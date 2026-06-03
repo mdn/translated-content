@@ -3,8 +3,6 @@ title: 101 Switching Protocol
 slug: Web/HTTP/Reference/Status/101
 ---
 
-{{HTTPSidebar}}
-
 Код ответа протокола HTTP 101 Switching Protocol указывает протокол, который сервер переключает, используя клиентский запрос {{HTTPHeader("Upgrade")}}.
 
 Сервер отправляет заголовок ответа {{HTTPHeader ("Upgrade")}}, указывая протокол, на который он переключился.

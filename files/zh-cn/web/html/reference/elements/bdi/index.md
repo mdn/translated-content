@@ -3,8 +3,6 @@ title: <bdi>
 slug: Web/HTML/Reference/Elements/bdi
 ---
 
-{{HTMLSidebar}}
-
 **HTML** 双向隔离元素（**`<bdi>`**）告诉浏览器的双向算法将其包含的文本与周围的文本隔离，当网站动态插入一些文本且不知道所插入文本的方向性时，此功能特别有用。
 
 {{InteractiveExample("HTML Demo: &lt;bdi&gt;", "tabbed-standard")}}
@@ -40,12 +38,12 @@ bdi {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -53,7 +51,7 @@ bdi {
   </tr>
   <tr>
    <th scope="row">Permitted parent elements</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">DOM interface</th>

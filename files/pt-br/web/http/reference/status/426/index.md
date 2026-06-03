@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/426
 original_slug: Web/HTTP/Status/426
 ---
 
-{{HTTPSidebar}}
-
 O status HTTP **`426 Upgrade Required`** indica que o servidor recusa o processamento da requisição usando o protocolo atual mas poderá ser processado caso o cliente atualize para um protocolo diferente.
 
 O servidor envia uma header {{HTTPHeader("Upgrade")}} com esta resposta para indicar qual o protocolo necessário.

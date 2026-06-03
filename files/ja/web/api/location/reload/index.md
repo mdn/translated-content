@@ -9,7 +9,7 @@ l10n:
 
 **`location.reload()`** メソッドは、再読み込みボタンのように現在の URL を再読み込みします。
 
-再読み込みはブロックされ、 `SECURITY_ERROR` の {{domxref("DOMException")}} が発生する可能性があります。これは、 `location.reload()` を呼び出すスクリプトの{{Glossary("origin", "オリジン")}}が、 {{domxref("Location")}} オブジェクトを保持するページのオリジンと異なる場合に発生します。詳細については、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)を参照してください。
+再読み込みはブロックされ、 `SECURITY_ERROR` の {{domxref("DOMException")}} が発生する可能性があります。これは、 `location.reload()` を呼び出すスクリプトの{{Glossary("origin", "オリジン")}}が、 {{domxref("Location")}} オブジェクトを保持するページのオリジンと異なる場合に発生します。詳細については、[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)を参照してください。
 
 ## 構文
 

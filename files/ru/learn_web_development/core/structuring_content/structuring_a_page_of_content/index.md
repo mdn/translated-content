@@ -3,7 +3,7 @@ title: Структурируем страницу
 slug: Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Разметить страницу так, чтобы к ней было просто применить CSS — первое, чему должен научиться будущий веб-разработчик. В этом задании вам придётся подумать о том, как должна выглядеть страница, и подобрать подходящую семантическую разметку.
 
@@ -59,4 +59,4 @@ slug: Learn_web_development/Core/Structuring_content/Structuring_a_page_of_conte
 
 Если вам дали это задание на каком-то курсе, просто передайте свою страницу для проверки преподавателю. Если вы учитесь сами, обратитесь на [форум, задав тему обсуждения этого упражнения, или в IRC-канале #mdn в IRC Mozilla](https://discourse.mozilla.org/t/structuring-a-page-of-content-assessment/24678), или в IRC-канале [#mdn](irc://irc.mozilla.org/mdn) в [IRC Mozilla](https://wiki.mozilla.org/IRC). Попробуйте выполнить задание сами, ведь вам некого обманывать, кроме себя самого!
 
-{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenu("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "conflicting/Learn_web_development/Core/Structuring_content")}}

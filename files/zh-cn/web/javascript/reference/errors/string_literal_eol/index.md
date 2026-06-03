@@ -3,8 +3,6 @@ title: "SyntaxError: string literal contains an unescaped line break"
 slug: Web/JavaScript/Reference/Errors/String_literal_EOL
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 信息
 
 ```plain

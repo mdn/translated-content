@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/X-Forwarded-Host
 original_slug: Web/HTTP/Headers/X-Forwarded-Host
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho **`X-Forwarded-Host`** (XFH) é um cabeçalho padrão de fato para identificar o _host_ original requisitado pelo cliente no cabeçalho de requisição HTTP {{HTTPHeader("Host")}}.
 
 Nomes de _hosts_ e portes de proxies reversos (balanceadores de carga, CDNs) pode diferir do servidor de origem que manipula a solicitação, neste caso o cabeçalho `X-Forwarded-Host` é útil para determinar qual Host foi originalmente utilizado.
@@ -21,7 +19,7 @@ Uma versão padronizada deste cabeçalho é o cabeçalho HTTP {{HTTPHeader("Forw
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

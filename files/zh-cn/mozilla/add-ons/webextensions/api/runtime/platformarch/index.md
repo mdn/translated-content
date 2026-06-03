@@ -3,8 +3,6 @@ title: 获取处理器架构 - runtime.PlatformArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
 ---
 
-{{AddonSidebar}}
-
 当前浏览器所在的计算机的处理器架构。
 
 ## 值类型

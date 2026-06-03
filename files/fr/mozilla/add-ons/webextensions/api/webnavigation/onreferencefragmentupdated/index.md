@@ -30,9 +30,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants:
-
     - `details`
       - : [`object`](#details). Détails sur l'événement de navigation.
 
@@ -50,7 +48,7 @@ Les événements ont trois fonctions :
 - `processId`
   - : `integer`. L'ID du processus dans lequel cet onglet est rendu.
 - `frameId`
-  - : `integer`.Cadre dans lequel la navigation aura lieu. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. Une valeur positive indique que la navigation se déroule dans un iframe imbriqué. Les ID de cadre sont uniques pour un onglet et un processus donnés.
+  - : `integer`.Cadre dans lequel la navigation aura lieu. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Reference/Elements/iframe) imbriqué. Une valeur positive indique que la navigation se déroule dans un iframe imbriqué. Les ID de cadre sont uniques pour un onglet et un processus donnés.
 - `timeStamp`
   - : `number`. L'heure à laquelle la navigation a été validée, en [milliseconde depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 - `transitionType`
@@ -88,8 +86,6 @@ browser.webNavigation.onReferenceFragmentUpdated.addListener(
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

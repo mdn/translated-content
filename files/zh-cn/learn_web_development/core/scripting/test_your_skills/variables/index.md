@@ -61,7 +61,8 @@ slug: Learn_web_development/Core/Scripting/Test_your_skills/Variables
 
 {{ EmbedLiveSample('变量 1', '100%', 420, '', '', 'hide-codepen-jsfiddle') }}
 
-> **标注：** [下载 任务 1 的起始版本](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html)，然后使用你自选的编辑器完成任务。
+> [!CALLOUT]
+> [下载 任务 1 的起始版本](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html)，然后使用你自选的编辑器完成任务。
 
 ## 变量 2
 
@@ -106,7 +107,8 @@ section.appendChild(para);
 
 {{ EmbedLiveSample('变量 2', '100%', 360, '', '', 'hide-codepen-jsfiddle') }}
 
-> **标注：** [下载 任务 2 的起始版本](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html)，然后使用你自选的编辑器完成任务。
+> [!CALLOUT]
+> [下载 任务 2 的起始版本](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html)，然后使用你自选的编辑器完成任务。
 
 ## 变量 3
 
@@ -156,7 +158,8 @@ section.appendChild(para2);
 
 {{ EmbedLiveSample('变量 3', '100%', 420, '', '', 'hide-codepen-jsfiddle') }}
 
-> **标注：** [下载 任务 3 的起始版本](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html)，然后使用你自选的编辑器完成任务。
+> [!CALLOUT]
+> [下载 任务 3 的起始版本](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html)，然后使用你自选的编辑器完成任务。
 
 ## 了解更多
 

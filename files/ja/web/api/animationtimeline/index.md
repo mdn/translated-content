@@ -31,4 +31,4 @@ l10n:
 - {{domxref("DocumentTimeline")}}, {{domxref("ScrollTimeline")}}, {{domxref("ViewTimeline")}}
 - {{domxref("Document.timeline")}}
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

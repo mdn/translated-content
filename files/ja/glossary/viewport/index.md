@@ -13,7 +13,7 @@ slug: Glossary/Viewport
 
 ### 一般知識
 
-- [Visual Viewport API](/ja/docs/Web/API/Visual_Viewport_API)
+- [Visual Viewport API](/ja/docs/Web/API/VisualViewport)
 - [Viewport](https://en.wikipedia.org/wiki/Viewport) (Wikipedia)
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)
 - 関連用語:

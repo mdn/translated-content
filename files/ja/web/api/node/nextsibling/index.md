@@ -13,7 +13,7 @@ l10n:
 > ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書に {{domxref("Text")}} ノードを挿入します。
 > そのため、例えば [`Node.firstChild`](/ja/docs/Web/API/Node/firstChild) や [`Node.previousSibling`](/ja/docs/Web/API/Node/previousSibling) を使用して得たノードが、取得しようとした実際のノードではなく、ホワイトスペースのテキストノードであることがあります。
 >
-> [DOM でのホワイトスペース](/ja/docs/Web/API/Document_Object_Model/Whitespace)の記事に、この動作に関する詳しい情報があります。
+> [DOM でのホワイトスペース](/ja/docs/Web/CSS/Guides/Text/Whitespace)の記事に、この動作に関する詳しい情報があります。
 >
 > {{domxref("Element.nextElementSibling")}} を使用すると、ホワイトスペースのノードや要素間のテキスト、コメントなどを飛ばして次の要素を取得することができます。
 >

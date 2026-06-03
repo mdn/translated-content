@@ -26,7 +26,7 @@ ruby {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>없음.</td>
     </tr>
@@ -63,7 +63,7 @@ ruby {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만을 포함합니다.
 
 ## 사용 일람
 

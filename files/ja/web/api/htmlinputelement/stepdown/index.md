@@ -59,9 +59,7 @@ console.log(input2.value); // "16:45"
 フォームコントロールが時刻、日付、数値以外のもので、 `step` 属性に対応していない場合（前述の対応している入力型のリストを参照）、または `step` 値が `any` に設定されている場合、 `InvalidStateError` 例外が発生します。
 
 - {{domxref("HTMLInputElement.stepDown()")}}
-
   - : [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) を（[`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) \* n だけ）減少させます。ここで n が指定されなかった場合は、既定で 1 になります。次の場合は例外 `InvalidStateError` が発生します。
-
     - このメソッドが現在の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) の値に適切ではない場合
     - この要素に [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) の値がなかった場合
     - [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) が数値に変換できなかった場合
@@ -77,7 +75,6 @@ stepDown(stepDecrement)
 ### 引数
 
 - `stepDecrement` {{optional_inline}}
-
   - : 数値です。引数が渡されなかった場合、 _stepDecrement_ は既定で 1 になります。
 
     この値が浮動小数点数であった場合、値は [`Math.floor(stepDecrement)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) が渡されたときと同様に減少します。この値が負の数であった場合は、値は減少するのではなく増加します。

@@ -3,8 +3,6 @@ title: Firefox 76 for developers
 slug: Mozilla/Firefox/Releases/76
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 76 の変更点をまとめています。Firefox 76 は、[2020 年 5 月 5 日](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/) にリリースされました。
 
 **付随する hacks ブログの記事「[Firefox 76: Audio worklets and other tricks](https://hacks.mozilla.org/2020/05/firefox-76-audio-worklets-and-other-tricks/)」もご覧ください。**
@@ -39,7 +37,7 @@ slug: Mozilla/Firefox/Releases/76
 
 ### CSS
 
-- [CSS4 system colors](/ja/docs/Web/CSS/color_value#system_colors) を Firefox でサポートしました ([Firefox バグ 1590894](https://bugzil.la/1590894))。
+- [CSS4 system colors](/ja/docs/Web/CSS/Reference/Values/color_value#system_colors) を Firefox でサポートしました ([Firefox バグ 1590894](https://bugzil.la/1590894))。
 
 ### SVG
 

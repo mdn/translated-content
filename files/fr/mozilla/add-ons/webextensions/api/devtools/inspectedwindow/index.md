@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
 {{AddonSidebar}}
 
 > [!NOTE]
-> Cette page décrit les API de développement de WebExtensions telles qu'elles existent dans Firefox 54. Bien que les API soient basées sur les [APIs de devtools de Chrome](https://developer.chrome.com/extensions/devtools), il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir les fonctionnalités actuellement manquantes, regarder [Limitations des APIs devtools](/fr/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs#limitations_of_the_devtools_apis).
+> Cette page décrit les API de développement de WebExtensions telles qu'elles existent dans Firefox 54. Bien que les API soient basées sur les [APIs de devtools de Chrome](https://developer.chrome.com/extensions/devtools), il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir les fonctionnalités actuellement manquantes, regarder [Limitations des APIs devtools](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis).
 
 L'API `devtools.inspectedWindow` permet à un extension de devtools d'interagir avec la fenêtre sur laquelle les outils de développement sont attachés.
 
@@ -33,8 +33,6 @@ Comme toutes les APIs de `devtools`, cette API n'est disponible que pour exécut
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.inspectedWindow`](https://developer.chrome.com/extensions/devtools_inspectedWindow).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

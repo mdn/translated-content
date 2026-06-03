@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Methods/GET
 original_slug: Web/HTTP/Methods/GET
 ---
 
-{{HTTPSidebar}}O **método HTTP GET** solicita uma representação do recurso especificado. Solicitações usando GET só devem recuperar dados.
+O **método HTTP GET** solicita uma representação do recurso especificado. Solicitações usando GET só devem recuperar dados.
 
 <table class="properties">
   <tbody>
@@ -18,7 +18,7 @@ original_slug: Web/HTTP/Methods/GET
     </tr>
     <tr>
       <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Safe"
+        <a href="/pt-BR/docs/Glossary/Safe"
           >Seguro</a
         >
       </th>
@@ -26,7 +26,7 @@ original_slug: Web/HTTP/Methods/GET
     </tr>
     <tr>
       <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Idempotent"
+        <a href="/pt-BR/docs/Glossary/Idempotent"
           >Idempotente</a
         >
       </th>

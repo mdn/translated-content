@@ -3,8 +3,6 @@ title: 教程
 slug: Games/Tutorials
 ---
 
-{{GamesSidebar}}
-
 本页面包含多个教程系列，重点介绍高效创建不同类型的 Web 游戏的不同工作流程。
 
 - [使用纯 JavaScript 实现 2D 打砖块游戏](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)

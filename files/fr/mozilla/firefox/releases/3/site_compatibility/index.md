@@ -3,8 +3,6 @@ title: Changements dans Gecko 1.9 affectant les sites Web
 slug: Mozilla/Firefox/Releases/3/Site_compatibility
 ---
 
-{{FirefoxSidebar}}
-
 Cette page essaie de donner un aperçu des changements entre [Gecko](/fr/Gecko) 1.8 et Gecko 1.9 qui pourraient éventuellement affecter le comportement ou le rendu des sites Web.
 
 Consultez également [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs).
@@ -35,7 +33,7 @@ Dans Gecko 1.8, la méthode `preventBubble` existait sur les évènements pour l
 
 ### Quelques autres anciennes API d'évènements ne sont plus supportées
 
-[window.captureEvents](/fr/docs/DOM/window.captureEvents), [window.releaseEvents](/fr/docs/DOM/window.releaseEvents) et `window.routeEvent` ne sont plus supportées dans Gecko 1.9.
+[window.captureEvents](/fr/docs/Web/API/Window/captureEvents), [window.releaseEvents](/fr/docs/Web/API/Window/releaseEvents) et `window.routeEvent` ne sont plus supportées dans Gecko 1.9.
 
 ## DOM
 

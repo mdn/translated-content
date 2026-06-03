@@ -12,16 +12,16 @@ original_slug: Web/HTML/Element/output
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#양식_관련_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#양식_관련_콘텐츠"
           >양식 관련 콘텐츠</a
         >(나열됨, 레이블 가능, 초기화 가능), 뚜렷한 콘텐츠.
       </td>
@@ -29,7 +29,7 @@ original_slug: Web/HTML/Element/output
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -41,7 +41,7 @@ original_slug: Web/HTML/Element/output
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>
@@ -59,13 +59,12 @@ original_slug: Web/HTML/Element/output
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `for`
-  - : 스페이스로 구분한, 다른 여러 요소 [`id`](/ko/docs/Web/HTML/Global_attributes#id)의 목록. 목록에 포함된 요소가 출력 결과에 공헌했거나 영향을 주었음을 나타냅니다.
+  - : 스페이스로 구분한, 다른 여러 요소 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id)의 목록. 목록에 포함된 요소가 출력 결과에 공헌했거나 영향을 주었음을 나타냅니다.
 - `form`
-
-  - : `<output>`과 연결할 {{HTMLElement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다.
+  - : `<output>`과 연결할 {{HTMLElement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다.
 
   `form` 특성을 사용하면 `<output>`을 `<form>` 요소에 넣지 않고도 연결할 수 있고, 조상 중 `<form>`이 있더라도 소유자를 재정의할 수 있습니다.
 

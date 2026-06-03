@@ -70,14 +70,14 @@ original_slug: Web/HTML/Element/article
       </th>
       <td>
         <a
-          href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           title="HTML/Content categories#Flow content"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#구획_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구획_콘텐츠"
           >구획 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#뚜렷한_컨텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#뚜렷한_컨텐츠"
           >뚜렷한 콘텐츠</a
         >.
       </td>
@@ -86,7 +86,7 @@ original_slug: Web/HTML/Element/article
       <th scope="row"><dfn>가능한 콘텐츠</dfn></th>
       <td>
         <a
-          href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           title="HTML/Content_categories#Flow_content"
           >플로우 콘텐츠</a
         >.
@@ -99,7 +99,7 @@ original_slug: Web/HTML/Element/article
     <tr>
       <th scope="row"><dfn>가능한 부모 요소</dfn></th>
       <td>
-        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.<br /><code>&#x3C;article></code> 요소는
         {{HTMLElement("address")}}의 후손이 될 수 없음에 주의하세요.
@@ -127,14 +127,14 @@ original_slug: Web/HTML/Element/article
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 
 - 각각의 `<article>`을 식별할 수단이 필요합니다. 주로 제목({{htmlelement('h1')}}-{{htmlelement('h6')}}) 요소를 `<article>`의 자식으로 포함하는 방법을 사용합니다.
 - `<article>` 요소가 중첩되어 있을 때, 안쪽에 있는 요소는 바깥쪽에 있는 요소와 관련된 글을 나타냅니다. 예를 들어 블로그 글의 댓글은, 글을 나타내는 `<article>` 요소 안에 중첩한 `<article>`로 나타낼 수 있습니다.
 - `<article>` 요소의 작성자 정보를 {{HTMLElement("address")}} 요소를 이용하여 제공할 수 있습니다. 그러나 중첩 `<article>`에는 적용되지 않습니다.
-- `<article>` 요소의 작성일자와 시간은 {{HTMLElement("time")}} 요소의 [`datetime`](/ko/docs/Web/HTML/Element/time#datetime) 속성을 이용하여 설명할 수 있습니다. 참고로 {{HTMLElement("time")}} 요소의 [`pubdate`](/ko/docs/Web/HTML/Element/time#pubdate) 속성은 더 이상 {{glossary("W3C")}} {{glossary("HTML5")}} 표준안에 포함되지 않습니다.
+- `<article>` 요소의 작성일자와 시간은 {{HTMLElement("time")}} 요소의 [`datetime`](/ko/docs/Web/HTML/Reference/Elements/time#datetime) 속성을 이용하여 설명할 수 있습니다. 참고로 {{HTMLElement("time")}} 요소의 [`pubdate`](/ko/docs/Web/HTML/Reference/Elements/time#pubdate) 속성은 더 이상 {{glossary("W3C")}} {{glossary("HTML5")}} 표준안에 포함되지 않습니다.
 
 ## 예제
 

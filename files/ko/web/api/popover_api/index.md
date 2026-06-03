@@ -39,9 +39,9 @@ popover API의 일반적인 사용 사례에는 액션 메뉴, 사용자 지정 
 
 - [`popover`](/ko/docs/Web/HTML/Global_attributes/popover)
   - : 요소를 팝오버 요소로 전환하는 전역 속성으로, 팝오버 상태(`"auto"` 또는 `"manual"`)를 값으로 받습니다.
-- [`popovertarget`](/ko/docs/Web/HTML/Element/button#popovertarget)
+- [`popovertarget`](/ko/docs/Web/HTML/Reference/Elements/button#popovertarget)
   - : {{htmlelement("button")}} 또는 {{htmlelement("input")}} 요소를 팝오버 제어 버튼으로 바꾸고 제어할 팝오버 요소의 ID를 값으로 받습니다.
-- [`popovertargetaction`](/ko/docs/Web/HTML/Element/button#popovertargetaction)
+- [`popovertargetaction`](/ko/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
   - : 컨트롤 {{htmlelement("button")}} 또는 {{htmlelement("input")}}으로 제어되는 팝오버 요소에서 수행할 작업(`"hide"`, `"show"`, 또는 `"toggle"`)을 지정합니다.
 
 ## CSS 기능
@@ -63,9 +63,9 @@ popover API의 일반적인 사용 사례에는 액션 메뉴, 사용자 지정 
 - {{domxref("HTMLElement.popover")}}
   - : JavaScript를 통해 요소의 팝오버 상태(`"auto"` or `"manual"`)를 가져오고 설정하며, 기능 감지에 사용할 수 있습니다. [`popover`](/ko/docs/Web/HTML/Global_attributes/popover) 전역 HTML 특성 값을 반영합니다.
 - {{domxref("HTMLButtonElement.popoverTargetElement")}} 및 {{domxref("HTMLInputElement.popoverTargetElement")}}
-  - : 컨트롤 버튼으로 제어되는 팝오버 요소를 가져오고 설정합니다. JavaScript에서 [`popovertarget`](/ko/docs/Web/HTML/Element/button#popovertarget) HTML 특성에 해당하는 값입니다.
+  - : 컨트롤 버튼으로 제어되는 팝오버 요소를 가져오고 설정합니다. JavaScript에서 [`popovertarget`](/ko/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML 특성에 해당하는 값입니다.
 - {{domxref("HTMLButtonElement.popoverTargetAction")}} 및 {{domxref("HTMLInputElement.popoverTargetAction")}}
-  - : 컨트롤 버튼으로 제어되는 팝오버 요소에서 수행할 액션(`"hide"`, `"show"`, 또는 `"toggle"`)을 가져오고 설정합니다. [`popovertargetaction`](/ko/docs/Web/HTML/Element/button#popovertargetaction) HTML 특성의 값을 반영합니다.
+  - : 컨트롤 버튼으로 제어되는 팝오버 요소에서 수행할 액션(`"hide"`, `"show"`, 또는 `"toggle"`)을 가져오고 설정합니다. [`popovertargetaction`](/ko/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML 특성의 값을 반영합니다.
 
 ### 인스턴스 메서드
 

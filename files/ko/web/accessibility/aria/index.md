@@ -97,5 +97,5 @@ function updateProgress(percentComplete) {
 
 {{glossary("Accessibility", "접근성")}}, {{glossary("AJAX")}}, [JavaScript](/ko/docs/Web/JavaScript)
 
-- [웹 개발](/ko/docs/Web/Guide)
+- [웹 개발](/ko/docs/MDN/Guides)
 - [접근성과 Mozilla](/ko/docs/Mozilla/Accessibility)

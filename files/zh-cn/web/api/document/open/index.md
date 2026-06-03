@@ -46,7 +46,7 @@ document.close();
 
 ### 内容安全
 
-该方法与其他属性一样受[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)的限制，会改变文档的来源的方法调用不会起作用。
+该方法与其他属性一样受[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)的限制，会改变文档的来源的方法调用不会起作用。
 
 ## 三个参数的 document.open()
 

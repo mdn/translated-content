@@ -23,15 +23,11 @@ animate(keyframes, options)
 - `keyframes`
   - : Массив объектов кадров **или** объект кадра, свойства которого являются массивами значений для итерации. Смотрите [форматы кадров](/ru/docs/Web/API/Web_Animations_API/Keyframe_Formats) для получения подробной информации.
 - `options`
-
   - : **Целое число, представляющее продолжительность анимации** (в миллисекундах) **или** объект, содержащий одно или более свойств, описанных в [параметре `options` конструктора `KeyframeEffect()`](/ru/docs/Web/API/KeyframeEffect/KeyframeEffect#свойства)
-
     - `id` {{optional_inline}}
       - : Уникальное для `animate()` свойство: строка указывающая на анимацию.
     - `rangeEnd` {{optional_inline}}
-
       - : Указывает окончание диапазона анимации, JavaScript-эквивалент CSS-свойства {{cssxref("animation-range-end")}}. `rangeEnd` может принимать разные типы:
-
         - Строка `normal` (означает отсутствие изменений в диапазоне анимации), CSS-представление смещение анимации {{cssxref("length-percentage")}}, `<timeline-range-name>` или `<timeline-range-name>` с последующим `<length-percentage>`. Например:
 
           ```plain

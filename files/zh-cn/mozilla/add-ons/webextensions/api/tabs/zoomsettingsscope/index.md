@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 定义缩放更改是会对页面的来源持久化，还是仅在此标签页中生效。当 {{WebExtAPIRef("tabs.zoomSettingsMode")}} 为“automatic”时，默认值为 `per-origin`，否则始终为 `per-tab`。
 
 ## 类型

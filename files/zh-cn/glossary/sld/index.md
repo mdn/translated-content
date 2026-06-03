@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **二级域**（**SLD**）是域名中位于{{Glossary("TLD", "顶级域（TLD）")}}之前的一部分。
 
 例如，在 `mozilla.org` 中，`mozilla` 是二级域，`org` 是顶级域。

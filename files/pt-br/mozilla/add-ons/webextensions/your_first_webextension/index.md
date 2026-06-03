@@ -54,7 +54,8 @@ A chave mais interessante aqui é [`content_scripts`](/pt-BR/docs/Mozilla/Add-on
 - [Saiba mais sobre scripts de conteúdo.](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [Saiba mais sobre padrões de correspondência](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
-> **Aviso:** [Em algumas situações, você precisa especificar uma ID para sua extensão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#when_do_you_need_an_add-on_id). Se você precisar especificar um ID de extensão, inclua a chave [`applications`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) no `manifest.json` e configure sua propriedade `id`:
+> [!WARNING]
+> [Em algumas situações, você precisa especificar uma ID para sua extensão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#when_do_you_need_an_add-on_id). Se você precisar especificar um ID de extensão, inclua a chave [`applications`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) no `manifest.json` e configure sua propriedade `id`:
 >
 > ```json
 > "applications": {

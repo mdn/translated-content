@@ -2,7 +2,7 @@
 title: DataTransferItemList
 slug: Web/API/DataTransferItemList
 l10n:
-  sourceCommit: 980b5a01c4527ef69fee3b865c68ee3ffb09d612
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -33,81 +33,15 @@ l10n:
 
 此示例展示了如何使用拖放。
 
-### JavaScript
-
-```js
-function dragstartHandler(ev) {
-  console.log("拖动开始");
-
-  // 将此元素的 id 添加到拖拽数据中，以便放置处理器知道要将哪个元素添加到其树中。
-  const dataList = ev.dataTransfer.items;
-  dataList.add(ev.target.id, "text/plain");
-
-  // 向拖拽数据中添加其他项
-  dataList.add("<p>段落…</p>", "text/html");
-  dataList.add("http://www.example.org", "text/uri-list");
-}
-
-function dropHandler(ev) {
-  console.log("放置");
-  ev.preventDefault();
-
-  // 遍历已放置的项并记录它们的数据
-  for (const item of ev.dataTransfer.items) {
-    if (item.kind === "string" && item.type.match(/^text\/plain/)) {
-      // 此项是目标节点
-      item.getAsString((s) => {
-        ev.target.appendChild(document.getElementById(s));
-      });
-    } else if (item.kind === "string" && item.type.match(/^text\/html/)) {
-      // 拖拽数据项是 HTML
-      item.getAsString((s) => {
-        console.log(`…放置：HTML = ${s}`);
-      });
-    } else if (item.kind === "string" && item.type.match(/^text\/uri-list/)) {
-      // 拖拽数据项是 URI
-      item.getAsString((s) => {
-        console.log(`…放置：URI = ${s}`);
-      });
-    }
-  }
-}
-
-function dragoverHandler(ev) {
-  console.log("拖拽经过");
-  ev.preventDefault();
-
-  // 将 dropEffect 设置为 move
-  ev.dataTransfer.dropEffect = "move";
-}
-
-function dragendHandler(ev) {
-  console.log("拖拽结束");
-  const dataList = ev.dataTransfer.items;
-
-  // 清除所有剩余的拖拽数据
-  dataList.clear();
-}
-```
-
 ### HTML
 
 ```html
 <div>
-  <p
-    id="source"
-    ondragstart="dragstartHandler(event);"
-    ondragend="dragendHandler(event);"
-    draggable="true">
-    选中此元素，将其拖拽到放置区域，然后释放选择以移动该元素。
+  <p id="source" draggable="true">
+    选择该元素，拖动它到可放置区域并释放选择以移动元素。
   </p>
 </div>
-<div
-  id="target"
-  ondrop="dropHandler(event);"
-  ondragover="dragoverHandler(event);">
-  放置区域
-</div>
+<div id="target">可放置区域</div>
 ```
 
 ### CSS
@@ -126,6 +60,66 @@ div {
 #target {
   border: 1px solid black;
 }
+```
+
+### JavaScript
+
+```javascript
+const source = document.getElementById("source");
+const target = document.getElementById("target");
+
+source.addEventListener("dragstart", (ev) => {
+  console.log("拖拽开始");
+
+  // 添加元素的 ID 到拖拽负荷中，以便于放置处理器清楚要将什么元素添加到其树中
+  const dataList = ev.dataTransfer.items;
+  dataList.add(ev.target.id, "text/plain");
+
+  // 添加其他项目作为拖拽负荷
+  dataList.add("<p>段落……</p>", "text/html");
+  dataList.add("http://www.example.org", "text/uri-list");
+});
+
+source.addEventListener("dragend", (ev) => {
+  console.log("拖拽结束");
+  const dataList = ev.dataTransfer.items;
+
+  // 清除剩余的拖拽数据
+  dataList.clear();
+});
+
+target.addEventListener("drop", (ev) => {
+  console.log("放置");
+  ev.preventDefault();
+
+  // 遍历放下的项目并记录它们的数据
+  for (const item of ev.dataTransfer.items) {
+    if (item.kind === "string" && item.type.match(/^text\/plain/)) {
+      // 该项为目标节点
+      item.getAsString((s) => {
+        ev.target.appendChild(document.getElementById(s));
+      });
+    } else if (item.kind === "string" && item.type.match(/^text\/html/)) {
+      // 拖动数据项为 HTML
+      item.getAsString((s) => {
+        console.log(`……放置：HTML = ${s}`);
+      });
+    } else if (item.kind === "string" && item.type.match(/^text\/uri-list/)) {
+      // 拖动数据项为 URI
+      item.getAsString((s) => {
+        console.log(`……放置：URI = ${s}`);
+      });
+    }
+  }
+});
+
+target.addEventListener("dragover", (ev) => {
+  console.log("拖拽经过");
+  ev.preventDefault();
+
+  // 设置 dropEffect 为 move
+  ev.dataTransfer.dropEffect = "move";
+});
 ```
 
 ### 结果

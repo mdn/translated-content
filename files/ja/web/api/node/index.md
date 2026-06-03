@@ -34,7 +34,6 @@ _以下のプロパティに加え、 `Node` は親である {{DOMxRef("EventTar
 - {{DOMxRef("Node.nodeName")}} {{ReadOnlyInline}}
   - : `Node` の名前を持つ文字列を返します。名前の構造は、ノードの型によって異なります。例えば、{{DOMxRef("HTMLElement")}} は {{DOMxRef("HTMLAudioElement")}} に対して `'audio'` というように対応するタグの名前、 {{DOMxRef("Text")}} ノードは `'#text'` という文字列、 {{DOMxRef("Document")}} ノードは `'#document'` という文字列になります。
 - {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
-
   - : ノードの型を表す `unsigned short` を返します。使用できる値は次の通りです。
 
     | 名前                          | 値   |

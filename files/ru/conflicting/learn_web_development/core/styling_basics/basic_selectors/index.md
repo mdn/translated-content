@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors
 original_slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 В этом уроке мы рассмотрим некоторые из базисных селекторов, которые вы, вероятно, будете чаще всего использовать в вашей работе.
 
@@ -80,7 +80,8 @@ article *:first-child {
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/id.html", '100%', 750)}}
 
-> **Предупреждение:**Может показаться, что неоднократное использование в документе одного и того же ID выполняет задачи стилизования, но не стоит этого делать. Результатом будет неверный код, который приведёт к многочисленным странностям в поведении.
+> [!WARNING]
+> Может показаться, что неоднократное использование в документе одного и того же ID выполняет задачи стилизования, но не стоит этого делать. Результатом будет неверный код, который приведёт к многочисленным странностям в поведении.
 
 > [!NOTE]
 > Как мы знаем из урока по специфичности, ID имеет высокую специфичность. Он будет брать верх над большинством других селекторов. В большинстве случаев предпочтительнее добавить элементу класс, чем ID. Однако, если использование ID это единственный способ нацелиться на элемент — возможно, потому вы не имеете доступа к разметке и, следовательно, возможности её редактировать — это будет работать.
@@ -89,4 +90,4 @@ article *:first-child {
 
 Мы продолжим изучение селекторов и рассмотрим [селекторы атрибута](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}

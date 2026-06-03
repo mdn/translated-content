@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1822cdf5a86574429c4c49883a402663ef16a4ef
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 95 の変更点をまとめています。
 Firefox 95 は、2021 年 12 月 7 日にリリースされました。
 
@@ -19,7 +17,7 @@ Firefox 95 は、2021 年 12 月 7 日にリリースされました。
 
 ### CSS
 
-- CSS の [`cursor`](/ja/docs/Web/CSS/cursor) プロパティを、Android 版 Firefox でサポートしました。
+- CSS の [`cursor`](/ja/docs/Web/CSS/Reference/Properties/cursor) プロパティを、Android 版 Firefox でサポートしました。
   マウスを使用する Android ユーザーは、どの要素がクリックできるかを見分けやすくなります ([Firefox バグ 1672609](https://bugzil.la/1672609))。
 
 ### JavaScript

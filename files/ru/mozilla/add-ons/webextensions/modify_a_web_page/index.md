@@ -192,12 +192,10 @@ browser.runtime.onMessage.addListener(eatPage);
 - [`runtime.sendMessage()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 - [`runtime.onMessage`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - Примеры использования `content_scripts`:
-
   - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
   - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
   - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
 
 - Примеры использования `tabs.executeScript()`:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
   - [context-menu-demo](https://github.com/mdn/webextensions-examples/tree/master/context-menu-demo)

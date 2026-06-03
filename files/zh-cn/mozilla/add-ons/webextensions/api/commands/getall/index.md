@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 获取你已使用 [`commands` manifest.json 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)注册的所有扩展命令。
 
 该命令会返回一个 {{WebExtAPIRef('commands.Command')}} 对象的数组。或者，如果你使用基于 promise 版本的 API——`browser.commands.getAll()`，该命令将被传递到 [`Promise.then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 的 `onFulfilled` 参数中。

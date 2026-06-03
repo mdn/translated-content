@@ -2,10 +2,8 @@
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 {{jsxref("Array")}} 實例的 **`concat()`** 方法用於合併兩個或更多的陣列。此方法不會改變原有的陣列，而是返回一個新的陣列。
 

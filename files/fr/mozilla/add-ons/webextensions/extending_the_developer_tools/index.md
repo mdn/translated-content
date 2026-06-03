@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 {{AddonSidebar}}
 
 > [!NOTE]
-> Cette page décrit les API de devtools telles qu'elles existent dans Firefox 55. Bien que les API soient basées sur les [API devtools de chrome](https://developer.chrome.com/extensions/devtools), il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir quelles fonctionnalités sont actuellement manquantes, voir les [Limitations des APIs devtools](/fr/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs#limitations_of_the_devtools_apis).
+> Cette page décrit les API de devtools telles qu'elles existent dans Firefox 55. Bien que les API soient basées sur les [API devtools de chrome](https://developer.chrome.com/extensions/devtools), il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir quelles fonctionnalités sont actuellement manquantes, voir les [Limitations des APIs devtools](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis).
 
 Vous pouvez utiliser les API WebExtensions pour étendre les outils de développement intégrés du navigateur. Pour créer une extension devtools, incluez la clé "[devtools_page](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" dans [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json):
 
@@ -22,12 +22,11 @@ Le fichier HTML définit une page spéciale dans l'extension, appelée la page d
 
 La page Devtools est chargée lorsque les devtools du navigateur sont ouverts et déchargés lorsqu'ils sont fermés. Notez que, parce que la fenêtre devtools est associée avec un seul onglet, il est possible que plus d'une fenêtre devtools - donc plus d'une page devtools - existe en même temps.
 
-La page devtools n'a pas de DOM visible, mais peut inclure des sources JavaScript en utilisant les balises [`<script>`](/fr/docs/Web/HTML/Element/script). Les sources doivent être regroupées avec l'extension. Les sources ont accès à :
+La page devtools n'a pas de DOM visible, mais peut inclure des sources JavaScript en utilisant les balises [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script). Les sources doivent être regroupées avec l'extension. Les sources ont accès à :
 
 - Les API DOM normales accessibles via l'objet [`window`](/fr/docs/Web/API/Window) globale
 - Les mêmes [API WebExtension que dans les Scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)
 - Les APIs devtools :
-
   - [`devtools.inspectedWindow`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow)
   - [`devtools.network`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network)
   - [`devtools.panels`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)

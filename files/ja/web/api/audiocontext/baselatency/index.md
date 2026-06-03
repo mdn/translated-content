@@ -10,7 +10,8 @@ l10n:
 
 **`baseLatency`** は {{domxref("AudioContext")}} インターフェイスの読み取り専用プロパティで、{{domxref("AudioDestinationNode")}} すなわち音声グラフの終端から音声バッファーをホストシステムで再生の準備ができている音声サブシステムに渡すときに発生する処理の遅延の秒数を表す `double` の値を返します。
 
-> **メモ:** {{domxref("AudioContext.AudioContext()", "コンテキストの生成時", "", "true")}}に `latencyHint` オプションを用いることで特定の遅延を要求することができます。しかし、ブラウザーはこのオプションを無視する可能性があります。
+> [!NOTE]
+> {{domxref("AudioContext.AudioContext()", "コンテキストの生成時", "", "true")}}に `latencyHint` オプションを用いることで特定の遅延を要求することができます。しかし、ブラウザーはこのオプションを無視する可能性があります。
 
 ## 値
 

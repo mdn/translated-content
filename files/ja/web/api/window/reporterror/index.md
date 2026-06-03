@@ -3,7 +3,7 @@ title: "Window: reportError() メソッド"
 short-title: reportError()
 slug: Web/API/Window/reportError
 l10n:
-  sourceCommit: 63297dea804061944e7430acd2c057d773770a4f
+  sourceCommit: a44e9fc017ec15af0b8e0c0101ea895b9cb30522
 ---
 
 {{APIRef("DOM")}}
@@ -77,6 +77,6 @@ window.addEventListener("error", (error) => {
 
 - {{DOMxRef("Window")}}
 - {{DOMxRef("WorkerGlobalScope.reportError()")}}
-- {{DOMxRef("Window/error_event", "error")}} イベント
-- {{DOMxRef("WorkerGlobalScope/error_event", "error")}} イベント
-- {{DOMxRef("HTMLElement/error_event", "error")}} イベント
+- {{domxref("Window")}}: {{DOMxRef("Window/error_event", "error")}} イベント
+- {{domxref("WorkerGlobalScope")}}: {{DOMxRef("WorkerGlobalScope/error_event", "error")}} イベント
+- {{domxref("HTMLElement")}}: {{DOMxRef("HTMLElement/error_event", "error")}} イベント

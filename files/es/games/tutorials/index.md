@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e4783c03e39807e0060a2f4df3bf3962d25d8388
 ---
 
-{{GamesSidebar}}
-
 Esta página contiene una serie de tutoriales donde se destacan diferentes flujos de trabajo para crear de forma eficaz diferentes tipos de juegos web.
 
 - [Famoso juego 2D usando JavaScript puro](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)

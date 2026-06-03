@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 Unicode 是一种标准{{Glossary("Character set", "字符集")}}，用于对来自世界上不同语言、文字系统和符号的{{Glossary("Character", "字符")}}进行编号和定义。
 
 通过给每个字符分配一个编号，程序员可以创建{{Glossary("Character encoding","字符编码")}}，让计算机在同一个文件或程序中存储、处理和传输任何语言组合。

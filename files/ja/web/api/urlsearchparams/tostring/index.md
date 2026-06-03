@@ -48,7 +48,7 @@ console.log(params.toString()); // 'foo=1&bar=2&foo=4' と表示
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("URL")}} インターフェイス。
 - [Google Developers: URLSearchParams を使用した簡単な URL 操作](https://developer.chrome.com/blog/urlsearchparams/)（英語）

@@ -17,7 +17,6 @@ l10n:
 
 - 위키백과의 [케르크호프스의 원리(Kerckhoffs's principle)](https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle)
 - [MDN 웹 용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Block cipher mode of operation")}}
   - {{Glossary("Cipher")}}
   - {{Glossary("Ciphertext")}}

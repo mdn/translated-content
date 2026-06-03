@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status
 original_slug: Web/HTTP/Status
 ---
 
-{{HTTPSidebar}}
-
 Os códigos de status de resposta HTTP indicam se uma solicitação [HTTP](/pt-BR/docs/Web/HTTP) específica foi concluída com êxito.
 As respostas são agrupadas em cinco classes:
 
@@ -34,9 +32,7 @@ Os códigos de status listados abaixo são definidos por [RFC 9110](https://http
 ## Respostas bem-sucedidas
 
 - {{HTTPStatus(200, "200 OK")}}
-
   - : A solicitação foi bem-sucedida. O significado do resultado de "sucesso" depende do método HTTP:
-
     - `GET`: O recurso foi obtido e transmitido no corpo da mensagem.
     - `HEAD`: Os cabeçalhos de representação são incluídos na resposta sem nenhum corpo de mensagem.
     - `PUT` ou `POST`: O recurso que descreve o resultado da ação é transmitido no corpo da mensagem.

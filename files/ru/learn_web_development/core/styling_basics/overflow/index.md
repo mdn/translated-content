@@ -3,7 +3,7 @@ title: Переполнение содержимого
 slug: Learn_web_development/Core/Styling_basics/Overflow
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
 
 В этом уроке мы рассмотрим другую важную концепцию в CSS — **переполнение**. Переполнение это то, что случается когда слишком много контента содержится внутри блока. В этом гайде вы изучите что это и как этим управлять.
 
@@ -88,13 +88,12 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 
 В этом уроке была представлена концепция переполнения. Важно понимать, что CSS по умолчанию старается избежать обрезания выходящего за границы блока содержимого. Мы изучили, как можно справиться с возникшим переполнением, а также рассмотрели важность тестирования поведения веб-страниц как с малым количеством контента, так и с большим.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
 
 ## In this module
 
 1. [Каскад и наследование](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 2. [Селекторы CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
    - [Селекторы типа, класса и ID](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
    - [Селекторы атрибута](/ru/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
    - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

@@ -2,16 +2,16 @@
 title: ウェブアプリケーションからのファイルの使用
 slug: Web/API/File_API/Using_files_from_web_applications
 l10n:
-  sourceCommit: b079d9c8113879d70c668fc94347d50c35fc2fac
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef("File API")}}
+{{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
 
 ファイル API を使用すると、ウェブコンテンツがユーザーにローカルファイルを選択するように指示し、それらのファイルを読み取ることができるようになりました。この選択は HTML の `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` 要素を使用したり、ドラッグ & ドロップを行ったりすることで行うことができます。
 
 ## 選択されたファイルへのアクセス
 
-この HTML を考えてください。
+この HTML があったとします。
 
 ```html
 <input type="file" id="input" multiple />
@@ -49,15 +49,6 @@ const numFiles = fileList.length;
 
 個々の {{DOMxRef("File")}} オブジェクトは、単に配列としてリストにアクセスするだけで取得できます。
 
-```js
-for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
-  const file = fileList[i];
-  // …
-}
-```
-
-このループは、ファイルリスト内のすべてのファイルを繰り返し処理します。
-
 {{DOMxRef("File")}} オブジェクトには 3 つのプロパティがあり、ファイルに関する有益な情報を得られます。
 
 - `name`
@@ -72,69 +63,46 @@ for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
 次のコードは `size` プロパティを利用する例です。
 
 ```html
-<!doctype html>
-<html lang="ja-JP">
-  <head>
-    <meta charset="UTF-8" />
-    <title>ファイルのサイズ</title>
-  </head>
+<form name="uploadForm">
+  <div>
+    <input id="uploadInput" type="file" multiple />
+    <label for="fileNum">選択されたファイル:</label>
+    <output id="fileNum">0</output>;
+    <label for="fileSize">合計サイズ:</label>
+    <output id="fileSize">0</output>
+  </div>
+  <div><input type="submit" value="Send file" /></div>
+</form>
+```
 
-  <body>
-    <form name="uploadForm">
-      <div>
-        <input id="uploadInput" type="file" multiple />
-        <label for="fileNum">選択されたファイル:</label>
-        <output id="fileNum">0</output>;
-        <label for="fileSize">合計サイズ:</label>
-        <output id="fileSize">0</output>
-      </div>
-      <div><input type="submit" value="Send file" /></div>
-    </form>
+```js
+const uploadInput = document.getElementById("uploadInput");
+uploadInput.addEventListener(
+  "change",
+  () => {
+    // 合計サイズを計算
+    let numberOfBytes = 0;
+    for (const file of uploadInput.files) {
+      numberOfBytes += file.size;
+    }
 
-    <script>
-      const uploadInput = document.getElementById("uploadInput");
-      uploadInput.addEventListener(
-        "change",
-        () => {
-          // 合計サイズを計算
-          let numberOfBytes = 0;
-          for (const file of uploadInput.files) {
-            numberOfBytes += file.size;
-          }
+    // 最も近い接頭辞単位に近似
+    const units = ["B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
+    const exponent = Math.min(
+      Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
+      units.length - 1,
+    );
+    const approx = numberOfBytes / 1024 ** exponent;
+    const output =
+      exponent === 0
+        ? `${numberOfBytes} バイト`
+        : `${approx.toFixed(3)} ${units[exponent]} (${numberOfBytes} バイト)`;
 
-          // 最も近い接頭辞単位に近似
-          const units = [
-            "B",
-            "KiB",
-            "MiB",
-            "GiB",
-            "TiB",
-            "PiB",
-            "EiB",
-            "ZiB",
-            "YiB",
-          ];
-          const exponent = Math.min(
-            Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
-            units.length - 1,
-          );
-          const approx = numberOfBytes / 1024 ** exponent;
-          const output =
-            exponent === 0
-              ? `${numberOfBytes} bytes`
-              : `${approx.toFixed(3)} ${
-                  units[exponent]
-                } (${numberOfBytes} bytes)`;
-
-          document.getElementById("fileNum").textContent =
-            uploadInput.files.length;
-          document.getElementById("fileSize").textContent = output;
-        },
-        false,
-      );
-    </script>
-  </body>
-</html>
+    document.getElementById("fileNum").textContent = uploadInput.files.length;
+    document.getElementById("fileSize").textContent = output;
+  },
+  false,
+);
 ```
 
 ## click() メソッドを使用して非表示の input 要素を使用する
@@ -144,15 +112,14 @@ for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
 次のような HTML を考えてみましょう。
 
 ```html
-<input
-  type="file"
-  id="fileElem"
-  multiple
-  accept="image/*"
-  style="display:none" />
-<button id="fileSelect" type="button">
-  いくつかのファイルを選択してください。
-</button>
+<input type="file" id="fileElem" multiple accept="image/*" />
+<button id="fileSelect" type="button">ファイルをいくつか選択</button>
+```
+
+```css
+#fileElem {
+  display: none;
+}
 ```
 
 `click` イベントを扱うコードは次のようなものです。
@@ -187,18 +154,20 @@ JavaScript (click() メソッド) を使用せずにファイル選択を開け�
   multiple
   accept="image/*"
   class="visually-hidden" />
-<label for="fileElem">いくつかのファイルを選択してください。</label>
+<label for="fileElem">ファイルをいくつか選択</label>
 ```
 
 そしてこの CSS です。
 
 ```css
 .visually-hidden {
-  position: absolute !important;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   height: 1px;
-  width: 1px;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 input.visually-hidden:is(:focus, :focus-within) + label {
@@ -261,9 +230,7 @@ function drop(e) {
 
 ```js
 function handleFiles(files) {
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i];
-
+  for (const file of files) {
     if (!file.type.startsWith("image/")) {
       continue;
     }
@@ -282,7 +249,7 @@ function handleFiles(files) {
 }
 ```
 
-ここでは、ユーザーが選択したファイルを処理するループが各ファイルの `type` 属性を見て、その MIME タイプが "`image/`" という文字列で始まるかどうかを確認しています。画像である各ファイルに対して、新しい `img` 要素を作成します。CSS は、きれいな境界線や影を設定したり、画像のサイズを指定したりするために使用しますので、ここでは必要ありません。
+ここでは、ユーザーが選択したファイルを処理するループが各ファイルの `type` 属性を見て、その MIME タイプが `image/` で始まるかどうかを確認しています。画像である各ファイルに対して、新しい `img` 要素を作成します。CSS は、きれいな境界線や影を設定したり、画像のサイズを指定したりするために使用しますので、ここでは必要ありません。
 
 各画像には CSS クラス `obj` が追加されており、DOM ツリーで簡単に見つけることができます。また、各画像に `file` 属性を追加し、画像の {{DOMxRef("File")}} を指定しています。これにより、後で実際にアップロードする画像を取得することができます。{{DOMxRef("Node.appendChild()")}} を使用して、文書のプレビュー領域に新しいサムネイルを追加します。
 
@@ -290,7 +257,7 @@ function handleFiles(files) {
 
 ## オブジェクト URL を利用する
 
-DOM の {{DOMxRef("URL.createObjectURL()")}} と {{DOMxRef("URL.revokeObjectURL()")}} メソッドを使用すると、ユーザーのコンピューター上のローカルファイルなど、DOM {{DOMxRef("File")}} オブジェクトを使用して参照可能なあらゆるデータを参照するために使用できるシンプルな URL 文字列を作成できます。
+DOM の {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} と {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} メソッドを使用すると、ユーザーのコンピューター上のローカルファイルなど、DOM {{DOMxRef("File")}} オブジェクトを使用して参照可能なあらゆるデータを参照するために使用できるシンプルな URL 文字列を作成できます。
 
 HTML から URL で参照したい {{DOMxRef("File")}} オブジェクトがある場合は、次のようにオブジェクト URL を作成します。
 
@@ -298,7 +265,7 @@ HTML から URL で参照したい {{DOMxRef("File")}} オブジェクトがあ�
 const objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-オブジェクト URL は {{DOMxRef("File")}} オブジェクトを識別する文字列です。 {{DOMxRef("URL.createObjectURL()")}} を呼び出すたびに、すでにそのファイルのオブジェクト URL を作成していても、一意のオブジェクト URL が作成されます。これらはそれぞれ解除する必要があります。これらはドキュメントがアンロードされると自動的に解放されますが、ページが動的にこれらを使用している場合は {{DOMxRef("URL.revokeObjectURL()")}} を呼び出して明示的に解放する必要があります。
+オブジェクト URL は {{DOMxRef("File")}} オブジェクトを識別する文字列です。 {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を呼び出すたびに、すでにそのファイルのオブジェクト URL を作成していても、一意のオブジェクト URL が作成されます。これらはそれぞれ解除する必要があります。これらはドキュメントがアンロードされると自動的に解放されますが、ページが動的にこれらを使用している場合は {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} を呼び出して明示的に解放する必要があります。
 
 ```js
 URL.revokeObjectURL(objectURL);
@@ -311,16 +278,17 @@ URL.revokeObjectURL(objectURL);
 インターフェイスとなる HTML は次のようになります。
 
 ```html
-<input
-  type="file"
-  id="fileElem"
-  multiple
-  accept="image/*"
-  style="display:none" />
-<a href="#" id="fileSelect">いくつかのファイルを選択してください。</a>
+<input type="file" id="fileElem" multiple accept="image/*" />
+<a href="#" id="fileSelect">ファイルをいくつか選択</a>
 <div id="fileList">
   <p>ファイルが選択されていません。</p>
 </div>
+```
+
+```css
+#fileElem {
+  display: none;
+}
 ```
 
 これにより、ファイル {{HTMLElement("input")}} 要素と、ファイル選択を呼び出すリンクが確立されます (あまり美しくないファイル入力を非表示にするため)。これは、ファイル選択を呼び出すメソッドと同様に、[click() メソッドを使用して非表示の input 要素を使用する](#click_メソッドを使用して非表示の_input_要素を使用する)の節で説明されています。
@@ -346,25 +314,24 @@ fileSelect.addEventListener(
 fileElem.addEventListener("change", handleFiles, false);
 
 function handleFiles() {
+  fileList.textContent = "";
   if (!this.files.length) {
-    fileList.innerHTML = "<p>ファイルが選択されていません。</p>";
+    const p = document.createElement("p");
+    p.textContent = "ファイルが選択されていません。";
+    fileList.appendChild(p);
   } else {
-    fileList.innerHTML = "";
     const list = document.createElement("ul");
     fileList.appendChild(list);
-    for (let i = 0; i < this.files.length; i++) {
+    for (const file of this.files) {
       const li = document.createElement("li");
       list.appendChild(li);
 
       const img = document.createElement("img");
-      img.src = URL.createObjectURL(this.files[i]);
+      img.src = URL.createObjectURL(file);
       img.height = 60;
-      img.onload = () => {
-        URL.revokeObjectURL(img.src);
-      };
       li.appendChild(img);
       const info = document.createElement("span");
-      info.innerHTML = `${this.files[i].name}: ${this.files[i].size} バイト`;
+      info.textContent = `${file.name}: ${file.size} バイト`;
       li.appendChild(info);
     }
   }
@@ -373,26 +340,31 @@ function handleFiles() {
 
 これは、 {{HTMLElement("div")}} の URL を `fileList` という ID で取得することから始まります。これは、サムネイルを含むファイルリストを挿入するブロックです。
 
-`handleFiles()` に渡された {{DOMxRef("FileList")}} オブジェクトが `null` の場合、ブロックの内部 HTML に「ファイルが選択されていません」と表示するように設定します。そうでない場合は、次のようにファイルリストの構築を開始します。
+`handleFiles()` に渡された {{DOMxRef("FileList")}} オブジェクトが空の場合、ブロックの内部 HTML に「ファイルが選択されていません」と表示するように設定します。そうでない場合は、次のようにファイルリストの構築を開始します。
 
 1. 新しく順序なしリスト ({{HTMLElement("ul")}}) 要素を作成します。
 2. 新しいリスト要素は、{{HTMLElement("div")}} ブロックの中に {{DOMxRef("Node.appendChild()")}} メソッドを呼び出すことで挿入されます。
 3. `files` で表される {{DOMxRef("FileList")}} 内のそれぞれの {{DOMxRef("File")}} に対して次の処理を実行します。
-
-   1. 新しくリスト項目 ({{HTMLElement("li")}}) 要素を作成し、リストに挿入します。
+   1. 新しくリストアイテム ({{HTMLElement("li")}}) 要素を作成し、リストに挿入します。
    2. 新しく画像 ({{HTMLElement("img")}}) 要素を作成します。
-   3. {{DOMxRef("URL.createObjectURL()")}} を用いて、Blob の URL を作成して、画像のソースをファイルを表す新しいオブジェクト URL に設定します。
+   3. {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を用いて、Blob の URL を作成して、画像のソースをファイルを表す新しいオブジェクト URL に設定します。
    4. 画像の高さを 60 ピクセルに設定します。
-   5. 画像が読み込まれると不要になるため、画像の読み込みイベントハンドラーを設定してオブジェクトの URL を解放します。これは {{DOMxRef("URL.revokeObjectURL()")}} メソッドを呼び出し、`img.src` で指定したオブジェクト URL 文字列を渡すことで行います。
-   6. 新しいリスト項目をリストに追加する。
+   5. 新しいリストアイテムをリストに追加する。
 
 上のコードのライブデモはこちらです。
 
 {{EmbedLiveSample('Example_Using_object_URLs_to_display_images', '100%', '300px')}}
 
+画像が読み込まれた直後にオブジェクト URL をすぐに取り消さないことに注意してください。そうすると、ユーザーが画像に対して操作（右クリックして画像を保存したり、新しいタブで開いたりなど）ができなくなってしまいます。長寿命のアプリケーションでは、オブジェクト URL が不要になった場合（画像が DOM から除去された場合など）に、 {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} メソッドを呼び出し、オブジェクト URL 文字列を渡して、メモリーを解放するためにオブジェクト URL を無効にする必要があります。
+
 ## 例: ユーザーが選択したファイルを送信
 
-もう１つは、ユーザーが選択したファイルやファイル (先ほどの例で選択した画像など) をサーバーにアップロードできるようにすることです。これは非常に簡単に非同期で行うことができます。
+この例では、ユーザーがファイル（例えば、前回の例で使用した選択した画像）をサーバーにアップロードする方法を示します。
+
+> [!NOTE]
+> 通常、 HTTP リクエストを行うためには、[フェッチ API](/ja/docs/Web/API/Fetch_API) を {{domxref("XMLHttpRequest")}} の代わりに使用することをお勧めします。ただし、この例では、ユーザーにアップロードの進行状況を表示したいのですが、この機能はフェッチ API ではまだ対応していないため、 `XMLHttpRequest` を使用しています。
+>
+> フェッチ API を使用した進行状況の通知の標準化に関する取り組みは、 <https://github.com/whatwg/fetch/issues/607> で行われています。
 
 ### アップロードタスクの生成
 
@@ -402,13 +374,13 @@ function handleFiles() {
 function sendFiles() {
   const imgs = document.querySelectorAll(".obj");
 
-  for (let i = 0; i < imgs.length; i++) {
-    new FileUpload(imgs[i], imgs[i].file);
+  for (const img of imgs) {
+    new FileUpload(img, img.file);
   }
 }
 ```
 
-2 行目は、CSS クラス `obj` を持つドキュメント内のすべての要素の {{DOMxRef("NodeList")}} を取得し `imgs` と呼ばれる変数に格納します。この例では、これらの要素はすべての画像サムネイルになります。このリストを取得したら、それを参照して、それぞれの新しい `FileUpload` インスタンスを作成するのは簡単です。それぞれが対応するファイルのアップロードを処理します。
+`document.querySelectorAll` では CSS クラスが `obj` である文書中のすべての要素を取得します。この例では、これらの要素はすべての画像サムネイルになります。このリストを取得したら、それを参照して、それぞれの新しい `FileUpload` インスタンスを作成するのは簡単です。それぞれが対応するファイルのアップロードを処理します。
 
 ### ファイルのアップロード処理を行う
 
@@ -421,13 +393,12 @@ function FileUpload(img, file) {
   const xhr = new XMLHttpRequest();
   this.xhr = xhr;
 
-  const self = this;
   this.xhr.upload.addEventListener(
     "progress",
     (e) => {
       if (e.lengthComputable) {
         const percentage = Math.round((e.loaded * 100) / e.total);
-        self.ctrl.update(percentage);
+        this.ctrl.update(percentage);
       }
     },
     false,
@@ -436,8 +407,8 @@ function FileUpload(img, file) {
   xhr.upload.addEventListener(
     "load",
     (e) => {
-      self.ctrl.update(100);
-      const canvas = self.ctrl.ctx.canvas;
+      this.ctrl.update(100);
+      const canvas = this.ctrl.ctx.canvas;
       canvas.parentNode.removeChild(canvas);
     },
     false,
@@ -490,63 +461,67 @@ function createThrobber(img) {
 5. `FileReader` オブジェクトを使用して、ファイルをバイナリー文字列に変換します
 6. 最後に、コンテンツがロードされると、 `XMLHttpRequest` 関数の `send()` が呼び出され、ファイルのコンテンツがアップロードされます。
 
-### ファイルのアップロード処理を非同期に扱う
+### ファイルのアップロード処理を非同期に処理する
 
 この例では、サーバー側で PHP を使用し、クライアント側で JavaScript を使用して、ファイルの非同期アップロードを実演しています。
 
 ```php
 <?php
-if (isset($_FILES['myFile'])) {
-    // 例:
-    move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
-    exit;
+if (isset($_FILES["myFile"])) {
+  // Example:
+  move_uploaded_file($_FILES["myFile"]["tmp_name"], "uploads/" . $_FILES["myFile"]["name"]);
+  exit;
 }
-?><!DOCTYPE html>
+?><!doctype html>
 <html lang="ja-JP">
-<head>
-  <meta charset="UTF-8">
-  <title>dnd binary upload</title>
-    <script type="application/javascript">
-        function sendFile(file) {
-            const uri = "/index.php";
-            const xhr = new XMLHttpRequest();
-            const fd = new FormData();
+  <head>
+    <meta charset="UTF-8" />
+    <title>dnd binary upload</title>
+    <script>
+      function sendFile(file) {
+        const uri = "/index.php";
+        const xhr = new XMLHttpRequest();
+        const fd = new FormData();
 
-            xhr.open("POST", uri, true);
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    alert(xhr.responseText); // handle response.
-                }
-            };
-            fd.append('myFile', file);
-            // multipart/form-data のアップロードを開始します。
-            xhr.send(fd);
-        }
+        xhr.open("POST", uri, true);
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            alert(xhr.responseText); // レスポンスを処理
+          }
+        };
+        fd.append("myFile", file);
+        // multipart/form-data のアップロードを開始する
+        xhr.send(fd);
+      }
 
-        window.onload = () => {
-            const dropzone = document.getElementById("dropzone");
-            dropzone.ondragover = dropzone.ondragenter = (event) => {
-                event.stopPropagation();
-                event.preventDefault();
-            }
+      window.onload = () => {
+        const dropzone = document.getElementById("dropzone");
+        dropzone.ondragover = dropzone.ondragenter = (event) => {
+          event.stopPropagation();
+          event.preventDefault();
+        };
 
-            dropzone.ondrop = (event) => {
-                event.stopPropagation();
-                event.preventDefault();
+        dropzone.ondrop = (event) => {
+          event.stopPropagation();
+          event.preventDefault();
 
-                const filesArray = event.dataTransfer.files;
-                for (let i=0; i<filesArray.length; i++) {
-                    sendFile(filesArray[i]);
-                }
-            }
-        }
+          const filesArray = event.dataTransfer.files;
+          for (let i = 0; i < filesArray.length; i++) {
+            sendFile(filesArray[i]);
+          }
+        };
+      };
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">ここにファイルをドラッグ & ドロップしてください</div>
+      <div
+        id="dropzone"
+        style="margin:30px; width:500px; height:300px; border:1px dotted grey;">
+        ここにファイルをドラッグ & ドロップしてください
+      </div>
     </div>
-</body>
+  </body>
 </html>
 ```
 
@@ -554,7 +529,7 @@ if (isset($_FILES['myFile'])) {
 
 オブジェクト URL は画像以外にも使用できます。埋め込まれた PDF ファイルや、ブラウザーで表示可能な他のリソースを表示するために使用できます。
 
-Firefox では、 PDF が iframe 内に埋め込まれて表示されるようにするには (ダウンロードファイルとして提案されるのではなく)、`pdfjs.disabled` の設定を `false` {{non-standard_inline()}} に設定する必要があります。
+Firefox では、 PDF が iframe 内に埋め込まれて表示されるようにするには (ダウンロードファイルとして提案されるのではなく)、`pdfjs.disabled` の設定を `false` に設定する必要があります。
 
 ```html
 <iframe id="viewer"></iframe>
@@ -563,10 +538,12 @@ Firefox では、 PDF が iframe 内に埋め込まれて表示されるよう�
 そして、`src` 属性の変更点はこちらです。
 
 ```js
-const obj_url = URL.createObjectURL(blob);
+const objURL = URL.createObjectURL(blob);
 const iframe = document.getElementById("viewer");
-iframe.setAttribute("src", obj_url);
-URL.revokeObjectURL(obj_url);
+iframe.setAttribute("src", objURL);
+
+// 後で:
+URL.revokeObjectURL(objURL);
 ```
 
 ## 例: 他のファイル形式でのオブジェクト URL の使用
@@ -575,10 +552,12 @@ URL.revokeObjectURL(obj_url);
 
 ```js
 const video = document.getElementById("video");
-const obj_url = URL.createObjectURL(blob);
-video.src = obj_url;
+const objURL = URL.createObjectURL(blob);
+video.src = objURL;
 video.play();
-URL.revokeObjectURL(obj_url);
+
+// 後で:
+URL.revokeObjectURL(objURL);
 ```
 
 ## 関連情報
@@ -588,4 +567,4 @@ URL.revokeObjectURL(obj_url);
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest の使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

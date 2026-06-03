@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
-{{jsSidebar}}
-
 JavaScript 是一门多范式的动态语言，它包含类型、运算符、标准内置对象和方法。它的语法基于 Java 和 C 语言——这两门语言的许多结构也适用于 JavaScript。JavaScript 使用[对象原型](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)和类支持面向对象编程。它也支持函数式编程，因为函数是[头等](/zh-CN/docs/Glossary/First-class_Function)对象，它能通过表达式轻松创建，并像其他对象一样进行传递。
 
 本文的目的是作为各种 JavaScript 语言特性的快速概览，为有其他语言（如 C 或 Java）背景的读者编写。

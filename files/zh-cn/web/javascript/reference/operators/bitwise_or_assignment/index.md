@@ -3,8 +3,6 @@ title: 按位或赋值（|=）
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 **按位或赋值**（**`|=`**) 运算符使用两个操作数的二进制表示，对它们执行按位或运算并将结果分配给变量。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Bitwise OR assignment", "shorter")}}

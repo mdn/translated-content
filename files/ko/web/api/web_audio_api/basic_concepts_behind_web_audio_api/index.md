@@ -68,7 +68,8 @@ var context = new AudioContext();
 var buffer = context.createBuffer(2, 22050, 44100);
 ```
 
-> **참고:** [디지털 오디오](https://en.wikipedia.org/wiki/Digital_audio)에서, **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (또한 **44.1 kHz**로 표현되어짐) 은 일반적인 [샘플링 주파수](https://en.wikipedia.org/wiki/Sampling_frequency)입니다. 왜 44.1kHz일까요?
+> [!NOTE]
+> [디지털 오디오](https://en.wikipedia.org/wiki/Digital_audio)에서, **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (또한 **44.1 kHz**로 표현되어짐) 은 일반적인 [샘플링 주파수](https://en.wikipedia.org/wiki/Sampling_frequency)입니다. 왜 44.1kHz일까요?
 >
 > 첫째로, 왜냐하면 인간의 [가청 범위](https://en.wikipedia.org/wiki/Hearing_range)(hearing range)는 대략적으로 20 Hz에서 20,000 Hz이기 때문입니다. [표본화 정리](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem)(Nyquist–Shannon sampling theorem)에 의하여, 샘플링 주파수는 반드시 재생하기를 원하는 최대 주파수의 2배보다 커야 합니다. 그러므로, 샘플링 레이트는 40 kHz보다 커야만 합니다.
 >

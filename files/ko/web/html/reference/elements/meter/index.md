@@ -29,16 +29,16 @@ label {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#레이블_가능"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#레이블_가능"
           >레이블 가능</a
         >, 뚜렷한 콘텐츠.
       </td>
@@ -46,7 +46,7 @@ label {
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >. 단, 다른 <code>&#x3C;meter></code> 요소는 사용할 수 없습니다.
       </td>
@@ -58,7 +58,7 @@ label {
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>
@@ -76,13 +76,13 @@ label {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `value`
-
   - : 현재의 값. 최소와 최댓값(`min`과 `max` 특성)을 지정한 경우, 그 사이여야 합니다. 지정하지 않았거나 잘못된 값인 경우 `0`으로 간주합니다. 지정했으나 범위 바깥인 경우, 범위에 맞춰 나머지 값을 버립니다.
 
-    > **참고:**`value`가 `0` 이상 `1` 이하가 아닌 이상, `min`과 `max`를 정의해 `value` 값이 그 안에 들어가도록 해야 합니다.
+    > [!NOTE]
+    > `value`가 `0` 이상 `1` 이하가 아닌 이상, `min`과 `max`를 정의해 `value` 값이 그 안에 들어가도록 해야 합니다.
 
 - `min`
   - : 측정 범위의 가능한 최솟값. 지정할 경우 최댓값(`max` 특성) 미만이어야 합니다. 지정하지 않은 경우 `0`입니다.
@@ -95,7 +95,7 @@ label {
 - `optimum`
   - : 이상적인 값. `min`과 `max` 특성으로 정의한 범위 내에 위치해야 합니다. `low`와 `high` 특성을 함께 사용한 경우, `optimum`은 어느 범위가 이상적인지 나타냅니다. 예를 들어, 값이 `min`과 `low` 사이에 위치한 경우, 측정 범위 중 낮은 범위가 이상적인 범위입니다.
 - `form`
-  - : `<meter>`와 연결할 {{htmlelement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다. [`<input type="number">`](/ko/docs/Web/HTML/Element/input/number)의 값 범위를 보여주는 등 `<meter>`를 양식 관련 콘텐츠로서 사용할 때만 지정하세요.
+  - : `<meter>`와 연결할 {{htmlelement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다. [`<input type="number">`](/ko/docs/Web/HTML/Element/input/number)의 값 범위를 보여주는 등 `<meter>`를 양식 관련 콘텐츠로서 사용할 때만 지정하세요.
 
 ## 예제
 

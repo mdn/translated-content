@@ -23,9 +23,7 @@ matchAll(options)
 ### 매개변수
 
 - `options` {{optional_inline}}
-
   - : 매칭 작업에 대한 옵션을 설정할 수 있는 옵션 객체. 사용 가능한 옵션은 다음과 같습니다.
-
     - `includeUncontrolled`
       - : 불리언 값.
         `true`로 설정하면, 현재 서비스 워커와 동일한 출처를 공유하는 모든 서비스 워커 클라이언트를 반환합니다.

@@ -3,8 +3,6 @@ title: <map>：圖像映射元素
 slug: Web/HTML/Reference/Elements/map
 ---
 
-{{HTMLSidebar}}
-
 **`<map>`** [HTML](/zh-TW/docs/Web/HTML) 元素與 {{HTMLElement("area")}} 元素一同使用，用於定義圖像映射（可點擊的鏈接區域）。
 
 {{InteractiveExample("HTML Demo: &lt;map&gt;", "tabbed-standard")}}

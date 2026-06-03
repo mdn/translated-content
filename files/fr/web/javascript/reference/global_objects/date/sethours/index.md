@@ -1,67 +1,69 @@
 ---
-title: Date.prototype.setHours()
+title: "Date : méthode setHours()"
+short-title: setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
+l10n:
+  sourceCommit: b3840f6234d24ade72a43171fd6489dd533aaf15
 ---
 
-{{JSRef}}
+La méthode **`setHours()`** des instances de {{JSxRef("Date")}} modifie les heures, les minutes, les secondes et/ou les millisecondes pour cette date selon l'heure locale.
 
-La méthode **`setHours()`** définit les heures pour une date donnée, selon l'heure locale, et renvoie le nombre de millièmes de secondes écoulées entre le 1er janvier 1970 00:00:00 UTC et la nouvelle date mise à jour.
-
-{{InteractiveExample("JavaScript Demo: Date.setHours()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.setHours()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30");
 event.setHours(20);
 
 console.log(event);
-// Expected output: "Tue Aug 19 1975 20:15:30 GMT+0200 (CEST)"
-// Note: your timezone may vary
+// Résultat attendu : "Tue Aug 19 1975 20:15:30 GMT+0200 (CEST)"
+// Remarque : votre fuseau horaire peut varier
 
 event.setHours(20, 21, 22);
 
 console.log(event);
-// Expected output: "Tue Aug 19 1975 20:21:22 GMT+0200 (CEST)"
+// Résultat attendu : "Tue Aug 19 1975 20:21:22 GMT+0200 (CEST)"
 ```
 
 ## Syntaxe
 
-```js
-dateObj.setHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
-```
-
-### Versions antérieures à JavaScript 1.3
-
-```js
-dateObj.setHours(valeurHeures);
+```js-nolint
+setHours(hoursValue)
+setHours(hoursValue, minutesValue)
+setHours(hoursValue, minutesValue, secondsValue)
+setHours(hoursValue, minutesValue, secondsValue, msValue)
 ```
 
 ### Paramètres
 
-- `valeurHeures`
-  - : Un entier normalement compris entre 0 et 23, représentant l'heure. Si la valeur est supérieure à 23, la valeur de l'heure sera incrémentée d'autant d'heures supplémentaires.
-- `valeurMinutes`
-  - : Paramètre optionnel, un entier normalement compris entre 0 et 59, représentant les minutes. Si la valeur est supérieure à 59, la valeur de l'heure sera incrémentée d'autant de minutes supplémentaires.
-- `valeurSecondes`
-  - : Paramètre optionnel, un entier normalement compris entre 0 et 59, représentant les secondes. Si vous indiquez le paramètre `valeurSecondes`, vous devez aussi renseigner `valeurMinutes`. Si la valeur est supérieure à 59, l'heure sera incrémentée d'autant de secondes supplémentaires.
-- `valeurMs`
-  - : Paramètre optionnel, un entier normalement compris entre 0 et 999, représentant les millièmes de secondes. Si vous indiquez `valeurMs`, vous devez aussi renseigner `valeurMinutes` et `valeurSecondes`. Si la valeur fournie est supérieure à 999, l'heure sera incrémentée d'autant de millisecondes supplémentaires.
+- `hoursValue`
+  - : Un entier compris entre 0 et 23 représentant les heures.
+- `minutesValue` {{Optional_Inline}}
+  - : Un entier compris entre 0 et 59 représentant les minutes.
+- `secondsValue` {{Optional_Inline}}
+  - : Un entier compris entre 0 et 59 représentant les secondes. Si vous indiquez `secondsValue`, vous devez aussi indiquer `minutesValue`.
+- `msValue` {{Optional_Inline}}
+  - : Un entier compris entre 0 et 999 représentant les millisecondes. Si vous indiquez `msValue`, vous devez aussi indiquer `minutesValue` et `secondsValue`.
 
 ### Valeur de retour
 
-Le nombre de millisecondes écoulées entre le premier janvier 1970 à minuit, UTC et la date mise à jour.
+Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouveau [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Si un paramètre vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) et `NaN` est retourné.
 
 ## Description
 
-Si vous ne renseignez pas `valeurMinutes`, `valeurSecondes` et `valeurMs`, les valeurs renvoyées par les méthodes {{jsxref("Date.getMinutes", "getMinutes()")}}, {{jsxref("Date.getSeconds", "getSeconds()")}}, et {{jsxref("Date.getMilliseconds", "getMilliseconds()")}} seront utilisées.
+Si vous ne définissez pas les paramètres `minutesValue`, `secondsValue` et `msValue`, les mêmes valeurs que celles retournées par {{JSxRef("Date/getMinutes", "getMinutes()")}}, {{JSxRef("Date/getSeconds", "getSeconds()")}} et {{JSxRef("Date/getMilliseconds", "getMilliseconds()")}} sont utilisées.
 
-Si un des paramètres que vous renseignez est en dehors des limites attendues, `setHours()` tentera de mettre à jour la date en conséquence. Par exemple, si vous utilisez 100 pour `valeurSecondes`, les minutes seront incrémentées de 1 (min + 1), et 40 sera utilisé pour les secondes.
+Si un paramètre que vous définissez est en dehors de la plage attendue, les autres paramètres et les informations de date dans l'objet {{JSxRef("Date")}} sont mises à jour en conséquence. Par exemple, si vous définissez 100 pour `secondsValue`, les minutes sont incrémentées de 1 (`minutesValue + 1`), et 40 est utilisé pour les secondes.
+
+Comme `setHours()` fonctionne selon l'heure locale, franchir une transition d'heure d'été (DST) peut entraîner un temps écoulé différent de celui attendu. Par exemple, si le changement d'heure franchit une transition d'avance du printemps (perte d'une heure), la différence de timestamps entre la nouvelle et l'ancienne date est inférieure d'une heure à la différence nominale d'heures. À l'inverse, franchir une transition de recul de l'automne (gain d'une heure) ajoute une heure supplémentaire. Si vous devez ajuster la date d'une durée fixe, envisagez d'utiliser {{JSxRef("Date/setUTCHours", "setUTCHours()")}} ou {{JSxRef("Date/setTime", "setTime()")}}.
+
+Si la nouvelle heure locale tombe dans une transition de décalage, l'heure exacte est déterminée en utilisant le même comportement que l'option [`disambiguation: "compatible"`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguïté_et_écarts_entre_lheure_locale_et_lheure_utc) de `Temporal`. C'est-à-dire, si l'heure locale correspond à deux instants, le plus tôt est choisi&nbsp;; si l'heure locale n'existe pas (il y a un écart), on avance de la durée de l'écart.
 
 ## Exemples
 
-### Utiliser `setHours()`
+### Utiliser la méthode `setHours()`
 
 ```js
-var leGrandJour = new Date();
+const leGrandJour = new Date();
 leGrandJour.setHours(7);
 ```
 
@@ -75,5 +77,5 @@ leGrandJour.setHours(7);
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.getHours()")}}
-- {{jsxref("Date.prototype.setUTCHours()")}}
+- La méthode {{JSxRef("Date.prototype.getHours()")}}
+- La méthode {{JSxRef("Date.prototype.setUTCHours()")}}

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.findLastIndex()
+short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 l10n:
   sourceCommit: 57375b77984037c614982a9327bc96101824db89
@@ -12,7 +13,7 @@ l10n:
 
 인덱스 대신 판별 함수를 만족하는 마지막 값을 반환하는 {{jsxref("Array/findLast", "findLast()")}} 메서드도 참고하세요.
 
-{{InteractiveExample("JavaScript Demo: Array.findLastIndex()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.findLastIndex()", "shorter")}}
 
 ```js interactive-example
 const array1 = [5, 12, 50, 130, 44];

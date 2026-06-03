@@ -1,0 +1,154 @@
+---
+title: 网格布局
+slug: Web/CSS/Guides/Grid_layout
+---
+
+**CSS 网格布局**擅长于将一个页面划分为几个主要区域，以及定义这些区域的大小、位置、层次等关系（前提是 HTML 生成了这些区域）。
+
+像表格一样，网格布局让我们能够按行或列来对齐元素。然而在布局上，网格比表格更可能做到或更简单。例如，网格容器的子元素可以自己定位，以便它们像 CSS 定位的元素一样，真正的有重叠和层次。
+
+## 基本示例
+
+以下示例显示了一个三列轨道的网格，其中创建的行最小为 100 像素，最大为自动。条目使用线性定位放置在网格上。
+
+```css hidden
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.wrapper > div {
+  border: 2px solid rgb(233, 171, 88);
+  border-radius: 5px;
+  background-color: rgba(233, 171, 88, 0.5);
+  padding: 1em;
+  color: #d9480f;
+}
+```
+
+### HTML
+
+```html
+<div class="wrapper">
+  <div class="one">One</div>
+  <div class="two">Two</div>
+  <div class="three">Three</div>
+  <div class="four">Four</div>
+  <div class="five">Five</div>
+  <div class="six">Six</div>
+</div>
+```
+
+### CSS
+
+```css
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.one {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+.three {
+  grid-row: 2 / 5;
+  grid-column: 1;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3;
+}
+.five {
+  grid-column: 2;
+  grid-row: 4;
+}
+.six {
+  grid-column: 3;
+  grid-row: 4;
+}
+```
+
+{{EmbedLiveSample("基本示例", "100%", "460")}}
+
+## 参考
+
+### CSS 属性
+
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-template")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-flow")}}
+- {{cssxref("grid")}}
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-area")}}
+- {{cssxref("grid-row-gap")}}
+- {{cssxref("grid-column-gap")}}
+- {{cssxref("grid-gap")}}
+
+### CSS 函数
+
+- {{cssxref("repeat", "repeat()")}}
+- {{cssxref("minmax", "minmax()")}}
+- {{cssxref("fit-content", "fit-content()")}}
+
+### CSS 数据类型
+
+- {{cssxref("&lt;flex&gt;")}}
+
+### 术语表
+
+- [网格（Grid）](/zh-CN/docs/Glossary/Grid)
+- [网格线（Grid lines）](/zh-CN/docs/Glossary/Grid_Lines)
+- [网格轨道（Grid tracks）](/zh-CN/docs/Glossary/Grid_Tracks)
+- [网格单元格（Grid cell）](/zh-CN/docs/Glossary/Grid_Cell)
+- [网格区域（Grid areas）](/zh-CN/docs/Glossary/Grid_Areas)
+- [网格间隙（Gutters）](/zh-CN/docs/Glossary/Gutters)
+- [网格轴（Grid Axis）](/zh-CN/docs/Glossary/Grid_Axis)
+- [网格行（Grid row）](/zh-CN/docs/Glossary/Grid_Row)
+- [网格列（Grid column）](/zh-CN/docs/Glossary/Grid_Column)
+
+## 指南
+
+- [Basic concepts of Grid Layout](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [Relationship of Grid Layout to other layout methods](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+- [Layout using named grid lines](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+- [Grid template areas](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+- [Layout using named grid lines](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+- [Auto-placement in CSS Grid Layout](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
+- [Box alignment in CSS Grid Layout](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [CSS Grid, Logical Values and Writing Modes](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
+- [CSS Grid Layout and accessibility](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Accessibility)
+- [Realising common layouts using CSS Grid](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
+
+## 外部资源
+
+- [Examples from Jen Simmons](https://labs.jensimmons.com/)
+- [Grid by Example - a collection of usage examples and video tutorials](https://gridbyexample.com/)
+- [Codrops Grid Reference](https://tympanus.net/codrops/css_reference/grid/)
+- [Firefox DevTools CSS Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
+- [CSS Grid Playground](https://mozilladevelopers.github.io/playground/)
+- [Grid Garden](https://cssgridgarden.com/) - 一个学习 CSS 网格的游戏
+- <https://css-tricks.com/snippets/css/complete-guide-grid/>
+- <https://css-tricks.com/snippets/css/css-grid-starter-layouts/>
+- <https://css-tricks.com/getting-started-css-grid/>
+
+## 规范
+
+{{Specifications}}

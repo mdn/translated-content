@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Accept
 original_slug: Web/HTTP/Headers/Accept
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição HTTP **`Accept`** anuncia quais tipos de conteúdo, expressos como [MIME types](/pt-BR/docs/Web/HTTP/Guides/MIME_types), o cliente é capaz de entender. Usando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation), o servidor então seleciona uma das propostas, a usa e então informa o cliente da sua escolha com o cabeçalho de resposta {{HTTPHeader("Content-Type")}}. Navegadores colocam valores adequados para este cabeçalho dependendo do contexto onde a requisição é feita: quando buscando um CSS _stylesheet_, um valor diferente é colocado para a requisição, o mesmo acontece com imagens, vídeos ou scripts.
 
 <table class="properties">
@@ -15,7 +13,7 @@ O cabeçalho de requisição HTTP **`Accept`** anuncia quais tipos de conteúdo,
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
     <tr>

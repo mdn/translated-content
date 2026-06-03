@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-src`** ディレクティブは、 JavaScript の情報なソースを指定します。これは {{HTMLElement("script")}} 要素の中に直接読み込まれる URL だけでなく、インラインのスクリプトイベントハンドラー (`onclick`) やスクリプト実行のトリガーとなりうる [XSLT スタイルシート](/ja/docs/Web/XML/XSLT)のようなものも含まれます。
 
 <table class="properties">
@@ -40,7 +38,6 @@ Content-Security-Policy: script-src <source-expression-list>;
 - `'none'`
   - : この種類のリソースは読み込まれません。単一引用符は必須です。
 - `<source-expression-list>`
-
   - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、[フェッチディレクティブの構文](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#フェッチディレクティブの構文)に掲載されているソース表現のいずれかが適用できます。
 
 ## 例
@@ -81,7 +78,7 @@ document.getElementById("btn").addEventListener("click", doSomething);
 
 代替の方法として、ファイルハッシュを使用して許可するスクリプトを指定する方法があります。
 この手法を使用すると、`<script>` 要素内の外部ファイルは、 [`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性の有効なハッシュ値がすべて CSP ヘッダーで許可された値と一致した場合にのみ、読み込まれ実行されます。
-[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の機能は、ダウンロードしたファイルが示すハッシュ値を持ち、変更されていないことを追加的に調べます。
+[サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)の機能は、ダウンロードしたファイルが示すハッシュ値を持ち、変更されていないことを追加的に調べます。
 これはドメインを信頼するよりも安全です。ファイルは、たとえ侵害されたサイトから読み込まれたとしても、改変されていない場合にのみ使用されるからです。
 しかし、これはより粒度の細かいものであり、関連付けられたスクリプトが変更されるたびに、 CSP とスクリプト要素でハッシュ値を更新することが要求されます。
 下記の CSP ヘッダーは、その手法を示しています。
@@ -121,7 +118,7 @@ Content-Security-Policy: script-src 'sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy
   crossorigin="anonymous"></script>
 ```
 
-[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)には、ハッシュの計算と `integrity` 属性の使用に関するより多くの情報が含まれています。
+[サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)には、ハッシュの計算と `integrity` 属性の使用に関するより多くの情報が含まれています。
 
 ### 安全ではないインラインスクリプト
 
@@ -215,7 +212,6 @@ Content-Security-Policy:  script-src 'unsafe-hashes' 'sha256-{HASHED_EVENT_HANDL
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("Function", "Function()")}}
 - メソッドの文字列リテラルを `setTimeout("alert(\"Hello World!\");", 500);` のように渡した場合
-
   - {{domxref("Window.setTimeout", "setTimeout()")}}
   - {{domxref("Window.setInterval", "setInterval()")}}
   - {{domxref("Window.setImmediate", "setImmediate()")}}

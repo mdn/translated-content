@@ -2,12 +2,10 @@
 title: ツールとセットアップ
 slug: Learn_web_development/Howto/Tools_and_setup
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
 
-{{LearnSidebar}}
-
-ウェブサイトを作るためのツールやソフトウェアに関係する質問です。
+この章では、ウェブサイトを構築するために使用できるツール/ソフトウェアに関連する質問を記載しています。
 
 - [ウェブサイトを作るのにどんなソフトウェアが必要か](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
   - : この記事では、ウェブサイトの編集、アップロード、閲覧に、それぞれどのようなソフトウェアコンポーネントが必要になるか説明します。

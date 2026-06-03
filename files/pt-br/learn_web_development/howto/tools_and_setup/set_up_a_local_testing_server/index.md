@@ -14,12 +14,12 @@ Este artigo explica como configurar um simples servidor de testes local em seu c
         <p>
           Primeiro você precisa saber
           <a
-            href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Como_a_internet_funciona"
+            href="/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
             >como a internet funciona</a
           >
           e
           <a
-            href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/o_que_e_um_web_server"
+            href="/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
             >o que é um servidor Web</a
           >.
         </p>
@@ -52,7 +52,6 @@ Para contornar o problema de requisições assíncronas, precisamos testar esses
 Para fazer isso:
 
 1. Instale o Python. Se você estiver usando Linux ou macOS, ele já deverá estár disponível em seu sistema. Se você é um usuário do Windows, pode obter um instalador na página inicial do Python e seguir as instruções para instalá-lo:
-
    - Vá para [python.org](https://www.python.org/) (em inglês)
    - Na seção Download, clique no link para Python "3.xxx".
    - Na parte inferior da página, escolha o instalador executável do _Windows x86_ e baixe-o.

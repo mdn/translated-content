@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当流被打开且准备开始传递数据时调用的事件处理器。从这时起扩展就可以调用过滤器函数，例如 {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}、{{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}} 或 {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}。
 
 ## 浏览器兼容性

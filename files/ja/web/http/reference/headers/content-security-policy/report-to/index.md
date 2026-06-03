@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 `Content-Security-Policy` の **`report-to`** ディレクティブは、 CSP 違反の報告に使用するエンドポイントの名前を示します。
 
 CSP 違反が発生した場合、シリアライズされた {{domxref("CSPViolationReportBody")}} オブジェクトのインスタンスが含まれているレポートが生成されます。

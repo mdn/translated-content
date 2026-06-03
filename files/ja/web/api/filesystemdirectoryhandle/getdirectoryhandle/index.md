@@ -21,9 +21,7 @@ getDirectoryHandle(name, options)
 - `name`
   - : 取得したいサブディレクトリーの {{domxref('FileSystemHandle.name')}} を表す文字列です。
 - `options` {{optional_inline}}
-
   - : 取得するサブディレクトリーに関するオプションを持つオブジェクトで、省略可能です。以下のオプションがあります。
-
     - `create`
       - : {{jsxref("boolean")}} 値で、デフォルトは `false` です。`true` に設定すると、ディレクトリーが見つからない場合、指定した名前のディレクトリーが作成されて返されます。
 

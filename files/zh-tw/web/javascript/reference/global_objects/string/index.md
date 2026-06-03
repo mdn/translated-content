@@ -3,8 +3,6 @@ title: 字串
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
 
-{{JSRef}}
-
 **`String`** 全域物件為字串的構造函數，或是一個字符序列。
 
 ## 語法
@@ -304,7 +302,6 @@ The following is a shim to provide support to non-supporting browsers:
   - : Returns a new string containing characters of the calling string from (or between)
     the specified index (or indices).
 - {{jsxref("String.prototype.toLocaleLowerCase()")}}
-
   - : The characters within a string are converted to lowercase while respecting the
     current locale.
 
@@ -312,7 +309,6 @@ The following is a shim to provide support to non-supporting browsers:
     {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
 
 - {{jsxref("String.prototype.toLocaleUpperCase()", "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
-
   - : The characters within a string are converted to uppercase while respecting the
     current locale.
 

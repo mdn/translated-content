@@ -10,7 +10,8 @@ l10n:
 
 `createBiquadFilter()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("BiquadFilterNode") }} を生成し、いくつかの異なる共通フィルター型として設定可能な 2 次フィルターを表現します。
 
-> **メモ:** {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} コンストラクターが {{domxref("BiquadFilterNode")}} を作成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> [!NOTE]
+> {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} コンストラクターが {{domxref("BiquadFilterNode")}} を作成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c6f0f106b9083984dbf597678def6561729bb459
 ---
 
-{{jsSidebar("Statements")}}
-
 **空语句**用于不提供任何语句，尽管 JavaScript 语法期望提供一个语句。
 
 {{InteractiveExample("JavaScript Demo: Statement - Empty")}}

@@ -42,7 +42,7 @@ Llamamos a esto una _llamada a función asíncrona_. Esta convención tiene vari
 
 A diferencia de las funciones callback pasadas al "viejo estilo", una promesa viene con algunas garantías:
 
-- Las funciones callback nunca serán llamadas antes de la [terminación de la ejecución actual](/es/docs/Web/JavaScript/Event_loop#ejecutar_hasta_completar) del bucle de eventos de JavaScript.
+- Las funciones callback nunca serán llamadas antes de la [terminación de la ejecución actual](/es/docs/Web/JavaScript/Reference/Execution_model#ejecutar_hasta_completar) del bucle de eventos de JavaScript.
 - Las funciones callback añadidas con `then()` incluso después del éxito o fracaso de la operación asíncrona serán llamadas como se mostró anteriormente.
 - Múltiples funciones callback pueden ser añadidas llamando a `then()` varias veces. Cada una de ellas es ejecutada una seguida de la otra, en el orden en el que fueron insertadas.
 

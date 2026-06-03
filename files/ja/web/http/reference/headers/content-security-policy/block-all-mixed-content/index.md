@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 > [!WARNING]
 > このディレクティブは、仕様上、廃止されたものとして位置づけられています。
@@ -14,9 +14,10 @@ l10n:
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`block-all-mixed-content`** ディレクティブは、ページが HTTPS を使用しているときに HTTP で資産を読み込むことを防ぎます。
 
-すべての[混在コンテンツ](/ja/docs/Web/Security/Mixed_content)のリソースのリクエストは、ブロック可能であるものやアップグレード可能であるものを含め、ブロックされます。これは {{HTMLElement("iframe")}} の文書にも適用され、ページ全体で混在コンテンツがないことを保証します。
+すべての[混在コンテンツ](/ja/docs/Web/Security/Defenses/Mixed_content)のリソースのリクエストは、ブロック可能であるものやアップグレード可能であるものを含め、ブロックされます。これは {{HTMLElement("iframe")}} の文書にも適用され、ページ全体で混在コンテンツがないことを保証します。
 
-> **メモ:** {{CSP("upgrade-insecure-requests")}} ディレクティブが `block-all-mixed-content` の前に評価されます。
+> [!NOTE]
+> {{CSP("upgrade-insecure-requests")}} ディレクティブが `block-all-mixed-content` の前に評価されます。
 > 前者が設定されていれば、後者は何もしません。どちらかのディレクティブを設定してください。 HTTP にリダイレクトした後で HTTPS を強制することができない古いブラウザーで HTTPS を強制させたくない限り、両方の効果はありません。
 
 ## 構文
@@ -53,4 +54,4 @@ Content-Security-Policy: img-src https:
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{CSP("upgrade-insecure-requests")}}
-- [混在コンテンツ](/ja/docs/Web/Security/Mixed_content)
+- [混在コンテンツ](/ja/docs/Web/Security/Defenses/Mixed_content)

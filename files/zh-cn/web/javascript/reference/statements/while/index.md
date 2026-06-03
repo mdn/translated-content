@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a13e4b5745274e14f7e1f5213522a4a39b228f81
 ---
 
-{{jsSidebar("Statements")}}
-
 **`while`** 语句创建一个循环，只要测试条件求值为真，则循环执行指定语句。在执行语句前会先对条件进行求值。
 
 {{InteractiveExample("JavaScript Demo: Statement - While")}}
@@ -32,7 +30,6 @@ while (condition)
 - `condition`
   - : 每次循环之前求值的表达式。如果[求值为真](/zh-CN/docs/Glossary/Truthy)，`statement` 就会被执行。如果[求值为假](/zh-CN/docs/Glossary/Falsy)，则执行 `while` 循环后面的语句。
 - `statement`
-
   - : 可选语句，只要条件表达式求值为真就会执行。要在循环中执行多条语句，可以使用{{jsxref("Statements/block", "块", "", 1)}}语句（`{ /* ... */ }`）包住这些语句。
 
     注意：使用 {{jsxref("Statements/break", "break")}} 语句在 `condition` 求值为真之前停止循环。

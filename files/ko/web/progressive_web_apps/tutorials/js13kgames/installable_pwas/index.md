@@ -3,7 +3,7 @@ title: PWA를 설치가능하게 만드는 방법
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 ---
 
-{{PWASidebar}}{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PWASidebar}}{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 이전 문서에서는 [service worker](/ko/docs/Web/API/Service_Worker_API)의 도움으로 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 을 오프라인에서 동작하는 방법에 대해 알아보았습니다. 그런데 우리는 더 나아가 모바일 브라우저를 지원하는 웹 앱을 네이티브 앱처럼 설치할 수 있게 할수도 있습니다. 이 문서에서는 웹 manifest를 사용해 홈 화면에 추가라고 불리는 기능을 구현하는 방법에 대해 설명합니다.
 
@@ -71,7 +71,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 - `theme_color`: 운영 체제에 의해 사용될 UI를 위한 주요 색상입니다.
 - `background_color`: 스플래시 화면과 설치하는 동안 사용될 배경 색상입니다.
 
-웹 manifest를 위한 최소 요구 사항은 `name`과 적어도 하나(`src`, `size`, `type`을 포함)의 아이콘입니다. `description`, `short_name`, `start_url`은 권장사항입니다. 위에서 나열한 항목 외 더 많은 항목들이 있습니다. [Web App Manifest 레퍼런스](/ko/docs/Web/Manifest)에서 자세한 내용에 대해 확인하시기 바랍니다.
+웹 manifest를 위한 최소 요구 사항은 `name`과 적어도 하나(`src`, `size`, `type`을 포함)의 아이콘입니다. `description`, `short_name`, `start_url`은 권장사항입니다. 위에서 나열한 항목 외 더 많은 항목들이 있습니다. [Web App Manifest 레퍼런스](/ko/docs/Web/Progressive_web_apps/Manifest)에서 자세한 내용에 대해 확인하시기 바랍니다.
 
 ## 홈 화면에 추가
 
@@ -111,4 +111,4 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 
 이제 PWA 퍼즐의 마지막 조각(푸시 알림을 통한 재참여)으로 이동해봅시다.
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}

@@ -3,8 +3,6 @@ title: Set-Cookie2
 slug: conflicting/Web/HTTP/Headers/Set-Cookie
 ---
 
-{{HTTPSidebar}}
-
 O obsoleto cabeçalho de resposta HTTP **`Set-Cookie2`** usado para enviar _cookies_ do servidor para o agente de usuário, mas ele foi depreciado por especificação. Use {{HTTPHeader("Set-Cookie")}} ao invés disso.
 
 <table class="properties">
@@ -14,7 +12,7 @@ O obsoleto cabeçalho de resposta HTTP **`Set-Cookie2`** usado para enviar _cook
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

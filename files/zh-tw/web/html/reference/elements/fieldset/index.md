@@ -3,8 +3,6 @@ title: <fieldset>：欄集元素
 slug: Web/HTML/Reference/Elements/fieldset
 ---
 
-{{HTMLSidebar}}
-
 **`<fieldset>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於在網頁表單中將多個控件以及標籤（{{HTMLElement("label")}}）分組。
 
 {{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
@@ -49,16 +47,16 @@ input {
 - `form`
   - : 這個屬性接受一個 {{HTMLElement("form")}} 元素的 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#id) 屬性的值，你希望 `<fieldset>` 成為該表單的一部分，即使它不在表單內。請注意，這種用法很混亂——如果你希望 `<fieldset>` 內的 {{HTMLElement("input")}} 元素與表單關聯，則需要直接在這些元素上使用 `form` 屬性。你可以使用 JavaScript 來檢查哪些元素與表單關聯，使用 {{domxref("HTMLFormElement.elements")}}。
 - `name`
-
   - : 與該組關聯的名稱。
 
-    > **備註：** `<fieldset>` 的標題由嵌套在其中的第一個 {{HTMLElement("legend")}} 元素提供。
+    > [!NOTE]
+    > `<fieldset>` 的標題由嵌套在其中的第一個 {{HTMLElement("legend")}} 元素提供。
 
 ## 使用 CSS 進行樣式設置
 
 對於 `<fieldset>`，有一些特殊的樣式考慮因素。
 
-它的 {{cssxref("display")}} 默認值為 `block`，並建立了一個[塊格式化上下文](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)。如果 `<fieldset>` 以內聯級別的 `display` 值進行樣式設置，則其行為將像 `inline-block` 一樣，否則將像 `block` 一樣。默認情況下，周圍有一個 `2px` 的 `groove` 邊框圍繞內容，並有一小部分默認填充。元素默認具有 {{cssxref("min-inline-size", "min-inline-size: min-content")}}。
+它的 {{cssxref("display")}} 默認值為 `block`，並建立了一個[塊格式化上下文](/zh-TW/docs/Web/CSS/Guides/Display/Block_formatting_context)。如果 `<fieldset>` 以內聯級別的 `display` 值進行樣式設置，則其行為將像 `inline-block` 一樣，否則將像 `block` 一樣。默認情況下，周圍有一個 `2px` 的 `groove` 邊框圍繞內容，並有一小部分默認填充。元素默認具有 {{cssxref("min-inline-size", "min-inline-size: min-content")}}。
 
 如果存在 {{htmlelement("legend")}}，則其位於 `block-start` 邊框之上。`<legend>` 將會縮小包裹，並且也會建立一個格式化上下文。`display` 值被轉換為塊級別。（例如，`display: inline` 行為與 `block` 一樣。）
 

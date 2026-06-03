@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **RTP 控制协议**（**RTCP**）是 {{Glossary("RTP")}} 协议的伙伴。RTCP 用于提供有关 RTP 媒体流会话的控制和统计信息。
 
 这样可以在使用底层数据包传递层传输 RTCP 信号、RTP 和媒体内容的同时，逻辑上和功能上将控制和统计包与媒体流分离。

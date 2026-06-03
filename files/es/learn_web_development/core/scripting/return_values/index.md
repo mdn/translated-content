@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Return_values
 original_slug: Learn/JavaScript/Building_blocks/Return_values
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
 Hay un último concepto esencial para que discutamos en este curso, para cerrar nuestra visión de las funciones: — lo valores que se devuelven. Algunas funciones no devuelven un valor significativo después de su finalización, pero otras sí, y es importante comprender cuáles son sus valores, cómo utilizarlos en su código y cómo hacer que sus propias funciones personalizadas devuelvan valores útiles. Cubriremos todos estos a continuación.
 
@@ -152,4 +152,4 @@ If there is anything you didn't understand, feel free to read through the articl
 - [Functions in-depth](/es/docs/Web/JavaScript/Reference/Functions) — a detailed guide covering more advanced functions-related information.
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — a common JavaScript pattern is to pass a function into another function as an argument, which is then called inside the first function. This is a little beyond the scope of this course, but worth studying before too long.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}

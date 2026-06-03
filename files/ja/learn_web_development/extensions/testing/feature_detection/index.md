@@ -57,7 +57,7 @@ if ("geolocation" in navigator) {
 
 JavaScriptで _[element.style.プロパティ](/ja/docs/Web/API/HTMLElement/style)_ （例 `paragraph.style.rotate`）の存在をテストすることで、 CSS 機能のテストを書くことができます。
 
-古典的な例は、ブラウザーの[サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)の対応をテストすることです。 [`grid-template-columns`](/ja/docs/Web/CSS/grid-template-columns) と [`grid-template-rows`](/ja/docs/Web/CSS/grid-template-rows) のサブグリッドの値として `subgrid` に対応しているブラウザーの場合、レイアウトでサブグリッドを使用することができます。そうでないブラウザーでは、通常のグリッドを使用することができて、動作はうまくいきますが、見た目はあまりよくありません。
+古典的な例は、ブラウザーの[サブグリッド](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid)の対応をテストすることです。 [`grid-template-columns`](/ja/docs/Web/CSS/Reference/Properties/grid-template-columns) と [`grid-template-rows`](/ja/docs/Web/CSS/Reference/Properties/grid-template-rows) のサブグリッドの値として `subgrid` に対応しているブラウザーの場合、レイアウトでサブグリッドを使用することができます。そうでないブラウザーでは、通常のグリッドを使用することができて、動作はうまくいきますが、見た目はあまりよくありません。
 
 この例を用いると、値が対応している場合はサブグリッドのスタイルシートを、対応していない場合は通常のグリッドのスタイルシートを含めることができます。そのためには、 HTML ファイルの見出しに 2 つのスタイルシートを含めることができます。 1 つはすべてのスタイル設定、もう 1 つはサブグリッドに対応していない場合の既定レイアウトを実装するものです。
 
@@ -83,7 +83,7 @@ if (CSS.supports("grid-template-columns", "subgrid")) {
 
 #### @supports
 
-CSS にはネイティブの機能検出メカニズムがあります。 {{cssxref("@supports")}} アットルールです。これは[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)と同じように動作しますが、解像度や画面の内側、縦横比などのメディア特性に応じて CSS を選択的に適用するのではなく、 `CSS.supports()` と同じように、 CSS 機能が対応しているかどうかによって CSS を選択的に適用します。
+CSS にはネイティブの機能検出メカニズムがあります。 {{cssxref("@supports")}} アットルールです。これは[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)と同じように動作しますが、解像度や画面の内側、縦横比などのメディア特性に応じて CSS を選択的に適用するのではなく、 `CSS.supports()` と同じように、 CSS 機能が対応しているかどうかによって CSS を選択的に適用します。
 
 例えば、前回の例を書き換えて `@supports` を使用することができます。
 
@@ -129,7 +129,6 @@ JavaScript の機能検出テストの例をすでに見ました。一般的に
 検出可能な機能の一般的なパターンには、以下のようなものがあります。
 
 - オブジェクトのメンバー
-
   - : 具体的なメソッドやプロパティ（通常は、検出する API や他の機能を使用するためのエントリーポイント）が親オブジェクトに存在するかどうかを調べます。
 
     先ほどの例では、[`navigator`](/ja/docs/Web/API/Navigator) オブジェクトに `geolocation` メンバがあるかどうかをテストすることで、[位置情報](/ja/docs/Web/API/Geolocation_API)の対応を検出するためにこのパターンを使用しました。
@@ -141,7 +140,6 @@ JavaScript の機能検出テストの例をすでに見ました。一般的に
     ```
 
 - 要素のプロパティ
-
   - : {{domxref("Document.createElement()")}} を使ってメモリー内に要素を作成し、それにプロパティが存在するか調べます。
 
     この例では、[キャンバス API](/ja/docs/Web/API/Canvas_API) の対応を検出する方法を示しています。
@@ -160,11 +158,9 @@ JavaScript の機能検出テストの例をすでに見ました。一般的に
     > 上の例の二重 `NOT` (`!!`) は、結果を歪める可能性のある{{glossary("Truthy", "真値")}}/{{glossary("Falsy", "偽値")}}ではなく、「適切な」論理値を返すように強制する方法です。
 
 - 要素におけるメソッドの固有の返値
-
   - : {{domxref("Document.createElement()")}} を使用してメモリー内に要素を作成し、その要素にメソッドが存在するか調べます。存在する場合は、そのメソッドが返す値を調べます。
 
 - 要素に割り当てられたプロパティ値の保持
-
   - : {{domxref("Document.createElement()")}} を使用してメモリー内に要素を作成し、プロパティに固有の値を設定し、その値が保持されているかどうかを調べます。
 
 しかし、いくつかの機能は検出できないことが知られていることに留意してください。このような用途では、{{Glossary("Polyfill", "ポリフィル")}}を使用するなど、別の手法を用いる必要があります。

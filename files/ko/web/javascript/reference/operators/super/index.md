@@ -61,7 +61,8 @@ super[expression]
 
 `super` 키워드는 "함수 호출"(`super(...args)`) 또는 "속성 조회"(`super.prop`와 `super[expr]`)의 두 가지 방법으로 사용할 수 있습니다.
 
-> **참고:** `super`는 키워드이며 특수한 구문 구조입니다. `super`는 프로토타입 객체를 가리키는 변수가 아닙니다. `super` 자체를 읽으려는 시도는 {{jsxref("SyntaxError")}}입니다.
+> [!NOTE]
+> `super`는 키워드이며 특수한 구문 구조입니다. `super`는 프로토타입 객체를 가리키는 변수가 아닙니다. `super` 자체를 읽으려는 시도는 {{jsxref("SyntaxError")}}입니다.
 >
 > ```js example-bad
 > const child = {
@@ -309,7 +310,7 @@ class Extended extends Base {
 Extended.getName(); // "Extended" 로그
 ```
 
-이는 [정적 프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties#private_static_fields)과 상호 작용할 때 특히 중요합니다.
+이는 [정적 프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_elements#private_static_fields)과 상호 작용할 때 특히 중요합니다.
 
 ### super.prop을 설정하면 this 속성이 대신 설정됩니다
 

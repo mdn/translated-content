@@ -3,8 +3,6 @@ title: Jeu 2D avec l'API Device orientation
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 ---
 
-{{GamesSidebar}}
-
 Dans ce tutoriel, nous allons passer par le processus de construction d'un jeu mobile HTML5 qui utilise les API [Device Orientation](/fr/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes) et [Vibration](/fr/docs/Web/API/Vibration_API) pour améliorer le "gameplay" et est construit avec le "framework" [Phaser](https://phaser.io/). La connaissance JavaScript de base est recommandée pour tirer le meilleur parti de ce tutoriel.
 
 ## Exemple de jeu

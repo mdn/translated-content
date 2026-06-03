@@ -12,5 +12,4 @@ Flash — устаревшая технология, разработанная 
 3. [Gnash, свободная реализация от GNU](http://gnashdev.org/)
 4. [Ruffle, свободная реализация](https://ruffle.rs)
 5. [Глоссарий](/ru/docs/Glossary)
-
    1. {{Glossary("Browser", "браузер")}}

@@ -3,7 +3,7 @@ title: 數字與日期
 slug: Web/JavaScript/Guide/Numbers_and_strings
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
 
 這個章節將介紹如何在 JavaScript 中處理數字與日期。
 

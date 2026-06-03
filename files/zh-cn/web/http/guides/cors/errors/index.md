@@ -3,8 +3,6 @@ title: CORS 错误
 slug: Web/HTTP/Guides/CORS/Errors
 ---
 
-{{HTTPSidebar}}
-
 [跨源资源分享](/zh-CN/docs/Web/HTTP/Guides/CORS)（{{Glossary("CORS")}}）是一种允许服务器放宽同源策略的标准。这用于明确允许一些跨源请求，同时拒绝其他请求。例如，如果站点提供外界嵌入的服务，则可能需要放宽同源策略。设置这样的 CORS 配置并不一定容易，并且可能存在一些挑战。在这些页面中，我们将研究一些常见的 CORS 错误消息以及如何解决它们。
 
 如果未正确设置 CORS 配置，浏览器控制台将显示错误，例如 `"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at $somesite"` 表示请求因违反 CORS 安全规则而被阻止。但这可能不一定是设置错误。因为用户的 Web 应用程序和远程外部服务可能故意禁止该请求。如果要使端点可用，则需要进行一些调试才能成功。

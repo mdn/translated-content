@@ -10,7 +10,7 @@ l10n:
 
 **`<q>`** は [HTML](/ja/docs/Web/HTML) の要素で、中に含まれるテキストが短いインラインの引用であることを示します。最近の多くのブラウザーでは、文字列を引用符で囲むように実装しています。この要素は、段落区切りをまたがない短い引用のためのものです。長文の引用には、 {{HTMLElement("blockquote")}} 要素を使用してください。
 
-{{InteractiveExample("HTML Demo: &lt;q&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;q&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
@@ -56,15 +56,15 @@ q {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -72,7 +72,7 @@ q {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -84,7 +84,7 @@ q {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>

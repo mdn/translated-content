@@ -124,7 +124,8 @@ Un opérateur de comparaison compare ses opérandes et renvoie une valeur boolé
 - [`>=`](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
   - : L'opérateur de supériorité.
 
-> **Note :** `=>` n'est pas un opérateur mais la notation utilisée pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> [!NOTE]
+> `=>` n'est pas un opérateur mais la notation utilisée pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Opérateurs d'égalité
 
@@ -218,8 +219,8 @@ Un opérateur d'affectation permet d'affecter une valeur à son opérande gauche
   - : Opérateur booléen OU et d'affectation.
 - [`??=`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
   - : Opérateur d'affectation et de logique nulle.
-- [`[a, b] = [1, 2]`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-  [`{a, b} = {a:1, b:2}`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = [1, 2]`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
+  [`{a, b} = {a:1, b:2}`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
   - : L'affectation par décomposition permet d'affecter les propriétés d'un tableau ou d'un objet à des variables en utilisant une syntaxe similaire à celle des littéraux pour les tableaux et les objets.
 
 ### Opérateur virgule

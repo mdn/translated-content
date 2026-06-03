@@ -3,7 +3,7 @@ title: Manipulation de pixels avec canvas
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 Jusqu'à présent, nous n'avons pas examiné dans le détail les pixels réels de notre canevas. Avec l'objet ImageData, vous pouvez directement lire et écrire dans le tableau de données de l'image, pour manipuler les pixels un par un. Nous verrons également comment le lissage (anticrénelage) de l'image peut être contrôlé et comment sauvegarder des images depuis votre canevas.
 
@@ -260,16 +260,16 @@ function draw(img) {
 
 ## Sauvegarde des images
 
-L' {{domxref ("HTMLCanvasElement")}} fournit une méthode `toDataURL ()`, utile lors de l'enregistrement d'images. Il retourne un [URI de données](/fr/docs/Web/URI/Schemes/data) contenant une représentation de l'image dans le format spécifié par le paramètre de `type` (par défaut en [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) ). L'image renvoyée est dans une résolution de 96 dpi.
+L' {{domxref ("HTMLCanvasElement")}} fournit une méthode `toDataURL ()`, utile lors de l'enregistrement d'images. Il retourne un [URI de données](/fr/docs/Web/URI/Reference/Schemes/data) contenant une représentation de l'image dans le format spécifié par le paramètre de `type` (par défaut en [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) ). L'image renvoyée est dans une résolution de 96 dpi.
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : Par défaut. Crée un image PNG.
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : Crée une image JPG. En option, vous pouvez fournir une qualité comprise entre 0 et 1, 1 étant de la meilleure qualité et 0 presque non reconnaissable mais de petite taille.
 
-Une fois que vous avez généré un URI de données à partir de votre canevas, vous pouvez l'utiliser comme source de {{HTMLElement ("image")}} ou le mettre dans un lien hypertexte avec un attribut de téléchargement pour l'enregistrer sur le disque par exemple.
+Une fois que vous avez généré un URI de données à partir de votre canevas, vous pouvez l'utiliser comme source de {{HTMLElement("img")}} ou le mettre dans un lien hypertexte avec un attribut de téléchargement pour l'enregistrer sur le disque par exemple.
 
-Vous pouvez également créer un {{domxref ("Blob")}} à partir du canevas.
+Vous pouvez également créer un {{domxref("Blob")}} à partir du canevas.
 
 - {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}
   - : Crée un objet `Blob` représentant l'image contenue dans le canevas.
@@ -280,4 +280,4 @@ Vous pouvez également créer un {{domxref ("Blob")}} à partir du canevas.
 - [Manipulating video using canvas](/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Canevas, images et pixels – par Christian Heilmann (en)](https://codepo8.github.io/canvas-images-and-pixels/)
 
-{{PreviousNext("Tutoriel_canvas/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

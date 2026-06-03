@@ -49,15 +49,15 @@ En algunos casos, los buscadores que dan servicio a determinadas regiones pueden
 
 ## Atributos globales
 
-_[itemid](/es/docs/Web/HTML/Global_attributes/itemid)_: el identificador unívoco y global de un elemento.
+_[itemid](/es/docs/Web/HTML/Reference/Global_attributes/itemid)_: el identificador unívoco y global de un elemento.
 
-_[itemprop](/es/docs/Web/HTML/Global_attributes/itemprop)_: utilizado para añadir propiedades a un elemento. Cualquier elemento HTML puede contener un atributo _itemprop_ definido, y tal _itemprop_ consiste de un nombre y un valor.
+_[itemprop](/es/docs/Web/HTML/Reference/Global_attributes/itemprop)_: utilizado para añadir propiedades a un elemento. Cualquier elemento HTML puede contener un atributo _itemprop_ definido, y tal _itemprop_ consiste de un nombre y un valor.
 
-_[itemref](/es/docs/Web/HTML/Global_attributes/itemref)_: las propiedades que no desciendan de un elemento y contengan el atributo `itemscope` pueden asociarse con el elemento a través de una _**itemref**_. _Itemref_ proporciona una lista de identificadores de elementos (distintos de los `itemid`s) con propiedades adicionales en otras partes del documento.
+_[itemref](/es/docs/Web/HTML/Reference/Global_attributes/itemref)_: las propiedades que no desciendan de un elemento y contengan el atributo `itemscope` pueden asociarse con el elemento a través de una _**itemref**_. _Itemref_ proporciona una lista de identificadores de elementos (distintos de los `itemid`s) con propiedades adicionales en otras partes del documento.
 
-[_itemscope_](/es/docs/Web/HTML/Global_attributes/itemscope): _Itemscope_ (por lo general) funciona en conjunto con [_itemtype_](/es/docs/Web/HTML/Global_attributes/itemtype)para especificar que el HTML contenido en un bloque se refiere a un término concreto. _itemscope_ crea el elemento y define el alcance del _itemtype_ asociado con él. _itemtype_ es un URL válido de un vocabulario (como [Schema.org](https://schema.org/)) que describe el elemento y el contexto de sus propiedades.
+[_itemscope_](/es/docs/Web/HTML/Reference/Global_attributes/itemscope): _Itemscope_ (por lo general) funciona en conjunto con [_itemtype_](/es/docs/Web/HTML/Global_attributes/itemtype)para especificar que el HTML contenido en un bloque se refiere a un término concreto. _itemscope_ crea el elemento y define el alcance del _itemtype_ asociado con él. _itemtype_ es un URL válido de un vocabulario (como [Schema.org](https://schema.org/)) que describe el elemento y el contexto de sus propiedades.
 
-[_itemtype_](/es/docs/Web/HTML/Global_attributes/itemtype): Especifica el URL del vocabulario que se empleará para definir _itemprops_ ('propiedades de elementos') en la estructura de datos. Se emplea _[Itemscope](/es/docs/Web/HTML/Global_attributes/itemscope)_ para establecer el alcance del área de funcionamiento del vocabulario establecido por _itemtype_ dentro de la estructura de datos.
+[_itemtype_](/es/docs/Web/HTML/Global_attributes/itemtype): Especifica el URL del vocabulario que se empleará para definir _itemprops_ ('propiedades de elementos') en la estructura de datos. Se emplea _[Itemscope](/es/docs/Web/HTML/Reference/Global_attributes/itemscope)_ para establecer el alcance del área de funcionamiento del vocabulario establecido por _itemtype_ dentro de la estructura de datos.
 
 ## Ejemplo
 
@@ -153,4 +153,4 @@ _[itemref](/es/docs/Web/HTML/Global_attributes/itemref)_: las propiedades que no
 
 ## Véase también
 
-- [Atributos globales](/es/docs/Web/HTML/Global_attributes)
+- [Atributos globales](/es/docs/Web/HTML/Reference/Global_attributes)

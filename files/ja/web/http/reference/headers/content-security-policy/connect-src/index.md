@@ -1,11 +1,10 @@
 ---
-title: "CSP: connect-src"
+title: "Content-Security-Policy: connect-src ディレクティブ"
+short-title: connect-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/connect-src
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
-
-{{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`connect-src`** ディレクティブは、スクリプトインターフェイスを使用して読み込むことができる URL を制限します。以下の API が制限の対象となります。
 
@@ -17,7 +16,8 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`connect
 - {{domxref("EventSource")}}
 - {{domxref("Navigator.sendBeacon()")}}
 
-> **メモ:** `connect-src 'self'` はすべてのブラウザーで websocket スキーマを解決するわけではありません。この[問題](https://github.com/w3c/webappsec-csp/issues/7)に詳細情報があります。
+> [!NOTE]
+> `connect-src 'self'` はすべてのブラウザーで websocket スキーマを解決するわけではありません。この[問題](https://github.com/w3c/webappsec-csp/issues/7)に詳細情報があります。
 
 <table class="properties">
   <tbody>
@@ -50,9 +50,7 @@ Content-Security-Policy: connect-src <source-expression-list>;
 - `'none'`
   - : この種類のリソースは読み込まれません。単一引用符は必須です。
 - `<source-expression-list>`
-
   - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、以下のソース表現の値が適用できます。
-
     - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
     - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
     - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
@@ -61,32 +59,31 @@ Content-Security-Policy: connect-src <source-expression-list>;
 
 ### 違反の場合
 
-以下の CSP ヘッダーを指定した場合、
+次の CSP ヘッダーを指定した場合、
 
 ```http
 Content-Security-Policy: connect-src https://example.com/
 ```
 
-以下の接続はブロックされ、読み込まれません。
+次の接続はブロックされ、読み込まれません。
 
 ```html
-<a ping="https://not-example.com">
-  <script>
-    const response = fetch("https://not-example.com/");
+<a ping="https://not-example.com" href="/">リンク</a>
+<script>
+  const response = fetch("https://not-example.com/");
 
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://not-example.com/");
-    xhr.send();
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://not-example.com/");
+  xhr.send();
 
-    const ws = new WebSocket("wss://not-example.com/");
+  const ws = new WebSocket("wss://not-example.com/");
 
-    const es = new EventSource("https://not-example.com/");
+  const es = new EventSource("https://not-example.com/");
 
-    navigator.sendBeacon("https://not-example.com/", {
-      /* … */
-    });
-  </script></a
->
+  navigator.sendBeacon("https://not-example.com/", {
+    /* … */
+  });
+</script>
 ```
 
 ## 仕様書

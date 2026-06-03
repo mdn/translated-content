@@ -16,9 +16,7 @@ element.insertAdjacentText(position, element);
 ### Параметры
 
 - `position`
-
   - : {{domxref("DOMString")}} позиция для вставки текста относительно элемента `element`; должна быть указана в следующем виде:
-
     - `'beforebegin'`: Перед самим `element`.
     - `'afterbegin'`: Внутри самого `element`, перед первым child.
     - `'beforeend'`: Внутри самого `element`, после последнего child.

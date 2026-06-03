@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Permissions-Policy
 original_slug: Web/HTTP/Headers/Permissions-Policy
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho HTTP **`Feature-Policy`** provê um mecanismo para permitir ou proibir o uso de funcionalidades do navegador no seu próprio enquadramento, e o conteúdo dentro de quaisquer elementos {{HTMLElement("iframe")}} no documento.
 
 > [!NOTE]
@@ -20,7 +18,7 @@ Para mais informação, veja o artigo principal [Policy Feature](/docs/Web/HTTP/
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>sim</td>
     </tr>
   </tbody>
@@ -56,7 +54,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}
   - : Controla se o documento atual é permitido de usar a API [Extensões de Mídias Encriptadas (_Encrypted Media Extensions_)](/pt-BR/docs/Web/API/Encrypted_Media_Extensions_API) (EME). Quando esta política é desabilitada, a {{domxref("Promise")}} retornada pelo {{domxref("Navigator.requestMediaKeySystemAccess()")}} irá rejeitar com um {{domxref("DOMException")}}.
 - {{httpheader('Feature-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}
-  - : Controla se as tarefas devem ser executadas em enquadramentos enquanto não são renderizados (e.g. se um enquadramento é [`hidden`](/pt-BR/docs/Web/HTML/Global_attributes/hidden) ou `display: none`).
+  - : Controla se as tarefas devem ser executadas em enquadramentos enquanto não são renderizados (e.g. se um enquadramento é [`hidden`](/pt-BR/docs/Web/HTML/Reference/Global_attributes/hidden) ou `display: none`).
 - {{httpheader('Feature-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}
   - : Controla se as tarefas devem ser executadas em enquadramentos enquanto eles estão fora da janela de visualização visível.
 - {{httpheader('Feature-Policy/fullscreen','fullscreen')}}

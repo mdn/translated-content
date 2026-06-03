@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 `StreanFilter` 是可用于监控与修改 HTTP 响应的对象。
 
 要创建 `StreamFilter`，请调用 {{WebExtAPIRef("webRequest.filterResponseData()")}} 并传入你想要过滤的 Web 请求的 ID。

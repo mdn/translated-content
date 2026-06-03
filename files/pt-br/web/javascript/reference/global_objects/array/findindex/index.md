@@ -18,9 +18,7 @@ arr.findIndex(callback[, thisArg])
 ### Parâmetros
 
 - `callback`
-
   - : Função para executar em cada valor no array, tomando três argumentos:
-
     - `element`
       - : O elemento atual sendo processado no array.
     - `index`

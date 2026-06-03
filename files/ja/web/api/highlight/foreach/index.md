@@ -22,9 +22,7 @@ forEach(callbackFn, thisArg)
 ### 引数
 
 - `callback`
-
   - : それぞれの `Range` オブジェクトについて呼び出される関数で、 3 つの引数を取ります。
-
     - `range`, `key`
       - : `Highlight` で現在処理されている `Range` オブジェクト。 `Highlight` にはキーがないため、 `range` は両方の引数に渡されます。
     - `highlight`

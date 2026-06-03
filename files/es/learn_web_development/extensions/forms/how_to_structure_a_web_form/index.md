@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 original_slug: Learn/Forms/How_to_structure_a_web_form
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 Una vez examinados los conceptos básicos, vamos a ver más en detalle los elementos que se utilizan para proporcionar estructura y significado a las diferentes partes de un formulario.
 
@@ -14,7 +14,7 @@ Una vez examinados los conceptos básicos, vamos a ver más en detalle los eleme
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática y de
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">lenguajes HTML</a>.
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">lenguajes HTML</a>.
       </td>
     </tr>
     <tr>
@@ -312,7 +312,7 @@ Debajo puedes ver en acción el formulario terminado (también lo encontrarás e
 
 ## ¡Prueba tus habilidades!
 
-Has llegado al final de este artículo pero ¿puedes recordar la información más importante? Puedes encontrar pruebas adicionales para comprobar que has comprendido la información antes de continuar — visita [Prueba tus habilidades: Estructura de formularios](/es/docs/Learn/Forms/Test_your_skills:_Form_structure).
+Has llegado al final de este artículo pero ¿puedes recordar la información más importante? Puedes encontrar pruebas adicionales para comprobar que has comprendido la información antes de continuar — visita [Prueba tus habilidades: Estructura de formularios](/es/docs/Learn_web_development/Extensions/Forms).
 
 ## Resumen
 
@@ -322,7 +322,7 @@ Ahora tienes todos los conocimientos necesarios para estructurar adecuadamente t
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
 
-{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 ### Temas avanzados
 
@@ -330,4 +330,4 @@ Ahora tienes todos los conocimientos necesarios para estructurar adecuadamente t
 - [Cómo crear controles de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Formularios HTML en navegadores antiguos](/es/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Cuestiones avanzadas de aplicación de estilo para formularios HTML](/es/docs/Learn/Forms/Advanced_form_styling)
-- [Tabla de compatibilidad de los controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls) según su código propietario
+- [Tabla de compatibilidad de los controles de formulario](/es/docs/Learn_web_development/Extensions/Forms) según su código propietario

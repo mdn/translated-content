@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 29c6dda247bbe2443f2457df08f838031ec78442
 ---
 
-{{GamesSidebar}}
-
 {{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}
 
 未来的手游一定是 Web 的天下，许多开发者在游戏开发过程中[首先选择移动端](/zh-CN/docs/Glossary/Mobile_First)——在现代社会，这通常还涉及到触摸控制的实现。在本教程中，我们将看到在 HTML 游戏中实现移动控件是多么容易，并且可以在支持移动触摸的设备上尽情玩耍。

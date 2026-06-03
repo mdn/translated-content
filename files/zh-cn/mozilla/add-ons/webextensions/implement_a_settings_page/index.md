@@ -3,8 +3,6 @@ title: 实现一个设置页面
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 ---
 
-{{AddonSidebar}}
-
 设置页面可以让用户查看，修改扩展的一些设置。
 
 对于 WebExtensions，设置通常使用 [`storage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 保存。实现一个设置页面通常包含以下三步：
@@ -187,5 +185,4 @@ settings/
 - [`storage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 文档
 - 使用[`runtime.openOptionsPage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 直接打开你的设置页面
 - 另一个设置页面例子：
-
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)

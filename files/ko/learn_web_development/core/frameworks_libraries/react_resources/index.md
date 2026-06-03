@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_accessibility","Learn_web_development/Core/Frameworks_libraries/Ember_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
 
 마지막 글에서는 학습을 더 진행하는 데 사용할 수 있는 React 리소스 목록을 제공합니다.
 
@@ -16,9 +16,9 @@ l10n:
       <th scope="row">필요한 사전 지식:</th>
       <td>
         <p>
-          <a href="/ko/docs/Learn/HTML">HTML</a>,
-          <a href="/ko/docs/Learn/CSS">CSS</a>, 및
-          <a href="/ko/docs/Learn/JavaScript">JavaScript</a> 언어 핵심에 대한 친숙도,
+          <a href="/ko/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>, 및
+          <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a> 언어 핵심에 대한 친숙도,
           <a
             href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >터미널/커멘드 라인</a
@@ -104,4 +104,4 @@ React 커뮤니티는 클라이언트 측 라우팅을 위한 두 가지 주요 
 
 그러나 한 가지 주의 사항이 있습니다. 이러한 프로젝트는 [가까운 미래에 병합](https://reacttraining.com/blog/reach-react-router-future/)될 것입니다. 이 병합이 발생하면, React Router는 살아남은 프로젝트가 됩니다(Reach의 포커스 관리 기능 추가).
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_accessibility","Learn_web_development/Core/Frameworks_libraries/Ember_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}

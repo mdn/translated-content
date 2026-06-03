@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 该事件监听器在 `enabled` 事件被触发时调用，表示一个附加组件现在已被启用。
 
 此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
@@ -33,9 +31,7 @@ browser.management.onEnabled.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 在此事件发生时调用的函数。此函数接收以下参数：
-
     - `info`
       - : [`ExtensionInfo`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo)，关于已安装的附加组件的信息。
 

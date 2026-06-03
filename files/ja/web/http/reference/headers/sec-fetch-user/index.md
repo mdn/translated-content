@@ -1,14 +1,12 @@
 ---
-title: Sec-Fetch-User
+title: Sec-Fetch-User ヘッダー
+short-title: Sec-Fetch-User
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-User
-original_slug: Web/HTTP/Headers/Sec-Fetch-User
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{HTTPSidebar}}
-
-**`Sec-Fetch-User`** は{{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}}で、これはユーザーアクティベーションによって開始されたリクエストに 対してのみ送られ、その値は常に `?1` です。
+**`Sec-Fetch-User`** は{{Glossary("fetch metadata request header", "フェッチメタデータリクエストヘッダー")}}で、ユーザーによる操作で開始されたリクエストに対して送信され、その値は常に `?1` です。
 
 サーバーはこのヘッダーを使用して、文書や iframe などからのナビゲーションリクエストがユーザーによって発信されたかどうかを識別できます。
 
@@ -43,6 +41,8 @@ Sec-Fetch-User: ?1
 
 ## 例
 
+### Sec-Fetch-User の使用
+
 ユーザーが同じオリジンの別のページへのページリンクをクリックした場合、結果として生じるリクエストには以下のヘッダーが入ります。
 
 ```http
@@ -62,11 +62,6 @@ Sec-Fetch-User: ?1
 
 ## 関連情報
 
-- 関連ヘッダー
-
-  - {{HTTPHeader("Sec-Fetch-Dest")}}
-  - {{HTTPHeader("Sec-Fetch-Mode")}}
-  - {{HTTPHeader("Sec-Fetch-Site")}}
-
-- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/fetch-metadata/) (web.dev)
+- フェッチメタデータリクエストヘッダー: {{HTTPHeader("Sec-Fetch-Dest")}}, {{HTTPHeader("Sec-Fetch-Mode")}}, {{HTTPHeader("Sec-Fetch-Site")}}
+- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

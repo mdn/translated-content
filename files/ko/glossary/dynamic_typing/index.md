@@ -11,5 +11,5 @@ l10n:
 
 ## 같이 보기
 
-- [JavaScript 데이터 타입 및 자료구조](/ko/docs/Web/JavaScript/Data_structures)
+- [JavaScript 데이터 타입 및 자료구조](/ko/docs/Web/JavaScript/Guide/Data_structures)
 - 위키백과의 [타입 시스템](https://en.wikipedia.org/wiki/Type_system#DYNAMIC)

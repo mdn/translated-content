@@ -16,12 +16,10 @@ Le bouton de la barre d'adresse (ou action de la page) est très semblable au bo
 Les différences sont :
 
 - **L'emplacement du bouton :**
-
   - L'action de la page s'affiche dans la barre d'adresse du navigateur.
   - L'action du navigateur s'affiche en dehors de la barre d'adresse, dans la barre d'outils du navigateur.
 
 - La visibilité du bouton **:**
-
   - L'action page est masquée par défaut (bien que cette valeur par défaut puisse être modifiée via les propriétés [manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) des clés `show_matches` et `hide_matches`), et vous appelez [`pageAction.show()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) et [`pageAction.hide()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) pour l'afficher ou la masquer dans des onglets spécifiques.
   - L'action du navigateur est toujours affichée.
 
@@ -77,7 +75,7 @@ Il y a deux façons de spécifier une action de page : avec ou sans [popup](/fr/
   browser.pageAction.onClicked.addListener(handleClick);
   ```
 
-- **Avec un popup:** L'événement `click` n'est pas envoyé. Au lieu de cela, le popup apparaît lorsque l'utilisateur clique sur le bouton. L'utilisateur interagit alors avec le popup. Lorsque l'utilisateur clique à l'extérieur de la fenêtre contextuelle, celle-ci se ferme automatiquement. Voir l'article [Popup](/fr/docs/Mozilla/Add-ons/WebExtensions/Popups) pour plus de détails sur la création et la gestion des popups.
+- **Avec un popup:** L'événement `click` n'est pas envoyé. Au lieu de cela, le popup apparaît lorsque l'utilisateur clique sur le bouton. L'utilisateur interagit alors avec le popup. Lorsque l'utilisateur clique à l'extérieur de la fenêtre contextuelle, celle-ci se ferme automatiquement. Voir l'article [Popup](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) pour plus de détails sur la création et la gestion des popups.
 
 Notez que votre extension ne peut avoir qu'une seule page action.
 

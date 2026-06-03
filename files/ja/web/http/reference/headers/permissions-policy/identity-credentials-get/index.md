@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `identity-credentials-get` ディレクティブは、現在の文書が[連合資格情報管理 API (FedCM)](/ja/docs/Web/API/FedCM_API)、より具体的には、 {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} メソッドの使用を `identity` オプション付きで許可するかどうかを制御します。
 

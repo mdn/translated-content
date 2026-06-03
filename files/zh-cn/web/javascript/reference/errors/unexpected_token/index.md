@@ -3,8 +3,6 @@ title: "SyntaxError: Unexpected token"
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
 
-{{jsSidebar("Errors")}}
-
 JavaScript 异常“unexpected token”会在解析器在给定位置没有识别到它可以理解的标记（而无法理解程序的结构）时发生。这可能只是一个简单的拼写错误。
 
 ## 信息

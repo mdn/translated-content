@@ -3,8 +3,6 @@ title: 原因：CORS preflight channel did not succeed
 slug: Web/HTTP/Guides/CORS/Errors/CORSPreflightDidNotSucceed
 ---
 
-{{HTTPSidebar}}
-
 ## 原因
 
 ```plain

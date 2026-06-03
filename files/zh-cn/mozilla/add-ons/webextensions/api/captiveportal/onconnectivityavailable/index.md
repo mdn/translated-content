@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当强制门户服务确定用户可以连接到互联网时触发。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.captivePortal.onConnectivityAvailable.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当此事件发生时调用的函数。函数被传入此参数：
-
     - `status`
       - : `string`。服务的状态，可能是 `captive`（如果存在未锁定的强制门户）或 `clear`（如果未检测到强制门户）。
 

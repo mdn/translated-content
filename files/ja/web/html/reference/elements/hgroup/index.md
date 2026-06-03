@@ -10,7 +10,7 @@ l10n:
 
 **`<hgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、見出しとそれに関連する内容を表します。これは 1 つの [`<h1>–<h6>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) 要素と、1 つ以上の [`<p>`](/ja/docs/Web/HTML/Reference/Elements/p) 要素をグループ化します。
 
-{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;hgroup&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <hgroup>
@@ -82,12 +82,12 @@ hgroup p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >, 見出しコンテンツ, 知覚可能コンテンツ
       </td>
@@ -107,7 +107,7 @@ hgroup p {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>

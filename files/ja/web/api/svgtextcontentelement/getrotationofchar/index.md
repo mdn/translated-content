@@ -61,4 +61,4 @@ console.log(extent); // 出力: 90
 
 ## 関連情報
 
-- [`writing-mode`](/ja/docs/Web/CSS/writing-mode)
+- [`writing-mode`](/ja/docs/Web/CSS/Reference/Properties/writing-mode)

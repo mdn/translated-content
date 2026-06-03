@@ -14,4 +14,4 @@ XInclude 메커니즘은 주요 브라우저에서 기본적으로 지원되지 
 ## 같이 보기
 
 - [XInclude 표준](https://www.w3.org/TR/xinclude-11/)
-- [`XPath`](/ko/docs/Web/XPath)
+- [`XPath`](/ko/docs/Web/XML/XPath)

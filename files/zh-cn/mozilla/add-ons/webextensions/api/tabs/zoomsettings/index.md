@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 定义标签页的缩放设置：{{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}、{{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}} 和默认的缩放系数。
 
 ## 类型

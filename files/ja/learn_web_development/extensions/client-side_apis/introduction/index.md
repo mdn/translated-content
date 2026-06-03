@@ -265,7 +265,7 @@ audioElement.addEventListener("ended", () => {
 
 ### 必要に応じて追加のセキュリティ機構がある
 
-WebAPI 機能は、 JavaScript や他のウェブ技術（例えば [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)）と同等のセキュリティ上の配慮が必要ですが、追加のセキュリティ機構が必要な場合もあります。例として、現代の WebAPI の中には HTTPS で配信されるページ上でしか動かないものがあります。これは機密とすべきデータをやりとりする可能性があるためです（[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)や[プッシュ通知](/ja/docs/Web/API/Push_API)など）。
+WebAPI 機能は、 JavaScript や他のウェブ技術（例えば [同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)）と同等のセキュリティ上の配慮が必要ですが、追加のセキュリティ機構が必要な場合もあります。例として、現代の WebAPI の中には HTTPS で配信されるページ上でしか動かないものがあります。これは機密とすべきデータをやりとりする可能性があるためです（[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)や[プッシュ通知](/ja/docs/Web/API/Push_API)など）。
 
 また、WebAPI の中には、コード内で呼び出された時点で、ユーザーから有効化するための許可を求めるものがあります。例として、[通知 API](/ja/docs/Web/API/Notifications_API) は、ポップアップダイアログボックスを使用して許可を求めます。
 

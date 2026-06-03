@@ -44,7 +44,7 @@ readAsText(Blob, encoding)
 - `NotReadableError` {{domxref("DOMException")}}
   - : 同時実行ロックなどの権限の問題でリソースを読み込めない場合に発生します。
 - `EncodingError` {{domxref("DOMException")}}
-  - : リソースがデータ URL であり、ブラウザーごとに定義された制限長を超えた場合に発生します。
+  - : リソースが data URL であり、ブラウザーごとに定義された制限長を超えた場合に発生します。
 
 ## 仕様書
 

@@ -18,7 +18,6 @@ l10n:
 - `publicExponent`
   - : {{jsxref("Uint8Array")}}。公開指数です。他の値を用いるいい理由が無い限り、65,537 ( `[0x01, 0x00, 0x01]` ) を指定してください。
 - `hash`
-
   - : 用いる[ダイジェスト関数](/ja/docs/Web/API/SubtleCrypto/digest)の名前を表す文字列です。`SHA-256`, `SHA-384`, `SHA-512` のうちのいずれかを指定できます。
 
     > [!WARNING]

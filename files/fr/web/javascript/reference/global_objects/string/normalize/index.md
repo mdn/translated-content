@@ -40,9 +40,7 @@ str.normalize([form]);
 ### Paramètres
 
 - `form`
-
   - : Paramètre optionnel. Une chaîne parmi "NFC", "NFD", "NFKC", ou "NFKD", définissant la forme de normalisation Unicode à utiliser. Si le paramètre n'est pas précisé ou vaut {{jsxref("undefined")}}, la valeur par défaut utilisée sera "`NFC`".
-
     - `NFC` - Normalization Form Canonical Composition.
     - `NFD` - Normalization Form Canonical Decomposition.
     - `NFKC` - Normalization Form Compatibility Composition.

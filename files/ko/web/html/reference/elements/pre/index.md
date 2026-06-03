@@ -44,7 +44,7 @@ pre {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 - `cols` {{non-standard_inline}} {{deprecated_inline}}
   - : 행에 포함되어야 하는 기본 문자 갯수입니다. [`width`](#width)의 비표준 동의어였습니다. 이러한 효과를 얻으려면 대신 CSS {{Cssxref("width")}}를 사용하십시오.
@@ -59,7 +59,7 @@ pre {
 
 시력이 낮은 사용자가 스크린 리더와 같은 보조 기술을 사용 중이라면, 미리 서식 적용한 텍스트의 문자를 차례대로 읽어서는 이게 무엇을 의미하는지 이해하지 못할 수 있습니다.
 
-{{HTMLElement("figure")}}과 {{HTMLElement("figcaption")}}에 더해, [ARIA](/ko/docs/Web/Accessibility/ARIA) `role`과 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label) 특성을 조합하면 `<pre>`와 사용하면, 미리 서식 지정된 {{Glossary("ASCII")}} 아트를 마치 이미지처럼 표현하면서 `<figcaption>`을 대체 설명으로 사용할 수 있습니다.
+{{HTMLElement("figure")}}과 {{HTMLElement("figcaption")}}에 더해, [ARIA](/ko/docs/Web/Accessibility/ARIA) `role`과 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 특성을 조합하면 `<pre>`와 사용하면, 미리 서식 지정된 {{Glossary("ASCII")}} 아트를 마치 이미지처럼 표현하면서 `<figcaption>`을 대체 설명으로 사용할 수 있습니다.
 
 ### 예제
 
@@ -127,10 +127,10 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >플로우 콘텐츠</a
         >, 뚜렷한 콘텐츠.
       </td>
@@ -138,7 +138,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -150,7 +150,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>

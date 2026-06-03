@@ -3,7 +3,7 @@ title: Коллекции
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 Этот раздел содержит обзор коллекций {{jsxref("Set")}} и словарей {{jsxref("Map")}} - встроенных {{Glossary("Data_structure","структур данных")}} с доступом по ключу.
 
@@ -153,7 +153,7 @@ mySet2 = new Set([1, 2, 3, 4]);
 Сравнение на равенство ключей в `Map` objects или объектов в `Set` основано на "[same-value-zero algorithm](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)":
 
 - алгоритм сравнения в целом совпадает с оператором `===`.
-- `-0` и `+0` считаются равными (в отличие от `===`).
+- `-0` и `+0` считаются равными.
 - {{jsxref("NaN")}} считается равным самому себе (в отличие от `===`).
 
-{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}

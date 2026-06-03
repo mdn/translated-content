@@ -43,7 +43,7 @@ l10n:
 
 ## 例
 
-{{InteractiveExample("HTML Demo: &lt;area&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;area&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <map name="infographic">

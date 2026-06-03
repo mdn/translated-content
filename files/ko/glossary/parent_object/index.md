@@ -11,4 +11,4 @@ l10n:
 
 ## 같이 보기
 
-- [JavaScript의 상속 및 프로토타입에 대한 토론](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript의 상속 및 프로토타입에 대한 토론](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

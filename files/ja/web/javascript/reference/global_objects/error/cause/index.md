@@ -1,15 +1,14 @@
 ---
 title: "Error: cause"
+short-title: cause
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
 l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`cause`** は {{jsxref("Error")}} インスタンスのデータプロパティで、エラーの元の原因を示します。
 
-これはエラーをキャッチし、より具体的もしくは有用なエラーメッセージを再スローする際に、元のエラーにアクセスできるようにするために使用されます。
+これはエラーを捕捉し、より具体的もしくは有用なエラーメッセージを再スローする際に、元のエラーにアクセスできるようにするために使用されます。
 
 ## 値
 

@@ -35,7 +35,6 @@ x-frame-options: DENY
 
 - [Listado de cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers)
 - [Glosario](/es/docs/Glossary)
-
   - {{Glossary("Representation header")}}
   - {{Glossary("HTTP header")}}
   - {{Glossary("Fetch metadata response header")}}

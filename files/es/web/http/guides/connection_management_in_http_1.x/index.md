@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Connection_management_in_HTTP_1.x
 original_slug: Web/HTTP/Connection_management_in_HTTP_1.x
 ---
 
-{{HTTPSidebar}}
-
 La gestión de las conexiones en un tema fundamental en HTTP: crear y mantener una conexión tiene una gran influencia en el rendimiento de las páginas Web y las aplicaciones Web. En la versión HTTP/1.x, hay modos de conexión: conexiones breves, conexiones persistentes, y '_pipelining_'.
 
 HTTP la mayor parte de las veces se basa en TCP, como protocolo de transporte, dando conexión entre el cliente y el servidor. En sus comienzos, HTTP, únicamente tenia un modelo para gestionar dichas conexiones. Aquellas conexiones eran conexiones breves: se creaba una cada vez que una petición necesitaba ser transmitida, y se cerraba, una vez que la respuesta se había recibido.

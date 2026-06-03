@@ -1,81 +1,83 @@
 ---
 title: DOMPoint
 slug: Web/API/DOMPoint
+l10n:
+  sourceCommit: 3652cfa9c036cf3ceebb1384bdc7edfd549251f3
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-DOMPoint 对象表示坐标系中的 2D 或 3D 点;它包括三维度的坐标值以及可选的透视值。DOMPoint 基于 DOMPointReadOnly，但允许更改其属性值。
+**`DOMPoint`** 对象表示坐标系统中的一个二维或三维点；它包含最多三个维度的坐标值以及一个可选的透视值。`DOMPoint` 基于 {{domxref("DOMPointReadOnly")}}，但允许修改其属性的值。
 
-通常，正 x 分量表示原点右侧的位置，正 y 分量从原点向下，正 z 分量从屏幕向外延伸 (换言之，朝向用户)。
+一般而言，`x` 的正值表示位于原点右侧的位置，`y` 的正值表示位于原点下方，而 `z` 的正值表示从屏幕向外（即朝向用户）的方向。
 
-## Constructor
+{{InheritanceDiagram}}
+
+## 构造函数
 
 - {{domxref("DOMPoint.DOMPoint","DOMPoint()")}}
-  - : Creates and returns a new `DOMPoint` object given the values of zero or more of its coordinate components and optionally the `w` perspective value. You can also use an existing `DOMPoint` or `DOMPointReadOnly` or a {{domxref("DOMPointInit")}} dictionary to create a new point by calling the {{domxref("DOMPoint.fromPoint()")}} static method.
+  - : 根据零个或多个坐标分量值（以及可选的透视值 `w`）创建并返回一个新的 `DOMPoint` 对象。你也可以通过调用 {{domxref("DOMPoint.fromPoint_static", "DOMPoint.fromPoint()")}} 静态方法，使用现有的 `DOMPoint`、`DOMPointReadOnly` 或具有相同属性的对象来创建一个新的点。
 
-## Methods
+## 实例属性
 
-_`DOMPoint` inherits methods from its parent, {{domxref("DOMPointReadOnly")}}._
+_`DOMPoint` 还继承父接口 {{domxref("DOMPointReadOnly")}} 的属性。_
 
-- {{domxref("DOMPointReadOnly.fromPoint", "fromPoint()")}}
-  - : Creates a new mutable `DOMPoint` object given an existing point or a {{domxref("DOMPointInit")}} dictionary which provides the values for its properties.
+- {{domxref("DOMPoint.x")}}
+  - : `DOMPoint` 的 `x` 坐标。
+- {{domxref("DOMPoint.y")}}
+  - : `DOMPoint` 的 `y` 坐标。
+- {{domxref("DOMPoint.z")}}
+  - : `DOMPoint` 的 `z` 坐标。
+- {{domxref("DOMPoint.w")}}
+  - : `DOMPoint` 的透视值。
 
-## Properties
+## 实例方法
 
-_`DOMPoint` inherits properties from its parent, {{domxref("DOMPointReadOnly")}}._
+_`DOMPoint` 继承父接口 {{domxref("DOMPointReadOnly")}} 的实例方法。_
 
-- {{domxref("DOMPointReadOnly.x", "DOMPoint.x")}}
-  - : The x coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.y", "DOMPoint.y")}}
-  - : The y coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.z", "DOMPoint.z")}}
-  - : The z coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.w", "DOMPoint.w")}}
-  - : The perspective value of the `DOMPoint`.
+## 静态方法
 
-## Examples
+_`DOMPoint` 还可能继承父接口 {{domxref("DOMPointReadOnly")}} 的静态方法。_
 
-In the [WebVR API](/zh-CN/docs/Web/API/WebVR_API), `DOMPoint` values are used to represent points in the coordinate space that the user's head mounted display exists in. In the following snippet, the position of the VR HMD can be retrieved by first grabbing a reference to the position sensor's current state using {{domxref("PositionSensorVRDevice.getState()")}}, then accessing the resulting {{domxref("VRPositionState")}}'s {{domxref("VRPositionState.position","position")}} property, which returns a `DOMPoint`. Note below the usage of `position.x`, `position.y`, and `position.z`.
+- {{domxref("DOMPoint/fromPoint_static", "DOMPoint.fromPoint()")}}
+  - : 根据一个已有的点（或包含相应属性的对象）创建一个新的可变 `DOMPoint` 对象，并使用该点的属性值进行初始化。
+
+## 示例
+
+在 [WebXR 设备 API](/zh-CN/docs/Web/API/WebXR_Device_API) 中，`DOMPointReadOnly` 值用于表示位置和方向。在以下代码片段中，可以在 {{domxref("XRSession")}} 的动画帧回调中，通过调用 {{domxref("XRFrame.getViewerPose()")}} 来获取 XR 设备（例如 VR 头显或具备 AR 功能的手机）的姿态。返回的 {{domxref("XRPose")}} 对象的 {{domxref("XRPose.transform","transform")}} 属性包含两个 `DOMPointReadOnly` 类型的属性：{{domxref("XRRigidTransform.position","position")}}（表示位置向量）和 {{domxref("XRRigidTransform.orientation","orientation")}}（表示四元数方向）。
 
 ```js
-function setView() {
-  var posState = gPositionSensor.getState();
+function onXRFrame(time, xrFrame) {
+  let viewerPose = xrFrame.getViewerPose(xrReferenceSpace);
 
-  if (posState.hasPosition) {
-    posPara.textContent =
-      "Position: x" +
-      roundToTwo(posState.position.x) +
-      " y" +
-      roundToTwo(posState.position.y) +
-      " z" +
-      roundToTwo(posState.position.z);
-    xPos = -posState.position.x * WIDTH * 2;
-    yPos = posState.position.y * HEIGHT * 2;
+  if (viewerPose) {
+    let position = viewerPose.transform.position;
+    let orientation = viewerPose.transform.orientation;
 
-    if (-posState.position.z > 0.01) {
-      zPos = -posState.position.z;
-    } else {
-      zPos = 0.01;
-    }
+    console.log(
+      `XR 视图位置：{x: ${roundToTwo(position.x)}, y: ${roundToTwo(
+        position.y,
+      )}, z: ${roundToTwo(position.z)}}`,
+    );
+
+    console.log(
+      `XR 视图方向：{x: ${roundToTwo(orientation.x)}, y: ${roundToTwo(
+        orientation.y,
+      )}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}}`,
+    );
   }
-
-  /* ... */
 }
 ```
 
-> [!NOTE]
-> See our [positionsensorvrdevice demo](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html) for the full code.
-
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("DOMRect")}}
 - {{domxref("DOMMatrix")}}

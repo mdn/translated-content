@@ -74,7 +74,8 @@ open 요청은 데이터베이스를 즉시 열거나 즉시 트랜잭션을 시
 
 open 메소드의 두번째 매개 변수는 데이터베이스의 버전입니다. 데이터베이스의 버전은 데이터베이스 스키마를 결정합니다. 데이터베이스 스키마는 데이터베이스 안의 객체 저장소와 그것들의 구조를 결정합니다. 데이터베이스가 아직 존재하지 않으면, open operation에 의해 생성되고, 그 다음 `onupgradeneeded` 이벤트가 트리거되고 이 이벤트 안에서 데이터베이스 스키마를 작성합니다. 데이터베이스가 존재하지만 업그레이드 된 버전 번호를 지정하는 경우 `onupgradeneeded` 이벤트가 트리거되고 해당 핸들러에 업데이트된 스키마를 제공할 수 있습니다. 자세한 내용은 나중에 아래의 [데이터베이스의 버전 업데이트](#데이터베이스의_버전_생성_또는_업데이트)와 {{ domxref("IDBFactory.open") }} 페이지를 참조하십시오.
 
-> **경고:** **중요**: 버전 번호는 `unsigned long long` 숫자입니다. 이는 버전 번호는 매우 큰 정수가 되어야한다는 의미입니다. 또한 부동 소수점을 사용할 수 없다는 것을 의미합니다. 그렇지 않으면 가장 가까운 정수로 변환되어 트랜잭션이 시작되지 않거나 `upgradeneeded` 이벤트가 트리거 되지 않습니다. 예를 들어, 2.4와 같은 버전 번호를 사용하지 마십시오:
+> [!WARNING]
+> **중요**: 버전 번호는 `unsigned long long` 숫자입니다. 이는 버전 번호는 매우 큰 정수가 되어야한다는 의미입니다. 또한 부동 소수점을 사용할 수 없다는 것을 의미합니다. 그렇지 않으면 가장 가까운 정수로 변환되어 트랜잭션이 시작되지 않거나 `upgradeneeded` 이벤트가 트리거 되지 않습니다. 예를 들어, 2.4와 같은 버전 번호를 사용하지 마십시오:
 > `var request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2`
 
 #### 제어 객체 생성
@@ -427,7 +428,8 @@ objectStore.openCursor().onsuccess = function (event) {
 };
 ```
 
-> **참고:** **Note**: Mozilla는 이런 경우를 처리하기 위해 getAll()을 구현했습니다(그리고 함께 구현한 `getAllKeys()`는 현재 about:config의 `dom.indexedDB.experimental` 설정 뒤에 숨겨져 있습니다.). 이들은 IndexedDB 표준은 아니기 때문에 추후 사라질 수 있습니다. 하지만 우리는 이것들이 유용하다고 생각하기 때문에 포함시켰습니다. 다음 코드는 위 코드와 정확히 같이 동작합니다.:`js objectStore.getAll().onsuccess = function(event) { alert("Got all customers: " + event.target.result); };` 커서의 `value` 속성을 살펴보는 것은 성능상의 비용이 발생합니다. 왜냐하면 해당 객체는 지연 생성되기 때문입니다. 예를 들어 `getAll()` 을 사용할 때, Gecko는 모든 객체를 한 번에 생성합니다. 만약 키 각각을 보는 것에만 관심이 있다면, 커서를 사용하는 것이 `getAll()`을 사용하는 것 보다 훨씬 효율적입니다. 반면에 객체 저장소의 모든 객체 배열을 가져오려는 경우에는 `getAll()`을 사용하세요.
+> [!NOTE]
+> Mozilla는 이런 경우를 처리하기 위해 getAll()을 구현했습니다(그리고 함께 구현한 `getAllKeys()`는 현재 about:config의 `dom.indexedDB.experimental` 설정 뒤에 숨겨져 있습니다.). 이들은 IndexedDB 표준은 아니기 때문에 추후 사라질 수 있습니다. 하지만 우리는 이것들이 유용하다고 생각하기 때문에 포함시켰습니다. 다음 코드는 위 코드와 정확히 같이 동작합니다.:`js objectStore.getAll().onsuccess = function(event) { alert("Got all customers: " + event.target.result); };` 커서의 `value` 속성을 살펴보는 것은 성능상의 비용이 발생합니다. 왜냐하면 해당 객체는 지연 생성되기 때문입니다. 예를 들어 `getAll()` 을 사용할 때, Gecko는 모든 객체를 한 번에 생성합니다. 만약 키 각각을 보는 것에만 관심이 있다면, 커서를 사용하는 것이 `getAll()`을 사용하는 것 보다 훨씬 효율적입니다. 반면에 객체 저장소의 모든 객체 배열을 가져오려는 경우에는 `getAll()`을 사용하세요.
 
 ### index 사용하기
 

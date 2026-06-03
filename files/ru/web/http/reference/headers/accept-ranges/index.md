@@ -3,8 +3,6 @@ title: Accept-Ranges
 slug: Web/HTTP/Reference/Headers/Accept-Ranges
 ---
 
-{{HTTPSidebar}}
-
 HTTP Заголовок ответа **`Accept-Ranges`** — это маркер, который использует сервер, чтобы уведомить клиента о поддержке "запросов по кускам". Его значение указывает единицу измерения, которая может быть использована для определения диапазона чтения.
 
 При наличии заголовка `Accept-Ranges`, браузер может попытаться _возобновить_ прерванную загрузку, а не запускать её с самого начала.
@@ -16,7 +14,7 @@ HTTP Заголовок ответа **`Accept-Ranges`** — это маркер
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>

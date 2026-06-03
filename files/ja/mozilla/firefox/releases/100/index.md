@@ -3,8 +3,6 @@ title: Firefox 100 for developers
 slug: Mozilla/Firefox/Releases/100
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 100 の変更点をまとめています。Firefox 100 は、米国時間 2022 年 5 月 3 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -15,7 +13,7 @@ slug: Mozilla/Firefox/Releases/100
 
 ### CSS
 
-- [`dynamic-range`](/ja/docs/Web/CSS/@media/dynamic-range) および [`video-dynamic-range`](/ja/docs/Web/CSS/@media/video-dynamic-range) 向けの CSS メディア特性をサポートしました。`dynamic-range` を使用して、ユーザーエージェントや出力デバイスが輝度、コントラスト比、色深度の組み合わせをサポートしているかを確認できます。また `video-dynamic-range` は、ビデオプレーンで確認できます ([Firefox バグ 1751217](https://bugzil.la/1751217))。
+- [`dynamic-range`](/ja/docs/Web/CSS/Reference/At-rules/@media/dynamic-range) および [`video-dynamic-range`](/ja/docs/Web/CSS/Reference/At-rules/@media/video-dynamic-range) 向けの CSS メディア特性をサポートしました。`dynamic-range` を使用して、ユーザーエージェントや出力デバイスが輝度、コントラスト比、色深度の組み合わせをサポートしているかを確認できます。また `video-dynamic-range` は、ビデオプレーンで確認できます ([Firefox バグ 1751217](https://bugzil.la/1751217))。
 
 ### JavaScript
 

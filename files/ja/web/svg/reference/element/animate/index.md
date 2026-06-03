@@ -2,10 +2,22 @@
 title: <animate>
 slug: Web/SVG/Reference/Element/animate
 l10n:
-  sourceCommit: d8fbe1ea30dcc8fd707048a804f5070a729b57a7
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
 **`<animate>`** は [SVG](/ja/docs/Web/SVG) の要素で、時間の経過に応じて要素の属性を変化させる方法を提供します。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+この要素にはグローバル属性のみがあります。
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGAnimateElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -33,15 +45,11 @@ svg {
 
 {{EmbedLiveSample('Example', 150, '100%')}}
 
-## 使用上のメモ
-
-この要素は {{domxref("SVGAnimateElement")}} インターフェイスを実装しています。
-
 ## アクセシビリティの考慮
 
 点滅や発光のアニメーションは、注意欠陥障碍 (ADHD) のような認知障碍を持つ人にとって問題になることがあります。加えて、このような動きは、前庭障害、てんかん、偏頭痛、光感受性障害の引き金になる可能性があります。
 
-アニメーションを一時停止したり無効にしたりする仕組みを提供したり、[動き軽減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)または同様の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints)である {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} を使用して、アニメーションなしの利用を設定したユーザーに適した利用方法を作成するようにすることを検討してください。
+アニメーションを一時停止したり無効にしたりする仕組みを提供したり、[動き軽減メディアクエリー](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)または同様の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints)である {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} を使用して、アニメーションなしの利用を設定したユーザーに適した利用方法を作成するようにすることを検討してください。
 
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)

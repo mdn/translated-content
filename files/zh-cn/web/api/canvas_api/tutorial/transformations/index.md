@@ -215,7 +215,6 @@ draw();
 最后一个方法允许对变形矩阵直接修改。
 
 - {{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}
-
   - : 这个方法是将当前的变形矩阵乘上一个基于自身参数的矩阵，如下面的矩阵所示：
 
     <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
@@ -223,7 +222,6 @@ draw();
     如果任意一个参数是 [`Infinity`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity)，变形矩阵也必须被标记为无限大，否则会抛出异常。
 
     这个函数的参数各自代表如下：
-
     - `a (m11)`
       - : 水平方向的缩放
     - `b(m12)`

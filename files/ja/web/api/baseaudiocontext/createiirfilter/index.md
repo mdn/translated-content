@@ -11,7 +11,8 @@ l10n:
 **`createIIRFilter()`** は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{ domxref("IIRFilterNode") }} を生成します。
 これは一般的な**[無限インパルス応答](https://ja.wikipedia.org/wiki/無限インパルス応答)** (IIR) フィルターを生成し、これはよって様々な種類のフィルターとして提供できるように構成することができます。
 
-> **メモ:** {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}} コンストラクターは {{domxref("IIRFilterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> [!NOTE]
+> {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}} コンストラクターは {{domxref("IIRFilterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}
-
 **`<u>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示行内文本拥有一个非文本形式的注释，该注释需要以某种方式渲染出来。默认情况下渲染为一个实线下划线，可以用 CSS 替换。
 
 > [!WARNING]

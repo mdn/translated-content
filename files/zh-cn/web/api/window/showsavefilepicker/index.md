@@ -19,9 +19,7 @@ showSaveFilePicker(options)
 ### 参数
 
 - `options` {{Optional_Inline}}
-
   - : 选项对象，包含以下属性：
-
     - `excludeAcceptAllOption` {{Optional_Inline}}
       - : 布尔值，默认为 `false`。默认情况下，选择器应包含一个不应用任何文件类型过滤器的选项（通过下面的类型选项启动）。将此选项设置为 `true` 意味着该选项*不*可用。
     - `id` {{Optional_Inline}}
@@ -31,9 +29,7 @@ showSaveFilePicker(options)
     - `suggestedName` {{Optional_Inline}}
       - : 一个{{jsxref('String', '字符串', '', 1)}}。建议的文件名。
     - `types` {{Optional_Inline}}
-
       - : 允许选择的文件类型的{{jsxref('Array', '数组', '', 1)}}。每个项目都是一个具有以下选项的对象：
-
         - `description` {{Optional_Inline}}
           - : 允许的文件类型类别的可选描述。默认为空字符串。
         - `accept`
@@ -48,7 +44,7 @@ showSaveFilePicker(options)
 - `AbortError` {{domxref("DOMException")}}
   - : 如果用户在没有做出选择的情况下关闭提示，或者如果用户代理认为任何选定的文件过于敏感或危险，则抛出此异常。
 - `SecurityError` {{domxref("DOMException")}}
-  - : 如果调用被[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)阻止，或者不是通过用户交互（例如按下按钮）调用，则抛出该异常。
+  - : 如果调用被[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)阻止，或者不是通过用户交互（例如按下按钮）调用，则抛出该异常。
 - {{jsxref("TypeError")}}
   - : 如果无法处理接受类型，则抛出该异常，它可能会在出现以下情况时发生：
     - `types` 选项中任何项目的 `accept` 选项的任何键字符串都无法解析为有效的 MIME 类型。
@@ -57,7 +53,7 @@ showSaveFilePicker(options)
 
 ## 安全性
 
-[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)是必需的。用户必须与页面或 UI 元素进行交互才能使该特性正常运行。
+[瞬态用户激活](/zh-CN/docs/Web/Security/Defenses/User_activation)是必需的。用户必须与页面或 UI 元素进行交互才能使该特性正常运行。
 
 ## 示例
 

@@ -3,8 +3,6 @@ title: Cookie2
 slug: conflicting/Web/HTTP/Headers/Cookie
 ---
 
-{{HTTPSidebar}}
-
 O obsoleto cabeçalho de requisição HTTP **`Cookie2`** costumava aconselhar o servidor que o agente de usuário entende _cookies_ de "novo estilo", mas atualmente os agentes de usuário vão usar o cabeçalho {{HTTPHeader("Cookie")}} ao invés disso, não este.
 
 <table class="properties">
@@ -14,7 +12,7 @@ O obsoleto cabeçalho de requisição HTTP **`Cookie2`** costumava aconselhar o 
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>sim</td>
     </tr>
   </tbody>

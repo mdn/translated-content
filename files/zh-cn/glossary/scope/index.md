@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **作用域**是当前的执行上下文，在其中的{{glossary("value", "值")}}和表达式“可见”（可被访问）。如果一个{{glossary("variable", "变量")}}或表达式不在当前的作用域中，那么它是不可用的。作用域也可以堆叠成层次结构，子作用域可以访问父作用域，反过来则不行。
 
 JavaScript 的作用域分以下三种：

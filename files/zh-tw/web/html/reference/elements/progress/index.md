@@ -3,8 +3,6 @@ title: <progress>：進度指示元素
 slug: Web/HTML/Reference/Elements/progress
 ---
 
-{{HTMLSidebar}}
-
 **`<progress>`** [HTML](/zh-TW/docs/Web/HTML) 元素顯示顯示任務完成進度的指示器，通常呈現為進度條。
 
 {{InteractiveExample("HTML Demo: &lt;progress&gt;", "tabbed-standard")}}

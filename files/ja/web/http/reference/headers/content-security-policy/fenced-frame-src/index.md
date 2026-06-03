@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`fenced-frame-src`** ディレクティブは、ディレクティブは、 {{HTMLElement("fencedframe")}} 要素に読み込まれた、埋め込まれた閲覧コンテキストの有効なソースを指定します。
 

@@ -3,7 +3,7 @@ title: "ARIA: option ロール"
 slug: Web/Accessibility/ARIA/Reference/Roles/option_role
 original_slug: Web/Accessibility/ARIA/Roles/option_role
 l10n:
-  sourceCommit: f6310f5cf34dfe4b5c0a45494a83b0a5ef9a6571
+  sourceCommit: f6e12d0cba939a2f203119f4514b56b5faff17e1
 ---
 
 `option` ロールは `listbox` で選択可能な項目に使用します。
@@ -52,39 +52,30 @@ l10n:
 #### 状態とプロパティ
 
 - [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
-
-  - : 選択肢の選択状態を記述するために使用します。必須です。
+  - : 選択肢の選択状態を記述するために使用します。オプションです。
 
 - [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
-
   - : 選択肢を複数選択で使用する場合のチェック状態を記述するために使用します。`true`、`false`、`mixed` に対応しています。オプションです。
 
 - [`aria-posinset`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset)
-
   - : 一度にいくつかの選択肢しか存在しない仮想スクロールのように、選択肢の集合が DOM と一致しない場合に、その位置を記述するために使用します。オプションです。
 
 - [`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize)
-
   - : 選択肢の総数を宣言するために `aria-posinset` と共に使用します。オプションです。
 
 - [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
-
   - : 選択肢が存在していますが、編集できません。オプションです。
 
 - [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
-
   - : アクセシビリティツールから選択肢を非表示にするために使用します。冗長なコンテンツなど、支援技術の使い勝手を向上させる場合にのみ、非表示のコンテンツや表示可能なコンテンツを非表示にするために使用しましょう。オプションです。
 
 - [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
-
   - : 選択肢の値がアプリケーションによって不正な値とみなされることを示すために使用します。オプションです。
 
 - [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
-
   - : 読み込んでいる間など、要素が変更されていることを示すために使用します。オプションです。
 
 - [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-
   - : どの要素が選択肢をラベル付けするかを示すために用います。適切な場合には、選択肢のコンテンツを代わりに使用してください。オプションです。
 
 - [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
@@ -107,6 +98,6 @@ l10n:
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA ロール</strong></a>{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+    <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles"><strong>WAI-ARIA ロール</strong></a>{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
   </ol>
 </section>

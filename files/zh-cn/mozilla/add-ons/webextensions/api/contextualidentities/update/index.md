@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 更新给定 cookie 存储 ID 的场景身份的属性。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -25,17 +23,12 @@ let createContext = browser.contextualIdentities.update(
 - `cookieStoreId`
   - : `string`。场景身份的 cookie 存储的 ID。由于每个场景身份都有自己的 cookie 存储，因此这也作为场景身份的标识符。
 - `details`
-
   - : `object`。包含要更改的属性的新值的对象。可以包含以下任意属性：
-
     - `name` {{optional_inline}}
-
       - : `string`。身份的新名称。这将显示在浏览器的用户界面中，用户可以在该身份中打开新标签页。它还会显示在属于该身份的标签页的 URL 栏中。
 
     - `color` {{optional_inline}}
-
       - : `string`。身份的新颜色。这将用于突出显示属于该身份的标签页。可以提供以下任意值：
-
         - "blue"
         - "turquoise"
         - "green"
@@ -47,9 +40,7 @@ let createContext = browser.contextualIdentities.update(
         - "toolbar"
 
     - `icon` {{optional_inline}}
-
       - : `string`。身份的新图标。可以提供以下任意值：
-
         - "fingerprint"
         - "briefcase"
         - "dollar"

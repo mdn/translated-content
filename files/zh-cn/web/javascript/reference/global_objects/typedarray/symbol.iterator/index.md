@@ -3,8 +3,6 @@ title: TypedArray.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator
 ---
 
-{{JSRef}}
-
 {{jsxref("TypedArray")}} 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)以允许类型化数组被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[数组迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它会以类型化数组中的每个索引的值生成数组。
 
 {{InteractiveExample("JavaScript Demo: TypedArray.prototype[Symbol.iterator]()")}}

@@ -22,18 +22,14 @@ var promise = CredentialsContainer.create([options]);
 ### Paramètres
 
 - `options`
-
   - : Un objet de type {{domxref("CredentialCreationOptions")}} qui contient des options pour le nouvel objet `Credentials` demandé. Cet objet doit posséder au moins une des propriétés parmi `"password"`, `"federated"` ou `"publicKey"`. Les options sont :
-
     - password: {{optional_inline}} un objet {{domxref("HTMLFormElement")}} ou un objet {{domxref("PasswordCredentialData")}}
-
       - `id`: (obligatoire) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.
       - `name`: {{optional_inline}} {{domxref("USVString")}}
       - `iconURL`: {{optional_inline}} {{domxref("USVString")}}
       - `password`: (required) {{domxref("USVString")}}
 
     - federated : {{optional_inline}} un objet {{domxref("FederatedCredentialInit")}}. Cet objet contient le nécessaire pour créer/obtenir des informations d'authentification fédérées. Les propriétés disponibles sont :
-
       - `id`: (required) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.
       - `name`: {{optional_inline}} {{domxref("USVString")}}
       - `iconURL`: {{optional_inline}} {{domxref("USVString")}}

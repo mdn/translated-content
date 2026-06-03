@@ -11,4 +11,4 @@ CSS에서, **가상 요소(pseudo-element)** 선택자는 선택할 특정 HTML 
 
 ## 같이 보기
 
-- [가상 요소](/ko/docs/Web/CSS/Pseudo-elements)
+- [가상 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

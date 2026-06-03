@@ -3,8 +3,6 @@ title: itemprop
 slug: Web/HTML/Reference/Global_attributes/itemprop
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 全局属性 **`itemprop`**被用于向一个物体中添加属性。每一个 HTML 元素都可以指定一个 itemprop 属性，一个`itemprop`属性由 name-value 对组成。每一个键值对称为一个属性，一个元素可以有一个或者多个属性。属性值可以是一个 string 或者一个 URL，并且可以和大部分元素进行组合，包括{{HTMLElement("audio")}}， {{HTMLElement("embed")}}， {{HTMLElement("iframe")}}， {{HTMLElement("img")}}， {{HTMLElement("link")}}， {{HTMLElement("object")}}， {{HTMLElement("source")}} ， {{HTMLElement("track")}}，和 {{HTMLElement("video")}}。
 
 ## 样例
@@ -274,13 +272,11 @@ ID 不是人性化的，所以产品的名字是用的人所能看懂的文字�
 **序列**既可以是字符串也可以是 URL。如果是一个 URL，那么这个项被称为**类型项**。否则它是一个字符串。字符串不能包括句号和冒号（如下）。
 
 1. 如果项是一个类型项它必须满足：
-
    1. 是一个被定义的属性名
    2. 一个合法的指向语法定义的 URL
    3. 一个合法的被用来当作所有权项属性名的 URL
 
 2. 如果一个项不是类型项，他必须：
-
    1. 一个不含 "**.**" (U+002E 句号) 和 "**:**" (U+003A 冒号) 并且被用作一个所有权项的属性名（没有公共规范定义的）
 
 **注意：** 上面的规则不允许 ":" 在没有 URL 的值中 是因为否则它们没法和 URL 作区分。带有"." 的值被保留作为将来可能的拓展。空格也不被允许是因为否则值就会被解析为多个序列。
@@ -290,35 +286,27 @@ ID 不是人性化的，所以产品的名字是用的人所能看懂的文字�
 The property value of a name-value pair is as given for the first matching case in the following list:
 
 - If the element has an **itemscope** attribute
-
   - The value is the **item** created by the element.
 
 - If the element is a **meta** element
-
   - The value is the value of the element's **content** attribute
 
 - If the element is an **audio**, **embed**, **iframe**, **img**, **source**, **track**, or **video** element
-
   - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/zh-CN/docs/Web/HTML/Guides/Microdata)) of the element at the time the attribute is set
 
 - If the element is an **a**, **area**, or **link** element
-
   - The value is the resulting URL string that results from parsing the value of the element's href attribute relative to the node document of the element at the time the attribute is set
 
 - If the element is an **object** element
-
   - The value is the resulting URL string that results from parsing the value of the element's data attribute relative to the node document of the element at the time the attribute is set
 
 - If the element is a **data** element
-
   - The value is the value of the element's value attribute
 
 - If the element is a **meter** element
-
   - The value is the value of the element's **value** attribute
 
 - If the element is a **time** element
-
   - The value is the element's **datetime** value
 
 Otherwise
@@ -436,7 +424,6 @@ Names are unordered relative to each other, but if a particular name has multipl
 
 - [其他不同的全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
 - 其他，微数据相关的全局属性：
-
   - [`itemid`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemid)
   - [`itemprop`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemprop)
   - [`itemref`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemref)

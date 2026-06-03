@@ -43,17 +43,17 @@ input {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `disabled`
   - : 지정한 경우, 모든 자손 컨트롤을 비활성화합니다. 비활성 컨트롤은 편집할 수 없고, {{htmlelement("form")}}을 제출할 때 데이터에 포함되지 않습니다. 마우스 클릭, 포커스 등 브라우저 이벤트도 모두 받지 않습니다. 브라우저는 비활성 컨트롤을 주로 회색으로 표시합니다. 단, {{htmlelement("legend")}} 안의 양식 요소는 비활성 상태로 전환되지 않습니다.
 - `form`
-  - : `<fieldset>` 요소와 연결할 {{htmlelement("form")}} 요소("양식 소유자")의 [`id`](/ko/docs/Web/HTML/Global_attributes#id). `<fieldset>`이 해당 `<form>` 안에 위치하지 않아도 연결할 수 있습니다.
+  - : `<fieldset>` 요소와 연결할 {{htmlelement("form")}} 요소("양식 소유자")의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id). `<fieldset>`이 해당 `<form>` 안에 위치하지 않아도 연결할 수 있습니다.
 - `name`
-
   - : 그룹과 연관지을 이름.
 
-    > **참고:** `<fieldset>`에 대한 설명은 자신이 포함한 첫 번째 {{htmlelement("legend")}} 요소가 담당합니다.
+    > [!NOTE]
+    > `<fieldset>`에 대한 설명은 자신이 포함한 첫 번째 {{htmlelement("legend")}} 요소가 담당합니다.
 
 ## CSS 스타일링
 
@@ -114,15 +114,15 @@ input {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >, 구획 루트,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#양식_관련_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#양식_관련_콘텐츠"
           >양식 관련 콘텐츠</a
-        >(<a href="/ko/docs/Web/Guide/HTML/Content_categories#나열됨">나열됨</a
+        >(<a href="/ko/docs/Web/HTML/Guides/Content_categories#나열됨">나열됨</a
         >), 뚜렷한 콘텐츠.
       </td>
     </tr>
@@ -130,7 +130,7 @@ input {
       <th scope="row">가능한 콘텐츠</th>
       <td>
         선택적인 {{HTMLElement("legend")}} 요소와 그 이후의
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >.
       </td>
@@ -142,7 +142,7 @@ input {
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>

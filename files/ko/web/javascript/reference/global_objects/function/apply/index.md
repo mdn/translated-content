@@ -87,7 +87,7 @@ var max = Math.max.apply(null, numbers);
 var min = Math.min.apply(null, numbers);
 
 // vs. simple loop based algorithm
-(max = -Infinity), (min = +Infinity);
+((max = -Infinity), (min = +Infinity));
 
 for (var i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {
@@ -131,7 +131,8 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-> **참고:** **알림:** 위에서 사용된 `Object.create()` 메소드는 상대적으로 새로운 것입니다. 대안으로, 다음 접근법 중 하나를 고려하세요.
+> [!NOTE]
+> 위에서 사용된 `Object.create()` 메소드는 상대적으로 새로운 것입니다. 대안으로, 다음 접근법 중 하나를 고려하세요.
 
 [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 사용:
 
@@ -144,7 +145,7 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-[클로져](/ko/docs/Web/JavaScript/Closures) 사용:
+[클로져](/ko/docs/Web/JavaScript/Guide/Closures) 사용:
 
 ```JS
 Function.prototype.construct = function(aArgs) {

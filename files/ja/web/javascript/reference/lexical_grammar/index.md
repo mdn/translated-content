@@ -2,10 +2,8 @@
 title: 字句文法
 slug: Web/JavaScript/Reference/Lexical_grammar
 l10n:
-  sourceCommit: 3c13d9a0c239ed31ae861486393952bc03e0b5bd
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
-
-{{jsSidebar("More")}}
 
 このページでは、 JavaScript での字句文法を説明します。JavaScript のソーステキストは、単なる文字の列です。これをインタープリターに理解させるためには、文字列をより構造化された表現に解釈させる必要があります。構文解析の最初の手順は[字句解析](https://ja.wikipedia.org/wiki/字句解析)と呼ばれ、テキストを左から右へスキャンして、個々の原子的な入力要素の列に変換します。一部の入力要素、例えば[ホワイトスペース](#ホワイトスペース)や[コメント](#コメント)はインタープリターにとって重要ではないので、この手順の後で取り除かれます。それ以外の、例えば[識別子](#識別子)、[キーワード](#キーワード)、[リテラル](#リテラル)、区切り記号（主に[演算子](/ja/docs/Web/JavaScript/Reference/Operators)）は、その後の構文解析に使用します。[改行文字](#改行文字)や複数行のコメントも構文的には重要ではありませんが、不正なトークン列を有効にするために[自動セミコロン挿入](#自動セミコロン挿入)の処理のガイドとなります。
 
@@ -37,7 +35,8 @@ JavaScriptのソーステキストでは、 \<ZWNJ> と \<ZWJ> は[識別子](#�
 
 [space separator set]: https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BGeneral_Category%3DSpace_Separator%7D
 
-> **メモ:** ["White_Space" プロパティがあるが "Space_Separator" 一般カテゴリーにない文字](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BWhite_Space%7D%26%5CP%7BGeneral_Category%3DSpace_Separator%7D)のうち、 U+0009, U+000B, U+000C は JavaScript でもホワイトスペースとして扱われ、 U+0085 NEXT LINE は特別な役割を持たず、他にも[改行文字](#改行文字)の集合となるものがあります。
+> [!NOTE]
+> ["White_Space" プロパティがあるが "Space_Separator" 一般カテゴリーにない文字](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BWhite_Space%7D%26%5CP%7BGeneral_Category%3DSpace_Separator%7D)のうち、 U+0009, U+000B, U+000C は JavaScript でもホワイトスペースとして扱われ、 U+0085 NEXT LINE は特別な役割を持たず、他にも[改行文字](#改行文字)の集合となるものがあります。
 
 > [!NOTE]
 > JavaScript エンジンで使用される Unicode 規格が変更されると、プログラムの動作に影響を与える可能性があります。例えば、 ES2016 では参照する Unicode 規格が 5.1 から 8.0.0 にアップグレードされ、その影響で U+180E MONGOLIAN VOWEL SEPARATOR が "Space_Separator" カテゴリーから「書式化（Cf）」カテゴリーに移動し、空白でなくなっています。その結果、" \u180E".trim().length の結果が 0 から 1 に変更されました。
@@ -69,7 +68,7 @@ JavaScript には、コード内にコメントを割り当てる方法が 2 つ
 
 ```js
 function comment() {
-  // This is a one line JavaScript comment
+  // これは JavaScript の 1 行コメントです
   console.log("Hello world!");
 }
 comment();
@@ -83,7 +82,7 @@ comment();
 
 ```js
 function comment() {
-  /* This is a one line JavaScript comment */
+  /* これは JavaScript の 1 行コメントです */
   console.log("Hello world!");
 }
 comment();
@@ -93,8 +92,8 @@ comment();
 
 ```js
 function comment() {
-  /* This comment spans multiple lines. Notice
-     that we don't need to end the comment until we're done. */
+  /* このコメントは複数行にまたがることができます。
+     コメントが終了するまで、閉じる必要がないことに注意してください。 */
   console.log("Hello world!");
 }
 comment();
@@ -104,7 +103,7 @@ comment();
 
 ```js
 function comment(x) {
-  console.log("Hello " + x /* insert the value of x */ + " !");
+  console.log("Hello " + x /* 値 x を挿入 */ + " !");
 }
 comment("world");
 ```
@@ -151,7 +150,7 @@ function fn() {} // 関数宣言
 const obj = { key: "value" }; // オブジェクトキー
 // クラス宣言
 class C {
-  #priv = "value"; // プライベートプロパティ
+  #priv = "value"; // プライベートフィールド
 }
 lbl: console.log(1); // ラベル
 ```
@@ -177,7 +176,7 @@ console.log(\u4f60\u597d); // Hello
 function import() {} // 違反: import は予約語です。
 ```
 
-最も注目すべきは、プライベートプロパティとオブジェクトプロパティは、予約語を許可していることです。
+最も注目すべきは、プライベート要素とオブジェクトプロパティは、予約語を許可していることです。
 
 ```js
 const obj = { import: "value" }; // `import` は予約語だが有効
@@ -378,9 +377,9 @@ false
 16 進数の構文は、先頭のゼロに続いて小文字または大文字のラテン文字 "X" を使用します (`0x` または `0X`)。`0x` の後に範囲 (0123456789ABCDEF) から外れた文字があると、一連のリテラルは終了します。
 
 ```js-nolint
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xFFFFFFFFFFFFF // 4503599627370495
+0xabcdef123456  // 188900967593046
+0XA             // 10
 ```
 
 #### 長整数リテラル
@@ -559,12 +558,12 @@ tag`string text ${expression} string text`;
 
 一部の [JavaScript 文](/ja/docs/Web/JavaScript/Reference/Statements)は、末尾にセミコロン (`;`) が必要です。これには次のようなものがあります。
 
-- [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var), [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const)
+- [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var), [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const), [`using`](/ja/docs/Web/JavaScript/Reference/Statements/using), [`await using`](/ja/docs/Web/JavaScript/Reference/Statements/await_using)
 - [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)
 - [`do...while`](/ja/docs/Web/JavaScript/Reference/Statements/do...while)
 - [`continue`](/ja/docs/Web/JavaScript/Reference/Statements/continue), [`break`](/ja/docs/Web/JavaScript/Reference/Statements/break), [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return), [`throw`](/ja/docs/Web/JavaScript/Reference/Statements/throw)
 - [`debugger`](/ja/docs/Web/JavaScript/Reference/Statements/debugger)
-- クラスフィールド宣言（[パブリック](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)または[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)）
+- クラスフィールド宣言（[パブリック](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)または[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)）
 - [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import), [`export`](/ja/docs/Web/JavaScript/Reference/Statements/export)
 
 しかし、JavaScriptはこの言語をより手軽で便利なものにするために、トークンストリームを処理する際にセミコロンを自動的に挿入することがあり、不正なトークン列を有効な構文に「修正」することができます。この手順は、プログラムテキストが字句文法に従ってトークンに解釈された後に行われます。セミコロンが自動的に挿入されるケースは 3 つあります。
@@ -588,7 +587,7 @@ tag`string text ${expression} string text`;
 
 ```js-nolint
 do {
-  // ...
+  // …
 } while (condition) /* ; */ // ASI が行われる
 const a = 1
 ```
@@ -629,6 +628,7 @@ const a = 1 /* ; */ // ASI が行われる
 - `yield <ここ> * 式`
 - `(param) <ここ> => {}`
 - `async <ここ> function`, `async <ここ> prop()`, `async <ここ> function*`, `async <ここ> *prop()`, `async <ここ> (param) <ここ> => {}`
+- `using <ここ> id`, `await <ここ> using <ここ> id`
 
 ここで [`++`](/ja/docs/Web/JavaScript/Reference/Operators/Increment) は、変数 `b` に適用される後置演算子としては扱われません。というのも、改行文字が `b` と`++` の間にあるからです。
 
@@ -772,12 +772,24 @@ class A {
   foo() {}
   ```
 
-- `(`, `[`, `` ` ``, `+`, `-`, `/`（正規表現リテラルとして）のいずれかで始まる行は、その前にセミコロンを置くか、前の行をセミコロンで終わらせるかしましょう。
+- `using` キーワードを `using` 文および `await using` 文で使用する場合、宣言する最初の識別子と同じ行に記述する必要があります。
+
+  ```js-nolint example-bad
+  using
+  resource = acquireResource()
+  ```
+
+  ```js-nolint example-good
+  using resource
+    = acquireResource()
+  ```
+
+- `(`, `[`, `` ` ``, `+`, `-`, `/` （正規表現リテラルとして）のいずれかで始まる行は、その前にセミコロンを置くか、前の行をセミコロンで終わらせるかしましょう。
 
   ```js-nolint example-bad
   // この () は前の行と結合して関数呼び出しとなる可能性がある
   (() => {
-    // ...
+    // …
   })()
 
   // この [ は前の行と結合してプロパティアクセスとなる可能性がある
@@ -798,7 +810,7 @@ class A {
 
   ```js-nolint example-good
   ;(() => {
-    // ...
+    // …
   })()
   ;[1, 2, 3].forEach(console.log)
   ;`string text ${data}`.match(pattern).forEach(console.log)
@@ -836,5 +848,5 @@ class A {
 ## 関連情報
 
 - [文法とデータ型](/ja/docs/Web/JavaScript/Guide/Grammar_and_types)ガイド
-- [Micro-feature from ES6, now in Firefox Aurora and Nightly: binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/) by Jeff Walden (2013)
-- [JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes) by Mathias Bynens (2011)
+- [Micro-feature from ES6, now in Firefox Aurora and Nightly: binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/) (Jeff Walden, 2013)
+- [JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes) (Mathias Bynens, 2011)

@@ -14,7 +14,8 @@ Para tirar o máximo proveito deste módulo, é recomendável a leitura dos mód
 
 Conhecimento básico de [HTML](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d) e [CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics) serão utéis.
 
-> **Nota:** **Notes** Se você estiver trabalhando de um dispositivo que não permita a criação de arquivos. Você pode tentar editar os arquivos em um editor online como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> Se você estiver trabalhando de um dispositivo que não permita a criação de arquivos. Você pode tentar editar os arquivos em um editor online como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias
 

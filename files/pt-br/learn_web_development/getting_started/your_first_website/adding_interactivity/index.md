@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactiv
 original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
 JavaScript é uma linguagem de programação que adiciona interatividade ao seu site. Isso acontece em jogos, no comportamento das respostas quando botões são pressionados ou com entrada de dados em formulários; com estilo dinâmico; com animação, etc.
 Este artigo ajuda você a começar a usar o JavaScript e aumenta sua compreensão do que é possível.
@@ -383,7 +383,6 @@ Isso é o que aconteceu. Você armazenou uma referência ao seu elemento {{htmle
 
 1. O código recupera o valor do atributo `src` da imagem.
 2. O código usa uma condicional para verificar se o valor `src` é igual ao caminho da imagem original:
-
    1. Se for, o código altera o valor `src` para o caminho da segunda imagem, forçando a outra imagem a ser carregada dentro do elemento {{htmlelement("img")}}.
    2. Se não for (o que significa que já deve ter mudado), o valor `src` volta para o caminho da imagem original, para o estado original.
 
@@ -476,4 +475,4 @@ Acabamos de arranhar a superfície do JavaScript. Se você gostou de jogar e des
 - [Aprenda JavaScript](https://learnjavascript.online/)
   - : Este é um excelente recurso para aspirantes a desenvolvedores da web! Aprenda JavaScript em um ambiente interativo, com aulas curtas e testes interativos, guiados por uma avaliação automatizada. As primeiras 40 aulas são gratuitas. O curso completo está disponível por um pequeno pagamento único.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}

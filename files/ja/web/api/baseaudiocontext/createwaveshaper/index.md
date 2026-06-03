@@ -10,7 +10,8 @@ l10n:
 
 `createWaveShaper()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("WaveShaperNode") }} を生成します。これは非線形な歪みを表現します。オーディオに歪み効果を適用するために使用されます。
 
-> **メモ:** {{domxref("WaveShaperNode.WaveShaperNode", "WaveShaperNode()")}} コンストラクターは {{domxref("WaveShaperNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> [!NOTE]
+> {{domxref("WaveShaperNode.WaveShaperNode", "WaveShaperNode()")}} コンストラクターは {{domxref("WaveShaperNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 

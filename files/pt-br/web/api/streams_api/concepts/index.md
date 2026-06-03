@@ -30,7 +30,8 @@ Apenas um reader pode ler um stream por vez; quando um reader é criado e inicia
 
 Observe que há dois tipos diferentes de readable streams. Assim como um readable stream convencional há um tipo chamado byte stream - este é uma versão extendida de um stream convencional para leitura de underlying byte sources (de outra forma conhecido como BYOB, ou "bring your own buffer"). Estes permitem que streams sejam lidos diretamente em um buffer fornecido pelo desenvolvedor, minimizando a cópia necessária. Tal underlying stream (e por extensão, reader e controller) seu código dependerá em primeiro lugar de como o stream foi criado (veja o {{domxref("ReadableStream.ReadableStream()")}} construtor de página).
 
-> **Aviso:** **Importante**: Bytes streams não estão implementados ainda em algum lugar, e foram levantadas questões sobre se os detalhes de especificação estão em condições para serem implementados. Isto pode mudar com o tempo.
+> [!WARNING]
+> **Importante**: Bytes streams não estão implementados ainda em algum lugar, e foram levantadas questões sobre se os detalhes de especificação estão em condições para serem implementados. Isto pode mudar com o tempo.
 
 Você pode fazer uso dos stream readers já implementados via mecanismos como {{domxref("Response.body")}} como uma requisição, ou com seus próprios streams usando o {{domxref("ReadableStream.ReadableStream()")}} como construtor.
 

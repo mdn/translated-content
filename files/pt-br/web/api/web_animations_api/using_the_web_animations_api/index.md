@@ -336,7 +336,8 @@ var endGame = function() {
 }
 ```
 
-> **Nota:** `getAnimations()` e `effect` não estão disponíveis em todos os browsers no momento em que este artigo foi escrito, mas o polyfill possibilita utilizá-los agora.
+> [!NOTE]
+> `getAnimations()` e `effect` não estão disponíveis em todos os browsers no momento em que este artigo foi escrito, mas o polyfill possibilita utilizá-los agora.
 
 ## Callbacks e promises
 

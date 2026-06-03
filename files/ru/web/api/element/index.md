@@ -44,7 +44,6 @@ _Наследует свойства от родительского узла {{
 - {{ domxref("Element.innerHTML") }} {{experimental_inline}}
   - : Является {{domxref("DOMString")}}, представляющей разметку контента элемента.
 - {{domxref("Element.namespaceURI")}} {{readonlyInline}}
-
   - : Пространство имён URI элемента или null, если это не пространство имён.
 
     > [!NOTE]

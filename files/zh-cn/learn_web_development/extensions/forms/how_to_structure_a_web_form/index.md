@@ -136,7 +136,7 @@ l10n:
 <!--div>
   <label for="username">名字：</label>
   <input id="username" type="text" name="username" required>
-  <label for="username"><span aria-label="必须">*</label>
+  <label for="username"><span aria-label="必须">*</span></label>
 </div-->
 
 <!-- 可能没有这样写好： -->
@@ -392,7 +392,7 @@ l10n:
 
 ## 技能测试！
 
-本文已经结束，但你还记得最重要的信息吗？在继续阅读之前，可以找到进一步的测试来验证是否记住了这些信息——请参见[技能测试：表格结构](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Form_structure)。
+本文已经结束，但你还记得最重要的信息吗？在继续阅读之前，可以找到进一步的测试来验证是否记住了这些信息——请参见[技能测试：表格结构](/zh-CN/docs/Learn_web_development/Extensions/Forms)。
 
 ## 总结
 

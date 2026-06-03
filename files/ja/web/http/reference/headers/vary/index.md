@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Vary
 original_slug: Web/HTTP/Headers/Vary
 ---
 
-{{HTTPSidebar}}
-
 **`Vary`** HTTP レスポンスヘッダーは、オリジンのサーバーから新しく要求するのではなく、キャッシュされたレスポンスを使用できるかどうかを決定するために将来のリクエストヘッダーをどのように一致させるかを決定します。これは、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)アルゴリズムでリソースの表現を選択するときにどのヘッダーを使用したかを示すためにサーバーによって使用されます。
 
 `Vary` ヘッダーは {{HTTPStatus("200")}} `OK` レスポンスに設定されるのと同様に、 {{HTTPStatus("304")}} `Not Modified` にも設定されます。

@@ -1,35 +1,29 @@
 ---
 title: Unicode 字符类转义：\p{...}、\P{...}
 slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
+l10n:
+  sourceCommit: fce3e005d0d2566741e2db7acc8f83c708d1c1cc
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+**Unicode 字符类转义**是一种[字符类转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)，用于匹配由 Unicode 属性指定的字符集。它仅在 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)下受支持。当启用 [`v`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) 标志时，它也可用于匹配有限长度的字符串。
 
-**Unicode property escapes** [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions) 支持根据 Unicode 属性进行匹配，例如我们可以用它来匹配出表情、标点符号、字母（甚至适用特定语言或文字）等。同一符号可以拥有多种 Unicode 属性，属性则有 binary ("boolean-like") 和 non-binary 之分。
-
-{{InteractiveExample("JavaScript Demo: RegExp Unicode property escapes", "taller")}}
+{{InteractiveExample("JavaScript 演示：正则表达式 Unicode 字符类转义", "taller")}}
 
 ```js interactive-example
 const sentence = "A ticket to 大阪 costs ¥2000 👌.";
 
 const regexpEmojiPresentation = /\p{Emoji_Presentation}/gu;
 console.log(sentence.match(regexpEmojiPresentation));
-// Expected output: Array ["👌"]
+// 期望输出：Array ["👌"]
 
 const regexpNonLatin = /\P{Script_Extensions=Latin}+/gu;
 console.log(sentence.match(regexpNonLatin));
-// Expected output: Array [" ", " ", " 大阪 ", " ¥2000 👌."]
+// 期望输出：Array [" ", " ", " 大阪 ", " ¥2000 👌."]
 
 const regexpCurrencyOrPunctuation = /\p{Sc}|\p{P}/gu;
 console.log(sentence.match(regexpCurrencyOrPunctuation));
-// Expected output: Array ["¥", "."]
+// 期望输出：Array ["¥", "."]
 ```
-
-> [!NOTE]
-> 使用 Unicode 属性转义依靠 [`\u` 标识](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)，`\u` 表示该字符串被视为一串 Unicode 代码点。参考 [`RegExp.prototype.unicode`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)。
-
-> [!NOTE]
-> 某些 Unicode 属性比[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)(如 `\w` 只匹配拉丁字母 `a` 到 `z`) 包含更多的字符，但后者浏览器兼容性更好（截至 2020 一月）。
 
 ## 语法
 
@@ -41,104 +35,147 @@ console.log(sentence.match(regexpCurrencyOrPunctuation));
 \P{property=value}
 ```
 
-- [General_Category](https://unicode.org/reports/tr18/#General_Category_Property) (`gc`)
-- [Script](https://unicode.org/reports/tr24/#Script) (`sc`)
-- [Script_Extensions](https://unicode.org/reports/tr24/#Script_Extensions) (`scx`)
+### 参数
 
-参考 [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
+- `loneProperty`
+  - : 一个单独的 Unicode 属性名称或值，其语法与 `value` 相同。它指定 `General_Category` 属性的值，或一个[二元属性名称](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties)。在 [`v`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) 模式下，它也可以是[字符串的二元 Unicode 属性](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties-of-strings)。
 
-- UnicodeBinary 属性名
-  - : [Binary 属性](https://tc39.es/ecma262/#table-binary-unicode-properties)名。E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property). [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), 等。另见 [Unicode Data PropList.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt).
-- Unicode 属性名
-  - : [Non-binary](https://tc39.es/ecma262/#table-nonbinary-unicode-properties) 属性名：
-- Unicode 属性值
-  - : 很多值有同名或简写 (e.g. 对应着 `General_Category` 属性名的属性值 `Decimal_Number` 可以写作 `Nd`, `digit`, 或 `Decimal_Number`). 大多数属性值的 `Unicode 属性名` 和等号可以省去。如果想明确某 `Unicode 属性名`，必须给出它的值。
+    > [!NOTE]
+    > [ICU](https://unicode-org.github.io/icu/userguide/strings/unicodeset.html#property-values) 的语法也允许省略 `Script` 属性名，但 JavaScript 不支持这种写法，因为在大多数情况下，`Script_Extensions` 比 `Script` 更有用。
+
+- `property`
+  - : Unicode 属性名称。必须由 {{Glossary("ASCII")}} 字符（`A–Z`、`a–z`）和下划线（`_`）组成，且必须是[非二元属性名称](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties)之一。
+- `value`
+  - : Unicode 属性值。必须由 ASCII 字符（`A–Z`、`a–z`）、下划线（`_`）和数字（`0–9`）组成，且必须是 [`PropertyValueAliases.txt`](https://unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt) 中列出的支持的值之一。
+
+## 描述
+
+`\p` 和 `\P` 仅在 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)下受支持。在非 Unicode 感知模式下，它们是 `p` 或 `P` 字符的[一致转义符](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)。
+
+每个 Unicode 字符都有一组描述它的属性。例如，字符 [`a`](https://util.unicode.org/UnicodeJsps/character.jsp?a=0061) 的 `General_Category` 属性值为 `Lowercase_Letter`，`Script` 属性值为 `Latn`。`\p` 和 `\P` 转义序列允许根据字符的属性进行匹配。例如，`a` 既可以通过 `\p{Lowercase_Letter}`（`General_Category` 属性名可选）匹配，也可以通过 `\p{Script=Latn}` 匹配。`\P` 会创建一个*补集类*，其中包含不具备指定属性的码位。
+
+当设置了 [`i`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) 标志时，`u` 和 `v` 模式下对 `\P` 字符类的处理方式略有不同。在 `u` 模式下，大小写转换发生在差集运算之后；而在 `v` 模式下，大小写转换发生在差集运算之前。更具体地说，在 `u` 模式下，`\P{property}` 匹配 `caseFold(allCharacters - charactersWithProperty)`。这意味着 `/\P{Lowercase_Letter}/iu` 仍然匹配 `"a"`，因为 `A` 不是 `Lowercase_Letter`。在 `v` 模式下，`\P{property}` 匹配 `caseFold(allCharacters) - caseFold(charactersWithProperty)`。这意味着 `/\P{Lowercase_Letter}/iv` 不匹配 `"a"`，因为 `A` 甚至不在所有大小写转换后的 Unicode 字符集合中。参见[补集类与不区分大小写的匹配](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#补集类与不区分大小写的匹配)。
+
+要组合多个属性，请使用通过 `v` 标志启用的[字符集交集](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-模式字符类) 语法，或参见[模式差集与交集](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#模式差集与交集)。
+
+在 `v` 模式下，`\p` 可能匹配一串码位，Unicode 中将其定义为“字符串属性”。这对通常由多个码位组成的表情符号最为有用。然而，`\P` 只能匹配字符属性。
 
 > [!NOTE]
-> 因为可使用的属性和值太多，这里不一一赘述，仅提供几个例子。
-
-## 基本原理
-
-在 ES2018 之前，JavaScript 没有强有效的方式用匹配出不同`文字`(如马其顿语，希腊语，Georgian 等) 或不同 `属性名` (如 Emoji 等) 的字符。另见 [tc39 Proposal on Unicode Property Escapes](https://github.com/tc39/proposal-regexp-unicode-property-escapes).
+> 目前也有计划将字符串属性的功能移植到 `u` 模式中。
 
 ## 示例
 
-### （一般类别）General categories
+### 通用类别
 
-General categories 对 Unicode 字符进行分类，子类别用于精确定义类别。长名和简写的 Unicode 属性转义都可用。
+通用类别用于对 Unicode 字符进行分类，而子类别则用于定义更精确的分类。在 Unicode 属性转义序列中，可以使用短形式或长形式。
 
-它们可匹配字母、数字、符号、标点符号、空格等等。一般类别详见 [the Unicode specification](https://unicode.org/reports/tr18/#General_Category_Property).
+它们可用于匹配字母、数字、符号、标点、空格等。如需查看更详尽的一般类别列表，请参阅 [Unicode 规范](https://unicode.org/reports/tr18/#General_Category_Property)。
 
 ```js
-// finding all the letters of a text
-let story = "It's the Cheshire Cat: now I shall have somebody to talk to.";
+// 匹配文本中所有的字母
+const story = "It's the Cheshire Cat: now I shall have somebody to talk to.";
 
-// Most explicit form
+// 最明确的形式
 story.match(/\p{General_Category=Letter}/gu);
 
-// It is not mandatory to use the property name for General categories
+// 对于通用类别，无需使用属性名称
 story.match(/\p{Letter}/gu);
 
-// This is equivalent (short alias):
+// 与以下内容等价（简写形式）：
 story.match(/\p{L}/gu);
 
-// This is also equivalent (conjunction of all the subcategories using short aliases)
+// 这也等同于（使用简短别名对所有子类别进行并集运算）：
 story.match(/\p{Lu}|\p{Ll}|\p{Lt}|\p{Lm}|\p{Lo}/gu);
 ```
 
-### 文字（Script）和文字扩充（Script_Extensions）
+### 文字与文字扩展
 
-某些语言使用不同的文字，如英语和西班牙语使用拉丁文，而阿拉伯语和俄语用阿拉伯文和俄文。`Script` 和 `Script_Extensions` Unicode 属性允许正则表达式根据字符所属的`文字`或该文字所属的`文字扩充`进行匹配。
+某些语言使用不同的文字系统进行书写。例如，英语和西班牙语使用拉丁字母书写，而阿拉伯语和俄语则使用其他文字系统（分别是阿拉伯文和西里尔文）。Unicode 的 `Script` 和 `Script_Extensions` 属性允许正则表达式根据字符主要使用的文字系统（`Script`）或其所属的文字系统集合（`Script_Extensions`）来匹配字符。
 
-比如，`A` 属于 `拉丁文`，`ε` 属于`希腊 (Greek)`文。
+例如，`A` 属于 `Latin` 字符集，而 `ε` 属于 `Greek` 字符集。
 
 ```js
-let mixedCharacters = "aεЛ";
+const mixedCharacters = "aεЛ";
 
-// Using the canonical "long" name of the script
+// 使用脚本的标准“长”名称
 mixedCharacters.match(/\p{Script=Latin}/u); // a
 
-// Using a short alias for the script
+// 为该种文字使用简短别名（ISO 15924 代码）
 mixedCharacters.match(/\p{Script=Grek}/u); // ε
 
-// Using the short name Sc for the Script property
-mixedCharacters.match(/\p{Sc=Cyrillic}/u); // Л
+// 为“Script”属性使用缩写名“sc”
+mixedCharacters.match(/\p{sc=Cyrillic}/u); // Л
 ```
 
-详见 [the Unicode specification](https://unicode.org/reports/tr24/#Script) 和 [Scripts table in the ECMAScript specification](https://tc39.es/ecma262/#table-unicode-script-values).
+更多详情，请参阅 [Unicode 规范](https://unicode.org/reports/tr24/#Script)、[ECMAScript 规范中的文字表](https://tc39.es/ecma262/multipage/text-processing.html#table-unicode-script-values) 以及 [ISO 15924 文字代码列表](https://unicode.org/iso15924/iso15924-codes.html)。
 
-某字符用于多种文字时，`Script` 优先匹配最主要使用那个字符的文字。如果想要根据非主要的文字进行匹配，我们可以使用 `Script_Extensions` 属性 (简写为`Scx`).
+如果某个字符属于有限的文字集合，`Script` 属性仅匹配“主要”使用的文字。如果我们要根据“非主要”文字匹配字符，可以使用 `Script_Extensions` 属性（简称 `scx`）。
 
 ```js
-// ٢ is the digit 2 in Arabic-Indic notation
-// while it is predominantly written within the Arabic script
-// it can also be written in the Thaana script
+// ٢ 是阿拉伯——印度数字系统中的数字 2，虽然它主要使用阿拉伯字母书写，但也可能使用塔纳字母书写。
 
 "٢".match(/\p{Script=Thaana}/u);
-// null as Thaana is not the predominant script        super()
+// null，因为塔纳文并非主要文字
 
 "٢".match(/\p{Script_Extensions=Thaana}/u);
 // ["٢", index: 0, input: "٢", groups: undefined]
 ```
 
-### Unicode 属性转义 vs. 字符类
+### Unicode 属性转义与字符类
 
-JavaScript 正则表达式可以使用 [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) 尤其是 `\w` 或 `\d` 匹配字母或数字，然而，这样的形式只匹配拉丁文字的字符 (换言之，`a` 到 `z`、 `A` 到 `Z` 的 `\w` 和 `0` 到 `9` 的 `\d`)，见[示例](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#寻找一个_unicode_字符的单词)，这样的使用放到非拉丁文本中是有些蠢的。
+在 JavaScript 正则表达式中，也可以使用[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)，特别是 `\w` 或 `\d` 来匹配字母或数字。然而，此类形式仅匹配*拉丁*字母表中的字符（换言之，`\w` 匹配 `a` 到 `z` 以及 `A` 到 `Z`，`\d` 匹配 `0` 到 `9`）。如[此示例](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#寻找一个_unicode_字符的单词)所示，处理非拉丁文本时可能会有些笨拙。
 
-Unicode 属性转义 categories 包含更多字符，`\p{Letter}` 或 `\p{Number}` 将会适用于任何文字。
+Unicode 属性转义类别涵盖了更多的字符，而 `\p{Letter}` 或 `\p{Number}` 适用于任何字符集。
 
 ```js
-// Trying to use ranges to avoid \w limitations:
+// 尝试使用字符集来规避 \w 的限制：
 
 const nonEnglishText = "Приключения Алисы в Стране чудес";
 const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
-// BMP goes through U+0000 to U+FFFF but space is U+0020
+// BMP 范围从 U+0000 到 U+FFFF，但空格是 U+0020
 
 console.table(nonEnglishText.match(regexpBMPWord));
 
-// Using Unicode property escapes instead
+//  改用 Unicode 属性转义符
 const regexpUPE = /\p{L}+/gu;
 console.table(nonEnglishText.match(regexpUPE));
+```
+
+### 匹配价格
+
+以下示例在字符串中匹配价格：
+
+```js
+function getPrices(str) {
+  // Sc 代表“货币符号”
+  return [...str.matchAll(/\p{Sc}\s*[\d.,]+/gu)].map((match) => match[0]);
+}
+
+const str = `California rolls $6.99
+Crunchy rolls $8.49
+Shrimp tempura $10.99`;
+console.log(getPrices(str)); // ["$6.99", "$8.49", "$10.99"]
+
+const str2 = `US store $19.99
+Europe store €18.99
+Japan store ¥2000`;
+console.log(getPrices(str2)); // ["$19.99", "€18.99", "¥2000"]
+```
+
+### 匹配字符串
+
+使用 `v` 标志时，`\p{…}` 可以利用字符串的特性，匹配可能长于一个字符的字符串：
+
+```js
+const flag = "🇺🇳";
+console.log(flag.length); // 2
+console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
+```
+
+不过，你不能使用 `\P` 来匹配“一个不具有该属性的字符串”，因为无法确定应该消耗多少个字符。
+
+```js-nolint example-bad
+/\P{RGI_Emoji_Flag_Sequence}/v; // SyntaxError: Invalid regular expression: Invalid property name
 ```
 
 ## 规范
@@ -157,7 +194,7 @@ console.table(nonEnglishText.match(regexpUPE));
 - [字符类转义：`\d`、`\D`、`\w`、`\W`、`\s`、`\S`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
 - [字符转义：`\n`、`\u{...}`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
 - [析取符：`|`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
-- 维基百科上的 [Unicode 字符类属性](https://en.wikipedia.org/wiki/Unicode_character_property)
+- 维基百科上的 [Unicode 字符属性](https://en.wikipedia.org/wiki/Unicode_character_property)
 - [ES2018：RegExp Unicode 属性转义](https://2ality.com/2017/07/regexp-unicode-property-escapes.html)，由 Dr. Axel Rauschmayer 撰写（2017）
 - [Unicode 正则表达式：属性章节](https://unicode.org/reports/tr18/#Categories)
 - [Unicode 工具集：UnicodeSet](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp)

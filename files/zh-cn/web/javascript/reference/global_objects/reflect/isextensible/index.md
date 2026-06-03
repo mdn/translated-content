@@ -3,8 +3,6 @@ title: Reflect.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 ---
 
-{{JSRef}}
-
 `静态方法 Reflect`**`.isExtensible()`** 判断一个对象是否可扩展（即是否能够添加新的属性）。与它 {{jsxref("Object.isExtensible()")}} 方法相似，但有一些不同，详情可见 [与 Object.isExtensible() 的不同点](#与_object.isextensible_的不同点)。
 
 ## 语法

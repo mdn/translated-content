@@ -10,7 +10,7 @@ l10n:
 
 **`<s>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストを取り消し線または打ち消し線つきで描画します。`<s>` 要素はすでに適切または正確ではなくなった事柄を表現するために使用してください。しかし、文書の修正を示す場合、 `<s>` 要素は適切ではありません。この場合は {{HTMLElement("del")}} と {{HTMLElement("ins")}} の方が適しているので、こちらを使用してください。
 
-{{InteractiveExample("HTML Demo: &lt;s&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;s&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p><s>There will be a few tickets available at the box office tonight.</s></p>
@@ -28,13 +28,13 @@ s {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -42,7 +42,7 @@ s {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -54,7 +54,7 @@ s {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>

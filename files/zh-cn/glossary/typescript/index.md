@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8005d92738cb5678d9b1e434f02ddebaa15c1eaa
 ---
 
-{{GlossarySidebar}}
-
 TypeScript 是一个为 JavaScript 添加{{glossary("static_typing", "静态类型检查")}}的编程语言。
 
 TypeScript 是 JavaScript 的超集，这意味着 JavaScript 中所具有的一切也都可以在 TypeScript 中使用，而且每个 JavaScript 程序都是语法合法的 TypeScript 程序。此外，TypeScript 和 JavaScript 的运行时行为是相同的。

@@ -12,7 +12,7 @@ l10n:
 
 *ルビ*という言葉は[写植者が使用した長さの単位](<https://en.wikipedia.org/wiki/Agate_(typography)>)に由来しており、読みやすさ保ったままテキストを新聞用紙に印刷できる最小のサイズを表します。
 
-{{InteractiveExample("HTML Demo: &lt;ruby&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;ruby&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
@@ -28,15 +28,15 @@ ruby {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -44,7 +44,7 @@ ruby {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -56,7 +56,7 @@ ruby {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>

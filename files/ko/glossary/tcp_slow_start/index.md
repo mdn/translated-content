@@ -17,5 +17,5 @@ TCP 느린 시작을 구현하기 위해, 혼잡 창('cwnd')은 확인('ACK')을
 
 ## 같이 보기
 
-- [페이지 채우기: 브라우저 작동 방식](/ko/docs/Web/Performance/How_browsers_work)
-- [http 개요](/ko/docs/Web/HTTP/Overview)
+- [페이지 채우기: 브라우저 작동 방식](/ko/docs/Web/Performance/Guides/How_browsers_work)
+- [http 개요](/ko/docs/Web/HTTP/Guides/Overview)

@@ -1,37 +1,39 @@
 ---
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Objects")}}
+**`Infinity`** はグローバルプロパティで、無限大を表す数値です。
 
-グローバルプロパティ **`Infinity`** は無限大を表す数値です。
-
-{{js_property_attributes(0,0,0)}}
-
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - infinity")}}
+{{InteractiveExample("JavaScript デモ: Infinity")}}
 
 ```js interactive-example
-const maxNumber = Math.pow(10, 1000); // Max positive number
+const maxNumber = 10 ** 1000; // 正の最大値
 
 if (maxNumber === Infinity) {
   console.log("Let's call it Infinity!");
-  // Expected output: "Let's call it Infinity!"
+  // 予想される結果: "Let's call it Infinity!"
 }
 
 console.log(1 / maxNumber);
-// Expected output: 0
+// 予想される結果: 0
 ```
+
+## 値
+
+{{jsxref("Number.POSITIVE_INFINITY")}} と同じ数値です。
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 解説
 
-`Infinity` は*グローバルオブジェクト*のプロパティです。言い換えればグローバルスコープ内の変数です。
+`Infinity` はグローバルオブジェクトのプロパティです。言い換えればグローバルスコープ内の変数です。
 
-`Infinity` の初期値は {{jsxref("Number.POSITIVE_INFINITY")}} です。`Infinity` という値 (正の無限大) は他のあらゆる数より大きい数です。
+`Infinity` の値（正の無限大）は他のあらゆる数値よりも大きな値です。
 
 この値は数学的に無限大のように振る舞います。詳しくは {{jsxref("Number.POSITIVE_INFINITY")}} を参照してください。
-
-ECMAScript 5 の仕様では、`Infinity` は読み取り専用です (JavaScript 1.8.5 / Firefox 4 にて実装)。
 
 ## 例
 
@@ -40,7 +42,7 @@ ECMAScript 5 の仕様では、`Infinity` は読み取り専用です (JavaScrip
 ```js
 console.log(Infinity); /* Infinity */
 console.log(Infinity + 1); /* Infinity */
-console.log(Math.pow(10, 1000)); /* Infinity */
+console.log(10 ** 1000); /* Infinity */
 console.log(Math.log(0)); /* -Infinity */
 console.log(1 / Infinity); /* 0 */
 console.log(1 / 0); /* Infinity */

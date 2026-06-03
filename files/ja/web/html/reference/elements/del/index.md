@@ -10,7 +10,7 @@ l10n:
 
 **`<del>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書から削除された文字列の範囲を表します。これは例えば、「変更の追跡」や、ソースコードの差分情報を描画するときに使用することができます。{{HTMLElement("ins")}} 要素は逆の目的に、文書に追加された文字列を示すために用いることができます。
 
-{{InteractiveExample("HTML Demo: &lt;del&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;del&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <blockquote>
@@ -44,14 +44,14 @@ blockquote {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        >、<a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -59,7 +59,7 @@ blockquote {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#透過的コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#透過的コンテンツ"
           >透過的コンテンツ</a
         >
       </td>
@@ -71,7 +71,7 @@ blockquote {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>

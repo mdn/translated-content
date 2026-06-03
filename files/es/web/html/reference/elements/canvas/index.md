@@ -14,11 +14,11 @@ Para más artículos sobre canvas, consulta la [página del tema canvas](/es/doc
 
 ## Contexto de uso
 
-| Contenido permitido            | Transparente, ya sea [contenido estático](/es/docs/Web/HTML/Content_categories#phrasing_content) o [contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content) . |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                              |
-| Elementos primarios permitidos | Cualquier elemento que acepte contenido dinámico o cualquier otro elemento que acepte contenido estático .                                                                   |
-| Documento normativo            | [HTML 5, sección 4.8.10](https://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                             |
+| Contenido permitido            | Transparente, ya sea [contenido estático](/es/docs/Web/HTML/Guides/Content_categories#phrasing_content) o [contenido dinámico](/es/docs/Web/HTML/Guides/Content_categories#flow_content) . |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                                            |
+| Elementos primarios permitidos | Cualquier elemento que acepte contenido dinámico o cualquier otro elemento que acepte contenido estático .                                                                                 |
+| Documento normativo            | [HTML 5, sección 4.8.10](https://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                                           |
 
 ## Atributos
 
@@ -44,7 +44,7 @@ Para más artículos sobre canvas, consulta la [página del tema canvas](/es/doc
 
 ## Sobre Accesibilidad
 
-El elemento [`<canvas>`](/es/docs/Web/HTML/Element/canvas) es simplemente un bitman que no provee ninguna información adicional sobre los elementos que tiene dibujados. El contenido de la etiqueta `canvas` no se muestra a los lectores de pantalla como otras etiquetas semánticas. Como regla general, deberías evitar utilizar canvas en un sitio accesible.
+El elemento [`<canvas>`](/es/docs/Web/HTML/Reference/Elements/canvas) es simplemente un bitman que no provee ninguna información adicional sobre los elementos que tiene dibujados. El contenido de la etiqueta `canvas` no se muestra a los lectores de pantalla como otras etiquetas semánticas. Como regla general, deberías evitar utilizar canvas en un sitio accesible.
 
 Para mejorar la accesibilidad de la etiquetas puedes leer los siguientes artículos (en inglés):
 

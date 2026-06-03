@@ -34,7 +34,7 @@ WebVTT API は主に、動画コンテンツに重ねて表示される字幕や
 
 あるいは、{{domxref("TextTrack")}} を JavaScript で [`HTMLMediaElement.addTextTrack()`](/ja/docs/Web/API/HTMLMediaElement/addTextTrack) を使用してメディア要素にテキストトラックを追加し、個々の {{domxref("VTTCue")}} オブジェクトを {{domxref("TextTrack.addCue()")}} によってトラックに追加することができます。
 
-{{cssxref("::cue")}} は [CSS](/ja/docs/Web/CSS) [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、HTML と WebVTT ファイルのどちらでも使用することができ、特定の要素、キュー内の特定のタグ、VTT クラス、または特定のラベルを持つキューのスタイルを設定することができます。
+{{cssxref("::cue")}} は [CSS](/ja/docs/Web/CSS) [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、HTML と WebVTT ファイルのどちらでも使用することができ、特定の要素、キュー内の特定のタグ、VTT クラス、または特定のラベルを持つキューのスタイルを設定することができます。
 `::cue-region` 擬似要素は、特定の領域のキューをスタイル設定するためのものですが、どのブラウザーも対応していません。
 
 WebVTTの最も重要な機能は、ファイル形式またはウェブ API を使用してアクセスすることができます。
@@ -62,7 +62,7 @@ WebVTTの最も重要な機能は、ファイル形式またはウェブ API を
 
 ### 関連する CSS の拡張
 
-これらの [CSS](/ja/docs/Web/CSS) [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は、VTT トラックを持つメディアのキューをスタイルするために使用されます。
+これらの [CSS](/ja/docs/Web/CSS) [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)は、VTT トラックを持つメディアのキューをスタイルするために使用されます。
 
 - {{CSSxRef("::cue")}}
   - : メディアの中で選択された要素内のキューを VTT トラックと照合します。
@@ -156,13 +156,13 @@ Somebody must've stolen the crown jewels
 </video>
 ```
 
-### HTML またはスタイルシートは WebVTT のスタイル設定
+### HTML またはスタイルシートの中の WebVTT のスタイル設定
 
 WebVTT キューは、{{cssxref("::cue")}} 擬似要素を使用して要素と照合することで、スタイル設定することができます。
 これにより、すべてのキューテキストの外観を変更することも、特定の要素だけを変更することもできます。この例では、[上記の最初の例](#webvtt_api_を使用してキャプションを追加)にスタイル設定を追加します。
 
 > [!NOTE]
-> また、[WebVTT ファイル形式](/ja/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format)でスタイルを定義することも可能です。
+> [WebVTT ファイル形式](/ja/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format)でもスタイルを定義することも可能です。
 
 #### HTML
 
@@ -289,7 +289,7 @@ video::cue(i) {
 }
 
 video::cue(c) {
-  color: lightpurple;
+  color: lavender;
 }
 ```
 
@@ -376,4 +376,4 @@ video::cue(v[voice="Bob"]) {
 
 ## 関連情報
 
-- CSS の [`::cue` および `::cue()`](/ja/docs/Web/CSS/::cue) 擬似要素
+- CSS の [`::cue` および `::cue()`](/ja/docs/Web/CSS/Reference/Selectors/::cue) 擬似要素

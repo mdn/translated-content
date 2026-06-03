@@ -18,11 +18,9 @@ En general, no es necesario utilizar macros para crear enlaces arbitrarios. Util
 - La macro [`Glossary`](https://github.com/mdn/yari/tree/main/kumascript/macros/Glossary.ejs) crea un vínculo a la entrada de un término específico en el [glosario](/es/docs/Glossary) de MDN. Esta macro acepta un parámetro obligatorio y dos opcionales:
 
   Ejemplos:
-
   1. El nombre del término (tal como "HTML").
   2. El texto que se mostrará en el artículo en lugar del nombre del término (esto se debe usar con poca frecuencia).{{Optional_Inline}}
   3. Si se especifica este parámetro y no es cero, no se aplica el estilo personalizado que normalmente se aplica a los enlaces del glosario.{{Optional_Inline}}
-
   - `\{{Glossary("HTML")}}` produce {{Glossary("HTML")}}
   - `\{{Glossary("CSS", "Hojas de estilo en cascada")}}` produce {{Glossary("CSS", "Hojas de estilo en cascada")}}
   - `\{{Glossary("HTML", "", 1)}}` produce {{Glossary("HTML", "", 1)}}
@@ -131,7 +129,6 @@ Estas plantillas tienen la misma semántica que sus contrapartes en línea descr
 - [`Non-standard_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
 - [`SeeCompatTable`](https://github.com/mdn/yari/tree/main/kumascript/macros/SeeCompatTable.ejs) se debe usar en páginas que documentan [características experimentales](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Ejemplo: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`Deprecated_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
-- [`Deprecated_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Header.ejs) con parámetro: `\{{Deprecated_Header("gecko5")}}` {{Deprecated_Header("gecko5")}} No utilices el parámetro en ninguna área de diagnóstico del navegador (HTML, APIs, JS, CSS, …).
 - [`secureContext_header`](https://github.com/mdn/yari/tree/main/kumascript/macros/secureContext_header.ejs): `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
 ### Indica que una función está disponible en `workers` web

@@ -3,7 +3,7 @@ title: Une pluie de rectangle
 slug: Web/API/WebGL_API/By_example/Raining_rectangles
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique","Apprendre/WebGL/Par_exemple/Hello_GLSL")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Scissor_animation","Web/API/WebGL_API/By_example/Hello_GLSL")}}
 
 Cet exemple permet de créer un jeu simple qui illustre ce qu'il est possible de faire avec du « découpage », des animations et des interactions utilisateur.
 
@@ -171,4 +171,4 @@ function getRenderingContext() {
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/raining-rectangles).
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique","Apprendre/WebGL/Par_exemple/Hello_GLSL")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Scissor_animation","Web/API/WebGL_API/By_example/Hello_GLSL")}}

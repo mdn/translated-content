@@ -18,9 +18,7 @@ browser.bookmarks.getTree(
 ### 引数
 
 - `callback`
-
   - : ルートに相当するノードが取得された際に実行される関数です。この関数には以下の引数が渡ります。
-
     - `results`
       - : ルートノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトが 1 つ含まれた配列
 

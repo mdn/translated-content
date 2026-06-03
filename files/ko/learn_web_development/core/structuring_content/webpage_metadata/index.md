@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 HTML의 {{glossary("Head", "head")}}는 페이지를 열 때 웹 브라우저에 표시되지 않습니다. head는 {{htmlelement("title")}} 같은 페이지나, {{glossary("CSS")}}의 링크(HTML 컨텐츠를 CSS로 스타일링하기를 원한다면), 파비콘(favicon), 그리고 다른 메타데이터(작성자, 중요한 키워드와 같은 HTML에 대한 내용)를 포함합니다. 이 글에서는 위 내용들과 그 이상에 대해 다룰 것입니다. 이것은 head에 있어야하는 마크업이나 다른 코드들을 다루는데 좋은 기초가 될 것입니다.
 
@@ -14,7 +14,7 @@ HTML의 {{glossary("Head", "head")}}는 페이지를 열 때 웹 브라우저에
       <th scope="row">사전 지식:</th>
       <td>
         HTML의 기본 구조,
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Getting started with HTML</a
         >문서의 내용을 사전에 읽으면 좋습니다.
       </td>
@@ -67,7 +67,6 @@ HTML {{htmlelement("head")}} 요소의 내용입니다. — 페이지를 열 때
 ### 능동적 학습: 간단한 예제 살펴보기
 
 1. 능동적인 학습을 시작하기 위해서, GitHub repo에가서 [title-example.html 페이지](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)의 복사본을 다운로드 하십시오. 다음 중 하나를 하면 됩니다:
-
    1. 복사 붙여넣기를 새로운 텍스트 편집기에서 실행하고 당신이 알 만한 경로에 저장하십시오.
    2. 페이지에서 "Raw"버튼을 누르면, 새창에 Raw code가 나타납니다. 그런 다음 브라우저 메뉴에서 _File > Save Page As..._ 로 원하는 곳에 저장하십시오
 
@@ -271,7 +270,7 @@ HTML을 저장하고 브라우저를 새로 고치면 올바르게 변경된 것
 
 ## 문서의 기본 언어 설정
 
-마지막으로, 페이지의 언어를 설정 할 수도 있다. 이 작업은 [lang attribute](/ko/docs/Web/HTML/Global_attributes/lang) 을 여는 HTML 태그에 추가하여 수행 할 수 있다. ([meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) 과 아래 참조)
+마지막으로, 페이지의 언어를 설정 할 수도 있다. 이 작업은 [lang attribute](/ko/docs/Web/HTML/Reference/Global_attributes/lang) 을 여는 HTML 태그에 추가하여 수행 할 수 있다. ([meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) 과 아래 참조)
 
 ```html
 <html lang="en-US"></html>
@@ -291,4 +290,4 @@ HTML을 저장하고 브라우저를 새로 고치면 올바르게 변경된 것
 
 HTML head에 대한 퀵 파이어 투어가 마무리 되었다. 여기에서 보고 할 수 있는 것보다 훨씬 많은 부분이 있지만, 지금 단계에서는 복잡하거나 어렵게 느껴질 수도 있을 것이고 단지 당신에게 지극히 일반적이고 기초적인 사용법만을 제시했을 뿐이다.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "conflicting/Learn_web_development/Core/Structuring_content")}}

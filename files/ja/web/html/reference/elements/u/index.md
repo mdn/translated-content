@@ -13,7 +13,7 @@ l10n:
 > [!WARNING]
 > この要素は古いバージョンの HTML で "Underline" (下線) 要素と呼ばれる傾向があり、現在でもそのように誤用されることがあります。テキストに下線を引くのであれば、代わりに CSS の {{cssxref("text-decoration")}} プロパティを `underline` に設定したスタイルを適用してください。
 
-{{InteractiveExample("HTML Demo: &lt;u&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;u&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
@@ -159,13 +159,13 @@ cite {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -173,7 +173,7 @@ cite {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -185,7 +185,7 @@ cite {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>

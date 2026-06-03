@@ -11,7 +11,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
   <tbody>
     <tr>
       <th scope="row">Необходимые знания:</th>
-      <td>Вы уже должны знать о <a href="/ru/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need">различных программах, необходимых для создания веб-сайта</a>.</td>
+      <td>Вы уже должны знать о <a href="/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need">различных программах, необходимых для создания веб-сайта</a>.</td>
     </tr>
     <tr>
       <th scope="row">Цель:</th>
@@ -311,14 +311,12 @@ Installing a text editor is usually quite straightforward. The method varies bas
 When you install a new text editor, your OS will probably continue to open text files with its default editor until you change the _file association._ These instructions will help you specify that your OS should open files in your preferred editor when you double-click them:
 
 - Windows
-
   - [Windows 8](https://windows.microsoft.com/en-us/windows-8/choose-programs-windows-uses-default)
   - [Windows 7](https://windows.microsoft.com/en-us/windows/change-default-programs#1TC=windows-7)
   - [older systems](http://pcsupport.about.com/od/fixtheproblem/f/chdefprogram.htm)
 
 - [Mac OS X](http://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
 - Linux
-
   - [Ubuntu Unity](http://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
   - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
   - [KDE](http://doc.opensuse.org/documentation/html/openSUSE_113/opensuse-kdeuser/cha.kde.cust.html#pro.kde.cust.system.fileass)

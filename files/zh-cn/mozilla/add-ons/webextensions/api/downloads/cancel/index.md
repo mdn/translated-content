@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("downloads")}} API 的 **`cancel()`** 函数用于取消一个下载操作。如果下载未处于活动状态（例如，已完成下载），则调用将失败。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。

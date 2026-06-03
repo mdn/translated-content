@@ -23,5 +23,4 @@ l10n:
 - [Web worker API](/ko/docs/Web/API/Web_Workers_API)
 - [Service worker API](/ko/docs/Web/API/Service_Worker_API)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Main thread")}}

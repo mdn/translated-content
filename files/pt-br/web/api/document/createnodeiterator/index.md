@@ -17,7 +17,6 @@ _Essa interface não implementa, nem herda, nenhuma propriedade._
 _Essa interface não herda nenhum método._
 
 - {{domxref("NodeFilter.acceptNode()")}}
-
   - : Returns an `unsigned short` that will be used to tell if a given {{domxref("Node")}} must be accepted or not by the {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} iteration algorithm. This method is expected to be written by the user of a `NodeFilter`. Possible return values are:
 
     | Constant        | Description                                                                                                                                                                                                                                                                        |

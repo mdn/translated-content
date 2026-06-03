@@ -1,15 +1,17 @@
 ---
-title: バイナリーデータの送信と受信
+title: バイナリーデータの送受信
 slug: Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
 l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+  sourceCommit: 759102220c07fb140b3e06971cd5981d8f0f134f
 ---
 
 {{DefaultAPISidebar("XMLHttpRequest API")}}
 
-XMLHttpRequest オブジェクトの `responseType` プロパティで、サーバーに期待する応答の種類を変更することができます。設定可能な値は空文字列 (既定), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, `"text"` です。 `response` プロパティにはエンティティの本体が `responseType` に応じて `ArrayBuffer`, `Blob`, `Document`, `JSON` または文字列で格納されます。要求が不完全であったり成功しなかった場合は `null` になります。
+## バイナリーデータの受信
 
-このサンプルでは画像をバイナリーファイルとして読み込み、生のバイト列から 8 ビット符号なし整数値の配列を作成します。なお、これは画像をデコードしてピクセルを読み取ることは行いません。そのためには [png デコードライブラリー](https://github.com/foliojs/png.js)が必要になるでしょう。
+XMLHttpRequest オブジェクトの `responseType` プロパティで、サーバーに期待するレスポンスの種類を変更することができます。設定可能な値は空文字列 (既定), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, `"text"` です。 `response` プロパティにはエンティティの本体が `responseType` に応じて `ArrayBuffer`, `Blob`, `Document`, `JSON` または文字列で格納されます。リクエストが不完全であったり成功しなかった場合は `null` になります。
+
+このサンプルでは画像をバイナリーファイルとして読み込み、生のバイト列から 8 ビット符号なし整数値の配列を作成します。なお、これは画像をデコードしてピクセルを読み取ることは行いません。これらは {{domxref("ImageDecoder")}} インターフェイスで実現できます。
 
 ```js
 const req = new XMLHttpRequest();
@@ -38,38 +40,11 @@ req.responseType = "blob";
 
 req.onload = (event) => {
   const blob = req.response;
-  // ...
+  // …
 };
 
 req.send();
 ```
-
-## 古いブラウザーでのバイナリーデータの受信
-
-下に示す `loadBinaryResource()` 関数は、指定した URL からロードしたバイナリーデータを関数の呼び元に返します。
-
-```js
-function loadBinaryResource(url) {
-  const req = new XMLHttpRequest();
-  req.open("GET", url, false);
-
-  // XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
-  req.overrideMimeType("text/plain; charset=x-user-defined");
-  req.send(null);
-  return req.status === 200 ? req.responseText : "";
-}
-```
-
-マジックは 5 行目で、 MIME タイプを上書きしてブラウザーに強制的に、ユーザー定義の文字セットを使用したプレインテキストとして扱わせます。これにより、ブラウザーはこれを解釈せず、未処理のままバイト列を通します。
-
-```js
-const filestream = loadBinaryResource(url);
-const abyte = filestream.charCodeAt(x) & 0xff; // throw away high-order byte (f7)
-```
-
-上記のサンプルでは、ロードしたバイナリーデータ内のオフセット `x` のバイトを取得します。 `x` の有効範囲は 0 から `filestream.length-1` です。
-
-詳細な説明は [downloading binary streams with XMLHttpRequest](https://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) を見て下さい。
 
 ## バイナリーデータの送信
 

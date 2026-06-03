@@ -6,7 +6,8 @@ slug: Web/API/Window/requestAnimationFrame
 {{APIRef}}
 O método **`window.requestAnimationFrame()`** fala para o navegador que deseja-se realizar uma animação e pede que o navegador chame uma função específica para atualizar um quadro de animação antes da próxima repaint (repintura). O método tem como argumento uma callback que deve ser invocado antes da repaint.
 
-> **Nota:**A rotina callback deve chamar `requestAnimationFrame()` se quiser animar outro quadro na próxima repaint.
+> [!NOTE]
+> A rotina callback deve chamar `requestAnimationFrame()` se quiser animar outro quadro na próxima repaint.
 
 Deve-se chamar esse método sempre que estiver pronto para atualizar a animação na tela. Isso irá requisitar que a função de animação seja chamada antes que o navegador realize a próxima repaint. O número de callbacks é normalmente 60 por segundo, mas geralmente acompanha a taxa de atualização do display na maioria dos navegadores, como recomenda a W3C. A taxa de callbacks é reduzida quando executados em aba de fundo ou em {{ HTMLElement("iframe") }} escondidos para melhorar performance e vida de bateria.
 

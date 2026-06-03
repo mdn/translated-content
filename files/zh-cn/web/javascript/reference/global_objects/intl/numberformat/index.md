@@ -3,8 +3,6 @@ title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
 
-{{JSRef}}
-
 **`Intl.NumberFormat`** 对象能使数字在特定的语言环境下格式化。
 
 {{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}

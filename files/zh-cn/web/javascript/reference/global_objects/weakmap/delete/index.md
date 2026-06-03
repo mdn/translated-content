@@ -3,8 +3,6 @@ title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 ---
 
-{{JSRef}}
-
 {{jsxref("WeakMap")}} 实例的 **`delete()`** 方法从该 `WeakMap` 中删除指定的元素。
 
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.delete()")}}

@@ -3,7 +3,7 @@ title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{deprecated_header}}
 
 {{jsxref("String")}} 值的 **`big()`** 方法创建一个 {{HTMLElement("big")}} 元素字符串，其中嵌入了调用的字符串（`<big>str</big>`），从而使该字符串以大字体显示。
 

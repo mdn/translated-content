@@ -15,7 +15,6 @@ slug: Glossary/Navigation_directive
 
 - <https://www.w3.org/TR/CSP/#directives-navigation>
 - 他の種類のディレクティブ:
-
   - {{Glossary("Fetch directive","フェッチディレクティブ")}}
   - {{Glossary("Document directive","文書ディレクティブ")}}
   - {{Glossary("Reporting directive", "報告ディレクティブ")}}
@@ -27,7 +26,6 @@ slug: Glossary/Navigation_directive
 - {{HTTPHeader("Content-Security-Policy")}}
 
 1. 関連用語:
-
    1. {{Glossary("CSP")}}
    2. {{Glossary("Fetch directive", "フェッチディレクティブ")}}
    3. {{Glossary("Document directive", "文書ディレクティブ")}}

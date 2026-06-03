@@ -61,7 +61,8 @@ if(navigator.getVRDisplays) {
 }
 ```
 
-> **メモ:** `canvasReference` は {{htmlelement("canvas")}} 要素そのものを指すものであり、キャンバスに関連付けられた WebGL コンテキストを指すわけではありません。他の 2 つのメンバーは配列です。
+> [!NOTE]
+> `canvasReference` は {{htmlelement("canvas")}} 要素そのものを指すものであり、キャンバスに関連付けられた WebGL コンテキストを指すわけではありません。他の 2 つのメンバーは配列です。
 
 ## 仕様書
 

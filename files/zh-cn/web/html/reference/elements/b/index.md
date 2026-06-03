@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}
-
 **`<b>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于吸引读者注意元素内容，而这些内容本身并不具有特别重要性。它以前被称为粗体元素，大多数浏览器仍然以粗体显示文本。但是，你不应该使用 `<b>` 来设置文本样式或赋予重要性。如果你希望创建粗体文本，应该使用 CSS {{cssxref("font-weight")}} 属性。如果你希望指示某个元素特别重要，应该使用 {{HTMLElement("strong")}} 元素。
 
 {{InteractiveExample("HTML Demo: &lt;b&gt;", "tabbed-shorter")}}

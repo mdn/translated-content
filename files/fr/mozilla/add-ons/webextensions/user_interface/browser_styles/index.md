@@ -19,7 +19,8 @@ Lorsque vous envisagez d'utiliser le `browser_style: true`, vous devez tester vo
 > [!WARNING]
 > Quand `browser_style: true` est inclus dans le manifest de votre extension web, la sélection de texte dans l'interface utilisateur de votre extension est désactivée sauf dans les contrôles de saisie. Si cela pose un problème, incluez plutôt browser_style:false.
 
-> **Note :** **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
+> [!NOTE]
+> **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
 
 Dans Firefox, la feuille de style peut être vue sur `chrome://browser/content/extension.css`. La feuille de style peut être vue sur `chrome://browser/content/extension-mac.css` est également incluse sur OS X.
 
@@ -36,7 +37,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
     <tr>
       <td>
         <code
-          ><a href="/fr/docs/Web/HTML/Element/button">&#x3C;button></a></code
+          ><a href="/fr/docs/Web/HTML/Reference/Elements/button">&#x3C;button></a></code
         >
       </td>
       <td>
@@ -49,7 +50,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
       <td>
         <p>
           <code
-            ><a href="/fr/docs/Web/HTML/Element/select">&#x3C;select></a></code
+            ><a href="/fr/docs/Web/HTML/Reference/Elements/select">&#x3C;select></a></code
           >
         </p>
       </td>
@@ -66,7 +67,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
     <tr>
       <td>
         <code
-          ><a href="/fr/docs/Web/HTML/Element/textarea"
+          ><a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
             >&#x3C;textarea></a
           ></code
         >
@@ -80,7 +81,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
     <tr>
       <td>
         Parent d'un
-        <code><a href="/fr/docs/Web/HTML/Element/input">&#x3C;input></a></code>
+        <code><a href="/fr/docs/Web/HTML/Reference/Elements/input">&#x3C;input></a></code>
       </td>
       <td>
         <pre class="brush: html">

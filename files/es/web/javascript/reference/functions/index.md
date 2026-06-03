@@ -387,7 +387,6 @@ Compare lo siguiente:
 Todos hacen aproximadamente la misma cosa, con algunas diferencias sutiles:
 
 - Existe una distinción entre el nombre de la función y la variable a la que se asigna la función:
-
   - El nombre de la función no se puede cambiar, mientras que la variable a la que se asigna la función puede ser reasignada.
   - El nombre de la función sólo se puede utilizar en el cuerpo de la función. Intentar utilizarlo fuera del cuerpo de la función da como resultado un error (o `undefined` si el nombre de la función se declaró previamente mediante una instrucción `var`). Por ejemplo:
 

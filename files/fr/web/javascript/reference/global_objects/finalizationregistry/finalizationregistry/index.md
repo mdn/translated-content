@@ -1,29 +1,28 @@
 ---
 title: Constructeur FinalizationRegistry()
+short-title: FinalizationRegistry()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-Le constructeur **`FinalizationRegistry`** crée un objet [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) qui utilise la fonction de rappel passée en argument comme fonction de nettoyage pour les objets du registre.
+Le constructeur **`FinalizationRegistry`** crée un objet {{JSxRef("FinalizationRegistry")}} qui utilise la fonction de rappel passée en argument comme fonction de nettoyage pour les objets du registre.
 
 ## Syntaxe
 
-```js
-// Fonction de rappel avec une fonction fléchée
-new FinalizationRegistry(valeurTenue => { ... } )
-
-// Référence à une fonction de rappel
+```js-nolint
 new FinalizationRegistry(callbackFn)
-
-// Fonction de rappel en ligne
-new FinalizationRegistry(function(valeurTenue) { ... })
 ```
+
+> [!NOTE]
+> `FinalizationRegistry()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` déclenche une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 
 - `callback`
-  - : La fonction de rappel de nettoyage à utiliser par le registre.
+  - : Fonction à invoquer chaque fois qu'une valeur cible enregistrée est récupérée par le ramasse-miettes. Sa valeur de retour est ignorée. La fonction est appelée avec les arguments suivants&nbsp;:
+    - `heldValue`
+      - : La valeur qui a été passée en second paramètre à la méthode {{JSxRef("FinalizationRegistry/register", "register()")}} lors de l'enregistrement de l'objet `target`.
 
 ## Exemples
 
@@ -47,4 +46,4 @@ const registre = new FinalizationRegistry((valeurTenue) => {
 
 ## Voir aussi
 
-- [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)
+- L'objet {{JSxRef("FinalizationRegistry")}}

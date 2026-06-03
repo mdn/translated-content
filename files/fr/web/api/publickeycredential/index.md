@@ -23,9 +23,7 @@ Les autres interfaces qui héritent de {{domxref("Credential")}} sont :
 - {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}}
   - : Un objet {{domxref("ArrayBuffer")}} qui contient l'identifiant unique global/universel pour cette instance `PublicKeyCredential`. Cet identifiant peut être utilisé afin de rechercher les informations d'authentification avec les futurs appels à {{domxref("CredentialsContainer.get")}}.
 - {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}}
-
   - : Une instance {{domxref("AuthenticatorResponse")}}. Cette instance est de type :
-
     - {{domxref("AuthenticatorAttestationResponse")}} si l'objet `PublicKeyCredential` a été créé grâce à un appel à [`create()`](/fr/docs/Web/API/CredentialsContainer/create)
     - {{domxref("AuthenticatorAssertionResponse")}} si l'objet `PublicKeyCredential` a été créé grâce à un appel à [`get()`](/fr/docs/Web/API/CredentialsContainer/get).
 

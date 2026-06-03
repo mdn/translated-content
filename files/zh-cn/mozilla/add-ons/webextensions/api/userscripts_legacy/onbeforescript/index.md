@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6b26a56826b43f539b79033378683bb3be5bbba9
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > 本文档针对旧版 `userScripts` API 编写，适用于 Firefox Manifest V2 版本。如希望在 Manifest V3 中使用用户脚本功能，可参见新的 {{WebExtAPIRef("userScripts")}} API。
 
@@ -34,13 +32,9 @@ browser.userScripts.onBeforeScript.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当事件发生时要调用的函数。该函数接收以下参数：
-
     - `script`
-
       - : 一个表示与网页匹配的用户脚本的对象。其属性和方法如下：
-
         - `defineGlobals`
           - : 一个方法，用于导出一个包含全局属性和用户脚本沙盒中可用方法的对象。必须同步调用此方法，以确保用户脚本尚未执行。
         - `export`

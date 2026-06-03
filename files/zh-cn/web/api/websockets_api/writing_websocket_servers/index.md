@@ -48,7 +48,8 @@ Sec-WebSocket-Version: 13
 > [!NOTE]
 > 请求 URI（这里的是`/chat`）在规范里没有定义。很多开发者聪明地把这点用于控制多功能 WebSocket 应用。例如`example.com/chat`会请求一个多方会话应用，而在相同服务器上`example.com/game`则会请求一个多玩家游戏应用。
 
-> **备注：** [常规 HTTP 状态码](/zh-CN/docs/Web/HTTP/Reference/Status)只能在握手之前使用。握手成功后，你必须使用一组不同的代码（在规范的第 7.4 节中定义）。
+> [!NOTE]
+> [常规 HTTP 状态码](/zh-CN/docs/Web/HTTP/Reference/Status)只能在握手之前使用。握手成功后，你必须使用一组不同的代码（在规范的第 7.4 节中定义）。
 
 ### 服务器握手响应
 

@@ -14,12 +14,12 @@ El elemento HTML Details **\<details>** es usado como un widget de revelación a
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Contenido dinámico</a
         >
         , contenido de seccionamiento, contenido interactivo, contenido palpable
@@ -30,7 +30,7 @@ El elemento HTML Details **\<details>** es usado como un widget de revelación a
       <th scope="row">Contenido permitido</th>
       <td>
         Un elemento {{HTMLElement("summary")}} seguido de
-        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >contenido dinámico</a
         >
       </td>
@@ -43,7 +43,7 @@ El elemento HTML Details **\<details>** es usado como un widget de revelación a
       <th scope="row">Elementos padres permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >contenido dinámico</a
         >.
       </td>
@@ -57,7 +57,7 @@ El elemento HTML Details **\<details>** es usado como un widget de revelación a
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes) .
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes) .
 
 - `open`
   - : Este atributo Booleano indica si los detalles serán mostrados al usuario cuando la página se cargue . Por default el valor es `false` y por lo tanto los detalles estarán ocultos.

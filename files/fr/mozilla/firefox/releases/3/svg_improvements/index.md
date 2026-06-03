@@ -5,15 +5,12 @@ l10n:
   sourceCommit: fff0462a1f0cdd479b62808e810e9fd030622c8e
 ---
 
-{{FirefoxSidebar}}
-
 La prise en charge de [SVG](/fr/docs/Web/SVG) est améliorée dans Firefox 3. Cet article fournit la liste des fonctionnalités (documentées par ailleurs) des fonctionnalités ajoutées à Firefox 3.
 
 - Prise en charge de l'élément `foreignObject` (voir [le bogue 326966](https://bugzilla.mozilla.org/show_bug.cgi?id=326966)). Pour plus de détails, consultez [la spécification](https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement) ou [cet article](https://robert.ocallahan.org/2006/06/future-is-now_20.html).
 - Prise en charge de l'élément `pattern` ([spécification](https://www.w3.org/TR/SVG11/pservers.html#PatternElement))
 - Prise en charge de l'élément `mask` ([spécification](https://www.w3.org/TR/SVG11/masking.html#MaskElement))
 - Prise en charge de l'ensemble des filtres SVG 1.1 ([spécification](https://www.w3.org/TR/SVG11/filters.html))&nbsp;:
-
   - `filter`
   - `feDistantLight`
   - `fePointLight`

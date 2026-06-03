@@ -1,11 +1,10 @@
 ---
 title: Function.prototype.call()
+short-title: call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`call()`** は {{jsxref("Function")}} インスタンスのメソッドで、 `this` の値と、独立して提供された引数によって関数を呼び出します。
 
@@ -100,7 +99,7 @@ function display() {
   console.log(`globProp の値は ${this.globProp}`);
 }
 
-display.call(); // undefined の 'sData' のプロパティは読めない
+display.call(); // throws TypeError: Cannot read the property of 'globProp' of undefined
 ```
 
 ### メソッドのユーティリティ関数への変換
@@ -112,7 +111,7 @@ display.call(); // undefined の 'sData' のプロパティは読めない
 ```js
 const slice = Array.prototype.slice;
 
-// ...
+// …
 
 slice.call(arguments);
 ```
@@ -124,7 +123,7 @@ slice.call(arguments);
 const unboundSlice = Array.prototype.slice;
 const slice = Function.prototype.call.bind(unboundSlice);
 
-// ...
+// …
 
 slice(arguments);
 ```

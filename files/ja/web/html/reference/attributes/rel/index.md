@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: rel"
+title: HTML `rel` 属性
 short-title: rel
 slug: Web/HTML/Reference/Attributes/rel
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 **`rel`** 属性は、リンク先のリソースと現在の文書との関係を定義します。 {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}}、{{htmlelement('form')}} で有効で、対応する値は属性が見つかった要素に依存します。
 
@@ -23,13 +21,13 @@ l10n:
 | [`compression-dictionary`](/ja/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary) | {{glossary("Compression dictionary transport", "圧縮辞書")}}へのリンクで、これはこのサイトのリソースのための将来のダウンロードを圧縮するために使用されます。                                                                                                  | リンク                    | 不許可                                                  | 不許可                    |
 | [`dns-prefetch`](/ja/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch)                     | 宛先リソースのオリジンに対する DNS 解決を先取りして行うようブラウザーに指示する                                                                                                                                                                               | 外部リソース              | 不許可                                                  | 不許可                    |
 | [`external`](#external)                                                                       | 参照先の文書は、現在の文書と同じサイトの一部ではありません。                                                                                                                                                                                                  | 不許可                    | 注釈                                                    | 注釈                      |
-| [`expect`](#expect)                                                                           | 文書内の主要部分が解釈できるまでページを[レンダリングブロック](/ja/docs/Glossary/Render_blocking)し、一貫したレンダリングを実現します。                                                                                                                       | リンク                    | 不許可                                                  | 不許可                    |
+| [`expect`](#expect)                                                                           | [`blocking="render"`](/ja/docs/Web/HTML/Reference/Elements/link#blocking) と共に使用された場合、文書内の主要部分が解釈できるまでページを[レンダリングブロック](/ja/docs/Glossary/Render_blocking)できるようにし、一貫したレンダリングを実現します。           | リンク                    | 不許可                                                  | 不許可                    |
 | [`help`](#help)                                                                               | コンテンツに応じたヘルプにリンクします。                                                                                                                                                                                                                      | リンク                    | リンク                                                  | リンク                    |
 | [`icon`](#icon)                                                                               | 現在の文書を表すアイコンです。                                                                                                                                                                                                                                | 外部リソース              | 不許可                                                  | 不許可                    |
 | [`license`](#license)                                                                         | 現在の文書のメインコンテンツが、参照先の文書で説明されている著作権ライセンスによってカバーされていることを示す。                                                                                                                                              | リンク                    | リンク                                                  | リンク                    |
 | [`manifest`](/ja/docs/Web/HTML/Reference/Attributes/rel/manifest)                             | ウェブアプリマニフェスト                                                                                                                                                                                                                                      | リンク                    | 不許可                                                  | 不許可                    |
 | [`me`](/ja/docs/Web/HTML/Reference/Attributes/rel/me)                                         | 現在の文書がリンク先のコンテンツを所有する人物を表すことを示す                                                                                                                                                                                                | リンク                    | 不許可                                                  | 不許可                    |
-| [`modulepreload`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload)                   | スクリプトを先取りして取得し、後で評価できるようにこの文書のモジュールマップに保存するようブラウザーに指示します。オプションで、モジュールの依存関係も読み取ることができます。                                                                                | 外部リソース              | 不許可                                                  | 不許可                    |
+| [`modulepreload`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload)                   | スクリプトを先読みし、後で評価できるようにこの文書のモジュールマップに保存するようブラウザーに指示します。オプションで、モジュールの依存関係も読み取ることができます。                                                                                        | 外部リソース              | 不許可                                                  | 不許可                    |
 | [`next`](#next)                                                                               | 現在の文書が一連の文書の一部であり、その中の次の文書が参照先の文書であることを示します。                                                                                                                                                                      | リンク                    | リンク                                                  | リンク                    |
 | [`nofollow`](#nofollow)                                                                       | 現在の文書の原著者または発行者が、参照先の文書を支持していないことを示します。                                                                                                                                                                                | 不許可                    | 注釈                                                    | 注釈                      |
 | [`noopener`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener)                             | ハイパーリンクが補助的な閲覧コンテキストのいずれかを生成する (つまり、適切な `target` 属性値を持つ) 場合、補助的な閲覧コンテキストではない最上位の閲覧コンテキストを生成します。                                                                              | 不許可                    | 注釈                                                    | 注釈                      |
@@ -39,7 +37,7 @@ l10n:
 | [`preconnect`](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect)                         | ユーザーエージェントが対象となるリソースのオリジンへの接続を先読みすることを指定します。                                                                                                                                                                      | 外部リソース              | 不許可                                                  | 不許可                    |
 | [`prefetch`](/ja/docs/Web/HTML/Reference/Attributes/rel/prefetch)                             | ユーザーエージェントが、後続のナビゲーションに必要となる可能性の高いターゲットリソースを先取りしてキャッシュすることを指定します。                                                                                                                            | 外部リソース              | 不許可                                                  | 不許可                    |
 | [`preload`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)                               | [`as`](/ja/docs/Web/HTML/Reference/Elements/link#as) 属性で指定された潜在的な距離 (および対応する距離に関連する優先度) に従って、ユーザーエージェントが現在のナビゲーションのためにターゲットリソースを先取りしてキャッシュしなければならないことを指定する。 | 外部リソース              | 不許可                                                  | 不許可                    |
-| [`prerender`](/ja/docs/Web/HTML/Reference/Attributes/rel/prerender)                           | ユーザーエージェントが、対象となるリソースを先取りして取得し、将来的に高速なレスポンスを実現するための処理を行うことを指定します。                                                                                                                            | 外部リソース              | 不許可                                                  | 不許可                    |
+| [`prerender`](/ja/docs/Web/HTML/Reference/Attributes/rel/prerender) {{deprecated_inline}}     | ユーザーエージェントが、対象となるリソースを先取りして取得し、将来的に高速なレスポンスを実現するための処理を行うことを指定します。この機能は[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) で置き換えられました。                                   | 外部リソース              | 不許可                                                  | 不許可                    |
 | [`prev`](#prev)                                                                               | 現在の文書が一連の文書の一部であり、その中の前の文書が参照先の文書であることを示します。                                                                                                                                                                      | リンク                    | リンク                                                  | リンク                    |
 | [`privacy-policy`](#privacy-policy)                                                           | 現在の文書に適用されるデータの収集と使用慣行に関する情報へのリンクを提供します。                                                                                                                                                                              | リンク                    | リンク                                                  | 不許可                    |
 | [`search`](#search)                                                                           | 現在の文書とその関連ページを検索するのに使用できるリソースへのリンクを提供します。                                                                                                                                                                            | リンク                    | リンク                                                  | リンク                    |
@@ -47,16 +45,14 @@ l10n:
 | [`tag`](#tag)                                                                                 | 現在の文書に適用される (与えられたアドレスで識別される) タグを与えます。                                                                                                                                                                                      | 不許可                    | リンク                                                  | 不許可                    |
 | [`terms-of-service`](#terms-of-service)                                                       | 文書の提供者と、その文書を使用したいユーザーとの間の合意、つまり利用規約へのリンクです。                                                                                                                                                                      | リンク                    | リンク                                                  | 不許可                    |
 
-`rel` 属性は {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}}、{{htmlelement('form')}} の各要素に関連していますが、これらの要素のサブセットにのみ関連する値もあります。他の HTML キーワード属性の値と同様に、これらの値は大文字小文字の区別がありません。
+`rel` 属性は {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}}、{{htmlelement('form')}} の各要素に関連していますが、これらの要素の一部にのみ関連する値もあります。他の HTML キーワード属性の値と同様に、これらの値は大文字小文字の区別がありません。
 
 `rel` 属性には既定値がありません。属性が省略された場合や、属性の値がいずれも対応されていない場合、文書は宛先のリソースとの間にハイパーリンクがあるということ以外には、特に関係を持ちません。この場合、 {{htmlelement('link')}} と {{htmlelement('form')}} では、 `rel` 属性がない場合、キーワードがない場合、または上記の空白で区切られたキーワードのうち 1 つ以上がない場合、その要素はいかなるリンクも生成しません。 {{htmlelement('a')}} と {{htmlelement('area')}} はリンクを生成しますが、関係は定義されません。
 
 ## 値
 
 - `alternate`
-
   - : 現在の文書の代替表現を示します。 {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}} で有効であり、意味は他の属性の値に依存します。
-
     - [`stylesheet`](#stylesheet) キーワードと共に `<link>` で使用された場合は、[代替スタイルシート](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)を生成します。
 
       ```html
@@ -70,7 +66,7 @@ l10n:
       ```
 
     - この文書の言語と異なる [`hreflang`](/ja/docs/Web/HTML/Reference/Elements/link#hreflang) 属性と共に使用された場合は、翻訳版を表します。
-    - [`type`](/ja/docs/Web/HTML/Reference/Elements/link#type) 属性が `"application/rss+xml"` または `"application/atom+xml"` の値で共に使用された場合は、シンジケーションフィードを参照するハイパーリンクが生成されます。
+    - [`type`](/ja/docs/Web/HTML/Reference/Elements/link#type) 属性が `"application/rss+xml"` または `"application/atom+xml"` の値で使用された場合は、シンジケーションフィードを参照するハイパーリンクが生成されます。
 
       ```html
       <link
@@ -81,9 +77,8 @@ l10n:
       ```
 
     - それ以外の場合は、現在の文書の代替表現を参照するハイパーリンクを作成します。その性質は [`hreflang`](/ja/docs/Web/HTML/Reference/Elements/link#hreflang) と [`type`](/ja/docs/Web/HTML/Reference/Elements/link#type) 属性によって与えられます。
-
-      - もし `hreflang` が `alternate` と共に指定され、 `hreflang` の値が現在の文書の言語と異なる場合には、参照された文書が翻訳であることを示します。
-      - もし `type` が `alternate` と一緒に指定された場合、参照された文書が代替形式（PDF など）であることを示します。
+      - もし `hreflang` が `alternate` で指定され、 `hreflang` の値が現在の文書の言語と異なる場合には、参照された文書が翻訳であることを示します。
+      - もし `type` が `alternate` に指定された場合、参照された文書が代替形式（PDF など）であることを示します。
       - `hreflang` と `type` 属性は、どちらも `alternate` と同時に指定することができます。
 
       ```html
@@ -103,7 +98,6 @@ l10n:
       ```
 
 - `author`
-
   - : 参照する文書が、現在の文書または記事の著者に関する追加情報を提供することを示します。{{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}} 要素に関連します。
 
     {{htmlelement('a')}} と {{htmlelement('area')}} では、リンクされた文書（または `mailto:`）が、最も近い {{htmlelement('article')}} の祖先があればその、なければ文書全体の著者に関する情報を提供することを示します。
@@ -124,7 +118,6 @@ l10n:
 - `external`
   - : {{htmlelement('form')}}、{{htmlelement('a')}}、{{htmlelement('area')}} に関連し、参照先の文書が現在のサイトの一部ではないことを示します。属性セレクターと一緒に使うことで、外部リンクを現在のサイトから離れることをユーザーに示すようなスタイルにすることができます。
 - `expect` {{experimental_inline}}
-
   - : 文書の重要な部分が解釈できるまで、ページが[レンダリングブロック](/ja/docs/Glossary/Render_blocking)されるようにします。これにより、ページは一貫性を保ってレンダリングされます。レンダリングブロックは、 [`blocking="render"`](/ja/docs/Web/HTML/Reference/Elements/link#blocking) 属性が追加されている場合にのみ発生することに注意してください。
 
     > [!NOTE]
@@ -133,8 +126,7 @@ l10n:
 - `help`
   - : {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}} に関連し、 `help` キーワードは、リンク先のコンテンツがコンテキスト依存のヘルプを提供することを示し、ハイパーリンクを定義している要素の親とその子のための情報を提供します。 `<link>` 内で使用された場合、ヘルプは文書全体を対象とします。 {{htmlelement('a')}} および {{htmlelement('area')}} に含まれていて対応している場合、既定の {{cssxref('cursor')}} が `pointer` ではなく `help` になります。
 - `icon`
-
-  - : {{htmlelement('link')}} と共に有効で、リンクされたリソースは、現在の文書の、ユーザーインターフェイスでページを表現するためのリソースであるアイコンを表します。
+  - : {{htmlelement('link')}} で使用したときに有効となり、リンクされたリソースは、ユーザーインターフェイスで現在の文書のページを表現するためのリソースであるアイコンを表します。
 
     `icon` の値の最も一般的な用途はファビコンです。
 
@@ -142,18 +134,19 @@ l10n:
     <link rel="icon" href="favicon.ico" />
     ```
 
-    複数の `<link rel="icon">` があった場合、ブラウザーはそれぞれの [`media`](/ja/docs/Web/HTML/Reference/Elements/link#media) 属性、[`type`](/ja/docs/Web/HTML/Reference/Elements/link#type) 属性、[`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性を使って、最も適切なアイコンを選択します。複数のアイコンが同じように適切である場合は、最後のアイコンが使用されます。最も適切なアイコンが、対応していないファイル形式を使用しているなどの理由で不適切であることが後に判明した場合、ブラウザーは次に適切なアイコンを選択します。
+    複数の `<link rel="icon">` があった場合、ブラウザーはそれぞれの [`media`](/ja/docs/Web/HTML/Reference/Elements/link#media) 属性、[`type`](/ja/docs/Web/HTML/Reference/Elements/link#type) 属性、[`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性を使って、最も適切なアイコンを選択します。複数のアイコンが同等のレベルで適切である場合は、最後のアイコンが使用されます。最も適切なアイコンが、対応していないファイル形式を使用しているなどの理由で不適切であることが後に判明した場合、ブラウザーは次に適切なアイコンを選択します。
 
-    > **メモ:** [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性は `rel="icon"` においては Chromium ベースのブラウザーは対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
+    > [!NOTE]
+    > [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性は `rel="icon"` においては Chromium ベースのブラウザーは対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
 
     > [!NOTE]
     > Apple の iOS では、他のモバイルブラウザーのように、ウェブクリップやスタートアップのプレースホルダー用のウェブページのアイコンを選択するために、このリンク種別や [`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性を使用していません。
     > 代わりに、標準外の [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) および [`apple-touch-startup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) をそれぞれ使用しています。
 
-    > **メモ:** `shortcut` リンク種別が `icon` の前に見られることが良くありますが、このリンク種別は適合するものではなく、無視されるので**使用しないでください**。
+    > [!NOTE]
+    > `shortcut` リンク種別が `icon` の前に見られることが良くありますが、このリンク種別は適合するものではなく、無視されるので**使用しないでください**。
 
 - `license`
-
   - : {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} の各要素で有効である `license` の値は、ハイパーリンクがライセンス情報を記述した文書につながること、現在の文書のメインコンテンツが、参照された文書で記述された著作権ライセンスによってカバーされていることを示します。 {{HTMLElement("head")}} 要素内にない場合、規格では、文書の特定の部分に適用されるハイパーリンクか、文書全体に適用されるハイパーリンクかを区別していません。ページ上のデータのみがこれを示すことができます。
 
     ```html
@@ -172,7 +165,6 @@ l10n:
 - `nofollow`
   - : {{htmlelement('form')}}, {{htmlelement('a')}}, {{htmlelement('area')}} に関連する `nofollow` キーワードは、検索エンジンスパイダーにリンク関係を無視するよう指示します。 nofollow の関係は、現在の文書の所有者が、参照先の文書を支持していないことを示す場合があります。このキーワードは、検索エンジンオプティマイザーが、リンクファームがスパムページではないことを示すために使用します。
 - `noopener`
-
   - : {{htmlelement('form')}}, {{htmlelement('a')}}, {{htmlelement('area')}} に関連するもので、ハイパーリンクがそもそもこれらのいずれかを作成する（つまり、適切な `target` 属性値を持っている）場合、補助的な閲覧コンテキストではない最上位の閲覧コンテキストを作成します。言い換えれば、 [`window.opener`](/ja/docs/Web/API/Window/opener) が null で `target="_parent"` が設定されているかのようにリンクを動作させます。
 
     これは [`opener`](#opener) の逆です。
@@ -191,25 +183,21 @@ l10n:
 - `preload`
   - : ユーザーエージェントが、 [`as`](/ja/docs/Web/HTML/Reference/Elements/link#as) 属性（および対応する出力先に関連付けられた優先度）によって指定された潜在的な出力先に従って、現在のナビゲーションの対象となるリソースを先行して取得し、キャッシュしなければならないことを指定します。 [`preload`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) 値のページを参照してください。
 - `prerender` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : ユーザーエージェントが対象リソースを先取りして取得し、そのサブリソースの取得やレンダリングの実行など、将来的に高速なレスポンスを提供することを支援する方法で処理することを指定します。
+  - : ユーザーエージェントが対象リソースを先取りして取得し、そのサブリソースの取得やレンダリングの実行など、将来的に高速なレスポンスを提供することを支援する方法で処理することを指定します。この機能は[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)で置き換えられました。
 - `prev`
-
   - : [`next`](#next) キーワードと同様に、{{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}} に関連する `prev` の値は、現在の文書が一連の文書の一部であり、このリンクが一連の文書内の直前の文書を参照していることを示します。
 
     メモ: 別名である `previous` は正しくないため使用しないでください。
 
 - `privacy-policy`
-
   - : {{htmlelement('a')}}、{{htmlelement('area')}}、{{htmlelement('link')}} 要素で有効で、 `privacy-policy` の値は参照する文書が現在の文書のデータ収集と使用方法を説明するプライバシーポリシーであることを示します。
 
 - `search`
-
   - : {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}} の各要素に関連する `search` キーワードは、ハイパーリンクが、現在の文書、サイト、および関連リソースでの検索のために特別に設計されたインターフェイスを持つ文書を参照していることを示し、検索に使用できるリソースへのリンクを提供します。
 
     [`type`](/ja/docs/Web/HTML/Reference/Elements/link#type) 属性が `application/opensearchdescription+xml` に設定されている場合、そのリソースは、Firefox のインターフェイスに簡単に追加できる [OpenSearch](/ja/docs/Web/XML/Guides/OpenSearch) プラグインです。
 
 - `stylesheet`
-
   - : {{htmlelement('link')}} 要素で有効で、スタイルシートとして使われる外部リソースをインポートします。 [`type`](/ja/docs/Web/HTML/Reference/Elements/link#type) 属性は `text/css` スタイルシートの場合は既定値となっているので必要ありません。`text/css` 型スタイルシートでない場合は、 type を宣言するのがベストです。
 
     この属性は、リンクがスタイルシートであることを定義しますが、他の属性や rel 値内の他のキーワードとの相互作用は、スタイルシートがダウンロードされるかどうかや使用されるかどうかに影響します。
@@ -221,11 +209,9 @@ l10n:
     オリジンをまたいだ読み取りには CORS プロトコルが必要です。
 
 - `tag`
-
   - : {{htmlelement('a')}} と {{htmlelement('area')}} 要素で有効であり、現在の文書に適用される (指定されたアドレスで識別される) タグを与えます。タグの値は、リンク先の文書に適用されるタグを記述した文書を参照していることを示します。このリンク種別は、タグクラウド内のタグには適していません。タグクラウド内のタグは、複数のページに適用されるのに対し、 `rel` 属性の `tag` 値は単一の文書に適用されるからです。
 
 - `terms-of-service`
-
   - : {{htmlelement('a')}}、{{htmlelement('area')}}、{{htmlelement('link')}} 要素で有効で、 `terms-of-service` 値は参照する文書が現在の文書の提供者と、指定された文書を使用したいユーザーとの間で記述する利用規約であることを示します。
 
 ### 標準外の値

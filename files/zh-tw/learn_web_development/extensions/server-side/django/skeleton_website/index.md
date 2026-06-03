@@ -209,7 +209,8 @@ urlpatterns = [
 
 URL 映射通過`urlpatterns` 變量管理，它是一個`path()`函數的 Python 列表。每個`path()`函數，要么將 URL 式樣(URL pattern)關聯到特定視圖( _specific view)_，當模式匹配時將會顯示，要么關聯到某個 URL 式樣列表的測試代碼。(第二種情況下，URL 式樣是目標模型裡的「基本 URL」). `urlpatterns` 列表初始化定義了單一函數，把所有帶有 'admin/' 模式的 URL，映射到`admin.site.urls`。這個函數，包含了 Administration 應用自己的 URL 映射定義。
 
-> **備註：** `path()`中的路由是一個字符串，用於定義要匹配的 URL 模式。該字符串可能包括一個命名變量（在尖括號中），例如`'catalog/<id>/'`。此模式將匹配 **/catalog/any_chars** 等 URL，並將 any_chars 作為參數名稱為`id` 的字符串，傳遞給視圖。我們將在後面的主題中，進一步討論路徑方法和路由模式
+> [!NOTE]
+> `path()`中的路由是一個字符串，用於定義要匹配的 URL 模式。該字符串可能包括一個命名變量（在尖括號中），例如`'catalog/<id>/'`。此模式將匹配 **/catalog/any_chars** 等 URL，並將 any_chars 作為參數名稱為`id` 的字符串，傳遞給視圖。我們將在後面的主題中，進一步討論路徑方法和路由模式
 
 在`urlpatterns` 列表的下面一行，插入下面的代码。這個新項目包括一個 `path()` ，它使用模式 `catalog/` 轉發請求到模塊 `catalog.urls`（具有相對 URL **/catalog/urls.py** 的文件）。
 

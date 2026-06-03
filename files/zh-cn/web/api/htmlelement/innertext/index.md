@@ -9,7 +9,8 @@ slug: Web/API/HTMLElement/innerText
 
 作为一个 getter，它近似于用户用光标突出该元素的内容，然后将其复制到剪贴板上所得到的文本。作为一个 setter，这将用给定的值替换该元素的子元素，并将任何换行符转换为 {{HTMLElement("br")}} 元素。
 
-> **备注：** `innerText` 很容易与 {{domxref("Node.textContent")}} 混淆，但这两个属性间实际上有很重要的区别。大体来说，`innerText` 知道文本的渲染外观，而 `textContent` 不知道。
+> [!NOTE]
+> `innerText` 很容易与 {{domxref("Node.textContent")}} 混淆，但这两个属性间实际上有很重要的区别。大体来说，`innerText` 知道文本的渲染外观，而 `textContent` 不知道。
 
 ### 输出
 

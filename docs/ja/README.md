@@ -57,7 +57,7 @@ MDN のページプレビューを伴ったドキュメントの編集方法は�
 必要なもの：
 
 - GitHub アカウント
-- [Node.js, Yarn の実行環境](https://mozilla-japan.github.io/mdn-translation-guide/translation/0_preparation.html)
+- [Node.js, npm の実行環境](https://mozilla-japan.github.io/mdn-translation-guide/translation/0_preparation.html)
 
 英語版リポジトリーとローカライズ版リポジトリーを `git clone` することで、MDN のページプレビューを伴った編集作業が行えます。
 

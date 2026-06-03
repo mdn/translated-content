@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("HTMLElement")}} 인터페이스의 **`translate`** 속성은 페이지가 현지화될 때 요소의 특성 값과 자식 {{domxref("Text")}} 노드의 값을 번역할지 아니면 변경하지 않고 둘지 여부를 나타냅니다.
 
-이 속성은 [`translate`](/ko/docs/Web/HTML/Global_attributes/translate) HTML 전역 특성의 값을 반영합니다.
+이 속성은 [`translate`](/ko/docs/Web/HTML/Reference/Global_attributes/translate) HTML 전역 특성의 값을 반영합니다.
 
 ## 값
 
@@ -61,4 +61,4 @@ controller.addEventListener("change", (e) => {
 
 ## 같이 보기
 
-- [`translate`](/ko/docs/Web/HTML/Global_attributes#translate) HTML 전역 특성
+- [`translate`](/ko/docs/Web/HTML/Reference/Global_attributes#translate) HTML 전역 특성

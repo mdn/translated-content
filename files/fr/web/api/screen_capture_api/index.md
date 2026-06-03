@@ -73,7 +73,7 @@ Le dictionnaire suivant est difinit par l'API Screen Capture.
 
 ## Validation de Feature Policy
 
-Les [agents utilisateurs](/fr/docs/Glossary/User_agent) qui prennent en charge les politiques de fonctionnalités (<i lang="en">feature policy</i>) (soit en utilisant l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Permissions-Policy) ou l'attribut [`allow`](/fr/docs/Web/HTML/Element/iframe#allow) de l'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) peuvent indiquer le souhait d'utiliser l'API Screen Capture via la directive `display-capture`&nbsp;:
+Les [agents utilisateurs](/fr/docs/Glossary/User_agent) qui prennent en charge les politiques de fonctionnalités (<i lang="en">feature policy</i>) (soit en utilisant l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy) ou l'attribut [`allow`](/fr/docs/Web/HTML/Reference/Elements/iframe#allow) de l'élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) peuvent indiquer le souhait d'utiliser l'API Screen Capture via la directive `display-capture`&nbsp;:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html"></iframe>

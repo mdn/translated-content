@@ -1,19 +1,16 @@
 ---
 title: marker-mid
 slug: Web/SVG/Reference/Attribute/marker-mid
-original_slug: Web/SVG/Attribute/marker-mid
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
 ---
 
-{{SVGRef}}
+**`marker-mid`** 属性は、指定された[シェイプ](/ja/docs/Web/SVG/Reference/Element#基本シェイプ)の中間の頂点すべてに描かれる矢印やマーカーを定義します。
 
-**`marker-mid`** 属性は、指定された[シェイプ](/ja/docs/Web/SVG/Reference/Element#shape_elements)の中間の頂点すべてに描かれる矢印やマーカーを定義します。
-
-マーカーは、[パスデータ](/ja/docs/Web/SVG/Reference/Attribute/d#path_commands)の最初と最後以外のすべての頂点に描画されます。
+マーカーは、[パスデータ](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド)の最初と最後以外のすべての頂点に描画されます。
 
 > [!NOTE]
-> プレゼンテーション属性なので、 `marker-mid` は CSS プロパティとして使用することができます。
+> プレゼンテーション属性であるため、 `marker-mid` には対応する CSS プロパティ {{cssxref("marker-mid")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 この属性は次の SVG 要素で使用できます。
 
@@ -39,7 +36,7 @@ svg {
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <marker id="circle" markerWidth="8" markerHeight="8" refX="4" refY="4">
-      <circle cx="4" cy="4" r="4" stroke="none" fill="#f00" />
+      <circle cx="4" cy="4" r="4" stroke="none" fill="red" />
     </marker>
   </defs>
   <polyline
@@ -89,3 +86,4 @@ svg {
 - {{SVGElement("marker")}}
 - {{SVGAttr("marker-start")}}
 - {{SVGAttr("marker-end")}}
+- CSS の {{cssxref('marker-mid')}} プロパティ

@@ -3,8 +3,6 @@ title: 透過用戶代理偵測瀏覽器
 slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 ---
 
-{{HTTPSidebar}}
-
 針對不同的瀏覽器給予不同的網頁或服務，通常不是好主意：網路的原意，是要讓所有人都能訪問，無論他們使用何種瀏覽器或何種設備。你的網站可以透過基於（瀏覽器）功能可用性的漸進增強法開發，而不是特別指定某種瀏覽器。
 
 不過瀏覽器與標準並不是完美的，有些特殊情況依舊需要偵測瀏覽器。透過用戶代理（user agent）去偵測瀏覽器看似簡單，要做好卻頗為困難。這份文件會盡可能引導你正確處理這種事。
@@ -28,7 +26,6 @@ slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 如果要避免用戶代理偵測，有以下選項！
 
 - 功能偵測
-
   - : 功能偵測使你無須弄清是哪種瀏覽器在渲染你的網頁，只須檢查需要的具體功能是否能用。如果不能用，就採取備用方案。在極少數的情況下，各瀏覽器行為有所不同。面對這種情況，不要偵測用戶代理，而是用實作測試來檢查瀏覽器 API、並搞清楚用法。最近有個好例子：[Chrome 針對正規表達式，添加了實驗性的 lookbehind 支援](https://chromestatus.com/feature/5668726032564224)，但其他瀏覽器並不支援。你可能以為要這麼用：
 
     ```js
@@ -80,7 +77,6 @@ slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 - 優雅降級（Graceful degradation）
   - : 這種由上而下的途徑，是先在建造網站時，就用上所有需要的功能，再調整到令舊版瀏覽器也能執行。這種途徑與漸進增強相比，難度更高、效率也更糟，不過在某些情況下也可能更管用。
 - 行動設備偵測（Mobile Device Detection）
-
   - : 檢查是否透過行動設備上網，大概是用戶代理嗅探最常見的用途與誤用。偵測後要作什麼事，卻往往是被忽略的問題所在。開發者通常透過用戶代理嗅探，將用戶設備導向至易於觸碰的小螢幕，以便加強網站體驗。
 
     用戶代理這方面有時有用，但問題是所有設備不完全相同：有些行動設備的尺寸很大、有些桌機有一小塊觸控螢幕、有些人使用完全是不同世界的智慧型電視、甚至還有藉由翻轉平板、來動態改變設備長寬的人！
@@ -122,7 +118,7 @@ slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 
     我們先想像一個由各種貓貓或狗狗的訊息框，所組成的頁面；每個訊息框都有圖片、概覽、還有歷史趣聞；而圖片即使在大螢幕上，也要保持最大的合理尺寸。為了讓內容有意義的排列在一起，所有的貓貓訊息框都和狗狗訊息框分開、兩種動物都不會混在一起。在大螢幕上，會節省具有多列的空間，從而減少了圖片左右兩側的間距。訊息框則會透過平分而被拆分為多列。
 
-    現在我們能假設在原始碼裡面，狗狗訊息框都在上面、而貓貓訊息框都在下面。而這兩個框框都在同一個父元素之下。很明顯，有一個狗狗訊息框，就在貓貓訊息框的上面。第一個方法，就是使用水平的 [Flexbox](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox) 把內容組合起來。這樣，當頁面顯示給最終用戶時，狗狗訊息框就在頁面上方、而貓貓訊息框就在頁面下方；第二個方法，就是使用 [Column](/zh-TW/docs/Web/CSS/Layout_cookbook/Column_layouts) layout and resent 把所有的狗狗與貓貓排到右邊。在這種情況下，就能給沒有 flexboxes/multicolumns 的老舊版本提供適當的呈現：他們會呈現一列非常寬的框。
+    現在我們能假設在原始碼裡面，狗狗訊息框都在上面、而貓貓訊息框都在下面。而這兩個框框都在同一個父元素之下。很明顯，有一個狗狗訊息框，就在貓貓訊息框的上面。第一個方法，就是使用水平的 [Flexbox](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox) 把內容組合起來。這樣，當頁面顯示給最終用戶時，狗狗訊息框就在頁面上方、而貓貓訊息框就在頁面下方；第二個方法，就是使用 [Column](/zh-TW/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts) layout and resent 把所有的狗狗與貓貓排到右邊。在這種情況下，就能給沒有 flexboxes/multicolumns 的老舊版本提供適當的呈現：他們會呈現一列非常寬的框。
 
     再考慮一下這個例子：如果有人是想來看貓貓的，那我們就可以在原始碼裡面，把貓貓放到狗狗的上面。這樣一來，更多的人就可以在更小的螢幕上（內容折疊成一列）更快找到需要的內容。
 
@@ -157,7 +153,7 @@ function whenMediaChanges() {
 var listenToMediaQuery = isWebkit
   ? function (mQ, f) {
       if (/height|width/.test(mQ.media)) mqL.push([mQ, f]);
-      mQ.addListener(f), mQ.addListener(whenMediaChanges);
+      (mQ.addListener(f), mQ.addListener(whenMediaChanges));
     }
   : function () {};
 var destroyMediaQuery = isWebkit

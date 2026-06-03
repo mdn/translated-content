@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8de26f8083cd83e41328147240d94b4da902e987
 ---
 
-{{AddonSidebar}}
-
 使用此函数获取与特定请求相关的 [TLS](/zh-CN/docs/Glossary/TLS) 连接的详细信息。
 
 你需要将相关请求的 `requestId` 和一些可选的额外参数传递给此函数。它返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为一个 {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} 对象。
@@ -29,9 +27,7 @@ let gettingInfo = browser.webRequest.getSecurityInfo(
 - `requestId`
   - : `string`。要获取安全信息的请求的 ID。可以从传递给任何 `webRequest` 事件监听器的 `details` 对象中获取。
 - `options` {{optional_inline}}
-
   - : `object`。一个可以包含以下属性的对象：
-
     - `certificateChain` {{optional_inline}}
       - : `boolean`。如果为 `true`，返回的 {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} 对象将包含完整的证书链和信任根证书。如果为 `false` 则仅包含服务器证书。默认为 `false`。
     - `rawDER` {{optional_inline}}

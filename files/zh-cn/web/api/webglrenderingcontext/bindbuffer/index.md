@@ -16,13 +16,10 @@ void gl.bindBuffer(target, buffer);
 ### 参数
 
 - target
-
   - : {{domxref("GLenum")}} 指定绑定点 (target)。可能的值：
-
     - `gl.ARRAY_BUFFER`: 包含顶点属性的 Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。
     - `gl.ELEMENT_ARRAY_BUFFER`: 用于元素索引的 Buffer。
     - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时，可以使用以下值：
-
       - `gl.COPY_READ_BUFFER`: 从一个 Buffer 对象复制到另一个 Buffer 对象。
       - `gl.COPY_WRITE_BUFFER`: 从一个 Buffer 对象复制到另一个 Buffer 对象。
       - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform feedback operations.

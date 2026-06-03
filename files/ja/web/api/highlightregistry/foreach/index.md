@@ -22,9 +22,7 @@ forEach(callbackFn, thisArg)
 ### 引数
 
 - `callback`
-
   - : それぞれの `Highlight` オブジェクトについて呼び出される関数で、 3 つの引数を取ります。
-
     - `highlight`
       - : 現在のハイライトです。
     - `name`

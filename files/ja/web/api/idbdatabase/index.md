@@ -43,7 +43,6 @@ IndexedDB API の `IDBDatabase` インターフェイスは、[データベー�
 `addEventListener()` を用いるか、このインターフェイスの `oneventname` プロパティにイベントリスナーを代入することで、これらのイベントを待ち受けできます。
 
 - [`close`](/ja/docs/Web/API/IDBDatabase/close_event)
-
   - : データベースへの接続が予期せず閉じられたとき発行されるイベントです。
 
 - [`versionchange`](/ja/docs/Web/API/IDBDatabase/versionchange_event)

@@ -3,8 +3,6 @@ title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 ---
 
-{{JSRef}}
-
 静态方法 **`Reflect.preventExtensions()`** 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与 {{jsxref("Object.preventExtensions()")}}相似，但有一些不同点。详情可见 [differences](#与_object.preventextensions_的不同点)。
 
 {{InteractiveExample("JavaScript Demo: Reflect.preventExtensions()")}}

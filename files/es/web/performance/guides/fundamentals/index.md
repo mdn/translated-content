@@ -55,7 +55,7 @@ Esta sección proporciona una breve descripción de cómo Firefox / Gecko contri
 
 ### Tecnologías web
 
-La plataforma web proporciona muchas herramientas, algunas más adecuadas para trabajos particulares que otras. Toda la lógica de la aplicación está escrita en JavaScript. Para mostrar gráficos, los desarrolladores pueden usar HTML o CSS (es decir, lenguajes declarativos de alto nivel), o usar interfaces imperativas de bajo nivel ofrecidas por el elemento [\<canvas>](/es/docs/Web/HTML/Element/canvas) (que incluye [WebGL](/es/docs/Web/API/WebGL_API)). En algún lugar "entre" HTML / CSS y Canvas está [SVG](/es/docs/Web/SVG), que ofrece algunos beneficios de ambos.
+La plataforma web proporciona muchas herramientas, algunas más adecuadas para trabajos particulares que otras. Toda la lógica de la aplicación está escrita en JavaScript. Para mostrar gráficos, los desarrolladores pueden usar HTML o CSS (es decir, lenguajes declarativos de alto nivel), o usar interfaces imperativas de bajo nivel ofrecidas por el elemento [\<canvas>](/es/docs/Web/HTML/Reference/Elements/canvas) (que incluye [WebGL](/es/docs/Web/API/WebGL_API)). En algún lugar "entre" HTML / CSS y Canvas está [SVG](/es/docs/Web/SVG), que ofrece algunos beneficios de ambos.
 
 HTML y CSS aumentan en gran medida la productividad, a veces a expensas de la frecuencia de cuadros o el control a nivel de píxeles de la renderización. El texto y las imágenes se vuelven a generar automáticamente, los elementos de la IU reciben automáticamente el tema del sistema, y el sistema proporciona soporte "integrado" para algunos casos de uso que los desarrolladores pueden no pensar inicialmente, como pantallas de diferente resolución o idiomas de derecha a izquierda.
 
@@ -121,7 +121,7 @@ The first important thing for high framerate is to choose the right tool. Use HT
 
 For content drawn using Canvas, it's up to the developer to hit framerate targets: they have direct control over what's drawn.
 
-For HTML and CSS content, the path to high framerate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling framerate over a target. CSS [media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow these compromises to be restricted only to devices that need them.
+For HTML and CSS content, the path to high framerate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling framerate over a target. CSS [media queries](/es/docs/Web/CSS/Guides/Media_queries/Using) allow these compromises to be restricted only to devices that need them.
 
 Many applications use transitions or animations through "pages", or "panels". For example, the user taps a "Settings" button to transition into an application configuration screen, or a settings menu "pops up". Firefox is highly optimized to transition and animate scenes that:
 
@@ -147,9 +147,9 @@ The following practical tips will help improve one or more of the Application pe
 
 #### Use CSS animations and transitions
 
-Instead of using some library's `animate()` function, which probably currently uses many badly performing technologies ({{domxref("window.setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations). In many cases, you can actually use [CSS Transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
+Instead of using some library's `animate()` function, which probably currently uses many badly performing technologies ({{domxref("window.setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/es/docs/Web/CSS/Guides/Animations/Using). In many cases, you can actually use [CSS Transitions](/es/docs/Web/CSS/Guides/Transitions/Using) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
 
-CSS animations give you very granular control over your effects using [keyframes](/es/docs/Web/CSS/@keyframes), and you can even watch events fired during the animation process in order to handle other tasks that need to be performed at set points in the animation process. You can easily trigger these animations with the {{cssxref(":hover")}}, {{cssxref(":focus")}}, or {{cssxref(":target")}}, or by dynamically adding and removing classes on parent elements.
+CSS animations give you very granular control over your effects using [keyframes](/es/docs/Web/CSS/Reference/At-rules/@keyframes), and you can even watch events fired during the animation process in order to handle other tasks that need to be performed at set points in the animation process. You can easily trigger these animations with the {{cssxref(":hover")}}, {{cssxref(":focus")}}, or {{cssxref(":target")}}, or by dynamically adding and removing classes on parent elements.
 
 If you want to create animations on the fly or modify them in [JavaScript](/es/docs/Web/JavaScript), James Long has written a simple library for that called [CSS-animations.js](https://github.com/jlongster/css-animations.js/).
 

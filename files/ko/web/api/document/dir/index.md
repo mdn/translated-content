@@ -24,4 +24,4 @@ l10n:
 
 ## 함께 보기
 
-- [`dir`](/ko/docs/Web/HTML/Global_attributes/dir) 전역 속성
+- [`dir`](/ko/docs/Web/HTML/Reference/Global_attributes/dir) 전역 속성

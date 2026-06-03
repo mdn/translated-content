@@ -3,7 +3,7 @@ title: Введение в асинхронный JavaScript
 slug: Learn_web_development/Extensions/Async_JS/Introducing
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 В этой статье мы кратко остановимся на проблемах, связанных с синхронным Javascript, а также ознакомимся с несколькими асинхронными методами, демонстрирующими как они могут помочь нам подобные проблемы решить.
 
@@ -30,7 +30,6 @@ btn.addEventListener("click", () => {
 
 1. Получаем ссылку на элемент {{htmlelement("button")}}, который уже есть в DOM.
 2. Добавляем к кнопке обработчик события [`click`](/ru/docs/Web/API/Element/click_event) так, что при нажатии на неё:
-
    1. Выводится сообщение [`alert()`](/ru/docs/Web/API/Window/alert).
    2. После закрытия сообщения создаём элемент {{htmlelement("p")}} (абзац).
    3. Затем добавляем в абзац текст.
@@ -256,4 +255,4 @@ TypeError: image is undefined; can't access its "src" property
 
 Если мы выполняем операцию, которая требует времени, например, запрос к базе данных и использование полученных результатов для заполнения шаблонов, лучше вытолкнуть это из основного потока и выполнить задачу асинхронно. Со временем вы узнаете, когда имеет смысл выбирать асинхронную технику вместо синхронной.
 
-{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}

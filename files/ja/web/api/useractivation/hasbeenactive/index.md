@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-{{domxref("UserActivation")}} インターフェイスの読み取り専用プロパティ **`hasBeenActive`** は、現在のウインドウでユーザーによる粘着的な有効化がされているかを表します。({{Glossary("sticky activation", "粘着的な有効化")}}を参照してください)
+{{domxref("UserActivation")}} インターフェイスの読み取り専用プロパティ **`hasBeenActive`** は、現在のウインドウでユーザーによる持続的な有効化がされているかを表します。({{Glossary("sticky activation", "持続的な有効化")}}を参照してください)
 
 ## 値
 
@@ -37,4 +37,4 @@ if (navigator.userActivation.hasBeenActive) {
 
 - {{domxref("UserActivation")}}
 - {{domxref("UserActivation.isActive")}}
-- [ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/User_activation)
+- [ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/Defenses/User_activation)

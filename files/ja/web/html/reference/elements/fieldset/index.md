@@ -1,38 +1,35 @@
 ---
 title: "<fieldset>: フィールドセット要素"
 slug: Web/HTML/Reference/Elements/fieldset
-original_slug: Web/HTML/Element/fieldset
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{HTMLSidebar}}
 
 **`<fieldset>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブフォーム内のラベル ({{HTMLElement("label")}}) などのようにいくつかのコントロールをグループ化するために使用します。
 
-{{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;fieldset&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <form>
   <fieldset>
-    <legend>Choose your favorite monster</legend>
+    <legend>好きなモンスターを選んでください</legend>
 
     <input type="radio" id="kraken" name="monster" value="K" />
-    <label for="kraken">Kraken</label><br />
+    <label for="kraken">クラーケン</label><br />
 
     <input type="radio" id="sasquatch" name="monster" value="S" />
-    <label for="sasquatch">Sasquatch</label><br />
+    <label for="sasquatch">サスカッチ</label><br />
 
     <input type="radio" id="mothman" name="monster" value="M" />
-    <label for="mothman">Mothman</label>
+    <label for="mothman">モスマン</label>
   </fieldset>
 </form>
 ```
 
 ```css interactive-example
 legend {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   padding: 3px 6px;
 }
 
@@ -47,12 +44,11 @@ input {
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-- `disabled`
+- [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled)
   - : この論理属性が設定されている場合、`<fieldset>` の子孫要素として配置したフォームコントロールはすべて無効になり、つまり編集したり {{htmlelement("form")}} と一緒に送信したりすることができなくなります。マウスクリックやフォーカス関連のイベントのような閲覧イベントを受け取らなくなります。既定では、ブラウザーはそのようなコントロールを灰色で表示します。なお、子孫の {{HTMLElement("legend")}} 要素内のフォーム要素は無効になりません。
-- `form`
+- [`form`](/ja/docs/Web/HTML/Reference/Attributes/form)
   - : {{HTMLElement("form")}} 要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性を指定し、たとえ `<fieldset>` 要素がその中になくても、その一部とすることができます。なお、 `<fieldset>` 内の {{HTMLElement("input")}} 要素をフォームに関連付けたい場合は、それらの要素に直接 `form` 属性を使用する必要があります。どの要素がフォームに関連付けられているかは、 JavaScript で {{domxref("HTMLFormElement.elements")}} を使用して確認することができます。
 - `name`
-
   - : グループに関連付けられた名前です。
 
     > [!NOTE]
@@ -62,7 +58,7 @@ input {
 
 `<fieldset>` には、スタイル付けの特殊な考慮事項がいくつかあります。
 
-{{cssxref("display")}} の値は既定で `block` であり、[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)を確立します。 `<fieldset>` がインラインレベルの `display` の値でスタイル付けされた場合は `inline-block` として動作し、そうでなければ `block` として動作します。既定では、コンテンツを囲む `2px` `groove` の境界線があり、少量の既定のパディングがあります。要素は既定で {{cssxref("min-inline-size", "min-inline-size: min-content")}} を持ちます。
+{{cssxref("display")}} の値は既定で `block` であり、[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)を確立します。 `<fieldset>` がインラインレベルの `display` の値でスタイル付けされた場合は `inline-block` として動作し、そうでなければ `block` として動作します。既定では、コンテンツを囲む `2px` `groove` の境界線があり、少量の既定のパディングがあります。要素は既定で {{cssxref("min-inline-size", "min-inline-size: min-content")}} を持ちます。
 
 {{htmlelement("legend")}} が存在する場合は、`block-start` 境界線の上に配置されます。 `<legend>` は縮小折り返しであり、整形コンテキストを確立します。`display` の値はブロック的です。（例えば、`display: inline` は `block` として動作します。）
 
@@ -72,23 +68,23 @@ input {
 
 ## 例
 
-### 単純なフィールドセット
+### 基本的なフィールドセット
 
-この例は、本当に単純な `<fieldset>` の例で、 `<legend>` および 1 つのコントールが中にあります。
+この例には、 `<fieldset>` の中に `<legend>` と 1 つのコントロールが中にあります。
 
 ```html
 <form action="#">
   <fieldset>
-    <legend>Do you agree?</legend>
+    <legend>同意しますか？</legend>
     <input type="checkbox" id="chbx" name="agree" value="Yes!" />
-    <label for="chbx">I agree</label>
+    <label for="chbx">同意する</label>
   </fieldset>
 </form>
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Simple_fieldset', '100%', '80') }}
+{{ EmbedLiveSample('Basic_fieldset', '100%', '80') }}
 
 ### 無効化されたフィールドセット
 
@@ -97,13 +93,13 @@ input {
 ```html
 <form action="#">
   <fieldset disabled>
-    <legend>Disabled login fieldset</legend>
+    <legend>ログインフィールドセットの無効化</legend>
     <div>
-      <label for="name">Name: </label>
+      <label for="name">名前: </label>
       <input type="text" id="name" value="Chris" />
     </div>
     <div>
-      <label for="pwd">Archetype: </label>
+      <label for="pwd">パスワード: </label>
       <input type="password" id="pwd" value="Wookie" />
     </div>
   </fieldset>
@@ -120,29 +116,28 @@ input {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a
-          href="/ja/docs/Web/HTML/Element/Heading_Elements#区分化ルート"
-          >区分化ルート</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#リスト化"
+        区分化ルート,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#リスト化"
           >リスト化</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フォーム関連コンテンツ"
           >フォーム関連</a
-        >要素, 知覚可能コンテンツ
+        >要素,
+        知覚可能コンテンツ
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        任意の {{HTMLElement("legend")}}
-        要素と、それに続くフローコンテンツ
+        任意の {{HTMLElement("legend")}} 要素と、それに続くフローコンテンツ
       </td>
     </tr>
     <tr>
@@ -152,7 +147,7 @@ input {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>

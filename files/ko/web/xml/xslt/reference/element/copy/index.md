@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/copy
 original_slug: Web/XSLT/Element/copy
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:copy>` 요소는 출력 문서에 현재 노드의 노드와 어떤 관련 이름공간 노드만을 얕게 복사(shallow copy) 전달합니다. 속성이나 자식은 복사하지 않습니다.
 

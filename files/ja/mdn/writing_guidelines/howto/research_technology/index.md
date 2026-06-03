@@ -86,7 +86,6 @@ MDN Web Docs のサンプルコードの一部は別個のリポジトリーに�
 
 - Web_Audio_API
 - AudioContext
-
   - AudioContext.currentTime
   - AudioContext.destination
   - AudioContext.listener
@@ -96,7 +95,6 @@ MDN Web Docs のサンプルコードの一部は別個のリポジトリーに�
   - ...
 
 - AudioNode
-
   - AudioNode.context
   - AudioNode.numberOfInputs
   - AudioNode.numberOfOutputs
@@ -106,7 +104,6 @@ MDN Web Docs のサンプルコードの一部は別個のリポジトリーに�
 
 - AudioParam
 - Events (update list)
-
   - start
   - end
   - …

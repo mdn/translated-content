@@ -36,11 +36,8 @@ var settingIcon = browser.sidebarAction.setIcon(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un Objet contenant des propriétés `imageData` ou `path`, et éventuellement une propriété `tabId`.
-
     - `imageData`{{optional_inline}}
-
       - : `{{WebExtAPIRef('sidebarAction.ImageDataType')}}` ou `object`. C'est un objet `ImageData` unique ou un objet dictionnaire.
 
         Utilisez un objet dictionnaire pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet `ImageData`, et son nom est sa taille, comme ceci :
@@ -55,7 +52,6 @@ var settingIcon = browser.sidebarAction.setIcon(
         Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choisir les tailles d'icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) pour plus d'informations à ce sujet.
 
     - `path`{{optional_inline}}
-
       - : `string` ou `object`. C'est soit un chemin relatif vers un fichier d'icône, soit un objet dictionnaire.
 
         Utilisez un objet de dictionnaire pour spécifier plusieurs fichiers d'icônes de différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente. Si `path` est un dictionnaire, la valeur de chaque propriété est un chemin relatif, et son nom est sa taille, comme ceci :

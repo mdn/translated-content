@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 当浏览器操作图标被点击时触发。如果浏览器操作有一个弹出窗口，此事件将不会触发。
 
 > [!NOTE]
@@ -36,15 +34,11 @@ browser.action.onClicked.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 该函数将在事件触发时被调用。会为该函数传递以下参数：
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}，当图标被点击时的活动标签页。
     - `OnClickData`
-
       - : 包含有关点击的信息的对象。
-
         - `modifiers`
           - : `array`，点击时活动的键盘修饰符，可以是 `Shift`、`Alt`、`Command`、`Ctrl` 或 `MacCtrl` 中的一个或多个。
         - `button`

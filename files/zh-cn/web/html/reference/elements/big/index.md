@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 已弃用的 **`<big>`** [HTML](/zh-CN/docs/Web/HTML) 元素使其中包裹的文字会以比周围文本大一级的字体大小（例如将 `medium` 变为 `large`）渲染。字体大小的最大值受限于浏览器的允许范围。
 

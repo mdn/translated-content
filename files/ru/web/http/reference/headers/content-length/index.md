@@ -3,8 +3,6 @@ title: Content-Length
 slug: Web/HTTP/Reference/Headers/Content-Length
 ---
 
-{{HTTPSidebar}}
-
 Заголовок **`Content-Length`** указывает размер отправленного получателю тела объекта в байтах.
 
 <table class="properties">

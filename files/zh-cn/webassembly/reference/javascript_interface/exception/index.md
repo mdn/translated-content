@@ -23,7 +23,6 @@ l10n:
 ## 实例方法
 
 - [`Exception.prototype.is()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/is)
-
   - : 测试异常是否匹配某个特定的标签。
 
 - [`Exception.prototype.getArg()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)

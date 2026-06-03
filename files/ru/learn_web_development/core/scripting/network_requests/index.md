@@ -3,7 +3,7 @@ title: Получение данных с сервера
 slug: Learn_web_development/Core/Scripting/Network_requests
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Другой очень распространённой задачей в современных веб-сайтах и приложениях является получение отдельных элементов данных с сервера для обновления разделов веб-страницы без необходимости загрузки всей новой страницы. Эта, казалось бы, небольшая деталь оказала огромное влияние на производительность и поведение сайтов, поэтому в этой статье мы объясним концепцию и рассмотрим технологии, которые делают это возможным, например XMLHttpRequest и API Fetch.
 
@@ -335,7 +335,6 @@ blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
 - Вы можете найти полезный справочный материал {{domxref("XMLHttpRequest")}}.
 - Вам в основном нужно использовать тот же шаблон, что и раньше, в примере [XHR-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html).
 - Однако вам нужно будет добавить обработку ошибок, которые мы показали вам в версии Fetch Can Store:
-
   - Ответ найден в `request.response` после того, как событие `load` запущено, а не в промисе `then()`.
   - О наилучшем эквиваленте Fetch's `response.ok` в XHR следует проверить, является ли {{domxref("XMLHttpRequest.status","request.status")}} равным 200 или если {{domxref("XMLHttpRequest.readyState","request.readyState")}} равно 4.
   - Свойства для получения статуса и сообщения состояния одинаковы, но они находятся на объекте `request` (XHR), а не в объекте `response`.
@@ -358,4 +357,4 @@ blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
 - [Обзор HTTP](/ru/docs/Web/HTTP/Guides/Overview)
 - [Программирование веб-сайта на стороне сервера](/ru/docs/Learn_web_development/Extensions/Server-side)
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

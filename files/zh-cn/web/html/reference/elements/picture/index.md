@@ -3,8 +3,6 @@ title: <picture>：picture 元素
 slug: Web/HTML/Reference/Elements/picture
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<picture>` 元素**通过包含零或多个 {{HTMLElement("source")}} 元素和一个 {{HTMLElement("img")}} 元素来为不同的显示/设备场景提供图像版本。浏览器会选择最匹配的子 `<source>` 元素，如果没有匹配的，就选择 `<img>` 元素的 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/img#src) 属性中的 URL。然后，所选图像呈现在\<img>元素占据的空间中。
 
 {{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}

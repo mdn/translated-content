@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6d81ba6606ce5473cadd085c37eaf4960e99a238
 ---
 
-{{HTTPSidebar}}
-
 **`302 Found`** [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status#重定向消息)表示请求的资源已临时移动到 {{HTTPHeader("Location")}} 标头中的 URL。
 
 浏览器收到此状态后，将自动请求 `Location` 标头中的 URL 资源，将用户重定向到新页面。搜索引擎收到此响应后，不会将原始 URL 的链接归属于新资源，这意味着不会将任何 {{Glossary("SEO")}} 值传递给新 URL。

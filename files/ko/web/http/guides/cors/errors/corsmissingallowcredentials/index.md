@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 ## 이유
 
 ```plain
@@ -28,6 +26,6 @@ Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'
 
 ## 함께 보기
 
-- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
+- [CORS 에러](/ko/docs/Web/HTTP/Guides/CORS/Errors)
 - 용어 사전: {{Glossary("CORS")}}
-- [CORS 소개](/ko/docs/Web/HTTP/CORS)
+- [CORS 소개](/ko/docs/Web/HTTP/Guides/CORS)

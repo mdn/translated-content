@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
 
-{{GlossarySidebar}}
-
 浏览器插件是一种软件组件，用户可以安装它来处理浏览器无法原生支持的内容。浏览器插件通常使用 [NPAPI](https://en.wikipedia.org/wiki/NPAPI)（Netscape 插件应用程序编程接口）架构编写。
 
 最著名且使用最广泛的插件是现已过时的 Adobe Flash 播放器，它使浏览器能够运行 {{Glossary("Adobe Flash")}} 内容。

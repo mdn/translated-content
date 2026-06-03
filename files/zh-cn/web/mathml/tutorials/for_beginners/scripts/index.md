@@ -470,7 +470,8 @@ math {
 - _largeop_：如果 `<math>` 标签具有 `display="block"` 属性，则使用更大的字形绘制运算符。
 - _movablelimits_：如果 `<math>` 标签没有 `display="block"` 属性，则将附加在运算符上的正下标和正上标分别渲染为下标和上标。
 
-> **备注：** _largeop_ 属性实际上与附加符号无关，尽管具有此属性的运算符通常会有附加符号。_movablelimits_ 属性也适用于 `<munder>` 和 `<mover>` 元素。
+> [!NOTE]
+> _largeop_ 属性实际上与附加符号无关，尽管具有此属性的运算符通常会有附加符号。_movablelimits_ 属性也适用于 `<munder>` 和 `<mover>` 元素。
 
 ## 总结
 

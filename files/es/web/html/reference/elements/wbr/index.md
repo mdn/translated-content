@@ -22,7 +22,7 @@ Este elemento fue implementado por primera vez en Internet Explorer 5.5 y fue of
 
 ## Atributos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes) .
+Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes) .
 
 ## Interfase DOM
 

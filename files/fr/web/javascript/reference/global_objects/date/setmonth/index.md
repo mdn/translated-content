@@ -1,13 +1,14 @@
 ---
-title: Date.prototype.setMonth()
+title: "Date : méthode setMonth()"
+short-title: setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
+l10n:
+  sourceCommit: b3840f6234d24ade72a43171fd6489dd533aaf15
 ---
 
-{{JSRef}}
+La méthode **`setMonth()`** des instances de {{JSxRef("Date")}} modifie le mois et/ou le jour du mois pour cette date selon l'heure locale.
 
-La méthode **`setMonth()`** définit le mois de la date, selon l'heure locale et l'année courante de l'objet {{jsxref("Date")}}
-
-{{InteractiveExample("JavaScript Demo: Date.setMonth()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.setMonth()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30");
@@ -15,59 +16,55 @@ const event = new Date("August 19, 1975 23:15:30");
 event.setMonth(3);
 
 console.log(event.getMonth());
-// Expected output: 3
+// Résultat attendu : 3
 
 console.log(event);
-// Expected output: "Sat Apr 19 1975 23:15:30 GMT+0100 (CET)"
-// Note: your timezone may vary
+// Résultat attendu : "Sat Apr 19 1975 23:15:30 GMT+0100 (CET)"
+// Remarque : votre fuseau horaire peut varier
 ```
 
 ## Syntaxe
 
-```js
-dateObj.setMonth(valeurMois[, valeurJour])
-```
-
-### Versions antérieures à JavaScript 1.3
-
-```js
-dateObj.setMonth(valeurMois);
+```js-nolint
+setMonth(monthValue)
+setMonth(monthValue, dateValue)
 ```
 
 ### Paramètres
 
-- `valeurMois`
-  - : Un entier entre 0 et 11 (représentant les mois de janvier à décembre).
-- `valeurJour`
-  - : Paramètre optionnel, un entier entre 1 et 31, représentant le jour du mois.
+- `monthValue`
+  - : Un entier représentant le mois&nbsp;: 0 pour janvier, 1 pour février, etc.
+- `dateValue` {{Optional_Inline}}
+  - : Un entier de 1 à 31 représentant le jour du mois.
 
 ### Valeur de retour
 
-Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
+Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouveau [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Si un paramètre vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) et `NaN` est retourné.
 
 ## Description
 
-Si le paramètre `valeurJour` n'est pas utilisé, la valeur renvoyée par la méthode {{jsxref("Date.getDate", "getDate()")}} sera utilisée.
+Si vous ne définissez pas le paramètre `dateValue`, la même valeur que celle retournée par {{JSxRef("Date/getDate", "getDate()")}} est utilisée.
 
-Si un paramètre que vous renseignez n'est pas dans les limites attendues, `setMonth()` tentera de mettre à jour la date en conséquence. Par exemple, si la valeur 15 est utilisée pour `valeurMois`, l'année sera incrémenté de 1 (année + 1), et 3 sera utilisé pour le mois.
+Si un paramètre que vous définissez est en dehors de la plage attendue, les autres paramètres et les informations de date dans l'objet {{JSxRef("Date")}} sont mises à jour en conséquence. Par exemple, si vous définissez 15 pour `monthValue`, l'année est incrémentée de 1, et 3 est utilisé pour le mois.
 
-> [!NOTE]
-> Attention aux jours du mois lorsqu'on utilise `setMonth()`. En effet, `setMonth()` cherchera à aboutir à une date correcte et on peut avoir des surprises pour les transitions entre les mois. Ainsi, en 2016 (où février a eu 29 jours), on aura le cas suivant :
->
-> ```js
-> var finDuMois = new Date(2016, 7, 31); // le 31 août 2016
-> finDuMois.setMonth(1);
->
-> console.log(finDuMois.toLocaleString()); // 02/03/2016 à 00:00:00
-> ```
+Le jour du mois courant aura un impact sur le comportement de cette méthode. Conceptuellement, il ajoutera le nombre de jours donné par le jour du mois courant au premier jour du nouveau mois défini comme paramètre, pour retourner la nouvelle date. Par exemple, si la valeur courante est le 31 janvier 2016, appeler setMonth avec une valeur de 1 retournera le 2 mars 2016. Cela s'explique par le fait qu'en 2016, février avait 29 jours.
+
+Comme `setMonth()` fonctionne selon l'heure locale, franchir une transition d'heure d'été (DST) peut entraîner un temps écoulé différent de celui attendu. Par exemple, si le changement de mois franchit une transition d'avance du printemps (perte d'une heure), la différence de timestamps entre la nouvelle et l'ancienne date est inférieure d'une heure à la différence nominale de jours multipliée par 24 heures. À l'inverse, franchir une transition de recul de l'automne (gain d'une heure) ajoute une heure supplémentaire. Si vous devez ajuster la date d'une durée fixe, envisagez d'utiliser {{JSxRef("Date/setUTCMonth", "setUTCMonth()")}} ou {{JSxRef("Date/setTime", "setTime()")}}.
+
+Si la nouvelle heure locale tombe dans une transition de décalage, l'heure exacte est déterminée en utilisant le même comportement que l'option [`disambiguation: "compatible"`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguïté_et_écarts_entre_lheure_locale_et_lheure_utc) de `Temporal`. C'est-à-dire, si l'heure locale correspond à deux instants, le plus tôt est choisi&nbsp;; si l'heure locale n'existe pas (il y a un écart), on avance de la durée de l'écart.
 
 ## Exemples
 
-### Utiliser `setMonth()`
+### Utiliser la méthode `setMonth()`
 
 ```js
-var leGrandJour = new Date();
+const leGrandJour = new Date();
 leGrandJour.setMonth(6);
+
+// Attention aux transitions de fin de mois
+const finDuMois = new Date(2016, 7, 31);
+finDuMois.setMonth(1);
+console.log(finDuMois); // Wed Mar 02 2016 00:00:00
 ```
 
 ## Spécifications
@@ -80,5 +77,5 @@ leGrandJour.setMonth(6);
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.getMonth()")}}
-- {{jsxref("Date.prototype.setUTCMonth()")}}
+- La méthode {{JSxRef("Date.prototype.getMonth()")}}
+- La méthode {{JSxRef("Date.prototype.setUTCMonth()")}}

@@ -23,7 +23,6 @@ console.log(typeof null); // "object"
 - JavaScript のグローバルオブジェクト: [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)
 - [ヌルポインタ](https://ja.wikipedia.org/wiki/ヌルポインタ)（ウィキペディア）
 - **関連用語**
-
   - {{Glossary("JavaScript")}}
   - {{Glossary("string", "文字列")}}
   - {{Glossary("number", "数値")}}

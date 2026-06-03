@@ -1,352 +1,171 @@
 ---
 title: 関数
 slug: Web/JavaScript/Reference/Functions
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Functions")}}
+一般的に言うと、関数とは外部 (再帰の場合は内部) から呼び出すことのできる「サブプログラム」です。プログラムそのもののように、関数は関数本体 (_function body_) と呼ばれる連続した文で構成されます。関数には引数として値を渡すことができ、関数は値を返すことができます。
 
-一般的に言うと、関数とは外部 (再帰の場合は内部) から _呼び出す_ ことのできる「サブプログラム」です。プログラムそのもののように、関数は関数本体 (_function body_) と呼ばれる連続した文で構成されます。値を関数に*渡す*ことができ、関数は値を*返す*ことができます。
-
-JavaScript において、関数は第一級オブジェクトです。すなわち、関数はオブジェクトであり、他のあらゆるオブジェクトと同じように操作したり渡したりすることができます。具体的には、関数は [`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) オブジェクトです。
+JavaScript で、関数は[第一級オブジェクト](/ja/docs/Glossary/First-class_Function)です。関数は他の関数に渡したり、関数から返したり、変数やプロパティに代入したりできるからです。また、それ以外のオブジェクトと同様にプロパティやメソッドを持つこともできます。他のオブジェクトと異なる点は、関数は呼び出せるということです。
 
 より詳細な例や解説については、[JavaScript の関数のガイド](/ja/docs/Web/JavaScript/Guide/Functions)を参照してください。
 
 ## 解説
 
-JavaScript におけるすべての関数は、実際には `Function` オブジェクトです。`Function` オブジェクトのプロパティとメソッドについての情報は {{jsxref("Function")}} をご覧ください。
+関数値は通常、[`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) のインスタンスです。 `Function` オブジェクトのプロパティとメソッドに関する情報については、 {{jsxref("Function")}} を参照してください。呼び出し可能な値であるため、[`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) は `"object"` ではなく `"function"` を返します。
 
-初期値以外の値を返すためには、返す値を指定する [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文が関数内になくてはなりません。`return` 文を持たない関数は既定値を返します。[コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)が [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) キーワードとともに呼び出された場合、その `this` 引数が初期値となります。それ以外のすべての関数が既定で返す値は {{jsxref("undefined")}} です。
+> [!NOTE]
+> 呼び出し可能な値のすべてが `instanceof Function` であるとは限りません。例えば、`Function.prototype` オブジェクトは呼び出し可能ですが、`Function` のインスタンスではありません。また、関数の[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)を手動で設定して、`Function.prototype` からの継承をやめることもできます。ただし、そのようなケースは非常に稀です。
 
-関数の仮引数 (parameter) には、関数呼び出しにおいて実引数 (_argument_) が渡されます。実引数は、関数に*値渡し*されます。関数の中で引数の値を変更しても、その変更はグローバルスコープもしくは呼び出し元の関数内には反映されません。オブジェクト参照も「値」ですが、こちらは特別です。参照されているオブジェクトのプロパティを関数の中で変更すると、次の例にあるように、その変更を関数の外部から見ることができます。
+### 返値
+
+既定では、関数の実行が [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文で終わらない場合、または `return` キーワードの後に式がない場合、返値は {{jsxref("undefined")}} となります。 `return` 文を使用すると、関数から任意の値を返すことができます。 1 回の関数呼び出しで返せる値は 1 つだけですが、オブジェクトや配列を返して結果を[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)することで、複数の値を返す効果を模倣することができます。
+
+> [!NOTE]
+> [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) で呼び出されるコンストラクターは、返値を決定するための一連のロジックが異なります。
+
+### 引数の受け渡し
+
+[仮引数 (parameter) と実引数 (argument)](https://ja.wikipedia.org/wiki/引数)があり、意味が若干異なりますが、 MDN web docs では多くの場合同じ意味で使用されています。簡単に言うと、
 
 ```js
-/* 関数 'myFunc' を宣言 */
-function myFunc(theObject) {
-  theObject.brand = "Toyota";
+function formatNumber(num) {
+  return num.toFixed(2);
 }
 
-/*
- * 変数 'mycar' を宣言
- * 新しいオブジェクトの生成と初期化
- * 'mycar' への参照をオブジェクトに代入
- */
-var mycar = {
+formatNumber(2);
+```
+
+この例では、 `num` 変数は関数の「仮引数」 (_parameter_) と呼ばれ、関数定義の括弧で囲まれたリスト内で宣言されます。関数は `num` 仮引数が数値であることを期待しています。ただし、 JavaScript では実行時検証コードを書かない限り、これを強制することはできません。 `formatNumber(2)` の呼び出しにおいて、数値 `2` は関数の「実引数」 (_argument_) です。これは関数呼び出し時に実際に渡される値です。 実引数の値は、関数本体内で対応する引数名または [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトを通じてアクセスできます。
+
+引数は常に[値渡し](https://ja.wikipedia.org/wiki/評価戦略#値呼び)であり、決して参照渡しではありません。これは、関数が引数に再代入を行っても、関数外では値が変更されないということです。より正確には、オブジェクト引数は[共有渡し](https://ja.wikipedia.org/wiki/評価戦略#参照の値渡し)です。つまり、オブジェクトのプロパティが変更される場合、その変更は関数外にも影響するということです。例えば、
+
+```js
+function updateBrand(obj) {
+  // オブジェクトの変更は関数外からも見える
+  obj.brand = "Toyota";
+  // 仮引数に再代入してみても、関数外での変数の値には影響しない
+  obj = null;
+}
+
+const car = {
   brand: "Honda",
   model: "Accord",
   year: 1998,
 };
 
-/* 'Honda' を出力 */
-console.log(mycar.brand);
+console.log(car.brand); // Honda
 
-/* オブジェクト参照を関数に渡す */
-myFunc(mycar);
+// オブジェクト参照を関数へ渡す
+updateBrand(car);
 
-/*
- * オブジェクトの 'brand' プロパティの値は関数によって
- * 変更されたので 'Toyota' と出力される
- */
-console.log(mycar.brand);
+// updateBrand が car を変更した
+console.log(car.brand); // Toyota
 ```
 
-[`this` キーワード](/ja/docs/Web/JavaScript/Reference/Operators/this)は現在実行中の関数を参照しません。よって、その関数本体の中であっても、名前によって `Function` オブジェクトを参照しなければなりません。
+[`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) キーワードは、関数がアクセスされたオブジェクトを参照します。現在実行中の関数を参照するのではなく、関数本体内であっても関数値は名前で参照する必要があります。
 
-## 関数の定義
+### 関数の定義
 
-関数を定義するのにはいくつかの方法があります。
+大まかに言えば、 JavaScript には 4 種類の関数があります。
 
-### 関数宣言 (`function` 文)
+- 通常関数: 何でも返すことができます。呼び出し後、常に完了するまで実行します。
+- ジェネレーター関数: [`Generator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator) オブジェクトを返します。 [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) 演算子で一時停止や再開ができます。
+- 非同期関数: [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返します。 [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) 演算子で一時停止や再開ができます。
+- 非同期ジェネレーター関数: [`AsyncGenerator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) オブジェクトを返します。 `await` と `yield` の両方の演算子を使用できます。
 
-関数を宣言するための特殊な構文があります。(詳細は [function 文](/ja/docs/Web/JavaScript/Reference/Statements/function)を参照)
+どの種類の関数でも、それを定義する方法は複数あります。
 
-```js
-function name([param[, param[, ... param]]]) {
-   statements
-}
-```
+- 宣言
+  - : [`function`](/ja/docs/Web/JavaScript/Reference/Statements/function), [`function*`](/ja/docs/Web/JavaScript/Reference/Statements/function*), [`async function`](/ja/docs/Web/JavaScript/Reference/Statements/async_function), [`async function*`](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)
+- 式
+  - : [`function`](/ja/docs/Web/JavaScript/Reference/Operators/function), [`function*`](/ja/docs/Web/JavaScript/Reference/Operators/function*), [`async function`](/ja/docs/Web/JavaScript/Reference/Operators/async_function), [`async function*`](/ja/docs/Web/JavaScript/Reference/Operators/async_function*)
+- コンストラクター
+  - : [`Function()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function), [`GeneratorFunction()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction/GeneratorFunction), [`AsyncFunction()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction), [`AsyncGeneratorFunction()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/AsyncGeneratorFunction)
 
-- `name`
-  - : 関数名です。
-- `param`
-  - : 関数に渡される引数の名前です。
-- `statements`
-  - : 関数の本体を構成する文です。
-
-### 関数式 (`function` 式)
-
-関数式は、関数宣言と似ており、同じ構文を持っています (詳細は[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)を参照)。関数式はより大きな式の一部になることもあります。「名前付き」の関数式を定義することもできます (例えばその名前はコールスタック内で使われるかもしれません) し、「無名の」関数式を定義することもできます。関数式はスコープの開始時に「巻き上げ」られないので、コード内でそれらが登場するより前に使用することはできません。
+さらに、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) と [メソッド](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions) を定義するための特別な構文があり、これらはその用法に明確な意味づけを提供します。[クラス](/ja/docs/Web/JavaScript/Reference/Classes)は概念的には関数ではありません（`new` なしで呼び出されるとエラーが発生するため）。しかし、それらは `Function.prototype` を継承し、 `typeof MyClass === "function"` となります。
 
 ```js
-function [name]([param[, param[, ... param]]]) {
-   statements
-}
-```
+// コンストラクター
+const multiply = new Function("x", "y", "return x * y");
 
-- `name`
-  - : 関数名。省略することができ、その場合は関数は無名関数と見なされます。
-- `param`
-  - : 関数に渡される引数の名前です。
-- `statements`
-  - : 関数の本体を構成する文です。
-
-以下は**無名の**関数式の例です (`name` が使われていない)。
-
-```js
-var myFunction = function () {
-  statements;
-};
-```
-
-定義の中で名前を提供することで、**名前付きの**関数式を作ることも可能です。
-
-```js
-var myFunction = function namedFunction() {
-  statements;
-};
-```
-
-名前付きの関数式を作ることの利点の 1 つは、エラーに遭遇したとき、スタックトレースがその関数の名前を含めるため、エラーの発生源をより容易に特定できるということです。
-
-ここまで見てきたように、どちらの例も `function` キーワードから開始されていません。 `function` から開始せずに関数を含んでいる文が関数式です。
-
-関数が一度だけ使われるとき、一般的なパターンが[即時実行関数式 (IIFE, Immediately Invoked Function Expression)](/ja/docs/Glossary/IIFE) です。
-
-```js
-(function () {
-  statements;
-})();
-```
-
-即時実行関数式は、関数を宣言した直後に実行する関数式です。
-
-### ジェネレーター関数宣言 (`function*` 文)
-
-ジェネレーター関数の宣言のための特別な構文です (詳細は {{jsxref('Statements/function*', 'function* 文')}} を参照してください)。
-
-```js
-function* name([param[, param[, ... param]]]) {
-   statements
-}
-```
-
-- `name`
-  - : 関数名。
-- `param`
-  - : 関数に渡される引数の名前です。
-- `statements`
-  - : 関数の本体を構成する文。
-
-### ジェネレーター関数式 (`function*` 式)
-
-ジェネレーター関数式は、ジェネレーター関数宣言と似ており、同じ構文を持っています （詳細は {{jsxref('Operators/function*', 'function* 式')}} を参照してください）。
-
-```js
-function* [name]([param[, param[, ... param]]]) {
-   statements
-}
-```
-
-- `name`
-  - : 関数名。省略することができ、その場合関数は無名関数と見なされます。
-- `param`
-  - : 関数に渡される引数の名前です。
-- `statements`
-  - : 関数の本体を構成する文です。
-
-### アロー関数式 (=>)
-
-アロー関数式はより短い構文で、 `this` 値を語彙的に結合します (詳細は[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を参照)。
-
-<pre class="brush: js">([param[, param]]) =&gt; {
-   statements
-}
-
-param =&gt; expression
-</pre>
-
-- `param`
-  - : 引数の名前。引数が 0 個の場合は `()` で示すことが必要です。引数が 1 個の場合のみ、丸括弧は必須ではありません。(例えば `foo =&gt; 1`)
-- `statements` または `expression`
-  - : 複数の文は中括弧で括らなければなりません。単一の式では、中括弧は必須ではありません。式は、関数の暗黙的な返値でもあります。
-
-### `Function` コンストラクター
-
-> **メモ:** `Function` コンストラクターによる関数の生成は推奨されません。これは、文字列として関数本体が必要であり、JS エンジンによる最適化を妨げたり、他の問題を引き起こしたりする場合があるためです。
-
-他のすべてのオブジェクトと同じように、`new` 演算子を使って {{jsxref("Function")}} オブジェクトを作成することができます。
-
-```js
-new Function(arg1, arg2, ...argN, functionBody);
-```
-
-- `arg1, arg2, ... argN`
-  - : 関数で仮引数名として使われる、0 個以上の名前。それぞれが、妥当な JavaScript 識別子に相当する文字列、もしくはそういった文字列のカンマで分割されたリストでなくてはなりません。
-- `functionBody`
-  - : 関数定義を構成する JavaScript 文を含む文字列。
-
-`Function` コンストラクターを関数として (`new` 演算子を使わずに) 呼び出しても、コンストラクターとして呼び出すのと同じ効果があります。
-
-### `GeneratorFunction` コンストラクター
-
-> **メモ:** `GeneratorFunction` はグローバルオブジェクトではありませんが、ジェネレーター関数のインスタンスから得ることができます (詳細は {{jsxref("GeneratorFunction")}} を参照してください)。
-
-> **メモ:** `GeneratorFunction` コンストラクターによる関数の生成は推奨されません。これは、文字列として関数本体が必要で、JS エンジンによる最適化を妨げたり、他の問題を引き起こしたりする場合があるためです。
-
-他のすべてのオブジェクトと同じように、 `new` 演算子を使って {{jsxref("GeneratorFunction")}} オブジェクトを作成することができます。
-
-```js
-new GeneratorFunction(arg1, arg2, ...argN, functionBody);
-```
-
-- `arg1, arg2, ... argN`
-  - : 関数で仮引数名として使われる、0 個以上の名前。それぞれが、妥当な JavaScript 識別子に相当する文字列、もしくはそういった文字列のカンマで分割されたリストでなくてはなりません。例えば "`x`"、"`theValue`"、"`a,b`" などです。
-- `functionBody`
-  - : 関数定義を構成する JavaScript 文を含む文字列です。
-
-`Function` コンストラクターを関数として (`new` 演算子を使わずに) 呼び出しても、コンストラクターとして呼び出すのと同じ効果があります。
-
-## 関数の引数
-
-### デフォルト引数
-
-関数のデフォルト引数で、関数に値が渡されなかった場合や `undefined` が渡された場合に、既定値で初期化される形式上の引数を指定できます。詳細は[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)を参照してください。
-
-### 残余引数
-
-残余引数とは、不特定多数の引数を配列として受け取る構文です。詳細は[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)を参照してください。
-
-## `arguments` オブジェクト
-
-`arguments` オブジェクトを使って、関数内部で関数の引数を参照することができます。[arguments](/ja/docs/Web/JavaScript/Reference/Functions/arguments) を参照してください。
-
-- [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments):
-  現在実行中の関数に渡された引数を格納する配列風オブジェクト。
-- [`arguments.callee`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee):
-  現在実行中の関数。
-- [`arguments.caller`](/ja/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller):
-  現在実行中の関数を呼び出した関数。
-- [`arguments.length`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/length):
-  関数に渡された引数の数。
-
-## メソッドの定義
-
-### ゲッターおよびセッター関数
-
-ゲッター (アクセサーメソッド) およびセッター (ミューテーターメソッド) は、標準組み込みオブジェクトでもユーザー定義オブジェクトでも、新しいプロパティの追加に対応していれば定義することができます。ゲッターとセッターを定義するための構文は、オブジェクトリテラル構文を使用します。
-
-- [get](/ja/docs/Web/JavaScript/Reference/Functions/get)
-  - : オブジェクトのプロパティを、そのプロパティが検索されたときに呼び出される関数に束縛します。
-- [set](/ja/docs/Web/JavaScript/Reference/Functions/set)
-  - : あるオブジェクトのプロパティを、そのプロパティに代入しようとしたときに呼び出される関数に結びつけます。
-
-### メソッド定義構文
-
-ECMAScript 2015 からは、独自のメソッドを、ゲッターとセッターに似たより短い構文で定義することができます。詳細は[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)を参照してください。
-
-```js
-var obj = {
-  foo() {},
-  bar() {},
-};
-```
-
-## コンストラクターと関数宣言と関数式
-
-以下のものを比較してみて下さい。
-
-`Function` *コンストラクター*によって定義され、変数 `multiply` に代入された関数です。
-
-```js
-var multiply = new Function("x", "y", "return x * y");
-```
-
-`multiply` と命名された関数の*関数宣言*です。
-
-```js
+// 宣言
 function multiply(x, y) {
   return x * y;
-} // ここにセミコロンは必要ありません
-```
+} // ここではセミコロンは必須ではない
 
-変数 `multiply` に代入された、無名関数の*関数式*です。
-
-```js
-var multiply = function (x, y) {
+// 式：この関数は無名だが、変数に代入される
+const multiply = function (x, y) {
   return x * y;
+};
+// 式：自分の名前を持つ関数
+const multiply = function funcName(x, y) {
+  return x * y;
+};
+
+// アロー関数
+const multiply = (x, y) => x * y;
+
+// メソッド
+const obj = {
+  multiply(x, y) {
+    return x * y;
+  },
 };
 ```
 
-変数 `multiply` に代入された、`func_name` と命名された関数式です。
+すべての構文はおおむね同じことをしますが、微妙な動作の違いがいくつかあります。
+
+- `Function()` コンストラクター、`function` 式、および `function` 宣言構文は、正規の関数オブジェクトを生成します。これらは [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使用して構築可能です。ただし、アロー関数とメソッドは構築できません。非同期関数、ジェネレーター関数、および非同期ジェネレーター関数は、構文に関わらず構築できません。
+- `function` 宣言は、[巻き上げ](/ja/docs/Web/JavaScript/Guide/Functions#関数の巻き上げ)られる関数を作成します。それ以外にも構文では関数は巻き上げられず、関数の値は定義後にのみ見えるようになります。
+- アロー関数と `Function()` コンストラクターは常に無名関数を生成するため、それらは簡単に再帰的に自身を呼び出すことができません。アロー関数を再帰的に呼び出す一つの方法は、それを変数に代入することです。
+- アロー関数の構文では、 `arguments` や `this` は持ちません。
+- `Function()` コンストラクターはローカル変数にアクセスできません。グローバルスコープのみにアクセス可能です。
+- `Function()` コンストラクターでは実行時コンパイルが発生するため、それ以外の構文よりも多くの場合、処理が遅くなります。
+
+`function` 式では、関数名と関数が代入される変数には違いがあります。関数名は変更できませんが、関数が代入される変数は再代入できます。関数名は、関数が代入される変数とは異なる名前を付けることが可能です。両者は、互いに関連のありません。関数名は関数本体内でのみ使用できます。関数本体外で使用しようとするとエラーが発生します（または、同じ名前が別の場所で宣言されている場合は別の値が取得されます）。 例えば、
 
 ```js
-var multiply = function func_name(x, y) {
-  return x * y;
-};
+const y = function x() {};
+console.log(x); // ReferenceError: x is not defined
 ```
 
-### 相違点
+一方、関数が代入される変数は、そのスコープによってのみ制限されます。このスコープには、関数が宣言されたスコープを含むことが保証されています。
 
-これらはすべて、おおよそ同じ働きをしますが、いくつか微妙に異なる点があります。
+関数宣言は、関数名と同じ名前の変数も作成します。したがって、関数式で定義されたものとは異なり、関数宣言で定義された関数は、自身の本体内だけでなく、定義されたスコープ内でもその名前でアクセスできます。
 
-関数名と関数が代入された変数の間には違いがあります。関数名は変えることができませんが、関数が代入された変数は再代入することができます。関数名は関数本体の内部でのみ使用することができます。関数本体の外側でそれを使用しようとするとエラー (その関数名がそれより前に `var` 文によって宣言されていれば `undefined`) になります。例えば、
+`new Function` で定義された関数は、そのソースが動的にアセンブルされます。これはシリアライズ時に確認できます。例えば、`console.log(new Function().toString())` は次のような結果になります。
 
-```js
-var y = function x() {};
-alert(x); // throws an error
-```
+```js-nolint
+function anonymous(
+) {
 
-関数名は [`Function` の toString メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)によってシリアライズしたときにも現れます。
-
-一方、関数が代入された変数はそのスコープ内でのみ有効で、そのスコープは関数が宣言されたスコープを含んでいることが保証されています。
-
-4 つ目の例にあるように、関数名はその関数が代入される変数と違っていても構いません。互いの間に関連性はありません。関数宣言は同時にその関数名と同じ名前の変数を作成します。よって、関数式で定義されたものと違って、関数宣言で定義された関数は定義されたスコープ内でも、その名前によってアクセスできます。
-
-`new Function` によって定義された関数は関数名を持ちません。しかし、JavaScript エンジンの [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) では、その関数をシリアライズされた形式にすると "anonymous" という名前を持っているかのように表示されます。例えば、`alert(new Function())` はこのように出力されます。
-
-```js
-function anonymous() {}
-```
-
-この関数は実際には名前を持っていないので、`anonymous` は関数内部でアクセスできる変数ではありません。例えば、次の文はエラーになります。
-
-```js
-var foo = new Function("alert(anonymous);");
-foo();
-```
-
-関数式や `Function` コンストラクターで定義されたものとは違い、関数宣言で定義された関数は、関数自体が宣言される前に使用することができます。例えば、
-
-```js
-foo(); // FOO! とアラート表示
-function foo() {
-  alert("FOO!");
 }
 ```
 
-関数式で定義された関数は現在のスコープを継承します。つまり、関数がクロージャを形成します。一方、`Function` コンストラクターで定義された関数は (あらゆる関数が継承する) グローバルスコープ以外はどんなスコープも継承しません。
+これは関数をコンパイルするために実際に使用されるソースです。ただし、 `Function()` コンストラクターは `anonymous` という名前の関数を生成しますが、この名前は本体スコープには追加されません。本体は常にグローバル変数にしかアクセスできません。例えば、次のものはエラーになります。
 
 ```js
-/*
- * Declare and initialize a variable 'p' (global)
- * and a function 'myFunc' (to change the scope) inside which
- * declare a varible with same name 'p' (current) and
- * define three functions using three different ways:-
- *     1. function declaration
- *     2. function expression
- *     3. function constructor
- * each of which will log 'p'
- */
-var p = 5;
+new Function("alert(anonymous);")();
+```
+
+関数式または関数宣言によって定義された関数は、現在のスコープを継承します。つまり、その関数はクロージャを形成します。一方、 `Function` コンストラクターによって定義された関数は、グローバルスコープ（すべての関数が継承する）以外のスコープを継承しません。
+
+```js
+// p はグローバル変数
+globalThis.p = 5;
 function myFunc() {
-  var p = 9;
+  // p はローカル変数
+  const p = 9;
 
   function decl() {
     console.log(p);
   }
-  var expr = function () {
+  const expr = function () {
     console.log(p);
   };
-  var cons = new Function("\tconsole.log(p);");
+  const cons = new Function("\tconsole.log(p);");
 
   decl();
   expr();
@@ -354,80 +173,106 @@ function myFunc() {
 }
 myFunc();
 
-/*
- * Logs:-
- * 9  - for 'decl' by function declaration (current scope)
- * 9  - for 'expr' by function expression (current scope)
- * 5  - for 'cons' by Function constructor (global scope)
- */
+// Logs:
+// 9 （関数定義による 'decl' の場合（現在のスコープ））
+// 9 （関数式による 'expr' の場合（現在のスコープ））
+// 5 （コンストラクターによる 'cons' の場合（グローバルスコープ））
 ```
 
-関数式と関数宣言で定義された関数は一度しか解析されませんが、`Function` コンストラクターで定義された関数はそうではありません。つまり、`Function` コンストラクターに渡された関数本体を表す文字列が、評価されるたびに必ず解析されます。関数式は毎回クロージャを作成しますが、関数本体は再解析されないので、"`new Function(...)`" よりは関数式の方がまだ高速です。したがって `Function` コンストラクターはできる限り避けるべきでしょう。
+関数式や関数宣言で定義された関数は一度だけ構文解析されますが、 `Function` コンストラクターで定義された関数は、コンストラクターが呼び出されるたびに渡された文字列を毎回構文解析します。関数式はそれぞれクロージャを生成しますが、関数本体は再解析されないため、関数式は `new Function(...)` よりも高速です。したがって、可能な限り `Function` コンストラクターの使用は避けるべきです。
 
-ただし、`Function` コンストラクターの文字列を解析することで生成された関数内で入れ子にされている関数式や関数宣言は、繰り返し解析されないことに注意してください。例えば、
-
-```js
-var foo = new Function(
-  "var bar = 'FOO!';\nreturn(function() {\n\talert(bar);\n});",
-)();
-foo(); // 関数本体の文字列で "function() {\n\talert(bar);\n}" の部分は再解析されません
-```
-
-関数宣言はとても簡単に (しばしば意図せずに) 関数式に変化します。関数宣言は以下のようなときには関数宣言ではなくなります。
-
-- 式の一部になったとき
-- 関数またはスクリプト自体の「ソース要素 (source element)」でなくなったとき。「ソース要素」はスクリプトや関数本体の中で入れ子にされていない文のことです。
+関数宣言は、式コンテキスト内で現れた場合、意図せず関数式に変換されることがあります。
 
 ```js
-var x = 0; // ソース要素
-if (x === 0) {
-  // ソース要素
-  x = 10; // ソース要素ではない
-  function boo() {} // ソース要素ではない
-}
+// 関数宣言
 function foo() {
-  // ソース要素
-  var y = 20; // ソース要素
-  function bar() {} // ソース要素
-  while (y === 10) {
-    // ソース要素
-    function blah() {} // ソース要素ではない
-    y++; // ソース要素ではない
-  }
+  console.log("FOO!");
 }
+
+doSomething(
+  // 引数として渡された関数式
+  function foo() {
+    console.log("FOO!");
+  },
+);
 ```
 
-### 例
+一方、関数式は関数宣言に変換されることもあります。[式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)は `function` や `async function` キーワードで始めることはできません。これは [IIFE](/ja/docs/Glossary/IIFE)（即時実行関数式）を実装する際によく見られる間違いです。
+
+```js-nolint example-bad
+function () { // SyntaxError: Function statements require a function name
+  console.log("FOO!");
+}();
+
+function foo() {
+  console.log("FOO!");
+}(); // SyntaxError: Unexpected token ')'
+```
+
+代わりに、式文を別の方法で始まるようにし、 `function` キーワードで確実に関数式が始まるようにします。一般的な選択肢には、[グループ化](/ja/docs/Web/JavaScript/Reference/Operators/Grouping)や [`void`](/ja/docs/Web/JavaScript/Reference/Operators/void) の使用があります。
+
+```js-nolint example-good
+(function () {
+  console.log("FOO!");
+})();
+
+void function () {
+  console.log("FOO!");
+}();
+```
+
+### 関数の引数
+
+関数のそれぞれの引数は、ローカルスコープ内でアクセスできる単純な識別子です。
 
 ```js
-// 関数宣言
-function foo() {}
-
-// 関数式
-(function bar() {});
-
-// 関数式
-x = function hello() {};
-
-if (x) {
-  // 関数式
-  function world() {}
-}
-
-// 関数宣言
-function a() {
-  // 関数宣言
-  function b() {}
-  if (0) {
-    // 関数式
-    function c() {}
-  }
+function myFunc(a, b, c) {
+  // ここで a, b, c の値にアクセスできる
 }
 ```
 
-## ブロックレベル関数
+特別な引数の構文が 3 種類あります。
 
-[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では ES2015 から、ブロック内の関数はそのブロックに新しいスコープを形成します。 ES2015 より前では、ブロックレベル関数は strict モードでは禁止されています。
+- [デフォルト引数 (_Default parameters_)](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters) を使用すると、値が渡されなかった場合や `undefined` が渡された場合に、仮引数を既定値で初期化できます。
+- [残余引数 (_rest parameter_)](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters) を使用すると、不定数の引数を配列として表すことができます。
+- [構造分解 (_Destructuring_)](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) 配列から要素を、またはオブジェクトからプロパティを、個々の変数に展開することができます。
+
+```js
+function myFunc({ a, b }, c = 1, ...rest) {
+  // ここで a, b, c, rest の値にアクセスできる
+}
+```
+
+上記の単純でない引数構文のいずれかが使用されている場合、いくつかの影響があります。
+
+- 関数本体に `"use strict"` を適用することはできません。これにより、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params)が発生します。
+- 関数が[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でなくても、特定の厳格モード関数機能が適用されます。 [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトが名前付き引数との同期を停止したり、 [`arguments.callee`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee) にアクセスするとエラーが発生したり、重複する引数名が利用できなかったりします。
+
+### arguments オブジェクト
+
+[`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトを使用すると、関数内部で関数の実引数を参照することができます。
+
+- [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments)
+  - : 現在実行中の関数に渡された引数を格納する配列風オブジェクト。
+- [`arguments.callee`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+  - : 現在実行中の関数。
+- [`arguments.length`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/length):
+  - : 関数に渡された引数の数。
+
+### ゲッターおよびセッター関数
+
+標準の組み込みオブジェクトや ユーザー定義オブジェクトには、追加のプロパティに対応しているものなら、いずれにもアクセサープロパティを定義できます。[オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)や[クラス](/ja/docs/Web/JavaScript/Reference/Classes)内で、特別な構文を使用してアクセサープロパティのゲッターとセッターを定義することができます。
+
+- [get](/ja/docs/Web/JavaScript/Reference/Functions/get)
+  - : オブジェクトのプロパティを、そのプロパティが検索されたときに呼び出される関数に束縛します。
+- [set](/ja/docs/Web/JavaScript/Reference/Functions/set)
+  - : あるオブジェクトのプロパティを、そのプロパティに代入しようとしたときに呼び出される関数に結びつけます。
+
+なお、これらの構文はオブジェクトのメソッドではなく、プロパティを生成します。ゲッター関数やセッター関数自体は、{{jsxref("Object.getOwnPropertyDescriptor()")}} などのリフレクション API を使用してのみアクセスできます。
+
+### ブロックレベル関数
+
+[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、ブロック内の関数はそのブロックに新しいスコープを形成します。 ES2015 より前では、ブロックレベル関数は厳格モードでは禁止されています。
 
 ```js
 "use strict";
@@ -444,72 +289,72 @@ function f() {
 
 f() === 1; // true
 
-// strict モード以外では f() === 2
+// 厳格モード以外では f() === 2
 ```
 
-### strict コード以外におけるブロックレベル関数
+### 厳格モードのコード以外におけるブロックレベル関数
 
-一言で言えば、使わないでください。
+一言で言えば、**使わないでください**。
 
-strict コード以外では、ブロック内の関数宣言は奇妙な動作をします。次の例を見てください。
+厳格モードのコード以外では、ブロック内の関数宣言は奇妙な動作をします。次の例を見てください。
 
 ```js
 if (shouldDefineZero) {
   function zero() {
     // 危険: 互換性リスク
-    console.log("This is zero.");
+    console.log("これはゼロです。");
   }
 }
 ```
 
-ES2015 では `shouldDefineZero` が false の場合、このブロックが実行されることはないので、`zero` は決して定義されないとされています。しかし、これは標準において新しいパーツです。歴史的には、このことは仕様とならないまま残されていました。いくつかのブラウザーでは、ブロックが実行されてもされなくても、`zero` を定義したでしょう。
-
-[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、ES2015 に対応するブラウザーはすべて、これを同じように扱います。 `zero` は `shouldDefineZero` が true の場合のみ定義され、かつ `if` ブロックのスコープに限られます。
+厳格モードにおけるこの意味づけは明確に指定されています。 `zero` は常に `if` ブロックのスコープ内でのみ存在します。 `shouldDefineZero` が false の場合、ブロックは決して実行されないため、 `zero` は定義すべきでは決してありません。しかし、過去にはこれは未指定のままにされていたため、厳格モード以外ではブラウザーによって実装が異なっていました。より詳細な情報については、[`function`宣言](/ja/docs/Web/JavaScript/Reference/Statements/function#block-level_function_declaration)のリファレンスを参照してください。
 
 条件付きで関数を定義するより安全な方法は、変数に関数式を代入することです。
 
 ```js
+// var を使用すると、グローバル変数として利用可能になり、
+// 最上位の関数宣言に近い動作になる
 var zero;
 if (shouldDefineZero) {
   zero = function () {
-    console.log("This is zero.");
+    console.log("これはゼロです。");
   };
 }
 ```
 
 ## 例
 
-### 整形された数値を返す
+### 書式化された数値を返す
 
-次の関数は、数値の先頭にゼロを足して固定長にした形で表される文字列を返します。
+次の関数は、数値を先頭にゼロを付けて書式化した文字列で返します。
 
 ```js
 // この関数は先頭にゼロを足して固定長にした文字列を返す
 function padZeros(num, totalLen) {
-  var numStr = num.toString(); // 戻り値を文字列に初期化する
-  var numZeros = totalLen - numStr.length; // ゼロの数を計算する
-  for (var i = 1; i <= numZeros; i++) {
-    numStr = "0" + numStr;
+  let numStr = num.toString(); // 返値を文字列として初期化
+  const numZeros = totalLen - numStr.length; // ゼロの数を計算
+  for (let i = 1; i <= numZeros; i++) {
+    numStr = `0${numStr}`;
   }
   return numStr;
 }
 ```
 
-次の文で padZeros 関数を呼び出します。
+次の文で `padZeros` 関数を呼び出します。
 
 ```js
-var result;
+let result;
 result = padZeros(42, 4); // "0042" を返す
 result = padZeros(42, 2); // "42" を返す
 result = padZeros(5, 4); // "0005" を返す
 ```
 
-### 関数が存在するかどうか確認する
+### 関数が存在するかどうか確認
 
-`typeof` 演算子を使うと関数が存在するかどうかを確かめることができます。次の例では、`window` オブジェクトが `noFunc` という関数のプロパティを持つかどうかを確かめるためのテストが行われます。もし持っていたら、それが使われます。そうでなければ、他の行動が取られます。
+[`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) 演算子を使うと、関数が存在するかどうかを確かめることができます。次の例では、`window` オブジェクトが `noFunc` という関数のプロパティを持つかどうかを確かめるためのテストが行われます。もし持っていたら、それが使われます。そうでなければ、他の行動が取られます。
 
 ```js
-if ("function" === typeof window.noFunc) {
+if (typeof window.noFunc === "function") {
   // noFunc() を使う
 } else {
   // 何か他のことをする
@@ -528,16 +373,8 @@ if ("function" === typeof window.noFunc) {
 
 ## 関連情報
 
-- {{jsxref("Statements/function", "function 文")}}
-- {{jsxref("Operators/function", "function 式")}}
-- {{jsxref("Statements/function*", "function* 文")}}
-- {{jsxref("Operators/function*", "function* 式")}}
+- [関数](/ja/docs/Web/JavaScript/Guide/Functions)ガイド
+- [クラス](/ja/docs/Web/JavaScript/Reference/Classes)
+- {{jsxref("Statements/function", "function")}}
+- [`function` 式](/ja/docs/Web/JavaScript/Reference/Operators/function)
 - {{jsxref("Function")}}
-- {{jsxref("GeneratorFunction", "ジェネレーター関数")}}
-- {{jsxref("Functions/Arrow_functions", "アロー関数")}}
-- {{jsxref("Functions/Default_parameters", "デフォルト引数")}}
-- {{jsxref("Functions/rest_parameters", "残余引数")}}
-- {{jsxref("Functions/arguments", "arguments オブジェクト")}}
-- {{jsxref("Functions/get", "ゲッター")}}
-- {{jsxref("Functions/set", "セッター")}}
-- {{jsxref("Functions/Method_definitions", "メソッド定義")}}

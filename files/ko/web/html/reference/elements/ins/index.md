@@ -62,13 +62,13 @@ p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -84,7 +84,7 @@ p {
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>
@@ -102,12 +102,12 @@ p {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `cite`
   - : 회의록, 이슈 추적 시스템의 티켓 번호 등 변경점을 설명하는 리소스의 {{glossary("URI")}}.
 - `datetime`
-  - : 변경이 발생한 일시. 유효한 날짜 문자열이어야 하며, 시간을 지정할 경우 역시 유효해야 합니다. 유효하지 않은 값을 지정할 경우 일시를 지정하지 않은 것과 같습니다. 유효한 문자열의 종류는 [HTML에서 사용하는 날짜와 시간 형식](/ko/docs/Web/HTML/Date_and_time_formats) 문서에서 확인할 수 있습니다.
+  - : 변경이 발생한 일시. 유효한 날짜 문자열이어야 하며, 시간을 지정할 경우 역시 유효해야 합니다. 유효하지 않은 값을 지정할 경우 일시를 지정하지 않은 것과 같습니다. 유효한 문자열의 종류는 [HTML에서 사용하는 날짜와 시간 형식](/ko/docs/Web/HTML/Guides/Date_and_time_formats) 문서에서 확인할 수 있습니다.
 
 ## 예제
 

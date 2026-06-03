@@ -13,7 +13,7 @@ l10n:
 
 要素のサイズの変化を検出する方法 (やそのほかの手法) はたくさんありますが、これまでの実装はハック的で脆弱なことがよくありました。
 
-例えば、 [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries) / {{domxref("window.matchMedia")}} はビューポートのサイズの変化を検出したときに特定の箇所に対してレイアウト更新を行う場合に最適ですが、これが特定の要素のサイズの変更を検出したい場合はどうすればよいでしょうか？
+例えば、 [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries) / {{domxref("window.matchMedia")}} はビューポートのサイズの変化を検出したときに特定の箇所に対してレイアウト更新を行う場合に最適ですが、これが特定の要素のサイズの変更を検出したい場合はどうすればよいでしょうか？
 
 この問題を解決するために、サイズの変化を検出させたい要素を示唆する適切なイベント ( [Window: resize イベント](/ja/docs/Web/API/Window/resize_event) など) で監視し、 {{domxref("Element.getBoundingClientRect")}} や {{domxref("Window.getComputedStyle")}} などを使用して要素の新しいサイズやその他の特徴を探し出す方法が考えられます。
 

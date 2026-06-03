@@ -18,9 +18,7 @@ arr.reduceRight(callback[, initialValue])
 ### Parâmetros
 
 - `callback`
-
   - : Função para executar em cada valor do array, recebendo quatro argumentos:
-
     - `previousValue`
       - : O valor anteriormente retornado na ultima invocação do callback, ou o `initialValue`, se este for o recebido. (Ver abaixo.)
     - `currentValue`

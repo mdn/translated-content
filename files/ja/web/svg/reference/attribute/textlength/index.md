@@ -2,7 +2,7 @@
 title: textLength
 slug: Web/SVG/Reference/Attribute/textLength
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
 
 **`textLength`** 属性は、 SVGの {{SVGElement("text")}} 要素と {{SVGElement("tspan")}} 要素で利用でき、テキストが描かれる空間の幅を指定することができます。 {{glossary("user agent", "ユーザーエージェント")}}は、 {{SVGAttr("lengthAdjust")}} 属性で指定された方法を使用して、テキストがその長さよりも広がらないようにします。既定では、文字間の間隔のみが調整されますが、 `lengthAdjust` を変更すると、文字サイズも調整できます。
@@ -13,7 +13,6 @@ l10n:
 
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## 例
@@ -108,7 +107,7 @@ svg {
 </svg>
 ```
 
-最初の段階では、テキストが含まれている長方形を作成し、その輪郭を描画するために、 {{SVGElement("rect")}} 要素が使用されています。次に、 {{SVGElement("text")}} を使用してテキスト要素自身を、 {{SVGAttr("id")}} を `"hello"` として作成します。
+最初の段階では、テキストが含まれている矩形を作成し、その輪郭を描画するために、 {{SVGElement("rect")}} 要素が使用されています。次に、 {{SVGElement("text")}} を使用してテキスト要素自身を、 {{SVGAttr("id")}} を `"hello"` として作成します。
 
 ### HTML
 
@@ -135,17 +134,13 @@ const baseLength = Math.floor(textElement.textLength.baseVal.value);
 
 widthSlider.value = baseLength;
 
-widthSlider.addEventListener(
-  "input",
-  (event) => {
-    textElement.textLength.baseVal.newValueSpecifiedUnits(
-      SVGLength.SVG_LENGTHTYPE_PX,
-      widthSlider.valueAsNumber,
-    );
-    widthDisplay.innerText = widthSlider.value;
-  },
-  false,
-);
+widthSlider.addEventListener("input", (event) => {
+  textElement.textLength.baseVal.newValueSpecifiedUnits(
+    SVGLength.SVG_LENGTHTYPE_PX,
+    widthSlider.valueAsNumber,
+  );
+  widthDisplay.innerText = widthSlider.value;
+});
 
 widthSlider.dispatchEvent(new Event("input"));
 ```

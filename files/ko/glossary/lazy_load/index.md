@@ -13,4 +13,4 @@ l10n:
 
 ## 같이 보기
 
-- [Lazy loading](/ko/docs/Web/Performance/Lazy_loading)
+- [Lazy loading](/ko/docs/Web/Performance/Guides/Lazy_loading)

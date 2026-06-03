@@ -1,11 +1,9 @@
 ---
-title: title
+title: HTML title 全域屬性
 slug: Web/HTML/Reference/Global_attributes/title
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 7885271e36e9d2744296c01f400653f63caa6f75
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 [全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes) **`title`** 包含表示與其所屬元素相關的建議資訊的文字。
 

@@ -24,7 +24,8 @@ new BigUint64Array(buffer, byteOffset)
 new BigUint64Array(buffer, byteOffset, length)
 ```
 
-> **참고:** `BigUint64Array()`는 오직
+> [!NOTE]
+> `BigUint64Array()`는 오직
 > [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다.
 > `new` 없이 호출하면 {{jsxref("TypeError")}} 예외가 발생합니다.
 

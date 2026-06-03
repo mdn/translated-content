@@ -23,7 +23,8 @@ TypeError(message, fileName)
 TypeError(message, fileName, lineNumber)
 ```
 
-> **참고:** `TypeError()` [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)를 사용하거나 혹은 사용하지 않고 호출이 사용합니다. 두 방법 모두 새로운 `TypeError`를 생성합니다.
+> [!NOTE]
+> `TypeError()` [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)를 사용하거나 혹은 사용하지 않고 호출이 사용합니다. 두 방법 모두 새로운 `TypeError`를 생성합니다.
 
 ### 매개변수
 

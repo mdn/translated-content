@@ -36,7 +36,6 @@ h2 {
 부모인 {{domxref("StyleSheet")}}를 상속합니다.
 
 - {{domxref("CSSStyleSheet.cssRules")}} {{ReadOnlyInline}}
-
   - : 스타일 시트를 구성하는 최신의 {{domxref("CSSRule")}} 객체 목록을 유지하는 실시간 {{domxref("CSSRuleList")}}를 반환합니다.
 
     > [!NOTE]
@@ -70,7 +69,6 @@ h2 {
 이 메서드들은 마이크로소프트에 의해 소개된 레거시 메서드입니다. 이 메서드들은 이미 운영중인 사이트의 호환성을 위해 유지됩니다.
 
 - {{domxref("CSSStyleSheet.addRule", "addRule()")}} {{Deprecated_Inline}}
-
   - : 적용될 선택자와 일치하는 요소들에 적용할 스타일을 고려하여 새로운 규칙을 스타일 시트에 추가합니다.
 
     이 메서드는 모든 규칙의 텍스트 표현을 하나의 문자열로 받는 {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}과는 다릅니다.

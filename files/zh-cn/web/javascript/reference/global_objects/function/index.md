@@ -3,8 +3,6 @@ title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
 ---
 
-{{JSRef}}
-
 **`Function`** 对象提供了用于处理[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)的方法。在 JavaScript 中，每个函数实际上都是一个 `Function` 对象。
 
 ## 构造函数

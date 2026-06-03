@@ -3,8 +3,6 @@ title: contenteditable
 slug: Web/HTML/Reference/Global_attributes/contenteditable
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) **`contenteditable`** 是一个枚举属性，表示元素是否可被用户编辑。如果可以，浏览器会修改元素的组件以允许编辑。
 
 {{InteractiveExample("HTML Demo: contenteditable", "tabbed-shorter")}}

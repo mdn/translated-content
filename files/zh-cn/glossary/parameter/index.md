@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2c4aa2968a162a8742f7bc25798803eaea292304
 ---
 
-{{GlossarySidebar}}
-
 形式参数（Parameter）是传递给函数{{Glossary("function", "函数")}}的一个命名变量。形式参数变量用于将{{Glossary("argument","实际参数")}}导入函数。
 
 例如：

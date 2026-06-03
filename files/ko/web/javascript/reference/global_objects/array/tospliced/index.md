@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.toSpliced()
+short-title: toSpliced()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
 l10n:
   sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
@@ -22,14 +23,12 @@ toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
 ### 매개변수
 
 - `start`
-
   - : 배열은 0부터 시작하는 인덱스로 변경되며, [정수로 변환됩니다.](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
     - 음수 인덱스는 배열의 끝에서부터 카운트됩니다. 만약 `start < 0` 인 경우, `start + array.length`가 적용됩니다.
     - `start < -array.length`이거나 `start`가 생략된 경우, `0`이 적용됩니다.
     - `start >= array.length`인 경우 요소는 삭제되지 않지만, 메서드는 요소를 추가하는 추가 함수처럼 작동합니다.
 
 - `deleteCount` {{optional_inline}}
-
   - : `start`에서부터 제거할 배열의 요소의 개수를 나타내는 수입니다.
 
     만약 `deleteCount`가 생략되거나, `deleteCount`가 `start` 인덱스 뒤의 요소의 개수보다 크거나 같으면 배열의 시작부터 끝까지 모든 요소가 삭제됩니다. 그러나 `itemN` 매개변수를 전달하려면 `Infinity`를 `deleteCount`로 전달하여 `start` 인덱스 뒤의 모든 요소를 삭제해야 합니다. 왜냐하면 `undefined`는 0으로 [변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion)되기 때문입니다.
@@ -37,7 +36,6 @@ toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
     `deleteCount`가 `0`이거나 음수라면, 요소가 제거되지 않습니다. 이 경우 새 요소를 하나 이상 지정해야 합니다. (아래 참조).
 
 - `item1`, …, `itemN` {{optional_inline}}
-
   - : `start` 부터 시작하여 배열에 추가할 요소입니다.
 
     만약 명확한 요소를 지정하지 않으면, `toSpliced()`는 배열에서 요소만 제거합니다.

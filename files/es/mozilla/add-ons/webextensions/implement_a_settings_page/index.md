@@ -183,5 +183,4 @@ En Firefox se puede accededer a la página de configuración visitando : complem
 - Documentación de referencia de la API [storage.](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage)
 - Abrir la página de configuración directamente desde el complemento utilizando la API [`runtime.openOptionsPage().`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage)
 - Página de ejemplo de configuraciones:
-
   - [color-favorito.](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)

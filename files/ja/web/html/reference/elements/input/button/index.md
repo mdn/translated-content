@@ -9,7 +9,7 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`button`** 型は、プッシュボタンとして描画され、イベントハンドラー関数 (ふつうは {{domxref("Element/click_event", "click")}} イベント) を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <input class="styled" type="button" value="Add to favorites" />
@@ -48,7 +48,8 @@ l10n:
 }
 ```
 
-> **メモ:** `<input>` 要素の `button` 型は完全に妥当な HTML ですが、より新しい {{HTMLElement("button")}} 要素が、ボタンの作成にはより好まれるようになりました。 {{HTMLElement("button")}} のラベル文字列は開始タグと終了タグの間に挿入され、ラベルに画像を含む HTML を含めることができます。
+> [!NOTE]
+> `<input>` 要素の `button` 型は完全に妥当な HTML ですが、より新しい {{HTMLElement("button")}} 要素が、ボタンの作成にはより好まれるようになりました。 {{HTMLElement("button")}} のラベル文字列は開始タグと終了タグの間に挿入され、ラベルに画像を含む HTML を含めることができます。
 
 ## 値
 

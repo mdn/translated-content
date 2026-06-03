@@ -1,169 +1,178 @@
 ---
-title: Document.createTreeWalker()
+title: "Document : méthode createTreeWalker()"
+short-title: createTreeWalker()
 slug: Web/API/Document/createTreeWalker
+l10n:
+  sourceCommit: 30ae43a0c98ab92f750fd571d7a3a8ee8b15b4c0
 ---
 
-{{ApiRef("Document")}}
+{{APIRef("Document")}}
 
-La méthode de création **`Document.createTreeWalker()`** renvoie un nouvel objet {{domxref("TreeWalker")}}.
+La méthode **`createTreeWalker()`** de l'interface {{DOMxRef("Document")}} crée et retourne un nouvel objet {{DOMxRef("TreeWalker")}}.
 
 ## Syntaxe
 
-```js
-treeWalker = document.createTreeWalker(
-  root,
-  whatToShow,
-  filter,
-  entityReferenceExpansion,
-);
+```js-nolint
+createTreeWalker(root)
+createTreeWalker(root, whatToShow)
+createTreeWalker(root, whatToShow, filter)
 ```
 
 ### Paramètres
 
-- _root_
-  - : est le {{domxref("Node")}} (_noeud_) racine du {{domxref("TreeWalker")}} à traverser. Généralement, ce sera un élément appartenant au document.
-- _whatToShow {{optional_inline}}_
+- `root`
+  - : Un nœud ({{DOMxRef("Node")}}) racine de l'objet `TreeWalker`, qui est la valeur initiale de {{DOMxRef("TreeWalker.currentNode")}}.
 
-  - : est un `unsigned long` (_long non signé_) facultatif représentant un masque de bits créé par combinaison des propriétés de constante de [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). C'est un moyen pratique de filtrage pour certains types de nœuds. Par défaut `0xFFFFFFFF` représentant la constante `SHOW_ALL`.
+- `whatToShow` {{Optional_Inline}}
+  - : Un `unsigned long` représentant un masque de bits créé par combinaison des propriétés de constante de [`NodeFilter` <sup>(angl.)</sup>](https://dom.spec.whatwg.org/#interface-nodefilter). C'est un moyen pratique de filtrer pour certains types de nœuds. Il est par défaut `0xFFFFFFFF`, représentant la constante `NodeFilter.SHOW_ALL`.
 
-    <table class="standard-table">
-      <tbody>
-        <tr>
-          <td class="header">Constante</td>
-          <td class="header">Valeur numérique</td>
-          <td class="header">Description</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ALL</code></td>
-          <td>
-            <code>-1</code> (c'est la valeur numérique maximale du
-            <code>unsigned long</code> (<em>non signé long</em>))
-          </td>
-          <td>Affiche tous les noeuds.</td>
-        </tr>
-        <tr>
-          <td>
-            <code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}
-          </td>
-          <td><code>2</code></td>
-          <td>
-            Affiche l'attribut {{domxref("Attr")}} des noeuds. Cela n'a de sens
-            que lors de la création d'un {{domxref("TreeWalker")}} avec un
-            noeud {{domxref("Attr")}} comme racine ; dans ce cas, cela signifie
-            que le nœud d'attribut apparaîtra dans la première position de
-            l'itération ou de la traversée. Comme les attributs ne sont jamais des
-            enfants d'autres nœuds, ils n'apparaissent pas lors de la traversée de
-            l'arbre du document.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}
-          </td>
-          <td><code>8</code></td>
-          <td>Affiche les noeuds {{domxref("CDATASection")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_COMMENT</code></td>
-          <td><code>128</code></td>
-          <td>Affiche les noeuds {{domxref("Comment")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_DOCUMENT</code></td>
-          <td><code>256</code></td>
-          <td>Affiche les noeuds {{domxref("Document")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_DOCUMENT_FRAGMENT</code></td>
-          <td><code>1024</code></td>
-          <td>Affiche les noeuds {{domxref("DocumentFragment")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_DOCUMENT_TYPE</code></td>
-          <td><code>512</code></td>
-          <td>Affiche les noeuds {{domxref("DocumentType")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ELEMENT</code></td>
-          <td><code>1</code></td>
-          <td>Affiche les noeuds {{domxref("Element")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
-          <td><code>32</code></td>
-          <td>
-            Affiche les noeuds {{domxref("Entity")}}. Cela n'a de sens que
-            lors de la création d'un {{domxref("TreeWalker")}} avec un noeud
-            {{ domxref("Entity") }} comme racine ; dans ce cas, il signifie
-            que le noeud d'entité {{domxref("Entity") }} apparaîtra à la
-            première position de la traversée. Étant donné que les entités ne font
-            pas partie de l'arborescence du document, elles n'apparaissent pas lors
-            de la traversée de l'arborescence du document.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>NodeFilter.SHOW_ENTITY_REFERENCE</code>
-            {{deprecated_inline}}
-          </td>
-          <td><code>16</code></td>
-          <td>Affiche les noeuds {{domxref("EntityReference")}}.</td>
-        </tr>
-        <tr>
-          <td>
-            <code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}
-          </td>
-          <td><code>2048</code></td>
-          <td>
-            Affiche les noeuds {{domxref("Notation")}}. Cela n'a de sens
-            que lors de la création d'un {{domxref("TreeWalker")}} avec un
-            noeud {{domxref("Notation")}} comme racine ; dans ce cas, il
-            signifie que le noeud {{domxref("Notation")}} apparaîtra à la
-            première position de la traversée. Étant donné que les entités ne font
-            pas partie de l'arborescence du document, elles n'apparaissent pas lors
-            de la traversée de l'arborescence du document.
-          </td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
-          <td><code>64</code></td>
-          <td>
-            Affiche les noeuds {{domxref("ProcessingInstruction")}}.
-          </td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_TEXT</code></td>
-          <td><code>4</code></td>
-          <td>Affiche les noeuds {{domxref("Text")}}.</td>
-        </tr>
-      </tbody>
-    </table>
+    | Constante                                                | Valeur numérique | Description                                             |
+    | -------------------------------------------------------- | ---------------- | ------------------------------------------------------- |
+    | `NodeFilter.SHOW_ALL`                                    | ` 0xFFFFFFFF`    | Affiche tous les nœuds.                                 |
+    | `NodeFilter.SHOW_ATTRIBUTE`                              | ` 0x2`           | Affiche les nœuds {{DOMxRef("Attr")}}.                  |
+    | `NodeFilter.SHOW_CDATA_SECTION`                          | ` 0x8`           | Affiche les nœuds {{DOMxRef("CDATASection")}}.          |
+    | `NodeFilter.SHOW_COMMENT`                                | ` 0x80`          | Affiche les nœuds {{DOMxRef("Comment")}}.               |
+    | `NodeFilter.SHOW_DOCUMENT`                               | ` 0x100`         | Affiche les nœuds {{DOMxRef("Document")}}.              |
+    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | ` 0x400`         | Affiche les nœuds {{DOMxRef("DocumentFragment")}}.      |
+    | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | ` 0x200`         | Affiche les nœuds {{DOMxRef("DocumentType")}}.          |
+    | `NodeFilter.SHOW_ELEMENT`                                | ` 0x1`           | Affiche les nœuds {{DOMxRef("Element")}}.               |
+    | `NodeFilter.SHOW_ENTITY` {{Deprecated_Inline}}           | `0x20`           | Héritage, qui n'est plus en vigueur.                    |
+    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{Deprecated_Inline}} | ` 0x10`          | Héritage, qui n'est plus en vigueur.                    |
+    | `NodeFilter.SHOW_NOTATION` {{Deprecated_Inline}}         | `0x800`          | Héritage, qui n'est plus en vigueur.                    |
+    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | ` 0x40`          | Affiche les nœuds {{DOMxRef("ProcessingInstruction")}}. |
+    | `NodeFilter.SHOW_TEXT`                                   | ` 0x4`           | Affiche les nœuds {{DOMxRef("Text")}}.                  |
 
-- `filter` {{optional_inline}}
-  - : est un {{domxref("NodeFilter")}} (_filtre de noeud_) facultatif, c'est à dire un objet avec une méthode `acceptNode` appelé par {{domxref("TreeWalker")}} pour déterminer s'il doit accepter ou non un nœud qui a passé le test `whatToShow`.
-- `entityReferenceExpansion` {{optional_inline}} {{deprecated_inline}}
-  - : est un {{domxref("Boolean")}} (_booléen_) indiquant si, lors de la suppression d'une {{domxref("EntityReference")}}, son sous-arbre doit être supprimé en même temps.
+    > [!NOTE]
+    > La constante `NodeFilter.SHOW_ATTRIBUTE` n'est efficace que lorsque la racine est un nœud d'attribut. Étant donné que le parent de tout nœud `Attr` est toujours `null`, {{DOMxRef("TreeWalker.nextNode()")}} et {{DOMxRef("TreeWalker.previousNode()")}} ne retournent jamais un nœud `Attr`. Pour parcourir les nœuds `Attr`, utilisez plutôt {{DOMxRef("Element.attributes")}}.
 
-## Exemple
+- `filter` {{Optional_Inline}}
+  - : Une fonction de rappel ou un objet avec une méthode `acceptNode()`, qui retourne `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, ou `NodeFilter.FILTER_SKIP`. La fonction ou la méthode sera appelée pour chaque nœud de la sous-arborescence basée sur `root` qui est accepté comme incluse par l'indicateur `whatToShow` pour déterminer s'il faut ou non l'inclure dans la liste des nœuds itérables&nbsp;:
+    - Si la valeur retournée est `NodeFilter.FILTER_ACCEPT`, ce nœud est inclus.
+    - Si la valeur retournée est `NodeFilter.FILTER_REJECT`, aucun nœud de la sous-arborescence basée sur ce nœud n'est inclus.
+    - Si la valeur retournée est `NodeFilter.FILTER_SKIP`, ce nœud n'est pas inclus.
 
-L'exemple suivant passe à travers tous les noeuds du "body" (_corps du document_), réduit l'ensemble des noeuds aux éléments, passe simplement à travers chaque noeud acceptable (à la place, il pourrait réduire l'ensemble dans la méthode `acceptNode()`), puis utilise l'itérateur de traversée de l'arbre créé pour avancer à travers les nœuds (maintenant tous les éléments) et les écrire dans un tableau.
+### Valeur de retour
+
+Un nouvel objet {{DOMxRef("TreeWalker")}}.
+
+## Exemples
+
+### Utiliser `whatToShow`
+
+Cet exemple utilise `whatToShow` pour transformer les contenus textuels en majuscules. Notez que les nœuds textuels des descendants de l'élément `#root` sont également parcourus malgré le fait qu'ils ne soient pas des nœuds enfants de l'élément `#root`.
+
+#### HTML
+
+```html
+<div id="root">
+  Ceci est un nœud textuel.
+  <span>Et ceci est un élément <code>span</code>.</span>
+</div>
+```
+
+#### CSS
+
+```css
+span {
+  background-color: aqua;
+}
+```
+
+#### JavaScript
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
-  {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
-  },
-  false,
+const treeWalker = document.createTreeWalker(
+  document.querySelector("#root"),
+  NodeFilter.SHOW_TEXT,
 );
 
-var nodeList = [];
-
-while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
+while (treeWalker.nextNode()) {
+  const node = treeWalker.currentNode;
+  node.data = node.data.toUpperCase();
+}
 ```
+
+#### Résultat
+
+{{EmbedLiveSample("Utiliser `whatToShow`", "100%", 100)}}
+
+### Utiliser `filter`
+
+Cet exemple utilise `filter` pour échapper les contenus textuels. Pour tout nœud textuel, son contenu sera échappé en utilisant {{JSxRef("encodeURI()")}} s'il est un descendant d'un élément `.escape` mais pas d'un élément `.no-escape`.
+
+#### HTML
+
+```html
+<div>
+  <div>
+    Ceci n'est pas échappé. <span class="escape">Mais ceci est échappé.</span>
+  </div>
+  <div class="escape">Ceci est échappé.</div>
+  <div class="no-escape">Ceci n'est pas échappé.</div>
+</div>
+<hr />
+<div class="escape">
+  <div>
+    Ceci est échappé.
+    <span class="no-escape">Mais ceci n'est pas échappé.</span>
+  </div>
+  <div class="no-escape">Ceci n'est pas échappé.</div>
+</div>
+<hr />
+<div class="no-escape">
+  <div>Ceci n'est pas échappé.</div>
+  <div class="escape">Ceci n'est pas échappé.</div>
+</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  margin: 0.25em 0;
+  padding: 0.25em;
+}
+span {
+  display: inline-block;
+}
+```
+
+```css
+.escape {
+  border: dashed;
+}
+.no-escape {
+  border: solid;
+}
+```
+
+#### JavaScript
+
+```js
+const treeWalker = document.createTreeWalker(
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  (node) =>
+    node.classList.contains("no-escape")
+      ? NodeFilter.FILTER_REJECT
+      : node.closest(".escape")
+        ? NodeFilter.FILTER_ACCEPT
+        : NodeFilter.FILTER_SKIP,
+);
+
+while (treeWalker.nextNode()) {
+  for (const node of treeWalker.currentNode.childNodes) {
+    if (node.nodeType === Node.TEXT_NODE && /\S/.test(node.data)) {
+      // Exclure les nœuds textuels ne contenant que des espaces
+      node.data = encodeURI(node.data.replace(/\s+/g, " "));
+    }
+  }
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Utiliser `filter`", "100%", 400)}}
 
 ## Spécifications
 
@@ -175,4 +184,4 @@ while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 
 ## Voir aussi
 
-- L'interface de l'objet qu'il crée : {{domxref("TreeWalker")}}.
+- L'interface associée&nbsp;: {{DOMxRef("TreeWalker")}}

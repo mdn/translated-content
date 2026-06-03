@@ -34,13 +34,13 @@ i {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >, 뚜렷한 콘텐츠.
       </td>
@@ -48,7 +48,7 @@ i {
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -60,7 +60,7 @@ i {
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>
@@ -78,7 +78,7 @@ i {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 
@@ -86,7 +86,6 @@ i {
 - 초기 HTML 명세의 `<i>` 요소는, {{htmlelement("b")}} 요소가 굵은 글씨 적용에 그쳤던 것과 마찬가지로, 글자를 기울이기만 하는 단순한 시각적 요소였습니다. 그러나 지금은 글자 외형에 그치지 않고 특정한 의미를 지니는 요소이므로 시각적인 강조에 그치지 않습니다. 보통, 브라우저가 여전히 `<i>` 요소의 글자를 기울이겠지만, 명세에 따르면 꼭 그렇게 표시할 필요는 없습니다.
 - `<i>` 요소가 글자를 기울이기는 하지만, 기울임꼴을 적용하기 위한 용도로 사용해서는 안됩니다. CSS {{cssxref("font-style")}} 속성을 사용하세요.
 - 강조하려는 텍스트가 다른 요소에 더 적합하지 않은지 고려하세요.
-
   - {{htmlelement("em")}} 요소는 강세를 나타냅니다.
   - {{htmlelement("strong")}} 요소는 보다 강한 강조를 나타냅니다.
   - {{htmlelement("mark")}} 요소는 관련성을 나타냅니다.

@@ -16,7 +16,7 @@ En este artículo, repasaremos qué son los hipervínculos y por qué son import
         Debes saber
         <a href="/es/Learn/How_the_Internet_works">como funciona internet</a>.
         Y estar familiarizado con<a
-          href="/es/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
         >
           la diferencia entre una página web, un sitio web, un servidor web y un
           buscador</a

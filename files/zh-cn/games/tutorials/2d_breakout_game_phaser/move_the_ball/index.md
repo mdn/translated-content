@@ -3,9 +3,7 @@ title: Move the ball
 slug: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
 ---
 
-{{GamesSidebar}}
-
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Workflows/2D_Breakout_game_Phaser/Physics")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Tutorials/2D_breakout_game_Phaser/Physics")}}
 
 这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 4 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson04.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson04.html)完成本课后，你可以找到源代码。
 
@@ -36,4 +34,4 @@ function update() {
 
 无论如何，在我们做所有的事情之前，我们将首先介绍 Phaser 的[物理](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics)引擎，并做一些设置工作。
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Workflows/2D_Breakout_game_Phaser/Physics")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Tutorials/2D_breakout_game_Phaser/Physics")}}

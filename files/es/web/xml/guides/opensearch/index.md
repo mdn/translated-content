@@ -58,14 +58,12 @@ El fichero XML que describe un motor de búsqueda es bastante sencillo, tal y co
 <!---->
 
 - **Url**
-
   - : Describe la(s) URL(s) a emplear para la búsqueda. El atributo `method` indica si se debe emplear una petición `GET` o `POST` para obtener los resultados.
 
     > [!NOTE]
     > Internet Explorer 7 no admite peticiones `POST`.
 
     Firefox admite dos tipos de URL en el campo `type`:
-
     - `type="text/html"` se usa al especificar la URL a donde se va a enviar la petición de búsqueda.
     - `type="application/x-suggestions+json"` se usa al especificar la URL de donde se van a obtener las sugerencias de búsqueda.
 
@@ -76,14 +74,12 @@ El fichero XML que describe un motor de búsqueda es bastante sencillo, tal y co
 <!---->
 
 - **Param**
-
   - : Los parámetros que es necesario suministrar junto con la consulta, en la forma de pares clave/valor. En los valores es posible emplear las plantillas dinámicas presentadas anteriormente; por ejemplo, se puede usar `{searchTerms}` para insertar los términos de búsqueda que el usuario introdujo en la barra de búsquedas.
 
     > [!NOTE]
     > Internet Explorer 7 no admite este elemento.
 
 - **SearchForm**
-
   - : La URL donde se encuentra la página de búsquedas del sitio al que hace referencia el complemento que estamos desarrollando. Esto permite al usuario acceder directamente al sitio web en cuestión.
 
     > [!NOTE]

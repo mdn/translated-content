@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Instance
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.Instance`** 개체는 [WebAssembly.Module](/ko/docs/WebAssembly/JavaScript_interface/Module)의 상태 저장되고 실행 가능한 인스턴스입니다. `Instance` 객체에는 JavaScript에서 WebAssembly 코드로 호출 할 수있는 모든 [Exported WebAssembly functions](/ko/docs/WebAssembly/Exported_functions)가 포함되어 있습니다.
+**`WebAssembly.Instance`** 개체는 [WebAssembly.Module](/ko/docs/WebAssembly/Reference/JavaScript_interface/Module)의 상태 저장되고 실행 가능한 인스턴스입니다. `Instance` 객체에는 JavaScript에서 WebAssembly 코드로 호출 할 수있는 모든 [Exported WebAssembly functions](/ko/docs/WebAssembly/Guides/Exported_functions)가 포함되어 있습니다.
 
 주어진 {{jsxref ( "WebAssembly.Module")}} 객체를 동기적으로 인스턴스화하기 위해 `WebAssembly.Instance()` 생성자 함수를 호출 할 수 있습니다. 하지만 `Instance`를 가져 오는 주요 방법은 비동기 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 함수를 사용하는 것입니다.
 
@@ -31,5 +31,5 @@ original_slug: WebAssembly/JavaScript_interface/Instance
 ## 같이 보기
 
 - [WebAssembly](/ko/docs/WebAssembly) overview page
-- [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly concepts](/ko/docs/WebAssembly/Guides/Concepts)
+- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Guides/Using_the_JavaScript_API)

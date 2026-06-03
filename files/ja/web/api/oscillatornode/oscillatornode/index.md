@@ -23,9 +23,7 @@ new OscillatorNode(context, options)
 - `context`
   - : {{domxref("AudioContext")}} への参照です。
 - `options` {{optional_inline}}
-
   - : この発振器ノードのプロパティの初期値を指定するオブジェクトです。プロパティがオブジェクトから省略されると、ドキュメントにある通りの既定値を受け取ります。
-
     - `type`
       - : ノードが生成する波形を指定します。有効な値は '`sine`', '`square`', '`sawtooth`', '`triangle`', '`custom`'です。既定値は '`sine`' です。
     - `detune`

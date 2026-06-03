@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 移除指定的浏览数据。
 
 要移除的浏览数据在 `dataTypes` 选项（一个 {{WebExtAPIRef("browsingData.DataTypeSet")}} 对象）中指定。

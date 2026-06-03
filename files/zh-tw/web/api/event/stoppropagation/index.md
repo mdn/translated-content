@@ -15,7 +15,7 @@ stopPropagation()
 
 ## 範例
 
-請參考範例五：[事件傳遞](/zh-TW/docs/Web/API/Document_Object_Model/Examples#範例五：事件傳遞)章節中關於此方法與 DOM 事件傳遞的更詳細範例。
+請參考[事件傳遞](/zh-TW/docs/Web/API/Document_Object_Model#事件傳遞)。另請參閱 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} 中的範例
 
 ## 規範
 

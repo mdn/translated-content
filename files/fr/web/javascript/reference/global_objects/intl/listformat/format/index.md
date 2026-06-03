@@ -1,13 +1,14 @@
 ---
-title: Intl.ListFormat.prototype.format()
+title: "Intl.ListFormat : méthode format()"
+short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`format()`** des instances de {{JSxRef("Intl.ListFormat")}} retourne une chaîne de caractères avec une représentation de la liste adaptée à la langue.
 
-La méthode **`format()`** renvoie une chaîne de caractères représentant la liste passée en argument, mise en forme selon la langue choisie (lors de la construction de l'objet `Intl.ListFormat`).
-
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.ListFormat.prototype.format()", "taller")}}
 
 ```js interactive-example
 const vehicles = ["Motorcycle", "Bus", "Car"];
@@ -17,38 +18,66 @@ const formatter = new Intl.ListFormat("en", {
   type: "conjunction",
 });
 console.log(formatter.format(vehicles));
-// Expected output: "Motorcycle, Bus, and Car"
+// Résultat attendu : "Motorcycle, Bus, and Car"
 
 const formatter2 = new Intl.ListFormat("de", {
   style: "short",
   type: "disjunction",
 });
 console.log(formatter2.format(vehicles));
-// Expected output: "Motorcycle, Bus oder Car"
+// Résultat attendu : "Motorcycle, Bus oder Car"
 
 const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
 console.log(formatter3.format(vehicles));
-// Expected output: "Motorcycle Bus Car"
+// Résultat attendu : "Motorcycle Bus Car"
 ```
-
-## Description
-
-La méthode **`format()`** renvoie une chaîne de caractères qui a été formatée en fonction des paramètres fournis à l'objet `Intl.ListFormat`. Les paramètres `locales` et `options` permettent de personnaliser le comportement de `format()` et de gérer différentes conventions linguistiques au sein d'une application, notamment pour la mise en forme des listes.
 
 ## Syntaxe
 
-```js
-listFormat.format([list]);
+```js-nolint
+format(list)
 ```
 
 ### Paramètres
 
-- **`list`**
-  - : Un objet itérable (ex. un tableau / {{jsxref("Array")}}).
+- `list`
+  - : Un objet itérable, tel qu'un tableau, contenant des chaînes de caractères. Si vous l'omettez, cela formate un tableau vide, ce qui peut prêter à confusion, il est donc conseillé de toujours passer explicitement une liste.
 
 ### Valeur de retour
 
-Une chaîne de caractères représentant les éléments de la liste et mise en forme en fonction de la langue souhaitée (grâce au paramètre `locales` passé au constructeur `Intl.ListFormat`).
+Une chaîne de caractères formatée selon la langue, représentant les éléments de la liste.
+
+> [!NOTE]
+> La plupart du temps, le formatage retourné par `format()` est cohérent. Cependant, le résultat peut varier selon les implémentations, même au sein d'une même locale — ces variations sont prévues et autorisées par la spécification. Le résultat peut aussi ne pas être celui attendu. Par exemple, la chaîne peut utiliser des espaces insécables ou être entourée de caractères de contrôle bidirectionnels. Vous ne devez pas comparer les résultats de `format()` à des constantes codées en dur.
+
+## Exemples
+
+### Utiliser la méthode `format()`
+
+L'exemple suivant montre comment créer un formateur de liste en utilisant la langue anglaise.
+
+```js
+const liste = ["Motorcycle", "Bus", "Car"];
+
+console.log(
+  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
+    liste,
+  ),
+);
+// Motorcycle, Bus and Car
+
+console.log(
+  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
+    liste,
+  ),
+);
+// Motorcycle, Bus or Car
+
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(liste),
+);
+// Motorcycle Bus Car
+```
 
 ## Spécifications
 
@@ -60,4 +89,4 @@ Une chaîne de caractères représentant les éléments de la liste et mise en f
 
 ## Voir aussi
 
-- {{jsxref("ListFormat", "Intl.ListFormat")}}
+- L'objet {{JSxRef("Intl.ListFormat")}}

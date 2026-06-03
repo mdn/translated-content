@@ -3,8 +3,6 @@ title: Array.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
 
-{{JSRef}}
-
 **`length`** 為 `Array` 物件的屬性，可供設定或回傳該陣列實體中包含的元素個數。其值必為一大於零、32 位元、且恆大於該陣列最大索引數的正整數。
 
 ```js

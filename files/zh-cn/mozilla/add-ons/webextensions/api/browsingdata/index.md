@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eec174a08a5003da32f53e694c45eda3377b4d18
 ---
 
-{{AddonSidebar}}
-
 使扩展程序能够清除用户在浏览时积累的数据。
 
 在 `browsingData` API 中，浏览数据被分为以下类型：

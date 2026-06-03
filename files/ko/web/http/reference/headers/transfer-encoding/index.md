@@ -4,11 +4,9 @@ slug: Web/HTTP/Reference/Headers/Transfer-Encoding
 original_slug: Web/HTTP/Headers/Transfer-Encoding
 ---
 
-{{HTTPSidebar}}
-
 **`Transfer-Encoding`** 헤더는 사용자에게 {{Glossary("Entity header","entity")}}를 안전하게 전송하기 위해 사용하는 인코딩 형식을 지정합니다.
 
-`Transfer-Encoding`은 [hop-by-hop 헤더](/ko/docs/Web/HTTP/Headers#hbh)로, 리소스 자체가 아닌 두 노드 사이에 메시지를 적용하는 것입니다. 다중-노드 연결의 각각의 세그먼트는 `Transfer-Encoding` 의 값을 다르게 사용할 수 있습니다. 만약 전체 연결에 있어 데이터를 압축하고자 한다면, end-to-end 헤더인 {{HTTPHeader("Content-Encoding")}} 헤더를 대신 사용하시기 바랍니다.
+`Transfer-Encoding`은 [hop-by-hop 헤더](/ko/docs/Web/HTTP/Reference/Headers#hbh)로, 리소스 자체가 아닌 두 노드 사이에 메시지를 적용하는 것입니다. 다중-노드 연결의 각각의 세그먼트는 `Transfer-Encoding` 의 값을 다르게 사용할 수 있습니다. 만약 전체 연결에 있어 데이터를 압축하고자 한다면, end-to-end 헤더인 {{HTTPHeader("Content-Encoding")}} 헤더를 대신 사용하시기 바랍니다.
 
 본문이 없는 {{HTTPMethod("HEAD")}} 요청에 대한 응답은 그에 대한 {{HTTPMethod("GET")}} 메시지에 적용될 값을 나타냅니다.
 
@@ -19,7 +17,7 @@ original_slug: Web/HTTP/Headers/Transfer-Encoding
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>yes</td>
     </tr>
   </tbody>
@@ -32,7 +30,6 @@ Transfer-Encoding: chunked
 Transfer-Encoding: compress
 Transfer-Encoding: deflate
 Transfer-Encoding: gzip
-Transfer-Encoding: identity
 
 // 어떤 값들은 쉼표로 구분하여 나열될 수 있습니다
 Transfer-Encoding: gzip, chunked
@@ -49,8 +46,6 @@ Transfer-Encoding: gzip, chunked
   - : ([RFC 1951](https://tools.ietf.org/html/rfc1952)에 정의된) *[deflate](http://en.wikipedia.org/wiki/DEFLATE) *압축 알고리즘과 함께 ([RFC 1950](https://tools.ietf.org/html/rfc1950)에서 정의된) [zlib](http://en.wikipedia.org/wiki/Zlib) 구조체를 사용합니다.
 - `gzip`
   - : 32비트 CRC를 이용한 [Lempel-Ziv coding](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77)을 사용하는 형식. 이것은 근본적으로 UNIX _gzip_ 프로그램의 형식입니다. 또한, HTTP/1.1 표준은 이 content-encoding을 지원하는 서버는 호환성 목적을 위해 `x-gzip` 을 별칭으로 인지할 것을 권고하고 있습니다.
-- `identity`
-  - : 정체성 기능 (즉, 압축이나 수정이 없는) 을 나타냅니다. 이 토크은 명시적으로 지정되는 경우를 제외하고 항상 허용 가능한 것으로 간주됩니다.
 
 ## 예제
 

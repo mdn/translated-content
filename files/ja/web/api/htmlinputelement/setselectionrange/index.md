@@ -34,9 +34,7 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 - `selectionEnd`
   - : 選択する最後の文字の*次の* 0 から始まる位置です。位置が要素の長さよりも大きい場合は、要素の値の末尾の位置と見なされます。
 - `selectionDirection` {{optional_inline}}
-
   - : 選択が行われたと見なされる方向を示す文字列です。取りうる値は次の通りです。
-
     - `"forward"`
     - `"backward"`
     - `"none"` 選択方向が不明または無関係な場合です。既定値です。

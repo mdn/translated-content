@@ -29,9 +29,7 @@ typedarray.every(callback[, thisArg])>
 ### Paramètres
 
 - `callback`
-
   - : La fonction utilisée pour tester chaque élément du tableau. Elle utilise trois arguments :
-
     - `valeurCourante`
       - : L'élément du tableau typé qui est en cours de traitement.
     - `index`

@@ -44,7 +44,6 @@ IndexedDB 中的 **`IDBDatabase`** 接口提供一个到 [数据库的连接](/z
 - {{domxref("IDBDatabase.onerror")}}
   - : 当访问数据库失败时触发。
 - {{domxref("IDBDatabase.onversionchange")}}
-
   - : 当数据库结构发生更改时触发
 
     ({{domxref("IDBOpenDBRequest.onupgradeneeded")}}事件或在其他地方请求 {{domxref("IDBFactory.deleteDatabase")}} 时（最可能在同一台计算机上的另一个窗口/选项卡中）这与版本更改事务（请参阅参考资料{{domxref("IDBVersionChangeEvent")}}) 不同，但它是相关的。

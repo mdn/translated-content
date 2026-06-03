@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 实例是由{{glossary("constructor", "构造函数")}}所创建的{{glossary("object", "对象")}}。
 
 ## 参见

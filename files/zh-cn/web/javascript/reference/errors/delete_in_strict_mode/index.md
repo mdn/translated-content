@@ -3,8 +3,6 @@ title: "SyntaxError: applying the 'delete' operator to an unqualified name is de
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 错误提示
 
 ```plain

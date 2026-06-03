@@ -23,9 +23,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
 ### 引数
 
 - `underlyingSource` {{optional_inline}}
-
   - : 構築されたストリームのインスタンスの動作を定義するメソッドとプロパティを含むオブジェクト。 `underlyingSource` には次のものを含めることができます。
-
     - `start` (controller) {{optional_inline}}
       - : これは、オブジェクトが構築されるとすぐに呼び出されるメソッドです。 このメソッドの内容は開発者が定義し、ストリームのソースへのアクセスを取得し、ストリーム機能を設定するために必要な他のすべての操作を行う必要があります。 このプロセスを非同期で実行する場合、成功または失敗を通知するプロミスを返すことができます。このメソッドに渡される `controller` 引数は、 {{domxref("ReadableStreamDefaultController")}} または {{domxref("ReadableByteStreamController")}} を `type` プロパティの値に応じて指定します。開発者はこれを使用して、セットアップ中にストリームを制御できます。
     - `pull` (controller) {{optional_inline}}
@@ -35,7 +33,6 @@ new ReadableStream(underlyingSource, queuingStrategy)
     - `type` {{optional_inline}}
       - : このプロパティは、どの種類の読み取り可能なストリームが処理されるかを制御します。 `"bytes"` に設定された値が含まれている場合、渡されるコントローラーオブジェクトは、 BYOB （独自のバッファーを持ち込む）/バイトストリームを処理できる {{domxref("ReadableByteStreamController")}} になります。 含まれていない場合、渡されるコントローラーは {{domxref("ReadableStreamDefaultController")}} になります。
     - `autoAllocateChunkSize` {{optional_inline}}
-
       - : バイトストリームの場合、開発者は `autoAllocateChunkSize` に正の整数値を設定して、ストリームの自動割り当て機能をオンにできます。
         これを設定すると、ストリームの実装は、必要なときに自動的に {{domxref("ReadableByteStreamController.byobRequest")}} に指定したサイズのビューバッファーを確保するようになります。
 
@@ -43,9 +40,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
         設定されていない場合、既定のリーダーはデータをストリームしますが、 {{domxref("ReadableByteStreamController.byobRequest")}} は常に `null` となり、コンシューマーへの転送はストリーム内のキューを経由しなければなりません。
 
 - `queuingStrategy` {{optional_inline}}
-
   - : オプションでストリームのキューイング戦略を定義するオブジェクト。 これには次の 2 つの引数が必要です。
-
     - `highWaterMark`
       - : 負でない整数 — これは、バックプレッシャーが適用される前に内部キューに含めることができるチャンクの総数を定義します。
     - `size(chunk)`

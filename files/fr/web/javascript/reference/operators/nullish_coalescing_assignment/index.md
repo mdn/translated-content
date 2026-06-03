@@ -67,7 +67,7 @@ x ??= console.log("y est évalué");
 
 ### Utiliser l'opérateur d'affectation après coalescence des nuls
 
-Vous pouvez utiliser l'opérateur d'affectation de coalescence des nuls pour appliquer des valeurs par défaut aux propriétés d'objet. Par rapport à l'utilisation de la déstructuration et des [valeurs par défaut](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#valeurs-par-défaut), `??=` applique également la valeur par défaut si la propriété a pour valeur `null`.
+Vous pouvez utiliser l'opérateur d'affectation de coalescence des nuls pour appliquer des valeurs par défaut aux propriétés d'objet. Par rapport à l'utilisation de la déstructuration et des [valeurs par défaut](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring#valeurs-par-défaut), `??=` applique également la valeur par défaut si la propriété a pour valeur `null`.
 
 ```js
 function config(options) {

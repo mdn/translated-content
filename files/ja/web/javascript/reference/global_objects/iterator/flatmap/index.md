@@ -1,13 +1,12 @@
 ---
 title: Iterator.prototype.flatMap()
+short-title: flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/flatMap
 l10n:
-  sourceCommit: 7df171ff1d6da6a5e3911b7aedd56f6312bf0cca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`flatMap()`** は {{jsxref("Iterator")}} インスタンスの目疎度で、新しい[イテレーターヘルパーオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator#イテレーターヘルパーオブジェクト)を返します。これは元のイテレーターのそれぞれの要素を取り、それをマッピング関数によって走査し、マッピング関数から返される（他のイテレーターや反復可能オブジェクトに含まれている）要素を返します。
+**`flatMap()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、新しい[イテレーターヘルパーオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator#イテレーターヘルパーオブジェクト)を返します。これは元のイテレーターのそれぞれの要素を取り、それをマッピング関数によって走査し、マッピング関数から返される（他のイテレーターや反復可能オブジェクトに含まれている）要素を返します。
 
 ## 構文
 
@@ -67,6 +66,8 @@ flatMap(callbackFn)
             return it;
           },
         };
+      default:
+        return undefined;
     }
   })
   .toArray();
@@ -144,3 +145,4 @@ new Map([map1, map2].flatMap((x) => x)); // Map(1) {undefined => undefined}
 ## 関連情報
 
 - [`Iterator.prototype.flatMap` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims による `Iterator.prototype.flatMap` のポリフィル](https://www.npmjs.com/package/es-iterator-helpers)

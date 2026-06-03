@@ -2,10 +2,10 @@
 title: インデックス付きコレクション
 slug: Web/JavaScript/Guide/Indexed_collections
 l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 この章では、インデックス値により順序付けされたデータのコレクションを紹介します。これには配列と、{{jsxref("Array")}} オブジェクトや {{jsxref("TypedArray")}} オブジェクトなどの配列風の構造物があります。
 
@@ -91,7 +91,7 @@ const arr = Array(9.3); // RangeError: Invalid array length
 ES2015 から単一の要素を持つ配列を生成するために {{jsxref("Array.of")}} 静的メソッドを使用することができます。
 
 ```js
-const wisenArray = Array.of(9.3); // wisenArray は 1 つの要素 9.3 だけを持つ配列
+const arr = Array.of(9.3); // arr は 1 つの要素 9.3 だけを持つ配列
 ```
 
 ## 配列要素の参照
@@ -104,7 +104,8 @@ const myArray = ["Wind", "Rain", "Fire"];
 
 要素のインデックスは 0 から始まるので、配列の 1 番目の要素を `myArray[0]`、2 番目の要素を `myArray[1]` と呼ぶことができます。
 
-> **メモ:** [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
+> [!NOTE]
+> [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
 >
 > ```js
 > const arr = ["one", "two", "three"];
@@ -145,7 +146,7 @@ const myArray = ["Mango", "Apple", "Orange"];
 
 実装レベルでは、JavaScript の配列は、配列のインデックスをプロパティ名として使用して、その要素を標準的なオブジェクトのプロパティとして格納します。
 
-`length` プロパティは特別です。これは常に、存在する最後の要素のインデックスより大きな正の整数をになります。（次の例では、`'Dusty'` のインデックスは `30` なので、`cats.length` は `30 + 1` を返します。）
+`length` プロパティは特別です。これは常に、存在する最後の要素のインデックスより大きな正の整数になります。（次の例では、`'Dusty'` のインデックスは `30` なので、`cats.length` は `30 + 1` を返します。）
 
 JavaScript の配列のインデックスは `0` から始まるものであり、 `1` からではないことを思い出してください。これは、`length` プロパティは配列に格納されている最大のインデックスより 1 つ大きい値になるということです。
 
@@ -522,7 +523,7 @@ const inventory = [
 
 `Object.groupBy()` を使用するにあたっては、現在の要素で呼び出されるコールバック関数を指定します。オプションで現在のインデックスと配列を指定することもでき、要素のグループを示す文字列を返します。
 
-次のコードでは、アロー関数を使用して配列のそれぞれの要素の型を返します（これは、[関数の引数にオブジェクトの分割代入構文を使用](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#関数の引数として渡されたオブジェクトからのプロパティの展開)して、渡されたオブジェクトから型要素を展開します）。結果は、コールバック関数によって返された一意の文字列を名前とするプロパティを持つオブジェクトとなります。それぞれのプロパティには、グループ内の要素を含む配列が割り当てられます。
+次のコードでは、アロー関数を使用して配列のそれぞれの要素の型を返します（これは、[関数の引数にオブジェクトの構造分解構文を使用](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#関数の引数として渡されたオブジェクトからのプロパティの展開)して、渡されたオブジェクトから型要素を展開します）。結果は、コールバック関数によって返された一意の文字列を名前とするプロパティを持つオブジェクトとなります。それぞれのプロパティには、グループ内の要素を含む配列が割り当てられます。
 
 ```js
 const result = Object.groupBy(inventory, ({ type }) => type);
@@ -583,7 +584,7 @@ for (const i of arr) {
 }
 // 出力: 1 2 undefined undefined 5
 
-// 分割代入
+// 構造分解
 const another = [...arr]; // "another" は [ 1, 2, undefined, undefined, 5 ]
 ```
 

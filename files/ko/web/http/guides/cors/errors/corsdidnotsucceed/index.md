@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed
 original_slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
 
-{{HTTPSidebar}}
-
 ## 원인
 
 ```
@@ -18,6 +16,6 @@ original_slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 
 ## 더 보기
 
-- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
+- [CORS 에러](/ko/docs/Web/HTTP/Guides/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS 소개](/ko/docs/Web/HTTP/CORS)
+- [CORS 소개](/ko/docs/Web/HTTP/Guides/CORS)

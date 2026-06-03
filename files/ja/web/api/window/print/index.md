@@ -1,9 +1,12 @@
 ---
-title: Window.print()
+title: "Window: print() メソッド"
+short-title: print()
 slug: Web/API/Window/print
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
 現在の文書を印刷するための印刷ダイアログを開きます。
 
@@ -13,8 +16,8 @@ slug: Web/API/Window/print
 
 ## 構文
 
-```js
-print();
+```js-nolint
+print()
 ```
 
 ### 引数
@@ -35,6 +38,6 @@ print();
 
 ## 関連情報
 
-- [印刷](/ja/docs/Web/CSS/CSS_media_queries/Printing)
+- [印刷](/ja/docs/Web/CSS/Guides/Media_queries/Printing)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} イベント
 - {{ domxref("window.afterprint_event", "afterprint") }} イベント

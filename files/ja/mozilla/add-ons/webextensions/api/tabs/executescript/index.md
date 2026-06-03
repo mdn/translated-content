@@ -41,9 +41,7 @@ var executing = browser.tabs.executeScript(
 - `tabId` {{optional_inline}}
   - : `integer` 型。 スクリプトを実行するタブの ID。省略時のデフォルトは、現在のウィンドウでアクティブなタブ。
 - `details`
-
   - : 実行するスクリプトに関するオブジェクト。次のプロパティを持ちます。
-
     - `allFrames` {{optional_inline}}
       - : `boolean` 型。`true` である場合は、現在のページが持つ全てのフレームにコードが挿入されます。`true` であり、かつ `frameId` が設定されている場合はエラーが発生するため、frameId と allFrames は互いに排他的です。`false` である場合は、最上位のフレームにのみコードが挿入されます。デフォルトは `false` です。
     - `code` {{optional_inline}}

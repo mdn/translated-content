@@ -3,8 +3,6 @@ title: HTML 属性：crossorigin
 slug: Web/HTML/Reference/Attributes/crossorigin
 ---
 
-{{HTMLSidebar}}
-
 **`crossorigin`** 属性在 {{HTMLElement("audio")}}、{{HTMLElement("img")}}、{{HTMLElement("link")}}、{{HTMLElement("script")}} 和 {{HTMLElement("video")}} 元素中有效，它们提供对 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 的支持，定义该元素如何处理跨源请求，从而实现对该元素获取数据的 CORS 请求的配置。根据元素的不同，该属性可以是一个 CORS 设置属性。
 
 在媒体元素上所使用的 `crossorigin` 内容属性为 CORS 设置属性。
@@ -82,5 +80,3 @@ slug: Web/HTML/Reference/Attributes/crossorigin
 
 - [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTML 属性：`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/HTML/")}}

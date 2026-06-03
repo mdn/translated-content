@@ -493,7 +493,8 @@ const { Builder, Browser, By, Key } = require("selenium-webdriver");
 
 4. Mocha の任意のタイムアウト（3 秒）のためにテストが失敗してしまうことがないように、`--no-timeouts` フラグを記載する必要があります。
 
-> **メモ:** [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) には、テスト/アサーションツールのさまざまな組み合わせを設定する方法を示す有益な例がいくつか含まれています。
+> [!NOTE]
+> [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) には、テスト/アサーションツールのさまざまな組み合わせを設定する方法を示す有益な例がいくつか含まれています。
 
 ## リモートテストの実行
 
@@ -802,7 +803,8 @@ Sauce Labs や BrowserStack のようなサービスを使用したくない場�
 - [Using LambdaTest with Jenkins](https://www.lambdatest.com/support/docs/jenkins-with-lambdatest/)
 - [Using Sauce Labs with Travis CI](https://docs.travis-ci.com/user/sauce-connect/)
 
-> **メモ:** **コードレス自動化**で継続的なテストを行いたい場合は、 [Endtest](https://www.endtest.io) や [TestingBot](https://testingbot.com) を使用することができます。
+> [!NOTE]
+> **コードレス自動化**で継続的なテストを行いたい場合は、 [Endtest](https://www.endtest.io) や [TestingBot](https://testingbot.com) を使用することができます。
 
 ## まとめ
 

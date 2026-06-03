@@ -3,7 +3,7 @@ title: "SnapEvent: SnapEvent() コンストラクター"
 short-title: SnapEvent()
 slug: Web/API/SnapEvent/SnapEvent
 l10n:
-  sourceCommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
+  sourceCommit: 759102220c07fb140b3e06971cd5981d8f0f134f
 ---
 
 {{APIRef("Snap Events")}}{{SeeCompatTable}}
@@ -35,7 +35,7 @@ new SnapEvent(type, init)
 
 ```js
 mainElem.addEventListener("scrollsnapchange", (event) => {
-  // ...
+  // …
 
   // コンソールに SnapEvent オブジェクトのインスタンスを出力
   console.log(event);
@@ -54,5 +54,5 @@ mainElem.addEventListener("scrollsnapchange", (event) => {
 
 - {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベント
 - {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベント
-- [CSS スクロールスナップモジュール](/ja/docs/Web/CSS/CSS_scroll_snap)
+- [CSS スクロールスナップモジュール](/ja/docs/Web/CSS/Guides/Scroll_snap)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) (developer.chrome.com, 2024)

@@ -86,7 +86,6 @@ document.onkeypress = logKey;
 - {{domxref("GlobalEventHandlers.onkeypress")}}
 - L'interface {{domxref("Element")}} que cet évènement cible
 - Les évènements associés :
-
   - [`keydown`](/fr/docs/Web/API/Element/keydown_event)
   - [`keyup`](/fr/docs/Web/API/Element/keyup_event)
   - [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)

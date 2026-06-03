@@ -3,8 +3,6 @@ title: Firefox 25 for developers
 slug: Mozilla/Firefox/Releases/25
 ---
 
-{{FirefoxSidebar}}
-
 ## Changements pour les développeurs Web
 
 ### Nouveau dans Firefox DevTools
@@ -18,14 +16,14 @@ slug: Mozilla/Firefox/Releases/25
 ### CSS
 
 - La prise en charge du mot clé `local` en tant que valeur de la propriété CSS {{cssxref("background-attachment")}} a été ajoutée ([bug Firefox 483446](https://bugzil.la/483446)).
-- La prise en charge d'une requête multimédia non standard de Mozilla uniquement pour déterminer la version du système d'exploitation a été ajoutée: [`-moz-os-version`](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-os-version) ([bug Firefox 810399](https://bugzil.la/810399)). La propriété n'est actuellement implémentée que sur Windows.
+- La prise en charge d'une requête multimédia non standard de Mozilla uniquement pour déterminer la version du système d'exploitation a été ajoutée: [`-moz-os-version`](/fr/docs/Web/CSS/Guides/Media_queries/Using#-moz-os-version) ([bug Firefox 810399](https://bugzil.la/810399)). La propriété n'est actuellement implémentée que sur Windows.
 - La propriété CSS {{cssxref("-moz-osx-font-smoothing")}} a été ajoutée ([bug Firefox 857142](https://bugzil.la/857142)).
 - Notre support expérimental pour {{cssxref("filter")}} prend désormais en charge la notation fonctionnelle `hue-rotate()` ([bug Firefox 897392](https://bugzil.la/897392)). Il est toujours désactivé par défaut.
 - `page-break-inside`: `avoid` travaille maintenant avec la hauteur d'un bloc ([bug Firefox 883676](https://bugzil.la/883676)).
 
 ### HTML
 
-- L'attribut [`srcdoc`](/fr/docs/Web/HTML/Element/iframe#srcdoc), permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}}, est maintenant pris en charge ([bug Firefox 802895](https://bugzil.la/802895)).
+- L'attribut [`srcdoc`](/fr/docs/Web/HTML/Reference/Elements/iframe#srcdoc), permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}}, est maintenant pris en charge ([bug Firefox 802895](https://bugzil.la/802895)).
 - Lorsqu'elle est utilisée avec un type `"image/jpeg"`, la méthode `HTMLCanvasElement.toBlob` accepte désormais un troisième attribut définissant la qualité de l'image ([bug Firefox 891884](https://bugzil.la/891884)).
 
 ### JavaScript
@@ -46,7 +44,7 @@ L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_
 - L'[API Web Audio](/fr/docs/Web/API/Web_Audio_API) est désormais prise en charge. Une implémentation incomplète était auparavant disponible derrière une péférence ([bug Firefox 779297](https://bugzil.la/779297)).
 - Certaines clés liées à IME sous Windows sont prises en charge par `KeyboardEvent.key` ([bug Firefox 865565](https://bugzil.la/865565)), voir [le tableau des noms de clé](/fr/docs/Web/API/KeyboardEvent#keyname_table_win) pour plus de détails.
 - Firefox pour Metro distribue désormais les événements clés de la même manière que la version bureau ([bug Firefox 843236](https://bugzil.la/843236)).
-- L'événement `keypress` n'est plus distribué si `preventDefault()` de l'événement `keydown` précédnt est appelé ([bug Firefox 501496](https://bugzil.la/501496)), voir [le document de l'événement `keydown`](</fr/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event>) pour plus de détails.
+- L'événement `keypress` n'est plus distribué si `preventDefault()` de l'événement `keydown` précédnt est appelé ([bug Firefox 501496](https://bugzil.la/501496)), voir [le document de l'événement `keydown`](</fr/docs/Web/API/Element/keydown_event#preventDefault()_of_keydown_event>) pour plus de détails.
 - L'interface `Future` a été renommée `Promise` ([bug Firefox 884279](https://bugzil.la/884279)).
 - La propriété `srcDoc` sur l'interface {{domxref("HTMLIFrameElement")}}, permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}}, est désormais prise en charge ([bug Firefox 802895](https://bugzil.la/802895)).
 - La méthode `createTBody()` sur l'interface {{domxref("HTMLTableElement")}}, permettant d'obtenir son {{HTMLElement("tbody")}}, est désormais supportée ([bug Firefox 813034](https://bugzil.la/813034)).

@@ -10,7 +10,7 @@ l10n:
 
 **`<rtc>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("ruby")}} 要素内で使用する {{HTMLElement("rb")}} 要素にルビで与える文字列の、意味を表す注釈を包含します。{{HTMLElement("rb")}} 要素は発音の注釈 ({{HTMLElement("rt")}}) と意味の注釈 ({{HTMLElement("rtc")}}) の両方を持つことができます。
 
-{{InteractiveExample("HTML Demo: &lt;rtc&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;rtc&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <ruby xml:lang="zh-Hant" style="ruby-position: under;">
@@ -68,14 +68,14 @@ ruby {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >または {{HTMLElement("rt")}} 要素
       </td>

@@ -3,8 +3,6 @@ title: <input type="date">
 slug: Web/HTML/Reference/Elements/input/date
 ---
 
-{{HTMLSidebar}}
-
 **`type="date"`** 类型的 {{htmlelement("input")}} 元素会创建一个让用户输入一个日期的输入区域，可以使用自动验证内容的文本框，也可以使用特殊的日期选择器界面。结果值包括年份，月份和日期，但*不*包括时间。{{HTMLElement("input/time", "time")}} 和 {{HTMLElement("input/datetime-local", "datetime-local")}} 类型支持时间和日期时间输入。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
@@ -204,7 +202,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 {{ EmbedLiveSample('验证', 600, 100) }}
 
-这是上面例子使用的 CSS。我们基于 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-elements)来在输入框旁边添加小图标。我们必须把图标放在 input 旁边的 {{htmlelement("span")}} 里面，而并不是它本身，因为在 Chrome 中被放置在表单中生成的内容不能有效的样式化或者显示。
+这是上面例子使用的 CSS。我们基于 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)来在输入框旁边添加小图标。我们必须把图标放在 input 旁边的 {{htmlelement("span")}} 里面，而并不是它本身，因为在 Chrome 中被放置在表单中生成的内容不能有效的样式化或者显示。
 
 ```css
 label {

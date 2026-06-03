@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
 ---
 
-{{JSRef}}
-
 {{jsxref("Array")}} 实例的 **`concat()`** 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
 
 {{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}

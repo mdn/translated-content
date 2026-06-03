@@ -58,7 +58,7 @@ const audioContext = new AudioContext();
 ```
 
 > [!NOTE]
-> 만약 로딩한 사운드 파일이 다른 도메인에 있다면 `crossorigin` 특성을 사용할 필요가 있습니다; 더 많은 정보를 보시려면 [Cross Origin Resource Sharing (CORS)](/ko/docs/Web/HTTP/CORS)를 참고해 보세요.
+> 만약 로딩한 사운드 파일이 다른 도메인에 있다면 `crossorigin` 특성을 사용할 필요가 있습니다; 더 많은 정보를 보시려면 [Cross Origin Resource Sharing (CORS)](/ko/docs/Web/HTTP/Guides/CORS)를 참고해 보세요.
 
 Web Audio API로 얻을 수 있는 모든 것을 사용하려면 이 요소에서 소스를 가져와 우리가 만든 컨텍스트에 연결해야 합니다. 운 좋게도 이걸 할 수 있는 메서드가 있습니다 — {{domxref("AudioContext.createMediaElementSource")}}입니다:
 
@@ -82,7 +82,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 JavaScript 코드에서 프로그래밍적으로 사운드를 제어하는 것은 브라우저의 자동 재생 지원 정책에 의해 다뤄지는데, 그러한 것은 허가가 사용자 (또는 화이트리스트)에 의해 승인되지 않은 채로 차단될 가능성이 있습니다. 자동 재생 정책은 보통 스크립트가 오디오를 재생하게 할 수 있게 하기 전에 페이지에서 명시적인 허가나 사용자의 허락 중 하나를 요구합니다.
 
-이 특별한 요구는 필수적으로 가동 중인데 그 이유는 예기치 않은 사운드는 짜증나고 거슬릴 수 있고, 접근성 문제를 유발할 수 있기 때문입니다. [미디어와 Web Audio API에 대한 자동 재생 가이드](/ko/docs/Web/Media/Autoplay_guide) 문서에서 이것에 대해 더 배울 수 있습니다.
+이 특별한 요구는 필수적으로 가동 중인데 그 이유는 예기치 않은 사운드는 짜증나고 거슬릴 수 있고, 접근성 문제를 유발할 수 있기 때문입니다. [미디어와 Web Audio API에 대한 자동 재생 가이드](/ko/docs/Web/Media/Guides/Autoplay) 문서에서 이것에 대해 더 배울 수 있습니다.
 
 우리의 스크립트는 사용자의 입력 이벤트 (예를 들자면 재생 버튼의 클릭)에 응답하여 오디오를 재생하므로, 우리는 이상이 없고 자동 재생 방지로부터 문제가 없어야만 합니다. 그러므로, 우리의 재생과 정지 기능을 살펴봄으로써 시작해 봅시다. 우리는 트랙이 재생중일 때 정지 버튼으로 바뀌는 재생 버튼을 가지고 있습니다:
 

@@ -30,9 +30,7 @@ En este módulo encontrarás artículos que cubren los fundamentos más esencial
 - [Cascada y herencia](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
   - : El objetivo de ésta lección es desarrollar tu entendimiento sobre algunos de los conceptos fundamentales de CSS - cascada, especificidad y herencia - los cuales controlan como CSS es aplicado a HTML y como sus conflitos son resueltos.
 - [Selectores CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
   - : Hay una gran variedad de selectores disponibles en CSS, permitiendo una fina precision para seleccionar elementos de estilo. En este artículo y sub-artículos, repasaremos los diferentes tipos en detalle y veremos como funcionan. Los sub-artículos son los siguientes:
-
     - [Selectores de tipo, clase e ID](/es/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
     - [Selectores de Atributos](/es/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
     - [Pseudo-clases y pseudo-elementos](/es/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
@@ -57,18 +55,17 @@ En este módulo encontrarás artículos que cubren los fundamentos más esencial
 - [Depuración de CSS](/es/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
   - : A veces, al escribir CSS, encontrará un problema en el que su CSS no parece estar haciendo lo que espera. Este artículo le dará orientación sobre cómo solucionar un problema de CSS y le mostrará cómo las DevTools incluidas en todos los navegadores modernos pueden ayudarlo a descubrir qué está sucediendo.
 - [Organizando tu CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)
-
   - : A medida que comience a trabajar en hojas de estilo más grandes y grandes proyectos, descubrirá que mantener un gran archivo CSS puede ser un desafío. En este artículo, analizaremos brevemente algunas de las mejores prácticas para escribir su CSS para que sea fácil de mantener, y algunas de las soluciones que encontrará en uso para ayudar a mejorar la capacidad de mantenimiento.
 
 ## Evaluaciones
 
 ¿Quieres probar tus habilidades de CSS? Las siguientes evaluaciones pondrán a prueba su comprensión del CSS cubierto en las guías anteriores.
 
-- [Comprensión de CSS básica](/es/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension)
+- [Comprensión de CSS básica](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9)
   - : Esta evaluación evalúa su comprensión de la sintaxis básica, selectores, especificidad, modelo de caja y más.
-- [Crear papel con membrete elegante](/es/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
+- [Crear papel con membrete elegante](/es/docs/Learn_web_development/Core/Styling_basics)
   - : Si desea causar la impresión correcta, escribir una carta en papel con membrete puede ser un buen comienzo. En esta evaluación, lo retaremos a crear una plantilla en línea para lograr ese aspecto.
-- [Una caja de aspecto genial](/es/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
+- [Una caja de aspecto genial](/es/docs/Learn_web_development/Core/Styling_basics)
   - : Aquí aprenderás a usar el estilo de fondo y borde para crear un cuadro llamativo.
 
 ## Ver también

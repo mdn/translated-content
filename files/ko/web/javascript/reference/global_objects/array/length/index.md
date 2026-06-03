@@ -1,5 +1,6 @@
 ---
-title: Array.length
+title: "Array: length"
+short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a

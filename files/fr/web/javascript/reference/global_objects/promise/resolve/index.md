@@ -18,7 +18,8 @@ promise1.then((value) => {
 });
 ```
 
-> **Attention :** `Promise.resolve()` ne doit pas être appelée sur un objet _thenable_ qui se résout en lui-même. Cela provoquera une récursion infinie et `resolve()` tentera d'aplatir ce qui ressemble à une promesse imbriquée à l'infini.
+> [!WARNING]
+> `Promise.resolve()` ne doit pas être appelée sur un objet _thenable_ qui se résout en lui-même. Cela provoquera une récursion infinie et `resolve()` tentera d'aplatir ce qui ressemble à une promesse imbriquée à l'infini.
 
 ## Syntaxe
 

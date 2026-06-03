@@ -3,8 +3,6 @@ title: "Permissions-Policy: camera"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/camera
 ---
 
-{{HTTPSidebar}}
-
 HTTP {{HTTPHeader("Permissions-Policy")}} 标头当中的 `camera` 指令控制着当前的文档是否允许使用视频输入设备。当该策略被开启时，由 {{domxref("MediaDevices.getUserMedia()")}} 返回的 {{jsxref("Promise")}} 将会以一个 `NotAllowedError` {{domxref("DOMException")}} 拒绝。
 
 ## 语法

@@ -14,10 +14,10 @@ En este artículo explica cómo configurar un servidor de prueba local simple en
       <th scope="row">Prerrequisitos:</th>
       <td>
         Primero debes saber
-        <a href="/es/docs/Learn/How_the_Internet_works"
+        <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >cómo funciona internet</a
         >, y
-        <a href="/es/docs/Learn/What_is_a_Web_server"
+        <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
           >qué es un servidor web</a
         >.
       </td>
@@ -49,7 +49,6 @@ Para evitar el problema de las solicitudes asíncronas, necesitamos probar estos
 Para hacer esto:
 
 1. Instalar Python. Si usas Linux o Mac OS X, ya debe estar disponible en tu sistema. Si eres usuario de Windows, puedes conseguir un instalador desde la página principal de Python y seguir las instrucciones para instalarlo:
-
    - Vé a [python.org](https://www.python.org/)
    - Debajo de la sección de Descarga, haz clic en el link para Python "3.xxx".
    - En la parte superior de la página, selecciona el _instalador ejecutable windows x86_ y descárgalo.

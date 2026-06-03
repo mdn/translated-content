@@ -388,7 +388,7 @@ Parcel 可以使用 `parcel serve filename.html` 命令运行开发服务器，�
 
 因此，让我们在 `package.json` 中创建一个自定义缩写命令——“dev”。
 
-如果你按照之前的教程操作，你应该在 parcel-experiment 目录中有一个 `package.json` 文件。打开它，它的 `sripts` 应该如下所示：
+如果你按照之前的教程操作，你应该在 parcel-experiment 目录中有一个 `package.json` 文件。打开它，它的 `scripts` 应该如下所示：
 
 ```json
 "scripts": {

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 74206b3f81736bac558470f36222544cc67ba9e2
 ---
 
-{{JSRef}}
-
 {{jsxref("Set")}} 实例的 **`isDisjointFrom()`** 方法接受一个集合并返回一个布尔值来指示当前集合与给定集合是否不存在公共元素。
 
 ## 语法

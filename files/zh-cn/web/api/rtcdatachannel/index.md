@@ -23,9 +23,7 @@ RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的�
 - {{domxref("RTCDataChannel.id")}} {{readOnlyInline}}
   - : 当{{domxref("RTCDataChannel")}}对象被创建出来的时候，返回一个无符号 short 类型的数据，作为通道的标识 id。
 - {{domxref("RTCDataChannel.readyState")}} {{readOnlyInline}}
-
   - : 返回枚举类型的 RTCDataChannelState，表示数据连接的状态，有以下几种类型：
-
     - `"connecting"` 该状态表示底层链路还未建立和激活，该状态还是由{{domxref("RTCPeerConnection.createDataChannel()")}}生成的 datachannel 初始状态。
     - `"open"` 该状态表示底层链路已经连接成功并且运行。这个状态还是由{{domxref("RTCDataChannelEvent")}}分发的 datachannel 的初始状态。
     - `"closing"` 该状态表示底层链路已经在关闭的过程中。该状态下将不会接受新的发送任务，但是缓冲队列中的消息还是会被继续发送或者接收。

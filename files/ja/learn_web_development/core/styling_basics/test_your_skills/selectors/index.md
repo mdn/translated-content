@@ -1,35 +1,35 @@
 ---
-title: "スキルテスト: セレクター"
+title: "確認テスト: セレクター"
+short-title: "テスト: セレクター"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
-original_slug: Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: a623d4459e2aa00d17dc0fd6b6bc44f56c589950
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
-このスキルテストの目的は、 [CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)を理解しているかどうかを評価することです。
+この確認テストの目的は、 [CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)を理解しているかどうかを評価することです。
+
+これらの課題を完了するには、HTML は編集せずに CSS のみ編集してください。
 
 > [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
-## 課題 1
+## セレクター 1
 
 この課題では、 HTML を変えずに CSS を使用して以下のことを行ってください。
 
-- `<h1>` の見出しを青にする。
-- `<h2>` の見出しを青背景の白文字にする。
-- `<span>`で囲まれたテキストのフォントサイズが 200% になるようにする。
+1. `<h1>` の見出しを青にする。
+2. `<h2>` の見出しを青背景の白文字にする。
+3. `<span>` で囲まれたテキストのフォントサイズが `200%` になるようにする。
 
-最終結果は下記の画像のようになるはずです。
+この課題の出発点は次のようなものです。
 
-![課題 1 の解答の CSS を適用したテキスト。](selectors1.jpg)
+{{EmbedLiveSample("selectors1-start", "", "370px")}}
 
-以下のライブコードを更新して、完成例を再現してみてください。
+基盤となる出発点のコードは次の通りです。
 
-```html live-sample___type
+```html live-sample___selectors1-start live-sample___selectors1-finish
 <div class="container">
   <h1>これは見出しです</h1>
   <p>
@@ -37,7 +37,7 @@ l10n:
     kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean
     garlic.
   </p>
-  <h2>これはレベル 2 の見出しです</h2>
+  <h2>レベル 2 の見出し</h2>
   <p>
     Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
     tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
@@ -46,21 +46,23 @@ l10n:
 </div>
 ```
 
-```css live-sample___type
+```css live-sample___selectors1-start live-sample___selectors1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
-/* Add styles here */
+/* ここにスタイルを追加 */
 ```
 
-{{EmbedLiveSample("type", "", "260px")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("selectors1-finish", "", "400px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 色やサイズを変更するには、`h1`、`h2`、`span` セレクターを対象とする必要があります。
 
-```css
+```css live-sample___selectors1-finish
 h1 {
   color: blue;
 }
@@ -77,22 +79,22 @@ span {
 
 </details>
 
-## 課題 2
+## セレクター 2
 
-この課題では、 HTML を変更せずに、この例のコンテンツの外見に以下の変更を加えていただきたいと思います。
+この課題を完成させるには、次のことを行ってください。
 
-- id が `special` の要素の背景を黄色にする。
-- `alert` クラスの要素に 1px の灰色の境界線をつける。
-- `alert` クラスを持つ要素が `stop` クラスも持つ場合、背景を赤にする。
-- `alert` クラスを持つ要素が `go` クラスも持つ場合、背景を緑色にする。
+1. id が `special` の要素の背景を黄色にする。
+2. `alert` クラスの要素に 1px の灰色の境界線をつける。
+3. `alert` クラスを持つ要素が `stop` クラスも持つ場合、背景を赤にする。
+4. `alert` クラスを持つ要素が `go` クラスも持つ場合、背景を緑色にする。
 
-最終結果は下記の画像のようになるはずです。
+この課題の出発点は次のようなものです。
 
-![課題 2 の解答の CSS を適用したテキスト。](selectors2.jpg)
+{{EmbedLiveSample("selectors2-start", "", "480px")}}
 
-以下のライブコードを更新して、完成例を再現してみてください。
+基盤となる出発点のコードは次の通りです。
 
-```html live-sample___class-id
+```html live-sample___selectors2-start live-sample___selectors2-finish
 <div class="container">
   <h1>これは見出しです</h1>
   <p>
@@ -100,9 +102,9 @@ span {
     <span class="alert stop">essum magis</span> kohlrabi welsh onion daikon
     amaranth tatsoi tomatillo melon azuki bean garlic.
   </p>
-  <h2 id="special">これはレベル 2 の見出しです</h2>
+  <h2 id="special">レベル 2 の見出し</h2>
   <p>Gumbo beet greens corn soko endive gumbo gourd.</p>
-  <h2>他のレベル 2 の見出しです</h2>
+  <h2>他のレベル 2 の見出し</h2>
   <p>
     <span class="alert go">Parsley shallot</span> courgette tatsoi pea sprouts
     fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
@@ -111,21 +113,23 @@ span {
 </div>
 ```
 
-```css live-sample___class-id
+```css live-sample___selectors2-start live-sample___selectors2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
-/* Add styles here */
+/* ここにスタイルを追加 */
 ```
 
-{{EmbedLiveSample("class-id", "", "320px")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("selectors2-finish", "", "480px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 これは、クラスセレクターと ID セレクターの違いを理解しているか、また、アイテムの複数のクラスを対象とする方法を理解しているかを検査するものです。
 
-```css
+```css live-sample___selectors2-finish
 #special {
   background-color: yellow;
 }
@@ -145,21 +149,21 @@ body {
 
 </details>
 
-## 課題 3
+## セレクター 3
 
 この課題では、 HTML に追加することなく、以下の変更を行ってください。
 
 - リンクをスタイル設定し、リンク状態をオレンジ色に、訪問済みリンクを緑色に、ホバー時のアンダーラインを除去する。
 - コンテナーの中にある最初の要素を font-size: 150% にし、その要素の最初の行を赤くする。
-- 表内の行を 1 つおきに選択し、背景色を #333 に、前景色を白にする。
+- 表内の行を 1 つおきに選択し、背景色を `#333333` に、前景色を白にする。
 
-最終結果は下記の画像のようになるはずです。
+この課題の出発点は次のようなものです。
 
-![課題 3 の解答の CSS を適用したテキスト。](selectors3.jpg)
+{{EmbedLiveSample("selectors3-start", "", "440px")}}
 
-以下のライブコードを更新して、完成例を再現してみてください。
+基盤となる出発点のコードは次の通りです。
 
-```html live-sample___pseudo
+```html live-sample___selectors3-start live-sample___selectors3-finish
 <div class="container">
   <p>
     Veggies es <a href="http://example.com">bonus vobis</a>, proinde vos postulo
@@ -202,7 +206,7 @@ body {
 </div>
 ```
 
-```css hidden live-sample___pseudo
+```css live-sample___selectors3-start live-sample___selectors3-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -220,21 +224,21 @@ th {
   padding: 0.2em;
   text-align: left;
 }
+
+/* ここにスタイルを追加 */
 ```
 
-```css live-sample___pseudo
-/* Add styles here */
-```
+スタイル設定を更新すると、このようになります。
 
-{{EmbedLiveSample("pseudo", "", "320px")}}
+{{EmbedLiveSample("selectors3-finish", "", "540px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 コンテンツに擬似クラス (`:first-child`) と擬似要素 (`::first-line`) を適用します。
 `a` 要素の`:link`、`:visited`、`:hover`の状態にスタイル設定を行い、 `:nth-child` 擬似クラスを使用して表の行を縞模様にします。
 
-```css
+```css live-sample___selectors3-finish
 .container p:first-child {
   font-size: 150%;
 }
@@ -256,27 +260,29 @@ a:hover {
 }
 
 tr:nth-child(even) {
-  background-color: #333;
-  color: #fff;
+  background-color: #333333;
+  color: white;
 }
 ```
 
 </details>
 
-## 課題 4
+## セレクター 4
 
-この課題では、以下のことを行っていただきたいと思います。
+この課題を完成させるには、次のようにします。
 
-- `<h2>` 要素の直後の段落を赤くする。
-- 箇条書きを取り除き、 ul の直接の子でクラスが `list` であるリストアイテムにのみ、 1px のグレーの下境界線を追加します。
+1. `<h2>` 要素の直後の段落を赤くしましょう。
+2. `<ul>` の直接の子要素で、クラス名 `list` をつけたリストアイテムを次のとおりスタイル設定しましょう。
+   - 行頭記号を除去する。
+   - それらに `1px` の灰色の境界線を設定しましょう。
 
-最終結果は下記の画像のようになるはずです。
+この課題の出発点は次のようなものです。
 
-![課題 4 の解答の CSS を適用したテキスト。](selectors4.jpg)
+{{EmbedLiveSample("selectors4-start", "", "500px")}}
 
-以下のライブコードを更新して、完成例を再現してみてください。
+基盤となる出発点のコードは次の通りです。
 
-```html live-sample___combinators
+```html live-sample___selectors4-start live-sample___selectors4-finish
 <div class="container">
   <h2>これは見出しです</h2>
   <p>見出しの後の段落です。</p>
@@ -298,58 +304,61 @@ tr:nth-child(even) {
 </div>
 ```
 
-```css live-sample___combinators
+```css live-sample___selectors4-start live-sample___selectors4-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
-/* Add styles here */
+
+/* ここにスタイルを追加 */
 ```
 
-{{EmbedLiveSample("combinators", "", "350px")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("selectors4-finish", "", "500px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 この課題では、さまざまな結合子を使用する方法を理解しているか調べます。
 適切な解答は次の通りです。
 
-```css
+```css live-sample___selectors4-finish
 h2 + p {
   color: red;
 }
 
 .list > li {
   list-style: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
 }
 ```
 
 </details>
 
-## 課題 5
+## セレクター 5
 
-この課題では、属性セレクターを使用して以下のように CSS を追加します。
+この課題を完了するには、属性セレクターを使用して、次の課題に対する解決策を提供してください。
 
-- `<a>` 要素に `title` 属性を対象とし、境界線をピンクにします (`border-color: pink`)。
-- `<a>` 要素のうち、 `href` 属性のどこかに `contact` という単語を含むものを対象とし、境界線をオレンジ色にします (`border-color: orange`)。
-- `<a>` 要素のうち、 `href` 属性が `https` で始まるものを対象とし、緑色の境界線 (`border-color: green`) を与えます。
+1. `<a>` 要素に `title` 属性を対象とし、境界線をピンクにします (`border-color: pink`)。
+2. `<a>` 要素のうち、 `href` 属性のどこかに `contact` という単語を含むものを対象とし、境界線をオレンジ色にします (`border-color: orange`)。
+3. `<a>` 要素のうち、 `href` 属性が `https` で始まるものを対象とし、緑色の境界線 (`border-color: green`) を与えます。
 
-最終結果は下記の画像のようになるはずです。
+この課題の出発点は次のようなものです。
 
-![異なる色の縁取りが施された 4 つのリンク。](selectors-attribute.png)
+{{EmbedLiveSample("selectors5-start", "", "300px")}}
 
-以下のライブコードを更新して、完成例を再現してみてください。
+基盤となる出発点のコードは次の通りです。
 
-```html live-sample___attribute-links
+```html live-sample___selectors5-start live-sample___selectors5-finish
 <ul>
-  <li><a href="https://example.com">Link 1</a></li>
-  <li><a href="http://example.com" title="Visit example.com">Link 2</a></li>
-  <li><a href="/contact">Link 3</a></li>
-  <li><a href="../contact/index.html">Link 4</a></li>
+  <li><a href="https://example.com">リンク 1</a></li>
+  <li><a href="http://example.com" title="Visit example.com">リンク 2</a></li>
+  <li><a href="/contact">リンク 3</a></li>
+  <li><a href="../contact/index.html">リンク 4</a></li>
 </ul>
 ```
 
-```css hidden live-sample___attribute-links
+```css live-sample___selectors5-start live-sample___selectors5-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -361,26 +370,27 @@ ul {
 }
 
 li {
-  margin: 0 0 0.5em 0;
+  margin-bottom: 0.5em;
 }
 
 a {
   display: block;
   padding: 0.5em;
 }
-```
 
-```css live-sample___attribute-links
 a {
   border: 5px solid grey;
 }
-/* Add styles here */
+
+/* ここにスタイルを追加 */
 ```
 
-{{EmbedLiveSample("attribute-links", "", "300px")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("selectors5-finish", "", "300px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 - title 属性を持つ要素を選択するには、角カッコ内に title を追加します (`a[title]`)。これにより、唯一タイトル属性を持つ 2 つ目のリンクが選択されます。
 
@@ -390,7 +400,7 @@ a {
 - `<a>` 要素の `href` 値が `https` で始まるものを対象とし、緑色の境界線 (`border-color: green`) を設定します。
   `href` 値が "https" で始まるものを探していくには、最初のリンクのみを選択するために `^=` を使用します。
 
-```css
+```css live-sample___selectors5-finish
 a[title] {
   border-color: pink;
 }
@@ -404,6 +414,4 @@ a[href^="https"] {
 
 </details>
 
-## 関連情報
-
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}

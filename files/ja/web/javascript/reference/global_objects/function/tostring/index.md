@@ -1,11 +1,10 @@
 ---
 title: Function.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toString()`** は {{jsxref("Function")}} インスタンスのメソッドで、関数のソースコードを表す文字列を返します。
 

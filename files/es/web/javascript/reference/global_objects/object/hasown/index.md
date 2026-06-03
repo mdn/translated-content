@@ -9,7 +9,8 @@ l10n:
 
 El método estático **`Object.hasOwn()`** devuelve `true` si el objeto especificado tiene la propiedad indicada como propiedad _propia_. Si la propiedad es heredada, o no existe, el método devuelve `false`.
 
-> **Nota:** `Object.hasOwn()` está pensada como un reemplazo de {{jsxref("Object.prototype.hasOwnProperty()")}}.
+> [!NOTE]
+> `Object.hasOwn()` está pensada como un reemplazo de {{jsxref("Object.prototype.hasOwnProperty()")}}.
 
 {{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
 
@@ -164,8 +165,8 @@ if (Object.hasOwn(foo, "prop")) {
 
 - [Polyfill de `Object.hasOwn` en `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
-- [Enumerabilidad y pertenencia de las propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerabilidad y pertenencia de las propiedades](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [Guía de JavaScript: Herencia revisada](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Guía de JavaScript: Herencia revisada](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

@@ -4,7 +4,7 @@ slug: Web/HTML/Reference/Attributes/crossorigin
 original_slug: Web/HTML/Attributes/crossorigin
 ---
 
-{{ HTMLElement("audio") }}, {{ HTMLElement("img") }}, {{ HTMLElement("link") }}, {{ HTMLElement("script") }}, {{ HTMLElement("video") }}에 있는 crossOrigin 속성은 element가 CORS 요청을 처리하는 방식을 명시하여 element가 fetch한 데이터를 [CORS](/ko/docs/Web/HTTP/CORS) 가능하게 합니다. 특정 element에서는 CORS 세팅 속성이 될 수도 있습니다.
+{{ HTMLElement("audio") }}, {{ HTMLElement("img") }}, {{ HTMLElement("link") }}, {{ HTMLElement("script") }}, {{ HTMLElement("video") }}에 있는 crossOrigin 속성은 element가 CORS 요청을 처리하는 방식을 명시하여 element가 fetch한 데이터를 [CORS](/ko/docs/Web/HTTP/Guides/CORS) 가능하게 합니다. 특정 element에서는 CORS 세팅 속성이 될 수도 있습니다.
 
 Media element의 `crossorigin` 속성은 CORS 세팅입니다.
 
@@ -32,7 +32,7 @@ Media element의 `crossorigin` 속성은 CORS 세팅입니다.
 
 ### 예시: credential 포함한 Webmanifest
 
-[Manifest](/ko/docs/Web/Manifest) 요청 시 credential이 필요하다면 same-origin의 리소스라 하여도 `use-credentials` 값을 사용해야 합니다.
+[Manifest](/ko/docs/Web/Progressive_web_apps/Manifest) 요청 시 credential이 필요하다면 same-origin의 리소스라 하여도 `use-credentials` 값을 사용해야 합니다.
 
 ```html
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
@@ -48,7 +48,7 @@ Media element의 `crossorigin` 속성은 CORS 세팅입니다.
 
 ## 더 보기
 
-- [Cross-Origin Resource Sharing (CORS)](/ko/docs/Web/HTTP/CORS)
-- [HTML attribute: `rel`](/ko/docs/Web/HTML/Attributes/rel)
+- [Cross-Origin Resource Sharing (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
+- [HTML attribute: `rel`](/ko/docs/Web/HTML/Reference/Attributes/rel)
 
 {{QuickLinksWithSubpages("/ko/docs/Web/HTML/")}}

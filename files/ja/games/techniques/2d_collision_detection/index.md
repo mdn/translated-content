@@ -3,8 +3,6 @@ title: 二次元の衝突検出
 slug: Games/Techniques/2D_collision_detection
 ---
 
-{{GamesSidebar}}
-
 二次元ゲームでの衝突を判定するアルゴリズムは、衝突する図形の種類に依存します（例：矩形と矩形、矩形と円、円と円など）。一般的には、「ヒットボックス」として知られる実体に応じたシンプルな汎用図形を保有することになるので、たとえ衝突がピクセル単位で完璧でなくても、十分に見栄えが良く、複数の実体にわたってパフォーマンスを発揮することができるのです。この記事では、二次元ゲームで衝突判定を提供するために使用される最も一般的なテクニックのレビューを提供します。
 
 ## 座標軸に沿った囲みボックス
@@ -48,7 +46,8 @@ rect2.bind("EnterFrame", function () {
 
 {{ EmbedLiveSample('Axis-Aligned_Bounding_Box', '700', '300') }}
 
-> **メモ:** [キャンバスや外部ライブラリーを使用しない別の例](https://jsfiddle.net/jlr7245/217jrozd/3/).
+> [!NOTE]
+> [キャンバスや外部ライブラリーを使用しない別の例](https://jsfiddle.net/jlr7245/217jrozd/3/).
 
 ## 円形衝突
 
@@ -127,7 +126,8 @@ circle2.bind("EnterFrame", () => {
 
 {{ EmbedLiveSample('Circle_Collision', '700', '300') }}
 
-> **メモ:** [キャンバスや 外部ライブラリーを使わない例はこちらです。](https://jsfiddle.net/jlr7245/teb4znk0/20/)
+> [!NOTE]
+> [キャンバスや 外部ライブラリーを使わない例はこちらです。](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
 ## 分割軸定理
 

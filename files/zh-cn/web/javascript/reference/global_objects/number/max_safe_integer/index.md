@@ -3,8 +3,6 @@ title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 ---
 
-{{JSRef}}
-
 **`Number.MAX_SAFE_INTEGER`** 静态数据属性表示在 JavaScript 中最大的安全整数（2<sup>53</sup> – 1）。
 
 对于更大的整数，请考虑使用 {{jsxref("BigInt")}}。

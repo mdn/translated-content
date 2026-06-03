@@ -3,8 +3,6 @@ title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 ---
 
-{{JSRef}}
-
 **`handler.setPrototypeOf()`** 方法主要用来拦截 {{jsxref("Object.setPrototypeOf()")}}.
 
 ## 语法

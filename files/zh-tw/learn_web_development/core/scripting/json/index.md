@@ -189,7 +189,6 @@ var section = document.querySelector("section");
    ```
 
    這樣就顧到至少 2 個參數。當然也有其他參數可選擇。但這個簡易範例只需要 2 個強制參數：
-
    - 在設立網路請求時，應使用 HTTP 函式。因為這裡只要檢索簡單的資料，所以用 [`GET`](/zh-TW/docs/Web/HTTP/Reference/Methods/GET) 就可以。
    - URL 提供請求目的地 — 這也就是我們剛剛儲存的 JSON 檔案網址。
 
@@ -212,7 +211,7 @@ var section = document.querySelector("section");
 
 在這裡，我們將所獲得的響應 (可到 [`response`](/zh-TW/docs/Web/API/XMLHttpRequest/response) 屬性中找到) 儲存到 `superHeroes` 變數之中。此變數現在會納入我們的 JSON。接著再把此 JSON 檔案送到 2 個函式呼叫。第一個函式呼叫會將正確資料填入 <`header>`；第二個函式呼叫則會為團隊中的各個英文建立資訊卡，再插入至 `<section>` 內。
 
-當於請求物件上觸發載入事件時，會執行一個事件處理器。我們就將程式碼包裹至此處理器之中 (參閱 [`onload`](/zh-TW/docs/Web/API/XMLHttpRequest/load_event)) — 只要成功回傳響應，就會觸發載入事件。之所以這樣做，是為了確保當我們要以 `request.response` 進行某件事時，此 `request.response` 絕對可用。
+當於請求物件上觸發載入事件時，會執行一個事件處理器。我們就將程式碼包裹至此處理器之中 (參閱 [`onload`](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/load_event)) — 只要成功回傳響應，就會觸發載入事件。之所以這樣做，是為了確保當我們要以 `request.response` 進行某件事時，此 `request.response` 絕對可用。
 
 ### 產生標頭
 

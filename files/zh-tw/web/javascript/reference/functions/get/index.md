@@ -3,8 +3,6 @@ title: getter
 slug: Web/JavaScript/Reference/Functions/get
 ---
 
-{{jsSidebar("Functions")}}
-
 **`get`** 語法會將物件屬性，綁定到屬性被檢索時，所呼叫的函式。
 
 {{InteractiveExample("JavaScript Demo: Functions Getter")}}

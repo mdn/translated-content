@@ -1,36 +1,51 @@
 ---
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Objects")}}
+**`Infinity`** 全域屬性是一個代表無限大的數值。
 
-全域 **`Infinity`** 屬性是一個表示無窮大的數值。
+{{InteractiveExample("JavaScript Demo: Infinity")}}
 
-{{js_property_attributes(0,0,0)}}
+```js interactive-example
+const maxNumber = 10 ** 1000; // 最大正數
 
-## 語法
+if (maxNumber === Infinity) {
+  console.log("我們稱之為無限大！");
+  // 預期輸出：「我們稱之為無限大！」
+}
 
-```js-nolint
-Infinity
+console.log(1 / maxNumber);
+// 預期輸出：0
 ```
+
+## 值
+
+與 {{jsxref("Number.POSITIVE_INFINITY")}} 的數值相同。
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 描述
 
-`Infinity` 是全域物件屬性，即它是全域範圍內的變數。
+`Infinity` 是*全域物件*的一個屬性。換句話說，它是一個在全域作用域中的變數。
 
-`Infinity` 的初始值是 {{jsxref("Number.POSITIVE_INFINITY")}} `Infinity` 值（正無窮大）值大於其他任何數值。該值在數學上表現為無窮大。例如，任何乘以 `Infinity` 的正整數都是 `Infinity`，除以 `Infinity` 的任何數都是 0。
+`Infinity`（正無限大）這個值比任何其他數字都大。
 
-按照 ECMAScript 5 規範，在 JavaScript 1.8.5 / Firefox 4 實作的 `Infinity` 乃唯讀屬性。
+這個值的行為與數學上的無限大略有不同；詳情請參見 {{jsxref("Number.POSITIVE_INFINITY")}}。
 
 ## 範例
+
+### 使用 Infinity
 
 ```js
 console.log(Infinity); /* Infinity */
 console.log(Infinity + 1); /* Infinity */
-console.log(Math.pow(10, 1000)); /* Infinity */
+console.log(10 ** 1000); /* Infinity */
 console.log(Math.log(0)); /* -Infinity */
 console.log(1 / Infinity); /* 0 */
+console.log(1 / 0); /* Infinity */
 ```
 
 ## 規範

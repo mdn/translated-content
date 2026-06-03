@@ -37,11 +37,11 @@ openWindow(url)
 ### 예외
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : 앱의 출처에 [임시 활성화](/ko/docs/Web/Security/User_activation)된 창이 없는 경우 이 예외로 프로미스가 거부됩니다.
+  - : 앱의 출처에 [임시 활성화](/ko/docs/Web/Security/Defenses/User_activation)된 창이 없는 경우 이 예외로 프로미스가 거부됩니다.
 
 ## 보안 요구 사항
 
-- 앱의 출처에 적어도 하나의 창은 [임시 활성화](/ko/docs/Web/Security/User_activation)되어 있어야 합니다.
+- 앱의 출처에 적어도 하나의 창은 [임시 활성화](/ko/docs/Web/Security/Defenses/User_activation)되어 있어야 합니다.
 
 ## 예제
 

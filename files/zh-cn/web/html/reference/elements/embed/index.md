@@ -13,8 +13,8 @@ slug: Web/HTML/Reference/Elements/embed
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, embedded content, interactive content, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>, embedded content, interactive content, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -72,5 +72,3 @@ slug: Web/HTML/Reference/Elements/embed
 ## 参见
 
 - 其他用于嵌入各种类型内容的元素还包括：{{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}} 和 {{HTMLElement("video")}}.
-
-{{ HTMLSidebar }}

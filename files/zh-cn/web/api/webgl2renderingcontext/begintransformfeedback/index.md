@@ -16,9 +16,7 @@ void gl.beginTransformFeedback(primitiveMode);
 ### 参数
 
 - `primitiveMode`
-
   - : A {{domxref("GLenum")}} specifying the output type of the primitives that will be recorded into the buffer objects that are bound for transform feedback. 可能的值：
-
     - `gl.POINTS`
     - `gl.LINES`
     - `gl.TRIANGLES`

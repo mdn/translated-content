@@ -30,7 +30,6 @@ captureStream(frameRate)
 ### 例外
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : `frameRate` が負の値であった場合に発生します。
 
 - `SecurityError` {{domxref("DOMException")}}

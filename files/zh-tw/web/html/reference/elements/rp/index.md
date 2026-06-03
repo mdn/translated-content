@@ -3,8 +3,6 @@ title: <rp>：Ruby 回退括號元素
 slug: Web/HTML/Reference/Elements/rp
 ---
 
-{{HTMLSidebar}}
-
 **`<rp>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於為不支援使用 {{HTMLElement("ruby")}} 元素顯示 ruby 注釋的瀏覽器提供回退括號。每個 `<rp>` 元素應該包裹著包含注釋文字的 {{HTMLElement("rt")}} 元素的開始和結束括號。
 
 {{InteractiveExample("HTML Demo: &lt;rp&gt;", "tabbed-shorter")}}

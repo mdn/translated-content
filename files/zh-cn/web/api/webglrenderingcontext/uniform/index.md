@@ -39,9 +39,7 @@ uniform4iv(location, value)
 - `location`
   - : {{domxref("WebGLUniformLocation")}} 对象包含了将要修改的 uniform 属性位置。
 - `value, v0, v1, v2, v3`
-
   - : 新的值将被用于 uniform 变量。可能的类型：
-
     - 浮点值 {{jsxref("Number")}}(方法名跟"f").
     - 浮点数组 (例如 {{jsxref("Float32Array")}} 或 {{jsxref("Array")}} 的数组) 用于浮点型向量方法 (方法名跟 "fv").
     - 整型值 {{jsxref("Number")}} (方法名跟"i").

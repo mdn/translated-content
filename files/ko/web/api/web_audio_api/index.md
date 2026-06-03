@@ -29,7 +29,8 @@ Web Audio API는 **오디오 컨텍스트** 내부의 오디오 조작을 핸들
 
 Web Audio API는 오디오가 어떻게 *공간화*될지 컨트롤할 수 있도록 합니다. *소스-리스너 모델*을 기반으로 하는 시스템을 사용하면 *패닝 모델*과 _거리-유도 감쇄_ 혹은 움직이는 소스(혹은 움직이는 청자)를 통해 유발된 _도플러 시프트_ 컨트롤이 가능합니다.
 
-> **참고:** [Web Audio API의 기본 개념](/ko/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) 문서에서 Web Audio API 이론에 대한 더 자세한 내용을 읽을 수 있습니다.
+> [!NOTE]
+> [Web Audio API의 기본 개념](/ko/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) 문서에서 Web Audio API 이론에 대한 더 자세한 내용을 읽을 수 있습니다.
 
 ## Web Audio API 타겟 사용자층
 
@@ -204,7 +205,7 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 - [Web Audio API의 기본 개념](/ko/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
 - [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [고급 기술: 소리 생성, 시퀸싱, 타이밍, 스케쥴링](/ko/docs/Web/API/Web_Audio_API/Advanced_techniques)
-- [미디어와 Web Audio API에 대한 자동 재생 가이드](/ko/docs/Web/Media/Autoplay_guide)
+- [미디어와 Web Audio API에 대한 자동 재생 가이드](/ko/docs/Web/Media/Guides/Autoplay)
 - [IIR 필터 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_IIR_filters)
 - [Web Audio API 시각화](/ko/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio 공간화 기초](/ko/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

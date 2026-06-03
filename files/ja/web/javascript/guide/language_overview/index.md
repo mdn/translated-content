@@ -2,10 +2,8 @@
 title: JavaScript 言語概要
 slug: Web/JavaScript/Guide/Language_overview
 l10n:
-  sourceCommit: 8cf6d8c10adf3ce5370f8a3f180bec11112d4d44
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
-
-{{jsSidebar}}
 
 JavaScript はマルチパラダイムの動的言語であり、型や演算子、標準組み込みオブジェクト、メソッドがあります。その構文は Java や C 言語に由来するので、それらの言語の多くの構造が JavaScript にも同様に適用できます。 JavaScript は、[オブジェクトプロトタイプ](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)やクラスによるオブジェクト指向プログラミングに対応しています。また、JavaScript は関数型プログラミングもサポートします。関数が[第一級](/ja/docs/Glossary/First-class_Function)オブジェクトであり、式から容易に作成し、他のオブジェクトと同じように受け渡しすることができます。
 
@@ -564,10 +562,10 @@ avg(2, 3, 4, 5); // 3.5
 
 関数が引数のリストを受け入れ、それらがすでに配列にある場合、関数呼び出しの中で[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使って、配列を要素のリストとして展開することができます。例えば `avg(...numbers)` のようにします。
 
-JavaScript には名前付き引数がないと述べました。しかし、オブジェクトを便利にパックしたり展開したりできる[オブジェクト分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して実装することは可能です。
+JavaScript には名前付き引数がないと述べました。しかし、オブジェクトを便利にパックしたり展開したりできる[オブジェクト構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して実装することは可能です。
 
 ```js
-// { } 中括弧はオブジェクト野分割代入する
+// { } 中括弧はオブジェクトを構造分解する
 function area({ width, height }) {
   return width * height;
 }
@@ -735,7 +733,7 @@ class Admin extends withAuthentication(Person) {
 }
 ```
 
-静的プロパティは先頭に `static` を付けて作成します。プライベートプロパティは先頭にハッシュ `#` を付けて作成します（`private` ではありません）。ハッシュはプロパティ名の一部です。（`#` は Python の `_` と考えてください。）他の多くの言語とは異なり、派生クラスであっても、クラス本体の外でプライベートプロパティを読み取る方法はありません。
+静的プロパティは先頭に `static` を付けて作成します。プライベートフィールドとメソッドは、先頭にハッシュ `#` を付けて作成します（`private` ではありません）。ハッシュは要素名の不可欠な部分であり、通常の文字列キーを持つプロパティと判別するために用いられます。（`#` は Python の `_` と考えてください。）他の多くの言語とは異なり、派生クラスであっても、クラス本体の外でプライベート要素を読み取る方法はありません。
 
 様々なクラス機能の詳細なガイドについては、[ガイドページ](/ja/docs/Web/JavaScript/Guide/Using_classes)を参照してください。
 

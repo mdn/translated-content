@@ -11,7 +11,8 @@ original_slug: WebAssembly/JavaScript_interface/instantiate_static
 - 기본 오버로드는 [typed array](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 또는 {{jsxref ( "ArrayBuffer")}}의 형태로 WebAssembly 바이너리 코드를 취해 컴파일 및 인스턴스화를 한 번에 수행합니다. 반환 된 Promise는 컴파일 된 {{jsxref ( "WebAssembly.Module")}} 및 첫 번째 {{jsxref ( "WebAssembly.Instance")}}로 해석됩니다.
 - 두번째 오버로드는 이미 컴파일 된 {{jsxref ( "WebAssembly.Module")}}을 취하여 해당 `Module`의 `Instance`로 해석되는 `Promise`을 반환합니다. 이 overload는 `Module`이 이미 컴파일된 경우 유용합니다.
 
-> **경고:** **중요 :** **이 방법은 wasm 모듈을 가져와 인스턴스화하는 가장 효율적인 방법은 아닙니다. 가능하다면 원시 바이트 코드에서 모듈을 모두 한 단계로 가져오고, 컴파일하고 인스턴스화하는 대신 최신 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 메서드를 사용해야합니다. {{jsxref ( "ArrayBuffer")}} 로의 변환이 필요합니다.**
+> [!WARNING]
+> **중요 :** **이 방법은 wasm 모듈을 가져와 인스턴스화하는 가장 효율적인 방법은 아닙니다. 가능하다면 원시 바이트 코드에서 모듈을 모두 한 단계로 가져오고, 컴파일하고 인스턴스화하는 대신 최신 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 메서드를 사용해야합니다. {{jsxref ( "ArrayBuffer")}} 로의 변환이 필요합니다.**
 
 ## Syntax
 
@@ -33,7 +34,7 @@ Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
 두개의 필드를 포함하는 `ResultObject`를 가진 `Promise`를 반환:
 
 - `module`: 컴파일 된 WebAssembly 모듈을 나타내는 {{jsxref ( "WebAssembly.Module")}} 객체입니다. 이 `Module`은 {{domxref("Worker.postMessage", "postMessage()")}}를 통해 공유되거나 [cached in IndexedDB](/ko/docs/WebAssembly)로 다시 인스턴스화 될 수 있습니다.
-- `instance`: [Exported WebAssembly functions](/ko/docs/WebAssembly/Exported_functions)을 포함하는 {{jsxref ( "WebAssembly.Instance")}} 객체입니다.
+- `instance`: [Exported WebAssembly functions](/ko/docs/WebAssembly/Guides/Exported_functions)을 포함하는 {{jsxref ( "WebAssembly.Instance")}} 객체입니다.
 
 #### Exceptions
 
@@ -69,7 +70,7 @@ A `Promise` that resolves to an {{jsxref("WebAssembly.Instance")}} object.
 
 ### First overload example
 
-fetch를 사용하여 일부 WebAssembly 바이트 코드를 가져온 후 우리는 {{jsxref ( "WebAssembly.instantiate ()")}} 함수를 사용하여 모듈을 컴파일하고 인스턴스화하여 해당 프로세스에서 JavaScript 함수를 WebAssembly 모듈로 가져옵니다. 그런 다음 `Instance`에서 [Exported WebAssembly function](/ko/docs/WebAssembly/Exported_functions)를 호출합니다.
+fetch를 사용하여 일부 WebAssembly 바이트 코드를 가져온 후 우리는 {{jsxref ( "WebAssembly.instantiate ()")}} 함수를 사용하여 모듈을 컴파일하고 인스턴스화하여 해당 프로세스에서 JavaScript 함수를 WebAssembly 모듈로 가져옵니다. 그런 다음 `Instance`에서 [Exported WebAssembly function](/ko/docs/WebAssembly/Guides/Exported_functions)를 호출합니다.
 
 ```js
 var importObject = {
@@ -133,5 +134,5 @@ onmessage = function (e) {
 ## See also
 
 - [WebAssembly](/ko/docs/WebAssembly) overview page
-- [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly concepts](/ko/docs/WebAssembly/Guides/Concepts)
+- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Guides/Using_the_JavaScript_API)

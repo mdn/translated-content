@@ -1,40 +1,43 @@
 ---
-title: WebGLRenderingContext.linkProgram()
+title: WebGLRenderingContext：linkProgram() 方法
 slug: Web/API/WebGLRenderingContext/linkProgram
+l10n:
+  sourceCommit: 2b942f0d8f84641c233d701cb5d1f4e6c23120ff
 ---
 
-{{APIRef("WebGL")}}
-{{domxref("WebGLRenderingContext")}} 接口的**linkProgram()**方法链接给定的{{domxref("WebGLProgram")}}，从而完成为程序的片元和顶点着色器准备 GPU 代码的过程。
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
+
+{{domxref("WebGLRenderingContext")}} 接口的 **`linkProgram()`** 方法链接给定的{{domxref("WebGLProgram")}}，从而完成为程序的片元和顶点着色器准备 GPU 代码的过程。
 
 ## 语法
 
-```plain
-void gl.linkProgram(program);
+```js-nolint
+linkProgram(program)
 ```
 
 ### 参数
 
-- program
-  - : 一个用于链接的 {{domxref("WebGLProgram")}} 。
+- `program`
+  - : 一个用于链接的 {{domxref("WebGLProgram")}}。
 
 ### 返回值
 
-None.
+无（{{jsxref("undefined")}}）。
 
-## 例子
+## 示例
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
-// Attach pre-existing shaders
+// 附加预先存在的着色器
 gl.attachShader(program, vertexShader);
 gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
 if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-  var info = gl.getProgramInfoLog(program);
-  throw new Error("Could not compile WebGL program. \n\n" + info);
+  const info = gl.getProgramInfoLog(program);
+  throw new Error(`无法编译 WebGL 程序。\n\n${info}`);
 }
 ```
 
@@ -46,7 +49,7 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{domxref("WebGLRenderingContext.createProgram()")}}
 - {{domxref("WebGLRenderingContext.deleteProgram()")}}

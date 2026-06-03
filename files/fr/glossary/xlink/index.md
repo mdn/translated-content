@@ -1,9 +1,9 @@
 ---
 title: XLink
 slug: Glossary/XLink
+l10n:
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
-
-{{GlossarySidebar}}
 
 XLink est un standard du W3C qui sert à décrire des liens entre documents XML ou entre XML et d'autres documents. Un certain nombre de ses comportements est laissé à l'implémentation qui détermine comment ils doivent être gérés.
 
@@ -13,13 +13,8 @@ Pour ceux qui ont trouvé XLink 1.0 lourd pour les liens normaux, XLink 1.1 supp
 
 XLink est utilisé dans [SVG](/fr/docs/Web/SVG), [MathML](/fr/docs/Web/MathML) et d'autres standards importants.
 
-### Spécification
-
-- [XLink 1.0](https://www.w3.org/TR/xlink/)
-- [XLink 1.1](https://www.w3.org/TR/xlink11/) (actuellement au stade de brouillon de travail)
-
 ### Voir aussi
 
-- [XML dans Mozilla](/fr/docs/XML_dans_Mozilla)
-- [Code snippets:getAttributeNS](/fr/docs/Archive/Add-ons/Code_snippets/getAttributeNS) - un wrapper à utiliser avec les navigateurs qui ne supportent par cette méthode DOM
-- [Code snippets:xml:base function](/fr/docs/Archive/Add-ons/Code_snippets/XML/base_function) - une tentative grossière de trouver un XLink complet en se basant sur un attribut xlink:href (ou \<xi:include href=>) et sur son xml:base ou celui de son ancêtre.
+- [XLink 1.1 <sup>(angl.)</sup>](https://www.w3.org/TR/xlink/)
+- [XML](/fr/docs/Web/XML)
+- [Extrait de code&nbsp;: getAttributeNS](/fr/docs/Web/API/Element/getAttributeNS) — un wrapper pour gérer certains navigateurs ne prenant pas en charge cette méthode DOM

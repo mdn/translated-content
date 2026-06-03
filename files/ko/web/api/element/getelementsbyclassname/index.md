@@ -30,7 +30,8 @@ var elements = element.getElementsByClassName(names);
 
 반대도 역시 마찬가지입니다. 클래스명이 더 이상 `names` 와 일치하지 않게 되면, collection으로 부터 즉시 제거됩니다.
 
-> **참고:** [호환모드](/ko/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)에서는 클래스명의 대소문자를 구분하지 않습니다. 그 외의 경우에는, 대소문자를 구분합니다.
+> [!NOTE]
+> [호환모드](/ko/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)에서는 클래스명의 대소문자를 구분하지 않습니다. 그 외의 경우에는, 대소문자를 구분합니다.
 
 ## Examples
 

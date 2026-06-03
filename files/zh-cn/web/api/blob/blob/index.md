@@ -19,7 +19,6 @@ new Blob(blobParts, options)
 ### 参数
 
 - `blobParts` {{optional_inline}}
-
   - : 一个[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，比如 {{jsxref("Array")}}，包含 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("Blob")}}、字符串或者任意这些元素的混合，这些元素将会被放入 {{domxref("Blob")}} 中。字符串应该是格式良好的 Unicode，而单独代理项（lone surrogate）会使用和 {{jsxref("String.prototype.toWellFormed()")}} 相同的算法进行清理。
 
 - `options` {{optional_inline}}

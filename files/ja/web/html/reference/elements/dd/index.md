@@ -10,7 +10,7 @@ l10n:
 
 **`<dd>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明リスト要素 ({{HTMLElement("dl")}}) 内で、その前の用語 ({{HTMLElement("dt")}}) の説明、定義、値などを示します。
 
-{{InteractiveExample("HTML Demo: &lt;dd&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;dd&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>Cryptids of Cornwall:</p>
@@ -60,7 +60,7 @@ dd {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -69,7 +69,7 @@ dd {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>

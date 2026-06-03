@@ -7,7 +7,8 @@ l10n:
 
 {{jsSidebar("Statements")}}{{Deprecated_Header}}
 
-> **참고:** `with`문의 사용은 권장되지 않습니다. 혼란스러운 버그와 호환성 문제의 원인이 될 수 있고 최적화를 불가능하게 만들며 [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서 금지되어 있기 때문입니다. 속성에 접근하고자 하는 객체를 임시 변수에 할당하는 것이 대안으로 권장됩니다.
+> [!NOTE]
+> `with`문의 사용은 권장되지 않습니다. 혼란스러운 버그와 호환성 문제의 원인이 될 수 있고 최적화를 불가능하게 만들며 [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서 금지되어 있기 때문입니다. 속성에 접근하고자 하는 객체를 임시 변수에 할당하는 것이 대안으로 권장됩니다.
 
 `with`문은 문의 스코프 체인을 확장합니다.
 
@@ -107,7 +108,7 @@ with (Math) {
 
 ### 현재 스코프에서 속성 구조 분해 할당을 사용하여 with문 피하기
 
-대부분의 경우 [속성 구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 통해서 `with` 사용을 피할 수 있습니다. 여기서는 `with`가 추가 스코프를 생성하는 동작을 모방하기 위해 추가 블록을 만들었지만 실제 사용에서는 이 블록을 보통 생략할 수 있습니다.
+대부분의 경우 [속성 구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)을 통해서 `with` 사용을 피할 수 있습니다. 여기서는 `with`가 추가 스코프를 생성하는 동작을 모방하기 위해 추가 블록을 만들었지만 실제 사용에서는 이 블록을 보통 생략할 수 있습니다.
 
 ```js
 let a, x, y;

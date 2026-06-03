@@ -15,7 +15,6 @@ slug: Glossary/Graceful_degradation
 2. [一般的な HTML と CSS の問題への対処](/ja/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS)
 3. [機能検出の実装](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)
 4. 関連用語:
-
    1. {{Glossary("Graceful degradation", "グレースフルデグラデーション")}}
    2. {{Glossary("Polyfill", "ポリフィル")}}
    3. {{Glossary("Progressive enhancement", "プログレッシブエンハンスメント")}}

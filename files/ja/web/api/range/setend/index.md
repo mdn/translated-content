@@ -47,7 +47,8 @@ const endOffset = endNode.childNodes.length;
 range.setEnd(endNode, endOffset);
 ```
 
-> **メモ:** `setEnd()` は {{domxref("Range.setStart", "setStart()")}} と組み合わせて使用するのが一般的です。
+> [!NOTE]
+> `setEnd()` は {{domxref("Range.setStart", "setStart()")}} と組み合わせて使用するのが一般的です。
 
 ## 仕様書
 

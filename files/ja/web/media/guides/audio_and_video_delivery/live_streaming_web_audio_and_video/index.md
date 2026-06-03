@@ -135,7 +135,8 @@ Opus is a royalty-free and open format that manages to optimize quality at vario
 
 Currently, Opus is supported by Firefox desktop and mobile as well as the latest versions of desktop Chrome and Opera.
 
-> **メモ:** [Opus is a mandatory format](https://tools.ietf.org/html/draft-ietf-rtcweb-audio-05) for WebRTC browser implementations.
+> [!NOTE]
+> [Opus is a mandatory format](https://tools.ietf.org/html/draft-ietf-rtcweb-audio-05) for WebRTC browser implementations.
 
 ### MP3, AAC, Ogg Vorbis
 

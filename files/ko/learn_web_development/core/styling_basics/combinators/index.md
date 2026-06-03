@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
 
 우리가 살펴볼 최종 선택자는 결합자라고 합니다. 다른 선택자를 서로 유용한 관계와 문서의 콘텐츠 위치를 제공하는 방식으로 결합하기 때문입니다.
 
@@ -21,13 +21,13 @@ l10n:
           >설치된 기본 소프트웨어</a
         >,
         <a
-          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >파일 작업</a
         >에 대한 기본 지식, HTML 기초 (
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 입문</a
         > 학습), CSS 작동 방식에 대한 아이디어 (
-        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습)
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS 첫 번째 단계</a> 학습)
       </td>
     </tr>
     <tr>
@@ -112,4 +112,4 @@ ul > li[class="a"] {
 
 이 부분은 선택자에 대한 강의 마지막 세션입니다. 다음으로 CSS의 또 다른 중요한 부분인 [cascade, specificity, and inheritance](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)으로 이동합니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}

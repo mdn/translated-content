@@ -18,7 +18,6 @@ isEnabled(cap)
 ### 参数
 
 - `cap`
-
   - : {{domxref("GLenum")}} 指定待检测的 WebGL 功能项。可能的值有：
 
     | Constant                      | Description                                                                                                                         |

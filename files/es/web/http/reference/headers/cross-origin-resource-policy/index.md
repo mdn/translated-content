@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy
 original_slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
 ---
 
-{{HTTPSidebar}}
-
 La respuesta del encabezado HTTP **`Cross-Origin-Resource-Policy`** transmite un deseo de que el navegador bloquee peticiones no-cors cross-origin/cross-site al recurso dado
 
 | Tipo de encabezado                                                       | {{Glossary("Response header", "Respuesta del encabezado")}} |

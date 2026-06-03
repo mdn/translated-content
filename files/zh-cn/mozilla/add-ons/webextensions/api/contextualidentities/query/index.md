@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 获取有关所有场景身份的信息，或获取与给定过滤参数匹配的场景身份的信息。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -22,9 +20,7 @@ let getContext = browser.contextualIdentities.query(
 ### 参数
 
 - `details`
-
   - : `object`。一个用于过滤返回的场景身份的对象。可以包含以下任意属性：
-
     - `name` {{optional_inline}}
       - : `string`。仅返回具有此名称的场景身份。
 

@@ -1,49 +1,58 @@
 ---
-title: document.createTextNode
+title: "Document : méthode createTextNode()"
+short-title: createTextNode()
 slug: Web/API/Document/createTextNode
+l10n:
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{APIRef("DOM")}}
 
-Crée un nouveau nœud de texte.
+La méthode **`createTextNode()`** de l'interface {{DOMxRef("Document")}} crée un nouveau nœud {{DOMxRef("Text")}}. Cette méthode peut être utilisée pour échapper les caractères HTML.
 
 ## Syntaxe
 
-```js
-var text = document.createTextNode(données);
+```js-nolint
+createTextNode(data)
 ```
 
-- `texte` est un nœud de texte.
-- `donnees` est une chaîne contenant les données à placer dans le nœud de texte.
+### Paramètres
 
-## Exemple
+- `data`
+  - : Une chaîne de caractères contenant les données à placer dans le nœud de texte.
+
+### Valeur de retour
+
+Un nœud {{DOMxRef("Text")}}.
+
+## Exemples
 
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>createTextNode example</title>
-    <script>
-      function addTextNode(text) {
-        var newtext = document.createTextNode(text),
-          p1 = document.getElementById("p1");
+<button>OUI&nbsp;!</button>
+<button>NON&nbsp;!</button>
+<button>NOUS POUVONS&nbsp;!</button>
 
-        p1.appendChild(newtext);
-      }
-    </script>
-  </head>
+<hr />
 
-  <body>
-    <button onclick="addTextNode('YES! ');">YES!</button>
-    <button onclick="addTextNode('NO! ');">NO!</button>
-    <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
-
-    <hr />
-
-    <p id="p1">First line of paragraph.</p>
-  </body>
-</html>
+<p id="p1">La première ligne du paragraphe.</p>
 ```
+
+```js
+function addTextNode(text) {
+  const nouveauTexte = document.createTextNode(text);
+  const p1 = document.getElementById("p1");
+
+  p1.appendChild(nouveauTexte);
+}
+
+document.querySelectorAll("button").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    addTextNode(`${event.target.textContent} `);
+  });
+});
+```
+
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 

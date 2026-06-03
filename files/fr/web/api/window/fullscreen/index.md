@@ -1,17 +1,18 @@
 ---
-title: Window.fullScreen
+title: "Window : propriété fullScreen"
+short-title: fullScreen
 slug: Web/API/Window/fullScreen
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}{{Non-standard_Header}}
 
-La propriété **`fullScreen`**, rattachée à l'interface `Window`, indique si la fenêtre est affichée en mode plein écran ou non.
-
-Avec des privilèges sur le chrome, cette propriété est accessible en lecture-écriture, sinon elle est uniquement accessible en lecture. Il faut garder à l'esprit que tenter de modifier cette propriété sans disposer des privilèges sur le chrome ne déclenchera pas d'exception mais échouera silencieusement. Ce comportement évite de casser les scripts qui modifient cette propriété pour Internet Explorer.
+La propriété **`fullScreen`** de l'interface {{DOMxRef("Window")}} indique si la fenêtre est affichée en mode plein écran ou non.
 
 ## Valeur
 
-Une valeur booléenne qui indique si la fenêtre est en plein écran.
+Une valeur booléenne avec `true` signifiant que la fenêtre est en mode plein écran et `false` signifiant qu'elle ne l'est pas.
 
 ## Notes
 

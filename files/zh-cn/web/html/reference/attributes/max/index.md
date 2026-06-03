@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a242996610e5a3335fcd0c5ee3c84d5543b9b8dd
 ---
 
-{{HTMLSidebar}}
-
 **`max`** 属性定义了输入字段所能接受的最大值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 大于此值，则该元素将不能通过[校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)。此值必须大于等于 [`min`](/zh-CN/docs/Web/HTML/Reference/Attributes/min) 属性的值。如果存在 `max` 属性但未指定或无效，则 `max` 值不会被应用。如果 `max` 属性有效，并且非空值大于 `max` 属性所允许的最大值，则约束验证将阻止表单提交。
 
 max 属性适用于数值类型的输入，包括 {{HTMLElement("input/date", "date")}}、{{HTMLElement("input/month", "month")}}、{{HTMLElement("input/week", "week")}}、{{HTMLElement("input/time", "time")}}、{{HTMLElement("input/datetime-local", "datetime-local")}}、{{HTMLElement("input/number", "number")}} 和 {{HTMLElement("input/range", "range")}} 类型，以及 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素。它是一个数值，用于指定表单控件被认为有效的最大正值。
@@ -60,14 +58,14 @@ max 属性适用于数值类型的输入，包括 {{HTMLElement("input/date", "d
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
-      <td><a href="/zh-CN/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/zh-CN/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code>&#x3C;input type="number" min="0" step="5" max="100"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
-      <td><a href="/zh-CN/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/zh-CN/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code>&#x3C;input type="range" min="60" step="5" max="100"></code>
       </td>
@@ -98,7 +96,7 @@ max 属性适用于数值类型的输入，包括 {{HTMLElement("input/date", "d
   <tbody>
     <tr>
       <td>{{HTMLElement("progress")}}</td>
-      <td><a href="/zh-CN/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/zh-CN/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code
           >&#x3C;progress id="file" max="100" value="70"> 70%
@@ -108,7 +106,7 @@ max 属性适用于数值类型的输入，包括 {{HTMLElement("input/date", "d
     </tr>
     <tr>
       <td>{{HTMLElement("meter")}}</td>
-      <td><a href="/zh-CN/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/zh-CN/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code
           >&#x3C;meter id="fuel" min="0" max="100" low="33" high="66"

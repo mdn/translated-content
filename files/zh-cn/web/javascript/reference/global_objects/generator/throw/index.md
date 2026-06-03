@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
-
 {{jsxref("Generator")}} 实例的 **`throw()`** 方法的作用就好像一个 `throw` 语句被插入到生成器主体的当前暂停位置，这会通知生成器错误的情况并允许其处理错误，或者执行清理和自行关闭。
 
 ## 语法

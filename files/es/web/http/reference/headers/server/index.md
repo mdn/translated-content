@@ -4,15 +4,13 @@ slug: Web/HTTP/Reference/Headers/Server
 original_slug: Web/HTTP/Headers/Server
 ---
 
-{{HTTPSidebar}}
-
 La cabecera **`Server`** contiene la información acerca del software usado por el servidor original encargado de la solicitud.
 
 La información larga y detallada debe de ser evitada en las cabeceras Server ya que puede revelar detalles de implementación que pueden hacer (un poco) más fácil para los atacantes encontrar y explotar huecos de seguridad.
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## Sintaxis
 

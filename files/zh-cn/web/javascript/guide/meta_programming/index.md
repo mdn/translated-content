@@ -3,7 +3,7 @@ title: 元编程
 slug: Web/JavaScript/Guide/Meta_programming
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Modules")}}
+{{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Modules")}}
 
 {{jsxref("Proxy")}} 和 {{jsxref("Reflect")}} 对象允许你拦截并自定义基本语言操作（例如属性查找、赋值、枚举和函数调用等）。借助这两个对象，你可以在 JavaScript 进行元级别的编程。
 

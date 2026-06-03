@@ -3,8 +3,6 @@ title: "CSP: worker-src"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src
 ---
 
-{{HTTPSidebar}}
-
 HTTP {{HTTPHeader("Content-Security-Policy")}}（内容安全策略，CSP）中的 **`worker-src`** 指令指定了 {{domxref("Worker")}}、{{domxref("SharedWorker")}} 或 {{domxref("ServiceWorker")}} 脚本的有效来源。
 
 <table class="properties">

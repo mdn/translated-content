@@ -60,7 +60,8 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
 
 ![Screenshot of the DevTools console showing the correct versionnumber.](version.png)
 
-> **참고:**libwebp는 현재 버전 인 a.b.c를 16 진수 0xabc로 반환합니다. 예를 들어 v0.6.1은 0x000601 = 1537로 인코딩됩니다.
+> [!NOTE]
+> libwebp는 현재 버전 인 a.b.c를 16 진수 0xabc로 반환합니다. 예를 들어 v0.6.1은 0x000601 = 1537로 인코딩됩니다.
 
 ### Get an image from JavaScript into Wasm
 
@@ -166,7 +167,8 @@ const result = new Uint8Array(resultView);
 api.free_result(resultPointer);
 ```
 
-> **참고:** `new Uint8Array(someBuffer)`는 `new Uint8Array(someTypedArray)`가 데이터를 복사하는 동안 동일한 memory chunk에 새로운 뷰를 생성합니다.
+> [!NOTE]
+> `new Uint8Array(someBuffer)`는 `new Uint8Array(someTypedArray)`가 데이터를 복사하는 동안 동일한 memory chunk에 새로운 뷰를 생성합니다.
 
 이미지의 크기에 따라, wasm이 입력 및 출력 이미지를 모두 수용할 만큼 메모리를 늘릴 수 없는 오류가 발생할 수 있습니다.
 

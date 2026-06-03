@@ -3,8 +3,6 @@ title: Error() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 ---
 
-{{JSRef}}
-
 **`Error()`** 构造函数能够创建一个包含错误信息的对象。
 
 ## 语法

@@ -2,10 +2,8 @@
 title: async function 式
 slug: Web/JavaScript/Reference/Operators/async_function
 l10n:
-  sourceCommit: a71b8929628a2187794754c202ad399fe357141b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **`async function`** キーワードは、式の中で非同期関数を定義するために使用できます。
 
@@ -35,7 +33,8 @@ async function name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **メモ:** [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)は `async function` キーワードを使用することができません。[`async function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function)との混同を防ぐためです。`async function` キーワードは文を受け付けることができないコンテキストで現れた場合のみ、式の始まりになります。
+> [!NOTE]
+> [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)は `async function` キーワードを使用することができません。[`async function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function)との混同を防ぐためです。`async function` キーワードは文を受け付けることができないコンテキストで現れた場合のみ、式の始まりになります。
 
 ### 引数
 
@@ -52,7 +51,7 @@ async function name(param0, param1, /* …, */ paramN) {
 
 ## 例
 
-### シンプルな例
+### 非同期関数式の使用
 
 ```js
 function resolveAfter2Seconds(x) {
@@ -84,6 +83,23 @@ add(10).then((v) => {
 });
 ```
 
+### 非同期 IIFE
+
+`async` の [IIFE](/ja/docs/Glossary/IIFE) を使用すると、 [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) および [`for...await`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) を、[最上位の await](/ja/docs/Web/JavaScript/Reference/Operators/await#最上位の_await) が利用できないコンテキストで使用することができます。ここでは、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用して IIFE を定義していますが、 `async function` 式も使用できます。
+
+```js
+const getFileStream = async (url) => {
+  // implementation
+};
+
+(async () => {
+  const stream = await getFileStream("https://domain.name/path/file.ext");
+  for await (const chunk of stream) {
+    console.log({ chunk });
+  }
+})();
+```
+
 ## 仕様書
 
 {{Specifications}}
@@ -94,6 +110,8 @@ add(10).then((v) => {
 
 ## 関連情報
 
+- [関数](/ja/docs/Web/JavaScript/Guide/Functions)ガイド
+- [関数](/ja/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Statements/async_function", "async function")}}
 - {{jsxref("AsyncFunction")}}
 - {{jsxref("Operators/await", "await")}}

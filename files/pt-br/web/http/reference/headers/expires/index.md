@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Expires
 original_slug: Web/HTTP/Headers/Expires
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho **`Expires`** contém a data/hora após a qual a resposta é considerada velha.
 
 Datas inválidas, como o valor 0, representam uma data no passado e significam que o recurso já expirou.
@@ -19,7 +17,7 @@ Se existe um cabeçalho {{HTTPHeader("Cache-Control")}} com a diretiva "max-age"
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
     <tr>

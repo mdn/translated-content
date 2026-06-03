@@ -422,7 +422,7 @@ CSS の擬似クラスで、要素の外見を制御することができます�
 
 #### :required および :optional 擬似クラス
 
-{{cssxref(':required')}} と {{cssxref(':optional')}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、[`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性がある、またはないフォーム要素に一致するセレクターを書くことができます。
+{{cssxref(':required')}} と {{cssxref(':optional')}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、[`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性がある、またはないフォーム要素に一致するセレクターを書くことができます。
 
 #### :placeholder-shown 擬似クラス
 
@@ -430,14 +430,13 @@ CSS の擬似クラスで、要素の外見を制御することができます�
 
 #### :valid :invalid 擬似クラス
 
-{{cssxref(':valid')}} と {{cssxref(':invalid')}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、 \<input> 要素の内容がその型の設定に応じて、それぞれ検証されたか、検証に失敗したかを表すために使用します。これらのクラスは、有効または無効なフォーム要素にスタイルを与えることで書式が正しい要素と正しくない要素の識別をしやすくします。
+{{cssxref(':valid')}} と {{cssxref(':invalid')}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)は、 \<input> 要素の内容がその型の設定に応じて、それぞれ検証されたか、検証に失敗したかを表すために使用します。これらのクラスは、有効または無効なフォーム要素にスタイルを与えることで書式が正しい要素と正しくない要素の識別をしやすくします。
 
 ### 制約違反のテキストの制御
 
 制約違反のテキストを制御するには、以下の項目が有用です。
 
 - 以下の要素の `setCustomValidity(message)` メソッド
-
   - {{HTMLElement("fieldset")}} メモ: fieldset 要素にカスタム検証メッセージを設定しても、多くのブラウザーでは送信が抑止できません。
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}

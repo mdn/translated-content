@@ -3,8 +3,6 @@ title: Firefox 41 for developers
 slug: Mozilla/Firefox/Releases/41
 ---
 
-{{FirefoxSidebar}}
-
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://nightly.mozilla.org/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
@@ -26,7 +24,6 @@ Highlights:
 ### CSS
 
 - Support for laying out vertical scripts has been activated by default ([Firefox bug 1138384](https://bugzil.la/1138384)). That means that the following CSS properties are now available:
-
   - Choosing the direction of writing: {{cssxref("writing-mode")}}.
   - Controlling orientation of characters: {{cssxref("text-orientation")}}.
   - Direction-independent equivalents of {{cssxref("width")}} and {{cssxref("height")}}: {{cssxref("block-size")}} and {{cssxref("inline-size")}}.
@@ -62,7 +59,6 @@ Highlights:
 ### Interfaces/APIs/DOM
 
 - 剪切、复制和粘贴命令处理已经被重新编码，并且现在允许 JS 编程实现网页内容复制和剪切。
-
   - 使用 `'paste'`名利作为参数，{{domxref("Document.queryCommandSupported()")}}现在会返回 false 如果不充分的权限被执行 ([Firefox bug 1161721](https://bugzil.la/1161721)).
   - 使用`'cut'` 或 `'copy'` 命令作为参数，{{domxref("Document.queryCommandSupported()")}} 现在返回`true` 如果调用的上下文中包括用户发起的或特权代码 ([Firefox bug 1162952](https://bugzil.la/1162952)).
   - 使用 `'cut'` 或`'copy'` 命令作为参数，{{domxref("Document.execCommand()")}} 将会执行，但是仅仅在用户发起的或特权代码的上下文下 ([Firefox bug 1012662](https://bugzil.la/1012662)).
@@ -86,7 +82,6 @@ Highlights:
 #### Service Workers
 
 - Improvement to our experimental [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) implementation:
-
   - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} has been implemented ([Firefox bug 1131352](https://bugzil.la/1131352)).
   - {{domxref("Clients.claim()")}} has been added ([Firefox bug 1130684](https://bugzil.la/1130684)).
   - The other functional events of Service Workers have been made to inherit from {{domxref("ExtendableEvent")}}, giving them access to the {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} method ([Firefox bug 1160527](https://bugzil.la/1160527)).

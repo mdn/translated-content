@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Errors")}}
-
 当标识符以数字开头时，JavaScript 会出现“identifier starts immediately after numeric literal”的异常。标识符只能以字母、下划线（\_）或美元符号（$）开头。
 
 ## 错误信息

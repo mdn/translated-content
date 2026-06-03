@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 08ef601955d7fc92a9a4c6d6c047854b5aef723d
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 124 の変更点をまとめています。Firefox 124 は、米国時間 [2024 年 3 月 19 日](https://whattrainisitnow.com/release/?version=124) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -40,7 +38,7 @@ l10n:
 - リクエストを中断するためのさまざまなコマンドを実装しました:
   - [network.addIntercept](https://w3c.github.io/webdriver-bidi/#command-network-addIntercept) は、ネットワークイベントのライフサイクルのさまざまな段階でリクエストを中断するために使用される、URL パターンを定義できます。このコマンドは、作成したネットワークインターセプトのために生成した一意な ID を返します。([Firefox bug 1826192](https://bugzil.la/1826192))
   - [network.removeIntercept](https://w3c.github.io/webdriver-bidi/#command-network-removeIntercept) は、一意の ID に基づいてインターセプトを削除できます。([Firefox bug 1826193](https://bugzil.la/1826193))
-  - [network.continueWithAuth](https://w3c.github.io/webdriver-bidi/#command-network-continueWithAuth) は、`AuthRequired` の段階で中断したリクエストを再開できます。引数 "action" を使用して、クライアントは "cancel"、ユーザー名とパスワードを与える "provideCredentials"、あるいはブラウザーが認証プロンプトをを表示させる "default" へのフォールバックが可能です。([Firefox bug 1826196](https://bugzil.la/1826196))
+  - [network.continueWithAuth](https://w3c.github.io/webdriver-bidi/#command-network-continueWithAuth) は、`AuthRequired` の段階で中断したリクエストを再開できます。引数 "action" を使用して、クライアントは "cancel"、ユーザー名とパスワードを与える "provideCredentials"、あるいはブラウザーが認証プロンプトを表示させる "default" へのフォールバックが可能です。([Firefox bug 1826196](https://bugzil.la/1826196))
   - [network.failRequest](https://w3c.github.io/webdriver-bidi/#command-network-failRequest) は、`BeforeRequestSent` または `ResponseStarted` の段階で中断したリクエストを中止できます。([Firefox bug 1853883](https://bugzil.la/1853883))
   - [network.continueRequest](https://w3c.github.io/webdriver-bidi/#command-network-continueRequest)、[network.continueResponse](https://w3c.github.io/webdriver-bidi/#command-network-continueResponse)、および [network.provideResponse](https://w3c.github.io/webdriver-bidi/#command-network-provideResponse) も使用できますが、現在は引数 "request" だけサポートしており、またブロックされたリクエストの再開だけが可能です。将来のリリースでは、リクエストやレスポンスを変更する追加の引数も使用できる予定です。([Firefox bug 1874206](https://bugzil.la/1874206) および [Firefox bug 1853882](https://bugzil.la/1853882))
 - "ユーザーコンテキスト" に関する複数のコマンドを、Firefox で [コンテナー](https://support.mozilla.org/kb/how-use-firefox-containers) として実装しました:
@@ -50,7 +48,7 @@ l10n:
 - [browsingContext.create](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create) コマンドで引数 "userContext" をサポートしました。この引数は、新しい閲覧コンテキスト (タブやウィンドウ) を特定のユーザーコンテキスト (Firefox のコンテナー) に割り当てできます。([Firefox bug 1874918](https://bugzil.la/1874918))
 - [browsingContext.Info](https://w3c.github.io/webdriver-bidi/#type-browsingContext-Info) 型を、"userContext" フィールドを含むように更新しました。このフィールドは、閲覧コンテキストのタブを所有するユーザーコンテキストの一意の ID です。([Firefox bug 1874920](https://bugzil.la/1874920))
 - [script.addPreloadScript](https://w3c.github.io/webdriver-bidi/#command-script-addPreloadScript) コマンドで引数 "contexts" をサポートしました。この引数は特定の閲覧コンテキストツリー (タブ) のトップレベルの閲覧コンテキストを指定することで、特定の閲覧コンテキストツリーに限ってプリロードスクリプトをクライアントが追加することを可能にします。([Firefox bug 1858458](https://bugzil.la/1858458))
-- [browsingContext.close](https://w3c.github.io/webdriver-bidi/#command-browsingContext-close) が、最後のタブやウィンドウをを閉じることができない不具合を修正しました。([Firefox bug 1873948](https://bugzil.la/1873948))
+- [browsingContext.close](https://w3c.github.io/webdriver-bidi/#command-browsingContext-close) が、最後のタブやウィンドウを閉じることができない不具合を修正しました。([Firefox bug 1873948](https://bugzil.la/1873948))
 
 #### Marionette
 

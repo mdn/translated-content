@@ -16,9 +16,7 @@ void gl.drawBuffers(buffers);
 ### 参数
 
 - `buffers`
-
   - : 一个 {{domxref("GLenum")}}的{{jsxref("Array")}} 对碎片颜色的说明将被写入缓冲区。可能的值有：
-
     - `gl.NONE`: 碎片着色器的输出没有被写入到任何颜色缓存中。
     - `gl.BACK`: 碎片着色器的输出被写入到返回的颜色缓存中。
     - `gl.COLOR_ATTACHMENT{0-15}`: 碎片着色器的输出被写入当前帧缓存的第 n 个颜色缓存中。Fragment shader output is written in the nth color attachment of the current framebuffer.

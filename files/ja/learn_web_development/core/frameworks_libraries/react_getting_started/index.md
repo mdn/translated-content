@@ -340,7 +340,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 次に、アプリケーションのルートノードを定義する関数 `ReactDOM.createRoot()` を呼び出します。この関数は、React アプリをレンダリングする DOM 要素を引数として取ります。この場合、ID が `root` の DOM 要素です。最後に、`createRoot()` の呼び出しに `render()` メソッドを連結して、ルートの中にレンダリングしたい JSX 式を渡します。この JSX 式に `<App />` と書くことで、ルートノード内に `App` コンポーネントをレンダリングする `App()` 関数を呼び出すように React に指示しています。
 
-> **メモ:** `<App />` は特別な `<React.StrictMode>` コンポーネント内でレンダリングされます。この部品は、開発者がコードの潜在的な問題を発見するのに役立ちます。
+> [!NOTE]
+> `<App />` は特別な `<React.StrictMode>` コンポーネント内でレンダリングされます。この部品は、開発者がコードの潜在的な問題を発見するのに役立ちます。
 
 よろしければ、React API について以下の記事を読んでみてください。
 
@@ -500,6 +501,6 @@ React では:
 ## 関連情報
 
 - [Learn React](https://v2.scrimba.com/learn-react-c0e?via=mdn) <sup>_MDN カリキュラムパートナー_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn React_ コースは、 React の初心者にとって完璧な出発点ととなる究極の React 101 です。 140 以上の対話式のコード課題を解き、 8 つの楽しいプロジェクトを構築することで、現行の React の基本を学ぶことができます。
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn React_ コースは、 React の初心者にとって完璧な出発点となる究極の React 101 です。 140 以上の対話式のコード課題を解き、 8 つの楽しいプロジェクトを構築することで、現行の React の基本を学ぶことができます。
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

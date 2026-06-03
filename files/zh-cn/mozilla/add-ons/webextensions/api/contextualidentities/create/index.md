@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 创建一个新的场景身份。创建后，用户将能够创建属于这个场景身份的新标签，就像他们使用内置身份一样。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -22,17 +20,12 @@ let createContext = browser.contextualIdentities.create(
 ### 参数
 
 - `details`
-
   - : `object`。包含新场景身份属性的对象。这包含以下属性：
-
     - `name`
-
       - : `string`。新标识的名称。这将显示在浏览器的用户界面中，使用户能够打开属于此身份的新标签。它还将在属于此身份的标签的 URL 栏中显示。
 
     - `color`
-
       - : `string`。与新身份关联的颜色。这将用于突出显示属于此身份的标签。你可以在此处提供以下任何值：
-
         - "blue"
         - "turquoise"
         - "green"
@@ -44,9 +37,7 @@ let createContext = browser.contextualIdentities.create(
         - "toolbar"
 
     - `icon`
-
       - : `string`。显示在属于此身份的标签的 URL 栏中的图标名称。你可以在此处提供以下任何值：
-
         - "fingerprint"
         - "briefcase"
         - "dollar"

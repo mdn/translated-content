@@ -25,7 +25,7 @@ Firefox 过去的 cookie 策略试图通过阻止某些存储 API（例如，coo
 
 ## 状态分区
 
-状态分区是防止跨站点跟踪的不同方法。Firefox 不是通过在第三方上下文中阻止访问特定状态 API 来实现这一点，而是为每个顶级网站提供嵌入资源的单独存储桶。更具体地说，Firefox 使用资源加载的[源](https://html.spec.whatwg.org/multipage/browsers.html#origin)和顶级[站点](https://html.spec.whatwg.org/multipage/browsers.html#site)共同标记所有客户端状态。在大多数情况下，顶级站点是用户访问的顶级页面的方案（scheme）和 {{Glossary("eTLD", "eTLD+1")}}。
+状态分区是防止跨站点跟踪的不同方法。Firefox 不是通过在第三方上下文中阻止访问特定状态 API 来实现这一点，而是为每个顶级网站提供嵌入资源的单独存储桶。更具体地说，Firefox 使用资源加载的[源](https://html.spec.whatwg.org/multipage/browsers.html#origin)和顶级[站点](https://html.spec.whatwg.org/multipage/browsers.html#site)共同标记所有客户端状态。在大多数情况下，顶级站点是用户访问的顶级页面的方案（scheme）和{{glossary("registrable domain", "可注册域名")}}。
 
 在下面的例子中，`example.com` 嵌入在 `A.example` 和 `B.example` 中。然而，由于存储被分区，存在三个不同的存储桶（而不是一个）。跟踪器仍然可以访问存储，但由于每个存储桶以不同的顶级站点标识，它在 A 上可以访问的数据将与 B 上的不同。这将阻止跟踪器在直接访问时在其 cookie 中存储标识符，然后在嵌入其他网站时检索该标识符。
 

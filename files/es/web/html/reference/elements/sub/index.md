@@ -8,17 +8,17 @@ original_slug: Web/HTML/Element/sub
 
 El **elemento HTML** \<sub> define un fragmento de texto que se debe mostrar, por razones tipográficas, más bajo, y generalmente más pequeño, que el tramo principal del texto, es decir, en subíndice.
 
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Contenido dinamíco](/es/docs/Web/HTML/Content_categories#Contenido_din%C3%A1mico)(Flow content) y [contenido estático o de texto](/es/docs/Web/HTML/Content_categories#Contenido_est%C3%A1tico_o_de_texto)(phrasing content) |
-| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | [contenido estático o de texto](/es/docs/Web/HTML/Content_categories#Contenido_est%C3%A1tico_o_de_texto)                                                                                                                      |
-| Omission de etiquetas                                           | Ninguna, tanto la etiqueta de apertura y cierre deben estar presentes                                                                                                                                                         |
-| Elementos padres permitidos                                     | Cualquier elemento que acepte contenido estático o de texto                                                                                                                                                                   |
-| Roles ARIA permitidos                                           | Cualquiera                                                                                                                                                                                                                    |
-| Interfaz DOM                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                    |
+| [Categorías de contenido](/es/docs/Web/HTML/Guides/Content_categories) | [Contenido dinamíco](/es/docs/Web/HTML/Guides/Content_categories#Contenido_din%C3%A1mico)(Flow content) y [contenido estático o de texto](/es/docs/Web/HTML/Guides/Content_categories#Contenido_est%C3%A1tico_o_de_texto)(phrasing content) |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                                    | [contenido estático o de texto](/es/docs/Web/HTML/Guides/Content_categories#Contenido_est%C3%A1tico_o_de_texto)                                                                                                                             |
+| Omission de etiquetas                                                  | Ninguna, tanto la etiqueta de apertura y cierre deben estar presentes                                                                                                                                                                       |
+| Elementos padres permitidos                                            | Cualquier elemento que acepte contenido estático o de texto                                                                                                                                                                                 |
+| Roles ARIA permitidos                                                  | Cualquiera                                                                                                                                                                                                                                  |
+| Interfaz DOM                                                           | {{domxref("HTMLElement")}}                                                                                                                                                                                                                  |
 
 ## Atributos
 
-Este elemento sólo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento sólo incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 
@@ -43,7 +43,7 @@ Este elemento sólo incluye los [atributos globales](/es/docs/Web/HTML/Global_at
 
 ## Ver también
 
-- El elemento HTML [\<sup>](/es/docs/Web/HTML/Element/sup) produce superíndice. Tenga en cuenta que no puedes usar \<sup> y \<sub> ambos al mismo tiempo y necesita usar [MathML](/es/docs/Web/MathML) para producir un superíndice y un subíndice al lado del símbolo químico de un elemento, que representa su número atómico y su número nuclear.
+- El elemento HTML [\<sup>](/es/docs/Web/HTML/Reference/Elements/sup) produce superíndice. Tenga en cuenta que no puedes usar \<sup> y \<sub> ambos al mismo tiempo y necesita usar [MathML](/es/docs/Web/MathML) para producir un superíndice y un subíndice al lado del símbolo químico de un elemento, que representa su número atómico y su número nuclear.
 
   ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Element_identity.png/220px-Element_identity.png)
 

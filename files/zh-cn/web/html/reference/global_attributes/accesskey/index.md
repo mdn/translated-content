@@ -3,8 +3,6 @@ title: accesskey
 slug: Web/HTML/Reference/Global_attributes/accesskey
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **accesskey** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) 提供了为当前元素生成快捷键的方式。属性值必须包含一个可打印字符。
 
 {{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}

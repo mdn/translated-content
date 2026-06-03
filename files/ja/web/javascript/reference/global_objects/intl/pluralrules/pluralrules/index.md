@@ -20,22 +20,17 @@ new Intl.PluralRules(locales, options);
 - `locales` {{optional_inline}}
   - : BCP 47 言語タグの文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式と解釈ついては、 {{jsxref("Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。
 - `options` {{optional_inline}}
-
   - : 以下のプロパティの全部または一部を持つオブジェクトです。
-
     - `localeMatcher`
       - : 使用するロケールの照合アルゴリズムです。指定可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。
     - `type`
-
       - : 使用する種別です。指定可能な値は次の通りです。
-
         - "`cardinal`" は基数です（物の数量を表します）。これが既定値です。
         - "`ordinal`" は序数です（物事の順序や順位を表します。たとえば英語では "1st", "2nd", "3rd" です）。
 
     以下のプロパティは 2 つのグループに分けられます。
     `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits` が 1 つのグループで、
     `minimumSignificantDigits` と `maximumSignificantDigits` がもう一方です。第 2 のグループから 1 つでもプロパティが定義されると、第 1 のグループは無視されます。
-
     - `minimumIntegerDigits`
       - : 使用する整数部の最小桁数です。取りうる値は 1 から 21 までです。既定値は 1 です。
     - `minimumFractionDigits`

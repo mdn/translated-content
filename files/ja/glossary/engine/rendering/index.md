@@ -1,20 +1,24 @@
 ---
 title: Rendering engine (レンダリングエンジン)
 slug: Glossary/Engine/Rendering
-original_slug: Glossary/Rendering_engine
+l10n:
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
 
-**レンダリングエンジン**は画面にテキストと画像を描画するソフトウェアです。このエンジンは構造化文書 (たいてい {{glossary("HTML")}}) を描画して、所与のスタイル定義 (たいてい {{glossary("CSS")}} にて与えられる) に基づいて整形します。レイアウトエンジンの例としては、 {{glossary("Blink")}}, {{glossary("Gecko")}}, EdgeHTML, {{glossary("WebKit")}} があります。
+**レンダリングエンジン**（レイアウトエンジンまたはブラウザーエンジンとも呼ばれる）は、{{glossary("Browser", "ウェブブラウザー")}}の一部で、ウェブページの {{glossary("HTML")}}、{{glossary("CSS")}}、その他のリソースを、画面上の視覚的表現に変換します。
 
-## 詳細情報
+有名なレンダリングエンジンには、次のようなものがあります。
 
-### 一般知識
+- {{glossary("Blink")}}
+- {{glossary("Gecko")}}
+- {{glossary("WebKit")}}
+- {{glossary("Trident")}}
 
-- Wikipedia の [HTMLレンダリングエンジン](https://ja.wikipedia.org/wiki/HTMLレンダリングエンジン)
+## 関連情報
 
-### 技術リファレンス
-
-- [Gecko のドキュメント](/ja/docs/Mozilla/Gecko)
-- [Venkatraman.R - Behind Browsers (Part 1, Basics)](https://medium.com/@ramsunvtech/behind-browser-basics-part-1-b733e9f3c0e6)
+- [HTML レンダリングエンジン](https://ja.wikipedia.org/wiki/HTMLレンダリングエンジン) （ウィキペディア）
+- 関連する用語:
+  - {{Glossary("Engine", "エンジン")}}
+  - {{Glossary("Browser", "ブラウザー")}}

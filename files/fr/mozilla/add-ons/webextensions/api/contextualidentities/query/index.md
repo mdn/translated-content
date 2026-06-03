@@ -20,9 +20,7 @@ var getContext = browser.contextualIdentities.query(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet qui peut être utilisé pour filtrer les identités contextuelles renvoyées. Cela peut contenir l'une des propriétés suivantes :
-
     - `name` {{optional_inline}}
       - : `string`. Renvoie uniquement les identités contextuelles avec ce nom.
 

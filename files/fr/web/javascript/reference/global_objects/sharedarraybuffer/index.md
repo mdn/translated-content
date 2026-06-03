@@ -35,12 +35,12 @@ La mémoire partagée peut être créée et mise à jour de façon simultanée e
 
 La mémoire partagée et les chronomètres de haute précision ont été [désactivés début 2018](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) suite à la vulnérabilité [Spectre](<https://fr.wikipedia.org/wiki/Spectre_(vulnérabilité)>). En 2020, une nouvelle approche, sécurisée, a été mise en place afin de réactiver la mémoire partagée. En suivant quelques règles de sécurité, [`postMessage()`](/fr/docs/Web/API/Window/postMessage) ne lève plus d'exception pour les objets `SharedArrayBuffer` et une mémoire partagée entre les <i lang="en">threads</i> est disponible.
 
-Pour commencer, le document doit être mis à disposition dans [un contexte sécurisé](/fr/docs/Web/Security/Secure_Contexts).
+Pour commencer, le document doit être mis à disposition dans [un contexte sécurisé](/fr/docs/Web/Security/Defenses/Secure_Contexts).
 
 Pour les documents de plus haut niveau, deux en-têtes HTTP doivent être utilisés pour isoler le site des origines tierces&nbsp;:
 
-- [`Cross-Origin-Opener-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) avec la valeur `same-origin` (ce qui protège l'origine des éventuels attaquants)
-- [`Cross-Origin-Embedder-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) avec la valeur `require-corp` (ce qui protège les éventuelles victimes de votre origine)
+- [`Cross-Origin-Opener-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) avec la valeur `same-origin` (ce qui protège l'origine des éventuels attaquants)
+- [`Cross-Origin-Embedder-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) avec la valeur `require-corp` (ce qui protège les éventuelles victimes de votre origine)
 
 ```http
 Cross-Origin-Opener-Policy: same-origin

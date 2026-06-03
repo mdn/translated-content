@@ -1,11 +1,10 @@
 ---
 title: Math.log()
+short-title: log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.log()`** は静的メソッドで、数値の（[e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) を底とした）自然対数を返します。
 
@@ -15,7 +14,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.log()")}}
+{{InteractiveExample("JavaScript デモ: Math.log()")}}
 
 ```js interactive-example
 function getBaseLog(x, y) {
@@ -24,11 +23,11 @@ function getBaseLog(x, y) {
 
 // 2 x 2 x 2 = 8
 console.log(getBaseLog(2, 8));
-// Expected output: 3
+// 予想される結果: 3
 
 // 5 x 5 x 5 x 5 = 625
 console.log(getBaseLog(5, 625));
-// Expected output: 4
+// 予想される結果: 4
 ```
 
 ## 構文

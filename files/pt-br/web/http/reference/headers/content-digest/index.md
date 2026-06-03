@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Digest
 original_slug: Web/HTTP/Headers/Content-Digest
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta HTTP **`Digest`** provém uma {{Glossary("digest")}} do recurso requisitado.
 
 Nos termos da [RFC 7231](https://tools.ietf.org/html/rfc7231) esta é a _representação selecionada_ de um recurso. A representação selecionada depende dos valores dos cabeçalhos [`Content-Type`](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Type) e [`Content-Encoding`](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Encoding): então um único recurso pode ter diversos valores de "digestão".
@@ -23,7 +21,7 @@ A "digestão" é calculada através da representação inteira. A representaçã
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

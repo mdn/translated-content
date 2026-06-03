@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Status/103
 original_slug: Web/HTTP/Status/103
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP **`103 Early Hints`** 정보 상태 응답 코드는 서버가 응답을 준비하는 동안에도 사용자 에이전트가
 리소스를 미리읽어들일 수 있도록, 주로 {{HTTPHeader("Link")}} 헤더와 함께 사용됩니다.

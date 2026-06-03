@@ -52,7 +52,6 @@ _Hérite des propriétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNod
 - [`BiquadFilterNode.gain`](/fr/docs/Web/API/BiquadFilterNode/gain) {{readonlyInline}}
   - : Un objet [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [`a-rate`](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: c'est un nombre flottant à double précision représentant le [gain](<https://fr.wikipedia.org/wiki/Gain_(électronique)>) utilisé dans l'algorithme de filtrage.
 - [`BiquadFilterNode.type`](/fr/docs/Web/API/BiquadFilterNode/type)
-
   - : Une chaîne de caractères définissant le type d'algorithme de filtrage que le nœud implémente.
 
     <table class="standard-table">

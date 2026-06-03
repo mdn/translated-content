@@ -7,10 +7,10 @@ slug: Web/HTML/Reference/Elements/dfn
 
 _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
-> **备注：** `<dfn>` 元素标记了被定义的术语；术语定义应当在 {{HTMLElement("p")}}, {{HTMLElement("section")}}或定义列表 (通常是{{HTMLElement("dt")}}, {{HTMLElement("dd")}} 对) 中给出。
+> [!NOTE]
+> `<dfn>` 元素标记了被定义的术语；术语定义应当在 {{HTMLElement("p")}}, {{HTMLElement("section")}}或定义列表 (通常是{{HTMLElement("dt")}}, {{HTMLElement("dd")}} 对) 中给出。
 >
 > - 被定义术语的值由下列规则确定：
->
 >   1. 如果 `<dfn>` 元素有一个 **`title`** 属性，那么该术语的值就是该属性的值。
 >   2. 否则，如果它仅包含一个 {{HTMLElement("abbr")}} 元素，该元素拥有 [`title`](/zh-CN/docs/Web/HTML/Reference/Elements/abbr#title) 属性，那么该术语的值就是该属性的值。
 >   3. 否则，`<dfn>` 元素的文本内容就是该术语的值。
@@ -18,12 +18,12 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a>, but no {{HTMLElement("dfn")}} element must be a descendant.</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">Phrasing content</a>, but no {{HTMLElement("dfn")}} element must be a descendant.</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -31,7 +31,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -92,5 +92,3 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
 - 定义列表的相关元素：{{HTMLElement("dl")}}, {{HTMLElement("dt")}}, {{HTMLElement("dd")}}
 - {{HTMLElement("abbr")}}
-
-{{HTMLSidebar}}

@@ -3,8 +3,6 @@ title: <data>：資料元素
 slug: Web/HTML/Reference/Elements/data
 ---
 
-{{HTMLSidebar}}
-
 **`<data>`** [HTML](/zh-TW/docs/Web/HTML) 元素將給定的內容與可機器讀取的翻譯相關聯。如果內容與時間或日期有關，則必須使用 {{HTMLElement("time")}} 元素。
 
 {{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}

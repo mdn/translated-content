@@ -9,14 +9,13 @@ original_slug: Web/HTML/Element/map
 ### Definición
 
 - descripción de uno o dos párrafos
-
   - : **Sus etiquetas son**: \<map> y \</map> (ambas obligatorias).
 
     **Crea una caja**: [En bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Está definido como**: [Elemento especial](/es/docs/HTML/Elemento/Tipos_de_elementos#especial).
 
-    **Puede contener**: Uno o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque), o elementos [area](/es/docs/Web/HTML/Element/area)
+    **Puede contener**: Uno o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque), o elementos [area](/es/docs/Web/HTML/Reference/Elements/area)
 
 #### Atributos
 

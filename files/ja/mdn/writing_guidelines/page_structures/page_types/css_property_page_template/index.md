@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **メモ:** _この説明文全体を削除してから公開してください。_
+> [!NOTE]
+> _この説明文全体を削除してから公開してください。_
 >
 > **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。）
 >
@@ -29,10 +30,10 @@ l10n:
 >
 > - **title**
 >   - : `title` の値はページの先頭に表示されます。タイトルの書式は _NameOfTheProperty_ です。
->     例えば、 [`background-color`](/ja/docs/Web/CSS/background-color) プロパティのタイトルは _background-color_ です。
+>     例えば、 [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color) プロパティのタイトルは _background-color_ です。
 > - **slug**
 >   - : `slug` の値は`https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。 これは `Web/CSS/NameOfTheProperty` のような書式です。
->     例えば、 [`background-color`](/ja/docs/Web/CSS/background-color) プロパティのスラッグは `Web/CSS/background-color` です。スラッグ内の `Getting_started` のような複数単語の成分の場合、スラッグは `/ja/docs/Learn/HTML/Getting_started` のようにアンダースコアを使用します。
+>     例えば、 [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color) プロパティのスラッグは `Web/CSS/background-color` です。スラッグ内の `Getting_started` のような複数単語の成分の場合、スラッグは `/ja/docs/Learn/HTML/Getting_started` のようにアンダースコアを使用します。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
@@ -70,7 +71,7 @@ l10n:
 >
 > _この説明文全体を削除してから公開してください。_
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 ページのコンテンツは導入段落から始めましょう。プロパティ名から始め、それが何をするのかを買いてください。
 これはできれば 1 つか 2 つの短い文章にしてください。
@@ -83,7 +84,7 @@ _このタイトルは `\{{EmbedInteractiveExample}}` マクロで自動生成�
 
 ## 構成要素のプロパティ
 
-この節は、 [animation](/ja/docs/Web/CSS/animation) のような一括指定のプロパティにのみ追加し、関連する個別指定プロパティをすべて列挙します。
+この節は、 [animation](/ja/docs/Web/CSS/Reference/Properties/animation) のような一括指定のプロパティにのみ追加し、関連する個別指定プロパティをすべて列挙します。
 
 ## 構文
 

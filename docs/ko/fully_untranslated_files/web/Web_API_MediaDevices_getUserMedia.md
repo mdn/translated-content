@@ -50,7 +50,6 @@ const promise = navigator.mediaDevices.getUserMedia(constraints);
 ### 매개변수
 
 - `constraints`
-
   - : 요청할 미디어 유형과 각각에 대한 요구사항을 지정하는 {{domxref("MediaStreamConstraints")}} 객체.`constraints` 매개변수는 두 개의 구성 요소, `video`와 `audio`를 가지는 객체로, 요청할 미디어 유형에 대해 설명합니다. 둘 중 적어도 하나는 지정해야 합니다. 브라우저가 주어진 유형과 제약을 만족하는 미디어 트랙을 하나도 찾을 수 없는 경우 프로미스는 `NotFoundError`와 함께 거부합니다.다음은 특별한 요구사항 없이 오디오와 비디오 둘 다 요청하는 매개변수입니다.
 
     ```js

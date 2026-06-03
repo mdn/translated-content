@@ -1,11 +1,12 @@
 ---
 title: "Clients: get() メソッド"
+short-title: get()
 slug: Web/API/Clients/get
 l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 **`get()`** は{{domxref("Clients")}} インターフェイスのメソッドは、指定された `id` と一致するサービスワーカークライアントを取得し、{{jsxref("Promise")}} で返します。
 

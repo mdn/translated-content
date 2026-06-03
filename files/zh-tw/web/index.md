@@ -5,10 +5,6 @@ l10n:
   sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-<section id="Quick_links">
-  {{ListSubpages("", 1, 0, 1)}}
-</section>
-
 全球資訊網的開放性提供了開發人員非常棒的機會。要充分發揮 Web 潛能，你需要知道如何使用它們。你可以從以下連結找到各種 Web 技術說明。
 
 ## Web 開發者說明文件
@@ -40,7 +36,7 @@ l10n:
   - : JavaScript 是 Web 的原生程式語言。
 - [WebAssembly](/zh-TW/docs/WebAssembly)
   - : WebAssembly 能夠讓以 C、C++、Rust、Swift、C#、Go 等語言開發的程式在 Web 上執行。
-- [事件](/zh-TW/docs/Web/Events)
+- [事件](/zh-TW/docs/Web/API/Document_Object_Model/Events)
   - : 你的 Web 應用程式能夠對事件做出反應；例如當 Web 完成載入，或使用者選擇某些內容、按下按鍵、調整視窗大小、提交表單、暫停影片等。
 - [HTTP](/zh-TW/docs/Web/HTTP)
   - : **超文字傳輸協定**（Hypertext Transfer Protocol）是基本的網際網路協定，用於從網路上取得檔案、樣式表、程式碼、圖片、影片、字型，以及其他資源——以及將資料傳回伺服器。

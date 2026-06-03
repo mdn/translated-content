@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーの `hid` ディレクティブは、現在の文書が {{domxref("WebHID API", "WebHID API", "", "nocode")}} を使用して、代替キーボードやゲームパッドなどの一般的ではない、あるいは珍しいヒューマンインターフェイス機器に接続することを許可するかどうかをコントロールします。
 

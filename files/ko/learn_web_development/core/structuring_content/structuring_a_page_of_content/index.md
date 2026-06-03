@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 CSS를 사용하여 콘텐츠 페이지를 레이아웃할 수 있도록 구조화하는 것은 숙달해야 할 매우 중요한 기술이므로 이 장에서는 페이지가 어떻게 보일지 고려하고 그 위에 레이아웃을 구축할 적절한 구조적 의미론(Structural Semantics)을 선택하는 능력을 테스트합니다.
 
@@ -86,10 +86,9 @@ zip 파일에는 다음이 포함되어 있습니다:
 
 1. 여러분의 작업을 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/)와 같은 온라인에서 공유 가능한 에디터에 올리세요. 여러분은 코드를 직접 작성할 수도 있고, 혹은 위 섹션에 링크된 시작 파일을 사용할 수도 있습니다.
 2. [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250)에 평가 및/또는 도움을 요청하는 글을 작성하세요. 여러분의 글은 다음을 포함해야만 합니다:
-
    - "콘텐츠 페이지 구조화를 위한 평가 원함"과 같은 서술적인 제목.
    - 여러분이 이미 무엇을 시도해 봤는지, 그리고 우리가 무엇을 하기를 원하는지에 대한 설명. 예를 들자면, 막혀서 도움이 필요하다거나, 평가를 원한다거나 하는 설명을 포함해야 합니다.
    - (위의 단계 1에서 언급된) 온라인에서 공유 가능한 에디터에 있는, 여러분이 평가를 원하거나 도움이 필요한 예제의 링크. 이것은 익숙해지기에 좋은 습관입니다. 코딩 문제가 있는 누군가를 도울 때, 그들의 코드를 보지 못한다면 그들을 돕는 것은 몹시 힘듭니다.
    - 우리가 여러분이 도움을 원하는 문제를 찾을 수 있도록, 실제 과제나 평가 페이지의 링크.
 
-{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenu("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "conflicting/Learn_web_development/Core/Structuring_content")}}

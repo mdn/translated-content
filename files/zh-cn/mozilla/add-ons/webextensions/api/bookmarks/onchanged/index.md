@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 触发条件：
 
 - 书签的标题或 URL 发生更改时
@@ -34,9 +32,7 @@ browser.bookmarks.onChanged.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件发生时调用的函数。该函数接收以下参数：
-
     - `id`
       - : `string`。发生更改的项目的 ID。
     - `hangeInfo`

@@ -1,48 +1,46 @@
 ---
-title: XMLHttpRequest()
+title: XMLHttpRequest：XMLHttpRequest() 建構子
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
+l10n:
+  sourceCommit: 5e270e3cdab4f3c8ad3f5752976c72c6e8312eb9
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-**`XMLHttpRequest()`** 建構式會建立一個新的 {{domxref("XMLHttpRequest")}} 物件。
-
-關於如何使用 `XMLHttpRequest` 物件的細節，請參照：[使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)。
+**`XMLHttpRequest()`** 建構子會建立一個新的 {{domxref("XMLHttpRequest")}}。
 
 ## 語法
 
-```js
-const request = new XMLHttpRequest();
+```js-nolint
+new XMLHttpRequest()
+// 非標準
+new XMLHttpRequest(options)
 ```
 
 ### 參數
 
-無。
+此建構子沒有標準參數。然而，Firefox 允許一個非標準參數：
+
+- `options` {{non-standard_inline}}
+  - : 一個可以包含以下旗標的物件：
+    - `mozAnon`
+      - : 一個布林。將此旗標設為 `true` 會使瀏覽器在擷取資源時不暴露{{Glossary("origin", "來源")}}和使用者憑證。最重要的是，這表示除非使用 `setRequestHeader` 明確新增，否則不會傳送 {{Glossary("Cookie", "Cookie")}}。
+    - `mozSystem`
+      - : 一個布林。將此旗標設為 `true` 時，請求將不會強制執行同源政策。
 
 ### 回傳值
 
-將回傳一個新的 {{domxref("XMLHttpRequest")}} 物件。{{domxref("XMLHttpRequest")}} 物件在呼叫{{domxref("XMLHttpRequest.send", "send()")}} 送出要求到伺服器之前，至少要藉著呼叫 {{domxref("XMLHttpRequest.open", "open()")}} 來準備好必需的設定。
+一個新的 {{domxref("XMLHttpRequest")}} 物件。在呼叫 {{domxref("XMLHttpRequest.send", "send()")}} 將請求傳送至伺服器之前，必須至少先呼叫 {{domxref("XMLHttpRequest.open", "open()")}} 來初始化該物件。
 
-## 非標準的 Firefox 語法
+## 規範
 
-Firefox 16 added a non-standard parameter to the constructor that can enable anonymous mode (see [Firefox bug 692677](https://bugzil.la/692677)). Setting the `mozAnon` flag to `true` effectively resembles the [`AnonXMLHttpRequest()`](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) constructor described in older versions of the XMLHttpRequest specification.
+{{Specifications}}
 
-```js
-const request = new XMLHttpRequest(paramsDictionary);
-```
+## 瀏覽器相容性
 
-### Parameters (non-standard)
-
-- `objParameters`
-
-  - : There are two flags you can set:
-
-    - `mozAnon`
-      - : Boolean: Setting this flag to `true` will cause the browser not to expose the {{Glossary("origin")}} and [user credentials](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) when fetching resources. Most important, this means that {{Glossary("Cookie", "cookies")}} will not be sent unless explicitly added using setRequestHeader.
-    - `mozSystem`
-      - : Boolean: Setting this flag to `true` allows making cross-site connections without requiring the server to opt-in using {{Glossary("CORS")}}. _Requires setting `mozAnon: true`, i.e. this can't be combined with sending cookies or other user credentials. This only works in privileged (reviewed) apps ([Firefox bug 692677](https://bugzil.la/692677)); it does not work on arbitrary webpages loaded in Firefox_
+{{Compat}}
 
 ## 參見
 
 - [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
+- [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

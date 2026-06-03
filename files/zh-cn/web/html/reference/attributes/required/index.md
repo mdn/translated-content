@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c66d3e5e446bf5ebfcef528c4a766bea6a08c879
 ---
 
-{{HTMLSidebar}}
-
 **`required`** [布尔](/zh-CN/docs/Glossary/Boolean/HTML)属性（如果存在）表示用户在提交输入所属的表单前必须为其指定一个值。
 
 `{{HTMLElement("input/text", "text")}}`、`{{HTMLElement("input/search", "search")}}`、`{{HTMLElement("input/url", "url")}}`、`{{HTMLElement("input/tel", "tel")}}`、`{{HTMLElement("input/email", "email")}}`、`{{HTMLElement("input/password", "password")}}`、`{{HTMLElement("input/date", "date")}}`、`{{HTMLElement("input/month", "month")}}`、`{{HTMLElement("input/week", "week")}}`、`{{HTMLElement("input/time", "time")}}`、`{{HTMLElement("input/datetime-local", "datetime-local")}}`、`{{HTMLElement("input/number", "number")}}`、`{{HTMLElement("input/checkbox", "checkbox")}}`、`{{HTMLElement("input/radio", "radio")}}`、`{{HTMLElement("input/file", "file")}}` {{HTMLElement("input")}} 类型以及 {{HTMLElement("select")}} 和 {{HTMLElement("textarea")}} 表单控件元素均支持 `required` 属性。如果这些输入类型和元素中出现了该属性，则会匹配 {{cssxref(':required')}} 伪类。如果不包含该属性，则会匹配 {{cssxref(':optional')}} 伪类。

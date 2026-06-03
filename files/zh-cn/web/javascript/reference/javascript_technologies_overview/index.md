@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
-{{JsSidebar("Introductory")}}
-
 [HTML](/zh-CN/docs/Web/HTML) 定义网页的结构与内容，[CSS](/zh-CN/docs/Web/CSS) 定义其格式与样式，而 [JavaScript](/zh-CN/docs/Web/JavaScript) 则为网页增加交互性，创作功能丰富的 Web 应用。
 
 但是，如果从浏览器的范畴去理解“JavaScript”这个术语，它包含了截然不同的两个方面。一方面是 JavaScript 的核心语言（ECMAScript），另一方面是大量的 [Web API](/zh-CN/docs/Web/API)，包括 DOM（文档对象模型）。

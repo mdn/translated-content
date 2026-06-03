@@ -13,7 +13,7 @@ slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 
 为了验证 MediaRecorder API 的基础用法，我们做了一个基于 web 的录音机。它允许你录制音频片段并播放它。通过使用这个 web 音频 API，它甚至给你提供了一个设备音频输入信息的可视化波浪图。我们在本文中专注于录制和回放功能的实现。
 
-你可以看到[实例演示](https://mdn.github.io/web-dictaphone/)或是 Github 上的[源码](https://github.com/mdn/web-dictaphone)（也可以点此[直接下载](https://github.com/mdn/web-dictaphone/archive/master.zip)）。
+你可用查看[实时演示](https://mdn.github.io/dom-examples/media/web-dictaphone/)，或在 GitHub 上[获取源码](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)。
 
 ## CSS goodies
 
@@ -21,7 +21,7 @@ slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 
 ### 保持主界面对显示区域的约束，用 calc() 来忽略设备的尺寸
 
-[calc() 函数](/zh-CN/docs/Web/CSS/calc)是 CSS3 中出现的非常实用的功能之一，虽然现在的用处和这个名称看上去关系不大，但是你很快就会觉得“WC，这个功能为什么我们之前没有？为什么之前 CSS2 的布局会这么蛋疼？”它允许你计算一个 CSS 单元的计算值，在这个过程中混合不同的单元。
+[calc() 函数](/zh-CN/docs/Web/CSS/Reference/Values/calc)是 CSS3 中出现的非常实用的功能之一，虽然现在的用处和这个名称看上去关系不大，但是你很快就会觉得“WC，这个功能为什么我们之前没有？为什么之前 CSS2 的布局会这么蛋疼？”它允许你计算一个 CSS 单元的计算值，在这个过程中混合不同的单元。
 
 例如，在 Web 录音机中，我们有主要的 UI 区域，垂直堆叠。我们先给出前两块地方（头部和控制件）的固定高度：
 
@@ -48,7 +48,7 @@ header {
 ```
 
 > [!NOTE]
-> 现在的浏览器对[calc()](/zh-CN/docs/Web/CSS/calc)有着良好的支持，即使是像 IE9 那样的浏览器也可以。
+> 现在的浏览器对[calc()](/zh-CN/docs/Web/CSS/Reference/Values/calc)有着良好的支持，即使是像 IE9 那样的浏览器也可以。
 
 ### 用于显示/隐藏的复选框
 

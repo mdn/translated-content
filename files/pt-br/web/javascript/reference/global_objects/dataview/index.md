@@ -46,7 +46,6 @@ Você pode pensar nesse objeto retornado como um "intérprete" de um array buffe
 ### Exceções
 
 - `{{jsxref("RangeError")}}`
-
   - : Lançado se o `byteOffset` ou `byteLength` especificados ultrapassarem o final do buffer.
 
     Por exemplo, se o buffer tem 16 bytes de comprimento, o `byteOffset` é 8 e o `byteLength` é 10, esse erro será lançado porque a view resultante tenta estender 2 bytes acima do comprimento total do buffer.

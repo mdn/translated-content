@@ -10,7 +10,7 @@ l10n:
 
 **`<dfn>`** は [HTML](/ja/docs/Web/HTML) の要素で、定義句や文の文脈の中で定義している用語を示すために用いられます。祖先である {{HTMLElement("p")}} 要素、{{HTMLElement("dt")}}/{{HTMLElement("dd")}} の組み合わせ、または直近の {{HTMLElement("section")}} 要素が用語の定義とみなされます。
 
-{{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;dfn&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
@@ -33,7 +33,7 @@ dfn {
 
 ## 使用上のメモ
 
-`<dfn>` 要素の使用については、完全に明らかになっていない側面がいくつかあります。ここでそれらを説明します。
+`<dfn>` 要素の使用については、必ずしも明確に分かりやすくない側面がいくつかあります。ここでそれらを説明します。
 
 ### 定義される用語の指定
 
@@ -141,17 +141,17 @@ dfn {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、ただし {{HTMLElement("dfn")}} 要素を子孫にしてはいけません。
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>、ただし {{HTMLElement("dfn")}} 要素を子孫にしてはいけません。
       </td>
     </tr>
     <tr>
@@ -161,7 +161,7 @@ dfn {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>

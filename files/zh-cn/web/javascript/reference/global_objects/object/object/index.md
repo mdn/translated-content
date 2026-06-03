@@ -3,8 +3,6 @@ title: Object() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 ---
 
-{{JSRef}}
-
 **`Object()`** 构造函数将输入转换为一个对象。它的行为取决于输入的类型。
 
 ## 语法
@@ -14,7 +12,8 @@ new Object(value)
 Object(value)
 ```
 
-> **备注：** `Object()` 可以在带有或者不带有 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下调用，但有时会产生不同的效果。参见[返回值](#返回值)。
+> [!NOTE]
+> `Object()` 可以在带有或者不带有 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下调用，但有时会产生不同的效果。参见[返回值](#返回值)。
 
 ### 参数
 

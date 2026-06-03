@@ -16,7 +16,6 @@ HTTP/3의 요점은 {{glossary("TCP")}} 대신, QUIC이라는 새로운 {{glossa
 - [MDN의 HTTP 설명](/ko/docs/Web/HTTP)
 - 위키피디아의 [HTTP/3](https://ko.wikipedia.org/wiki/HTTP/3)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{glossary("HTTP")}}
   - {{glossary("HTTP 2")}}
   - {{glossary("Latency")}}

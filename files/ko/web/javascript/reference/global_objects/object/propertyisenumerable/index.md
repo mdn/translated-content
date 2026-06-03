@@ -124,7 +124,7 @@ o.propertyIsEnumerable("firstMethod"); // returns false
 
 ## 같이 보기
 
-- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

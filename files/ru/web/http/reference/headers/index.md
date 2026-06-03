@@ -3,8 +3,6 @@ title: Заголовки HTTP
 slug: Web/HTTP/Reference/Headers
 ---
 
-{{ HTTPSidebar }}
-
 **Заголовки HTTP** позволяют клиенту и серверу отправлять дополнительную информацию с HTTP запросом или ответом. В HTTP-заголовке содержится не чувствительное к регистру название, а затем после (`:`) непосредственно значение. [Пробелы](/ru/docs/Glossary/Whitespace) перед значением игнорируются.
 
 Пользовательские собственные заголовки исторически использовались с префиксом X, но это соглашение было объявлено устаревшим в июне 2012 года из-за неудобств, вызванных тем, что нестандартные поля стали стандартом в [RFC 6648](https://tools.ietf.org/html/rfc6648); другие перечислены в реестре [IANA](https://www.iana.org/assignments/message-headers/perm-headers.html), исходное содержимое которого было определено в [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA также поддерживает [реестр предлагаемых новых заголовков HTTP](https://www.iana.org/assignments/message-headers/message-headers.xhtml).
@@ -60,7 +58,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept.3a_header"
+            href="/ru/docs/Web/HTTP/Guides/Content_negotiation#The_Accept.3a_header"
             title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept.3a_header"
             >Accept</a
           ></code
@@ -69,7 +67,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>Список MIME типов, которые ожидает клиент.</td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
+          href="/ru/docs/Web/HTTP/Guides/Content_negotiation"
           title="ru/HTTP/Content negotiation"
           >HTTP Content Negotiation</a
         >
@@ -80,7 +78,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept-CH_header"
+            href="/ru/docs/Web/HTTP/Guides/Content_negotiation#The_Accept-CH_header"
             >Accept-CH</a
           ></code
         >
@@ -102,7 +100,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
+          href="/ru/docs/Web/HTTP/Guides/Content_negotiation"
           title="ru/HTTP/Content negotiation"
           >HTTP Content Negotiation</a
         >
@@ -113,7 +111,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept-Encoding.3a_header"
+            href="/ru/docs/Web/HTTP/Guides/Content_negotiation#The_Accept-Encoding.3a_header"
             title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept-Encoding.3a_header"
             >Accept-Encoding</a
           ></code
@@ -122,7 +120,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>Список форматов сжатия данных, которые поддерживает клиент.</td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
+          href="/ru/docs/Web/HTTP/Guides/Content_negotiation"
           title="ru/HTTP/Content negotiation"
           >HTTP Content Negotiation</a
         >
@@ -133,7 +131,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept-Language.3a_header"
+            href="/ru/docs/Web/HTTP/Guides/Content_negotiation#The_Accept-Language.3a_header"
             title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept-Language.3a_header"
             >Accept-Language</a
           ></code
@@ -142,7 +140,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>Определяет языковые предпочтения клиента.</td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
+          href="/ru/docs/Web/HTTP/Guides/Content_negotiation"
           title="ru/HTTP/Content negotiation"
           >HTTP Content Negotiation</a
         >
@@ -153,7 +151,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Заголовки/Accept-Ranges"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Accept-Ranges"
             title="ru/Accept-Ranges"
             >Accept-Ranges</a
           ></code
@@ -167,7 +165,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Credentials"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Allow-Credentials"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Credentials"
             >Access-Control-Allow-Credentials</a
           ></code
@@ -175,12 +173,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -195,7 +193,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Origin"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Allow-Origin"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Origin"
             >Access-Control-Allow-Origin</a
           ></code
@@ -203,12 +201,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -223,7 +221,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Methods"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Allow-Methods"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Methods"
             >Access-Control-Allow-Methods</a
           ></code
@@ -231,12 +229,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -251,7 +249,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Headers"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Allow-Headers"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Headers"
             >Access-Control-Allow-Headers</a
           ></code
@@ -259,12 +257,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -279,7 +277,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Max-Age"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Max-Age"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Max-Age"
             >Access-Control-Max-Age</a
           ></code
@@ -287,12 +285,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -307,7 +305,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Expose-Header"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Expose-Header"
             title="en/HTTP access control#Access-Control-Expose-Header"
             >Access-Control-Expose-Headers</a
           ></code
@@ -315,12 +313,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -335,7 +333,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Request-Method"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Request-Method"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Request-Method"
             >Access-Control-Request-Method</a
           ></code
@@ -343,12 +341,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -363,7 +361,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Request-Headers"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Request-Headers"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Request-Headers"
             >Access-Control-Request-Headers</a
           ></code
@@ -371,12 +369,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -416,7 +414,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
+          href="/ru/docs/Web/HTTP/Guides/Content_negotiation"
           title="ru/HTTP/Content negotiation"
           >HTTP Content Negotiation</a
         >
@@ -427,7 +425,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Authorization"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Authorization"
             title="en/Authorization"
             >Authorization</a
           ></code
@@ -441,7 +439,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Cache-Control"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Cache-Control"
             title="en/Cache-Control"
             >Cache-Control</a
           ></code
@@ -449,7 +447,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -459,7 +457,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Заголовки/Connection"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Connection"
             title="ru/Connection"
             >Connection</a
           ></code
@@ -476,7 +474,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-Encoding"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Content-Encoding"
             title="en/Content-Encoding"
             >Content-Encoding</a
           ></code
@@ -490,7 +488,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-Language"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Content-Language"
             title="en/Content-Language"
             >Content-Language</a
           ></code
@@ -504,7 +502,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-Length"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Content-Length"
             title="en/Content-Length"
             >Content-Length</a
           ></code
@@ -564,7 +562,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-Type"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Content-Type"
             title="en/Content-Type"
             >Content-Type</a
           ></code
@@ -605,7 +603,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Date" title="en/Date"
+          ><a href="/ru/docs/Web/HTTP/Reference/Headers/Date" title="en/Date"
             >Date</a
           ></code
         >
@@ -617,14 +615,14 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/ETag" title="en/ETag"
+          ><a href="/ru/docs/Web/HTTP/Reference/Headers/ETag" title="en/ETag"
             >ETag</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -633,7 +631,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Expect" title="en/Expect"
+          ><a href="/ru/docs/Web/HTTP/Reference/Headers/Expect" title="en/Expect"
             >Expect</a
           ></code
         >
@@ -645,14 +643,14 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Expires" title="en/Expires"
+          ><a href="/ru/docs/Web/HTTP/Reference/Headers/Expires" title="en/Expires"
             >Expires</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -673,7 +671,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Host" title="en/Host"
+          ><a href="/ru/docs/Web/HTTP/Reference/Headers/Host" title="en/Host"
             >Host</a
           ></code
         >
@@ -685,7 +683,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/If-Match" title="en/If-Match"
+          ><a href="/ru/docs/Web/HTTP/Reference/Headers/If-Match" title="en/If-Match"
             >If-Match</a
           ></code
         >
@@ -698,7 +696,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/If-Modified-Since"
+            href="/ru/docs/Web/HTTP/Reference/Headers/If-Modified-Since"
             title="en/If-Modified-Since"
             >If-Modified-Since</a
           ></code
@@ -706,7 +704,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -724,7 +722,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -746,7 +744,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/If-Unmodified-Since"
+            href="/ru/docs/Web/HTTP/Reference/Headers/If-Unmodified-Since"
             title="en/If-Unmodified-Since"
             >If-Unmodified-Since</a
           ></code
@@ -760,7 +758,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Last-Modified"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Last-Modified"
             title="en/Last-Modified"
             >Last-Modified</a
           ></code
@@ -768,7 +766,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -850,7 +848,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
+          href="/ru/docs/Web/HTTP/Guides/Content_negotiation"
           title="ru/HTTP/Content negotiation"
           >HTTP Content Negotiation</a
         >
@@ -861,7 +859,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Origin"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Origin"
             title="https://developer.mozilla.org/En/HTTP_access_control#Origin"
             >Origin</a
           ></code
@@ -869,12 +867,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -892,7 +890,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Pragma" title="en/Pragma"
+          ><a href="/ru/docs/Web/HTTP/Reference/Headers/Pragma" title="en/Pragma"
             >Pragma</a
           ></code
         >
@@ -900,7 +898,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         for the pragma: nocache value see
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -937,7 +935,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Range" title="en/Range"
+          ><a href="/ru/docs/Web/HTTP/Reference/Headers/Range" title="en/Range"
             >Range</a
           ></code
         >
@@ -949,7 +947,7 @@ HTTP-заголовки сопровождают обмен данными по 
     <tr>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Заголовки/Referer" title="ru/Referer"
+          ><a href="/ru/docs/Web/HTTP/Reference/Headers/Referer" title="ru/Referer"
             >Referer</a
           ></code
         >
@@ -977,7 +975,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Retry-After"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Retry-After"
             title="en/Retry-After"
             >Retry-After</a
           ></code
@@ -1063,7 +1061,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Set-Cookie"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Set-Cookie"
             title="en/Set-Cookie"
             >Set-Cookie</a
           ></code
@@ -1081,7 +1079,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Set-Cookie2"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Set-Cookie"
             title="en/Set-Cookie2"
             >Set-Cookie2</a
           ></code
@@ -1100,7 +1098,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         <a
-          href="/ru/docs/Security/HTTP_Strict_Transport_Security"
+          href="/ru/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security"
           title="en/Security/HTTP Strict Transport Security"
           >HTTP Strict Transport Security</a
         >
@@ -1118,7 +1116,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
+          href="/ru/docs/Web/HTTP/Guides/Content_negotiation"
           title="ru/HTTP/Content negotiation"
           >HTTP Content Negotiation</a
         >
@@ -1190,7 +1188,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_User-Agent.3a_header"
+            href="/ru/docs/Web/HTTP/Guides/Content_negotiation#The_User-Agent.3a_header"
             title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_User-Agent.3a_header"
             >User-Agent</a
           ></code
@@ -1212,7 +1210,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
+          href="/ru/docs/Web/HTTP/Guides/Content_negotiation"
           title="ru/HTTP/Content negotiation"
           >HTTP Content Negotiation</a
         >
@@ -1223,7 +1221,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Vary.3a_response_header"
+            href="/ru/docs/Web/HTTP/Guides/Content_negotiation#The_Vary.3a_response_header"
             title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Vary.3a_response_header"
             >Vary</a
           ></code
@@ -1236,12 +1234,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
+          href="/ru/docs/Web/HTTP/Guides/Content_negotiation"
           title="ru/HTTP/Content_negotiation"
           >HTTP Content Negotiation</a
         >
         &#x26;
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -1303,7 +1301,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         Using
         <a
-          href="/ru/docs/Security/CSP/Using_Content_Security_Policy"
+          href="/ru/docs/Web/HTTP/Guides/CSP"
           title="en/Security/CSP/Using Content Security Policy"
           >Content Security Policy</a
         >

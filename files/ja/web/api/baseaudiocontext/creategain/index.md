@@ -10,7 +10,8 @@ l10n:
 
 `createGain()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("GainNode") }} を生成します。これは、音声グラフの全体的なゲイン（音量）を調整するのに使用します。
 
-> **メモ:** {{domxref("GainNode.GainNode", "GainNode()")}} コンストラクターは {{domxref("GainNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> [!NOTE]
+> {{domxref("GainNode.GainNode", "GainNode()")}} コンストラクターは {{domxref("GainNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 

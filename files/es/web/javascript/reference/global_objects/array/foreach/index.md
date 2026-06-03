@@ -30,9 +30,7 @@ arr.forEach(function callback(currentValue, index, array) {
 ### Parámetros
 
 - `callback`
-
   - : Función a ejecutar por cada elemento, que recibe tres argumentos:
-
     - `currentValue`
       - : El elemento actual siendo procesado en el array.
     - `index` {{optional_inline}}

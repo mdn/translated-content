@@ -1,20 +1,17 @@
 ---
-title: "スキルテスト: 演算"
+title: "確認テスト: 演算"
+short-title: "テスト: 演算"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Math
-original_slug: Learn_web_development/Core/Scripting/Test_your_skills:_Math
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: b36d59a0df933597c7d3b55e363f7a59e30d3ba3
 ---
 
-{{learnsidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
-このスキルテストの目的は、[JavaScript での基本演算 — 数値と演算子](/ja/docs/Learn_web_development/Core/Scripting/Math)の記事を理解しているかどうかを評価することです。
+この確認テストの目的は、[JavaScript での基本演算 — 数値と演算子](/ja/docs/Learn_web_development/Core/Scripting/Math)の記事を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
-> コードにエラーがある場合、このページの結果パネルまたは JavaScript コンソールでログ出力されます。
->
-> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## 演算 1
 
@@ -22,7 +19,7 @@ l10n:
 4 つの数値を作成し、 2 つを加算し、 1 つを減算し、結果を掛け算してください。
 最後に、この値が偶数であることを証明するテストを記述することも必要ですね。
 
-では、完成イメージを再構築するために、下記のライブコードを更新してみましょう。次の手順に従ってください。
+この課題を完成させるには、次のようにします。
 
 1. 数値の変数を 4 つ作成してください。変数にわかりやすい名前を付けてください。
 2. 最初の 2 つの変数を加算し、その結果を別の変数に格納してください。
@@ -32,11 +29,121 @@ l10n:
 
 このテストに合格するためには、 `finalResult` の値が `48` で、 `evenOddResult` の値が `0` である必要があります。
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math1.html", '100%', 400)}}
+<!-- Code shared across examples -->
 
-> [!CALLOUT]
->
-> [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math1-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
+```html hidden live-sample___math-1 live-sample___math-2 live-sample___math-3 live-sample___math-1-finish live-sample___math-2-finish live-sample___math-3-finish
+<section></section>
+```
+
+```css hidden live-sample___math-1 live-sample___math-2 live-sample___math-3 live-sample___math-1-finish live-sample___math-2-finish live-sample___math-3-finish
+* {
+  box-sizing: border-box;
+}
+
+p {
+  color: purple;
+  margin: 0.5em 0;
+}
+```
+
+<!-- Example-specific code -->
+
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample("math-1", "100%", 80) }}
+
+この出発点の基盤となるコードは次の通りです。
+
+```js live-sample___math-1
+let finalResult;
+let evenOddResult;
+
+// 以上のコードは編集しないでください。
+
+// ここにコードを追加
+
+// 以下のコードは編集しないでください。
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const finalResultCheck =
+  finalResult === 48
+    ? `はい、よくできました。`
+    : `いいえ、 ${finalResult} でした。`;
+para1.textContent = `finalResult は 48 でしょうか？ ${finalResultCheck}`;
+const para2 = document.createElement("p");
+const evenOddResultCheck =
+  evenOddResult === 0
+    ? "finalResult は偶数です。"
+    : "finalResult は奇数です。うーん。";
+para2.textContent = evenOddResultCheck;
+section.appendChild(para1);
+section.appendChild(para2);
+```
+
+更新後の出力は次のようになります。
+
+{{ EmbedLiveSample("math-1-finish", "100%", 80) }}
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+最終的な JavaScript は次のようになります。
+
+```js
+// ...
+// 以上のコードは編集しないでください。
+
+const number1 = 4;
+const number2 = 8;
+const number3 = 12;
+const number4 = 8;
+
+const additionResult = number1 + number2;
+const subtractionResult = number3 - number4;
+
+finalResult = additionResult * subtractionResult;
+
+evenOddResult = finalResult % 2;
+
+// 以下のコードは編集しないでください。
+// ...
+```
+
+```js hidden live-sample___math-1-finish
+let finalResult;
+let evenOddResult;
+
+const number1 = 4;
+const number2 = 8;
+const number3 = 12;
+const number4 = 8;
+
+const additionResult = number1 + number2;
+const subtractionResult = number3 - number4;
+
+finalResult = additionResult * subtractionResult;
+
+evenOddResult = finalResult % 2;
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const finalResultCheck =
+  finalResult === 48
+    ? `はい、よくできました。`
+    : `いいえ、 ${finalResult} でした。`;
+para1.textContent = `finalResult は 48 でしょうか？ ${finalResultCheck}`;
+const para2 = document.createElement("p");
+const evenOddResultCheck =
+  evenOddResult === 0
+    ? "finalResult は偶数です。"
+    : "finalResult は奇数です。うーん。";
+para2.textContent = evenOddResultCheck;
+section.appendChild(para1);
+section.appendChild(para2);
+```
+
+</details>
 
 ## 演算 2
 
@@ -49,23 +156,195 @@ l10n:
 2. その結果を小数第 2 位までにフォーマットし、そして `finalResult` という変数に格納する 1 行コードを記述してください。
 3. `typeof` を使用して `finalResult` のデータ型をチェックしてください。実際には `string` 型であることがわかるでしょう！それを `number` 型に変換し、結果を `finalNumber` という変数に格納する 1 行コードを記述してください。
 
-このテストに合格するためには、 `finalNumber` の値は `4633.33` にならなければいけません。
+このテストに合格するには、`finalNumber` の結果を `4633.33` にする必要があります。正しい出力を得るには、演算子の優先順位を考えてみたり、入力式に括弧を追加したり変更したりする必要があるかもしれません。
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}
+この課題の出発点は次のようなものです。
 
-> [!CALLOUT]
->
-> [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math2-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
+{{ EmbedLiveSample("math-2", "100%", 80) }}
+
+この出発点の基盤となるコードは次の通りです。
+
+```js live-sample___math-2
+// 最終結果を 4633.33 にする
+
+let result = 7 + 13 / 9 + 7;
+let result2 = (100 / 2) * 6;
+
+// ここにコードを追加
+
+// 以下のコードは編集しないでください。
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = `finalResult は ${finalResult} です。`;
+const para2 = document.createElement("p");
+const finalNumberCheck =
+  isNaN(finalNumber) === false
+    ? "finalNumber は数値型です。よくできました！"
+    : `残念！ finalNumber は数値ではありません。`;
+para2.textContent = finalNumberCheck;
+section.appendChild(para1);
+section.appendChild(para2);
+```
+
+更新後の出力は次のようになります。
+
+{{ EmbedLiveSample("math-2-finish", "100%", 80) }}
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+最終的な JavaScript は次のようになります。
+
+```js-nolint
+// 最終結果を 4633.33 にする
+
+let result = (7 + 13 / 9) + 7;
+let result2 = 100 / 2 * 6;
+
+result *= result2;
+
+const finalResult = result.toFixed(2);
+
+const finalNumber = Number(finalResult);
+
+// 以下のコードは編集しないでください。
+// ...
+```
+
+```js hidden live-sample___math-2-finish
+let result = 7 + 13 / 9 + 7;
+let result2 = (100 / 2) * 6;
+
+result *= result2;
+const finalResult = result.toFixed(2);
+const finalNumber = Number(finalResult);
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = `finalResult は ${finalResult} です。`;
+const para2 = document.createElement("p");
+const finalNumberCheck =
+  isNaN(finalNumber) === false
+    ? "finalNumber は数値型です。よくできました！"
+    : `残念！ finalNumber は数値ではありません。`;
+para2.textContent = finalNumberCheck;
+section.appendChild(para1);
+section.appendChild(para2);
+```
+
+</details>
 
 ## 演算 3
 
-この記事の最後のタスクでは、いくつかのテストを記述していきましょう。
-3 つのグループがあり、それぞれが文と 2 つの変数で構成されています。
-各グループについて、与えられている文を証明または反証するテストを記述してください。
-これらのテスト結果を、それぞれ `weightComparison`、`heightComparison`、`pwdMatch` という変数に格納してください。
+この記事の最後の課題では、いくつかのテストを記述していきましょう。
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math3.html", '100%', 550)}}
+この課題を完成させるには、次のようにします。
 
-> [!CALLOUT]
->
-> [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math3-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
+1. 3 つのグループがあり、それぞれが文と 2 つの変数で構成されています。各グループについて、与えられている文を証明または反証するテストを記述してください。
+2. これらのテスト結果を、それぞれ `weightComparison`、`heightComparison`、`pwdMatch` という変数に格納してください。
+
+この課題の出発点は次のようなものです（まだ何も見えません）。
+
+{{ EmbedLiveSample("math-3", "100%", 80) }}
+
+この出発点の基盤となるコードは次の通りです。
+
+```js live-sample___math-3
+// 仮説 1: 象はネズミよりも体重が軽い
+const eleWeight = 1000;
+const mouseWeight = 2;
+// 仮説 2: ダチョウはアヒルよりも背が高い
+const ostrichHeight = 2;
+const duckHeight = 0.3;
+// 仮説 3: 2 つのパスワードは一致する
+const pwd1 = "stromboli";
+const pwd2 = "stROmBoLi";
+
+// 以上のコードは編集しないでください。
+
+// ここにコードを追加
+
+// 以下のコードは編集しないでください。
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+const para3 = document.createElement("p");
+const weightTest = weightComparison
+  ? "真 — 象はネズミよりも体重が軽い！？"
+  : "偽 — もちろん、象はネズミよりも重いでしょう！";
+const heightTest = heightComparison
+  ? "真 — ダチョウは確かにアヒルよりも背が高い！"
+  : "偽 — どうやら、アヒルはダチョウよりも背が高いようです！？";
+const pwdTest = pwdMatch
+  ? "真 — パスワードが一致します。"
+  : "偽 — パスワードが一致しません。パスワードを確認してください。";
+para1.textContent = weightTest;
+section.appendChild(para1);
+para2.textContent = heightTest;
+section.appendChild(para2);
+para3.textContent = pwdTest;
+section.appendChild(para3);
+```
+
+更新後の出力は次のようになります。
+
+{{ EmbedLiveSample("math-3-finish", "100%", 100) }}
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+最終的な JavaScript は次のようになります。
+
+```js-nolint
+// ...
+// 以上のコードは編集しないでください。
+
+const weightComparison = eleWeight < mouseWeight;
+const heightComparison = ostrichHeight > duckHeight;
+const pwdMatch = pwd1 === pwd2;
+
+// 以下のコードは編集しないでください。
+// ...
+```
+
+```js hidden live-sample___math-3-finish
+// 仮説 1: 象はネズミよりも体重が軽い
+const eleWeight = 1000;
+const mouseWeight = 2;
+// 仮説 2: ダチョウはアヒルよりも背が高い
+const ostrichHeight = 2;
+const duckHeight = 0.3;
+// 仮説 3: 2 つのパスワードは一致する
+const pwd1 = "stromboli";
+const pwd2 = "stROmBoLi";
+
+const weightComparison = eleWeight < mouseWeight;
+const heightComparison = ostrichHeight > duckHeight;
+const pwdMatch = pwd1 === pwd2;
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+const para3 = document.createElement("p");
+const weightTest = weightComparison
+  ? "真 — 象はネズミよりも体重が軽い！？"
+  : "偽 — もちろん、象はネズミよりも重いでしょう！";
+const heightTest = heightComparison
+  ? "真 — ダチョウは確かにアヒルよりも背が高い！"
+  : "偽 — どうやら、アヒルはダチョウよりも背が高いようです！？";
+const pwdTest = pwdMatch
+  ? "真 — パスワードが一致します。"
+  : "偽 — パスワードが一致しません。パスワードを確認してください。";
+para1.textContent = weightTest;
+section.appendChild(para1);
+para2.textContent = heightTest;
+section.appendChild(para2);
+para3.textContent = pwdTest;
+section.appendChild(para3);
+```
+
+</details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

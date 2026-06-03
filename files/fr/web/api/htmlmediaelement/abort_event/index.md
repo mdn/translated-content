@@ -1,43 +1,39 @@
 ---
-title: "HTMLMediaElement: abort event"
+title: "HTMLMediaElement : évènement abort"
+short-title: abort
 slug: Web/API/HTMLMediaElement/abort_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-L'événement **`abort`** se déclenche si l'élément écouté ne s'est pas chargé complétement. Il est désactivé si le résultat obtenu est une erreur.
+L'évènement **`abort`** se déclenche lorsque la ressource n'a pas été entièrement chargée, mais pas à la suite d'une erreur.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onabort", "onabort")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+Cet évènement n'est pas annulable et ne se propage pas.
+
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("abort", (event) => { })
+
+onabort = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("Event")}} générique.
 
 ## Exemples
 
 ```js
 const video = document.querySelector("video");
-const videoSrc = "https://path/to/video.webm";
+const videoSrc = "https://example.org/path/to/video.webm";
 
 video.addEventListener("abort", () => {
-  console.log(`Abort loading: ${videoSrc}`);
+  console.log(`Abandon du chargement : ${videoSrc}`);
 });
 
 const source = document.createElement("source");
@@ -57,7 +53,7 @@ video.appendChild(source);
 
 ## Voir aussi
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- L'interface {{DOMxRef("HTMLAudioElement")}}
+- L'interface {{DOMxRef("HTMLVideoElement")}}
+- L'élément HTML {{HTMLElement("audio")}}
+- L'élément HTML {{HTMLElement("video")}}

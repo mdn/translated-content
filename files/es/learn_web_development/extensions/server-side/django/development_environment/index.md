@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/development_environmen
 original_slug: Learn/Server-side/Django/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Ahora que sabes para qué se utiliza Django, te enseñaremos cómo configurar y probar un entorno de desarrollo Django en Windows, Linux (Ubuntu), y Mac OS X — cualquiera que sea el sistema operativo común que estés utilizando, este artículo te dará lo que necesitas para ser capaz de empezar a desarrollar aplicaciones Django.
 
@@ -146,7 +146,6 @@ python3 -V
 Puedes instalar fácilmente Python 3 (junto con la herramienta _pip3_) desde [python.org](https://www.python.org/):
 
 1. Descarga el instalador requerido:
-
    1. Vete a <https://www.python.org/downloads/>
    2. Selecciona el botón **Descarga Python 3.5.2** (el número exacto de versión menor puede ser diferente).
 
@@ -170,7 +169,6 @@ pip3 list
 Windows no incluye Python por defecto, pero puedes instalarlo fácilmente (junto con la herramienta _pip3_) desde [python.org](https://www.python.org/):
 
 1. Descarga el instalador requerido:
-
    1. Vete a <https://www.python.org/downloads/>
    2. Selecciona el botón de **Descarga Python 3.6.3** (la versión menor exacta puede ser diferente).
 
@@ -392,4 +390,4 @@ En el siguiente artículo expandimos este proceso, construyendo una aplicación 
 - [Cómo instalar Django — Guía Completa](https://docs.djangoproject.com/es/2.0/topics/install/) (Django docs) - incluye información sobre cómo borrar Django
 - [Cómo instalar Django en Windows](https://docs.djangoproject.com/es/2.0/howto/windows/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}

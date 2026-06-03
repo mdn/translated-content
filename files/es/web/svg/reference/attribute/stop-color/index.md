@@ -6,7 +6,7 @@ original_slug: Web/SVG/Attribute/stop-color
 
 {{SVGRef}}
 
-« [SVG Attribute reference hom](/es/docs/Web/SVG/Attribute)e
+« [SVG Attribute reference hom](/es/docs/Web/SVG/Reference/Attribute)e
 
 El atributo `stop-color` indica que color usar en el stop del gradiente. La keyword `currentColor` y ICC pueden ser especificadas de la misma manera con la especificación [\<paint>](/es/docs/Web/SVG#paint) para los atributos {{ SVGAttr("fill") }} y {{ SVGAttr("stroke") }}.
 

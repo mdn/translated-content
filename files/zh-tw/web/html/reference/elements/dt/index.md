@@ -3,8 +3,6 @@ title: <dt>：定義術語元素
 slug: Web/HTML/Reference/Elements/dt
 ---
 
-{{HTMLSidebar}}
-
 **`<dt>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於指定描述或定義清單中的術語，因此必須在 {{HTMLElement("dl")}} 元素內使用。通常後面會跟著一個 {{HTMLElement("dd")}} 元素；但是連續多個 `<dt>` 元素表示所有這些術語都由接下來的 {{HTMLElement("dd")}} 元素定義。
 
 隨後的 {{HTMLElement("dd")}}（描述詳細資訊）元素提供了使用 `<dt>` 指定的術語的定義或其他相關文字。

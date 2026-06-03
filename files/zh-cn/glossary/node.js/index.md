@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 70736395f85541545fc0b384f2d091e35cfeadae
 ---
 
-{{GlossarySidebar}}
-
 Node.js 是一个跨平台 {{Glossary("JavaScript")}} 运行环境，使开发者可以搭建服务器端的 JavaScript 应用程序。
 
 ## Node 包管理器（npm）

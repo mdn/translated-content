@@ -10,11 +10,11 @@ l10n:
 
 HTML의 특정 요소는 날짜 와/또는 시간 값을 사용합니다. 이러한 값을 지정하는 문자열의 형식은 본 문서에서 설명합니다.
 
-이러한 형식을 사용하는 요소로는 사용자가 날짜, 시간 또는 둘 다 선택하거나 지정할 수 있는 {{HTMLElement("input")}} 요소의 특정 형태와, 내용 삽입 또는 삭제 시점을 나타내는 [`datetime`](/ko/docs/Web/HTML/Element/ins#datetime) 속성을 포함한 {{HTMLElement("ins")}} 및 {{HTMLElement("del")}} 요소가 있습니다.
+이러한 형식을 사용하는 요소로는 사용자가 날짜, 시간 또는 둘 다 선택하거나 지정할 수 있는 {{HTMLElement("input")}} 요소의 특정 형태와, 내용 삽입 또는 삭제 시점을 나타내는 [`datetime`](/ko/docs/Web/HTML/Reference/Elements/ins#datetime) 속성을 포함한 {{HTMLElement("ins")}} 및 {{HTMLElement("del")}} 요소가 있습니다.
 
 `<input>` 요소의 경우, 날짜 및/또는 시간을 나타내는 문자열을 포함하는 [`value`](/ko/docs/Web/HTML/Element/input#value) 속성의 [`type`](/ko/docs/Web/HTML/Element/input#type) 값은 다음과 같습니다.
 
-- [`date`](/ko/docs/Web/HTML/Element/input/date)
+- [`date`](/ko/docs/Web/HTML/Reference/Elements/input/date)
 - [`datetime-local`](/ko/docs/Web/HTML/Element/input/datetime-local)
 - [`month`](/ko/docs/Web/HTML/Element/input/month)
 - [`time`](/ko/docs/Web/HTML/Element/input/time)

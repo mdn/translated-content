@@ -616,7 +616,7 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
     <tr>
       <th scope="row">장점</th>
       <td>
-        모든 최신 엔진에서 지원됩니다. 매우 높은 가독성과 유지 보수성. <a href="/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields">비공개 속성</a>은 프로토타입 상속에서 자잘한 대체가 없는 기능입니다.
+        모든 최신 엔진에서 지원됩니다. 매우 높은 가독성과 유지 보수성. <a href="/ko/docs/Web/JavaScript/Reference/Classes/Private_elements">비공개 속성</a>은 프로토타입 상속에서 자잘한 대체가 없는 기능입니다.
       </td>
     </tr>
     <tr>
@@ -664,7 +664,8 @@ Object.setPrototypeOf(obj, anotherObj);
 
 모든 객체는 [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 설정자를 상속하며, 이는 기존 객체의 `[[Prototype]]`을 설정하는 데 사용할 수 있습니다(`__proto__` 키가 객체에서 재정의되지 않은 경우).
 
-> **경고:** `Object.prototype.__proto__` 접근자는 **비표준**이며 더 이상 사용되지 않습니다. 대신 거의 항상 `Object.setPrototypeOf`를 사용해야 합니다.
+> [!WARNING]
+> `Object.prototype.__proto__` 접근자는 **비표준**이며 더 이상 사용되지 않습니다. 대신 거의 항상 `Object.setPrototypeOf`를 사용해야 합니다.
 
 ```js
 const obj = {};

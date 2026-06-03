@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props","Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility", "Learn_web_development/Core/Frameworks_libraries")}}
 
 지난 시간에 이어 할 일(to-do) 목록 앱을 개발합니다. 이번 시간의 핵심 목표는 앱을 관리 가능한 컴포넌트로 나누고 컴포넌트 간에 정보를 공유하는 방법을 배우는 것입니다. 우리는 앱을 구성한 다음 사용자가 기존 컴포넌트를 업데이트할 수 있도록 기능을 추가할 것입니다.
 
@@ -18,9 +18,9 @@ l10n:
       <td>
         <p>
           적어도
-          <a href="/ko/docs/Learn/HTML">HTML</a>,
-          <a href="/ko/docs/Learn/CSS">CSS</a>,
-          <a href="/ko/docs/Learn/JavaScript">JavaScript</a>언어의 사용에 익숙하기를 권장합니다. 그리고
+          <a href="/ko/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>,
+          <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a>언어의 사용에 익숙하기를 권장합니다. 그리고
           <a
             href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
@@ -320,7 +320,6 @@ export let onclick = (clicked) => {};
    ```
 
 2. `Todo` 컴포넌트가 발생시킬 이벤트를 결정해야 합니다.
-
    - 상태 토글과 이름 편집에 대해 서로 다른 이벤트를 발생시킬 수 있습니다(예를 들면, `updateTodoStatus`와 `updateTodoName`).
    - 또는 더 일반적인 접근 방식을 취하여 두 작업 모두에 대해 단일 `update` 이벤트를 발생시킬 수 있습니다.
 
@@ -564,4 +563,4 @@ REPL에서 코드의 현재 상태를 보려면 다음에 방문하십시오.
 
 다음 시간에는 앱의 컴포넌트화를 계속 진행하고 DOM과 작업할 때 사용하는 몇 가지 고급 기술을 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props","Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility", "Learn_web_development/Core/Frameworks_libraries")}}

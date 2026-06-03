@@ -22,11 +22,9 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
 ### 引数
 
 - `transformer` {{optional_inline}}
-
   - : `transformer` を表すオブジェクト。指定されなかった場合、ストリームは**同一変換ストリーム**となり、書き込み可能な端点に書き込まれたすべてのチャンクをそのまま読み取り可能な端点に転送します。
 
     変換オブジェクトは以下のメソッドを持つことができます。各メソッドの、 `controller` は {{domxref("TransformStreamDefaultController")}} のインスタンスです。
-
     - `start(controller)`
       - : `TransformStream` が構築される際に呼び出されます。通常は {{domxref("TransformStreamDefaultController.enqueue()")}} を使用してチャンクをキューに入れます。
     - `transform(chunk, controller)`
@@ -35,18 +33,14 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
       - : 書き込み可能な端点に書き込まれたチャンクがすべて正常に変換され、書き込み可能な端点が閉じられた後に呼び出されます。
 
 - `writableStrategy` {{optional_inline}}
-
   - : オプションでストリームのキューイング戦略を定義するオブジェクト。これは 2 つの引数を取ります。
-
     - `highWaterMark`
       - : 非負の整数。これは、背圧が適用される前に内部キューに格納することができるチャンクの総数を定義します。
     - `size(chunk)`
       - : 引数 `chunk` を取るメソッド。これは各チャンクに使用するサイズをバイト単位で示します。
 
 - `readableStrategy` {{optional_inline}}
-
   - : オプションでストリームのキューイング戦略を定義するオブジェクト。 2 つの引数を取ります。
-
     - `highWaterMark`
       - : 非負の整数。これは、背圧が適用される前に内部キューに格納することができるチャンクの総数を定義します。
     - `size(chunk)`

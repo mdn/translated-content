@@ -11,7 +11,7 @@ slug: Learn_web_development/Extensions/Client-side_APIs
 
 Убедитесь, что вы прочли и хорошо разбираетесь в следующих модулях ([Первые шаги](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8), [Структурные элементы](/ru/docs/Learn_web_development/Core/Scripting), и [Введение в объекты](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)). Эти модули включали в себя простое использование API, так как зачастую без них сложно писать примеры клиентского кода JavaScript. В данном модуле мы предполагаем, что вы хорошо знакомы с основами JavaScript, и немного подробнее рассмотрим общие веб-API.
 
-Естественно знание [HTML](/ru/docs/Learn_web_development/Core/Structuring_content) и [CSS](/ru/docs/Learn/CSS) здесь также необходимо.
+Естественно знание [HTML](/ru/docs/Learn_web_development/Core/Structuring_content) и [CSS](/ru/docs/Learn_web_development/Core/Styling_basics) здесь также необходимо.
 
 > [!NOTE]
 > Если вы работаете на устройстве, где у вас нет возможности создавать свои собственные файлы, вы можете проверить большинство примеров кода в онлайн-программах вроде [JSBin](https://jsbin.com/) или [Glitch](https://glitch.com/).

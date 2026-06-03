@@ -158,7 +158,8 @@ GStreamer 的插件如 [souphttpclientsink](https://gstreamer.freedesktop.org/do
 
 [SHOUTcast](https://en.wikipedia.org/wiki/SHOUTcast) 是一种跨平台的，针对流式媒体的专有技术。它由 Nullsoft 开发，可以播放 MP3 或 AAC 格式的数字音频内容。对于 Web 端使用，SHOUTcast 通过 HTTP 传输流。
 
-> **备注：** [SHOUTcast 的 URL 可能需要加上分号](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
+> [!NOTE]
+> [SHOUTcast 的 URL 可能需要加上分号](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
 
 ### Icecast
 

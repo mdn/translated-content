@@ -1,62 +1,39 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`URIError`** 物件表示一個在全域 URI 處理函式使用方式錯誤時的錯誤。
 
-**`URIError`** 物件在全域的 URI 處理函式被錯誤使用時作為一個錯誤被拋出。
+`URIError` 是一個{{Glossary("serializable object", "可序列化物件")}}，所以它可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 複製，或在 [Worker](/zh-TW/docs/Web/API/Worker) 之間使用 {{domxref("Worker/postMessage()", "postMessage()")}} 複製。
 
-## 語法
+`URIError` 是 {{jsxref("Error")}} 的子類別。
 
-```plain
-new URIError([message[, fileName[, lineNumber]]])
-```
+## 建構子
 
-### 參數
+- {{jsxref("URIError/URIError", "URIError()")}}
+  - : 建立一個新的 `URIError` 物件。
 
-- `message`
-  - : 可選。具人類可讀性的錯誤說明
-- `fileName` {{non-standard_inline}}
-  - : 可選。包含造成錯誤發生的程式碼的檔案名稱
-- `lineNumber` {{non-standard_inline}}
-  - : 可選。造成錯誤發生的程式碼行號
+## 實例屬性
 
-## 說明
+_也繼承其父實例 {{jsxref("Error")}} 的實例屬性_。
 
-`URIError` 在全域的 URI 處理函式被傳入了一個錯誤編碼的 URI 時被拋出。
+這些屬性定義在 `URIError.prototype` 上，並由所有 `URIError` 實例共享。
 
-## 屬性
+- {{jsxref("Object/constructor", "URIError.prototype.constructor")}}
+  - : 建立實例物件的建構函式。對於 `URIError` 實例，初始值為 {{jsxref("URIError/URIError", "URIError")}} 建構子。
+- {{jsxref("Error/name", "URIError.prototype.name")}}
+  - : 表示錯誤類型的名稱。對於 `URIError.prototype.name`，初始值為 `"URIError"`。
 
-- {{jsxref("URIError.prototype")}}
-  - : 允許對一個 `URIError` 物件增加其屬性。
+## 實例方法
 
-## 方法
-
-普遍的 `URIError` 自身沒有包含方法，儘管他的確從原型鍊中繼承了一些。
-
-## `URIError` 物件實體
-
-### 屬性
-
-- {{jsxref("Error.prototype.message", "URIError.prototype.message")}}
-  - : Error message. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.name", "URIError.prototype.name")}}
-  - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "URIError.prototype.cause")}}
-  - : Error cause. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}} {{non-standard_inline}}
-  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}} {{non-standard_inline}}
-  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}} {{non-standard_inline}}
-  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "URIError.prototype.stack")}} {{non-standard_inline}}
-  - : Stack trace. Inherited from {{jsxref("Error")}}.
+_繼承其父實例 {{jsxref("Error")}} 的實例方法_。
 
 ## 範例
 
-### Catch 一個 `URIError`
+### 捕捉 URIError
 
 ```js
 try {
@@ -65,26 +42,20 @@ try {
   console.log(e instanceof URIError); // true
   console.log(e.message); // "malformed URI sequence"
   console.log(e.name); // "URIError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+  console.log(e.stack); // 錯誤的堆疊
 }
 ```
 
-### 生成一個 `URIError`
+### 建立 URIError
 
 ```js
 try {
-  throw new URIError("Hello", "someFile.js", 10);
+  throw new URIError("你好");
 } catch (e) {
   console.log(e instanceof URIError); // true
-  console.log(e.message); // "Hello"
+  console.log(e.message); // "你好"
   console.log(e.name); // "URIError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  console.log(e.stack); // 錯誤的堆疊
 }
 ```
 
@@ -99,8 +70,7 @@ try {
 ## 參見
 
 - {{jsxref("Error")}}
-- {{jsxref("URIError.prototype")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("decodeURI()")}}
+- {{jsxref("decodeURIComponent()")}}
+- {{jsxref("encodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}

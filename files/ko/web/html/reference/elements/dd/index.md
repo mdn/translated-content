@@ -45,11 +45,11 @@ dd {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만을 포함합니다.
 
 ## 예제
 
-예시를 보러면 [`<dl>` 예제](/ko/docs/Web/HTML/Element/dl#예제)를 참고하세요.
+예시를 보러면 [`<dl>` 예제](/ko/docs/Web/HTML/Reference/Elements/dl#예제)를 참고하세요.
 
 ## 기술 요약
 
@@ -58,7 +58,7 @@ dd {
     <tr>
       <th scope="row">
         <a
-          href="/ko/docs/Web/HTML/Content_categories"
+          href="/ko/docs/Web/HTML/Guides/Content_categories"
           >콘텐츠 카테고리</a
         >
       </th>
@@ -67,7 +67,7 @@ dd {
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >
       </td>

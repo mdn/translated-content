@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/User-Agent
 original_slug: Web/HTTP/Headers/User-Agent
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição **User-Agent** é uma cadeia de caracteres característica que permite servidores e pares de rede identificar a aplicação, sistema operacional, fornecedor, e/ou versão do agente de usuário requisitante.
 
 > [!WARNING]
@@ -18,7 +16,7 @@ O cabeçalho de requisição **User-Agent** é uma cadeia de caracteres caracter
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

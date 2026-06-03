@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 27ed2557b2d3f07807b2f662dc2cf13208406eb9
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Type`** 表示标头用于指示资源的原始{{Glossary("MIME type","媒体类型")}}（在发送时应用任何内容编码之前）。
 
 在响应中，`Content-Type` 标头向客户端提供返回内容的实际内容类型。例如，当浏览器执行 MIME 嗅探时，该标头的值可能会被忽略；将 {{HTTPHeader("X-Content-Type-Options")}} 标头值设置为 `nosniff` 可防止这种行为。

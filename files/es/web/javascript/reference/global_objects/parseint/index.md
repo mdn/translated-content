@@ -18,7 +18,6 @@ parseInt(string, base);
 ### Parámetros
 
 - `cadena`
-
   - : Una cadena que representa el valor que se desea convertir.
 
 - `base`

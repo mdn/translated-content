@@ -3,8 +3,6 @@ title: Date.prototype.setUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
 ---
 
-{{JSRef}}
-
 **`setUTCFullYear()`** 方法根据世界标准时间为一个具体日期设置年份。
 
 {{InteractiveExample("JavaScript Demo: Date.setUTCFullYear()")}}

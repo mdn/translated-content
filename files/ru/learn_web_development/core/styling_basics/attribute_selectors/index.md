@@ -3,7 +3,7 @@ title: Селекторы атрибута
 slug: Learn_web_development/Core/Styling_basics/Attribute_selectors
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}
 
 Как вы знаете из курса о HTML, элементы могут иметь атрибуты, которые дают дополнительную информацию о размечаемом элементе. В CSS вы можете использовать селекторы атрибута для стилизации элементов с определёнными атрибутами. Этот урок покажет вам, как использовать эти очень полезные селекторы.
 
@@ -65,4 +65,4 @@ slug: Learn_web_development/Core/Styling_basics/Attribute_selectors
 
 Итак, мы рассмотрели селекторы атрибута, и вы можете перейти к следующей статье, в которой рассказывается о [псевдоклассах и псевдоэлементах](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}

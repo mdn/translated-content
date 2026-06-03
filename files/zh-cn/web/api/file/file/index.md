@@ -23,9 +23,7 @@ new File(fileBits, fileName, options)
 - `fileName`
   - : 表示文件名或文件路径的字符串。
 - `options` {{optional_inline}}
-
   - : 包含文件可选属性的选项对象。可用选项如下：
-
     - `type` {{optional_inline}}
       - : 表示将放入文件的内容的 MIME 类型的字符串。默认值为 `""`。
     - `endings` {{optional_inline}}

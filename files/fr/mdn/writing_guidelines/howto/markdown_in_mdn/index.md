@@ -245,7 +245,8 @@ Ce HTML sera affiché comme une boîte mise en valeur&nbsp;:
 #### Remarques
 
 ```md
-> **Remarque :** **Voici comment écrire un encadré.**
+> [!CALLOUT]
+> **Voici comment écrire un encadré.**
 >
 > Il peut avoir plusieurs paragraphes.
 ```
@@ -335,7 +336,7 @@ Voir la discussion et le consensus à ce sujet dans <https://github.com/mdn/cont
 
 ## Listes de définitions
 
-Les listes de définitions sont souvent utilisées sur MDN, mais ne sont pas supportées par GFM. MDN introduit un format personnalisé pour les listes de définitions, qui est une forme modifiée des listes non-ordonnées de GFM ([`<ul>`](/fr/docs/Web/HTML/Element/ul)). Dans ce format&nbsp;:
+Les listes de définitions sont souvent utilisées sur MDN, mais ne sont pas supportées par GFM. MDN introduit un format personnalisé pour les listes de définitions, qui est une forme modifiée des listes non-ordonnées de GFM ([`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)). Dans ce format&nbsp;:
 
 - La liste `<ul>` de GFM contient n'importe quel nombre d'éléments GFM `<li>` de premier niveau.
 - Chacun de ces éléments GFM `<li>` de premier niveau doivent contenir un élément GFM `<ul>` en tant que dernier élément.
@@ -350,11 +351,9 @@ Par exemple, voici un `<dl>`&nbsp;:
 
 ````md
 - terme1
-
   - : Ma description du terme1
 
 - `terme2`
-
   - : Ma description du terme2
 
     Il peut avoir plusieurs paragraphes, et aussi des blocs de code&nbsp;:
@@ -581,7 +580,7 @@ Voir les discussions et consensus sur les <i lang="en">issues</i> GitHub suivant
 
 ## Exposant et indice
 
-On peut utiliser les éléments HTML [`<sup>`](/fr/docs/Web/HTML/Element/sup) et [`<sub>`](/fr/docs/Web/HTML/Element/sub) si nécessaire, mais on veillera à utiliser des formes alternatives dans les cas suivants&nbsp;:
+On peut utiliser les éléments HTML [`<sup>`](/fr/docs/Web/HTML/Reference/Elements/sup) et [`<sub>`](/fr/docs/Web/HTML/Reference/Elements/sub) si nécessaire, mais on veillera à utiliser des formes alternatives dans les cas suivants&nbsp;:
 
 - Pour l'exponentiation, utilisez le circonflexe&nbsp;: `2^53`.
 - Pour des expressions ordinales comme 1<sup>er</sup>, préférez des mots comme «&nbsp;premier&nbsp;».
@@ -601,18 +600,3 @@ Le premier paragraphe devrait donc être à la fois bref et informatif.
 ### Référence de la discussion
 
 Voir l'<i lang="en">issue</i> GitHub suivante pour la discussion et le consensus <https://github.com/mdn/content/issues/3923> (en anglais).
-
-## KumaScript
-
-Au sein d'une page, on pourra inclure des appels à des macros KumaScript dans les contenus en prose&nbsp;:
-
-```md
-La propriété **`margin`** [CSS](/fr/docs/Web/CSS) définit la taille des marges sur les quatres côtés de l'élément. C'est une propriété raccourcie qui permet de manipuler les autres propriétés de marges : \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}} et \{{cssxref("margin-left")}}.
-
-\{{EmbedInteractiveExample("pages/css/margin.html")}}
-
-Les marges haute et basse n'ont aucun effet sur les élements en ligne (inline) qui ne sont pas remplacés
-(par exemple les \{{HTMLElement("span")}} ou \{{HTMLElement("code")}}).
-```
-
-Voir [Utiliser les macros](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros) pour plus d'informations sur les macros.

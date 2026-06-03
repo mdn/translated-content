@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "conflicting/Learn_web_development/Core/Scripting")}}
 
 ¡Bienvenido al curso de JavaScript para principiantes de MDN! En este artículo veremos JavaScript desde un alto nivel, respondiendo preguntas como "¿Qué es?" y "¿Qué puedes hacer con él?", y asegúrate de estar cómodo con el propósito de JavaScript.
 
@@ -64,7 +64,7 @@ function updateName() {
 }
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('A_high-level_definition', '100%', 80, , , , , 'allow-modals') }}
 
 Intenta hacer clic en esta última versión de la etiqueta de texto para ver qué sucede (ten en cuenta también que puedes encontrar esta demostración en GitHub — ¡consulta el [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html) o [ejecútalo en vivo](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html))!
 
@@ -403,4 +403,4 @@ Así que ahí tienes, tu primer paso en el mundo de JavaScript. Comenzamos solo 
 
 JavaScript puede parecer un poco abrumador en este momento, pero no te preocupes — en este curso, te guiaremos en pasos simples que tendrán sentido en el futuro. En el próximo artículo, [nos sumergiremos directamente en lo práctico](/es/docs/Learn_web_development/Core/Scripting/A_first_splash), lo que te permitirá comenzar directamente y crear tus propios ejemplos de JavaScript.
 
-{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "conflicting/Learn_web_development/Core/Scripting")}}

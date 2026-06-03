@@ -1,57 +1,91 @@
 ---
-title: window.innerHeight
+title: "Window : propriété innerHeight"
+short-title: innerHeight
 slug: Web/API/Window/innerHeight
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
-Récupère la hauteur (en pixels) de la partie visible de la fenêtre de navigation en incluant, si elle est affichée, la barre de défilement horizontale.
+La propriété en lecture seule **`innerHeight`** de l'interface {{DOMxRef("Window")}} retourne la hauteur intérieure de la fenêtre en pixels, y compris la hauteur de la barre de défilement horizontale, si elle est présente.
 
-> [!NOTE]
-> La valeur retournée par cette propriété correspond le cas échéant à la hauteur de la fenêtre définie par `nsIDOMWindowUtils.setCSSViewport()`, dans le cas où vous utilisez cette méthode pour définir les dimensions de la fenêtre virtuelle dans le but d'agencer la page.
+La valeur de `innerHeight` est prise à partir de la hauteur de la {{Glossary("layout viewport", "disposition de la zone d'affichage")}} de la fenêtre. La largeur peut être obtenue en utilisant la propriété {{DOMxRef("Window.innerWidth", "innerWidth")}}.
 
-## Syntaxe
+## Valeur
 
-```js
-var hauteur = window.innerHeight;
-```
+Une valeur entière indiquant la hauteur de la zone d'affichage de la fenêtre en pixels. La propriété est en lecture seule et n'a pas de valeur par défaut.
 
-### Valeur
+Pour modifier la hauteur de la fenêtre, appelez l'une de ses méthodes de redimensionnement, telles que {{DOMxRef("Window.resizeTo", "resizeTo()")}} ou {{DOMxRef("Window.resizeBy", "resizeBy()")}}.
 
-Renvoie la hauteur de la partie visible de la fenêtre de navigation. La propriété `window.innerHeight` est accessible en lecture seulement ; elle n'a pas de valeur par défaut.
+## Notes d'utilisation
 
-## Notes
+Pour obtenir la hauteur de la fenêtre moins sa barre de défilement horizontale et ses bordures, utilisez plutôt la propriété {{DOMxRef("Element.clientHeight", "clientHeight")}} de l'élément racine {{HTMLElement("html")}}.
 
-- La propriété `window.innerHeight` est supportée par tout objet assimilé à une fenêtre _{{domxref("window")}}_, un cadre _frame_ , un ensemble de cadres _frameset_, ou une fenêtre secondaire.
-- Il existe un [algorithme](https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7) pour calculer la hauteur de la partie visible de la fenêtre en excluant la barre de défilement horizontale si est elle affichée.
+Les deux propriétés `innerHeight` et `innerWidth` sont disponibles sur n'importe quelle fenêtre ou tout objet qui se comporte comme une fenêtre, tel qu'un onglet ou un cadre.
 
 ## Exemples
 
-### Sur un _frameset_
+### Sur une collection de cadres
 
 ```js
-var intFrameHeight = window.innerHeight; // ou
+console.log(window.innerHeight); // ou
 
-var intFrameHeight = self.innerHeight;
+console.log(self.innerHeight);
 // retournera la hauteur de la partie visible du cadre dans frameset
 
-var intFramesetHeight = parent.innerHeight;
+console.log(parent.innerHeight);
 // retournera la hauteur de la partie visible du frameset le plus proche
 
-var intOuterFramesetHeight = top.innerHeight;
+console.log(top.innerHeight);
 // retournera la hauteur de la partie visible du frameset le plus éloigné
 ```
 
-<!-- TODO: add content -->
+Pour modifier les dimensions d'une fenêtre, voir {{DOMxRef("window.resizeBy()")}} et
+{{DOMxRef("window.resizeTo()")}}.
 
-- Pour modifier les dimensions d'une fenêtre, voir {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo()")}}.
-- Pour récupérer la hauteur extérieure d'une fenêtre, c'est-à-dire la hauteur de la fenêtre du navigateur dans sa totalité, voir {{domxref("window.outerHeight")}}.
+Pour récupérer la hauteur extérieure d'une fenêtre, c'est-à-dire la hauteur de la fenêtre du navigateur dans sa totalité, voir
+{{DOMxRef("window.outerHeight")}}.
 
 ### Exemple graphique
 
 L'illustration suivante montre la différence entre `outerHeight` et `innerHeight`.
 
 ![Illustration de la différence entre innerHeight et outerHeight](firefoxinnervsouterheight2.png)
+
+## Démonstration
+
+### HTML
+
+```html
+<p>
+  Redimensionnez la fenêtre du navigateur pour déclencher l'événement
+  <code>resize</code>.
+</p>
+<p>Hauteur de la fenêtre&nbsp;: <span id="height"></span></p>
+<p>Largeur de la fenêtre&nbsp;: <span id="width"></span></p>
+```
+
+### JavaScript
+
+```js
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
+
+function updateSize() {
+  heightOutput.textContent = window.innerHeight;
+  widthOutput.textContent = window.innerWidth;
+}
+
+updateSize();
+window.addEventListener("resize", updateSize);
+```
+
+### Résultat
+
+{{EmbedLiveSample("Démonstration")}}
+
+Vous pouvez également {{LiveSampleLink("Démonstration", "voir les résultats du code de démonstration dans une page séparée")}}.
 
 ## Spécifications
 
@@ -63,6 +97,6 @@ L'illustration suivante montre la différence entre `outerHeight` et `innerHeigh
 
 ## Voir aussi
 
-- {{domxref("window.innerWidth")}}
-- {{domxref("window.outerHeight")}}
-- {{domxref("window.outerWidth")}}
+- La propriété {{DOMxRef("Window.innerWidth")}}
+- La propriété {{DOMxRef("Window.outerHeight")}}
+- La propriété {{DOMxRef("Window.outerWidth")}}

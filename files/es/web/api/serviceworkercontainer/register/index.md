@@ -23,9 +23,7 @@ ServiceWorkerContainer.register(scriptURL, options)
 - `scriptURL`
   - : La URL del script de trabajador de servicio.
 - `options` `{{optional_inline}}`
-
   - : Un objeto que contiene opciones de registro. Las opciones disponibles actualmente son:
-
     - `alcance`: {{domxref("USVString")}} representa una URL que define el alcance de registro de un "service worker"; es decir, qué rango de URL puede controlar un "service worker". Esto es generalmente una URL relativa. El valor predeterminado es la URL que obtendría si resolviera './' utilizando la ubicación de la página web como base. No es, como se cree comúnmente, relativo a la ubicación del "service worker". Vea la sección de Ejemplos para más información sobre cómo funciona.
 
 ### Valor retornado

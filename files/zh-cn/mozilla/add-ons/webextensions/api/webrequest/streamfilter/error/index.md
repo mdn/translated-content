@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 在 {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} 事件触发后包含错误消息的字符串。
 
 ## 浏览器兼容性

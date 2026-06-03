@@ -19,9 +19,7 @@ new WebAssembly.Global(descriptor, value)
 ### 引数
 
 - `descriptor`
-
   - : オブジェクトで、 2 つのプロパティを持ちます。
-
     - `value`: 文字列で、そのグローバル変数のデータ型を表します。
       これは以下のいずれかです。
       - `i32`: 32 ビット整数。

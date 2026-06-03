@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}{{SeeCompatTable}}
 
-**`type`** は {{DOMxRef('CSSPseudoElement')}} インターフェイスの読み取り専用プロパティで、擬似要素の型を [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors#pseudo-elements)の形の文字列で表します。
+**`type`** は {{DOMxRef('CSSPseudoElement')}} インターフェイスの読み取り専用プロパティで、擬似要素の型を [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors#pseudo-elements)の形の文字列で表します。
 
 ## 値
 
@@ -42,4 +42,4 @@ console.log(mySelector === typeOfPseudoElement); // true を出力
 ## 関連情報
 
 - {{DOMxRef('Element.pseudo()')}}
-- [標準的な擬似要素の索引](/ja/docs/Web/CSS/Pseudo-elements#標準的な擬似要素の索引)
+- [標準的な擬似要素の索引](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements#標準的な擬似要素の索引)

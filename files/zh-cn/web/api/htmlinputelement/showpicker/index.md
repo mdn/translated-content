@@ -38,7 +38,7 @@ showPicker()
 
 ## 安全性
 
-[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)是需要的。用户必须与页面或者 UI 元素交互，才能使这个功能按顺序工作。
+[瞬态用户激活](/zh-CN/docs/Web/Security/Defenses/User_activation)是需要的。用户必须与页面或者 UI 元素交互，才能使这个功能按顺序工作。
 
 ## 示例
 
@@ -56,7 +56,8 @@ if ("showPicker" in HTMLInputElement.prototype) {
 
 这个示例展示了如何将这个功能用于 `color` 和 `file` 的 input 选择器。
 
-> **备注：** `date`、`datetime-local`、`month`、`time`、`week` 的选择器以同样的方式启动。它们并不能在这里展示，因为在线示例运行在一个跨域 frame 中，并且会导致 [`SecurityError`](#安全性)。
+> [!NOTE]
+> `date`、`datetime-local`、`month`、`time`、`week` 的选择器以同样的方式启动。它们并不能在这里展示，因为在线示例运行在一个跨域 frame 中，并且会导致 [`SecurityError`](#安全性)。
 
 #### HTML
 

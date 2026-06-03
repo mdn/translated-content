@@ -31,7 +31,6 @@ slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 Для этого нужно:
 
 1. Установить Python. Если вы пользуетесь Linux или Mac OS X, всё уже готово в вашей системе. Если вы пользователь Windows, вы можете скачать установочный файл с домашней страницы Python:
-
    - Зайдите на [python.org](https://www.python.org/)
    - В секции загрузок, выберите линк для Python "3.xxx".
    - Внизу страницы выберите _Windows x86 executable installer_ и скачайте его.

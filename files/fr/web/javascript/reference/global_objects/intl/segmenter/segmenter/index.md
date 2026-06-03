@@ -1,59 +1,64 @@
 ---
 title: Constructeur Intl.Segmenter()
+short-title: Intl.Segmenter()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
+l10n:
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-{{JSRef}}
+Le constructeur **`Intl.Segmenter()`** crée des objets {{JSxRef("Intl.Segmenter")}}.
 
-Le constructeur **`Intl.Segmenter()`** crée un objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) permettant la segmentation d'un texte selon la locale.
-
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.Segmenter() constructor")}}
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+const string = "Que ma joie demeure";
 
-const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+const iterator = segmenterFr.segment(string)[Symbol.iterator]();
 
-console.log(iterator1.next().value.segment);
-// Expected output: 'Que'
+console.log(iterator.next().value.segment);
+// Résultat attendu : 'Que'
 
-console.log(iterator1.next().value.segment);
-// Expected output: ' '
+console.log(iterator.next().value.segment);
+// Résultat attendu : ' '
 ```
 
 ## Syntaxe
 
-```js
-new Intl.Segmenter();
-new Intl.Segmenter(locales);
-new Intl.Segmenter(locales, options);
+```js-nolint
+new Intl.Segmenter()
+new Intl.Segmenter(locales)
+new Intl.Segmenter(locales, options)
 ```
+
+> [!NOTE]
+> `Intl.Segmenter()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 
-- `locales` {{optional_inline}}
-  - : Une chaîne qui est une balise de langue BCP 47 ou un tableau de telles chaînes. Pour la forme générale et l'interprétation de cet argument, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#négociation_de_la_locale).
-- `options` {{optional_inline}}
-  - : Un objet avec une ou plusieurs des propriétés suivantes&nbsp;:
-    - `granularity` {{optional_inline}}
-      - : Une chaîne de caractères qui peut valoir&nbsp;:
-        - `"grapheme"` (la valeur par défaut)
-          - : Découpe la chaîne en groupes de graphèmes (<i lang="en">grapheme cluster</i>) (ce qui correspond aux caractères perçus pour la personne qui lit), comme déterminé par la locale.
+- `locales` {{Optional_Inline}}
+  - : Une chaîne de caractères avec une {{Glossary("BCP 47 language tag", "balise de langue BCP 47")}} ou une instance de {{JSxRef("Intl.Locale")}}, ou un tableau de tels identifiants de locale. La locale par défaut de l'environnement d'exécution est utilisée lorsque `undefined` est passé ou lorsqu'aucun des identifiants de locale définis n'est pris en charge. Pour la forme générale et l'interprétation de l'argument `locales`, voir [la description du paramètre sur la page principale de `Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#argument_locales).
+- `options` {{Optional_Inline}}
+  - : Un objet contenant les propriétés suivantes, dans l'ordre dans lequel elles sont récupérées (toutes sont optionnelles)&nbsp;:
+    - `localeMatcher`
+      - : L'algorithme de correspondance de la locale à utiliser. Les valeurs possibles sont `"lookup"` et `"best fit"`&nbsp;; la valeur par défaut est `"best fit"`. Pour plus d'informations sur cette option, voir [Identification et négociation de la locale](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_négociation_de_locale).
+    - `granularity`
+      - : La granularité avec laquelle l'entrée doit être segmentée. Les valeurs possibles sont&nbsp;:
+        - `"grapheme"` (par défaut)
+          - : Segmente l'entrée aux limites des grappes de graphèmes (caractères perçus par l'utilisateur·ice), comme déterminé par la locale.
         - `"word"`
-          - : Découpe la chaîne en segments aux limites de mots, comme déterminé par la locale.
+          - : Segmente l'entrée aux limites des mots, comme déterminé par la locale.
         - `"sentence"`
-          - : Découpe la chaîne en segments aux limites de phrases, comme déterminé par la locale.
-    - `localeMatcher` {{optional_inline}}
-      - : L'algorithme de correspondance des locales à utiliser. Les valeurs possibles sont&nbsp;:
-        - `"best fit"` (la valeur par défaut)
-          - : L'environnement d'exécution peut éventuellement choisir une locale plus adaptée que celle fournie par l'algorithme utilisé par `"lookup"`.
-        - `"lookup"`
-          - : Utilise [l'algorithme de recherche BCP 47](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4) pour choisir la locale à partir de `locales`. Pour chaque locale contenue dans `locales`, l'environnement d'exécution renvoie la première locale prise en charge (en retirant éventuellement des sous-étiquettes de l'étiquette de locale fournie afin d'en sélectionner une prise en charge&nbsp;; autrement dit, si on fournit `"de-CH"` pour `locales`, cet algorithme pourra fournir `"de"` en résultat si `"de"` est prise en charge mais que `"de-CH"` ne l'est pas).
+          - : Segmente l'entrée aux limites des phrases, comme déterminé par la locale.
 
 ### Valeur de retour
 
-Une nouvelle instance de [`Intl.Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments).
+Une nouvelle instance de [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter).
+
+### Exceptions
+
+- {{JSxRef("RangeError")}}
+  - : Levée si `locales` ou `options` contiennent des valeurs invalides.
 
 ## Exemples
 

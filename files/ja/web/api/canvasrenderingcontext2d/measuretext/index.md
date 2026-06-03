@@ -1,6 +1,9 @@
 ---
-title: CanvasRenderingContext2D.measureText()
+title: "CanvasRenderingContext2D: measureText() メソッド"
+short-title: measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
 {{APIRef}}
@@ -9,13 +12,13 @@ slug: Web/API/CanvasRenderingContext2D/measureText
 
 ## 構文
 
-```js
-ctx.measureText(text);
+```js-nolint
+measureText(text)
 ```
 
 ### 引数
 
-- text
+- `text`
   - : 測定する文字列。
 
 ### 返値

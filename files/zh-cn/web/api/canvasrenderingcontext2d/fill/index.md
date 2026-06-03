@@ -21,10 +21,8 @@ fill(path, fillRule)
 ### 参数
 
 - `fillRule`
-
   - : 一种算法，确定点是在路径内还是在路径外。
     允许的值：
-
     - `nonzero`
       - : [非零环绕规则](https://en.wikipedia.org/wiki/Nonzero-rule)，默认的规则。
     - `evenodd`

@@ -27,7 +27,6 @@ var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceReso
 - `contextNode`: `xpathExpression`이 평가될 모든 자식 노드를 포함하는 문서의 노드. [document](/ko/docs/Web/API/Document) 노드가 가장 흔히 쓰입니다.
 
 - `namespaceResolver`: 그 접두사와 관련된 namespace URI를 나타내는 문자열을 반환하는 `xpathExpression` 내에 포함되는 모든 namespace 접두사를 넘겨주는 함수. 이는 XPath 식에 쓰(이)는 접두사와 문서에 쓰(이)는 아마도 다른 접두사 사이에 변환을 가능하게 합니다. 함수는 어느 한쪽일 수 있습니다.
-
   - [`XPathEvaluator`](http://www.xulplanet.com/references/objref/XPathEvaluator.html) 개체의 [`createNSResolver`](/ko/docs/DOM/document.createNSResolver) 메소드를 써서 [만듭니다](#implementing_a_default_namespace_resolver). 항상 가상으로 이를 쓰면 좋습니다.
   - HTML 문서를 위해서나 namespace 접두사가 없을 때 쓸 수 있는 `null`. 만약 `xpathExpression`가 namespace 접두사를 포함하면 이는 `NAMESPACE_ERR` 코드를 내는 `DOMException`을 가져옴을 유의하세요.
   - 사용자 정의 맞춤(custom) 함수. 세부 내용은 부록의 [사용자 정의 Namespace Resolver 쓰기](#implementing_a_user_defined_namespace_resolver) 절을 보세요.

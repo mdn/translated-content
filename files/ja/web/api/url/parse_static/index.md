@@ -27,7 +27,6 @@ URL.parse(url, base)
     `url` が相対参照の場合、`base` は要求され、最終的な URL を解決するために使用されます。
     `url` が絶対 URL の場合、指定された `base` は結果の URL を作成するために使用されません。
 - `base` {{optional_inline}}
-
   - : `url` が相対 URL の場合に利用するベース URL を表す文字列です。
     指定しない場合、既定では `undefined` となります。
 

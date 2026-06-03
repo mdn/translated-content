@@ -9,7 +9,8 @@ l10n:
 
 **`ArrayBuffer[Symbol.species]`** 정적 접근자 속성은 배열 버퍼 메서드에서 반환 값을 생성하는데 사용되는 생성자를 반환합니다.
 
-> **경고:** `Symbol.species` 존재는 임의의 코드가 실행될 수 있게하며 보안 취약점이 발생할 수 있습니다. 또한 어떠한 최적화를 훨씬 어렵게 만들 수 있습니다. 엔진 구현자들은 [이 기능을 제거할지 여부를 검토 중](https://github.com/tc39/proposal-rm-builtin-subclassing) 입니다. 가능하면 이 기능에 의존하지 마시기 바랍니다.
+> [!WARNING]
+> `Symbol.species` 존재는 임의의 코드가 실행될 수 있게하며 보안 취약점이 발생할 수 있습니다. 또한 어떠한 최적화를 훨씬 어렵게 만들 수 있습니다. 엔진 구현자들은 [이 기능을 제거할지 여부를 검토 중](https://github.com/tc39/proposal-rm-builtin-subclassing) 입니다. 가능하면 이 기능에 의존하지 마시기 바랍니다.
 
 ## 구문
 

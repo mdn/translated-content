@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Workers API")}}
 
-Le constructeur **`SharedWorker()`** crée un objet [`SharedWorker`](/fr/docs/Web/API/SharedWorker) qui exécute le script depuis l'URL indiquée. Le script doit respecter la [politique de même origine](/fr/docs/Web/Security/Same-origin_policy).
+Le constructeur **`SharedWorker()`** crée un objet [`SharedWorker`](/fr/docs/Web/API/SharedWorker) qui exécute le script depuis l'URL indiquée. Le script doit respecter la [politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy).
 
 > [!NOTE]
 > Il y a désaccord entre les éditeurs de navigateur pour savoir si une URL de données partage la même origine. Bien que Gecko 10.0 et les versions supérieures acceptent des URL de données, ce n'est pas le cas de tous les autres navigateurs.
@@ -41,7 +41,7 @@ new SharedWorker(uneURL, options);
 - `SecurityError` [`DOMException`](/fr/docs/Web/API/DOMException)
   - : Déclenchée si le document n'est pas autorisé à démarrer des <i lang="en">workers</i>, par exemple si la syntaxe de l'URL est invalide ou si cette dernière ne respecte pas la règle de même origine.
 - `NetworkError` [`DOMException`](/fr/docs/Web/API/DOMException)
-  - : Déclenchée si le type MIME du script du <i lang="en">worker</i> est incorrect. Ce devrait _toujours_ être `text/javascript` (pour des raisons historiques, [d'autres types MIME JavaScript](/fr/docs/Web/HTTP/MIME_types#textjavascript) peuvent être acceptés).
+  - : Déclenchée si le type MIME du script du <i lang="en">worker</i> est incorrect. Ce devrait _toujours_ être `text/javascript` (pour des raisons historiques, [d'autres types MIME JavaScript](/fr/docs/Web/HTTP/Guides/MIME_types#textjavascript) peuvent être acceptés).
 - `SyntaxError` [`DOMException`](/fr/docs/Web/API/DOMException)
   - : Déclenchée si `uneURL` ne peut pas être analysée.
 

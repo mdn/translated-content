@@ -3,7 +3,7 @@ title: Setting up a Node development environment
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Теперь, когда вы знаете, что такое Express, мы покажем вам, как настроить и протестировать среду разработки Express для Windows, Linux (Ubuntu) и Mac OS X - какую бы операционную систему вы не использовали, эта статья должна дать вам все, что необходимо для возможности начать разрабатывать приложения Express.
 
@@ -58,7 +58,6 @@ NPM также можно использовать для (глобальной)
 Установка Node и NPM в Windows и macOS проста, потому что вы можете просто использовать предоставленный инсталлятор:
 
 1. Загрузите необходимый установщик:
-
    1. Перейдите по ссылке <https://nodejs.org/en/>
    2. Нажмите кнопку, чтобы загрузить сборку LTS, которая «Рекомендуется для большинства пользователей».
 
@@ -73,7 +72,8 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-> **Предупреждение:** **Внимание:** Не устанавливайте напрямую из обычных репозиториев Ubuntu, поскольку они содержат очень старые версии узла.
+> [!WARNING]
+> Не устанавливайте напрямую из обычных репозиториев Ubuntu, поскольку они содержат очень старые версии узла.
 
 ### Проверка вашей установки Nodejs и NPM
 
@@ -371,4 +371,4 @@ DEBUG=helloworld:* npm start
 - [Installing Express](http://expressjs.com/en/starter/installing.html) (expressjs.com)
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

@@ -1,42 +1,52 @@
 ---
-title: CSSStyleDeclaration.getPropertyCSSValue()
+title: CSSStyleDeclaration：getPropertyCSSValue() 方法
+short-title: getPropertyCSSValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
+l10n:
+  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
 {{ APIRef("CSSOM") }} {{deprecated_header}}
 
-**CSSStyleDeclaration.getPropertyCSSValue()** 方法接口返回一个{{domxref('CSSValue')}} 包含一个属性的 CSS 值。请注意，如果属性名称是速记属性，则返回 null。
+**CSSStyleDeclaration.getPropertyCSSValue()** 方法返回一个包含指定属性 CSS 值的 {{domxref('CSSValue')}}。注意：如果属性名是一个简写属性，该方法会返回 `null`。
 
-现在你应该使用 {{domxref("CSSStyleDeclaration.getPropertyValue()")}}。
+> [!NOTE]
+> 此属性曾是创建类型化 CSS 对象模型尝试的一部分。该尝试已被放弃，大多数浏览器并未实现它。
+>
+> 要实现你的目的，你可以使用：
+>
+> - 无类型的 [CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model)中被广泛支持的 {{domxref("CSSStyleDeclaration.getPropertyValue()")}} 或
+> - 现代化的 [CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Typed_OM_API) 中支持度较低且被视为实验性的 {{domxref("Element.computedStyleMap()")}}。
 
 ## 语法
 
-```plain
-let value = style.getPropertyCSSValue(property);
+```js-nolint
+getPropertyCSSValue(property)
 ```
 
 ### 参数
 
-- _`property`_ is a {{domxref('DOMString')}} representing the property name to be retrieved.
+- `property`
+  - : 一个字符串，表示要获取的属性名称。
 
 ### 返回值
 
-- `value` is a {{domxref('CSSValue')}} containing the CSS value for a property. If none exists, returns `null`.
+一个包含该属性 CSS 值的 {{domxref('CSSValue')}} 。如果不存在则返回 `null`。
 
 ## 示例
 
-The following JavaScript code gets an object containing the computed RGB values of the `color` CSS property:
+下面的 JavaScript 代码获取一个对象，其中包含 `color` CSS 属性的计算后的 RGB 值：
 
 ```js
-var style = window.getComputedStyle(elem, null);
-var rgbObj = style.getPropertyCSSValue("color").getRGBColorValue();
+const style = window.getComputedStyle(elem, null);
+const rgbObj = style.getPropertyCSSValue("color").getRGBColorValue();
 ```
 
 ## 规范
 
-该特性最初在 [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) 中定义，但从那时起已从标准化工作中移除。
+此特性最初定义于 [DOM 样式第 2 版](https://www.w3.org/TR/DOM-Level-2-Style/)规范，但自那以后已从任何标准化工作中移除。
 
-它已被现代、不兼容的 [CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Typed_OM_API) 取代，该 API 已被标准化。
+它已被现代但不兼容的 [CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Typed_OM_API) 所取代，后者现已进入标准轨道。
 
 ## 浏览器兼容性
 

@@ -1,17 +1,16 @@
 ---
-title: "<a>: アンカー要素"
+title: HTML `<a>` アンカー要素
+short-title: <a>
 slug: Web/HTML/Reference/Elements/a
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<a>`** は [HTML](/ja/docs/Web/HTML) の要素（*アンカー*要素）で、[`href` 属性](#href)を用いて、別のウェブページ、ファイル、メールアドレス、同一ページ内の場所、または他の URL へのハイパーリンクを作成します。
 
 `<a>` の内容は、リンク先を示すもの**であるべきです**。`href` 属性が存在する場合、`<a>` 要素にフォーカスがある状態で Enter キーを押すと起動します。
 
-{{InteractiveExample("HTML Demo: &lt;a&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;a&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>You can reach Michael at:</p>
@@ -33,14 +32,12 @@ li {
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-- `attributionsrc` {{experimental_inline}}
-
+- `attributionsrc` {{deprecated_inline}}
   - : ブラウザーが {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーの送信を開始し、[ナビゲーションベースのアトリビューションソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)を登録するために使用します。
 
-    ブラウザーは、ユーザーがリンクをクリックすると、ナビゲーションベースのアトリビューションソース（{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定された）に関連付けられたソースデータを格納されます。詳細は[アトリビューション報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
+    ブラウザーは、ユーザーがリンクをクリックすると、ナビゲーションベースのアトリビューションソース（{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定された）に関連付けられたソースデータを格納します。詳細は[アトリビューション報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
     この属性には設定することができる 2 つのバージョンがあります：
-
     - 論理値、つまり `attributionsrc` の名前だけです。これは、{{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを、`href` 属性がこの点を指すのと同じサーバーに送ることを指定します。同じサーバーでアトリビューションソースの登録を処理している場合は、これで問題ありません。
     - 1 つ以上の URL を格納する値。例えば、以下のようなものです。
 
@@ -57,29 +54,24 @@ li {
     `<a>` 要素はアトリビューショントリガーとして使用することはできず、ソースとしてのみです。
 
 - `download`
-
   - : ブラウザーがリンクされた URL をダウンロードとして扱うようにします。`filename` 値があってもなくても構いません。
-
     - 値がない場合は、ブラウザーは様々なソースから生成されたファイル名/拡張子を提案します。
-
       - HTTP の {{HTTPHeader("Content-Disposition")}} ヘッダー
       - URL の[パス](/ja/docs/Web/API/URL/pathname)の最後の部分
-      - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) の先頭、 [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL_static) の {{domxref("Blob.type")}} から）
+      - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) の先頭、 [`blob:` URL](/ja/docs/Web/URI/Reference/Schemes/blob) の {{domxref("Blob.type")}} から）
 
     - 値を定義すると、ファイル名として提案します。 `/` および `\` はアンダースコアに変換されます。ファイルシステムがファイル名に禁止している文字は他にもあるかもしれませんので、ブラウザーは必要に応じてファイル名を調整します。
 
     > [!NOTE]
     >
-    > - `download` は[同一オリジンの URL](/ja/docs/Web/Security/Same-origin_policy) と、 `blob:`、 `data:` の各スキームでのみ動作します。
+    > - `download` は[同一オリジンの URL](/ja/docs/Web/Security/Defenses/Same-origin_policy) と、 `blob:`、 `data:` の各スキームでのみ動作します。
     > - ブラウザーがダウンロードをどのように扱うかは、ブラウザー、ユーザーの設定、その他の要因によって異なります。ダウンロードを開始する前にユーザーにプロンプトが表示されたり、ファイルが自動的に保存されたり、外部のアプリケーションまたはブラウザー自体で自動的に開いたりすることがあります。
     > - `Content-Disposition` ヘッダーが `download` とは異なる情報を持っていた場合、動作結果は様々です。
     >   - ヘッダーが `filename` を指定した場合、そちらが `download` 属性で指定されたファイル名より優先されます。
     >   - ヘッダーが `inline` の処分を指定している場合、 Chrome や Firefox 82 以降のバージョンでは、属性を優先してダウンロードとして扱います。Firefox の（82 以前の）古い版では、ヘッダーが優先され、コンテンツがインラインで表示されます。
 
 - `href`
-
   - : ハイパーリンクが指す先の URL です。リンクは HTTP ベースの URL に限定されません。ブラウザーが対応するあらゆるプロトコルを使用することができます。
-
     - 電話番号を示す `tel:` URL
     - メールアドレスを示す `mailto:` URL
     - SMS テキストメッセージを示す `sms:` URL
@@ -87,19 +79,18 @@ li {
     - ウェブブラウザーがその他の URL スキームに対応していない可能性がある場合、ウェブサイトは [`registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler) を使用することができます。
 
     他にも、次のようにして URL 機能でリソースの特定の部分を記載することができます。
-
     - ページの節を示すフラグメント URL
     - [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)で指定されたテキストの部分
     - メディアファイルの一部を示すメディアフラグメント
 
 - `hreflang`
   - : リンク先の URL における自然言語のヒントです。組み込まれている機能はありません。許容される値は、 [`lang` グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes/lang)と同じです。
+- `interestfor` {{experimental_inline}} {{non-standard_inline}}
+  - : `<a>` 要素を**関心インボーカー**として定義します。その値は、対象要素の `id` です。呼び出し元要素に対して関心が向けられたり失われたりした際（例えば、マウスオーバーやマウスアウト、フォーカスやフォーカス解除など）、この対象要素には何らかの影響（通常は表示または非表示）が及ぶことになります。詳細や例については、[関心インボーカーの使用](/ja/docs/Web/API/Popover_API/Using_interest_invokers)をご覧ください。
 - `ping`
   - : 空白で区切られた URL のリストです。リンクをたどるとき、ブラウザーは {{HTTPMethod("POST")}} リクエストを指定された URL に、 `PING` を本文として送信します。通常、トラッキングに使用されます。
 - `referrerpolicy`
-
   - : リンクをたどるときにどれだけの[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referer)を送信するかです。
-
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーは送信されません。
     - `no-referrer-when-downgrade`: {{HTTPHeader("Referer")}} ヘッダーは{{Glossary("origin", "オリジン")}}に {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) がない場合は送信されません。
     - `origin`: 送信されるリファラーは、参照元ページのオリジンのみに限定されます。すなわち[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}です。
@@ -112,16 +103,15 @@ li {
 - [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel)
   - : リンク先の URL との関係を示す、空白で区切られたリンク種別のリストです。
 - `target`
-
   - : リンク先の URL を表示する場所、_閲覧コンテキスト_（タブ、ウィンドウ、{{HTMLElement("iframe")}}）の名前で指定します。以下のキーワードは URL の読み込み先について特別な意味を持ちます。
-
     - `_self`: 現在の閲覧コンテキストです。（既定値）
     - `_blank`: ふつうは新しいタブですが、新しいウィンドウを使用するようにブラウザーを設定できます。
     - `_parent`: 現在の親の閲覧コンテキストです。親がない場合は、 `_self` と同じ振る舞いをします。
     - `_top`: 最上位の閲覧コンテキスト（現在のコンテキストの祖先である "最上位" のコンテキスト）です。親の閲覧コンテキストがない場合は、 `_self` と同じ動作をします。
     - `_unfencedTop`: 埋め込まれた[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)が最上位のフレームを移動できるようにします (つまり、他の予約された移動先とは異なり、フェンスフレームのルートを越えて移動します)。これがフェンスフレームのコンテキスト外で使用されてもナビゲーションは成功しますが、予約語のようには動作しないことに注意してください。
 
-    > **メモ:** `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。
+    > [!NOTE]
+    > `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。
 
 - `type`
   - : リンク先 URL の {{Glossary("MIME type", "MIME タイプ")}}の形式を表すヒントです。組み込まれている機能はありません。
@@ -129,7 +119,6 @@ li {
 ### 非推奨の属性
 
 - `charset` {{Deprecated_Inline}}
-
   - : リンク先 URL の{{Glossary("character encoding", "文字エンコーディング")}}のヒントでした。
 
     > [!NOTE]
@@ -138,7 +127,6 @@ li {
 - `coords` {{Deprecated_Inline}}
   - : [`shape` 属性](#shape)とともに使用されます。カンマ区切りの座標のリストです。
 - `name` {{Deprecated_Inline}}
-
   - : ページ内のリンク先の場所を定義するアンカーで必要でした。 HTML 4.01 では、値がまったく同じであれば `id` 属性と `name` 属性を `<a>` 要素内で同時に使用できました。
 
     > [!NOTE]
@@ -147,7 +135,6 @@ li {
 - `rev` {{Deprecated_Inline}}
   - : この属性は、逆方向のリンクを指定します。 [`rel` 属性](#rel)と逆の関係を定義していました。これはとても紛らわしいため、非推奨になりました。
 - `shape` {{Deprecated_Inline}}
-
   - : イメージマップ内のハイパーリンクの領域の形状です。
 
     > [!NOTE]
@@ -169,9 +156,9 @@ li {
 
 ##### 結果
 
-{{EmbedLiveSample('Inaccessible, weak link text')}}
+{{EmbedLiveSample('Inaccessible, weak link text', '100%', '50')}}
 
-#### 強力なリンクテキスト
+#### アクセシブルで強力なリンクテキスト
 
 幸いにも、これは簡単に直すことができ、しかもアクセシビリティに対応していないものより短くなります。
 
@@ -181,7 +168,7 @@ li {
 
 ##### 結果
 
-{{EmbedLiveSample('Strong link text')}}
+{{EmbedLiveSample('Accessible, strong link text', '100%', '50')}}
 
 支援ソフトウェアには、ページ上のすべてのリンクを一覧表示するショートカットがあります。しかし、強力なリンクテキストはすべてのユーザーに利点があります。「すべてのリンクの一覧」のショートカットは、視力のあるユーザーがページを素早く見渡す方法を模倣しています。
 
@@ -268,7 +255,7 @@ li {
 .skip-link {
   position: absolute;
   top: -3em;
-  background: #fff;
+  background: white;
 }
 .skip-link:focus {
   top: 0;
@@ -292,7 +279,7 @@ li {
 
 #### 大きさ
 
-リンクのような対話的要素は、それらを簡単に起動できるように十分な大きさの領域を提供する必要があります。これは、運動制御に問題がある人や、タッチパネルなどの精度が低い入力手段を使用している人など、さまざまな人に役立ちます。少なくとも 44×44 [CSS ピクセル](https://www.w3.org/TR/WCAG21/#dfn-css-pixels)の大きさであることが推奨されています。
+リンクのような対話的要素は、それらを簡単に起動できるように十分な大きさの領域を提供する必要があります。これは、運動制御に問題がある人や、タッチパネルなどの精度が低い入力手段を使用している人など、さまざまな人に役立ちます。少なくとも 44×44 [CSS ピクセル](https://w3c.github.io/wcag/guidelines/22/#dfn-css-pixels)の大きさであることが推奨されています。
 
 散文コンテンツのテキストのみのリンクは免除されますが、それでもハイパーリンクに十分なテキストがあることを確認して、操作しやすくなるようにしておくと良いでしょう。
 
@@ -359,7 +346,8 @@ a {
 
 {{EmbedLiveSample('Linking to an element on the same page')}}
 
-> **メモ:** `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)（英語）。
+> [!NOTE]
+> `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)（英語）。
 
 ### メールアドレスへのリンク
 
@@ -419,13 +407,13 @@ html {
   font-family: sans-serif;
 }
 canvas {
-  background: #fff;
+  background: white;
   border: 1px dashed;
 }
 a {
   display: inline-block;
-  background: #69c;
-  color: #fff;
+  background: #6699cc;
+  color: white;
   padding: 5px 10px;
 }
 ```
@@ -467,7 +455,7 @@ document
 
 ## セキュリティとプライバシー
 
-`<a>` 要素は、ユーザーのセキュリティやプライバシーに影響を及ぼす可能性があります。詳細情報については [`Referer` ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)を参照してください。
+`<a>` 要素は、ユーザーのセキュリティやプライバシーに影響を及ぼす可能性があります。詳細情報については [`Referer` ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns)を参照してください。
 
 `target="_blank"` を [`rel="noreferrer"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noreferrer) や [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) なしで使用すると、ウェブサイトが {{domxref("window.opener")}} API 搾取攻撃を受けやすくなりますが、新しい版のブラウザーでは `target="_blank"` を設定すると、`rel="noopener"` と同じ保護が提供されます。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 

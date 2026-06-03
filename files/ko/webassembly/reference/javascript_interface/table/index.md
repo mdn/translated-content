@@ -36,7 +36,7 @@ var myTable = new WebAssembly.Table(tableDescriptor);
 
 ## `Table` instances
 
-모든 `Table` 인스턴스는 `Table()`생성자의 [prototype object](/ko/docs/WebAssembly/JavaScript_interface/Table)에서 상속받습니다.이 인스턴스는 모든 `Table` 인스턴스에 적용되도록 수정할 수 있습니다.
+모든 `Table` 인스턴스는 `Table()`생성자의 [prototype object](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table)에서 상속받습니다.이 인스턴스는 모든 `Table` 인스턴스에 적용되도록 수정할 수 있습니다.
 
 ### Instance properties
 
@@ -75,7 +75,7 @@ var importObj = {
 };
 ```
 
-마지막으로 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 메소드를 사용하여 wasm 모듈 (table2.wasm)을 로드하고 인스턴스화합니다. table2.wasm 모듈에는 두 개의 함수 (하나는 42를 반환하고 다른 하나는 83을 반환하는 함수)가 들어 있고 가져온 테이블의 요소 0과 1에 둘 다 저장합니다 ([text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat) 참조). 인스턴스화 후에도 테이블의 길이는 여전히 2이지만 JS에 호출 할 수있는 호출 가능한 [Exported WebAssembly Functions](/ko/docs/WebAssembly/Exported_functions)가 요소에 포함됩니다.
+마지막으로 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 메소드를 사용하여 wasm 모듈 (table2.wasm)을 로드하고 인스턴스화합니다. table2.wasm 모듈에는 두 개의 함수 (하나는 42를 반환하고 다른 하나는 83을 반환하는 함수)가 들어 있고 가져온 테이블의 요소 0과 1에 둘 다 저장합니다 ([text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat) 참조). 인스턴스화 후에도 테이블의 길이는 여전히 2이지만 JS에 호출 할 수있는 호출 가능한 [Exported WebAssembly Functions](/ko/docs/WebAssembly/Guides/Exported_functions)가 요소에 포함됩니다.
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
@@ -102,5 +102,5 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
 ## See also
 
 - [WebAssembly](/ko/docs/WebAssembly) overview page
-- [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly concepts](/ko/docs/WebAssembly/Guides/Concepts)
+- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Guides/Using_the_JavaScript_API)

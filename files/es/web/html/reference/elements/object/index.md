@@ -22,29 +22,29 @@ El **elemento HTML `<object>`** representa un recurso externo, que puede ser tra
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/es/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Flow content</a
         >;
-        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >phrasing content</a
         >;
-        <a href="/es/docs/Web/HTML/Content_categories#Embedded_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Embedded_content"
           >embedded content</a
         >, palpable content; if the element has a
-        <a href="/es/docs/Web/HTML/Element/object#usemap"><code>usemap</code></a> attribute,
-        <a href="/es/docs/Web/HTML/Content_categories#Interactive_content"
+        <a href="/es/docs/Web/HTML/Reference/Elements/object#usemap"><code>usemap</code></a> attribute,
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Interactive_content"
           >interactive content</a
         >;
-        <a href="/es/docs/Web/HTML/Content_categories#Form_listed">listed</a
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Form_listed">listed</a
         >,
-        <a href="/es/docs/Web/HTML/Content_categories#Form_submittable"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Form_submittable"
           >submittable</a
         >
         <a
-          href="/es/docs/Web/HTML/Content_categories#Form-associated_content"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Form-associated_content"
           >form-associated</a
         >
         element.
@@ -55,7 +55,7 @@ El **elemento HTML `<object>`** representa un recurso externo, que puede ser tra
       <td>
         cero o más elementos {{HTMLElement("param")}} , luego
         <a
-          href="/es/docs/Web/HTML/Content_categories#Transparent_content_model"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Transparent_content_model"
           >transparent</a
         >.
       </td>
@@ -68,7 +68,7 @@ El **elemento HTML `<object>`** representa un recurso externo, que puede ser tra
       <th scope="row">Padres permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Content_categories#Embedded_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Embedded_content"
           >embedded content</a
         >
         (contenido incrustado).
@@ -90,7 +90,7 @@ El **elemento HTML `<object>`** representa un recurso externo, que puede ser tra
 
 ## Atributos
 
-Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [global attributes](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `archive` only {{deprecated_inline}}
   - : Una lista separada por espacios de las URl's de archivos o recursos para el objeto.
@@ -121,7 +121,7 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 - `typemustmatch`
   - : Este valor booleano indica si el atributo **type** y el [content type](/es/docs/Glossary/MIME_type) real del recurso deben coincidir para porder ser usados.
 - `usemap`
-  - : Una refercia hash-name a un elemento {{HTMLElement("map")}}; es decir un '#' seguido del valor de un [`name`](/es/docs/Web/HTML/Element/map#name) de un elemento map.
+  - : Una refercia hash-name a un elemento {{HTMLElement("map")}}; es decir un '#' seguido del valor de un [`name`](/es/docs/Web/HTML/Reference/Elements/map#name) de un elemento map.
 - `width`
   - : El ancho del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 

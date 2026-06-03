@@ -29,7 +29,6 @@ Ver [Utilizando archivos desde aplicaciones web (Using files from web applicatio
 - {{DOMxRef("File.name")}}{{ReadOnlyInline}}
   - : Retorna el nombre del archivo referenciada por el objeto `File`.
 - {{DOMxRef("File.webkitRelativePath")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-
   - : Retorna la ruta relativa de la URL del {{DOMxRef("File")}}.
 
     `File` implementa {{DOMxRef("Blob")}}, así que también cuenta con las siguientes propiedades:

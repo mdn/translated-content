@@ -44,6 +44,8 @@ l10n:
   - : この記事では基本的なスタイル設定作業のために知るべき基本を含む、フォームを CSS でスタイル設定するための入門を紹介します。
 - [ウェブフォームの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
   - : ここでは、スタイルが難しい要素を扱うために必要な、さらに高度なフォームスタイル設定テクニックを紹介します。
+- [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+  - : この記事では、最新の HTML と CSS の専用機能を使用して、完全にカスタマイズした `<select>` 要素を作成する方法について説明します。これには、選択ボタン、ドロップダウンピッカー、矢印アイコン、現在の選択チェックマーク、および個々の `<option>` 要素のスタイルを完全に制御する機能も含んでいます。
 - [UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
   - : 現在の状態に応じて制御される HTML フォームコントロールを可能とする、UI 擬似クラス の入門です。
 
@@ -61,7 +63,9 @@ l10n:
 - [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
   - : 場合によってはネイティブのフォームウィジェットが必要となるものを提供していないことがあるでしょう。例えばスタイル設定や機能で。この場合、生の HTML から自分自身のフォームウィジェットを作る必要があります。この記事ではその方法と考慮すべき点を、実際のケーススタディと一緒に説明します。
 - [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
-  - : この記事では、標準フォームの送信ではなく、カスタム JavaScript 内で HTTP リクエストを組み立てて送る方法を見ます。またそうしたい理由と、そうする意味も見ていきます（[FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)もご覧ください）。
+  - : この記事では、標準フォームの送信ではなく、カスタム JavaScript 内で HTTP リクエストを組み立てて送る方法を見ます。またそうしたい理由と、そうする意味も見ていきます（[FormData オブジェクトの使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)もご覧ください）。
+- [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+  - : この記事では、最新の HTML と CSS の専用機能を使用して、完全にカスタマイズした {{htmlelement("select")}} 要素を作成する方法について説明します。
 
 ## 関連情報
 

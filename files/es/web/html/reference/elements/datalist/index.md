@@ -10,15 +10,15 @@ El **elemento HTML `<datalist>`** contiene un conjunto de elementos {{HTMLElemen
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Contenido de las categorías</a
         >
       </th>
       <td>
-        <a href="/es/docs/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Contenido de flujo</a
         >,
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >.
       </td>
@@ -27,7 +27,7 @@ El **elemento HTML `<datalist>`** contiene un conjunto de elementos {{HTMLElemen
       <th scope="row">Contenido permitido</th>
       <td>
         O bien
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >
         o, cero o más elementos {{HTMLElement("option")}}.
@@ -41,7 +41,7 @@ El **elemento HTML `<datalist>`** contiene un conjunto de elementos {{HTMLElemen
       <th scope="row">Elementos padre permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >.
       </td>
@@ -59,7 +59,7 @@ El **elemento HTML `<datalist>`** contiene un conjunto de elementos {{HTMLElemen
 
 ## Atributos
 
-Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
+Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes), comunes a todos los elementos.
 
 ## Ejemplos
 
@@ -91,7 +91,7 @@ Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs
 
 ## Ver también
 
-- El elemento {{HTMLElement("input")}}, y más especificamente este atributo [`list`](/es/docs/Web/HTML/Element/input#list);
+- El elemento {{HTMLElement("input")}}, y más especificamente este atributo [`list`](/es/docs/Web/HTML/Reference/Elements/input#list);
 - El elemento {{HTMLElement("option")}}.
 
 {{HTMLSidebar}}

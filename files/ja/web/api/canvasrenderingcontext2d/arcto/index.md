@@ -52,7 +52,6 @@ arcTo(x1, y1, x2, y2, radius)
 ### 例外
 
 - `IndexSizeError` {{domxref("DOMException")}}
-
   - : `radius` が負の値の場合に発生します。
 
 ## 例

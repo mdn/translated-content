@@ -10,7 +10,7 @@ l10n:
 
 **`FontFace.family`** プロパティにより、 {{domxref("FontFace")}} オブジェクトのフォントファミリを取得したり設定したりすることができます。
 
-この値は、 [`font-family`](/ja/docs/Web/CSS/font-family) プロパティを使用して要素をスタイル設定するときに、特定のフォントフェイスに対して名前を照合するために用いられます。
+この値は、 [`font-family`](/ja/docs/Web/CSS/Reference/Properties/font-family) プロパティを使用して要素をスタイル設定するときに、特定のフォントフェイスに対して名前を照合するために用いられます。
 任意の名前を使用することができ、これは基盤のフォントデータで指定した名前を上書きします。
 
 このプロパティは {{cssxref("@font-face")}} の {{cssxref("@font-face/font-family", "font-family")}} 記述子と等価です。

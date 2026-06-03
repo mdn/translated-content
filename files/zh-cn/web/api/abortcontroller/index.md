@@ -28,7 +28,8 @@ l10n:
 
 ## 示例
 
-> **备注：** {{domxref("AbortSignal")}} 中还有其他额外的示例。
+> [!NOTE]
+> {{domxref("AbortSignal")}} 中还有其他额外的示例。
 
 在下面的代码片段中，我们想通过 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 下载一段视频。
 

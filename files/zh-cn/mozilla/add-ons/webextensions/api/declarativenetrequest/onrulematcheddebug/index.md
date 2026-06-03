@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当规则与请求匹配时触发。此功能仅对具有 `"declarativeNetRequestFeedback"` 权限的扩展可用，因为这仅用于调试目的。有关在每个浏览器中启用测试的详细信息，请参阅[测试](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#测试)。
 
 ## 语法
@@ -31,11 +29,8 @@ browser.declarativeNetRequest.onRuleMatchedDebug.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。函数传递以下参数：
-
     - `request`
-
       - : 一个包含匹配规则的请求信息的对象。
         - `documentId` {{optional_inline}}
           - : `string`。如果此请求是针对框架的，则为框架文档的唯一标识符。

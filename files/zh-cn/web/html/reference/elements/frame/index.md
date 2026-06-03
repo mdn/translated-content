@@ -43,5 +43,3 @@ slug: Web/HTML/Reference/Elements/frame
 
 - {{HTMLElement("frameset")}}
 - {{HTMLElement("iframe")}}
-
-{{HTMLSidebar}}

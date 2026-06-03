@@ -26,7 +26,6 @@ document.cookie = newCookie;
 В приведённом коде `newCookie` - строка в виде `key=value`_._ Заметьте, у вас есть возможность установить/обновить лишь одну связку `key=value` за один раз, используя этот метод. Стоит отметить, что:
 
 - Any of the following cookie attribute values can optionally follow the key-value pair, specifying the cookie to set/update, and preceded by a semi-colon separator:
-
   - `;path=path` (e.g., '`/`', '`/mydir`') If not specified, defaults to the current path of the current document location.
 
     > [!NOTE]
@@ -42,18 +41,15 @@ document.cookie = newCookie;
     > When user privacy is a concern, It is important that any web app implementation will invalidate cookie data after a certain timeout and won't rely on the browser clearing session cookies
     > One of the most beloved features of Firefox [prevents session cookies from ever expiring](https://bugzilla.mozilla.org/show_bug.cgi?id=345345).
     > The same [issue](https://code.google.com/p/chromium/issues/detail?id=128513) is also occuring with google chrome (and probably with other browsers offering similar features)
-
     - See {{jsxref("Date.toUTCString()")}} for help formatting this value.
 
   - `;secure` Cookie to only be transmitted over secure protocol as https. Before Chrome 52, this flag could appear with cookies from http domains.
   - `;samesite` [SameSite](/ru/docs/Web/HTTP/Guides/Cookies#samesite_cookies) prevents the browser from sending this cookie along with cross-site requests. Possible values for the flag are `lax` or `strict`.
-
     - The `strict` value will prevent the cookie from being sent by the browser to the target site in all cross-site browsing context, even when following a regular link.
     - The `lax` value will only send cookies for TOP LEVEL navigation GET requests. This is sufficient for user tracking, but it will prevent many CSRF attacks.
 
 - The cookie value string can use {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}} to ensure that the string does not contain any commas, semicolons, or whitespace (which are disallowed in cookie values).
 - Some user agent implementations support the following cookie prefixes:
-
   - `__Secure-` Signals to the browser that it should only include the cookie in requests transmitted over a secure channel.
   - `__Host-` Signals to the browser that in addition to the restriction to only use the cookie from a secure origin, the scope of the cookie is limited to a path attribute passed down by the server. If the server omits the path attribute the "directory" of the request URI is used. It also signals that the domain attribute must not be present, which prevents the cookie from being sent to other domains. For Chrome the path attribute must always be the origin.
 
@@ -184,7 +180,7 @@ if (document.cookie.split(';').filter((item) => item.includes('reader=1')).lengt
 
 ## Безопасность
 
-It is important to note that the path attribute does **not** protect against unauthorized reading of the cookie from a different path. It can be easily bypassed using the DOM, for example by creating a hidden [iframe](/ru/docs/Web/HTML/Element/iframe) element with the path of the cookie, then accessing this iframe's `contentDocument.cookie` property. The only way to protect the cookie is by using a different domain or subdomain, due to the [same origin policy](/ru/docs/Web/Security/Same-origin_policy).
+It is important to note that the path attribute does **not** protect against unauthorized reading of the cookie from a different path. It can be easily bypassed using the DOM, for example by creating a hidden [iframe](/ru/docs/Web/HTML/Element/iframe) element with the path of the cookie, then accessing this iframe's `contentDocument.cookie` property. The only way to protect the cookie is by using a different domain or subdomain, due to the [same origin policy](/ru/docs/Web/Security/Defenses/Same-origin_policy).
 
 Cookies are often used in web application to identify a user and their authenticated session. So stealing cookie from a web application, will lead to hijacking the authenticated user's session. Common ways to steal cookies include using Social Engineering or by exploiting an XSS vulnerability in the application -
 

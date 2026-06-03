@@ -3,8 +3,6 @@ title: await
 slug: Web/JavaScript/Reference/Operators/await
 ---
 
-{{jsSidebar("Operators")}}
-
 `await` 操作符用于等待一个 {{jsxref("Promise")}} 兑现并获取它兑现之后的值。它只能在{{jsxref("Statements/async_function", "异步函数", "", 1)}}或者[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)顶层中使用。
 
 ## 语法

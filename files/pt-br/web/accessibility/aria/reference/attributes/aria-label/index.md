@@ -27,7 +27,8 @@ Nos casos em que um elemento interativo não tem um nome acessível, ou um nome 
 </button>
 ```
 
-> **Observação:** `aria-label` destina-se ao uso em elementos interativos, ou elementos feitos para serem interativos por meio de outras declarações ARIA, quando não houver texto apropriado visível no DOM que possa ser referenciado como um rótulo
+> [!CALLOUT]
+> `aria-label` destina-se ao uso em elementos interativos, ou elementos feitos para serem interativos por meio de outras declarações ARIA, quando não houver texto apropriado visível no DOM que possa ser referenciado como um rótulo
 
 A maior parte do conteúdo tem um nome acessível gerado a partir do conteúdo de texto de seu elemento de encapsulamento imediato. Nomes acessíveis também podem ser criados por certos atributos ou elementos associados.
 

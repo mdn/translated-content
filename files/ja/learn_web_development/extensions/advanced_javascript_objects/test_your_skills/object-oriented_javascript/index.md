@@ -1,5 +1,5 @@
 ---
-title: "スキルテスト: オブジェクト指向 JavaScript"
+title: "確認テスト: オブジェクト指向 JavaScript"
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
 original_slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 {{learnsidebar}}
 
-このスキルテストの目的は、[JavaScript でのクラス](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)の記事を理解できたかどうかを評価することです。
+この確認テストの目的は、[JavaScript でのクラス](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)の記事を理解できたかどうかを評価することです。
 
 > [!NOTE]
 > このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。

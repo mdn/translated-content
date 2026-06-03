@@ -3,8 +3,6 @@ title: Firefox 26 for developers
 slug: Mozilla/Firefox/Releases/26
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 26 est sorti le 10 Décembre 2013. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais également pour les développeurs Firefox et Gecko ainsi que pour les développeurs de modules complémentaires.
 
 ## Changements pour les développeurs Web

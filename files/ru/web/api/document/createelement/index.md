@@ -20,7 +20,7 @@ var element = document.createElement(tagName, [options]);
 ```
 
 - `element` — созданный объект [элемента](/ru/docs/Web/API/Element).
-- `tagName` — строка, указывающая элемент какого типа должен быть создан. [nodeName](/ru/docs/DOM/element.nodeName) создаётся и инициализируется со значением `tagName`.
+- `tagName` — строка, указывающая элемент какого типа должен быть создан. [nodeName](/ru/docs/Web/API/Node/nodeName) создаётся и инициализируется со значением `tagName`.
 - `options` — необязательный параметр, объект `ElementCreationOptions`, который может содержать только поле `is`, указывающее имя пользовательского элемента, созданного с помощью `customElements.define()` (см. [Веб-компоненты](/ru/docs/Web/API/Web_components)).
 
 ### Пример

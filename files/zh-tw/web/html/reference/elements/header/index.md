@@ -3,8 +3,6 @@ title: <header>：頁首元素
 slug: Web/HTML/Reference/Elements/header
 ---
 
-{{HTMLSidebar}}
-
 **`<header>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表導言內容，通常是一組導言或導航輔助元素。它可能包含一些標題元素，也可能包含標誌、搜索表單、作者名稱和其他元素。
 
 {{InteractiveExample("HTML Demo: &lt;header&gt;", "tabbed-standard")}}

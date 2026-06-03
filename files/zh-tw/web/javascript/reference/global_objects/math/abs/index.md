@@ -2,10 +2,8 @@
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
 l10n:
-  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.abs()`** 靜態方法會回傳一個數字的絕對值。
 

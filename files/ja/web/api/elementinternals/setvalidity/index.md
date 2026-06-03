@@ -21,9 +21,7 @@ setValidity(flags, message, anchor)
 ### 引数
 
 - `flags` {{Optional_Inline}}
-
   - : 要素の有効状態を示す、 1 つ以上のフラグを含む辞書オブジェクトです。
-
     - `valueMissing`
       - : 論理値で、要素に [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性があって値がない場合は `true` となり、そうでない場合は `false` となります。もし `true` なら、その要素は CSS の {{cssxref(":invalid")}} の擬似クラスに一致します。
     - `typeMismatch`

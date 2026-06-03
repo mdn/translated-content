@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 **`DPR`** [设备客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)请求标头提供客户端设备的像素比。该比例是与每个 {{Glossary("CSS pixel", "CSS 像素")}}相对应的物理设备像素的数量。
 
@@ -76,7 +76,6 @@ Content-DPR: 2.0
 
 - [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)（developer.chrome.google.cn）
 - 设备客户端提示
-
   - {{HTTPHeader("Content-DPR")}}
   - {{HTTPHeader("Device-Memory")}}
   - {{HTTPHeader("Viewport-Width")}}

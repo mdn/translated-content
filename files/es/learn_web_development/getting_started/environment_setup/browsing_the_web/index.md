@@ -16,7 +16,7 @@ En este artículo se describen varios conceptos referidos a la web: Páginas web
       <th scope="row">Prerrequisitos:</th>
       <td>
         Debes saber
-        <a href="/es/docs/Learn/Common_questions/How_does_the_Internet_work"
+        <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >¿Cómo funciona internet?</a
         >.
       </td>

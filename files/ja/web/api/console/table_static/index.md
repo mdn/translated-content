@@ -1,19 +1,39 @@
 ---
-title: console.table()
+title: "console: table() 静的メソッド"
+short-title: table()
 slug: Web/API/console/table_static
+l10n:
+  sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
-**`console.table()`** メソッドは、表形式のデータを表として表示します。
+**`console.table()`** 静的メソッドは、表形式のデータを表として表示します。
 
-この関数には必須の引数 `data` があり、これは配列またはオブジェクトでなければなりません。また、省略可能な引数 `columns` もあります。
+## 構文
 
-これは `data` を表として出力します。配列の各要素（`data` がオブジェクトである場合は、列挙可能なプロパティ）が、表の行になります。
+```js-nolint
+console.table(data)
+console.table(data, columns)
+```
 
-表の 1 列目には、`(添字)` というラベルがつきます。 `data` が配列である場合、この値は配列の添字になります。 `data` がオブジェクトである場合、この値はプロパティ名になります。（Firefox では） `console.table` は表示する行が 1000 行（最初の行は見出し）に制限されていますので注意してください。
+### 引数
 
-{{AvailableInWorkers}}
+- `data`
+  - : 表示するデータ。これは配列またはオブジェクトでなければなりません。配列のそれぞれのアイテム、またはオブジェクトのそれぞれのプロパティは、表内の 1 行として表現されます。表の最初の列は `(添字)` とラベルが付き、その値は配列のインデックスまたはプロパティ名となります。
+
+    配列内の要素、またはオブジェクトのプロパティがそれ自体が配列またはオブジェクトである場合、それらのアイテムまたはプロパティは行ごとに列ごとに 1 つずつ列挙されます。
+
+    Firefox では、`console.table()` は見出し行を含め 1000 行までしか表示させられないことに注意してください。
+
+- `columns` {{optional_inline}}
+  - : 表に表示する列を制限するために使用できる配列です。`data` の各項目が配列の場合、インデックスを格納します。`data` の各項目がオブジェクトの場合、プロパティ名を保持します。結果として生成される表には、指定された位置または名前に一致する項目の列のみが含まれます。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+## 例
 
 ## プリミティブ型のコレクション
 
@@ -25,7 +45,11 @@ slug: Web/API/console/table_static
 console.table(["apples", "oranges", "bananas"]);
 ```
 
-![](console-table-array.png)
+| (添字) | 値        |
+| ------ | --------- |
+| 0      | 'apples'  |
+| 1      | 'oranges' |
+| 2      | 'bananas' |
 
 ```js
 // 文字列がプロパティであるオブジェクト
@@ -35,12 +59,15 @@ function Person(firstName, lastName) {
   this.lastName = lastName;
 }
 
-const me = new Person("John", "Smith");
+const me = new Person("Tyrone", "Jones");
 
 console.table(me);
 ```
 
-![](console-table-simple-object.png)
+| (添字)    | 値       |
+| --------- | -------- |
+| firstName | 'Tyrone' |
+| lastName  | 'Jones'  |
 
 ### 複合的な型の集合
 
@@ -50,14 +77,18 @@ console.table(me);
 // 配列の配列
 
 const people = [
-  ["John", "Smith"],
-  ["Jane", "Doe"],
-  ["Emily", "Jones"],
+  ["Tyrone", "Jones"],
+  ["Janet", "Smith"],
+  ["Maria", "Cruz"],
 ];
 console.table(people);
 ```
 
-![配列の配列を表示している表](console-table-array-of-array.png)
+| (添字) | 0        | 1       |
+| ------ | -------- | ------- |
+| 0      | 'Tyrone' | 'Jones' |
+| 1      | 'Janet'  | 'Smith' |
+| 2      | 'Maria'  | 'Cruz'  |
 
 ```js
 // オブジェクトの配列
@@ -67,30 +98,38 @@ function Person(firstName, lastName) {
   this.lastName = lastName;
 }
 
-const john = new Person("John", "Smith");
-const jane = new Person("Jane", "Doe");
-const emily = new Person("Emily", "Jones");
+const tyrone = new Person("Tyrone", "Jones");
+const janet = new Person("Janet", "Smith");
+const maria = new Person("Maria", "Cruz");
 
-console.table([john, jane, emily]);
+console.table([tyrone, janet, maria]);
 ```
 
 配列にオブジェクトが含まれている場合、列にはプロパティ名が表示されることに注意してください。
 
-![Table displaying array of objects](console-table-array-of-objects.png)
+| (添字) | firstName | lastName |
+| ------ | --------- | -------- |
+| 0      | 'Tyrone'  | 'Jones'  |
+| 1      | 'Janet'   | 'Smith'  |
+| 2      | 'Maria'   | 'Cruz'   |
 
 ```js
 // 値がオブジェクトのプロパティを持つオブジェクト
 
 const family = {};
 
-family.mother = new Person("Jane", "Smith");
-family.father = new Person("John", "Smith");
-family.daughter = new Person("Emily", "Smith");
+family.mother = new Person("Janet", "Jones");
+family.father = new Person("Tyrone", "Jones");
+family.daughter = new Person("Maria", "Jones");
 
 console.table(family);
 ```
 
-![オブジェクトのオブジェクトを表示している表](console-table-object-of-objects.png)
+| (添字)   | firstName | lastName |
+| -------- | --------- | -------- |
+| daughter | 'Maria'   | 'Jones'  |
+| father   | 'Tyrone'  | 'Jones'  |
+| mother   | 'Janet'   | 'Jones'  |
 
 ### 表示する列を制限する
 
@@ -104,36 +143,18 @@ function Person(firstName, lastName) {
   this.lastName = lastName;
 }
 
-const john = new Person("John", "Smith");
-const jane = new Person("Jane", "Doe");
-const emily = new Person("Emily", "Jones");
+const tyrone = new Person("Tyrone", "Jones");
+const janet = new Person("Janet", "Smith");
+const maria = new Person("Maria", "Cruz");
 
-console.table([john, jane, emily], ["firstName"]);
+console.table([tyrone, janet, maria], ["firstName"]);
 ```
 
-![フィルタリングされた出力を持つオブジェクトの配列を表示する表](console-table-array-of-objects-firstname-only.png)
-
-### 列で並べ替える
-
-列の見出しをクリックすると、その列の値で表を並べ替えることができます。
-
-## 構文
-
-```js
-table(data);
-table(data, columns);
-```
-
-### 引数
-
-- `data`
-  - : 表示するデータ。配列またはオブジェクトでなければなりません。
-- `columns`
-  - : 出力に含める列の名前を含む配列。
-
-### 返値
-
-なし ({{jsxref("undefined")}})。
+| (添字) | firstName |
+| ------ | --------- |
+| 0      | 'Tyrone'  |
+| 1      | 'Janet'   |
+| 2      | 'Maria'   |
 
 ## 仕様書
 
@@ -142,3 +163,9 @@ table(data, columns);
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [Microsoft Edge's documentation for `console.table()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#table)
+- [Node.js documentation for `console.table()`](https://nodejs.org/docs/latest/api/console.html#consoletabletabulardata-properties)
+- [Google Chrome's documentation for `console.table()`](https://developer.chrome.com/docs/devtools/console/api/#table)

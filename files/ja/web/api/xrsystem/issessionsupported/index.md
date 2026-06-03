@@ -21,9 +21,7 @@ isSessionSupported(mode)
 ### 引数
 
 - `mode`
-
   - : 文字列 ({{jsxref("String")}}) で、対応を調べる WebXR セッションモードを指定します。調べる可能なモード：
-
     - `immersive-ar` {{Experimental_Inline}}
     - `immersive-vr`
     - `inline`

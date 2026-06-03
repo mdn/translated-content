@@ -12,7 +12,7 @@ slug: Glossary/Doctype
 ### Conocimiento general
 
 - [Declaración de tipo de documento](https://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_tipo_de_documento) en Wikipedia
-- [Modo Quirk y modo estándar](/es/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+- [Modo Quirk y modo estándar](/es/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
 
 ### Referencia técnica
 

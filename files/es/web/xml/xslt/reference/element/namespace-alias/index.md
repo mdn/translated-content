@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/namespace-alias
 original_slug: Web/XSLT/Reference/Element/namespace-alias
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{XsltSidebar}}
 
 El elemento `<xsl:namespace-alias>` es un mecanismo raramente usado para asociar un nombre de espacios en la hoja de estilos a otro nombre de espacios diferente en el árbol de salida. El uso más común para este elemento se da en la generación de una hoja de estilos a partir de otra hoja de estilos.
 

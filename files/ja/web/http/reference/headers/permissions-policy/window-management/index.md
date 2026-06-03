@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `window-management` ディレクティブは、現在の文書が[ウィンドウ管理 API](/ja/docs/Web/API/Window_Management_API) を使用して複数のディスプレイ上のウィンドウを管理することを許可するかどうかを制御します。
 

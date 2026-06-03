@@ -33,7 +33,7 @@ x * y
 
 ## Descripción
 
-El operador `*` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar ambos operandos a valores numéricos](/es/docs/Web/JavaScript/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una multiplicación BigInt si ambos operandos se convierten en BigInts; de lo contrario, realiza la multiplicación de números. Se genera un {{jsxref("TypeError")}} si un operando es convertido a BigInt pero el otro se convierte en un número.
+El operador `*` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar ambos operandos a valores numéricos](/es/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una multiplicación BigInt si ambos operandos se convierten en BigInts; de lo contrario, realiza la multiplicación de números. Se genera un {{jsxref("TypeError")}} si un operando es convertido a BigInt pero el otro se convierte en un número.
 
 ## Ejemplos
 

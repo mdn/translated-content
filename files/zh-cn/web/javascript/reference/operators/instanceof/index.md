@@ -3,8 +3,6 @@ title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
 ---
 
-{{jsSidebar("Operators")}}
-
 **`instanceof`** 运算符用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。其返回值是一个布尔值。可以通过 [`Symbol.hasInstance`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) 来自定义该运算符的行为。
 
 {{InteractiveExample("JavaScript Demo: instanceof operator")}}

@@ -22,9 +22,7 @@ new TextDecoderStream(label, options)
   - : 文字列で、既定値は `utf-8` です。
     [何れかの有効なラベル](/ja/docs/Web/API/Encoding_API/Encodings)にすることができます。
 - `options` {{optional_inline}}
-
   - : 次のプロパティを持つオブジェクトです。
-
     - `fatal`
       - : 論理値で、このオブジェクトが無効なデータをデコードした場合に {{jsxref("TypeError")}} を発生させる必要があるかどうかを示します。
         既定値では `false` であり、これはデコードする際に不正なデータを置換文字で置き換えることを意味します。

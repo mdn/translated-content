@@ -1,14 +1,14 @@
 ---
-title: anchor
+title: HTML anchor グローバル属性
+short-title: anchor
 slug: Web/HTML/Reference/Global_attributes/anchor
-original_slug: Web/HTML/Global_attributes/anchor
 l10n:
-  sourceCommit: 926f83641b980fcda58914649748b0368eeca1cd
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}{{SeeCompatTable}}
+{{Non-standard_Header}}{{SeeCompatTable}}
 
-**`anchor`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、位置指定要素とアンカー要素を関連付けるために使用されます。この属性の値は、位置指定要素をアンカーする要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) の値です。その後、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)を使用して要素の位置指定を行うことができます。
+**`anchor`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、位置指定要素とアンカー要素を関連付けるために使用されます。この属性の値は、位置指定要素をアンカーする要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) の値です。その後、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)を使用して要素の位置指定を行うことができます。
 
 > [!NOTE]
 > それ以外に、CSS を使用して、位置指定要素をアンカー要素に関連付けることもできます。 {{cssxref("anchor-name")}} および {{cssxref("position-anchor")}} プロパティを使用します。 同じ要素に対してどちらのアンカー技術も使用されている場合、 CSS 技術が HTML 技術よりも優先されます。
@@ -87,7 +87,7 @@ CSS を使用して、 `infobox` 要素をアンカー位置指定要素に変�
 
 - {{cssxref("position")}} プロパティを `fixed` にし、位置指定要素に変換することで、アンカー位置から相対的に位置指定できるようになります。
 - {{cssxref("left")}} プロパティを {{cssxref("anchor()")}} 関数に指定し、その値を `right` とします。これにより、位置指定要素がアンカーに固定され、左端がアンカーの右端と揃うように位置指定されます。
-- {{cssxref("align-self")}} プロパティを [`anchor-center`](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) に設定します。これにより、情報ボックスがアンカーのインライン方向の中央に配置されます。
+- {{cssxref("align-self")}} プロパティを [`anchor-center`](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) に設定します。これにより、情報ボックスがアンカーのインライン方向の中央に配置されます。
 - {{cssxref("margin-left")}} を `10px` に設定し、アンカーが指定された要素とアンカーの間に空間を作成します。
 
 ```css
@@ -118,5 +118,4 @@ CSS を使用して、 `infobox` 要素をアンカー位置指定要素に変�
 - {{domxref("HTMLElement.anchorElement")}}
 - CSS の {{cssxref("anchor-name")}} プロパティ
 - CSS の　{{cssxref("position-anchor")}} プロパティ
-- [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール
-- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイド
+- [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール

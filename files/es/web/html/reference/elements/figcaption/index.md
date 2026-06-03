@@ -48,7 +48,7 @@ figcaption {
     <tr>
       <th scope="row">
         <a
-          href="/es/docs/HTML/Content_categories"
+          href="/es/docs/Web/HTML/Guides/Content_categories"
           title="HTML/Content_categories"
           >Content categories</a
         >
@@ -59,7 +59,7 @@ figcaption {
       <th scope="row">Contenido Permitido</th>
       <td>
         <a
-          href="/es/docs/HTML/Content_categories#Flow_content"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content"
           title="HTML/Content categories#Flow content"
           >Flow content</a
         >.
@@ -91,7 +91,7 @@ figcaption {
 
 ## Atributos
 
-Este elemento sólo incluye los [global attributes](/es/docs/Web/HTML/Global_attributes).
+Este elemento sólo incluye los [global attributes](/es/docs/Web/HTML/Reference/Global_attributes).
 
 ## Ejemplos
 

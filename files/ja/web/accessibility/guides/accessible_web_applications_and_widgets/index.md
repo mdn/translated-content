@@ -1,14 +1,10 @@
 ---
 title: アクセシブルなウェブアプリケーションやウィジェットの概要
+short-title: アクセシブルなウェブアプリケーションやウィジェット
 slug: Web/Accessibility/Guides/Accessible_web_applications_and_widgets
-original_slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 l10n:
-  sourceCommit: acad5b9afc0a9e20144d49fd3fbb7f4fa92c9192
+  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
 ---
-
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility", 1)}}
-</section>
 
 ほとんどの JavaScript ライブラリーでは、デスクトップで慣れ親しんだインターフェイスの動作を模倣した、クライアントサイドウィジェットのライブラリーが提供されています。スライダー、メニューバー、ファイルリストビューなどは、JavaScript、CSS、HTMLの組み合わせで構築することができます。HTML4 の規格では、この種のウィジェットを意味的に記述する組み込みタグが提供されていないため、開発者は一般に {{HTMLElement('div')}} や {{HTMLElement('span')}} などの汎用の要素を使用することになります。この結果、デスクトップと同じように見えるウィジェットができますが、通常、マークアップには支援技術で使用するのに十分な意味づけの情報がありません。
 
@@ -102,7 +98,7 @@ ARIA に、UI ウィジェットの現在の状態を定義する属性があり
 - `aria-grabbed`
   - : ドラッグ & ドロップ操作で、オブジェクトが「つかまれている」状態を示します。
 
-（ARIA のすべてのステートの一覧については、[ARIA のステートとプロパティの一覧](https://www.w3.org/TR/wai-aria-1.1/#introstates)をご覧ください。）
+（ARIA のすべてのステートの一覧については、[ARIA のステートとプロパティの一覧](https://w3c.github.io/aria/#introstates)をご覧ください。）
 
 開発者は UI ウィジェット要素の状態を示すために ARIA のステートを使用して、ステートの変化に基づく視覚的外見の変更に（スクリプトを使用して要素のクラス名を変更するのではなく） CSS の属性セレクターを使用してください。
 
@@ -110,9 +106,7 @@ ARIA に、UI ウィジェットの現在の状態を定義する属性があり
 
 コンテンツの可視性を変える（例えば要素を隠したり表示したりする）とき、開発者は **`aria-hidden`** プロパティの値を変更するとよいでしょう。先に説明した手法を、`display:none` を使用して要素を視覚的に隠すという CSS を示すために使用してください。
 
-これは、可視性の制御に **`aria-hidden`** を使用するツールチップの例です。この例では、入力フィールドに関する指示を収めたツールチップを持つシンプルなウェブフォームの例を示しています。例の中で関係する部分を、以下で説明します。
-
-この例でツールチップ用の HTML は、以下に示す形になっています。9 行目で **`aria-hidden`** を `true` に設定しています。
+これは、可視性の制御に **`aria-hidden`** を使用するツールチップの例です。この例では、入力フィールドに関する指示を収めたツールチップを持つウェブフォームの例を示しています。例の中で関係する部分を、以下で説明します。
 
 ```html
 <div class="text">
@@ -131,7 +125,7 @@ ARIA に、UI ウィジェットの現在の状態を定義する属性があり
 </div>
 ```
 
-このマークアップ用の CSS を以下に示します。ここでは独自のクラス名を使用せず、1 行目で **`aria-hidden`** 属性の状態のみを使用していることに注意してください。
+このマークアップ用の CSS を以下に示します。ここでは独自のクラス名を使用せず、 **`aria-hidden`** 属性の状態のみを使用していることに注意してください。
 
 ```css
 div.tooltip[aria-hidden="true"] {
@@ -139,7 +133,7 @@ div.tooltip[aria-hidden="true"] {
 }
 ```
 
-**`aria-hidden`** プロパティを更新するための JavaScript は、以下のコードにある形になります。このスクリプトは **`aria-hidden`** 属性しか更新しないことに注意してください (2 行目)。独自のクラス名の追加や削除は不要です。
+**`aria-hidden`** プロパティを更新するための JavaScript は、以下のコードにある形になります。このスクリプトは **`aria-hidden`** 属性しか更新しないことに注意してください。独自のクラス名の追加や削除は不要です。
 
 ```js
 function showTip(el) {
@@ -180,5 +174,5 @@ ARIA では、開発者が要素の意味づけの役割を宣言することが
 
 - [ARIA](/ja/docs/Web/Accessibility/ARIA)
 - [キーボードで操作可能な JavaScript ウィジェットを書く](/ja/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
-- [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
+- [WAI-ARIA Specification](https://w3c.github.io/aria/)
 - [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)

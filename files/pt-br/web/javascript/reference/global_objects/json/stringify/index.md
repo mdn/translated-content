@@ -71,7 +71,8 @@ O parâmetro <kbd>replacer</kbd> pode ser uma função ou uma matriz. Como funç
 - If you return any other object, the object is recursively stringified into the JSON string, calling the `replacer` function on each property, unless the object is a function, in which case nothing is added to the JSON string.
 - If you return `undefined`, the property is not included in the output JSON string.
 
-> **Nota:**Você não pode usar a função `replacer` para remover valoeres em uma `array`. Se você retornar `undefined`, `null` será usado no lugar.
+> [!NOTE]
+> Você não pode usar a função `replacer` para remover valoeres em uma `array`. Se você retornar `undefined`, `null` será usado no lugar.
 
 #### Exemplo de uma função
 

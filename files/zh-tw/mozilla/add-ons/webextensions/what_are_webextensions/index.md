@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 93b34fcdb9cf91ff44f5dfe7f4dcd13e961962da
 ---
 
-{{AddonSidebar}}
-
 > [!NOTE]
 > 如果你已熟悉瀏覽器擴充套件的基本概念，可以跳過此部分，直接了解[擴充套件檔案的組成方式](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。接著，使用[參考文件](/zh-TW/docs/Mozilla/Add-ons/WebExtensions#reference)開始建立你的擴充套件。造訪 [Firefox 擴充套件工作坊](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)，了解測試、發佈及管理擴充套件的流程。
 

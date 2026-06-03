@@ -1,13 +1,13 @@
 ---
 title: Signature (fonctions)
 slug: Glossary/Signature/Function
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 Une **signature de fonction** (ou signature de _type_, ou signature de _méthode_) définit les entrées et sorties des {{Glossary("Function", "fonctions")}} et des {{Glossary("Method", "méthodes")}}.
 
-Une signature peut comporter :
+Une signature peut comporter&nbsp;:
 
 - Des {{Glossary("Parameter", "paramètres")}} et leurs {{Glossary("Type", "types")}}
 - une valeur et un type de retour
@@ -18,7 +18,7 @@ Une signature peut comporter :
 
 ### Signatures en JavaScript
 
-{{Glossary("JavaScript")}} est un langage à _typage faible et_ _dynamique_. Cela signifie que vous n'avez pas à déclarer le type d'une variable à l'avance. Il sera déterminé automatiquement pendant le traitement du programme. Une signature en JavaScript peut vous apporter certaines informations sur la méthode :
+{{Glossary("JavaScript")}} est un langage à _typage faible et_ _dynamique_. Cela signifie que vous n'avez pas à déclarer le type d'une variable à l'avance. Il sera déterminé automatiquement pendant le traitement du programme. Une signature en JavaScript peut vous apporter certaines informations sur la méthode&nbsp;:
 
 ```js
 MonObjet.prototype.maFonction(valeur);
@@ -43,8 +43,6 @@ public static void main(String[] args)
 - Le nom de la méthode est `main`.
 - La méthode accepte un paramètre de type tableau de chaînes. Il est nommé `args.`
 
-## `Pour approfondir`
+## Voir aussi
 
-### `Culture générale`
-
-- [Signature de type](https://fr.wikipedia.org/wiki/Signature_de_type) sur Wikipédia
+- [Signature de type en Java](https://fr.wikipedia.org/wiki/Signature_de_type#Java) sur Wikipédia

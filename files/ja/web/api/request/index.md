@@ -31,7 +31,7 @@ l10n:
 - {{domxref("Request.headers")}} {{ReadOnlyInline}}
   - : リクエストに関連付けられた {{domxref("Headers")}} オブジェクトが入ります。
 - {{domxref("Request.integrity")}} {{ReadOnlyInline}}
-  - : リクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します（`sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=` など）。
+  - : リクエストの[サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)の値を保持します（`sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=` など）。
 - {{domxref("Request.isHistoryNavigation")}} {{ReadOnlyInline}}
   - : 論理値で、このリクエストが履歴のナビゲーションであるかどうかを示します。
 - {{domxref("Request.keepalive")}} {{ReadOnlyInline}}

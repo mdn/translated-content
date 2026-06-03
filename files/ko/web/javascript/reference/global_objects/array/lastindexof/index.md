@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.lastIndexOf()
+short-title: lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
@@ -9,7 +10,7 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 `lastIndexOf()` 메서드는 배열에서 특정 요소를 찾을 수 있는 마지막 인덱스를 반환하거나, 해당 요소가 없으면 `-1`을 반환합니다. 배열은 `fromIndex`에서 시작하여 역방향으로 검색됩니다.
 
-{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.lastIndexOf()")}}
 
 ```js interactive-example
 const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];

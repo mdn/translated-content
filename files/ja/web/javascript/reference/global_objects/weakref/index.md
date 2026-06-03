@@ -48,7 +48,6 @@ l10n:
 これらのプロパティは `WeakRef.prototype` で定義されており、すべての `WeakRef` インスタンスで共有されます。
 
 - {{jsxref("Object/constructor", "WeakRef.prototype.constructor")}} {{Optional_Inline}}
-
   - : インスタンスオブジェクトを作成したコンストラクター関数です。 `WeakRef` インスタンスの場合、初期値は {{jsxref("WeakRef/WeakRef", "WeakRef")}} コンストラクターです。
 
     > [!NOTE]

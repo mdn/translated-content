@@ -3,8 +3,6 @@ title: 標準內建物件
 slug: Web/JavaScript/Reference/Global_Objects
 ---
 
-{{jsSidebar("Objects")}}
-
 本章節記錄了 JavaScript 所有標準、內建的物件，以及這些物件的方法與屬性。
 
 「全域物件」（或稱作標準內建物件）這個專有名字並非是要和**全域物件**混著說。在這裡，全域物件是那些在全域範圍裡的物件。而**全域物件**自身則是關聯到全域範圍裡的 {{jsxref("Operators/this", "this")}} 運算子（但若是在 ECMAScript 5 的嚴格模式（strict mode）則是不被採用的，即會回傳 {{jsxref("undefined")}}）。 事實上，全域範圍包含了全域物件的屬性，也包含了繼承而來的屬性（如果有的話）。

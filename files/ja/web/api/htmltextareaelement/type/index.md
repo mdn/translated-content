@@ -3,30 +3,22 @@ title: "HTMLTextAreaElement: type プロパティ"
 short-title: type
 slug: Web/API/HTMLTextAreaElement/type
 l10n:
-  sourceCommit: 9054005318a0d1e8fbdf28910d1dd83f7615ef70
+  sourceCommit: 9f7016d8434a36052362f7c58ff7c4b144da56b0
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`type`** は {{domxref("HTMLTextAreaElement")}} の読み取り専用プロパティで、常に `textarea` を返します。
+**`type`** は {{domxref("HTMLTextAreaElement")}} の読み取り専用プロパティで、常に `"textarea"` を返します。
 
 ## 値
 
-文字列で、常に `textarea` を返します。
+文字列で、常に `"textarea"` を返します。
 
 ## 例
 
-### HTML
-
-```html
-<textarea id="txtarea"></textarea>
-```
-
-### JavaScript
-
 ```js
-const txtAreaElement = document.querySelector("#txtarea");
-console.log(txtAreaElement.type); // 出力結果: "textarea"
+const textArea = document.querySelector("textarea");
+console.log(textArea.type); // "textarea"
 ```
 
 ## 仕様書
@@ -39,4 +31,5 @@ console.log(txtAreaElement.type); // 出力結果: "textarea"
 
 ## 関連情報
 
-- {{domxref("HTMLInputElement.type")}} プロパティ
+- {{domxref("HTMLTextAreaElement")}}
+- {{HTMLElement("textarea")}}

@@ -1,17 +1,15 @@
 ---
-title: function 宣言
+title: function
 slug: Web/JavaScript/Reference/Statements/function
 l10n:
-  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Statements")}}
+**`function`** 宣言は、新しい関数と指定された名前の{{Glossary("binding", "バインド")}}を作成します。
 
-**`function`** 宣言は、指定された引数を使用して関数を定義します。
+関数は [`function` 式](/ja/docs/Web/JavaScript/Reference/Operators/function)を使用して定義することもできます。
 
-また、 {{jsxref("Function")}} のコンストラクターと{{jsxref("Operators/function", "関数式", "", 1)}}を使用して関数を定義することもできます。
-
-{{InteractiveExample("JavaScript Demo: Statement - Function", "shorter")}}
+{{InteractiveExample("JavaScript デモ: function 宣言", "shorter")}}
 
 ```js interactive-example
 function calcRectArea(width, height) {
@@ -19,7 +17,7 @@ function calcRectArea(width, height) {
 }
 
 console.log(calcRectArea(5, 6));
-// Expected output: 30
+// 予想される結果: 30
 ```
 
 ## 構文
@@ -31,37 +29,44 @@ function name(param0) {
 function name(param0, param1) {
   statements
 }
-function name(param0, param1, /* … ,*/ paramN) {
+function name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
 
+### 引数
+
 - `name`
   - : 関数の名前です。
 - `param` {{optional_inline}}
-  - : 関数に渡す引数の名前です。引数の最大数はエンジンによって異なります。
+  - : この関数の公式な引数の名前です。引数の最大数はエンジンによって異なります。引数の構文については、[関数リファレンス](/ja/docs/Web/JavaScript/Guide/Functions#関数の引数)を参照してください。
 - `statements` {{optional_inline}}
   - : 関数の本体を構成する文です。
 
 ## 解説
 
-関数宣言で作成された関数は `Function` オブジェクトであり、`Function` オブジェクトのすべてのプロパティ、メソッド、動作を備えています。関数の詳細については {{jsxref("Function")}} を参照してください。
+関数宣言は {{jsxref("Function")}} オブジェクトを生成します。関数が呼び出されるたびに、最後に実行された {{jsxref("Statements/return", "return")}} 文で指定された値を返します。関数本体の末尾に到達した場合は`undefined`を返します。関数の詳細については、[関数](/ja/docs/Web/JavaScript/Reference/Functions)を参照してください。
 
-関数は式を使用して作成することもできます ({{jsxref("Operators/function", "関数式", "", 1)}}を参照)。
+`function` 宣言は、{{jsxref("Statements/var", "var")}} と {{jsxref("Statements/let", "let")}} を併せたような動作をします。
 
-既定では、関数は `undefined` を返します。他の値を返すには、関数に返す値を指定する {{jsxref("Statements/return", "return")}} 文が必要です。
+- `let` と同様に、厳格モードでは、[関数制限は最も近い包含ブロックのスコープになります](#ブロックレベル関数宣言)。
+- `let` と同様に、モジュールの最上位での関数宣言や、厳格モードでのブロック内では、他の宣言で[再宣言](#再宣言)することができません。
+- `var` と同様に、スクリプトの最上位での関数宣言は（厳格モードか否かに関わらず）、 {{jsxref("globalThis")}} のプロパティとなります。スクリプトの最上位または関数本体での関数宣言は（厳格モードか否かに関わらず）、別の `function` または `var` によって再宣言される可能性があります。
+- 両者と同様に、関数宣言は再割り当て可能ですが、それは避けるべきです。
+- どちらとも異なり、関数宣言はその値とともに[巻き上げ](#巻き上げ)られ、そのスコープ内のどこでも呼び出すことができます。
 
-### 条件付きで作成される関数
+### ブロックレベル関数宣言
 
-> **警告:** [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)ではない場合、ブロック内での関数宣言は奇妙な動きをします。ブロック内での関数宣言は、厳格モード時のみ行ってください。
+> [!WARNING]
+> [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)ではない場合、ブロック内での関数宣言は奇妙な動きをします。ブロック内での関数宣言は、厳格モード時のみ行ってください。
 
-関数は条件付きで宣言できます。つまり、関数文を [`if`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文の中に入れ子にすることができますが、結果は実装によって一貫性がないので、このパターンを本番コードでは使用すべきではありません。条件付きの関数の作成には、代わりに関数式を使用してください。
+関数は条件付きで宣言できます。つまり、関数文を [`if`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文の中に入れ子にすることができます。ただし、厳格モードでない場合、実装によって結果に一貫性がありません。
 
 ```js
 console.log(
-  `'foo' name ${
-    "foo" in globalThis ? "is" : "is not"
-  } global. typeof foo is ${typeof foo}`,
+  `'foo' の名前はグローバル${
+    "foo" in globalThis ? "です" : "ではありません"
+  }。 typeof foo は ${typeof foo} です。`,
 );
 if (false) {
   function foo() {
@@ -69,23 +74,23 @@ if (false) {
   }
 }
 
-// In Chrome:
-// 'foo' の名前はグローバル。typeof foo は undefined
+// Chrome では:
+// 'foo' の名前はグローバルです。 typeof foo は undefined です。
 //
-// In Firefox:
-// 'foo' の名前はグローバル。typeof foo は undefined
+// Firefox では:
+// 'foo' の名前はグローバルです。 typeof foo は undefined です。
 //
-// In Safari:
-// 'foo' の名前はグローバル。typeof foo は function
+// Safari では:
+// 'foo' の名前はグローバルです。 typeof foo は function です。
 ```
 
 `if` 本体が実際に実行されるかどうかにかかわらず、スコープと巻き上げの効果は変わりません。
 
 ```js
 console.log(
-  `'foo' name ${
-    "foo" in globalThis ? "is" : "is not"
-  } global. typeof foo is ${typeof foo}`,
+  `'foo' の名前はグローバル${
+    "foo" in globalThis ? "です" : "ではありません"
+  }。 typeof foo は ${typeof foo} です。`,
 );
 if (true) {
   function foo() {
@@ -94,13 +99,13 @@ if (true) {
 }
 
 // In Chrome:
-// 'foo' の名前はグローバル。typeof foo は undefined
+// 'foo' の名前はグローバルです。 typeof foo は undefined です。
 //
 // In Firefox:
-// 'foo' の名前はグローバル。typeof foo は undefined
+// 'foo' の名前はグローバルです。 typeof foo は undefined です。
 //
 // In Safari:
-// 'foo' の名前はグローバル。typeof foo は function
+// 'foo' の名前はグローバルです。 typeof foo は function です。
 ```
 
 [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、[ブロック](/ja/docs/Web/JavaScript/Reference/Statements/block)レベルの関数宣言はそのブロックのスコープとなり、そのブロックの先頭に巻き上げられます。
@@ -109,23 +114,23 @@ if (true) {
 "use strict";
 
 {
-  foo(); // Logs "foo"
+  foo(); // "foo" をログ出力
   function foo() {
     console.log("foo");
   }
 }
 
 console.log(
-  `'foo' name ${
-    "foo" in globalThis ? "is" : "is not"
-  } global. typeof foo is ${typeof foo}`,
+  `'foo' の名前はグローバル${
+    "foo" in globalThis ? "です" : "ではありません"
+  }。 typeof foo は ${typeof foo} です。`,
 );
-// 'foo' name is not global. typeof foo is undefined
+// 'foo' の名前はグローバルではありません。 typeof foo は undefined です。
 ```
 
-### 関数宣言の巻き上げ
+### 巻き上げ
 
-JavaScript の関数宣言は、それを囲む関数やグローバルスコープの先頭に[巻き上げられ](/ja/docs/Glossary/Hoisting)、関数を宣言する前に使うことができます。
+JavaScript の関数宣言は、それを囲む関数やグローバルスコープの先頭に[巻き上げ](/ja/docs/Glossary/Hoisting)られます。関数を宣言する前に使うことができます。
 
 ```js
 hoisted(); // "foo" とログ出力
@@ -135,7 +140,7 @@ function hoisted() {
 }
 ```
 
-{{jsxref("Operators/function", "関数式", "", 1)}}は巻き上げられないことに注意してください。
+[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)は巻き上げられないことに注意してください。
 
 ```js
 notHoisted(); // TypeError: notHoisted is not a function
@@ -143,6 +148,63 @@ notHoisted(); // TypeError: notHoisted is not a function
 var notHoisted = function () {
   console.log("bar");
 };
+```
+
+### 再宣言
+
+`function` 宣言が同じスコープ内で再宣言できるかどうかは、それが含まれているスコープによって決まります。
+
+スクリプトの最上位レベルでは、`function` 宣言は `var` と同様に振る舞い、別の `function` または `var` によって再宣言可能ですが、{{jsxref("Statements/let", "let")}}、{{jsxref("Statements/const", "const")}}、{{jsxref("Statements/class", "class")}} によって再宣言することはできません。
+
+```js-nolint example-bad
+function a(b) {}
+function a(b, c) {}
+console.log(a.length); // 2
+let a = 2; // SyntaxError: Identifier 'a' has already been declared
+```
+
+`function` 宣言が `var` によって再宣言される場合、`var` 宣言の初期化子は、両者の相対的な位置に関係なく、常にその関数の値を上書きします。これは、関数宣言が初期化子の評価より前に巻き上げられるためであり、初期化子は後から実行され、値を上書きするからです。
+
+```js
+var a = 1;
+function a() {}
+console.log(a); // 1
+```
+
+関数本体の最上位レベルでは、`function` も `var` と同様に振る舞い、再宣言したり引数と同じ名前を持ったりすることが可能です。
+
+```js
+function foo(a) {
+  function a() {}
+  console.log(typeof a);
+}
+
+foo(2); // ログ出力: "function"
+```
+
+厳格モードでは、モジュールまたはブロックの最上位レベルにおける `function` 宣言は `let` と同様に動作し、それ以外のいかなる宣言によっても再宣言することはできません。
+
+```js-nolint example-bad
+// 現在のソースがモジュールである場合
+function foo() {}
+function foo() {} // SyntaxError: Identifier 'foo' has already been declared
+```
+
+```js-nolint example-bad
+"use strict";
+{
+  function foo() {}
+  function foo() {} // SyntaxError: Identifier 'foo' has already been declared
+}
+```
+
+`catch` ブロック内の `function` 宣言は、厳格モードでなくても、`catch` にバインドされた識別子と同じ名前を持つことはできません。
+
+```js-nolint example-bad
+try {
+} catch (e) {
+  function e() {} // SyntaxError: Identifier 'e' has already been declared
+}
 ```
 
 ## 例
@@ -167,11 +229,10 @@ function calcSales(unitsA, unitsB, unitsC) {
 
 ## 関連情報
 
+- [関数](/ja/docs/Web/JavaScript/Guide/Functions)ガイド
+- [関数](/ja/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Function")}}
-- {{jsxref("Operators/function", "関数式", "", 1)}}
-- {{jsxref("Statements/function*", "function* 文", "", 1)}}
-- {{jsxref("Operators/function*", "function* 式", "", 1)}}
-- {{jsxref("Functions/Arrow_functions", "アロー関数", "", 1)}}
-- {{jsxref("GeneratorFunction")}}
-- {{jsxref("Statements/async_function", "非同期関数", "", 1)}}
-- {{jsxref("Operators/async_function", "非同期関数式", "", 1)}}
+- [`function` 式](/ja/docs/Web/JavaScript/Reference/Operators/function)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Statements/async_function*", "async function*")}}

@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "conflicting/Web/JavaScript/Guide/Numbers_and_strings")}}
 
 이 장에서는 JavaScript에서 숫자와 날짜를 사용하기 위한 개념과 객체, 함수에 대해 소개합니다. 그리고 숫자를 10진법, 2진법, 16진법 등의 다양한 형태로 표현하는 방법과 더불어 {{jsxref("Math")}} 객체를 사용해 다양한 수학 연산을 수행하는 방법을 알 수 있습니다.
 
@@ -16,7 +16,7 @@ JavaScript에서 모든 숫자는 [double-precision 64-bit binary format IEEE 75
 
 JavaScript에 최근 추가 된 것은 {{jsxref ( "BigInt")}}로, 매우 큰 정수를 나타낼 수 있습니다. `BigInt`를사용할땐 다음을 주의해야 합니다. 예를 들면, `BigInt`와 {{jsxref ( "Number")}} 값을 같은 연산으로 혼합하고 일치시킬 수는 없으며 {{jsxref ( "Math")}} 객체를 `BigInt`값과 함께 사용할 수 없습니다.
 
-JavaScript에서 다른 기본형과 문맥에 대한 내용은 [JavaScript data types and structures](/ko/docs/Web/JavaScript/Data_structures)를 참조하세요.
+JavaScript에서 다른 기본형과 문맥에 대한 내용은 [JavaScript data types and structures](/ko/docs/Web/JavaScript/Guide/Data_structures)를 참조하세요.
 
 여러분은 숫자 리터럴의 네 가지 유형을 사용할 수 있습니다: 10진수, 2진수, 8진수, 16진수
 
@@ -400,4 +400,4 @@ function JSClock() {
 
 마지막으로 조건부 표현식에 "P.M."이 추가됩니다. 시간(`hour`)이 12 시간 이상이면 임시(`temp`)로; 그렇지 않으면 "A.M."을 `temp`에 추가합니다.
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "conflicting/Web/JavaScript/Guide/Numbers_and_strings")}}

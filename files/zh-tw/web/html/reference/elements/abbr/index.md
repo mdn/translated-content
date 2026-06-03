@@ -3,8 +3,6 @@ title: <abbr>：縮寫元素
 slug: Web/HTML/Reference/Elements/abbr
 ---
 
-{{HTMLSidebar}}
-
 **`<abbr>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表縮寫或縮略語。
 
 在包含縮寫或縮略語時，首次使用時需提供該術語的全稱，並使用 `<abbr>` 標記縮寫。這有助於告知使用者縮寫或縮略語的含義。

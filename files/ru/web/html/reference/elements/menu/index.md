@@ -77,7 +77,8 @@ div {
 > [!WARNING]
 > Menu buttons haven't been implemented in any known browsers yet. The [`type`](#type) attribute on the `<menu>` element is now obsolete.
 
-> **Предупреждение:** {{HTMLElement("menuitem")}} element is obsolete.
+> [!WARNING]
+> {{HTMLElement("menuitem")}} element is obsolete.
 
 #### HTML
 

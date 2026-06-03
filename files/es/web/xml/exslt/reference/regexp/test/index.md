@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/regexp/test
 original_slug: Web/EXSLT/regexp/test
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 
 `regexp:test()` comprueba si una cadena coincide con una expresión regular especificada.
 

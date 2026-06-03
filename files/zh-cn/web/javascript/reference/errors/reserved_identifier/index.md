@@ -3,8 +3,6 @@ title: 'SyntaxError: "x" is a reserved identifier'
 slug: Web/JavaScript/Reference/Errors/Reserved_identifier
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 消息提示
 
 ```plain

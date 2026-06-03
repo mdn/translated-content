@@ -144,12 +144,10 @@ Vue에서는 props를 등록하는 방법이 두 가지 있습니다.
 2. export `default {}` 오브젝트 안에 `props` 속성을 추가하고 빈 오브젝트를 만들어주세요.
 3. 이 오브젝트 안에 `label` 과 `done` 을 키로 사용하는 속성을 추가하세요.
 4. `label` 키의 값은 두 개의 속성을 갖는 오브젝트입니다.
-
    1. 첫 번째는 `required` 속성입니다. 이 속성의 값을 `true`로 지정하겠습니다. 이 컴포넌트의 모든 인스턴스가 레이블 필드를 반드시 가져야 한다는 의미입니다. 만약 `ToDoItem` 컴포넌트가 레이블 필드를 갖지 않으면 Vue가 경고해줄 것입니다.
    2. 두 번째는 `type` 속성입니다. 이 속성의 값을 JavaScript `String`(대문자 S)타입으로 설정합니다. 이렇게 하면 label prop이 스트링 값을 가질 것임을 Vue에게 알려줄 수 있습니다.
 
 5. 이제 `done` prop으로 넘어가겠습니다.
-
    1. 먼저 `default` 필드를 추가하고, `false` 값을 지정합니다. 이것은 `ToDoItem` 컴포넌트가 `done` prop을 받지 못했을 때, 기본값으로 false를 갖는다는 의미입니다. his means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will will have a value of false(기본값을 항상 설정할 필요는 없습니다. 필수가 아닌 props에 대해서만 `default`를 지정하면 됩니다).
    2. 다음으로 `type` 필드를 추가합니다. 값은 `Boolean`으로 지정합니다. 이 prop이 JavaScript 불리언 타입을 가질 것임을 Vue에게 알려주는 것입니다.
 

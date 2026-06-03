@@ -2,10 +2,10 @@
 title: prefer_related_applications
 slug: Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 628b29f53d15f203c4a6b33c1d0303f864f6af63
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `prefer_related_applications` マニフェストメンバーは、 [`related_applications`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) マニフェストメンバーで指定されたネイティブアプリケーションをウェブアプリケーションよりも優先してインストールするかどうかをブラウザーに指定するためのヒントを提供するために使用されます。
 

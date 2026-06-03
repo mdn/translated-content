@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `gyroscope` ディレクティブは、現在の文書が {{domxref("Gyroscope")}} インターフェイスを通じて端末の方向に関する情報を収集することを許可するかどうかをコントロールします。
 

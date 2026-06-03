@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/From
 original_slug: Web/HTTP/Headers/From
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição **`From`** contém um endereço de email da Internet para um usuário humano que controla o agente de usuário requisitante poder enviar uma mensagem.
 
 Se você está rodando um agente de usuário robótico (e.g. um _crawler_), o cabeçalho `From` deve ser enviado, para que você possa contatar se problemas ocorrerem em servidores, como por exemplo, o robô estar enviando requisições excessivas, não desejadas ou inválidas.
@@ -20,7 +18,7 @@ Se você está rodando um agente de usuário robótico (e.g. um _crawler_), o ca
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

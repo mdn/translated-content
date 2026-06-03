@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Range`** HTTP 응답 헤더는 전체 바디 메시지에서 부분 메시지가 속한 위치를 알려줍니다.
 
 <table class="properties">

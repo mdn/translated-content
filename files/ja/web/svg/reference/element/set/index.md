@@ -2,14 +2,29 @@
 title: <set>
 slug: Web/SVG/Reference/Element/set
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
 **`<set>`** は [SVG](/ja/docs/Web/SVG) の要素で、指定した時間だけ属性の値を設定するという単純な意味を提供します。
 
 文字列や論理値など、合理的に補間できないものも含めて、すべての属性型に対応しています。合理的に補間できる属性については、通常は {{SVGElement('animate')}} を推奨します。
 
-> **メモ:** `<set>` 要素は非加算です。{{SVGAttr('additive')}} と {{SVGAttr('accumulate')}} 属性は指定することができず、指定されても無視されます。
+> [!NOTE]
+> `<set>` 要素は非加算です。{{SVGAttr('additive')}} と {{SVGAttr('accumulate')}} 属性は指定することができず、指定されても無視されます。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+- {{SVGAttr("to")}}
+  - : この属性は、アニメーションの再生時間の間、対象とする属性に適用する値を定義します。値は、対象とする属性の要求と一致しなければなりません。
+    _値の型_: [**\<anything>**](/ja/docs/Web/SVG/Guides/Content_type#anything); _デフォルト値_: なし; _アニメーション_: **不可**
+
+## DOM インターフェイス
+
+この要素は、{{domxref("SVGSetElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -40,16 +55,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## 属性
-
-- {{SVGAttr("to")}}
-  - : この属性は、アニメーションの再生時間の間、対象とする属性に適用する値を定義します。値は、対象とする属性の要求と一致しなければなりません。
-    _値の型_: [**\<anything>**](/ja/docs/Web/SVG/Guides/Content_type#anything); _既定値_: none; _アニメーション_: **不可**
-
-## 使用可能な場所
-
-{{svginfo}}
 
 ## 仕様書
 

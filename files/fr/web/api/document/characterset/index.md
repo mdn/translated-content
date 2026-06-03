@@ -1,30 +1,27 @@
 ---
-title: Document.characterSet
+title: "Document : propriété characterSet"
+short-title: characterSet
 slug: Web/API/Document/characterSet
+l10n:
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
-**`Document.characterSet`** propriété en lecture seule, renvoie l'encodage du document en cours. Un encodage décrit l'ensemble des caractères possibles et la façon de décoder les octets en ces caractères.
+La propriété en lecture seule **`characterSet`** de l'interface {{DOMxRef("Document")}} retourne {{Glossary("Character_encoding", "l'encodage des caractères")}} du document tel qu'il est actuellement rendu.
 
 > [!NOTE]
-> La propriété `document.charset` et `document.inputEncoding` sont les alias de `document.characterSet`. Ne plus les utiliser.
+> Un «&nbsp;jeu de caractères&nbsp;» et un «&nbsp;encodage de caractères&nbsp;» sont liés, mais différents. Malgré le nom de cette propriété, elle retourne _l'encodage_.
 
-Les utilisateurs peuvent surcharger l'encodage indiqué pour le document (transmis par l'en-tête {{HTTPHeader("Content-Type")}} ou via le {{HTMLElement("meta")}} : `<meta charset="utf-8">`) grâce au menu <kbd>Affichage → Encodage du texte</kbd>. Cela peut notamment permettre de corriger le comportement d'un document dont l'encodage indiqué est incorrect.
+## Valeur
 
-## Syntaxe
-
-```js
-var string = document.characterSet;
-```
+Une chaîne de caractères.
 
 ## Exemples
 
-```html
-<button onclick="console.log(document.characterSet);">
-  Affiche le jeu de caractère
-</button>
-<!-- logs document's character set, such as "ISO-8859-1" or "UTF-8" -->
+```js
+console.log(document.characterSet);
+// l'encodage des caractères du document, tel que "ISO-8859-1" ou "UTF-8"
 ```
 
 ## Spécifications

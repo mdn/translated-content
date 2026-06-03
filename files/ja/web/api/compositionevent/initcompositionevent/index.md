@@ -10,7 +10,8 @@ l10n:
 
 **`initCompositionEvent()`** は {{domxref("CompositionEvent")}} インターフェイスのメソッドで、 `CompositionEvent` オブジェクトインスタンスの属性を初期化します。
 
-> **メモ:** {{domxref("CompositionEvent")}} を生成する正しい方法は、 {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}} コンストラクターを使用する方法です。
+> [!NOTE]
+> {{domxref("CompositionEvent")}} を生成する正しい方法は、 {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}} コンストラクターを使用する方法です。
 
 ## 構文
 

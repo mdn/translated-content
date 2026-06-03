@@ -1,17 +1,15 @@
 ---
 title: 300 Multiple Choices
 slug: Web/HTTP/Reference/Status/300
-original_slug: Web/HTTP/Status/300
 l10n:
-  sourceCommit: bd4d7bc4176d9f67297e3940ae7163a258f07ef5
+  sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`300 Multiple Choices`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、リクエストに対して複数のレスポンスがあることを示します。
 ユーザーエージェントやユーザーは、その内から一つを選択します。
 
-> **メモ:** [エージェント駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#エージェント駆動型ネゴシエーション)では、サーバーに複数の候補が存在する場合、クライアントとサーバーが共同で指定されたリソースの最適な候補を決定します。
+> [!NOTE]
+> [エージェント駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#エージェント駆動型ネゴシエーション)では、サーバーに複数の候補が存在する場合、クライアントとサーバーが共同で指定されたリソースの最適な候補を決定します。
 > ほとんどのクライアントは、レスポンスから自動的に選択する手段を持っていません。また、追加の往復通信により、クライアントとサーバーの対話が遅くなります。
 > [サーバー駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#サーバー駆動型コンテンツネゴシエーション)の方がはるかに広く使用されており、サーバーはリクエストヘッダー（{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept")}} など）に基づいて、クライアントに最も適したリソースを選べます。
 
@@ -32,7 +30,7 @@ HTTP の **`300 Multiple Choices`** は[リダイレクトレスポンス](/ja/d
 次の例は、透過的コンテンツネゴシエーションのリクエストとレスポンスのやり取りを示しています。
 Apache サーバーは、[型マップ](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps)で定義されたリソースの複数の版を、入力する言語に応じて、英語のコンテンツには `index.html.en`、フランス語のコンテンツには `index.html.fr` というように提供します。
 
-```plain
+```http
 URI: index.html.en
 Content-Language: en
 
@@ -87,7 +85,7 @@ Available variants:
 
 ## 関連情報
 
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [HTTP のリダイレクト](/ja/docs/Web/HTTP/Guides/Redirections)
 - [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("301", "301 Moved Permanently")}}
 - {{HTTPStatus("302", "302 Found")}} 一時リダイレクト

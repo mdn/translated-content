@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/string
 original_slug: Web/XPath/Functions/string
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `string` 함수는 인수를 문자열로 변환합니다.
 
@@ -28,7 +28,6 @@ string( [object] )
 
 - 만약 개체가 노드 집합이면, 집합의 첫 노드의 문자열값을 반환됩니다.
 - 숫자는 다음으로 반환됩니다.
-
   - NaN은 문자열 NaN으로 변환됩니다.
   - 양수 0은 문자열 0으로 변환됩니다.
   - 음수 0은 문자열 0으로 변환됩니다.

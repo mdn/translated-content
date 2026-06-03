@@ -3,8 +3,6 @@ title: Añadir lectores de canales a Firefox
 slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 ---
 
-{{FirefoxSidebar}}
-
 A partir de Firefox 2, Firefox permite seleccionar diferentes lectores de canales RSS o Atom para usarlos cuando se trata de leer un canal. Este artículo proporciona información sobre cómo añadir lectores adicionales no admitidos por defecto.
 
 ## Añadir un nuevo lector de canales basado en la web

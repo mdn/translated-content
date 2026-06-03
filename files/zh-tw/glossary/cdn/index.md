@@ -3,8 +3,6 @@ title: CDN
 slug: Glossary/CDN
 ---
 
-{{GlossarySidebar}}
-
 **CDN**（Content Delivery Network，內容傳遞網路）是一群部署在世界不同位置的伺服器。這些伺服器保存著資料的備份檔案。按照使用者發出請求的位置，它們能根據離終端使用者距離最近的伺服器來快速回應請求。也因此，即使在網路流量很大的時候，CDN 仍能在影響較小的情況下快速提供服務。
 
 CDN 廣泛用於傳送像 Bootstrap、jQuery 等函式庫的樣式表和 JavaScript 檔案（靜態資源）。考慮到以下幾項原因，使用 CDN 來保存這些函式庫檔案會是更適合的選擇：

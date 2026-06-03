@@ -506,7 +506,8 @@ driver.quit();
 
 4. 使用 `--no-timeouts` 参数确保测试不会因 Mocha 的 3 秒超时时限而中途失败退出。
 
-> **备注：** [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) 中包含了一些关于如何配置不同测试/断言工具组合的有用示例。
+> [!NOTE]
+> [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) 中包含了一些关于如何配置不同测试/断言工具组合的有用示例。
 
 ## 运行远程测试
 

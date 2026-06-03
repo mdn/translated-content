@@ -1,15 +1,13 @@
 ---
-title: Guides des bonnes pratiques
+title: Guides pratiques pour les contributeur·ice·s MDN
+short-title: Guides pratiques
 slug: MDN/Writing_guidelines/Howto
 l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
 
-{{MDNSidebar}}
+Cette section des règles de rédaction de MDN Web Docs contient les étapes détaillées pour accomplir des tâches spécifiques lors de la contribution à MDN Web Docs&nbsp;: comment utiliser le markdown, comment ajouter une entrée au glossaire, comment déplacer ou supprimer des pages, et plus encore.
+Pour savoir _comment contribuer_, consultez nos [directives de contribution](/fr/docs/MDN/Community).
+Ces documents partent du principe que vous avez lu les directives de contribution, que vous connaissez les dépôts `mdn/content` et `mdn/translated-content`, et que vous savez utiliser git et GitHub.
 
-Cette section porte sur les règles d'écriture sur MDN Web Docs et contient toutes les informations détaillées pour accomplir des tâches spécifiques lors d'une contribution à MDN Web Docs&nbsp;: comment utiliser Markdown, comment ajouter une entrée au glossaire, comment déplacer ou supprimer des pages, et plus encore. Pour en savoir plus sur _comment contribuer_ (via GitHub), consultez nos [directives de contribution](/fr/docs/MDN/Community/Contributing).
-
-> [!NOTE]
-> Tout au long de cette section, nous supposons que vous avez lu les directives de contribution, que vous connaissez les dépôts `mdn/content` et `mdn/translated-content`, et que vous savez comment utiliser Git et GitHub.
-
-{{LandingPageListSubpages}}
+{{SubpagesWithSummaries}}

@@ -1,22 +1,21 @@
 ---
 title: ArrayBuffer() コンストラクター
+short-title: ArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
-
-{{JSRef}}
 
 **`ArrayBuffer()`** コンストラクターは {{jsxref("ArrayBuffer")}} オブジェクトを生成するために使用されます。
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer Constructor", "shorter")}}
+{{InteractiveExample("JavaScript デモ: ArrayBuffer() コンストラクター", "shorter")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// ArrayBuffer をバイト単位のサイズで作成
 const buffer = new ArrayBuffer(8);
 
 console.log(buffer.byteLength);
-// Expected output: 8
+// 予想される結果: 8
 ```
 
 ## 構文
@@ -26,15 +25,16 @@ new ArrayBuffer(length)
 new ArrayBuffer(length, options)
 ```
 
-> **メモ:** `ArrayBuffer()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でのみ構築することができます。`new` 無しで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `ArrayBuffer()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でのみ構築することができます。`new` 無しで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
 - `length`
   - : 作成する配列バッファーのサイズをバイト単位で指定します。
-- `options` {{optional_inline}} {{experimental_inline}}
+- `options` {{optional_inline}}
   - : オブジェクトであり、以下のプロパティを持つことができます。
-    - `maxByteLength` {{optional_inline}} {{experimental_inline}}
+    - `maxByteLength` {{optional_inline}}
       - : 配列バッファーがサイズ変更可能な最大サイズ（バイト単位）。
 
 ### 返値
@@ -52,7 +52,7 @@ new ArrayBuffer(length, options)
 
 ### ArrayBuffer の作成
 
-この例では、バッファーを参照する {{jsxref("Global_Objects/Int32Array", "Int32Array")}} ビューを持つ 8 バイトのバッファーを作成しています。
+この例では、バッファーを参照する {{jsxref("Int32Array")}} ビューを持つ 8 バイトのバッファーを作成しています。
 
 ```js
 const buffer = new ArrayBuffer(8);
@@ -69,7 +69,8 @@ const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
 buffer.resize(12);
 ```
 
-> **メモ:** `maxByteLength` は使用する用途に応じて使用可能な最小値に設定することが推奨されます。メモリ不足になる危険を縮小するために、`1073741824` (1GB) を超えないようにする必要があります。
+> [!NOTE]
+> `maxByteLength` は使用する用途に応じて使用可能な最小値に設定することが推奨されます。メモリ不足になる危険を縮小するために、`1073741824` (1GB) を超えないようにする必要があります。
 
 ## 仕様書
 
@@ -82,5 +83,5 @@ buffer.resize(12);
 ## 関連情報
 
 - [`ArrayBuffer` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("SharedArrayBuffer")}}

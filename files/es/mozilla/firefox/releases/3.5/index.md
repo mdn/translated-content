@@ -3,8 +3,6 @@ title: Firefox 3.5 para desarrolladores
 slug: Mozilla/Firefox/Releases/3.5
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el funcionamiento de una amplia variedad de estándares web. Este artículo ofrece una extensa lista con enlaces a artículos que explican estas grandes mejoras.
 
 ## Nuevas funcionalidades para desarrolladores en Firefox 3.5
@@ -14,7 +12,7 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 #### Funciones de HTML 5
 
 - [Usar audio y video en Firefox](/Es/Usar_audio_y_v%C3%ADdeo_en_Firefox)
-  - : Firefox 3.5 implementa los elementos [`audio`](/es/docs/Web/HTML/Element/audio) y [`video`](/es/docs/Web/HTML/Element/video) de HTML 5.
+  - : Firefox 3.5 implementa los elementos [`audio`](/es/docs/Web/HTML/Reference/Elements/audio) y [`video`](/es/docs/Web/HTML/Reference/Elements/video) de HTML 5.
 - [Recursos sin conexión en Firefox](/es/docs/Offline_resources_in_Firefox)
   - : Firefox 3.5 implementa de forma completa la especificación para recursos sin conexión de HTML 5.
 - [Arrastrar y soltar (Drag and drop](/es/docs/Web/API/HTML_Drag_and_Drop_API))
@@ -22,21 +20,21 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 
 #### Nuevas características de CSS implementadas
 
-- [Tipografías descargables](/es/docs/Web/CSS/@font-face)
+- [Tipografías descargables](/es/docs/Web/CSS/Reference/At-rules/@font-face)
   - : La nueva regla {{cssxref("@font-face")}} permite a las páginas web disponer de tipografías descargables, para que los sitios web puedan ser visualizados como el autor lo pretende.
-- [Pedidos de CSS según el medio](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Pedidos de CSS según el medio](/es/docs/Web/CSS/Guides/Media_queries/Using)
   - : Firefox 3.5 implementa esta característica que permite al autor del sitio web tener más control sobre el archivo CSS que cada dispositivo va a recibir según las características del mismo.
 - {{cssxref(":before")}} y {{cssxref(":after")}} actualizados a CSS 2.1
   - : Los pseudo-elementos `:before` y `:after` han sido actualizados para implementar por completo las características de CSS 2.1, añadiendo la posibilidad de usar `position`, `float`, `list-style-*` y algunas propiedades de `display`.
-- [`opacity`](/es/docs/Web/CSS/opacity)
+- [`opacity`](/es/docs/Web/CSS/Reference/Properties/opacity)
   - : La extensión al CSS `-moz-opacity` fue eliminada para implementar la propiedad estandar `opacity`.
-- [`text-shadow`](/es/docs/Web/CSS/text-shadow)
+- [`text-shadow`](/es/docs/Web/CSS/Reference/Properties/text-shadow)
   - : La propiedad `text-shadow`, que permite especificar efectos de sombra para textos y decoraciones del texto, está implementada.
 - [`word-wrap`](/es/docs/Web/CSS/overflow-wrap)
   - : Esta propiedad permite especificar cuando las líneas deben o no ser cortadas entre palabras para prevenir el overflow cuando una línea que no puede ser cortada es demasiado larga para entrar en una sola línea.
-- [`-moz-box-shadow`](/es/docs/Web/CSS/box-shadow)
+- [`-moz-box-shadow`](/es/docs/Web/CSS/Reference/Properties/box-shadow)
 
-  [`-moz-border-image`](/es/docs/Web/CSS/border-image)
+  [`-moz-border-image`](/es/docs/Web/CSS/Reference/Properties/border-image)
 
   [`-moz-column-rule`](/es/docs/Web/CSS/column-rule)
 
@@ -45,31 +43,29 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
   [`-moz-column-rule-style`](/es/docs/Web/CSS/column-rule-style)
 
   [`-moz-column-rule-color`](/es/docs/Web/CSS/column-rule-color)
-
   - : Firefox 3.5 añade la posibilidad de usar estas extensiones al CSS de Mozilla.
 
-- [The `-moz-nativehyperlinktext` color value](/es/docs/Web/CSS/color#mozilla_specific_colors)
+- [The `-moz-nativehyperlinktext` color value](/es/docs/Web/CSS/Reference/Properties/color#mozilla_specific_colors)
   - : Este nuevo valor del color representa el predefinido por el sistema del usuario para los hipervínculos.
 - Las nuevas propiedades `-moz-window-shadow` y `-moz-system-metric(mac-graphite-theme)`
   - : Estas nuevas propiedades de CSS fueron añadidas para facilitar la creación de temas.
-- Nuevos valores para [`-moz-appearance`](/es/docs/Web/CSS/appearance)
+- Nuevos valores para [`-moz-appearance`](/es/docs/Web/CSS/Reference/Properties/appearance)
   - : Los valores `-moz-win-glass` y `-moz-mac-unified-toolbar` se agregaron a `-moz-appearance`.
-- [Usar transformaciones CSS](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-  - : Firefox 3.5 implementa las transformaciones CSS. Mirá [`-moz-transform`](/es/docs/Web/CSS/transform) y [`-moz-transform-origin`](/es/docs/Web/CSS/transform-origin) para saber más detalles.
-- [`:nth-child`](/es/docs/Web/CSS/:nth-child)
+- [Usar transformaciones CSS](/es/docs/Web/CSS/Guides/Transforms/Using)
+  - : Firefox 3.5 implementa las transformaciones CSS. Mirá [`-moz-transform`](/es/docs/Web/CSS/Reference/Properties/transform) y [`-moz-transform-origin`](/es/docs/Web/CSS/Reference/Properties/transform-origin) para saber más detalles.
+- [`:nth-child`](/es/docs/Web/CSS/Reference/Selectors/:nth-child)
 
-  [`:nth-last-child`](/es/docs/Web/CSS/:nth-last-child)
+  [`:nth-last-child`](/es/docs/Web/CSS/Reference/Selectors/:nth-last-child)
 
-  [`:nth-of-type`](/es/docs/Web/CSS/:nth-of-type)
+  [`:nth-of-type`](/es/docs/Web/CSS/Reference/Selectors/:nth-of-type)
 
-  [`:nth-last-of-type`](/es/docs/Web/CSS/:nth-last-of-type)
+  [`:nth-last-of-type`](/es/docs/Web/CSS/Reference/Selectors/:nth-last-of-type)
 
-  [`:first-of-type`](/es/docs/Web/CSS/:first-of-type)
+  [`:first-of-type`](/es/docs/Web/CSS/Reference/Selectors/:first-of-type)
 
-  [`:last-of-type`](/es/docs/Web/CSS/:nth-last-of-type)
+  [`:last-of-type`](/es/docs/Web/CSS/Reference/Selectors/:nth-last-of-type)
 
-  [`:only-of-type`](/es/docs/Web/CSS/:only-of-type)
-
+  [`:only-of-type`](/es/docs/Web/CSS/Reference/Selectors/:only-of-type)
   - : Estos selectores pueden ser usados en Firefox 3.5.
 
 #### Nuevas funcionalidades del DOM
@@ -82,7 +78,7 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
   - : Firefox 3.5 implementa la API de geolocalización, que permite que las aplicaciones web obtengan información sobre la ubicación actual del usuario si unu proveedor de ese servicio está instalado y habilitado.
 - [Usar JSON en Firefox](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON)
   - : Posibilidad de usar [JSON](/es/docs/Glossary/JSON) en el DOM.
-- [Localizar elementos del DOM con selectores](/es/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [Localizar elementos del DOM con selectores](/es/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
   - : El API de selectores permite pedirle a un documento que localice los elementos que coincidan con una regla seleccionada.
 - [El objeto `NodeIterator`](/es/docs/Web/API/NodeIterator)
   - : El objeto `NodeIterator` permite recorrer la lista de nodos en un árbol del DOM.
@@ -133,7 +129,7 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 
 - [Corrección de color ICC en Firefox](/es/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox)
   - : Firefox 3.5 ahora soporta corrección de color ICC para imágenes etiquetadas.
-- El atributo `defer` es ahora soportado en elementos [`script`](/es/docs/Web/HTML/Element/script)
+- El atributo `defer` es ahora soportado en elementos [`script`](/es/docs/Web/HTML/Reference/Elements/script)
   - : Este atributo indica al navegador que _puede_ escoger continuar parseando y renderizando la página sin esperar a que el script termine de ejecutarse.
 
 ### Otras mejoras
@@ -149,7 +145,7 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 - En ámbito no-chrome, los objetos capturados en excepciones son ahora el objeto realmente lanzado en lugar de un wrapper [XPConnect](/es/docs/XPConnect) que contiene el objeto lanzado.
 - Las referencias ID de SVG ahora son vivas.
 - Los filtros SVG ahora funcionan para `foreignObject`.
-- El método `GetSVGDocument()` ha sido añadido a los elementos [`object`](/es/docs/Web/HTML/Element/object) y [`iframe`](/es/docs/Web/HTML/Element/iframe) por compatibilidad.
+- El método `GetSVGDocument()` ha sido añadido a los elementos [`object`](/es/docs/Web/HTML/Reference/Elements/object) y [`iframe`](/es/docs/Web/HTML/Reference/Elements/iframe) por compatibilidad.
 - El setting implícito de propiedades en inicializadores de objeto y array ya no ejecuta los setters JavaScript. Ver el post [Object and array initializers should not invoke setters when evaluated](/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated) para más detalles.
 - La variable `gDownloadLastDir.path` ha sido renombrada a `gDownloadLastDir.file` porque se refiere a un `nsIFile`, no a una ruta.
 - La variable `gDownloadLastDirPath` ha sido renombrada a `gDownloadLastDirFile` porque se refiere a un `nsIFile`, not a una ruta.

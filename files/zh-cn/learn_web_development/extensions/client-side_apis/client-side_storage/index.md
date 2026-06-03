@@ -681,7 +681,8 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-> **备注：** `sw.js` 文件的给定路径是相对于站点源的，而不是包含代码的 JavaScript 文件。service worker 在 `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`。来源是 `https://mdn.github.io`，因此给定的路径必须是 `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`。如果你想在自己的服务器上托管此示例，则必须相应地更改此示例。这是相当令人困惑的，但出于安全原因，它必须以这种方式工作。
+> [!NOTE]
+> `sw.js` 文件的给定路径是相对于站点源的，而不是包含代码的 JavaScript 文件。service worker 在 `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`。来源是 `https://mdn.github.io`，因此给定的路径必须是 `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`。如果你想在自己的服务器上托管此示例，则必须相应地更改此示例。这是相当令人困惑的，但出于安全原因，它必须以这种方式工作。
 
 #### 安装 service worker
 

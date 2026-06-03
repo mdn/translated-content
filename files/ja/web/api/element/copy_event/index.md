@@ -16,7 +16,7 @@ l10n:
 
 ただし、ハンドラーがクリップボードのデータを*読み取る*ことはできません。
 
-[合成した](/ja/docs/Web/Events/Creating_and_triggering_events) `copy` イベントを構築して配信することもできますが、システムのクリップボードには影響を与えません。
+[合成した](/ja/docs/Web/API/Document_Object_Model/Events) `copy` イベントを構築して配信することもできますが、システムのクリップボードには影響を与えません。
 
 ## 構文
 

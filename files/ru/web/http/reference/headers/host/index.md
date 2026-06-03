@@ -3,8 +3,6 @@ title: Host
 slug: Web/HTTP/Reference/Headers/Host
 ---
 
-{{HTTPSidebar}}
-
 Заголовок **Host** содержит имя домена, для которого предназначен запрос и, опционально, номер порта.
 
 Если порт не указан, то используется умолчательный порт протокола/сервиса (например «80» для HTTP, "443" для HTTPS и т.д.).
@@ -19,7 +17,7 @@ slug: Web/HTTP/Reference/Headers/Host
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name")}} Неизменяемый
+        {{Glossary("Forbidden request header")}} Неизменяемый
       </th>
       <td>да</td>
     </tr>

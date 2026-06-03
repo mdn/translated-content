@@ -1,11 +1,10 @@
 ---
 title: Iterator.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`[Symbol.iterator]()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実行し、組み込みイテレーターが反復可能オブジェクトを期待する大部分の構文、例えば[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループなどで利用できるようにします。これは [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) の値、すなわちイテレーターオブジェクト自身を返します。
 

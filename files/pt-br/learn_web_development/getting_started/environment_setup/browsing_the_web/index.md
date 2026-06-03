@@ -13,7 +13,7 @@ Neste artigo, iremos apresentar diversos conceitos relacionados à Web: páginas
       <td>
         Você deverá conhecer
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Como_a_internet_funciona"
+          href="/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >como a Internet funciona</a
         >.
       </td>
@@ -72,7 +72,8 @@ Uma **página web** é simplesmente um documento que é renderizado ("mostrado")
 - _scripts_ — os quais são responsáveis por adicionar interatividade à página
 - _mídia_ — imagens, sons e vídeos.
 
-> **Nota:**Navegadores também são capazes de renderizar outros documentos, como arquivos {{Glossary("PDF")}} ou imagens, porém o termo **página web** se refere especificamente a documentos HTML. Todavia, usaremos apenas o termo **documento**.
+> [!NOTE]
+> Navegadores também são capazes de renderizar outros documentos, como arquivos {{Glossary("PDF")}} ou imagens, porém o termo **página web** se refere especificamente a documentos HTML. Todavia, usaremos apenas o termo **documento**.
 
 Todas as páginas web disponíveis na web são alcançáveis através de um único endereço. Para acessar uma página, basta digitar seu endereço na barra de endereços do seu navegador:
 

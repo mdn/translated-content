@@ -78,7 +78,7 @@ td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>없음.</td>
     </tr>
@@ -130,16 +130,14 @@ td {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 ### 더 이상 사용하지 않는 특성
 
 다음 특성은 더 이상 사용되지 않으므로 사용해서는 안 됩니다. 이 특성들은 기존 코드를 업데이트할 때 참조하는 용도와, 역사적인 흥미를 위해서만 작성되어 있습니다.
 
 - `align` {{deprecated_inline}}
-
   - : 아래에 나열된 속성들은 각 셀 컨텐츠의 수평 정렬 방법을 지정합니다. 가능한 값:
-
     - `left`, 컨텐츠를 셀의 왼쪽으로 정렬합니다.
     - `center`, 컨텐츠를 셀의 가운데로 정렬합니다.
     - `right`, 컨텐츠를 셀의 오른쪽으로 정렬합니다.
@@ -153,7 +151,7 @@ td {
     > - `char` 값과 같은 효과를 내고 싶다면, CSS3에서 [`char`](#char)의 값을 {{cssxref("text-align")}} 속성의 값으로 사용할 수 있습니다.
 
 - `bgcolor` {{Deprecated_inline}}
-  - : 표의 배경 색입니다. '`#`'이 앞에 붙는 [6자리의 16진수 RGB 코드](/ko/docs/Web/CSS/color_value#rgb_colors) 형식으로 작성합니다. 이미 정의되어 있는 [color keywords](/ko/docs/Web/CSS/color_value#color_keywords) 도 사용할 수 있습니다.
+  - : 표의 배경 색입니다. '`#`'이 앞에 붙는 [6자리의 16진수 RGB 코드](/ko/docs/Web/CSS/Reference/Values/color_value#rgb_colors) 형식으로 작성합니다. 이미 정의되어 있는 [color keywords](/ko/docs/Web/CSS/Reference/Values/color_value#color_keywords) 도 사용할 수 있습니다.
     비슷한 효과를 적용하고 싶다면 CSS {{cssxref("background-color")}} 속성을 사용합니다.
 - `char` {{deprecated_inline}}
   - : 이 특성은 열을 특정 문자에 대해 정렬하도록 지정합니다. 숫자 또는 통화 값을 정렬할 때에는 일반적으로 마침표(.)가 포함됩니다. 만약 [`align`](#align) 이 `char`로 설정되어 있지 않으면, 이 특성은 무시됩니다.

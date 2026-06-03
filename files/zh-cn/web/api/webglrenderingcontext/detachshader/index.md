@@ -1,59 +1,40 @@
 ---
-title: WebGLRenderingContext.detachShader()
+title: WebGLRenderingContext：detachShader() 方法
 slug: Web/API/WebGLRenderingContext/detachShader
+l10n:
+  sourceCommit: ffff697fbd3004c3da50323ef4d868b3ad47e4d0
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**WebGLRenderingContext.detachShader()** 方法：从一个 {{domxref("WebGLProgram")}}中分离一个先前附加的片段或者顶点着色器（{{domxref("WebGLShader")}} ）.
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.detachShader()`** 方法用于将先前附加到 {{domxref("WebGLProgram")}} 上的 {{domxref("WebGLShader")}} 与该 WebGLProgram 分离。
 
-## Syntax
+## 语法
 
-```plain
-void gl.detachShader(program, shader);
+```js-nolint
+detachShader(program, shader)
 ```
 
-### Parameters
+### 参数
 
 - `program`
-  - : 一个 {{domxref("WebGLProgram")}} 对象。
+  - : 一个 {{domxref("WebGLProgram")}}。
 - `shader`
-  - : 一个顶点或者片元着色器 {{domxref("WebGLShader")}}.
+  - : 一个片段或顶点 {{domxref("WebGLShader")}}。
 
-## Specifications
+### 返回值
+
+无（{{jsxref("undefined")}}）。
+
+## 规范
 
 {{Specifications}}
 
-## 例子
-
-### 使用 detachShader 方法分离一个顶点或片元着色器
-
-```plain
-//顶点着色器
-    var vertexShader = gl.createShader(gl.VERTEX_SHADER);
-    gl.shaderSource(vertexShader, vertexSrc);
-    gl.compileShader(vertexShader);
-    //片元着色器
-    var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);//创建 WebGLShader。
-    gl.shaderSource(fragmentShader, fragmentSrc); //fragmentSrc 设置一个 WebGLShader 的源码。
-    gl.compileShader(fragmentShader);
-
-    //WebGLProgram
-    var program = gl.createProgram();//创建 WebGLProgram
-    gl.attachShader(program, vertexShader); //往 WebGLProgram 添加一个片段或者顶点着色器。
-    gl.attachShader(program, fragmentShader);
-    gl.linkProgram(program);//链接给入的 WebGLProgram 对象
-    gl.detachShader(program, vertexShader); //从一个 WebGLProgram 中分离一个先前附加的片段或者顶点着色器;
-    gl.detachShader(program, fragmentShader);
-    gl.deleteShader(vertexShader);
-    gl.deleteShader(fragmentShader);
-```
-
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("WebGLProgram")}}
 - {{domxref("WebGLShader")}}
@@ -63,7 +44,6 @@ void gl.detachShader(program, shader);
 - {{domxref("WebGLRenderingContext.createShader()")}}
 - {{domxref("WebGLRenderingContext.deleteProgram()")}}
 - {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.detachShader()")}}
 - {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
 - {{domxref("WebGLRenderingContext.getProgramParameter()")}}
 - {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}

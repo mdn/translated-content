@@ -8,7 +8,7 @@ l10n:
 
 {{MathMLRef}}
 
-{{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Guides")}}
 
 基本的な数学記法の復習を続け、添字つきの MathML 要素の構築に焦点を当てます。
 
@@ -449,7 +449,7 @@ math {
 - 移動制限: 演算子に付けられた真下付き文字と真上付き文字は `<math>` タグに `display="block"` 属性がない場合、それぞれ下付き文字と上付き文字として表示されます。
 
 > [!NOTE]
-> 「大きな演算子」特性は添字とは無関係ですが、この特性が付いた演算子はを保有する演算子は一般的に添字が付きます。移動制限特性は、`<munder>` と `<mover>` 要素にも適用されます。
+> 「大きな演算子」特性は添字とは無関係ですが、この特性が付いた演算子を保有する演算子は一般的に添字が付きます。移動制限特性は、`<munder>` と `<mover>` 要素にも適用されます。
 
 ## まとめ
 
@@ -464,4 +464,4 @@ math {
 - [`<mover>` 要素](/ja/docs/Web/MathML/Reference/Element/mover)
 - [`<munderover>` 要素](/ja/docs/Web/MathML/Reference/Element/munderover)
 
-{{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Guides")}}

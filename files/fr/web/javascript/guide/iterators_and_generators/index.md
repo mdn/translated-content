@@ -3,7 +3,7 @@ title: Itérateurs et générateurs
 slug: Web/JavaScript/Guide/Iterators_and_generators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Utiliser_les_promesses", "Web/JavaScript/Guide/Métaprogrammation")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
 
 Effectuer des traitements sur chacun des éléments d'une collection est une opération très fréquente. Il existe plusieurs outils natifs dans JavaScript pour parcourir une collection, les boucles [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for), [`map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). Les itérateurs et les générateurs font de ce concept d'itération une fonctionnalité principale du langage et permettent d'adapter et de personnaliser le comportement des boucles [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of).
 
@@ -63,7 +63,7 @@ console.log("La séquence parcourue contenait ", result.value, " éléments.");
 
 Un objet est considéré comme **itérable** s'il définit le comportement qu'il aura lors de l'itération (par exemple les valeurs qui seront utilisées dans une boucle {{jsxref("Instructions/for...of", "for...of")}}). Certains types natifs, tels qu'{{jsxref("Array")}} ou {{jsxref("Map")}}, possède un comportement par défaut pour les itérations, cependant d'autres types comme les Objets, ne possèdent pas ce comportement.
 
-Pour qu'un objet soit **itérable**, un objet doit implémenter la méthode **@@iterator**, cela signifie que l'objet (ou un des objets de la [chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec la clé {{jsxref("Symbol.iterator")}}. Cette fonction doit également, même si ce n'est pas une obligation, renvoyer une nouvel opérateur à chaque appel.
+Pour qu'un objet soit **itérable**, un objet doit implémenter la méthode **@@iterator**, cela signifie que l'objet (ou un des objets de la [chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec la clé {{jsxref("Symbol.iterator")}}. Cette fonction doit également, même si ce n'est pas une obligation, renvoyer une nouvel opérateur à chaque appel.
 
 ### Itérables personnalisés
 
@@ -172,4 +172,4 @@ Si l'exception n'est pas interceptée dans le générateur, elle se propagera ju
 
 Les générateurs possèdent une méthode `return(valeur)` qui permet de renvoyer une valeur donnée et de terminer le générateur.
 
-{{PreviousNext("Web/JavaScript/Guide/Utiliser_les_promesses", "Web/JavaScript/Guide/Métaprogrammation")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}

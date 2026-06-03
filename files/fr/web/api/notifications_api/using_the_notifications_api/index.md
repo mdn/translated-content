@@ -27,7 +27,7 @@ Avant qu'une application puisse envoyer une notification, l'utilisatrice ou l'ut
 
 En raison d'abus des notifications par le passé, les équipes des navigateurs web ont commencé à mettre en place des stratégies pour limiter ce problème. Dans la pratique, vous ne devriez demander la permission à une personne uniquement après que celle-ci a interagi avec votre site/application (par exemple en ayant cliqué sur un bouton). Il ne s'agit pas seulement d'une bonne pratique (on ne devrait pas ennuyer les utilisatrices et utilisateurs avec de trop nombreuses notifications indésirées) mais d'une méthode qui sera implémentée par les différents navigateurs&nbsp;: Firefox le fait depuis Firefox 72 et Safari le fait également depuis quelque temps.
 
-De plus, pour Chrome et Firefox, il n'est pas possible de demander la permission d'afficher des notifications à moins que le site soit servi dans un contexte sécurisé (c'est-à-dire avec HTTPS) et il n'est plus possible de demander une telle permission depuis une [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) d'une origine tierce.
+De plus, pour Chrome et Firefox, il n'est pas possible de demander la permission d'afficher des notifications à moins que le site soit servi dans un contexte sécurisé (c'est-à-dire avec HTTPS) et il n'est plus possible de demander une telle permission depuis une [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) d'une origine tierce.
 
 ### Vérifier l'état de la permission
 

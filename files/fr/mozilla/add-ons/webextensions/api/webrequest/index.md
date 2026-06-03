@@ -30,26 +30,21 @@ Pour intercepter des ressources chargées par une page (comme des images, des sc
 Sur certains de ces événements, vous pouvez modifier la demande. Plus précisément, vous pouvez :
 
 - Annuler une requête avec:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 - Rediriger une requête avec:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - Modifier des en-têtes de requêtes avec:
-
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
 
 - Modifier des réponses d'en-têtes avec:
-
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - Fournir des informations d'authentifications avec:
-
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 Pour ce faire, vous devez transmettre une option avec la valeur "blocking" dans l'argument `extraInfoSpec` à la fonction `addListener()` de l'événement. Cela rend l'auditeur synchrone. Dans l'écouteur, vous pouvez alors renvoyer un objet {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}, qui indique la modification à apporter : par exemple, l'en-tête de requête modifié que vous souhaitez envoyer.
@@ -134,8 +129,6 @@ Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

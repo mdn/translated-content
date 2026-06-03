@@ -78,7 +78,6 @@ block content
 
 1. 你需要在 **/controllers/genreController.js** 中编辑`genre_list()`。
 2. 实现方式几乎与`author_list()`控制器完全相同。
-
    - 按名称以上升顺序，对结果进行排序。
 
 3. 要呈现的模板，应命名为 **genre_list.pug**。

@@ -19,4 +19,4 @@ Il s'agit d'une propriété spécifique à Mozilla qui ne fait partie d'aucune s
 
 ## Voir aussi
 
-- [Comparaison des cibles d'évènements](/fr/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [Comparaison des cibles d'évènements](/fr/docs/Learn_web_development/Core/Scripting/Event_bubbling)

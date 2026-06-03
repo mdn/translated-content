@@ -184,7 +184,7 @@ window.addEventListener("load", () => {
       // 使用时间间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
       const interval = setInterval(() => {
         // 由于 tag 参数，我们应该只能看到“来自 MDN 的第 9 个你好”通知
-        const n = new Notification(`来自 MDN 的第 9 个你好。`, {
+        const n = new Notification(`来自 MDN 的第 ${i} 个你好。`, {
           tag: "soManyNotification",
         });
         if (i === 9) {

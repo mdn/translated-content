@@ -2,10 +2,8 @@
 title: "Reason: CORS request did not succeed"
 slug: Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 ## 理由
 
@@ -15,7 +13,7 @@ Reason: CORS request did not succeed
 
 ## エラーの原因
 
-CORS を使用した {{Glossary("HTTP")}} 要求が、ネットワークまたはプロトコルレベルで HTTP 接続に失敗したために失敗しました。エラーは CORS に直接関連したものではなく、ある種の基本的なネットワークエラーです。
+CORS を使用した {{Glossary("HTTP")}} リクエストが、ネットワークまたはプロトコルレベルで HTTP 接続に失敗したために失敗しました。エラーは CORS に直接関連したものではなく、ある種の基本的なネットワークエラーです。
 
 多くの場合、ブラウザーのプラグイン (例えば広告ブロッカーやプライバシー保護) がリクエストをブロックしたときに発生します。
 

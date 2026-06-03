@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`style-src-elem`** ディレクティブは、スタイルシート {{HTMLElement("style")}} 要素と `rel="stylesheet"` を持つ {{HTMLElement("link")}} 要素の有効なソースを指定します。
 
 これらは {{CSP("style-src-attr")}} を使用して設定されます（また、すべてのスタイルの有効なソースは {{CSP("style-src")}} で設定することができます）。
@@ -45,7 +43,6 @@ Content-Security-Policy: style-src-elem <source-expression-list>;
 - `'none'`
   - : この種類のリソースは読み込まれません。単一引用符は必須です。
 - `<source-expression-list>`
-
   - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、[フェッチディレクティブの構文](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#フェッチディレクティブの構文)に掲載されているソース表現のうち、 [`'unsafe-hashes'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-hashes) 以外のいずれかが適用できます。
 
 `style-src-elem` は {{CSP("style-src")}} との組み合わせで使用できます。

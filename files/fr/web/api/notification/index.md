@@ -19,9 +19,7 @@ L'interface Notification de l'[API Notifications](/fr/docs/Web/API/Notifications
 _Ces propriétés ne sont disponibles que sur l'objet_ `Notification` _lui-même._
 
 - {{domxref("Notification.permission")}} {{readonlyinline}}
-
   - : Une chaîne représentant l'autorisation actuelle d'afficher les notifications. Les valeurs possibles sont:
-
     - `denied` — L'utilisateur refuse d'afficher des notifications.
     - `granted` — L'utilisateur accepte d'afficher des notifications.
     - `default` — Le choix de l'utilisateur est inconnu et donc le navigateur agira comme si la valeur était refusée.
@@ -86,7 +84,7 @@ _Ces méthodes ne sont disponibles que sur l'objet_ `Notification` _lui-même._
 
 ### Méthodes d'instance
 
-_Ces propriétés ne sont disponibles que sur une instance de l'objet_ `Notification` _ou via son_ [prototype](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)_. L'objet_ `Notification` _hérite également de l'interface {{domxref ("EventTarget")}}._
+_Ces propriétés ne sont disponibles que sur une instance de l'objet_ `Notification` _ou via son_ [prototype](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)_. L'objet_ `Notification` _hérite également de l'interface {{domxref ("EventTarget")}}._
 
 - {{domxref("Notification.close()")}}
   - : Ferme programmatiquement une instance de notification.

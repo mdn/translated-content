@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e626fb706bfef0d496f0a209554f80a2d9313c0c
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`508 Loop Detected`** [服务端错误响应](/zh-CN/docs/Web/HTTP/Reference/Status#服务端错误响应)状态码表示整个操作失败，因为它在处理带有 `Depth: infinity` 的请求时遇到了无限循环。
 
 该状态码可能出现在基于 Web 的分布式编写与版本控制（{{Glossary("WebDAV")}}）的上下文中。它被引入作为 WebDAV 客户端不支持 {{HTTPStatus("208", "208 Already Reported")}} 响应（当请求未显式包含 `DAV` 标头时）的备用方案。

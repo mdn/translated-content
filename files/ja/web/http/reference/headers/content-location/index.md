@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 1176e753733ee9d2e8966cc7cf03df495dce9aba
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Location`** ヘッダーは、返されるデータの代替場所を示します。主な用途は、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)の結果として送信されたリソースの URL を示すことです。
 
 {{HTTPHeader("Location")}} と `Content-Location` は異なります。

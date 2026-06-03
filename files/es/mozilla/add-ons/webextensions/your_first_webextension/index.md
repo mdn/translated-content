@@ -57,7 +57,8 @@ El parámetro más interesante aquí es [`content_scripts`](/es/docs/Mozilla/Add
 - [Aprenda más acerca de los scripts contenidos.](/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [Aprenda más acerca de los patrones coincidentes](/es/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
-> **Advertencia:** [En algunas situaciones usted necesita especificar un ID para su extensión](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id). Si necesita especificar un ID para el complemento, incluya el parámetro [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) en el `manifest.json` y configure la propiedad `gecko.id`:
+> [!WARNING]
+> [En algunas situaciones usted necesita especificar un ID para su extensión](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id). Si necesita especificar un ID para el complemento, incluya el parámetro [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) en el `manifest.json` y configure la propiedad `gecko.id`:
 >
 > ```json
 > "applications": {

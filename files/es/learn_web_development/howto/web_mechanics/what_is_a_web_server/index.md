@@ -14,10 +14,10 @@ En este articulo veremos que son los servidores, cómo funcionan y por qué son 
       <th scope="row">Prerequisitos:</th>
       <td>
         Debes saber
-        <a href="/es/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+        <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >cómo funciona internet</a
         >, y
-        <a href="/es/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+        <a href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >entender la diferencia entre página web, sitio web, servidor y
           motor de búsqueda</a
         >

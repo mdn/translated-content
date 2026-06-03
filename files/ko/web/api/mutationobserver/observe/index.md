@@ -24,12 +24,10 @@ observe(target, options)
 - `target`
   - : DOM 트리 내에서 변경을 감지할 노드 또는 하위 트리 루트로서의 {{domxref("Node")}}입니다. ({{domxref("Element")}} 포함)
 - `options`
-
   - : 주시하고자 하는 DOM 변경을 나타내는 객체입니다. 이 옵션을 만족하는 DOM 변경들만 `MutationObserver`의 콜백으로 전달됩니다.
     적어도 `childList`, `attributes`, `characterData` 중 하나는 `true`여야 하며 세 속성 모두 `false`면 `TypeError`가 발생합니다.
 
     사용 가능한 옵션은 다음과 같습니다.
-
     - `subtree` {{optional_inline}}
       - : `true`로 지정하면 `target`이 루트인 하위 트리 전체를 주시합니다. 다른 옵션들도 `target` 노드 하나가 아니라 이 하위 트리에 속한 모든 노드에 대해 적용됩니다. 기본 값은 `false`입니다.
     - `childList` {{optional_inline}}
@@ -52,9 +50,7 @@ observe(target, options)
 ### 예외
 
 - {{jsxref('TypeError')}}
-
   - : 다음 상황에서 발생합니다.
-
     - 지정한 `options`로는 감지할 수 있는 변경이 없을 때
       (`childList`, `attributes`, `characterData`가 모두 `false`일 때)
     - `options`의 `attributes`가 `false`(특성 변경을 감지하지 않음)인데 `attributeOldValue`가 `true`거나 `attributeFilter`를 지정한 경우

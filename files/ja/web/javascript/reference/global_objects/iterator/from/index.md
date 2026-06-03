@@ -1,18 +1,17 @@
 ---
 title: Iterator.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/from
 l10n:
-  sourceCommit: 06b418a190b8e4a46682ab706d14984e7db34862
+  sourceCommit: dc02b8a490ea0ff4ac1236546f32270ca0cc0aa5
 ---
-
-{{JSRef}}
 
 **`Iterator.from()`** は静的メソッドで、イテレーターや反復可能オブジェクトから新しい {{jsxref("Iterator")}} オブジェクトを作成します。
 
 ## 構文
 
 ```js-nolint
-from(object)
+Iterator.from(object)
 ```
 
 ### 引数
@@ -120,5 +119,6 @@ console.log(obj2.next()); // { value: 1, done: false }
 ## 関連情報
 
 - [`Iterator.from` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims による `Iterator.from` のポリフィル](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Array.from()")}}

@@ -3,8 +3,6 @@ title: Intl.Segmenter
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 ---
 
-{{JSRef}}
-
 **`Intl.Segmenter`** 对象支持语言敏感的文本分割，允许你将一个字符串分割成有意义的片段（字、词、句）。
 
 {{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}

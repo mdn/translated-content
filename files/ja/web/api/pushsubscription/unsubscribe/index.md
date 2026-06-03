@@ -49,6 +49,6 @@ navigator.serviceWorker.ready.then((reg) => {
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("PushManager.getSubscription")}}

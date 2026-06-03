@@ -47,13 +47,13 @@ img {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >, 뚜렷한 콘텐츠.
       </td>
@@ -62,7 +62,7 @@ img {
       <th scope="row">가능한 콘텐츠</th>
       <td>
         모든
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#투명_콘텐츠_모델"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#투명_콘텐츠_모델"
           >투명한</a
         >
         콘텐츠.
@@ -75,7 +75,7 @@ img {
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>
@@ -93,10 +93,10 @@ img {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `name`
-  - : 맵을 참조할 때 사용할 수 있는 이름. 반드시 존재해야 하고, 값이 비면 안되며, 값에 공백 문자가 포함되어도 안됩니다. `name` 특성은 문서 내의 모든 `<map>`에서 유일해야 합니다. [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성이 존재하는 경우 `name`과 값이 동일해야 합니다.
+  - : 맵을 참조할 때 사용할 수 있는 이름. 반드시 존재해야 하고, 값이 비면 안되며, 값에 공백 문자가 포함되어도 안됩니다. `name` 특성은 문서 내의 모든 `<map>`에서 유일해야 합니다. [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) 특성이 존재하는 경우 `name`과 값이 동일해야 합니다.
 
 ## 예제
 

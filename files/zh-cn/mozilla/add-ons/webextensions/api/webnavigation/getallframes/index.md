@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{AddonSidebar}}
-
 给定一个标签页 ID，获取其包含的所有框架的信息。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -22,9 +20,7 @@ let gettingFrames = browser.webNavigation.getAllFrames(
 ### 参数
 
 - `details`
-
   - : `object`。要获取所有框架的信息的标签页的信息。
-
     - `tabId`
       - : `integer`。标签页的 ID。
 

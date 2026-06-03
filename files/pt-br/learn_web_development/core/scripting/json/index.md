@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/JSON
 original_slug: Learn/JavaScript/Objects/JSON
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 JavaScript Object Notation (JSON) é um formato baseado em texto padrão para representar dados estruturados com base na sintaxe do objeto JavaScript. É comumente usado para transmitir dados em aplicativos da Web (por exemplo, enviar alguns dados do servidor para o cliente, para que possam ser exibidos em uma página da Web ou vice-versa). Você se deparará com isso com bastante frequência, portanto, neste artigo, oferecemos tudo o que você precisa para trabalhar com o JSON usando JavaScript, incluindo a análise do JSON para que você possa acessar os dados dentro dele e criar o JSON.
 
@@ -16,14 +16,14 @@ JavaScript Object Notation (JSON) é um formato baseado em texto padrão para re
         <p>
           Conhecimento básico em informática, conhecimento básico de HTML e CSS,
           conhecimento básico de JavaScript veja
-          <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
+          <a href="/pt-BR/docs/Learn_web_development/Core/Scripting"
             >Primeiros passos</a
           >
           e
-          <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
             >Construindo blocos</a
           >) e o básico de OOJS (veja
-          <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"
+          <a href="/pt-BR/docs/Learn_web_development/Core/Scripting/Object_basics"
             >Introdução a objetos</a
           >).
         </p>
@@ -205,7 +205,6 @@ Para obter o JSON, vamos usar uma API chamada {{domxref("XMLHttpRequest")}} (ger
    ```
 
    Isso leva pelo menos dois parâmetros — existem outros parâmetros opcionais disponíveis. Nós só precisamos dos dois obrigatórios para este exemplo simples:
-
    - O método HTTP a ser usado ao fazer a solicitação de rede. Neste caso, [`GET`](/pt-BR/docs/Web/HTTP/Reference/Methods/GET) é bom, pois estamos apenas recuperando alguns dados simples.
    - O URL para fazer a solicitação — esta é a URL do arquivo JSON que armazenamos anteriormente.
 
@@ -356,7 +355,7 @@ Neste artigo, fornecemos um guia simples para usar o JSON em seus programas, inc
 - [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods)
 - [Site oficial JSON com o link para o padrão ECMA](http://json.org)
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 ## Nesse módulo
 

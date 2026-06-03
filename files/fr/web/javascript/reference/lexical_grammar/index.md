@@ -298,7 +298,7 @@ Le type {{jsxref("BigInt")}} est un type numérique primitif de JavaScript qui p
 0b0101010101110101n (nombre binaire, en base 2)
 ```
 
-Voir aussi [le paragraphe sur les grands entiers/BigInt sur les structures de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures#le_type_bigint).
+Voir aussi [le paragraphe sur les grands entiers/BigInt sur les structures de données en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures#le_type_bigint).
 
 #### Séparateurs numériques
 

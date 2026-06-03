@@ -3,8 +3,6 @@ title: POST
 slug: Web/HTTP/Reference/Methods/POST
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `POST` 方法**发送数据给服务器。请求主体的类型由 {{HTTPHeader("Content-Type")}} 标头指定。
 
 {{HTTPMethod("PUT")}} 和 `POST` 方法的区别是，`PUT` 方法是幂等的：调用一次与连续调用多次效果是相同的（即没有*副*作用），而连续调用多次相同的 `POST` 方法可能会有副作用，比如多次提交同一订单。

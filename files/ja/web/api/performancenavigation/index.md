@@ -20,9 +20,7 @@ l10n:
 _`PerformanceNavigation` インターフェイスはプロパティを継承していません。_
 
 - {{domxref("PerformanceNavigation.type")}} {{ReadOnlyInline}} {{deprecated_inline}}
-
   - : `unsigned short` で、このページへのナビゲーションがどのように行われたかを示します。取りうる値は次のとおりです。
-
     - `TYPE_NAVIGATE` (0)
       - : リンク、ブックマーク、フォーム送信、またはスクリプトを使用するか、アドレスバーに URL を入力してページにアクセスしました。
     - `TYPE_RELOAD` (1)

@@ -3,7 +3,7 @@ title: "AnimationEvent: elapsedTime プロパティ"
 short-title: elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("Web Animations")}}
@@ -24,6 +24,6 @@ l10n:
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - アニメーションに関する CSS プロパティとアットルール: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
 - 所属先の {{domxref("AnimationEvent")}} インターフェイス

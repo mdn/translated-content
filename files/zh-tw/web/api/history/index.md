@@ -29,14 +29,12 @@ _The `History`_ _interface doesn't inherit any property._
 _The `History`_ _interface doesn't inherit any methods._
 
 - {{domxref("History.back()")}}
-
   - : 回到 session history 紀錄中的前一頁，等同於使用者按下瀏覽器的上一頁按鈕。相當於 `history.go(-1)`。
 
     > [!NOTE]
     > Calling this method to go back beyond the first page in the session history has no effect and doesn't raise an exception.
 
 - {{domxref("History.forward()")}}
-
   - : 回到 session history 紀錄中的下一頁，等同於使用者按下瀏覽器的下一頁按鈕。相當於 `history.go(1)`。
 
     > [!NOTE]

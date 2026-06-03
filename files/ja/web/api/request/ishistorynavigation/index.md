@@ -3,7 +3,7 @@ title: "Request: isHistoryNavigation プロパティ"
 short-title: isHistoryNavigation
 slug: Web/API/Request/isHistoryNavigation
 l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+  sourceCommit: f2dc3d5367203c860cf1a71ce0e972f018523849
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}

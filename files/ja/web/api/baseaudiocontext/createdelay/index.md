@@ -10,7 +10,8 @@ l10n:
 
 `createDelay()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("DelayNode")}} を生成します。これは、入力される音声信号を一定時間遅らせるために使用します。
 
-> **メモ:** {{domxref("DelayNode.DelayNode", "DelayNode()")}} コンストラクターは {{domxref("DelayNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> [!NOTE]
+> {{domxref("DelayNode.DelayNode", "DelayNode()")}} コンストラクターは {{domxref("DelayNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 

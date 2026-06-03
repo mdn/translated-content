@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Location
 original_slug: Web/HTTP/Headers/Location
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta **`Location`** indica o URL para qual página deve-se ser redirecionada. Ele só tem significado quando é enviado junto a uma resposta de status `3xx` (redirecionamento) ou `201` (criado).
 
 Em casos de redirecionamento, o método HTTP utilizado para fazer a nova requisição à página apontada pelo cabeçalho `Location` depende do método original e do tipo de redirecionamento:
@@ -26,7 +24,7 @@ Em casos de recursos de criação, ele indica o URL para o novo recurso criado.
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

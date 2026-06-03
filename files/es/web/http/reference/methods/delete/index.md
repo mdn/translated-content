@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 El **método de solicitud HTTP `DELETE`** elimina el recurso especificado.
 
 <table class="properties">
@@ -34,7 +32,7 @@ El **método de solicitud HTTP `DELETE`** elimina el recurso especificado.
     </tr>
     <tr>
       <th scope="row">
-        Permitido en <a href="/es/docs/Learn/Forms">formularios HTML</a>
+        Permitido en <a href="/es/docs/Learn_web_development/Extensions/Forms">formularios HTML</a>
       </th>
       <td>No</td>
     </tr>

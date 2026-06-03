@@ -24,9 +24,7 @@ browser.search.search(
 ### Paramètres
 
 - `searchProperties`
-
   - : `object`. Un objet avec les propriétés suivantes :
-
     - `query`
       - : `string`. La requête de recherche.
     - `engine`{{optional_inline}}

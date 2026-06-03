@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-{{GlossarySidebar}}
-
 **网格轨道**是两条{{glossary("grid lines","网格线")}}之间的空间。它们通过使用属性 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}} 或者简写属性 {{cssxref("grid")}} 和 {{cssxref("grid-template")}} 在*显式网格*中定义。也可以通过将网格项目定位到显式网格创建的轨道之外，以在*隐式网格*中创建轨道。
 
 下图展示该网格中的第一个行轨道（上色部分的空间）。
@@ -66,10 +64,9 @@ l10n:
 
 ## 参见
 
-- [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [网格布局的基本概念](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - [CSS 网格布局规范中网格轨道的定义](https://drafts.csswg.org/css-grid/#grid-track-concept)
 - 属性参考
-
   - {{cssxref("grid-template-columns")}}
   - {{cssxref("grid-template-rows")}}
   - {{cssxref("grid-auto-rows")}}

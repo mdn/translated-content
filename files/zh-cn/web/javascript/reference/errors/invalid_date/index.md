@@ -3,8 +3,6 @@ title: "RangeError: invalid date"
 slug: Web/JavaScript/Reference/Errors/Invalid_date
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 消息
 
 ```plain

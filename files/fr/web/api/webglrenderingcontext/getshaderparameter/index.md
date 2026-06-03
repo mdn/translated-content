@@ -18,9 +18,7 @@ quelconque gl.getShaderParameter(shader, nomp);
 - shader
   - : Un {{domxref("WebGLShader")}} depuis lequel obtenir une information de paramètre.
 - nomp
-
   - : Un {{domxref("Glenum")}} indiquant l'information à retrouver. Valeurs possibles :
-
     - `gl.DELETE_STATUS`&nbsp;: retourne un {{domxref("GLboolean")}} indicating si le shader est marqué pour suppression ou non.
     - `gl.COMPILE_STATUS`&nbsp;: retourne un {{domxref("GLboolean")}} indiquant si la dernière compilation du shader a réussi ou non.
     - `gl.SHADER_TYPE`&nbsp;: retourne un {{domxref("GLenum")}} indiquant si le shader est un objet shader de sommets (`gl.VERTEX_SHADER`) ou shader de fragment (`gl.FRAGMENT_SHADER`).

@@ -3,7 +3,7 @@ title: Funciones
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 Las funciones son uno de los bloques de construcción fundamentales en JavaScript. Una función en JavaScript es similar a un procedimiento — un conjunto de instrucciones que realiza una tarea o calcula un valor, pero para que un procedimiento califique como función, debe tomar alguna entrada y devolver una salida donde hay alguna relación obvia entre la entrada y la salida. Para usar una función, debes definirla en algún lugar del ámbito desde el que deseas llamarla.
 
@@ -703,4 +703,4 @@ JavaScript tiene integradas varias funciones de nivel superior:
 - {{JSxRef("Objetos_globales/unescape", "unescape()")}}
   - : El método obsoleto **`unescape()`** calcula una nueva cadena en la que las secuencias de escape hexadecimales se reemplazan con el caracter que representan. Las secuencias de escape se pueden introducir por medio de una función como {{JSxRef("Objetos_globales/escape", "escape")}}. Debido a que `unescape()` está en desuso, usa {{JSxRef("Objetos_globales/decodeURI", "decodeURI()")}} o {{JSxRef("Objetos_globales/decodeURIComponent", "decodeURIComponent")}} en su lugar.
 
-{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

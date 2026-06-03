@@ -1,31 +1,21 @@
 ---
-title: Cross-site scripting
+title: Cross-site scripting (XSS)
 slug: Glossary/Cross-site_scripting
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Une attaque de **cross-site scripting** (XSS) est une attaque dans laquelle un·e attaquant·e parvient à faire exécuter du code malveillant par un site cible comme s'il faisait partie du site lui-même. Ce code peut alors faire tout ce que le code du site peut faire. Par exemple, l'attaquant·e pourrait&nbsp;:
 
-Cross-site scripting (XSS) est une faille de sécurité qui permet à un attaquant d'injecter dans un site web un code client malveillant. Ce code est exécuté par les victimes et permet aux attaquants de contourner les contrôles d'accès et d'usurper l'identité des utilisateurs. Selon le projet Open Web Application Security, XSS était la [troisième cause de vulnérabilité des applications du web](https://www.owasp.org/index.php/Top_10_2013-Top_10) en 2013.
+- accéder et modifier tout le contenu des pages chargées du site, ainsi que tout contenu dans le stockage local&nbsp;;
+- effectuer des requêtes HTTP avec les identifiants de l'utilisateur·ice, lui permettant d'usurper son identité ou d'accéder à des données sensibles.
 
-Ces attaques réussissent si l'application Web n'emploie pas assez de validation ou d'encodage. Le navigateur de l'utilisateur ne peut pas détecter que le script malveillant n'est pas fiable et lui donne donc accès à tous les cookies, jetons de session ou autres informations sensibles propres au site, ou permet au script malveillant de réécrire le contenu {{glossary("HTML")}}.
+Toutes les attaques XSS reposent sur deux éléments&nbsp;:
 
-Les attaques de script intersite se produisent généralement lorsque 1) les données entrent dans une application Web via une source non fiable (le plus souvent une requête web) ou 2) le contenu dynamique est envoyé à un utilisateur web sans être reconnu comme un contenu malveillant.
-
-Le contenu malveillant inclut souvent {{glossary("JavaScript")}}, mais parfois HTML, Flash, ou quelqu'autre code que le navigateur peut exécuter. La diversité des attaques basées sur XSS est presque illimitée, mais elles incluent généralement la transmission de données privées comme des cookies ou d'autres informations de session à l'attaquant, redirigeant la victime vers une page Web contrôlée par l'attaquant ou exécutant d'autres opérations malveillantes sur la machine de l'utilisateur.
-
-Les attaques XSS peuvent être classées en 3 catégories : stockée (aussi appelée persistante), reflétée (aussi appelée non-persistante) ou basée sur DOM.
-
-- **Les attaques XSS stockées**
-  - : Le script injecté est stocké en permanence sur les serveurs cibles. La victime extrait ensuite ce script malveillant du serveur lorsque le navigateur envoie une demande de données.
-- **Les attaques XSS reflétées**
-  - : Lorsqu'un utilisateur est trompé en cliquant sur un lien malveillant, en soumettant un formulaire spécialement conçu ou en naviguant sur un site malveillant, le code injecté se rend sur le site Web vulnérable. Le serveur Web renvoie le script injecté au navigateur de l'utilisateur, par exemple dans un message d'erreur, un résultat de recherche ou toute autre réponse incluant des données envoyées au serveur dans le cadre de la demande. Le navigateur exécute le code car il suppose que la réponse provient d'un serveur "de confiance" avec lequel l'utilisateur a déjà interagi.
-- **Les attaques XSS basées sur DOM**
-  - : La charge utile est exécutée à la suite de la modification de l'environnement DOM (dans le navigateur de la victime) utilisé par le script côté client d'origine. En d'autres termes, la page elle-même ne change pas, mais le code côté client contenu dans la page s'exécute de manière inattendue en raison des modifications malveillantes apportées à l'environnement DOM.
+1. Le site accepte une entrée qui pourrait avoir été forgée par un·e attaquant·e&nbsp;;
+2. Cette entrée est incluse dans une page sans être assainie&nbsp;: c'est-à-dire sans garantir qu'elle ne sera pas exécutable comme JavaScript.
 
 ## Voir aussi
 
-### Culture générale
-
-- [<i lang="en">Cross-site_scripting</i>](https://fr.wikipedia.org/wiki/Cross-site_scripting) sur Wikipédia
-- [Cross-site scripting sur OWASP](https://www.owasp.org/index.php/XSS) (en)
-- [Un autre article à propos de Cross-site scripting](http://www.acunetix.com/blog/web-security-zone/articles/dom-xss-explained/) (en)
+- [Cross-site scripting (XSS)](/fr/docs/Web/Security/Attacks/XSS)
+- [Cross-site scripting sur OWASP <sup>(angl.)</sup>](https://owasp.org/www-community/attacks/xss/)

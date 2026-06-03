@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 
 **`Intl.Collator.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl.Collator")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.resolvedOptions")}}
+{{InteractiveExample("JavaScript デモ: Intl.Collator.prototype.resolvedOptions")}}
 
 ```js interactive-example
 const numberDe = new Intl.NumberFormat("de-DE");

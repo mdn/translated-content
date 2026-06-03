@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Strict-Transport-Security
 original_slug: Web/HTTP/Headers/Strict-Transport-Security
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta **HTTP `Strict-Transport-Security`** (geralmente abreviado como {{Glossary("HSTS")}}) permite que um site informe aos navegadores que ele deve ser acessado apenas por HTTPS, em vez de usar HTTP.
 
 <table class="properties">

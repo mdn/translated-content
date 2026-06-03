@@ -8,7 +8,8 @@ original_slug: Web/API/GlobalEventHandlers
 
 La combinación («_mixin_» en inglés) **`GlobalEventHandlers`** describe los controladores de eventos comunes a varias interfaces como {{DOMxRef("HTMLElement")}}, {{DOMxRef("Document")}} o {{DOMxRef("Window")}}. Cada una de estas interfaces puede, por supuesto, agregar más controladores de eventos además de los que se enumeran a continuación.
 
-> **Nota:** `GlobalEventHandlers` es una combinación («_mixin_») y no una interfaz; en realidad, no puedes crear un objeto de tipo `GlobalEventHandlers`.
+> [!NOTE]
+> `GlobalEventHandlers` es una combinación («_mixin_») y no una interfaz; en realidad, no puedes crear un objeto de tipo `GlobalEventHandlers`.
 
 ## Propiedades
 
@@ -21,13 +22,13 @@ Estos controladores de eventos se definen en el mixin {{DOMxRef("GlobalEventHand
 - {{DOMxRef("GlobalEventHandlers.onabort")}}
   - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento {{DOMxRef("HTMLMediaElement/abort_event", "abort")}}.
 - {{DOMxRef("GlobalEventHandlers.onanimationcancel")}} {{Non-standard_inline}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`animationcancel`](/es/docs/Web/Reference/Events/animationcancel), lo cual indica que una [animación CSS](/es/docs/Web/CSS/CSS_animations) se ha cancelado.
+  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`animationcancel`](/es/docs/Web/Reference/Events/animationcancel), lo cual indica que una [animación CSS](/es/docs/Web/CSS/Guides/Animations) se ha cancelado.
 - {{DOMxRef("GlobalEventHandlers.onanimationend")}} {{Non-standard_inline}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`animationend`](/es/docs/Web/API/Element/animationend_event), lo cual indica que [la animación CSS](/es/docs/Web/CSS/CSS_animations) se ha detenido.
+  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`animationend`](/es/docs/Web/API/Element/animationend_event), lo cual indica que [la animación CSS](/es/docs/Web/CSS/Guides/Animations) se ha detenido.
 - {{DOMxRef("GlobalEventHandlers.onanimationiteration")}} {{Non-standard_inline}}
-  - : Un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) llamado cuando se ha enviado un evento [`animationiteration`](/es/docs/Web/API/Element/animationiteration_event), indica que una [animación CSS](/es/docs/Web/CSS/CSS_animations) ha comenzado a reproducir una nueva iteración de la secuencia de animación.
+  - : Un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) llamado cuando se ha enviado un evento [`animationiteration`](/es/docs/Web/API/Element/animationiteration_event), indica que una [animación CSS](/es/docs/Web/CSS/Guides/Animations) ha comenzado a reproducir una nueva iteración de la secuencia de animación.
 - {{DOMxRef("GlobalEventHandlers.onanimationstart")}} {{Non-standard_inline}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`animationstart`](/es/docs/Web/API/Element/animationstart_event), lo cual indica que una [animación CSS](/es/docs/Web/CSS/CSS_animations) se ha comenzado a reproducir.
+  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`animationstart`](/es/docs/Web/API/Element/animationstart_event), lo cual indica que una [animación CSS](/es/docs/Web/CSS/Guides/Animations) se ha comenzado a reproducir.
 - {{DOMxRef("GlobalEventHandlers.onauxclick")}} {{Non-standard_inline}}
   - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`auxclick`](/es/docs/Web/Reference/Events/auxclick), el cual indica que se ha presionado un botón no principal en un dispositivo de entrada (por ejemplo, un botón central del ratón).
 - {{DOMxRef("GlobalEventHandlers.onblur")}}
@@ -93,11 +94,11 @@ Estos controladores de eventos se definen en el mixin {{DOMxRef("GlobalEventHand
 - {{DOMxRef("GlobalEventHandlers.onload")}}
   - : Is an [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) representing the code to be called when the [`load`](/es/docs/Web/API/Window/load_event) event is raised.
 - {{DOMxRef("GlobalEventHandlers.onloadeddata")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadeddata `](/es/docs/Web/Reference/Events/loadeddata ).
+  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadeddata `](/es/docs/Web/API/HTMLMediaElement/loadeddata_event ).
 - {{DOMxRef("GlobalEventHandlers.onloadedmetadata")}}
   - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadedmetadata`](/es/docs/Web/API/HTMLMediaElement/loadedmetadata_event).
 - {{DOMxRef("GlobalEventHandlers.onloadend")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event) (cuando el progreso se haya detenido en la carga de un recurso).
+  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadend`](/es/docs/Web/API/XMLHttpRequestEventTarget/loadend_event) (cuando el progreso se haya detenido en la carga de un recurso).
 - {{DOMxRef("GlobalEventHandlers.onloadstart")}}
   - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadstart`](/es/docs/Web/API/XMLHttpRequest/loadstart_event) (cuando el progreso ha comenzado a cargar un recurso).
 - {{DOMxRef("GlobalEventHandlers.onlostpointercapture")}}
@@ -189,13 +190,13 @@ Estos controladores de eventos se definen en el mixin {{DOMxRef("GlobalEventHand
 - {{DOMxRef("GlobalEventHandlers.ontouchstart")}} {{Non-standard_inline}} {{Experimental_inline}}
   - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`touchstart`](/es/docs/Web/API/Element/touchstart_event).
 - {{DOMxRef("GlobalEventHandlers.ontransitioncancel")}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`transitioncancel`](/es/docs/Web/API/Element/transitioncancel_event), lo cual indica que [se canceló la transición CSS](/es/docs/Web/CSS/CSS_transitions).
+  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`transitioncancel`](/es/docs/Web/API/Element/transitioncancel_event), lo cual indica que [se canceló la transición CSS](/es/docs/Web/CSS/Guides/Transitions).
 - {{DOMxRef("GlobalEventHandlers.ontransitionend")}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`transitionend`](/es/docs/Web/API/Element/transitionend_event), lo cual indica que [la transición CSS](/es/docs/Web/CSS/CSS_transitions) se ha terminado de reproducir.
+  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`transitionend`](/es/docs/Web/API/Element/transitionend_event), lo cual indica que [la transición CSS](/es/docs/Web/CSS/Guides/Transitions) se ha terminado de reproducir.
 - {{DOMxRef("GlobalEventHandlers.ontransitionrun")}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`transitionrun`](/es/docs/Web/Reference/Events/transitionrun), lo cual indica que [la transición CSS](/es/docs/Web/CSS/CSS_transitions) se está ejecutando, aunque no necesariamente se inició.
+  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`transitionrun`](/es/docs/Web/Reference/Events/transitionrun), lo cual indica que [la transición CSS](/es/docs/Web/CSS/Guides/Transitions) se está ejecutando, aunque no necesariamente se inició.
 - {{DOMxRef("GlobalEventHandlers.ontransitionstart")}}
-  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`transitionstart`](/es/docs/Web/Reference/Events/transitionstart), lo cual indica que [la transición CSS](/es/docs/Web/CSS/CSS_transitions) ha comenzado a realizar la transición.
+  - : Se llama a [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) cuando se envía un evento [`transitionstart`](/es/docs/Web/Reference/Events/transitionstart), lo cual indica que [la transición CSS](/es/docs/Web/CSS/Guides/Transitions) ha comenzado a realizar la transición.
 - {{DOMxRef("GlobalEventHandlers.onwaiting")}}
   - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`waiting`](/es/docs/Web/API/HTMLMediaElement/waiting_event).
 

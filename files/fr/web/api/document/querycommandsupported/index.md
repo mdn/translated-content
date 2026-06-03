@@ -1,16 +1,22 @@
 ---
-title: Document.queryCommandSupported()
+title: "Document : méthode queryCommandSupported()"
+short-title: queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
+l10n:
+  sourceCommit: 22cf84fc5704222a2e2e5ac67b95b02dcfea08ff
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-La méthode **`Document.queryCommandSupported()`** indique si la commande d'éditeur spécifiée est prise en charge par le navigateur.
+> [!NOTE]
+> Bien que la méthode {{DOMxRef("Document/execCommand", "execCommand()")}} soit obsolète, si vous décidez de l'utiliser pour les raisons mentionnées sur cette page, vous devriez envisager de vérifier la disponibilité de la commande en utilisant `queryCommandSupported()` pour garantir la compatibilité.
+
+La méthode **`queryCommandSupported()`** de l'interface {{DOMxRef("Document")}} indique si la commande d'éditeur définie est prise en charge par le navigateur.
 
 ## Syntaxe
 
-```js
-isSupported = document.queryCommandSupported(command);
+```js-nolint
+queryCommandSupported(command)
 ```
 
 ### Paramètres
@@ -20,16 +26,16 @@ isSupported = document.queryCommandSupported(command);
 
 ### Valeur de retour
 
-Renvoie un {{jsxref("Boolean")}} qui est `true` (_vrai_) si la commande est prise en charge et `false` (_faux_) sinon.
+Retourne une valeur booléenne qui est `true` si la commande est prise en charge et `false` si elle ne l'est pas.
 
 ## Notes
 
-La commande `'paste'` (_coller_) renvoie `false` (_faux_), pas seulement si la fonctionnalité n'est pas disponible, mais également si le script l'appelant a des privilèges insuffisants pour réaliser l'action [\[1\]](#note1).
+La commande `"paste"` (coller) retourne `false` non seulement si la fonctionnalité n'est pas disponible, mais aussi si le script l'appelant n'a pas les privilèges suffisants pour effectuer l'action.
 
-## Exemple
+## Exemples
 
 ```js
-var flg = document.queryCommandSupported("SelectAll");
+const flg = document.queryCommandSupported("SelectAll");
 
 if (flg) {
   // ...Faire quelque chose
@@ -38,7 +44,7 @@ if (flg) {
 
 ## Spécifications
 
-{{Specifications}}
+Cette fonctionnalité ne fait partie d'aucune spécification actuelle. Elle n'est plus destinée à devenir un standard. Il existe un [brouillon non officiel de la spécification W3C execCommand <sup>(angl.)</sup>](https://w3c.github.io/editing/docs/execCommand/).
 
 ## Compatibilité des navigateurs
 
@@ -46,5 +52,5 @@ if (flg) {
 
 ## Voir aussi
 
-- {{domxref("Document.execCommand()")}}
-- {{domxref("Document.queryCommandEnabled()")}}
+- La méthode {{DOMxRef("document.execCommand()")}}
+- La méthode {{DOMxRef("document.queryCommandEnabled()")}}

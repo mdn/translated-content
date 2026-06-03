@@ -35,7 +35,7 @@ Dans le chapitre sur [le dessin des formes](/fr/docs/Web/API/Canvas_API/Tutorial
 
 Il faut utiliser `clip()` plutôt que `closePath()` pour fermer un chemin et en faire un détourage.
 
-Par défaut, l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) possède un détourage aux mêmes dimensions que le canevas lui-même. Autrement, par défaut aucune découpe n'est effectuée.
+Par défaut, l'élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) possède un détourage aux mêmes dimensions que le canevas lui-même. Autrement, par défaut aucune découpe n'est effectuée.
 
 ### Un exemple de `clip`
 

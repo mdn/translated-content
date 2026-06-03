@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3d283cb0a0c6f36ad09ca95f751a30bd3a1fcf4d
 ---
 
-{{AddonSidebar}}
-
 `USER_SCRIPT` 执行环境的配置。用于 {{WebExtAPIRef("userScripts.configureWorld")}} 和 {{WebExtAPIRef("userScripts.getWorldConfigurations")}}。
 
 ## 类型

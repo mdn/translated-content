@@ -535,7 +535,8 @@ function playSample(audioContext, audioBuffer, time) {
 }
 ```
 
-> **メモ:** `stop()` は {{domxref("AudioBufferSourceNode")}} で呼び出すことができますが、これはサンプルの再生が完了したときに自動的に行われます。
+> [!NOTE]
+> `stop()` は {{domxref("AudioBufferSourceNode")}} で呼び出すことができますが、これはサンプルの再生が完了したときに自動的に行われます。
 
 ### ダイアルアップのユーザーコントロール
 

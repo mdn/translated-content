@@ -31,9 +31,7 @@ removeEventListener(type, listener, useCapture);
 - `listener`
   - : 需要从目标事件移除的[事件监听器](/zh-CN/docs/Web/API/EventTarget/addEventListener#事件监听回调)函数。
 - `options` {{optional_inline}}
-
   - : 一个指定事件侦听器特征的可选对象。可选项有：
-
     - `capture`: 一个布尔值，指定需要移除的[事件监听器](/zh-CN/docs/Web/API/EventTarget/addEventListener#事件监听回调)函数是否为捕获监听器。如果未指定此参数，默认值为 `false`。
 
 - `useCapture` {{ optional_inline }}

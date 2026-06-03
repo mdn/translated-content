@@ -36,13 +36,11 @@ Les opérateurs d'égalité (`==` et `!=`) utilisent [l'algorithme de comparaiso
 - Si les opérandes sont deux objets, on renvoie `true` uniquement si les deux opérandes référencent le même objet.
 - Si un opérande vaut `null` et que l'autre vaut `undefined`, on renvoie `true`.
 - Si les opérandes sont de types différents, on tente une conversion pour avoir le même type de part et d'autre avant la comparaison :
-
   - Si on compare un nombre à une chaîne de caractères, on tentera de convertir la chaîne en une valeur numérique.
   - Si l'un des opérandes est un booléen, on le convertira en 1 s'il vaut `true` et en +0 s'il vaut `false`.
   - Si l'un des opérandes est un objet et que l'autre est un nombre ou une chaîne de caractères, on tentera de convertir l'objet en une valeur primitive grâce aux méthodes `valueOf()` et `toString()` de l'objet.
 
 - Si les opérandes sont du même types, on les compare comme suit :
-
   - `String` : on renvoie `true` uniquement si les deux opérandes ont les mêmes caractères dans le même ordre.
   - `Number` : on renvoie `true` uniquement si les deux opérandes ont la même valeur. `+0` et `-0` sont considérés comme la même valeur. Si au moins un des opérandes vaut `NaN`, on renvoie `false`.
   - `Boolean` : on renvoie `true` uniquement si les deux opérandes valent tous les deux `true` ou s'ils valent tous les deux `false`.

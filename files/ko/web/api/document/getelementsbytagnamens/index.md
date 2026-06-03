@@ -17,9 +17,11 @@ elements = document.getElementsByTagNameNS(namespace, name);
 - _namespace_ 는 탐색하기 위한 엘리먼트의 네임스페이스 URI 입니다({{domxref("Node.namespaceURI", "element.namespaceURI")}}) 를 확인하세요).
 - _name 은 탐색할 엘리먼트의 로컬명 또는 모든 엘리먼트에 일치하는 특별 값 `*` 입니다_({{domxref("Node.localName", "element.localName")}} 를 확인하세요).
 
-> **참고:** **노트:** W3C 명세는 `elements` 를 `NodeList` 라고 하였지만, Gecko 와 Internet Explorer 에서는 {{DOMxRef("HTMLCollection")}} 을 반환합니다. Opera 는`NodeList` 를 반환하지만 `namedItem` 메소드를 구현해 `HTMLCollection` 과 유사하게 만듭니다. 2012 년 1월 기준으로, WebKit 브라우저만 순수한 `NodeList` 를 반환합니다. 자세한 내용은 [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) 를 확인하세요.
+> [!NOTE]
+> **노트:** W3C 명세는 `elements` 를 `NodeList` 라고 하였지만, Gecko 와 Internet Explorer 에서는 {{DOMxRef("HTMLCollection")}} 을 반환합니다. Opera 는`NodeList` 를 반환하지만 `namedItem` 메소드를 구현해 `HTMLCollection` 과 유사하게 만듭니다. 2012 년 1월 기준으로, WebKit 브라우저만 순수한 `NodeList` 를 반환합니다. 자세한 내용은 [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) 를 확인하세요.
 
-> **참고:** **노트:** 현재 이 메소드의 파라미터는 대소문자를 구분하지만, Firefox 3.5 와 그 이전에는 그렇지 않았습니다. 자세한 내용은 [Firefox 3.6 개발자 릴리즈 노트](/ko/docs/Mozilla/Firefox/Releases/3.6#DOM)와 {{domxref("Element.getElementsByTagNameNS")}} 의 브라우저 호환성 섹션을 확인하세요.
+> [!NOTE]
+> **노트:** 현재 이 메소드의 파라미터는 대소문자를 구분하지만, Firefox 3.5 와 그 이전에는 그렇지 않았습니다. 자세한 내용은 [Firefox 3.6 개발자 릴리즈 노트](/ko/docs/Mozilla/Firefox/Releases/3.6#DOM)와 {{domxref("Element.getElementsByTagNameNS")}} 의 브라우저 호환성 섹션을 확인하세요.
 
 ## 예시
 

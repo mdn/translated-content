@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.toSorted()
+short-title: toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSorted
 l10n:
   sourceCommit: e46c58e6ed948e8c35c206762eb14a2e68616ed1

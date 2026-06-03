@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{jsSidebar("Statements")}}
-
 **`for...in`** 语句迭代一个对象的所有[可枚举字符串属性](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)（除 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 以外），包括继承的可枚举属性。
 
 {{InteractiveExample("JavaScript Demo: Statement - For...In")}}

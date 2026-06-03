@@ -7,7 +7,8 @@ slug: Web/API/HTMLElement/dataset
 
 {{DOMxRef("HTMLElement")}} 接口的只读属性 **`dataset`** 提供了对元素上[自定义数据属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)（`data-*`）读/写访问。它暴露了一个字符串映射（{{domxref("DOMStringMap")}}），其中包含每个 `data-*` 属性条目。
 
-> **备注：** `dataset` 属性本身可以被读取，但是不能直接写入。相反，所有写入都必须是写入 `dataset` 的单个属性，而 dataset 又表示这些数据的属性。
+> [!NOTE]
+> `dataset` 属性本身可以被读取，但是不能直接写入。相反，所有写入都必须是写入 `dataset` 的单个属性，而 dataset 又表示这些数据的属性。
 
 一个 HTML 的 `data-*` 属性和它相关的 DOM `dataset.property` 根据它们的读取或者写入的位置修改其共享的名称：
 
@@ -21,18 +22,14 @@ slug: Web/API/HTMLElement/dataset
 ### 名称转换
 
 - 从 `dash-style` 转换到 `camelCase`
-
   - : 一个自定义的 data 属性名转换为 {{domxref("DOMStringMap") }} 条目的键，如下：
-
     1. 小写所有 ASCII 大写字母（`A` 到 `Z`）；
     2. 移除前缀 `data-`（包括破折号）；
     3. 对于任何破折号（`U+002D`）后面跟随的 ASCII 小写字母 `a` 到 `z`，移除破折号并且大写字母；
     4. 其他字符（包括其他破折号）保持不变。
 
 - 从 `camelCase` 到 `dash-style` 转变
-
   - : 与以上内容转换相反，将该键映射到一个属性名，使用以下方式：
-
     1. **限制**：在转换之前，破折号*不得*立即后跟 ASCII 小写字母 `a` 到 `z`；
     2. 增加 `data-` 前缀；
     3. 在任何 ASCII 大写字母 `A` 到 `Z` 之前增加一个破折号，然后小写该字母。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 76a33f03c6b116e85efc981f22ff9eca51cea8d8
 ---
 
-{{GamesSidebar}}
-
 本文介绍了用于在 3D 环境中实现碰撞检测的不同包围体（bounding volume）技术。后续文章将讨论特定 3D 库中的实现。
 
 ## 轴对齐包围盒

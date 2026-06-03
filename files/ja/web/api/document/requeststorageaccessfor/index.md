@@ -36,7 +36,7 @@ requestStorageAccessFor(requestedOrigin)
   - : 現在の {{domxref("Document")}} がまだアクティブ化されたいない場合に発生します。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)ではない場合。
+    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)ではない場合。
     - この文書が最上位の文書でない場合。
     - この文書のオリジンが `null` であった場合。
     - 指定された `requestedOrigin` が[不透明](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque)であった場合。
@@ -49,7 +49,7 @@ requestStorageAccessFor(requestedOrigin)
 
 ## 解説
 
-`requestStorageAccessFor()` メソッドは、クッキーを必要とする別サイトの画像やスクリプトを使用している最上位のサイトでストレージアクセス API を採用する際の課題に対処します。既定ではプライバシーを改善するために（例えばトラッキングを防ぐために）[サードパーティ](/ja/docs/Web/Privacy/Third-party_cookies)の[分離されていない](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセスをブロックしているユーザエージェントに関連しており、[ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) の拡張提案です。
+`requestStorageAccessFor()` メソッドは、クッキーを必要とする別サイトの画像やスクリプトを使用している最上位のサイトでストレージアクセス API を採用する際の課題に対処します。既定ではプライバシーを改善するために（例えばトラッキングを防ぐために）[サードパーティ](/ja/docs/Web/Privacy/Guides/Third-party_cookies)の[分離されていない](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセスをブロックしているユーザエージェントに関連しており、[ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) の拡張提案です。
 
 `requestStorageAccessFor()` は、例えば {{htmlelement("img")}} 要素など、ストレージアクセスをリクエストすることができない最上位サイトに直接埋め込まれた別サイトのリソースに対して、サードパーティのクッキーアクセスを有効にすることができます。自分自身でロジックとリソースを保有し、サードパーティのクッキーアクセスを必要とする `<iframe>` に埋め込まれた別サイトのコンテンツは、{{domxref("Document.requestStorageAccess()")}} を介してストレージアクセスをリクエストする必要があります。
 

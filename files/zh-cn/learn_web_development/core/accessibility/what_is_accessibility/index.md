@@ -163,7 +163,6 @@ Web 浏览器使用特殊的无障碍 API(由底层操作系统提供)，这些 
 ## 参见
 
 - [WCAG](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   - [Perceivable](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   - [Operable](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   - [Understandable](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)

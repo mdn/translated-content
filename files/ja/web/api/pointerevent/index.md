@@ -70,10 +70,10 @@ _このインターフェイスは、{{domxref("MouseEvent")}} および {{domxr
 - {{domxref('Element/pointerenter_event', 'pointerenter')}}
   - : このイベントは、ポインティングデバイスが要素またはその子孫の 1 つのヒットテスト境界内に移動したときに発生します。 これには、ホバーに対応していない機器からの `pointerdown` イベントの結果も含まれます（`pointerdown` を参照）。 この種類のイベントは `pointerover` に似ていますが、バブリングしないという点が異なります。
 - {{domxref('Element/pointerdown_event', 'pointerdown')}}
-
   - : このイベントは、ポインターが*アクティブ*になると発生します。 マウスの場合、ボタンが押されていない状態から少なくとも 1 つのボタンが押された状態に移行したときに発生します。タッチの場合、物理的な接触がデジタイザーとなされたときに発生します。 ペンの場合、スタイラスがデジタイザーと物理的に接触したときに発生します。
 
-    > **メモ:** [直接操作](https://w3c.github.io/pointerevents/#dfn-direct-manipulation)を受け付けるタッチ画面のブラウザーでは、 `pointerdown` イベントにより[暗黙的なポインターキャプチャ](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture)が行われ、以降のすべてのポインターイベントが、キャプチャターゲット上で発生したかのようにターゲットに捕捉されます。そのため `pointerover`、`pointerenter`、`pointerleave`、`pointerout` はキャプチャが設定されている間は**発生しません**。キャプチャはターゲット要素上で {{domxref('element.releasePointerCapture') }} を呼び出すことで手動で解除することができ、また `pointerup` または `pointercancel` イベントの後で暗黙的に解放されます。
+    > [!NOTE]
+    > [直接操作](https://w3c.github.io/pointerevents/#dfn-direct-manipulation)を受け付けるタッチ画面のブラウザーでは、 `pointerdown` イベントにより[暗黙的なポインターキャプチャ](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture)が行われ、以降のすべてのポインターイベントが、キャプチャターゲット上で発生したかのようにターゲットに捕捉されます。そのため `pointerover`、`pointerenter`、`pointerleave`、`pointerout` はキャプチャが設定されている間は**発生しません**。キャプチャはターゲット要素上で {{domxref('element.releasePointerCapture') }} を呼び出すことで手動で解除することができ、また `pointerup` または `pointercancel` イベントの後で暗黙的に解放されます。
 
 - {{domxref('Element/pointermove_event', 'pointermove')}}
   - : このイベントは、ポインターが座標を変更したときに発生します。

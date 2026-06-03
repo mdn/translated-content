@@ -2,10 +2,8 @@
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 l10n:
-  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Array`** オブジェクトは、他のプログラミング言語の配列と同様に、[複数のアイテムの集合を単一の変数名の下に格納](/ja/docs/Learn_web_development/Core/Scripting/Arrays)することができ、[共通の配列操作を行う](#例)ためのメンバーを持っています。
 
@@ -30,7 +28,7 @@ arr.0; // 構文エラー
 
 JavaScript の構文では、数字で始まるプロパティには[ブラケット記法](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ)を使う必要があり、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使うことはできません。また、配列の添字を引用符で囲むことができますが（`years[2]` の代わりに `years['2']` のように）、ふつうはそうする必要はありません。
 
-`years[2]` の `2` は最終的に、JavaScript エンジンが内部的に `toString` メソッドで型変換することで文字列にされます。これは '2' と '02' が `years` オブジェクトの異なる場所を指すようにするためでです。このため、以下の例は `true` がログ出力されます。
+`years[2]` の `2` は最終的に、JavaScript エンジンが内部的に `toString` メソッドで型変換することで文字列にされます。これは '2' と '02' が `years` オブジェクトの異なる場所を指すようにするためです。このため、以下の例は `true` がログ出力されます。
 
 ```js
 console.log(years["2"] !== years["02"]);
@@ -485,7 +483,8 @@ console.log(removedItem);
 // みかん
 ```
 
-> **メモ:** `pop()` は配列の最後の項目を削除するためだけに使用できます。配列の最後にある複数の項目を削除したい場合は、次の例を参照してください。
+> [!NOTE]
+> `pop()` は配列の最後の項目を削除するためだけに使用できます。配列の最後にある複数の項目を削除したい場合は、次の例を参照してください。
 
 ### 配列の最後から複数の項目を取り除く
 
@@ -503,7 +502,7 @@ console.log(removedItems);
 
 ### 配列を最初の _N_ 項目ちょうどに切り詰める
 
-この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドはを使用して、配列 `fruits` を最初の 2 項目ちょうどに切り詰めます。
+この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、配列 `fruits` を最初の 2 項目ちょうどに切り詰めます。
 
 ```js
 const fruits = ["りんご", "バナナ", "いちご", "マンゴー", "さくらんぼ"];
@@ -528,7 +527,8 @@ console.log(removedItem);
 // りんご
 ```
 
-> **メモ:** `shift()` は最初の項目を配列から取り除く場合にのみ使用できます。複数の項目を配列の先頭から取り除く場合は、次の例を参照してください。
+> [!NOTE]
+> `shift()` は最初の項目を配列から取り除く場合にのみ使用できます。複数の項目を配列の先頭から取り除く場合は、次の例を参照してください。
 
 ### 配列の先頭から複数のアイテムを取り除く
 

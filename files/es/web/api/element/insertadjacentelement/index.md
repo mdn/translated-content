@@ -16,9 +16,7 @@ elementoObjetivo.insertAdjacentElement(posición, elemento);
 ### Parameters
 
 - `posición`
-
   - : Un {{domxref("DOMString")}} representando la posición relativa al elementoObjetivo; debe ser una de las siguientes cadenas:
-
     - `'beforebegin'`: Antes del `elementoObjetivo`.
     - `'afterbegin'`: Dentro del `elementoObjetivo`, antes de su primer hijo.
     - `'beforeend'`: Dentro del `elementoObjetivo`, después de su último hijo.

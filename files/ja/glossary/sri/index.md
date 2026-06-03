@@ -9,5 +9,5 @@ slug: Glossary/SRI
 
 ## 関連項目
 
-- [Subresource Integrity](/ja/docs/Web/Security/Subresource_Integrity)
+- [Subresource Integrity](/ja/docs/Web/Security/Defenses/Subresource_Integrity)
 - {{HTTPHeader("Content-Security-Policy")}}: {{CSP("require-sri-for")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `HEAD` 方法**請求返回與使用 HTTP {{HTTPMethod("GET")}} 方法請求相同 URL 時將返回的標頭。例如，如果某個 URL 可能產生大文件下載，則 `HEAD` 請求可以讀取其 {{HTTPHeader("Content-Length")}} 標頭以檢查文件大小，而無需實際下載文件。
 
 > [!WARNING]

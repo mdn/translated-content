@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1079b152415f26432481498d2d2b4e8b2f81e3e0
 ---
 
-{{AddonSidebar}}
-
 标签页（tab）允许用户在其浏览器窗口中打开多个网页，然后在这些网页之间切换。通过使用 Tabs API，你可以使用和操作这些标签页来创建实用程序，为用户提供使用标签页或提供扩展功能的新方法。
 
 在这篇教程文章中，我们将了解如下内容：
@@ -60,7 +58,6 @@ l10n:
 ![标签页工具栏菜单显示“switch to tap area”](switch_to_tab.png)
 
 - manifest.json
-
   - : 这里是 [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json) 文件：
 
     ```json
@@ -84,7 +81,6 @@ l10n:
     > - **tabs 包含在权限中**。这是支持标签页列表功能所必需的，因为扩展会读取标签页的标题，以便在弹出窗口中显示。
 
 - tabs.html
-
   - : `tabs.html` 定义了该扩展弹出的内容：
 
     ```html
@@ -120,7 +116,6 @@ l10n:
     ```
 
     它做了这些事情：
-
     1. 声明菜单项。
     2. 声明一个 ID 为 `tabs-list` 的空 `div` 以包含标签页列表。
     3. 调用 `tabs.js`。
@@ -168,7 +163,6 @@ function listTabs() {
 
 1. 循环遍历 {{WebExtAPIRef("tabs.Tab")}} 对象的前 5 个项目。
 2. 为每个项目在文档片段中添加一个超链接。
-
    - 链接的标签（即文本）使用标签页的 `title`（如果没有 `title`，则使用 `id`）设置。
    - 链接的地址使用标签页的 `id` 设置。
 
@@ -264,7 +258,6 @@ document.addEventListener("click", (e) => {
 - manifest.json
   - : 没有一个功能需要权限才能运行，因此 [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json) 文件中没有需要突出显示的功能。
 - tabs.html
-
   - : [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html) 定义了弹出窗口中显示的“菜单”，其中包括“将活动标签页移至窗口列表开头”选项，以及一系列由可视分隔符分组的 `<a>` 标记。每个菜单项都有一个 `id` ，`tabs.js` 使用该 `id` 来确定请求的是哪个菜单项。
 
     ```html
@@ -283,7 +276,6 @@ document.addEventListener("click", (e) => {
     ```
 
 - tabs.js
-
   - : 为了实现在 `tabs.html` 中定义的“菜单”，[`tabs.js`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js) 在 `tabs.html` 中包含了一个点击监听器：
 
     ```js
@@ -382,7 +374,6 @@ browser.tabs.move([tab.id], { index });
 - tabs.html
   - : 我们已经讨论过 [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html) 是如何定义该扩展的选项的，在提供缩放选项方面没有做任何新的或独特的工作。
 - tabs.js
-
   - : [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js) 首先定义了缩放代码中使用的几个常量：
 
     ```js
@@ -432,9 +423,7 @@ browser.tabs.move([tab.id], { index });
 让我们来看看它是如何实现的。
 
 - manifest.json
-
   - : [`manifest.json`](https://github.com/mdn/webextensions-examples/blob/main/apply-css/manifest.json) 请求使用 CSS 功能所需的权限。你需要
-
     - `"tabs"` 权限和[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)；或者
     - `"activeTab"` 权限。
 
@@ -464,12 +453,10 @@ browser.tabs.move([tab.id], { index });
     你会注意到，除了 `"activeTab"`，还请求了 `"tabs"` 权限。扩展脚本需要这个额外权限才能访问标签页的 URL，我们稍后会看到它的重要性。
 
     manifest.json 文件中的其他主要功能包括以下定义：
-
     - **后台脚本**，加载扩展后立即开始运行。
     - **一个“页面动作”**，它定义了一个要添加到浏览器地址栏的图标。
 
 - background.js
-
   - : 启动时，[`background.js`](https://github.com/mdn/webextensions-examples/blob/main/apply-css/background.js) 会设置一些常量，以定义要应用的 CSS、“页面操作”的标题以及扩展将在其中运行的协议列表：
 
     ```js
@@ -518,14 +505,11 @@ browser.tabs.move([tab.id], { index });
     ```
 
     `toggleCSS()` 获取 `pageAction` 的标题，然后执行所述操作：
-
     - **对于“应用 CSS”**：
-
       - 将 `pageAction` 图标和标题切换为“移除”。
       - 使用 {{WebExtAPIRef("tabs.insertCSS()")}} 应用 CSS。
 
     - **对于“移除 CSS”**：
-
       - 将 `pageAction` 图标和标题切换为“应用”。
       - 使用 {{WebExtAPIRef("tabs.removeCSS()")}} 删除 CSS。
 

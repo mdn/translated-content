@@ -1,46 +1,40 @@
 ---
-title: Document.doctype
+title: "Document : propriété doctype"
+short-title: doctype
 slug: Web/API/Document/doctype
+l10n:
+  sourceCommit: 5d670c42df8ede57e3d6341cb15d8251eb188dc4
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
-Renvoie la "Document Type Declaration (DTD)" (_déclaration de type de document_) associée avec le document actuel. L'objet renvoyé implémente l'interface {{domxref("DocumentType")}}. Utilisez {{domxref("DOMImplementation.createDocumentType()")}} pour créer un `DocumentType`.
+La propriété en lecture seule **`doctype`** de l'interface {{DOMxRef("Document")}} est un objet {{DOMxRef("DocumentType")}} représentant le {{Glossary("Doctype", "Document Type Declaration (DTD)")}} associé au document en cours.
 
-## Syntaxe
+## Valeur
 
-```js
-doctype = document.doctype;
-```
+Un objet {{DOMxRef("DocumentType")}}.
 
-- `doctype` est une propriété en lecture seule.
-
-## Exemple
+## Exemples
 
 ```js
-var doctypeObj = document.doctype;
+const doctypeObj = document.doctype;
 
-console.log(
-  "doctypeObj.name: " +
-    doctypeObj.name +
-    "\n" +
-    "doctypeObj.internalSubset: " +
-    doctypeObj.internalSubset +
-    "\n" +
-    "doctypeObj.publicId: " +
-    doctypeObj.publicId +
-    "\n" +
-    "doctypeObj.systemId: " +
-    doctypeObj.systemId,
-);
+console.log(`doctypeObj.name: ${doctypeObj.name}`);
+console.log(`doctypeObj.internalSubset: ${doctypeObj.internalSubset}`);
+console.log(`doctypeObj.publicId: ${doctypeObj.publicId}`);
+console.log(`doctypeObj.systemId: ${doctypeObj.systemId}`);
 ```
 
 ## Notes
 
-La propriété renvoie `null` si aucune DTD n'est associée au document en cours.
+La propriété retourne `null` si aucune DTD n'est associée au document en cours.
 
-DOM level 2 ne prend pas en charge l'édition de la déclaration de type de document (DTD).
+Le niveau 2 du DOM ne prend pas en charge la modification de la déclaration de type de document (DTD).
 
 ## Spécifications
 
 {{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

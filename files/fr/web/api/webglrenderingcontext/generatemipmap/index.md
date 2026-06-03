@@ -18,13 +18,10 @@ void gl.generateMipmap(cible);
 ### Paramètres
 
 - cible
-
   - : Un {{domxref("GLenum")}} indiquant le point de liaison (cible) de la texture active dont les mipmaps seront générées. Valeurs possibles :
-
     - `gl.TEXTURE_2D`&nbsp;: une texture bi-dimensionnelle.
     - `gl.TEXTURE_CUBE_MAP`&nbsp;: une texture appliquée sur un cube.
     - Lorsqu'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} est utilisé, les valeurs suivantes sont en outre disponibles :
-
       - `gl.TEXTURE_3D`&nbsp;: une texture tri-dimensionnelle.
       - `gl.TEXTURE_2D_ARRAY`&nbsp;: une texture bi-dimensionnelle en tableau.
 

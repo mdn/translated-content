@@ -3,8 +3,6 @@ title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 ---
 
-{{JSRef}}
-
 {{jsxref("Map")}} 实例的 **`forEach()`** 方法按插入顺序对该 map 中的每个键/值对执行一次提供的函数。
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.forEach()")}}

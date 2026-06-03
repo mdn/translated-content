@@ -18,15 +18,15 @@ original_slug: Web/HTML/Element/object
   height="200"></object>
 ```
 
-- `[컨텐츠 범주](/ko/docs/HTML/Content_categories)` [플로우 컨텐츠](/ko/docs/Web/HTML/Content_categories#flow_content); [구문 컨텐츠](/ko/docs/Web/HTML/Content_categories#phrasing_content); [포함된 컨텐츠](/ko/docs/Web/HTML/Content_categories#embedded_content), palpable 컨텐츠; 만약 요소가 **usemap ** 속성을 가지고 있다면, [대화형 컨텐츠](/ko/docs/Web/HTML/Content_categories#interactive_content); [listed](/ko/docs/Web/HTML/Content_categories#form_listed), [submittable](/ko/docs/Web/HTML/Content_categories#form_submittable) [form-associated](/ko/docs/Web/HTML/Content_categories#form-associated_content) element.
-- `허용된 컨텐츠` 0개 이상의 {{HTMLElement("param")}} elements, then [Transparent content](/ko/docs/Web/HTML/Content_categories#transparent_content_models).
+- `[컨텐츠 범주](/ko/docs/HTML/Content_categories)` [플로우 컨텐츠](/ko/docs/Web/HTML/Guides/Content_categories#flow_content); [구문 컨텐츠](/ko/docs/Web/HTML/Guides/Content_categories#phrasing_content); [포함된 컨텐츠](/ko/docs/Web/HTML/Guides/Content_categories#embedded_content), palpable 컨텐츠; 만약 요소가 **usemap ** 속성을 가지고 있다면, [대화형 컨텐츠](/ko/docs/Web/HTML/Guides/Content_categories#interactive_content); [listed](/ko/docs/Web/HTML/Guides/Content_categories#form_listed), [submittable](/ko/docs/Web/HTML/Guides/Content_categories#form_submittable) [form-associated](/ko/docs/Web/HTML/Guides/Content_categories#form-associated_content) element.
+- `허용된 컨텐츠` 0개 이상의 {{HTMLElement("param")}} elements, then [Transparent content](/ko/docs/Web/HTML/Guides/Content_categories#transparent_content_models).
 - `태그 생략` 불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.
-- `허용된 부모 요소` [포함된 컨텐츠](/ko/docs/Web/HTML/Content_categories#embedded_content)를 허용하는 모든 요소
+- `허용된 부모 요소` [포함된 컨텐츠](/ko/docs/Web/HTML/Guides/Content_categories#embedded_content)를 허용하는 모든 요소
 - `DOM 인터페이스` {{domxref("HTMLObjectElement")}}
 
 ## 속성
 
-이 속성은 [전역 속성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 속성은 [전역 속성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `archive` {{deprecated_inline}}
   - : A space-separated list of URIs for archives of resources for the object.
@@ -57,7 +57,7 @@ original_slug: Web/HTML/Element/object
 - `typemustmatch`
   - : **type**와 리소스의 실제 [컨텐츠 타입](/ko/docs/Glossary/MIME_type)이 일치해야되는지를 나타내는 불리언 속성
 - `usemap`
-  - : {{HTMLElement("map")}} 요소에 대한 해쉬-이름 참조; #와 그 뒤에 map 요소의 [`name`](/ko/docs/Web/HTML/Element/map#name) 값이 붙음
+  - : {{HTMLElement("map")}} 요소에 대한 해쉬-이름 참조; #와 그 뒤에 map 요소의 [`name`](/ko/docs/Web/HTML/Reference/Elements/map#name) 값이 붙음
 - `width`
   - : 표시될 리소스의 가로 길이를 CSS 픽셀단위로 지정합니다.
 

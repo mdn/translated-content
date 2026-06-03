@@ -18,9 +18,7 @@ element.scrollIntoView(scrollIntoViewOptions); // Object parameter
 ### 매개변수
 
 - `alignToTop` {{optional_inline}}
-
   - : 불리언 값입니다.
-
     - `true`일 경우, 요소의 상단은 스크롤 가능한 조상 요소의 보이는 영역 상단에 정렬됩니다.
       `scrollIntoViewOptions: {block: "start", inline: "nearest"}`와 일치합니다.
       이 값이 기본 값입니다.
@@ -29,9 +27,7 @@ element.scrollIntoView(scrollIntoViewOptions); // Object parameter
 
 - `scrollIntoViewOptions` {{optional_inline}}
   {{experimental_inline}}
-
   - : 다음 속성을 포함하는 객체입니다.
-
     - `behavior` {{optional_inline}}
       - : 스크롤을 즉시 적용할지 아니면 부드러운 애니메이션을 적용할지 결정합니다. 이 옵션은 다음 값 중 하나의 문자열을 취해야 합니다.
         - `smooth`: 스크롤이 부드럽게 움직입니다.

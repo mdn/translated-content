@@ -2,27 +2,25 @@
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
 l10n:
-  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
+  sourceCommit: d19713a0df638c5a46deecd8b8075d27146c7bea
 ---
-
-{{jsSidebar("Operators")}}
 
 **`typeof`** 演算子は、オペランドの値の型を示す文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+{{InteractiveExample("JavaScript デモ: typeof 演算子")}}
 
 ```js interactive-example
 console.log(typeof 42);
-// Expected output: "number"
+// 予想される結果: "number"
 
 console.log(typeof "blubber");
-// Expected output: "string"
+// 予想される結果: "string"
 
 console.log(typeof true);
-// Expected output: "boolean"
+// 予想される結果: "boolean"
 
 console.log(typeof undeclaredVariable);
-// Expected output: "undefined"
+// 予想される結果: "undefined"
 ```
 
 ## 構文
@@ -151,19 +149,19 @@ typeof func; // "function" を返す
 // 括弧を使うと、式のデータ型を特定することができます。
 const someData = 99;
 
-typeof someData + " Wisen"; // "number Wisen"
-typeof (someData + " Wisen"); // "string"
+typeof someData + " foo"; // "number foo"
+typeof (someData + " foo"); // "string"
 ```
 
-### エラー
+### 宣言・初期化されていない変数の操作
 
-`typeof` は一般に、それが供給されたオペランドの文字列を返すことが保証されています。宣言されていない識別子があっても、`typeof` は `"undefined"` を返し、エラーは発生しません。
+`typeof` は宣言されていない識別子があっても、`"undefined"` を返し、エラーは発生しません。
 
 ```js
 typeof undeclaredVariable; // "undefined"
 ```
 
-しかし、`typeof` を同じブロック内の字句宣言（{{jsxref("Statements/let", "let")}}、{{jsxref("Statements/const", "const")}}、[`class`](/ja/docs/Web/JavaScript/Reference/Statements/class)）の前に使用すると、{{jsxref("ReferenceError")}} が発生します。 ブロックスコープの変数は、ブロックの開始から初期化が処理されるまでの間、一時的なデッドゾーンにあり、その間にアクセスするとエラーが発生します。ブロックスコープ内の変数は、ブロックの開始から初期化が処理されるまで「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)」にあり、その間にアクセスされるとエラーが発生します。
+しかし、`typeof` を同じブロック内の字句宣言（{{jsxref("Statements/let", "let")}}、{{jsxref("Statements/const", "const")}}、{{jsxref("Statements/using", "using")}}、{{jsxref("Statements/await_using", "await using")}}、[`class`](/ja/docs/Web/JavaScript/Reference/Statements/class)）の前に使用すると、{{jsxref("ReferenceError")}} が発生します。 ブロックスコープの変数は、ブロックの開始から初期化が処理されるまでの間、一時的なデッドゾーンにあり、その間にアクセスするとエラーが発生します。ブロックスコープ内の変数は、ブロックの開始から初期化が処理されるまで「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)」にあり、その間にアクセスされるとエラーが発生します。
 
 ```js example-bad
 typeof newLetVariable; // ReferenceError
@@ -174,6 +172,8 @@ let newLetVariable;
 const newConstVariable = "hello";
 class newClass {}
 ```
+
+詳しくは [`typeof` 演算子と `undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined#typeof_演算子と_undefined) を参照してください。
 
 ### document.all の例外的な動作
 

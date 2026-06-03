@@ -3,7 +3,7 @@ title: "SnapEvent: snapTargetBlock プロパティ"
 short-title: snapTargetBlock
 slug: Web/API/SnapEvent/snapTargetBlock
 l10n:
-  sourceCommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef("Snap Events")}}{{SeeCompatTable}}
@@ -25,7 +25,7 @@ l10n:
 
 ## 例
 
-短い例については {{domxref("SnapEvent")}} のメインページを、完全な例と説明については[スクロールスナップイベントの使用](/ja/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)ガイドを参照してください。
+短い例については {{domxref("SnapEvent")}} のメインページを、完全な例と説明については[スクロールスナップイベントの使用](/ja/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)ガイドを参照してください。
 
 ## 仕様書
 
@@ -39,5 +39,5 @@ l10n:
 
 - {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベント
 - {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベント
-- [CSS スクロールスナップモジュール](/ja/docs/Web/CSS/CSS_scroll_snap)
+- [CSS スクロールスナップモジュール](/ja/docs/Web/CSS/Guides/Scroll_snap)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) (developer.chrome.com, 2024)

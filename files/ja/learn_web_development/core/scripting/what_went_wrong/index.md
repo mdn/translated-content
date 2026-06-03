@@ -1,11 +1,10 @@
 ---
 title: 何が間違っている? JavaScript のトラブルシューティング
+short-title: トラブルシューティング
 slug: Learn_web_development/Core/Scripting/What_went_wrong
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 7d8ee59e2e9abaa903f883d0d0361d4d5a9a4498
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}
 
@@ -36,7 +35,7 @@ l10n:
 
 コードに誤りがある場合、一般的に以下の 2 つのうち、どちらかの誤りであることがよくあります。
 
-- **構文エラー**: コードの記述ミスで、実際にプログラムがすべて実行されなかったり、途中で動作が止まってしまったりします。通常、エラーメッセージもいくつか提示されます。正しいツールに慣れ、エラーメッセージが意味していることを理解している限り、これらは通常修正しても問題ありません。
+- **構文エラー**: コードの記述ミスで、実際にプログラムがすべて実行されなかったり、途中で動作が止まってしまったりします。通常、エラーメッセージもいくつか提示されます。正しいツールに慣れ、エラーメッセージが意味していることを理解している限り、これらは通常修正するのはあまり難しくありません。
 - **論理エラー**: 書き方は正しくても、コードが意図した通りに動ないエラーです。つまりプログラムは動くのですが、間違った結果を返します。たいていの場合に、問題となる箇所に直接のエラーメッセージが出ることがないため、構文エラーよりも直すのが難しいことが多いです。
 
 まあ、こんなに単純ではありません。もっと深く追及していくと違う種類のエラーも出てくることでしょう。しかし、見習いのうちは上の分類で十分です。上記の 2 つの種類のエラーについて見ていきましょう。
@@ -77,7 +76,8 @@ l10n:
 4. エラーでは、"guessSubmit.addeventListener is not a function" とあり、これは JavaScript インタープリターに呼び出している関数が認識されないという意味です。しばしば、このエラーメッセージは、スペルミスをしたということです。もし正しい綴りがわからなければ、MDN のサイトで使用している機能を調べてみてください。きっと見つかります。いつもはお好みの検索エンジンで「mdn _機能の名前_」と検索してみるのがよいでしょう。今回は時間短縮のために [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) のリンクを張っておきます。
 5. ページによると、関数の名前を間違えたみたいですね。 JavaScript は大文字小文字を区別しますので、ちょっとでも違うとエラーの原因になることを覚えておきましょう。それでは `addeventListener` を `addEventListener` に修正してエラーを直しましょう。
 
-> **メモ:** [TypeError: "x" is not a function](/ja/docs/Web/JavaScript/Reference/Errors/Not_a_function) のリファレンスページで、このエラーに関する詳細な説明が見られます。
+> [!NOTE]
+> [TypeError: "x" is not a function](/ja/docs/Web/JavaScript/Reference/Errors/Not_a_function) のリファレンスページで、このエラーに関する詳細な説明が見られます。
 
 ### 構文エラーその 2
 
@@ -132,7 +132,8 @@ l10n:
 9. ここではクラスセレクターが必要です。クラスセレクターはドット (`.`) で始まりますが、 51 行目で `querySelector()` メソッドに渡された文字列にはドットがありません。これが問題でしょう！ 51 行目の `lowOrHi` を `.lowOrHi` に変更してみてください。
 10. ファイルを保存して再度読み込むと、`console.log()` の文は求めていた `<p>` 要素を表示しています。何とか次のエラーを潰すことができました！ `console.log()` の行は削除してもいいですし、後で使うために残しておいても大丈夫です。
 
-> **メモ:** [TypeError: "x" is (not) "y"](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_type) のリファレンスページで、このエラーに関する詳細な説明が見られます。
+> [!NOTE]
+> [TypeError: "x" is (not) "y"](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_type) のリファレンスページで、このエラーに関する詳細な説明が見られます。
 
 ### 構文エラーその 3
 
@@ -198,27 +199,28 @@ Math.floor(Math.random() * 100) + 1;
 
 コードを書いていると、よくあるエラーは他にもあります。この節ではそれらを紹介してみましょう。
 
-### プログラムが入力の内容に関わらずいつでも勝ちだと言ってくる
+### 一度間違えるだけでゲームオーバーになる
 
 これも代入演算子と厳密等価演算子を混合しているために起こる症状かもしれません。例えば、 `checkGuess()` の中のこの行を変更するとします。
 
 ```js
-if (userGuess === randomNumber) {
+} else if (guessCount === 10) {
 ```
 
 以下のように変更してみます。
 
 ```js
-if (userGuess = randomNumber) {
+} else if (guessCount = 10) {
 ```
 
-判定で常に `true` が返るようになり、常にプレイヤーが勝ったことになってしまいます。気を付けましょう！
+この検査は常に `true` を返すため、一度でも間違った予想をすれば、プログラムが `setGameOver()` を実行します。ご注意ください！
 
 ### SyntaxError: missing ) after argument list
 
 これは単純です。大体は関数やメソッドの呼び出しで閉じ括弧を忘れたことを表しています。
 
-> **メモ:** [SyntaxError: missing ) after argument list](/ja/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) のリファレンスページで、このエラーに関する詳細な説明が見られます。
+> [!NOTE]
+> [SyntaxError: missing ) after argument list](/ja/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) のリファレンスページで、このエラーに関する詳細な説明が見られます。
 
 ### SyntaxError: missing : after property id
 
@@ -246,7 +248,8 @@ function checkGuess( {
 
 どのエラーにも言えることですが、上の例でも見たように、考えてください。エラーが起きた時に、エラーが起きた行の番号をみて、その行にエラーがあるか見てみます。エラーはその行に存在しないこともありますし、上述した理由以外で起きることもあるということを心に留めておいてください。
 
-> **メモ:** [SyntaxError: Unexpected token](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_token) と [SyntaxError: string literal contains an unescaped line break](/ja/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) のリファレンスページで、これらエラーに関する詳細な説明が見られます。
+> [!NOTE]
+> [SyntaxError: Unexpected token](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_token) と [SyntaxError: string literal contains an unescaped line break](/ja/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) のリファレンスページで、これらエラーに関する詳細な説明が見られます。
 
 ## まとめ
 

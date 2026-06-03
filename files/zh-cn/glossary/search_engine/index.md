@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 搜索引擎是一种从 {{Glossary("World Wide Web", "Web")}} 收集信息，并将这些信息呈现给正在寻找特定信息的用户的软件系统。
 
 搜索引擎执行以下过程：

@@ -4,7 +4,7 @@ slug: conflicting/Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Text_formatting
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}
 
 В этой главе приводится порядок работы со строками и текстом в JavaScript.
 
@@ -251,4 +251,4 @@ console.log(names.sort(germanDictionary.compare).join(", "));
 - [Регулярные выражения JavaScript](/ru/docs/Web/JavaScript/Guide/Regular_expressions) в руководстве по JavaScript.
 - {{jsxref("RegExp")}} ссылка в документации.
 
-{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}

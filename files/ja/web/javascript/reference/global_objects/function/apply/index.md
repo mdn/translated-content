@@ -1,11 +1,10 @@
 ---
 title: Function.prototype.apply()
+short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`apply()`** メソッドは、 `this` 値を指定して関数を呼び出し、 `arguments` は配列 (または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)) として提供します。
 
@@ -114,14 +113,14 @@ let min = Math.min.apply(null, numbers);
 
 // 対して、ループ文を使うとこうなる
 max = -Infinity;
-min = +Infinity;
+min = Infinity;
 
-for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] > max) {
-    max = numbers[i];
+for (const n of numbers) {
+  if (n > max) {
+    max = n;
   }
-  if (numbers[i] < min) {
-    min = numbers[i];
+  if (n < min) {
+    min = n;
   }
 }
 ```

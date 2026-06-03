@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3138c50f08e9fba1176aa77dbbfdb33e22357ddd
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `PATCH` 方法**對資源應用部分修改。
 
 `PATCH` 在某種程度上類似於 {{Glossary("CRUD")}} 中的「更新」概念（一般來說，HTTP 與 {{Glossary("CRUD")}} 不同，兩者不應混淆）。

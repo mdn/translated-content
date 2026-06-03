@@ -3,8 +3,6 @@ title: 名称 - name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
 ---
 
-{{AddonSidebar}}
-
 <table class="fullwidth-table standard-table">
   <tbody>
     <tr>

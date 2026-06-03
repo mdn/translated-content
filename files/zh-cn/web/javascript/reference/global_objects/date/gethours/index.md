@@ -3,8 +3,6 @@ title: Date.prototype.getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 ---
 
-{{JSRef}}
-
 **`getHours()`** 方法根据本地时间，返回一个指定的日期对象的小时。
 
 {{InteractiveExample("JavaScript Demo: Date.getHours()")}}

@@ -18,13 +18,14 @@ JavaScript에서 함수는 다른 함수로 전달되거나 반환받을 수 있
 함수 값은 일반적으로 [`함수`](/ko/docs/Web/JavaScript/Rference/Global_Objects/Function)의 인스턴스입니다. `함수` 객체의 속성 및 메서드에 대한 자세한 내용은 {{jsxref("Function")}}을 참조하세요. 호출 가능한 값으로 인해 [`typeof`](/ko/docs/Web/JavaScript/Rference/Operators/typeof)가 `"객체"` 대신 `"함수"`를 반환하게 됩니다.
 
 > [!NOTE]
-> 모든 호출 가능한 값이 `instanceof Function`인 것은 아닙니다. 예를 들어, `Function.prototype` 객체는 호출 가능하지만 `Function`의 인스턴스는 아닙니다. 함수의 [프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 수동으로 설정하여 함수가 더 이상 `Function.prototype`에서 상속되지 않도록 할 수도 있습니다. 그러나 이러한 경우는 극히 드뭅니다.
+> 모든 호출 가능한 값이 `instanceof Function`인 것은 아닙니다. 예를 들어, `Function.prototype` 객체는 호출 가능하지만 `Function`의 인스턴스는 아닙니다. 함수의 [프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)을 수동으로 설정하여 함수가 더 이상 `Function.prototype`에서 상속되지 않도록 할 수도 있습니다. 그러나 이러한 경우는 극히 드뭅니다.
 
 ### 반환 값
 
-함수 실행이 [`return`](/ko/docs/Web/JavaScript/Reference/Statements/return) 문에서 끝나지 않거나 `return` 키워드 뒤에 표현식이 없는 경우 반환 값은 {{jsxref("undefined")}}가 됩니다. `return`문을 사용하면 함수에서 임의의 값을 반환할 수 있습니다. 하나의 함수 호출은 하나의 값만 반환할 수 있지만, 객체 또는 배열을 반환하고 그 결과를 [구조 분해](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)하여 여러 값을 반환하는 효과를 나타낼 수 있습니다.
+함수 실행이 [`return`](/ko/docs/Web/JavaScript/Reference/Statements/return) 문에서 끝나지 않거나 `return` 키워드 뒤에 표현식이 없는 경우 반환 값은 {{jsxref("undefined")}}가 됩니다. `return`문을 사용하면 함수에서 임의의 값을 반환할 수 있습니다. 하나의 함수 호출은 하나의 값만 반환할 수 있지만, 객체 또는 배열을 반환하고 그 결과를 [구조 분해](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)하여 여러 값을 반환하는 효과를 나타낼 수 있습니다.
 
-> **참고:** [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로 호출되는 생성자에는 반환값을 결정하는 다른 로직이 있습니다.
+> [!NOTE]
+> [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로 호출되는 생성자에는 반환값을 결정하는 다른 로직이 있습니다.
 
 ### 인수 전달
 
@@ -237,7 +238,7 @@ function myFunc(a, b, c) {
 
 - [기본값 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters)를 사용하면 값이 전달되지 않거나 `정의되지 않은` 경우 공식 매개변수를 기본값으로 초기화할 수 있습니다.
 - [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)를 사용하면 무한한 수의 인수를 배열로 표현할 수 있습니다.
-- [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 사용하면 배열의 요소 또는 객체의 속성를 별개의 변수로 분해할 수 있습니다.
+- [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)을 사용하면 배열의 요소 또는 객체의 속성를 별개의 변수로 분해할 수 있습니다.
 
 ```js
 function myFunc({ a, b }, c = 1, ...rest) {

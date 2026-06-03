@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 El código de estado de respuesta **`405 Method Not Allowed`** (Método no permitido, en español) del protocolo de transferencia de hipertexto (HTTP) indica que el servidor conoce el método de solicitud, pero el recurso de destino no admite este método.
 
 El servidor **debe** generar un campo de cabecera **`Allow`** en una respuesta con código de estado 405. El campo debe contener una lista de métodos que el recurso de destino admite actualmente.

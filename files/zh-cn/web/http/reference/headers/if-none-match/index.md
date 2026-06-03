@@ -3,8 +3,6 @@ title: If-None-Match
 slug: Web/HTTP/Reference/Headers/If-None-Match
 ---
 
-{{HTTPSidebar}}
-
 **`If-None-Match`** 是一个条件式请求首部。对于 GET{{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 请求方法来说，当且仅当服务器上没有任何资源的 {{HTTPHeader("ETag")}} 属性值与这个首部中列出的相匹配的时候，服务器端才会返回所请求的资源，响应码为 {{HTTPStatus("200")}} 。对于其他方法来说，当且仅当最终确认没有已存在的资源的 {{HTTPHeader("ETag")}} 属性值与这个首部中所列出的相匹配的时候，才会对请求进行相应的处理。
 
 对于 {{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 方法来说，当验证失败的时候，服务器端必须返回响应码 304（Not Modified，未改变）。对于能够引发服务器状态改变的方法，则返回 412（Precondition Failed，前置条件失败）。需要注意的是，服务器端在生成状态码为 304 的响应的时候，必须同时生成以下会存在于对应的 200 响应中的首部：Cache-Control、Content-Location、Date、ETag、Expires 和 Vary。
@@ -18,9 +16,9 @@ slug: Web/HTTP/Reference/Headers/If-None-Match
 - 采用 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法，来更新拥有特定的{{HTTPHeader("ETag")}} 属性值的缓存。
 - 采用其他方法，尤其是 {{HTTPMethod("PUT")}}，将 `If-None-Match` used 的值设置为 \* ，用来生成事先并不知道是否存在的文件，可以确保先前并没有进行过类似的上传操作，防止之前操作数据的丢失。这个问题属于[更新丢失问题](https://www.w3.org/1999/04/Editing/#3.1)的一种。
 
-| Header type                           | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | no                             |
+| Header type                              | {{Glossary("Request header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | no                             |
 
 ## 语法
 

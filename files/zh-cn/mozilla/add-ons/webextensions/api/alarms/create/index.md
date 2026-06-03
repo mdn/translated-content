@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 为当前浏览器会话创建一个新的闹钟。一个闹钟可以触发一次或多次。闹钟在最后一次触发后会被清除。
 
 ## 语法
@@ -21,7 +19,6 @@ browser.alarms.create(
 ### 参数
 
 - `name`{{optional_inline}}
-
   - : 字符串类型。闹钟的名称。默认为空的字符串。
 
     闹钟的名称可用于 {{WebExtAPIRef('alarms.get()')}} 方法和 {{WebExtAPIRef('alarms.clear()')}} 方法来引用特定闹钟。同时也可以通过 {{WebExtAPIRef('alarms.onAlarm')}} 监听函数传入的 {{WebExtAPIRef('alarms.Alarm')}} 对象的 `name` 属性访问到它。
@@ -29,13 +26,11 @@ browser.alarms.create(
     闹钟的名称是唯一的（在单个扩展的作用域内）。如果传入了已经在这个扩展中存在的名称，原来的同名闹钟会被移除并使用正在创建的闹钟替换。
 
 - `alarmInfo`{{optional_inline}}
-
   - : `object`（对象）类型。你可以使用它来指定闹钟开始触发的时间，其值可以是一个绝对值（`when`），或相对于闹钟设置时间的相对值（`delayInMinutes`）。要让闹钟能够重复，需要指定 `periodInMinutes`。
 
     在 Chrome 浏览器上，除非附件以非打包（unpackaged）方式加载，创建的闹钟的触发频率不能超过每分钟一次。如果扩展尝试将 `delayInMinutes` 设置为小于 1 的值，或 `when` 设置为在未来的 1 分钟之内的值，则闹钟只能在到达 1 分钟之后才会触发。如果扩展尝试将 `periodInMinutes` 设置为小于 1 的之，则闹钟会变成每分钟触发一次。
 
     `alarmInfo` 对象可以设置以下属性：
-
     - `when`{{optional_inline}}
       - : `double` 类型。闹钟首次触发的时间，以[自纪元以来的毫秒数表示](https://zh.wikipedia.org/wiki/UNIX时间)。要获取从纪元到当前时间的毫秒数，请使用 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now)。如果指定了 `when`，则不要指定 `delayInMinutes`。
     - `delayInMinutes`{{optional_inline}}

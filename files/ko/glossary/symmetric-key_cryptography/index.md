@@ -18,7 +18,6 @@ l10n:
 ## 같이 보기
 
 - [MDN 웹 문서 용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Block cipher mode of operation")}}
   - {{Glossary("Cryptography")}}
   - {{Glossary("Cryptographic hash function")}}

@@ -3,8 +3,6 @@ title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
 
-{{JSRef}}
-
 **`finally()`** 方法會回傳一個 {{jsxref("Promise")}}。當 promise 被 settled 後，無論其結果是 fulfilled 還是 rejected ，都會執行指定的回呼函數。它提供了一個讓 `Promise` 在被確認後，無論是 fulfilled 或是 rejected 都會執行某些程式碼的一種手段。
 
 這樣可以避免你在 promise 的 {{jsxref("Promise.then", "then()")}} 和 {{jsxref("Promise.catch", "catch()")}} 重複處理相同的程式碼。
@@ -36,7 +34,6 @@ p.finally(function () {
 
 - 當建立行內的函數時，可以只傳遞一次，從而避免重複宣告或為它宣告變數。
 - `finally` 的回呼函數並不會接收到任何引數，因其沒有可靠的方式來確認 promise 是被 fulfilled 還是 rejected 。它的使用情境僅適用於當你*不關心* rejection 的原因或 fulfillment 的值，因此無須提供。範例：
-
   - 與 `Promise.resolve(2).then(() => {}, () => {})`（將被 resolved 為`undefined`）不同，`Promise.resolve(2).finally(() => {})` 將被 resolved 為`2`。
   - 同樣的，與 `Promise.reject(3).then(() => {}, () => {})`（將 fulfilled 為`undefined`）不同，`Promise.reject(3).finally(() => {})` 將被 rejected 為`3`。
 

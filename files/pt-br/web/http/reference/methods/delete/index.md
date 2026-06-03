@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Methods/DELETE
 original_slug: Web/HTTP/Methods/DELETE
 ---
 
-{{HTTPSidebar}}O **método de requisição HTTP DELETE** remove o recurso especificado.
+O **método de requisição HTTP DELETE** remove o recurso especificado.
 
 <table class="properties">
   <tbody>
@@ -31,7 +31,7 @@ original_slug: Web/HTTP/Methods/DELETE
     <tr>
       <th scope="row">
         Aceito nos
-        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a>
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Forms">formulários HTML</a>
       </th>
       <td>Não</td>
     </tr>

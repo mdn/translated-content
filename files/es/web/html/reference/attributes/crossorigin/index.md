@@ -28,4 +28,4 @@ Una clave inválida y un string vacío serán gestionados como una clave anónim
 ## Véase también
 
 - [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/Guides/CORS)
-- [Atributo HTML: `rel`](/es/docs/Web/HTML/Attributes/rel)
+- [Atributo HTML: `rel`](/es/docs/Web/HTML/Reference/Attributes/rel)

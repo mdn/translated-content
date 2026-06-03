@@ -41,7 +41,7 @@ showPicker()
 
 ## セキュリティ
 
-[一時的な活性化](/ja/docs/Web/Security/User_activation)が必要です。この機能を作業するためには、ユーザーがページや UI 要素を操作する必要があります。
+[一時的な活性化](/ja/docs/Web/Security/Defenses/User_activation)が必要です。この機能を作業するためには、ユーザーがページや UI 要素を操作する必要があります。
 
 ## 例
 
@@ -59,7 +59,8 @@ if ("showPicker" in HTMLInputElement.prototype) {
 
 この例は、この機能を `color` と `file` の入力ピッカーに使用する方法を示しています。
 
-> **メモ:** `date`、`datetime-local`、`month`、`time`、`week` のピッカーも同じように起動します。
+> [!NOTE]
+> `date`、`datetime-local`、`month`、`time`、`week` のピッカーも同じように起動します。
 > ライブ例がオリジン間フレームで実行され、[`SecurityError`](#securityerror)を発生させてしまうため、ここでは示せません。
 
 #### HTML

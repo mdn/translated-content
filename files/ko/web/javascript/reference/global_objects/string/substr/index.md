@@ -9,7 +9,8 @@ l10n:
 
 {{jsxref("String")}} 값의 **`substr()`** 메서드는 지정된 인덱스에서 시작하여 그 다음에 지정된 문자 수만큼 확장되는 이 문자열의 일부를 반환합니다.
 
-> **참고:** `substr()`은 기본 ECMAScript 명세의 일부가 아니며, 비브라우저 런타임에 대한 권장 선택 사항인[부록 B: 웹 브라우저용 추가 ECMAScript 기능](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html)에 정의되어 있습니다. 그러므로 코드를 최대한 크로스 플랫폼 친화적으로 만들려면 표준 [`String.prototype.substring()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 그리고 [`String.prototype.slice()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/slice) 메서드를 대신 사용을 권장합니다. [`String.prototype.substring()` 페이지](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substring#the_difference_between_substring_and_substr)에는 세 가지 메서드 간의 비교가 나와 있습니다.
+> [!NOTE]
+> `substr()`은 기본 ECMAScript 명세의 일부가 아니며, 비브라우저 런타임에 대한 권장 선택 사항인[부록 B: 웹 브라우저용 추가 ECMAScript 기능](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html)에 정의되어 있습니다. 그러므로 코드를 최대한 크로스 플랫폼 친화적으로 만들려면 표준 [`String.prototype.substring()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 그리고 [`String.prototype.slice()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/slice) 메서드를 대신 사용을 권장합니다. [`String.prototype.substring()` 페이지](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substring#the_difference_between_substring_and_substr)에는 세 가지 메서드 간의 비교가 나와 있습니다.
 
 {{InteractiveExample("JavaScript Demo: String.substr()")}}
 

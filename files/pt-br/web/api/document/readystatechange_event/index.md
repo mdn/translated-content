@@ -44,7 +44,7 @@ document.onreadystatechange = function () {
 
 ## Compatibilidade com navegadores
 
-Este evento tem sido suportado pelo Internet Explorer há várias versões, e pode ser usada como uma alternativa para o evento [`DOMContentLoaded`](</pt-BR/docs/Mozilla_event_reference/DOMContentLoaded_(event)>) (veja a seção [cross-browser fallback](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event#cross-browser_fallback)).
+Este evento tem sido suportado pelo Internet Explorer há várias versões, e pode ser usada como uma alternativa para o evento [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event) (veja a seção [cross-browser fallback](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event#cross-browser_fallback)).
 
 ## Eventos Relacionados
 

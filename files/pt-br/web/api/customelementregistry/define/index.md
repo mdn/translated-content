@@ -11,7 +11,7 @@ Dois tipos de elementos personalizados podem ser criados:
 
 - **Elementos personalizados autônomos**: Elementos autônomos; estes herdam de HTMLElement (Elemento HTML genérico).
 - **Elementos personalizados pré-construídos**: Estes elementos herdam - e estendem - elementos HTML já existentes (p.ej HTMLParagraphElement que é um elemento HTML
-  [`<p>`](/pt-BR/docs/Web/HTML/Element/p)).
+  [`<p>`](/pt-BR/docs/Web/HTML/Reference/Elements/p)).
 
 ## Sintaxe
 
@@ -26,9 +26,7 @@ customElements.define(name, constructor, options);
 - constructor
   - : Construtor para o novo elemento personalizado
 - options {{optional_inline}}
-
   - : Um objeto que controla como o elemento é definido. Atualmente, apenas uma opção é permitida:
-
     - `extends`: String que especifica o nome do elemento pré-definido a partir do qual se estende. Usado para criar*elementos personalizados pré-construídos*.
 
 ### Valor de retorno

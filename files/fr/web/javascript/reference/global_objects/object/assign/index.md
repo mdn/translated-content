@@ -211,5 +211,5 @@ console.log(copie);
 ## Voir aussi
 
 - {{jsxref("Object.defineProperties()")}}
-- [Le caractère énumérable des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Le caractère énumérable des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [La décomposition des littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax#utiliser_la_décomposition_avec_les_littéraux_objet)

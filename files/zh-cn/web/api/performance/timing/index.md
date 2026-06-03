@@ -1,18 +1,27 @@
 ---
-title: Performance.timing
+title: Performance：timing 属性
+short-title: timing
 slug: Web/API/Performance/timing
+l10n:
+  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("Navigation Timing")}}{{deprecated_header}}
+{{APIRef("Performance API")}}{{deprecated_header}}
+
+遗留的 **`Performance.timing`** 只读属性会返回一个与延迟相关的性能信息的 {{domxref("PerformanceTiming")}} 对象。
+
+该属性在 worker 中不可用。
 
 > [!WARNING]
-> 该属性在 [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete) 中已经被废弃，请使用 {{domxref("PerformanceNavigationTiming")}} 替代。
+> 此属性已在 [Navigation Timing 第 2 版规范](https://w3c.github.io/navigation-timing/#obsolete)中被弃用。请改用 {{domxref("PerformanceNavigationTiming")}} 接口。
 
-**`Performance.timing`** 只读属性返回一个 {{domxref("PerformanceTiming")}} 对象，这个对象包括了页面相关的性能信息。
+## 值
+
+{{domxref("PerformanceTiming")}} 对象。
 
 ## 规范
 
-因为 [Navigation Timing 规范](https://w3c.github.io/navigation-timing/#obsolete)已被弃用，此特性不再有望成为标准。请使用 {{domxref("PerformanceNavigationTiming")}} 接口代替。
+{{Specifications}}
 
 ## 浏览器兼容性
 
@@ -20,4 +29,4 @@ slug: Web/API/Performance/timing
 
 ## 参见
 
-- {{domxref("Performance")}} 接口。
+- 所属的 {{domxref("Performance")}} 接口。

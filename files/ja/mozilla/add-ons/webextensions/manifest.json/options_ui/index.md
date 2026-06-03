@@ -77,7 +77,7 @@ l10n:
           ブラウザーの UI と、<code>browser_style</code> プロパティを使用する他の拡張機能とで見た目が一致するようにするスタイルシートを、ページに記載するために使用します。既定値は <code>true</code> ですが、このプロパティを記載することをお勧めします。
         </p>
         <p>
-          Firefox では <code>chrome://browser/content/extension.css</code>、macOS では <code>chrome://browser/content/extension-mac.css<code> で、このスタイルシートは見ることができます。寸法を設定する場合、このスタイルシートが現在 <code>box-sizing: border-box</code> を設定していることに注意してください（<a href="/ja/docs/Web/CSS/box-sizing">box-sizing</a> を参照してください）。
+          Firefox では <code>chrome://browser/content/extension.css</code>、macOS では <code>chrome://browser/content/extension-mac.css<code> で、このスタイルシートは見ることができます。寸法を設定する場合、このスタイルシートが現在 <code>box-sizing: border-box</code> を設定していることに注意してください（<a href="/ja/docs/Web/CSS/Reference/Properties/box-sizing">box-sizing</a> を参照してください）。
         </p>
         <p>
           <a class="external external-icon" href="https://design.firefox.com/photon/">Firefox スタイルガイド</a>では、特定のスタイルを取得するためにポップアップの要素に適用できるクラスについて記述しています。

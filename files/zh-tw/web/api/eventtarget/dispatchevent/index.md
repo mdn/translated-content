@@ -41,7 +41,7 @@ cancelled = !target.dispatchEvent(event)
 
 ## 範例
 
-請參閱《[建立或觸發事件](/zh-TW/docs/Web/Events/Creating_and_triggering_events)》。
+請參閱《[建立或觸發事件](/zh-TW/docs/Web/API/Document_Object_Model/Events)》。
 
 ## 規格
 

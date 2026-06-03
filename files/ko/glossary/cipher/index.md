@@ -25,7 +25,6 @@ l10n:
 - [암호](https://en.wikipedia.org/wiki/Cipher) on Wikipedia
 - [암호화와 복호화](/ko/docs/Archive/Security/Encryption_and_Decryption)
 - [MDN 웹 문서 용어사전](/ko/docs/Glossary)
-
   - {{Glossary("Block cipher mode of operation", "블록 암호 운용 방식")}}
   - {{Glossary("Cipher", "암호")}}
   - {{Glossary("Ciphertext", "암호문")}}

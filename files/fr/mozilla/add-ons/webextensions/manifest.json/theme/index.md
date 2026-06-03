@@ -77,7 +77,7 @@ La clé du thème est un objet qui prend les propriétés suivantes:
           Un objet JSON dont les propriétés représentent les images à afficher
           dans différentes parties du navigateur. Voir les
           <code
-            ><a href="/fr/Add-ons/WebExtensions/manifest.json/theme#images"
+            ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#images"
               >images</a
             ></code
           >
@@ -94,7 +94,7 @@ La clé du thème est un objet qui prend les propriétés suivantes:
           Un objet JSON dont les propriétés représentent les couleurs de
           différentes parties du navigateur. Voir
           <code
-            ><a href="/fr/Add-ons/WebExtensions/manifest.json/theme#couleurs"
+            ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#couleurs"
               >couleurs</a
             ></code
           >
@@ -111,7 +111,7 @@ La clé du thème est un objet qui prend les propriétés suivantes:
           This object has two properties that affect how the
           <code>"additional_backgrounds"</code> images are displayed. See
           <code
-            ><a href="/fr/Add-ons/WebExtensions/manifest.json/theme#properties"
+            ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#properties"
               >properties</a
             ></code
           >
@@ -276,14 +276,15 @@ Ces propriétés définissent les couleurs utilisées pour les différentes part
 > [!NOTE]
 > Lorsqu'un composant est affecté par plusieurs propriétés de couleur, les propriétés sont listées par ordre de priorité.
 
-Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne contenant un [code de couleur CSS](/fr/docs/Web/CSS/color_value), ou un tableau RVB tel que `"tab_background_text": [ 107 , 99 , 23 ]`, ou en héxadécimal, tel que `"tab_background_text": #6b6317`.
+Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne contenant un [code de couleur CSS](/fr/docs/Web/CSS/Reference/Values/color_value), ou un tableau RVB tel que `"tab_background_text": [ 107 , 99 , 23 ]`, ou en héxadécimal, tel que `"tab_background_text": #6b6317`.
 
-> **Note :** [Dans Chrome, les couleurs ne peuvent être spécifiées que sous forme de tableau RVB](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#chrome_compatibility).
+> [!NOTE]
+> [Dans Chrome, les couleurs ne peuvent être spécifiées que sous forme de tableau RVB](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#chrome_compatibility).
 >
 > Dans Firefox pour Android, les couleurs peuvent être spécifiées en utilisant:
 >
 > - La notation hexadecimale complète, c'est à dire #RRGGBB uniquement. Les syntaxes _alpha_ et abrégée, comme dans #RGB\[A], ne sont pas supportées.
-> - [Notation fonctionnelle](/fr/docs/Web/CSS/color_value#syntaxe) (tableau RVB) pour les thèmes ciblant Firefox 68.2 ou supérieur.
+> - [Notation fonctionnelle](/fr/docs/Web/CSS/Reference/Values/color_value#syntaxe) (tableau RVB) pour les thèmes ciblant Firefox 68.2 ou supérieur.
 >
 > Les couleurs pour les thèmes Firefox pour Android ne peuvent pas être spécifiées à l'aide des noms de couleurs.
 

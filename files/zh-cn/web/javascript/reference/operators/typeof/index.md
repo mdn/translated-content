@@ -3,8 +3,6 @@ title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
 ---
 
-{{JSSidebar("Operators")}}
-
 **`typeof`** 运算符返回一个字符串，表示操作数的类型。
 
 {{InteractiveExample("JavaScript Demo: Expressions - typeof")}}

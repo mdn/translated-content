@@ -5,11 +5,12 @@ l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
+{{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
 
 HTTP **`Content-DPR`** {{Glossary("response header", "响应标头")}}用于在使用屏幕 {{HTTPHeader("DPR")}} 客户端提示来选择图像资源的请求中确认*图像*的设备像素比率（DPR）。
 
-> **备注：** `Content-DPR` 标头在 [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07) 草案中已从客户端提示规范中移除。[响应式图像客户端提示](https://wicg.github.io/responsive-image-client-hints/)规范提议通过在 EXIF 元数据中指定图像的固有分辨率或尺寸来替代该标头。
+> [!NOTE]
+> `Content-DPR` 标头在 [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07) 草案中已从客户端提示规范中移除。[响应式图像客户端提示](https://wicg.github.io/responsive-image-client-hints/)规范提议通过在 EXIF 元数据中指定图像的固有分辨率或尺寸来替代该标头。
 
 如果使用 `DPR` 客户端提示来选择图像，则服务器必须在响应中指定 `Content-DPR`。如果 `Content-DPR` 中的值与请求中的 {{HTTPHeader("DPR")}} 值不同（即图像的 DPR 与屏幕的 DPR 不同），客户端必须使用 `Content-DPR` 来确定图像的固有尺寸并对图像进行缩放。
 

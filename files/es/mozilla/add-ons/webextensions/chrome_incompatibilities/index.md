@@ -62,7 +62,6 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 - [alarmas](/es/docs/Mozilla/Add-ons/WebExtensions/API/alarms)
 - [Menú contextual](/es/docs/Mozilla/Add-ons/WebExtensions/API/menus)
 - [pageAction](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)
-
   - Las URL relativas pasadas a `setPopup()`se resuelven en relación con el documento de la persona que llama, en lugar de con la raíz de la extensión .
 
 ### APIs parcialmente soportadas
@@ -70,7 +69,6 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### marcadores
 
 - Firefox no admite:
-
   - `getRecent()`
   - `search()`
   - `removeTree()` (`remove` también elimina carpetas no vacías)
@@ -88,7 +86,6 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### browserAction
 
 - Firefox no admite:
-
   - `enable()` o `disable()`.
 
 - Las URL relativas pasadas a `setPopup()`se resuelven en relación con el documento de la persona que llama, en lugar de con la raíz de la extensión .
@@ -103,7 +100,6 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### extension
 
 - Firefox sólo soporta :
-
   - `getBackgroundPage()`
   - `getURL()`
   - `inIncognitoContext` en los scripts de contenido
@@ -118,13 +114,11 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### notifications
 
 - Las únicas opciones de notificación admitidas son :
-
   - `iconUrl`
   - `title`
   - `message`.
 
 - Los únicos métodos soportados son :
-
   - `create()`
   - `clear()`
   - `getAll()`.
@@ -135,7 +129,6 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### Tiempo de ejecución
 
 - Firefox sólo admite:
-
   - `onStartup()`
   - `getManifest()`
   - `getURL()`
@@ -152,7 +145,6 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### tabs
 
 - Firefox does not support:
-
   - `getCurrent()`
   - `sendRequest()`
   - `getSelected()`
@@ -173,7 +165,6 @@ Firefox doesn't yet support the `callback` argument to `executeScript()`.
 #### webNavigation
 
 - Firefox does not support:
-
   - `getFrame()`
   - `getAllFrames()`
   - `onCreatedNavigationTarget`
@@ -186,14 +177,12 @@ Firefox doesn't yet support the `callback` argument to `executeScript()`.
 #### webRequest
 
 - Firefox does not support:
-
   - `handlerBehaviorChanged()`
   - `onAuthRequired`
   - `onBeforeRedirect`
   - `onErrorOccurred`
 
 - Requests can be:
-
   - canceled only in `onBeforeRequest`
   - modified/redirected only in `onBeforeSendHeaders`
 

@@ -3,8 +3,6 @@ title: 逻辑非（!）
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
 ---
 
-{{jsSidebar("Operators")}}
-
 **逻辑非**（`!`，逻辑连接取反）运算符将真值或假值转换为对应的相反值，经常用于布尔（逻辑）值。当与非布尔值使用时，如果其操作数可以转化为 `true`，则返回 `false`，否则返回 `true`。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Logical NOT", "shorter")}}

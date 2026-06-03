@@ -2,10 +2,8 @@
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Number`** （数値）の値は `37` や `-9.25` のような浮動小数点数を表します。
 

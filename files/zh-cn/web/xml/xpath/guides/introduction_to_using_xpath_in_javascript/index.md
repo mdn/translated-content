@@ -26,7 +26,6 @@ var xpathResult = document.evaluate(
 - `xpathExpression`：包含要评估的 XPath 表达式的字符串。
 - `contextNode`：应评估 `xpathExpression` 的文档中的节点，包括其任何和所有子节点。document 节点是最常用的。
 - `namespaceResolver`：将传递包含在 `xpathExpression` 中的任何命名空间前缀的函数，它返回一个表示与该前缀关联的命名空间 URI 的字符串。这使得能够在 XPath 表达式中使用的前缀和文档中使用的可能不同的前缀之间进行转换。该转换函数可以是：
-
   - 使用 [`XPathEvaluator`](/zh-CN/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript#node-specific_evaluator_function) 对象的 [`createNSResolver`](/zh-CN/docs/Web/API/Document/createNSResolver) 方法[创建](/zh-CN/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript#implementing_a_default_namespace_resolver)。
   - `null`。其可以用于 HTML 文档或者当不使用命名空间前缀时。注意，如果 `xpathExpression` 包含命名空间前缀，这将导致一个带有 `NAMESPACE_ERR` 的 `DOMException` 抛出。
   - 用户定义的函数。有关详细信息，请参阅附录中的 [使用一个用户定义的命名空间解析器](/zh-CN/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript#implementing_a_user_defined_namespace_resolver) 部分。

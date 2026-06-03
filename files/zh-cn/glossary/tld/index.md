@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 TLD（_顶级域_）是在互联网的层次结构 DNS（域名系统）中最通用的 {{Glossary("domain", "域名")}}。TLD 是{{Glossary("domain name", "域名")}}的最后一个组成部分，例如，`developer.mozilla.org` 中的 `org`。
 
 {{Glossary("ICANN")}}（互联网名称与数字地址分配机构）指定组织来管理每个 TLD。根据管理组织可能有多严格，TLD 通常作为网站的用途、所有权或国籍的线索。

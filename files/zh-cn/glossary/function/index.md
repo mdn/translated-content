@@ -3,8 +3,6 @@ title: Function（函数）
 slug: Glossary/Function
 ---
 
-{{GlossarySidebar}}
-
 **函数**（Function）是一个可以被其他代码或其自身调用的代码片段，或者是一个指向该函数的{{Glossary("variable", "变量")}} 。当函数被调用时，{{Glossary("Argument", "实际参数")}}被作为输入传递给函数，并且函数可以返回输出。在 {{glossary("JavaScript")}} 中，函数也是一个{{glossary("object", "对象")}}。
 
 函数名是作为函数声明或函数表达式的一部分声明的{{Glossary("identifier", "标识符")}}。函数的{{Glossary("scope", "作用域")}}取决于函数名是一个声明还是表达式。

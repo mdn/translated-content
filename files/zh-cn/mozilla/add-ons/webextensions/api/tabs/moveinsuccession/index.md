@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 调整一组标签页的继承关系。
 
 使用 {{WebExtAPIRef('tabs')}} API，可以为一个标签页指定同一窗口中的另一个标签页作为其*后继*（successor）。如果标签页 B 是标签页 A 的后继，并且标签页 A 在活动时被关闭，则接下来将激活标签页 B。如果标签页 A 没有后继，则浏览器可以自由确定接下来激活哪个标签页。如果标签页 B 是标签页 A 的后继，则标签页 A 被称为标签页 B 的*前驱*。一个标签页最多只能有一个后继，但可以有任意数量的前驱。标签页不能将自己或另一个窗口中的标签页作为其后继。
@@ -30,9 +28,7 @@ browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
 - `tabId` {{optional_inline}}
   - : `integer`。将成为 `tabIds` 数组中最后一个标签页的后继的标签页 `ID`。如果此 `ID` 无效或者为 {{WebExtAPIRef('tabs.TAB_ID_NONE')}}，则最后一个标签页将没有后继。默认为 {{WebExtAPIRef('tabs.TAB_ID_NONE')}}。
 - `options` {{optional_inline}}
-
   - : `object`。
-
     - `append` {{optional_inline}}
       - : `boolean`。确定是否将 `tabIds` 中的标签页移到 `tabId` 之前或之后。如果为 `false`，标签页将移到 `tabId` 之前；如果为 `true`，标签页将移到 `tabId` 之后。默认为 `false`。
     - `insert` {{optional_inline}}

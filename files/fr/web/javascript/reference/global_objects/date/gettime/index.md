@@ -1,85 +1,74 @@
 ---
-title: Date.prototype.getTime()
+title: "Date : méthode getTime()"
+short-title: getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`getTime()`** des instances de {{JSxRef("Date")}} retourne le nombre de millisecondes écoulées depuis [l'epoch](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), défini comme le début du 1er janvier 1970 à minuit UTC.
 
-La méthode **`getTime()`** renvoie la valeur numérique correspondant au temps pour la date renseignée, d'après le temps universel (c'est-à-dire relative à UTC, une mesure donnée par `getTime()` sera indépendante du fuseau horaire sur lequel on se trouve). Cette valeur numérique est le nombre de millisecondes écoulées depuis le premier janvier 1970 à minuit UTC.
-
-Vous pouvez utiliser cette méthode pour vous affecter une date et un temps à une autre instance de `Date`. Cette méthode est fonctionnellement équivalente à la méthode {{jsxref("Date.valueof", "valueOf()")}}.
-
-{{InteractiveExample("JavaScript Demo: Date.getTime()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.getTime()", "shorter")}}
 
 ```js interactive-example
 const moonLanding = new Date("July 20, 69 20:17:40 GMT+00:00");
 
-// Milliseconds since Jan 1, 1970, 00:00:00.000 GMT
+// Millisecondes depuis le 1er janvier 1970, 00:00:00.000 GMT
 console.log(moonLanding.getTime());
-// Expected output: -14182940000
+// Résultat attendu : -14182940000
 ```
 
 ## Syntaxe
 
-```js
-dateObj.getTime();
+```js-nolint
+getTime()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-La valeur renvoyée par la méthode `getTime()` est le nombre de millièmes de secondes entre le 1 janvier 1970 à 00:00:00 UTC et la date indiquée.
+Un nombre représentant le [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), en millisecondes, de cette date. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
+
+## Description
+
+Les objets `Date` sont fondamentalement représentés par un [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), et cette méthode permet de récupérer ce timestamp. Vous pouvez utiliser cette méthode pour affecter une date et une heure à un autre objet {{JSxRef("Date")}}. Cette méthode est fonctionnellement équivalente à la méthode {{JSxRef("Date/valueof", "valueOf()")}}.
 
 ## Exemples
 
-### Utiliser `getTime()`
+### Utiliser la méthode `getTime()` pour copier des dates
 
-L'exemple qui suit assigne la valeur de `anniversaire` à `copie` :
+Construire un objet date avec la même valeur temporelle.
 
 ```js
-var anniversaire = new Date(1994, 11, 10); // 10 décembre 1994
-var copie = new Date();
+// Puisque que les mois sont indexés à partir de zéro, l'anniversaire sera le 10 janvier 1995
+const anniversaire = new Date(1994, 12, 10);
+const copie = new Date();
 copie.setTime(anniversaire.getTime());
 ```
 
 ### Mesurer un temps d'exécution
 
-Effectuer une soustration entre deux appels à `getTime()` donne la durée écoulée entre ces appels. On peut donc utiliser cette méthode afin de connaître la durée d'exécution de certaines opérations (voir également la méthode {{jsxref("Date.now()")}} qui peut permettre d'éviter d'instancier des objets intermédiaires).
+Soustraire deux appels consécutifs à `getTime()` sur des objets {{JSxRef("Date")}} nouvellement générés donne la durée écoulée entre ces deux appels. Cela peut être utilisé pour calculer le temps d'exécution de certaines opérations. Voir aussi {{JSxRef("Date.now()")}} pour éviter d'instancier des objets {{JSxRef("Date")}} inutiles.
 
 ```js
-var fin, début;
+let fin, debut;
 
-début = new Date();
-for (var i = 0; i < 1000; i++) {
+debut = new Date();
+for (let i = 0; i < 1000; i++) {
   Math.sqrt(i);
 }
 fin = new Date();
 
 console.log(
-  "Durée de cette opération : " + (fin.getTime() - début.getTime()) + " msec",
+  `Durée de cette opération : ${fin.getTime() - debut.getTime()} msec`,
 );
 ```
 
-## Précision temporelle réduite
-
-Afin de protéger contre les attaques de minutage et d'identification, la précision de `new Date().getTime()` peut être arrondie en fonction des paramètres du navigateur. Pour Firefox, la préférence `privacy.reduceTimerPrecision` est activée par défaut et vaut, par défaut 20µs pour Firefox 59 et 2ms pour Firefox 60.
-
-```js
-// Précision temporelle réduite (2ms) pour Firefox 60
-new Date().getTime();
-// 1519211809934
-// 1519211810362
-// 1519211811670
-// ...
-
-// précision temporelle avec `privacy.resistFingerprinting` activé
-new Date().getTime();
-// 1519129853500
-// 1519129858900
-// 1519129864400
-// ...
-```
-
-Pour Firefox, il est également possible d'activer `privacy.resistFingerprinting` auquel cas la précision sera 100ms ou la valeur de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` selon laquelle est plus grande.
+> [!NOTE]
+> Dans les navigateurs qui prennent en charge la fonctionnalité de mesure temporelle haute résolution de {{DOMxRef("Performance API", "l'API Performance", "", "nocode")}}, {{DOMxRef("Performance.now()")}} peut fournir des mesures du temps écoulé plus fiables et précises que {{JSxRef("Date.now()")}}.
 
 ## Spécifications
 
@@ -91,6 +80,6 @@ Pour Firefox, il est également possible d'activer `privacy.resistFingerprinting
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.setTime()")}}
-- {{jsxref("Date.prototype.valueOf()")}}
-- {{jsxref("Date.prototype.now()")}}
+- La méthode {{JSxRef("Date.prototype.setTime()")}}
+- La méthode {{JSxRef("Date.prototype.valueOf()")}}
+- La méthode statique {{JSxRef("Date.now()")}}

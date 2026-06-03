@@ -1,48 +1,64 @@
 ---
-title: Map.prototype.get()
+title: "Map : méthode get()"
+short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
+l10n:
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-{{JSRef}}
+La méthode **`get()`** des instances de {{JSxRef("Map")}} retourne la valeur correspondant à la clé dans cette `Map`, ou `undefined` s'il n'y en a pas. Les valeurs des objets sont retournées sous la même référence que celle qui a été initialement stockée, et non sous forme de copie, de sorte que les modifications apportées à l'objet retourné seront reflétées partout où cette référence est utilisée, y compris à l'intérieur de la `Map`.
 
-La méthode **`get()`** renvoie un élément précisé d'un objet `Map`. Si la valeur associée à la clé fournie est un objet, alors on obtient une référence à cet objet et tous changements apporté à cet objet sera aussi visible à l'intérieur de l'objet `Map`.
-
-{{InteractiveExample("JavaScript Demo: Map.prototype.get()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Map.prototype.get()")}}
 
 ```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+const map = new Map();
+map.set("toto", "truc");
 
-console.log(map1.get("bar"));
-// Expected output: "foo"
+console.log(map.get("toto"));
+// Sortie attendue : "truc"
 
-console.log(map1.get("baz"));
-// Expected output: undefined
+console.log(map.get("tata"));
+// Sortie attendue : undefined
 ```
 
 ## Syntaxe
 
-```js
-maMap.get(clé);
+```js-nolint
+get(key)
 ```
 
 ### Paramètres
 
-- `clé`
-  - : La clé de l'élément à renvoyer depuis l'objet `Map`.
+- `key`
+  - : La clé de la valeur à retourner depuis l'objet `Map`. Les clés des objets sont comparées par {{Glossary("Object_reference", "référence")}}, et pas par valeur.
 
 ### Valeur de retour
 
-L'élément associée à la clé donnée ou {{jsxref("undefined")}} si la clé ne fait pas partie de l'objet `Map`.
+La valeur associée à la clé définie dans l'objet `Map`. Si la clé n'est pas trouvée, {{JSxRef("undefined")}} est retournée.
 
 ## Exemples
 
+### Utiliser la méthode `get()`
+
 ```js
-var maMap = new Map();
+const maMap = new Map();
 maMap.set("truc", "toto");
 
-maMap.get("truc"); // Renvoie "toto".
-maMap.get("machin"); // Renvoie undefined.
+maMap.get("truc"); // Retourne "toto".
+maMap.get("machin"); // Retourne undefined.
+```
+
+### Utiliser `get()` pour récupérer une référence à un objet
+
+```js
+const arr = [];
+const maMap = new Map();
+maMap.set("toto", arr);
+
+maMap.get("toto").push("truc");
+
+console.log(arr); // ["truc"]
+console.log(maMap.get("toto")); // ["truc"]
 ```
 
 ## Spécifications
@@ -55,6 +71,7 @@ maMap.get("machin"); // Renvoie undefined.
 
 ## Voir aussi
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
-- {{jsxref("Map.prototype.has()")}}
+- L'objet {{JSxRef("Map")}}
+- La méthode {{JSxRef("Map.prototype.delete()")}}
+- La méthode {{JSxRef("Map.prototype.set()")}}
+- La méthode {{JSxRef("Map.prototype.has()")}}

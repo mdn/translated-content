@@ -1,27 +1,26 @@
 ---
 title: Symbol.iterator
+short-title: iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{JSRef}}
+**`Symbol.iterator`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)の `Symbol.iterator` を表します。[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)は、オブジェクトのイテレーターを返すメソッドを、このシンボルで探します。オブジェクトが反復可能であるためには、`[Symbol.iterator]` キーを持っていなければなりません。
 
-**`Symbol.iterator`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.iterator` を表します。[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)は、オブジェクトのイテレーターを返すメソッドを、このシンボルで探します。オブジェクトが反復可能であるためには、`[Symbol.iterator]` キーを持っていなければなりません。
-
-{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+{{InteractiveExample("JavaScript デモ: Symbol.iterator")}}
 
 ```js interactive-example
-const iterable1 = {};
+const iterable = {};
 
-iterable1[Symbol.iterator] = function* () {
+iterable[Symbol.iterator] = function* () {
   yield 1;
   yield 2;
   yield 3;
 };
 
-console.log([...iterable1]);
-// Expected output: Array [1, 2, 3]
+console.log([...iterable]);
+// 予想される結果: Array [1, 2, 3]
 ```
 
 ## 値

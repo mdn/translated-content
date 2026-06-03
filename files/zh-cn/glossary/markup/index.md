@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 标记语言是一种专门用于定义和呈现文本的语言。{{glossary("HTML")}}（超文本标记语言）就是标记语言的一个例子。
 
 在如 HTML 文件之类的文本文件中，元素使用{{glossary("Tag", "标签")}}进行*标记*。这些标记解释了内容的那部分的目的。
@@ -23,7 +21,6 @@ l10n:
 ## 参见
 
 - [MDN Web 文档术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("HTML")}}
   - {{Glossary("XHTML")}}
   - {{Glossary("XML")}}

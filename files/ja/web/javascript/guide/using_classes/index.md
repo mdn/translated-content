@@ -2,10 +2,10 @@
 title: クラスの使用
 slug: Web/JavaScript/Guide/Using_classes
 l10n:
-  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
+  sourceCommit: 8fc371f14e899fc9389ed98b20b9ee57e6b0886d
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
+{{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
 
 JavaScript はプロトタイプベースの言語です。オブジェクトの動作は、自分自身のプロパティとプロトタイプのプロパティで指定します。しかし、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)の追加により、オブジェクトの階層の作成、プロパティとその値の継承は、Java などの他のオブジェクト指向言語とかなり方向性が近くなっています。この章では、クラスからオブジェクトを作成する方法を説明します。
 
@@ -33,7 +33,7 @@ if (bigDay.getTime() < Date.now()) {
 
 - クラスは [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子を用いてオブジェクトを作成します。
 - それぞれのオブジェクトは、クラスによって追加されたいくつかのプロパティ（データまたはメソッド）を持ちます。
-- クラスは、いくつかのプロパティ（データまたはメソッド）を自分自身に格納し、通常、インスタンスと対話するために使用しあｍす。
+- クラスは、いくつかのプロパティ（データまたはメソッド）を自分自身に格納し、通常、インスタンスと対話するために使用します。
 
 これらは、クラスの 3 大機能に対応しています。
 
@@ -305,7 +305,7 @@ red.values[0] = 0;
 console.log(red.values[0]); // 0
 ```
 
-オブジェクト指向プログラミングには、「カプセル化」と呼ばれる哲学があります。これは、オブジェクトの基盤となる実装にはアクセスせず、オブジェクトと対話するために抽象化されたメソッドを使用することを意味しています。例えば、突然、色を [HSL](/ja/docs/Web/CSS/color_value/hsl) として表すことにしたとします。
+オブジェクト指向プログラミングには、「カプセル化」と呼ばれる哲学があります。これは、オブジェクトの基盤となる実装にはアクセスせず、オブジェクトと対話するために抽象化されたメソッドを使用することを意味しています。例えば、突然、色を [HSL](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) として表すことにしたとします。
 
 ```js
 class Color {
@@ -314,10 +314,12 @@ class Color {
     this.values = rgbToHSL([r, g, b]);
   }
   getRed() {
-    return this.values[0];
+    return hslToRGB(this.values)[0];
   }
   setRed(value) {
-    this.values[0] = value;
+    const rgb = hslToRGB(this.values);
+    rgb[0] = value;
+    this.values = rgbToHSL(rgb);
   }
 }
 
@@ -325,9 +327,9 @@ const red = new Color(255, 0, 0);
 console.log(red.values[0]); // 0。255 ではなくなります。純粋な赤の H の値は 0 だからです。
 ```
 
-ユーザーは `values` が RGB 値を突然崩壊させることを意味していると思い込み、自分のロジックが壊れる原因になりかねません。そのため、もしあなたがクラスの実装者であれば、インスタンスの内部データ構造をユーザーから隠したいでしょう。これは、API をきれいに保つためと、あなたが「害のないリファクタリング」をしたときにユーザーのコードが壊れるのを防ぐためです。クラスでは、これは[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を通して行われます。
+ユーザーは `values` が RGB 値を突然崩壊させることを意味していると思い込み、自分のロジックが壊れる原因になりかねません。そのため、もしあなたがクラスの実装者であれば、インスタンスの内部データ構造をユーザーから隠したいでしょう。これは、API をきれいに保つためと、あなたが「害のないリファクタリング」をしたときにユーザーのコードが壊れるのを防ぐためです。クラスでは、これは[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を通して行われます。
 
-プライベートフィールドは、接頭辞に `#` (ハッシュ記号) を持つ識別子です。このハッシュはフィールドの名前に不可欠な要素であり、プライベートプロパティがパブリックプロパティと名前が衝突することはないことを意味しています。プライベートフィールドをクラスのどこかで参照するには、クラス本体でそれを宣言する必要があります（プライベートプロパティをその場で作成することはできません）。これを除けば、プライベートフィールドは通常のプロパティとほとんど同じです。
+プライベートフィールドは、接頭辞に `#` (ハッシュ記号) を持つ識別子です。このハッシュはフィールドの名前に不可欠な部分であり、プライベートフィールドがパブリックフィールドやメソッドと名前が衝突することはないことを意味しています。プライベートフィールドをクラスのどこかで参照するには、クラス本体でそれを宣言する必要があります（プライベート要素をその場で作成することはできません）。これを除けば、プライベートフィールドは通常のプロパティとほとんど同じです。
 
 ```js
 class Color {
@@ -355,7 +357,7 @@ console.log(red.#values); // SyntaxError: Private field '#values' must be declar
 ```
 
 > [!NOTE]
-> Chrome コンソールで実行するコードは、クラスの外部からプライベートプロパティにアクセスすることができます。これは、 JavaScript の構文制限を緩和した開発ツール独自の機能です。
+> Chrome コンソールで実行するコードは、クラスの外部からプライベート要素にアクセスすることができます。これは、 JavaScript の構文制限を緩和した開発ツール独自の機能です。
 
 JavaScript でのプライベートフィールドはハードプライベートです。クラスがこのプライベートフィールドを公開するメソッドを実装していない場合、クラスの外からそれを取得する仕組みは全くありません。つまり、公開されるメソッドの動作が変わらない限り、クラスのプライベートフィールドにどんなリファクタリングを行っても安全だということです。
 
@@ -405,7 +407,7 @@ const crimson = new Color(220, 20, 60);
 red.redDifference(crimson); // 35
 ```
 
-しかし、`anotherColor` が Color のインスタンスでない場合、`#values` は存在しないことになります。（他のクラスが同じ名前の `#values` プライベートフィールドを持っていたとしても、同じことを参照しているわけではないので、ここではアクセスすることができません。）存在しないプライベートプロパティにアクセスすると、通常のプロパティのように `undefined` を返すのではなく、エラーが発生します。オブジェクトにプライベートフィールドが存在するかどうかわからず、エラーを処理するために `try`/`catch` を使用せずにアクセスしたい場合は、 [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用することができます。
+しかし、`anotherColor` が Color のインスタンスでない場合、`#values` は存在しないことになります。（他のクラスが同じ名前の `#values` プライベートフィールドを持っていたとしても、同じことを参照しているわけではないので、ここではアクセスすることができません。）存在しないプライベート要素にアクセスすると、通常のプロパティのように `undefined` を返すのではなく、エラーが発生します。オブジェクトにプライベートフィールドが存在するかどうかわからず、エラーを処理するために `try`/`catch` を使用せずにアクセスしたい場合は、 [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用することができます。
 
 ```js
 class Color {
@@ -425,7 +427,7 @@ class Color {
 > [!NOTE]
 > このとき、`#` は特殊な識別子構文であり、フィールド名を文字列のように使用することはできないことに留意してください。`"#values" in anotherColor` は、プライベートフィールドではなく、文字通り `"#values"` というプロパティ名を探していくことになります。
 
-プライベートプロパティを使用するには、いくつかの制限があります。同じ名前を単一のクラスで 2 回宣言することはできませんし、削除することもできません。どちらも初期の構文エラーにつながります。
+プライベート要素を使用するには、いくつかの制限があります。同じ名前を単一のクラスで 2 回宣言することはできませんし、削除することもできません。どちらも初期の構文エラーにつながります。
 
 ```js-nolint example-bad
 class BadIdeas {
@@ -584,7 +586,7 @@ class MyClass {
 console.log(MyClass.myStaticProperty); // 'foo'
 ```
 
-静的初期化ブロックは、クラスが宣言された後、すぐにコードを実行するのとほぼ同じです。唯一の違いは、静的なプライベートプロパティにアクセスできることです。
+静的初期化ブロックは、クラスが宣言された後、すぐにコードを実行するのとほぼ同じです。唯一の違いは、静的なプライベート要素にアクセスできることです。
 
 ## 拡張と継承
 
@@ -637,7 +639,7 @@ class ColorWithAlpha extends Color {
 
 親クラスが `this` を変更した後、派生クラスは自分自身でロジックを作成することができます。ここでは、`#alpha` というプライベートフィールドを追加し、それと対話するためのゲッター/セッターのペアを提供しました。
 
-派生クラスは、親クラスからすべてのメソッドを継承します。例えば、`ColorWithAlpha` は自分自身で`get red()` アクセサーを宣言していませんが、この動作は親クラスで指定されているので、`red` にアクセスすることはできます。
+派生クラスは、親クラスからすべてのメソッドを継承します。例えば、[アクセサーフィールド](#アクセサーフィールド)の節で `Color` に追加した `get red()` アクセサーを考えてみましょう。`ColorWithAlpha` ではこれを宣言していませんが、この動作は親クラスで指定されているため、`red` にアクセスすることができます。
 
 ```js
 const color = new ColorWithAlpha(255, 0, 0, 0.5);
@@ -683,7 +685,7 @@ console.log(new ColorWithAlpha(255, 0, 0, 0.5).toString()); // '255, 0, 0, 0.5'
 
 ```js
 class ColorWithAlpha extends Color {
-  // ...
+  // …
   static isValid(r, g, b, a) {
     // 親クラスの isValid() を呼び出し、返値において構築する
     return super.isValid(r, g, b) && a >= 0 && a <= 1;
@@ -723,7 +725,7 @@ console.log(color instanceof ColorWithAlpha); // true
 
 ```js
 function incrementDay(date) {
-  return date.setDate(date.getDate() + 1);
+  return new Date(date.setDate(date.getDate() + 1));
 }
 const date = new Date(); // 2019-06-19
 const newDay = incrementDay(date);
@@ -756,7 +758,7 @@ function isValidColor(color) {
     color.blue <= 255
   );
 }
-// ...
+// …
 ```
 
 しかし、クラスを使えば、すべて `Color` という名前空間の下に集めることができるので、読みやすさが向上します。また、プライベートフィールドを導入することで、特定のデータを下流のユーザーから隠すことができ、クリーンな API を作成することができます。

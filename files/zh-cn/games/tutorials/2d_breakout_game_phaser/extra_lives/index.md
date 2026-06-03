@@ -3,9 +3,7 @@ title: Extra lives
 slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 ---
 
-{{GamesSidebar}}
-
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Win_the_game", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}
 
 这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 13 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson13.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html)完成本课程后找到源代码。
 
@@ -134,4 +132,4 @@ function ballLeaveScreen() {
 
 生活让游戏更加宽容 - 如果你失去一个生命，你还剩下两个，可以继续玩。现在让我们通过添加[动画和补间来](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)扩展游戏的外观和感觉。
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Win_the_game", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}

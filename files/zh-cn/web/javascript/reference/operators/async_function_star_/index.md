@@ -3,8 +3,6 @@ title: async function* 表达式
 slug: Web/JavaScript/Reference/Operators/async_function*
 ---
 
-{{jsSidebar("Operators")}}
-
 **`async function*`** 关键字可用于在表达式中定义一个异步生成器函数。
 
 你也可以使用 [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)定义一个异步生成器函数。

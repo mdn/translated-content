@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 59cc14c29e04e83e952bc239dae0a3208497e37b
 ---
 
-{{GlossarySidebar}}
-
 **标识符**是代码中用来标识{{glossary("variable","变量")}}、{{glossary("function","函数")}}或{{glossary("property","属性")}}的字符序列。在大多数语言中，标识符对大小写敏感，也不需要用引号括起来。
 
 在 {{glossary("JavaScript")}} 中，标识符只能包含字母、`$`、`_`、数字（0-9），且不能以数字开头。标识符与字符串不同之处在于{{glossary("string", "字符串")}}是数据，而标识符是代码的一部分。在 JavaScript 中，无法将标识符转换为字符串，但有时可以将字符串解析为标识符。

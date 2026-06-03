@@ -1,122 +1,71 @@
 ---
 title: Opérations de glissement
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
+l10n:
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-Ce qui suit décrit les étapes qui se déroulent lors d'un Glisser Déposer.
+Au cœur de l'API Glisser-déposer se trouvent les différents [évènements de déplacement](/fr/docs/Web/API/HTML_Drag_and_Drop_API#évènements_de_déplacement) qui se déclenchent dans un ordre précis et doivent être gérés d'une manière spécifique. Ce document décrit les étapes qui se déroulent au cours d'une opération de glisser-déposer, ainsi que ce que l'application est censée faire dans chaque gestionnaire.
 
-> [!NOTE]
-> Les opérations de glisser décrits dans ce document utilisent l'interface {{domxref("DataTransfer")}}. Ce document n'utilise pas l'interface {{domxref("DataTransferItem")}} ni l'interface {{domxref("DataTransferItemList")}}.
+À un niveau élevé, voici les étapes possibles dans une opération de glisser-déposer&nbsp;:
 
-## L'attribut draggable
+- L'utilisateur·ice [commence le glissement](#commencer_le_glissement) sur le nœud source&nbsp;; l'évènement {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}} est déclenché sur le nœud source. Dans cet évènement, le nœud source prépare le contexte pour l'opération de glissement, y compris les données de glissement, l'image de réaction et les effets de dépôt autorisés.
+- L'utilisateur·ice [déplace l'élément](#déplacer_des_éléments_et_définir_des_cibles_de_dépôt)&nbsp;: chaque fois qu'un nouvel élément est atteint, l'évènement {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}} est déclenché sur cet élément, et l'évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} est déclenché sur l'élément précédent. Toutes les quelques centaines de millisecondes, un évènement {{DOMxRef("HTMLElement/dragover_event", "dragover")}} est déclenché sur l'élément dans lequel le glissement se trouve actuellement, et l'évènement {{DOMxRef("HTMLElement/drag_event", "drag")}} est déclenché sur le nœud source.
+- Le glissement entre dans une cible de dépôt valide&nbsp;: la cible de dépôt annule son évènement `dragover` pour indiquer qu'elle est une cible de dépôt valide. Une forme de [réaction au dépôt](#réaction_personnalisée_au_dépôt) indique à l'utilisateur·ice l'effet de dépôt attendu.
+- L'utilisateur·ice [effectue le dépôt](#effectuer_le_dépôt)&nbsp;: l'évènement {{DOMxRef("HTMLElement/drop_event", "drop")}} est déclenché sur la cible de dépôt. Dans cet évènement, le nœud cible lit les données de glissement.
+- [L'opération de glissement se termine](#terminer_le_glissement)&nbsp;: l'évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}} est déclenché sur le nœud source. Cet évènement est déclenché que le dépôt ait réussi ou non.
 
-Dans une page Web, certains cas nécessitent l'usage du Glisser Déposer. Il peut servir pour des sélections de texte, d'images ou de liens. Lorsqu'une image ou un lien sont glissés, l'URL de l'image ou du lien est défini comme données du glissement, et le Glisser commence. Pour d'autres éléments, il peut s'agir d'une sélection effectuée qui servira au glissement. Pour voir cet effet, sélectionnez une zone dans une page Web, puis cliquez dedans en maintenant le bouton de la souris et glissez la sélection. Un rendu translucide de la sélection apparaitra en suivant le pointeur de la souris. Il s'agit toutefois du comportement par défaut du glissement si aucun scrutateur n'a été défini pour traiter les données.
+## Commencer le glissement
 
-En HTML, excepté le comportement par défaut des images, des liens et des sélections, aucun autre élément ne peut être glissé. Tous les éléments XUL peuvent être glissés.
+Le glissement commence sur un [élément déplaçable](/fr/docs/Web/API/HTML_Drag_and_Drop_API#éléments_déplaçables), qui peut être une sélection, un élément déplaçable (y compris des liens, des images et tout élément avec `draggable="true"`), un fichier provenant de l'explorateur de fichiers du système d'exploitation, etc. Tout d'abord, l'évènement {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}} est déclenché sur le _nœud source_, qui est l'élément déplaçable ou, pour les sélections, le nœud de texte sur lequel le glissement a commencé. Si cet évènement est annulé, l'opération de glissement est interrompue. Sinon, l'évènement {{DOMxRef("Element/pointercancel_event", "pointercancel")}} est également déclenché sur le nœud source.
 
-Pour rendre un autre élément HTML glissable, deux choses doivent être faites&nbsp;:
+L'évènement `dragstart` est le seul moment où vous pouvez modifier le {{DOMxRef("DragEvent.dataTransfer", "dataTransfer")}}. Pour un élément déplaçable personnalisé, vous voudrez presque toujours modifier les données de glissement, ce qui est couvert en détail dans [Modifier le stockage des données de glissement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifier_le_stockage_des_données_de_glissement). Il y a deux autres choses que vous pouvez changer&nbsp;: [l'image de réaction](#définir_limage_de_réaction_au_glissement) et les [effets de dépôt autorisés](#effets_de_dépôt).
 
-- Définissez l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) à `true` sur l'élément que vous voulez rendre glissable.
-- Ajoutez un scrutateur sur l'événement [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event) et définissez les données du glissement dans ce scrutateur.
-- {{domxref("DataTransfer.setData","Définir la donnée de glissement")}} au sein du scrutateur ajouté précédemment.
-
-Voici un exemple qui permet à une section de contenu d'être glissée&nbsp;:
-
-```html
-<div
-  draggable="true"
-  ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
-  Ce texte <strong>peut</strong> être glissé.
-</div>
-```
-
-L'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) est défini à true, ce qui rend l'élément glissant. Si cet attribut est omis ou défini à false, l'élément ne serait pas glissant et le texte serait alors simplement sélectionné. Cet attribut peut être placé sur n'importe quel élément, y compris des images et des liens. Toutefois, pour les deux derniers, la valeur par défaut est true, donc vous n'utiliserez l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) que pour le définir à `false` pour interdire le glissement de ces éléments.
-
-Notez que lorsqu'un élément est rendu glissable, le texte ou les autres éléments qu'il contient ne peuvent plus être sélectionné de manière classique en cliquant et déplaçant la souris. Au lieu de cela, l'utilisateur doit maintenir la touche <kbd>Alt</kbd> appuyée pour sélectionner le texte avec la souris, ou bien utilisez le clavier.
-
-Pour des éléments XUL, il n'est pas nécessaire d'utiliser l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable), car tous les éléments XUL sont glissables.
+Dans cet exemple, nous ajoutons un écouteur pour l'évènement {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}} en utilisant la méthode `addEventListener()`.
 
 ```html
-<button
-  label="Glisse moi"
-  ondragstart="event.dataTransfer.setData('text/plain', 'Bouton à glisser');"></button>
+<p draggable="true">Ce texte <strong>peut</strong> être déplacé.</p>
 ```
-
-## Démarrer une opération de glissement
-
-Dans cet exemple, un scrutateur est ajouté à l'événement dragstart en utilisant l'attribut `ondragstart`.
-
-```html
-<div
-  draggable="true"
-  ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
-  Ce texte <strong>peut</strong> être glissé.
-</div>
-```
-
-Lorsqu'un utilisateur commence un glissement, l'événement dragstart est déclenché. Dans cet exemple, le scrutateur dragstart a été ajouté à l'élément à déplacer lui-même. Vous pouvez toutefois mettre le scrutateur sur un ancètre plus élevé car l'événement drag diffuse comme le font les autres événements. À l'intérieur de l'événement dragstart, vous devez spécifier la donnée de glissement, l'image filligrane et les effets du glissement tels que décrits ci-dessous. Cependant, seule la donnée de glissement est nécessaire&nbsp;; l'image et les effets du glissement par défaut sont suffisants pour la majorité des cas.
-
-## Donnée de glissement
-
-Tous les événements de glissement ont une propriété appelée [dataTransfer](/fr/docs/Web/API/DataTransfer) utilisée pour contenir la donnée de glissement.
-
-Lorsqu'un glissement a lieu, une donnée doit être associée au glissement pour identifier ce qui est en train de glisser. Par exemple, lors du glissement d'un texte sélectionné dans un champs de texte, la donnée associée au glissement est le texte lui-même. De même, lors du glissement d'un lien, la donnée associée est l'URL du lien.
-
-La donnée de glissement contient deux informations&nbsp;: son type ou format et sa valeur. Le format est une chaîne de caractère (telle que [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte) pour un texte), et la valeur est un texte. Lorsqu'un glissement démarre, vous devez lui ajouter en fournissant un type et la donnée. Dans les scrutateurs des événements `dragenter` et `dragover` au cours d'un glissement, vous pouvez vérifier les types de données et indiquer si un dépôt est permis ou non. Par exemple, une cible de dépôt qui accepte que des liens testera les types lien [text/uri-list](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#lien). Pendant un évément de dépôt, un scrutateur récupèrera la donnée glissée et l'insèrera dans la zone de dépôt.
-
-Les types MIME habituels sont [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte) ou [image/jpeg](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#image), mais vous pouvez créer vos propres types. La liste des types les plus utilisés est disponible sur [cette page](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types).
-
-Un glissement peut fournir une donnée dans différents types. Ceci permet à une donnée d'être disponible dans des types spécifiques, souvent personnalisés, toujours en fournissant un format pour les cibles ne supportant pas ces types spécifiques. Habituellement, il s'agit toujours d'une version textuelle de type [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte). La donnée n'en sera qu'une représentation sous la forme d'un texte.
-
-Pour définir une donnée dans un dataTransfer, utilisez la méthode [setData](/fr/docs/Web/API/DataTransfer/setData). Elle prend deux arguments qui sont le type de la donnée et sa valeur. Par exemple&nbsp;:
 
 ```js
-event.dataTransfer.setData("text/plain", "Texte à glisser");
+const elementDeplacable = document.querySelector('p[draggable="true"]');
+elementDeplacable.addEventListener("dragstart", (event) => {
+  event.dataTransfer.setData("text/plain", "Ce texte peut être déplacé");
+});
 ```
 
-Dans ce cas, la valeur de la donnée est "Texte à glisser" et son format est [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte).
-
-Vous pouvez fournir une donnée dans de multiples formats. Il suffit d'appeler la méthode [setData](/fr/docs/Web/API/DataTransfer/setData) plusieurs fois avec chacun des formats. Vous devez l'appeler dans l'ordre du format le plus spécifique au moins spécifique.
+Vous pouvez également écouter un ancêtre plus élevé, car les évènements de glissement se propagent comme la plupart des autres évènements. Pour cette raison, il est courant de vérifier également la cible de l'évènement, afin que le glissement d'une sélection contenue dans cet élément ne déclenche pas le `setData` (bien que sélectionner du texte à l'intérieur de l'élément soit difficile, ce n'est pas impossible)&nbsp;:
 
 ```js
-var dt = event.dataTransfer;
-dt.setData("application/x-bookmark", bookmarkString);
-dt.setData("text/uri-list", "http://www.mozilla.org");
-dt.setData("text/plain", "http://www.mozilla.org");
+elementDeplacable.addEventListener("dragstart", (event) => {
+  if (event.target === elementDeplacable) {
+    event.dataTransfer.setData("text/plain", "Ce texte peut être déplacé");
+  }
+});
 ```
 
-Ici, une donnée est ajoutée avec trois types différents. Le premier type 'application/x-bookmark' est un type personnalisé. Toutes les applications ne vont pas supporter ce type, mais vous pouvez l'utiliser pour le glissement entre des zones d'une même application ou d'un même site. En fournissant la donnée avec d'autres types, vous la rendez disponible à moindre échelle pour d'autres applications. Le type 'application/x-bookmark' fournira ainsi plus de détail à l'application qu'avec les autres types qui ne seraient que de simples liens ou textes.
+### Définir l'image de réaction au glissement
 
-Notez que cet exemple, [text/uri-list](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#lien) et [text/plain](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#texte) contiennent la même donnée. C'est souvent le cas, mais pas forcément nécessaire.
-
-Si vous essayez d'ajouter une donnée deux fois avec le même format, alors la nouvelle donnée remplacera l'ancienne, mais à la même position que l'ancienne dans la liste.
-
-Vous pouvez effacer la donnée en utilisant la méthode [clearData](/fr/docs/Web/API/DataTransfer/clearData), avec un seul argument qui est le type de la donnée à effacer.
+Lorsque le glissement se produit, une image translucide est générée à partir du nœud source et suit le pointeur de l'utilisateur·ice pendant le glissement. Cette image est créée automatiquement, vous n'avez donc pas besoin de la créer vous-même. Cependant, vous pouvez utiliser {{DOMxRef("DataTransfer.setDragImage", "setDragImage()")}} pour définir une image personnalisée de réaction au glissement.
 
 ```js
-event.dataTransfer.clearData("text/uri-list");
+elementDeplacable.addEventListener("dragstart", (event) => {
+  event.dataTransfer.setDragImage(image, xOffset, yOffset);
+});
 ```
 
-L'argument de type de la méthode [clearData](/fr/docs/Web/API/DataTransfer/clearData) est optionnel. S'il n'est pas précisé, la donnée associée à tous les types est effacée. Et si aucune donnée à glisser n'est ajoutée, alors l'opération de glissement ne s'effectue pas.
+Trois arguments sont nécessaires. Le premier est une référence à une image. Cette référence sera généralement un élément `<img>`, mais elle peut également être un `<canvas>` ou tout autre élément. L'image de réaction sera générée à partir de l'apparence de l'image à l'écran, bien que pour les images, elles seront dessinées à leur taille originale. Les deuxième et troisième arguments de la méthode {{DOMxRef("DataTransfer.setDragImage", "setDragImage()")}} sont des décalages où l'image doit apparaître par rapport au pointeur de la souris.
 
-## Définir l'image filigrane d'un glissement
-
-Lorsqu'un glissement a lieu, une image translucide est générée à partir de l'origine du glissement (l'élément d'origine ayant déclenché l'événement), et cette image suit le déplacement de la souris. Elle est créée automatiquement donc vous n'avez pas à le faire vous même. Toutefois, vous pouvez personnaliser cette image filigrane grâce à [setDragImage](/fr/docs/Web/API/DataTransfer/setDragImage).
+Vous pouvez également utiliser des images et des canevas qui ne sont pas dans un document. Cette technique est utile lors de la création d'images de glissement personnalisées à l'aide de l'élément canvas, comme dans l'exemple suivant&nbsp;:
 
 ```js
-event.dataTransfer.setDragImage(image, xOffset, yOffset);
-```
-
-Trois arguments sont nécessaires. Le premier est la référence à une image. Cette référence pointera en gérénal vers un élément image, mais elle peut pointer aussi vers un canvas ou vers tous autres éléments. L'image filigrane sera simplement générée telle qu'elle ressemble à l'écran, et dessinée à sa taille d'origine. Il est également possible d'utiliser des images et des canvas qui ne sont pas dans un document, comme le montre cet exemple&nbsp;:
-
-```js
-function dragWithCustomImage(event) {
-  var canvas = document.createElement("canvas");
+elementDeplacable.addEventListener("dragstart", (event) => {
+  const canvas = document.createElement("canvas");
   canvas.width = canvas.height = 50;
 
-  var ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
   ctx.lineWidth = 4;
   ctx.moveTo(0, 0);
   ctx.lineTo(50, 50);
@@ -124,188 +73,304 @@ function dragWithCustomImage(event) {
   ctx.lineTo(50, 0);
   ctx.stroke();
 
-  var dt = event.dataTransfer;
-  dt.setData("text/plain", "Data to Drag");
-  dt.setDragImage(canvas, 25, 25);
-}
+  event.dataTransfer.setDragImage(canvas, 25, 25);
+});
 ```
 
-Cette technique est utile pour dessiner des images filigranes personnalisées en utilisant l'élément canvas.
+Dans cet exemple, nous utilisons un canevas comme image de glissement. Comme le canevas fait 50×50 pixels, nous utilisons des décalages de la moitié de cette taille (`25`) afin que l'image apparaisse centrée sur le pointeur de la souris.
 
-Les deuxième et troisième arguments de la méthode [setDragImage](/fr/docs/Web/API/DataTransfer/setDragImage) sont les décalages de l'image par rapport au pointeur de la souris. Dans cet exemple, comme le canvas fait 50 pixels de large et 50 pixels de haut, nous utilisons son centre (soit 25 et 25) pour que l'image soit centrée sur le pointeur de la souris.
+## Déplacer des éléments et définir des cibles de dépôt
 
-## Effets du glissement
+Pendant toute la durée de l'opération de glissement, tous les évènements d'entrée des périphériques (comme la souris ou le clavier) sont supprimés. Les données déplacées peuvent être déplacées sur différents éléments du document, voire sur des éléments d'autres documents. Chaque fois qu'un nouvel élément est atteint, un évènement {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}} est déclenché sur cet élément, et un évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} est déclenché sur l'élément précédent.
 
-Lors d'un glisser/déposer, plusieur opérations se déroulent. L'opération `copy` indique que la donnée glissée sera copiée de son emplacement d'origine au lieu de dépot. L'opération `move` indique que la donnée glissée sera déplacée, et l'opération `link` indique une forme de relation ou de connexion entre l'origine et le lieu de dépot.
+> [!NOTE]
+> `dragleave` se déclenche toujours _après_ `dragenter`, donc conceptuellement, entre ces deux évènements, la cible est entrée dans un nouvel élément mais n'a pas encore quitté le précédent.
 
-Vous pouvez spécifier laquelle de ces trois opérations sera autorisée au niveau de l'origine du glissement, en définissant la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) dans un scrutateur d'événement `dragstart`.
-
-```js
-event.dataTransfer.effectAllowed = "copy";
-```
-
-Dans cet exemple, seule une copie n'est autorisée. Vous pouvez combiner les valeurs de plusieurs façons&nbsp;:
-
-- none
-  - : Aucune opération permise
-- copy
-  - : Copie uniquement
-- move
-  - : Déplacement uniquement
-- link
-  - : Lien uniquement
-- copyMove
-  - : Copie ou déplacement uniquement
-- copyLink
-  - : Copie ou lien uniquement
-- linkMove
-  - : Lien ou déplacement uniquement
-- all
-  - : Copie, déplacement ou lien
-
-Notez que ces valeurs doivent être écrites exactement comme cela. Si vous ne modifiez pas la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed), alors tous les opérations seront permises comme pour la valeur 'all'. L'usage de cette propriété intervient seulement si vous souhaitez exclure des types spécifiques.
-
-Pendant une opération de glissement, un scrutateur pour les événements `dragenter` ou `dragover` peut tester la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) afin de voir quelles opérations sont autorisées. La propriété associée [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) doit être définie dans un de ces événements pour spécifier ce que chaque opération aura à faire. Les valeurs valides pour [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) sont `none`, `copy`, `move` ou `link`. Il n'y a pas de combinaison pour cette propriété.
-
-Pour les événements `dragenter` et `dragover`, la propriété [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) est initialisée avec l'effet attendu par l'utilisateur. L'utilisateur peut modifier l'effet désiré en appuyant sur une touche de modification. Bien que les touches varient selon la plateforme, habituellement, il s'agit d'une combinaison des touches Maj et Control qui permettent de copier, déplacer et créer un raccourci. Le pointeur de la souris change de forme pour montrer l'opération souhaitée, par exemple un signe + à côté de la souris pour une copie.
-
-Vous pouvez modifier les propriétés [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) et [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) pendant les événements `dragenter` ou `dragover`, si par exemple une cible ne supporte qu'un seul type d'opération. La modification de la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) vous permet de spécifier les opérations autorisées sur une cible donnée. Par exemple, mettre une propriété `copyMove` permet des opération de copie ou de déplacement, mais pas de créer un lien raccourci.
-
-Vous pouvez modifier la propriété [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) en remplaçant l'effet de l'utilisateur, et forcer à obtenir une opération spécifique. Notez que cet effet doit être un de ceux listé dans la propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed), sinon une valeur alternative sera attribuée.
-
-```js
-event.dataTransfer.effectAllowed = "copyMove";
-event.dataTransfer.dropEffect = "copy";
-```
-
-Dans cet exemple, la copie est l'effet proposé qui est inclus dans la liste des effets autorisés.
-
-Vous pouvez utiliser la valeur `none` pour interdir tout dépôt à cet emplacement.
-
-## Spécifier les cibles de dépôt
-
-Un scrutateur pour les événements `dragenter` et `dragover` est utilisé pour indiquer des cibles de dépôt valides, c'est-à-dire là où les items pourront être déposés. La plupart des zones d'une page Web ne sont pas des endroits valides pour déposer des données. Ainsi, le comportement par défaut pour ces événements ne permet pas un dépôt.
-
-Si vous voulez autoriser un dépôt, vous devez empêcher le comportement par défaut en annulant l'événement. Il suffit soit de retourner `false` à partir d'un scrutateur d'événement, ou par l'appel de la méthode événementielle [event.preventDefault](/fr/docs/DOM/event.preventDefault). Cette dernière solution est plus faisable avec une fonction définie dans un script séparé.
+Toutes les quelques centaines de millisecondes, deux évènements se déclenchent&nbsp;: un évènement {{DOMxRef("HTMLElement/drag_event", "drag")}} sur le nœud source, et un évènement {{DOMxRef("HTMLElement/dragover_event", "dragover")}} sur l'élément dans lequel le glissement se trouve actuellement. La plupart des zones d'une page web ou d'une application ne sont pas des endroits valides pour déposer des données, donc les éléments ignorent par défaut tout dépôt qui s'y produit. L'élément peut se déclarer comme une cible de dépôt valide en annulant l'évènement `dragover`. Si l'élément est un champ de texte éditable, comme un {{HTMLElement("textarea")}} ou `{{HTMLElement("input/text", "&lt;input type=\"text\"&gt;")}}`, et que le magasin de données contient un élément `text/plain`, alors l'élément est une cible de dépôt valide par défaut sans annuler `dragover`.
 
 ```html
-<div ondragover="return false">
-  <div ondragover="event.preventDefault()"></div>
+<div id="cible-depot">
+  Vous pouvez faire glisser et déposer un élément déplaçable ici
 </div>
 ```
 
-L'appel de la méthode [event.preventDefault](/fr/docs/DOM/event.preventDefault) pendant les événements `dragenter` et `dragover` indiquera qu'un dépôt est permis à cet endroit. Toutefois, il est fréquent d'appeler la méthode [event.preventDefault](/fr/docs/DOM/event.preventDefault) seulement dans certaines situations, par exemple si un lien est en train d'être glissé. Pour cela, appelez une fonction qui testera une condition et annulera l'événement seulement si cette condition est rencontrée. Dans le cas contraire, il suffit de ne pas annuler l'événement et aucun dépôt ne se réalisera si l'utilisateur lache le bouton de la souris.
-
-Il est plus fréquent d'accepter ou non un dépôt en fonction du type de la donnée glissée. Par exemple, permettre les images ou les liens, ou bien les deux. Pour cela, testez les [types](/fr/docs/Web/API/DataTransfer/types) de l'objet `dataTransfer`. Les types sont sous la forme d'une liste de chaînes de caractères ajoutées au début du glissement, du plus signifiant au moins signifiant.
-
 ```js
-function doDragOver(event) {
-  var isLink = event.dataTransfer.types.contains("text/uri-list");
-  if (isLink) event.preventDefault();
-}
-```
+const elementDepot = document.getElementById("cible-depot");
 
-Dans cet exemple, la méthode `contains` est utilisée pour vérifier si le type [text/uri-list](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#lien) est présent dans la liste des types. S'il l'est, l'événement est annulé, ce qui autorise un dépôt. Si la donnée ne contient pas un lien, l'événement ne sera pas annulé et le dépôt ne sera pas autorisé à cet endroit.
-
-Vous pouvez également définir une propriété [effectAllowed](/fr/docs/Web/API/DataTransfer/effectAllowed) ou [dropEffect](/fr/docs/Web/API/DataTransfer/dropEffect) ou les deux à la fois si vous souhaitez être plus précis sur le type d'opération autorisé. Naturellement, le changement de propriété n'aura aucun effet si vous n'avez pas annulé l'événement.
-
-## Retour d'information du dépôt
-
-Il y a de nombreuses manières d'indiquer à l'utilisateur que le dépot est autorisé dans une certaine zone. Le pointeur de la souris va être mis à jour en fonction de la valeur de la propriété [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29). L'apparence exacte dépend de la plateforme de l'utilisateur, généralement il s'agit d'un icone représentant un signe plus qui apparaît pour une copie par exemple, et un 'impossible de déposer ici' peut apparaître quand le dépôt n'est pas autorisé. Cette information contextuelle est suffisante dans la plupart des cas.
-
-De plus, vous pouvez aussi mettre à jour l'interface utilisateur en surlignant au besoin. Pour un simple surlignage, vous pouvez utiliser la pseudo-classe `-moz-drag-over`sur la cible du dépôt.
-
-```css
-.droparea:-moz-drag-over {
-  border: 1px solid black;
-}
-```
-
-Dans cet example, l'élement comportant la classe `droparea` va recevoir un bord noir de un pixel tant que la cible sera valide, ce qui est le cas, si la méthode [event.preventDefault](/fr/docs/DOM/event.preventDefault) est appelé durant l'évenement `dragenter`. Il est à noter que vous devez annuler l'évenement `dragenter` de cette pseudo-classe tant que l'état n'est pas verifié par l'évenement `dragover`.
-
-For more complex visual effects, you can also perform other operations during the `dragenter` event, for example, by inserting an element at the location where the drop will occur. For example, this might be an insertion marker or an element that represents the dragged element in its new location. To do this, you could create an [image](/fr/docs/XUL/image) or [separator](/fr/docs/XUL/separator) element for example, and simply insert it into the document during the `dragenter` event.
-
-The `dragover` event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a `dragover` event as well. You can use the event's [clientX](/fr/docs/Web/API/MouseEvent/clientX) and [clientY](/fr/docs/Web/API/MouseEvent/clientY) properties as with other mouse events to determine the location of the mouse pointer.
-
-Finally, the `dragleave` event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. Any highlighting or other visual effects specified using the `-moz-drag-over` pseudoclass will be removed automatically. The `dragleave` event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.
-
-## Performing a Drop
-
-When the user releases the mouse, the drag and drop operation ends. If the mouse was released over an element that is a valid drop target, that is, one that cancelled the last `dragenter` or `dragover` event, then the drop will be successful, and a `drop` event will fire at the target. Otherwise, the drag operation is cancelled and no `drop` event is fired.
-
-During the `drop` event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29) property to determine which drag operation was desired.
-
-As with all drag related events, the event's `dataTransfer` property will hold the data that is being dragged. The [getData](/fr/docs/Web/API/DragDrop/DataTransfer#getData.28.29) method may be used to retrieve the data again.
-
-```js
-function onDrop(event) {
-  var data = event.dataTransfer.getData("text/plain");
-  event.target.textContent = data;
+elementDepot.addEventListener("dragover", (event) => {
   event.preventDefault();
-}
+});
 ```
 
-The [getData](/fr/docs/Web/API/DragDrop/DataTransfer#getData.28.29) method takes one argument, the type of data to retrieve. It will return the string value that was set when the [setData](/fr/docs/Web/API/DragDrop/DataTransfer#setData.28.29) was called at the beginning of the drag operation. An empty string will be returned if data of that type does not exist. Naturally though, you would likely know that the right type of data was available, as it was previously checked during a `dragover` event.
+> [!NOTE]
+> La spécification exige que l'évènement `dragenter` soit également annulé pour une cible de dépôt, sinon les évènements `dragover` ou `dragleave` ne commenceront même pas à se déclencher sur cet élément&nbsp;; en pratique, aucun navigateur n'implémente cela, et «&nbsp;l'élément actuel&nbsp;» change chaque fois qu'un nouvel élément est atteint.
 
-In the example here, once we have retrieved the data, we insert the string as the textual content of the target. This has the effect of inserting the dragged text where it was dropped, assuming that the drop target is an area of text such as a `p` or `div` element.
+> [!NOTE]
+> La spécification exige que l'annulation de l'évènement `drag` [interrompe](#un_dépôt_échoué) le glissement&nbsp;; en pratique, aucun navigateur n'implémente cela. Voir l'exemple ci-dessous&nbsp;:
+>
+> {{EmbedLiveSample("cancel_drag", "", 100)}}
 
-In a web page, you should call the [preventDefault](/fr/docs/DOM/event.preventDefault) method of the event if you have accepted the drop so that the default browser handling does not handle the droppped data as well. For example, when a link is dragged to a web page, Firefox will open the link. By cancelling the event, this behaviour will be prevented.
+```html hidden live-sample___cancel_drag
+<p draggable="true" id="deplacable">Déplacez-moi pendant 1 seconde&nbsp;!</p>
+<p id="output"></p>
+```
 
-You can retrieve other types of data as well. If the data is a link, it should have the type [text/uri-list](/fr/docs/Web/API/DragDrop/Recommended_Drag_Types#link). You could then insert a link into the content.
-
-```js
-function doDrop(event)
-{
-  var links = event.dataTransfer.getData("text/uri-list").split("\n");
-  for each (var link in links) {
-    if (link.indexOf("#") == 0)
-      continue;
-
-    var newlink = document.createElement("a");
-    newlink.href = link;
-    newlink.textContent = link;
-    event.target.appendChild(newlink);
+```js hidden live-sample___cancel_drag
+const elementDeplacable = document.getElementById("deplacable");
+const output = document.getElementById("output");
+let time = null;
+elementDeplacable.addEventListener("dragstart", (event) => {
+  time = Date.now();
+  output.textContent = "";
+});
+elementDeplacable.addEventListener("drag", (event) => {
+  if (time !== null && Date.now() - time > 1000) {
+    event.preventDefault();
+    output.textContent =
+      "Opération de glissement annulée ; si vous êtes toujours en train de déplacer le nœud, alors votre navigateur ne prend pas en charge l'annulation du glissement de manière programmatique.";
+    time = null;
   }
-  event.preventDefault();
+});
+```
+
+### Cibles de dépôt conditionnelles
+
+Vous souhaitez généralement que la cible de dépôt n'accepte les dépôts que dans certaines situations (par exemple, uniquement si un lien est en cours de glissement). Pour ce faire, vérifiez une condition et n'annulez l'évènement que lorsque la condition est remplie. Par exemple, vous pouvez vérifier si les données déplacées contiennent des liens&nbsp;:
+
+```js
+elementDepot.addEventListener("dragover", (event) => {
+  const isLink = event.dataTransfer.types.includes("text/uri-list");
+  if (isLink) {
+    event.preventDefault();
+  }
+});
+```
+
+Dans cet exemple, nous utilisons la méthode `includes` pour vérifier si le type [`text/uri-list`](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#glisser_des_liens) est présent dans la liste des types. Si c'est le cas, nous annulerons l'évènement afin qu'un dépôt puisse être autorisé. Si les données déplacées ne contiennent pas de lien, l'évènement ne sera pas annulé et un dépôt ne pourra pas se produire à cet endroit.
+
+## Réaction au dépôt
+
+L'utilisateur·ice est en train de faire glisser un élément vers une zone de dépôt valide. Il existe plusieurs façons d'indiquer à l'utilisateur·ice qu'un dépôt est autorisé à cet endroit, et ce qui pourrait se passer si le dépôt a lieu. En général, le pointeur de la souris s'adapte en fonction de la valeur de la propriété {{DOMxRef("DataTransfer.dropEffect", "dropEffect")}}. Bien que l'apparence exacte dépende de la plateforme de l'utilisateur·ice, généralement une icône de signe plus apparaîtra pour un `copy`, par exemple, et une icône «&nbsp;ne peut pas déposer ici&nbsp;» apparaîtra lorsqu'un dépôt n'est pas autorisé. Ce retour visuel du pointeur de la souris est suffisant dans de nombreux cas.
+
+### Effets de dépôt
+
+Lors du dépôt, plusieurs opérations peuvent être effectuées&nbsp;:
+
+- `copy`
+  - : Les données seront simultanément présentes à l'emplacement source et à l'emplacement cible après le dépôt.
+- `move`
+  - : Les données ne seront présentes qu'à l'emplacement cible et seront supprimées de l'emplacement source.
+- `link`
+  - : Une forme de lien sera créée entre les emplacements source et de dépôt&nbsp;; il n'y a qu'une seule instance des données à l'emplacement source.
+- `none`
+  - : Rien ne se passe&nbsp;; le dépôt a échoué.
+
+Avec les évènements {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}} et {{DOMxRef("HTMLElement/dragover_event", "dragover")}}, la propriété {{DOMxRef("DataTransfer.dropEffect", "dropEffect")}} est initialisée à l'effet demandé par l'utilisateur·ice. L'utilisateur·ice peut modifier l'effet souhaité en appuyant sur des touches de modification. Bien que les touches exactes varient selon la plateforme, généralement les touches <kbd>Maj</kbd> et <kbd>Ctrl</kbd> sont utilisées pour passer entre la copie, le glissement et le lien. Le pointeur de la souris changera pour indiquer quelle opération est souhaitée. Par exemple, pour un `copy`, le curseur peut apparaître avec un signe plus à côté.
+
+Vous pouvez modifier la propriété {{DOMxRef("DataTransfer.dropEffect","dropEffect")}} lors des évènements {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}} ou {{DOMxRef("HTMLElement/dragover_event", "dragover")}}, par exemple si une zone de dépôt particulière ne prend en charge que certaines opérations. Vous pouvez modifier la propriété {{DOMxRef("DataTransfer.dropEffect", "dropEffect")}} pour remplacer l'effet de l'utilisateur·ice et imposer qu'une opération de dépôt spécifique se produise.
+
+```js
+cible.addEventListener("dragover", (event) => {
+  event.dataTransfer.dropEffect = "move";
+});
+```
+
+Dans cet exemple, le glissement est l'effet qui est effectué.
+
+Vous pouvez utiliser la valeur `none` pour indiquer qu'aucun dépôt n'est autorisé à cet emplacement. Vous devriez généralement faire cela si l'élément n'accepte temporairement pas les dépôts&nbsp;; s'il n'est pas destiné à être une cible de dépôt, vous ne devriez tout simplement pas annuler l'évènement.
+
+Notez que la définition de `dropEffect` n'indique que l'effet souhaité _à cet instant précis_&nbsp;; un envoi ultérieur de `dragover` peut le modifier. Pour persister le choix, vous devez le définir dans chaque évènement `dragover`. De plus, cet effet est uniquement _informatif_, et les effets réellement mis en œuvre dépendent à la fois des nœuds source et cible (par exemple, si le nœud source ne peut pas être modifié, alors même si un effet `"move"` est demandé, il peut ne pas être possible).
+
+Pour les gestes de l'utilisateur·ice et la définition programmatique de `dropEffect`, par défaut, les trois effets de dépôt sont disponibles. L'élément draggable peut se restreindre à n'autoriser que certains effets en définissant la propriété {{DOMxRef("DataTransfer.effectAllowed", "effectAllowed")}} dans un écouteur d'évènement {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}}.
+
+```js
+elementDeplacable.addEventListener("dragstart", (event) => {
+  event.dataTransfer.effectAllowed = "copyLink";
+});
+```
+
+Dans cet exemple, seule une opération de copie ou de lien est autorisée, mais une opération de glissement ne peut pas être sélectionnée ni par le script ni par les gestes de l'utilisateur·ice.
+
+Les valeurs de `effectAllowed` sont des combinaisons de `dropEffect`&nbsp;:
+
+| Valeur          | Description                                                                                                                                                            |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `none`          | Aucune opération n'est autorisée                                                                                                                                       |
+| `copy`          | `copy` uniquement                                                                                                                                                      |
+| `move`          | `move` uniquement                                                                                                                                                      |
+| `link`          | `link` uniquement                                                                                                                                                      |
+| `copyMove`      | `copy` ou `move` uniquement                                                                                                                                            |
+| `copyLink`      | `copy` ou `link` uniquement                                                                                                                                            |
+| `linkMove`      | `link` ou `move` uniquement                                                                                                                                            |
+| `all`           | `copy`, `move` ou `link`                                                                                                                                               |
+| `uninitialized` | La valeur par défaut lorsque l'effet n'a pas été défini&nbsp;; généralement équivalente à `all`, sauf que le `dropEffect` par défaut peut ne pas toujours être `copy`. |
+
+Par défaut, le `dropEffect` est initialisé en fonction de `effectAllowed`, dans l'ordre de `copy`, `link`, `move`, en sélectionnant le premier effet autorisé. Les effets non sélectionnés mais autorisés peuvent également être choisis par défaut si approprié&nbsp;; par exemple, sous Windows, maintenir la touche <kbd>Alt</kbd> enfoncée fait que `link` est utilisé en priorité. Si `effectAllowed` est `uninitialized` et que l'élément déplacé est un lien `<a>`, le `dropEffect` par défaut est `link`&nbsp;; si `effectAllowed` est `uninitialized` et que l'élément déplacé est une sélection d'un champ de texte éditable, le `dropEffect` par défaut est `move`.
+
+```html hidden live-sample___drop_effects
+<div class="conteneur-sources">
+  Ce sont les sources avec différents <code>allowedEffect</code>
+  <div id="sources"></div>
+</div>
+<div class="conteneur-cibles">
+  Ce sont les cibles avec différents <code>dropEffect</code>
+  <div id="cibles"></div>
+</div>
+```
+
+```css hidden live-sample___drop_effects
+.conteneur-sources,
+.conteneur-cibles {
+  width: calc(100% - 2rem);
+  border: 2px dashed gray;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+#sources,
+#cibles {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+#sources {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#cibles {
+  grid-template-columns: 1fr 1fr;
+}
+
+#sources div,
+#cibles div {
+  border: 2px solid black;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sources div {
+  height: 50px;
+}
+
+#cibles div {
+  height: 75px;
 }
 ```
 
-This example inserts a link from the dragged data. As you might be able to guess from the name, the [text/uri-list](/fr/docs/Web/API/DragDrop/Recommended_Drag_Types#link) type actually may contain a list of URLs, each on a separate line. In this code, we use the [split](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split) to split the string into lines, then iterate over the list of lines, inserting each as a link into the document. Note also that we skip links starting with a number sign (#) as these are comments.
+```js hidden live-sample___drop_effects
+for (const allowedEffect of [
+  "none",
+  "copy",
+  "move",
+  "link",
+  "copyMove",
+  "copyLink",
+  "linkMove",
+  "all",
+  "uninitialized",
+]) {
+  const div = document.createElement("div");
+  div.textContent = allowedEffect;
+  div.draggable = true;
+  div.addEventListener("dragstart", (event) => {
+    event.dataTransfer.effectAllowed = allowedEffect;
+  });
+  document.getElementById("sources").appendChild(div);
+}
 
-For simple cases, you can use the special type `URL` to just retrieve the first valid URL in the list. For example:
-
-```js
-var link = event.dataTransfer.getData("URL");
-```
-
-This eliminates the need to check for comments or iterate through lines yourself, however it is limited to only the first URL in the list.
-
-The `URL` type is a special type used only as a shorthand, and it does not appear within the list of types specified in the [types](/fr/docs/Web/API/DragDrop/DataTransfer#types.28.29) property.
-
-Sometimes you may support a number of different formats, and you want to retrieve the data that is most specific that is supported. In this example, three formats are support by a drop target.
-
-The following example returns the data associated with the best supported format:
-
-```js
-function doDrop(event)
-{
-  var types = event.dataTransfer.types;
-  var supportedTypes = ["application/x-moz-file", "text/uri-list", "text/plain"];
-  types = supportedTypes.filter(function (value) types.contains(value));
-  if (types.length)
-    var data = event.dataTransfer.getData(types[0]);
-  event.preventDefault();
+for (const effetDepot of ["none", "copy", "move", "link"]) {
+  const div = document.createElement("div");
+  div.textContent = effetDepot;
+  div.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = effetDepot;
+  });
+  document.getElementById("cibles").appendChild(div);
 }
 ```
 
-This method relies on JavaScript functionality available in Firefox 3. However the code could be adjusted to support other platforms.
+{{EmbedLiveSample("drop_effects", "", 500)}}
 
-## Finishing a Drag
+### Réaction personnalisée au dépôt
 
-Once the drag is complete, a `dragend` is fired at the source of the drag (the same element that received the `dragstart` event). This event will fire if the drag was successful or if it was cancelled. However, you can use the [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29) to determine what drop operation occurred.
+Pour des effets visuels plus avancés, vous pouvez effectuer d'autres opérations pendant l'évènement {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}, par exemple en insérant un élément à l'endroit où le dépôt aura lieu. Il peut s'agir d'un marqueur d'insertion ou d'un élément représentant l'élément déplacé dans sa nouvelle position. Pour ce faire, vous pouvez créer un élément HTML {{HTMLElement("img")}} et l'insérer dans le document pendant l'évènement {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}.
 
-If the [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29) property has the value `none` during a `dragend`, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a move operation to remove the dragged item from the old location. The [mozUserCancelled](/fr/docs/Web/API/DragDrop/DataTransfer#mozUserCancelled.28.29) property will be set to true if the user cancelled the drag (by pressing Escape), and false if the drag was cancelled for other reasons such as an invalid drop target, or if was successful.
+L'évènement {{DOMxRef("HTMLElement/dragover_event", "dragover")}} se déclenche sur l'élément que la souris pointe. Naturellement, vous devrez peut-être déplacer le marqueur d'insertion à l'intérieur du gestionnaire d'évènements {{DOMxRef("HTMLElement/dragover_event", "dragover")}} également. Vous pouvez utiliser les propriétés {{DOMxRef("MouseEvent.clientX", "clientX")}} et {{DOMxRef("MouseEvent.clientY", "clientY")}} de l'évènement, comme pour les autres évènements de souris, pour déterminer la position du pointeur de la souris.
 
-A drop can occur inside the same window or over another application. The `dragend` event will always fire regardless. The event's [screenX](/fr/docs/Web/API/Window/screenX) and [screenY](/fr/docs/Web/API/Window/screenY) properties will be set to the screen coordinate where the drop occurred.
+Enfin, l'évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} se déclenche sur un élément lorsque le glissement quitte l'élément. C'est le moment où vous devez supprimer tout marqueur d'insertion ou surlignage. Vous n'avez pas besoin d'annuler cet évènement. L'évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} se déclenchera toujours, même si le glissement est annulé, vous pouvez donc toujours vous assurer que tout nettoyage du point d'insertion peut être effectué pendant cet évènement.
 
-After the `dragend` event has finished propagating, the drag and drop operation is complete.
+Pour un exemple pratique de l'utilisation de ces évènements, consultez notre [exemple de tableau Kanban](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board#insérer_à_un_emplacement_particulier).
+
+## Effectuer un dépôt
+
+Lorsque l'utilisateur·ice relâche la souris, l'opération de glisser-déposer se termine.
+
+Pour qu'un dépôt soit _potentiellement réussi_, il doit se produire sur une [cible de dépôt](#déplacer_des_éléments_et_définir_des_cibles_de_dépôt) valide, et la propriété `dropEffect` ne doit pas être `none` au moment du relâchement de la souris. Sinon, l'opération de dépôt est considérée comme [échouée](#un_dépôt_échoué).
+
+Si le dépôt est potentiellement réussi, un évènement {{DOMxRef("HTMLElement/drop_event", "drop")}} est déclenché sur la cible de dépôt. Vous devez annuler cet évènement en utilisant `preventDefault()` afin que le dépôt soit considéré comme réellement réussi. Sinon, le dépôt est également considéré comme réussi si le dépôt consistait à déposer du texte (les données contiennent un élément `text/plain`) dans un champ de texte éditable. Dans ce cas, le texte est inséré dans le champ (soit à la position du curseur, soit à la fin, selon les conventions de la plateforme) et, si le `dropEffect` est `move` alors que la source est une sélection dans une zone éditable, la source est supprimée. Sinon, pour toutes les autres données de glissement et cibles de dépôt, le dépôt est considéré comme échoué.
+
+Lors de l'évènement {{DOMxRef("HTMLElement/drop_event", "drop")}}, vous devez récupérer les données souhaitées dans le stockage de données de glisser-déposer à l'aide de {{DOMxRef("DataTransfer.getData()")}}, et les insérer à l'endroit du dépôt. Vous pouvez utiliser la propriété {{DOMxRef("DataTransfer.dropEffect", "dropEffect")}} pour déterminer quelle opération de glissement était souhaitée. L'évènement `drop` est le seul moment où vous pouvez lire le stockage de données de glissement, en dehors de `dragstart`.
+
+```js
+cible.addEventListener("drop", (event) => {
+  event.preventDefault();
+  const data = event.dataTransfer.getData("text/plain");
+  cible.textContent = data;
+});
+```
+
+Dans l'exemple ci-dessus, une fois les données récupérées, nous insérons la chaîne de caractères en tant que contenu textuel de la cible. Cela a pour effet d'insérer le texte déplacé à l'endroit où il a été déposé, en supposant que la cible de dépôt est une zone de texte telle qu'un élément `p` ou `div`.
+
+La méthode `getData()` retourne une chaîne de caractères vide si le stockage de données ne contient pas de données du type défini. Si vous avez implémenté des [cibles de dépôt conditionnelles](#cibles_de_dépôt_conditionnelles), cette situation ne devrait pas se produire, car la cible de dépôt ne devrait accepter les dépôts que lorsque les données souhaitées sont présentes.
+
+Vous pouvez également récupérer d'autres types de données. Si les données sont un lien, elles doivent avoir le type [`text/uri-list`](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#glisser_des_liens). Vous pouvez alors insérer un lien dans le contenu.
+
+```js
+cible.addEventListener("drop", (event) => {
+  event.preventDefault();
+  const lignes = event.dataTransfer.getData("text/uri-list").split("\r\n");
+  lignes
+    .filter((ligne) => !ligne.startsWith("#"))
+    .forEach((ligne) => {
+      const lien = document.createElement("a");
+      lien.href = ligne;
+      lien.textContent = ligne;
+      cible.appendChild(lien);
+    });
+});
+```
+
+Pour plus d'informations sur la lecture des données de glissement, consultez [Travailler avec le stockage des données de glissement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#lire_le_stockage_des_données_du_glissement).
+
+Il incombe également aux éléments source et cible de collaborer pour mettre en œuvre le `dropEffect` — la source écoute l'évènement `dragend` et la cible écoute l'évènement `drop`. Par exemple, si le `dropEffect` est `move`, alors l'un de ces éléments doit supprimer l'élément déplacé de son ancien emplacement (généralement l'élément source lui-même, car l'élément cible ne connaît pas nécessairement ou n'a pas le contrôle sur la source).
+
+## Un dépôt échoué
+
+L'opération de glisser-déposer est considérée comme échouée si l'une des conditions suivantes est remplie&nbsp;:
+
+1. L'utilisateur·ice a appuyé sur la touche <kbd>Échap</kbd>
+2. Le dépôt a eu lieu en dehors d'une [cible de dépôt](#déplacer_des_éléments_et_définir_des_cibles_de_dépôt) valide
+3. L'effet de dépôt vaut `none` au moment du relâchement de la souris
+4. L'évènement `drop` n'a pas été annulé et le dépôt ne consistait pas à déposer du texte (contenant des données `text/plain`) dans un champ de texte éditable (voir [effectuer un dépôt](#effectuer_le_dépôt))
+
+Dans les cas 1 et 3, si l'annulation survient alors que le curseur survole une cible de dépôt valide, celle-ci reçoit un évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}}, comme si le dépôt n'avait finalement pas lieu sur elle, afin qu'elle puisse effacer toute [réaction au dépôt](#réaction_personnalisée_au_dépôt). Dans tous les cas, la propriété `dropEffect` est définie sur `none` pour les évènements suivants.
+
+Ensuite, un évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}} est déclenché à la source. Le navigateur peut afficher une animation de la sélection déplacée revenant à la source de l'opération de glisser-déposer.
+
+## Terminer le glissement
+
+Une fois le glissement terminé, un évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}} est déclenché à la source du glissement (le même élément qui a reçu l'évènement {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}}). Cet évènement sera déclenché indépendamment du succès du glissement.
+
+Si la propriété {{DOMxRef("DataTransfer.dropEffect","dropEffect")}} a la valeur `none` pendant un évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}}, alors le glissement a été annulé. Sinon, l'effet définit quelle opération a été effectuée. La source peut utiliser cette information après une opération de `move` pour supprimer l'élément déplacé de son ancien emplacement.
+
+Un dépôt peut se produire à l'intérieur de la même fenêtre ou sur une autre application. L'évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}} sera toujours déclenché. Les propriétés {{DOMxRef("MouseEvent.screenX", "screenX")}} et {{DOMxRef("MouseEvent.screenY", "screenY")}} de l'évènement seront définies aux coordonnées de l'écran où le dépôt a eu lieu.
+
+Après la propagation de l'évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}}, l'opération de glisser-déposer est terminée.
+
+## Voir aussi
+
+- [API HTML Drag and Drop (Aperçu)](/fr/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Travailler avec le stockage de données de glissement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

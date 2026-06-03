@@ -6,9 +6,9 @@ original_slug: Web/HTML/CORS_enabled_image
 
 {{HTMLSidebar}}
 
-La especificación HTML introduce un atributo [`crossorigin`](/es/docs/Web/HTML/Element/img#crossorigin) para imágenes que, en conjunto con el encabezado {{Glossary("CORS")}} apropiado, permite definir imágenes con el elemento {{ HTMLElement("img") }} que se carguen de orígenes externos dentro de un lienzo (_canvas_) como si estas fuesen cargadas del origen actual.
+La especificación HTML introduce un atributo [`crossorigin`](/es/docs/Web/HTML/Reference/Elements/img#crossorigin) para imágenes que, en conjunto con el encabezado {{Glossary("CORS")}} apropiado, permite definir imágenes con el elemento {{ HTMLElement("img") }} que se carguen de orígenes externos dentro de un lienzo (_canvas_) como si estas fuesen cargadas del origen actual.
 
-Vea el artículo ["Atributos de configuración CORS"](/es/docs/Web/HTML/Attributes/crossorigin) para mas detalles de como el atributo "crossorigin" es usado.
+Vea el artículo ["Atributos de configuración CORS"](/es/docs/Web/HTML/Reference/Attributes/crossorigin) para mas detalles de como el atributo "crossorigin" es usado.
 
 ## ¿Qué es un "tainted" canvas?
 

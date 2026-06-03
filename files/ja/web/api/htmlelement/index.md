@@ -2,7 +2,7 @@
 title: HTMLElement
 slug: Web/API/HTMLElement
 l10n:
-  sourceCommit: 20cff31570e35c6da44ddd84158fcebd9f4f42d9
+  sourceCommit: 34055723f9d2bbadfa8b0f0d27102e3adcedbd58
 ---
 
 {{APIRef("HTML DOM")}}
@@ -116,21 +116,14 @@ _親である {{DOMxRef("Element")}} から継承したイベントもありま�
 
 - {{DOMxRef("HTMLElement/change_event", "change")}}
   - : {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} のいずれかの要素の `value` が変更され、ユーザーが確定したときに発行されます。{{domxref("Element/input_event", "input")}} イベントとは異なり、`change` イベントは要素の `value` が変更されるたびに発行されるわけではありません。
+- {{domxref("HTMLElement/command_event", "command")}}
+  - : {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} および {{domxref("HTMLButtonElement.command", "command")}} の値が有効な{{domxref("HTMLButtonElement", "ボタン")}}によって制御される要素上で、ボタンが操作されるたびに（例えば、クリックされるたびに）発生します。
 - {{DOMxRef("HTMLElement/error_event", "error")}}
   - : リソースの読み込みに失敗した、または使用することができない場合に発行されます。
 - {{DOMxRef("HTMLElement/load_event", "load")}}
   - : リソースが正常に読み込まれたときに、リソースを保持する要素に対して発行されます。
 
-### クリップボードイベント
-
-- {{DOMxRef("HTMLElement/copy_event", "copy")}}
-  - : ユーザーがブラウザーのユーザーインターフェイスを通じてコピー操作を開始したときに発生します。
-- {{DOMxRef("HTMLElement/cut_event", "cut")}}
-  - : ユーザーがブラウザーのユーザーインターフェイスから切り取り操作を開始したときに発生します。
-- {{DOMxRef("HTMLElement/paste_event", "paste")}}
-  - : ユーザーがブラウザーのユーザーインターフェイスを通じて貼り付け操作を開始したときに発生します。
-
-### ドラッグ & ドロップイベント
+### ドラッグ＆ドロップイベント
 
 - {{DOMxRef("HTMLElement/drag_event", "drag")}}
   - : このイベントは、要素やテキスト選択がドラッグされたときに発行されます。

@@ -178,7 +178,6 @@ Iniciando com Gecko 29, o _generator_ finalizado não lança mais um {{jsxref("T
 - {{jsxref("Operators/function", "function expression")}}
 - {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
 - Outras fontes na web:
-
   - [Regenerator](http://facebook.github.io/regenerator/) um ES6 generator que compila para ES5
   - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Hemanth.HM: The New gen of \*gen(){}](https://www.youtube.com/watch?v=ZrgEZykBHVo&list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&index=1)

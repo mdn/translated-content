@@ -32,7 +32,6 @@ Separately from the Page Visibility API, user agents typically have a number of 
 - Most browsers stop sending {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} callbacks to background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance and battery life.
 - Timers such as {{domxref("setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/ru/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for more details.
 - Budget-based background timeout throttling is now available in modern browsers (Firefox 58+, Chrome 57+), placing an additional limit on background timer CPU usage. This operates in a similar way across modern browsers, with the details being as follows:
-
   - In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.
   - Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see [Reasons for delays longer than specified](/ru/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified)). In Chrome, this value is 10 seconds.
   - Timer tasks are only permitted when the budget is non-negative.
@@ -115,19 +114,15 @@ The Page Visibility API adds the following properties to the {{domxref("Document
 - {{domxref("Document.hidden")}} {{ReadOnlyInline}}
   - : Returns `true` if the page is in a state considered to be hidden to the user, and `false` otherwise.
 - {{domxref("Document.visibilityState")}} {{ReadOnlyInline}}
-
   - : A {{domxref("DOMString")}} indicating the document's current visibility state. Possible values are:
-
     - `visible`
       - : The page content may be at least partially visible. In practice this means that the page is the foreground tab of a non-minimized window.
     - `hidden`
       - : The page's content is not visible to the user, either due to the document's tab being in the background or part of a window that is minimized, or because the device's screen is off.
     - `prerender`
-
       - : The page's content is being prerendered and is not visible to the user. A document may start in the `prerender` state, but will never switch to this state from any other state, since a document can only prerender once.
 
     - `unloaded`
-
       - : The page is in the process of being unloaded from memory.
 
 - {{domxref("Document.onvisibilitychange")}}

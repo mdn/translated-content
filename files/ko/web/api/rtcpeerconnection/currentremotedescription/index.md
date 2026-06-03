@@ -9,7 +9,8 @@ slug: Web/API/RTCPeerConnection/currentRemoteDescription
 
 `currentRemoteDescription`를 바꾸기 위해서는, {{domxref("RTCPeerConnection.setRemoteDescription()")}}를 호출해서 이 값이 설정되도록 만들어주는 연속된 이벤트를 활성화하십시오. 왜 바꾸는 것이 바로 적용이 안되는지 및 어떻게 작동하는지 더 자세히 알고 싶다면, [Pending and current descriptions](/ko/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) 를 참조하십시오.
 
-> **참고:** {{domxref("RTCPeerConnection.remoteDescription")}}와 다르게, 이 값은 연결의 로컬 엔드 포인트에 대한 실제 현재 상태를 보여줍니다. `remoteDescription`은 연결이 현재 어느 상태로 바뀌는지에 대한 설명도 명시 할 수 있습니다.
+> [!NOTE]
+> {{domxref("RTCPeerConnection.remoteDescription")}}와 다르게, 이 값은 연결의 로컬 엔드 포인트에 대한 실제 현재 상태를 보여줍니다. `remoteDescription`은 연결이 현재 어느 상태로 바뀌는지에 대한 설명도 명시 할 수 있습니다.
 
 ## Syntax
 

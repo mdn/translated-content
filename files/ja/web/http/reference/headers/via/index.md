@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Via
 original_slug: Web/HTTP/Headers/Via
 ---
 
-{{HTTPSidebar}}
-
 一般ヘッダーの **`Via`** は、フォワードプロキシーとリバースプロキシーの両方のプロキシーによって追加され、リクエストヘッダーとレスポンスヘッダーに表示されます。 メッセージ転送の追跡、要求ループの回避、および要求/応答チェーンに沿った送信者のプロトコル機能の識別に使用されます。
 
 <table class="properties">

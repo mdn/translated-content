@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 692015f089ff03699f0fe58814502b157c3e92ea
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 120 中影响开发者的变更信息。Firefox 120 于 [2023 年 11 月 21 日](https://whattrainisitnow.com/release/?version=120)发布。
 
 ## 为 Web 开发者带来的变化
@@ -27,9 +25,7 @@ l10n:
 ### JavaScript
 
 - {{jsxref("Date.parse()")}} 现在接受几种额外的日期格式：
-
   - 现在接受不符合正式 ISO 标准的数字连接号日期格式（[Firefox bug 1557650](https://bugzil.la/1557650)），包括：
-
     - `"01-12-1999"`（首个为月份）
     - `"1999-1-5"`（单个数字表示的月份或日期）
     - `"10000-01-12"`（年份超过 9999）
@@ -39,7 +35,6 @@ l10n:
     这些日期将使用其他非 ISO 日期格式的典型行为进行解析，例如本地时区和月份转期（4 月 31 日转期到 5 月 1 日，因为 4 月 31 日不存在）。
 
   - 放宽了直接跟在数字后面的字符的要求，以接受新的格式（[Firefox bug 449921](https://bugzil.la/449921)），包括：
-
     - `"DDMonYYYY"`
     - `"Mon.DD.YYYY"`
     - `"DD.Mon.YYYY"`

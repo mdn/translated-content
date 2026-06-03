@@ -1,5 +1,6 @@
 ---
 title: Array.isArray()
+short-title: isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de

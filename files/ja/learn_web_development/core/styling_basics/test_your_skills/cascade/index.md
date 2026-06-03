@@ -1,31 +1,31 @@
 ---
-title: "スキルテスト: カスケード"
+title: "確認テスト: カスケード"
+short-title: "テスト: カスケード"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
-original_slug: Learn_web_development/Core/Styling_basics/Cascade_tasks
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Fixing_blog_styles", "Learn_web_development/Core/Styling_basics")}}
 
-このスキルテストの目的は、 [CSS における継承の制御](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)の全般的なプロパティ値を理解しているかどうかを評価することです。
+この確認テストの目的は、 [CSS における継承の制御](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)の全般的なプロパティ値を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
-## 課題 1
+## カスケード 1
 
-この課題では、[継承の制御](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#継承の制御)の節で見てきた特別な値の 1 つを使用します。実際の色値を用いずに、背景色を白に戻す宣言を新しいルールに書いてください。
+この課題では、[継承の制御](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#継承の制御)の節で見てきた特別な値の 1 つを使用します。
 
-最終結果は下記の画像のようになるはずです。
+この課題を完了するには、実際の色の値を使用せずに背景色を白にリセットする宣言を新しいルールに記述しましょう。
 
-![白地に黄色のリンクがかろうじて見える程度。](mdn-cascade.png)
+この課題の出発点は次のようなものです。
 
-以下のライブコードを更新して、完成例を再現してみてください。
+{{EmbedLiveSample("cascade1-start", "100%", "110px")}}
 
-```html live-sample___cascade
+基盤となる出発点のコードは次の通りです。
+
+```html live-sample___cascade1-start live-sample___cascade1-finish
 <div class="container" id="outer">
   <div class="container" id="inner">
     <ul>
@@ -36,7 +36,7 @@ l10n:
 </div>
 ```
 
-```css live-sample___cascade
+```css live-sample___cascade1-start live-sample___cascade1-finish
 #outer div ul .nav a {
   background-color: powderblue;
   padding: 5px;
@@ -49,16 +49,18 @@ div div li a {
 }
 ```
 
-{{EmbedLiveSample("cascade")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("cascade1-finish", "100%", "110px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 可能な解決策の一つは次の通りです。
 
-```css
+```css live-sample___cascade1-finish
 #outer #inner a {
-  background-color: initial;
+  background-color: inherit;
 }
 ```
 
@@ -68,17 +70,19 @@ div div li a {
 
 </details>
 
-## 課題 2
+## カスケード 2
 
-この課題では、[カスケードレイヤーの順序](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#order_of_cascade_layers)の節を活用して変更してください。リンクを rebeccapurple 色にするためにカスケードレイヤーの順序を使用して、 lightgreen の宣言に触れることなく、既存の宣言を編集してください。
+この課題を完了するには、カスケードレイヤーの順序を操作して、リンクの色を `rebeccapurple` に変更してください。 `lightgreen` の宣言は編集しないでください。
 
-最終結果は下記の画像のようになるはずです。
+この課題は、[競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)記事では取り上げていない、カスケードレイヤーに関する知識が要求される、やや難しい課題です。この課題に挑戦するために必要な情報は、[カスケードレイヤー > レイヤーの順序に基づく優先順位の決定](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#レイヤーの順番に応じた優先順位の決定)で探すことができます。
 
-![白地に黄色のリンクがかろうじて見える程度。](mdn-cascade.png)
+この課題の出発点は次のようなものです。
 
-以下のライブコードを更新して、完成例を再現してみてください。
+{{EmbedLiveSample("cascade2-start", "100%", "110px")}}
 
-```html live-sample___cascade-layer
+基盤となる出発点のコードは次の通りです。
+
+```html live-sample___cascade2-start live-sample___cascade2-finish
 <div class="container" id="outer">
   <div class="container" id="inner">
     <ul>
@@ -89,7 +93,7 @@ div div li a {
 </div>
 ```
 
-```css live-sample___cascade-layer
+```css live-sample___cascade2-start
 @layer yellow, purple, green;
 
 @layer yellow {
@@ -111,15 +115,37 @@ div div li a {
 }
 ```
 
-{{EmbedLiveSample("cascade-layer")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("cascade2-finish", "100%", "110px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 可能な解決策の一つは次の通りです。
 
-```css
+```css live-sample___cascade2-finish
 @layer yellow, green, purple;
+```
+
+```css hidden live-sample___cascade2-finish
+@layer yellow {
+  #outer div ul .nav a {
+    padding: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
+@layer purple {
+  div div li a {
+    color: rebeccapurple;
+  }
+}
+@layer green {
+  a {
+    color: lightgreen;
+  }
+}
 ```
 
 この課題で必要なことは 1 つだけです。優先順位を変更して、希望する色の宣言が最後に宣言されたレイヤーになるようにすることです。これが彼の解決策が示す内容です。
@@ -128,6 +154,4 @@ div div li a {
 
 </details>
 
-## 関連情報
-
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Fixing_blog_styles", "Learn_web_development/Core/Styling_basics")}}

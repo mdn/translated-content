@@ -2,7 +2,7 @@
 title: Document：getElementsByClassName() 方法
 slug: Web/API/Document/getElementsByClassName
 l10n:
-  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{APIRef("DOM")}}
@@ -70,26 +70,22 @@ const testDivs = Array.prototype.filter.call(
 這是最常用的操作方式。
 
 ```html
-<html lang="zh-TW">
-  <body>
-    <div id="parent-id">
-      <p>你好世界 1</p>
-      <p class="test">你好世界 2</p>
-      <p>你好世界 3</p>
-      <p>你好世界 4</p>
-    </div>
+<div id="parent-id">
+  <p>你好世界 1</p>
+  <p class="test">你好世界 2</p>
+  <p>你好世界 3</p>
+  <p>你好世界 4</p>
+</div>
+```
 
-    <script>
-      const parentDOM = document.getElementById("parent-id");
+```js
+const parentDOM = document.getElementById("parent-id");
 
-      const test = parentDOM.getElementsByClassName("test"); // 一個匹配元素的列表，*不是*單一元素
-      console.log(test); // HTMLCollection[1]
+const test = parentDOM.getElementsByClassName("test"); // 一個匹配元素的列表，*不是*單一元素
+console.log(test); // HTMLCollection[1]
 
-      const testTarget = parentDOM.getElementsByClassName("test")[0]; // 我們想要的第一個元素
-      console.log(testTarget); // <p class="test">你好世界 2</p>
-    </script>
-  </body>
-</html>
+const testTarget = parentDOM.getElementsByClassName("test")[0]; // 我們想要的第一個元素
+console.log(testTarget); // <p class="test">你好世界 2</p>
 ```
 
 ### 多類別範例
@@ -103,7 +99,14 @@ const testDivs = Array.prototype.filter.call(
 <span class="orange juice">柳橙汁</span>
 <span class="apple juice">蘋果汁</span>
 <span class="foo bar">隨機的東西</span>
-<textarea id="resultArea" style="width:98%;height:7em"></textarea>
+<textarea id="resultArea"></textarea>
+```
+
+```css hidden
+#resultArea {
+  width: 98%;
+  height: 7em;
+}
 ```
 
 #### JavaScript
@@ -112,15 +115,15 @@ const testDivs = Array.prototype.filter.call(
 // getElementsByClassName 只會選擇同時具有兩個指定類別的元素
 const allOrangeJuiceByClass = document.getElementsByClassName("orange juice");
 let result = "document.getElementsByClassName('orange juice')";
-for (let i = 0; i < allOrangeJuiceByClass.length; i++) {
-  result += `\n  ${allOrangeJuiceByClass[i].textContent}`;
+for (const el of allOrangeJuiceByClass) {
+  result += `\n  ${el.textContent}`;
 }
 
 // querySelector 只會選擇完全匹配的元素
 const allOrangeJuiceQuery = document.querySelectorAll(".orange.juice");
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
-for (let i = 0; i < allOrangeJuiceQuery.length; i++) {
-  result += `\n  ${allOrangeJuiceQuery[i].textContent}`;
+for (const el of allOrangeJuiceQuery) {
+  result += `\n  ${el.textContent}`;
 }
 
 document.getElementById("resultArea").value = result;

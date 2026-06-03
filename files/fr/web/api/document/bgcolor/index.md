@@ -1,24 +1,22 @@
 ---
-title: Document.bgColor
+title: "Document : propriété bgColor"
+short-title: bgColor
 slug: Web/API/Document/bgColor
+l10n:
+  sourceCommit: cac79d099b0a4e48456cb53eb2435f6acf03e188
 ---
 
-{{APIRef("DOM")}} {{ Deprecated_header() }}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
-La propriété obsolète `bgColor` renvoie ou déinit la couleur de fond (background-color) du document courant.
+La propriété obsolète **`bgColor`** de l'interface {{DOMxRef("Document")}} retourne ou définit la couleur de fond du document courant.
 
-## Syntaxe
+## Valeur
 
-```js
-color = document.bgColor;
-document.bgColor = color;
-```
+Une chaîne de caractères représentant la couleur comme un mot (par exemple, `"red"`) ou une valeur hexadécimale (par exemple, `"#ff0000"`).
 
-### Parametres
+Lorsque la valeur est définie sur `null`, cette valeur `null` est convertie en chaîne de caractères vide (`""`), donc `document.bgColor = null` est équivalent à `document.bgColor = ""`.
 
-- `color` est une chaîne de caractères représentant la couleur comme un mot (e.g., "red") ou une valeur hexadécimale (e.g., "`#ff0000`").
-
-## Exemple
+## Exemples
 
 ```js
 document.bgColor = "darkblue";
@@ -28,7 +26,11 @@ document.bgColor = "darkblue";
 
 La valeur par défaut pour cette propriété sur Firefox est le blanc (`#ffffff` en hexadécimal).
 
-`document.bgColor` est obsolète dans le [DOM Niveau 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). L'alternative recommandée est l'utilisation du style CSS {{Cssxref("background-color")}} qui peut être accessible via le DOM avec `document.body.style.backgroundColor`. Une autre alternative est `document.body.bgColor`, mais c'est aussi obsolète dans HTML 4.01 en faveur de l'alternative CSS.
+`document.bgColor` est obsolète dans la [spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-bgcolor). L'alternative recommandée est l'utilisation du style CSS {{CSSxRef("background-color")}} qui peut être accessible via le DOM avec `document.body.style.backgroundColor`.
+
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

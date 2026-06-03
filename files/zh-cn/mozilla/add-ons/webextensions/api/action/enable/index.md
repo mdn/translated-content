@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 启用某一标签页的浏览器操作。默认情况下，浏览器操作对所有标签页都是启用的。
 
 > [!NOTE]

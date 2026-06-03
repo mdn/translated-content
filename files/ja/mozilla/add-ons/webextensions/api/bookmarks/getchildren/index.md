@@ -21,9 +21,7 @@ browser.bookmarks.getChildren(
 - `id`
   - : 取得したい子要素を持つフォルダー ID を指定する {{jsxref("string")}} です。
 - `callback`
-
   - : 子ノードのリストが取得された際に実行される関数です。この関数には以下の引数が渡ります。
-
     - `results`
       - : 各要素が 1 つの子ノードを表す、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} の {{jsxref("array")}} です。要素の順序は、UI に表示されているのと同じ順番です。現在、セパレータの有無は結果に含まれません。指定したノードに子要素が含まれていなかった場合、`results` は空配列となります。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9409e72722add6d1c4baeaf7b262c9b0985c0bcf
 ---
 
-{{GlossarySidebar}}
-
 **Base64** 是一组相似的[二进制到文本](https://en.wikipedia.org/wiki/Binary-to-text_encoding)（binary-to-text）的编码规则，让二进制数据在解释成 64 进制的表现形式后能够用 {{glossary("ASCII")}} 字符串的格式表示出来。_Base64_ 这个词出自一种特定的 [MIME 内容传输编码](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展#内容传输编码)。
 
 当单独使用术语“Base64”指代特定{{glossary("algorithm", "算法")}}时，通常指的是 [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) 第 4 节中概述的 Base64 版本。该版本使用以下字母表来表示基于 64 进制的数字，以及使用 `=` 作为填充字符：

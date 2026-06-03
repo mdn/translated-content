@@ -84,7 +84,6 @@ Firefox does not support the following incognito (private browsing) modes:
 
 - [alarms](/ru/docs/Mozilla/Add-ons/WebExtensions/API/alarms)
 - [browserAction](/ru/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
-
   - Relative URLs passed to `setPopup()` are resolved relative to the caller document, rather than to the extension root
 
 - [commands](/ru/docs/Mozilla/Add-ons/WebExtensions/API/commands)
@@ -92,7 +91,6 @@ Firefox does not support the following incognito (private browsing) modes:
 - [cookies](/ru/docs/Mozilla/Add-ons/WebExtensions/API/cookies)
 - [i18n](/ru/docs/Mozilla/Add-ons/WebExtensions/API/i18n)
 - [pageAction](/ru/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)
-
   - Relative URLs passed to `setPopup()` are resolved relative to the caller document, rather than to the extension root
 
 ### Partially supported APIs
@@ -100,7 +98,6 @@ Firefox does not support the following incognito (private browsing) modes:
 #### bookmarks
 
 - Firefox does not support:
-
   - `import()`
   - `export()`
   - `onCreated`
@@ -117,13 +114,11 @@ Firefox does not support the following incognito (private browsing) modes:
 #### contextMenus
 
 - Firefox does not support:
-
   - the "browser_action" or "page_action" context types
 
 #### downloads
 
 - Firefox does not support:
-
   - `drag()`
   - `acceptDanger()`
   - `setShelfEnabled()`
@@ -134,11 +129,9 @@ Firefox does not support the following incognito (private browsing) modes:
 #### extension
 
 - Firefox does not support:
-
   - `setUpdateUrlData()`
 
 - Additionally, the following deprecated properties will not be supported:
-
   - `onRequest`
   - `onRequestExternal`
   - `getExtensionTabs()`
@@ -147,7 +140,6 @@ Firefox does not support the following incognito (private browsing) modes:
 #### idle
 
 - Firefox does not support:
-
   - `onStateChanged`
   - `setDetectionInterval()`
 
@@ -156,7 +148,6 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 #### notifications
 
 - Firefox does not support:
-
   - `update()`
 
 - Firefox doesn't provide `byUser` data.
@@ -164,7 +155,6 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 #### runtime
 
 - Firefox does not support:
-
   - `getPackageDirectoryEntry()`
   - `reload()`
   - `requestUpdateCheck()`
@@ -183,7 +173,6 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 #### storage
 
 - Firefox does not support:
-
   - `managed` storage area
   - `sync` storage area
   - `getBytesInUse()`.
@@ -199,14 +188,12 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
   ```
 
 - In Firefox, you can't open (using {{WebExtAPIRef("tabs.create")}}), or navigate to (using {{WebExtAPIRef("tabs.update")}}) privileged URLs:
-
   - chrome: URLs
   - javascript: URLs
   - data: URLs
   - privileged about: URLs (for example, about:config, about:addons, about:debugging)
 
 - Additionally, the following deprecated properties will not be supported:
-
   - `sendRequest()`
   - `getSelected()`
   - `onActiveChanged`
@@ -216,14 +203,12 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 #### webNavigation
 
 - Firefox does not support:
-
   - `onCreatedNavigationTarget`
   - `onTabReplaced`
 
 #### webRequest
 
 - Firefox does not support:
-
   - `onAuthRequired`
   - filtering by `windowId` and `tabId`
   - the `"requestBody"` instruction in `opt_extraInfoSpec`
@@ -233,7 +218,6 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 #### windows
 
 - Firefox does not support:
-
   - the `focused` option in `create()`
 
 - In Firefox `onFocusChanged` will trigger multiple times for a given focus change.

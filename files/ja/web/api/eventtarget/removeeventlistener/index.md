@@ -36,11 +36,9 @@ removeEventListener(type, listener, useCapture)
 - `listener`
   - : イベントターゲットから取り外すイベントハンドラーの[イベントリスナー](/ja/docs/Web/API/EventTarget/addEventListener#イベントリスナーのコールバック)関数です。
 - `options` {{optional_inline}}
-
   - : イベントリスナーに関する特性を指定する、オプションのオブジェクトです。
 
     次のオプションが使用できます。
-
     - `capture`: 論理値で、取り外す[イベントリスナー](/ja/docs/Web/API/EventTarget/addEventListener#イベントリスナーのコールバック)がキャプチャリスナーとして登録されているか否かを指定します。この引数がない場合、既定の値として `false` が想定される。
 
 - `useCapture` {{optional_inline}}

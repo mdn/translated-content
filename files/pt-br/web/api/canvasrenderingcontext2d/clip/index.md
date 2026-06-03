@@ -20,10 +20,8 @@ void ctx.clip(path, fillRule);
 ![](canvas_clipping_path.png)
 
 - `fillRule`
-
   - : O algoritmo pelo qual determina se um ponto esta dentro de um caminho ou fora de um caminho.
     Valores Possíveis:
-
     - `nonzero`
       - : A [regra contorno diferente de zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
     - `evenodd`

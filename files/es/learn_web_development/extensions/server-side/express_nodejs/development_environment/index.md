@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_en
 original_slug: Learn/Server-side/Express_Nodejs/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Ahora que sabes para que sirve Express, nosotros te vamos a mostrar como preparar y testear un entorno de desarrollo Node/Express en: Windows, Linux (Ubuntu), y macOS. Este artículo te va a dar todo lo que se necesita para poder empezar a desarrollar apps en Express, sin importar el sistema operativo que se use.
 
@@ -75,7 +75,6 @@ Para poder utilizar _Express_ primero tiene que instalar _Nodejs_ y el [Administ
 Instalar _Node_ y _NPM_ en Windows y macOS es sencillo, porque simplemente debe utilizar el instalador provisto:
 
 1. Descargue el instalador requerido:
-
    1. Vaya a [https://nodejs.org/es/](https://nodejs.org/en/)
    2. Seleccione el boton para descargar la versión LTS que es "Recomendada la mayoría de los usuarios".
 
@@ -388,4 +387,4 @@ En el siguiente artículo, comenzaremos a trabajar a través de un tutorial para
 - [Installing Express](http://expressjs.com/en/starter/installing.html) (expressjs.com)
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

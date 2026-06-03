@@ -3,8 +3,6 @@ title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
 
-{{JSRef}}
-
 **`Promise.race()`** 静态方法接受一个 promise 可迭代对象作为输入，并返回一个 {{jsxref("Promise")}}。这个返回的 promise 会随着第一个 promise 的敲定而敲定。
 
 {{InteractiveExample("JavaScript Demo: Promise.race()", "taller")}}
@@ -231,7 +229,8 @@ setTimeout(() => {
 // { status: '已拒绝', reason: 300 }
 ```
 
-> **备注：** `promiseState` 函数仍然是异步执行的，因为没有办法同步地获取 Promise 的值（即不使用 `then()` 或 `await`），即使它已经敲定。但是，`promiseState()` 总是在一次事件循环内就会完成，并且实际上从不等待任何 Promise 的敲定。
+> [!NOTE]
+> `promiseState` 函数仍然是异步执行的，因为没有办法同步地获取 Promise 的值（即不使用 `then()` 或 `await`），即使它已经敲定。但是，`promiseState()` 总是在一次事件循环内就会完成，并且实际上从不等待任何 Promise 的敲定。
 
 ### 与 Promise.any() 的比较
 

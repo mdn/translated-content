@@ -778,7 +778,7 @@ textarea.onkeyup = () => {
 
 ## ¡Pon a prueba tus habilidades!
 
-Has llegado al final de este conjunto de tres artículos sobre elementos semánticos HTML básicos, pero ¿puedes recordar la información más importante? Puedes encontrar algunas pruebas adicionales para verificar que has retenido esta información antes de continuar — consulta [Pon a prueba tus habilidades: Fundamentos del texto HTML](/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics).
+Has llegado al final de este conjunto de tres artículos sobre elementos semánticos HTML básicos, pero ¿puedes recordar la información más importante? Puedes encontrar algunas pruebas adicionales para verificar que has retenido esta información antes de continuar — consulta [Pon a prueba tus habilidades: Fundamentos del texto HTML](/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics).
 
 ## Resumen
 

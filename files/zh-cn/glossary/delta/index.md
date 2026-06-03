@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fd4435ca55ff683dc8574b700ef244e75c2dfb52
 ---
 
-{{GlossarySidebar}}
-
 术语 **delta** 指两个值或状态之间的差异。
 
 这个名称来源于希腊字母 Δ（delta），相当于罗马字母中的 _D_。_delta_ 指的是用字母 Δ 作为*差异*的简写。

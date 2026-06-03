@@ -2,14 +2,12 @@
 title: "<br>: 改行要素"
 slug: Web/HTML/Reference/Elements/br
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 **`<br>`** は [HTML](/ja/docs/Web/HTML) の要素で、文中に改行（キャリッジリターン）を生成します。詩や住所など、行の分割が重要な場合に有用です。
 
-{{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;br&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>
@@ -54,7 +52,7 @@ p {
 
 ## アクセシビリティ
 
-段落間の間隔を広げるために連続した `<br>` 要素を使用することは、読み上げ技術の支援の下で操作をしている人にとっては問題になります。読み上げソフトは要素が存在することをアナウンスするものの、その中にはコンテンツが何もないという状況になる可能性があります。これは読み上げソフトを使用している人の利用を混乱させ不満をためる可能性があります。
+段落間の間隔を広げるために連続した `<br>` 要素を使用することは、読み上げ技術の支援の下で操作をしている人にとっては問題になります。スクリーンリーダーは要素が存在することをアナウンスするものの、その中にはコンテンツが何もないという状況になる可能性があります。これはスクリーンリーダーを使用している人の利用を混乱させ不満をためる可能性があります。
 
 追加の間隔をあける必要がある場合は、 {{cssxref("margin")}} のような CSS プロパティを使用して効果を得るようにしてください。
 
@@ -115,7 +113,7 @@ USA<br />
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>

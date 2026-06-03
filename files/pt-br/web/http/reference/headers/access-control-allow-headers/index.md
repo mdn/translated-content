@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta **`Access-Control-Allow-Headers`** é usado na resposta à uma {{glossary("preflight request")}} na qual incluí o cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}} para indicar quais cabeçalhos HTTP podem ser utilizados durante a requisição efetiva.
 
 Este cabeçalho é obrigatório se a requisição tem um cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}}.
@@ -17,7 +15,7 @@ Este cabeçalho é obrigatório se a requisição tem um cabeçalho {{HTTPHeader
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

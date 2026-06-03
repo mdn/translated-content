@@ -35,7 +35,7 @@ l10n:
 - {{domxref("SVGTransformList.removeItem", "removeItem()")}}
   - : リストから既存のアイテムを除去します。
 - {{domxref("SVGTransformList.appendItem", "appendItem()")}}
-  - : リストの末尾に新しいアイテムをを追加します。 `newItem` がすでにリスト内に存在する場合は、このリストに挿入される前に、以前のリストから除去されます。挿入されるアイテムはアイテムそのものであり、コピーではありません。
+  - : リストの末尾に新しいアイテムを追加します。 `newItem` がすでにリスト内に存在する場合は、このリストに挿入される前に、以前のリストから除去されます。挿入されるアイテムはアイテムそのものであり、コピーではありません。
 - {{domxref("SVGTransformList.createSVGTransformFromMatrix", "createSVGTransformFromMatrix()")}}
   - : `SVG_TRANSFORM_MATRIX` 型の変換に初期化され、その値が指定された行列である `SVGTransform` オブジェクトを作成します。引数行列の値はコピーされます。この行列引数は `SVGTransform::matrix` に取りつけられません。
 - {{domxref("SVGTransformList.consolidate", "consolidate()")}}

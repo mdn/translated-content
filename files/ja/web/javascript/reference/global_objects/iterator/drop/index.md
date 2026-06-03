@@ -1,11 +1,10 @@
 ---
 title: Iterator.prototype.drop()
+short-title: drop()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/drop
 l10n:
-  sourceCommit: 7df171ff1d6da6a5e3911b7aedd56f6312bf0cca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`drop()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、新しい[イテレーターヘルパーオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator#イテレーターヘルパーオブジェクト)を返します。これは、このイテレーターの開始位置から指定した数の要素を読み飛ばします。
 

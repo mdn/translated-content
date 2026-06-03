@@ -93,7 +93,7 @@ To add compatible `Object.entries` support in older environments that do not nat
 
 ## See also
 
-- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}} {{experimental_inline}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

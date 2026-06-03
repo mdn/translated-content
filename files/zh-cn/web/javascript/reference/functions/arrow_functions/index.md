@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
 ---
 
-{{jsSidebar("Functions")}}
-
 **箭头函数表达式**的语法比传统的[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)更简洁，但在语义上有一些差异，在用法上也有一些限制：
 
 - 箭头函数没有独立的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)、[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 和 [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) {{Glossary("binding", "绑定")}}，并且不可被用作[方法](/zh-CN/docs/Glossary/Method)。

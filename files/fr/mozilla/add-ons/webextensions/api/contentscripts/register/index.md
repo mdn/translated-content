@@ -22,14 +22,11 @@ var registering = browser.contentScripts.register(
 ### Paramètres
 
 - `contentScriptOptions`
-
   - : `object`. Un objet `RegisteredContentScriptOptions` représentant les scripts de contenu à enregistrer. Sa syntaxe est similaire à celle des objets du tableau de clés de manifest [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts). Les différences sont :
-
     - les noms de propriété utilisent camelCase plutôt que des traits de soulignement (par exemple, `excludeMatches`, pas `exclude_matches`
     - les propriétés `js` et `css` vous permettent d'enregistrer des chaînes ainsi que des URL, leur syntaxe doit donc distinguer ces types.
 
     L'objet `RegisteredContentScriptOptions` a les propriétés suivantes :
-
     - `allFrames`{{optional_inline}}
       - : Identique à `all_frames` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
     - `css`{{optional_inline}}

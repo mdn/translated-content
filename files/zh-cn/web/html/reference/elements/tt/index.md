@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<tt>`** [HTML](/zh-CN/docs/Web/HTML) 元素创建行级文本，该文本使用{{Glossary("user agent", "用户代理")}}默认的等宽字体。该元素用于将文本呈现在固定宽度的显示设备（如电传打字机、纯文本屏幕或行式打印机）上。
 

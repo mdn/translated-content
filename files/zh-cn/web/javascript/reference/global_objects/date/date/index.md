@@ -3,8 +3,6 @@ title: Date() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 ---
 
-{{JSRef}}
-
 **`Date()`** 构造函数可以创建一个 {{jsxref("Date")}} 实例或返回代表当前时间的字符串。
 
 {{InteractiveExample("JavaScript Demo: Date Constructor")}}
@@ -60,7 +58,6 @@ Date()
 #### 日期字符串
 
 - `dateString`
-
   - : 一个代表日期的字符串值，其格式由 {{jsxref("Date.parse()")}} 方法所识别。（ECMA262 规范规定了 [ISO 8601 的简化版本](https://tc39.es/ecma262/#sec-date-time-string-format)，但其他格式可以由实现者定义，通常包括[符合 IETF 的 RFC 2822 时间戳](https://datatracker.ietf.org/doc/html/rfc2822#page-14)。）
 
     > [!NOTE]

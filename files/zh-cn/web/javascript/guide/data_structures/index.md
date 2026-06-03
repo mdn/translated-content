@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
 ---
 
-{{jsSidebar("More")}}
-
 编程语言都有内置的数据结构，但各种编程语言的数据结构常有不同之处。本文尝试列出 JavaScript 语言中内置的数据结构及其属性。它们可以用来构建其他的数据结构。
 
 [语言概述](/zh-CN/docs/Web/JavaScript/Guide/Language_overview)对常见的数据类型提供了类似的总结，但是更倾向于和其他语言进行比较。

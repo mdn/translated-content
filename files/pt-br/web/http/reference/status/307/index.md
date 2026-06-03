@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/307
 original_slug: Web/HTTP/Status/307
 ---
 
-{{HTTPSidebar}}
-
 {{Glossary("HTTP")}} O código de estado **`307 Redirecionamento temporário`** indica que o recurso da requisição foi temporariamente alterado para a URL informada no cabeçalho {{HTTPHeader("Location")}}.
 
 O método e o corpo da requisição original são reutilizados para realizar a requisição de redirecionamento. Em casos onde você deseja que o método utilizado seja alterado para {{HTTPMethod("GET")}}, utilize o código de estado {{HTTPStatus("303", "303 See Other")}}. Isto é util quando você deseja dar uma resposta a um método {{HTTPMethod("PUT")}} que não seja o recurso enviado, mas uma mensagem de confirmação (como por exemplo "Envio de XYZ concluído com sucesso").

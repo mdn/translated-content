@@ -21,9 +21,7 @@ browser.alarms.clear(
 - `name`{{optional_inline}}
   - : `string`. 解除したいアラームの名前を指定します。指定しなかった場合は空文字列 "" が用いられます。
 - `callback`{{optional_inline}}
-
   - : `function`. この関数には以下の引数が渡されます。
-
     - `wasCleared`
       - : `boolean`. アラームが解除された場合は `true` が、それ以外の場合は `false` が入ります。
 

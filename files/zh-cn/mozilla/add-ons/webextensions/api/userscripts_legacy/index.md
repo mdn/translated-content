@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6b26a56826b43f539b79033378683bb3be5bbba9
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > 本文档针对旧版 `userScripts` API 编写，适用于 Firefox Manifest V2 版本。如希望在 Manifest V3 中使用用户脚本功能，可参见新的 {{WebExtAPIRef("userScripts")}} API。
 

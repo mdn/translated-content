@@ -150,7 +150,7 @@ console.log(nonenum_only);
 ## 같이 보기
 
 - `Object.getOwnPropertyNames` 의 폴리필 코드는 아래에서 확인 할 수 있습니다. [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

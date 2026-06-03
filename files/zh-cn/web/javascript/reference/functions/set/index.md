@@ -3,8 +3,6 @@ title: setter
 slug: Web/JavaScript/Reference/Functions/set
 ---
 
-{{jsSidebar("Functions")}}
-
 当尝试设置属性时，**`set`** 语法将对象属性绑定到要调用的函数。它还可以在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)中应用。
 
 {{InteractiveExample("JavaScript Demo: Functions Setter")}}

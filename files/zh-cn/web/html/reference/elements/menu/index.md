@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
-{{HTMLSidebar}}
-
 **`<menu>`** [HTML](/zh-CN/docs/Web/HTML) 元素在 HTML 规范中被描述为 {{HTMLElement("ul")}} 的语义替代，但浏览器将其视为与 {{HTMLElement("ul")}} 没有区别（并通过无障碍树暴露）。它表示一个无序列表（由 {{HTMLElement("li")}} 元素表示）。
 
 {{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}

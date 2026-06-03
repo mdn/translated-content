@@ -1,5 +1,6 @@
 ---
 title: "HTMLAreaElement: href プロパティ"
+short-title: href
 slug: Web/API/HTMLAreaElement/href
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
@@ -16,9 +17,9 @@ l10n:
 ## 例
 
 ```js
-// <area id="myArea" href="https://developer.mozilla.org/en-US/HTMLAreaElement"> 要素が文書にあったとします
+// <area id="myArea" href="https://developer.mozilla.org/ja/HTMLAreaElement"> 要素が文書にあったとします
 const area = document.getElementById("myArea");
-area.href; // 'https://developer.mozilla.org/en-US/HTMLAreaElement' を返す
+area.href; // 'https://developer.mozilla.org/ja/HTMLAreaElement' を返す
 ```
 
 ## 仕様書

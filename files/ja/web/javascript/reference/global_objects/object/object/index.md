@@ -1,11 +1,10 @@
 ---
 title: Object() コンストラクター
+short-title: Object()
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 l10n:
-  sourceCommit: 688f606b78fb7e375e5680cc1ae49c5b9d0bc0ea
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Object()`** コンストラクターは、入力されたものをオブジェクトに変換します。その動作は入力したものの型によって異なります。
 
@@ -19,7 +18,8 @@ Object()
 Object(value)
 ```
 
-> **メモ:** `Object()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてもつけなくても呼び出すことができますが、一部の効果が異なることがあります。[返値](#返値)を参照してください。
+> [!NOTE]
+> `Object()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてもつけなくても呼び出すことができますが、効果が異なることがあります。[返値](#返値)を参照してください。
 
 ### 引数
 
@@ -28,7 +28,7 @@ Object(value)
 
 ### 返値
 
-`Object()` コンストラクター自体がが呼び出された場合や構築された場合、返値はオブジェクトになります。
+`Object()` コンストラクター自体が呼び出された場合や構築された場合、返値はオブジェクトになります。
 
 - 値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{jsxref("undefined")}} の場合は、空のオブジェクトを作成して返します。
 - 値がすでにオブジェクトである場合は、その値を返します。

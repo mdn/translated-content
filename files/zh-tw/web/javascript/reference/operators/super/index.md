@@ -3,8 +3,6 @@ title: super
 slug: Web/JavaScript/Reference/Operators/super
 ---
 
-{{jsSidebar("Operators")}}
-
 super 關鍵字被使用於通過函式存取父層
 
 `super.prop` 與 `super[expr]` 表達有效在 [method definition](/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions) 與 [classes](/zh-TW/docs/Web/JavaScript/Reference/Classes) 與 [object literals](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer).

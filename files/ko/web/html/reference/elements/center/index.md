@@ -4,7 +4,7 @@ slug: Web/HTML/Reference/Elements/center
 original_slug: Web/HTML/Element/center
 ---
 
-{{deprecated_header()}}
+{{deprecated_header}}
 
 ## 개요
 
@@ -16,7 +16,8 @@ original_slug: Web/HTML/Element/center
 
 이 요소는 {{domxref("HTMLElement")}} 인터페이스를 구현합니다.
 
-> **참고:** **Implementation note:** up to Gecko 1.9.2 inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.
+> [!NOTE]
+> **Implementation note:** up to Gecko 1.9.2 inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.
 
 ## 예제 1
 

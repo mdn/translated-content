@@ -64,6 +64,5 @@ button.onauxclick = function () {
 
 - `auxclick` event
 - Related event handlers
-
   - {{domxref("GlobalEventHandlers.onclick")}}
   - {{domxref("GlobalEventHandlers.ondblclick")}}

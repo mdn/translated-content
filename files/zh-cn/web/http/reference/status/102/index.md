@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 67a409e7944352612272e095a26bf325ecfae822
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 HTTP **`102 Processing`** [信息响应](/zh-CN/docs/Web/HTTP/Reference/Status#信息响应)状态码用于告知客户端已接收到完整的请求，并且服务器正在处理中。此状态码仅在服务器预期该请求将耗费较长时间处理时才会发送。
 

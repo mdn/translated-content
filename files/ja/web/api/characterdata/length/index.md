@@ -15,7 +15,8 @@ l10n:
 
 ## 例
 
-> **メモ:** {{domxref("CharacterData")}} は抽象インターフェイスです。
+> [!NOTE]
+> {{domxref("CharacterData")}} は抽象インターフェイスです。
 > 以下の例ではそれを実装した具象インターフェイスの一つである {{domxref("Text")}} を使用しています。
 
 ```html

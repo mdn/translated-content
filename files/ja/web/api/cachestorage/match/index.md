@@ -14,7 +14,8 @@ l10n:
 
 `Cache` オブジェクトは作成順に検索されます。
 
-> **メモ:** {{domxref("CacheStorage.match()", "caches.match()")}} は便利なメソッドです。
+> [!NOTE]
+> {{domxref("CacheStorage.match()", "caches.match()")}} は便利なメソッドです。
 > 各キャッシュに対して（{{domxref("CacheStorage.keys()", "caches.keys()")}} によって返される順序で）、{{domxref("Response")}} が返されるまで {{domxref("cache.match()")}} を呼び出すのと同等の機能です。
 
 ## 構文
@@ -29,9 +30,7 @@ match(request, options)
 - `request`
   - : 照合したい {{domxref("Request")}}。 これは、{{domxref("Request")}} オブジェクトまたは URL 文字列にすることができます。
 - `options` {{optional_inline}}
-
   - : `match` 操作での照合方法を制御するプロパティを持つオブジェクト。 利用可能なオプションは次のとおりです。
-
     - `ignoreSearch`
       - : 論理値で、照合処理が URL のクエリー文字列を無視するかどうかを指定します。例えば、`true` に設定すると、 `http://foo.com/?value=bar` の `?value=bar` 部分は、照合するときに無視されます。
         既定値は `false` です。

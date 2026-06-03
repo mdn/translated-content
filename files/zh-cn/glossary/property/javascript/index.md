@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **JavaScript 属性**是一个[对象](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#object)的成员，它将键与值联系起来。JavaScript 对象是一种数据结构，它存储了属性的集合。
 
 属性包含以下组成部分：

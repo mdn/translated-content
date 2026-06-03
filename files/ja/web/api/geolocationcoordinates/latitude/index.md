@@ -3,12 +3,12 @@ title: "GeolocationCoordinates: latitude プロパティ"
 short-title: latitude
 slug: Web/API/GeolocationCoordinates/latitude
 l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+  sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`GeolocationCoordinates.latitude`** は読み取り専用のプロパティであり、 `double` 値でその位置の緯度を 10 進形式で表します。
+**`latitude`** は {{domxref("GeolocationCoordinates")}} インターフェイスの読み取り専用プロパティであり、 `double` 値でその位置の緯度を 10 進形式で表します。
 
 ## 値
 

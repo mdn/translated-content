@@ -3,8 +3,6 @@ title: 可選串連
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
 
-{{JSSidebar("Operators")}}
-
 **可選串連**運算子 **`?.`** 允許進行深層次的物件值存取，而無需透過明確的物件值串連驗證。`?.` 運算子的操作與 `.` 屬性存取運算子相似，後者會在參照到 [nullish](/zh-TW/docs/Glossary/nullish) ({{JSxRef("null")}} or {{JSxRef("undefined")}}) 的值時出現錯誤，而前者可選串連則回傳 `undefined` 。 當需要存取一個函數，而這函數並不存在時，則會回傳 `undefined` 。
 
 當有機會存在參照不存在的時候，可選串連可以提供更簡短的表述式來進行串連性的屬性存取。這有助於在無法保證物件屬性為必要存在的狀況下，進行物件內容的探索。

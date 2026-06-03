@@ -6,19 +6,19 @@ original_slug: Web/HTML/Attributes/multiple
 
 {{HTMLSidebar}}
 
-El atributo booleano [`multiple`](/es/docs/Web/HTML/Element/input#multiple), si se establece, significa que el control del formulario acepta uno o más valores. Válido para los {{HTMLElement("input")}}s de tipo {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/file", "file")}} y {{HTMLElement("select")}}, la forma en que el usuario opta por valores múltiples depende del control del formulario.
+El atributo booleano [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple), si se establece, significa que el control del formulario acepta uno o más valores. Válido para los {{HTMLElement("input")}}s de tipo {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/file", "file")}} y {{HTMLElement("select")}}, la forma en que el usuario opta por valores múltiples depende del control del formulario.
 
-Dependiendo del tipo, el control de formulario puede tener una apariencia diferente si se establece el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple). Para el {{HTMLElement("input")}} de tipo `file`, la mensajería nativa que proporciona el navegador es diferente. En Firefox, el {{HTMLElement("input")}} de tipo `file` dice "Ningún archivo seleccionado" cuando el atributo está presente y "Ningún archivo seleccionado", cuando no hay archivo seleccionado. La mayoría de los navegadores muestran un cuadro de lista de desplazamiento para un control {{HTMLElement("select")}} con el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) establecido frente a un menú desplegable de una sola línea cuando se omite el atributo. El {{HTMLElement("input")}} {{HTMLElement("input/email", "email")}} muestra lo mismo, pero coincidirá con la pseudoclase {{CSSxRef(':invalid')}} si hay más de una dirección de correo electrónico separada por comas incluido si el atributo no está presente.
+Dependiendo del tipo, el control de formulario puede tener una apariencia diferente si se establece el atributo [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple). Para el {{HTMLElement("input")}} de tipo `file`, la mensajería nativa que proporciona el navegador es diferente. En Firefox, el {{HTMLElement("input")}} de tipo `file` dice "Ningún archivo seleccionado" cuando el atributo está presente y "Ningún archivo seleccionado", cuando no hay archivo seleccionado. La mayoría de los navegadores muestran un cuadro de lista de desplazamiento para un control {{HTMLElement("select")}} con el atributo [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple) establecido frente a un menú desplegable de una sola línea cuando se omite el atributo. El {{HTMLElement("input")}} {{HTMLElement("input/email", "email")}} muestra lo mismo, pero coincidirá con la pseudoclase {{CSSxRef(':invalid')}} si hay más de una dirección de correo electrónico separada por comas incluido si el atributo no está presente.
 
-Cuando se establece [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el tipo de entrada {{HTMLElement("input/email", "email")}}, el usuario puede incluir cero (si no es [required](/es/docs/Web/HTML/Attributes/required) también), una o más direcciones de correo electrónico separadas por comas.
+Cuando se establece [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple) en el tipo de entrada {{HTMLElement("input/email", "email")}}, el usuario puede incluir cero (si no es [required](/es/docs/Web/HTML/Attributes/required) también), una o más direcciones de correo electrónico separadas por comas.
 
 ```html
 <input type="email" multiple name="emails" id="emails" />
 ```
 
-Si y solo si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple), el valor puede ser una lista de direcciones de correo electrónico separadas por comas y formadas correctamente. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista.
+Si y solo si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple), el valor puede ser una lista de direcciones de correo electrónico separadas por comas y formadas correctamente. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista.
 
-Cuando se establece [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el tipo de entrada {{HTMLElement("input/file", "file")}}, el usuario puede seleccionar uno o más archivos. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic).
+Cuando se establece [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple) en el tipo de entrada {{HTMLElement("input/file", "file")}}, el usuario puede seleccionar uno o más archivos. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic).
 
 ```html
 <input type="file" multiple name="uploads" id="uploads" />
@@ -26,7 +26,7 @@ Cuando se establece [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el
 
 Cuando se omite el atributo, el usuario solo puede seleccionar un único archivo por {{HTMLElement("input")}}.
 
-El atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el elemento {{HTMLElement("select")}} representa un control para seleccionar cero o más opciones de la lista. De lo contrario, el elemento {{HTMLElement("select")}} representa un control para seleccionar una única {{HTMLElement("option")}} de la lista de opciones.
+El atributo [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple) en el elemento {{HTMLElement("select")}} representa un control para seleccionar cero o más opciones de la lista. De lo contrario, el elemento {{HTMLElement("select")}} representa un control para seleccionar una única {{HTMLElement("option")}} de la lista de opciones.
 
 ```html
 <select multiple name="drawfs" id="drawfs">
@@ -40,7 +40,7 @@ El atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el element
 </select>
 ```
 
-Cuando se especifica [`multiple`](/es/docs/Web/HTML/Element/input#multiple), la mayoría de los navegadores mostrarán un cuadro de lista de desplazamiento en lugar de un menú desplegable de una sola línea.
+Cuando se especifica [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple), la mayoría de los navegadores mostrarán un cuadro de lista de desplazamiento en lugar de un menú desplegable de una sola línea.
 
 ## Ejemplos
 
@@ -74,7 +74,7 @@ input:invalid {
 }
 ```
 
-Si y solo si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple), el valor puede ser una lista de direcciones de correo electrónico separadas por comas y formadas correctamente. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista. Si el atributo [required](/es/docs/Web/HTML/Attributes/required) está presente, se requiere al menos una dirección de correo electrónico.
+Si y solo si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple), el valor puede ser una lista de direcciones de correo electrónico separadas por comas y formadas correctamente. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista. Si el atributo [required](/es/docs/Web/HTML/Attributes/required) está presente, se requiere al menos una dirección de correo electrónico.
 
 Algunos navegadores admiten la aparición de la [lista](/es/docs/Web/HTML/Attributes/list) de opciones del {{HTMLElement('datalist')}} para direcciones de correo electrónico posteriores cuando haya varias. Otros no lo hacen.
 
@@ -82,7 +82,7 @@ Algunos navegadores admiten la aparición de la [lista](/es/docs/Web/HTML/Attrib
 
 ### `input` de tipo `file`
 
-Cuando se establece [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el {{HTMLElement("input")}} de tipo {{HTMLElement("input/file", "file")}}, el usuario puede seleccionar uno o más archivos:
+Cuando se establece [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple) en el {{HTMLElement("input")}} de tipo {{HTMLElement("input/file", "file")}}, el usuario puede seleccionar uno o más archivos:
 
 ```html
 <form method="post" enctype="multipart/form-data">
@@ -107,13 +107,13 @@ Cuando se establece [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el
 
 {{EmbedLiveSample("input_de_tipo_file", 600, 80) }}
 
-Nota la diferencia en la apariencia entre el ejemplo con [`multiple`](/es/docs/Web/HTML/Element/input#multiple) establecido y el otro {{HTMLElement("input")}} sin `file`.
+Nota la diferencia en la apariencia entre el ejemplo con [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple) establecido y el otro {{HTMLElement("input")}} sin `file`.
 
-Cuando se envía el formulario, utilizas el [method='get'](/es/docs/Web/HTML/Element/form) el nombre de cada archivo seleccionado se habría agregado a los parámetros de la URL como `?uploads=img1.jpg&uploads=img2.svg`. Sin embargo, dado que estamos asumiendo datos de formularios de [multipart](/es/docs/Web/API/XMLHttpRequest/multipart), usamos mucho el `post`. Consulta el elemento {{HTMLElement('form')}} y [envío de datos del formulario](/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#the_method_attribute) para obtener más información.
+Cuando se envía el formulario, utilizas el [method='get'](/es/docs/Web/HTML/Reference/Elements/form) el nombre de cada archivo seleccionado se habría agregado a los parámetros de la URL como `?uploads=img1.jpg&uploads=img2.svg`. Sin embargo, dado que estamos asumiendo datos de formularios de [multipart](/es/docs/Web/API/XMLHttpRequest/multipart), usamos mucho el `post`. Consulta el elemento {{HTMLElement('form')}} y [envío de datos del formulario](/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#the_method_attribute) para obtener más información.
 
 ### `select`
 
-El atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el elemento {{HTMLElement("select")}} representa un control para seleccionar cero o más opciones de la lista. De lo contrario, el elemento {{HTMLElement("select")}} representa un control para seleccionar una única {{HTMLElement("option")}} de la lista de opciones. El control generalmente tiene una apariencia diferente en función de la presencia del atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple), y la mayoría de los navegadores muestran un cuadro de lista de desplazamiento en lugar de una lista desplegable de una sola línea cuando el atributo está presente.
+El atributo [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple) en el elemento {{HTMLElement("select")}} representa un control para seleccionar cero o más opciones de la lista. De lo contrario, el elemento {{HTMLElement("select")}} representa un control para seleccionar una única {{HTMLElement("option")}} de la lista de opciones. El control generalmente tiene una apariencia diferente en función de la presencia del atributo [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple), y la mayoría de los navegadores muestran un cuadro de lista de desplazamiento en lugar de una lista desplegable de una sola línea cuando el atributo está presente.
 
 ```html
 <form method="get" action="#">
@@ -166,7 +166,7 @@ select[multiple]:active {
 */
 ```
 
-Hay varias formas de seleccionar varias opciones en un elemento `<select>` con un atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple). Dependiendo del sistema operativo, los usuarios del ratón pueden mantener presionadas las teclas <kbd>Ctrl</kbd>, <kbd>Comando</kbd> o <kbd>Mayús</kbd> y luego hacer clic en varias opciones para seleccionarlas o deseleccionarlas. Los usuarios de teclado pueden seleccionar varios elementos contiguos centrándose en el elemento `<select>`, seleccionando un elemento en la parte superior o inferior del rango que desean seleccionar usando <kbd>Arriba</kbd> y <kbd>Teclas del cursor hacia abajo</kbd> para subir y bajar las opciones. La selección de elementos no contiguos no es tan compatible: los elementos se deben poder seleccionar y deseleccionar presionando <kbd>Espacio</kbd>, pero el soporte varía entre los navegadores.
+Hay varias formas de seleccionar varias opciones en un elemento `<select>` con un atributo [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple). Dependiendo del sistema operativo, los usuarios del ratón pueden mantener presionadas las teclas <kbd>Ctrl</kbd>, <kbd>Comando</kbd> o <kbd>Mayús</kbd> y luego hacer clic en varias opciones para seleccionarlas o deseleccionarlas. Los usuarios de teclado pueden seleccionar varios elementos contiguos centrándose en el elemento `<select>`, seleccionando un elemento en la parte superior o inferior del rango que desean seleccionar usando <kbd>Arriba</kbd> y <kbd>Teclas del cursor hacia abajo</kbd> para subir y bajar las opciones. La selección de elementos no contiguos no es tan compatible: los elementos se deben poder seleccionar y deseleccionar presionando <kbd>Espacio</kbd>, pero el soporte varía entre los navegadores.
 
 ## Especificaciones
 
@@ -174,7 +174,7 @@ Hay varias formas de seleccionar varias opciones en un elemento `<select>` con u
 
 ## Problemas de accesibilidad
 
-Proporciona instrucciones para ayudar a los usuarios a comprender cómo completar el formulario y utilizar controles de formulario individuales. Indica cualquier entrada requerida y opcional, formatos de datos y otra información relevante. Cuando utilices el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple), informa al usuario que se permiten múltiples valores y proporciona instrucciones sobre cómo proveer más valores, como "direcciones de correo electrónico separadas con una coma".
+Proporciona instrucciones para ayudar a los usuarios a comprender cómo completar el formulario y utilizar controles de formulario individuales. Indica cualquier entrada requerida y opcional, formatos de datos y otra información relevante. Cuando utilices el atributo [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple), informa al usuario que se permiten múltiples valores y proporciona instrucciones sobre cómo proveer más valores, como "direcciones de correo electrónico separadas con una coma".
 
 Configurar [size](/es/docs/Web/HTML/Attributes/size) `="1"` en una selección múltiple puedes hacer que aparezca como una única selección en algunos navegadores, pero luego no se expande en el enfoque, lo que perjudica la usabilidad. No hagas eso. Si cambias la apariencia de un `select`, e incluso si no lo haces, asegúrate de informar al usuario que se puede seleccionar más de una opción mediante otro método.
 
@@ -182,4 +182,4 @@ Configurar [size](/es/docs/Web/HTML/Attributes/size) `="1"` en una selección m�
 
 - {{HTMLElement('input')}}
 - {{htmlelement('select')}}
-- [Permitir varias direcciones de correo electrónico](/es/docs/Web/HTML/Element/input/email#allowing_multiple_e-mail_addresses)
+- [Permitir varias direcciones de correo electrónico](/es/docs/Web/HTML/Reference/Elements/input/email#allowing_multiple_e-mail_addresses)

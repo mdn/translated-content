@@ -3,8 +3,6 @@ title: Desarrollo de Videojuegos
 slug: Games
 ---
 
-{{GamesSidebar}}
-
 ## Introducción de los juegos para la Web
 
 Jugar es una de las actividades más populares en las computadoras. Constantemente aparecen nuevas tecnologías para desarrollar juegos mejores y más potentes que pueden iniciarse en cualquier navegador web compatible con los estándares.

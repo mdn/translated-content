@@ -1,12 +1,11 @@
 ---
 title: Express ウェブフレームワーク (Node.js/JavaScript)
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs
-original_slug: Learn/Server-side/Express_Nodejs
 l10n:
-  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
+  sourceCommit: 8443cb34d9944d8eb8e2c5add598bec26ed6d21f
 ---
 
-{{LearnSidebar}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side")}}
 
 Express は、JavaScript で書かれ、Node.js 実行環境内でホストされている、人気の指図しないウェブフレームワークです。このモジュールでは、このフレームワークの主な利点、開発環境の設定方法、一般的なウェブ開発と配置作業の実行方法について説明します。
 
@@ -17,7 +16,7 @@ Express は、JavaScript で書かれ、Node.js 実行環境内でホストさ�
 > [!NOTE]
 > このウェブサイトには、クライアントサイド開発のコンテキストで JavaScript を学習するための多くの有用なリソースがあります。[JavaScript](/ja/docs/Web/JavaScript)、[JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)、[JavaScript の基本](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)、[JavaScript](/ja/docs/Learn_web_development/Core/Scripting)(学習)。JavaScript のコアとなる言語と概念は、Node.js でのサーバーサイド開発と同じであり、この資料は関連性があります。Node.js は、ブラウザーレス環境で役立つ機能をサポートするための[追加の API](https://nodejs.org/dist/latest-v10.x/docs/api/) を提供します (たとえば、HTTP サーバーを作成してファイルシステムにアクセスするため。ただし、ブラウザーおよび DOM を操作するための JavaScript API はサポートしません)。
 >
-> このガイドは Node.js と Express を使った作業についての情報を提供します。インターネットや本には他にもたくさんの優れたリソースがあります。これらのうち一部は [How do I get started with Node.js](https://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js/5511507) (StackOverflow) と [What are the best resources for learning Node.js?](https://www.quora.com/What-is-the-greatest-resource-for-learning-Node-js-for-a-newbie) (Quora) からリンクされています。
+> このガイドは Node.js と Express を使った作業についての情報を提供します。インターネットや本には他にもたくさんの優れたリソースがあります。これらのうち一部は [How do I get started with Node.js](https://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js/5511507) (Stack Overflow) と [What are the best resources for learning Node.js?](https://www.quora.com/What-is-the-greatest-resource-for-learning-Node-js-for-a-newbie) (Quora) からリンクされています。
 
 ## ガイド
 
@@ -51,3 +50,5 @@ Express は、JavaScript で書かれ、Node.js 実行環境内でホストさ�
 - Express ウェブアプリケーションのウェブセキュリティ
 
 そしてもちろん、評価作業を行うのは素晴らしいことです。
+
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side")}}

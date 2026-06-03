@@ -10,7 +10,8 @@ l10n:
 
 `createBufferSource()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、新しい {{ domxref("AudioBufferSourceNode") }} を作成するために使用します。これは {{ domxref("AudioBuffer") }} オブジェクトに含まれる音声データを再生するために使用されます。 {{domxref("AudioBuffer")}} は {{domxref("BaseAudioContext.createBuffer")}} で生成さされたり、音声トラックのデコードに成功したときに {{domxref("BaseAudioContext.decodeAudioData")}} から返されたりします。
 
-> **メモ:** {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}} コンストラクターは、 {{domxref("AudioBufferSourceNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> [!NOTE]
+> {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}} コンストラクターは、 {{domxref("AudioBufferSourceNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 
@@ -30,7 +31,8 @@ createBufferSource()
 
 この例では、 2 秒間のバッファーを作成してホワイトノイズで満たし、 {{ domxref("AudioBufferSourceNode") }} で再生しています。コメントでは、何が起こっているのかを簡単に説明しています。
 
-> **メモ:** [コードをライブで実行](https://mdn.github.io/webaudio-examples/audio-buffer/)したり、[ソースを閲覧](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html)したりすることもできます。
+> [!NOTE]
+> [コードをライブで実行](https://mdn.github.io/webaudio-examples/audio-buffer/)したり、[ソースを閲覧](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html)したりすることもできます。
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();

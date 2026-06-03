@@ -13,7 +13,8 @@ slug: Web/API/Element/input_event
 
 {{htmlelement("textarea")}}와 텍스트 입력을 허용하는 {{htmlelement("input")}}(`type=text`, `type=tel`, ...)에서의 이벤트 인터페이스는 {{domxref("InputEvent")}}고, 나머지 요소에서는 {{domxref("Event")}}입니다.
 
-> **참고:** `input` 이벤트는 요소의 `value`가 변할 때마다 발생합니다. {{domxref("HTMLElement/change_event", "change")}} 이벤트는 엔터 키를 누르거나 리스트에서 옵션을 선택하는 등 변경점을 '반영'해야 발생한다는 점에서 다릅니다.
+> [!NOTE]
+> `input` 이벤트는 요소의 `value`가 변할 때마다 발생합니다. {{domxref("HTMLElement/change_event", "change")}} 이벤트는 엔터 키를 누르거나 리스트에서 옵션을 선택하는 등 변경점을 '반영'해야 발생한다는 점에서 다릅니다.
 
 ## 구문
 
@@ -68,7 +69,6 @@ function updateValue(e) {
 ## 같이 보기
 
 - 관련 이벤트
-
   - {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}
   - {{domxref("HTMLElement/change_event", "change")}}
   - {{domxref("HTMLInputElement/invalid_event", "invalid")}}

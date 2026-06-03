@@ -3,8 +3,6 @@ title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
 
-{{JSRef}}
-
 {{jsxref("Set")}} 实例的 **`clear()`** 方法移除该集合中的所有元素。
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.clear()")}}

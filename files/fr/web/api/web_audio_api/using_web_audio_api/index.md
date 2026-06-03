@@ -7,7 +7,7 @@ slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 
 La [Web Audio API](/fr/docs/Web/API/Web_Audio_API) offre un méchanisme à la fois simple et puissant pour implémenter et manipuler le contenu audio dans une application web. Elle permet de manipuler mixages audio, effets, balance, etc. Cet article donne les bases pour l'utiliser, à travers quelques exemples simples.
 
-La Web Audio API ne vient pas remplacer l'élément [\<audio>](/fr/docs/Web/HTML/Element/audio), mais plutôt le compléter, de même que l'API Canvas 2D coexiste avec l'élément [\<video>](/fr/docs/Web/HTML/Element/img). Si vous avez seulement besoin de contrôler la lecture d'un fichier audio, \<audio> est probablement une meilleure solution, plus rapide. Si vous voulez procéder à un traitement audio plus complexe et à la lecture d'une source, la Web Audio API offre davantage de possibilités en termes de puissance et de contrôle.
+La Web Audio API ne vient pas remplacer l'élément [\<audio>](/fr/docs/Web/HTML/Reference/Elements/audio), mais plutôt le compléter, de même que l'API Canvas 2D coexiste avec l'élément [\<video>](/fr/docs/Web/HTML/Reference/Elements/img). Si vous avez seulement besoin de contrôler la lecture d'un fichier audio, \<audio> est probablement une meilleure solution, plus rapide. Si vous voulez procéder à un traitement audio plus complexe et à la lecture d'une source, la Web Audio API offre davantage de possibilités en termes de puissance et de contrôle.
 
 L'une des particularités de la Web Audio API est qu'elle n'a pas de limites au niveau de la programmation du son. Par exemple, le nombre de sons que l'on peut appeler en même temps n'est pas plafonnée. Certains processeurs sont potentiellement capables de jouer plus d'un millier de sons simultanément sans saccades.
 

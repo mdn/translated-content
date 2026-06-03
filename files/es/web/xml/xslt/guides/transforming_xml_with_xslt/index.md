@@ -115,7 +115,6 @@ El segundo tipo de hojas de transformación que soporta Gecko son las hojas de e
 
 - [Libros](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Libros)
 - [Online](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Online)
-
   - [El Consorcio del amplio mundo de la Web](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#El_Consorcio_del_Mundo_de_la_Web)
   - [Portales](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Portales)
   - [Artículos](/es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Art.C3.ADculos)

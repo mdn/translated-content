@@ -20,17 +20,13 @@ new Request(input, options)
 ### 引数
 
 - `input`
-
   - : 取得したいリソースを定義します。次のいずれかの値を取ります。
-
     - 取得したいリソースの URL の入った文字列。 URL は、ベース URL に対する相対 URL である可能性があります。ベース URL とは、ウィンドウコンテキストでは文書内の {{domxref("Node.baseURI", "baseURI")}}、ワーカーコンテキストでは {{domxref("WorkerGlobalScope.location")}} です。
     - 効率的にコピーを作成するための {{domxref("Request")}} オブジェクト。なお、コンストラクターが例外を発生させる可能性を下げるため、セキュリティーを保持するための以下の動作上の更新に注意してください。
-
       - このオブジェクトがコンストラクターの呼び出しとは別のオリジンに存在する場合、 {{domxref("Request.referrer")}} が削除されます。
       - このオブジェクトの {{domxref("Request.mode")}} が `navigate` である場合、 `mode` の値が `same-origin` に変換されます。
 
 - `options` {{optional_inline}}
-
   - : リクエストに適用したいカスタム設定が含まれている {{domxref("RequestInit")}} オブジェクトです。
 
     既存の `Request` から新しい `Request` を作成する場合、新しいリクエストの _options_ 引数に設定したオプションは、元の `Request` に設定された対応するオプションを置き換えます。例えば次の通りです。

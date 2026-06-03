@@ -15,7 +15,7 @@ l10n:
 
 ## バナーマクロを追加する場所
 
-バナーは通常、ページのメタデータのすぐ下に挿入され、ページサイドバーのマクロの横に並んだマクロを使用して追加されます。例えば、下記ブロックでは、 `\{{SecureContext_Header}}` マクロが使用されており、 {{domxref("AudioDecoder")}} インターフェイスが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用できることを示しています。また、 `\{{AvailableInWorkers}}` マクロが使用されており、 {{domxref("AudioDecoder")}} インターフェイスが[ウィンドウコンテキスト](/ja/docs/Web/API/Window)および[専用ワーカーコンテキスト](/ja/docs/Web/API/DedicatedWorkerGlobalScope)でのみ利用できることを示しています。さらに、 `\{{SeeCompatTable}}` が追加されており、このインターフェイスが実験的なものであることを示しています。
+バナーは通常、ページのメタデータのすぐ下に挿入され、ページサイドバーのマクロの横に並んだマクロを使用して追加されます。例えば、下記ブロックでは、 `\{{SecureContext_Header}}` マクロが使用されており、 {{domxref("AudioDecoder")}} インターフェイスが[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用できることを示しています。また、 `\{{AvailableInWorkers}}` マクロが使用されており、 {{domxref("AudioDecoder")}} インターフェイスが[ウィンドウコンテキスト](/ja/docs/Web/API/Window)および[専用ワーカーコンテキスト](/ja/docs/Web/API/DedicatedWorkerGlobalScope)でのみ利用できることを示しています。さらに、 `\{{SeeCompatTable}}` が追加されており、このインターフェイスが実験的なものであることを示しています。
 
 ```md
 ---
@@ -34,7 +34,7 @@ browser-compat: api.AudioDecoder
 
 以下のマクロは手動で追加する必要があります。
 
-- `\{{SecureContext_Header}}` — これは「**保護されたコンテキスト**」バナーを生成して、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用可能なことを示します。
+- `\{{SecureContext_Header}}` — これは「**保護されたコンテキスト**」バナーを生成して、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用可能なことを示します。
 - `\{{AvailableInWorkers}}` — これによって、「**ワーカーで利用できる**」というメモが生成され、その技術が[ワーカーのコンテキスト](/ja/docs/Web/API/Web_Workers_API)で利用できることを示します。
 
 ## 自動的に追加されるバナー
@@ -50,7 +50,8 @@ browser-compat: api.AudioDecoder
 > [!NOTE]
 > コンテンツ内でこれらのマクロを手動で更新することはできますが、ブラウザー互換性データと一致しない値は置き換えられたり除去されたりします。
 
-> **メモ:** `\{{SeeCompatTable}}`、`\{{Deprecated_Header}}`、`\{{Non-standard_Header}}` のバナーがあるページは、ページメタデータにそれぞれ `experimental`、`deprecated`、`non-standard` のステータス値があります。
+> [!NOTE]
+> `\{{SeeCompatTable}}`、`\{{Deprecated_Header}}`、`\{{Non-standard_Header}}` のバナーがあるページは、ページメタデータにそれぞれ `experimental`、`deprecated`、`non-standard` のステータス値があります。
 > このメタデータは、ヘッダーと同じときに自動的に更新されます。
 > バナーマクロはこのステータスメタデータには依存しません（しかし、いつか生成されるかもしれません）。
 
@@ -72,4 +73,5 @@ browser-compat: api.AudioDecoder
 
 - 上記バナーと同じページに、標準の「仕様書」の下位セクションとして「規格の状況」を追加します。
 
-> **メモ:** [Related Website Sets](/ja/docs/Web/API/Storage_Access_API/Related_website_sets) がランディングページのバナー、「規格の状況」セクション、何を記述べきかという例になります。
+> [!NOTE]
+> [Related Website Sets](/ja/docs/Web/API/Storage_Access_API/Related_website_sets) がランディングページのバナー、「規格の状況」セクション、何を記述べきかという例になります。

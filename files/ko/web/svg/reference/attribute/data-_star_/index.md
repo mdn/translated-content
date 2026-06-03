@@ -16,7 +16,8 @@ l10n:
 - 세미콜론 (`;`, `U+003A`) 이 허용되지 않습니다.
 - 대문자 `A` 부터 `Z` 는 사용하지 않습니다.
 
-> **참고:** {{domxref("SVGElement.dataset")}} 속성은 `SVGElement.dataset.testValue` 를 통해 `data-test-value` 특성을 제공하는 {{domxref("DOMStringMap")}} 속성입니다. 하이픈 문자 (`-`, `U+002D`) 는 제거되고 다음 문자는 대문자로 변환되며, {{Glossary("camel_case", "카멜 케이스")}} 형식이 됩니다.
+> [!NOTE]
+> {{domxref("SVGElement.dataset")}} 속성은 `SVGElement.dataset.testValue` 를 통해 `data-test-value` 특성을 제공하는 {{domxref("DOMStringMap")}} 속성입니다. 하이픈 문자 (`-`, `U+002D`) 는 제거되고 다음 문자는 대문자로 변환되며, {{Glossary("camel_case", "카멜 케이스")}} 형식이 됩니다.
 
 이 특성은 어느 SVG 요소에도 적용 가능합니다.
 
@@ -32,4 +33,4 @@ l10n:
 
 - {{domxref("SVGElement")}}
 - {{domxref("SVGElement.dataset")}} 속성은 스크립트에서 이러한 특성들로 접근할 때 사용됩니다.
-- [데이터 특성 사용하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [데이터 특성 사용하기](/ko/docs/Web/HTML/How_to/Use_data_attributes)

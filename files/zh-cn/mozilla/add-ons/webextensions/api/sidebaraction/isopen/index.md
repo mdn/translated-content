@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 在给定窗口中侧边栏打开的情况下返回 `true`。
 
 此函数接受一个 `windowId` 作为参数：
@@ -27,9 +25,7 @@ let gettingIsOpen = browser.sidebarAction.isOpen(
 ### 参数
 
 - `details`
-
   - : `object`。一个对象，可选地包含要检查的 `windowId` 属性。
-
     - `windowId` {{optional_inline}}
       - : `integer`。要检查的浏览器窗口的 ID。如果省略，则默认为 {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}，它引用最顶层的浏览器窗口。
 

@@ -25,4 +25,4 @@ CSS の **論理的プロパティ** は、ビューポートの物理的な次�
 
 ## 関連情報
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュール
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュール

@@ -3,8 +3,6 @@ title: <pre>
 slug: Web/HTML/Reference/Elements/pre
 ---
 
-{{HTMLSidebar}}
-
 **HTML \<pre>** 元素表示预定义格式文本。在该元素中的文本通常按照原文件中的编排，以等宽字体的形式展现出来，文本中的空白符（比如空格和换行符）都会显示出来。(紧跟在 \<pre> 开始标签后的换行符也会被省略)
 
 {{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
@@ -43,12 +41,12 @@ pre {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">内容类别</a></th>
-   <td>流内容 ( <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>) , 可触知的内容 (palpable content).</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类别</a></th>
+   <td>流内容 ( <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>) , 可触知的内容 (palpable content).</td>
   </tr>
   <tr>
    <th scope="row">允许的 内容</th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -56,7 +54,7 @@ pre {
   </tr>
   <tr>
    <th scope="row">允许的 父元素</th>
-   <td>任何可以接受流内容 ( <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>) 的元素</td>
+   <td>任何可以接受流内容 ( <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>) 的元素</td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>

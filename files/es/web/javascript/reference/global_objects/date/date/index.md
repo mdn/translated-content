@@ -68,7 +68,7 @@ Cuando no se proporcionan parámetros, el objeto `Date` recién creado represent
 - `dateObject`
   - : Un objeto `Date` existente. Esto efectivamente hace una copia del objeto `Date` existente con la misma fecha y hora. Esto es equivalente a `new Date(dateObject.valueOf())`, excepto que no se llama al método `valueOf()`.
 
-Cuando se pasa un parámetro al constructor `Date()`, las instancias de `Date` se tratan de manera especial. Todos los demás valores se [convierten a datos primitivos](/es/docs/Web/JavaScript/Data_structures#primitive_coercion). Si el resultado es una cadena, se analizará como una cadena de fecha. De lo contrario, el valor primitivo resultante se convierte en un número y se trata como una marca de tiempo.
+Cuando se pasa un parámetro al constructor `Date()`, las instancias de `Date` se tratan de manera especial. Todos los demás valores se [convierten a datos primitivos](/es/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion). Si el resultado es una cadena, se analizará como una cadena de fecha. De lo contrario, el valor primitivo resultante se convierte en un número y se trata como una marca de tiempo.
 
 #### Valores individuales de componentes de fecha y hora
 

@@ -3,8 +3,6 @@ title: 原因：missing token 'xyz' in CORS header 'Access-Control-Allow-Headers
 slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 ---
 
-{{HTTPSidebar}}
-
 ## 原因
 
 ```plain

@@ -3,8 +3,6 @@ title: <hr>：主题分割（水平分割线）元素
 slug: Web/HTML/Reference/Elements/hr
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<hr>`** 元素表示段落级元素之间的主题转换（例如，一个故事中的场景的改变，或一个章节的主题的改变）。
 
 {{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
@@ -75,12 +73,12 @@ hr::after {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >。
       </td>
@@ -96,7 +94,7 @@ hr::after {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        所有接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        所有接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的元素。
       </td>

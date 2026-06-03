@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9a5b5597483ca34a58d400060f2e0534dceda240
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
-
 每一个现代网络浏览器都包含一套强大的开发工具套件。这些工具可以检查当前加载的 HTML、CSS 和 JavaScript，显示每个资源页面的请求以及载入所花费的时间。本文阐述了如何利用浏览器的开发工具的基本功能。
 
 > [!NOTE]
@@ -21,12 +19,10 @@ l10n:
 如何打开它？有三种方式：
 
 - **_键盘快捷键_**
-
   - **Windows：** _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_ 或 <kbd>F12</kbd>
   - **macOS：** _<kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>_
 
 - **_菜单栏_**
-
   - **Firefox：** 菜单 ![Firefox 浏览器汉堡菜单图标，提供更多自定义和控制 Firefox 浏览器的选项](2014-01-10-13-08-08-f52b8c.png) _➤ 更多工具 ➤ Web 开发者工具_
   - **Chrome：** _➤ 更多工具 ➤ 开发者工具_
   - **Safari：** _开发 ➤ 显示网页检查器_。如果你看不到*开发*菜单，去到 _Safari ➤ 设置 ➤ 高级_，然后点击*显示网页开发者功能*复选框。

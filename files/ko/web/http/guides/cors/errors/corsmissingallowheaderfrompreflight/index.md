@@ -6,8 +6,6 @@ l10n:
   sourceCommit: c2274293475b0a5b4febf85a49c1f91bf43ebac7
 ---
 
-{{HTTPSidebar}}
-
 ## 이유
 
 ```plain
@@ -22,7 +20,7 @@ Reason: missing token 'xyz' in CORS header 'Access-Control-Allow-Headers' from C
 
 ## 같이 보기
 
-- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
+- [CORS 에러](/ko/docs/Web/HTTP/Guides/CORS/Errors)
 - 용어 사전: {{Glossary("CORS")}}
-- [CORS 소개](/ko/docs/Web/HTTP/CORS)
-- [HTTP 헤더](/ko/docs/Web/HTTP/Headers)
+- [CORS 소개](/ko/docs/Web/HTTP/Guides/CORS)
+- [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)

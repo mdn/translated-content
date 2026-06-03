@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 更新已注册的内容脚本。如果在脚本解析和文件验证期间发生错误，或者指定的 ID 不存在，则不会更新任何脚本。
 
 > [!NOTE]

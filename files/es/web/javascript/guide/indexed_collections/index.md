@@ -3,7 +3,7 @@ title: Colecciones indexadas
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 Este capítulo presenta colecciones de datos ordenados por un valor de índice. Esto incluye arreglos y construcciones similares a arreglos tal como objetos {{jsxref("Array")}} y objetos {{jsxref("TypedArray")}}.
 
@@ -553,4 +553,4 @@ Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vi
 
 Para obtener más información, consulta [Arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays) y la documentación de referencia para los diferentes objetos {{jsxref("TypedArray")}}.
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}

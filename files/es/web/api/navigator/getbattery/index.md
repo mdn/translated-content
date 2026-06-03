@@ -35,14 +35,12 @@ información acerca del estado de la batería.
 Este método no arroja excepciones reales; en su lugar, rechaza la promesa retornada, pasando dentro de ella una {{domxref("DOMException")}} cuyo `name` (nombre) es uno de los siguientes:
 
 - `SecurityError`
-
   - : El Agente de Usuario no expone información de batería a contextos inseguros y este método fue llamado de un contexto inseguro.
 
     > [!NOTE]
     > Versiones antiguas de algunos Agentes de Usuario pueden permitir el uso de esta característica en contextos inseguros.
 
 - `NotAllowedError`
-
   - : Ningún Agente de Usuario arroja actualmente esta excepción, pero la especificación describe el siguiente comportamiento:
     > Este documento no tiene permitido el uso de esta característica.
     > Por ejemplo, puede no estar permitido o restringido explícitamente por medio de la característica {{HTTPHeader("Feature-Policy")}} {{HTTPHeader("Feature-Policy/battery", "battery")}}.

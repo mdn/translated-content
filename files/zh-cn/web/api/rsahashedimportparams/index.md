@@ -14,9 +14,7 @@ l10n:
 - `name`
   - : 一个字符串。应依据你想要使用的算法，设置为 `RSASSA-PKCS1-v1_5`、`RSA-PSS` 或 `RSA-OAEP`。
 - `hash`
-
   - : 一个字符串或一个包含单个名为 `name` 且具有字符串值的属性的对象。表示要使用的[摘要函数](/zh-CN/docs/Web/API/SubtleCrypto/digest)名称的字符串。可以是以下值之一：
-
     - `SHA-256`：选择 [SHA-256](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法) 算法。
     - `SHA-384`：选择 [SHA-384](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法) 算法。
     - `SHA-512`：选择 [SHA-512](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法) 算法。

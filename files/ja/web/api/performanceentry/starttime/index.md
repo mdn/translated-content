@@ -21,7 +21,7 @@ l10n:
 - `event`
   - : イベントが作成された時刻、すなわちそのイベントの [`timeStamp`](/ja/docs/Web/API/Event/timeStamp) プロパティです。
 - `first-input`
-  - : 最初の入力イベントが作成された時刻、すなわちそのイベtのの [`timeStamp`](/ja/docs/Web/API/Event/timeStamp) プロパティです。
+  - : 最初の入力イベントが作成された時刻、すなわちそのイベントの [`timeStamp`](/ja/docs/Web/API/Event/timeStamp) プロパティです。
 - `largest-contentful-paint`
   - : この項目の {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} の値が `0` でない場合はその値、そうでない場合はこの項目の {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} の値。
 - `layout-shift`

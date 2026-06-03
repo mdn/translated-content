@@ -13,7 +13,7 @@ l10n:
 > ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書にテキストノードを挿入します。
 > そのため、例えば [`Node.firstChild`](/ja/docs/Web/API/Node/firstChild) や `Node.previousSibling` を使用して得たノードが、取得しようとした実際のノードではなく、ホワイトスペースのテキストノードであることがあります。
 >
-> [DOM でのホワイトスペース](/ja/docs/Web/API/Document_Object_Model/Whitespace)の記事に、この動作に関する詳しい情報があります。
+> [DOM でのホワイトスペース](/ja/docs/Web/CSS/Guides/Text/Whitespace)の記事に、この動作に関する詳しい情報があります。
 >
 > [`previousElementSibling`](/ja/docs/Web/API/Element/previousElementSibling) を使用すると、（テキストノードやその他の要素以外のノードを飛ばして）前の要素を取得することができます。
 >

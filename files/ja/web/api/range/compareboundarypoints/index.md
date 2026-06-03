@@ -19,9 +19,7 @@ compareBoundaryPoints(how, sourceRange)
 ### 引数
 
 - `how`
-
   - : 定数で、比較メソッドを説明します。
-
     - `Range.END_TO_END` は _sourceRange_ の終わりの境界点と `Range` の終わりの境界点を比較します。
     - `Range.END_TO_START` は _sourceRange_ の終わりの境界点と `Range` の始まりの境界点を比較します。
     - `Range.START_TO_END` は _sourceRange_ の始まりの境界点と `Range` の終わりの境界点を比較します。

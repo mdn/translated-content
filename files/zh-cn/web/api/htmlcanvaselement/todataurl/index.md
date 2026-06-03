@@ -13,7 +13,8 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 对于支持编码分辨率元数据的文件格式，创建的图像数据将具有 96dpi 的分辨率。
 
-> **警告：**`toDataURL()` 将整个图像编码为内存中的字符串。对于较大的图像，这可能会有性能影响，甚至在赋值给 {{domxref("HTMLImageElement.src")}} 时可能超出浏览器的 URL 长度限制。你通常应该优先选择 [`toBlob()`](/zh-CN/docs/Web/API/HTMLCanvasElement/toBlob)，结合 {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}} 来使用。
+> [!WARNING]
+> `toDataURL()` 将整个图像编码为内存中的字符串。对于较大的图像，这可能会有性能影响，甚至在赋值给 {{domxref("HTMLImageElement.src")}} 时可能超出浏览器的 URL 长度限制。你通常应该优先选择 [`toBlob()`](/zh-CN/docs/Web/API/HTMLCanvasElement/toBlob)，结合 {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}} 来使用。
 
 ## 语法
 

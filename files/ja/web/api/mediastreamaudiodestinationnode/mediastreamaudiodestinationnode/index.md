@@ -21,9 +21,7 @@ new MediaStreamAudioDestinationNode(context, options)
 - `context`
   - : このノードを関連付ける音声コンテキストを表す {{domxref("AudioContext")}} です。
 - `options` {{optional_inline}}
-
   - : `MediaStreamAudioDestinationNode` に持たせる性質を定義するオブジェクトです。
-
     - `channelCount`
       - : ノードの入力への接続を[アップミキシングとダウンミキシング](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#アップミキシングとダウンミキシング)する際に使用するチャンネルの数を決めるのに用いる整数です。(詳しくは {{domxref("AudioNode.channelCount")}} を参照してください) 使用法と正確な定義は、`channelCountMode` の値によります。
     - `channelCountMode`

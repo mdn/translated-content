@@ -2,9 +2,8 @@
 title: "HTML 属性: maxlength"
 short-title: maxlength
 slug: Web/HTML/Reference/Attributes/maxlength
-original_slug: Web/HTML/Attributes/maxlength
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -19,7 +18,7 @@ l10n:
 
 ブラウザーは一般的に、 maxlength 属性が許可する以上のテキストをユーザーが入力することを防止しますが、長さが maxlength が許可しているよりも長くなった場合、 {{domxref("ValidityState")}} オブジェクトの読み取り専用の {{domxref("ValidityState.tooLong", "tooLong")}} プロパティが true になります。
 
-{{InteractiveExample("HTML Demo: maxlength", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: maxlength", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="name">Product name:</label>

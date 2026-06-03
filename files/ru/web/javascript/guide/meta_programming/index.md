@@ -3,7 +3,7 @@ title: Мета-программирование
 slug: Web/JavaScript/Guide/Meta_programming
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_generators")}}
 
 С приходом ECMAScript 2015, в JavaScript введены объекты {{jsxref("Proxy")}} и {{jsxref("Reflect")}}, позволяющие перехватить и переопределить поведение фундаментальных процессов языка (таких как поиск свойств, присвоение, итерирование, вызов функций и так далее). С помощью этих двух объектов вы можете программировать на мета уровне JavaScript.
 
@@ -422,4 +422,4 @@ if (Reflect.defineProperty(target, property, attributes)) {
 }
 ```
 
-{{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{Previous("Web/JavaScript/Guide/Iterators_and_generators")}}

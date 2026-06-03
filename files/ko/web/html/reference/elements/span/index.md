@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/span
 
 {{HTMLSidebar}}
 
-**HTML `<span>` 요소**는 구문 콘텐츠를 위한 통용 인라인 컨테이너로, 본질적으로는 아무것도 나타내지 않습니다. 스타일을 적용하기 위해서, 또는 [`lang`](/ko/docs/Web/HTML/Global_attributes#lang) 등 어떤 특성의 값을 서로 공유하는 요소를 묶을 때 사용할 수 있습니다. 적절한 의미를 가진 다른 요소가 없을 때에만 사용해야 합니다. `<span>`은 {{htmlelement("div")}}와 매우 유사하지만, {{htmlelement("div")}}는 [블록 레벨 요소](/ko/docs/Glossary/Block-level_content)인 반면 `<span>`은 [인라인 요소](/ko/docs/Glossary/Inline-level_content)입니다.
+**HTML `<span>` 요소**는 구문 콘텐츠를 위한 통용 인라인 컨테이너로, 본질적으로는 아무것도 나타내지 않습니다. 스타일을 적용하기 위해서, 또는 [`lang`](/ko/docs/Web/HTML/Reference/Global_attributes#lang) 등 어떤 특성의 값을 서로 공유하는 요소를 묶을 때 사용할 수 있습니다. 적절한 의미를 가진 다른 요소가 없을 때에만 사용해야 합니다. `<span>`은 {{htmlelement("div")}}와 매우 유사하지만, {{htmlelement("div")}}는 [블록 레벨 요소](/ko/docs/Glossary/Block-level_content)인 반면 `<span>`은 [인라인 요소](/ko/docs/Glossary/Inline-level_content)입니다.
 
 {{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-standard")}}
 
@@ -33,13 +33,13 @@ span.ingredient {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_컨텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_컨텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_컨텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_컨텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -47,7 +47,7 @@ span.ingredient {
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_컨텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_컨텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -59,11 +59,11 @@ span.ingredient {
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_컨텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_컨텐츠"
           >구문 콘텐츠</a
         >
         또는
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_컨텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_컨텐츠"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>
@@ -81,7 +81,7 @@ span.ingredient {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 ## 예제
 

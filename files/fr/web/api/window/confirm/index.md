@@ -1,50 +1,61 @@
 ---
 title: "Window : méthode confirm()"
+short-title: confirm()
 slug: Web/API/Window/confirm
 l10n:
-  sourceCommit: 70b1b8ac18d3e3346645d4ee5155f654c83d96e0
+  sourceCommit: b7310d059a28842d0a43ebabf814e8f2469c3419
 ---
 
-{{ApiRef("Window")}}
+{{APIRef("Window")}}
 
-`window.confirm()` indique au navigateur d'afficher une boîte de dialogue avec un message optionnel et d'attendre que la personne confirme ou annule la boîte de dialogue.
+La méthode **`confirm()`** de l'interface {{DOMxRef("Window")}} indique au navigateur d'afficher une boîte de dialogue avec un message optionnel et d'attendre que la personne confirme ou annule la boîte de dialogue.
 
-Sous certaines conditions, par exemple au changement d'onglet, le navigateur pourra ne pas afficher la boîte de dialogue ou ne pas attendre la confirmation ou l'annulation.
+Sous certaines conditions — par exemple au changement d'onglet — le navigateur pourra ne pas afficher la boîte de dialogue ou ne pas attendre la confirmation ou l'annulation.
 
 ## Syntaxe
 
 ```js-nolint
+confirm()
 confirm(message)
 ```
 
 ### Paramètres
 
-- `message`
+- `message` {{Optional_Inline}}
   - : Une chaîne de caractères qu'on souhaite afficher dans la boîte de dialogue de confirmation.
 
 ### Valeur de retour
 
-Un booléen qui indique si l'option «&nbsp;OK&nbsp;» (`true`) ou «&nbsp;Annuler&nbsp;» (`false`) a été sélectionnée. Si le navigateur ignore les boîtes de dialogue, la valeur renvoyée est toujours `false`.
+### Confirmer avant une action
 
-## Exemples
+L'exemple suivant montre comment vérifier la valeur retournée par une boîte de dialogue de confirmation.
+Lorsque l'utilisateur·ice clique sur le bouton OK, nous appelons {{DOMxRef("window.open()")}}, et si l'utilisateur·ice clique sur Annuler, nous affichons du texte dans un élément {{HTMLElement("pre")}}.
 
-```js
-if (window.confirm("Souhaitez-vous vraiment quitter le site ?")) {
-  window.open("exit.html", "Merci de votre visite !");
-}
+```html live-sample___confirm
+<button id="windowButton">Ouvrir un nouvel onglet</button>
+<pre id="log"></pre>
 ```
 
-Créera le résultat suivant&nbsp;:
+```js live-sample___confirm
+const windowButton = document.querySelector("#windowButton");
+const log = document.querySelector("#log");
 
-![Confirmation dans Firefox](firefoxcomfirmdialog_zpsf00ec381.png)
+windowButton.addEventListener("click", () => {
+  if (window.confirm("Voulez-vous ouvrir un nouvel onglet ?")) {
+    window.open("https://developer.mozilla.org/docs/Web/API/Window/open");
+  } else {
+    log.innerText = "Content que vous restiez !";
+  }
+});
+```
+
+{{EmbedLiveSample('confirm', , , , , , , 'allow-modals allow-popups')}}
 
 ## Notes
 
-Ces boîtes de dialogue sont des fenêtres modales qui empêchent d'accéder au reste de l'interface utilisateur du programme, à moins que la boîte de dialogue soit fermée. Aussi, il ne faut pas abuser de cette fonction.
-
-Il y a également d'autres raisons [d'éviter les boîtes de dialogue pour demander une confirmation](https://alistapart.com/article/neveruseawarning/).
-
-Une autre méthode consiste à utiliser l'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) afin d'afficher des demandes de confirmation.
+Les boîtes de dialogue sont des fenêtres bloquantes — elles empêchent l'utilisateur·ice d'accéder au reste de l'interface du programme tant que la boîte de dialogue n'est pas fermée.
+Pour cette raison, vous ne devez pas abuser de toute fonction qui crée une boîte de dialogue ou une fenêtre bloquante.
+Alternativement, un élément {{HTMLElement("dialog")}} peut être utilisé pour les confirmations.
 
 ## Spécifications
 
@@ -56,6 +67,7 @@ Une autre méthode consiste à utiliser l'élément HTML [`<dialog>`](/fr/docs/W
 
 ## Voir aussi
 
-- L'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
-- [`window.alert()`](/fr/docs/Web/API/Window/alert)
-- [`window.prompt()`](/fr/docs/Web/API/Window/prompt)
+- L'élément HTML {{HTMLElement("dialog")}}
+- La méthode {{DOMxRef("window.alert()")}}
+- La méthode {{DOMxRef("window.prompt()")}}
+- [N'utilisez jamais un avertissement lorsque vous voulez dire Annuler <sup>(angl.)</sup>](https://alistapart.com/article/neveruseawarning/) sur A List Apart (2017)

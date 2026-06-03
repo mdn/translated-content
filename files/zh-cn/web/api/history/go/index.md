@@ -16,7 +16,6 @@ window.history.go(delta);
 ### 参数
 
 - `delta` {{optional_inline}}
-
   - : 相对于当前页面你要去往历史页面的位置。负值表示向后移动，正值表示向前移动。因此，例如：`history.go(2)`向前移动两页，`history.go(-2)`则向后移动两页。如果未向该函数传参或`delta`相等于 0，则该函数与调用`location.reload()`具有相同的效果。
 
     > [!NOTE]

@@ -7,7 +7,7 @@ slug: Web/API/SVGTextElement
 
 Интерфейс **`SVGTextElement`** соответствует элементам {{SVGElement("text")}}.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 

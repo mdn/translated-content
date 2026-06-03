@@ -77,25 +77,20 @@ l10n:
 `<area>` 要素は{{glossary("void element", "空要素")}}ですが、次の 4 つの属性が必要です。
 
 - [`shape`](/ja/docs/Web/HTML/Reference/Elements/area#shape)
-
   - : `shape` は、`circle`（円）、`rect`（四角形）、`poly`（ポリゴン）、`default`（デフォルト）の 4 つの値のいずれかをとります。 `shape` が `default` の `<area>` は画像全体から、あなたが定義した他のホットスポットを除いたものです。
     定義した領域が重複している場合、ソースの順序によってどちらの領域が優先されるかが決まります。
     選択した図形によって、`coords` で指定する必要がある座標情報が決まります。
 
 - [`coords`](/ja/docs/Web/HTML/Reference/Elements/area#coords)
-
   - : 座標は CSS ピクセルで指定され、その値は選択した `shape` によって異なります。
-
     - 円の場合は、中心の x 座標と y 座標を指定し、その後に半径の長さを指定します。
     - 四角形の場合は、左上角と右下角の x/y 座標を指定します。
     - ポリゴンの場合は、各角の x/y 座標を指定します（したがって、 6 つ以上の値）。
 
 - [`href`](/ja/docs/Web/HTML/Reference/Elements/area#href)
-
   - : リンク先のリソースの URL。 現在の領域をどこにもリンクさせたくない場合は、この属性を空白のままにしておくことができます（空白の円を描いている場合など）。
 
 - [`alt`](/ja/docs/Web/HTML/Reference/Elements/area#alt)
-
   - : リンクがどこにあるのか、それが何をするのかを人に伝える必須の属性。 `alt` テキストは、画像が利用できない場合にのみ表示されます。 [アクセス可能なリンクテキストを書くためのガイドライン](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#明確なリンク語を使う)を参照してください。
 
     `href` 属性が空白で、画像全体に既に `alt` 属性がある場合、`alt=""` と書くことができます。

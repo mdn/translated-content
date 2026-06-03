@@ -2,10 +2,8 @@
 title: ウェブの仕組み
 slug: Learn_web_development/Howto/Web_mechanics
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{LearnSidebar}}
 
 この章では、ウェブのメカニズムについてのウェブのエコシステムや動作に関係する質問に答えます。
 

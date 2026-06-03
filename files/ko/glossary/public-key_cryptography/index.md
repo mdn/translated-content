@@ -22,5 +22,4 @@ l10n:
 
 - [Web Crypto API](/ko/docs/Web/API/Web_Crypto_API)
 - [MDN 웹 문서 용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Symmetric-key cryptography")}}

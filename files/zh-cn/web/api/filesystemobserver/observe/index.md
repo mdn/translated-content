@@ -19,18 +19,13 @@ observe(handle, options)
 ### 参数
 
 - `handle`
-
   - : 表示要观察的文件或目录的文件系统条目的句柄。
-
     - 对于用户可观察的文件系统，这可以是 {{domxref("FileSystemFileHandle")}} 或 {{domxref("FileSystemDirectoryHandle")}}。
     - 对于[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)（OPFS），它可以是 {{domxref("FileSystemFileHandle")}}、{{domxref("FileSystemDirectoryHandle")}} 或 {{domxref("FileSystemSyncAccessHandle")}}。
 
 - `options` {{optional_inline}}
-
   - : 指定 `observe()` 调用的选项的对象。它可以包含以下属性：
-
     - `recursive`
-
       - : 一个布尔值，指定是否要递归观察目录的更改。如果设置为 `true`，则会观察目录本身及其包含的所有子目录和文件的更改。如果设置为 `false`，则仅观察目录本身及其直接包含的文件的更改（即，不包括子目录中的文件）。默认为 `false`。如果 `handle` 表示文件，则此属性无效。
 
 ### 返回值

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1f1418448e3b7f1d987b16db886008e5c5cc7fa1
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`<dir>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于作为包含文件或文件夹目录的容器，可能由{{Glossary("user agent", "用户代理")}}应用样式和图标。不应使用此过时元素；相反，对于包括文件列表在内的列表应使用 {{HTMLElement("ul")}} 元素。
 
@@ -35,8 +35,7 @@ l10n:
 
 - 其他和列表相关的 HTML 元素：{{HTMLElement("ol")}}、{{HTMLElement("ul")}}、{{HTMLElement("li")}} 和 {{HTMLElement("menu")}}；
 - 特定用于 `<dir>` 元素的 CSS 属性：
-
   - {{cssxref('list-style')}} 属性，用于选择序号展示的方式。
-  - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，用于处理复杂的嵌套列表。
+  - [CSS 计数器](/zh-CN/docs/Web/CSS/Guides/Counter_styles/Using_counters)，用于处理复杂的嵌套列表。
   - {{Cssxref('line-height')}} 属性，用于模拟弃用的 [`compact`](#compact) 属性。
   - {{cssxref('margin')}} 属性，用于控制列表的缩进。

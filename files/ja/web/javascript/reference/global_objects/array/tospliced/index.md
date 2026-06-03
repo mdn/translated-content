@@ -1,11 +1,10 @@
 ---
 title: Array.prototype.toSpliced()
+short-title: toSpliced()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
 l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toSpliced()`** は {{jsxref("Array")}} インスタンスのメソッドで、 {{jsxref("Array/splice", "splice()")}} メソッドに対応する[コピー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)メソッドです。これは、指定された位置の要素を除去したり置き換えたりした新しい配列を返します。
 
@@ -13,43 +12,40 @@ l10n:
 
 ```js-nolint
 toSpliced(start)
-toSpliced(start, deleteCount)
-toSpliced(start, deleteCount, item1)
-toSpliced(start, deleteCount, item1, item2)
-toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
+toSpliced(start, skipCount)
+toSpliced(start, skipCount, item1)
+toSpliced(start, skipCount, item1, item2)
+toSpliced(start, skipCount, item1, item2, /* …, */ itemN)
 ```
 
 ### 引数
 
 - `start`
-
   - : 配列の変更を始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
-    - 負のインデックスは配列の末尾から数えます。 `start < 0` の場合は `start + array.length` を使用します。
+    - 負のインデックスは配列の末尾から数えます。 `-array.length <= start < 0` の場合は `start + array.length` を使用します。
     - `start < -array.length` または `start` が省略された場合は `0` が使用されます。
     - `start >= array.length` である場合、削除される要素はありませんが、このメソッドは追加関数として動作し、提供されただけの要素を追加します。
 
-- `deleteCount` {{optional_inline}}
+- `skipCount` {{optional_inline}}
+  - : 整数で、配列内で `start` から削除（またはスキップ）する要素の数を示します。
 
-  - : 整数で、配列内で `start` から削除する要素の数を示します。
+    `skipCount` を省略した場合、またはその値が `start` で指定した位置以降の要素数以上の場合、 `start` から配列の末尾までのすべての要素が削除されます。ただし、もし `itemN` 引数を渡したい場合は、 `Infinity` を `skipCount` に渡して `start` 以降の要素をすべて削除してください。明示的に `undefined` を指定すると `0` に[変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)されてしまうからです。
 
-    `deleteCount` を省略した場合、またはその値が `start` で指定した位置以降の要素数以上の場合、 `start` から配列の末尾までのすべての要素が削除されます。ただし、もし `itemN` 引数を渡したい場合は、 `Infinity` を `deleteCount` に渡して `start` 以降の要素をすべて削除してください。明示的に `undefined` を指定すると `0` に[変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)されてしまうからです。
-
-    `deleteCount` が `0` または負の場合、要素は除去されません。
+    `skipCount` が `0` または負の場合、要素は除去されません。
     この場合、少なくとも 1 つの新しい要素を指定する必要があります（下記参照）。
 
 - `item1`, …, `itemN` {{optional_inline}}
-
   - : 配列に追加する要素を `start` から始めます。
 
     要素を指定しない場合、 `toSpliced()` は配列から要素を取り除くだけです。
 
 ### 返値
 
-`start`, `item1`, `item2`, …, `itemN` より前のすべての要素と、 `start + deleteCount` より後のすべての要素からなる新しい配列です。
+`start` より前のすべての要素、 `item1`, `item2`, …, `itemN` と、 `start + skipCount` 以降のすべての要素からなる新しい配列です。
 
 ## 解説
 
-`toSpliced()` メソッドは `splice()` と同様に、一度に複数のことを行います。指定されたインデックスの位置から、指定された数の要素を配列から除去し、同じインデックスの位置に指定された要素を挿入します。しかし、元の配列を変更するのではなく、新しい配列を返します。したがって、削除された要素はこのメソッドからは返されません。
+`toSpliced()` メソッドは `splice()` と同様に、一度に複数のことを行います。指定されたインデックスの位置から、指定された数の要素を配列から除去し、同じインデックスの位置に指定された要素を挿入します。しかし、元の配列を変更するのではなく、新しい配列を返します。したがって、削除された要素は、このメソッドからは返されませんが、元の配列では引き続きアクセス可能です。
 
 `toSpliced()` メソッドは決して[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)を生成しません。疎配列の場合、空のスロットは新しい配列の `undefined` に置き換わります。
 
@@ -115,6 +111,7 @@ console.log(Array.prototype.toSpliced.call(arrayLike, 0, 1, 2, 3));
 ## 関連情報
 
 - [`Array.prototype.toSpliced` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
+- [es-shims による `Array.prototype.toSpliced` のポリフィル](https://www.npmjs.com/package/array.prototype.tospliced)
 - {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSorted()")}}

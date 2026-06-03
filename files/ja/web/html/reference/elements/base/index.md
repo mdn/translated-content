@@ -1,11 +1,10 @@
 ---
-title: "<base>: 文書の基底 URL 要素"
+title: HTML `<base>` 文書基底 URL 要素
+short-title: <base>
 slug: Web/HTML/Reference/Elements/base
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<base>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書内におけるすべての*相対* URL の基点となる URL を指定します。 `<base>` 要素は、文書内に 1 つだけ置くことができます。
 
@@ -15,15 +14,14 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-> **警告:** `<base>` 要素は、 `href` 属性または `target` 属性、あるいはその両方を指定する必要があります。これらの属性のうち少なくとも 1 つが指定されている場合、 `<base>` 要素は、 {{HTMLElement("link")}} の `href` 属性など、URL を属性値とする他の要素よりも前に記述する**必要があります**。
+> [!WARNING]
+> `<base>` 要素は、 `href` 属性または `target` 属性、あるいはその両方を指定する必要があります。これらの属性のうち少なくとも 1 つが指定されている場合、 `<base>` 要素は、 {{HTMLElement("link")}} の `href` 属性など、URL を属性値とする他の要素よりも前に記述する**必要があります**。
 
 - `href`
   - : 文書全体を通して相対 URL に使用される基底 URL です。絶対 URL と相対 URL が使用できます。
     [`data:`](/ja/docs/Web/URI/Reference/Schemes/data) および [`javascript:`](/ja/docs/Web/URI/Reference/Schemes/javascript) の URL は利用できません。
 - `target`
-
   - : **キーワード**または**制作者が定義した名前**で、既定の{{Glossary("browsing context", "閲覧コンテキスト")}}を表し、 {{HTMLElement("a")}}、{{HTMLElement("area")}}、{{HTMLElement("form")}} のいずれかの要素が明示的に `target` 属性を持たない場合に、移動の結果を表示する先として使用されます。以下のキーワードは特別な意味を持ちます。
-
     - `_self` （既定値）: 現在の閲覧コンテキストに結果を表示します。
     - `_blank`: 新しい無名の閲覧コンテキストに結果を表示します。
     - `_parent`: 現在のコンテキストの親の閲覧コンテキストに結果を表示します。親がない場合、このオプションは `_self` と同じ振る舞いをします。
@@ -89,7 +87,7 @@ l10n:
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
       </td>
     </tr>
     <tr>

@@ -16,9 +16,7 @@ void gl.bindBufferBase(target, index, buffer);
 ### 参数
 
 - `target`
-
   - : {{domxref("Glenum")}} 指定绑定操作的目标。可能的值：
-
     - `gl.TRANSFORM_FEEDBACK_BUFFER`
     - `gl.UNIFORM_BUFFER`
 

@@ -2,10 +2,8 @@
 title: ウェブで何かするのにかかるコスト
 slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: e488eba036b2fee56444fd579c3759ef45ff2ca8
 ---
-
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 ウェブに関わることは、見た目ほど安いものではありません。この記事では、あなたがどれくらいの費用を負担しなければならないか、またその理由について説明します。
 
@@ -42,7 +40,7 @@ l10n:
 
 Windows のメモ帳、Linux の Gedit、Mac の TextEdit などのテキストエディターを使った経験はおありでしょう。色分けしたり、文法をチェックしたり、コードの構築を手助けしたりするエディターを選択すれば、コードを書くのが楽になります。
 
-無料のエディターは多くあります。たとえば、 [Brackets](https://brackets.io/)、[Bluefish](https://bluefish.openoffice.nl/)、[TextWrangler](https://www.barebones.com/products/textwrangler/)、[Eclipse](https://www.eclipse.org/)、[Netbeans](https://netbeans.apache.org//)、[Visual Studio Code](https://code.visualstudio.com/) などです。また [Sublime Text](https://www.sublimetext.com/) のように好きなだけ試用できるが、料金を支払ったほうが良いものもあります。なかには、 [PhpStorm](https://www.jetbrains.com/phpstorm/) のように、購入ライセンスによって、価格が数百円から 2 万円程度になるものもあります。 [Microsoft Visual Studio](https://visualstudio.microsoft.com/) は数万円から数十万円しますが、 Visual Studio Express は個人やオープンソースプロジェクトでは無料で使えます。 有料ソフトウエアには、無料の試用期間を設けているものもあります。
+無料のエディターは多くあります。たとえば、 [Brackets](https://brackets.io/)、[Bluefish](https://bluefish.openoffice.nl/)、[TextWrangler](https://www.barebones.com/products/textwrangler/)、[Eclipse](https://www.eclipse.org/)、[NetBeans](https://netbeans.apache.org/)、[Visual Studio Code](https://code.visualstudio.com/) などです。また [Sublime Text](https://www.sublimetext.com/) のように好きなだけ試用できるが、料金を支払ったほうが良いものもあります。なかには、 [PhpStorm](https://www.jetbrains.com/phpstorm/) のように、購入ライセンスによって、価格が数百円から 2 万円程度になるものもあります。 [Microsoft Visual Studio](https://visualstudio.microsoft.com/) は数万円から数十万円しますが、 Visual Studio Express は個人やオープンソースプロジェクトでは無料で使えます。 有料ソフトウエアには、無料の試用期間を設けているものもあります。
 
 最初に何種類かのエディターを試して、用途に合うのはどれか調べるといいでしょう。 {{Glossary("HTML")}} や {{Glossary("CSS")}}、それに {{Glossary("JavaScript")}} で簡単なコードを書くのであれば、シンプルなエディターをお勧めします。
 
@@ -50,7 +48,7 @@ Windows のメモ帳、Linux の Gedit、Mac の TextEdit などのテキスト�
 
 ### 画像エディター
 
-お使いのシステムには、簡単な画像エディターやビューアーが入っているはずです。 Windows ではペイント、 Ubuntu では Eye of Gnome、 Mac では Preview などです。これらのプログラムは比較的機能が限られていて、レイヤーやエフェクトを追加したり、グループ化したりすることができる、より強力なエディターがすぐに必要になるでしょう。
+お使いのシステムには、画像エディターやビューアーが入っているはずです。 Windows ではペイント、 Ubuntu では Eye of GNOME、 Mac では Preview などです。これらのプログラムは比較的機能が限られていて、レイヤーやエフェクトを追加したり、グループ化したりすることができる、より強力なエディターがすぐに必要になるでしょう。
 
 編集ソフトは無料のもの ([GIMP](https://www.gimp.org/), [Paint.NET](https://www.getpaint.net/))、やや高価なもの ([PaintShop Pro](https://www.paintshoppro.com/), less than $100)、または数百ドルのもの ([Adobe Photoshop](https://www.adobe.com/products/photoshop.html)) もあります。
 
@@ -60,11 +58,11 @@ Windows のメモ帳、Linux の Gedit、Mac の TextEdit などのテキスト�
 
 ウェブサイトに動画や音声を入れたい場合は、オンラインサービス（YouTube、Vimeo、Dailymotion など）を埋め込むか、自作の動画を入れることができます（帯域幅のコストについては下記をご覧ください）。
 
-音声ファイルの場合、フリーソフト（[Audacity](https://www.audacityteam.org/), [Wavosaur](https://www.wavosaur.com/)）、数百円の有料ソフト（[Sound Forge](https://www.magix.com/us/music-editing/sound-forge/), [Adobe Audition](https://www.adobe.com/products/audition.html)）などがあります。同様に、動画編集ソフトもフリーソフト（[PiTiVi](https://www.pitivi.org/), [OpenShot](https://www.openshot.org/) for Linux, [iMovie](https://www.apple.com/imovie/) for Mac）、低価格のもの（[Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html)）、高価格のもの（[Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](https://www.avid.com/media-composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)）があります。デジタルカメラに付属しているソフトウェアで、すべてのニーズを満たすことができるかもしれません。
+音声ファイルの場合、フリーソフト（[Audacity](https://www.audacityteam.org/), [Wavosaur](https://www.wavosaur.com/)）、数百円の有料ソフト（[Sound Forge](https://www.magix.com/us/music-editing/sound-forge/), [Adobe Audition](https://www.adobe.com/products/audition.html)）などがあります。同様に、動画編集ソフトもフリーソフト（[PiTiVi](https://www.pitivi.org/), [OpenShot](https://www.openshot.org/) for Linux, [iMovie](https://support.apple.com/imovie) for Mac）、低価格のもの（[Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html)）、高価格のもの（[Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](https://www.avid.com/media-composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)）があります。デジタルカメラに付属しているソフトウェアで、すべてのニーズを満たすことができるかもしれません。
 
 ### 公開ツール
 
-また、ファイルをアップロードする方法も必要です。自分のハードドライブから遠くのウェブサーバーにアップロードします。そのためには、 (S)[FTP クライアント](/ja/docs/Glossary/FTP), [RSync](https://en.wikipedia.org/wiki/Rsync)、[Git/GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) などの公開ツールを使用する必要があります。
+また、ファイルをアップロードする方法も必要です。自分のハードドライブから遠くのウェブサーバーにアップロードします。そのためには、 [(S)FTP クライアント](/ja/docs/Glossary/FTP), [RSync](https://en.wikipedia.org/wiki/Rsync)、[Git/GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) などの公開ツールを使用する必要があります。
 
 それぞれのオペレーティングシステムには、ファイルマネージャーの一部として、 (S)FTP クライアントが入っています。 Windows のエクスプローラー、 Nautilus （Linux の一般的なファイルマネージャー）、 Mac の Finder はすべてこの機能を入れています。しかし、ローカルやリモートのディレクトリーを並べて表示したり、サーバーのパスワードを格納するために、専用の (S)FTP クライアントを選ぶ人がよくいます。
 
@@ -74,7 +72,7 @@ FTP は本質的に安全ではないので、 SFTP - 最近ではほとんど�
 
 ## ブラウザー
 
-ブラウザーはすでにお持ちか、無料で取得することができます。必要に応じて、 Firefox を[こちら](https://www.mozilla.org/en-US/firefox/all/)で、または Google Chrome を[こちら](https://www.google.com/chrome/)でダウンロードしてください。
+ブラウザーはすでにお持ちか、無料で取得することができます。必要に応じて、[Firefox](https://www.mozilla.org/en-US/firefox/all/)、または [Google Chrome](https://www.google.com/chrome/) をダウンロードしてください。
 
 ## ウェブアクセス
 
@@ -111,9 +109,9 @@ FTP は本質的に安全ではないので、 SFTP - 最近ではほとんど�
 
 ### 自分で作るホスティングと「パッケージ」ホスティングの比較
 
-ウェブサイトを公開する場合、データベースの設定（必要な場合）やコンテンツ管理システム ({{Glossary("CMS")}}) （[Wordpress](https://wordpress.org/), [Dotclear](https://dotclear.org/), [spip](https://www.spip.net/en_rubrique25.html) など）の導入、既製または独自のテンプレートのアップロードなどを、すべてを自分自身で行うことが可能です。
+ウェブサイトを公開する場合、データベースの設定（必要な場合）やコンテンツ管理システム ({{Glossary("CMS")}}) （[WordPress](https://wordpress.org/), [Dotclear](https://dotclear.org/), [spip](https://www.spip.net/en_rubrique25.html) など）の導入、既製または独自のテンプレートのアップロードなどを、すべてを自分自身で行うことが可能です。
 
-ホスティングプロバイダーの環境を使用することもできますし、月額 10 ～ 15 ドル程度で、あらかじめ CMS がパッケージされた専用のホスティングサービス（[Wordpress](https://wordpress.com/), [Tumblr](https://www.tumblr.com/), [Blogger](https://www.blogger.com/) など）を直接契約して利用することもできます。後者の場合、何も支払う必要はありませんが、テンプレートやその他のオプションの制御が難しくなる可能性があります。
+ホスティングプロバイダーの環境を使用することもできますし、月額 10 ～ 15 ドル程度で、あらかじめ CMS がパッケージされた専用のホスティングサービス（[WordPress](https://wordpress.com/), [Tumblr](https://www.tumblr.com/), [Blogger](https://www.blogger.com/) など）を直接契約して利用することもできます。後者の場合、何も支払う必要はありませんが、テンプレートやその他のオプションの制御が難しくなる可能性があります。
 
 ### 無料のホスティングと有料のホスティングの比較
 

@@ -21,9 +21,7 @@ forEach(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-
   - : 对每个元素执行的函数，接受三个参数：
-
     - `currentValue`
       - : 当前正在处理的元素的值。
     - `index` {{optional_inline}}

@@ -2,10 +2,8 @@
 title: Iterator
 slug: Web/JavaScript/Reference/Global_Objects/Iterator
 l10n:
-  sourceCommit: 7df171ff1d6da6a5e3911b7aedd56f6312bf0cca
+  sourceCommit: c534ba0cb925657de5e99ab8c540eae31afd9382
 ---
-
-{{JSRef}}
 
 **`Iterator`** オブジェクトは、イテレーターの結果オブジェクトを返す `next()` メソッドを提供することで、[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)に準拠したオブジェクトです。すべての組み込みイテレーターは `Iterator` クラスを継承しています。 `Iterator` クラスはイテレーターオブジェクト自身を返す [`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) メソッドを提供し、イテレーターを[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)にしています。また、イテレーターを操作するためのヘルパーメソッドもいくつか提供しています。
 
@@ -28,7 +26,8 @@ Web API はイテレーターを返すこともあります。 JavaScript のコ
 - Web API の [Map 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map#map_風のブラウザー_api)オブジェクト、たとえば [`Headers`](/ja/docs/Web/API/Headers) は、独自のイテレーター型（Headers イテレーターなど）を `keys()`、`values()`、`entries()`、`[Symbol.iterator]()` メソッドそれぞれで返します。
 - Web API の [Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set_風のブラウザー_api)オブジェクト、たとえば [`FontFaceSet`](/ja/docs/Web/API/FontFaceSet) は、独自のイテレーター型（FontFaceSet イテレーターなど）を `keys()`、`values()`、`entries()`、`[Symbol.iterator]()` メソッドそれぞれで返します。
 
-> **メモ:** [`NodeIterator`](/ja/docs/Web/API/NodeIterator) やその他の古いインターフェイスはそのような名前が付いていますが、[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)や[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)には適合していません。
+> [!NOTE]
+> [`NodeIterator`](/ja/docs/Web/API/NodeIterator) やその他の古いインターフェイスはそのような名前が付いていますが、[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)や[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)には適合していません。
 
 これらのイテレーターはそれぞれ個別のプロトタイプオブジェクトを持っており、特定のイテレーターが使用する `next()` メソッドを定義しています。例えば、すべての String イテレーターオブジェクトは、隠しオブジェクトである `StringIteratorPrototype` を継承しており、このオブジェクトは、その文字列をコードポイントごとに反復処理する `next()` メソッドを持っています。また、 `StringIteratorPrototype` は [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティを持っており、初期値は文字列 `"String Iterator"` となります。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用します。同様に、他のイテレータープロトタイプも自分自身で `[Symbol.toStringTag]` の値を持ち、それは上で指定された名前と同じです。
 
@@ -92,7 +91,8 @@ const firstThreeDigitTerm = seq.find((n) => n >= 100);
 
 ### イテレーターヘルパーオブジェクト
 
-> **メモ:** 「イテレーターヘルパーオブジェクト」と「イテレーターヘルパーメソッド」は、 2 つの異なる概念です。イテレーターヘルパーオブジェクトは実行時に検出可能ですが、「イテレーターヘルパーメソッド」は、理解を助けるための一連のメソッドの名前にすぎません。「イテレーターヘルパー」は、コンテキストに応じて、オブジェクトまたはメソッドのどちらかを指す場合があります。
+> [!NOTE]
+> 「イテレーターヘルパーオブジェクト」と「イテレーターヘルパーメソッド」は、 2 つの異なる概念です。イテレーターヘルパーオブジェクトは実行時に検出可能ですが、「イテレーターヘルパーメソッド」は、理解を助けるための一連のメソッドの名前にすぎません。「イテレーターヘルパー」は、コンテキストに応じて、オブジェクトまたはメソッドのどちらかを指す場合があります。
 
 イテレーターヘルパーメソッドのうち、{{jsxref("Iterator/filter", "filter()")}}、{{jsxref("Iterator/flatMap", "flatMap()")}}、{{jsxref("Iterator/map", "map()")}}、{{jsxref("Iterator/drop", "drop()")}}、{{jsxref("Iterator/take", "take()")}} は、新しいイテレーターヘルパーオブジェクトを返します。 イテレーターヘルパーは、 `Iterator` のインスタンスでもあり、これらのヘルパーメソッドを連結可能にします。 イテレーターヘルパーオブジェクトはすべて、イテレータープロトコルを実装する共通のプロトタイプオブジェクトを継承しています。
 
@@ -136,8 +136,14 @@ const myIterator = Iterator.from({
 
 ## 静的メソッド
 
+- {{jsxref("Iterator.concat()")}}
+  - : 反復可能オブジェクトのリストから新しい `Iterator` オブジェクトを作成します。新しいイテレーターは、入力されたそれぞれの反復可能オブジェクトから順番に値を生成します。
 - {{jsxref("Iterator.from()")}}
   - : イテレーターまたは反復可能オブジェクトから、新しい`Iterator`オブジェクトを作成します。
+- {{jsxref("Iterator.zip()")}} {{experimental_inline}}
+  - : 複数の反復可能オブジェクトから要素を集約し、同じ位置の要素を含む配列を生成する新しい `Iterator` オブジェクトを作成します。
+- {{jsxref("Iterator.zipKeyed()")}} {{experimental_inline}}
+  - : 複数の反復可能オブジェクトから要素を集約する新しい`Iterator`オブジェクトを作成します。入力で指定されたキーを持つ、同じ位置の要素を含むオブジェクトを生成します。
 
 ## インスタンスプロパティ
 
@@ -146,7 +152,6 @@ const myIterator = Iterator.from({
 - {{jsxref("Object/constructor", "Iterator.prototype.constructor")}}
   - : インスタンスオブジェクトを作成するコンストラクター関数です。 `Iterator` インスタンスの場合、初期値は {{jsxref("Iterator/Iterator", "Iterator")}} コンストラクターです。
 - `Iterator.prototype[Symbol.toStringTag]`
-
   - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"Iterator"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
     > [!NOTE]
@@ -176,6 +181,8 @@ const myIterator = Iterator.from({
   - : このイテレーターで指定された数の要素を反復処理し、その後終了する新しいイテレーターヘルパーオブジェクトを返します。
 - {{jsxref("Iterator.prototype.toArray()")}}
   - : イテレーターから反復処理された要素で満たされた新しい配列インスタンス ({{jsxref("Array")}}) を作成します。
+- [`Iterator.prototype[Symbol.dispose]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.dispose)
+  - : `this` の `return()` メソッドが存在する場合、それを呼び出します。これにより disposable プロトコルが実装され、{{jsxref("Statements/using", "using")}} または {{jsxref("Statements/await_using", "await using")}} と共に使用された際に破棄することができます。
 - [`Iterator.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator)
   - : イテレーターオブジェクト自身を返します。これにより、イテレーターオブジェクトが反復可能にもなります。
 
@@ -204,5 +211,6 @@ for (const value of arrIterator) {
 ## 関連情報
 
 - [`Iterator` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims による `Iterator` と関連するヘルパーのポリフィル](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Statements/function*", "function*")}}
 - [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

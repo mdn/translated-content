@@ -28,7 +28,6 @@ slug: Web/CSS/CSS_colors/Applying_color
 - {{cssxref("background-color")}}
   - : 글씨의 배경색입니다.
 - {{cssxref("text-shadow")}}
-
   - : 글씨의 그림자 효과를 설정합니다. 여러 옵션 중에서 그림자 색을 정할 수 있습니다. (이후 다른 옵션에 따라 흐려지고 배경과 섞입니다)
 
     See [Text drop shadows](/ko/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows) to learn more.

@@ -3,12 +3,12 @@ title: "IntersectionObserverEntry: target プロパティ"
 short-title: target
 slug: Web/API/IntersectionObserverEntry/target
 l10n:
-  sourceCommit: 618aa21b32b84cdd69b6982303e4ec9667efa48c
+  sourceCommit: fe47429d64ffaacb24f5130523442aeaabf26ac6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`target`** プロパティは、交差ルートとの交差量が変化したのがどの対象要素であるかを {{domxref("Element")}} で示します。
+**`target`** は {{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用プロパティで、交差ルートとの交差量が変化したのがどの対象要素であるかを {{domxref("Element")}} で示します。
 
 ## 値
 

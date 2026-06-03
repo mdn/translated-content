@@ -1,13 +1,14 @@
 ---
 title: Reflect.construct()
+short-title: construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Reflect.construct()`** は静的メソッドで、{{jsxref("Operators/new", "new")}} 演算子のように、ただし関数として動作します。これは `new target(...args)` の呼び出しと同等です。さらに、別の　[`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target)　値を指定することもすることができます。
 
-静的な **`Reflect.construct()`** メソッドは {{jsxref("Operators/new", "new")}} 演算子のように、ただし関数として動作します。これは `new target(...args)` の呼び出しと同等です。このメソッドはオプションを追加することで、別なプロトタイプを指定することができます。
-
-{{InteractiveExample("JavaScript Demo: Reflect.construct()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Reflect.construct()", "taller")}}
 
 ```js interactive-example
 function func1(a, b, c) {
@@ -19,17 +20,17 @@ const object1 = new func1(...args);
 const object2 = Reflect.construct(func1, args);
 
 console.log(object2.sum);
-// Expected output: 6
+// 予想される結果: 6
 
 console.log(object1.sum);
-// Expected output: 6
+// 予想される結果: 6
 ```
 
 ## 構文
 
-```js
-Reflect.construct(target, argumentsList);
-Reflect.construct(target, argumentsList, newTarget);
+```js-nolint
+Reflect.construct(target, argumentsList)
+Reflect.construct(target, argumentsList, newTarget)
 ```
 
 ### 引数
@@ -37,9 +38,9 @@ Reflect.construct(target, argumentsList, newTarget);
 - `target`
   - : 呼び出し対象の関数。
 - `argumentsList`
-  - : 配列風オブジェクトで、 `target` の呼び出しの引数を指定する。
+  - : `target` を呼び出す際の引数を指定する[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)。
 - `newTarget` {{optional_inline}}
-  - : プロトタイプを使用するコンストラクター。 [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) も参照してください。 `newTarget` が存在しない場合は、既定値は `target` になります。
+  - : `target` 内の [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) 式の値。デフォルトは `target` です。一般的に（[例を参照](#new.target_の変更)）、`target` はオブジェクトを初期化するロジックを指定し、`newTarget.prototype` は構築されたオブジェクトのプロトタイプを指定します。
 
 ### 返値
 
@@ -47,18 +48,118 @@ Reflect.construct(target, argumentsList, newTarget);
 
 ### 例外
 
-{{jsxref("TypeError")}}: `target` または `newTarget` がコンストラクターではない場合。
+- {{jsxref("TypeError")}}
+  - : `target` または `newTarget` がコンストラクターではない場合、または `argumentsList` がオブジェクトではない場合に発生します。
 
 ## 解説
 
-`Reflect.construct()` によって、可変長引数を指定してコンストラクターを呼び出すことができます。 (これは[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)と[`new` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/new)を組み合わせて使用することでも可能です。)
+`Reflect.construct()` はコンストラクター呼び出しの反射的意味づけを提供します。つまり、`Reflect.construct(target, argumentsList, newTarget)` は意味的に次のものと同等です。
 
 ```js
-let obj = new Foo(...args);
-let obj = Reflect.construct(Foo, args);
+new target(...argumentsList);
 ```
 
-### `Reflect.construct()` と `Object.create()`
+`new` 演算子を使用する場合、`target` と `newTarget` は常に同じコンストラクターであることに注意してください。ただし、`Reflect.construct()` を使用すると、異なる [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) 値を渡すことが可能です。概念的には、`newTarget` は `new` が呼び出された関数であり、`newTarget.prototype` が構築されたオブジェクトのプロトタイプとなります。一方、`target` はオブジェクトを初期化するために実際に実行されるコンストラクターです。例えば、クラス継承において `new.target` は現在実行中のコンストラクターとは異なる場合もあります。
+
+```js
+class A {
+  constructor() {
+    console.log(new.target.name);
+  }
+}
+class B extends A {}
+
+new B(); // "B"
+```
+
+`Reflect.construct()` によって、可変長引数を指定してコンストラクターを呼び出すことができます。（これは通常のコンストラクター呼び出しで[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を組み合わせて使用することでも可能です。）
+
+```js
+const obj = new Foo(...args);
+const obj = Reflect.construct(Foo, args);
+```
+
+`Reflect.construct()` は `target` の `[[Construct]]` [オブジェクト内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods)を呼び出します。
+
+## 例
+
+### Reflect.construct() の使用
+
+```js
+const d = Reflect.construct(Date, [1776, 6, 4]);
+d instanceof Date; // true
+d.getFullYear(); // 1776
+```
+
+### new.target の変更
+
+`newTarget` が渡された場合、コンストラクター内で `new.target` の値を変更します。生成されるオブジェクトは `target` ではなく `newTarget` のインスタンスとなります。
+
+```js
+function OneClass() {
+  console.log("OneClass executed");
+  console.log(`new.target is ${new.target.name}`);
+}
+
+function OtherClass() {
+  console.log("OtherClass executed");
+  console.log(`new.target is ${new.target.name}`);
+}
+
+const obj1 = Reflect.construct(OneClass, []);
+// ログ出力:
+// OneClass executed
+// new.target is OneClass
+console.log(obj1 instanceof OneClass); // true
+
+const obj2 = Reflect.construct(OneClass, [], OtherClass);
+// ログ出力:
+// OneClass executed
+// new.target is OtherClass
+console.log(obj2 instanceof OtherClass); // true
+console.log(obj2 instanceof OneClass); // false
+```
+
+もちろん、構築されたオブジェクトのプロトタイプチェーンについては、コンストラクターの実装に依存するため、確固たる保証はありません。例えば、`target` コンストラクターがオブジェクトを返す場合、`newTarget` の値に関わらず、そのオブジェクトが構築されたオブジェクトとなります。`target` が `construct` トラップを持つプロキシーである場合、そのトラップが構築プロセスを完全に制御します。
+
+```js
+function OneClass() {
+  return { name: "one" };
+}
+
+function OtherClass() {
+  return { name: "other" };
+}
+
+const obj1 = Reflect.construct(OneClass, [], OtherClass);
+console.log(obj1.name); // 'one'
+console.log(obj1 instanceof OneClass); // false
+console.log(obj1 instanceof OtherClass); // false
+```
+
+有効な `new.target` は、[`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) プロパティを持つコンストラクター関数であるべきですが、後者は強制されません。`prototype` プロパティの値がオブジェクトでない場合、初期化されたオブジェクトは `Object.prototype` から継承します。
+
+```js
+function OneClass() {
+  console.log("OneClass executed");
+  console.log(`new.target is ${new.target.name}`);
+}
+
+function OtherClass() {
+  console.log("OtherClass executed");
+  console.log(`new.target is ${new.target.name}`);
+}
+
+OtherClass.prototype = null;
+
+const obj = Reflect.construct(OneClass, [], OtherClass);
+// ログ出力:
+// OneClass executed
+// new.target is OtherClass
+console.log(Object.getPrototypeOf(obj) === Object.prototype); // true
+```
+
+### Reflect.construct() と Object.create()
 
 `Reflect` が導入される前は、オブジェクトを構築するのにコンストラクターとプロトタイプの任意の組み合わせで {{jsxref("Object.create()")}} を使用して構築することができました。
 
@@ -71,11 +172,9 @@ function OtherClass() {
   this.name = "other";
 }
 
-// Calling this:
-let obj1 = Reflect.construct(OneClass, args, OtherClass);
-
-// ...has the same result as this:
-let obj2 = Object.create(OtherClass.prototype);
+const args = [];
+const obj1 = Reflect.construct(OneClass, args, OtherClass);
+const obj2 = Object.create(OtherClass.prototype);
 OneClass.apply(obj2, args);
 
 console.log(obj1.name); // 'one'
@@ -86,22 +185,9 @@ console.log(obj2 instanceof OneClass); // false
 
 console.log(obj1 instanceof OtherClass); // true
 console.log(obj2 instanceof OtherClass); // true
-
-//Another example to demonstrate below:
-
-function func1(a, b, c, d) {
-  console.log(arguments[3]);
-}
-
-function func2(d, e, f, g) {
-  console.log(arguments[3]);
-}
-
-let obj1 = Reflect.construct(func1, ["I", "Love", "my", "India"]);
-obj1;
 ```
 
-この 2 つの手法の最終結果は同じですが、その過程に重要な違いがあります。 `Object.create()` と {{jsxref("Function.prototype.apply()")}} を使用する場合、 `new.target` 演算子はコンストラクター内で `undefined` を返します。これは、 `new` 演算子を用いないためです。
+この 2 つの手法の最終結果は同じですが、その過程に重要な違いがあります。 `Object.create()` と {{jsxref("Function.prototype.apply()")}} を使用する場合、 `new.target` 演算子はコンストラクター内で `undefined` を返します。これは、 `new` 演算子を用いないためです。（実際には、[`apply`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply) の意味づけを使用しており、`construct` ではありません。ただし、通常の関数はほぼ同じように動作します。）
 
 一方、 `Reflect.construct()` を呼び出す場合は、 `new.target` 演算子は、提供されていれば `newTarget` を指し、そうでなければ `target` を指します。
 
@@ -115,31 +201,21 @@ function OtherClass() {
   console.log(new.target);
 }
 
-let obj1 = Reflect.construct(OneClass, args);
-// Output:
-//     OneClass
-//     function OneClass { ... }
+const obj1 = Reflect.construct(OneClass, args);
+// ログ出力:
+// OneClass
+// function OneClass { ... }
 
-let obj2 = Reflect.construct(OneClass, args, OtherClass);
-// Output:
-//     OneClass
-//     function OtherClass { ... }
+const obj2 = Reflect.construct(OneClass, args, OtherClass);
+// ログ出力:
+// OneClass
+// function OtherClass { ... }
 
-let obj3 = Object.create(OtherClass.prototype);
+const obj3 = Object.create(OtherClass.prototype);
 OneClass.apply(obj3, args);
 // Output:
 //     OneClass
 //     undefined
-```
-
-## 例
-
-### `Reflect.construct()` の使用
-
-```js
-let d = Reflect.construct(Date, [1776, 6, 4]);
-d instanceof Date; // true
-d.getFullYear(); // 1776
 ```
 
 ## 仕様書
@@ -156,3 +232,4 @@ d.getFullYear(); // 1776
 - {{jsxref("Reflect")}}
 - {{jsxref("Operators/new", "new")}}
 - [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target)
+- [`handler.construct()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct)

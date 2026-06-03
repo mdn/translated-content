@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/If-Unmodified-Since
 original_slug: Web/HTTP/Headers/If-Unmodified-Since
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`If-Unmodified-Since`** リクエストヘッダーは、リクエストを条件付きにします。サーバーはリソースが指定された日時以降に変更されていない場合のみ、要求されたリソースを返信したり、 {{HTTPMethod("POST")}} などの{{Glossary("safe", "安全")}}ではないメソッドをの場合はそれを受け付けたりします。リソースが指定された日時以降に変更されていた場合は、レスポンスは{{HTTPStatus("412")}} (Precondition Failed) エラーになります。
 
 一般的な使用例は 2 つあります。
@@ -67,7 +65,7 @@ If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 | --------------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "If-Unmodified-Since", "3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 

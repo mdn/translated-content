@@ -17,7 +17,7 @@ Para criar uma instância de XMLHttpRequest , basta fazer isso:
 var myRequest = new XMLHttpRequest();
 ```
 
-Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest).
+Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
 
 ## Propriedades
 
@@ -395,7 +395,7 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
             href="/pt-BR/docs/Server-sent_events"
             >Server-Sent Events</a
           >,
-          <a href="/pt-BR/docs/WebSockets"
+          <a href="/pt-BR/docs/Web/API/WebSockets_API"
             >Web Sockets</a
           >
           ou <code>responseText</code> de eventos de progresso em seu lugar.
@@ -439,9 +439,7 @@ XMLHttpRequest (
 ##### Parâmetros (não-padrão)
 
 - `objParameters`
-
   - : Há dois sinalizadores que você pode definir:
-
     - `mozAnon`
       - : Boolean: Definir esse sinalizador de true fará com que o navegador para não expor a origem e as [credenciais do usuário](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) ao buscar recursos. Mais importante, isto significa que os cookies não será enviado a menos que explicitamente adicionado usando setRequestHeader.
     - `mozSystem`
@@ -555,7 +553,8 @@ void setRequestHeader(
 
 Inicializa o objeto para uso a partir do código C ++.
 
-> **Aviso:** **Nota:** Este método não deve ser chamado a partir do JavaScript.
+> [!WARNING]
+> **Nota:** Este método não deve ser chamado a partir do JavaScript.
 
 ```
 [noscript] void init(
@@ -635,7 +634,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 `onreadystatechange` como uma propriedade do `XMLHttpRequest` instância é suportado em todos os navegadores.
 
-Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest).
+Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
 
 avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/pt-BR/docs/Web/API/EventTarget/addEventListener) APIs Além de definir on propriedades para uma função de manipulador.
 
@@ -650,14 +649,12 @@ avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpR
 ## Veja também
 
 - MDN artigos sobre XMLHttpRequest:
-
   - [AJAX - Getting Started](/pt-BR/docs/conflicting/Web/Guide/AJAX)
-  - [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+  - [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
   - [HTML in XMLHttpRequest](/pt-BR/HTML_in_XMLHttpRequest)
-  - [`FormData`](/pt-BR/docs/DOM/XMLHttpRequest/FormData)
+  - [`FormData`](/pt-BR/docs/Web/API/FormData)
 
 - XMLHttpRequest referencias da W3C e navegador fornecedores:
-
   - [W3C: XMLHttpRequest](https://www.w3.org/TR/XMLHttpRequest1/) (base features)
   - [W3C: XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2
   - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
