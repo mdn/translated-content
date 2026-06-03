@@ -5,7 +5,7 @@ slug: Web/API/File/webkitRelativePath
 
 {{APIRef("File API")}}{{non-standard_header}}
 
-La propiedad **`File.webkitRelativePath`** de solo lectura contiene un {{domxref("USVString")}} el cual especifica la ruta relativa del archivo al directorio seleccionado por el usuario en un elemento {{HTMLElement("input")}} con su [`webkitdirectory`](/es/docs/Web/HTML/Reference/Elements/input#webkitdirectory) atributo definido.
+La propiedad **`File.webkitRelativePath`** de solo lectura contiene un {{jsxref("String")}} el cual especifica la ruta relativa del archivo al directorio seleccionado por el usuario en un elemento {{HTMLElement("input")}} con su [`webkitdirectory`](/es/docs/Web/HTML/Reference/Elements/input#webkitdirectory) atributo definido.
 
 ## Sintaxis
 
@@ -15,7 +15,7 @@ var rulaRelativa = File.webkitRelativePath;
 
 ### Valor
 
-Un {{domxref("USVString")}} conteniendo la ruta del archivo relativa al directorio padre seleccionado por el usuario.
+Un {{jsxref("String")}} conteniendo la ruta del archivo relativa al directorio padre seleccionado por el usuario.
 
 ## Ejemplo
 

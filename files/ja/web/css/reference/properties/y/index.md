@@ -107,7 +107,7 @@ rect:nth-of-type(4) {
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - SVG の {{SVGAttr("y")}} 属性
 - 幾何プロパティ: `y`, {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("ry")}}, {{cssxref("x")}}, {{cssxref("width")}}, {{cssxref("height")}}

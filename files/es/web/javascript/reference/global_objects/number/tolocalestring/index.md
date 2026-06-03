@@ -42,7 +42,7 @@ Un texto con una representación localizada del número dado.
 
 ## Performance
 
-Cuando formateas una gran cantidad de números, es mejor crear un objeto {{jsxref("NumberFormat")}} y utilizar la función {{jsxref("NumberFormat.format")}}.
+Cuando formateas una gran cantidad de números, es mejor crear un objeto {{jsxref("Intl/NumberFormat", "NumberFormat")}} y utilizar la función {{jsxref("Intl/NumberFormat/format", "NumberFormat.format")}}.
 
 ## Ejemplos
 
@@ -58,7 +58,7 @@ console.log(number.toLocaleString()); // Muestra "3,500" si se está utilizando 
 
 ### Verificando el soporte de los parámetros `locales` y `options`
 
-Los parámetros `locales` y `options` no son soportados aún por todos los navegadores. Para verificar el soporte en ES5.1 y posteriores implementaciones, se puede utilizar el hecho que los tags inválidos en la localización son rechazados con una excepción {{jsxref("Global_Objects/RangeError", "RangeError")}}:
+Los parámetros `locales` y `options` no son soportados aún por todos los navegadores. Para verificar el soporte en ES5.1 y posteriores implementaciones, se puede utilizar el hecho que los tags inválidos en la localización son rechazados con una excepción {{jsxref("RangeError")}}:
 
 ```js
 function toLocaleStringSupportsLocales() {
@@ -72,7 +72,7 @@ function toLocaleStringSupportsLocales() {
 }
 ```
 
-Antes de ES5.1, las implementaciones no requieren devolver una exepción {{jsxref("Global_Objects/RangeError", "RangeError")}} cuando `toLocaleString` es llamado sin argumentos.
+Antes de ES5.1, las implementaciones no requieren devolver una exepción {{jsxref("RangeError")}} cuando `toLocaleString` es llamado sin argumentos.
 
 Para verificar que funciona todos los navegadores, incluyendo aquellos que soportan ECMA-262, anterior a ES5.1, se puede verificar por las funcionalidades especificadas en ECMA-402 que requieren soportar opciones regionales para `Number.prototype.toLocaleString` directamente:
 

@@ -24,11 +24,11 @@ var movingBookmark = browser.bookmarks.move(
 ### Paramètres
 
 - `id`
-  - : Un {{jsxref("string")}} contenant l'ID du signet ou du dossier à déplacer.
+  - : Un {{jsxref("String")}} contenant l'ID du signet ou du dossier à déplacer.
 - `destination`
-  - : Un {{jsxref("object")}} qui spécifie la destination du signet. Cet objet doit contenir un ou les deux champs suivants :
+  - : Un {{jsxref("Object")}} qui spécifie la destination du signet. Cet objet doit contenir un ou les deux champs suivants :
     - `parentId` {{optional_inline}}
-      - : Un {{jsxref("string")}} qui spécifie l'ID du dossier de destination. Si cette valeur est omise, le signet est déplacé vers un nouvel emplacement dans son dossier actuel.
+      - : Un {{jsxref("String")}} qui spécifie l'ID du dossier de destination. Si cette valeur est omise, le signet est déplacé vers un nouvel emplacement dans son dossier actuel.
     - `index` {{optional_inline}}
       - : Un index basé sur 0 spécifiant la position dans le dossier vers lequel déplacer le signet. La valeur 0 déplace le signet vers le haut du dossier. Si cette valeur est omise, le signet est placé à la fin du nouveau dossier parent..
 

@@ -27,7 +27,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 ### 参数
 
 - `func`
-  - : 要每隔 `delay` 毫秒执行一次的{{jsxref("function", "函数", "", 1)}}。第一次执行发生在 `delay` 毫秒之后。
+  - : 要每隔 `delay` 毫秒执行一次的{{jsxref("Operators/function", "函数", "", 1)}}。第一次执行发生在 `delay` 毫秒之后。
 - `code`
   - : 这个可选的语法让你可以传递一个字符串来代替函数，你传递的字符串会被编译然后每经过 `delay` 毫秒执行一次。这个语法因为与 {{jsxref("Global_Objects/eval", "eval()")}} 存在相同的安全风险所以*不推荐*使用。
 - `delay` {{optional_inline}}

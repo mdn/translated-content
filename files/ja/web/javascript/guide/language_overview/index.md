@@ -744,7 +744,7 @@ JavaScript は本質的に単一スレッドです。[並列処理](https://ja.w
 JavaScript で非同期コードを書く慣用的な方法は 3 つあります。
 
 - コールバックベース（{{domxref("Window.setTimeout", "setTimeout()")}} など）
-- プロミス ({{jsxref("Global_Objects/Promise", "Promise")}}) ベース
+- プロミス ({{jsxref("Promise")}}) ベース
 - プロミスの糖衣構文である {{jsxref("Statements/async_function", "async")}}/{{jsxref("Operators/await", "await")}}
 
 例えば、 JavaScript でファイル読み込み処理をすると次のようになります：

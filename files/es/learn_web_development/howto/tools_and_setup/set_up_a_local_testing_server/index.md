@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 original_slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/es/docs/Learn/Common_questions")}}
 
 En este artículo explica cómo configurar un servidor de prueba local simple en su equipo y los conceptos básicos de cómo utilizarlo.
 

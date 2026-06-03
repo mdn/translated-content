@@ -10,10 +10,10 @@ Le module **de cascade et d'héritage CSS** définit les règles d'attribution d
 
 L'un des principes fondamentaux de conception de CSS est la cascade des règles. Elle permet à plusieurs feuilles de style d'influencer la présentation d'un document. Les déclarations de propriétés et de valeurs CSS définissent comment un document est rendu. Plusieurs déclarations peuvent définir des valeurs différentes pour la même combinaison d'élément et de propriété, mais une seule valeur peut être appliquée à une propriété CSS. Le module de cascade CSS définit comment ces conflits sont résolus.
 
-L'inverse se produit également. Parfois, il n'y a pas de déclarations définissant la valeur d'une propriété. Le module de cascade CSS définit comment ces valeurs manquantes doivent être définies via l'héritage ou à partir de la valeur initiale de la propriété.
+L'inverse se produit également. Parfois, il n'y a pas de déclarations définissant la valeur d'une propriété. Le module de cascade CSS définit comment ces valeurs manquantes doivent être définies par l'héritage ou à partir de la valeur initiale de la propriété.
 
 > [!NOTE]
-> Les règles pour trouver les valeurs spécifiées dans le contexte de la page et ses boîtes de marge sont décrites dans le [module de page CSS](/fr/docs/Web/CSS/Guides/Paged_media).
+> Les règles pour trouver les valeurs définies dans le contexte de la page et ses boîtes de marge sont décrites dans le [module de page CSS](/fr/docs/Web/CSS/Guides/Paged_media).
 
 ## Référence
 
@@ -46,7 +46,7 @@ L'inverse se produit également. Parfois, il n'y a pas de déclarations définis
 
 - [Valeur réelle](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_réelle)
 - [Disposition anonyme](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#le_bloc_de_règle_layer_pour_les_disposition_nommées_et_anonymes)
-- [Origine de l'auteur·ice](/fr/docs/Web/CSS/Guides/Cascade/Introduction#feuilles_de_style_de_lauteur_ou_lautrice)
+- [Origine du site](/fr/docs/Web/CSS/Guides/Cascade/Introduction#feuilles_de_style_du_site)
 - [Cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction)
 - [Valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée)
 - [Valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale)

@@ -1,11 +1,12 @@
 ---
 title: Intl.Collator.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
+l10n:
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-{{JSRef}}
-
-**`Intl.Collator.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl.Collator")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
+**`resolvedOptions()`** は {{jsxref("Intl.Collator")}} インスタンスのメソッドで、この `Collator` オブジェクトの初期化時に計算されたオプションを反映したプロパティを持つ、新しいオブジェクトを返します。
 
 {{InteractiveExample("JavaScript デモ: Intl.Collator.prototype.resolvedOptions")}}
 
@@ -14,42 +15,48 @@ const numberDe = new Intl.NumberFormat("de-DE");
 const numberAr = new Intl.NumberFormat("ar");
 
 console.log(numberDe.resolvedOptions().numberingSystem);
-// Expected output: "latn"
+// 予想される結果: "latn"
 
 console.log(numberAr.resolvedOptions().numberingSystem);
-// Expected output: "arab"
+// 予想される結果: "arab"
 ```
 
 ## 構文
 
-```js
-resolvedOptions();
+```js-nolint
+resolvedOptions()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
-この {{jsxref("Intl.Collator")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトです。
-
-## 解説
-
-返されるオブジェクトには、以下のプロパティがあります。
+この `Collator` オブジェクトの初期化時に計算されたオプションを反映したプロパティを持つ、新しいオブジェクトです。このオブジェクトは以下のプロパティを、掲載順に保持します。
 
 - `locale`
-  - : 実際に使用したロケールの BCP 47 言語タグ。このロケールにつながる入力 BCP 47 言語タグに Unicode 拡張値が要求された場合、要求されたキーと値のペアのうち、このロケールで対応しているものが `locale` に含まれます。
-- `usage`, `sensitivity`, `ignorePunctuation`
-  - : `options` 引数の同名のプロパティで提供された値、または既定値が入ります。
+  - : 実際に使用されているロケールの {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}で、[ロケールネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation)プロセスで定められます。Unicode の `co`、`kn`、`kf` 拡張キーのみが、リクエストされ、かつ対応している場合に限り、出力に含まれる可能性があります。
+- `usage`
+  - : `options` 引数でこのプロパティに指定された値です。必要に応じてデフォルト値が設定されます。値は `"sort"` または `"search"` のどちらかです。デフォルトは `"sort"` です。
+- `sensitivity`
+  - : `options` 引数でこのプロパティに指定された値です。必要に応じてデフォルト値が設定されます。値は `"base"`、`"accent"`、`"case"`、`"variant"` のいずれかです。`"sort"` を使用する場合のデフォルトは `"variant"` ですが、`"search"` を使用する場合はロケールに依存します。
+- `ignorePunctuation`
+  - : `options` 引数でこのプロパティに指定された値です。必要に応じてデフォルト値が設定されます。これは論理値です。デフォルト値は、タイ語 (`th`) の場合は `true`、それ以外の言語の場合は `false` です。
 - `collation`
-  - : `locale` が対応している場合は、 Unicode 拡張キー "`co`" を使用して要求された値、そうでなければ "`default`" です。
-- `numeric`, `caseFirst`
-  - : `options` 引数の同名のプロパティ、または Unicode 拡張キーの "`kn`" および "`kf`" で要求された値、または既定値が入ります。実装がこれらのプロパティに対応していない場合は、省略されます。
+  - : このプロパティの値は、`options` 引数で指定するか、Unicode 拡張キー `"co"` を使用して指定します。必要に応じてデフォルト値が設定されます。これは、このロケールで対応している[照合型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している照合型)です。デフォルトは `"default"` です。
+- `numeric`
+  - : このプロパティには、`options` 引数で指定された値、または Unicode 拡張キー `"kn"` を使用して指定された値が設定されます。必要に応じてデフォルト値が設定されます。これは論理値です。デフォルトは `false` です。実装がこの Unicode 拡張キーに対応していない場合、このプロパティは省略されます。
+- `caseFirst`
+  - : このプロパティには、`options` 引数で指定された値、または Unicode 拡張キー `"kf"` を使用して指定された値が設定されます。必要に応じてデフォルト値が代入されます。値は `"upper"`、`"lower"`、`"false"` のいずれかです。デフォルトは `"false"` です。実装がこの Unicode 拡張キーに対応していない場合、このプロパティは省略されます。s
 
 ## 例
 
 ### resolvedOptions メソッドの使用
 
 ```js
-var de = new Intl.Collator("de", { sensitivity: "base" });
-var usedOptions = de.resolvedOptions();
+const de = new Intl.Collator("de", { sensitivity: "base" });
+const usedOptions = de.resolvedOptions();
 
 usedOptions.locale; // "de"
 usedOptions.usage; // "sort"

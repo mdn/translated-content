@@ -25,11 +25,11 @@ Um {{jsxref('Boolean')}} que tem valor `false` se o comando não é válido ou e
 ### Parâmetros
 
 - `aCommandName`
-  - : Uma {{domxref("DOMString")}} especificando o nome do comando a ser executado. Veja [Comandos](#comandos) para um lista dos possíveis comandos.
+  - : Uma {{jsxref("String")}} especificando o nome do comando a ser executado. Veja [Comandos](#comandos) para um lista dos possíveis comandos.
 - `aShowDefaultUI`
   - : Um {{jsxref("Boolean")}} indicando se a interface padrão do usuário deve ser mostrada. Isso não é implementado no Mozilla.
 - `aValueArgument`
-  - : Para comandos que requerem um argumento de entrada. É uma {{domxref("DOMString")}} provendo a informação. Por exemplo, `insertImage` requer uma URL da imagem a ser inserida. Use `null` se nenhum argumento é necessário.
+  - : Para comandos que requerem um argumento de entrada. É uma {{jsxref("String")}} provendo a informação. Por exemplo, `insertImage` requer uma URL da imagem a ser inserida. Use `null` se nenhum argumento é necessário.
 
 ### Comandos
 

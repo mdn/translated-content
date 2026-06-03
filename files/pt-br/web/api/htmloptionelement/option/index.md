@@ -16,9 +16,9 @@ var optionElementReference = new Option(text, value, defaultSelected, selected);
 ### Parâmetros
 
 - `text` {{optional_inline}}
-  - : Um {{domxref("DOMString")}} representa o conteúdo do elemento, o texto mostrado na tela. Se o texto não é especificado, o texto padrão "" (texto vazio) é utilizado.
+  - : Um {{jsxref("String")}} representa o conteúdo do elemento, o texto mostrado na tela. Se o texto não é especificado, o texto padrão "" (texto vazio) é utilizado.
 - `value` {{optional_inline}}
-  - : Um {{domxref("DOMString")}} representa o valor do {{domxref("HTMLOptionElement")}}, i.e. o valor do elemento {{htmlelement("option")}}. Se não especificado, o texto é usado como valor, e.g. o elemento {{htmlelement("select")}} tem seu valor associado quando o formulário é submetido ao servidor.
+  - : Um {{jsxref("String")}} representa o valor do {{domxref("HTMLOptionElement")}}, i.e. o valor do elemento {{htmlelement("option")}}. Se não especificado, o texto é usado como valor, e.g. o elemento {{htmlelement("select")}} tem seu valor associado quando o formulário é submetido ao servidor.
 - `defaultSelected` {{optional_inline}}
   - : Um {{domxref("Boolean")}} é usado para adicionar o atributo **selected**, para que este {{htmlelement("option")}} seja mostrado como selecionado no elemento {{htmlelement("select")}} quando a página for carregada. Se não especificado, o estado padrão é não selecionado. Observe que o **defaultSelected = true** não define a opção como o valor selecionado do elemento {{htmlelement("select")}}.
 - `selected` {{optional_inline}}

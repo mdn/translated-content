@@ -55,7 +55,7 @@ myModule.doAllTheAmazingThings();
 
 ### Importa un solo miembro de un módulo
 
-Dado un objeto o valor llamado `myExport` que ha sido exportado del módulo `my-module` ya sea implícitamente (porque todo el módulo ha sido exportado) o explícitamente (usando la sentencia {{jsxref("Sentencias/export", "export")}} ), esto inserta `myExport` en el ámbito actual.
+Dado un objeto o valor llamado `myExport` que ha sido exportado del módulo `my-module` ya sea implícitamente (porque todo el módulo ha sido exportado) o explícitamente (usando la sentencia {{jsxref("Statements/export", "export")}} ), esto inserta `myExport` en el ámbito actual.
 
 ```js
 import { myExport } from "/modules/my-module.js";
@@ -161,7 +161,7 @@ getUsefulContents("http://www.example.com", (data) => {
 
 ## Ver también
 
-- {{jsxref("Sentencias/export", "export")}}
+- {{jsxref("Statements/export", "export")}}
 - [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
 - [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

@@ -502,7 +502,7 @@ La plupart des fonctionnalités JavaScript standard peuvent être utilisées dan
 
 - {{domxref("Navigator")}}
 - {{domxref("XMLHttpRequest")}}
-- {{jsxref("Objets_globaux/Array", "Array")}}, {{jsxref("Objets_globaux/Date", "Date")}}, {{jsxref("Objets_globaux/Math", "Math")}} et {{jsxref("Objets_globaux/String", "String")}}
+- {{jsxref("Array")}}, {{jsxref("Date")}}, {{jsxref("Math")}} et {{jsxref("String")}}
 - {{domxref("WindowTimers.setTimeout")}} et {{domxref("WindowTimers.setInterval")}}
 
 En revanche, un _worker_ ne pourra pas directement manipuler la page parente et notamment le DOM et les objets de la page. Il faudra effectuer ce traitement indirectement, via des messages.

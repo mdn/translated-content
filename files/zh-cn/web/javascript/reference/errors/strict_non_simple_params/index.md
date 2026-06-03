@@ -105,4 +105,4 @@ var callback = (() => {
 - {{jsxref("Operators/function", "函数表达式", "", 1)}}
 - {{jsxref("Functions/Default_parameters", "默认参数", "", 1)}}
 - {{jsxref("Functions/rest_parameters", "剩余参数", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "解构参数", "", 1)}}
+- {{jsxref("Operators/Destructuring", "解构参数", "", 1)}}

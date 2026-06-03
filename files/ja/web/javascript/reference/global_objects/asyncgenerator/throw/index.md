@@ -24,7 +24,7 @@ asyncGeneratorObject.throw(exception)
 
 発生したエラーを捕捉できない場合は、渡された例外で拒否する {{jsxref("Promise")}} を返します。
 
-例外が [`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) で捉えられ、再開してジェネレーターが次の値を生成すると、次の 2 つのプロパティを持つ {{jsxref("Global_Objects/Object", "Object")}} で解決する {{jsxref("Promise")}} を返します。
+例外が [`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) で捉えられ、再開してジェネレーターが次の値を生成すると、次の 2 つのプロパティを持つ {{jsxref("Object")}} で解決する {{jsxref("Promise")}} を返します。
 
 - `done`
   - : 論理値です。

@@ -1,13 +1,13 @@
 ---
-title: <meta name="robots">
+title: HTML `<meta name="robots">` 属性値
 short-title: robots
 slug: Web/HTML/Reference/Elements/meta/name/robots
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
 ---
 
 **`robots`** は {{htmlelement("meta")}} 要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性の値で（多くの場合「ロボットタグ」と呼ばれます）、ウェブ{{glossary("Crawler", "クローラー")}}がページに対して行うクロールおよびインデックス作成の動作を定義します。
-指定した場合、 `<meta>` 要素の [`content`](/ja/docs/Web/HTML/Reference/Elements/meta#content) 属性に、1 つ以上のルールをカンマで区切ったリストとして、クローラーに対する指示を定義します。
+指定した場合、 `<meta>` 要素の [`content`](/ja/docs/Web/HTML/Reference/Attributes/content) 属性に、1 つ以上のルールをカンマで区切ったリストとして、クローラーに対する指示を定義します。
 
 例えば、ページを検索結果のインデックスから除外することをクローラーに指示するには、`noindex` 値を使用することができます。
 
@@ -24,7 +24,7 @@ l10n:
 
 `<meta name="robots">` 要素には、次の追加属性を指定することができます。
 
-- [`content`](/ja/docs/Web/HTML/Reference/Elements/meta#content)
+- [`content`](/ja/docs/Web/HTML/Reference/Attributes/content)
   - : `content` 属性は定義する必要があります。この属性の値は、協力的な検索エンジンロボットのインデックス作成およびクロール動作を設定します。
     カンマで区切られたリストとして、次のキーワードを 1 つ以上受け入れます。
     - `index`
@@ -47,16 +47,16 @@ l10n:
         使用されるもの: [Google](https://developers.google.com/search/docs/crawling-indexing/special-tags?visit_id=637855965074074862-574753619&rd=1).
     - `noarchive`
       - : 検索エンジンにこのページの内容をキャッシュしないよう要求します。
-        使用されるもの: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag), [Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240).
+        使用されるもの: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag), [Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing](https://www.bing.com/webmasters/help/robots-meta-tags-and-attributes-that-bing-supports-5198d240).
     - `nosnippet`
       - : 検索エンジンの結果でこのページの説明の表示を抑制します。
-        使用されるもの: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240).
+        使用されるもの: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag), [Bing](https://www.bing.com/webmasters/help/robots-meta-tags-and-attributes-that-bing-supports-5198d240).
     - `noimageindex`
       - : このページをインデックスされた画像の参照ページとして表示しないよう要求します。
         使用されるもの: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag).
     - `nocache`
       - : `noarchive` と同等です。
-        使用されるもの: [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240).
+        使用されるもの: [Bing](https://www.bing.com/webmasters/help/robots-meta-tags-and-attributes-that-bing-supports-5198d240).
 
 ## 解説
 

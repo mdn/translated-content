@@ -20,7 +20,7 @@ new Temporal.ZonedDateTime(epochNanoseconds, timeZone, calendar)
 ```
 
 > [!NOTE]
-> Le constructeur `Temporal.ZonedDateTime()` ne peut être utilisé qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
+> Le constructeur `Temporal.ZonedDateTime()` ne peut être utilisé qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 

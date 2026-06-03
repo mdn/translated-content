@@ -17,7 +17,7 @@ BigInt(value)
   - : 被创建的对象的数值。可以是字符串或整数。
 
 > [!NOTE]
-> `BigInt()` 不与 {{JSxRef("Operators/new", "new")}} 运算符一起使用。
+> `BigInt()` 不与 {{JSxRef("new")}} 运算符一起使用。
 
 ## 示例
 

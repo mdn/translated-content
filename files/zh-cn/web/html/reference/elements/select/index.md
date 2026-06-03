@@ -49,7 +49,7 @@ select {
 包括下列[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `autocomplete`
-  - : 一个 {{domxref("DOMString")}}，为 {{Glossary("user agent", "用户代理")}} 提供自动填充功能的线索。关于该值的完整列表以及如何使用自动填充的详细信息，请参阅 [HTML 自动完成属性](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete)。
+  - : 一个 {{jsxref("String")}}，为 {{Glossary("user agent", "用户代理")}} 提供自动填充功能的线索。关于该值的完整列表以及如何使用自动填充的详细信息，请参阅 [HTML 自动完成属性](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete)。
 - `autofocus`
   - : 这个布尔值属性能够让一个对象在页面加载的时候获得焦点。一个文档中只有一个对象可以有这个属性。
 - `disabled`
