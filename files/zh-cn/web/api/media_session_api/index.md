@@ -151,22 +151,22 @@ playButton.addEventListener("pointerup", (event) => {
 ```js
 try {
   navigator.mediaSession.setActionHandler("previousslide", () => {
-    log('> 用户点击“向前翻页”图标。');
+    log("> 用户点击“向前翻页”图标。");
     if (slideNumber > 1) slideNumber--;
     updateSlide();
   });
 } catch (error) {
-  log('警告！不支持媒体会话操作“previousslide”。');
+  log("警告！不支持媒体会话操作“previousslide”。");
 }
 
 try {
   navigator.mediaSession.setActionHandler("nextslide", () => {
-    log('> 用户点击“向后翻页”图标。');
+    log("> 用户点击“向后翻页”图标。");
     slideNumber++;
     updateSlide();
   });
 } catch (error) {
-  log('警告！不支持媒体会话操作“nextslide”。');
+  log("警告！不支持媒体会话操作“nextslide”。");
 }
 ```
 
