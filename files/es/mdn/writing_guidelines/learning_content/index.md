@@ -10,7 +10,7 @@ La sección [Aprende desarrollo web](/es/docs/Learn_web_development) de MDN est�
 
 ## Público objetivo
 
-El público al que está dirigido MDN aprende desarrollo web (también conocido como "aprende") son personas que no son expertas en desarrollo front-end, esto incluye a estudiantes, desarrollador web principiantes (junior) o aprendices (trainee), aficionados y docentes que buscan orientación sobre las mejores prácticas para saber qué enseñar a sus alumnos.
+El público al que está dirigido MDN Aprende desarrollo web (también conocido como "Aprende") son personas que no son expertas en desarrollo front-end; esto incluye a estudiantes, desarrolladores web principiantes (junior) o aprendices (trainee), aficionados y docentes que buscan orientación sobre las mejores prácticas para saber qué enseñar a sus alumnos.
 
 ## Temas tratados
 
