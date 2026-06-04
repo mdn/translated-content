@@ -49,7 +49,7 @@ Sin embargo, hay algunas diferencias:
 > [!NOTE]
 > Mantenemos un [registro de cambios](/es/docs/Learn_web_development/Changelog) que detalla cualquier cambio significativo realizado en los resultados de aprendizaje, para que los educadores puedan actualizar cualquier recurso basado en MDN Aprende.
 
-## Enlances externos o embebidos
+## Enlaces externos o embebidos
 
 Tal y como se describe en nuestras pautas sobre [enlaces externos](/es/docs/MDN/Writing_guidelines/Writing_style_guide#external_links), MDN generalmente no permite enlaces externos (o embebidos) que parezcan respaldar productos o servicios comerciales o que apunten a contenido pago. Esto es para disminuir el riesgo de que el contenido de MDN pierda confianza y se vuelva menos útil debido al exceso de enlaces de spam.
 
