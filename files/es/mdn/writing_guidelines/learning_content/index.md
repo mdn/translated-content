@@ -69,7 +69,7 @@ Sin embargo, nosotros:
 
 ### Orden de los enlaces "Véase también"
 
-En las páginas de contenido del área de aprendizaje, los enlaces de "Véase también" que aparecen al final del contenido, debe aparecer en el siguiente orden:
+En las páginas de contenido del área de aprendizaje, los enlaces de "Véase también" que aparecen al final del contenido deben aparecer en el siguiente orden:
 
 1. Enlaces internos.
 2. Enlaces a contenido gratuito.
