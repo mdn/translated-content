@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 6722199b4d63fad3c33db1146af380fc98b6c202
 ---
 
-JavaScript (または JS) は、主にウェブページの動的なクライアントサイドスクリプトとして使用されるプログラミング言語です。しかし、{{Glossary("Server","サーバー")}}サイドでも  {{Glossary("Node.js")}}、{{Glossary("Deno")}}、[Bun](https://bun.com/) などのランタイムを用いて、たびたび使用されています。
+JavaScript (または JS) は、主にウェブページの動的なクライアントサイドスクリプトとして使用されるプログラミング言語です。しかし、{{Glossary("Server","サーバー")}}サイドでも {{Glossary("Node.js")}}、{{Glossary("Deno")}}、[Bun](https://bun.com/) などのランタイムを用いて、たびたび使用されています。
 
 JavaScript と [プログラミング言語 Java](https://ja.wikipedia.org/wiki/Java) を混同**しないでください**。_"Java"_ と _"JavaScript"_ のどちらも米国その他の国での Oracle の（登録）商標ですが、この 2 つのプログラミング言語は構文、セマンティクス、ユースケースがかなり異なります。
 
