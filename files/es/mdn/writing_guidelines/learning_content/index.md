@@ -19,7 +19,7 @@ El público al que está dirigido MDN Aprende desarrollo web (también conocido 
 Por lo tanto, nuestro objetivo es limitar estrictamente el alcance del área de aprendizaje a:
 
 - configuración, habilidades blandas y conocimientos previos en nuestros [módulos de introducción](/es/docs/Learn_web_development/Getting_started).
-- Las tecnologías fundamentales requeridas al comienzo de la trayectoría de un desarrollador web en nuestros [módulos básicos](/es/docs/Learn_web_development/Core).
+- Las tecnologías fundamentales requeridas al comienzo de la trayectoria de un desarrollador web en nuestros [módulos básicos](/es/docs/Learn_web_development/Core).
 - Temas de la "segunda fase" que constituyen pasos útiles para que los principiantes avancen luego de haber dominado los módulos básicos, en nuestros [módulos de extensión](/es/docs/Learn_web_development/Extensions).
 
 El área de aprendizaje no pretende ser el espacio de MDN dedicado a contenidos introductorios sobre _todos_ los temas. Esto significa que los temas especializados como MathML y Web Games, así como los temas avanzados o específicos, como expresiones regulares, pruebas de rendimiento, WebRTC y WebGPU, no tienen lugar en el área de aprendizaje.
@@ -53,7 +53,7 @@ Sin embargo, hay algunas diferencias:
 
 Tal y como se describe en nuestras pautas sobre [enlaces externos](/es/docs/MDN/Writing_guidelines/Writing_style_guide#external_links), MDN generalmente no permite enlaces externos (o embebidos) que parezcan respaldar productos o servicios comerciales o que apunten a contenido pago. Esto es para disminuir el riesgo de que el contenido de MDN pierda confianza y se vuelva menos útil debido al exceso de enlaces de spam.
 
-El contenido del área de aprendizaje de MDN presenta algunas exepciones a la regla. Permitimos enlaces a contenido externo (que pueden ser pagos) procedentes de sitios web específicos de socios de confianza. Se trata de sitios con los que MDN ha establecido relación de confianza, mediante un análisis exhaustivo de su calidad, ética y compromiso con los estándares web, buenas prácticas y ayudándolos a actualizar su contenido cuando no cumpla con nuestros estándares. Confiamos en que no cambiarán los enlaces sin avisarnos y que su contenido es seguro.
+El contenido del área de aprendizaje de MDN presenta algunas excepciones a la regla. Permitimos enlaces a contenido externo (que pueden ser pagos) procedentes de sitios web específicos de socios de confianza. Se trata de sitios con los que MDN ha establecido relación de confianza, mediante un análisis exhaustivo de su calidad, ética y compromiso con los estándares web, buenas prácticas y ayudándolos a actualizar su contenido cuando no cumpla con nuestros estándares. Confiamos en que no cambiarán los enlaces sin avisarnos y que su contenido es seguro.
 
 El propósito de los enlaces de los socios es el siguiente:
 
@@ -78,3 +78,4 @@ En las páginas de contenido del área de aprendizaje, los enlaces de "Véase ta
 ### Socios actuales en el ámbito de la educación
 
 - [Scrimba](https://scrimba.com/home)
+- 
