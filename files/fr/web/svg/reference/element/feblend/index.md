@@ -2,7 +2,7 @@
 title: <feBlend>
 slug: Web/SVG/Reference/Element/feBlend
 l10n:
-  sourceCommit: 48afb4da7957efe672d7fd837413ee1a69a842fd
+  sourceCommit: 62476ac3c21417ad3a07e12c9f8eaf92cea8311d
 ---
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feBlend>`** permet de composer deux objets ensemble selon un mode de fusion donné, à la manière de ce que proposent les logiciels de retouche d'image pour fusionner deux calques. Le mode utilisé est défini par l'attribut {{SVGAttr("mode")}}.
@@ -24,7 +24,7 @@ Comme les autres primitives de filtres, elle traite les composantes colorimétri
 
 Cet élément implémente l'interface {{DOMxRef("SVGFEBlendElement")}}.
 
-## Exemple
+## Exemples
 
 ### SVG
 
@@ -60,7 +60,7 @@ Cet élément implémente l'interface {{DOMxRef("SVGFEBlendElement")}}.
 
 ### Résultat
 
-{{EmbedLiveSample("Exemple", "", 200)}}
+{{EmbedLiveSample("Exemples", "", 200)}}
 
 ## Spécifications
 
