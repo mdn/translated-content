@@ -1,5 +1,5 @@
 ---
-title: Aprender pautas de escrutura para el desarrollo web
+title: Pautas de escritura para Aprende desarrollo web
 short-title: Contenido educativo
 slug: MDN/Writing_guidelines/Learning_content
 l10n:
