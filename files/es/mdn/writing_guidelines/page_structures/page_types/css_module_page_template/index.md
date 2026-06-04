@@ -28,7 +28,7 @@ l10n:
 > ```
 >
 > - **title**
->   - : El valor de `title` se muestra en la parte superior de la página. 
+>   - : El valor de `title` se muestra en la parte superior de la página.
 >     Es el texto "CSS" seguido del nombre del módulo.
 >     Por ejemplo, el título para la página del módulo [grid layout](/es/docs/Web/CSS/Guides/Grid_layout) es _CSS grid layout_.
 > - **slug**
