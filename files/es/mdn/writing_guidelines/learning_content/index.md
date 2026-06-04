@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a1ac64fa4da965d2a152f08221b1a9aed638fd16
 ---
 
-La sección de [aprender desarrollo web](/es/docs/Learn_web_development) de MDN está destinado especificamente a las personas que están aprendiendo fundamentos básicos de desarrollo web, y por lo tanto, requiere un propósito diferente que el resto de contenido de MDN. Este artículo proporciona pautas para redactar contenido didácticos.
+La sección [Aprende desarrollo web](/es/docs/Learn_web_development) de MDN está destinada específicamente a las personas que están aprendiendo los fundamentos básicos del desarrollo web y, por lo tanto, requiere un enfoque diferente del resto del contenido de MDN. Este artículo proporciona pautas para redactar contenido didáctico.
 
 ## Público objetivo
 
