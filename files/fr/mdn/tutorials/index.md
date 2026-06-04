@@ -2,21 +2,20 @@
 title: Tutoriels de développement web
 short-title: Tutoriels
 slug: MDN/Tutorials
-original_slug: Web/Tutorials
 l10n:
-  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Les liens de cette page mènent à divers tutoriels et ressources d'apprentissage.
-Que vous soyez débutant·e, intermédiaire ou expert·e en développement web, vous trouverez ici des contenus utiles.
+Que vous soyez débutant·e, intermédiaire ou expert·e en développement web, vous trouvez ici des contenus utiles.
 
-Ces tutoriels sont créés par des entreprises et des développeur·euse·s web visionnaires qui ont adopté les standards ouverts et les bonnes pratiques, et qui autorisent ou proposent des traductions via une licence de contenu libre telle que Creative Commons.
+Ces tutoriels sont créés par des entreprises et des développeur·euse·s web visionnaires qui ont adopté les standards ouverts et les bonnes pratiques, et qui autorisent ou proposent des traductions avec une licence de contenu libre telle que Creative Commons.
 
 ## Pour les débutant·e·s
 
 - [Premiers pas avec le Web](/fr/docs/Learn_web_development/Getting_started/Your_first_website)
   - : _Premiers pas avec le Web_ est une série concise qui vous initie aux aspects pratiques du développement web.
-    Vous installerez les outils nécessaires pour créer une page web basique et publier votre propre code.
+    Vous installez les outils nécessaires pour créer une page web basique et publier votre propre code.
 
 ## Tutoriels HTML
 
@@ -43,7 +42,7 @@ Ces tutoriels sont créés par des entreprises et des développeur·euse·s web 
 ### Introduction à CSS
 
 - [Bases de CSS](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
-  - : CSS (<i lang="en">Cascading Style Sheets</i>, ou feuilles de style en cascade) est le langage utilisé pour la mise en forme de votre page web. Ce guide _Bases de CSS_ vous aide à bien démarrer. Nous répondrons à des questions comme&nbsp;: Comment afficher le texte en noir ou en rouge&nbsp;? Comment placer le contenu à l'écran&nbsp;? Comment ajouter des images ou des couleurs de fond à la page&nbsp;?
+  - : CSS (<i lang="en">Cascading Style Sheets</i>, ou feuilles de style en cascade) est le langage utilisé pour la mise en forme de votre page web. Ce guide _Bases de CSS_ vous aide à bien démarrer. Nous répondons à des questions comme&nbsp;: Comment afficher le texte en noir ou en rouge&nbsp;? Comment placer le contenu à l'écran&nbsp;? Comment ajouter des images ou des couleurs de fond à la page&nbsp;?
 - [Bases de la mise en forme CSS](/fr/docs/Learn_web_development/Core/Styling_basics)
   - : CSS permet la mise en forme et la mise en page des sites web — par exemple, modifier la police, la couleur, la taille, l'espacement du contenu, le diviser en colonnes, ou ajouter des animations et autres effets décoratifs. Ce module propose une introduction progressive aux bases de CSS, à sa syntaxe et à la manière de l'utiliser pour la présentation du HTML.
 - [Sélecteurs](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
@@ -84,7 +83,7 @@ Ces tutoriels sont créés par des entreprises et des développeur·euse·s web 
 - [Premiers pas avec JavaScript](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
   - : Qu'est-ce que JavaScript et comment peut-il vous aider&nbsp;?
 - [Scripts dynamiques avec JavaScript](/fr/docs/Learn_web_development/Core/Scripting)
-  - : Ce module poursuit la découverte des fonctionnalités fondamentales de JavaScript, en abordant les types de blocs de code courants comme les instructions conditionnelles, les boucles, les fonctions et les événements. Vous avez déjà vu ces notions dans le cours, mais ici elles sont détaillées explicitement.
+  - : Ce module poursuit la découverte des fonctionnalités fondamentales de JavaScript, en abordant les types de blocs de code courants comme les instructions conditionnelles, les boucles, les fonctions et les évènements. Vous avez déjà vu ces notions dans le cours, mais ici elles sont détaillées explicitement.
 - [Codecademy <sup>(angl.)</sup>](https://www.codecademy.com/)
   - : Codecademy est une façon simple d'apprendre à coder en JavaScript. C'est interactif et vous pouvez le faire avec vos ami·e·s.
 - [freeCodeCamp <sup>(angl.)</sup>](https://www.freecodecamp.org/)
@@ -95,7 +94,7 @@ Ces tutoriels sont créés par des entreprises et des développeur·euse·s web 
 - [Introduction aux objets JavaScript](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : En JavaScript, presque tout est un objet, des fonctionnalités de base comme les chaînes de caractères et tableaux aux API du navigateur. Vous pouvez aussi créer vos propres objets pour regrouper fonctions et variables. Comprendre la programmation orientée objet en JavaScript est essentiel pour progresser et écrire du code efficace. Ce module détaille la théorie, la syntaxe, la création d'objets et l'utilisation de JSON.
 - [APIs web côté client](/fr/docs/Learn_web_development/Extensions/Client-side_APIs)
-  - : En écrivant du JavaScript côté client, vous utiliserez rapidement des API — interfaces pour manipuler le navigateur, le système d'exploitation ou des données externes. Ce module explore ce que sont les API et comment utiliser les plus courantes dans vos développements.
+  - : En écrivant du JavaScript côté client, vous utilisez rapidement des API — interfaces pour manipuler le navigateur, le système d'exploitation ou des données externes. Ce module explore ce que sont les API et comment utiliser les plus courantes dans vos développements.
 - [Eloquent JavaScript <sup>(angl.)</sup>](https://eloquentjavascript.net/)
   - : Un guide complet des méthodologies JavaScript intermédiaires et avancées.
 - [Speaking JavaScript <sup>(angl.)</sup>](https://exploringjs.com/es5/)
@@ -125,4 +124,4 @@ Ces tutoriels sont créés par des entreprises et des développeur·euse·s web 
 ### Développement d'extensions
 
 - [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
-  - : WebExtensions est un système multiplateforme pour développer des modules complémentaires de navigateur. Il est largement compatible avec l'[API d'extension <sup>(angl.)</sup>](https://developer.chrome.com/docs/extensions/reference/) de Google Chrome et Opera. Les extensions écrites pour ces navigateurs fonctionnent généralement dans Firefox ou [Microsoft Edge <sup>(angl.)</sup>](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) avec [quelques adaptations <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). L'API est aussi totalement compatible avec [Firefox multiprocessus <sup>(angl.)</sup>](https://wiki.mozilla.org/Firefox/multiprocess).
+  - : WebExtensions est un système multiplateforme pour développer des modules complémentaires de navigateur. Il est largement compatible avec [l'API d'extension <sup>(angl.)</sup>](https://developer.chrome.com/docs/extensions/reference/) de Google Chrome et Opera. Les extensions écrites pour ces navigateurs fonctionnent généralement dans Firefox ou [Microsoft Edge <sup>(angl.)</sup>](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) avec [quelques adaptations <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). L'API est aussi totalement compatible avec [Firefox multiprocessus <sup>(angl.)</sup>](https://wiki.mozilla.org/Firefox/multiprocess).
