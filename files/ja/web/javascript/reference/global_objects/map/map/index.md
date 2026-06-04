@@ -3,7 +3,7 @@ title: Map() コンストラクター
 short-title: Map()
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 1d905454be7d8910d5e3b33f0c22d063fe212816
 ---
 
 **`Map()`** コンストラクターは、 {{jsxref("Map")}} オブジェクトを生成します。
@@ -21,7 +21,7 @@ new Map(iterable)
 ### 引数
 
 - `iterable` {{optional_inline}}
-  - : {{jsxref("Array")}} または他の[反復処理可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)なオブジェクトで、要素はキーと値の組です。 (たとえば、 `[[ 1, 'one' ],[ 2, 'two' ]]` のような 2 つの要素を持つ配列。) それぞれのそれぞれのキーと値の組が新しい `Map` に追加されます。
+  - : 配列などの[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)が渡された場合、そのすべての要素が新しい `Map` に追加されます。それぞれの要素は `0` と `1` の 2 つのプロパティを持つオブジェクトでなければならず、それぞれがキーと値に対応します（例えば `[[1, "one"],[2, "two"]]`）。この引数を指定しない場合、またはその値が `null` または `undefined` である場合、新しい `Map` は空になります。
 
 ## 例
 

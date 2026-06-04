@@ -20,9 +20,9 @@ var sharePromise = window.navigator.share(data);
 
 <!---->
 
-- `url`: Un {{domxref("USVString")}} représentant l'URL à partager.
-- `text`: Un {{domxref("USVString")}} représentant le texte à partager.
-- `title`: Un {{domxref("USVString")}} représentant le titre à partager.
+- `url`: Un {{jsxref("String")}} représentant l'URL à partager.
+- `text`: Un {{jsxref("String")}} représentant le texte à partager.
+- `title`: Un {{jsxref("String")}} représentant le titre à partager.
 
 <!---->
 

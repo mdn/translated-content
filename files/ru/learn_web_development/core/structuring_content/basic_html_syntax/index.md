@@ -3,7 +3,7 @@ title: Начало работы с HTML
 slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Введение_в_HTML/Начало_работы")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Basic_HTML_syntax")}}
 
 В этой статье мы охватим азы HTML, необходимые для начала работы. Дадим определение «элементам», «атрибутам», «тегам» и прочим важным понятиям, о которых вы, возможно, слышали, а также об их роли в языке. Мы также покажем, как устроены HTML-элементы, типичная HTML-страница, и объясним другие важные аспекты языка. По ходу дела, чтобы вы не заскучали, мы поиграем с настоящей HTML-страницей!
 
@@ -728,4 +728,4 @@ textarea.onkeyup = function () {
 
 - [Применение цвета к элементам HTML с помощью CSS](/ru/docs/Web/CSS/Guides/Colors/Applying_color)
 
-{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Введение_в_HTML/Начало_работы")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Basic_HTML_syntax")}}

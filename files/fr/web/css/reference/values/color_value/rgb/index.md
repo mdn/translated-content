@@ -1,8 +1,9 @@
 ---
-title: rgb()
+title: Fonction CSS `rgb()`
+short-title: rgb()
 slug: Web/CSS/Reference/Values/color_value/rgb
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 > [!NOTE]
@@ -67,7 +68,7 @@ rgb(0, 255, 255, 50%)
 
 ### Valeurs
 
-Vous trouverez ci-dessous les descriptions des valeurs autorisées pour les [couleurs absolues et relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors).
+Vous trouverez ci-dessous les descriptions des valeurs autorisées pour les [couleurs absolues et relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 #### Syntaxe des valeurs absolues
 
@@ -338,5 +339,5 @@ div.comma-separated {
 
 - Le type de données {{CSSxRef("&lt;color&gt;")}} pour une liste de toutes les notations de couleur
 - [Outil de conversion de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
-- [Utilisation des couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
+- [Utilisation des couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - Le module [des couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)

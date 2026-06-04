@@ -30,7 +30,7 @@ mapArrayBuffer = publicKeyCredential.getClientExtensionResults()
 {{jsxref("ArrayBuffer")}} の形で、クライアントが様々な拡張機能を処理した結果です。拡張子の識別子と、クライアントが処理した後の結果の対応表を返します。このオブジェクトには拡張機能の識別子と処理の結果の対応表が入っています。
 
 > [!WARNING]
-> 2019 年 3 月時点で、 `appId` ({{domxref("PublicKeyCredentialRequestOptions.extensions")}} の生成の間に使用される) のみ、 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=818303) および [Edge](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication#api-surface) が対応しています。 Firefox は[どの拡張機能にも対応していない](https://bugzilla.mozilla.org/show_bug.cgi?id=1370728)ようです。
+> 2019 年 3 月時点で、 `appId` ({{domxref("PublicKeyCredentialRequestOptions.extensions")}} の生成の間に使用される) のみ、 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=818303) および [Edge](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication#api-surface) が対応しています。 Firefox は[どの拡張機能にも対応していない](https://bugzil.la/1370728)ようです。
 
 ## 例
 

@@ -55,7 +55,7 @@ No utilices un objeto `Boolean` en lugar de un `Boolean` primitivo.
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Boolean/Boolean", "Boolean()")}}
+- {{jsxref("Boolean.Boolean", "Boolean()")}}
   - : Crea un nuevo objeto `Boolean`.
 
 ## Métodos de instancia

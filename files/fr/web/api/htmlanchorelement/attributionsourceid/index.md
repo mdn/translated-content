@@ -3,10 +3,10 @@ title: "HTMLAnchorElement: attributionSourceId property"
 short-title: attributionSourceId
 slug: Web/API/HTMLAnchorElement/attributionSourceId
 l10n:
-  sourceCommit: af9a8ff87cfa6563c9a082162ce4ed7ba0b204e1
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`attributionSourceId`** de l'interface {{DOMxRef("HTMLAnchorElement")}} obtient et définit l'attribut HTML `attributionsourceid` sur un élément HTML {{HTMLElement("a")}}.
 
@@ -14,7 +14,7 @@ La propriété `attributionSourceId` est utilisée dans le cadre de la spécific
 
 ## Valeur
 
-Un nombre. Les valeurs valides pour la mesure des clics privés sont comprises entre `0` et `255`. La valeur par défaut est `0`. Les valeurs en dehors de cette plage ne provoqueront pas d'erreur lors de la définition de la propriété, mais seront ignorées par le navigateur à des fins d'attribution.
+Un nombre. Les valeurs valides pour la mesure des clics privés sont comprises entre `0` et `255`. La valeur par défaut est `0`. Les valeurs en dehors de cette plage ne provoquent pas d'erreur lors de la définition de la propriété, mais sont ignorées par le navigateur à des fins d'attribution.
 
 ## Exemples
 

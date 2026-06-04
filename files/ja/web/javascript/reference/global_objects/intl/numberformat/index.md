@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`Intl.NumberFormat`** オブジェクトは、言語に依存した数値書式を可能にするオブジェクトのコンストラクターです。
+**`Intl.NumberFormat`** オブジェクトで、言語を考慮した数値の書式化ができます。
 
 {{InteractiveExample("JavaScript デモ: Intl.NumberFormat")}}
 
@@ -44,29 +44,29 @@ console.log(
 ## 静的メソッド
 
 - {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
-  - : 提供されたロケールのうち、実行時の既定のロケールに代替せずに対応しているものを配列に収めて返します。
+  - : 指定されたロケールのうち、実行環境のデフォルトのロケールで代替されることなく対応するものを、配列に収めて返します。
 
 ## インスタンスプロパティ
 
 これらのプロパティは `Intl.NumberFormat.prototype` で定義されており、すべての `Intl.NumberFormat` インスタンスで共有されます。
 
 - {{jsxref("Object/constructor", "Intl.NumberFormat.prototype.constructor")}}
-  - : インスタンスオブジェクトを作成したコンストラクター関数。 `Intl.NumberFormat` インスタンスの場合、初期値は {{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat")}} コンストラクターです。
+  - : インスタンスオブジェクトを作成したコンストラクター関数です。`Intl.NumberFormat` インスタンスの場合、初期値は {{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat")}} コンストラクターとなります。
 - `Intl.NumberFormat.prototype[Symbol.toStringTag]`
   - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"Intl.NumberFormat"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド
 
 - {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
-  - : ゲッター関数で、ロケールに応じて、この `Intl.NumberFormat` オブジェクトのオプションを持つ数値を書式化する関数を返します。
+  - : この `NumberFormat` オブジェクトのロケールおよび書式化オプションに従って日時を書式化するゲッター関数です。
 - {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}}
-  - : ゲッター関数で、メソッドが呼び出された `Intl.NumberFormat` オブジェクトのロケールおよび書式設定オプションに従って、数値の範囲を書式化します。
+  - : メソッドが呼び出された `Intl.NumberFormat` オブジェクトのロケールおよび書式化オプションに従って、数値の範囲を書式化するゲッター関数です。
 - {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
-  - : オブジェクトの {{jsxref("Array")}} を返し、これは専用のロケールを意識した書式で使用することができる部品内の数値文字列を表します。
+  - : ロケールを意識した独自の書式で使用することができる部品内の数値文字列を表すオブジェクトのを配列 ({{jsxref("Array")}}) に収めて返します。
 - {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
-  - : {{jsxref("Array")}} で、カスタムロケールに対応した書式化に使用できる、数値文字列を表すオブジェクトの配列を返します。
+  - : ロケールを考慮した書式化に利用できる、数値文字列を部品単位で表すオブジェクトを配列 ({{jsxref("Array")}}) に収めて返します。
 - {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-  - : ロケールを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
+  - : オブジェクトの初期化時に計算された照合オプションを反映したプロパティを持つ、新しいオブジェクトを返します。
 
 ## 例
 

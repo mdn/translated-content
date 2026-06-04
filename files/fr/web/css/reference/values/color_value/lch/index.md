@@ -1,8 +1,9 @@
 ---
-title: lch()
+title: Fonction CSS `lch()`
+short-title: lch()
 slug: Web/CSS/Reference/Values/color_value/lch
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`lch()`** exprime une couleur donnée dans {{Glossary("color space", "l'espace de couleur")}} LCH, qui utilise le même axe L (luminosité) que la fonction de couleur {{CSSxRef("color_value/lab","lab()")}} de l'[espace de couleur CIELab](/fr/docs/Glossary/Color_space#espaces_de_couleur_cielab), mais utilise des coordonnées polaires C (chroma) et H (pour la teinte, <i lang="en">hue</i> en anglais).
@@ -24,7 +25,7 @@ lch(from var(--color-value) l c h / calc(alpha - 0.1))
 
 ### Valeurs
 
-Voici les descriptions des valeurs autorisées pour les [couleurs absolues et relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors).
+Voici les descriptions des valeurs autorisées pour les [couleurs absolues et relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 > [!NOTE]
 > En général, lorsque les valeurs de pourcentage ont un équivalent numérique en CSS, `100%` est égal au nombre `1`.
@@ -545,7 +546,7 @@ Le résultat est le suivant&nbsp;:
 ## Voir aussi
 
 - [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/Reference/Values/color_value)
-- [Utilisation des couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
+- [Utilisation des couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - Le type de donnée {{CSSxRef("&lt;hue&gt;")}}
 - [Les couleurs LCH en CSS&nbsp;: qu'est-ce que c'est, pourquoi et comment&nbsp;? <sup>(angl.)</sup>](https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/) par Lea Verou (2020)

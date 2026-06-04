@@ -24,7 +24,7 @@ Uma [introdução](/pt-BR/docs/conflicting/Web/API/Document_Object_Model_a0b9059
 - {{domxref("DOMError")}}
 - {{domxref("DOMException")}}
 - {{domxref("DOMImplementation")}}
-- {{domxref("DOMString")}}
+- {{jsxref("String")}}
 - {{domxref("DOMTimeStamp")}}
 - {{domxref("DOMSettableTokenList")}}
 - {{domxref("DOMStringList")}}

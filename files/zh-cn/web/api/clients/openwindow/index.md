@@ -22,7 +22,7 @@ ServiceWorkerClients.openWindow(url).then(function (WindowClient) {
 ### 参数
 
 - `url`
-  - : 一个 {{domxref("USVString")}}，表示要在窗口中打开的 client 的 URL。通常，此值必须是与调用脚本有相同域的 URL.
+  - : 一个 {{jsxref("String")}}，表示要在窗口中打开的 client 的 URL。通常，此值必须是与调用脚本有相同域的 URL.
 
 ### 返回值
 

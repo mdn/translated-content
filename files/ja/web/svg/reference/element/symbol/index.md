@@ -2,7 +2,7 @@
 title: <symbol>
 slug: Web/SVG/Reference/Element/symbol
 l10n:
-  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
+  sourceCommit: a9063bb88f28dc2a9b32e39f060ab6930663da52
 ---
 
 **`<symbol>`** は [SVG](/ja/docs/Web/SVG) 要素で、{{SVGElement("use")}} 要素によってインスタンス化することができるグラフィカルなテンプレートオブジェクトを定義する際に使用されます。
@@ -10,7 +10,7 @@ l10n:
 `<symbol>` 要素を同じ文書内で複数回使用されるグラフィックに用いることで、構造と意味づけが追加されます。構造が豊かな文書は、グラフィック、音声、点字として表示される可能性があり、これによりアクセシビリティが向上します。
 
 > [!NOTE]
-> `<symbol>` 要素自体はレンダリングされることを意味していません。 `<symbol>` 要素のインスタンス（つまり、{{SVGElement("use")}} 要素による `<symbol>` への参照）のみがレンダリングされます。すなわち、ブラウザーによっては、CSS の {{cssxref("display")}} プロパティの指示に関わらず、`<symbol>` 要素を直接表示しない場合があります。
+> `<symbol>` 要素自体はレンダリングされることを意味していません。 `<symbol>` 要素のインスタンス（つまり、{{SVGElement("use")}} 要素による `<symbol>` への参照）のみがレンダリングされます。すなわち、ブラウザーによっては、CSS の {{cssxref('display')}} プロパティの指示に関わらず、`<symbol>` 要素を直接表示しない場合があります。
 
 ## 使用コンテキスト
 
@@ -20,28 +20,28 @@ l10n:
 
 - {{SVGAttr("height")}}
   - : この属性は、シンボルの高さを決定します。
-    値の型: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); 既定値: `auto`; アニメーション: **可**
+    値の型: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); デフォルト値: `auto`; アニメーション: **可**
 - {{SVGAttr("preserveAspectRatio")}}
   - : この属性は、 SVG 断片が異なる{{glossary("aspect ratio", "アスペクト比")}}を持つコンテナーに埋め込まれた場合、どのように変形されるかを定義する。
-    値の型: (`none` | `xMinYMin` | `xMidYMin` | `xMaxYMin` | `xMinYMid` | `xMidYMid` | `xMaxYMid` | `xMinYMax` | `xMidYMax` | `xMaxYMax`) (`meet` | `slice`)?; 既定値: `xMidYMid meet`; アニメーション: **可**
+    値の型: (`none` | `xMinYMin` | `xMidYMin` | `xMaxYMin` | `xMinYMid` | `xMidYMid` | `xMaxYMid` | `xMinYMax` | `xMidYMax` | `xMaxYMax`) (`meet` | `slice`)?; デフォルト値: `xMidYMid meet`; アニメーション: **可**
 - {{SVGAttr("refX")}}
   - : この属性は、シンボルの参照点の x 座標を決定します。
-    値の型: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) | `left` | `center` | `right`; 既定値: None; アニメーション: **可**
+    値の型: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) | `left` | `center` | `right`; デフォルト値: None; アニメーション: **可**
 - {{SVGAttr("refY")}}
   - : この属性は、シンボルの参照点の y 座標を決定します。
-    値の型: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) | `top` | `center` | `bottom`; 既定値: None; アニメーション: **可**
+    値の型: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) | `top` | `center` | `bottom`; デフォルト値: None; アニメーション: **可**
 - {{SVGAttr("viewBox")}}
   - : この属性は、現在のシンボルに対する SVG ビューポートの境界を定義します。
-    値の型: **[\<list-of-numbers>](/ja/docs/Web/SVG/Guides/Content_type#list-of-ts)**; 既定値: none; アニメーション: **可**
+    値の型: **[\<list-of-numbers>](/ja/docs/Web/SVG/Guides/Content_type#list-of-ts)**; デフォルト値: none; アニメーション: **可**
 - {{SVGAttr("width")}}
   - : この属性は、シンボルの幅を決定します。
-    値の型: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); 既定値: `auto`; アニメーション: **可**
+    値の型: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); デフォルト値: `auto`; アニメーション: **可**
 - {{SVGAttr("x")}}
   - : この属性は、シンボルの x 座標を決定します。
-    値の型: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); 既定値: `0`; アニメーション: **可**
+    値の型: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); デフォルト値: `0`; アニメーション: **可**
 - {{SVGAttr("y")}}
   - : この属性は、シンボルの y 座標を決定します。
-    値の型: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); 既定値: `0`; アニメーション: **可**
+    値の型: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); デフォルト値: `0`; アニメーション: **可**
 
 ## DOM インターフェイス
 

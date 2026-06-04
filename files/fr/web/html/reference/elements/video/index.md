@@ -1,8 +1,9 @@
 ---
-title: "<video> : l'élément d'intégration vidéo"
+title: "Élément HTML `<video>` : l'élément d'intégration vidéo"
+short-title: <video>
 slug: Web/HTML/Reference/Elements/video
 l10n:
-  sourceCommit: 743ba8b257cd06449b192818df120e609f6e16d2
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<video>`** intègre un lecteur de média qui prend en charge la lecture vidéo dans le document. Vous pouvez également utiliser `<video>` pour le contenu audio, mais l'élément {{HTMLElement("audio")}} peut fournir une expérience utilisateur plus appropriée.

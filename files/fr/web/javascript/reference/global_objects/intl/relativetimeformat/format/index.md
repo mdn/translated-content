@@ -1,83 +1,86 @@
 ---
-title: Intl.RelativeTimeFormat.prototype.format()
+title: "Intl.RelativeTimeFormat : méthode format()"
+short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}La méthode **`Intl.RelativeTimeFormat.prototype.format()`** permet de formater une valeur avec une unité selon des options de locale et de formatage stockées dans l'objet {{jsxref("RelativeTimeFormat")}}.
+La méthode **`format()`** des instances de {{JSxRef("Intl.RelativeTimeFormat")}} permet de formater une `valeur` et une `unité` en fonction de la locale et des options de formatage de cet objet `Intl.RelativeTimeFormat`.
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.format")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.RelativeTimeFormat.prototype.format()")}}
 
 ```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+const rtf = new Intl.RelativeTimeFormat("en", { style: "short" });
 
-console.log(rtf1.format(3, "quarter"));
-// Expected output: "in 3 qtrs."
+console.log(rtf.format(3, "quarter"));
+// Résultat attendu : "in 3 qtrs."
 
-console.log(rtf1.format(-1, "day"));
-// Expected output: "1 day ago"
+console.log(rtf.format(-1, "day"));
+// Résultat attendu : "1 day ago"
 
-console.log(rtf1.format(10, "seconds"));
-// Expected output: "in 10 sec."
+console.log(rtf.format(10, "seconds"));
+// Résultat attendu : "in 10 sec."
 ```
 
 ## Syntaxe
 
-```js
-RelativeTimeFormat.format(valeur, unite);
+```js-nolint
+format(value, unit)
 ```
 
 ### Paramètres
 
-- `valeur`
-  - : Une valeur numérique qu'on souhaite utiliser pour exprimer un temps relatif dans un message internationalisé.
-- `unite`
-  - : L'unité à utiliser pour le message internationalisé exprimant le temps relatif. Les valeurs possibles pour cet argument sont `"year"` (année), `"quarter"` (trimestre), `"month"` (mois), `"week"` (semaine), `"day"` (jour), `"hour"` (heure), `"minute"` (minute), `"second"` (secondes). Les formes plurielles sont également autorisées.
+- `value`
+  - : Valeur numérique à utiliser dans le message de temps relatif internationalisé.
+- `unit`
+  - : Unité à utiliser dans le message de temps relatif internationalisé. Les valeurs possibles sont&nbsp;: `"year"`, `"quarter"`, `"month"`, `"week"`, `"day"`, `"hour"`, `"minute"`, `"second"`. Les formes plurielles sont également autorisées.
 
-## Description
+### Valeur de retour
 
-La fonction renvoyée par l'accesseur `format` permet de formater une valeur et une unité en une chaîne de caractères en prenant en compte la locale et les options de formatage associées à l'objet {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} utilisé.
+Une chaîne de caractères représentant la `valeur` et une `unité` données, formatées selon la locale et les options de formatage de cet objet {{JSxRef("Intl.RelativeTimeFormat")}}.
+
+> [!NOTE]
+> La plupart du temps, le formatage retourné par `format()` est cohérent. Cependant, le résultat peut varier entre les implémentations, même au sein de la même locale — ces variations sont prévues par la spécification et sont autorisées. Le résultat peut également ne pas être celui attendu. Par exemple, la chaîne de caractères peut utiliser des espaces insécables ou être entourée de caractères de contrôle bidirectionnels. Il ne faut pas comparer les résultats de `format()` à des constantes codées en dur.
 
 ## Exemples
 
-### Utilisation simple de `format`
+### Utilisation simple de `format()`
 
 L'exemple suivant illustre comment créer un outil de formatage pour les valeurs de temps relatifs en anglais.
 
 ```js
-// On crée un outil de formatage pour les valeurs exprimant
-// les temps relatifs en anglais, avec les valeurs par défaut
-// utilisées explicitement.
+// Créer un formateur de temps relatif dans votre locale
+// avec les valeurs par défaut passées explicitement.
 const rtf = new Intl.RelativeTimeFormat("en", {
-  localeMatcher: "best fit", // autre valeur possible : "lookup"
-  numeric: "always", // autre valeur possible : "auto"
+  localeMatcher: "best fit", // autres valeurs possibles : "lookup"
+  numeric: "always", // autres valeurs possibles : "auto"
   style: "long", // autres valeurs possibles : "short" ou "narrow"
 });
 
 // Formatage d'une valeur relative négative.
-rtf.format(-1, "day");
-// > "1 day ago"
+rtf.format(-1, "day"); // "1 day ago"
 
 // Formatage d'une valeur relative positive.
-rtf.format(1, "day");
-// > "in 1 day"
+rtf.format(1, "day"); // "in 1 day"
 ```
 
 ### Utiliser l'option `auto`
 
-Si on passe l'option `numeric:auto`, c'est la chaîne de caractères `yesterday` ou `tomorrow` qui sera produite (en anglais) plutôt que `1 day ago` ou `in 1 day`. Cela permet de n'avoir pas nécessairement une valeur numérique en résultat.
+Si l'option `numeric:auto` est passée, elle produira la chaîne de caractères `yesterday`, `today` ou `tomorrow` au lieu de `1 day ago`, `in 0 days` ou `in 1 day`. Cela permet de ne pas toujours avoir à utiliser des valeurs numériques dans le résultat.
 
 ```js
-// On crée un formateur en anglais avec l'option
-// numeric: "auto".
+// Créer un formateur de temps relatif dans votre locale
+// avec l'option numeric: "auto".
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // Formatage d'une valeur relative négative.
-rtf.format(-1, "day");
-// > "yesterday"
+rtf.format(-1, "day"); // "yesterday"
+
+rtf.format(0, "day"); // "today"
 
 // Formatage d'une valeur relative positive.
-rtf.format(1, "day");
-// > "tomorrow"
+rtf.format(1, "day"); // "tomorrow"
 ```
 
 ## Spécifications
@@ -87,3 +90,7 @@ rtf.format(1, "day");
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- L'objet {{JSxRef("Intl.RelativeTimeFormat")}}

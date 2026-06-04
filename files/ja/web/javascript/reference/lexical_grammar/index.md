@@ -210,7 +210,7 @@ const els\u{65} = 1;
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/switch", "default")}}
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Statements/do...while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
 - {{jsxref("Statements/export", "export")}}
@@ -222,13 +222,13 @@ const els\u{65} = 1;
 - {{jsxref("Statements/if...else", "if")}}
 - {{jsxref("Statements/import", "import")}}
 - {{jsxref("Operators/in", "in")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Operators/new", "new")}}
-- {{jsxref("Operators/null", "null")}}
+- {{jsxref("instanceof")}}
+- {{jsxref("new")}}
+- {{jsxref("null")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - {{jsxref("Statements/throw", "throw")}}
 - [`true`](#論理値リテラル)
 - {{jsxref("Statements/try...catch", "try")}}

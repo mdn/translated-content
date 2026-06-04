@@ -3,7 +3,7 @@ title: HTMLTableElement.align
 slug: Web/API/HTMLTableElement/align
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header()}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 La propiedad **`HTMLTableElement.align`** representa la alineación de la tabla.
 

@@ -56,12 +56,12 @@ _変更なし。_
 - {{jsxref("Statements/return", "return")}} 文の後方にある到達できないコード ({{jsxref("Statements/return", "セミコロンがない return 文", "#Automatic_semicolon_insertion", 1)}} の後方にある、到達できない式を含む) について、コンソールに警告を表示します ([Firefox バグ 1005110](https://bugzil.la/1005110)、[Firefox バグ 1151931](https://bugzil.la/1151931))。
 - {{jsxref("Symbol.match")}} を追加しました ([Firefox バグ 1054755](https://bugzil.la/1054755))。
 - {{jsxref("Symbol.match")}} プロパティが{{Glossary("truthy", "真値")}}であるオブジェクトを {{jsxref("String.prototype.startsWith")}}、{{jsxref("String.prototype.endsWith")}}、`String.prototype.contains` に渡すと、{{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 1054755](https://bugzil.la/1054755))。
-- {{jsxref("RegExp")}} 関数を {{jsxref("Operators/new", "new")}} を伴わずに {{jsxref("Symbol.match")}} プロパティが{{Glossary("truthy", "真値")}}であるパターンオブジェクトを使用して呼び出すと、パターンそのものが返るようになりました。また、パターンオブジェクトの `constructor` プロパティは {{jsxref("RegExp")}} 関数に等しくなります ([Firefox バグ 1147817](https://bugzil.la/1147817))。
+- {{jsxref("RegExp")}} 関数を {{jsxref("new")}} を伴わずに {{jsxref("Symbol.match")}} プロパティが{{Glossary("truthy", "真値")}}であるパターンオブジェクトを使用して呼び出すと、パターンそのものが返るようになりました。また、パターンオブジェクトの `constructor` プロパティは {{jsxref("RegExp")}} 関数に等しくなります ([Firefox バグ 1147817](https://bugzil.la/1147817))。
 - JS1.7 の、for-in を使用する標準外の構造分解を廃止しました ([Firefox バグ 1083498](https://bugzil.la/1083498))。
 - [標準外の初期化式](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)は [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループにおいて、無視されてコンソールに警告が表示されるようになりました ([Firefox バグ 748550](https://bugzil.la/748550) および [Firefox バグ 1164741](https://bugzil.la/1164741))。
 - Unicode コードポイントのエスケープ書式 [`\u{xxxxxx}`](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_コードポイントエスケープ) をサポートしました ([Firefox バグ 320500](https://bugzil.la/320500))。
 - `String.prototype.contains` は、{{jsxref("String.prototype.includes")}} に置き換えられました。`String.prototype.contains` はエイリアスとして維持します ([Firefox バグ 1102219](https://bugzil.la/1102219))。
-- {{jsxref("DataView")}} コンストラクターを {{jsxref("Operators/new", "new")}} 演算子を伴わない関数として呼び出した場合、ES6 に従って {{jsxref("TypeError")}} が発生するようになりました。
+- {{jsxref("DataView")}} コンストラクターを {{jsxref("new")}} 演算子を伴わない関数として呼び出した場合、ES6 に従って {{jsxref("TypeError")}} が発生するようになりました。
 - Firefox 21 のリグレッションである、`get` トラップを持たずに配列から作成した Proxy が正常に動作しない問題を修正しました。{{jsxref("Proxy")}} で `get` トラップを定義していない場合は、{{jsxref("Array.length")}} が `0` を返します。また `set` トラップは呼び出されません。この問題の回避策は、必要ない場合でも `get` トラップを追加することでした。この問題は解決されました ([Firefox バグ 895223](https://bugzil.la/895223))。
 - ES2015 仕様に従い、 `WeakMap.prototype` および `WeakSet.prototype` は通常のオブジェクトに変更しました ([Firefox バグ 1055473](https://bugzil.la/1055473))。
 

@@ -1,8 +1,9 @@
 ---
-title: color()
+title: Fonction CSS `color()`
+short-title: color()
 slug: Web/CSS/Reference/Values/color_value/color
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`color()`** permet de définir une couleur dans un {{Glossary("color space", "espace colorimétrique")}} particulier, au lieu de l'espace colorimétrique sRGB implicite utilisé par la plupart des autres fonctions de couleur.
@@ -23,7 +24,7 @@ color(from #123456 xyz calc(x + 0.75) y calc(z - 0.35))
 
 ### Valeurs
 
-Vous trouverez ci-dessous la description des valeurs autorisées pour les couleurs absolues et [relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors).
+Vous trouverez ci-dessous la description des valeurs autorisées pour les couleurs absolues et [relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 #### Syntaxe de valeur absolue
 
@@ -376,7 +377,7 @@ Le résultat est le suivant&nbsp;:
 
 - La propriété {{CSSxRef("color")}}
 - [Le type de donnée `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) pour la liste de toutes les notations de couleur
-- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
+- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - [Outil de conversion de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
 - Le module [des couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - Fonctionnalité média [`color-gamut`](/fr/docs/Web/CSS/Reference/At-rules/@media/color-gamut)

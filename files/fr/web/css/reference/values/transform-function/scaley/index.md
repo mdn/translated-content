@@ -1,8 +1,9 @@
 ---
-title: scaleY()
+title: Fonction CSS `scaleY()`
+short-title: scaleY()
 slug: Web/CSS/Reference/Values/transform-function/scaleY
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`scaleY()`** définit une transformation qui redimensionne un élément selon l'axe des ordonnées (verticalement). Son résultat est de type {{CSSxRef("&lt;transform-function&gt;")}}.

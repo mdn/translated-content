@@ -3,10 +3,8 @@ title: 構文とよくあるタスクの HTML 早見表
 short-title: HTML 早見表
 slug: Web/HTML/Guides/Cheatsheet
 l10n:
-  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
-
-{{HTMLSidebar}}
 
 {{Glossary("HTML")}} を使用しているとき、HTML タグを正しく使用する方法や適用方法を簡単に覚える方法があるととても便利です。MDN は広範にわたる [HTML ドキュメント](/ja/docs/Web/HTML/Reference/Elements) と深い解説である[一連の　HTML ガイド](/ja/docs/Learn_web_development/Core/Structuring_content)を提供しています。しかし、多くの場合、手っ取り早くヒントを得たいものです。そのため、早見表では、よく使用するコードの断片をすばやく正確に使用することができるようにしています。
 
@@ -168,7 +166,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td>改行</td>
       <td>{{HTMLElement("br")}}</td>
       <td id="br-example">
-        <pre class="brush: html">Line 1&#x3C;br>Line 2</pre>
+        <pre class="brush: html">Line 1&#x3C;br />Line 2</pre>
         {{EmbedLiveSample("br-example", 100, 80)}}
       </td>
     </tr>
@@ -178,7 +176,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td id="wbr-example">
         <pre class="brush: html">
 &#x3C;div style="width: 200px">
-  Llanfair&#x3C;wbr>pwllgwyngyll&#x3C;wbr>gogerychwyrndrobwllllantysiliogogogoch.
+  Llanfair&#x3C;wbr />pwllgwyngyll&#x3C;wbr />gogerychwyrndrobwllllantysiliogogogoch.
 &#x3C;/div></pre
         >
         {{EmbedLiveSample("wbr-example", 100, 80)}}
@@ -214,7 +212,7 @@ format&#x3C;/code>.</pre
       <td id="audio-example">
         <pre class="brush: html">
 &#x3C;audio controls>
-  &#x3C;source src="/shared-assets/audio/t-rex-roar.mp3" type="audio/mpeg">
+  &#x3C;source src="/shared-assets/audio/t-rex-roar.mp3" type="audio/mpeg" />
 &#x3C;/audio>
         </pre>
         {{EmbedLiveSample("audio-example", 100, 80)}}
@@ -226,8 +224,8 @@ format&#x3C;/code>.</pre
       <td id="video-example">
         <pre class="brush: html">
 &#x3C;video controls width="250"
-  src="https://archive.org/download/ElephantsDream/ed_hd.ogv" >
-  &#x3C;a href="https://archive.org/download/ElephantsDream/ed_hd.ogv">Download OGV video&#x3C;/a>
+  src="/shared-assets/videos/flower.webm" >
+  &#x3C;a href="/shared-assets/videos/flower.webm">Download WebM video&#x3C;/a>
 &#x3C;/video></pre
         >
         {{EmbedLiveSample("video-example", 100, 200)}}
@@ -328,7 +326,7 @@ an extended quotation.&#x3C;/blockquote></pre
       <td>水平区切り線</td>
       <td>{{HTMLElement("hr")}}</td>
       <td id="hr-example">
-        <pre class="brush: html">before&#x3C;hr>after</pre>
+        <pre class="brush: html">before&#x3C;hr />after</pre>
         {{EmbedLiveSample("hr-example", 100, 100)}}
       </td>
     </tr>

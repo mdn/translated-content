@@ -1,8 +1,9 @@
 ---
-title: "<form> : l'élément représentant un formulaire"
+title: "Élément HTML `<form>` : l'élément représentant un formulaire"
+short-title: <form>
 slug: Web/HTML/Reference/Elements/form
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<form>`** représente une section du document contenant des contrôles interactifs permettant de soumettre des informations.

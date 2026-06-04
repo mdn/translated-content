@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bd48972c8a9c2acf3b8fa6e41248d0952eb0c406
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ko/docs/Learn/Common_questions")}}
 
 여기서 우리는 웹 서버가 무엇인지, 어떻게 동작하는지, 왜 중요한지를 알아볼 것입니다.
 

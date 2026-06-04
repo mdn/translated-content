@@ -26,7 +26,7 @@ dataTransferItem.getAsString(callback);
 
 The callback parameter is a callback function which accepts one parameter:
 
-- {{domxref("DOMString")}}
+- {{jsxref("String")}}
   - : The drag data item's string data.
 
 The callback return value is `undefined`.

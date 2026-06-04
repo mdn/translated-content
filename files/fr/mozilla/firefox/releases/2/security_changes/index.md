@@ -13,7 +13,7 @@ Cet article aborde les changements concernant la sécurité dans Firefox 2.
 
 Les méthodes privilégiées de chiffrage sont `TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA` et `TLS_RSA_WITH_3DES_EDE_CBC_SHA`. Certains serveurs y font référence en tant que `SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA` et `SSL_RSA_WITH_3DES_EDE_CBC_SHA`.
 
-Si le support de SSLv2 doit être activé, vous devrez définir avec la valeur `true` la préférence utilisateur `security.ssl2.*` dans about:config.
+Si le support de SSLv2 doit être activé, vous devez définir avec la valeur `true` la préférence utilisateur·ice `security.ssl2.*` dans about:config.
 
 ## Nouvelles fonctionnalités
 

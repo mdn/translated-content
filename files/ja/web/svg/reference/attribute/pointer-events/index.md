@@ -2,7 +2,7 @@
 title: pointer-events
 slug: Web/SVG/Reference/Attribute/pointer-events
 l10n:
-  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
 **`pointer-events`** 属性は、要素がマウスイベントの対象となるかどうか、またはそのタイミングを定義するための表示属性です。

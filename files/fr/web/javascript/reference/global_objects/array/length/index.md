@@ -3,10 +3,10 @@ title: "Array : propriété length"
 short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 5a745d55a26933ffd9e71f3b2246deba3f9e6f82
 ---
 
-La propriété de données **`length`** d'une instance de {{JSxRef("Array")}} représente le nombre d'éléments dans ce tableau. Sa valeur est un entier non signé sur 32 bits qui est toujours numériquement supérieur au plus grand indice du tableau.
+La propriété de données **`length`** d'une instance de {{JSxRef("Array")}} représente le nombre d'emplacements dans ce tableau. Sa valeur est un entier non signé sur 32 bits qui est toujours numériquement supérieur au plus grand indice du tableau. Elle peut être supérieure au nombre d'éléments si le tableau est [creux](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_et_emplacements_vides).
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Array.length", "shorter")}}
 
@@ -111,7 +111,7 @@ console.log(nombres); // [vide x 3]
 
 ### Tableau avec une propriété `length` non modifiable
 
-La propriété `length` est automatiquement mise à jour par le tableau lorsque des éléments sont ajoutés au-delà de la longueur actuelle. Si la propriété `length` est rendue non modifiable, le tableau ne pourra pas la mettre à jour. Cela provoque une erreur en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+La propriété `length` est automatiquement mise à jour par le tableau lorsque des éléments sont ajoutés au-delà de la longueur actuelle. Si la propriété `length` est rendue non modifiable, le tableau ne peut pas la mettre à jour. Cela provoque une erreur en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
 ```js
 "use strict";

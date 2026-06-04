@@ -1,8 +1,9 @@
 ---
-title: oklab()
+title: Fonction CSS `oklab()`
+short-title: oklab()
 slug: Web/CSS/Reference/Values/color_value/oklab
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`oklab()`** exprime une couleur donnée dans {{Glossary("color space", "l'espace de couleur")}} OKLab, qui essaie de se rapprocher de la perception de la couleur par l'œil humain.
@@ -31,7 +32,7 @@ oklab(from hsl(180 100% 50%) calc(l - 0.1) a b)
 
 ### Valeurs
 
-Voici les descriptions des valeurs autorisées pour les [couleurs absolues et relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors).
+Voici les descriptions des valeurs autorisées pour les [couleurs absolues et relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 #### Syntaxe des valeurs absolues
 
@@ -477,7 +478,7 @@ Le résultat est le suivant&nbsp;:
 
 - Le [type de donnée `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) pour une liste de toutes les notations de couleur
 - Les fonctions de couleur {{CSSxRef("color_value/lab","lab()")}} et {{CSSxRef("color_value/oklch","oklch()")}}
-- [Utilisation des couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
+- [Utilisation des couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - [Un espace de couleur perceptuel pour le traitement des images <sup>(angl.)</sup>](https://bottosson.github.io/posts/oklab/) sur bottosson.github.io (2023)
 - [Roue de couleurs OKLAB <sup>(angl.)</sup>](https://observablehq.com/@shan/oklab-color-wheel) sur observablehq.com

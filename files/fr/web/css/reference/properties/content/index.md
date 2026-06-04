@@ -3,7 +3,7 @@ title: Propriété CSS `content`
 short-title: content
 slug: Web/CSS/Reference/Properties/content
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`content`** remplace le contenu par une valeur générée. Elle peut être utilisée pour définir ce qui est affiché à l'intérieur d'un élément ou d'un pseudo-élément. Pour les éléments, la propriété `content` définit si l'élément s'affiche normalement (`normal` ou `none`) ou s'il est remplacé par une image (et le texte alternatif (`alt`) associé). Pour les pseudo-éléments et les marges, `content` définit le contenu comme des images, du texte, les deux ou aucun, ce qui détermine si l'élément est affiché ou non.
@@ -111,19 +111,19 @@ Les mots-clés et les types de données mentionnés ci-dessus sont décrits plus
   - : A sequence of characters enclosed in matching single or double quotes. Multiple string values will be concatenated (there is no concatenation operator in CSS).
 
 - {{CSSxRef("&lt;image&gt;")}}
-  - : Une {{CSSxRef("&lt;image&gt;")}}, représentant une image à afficher. Cela peut être égal à une {{CSSxRef("url_value", "&lt;url&gt;")}}, {{CSSxRef("image/image-set", "image-set()")}}, ou {{CSSxRef("&lt;gradient&gt;")}} type de données, ou une partie de la page Web elle-même, définie par la {{CSSxRef("element", "element()")}} fonction.
+  - : Une {{CSSxRef("&lt;image&gt;")}}, représentant une image à afficher. Cela peut être égal à une {{CSSxRef("url_value", "&lt;url&gt;")}}, {{CSSxRef("image/image-set", "image-set()")}}, ou {{CSSxRef("&lt;gradient&gt;")}} type de données, ou une partie de la page Web elle-même, définie par la {{CSSxRef("element()")}} fonction.
 
 - `<counter>`
-  - : La valeur `<counter>` est un [compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters), généralement un nombre produit par des calculs définis par les {{CSSxRef("&lt;counter-reset&gt;")}} et {{CSSxRef("&lt;counter-increment&gt;")}} propriétés. Il peut être affiché à l'aide de la {{CSSxRef("counter", "counter()")}} ou {{CSSxRef("counters", "counters()")}} fonction.
-    - {{CSSxRef("counter", "counter()")}}
-      - : La {{CSSxRef("counter", "counter()")}} fonction a deux formes : 'counter(_name_)' ou 'counter(_name_, style)'. Le texte généré est la valeur du compteur le plus interne du nom donné dans le contexte du pseudo-élément donné. Il est formaté dans le {{CSSxRef("&lt;list-style-type&gt;")}} défini (`decimal` par défaut).
-    - {{CSSxRef("counters", "counters()")}}
-      - : La {{CSSxRef("counters", "counters()")}} fonction a également deux formes : 'counters(_name_, _string_)' ou 'counters(_name_, _string_, _style_)'. Le texte généré est la valeur de tous les compteurs avec le nom donné dans le contexte du pseudo-élément donné, du plus externe au plus interne, séparés par la chaîne définie. Les compteurs sont rendus dans le {{CSSxRef("&lt;list-style-type&gt;")}} indiqué (`decimal` par défaut).
+  - : La valeur `<counter>` est un [compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters), généralement un nombre produit par des calculs définis par les {{CSSxRef("counter-reset")}} et {{CSSxRef("counter-increment")}} propriétés. Il peut être affiché à l'aide de la {{CSSxRef("counter()")}} ou {{CSSxRef("counters()")}} fonction.
+    - {{CSSxRef("counter()")}}
+      - : La {{CSSxRef("counter()")}} fonction a deux formes&nbsp;: `counter(_name_)` ou `counter(_name_, style)`. Le texte généré est la valeur du compteur le plus interne du nom donné dans le contexte du pseudo-élément donné. Il est formaté dans le {{CSSxRef("list-style-type")}} défini (`decimal` par défaut).
+    - {{CSSxRef("counters()")}}
+      &nbsp;: `counters(_name_, _string_)` ou `counters(_name_, _string_, _style_)`. Le texte généré est la valeur de tous les compteurs avec le nom donné dans le contexte du pseudo-élément donné, du plus externe au plus interne, séparés par la chaîne de caractères définie. Les compteurs sont rendus dans le {{CSSxRef("list-style-type")}} indiqué (`decimal` par défaut).
 
 - `<quote>`
   - : Le type de données `<quote>` comprend des mots-clés dépendants de la langue et de la position&nbsp;:
     - `open-quote` et `close-quote`
-      - : Ces valeurs sont remplacées par la chaîne appropriée de la {{CSSxRef("quotes")}} propriété.
+      - : Ces valeurs sont remplacées par la chaîne de caractères appropriée de la {{CSSxRef("quotes")}} propriété.
     - `no-open-quote` et `no-close-quote`
       - : N'introduit aucun contenu, mais incrémente (décrémente) le niveau de nesting pour les citations.
 
@@ -131,7 +131,7 @@ Les mots-clés et les types de données mentionnés ci-dessus sont décrits plus
   - : Le type de données `<target>` comprend trois fonctions cibles, `<target-counter()>`, `<target-counters()>`, et `<target-text()>` qui créent des références croisées obtenues à partir de l'extrémité cible d'un lien. Voir [Syntaxe formelle](#syntaxe_formelle).
 
 - `<leader()>`
-  - : Le type de données `<leader()>` comprend une fonction leader : `leader( <leader-type> )`. Cette fonction accepte les valeurs de mots-clés `dotted`, `solid`, ou `space` (égal à `leader(".")`, `leader("_")`, et `leader(" ")`, respectivement), ou une `<string>` comme paramètre. Lorsqu'il est pris en charge et utilisé comme valeur pour `content`, le type de leader fourni sera inséré comme un motif répétitif, reliant visuellement le contenu à travers une ligne horizontale.
+  - : Le type de données `<leader()>` comprend une fonction leader&nbsp;: `leader( <leader-type> )`. Cette fonction accepte les valeurs de mots-clés `dotted`, `solid`, ou `space` (égal à `leader(".")`, `leader("_")`, et `leader(" ")`, respectivement), ou une `<string>` comme paramètre. Lorsqu'il est pris en charge et utilisé comme valeur pour `content`, le type de leader fourni est inséré comme un motif répétitif, reliant visuellement le contenu à travers une ligne horizontale.
 
 - `attr(x)`
   - : La fonction CSS `attr(x)` récupère la valeur d'un attribut de l'élément sélectionné, ou de l'élément d'origine du pseudo-élément. La valeur de l'attribut `x` de l'élément est une chaîne non analysée représentant le nom de l'attribut. S'il n'y a pas d'attribut `x`, une chaîne vide est renvoyée. La sensibilité à la casse du paramètre de nom d'attribut dépend de la langue du document.
@@ -149,7 +149,7 @@ Les mots-clés et les types de données mentionnés ci-dessus sont décrits plus
 
 ## Accessibilité
 
-Le contenu généré par CSS n'est pas inclus dans le [DOM](/fr/docs/Web/API/Document_Object_Model). Pour cette raison, il ne fait pas partie de l'[arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#api_daccessibilité) et certaines technologies d'assistances ou certains navigateurs ne permettront pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.
+Le contenu généré par CSS n'est pas inclus dans le [DOM](/fr/docs/Web/API/Document_Object_Model). Pour cette raison, il ne fait pas partie de [l'arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#api_daccessibilité) et certaines technologies d'assistances ou certains navigateurs ne permettent pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.
 
 - [La prise en charge relative à l'accessibilité pour les contenus générés par CSS — Tink <sup>(angl.)</sup>](https://tink.uk/accessibility-support-for-css-generated-content/)
 - [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.3_—_créer_du_contenu_pouvant_être_présenté_de_différentes_façons)
@@ -348,7 +348,7 @@ Si vous utilisez un lecteur d'écran, il devrait prononcer le mot «&nbsp;MOZILL
 
 ### Ajouter des compteurs dans le texte alternatif
 
-Cet exemple présente une liste de liens vers des chapitres de livre, et montre comment utiliser du contenu généré pour inclure une icône de livre et un compteur avant chaque lien, avec un texte alternatif qui inclut le mot «&nbsp;chapitre&nbsp;» à la place de l'icône. Cela a pour effet d'afficher le mot «&nbsp;chapitre&nbsp;» et le numéro du chapitre avant le texte dans le {{Glossary("accessible name", "nom accessible")}} de chaque lien, qui sera annoncé aux utilisateur·ice·s de lecteurs d'écran lorsque le lien reçoit la sélection.
+Cet exemple présente une liste de liens vers des chapitres de livre, et montre comment utiliser du contenu généré pour inclure une icône de livre et un compteur avant chaque lien, avec un texte alternatif qui inclut le mot «&nbsp;chapitre&nbsp;» à la place de l'icône. Cela a pour effet d'afficher le mot «&nbsp;chapitre&nbsp;» et le numéro du chapitre avant le texte dans le {{Glossary("accessible name", "nom accessible")}} de chaque lien, qui est annoncé aux utilisateur·ice·s de lecteurs d'écran lorsque le lien reçoit la sélection.
 
 #### HTML
 
@@ -394,13 +394,13 @@ a::before {
 
 {{EmbedLiveSample("alt-counter", "100%", 270)}}
 
-Lorsqu'un lecteur d'écran navigue vers un lien dans la liste, les navigateurs compatibles annonceront «&nbsp;Chapitre&nbsp;» suivi du numéro actuel du compteur, puis du texte du lien, par exemple «&nbsp;Chapitre 1 Un·e inconnu·e appelle&nbsp;» et «&nbsp;Chapitre 2 Deux chouettes&nbsp;».
+Lorsqu'un lecteur d'écran navigue vers un lien dans la liste, les navigateurs compatibles annoncent «&nbsp;Chapitre&nbsp;» suivi du numéro actuel du compteur, puis du texte du lien, par exemple «&nbsp;Chapitre 1 Un·e inconnu·e appelle&nbsp;» et «&nbsp;Chapitre 2 Deux chouettes&nbsp;».
 
 ### Remplacement d'élément avec un lien
 
 Cet exemple remplace un élément régulier&nbsp;! Le contenu de l'élément est remplacé par un SVG utilisant le type {{CSSxRef("url_value", "&lt;url&gt;")}}.
 
-Les pseudo-éléments ne sont pas rendus sur les éléments remplacés. Comme cet élément est remplacé, tous les `::after` ou `::before` correspondants ne sont pas générés ou appliqués. Pour démontrer cela, nous incluons un bloc de déclaration `::after`, tentant d'ajouter l'`id` en tant que contenu généré. Ce pseudo-élément ne sera pas généré car l'élément est remplacé.
+Les pseudo-éléments ne sont pas rendus sur les éléments remplacés. Comme cet élément est remplacé, tous les `::after` ou `::before` correspondants ne sont pas générés ou appliqués. Pour démontrer cela, nous incluons un bloc de déclaration `::after`, tentant d'ajouter l'`id` en tant que contenu généré. Ce pseudo-élément n'est pas généré, car l'élément est remplacé.
 
 #### HTML
 
@@ -429,7 +429,7 @@ Lorsqu'on génère du contenu sur des éléments réguliers (plutôt que juste s
 
 ### Remplacement d'élément avec `<gradient>`
 
-Cet exemple démontre comment le contenu d'un élément peut être remplacé par n'importe quel type d'`<image>`, dans ce cas, un dégradé CSS. Le contenu de l'élément est remplacé par un {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}. Nous fournissons un texte alternatif car toutes les images doivent être décrites pour l'accessibilité.
+Cet exemple démontre comment le contenu d'un élément peut être remplacé par n'importe quel type d'`<image>`, dans ce cas, un dégradé CSS. Le contenu de l'élément est remplacé par un {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}. Nous fournissons un texte alternatif, car toutes les images doivent être décrites pour l'accessibilité.
 
 #### HTML
 
@@ -461,7 +461,7 @@ Vérifiez le [tableau de compatibilité des navigateurs](#compatibilité_des_nav
 
 ### Remplacement d'élément avec `image-set()`
 
-Cet exemple remplace le contenu d'un élément par un {{CSSxRef("image/image-set", "image-set()")}}. Si l'affichage des utilisateur·ice·s a une résolution normale, le `1x.png` sera affiché. Les écrans avec une résolution plus élevée afficheront l'image `2x.png`.
+Cet exemple remplace le contenu d'un élément par un {{CSSxRef("image/image-set", "image-set()")}}. Si l'affichage des utilisateur·ice·s a une résolution normale, le `1x.png` est affiché. Les écrans avec une résolution plus élevée affichent l'image `2x.png`.
 
 #### HTML
 
@@ -515,4 +515,4 @@ div {
 - L'entrée de glossaire {{Glossary("Replaced elements", "Éléments remplacés")}}
 - Le module [de contenu généré par CSS](/fr/docs/Web/CSS/Guides/Generated_content)
 - Le module [des listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
-- Panneaux d'accessibilité du navigateur&nbsp;: [Inspecteur d'accessibilité de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/), [Panneau d'accessibilité de Chrome](https://developer.chrome.com/docs/devtools/accessibility/reference#pane), [Arbre d'accessibilité de Safari](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)
+- Panneaux d'accessibilité du navigateur&nbsp;: [Inspecteur d'accessibilité de Firefox <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/), [Panneau d'accessibilité de Chrome <sup>(angl.)</sup>](https://developer.chrome.com/docs/devtools/accessibility/reference#pane), [Arbre d'accessibilité de Safari <sup>(angl.)</sup>](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)

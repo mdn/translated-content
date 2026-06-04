@@ -1,8 +1,9 @@
 ---
-title: "<time> : l'élément de temps (date)"
+title: "Élément HTML `<time>` : l'élément de temps (date)"
+short-title: <time>
 slug: Web/HTML/Reference/Elements/time
 l10n:
-  sourceCommit: eb9034ead504af00b27a7da3ff9d4f641ade5e59
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<time>`** représente une période précise dans le temps. Il peut inclure l'attribut `datetime` pour traduire les dates dans un format lisible par une machine, permettant d'améliorer les résultats des moteurs de recherche ou d'activer des fonctionnalités personnalisées comme des rappels.

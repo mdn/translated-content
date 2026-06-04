@@ -29,8 +29,8 @@ li {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容类别</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, and if the <code>&lt;ol&gt;</code> element's children include at least one {{HTMLElement("li")}} element, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Palpable_content">palpable content</a>.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类别</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">Flow content</a>, and if the <code>&lt;ol&gt;</code> element's children include at least one {{HTMLElement("li")}} element, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Palpable_content">palpable content</a>.</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>

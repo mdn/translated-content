@@ -1,8 +1,9 @@
 ---
-title: color-mix()
+title: Fonction CSS `color-mix()`
+short-title: color-mix()
 slug: Web/CSS/Reference/Values/color_value/color-mix
 l10n:
-  sourceCommit: b272f3e0aef3030a1370f1466fa59ee97243de7a
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`color-mix()`** prend une ou plusieurs valeurs de type {{CSSxRef("&lt;color&gt;")}} et retourne le résultat de leur mélange selon des proportions données, dans un espace de couleur donné.
@@ -245,7 +246,7 @@ li:nth-child(6) {
 
 {{EmbedLiveSample("Ajouter de la transparence", "100%", 120)}}
 
-De cette manière, la fonction `color-mix()` peut être utilisée pour ajouter de la transparence à n'importe quelle couleur, même si la couleur possède déjà un canal alpha inférieur à 1. Cependant, `color-mix()` ne permet pas de rendre une couleur semi-transparente totalement opaque. Pour cela, utilisez une [couleur relative](/fr/docs/Web/CSS/Guides/Colors/Relative_colors) avec une [fonction de couleur CSS](/fr/docs/Web/CSS/Guides/Colors#fonctions). Les couleurs relatives peuvent modifier la valeur de n'importe quel canal, y compris augmenter le canal alpha pour rendre la couleur totalement opaque.
+De cette manière, la fonction `color-mix()` peut être utilisée pour ajouter de la transparence à n'importe quelle couleur, même si la couleur possède déjà un canal alpha inférieur à 1. Cependant, `color-mix()` ne permet pas de rendre une couleur semi-transparente totalement opaque. Pour cela, utilisez une [couleur relative](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors) avec une [fonction de couleur CSS](/fr/docs/Web/CSS/Guides/Colors#fonctions). Les couleurs relatives peuvent modifier la valeur de n'importe quel canal, y compris augmenter le canal alpha pour rendre la couleur totalement opaque.
 
 ### Utiliser l'interpolation de teinte avec `color-mix()`
 
@@ -412,4 +413,4 @@ Avec `longer hue`, les incréments ou décréments entre les couleurs seront tou
 - Le type de donnée {{CSSxRef("&lt;color&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;hue&gt;")}}
-- [Couleurs relatives CSS](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
+- [Couleurs relatives CSS](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors)

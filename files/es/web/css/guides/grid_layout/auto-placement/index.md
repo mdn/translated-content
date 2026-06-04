@@ -590,7 +590,7 @@ Puede ser que se te ocurran tus propios casos de uso para la colocación automá
    <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Box_alignment">Box alignment in grid layout</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
+   <li><a href="/es/docs/Web/CSS/Guides/Grid_layout">CSS Grid Layout and Progressive Enhancement</a></li>
    <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts">Realizing common layouts using grids</a></li>
   </ol>
  </li>

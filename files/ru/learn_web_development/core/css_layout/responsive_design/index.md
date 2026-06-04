@@ -3,7 +3,7 @@ title: Отзывчивый дизайн
 slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
+{{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 На заре веб-дизайна страницы создавались для экрана определённого размера. Если у пользователя был экран большего или меньшего размера чем ожидал дизайнер, то результат мог быть от нежелательных полос прокрутки, до слишком длинной строки и плохого использования пространства. Поскольку становились доступны много различных размеров экранов, появилась концепция _отзывчивого (адаптивного) веб-дизайна_ _(responsive web design_ (RWD)) — набор методов, которые позволяют веб-страницам менять свой макет и внешний вид в соответствии с разной шириной экрана, разрешением и т.д. Это та самая, идея которая изменила подход к дизайну веба для множества устройств, и в этой статье мы поможем вам понять основные методы, которые вам необходимо знать, чтобы освоить его.
 
@@ -279,7 +279,7 @@ Responsive design refers to a site or application design that responds to the en
 
 It has also become much easier to achieve responsive designs with the help of the layout methods you have learned in these lessons. If you are new to web development today you have many more tools at your disposal than in the early days of responsive design. It is therefore worth checking the age of any materials you are referencing. While the historical articles are still useful, modern use of CSS and HTML makes it far easier to create elegant and useful designs, no matter what device your visitor views the site with.
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 ## In this module
 

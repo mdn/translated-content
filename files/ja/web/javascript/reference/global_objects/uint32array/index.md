@@ -9,14 +9,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/Uint32Array/Uint32Array", "Uint32Array()")}}
+- {{jsxref("Uint32Array.Uint32Array", "Uint32Array()")}}
   - : 新しい `Uint32Array` オブジェクトを生成します。
 
 ## 静的プロパティ
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint32Array.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`Uint32Array` の場合は `4` です。
-- {{jsxref("TypedArray.name", "Uint32Array.name")}}
+- {{jsxref("Function.name", "Uint32Array.name")}}
   - : コンストラクター名を文字列値で返します。`Uint32Array` の場合、 "`Uint32Array`" です。
 
 ## 静的メソッド
@@ -89,7 +89,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
   - : 配列とその要素を表すローカライズされた文字列を返します。{{jsxref("Array.prototype.toLocaleString()")}} も参照してください。
 - {{jsxref("TypedArray.toString", "Uint32Array.prototype.toString()")}}
   - : 配列とその要素を表す文字列を返します。{{jsxref("Array.prototype.toString()")}} も参照してください。
-- {{jsxref("TypedArray.@@iterator", "Uint32Array.prototype[Symbol.iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Uint32Array.prototype[Symbol.iterator]()")}}
   - : 配列内ですべての位置における値を提供する新しい*配列イテレーター*を返します。
 
 ## 例
@@ -136,6 +136,6 @@ var uint32 = new Uint32Array(iterable);
 ## 関連情報
 
 - `Uint32Array` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays) で利用できます
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

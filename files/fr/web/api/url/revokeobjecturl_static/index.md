@@ -18,7 +18,7 @@ window.URL.revokeObjectURL(objectURL);
 ### Paramètres
 
 - `objectURL`
-  - : Une {{domxref("DOMString")}} représentant une URL d'objet qui a été précédemment créée par un appel à {{domxref("URL.createObjectURL", "createObjectURL()") }}.
+  - : Une {{jsxref("String")}} représentant une URL d'objet qui a été précédemment créée par un appel à {{domxref("URL.createObjectURL", "createObjectURL()") }}.
 
 ### Valeur de retour
 

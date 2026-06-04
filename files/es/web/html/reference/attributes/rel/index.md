@@ -203,7 +203,7 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
       <td><code>search</code></td>
       <td>Indicates that the hyperlink reference a document whose interface is specially designing for searching in this document, or site, and its resources.<br>
        <br>
-       If the <a href="/es/docs/Web/HTML/Reference/Elements/link#type"><code>type</code></a> attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href="/es/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
+       If the <a href="/es/docs/Web/HTML/Reference/Elements/link#type"><code>type</code></a> attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href="/es/docs/Web/XML/Guides/OpenSearch">OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
       <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
       <td><em>None.</em></td>
      </tr>

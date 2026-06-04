@@ -1,32 +1,33 @@
 ---
-title: Firefox 108 for developers
+title: Firefox 108 開発者向けリリースノート
+short-title: Firefox 108
 slug: Mozilla/Firefox/Releases/108
 l10n:
-  sourceCommit: edeb48d22b0865ede34c8ca70cd2eb60010cbf9c
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 このページでは、開発者に影響する Firefox 108 の変更点をまとめています。Firefox 108 は、2022 年 12 月 13 日にリリースされました。
 
-## ウェブ開発者向けの変更点一覧
+## ウェブ開発者向けの変更点
 
 ### HTML
 
-- {{HTMLElement("source")}} 要素で、{{HTMLElement("picture")}} 要素の子要素であるときに [`height`](/ja/docs/Web/HTML/Reference/Elements/source#attr-height) および [`width`](/ja/docs/Web/HTML/Reference/Elements/source#attr-width) 属性をサポートしました。
+- {{HTMLElement("source")}} 要素で、{{HTMLElement("picture")}} 要素の子要素であるときに [`height`](/ja/docs/Web/HTML/Reference/Elements/source#height) および [`width`](/ja/docs/Web/HTML/Reference/Elements/source#-width) 属性をサポートしました。
   この機能は設定項目 `dom.picture_source_dimension_attributes.enabled` で制御しており、既定値を `true` にしました ([Firefox バグ 1795953](https://bugzil.la/1795953))。
 
 ### CSS
 
-- 設定項目 `layout.css.trig.enabled` の既定値を `true` に設定して、[三角関数](/ja/docs/Web/CSS/Reference/Values/Functions#trigonometric_functions) が使用可能になりました。
+- 設定項目 `layout.css.trig.enabled` の既定値を `true` に設定して、[三角関数](/ja/docs/Web/CSS/Reference/Values/Functions#三角関数) が使用可能になりました。
   `sin()`、`cos()`、`tan()`、`asin()`、`acos()`、`atan()`、`atan2()` 関数を使用できます ([Firefox バグ 1774589](https://bugzil.la/1774589)、[Firefox バグ 1787070](https://bugzil.la/1787070))。
 - [数学関数](/ja/docs/Web/CSS/Reference/Values/Functions#math_functions) で `pi` や `e` のようなよく知られた定数を使用できるようにするため、CSS の [`<calc-constant>`](/ja/docs/Web/CSS/Reference/Values/calc-keyword) 型を実装しました ([Firefox バグ 1682444](https://bugzil.la/1682444)、[Firefox バグ 1787070](https://bugzil.la/1787070))。
 - 設定項目 `layout.css.container-queries.enabled` で、コンテナークエリーの長さの単位をサポートしました。
   この設定を `true` にすると、クエリーコンテナーの寸法に比例する長さの単位である`cqw`、`cqh`、`cqi`、`cqb`、`cqmin`、`cqmax` を使用できます。
-  これらの単位について、詳しくは [CSS Container Queries](/ja/docs/Web/CSS/Guides/Containment/Container_queries#container_query_length_units) の文書をご覧ください ([Firefox バグ 1744231](https://bugzil.la/1744231))。
+  これらの単位について、詳しくは [CSS コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries#container_query_length_units) の文書をご覧ください ([Firefox バグ 1744231](https://bugzil.la/1744231))。
 - 設定項目 `layout.css.font-variant-emoji.enabled` で、[`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-variant-emoji) プロパティをサポートしました。設定項目の既定値は `false` です。このプロパティで、絵文字を表示するときの既定の表現スタイルを設定できます ([Firefox バグ 1461589](https://bugzil.la/1461589))。
 
 ### JavaScript
 
-変更なし。
+目立った変更なし。
 
 ### HTTP
 
@@ -35,12 +36,12 @@ l10n:
 - [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) HTTP ヘッダーの [`script-src-elem`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem) および [`script-src-attr`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr) ディレクティブをサポートしました。
   サーバーはそれぞれのディレクティブを使用して、`<script>` 要素の JavaScript、および `onclick` などのイベントハンドラーのインラインスクリプトの正当な提供元を指定できます ([Firefox バグ 1529337](https://bugzil.la/1529337))。
 - [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) の違反内容の報告が、`effective-directive` および `status-code` プロパティを含むようになりました。
-  詳しくは [違反内容の報告の構文](/ja/docs/Web/HTTP/Guides/CSP#違反内容の報告の構文) をご覧ください ([Firefox バグ 1192684](https://bugzil.la/1192684))。
+  詳しくは [違反内容の報告の構文](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri#違反内容の報告の構文) をご覧ください ([Firefox バグ 1192684](https://bugzil.la/1192684))。
 
 ### API
 
-- [Import maps](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap) をサポートしました。
-  Import maps は、[JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules) をインポートするときにブラウザーがモジュール指定子を解決する方法に柔軟性や追加の制御手段を提供するものです ([Firefox バグ 1795647](https://bugzil.la/1795647))。
+- [インポートマップ](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap)をサポートしました。
+  インポートマップは、[JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules) をインポートするときにブラウザーがモジュール指定子を解決する方法に柔軟性や追加の制御手段を提供するものです ([Firefox バグ 1795647](https://bugzil.la/1795647))。
 
 #### Media、WebRTC、Web Audio
 
@@ -66,7 +67,3 @@ l10n:
 ## アドオン開発者向けの変更点一覧
 
 - [バージョン番号](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) が推奨するフォーマットに従っていない拡張機能がインストールされているときに、Firefox が警告を表示するようになりました ([Firefox バグ 1793925](https://bugzil.la/1793925))。
-
-## 過去のバージョン
-
-{{Firefox_for_developers(107)}}

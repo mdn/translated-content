@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/URIError
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/URIError/URIError", "URIError()")}}
+- {{jsxref("URIError.URIError", "URIError()")}}
   - : 新しい `URIError` オブジェクトを生成します。
 
 ## インスタンスプロパティ
@@ -72,7 +72,7 @@ try {
 ## 関連情報
 
 - {{jsxref("Error")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("decodeURI()")}}
+- {{jsxref("decodeURIComponent()")}}
+- {{jsxref("encodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}

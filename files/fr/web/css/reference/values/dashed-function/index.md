@@ -1,8 +1,9 @@
 ---
-title: "<dashed-function> : fonctions personnalisées CSS"
+title: Type CSS `<dashed-function>`
+short-title: <dashed-function>
 slug: Web/CSS/Reference/Values/dashed-function
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 {{SeeCompatTable}}

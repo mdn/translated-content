@@ -9,7 +9,7 @@ El objeto **`AggregateError`** representa un error cuando se deben agrupar vario
 
 ## Constructor
 
-- {{JSxRef("Global_Objects/AggregateError/AggregateError", "AggregateError()")}}
+- {{JSxRef("AggregateError.AggregateError", "AggregateError()")}}
   - : Crea un nuevo objeto `AggregateError`.
 
 ## Propiedades de la instancia
