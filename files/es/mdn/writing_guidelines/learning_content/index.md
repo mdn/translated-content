@@ -32,7 +32,7 @@ Para crear y actualizar contenido en el área de aprendizaje de desarrollo web d
 
 Sin embargo, hay algunas diferencias:
 
-- **Estilo de los tutoriales**: La mayor parte del contenido de MDN es una combinación de material de referencia y guías; por otro lado, el área de aprendizaje tiene como objetivo proporcionar tutoriales prácticos. No tenemos una plantilla estricta para cada página, pero deben estar redactadas de manera que guíen al lector paso a paso, mediante una combinación de secciones detalladas y secciones del tipo "probalo tú mismo". Estas instrucciones deberían animar a los lectores a lanzarse, probar cosas nuevas y empezar a escribir código. Consulte la sección "probalo tú mismo" al final de nuestra información sobre [motores de búsqueda](/es/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web#search_engine). Estos se crean usando el siguiente formato Markdown:
+- **Estilo de los tutoriales**: la mayor parte del contenido de MDN es una combinación de material de referencia y guías; en cambio, el área de aprendizaje tiene como objetivo proporcionar tutoriales prácticos. No tenemos una plantilla estricta para cada página, pero deben estar redactadas de manera que guíen al lector paso a paso, mediante una combinación de secciones detalladas y secciones del tipo "Pruébalo tú mismo". Estas instrucciones deberían animar a los lectores a lanzarse, probar cosas nuevas y empezar a escribir código. Consulta la sección "Try it out" al final de nuestra información sobre [motores de búsqueda](/es/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web#search_engine) como ejemplo. Estas secciones se crean usando el siguiente formato Markdown:
 
   ```md
   > [!CALLOUT]
