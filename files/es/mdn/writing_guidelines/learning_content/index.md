@@ -14,7 +14,7 @@ El público al que está dirigido MDN Aprende desarrollo web (también conocido 
 
 ## Temas tratados
 
-"Aprende" proporciona una ruta estructurada que incluye objetivos de aprendizaje, diseñado para enseñar las habilidades y prácticas fundamentales que prepararán a los lectores para convertirse en desarrolladores front-end exitosos. Los estudiantes pueden confiar en que la información proporcionada es correcta para sus estudios y los educadores pueden confiar en que los objetivos proporcionados son correctos para basar sus cursos y planes de estudios.
+"Aprende" proporciona una ruta estructurada que incluye objetivos de aprendizaje, diseñada para enseñar las habilidades y prácticas fundamentales que prepararán a los lectores para convertirse en desarrolladores front-end exitosos. Los estudiantes pueden confiar en que la información proporcionada es correcta para sus estudios, y los educadores pueden confiar en que los objetivos proporcionados son correctos para basar en ellos sus cursos y planes de estudio.
 
 Por lo tanto, nuestro objetivo es limitar estrictamente el alcance del área de aprendizaje a:
 
