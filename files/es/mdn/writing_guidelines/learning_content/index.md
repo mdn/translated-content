@@ -24,7 +24,7 @@ Por lo tanto, nuestro objetivo es limitar estrictamente el alcance del área de 
 
 El área de aprendizaje no pretende ser el espacio de MDN dedicado a contenidos introductorios sobre _todos_ los temas. Esto significa que los temas especializados como MathML y Web Games, así como los temas avanzados o específicos, como expresiones regulares, pruebas de rendimiento, WebRTC y WebGPU, no tienen lugar en el área de aprendizaje.
 
-Si no podes ver un tema tratado en el área de aprendizaje y pensas que debería cubrirlo, no intentes agregarle solamente, comentalo primero con nosotros (Consulta [sugerir contenido](/es/docs/MDN/Writing_guidelines/What_we_write#suggesting_content)).
+Si no ves un tema tratado en el área de aprendizaje y piensas que debería cubrirse, no intentes simplemente añadirlo; coméntalo primero con nosotros (consulta [Sugerir contenido](/es/docs/MDN/Writing_guidelines/What_we_write#suggesting_content)).
 
 ## Enfoque
 
