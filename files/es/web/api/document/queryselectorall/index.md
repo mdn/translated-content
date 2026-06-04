@@ -19,7 +19,7 @@ elementList = parentNode.querySelectorAll(selectors);
 ### Parámetros
 
 - `selectors`
-  - : Un {{domxref("DOMString")}} que contiene uno o más selectores para buscar coincidencias. Esta cadena de texto debe ser una cadena [CSS selector](/es/docs/Web/CSS/Guides/Selectors) válida; si no lo es, se lanzará una excepción `SyntaxError`. Vea [Locating DOM elements using selectors](/es/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree) para más información acerca de utilizar selectores para identificar elementos. Se pueden especificar varios selectores separándolos utilizando comas.
+  - : Un {{jsxref("String")}} que contiene uno o más selectores para buscar coincidencias. Esta cadena de texto debe ser una cadena [CSS selector](/es/docs/Web/CSS/Guides/Selectors) válida; si no lo es, se lanzará una excepción `SyntaxError`. Vea [Locating DOM elements using selectors](/es/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree) para más información acerca de utilizar selectores para identificar elementos. Se pueden especificar varios selectores separándolos utilizando comas.
 
 > [!NOTE]
 > Los caracteres que no son parte de la sintaxis estándar de CSS deben ser escapados utilizando el caracter de barra invertida. Dado que JavaScript también utiliza el escapado por retroceso, se debe tener especial cuidado al escribir cadenas de texto literales utilizando estos caracteres. Vea [Escapando caracteres especiales](#escapando_caracteres_especiales) para más información.

@@ -79,7 +79,7 @@ Vea [enlace a métodos](/es/docs/Web/JavaScript/Reference/Operators/this#funcion
 
 ### Nota sobre `eval`
 
-Los principiantes en JavaScript a menudo tienen el error de usar {{jsxref("eval")}} cuando la notación por corchetes puede usarse a cambio. Por ejemplo, la siguiente sintaxis se ve a menudo en muchos scripts.
+Los principiantes en JavaScript a menudo tienen el error de usar {{jsxref("Global_Objects/eval", "eval")}} cuando la notación por corchetes puede usarse a cambio. Por ejemplo, la siguiente sintaxis se ve a menudo en muchos scripts.
 
 ```js
 x = eval("document.nombre_formulario." + cadenaControlFormulario + ".value");

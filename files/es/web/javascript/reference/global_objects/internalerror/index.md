@@ -16,7 +16,7 @@ Los principalmente casos de ejemplo son cuando algo es demasiado grande, por eje
 
 ## Constructor
 
-- {{JSxRef("Global_Objects/InternalError/InternalError", "InternalError()")}}
+- {{JSxRef("InternalError.InternalError", "InternalError()")}}
   - : Crea un nuevo objeto `InternalError`.
 
 ## Propiedades de la instancia

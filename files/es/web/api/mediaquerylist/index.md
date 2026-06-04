@@ -17,7 +17,7 @@ La nueva versión de la interfaz de `MediaQueryList` hereda las propiedades de s
   - : Un {{domxref("Boolean")}} que devuelve `true` si el
     {{domxref("document")}} actualmente coincide con la lista de consultas de medios, o `false` si no.
 - {{domxref("MediaQueryList.media")}} {{readonlyInline}}
-  - : Un {{domxref("DOMString")}} representa una consulta de medios serializada.
+  - : Un {{jsxref("String")}} representa una consulta de medios serializada.
 
 ### Controladores de eventos
 

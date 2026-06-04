@@ -17,12 +17,12 @@ new Intl.RelativeTimeFormat(locales, options)
 ```
 
 > [!NOTE]
-> `Intl.RelativeTimeFormat()` は、[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使用しても、使用しなくても呼び出すことができます。どちらも新しい `Intl.RelativeTimeFormat` インスタンスを作成します。ただし、`new` を使用せずに呼び出し、`this` 値が別の `Intl.RelativeTimeFormat` インスタンスである場合は、特別な動作があります。[返値](#返値)を参照してください。
+> `Intl.RelativeTimeFormat()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きでないと構築できません。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : BCP 47 言語タグの文字列、または {{jsxref("Intl.Locale")}} インスタンス、またはそのようなロケール識別子の配列です。 `undefined` が渡された場合、または指定されたロケール識別子が対応していない場合は、実行時の既定のロケールが使用されます。 `locales` 引数の一般的な形式および解釈については、[`Intl` メインページにある引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument)を参照してください。
+  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}または {{jsxref("Intl.Locale")}} インスタンスを持つ文字列、あるいはそのようなロケール識別子の配列。`undefined` が渡された場合、または指定されたロケール識別子のいずれも対応していない場合は、ランタイムのデフォルトのロケールが使用されます。`locales` 引数の一般的な形と解釈については、[`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 
     次の Unicode 拡張キーが許可されています。
     - `nu`

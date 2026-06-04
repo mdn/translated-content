@@ -43,7 +43,7 @@ Si los argumentos no son de tipo texto, son convertidos a texto antes de concate
 
 ## Rendimiento
 
-Es altamente recomendado que se utilicen {{jsxref("Operators/Assignment_Operators", "operadores de asignación", "", 1)}} (`+`, `+=`) en lugar del método `concat()`.
+Es altamente recomendado que se utilicen {{jsxref("Operators", "operadores de asignación", "Assignment_operators", 1)}} (`+`, `+=`) en lugar del método `concat()`.
 
 ## Ejemplos
 
@@ -77,4 +77,4 @@ let greetList = ["Hello", " ", "Venkat", "!"];
 ## Ver también
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Operadores de asignación", "", 1)}}
+- {{jsxref("Operators", "Operadores de asignación", "Assignment_operators", 1)}}
