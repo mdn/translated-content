@@ -47,7 +47,7 @@ Sin embargo, hay algunas diferencias:
 - **Resultados de aprendizaje estables**: Los resultados de aprendizaje que aparecen al inicio de cada tutorial ofrecen un resumen de lo que enseña en cada uno de ellos y, en conjunto, conforman un plan para el desarrollo web front-end. Es fundamental que los resultados de aprendizaje y los contenidos impartidos se mantengan estables y sincronizados; de lo contrario, el contenido no podrá considerarse una base fiable para el aprendizaje formal (por ejemplo, cursos educativos o certificaciones). Por ello, los cambios en los resultados de aprendizaje deben realizarse de forma gradual y solo cuando exista una razón de peso. Si intentas agregar contenido que no está cubierto en los resultados de aprendizaje asociados (o viceversa), tu solicitud de incorporación de cambios será rechazada. [Haz una sugerencia primero](/es/docs/MDN/Writing_guidelines/What_we_write#suggesting_content)
 
 > [!NOTE]
-> Mantenemos un [registro de cambios](/es/docs/Learn_web_development/Changelog) que detalla cualquier cambio significativo realizada en los resultados de aprendizaje, para que los educadores puedan actualizar cualquier recurso basado en el área de aprendizaje de MDN.
+> Mantenemos un [registro de cambios](/es/docs/Learn_web_development/Changelog) que detalla cualquier cambio significativo realizado en los resultados de aprendizaje, para que los educadores puedan actualizar cualquier recurso basado en MDN Aprende.
 
 ## Enlances externos o embebidos
 
