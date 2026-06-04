@@ -17,5 +17,5 @@ l10n:
 
 ## 関連情報
 
-- [クロスサイトスクリプティング (XSS)](/en-US/docs/Web/Security/Attacks/XSS)
+- [クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS)
 - [Cross-site scripting (OWASP)](https://owasp.org/www-community/attacks/xss/)
