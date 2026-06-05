@@ -165,7 +165,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Credentials"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Allow-Credentials"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Credentials"
             >Access-Control-Allow-Credentials</a
           ></code
@@ -173,12 +173,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -193,7 +193,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Origin"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Allow-Origin"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Origin"
             >Access-Control-Allow-Origin</a
           ></code
@@ -201,12 +201,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -221,7 +221,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Methods"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Allow-Methods"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Methods"
             >Access-Control-Allow-Methods</a
           ></code
@@ -229,12 +229,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -249,7 +249,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Headers"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Allow-Headers"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Headers"
             >Access-Control-Allow-Headers</a
           ></code
@@ -257,12 +257,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -277,7 +277,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Max-Age"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Max-Age"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Max-Age"
             >Access-Control-Max-Age</a
           ></code
@@ -285,12 +285,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -305,7 +305,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Expose-Header"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Expose-Header"
             title="en/HTTP access control#Access-Control-Expose-Header"
             >Access-Control-Expose-Headers</a
           ></code
@@ -313,12 +313,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -333,7 +333,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Request-Method"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Request-Method"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Request-Method"
             >Access-Control-Request-Method</a
           ></code
@@ -341,12 +341,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -361,7 +361,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Request-Headers"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Access-Control-Request-Headers"
             title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Request-Headers"
             >Access-Control-Request-Headers</a
           ></code
@@ -369,12 +369,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -447,7 +447,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -622,7 +622,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -650,7 +650,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -704,7 +704,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -722,7 +722,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -766,7 +766,7 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -859,7 +859,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Origin"
+            href="/ru/docs/Web/HTTP/Guides/CORS#Origin"
             title="https://developer.mozilla.org/En/HTTP_access_control#Origin"
             >Origin</a
           ></code
@@ -867,12 +867,12 @@ HTTP-заголовки сопровождают обмен данными по 
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
+        <a href="/ru/docs/Web/HTTP/Guides/CORS" title="En/HTTP access control"
           >HTTP Access Control</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
+          href="/ru/docs/Web/HTTP/Guides/CORS"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
         >
@@ -898,7 +898,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         for the pragma: nocache value see
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -1079,7 +1079,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Set-Cookie2"
+            href="/ru/docs/Web/HTTP/Reference/Headers/Set-Cookie"
             title="en/Set-Cookie2"
             >Set-Cookie2</a
           ></code
@@ -1098,7 +1098,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td>
         <a
-          href="/ru/docs/Security/HTTP_Strict_Transport_Security"
+          href="/ru/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security"
           title="en/Security/HTTP Strict Transport Security"
           >HTTP Strict Transport Security</a
         >
@@ -1239,7 +1239,7 @@ HTTP-заголовки сопровождают обмен данными по 
           >HTTP Content Negotiation</a
         >
         &#x26;
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
+        <a href="/ru/docs/Web/HTTP/Guides/Caching" title="en/HTTP Caching FAQ"
           >HTTP Caching FAQ</a
         >
       </td>
@@ -1301,7 +1301,7 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         Using
         <a
-          href="/ru/docs/Security/CSP/Using_Content_Security_Policy"
+          href="/ru/docs/Web/HTTP/Guides/CSP"
           title="en/Security/CSP/Using Content Security Policy"
           >Content Security Policy</a
         >

@@ -2,7 +2,7 @@
 title: y
 slug: Web/SVG/Reference/Attribute/y
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
 ---
 
 **`y`** 属性はユーザー座標系の Y 軸の座標を定義します。

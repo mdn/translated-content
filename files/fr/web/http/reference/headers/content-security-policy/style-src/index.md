@@ -1,10 +1,12 @@
 ---
-title: "CSP : style-src"
+title: "Content-Security-Policy : directive style-src"
+short-title: style-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/style-src
+l10n:
+  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`style-src`** spécifie les sources valides pour les feuilles de style.
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src`** définit les sources valides pour les feuilles de style.
 
 <table class="properties">
   <tbody>
@@ -14,10 +16,10 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
+      <td>{{Glossary("Fetch directive", "Directive de récupération")}}</td>
     </tr>
     <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+      <th scope="row">Solution de repli {{CSP("default-src")}}</th>
       <td>
         Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
       </td>
@@ -27,18 +29,27 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
 ```http
-Content-Security-Policy: style-src <source>;
-Content-Security-Policy: style-src <source> <source>;
+Content-Security-Policy: style-src 'none';
+Content-Security-Policy: style-src <source-expression-list>;
 ```
 
-### Sources
+Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+- `'none'`
+  - : Aucune ressource de ce type ne peut être chargée. Les guillemets simples sont obligatoires.
+- `<source-expression-list>`
+  - : Une liste de valeurs _d'expressions de source_ séparées par des espaces. Les ressources de ce type peuvent être chargées si elles correspondent à l'une des expressions de source données. Pour cette directive, les valeurs d'expression de source suivantes sont applicables&nbsp;:
+    - [`<host-source>`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
+    - [`'unsafe-inline'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-inline)
+    - [`'unsafe-hashes'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-hashes)
+    - [`'nonce-<nonce_value>'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#nonce-nonce_value)
+    - [`'<hash_algorithm>-<hash_value>'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#hash_algorithm-hash_value)
+    - [`'report-sample'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample)
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associées)).
+    Notez que la spécification inclut également [`'unsafe-eval'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) comme valeur d'expression de source valide, afin de permettre les méthodes CSSOM qui analysent et insèrent des chaînes de caractères CSS, y compris les méthodes `insertRule()` et les accesseurs `cssText` sur diverses interfaces, telles que {{DOMxRef("CSSStyleSheet.insertRule()")}} et {{DOMxRef("CSSStyleDeclaration.cssText")}}. Cependant, aucun navigateur ne bloque actuellement ces méthodes, il n'est donc pas nécessaire d'appliquer `unsafe-eval`.
 
 ## Exemples
 
@@ -47,16 +58,13 @@ On notera que cet ensemble de valeurs peut être utilisé pour toutes les [direc
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: style-src https://example.com/
+Content-Security-Policy: style-src https://exemple.com/
 ```
 
 Ces feuilles de style seront bloquées et ne se chargeront pas&nbsp;:
 
 ```html
-<link
-  href="https://not-example.com/styles/main.css"
-  rel="stylesheet"
-  type="text/css" />
+<link href="https://hors-exemple.com/styles/main.css" rel="stylesheet" />
 
 <style>
   #inline-style {
@@ -65,14 +73,14 @@ Ces feuilles de style seront bloquées et ne se chargeront pas&nbsp;:
 </style>
 
 <style>
-  @import url("https://not-example.com/styles/print.css") print;
+  @import "https://hors-exemple.com/styles/print.css" print;
 </style>
 ```
 
-De même que les styles chargés avec l'en-tête [`Link`](/fr/docs/Web/HTTP/Reference/Headers/Link)&nbsp;:
+De même que les styles chargés avec l'en-tête {{HTTPHeader("Link")}}&nbsp;:
 
-```bash
-Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
+```http
+Link: <https://hors-exemple.com/styles/stylesheet.css>;rel=stylesheet
 ```
 
 Les attributs de style seront aussi bloqués&nbsp;:
@@ -81,20 +89,20 @@ Les attributs de style seront aussi bloqués&nbsp;:
 <div style="display:none">Toto</div>
 ```
 
-De même que les styles ajoutés par JavaScript en définissant l'attribut `style` directement, ou en définissant la propriété [`cssText`](/fr/docs/Web/API/CSSStyleDeclaration/cssText)&nbsp;:
+De même que les styles ajoutés par JavaScript en définissant l'attribut `style` directement, ou en définissant la propriété {{DOMxRef("CSSStyleDeclaration.cssText", "cssText")}}&nbsp;:
 
 ```js
 document.querySelector("div").setAttribute("style", "display:none;");
 document.querySelector("div").style.cssText = "display:none;";
 ```
 
-Toutefois, les propriétés de styles qui sont définies directement dans l'attribut [`style`](/fr/docs/Web/API/HTMLElement/style) ne seront pas bloquées, permettant aux utilisatrices et utilisateurs de manipuler sainement les styles avec JavaScript&nbsp;:
+Toutefois, les propriétés de styles qui sont définies directement dans la propriété {{DOMxRef("HTMLElement/style", "style")}} de l'élément ne seront pas bloquées, permettant aux utilisateur·ice·s de manipuler sainement les styles avec JavaScript&nbsp;:
 
 ```js
 document.querySelector("div").style.display = "none";
 ```
 
-Ce genre de manipulations peut être bloqué en désactivant JavaScript au moyen de la directive CSP [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src).
+Ce genre de manipulations peut être bloqué en désactivant JavaScript au moyen de la directive CSP {{CSP("script-src")}}.
 
 ### Styles embarqués non fiables
 
@@ -107,7 +115,7 @@ Vous pouvez autoriser les styles embarqués en spécifiant la valeur `'unsafe-in
 Content-Security-Policy: style-src 'unsafe-inline';
 ```
 
-Cette directive CSP autorisera toutes les feuilles de styles embarquées avec l'élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style) et l'attribut `style` sur tous les éléments&nbsp;:
+L'élément HTML {{HTMLElement("style")}} suivant et l'attribut `style` seront autorisés par la politique&nbsp;:
 
 ```html
 <style>
@@ -119,13 +127,15 @@ Cette directive CSP autorisera toutes les feuilles de styles embarquées avec l'
 <div style="display:none">Toto</div>
 ```
 
-Vous pouvez aussi utiliser un nonce pour autoriser spécifiquement certains éléments [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style)&nbsp;:
+Vous pouvez utiliser une source de nonce pour n'autoriser que certains blocs de styles embarqués.
+Vous devez générer une valeur {{Glossary("Nonce", "unique")}} aléatoire (en utilisant un générateur de jetons aléatoires cryptographiquement sécurisé) et l'inclure dans la politique.
+Il est important de noter que cette valeur unique doit être générée dynamiquement car elle doit être unique pour chaque requête HTTP&nbsp;:
 
 ```http
 Content-Security-Policy: style-src 'nonce-2726c7f26c'
 ```
 
-Vous devrez alors définir ce nonce sur l'élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style)&nbsp;:
+Vous devrez alors définir ce nonce sur l'élément HTML {{HTMLElement("style")}}&nbsp;:
 
 ```html
 <style nonce="2726c7f26c">
@@ -135,19 +145,19 @@ Vous devrez alors définir ce nonce sur l'élément [`<style>`](/fr/docs/Web/HTM
 </style>
 ```
 
-Autrement, vous pourrez créer des empreintes à partir de vos feuilles de styles. CSP accepte les algorithmes sha256, sha384 et sha512. La forme **binaire** de l'empreinte doit être encodée en base64. Pour obtenir l'empreinte d'une chaîne de caractères en ligne de commande avec le programme `openssl`, on pourra utiliser ceci&nbsp;:
+Vous pouvez aussi créer des hachages à partir de vos styles embarqués. CSP prend en charge sha256, sha384 et sha512. La forme **binaire** de l'empreinte doit être encodée en base64. Vous pouvez obtenir l'empreinte d'une chaîne de caractères en ligne de commande avec le programme `openssl`&nbsp;:
 
 ```bash
 echo -n "#inline-style { background: red; }" | openssl dgst -sha256 -binary | openssl enc -base64
 ```
 
-On peut utiliser une empreinte pour la source afin d'autoriser uniquement certains blocs pour les styles embarqués&nbsp;:
+On peut utiliser un hachage pour la source afin d'autoriser uniquement certains blocs pour les styles embarqués&nbsp;:
 
 ```http
-Content-Security-Policy: style-src 'sha256-a330698cbe9dc4ef1fb12e2ee9fc06d5d14300262fa4dc5878103ab7347e158f'
+Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6tzR+FY8='
 ```
 
-Lors de la génération de l'empreinte, il ne faut pas inclure les balises et il faut tenir compte de la casse et des caractères blancs (espaces, retours à la ligne, etc.).
+Lorsque vous générez le hachage, ne pas inclure les balises {{HTMLElement("style")}} et notez que la casse et les espaces comptent, y compris les espaces en début ou en fin de ligne.
 
 ```html
 <style>
@@ -156,14 +166,6 @@ Lors de la génération de l'empreinte, il ne faut pas inclure les balises et il
   }
 </style>
 ```
-
-### Expressions de style non fiables
-
-La valeur `'unsafe-eval'` contrôle différentes méthodes de mise en forme qui créent des déclarations de style à partir de chaines de caractères. Si `'unsafe-eval'` n'est pas spécifiée avec la directive `style-src`, ces méthodes seront bloquées et n'auront aucun effet&nbsp;:
-
-- [`CSSStyleSheet.insertRule()`](/fr/docs/Web/API/CSSStyleSheet/insertRule)
-- [`CSSGroupingRule.insertRule()`](/fr/docs/Web/API/CSSGroupingRule/insertRule)
-- [`CSSStyleDeclaration.cssText`](/fr/docs/Web/API/CSSStyleDeclaration/cssText)
 
 ## Spécifications
 
@@ -175,12 +177,12 @@ La valeur `'unsafe-eval'` contrôle différentes méthodes de mise en forme qui 
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
-- [`style-src-elem`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem)
-- [`style-src-attr`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr)
-- [`Link`](/fr/docs/Web/HTTP/Reference/Headers/Link) header
-- [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style), [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link)
-- [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import)
-- [`CSSStyleSheet.insertRule()`](/fr/docs/Web/API/CSSStyleSheet/insertRule)
-- [`CSSGroupingRule.insertRule()`](/fr/docs/Web/API/CSSGroupingRule/insertRule)
-- [`CSSStyleDeclaration.cssText`](/fr/docs/Web/API/CSSStyleDeclaration/cssText)
+- L'en-tête {{HTTPHeader("Content-Security-Policy")}}
+- La directive CSP {{CSP("style-src-elem")}}
+- La directive CSP {{CSP("style-src-attr")}}
+- L'en-tête {{HTTPHeader("Link")}}
+- L'élément HTML {{HTMLElement("style")}}, {{HTMLElement("link")}}
+- La règle CSS {{CSSxRef("@import")}}
+- La méthode API {{DOMxRef("CSSStyleSheet.insertRule()")}}
+- La méthode API {{DOMxRef("CSSGroupingRule.insertRule()")}}
+- La propriété API {{DOMxRef("CSSStyleDeclaration.cssText")}}

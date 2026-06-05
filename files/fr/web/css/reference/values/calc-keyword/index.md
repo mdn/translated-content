@@ -97,7 +97,7 @@ NAN
 ### Utiliser e et pi dans `calc()`
 
 L'exemple suivant montre comment utiliser `e` dans `calc()` pour faire tourner un élément avec un angle qui augmente exponentiellement.
-La seconde boîte montre comment utiliser `pi` dans une fonction [`sin()`](/fr/docs/Web/CSS/sin).
+La seconde boîte montre comment utiliser `pi` dans une fonction [`sin()`](/fr/docs/Web/CSS/Reference/Values/sin).
 
 ```css hidden
 #wrapper {

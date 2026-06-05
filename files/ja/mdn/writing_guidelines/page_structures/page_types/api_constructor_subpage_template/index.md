@@ -2,10 +2,8 @@
 title: API コンストラクターサブページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
-
-{{MDNSidebar}}
 
 > [!NOTE]
 > _この説明文全体を削除してから公開してください。_
@@ -44,6 +42,7 @@ l10n:
 > **ページ先頭のマクロ**
 >
 > コンテンツ部の上部（ページのフロントマターの直下）には、いくつかのマクロ呼び出しが現れます。
+>
 > **訳注:** 英語版では以下のバナーは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のバナーに合わせてください。
 >
 > - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。実験的なもので、その技術が Firefox の設定で隠されている場合は、 [Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのための項目を記入する必要があります。
@@ -55,18 +54,21 @@ l10n:
 > - `\{{SecureContext_Header}}` — これは **保護されたコンテキスト** バナーを生成し、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用できることを示します。
 >   もしそうでないなら、マクロの呼び出しを削除してください。
 >   そうである場合は、[保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
+> - `\{{AvailableInWorkers}}` — これにより、**ウェブワーカーで利用可能**というメモが生成され、その技術が [ウェブワーカーのコンテキスト](/ja/docs/Web/API/Web_Workers_API) で利用可能であることを示します。
+>   ウィンドウコンテキストでのみ利用できる場合は、そのマクロの呼び出しを除去できます。
+>   もしそれがワーカーコンテキストでも利用できる、あるいはワーカーコンテキストでのみ利用できる場合、その利用状況に応じて引数を渡す必要があることがあります（利用できるすべての値については、[\\{{AvailableInWorkers}} マクロのソースコード](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)をご参照ください）。また、[ウェブワーカーで利用可能な Web API](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#ワーカーで使用できる_web_api) ページに、その項目を追加する必要があることがあります。
 > - `\{{APIRef("GroupDataName")}}` — これは、現在のページに関連するクイックリファレンスリンクを示す左側のリファレンスサイドバーを生成します。
 >   例えば、 [WebVR API](/ja/docs/Web/API/WebVR_API) のすべてのページには同じサイドバーがあり、これは API の他のページを指しています。
 >   API に適したサイドバーを生成するには、 KumaScript GitHub リポジトリーに GroupData の項目を追加し、_GroupDataName_ の代わりにマクロ呼び出し内にその項目の名前を記載する必要があります。
->   この方法については、 [API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)のガイドを参照してください。このページをコピーする際には、忘れずに `\{{MDNSidebar}}` マクロを除去してください。
+>   この方法については、 [API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)のガイドを参照してください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
-> **保護されたコンテキスト**、**実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
+> **保護されたコンテキスト**、**ワーカーで利用可能**、**実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 ページのコンテンツは導入段落で始めてください。コンストラクターの名前で始め、それが何をするのかを述べてください。
 これはできれば 1、2 の短い文にすべきです。対応する API リファレンスページのコンストラクターの概要から、この大部分をコピーすることができます。
@@ -98,6 +100,20 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
   - : どのような場合に例外が発生するかをの説明を記述してください。
 - `Exception2`
   - : どのような場合に例外が発生するかをの説明を記述してください。
+
+例外には、{{domxref("DOMException")}} オブジェクトと、{{jsxref("TypeError")}} や {{jsxref("RangeError")}} のような通常の JavaScript 例外の 2 種類があることに注意してください。ウェブ開発者は以下のことを知っておく必要があります。
+
+- どちらのオブジェクトが送出されるか
+- `DOMException` オブジェクトである例外の場合、その例外の `name`。
+
+以下は、あるメソッドが `IndexSizeError` という名前の `DOMException`、`InvalidNodeTypeError` という名前の 2 つ目の `DOMException`、および `TypeError` 型の JavaScript 例外を発生させる可能性がある例です。
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : … で発生します。
+- `InvalidNodeTypeError` {{domxref("DOMException")}}
+  - : … で発生します。
+- {{jsxref("TypeError")}}
+  - : … で発生します。
 
 ## 例
 

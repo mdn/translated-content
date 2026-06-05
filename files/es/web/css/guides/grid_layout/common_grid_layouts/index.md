@@ -605,7 +605,7 @@ La mejor manera de aprender a usar el diseño de la cuadrícula es continuar con
    <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Box_alignment">Alineación de cajas en grid layout</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Rejillas, valores lógicos y modos de escritura</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout y Accesibilidad</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout y Mejora Progresiva</a></li>
+   <li><a href="/es/docs/Web/CSS/Guides/Grid_layout">CSS Grid Layout y Mejora Progresiva</a></li>
    <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts">Layouts comunes utilizando CSS Grid</a></li>
   </ol>
  </li>

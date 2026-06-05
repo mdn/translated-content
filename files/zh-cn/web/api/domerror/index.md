@@ -10,9 +10,9 @@ slug: Web/API/DOMError
 ## 属性
 
 - {{domxref("DOMError.name")}} {{readOnlyInline}}
-  - : 返回一个代表一个错误类型名称的 {{ domxref("DOMString") }} (见下文).
+  - : 返回一个代表一个错误类型名称的 {{ jsxref("String") }} (见下文).
 - {{domxref("DOMError.message")}} {{readOnlyInline}}
-  - : 返回一个代表与给定错误类型名称有关的信息或描述{{ domxref("DOMString") }}
+  - : 返回一个代表与给定错误类型名称有关的信息或描述{{ jsxref("String") }}
 
 ## Error 类型
 

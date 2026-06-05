@@ -1,8 +1,9 @@
 ---
-title: env()
+title: CSS `env()` 関数
+short-title: env()
 slug: Web/CSS/Reference/Values/env
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`env()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、ユーザーエージェントが定義した[環境変数](/ja/docs/Web/CSS/Guides/Environment_variables/Using)の値を CSS に挿入するために使用することができます。

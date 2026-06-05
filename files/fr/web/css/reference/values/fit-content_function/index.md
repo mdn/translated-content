@@ -1,16 +1,14 @@
 ---
-title: fit-content()
+title: Fonction CSS `fit-content()`
+short-title: fit-content()
 slug: Web/CSS/Reference/Values/fit-content_function
-original_slug: Web/CSS/fit-content_function
 l10n:
-  sourceCommit: 059c9c1d93926bec5383fcfeb301f282ed40a9b9
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donné en utilisant la formule `min(taille maximale, max(taille minimale, argument))`.
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donné (en utilisant la formule `min(taille maximale, max(taille minimale, argument))`.
-
-{{InteractiveExample("CSS Demo: fit-content()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: fit-content()")}}
 
 ```css interactive-example-choice
 grid-template-columns: fit-content(8ch) fit-content(8ch) 1fr;
@@ -28,11 +26,11 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
-      <div>One. This column has more text in it.</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+      <div>Un. Cette colonne contient plus de texte.</div>
+      <div>Deux</div>
+      <div>Trois</div>
+      <div>Quatre</div>
+      <div>Cinq</div>
     </div>
   </div>
 </section>
@@ -47,21 +45,19 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   text-align: left;
 }
 ```
 
-Cette fonction peut être utilisée pour définir la taille d'une piste via les propriétés relatives [aux grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout) où la taille maximale est définie par [`max-content`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns#max-content) et où la taille minimale est définie par [`auto`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns#auto) et qui est calculée de façon similaire à `auto` (i.e. [`minmax(auto, max-content)`](/fr/docs/Web/CSS/Reference/Values/minmax)), sauf que la taille de la piste est ramenée à _argument_ si celui-ci est supérieur à `auto`.
+Cette fonction peut être utilisée comme taille de piste dans les propriétés [de grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout), où la taille maximale est définie par `max-content` et la taille minimale par `auto`, qui est calculée de la même manière que `auto` (c'est-à-dire, [`minmax(auto, max-content)`](/fr/docs/Web/CSS/Reference/Values/minmax)), sauf que la taille de la piste est ramenée à _l'argument_ si celui-ci est supérieur à `auto`.
 
-Voir la page [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns) pour plus d'informations sur les mots-clés `max-content` et `auto`.
+Voir la page {{CSSxRef("grid-template-columns")}} pour plus d'information les sur mots-clés `max-content` et `auto`.
 
-La fonction `fit-content()` peut également être utilisée pour définir la taille d'une boîte avec [`width`](/fr/docs/Web/CSS/Reference/Properties/width), [`height`](/fr/docs/Web/CSS/Reference/Properties/height), [`min-width`](/fr/docs/Web/CSS/Reference/Properties/min-width), [`min-height`](/fr/docs/Web/CSS/Reference/Properties/min-height), [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width) et [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height) où la taille maximale fait référence à la taille maximale du contenu et où la taille minimale fait référence à la taille minimale du contenu.
+La fonction `fit-content()` peut également être utilisée comme taille de boîte mise en page pour {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("min-width")}}, {{CSSxRef("min-height")}}, {{CSSxRef("max-width")}} et {{CSSxRef("max-height")}}, où les tailles maximale et minimale font référence à la taille du contenu.
 
 ## Syntaxe
-
-La fonction `fit-content()` accepte un argument de type `<length>` ou `<percentage>`.
 
 ```css
 /* Valeurs de type <length> */
@@ -76,14 +72,35 @@ fit-content(40%)
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
-  - : Une longueur exprimée de façon absolue.
-- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
-  - : Un pourcentage relatif à l'espace disponible sur l'axe indiqué (la hauteur ou la largeur). Pour les propriétés qui concernent les grilles, le pourcentage est relatif à la dimension en ligne du conteneur de la grille pour les pistes qui sont disposées en colonnes et à la dimension en bloc pour les pistes qui sont disposées en lignes. Sinon, le pourcentage est relatif à la dimension en ligne ou en bloc selon le mode d'écriture utilisé.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Une longueur absolue.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Un pourcentage relatif à l'espace disponible sur l'axe indiqué.
+
+    Pour les propriétés de grille, il est relatif à la taille en ligne du conteneur de la grille pour les pistes en colonnes et à la taille en bloc du conteneur de la grille pour les pistes en lignes. Sinon, il est relatif à la taille en ligne ou en bloc de la boîte mise en page en fonction du mode d'écriture.
+
+## Syntaxe formelle
+
+{{CSSSyntax("fit-content")}}
 
 ## Exemples
 
-### CSS
+### Dimensionner les colonnes de la grille avec `fit-content`
+
+#### HTML
+
+```html
+<div id="container">
+  <div>Élément aussi large que le contenu.</div>
+  <div>
+    Un élément avec plus de texte à l'intérieur. Comme son conteneur est plus
+    large que la largeur maximale, il est ramené sur 300 pixels.
+  </div>
+  <div>Un élément flexible</div>
+</div>
+```
+
+#### CSS
 
 ```css
 #container {
@@ -103,22 +120,9 @@ fit-content(40%)
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div id="container">
-  <div>Élément aussi large que le contenu.</div>
-  <div>
-    Un élément avec plus de texte à l'intérieur. Comme son conteneur est plus
-    large que la largeur maximale, il est ramené sur 300 pixels.
-  </div>
-  <div>Un élément flexible</div>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("", "100%", 200)}}
+{{EmbedLiveSample("Dimensionner les colonnes de la grille avec `fit-content`", "100%", 200)}}
 
 ## Spécifications
 
@@ -130,15 +134,15 @@ fit-content(40%)
 
 ## Voir aussi
 
-- Les mots-clés pour le dimensionnement&nbsp;: [`min-content`](/fr/docs/Web/CSS/Reference/Values/min-content), [`max-content`](/fr/docs/Web/CSS/Reference/Values/max-content)
-- Les propriétés correspondantes des grilles CSS&nbsp;:
-  - [`grid-template`](/fr/docs/Web/CSS/Reference/Properties/grid-template)
-  - [`grid-template-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-template-rows)
-  - [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns)
-  - [`grid-template-areas`](/fr/docs/Web/CSS/Reference/Properties/grid-template-areas)
-  - [`grid-auto-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-columns)
-  - [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows)
-  - [`grid-auto-flow`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-flow)
-- Les guides à propos de la disposition en grille
-  - [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
-  - [Les propriétés raccourcies pour les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#les_propriétés_raccourcies_pour_les_grilles_css)
+- Le mot-clé {{CSSxRef("min-content")}}
+- Le mot-clé {{CSSxRef("max-content")}}
+- Le module [de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_sizing)
+- La propriété {{CSSxRef("grid-template")}}
+- La propriété {{CSSxRef("grid-template-rows")}}
+- La propriété {{CSSxRef("grid-template-columns")}}
+- La propriété {{CSSxRef("grid-template-areas")}}
+- La propriété {{CSSxRef("grid-auto-columns")}}
+- La propriété {{CSSxRef("grid-auto-rows")}}
+- La propriété {{CSSxRef("grid-auto-flow")}}
+- [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [Modèle de grille&nbsp;: Propriétés raccourcies pour définir les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#les_propriétés_raccourcies_pour_les_grilles_css)

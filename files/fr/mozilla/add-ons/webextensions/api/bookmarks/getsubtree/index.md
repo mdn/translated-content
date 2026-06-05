@@ -22,7 +22,7 @@ var gettingSubTree = browser.bookmarks.getSubTree(
 ### Paramètres
 
 - `id`
-  - : Un {{jsxref("string")}} spécifiant l'ID de la racine du sous-arbre à récupérer.
+  - : Un {{jsxref("String")}} spécifiant l'ID de la racine du sous-arbre à récupérer.
 
 ### Valeur retournée
 

@@ -2,7 +2,7 @@
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
 l10n:
-  sourceCommit: f6e66d18205c93fcaeb2ea9ad51541b5b4d7d2b1
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 {{APIRef("HTML DOM")}}
@@ -22,7 +22,7 @@ _Hérite également des propriétés de son parent, {{DOMxRef("HTMLElement")}}_.
 - {{DOMxRef("HTMLIFrameElement.allowfullscreen")}}
   - : Un booléen indiquant si le cadre intégré est prêt à être placé en mode plein écran. Voir [Utiliser le mode plein écran](/fr/docs/Web/API/Fullscreen_API) pour plus de détails.
 - {{DOMxRef("HTMLIFrameElement.allowPaymentRequest")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Un booléen indiquant si l'[API Payment Request](/fr/docs/Web/API/Payment_Request_API) peut être appelée à l'intérieur d'un cadre intégré (<i lang="en">iframe</i> en anglais) inter-origine (<i lang="en">cross-origin</i> en anglais).
+  - : Un booléen indiquant si [l'API Payment Request](/fr/docs/Web/API/Payment_Request_API) peut être appelée à l'intérieur d'un cadre intégré (<i lang="en">iframe</i> en anglais) inter-origine (<i lang="en">cross-origin</i> en anglais).
 - {{DOMxRef("HTMLIFrameElement.browsingTopics")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Une propriété booléenne indiquant que les sujets sélectionnés pour l'utilisateur·ice actuel·le doivent être envoyés avec la requête pour la source de l'élément HTML {{HTMLElement("iframe")}} associé. Cela reflète la valeur de l'attribut de contenu `browsingtopics`.
     {{DOMxRef("HTMLIFrameElement.contentDocument")}} {{ReadOnlyInline}}
@@ -33,7 +33,7 @@ _Hérite également des propriétés de son parent, {{DOMxRef("HTMLElement")}}_.
   - : Un booléen indiquant si un `<iframe>` est sans identifiants, ce qui signifie que son contenu est chargé dans un nouveau contexte éphémère. Ce contexte n'a pas accès au stockage partagé et aux identifiants du contexte parent. En contrepartie, les règles d'intégration du {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) peuvent être levées, de sorte que les documents avec COEP défini peuvent intégrer des documents tiers qui ne le sont pas. Voir [IFrame sans identifiant](/fr/docs/Web/HTTP/Guides/IFrame_credentialless) pour une explication plus approfondie.
 - {{DOMxRef("HTMLIFrameElement.csp")}} {{Experimental_Inline}}
   - : Définit la politique de sécurité du contenu qu'un document incorporé doit accepter d'appliquer à lui-même.
-- {{DOMxRef("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Retourne l'interface {{DOMxRef("FeaturePolicy")}} qui fournit une API simple pour l'introspection des [politiques d'autorisations](/fr/docs/Web/HTTP/Guides/Permissions_Policy) appliquées à un document spécifique.
 - `HTMLIFrameElement.frameBorder` {{Deprecated_Inline}}
   - : Est une chaîne de caractères qui indique s'il faut créer des bordures entre les cadres.
@@ -59,7 +59,7 @@ _Hérite également des propriétés de son parent, {{DOMxRef("HTMLElement")}}_.
 - `HTMLIFrameElement.scrolling` {{Deprecated_Inline}}
   - : Est une chaîne de caractères qui indique si le navigateur doit fournir des barres de défilement pour le cadre.
 - {{DOMxRef("HTMLIFrameElement.src")}}
-  - : Est une chaîne de caractères qui reflète l'attribut HTML [`src`](/fr/docs/Web/HTML/Reference/Elements/iframe#src) contenant l'adresse du contenu à intégrer. Notez que la suppression programmatique de l'attribut src d'un `<iframe>` (par exemple via {{DOMxRef("Element.removeAttribute()")}}) entraîne le chargement de `about:blank` dans le cadre dans Firefox (à partir de la version 65), les navigateurs basés sur Chromium et Safari/iOS.
+  - : Est une chaîne de caractères qui reflète l'attribut HTML [`src`](/fr/docs/Web/HTML/Reference/Elements/iframe#src) contenant l'adresse du contenu à intégrer. Notez que la suppression programmatique de l'attribut src d'un `<iframe>` (par exemple avec {{DOMxRef("Element.removeAttribute()")}}) entraîne le chargement de `about:blank` dans le cadre dans Firefox (à partir de la version 65), les navigateurs basés sur Chromium et Safari/iOS.
 - {{DOMxRef("HTMLIFrameElement.srcdoc")}}
   - : Est une chaîne de caractères qui représente le contenu à afficher dans le cadre.
 - {{DOMxRef("HTMLIFrameElement.width")}}

@@ -27,7 +27,7 @@ new Temporal.Duration(years, months, weeks, days, hours, minutes, seconds, milli
 ```
 
 > [!NOTE]
-> `Temporal.Duration()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` déclenche une {{JSxRef("TypeError")}}.
+> `Temporal.Duration()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` déclenche une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 

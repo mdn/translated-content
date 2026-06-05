@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn_web_development/Core/Scripting")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
 Los lenguajes de programación son muy útiles para completar rápidamente tareas repetitivas, desde múltiples cálculos básicos hasta casi cualquier otra situación en la que tenga que completar muchos elementos de trabajo similares. Aquí veremos las estructuras de bucle disponibles en JavaScript que manejan tales necesidades.
 
@@ -150,7 +150,7 @@ Pero también hay otras colecciones en JavaScript, como {{jsxref ("Set")}} y {{j
 
 ### El bucle for...of
 
-La herramienta básica para recorrer una colección es el bucle {{jsxref("statements/for...of","for...of")}}:
+La herramienta básica para recorrer una colección es el bucle {{jsxref("Statements/for...of","for...of")}}:
 
 ```js
 const cats = ["Leopardo", "Serval", "Jaguar", "Tigre", "Caracal", "León"];
@@ -227,7 +227,7 @@ console.log(filtrado);
 ## El bucle estándar for
 
 En el ejemplo anterior de "círculos de dibujo", no tiene una colección de elementos para recorrer: realmente solo desea ejecutar el mismo código 100 veces.
-En un caso como ese, debes usar el bucle {{jsxref("statements/for","for")}}.
+En un caso como ese, debes usar el bucle {{jsxref("Statements/for","for")}}.
 Tiene la siguiente sintaxis:
 
 ```js-nolint

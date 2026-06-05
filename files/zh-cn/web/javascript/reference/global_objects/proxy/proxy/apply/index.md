@@ -96,7 +96,7 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"; outputs 6
 ## 参见
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Function.prototype.apply")}}
 - {{jsxref("Function.prototype.call")}}
 - {{jsxref("Reflect.apply()")}}

@@ -1,8 +1,9 @@
 ---
-title: "<script> : l'élément de script"
+title: "Élément HTML `<script>` : l'élément de script"
+short-title: <script>
 slug: Web/HTML/Reference/Elements/script
 l10n:
-  sourceCommit: fef6630e9b90f9794d3194ea8389ff70599c6884
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<script>`** est utilisé pour intégrer du code ou des données exécutables&nbsp;: il sert généralement à intégrer ou référencer du code JavaScript. L'élément `<script>` peut aussi être utilisé avec d'autres langages, comme le langage de programmation GLSL de [WebGL](/fr/docs/Web/API/WebGL_API) ou {{Glossary("JSON")}}.
@@ -12,9 +13,9 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<script>`** est utilisé pour intégrer
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `async`
-  - : Pour les scripts classiques, si l'attribut `async` est présent, alors le script classique sera récupéré en parallèle de l'analyse et évalué dès qu'il sera disponible.
+  - : Pour les scripts classiques, si l'attribut `async` est présent, alors le script classique est récupéré en parallèle de l'analyse et évalué dès qu'il est disponible.
 
-    Pour les [modules de script](/fr/docs/Web/JavaScript/Guide/Modules), si l'attribut `async` est présent, alors les scripts et toutes leurs dépendances seront récupérés en parallèle de l'analyse et évalués dès qu'ils seront disponibles.
+    Pour les [modules de script](/fr/docs/Web/JavaScript/Guide/Modules), si l'attribut `async` est présent, alors les scripts et toutes leurs dépendances sont récupérés en parallèle de l'analyse et évalués dès qu'ils sont disponibles.
 
     > [!WARNING]
     > Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts «&nbsp;en ligne&nbsp;») pour les scripts classiques, dans ce cas il n'aurait aucun effet.
@@ -27,14 +28,14 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
     Voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) pour la prise en charge. Voir aussi [les scripts asynchrones avec asm.js](/fr/docs/Games/Techniques/Async_scripts).
 
-- `attributionsrc` {{Deprecated_Inline}}
+- `attributionsrc` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Indique que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} avec la requête de ressource du script. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} ou {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} dans la réponse, pour enregistrer respectivement une [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#sources_dévénements_basées_sur_javascript) ou un [déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers#déclencheurs_dattributions_basés_sur_javascript) basé sur JavaScript. L'en-tête de réponse à envoyer dépend de la valeur de l'en-tête `Attribution-Reporting-Eligible` qui a déclenché l'enregistrement.
 
     > [!NOTE]
     > Il est aussi possible d'enregistrer des sources ou déclencheurs d'attribution JavaScript en envoyant une requête {{DOMxRef("Window/fetch", "fetch()")}} contenant l'option `attributionReporting` (soit directement dans l'appel à `fetch()`, soit sur un objet {{DOMxRef("Request")}} passé à `fetch()`), ou en envoyant un {{DOMxRef("XMLHttpRequest")}} avec {{DOMxRef("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoqué sur l'objet requête.
 
     Il existe deux versions de cet attribut que vous pouvez définir&nbsp;:
-    - Booléen, c'est-à-dire juste le nom `attributionsrc`. Cela indique que vous souhaitez que l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} soit envoyé au même serveur que celui indiqué par l'attribut `src`. Cela convient lorsque vous gérez l'enregistrement de la source ou du déclencheur d'attribution sur le même serveur. Lors de l'enregistrement d'un déclencheur d'attribution, cette propriété est optionnelle, et une valeur de chaîne de caractères vide sera utilisée si elle est omise.
+    - Booléen, c'est-à-dire juste le nom `attributionsrc`. Cela indique que vous souhaitez que l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} soit envoyé au même serveur que celui indiqué par l'attribut `src`. Cela convient lorsque vous gérez l'enregistrement de la source ou du déclencheur d'attribution sur le même serveur. Lors de l'enregistrement d'un déclencheur d'attribution, cette propriété est optionnelle, et une valeur de chaîne de caractères vide est utilisée si elle est omise.
     - Valeur contenant une ou plusieurs URL, par exemple&nbsp;:
 
       ```html
@@ -43,7 +44,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
         attributionsrc="https://a.example/register-source https://b.example/register-source"></script>
       ```
 
-      Cela est utile dans les cas où la ressource demandée n'est pas sur un serveur que vous contrôlez, ou si vous souhaitez gérer l'enregistrement de la source d'attribution sur un autre serveur. Dans ce cas, une ou plusieurs URL peuvent être définies comme valeur de `attributionsrc`. Lors de la requête de ressource, l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} sera envoyé à l'(aux) URL(s) définie(s) dans `attributionsrc` en plus de l'origine de la ressource. Ces URL peuvent alors répondre avec un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} ou {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} selon le cas pour compléter l'enregistrement.
+      Cela est utile dans les cas où la ressource demandée n'est pas sur un serveur que vous contrôlez, ou si vous souhaitez gérer l'enregistrement de la source d'attribution sur un autre serveur. Dans ce cas, une ou plusieurs URL peuvent être définies comme valeur de `attributionsrc`. Lors de la requête de ressource, l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} est envoyé à l'(aux) URL(s) définie(s) dans `attributionsrc` en plus de l'origine de la ressource. Ces URL peuvent alors répondre avec un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} ou {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} selon le cas pour compléter l'enregistrement.
 
       > [!NOTE]
       > Définir plusieurs URL permet d'enregistrer plusieurs sources d'attribution sur la même fonctionnalité. Par exemple, différentes campagnes peuvent être mesurées, ce qui implique de générer différents rapports sur différentes données.
@@ -58,7 +59,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > Seuls les éléments HTML `script` présents dans l'en-tête du document (`<head>`) peuvent bloquer le rendu. Les scripts ne bloquent pas le rendu par défaut&nbsp;: si un élément `script` n'inclut pas `type="module"`, `async` ou `defer`, il bloque l'analyse, pas le rendu. Si un tel élément est ajouté dynamiquement, il faut définir `blocking = "render"` pour bloquer le rendu.
 
 - [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin)
-  - : Les balises de `script` classiques enverront un minimum d'informations à {{DOMxRef("Window.error_event", "window.onerror")}} pour les scripts qui ne respectent pas les contrôles standard du {{Glossary("CORS")}}. Afin de disposer de plus de renseignements sur les erreurs pour les sites utilisant des domaines séparés pour des documents statiques, on pourra utiliser cet attribut. Voir [la page de réglages des attributs CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus d'explications quant aux valeurs valides.
+  - : Les balises de `script` classiques envoient un minimum d'informations à {{DOMxRef("Window.error_event", "window.onerror")}} pour les scripts qui ne respectent pas les contrôles standard du {{Glossary("CORS")}}. Afin de disposer de plus de renseignements sur les erreurs pour les sites utilisant des domaines séparés pour des documents statiques, on peut utiliser cet attribut. Voir [la page de réglages des attributs CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus d'explications quant aux valeurs valides.
 - `defer`
   - : Cet attribut booléen permet d'indiquer au navigateur que le script doit être exécuté après l'analyse du document et avant l'évènement {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}.
 
@@ -69,7 +70,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     >
     > L'attribut `defer` n'a aucun effet sur les [modules de script](/fr/docs/Web/JavaScript/Guide/Modules)&nbsp;: ils sont différés par défaut.
 
-    Les scripts qui utilisent l'attribut `defer` seront exécutés dans l'ordre dans lequel ils apparaissent dans le document.
+    Les scripts qui utilisent l'attribut `defer` sont exécutés dans l'ordre dans lequel ils apparaissent dans le document.
 
     Cet attribut permet d'éliminer le **JavaScript bloquant l'analyse** où le navigateur devrait charger et évaluer les scripts avant de poursuivre l'analyse. `async` a un effet similaire dans ce cas.
 
@@ -94,26 +95,26 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `nomodule`
   - : Cet attribut booléen indique que le script ne doit pas être exécuté dans les navigateurs qui prennent en charge les [modules EcmaScript](/fr/docs/Web/JavaScript/Guide/Modules). Il permet ainsi de fournir un script de repli aux anciens navigateurs qui ne gèrent pas le code JavaScript modulaire.
 - `nonce`
-  - : Un _nonce_ (pour <i lang="en">number used once</i> en anglais) cryptographique utilisé pour inscrire les scripts en ligne sur une liste blanche pour [la règle `script-src` Content-Security-Policy](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src). Le serveur doit générer un nonce unique chaque fois qu'il transmet une règle de sécurité. Ce nonce ne doit pas pouvoir être deviné car sinon, il devient trivial d'outrepasser la règle de sécurité.
+  - : Un _nonce_ (pour <i lang="en">number used once</i> en anglais) cryptographique utilisé pour inscrire les scripts en ligne sur une liste blanche pour [la règle `script-src` Content-Security-Policy](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src). Le serveur doit générer un nonce unique chaque fois qu'il transmet une règle de sécurité. Ce nonce ne doit pas pouvoir être deviné, car sinon, il devient trivial d'outrepasser la règle de sécurité.
 - `referrerpolicy`
   - : Une chaîne de caractères qui indique le [référent (<i lang="en">referrer</i> en anglais)](/fr/docs/Web/API/Document/referrer) à utiliser lors de la récupération du script&nbsp;:
-    - `no-referrer`&nbsp;: signifie que l'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé.
-    - `no-referrer-when-downgrade`&nbsp;: signifie qu'aucune en-tête {{HTTPHeader("Referer")}} ne sera envoyé lorsqu'on navigue vers une {{Glossary("origin", "origine")}} qui n'utilise pas {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`&nbsp;: le référent envoyé sera limité à l'origine de la page référente&nbsp;: son [schéma](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, et {{Glossary("port")}}.
-    - `origin-when-cross-origin`&nbsp;: signifie que les navigations vers d'autres origines seront limitées aux schémas, hôtes et ports. Les navigations sur la même origine inclueront le chemin explicite du référent.
-    - `same-origin`&nbsp;: un référent sera envoyé pour {{Glossary("Same-origin policy", "les origines du même site")}} mais les requêtes multi-origines ne contiendront pas d'informations de référent.
+    - `no-referrer`&nbsp;: signifie que l'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé.
+    - `no-referrer-when-downgrade`&nbsp;: signifie qu'aucune en-tête {{HTTPHeader("Referer")}} n'est envoyée lorsqu'on navigue vers une {{Glossary("origin", "origine")}} qui n'utilise pas {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
+    - `origin`&nbsp;: le référent envoyé est limité à l'origine de la page référente&nbsp;: son [schéma](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, et {{Glossary("port")}}.
+    - `origin-when-cross-origin`&nbsp;: signifie que les navigations vers d'autres origines sont limitées aux schémas, hôtes et ports. Les navigations sur la même origine incluent le chemin explicite du référent.
+    - `same-origin`&nbsp;: un référent est envoyé pour {{Glossary("Same-origin policy", "les origines du même site")}} mais les requêtes multi-origines ne contiennent pas d'informations de référent.
     - `strict-origin`&nbsp;: seule l'origine du document est envoyée comme référent lorsque le protocole de sécurité est le même (HTTPS→HTTPS). L'origine n'est pas envoyée lorsque la destination est moins sécurisée (HTTPS→HTTP).
     - `strict-origin-when-cross-origin` (par défaut)&nbsp;: l'URL complète est envoyée pour les requêtes de même origine, seule l'origine est envoyée lorsque le protocole de sécurité est le même (HTTPS→HTTPS) et aucun en-tête n'est envoyé pour une destination moins sécurisée (HTTPS→HTTP).
-    - `unsafe-url`&nbsp;: signifie que le référent incluera l'origine et le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom utilisateur·ice](/fr/docs/Web/API/HTMLAnchorElement/username)). **Cette valeur n'est pas sûre** car elle peut entraîner des fuites d'origine ou de chemin provenant de ressources sécurisées avec TLS vers des origines insécures.
+    - `unsafe-url`&nbsp;: signifie que le référent inclut l'origine et le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom utilisateur·ice](/fr/docs/Web/API/HTMLAnchorElement/username)). **Cette valeur n'est pas sûre**, car elle peut entraîner des fuites d'origine ou de chemin provenant de ressources sécurisées avec TLS vers des origines insécures.
 
     > [!NOTE]
-    > Utiliser une chaîne vide (`""`) correspond à la valeur par défaut et à la valeur utilisée si `referrerpolicy` n'est pas pris en charge. Si cet attribut n'est pas explicitement défini sur l'élément `<script>`, ce dernier respectera la politique défine à un niveau supérieur (sur le document ou sur le domaine). Si une telle politique n'est pas disponible, la chaîne vide sera considérée comme équivalente à `strict-origin-when-cross-origin`.
+    > Utiliser une chaîne vide (`""`) correspond à la valeur par défaut et à la valeur utilisée si `referrerpolicy` n'est pas pris en charge. Si cet attribut n'est pas explicitement défini sur l'élément `<script>`, ce dernier respecte la politique défine à un niveau supérieur (sur le document ou sur le domaine). Si une telle politique n'est pas disponible, la chaîne vide est considérée comme équivalente à `strict-origin-when-cross-origin`.
 
 - `src`
   - : Cet attribut définit l'URI d'un script externe. Cela peut être utilisé pour insérer des scripts autrement qu'en les insérant à même le document.
 - [`type`](/fr/docs/Web/HTML/Reference/Elements/script/type)
   - : Cet attribut indique le type de script représenté.
-    La valeur de cet attribut sera l'une des suivantes&nbsp;:
+    La valeur de cet attribut est l'une des suivantes&nbsp;:
     - **Attribut non défini (valeur par défaut), chaîne de caractères vide ou type MIME JavaScript**
       - : Indique que le script est un «&nbsp;script classique&nbsp;» contenant du code JavaScript.
         Il est recommandé d'omettre l'attribut si le script fait référence à du code JavaScript plutôt que de définir un type MIME.
@@ -132,16 +133,16 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
         Les règles de spéculation prennent la forme d'un objet JSON qui détermine quelles ressources doivent être préchargées ou pré-rendues par le navigateur.
         Cela fait partie de {{DOMxRef("Speculation Rules API", "l'API Speculation Rules", "", 1)}}.
     - **Toute autre valeur**
-      - : Le contenu embarqué est traité comme un bloc de données et ne sera pas traité par le navigateur.
+      - : Le contenu embarqué est traité comme un bloc de données et ne est pas traité par le navigateur.
         Les développeur·euse·s doivent utiliser un type MIME valide qui n'est pas un type MIME JavaScript pour indiquer des blocs de données.
-        Tous les autres attributs seront ignorés, y compris l'attribut `src`.
+        Tous les autres attributs sont ignorés, y compris l'attribut `src`.
 
 ### Attributs obsolètes
 
 - `charset` {{Deprecated_Inline}}
   - : Si présent, sa valeur doit correspondre (sans tenir compte de la casse) à `utf-8` selon {{Glossary("ASCII")}}. Il est inutile de définir l'attribut `charset`, car les documents doivent utiliser UTF-8 et l'élément `script` hérite de l'encodage du document.
 - `language` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Comme l'attribut `type`, cet attribut spécifie le langage de script utilisé. Cependant, contrairement à l'attribut `type` les valeurs possibles de cet attribut n'ont jamais été normalisées. Il est recommandé d'utiliser l'attribut `type` plutôt que celui-là.
+  - : Comme l'attribut `type`, cet attribut définit le langage de script utilisé. Cependant, contrairement à l'attribut `type` les valeurs possibles de cet attribut n'ont jamais été normalisées. Il est recommandé d'utiliser l'attribut `type` plutôt que celui-là.
 
 ## Notes
 
@@ -175,7 +176,7 @@ Cependant, une fois le téléchargement terminé, le script s'exécute, ce qui b
 Il n'y a aucune garantie sur l'ordre d'exécution des scripts.
 Il est préférable d'utiliser `async` lorsque les scripts de la page fonctionnent indépendamment les uns des autres et ne dépendent d'aucun autre script de la page.
 
-Les scripts chargés avec l'attribut `defer` seront chargés dans l'ordre où ils apparaissent dans la page.
+Les scripts chargés avec l'attribut `defer` sont chargés dans l'ordre où ils apparaissent dans la page.
 Ils ne s'exécutent qu'une fois que tout le contenu de la page a été chargé, ce qui est utile si vos scripts dépendent de la présence du DOM (par exemple, s'ils modifient un ou plusieurs éléments de la page).
 
 Voici une représentation visuelle des différentes méthodes de chargement des scripts et ce que cela implique pour votre page&nbsp;:
@@ -192,11 +193,11 @@ Par exemple, si vous avez les éléments de script suivants&nbsp;:
 <script async src="js/script3.js"></script>
 ```
 
-Vous ne pouvez pas compter sur l'ordre dans lequel les scripts seront chargés.
-`jquery.js` peut être chargé avant ou après `script2.js` et `script3.js` et, dans ce cas, toute fonction de ces scripts dépendant de `jquery` produira une erreur car `jquery` ne sera pas défini au moment de l'exécution du script.
+Vous ne pouvez pas compter sur l'ordre dans lequel les scripts sont chargés.
+`jquery.js` peut être chargé avant ou après `script2.js` et `script3.js` et, dans ce cas, toute fonction de ces scripts dépendant de `jquery` produit une erreur, car `jquery` n'est pas défini au moment de l'exécution du script.
 
 `async` doit être utilisé lorsque vous avez plusieurs scripts d'arrière-plan à charger et que vous souhaitez simplement les mettre en place dès que possible.
-Par exemple, vous pouvez avoir des fichiers de données de jeu à charger, qui seront nécessaires lorsque le jeu commencera réellement, mais pour l'instant vous souhaitez simplement afficher l'introduction, les titres et le hall du jeu, sans que le chargement des scripts ne bloque l'affichage.
+Par exemple, vous pouvez avoir des fichiers de données de jeu à charger, qui sont nécessaires lorsque le jeu commence réellement, mais pour l'instant vous souhaitez simplement afficher l'introduction, les titres et le hall du jeu, sans que le chargement des scripts ne bloque l'affichage.
 
 Les scripts chargés avec l'attribut `defer` (voir ci-dessous) s'exécutent dans l'ordre où ils apparaissent dans la page et sont exécutés dès que le script et le contenu sont téléchargés&nbsp;:
 
@@ -206,7 +207,7 @@ Les scripts chargés avec l'attribut `defer` (voir ci-dessous) s'exécutent dans
 <script defer src="js/script3.js"></script>
 ```
 
-Dans le second exemple, on peut être certain que `jquery.js` sera chargé avant `script2.js` et `script3.js` et que `script2.js` sera chargé avant `script3.js`.
+Dans le second exemple, on peut être certain que `jquery.js` est chargé avant `script2.js` et `script3.js` et que `script2.js` est chargé avant `script3.js`.
 Ils ne s'exécutent qu'une fois que tout le contenu de la page a été chargé, ce qui est utile si vos scripts dépendent de la présence du DOM (par exemple, s'ils modifient un ou plusieurs éléments de la page).
 
 Pour résumer&nbsp;:
@@ -284,7 +285,7 @@ Vous pouvez également utiliser l'élément `<script>` pour intégrer des donné
 ### Bloquer le rendu jusqu'à ce qu'un script soit récupéré et exécuté
 
 Vous pouvez inclure le jeton `render` dans un attribut `blocking`&nbsp;;
-le rendu de la page sera bloqué jusqu'à ce que le script soit récupéré et exécuté. Dans l'exemple ci-dessous, on bloque le rendu sur un script asynchrone,
+le rendu de la page est bloqué jusqu'à ce que le script soit récupéré et exécuté. Dans l'exemple ci-dessous, on bloque le rendu sur un script asynchrone,
 de sorte que le script ne bloque pas l'analyse mais soit garanti d'être évalué avant le début du rendu.
 
 ```html

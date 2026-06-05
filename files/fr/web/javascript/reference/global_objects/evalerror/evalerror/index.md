@@ -25,7 +25,7 @@ EvalError(message, fileName, lineNumber)
 ```
 
 > [!NOTE]
-> `EvalError()` peut être appelée avec ou sans {{JSxRef("Operators/new", "new")}}. Les deux créent une nouvelle instance de `EvalError`.
+> `EvalError()` peut être appelée avec ou sans {{JSxRef("new")}}. Les deux créent une nouvelle instance de `EvalError`.
 
 ### Paramètres
 

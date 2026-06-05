@@ -3,7 +3,7 @@ title: "SVGPolylineElement: animatedPoints プロパティ"
 short-title: animatedPoints
 slug: Web/API/SVGPolylineElement/animatedPoints
 l10n:
-  sourceCommit: 9f9f880fa78383de963ae215204531c96715c0ea
+  sourceCommit: 0bb352f93d19c62cd07807479975f610f7b02cf4
 ---
 
 {{APIRef("SVG")}}

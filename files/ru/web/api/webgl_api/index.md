@@ -52,7 +52,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/ru/docs/WebGL/Creating_3D_objects_using_WebGL"
+              href="/ru/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL"
               >Создание 3D объектов с помощью WebGL</a
             >
           </dt>
@@ -62,14 +62,14 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/ru/docs/WebGL/Using_textures_in_WebGL"
+              href="/ru/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL"
               >Использование текстур в WebGL</a
             >
           </dt>
           <dd>Демонстрирует как разместить текстуры на гранях объекта.</dd>
           <dt>
             <a
-              href="/ru/docs/WebGL/Lighting_in_WebGL"
+              href="/ru/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL"
               >Освещение в WebGL</a
             >
           </dt>
@@ -86,7 +86,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/ru/docs/WebGL/WebGL_best_practices"
+              href="/ru/docs/Web/API/WebGL_API/WebGL_best_practices"
               >WebGL: советы по применению на практике</a
             >
           </dt>
@@ -96,7 +96,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/ru/docs/WebGL/Cross-Domain_Textures"
+              href="/ru/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL"
               >Текстуры с других доменов</a
             >
           </dt>

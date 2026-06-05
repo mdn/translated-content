@@ -47,7 +47,7 @@ Os detalhes de como o processo de inserção do texto funciona podem variar depe
         <strong><a href="#value">Value</a></strong>
       </td>
       <td>
-        Uma {{domxref("DOMString")}} representando uma senha, ou vazia
+        Uma {{jsxref("String")}} representando uma senha, ou vazia
       </td>
     </tr>
     <tr>
@@ -89,7 +89,7 @@ Os detalhes de como o processo de inserção do texto funciona podem variar depe
 
 ## Valor
 
-O atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value) contém uma {{domxref("DOMString")}} cujo valor é o conteúdo atual do controle de edição de texto usado para a inserção da senha. Se o usuário ainda não digitou nada, esse valor é uma string vazia (`""`). Se a propriedade [`required`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#required) for especificada, então a caixa de edição de senha precisa conter um valor que não seja uma string vazia para ser válida.
+O atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value) contém uma {{jsxref("String")}} cujo valor é o conteúdo atual do controle de edição de texto usado para a inserção da senha. Se o usuário ainda não digitou nada, esse valor é uma string vazia (`""`). Se a propriedade [`required`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#required) for especificada, então a caixa de edição de senha precisa conter um valor que não seja uma string vazia para ser válida.
 
 Se o atributo [`pattern`](/pt-BR/docs/Web/HTML/Reference/Elements/input#pattern) for especificado, o conteúdo de um controle `"password"` só é considerado válido se o valor passar na validação; veja [Validação](#validação) para mais informações.
 

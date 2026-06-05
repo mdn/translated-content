@@ -19,7 +19,7 @@ A diferencia de la mayoría de los lenguajes de programación, el lenguaje JavaS
 
 ## Información general
 
-JavaScript es un lenguaje dinámico múltiparadigma con tipos y operadores, objetos estándar integrados y métodos. Su sintaxis se basa en los lenguajes Java y C — muchas estructuras de esos lenguajes también se aplican a JavaScript. JavaScript admite la programación orientada a objetos con prototipos de objetos, en lugar de clases (consulta más información sobre {{jsxref("Inheritance_and_the_prototype_chain", "herencia prototípica")}} y ES2015 {{jsxref("Reference/Classes", "clases")}}. JavaScript también admite la programación funcional — debido a que son objetos, las funciones se pueden almacenar en variables y pasarse como cualquier otro objeto.
+JavaScript es un lenguaje dinámico múltiparadigma con tipos y operadores, objetos estándar integrados y métodos. Su sintaxis se basa en los lenguajes Java y C — muchas estructuras de esos lenguajes también se aplican a JavaScript. JavaScript admite la programación orientada a objetos con prototipos de objetos, en lugar de clases (consulta más información sobre [herencia prototípica](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) y ES2015 {{jsxref("Classes", "clases")}}. JavaScript también admite la programación funcional — debido a que son objetos, las funciones se pueden almacenar en variables y pasarse como cualquier otro objeto.
 
 Comencemos observando los componentes básicos de cualquier lenguaje: los tipos. Los programas JavaScript manipulan valores, y todos esos valores pertenecen a un tipo. Los tipos de JavaScript son:
 
@@ -73,7 +73,7 @@ Math.sin(3.5);
 var circumference = 2 * Math.PI * r;
 ```
 
-Puedes convertir una cadena en un número entero usando la función {{jsxref("Objetos_Globales/parseInt", "parseInt()")}} incorporada. Esta toma la base para la conversión como un segundo argumento opcional, que siempre debes proporcionar:
+Puedes convertir una cadena en un número entero usando la función {{jsxref("parseInt()")}} incorporada. Esta toma la base para la conversión como un segundo argumento opcional, que siempre debes proporcionar:
 
 ```js
 parseInt("123", 10); // 123
@@ -87,7 +87,7 @@ parseInt("010"); //  8
 parseInt("0x10"); // 16
 ```
 
-Aquí, vemos que la función {{jsxref("Objetos_Globales/parseInt", "parseInt()")}} trata la primera cadena como octal debido al 0 inicial, y la segunda cadena como hexadecimal debido al "0x" inicial. La _notación hexadecimal todavía está en su lugar_; solo se ha eliminado el octal.
+Aquí, vemos que la función {{jsxref("parseInt()")}} trata la primera cadena como octal debido al 0 inicial, y la segunda cadena como hexadecimal debido al "0x" inicial. La _notación hexadecimal todavía está en su lugar_; solo se ha eliminado el octal.
 
 Si deseas convertir un número binario en un entero, simplemente cambia la base:
 
@@ -95,7 +95,7 @@ Si deseas convertir un número binario en un entero, simplemente cambia la base:
 parseInt("11", 2); // 3
 ```
 
-De manera similar, puedes analizar números de coma flotante utilizando la función incorporada {{jsxref("Objetos_Globales/parseFloat", "parseFloat()")}}. A diferencia de su primo {{jsxref("Objetos_Globales/parseInt", "parseInt()")}}, `parseFloat()` siempre usa base 10.
+De manera similar, puedes analizar números de coma flotante utilizando la función incorporada {{jsxref("parseFloat()")}}. A diferencia de su primo {{jsxref("parseInt()")}}, `parseFloat()` siempre usa base 10.
 
 También puedes utilizar el operador `+` unario para convertir valores en números:
 
@@ -117,7 +117,7 @@ parseInt("hello", 10); // NaN
 NaN + 5; // NaN
 ```
 
-Puedes probar si un valor es `NaN` utilizando la función incorporada {{jsxref("Objetos_Globales/isNaN", "isNaN()")}}:
+Puedes probar si un valor es `NaN` utilizando la función incorporada {{jsxref("isNaN()")}}:
 
 ```js
 isNaN(NaN); // true
@@ -130,7 +130,7 @@ JavaScript también tiene los valores especiales {{jsxref("Infinity")}} e `-Infi
 -1 / 0; // -Infinity
 ```
 
-Puedes probar los valores `Infinity`, `-Infinity` y `NaN` utilizando la función integrada {{jsxref("Objetos_Globales/isFinite", "isFinite()")}}:
+Puedes probar los valores `Infinity`, `-Infinity` y `NaN` utilizando la función integrada {{jsxref("isFinite()")}}:
 
 ```js
 isFinite(1 / 0); // false
@@ -139,7 +139,7 @@ isFinite(NaN); // false
 ```
 
 > [!NOTE]
-> Las funciones {{jsxref("Objetos_Globales/parseInt", "parseInt()")}} y {{jsxref("Objetos_Globales/parseFloat", "parseFloat()")}} analizan una cadena hasta que alcancen un caracter que no es válido para el formato de número especificado, luego devuelve el número analizado hasta ese punto. Sin embargo, el operador "+" simplemente convierte la cadena a `NaN` si contiene un caracter no válido. Intenta analizar la cadena "10.2abc" con cada método tú mismo en la consola y comprenderás mejor las diferencias.
+> Las funciones {{jsxref("parseInt()")}} y {{jsxref("parseFloat()")}} analizan una cadena hasta que alcancen un caracter que no es válido para el formato de número especificado, luego devuelve el número analizado hasta ese punto. Sin embargo, el operador "+" simplemente convierte la cadena a `NaN` si contiene un caracter no válido. Intenta analizar la cadena "10.2abc" con cada método tú mismo en la consola y comprenderás mejor las diferencias.
 
 ## Strings
 
@@ -147,7 +147,7 @@ Las cadenas en JavaScript son secuencias de [caracteres Unicode](/es/docs/Web/Ja
 
 Si deseas representar un solo caracter, simplemente usa una cadena que consta de ese único caracter.
 
-Para encontrar la longitud de una cadena (en unidades de código), accede a su propiedad {{jsxref("Objetos_Globales/String/length", "lenght")}}:
+Para encontrar la longitud de una cadena (en unidades de código), accede a su propiedad {{jsxref("String.length", "lenght")}}:
 
 ```js
 "hello".length; // 5
@@ -183,7 +183,7 @@ Operaciones booleanas como `&&` (_and_ lógico), `||` (_or_ lógico) y `!` (_not
 
 ## Variables
 
-Las nuevas variables en JavaScript se declaran utilizando una de tres palabras clave: {{jsxref("Sentencias/let", "let")}}, {{jsxref("Sentencias/const", "const")}} o {{jsxref("Sentencias/var", "var")}}.
+Las nuevas variables en JavaScript se declaran utilizando una de tres palabras clave: {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}} o {{jsxref("Statements/var", "var")}}.
 
 **`let`** te permite declarar variables a nivel de bloque. La variable declarada está disponible en el _bloque_ en el que está incluida.
 
@@ -232,7 +232,7 @@ for (var myVarVariable = 0; myVarVariable < 5; myVarVariable++) {
 
 Si declaras una variable sin asignarle ningún valor, su tipo es `undefined`.
 
-Una diferencia importante entre JavaScript y otros lenguajes como Java es que en JavaScript, los bloques no tienen alcance; solo las funciones tienen alcance. Entonces, si una variable se define usando `var` en una declaración compuesta (por ejemplo, dentro de una estructura de control `if`), será visible para toda la función. Sin embargo, a partir de ECMAScript 2015, las declaraciones {{jsxref("Sentencias/let", "let")}} y {{jsxref("Sentencias/const", "const")}} te permiten crear variables con alcance de bloque.
+Una diferencia importante entre JavaScript y otros lenguajes como Java es que en JavaScript, los bloques no tienen alcance; solo las funciones tienen alcance. Entonces, si una variable se define usando `var` en una declaración compuesta (por ejemplo, dentro de una estructura de control `if`), será visible para toda la función. Sin embargo, a partir de ECMAScript 2015, las declaraciones {{jsxref("Statements/let", "let")}} y {{jsxref("Statements/const", "const")}} te permiten crear variables con alcance de bloque.
 
 ## Operadores
 
@@ -479,7 +479,7 @@ obj["for"] = "Simon"; // trabaja bien
 > [!NOTE]
 > A partir de ECMAScript 5, las palabras reservadas se pueden utilizar como nombres de propiedad de objeto "en bruto". Esto significa que no necesitan "vestirse" entre comillas al definir objeto literales. Consulta la [especificación](http://es5.github.io/#x7.6.1) de ES5.
 
-Para obtener más información sobre objetos y prototipos, consulta {{jsxref("Objetos_Globales/Object/prototype", "Object.prototype")}}. Para obtener una explicación de los prototipos de objetos y las cadenas de prototipos de objetos, consulta [Herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+Para obtener más información sobre objetos y prototipos, consulta {{jsxref("Object")}}. Para obtener una explicación de los prototipos de objetos y las cadenas de prototipos de objetos, consulta [Herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 > [!NOTE]
 > A partir de ECMAScript 2015, las claves de objeto se pueden definir mediante la variable en notación de corchetes al crearlas. `{[phoneType]: 12345}` es posible en lugar de solo `var userPhone = {}; userPhone[phoneType] = 12345`.
@@ -539,7 +539,7 @@ for (const currentValue of a) {
 
 También puedes iterar sobre un arreglo utilizando el bucle [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in), sin embargo, este no itera sobre los elementos del arreglo, sino los índices del arreglo. Además, si alguien agrega nuevas propiedades a `Array.prototype`, también serán iteradas por dicho bucle. Por lo tanto, este tipo de bucle no se recomienda para arreglos.
 
-Otra forma de iterar sobre un arreglo que se agregó con ECMAScript 5 es {{jsxref("Objetos_Globales/Array/forEach", "arr.forEach()")}}:
+Otra forma de iterar sobre un arreglo que se agregó con ECMAScript 5 es {{jsxref("Array.forEach", "arr.forEach()")}}:
 
 ```js
 ["dog", "cat", "hen"].forEach(function (currentValue, index, array) {
@@ -553,7 +553,7 @@ Si deseas agregar un elemento a un arreglo, simplemente hazlo así:
 a.push(item);
 ```
 
-Los arreglos vienen con varios métodos. Consulta también la {{jsxref("Objetos_Globales/Array", "documentación completa para métodos de arreglo")}}.
+Los arreglos vienen con varios métodos. Consulta también la {{jsxref("Array", "documentación completa para métodos de arreglo")}}.
 
 | Nombre del método                                    | Descripción                                                                                |
 | ---------------------------------------------------- | ------------------------------------------------------------------------------------------ |
@@ -917,7 +917,7 @@ var bill = trivialNew(Person, "William", "Orange");
 var bill = new Person("William", "Orange");
 ```
 
-`apply()` tiene una función hermana llamada {{jsxref("Objetos_Globales/Function/call", "call()")}}, que nuevamente te permite establecer `this` pero toma una lista de argumentos expandida en lugar de un arreglo.
+`apply()` tiene una función hermana llamada {{jsxref("Function.call", "call()")}}, que nuevamente te permite establecer `this` pero toma una lista de argumentos expandida en lugar de un arreglo.
 
 ```js
 function lastNameCaps() {

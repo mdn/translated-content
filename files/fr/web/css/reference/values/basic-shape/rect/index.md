@@ -1,12 +1,12 @@
 ---
-title: rect()
+title: Fonction CSS `rect()`
+short-title: rect()
 slug: Web/CSS/Reference/Values/basic-shape/rect
-original_slug: Web/CSS/basic-shape/rect
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`rect()`** crée un rectangle à la distance spécifiée depuis les bords supérieur et gauche du bloc englobant. Il s'agit d'une fonction de forme de base du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Vous pouvez utiliser la fonction `rect()` dans des propriétés CSS telles que {{CSSxRef("offset-path")}} pour créer le chemin rectangulaire le long duquel un élément se déplace, ou dans {{CSSxRef("clip-path")}} pour définir la forme de la région de découpe.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`rect()`** crée un rectangle à la distance définie depuis les bords supérieur et gauche du bloc englobant. Il s'agit d'une fonction de forme de base du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Vous pouvez utiliser la fonction `rect()` dans des propriétés CSS telles que {{CSSxRef("offset-path")}} pour créer le chemin rectangulaire le long duquel un élément se déplace, ou dans {{CSSxRef("clip-path")}} pour définir la forme de la région de découpe.
 
 ## Syntaxe
 
@@ -17,7 +17,7 @@ clip-path: rect(50px 70px 80% 20%);
 
 ### Valeurs
 
-Le rectangle intérieur est défini en spécifiant quatre valeurs de décalage, en commençant par le bord supérieur puis dans le sens des aiguilles d'une montre, ainsi qu'un mot-clé optionnel `round` avec le paramètre `border-radius` pour ajouter des coins arrondis au rectangle. Chaque valeur de décalage peut être soit une longueur (`<length>`), un pourcentage (`<percentage>`), ou le mot-clé `auto`.
+Le rectangle intérieur est défini en définissant quatre valeurs de décalage, en commençant par le bord supérieur puis dans le sens des aiguilles d'une montre, ainsi qu'un mot-clé optionnel `round` avec le paramètre `border-radius` pour ajouter des coins arrondis au rectangle. Chaque valeur de décalage peut être soit une longueur (`<length>`), un pourcentage (`<percentage>`), ou le mot-clé `auto`.
 
 - `<length-percentage>`
   - : Définit la valeur {{CSSxRef("&lt;length-percentage&gt;")}} de la distance du bord supérieur, droit, inférieur ou gauche du rectangle par rapport au bord supérieur ou gauche du bloc englobant. La première (haut) et la troisième (bas) valeurs sont des distances depuis le bord supérieur du bloc englobant, et la deuxième (droite) et la quatrième (gauche) valeurs sont des distances depuis le bord gauche du bloc englobant. Les valeurs droite (deuxième) et bas (troisième) sont limitées par les valeurs gauche (quatrième) et haut (première), respectivement, pour éviter que le bord inférieur ne croise le bord supérieur et que le bord droit ne croise le bord gauche. Par exemple, `rect(10px 0 0 20px)` est limité à `rect(10px 20px 10px 20px)`.
@@ -34,7 +34,7 @@ Le rectangle intérieur est défini en spécifiant quatre valeurs de décalage, 
 
 ## Exemples
 
-### Créer un offset-path avec rect()
+### Créer un `offset-path` avec `rect()`
 
 Dans cet exemple, la propriété {{CSSxRef("offset-path")}} utilise la fonction `rect()` pour définir la forme du chemin sur lequel l'élément, ici une boîte rouge, se déplace. Trois scénarios différents sont présentés, chacun utilisant des valeurs différentes pour la fonction `rect()`. La flèche à l'intérieur des boîtes pointe vers le bord droit de la boîte.
 
@@ -96,7 +96,7 @@ Dans cet exemple, la propriété {{CSSxRef("offset-path")}} utilise la fonction 
 
 #### Résultat
 
-{{EmbedLiveSample("créer_un_offset-path_avec_rect", "100%", 400)}}
+{{EmbedLiveSample("Créer un `offset-path` avec `rect()`", "100%", 400)}}
 
 - Le rectangle du chemin 1 définit les distances des quatre bords (haut, droit, bas et gauche) par rapport au bloc englobant. Les valeurs haut et bas sont des distances depuis le bord supérieur du bloc englobant. Les valeurs droite et gauche sont des distances depuis le bord gauche du bloc englobant. De plus, le coin du rectangle est arrondi à `20%`, ce qui fait que l'élément boîte rouge suit les coins arrondis lorsqu'il se déplace le long de ce chemin. Remarquez comment la flèche à l'intérieur de la boîte suit la courbe aux coins du chemin rectangulaire.
 - Le rectangle du chemin 2 est similaire à celui du chemin 1, sauf que la valeur droite est `auto`, ce qui équivaut à la valeur `100%`. Cela fait coïncider le bord droit du rectangle avec le bord droit du bloc englobant, créant un rectangle plus large que celui du chemin 1.

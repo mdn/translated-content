@@ -9,7 +9,7 @@ l10n:
 
 El símbolo conocido como **`Symbol.replace`** especifica el método que reemplaza las subcadenas coincidentes de una cadena. Esta función es llamada por el método {{jsxref("String.prototype.replace()")}}.
 
-Para más información, consulte {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} y {{jsxref("String.prototype.replace()")}}.
+Para más información, consulte {{jsxref("RegExp/Symbol.replace", "RegExp.prototype[@@replace]()")}} y {{jsxref("String.prototype.replace()")}}.
 
 {{InteractiveExample("JavaScript Demo: Symbol.replace")}}
 
@@ -61,4 +61,4 @@ console.log("football".replace(new CustomReplacer("foo")));
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp/Symbol.replace", "RegExp.prototype[@@replace]()")}}

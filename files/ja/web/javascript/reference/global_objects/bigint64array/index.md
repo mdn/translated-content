@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigInt64Array.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`BigInt64Array` の場合は `8` です。
-- {{jsxref("TypedArray.name", "BigInt64Array.name")}}
+- {{jsxref("Function.name", "BigInt64Array.name")}}
   - : コンストラクター名を文字列値で返します。`BigInt64Array` の場合、 "`BigInt64Array`" です。
 
 ## 静的メソッド
@@ -89,7 +89,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
   - : 配列とその要素を表すローカライズされた文字列を返します。{{jsxref("Array.prototype.toLocaleString()")}} も参照してください。
 - {{jsxref("TypedArray.toString", "BigInt64Array.prototype.toString()")}}
   - : 配列とその要素を表す文字列を返します。{{jsxref("Array.prototype.toString()")}} も参照してください。
-- {{jsxref("TypedArray.@@iterator", "BigInt64Array.prototype[Symbol.iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "BigInt64Array.prototype[Symbol.iterator]()")}}
   - : 配列内ですべての位置における値を提供する新しい*配列イテレーター*を返します。
 
 ## 例
@@ -135,6 +135,6 @@ var bigint64 = new BigInt64Array(iterable);
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("BigUint64Array")}}
 - {{jsxref("DataView")}}

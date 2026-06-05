@@ -45,7 +45,7 @@ Nuestra [área de aprendizaje CSS](/es/docs/conflicting/Learn_web_development/Co
 - Conceptos clave de CSS:
   - La [sintaxis y las formas del lenguaje](/es/docs/Web/CSS/Guides/Syntax/Introduction)
   - [Especificidad](/es/docs/Web/CSS/Guides/Cascade/Specificity), [herencia](/es/docs/Web/CSS/Guides/Cascade/Inheritance) y [la cascada](/es/docs/Web/CSS/Cascade)
-  - [Unidades y valores CSS](/es/docs/Web/CSS/CSS_Values_and_Units)
+  - [Unidades y valores CSS](/es/docs/Web/CSS/Guides/Values_and_units)
   - [Modelo de caja](/es/docs/Web/CSS/Guides/Box_model/Introduction) y [colapso de margen](/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - El [bloque contenedor](/es/docs/Web/CSS/Containing_block)
   - Contextos de [apilamiento](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) y [formato de bloques](/es/docs/Web/CSS/Guides/Display/Block_formatting_context)

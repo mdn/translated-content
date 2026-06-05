@@ -1,8 +1,9 @@
 ---
-title: "<del> : l'élément de texte supprimé"
+title: "Élément HTML `<del>` : l'élément de texte supprimé"
+short-title: <del>
 slug: Web/HTML/Reference/Elements/del
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<del>`** représente une portion de texte qui a été supprimée d'un document. Cela peut être utilisé, par exemple, pour afficher le «&nbsp;suivi des modifications&nbsp;» ou des informations sur les différences dans le code source. L'élément HTML {{HTMLElement("ins")}} peut être utilisé pour l'effet inverse&nbsp;: indiquer le texte qui a été ajouté au document.

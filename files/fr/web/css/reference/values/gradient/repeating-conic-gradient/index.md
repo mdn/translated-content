@@ -1,8 +1,9 @@
 ---
-title: repeating-conic-gradient()
+title: Fonction CSS `repeating-conic-gradient()`
+short-title: repeating-conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-conic-gradient
 l10n:
-  sourceCommit: b1bc04e2aedcaa50c55fb54686fb7855fdcbfc4e
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`repeating-conic-gradient()`** crée une image composée d'un dégradé conique répété (plutôt qu'un [dégradé unique](/fr/docs/Web/CSS/Reference/Values/gradient/conic-gradient)), avec des transitions de couleurs qui tournent autour d'un point central (plutôt que de [rayonner depuis le centre](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient)).

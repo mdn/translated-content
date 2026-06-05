@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/es/docs/Learn/Common_questions")}}
 
 En este articulo veremos que son los servidores, cómo funcionan y por qué son importantes.
 

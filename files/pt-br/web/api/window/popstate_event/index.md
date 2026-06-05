@@ -29,7 +29,7 @@ Navegadores tendem a lidar com o evento `popstate` diferentemente no carregament
 | Property                        | Type                       | Description                                        |
 | ------------------------------- | -------------------------- | -------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                   |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                 |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | The type of event.                                 |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.         |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.           |
 | `state` {{readonlyInline}}      | _any_                      | The current history entry's state object (if any). |

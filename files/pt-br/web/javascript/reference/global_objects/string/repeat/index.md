@@ -16,7 +16,7 @@ str.repeat(count);
 ### Parâmetros
 
 - `count`
-  - : Um número inteiro entre 0 e {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}}, indicando o número de vezes que a string deve ser repetida.
+  - : Um número inteiro entre 0 e {{jsxref("Number.POSITIVE_INFINITY", "+Infinity")}}, indicando o número de vezes que a string deve ser repetida.
 
 ### Valor retornado
 

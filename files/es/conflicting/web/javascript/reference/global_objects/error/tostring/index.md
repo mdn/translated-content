@@ -22,7 +22,7 @@ Una cadena que contiene el código fuente del error.
 
 ### Usar toSource
 
-Llamar al método `toSource` de una instancia {{JSxRef("Error")}} (incluido {{JSxRef("Global_Objects/Error", "NativeErrors", "#Error_types")}}) devolverá una cadena que contiene el código fuente del error. Esta cadena se puede evaluar para crear un objeto (aproximadamente) igual. Naturalmente, la cadena que contiene la fuente sigue la estructura del constructor {{JSxRef("Error")}}. Por ejemplo:
+Llamar al método `toSource` de una instancia {{JSxRef("Error")}} (incluido {{JSxRef("Error", "NativeErrors", "#Error_types")}}) devolverá una cadena que contiene el código fuente del error. Esta cadena se puede evaluar para crear un objeto (aproximadamente) igual. Naturalmente, la cadena que contiene la fuente sigue la estructura del constructor {{JSxRef("Error")}}. Por ejemplo:
 
 ```js
 (newname(message ,fileName,lineNumber))
@@ -39,4 +39,4 @@ donde estos atributos corresponden a las propiedades respectivas de la instancia
 - {{JSxRef("Error.prototype.lineNumber")}}
 - {{JSxRef("Error.prototype.message")}}
 - {{JSxRef("Error.prototype.name")}}
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

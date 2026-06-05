@@ -13,7 +13,7 @@ Este capítulo presenta colecciones de datos que están indexadas por una clave;
 
 ECMAScript 2015 introduce una nueva estructura de datos para asociar claves con valores. Un objeto {{JSxRef("Map")}} es un mapa de clave/valor simple y puedes iterar sobre sus elementos en el orden en que fueron insertados.
 
-El siguiente código muestra algunas operaciones básicas con un `Map`. Consulta también la página de referencia de {{JSxRef("Map")}} para obtener más ejemplos y la API completa. Puedes usar un bucle {{JSxRef("Sentencias/for...of", "for...of")}} para devolver un arreglo de `[key, value]` para cada iteración.
+El siguiente código muestra algunas operaciones básicas con un `Map`. Consulta también la página de referencia de {{JSxRef("Map")}} para obtener más ejemplos y la API completa. Puedes usar un bucle {{JSxRef("Statements/for...of", "for...of")}} para devolver un arreglo de `[key, value]` para cada iteración.
 
 ```js
 let sayings = new Map();
@@ -41,7 +41,7 @@ sayings.size; // 0
 
 Tradicionalmente, los {{JSxRef("Object", "objetos", "", 1)}} se han utilizado para asignar cadenas a valores. Los objetos te permiten establecer claves a valores, recuperar esos valores, eliminar claves y detectar si algo está almacenado en una clave. Los objetos `Map`, sin embargo, tienen algunas ventajas más que los hacen mejores mapas.
 
-- Las claves de un `Object` son {{JSxRef("Global_Objects/String", "Cadenas")}} o {{JSxRef("Global_Objects/Symbol", "Símbolos")}}, donde pueden tener cualquier valor para un `Map`.
+- Las claves de un `Object` son {{JSxRef("String", "Cadenas")}} o {{JSxRef("Symbol", "Símbolos")}}, donde pueden tener cualquier valor para un `Map`.
 - Puedes obtener el `size` de un `Map` fácilmente, mientras que tienes que realizar un seguimiento manual del tamaño de un `Object`.
 - La iteración de mapas está en el orden de inserción de los elementos.
 - Un `Object` tiene un prototipo, por lo que hay claves predeterminadas en el mapa. (Esto se puede omitir usando `map = Object.create(null)`).
@@ -105,7 +105,7 @@ for (let item of mySet) console.log(item);
 
 ### Conversión entre arreglo y `Set`
 
-Puedes crear un {{JSxRef("Array")}} a partir de un `Set` usando {{JSxRef("Array.from")}} o el {{JSxRef("Operators/Spread_operator", "operador de propagación")}}. Además, el constructor `Set` acepta un `Array` para convertirlo en la otra dirección.
+Puedes crear un {{JSxRef("Array")}} a partir de un `Set` usando {{JSxRef("Array.from")}} o el {{JSxRef("Operators/Spread_syntax", "operador de propagación")}}. Además, el constructor `Set` acepta un `Array` para convertirlo en la otra dirección.
 
 > [!NOTE]
 > Recuerda que los objetos `Set` almacenan _valores únicos_, por lo que cualquier elemento duplicado de un arreglo se elimina al realizar la conversión.

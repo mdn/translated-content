@@ -46,7 +46,7 @@ _Le constructeur `LinkError` ne contient pas de propriétés qui lui soient prop
 
 _Le constructeur `LinkError` ne contient pas de méthodes qui lui soient propres. Il hérite toutefois de méthodes grâce à sa chaîne de prototypes._
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.LinkError.prototype.toSource()")}}
+- {{jsxref("Error.prototype.toString", "WebAssembly.LinkError.prototype.toSource()")}}
   - : Cette méthode renvoie un code qui pourrait être évalué et causere la même erreur. Elle est héritée via {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.toString", "WebAssembly.LinkError.prototype.toString()")}}
   - : Cette méthode renvoie une chaîne de caractères qui représente l'objet de l'erreur. Elle est héritée via {{jsxref("Error")}}.
