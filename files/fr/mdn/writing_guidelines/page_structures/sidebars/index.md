@@ -2,17 +2,19 @@
 title: Barres de navigation latérales
 slug: MDN/Writing_guidelines/Page_structures/Sidebars
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 0ff7ba5177bf2e66214bd90b58590c6bf3acb758
 ---
 
 Toutes les pages MDN doivent avoir une barre de navigation latérale.
-La plupart sont créées à l'aide d'un système qui définit des structures de données dans des fichiers YAML, et inclut les barres latérales dans les pages via le front-matter ou une macro.
+La plupart sont créées à l'aide d'un système qui définit des structures de données dans des fichiers YAML, et inclut les barres latérales dans les pages avec le front-matter ou une macro.
 
-Dans ce guide, vous apprendrez comment fonctionnent ces barres latérales afin de pouvoir modifier les barres existantes et en créer de nouvelles selon les besoins.
+Dans ce guide, vous apprenez comment fonctionnent ces barres latérales afin de pouvoir modifier les barres existantes et en créer de nouvelles selon les besoins.
 
 > [!NOTE]
-> Si vous modifiez des barres latérales, vous pouvez utiliser les commandes `yarn tool` pour le formatage et la synchronisation avec les redirections.
-> Voir la documentation de [l'outil CLI de Yari <sup>(angl.)</sup>](https://github.com/mdn/yari/blob/main/docs/cli-tool.md) pour plus d'informations.
+> Si vous modifiez des barres latérales, vous pouvez utiliser les commandes `npm run content`&nbsp;:
+>
+> - Exécutez `npm run content -- fmt-sidebars` pour formater les barres latérales.
+> - Exécutez `npm run content -- sync-sidebars` pour synchroniser avec les redirections.
 
 ## Fonctionnement des barres latérales
 
@@ -38,7 +40,7 @@ Toutes les pages MDN doivent avoir une barre de navigation latérale.
 
 Le front-matter correspond au contenu entre les tirets. L'ajout de `sidebar: mdnsidebar` dans le front-matter indique au système de chercher un fichier YAML du même nom dans le dossier `files/sidebars`. S'il en trouve un, il s'occupe automatiquement d'afficher la barre latérale et de la placer sur la page sous forme d'une ou plusieurs listes ordonnées (éléments {{HTMLElement("ol")}}).
 
-Essayez de naviguer dans la barre latérale, puis revenez sur cette page. Vous remarquerez qu'en général, lors de la navigation, la liste de liens de la section dans laquelle vous vous trouvez est développée, tandis que les autres sont repliées, et la page active est surlignée.
+Essayez de naviguer dans la barre latérale, puis revenez sur cette page. Vous pouvez remarquer qu'en général, lors de la navigation, la liste de liens de la section dans laquelle vous vous trouvez est développée, tandis que les autres sont repliées, et la page active est surlignée.
 
 ## Syntaxe YAML des barres latérales expliquée
 
@@ -63,7 +65,7 @@ sidebar:
 ```
 
 L'URL est relative au dossier `docs` dans la structure d'URL MDN, donc par exemple `/MDN/Writing_guidelines/Page_structures/Sidebars` génère un lien vers la page courante. Le système utilise automatiquement le titre du document lié comme texte du lien.
-Si la page possède une clé `short-title` dans le front-matter, celle-ci sera utilisée comme texte du lien dans la barre latérale.
+Si la page possède une clé `short-title` dans le front-matter, celle-ci est utilisée comme texte du lien dans la barre latérale.
 
 Si vous souhaitez utiliser un texte de lien personnalisé qui n'est ni le `title` ni le `short-title` du document, il faut inclure deux clés dans l'élément de liste&nbsp;: `title`, qui contient le texte personnalisé, et `link`, qui contient l'URL relative comme précédemment. L'exemple suivant crée un lien vers la page courante, mais avec le texte personnalisé «&nbsp;Rédiger des barres latérales&nbsp;»&nbsp;:
 
@@ -157,7 +159,7 @@ sidebar:
 
 #### Regrouper les sous-pages
 
-Il existe aussi une valeur `type` de `listSubPagesGrouped`. Cela regroupe les sous-pages dont le titre commence par la même sous-chaîne suivie d'un tiret (par exemple `item-`) dans une liste enfant sous un élément parent nommé par la sous-chaîne, plus un tiret et une étoile (par exemple `item-*`).
+Il existe aussi une valeur `type` de `listSubPagesGrouped`. Cela regroupe les sous-pages dont le titre commence par la même sous-chaîne de caractères suivie d'un tiret (par exemple `item-`) dans une liste enfant sous un élément parent nommé par la sous-chaîne de caractères, plus un tiret et une étoile (par exemple `item-*`).
 
 Par exemple, au moment de la rédaction, le glossaire MDN contient trois pages liées à CORS&nbsp;:
 
@@ -175,7 +177,7 @@ sidebar:
     details: closed
 ```
 
-Les liens vers ces pages seront regroupés ainsi&nbsp;:
+Les liens vers ces pages sont regroupés ainsi&nbsp;:
 
 - CORS-\*
   - CORS
@@ -223,7 +225,7 @@ Si vous avez plusieurs types de pages dans un même dossier (définis par la cl�
 
 ### Localiser les chaînes de texte
 
-Comme expliqué plus haut, vous pouvez inclure du texte personnalisé pour vos liens ou titres de section via la clé `title`. Pour localiser ce texte dans plusieurs langues, utilisez un espace réservé dans `title`, puis définissez les valeurs de cet espace réservé pour chaque langue dans un dictionnaire `l10n` en bas du fichier YAML.
+Comme expliqué plus haut, vous pouvez inclure du texte personnalisé pour vos liens ou titres de section avec la clé `title`. Pour localiser ce texte dans plusieurs langues, utilisez un espace réservé dans `title`, puis définissez les valeurs de cet espace réservé pour chaque langue dans un dictionnaire `l10n` en bas du fichier YAML.
 
 Voici un exemple. Dans la barre latérale [HTML](/fr/docs/Web/HTML) (voir [`htmlsidebar.yaml` <sup>(angl.)</sup>](https://github.com/mdn/content/blob/main/files/sidebars/htmlsidebar.yaml)), on définit un élément qui génère une liste de liens vers toutes les pages de référence des types {{HTMLElement("input")}}. Le texte parent est défini dans `title` comme espace réservé `Input_types`&nbsp;:
 
@@ -272,14 +274,14 @@ Si une locale MDN n'a pas de valeur définie pour un espace réservé, la versio
 Certaines barres latérales sur MDN n'utilisent pas le système standard décrit ci-dessus. Ce sont des macros plus complexes nécessitant un traitement particulier&nbsp;:
 
 - `\{{APIRef("<API>")}}`
-  - : La barre latérale API affichée sur les [pages de référence d'API](/fr/docs/Web/API#interfaces). Pour chaque interface, la macro génère automatiquement des liens vers les membres définis sur l'interface — propriétés, méthodes, événements, etc. Le paramètre unique est le nom du groupe d'API défini dans le fichier [`GroupData.json` <sup>(angl.)</sup>](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json). Pour modifier les pages associées affichées en bas de la barre latérale, modifiez l'entrée GroupData de cette API.
+  - : La barre latérale API affichée sur les [pages de référence d'API](/fr/docs/Web/API#interfaces). Pour chaque interface, la macro génère automatiquement des liens vers les membres définis sur l'interface — propriétés, méthodes, évènements, etc. Le paramètre unique est le nom du groupe d'API défini dans le fichier [`GroupData.json` <sup>(angl.)</sup>](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json). Pour modifier les pages associées affichées en bas de la barre latérale, modifiez l'entrée GroupData de cette API.
 - `\{{DefaultAPISidebar("<API>")}}`
   - : La barre latérale API affichée sur les [pages d'accueil d'API](/fr/docs/Web/API#spécifications). Le paramètre unique est le nom du groupe d'API défini dans le fichier [`GroupData.json` <sup>(angl.)</sup>](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json). Pour modifier les guides, interfaces, etc. liés dans la barre latérale d'une API, modifiez l'entrée GroupData de cette API.
 - `sidebar: jsref`
-  - : La barre latérale sur les [pages de référence JavaScript](/fr/docs/Web/JavaScript/Reference) incluse via le front-matter.
+  - : La barre latérale sur les [pages de référence JavaScript](/fr/docs/Web/JavaScript/Reference) incluse avec le front-matter.
     Le contenu de `jsref` est défini dans rari dans [`jsref.rs` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/sidebars/jsref.rs).
 
-Si vous pensez qu'une de ces barres doit être mise à jour, contactez-nous via les [canaux habituels](/fr/docs/MDN/Community/Communication_channels).
+Si vous pensez qu'une de ces barres doit être mise à jour, contactez-nous par les [canaux habituels](/fr/docs/MDN/Community/Communication_channels).
 
 ## Voir aussi
 

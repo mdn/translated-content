@@ -96,5 +96,5 @@ p.a; //会抛出 TypeError
 ## 参见
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Reflect.get()")}}

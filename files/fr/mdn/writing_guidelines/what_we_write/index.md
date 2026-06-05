@@ -2,12 +2,10 @@
 title: Ce sur quoi nous écrivons
 slug: MDN/Writing_guidelines/What_we_write
 l10n:
-  sourceCommit: 4d6913ea91fa5dd65f843d715f1878a8d015b49f
+  sourceCommit: ca0b474bb2e153ce72718cb304306e540065a888
 ---
 
-{{MDNSidebar}}
-
-MDN contient une documentation sur le Web, _neutre_ pour les différents navigateurs, pour permettre aux développeuses et développeurs d'écrire du code «&nbsp;agnostique&nbsp;» aux différents navigateurs. Dans cet article, vous trouverez des informations pour savoir si un sujet ou un type de contenu a sa place pour être inclus dans MDN.
+MDN contient une documentation sur le Web, _neutre_ pour les différents navigateurs, pour permettre aux développeur·euse·s d'écrire du code «&nbsp;agnostique&nbsp;» aux différents navigateurs. Dans cet article, vous pouvez trouver des informations pour savoir si un sujet ou un type de contenu a sa place pour être inclus dans MDN.
 
 ## Règles éditoriales
 
@@ -15,9 +13,12 @@ Cette section décrit les règles mises en place par l'équipe MDN employée par
 
 ### Pertinence
 
-Tout le contenu présent sur MDN doit être pertinent pour la section dans laquelle il apparaît. Les publicités et autres contenus indésirables ne seront pas acceptés. Les personnes qui tentent d'ajouter ce type de contenu à plusieurs reprises pourront être bannies de MDN à la discrétion de l'équipe MDN employée par Mozilla.
+Tout le contenu présent sur MDN doit être pertinent pour la section dans laquelle il apparaît. Les publicités et autres contenus indésirables ne sont pas acceptés. Les personnes qui tentent d'ajouter ce type de contenu à plusieurs reprises peuvent être bannies de MDN à la discrétion de l'équipe MDN employée par Mozilla.
 
-Les liens sortants vers des sites commerciaux qui sont pertinents pour le sujet seront jugés au cas par cas. La valeur ajoutée pour aider les équipes de développement web doit surpasser le bénéfice commercial du site cible.
+Les liens sortants vers des sites commerciaux qui sont pertinents pour le sujet sont jugés au cas par cas. La valeur ajoutée pour aider les équipes de développement web doit surpasser le bénéfice commercial du site cible.
+
+> [!NOTE]
+> Vous pouvez voir des liens vers des sites commerciaux dans la section MDN [Apprendre le développement web](/fr/docs/Learn_web_development), mais ils sont utilisés avec parcimonie, et nous ne faisons des liens qu'avec des partenaires éducatifs de confiance. Vous pouvez en savoir plus à ce sujet dans [Directives de rédaction pour le contenu d'apprentissage > Liens et intégrations de partenaires](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations).
 
 ### Neutralité
 
@@ -25,26 +26,26 @@ Les articles de MDN doivent respecter [une neutralité de point de vue](https://
 
 ### Sujets web ouverts
 
-Les technologies web documentées sur MDN doivent être spécifiées de façon ouverte et implémentées par au moins un moteur de rendu. Les variations quant à la prise en charge des différents navigateurs sont documentées dans la section [de compatibilité des navigateurs](/fr/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) d'un article.
+Les technologies web documentées sur MDN doivent être définies de façon ouverte et implémentées par au moins un moteur de rendu. Les variations quant à la prise en charge des différents navigateurs sont documentées dans la section [de compatibilité des navigateurs](/fr/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) d'un article.
 
 ## Suggestion de contenus
 
 Si vous souhaitez suggérer un nouveau contenu pour MDN, veuillez lire cette page avant votre soumission afin de vérifier qu'elle est pertinente.
 
-Pour les nouvelles pages de référence ou les nouveaux guides, veuillez ouvrir une discussion [sur le dépôt `mdn-community`](https://github.com/mdn/mdn-community/discussions/categories/content-suggestions) et décrire le contenu suggéré et les raisons de cette suggestion (avec le plus de détails possible).
+Pour les nouvelles pages de référence ou les nouveaux guides, veuillez ouvrir une discussion [sur le dépôt `mdn-community` <sup>(angl.)</sup>](https://github.com/mdn/mdn-community/discussions/categories/content-suggestions) et décrire le contenu suggéré et les raisons de cette suggestion (avec le plus de détails possible).
 
 Pour suggérer des projets plus vastes, comme l'écriture de nouvelles sections, veuillez vous référer aux [critères d'inclusion](/fr/docs/MDN/Writing_guidelines/Criteria_for_inclusion). Cette page décrit comment faire dans ce cas.
 
 ## Sujets pertinents pour MDN
 
-MDN documente en général les technologies web ouvertes. Cela inclut les fonctionnalités qui peuvent être utilisées par les développeuses et développeurs web pour créer des sites et applications web.
+MDN documente en général les technologies web ouvertes. Cela inclut les fonctionnalités qui peuvent être utilisées par les développeur·euse·s web pour créer des sites et applications web.
 
-Si une fonctionnalité est implémentée par plusieurs navigateurs et acceptée comme standard ou en voie de standardisation, sa documentation a toute sa place sur MDN. Si une fonctionnalité est encore expérimentale et pas implémentée par plusieurs navigateurs ou si elle est sujette à changements, sa documentation pourra être incluse sur MDN, mais ne sera pas considérée comme prioritaire.
+Si une fonctionnalité est implémentée par plusieurs navigateurs et acceptée comme standard ou en voie de standardisation, sa documentation a toute sa place sur MDN. Si une fonctionnalité est encore expérimentale et pas implémentée par plusieurs navigateurs ou si elle est sujette à changements, sa documentation peut être incluse sur MDN, mais n'est pas considérée comme prioritaire.
 
 Autrement dit, les technologies web qui peuvent être documentées sur MDN devraient respecter les critères suivants&nbsp;:
 
 - Être en voie de standardisation.
-- Être spécifiée par un organisme de spécification reconnu.
+- Être définie par un organisme de spécification reconnu.
 - Être implémentée par au moins un moteur de rendu.
 - Être diffusée par une version de navigateur stable.
 
@@ -85,13 +86,13 @@ Nous ne documentons pas une nouvelle technologie si&nbsp;:
 
 ## Les sujets qui n'ont pas leur place sur MDN
 
-En règle générale, tout ce qui n'est pas standardisé de façon ouverte pour le Web n'a pas sa place sur MDN. Les publicités commerciales et autres contenus hors-sujet ne seront jamais acceptés sur le site. Toute personne qui contribue en soumettant du spam à plusieurs reprises pourra être bannie à la discrétion de l'équipe MDN employée par Mozilla.
+En règle générale, tout ce qui n'est pas standardisé de façon ouverte pour le Web n'a pas sa place sur MDN. Les publicités commerciales et autres contenus hors-sujet ne sont jamais acceptés sur le site. Toute personne qui contribue en soumettant du spam à plusieurs reprises peut être bannie à la discrétion de l'équipe MDN employée par Mozilla.
 
 Voici différents exemples de sujets non-pertinents pour MDN&nbsp;:
 
 - Les technologies qui ne sont pas exposées sur le Web et qui sont spécifiques à un navigateur.
 - Les technologies qui ne sont pas relatives au Web.
-- La documentation pour les utilisateurs finaux des sites ou des navigateurs. Ainsi, pour la documentation des produits Mozilla, [celle-ci sera sur le site de support de Mozilla](https://support.mozilla.org).
+- La documentation pour les utilisateur·ice·s finaux des sites ou des navigateurs. Ainsi, pour la documentation des produits Mozilla, [celle-ci est sur le site de support de Mozilla <sup>(angl.)</sup>](https://support.mozilla.org).
 - Des liens externes d'autopromotion. Veuillez suivre [le guide stylistique](/fr/docs/MDN/Writing_guidelines/Writing_style_guide#liens_externes) avant d'ajouter un lien externe.
 
 ### Quand retirer de la documentation
@@ -107,7 +108,7 @@ Voici quelques scénarios qui décrivent des situations où le contenu peut êtr
 - Des articles avec du contenu inapproprié pour MDN.
 - Des sections de MDN qui ne portent pas sur les technologies web ouvertes et qui sont un fardeau en termes de maintenance.
 
-Pour plus d'informations sur _comment_ supprimer des documents, voir [le guide sur la création, le déplacement et la suppression des pages](/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting).
+Pour plus d'informations sur _comment_ supprimer des documents, voir [le guide sur la création, le déplacement et la suppression des pages](/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting). Si vous souhaitez supprimer une section entière de contenu, consultez le guide [Retrait de contenu](/fr/docs/MDN/Writing_guidelines/Howto/Retiring_content).
 
 ## Types de documents autorisés sur MDN
 

@@ -37,7 +37,7 @@ new Promise(executor)
 ### 参数
 
 - `executor`
-  - : 在构造函数中执行的 {{jsxref("function")}}。它接收两个函数作为参数：`resolveFunc` 和 `rejectFunc`。`executor` 中抛出的任何错误都会导致 Promise 被拒绝，并且返回值将被忽略。`executor` 的语义将在下文详细介绍。
+  - : 在构造函数中执行的 {{jsxref("Operators/function", "function")}}。它接收两个函数作为参数：`resolveFunc` 和 `rejectFunc`。`executor` 中抛出的任何错误都会导致 Promise 被拒绝，并且返回值将被忽略。`executor` 的语义将在下文详细介绍。
 
 ### 返回值
 

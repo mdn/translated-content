@@ -5,13 +5,13 @@ l10n:
   sourceCommit: 2591a9b59de88401a2ef0fb7d0b8d0281e3f5376
 ---
 
-Cet article s'adresse aux développeurs qui souhaitent mettre à jour leur extension pour qu'elle fonctionne correctement avec Firefox 2.
+Cet article s'adresse aux développeur·euse·s qui souhaitent mettre à jour leur extension pour qu'elle fonctionne correctement avec Firefox 2.
 
 ## Étape 1 : Mise à jour du manifeste d'installation
 
 La première étape - pour de nombreuses extensions, la seule nécessaire - est de mettre à jour le fichier du [manifeste d'installation <sup>(angl.)</sup>](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests), install.rdf, pour annoncer la compatibilité avec Firefox 2.
 
-Trouvez la ligne indiquant la plus récente version de Firefox compatible. Pour Firefox 1.5, elle serait&nbsp;:
+Trouvez la ligne indiquant la plus récente version de Firefox compatible. Pour Firefox 1.5, elle est&nbsp;:
 
 ```xml
 <em:maxVersion>1.5.0.*</em:maxVersion>
@@ -37,6 +37,6 @@ Assurez-vous de tester en profondeur votre extension sous Firefox 2 avant de la 
 
 ## Étape 4 : Publication
 
-Mettez à jour la description de votre extension sur <https://addons.mozilla.org>, pour vous assurez que les utilisateur·ice·s la retrouveront.
+Mettez à jour la description de votre extension sur <https://addons.mozilla.org>, pour vous assurez que les utilisateur·ice·s la retrouvent.
 
-De plus, si le manifeste d'installation contient une [`updateURL` <sup>(angl.)</sup>](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests#updateurl), vérifiez qu'elle est valide pour que Firefox puisse automatiquement trouver les nouvelles versions de votre extension. De cette manière, Firefox proposera de l'installer automatiquement au premier lancement de l'extension après le passage à Firefox 2.
+De plus, si le manifeste d'installation contient une [`updateURL` <sup>(angl.)</sup>](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests#updateurl), vérifiez qu'elle est valide pour que Firefox puisse automatiquement trouver les nouvelles versions de votre extension. De cette manière, Firefox propose de l'installer automatiquement au premier lancement de l'extension après le passage à Firefox 2.

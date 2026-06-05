@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 El objeto **`RegExp`** se utiliza para hacer coincidir texto con un patrón.
 
-Para obtener una introducción a las expresiones regulares, lee el {{JSxRef("Guide/Regular_Expressions", "capítulo sobre expresiones regulares")}} en la {{JSxRef("Guide/Regular_Expressions", "Guía de JavaScript")}}.
+Para obtener una introducción a las expresiones regulares, lee el [capítulo sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) en la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ## Descripción
 
@@ -49,12 +49,12 @@ Ten en cuenta que varias de las propiedades de {{JSxRef("RegExp")}} tienen nombr
 
 ## Constructor
 
-- {{JSxRef("Objetos_globales/RegExp/RegExp", "RegExp()")}}
+- {{JSxRef("RegExp.RegExp", "RegExp()")}}
   - : Crea un nuevo objeto `RegExp`.
 
 ## Propiedades estáticas
 
-- {{JSxRef("RegExp.@@species", "get RegExp[@@species]")}}
+- {{JSxRef("RegExp/Symbol.species", "get RegExp[@@species]")}}
   - : La función constructora utilizada para crear objetos derivados.
 - {{JSxRef("RegExp.lastIndex")}}
   - : El índice en el que comenzará la siguiente búsqueda.
@@ -88,22 +88,22 @@ Ten en cuenta que varias de las propiedades de {{JSxRef("RegExp")}} tienen nombr
   - : Prueba una coincidencia en su parámetro de cadena.
 - {{JSxRef("RegExp.prototype.toString()")}}
   - : Devuelve una cadena que representa el objeto especificado. Redefine el método {{JSxRef("Object.prototype.toString()")}}.
-- {{JSxRef("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{JSxRef("RegExp/Symbol.match", "RegExp.prototype[@@match]()")}}
   - : Realiza la coincidencia con la cadena dada y devuelve el resultado de la coincidencia.
-- {{JSxRef("RegExp.prototype.@@matchAll()", "RegExp.prototype[@@matchAll]()")}}
+- {{JSxRef("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}
   - : Devuelve todas las coincidencias de la expresión regular con una cadena.
-- {{JSxRef("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{JSxRef("RegExp/Symbol.replace", "RegExp.prototype[@@replace]()")}}
   - : Reemplaza las coincidencias en una cadena dada con una nueva subcadena.
-- {{JSxRef("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- {{JSxRef("RegExp/Symbol.search", "RegExp.prototype[@@search]()")}}
   - : Busca la coincidencia en la cadena dada y devuelve el índice del patrón encontrado en la cadena.
-- {{JSxRef("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{JSxRef("RegExp/Symbol.split", "RegExp.prototype[@@split]()")}}
   - : Divide la cadena dada en un arreglo separando la cadena en subcadenas.
 
 ## Ejemplos
 
 ### Usar una expresión regular para cambiar el formato de los datos
 
-El siguiente script usa el método {{JSxRef("String.prototype.replace()", "replace()")}} de la instancia {{JSxRef("Objetos_globales/String", "String")}} para hacer coincidir una nombre en el formato _primero último_ y enviarlo en el formato _último, primero_.
+El siguiente script usa el método {{JSxRef("String.prototype.replace()", "replace()")}} de la instancia {{JSxRef("String")}} para hacer coincidir una nombre en el formato _primero último_ y enviarlo en el formato _último, primero_.
 
 En el texto de reemplazo, el script usa `$1` y `$2` para indicar los resultados de los correspondientes paréntesis coincidentes en el patrón de expresión regular.
 
@@ -142,7 +142,7 @@ s.match(/sí[^]*día/);
 
 ### Usar una expresión regular con la bandera pegajosa
 
-La bandera {{JSxRef("Objetos_globales/RegExp/sticky", "sticky")}} indica que la expresión regular realiza una coincidencia permanente en la cadena de destino al intentar hacer coincidir a partir de {{JSxRef("RegExp.prototype.lastIndex")}}.
+La bandera {{JSxRef("RegExp.sticky", "sticky")}} indica que la expresión regular realiza una coincidencia permanente en la cadena de destino al intentar hacer coincidir a partir de {{JSxRef("RegExp.prototype.lastIndex")}}.
 
 ```js
 let str = "#foo#";
@@ -194,7 +194,7 @@ console.log(regex.lastIndex); // registra '15'
 // y así sucesivamente
 ```
 
-La función {{JSxRef("Guide/Regular_Expressions/Unicode_Property_Escapes", "Escapes de propiedad Unicode")}} presenta una solución, al permitir una declaración tan simple como `\p{scx=Cyrl}`.
+La función [Escapes de propiedad Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) presenta una solución, al permitir una declaración tan simple como `\p{scx=Cyrl}`.
 
 ### Extraer el nombre de subdominio de la URL
 
@@ -236,7 +236,7 @@ Ten en cuenta que, debido a la compatibilidad web, `RegExp.$N` seguirá devolvie
 
 ## Ve también
 
-- El capítulo de {{JSxRef("Guide/Regular_Expressions", "Expresiones regulares")}} en la {{JSxRef("Guide", "Guía de JavaScript")}}
+- El capítulo de [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) en la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide)
 - {{JSxRef("String.prototype.match()")}}
 - {{JSxRef("String.prototype.replace()")}}
 - {{JSxRef("String.prototype.split()")}}
