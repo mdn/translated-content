@@ -52,9 +52,9 @@ l10n:
 > Varias llamadas a macros aparecen en la parte superior de la sección de contenido (inmediatamente debajo del front matter de la página).
 > El conjunto de herramientas (toolchain) añade automáticamente estas macros (no es necesario añadirlas ni eliminarlas):
 >
-> - `\{{SeeCompatTable}}`: Esta macro genera un banner de **Experimental**, que indica que la tecnología es [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   Si la tecnología es experimental y está oculta detrás de una preferencia en Firefox, también debes completar una entrada para ella en la página [Características experimentales en Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}`: Esta macro genera un banner de **Obsoleto (Deprecated)**, que indica que el uso de la tecnología está [desaconsejado](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
+> - `\{{SeeCompatTable}}`: Esta macro genera un banner de **Experimental**, que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
+>   Si la tecnología es experimental y está oculta detrás de una preferencia en Firefox, también debes completar una entrada para ella en la página [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
+> - `\{{Deprecated_Header}}`: Esta macro genera un banner de **Obsoleto (Deprecated)**, que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — esto genera un banner de **No estándar (Non-standard)** que indica que la característica no forma parte de ninguna especificación.
 >
 > Debes actualizar o eliminar las siguientes macros de acuerdo con los consejos a continuación:
