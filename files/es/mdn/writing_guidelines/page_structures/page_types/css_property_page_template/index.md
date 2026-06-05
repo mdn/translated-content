@@ -43,7 +43,7 @@ l10n:
 >   - : Reemplaza el valor de marcador de posición <code>css.properties.NameOfTheProperty</code> con la cadena de consulta (query string) para la propiedad en el [repositorio de datos de compatibilidad de navegadores (Browser compat data repo)](https://github.com/mdn/browser-compat-data/tree/main/css/properties). Revisa la sección _Otras macros en la página_ de este bloque de notas para ver cómo se utiliza este par clave-valor para generar contenido para las secciones _Especificaciones_ y _Compatibilidad con navegadores_.
 > - **sidebar**
 >   - : Esto es `cssref` para todas las páginas de guía y referencia de CSS.
->     Consulta [Estructuras de página: Barras laterales](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) para más detalles.
+>     Consulta [Estructuras de página: Barras laterales](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars) para más detalles.
 >
 > ---
 >
