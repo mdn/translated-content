@@ -2,9 +2,8 @@
 title: Guide pour rédiger des exemples de code CSS
 short-title: Exemples CSS
 slug: MDN/Writing_guidelines/Code_style_guide/CSS
-original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 l10n:
-  sourceCommit: 359d3c9cea9b2caa691c63ed3b01714ad4416372
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Les consignes suivantes expliquent comment rédiger des exemples de code CSS pour MDN Web Docs.
@@ -21,7 +20,7 @@ Prettier formate tout le code et maintient un style cohérent. Cependant, il exi
 
 ### Planifiez votre CSS
 
-Avant de vous lancer dans l'écriture de gros morceaux de CSS, planifiez soigneusement vos styles. Quels styles généraux seront nécessaires, quelles mises en page différentes devrez-vous créer, quelles redéfinitions spécifiques devront être créées et seront-elles réutilisables&nbsp;? Par-dessus tout, vous devez essayer d'**éviter trop de redéfinitions**. Si vous vous retrouvez constamment à écrire des styles pour ensuite les annuler quelques règles plus bas, vous devez probablement repenser votre stratégie.
+Avant de vous lancer dans l'écriture de gros morceaux de CSS, planifiez soigneusement vos styles. Quels styles généraux sont nécessaires, quelles mises en page différentes devez-vous créer, quelles redéfinitions spécifiques doivent être créées et sont-elles réutilisables&nbsp;? Par-dessus tout, vous devez essayer **d'éviter trop de redéfinitions**. Si vous vous retrouvez constamment à écrire des styles pour ensuite les annuler quelques règles plus bas, vous devez probablement repenser votre stratégie.
 
 ### Utilisez les fonctionnalités CSS modernes lorsque c'est possible
 
@@ -33,13 +32,13 @@ Cette règle ne s'applique pas à la fonctionnalité CSS documentée sur la page
 
 Il existe des principes universellement reconnus qu'il n'est pas nécessaire d'énumérer ici&nbsp;:
 
-- Assurez-vous que votre code ne comporte pas d'erreurs de syntaxe, ce qui peut entraîner l'[ignorance de la propriété ou de la déclaration](/fr/docs/Web/CSS/Guides/Syntax/Error_handling). Une syntaxe standard non encore implémentée est acceptable, si elle respecte notre [règle générale sur les fonctionnalités CSS modernes](#utilisez_les_fonctionnalités_css_modernes_lorsque_cest_possible).
-- N'utilisez pas de fonctionnalités [non standard, obsolètes ou dépréciées](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete). Cette règle s'étend aux [fonctionnalités préfixées](/fr/docs/Glossary/Vendor_Prefix#préfixes_css)&nbsp;: utilisez l'alternative préfixée _uniquement si_ la fonctionnalité standard n'est pas disponible (voir notre [règle générale sur les fonctionnalités CSS modernes](#utilisez_les_fonctionnalités_css_modernes_lorsque_cest_possible)). Si le lecteur a besoin d'une compatibilité plus large, il peut soit ajouter lui-même le préfixe de repli, soit utiliser un postprocesseur CSS.
-- N'écrivez pas de code redondant ou non fonctionnel, ce qui est souvent le signe de bogues ou de restes de refactorisation. Cela inclut les propriétés répétées dans une déclaration, les déclarations vides, les commentaires vides ou les sélecteurs qui ne correspondent à aucun élément.
+- Assurez-vous que votre code ne comporte pas d'erreurs de syntaxe, ce qui peut entraîner [l'ignorance de la propriété ou de la déclaration](/fr/docs/Web/CSS/Guides/Syntax/Error_handling). Une syntaxe standard non encore implémentée est acceptable, si elle respecte notre [règle générale sur les fonctionnalités CSS modernes](#utilisez_les_fonctionnalités_css_modernes_lorsque_cest_possible).
+- N'utilisez pas de fonctionnalités [non standard, obsolètes ou dépréciées](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete). Cette règle s'étend aux [fonctionnalités préfixées](/fr/docs/Glossary/Vendor_Prefix#préfixes_css)&nbsp;: utilisez l'alternative préfixée _uniquement si_ la fonctionnalité standard n'est pas disponible (voir notre [règle générale sur les fonctionnalités CSS modernes](#utilisez_les_fonctionnalités_css_modernes_lorsque_cest_possible)). Si le·la lecteur·ice a besoin d'une compatibilité plus large, il peut soit ajouter lui-même le préfixe de repli, soit utiliser un post-processeur CSS.
+- N'écrivez pas de code redondant ou non fonctionnel, ce qui est souvent le signe de bogues ou de restes de re-factorisation. Cela inclut les propriétés répétées dans une déclaration, les déclarations vides, les commentaires vides ou les sélecteurs qui ne correspondent à aucun élément.
 
 ### N'utilisez pas de préprocesseurs
 
-N'utilisez pas la syntaxe des préprocesseurs, comme [Sass <sup>(angl.)</sup>](https://sass-lang.com/), [Less <sup>(angl.)</sup>](https://lesscss.org/) ou [Stylus <sup>(angl.)</sup>](https://stylus-lang.com/), dans les exemples de code. Sur MDN Web Docs, nous documentons le langage CSS classique. L'utilisation de préprocesseurs ne fait qu'élever le niveau de compréhension nécessaire pour les exemples, ce qui peut potentiellement perdre les lecteurs.
+N'utilisez pas la syntaxe des préprocesseurs, comme [Sass <sup>(angl.)</sup>](https://sass-lang.com/), [Less <sup>(angl.)</sup>](https://lesscss.org/) ou [Stylus <sup>(angl.)</sup>](https://stylus-lang.com/), dans les exemples de code. Sur MDN Web Docs, nous documentons le langage CSS classique. L'utilisation de préprocesseurs ne fait qu'élever le niveau de compréhension nécessaire pour les exemples, ce qui peut potentiellement perdre les lecteur·ice·s.
 
 ### N'utilisez pas de méthodologies CSS spécifiques
 
@@ -149,7 +148,7 @@ En revanche, si votre règle `@keyframes` contient plus que les frames de début
 
 ### Gestion de la spécificité
 
-Si possible, évitez les surprises liées à l'augmentation ou la diminution de la spécificité, comme l'utilisation excessive de la pseudo-classe [`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where) ou la duplication de sélecteurs. Privilégiez plutôt les techniques suivantes pour gérer la spécificité&nbsp;:
+Si possible, évitez les surprises liées à l'augmentation ou la diminution de la spécificité, comme l'utilisation excessive de la pseudo-classe {{CSSxRef(":where()")}} ou la duplication de sélecteurs. Privilégiez plutôt les techniques suivantes pour gérer la spécificité&nbsp;:
 
 - Modifier l'ordre des déclarations pour tirer parti de la cascade
 - Réorganiser les propriétés dans chaque déclaration afin qu'elles ne se surchargent pas mutuellement
@@ -230,7 +229,7 @@ Les lignes vides entre les propriétés doivent être utilisées avec parcimonie
   margin: 1em 1em 1em 1em;
   ```
 
-- Rédigez les propriétés raccourcies dans l'[ordre canonique](/fr/docs/Glossary/Canonical_order). Écrivez ceci&nbsp;:
+- Rédigez les propriétés raccourcies dans {{Glossary("Canonical_order", "l'ordre canonique")}}. Écrivez ceci&nbsp;:
 
   ```css example-good
   /* largeur style couleur */
@@ -273,7 +272,7 @@ Utilisez les classes pour la mise en forme, et réservez les ID à des usages no
 
 ### Anciens sélecteurs de pseudo-éléments
 
-Les pseudo-éléments `::before`, `::after`, `::first-letter` et `::first-line` peuvent aussi s'écrire avec un seul deux-points (comme `:before`). Évitez la syntaxe à un seul deux-points car elle est déconseillée et pourrait être confondue avec une [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) (`:hover`) par les lecteurs.
+Les pseudo-éléments `::before`, `::after`, `::first-letter` et `::first-line` peuvent aussi s'écrire avec un seul deux-points (comme `:before`). Évitez la syntaxe à un seul deux-points, car elle est déconseillée et peut être confondue avec une [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) (`:hover`) par les lecteur·ice·s.
 
 ### Listes de sélecteurs complexes
 
@@ -346,7 +345,7 @@ h3 {
 
 ### Définir les familles de polices
 
-Lorsque vous indiquez une famille de polices, ajoutez toujours un [nom de famille générique](/fr/docs/Web/CSS/Reference/Properties/font-family#generic-name) en dernier recours. Cela garantit que si la police spécifiée n'est pas disponible, le navigateur affichera une police de remplacement plus appropriée. Les [polices sûres pour le Web](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals#polices_sûres_pour_le_web) sont exemptées de cette règle.
+Lorsque vous indiquez une famille de polices, ajoutez toujours un [nom de famille générique](/fr/docs/Web/CSS/Reference/Properties/font-family#generic-name) en dernier recours. Cela garantit que si la police définie n'est pas disponible, le navigateur affiche une police de remplacement plus appropriée. Les [polices sûres pour le Web](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals#polices_sûres_pour_le_web) sont exemptées de cette règle.
 
 ```css example-bad
 body {
@@ -356,7 +355,8 @@ body {
 
 ```css example-good
 body {
-  /* La famille "sans-serif" n'est pas nécessaire car Arial est une police sûre pour le Web */
+  /* La famille "sans-serif" n'est pas nécessaire, car Arial est une
+     police sûre pour le Web */
   font-family: "Helvetica", "Arial";
 }
 
@@ -419,7 +419,7 @@ Si vous avez différents styles alternatifs sélectionnés par des seuils de req
 
 ### Requêtes de média « mobile first »
 
-Dans une feuille de style qui contient des styles [media query](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour différentes tailles cibles de zone d'affichage (<i lang="en">viewport</i>), incluez d'abord la mise en forme pour les écrans étroits/mobiles avant toute autre media query. Ajoutez la mise en forme pour les tailles de zone d'affichage plus larges via des media queries successives. Suivre cette règle présente de nombreux avantages expliqués dans [Conception réactive](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+Dans une feuille de style qui contient des styles de [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour différentes tailles cibles de zone d'affichage (<i lang="en">viewport</i>), incluez d'abord la mise en forme pour les écrans étroits/mobiles avant toute autre requête de média. Ajoutez la mise en forme pour les tailles de zone d'affichage plus larges avec des requêtes de média successives. Suivre cette règle présente de nombreux avantages expliqués dans [Conception réactive](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 ```css example-good
 /* Mise en page CSS par défaut pour les écrans étroits */

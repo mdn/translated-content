@@ -2,10 +2,10 @@
 title: Bannières et avis
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 l10n:
-  sourceCommit: 1717097c927b0399fd143a6ab22631245e9da1cd
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-Bannières et avis sont affichés sur certaines pages, en particulier dans la référence des API, afin de mettre en avant des éléments importants qui influencent la façon dont le contenu décrit sera utilisé.
+Bannières et avis sont affichés sur certaines pages, en particulier dans la référence des API, afin de mettre en avant des éléments importants qui influencent la façon dont le contenu décrit est utilisé.
 Par exemple, les bannières servent à signaler lorsqu'une interface, une méthode ou une propriété est obsolète et ne doit pas être utilisée en production, ou n'est disponible que dans un contexte sécurisé.
 
 Les bannières sont générées à l'aide de macros dans le contenu de la page.
@@ -46,10 +46,10 @@ Les macros suivantes sont ajoutées automatiquement au contenu afin de refléter
 [Mettez à jour le statut de la fonctionnalité dans le dépôt browser-compat-data](/fr/docs/MDN/Writing_guidelines/Page_structures/Feature_status#comment_mettre_a_jour_le_statut_dune_fonctionnalite) pour modifier ces valeurs.
 
 > [!NOTE]
-> Même si vous pouvez ajouter ou modifier ces macros manuellement dans le contenu, les valeurs qui ne correspondent pas aux données de compatibilité des navigateurs seront remplacées ou supprimées.
+> Même si vous pouvez ajouter ou modifier ces macros manuellement dans le contenu, les valeurs qui ne correspondent pas aux données de compatibilité des navigateurs sont remplacées ou supprimées.
 
 > [!NOTE]
-> Les pages qui comportent les bannières `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}` ou `\{{Non-standard_Header}}` auront aussi les statuts correspondants `experimental`, `deprecated` et `non-standard` dans les métadonnées de la page.
+> Les pages qui comportent les bannières `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}` ou `\{{Non-standard_Header}}` ont aussi les statuts correspondants `experimental`, `deprecated` et `non-standard` dans les métadonnées de la page.
 > Les métadonnées sont automatiquement mises à jour en même temps que les en-têtes.
 > Les macros de bannière ne dépendent pas de ces métadonnées de statut (mais pourraient un jour en être générées).
 
