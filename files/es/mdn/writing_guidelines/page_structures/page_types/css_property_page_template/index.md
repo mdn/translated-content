@@ -72,7 +72,7 @@ l10n:
 > - Secciones de Especificaciones y Compatibilidad con navegadores: La herramienta de compilación utiliza automáticamente el par clave-valor `browser-compat` del front matter de la página para insertar datos en las secciones _Especificaciones_ y _Compatibilidad con navegadores_ (reemplazando las macros `\{{Specifications}}` y `\{{Compat}}` en esas secciones, respectivamente).
 >
 >   Ten en cuenta que es posible que primero debas crear o actualizar una entrada para la propiedad y su especificación en nuestro <a href="[https://github.com/mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)">repositorio de datos de compatibilidad de navegadores</a>.
->   Consulta nuestra [guía de tablas de compatibilidad](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para obtener información sobre cómo añadir o editar entradas.
+>   Consulta nuestra [guía de tablas de compatibilidad](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para obtener información sobre cómo añadir o editar entradas.
 >
 > _Recuerda eliminar este bloque de notas antes de publicar._
 
