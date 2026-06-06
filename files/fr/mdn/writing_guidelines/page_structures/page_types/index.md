@@ -190,7 +190,7 @@ Par exemple, le type de données `<easing-function>` et la media query `prefers-
 
 #### Modèles
 
-- [Modèle de page de module CSS](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template)
+- [Modèle de page de module CSS](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template)
 
 ### Page de référence de fonctionnalité CSS
 
