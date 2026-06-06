@@ -1,5 +1,5 @@
 ---
-title: 101 Switching Protocol
+title: 101 Switching Protocols
 slug: Web/HTTP/Reference/Status/101
 l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
