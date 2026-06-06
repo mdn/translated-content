@@ -37,7 +37,7 @@ Cela peut sembler un peu étrange au début, mais plus vous le faites, plus vous
 - [<i lang="en">How to read web specs part I — or: WebVR, how do you work?</i> <sup>(angl.)</sup>](https://surma.dev/things/reading-specs/) explique comment lire la spécification WebVR en particulier, mais c'est une excellente introduction à la lecture des spécifications des API Web.
 - [<i lang="en">How to read web specs part IIa — or: ECMAScript Symbols</i> <sup>(angl.)</sup>](https://surma.dev/things/reading-specs-2/) deuxième partie du lien ci-dessus, contient des informations sur la compréhension de la spécification ECMAScript qui définit le langage JavaScript
 
-De plus, nous disposons du guide sur [les informations contenues dans un fichier WebIDL](/fr/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file), qui peut vraiment aider lors de la lecture des spécifications des API Web.
+De plus, nous disposons du guide sur [les informations contenues dans un fichier WebIDL](/fr/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file), qui peut vraiment aider lors de la lecture des spécifications des API Web.
 
 ## Explorer les fonctionnalités
 
@@ -52,7 +52,7 @@ Les différentes pages que vous devez rédiger à partir de zéro ou mettre à j
 
 ### Barres latérales
 
-Il est possible que les barres latérales des pages que vous écrivez doivent également être créées ou mises à jour. Pour savoir si c'est nécessaire et comment le faire, consultez le guide sur [les barres latérales](/fr/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars).
+Il est possible que les barres latérales des pages que vous écrivez doivent également être créées ou mises à jour. Pour savoir si c'est nécessaire et comment le faire, consultez le guide sur [les barres latérales](/fr/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars).
 
 ### Exemples de code
 
