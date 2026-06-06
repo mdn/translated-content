@@ -132,7 +132,7 @@ ol {
 
 この例のマークアップには、MDN の HTML、CSS、JavaScript の各ホームページから引用した複数の段落のコンテンツと、コンテナーの `column-wrap` プロパティの値を `nowrap` と `wrap` の間で切り替えるための JavaScript を使用した [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) 要素が含まれています。簡潔にするため、HTML と JavaScript は省略しています。
 
-```html hidden live-sample___wrap-nowrap
+```html-nolint hidden live-sample___wrap-nowrap
 <form>
   <label for="set-wrap"
     ><code>column-wrap</code> を <code>wrap</code> に設定</label
