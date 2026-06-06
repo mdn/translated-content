@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La valeur **`text-scale`** pour attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta#name) de l'élément HTML {{HTMLElement("meta")}} permet d'opter pour que l'élément racine {{HTMLElement("html")}} ait sa {{CSSxRef("font-size")}} initiale mise à l'échelle en fonction des paramètres de mise à l'échelle du texte au niveau du système d'exploitation et du navigateur.
+La valeur **`text-scale`** pour attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta#name) de l'élément HTML {{HTMLElement("meta")}} permet de configurer la page de manière à ce que la {{CSSxRef("font-size")}} initiale de l'élément racine {{HTMLElement("html")}} soit proportionnelle aux paramètres d'échelle du texte définis au niveau du système d'exploitation et du navigateur.
 
 > [!WARNING]
 > Si vous incluez `<meta name="text-scale" content="scale" />` sur votre site Web pour activer ce comportement de mise à l'échelle du texte, vous devez tester qu'il prend en charge les tailles de texte jusqu'au facteur de mise à l'échelle maximale pour vos plateformes cibles. Cela varie généralement de 200% à plus de 300% sur les plateformes mobiles, certaines fonctionnalités d'accessibilité permettant même une mise à l'échelle du texte encore plus grande. Assurez-vous que votre site Web ne semble pas cassé pour les utilisateur·ice·s définissant des préférences de taille de police du système d'exploitation plus grandes ou plus petites.
