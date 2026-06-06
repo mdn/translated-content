@@ -232,7 +232,7 @@ MDN の HTML、CSS、JavaScript の各ホームページから引用した複数
   <strong>カスケーディングスタイルシート</strong> (Cascading Style Sheets、<strong>CSS</strong>) は<a href="/ja/docs/Web/API/StyleSheet">スタイルシート</a>言語であり、<a href="/ja/docs/Web/HTML">HTML</a> や <a href="/ja/docs/Web/XML/Guides/XML_introduction">XML</a>（派生言語である <a href="/ja/docs/Web/SVG">SVG</a>、<a href="/ja/docs/Web/MathML">MathML</a>、<a href="/ja/docs/Glossary/XHTML">XHTML</a> などを含む）で記述された文書の体裁や見栄えを表現するために用いられます。CSS は、要素が画面上で (あるいは紙や音声といった別のメディア上で) どのように表現されるのかを定義します。
 </p>
 <p>
-  CSS は<strong>オープンウェブ</strong>の核となる言語に含まれており、<a href="https://www.w3.org/Style/CSS/#specs" class="external" target="_blank" 
+  CSS は<strong>オープンウェブ</strong>の核となる言語に含まれており、<a href="https://www.w3.org/Style/CSS/#specs" class="external" target="_blank"
     >W3C 標準仕様</a
   >によってウェブブラウザー間で標準化されています。以前は CSS 仕様書の様々な部分が同時に開発されており、最新勧告の版数付けができていました。皆さんも CSS1、CSS2.1、また CSS3 についても聞いたことがあるでしょう。CSS3 や CSS4 にはなりません。すべて単なる "CSS" と、バージョン番号を持つ個々の CSS モジュールとなりました。
 </p>
