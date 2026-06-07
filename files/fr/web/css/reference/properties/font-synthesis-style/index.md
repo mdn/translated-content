@@ -3,7 +3,7 @@ title: Propriété CSS `font-synthesis-style`
 short-title: font-synthesis-style
 slug: Web/CSS/Reference/Properties/font-synthesis-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-synthesis-style`** permet de définir si le navigateur peut synthétiser la variante oblique lorsqu'elle n'est pas définie dans la famille de polices.
@@ -120,10 +120,10 @@ p {
 @supports not (font-synthesis-style: oblique-only) {
   body::before {
     content: "Your browser doesn't support the 'oblique-only' value.";
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 }
 ```

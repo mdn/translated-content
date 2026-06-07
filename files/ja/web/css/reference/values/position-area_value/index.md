@@ -1,9 +1,9 @@
 ---
-title: <position-area>
+title: CSS `<position-area>` データ型
+short-title: <position-area>
 slug: Web/CSS/Reference/Values/position-area_value
-original_slug: Web/CSS/position-area_value
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 **`<position-area>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、**位置指定領域グリッド**（中心セルがアンカー要素となる 3x3 グリッド）のセルまたはまたがらせるセルを定義します。
@@ -14,9 +14,9 @@ l10n:
 
 ```plain
 <position-area> = [
-  [ left | center | right | span-left | span-right | x-start | x-end | span-x-start | span-x-end | x-self-start | x-self-end | span-x-self-start | span-x-self-end | span-all ]
+  [ left | center | right | span-left | span-right | x-start | x-end | span-x-start | span-x-end | self-x-start | self-x-end | span-self-x-start | span-self-x-end | span-all ]
 ||
-  [ top | center | bottom | span-top | span-bottom | y-start | y-end | span-y-start | span-y-end | y-self-start | y-self-end | span-y-self-start | span-y-self-end | span-all ]
+  [ top | center | bottom | span-top | span-bottom | y-start | y-end | span-y-start | span-y-end | self-y-start | self-y-end | span-self-y-start | span-self-y-end | span-all ]
 |
   [ block-start | center | block-end | span-block-start | span-block-end | span-all ]
 ||
@@ -36,9 +36,9 @@ l10n:
 
 位置領域は**位置領域グリッド**という概念に基づいて動作します。これは 4 本のグリッド線（それぞれの軸に 2 本ずつ）で構成される 3x3 のタイルグリッドであり、アンカー要素が中央タイルです。
 
-![下記で説明する位置領域グリッド](/ja/docs/Web/CSS/CSS_anchor_positioning/Using/position-area.svg)
+![下記で説明する位置領域グリッド](position-area.png)
 
-位置指定された要素の `position-area` プロパティの値として使用される場合、中央タイルのサイズは要素の既定のアンカー要素の[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)によって定義されます。グリッドの外縁のサイズは、位置指定要素の包含ブロックによって定義されます。論理キータームは、`self-*`キータームを除き、一般的に包含ブロックの書字モードと方向に基づきます。`self-*` キータームは、位置指定要素から計算されます。
+位置指定された要素の `position-area` プロパティの値として使用される場合、中央タイルの寸法は、要素のデフォルトのアンカー要素の[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)によって定義されます。グリッドの外縁の寸法は、位置指定要素の包含ブロックによって定義されます。論理的キータームは、一般的に包含ブロックの書字モードと方向に基づきますが、`self-*` キータームは、アンカー位置指定要素から計算されます。
 
 グリッドタイルは、複数の行と列に分割されています。
 
@@ -56,7 +56,7 @@ position-area: center end;
 position-area: block-start center;
 position-area: inline-start block-end;
 position-area: x-start y-end;
-position-area: center y-self-end;
+position-area: center self-y-end;
 
 /* 例：要素を 2 つのタイルにまたがらせるように配置する 2 つのキーワード */
 position-area: top span-left;
@@ -68,7 +68,7 @@ position-area: y-start span-x-end;
 /* 例：要素を 3 つのタイルにまたがらせるように配置する 2 つのキーワード */
 position-area: top span-all;
 position-area: block-end span-all;
-position-area: x-self-start span-all;
+position-area: self-x-start span-all;
 
 /* 例：2 つ目のキーワードが暗黙的に含まれる 1 つのキーワード */
 position-area: top; /* top span-all と同等 */
@@ -91,7 +91,7 @@ position-area: end; /* end end と同等 */
 
 ## 物理的グリッドキーワード
 
-物理的グリッドキーワードは、物理的な値を用いて`position-area`グリッドのセルまたはセクションを指定します。これらの値は {{cssxref("writing-mode")}} や {{cssxref("direction")}} の設定 の影響を受けません。
+物理的グリッドキーワードは、物理的な値を用いて `position-area` グリッドのセルまたは区間を指定します。これらの値は {{cssxref("writing-mode")}} や {{cssxref("direction")}} の設定の影響を受けません。
 
 物理的な行と列のキーワードでは、以下の 2 つのリストからそれぞれの 1 つのキーワードを選択し、単一の特定のグリッドタイルを指定できます。
 
@@ -124,15 +124,15 @@ position-area: end; /* end end と同等 */
 > [!NOTE]
 > 行または列のキーワードに不適切なまたがるキーワードをつけて組み合わせようとすると、不正な値になります。例えば、`right span-right`は無効です。中央右のグリッドタイルを選択した後、さらに右にまたがらせることはできません。
 
-### 物理的グリッドキーワードの既定値
+### 物理的グリッドキーワードのデフォルト値
 
 `position-area` の値に物理キーワードが1つだけ指定されている場合、もう一方の値は以下のように暗黙的に指定されます。
 
 - `left`, `right`, `top`, `bottom`
-  - : もう一方の値は既定で [`span-all`](#span-all_2) となり、要素が最初に配置された列または行の 3 つのタイルすべてにまたがるようにします。例えば、 `left` は `left span-all` と同等です。
+  - : もう一方の値はデフォルトで [`span-all`](#span-all_2) となり、要素が最初に配置された列または行の 3 つのタイルすべてにまたがるようにします。例えば、 `left` は `left span-all` と同等です。
 
 - `center`, `span-left`, `span-right`, `span-top`, `span-bottom`
-  - : もう一方の値は既定で `center` となります。例えば、`span-left` は `center span-left` と同等であり、`center` は `center center` と同等です。
+  - : もう一方の値はデフォルトで `center` となります。例えば、`span-left` は `center span-left` と同等であり、`center` は `center center` と同等です。
 
 ## 論理的グリッドキーワード
 
@@ -222,21 +222,21 @@ position-area: end; /* end end と同等 */
 > [!NOTE]
 > 行または列のキーワードを不適切なまたがるキーワードと組み合わせようとすると、不正なプロパティ値となります。例えば、 `block-end span-block-end` は無効です。中央のブロック末尾行を選択した後、ブロック末尾方向を超えてさらに 1 タイル分またがらせることはできません。
 
-### 論理的グリッドキーワードの既定値
+### 論理的グリッドキーワードのデフォルト値
 
 論理的な `<position-area>` キーワードが一つだけ指定された場合、もう一つの値は次のように暗黙的に指定されます。
 
 - `start`, `end`, `self-start`, `self-end`
-  - : もう一方の値は、既定では最初の値と同じ値が設定され、先頭の行および列、または末尾の行および列のグリッドセルが選択されます。
+  - : もう一方の値は、デフォルトでは最初の値と同じ値が設定され、先頭の行および列、または末尾の行および列のグリッドセルが選択されます。
 
 - `span-start`, `span-self-start`, `span-end`, `span-self-end`
-  - : もう一方の値は既定で `center` になります。例えば、`span-start` は `span-start center` と同等です。
+  - : もう一方の値はデフォルトで `center` になります。例えば、`span-start` は `span-start center` と同等です。
 
 - `block-start`, `block-end`, `inline-start`, `inline-end`
-  - : もう一方の値は既定で [`span-all`](#span-all_2) となり、設定された列または行の 3 つのタイルすべてにまたがります。例えば、`block-start` は `block-start span-all` と同等です。
+  - : もう一方の値はデフォルトで [`span-all`](#span-all_2) となり、設定された列または行の 3 つのタイルすべてにまたがります。例えば、`block-start` は `block-start span-all` と同等です。
 
 - `span-block-start`, `span-block-end`, `span-inline-start`, `span-inline-end`
-  - : もう一方の値は既定で `center` になります。例えば、`span-inline-start` は `span-inline-start center` と同等です。
+  - : もう一方の値はデフォルトで `center` になります。例えば、`span-inline-start` は `span-inline-start center` と同等です。
 
 ## 座標グリッドキーワード
 
@@ -249,7 +249,7 @@ position-area: end; /* end end と同等 */
 
 座標の行と列のキーワードでは、x 軸から 1 つのキーワード、y 軸から 1 つのキーワードを指定します。これにより、単一の特定のグリッドタイルを定義できます。
 
-x 軸のキーワードには以下のものがあります。
+x 軸のキーワードには次のものがあります。
 
 - `x-start`
   - : 包含ブロックの書字方向から計算される、グリッドの x 軸方向の先頭タイル。
@@ -257,16 +257,16 @@ x 軸のキーワードには以下のものがあります。
 - `x-end`
   - : 包含ブロックの書字方向から計算される、グリッドの x 軸方向の末尾タイル。
 
-- `x-self-start`
+- `self-x-start`
   - : この要素自体の書字方向から計算される、グリッドの x 軸方向の先頭タイル。
 
-- `x-self-end`
+- `self-x-end`
   - : この要素自体の書字方向から計算される、グリッドの x 軸方向の末尾タイル。
 
 - `center`
   - : この要素自体の書字方向から計算される、グリッドの x 軸方向の中央タイル。
 
-The y-axis keywords include:
+y 軸のキーワードには次のものがあります。
 
 - `y-start`
   - : 包含ブロックの書字方向から計算される、グリッドの y 軸方向の先頭タイル。
@@ -274,16 +274,16 @@ The y-axis keywords include:
 - `y-end`
   - : 包含ブロックの書字方向から計算される、グリッドの y 軸方向の末尾タイル。
 
-- `y-self-start`
+- `self-y-start`
   - : この要素自体の書字方向から計算される、グリッドの y 軸方向の先頭タイル。
 
-- `y-self-end`
+- `self-y-end`
   - : この要素自体の書字方向から計算される、グリッドの y 軸方向の末尾タイル。
 
 - `center`
   - : この要素自体の書字方向から計算される、グリッドの y 軸方向の中央タイル。
 
-例えば、`x-end y-start` と `x-self-end y-self-start` はどちらも、x軸の末尾、かつ y軸の先頭のグリッドセルを選択します。`writing-mode: horizontal-tb` が設定されている場合、このアンカーの右上のセルになります。一方、`writing-mode: vertical-rl` が設定されている場合は左上のセルになります。
+例えば、`x-end y-start` と `self-x-end self-y-start` はどちらも、x 軸の末尾、かつ y 軸の先頭のグリッドセルを選択します。`writing-mode: horizontal-tb` が設定されている場合、このアンカーの右上のセルになります。一方、`writing-mode: vertical-rl` が設定されている場合は左上のセルになります。
 
 ### またがる座標キーワード
 
@@ -306,15 +306,15 @@ The y-axis keywords include:
 > [!NOTE]
 > 仕様書では座標の `self `のまたがるキーワードを別個に定義していませんが、これらは不要です。またがるキーワードは、座標行キーワードと行や列キーワードの両方で使用できます。
 
-### 座標グリッドキーワードの既定値
+### 座標グリッドキーワードのデフォルト値
 
 `<position-area>` で単一の座標グリッドのキーワードのみが指定された場合、それ以外にも値は次の通り暗黙的に指定されます。
 
-- `x-start`, `x-self-start`, `x-end`, `x-self-end`, `y-start`, `y-self-start`, `y-end`, `y-self-end`
-  - : もう一方の値は既定で [`span-all`](#span-all_2) となり、最初に配置された列または行の 3 つのタイルすべてにまたがるグリッドタイルを選択します。例えば、`x-start` は `x-start span-all` と同等です。
+- `x-start`, `self-x-start`, `x-end`, `self-x-end`, `y-start`, `self-y-start`, `y-end`, `self-y-end`
+  - : もう一方の値はデフォルトで [`span-all`](#span-all_2) となり、最初に配置された列または行の 3 つのタイルすべてにまたがるグリッドタイルを選択します。例えば、`x-start` は `x-start span-all` と同等です。
 
-- `span-x-start`, `span-x-end`, `span-y-start`, `span-y-end`
-  - : もう一方の値は既定で `center` になります。例えば、`span-start` は `span-start center` と同等です。
+- `span-x-start`, `span-x-end`, `span-y-start`, `span-y-end`, `span-self-x-start`, `span-self-x-end`, `span-self-y-end`, `span-self-y-start`
+  - : もう一方の値はデフォルトで `center` になります。例えば、`span-start` は `span-start center` と同等です。
 
 ## `span-all`
 
@@ -339,7 +339,7 @@ The y-axis keywords include:
 - {{cssxref("position-area")}}
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
-- [`anchor()`](/ja/docs/Web/CSS/Reference/Values/anchor) function
+- [`anchor()`](/ja/docs/Web/CSS/Reference/Values/anchor) 関数
 - [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイド
 - [オーバーフロー時の代替処理と条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)ガイド
 - [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール

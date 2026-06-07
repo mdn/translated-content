@@ -34,22 +34,22 @@ browser.bookmarks.onMoved.hasListener(listener)
 - `callback`
   - : イベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
     - `id`
-      - : 移動した要素の ID を表す {{jsxref("string")}} です。
+      - : 移動した要素の ID を表す {{jsxref("String")}} です。
 
     <!---->
     - `moveInfo`
-      - : 移動に関する詳細を含んだ {{jsxref("object")}} です。
+      - : 移動に関する詳細を含んだ {{jsxref("Object")}} です。
 
 ## 付随するオブジェクト
 
 ### moveInfo
 
 - `parentId`
-  - : 新しい親フォルダーを表す {{jsxref("string")}}
+  - : 新しい親フォルダーを表す {{jsxref("String")}}
 - `index`
   - : この要素が親から見て何番目にあるかを表す整数
 - `oldParentId`
-  - : 移動前の親フォルダーを表す {{jsxref("string")}}
+  - : 移動前の親フォルダーを表す {{jsxref("String")}}
 - `oldIndex`
   - : `移動前において、`この要素が親から見て何番目にあったかを表す整数
 

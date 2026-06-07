@@ -28,7 +28,7 @@ O `TypeError` é ativado quando um operador ou argumento passado para uma funç�
 
 ## Propriedades
 
-- {{jsxref("TypeError.prototype")}}
+- {{jsxref("TypeError")}}
   - : Permite a adição de propriedades para o objeto `TypeError`.
 
 ## Métodos
@@ -90,4 +90,4 @@ try {
 ## Veja também
 
 - {{jsxref("Error")}}
-- {{jsxref("TypeError.prototype")}}
+- {{jsxref("TypeError")}}

@@ -3,7 +3,7 @@ title: Pseudo-élément CSS `::view-transition-group()`
 short-title: ::view-transition-group()
 slug: Web/CSS/Reference/Selectors/::view-transition-group
 l10n:
-  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
+  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::view-transition-group()`** représente un groupe instantané de transition de vue.
@@ -45,7 +45,7 @@ De plus, la transformation de l'élément est animée de la transformation de l'
 - `*`
   - : Le [sélecteur universel (`*`)](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors)&nbsp;; sélectionne tous les groupes de transition de vue sur une page.
 - `root`
-  - : Le {{CSSxRef("view-transition-name")}} appliqué à {{CSSxRef(":root")}} fait correspondre le pseudo-élément au groupe de transition de vue par défaut `root`. C'est le groupe de capture d'écran créé par l'agent utilisateur pour contenir la transition de vue pour l'ensemble de la page. Ce groupe inclut tout élément non affecté à son propre groupe de capture d'écran de transition de vue spécifique via la propriété `view-transition-name`.
+  - : Le {{CSSxRef("view-transition-name")}} appliqué à {{CSSxRef(":root")}} fait correspondre le pseudo-élément au groupe de transition de vue par défaut `root`. C'est le groupe de capture d'écran créé par l'agent utilisateur pour contenir la transition de vue pour l'ensemble de la page. Ce groupe inclut tout élément non affecté à son propre groupe de capture d'écran de transition de vue spécifique avec la propriété `view-transition-name`.
 - `<pt-name-selector>`
   - : Le {{CSSxRef("custom-ident")}} défini comme valeur de la propriété {{CSSxRef("view-transition-name")}}.
 - `<pt-class-selector>`
@@ -77,5 +77,5 @@ La [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) du pseudo-élém
 
 ## Voir aussi
 
-- L'[API de transition de vue](/fr/docs/Web/API/View_Transition_API)
+- [L'API de transition de vue](/fr/docs/Web/API/View_Transition_API)
 - [Transitions fluides avec l'API de transition de vue <sup>(angl.)</sup>](https://developer.chrome.com/docs/web-platform/view-transitions/)

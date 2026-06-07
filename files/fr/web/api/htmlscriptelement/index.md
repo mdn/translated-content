@@ -2,7 +2,7 @@
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 {{APIRef("HTML DOM")}}
@@ -20,7 +20,7 @@ Les fichiers JavaScript doivent être servis avec le type [MIME](/fr/docs/Web/HT
 
 _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-- {{DOMxRef("HTMLScriptElement.attributionSrc")}} {{SecureContext_Inline}} {{Deprecated_Inline}}
+- {{DOMxRef("HTMLScriptElement.attributionSrc")}} {{SecureContext_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Obtient et définit l'attribut [`attributionsrc`](/fr/docs/Web/HTML/Reference/Elements/script#attributionsrc) sur un élément {{HTMLElement("script")}} par programmation, reflétant la valeur de cet attribut. `attributionsrc` indique que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} avec la requête de ressource du script. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} ou {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} dans la réponse, afin d'enregistrer respectivement une [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#sources_dévènements_basées_sur_javascript) ou un [déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers#déclencheurs_dattributions_basés_sur_javascript) basé sur JavaScript.
 - {{DOMxRef("HTMLScriptElement.async")}}
   - : Un booléen qui définit la façon dont le script doit être exécuté. Pour les scripts classiques, si la propriété `async` est à `true`, le script externe est récupéré en parallèle de l'analyse et évalué dès qu'il est disponible. Pour les [modules](/fr/docs/Web/JavaScript/Guide/Modules), si la propriété `async` est à `true`, le script et toutes ses dépendances sont récupérés en parallèle de l'analyse et évalués dès qu'ils sont disponibles.
@@ -29,7 +29,7 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 - `HTMLScriptElement.charset` {{Deprecated_Inline}}
   - : Une chaîne de caractères représentant l'encodage du script externe. Elle reflète l'attribut [`charset`](/fr/docs/Web/HTML/Reference/Elements/script#charset).
 - {{DOMxRef("HTMLScriptElement.crossOrigin")}}
-  - : Une chaîne de caractères reflétant le [paramètre CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour l'élément script. Pour les scripts classiques provenant d'autres {{Glossary("Origin", "origines")}}, cela définit si les informations d'erreur seront exposées.
+  - : Une chaîne de caractères reflétant le [paramètre CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour l'élément script. Pour les scripts classiques provenant d'autres {{Glossary("Origin", "origines")}}, cela définit si les informations d'erreur sont exposées.
 - {{DOMxRef("HTMLScriptElement.defer")}}
   - : Un booléen qui définit la façon dont le script doit être exécuté. Pour les scripts classiques, si la propriété `defer` est à `true`, le script externe est exécuté après l'analyse du document, mais avant le déclenchement de l'évènement {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}. Pour les [modules](/fr/docs/Web/JavaScript/Guide/Modules), la propriété `defer` n'a aucun effet.
 - `HTMLScriptElement.event` {{Deprecated_Inline}}
@@ -61,7 +61,7 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 ## Méthodes statiques
 
 - {{DOMxRef("HTMLScriptElement.supports_static", "HTMLScriptElement.supports()")}}
-  - : Retourne `true` si le navigateur prend en charge les scripts du type spécifié, et `false` sinon.
+  - : Retourne `true` si le navigateur prend en charge les scripts du type défini, et `false` sinon.
     Cette méthode fournit un moyen simple et unifié de détecter les fonctionnalités liées aux scripts.
 
 ## Méthodes d'instance
@@ -76,8 +76,8 @@ _Aucun évènement spécifique&nbsp;; hérite des évènements de son parent, {{
 
 ### Importation dynamique de scripts
 
-Créons une fonction qui importe de nouveaux scripts dans un document en créant un nœud {{HTMLElement("script")}} _juste avant_ le {{HTMLElement("script")}} qui héberge le code suivant (via {{DOMxRef("document.currentScript")}}).
-Ces scripts seront exécutés **de façon asynchrone**.
+Créons une fonction qui importe de nouveaux scripts dans un document en créant un nœud {{HTMLElement("script")}} _juste avant_ le {{HTMLElement("script")}} qui héberge le code suivant (avec {{DOMxRef("document.currentScript")}}).
+Ces scripts sont exécutés **de façon asynchrone**.
 Pour plus de détails, voir les propriétés [`defer`](/fr/docs/Web/API/HTMLScriptElement/defer) et [`async`](/fr/docs/Web/API/HTMLScriptElement/async).
 
 ```js

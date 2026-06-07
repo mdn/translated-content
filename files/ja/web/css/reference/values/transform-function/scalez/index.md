@@ -1,8 +1,9 @@
 ---
-title: scaleZ()
+title: CSS `scaleZ()` 関数
+short-title: scaleZ()
 slug: Web/CSS/Reference/Values/transform-function/scaleZ
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`scaleZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素を Z 軸に沿って変倍する座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -125,7 +126,7 @@ scaleZ(s)
   <tbody>
     <tr>
       <td colspan="2">
-        この座標変換は 3D 空間に適用され、平面で表すことはできません。
+        この座標変換は三次元空間に適用され、平面で表すことはできません。
       </td>
       <td>
         <math display="block">
@@ -165,13 +166,13 @@ div {
 }
 
 .perspective {
-  /* 3D 空間を生成するために視点を含める */
+  /* 三次元空間を生成するために視点を含める */
   transform: perspective(400px) translateZ(-100px);
   background-color: limegreen;
 }
 
 .scaled-translated {
-  /* 3D 空間を生成するために視点を含める */
+  /* 三次元空間を生成するために視点を含める */
   transform: perspective(400px) scaleZ(2) translateZ(-100px);
   background-color: pink;
 }

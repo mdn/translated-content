@@ -3,7 +3,7 @@ title: Propriété CSS `height`
 short-title: height
 slug: Web/CSS/Reference/Properties/height
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`height`** définit la hauteur d'un élément. Par défaut, la propriété définit la hauteur de la [zone de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_contenu). Si {{CSSxRef("box-sizing")}} est définie sur `border-box`, elle détermine alors la hauteur de la [zone de bordure](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_bordure).
@@ -52,15 +52,7 @@ Les propriétés {{CSSxRef("min-height")}} et {{CSSxRef("max-height")}} surcharg
 ## Syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
-height: max-content;
-height: min-content;
-height: fit-content;
-height: fit-content(20em);
-height: auto;
-height: stretch;
-
-/* Valeurs de type <length> */
+/* Valeur de type <length> */
 height: 120px;
 height: 10em;
 height: 100vh;
@@ -70,6 +62,14 @@ height: clamp(200px, anchor-size(width));
 
 /* Valeurs de type <percentage> */
 height: 75%;
+
+/* Valeurs avec un mot-clé */
+height: max-content;
+height: min-content;
+height: fit-content;
+height: fit-content(20em);
+height: auto;
+height: stretch;
 
 /* Valeurs globales */
 height: inherit;
@@ -93,7 +93,6 @@ height: unset;
   - : La hauteur intrinsèque minimale.
 - {{CSSxRef("fit-content")}}
   - : Utilise l'espace disponible, mais pas plus que [max-content](/fr/docs/Web/CSS/Reference/Values/max-content), c'est-à-dire `min(max-content, max(min-content, stretch))`.
-
 - {{CSSxRef("fit-content_function", "fit-content(&lt;length-percentage&gt;)")}} {{Experimental_Inline}}
   - : Utilise la formule fit-content en remplaçant l'espace disponible par l'argument défini, c'est-à-dire `min(max-content, max(min-content, <length-percentage>))`.
 - `stretch`
@@ -121,16 +120,10 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `heigh
 #### HTML
 
 ```html
-<div id="red">
-  <span>Je mesure 50 pixels de haut.</span>
-</div>
-<div id="green">
-  <span>Et moi je mesure 25 pixels de haut.</span>
-</div>
+<div id="taller">Je mesure 50 pixels de haut.</div>
+<div id="shorter">Et moi je mesure 25 pixels de haut.</div>
 <div id="parent">
-  <div id="child">
-    <span>Je suis moitié moins haut que mon parent.</span>
-  </div>
+  <div id="child">Je suis moitié moins haut que mon parent.</div>
 </div>
 ```
 
@@ -143,11 +136,11 @@ div {
   border: 2px solid blue;
 }
 
-#red {
+#taller {
   height: 50px;
 }
 
-#green {
+#shorter {
   height: 25px;
 }
 
@@ -164,6 +157,55 @@ div {
 #### Résultat
 
 {{EmbedLiveSample("Définir la hauteur en utilisant des pixels et des pourcentages", "auto", 240)}}
+
+### Étendre la hauteur pour remplir le bloc englobant
+
+#### HTML
+
+```html
+<div class="parent">
+  <div class="child">texte</div>
+</div>
+
+<div class="parent">
+  <div class="child stretch">étiré</div>
+</div>
+```
+
+#### CSS
+
+```css hidden
+@supports not (height: stretch) {
+  body::before {
+    content: "Votre navigateur ne prend pas encore en charge la valeur `stretch`.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+```
+
+```css
+.parent {
+  height: 150px;
+  margin: 1rem;
+  border: solid;
+}
+
+.child {
+  margin: 1rem;
+  background: #00999999;
+}
+
+.stretch {
+  height: stretch;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Étendre la hauteur pour remplir le bloc englobant", "auto", 380)}}
 
 ## Spécifications
 
@@ -183,4 +225,5 @@ div {
 - La fonction {{CSSxRef("clamp()")}}
 - La fonction {{CSSxRef("minmax()")}}
 - L'attribut SVG {{SVGAttr("height")}}
-- [Le modèle de boîtes](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
+- [Introduction au modèle de boîtes CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
+- Le module [du modèle de boîtes CSS](/fr/docs/Web/CSS/Guides/Box_model)

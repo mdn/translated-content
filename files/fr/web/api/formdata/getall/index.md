@@ -21,7 +21,7 @@ formData.getAll(name);
 ### Paramètres
 
 - `name`
-  - : Un {{domxref("USVString")}} représentant le nom de la clé que vous voulez récupérer.
+  - : Un {{jsxref("String")}} représentant le nom de la clé que vous voulez récupérer.
 
 ### Retours
 

@@ -3,7 +3,7 @@ title: document.bgColor
 slug: Web/API/Document/bgColor
 ---
 
-{{APIRef("DOM")}}{{ Deprecated_header() }}
+{{APIRef("DOM")}}{{ Deprecated_header }}
 
 `bgColor` da/define el color de fondo (bgColor) del documento actual.
 

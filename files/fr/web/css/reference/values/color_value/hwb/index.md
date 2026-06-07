@@ -65,7 +65,7 @@ hwb(from lch(40% 70 240deg) h w calc(b - 30))
 
 ## Valeurs
 
-Vous trouverez ci-dessous la description des valeurs autorisées pour les couleurs absolues et les [couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors).
+Vous trouverez ci-dessous la description des valeurs autorisées pour les couleurs absolues et les [couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 ### Syntaxe des valeurs absolues
 
@@ -275,6 +275,6 @@ La sortie est la suivante&nbsp;:
 
 - Le type de donnée {{CSSxRef("&lt;color&gt;")}}&nbsp;: pour une liste de toutes les notations de couleur
 - [Outil de conversion de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
-- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
+- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - [Module Couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - Le type de donnée {{CSSxRef("&lt;hue&gt;")}}&nbsp;: représentant un angle de teinte d'une couleur

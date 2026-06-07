@@ -3,15 +3,15 @@ title: En-tête Activate-Storage-Access
 short-title: Activate-Storage-Access
 slug: Web/HTTP/Reference/Headers/Activate-Storage-Access
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: 1296e665fd82a80bb17123725dcbf1f08b89ab4e
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Activate-Storage-Access`** permet à un serveur d'activer une autorisation accordée pour accéder à ses [cookies non partitionnés](/fr/docs/Web/API/Storage_Access_API#cookies_partitionnés_contre_non_partitionnés) lors d'une requête inter-sites.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Activate-Storage-Access`** permet à un serveur d'activer une autorisation accordée pour accéder à ses [cookies non partitionnés](/fr/docs/Web/API/Storage_Access_API#cookies_partitionnés_contre_non_partitionnés) lors d'une requête inter-sites.
 
 Le serveur s'appuie sur l'information d'état d'autorisation fournie dans l'en-tête {{HTTPHeader("Sec-Fetch-Storage-Access")}} de la requête.
 
 Ces en-têtes sont collectivement appelés [en-têtes d'accès au stockage](/fr/docs/Web/API/Storage_Access_API#en-têtes_daccès_au_stockage).
-Ils offrent une alternative efficace au fait de charger d'abord la ressource sans cookies, d'utiliser l'[API d'accès au stockage](/fr/docs/Web/API/Storage_Access_API) pour activer l'autorisation, puis de recharger la ressource avec les cookies.
+Ils offrent une alternative efficace au fait de charger d'abord la ressource sans cookies, d'utiliser [l'API d'accès au stockage](/fr/docs/Web/API/Storage_Access_API) pour activer l'autorisation, puis de recharger la ressource avec les cookies.
 
 <table class="properties">
   <tbody>
@@ -43,27 +43,35 @@ Activate-Storage-Access: load
 ## Directives
 
 - `retry`
-  - : Demande au navigateur d'activer l'autorisation d'accès au stockage pour le contexte puis de réessayer la requête avec les cookies inclus.
+  - : Le serveur utilise ce jeton pour indiquer qu'il a besoin de ses cookies tiers afin de répondre correctement à cette requête.
+
+    Le serveur doit vérifier la présence de `Sec-Fetch-Storage-Access: inactive` dans la requête avant de répondre avec ce jeton pour vérifier que l'autorisation a déjà été accordée (mais est inactive).
     Le paramètre `allowed-origin` doit être défini pour autoriser l'origine spécifique (définir `*` pour autoriser n'importe quelle origine).
+
+    Le navigateur doit répondre en activant une autorisation d'accès au stockage déjà accordée, et en réessayant la requête avec les cookies non partitionnés inclus.
+
 - `load`
-  - : Demande au navigateur d'activer l'autorisation d'accès au stockage pour le contexte puis de charger la ressource.
+  - : Le serveur utilise ce jeton pour indiquer qu'il envoie au navigateur un document HTML qui doit activer une autorisation `storage-access` préexistante — afin d'accéder aux cookies non partitionnés pendant le chargement.
+
+    Le serveur doit vérifier la présence de `Sec-Fetch-Storage-Access: inactive` ou `Sec-Fetch-Storage-Access: active` dans la requête avant de répondre avec `load` pour confirmer que l'autorisation a déjà été accordée.
+
+    Le navigateur doit répondre en chargeant la ressource et en lui accordant l'accès à ses cookies non partitionnés.
 
 ## Description
 
-L'[API d'accès au stockage](/fr/docs/Web/API/Storage_Access_API) fournit un mécanisme JavaScript permettant à une ressource intégrée de demander l'autorisation `storage-access`.
-Ceci permet d'envoyer des cookies tiers dans les requêtes, ce qui serait sinon bloqué par défaut dans la plupart des navigateurs.
-La ressource doit d'abord être demandée sans cookies, de sorte que le serveur retourne une version non authentifiée de la ressource qui n'aura pas accès à ses propres cookies.
+[L'API d'accès au stockage](/fr/docs/Web/API/Storage_Access_API) fournit un mécanisme JavaScript permettant à une ressource intégrée de demander l'autorisation `storage-access`.
+Ceci permet d'envoyer des cookies tiers dans les requêtes, ce qui est sinon bloqué par défaut dans la plupart des navigateurs.
+La ressource doit d'abord être demandée sans cookies, de sorte que le serveur retourne une version non authentifiée de la ressource qui n'a pas accès à ses propres cookies.
 Après le chargement, cette ressource peut appeler {{DOMxRef("Document.requestStorageAccess()")}} avec une activation transitoire pour demander l'autorisation d'accès au stockage.
 Si l'utilisateur·ice accorde l'autorisation, celle-ci est stockée par le navigateur dans une clé associée à l'intégrateur et au site intégré.
-Le navigateur doit alors recharger la ressource, qu'il peut maintenant demander avec les cookies car il dispose de l'état d'autorisation `active` pour le contexte courant.
+Le navigateur doit alors recharger la ressource, qu'il peut maintenant demander avec les cookies, car il dispose de l'état d'autorisation `active` pour le contexte courant.
 
-L'autorisation est accordée pour un couple intégrateur/site intégré particulier, mais n'est activée que pour un contexte particulier, tel qu'un `<iframe>` ou un onglet du navigateur.
-Cela signifie que si vous chargez la même page dans un nouvel onglet ou `<iframe>`, l'état d'autorisation de ce contexte sera `inactive`&nbsp;; il ne deviendra `active` que lorsque l'autorisation sera activée.
+L'autorisation est accordée pour un couple intégrateur/site intégré particulier, mais n'est _activée_ que pour un contexte particulier, tel qu'un `<iframe>` ou un onglet du navigateur.
+Cela signifie que si vous chargez la même page dans un nouvel onglet ou `<iframe>`, l'état d'autorisation de ce contexte est accordé mais `inactive`&nbsp;; il ne devient `active` que lorsque l'autorisation est activée.
 Le flux normal d'accès au stockage consiste à demander à nouveau la ressource sans cookies, à appeler `Document.requestStorageAccess()` pour activer l'autorisation existante, puis à recharger la ressource avec les cookies.
 
 La ressource doit être chargée au moins une fois pour que l'autorisation d'accès au stockage soit accordée.
-Cependant, une fois accordée, un serveur peut utiliser `Activate-Storage-Access` pour activer l'autorisation pour d'autres contextes.
-Cela évite d'avoir à charger la ressource uniquement pour activer l'autorisation via `Document.requestStorageAccess()`.
+Cependant, une fois accordée, un serveur peut utiliser `Activate-Storage-Access` pour activer l'autorisation pour d'autres origines et contextes.
 
 Le fonctionnement est le suivant&nbsp;:
 
@@ -75,6 +83,9 @@ Le fonctionnement est le suivant&nbsp;:
 
 Les réponses doivent également inclure l'en-tête {{HTTPHeader("Vary")}} avec `Sec-Fetch-Storage-Access`.
 
+> [!NOTE]
+> Il est également possible (mais moins efficace) d'activer une autorisation en chargeant une ressource et en appelant `Document.requestStorageAccess()`.
+
 ## Exemples
 
 Ces exemples montrent des requêtes avec {{HTTPHeader("Sec-Fetch-Storage-Access")}} pour des contextes ayant différents états d'autorisation d'accès au stockage, et les réponses correspondantes avec `Activate-Storage-Access`.
@@ -83,7 +94,7 @@ Ils utilisent l'exemple d'un site, `https://monsite.exemple`, qui inclut un {{HT
 ### Activation d'une autorisation par le serveur
 
 Cet exemple suppose que l'utilisateur·ice a déjà accordé l'autorisation pour le contexte, mais qu'elle n'a pas encore été activée.
-(Avec l'API, on activerait l'autorisation en rechargeant la ressource afin qu'elle puisse appeler `Document.requestStorageAccess()`.)
+(Avec l'API, on active l'autorisation en rechargeant la ressource afin qu'elle puisse appeler `Document.requestStorageAccess()`.)
 
 La requête concerne un `<iframe>` inter-sites avec le mode d'identifiants ["include"](/fr/docs/Web/API/Request/credentials#include).
 Le navigateur a ajouté `Sec-Fetch-Storage-Access: inactive` à la requête, car l'autorisation `secure-access` a été accordée mais pas activée.
@@ -180,10 +191,10 @@ Vary: Sec-Fetch-Storage-Access
 </html>
 ```
 
-La page intégrée appellerait alors {{DOMxRef("Document.requestStorageAccess()")}} avec une activation transitoire pour demander l'autorisation d'accès au stockage.
+La page intégrée appelle alors {{DOMxRef("Document.requestStorageAccess()")}} avec une activation transitoire pour demander l'autorisation d'accès au stockage.
 Si l'autorisation d'accès au stockage est accordée pour la page intégrée, elle est également activée.
 
-Elle se rechargerait alors, ce qui donnerait la requête suivante.
+Elle se recharge alors, ce qui donne la requête suivante.
 Cette fois, le navigateur ajoute `Sec-Fetch-Storage-Access: active` et inclut les cookies tiers, reflétant l'état d'autorisation du contenu intégré.
 
 ```http
@@ -199,7 +210,7 @@ Cookie: sessionid=abc123
 ```
 
 Le serveur répond avec la version authentifiée de la ressource, qui peut être différente de la première version chargée, et ajoute l'en-tête `Activate-Storage-Access: load`.
-Le navigateur charge la page, qui aura désormais accès à ses propres informations de cookie.
+Le navigateur charge la page, qui a désormais accès à ses propres informations de cookie.
 
 ```http
 HTTP/1.1 200 OK
@@ -223,5 +234,5 @@ Activate-Storage-Access: load
 ## Voir aussi
 
 - L'en-tête HTTP {{HTTPHeader("Sec-Fetch-Storage-Access")}}
-- [En-têtes d'accès au stockage](/fr/docs/Web/API/Storage_Access_API#en-têtes_daccès_au_stockage) dans _Storage Access API_
-- [Séquences d'en-têtes d'accès au stockage](/fr/docs/Web/API/Storage_Access_API#séquences_den-têtes_daccès_au_stockage) dans _Storage Access API_
+- [En-têtes d'accès au stockage](/fr/docs/Web/API/Storage_Access_API#en-têtes_daccès_au_stockage) dans _l'API Storage Access_
+- [Séquences d'en-têtes d'accès au stockage](/fr/docs/Web/API/Storage_Access_API#séquences_den-têtes_daccès_au_stockage) dans _l'API Storage Access_

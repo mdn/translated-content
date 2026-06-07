@@ -28,7 +28,7 @@ namedItem(name)
 
 - Une collection {{DOMxRef("RadioNodeList")}} s'il y a plusieurs éléments avec le `name` ou l'`id` donné,
 - Un objet {{DOMxRef("Element")}} s'il y a exactement un élément avec le `name` ou l'`id` donné, ou
-- {{JSxRef("Operators/null", "null")}} si aucun élément n'a le `name` ou l'`id` donné.
+- {{JSxRef("null")}} si aucun élément n'a le `name` ou l'`id` donné.
 
 > [!NOTE]
 > La {{DOMxRef("RadioNodeList")}} retournée est déynamique, ce qui signifie que son contenu se met automatiquement à jour si des éléments correspondant au nom donné sont ajoutés ou supprimés de la collection. De plus, elle peut contenir des éléments d'entrée qui ne sont pas radio malgré son nom.

@@ -31,7 +31,7 @@ JavaScript 中提供了这些循环语句：
 
 ## `for` 语句
 
-一个 {{jsxref("statements/for","for")}} 循环会一直重复执行，直到指定的循环条件为 false。JavaScript 的 for 循环，和 Java、C 的 for 循环，是很相似的。一个 for 语句是这个样子的：
+一个 {{jsxref("Statements/for","for")}} 循环会一直重复执行，直到指定的循环条件为 false。JavaScript 的 for 循环，和 Java、C 的 for 循环，是很相似的。一个 for 语句是这个样子的：
 
 ```js-nolint
 for (initialization; condition; afterthought)
@@ -92,7 +92,7 @@ btn.addEventListener("click", () => {
 
 ## `do...while` 语句
 
-{{jsxref("statements/do...while", "do...while")}} 语句一直重复直到指定的条件求值得到假值（false）。
+{{jsxref("Statements/do...while", "do...while")}} 语句一直重复直到指定的条件求值得到假值（false）。
 
 `do...while` 语句看起来像这样：
 
@@ -118,7 +118,7 @@ do {
 
 ## `while` 语句
 
-一个 {{jsxref("statements/while","while")}} 语句只要指定的条件求值为真（true）就会一直执行它的语句块。`while` 语句看起来像这样：
+一个 {{jsxref("Statements/while","while")}} 语句只要指定的条件求值为真（true）就会一直执行它的语句块。`while` 语句看起来像这样：
 
 ```js-nolint
 while (condition)
@@ -165,7 +165,7 @@ while (true) {
 
 ## `label` 语句
 
-一个 {{jsxref("statements/label","label")}} 提供了一个让你在程序中其他位置引用它的标识符。例如，你可以用 label 标识一个循环，然后使用 `break` 或者 `continue` 来指出程序是否该停止循环还是继续循环。
+一个 {{jsxref("Statements/label","label")}} 提供了一个让你在程序中其他位置引用它的标识符。例如，你可以用 label 标识一个循环，然后使用 `break` 或者 `continue` 来指出程序是否该停止循环还是继续循环。
 
 label 语句的语法看起来像这样：
 
@@ -242,7 +242,7 @@ alert(num); // 95
 
 ## `break` 语句
 
-使用 {{jsxref("statements/break","break")}} 语句来终止循环，`switch`，或者是链接到 label 语句。
+使用 {{jsxref("Statements/break","break")}} 语句来终止循环，`switch`，或者是链接到 label 语句。
 
 - 当你使用不带 label 的 `break` 时，它会立即终止当前所在的 `while`，`do-while`，`for`，或者 `switch` 并把控制权交回这些结构后面的语句。
 - 当你使用带 label 的 `break` 时，它会终止指定的带标记（label）的语句。
@@ -291,7 +291,7 @@ labelCancelLoops: while (true) {
 
 ## `continue` 语句
 
-{{jsxref("statements/continue","continue")}} 语句可以用来继续执行（跳过代码块的剩余部分并进入下一循环）一个 `while`、`do-while`、`for`，或者 `label` 语句。
+{{jsxref("Statements/continue","continue")}} 语句可以用来继续执行（跳过代码块的剩余部分并进入下一循环）一个 `while`、`do-while`、`for`，或者 `label` 语句。
 
 - 当你使用不带 label 的 `continue` 时，它终止当前 `while`，`do-while`，或者 for 语句到结尾的这次的循环并且继续执行下一次循环。
 - 当你使用带 label 的 `continue` 时，它会应用被 label 标识的循环语句。
@@ -349,7 +349,7 @@ checkIandJ: while (i < 4) {
 
 ## `for...in` 语句
 
-{{jsxref("statements/for...in","for...in")}} 语句循环一个指定的变量来循环一个对象所有可枚举的属性。JavaScript 会为每一个不同的属性执行指定的语句。
+{{jsxref("Statements/for...in","for...in")}} 语句循环一个指定的变量来循环一个对象所有可枚举的属性。JavaScript 会为每一个不同的属性执行指定的语句。
 
 ```js-nolint
 for (variable in object) {
@@ -381,11 +381,11 @@ car.model = Mustang
 
 ### 数组
 
-虽然使用 **for...in** 来迭代数组 {{jsxref("Array")}} 元素听起来很诱人，但是它返回的东西除了数字索引外，还有可能是你自定义的属性名字。因此还是用带有数字索引的传统的 {{jsxref("statements/for","for")}} 循环来迭代一个数组比较好，因为，如果你想改变数组对象，比如添加属性或者方法，**for...in** 语句迭代的是自定义的属性，而不是数组的元素。（译者注：下面的 `for...of` 语句，和 [`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)，也是理想的选择。）
+虽然使用 **for...in** 来迭代数组 {{jsxref("Array")}} 元素听起来很诱人，但是它返回的东西除了数字索引外，还有可能是你自定义的属性名字。因此还是用带有数字索引的传统的 {{jsxref("Statements/for","for")}} 循环来迭代一个数组比较好，因为，如果你想改变数组对象，比如添加属性或者方法，**for...in** 语句迭代的是自定义的属性，而不是数组的元素。（译者注：下面的 `for...of` 语句，和 [`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)，也是理想的选择。）
 
 ## `for...of` 语句
 
-{{jsxref("statements/for...of","for...of")}} 语句在[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)（包括{{jsxref("Array")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("functions/arguments","arguments")}} 等等）上创建了一个循环，对值的每一个独特属性调用一次迭代。
+{{jsxref("Statements/for...of","for...of")}} 语句在[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)（包括{{jsxref("Array")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("Functions/arguments","arguments")}} 等等）上创建了一个循环，对值的每一个独特属性调用一次迭代。
 
 ```js-nolint
 for (variable of object) {
@@ -393,7 +393,7 @@ for (variable of object) {
 }
 ```
 
-下面的这个例子展示了 `for...of` 和 {{jsxref("statements/for...in","for...in")}} 两种循环语句之间的区别。 `for...in` 循环遍历的结果是数组元素的下标，而 `for...of` 遍历的结果是元素的值：
+下面的这个例子展示了 `for...of` 和 {{jsxref("Statements/for...in","for...in")}} 两种循环语句之间的区别。 `for...in` 循环遍历的结果是数组元素的下标，而 `for...of` 遍历的结果是元素的值：
 
 ```js
 const arr = [3, 5, 7];

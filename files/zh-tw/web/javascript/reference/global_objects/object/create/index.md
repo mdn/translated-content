@@ -24,7 +24,7 @@ Object.create(proto[, propertiesObject])
 
 ### 例外
 
-如果 `proto` 參數不是 {{jsxref("null")}} 或一個物件，將會拋出 {{jsxref("TypeError")}} 例外。
+如果 `proto` 參數不是 {{jsxref("Operators/null", "null")}} 或一個物件，將會拋出 {{jsxref("TypeError")}} 例外。
 
 ## 範例
 

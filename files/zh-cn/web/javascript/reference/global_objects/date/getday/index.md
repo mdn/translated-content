@@ -40,7 +40,7 @@ console.log(weekday); // 1
 ```
 
 > [!NOTE]
-> 如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}与一个额外的`options` 参数，从而返回这天的全称（如`"Monday"`）.使用此方法，结果会更加国际化：
+> 如果需要，可以使用{{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}与一个额外的`options` 参数，从而返回这天的全称（如`"Monday"`）.使用此方法，结果会更加国际化：
 >
 > ```js
 > var options = { weekday: "long" };

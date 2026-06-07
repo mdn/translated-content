@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1
 original_slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
 ---
 
-{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/L'empilement_de_couches","Web/CSS/Comprendre_z-index/Exemple_2", "Web/CSS/Comprendre_z-index")}}
-
 ## Premier exemple
 
 Commençons par un exemple simple, dans le contexte d'empilement racine nous avons deux blocs _DIV_ (_DIV #1_ et _DIV #3_), tout deux positionnés relativement, mais sans propriété {{ cssxref("z-index") }}. Dans le bloc _DIV #1_ il y a un bloc _DIV #2_ en position absolue, alors que dans le bloc _DIV #3_ il y a un bloc _DIV #4_ en position absolue, tout deux également sans propriété `z-index`.
@@ -106,5 +104,3 @@ Dans le contexte d'empilement, les blocs _DIV #1_ et _DIV #3_ sont simplement as
 ### Résultat
 
 {{EmbedLiveSample('Exemple')}}
-
-{{PreviousMenuNext("Web/CSS/Comprendre_z-index/L'empilement_de_couches","Web/CSS/Comprendre_z-index/Exemple_2", "Web/CSS/Comprendre_z-index")}}

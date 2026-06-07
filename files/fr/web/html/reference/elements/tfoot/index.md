@@ -3,7 +3,7 @@ title: "Élément HTML `<tfoot>` : l'élément de pied de tableau"
 short-title: <tfoot>
 slug: Web/HTML/Reference/Elements/tfoot
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<tfoot>`** encapsule un ensemble de lignes de tableau (éléments {{HTMLElement("tr")}}), indiquant qu'elles constituent le pied d'un tableau avec des informations sur les colonnes du tableau. Il s'agit généralement d'un récapitulatif des colonnes, par exemple une somme des nombres présents dans une colonne.
@@ -86,7 +86,7 @@ Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés.
 - `align` {{Deprecated_Inline}}
   - : Définit l'alignement horizontal de chaque cellule du pied de tableau. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `left`, `center`, `right`, `justify` et `char`. Lorsque cela est pris en charge, la valeur `char` aligne le contenu textuel sur le caractère défini dans l'attribut [`char`](#char) et sur le décalage défini par l'attribut [`charoff`](#charoff). Utilisez plutôt la propriété CSS {{CSSxRef("text-align")}}, car cet attribut est obsolète.
 
-- `bgcolor` {{Deprecated_Inline}}
+- `bgcolor` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la couleur d'arrière-plan de chaque cellule du pied de tableau. La valeur est une couleur HTML&nbsp;; soit un [code RGB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/Reference/Values/hex-color), préfixé d'un `#`, soit un [mot-clé de couleur](/fr/docs/Web/CSS/Reference/Values/named-color). Les autres valeurs CSS {{CSSxRef("&lt;color&gt;")}} ne sont pas prises en charge. Utilisez la propriété CSS {{CSSxRef("background-color")}} à la place, car cet attribut est obsolète.
 
 - `char` {{Deprecated_Inline}}

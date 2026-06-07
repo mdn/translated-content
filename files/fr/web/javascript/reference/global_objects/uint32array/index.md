@@ -25,9 +25,9 @@ Pour plus d'informations sur la syntaxe du constructeur et le rôle des différe
   - : Cette propriété renvoie un nombre correspondant à la quantité d'octets pour un élément du tableau. Dans le cas d'`Uint32Array`, ce sera `4`.
 - `Uint32Array.length`
   - : La propriété de longueur statique qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "Uint32Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Uint32Array.name")}}
+- {{jsxref("Function.name", "Uint32Array.name")}}
   - : Cette propriété renvoie la chaîne de caractères correspondant au nom du constructeur. Pour `Uint32Array` ce sera : "Uint32Array".
-- {{jsxref("TypedArray.prototype", "Uint32Array.prototype")}}
+- {{jsxref("TypedArray", "Uint32Array.prototype")}}
   - : Le prototype des objets _TypedArray_.
 
 ## Méthodes
@@ -39,7 +39,7 @@ Pour plus d'informations sur la syntaxe du constructeur et le rôle des différe
 
 ## Prototype `Uint32Array`
 
-Tous les objets `Uint32Array` héritent de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+Tous les objets `Uint32Array` héritent de {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Propriétés
 
@@ -108,7 +108,7 @@ Tous les objets `Uint32Array` héritent de {{jsxref("TypedArray.prototype", "%Ty
   - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Uint32Array.prototype.toString()")}}
   - : Renvoie une chaîne de caractère qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Uint32Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Uint32Array.prototype[@@iterator]()")}}
   - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau.
 
 ## Exemples

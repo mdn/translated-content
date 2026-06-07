@@ -1,8 +1,9 @@
 ---
-title: translate3d()
+title: CSS `translate3d()` 関数
+short-title: translate3d()
 slug: Web/CSS/Reference/Values/transform-function/translate3d
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`translate3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素を三次元空間内で再配置します。返値は {{cssxref("&lt;transform-function&gt;")}} データ型です。
@@ -126,7 +127,7 @@ translate3d(tx, ty, tz)
     <tr>
       <td colspan="2">
         <p>
-          この変換は 3D 空間に適用され、平面上では表せません。
+          この変換は三次元空間に適用され、平面上では表せません。
         </p>
       </td>
       <td>

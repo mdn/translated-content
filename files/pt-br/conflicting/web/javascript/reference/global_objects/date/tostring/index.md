@@ -16,7 +16,7 @@ Date.toSource()
 
 ### Valor de retorno
 
-Uma _string_ representando o código fonte do objeto {{jsxref("Global_Objects/Date", "Date")}}.
+Uma _string_ representando o código fonte do objeto {{jsxref("Date")}}.
 
 ## Exemplos
 
@@ -40,4 +40,4 @@ Não faz parte de nenhum padrão.
 
 ## Veja também
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

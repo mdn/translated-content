@@ -173,7 +173,7 @@ let duration = vacations.trip?.getTime?.();
 
 ### Combinando com o operador de coalescência nula (nullish coalescing)
 
-O {{JSxRef("Operators/Nullish_Coalescing_Operator", "operador de coalescência nula", '', 1)}} pode ser usado após o encadeamento opcional, para construir um valor padrão quando nada é encontrado:
+O {{JSxRef("Operators/Nullish_coalescing", "operador de coalescência nula", '', 1)}} pode ser usado após o encadeamento opcional, para construir um valor padrão quando nada é encontrado:
 
 ```js
 let customer = {
@@ -196,5 +196,5 @@ console.log(customerCity); // Cidade desconhecida
 
 ## Veja também
 
-- O {{JSxRef("Operators/Nullish_Coalescing_Operator", "Nullish Coalescing Operator", '', 1)}}
+- O {{JSxRef("Operators/Nullish_coalescing", "Nullish Coalescing Operator", '', 1)}}
 - [TC39 proposals](https://github.com/tc39/proposals)

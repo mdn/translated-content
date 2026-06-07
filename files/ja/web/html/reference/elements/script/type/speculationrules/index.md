@@ -1,11 +1,12 @@
 ---
-title: <script type="speculationrules">
+title: HTML `<script type="speculationrules">` 属性値
+short-title: speculationrules
 slug: Web/HTML/Reference/Elements/script/type/speculationrules
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
-{{HTMLSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`speculationrules`** の値を [`<script>` 要素](/ja/docs/Web/HTML/Reference/Elements/script/type)の [`type`](/ja/docs/Web/HTML/Reference/Elements/script) 属性に設定すると、要素の本体に投機ルールが入っていることを示します。
 
@@ -77,7 +78,7 @@ JSON 構造は最上位のレベルに 1 つ以上のフィールドを格納し
 
 各オブジェクトは以下のプロパティを格納することができます。
 
-- `"source"`
+- `"source"` {{experimental_inline}}
   - : ルールが適用される URL のソースを示す文字列。 これ以外のプロパティからも常に値を推測できるため、これはオプションです。
 
     以下のいずれかを取ることができます。
@@ -150,11 +151,24 @@ JSON 構造は最上位のレベルに 1 つ以上のフィールドを格納し
 
     取りうる値は次の通りです。
     - `"anonymous-client-ip-when-cross-origin"`
-      - : `"prefetch"` のみ オリジン間先読みリクエストが発行された場合に、ユーザーエージェントがクライアントの IP アドレスをオリジンのサーバーから見えないようにできる場合にのみ、ルールが一致するように指定します。これがどのように動作するのかは、ブラウザー実装に依存します。例えば、次のようになります。
+      - : （prefetch のみ）オリジン間先読みリクエストが発行された場合に、ユーザーエージェントがクライアントの IP アドレスをオリジンのサーバーから見えないようにできる場合にのみ、ルールが一致するように指定します。これがどのように動作するのかは、ブラウザー実装に依存します。例えば、次のようになります。
         - Chrome の実装では、 Google 自身が所有するプロキシーを使って IP アドレスを隠蔽しているため、既定値では Google が制御するリファラーに対してのみ動作します（この場合、出力先の URL を Google に送信することはさらなるプライバシー漏洩にはならないため）。 Google が所有していないサイトで使用する場合、これを含むルールは `chrome://settings/preloading` で "Enhanced preloading" をオンにしているユーザーにのみ一致します。
         - 他の Chromium ベースのブラウザーは、自分自身で解決策を提供する必要があります。対象とするすべてのブラウザーで十分にテストすることをお勧めします。
         - 将来の Safari 実装では、 [iCloud プライベートリレー](https://support.apple.com/ja-jp/102602)のようなものを使用する可能性があります。
         - 将来の Firefox 実装では、[Mozilla VPN](https://www.mozilla.org/ja/products/vpn/) 製品をベースにしたものを使用するかもしれません。
+
+- `"tag"` {{experimental_inline}}
+  - : ルールまたはルールセットを識別するために使用される文字列です。この文字列は、そのルールの対象となるあらゆる推測について、{{HTTPHeader("Sec-Speculation-Tags")}} リクエストヘッダーに記載されます。
+
+- `"target_hint"` {{experimental_inline}}
+  - : ページが事前レンダリングされたコンテンツのアクティブ化を期待する場所を示す文字列です。
+    このディレクティブは、事前読み込みの投機には対応していません。
+    許可される値は次の通りです。
+    - `"target_hint": "_blank"`
+      - : 再レンダリングされたコンテンツを新しいページで開きます。
+    - `"target_hint": "_self"`
+      - : 現在のページで再レンダリングされたコンテンツを開きます。
+        指定しない場合は、これがデフォルトです。
 
 > [!NOTE]
 > 投機ルールは `<script>` 要素を使用するので、サイトに [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) の [`script-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) ディレクティブが指定されている場合は、明示的に許可する必要があります。これは `"inline-speculation-rules"` 値を hash- または nonce-source で追加することで行われます。
@@ -256,8 +270,6 @@ if (
   document.body.append(specScript);
 }
 ```
-
-この[事前レンダリングのデモ](https://prerender-demos.glitch.me/)のページでは、その様子を見ることができます。
 
 ### `where` 構文の例
 
@@ -496,6 +508,72 @@ if (A && B && (C || !D)) {
 > [!NOTE]
 > eagerness の設定の効果は、リストルールにはあまり有用ではありません。 既定では、リストルールの URL は、ルールが構文解析されるとすぐに先読み/事前レンダリングされます。これは想定どおりであり、優先度が高くできるだけ早く利用できるようにしたい URL を明示的に掲載するためのものです。このため、現在の実装では `eager` は `immediate` と同じ効果があります。優先度が低い設定は、リンクが操作された際に先読み/事前レンダリングを行うためのもので、これらの場合はページ上のリンクを見つけるために文書内のルールを使用する可能性が高くなります。
 
+### `tag` の例
+
+`tag` を最上位に記載することで、ルールセット全体を識別することができます。
+
+```html
+<script type="speculationrules">
+  {
+    "tag": "my-rules",
+    "prerender": [
+      {
+        "where": { "href_matches": "/*" },
+        "eagerness": "conservative"
+      }
+    ]
+  }
+</script>
+```
+
+あるいは、個々のルールを識別するために、
+
+```html
+<script type="speculationrules">
+  {
+    "prefetch": [
+      "tag": "my-prefetch-rule",
+      "urls": ["next.html"]
+    ],
+    "prerender": [
+      "tag": "my-prerender-rule",
+      "urls": ["next2.html"]
+    ],
+  }
+</script>
+```
+
+詳しくは {{HTTPHeader("Sec-Speculation-Tags")}} を参照してください。
+
+### `target_hint` の例
+
+`target_hint` を記載することで、一致した事前レンダリングの投機結果を開くための対象ウィンドウを示すことができます。
+
+```html
+<script type="speculationrules">
+  {
+    "tag": "my-rules",
+    "prerender": [
+      {
+        "eagerness": "eager",
+        "target_hint": "_blank",
+        "urls": ["page2.html"]
+      }
+    ]
+  }
+</script>
+```
+
+以上の上のルールにより、以下のリンクは適切なターゲットで正しく事前レンダリングされます。
+
+```html
+<a href="page1.html">リンクをこのウィンドウで開く</a>
+<a target="_blank" href="page2.html">リンクを新しいウィンドウで開く</a>
+```
+
+`target_hint` は、`urls` を使用するリストルールでのみ必要です。
+文書ルール（`where` を使用する）では、`<a>` リンク要素の `target` 属性からターゲットが判別できるため、これらは必要ありません。
+
 ## 仕様書
 
 {{Specifications}}
@@ -507,5 +585,5 @@ if (A && B && (C || !D)) {
 ## 関連情報
 
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) (developer.chrome.com)
-- [投機的な読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)
+- [投機的読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)
 - [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)

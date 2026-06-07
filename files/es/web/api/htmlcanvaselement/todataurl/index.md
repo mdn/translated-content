@@ -20,14 +20,14 @@ canvas.toDataURL(tipo, opcionesCodificación);
 ### Parámetros
 
 - `tipo`{{optional_inline}}
-  - : Un {{domxref("DOMString")}} indicando el formato de la imagen. El tipo por defecto es `image/png`.
+  - : Un {{jsxref("String")}} indicando el formato de la imagen. El tipo por defecto es `image/png`.
 - `opcionesCodificación`{{optional_inline}}
   - : Un {{jsxref("Number")}} entre `0` y `1` indicando la calidad de la imagen si el tipo solicitado es `image/jpeg` o `image/webp`.
     Si este argumento es cualquier otra cosa, se usa el valor por defecto de la imagen. El valor por defecto es `0.92`. Otros argumentos se ignoran.
 
 ### Valor devuelto
 
-Un {{domxref("DOMString")}} que contiene el valor [data URI](/es/docs/Web/URI/Reference/Schemes/data).
+Un {{jsxref("String")}} que contiene el valor [data URI](/es/docs/Web/URI/Reference/Schemes/data).
 
 ## Ejemplos
 

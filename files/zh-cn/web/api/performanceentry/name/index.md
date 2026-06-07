@@ -17,13 +17,13 @@ var name = entry.name;
 
 返回值取决于`PerformanceEntry` 对象的 subtype 和{{domxref("PerformanceEntry.entryType")}}的值，如下表所示。
 
-| Value                    | Subtype                                                                           | entryType values      | Description                                                                                                   |
-| ------------------------ | --------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- |
-| {{domxref("URL")}}       | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | `frame`, `navigation` | The document's address.                                                                                       |
-| {{domxref("URL")}}       | {{domxref('PerformanceResourceTiming')}}                                          | `resource`            | The resolved URL of the requested resource. This value doesn't change even if the request is redirected.      |
-| {{domxref("DOMString")}} | {{domxref('PerformanceMark')}}                                                    | `mark`                | The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.      |
-| {{domxref("DOMString")}} | {{domxref('PerformanceMeasure')}}                                                 | `measure`             | name used when the measure was created by calling {{domxref("Performance.measure","performance.measure()")}}. |
-| {{domxref("DOMString")}} | {{domxref('PerformancePaintTiming')}}                                             | `paint`               | Either `'first-paint'` or `'first-contentful-paint'`.                                                         |
+| Value                | Subtype                                                                           | entryType values      | Description                                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- |
+| {{domxref("URL")}}   | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | `frame`, `navigation` | The document's address.                                                                                       |
+| {{domxref("URL")}}   | {{domxref('PerformanceResourceTiming')}}                                          | `resource`            | The resolved URL of the requested resource. This value doesn't change even if the request is redirected.      |
+| {{jsxref("String")}} | {{domxref('PerformanceMark')}}                                                    | `mark`                | The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.      |
+| {{jsxref("String")}} | {{domxref('PerformanceMeasure')}}                                                 | `measure`             | name used when the measure was created by calling {{domxref("Performance.measure","performance.measure()")}}. |
+| {{jsxref("String")}} | {{domxref('PerformancePaintTiming')}}                                             | `paint`               | Either `'first-paint'` or `'first-contentful-paint'`.                                                         |
 
 ## 用例
 

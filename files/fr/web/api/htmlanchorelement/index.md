@@ -2,7 +2,7 @@
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,12 +15,12 @@ L'interface **`HTMLAnchorElement`** représente les éléments d'hyperlien et fo
 
 _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-- {{DOMxRef("HTMLAnchorElement.attributionSourceId")}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLAnchorElement.attributionSourceId")}}
   - : Un entier positif représentant l'identifiant de la source d'attribution utilisé pour la [mesure des clics privés <sup>(angl.)</sup>](https://privacycg.github.io/private-click-measurement/). Les valeurs valides vont de `0` à `255`.
-- {{DOMxRef("HTMLAnchorElement.attributionSrc")}} {{SecureContext_Inline}} {{Deprecated_Inline}}
+- {{DOMxRef("HTMLAnchorElement.attributionSrc")}} {{SecureContext_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Obtient et définit l'attribut [`attributionsrc`](/fr/docs/Web/HTML/Reference/Elements/a#attributionsrc) sur un élément {{HTMLElement("a")}} de façon programmatique, reflétant la valeur de cet attribut. `attributionsrc` indique que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} dans la réponse, afin d'enregistrer une source d'attribution basée sur la navigation.
 - {{DOMxRef("HTMLAnchorElement.download")}}
-  - : Une chaîne de caractères indiquant que la ressource liée doit être téléchargée plutôt qu'affichée dans le navigateur. La valeur représente le nom de fichier proposé. Si ce nom n'est pas valide pour le système d'exploitation sous-jacent, le navigateur l'adaptera.
+  - : Une chaîne de caractères indiquant que la ressource liée doit être téléchargée plutôt qu'affichée dans le navigateur. La valeur représente le nom de fichier proposé. Si ce nom n'est pas valide pour le système d'exploitation sous-jacent, le navigateur l'adapte.
 - {{DOMxRef("HTMLAnchorElement.hash")}}
   - : Une chaîne de caractères représentant l'identifiant de fragment, y compris le dièse (`#`) initial, le cas échéant, dans l'URL référencée.
 - {{DOMxRef("HTMLAnchorElement.host")}}
@@ -36,11 +36,11 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLAnchorElement.origin")}} {{ReadOnlyInline}}
   - : Retourne une chaîne de caractères contenant l'origine de l'URL, c'est-à-dire son schéma, son domaine et son port.
 - {{DOMxRef("HTMLAnchorElement.password")}}
-  - : Une chaîne de caractères contenant le mot de passe spécifié avant le nom de domaine.
+  - : Une chaîne de caractères contenant le mot de passe défini avant le nom de domaine.
 - {{DOMxRef("HTMLAnchorElement.pathname")}}
   - : Une chaîne de caractères contenant un `/` initial suivi du chemin de l'URL, sans inclure la chaîne de requête ni le fragment.
 - {{DOMxRef("HTMLAnchorElement.ping")}}
-  - : Une liste d'URL séparées par des espaces. Lorsque le lien est suivi, le navigateur enverra des requêtes {{HTTPMethod("POST")}} avec le corps PING à ces URL.
+  - : Une liste d'URL séparées par des espaces. Lorsque le lien est suivi, le navigateur envoie des requêtes {{HTTPMethod("POST")}} avec le corps PING à ces URL.
 - {{DOMxRef("HTMLAnchorElement.port")}}
   - : Une chaîne de caractères représentant la partie port, le cas échéant, de l'URL référencée.
 - {{DOMxRef("HTMLAnchorElement.protocol")}}
@@ -48,7 +48,7 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLAnchorElement.referrerPolicy")}}
   - : Une chaîne de caractères reflétant l'attribut HTML [`referrerpolicy`](/fr/docs/Web/HTML/Reference/Elements/a#referrerpolicy) indiquant quel référent utiliser.
 - {{DOMxRef("HTMLAnchorElement.rel")}}
-  - : Une chaîne de caractères reflétant l'attribut HTML [`rel`](/fr/docs/Web/HTML/Reference/Elements/a#rel), spécifiant la relation entre l'objet cible et l'objet lié.
+  - : Une chaîne de caractères reflétant l'attribut HTML [`rel`](/fr/docs/Web/HTML/Reference/Elements/a#rel), définissant la relation entre l'objet cible et l'objet lié.
 - {{DOMxRef("HTMLAnchorElement.relList")}} {{ReadOnlyInline}}
   - : Retourne un {{DOMxRef("DOMTokenList")}} qui reflète l'attribut HTML [`rel`](/fr/docs/Web/HTML/Reference/Elements/a#rel), sous forme de liste de jetons.
 - {{DOMxRef("HTMLAnchorElement.search")}}
@@ -60,7 +60,7 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLAnchorElement.type")}}
   - : Une chaîne de caractères reflétant l'attribut HTML [`type`](/fr/docs/Web/HTML/Reference/Elements/a#type), indiquant le type MIME de la ressource liée.
 - {{DOMxRef("HTMLAnchorElement.username")}}
-  - : Une chaîne de caractères contenant le nom d'utilisateur spécifié avant le nom de domaine.
+  - : Une chaîne de caractères contenant le nom d'utilisateur défini avant le nom de domaine.
 
 ### Propriétés obsolètes
 
@@ -71,7 +71,7 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 - `HTMLAnchorElement.name` {{Deprecated_Inline}}
   - : Une chaîne de caractères représentant le nom de l'ancre.
 - `HTMLAnchorElement.rev` {{Deprecated_Inline}}
-  - : Une chaîne de caractères représentant l'attribut HTML [`rev`](/fr/docs/Web/HTML/Reference/Elements/a#rev), spécifiant la relation de l'objet lien avec l'objet cible.
+  - : Une chaîne de caractères représentant l'attribut HTML [`rev`](/fr/docs/Web/HTML/Reference/Elements/a#rev), définissant la relation de l'objet lien avec l'objet cible.
 - `HTMLAnchorElement.shape` {{Deprecated_Inline}}
   - : Une chaîne de caractères représentant la forme de la zone active.
 

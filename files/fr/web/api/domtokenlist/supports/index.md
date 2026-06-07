@@ -16,7 +16,7 @@ var boolean = element.supports(token);
 ### Paramètres
 
 - _`token`_
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) contenant la marque à interroger.
+  - : Une {{jsxref("String")}} (_chaîne de caractères_) contenant la marque à interroger.
 
 ### Renvoie
 

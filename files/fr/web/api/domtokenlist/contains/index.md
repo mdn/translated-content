@@ -16,7 +16,7 @@ tokenList.contains(token);
 ### Paramètres
 
 - token
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la "token" (_marque_) dont vous voulez vérifier l'existence dans la liste.
+  - : Une {{jsxref("String")}} (_chaîne de caractères_) représentant la "token" (_marque_) dont vous voulez vérifier l'existence dans la liste.
 
 ### Valeur renvoyée
 
