@@ -341,7 +341,7 @@ function checkPostalCode() {
   // 国 ID を読む
   const country = countrySelect.value;
 
-// 制約チェッカーを構築
+  // 制約チェッカーを構築
   const constraint = new RegExp(constraints[country][0], "");
   console.log(constraint);
 
