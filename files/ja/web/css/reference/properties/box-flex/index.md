@@ -1,15 +1,19 @@
 ---
-title: box-flex
+title: CSS `box-flex` プロパティ
+short-title: box-flex
 slug: Web/CSS/Reference/Properties/box-flex
-original_slug: Web/CSS/box-flex
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{Non-standard_Header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 > [!WARNING]
-> このプロパティは XUL ボックスモデルの部品を制御するためのものです。古い CSS Flexible Box Layout Module の草稿の '`box-flex`' (このプロパティの元になったもの) または '`-webkit-box-flex`' (草稿の元になったもの) の動作のどちらとも一致しません。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)を参照してください。
+> このプロパティは XUL ボックスモデルの部品を制御するためのものです。古い CSS Flexible Box Layout Module の草稿の '`box-flex`' (このプロパティの元になったもの) または '`-webkit-box-flex`' (草稿の元になったもの) の動作のどちらとも一致しません。現在の標準についての情報は [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) を参照してください。
 
 **`-moz-box-flex`** および **`-webkit-box-flex`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 `-moz-box` または `-webkit-box` が、これを内包するボックスを、包含ボックスのレイアウトの方向で埋めるまで拡張する方法を指定します。
+
+## 構文
 
 ```css
 /* <number> 値 */
@@ -23,13 +27,15 @@ original_slug: Web/CSS/box-flex
 /* グローバル値 */
 -moz-box-flex: inherit;
 -moz-box-flex: initial;
+-moz-box-flex: revert;
+-moz-box-flex: revert-layer;
 -moz-box-flex: unset;
 -webkit-box-flex: inherit;
 -webkit-box-flex: initial;
+-webkit-box-flex: revert;
+-webkit-box-flex: revert-layer;
 -webkit-box-flex: unset;
 ```
-
-## 構文
 
 `box-flex` プロパティは {{CSSxRef("&lt;number&gt;")}} として指定されます。値が 0 の場合、ボックスは拡張されません。値が 0 より大きい場合は、ボックスは利用可能な空間の比率で拡張されます。
 
@@ -55,43 +61,36 @@ original_slug: Web/CSS/box-flex
 
 ## 形式文法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`box-flex = <number>`)}}
 
 ## 例
 
 ### box-flex の設定
 
 ```html
-<!doctype html>
-<html>
-  <head>
-    <title>-moz-box-flex example</title>
-    <style>
-      div.example {
-        display: -moz-box;
-        display: -webkit-box;
-        border: 1px solid black;
-        width: 100%;
-      }
-      div.example > p:nth-child(1) {
-        -moz-box-flex: 1; /* Mozilla */
-        -webkit-box-flex: 1; /* WebKit */
-        border: 1px solid black;
-      }
-      div.example > p:nth-child(2) {
-        -moz-box-flex: 0; /* Mozilla */
-        -webkit-box-flex: 0; /* WebKit */
-        border: 1px solid black;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="example">
-      <p>I will expand to fill extra space</p>
-      <p>I will not expand</p>
-    </div>
-  </body>
-</html>
+<div class="example">
+  <p>I will expand to fill extra space</p>
+  <p>I will not expand</p>
+</div>
+```
+
+```css
+div.example {
+  display: -moz-box;
+  display: -webkit-box;
+  border: 1px solid black;
+  width: 100%;
+}
+div.example > p:nth-child(1) {
+  -moz-box-flex: 1; /* Mozilla */
+  -webkit-box-flex: 1; /* WebKit */
+  border: 1px solid black;
+}
+div.example > p:nth-child(2) {
+  -moz-box-flex: 0; /* Mozilla */
+  -webkit-box-flex: 0; /* WebKit */
+  border: 1px solid black;
+}
 ```
 
 ## 仕様書
