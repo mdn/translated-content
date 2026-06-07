@@ -1,8 +1,9 @@
 ---
-title: border-image
+title: Propriété CSS `border-image`
+short-title: border-image
 slug: Web/CSS/Reference/Properties/border-image
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image`** dessine une image autour d'un élément donné. Elle remplace la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) classique de l'élément.

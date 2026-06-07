@@ -166,10 +166,10 @@ p {
   <tbody>
     <tr>
       <th>
-        <a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a>
+        <a href="/ru/docs/Web/HTML/Guides/Content_categories">Категории контента</a>
       </th>
       <td>
-        <a href="/ru/docs/Web/HTML/Content_categories#метаданные">Метаданные</a>.
+        <a href="/ru/docs/Web/HTML/Guides/Content_categories#метаданные">Метаданные</a>.
       </td>
     </tr>
     <tr>
@@ -187,7 +187,7 @@ p {
       <th>Допустимые родители</th>
       <td>
         Любой элемент, который принимает
-        <a href="/ru/docs/Web/HTML/Content_categories#метаданные">метаданные</a>.
+        <a href="/ru/docs/Web/HTML/Guides/Content_categories#метаданные">метаданные</a>.
       </td>
     </tr>
     <tr>

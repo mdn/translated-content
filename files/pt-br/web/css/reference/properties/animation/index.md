@@ -6,7 +6,7 @@ original_slug: Web/CSS/animation
 
 {{CSSRef}}
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) [abreviada](/pt-BR/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`animation`**, aplica uma animação entre estilos. É uma abreviação de {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, e {{cssxref("animation-play-state")}}.
+A propriedade [CSS](/pt-BR/docs/Web/CSS) [abreviada](/pt-BR/docs/Web/CSS/Guides/Cascade/Shorthand_properties) **`animation`**, aplica uma animação entre estilos. É uma abreviação de {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, e {{cssxref("animation-play-state")}}.
 
 {{InteractiveExample("CSS Demo: animation")}}
 
@@ -56,7 +56,7 @@ animation: 0.5s linear 1s infinite alternate slidein;
 
 Esta propriedade é uma abreviação para as seguintes propriedades CSS:
 
-- [`animation-delay`](/pt-BR/docs/Web/CSS/animation-delay)
+- [`animation-delay`](/pt-BR/docs/Web/CSS/Reference/Properties/animation-delay)
 - [`animation-direction`](/pt-BR/docs/Web/CSS/animation-direction)
 - [`animation-duration`](/pt-BR/docs/Web/CSS/animation-duration)
 - [`animation-fill-mode`](/pt-BR/docs/Web/CSS/animation-fill-mode)
@@ -142,7 +142,7 @@ Considere fornecer um mecanismo para pausar ou desabilitar a animação, bem com
 ## Exemplos
 
 > [!NOTE]
-> A animação das propriedades do [CSS Box Model](/pt-BR/docs/Web/CSS/CSS_box_model) não é recomendada. A animação de qualquer propriedade de box model é inerentemente para a CPU; considere animar a propriedade [transform](/pt-BR/docs/Web/CSS/transform).
+> A animação das propriedades do [CSS Box Model](/pt-BR/docs/Web/CSS/Guides/Box_model) não é recomendada. A animação de qualquer propriedade de box model é inerentemente para a CPU; considere animar a propriedade [transform](/pt-BR/docs/Web/CSS/Reference/Properties/transform).
 
 ### Nascer do Sol
 
@@ -328,7 +328,7 @@ embora uma animação de ascensão seja definida. A propriedade de transformaç�
 
 {{EmbedLiveSample('Cascading Multiple Animations')}}
 
-Veja [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations#examples) para exemplos adicionais.
+Veja [Usando animações CSS](/pt-BR/docs/Web/CSS/Guides/Animations/Using#examples) para exemplos adicionais.
 
 ## Especificações
 
@@ -340,5 +340,5 @@ Veja [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_anima
 
 ## Veja também
 
-- [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Usando animações CSS](/pt-BR/docs/Web/CSS/Guides/Animations/Using)
 - API JavaScript {{domxref("AnimationEvent")}}

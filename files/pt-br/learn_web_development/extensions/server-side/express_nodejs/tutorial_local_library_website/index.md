@@ -19,7 +19,7 @@ Este artigo tem como objetivo explicar o que você vai aprender ao longo dos pr�
           >Indrodução ao Express</a
         >. Para os próximos artigos, você também precisa ler
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Express_Nodejs/ambiente_de_desenvolvimento"
+          href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment"
           >Conhecendo Node como ambiente de desenvolvimento</a
         >.
       </td>

@@ -8,16 +8,16 @@ O **elemento HTML** **`<p>`** representa um parágrafo. Em mídias visuais, par�
 
 Parágrafos são [Elementos block-level](/pt-BR/docs/Glossary/Block-level_content), e fecharão automaticamente caso outro [Elemento block-level](/pt-BR/docs/Glossary/Block-level_content) inicie antes da tag de fechamento `</p>`. Veja "Omissão de tag" abaixo.
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_
-  [Conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_de_fluxo), conteúdos palpáveis.
-- _Conteúdo permitido_[Conteúdo frasal](/pt-BR/docs/Web/HTML/Content_categories#Conte%C3%BAdo_fraseado).
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Guides/Content_categories)_
+  [Conteúdos de fluxo](/pt-BR/docs/Web/HTML/Guides/Content_categories#conteúdo_de_fluxo), conteúdos palpáveis.
+- _Conteúdo permitido_[Conteúdo frasal](/pt-BR/docs/Web/HTML/Guides/Content_categories#Conte%C3%BAdo_fraseado).
 - _Omissão de tag_ A tag de abertura é obrigatória. A tag de fechamento pode ser omitida caso o elemento {{HTMLElement("p")}} seja imediatamente sucedido pelos elementos {{HTMLElement("address")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("blockquote")}}, {{HTMLElement("div")}}, {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("footer")}}, {{HTMLElement("form")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("header")}}, {{HTMLElement("hr")}}, {{HTMLElement("menu")}}, {{HTMLElement("nav")}}, {{HTMLElement("ol")}}, {{HTMLElement("pre")}}, {{HTMLElement("section")}}, {{HTMLElement("table")}}, {{HTMLElement("ul")}}, ou por outro elemento {{HTMLElement("p")}}, ou, caso não haja mais conteúdo no elemento pai e o elemento pai não for um elemento {{HTMLElement("a")}}.
-- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Conte%C3%BAdo_de_fluxo).
+- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/Web/HTML/Guides/Content_categories#Conte%C3%BAdo_de_fluxo).
 - _Interface DOM_ {{domxref("HTMLParagraphElement")}}
 
 ## Atributos
 
-Este elemento inclui [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 > **Note:** **Obs.:** O atributo `align` nas tags `<p>` está obsoleto e não deve ser usado.
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
 original_slug: Learn/HTML/Tables/Basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
 
 Cet article vous initie aux tableaux en HTML. Il porte sur les bases comme les rangées, les cellules, les en-têtes, les cellules sur plusieurs colonnes ou lignes, ainsi que sur la façon de regrouper les cellules dans une colonne en vue d'affecter un style.
 
@@ -540,4 +540,4 @@ Voyez comment vous lisez avec l'exemple. Si vous êtes coincé ou souhaitez vér
 
 Cela ne fait que compléter les bases des tableaux HTML. Dans l'article suivant, nous allons voir quelques fonctionnalités de tableaux un peu plus avancées et commencer à penser à quel point elles sont accessibles pour les malvoyants.
 
-{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content/HTML_table_basics")}}

@@ -13,7 +13,7 @@ L'entête de réponse `Tk` indique le statut de suivi (tracking) qui s'applique 
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>non</td>
     </tr>
   </tbody>

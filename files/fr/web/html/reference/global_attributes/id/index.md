@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : id"
+title: "Attribut HTML universel : `id`"
 short-title: id
 slug: Web/HTML/Reference/Global_attributes/id
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`id`** définit un identifiant qui doit être unique pour l'ensemble du document.

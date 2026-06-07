@@ -27,7 +27,7 @@ L'évènement **`mousedown`** est déclenché à partir d'un [`Element`](/fr/doc
     <tr>
       <th scope="row">Propriété pour la gestion d'évènement</th>
       <td>
-        <a href="/fr/docs/Web/API/GlobalEventHandlers/onmousedown"><code>onmousedown</code></a>
+        <a href="/fr/docs/Web/API/Element/mousedown_event"><code>onmousedown</code></a>
       </td>
     </tr>
   </tbody>

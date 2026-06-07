@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
 
 Sejam bem-vindos ao curso de JavaScript para iniciantes do MDN! Neste primeiro artigo vamos fazer uma análise profunda da linguagem, respondendo questões como "O que é JavaScript?", e "O que ele faz?", para você se sentir confortável com a proposta da linguagem.
 
@@ -109,7 +109,7 @@ Elas geralmente se dividem em duas categorias.
 - [APIs de áudio e vídeo](/pt-BR/docs/Web/Media/Audio_and_video_delivery) como {{domxref("HTMLMediaElement")}} e [WebRTC](/pt-BR/docs/Web/API/WebRTC_API) permitem a você fazer coisas realmente interessantes com multimídia, tanto tocar música e vídeo em uma página da web, como capturar vídeos com a sua câmera e exibir no computador de outra pessoa (veja [Snapshot demo](http://chrisdavidmills.github.io/snapshot/) para ter uma ideia).
 
 > [!NOTE]
-> Muitas demonstrações acima não vão funcionar em navegadores antigos — quando você for experimentar, é uma boa ideia usar browsers modernos como Firefox, Edge ou Opera para ver o código funcionar. Você vai precisar estudar [testes cross browser](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing) com mais detalhes quando você estiver chegando perto de produzir código (código real que as pessoas vão usar).
+> Muitas demonstrações acima não vão funcionar em navegadores antigos — quando você for experimentar, é uma boa ideia usar browsers modernos como Firefox, Edge ou Opera para ver o código funcionar. Você vai precisar estudar [testes cross browser](/pt-BR/docs/Learn_web_development/Extensions/Testing) com mais detalhes quando você estiver chegando perto de produzir código (código real que as pessoas vão usar).
 
 **APIs de terceiros** não estão implementados no navegador automaticamente, e você geralmente tem que pegar seu código e informações em algum lugar da Web. Por exemplo:
 
@@ -413,4 +413,4 @@ Então, esse foi o seu primeiro passo no mundo do JavaScript. Nós iniciamos ape
 
 O JavaScript talvez pareça um pouco assustador agora, mas não se preocupe — nesse curso você será guiado passo a passo, e tudo vai começar a fazer sentido. No próximo artigo vamos [mergulhar direto para a prática](/pt-BR/docs/Learn_web_development/Core/Scripting/A_first_splash), levando você a construir seu próprio código JavaScript.
 
-{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}

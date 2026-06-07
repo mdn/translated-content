@@ -71,7 +71,7 @@ var int32 = new Int32Array(iterable);
 
 ### 互換性メモ
 
-ECMAScript 2015 から、 `Int32Array` コンストラクターは構築に {{jsxref("Operators/new", "new")}} 演算子が必要になりました。 `Int32Array` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
+ECMAScript 2015 から、 `Int32Array` コンストラクターは構築に {{jsxref("new")}} 演算子が必要になりました。 `Int32Array` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
 
 ```js example-bad
 var dv = Int32Array([1, 2, 3]);
@@ -85,6 +85,6 @@ var dv = new Int32Array([1, 2, 3]);
 
 ## 関連情報
 
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

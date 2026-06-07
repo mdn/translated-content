@@ -62,7 +62,7 @@ span {
     - [결정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)
     - [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
     - [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
-    - [실제값](/ko/docs/Web/CSS/actual_value)
+    - [실제값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)
 
   - [값 정의 구문](/ko/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)

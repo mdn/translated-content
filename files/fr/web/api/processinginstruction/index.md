@@ -13,7 +13,7 @@ Les instructions de traitement définies par l'utilisateur ne peuvent pas commen
 
 Les instructions de traitement héritent des méthodes et propriétés de [`Node`](/fr/docs/Web/API/Node).
 
-{{InheritanceDiagram(700,70)}}
+{{InheritanceDiagram}}
 
 ### Attributs
 

@@ -188,7 +188,7 @@ Elles associent une clé avec une valeur et possèdent les attributs suivants&nb
       <td>Booléen</td>
       <td>
         <p>
-          Si cet attribut vaut <code>true</code>, la propriété sera énumérée dans les boucles <a href="/fr/docs/Web/JavaScript/Reference/Statements/for...in"><code>for…in</code></a>. Voir aussi <a href="/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Rattachement et caractère énumérable des propriétés</a>.
+          Si cet attribut vaut <code>true</code>, la propriété sera énumérée dans les boucles <a href="/fr/docs/Web/JavaScript/Reference/Statements/for...in"><code>for…in</code></a>. Voir aussi <a href="/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties">Rattachement et caractère énumérable des propriétés</a>.
         </p>
       </td>
       <td><code>false</code></td>

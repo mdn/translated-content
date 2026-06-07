@@ -1,14 +1,12 @@
 ---
-title: "<tr>: 表の行要素"
+title: HTML `<tr>` 表の行要素
+short-title: <tr>
 slug: Web/HTML/Reference/Elements/tr
-original_slug: Web/HTML/Element/tr
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
-
-**`<tr>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内でセルの行を定義します。行のセルには {{HTMLElement("td")}} （データセル）および {{HTMLElement("th")}} （見出しセル）要素をを混在させることができます。
+**`<tr>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の中のセルの行を定義します。行のセルには {{HTMLElement("td")}} （行のセル）および {{HTMLElement("th")}} （見出しセル）要素を混在させることができます。
 
 {{InteractiveExample("HTML デモ: &lt;tr&gt;", "tabbed-taller")}}
 
@@ -17,26 +15,30 @@ l10n:
   <caption>
     Alien football stars
   </caption>
-  <tr>
-    <th scope="col">Player</th>
-    <th scope="col">Gloobles</th>
-    <th scope="col">Za'taak</th>
-  </tr>
-  <tr>
-    <th scope="row">TR-7</th>
-    <td>7</td>
-    <td>4,569</td>
-  </tr>
-  <tr>
-    <th scope="row">Khiresh Odo</th>
-    <td>7</td>
-    <td>7,223</td>
-  </tr>
-  <tr>
-    <th scope="row">Mia Oolong</th>
-    <td>9</td>
-    <td>6,219</td>
-  </tr>
+  <thead>
+    <tr>
+      <th scope="col">Player</th>
+      <th scope="col">Gloobles</th>
+      <th scope="col">Za'taak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">TR-7</th>
+      <td>7</td>
+      <td>4,569</td>
+    </tr>
+    <tr>
+      <th scope="row">Khiresh Odo</th>
+      <td>7</td>
+      <td>7,223</td>
+    </tr>
+    <tr>
+      <th scope="row">Mia Oolong</th>
+      <td>9</td>
+      <td>6,219</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -49,7 +51,7 @@ td {
 
 th[scope="col"] {
   background-color: #505050;
-  color: #fff;
+  color: white;
 }
 
 th[scope="row"] {
@@ -61,7 +63,7 @@ td {
 }
 
 tr:nth-of-type(even) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 table {
@@ -78,504 +80,342 @@ caption {
 }
 ```
 
-セルをどのように列に収める（または列にまたがる）かを制御できるようにするため、`<th>` および `<td>` で [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性をサポートします。これはセルの幅をいくつの列にするかを指定でき、既定値は 1 です。同様に、セルが複数の行にまたがることを示す [`rowspan`](/ja/docs/Web/HTML/Reference/Elements/td#rowspan) 属性も使用できます。
-
-表を作成するとき、正しい表にするために少し経験が必要かもしれません。以下にいくつか[例](#例)がありますが、さらに多くの例や詳しいチュートリアルは、[ウェブ開発を学ぶ](/ja/docs/Learn_web_development)領域の [HTML 表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)シリーズをご覧ください。表形式のデータを正しいレイアウトに整形するため、 table 要素やその属性の使い方を学ぶことができます。
-
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。使用を避けるべき[非推奨の属性](#非推奨の属性)もいくつかありますが、古いコードを読む際は知っている必要があるでしょう。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 ### 非推奨の属性
 
-以下の属性はまだブラウザーが実装していますが、すでに HTML 仕様に含まれていませんのでまったく動作しない、あるいは期待どおりに動作しない可能性があります。使用は避けてください。
+以下の属性は非推奨となっているため、使用しないでください。これらは、既存のコードを更新する際の参考として、また歴史的な関心のためだけに、下記に記載されています。
 
 - `align` {{deprecated_inline}}
-  - : 文字列で、行の各セルの中身について、水平方向の配置方法を指定します。これは行内の全セルで個別に `align` を使用することに対する一括指定です。以下の値を指定可能です。
-    - `left`
-      - : 各セルの中身を左側に揃えます。
-    - `center`
-      - : 中身をセルの左端と右端の間で中央揃えにします。
-    - `right`
-      - : 各セルの中身を右側に揃えます。
-    - `justify`
-      - : テキストが各セルの幅全体を満たす（両端揃え）ように、テキスト内のホワイトスペースを広げます。
-    - `char`
-      - : 行内の各セルを、特定の文字に対して揃えます (この方法で設定された列内の各行は、その文字に対して揃えます)。これは [`char`](#char) および [`charoff`](#charoff) を使用して、揃える文字 (数値データを揃える際の "." や "," が一般的です) および揃える文字に続く文字の数を指定します。この配置方法は、広くは対応されていませんでした。
-
-    `align` の値が明示的に設定されていない場合は、親ノードの値を継承します。
-
-    > [!NOTE]
-    > 行内のセルで配置方法を指定するには、廃止された `align` 属性の代わりに CSS の {{CSSxRef("text-align")}} プロパティで `left`, `center`, `right`, `justify` を指定してください。文字ベースの配置方法を適用するには、 CSS の {{CSSxRef("text-align")}} プロパティに揃える文字 (`"."` や `","` など) を設定してください。
+  - : それぞれの行のセルの水平方向の配置を指定します。使用可能な{{Glossary("enumerated", "列挙")}}値は、`left`、`center`、`right`、`justify`、`char` です。対応していても、`char` 値は、[`char`](#char) 属性で定義された文字と、[`charoff`](#charoff) 属性で定義されたオフセットに基づいて、テキストコンテンツを配置します。この属性は非推奨となっているため、代わりに CSS の {{cssxref("text-align")}} プロパティを使用してください。
 
 - `bgcolor` {{deprecated_inline}}
-  - : 文字列で、行の各セルの背景色を定義します。値は [16 進 `#RRGGBB` または `#RGB` 値](/ja/docs/Web/CSS/Reference/Values/color_value/rgb)、あるいは[色キーワード](/ja/docs/Web/CSS/Reference/Values/named-color)を使用できます。属性を省略するか JavaScript で `null` を設定すると、行のセルは親要素の背景色を継承します。
-
-    > [!NOTE]
-    > {{HTMLElement("tr")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイルを設定するべきです。 `bgcolor` 属性と同様の効果を与えるには、CSS の {{CSSxRef("background-color")}} プロパティを使用してください。
+  - : 文字列で、行の各セルの背景色を定義します。この値は HTML 色であり、[6 桁の 16 進数の RGB コード](/ja/docs/Web/CSS/Reference/Values/hex-color)の前に '`#`' が付いた形、または[色キーワード](/ja/docs/Web/CSS/Reference/Values/named-color)のどちらかです。それ以外の CSS の {{cssxref("&lt;color&gt;")}} 値には対応していません。この属性は非推奨ですので、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
 - `char` {{deprecated_inline}}
-  - : 文字列で、行のそれぞれの列のセルで揃える文字を設定します（同一の文字を使用して、それぞれの行の中心がほかの行と揃えられます）。典型的な値に、数値や金額を揃えようとするときのピリオド (`"."`) やカンマ (`","`) があります。 [`align`](#align) 属性が `char` ではない場合は、この属性は無視されます。
-
-    > [!NOTE]
-    > この属性は廃止され、かつほとんど実装されていませんでした。 [`char`](#char) と同様の効果を得るには、 CSS の {{CSSxRef("text-align")}} プロパティの値として `char` の値を使用します（例えば `text-align: "."`）。
+  - : それぞれの行のセル内のコンテンツを、そのセル内の文字に対して配置する位置を指定します。よくある値としては、数値や金額を配置する場合のピリオド (`.`) があります。[`align`](#align) が `char` に設定されていない場合、この属性は無視されます。
 
 - `charoff` {{deprecated_inline}}
-  - : 文字列で、 `char` 属性で指定した揃え文字から行のデータをオフセットする文字数を示します。例えば通貨単位の 100 分の 1 の値を使用する通貨 (例えばドルであり、100 セントに分割されます) の金額を表示するときは、一般的に値 2 を指定するでしょう。 `char` に `"."` を設定することと組み合わせると、列内の値が小数点できれいに揃い、セントの数値が小数点の右側へ適切に表示されます。
-
-    > [!NOTE]
-    > この属性は廃止されただけでなく、ほとんど実装されていませんでした。
+  - : [`char`](#char) 属性で指定された配置文字から、行のセルのコンテンツをオフセットする文字数を指定します。
 
 - `valign` {{deprecated_inline}}
-  - : 文字列で、行の各セルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
-    - `baseline`
-      - : 異なるフォントやフォントサイズの文字列を、その行で使用されているフォントの[ベースライン](https://en.wikipedia.org/wiki/Baseline)に沿って整列させることによって処理します。もし行の全ての文字が同じサイズであれば、効果は `bottom` と同じになります。
-    - `bottom`
-      - : 行の各セル内のテキストを、セルの下辺に可能な限り近づけて描画します。
-    - `middle`
-      - : 各セルのテキストは垂直方向の中央に配置されます。
-    - `top`
-      - : 各セルのテキストは、含まれるセルの上端に可能な限り沿って描画されます。
+  - : 列内の各セルの垂直方向の配置を指定します。指定可能な{{Glossary("enumerated", "列挙")}}値は、`baseline`、`bottom`、`middle`、`top` です。この属性は非推奨となっているため、代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
 
-    > [!NOTE]
-    > `valign` 属性は廃止されたため、使用しないでください。代わりに CSS の {{CSSxRef("vertical-align")}} プロパティを使用してください。
+## 使用上の注意
+
+- `<tr>` 要素は、{{HTMLElement("thead")}}、{{HTMLElement("tbody")}}、{{HTMLElement("tfoot")}} 要素の子要素としてのみ有効です。
+- `<tr>` が親要素である {{HTMLElement("table")}} の直接の子要素として配置されている場合、`<tbody>` 要素が暗黙的に親として扱われ、ブラウザーがマークアップに `<tbody>` を追加します。
+- 暗黙の親要素 `<tbody>` は、`<table>` が子要素として `<tbody>` を持っていない場合であり、かつ `<tr>` が {{HTMLElement("caption")}}、{{HTMLElement("colgroup")}}、`<thead>` 要素のどれよりも後に記載されている場合にのみ対応します。
+- CSS の擬似クラス {{cssxref(":nth-of-type")}}、 {{cssxref(":first-of-type")}}、{{cssxref(":last-of-type")}} は、多くの場合、目的の行のセットとその行のセルおよび見出しセル（{{HTMLElement("td")}} および {{HTMLElement("th")}} 要素）を選択する際に役立ちます。
+- `<tr>` が `<table>` の直接の子要素として含まれている場合、ブラウザーがマークアップに `<tbody>` を追加するため、`table > tr` などの CSS セレクターが期待通りに動作しない、あるいはまったく動作しないことがあります。
 
 ## 例
 
-`<tr>` 要素の使用例については、 {{HTMLElement("table")}} を参照してください。
+一般的な標準や最善の手法を紹介する完全な表の例については、{{HTMLElement("table")}} をご覧ください。
 
-### 基本的な例
+### 基本的な行の作成
 
-これは、人名とクラブまたはサービスのさまざまな会員情報を載せる表を表示する簡単な例です。
+この例では、4 行 3 列の表を示しています。最初の列には、行のデータセルに対する見出しが含まれています。
 
 #### HTML
 
-この HTML は、表のもっとも基本的な構造を示します。グループ、複数の行や列にまたがるセル、タイトルはなく、明確に似ているもののために表の構成要素の周りに線を生成する、もっとも基本的なスタイルだけがあります。
-
-表には 4 列（1 列の見出しを含む）があるの行が 4 行（1 行の見出しを含む）があります。表セクション要素は使用していません。代わりに、ブラウザーはそれらを自動的に定義できます。この次の例では {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}} を追加します。
+4 つの `<tr>` 要素を使用して、表に 4 つの行を作成します。それぞれの行には 3 つのセル（1 つの見出しセル（{{HTMLElement("th")}}）と 2 つのデータセル（{{HTMLElement("td")}}））が含まれており、3 つの列が形成されます。それぞれの見出しセルに設定された [`scope`](/ja/docs/Web/HTML/Reference/Elements/th#scope) 属性は、そのセルがどのセルに関連するかを指定します。この例では、`row` 内のすべてのデータセルが対象となります。
 
 ```html
 <table>
-  <tr>
-    <th>Name</th>
-    <th>ID</th>
-    <th>Member Since</th>
-    <th>Balance</th>
-  </tr>
-  <tr>
-    <td>Margaret Nguyen</td>
-    <td>427311</td>
-    <td><time datetime="2010-06-03">June 3, 2010</time></td>
-    <td>0.00</td>
-  </tr>
-  <tr>
-    <td>Edvard Galinski</td>
-    <td>533175</td>
-    <td><time datetime="2011-01-13">January 13, 2011</time></td>
-    <td>37.00</td>
-  </tr>
-  <tr>
-    <td>Hoshi Nakamura</td>
-    <td>601942</td>
-    <td><time datetime="2012-07-23">July 23, 2012</time></td>
-    <td>15.00</td>
-  </tr>
+  <tbody>
+    <tr>
+      <th scope="row">A</th>
+      <td>Alfa</td>
+      <td>AL fah</td>
+    </tr>
+    <tr>
+      <th scope="row">B</th>
+      <td>Bravo</td>
+      <td>BRAH voh</td>
+    </tr>
+    <tr>
+      <th scope="row">C</th>
+      <td>Charlie</td>
+      <td>CHAR lee</td>
+    </tr>
+    <tr>
+      <th scope="row">D</th>
+      <td>Delta</td>
+      <td>DELL tah</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 #### CSS
 
-このシンプルな CSS は表とセルの周りに黒い実線の境界線を追加するものであり、セルは {{HTMLElement("th")}} と {{HTMLElement("td")}} の両方を使用して指定します。このようにして、見出しセルとデータセルが簡単に区別できます。
+CSS の {{cssxref(":nth-of-type")}} 擬似クラスを使用して、すべての奇数 (`odd`) 行を選択し、それらの行の {{cssxref("background-color")}} を少し濃い色に設定することで、いわゆる「ゼブラストライプ」効果を作成しています。背景色を交互にすることにより、表内のデータ行を解釈し読み取りやすくします。行と列の数が多い中で、特定の行にあるデータを探す場面を想像してみてください。さらに、行ヘッダーの見出しセル（{{HTMLElement("th")}} 要素）は、{{cssxref("background-color")}}をつけて強調表示し、データセル（{{HTMLElement("td")}}要素）と判別できるようにしています。
 
 ```css
-table {
-  border: 1px solid black;
+tr:nth-of-type(odd) {
+  background-color: #eeeeee;
 }
 
-th,
-td {
-  border: 1px solid black;
+tr th[scope="row"] {
+  background-color: #d6ecd4;
 }
 ```
-
-#### 結果
-
-{{EmbedLiveSample("Basic_example", 500, 125)}}
-
-### 行や列をつなげる
-
-次に、ユーザーの有効期限のデータを表示する列を追加しましょう。また、 "joined" と "canceled" のデータの上に、 "Membership Dates" という大見出しも追加します。これは行や列をまたぐセルを表に追加するということであり、見出しのセルを正しい位置に置くことができます。
-
-#### 結果
-
-始めに、実際の表示結果を見ましょう。
-
-{{EmbedLiveSample("Row_and_column_spanning", 500, 150)}}
-
-見出し領域が実際は 2 行あることに注目してください。ひとつは "Name", "ID", "Membership Dates", "Balance" の見出し、もうひとつは "Joined" と "Canceled" であり、これは "Membership Dates" の小見出しです。これは以下のようにして実現します。
-
-- 1 行目の "Name", "ID", "Balance" の見出しセルは、[`rowspan`](#rowspan) 属性を使用して 2 行にまたがっており、それぞれのセルの高さが 2 行分になります。
-- 1 行目の "Membership Dates" の見出しセルは、[`colspan`](#colspan) 属性を使用して 2 列にまたがっており、実際に見出しの幅が 2 列分になります。
-- 2 行目の {{HTMLElement("th")}} 要素は、"Joined" と "Canceled" しかありません。ほかの列は 2 行目にまたがっている 1 行目のセルがすでに占有しているためであり、 2 行目のセルは "Membership Dates" の下へ適切に配置されます。
-
-#### HTML
-
-HTML は前の例に似ていますが、それぞれのデータ行に新しい列を追加したことと、見出しを変更したことが異なります。変更した HTML は以下のようになります。
-
-```html
-<table>
-  <tr>
-    <th rowspan="2">Name</th>
-    <th rowspan="2">ID</th>
-    <th colspan="2">Membership Dates</th>
-    <th rowspan="2">Balance</th>
-  </tr>
-  <tr>
-    <th>Joined</th>
-    <th>Canceled</th>
-  </tr>
-  <tr>
-    <th>Margaret Nguyen</th>
-    <td>427311</td>
-    <td><time datetime="2010-06-03">June 3, 2010</time></td>
-    <td>n/a</td>
-    <td>0.00</td>
-  </tr>
-  <tr>
-    <th>Edvard Galinski</th>
-    <td>533175</td>
-    <td><time datetime="2011-01-13">January 13, 2011</time></td>
-    <td><time datetime="2017-04-08">April 8, 2017</time></td>
-    <td>37.00</td>
-  </tr>
-  <tr>
-    <th>Hoshi Nakamura</th>
-    <td>601942</td>
-    <td><time datetime="2012-07-23">July 23, 2012</time></td>
-    <td>n/a</td>
-    <td>15.00</td>
-  </tr>
-</table>
-```
-
-(行や列をまたぐことを論じるために) ここで重要な部分は、コードの最初の数行です。 "Name", "ID", "Balance" の見出しで `rowspan` を使用して 2 行を占めていることと、 "Membership Dates" の見出しで `colspan` を使用して 2 列を占めていることに注意してください。
-
-CSS は変更していません。
 
 ```css hidden
 table {
-  border: 1px solid black;
-}
-
-th,
-td {
-  border: 1px solid black;
-}
-```
-
-### 表の内容のグループを明示する
-
-この表にスタイルを設定する前に、 CSS を簡単にするために行や列のグループを追加する時間をとりましょう。
-
-#### HTML
-
-この作業を行う場所は HTML であり、また作業はとても単純です。
-
-```html
-<table>
-  <thead>
-    <tr>
-      <th rowspan="2">Name</th>
-      <th rowspan="2">ID</th>
-      <th colspan="2">Membership Dates</th>
-      <th rowspan="2">Balance</th>
-    </tr>
-    <tr>
-      <th>Joined</th>
-      <th>Canceled</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Margaret Nguyen</th>
-      <td>427311</td>
-      <td><time datetime="2010-06-03">June 3, 2010</time></td>
-      <td>n/a</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Edvard Galinski</th>
-      <td>533175</td>
-      <td><time datetime="2011-01-13">January 13, 2011</time></td>
-      <td><time datetime="2017-04-08">April 8, 2017</time></td>
-      <td>37.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Hoshi Nakamura</th>
-      <td>601942</td>
-      <td><time datetime="2012-07-23">July 23, 2012</time></td>
-      <td>n/a</td>
-      <td>15.00</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-(行や列をまたぐことを論じるために) ここで重要な部分は、コードの最初の数行です。 "Name", "ID", "Balance" の見出しで `rowspan` を使用して 2 行を占めていることと、 "Membership Dates" の見出しで `colspan` を使用して 2 列を占めていることに注意してください。
-
-ここでも、 CSS は変更しません。
-
-```css hidden
-table {
-  border: 1px solid black;
-}
-
-th,
-td {
-  border: 1px solid black;
-}
-```
-
-#### 結果
-
-内部では役に立つ文脈情報を追加したにもかかわらず、表示結果はまったく変わっていません。
-
-{{EmbedLiveSample("Explicitly_specifying_table_content_groups", 500, 150)}}
-
-### 基本的な整形
-
-表のすべての部分の場合と同じく、 CSS を使用して表の行やその中身の外観を変更できます。 `<tr>` 要素に適用したスタイルは、セルに適用したセルで上書きされない限り、行内のすべてのセルに影響を与えます。
-
-使用する書体の調節するスタイルと、見出し行に背景色を追加するスタイルを適用しましょう。
-
-#### 結果
-
-再び、始めに表示結果を見ましょう。
-
-{{EmbedLiveSample("Basic_styling", 500, 200)}}
-
-```html hidden
-<table>
-  <thead>
-    <tr>
-      <th rowspan="2">Name</th>
-      <th rowspan="2">ID</th>
-      <th colspan="2">Membership Dates</th>
-      <th rowspan="2">Balance</th>
-    </tr>
-    <tr>
-      <th>Joined</th>
-      <th>Canceled</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Margaret Nguyen</th>
-      <td>427311</td>
-      <td><time datetime="2010-06-03">June 3, 2010</time></td>
-      <td>n/a</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Edvard Galinski</th>
-      <td>533175</td>
-      <td><time datetime="2011-01-13">January 13, 2011</time></td>
-      <td><time datetime="2017-04-08">April 8, 2017</time></td>
-      <td>37.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Hoshi Nakamura</th>
-      <td>601942</td>
-      <td><time datetime="2012-07-23">July 23, 2012</time></td>
-      <td>n/a</td>
-      <td>15.00</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-#### CSS
-
-ここでは HTML を変更せず、CSS に手を加えます。
-
-```css
-table {
-  border: 1px solid black;
-  font:
-    16px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
-}
-
-thead > tr {
-  background-color: rgb(228, 240, 245);
-}
-
-th,
-td {
-  border: 1px solid black;
-  padding: 4px 6px;
-}
-```
-
-ここで {{CSSxRef("font")}} プロパティを {{HTMLElement("table")}} 要素に追加して、視覚的に目立つ書体 (または人の意見によっては忌々しい sans-serif 書体) を設定する一方、興味深いところは 2 番目のスタイルで、 `<tr>` 要素のうち {{HTMLElement("thead")}} の中にあるものの背景色がライトブルーになります。これは、見出し領域内にあるすべてのセルへ一斉に背景色を適用するためのてっとり早い方法です。
-
-1 列目の {{HTMLElement("th")}} 要素の会員名は行の見出しとして扱っていますが、このスタイルは<em>影響を与えません</em>。
-
-### 高度なスタイル設定
-
-次は全力を尽くして、行の色を交互に設定する、行内の位置に応じてさまざまな色を設定するなど、見出しや本体の行にスタイルを設定します。
-
-#### 結果
-
-表は最終的に以下のようになります。
-
-{{EmbedLiveSample("Advanced_styling", 500, 200)}}
-
-ここでも HTML は変更しません。 HTML を適切に準備することがどのようなことか分かりましたか？
-
-```html hidden
-<table>
-  <thead>
-    <tr>
-      <th rowspan="2">Name</th>
-      <th rowspan="2">ID</th>
-      <th colspan="2">Membership Dates</th>
-      <th rowspan="2">Balance</th>
-    </tr>
-    <tr>
-      <th>Joined</th>
-      <th>Canceled</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Margaret Nguyen</th>
-      <td>427311</td>
-      <td><time datetime="2010-06-03">June 3, 2010</time></td>
-      <td>n/a</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Edvard Galinski</th>
-      <td>533175</td>
-      <td><time datetime="2011-01-13">January 13, 2011</time></td>
-      <td><time datetime="2017-04-08">April 8, 2017</time></td>
-      <td>37.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Hoshi Nakamura</th>
-      <td>601942</td>
-      <td><time datetime="2012-07-23">July 23, 2012</time></td>
-      <td>n/a</td>
-      <td>15.00</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-#### CSS
-
-ここでは CSS をさらに変更します。複雑ではありませんが、多くのことを行います。詳しく説明しましょう。
-
-##### 表と基本的なスタイル
-
-```css
-table {
-  border: 1px solid black;
-  font:
-    16px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
-  border-spacing: 0;
   border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
 }
 ```
 
-ここでは {{CSSxRef("border-spacing")}} および {{CSSxRef("border-collapse")}} を追加して、セル間の間隔を取り除き、 2 本の境界線を互いに接する1本の境界線にまとめます。
+#### 結果
+
+{{EmbedLiveSample("Basic_row_setup", 650, 140)}}
+
+### ヘッダー行
+
+この例では、[前回の例](#基本的な行の作成)の基本的な表を拡張し、表の 1 行目としてヘッダー行を追加しています。
+
+#### HTML
+
+表の 1 行目として追加の行 (`<tr>`) が追加され、それぞれの列のヘッダーとなる見出しセル ({{HTMLElement("th")}}) が指定されます。この行を {{HTMLElement("thead")}} グループ化要素内に配置することで、これが表のヘッダーである旨を示します。[`scope`](/ja/docs/Web/HTML/Reference/Elements/th#scope) 属性を、このヘッダー行内の各見出しセル (`<th>`) に追加し、たとえそれらのセルが {{HTMLElement("tbody")}} 内にあったとしても、各見出しセルが同じの列内のすべてのセルに関連していることを明示的に指定します。
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th scope="col">記号</th>
+      <th scope="col">Code word</th>
+      <th scope="col">発音</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">A</th>
+      <td>Alfa</td>
+      <td>AL fah</td>
+    </tr>
+    <tr>
+      <th scope="row">B</th>
+      <td>Bravo</td>
+      <td>BRAH voh</td>
+    </tr>
+    <tr>
+      <th scope="row">C</th>
+      <td>Charlie</td>
+      <td>CHAR lee</td>
+    </tr>
+    <tr>
+      <th scope="row">D</th>
+      <td>Delta</td>
+      <td>DELL tah</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
+
+CSS は[前の例](#基本的な行の作成)とほぼ同じですが、「ヘッダー行」を強調するためのスタイル設定をいくつか追加しており、これにより列の見出しを他のセルと区別しやすくなっています。
 
 ```css
+tr:nth-of-type(odd) {
+  background-color: #eeeeee;
+}
+
+tr th[scope="col"] {
+  background-color: #505050;
+  color: white;
+}
+
+tr th[scope="row"] {
+  background-color: #d6ecd4;
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
 th,
 td {
-  border: 1px solid black;
-  padding: 4px 6px;
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("Header_row", 650, 170)}}
+
+### 行の並べ替え
+
+{{HTMLElement("table")}} の行（`<tr>` 要素）をソートするための組み込み機能はありません。しかし、{{jsxref("Array.prototype.sort()")}}、{{domxref("Node.removeChild")}}、{{domxref("Node.appendChild")}} を使用することで、`<tr>` 要素の {{domxref("HTMLCollection")}} をソートするための独自の `sort()` 関数を JavaScript で実装することができます。
+
+#### HTML
+
+この基本的な表では、{{HTMLElement("tbody")}} 要素を使用して表の本体部分を指定し、データ（{{HTMLElement("td")}} 要素）を含む 3 つの行（`<tr>` 要素）を配置することで、降順で並んだ数値からなる 1 つの列を作成しています。
+
+```html
+<table>
+  <tbody>
+    <tr>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### JavaScript
+
+下記の JavaScript コードでは、作成された `sort()` 関数を {{HTMLElement("tbody")}} 要素に取り付け、表のセルを値の昇順で並べ替え、それに応じて表示を更新します。
+
+```js
+HTMLTableSectionElement.prototype.sort = function (cb) {
+  Array.from(this.rows)
+    .sort(cb)
+    .forEach((e) => this.appendChild(this.removeChild(e)));
+};
+
+document
+  .querySelector("table")
+  .tBodies[0].sort((a, b) => a.textContent.localeCompare(b.textContent));
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 4px 8px;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Sorting_rows', '650', '80')}}
+
+### 見出しセルをクリックすることで行を並べ替え
+
+この例では、[前の例](#行の並べ替え)の基本的な表を拡張し、複数の列に対して、対話的かつ個別に並べ替えを行えるようにしています。
+
+#### HTML
+
+追加のデータセル（{{HTMLElement("td")}} 要素）を、テーブル本体（{{HTMLElement("tbody")}} 要素）内のそれぞれの行（`<tr>` 要素）に追加し、アルファベットの昇順に並んだ 2 つ目となる列を作成します。{{HTMLElement("thead")}} 要素を使用し、本体セクションの前にヘッダーセクションを追加して、表見出しセル（`<th>` 要素）を含むヘッダー行を導入します。これらの見出しセルは、後述の JavaScript コードで使用して、クリック可能に設定し、クリックによってアクティブ化された際に対応するソートを実行します。
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>番号</th>
+      <th>数値</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>C</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### JavaScript
+
+クリックイベントハンドラーを、{{domxref("HTMLDocument", "document")}} 内の各 {{HTMLElement("table")}} のそれぞれの見出し行（{{HTMLElement("th")}} 要素）に追加します。これにより、行に含まれているデータセル（{{HTMLElement("td")}} 要素）の内容に基づいて、{{HTMLElement("tbody")}} のすべての行（`<tr>` 要素）がソートされます。
+
+> [!NOTE]
+> この解決策では、{{HTMLElement("td")}} 要素には子要素を含まないプレーンテキストが仮定されていることを想定しています。
+
+```js
+const allTables = document.querySelectorAll("table");
+
+for (const table of allTables) {
+  const tBody = table.tBodies[0];
+  const rows = Array.from(tBody.rows);
+  const headerCells = table.tHead.rows[0].cells;
+
+  for (const th of headerCells) {
+    const cellIndex = th.cellIndex;
+
+    th.addEventListener("click", () => {
+      rows.sort((tr1, tr2) => {
+        const tr1Text = tr1.cells[cellIndex].textContent;
+        const tr2Text = tr2.cells[cellIndex].textContent;
+        return tr1Text.localeCompare(tr2Text);
+      });
+
+      tBody.append(...rows);
+    });
+  }
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 4px 8px;
 }
 
 th {
-  vertical-align: bottom;
+  background-color: #505050;
+  color: white;
+  cursor: pointer;
 }
 ```
 
-ここには、表のすべてのセルに既定のスタイルがあります。次に、カスタマイズしましょう!
+#### 結果
 
-##### 上部の見出し全体
+{{EmbedLiveSample('Sorting_rows_with_a_click_on_header_cells', '650', '100')}}
 
-上部の見出し 2 つに分けて見ていきます。始めに、見出し全体のスタイルです。
-
-```css
-thead > tr {
-  background-color: rgb(228, 240, 245);
-}
-
-thead > tr:nth-of-type(2) {
-  border-bottom: 2px solid black;
-}
-```
-
-これは、表の見出し ({{HTMLElement("thead")}} を使用して指定します) 内にあるすべての `<tr>` 要素の背景色を設定します。そして上部の見出しの下ボーダーを、幅が 2 ピクセルの線に設定します。ただし、見出しの *2 行目*に {{CSSxRef("border-bottom")}} を適用するために {{cssxref(":nth-of-type")}} セレクターを使用していることに注目してください。なぜでしょう? これは、いくつかのセルがまたがっている 2 つの行で見出しが構成されているためです。実際は見出しが 2 行あるということであり、 1 行目にスタイルを適用すると意図しない結果になります。
-
-##### "Joined" および "Canceled" の見出し
-
-新しい会員を「良く」、退会した会員を「悪く」表すために、これら 2 つの見出しを緑と赤の色合いでスタイリングしましょう。
-
-```css
-thead > tr:last-of-type > th:nth-of-type(1) {
-  background-color: rgb(225, 255, 225);
-}
-
-thead > tr:last-of-type > th:nth-of-type(2) {
-  background-color: rgb(255, 225, 225);
-}
-```
-
-ここでは表の見出しブロックの最後の行に注目して、最初の見出しセル ("Joined") を緑系統の色、2番目の見出しセル ("Canceled") を赤系統の色に設定します。
-
-##### 本体で行ごとに色を変える
-
-行の色を交互に設定することは、表の可読性を高めるためによく使用されます。偶数番目の行に、少し色をつけましょう。
-
-```css
-tbody > tr:nth-of-type(even) {
-  background-color: rgb(237, 238, 242);
-}
-```
-
-##### 左側の見出しにスタイルを設定
-
-最初の列も目立たせたいので、ここにもスタイルを設定します。
-
-```css
-tbody > tr > th:first-of-type {
-  text-align: left;
-  background-color: rgb(225, 229, 244);
-}
-```
-
-表の本体のそれぞれの行で最初の見出しセルに、会員名を左揃えにする {{CSSxRef("text-align")}} と、いくぶん異なる背景色を設定します。
-
-##### バランスを整える
-
-最後に、表内の金額の値は右揃えが一般的ですので、ここで行いましょう。
-
-```css
-tbody > tr > td:last-of-type {
-  text-align: right;
-}
-```
-
-本体のそれぞれの行で最後の {{HTMLElement("td")}} に対して、 CSS の {{CSSxRef("text-align")}} プロパティに `"right"` を設定します。
+> [!NOTE]
+> 使いやすく、アクセシビリティを確保するためには、並べ替え可能なそれぞれの列の見出しセルが並べ替えボタンとして識別可能である必要があり、また、その列が現在昇順で並べ替えられているか降順で並べ替えられているかを、視覚的に、および [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) 属性によって明確に定義する必要があります。情報については、[ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) の [sortable table example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) をご覧ください。
 
 ## 技術的概要
 
@@ -596,7 +436,7 @@ tbody > tr > td:last-of-type {
     <tr>
       <th scope="row">タグの省略</th>
       <td>
-        開始タグは必須。 {{HTMLElement("tr")}} 要素の直後に {{HTMLElement("tr")}} 要素がある場合、または親の表グループ要素 ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}) 内で最後の要素である場合は終了タグを省略可能。
+        開始タグは必須。 <code>&lt;tr&gt;</code> 要素の直後に <code>&lt;tr&gt;</code> 要素がある場合、または親の表グループ要素 ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}) 内で最後の要素である場合は終了タグを省略可能。
       </td>
     </tr>
     <tr>
@@ -609,7 +449,7 @@ tbody > tr > td:last-of-type {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Row_Role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role"
             >row</a
           ></code
         >
@@ -636,7 +476,10 @@ tbody > tr > td:last-of-type {
 
 ## 関連情報
 
-- [学習エリア: HTML の表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) `<tr>` を含む、表の使用について説明します。
-- {{DOMxRef("HTMLTableRowElement")}}: `<tr>` が準拠するインターフェイスです。
-- 他の表関連要素:
-  - {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}
+- [学習: HTML 表の基本](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) `<tr>` を含む、表の使用について説明します。
+- {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}: その他の表関連要素
+- {{cssxref("background-color")}}: 行の各セルの背景色を設定する CSS プロパティ
+- {{cssxref("border")}}: 行のセルの境界を制御する CSS プロパティ
+- {{cssxref("text-align")}}: 行の各セルの内容を水平方向に位置ぞろえするための CSS プロパティ
+- {{cssxref("vertical-align")}}: 行の各セルの内容を垂直方向に位置ぞろえするための CSS プロパティ
+- {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}: 目的の行のセルを選択するための CSS 擬似クラス

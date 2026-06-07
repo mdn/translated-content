@@ -1,8 +1,9 @@
 ---
-title: "@container"
+title: Règle CSS `@container`
+short-title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 l10n:
-  sourceCommit: 51872f3d8311c3c071cbfea613da40036911e4d7
+  sourceCommit: 3e5fd6765f891b6fedae20ce1e31e2fdefe55b3c
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries#nommer_les_contextes_de_conteneur).
@@ -77,6 +78,28 @@ Si aucun `<container-query>` n'est défini, les conteneurs nommés sont sélecti
     font-size: 1.5em;
   }
 }
+
+/* Requêtes de style() booléennes */
+@container style(--theme: one) or style(--theme: two) {
+  /* styles de conteneur correspondants */
+}
+@container style((--theme: one) or (--theme: two)) {
+  /* styles de conteneur correspondants */
+}
+@container style(--theme: one) and style(--theme: two) {
+  /* styles de conteneur correspondants */
+}
+@container style((--theme: one) and (--theme: two)) {
+  /* styles de conteneur correspondants */
+}
+@container not style(--theme: one) {
+  /* styles de conteneur correspondants */
+}
+
+/* requêtes de style() avec plage */
+@container style(--number > 4) {
+  /* styles de conteneur correspondants */
+}
 ```
 
 ### Paramètres
@@ -95,7 +118,7 @@ Des mots-clés logiques peuvent être utilisés pour définir la condition du co
 
 - `and` combine deux conditions ou plus.
 - `or` combine deux conditions ou plus.
-- `not` nie la condition. Un seul «&nbsp;not&nbsp;» est autorisé par requête de conteneur et il ne peut pas être utilisé avec les mots-clés `and` ou `or`.
+- `not` nie la condition. Un seul `not` est autorisé par requête de conteneur et il ne peut pas être utilisé avec les mots-clés `and` ou `or`.
 
 ```css
 @container (width > 400px) and (height > 400px) {
@@ -278,9 +301,9 @@ Les mots-clés pris en charge pour les descripteurs d'état de défilement inclu
     ```
 
 - `snapped`
-  - : Vérifie si le conteneur va être aligné («&nbsp;snapped&nbsp;») sur un conteneur parent de type [scroll snap](/fr/docs/Web/CSS/Guides/Scroll_snap) selon l'axe donné. Les valeurs valides pour `snapped` incluent&nbsp;:
+  - : Vérifie si le conteneur va être aligné («&nbsp;snapped&nbsp;») sur un conteneur parent de type [alignement au défilement](/fr/docs/Web/CSS/Guides/Scroll_snap) selon l'axe donné. Les valeurs valides pour `snapped` incluent&nbsp;:
     - `none`
-      - : Le conteneur n'est pas une [cible d'accrochage](/fr/docs/Glossary/Scroll_snap#cible_daccrochage) pour son conteneur parent. Si on utilise `snapped: none`, les conteneurs qui _sont_ des cibles d'accrochage n'auront _pas_ les styles `@container`, tandis que les non-cibles _les auront_.
+      - : Le conteneur n'est pas une [cible d'accrochage](/fr/docs/Glossary/Scroll_snap#cible_daccrochage) pour son conteneur parent. Si on utilise `snapped: none`, les conteneurs qui _sont_ des cibles d'accrochage n'ont _pas_ les styles `@container`, tandis que les non-cibles _les auront_.
     - `x`
       - : Le conteneur est une cible d'accrochage horizontale pour son conteneur parent.
     - `y`
@@ -290,11 +313,11 @@ Les mots-clés pris en charge pour les descripteurs d'état de défilement inclu
     - `inline`
       - : Le conteneur est une cible d'accrochage sur l'axe de la ligne pour son conteneur parent.
     - `both`
-      - : Le conteneur est à la fois une cible d'accrochage horizontale et verticale pour son conteneur parent. Il ne correspondra pas si l'accrochage ne se fait que sur un seul axe.
+      - : Le conteneur est à la fois une cible d'accrochage horizontale et verticale pour son conteneur parent. Il ne correspond pas si l'accrochage ne se fait que sur un seul axe.
 
-    Pour vérifier un conteneur avec une requête `snapped` différente de `none`, il doit avoir un conteneur parent avec une valeur {{CSSxRef("scroll-snap-type")}} différente de `none`. Une requête `snapped: none` correspondra même s'il n'y a pas de conteneur parent de type scroll snap.
+    Pour vérifier un conteneur avec une requête `snapped` différente de `none`, il doit avoir un conteneur parent avec une valeur {{CSSxRef("scroll-snap-type")}} différente de `none`. Une requête `snapped: none` correspond même s'il n'y a pas de conteneur parent de type d'alignement au défilement.
 
-    L'évaluation a lieu lors des événements {{DOMxRef("Element.scrollsnapchanging_event", "scrollsnapchanging")}} sur le conteneur scroll snap. Si le test est réussi, les règles à l'intérieur du bloc `@container` sont appliquées aux descendants du conteneur.
+    L'évaluation a lieu lors des évènements {{DOMxRef("Element.scrollsnapchanging_event", "scrollsnapchanging")}} sur le conteneur d'alignement au défilement. Si le test est réussi, les règles à l'intérieur du bloc `@container` sont appliquées aux descendants du conteneur.
 
     Pour vérifier si un conteneur est une cible d'accrochage, sans se soucier de la direction, utilisez la valeur `none` avec l'opérateur `not`&nbsp;:
 
@@ -335,7 +358,7 @@ Les mots-clés pris en charge pour les descripteurs d'état de défilement inclu
     }
     ```
 
-    Cependant, deux valeurs de bords opposés ne correspondront jamais en même temps&nbsp;:
+    Cependant, deux valeurs de bords opposés ne correspondent jamais en même temps&nbsp;:
 
     ```css
     @container scroll-state((stuck: left) and (stuck: right)) {
@@ -499,7 +522,7 @@ Les requêtes de conteneur peuvent aussi évaluer le style calculé de l'éléme
 }
 ```
 
-Le paramètre de chaque `style()` est un seul `<style-feature>`. Un **`<style-feature>`** est une [déclaration CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#déclarations_css) valide, une propriété CSS ou un [`<custom-property-name>`](/fr/docs/Web/CSS/Reference/Values/var#valeurs).
+Le paramètre de chaque `style()` est un seul `<style-feature>`. Un **`<style-feature>`** peut être une [déclaration CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#déclarations_css) valide (la forme **pleine**), une propriété CSS ou un [`<custom-property-name>`](/fr/docs/Web/CSS/Reference/Values/var#valeurs) seul (la forme **booléenne**), ou une [comparaison de plage](#syntaxe_de_plage) (la forme **plage**).
 
 ```css
 @container style(--themeBackground),
@@ -523,9 +546,9 @@ La requête suivante vérifie si la [valeur calculée](/fr/docs/Web/CSS/Guides/C
 ```
 
 > [!NOTE]
-> Si une propriété personnalisée a pour valeur `blue`, le code hexadécimal équivalent `#0000ff` ne correspondra pas, sauf si la propriété a été définie comme une couleur avec {{CSSxRef("@property")}} pour que le navigateur puisse comparer correctement les valeurs calculées.
+> Si une propriété personnalisée a pour valeur `blue`, le code hexadécimal équivalent `#0000ff` ne correspond pas, sauf si la propriété a été définie comme une couleur avec {{CSSxRef("@property")}} pour que le navigateur puisse comparer correctement les valeurs calculées.
 
-Les fonctionnalités de style qui interrogent une propriété raccourcie sont vraies si les valeurs calculées correspondent pour chacune de ses propriétés longues, et fausses sinon. Par exemple, `@container style(border: 2px solid red)` sera vrai si les 12 propriétés longues qui composent ce raccourci (`border-bottom-style`, etc.) sont toutes vraies.
+Les fonctionnalités de style qui interrogent une propriété raccourcie sont vraies si les valeurs calculées correspondent pour chacune de ses propriétés longues, et fausses sinon. Par exemple, `@container style(border: 2px solid red)` est vrai si les 12 propriétés longues qui composent ce raccourci (`border-bottom-style`, etc.) sont toutes vraies.
 
 Notez que [`!important`](/fr/docs/Web/CSS/Reference/Values/important) est autorisé dans les requêtes de style mais est ignoré.
 
@@ -537,6 +560,48 @@ Notez que [`!important`](/fr/docs/Web/CSS/Reference/Values/important) est autori
 ```
 
 Les valeurs globales `revert` et `revert-layer` sont invalides dans un `<style-feature>` et rendent la requête de style de conteneur fausse.
+
+#### Syntaxe de plage
+
+En plus de la forme simple `<style-feature-name>: <value>` décrite ci-dessus, un `<style-feature>` peut être écrit sous forme de **comparaison de plage** en utilisant `=`, `<`, `<=`, `>`, ou `>=`. La syntaxe de plage permet des comparaisons **numériques** que la forme simple ne peut pas gérer, comme `style(--columns >= 3)` ou `style(--gap = 1rem)`. Elle compare les valeurs résolues des deux côtés numériquement.
+
+Pour évaluer une plage, le navigateur&nbsp;:
+
+1. Résout chaque côté (les noms de propriétés personnalisées sont recherchés comme s'ils étaient utilisés avec {{CSSxRef("var()")}}).
+2. Analyse chaque côté comme un {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, ou {{CSSxRef("&lt;resolution&gt;")}}. Si l'un des côtés ne peut pas être analysé comme l'un de ces types, ou si les deux côtés n'ont pas le même type, la requête est fausse.
+3. Calcule chaque côté (en évaluant toutes les expressions `calc()`) et effectue la comparaison numérique.
+
+Cela signifie que la syntaxe de plage ne peut pas être utilisée pour comparer des valeurs de type mot-clé&nbsp;: `style(--theme = dark)` est toujours faux, car `dark` n'est pas un type numérique. Utilisez la syntaxe simple pour ceux-ci, par exemple `style(--theme: dark)`.
+
+Chaque côté d'une plage peut être un nom de propriété personnalisée, une référence `var()`, une valeur littérale ou une expression `calc()`, dans n'importe quel ordre&nbsp;:
+
+```css
+@container style(3 = --n) {
+  /* … */
+}
+@container style(var(--n) = 3) {
+  /* … */
+}
+@container style(calc(6/2) = var(--n)) {
+  /* … */
+}
+```
+
+Une plage peut également prendre une forme à trois valeurs, avec les deux comparateurs pointant dans la même direction, pour tester si une valeur se situe dans un intervalle&nbsp;:
+
+```css
+@container style(0 < --n < 10) {
+  /* vrai lorsque --n est supérieur à 0 et inférieur à 10 */
+}
+@container style(100px > --width > 50px) {
+  /* vrai lorsque --width est inférieur à 100px et supérieur à 50px */
+}
+```
+
+En d'autres termes, `style(0 < --n < 10)` est équivalent à `style(0 < --n) and style(--n < 10)`. La valeur du milieu est testée par rapport aux deux limites, plutôt que d'être chaînée de gauche à droite.
+
+> [!NOTE]
+> La syntaxe simple et la syntaxe de plage se comportent différemment même lorsqu'elles semblent similaires. Étant donné `--n: calc(6/2)`, la requête `style(--n: 3)` est **fausse**, car la forme simple compare la valeur calculée de la propriété (`calc(6/2)`) directement à `3`. La requête de plage équivalente `style(--n = 3)` est **vraie**, car la forme de plage calcule les deux côtés numériquement avant de comparer. Voir [Syntaxe simple versus syntaxe de plage dans les requêtes de style](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#syntaxe_simple_ou_de_plage_dans_les_requêtes_de_style) dans le guide des requêtes de style de conteneur pour plus de détails.
 
 ### Requêtes d'état de défilement
 
@@ -564,5 +629,6 @@ Voir [Utiliser les requêtes de conteneur avec une ancre](/fr/docs/Web/CSS/Guide
 - La propriété {{CSSxRef("container-type")}}
 - La propriété {{CSSxRef("contain")}}
 - La propriété {{CSSxRef("content-visibility")}}
+- L'interface API [`CSSContainerRule`](/fr/docs/Web/API/CSSContainerRule)
 - Le module de [Compartimentation CSS](/fr/docs/Web/CSS/Guides/Containment)
 - [Fonctions de règles @ CSS](/fr/docs/Web/CSS/Reference/At-rules/At-rule_functions)

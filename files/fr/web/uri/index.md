@@ -3,7 +3,7 @@ title: Identifiants Uniformes de Ressources (URIs)
 short-title: URIs
 slug: Web/URI
 l10n:
-  sourceCommit: eaec5c4226ac64696a95314a7bce995165a4d124
+  sourceCommit: 9aa03132f4c0aebc474995a234f4e52c64fcc6b4
 ---
 
 Les **Identifiants Uniformes de Ressources (URI)** sont utilisés pour identifier les «&nbsp;ressources&nbsp;» sur le Web. Les URI sont couramment utilisés comme cibles de requêtes [HTTP](/fr/docs/Web/HTTP), auquel cas l'URI représente l'emplacement d'une ressource, telle qu'un document, une photo ou des données binaires. Le type d'URI le plus courant est l'identifiant uniforme de ressource ({{Glossary("URL")}}), également appelé _adresse Web_.
@@ -20,6 +20,9 @@ La [Référence URI](/fr/docs/Web/URI/Reference) fournit des détails sur les co
   - : Section qui suit le schéma et précède le chemin. Elle peut comporter jusqu'à trois parties&nbsp;: informations `user`, `host`, et `port`.
 - [Chemin](/fr/docs/Web/URI/Reference/Path)
   - : La section après l'autorité. Contient des données, généralement organisées sous forme hiérarchique, permettant d'identifier une ressource dans le cadre du schéma et de l'autorité de l'URI
+- [Requête](/fr/docs/Web/URI/Reference/Query)
+  - : La section après le chemin.
+    Contient des données non hiérarchiques permettant d'identifier une ressource dans le cadre du schéma et de l'autorité de l'URI, ainsi que des données dans le composant chemin.
 - [Fragment](/fr/docs/Web/URI/Reference/Fragment)
   - : Une partie facultative à la fin d'une URI commençant par le caractère `#`. Elle sert à identifier une partie spécifique de la ressource, telle qu'une section d'un document ou une position dans une vidéo.
 

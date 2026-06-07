@@ -45,7 +45,7 @@ svg {
 - [`cx`](/fr/docs/Web/SVG/Reference/Attribute/cx)
   - : Cet attribut définit l'abscisse du cercle extérieur pour le dégradé radial.
     - Type de valeur
-      - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
+      - : [`<length>`](/fr/docs/Web/SVG/Guides/Content_type#length)
     - Valeur par défaut
       - : `50%`
     - Peut être animé
@@ -53,7 +53,7 @@ svg {
 - [`cy`](/fr/docs/Web/SVG/Reference/Attribute/cy)
   - : Cet attribut définit l'ordonnée du cercle extérieur pour le dégradé radial.
     - Type de valeur
-      - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
+      - : [`<length>`](/fr/docs/Web/SVG/Guides/Content_type#length)
     - Valeur par défaut
       - : `50%`
     - Peut être animé
@@ -61,7 +61,7 @@ svg {
 - [`fr`](/fr/docs/Web/SVG/Attribute/fr)
   - : Cet attribut définit le rayon du cercle intérieur du dégradé radial. Le dégradé sera dessiné de tel façon à ce que [l'arrêt de dégradé (`<stop>`)](/fr/docs/Web/SVG/Reference/Element/stop) situé au niveau 0% corresponde au périmètre du cercle intérieur.
     - Type de valeur
-      - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
+      - : [`<length>`](/fr/docs/Web/SVG/Guides/Content_type#length)
     - Valeur par défaut
       - : `0%`
     - Peut être animé
@@ -69,7 +69,7 @@ svg {
 - [`fx`](/fr/docs/Web/SVG/Attribute/fx)
   - : Cet attribut définit l'abscisse du cercle intérieur pour le dégradé radial.
     - Type de valeur
-      - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
+      - : [`<length>`](/fr/docs/Web/SVG/Guides/Content_type#length)
     - Valeur par défaut
       - : La même que celle de `cx`
     - Peut être animé
@@ -77,7 +77,7 @@ svg {
 - [`fy`](/fr/docs/Web/SVG/Attribute/fy)
   - : Cet attribut définit l'ordonnée du cercle intérieur pour le dégradé radial.
     - Type de valeur
-      - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
+      - : [`<length>`](/fr/docs/Web/SVG/Guides/Content_type#length)
     - Valeur par défaut
       - : La même que celle de `cy`
     - Peut être animé
@@ -93,7 +93,7 @@ svg {
 - [`gradientTransform`](/fr/docs/Web/SVG/Attribute/gradientTransform)
   - : Cet attribut fournit des [transformations](/fr/docs/Web/SVG/Reference/Attribute/transform) supplémentaires au système de coordonnées utilisé par le dégradé.
     - Type de valeur
-      - : [`<transform-list>`](/fr/docs/Web/SVG/Content_type#transform-list)
+      - : [`<transform-list>`](/fr/docs/Web/SVG/Guides/Content_type#transform-list)
     - Valeur par défaut
       - : La transformation identité
     - Peut être animé
@@ -101,7 +101,7 @@ svg {
 - [`href`](/fr/docs/Web/SVG/Attribute/href)
   - : Cet attribut définit une référence à un autre élément `<radialGradient>` qui sera utilisé comme modèle.
     - Type de valeur
-      - : [`<URL>`](/fr/docs/Web/SVG/Content_type#url)
+      - : [`<URL>`](/fr/docs/Web/SVG/Guides/Content_type#url)
     - Valeur par défaut
       - : Aucune
     - Peut être animé
@@ -109,7 +109,7 @@ svg {
 - [`r`](/fr/docs/Web/SVG/Attribute/r)
   - : Cet attribut définit le rayon du cercle extérieur du dégradé radial. Le dégradé sera dessiné de tel façon à ce que [l'arrêt de dégradé (`<stop>`)](/fr/docs/Web/SVG/Reference/Element/stop) situé au niveau 100% corresponde au périmètre du cercle extérieur.
     - Type de valeur
-      - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
+      - : [`<length>`](/fr/docs/Web/SVG/Guides/Content_type#length)
     - Valeur par défaut
       - : `50%`
     - Peut être animé
@@ -123,9 +123,9 @@ svg {
     - Peut être animé
       - : Oui
 - [`href`](/fr/docs/Web/SVG/Attribute/href)
-  - : {{Deprecated_Header}} Une référence [`<IRI>`](/fr/docs/Web/SVG/Content_type#iri) à un autre élément `<radialGradient>` qui pourra être utilisé comme modèle.
+  - : {{Deprecated_Header}} Une référence [`<IRI>`](/fr/docs/Web/SVG/Guides/Content_type#iri) à un autre élément `<radialGradient>` qui pourra être utilisé comme modèle.
     - Type de valeur
-      - : [`<IRI>`](/fr/docs/Web/SVG/Content_type#iri)
+      - : [`<IRI>`](/fr/docs/Web/SVG/Guides/Content_type#iri)
     - Valeur par défaut
       - : none
     - Peut être animé

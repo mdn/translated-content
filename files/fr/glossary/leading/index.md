@@ -2,12 +2,12 @@
 title: Interligne (leading)
 slug: Glossary/Leading
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: a516a9818e8cef06c626d436ee1d73fc6d87ec51
 ---
 
 En typographie, une **interligne** (ou <i lang="en">leading</i> en anglais) désigne l'espace ajouté au-dessus et en dessous du texte pour assurer l'espacement entre les lignes. Historiquement, dans la composition physique, des morceaux de véritable [plomb](https://fr.wikipedia.org/wiki/Plomb) étaient utilisés pour créer cet espacement, d'où le nom anglais.
 
-En CSS, l'interligne typographique correspond à la différence entre la hauteur du contenu et la hauteur de ligne, généralement définie par la propriété {{CSSxRef("line-height")}}. L'interligne défini via `line-height` crée un espacement entre les lignes, qui peut être négatif. Cet espace est réparti également au-dessus et en dessous du texte, ce que l'on appelle une **demi-interligne**.
+En CSS, l'interligne typographique correspond à la différence entre la hauteur du contenu et la hauteur de ligne, généralement définie par la propriété {{CSSxRef("line-height")}}. L'interligne défini par `line-height` crée un espacement entre les lignes, qui peut être négatif. Cet espace est réparti également au-dessus et en dessous du texte, ce que l'on appelle une **demi-interligne**.
 
 La zone d'une police située au-dessus de la ligne de base des capitales est appelée «&nbsp;bord supérieur&nbsp;» (<i lang="en">over edge</i> en anglais). La zone située sous la {{Glossary("Baseline/Typography", "ligne de base alphabétique")}} est appelée «&nbsp;bord inférieur&nbsp;» (<i lang="en">under edge</i> en anglais). De même, la demi-interligne au-dessus et en dessous d'une ligne est respectivement appelée «&nbsp;interligne supérieur&nbsp;» (<i lang="en">over leading</i> en anglais) et «&nbsp;interligne inférieur&nbsp;» (<i lang="en">under leading</i> en anglais).
 

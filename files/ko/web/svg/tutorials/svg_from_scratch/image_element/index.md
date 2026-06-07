@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Image_element
 original_slug: Web/SVG/Tutorial/SVG_Image_Tag
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Using_fonts", "Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
 
 SVG {{ SVGElement("image") }} 요소는 비트맵 이미지를 SVG 객체와 함께 표시할 수 있도록 해 준다.
 
@@ -26,4 +26,4 @@ SVG {{ SVGElement("image") }} 요소는 비트맵 이미지를 SVG 객체와 함
 - height 또는 width 속성을 설정하지 않으면, 0이 된다.
 - height 또는 width 속성이 0이면 이미지는 표시되지 않을 것이다.
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Using_fonts", "Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}

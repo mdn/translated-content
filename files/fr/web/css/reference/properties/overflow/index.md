@@ -1,8 +1,9 @@
 ---
-title: overflow
+title: Propriété CSS `overflow`
+short-title: overflow
 slug: Web/CSS/Reference/Properties/overflow
 l10n:
-  sourceCommit: 08fc6e4e0c44d7e840ae42e5911d9e721a99d336
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`overflow`** définit le comportement souhaité lorsque le contenu ne tient pas dans la boîte de remplissage (<i lang="en">padding</i> en anglais) de l'élément (dépassements) dans la direction horizontale et/ou verticale.

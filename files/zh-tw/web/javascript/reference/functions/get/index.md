@@ -127,7 +127,7 @@ get notifier() {
 
 ### `get` 與 `defineProperty`
 
-在使用 {{jsxref("classes")}} 時，儘管 `get` 關鍵字與 {{jsxref("Object.defineProperty()")}} 會出現相同結果，但其中有微妙的差異。
+在使用 {{jsxref("Classes")}} 時，儘管 `get` 關鍵字與 {{jsxref("Object.defineProperty()")}} 會出現相同結果，但其中有微妙的差異。
 
 在使用 `get` 時，屬性會在物件的原型被定義；而在使用 {{jsxref("Object.defineProperty()")}} 時，屬性會在被套用的實例內定義。
 
@@ -160,7 +160,7 @@ console.log(
 ## 參見
 
 - [setter](/zh-TW/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

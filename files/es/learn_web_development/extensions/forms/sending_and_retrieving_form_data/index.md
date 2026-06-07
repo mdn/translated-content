@@ -14,12 +14,12 @@ En este artículo se analiza lo que sucede cuando un usuario envía un formulari
       <th scope="row">Requisitos previos:</th>
       <td>
         Conocimientos básicos de informática, una
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >comprensión de HTML</a
         >
         , y conocimientos básicos de
-        <a href="/es/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> y
-        <a href="/es/docs/Learn/Server-side/First_steps"
+        <a href="/es/docs/conflicting/Web/HTTP">HTTP</a> y
+        <a href="/es/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >programación del lado del servidor</a
         >
         .

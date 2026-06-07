@@ -1,8 +1,9 @@
 ---
-title: "<main> : l'élément de contenu principal"
+title: "Élément HTML `<main>` : l'élément de contenu principal"
+short-title: <main>
 slug: Web/HTML/Reference/Elements/main
 l10n:
-  sourceCommit: 7615562a3689a3e23a2b6b623597f4391740a53e
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<main>`** représente le contenu principal du corps ({{HTMLElement("body")}}) d'un document. La zone de contenu principal se compose de contenu directement lié ou qui développe le sujet central d'un document, ou la fonctionnalité centrale d'une application.

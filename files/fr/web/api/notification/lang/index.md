@@ -17,7 +17,7 @@ Notification.lang
 
 ### Valeur
 
-Une {{domxref("DOMString")}} spécifiant la balise de langue.
+Une {{jsxref("String")}} spécifiant la balise de langue.
 
 ## Spécifications
 

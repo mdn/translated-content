@@ -10,18 +10,18 @@ O **elemento HTML `<script>`** é usado para incluir ou referenciar um script ex
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Metadata_content"
           >Conteúdo de metadados</a
         >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Fluxo de conteúdo</a
         >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >Conteúdo fraseado</a
         >.
       </td>
@@ -38,10 +38,10 @@ O **elemento HTML `<script>`** é usado para incluir ou referenciar um script ex
       <th scope="row">Pais permitidos</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Metadata_content"
           >conteúdo de metadados</a
         >, ou qualquer elemento que aceite
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >conteúdo fraseado</a
         >.
       </td>
@@ -59,7 +59,7 @@ O **elemento HTML `<script>`** é usado para incluir ou referenciar um script ex
 
 ## Atributos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `async`
   - : Um atributo booleano indicando que o navegador deve, se possível, executar o script assíncronamente.

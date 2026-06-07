@@ -1,8 +1,9 @@
 ---
-title: scrollbar-color
+title: Propriété CSS `scrollbar-color`
+short-title: scrollbar-color
 slug: Web/CSS/Reference/Properties/scrollbar-color
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scrollbar-color`** définit la couleur de la piste et du curseur de la barre de défilement.

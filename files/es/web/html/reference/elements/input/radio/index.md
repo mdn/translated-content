@@ -375,4 +375,4 @@ Observa que al hacer clic en un botón de radio, hay un agradable y suave efecto
 
 - Elemento {{HTMLElement("input")}} y la interfaz {{domxref("HTMLInputElement")}} que lo implementa.
 - {{domxref("RadioNodeList")}}: la interfaz que describe una lista de botones de opción.
-- [Compatibilidad de propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls).
+- [Compatibilidad de propiedades CSS](/es/docs/Learn_web_development/Extensions/Forms).

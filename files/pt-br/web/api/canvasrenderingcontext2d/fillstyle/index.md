@@ -20,7 +20,7 @@ ctx.fillStyle = pattern;
 ### Opções
 
 - `color`
-  - : Um {{domxref("DOMString")}} passado como um valor de CSS {{cssxref("&lt;color&gt;")}}.
+  - : Um {{jsxref("String")}} passado como um valor de CSS {{cssxref("&lt;color&gt;")}}.
 - `gradient`
   - : Um objeto {{domxref("CanvasGradient")}} (um gradiente linear ou radial).
 - `pattern`

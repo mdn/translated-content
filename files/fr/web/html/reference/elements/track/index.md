@@ -1,8 +1,9 @@
 ---
-title: "<track> : l'élément de piste texte embarquée"
+title: "Élément HTML `<track>` : l'élément de piste texte embarquée"
+short-title: <track>
 slug: Web/HTML/Reference/Elements/track
 l10n:
-  sourceCommit: 41db8c95b49ec2ca65776ef5c2eafed616b1510b
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<track>`** est utilisé comme enfant des éléments média, {{HTMLElement("audio")}} et {{HTMLElement("video")}}.

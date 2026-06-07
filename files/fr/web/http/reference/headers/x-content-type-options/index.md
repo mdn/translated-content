@@ -22,7 +22,7 @@ Les testeurs de sécurité du site s'attendent généralement à ce que cet en-t
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Non</td>
     </tr>
   </tbody>

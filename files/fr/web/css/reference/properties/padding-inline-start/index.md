@@ -1,8 +1,9 @@
 ---
-title: padding-inline-start
+title: Propriété CSS `padding-inline-start`
+short-title: padding-inline-start
 slug: Web/CSS/Reference/Properties/padding-inline-start
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`padding-inline-start`** définit le décalage avec le début de la zone de remplissage d'un élément selon le mode d'écriture, la direction et l'orientation du texte.

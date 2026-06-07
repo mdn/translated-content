@@ -6,7 +6,7 @@ original_slug: Web/CSS/margin
 
 {{CSSRef}}
 
-A propriedade **`margin`** do [CSS](/pt-BR/docs/Web/CSS) define a [área de margem](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) nos quatro lados do elemento. É uma abreviação que define todas as margens individuais de uma só vez: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, e {{cssxref("margin-left")}}.
+A propriedade **`margin`** do [CSS](/pt-BR/docs/Web/CSS) define a [área de margem](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction) nos quatro lados do elemento. É uma abreviação que define todas as margens individuais de uma só vez: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, e {{cssxref("margin-left")}}.
 
 {{InteractiveExample("CSS Demo: margin")}}
 
@@ -173,7 +173,7 @@ Contudo, em navegadores antigos, como IE8-9 que não suporta layout flexbox, est
 
 ### Colapso de margens
 
-Às vezes, as margens superior e inferior de elementos são colapsadas em uma única margem que é igual à maior das duas margens. Veja [Dominando margin collapsing](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) para mais informações.
+Às vezes, as margens superior e inferior de elementos são colapsadas em uma única margem que é igual à maior das duas margens. Veja [Dominando margin collapsing](/pt-BR/docs/Web/CSS/Guides/Box_model/Margin_collapsing) para mais informações.
 
 ## Especificações
 
@@ -187,5 +187,5 @@ Contudo, em navegadores antigos, como IE8-9 que não suporta layout flexbox, est
 
 ## Veja também
 
-- [CSS Box Model](/pt-BR/docs/CSS/box_model)
-- [Margin collapsing](/pt-BR/docs/CSS/margin_collapsing)
+- [CSS Box Model](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction)
+- [Margin collapsing](/pt-BR/docs/Web/CSS/Guides/Box_model/Margin_collapsing)

@@ -50,7 +50,7 @@ h4 {
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类别</a></th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素（Flow_content）">流式内容</a>，标题内容，可触知的内容。</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式元素（Flow_content）">流式内容</a>，标题内容，可触知的内容。</td>
   </tr>
   <tr>
    <th scope="row">允许内容</th>

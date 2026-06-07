@@ -355,7 +355,7 @@ La tableau qui suit fournit une liste complète des caractères spéciaux pouvan
         Un ensemble de caractère. Ce type de motif correspond pour n'importe
         quel caractètre présent entre les crochets, y compris les
         <a
-          href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_caractères_d&#x27;échappement"
+          href="/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_caractères_déchappement"
           >séquences d'échappement</a
         >. Les caractères spéciaux comme le point (.) et l'astérisque ne sont
         pas considérés comme spéciaux au sein d'un ensemble et n'ont donc pas
@@ -419,7 +419,7 @@ La tableau qui suit fournit une liste complète des caractères spéciaux pouvan
             <strong>Note :</strong> Le moteur d'expressions rationnelles
             JavaScript définit
             <a
-              href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.10.2.6"
+              href="https://www.ecma-international.org/ecma-262/5.1/#sec-15.10.2.6"
               >un ensemble de caractères spécifiques</a
             >
             qui doivent être considérés comme des caractères de mot. Tout
@@ -587,7 +587,7 @@ La tableau qui suit fournit une liste complète des caractères spéciaux pouvan
         Correspond au caractère NULL (U+0000). Il ne doit pas être suivi d'un
         autre chiffre car <code>\0&#x3C;chiffres></code> est une
         <a
-          href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_caractères_d&#x27;échappement"
+          href="/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_caractères_déchappement"
           >séquence d'échappement</a
         >
         pour les nombres en notation octale (si besoin d'utiliser un chiffre

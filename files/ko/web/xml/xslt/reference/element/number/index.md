@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/number
 original_slug: Web/XSLT/Element/number
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:number>` 요소는 숫자를 연속으로 셉니다. 또한 숫자를 빠르게 구성하는(format) 데도 쓸 수 있습니다.
 

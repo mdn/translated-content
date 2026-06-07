@@ -1,8 +1,9 @@
 ---
-title: background-clip
+title: Propriété CSS `background-clip`
+short-title: background-clip
 slug: Web/CSS/Reference/Properties/background-clip
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-clip`** définit si l'arrière-plan d'un élément s'étend sous son cadre de bordure, son cadre de remplissage ou son cadre de contenu.

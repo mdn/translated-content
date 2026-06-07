@@ -63,5 +63,5 @@ a * c + b * c; // 9
 ## 参见
 
 - [运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}

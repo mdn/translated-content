@@ -15,12 +15,12 @@ original_slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
     <tr>
       <th scope="row">선결 사항:</th>
       <td>
-        HTML 기본 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 기본 (<a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 입문</a
         >
         학습), CSS의 작동 방식
-        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS">CSS 입문 </a>및
-        (<a href="/ko/docs/Learn/CSS/Styling_boxes">박스 양식 지정</a> 학습)
+        <a href="/ko/docs/Learn_web_development/Core/Styling_basics">CSS 입문 </a>및
+        (<a href="/ko/docs/Learn_web_development/Core/Styling_basics">박스 양식 지정</a> 학습)
       </td>
     </tr>
     <tr>
@@ -435,7 +435,7 @@ body {
 
 ### calc() 함수를 사용한 편리한 계산법
 
-CSS 내부에서 직접 calc() 함수를 사용하여 수학 계산을 할 수 있습니다. 이것은 여러분의 CSS 값에 단순한 수학 방정식을 삽입하고 값이 무엇인지 계산할 수 있게 해줍니다. 복잡한 수학이 있을 때 특히 유용하며, 예를 들어 "나는 이 요소의 높이가 항상 부모의 높이의 100% 마이너스 50px가 되기를 원한다"와 같은 서로 다른 단위를 사용하는 셈법까지 계산할 수 있습니다. [MediaRecorder API 자습서에 있는 예제를 보십시요](</ko/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
+CSS 내부에서 직접 calc() 함수를 사용하여 수학 계산을 할 수 있습니다. 이것은 여러분의 CSS 값에 단순한 수학 방정식을 삽입하고 값이 무엇인지 계산할 수 있게 해줍니다. 복잡한 수학이 있을 때 특히 유용하며, 예를 들어 "나는 이 요소의 높이가 항상 부모의 높이의 100% 마이너스 50px가 되기를 원한다"와 같은 서로 다른 단위를 사용하는 셈법까지 계산할 수 있습니다. [MediaRecorder API 자습서에 있는 예제를 보십시요](</ko/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
 
 어쨌든, 다시 여러분의 격자로 복귀합시다! 여러분의 격자에서 한 열 이상을 하나로 합치기하고자 하는 어떤 열은 총 너비가 6.25%이고, 거기에 하나로 합치기할 열 갯수를 곱하고, 거기에 2.08333333%를 배수로 갯수로 곱하기합니다(실제 배수로의 갯수는 항상 열 갯수에서 하나 빼기가 됩니다.) 여러분은 `calc()` 함수을 통해서 여러분이 이러한 셈법을 너비 값 내부에서 바로 계산을 할 수 있으므로, 4열 합치기할 항목에 대해서는 다음과 같이 할 수 있습니다.
 

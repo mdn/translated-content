@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/set/distinct
 original_slug: Web/EXSLT/set/distinct
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
 `set:distinct()` retourne un sous-ensemble des nœuds appartenant à l'ensemble de nœuds spécifié, en ne retournant que les nœuds possédant une valeur de chaîne unique.
 

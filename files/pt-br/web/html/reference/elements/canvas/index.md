@@ -12,15 +12,15 @@ Para mais artigos sobre canvas, veja [canvas topic page](/pt-BR/docs/Web/API/Can
 
 ## Contexto de uso
 
-| Conteúdo permitido         | Transparente, tanto [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content) ou [flow content](/pt-BR/docs/HTML/Content_categories#flow_content).          |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tags            | Nenhuma, tanto a tag de início quanto a de fim devem ser incluídas.                                                                                                        |
-| Elementos "pai" permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content) ou [flow content](/pt-BR/docs/HTML/Content_categories#flow_content). |
-| Documento normativo        | [HTML 5, section 4.8.10](https://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                           |
+| Conteúdo permitido         | Transparente, tanto [phrasing content](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content) ou [flow content](/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content).          |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Omissão de tags            | Nenhuma, tanto a tag de início quanto a de fim devem ser incluídas.                                                                                                                              |
+| Elementos "pai" permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content) ou [flow content](/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content). |
+| Documento normativo        | [HTML 5, section 4.8.10](https://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                                                 |
 
 ## Atributos
 
-Como qualquer outro elemento HTML, este também tem [global attributes](/pt-BR/docs/HTML/Global_attributes).
+Como qualquer outro elemento HTML, este também tem [global attributes](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `width`
   - : A largura do espaço em pixels CSS. O padrão é 300.

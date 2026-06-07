@@ -1,8 +1,9 @@
 ---
-title: "<optgroup> : l'élément de groupe d'options"
+title: "Élément HTML `<optgroup>` : l'élément de groupe d'options"
+short-title: <optgroup>
 slug: Web/HTML/Reference/Elements/optgroup
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<optgroup>`** crée un regroupement d'options à l'intérieur d'un élément HTML {{HTMLElement("select")}}.

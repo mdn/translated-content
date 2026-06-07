@@ -8,7 +8,7 @@ original_slug: Web/HTML/Element/html
 
 O elemento **HTML \<html> **(ou _HTML root element_) representa a raiz de um HTML ou XHTML documento. Todos os outros elementos devem ser descendentes desse elemento.
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Nenhuma.
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Guides/Content_categories)_ Nenhuma.
 - _Conteúdo permitido_ Um elemento {{HTMLElement("head")}}, seguido por um elemento {{HTMLElement("body")}}.
 - _Omissão de tag_ A tag inicial pode ser omitida se a primeira coisa dentro do elemento `<html>` não for um comentário.
   A tag final pode ser omitida se o elemento `<html>` não for imediatamente seguido por um comentário, e conter um elemento {{HTMLElement("body")}} ou que não está vazio, ou cuja tag inicial está presente.
@@ -17,7 +17,7 @@ O elemento **HTML \<html> **(ou _HTML root element_) representa a raiz de um HTM
 
 ## Atributos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `version` {{deprecated_inline}}
   - : Especifica a versão da definição de tipo de documento HTML que governa o documento atual. Esse atributo não é necessário, porque é redundante com a informação de versão na declaração de tipo de documento.

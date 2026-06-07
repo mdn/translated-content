@@ -55,7 +55,7 @@ l10n:
 #### WebDriver BiDi
 
 - ユーザーが自動化セッションを終了できる `session.end` コマンドをサポートしました。以前、これは WebDriver Classic と WebDriver BiDi の両方を使用するセッションに限り使用できました。現在は WebDriver BiDi だけのセッションでも使用可能になりました ([Firefox bug 1829337](https://bugzil.la/1829337))。
-- `session.new` コマンドで [capability matching](/ja/docs/Web/WebDriver/Capabilities) をサポートしました。ブラウザー名やプラットフォーム名など、対象ブラウザーに関する想定値を定義できます。また、たとえば安全でない証明書を受け入れるかを指定するなど、セッションの設定にも使用できます ([Firefox bug 1731730](https://bugzil.la/1731730))。
+- `session.new` コマンドで [capability matching](/ja/docs/Web/WebDriver/Reference/Capabilities) をサポートしました。ブラウザー名やプラットフォーム名など、対象ブラウザーに関する想定値を定義できます。また、たとえば安全でない証明書を受け入れるかを指定するなど、セッションの設定にも使用できます ([Firefox bug 1731730](https://bugzil.la/1731730))。
 - シャドウルートが、戻り値のルートであるときに正しくシリアライズされるようになりまし ([Firefox bug 1836514](https://bugzil.la/1836514))。
 - `network` イベントの開始時刻の情報の名前を `originTime` から `timeOrigin` に変更しました ([Firefox bug 1836926](https://bugzil.la/1836926))。
 - `network` の `network.responseCompleted` イベントが、リダイレクトを伴うナビゲーション要求でも正しく発生するようになりました ([Firefox bug 1838238](https://bugzil.la/1838238))。

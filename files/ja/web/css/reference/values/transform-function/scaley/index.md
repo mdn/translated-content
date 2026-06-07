@@ -1,8 +1,9 @@
 ---
-title: scaleY()
+title: CSS `scaleY()` 関数
+short-title: scaleY()
 slug: Web/CSS/Reference/Values/transform-function/scaleY
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`scaleY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素を Y 軸に沿って (垂直に) 変倍する座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

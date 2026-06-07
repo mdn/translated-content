@@ -1,8 +1,9 @@
 ---
-title: "@property"
+title: Règle CSS `@property`
+short-title: "@property"
 slug: Web/CSS/Reference/At-rules/@property
 l10n:
-  sourceCommit: cd5ad7b2d4aa2596b19e6875fbe7736dde47ee82
+  sourceCommit: 4560e287e8c75c40aa5ecf40a0c9e8ecd0217c56
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@property`** est utilisée pour définir explicitement des [propriétés CSS personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*), avec vérification et contrainte de type, définition de valeurs par défaut et choix de l'héritage ou non de la propriété personnalisée.
@@ -53,10 +54,10 @@ Les conditions suivantes doivent être respectées pour que la règle `@property
 - La règle `@property` doit inclure les descripteurs {{CSSxRef("@property/syntax","syntax")}} et {{CSSxRef("@property/inherits","inherits")}}.
   Si l'un des deux manque, la règle entière est invalide et ignorée.
 
-- Le descripteur `syntax` peut être un nom de type de donnée (comme `<color>`, `<length>`, ou `<number>`, etc.), avec des multiplicateurs (`+`, `#`) et des combinateurs (`|`), un identifiant personnalisé, ou la définition universelle (`*`), ce qui signifie que la syntaxe peut être n'importe quel flux de jetons valide. La valeur est une chaîne de caractères ({{CSSxRef("string")}}). Elle doit donc être placée entre guillemets.
+- Le descripteur `syntax` peut être un nom de type de donnée (comme `<color>`, `<length>`, ou `<number>`, etc.), avec des multiplicateurs (`+` pour accepter une liste séparée par des espaces, ou `#` pour accepter une liste séparée par des virgules) et des combinateurs (`|` pour accepter un type de donnée ou un autre), un identifiant personnalisé, ou la définition universelle (`*`), ce qui signifie que la syntaxe peut être n'importe quel flux de jetons valide. La valeur est une chaîne de caractères ({{CSSxRef("string")}}). Elle doit donc être placée entre guillemets.
 - Le descripteur {{CSSxRef("@property/initial-value","initial-value")}} est optionnel si la valeur du descripteur `syntax` est la définition universelle (`syntax: "*"`).
   Si le descripteur `initial-value` est requis mais omis, la règle entière est invalide et ignorée.
-- Si la valeur du descripteur `syntax` n'est pas la définition universelle, le descripteur {{CSSxRef("@property/initial-value","initial-value")}} doit être une valeur [indépendante du calcul](https://drafts.css-houdini.org/css-properties-values-api-1/#computationally-independent)<sup>(angl.)</sup>.
+- Si la valeur du descripteur `syntax` n'est pas la définition universelle, le descripteur {{CSSxRef("@property/initial-value","initial-value")}} doit être une valeur [indépendante du calcul <sup>(angl.)</sup>](https://drafts.css-houdini.org/css-properties-values-api-1/#computationally-independent).
   Cela signifie que la valeur peut être convertie en valeur calculée sans dépendre d'autres valeurs, sauf pour les définitions «&nbsp;globales&nbsp;» indépendantes de CSS.
   Par exemple, `10px` est indépendant du calcul&nbsp;: il ne change pas lors de la conversion en valeur calculée. `2in` est aussi valide, car `1in` équivaut toujours à `96px`. En revanche, `3em` n'est pas valide, car la valeur d'un `em` dépend de la propriété {{CSSxRef("font-size")}} du parent.
 - Les descripteurs inconnus sont invalides et ignorés, mais n'invalident pas la règle `@property`.
@@ -82,21 +83,21 @@ Dans cet exemple, nous utilisons la règle `@property` pour déclarer deux propr
 #### CSS
 
 ```css
-@property --myColor {
+@property --maCouleur {
   syntax: "<color>";
   inherits: true;
   initial-value: rebeccapurple;
 }
 
-@property --myWidth {
+@property --maLargeur {
   syntax: "<length> | <percentage>";
   inherits: true;
   initial-value: 200px;
 }
 
 p {
-  background-color: var(--myColor);
-  width: var(--myWidth);
+  background-color: var(--maCouleur);
+  width: var(--maLargeur);
   color: white;
 }
 ```
@@ -109,7 +110,7 @@ Le paragraphe devrait avoir une largeur de `200px`, un arrière-plan violet et u
 
 ### Animer la valeur d'une propriété personnalisée
 
-Dans cet exemple, on définit une propriété personnalisée appelée `--progress` avec `@property`&nbsp;: elle accepte des valeurs de type {{CSSxRef("&lt;percentage&gt;")}} et a une valeur initiale de `25%`. On utilise `--progress` pour définir la position des arrêts de couleur dans un {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, spécifiant où le vert s'arrête et où le noir commence. On anime ensuite la valeur de `--progress` jusqu'à `100%` sur 2,5 secondes, ce qui donne l'effet d'une barre de progression animée.
+Dans cet exemple, on définit une propriété personnalisée appelée `--progress` avec `@property`&nbsp;: elle accepte des valeurs de type {{CSSxRef("&lt;percentage&gt;")}} et a une valeur initiale de `25%`. On utilise `--progress` pour définir la position des arrêts de couleur dans un {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, définissant où le vert s'arrête et où le noir commence. On anime ensuite la valeur de `--progress` jusqu'à `100%` sur 2,5 secondes, ce qui donne l'effet d'une barre de progression animée.
 
 #### HTML
 

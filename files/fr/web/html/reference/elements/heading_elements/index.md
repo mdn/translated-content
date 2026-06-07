@@ -1,8 +1,9 @@
 ---
-title: "<h1>-<h6> : les éléments de titre de section"
+title: "Élément HTML `<h1>-<h6>` : les éléments de titre de section"
+short-title: <h1>-<h6>
 slug: Web/HTML/Reference/Elements/Heading_Elements
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 Les éléments [HTML](/fr/docs/Web/HTML) **`<h1>`** à **`<h6>`** représentent les six niveaux de titre de section. `<h1>` correspond au niveau de section le plus haut et `<h6>` correspond au niveau le plus faible. Par défaut, tous les éléments de titre créent une boîte de [niveau bloc](/fr/docs/Glossary/Block-level_content) dans la mise en page, commençant sur une nouvelle ligne et prenant toute la largeur disponible dans leur bloc conteneur.

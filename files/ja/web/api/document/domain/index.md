@@ -3,10 +3,10 @@ title: "Document: domain プロパティ"
 short-title: domain
 slug: Web/API/Document/domain
 l10n:
-  sourceCommit: 3fd9ed857a7d87a5ecc539a9835dbd107178bb6c
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{ApiRef}} {{Deprecated_Header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 **`domain`** は {{domxref("Document")}} インターフェイスのプロパティは、[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)で使用される現在の文書の{{glossary("origin", "オリジン")}}のうち、ドメインの部分を取得または設定します。
 
@@ -17,13 +17,13 @@ l10n:
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : この機能の使用が[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされた。
+  - : この文書はドメインを設定することが禁止されています。例えば、サンドボックス化されている場合や、不透明なオリジンを持つ場合などが該当します。詳細については、[失敗の節](#失敗)をご覧ください。
 
 ## 例
 
 ### ドメイン名の取得
 
-`https://developer.mozilla.org/ja/docs/Web` の URI において、この例は `currentDomain` に "`developer.mozilla.org`" の文字列を設定します。
+`https://developer.mozilla.org/ja/docs/Web` の URI において、この例は `currentDomain` に `"developer.mozilla.org"` の文字列を設定します。
 
 ```js
 const currentDomain = document.domain;
@@ -31,17 +31,17 @@ const currentDomain = document.domain;
 
 このプロパティのゲッターは、現在の文書のオリジンのドメイン部分を返します。ほとんどの場合、これは文書の URL のホスト名部分になります。しかし、いくつかの例外があります：
 
-- 例えば、[data URL](/ja/docs/Web/URI/Reference/Schemes/data) を持つページのように、そのページに不透明な{{glossary("origin", "オリジン")}}がある場合は、空文字列を返します。
-- もし `document.domain` [セッター](#セッター)が使用されていれば、設定した値を返します。
+- 例えば、[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) を持つページのように、そのページに不透明な{{glossary("origin", "オリジン")}}がある場合は、空文字列を返します。
+- もし `document.domain` [セッター](#ドメインの設定)が使用されていれば、設定した値を返します。
 
 ゲッターはセッターと同じ方法で危険ではありませんが、代わりに {{domxref("Location.hostname")}} プロパティを使用する方がシンプルで有益な場合があります。
-そうすれば、`document.domain`を完全に避けることができます。
+そうすれば、`document.domain` を完全に避けることができます。
 
 ```js
 const currentHostname = location.hostname;
 ```
 
-URL `https://developer.mozilla.org/ja/docs/Web` の場合、`currentHostname` は文字列 "`developer.mozilla.org`" でもあります。
+URL `https://developer.mozilla.org/ja/docs/Web` の場合、`currentHostname` は文字列 `"developer.mozilla.org"` でもあります。
 他にも、ポート番号が入る {{domxref("Location.host")}} や、完全なオリジンを提供する {{domxref("Window.origin")}} があります。
 
 ### ドメインの設定
@@ -80,9 +80,8 @@ document.domain = document.domain;
 
 #### 失敗
 
-セッターは、いくつかのケースで "`SecurityError`" {{domxref("DOMException")}} が発生します。
+セッターは、いくつかのケースで `SecurityError` の {{domxref("DOMException")}} が発生します。
 
-- {{httpheader('Permissions-Policy/document-domain','document-domain')}} {{HTTPHeader("Permissions-Policy")}} が無効な場合
 - 文書がサンドボックス化された {{htmlelement("iframe")}} の中にある場合。
 - 文書に{{glossary("browsing context","閲覧コンテキスト")}}がない場合。
 - この文書の[実効ドメイン](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain)が `null` であった場合。
@@ -93,10 +92,10 @@ document.domain = document.domain;
 さらに、非推奨ですが、現行の分離機能と組み合わせても何もしません。
 
 - オリジン間分離ページ、つまり {{httpheader("Cross-Origin-Opener-Policy")}} と {{httpheader("Cross-Origin-Embedder-Policy")}} に適切な値を使用しているページで用いる場合。HTTP ヘッダー
-- オリジン分離されたページ、すなわち HTTP の {{httpheader("Origin-Isolation")}} ヘッダーを使用しているページで用いる場合。
+- オリジン分離されたページ、すなわち HTTP の {{httpheader("Origin-Agent-Cluster")}} {{experimental_inline}} ヘッダーを使用しているページで用いる場合。
 
 最後に、`document.domain` を設定しても、いくつかの Web API がオリジンチェックに用いるオリジンは変更されないので、このメカニズムによるサブドメインからのアクセスを防ぐことができます。
-関連する API には、{{domxref("Window.localStorage")}}、{{domxref("IndexedDB_API")}}、{{domxref("BroadcastChannel")}}、{{domxref("SharedWorker")}} があります（これらに限定されるものではありません）。
+関連する API には、{{domxref("Window.localStorage")}}、[IndexDB API](/ja/docs/Web/API/IndexedDB_API)、{{domxref("BroadcastChannel")}}、{{domxref("SharedWorker")}} があります（これらに限定されるものではありません）。
 
 ## 仕様書
 

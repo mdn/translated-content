@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : is"
+title: "Attribut HTML universel : `is`"
 short-title: is
 slug: Web/HTML/Reference/Global_attributes/is
 l10n:
-  sourceCommit: 56f5609d323467cd08eeaddc57e4490a02be1889
+  sourceCommit: 1bc1971a1265d1792c94b99b736c5accec1fec6d
 ---
 
 > [!NOTE]

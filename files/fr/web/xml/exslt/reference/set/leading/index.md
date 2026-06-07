@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/set/leading
 original_slug: Web/EXSLT/set/leading
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
 `set:leading()` renvoie les nœuds d'un premier ensemble de nœuds qui viennent avant le premier nœud d'un deuxième ensemble.
 

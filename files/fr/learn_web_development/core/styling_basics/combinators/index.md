@@ -116,7 +116,7 @@ Il est souvent préférable de créer une classe simple et de l'appliquer à l'�
 
 ## Testez vos compétences!
 
-Nous en avons beaucoup vu dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes? Vous pouvez trouver d'autres tests pour vérifier que vous avez conservé ces informations avant de continuer - voir [Test your skills: Selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks).
+Nous en avons beaucoup vu dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes? Vous pouvez trouver d'autres tests pour vérifier que vous avez conservé ces informations avant de continuer - voir [Test your skills: Selectors](/fr/docs/Learn_web_development/Core/Styling_basics/Selectors/Selectors_Tasks).
 
 ## Passer à la suite
 

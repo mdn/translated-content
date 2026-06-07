@@ -16,7 +16,7 @@ Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn_
         <p>
           Completa todos los tópicos anteriores del tutorial, incluyendo
           <a
-            href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django/Home_page"
+            href="/es/docs/Learn_web_development/Extensions/Server-side/Django/Home_page"
             >Tutorial de Django Parte 5: Creación de tu página de inicio</a
           >.
         </p>

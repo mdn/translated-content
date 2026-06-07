@@ -1,8 +1,9 @@
 ---
-title: <input type="radio">
+title: Valeur d'attribut HTML `<input type="radio">`
+short-title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
 l10n:
-  sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`radio`** sont généralement utilisés dans des **groupes de boutons radio** — des ensembles de boutons radio décrivant un ensemble d'options liées.

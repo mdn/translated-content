@@ -121,24 +121,24 @@ Dependiendo del contenido, incluir un encabezado también podría ser bueno para
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >Flujo de contenido</a
         >,
         <a
-          href="/es/docs/Web/HTML/Content_categories#contenido_de_sección"
+          href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_sección"
           >contenido de sección</a
-        >, <a href="/es/docs/Web/HTML/Content_categories#contenido_palpable">contenido palpable</a>.
+        >, <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_palpable">contenido palpable</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >Flujo de contenido</a
         >.
       </td>
@@ -151,7 +151,7 @@ Dependiendo del contenido, incluir un encabezado también podría ser bueno para
       <th scope="row">Padres permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >flujo de contenido</a
         >. Ten en cuenta que un elemento <code>&#x3C;section></code> no debe ser un
         descendiente de un elemento {{HTMLElement("address")}}.
@@ -180,7 +180,7 @@ Dependiendo del contenido, incluir un encabezado también podría ser bueno para
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
       <td>
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/alert_role"><code>alert</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role"><code>alert</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role"><code>alertdialog</code></a>,
         <a href="/es/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/banner_role"><code>banner</code></a>,
         <a href="/es/docs/Web/Accessibility/ARIA/Roles/complementary_role"><code>complementary</code></a>,
         <a href="/es/docs/Web/Accessibility/ARIA/Roles/contentinfo_role"><code>contentinfo</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/dialog_role"><code>dialog</code></a>,

@@ -10,16 +10,16 @@ O **elemento** **HTML** **`<em>`** marca o texto que tem ênfase. O elemento \<e
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Conteúdo fluído</a
         >,
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >conteúdo de frase</a
         >, conteúdo palpável
       </td>
@@ -28,7 +28,7 @@ O **elemento** **HTML** **`<em>`** marca o texto que tem ênfase. O elemento \<e
       <th scope="row">Conteúdo permitido</th>
       <td>
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >Conteúdo de frase</a
         >.
       </td>
@@ -42,7 +42,7 @@ O **elemento** **HTML** **`<em>`** marca o texto que tem ênfase. O elemento \<e
       <td>
         Qualquer elemento que aceita
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >conteúdo de frase</a
         >.
       </td>
@@ -64,7 +64,7 @@ O **elemento** **HTML** **`<em>`** marca o texto que tem ênfase. O elemento \<e
 
 ## Atributos
 
-Este elemento inclui somente os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui somente os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 

@@ -484,6 +484,7 @@
 /fr/docs/Glossary/Self-Executing_Anonymous_Function	/fr/docs/Glossary/IIFE
 /fr/docs/Glossary/Simple_header	/fr/docs/Glossary/CORS-safelisted_request_header
 /fr/docs/Glossary/Simple_response_header	/fr/docs/Glossary/CORS-safelisted_response_header
+/fr/docs/Glossary/Stylesheet	/fr/docs/Glossary/Style_sheet
 /fr/docs/Glossary/Transmission_Control_Protocol_(TCP)	/fr/docs/Glossary/TCP
 /fr/docs/Glossary/XHR_(XMLHttpRequest)	/fr/docs/Glossary/XMLHttpRequest
 /fr/docs/Glossary/eTLD	/fr/docs/Glossary/Registrable_domain
@@ -5769,7 +5770,12 @@
 /fr/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/fr/docs/Web/JavaScript/Reference/Strict_mode
 /fr/docs/Web/JavaScript/Reference/Valeurs_par_défaut_des_arguments	/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /fr/docs/Web/JavaScript/Reference/Virgules_finales	/fr/docs/Web/JavaScript/Reference/Trailing_commas
+/fr/docs/Web/JavaScript/Reference/delete	/fr/docs/Web/JavaScript/Reference/Operators/delete
 /fr/docs/Web/JavaScript/Reference/fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+/fr/docs/Web/JavaScript/Reference/instanceof	/fr/docs/Web/JavaScript/Reference/Operators/instanceof
+/fr/docs/Web/JavaScript/Reference/new	/fr/docs/Web/JavaScript/Reference/Operators/new
+/fr/docs/Web/JavaScript/Reference/null	/fr/docs/Web/JavaScript/Reference/Operators/null
+/fr/docs/Web/JavaScript/Reference/this	/fr/docs/Web/JavaScript/Reference/Operators/this
 /fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Defenses/Same-origin_policy
 /fr/docs/Web/JavaScript/Shells	/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /fr/docs/Web/JavaScript/Structures_de_données	/fr/docs/Web/JavaScript/Guide/Data_structures

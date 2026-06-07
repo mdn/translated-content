@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La propriété de données **`prototype`** d'une instance de {{JSxRef("Function")}} est utilisée lorsque la fonction est utilisée comme constructeur avec l'opérateur {{JSxRef("Operators/new", "new")}}. Elle deviendra le prototype du nouvel objet.
+La propriété de données **`prototype`** d'une instance de {{JSxRef("Function")}} est utilisée lorsque la fonction est utilisée comme constructeur avec l'opérateur {{JSxRef("new")}}. Elle deviendra le prototype du nouvel objet.
 
 > [!NOTE]
 > Tous les objets {{JSxRef("Function")}} n'ont pas la propriété `prototype` — voir [la description](#description).
@@ -22,7 +22,7 @@ Un objet.
 
 ## Description
 
-Lorsque une fonction est appelée avec {{JSxRef("Operators/new", "new")}}, la propriété `prototype` du constructeur devient le prototype de l'objet résultant.
+Lorsque une fonction est appelée avec {{JSxRef("new")}}, la propriété `prototype` du constructeur devient le prototype de l'objet résultant.
 
 ```js
 function Ctor() {}

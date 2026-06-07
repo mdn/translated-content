@@ -13,7 +13,7 @@ l10n:
 
 `Uint8Array` は、現時点では他の型付き配列に比べて追加のメソッドを持つ唯一の `TypedArray` サブクラスです。汎用バイト配列という性質のため、任意のバイナリーデータの処理に最も適しています。これは、 `Uint8Array` データの 16 進文字列および base64 文字列への作成、シリアライズ、変更を行う 2 種類のメソッドに対応しています。
 
-- {{jsxref("Uint8Array.fromBase64()")}}、{{jsxref("Uint8Array.prototype.toBase64()")}}ｍ{{jsxref("Uint8Array.prototype.setFromBase64()")}} は [base64](/ja/docs/Glossary/Base64) 文字列の処理を行い、 3 バイト単位でを 4 文字（0–9, A–Z, a–z, "+", "/" （または URL セーフ base64 であれば "-" と "\_"）のうちのいずれか）にエンコードします。
+- {{jsxref("Uint8Array.fromBase64()")}}、{{jsxref("Uint8Array.prototype.toBase64()")}}ｍ{{jsxref("Uint8Array.prototype.setFromBase64()")}} は [base64](/ja/docs/Glossary/Base64) 文字列の処理を行い、 3 バイト単位で 4 文字（0–9, A–Z, a–z, "+", "/" （または URL セーフ base64 であれば "-" と "\_"）のうちのいずれか）にエンコードします。
 - {{jsxref("Uint8Array.fromHex()")}}、{{jsxref("Uint8Array.prototype.toHex()")}}、{{jsxref("Uint8Array.prototype.setFromHex()")}} は 16 進文字列の処理を行い、それぞれのバイトを 2 文字（0–9 または A–F （大文字小文字の区別なし）のいずれか）にエンコードします。
 
 ## コンストラクター

@@ -73,7 +73,7 @@ open(url, target, windowFeatures)
     - `noreferrer`
       - : Si cette fonctionnalité est utilisée, le navigateur ne fournira pas d'en-tête {{HTTPHeader("Referer")}} et fixera d'office `noopener` à `true`. Voir [`rel="noreferrer"`](/fr/docs/Web/HTML/Reference/Attributes/rel#noreferrer) pour plus d'informations.
 
-    Une valeur {{JSxRef("Operators/null", "null")}} est traitée de la même manière que la chaîne de caractères vide (`""`).
+    Une valeur {{JSxRef("null")}} est traitée de la même manière que la chaîne de caractères vide (`""`).
 
 > [!NOTE]
 > Les valeurs de position demandées (`top`, `left`) et de dimension demandées (`width`, `height`) dans `windowFeatures` **seront corrigées** si l'une de ces valeurs demandées ne permet pas à la popup du navigateur d'être entièrement rendue dans la zone de travail des applications du système d'exploitation de l'utilisateur·ice. En d'autres termes, aucune partie de la nouvelle popup ne peut être initialement positionnée hors écran.

@@ -13,11 +13,11 @@ O segundo artigo do tutorial de Django mostra uma forma de criar o "esqueleto" d
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        <a href="/pt-BR/docs/Learn/Server-side/Django/development_environment"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"
           >Configurar um ambiente de desenvolvimento Django</a
         >. Ter lido
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website"
+          href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website"
           >Tutorial Django: Website de uma Biblioteca Local</a
         >.
       </td>

@@ -5,7 +5,7 @@ slug: Web/API/NodeList/values
 
 {{APIRef("DOM")}}
 
-La méthode **`NodeList.values()`** renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{domxref("Node")}} (_noeud_).
+La méthode **`NodeList.values()`** renvoie un {{jsxref("Iteration_protocols",'itérateur')}} permettant de parcourir toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{domxref("Node")}} (_noeud_).
 
 ## Syntaxe
 
@@ -15,7 +15,7 @@ nodeList.values();
 
 ### Valeur retournée
 
-Renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.
+Renvoie un {{jsxref("Iteration_protocols","itérateur")}}.
 
 ## Exemple
 

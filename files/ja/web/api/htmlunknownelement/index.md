@@ -7,7 +7,7 @@ slug: Web/API/HTMLUnknownElement
 
 **`HTMLUnknownElement`** インターフェイスは不正な HTML 要素である事を表します。{{domxref("HTMLElement")}} インターフェイスを継承しますが、追加のメソッドやプロパティは実装しません。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## プロパティ
 

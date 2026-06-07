@@ -1,8 +1,9 @@
 ---
-title: mask-position
+title: Propriété CSS `mask-position`
+short-title: mask-position
 slug: Web/CSS/Reference/Properties/mask-position
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-position`** définit la position initiale pour chaque image de masque utilisée. Cette position est relative au calque définit avec la propriété {{CSSxRef("mask-origin")}}.

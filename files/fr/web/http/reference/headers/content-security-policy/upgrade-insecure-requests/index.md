@@ -1,31 +1,30 @@
 ---
-title: "CSP: upgrade-insecure-requests"
+title: "Content-Security-Policy : directive upgrade-insecure-requests"
+short-title: upgrade-insecure-requests
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests
-original_slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
+l10n:
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`upgrade-insecure-requests`** informe l'agent utilisateur de traiter toutes les URL non sécurisées d'un site (servies avec HTTP) comme si elles avaient été remplacées par des URL sécurisées (servies avec HTTPS). Cette directive est prévue pour les sites web ayant un grand nombre d'URL non sécurisées héritées du passé et qui ont besoin d'être récrites.
 
-> [!NOTE]
-> La directive `upgrade-insecure-requests` est évaluée avant la directive {{CSP("block-all-mixed-content")}} et si cette elle est définie, cette dernière est effectivement ignorée. Il est recommendé de ne définir que l'une des deux directives mais non les deux, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.
-
-The `upgrade-insecure-requests` directive will not ensure that users visiting your site via links on third-party sites will be upgraded to HTTPS for the top-level navigation and thus does not replace the {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) header, which should still be set with an appropriate `max-age` to ensure that users are not subject to SSL stripping attacks.
+La directive `upgrade-insecure-requests` ne garantit pas que les utilisateur·ice·s accédant à votre site par le biais de liens sur des sites tiers verront leur connexion basculer vers HTTPS pour la navigation de premier niveau, et ne remplace donc pas l'en-tête {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}), qui doit toujours être définie avec une valeur `max-age` appropriée afin de garantir que les utilisateur·ice·s ne soient pas exposés à des attaques de mise à nu du SSL.
 
 ## Syntaxe
 
-```
+```http
 Content-Security-Policy: upgrade-insecure-requests;
 ```
 
 ## Exemples
 
-Soit cet en-tête CSP :
+### Utiliser l'en-tête HTTP
 
-```
+```http
 Content-Security-Policy: upgrade-insecure-requests;
 ```
 
-Et cette balise meta :
+### Utiliser l'élément HTML `meta`
 
 ```html
 <meta
@@ -33,37 +32,37 @@ Et cette balise meta :
   content="upgrade-insecure-requests" />
 ```
 
-Avec cet en-tête défini sur le domaine example.com voulant migrer d'HTTP à HTTPS, les requêtes pour des ressources non sécurisées et non navigationnelles sont automatiquement converties (qu'elles soient internes ou externes).
+Avec cet en-tête défini sur le domaine exemple.com souhaitant migrer de HTTP vers HTTPS, les requêtes pour des ressources non sécurisées et qui ne peuvent pas avoir de navigation sécurisée sont automatiquement converties (qu'elles soient internes ou externes).
 
 ```html
-<img src="http://example.com/image.png" />
-<img src="http://not-example.com/image.png" />
+<img src="http://exemple.com/image.png" />
+<img src="http://hors-exemple.com/image.png" />
 ```
 
-Ces URL seront récrites avant que la requête soit envoyée, signifiant qu'aucune requête non sécurisée ne sera envoyée. Notez que si la ressource demandée n'est pas actuellement disponible via HTTPS, la requête échouera sans se rabattre sur HTTP.
+Ces URL seront réécrites avant que la requête ne soit effectuée, ce qui signifie qu'aucune requête non sécurisée n'atteindra le réseau. Notez que, si la ressource demandée n'est pas réellement disponible par HTTPS, la requête échouera sans aucun retour à HTTP.
 
 ```html
-<img src="https://example.com/image.png" />
-<img src="https://not-example.com/image.png" />
+<img src="https://exemple.com/image.png" />
+<img src="https://hors-exemple.com/image.png" />
 ```
 
-Les conversions navigationnelles vers des ressources externes amènent un risque significatif de dysfonctionnement étant donné que des requêtes peuvent n'être pas converties, par exemple celles-ci :
+Les mises à niveau de navigation vers des ressources tierces présentent un potentiel de rupture beaucoup plus élevé, elles ne sont donc pas mises à niveau&nbsp;:
 
 ```html
-<a href="https://example.com/">Home</a>
-<a href="http://not-example.com/">Home</a>
+<a href="https://exemple.com/">Accueil</a>
+<a href="http://hors-exemple.com/">Accueil</a>
 ```
 
 ### Identifier des requêtes non sécurisées
 
-À l'aide de l'en-tête {{HTTPHeader("Content-Security-Policy-Report-Only")}} et de la directive {{CSP("report-uri")}}, vous pouvez mettre en place une stratégie de rapportage de violations sans bloquage conjointement à une stratégie de conversion comme :
+À l'aide de l'en-tête {{HTTPHeader("Content-Security-Policy-Report-Only")}} et de la directive {{CSP("report-uri")}}, vous pouvez mettre en place une stratégie de rapportage de violations sans bloquage conjointement à une stratégie de conversion comme&nbsp;:
 
-```
+```http
 Content-Security-Policy: upgrade-insecure-requests; default-src https:
 Content-Security-Policy-Report-Only: default-src https:; report-uri /endpoint
 ```
 
-De cette manière, vous convertirez toujours les requêtes non sécurisées sur votre site sécurisé mais la stratégie de rapportage identifiera les requêtes non sécurisées et les rapportera à l'adresse fournie.
+De cette manière, vous convertirez toujours les requêtes non sécurisées sur votre site sécurisé, mais la stratégie de rapportage identifiera les requêtes non sécurisées et les rapportera à l'adresse fournie.
 
 ## Spécifications
 
@@ -75,8 +74,8 @@ De cette manière, vous convertirez toujours les requêtes non sécurisées sur 
 
 ## Voir aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTTPHeader("Upgrade-Insecure-Requests")}} header
-- {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) header
-- {{CSP("block-all-mixed-content")}}
-- [Mixed content](/fr/docs/Web/Security/Defenses/Mixed_content)
+- L'en-tête {{HTTPHeader("Content-Security-Policy")}}
+- L'en-tête {{HTTPHeader("Upgrade-Insecure-Requests")}}
+- L'en-tête {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
+- La directive CSP {{CSP("block-all-mixed-content")}}
+- [Contenu mixte](/fr/docs/Web/Security/Defenses/Mixed_content)

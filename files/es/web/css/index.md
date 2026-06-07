@@ -45,11 +45,11 @@ Nuestra [área de aprendizaje CSS](/es/docs/conflicting/Learn_web_development/Co
 - Conceptos clave de CSS:
   - La [sintaxis y las formas del lenguaje](/es/docs/Web/CSS/Guides/Syntax/Introduction)
   - [Especificidad](/es/docs/Web/CSS/Guides/Cascade/Specificity), [herencia](/es/docs/Web/CSS/Guides/Cascade/Inheritance) y [la cascada](/es/docs/Web/CSS/Cascade)
-  - [Unidades y valores CSS](/es/docs/Web/CSS/CSS_Values_and_Units)
+  - [Unidades y valores CSS](/es/docs/Web/CSS/Guides/Values_and_units)
   - [Modelo de caja](/es/docs/Web/CSS/Guides/Box_model/Introduction) y [colapso de margen](/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - El [bloque contenedor](/es/docs/Web/CSS/Containing_block)
   - Contextos de [apilamiento](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) y [formato de bloques](/es/docs/Web/CSS/Guides/Display/Block_formatting_context)
-  - Valores [iniciales](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing), [calculados](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [usados](/es/docs/Web/CSS/used_value) y [actuales](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+  - Valores [iniciales](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing), [calculados](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [usados](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing) y [actuales](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
   - [Propiedades abreviadas de CSS](/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
   - [Diseño de caja flexible de CSS](/es/docs/Web/CSS/Guides/Flexible_box_layout)
   - [Diseño de cuadrícula CSS (_CSS Grid_)](/es/docs/Web/CSS/Guides/Grid_layout)

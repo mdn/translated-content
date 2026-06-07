@@ -1932,7 +1932,6 @@
 /es/docs/Web/API/PushManager/supportedContentEncodings	/es/docs/Web/API/PushManager/supportedContentEncodings_static
 /es/docs/Web/API/RandomSource/Obtenervaloresaleatorios	/es/docs/Web/API/Crypto/getRandomValues
 /es/docs/Web/API/Range/collapsed	/es/docs/Web/API/AbstractRange/collapsed
-/es/docs/Web/API/SubtleCrypto/encrypt	/es/docs/Web/HTTP/Reference/Headers/Content-Digest
 /es/docs/Web/API/UIEvent/pageX	/es/docs/Web/API/MouseEvent/pageX
 /es/docs/Web/API/URL/createObjectURL	/es/docs/Web/API/URL/createObjectURL_static
 /es/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
@@ -3397,6 +3396,11 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/null	/es/docs/Web/JavaScript/Reference/Operators/null
 /es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment	/es/docs/Web/JavaScript/Reference/Operators/Destructuring
 /es/docs/Web/JavaScript/Reference/Statements/import.meta	/es/docs/Web/JavaScript/Reference/Operators/import.meta
+/es/docs/Web/JavaScript/Reference/delete	/es/docs/Web/JavaScript/Reference/Operators/delete
+/es/docs/Web/JavaScript/Reference/instanceof	/es/docs/Web/JavaScript/Reference/Operators/instanceof
+/es/docs/Web/JavaScript/Reference/new	/es/docs/Web/JavaScript/Reference/Operators/new
+/es/docs/Web/JavaScript/Reference/null	/es/docs/Web/JavaScript/Reference/Operators/null
+/es/docs/Web/JavaScript/Reference/this	/es/docs/Web/JavaScript/Reference/Operators/this
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Referencia/Acerca_de	/es/docs/conflicting/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Referencia/Características_Desaprobadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features

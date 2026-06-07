@@ -7,7 +7,7 @@ l10n:
 
 [Firefox 1.5](/fr/docs/Mozilla/Firefox/Releases/1.5) met en mémoire cache des pages Web entières, avec leurs états JavaScript, pour une même session de navigation. Revenir ou avancer entre des pages déjà visitées ne nécessite aucun chargement de page et les états JavaScript sont préservés. Cette fonctionnalité parfois appelée **bfcache** (pour «&nbsp;Back-Forward Cache&nbsp;») rend la navigation très rapide. Ce cache est préservé en mémoire jusqu'à ce que l'utilisateur·ice ferme le navigateur.
 
-Il existe des cas où Firefox ne met pas en cache les pages. Vous trouverez ci-dessous certaines raisons classiques de programmation faisant qu'une page n'est pas mise en cache&nbsp;:
+Il existe des cas où Firefox ne met pas en cache les pages. Vous pouvez trouver ci-dessous certaines raisons classiques de programmation faisant qu'une page n'est pas mise en cache&nbsp;:
 
 - la page utilise un gestionnaire `unload` ou `beforeunload`&nbsp;;
 - la page définit "cache-control: no-store".
@@ -29,17 +29,17 @@ Le navigateur offre aux webmestres deux nouveaux évènements pour cela.
 
 ### Nouveaux évènements du navigateur
 
-Si vous utilisez ces nouveaux évènements, vos pages continueront à s'afficher correctement dans les autres navigateurs (nous avons testé des versions antérieures de Firefox, Internet Explorer, Opera et Safari), et elles utiliseront ces nouvelles fonctionnalités de mise en cache lors de leur chargement dans Firefox 1.5.
+Si vous utilisez ces nouveaux évènements, vos pages continuent à s'afficher correctement dans les autres navigateurs (nous avons testé des versions antérieures de Firefox, Internet Explorer, Opera et Safari), et elles utilisent ces nouvelles fonctionnalités de mise en cache lors de leur chargement dans Firefox 1.5.
 
 Remarque&nbsp;: depuis octobre 2009, les versions de développement de Safari prennent en charge ces nouveaux évènements (voir [le bogue WebKit <sup>(angl.)</sup>](https://webkit.org/b/28758)).
 
 Le comportement standard des pages Web est&nbsp;:
 
-1. L'utilisateur accède à une page.
+1. L'utilisateur·ice accède à une page.
 2. Au cours du chargement de la page, les scripts contenus dans la page (_inline_) s'exécutent.
 3. Dès que la page est chargée, le gestionnaire `onload` est invoqué.
 
-Certaines pages comprennent une quatrième étape. Ce sont celles qui utilisent un gestionnaire `unload` se déclenchant lorsque l'utilisateur·ice quitte la page pour en charger une autre. Si un gestionnaire `unload` est présent, la page ne sera pas mise en cache.
+Certaines pages comprennent une quatrième étape. Ce sont celles qui utilisent un gestionnaire `unload` se déclenchant lorsque l'utilisateur·ice quitte la page pour en charger une autre. Si un gestionnaire `unload` est présent, la page n'est pas mise en cache.
 
 Lorsqu'un·e utilisateur·ice navigue vers une page mise en cache, les scripts en-ligne et le gestionnaire `onload` ne sont pas exécutés (étape 2 et 3) puisque dans la plupart des cas les effets de ces scripts ont été préservés.
 
@@ -57,7 +57,7 @@ Si vous appelez des fonctions JavaScript comme faisant partie de l'évènement `
 
 #### L'évènement `pagehide`
 
-Si vous désirez définir un comportement se produisant lorsque l'utilisateur·ice quitte la page, mais ne voulez pas utiliser l'évènement `unload` (ce qui empêcherait la page d'être mise en cache), vous pouvez utiliser le nouvel évènement `pagehide`. Comme `pageshow`, l'évènement `pagehide` utilise une propriété booléenne appelée `persisted`. Cette propriété est définie à `true` si la page est mise en cache par le navigateur. Lorsque cette propriété est définie à `false`, le gestionnaire `unload`, s'il existe, se déclenche immédiatement après l'évènement `pagehide`.
+Si vous désirez définir un comportement se produisant lorsque l'utilisateur·ice quitte la page, mais ne voulez pas utiliser l'évènement `unload` (ce qui empêche la page d'être mise en cache), vous pouvez utiliser le nouvel évènement `pagehide`. Comme `pageshow`, l'évènement `pagehide` utilise une propriété booléenne appelée `persisted`. Cette propriété est définie à `true` si la page est mise en cache par le navigateur. Lorsque cette propriété est définie à `false`, le gestionnaire `unload`, s'il existe, se déclenche immédiatement après l'évènement `pagehide`.
 
 Firefox 1.5 essaie de simuler les évènements de chargement dans le même ordre de déroulement que lorsque la page est chargée initialement. Les cadres sont traités de la même façon que le document principal. Si la page contient des cadres, cela signifie que lorsque la page mise en cache est chargée&nbsp;:
 
@@ -149,7 +149,7 @@ Dans cet exemple&nbsp;:
 </html>
 ```
 
-En revanche, si la page ci-dessus n'avait pas écouté l'évènement `pageshow` et gérait tous les calculs au sein de l'évènement `load` (et était codée à la place comme dans l'exemple de code ci-dessous), la position du curseur et l'heure auraient été mis en cache par Firefox 1.5 lorsque l'utilisateur·ice aurait quitté la page. Lors de son retour, ce seraient la date et l'heure mises en cache qui auraient été affichées.
+En revanche, si la page ci-dessus n'avait pas écouté l'évènement `pageshow` et gérait tous les calculs au sein de l'évènement `load` (et était codée à la place comme dans l'exemple de code ci-dessous), la position du curseur et l'heure auraient été mis en cache par Firefox 1.5 lorsque l'utilisateur·ice a quitté la page. Lors de son retour, ce seraient la date et l'heure mises en cache qui auraient été affichées.
 
 ```html
 <head>

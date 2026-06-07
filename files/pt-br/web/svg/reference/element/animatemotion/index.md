@@ -20,13 +20,13 @@ O elemento `animateMotion` interfere em uma elemento referenciado para se mover 
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#core) »
-- [Atributos de eventos da animação](/pt-BR/docs/Web/SVG/Attribute#animationevent) »
-- [Atributos XLink](/pt-BR/docs/Web/SVG/Attribute#xlink) »
-- [Atributos de cronometragem da animação](/pt-BR/docs/Web/SVG/Attribute#animationtiming) »
-- [Atributos de valor de animação](/pt-BR/docs/Web/SVG/Attribute#animationvalue) »
-- [Atributos de animação adicionais](/pt-BR/docs/Web/SVG/Attribute#animationaddition) »
+- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
+- [Atributos de eventos da animação](/pt-BR/docs/Web/SVG/Reference/Attribute#animationevent) »
+- [Atributos XLink](/pt-BR/docs/Web/SVG/Reference/Attribute#xlink) »
+- [Atributos de cronometragem da animação](/pt-BR/docs/Web/SVG/Reference/Attribute#animationtiming) »
+- [Atributos de valor de animação](/pt-BR/docs/Web/SVG/Reference/Attribute#animationvalue) »
+- [Atributos de animação adicionais](/pt-BR/docs/Web/SVG/Reference/Attribute#animationaddition) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Atributos específicos

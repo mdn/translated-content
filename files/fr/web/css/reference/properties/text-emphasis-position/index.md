@@ -1,35 +1,115 @@
 ---
-title: text-emphasis-position
+title: Propriété CSS `text-emphasis-position`
+short-title: text-emphasis-position
 slug: Web/CSS/Reference/Properties/text-emphasis-position
-original_slug: Web/CSS/text-emphasis-position
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`text-emphasis-position`** définit l'emplacement des marques d'emphase. Similaire au texte rendu par l'élément HTML {{HTMLElement("ruby")}}, si l'espace disponible pour les marques d'emphase est insuffisant, la hauteur de ligne est augmentée.
 
-La propriété **`text-emphasis-position`** permet de décrire l'emplacement des marques d'emphase quand elles sont utilisées. L'ajout des marques a le même effet que [les annotations ruby](/fr/docs/Web/HTML/Reference/Elements/ruby) quant à la hauteur de ligne : s'il n'y a pas suffisamment de place, la hauteur de la ligne est augmentée.
+{{InteractiveExample("Démonstration CSS&nbsp;: text-emphasis-position")}}
+
+```css interactive-example-choice
+text-emphasis-position: auto;
+```
+
+```css interactive-example-choice
+text-emphasis-position: over right;
+```
+
+```css interactive-example-choice
+text-emphasis-position: under right;
+```
+
+```css interactive-example-choice
+text-emphasis-position: auto;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+text-emphasis-position: over left;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+text-emphasis-position: over right;
+writing-mode: vertical-rl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    Je préfère être
+    <span class="transition-all" id="example-element"
+      >heureux que d'avoir raison</span
+    >
+    n'importe quel jour.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-emphasis: filled double-circle #ffb703;
+}
+```
+
+## Syntaxe
 
 ```css
 /* Valeur initiale */
-text-emphasis-position: over right;
+text-emphasis-position: auto;
 
 /* Valeurs avec mot-clé */
+text-emphasis-position: over;
+text-emphasis-position: under;
+
+text-emphasis-position: over right;
 text-emphasis-position: over left;
 text-emphasis-position: under right;
 text-emphasis-position: under left;
 
 text-emphasis-position: left over;
+text-emphasis-position: right over;
 text-emphasis-position: right under;
 text-emphasis-position: left under;
 
 /* Valeurs globales */
 text-emphasis-position: inherit;
 text-emphasis-position: initial;
+text-emphasis-position: revert;
+text-emphasis-position: revert-layer;
 text-emphasis-position: unset;
 ```
 
-## Position privilégiée
+### Valeurs
 
-La position des marques d'emphase varie en fonction du langage. Par exemple, en japonais, on préfère les placer au dessus à droite. En revanche, pour le chinois, on préfèrera en bas à droite. Le tableau qui suit illustre les différences, notamment entre le chinois, le mongolien et le japonais :
+La propriété accepte une ou deux valeurs&nbsp;:
+
+- Si une seule valeur est fournie, elle peut être `auto`, `over` ou `under`. Lorsque seul `over` ou `under` est utilisé, `right` est supposé comme position par défaut.
+- Si deux valeurs sont fournies, elles doivent inclure l'une de `over` ou `under` et l'une de `right` ou `left`. Leur ordre n'a pas d'importance.
+
+Les valeurs incluent&nbsp;:
+
+- `auto`
+  - : Dessine les marques au-dessus du texte en mode d'écriture horizontal et à droite du texte en mode d'écriture vertical.
+- `over`
+  - : Les marques sont dessinées au-dessus du texte lorsqu'il est écrit en mode horizontal.
+- `under`
+  - : Les marques sont dessinées en-dessous du texte lorsqu'il est écrit en mode horizontal.
+- `right`
+  - : Les marques sont dessinées à droite du texte lorsqu'il est écrit en mode vertical.
+- `left`
+  - : Les marques sont dessinées à gauche du texte lorsqu'il est écrit en mode vertical.
+
+## Description
+
+La position préférée des marques d'emphase dépend de la langue. Par exemple, en japonais, la position préférée est `over right`. En chinois, en revanche, la position préférée est `under right`. Le tableau informatif ci-dessous résume les positions préférées des marques d'emphase pour le chinois, le mongol et le japonais&nbsp;:
 
 <table>
   <caption>
@@ -48,36 +128,39 @@ La position des marques d'emphase varie en fonction du langage. Par exemple, en 
   </thead>
   <tbody>
     <tr>
-      <td>Japanese</td>
-      <td rowspan="2">au dessus</td>
-      <td rowspan="2">à droite</td>
-      <td rowspan="2">
-        <img
-          alt="Emphasis marks appear over each emphasized character in horizontal Japanese text."
-          src="text-emphasis-ja.png"
-          title="Emphasis (shown in blue for clarity) applied above a fragment of Japanese text"
-        />
-      </td>
+      <td>Japonais</td>
+      <td rowspan="3">au dessus</td>
+      <td rowspan="3">à droite</td>
       <td rowspan="3">
         <img
-          alt="Emphasis marks appear on the right of each emphasized character in vertical Japanese text."
+          alt="Les marques d'emphase apparaissent au-dessus de chaque caractère accentué dans un texte japonais horizontal."
+          src="text-emphasis-ja.png"
+          title="Emphase (montrée en bleu pour plus de clarté) appliquée au-dessus d'un fragment de texte japonais"
+        />
+      </td>
+      <td rowspan="4">
+        <img
+          alt="Les marques d'emphase apparaissent à droite de chaque caractère accentué dans un texte japonais vertical."
           src="text-emphasis-v.gif"
-          title="Emphasis applied on the right of a fragment of Japanese text"
+          title="Emphase appliquée à droite d'un fragment de texte japonais"
         />
       </td>
     </tr>
     <tr>
-      <td>Mongolian</td>
+      <td>Coréen</td>
     </tr>
     <tr>
-      <td>Chinese</td>
+      <td>Mongolique</td>
+    </tr>
+    <tr>
+      <td>Chinois</td>
       <td>en dessous</td>
       <td>à droite</td>
       <td>
         <img
-          alt="Emphasis marks appear below each emphasized character in horizontal Simplified Chinese text."
+          alt="Les marques d'emphase apparaissent en dessous de chaque caractère accentué dans un texte chinois simplifié horizontal."
           src="text-emphasis-zh.gif"
-          title="Emphasis (shown in blue for clarity) applied below a fragment of Chinese text"
+          title="Emphase (montrée en bleu pour plus de clarté) appliquée en dessous d'un fragment de texte chinois"
         />
       </td>
     </tr>
@@ -85,20 +168,7 @@ La position des marques d'emphase varie en fonction du langage. Par exemple, en 
 </table>
 
 > [!NOTE]
-> La propriété `text-emphasis-position` ne peut pas être définie (et donc ne peut pas être redéfinie) avec la propriété raccourcie {{cssxref("text-emphasis")}}.
-
-## Syntaxe
-
-### Valeurs
-
-- `over`
-  - : Les marques sont dessinées au-dessus du texte lorsqu'il est écrit en mode horizontal.
-- `under`
-  - : Les marques sont dessinées en-dessous du texte lorsqu'il est écrit en mode horizontal.
-- `right`
-  - : Les marques sont dessinées à droite du texte lorsqu'il est écrit en mode vertical.
-- `left`
-  - : Les marques sont dessinées à gauche du texte lorsqu'il est écrit en mode vertical.
+> La propriété `text-emphasis-position` ne peut pas être définie (et donc ne peut pas être redéfinie) avec la propriété raccourcie {{CSSxRef("text-emphasis")}}.
 
 ## Définition formelle
 
@@ -110,9 +180,101 @@ La position des marques d'emphase varie en fonction du langage. Par exemple, en 
 
 ## Exemples
 
-### Masquer les marques
+### Ajouter des positions de marques d'emphase
 
-Certains éditeurs préfèrent masquer les marques d'emphase lorsque celles-ci entre en conflit avec les annotations ruby. On peut utiliser la règle suivante :
+Utilisez le menu déroulant pour changer la position des marques d'emphase. Cela changera la classe sur l'élément `<section>`, ce qui mettra à jour la position des marques d'emphase sur le texte.
+
+#### HTML
+
+```html hidden
+<p class="unsupported">
+  La valeur <code>auto</code> n'est pas prise en charge par votre navigateur.
+</p>
+<label for="position">Position de l'emphase&nbsp;:</label>
+<select id="position">
+  <option value="auto">auto</option>
+  <option value="over-right">over right</option>
+  <option value="over-left">over left</option>
+  <option value="under-right">under right</option>
+  <option value="under-left">under left</option>
+  <option value="preferred">preferred</option>
+</select>
+```
+
+```html
+<section id="setting" class="auto">
+  <p class="horizontal" lang="zh">你好世界</p>
+  <!-- Bonjour le monde en chinois -->
+  <p class="vertical" lang="ja">世界、こんにちは。</p>
+  <!-- Bonjour le monde en japonais -->
+</section>
+```
+
+#### CSS
+
+```css hidden
+.unsupported {
+  color: red;
+}
+@supports (text-emphasis-position: auto) {
+  .unsupported {
+    display: none;
+  }
+}
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+.vertical {
+  writing-mode: vertical-rl;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+}
+```
+
+```css
+section p {
+  text-emphasis: filled circle tomato;
+  text-emphasis-position: auto;
+}
+.over-right p,
+.preferred p [lang="ja"] {
+  text-emphasis-position: over right;
+}
+.over-left p {
+  text-emphasis-position: over left;
+}
+.under-right p,
+.preferred p [lang="zh"] {
+  text-emphasis-position: under right;
+}
+.under-left p {
+  text-emphasis-position: under left;
+}
+.preferred p [lang="ja"] {
+}
+```
+
+```js hidden
+const position = document.querySelector("#position");
+const setting = document.querySelector("#setting");
+const updateClass = () => {
+  const currentClass = setting.classList;
+  setting.classList.replace(currentClass, position.value);
+};
+position.addEventListener("change", updateClass);
+```
+
+#### Résultat
+
+Utilisez le menu déroulant «&nbsp;Position de l'emphase&nbsp;» pour choisir l'emplacement des marques d'emphase. L'option «&nbsp;prefered&nbsp;» du menu utilise les positions privilégiées, comme expliqué dans la [Description](#description).
+
+{{EmbedLiveSample("Ajouter des positions de marques d'emphase", 450, 250)}}
+
+### Privilégier ruby aux marques d'emphase
+
+Certain·e·s éditeur·ice·s préfèrent masquer les marques d'emphase lorsqu'elles entrent en conflit avec ruby. En HTML, cela peut être fait avec la règle de style suivante&nbsp;:
 
 ```css
 ruby {
@@ -120,40 +282,19 @@ ruby {
 }
 ```
 
-D'autres préfèrent masquer le contenu ruby et privilégier les marques d'emphase. On peut obtenir cet effet avec les déclarations suivantes :
+### Privilégier les marques d'emphase à ruby
+
+D'autres éditeur·ice·s préfèrent masquer ruby lorsqu'il entre en conflit avec les marques d'emphase. En HTML, cela peut être fait avec le modèle suivant&nbsp;:
 
 ```css
 em {
-  /* On utilise text-emphasis pour les <em> */
-  text-emphasis: dot;
+  text-emphasis: dot; /* On applique text-emphasis aux éléments <em> */
 }
 
 em rt {
-  /* On masque le ruby dans les éléments <em> */
-  display: none;
+  display: none; /* On masque ruby à l'intérieur des éléments <em> */
 }
 ```
-
-### Exemple _live_
-
-#### HTML
-
-```html
-<p><em>Coucou</em>, je suis <em>là</em></p>
-```
-
-#### CSS
-
-```css
-em {
-  text-emphasis-style: sesame;
-  text-emphasis-position: under right;
-}
-```
-
-#### Résultat
-
-{{EmbedLiveSample("Exemple_live","100%","100%")}}
 
 ## Spécifications
 
@@ -165,6 +306,8 @@ em {
 
 ## Voir aussi
 
-- {{cssxref("text-emphasis-style")}}
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-emphasis")}}
+- La propriété {{CSSxRef("text-underline-position")}}
+- La propriété {{CSSxRef("text-emphasis-style")}}
+- La propriété {{CSSxRef("text-emphasis-color")}}
+- La propriété raccourcie {{CSSxRef("text-emphasis")}}
+- La propriété {{CSSxRef("writing-mode")}}

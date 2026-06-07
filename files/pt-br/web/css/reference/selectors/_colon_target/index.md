@@ -6,7 +6,7 @@ original_slug: Web/CSS/:target
 
 {{CSSRef}}
 
-A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:target`** representa um único elemento (o elemento alvo) com uma [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) correspondente ao fragmento da URL.
+A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:target`** representa um único elemento (o elemento alvo) com uma [`id`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#id) correspondente ao fragmento da URL.
 
 ```css
 /* Seleciona um elemento com a ID correspondente ao fragmento da URL */

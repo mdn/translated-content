@@ -15,7 +15,7 @@ Este elemento implementa a interface {{domxref("HTMLDirectoryElement")}}.
 
 ## Atributos
 
-Como todos os outros elementos HTML, este elemento suporta os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
+Como todos os outros elementos HTML, este elemento suporta os [global attributes](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `compact`
   - : Este atributo booleano indica que a lista deve ser renderizada em um estilo compacto. A interpretação deste atributo depende do agente do usuário e não funciona em todos os navegadores.
@@ -32,7 +32,7 @@ Como todos os outros elementos HTML, este elemento suporta os [global attributes
 - Outros relacionados a lista de elementos HTML: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, e {{HTMLElement("menu")}};
 - Propriedades CSS que podem ser especialmente úteis para estilizar o elemento `<dir>` :
   - A propriedade {{cssxref('list-style')}}, útil para escolher a maneira como o ordinal é exibido.
-  - [CSS counters](/pt-BR/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), útil para lidar com listas aninhadas complexas.
+  - [CSS counters](/pt-BR/docs/Web/CSS/Guides/Counter_styles/Using_counters), útil para lidar com listas aninhadas complexas.
   - A propriedade {{Cssxref('line-height')}}, útil para simular o atributo obsoleto [`compact`](#compact).
   - A propriedade {{cssxref('margin')}}, útil para controlar o recuo da lista.
 

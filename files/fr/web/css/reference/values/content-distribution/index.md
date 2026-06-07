@@ -1,9 +1,9 @@
 ---
-title: <content-distribution>
+title: Type CSS `<content-distribution>`
+short-title: <content-distribution>
 slug: Web/CSS/Reference/Values/content-distribution
-original_slug: Web/CSS/content-distribution
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<content-distribution>`** est utilisé par les propriétés {{CSSxRef("justify-content")}} et {{CSSxRef("align-content")}}, ainsi que par le raccourci {{CSSxRef("place-content")}}, pour répartir l'espace supplémentaire d'un conteneur entre ses {{Glossary("alignment subject", "sujets d'alignement")}}.

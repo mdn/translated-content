@@ -1,8 +1,9 @@
 ---
-title: font-palette
+title: Propriété CSS `font-palette`
+short-title: font-palette
 slug: Web/CSS/Reference/Properties/font-palette
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-palette`** permet de définir l'une des nombreuses palettes contenues dans une [police de couleur <sup>(angl.)</sup>](https://www.colorfonts.wtf/) qu'un agent utilisateur peut utiliser pour la police. Les utilisateur·ice·s peuvent aussi modifier les valeurs d'une palette ou créer une nouvelle palette en utilisant la règle {{CSSxRef("@font-palette-values")}}.

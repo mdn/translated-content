@@ -1,9 +1,9 @@
 ---
-title: brightness()
+title: Fonction CSS `brightness()`
+short-title: brightness()
 slug: Web/CSS/Reference/Values/filter-function/brightness
-original_slug: Web/CSS/filter-function/brightness
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`brightness()`** applique un coefficient multiplicateur linéaire sur un élément ou une image en entrée, rendant l'image plus claire ou plus sombre. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
@@ -45,7 +45,7 @@ brightness(amount)
 ### Valeurs
 
 - `amount` {{Optional_Inline}}
-  - : La clarté indiquée sous la forme d'un nombre ({{CSSxRef("&lt;number&gt;")}}) ou d'un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Une valeur inférieure à `100%` assombrit l'image ou l'élément, tandis qu'une valeur supérieure à `100%` l'éclaircit. Une valeur de `0%` rend l'image ou l'élément complètement noir, tandis qu'une valeur de `100%` laisse l'entrée inchangée. Les autres valeurs entre `0%` et `100%` appliquent un effet multiplicateur linéaire. Les valeurs supérieures à `100%` sont autorisées et donnent un résultat plus clair. La valeur initiale pour l'{{Glossary("interpolation")}} est `1`. Les valeurs négatives ne sont pas autorisées. La valeur par défaut est `1`.
+  - : La clarté indiquée sous la forme d'un nombre ({{CSSxRef("&lt;number&gt;")}}) ou d'un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Une valeur inférieure à `100%` assombrit l'image ou l'élément, tandis qu'une valeur supérieure à `100%` l'éclaircit. Une valeur de `0%` rend l'image ou l'élément complètement noir, tandis qu'une valeur de `100%` laisse l'entrée inchangée. Les autres valeurs entre `0%` et `100%` appliquent un effet multiplicateur linéaire. Les valeurs supérieures à `100%` sont autorisées et donnent un résultat plus clair. La valeur initiale pour {{Glossary("interpolation", "l'interpolation")}} est `1`. Les valeurs négatives ne sont pas autorisées. La valeur par défaut est `1`.
 
 Voici des paires de valeurs équivalentes&nbsp;:
 
@@ -72,7 +72,7 @@ brightness(200%)
 
 ### Utiliser `brightness()` avec la propriété `backdrop-filter`
 
-Cet exemple montre comment appliquer le filtre `brightness()` à un paragraphe via la propriété CSS {{CSSxRef("backdrop-filter")}}.
+Cet exemple montre comment appliquer le filtre `brightness()` à un paragraphe avec la propriété CSS {{CSSxRef("backdrop-filter")}}.
 
 #### CSS
 
@@ -102,20 +102,21 @@ p {
 ```html hidden
 <div class="container">
   <p>
-    Text on images can be illegible and inaccessible even with a drop shadow.
+    Le texte sur les images peut être illisible et inaccessible même avec une
+    ombre portée.
   </p>
 </div>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('Utiliser `brightness()` avec la propriété `backdrop-filter`', '100%', '280')}}
+{{EmbedLiveSample("Utiliser `brightness()` avec la propriété `backdrop-filter`", "100%", 280)}}
 
 Dans cet exemple, les couleurs de la zone derrière l'élément HTML `<p>` sont modifiées linéairement. Si la propriété CSS `backdrop-filter` était définie à `brightness(0%)`, la zone `<div>` contenant le paragraphe `<p>` serait noire et masquerait l'image en arrière-plan. Avec `brightness(100%)`, la couleur de la zone `<div>` serait identique à la valeur d'entrée `#d4d5b2` et l'image derrière serait totalement transparente. Avec la luminosité réglée à `150%` comme dans cet exemple, les couleurs de l'image en arrière-plan sont masquées par la luminosité de l'élément `<div>`.
 
 ### Utiliser `brightness()` avec la propriété `filter`
 
-Dans cet exemple, un filtre `brightness()` est appliqué à l'ensemble de l'élément, y compris le contenu, la bordure et l'image de fond, via la propriété CSS {{CSSxRef("filter")}}. Le résultat montre trois variantes avec différentes valeurs de clarté.
+Dans cet exemple, un filtre `brightness()` est appliqué à l'ensemble de l'élément, y compris le contenu, la bordure et l'image de fond, avec la propriété CSS {{CSSxRef("filter")}}. Le résultat montre trois variantes avec différentes valeurs de clarté.
 
 ```css
 p:first-of-type {
@@ -148,13 +149,13 @@ p {
 <p>Ce paragraphe a une luminosité accrue.</p>
 ```
 
-{{EmbedLiveSample('Utiliser `brightness()` avec la propriété `filter`','100%','280')}}
+{{EmbedLiveSample("Utiliser `brightness()` avec la propriété `filter`", "100%", 280)}}
 
-### Utiliser `brightness()` avec un filtre SVG via `url()`
+### Utiliser `brightness()` avec un filtre SVG avec `url()`
 
 L'élément SVG {{SVGElement("filter")}} permet de définir des effets de filtre personnalisés qui peuvent ensuite être référencés par [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Le filtre utilise la primitive {{SVGElement("feComponentTransfer")}} pour permettre un remappage des couleurs au niveau du pixel.
 
-Dans cet exemple, pour créer un filtre qui assombrit le contenu de 25&nbsp;% (c'est-à-dire 75&nbsp;% de la clarté d'origine), l'attribut `slope` est fixé à `0.75`. On peut alors référencer ce filtre par son identifiant.
+Dans cet exemple, pour créer un filtre qui assombrit le contenu de 25% (c'est-à-dire 75% de la clarté d'origine), l'attribut `slope` est fixé à `0.75`. On peut alors référencer ce filtre par son identifiant.
 
 Exemple&nbsp;:
 
@@ -225,7 +226,7 @@ svg:not(:root) {
 }
 ```
 
-{{EmbedLiveSample('svg_filter', '100%', '280')}}
+{{EmbedLiveSample("svg_filter", "100%", 280)}}
 
 ## Spécifications
 

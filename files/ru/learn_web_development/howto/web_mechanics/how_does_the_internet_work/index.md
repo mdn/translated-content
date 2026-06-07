@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 Эта статья о том, что такое Интернет и как он работает.
 
@@ -13,7 +13,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">Необходимые знания:</th>
-      <td>Отсутствуют, но мы рекомендуем сначала прочитать <a href="/ru/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding">Статью о постановке целей проекта</a>.</td>
+      <td>Отсутствуют, но мы рекомендуем сначала прочитать <a href="/ru/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding">Статью о постановке целей проекта</a>.</td>
     </tr>
     <tr>
       <th scope="row">Цель:</th>

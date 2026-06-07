@@ -2,7 +2,7 @@
 title: Codes de statut de réponse HTTP
 slug: Web/HTTP/Reference/Status
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: cd8ed9bfa89d5ced4fd6c2083d7d90bcda41e441
 ---
 
 Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/Web/HTTP) a été exécutée avec succès ou non. Les réponses sont regroupées en cinq classes&nbsp;:
@@ -27,7 +27,7 @@ Les codes de statut listés ci-dessous sont définis par la [RFC 9110 <sup>(angl
 - {{HTTPStatus(102, "102 Processing")}} {{Deprecated_Inline}}
   - : Ce code était utilisé dans des contextes {{Glossary("WebDAV")}} pour indiquer qu'une requête a été reçue par le serveur, mais qu'aucun statut n'était disponible au moment de la réponse.
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : Ce code de statut est principalement destiné à être utilisé avec l'en-tête {{HTTPHeader("Link")}}, permettant à l'agent utilisateur de commencer le [préchargement](/fr/docs/Web/HTML/Reference/Attributes/rel/preload) des ressources pendant que le serveur prépare une réponse ou de [préconnecter](/fr/docs/Web/HTML/Reference/Attributes/rel/preconnect) à une origine depuis laquelle la page aura besoin de ressources.
+  - : Ce code de statut est principalement destiné à être utilisé avec l'en-tête {{HTTPHeader("Link")}}, permettant à l'agent utilisateur de commencer le [préchargement](/fr/docs/Web/HTML/Reference/Attributes/rel/preload) des ressources pendant que le serveur prépare une réponse ou de [préconnecter](/fr/docs/Web/HTML/Reference/Attributes/rel/preconnect) à une origine depuis laquelle la page a besoin de ressources.
 
 ## Réponses de succès
 
@@ -66,7 +66,7 @@ Les codes de statut listés ci-dessous sont définis par la [RFC 9110 <sup>(angl
 - {{HTTPStatus(302, "302 Found")}}
   - : Ce code de réponse indique que l'URI de la ressource demandée a été modifiée _temporairement_.
 - {{HTTPStatus(303, "303 See Other")}}
-  - : Le serveur a envoyé cette réponse pour diriger le client vers la ressource demandée via un autre URI en utilisant une requête {{HTTPMethod("GET")}}.
+  - : Le serveur a envoyé cette réponse pour diriger le client vers la ressource demandée par une autre URI en utilisant une requête {{HTTPMethod("GET")}}.
 - {{HTTPStatus(304, "304 Not Modified")}}
   - : Ce code est utilisé pour des raisons de cache. Il indique au client que la réponse n'a pas été modifiée. De fait, le client peut continuer à utiliser la même version de la réponse, [mise en cache](/fr/docs/Web/HTTP/Guides/Caching).
 - `305 Use Proxy` {{Deprecated_Inline}}
@@ -74,9 +74,9 @@ Les codes de statut listés ci-dessous sont définis par la [RFC 9110 <sup>(angl
 - `306 unused`
   - : Ce code de réponse n'est plus en service, son usage est actuellement réservé. Il était utilisé dans une version précédente de la spécification HTTP/1.1.
 - {{HTTPStatus(307, "307 Temporary Redirect")}}
-  - : Le serveur a envoyé cette réponse pour rediriger le client afin d'obtenir la ressource demandée via un autre URI, en utilisant la même méthode que précédemment. Ce code a la même sémantique que le code `302 Found`, à l'exception près que l'agent utilisateur _ne doit pas_ changer la méthode HTTP utilisée&nbsp;: si {{HTTPMethod("POST")}} était utilisé dans la première requête, alors `POST` doit être utilisé dans la seconde.
+  - : Le serveur a envoyé cette réponse pour rediriger le client afin d'obtenir la ressource demandée par une autre URI, en utilisant la même méthode que précédemment. Ce code a la même sémantique que le code `302 Found`, à l'exception près que l'agent utilisateur _ne doit pas_ changer la méthode HTTP utilisée&nbsp;: si {{HTTPMethod("POST")}} était utilisé dans la première requête, alors `POST` doit être utilisé dans la seconde.
 - {{HTTPStatus(308, "308 Permanent Redirect")}}
-  - : Cela signifie que la ressource a été déplacée de manière permanente vers une autre URI, spécifiée dans l'en-tête de réponse HTTP {{HTTPHeader("Location")}}. Ce code a la même sémantique que le code `301 Moved Permanently`, à l'exception près que l'agent utilisateur _ne doit pas_ changer la méthode HTTP utilisée&nbsp;: si {{HTTPMethod("POST")}} était utilisé dans la première requête, alors `POST` doit être utilisé dans la seconde.
+  - : Cela signifie que la ressource a été déplacée de manière permanente vers une autre URI, définie dans l'en-tête de réponse HTTP {{HTTPHeader("Location")}}. Ce code a la même sémantique que le code `301 Moved Permanently`, à l'exception près que l'agent utilisateur _ne doit pas_ changer la méthode HTTP utilisée&nbsp;: si {{HTTPMethod("POST")}} était utilisé dans la première requête, alors `POST` doit être utilisé dans la seconde.
 
 ## Réponses d'erreur côté client
 
@@ -98,7 +98,7 @@ Les codes de statut listés ci-dessous sont définis par la [RFC 9110 <sup>(angl
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : Similaire au code `401`, sauf que l'authentification doit être effectuée au travers d'un proxy.
 - {{HTTPStatus(408, "408 Request Timeout")}}
-  - : Cette réponse est envoyée via une connexion en attente par certains serveurs, même sans qu'il y ait de requête préalable de la part du client. Cela signifie que le serveur aimerait fermer cette connexion inutilisée. Cette réponse est bien plus utilisée depuis que certains navigateurs, comme Chrome, Firefox 27+ ou IE9, utilisent des [mécanismes de préconnexion HTTP <sup>(angl.)</sup>](https://www.belshe.com/2011/02/10/the-era-of-browser-preconnect/) pour accélérer la navigation. Notez aussi que certains serveurs ferment simplement la connexion sans même envoyer ce message.
+  - : Cette réponse est envoyée par une connexion en attente par certains serveurs, même sans qu'il y ait de requête préalable de la part du client. Cela signifie que le serveur aimerait fermer cette connexion inutilisée. Cette réponse est bien plus utilisée depuis que certains navigateurs, comme Chrome, Firefox 27+ ou IE9, utilisent des [mécanismes de préconnexion HTTP <sup>(angl.)</sup>](https://www.belshe.com/2011/02/10/the-era-of-browser-preconnect/) pour accélérer la navigation. Notez aussi que certains serveurs ferment simplement la connexion sans même envoyer ce message.
 - {{HTTPStatus(409, "409 Conflict")}}
   - : Cette réponse est envoyée lorsqu'une requête entre en conflit avec l'état actuel du serveur.
     Dans l'édition web distante {{Glossary("WebDAV")}}, les réponses `409` sont des erreurs envoyées au client afin qu'un·e utilisateur·ice puisse résoudre un conflit et renvoyer la requête.

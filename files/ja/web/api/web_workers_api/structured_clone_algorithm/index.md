@@ -33,7 +33,7 @@ l10n:
   <tbody>
     <tr>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Data_structures#プリミティブ値">すべてのプリミティブ型</a>
+        <a href="/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ値">すべてのプリミティブ型</a>
       </td>
       <td>ただし、シンボルを除く</td>
     </tr>

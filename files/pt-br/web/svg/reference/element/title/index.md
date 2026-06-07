@@ -32,7 +32,7 @@ O seguinte trecho de código demonstra a utilização da tag SVG `<title>`.
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 

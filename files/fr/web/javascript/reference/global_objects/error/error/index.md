@@ -25,7 +25,7 @@ Error(message, fileName, lineNumber)
 ```
 
 > [!NOTE]
-> `Error()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}. Les deux créent une nouvelle instance de `Error`.
+> `Error()` peut être appelé avec ou sans {{JSxRef("new")}}. Les deux créent une nouvelle instance de `Error`.
 
 ### Paramètres
 
@@ -44,7 +44,7 @@ Error(message, fileName, lineNumber)
 
 ### Appeler une fonction ou un nouveau constructeur
 
-Lorsque `Error` est utilisé comme une fonction, c'est-à-dire sans {{JSxRef("Operators/new", "new")}}, il renverra un objet `Error`.
+Lorsque `Error` est utilisé comme une fonction, c'est-à-dire sans {{JSxRef("new")}}, il renverra un objet `Error`.
 Ainsi, un simple appel à `Error` produira le même résultat que la construction d'un objet `Error` avec le mot-clé `new`.
 
 ```js

@@ -39,11 +39,11 @@ new Proxy(target, handler)
 - {{jsxref("Proxy/Proxy/apply", "handler.apply()")}}
   - : 函数调用劫持。
 - {{jsxref("Proxy/Proxy/construct", "handler.construct()")}}
-  - : {{JSxRef("Operators/new", "new")}} 运算符劫持。
+  - : {{JSxRef("new")}} 运算符劫持。
 - {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
   - : {{JSxRef("Object.defineProperty")}} 调用劫持。
 - {{jsxref("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
-  - : {{JSxRef("Operators/delete", "delete")}} 运算符劫持。
+  - : {{JSxRef("delete")}} 运算符劫持。
 - {{jsxref("Proxy/Proxy/get", "handler.get()")}}
   - : 获取属性值劫持。
 - {{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}

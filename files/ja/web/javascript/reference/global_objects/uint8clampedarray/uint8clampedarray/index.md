@@ -73,7 +73,7 @@ var uintc8 = new Uint8ClampedArray(iterable);
 
 ### 互換性メモ
 
-ECMAScript 2015 から、 `Uint8ClampedArray` コンストラクターは構築に {{jsxref("Operators/new", "new")}} 演算子が必要になりました。 `Uint8ClampedArray` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
+ECMAScript 2015 から、 `Uint8ClampedArray` コンストラクターは構築に {{jsxref("new")}} 演算子が必要になりました。 `Uint8ClampedArray` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
 
 ```js example-bad
 var dv = Uint8ClampedArray([1, 2, 3]);
@@ -87,6 +87,6 @@ var dv = new Uint8ClampedArray([1, 2, 3]);
 
 ## 関連情報
 
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

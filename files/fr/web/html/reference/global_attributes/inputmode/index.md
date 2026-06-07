@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : inputmode"
+title: "Attribut HTML universel : `inputmode`"
 short-title: inputmode
 slug: Web/HTML/Reference/Global_attributes/inputmode
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`inputmode`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui suggère le type de données qui pourrait être saisi par l'utilisateur·ice lors de la modification de l'élément ou de son contenu.

@@ -8,13 +8,13 @@ original_slug: Web/CSS/::before
 
 ## Sumário
 
-`::before` cria um [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) que é o primeiro filho do elemento atingido. É frequentemente utilizado para adicionar conteúdo decorativo à um element utilizando a propriedade {{cssxref("content")}}. Este elemento é inline por padrão.
+`::before` cria um [pseudo-elemento](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements) que é o primeiro filho do elemento atingido. É frequentemente utilizado para adicionar conteúdo decorativo à um element utilizando a propriedade {{cssxref("content")}}. Este elemento é inline por padrão.
 
 ## Sintaxe
 
 {{csssyntax}}
 
-A notação `::before` (com dois dois-pontos) foi introduzida no CSS3 afim de diferenciar [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elements). Navegadores também aceitam a notação `:before` introduzida no CSS 2.
+A notação `::before` (com dois dois-pontos) foi introduzida no CSS3 afim de diferenciar [pseudo-classes](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) de [pseudo-elementos](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Navegadores também aceitam a notação `:before` introduzida no CSS 2.
 
 ## Exemplos
 

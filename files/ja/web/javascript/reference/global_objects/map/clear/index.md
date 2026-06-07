@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-**`clear()`** は {{jsxref("Map")}} インスタンスのメソッドで、このマップからすべての要素を削除します。
+**`clear()`** は {{jsxref("Map")}} インスタンスのメソッドで、この対応表からすべての要素を削除します。
 
 {{InteractiveExample("JavaScript デモ: Map.prototype.clear()")}}
 

@@ -8,7 +8,7 @@ original_slug: Web/CSS/transition
 
 ## Summary
 
-A propriedade de [CSS](/pt-BR/docs/Web/CSS)**transition** é uma [propriedade abreviada](/pt-BR/docs/Web/CSS/CSS_cascade/Shorthand_properties) para {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }} e {{ cssxref("transition-delay") }}. Ela permite definir a transição entre dois estados de um elemento. Estados diferentes podem ser definidos usando [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) tais como {{cssxref(":hover")}} ou {{cssxref(":active")}}; ou dinamicamente, usando javascript.
+A propriedade de [CSS](/pt-BR/docs/Web/CSS)**transition** é uma [propriedade abreviada](/pt-BR/docs/Web/CSS/Guides/Cascade/Shorthand_properties) para {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }} e {{ cssxref("transition-delay") }}. Ela permite definir a transição entre dois estados de um elemento. Estados diferentes podem ser definidos usando [pseudo-classes](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) tais como {{cssxref(":hover")}} ou {{cssxref(":active")}}; ou dinamicamente, usando javascript.
 
 {{cssinfo}}
 
@@ -41,7 +41,7 @@ transition: unset;
 
 Observe que a ordem é importante dentro dos itens nesta propriedade: o primeiro valor que pode ser analisado como tempo é atribuído ao {{cssxref("transition-duration")}}, duration e o segundo valor que pode ser analisado como tempo é atribuído ao {{cssxref("transition-delay")}}.
 
-Veja [como as coisas são manipuladas](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#Quando_os_tamanhos_dos_valores_das_listas_das_propriedades_s%C3%A3o_de_tamanhos_diferentes) quando as listas de valores de propriedades não têm o mesmo comprimento. Em resumo, descrições de transição extras além do número de propriedades realmente sendo animadas são ignoradas.
+Veja [como as coisas são manipuladas](/pt-BR/docs/Web/CSS/Guides/Transitions/Using#Quando_os_tamanhos_dos_valores_das_listas_das_propriedades_s%C3%A3o_de_tamanhos_diferentes) quando as listas de valores de propriedades não têm o mesmo comprimento. Em resumo, descrições de transição extras além do número de propriedades realmente sendo animadas são ignoradas.
 
 ### Formal syntax
 
@@ -49,7 +49,7 @@ Veja [como as coisas são manipuladas](/pt-BR/docs/Web/CSS/CSS_transitions/Using
 
 ## Examples
 
-Existem vários outros exemplos de transições CSS incluídas no artigo principal sobre [CSS transitions](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+Existem vários outros exemplos de transições CSS incluídas no artigo principal sobre [CSS transitions](/pt-BR/docs/Web/CSS/Guides/Transitions/Using).
 
 ## Specifications
 
@@ -61,5 +61,5 @@ Existem vários outros exemplos de transições CSS incluídas no artigo princip
 
 ## See also
 
-- [Using CSS transitions](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/pt-BR/docs/Web/CSS/Guides/Transitions/Using)
 - {{ domxref("TransitionEvent") }}

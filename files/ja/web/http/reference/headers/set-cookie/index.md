@@ -103,7 +103,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : クッキーの期限までの秒数を示します。ゼロまたは負の数値の場合は、クッキーは直ちに期限切れになります。 `Expires` および `Max-Age` の両方が設定されていたら、 `Max-Age` が優先されます。
 
 - `Partitioned` {{optional_inline}}
-  - : 分割ストレージをを使用してクッキーが格納されるべきであることを示します。
+  - : 分割ストレージを使用してクッキーが格納されるべきであることを示します。
     この設定を行う場合は、 [`Secure` ディレクティブ](#secure)も設定する必要があることに注意してください。
     詳細は、[分割された独立した状態を持つクッキー (CHIPS)](/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)を参照してください。
 

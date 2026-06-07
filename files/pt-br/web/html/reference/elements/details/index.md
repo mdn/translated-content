@@ -10,7 +10,7 @@ O elemento HTML _details_ (`<details>`) é usado como uma ferramenta de onde o u
 
 ## Contexto de uso
 
-| Conteúdo permitido        | Um elemento {{ HTMLElement("summary") }} seguido por [flow content](/pt-BR/docs/HTML/Content_categories#flow_content)               |
+| Conteúdo permitido        | Um elemento {{ HTMLElement("summary") }} seguido por [flow content](/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content)    |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de tag            | Nenhuma, tanto as tas iniciais quanto as finais são obrigatórias.                                                                   |
 | Elementos pais permitidos | Qualquer elemento que aceite flow content.                                                                                          |
@@ -18,7 +18,7 @@ O elemento HTML _details_ (`<details>`) é usado como uma ferramenta de onde o u
 
 ## Atributos
 
-Como todos os elementos HTML, esse elemento aceita os [global attributes](/pt-BR/docs/HTML/Global_attributes).
+Como todos os elementos HTML, esse elemento aceita os [global attributes](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `open`
   - : Esse atributo Booleano indica se os detalhes serão mostrados para o usuário ao carregar a página. Se omitido os detalhes não serão mostrados.

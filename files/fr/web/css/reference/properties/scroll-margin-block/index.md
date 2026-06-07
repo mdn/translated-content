@@ -1,8 +1,9 @@
 ---
-title: scroll-margin-block
+title: Propriété CSS `scroll-margin-block`
+short-title: scroll-margin-block
 slug: Web/CSS/Reference/Properties/scroll-margin-block
 l10n:
-  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-margin-block`** définit les marges de défilement d'un élément dans la dimension de bloc.

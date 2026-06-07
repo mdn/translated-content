@@ -1,70 +1,142 @@
 ---
-title: tab-size
+title: Propriété CSS `tab-size`
+short-title: tab-size
 slug: Web/CSS/Reference/Properties/tab-size
-original_slug: Web/CSS/tab-size
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`tab-size`** permet d'adapter la largeur utilisée pour représenter le caractère de tabulation (`U+0009`).
 
-La propriété **`tab-size`** permet d'adapter la largeur utilisée pour représenter le caractère de tabulation (`U+0009`).
+{{InteractiveExample("Démonstration CSS&nbsp;: tab-size")}}
+
+```css interactive-example-choice
+tab-size: 10px;
+```
+
+```css interactive-example-choice
+tab-size: 16px;
+```
+
+```css interactive-example-choice
+tab-size: 24px;
+```
+
+```css interactive-example-choice
+tab-size: 4;
+```
+
+```html interactive-example
+<section id="default-example">
+  <pre id="example-element">&#9;123</pre>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid;
+}
+```
+
+## Syntaxe
 
 ```css
-/* Valeurs entières */
-/* Type <integer>   */
+/* Valeurs de type <number> */
 tab-size: 4;
 tab-size: 0;
 
-/* Valeurs de longueurs */
-/* Type <length>        */
+/* Valeurs de type <length> */
 tab-size: 10px;
 tab-size: 2em;
 
 /* Valeurs globales */
 tab-size: inherit;
 tab-size: initial;
+tab-size: revert;
+tab-size: revert-layer;
 tab-size: unset;
 ```
 
-{{cssinfo}}
-
-## Syntaxe
-
 ### Valeurs
 
-- {{cssxref("&lt;integer&gt;")}}
-  - : Le nombre d'espaces qu'occupe une tabulation. La valeur doit être positive.
-- {{cssxref("&lt;length&gt;")}}
+- {{CSSxRef("&lt;number&gt;")}}
+  - : Un multiple de la largeur d'avance du caractère espace (`U+0020`) à utiliser comme largeur des tabulations. Doit être non négatif. La largeur d'avance signifie la distance qu'un curseur ou une tête d'impression parcourt avant d'imprimer le caractère suivant.
+- {{CSSxRef("&lt;length&gt;")}}
   - : La largeur de la tabulation. La valeur doit être positive.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
-### HTML
-
-<!-- markdownlint-disable MD010 -->
-
-```html
-<pre class="exemple">
-	print "tabulation avant"
-    print "4 espaces avant"
-  print "2 espaces avant"
-</pre>
-```
-
-### CSS
+### Étendre avec un nombre de caractères
 
 ```css
-.exemple {
-  tab-size: 5;
+pre {
+  tab-size: 4; /* Définit la taille de tabulation à 4 caractères de large */
 }
 ```
 
-### Résultat
+### Réduire les tabulations
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+```css
+pre {
+  tab-size: 0; /* Supprime l'indentation */
+}
+```
+
+### Taille de tabulation par défaut et tailles personnalisées
+
+Cet exemple compare une taille de tabulation par défaut avec une taille de tabulation personnalisée. Notez que {{CSSxRef("white-space")}} est définie à `pre` pour empêcher la réduction des tabulations.
+
+#### HTML
+
+```html
+<p>pas de tabulation</p>
+<p>&#0009;taille de tabulation par défaut de 8 caractères de large</p>
+<p class="custom-number">
+  &#0009;taille de tabulation personnalisée de 3 caractères de large
+</p>
+<p>
+  &nbsp;&nbsp;&nbsp;3 espaces, équivalent à la taille de tabulation
+  personnalisée
+</p>
+<p class="custom-length">
+  &#0009;taille de tabulation personnalisée de 50px de large
+</p>
+```
+
+#### CSS
+
+```css hidden
+body {
+  border: 1px solid red;
+  margin: 1rem;
+}
+```
+
+```css
+p {
+  white-space: pre;
+}
+
+.custom-number {
+  tab-size: 3;
+}
+
+.custom-length {
+  tab-size: 50px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Taille de tabulation par défaut et tailles personnalisées", "100%", 250)}}
 
 ## Spécifications
 
@@ -76,4 +148,4 @@ tab-size: unset;
 
 ## Voir aussi
 
-- [Contrôler la taille du caractère de tabulation (U+0009)](https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html), un e-mail d'Anne van Kesteren pour le CSSWG afin de proposer la standardisation de cette propriété (en anglais).
+- La propriété {{CSSxRef('white-space')}}

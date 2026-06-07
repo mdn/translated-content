@@ -68,7 +68,7 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
   if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
   ```
 
-なお `let` は、[厳格モードでない](/ja/docs/Web/JavaScript/Reference/Strict_mode)場合、`var` または `function` で宣言する際に識別子名として使用することができますが、予期しない構文場の曖昧さを避けるため、`let` を識別子名として使うのは避けてください。
+なお `let` は、[厳格モードでない](/ja/docs/Web/JavaScript/Reference/Strict_mode)場合、`var` または `function` で宣言する際に識別子名として使用することができますが、予期しない構文上の曖昧さを避けるため、`let` を識別子名として使うのは避けてください。
 
 多くのスタイルガイド（[MDN](/ja/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript#variable_declarations) を含む）では、変数がそのスコープ内で再代入されない場合、`let` よりも {{jsxref("Statements/const", "const")}} を使用することを推奨しています。これにより、変数の型（場合によっては値）が不変であることが明確になります。変更可能な非プリミティブ型には `let` を推奨している場合もあります。
 

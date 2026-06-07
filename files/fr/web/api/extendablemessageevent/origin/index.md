@@ -15,7 +15,7 @@ var myOrigin = ExtendableMessageEventInstance.origin;
 
 ### Value
 
-Une {{domxref("DOMString")}}.
+Une {{jsxref("String")}}.
 
 ## Exemples
 

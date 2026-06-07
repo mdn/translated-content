@@ -7,14 +7,14 @@ slug: Web/API/HTMLDivElement
 
 La interfaz **`HTMLDivElement`** provee propiedades especiales (más allá de la interfaz regular {{domxref("HTMLElement")}} que también está disponible por herencia) para manipular elementos div.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Propiedades
 
 _Hereda las propiedades de su padre, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDivElement.align")}} {{deprecated_inline}}
-  - : Es un {{domxref("DOMString")}} que representa una propiedad enumerada que indica la alineación de los contenidos del elemento con respecto al contexto circundante. Los posibles valores son `"left"`, `"right"`, `"justify"`, and `"center"`.
+  - : Es un {{jsxref("String")}} que representa una propiedad enumerada que indica la alineación de los contenidos del elemento con respecto al contexto circundante. Los posibles valores son `"left"`, `"right"`, `"justify"`, and `"center"`.
 
 ## Métodos
 

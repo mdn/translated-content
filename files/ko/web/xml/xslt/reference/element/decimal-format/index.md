@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/decimal-format
 original_slug: Web/XSLT/Element/decimal-format
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:decimal-format>` 요소는
 `format-number( )`

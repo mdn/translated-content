@@ -8,15 +8,15 @@ original_slug: Web/HTML/Element/link
 
 O **Elemento HTML _\<link>_** especifica as relações entre o documento atual e um recurso externo. Possíveis usos para este elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é mais usado para vincular as folhas de estilo.
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Metadata content. If [`itemprop`](#itemprop) is present: [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content) [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content)
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Guides/Content_categories)_ Metadata content. If [`itemprop`](#itemprop) is present: [flow content](/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content) [phrasing content](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content)
 - _Conteúdo permitido_ None, it is an {{Glossary("empty element")}}.
 - _Omissão de tag_ As it is a void element, the start tag must be present and the end tag must not be present
-- _Elementos pai permitidos_ Any element that accepts metadata elements. If [`itemprop`](#itemprop) is present: any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
+- _Elementos pai permitidos_ Any element that accepts metadata elements. If [`itemprop`](#itemprop) is present: any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content).
 - _Interface de DOM_ {{domxref("HTMLLinkElement")}}
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `as`
   - : Esse atributo é usado apenas quando `rel="preload"` foi enviado no elemento `<link>`. Especifica o tipo de conteúdo carregado pelo `<link>`, que é necessário para a priorização do conteúdo, solicitação de correspondência, aplicação de [política de segurança de conteúdo](/pt-BR/docs/Web/HTTP/Guides/CSP) correta, e configuração do cabeçalho de pedido {{httpheader("Accept")}} correta.
@@ -49,14 +49,14 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `href`
   - : Esse atributo especifica a [URL](/pt-BR/docs/URIs_and_URLs) do recurso vinculado. Uma URL pode ser absolute or relative.
 - `hreflang`
-  - : Esse atributo indica o idioma do recurso vinculado. É meramente consultivo. Os valores permitidos são determindaos por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) para HTML5 e por [RFC1766](https://www.ietf.org/rfc/rfc1766.txt) para HTML 4. Use esse atributo se apenas os atributos [`href`](/pt-BR/docs/Web/HTML/Element/a#href) estiverem presentes.
+  - : Esse atributo indica o idioma do recurso vinculado. É meramente consultivo. Os valores permitidos são determindaos por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) para HTML5 e por [RFC1766](https://www.ietf.org/rfc/rfc1766.txt) para HTML 4. Use esse atributo se apenas os atributos [`href`](/pt-BR/docs/Web/HTML/Reference/Elements/a#href) estiverem presentes.
 - `media`
-  - : This attribute specifies the media which the linked resource applies to. Its value must be a [media query](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries). This attribute is mainly useful when linking to external stylesheets by allowing the user agent to pick the best adapted one for the device it runs on.
+  - : This attribute specifies the media which the linked resource applies to. Its value must be a [media query](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using). This attribute is mainly useful when linking to external stylesheets by allowing the user agent to pick the best adapted one for the device it runs on.
 
     > [!NOTE]
-    > In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/pt-BR/docs/Web/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`. HTML5 extended this to any kind of [media queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries), which are a superset of the allowed values of HTML 4.
+    > In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/pt-BR/docs/Web/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`. HTML5 extended this to any kind of [media queries](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using), which are a superset of the allowed values of HTML 4.
     >
-    > - Browsers not supporting the [CSS3 Media Queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
+    > - Browsers not supporting the [CSS3 Media Queries](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
 
 - `methods` {{Non-standard_inline}}
   - : The value of this attribute provides information about the functions that might be performed on an object. The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the **title** attribute) be useful to include advisory information in advance in the link. For example, the browser might choose a different rendering of a link as a function of the methods specified; something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site. This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4. See [Methods Property (MSDN)](http://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx).
@@ -74,7 +74,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - a white-space separated list of sizes, each in the format `<width in pixels>x<height in pixels>` or `<width in pixels>X<height in pixels>`. Each of these sizes must be contained in the resource.
 
     > [!NOTE]
-    > Most icon formats are only able to store one single icon; therefore most of the time the [`sizes`](/pt-BR/docs/Web/HTML/Global_attributes#sizes) attribute contains only one entry.
+    > Most icon formats are only able to store one single icon; therefore most of the time the [`sizes`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#sizes) attribute contains only one entry.
     > MS's ICO format does, as well as Apple's ICNS. ICO is more ubiquitous, so you should use this format if cross-browser support is a concern (especially for old IE versions).
 
 - `target`{{Non-standard_inline}}

@@ -10,9 +10,9 @@ Effectuer des traitements sur chacun des éléments d'une collection est une op�
 Pour plus de détails sur les mécanismes d'itération, voir les pages suivantes :
 
 - [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Instructions/for...of","for...of")}}
-- {{jsxref("Instructions/function*","function*")}} et {{jsxref("Generator")}}
-- {{jsxref("Opérateurs/yield","yield")}} et {{jsxref("Opérateurs/yield*","yield*")}}
+- {{jsxref("Statements/for...of","for...of")}}
+- {{jsxref("Statements/function*","function*")}} et {{jsxref("Generator")}}
+- {{jsxref("Operators/yield","yield")}} et {{jsxref("Operators/yield*","yield*")}}
 
 ## Itérateurs
 
@@ -61,7 +61,7 @@ console.log("La séquence parcourue contenait ", result.value, " éléments.");
 
 ## Itérables
 
-Un objet est considéré comme **itérable** s'il définit le comportement qu'il aura lors de l'itération (par exemple les valeurs qui seront utilisées dans une boucle {{jsxref("Instructions/for...of", "for...of")}}). Certains types natifs, tels qu'{{jsxref("Array")}} ou {{jsxref("Map")}}, possède un comportement par défaut pour les itérations, cependant d'autres types comme les Objets, ne possèdent pas ce comportement.
+Un objet est considéré comme **itérable** s'il définit le comportement qu'il aura lors de l'itération (par exemple les valeurs qui seront utilisées dans une boucle {{jsxref("Statements/for...of", "for...of")}}). Certains types natifs, tels qu'{{jsxref("Array")}} ou {{jsxref("Map")}}, possède un comportement par défaut pour les itérations, cependant d'autres types comme les Objets, ne possèdent pas ce comportement.
 
 Pour qu'un objet soit **itérable**, un objet doit implémenter la méthode **@@iterator**, cela signifie que l'objet (ou un des objets de la [chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec la clé {{jsxref("Symbol.iterator")}}. Cette fonction doit également, même si ce n'est pas une obligation, renvoyer une nouvel opérateur à chaque appel.
 
@@ -85,7 +85,7 @@ monItérable[Symbol.iterator] = function* () {
 
 ### Les éléments de syntaxe utilisant des itérables
 
-Certaines instructions ou expressions utilisent des itérables, par exemple les boucles {{jsxref("Instructions/for...of","for...of")}} et {{jsxref("Opérateurs/yield*","yield*")}}.
+Certaines instructions ou expressions utilisent des itérables, par exemple les boucles {{jsxref("Statements/for...of","for...of")}} et {{jsxref("Operators/yield*","yield*")}}.
 
 ```js
 for (let value of ["a", "b", "c"]) {

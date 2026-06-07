@@ -1,8 +1,9 @@
 ---
-title: <input type="password">
+title: Valeur d'attribut HTML `<input type="password">`
+short-title: <input type="password">
 slug: Web/HTML/Reference/Elements/input/password
 l10n:
-  sourceCommit: cc7f29133a331628d623e8cd705394b538d4368c
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments `<input>` de type **`password`** permettent à l'utilisateur·ice de saisir un mot de passe de manière sécurisée.

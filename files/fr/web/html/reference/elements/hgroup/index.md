@@ -1,8 +1,9 @@
 ---
-title: "<hgroup> : l'élément de regroupement de titres"
+title: "Élément HTML `<hgroup>` : l'élément de regroupement de titres"
+short-title: <hgroup>
 slug: Web/HTML/Reference/Elements/hgroup
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<hgroup>`** représente un titre et son contenu associé. Il regroupe un seul élément [`<h1>—<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) avec un ou plusieurs éléments {{HTMLElement("p")}}.

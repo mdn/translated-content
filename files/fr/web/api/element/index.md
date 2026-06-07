@@ -318,11 +318,11 @@ On peut écouter ces évènements en utilisant la méthode `addEventListener()` 
 ### Évènements du presse-papiers
 
 - [`copy`](/fr/docs/Web/API/Element/copy_event)
-  - : Déclenché lorsque l'utilisateur initie une action de copie via l'interface du navigateur. Également disponible via la propriété [`oncopy`](/fr/docs/Web/API/HTMLElement/copy_event).
+  - : Déclenché lorsque l'utilisateur initie une action de copie via l'interface du navigateur. Également disponible via la propriété [`oncopy`](/fr/docs/Web/API/Element/copy_event).
 - [`cut`](/fr/docs/Web/API/Element/cut_event)
-  - : Déclenché lorsque l'utilisateur initie une action de coupe via l'interface du navigateur. Également disponible via la propriété [`oncut`](/fr/docs/Web/API/HTMLElement/cut_event).
+  - : Déclenché lorsque l'utilisateur initie une action de coupe via l'interface du navigateur. Également disponible via la propriété [`oncut`](/fr/docs/Web/API/Element/cut_event).
 - [`paste`](/fr/docs/Web/API/Element/paste_event)
-  - : Déclenché lorsque l'utilisateur initie une action pour coller via l'interface du navigateur. Également disponible via la propriété [`onpaste`](/fr/docs/Web/API/HTMLElement/paste_event).
+  - : Déclenché lorsque l'utilisateur initie une action pour coller via l'interface du navigateur. Également disponible via la propriété [`onpaste`](/fr/docs/Web/API/Element/paste_event).
 
 ### Évènements de composition
 

@@ -2,7 +2,7 @@
 title: Types de pages
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 l10n:
-  sourceCommit: c68f51255b41e080f34f27aafc6fcd3aafa52114
+  sourceCommit: e0a2b683c4ddaeecdc4ddebf16e4a72c2dda17ac
 ---
 
 Il existe plusieurs types de pages qui sont utilisés de façon répétée sur MDN.
@@ -28,15 +28,15 @@ Quelques points à garder à l'esprit&nbsp;:
 
 Lorsque vous créez une nouvelle page, vous pouvez vous assurer d'utiliser la bonne structure et le bon contenu en consultant l'un de nos modèles de page — voir les sections ci-dessous.
 Vous pouvez trouver le code source exact de chaque modèle (si vous souhaitez le copier) en suivant le lien «&nbsp;Source sur **GitHub**&nbsp;» en bas de chaque modèle.
-Ces modèles de page n'ont pas beaucoup de sens en tant que pages publiées, mais si vous consultez leur code source, vous verrez qu'ils contiennent de nombreux commentaires utiles, des espaces réservés et des conseils détaillant comment remplir les informations manquantes et créer votre page.
+Ces modèles de page n'ont pas beaucoup de sens en tant que pages publiées, mais si vous consultez leur code source, vous pouvez voir qu'ils contiennent de nombreux commentaires utiles, des espaces réservés et des conseils détaillant comment remplir les informations manquantes et créer votre page.
 
-En haut de chaque modèle, vous trouverez une section intitulée _À supprimer avant publication_ — elle contient des informations sur la façon de remplir le titre de la page, le slug, le menu latéral et les tags (par exemple, des informations qui n'apparaissent pas dans le corps de l'article).
+En haut de chaque modèle, vous pouvez trouver une section intitulée _À supprimer avant publication_ — elle contient des informations sur la façon de remplir le titre de la page, le slug, le menu latéral et les tags (par exemple, des informations qui n'apparaissent pas dans le corps de l'article).
 Vous devez supprimer cette section après avoir suivi les instructions, avant que la page ne soit considérée comme terminée.
 
 ## Anciennes mises en page
 
 Il arrive parfois de tomber sur d'anciennes pages de référence qui sont très différentes des modèles présentés ici.
-Par exemple, les anciennes pages d'interface regroupaient tous les membres d'une interface sur une seule page, et il n'existait pas de pages individuelles pour chaque méthode/propriété/constructeur/écouteur d'événement.
+Par exemple, les anciennes pages d'interface regroupaient tous les membres d'une interface sur une seule page, et il n'existait pas de pages individuelles pour chaque méthode/propriété/constructeur/écouteur d'évènement.
 
 Si vous tombez sur un ensemble de pages au format ancien, nous serions ravi·e·s que vous les mettiez à jour au nouveau format&nbsp;!
 Cependant, nous comprenons que cela puisse représenter beaucoup de travail.
@@ -50,7 +50,7 @@ Si le travail est plus conséquent, vous devez prendre en compte quelques facteu
 
 Si vous souhaitez constituer une équipe pour travailler sur une mise à jour, ou simplement signaler ou discuter d'un contenu à mettre à jour, n'hésitez pas à [ouvrir un ticket de contenu <sup>(angl.)</sup>](https://github.com/mdn/content/issues) ou à [nous demander de l'aide](/fr/docs/MDN/Community/Communication_channels).
 
-## Clé front-matter « page-type »
+## Clé front-matter `page-type`
 
 Nous avons défini une clé front-matter `page-type` pour identifier clairement le type de page MDN. Les modèles ci-dessous indiquent quelle valeur de `page-type` utiliser pour chaque type de page.
 
@@ -58,7 +58,7 @@ Pour la liste complète des types de pages, voir [La clé front-matter page-type
 
 ## Modèles de page
 
-Vous trouverez ci-dessous des exemples des différents types de pages présents sur MDN, ainsi que des modèles à utiliser pour créer de nouveaux contenus selon le type de contenu à présenter, notamment&nbsp;:
+Vous pouvez trouver ci-dessous des exemples des différents types de pages présents sur MDN, ainsi que des modèles à utiliser pour créer de nouveaux contenus selon le type de contenu à présenter, notamment&nbsp;:
 
 - [Page d'accueil d'API](#page_daccueil_dapi)
 - [Page de référence d'API](#page_de_référence_dapi)
@@ -66,7 +66,7 @@ Vous trouverez ci-dessous des exemples des différents types de pages présents 
 - [Page de référence ARIA](#page_de_référence_aria)
 - [Page conceptuelle](#page_conceptuelle)
 - [Page de référence de fonctionnalité CSS](#page_de_référence_de_fonctionnalité_css)
-- [Page d'accueil de module CSS](#page_daccueil_de_module_css)
+- [Page de module CSS](#page_de_module_css)
 - [Page de glossaire](#page_de_glossaire)
 - [Page de référence d'élément HTML](#page_de_référence_délément_html)
 - [Page de référence d'attribut HTML](#page_de_référence_dattribut_html)
@@ -84,13 +84,13 @@ Elle ne lie pas directement vers des méthodes ou propriétés spécifiques des 
 Il s'agit principalement d'une page de _navigation_, mais elle sert aussi de page de _référence_ synthétique pour l'API.
 
 Il existe des cas où plusieurs API distinctes sont définies dans leurs propres spécifications, mais sont étroitement liées et il est donc pertinent de les regrouper sur une seule page d'accueil d'API.
-Par exemple, la [Generic Sensor API](https://w3c.github.io/sensors/) couvre les aspects généraux des capteurs, mais des aspects plus spécifiques sont couverts dans d'autres API comme [Ambient Light Sensor](https://w3c.github.io/ambient-light/), [Motion Sensor](https://w3c.github.io/motion-sensors/), etc.
+Par exemple, [l'API Generic Sensor <sup>(angl.)</sup>](https://w3c.github.io/sensors/) couvre les aspects généraux des capteurs, mais des aspects plus spécifiques sont couverts dans d'autres API comme [Ambient Light Sensor <sup>(angl.)</sup>](https://w3c.github.io/ambient-light/), [Motion Sensor <sup>(angl.)</sup>](https://w3c.github.io/motion-sensors/), etc.
 Dans ces cas, de nombreux concepts de haut niveau sont identiques, il n'est donc pas pertinent de les répéter sur plusieurs pages d'accueil.
 Il est alors préférable, pour éviter la répétition et améliorer la recherche, de tout regrouper sous une seule page d'accueil «&nbsp;Web sensors&nbsp;».
 
 #### Exemple
 
-- [WebVR API](/fr/docs/Web/API/WebVR_API)
+- [API WebVR](/fr/docs/Web/API/WebVR_API)
 
 #### Modèle
 
@@ -101,7 +101,7 @@ Il est alors préférable, pour éviter la répétition et améliorer la recherc
 > [!NOTE]
 > Aussi appelée _page d'accueil d'interface_.
 
-Une **page de référence d'API** liste toutes les méthodes, propriétés, événements, etc. qui sont membres d'une interface ou classe donnée.
+Une **page de référence d'API** liste toutes les méthodes, propriétés, évènements, etc. qui sont membres d'une interface ou classe donnée.
 Elle donne un aperçu de ce que fait la classe ou l'interface, ou de son usage, et fournit des liens vers la documentation de chacun de ses membres.
 Elle est plus détaillée qu'une page d'accueil d'API, qui lie généralement vers plusieurs pages de référence d'API.
 
@@ -109,9 +109,9 @@ Elle est plus détaillée qu'une page d'accueil d'API, qui lie généralement ve
 
 - [L'interface de requête](/fr/docs/Web/API/Request) de [L'API Fetch](/fr/docs/Web/API/Fetch_API).
 
-#### Templates
+#### Modèles
 
-- [API reference page template](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template)
+- [Modèle de page de référence d'API](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template)
 
 ### Sous-page de référence d'API
 
@@ -120,17 +120,17 @@ Elle documente en détail un seul membre d'interface.
 
 #### Exemples
 
-- [Méthode `count()`](/fr/docs/Web/API/IDBIndex/count) de l'interface [IDBIndex](/fr/docs/Web/API/IDBIndex) (faisant partie de l'[API IndexedDB](/fr/docs/Web/API/IndexedDB_API))
-- [Propriété `capabilities`](/fr/docs/Web/API/VRDisplay/capabilities) de l'interface [VRDisplay](/fr/docs/Web/API/VRDisplay) (faisant partie de l'[API WebVR](/fr/docs/Web/API/WebVR_API))
-- [Constructeur `Request()`](/fr/docs/Web/API/Request/Request) de l'interface [Request](/fr/docs/Web/API/Request) (faisant partie de l'[API Fetch](/fr/docs/Web/API/Fetch_API))
-- [Événement `vrdisplaypresentchange`](/fr/docs/Web/API/Window/vrdisplaypresentchange_event) (faisant partie de l'[API WebVR](/fr/docs/Web/API/WebVR_API), rattaché à l'interface [Window](/fr/docs/Web/API/Window))
+- [La méthode `count()`](/fr/docs/Web/API/IDBIndex/count) de l'interface [IDBIndex](/fr/docs/Web/API/IDBIndex) (faisant partie de [l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API))
+- [La propriété `capabilities`](/fr/docs/Web/API/VRDisplay/capabilities) de l'interface [VRDisplay](/fr/docs/Web/API/VRDisplay) (faisant partie de [l'API WebVR](/fr/docs/Web/API/WebVR_API))
+- [Le constructeur `Request()`](/fr/docs/Web/API/Request/Request) de l'interface [Request](/fr/docs/Web/API/Request) (faisant partie de [l'API Fetch](/fr/docs/Web/API/Fetch_API))
+- [L'évènement `vrdisplaypresentchange`](/fr/docs/Web/API/Window/vrdisplaypresentchange_event) (faisant partie de [l'API WebVR](/fr/docs/Web/API/WebVR_API), rattaché à l'interface [Window](/fr/docs/Web/API/Window))
 
 #### Modèles
 
 - [Modèle de sous-page de méthode d'API](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template)
 - [Modèle de sous-page de propriété d'API](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template)
 - [Modèle de sous-page de constructeur d'API](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template)
-- [Modèle de sous-page d'événement d'API](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template)
+- [Modèle de sous-page d'évènement d'API](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template)
 
 ### Page de référence d'élément HTML
 
@@ -138,7 +138,7 @@ Une **page de référence HTML** liste tous les attributs disponibles sur un él
 
 #### Exemple
 
-- [Élément `<video>`](/fr/docs/Web/HTML/Reference/Elements/video)
+- [L'élément `<video>`](/fr/docs/Web/HTML/Reference/Elements/video)
 
 #### Modèles
 
@@ -153,7 +153,7 @@ Une page de référence d'attribut HTML liste toutes les valeurs existantes pour
 
 #### Exemple
 
-- [Attribut `class`](/fr/docs/Web/HTML/Reference/Global_attributes/class)
+- [L'attribut `class`](/fr/docs/Web/HTML/Reference/Global_attributes/class)
 
 #### Modèles
 
@@ -165,21 +165,21 @@ Une **page de référence SVG** liste tous les attributs disponibles sur un él�
 
 #### Exemple
 
-- [Élément \<g>](/fr/docs/Web/SVG/Reference/Element/g)
+- [L'élément `<g>`](/fr/docs/Web/SVG/Reference/Element/g)
 
 #### Modèles
 
 - [Modèle de page d'élément SVG](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template)
 
-### Page d'accueil de module CSS
+### Page de module CSS
 
 Chaque **module [CSS](/fr/docs/Web/CSS)** représente une spécification CSS qui fournit la prise en charge de certaines fonctionnalités et implémentations en CSS. Par exemple, le module [Modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model) représente la [spécification](/fr/docs/Web/CSS/Guides/Box_model#spécifications) qui décrit les propriétés de marge et de remplissage permettant de créer des espacements dans et autour d'une boîte CSS.
 
-Une **page d'accueil de module CSS** donne un aperçu des fonctionnalités offertes par le module et liste toutes les propriétés, types de données, fonctions CSS, etc. proposés par le module. Lorsque c'est possible, la page d'accueil du module CSS propose une démonstration rapide de ce qu'il est possible de réaliser avec les propriétés du module via un exemple interactif.
-La page d'accueil du module sert principalement de page de _navigation_, mais fait aussi office de page de _référence_ synthétique pour le module.
+Une **page de module CSS** donne un aperçu des fonctionnalités offertes par le module et liste toutes les propriétés, types de données, fonctions CSS, etc. proposés par le module. Lorsque c'est possible, la page du module CSS propose une démonstration rapide de ce qu'il est possible de réaliser avec les propriétés du module avec un exemple interactif.
+La page du module sert principalement de page de _navigation_, mais fait aussi office de page de _référence_ synthétique pour le module.
 
 Certaines propriétés et fonctionnalités associées qui appartiennent à d'autres modules, mais qui sont étroitement liées à la fonctionnalité offerte par le module que vous documentez, peuvent aussi être abordées dans une section _Concepts associés_.
-Par exemple, le type de données `<easing-function>` et la media query `prefers-reduced-motion` ne sont pas couverts dans le module CSS animations, mais comme ils sont étroitement liés aux animations CSS, il est pertinent de les mettre en avant dans la section [Concepts associés](/fr/docs/Web/CSS/Guides/Animations#concepts_associés) de la page d'accueil du module CSS animations.
+Par exemple, le type de données `<easing-function>` et la media query `prefers-reduced-motion` ne sont pas couverts dans le module CSS animations, mais comme ils sont étroitement liés aux animations CSS, il est pertinent de les mettre en avant dans la section [Concepts associés](/fr/docs/Web/CSS/Guides/Animations#concepts_associés) de la page du module CSS animations.
 
 #### Exemples
 
@@ -190,7 +190,7 @@ Par exemple, le type de données `<easing-function>` et la media query `prefers-
 
 #### Modèles
 
-- [Modèle de page d'accueil de module CSS](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template)
+- [Modèle de page de module CSS](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template)
 
 ### Page de référence de fonctionnalité CSS
 
@@ -238,7 +238,7 @@ Une **page de référence ARIA** décrit un [rôle](/fr/docs/Web/Accessibility/A
 
 Une **page conceptuelle** est une page de _guide_ qui explique ou enseigne quelque chose.
 En général, si une page contient principalement du texte explicatif et ne correspond à aucun autre type de page, il s'agit probablement d'une page conceptuelle.
-Une discussion approfondie sur un sujet peut être répartie sur plusieurs pages conceptuelles, reliées entre elles à l'aide des macros [Next](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) et [Previous](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs).
+Une discussion approfondie sur un sujet peut être répartie sur plusieurs pages conceptuelles, reliées entre elles à l'aide des macros [Next <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) et [Previous <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs).
 
 #### Exemples
 
@@ -273,7 +273,7 @@ La liste des sous-pages peut être générée automatiquement à l'aide du modè
 
 ### Pages « Apprendre le développement web »
 
-La section [Apprendre le développement web](/fr/docs/Learn_web_development) de MDN s'adresse spécifiquement aux personnes qui apprennent les bases du développement web, et nécessite donc une approche différente du reste du contenu MDN. Vous trouverez plus de conseils dans [Règles de rédaction pour Apprendre le développement web](/fr/docs/MDN/Writing_guidelines/Learning_content).
+La section [Apprendre le développement web](/fr/docs/Learn_web_development) de MDN s'adresse spécifiquement aux personnes qui apprennent les bases du développement web, et nécessite donc une approche différente du reste du contenu MDN. Vous pouvez trouver plus de conseils dans [Règles de rédaction pour Apprendre le développement web](/fr/docs/MDN/Writing_guidelines/Learning_content).
 
 Il n'existe que quelques types de pages dans «&nbsp;Apprendre le développement web&nbsp;»&nbsp;:
 

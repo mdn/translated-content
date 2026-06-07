@@ -1,8 +1,9 @@
 ---
-title: rel="dns-prefetch"
+title: Valeur d'attribut HTML `rel="dns-prefetch"`
+short-title: dns-prefetch
 slug: Web/HTML/Reference/Attributes/rel/dns-prefetch
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Le mot-clé **`dns-prefetch`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément {{HTMLElement("link")}} indique aux navigateurs que l'utilisateur·ice est susceptible d'avoir besoin de ressources provenant de l'origine de la ressource cible, et que le navigateur peut donc améliorer l'expérience en effectuant de manière proactive la résolution DNS pour cette origine.
