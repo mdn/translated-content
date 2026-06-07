@@ -1,5 +1,5 @@
 ---
-title: "`box-ordinal-group` CSS プロパティ"
+title: CSS `box-ordinal-group` プロパティ
 short-title: box-ordinal-group
 slug: Web/CSS/Reference/Properties/box-ordinal-group
 l10n:
