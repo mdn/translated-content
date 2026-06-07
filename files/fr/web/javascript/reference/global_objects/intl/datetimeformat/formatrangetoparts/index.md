@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode **`formatRangeToParts()`** des instances de {{JSxRef("Intl.DateTimeFormat")}} retourne un tableau d'objets représentant chaque partie de la chaîne de caractères formatée qui serait retournée par {{JSxRef("Intl/DatetimeFormat/formatRange", "formatRange()")}}. Elle est utile pour construire des chaînes de caractères personnalisées à partir des jetons spécifiques à la locale.
+La méthode **`formatRangeToParts()`** des instances de {{JSxRef("Intl.DateTimeFormat")}} retourne un tableau d'objets représentant chaque partie de la chaîne de caractères formatée qui serait retournée par {{JSxRef("Intl/DateTimeFormat/formatRange", "formatRange()")}}. Elle est utile pour construire des chaînes de caractères personnalisées à partir des jetons spécifiques à la locale.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.DateTimeFormat.prototype.formatRangeToParts()", "taller")}}
 

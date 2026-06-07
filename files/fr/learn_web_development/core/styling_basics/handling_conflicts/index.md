@@ -91,7 +91,7 @@ CSS fournit 5 valeurs spéciales et universelles pour les propriétés afin de c
   - : Applique la [valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale) de la propriété sur l'élément ciblé.
 - [`revert`](/fr/docs/Web/CSS/Reference/Values/revert)
   - : Réinitialise la valeur de la propriété de l'élément ciblé avec la mise en forme par défaut du navigateur. Cette valeur agit comme [`unset`](/fr/docs/Web/CSS/Reference/Values/unset) dans la plupart des cas.
-- [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
+- [`revert-layer`](/fr/docs/Web/CSS/Reference/Values/revert-layer)
   - : Réinitialise la valeur de la propriété de l'élément ciblé avec celle établie dans une [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) précédente.
 - [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
   - : Réinitialise la propriété avec sa valeur naturelle. Autrement dit, si la propriété est naturellement héritée, ce mot-clé sera synonyme de `inherit`, sinon, il sera synonyme de `initial`.

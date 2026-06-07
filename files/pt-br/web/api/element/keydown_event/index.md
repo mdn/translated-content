@@ -127,7 +127,7 @@ O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do ev
       <td>
         O número de referência Unicode da tecla; este atributo é usado somente
         pelo evento
-        <a href="/pt-BR/docs/Mozilla_event_reference/keypress"
+        <a href="/pt-BR/docs/Web/API/Element/keypress_event"
           ><code>keypress</code></a
         >. Para teclas cujo atributo <code>char</code> contém múltiplos
         caracteres, este é o valor Unicode do primeiro caractere daquele

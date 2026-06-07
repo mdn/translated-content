@@ -19,7 +19,7 @@ Avertissement
 
 Ce problème peut avoir deux origines :
 
-- Une expression a été utilisée après l'instruction {{jsxref("Instructions/return", "return")}}
+- Une expression a été utilisée après l'instruction {{jsxref("Statements/return", "return")}}
 - Une instruction `return` a été utilisée sans point virgule mais une expression suivait cette instruction.
 
 Lorsqu'une expression existe après une instruction `return` valide, un avertissement est produit pour alerter qu'une portion du code ne peut pas être atteinte et ne sera donc jamais lue et exécutée.
@@ -28,10 +28,10 @@ Pourquoi est-il préférable d'ajouter des points-virgules après les instructio
 
 Les avertissements ne seront pas affichés pour les `return` sans point-virgule si ces instructions suivent :
 
-- {{jsxref("Instructions/throw", "throw")}}
-- {{jsxref("Instructions/break", "break")}}
-- {{jsxref("Instructions/var", "var")}}
-- {{jsxref("Instructions/function", "function")}}
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Statements/function", "function")}}
 
 ## Exemples
 
@@ -70,4 +70,4 @@ function f() {
 
 ## Voir aussi
 
-- {{jsxref("Instructions/return", "L'ajout automatique de point-virgule", "#Ajout_automatique_de_point-virgule", 1)}}
+- {{jsxref("Statements/return", "L'ajout automatique de point-virgule", "#Ajout_automatique_de_point-virgule", 1)}}

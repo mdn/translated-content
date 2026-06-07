@@ -3,14 +3,14 @@ title: En-tête Attribution-Reporting-Register-Trigger
 short-title: Attribution-Reporting-Register-Trigger
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{Deprecated_Header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Attribution-Reporting-Register-Trigger`** enregistre une fonctionnalité de page comme [déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers). Cet en-tête est inclus dans la réponse à une requête contenant l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Attribution-Reporting-Register-Trigger`** enregistre une fonctionnalité de page comme [déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers). Cet en-tête est inclus dans la réponse à une requête contenant l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}.
 
-Voir l'[API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
+Voir [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
 > [!NOTE]
 > Si le site appelant n'a pas inclus l'API Attribution Reporting dans un [processus d'inscription Privacy Sandbox](/fr/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment) réussi, l'en-tête `Attribution-Reporting-Register-Trigger` est ignoré et les déclencheurs d'attribution ne sont pas enregistrés.
@@ -57,7 +57,7 @@ Attribution-Reporting-Register-Trigger: <json-string>
     - `"event_trigger_data"`
       - : Un objet représentant les données du déclencheur. Les sous-champs disponibles sont les suivants&nbsp;:
         - `"trigger_data"`
-          - : Une chaîne de caractères représentant des données qui décrivent le déclencheur, généralement utilisée pour indiquer des évènements tels que «&nbsp;utilisateur·ice a ajouté un article au panier&nbsp;» ou «&nbsp;utilisateur·ice s'est inscrit·e à la liste de diffusion&nbsp;». Cette valeur sera incluse dans le rapport de niveau évènement généré, le cas échéant, bien qu'elle puisse être modifiée selon le champ [`"trigger_data_matching"`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) de la source attribuée.
+          - : Une chaîne de caractères représentant des données qui décrivent le déclencheur, généralement utilisée pour indiquer des évènements tels que «&nbsp;utilisateur·ice a ajouté un article au panier&nbsp;» ou «&nbsp;utilisateur·ice s'est inscrit·e à la liste de diffusion&nbsp;». Cette valeur est incluse dans le rapport de niveau évènement généré, le cas échéant, bien qu'elle puisse être modifiée selon le champ [`"trigger_data_matching"`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) de la source attribuée.
 
             > [!NOTE]
             > Les valeurs utilisées pour représenter chaque évènement, et le nombre d'éléments dans le tableau, sont totalement arbitraires et définis par vous en tant que développeur·euse. Le tableau peut contenir des valeurs non utilisées, mais des valeurs doivent être présentes pour être attribuées à la source par le navigateur lorsqu'un déclencheur est enregistré.

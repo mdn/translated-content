@@ -161,7 +161,7 @@ Les classes de caractères permettent de distinguer différents ensembles de car
         Correspond au caractère NULL (U+0000). Il ne doit pas être suivi d'un
         autre chiffre car <code>\0&#x3C;chiffres></code> est une
         <a
-          href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_caractères_d&#x27;échappement"
+          href="/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_caractères_déchappement"
           >séquence d'échappement</a
         >
         pour les nombres en notation octale (si besoin d'utiliser un chiffre

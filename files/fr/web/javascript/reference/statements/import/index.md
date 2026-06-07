@@ -200,7 +200,7 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## Voir aussi
 
-- {{jsxref("Instructions/export", "export")}}
+- {{jsxref("Statements/export", "export")}}
 - [`import.meta`](/fr/docs/Web/JavaScript/Reference/Operators/import.meta)
 - Limin Zhu, Brian Terlson et l'équipe Microsoft Edge : [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
 - [Jason Orendorff : ES6 en détails : les modules](https://tech.mozfr.org/post/2015/08/21/ES6-en-details-%3A-les-modules)

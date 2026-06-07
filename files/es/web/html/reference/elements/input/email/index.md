@@ -39,7 +39,7 @@ En los navegadores que no sopartan el tipo `email`, la entrada `email` se degrad
     <tr>
       <td><strong><a href="#value">Valor</a></strong></td>
       <td>
-        Un {{domxref("DOMString")}} representando una dirreción de correo o
+        Un {{jsxref("String")}} representando una dirreción de correo o
         vacío
       </td>
     </tr>
@@ -85,7 +85,7 @@ En los navegadores que no sopartan el tipo `email`, la entrada `email` se degrad
 
 ## Valor
 
-El atributo [`value`](/es/docs/Web/HTML/Reference/Elements/input#value) del elemento {{HTMLElement("input")}} contiene un {{DOMxRef("DOMString")}} que se valida automáticamente conforme a la sintaxis del correo. Específicamente, hay tres posibles formatos de valor que pasarán la validación:
+El atributo [`value`](/es/docs/Web/HTML/Reference/Elements/input#value) del elemento {{HTMLElement("input")}} contiene un {{jsxref("String")}} que se valida automáticamente conforme a la sintaxis del correo. Específicamente, hay tres posibles formatos de valor que pasarán la validación:
 
 1. Una cadena vacía ("") — indica que el usuario no ingresó un valor o que el valor fue eliminado.
 2. Una única dirección de correo debidamente formada. Esto no necesariamente significa que exista la dirección de correo electrónico, pero al menos tiene el formato correcto. En términos simples, esto significa `nombreusuario@dominio` o `nombreusuario@dominio.tld`. Hay más que eso, por supuesto; consulta [Validación](#validación) para obtener una {{Glossary("regular expression")}} que coincida con el algoritmo de validación de la dirección de correo.

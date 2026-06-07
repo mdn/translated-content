@@ -16,8 +16,8 @@ original_slug: Web/XSLT
         <ol>
           <li><a href="/fr/docs/Web/XSLT/Common_errors">Erreurs fréquentes avec XSLT</a></li>
           <li><a href="/fr/docs/Web/XML/XSLT/Guides/PI_Parameters">Paramètres PI</a></li>
-          <li><a href="/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko">L'interface XSLT/JavaScript de Gecko</a></li>
-          <li><a href="/fr/docs/Web/XSLT/Transforming_XML_with_XSLT">Transformer du XML avec XSLT</a></li>
+          <li><a href="/fr/docs/Web/API/XSLTProcessor">L'interface XSLT/JavaScript de Gecko</a></li>
+          <li><a href="/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT">Transformer du XML avec XSLT</a></li>
           <li><a href="/fr/docs/Web/API/XSLTProcessor">Utiliser l'interface JavaScript Mozilla pour les transformations XSL</a></li>
         </ol>
       </details>

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-**`size`** は {{jsxref("Map")}} インスタンスのアクセサープロパティで、このマップにある要素の数を返します。
+**`size`** は {{jsxref("Map")}} インスタンスのアクセサープロパティで、この対応表にある要素の数を返します。
 
 {{InteractiveExample("JavaScript デモ: Map.prototype.size")}}
 

@@ -1,22 +1,22 @@
 ---
-title: stroke
+title: CSS `stroke` プロパティ
+short-title: stroke
 slug: Web/CSS/Reference/Properties/stroke
-original_slug: Web/CSS/stroke
 l10n:
-  sourceCommit: 4ec412012be0b083ebcae4a56b425f49901143f2
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`stroke`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のストロークを描画するために使用される色または SVG ペイントサーバーを定義します。したがって、`stroke` はストロークを付与できる要素（{{SVGElement('rect')}} や {{SVGElement('ellipse')}} など）にのみ効果があります。完全なリストについては、SVG の {{SVGAttr('stroke')}} 属性のページを参照してください。宣言された場合、CSS 値は SVG の要素の {{SVGAttr('stroke')}} 属性の値を上書きします。
 
 > [!NOTE]
-> 2017 年 4 月 4 日付の [CSS Fill and Stroke Module Level 3](https://drafts.fxtf.org/fill-stroke-3/#stroke-shorthand) 仕様草案によれば、`stroke` プロパティは他の複数のストロークプロパティの一括指定です。実際には、2024 年 8 月現在、ブラウザーは `stroke` プロパティを介した幅やダッシュパターンなどの他のストローク関連値の設定に対応しておらず、代わりに SVG の {{SVGAttr("stroke")}} 属性と直接的に同等のものとして扱っています。
+> 2017 年 4 月 4 日付の [CSS Fill and Stroke Module Level 3](https://drafts.csswg.org/fill-stroke-3/#stroke-shorthand) 仕様草案によれば、`stroke` プロパティは他の複数のストロークプロパティの一括指定です。実際には、2024 年 8 月現在、ブラウザーは `stroke` プロパティを介した幅やダッシュパターンなどの他のストローク関連値の設定に対応しておらず、代わりに SVG の {{SVGAttr("stroke")}} 属性と直接的に同等のものとして扱っています。
 
 ## 構文
 
 ```css
 /* 様々な色の値 */
 stroke: rgb(153 51 102 / 1);
-stroke: color-mix(in lch, var(--primaryColor) 35%, gray 15%));
+stroke: color-mix(in lch, var(--primaryColor) 35%, gray 15%);
 stroke: dodgerblue;
 stroke: currentColor;
 stroke: transparent;
@@ -36,10 +36,10 @@ stroke: unset;
   - : ストロークの描画を、有効な CSS 色値で設定します。
 
 - `<image>`
-  - : ストロークの描画を、SVG で[ペイントサーバー](https://svgwg.org/svg2-draft/pservers.html)と呼ばれるもの（この文脈では SVG グラデーションまたはパターン）で設定します。CSS グラデーションは `stroke` プロパティでは使用できません。
+  - : ストロークの描画を、SVG で[ペイントサーバー](https://w3c.github.io/svgwg/svg2-draft/pservers.html)と呼ばれるもの（この文脈では SVG グラデーションまたはパターン）で設定します。CSS グラデーションは `stroke` プロパティでは使用できません。
 
 - `context-stroke`
-  - : 要素がストローク定義をその[コンテキスト要素](https://svgwg.org/svg2-draft/painting.html#TermContextElement)から「継承」するようにします。有効なコンテキスト要素が存在しない場合、この値はストロークに描画が適用されなくなります。
+  - : 要素がストローク定義をその[コンテキスト要素](https://w3c.github.io/svgwg/svg2-draft/painting.html#TermContextElement)から「継承」するようにします。有効なコンテキスト要素が存在しない場合、この値はストロークに描画が適用されなくなります。
 
 ## 公式定義
 

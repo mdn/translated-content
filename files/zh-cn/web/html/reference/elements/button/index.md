@@ -8,12 +8,12 @@ slug: Web/HTML/Reference/Elements/button
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Interactive_content">Interactive content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Form_listed">listed</a>, <a href="/zh-CN/docs/HTML/Content_categories#Form_labelable">labelable</a>, and <a href="/zh-CN/docs/HTML/Content_categories#Form_submittable">submittable</a> <a href="/zh-CN/docs/HTML/Content_categories#Form-associated_">form-associated</a> element, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Interactive_content">Interactive content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Form_listed">listed</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Form_labelable">labelable</a>, and <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Form_submittable">submittable</a> <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Form-associated_">form-associated</a> element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -21,7 +21,7 @@ slug: Web/HTML/Reference/Elements/button
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>任意可容纳 <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a> 的元素。</td>
+   <td>任意可容纳 <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a> 的元素。</td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>

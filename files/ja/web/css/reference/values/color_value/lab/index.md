@@ -1,8 +1,9 @@
 ---
-title: lab()
+title: CSS `lab()` 関数
+short-title: lab()
 slug: Web/CSS/Reference/Values/color_value/lab
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`lab()`** 関数記法は、指定された色を CIE L\*a\*b\* {{glossary("color space", "色空間")}}で表現します。

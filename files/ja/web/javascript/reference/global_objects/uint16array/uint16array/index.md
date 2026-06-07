@@ -32,7 +32,7 @@ new Uint16Array(buffer [, byteOffset [, length]]);
 
 **`Uint16Array()`** は型付き配列のコンストラクターで、プラットフォームのバイト順による 16 ビット符号なし整数値の配列を生成します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0` で初期化されます。生成されると、配列の中の要素はオブジェクトのメソッドを使用するか、配列の標準的な添字の構文を使用するか (すなわち、ブラケット構文を使用するか) して参照することができます。
 
-ECMAScript 2015 から、 `Uint16Array` コンストラクターは構築に {{jsxref("Operators/new", "new")}} 演算子が必要になりました。 `Uint16Array` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
+ECMAScript 2015 から、 `Uint16Array` コンストラクターは構築に {{jsxref("new")}} 演算子が必要になりました。 `Uint16Array` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
 
 ```js example-bad
 var dv = Uint16Array([1, 2, 3]);
@@ -87,6 +87,6 @@ var uint16 = new Uint16Array(iterable);
 
 ## 関連情報
 
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

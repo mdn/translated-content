@@ -12,10 +12,10 @@ Cet article explique comment configurer un serveur de test local simple sur votr
       <th scope="row">Prérequis :</th>
       <td>
         Vous devez au préalable savoir
-        <a href="/fr/docs/Learn/How_the_Internet_works"
+        <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >comment Internet fonctionne</a
         > et
-        <a href="/fr/docs/Learn/What_is_a_Web_server"
+        <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
           >ce qu'est un serveur Web</a
         >.
       </td>

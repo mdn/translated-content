@@ -1,6 +1,8 @@
 ---
 title: Quoi de neuf dans Deer Park Alpha
 slug: Mozilla/Firefox/Releases/1.5/What_s_new_in_1.5_alpha
+l10n:
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
 Cette page est basée en grande partie sur [https://www.squarefree.com/burningedg...eases/](https://www.squarefree.com/burningedge/releases/) (merci Jesse).
@@ -110,7 +112,7 @@ Cette page est basée en grande partie sur [https://www.squarefree.com/burninged
   - : Ces [nouveaux liens <sup>(angl.)</sup>](https://forums.mozillazine.org/viewtopic.php?t=263028) facilitent la création de fenêtres de préférences pour les extensions. Les nouvelles fenêtres de préférences prennent en charge le comportement d'application instantanée, activé par défaut sur Mac et Linux.
 
 - API pour la gestion de nouveaux commutateurs en ligne de commande
-  - : Une API a été introduite pour que les extensions puissent facilement gérer des indicateurs de ligne de commande complexes. Cette API sera stable et figée pour la version 1.1. Voir les interfaces `nsICommandLine` et `nsICommandLineHandler`.
+  - : Une API a été introduite pour que les extensions puissent facilement gérer des indicateurs de ligne de commande complexes. Cette API est stable et figée pour la version 1.1. Voir les interfaces `nsICommandLine` et `nsICommandLineHandler`.
 
 - Prise en charge de XTF
   - : Le eXtensible Tag Framework permet d'ajouter la prise en charge de nouveaux espaces de noms à Mozilla à l'aide de composants XPCOM (écrits en JavaScript ou C++). Voir [Page d'accueil XTF <sup>(angl.)</sup>](https://web.archive.org/web/20070527160710/http://www.croczilla.com/xtf).

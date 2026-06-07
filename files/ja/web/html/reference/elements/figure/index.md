@@ -1,29 +1,27 @@
 ---
-title: "<figure>: キャプションが付けられる図要素"
+title: HTML `<figure>` キャプションが付けられる図要素
+short-title: <figure>
 slug: Web/HTML/Reference/Elements/figure
-original_slug: Web/HTML/Element/figure
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<figure>`** は [HTML](/ja/docs/Web/HTML) の要素で、図表などの自己完結型のコンテンツを表し、任意で {{HTMLElement("figcaption")}} 要素を使用して表されるキャプションを付けることができます。図、すなわちキャプションとその中身は一単位として参照されます。
 
 {{InteractiveExample("HTML デモ: &lt;figure&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <figure>
   <img
     src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
+    alt="夜明けの象" />
+  <figcaption>夜明けの象</figcaption>
 </figure>
 ```
 
 ```css interactive-example
 figure {
-  border: thin #c0c0c0 solid;
+  border: thin silver solid;
   display: flex;
   flex-flow: column;
   padding: 5px;
@@ -37,8 +35,8 @@ img {
 }
 
 figcaption {
-  background-color: #222;
-  color: #fff;
+  background-color: #222222;
+  color: white;
   font: italic smaller sans-serif;
   padding: 3px;
   text-align: center;
@@ -53,6 +51,7 @@ figcaption {
 
 - ふつう `<figure>` は画像、イラスト、グラフ、コードの断片など、文書の本文の流れから参照されるものの、本文の流れに影響を与えることなく、文書のほかの部分や付録に移動することが可能なものに用います。
 - キャプションは `<figure>` 要素の中に（最初または最後の子要素として）{{HTMLElement("figcaption")}} 要素を挿入することで表すことができます。図の中で最初に見つかった最初の `<figcaption>` 要素が図のキャプションとして表示されます。
+- `<figcaption>` は親である `<figure>` の{{glossary("accessible name", "アクセシブル名")}}を提供します。
 
 ## 例
 
@@ -82,13 +81,12 @@ figcaption {
   <figcaption><code>navigator</code> を用いてブラウザーの詳細を取得</figcaption>
   <pre>
 function NavigatorExample() {
-  var txt;
-  txt = "Browser CodeName: " + navigator.appCodeName + "; ";
-  txt+= "Browser Name: " + navigator.appName + "; ";
-  txt+= "Browser Version: " + navigator.appVersion  + "; ";
-  txt+= "Cookies Enabled: " + navigator.cookieEnabled  + "; ";
-  txt+= "Platform: " + navigator.platform  + "; ";
-  txt+= "User-agent header: " + navigator.userAgent  + "; ";
+  let txt = `Browser CodeName: ${navigator.appCodeName};\n`;
+  txt += `Browser Name: ${navigator.appName};\n`;
+  txt += `Browser Version: ${navigator.appVersion};\n`;
+  txt += `Cookies Enabled: ${navigator.cookieEnabled};\n`;
+  txt += `Platform: ${navigator.platform};\n`;
+  txt += `User-agent header: ${navigator.userAgent};`;
   console.log("NavigatorExample", txt);
 }
   </pre>
@@ -118,11 +116,13 @@ function NavigatorExample() {
 
 ```html
 <figure>
-  <p style="white-space:pre">
-    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
-    green, Or, like a nymph, with long dishevelled hair, Dance on the sands, and
-    yet no footing seen: Love is a spirit all compact of fire, Not gross to
-    sink, but light, and will aspire.
+  <p>
+    Bid me discourse, I will enchant thine ear,<br />
+    Or like a fairy trip upon the green,<br />
+    Or, like a nymph, with long dishevelled hair,<br />
+    Dance on the sands, and yet no footing seen:<br />
+    Love is a spirit all compact of fire,<br />
+    Not gross to sink, but light, and will aspire.<br />
   </p>
   <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
 </figure>
@@ -187,8 +187,8 @@ function NavigatorExample() {
         子孫に
         <a href="/ja/docs/Web/HTML/Reference/Elements/figcaption">figcaption</a>
         がない場合:
-        <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a
-        >、それ以外の場合は許可されているロールなし
+        <a href="https://w3c.github.io/html-aria/#dfn-any-role">any</a>、
+        それ以外の場合は許可されているロールなし
       </td>
     </tr>
     <tr>

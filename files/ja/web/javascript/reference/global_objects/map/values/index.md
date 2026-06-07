@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-**`values()`** は {{jsxref("Map")}} インスタンスのメソッドで、この `Map` オブジェクトに挿入された要素の値を挿入順に列挙する新しい[マップイテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
+**`values()`** は {{jsxref("Map")}} インスタンスのメソッドで、この対応表 (`Map`) オブジェクトに挿入された要素の値を挿入順に列挙する、新しい[対応表イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
 {{InteractiveExample("JavaScript デモ: Map.prototype.values")}}
 

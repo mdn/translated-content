@@ -8,7 +8,7 @@ l10n:
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/es/docs/Web/Accessibility/ARIA/Annotations">Anotaciones ARIA</a></li>
+    <li><a href="/es/docs/Web/Accessibility/ARIA">Anotaciones ARIA</a></li>
     <li><a href="/es/docs/Web/Accessibility/ARIA/ARIA_Guides">Guías ARIA</a></li>
     <li><a href="/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">Regiones en vivo de ARIA</a></li>
     <li><a href="/es/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">Guía de implementadores del lector de pantalla ARIA</a></li>

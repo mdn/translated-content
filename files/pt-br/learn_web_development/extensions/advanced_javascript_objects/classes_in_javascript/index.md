@@ -20,7 +20,7 @@ Com a maior parte dos detalhes principais do OOJS agora explicados, este artigo 
         <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
           >Construindo blocos</a
         >) e OOJS básico (veja
-        <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting/Object_basics"
           >Introdução a objetos</a
         >).
       </td>

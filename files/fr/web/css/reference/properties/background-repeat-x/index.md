@@ -3,7 +3,7 @@ title: Propriété CSS `background-repeat-x`
 short-title: background-repeat-x
 slug: Web/CSS/Reference/Properties/background-repeat-x
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 {{SeeCompatTable}}
@@ -84,11 +84,11 @@ La propriété `background-repeat-x` accepte une liste de mots-clés [`<repetiti
 
 La valeur par défaut est `repeat`. Avec cette valeur, l'image de fond se répète horizontalement, couvrant toute la largeur de la zone de peinture de l'image de fond, les images de bord étant découpées à la taille de l'élément. Que les bords gauche, droit ou les deux soient découpés dépend de la valeur de la propriété {{CSSxRef("background-position")}} correspondante. Le nombre de fois que les images sont répétées et la quantité de découpe des images sur les bords dépendent de la taille de la zone de peinture de l'image de fond et de la valeur de largeur de la propriété {{CSSxRef("background-size")}} correspondante.
 
-Les images répétées peuvent être espacées uniformément, garantissant que les images répétées ne sont pas découpées horizontalement. Avec la valeur `space`, si la largeur de la zone de peinture de l'image de fond n'est pas un multiple de la largeur de l'image ou n'a pas autrement une taille qui est un multiple de la taille de l'image de fond dans la direction de la largeur, il y aura des zones non couvertes par l'image de fond.
+Les images répétées peuvent être espacées uniformément, garantissant que les images répétées ne sont pas découpées horizontalement. Avec la valeur `space`, si la largeur de la zone de peinture de l'image de fond n'est pas un multiple de la largeur de l'image ou n'a pas autrement une taille qui est un multiple de la taille de l'image de fond dans la direction de la largeur, il y a des zones non couvertes par l'image de fond.
 
 D'une autre manière, l'image de fond répétée peut être étirée pour couvrir toute la largeur de la zone de fond sans être découpée. Avec `round`, l'image répétée est étirée pour remplir tout l'espace disponible jusqu'à ce qu'il y ait de la place pour ajouter une image répétée supplémentaire.
 
-Par exemple, étant donné une image de fond de `100px` par `100px` et une zone de peinture de fond de `1099px` de largeur, l'image sera redimensionnée à `109.9px` de largeur et répétée 10 fois dans la direction horizontale. Ça modifie le {{Glossary("aspect ratio", "rapport d'aspect")}} de l'image et la déforme. Si la largeur de la zone de peinture augmente de `1px` pour atteindre `1100px`, une 11ème image pourra s'afficher horizontalement, chaque image étant peinte à `100px` de largeur, et n'étant plus déformée horizontalement.
+Par exemple, étant donné une image de fond de `100px` par `100px` et une zone de peinture de fond de `1099px` de largeur, l'image est redimensionnée à `109.9px` de largeur et répétée 10 fois dans la direction horizontale. Ça modifie le {{Glossary("aspect ratio", "rapport d'aspect")}} de l'image et la déforme. Si la largeur de la zone de peinture augmente de `1px` pour atteindre `1100px`, une 11ème image peut s'afficher horizontalement, chaque image étant peinte à `100px` de largeur, et n'étant plus déformée horizontalement.
 
 ## Définition formelle
 
@@ -164,7 +164,7 @@ div {
       content: "Votre navigateur ne prend pas en charge la propriété `background-repeat-x`.";
       background-color: wheat;
       display: block;
-      padding: 1em;
+      padding: 1rem 0;
       text-align: center;
     }
   }

@@ -15,7 +15,7 @@ Notification.body;
 
 ### Valeur
 
-Une {{domxref("DOMString")}} contenant le corps de la notification.
+Une {{jsxref("String")}} contenant le corps de la notification.
 
 ## Spécifications
 

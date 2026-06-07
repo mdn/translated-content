@@ -3,7 +3,7 @@ title: "Élément HTML `<tbody>` : l'élément de corps d'un tableau"
 short-title: <tbody>
 slug: Web/HTML/Reference/Elements/tbody
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<tbody>`** permet de regrouper une ou plusieurs lignes du tableau (éléments {{HTMLElement("tr")}}), indiquant qu'elles constituent le corps (principal) des données d'un tableau.
@@ -84,7 +84,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `align` {{Deprecated_Inline}}
   - : Définit l'alignement horizontal de chaque cellule du corps. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `left`, `center`, `right`, `justify` et `char`. Lorsque cela est pris en charge, la valeur `char` aligne le contenu textuel sur le caractère défini dans l'attribut [`char`](#char) et sur le décalage défini par l'attribut [`charoff`](#charoff). Utilisez la propriété CSS {{CSSxRef("text-align")}} à la place, car cet attribut est déprécié.
 
-- `bgcolor` {{Deprecated_Inline}}
+- `bgcolor` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la couleur d'arrière-plan de chaque cellule du corps. La valeur est une couleur HTML&nbsp;; soit un [code RGB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/Reference/Values/hex-color) précédé d'un `#`, soit un [mot-clé de couleur](/fr/docs/Web/CSS/Reference/Values/named-color). Les autres valeurs CSS {{CSSxRef("&lt;color&gt;")}} ne sont pas prises en charge. Utilisez la propriété CSS {{CSSxRef("background-color")}} à la place, car cet attribut est déprécié.
 
 - `char` {{Deprecated_Inline}}
@@ -99,8 +99,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 ## Notes d'utilisation
 
 - Le `<tbody>` est placé après tout élément {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}} et {{HTMLElement("thead")}}.
-- Si des éléments {{HTMLElement("tr")}} sont définis comme enfants directs de {{HTMLElement("table")}} (voir «&nbsp;omission de balise&nbsp;» dans le [résumé technique](#résumé_technique) pour une description des cas où cela est valide), alors le balisage généré par le navigateur inclura un élément `<tbody>` qui les encapsule. En conséquence, les sélecteurs CSS comme `table > tr` ne sélectionneront pas ces éléments. Voir aussi l'exemple [Sans corps explicite](#sans_définir_de_corps).
-- Il est permis d'utiliser plusieurs `<tbody>` par tableau tant qu'ils sont tous consécutifs. Cela permet de diviser les lignes (éléments {{HTMLElement("tr")}}) des grands tableaux en sections, chacune pouvant être mise en forme séparément si besoin. Si les éléments ne sont pas balisés comme consécutifs, les navigateurs corrigeront cette erreur d'auteur, en s'assurant que tout élément {{HTMLElement("thead")}} et {{HTMLElement("tfoot")}} soit respectivement rendu en premier et en dernier dans le tableau.
+- Si des éléments {{HTMLElement("tr")}} sont définis comme enfants directs de {{HTMLElement("table")}} (voir «&nbsp;omission de balise&nbsp;» dans le [résumé technique](#résumé_technique) pour une description des cas où cela est valide), alors le balisage généré par le navigateur inclut un élément `<tbody>` qui les encapsule. En conséquence, les sélecteurs CSS comme `table > tr` ne sélectionnent pas ces éléments. Voir aussi l'exemple [Sans corps explicite](#sans_définir_de_corps).
+- Il est permis d'utiliser plusieurs `<tbody>` par tableau tant qu'ils sont tous consécutifs. Cela permet de diviser les lignes (éléments {{HTMLElement("tr")}}) des grands tableaux en sections, chacune pouvant être mise en forme séparément si besoin. Si les éléments ne sont pas balisés comme consécutifs, les navigateurs corrigent cette erreur d'auteur·ice, en s'assurant que tout élément {{HTMLElement("thead")}} et {{HTMLElement("tfoot")}} soit respectivement rendu en premier et en dernier dans le tableau.
 - Avec les éléments associés {{HTMLElement("thead")}} et {{HTMLElement("tfoot")}}, l'élément `<tbody>` fournit des informations {{Glossary("semantics", "sémantiques")}} utiles et peut être utilisé lors du rendu à l'écran ou à l'impression. Définir de tels groupes de contenu de tableau fournit aussi des informations contextuelles précieuses pour les technologies d'assistance, y compris les lecteurs d'écran et les moteurs de recherche.
 - Lors de l'impression d'un document, dans le cas d'un tableau multipage, les éléments {{HTMLElement("thead")}} et {{HTMLElement("tfoot")}} définissent généralement des informations qui restent identiques — ou du moins très similaires — sur chaque page, tandis que le contenu de l'élément `<tbody>` diffère généralement d'une page à l'autre.
 - Lorsqu'un tableau est présenté dans un contexte d'écran (comme une fenêtre) qui n'est pas assez grand pour afficher le tableau en entier, le {{Glossary("user agent", "agent utilisateur")}} peut permettre à l'utilisateur·ice de faire défiler séparément le contenu des blocs {{HTMLElement("thead")}}, `<tbody>`, {{HTMLElement("tfoot")}} et {{HTMLElement("caption")}} pour un même parent {{HTMLElement("table")}}.
@@ -182,7 +182,7 @@ Cet exemple étend et améliore le tableau de base du [précédent exemple](#san
 
 Nous introduisons une tête de tableau (élément {{HTMLElement("thead")}}) et utilisons explicitement un élément `<tbody>` pour structurer le tableau en sections {{Glossary("semantics", "sémantiques")}}. La tête de tableau contient les en-têtes de colonnes (éléments {{HTMLElement("th")}}). L'élément `<tbody>` représente la section du corps du tableau, qui contient plusieurs lignes (éléments {{HTMLElement("tr")}}) avec les données principales du tableau, c'est-à-dire les données de chaque étudiant·e.
 
-L'utilisation de tels groupes de contenu de tableau et d'une structuration {{Glossary("semantics", "sémantique")}} n'est pas seulement utile pour la présentation visuelle (via la mise en forme CSS) et l'information contextuelle pour les technologies d'assistance&nbsp;; de plus, l'utilisation explicite de l'élément `<tbody>` aide le navigateur à créer la structure de tableau souhaitée, évitant ainsi des résultats indésirables.
+L'utilisation de tels groupes de contenu de tableau et d'une structuration {{Glossary("semantics", "sémantique")}} n'est pas seulement utile pour la présentation visuelle (avec la mise en forme CSS) et l'information contextuelle pour les technologies d'assistance&nbsp;; de plus, l'utilisation explicite de l'élément `<tbody>` aide le navigateur à créer la structure de tableau souhaitée, évitant ainsi des résultats indésirables.
 
 ```html
 <table>

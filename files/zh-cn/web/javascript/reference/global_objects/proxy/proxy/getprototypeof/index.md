@@ -60,7 +60,7 @@ const p = new Proxy(obj, {
 - {{jsxref("Reflect.getPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 
 如果遇到了下面两种情况，JS 引擎会抛出 {{jsxref("TypeError")}} 异常：
 
@@ -135,6 +135,6 @@ Object.getPrototypeOf(p); // TypeError: expected same prototype value
 ## 参见
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Reflect.getPrototypeOf()")}}

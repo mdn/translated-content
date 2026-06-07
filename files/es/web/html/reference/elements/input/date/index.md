@@ -45,7 +45,7 @@ La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad
     <tr>
       <td><strong><a href="#value">Valor</a></strong></td>
       <td>
-        Un {{domxref("DOMString")}} vacío o representando una fecha en el formato
+        Un {{jsxref("String")}} vacío o representando una fecha en el formato
         AAAA-MM-DD
       </td>
     </tr>
@@ -85,7 +85,7 @@ La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad
 
 ## Valor
 
-Una {{domxref("DOMString")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en [Formato válido de una fecha en formato de texto](/es/docs/Web/HTML/Date_and_time_formats#formato_válido_de_una_fecha_en_formato_de_texto).
+Una {{jsxref("String")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en [Formato válido de una fecha en formato de texto](/es/docs/Web/HTML/Date_and_time_formats#formato_válido_de_una_fecha_en_formato_de_texto).
 
 Puedes establecer un valor por defecto para la entrada introduciendo una fecha en el atributo [`value`](/es/docs/Web/HTML/Reference/Elements/input#value) de la siguiente forma:
 

@@ -1,26 +1,60 @@
 ---
 title: パンくずナビゲーション
 slug: Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation
-original_slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 l10n:
-  sourceCommit: 14924a9cc3dddbce37565d152cbb30134d314308
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-パンくず (Breadcrumb) ナビゲーションは、来た道をたどって開始ページまで戻ることができる{{glossary("breadcrumb", "パンくずリスト")}}を提供することによって、ユーザーがウェブサイト内の自分の位置を理解するのに役立ちます。
+パンくず (Breadcrumb) ナビゲーションは、来た道をたどって開始ページまで戻ることができる{{glossary("breadcrumb", "パンくずリスト")}}を提供することによって、ユーザーがウェブサイト内の自分の位置を理解するのに役立ちます。アイテムは通常、インラインで表示され、それぞれのアイテムの間には区切り文字がついて、個々のページ間の階層関係を示します。
 
 ![リンクを区切り文字を付けてインラインで表示](breadcrumb-navigation.png)
 
 ## 要件
 
-インラインリンクを表示することにより、サイトの階層を表示します。項目の間には区切り文字があり、個々のページ間の階層を示し、現在のページが最後に表示されます。
+各ページ間の階層関係を示すため、アイテム間に区切り文字をつけてインラインリンクを表示させ、現在のページが最後に現れるように、サイトの階層構造を表示します。
 
 ## レシピ
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
+以下のコードブロックの "Play" をクリックすると、この例を MDN Playground で開きます。
 
-> [!CALLOUT]
->
-> [この例をダウンロードする](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
+```html live-sample___breadcrumb-example
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Category</a></li>
+    <li><a href="#">Sub Category</a></li>
+    <li><a href="#">Type</a></li>
+    <li><span aria-current="page">Product</span></li>
+  </ol>
+</nav>
+```
+
+```css live-sample___breadcrumb-example
+body {
+  font: 1.2em sans-serif;
+}
+
+.breadcrumb {
+  padding: 0 0.5rem;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: end;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 0.25rem;
+  content: "→";
+}
+```
+
+{{EmbedLiveSample("breadcrumb-example", "", "100px")}}
 
 > [!NOTE]
 > 上の例では、複合セレクターを使用して、最後以外のすべての `li` の前にコンテンツを挿入しています。これは、最初の要素を除くすべての `li` 要素を対象とする複合セレクターを使用しても実現できます。
@@ -33,7 +67,7 @@ l10n:
 >
 > 好きな方の解決策を使用してください。
 
-## 行った選択
+## 選択したもの
 
 このパターンは単純なフレックスレイアウトを使用してレイアウトされており、CSS の 1 行でナビゲーションがどのように行われるかを示しています。 区切り文字は CSS 生成コンテンツを使用して追加されます。 区切り文字は好きなものに変更することができます。
 
@@ -41,7 +75,11 @@ l10n:
 
 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性および [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) 属性を使用して、このナビゲーションが何であるか、そして現在のページが構造のどこにあるのかを支援技術のユーザーが理解できるようにしてください。 詳細については関連リンクを参照してください。
 
-`content` で追加した矢印 `→` は、スクリーンリーダーや点字ディスプレイにも公開されるので注意してください。
+上記の例で、CSS の {{cssxref("content")}} プロパティを通じて追加された区切り矢印 `→` は、スクリーンリーダーや点字ディスプレイなどの支援技術 (AT) に公開される点にご注意ください。より目立たない解決策として、HTML内で装飾用の {{HTMLElement("img")}} を使用し、`alt` 属性を空に設定してください。ARIA [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) を [`none`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role) または [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) に設定しても、画像が支援技術に公開されるのを同時に防ぐことができます。
+
+あるいは、[CSS 生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)を無音にするために、スラッシュ (`/`) を先頭に置き、空文字列を代替テキストとして記載することで、することもできます。例えば、`content: url("arrow.png") / "";` のようにします。
+
+AT に公開される生成された区切り文字を記載する場合は、{{cssxref("::after")}} 擬似要素セレクターを {{cssxref("::before")}} の代わりに使用して生成コンテンツを作成するようにしてください。そうすることで、区切り文字のコンテンツが HTML コンテンツの「前」ではなく「後」として公開されるようになります。
 
 ## 関連情報
 
