@@ -158,7 +158,7 @@ form.addEventListener("submit", (event) => {
     Firefox は他のブラウザーとは異なり、デフォルトでページ読み込みをまたがって `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性を使用してください。
 
 - `value`
-`value` はすべての {{HTMLElement("input")}} で共通のものの一つです。しかし、`radio` 型の入力欄では特別な目的になります。フォームが送信されるとき、現在チェックされているラジオボタンのみがサーバーに送信され、報告される値は `value` 属性の値になります。 `value` が指定されていない場合は、デフォルトで `on` という文字列になります。これは以前に[値](#value)の節で説明した通りです。
+  `value` はすべての {{HTMLElement("input")}} で共通のものの一つです。しかし、`radio` 型の入力欄では特別な目的になります。フォームが送信されるとき、現在チェックされているラジオボタンのみがサーバーに送信され、報告される値は `value` 属性の値になります。 `value` が指定されていない場合は、デフォルトで `on` という文字列になります。これは以前に[値](#value)の節で説明した通りです。
 
 - [`required`](/ja/docs/Web/HTML/Reference/Attributes/required)
   - : `required` 属性は、ほとんどの {{HTMLElement("input")}} に共通する属性です。同じ名前のラジオボタンのグループのいずれかに `required` 属性がある場合、そのグループのラジオボタンのいずれかをチェックする必要がありますが、その属性が適用されているラジオボタンをチェックする必要があるわけではありません。
