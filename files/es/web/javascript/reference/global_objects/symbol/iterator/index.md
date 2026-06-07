@@ -30,11 +30,11 @@ Siempre que un objeto necesite ser iterado (como al principio de un bucle `for..
 
 Algunos tipos incorporados tienen un comportamiento de iteración por defecto, mientras que otros tipos (como {{jsxref("Object")}}) no lo tienen. Los tipos incorporados con un método `@@iterador` son:
 
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- {{jsxref("Array/Symbol.iterator", "Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("String/Symbol.iterator", "String.prototype[@@iterator]()")}}
+- {{jsxref("Map/Symbol.iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Set/Symbol.iterator", "Set.prototype[@@iterator]()")}}
 
 Véase también [Protocolos de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols) para más información.
 
@@ -100,8 +100,8 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 
 - [Polyfill de `Symbol.iterator` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - [Protocolos de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- {{jsxref("Array/Symbol.iterator", "Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("String/Symbol.iterator", "String.prototype[@@iterator]()")}}
+- {{jsxref("Map/Symbol.iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Set/Symbol.iterator", "Set.prototype[@@iterator]()")}}

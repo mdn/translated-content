@@ -3,10 +3,10 @@ title: "Élément HTML `<template>` : l'élément de modèle de contenu"
 short-title: <template>
 slug: Web/HTML/Reference/Elements/template
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 29e6ba9d844b835a1f00346ef1a78fa5d9e7c1a8
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<template>`** sert de mécanisme pour contenir des fragments {{Glossary("HTML")}}, qui peuvent être utilisés plus tard via JavaScript ou générés immédiatement dans le DOM d'ombre.
+L'élément [HTML](/fr/docs/Web/HTML) **`<template>`** sert de mécanisme pour contenir des fragments {{Glossary("HTML")}}, qui peuvent être utilisés plus tard avec JavaScript ou générés immédiatement dans le DOM d'ombre.
 
 ## Attributs
 
@@ -39,20 +39,36 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 - `shadowrootdelegatesfocus`
   - : Définit la valeur de la propriété {{DOMxRef("ShadowRoot.delegatesFocus")}} d'un objet {{DOMxRef("ShadowRoot")}} créé avec cet élément à `true`.
-    Si cela est défini et qu'un élément non sélectionnable dans l'arbre d'ombre est sélectionné, la sélection est déléguée au premier élément sélectionnable de l'arbre.
+    Si c'est défini et qu'un élément non sélectionnable dans l'arbre d'ombre est sélectionné, la sélection est déléguée au premier élément sélectionnable de l'arbre.
     La valeur par défaut est `false`.
 
 - `shadowrootreferencetarget` {{Experimental_Inline}} {{Non-standard_Inline}}
-  - : Définit la valeur de la propriété `referenceTarget` d'un objet {{DOMxRef("ShadowRoot")}} créé avec cet élément. La valeur doit être l'identifiant d'un élément à l'intérieur du DOM d'ombre. Si défini, les références ciblant l'élément hôte depuis l'extérieur du DOM d'ombre feront que l'élément cible référencé deviendra la cible effective de la référence à l'élément hôte.
+  - : Définit la valeur de la propriété `referenceTarget` d'un objet {{DOMxRef("ShadowRoot")}} créé avec cet élément. La valeur doit être l'identifiant d'un élément à l'intérieur du DOM d'ombre. Si défini, les références ciblant l'élément hôte depuis l'extérieur du DOM d'ombre font que l'élément cible référencé devient la cible effective de la référence à l'élément hôte.
 
 - `shadowrootserializable`
   - : Définit la valeur de la propriété {{DOMxRef("ShadowRoot.serializable")}} d'un objet {{DOMxRef("ShadowRoot")}} créé avec cet élément à `true`.
     Si défini, la racine d'ombre peut être sérialisée en appelant les méthodes {{DOMxRef("Element.getHTML()")}} ou {{DOMxRef("ShadowRoot.getHTML()")}} avec le paramètre `options.serializableShadowRoots` défini à `true`.
     La valeur par défaut est `false`.
 
+- `shadowrootslotassignment` {{Experimental_Inline}}
+  - : Définit la propriété [`slotAssignment`](/fr/docs/Web/API/ShadowRoot/slotAssignment) d'un objet [`ShadowRoot`](/fr/docs/Web/API/ShadowRoot) créé avec cet élément.
+    Il s'agit de l'équivalent déclaratif de l'option [`slotAssignment`](/fr/docs/Web/API/Element/attachShadow#slotassignment) de la méthode {{DOMxRef("Element.attachShadow()")}}.
+    - `named`
+      - : Les éléments sont automatiquement assignés aux éléments {{HTMLElement("slot")}} à l'intérieur de cette racine d'ombre.
+        C'est la valeur par défaut.
+
+        Les éléments avec l'attribut [`slot`](/fr/docs/Web/API/Element/slot) sont assignés au premier {{HTMLElement("slot")}} dans le template qui a l'attribut `name` correspondant.
+        Si plusieurs éléments définissent le même nom de slot, ils sont tous ajoutés au premier slot dans le template qui a ce nom, et rendus dans l'ordre dans lequel ils sont déclarés.
+        Tous les éléments non nommés — les éléments qui ne définissent pas d'attribut `slot` — sont assignés au slot par défaut dans l'ordre dans lequel ils sont déclarés.
+        Il s'agit du premier `<slot>` non nommé dans le template.
+
+    - `manual`
+      - : Les éléments sont assignés manuellement à des éléments de slot particuliers en utilisant {{DOMxRef("HTMLSlotElement.assign()")}}.
+        Aucune assignation automatique n'a lieu.
+
 ## Notes d'utilisation
 
-Cet élément n'a pas de contenu autorisé, car tout ce qui est imbriqué à l'intérieur dans le code source HTML ne devient pas réellement enfant de l'élément `<template>`. La propriété {{DOMxRef("Node.childNodes")}} de l'élément `<template>` est toujours vide, et vous ne pouvez accéder à ce contenu imbriqué que via la propriété spéciale {{DOMxRef("HTMLTemplateElement.content", "content")}}. Cependant, si vous appelez {{DOMxRef("Node.appendChild()")}} ou des méthodes similaires sur l'élément `<template>`, vous insérerez des enfants dans l'élément `<template>` lui-même, ce qui viole son modèle de contenu et ne met pas à jour le {{DOMxRef("DocumentFragment")}} retourné par la propriété `content`.
+Cet élément n'a pas de contenu autorisé, car tout ce qui est imbriqué à l'intérieur dans le code source HTML ne devient pas réellement enfant de l'élément `<template>`. La propriété {{DOMxRef("Node.childNodes")}} de l'élément `<template>` est toujours vide, et vous ne pouvez accéder à ce contenu imbriqué que avec la propriété spéciale {{DOMxRef("HTMLTemplateElement.content", "content")}}. Cependant, si vous appelez {{DOMxRef("Node.appendChild()")}} ou des méthodes similaires sur l'élément `<template>`, vous insérez des enfants dans l'élément `<template>` lui-même, ce qui viole son modèle de contenu et ne met pas à jour le {{DOMxRef("DocumentFragment")}} retourné par la propriété `content`.
 
 En raison de la façon dont l'élément `<template>` est analysé, toutes les balises `<html>`, `<head>` et `<body>` ouvrantes et fermantes à l'intérieur du template sont des erreurs de syntaxe et sont ignorées par l'analyseur, donc `<template><head><title>Test</title></head></template>` équivaut à `<template><title>Test</title></template>`.
 
@@ -74,6 +90,8 @@ C'est l'équivalent déclaratif de l'appel à {{DOMxRef("Element.attachShadow()"
 
 Si l'élément a une autre valeur pour `shadowrootmode`, ou n'a pas l'attribut `shadowrootmode`, l'analyseur génère un {{DOMxRef("HTMLTemplateElement")}}.
 De même, s'il y a plusieurs racines d'ombre déclaratives, seule la première est remplacée par un {{DOMxRef("ShadowRoot")}} — les suivantes sont analysées comme des objets {{DOMxRef("HTMLTemplateElement")}}.
+
+D'autres attributs préfixés par `shadowroot` permettent une personnalisation déclarative du `ShadowRoot`, comme le contrôle de l'affectation des emplacements.
 
 ## Exemples
 
@@ -103,7 +121,7 @@ Nous commençons d'abord par la partie HTML de l'exemple.
 </template>
 ```
 
-Au début, on a un tableau HTML pour lequel on insèrera du contenu plus tard grâce à l'aide d'un script JavaScript. Ensuite, on a le _template_ qui décrit la structure du fragment HTML représentant une ligne de tableau.
+Au début, on a un tableau HTML pour lequel on insère du contenu plus tard grâce à l'aide d'un script JavaScript. Ensuite, on a le _template_ qui décrit la structure du fragment HTML représentant une ligne de tableau.
 
 Avec le tableau créé et le template défini, on utilise JavaScript pour insérer des lignes dans le tableau dont chacune est construite à partir du _template_.
 
@@ -132,7 +150,7 @@ if ("content" in document.createElement("template")) {
 
   tbody.appendChild(clone2);
 } else {
-  // Une autre méthode pour ajouter les lignes
+  // Une autre méthode pour ajouter les lignes,
   // car l'élément HTML n'est pas pris en charge.
 }
 ```
@@ -152,7 +170,7 @@ table td {
 
 ### Implémentation d'un DOM d'ombre déclaratif
 
-Dans cet exemple, un avertissement de compatibilité caché est inclus au début du balisage. Cet avertissement est ensuite affiché via JavaScript si le navigateur ne prend pas en charge l'attribut `shadowrootmode`. Ensuite, il y a deux éléments {{HTMLElement("article")}}, chacun contenant des éléments {{HTMLElement("style")}} imbriqués avec des comportements différents. Le premier élément `<style>` est global à tout le document. Le second est limité à la racine d'ombre générée à la place de l'élément `<template>` grâce à la présence de l'attribut `shadowrootmode`.
+Dans cet exemple, un avertissement de compatibilité caché est inclus au début du balisage. Cet avertissement est ensuite affiché avec JavaScript si le navigateur ne prend pas en charge l'attribut `shadowrootmode`. Ensuite, il y a deux éléments {{HTMLElement("article")}}, chacun contenant des éléments {{HTMLElement("style")}} imbriqués avec des comportements différents. Le premier élément `<style>` est global à tout le document. Le second est limité à la racine d'ombre générée à la place de l'élément `<template>` grâce à la présence de l'attribut `shadowrootmode`.
 
 ```html
 <p hidden>
@@ -263,13 +281,191 @@ Cela sélectionne également l'élément parent comme illustré ci-dessous.
 
 ![Capture d'écran du code où l'élément est sélectionné](template_with_focus.png)
 
-## Les données sur le DocumentFragment ne sont pas clonées
+### DOM d'ombre déclaratif avec attribution d'emplacements nommés
+
+Cet exemple montre comment les éléments peuvent être attribués à des emplacements dans un DOM d'ombre en fonction de leur [`attribut slot`](/fr/docs/Web/API/Element/slot) (correspondant à l'attribut `name` de l'emplacement).
+
+#### HTML
+
+Tout d'abord, nous définissons un élément {{HTMLElement("article")}} qui présente le titre, les métadonnées et le corps de l'article.
+
+L'article contient un élément `<template>` qui devient une racine d'ombre, en raison de la présence de l'attribut `shadowrootmode`.
+Nous n'avons pas besoin de définir son attribut `shadowrootslotassignment`, car l'attribution d'emplacements nommés est la valeur par défaut.
+
+Le modèle définit des éléments qui ont des emplacements nommés pour les informations `"header"` et `"meta"`, et un emplacement non nommé pour les informations `"body"`.
+Les éléments sont mis en forme différemment afin qu'il soit facile de les différencier.
+
+```html
+<article id="host">
+  <template shadowrootmode="open" shadowrootslotassignment="named">
+    <style>
+      .header {
+        background-color: plum;
+      }
+      .meta {
+        background-color: green;
+      }
+      .body {
+        background-color: lightblue;
+      }
+    </style>
+
+    <h2 class="header">
+      <slot name="title"></slot>
+    </h2>
+
+    <div class="meta">
+      <slot name="meta"></slot>
+    </div>
+
+    <div class="body">
+      <slot></slot>
+    </div>
+  </template>
+
+  <p>
+    Texte 1 sans attribut de slot. Va dans l'emplacement par défaut (non nommé)
+    à l'intérieur de la div "body".
+  </p>
+  <span slot="title">Texte pour l'emplacement du titre</span>
+  <span slot="meta">Texte pour l'emplacement des métadonnées</span>
+  <p>
+    Texte 2 sans attribut de slot. Va également dans l'emplacement par défaut
+    (non nommé) à l'intérieur de la div "body".
+  </p>
+</article>
+```
+
+À l'intérieur du même hôte, sous le modèle, nous avons quatre éléments pour remplir les emplacements.
+Les éléments {{HTMLElement("span")}} ont des attributs `slot` qui correspondent aux attributs `name` des emplacements dans le modèle, et remplissent les emplacements correspondants.
+Les deux éléments {{HTMLElement("p")}} n'ont pas de nom, ils sont donc tous deux insérés dans l'emplacement non nommé `<slot>` dans l'élément "body".
+
+#### Résultats
+
+L'exemple ci-dessous doit montrer le contenu des emplacements affiché dans les sections appropriées.
+
+{{EmbedLiveSample("DOM d'ombre déclaratif avec attribution d'emplacements nommés", 100, 220)}}
+
+### DOM d'ombre déclaratif avec attribution manuelle d'emplacements
+
+Cet exemple montre comment les éléments peuvent être attribués à des emplacements dans un DOM d'ombre en utilisant une attribution manuelle des emplacements.
+
+Avec cette approche, chaque élément doit être attribué manuellement à un emplacement particulier.
+Il n'y a pas d'attribution par défaut, donc tout emplacement non attribué reste vide.
+
+#### HTML
+
+Tout d'abord, nous avons un avertissement de support caché.
+Cet avertissement est ensuite affiché avec JavaScript si le navigateur ne prend pas en charge l'attribut `shadowrootslotassignment`.
+
+```html
+<p id="support-warning" hidden>
+  ⛔ Votre navigateur ne prend pas encore en charge l'attribut
+  <code>shadowrootslotassignment</code>.
+</p>
+```
+
+Ensuite, nous définissons un élément {{HTMLElement("article")}} qui présente les informations de titre, de métadonnées et de corps de l'article.
+Cela contient un élément `<template>` qui devient une racine d'ombre, en raison de la présence de l'attribut `shadowrootmode`, et utilise une attribution manuelle des emplacements, car `shadowrootslotassignment="manual"` est défini.
+
+Le modèle définit des éléments qui ont des emplacements pour les informations `"header"`, `"meta"` et `"body"`, qui peuvent être référencés séparément par leur attribut `id`.
+Les éléments sont mis en forme différemment afin qu'il soit facile de les différencier.
+
+```html
+<article id="host">
+  <template shadowrootmode="open" shadowrootslotassignment="manual">
+    <style>
+      .header {
+        background-color: plum;
+      }
+      .meta {
+        background-color: green;
+      }
+      .body {
+        background-color: lightblue;
+      }
+    </style>
+
+    <h2 class="header">
+      <slot id="titleSlot"></slot>
+    </h2>
+
+    <div class="meta">
+      <slot id="metaSlot"></slot>
+    </div>
+
+    <div class="body">
+      <slot id="bodySlot"></slot>
+    </div>
+  </template>
+
+  <span id="text_title">Texte pour l'emplacement du titre</span>
+  <span id="text_meta">Texte pour l'emplacement des métadonnées</span>
+  <p id="text_body_1">Texte 1 pour l'emplacement du corps.</p>
+  <p id="text_body_2">Texte 2 pour l'emplacement du corps.</p>
+</article>
+```
+
+À l'intérieur du même hôte, sous le modèle, nous avons quatre éléments pour remplir les emplacements.
+Ces éléments sont également identifiés par leur identifiant.
+
+#### JavaScript
+
+Le JavaScript pour l'attribution manuelle des emplacements est montré ci-dessous.
+Tout d'abord, le code obtient les emplacements dans la racine d'ombre, puis le texte à insérer, et enfin attribue le texte à l'emplacement.
+Notez que vous ne pouvez attribuer un nœud qu'une seule fois à un emplacement particulier, et que si vous attribuez plusieurs nœuds à un seul emplacement en utilisant {{DOMxRef("HTMLSlotElement.assign()")}}, l'ordre dans lequel ils sont définis contrôle l'ordre dans lequel ils sont ajoutés.
+
+```js
+const host = document.querySelector("#host");
+const shadow = host.shadowRoot;
+
+// 1. Ciblez vos emplacements
+const titleSlot = shadow.querySelector("#titleSlot");
+const metaSlot = shadow.querySelector("#metaSlot");
+const bodySlot = shadow.querySelector("#bodySlot");
+
+// 2. Ciblez les éléments à insérer dans les emplacements
+const body1Text = document.querySelector("#text_body_1");
+const body2Text = document.querySelector("#text_body_2");
+const titleText = document.querySelector("#text_title");
+const metaText = document.querySelector("#text_meta");
+
+// 3. Attribuez-les manuellement
+titleSlot.assign(titleText);
+metaSlot.assign(metaText);
+bodySlot.assign(body2Text, body1Text);
+```
+
+Le code affiche l'avertissement de support caché si l'attribution des emplacements n'est pas prise en charge.
+
+```js
+const isShadowRootSlotAssignmentSupported = Object.hasOwn(
+  HTMLTemplateElement.prototype,
+  "shadowRootSlotAssignment",
+);
+
+document
+  .querySelector("p[hidden]")
+  .toggleAttribute("hidden", isShadowRootSlotAssignmentSupported);
+```
+
+#### Résultats
+
+L'exemple ci-dessous doit afficher le contenu des emplacements dans les sections appropriées.
+
+{{EmbedLiveSample("DOM d'ombre déclaratif avec attribution manuelle d'emplacements", 100, 220)}}
+
+> [!NOTE]
+> Si l'attribut `shadowrootslotassignment` n'est pas pris en charge, une note d'avertissement est affichée et le navigateur utilise l'attribution `named`.
+> Cependant, comme aucun des emplacements ou des éléments à insérer n'est nommé, tous les éléments sont insérés dans l'emplacement du titre (car c'est le premier emplacement non nommé, et donc l'emplacement "par défaut").
+
+### Les données sur le DocumentFragment ne sont pas clonées
 
 Lorsqu'une valeur {{DOMxRef("DocumentFragment")}} est transmise, {{DOMxRef("Node.appendChild")}} et des méthodes similaires déplacent uniquement les _nœuds enfants_ de cette valeur dans le nœud cible. Il est donc généralement préférable d'attacher les gestionnaires d'évènements aux enfants d'un `DocumentFragment`, plutôt qu'au `DocumentFragment` lui-même.
 
 Considérez l'exemple HTML et JavaScript suivant&nbsp;:
 
-### HTML
+#### HTML
 
 ```html
 <div id="container"></div>
@@ -279,7 +475,7 @@ Considérez l'exemple HTML et JavaScript suivant&nbsp;:
 </template>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const container = document.getElementById("container");
@@ -298,7 +494,7 @@ secondClone.children[0].addEventListener("click", clickHandler);
 container.appendChild(secondClone);
 ```
 
-### Résultat
+#### Résultat
 
 Comme `firstClone` est un `DocumentFragment`, seuls ses enfants sont ajoutés à `container` lorsque `appendChild` est appelé&nbsp;; les gestionnaires d'évènements de `firstClone` ne sont pas copiés. En revanche, comme un gestionnaire d'évènements est ajouté au premier _nœud enfant_ de `secondClone`, le gestionnaire est copié lors de l'appel à `appendChild`, et le clic fonctionne comme attendu.
 

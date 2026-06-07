@@ -18,11 +18,11 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 ### Parámetros
 
 - `aCommandName`
-  - : Una {{domxref("DOMString")}} que especifica el nombre del comando a ejecutar. Vea [Comandos](#comandos) para una lista de posibles comandos.
+  - : Una {{jsxref("String")}} que especifica el nombre del comando a ejecutar. Vea [Comandos](#comandos) para una lista de posibles comandos.
 - `aShowDefaultUI`
   - : Un {{jsxref("Boolean")}} que indica si la interfaz de usuario por defecto se debe mostrar. Esto no se ha implementado en Mozilla.
 - `aValueArgument`
-  - : Una {{domxref("DOMString")}} representando algunos comandos (como `insertImage`) requiere un argumento valor extra (url de la imagen). Pasar un argumento de `null` si no se necesita ningún argumento.
+  - : Una {{jsxref("String")}} representando algunos comandos (como `insertImage`) requiere un argumento valor extra (url de la imagen). Pasar un argumento de `null` si no se necesita ningún argumento.
 
 ### Comandos
 
