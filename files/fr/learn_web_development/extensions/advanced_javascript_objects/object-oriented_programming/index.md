@@ -155,7 +155,7 @@ suzanne.sePrésenter(); // "Je m'appelle Suzanne et je suis en première année.
 On pourrait avoir une implémentation par défaut de `sePrésenter()` pour les personnes qui ne sont pas des étudiants ou des enseignants&nbsp;:
 
 ```js
-thomas = new Person("Thomas");
+thomas = new Personne("Thomas");
 thomas.sePrésenter(); // "Je m'appelle Thomas."
 ```
 
