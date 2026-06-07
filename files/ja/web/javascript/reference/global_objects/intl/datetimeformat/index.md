@@ -76,7 +76,7 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // 引数無しの toLocaleString は実装に依存します。
 // 既定のロケール、既定のタイムゾーンです。
 console.log(new Intl.DateTimeFormat().format(date));
-// "12/19/2012" は、 en-US ろおけーる（言語）で America/Los_Angeles (UTC-0800) タイムゾーンの場合
+// "12/19/2012" は、 en-US ロケール（言語）で America/Los_Angeles (UTC-0800) タイムゾーンの場合
 ```
 
 ### locales の使用
