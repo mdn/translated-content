@@ -1,5 +1,5 @@
 ---
-title: "`-webkit-border-before` CSS property"
+title: CSS `-webkit-border-before` プロパティ
 short-title: -webkit-border-before
 slug: Web/CSS/Reference/Properties/-webkit-border-before
 l10n:
@@ -18,7 +18,7 @@ l10n:
 - {{cssxref("-webkit-border-before-style")}}
 - {{cssxref("-webkit-border-before-width")}}
 
-## Syntax
+## 構文
 
 ```css
 /* border の値 */

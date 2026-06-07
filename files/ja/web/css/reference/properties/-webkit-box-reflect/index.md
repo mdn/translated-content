@@ -1,5 +1,5 @@
 ---
-title: "`-webkit-box-reflect` CSS property"
+title: CSS `-webkit-box-reflect` プロパティ
 short-title: -webkit-box-reflect
 slug: Web/CSS/Reference/Properties/-webkit-box-reflect
 l10n:
@@ -60,6 +60,6 @@ l10n:
 
 ## 関連情報
 
-- Apple の[ドキュメント](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16)
-- Webkit の[仕様書](https://www.webkit.org/blog/182/css-reflections/).
+- Apple の [ドキュメント](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16)
+- Webkit の [仕様書](https://www.webkit.org/blog/182/css-reflections/).
 - Lea Verou's article on reflection using [CSS features on the standard track](https://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/).
