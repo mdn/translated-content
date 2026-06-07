@@ -25,11 +25,11 @@ CSS 학습에서 지금까지 경험한 많은 속성과 값은 화면의 크기
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >
         학습) 및 , CSS 작동 방식 이해 (<a
-          href="/ko/docs/Learn/CSS/First_steps"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics"
           >CSS 첫 번째 단계</a
         >
         학습)

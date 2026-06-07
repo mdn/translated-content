@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn_web_development/Core/Scripting")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
 Los lenguajes de programación son muy útiles para completar rápidamente tareas repetitivas, desde múltiples cálculos básicos hasta casi cualquier otra situación en la que tenga que completar muchos elementos de trabajo similares. Aquí veremos las estructuras de bucle disponibles en JavaScript que manejan tales necesidades.
 
@@ -16,7 +16,7 @@ Los lenguajes de programación son muy útiles para completar rápidamente tarea
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática, una comprensión básica de HTML y CSS,
-        <a href="/es/docs/Learn/JavaScript/First_steps"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting"
           > Primeros pasos de JavaScript </a
         >.
       </td>
@@ -150,7 +150,7 @@ Pero también hay otras colecciones en JavaScript, como {{jsxref ("Set")}} y {{j
 
 ### El bucle for...of
 
-La herramienta básica para recorrer una colección es el bucle {{jsxref("statements/for...of","for...of")}}:
+La herramienta básica para recorrer una colección es el bucle {{jsxref("Statements/for...of","for...of")}}:
 
 ```js
 const cats = ["Leopardo", "Serval", "Jaguar", "Tigre", "Caracal", "León"];
@@ -213,7 +213,7 @@ Nuestra función prueba que el elemento comienza con la letra "L", por lo que el
 [ "Leopardo", "León" ]
 ```
 
-Tenga en cuenta que `map()` y `filter()` se usan a menudo con _expresiones de funciones_, que aprenderemos en el módulo [Functions](/es/docs/Learn/JavaScript/Building_blocks/Functions).
+Tenga en cuenta que `map()` y `filter()` se usan a menudo con _expresiones de funciones_, que aprenderemos en el módulo [Functions](/es/docs/Learn_web_development/Core/Scripting/Functions).
 Usando expresiones de función podríamos reescribir el ejemplo anterior para que sea mucho más compacto:
 
 ```js
@@ -227,7 +227,7 @@ console.log(filtrado);
 ## El bucle estándar for
 
 En el ejemplo anterior de "círculos de dibujo", no tiene una colección de elementos para recorrer: realmente solo desea ejecutar el mismo código 100 veces.
-En un caso como ese, debes usar el bucle {{jsxref("statements/for","for")}}.
+En un caso como ese, debes usar el bucle {{jsxref("Statements/for","for")}}.
 Tiene la siguiente sintaxis:
 
 ```js-nolint
@@ -1010,4 +1010,4 @@ Si hay algo que no entendiste, vuelve a leer el artículo o [ponte en contacto c
 - Referencias de [while](/es/docs/Web/JavaScript/Reference/Statements/while) y [do...while](/es/docs/Web/JavaScript/Reference/Statements/do...while)
 - Referencias de [break](/es/docs/Web/JavaScript/Reference/Statements/break) y [continue](/es/docs/Web/JavaScript/Reference/Statements/continue)
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}

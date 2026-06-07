@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
 
 {{JSRef}}
 
-La fonction **`Math.expm1()`** renvoie `e^x` - 1, avec `x` l'argument donné et {{jsxref("Objets_globaux/Math/E","e")}} la base du logarithme nepérien.
+La fonction **`Math.expm1()`** renvoie `e^x` - 1, avec `x` l'argument donné et {{jsxref("Math.E","e")}} la base du logarithme nepérien.
 
 {{InteractiveExample("JavaScript Demo: Math.expm1()")}}
 
@@ -54,7 +54,7 @@ Math.expm1(1); // 1.718281828459045
 
 ## Prothèse d'émulation (_polyfill_)
 
-Cette fonction peut être émulée en utilisant la fonction {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}} :
+Cette fonction peut être émulée en utilisant la fonction {{jsxref("Math.exp()")}} :
 
 ```js
 Math.expm1 =

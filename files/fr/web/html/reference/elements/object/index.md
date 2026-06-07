@@ -1,8 +1,9 @@
 ---
-title: "<object> : l'élément d'objet externe"
+title: "Élément HTML `<object>` : l'élément d'objet externe"
+short-title: <object>
 slug: Web/HTML/Reference/Elements/object
 l10n:
-  sourceCommit: f29e825161ee6776a395cd846f8570686f784341
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<object>`** représente une ressource externe, qui peut être traitée comme une image, un contexte de navigation imbriqué ou une ressource à gérer par un module externe.

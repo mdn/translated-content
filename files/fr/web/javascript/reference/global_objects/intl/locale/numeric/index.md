@@ -1,36 +1,41 @@
 ---
-title: Intl.Locale.prototype.numeric
+title: "Intl.Locale : propriété numeric"
+short-title: numeric
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric
+l10n:
+  sourceCommit: e509776556a47f12843b91ab5c6e9be6585698c6
 ---
 
-{{JSRef}}
-
-La propriété **`Intl.Locale.prototype.numeric`** est une propriété fournie par un accesseur et qui indique si la locale possède une collation spécifique pour les caractères numériques (la collation étant la méthode qui permet d'ordonner des chaînes de caractères entre elles).
+La propriété d'accesseur **`numeric`** des instances de {{JSxRef("Intl.Locale")}} indique si cette locale possède une gestion spéciale des caractères numériques lors de la collation.
 
 ## Description
 
-À l'instar de {{jsxref("Locale.caseFirst", "Intl.Locale.caseFirst")}}, `numeric` représente une modification des règles de collation utilisée par la locale. `numeric` est un booléen (`true` ou `false`). Lorsque cette propriété vaut `false`, il n'y a pas de gestion particulière des chiffres et si cette propriété vaut `true`, cela indique que les caractères numériques sont pris en compte lors de la collation des chaînes. Ainsi, les séquences de chiffres décimaux seront comparés comme des nombres. Ainsi, la chaîne de caractères `"A-21"` sera considérée inférieure à `"A-123"`.
+À l'instar de {{JSxRef("Intl/Locale/caseFirst", "caseFirst")}}, `numeric` représente une modification des règles de collation utilisées par la locale. `numeric` est une valeur booléenne, ce qui signifie qu'elle peut être soit `true`, soit `false`. Si `numeric` est défini sur `false`, il n'y aura pas de gestion spéciale des valeurs numériques dans les chaînes de caractères. Si `numeric` est défini sur `true`, alors la locale prendra en compte les caractères numériques lors de la collation des chaînes de caractères. Cette gestion spéciale des nombres signifie que les séquences de chiffres décimaux seront comparées comme des nombres. Par exemple, la chaîne de caractères «&nbsp;A-21&nbsp;» sera considérée comme inférieure à «&nbsp;A-123&nbsp;».
+
+La valeur de la propriété `numeric` est définie lors de la construction, soit par la clé `kn` de l'identifiant de locale, soit par l'option `numeric` du constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}}. Cette dernière prend le pas si les deux sont présentes&nbsp;; et si aucune n'est présente, la propriété a pour valeur `undefined`.
+
+Le mutateur d'accesseur de `numeric` est `undefined`. Vous ne pouvez pas modifier cette propriété directement.
 
 ## Exemples
 
-### Définir `numeric` grâce à la chaîne de description de la locale
+Comme pour les autres sous-balises de locale, la valeur `numeric` peut être ajoutée à l'objet {{JSxRef("Intl.Locale")}} soit par la chaîne de caractères de la locale, soit par un objet de configuration passé au constructeur.
 
-Selon [la spécification Unicode sur les chaînes de caractères décrivant les locales](https://www.unicode.org/reports/tr35/), les valeurs de `numeric` sont associées à la clé `kn`. Pour utiliser cette clé dans la chaîne de description de la locale (le premier argument de [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)), après la chaîne de base, on pourra ajouter un suffixe avec `"-u"` afin d'indiquer la présence d'une extension, puis `"-kn"` afin de préciser l'extension en question et enfin la valeur souhaitée pour cette extension. Si on veut que `numeric` soit `true`, il suffit d'ajouter la clé `kn`. Pour indiquer la valeur `false`, il faudra explicitement ajouter `"-false"`.
+### Ajouter une valeur `numeric` par le biais de la chaîne de caractères de la locale
+
+Dans la [spécification des chaînes de caractères de locale Unicode <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/), `numeric` est une «&nbsp;sous-balise d'extension&nbsp;». Ces sous-balises ajoutent des informations supplémentaires sur la locale et sont ajoutées aux identifiants de locale en utilisant la clé d'extension `-u`. Pour ajouter la valeur `numeric` à l'identifiant de locale initial passé au constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}}, ajoutez d'abord la clé d'extension `-u` si elle n'existe pas. Ensuite, ajoutez l'extension `-kn` pour indiquer que vous ajoutez une valeur pour `numeric`. Enfin, ajoutez la valeur `numeric`. Si vous voulez définir `numeric` sur `true`, il suffit d'ajouter la clé `kn`. Pour définir la valeur sur `false`, vous devez définir `"false"` après la clé `kn`.
 
 ```js
-let numericViaStr = new Intl.Locale("fr-Latn-FR-u-kn-false");
-console.log(numericStr.numeric);
-// Affichera "false" dans la console
+const locale = new Intl.Locale("fr-Latn-FR-u-kn-false");
+console.log(locale.numeric); // "false"
 ```
 
-### Définir `numeric` via l'objet de configuration de l'instance
+### Ajouter une valeur `numeric` par le biais de l'objet de configuration
 
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) possède un deuxième argument, optionnel, qui est un objet permettant de configurer la locale. Les propriétés de cet objet sont utilisées comme extensions pour la locale ; les clés des propriétés sont les noms des extensions et leurs valeurs sont celles utilisées pour chaque extension. On peut donc utiliser la propriété `numeric` sur cet objet afin de définir le système de numération à utiliser pour cette locale.
+Le constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}} accepte un argument optionnel de type objet de configuration, qui peut contenir plusieurs types d'extensions, y compris `numeric`. Définissez la propriété `numeric` de l'objet de configuration sur la valeur `numeric` souhaitée, puis passez-le au constructeur.
 
 ```js
-let numericViaObj = new Intl.Locale("en-Latn-US", { numeric: true });
-console.log(us12hour.numeric);
-// Affichera "true" dans la console
+const locale = new Intl.Locale("en-Latn-US", { numeric: true });
+console.log(locale.numeric); // "true"
 ```
 
 ## Spécifications
@@ -43,4 +48,4 @@ console.log(us12hour.numeric);
 
 ## Voir aussi
 
-- {{jsxref("Locale", "Intl.Locale")}}
+- L'objet {{JSxRef("Intl.Locale")}}

@@ -1,31 +1,30 @@
 ---
 title: Intl.Segmenter.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
 l10n:
-  sourceCommit: 2ec681bd9ad77115496f551c62fee2ba50c9007f
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-{{JSRef}}
+**`resolvedOptions()`** は {{jsxref("Intl.Segmenter")}} インスタンスンのメソッドで、この `Segmenter` オブジェクトの初期化中に計算されたオプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-**`Intl.Segmenter.prototype.resolvedOptions()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの初期化時に計算されたロケールおよび粒度のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
-
-{{InteractiveExample("JavaScript デモ: Intl.Segmenter.prototype.resolvedOptions")}}
+{{InteractiveExample("JavaScript デモ: Intl.Segmenter.prototype.resolvedOptions()")}}
 
 ```js interactive-example
-const segmenter1 = new Intl.Segmenter("fr-FR");
-const options1 = segmenter1.resolvedOptions();
+const segmenter = new Intl.Segmenter("fr-FR");
+const options = segmenter.resolvedOptions();
 
-console.log(options1.locale);
-// Expected output: "fr-FR"
+console.log(options.locale);
+// 予想される結果: "fr-FR"
 
-console.log(options1.granularity);
-// Expected output: "grapheme"
+console.log(options.granularity);
+// 予想される結果: "grapheme"
 ```
 
 ## 構文
 
-```js
-resolvedOptions();
+```js-nolint
+resolvedOptions()
 ```
 
 ### 引数
@@ -34,16 +33,12 @@ resolvedOptions();
 
 ### 返値
 
-与えられた [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの初期化時に計算されたロケールおよび照合順序のオプションを反映したプロパティを持つ新しいオブジェクトです。
-
-## 解説
-
-生成されたオブジェクトは以下のプロパティを持ちます。
+この `Segmenter` オブジェクトの初期化時に計算されたオプションを反映したプロパティを持つ新しいオブジェクトです。このオブジェクトには、記載順に次のプロパティがあります。
 
 - `locale`
-  - : 実際に使用されるロケールの BCP 47 言語タグ。初期化のための BCP 47 言語タグに Unicode 拡張値が含まれていた場合、要求され、このロケールに対応しているキーと値のペアが `locale` に含まれる。
+  - : 実際に使用されるロケールの {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}です。これは、[ロケールネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)の処理によって決定されます。出力には、Unicode 拡張キーは含まれません。
 - `granularity`
-  - : オプション引数でこのプロパティに指定された値、またはデフォルト値。
+  - : `options` 引数でこのプロパティに指定された値です。必要に応じてデフォルト値が設定されます。値は `"grapheme"`、`"word"`、`"sentence"` のいずれかです。デフォルトは `"grapheme"` です。
 
 ## 例
 
@@ -56,7 +51,7 @@ console.log(options.locale); // "es"
 console.log(options.granularity); // "sentence"
 ```
 
-### デフォルトの granularity
+### デフォルトの粒度
 
 ```js
 const spanishSegmenter = new Intl.Segmenter("es");

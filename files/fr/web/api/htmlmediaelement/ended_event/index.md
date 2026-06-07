@@ -1,64 +1,99 @@
 ---
-title: "HTMLMediaElement: ended"
+title: "HTMLMediaElement : évènement ended"
+short-title: ended
 slug: Web/API/HTMLMediaElement/ended_event
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
-L'événement **ended** est déclenché lorsque la lecture ou le streaming s'est arrêté parce que la fin du média a été atteinte ou qu'aucune donnée n'est disponible.
+L'évènement **`ended`** est déclenché lorsque la lecture ou le flux en direct s'est arrêté parce que la fin du média a été atteinte ou qu'aucune donnée n'est disponible.
 
-L'événement se produit dans deux contextes liés mais unique:
+Cet évènement se produit lorsque les éléments HTML basés sur {{DOMxRef("HTMLMediaElement")}} ({{HTMLElement("audio")}} et {{HTMLElement("video")}}) déclenchent `ended` lorsque la lecture atteint la fin du média.
 
-- Les éléments basés sur {{domxref("HTMLMediaElement")}} ({{HTMLElement("audio")}} et {{HTMLElement("video")}}) déclenchent **ended** lorsque la lecture du média atteint la fin.
-- Les pistes de flux média, qui sont basées sur l'interface {{domxref("MediaStreamTrack")}}, déclenchent **`ended`** lorsque la source de la piste interrompt définitivement l'envoi de données sur le flux. Il y'a différentes manières d'y arriver:
-  - il n'y a plus de données à envoyer.
-  - L'utilisateur a révoqué les autorisations nécessaires pour que les données soient envoyées.
-  - Le matériel générant les données source a été supprimé ou éjecté.
-  - Un peer distant a définitivement cessé d'envoyer des données. La mise en pause des médias ne génère pas l'événement **ended**.
-
-## Informations générales
-
-- Spécification
-  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ended) et [Media Capture and Streams](https://www.w3.org/TR/mediacapture-streams/#event-mediastreamtrack-ended)
-- Interface
-  - : {{domxref("Event")}}
-- Propagation
-  - : Non
-- Annulable
-  - : Non
-- Cible
-  - : {{domxref("Element")}}
-- Action par défaut
-  - : Aucune
+Cet évènement n'est pas annulable et ne se propage pas.
 
 > [!NOTE]
-> Bien que cet événement soit défini dans deux spécifications, à ce moment-là, les deux spécifient cet événement de manière identique, nous avons donc documenté comme si elles ne faisaient qu'une. Si à un moment donné, cela change, la documentation sera révisée.
+> L'évènement `ended` ne se déclenche pas si la propriété [`loop`](/fr/docs/Web/API/HTMLMediaElement/loop) vaut `true` et [`playbackRate`](/fr/docs/Web/API/HTMLMediaElement/playbackRate) n'est pas négatif.
 
-## Propriétés
+## Syntaxe
 
-| Property                        | Type                       | Description                                            |
-| ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènements.
 
-## Evénements liés
+```js-nolint
+addEventListener("ended", (event) => { })
 
-- [`playing`](/fr/docs/Web/API/HTMLMediaElement/playing_event)
-- [`waiting`](/fr/docs/Web/API/HTMLMediaElement/waiting_event)
-- [`seeking`](/fr/docs/Web/API/HTMLMediaElement/seeking_event)
-- [`seeked`](/fr/docs/Web/API/HTMLMediaElement/seeked_event)
-- [`loadedmetadata`](/fr/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
-- [`loadeddata`](/fr/docs/Web/API/HTMLMediaElement/loadeddata_event)
-- [`canplay`](/fr/docs/Web/API/HTMLMediaElement/canplay_event)
-- [`canplaythrough`](/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event)
-- [`durationchange`](/fr/docs/Web/API/HTMLMediaElement/durationchange_event)
-- [`timeupdate`](/fr/docs/Web/API/HTMLMediaElement/timeupdate_event)
-- [`play`](/fr/docs/Web/API/HTMLMediaElement/play_event)
-- [`pause`](/fr/docs/Web/API/HTMLMediaElement/pause_event)
-- [`ratechange`](/fr/docs/Web/API/HTMLMediaElement/ratechange_event)
-- [`volumechange`](/fr/docs/Web/API/HTMLMediaElement/volumechange_event)
-- [`suspend`](/fr/docs/Web/API/HTMLMediaElement/suspend_event)
-- [`emptied`](/fr/docs/Web/API/HTMLMediaElement/emptied_event)
-- [`stalled`](/fr/docs/Web/API/HTMLMediaElement/stalled_event)
+onended = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("Event")}} générique.
+
+## Exemples
+
+Ces exemples ajoutent un écouteur d'évènement pour l'évènement `ended` de `HTMLMediaElement`, puis affichent un message lorsque ce gestionnaire d'évènement a réagi au déclenchement de l'évènement.
+
+Utiliser `addEventListener()`&nbsp;:
+
+```js
+const video = document.querySelector("video");
+
+video.addEventListener("ended", (event) => {
+  console.log(
+    "La vidéo s'est arrêtée soit parce qu'elle a terminé sa lecture, soit parce qu'aucune donnée supplémentaire n'est disponible.",
+  );
+});
+```
+
+Utiliser la propriété de gestionnaire d'évènements `onended`&nbsp;:
+
+```js
+const video = document.querySelector("video");
+
+video.onended = (event) => {
+  console.log(
+    "La vidéo s'est arrêtée soit parce qu'elle a terminé sa lecture, soit parce qu'aucune donnée supplémentaire n'est disponible.",
+  );
+};
+```
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Évènements associés
+
+- L'évènement {{DOMxRef("HTMLMediaElement.playing_event", "playing")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.waiting_event", "waiting")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.seeking_event", "seeking")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.seeked_event", "seeked")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.loadedmetadata_event", "loadedmetadata")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.loadeddata_event", "loadeddata")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.canplay_event", "canplay")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.canplaythrough_event", "canplaythrough")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.durationchange_event", "durationchange")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.timeupdate_event", "timeupdate")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.play_event", "play")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.pause_event", "pause")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.ratechange_event", "ratechange")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.volumechange_event", "volumechange")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.suspend_event", "suspend")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.emptied_event", "emptied")}} de HTMLMediaElement
+- L'évènement {{DOMxRef("HTMLMediaElement.stalled_event", "stalled")}} de HTMLMediaElement
+
+## Voir aussi
+
+- L'interface {{DOMxRef("HTMLAudioElement")}}
+- L'interface {{DOMxRef("HTMLVideoElement")}}
+- L'élément HTML {{HTMLElement("audio")}}
+- L'élément HTML {{HTMLElement("video")}}
+- [Média de capture et flux](/fr/docs/Web/API/Media_Capture_and_Streams_API)
+  - [`MediaStreamTrack`&nbsp;: évènement `ended`](/fr/docs/Web/API/MediaStreamTrack/ended_event)
+- [L'API Web Audio](/fr/docs/Web/API/Web_Audio_API)
+  - [L'API Web Audio&nbsp;: évènement `ended`](/fr/docs/Web/API/AudioScheduledSourceNode/ended_event)

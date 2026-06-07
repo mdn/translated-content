@@ -1,14 +1,19 @@
 ---
-title: object-fit
+title: Propriété CSS `object-fit`
+short-title: object-fit
 slug: Web/CSS/Reference/Properties/object-fit
-original_slug: Web/CSS/object-fit
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`object-fit`** définit la façon dont le contenu d'un {{ Glossary("replaced elements", "élément remplacé")}}, tel qu'une {{HTMLElement("img")}} ou une {{HTMLElement("video")}}, doit être redimensionné pour s'adapter à son conteneur.
 
-La propriété CSS **`object-fit`** définit la façon dont le contenu d'un [élément remplacé](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties) ([`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ou [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) par exemple) doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur.
+> [!NOTE]
+> La propriété `object-fit` n'a aucun effet sur les éléments HTML {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} et {{HTMLElement("fencedframe")}}.
 
-{{InteractiveExample("CSS Demo: object-fit")}}
+Il est possible de modifier l'alignement du contenu de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété {{CSSxRef("object-position")}}.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: object-fit")}}
 
 ```css interactive-example-choice
 object-fit: fill;
@@ -43,19 +48,13 @@ object-fit: scale-down;
 #example-element {
   height: 100%;
   width: 100%;
-  border: 2px dotted #888;
+  border: 2px dotted #888888;
 }
 ```
-
-Selon la valeur utilisée pour `object-fit`, l'élément peut être rogné, mis à l'échelle ou étiré, afin de remplir la boîte qui le contient.
-
-> [!NOTE]
-> Il est possible de modifier l'alignement du contenu de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position).
 
 ## Syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
 object-fit: contain;
 object-fit: cover;
 object-fit: fill;
@@ -66,6 +65,7 @@ object-fit: scale-down;
 object-fit: inherit;
 object-fit: initial;
 object-fit: revert;
+object-fit: revert-layer;
 object-fit: unset;
 ```
 
@@ -74,23 +74,23 @@ La propriété `object-fit` peut être définie grâce à l'un des mots-clés su
 ### Valeurs
 
 - `contain`
-  - : Le contenu remplacé est dimensionné pour maintenir ses proportions tout en étant ajusté à la boîte de contenu&nbsp;: sa taille réelle est résolue en utilisant la largeur et la hauteur de l'élément comme contraintes de contenant.
+  - : Le contenu remplacé est redimensionné pour maintenir son {{Glossary("aspect ratio", "rapport d'aspect")}} tout en s'adaptant à la boîte de contenu de l'élément. L'ensemble de l'objet est ajusté pour remplir la boîte, tout en préservant son ratio d'aspect, de sorte que l'objet sera [«&nbsp;au format de lettre&nbsp;»](https://fr.wikipedia.org/wiki/Letterbox) ou [«&nbsp;au format de pilier&nbsp;» <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Pillarbox) si son ratio d'aspect ne correspond pas à celui de la boîte.
 - `cover`
-  - : Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu. La taille réelle est calculée pour couvrir la zone décrite par la hauteur et la largeur de l'élément. Si les ratios de l'objet et de la boîte ne correspondent pas, le contenu remplacé sera rogné.
+  - : Le contenu remplacé est redimensionné pour maintenir son rapport d'aspect tout en remplissant entièrement la boîte de contenu de l'élément. Si le rapport d'aspect de l'objet ne correspond pas à celui de sa boîte, l'objet sera alors rogné pour s'adapter.
 - `fill`
-  - : Le contenu remplacé est dimensionné pour remplir la boîte de contenu. La taille réelle de l'objet est déterminée grâce à la hauteur et à la largeur de l'élément. Il est donc étiré afin de remplir la boîte.
+  - : Le contenu remplacé est redimensionné pour remplir entièrement la boîte de contenu de l'élément de boîte. C'est la valeur de {{CSSxRef("initial")}}. L'ensemble de l'objet remplira complètement la boîte. Si le {{Glossary("aspect ratio", "rapport d'aspect")}} de l'objet ne correspond pas à celui de sa boîte, l'objet sera alors étiré pour s'adapter.
 - `none`
-  - : Le contenu remplacé n'est pas redimensionné à l'intérieur de l'élément.
+  - : Le contenu remplacé n'est pas redimensionné.
 - `scale-down`
-  - : Le contenu est dimensionné comme si `none` ou `contain` étaient spécifiés, on prend celui qui aboutirait à une taille réelle plus petite.
+  - : Le contenu est redimensionné comme si `none` ou `contain` était défini, selon ce qui donnerait la taille d'objet concrète la plus petite.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -131,9 +131,7 @@ La propriété `object-fit` peut être définie grâce à l'un des mots-clés su
 
 ```css
 h2 {
-  font-family:
-    Courier New,
-    monospace;
+  font-family: "Courier New", monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }
@@ -141,7 +139,7 @@ h2 {
 img {
   width: 150px;
   height: 100px;
-  border: 1px solid #000;
+  border: 1px solid black;
   margin: 10px 0;
 }
 
@@ -173,7 +171,7 @@ img {
 
 #### Résultat
 
-{{EmbedLiveSample('', 500, 1100)}}
+{{EmbedLiveSample("Appliquer `object-fit` à une image", 500, 1100)}}
 
 ## Spécifications
 
@@ -185,10 +183,6 @@ img {
 
 ## Voir aussi
 
-- [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size)
-
-- Les autres propriétés CSS liées aux images&nbsp;:
-  - [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position)
-  - [`image-orientation`](/fr/docs/Web/CSS/Reference/Properties/image-orientation)
-  - [`image-rendering`](/fr/docs/Web/CSS/Reference/Properties/image-rendering)
-  - [`image-resolution`](/fr/docs/Web/CSS/Reference/Properties/image-resolution)
+- Les autres propriétés CSS associées aux images&nbsp;: {{CSSxRef("object-position")}}, {{CSSxRef("image-orientation")}}, {{CSSxRef("image-rendering")}}, {{CSSxRef("image-resolution")}}.
+- La propriété {{CSSxRef("background-size")}}
+- [Comprendre les rapports d'aspect](/fr/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)

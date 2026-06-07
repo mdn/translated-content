@@ -1,28 +1,31 @@
 ---
-title: "<param>: オブジェクト引数要素"
+title: HTML `<param>` オブジェクト引数要素
+short-title: <param>
 slug: Web/HTML/Reference/Elements/param
-original_slug: Web/HTML/Element/param
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{HTMLSidebar}}
+{{Deprecated_Header}}
 
 **`<param>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("object")}} 要素の引数を定義します。
+
+> [!NOTE]
+> 外部リソースの URL を設定するには、{{HTMLElement("object")}} 要素で [`data`](/ja/docs/Web/HTML/Reference/Elements/object#data) 属性を使用してください。
 
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-- `name` {{deprecated_inline}}
+- `name` {{deprecated_inline}} {{non-standard_inline}}
   - : 引数の名称。
-- `value` {{deprecated_inline}}
+- `value` {{deprecated_inline}} {{non-standard_inline}}
   - : 引数の値を指定します。
-- `type` {{deprecated_inline}}
+- `type` {{deprecated_inline}} {{non-standard_inline}}
   - : `valuetype` が `ref` に設定されている場合にのみ指定可能。`value` の値で指定された URI に存在するオブジェクトの MIME タイプを指定します。
-- `valuetype` {{deprecated_inline}}
+- `valuetype` {{deprecated_inline}} {{non-standard_inline}}
   - : `value` 属性の型を指定します。指定可能な値は以下の通りです。
-    - `data`: 既定値。値は文字列としてオブジェクトの実装に渡されます。
+    - `data`: デフォルト値。値は文字列としてオブジェクトの実装に渡されます。
     - `ref`: 値は、実行時の値が格納されているリソースへの URI です。
     - `object`: 同一文書内の他の {{HTMLElement("object")}} 要素の ID です。
 
@@ -44,9 +47,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>
-        空要素であるため開始タグは必須、また終了タグを置いてはなりません。
-      </td>
+      <td>開始タグは必須、また終了タグを置いてはなりません。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -60,7 +61,7 @@ l10n:
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>

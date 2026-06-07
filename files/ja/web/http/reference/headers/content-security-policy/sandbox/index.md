@@ -53,7 +53,7 @@ Content-Security-Policy: sandbox <value>;
 - `allow-same-origin`
   - : このトークンが使用されなかった場合、リソースは{{Glossary("same-origin policy", "同一オリジンポリシー")}}に常に失敗する特別なオリジンからのものとして扱われます（潜在的に[データストレージやクッキー](/ja/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_data_storage_access)へのアクセスや、一部の JavaScript API の使用を阻止することが可能です）。
 - `allow-scripts`
-  - : このページががスクリプトを実行することを許可します（ポップアップウィンドウの生成を除く）。このキーワードが使用されなかった場合は、この操作は許可されません。
+  - : このページがスクリプトを実行することを許可します（ポップアップウィンドウの生成を除く）。このキーワードが使用されなかった場合は、この操作は許可されません。
 - `allow-storage-access-by-user-activation` {{experimental_inline}}
   - : リソースが親のストレージ機能に[ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) でアクセスを要求できるようにします。
 - `allow-top-navigation`

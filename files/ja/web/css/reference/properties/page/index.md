@@ -1,14 +1,13 @@
 ---
 title: page
 slug: Web/CSS/Reference/Properties/page
-original_slug: Web/CSS/page
 l10n:
-  sourceCommit: 62ad79f3ece9fa7199b3420f38e8bdd05b54073f
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`page`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で定義された、名前付きページ、つまり特定の種類のページを指定するために使用します。
 
-名前付きページを連続して使用しているセレクターが複数ある場合は、 [`break-after`](/ja/docs/Web/CSS/Reference/Properties/break-after) を使用して強制的にページを分割する必要があるかもしれません。
+名前付きページを連続して使用しているセレクターが複数ある場合は、{{cssxref("break-after")}} を使用して強制的にページを分割する必要があるかもしれません。
 
 ## 構文
 
@@ -31,9 +30,9 @@ page: unset;
 ### 値
 
 - `auto`
-  - : 既定値。 `auto` 以外の値を持つ最も近い祖先の値を使用します。名前付きページの値が設定されている祖先が存在しない場合、 `auto` に使用される値は空文字列になります。
+  - : デフォルト値。 `auto` 以外の値を持つ最も近い祖先の値を使用します。名前付きページの値が設定されている祖先が存在しない場合、 `auto` に使用される値は空文字列になります。
 - {{cssxref("custom-ident")}}
-  - : [`@page`](/ja/docs/Web/CSS/Reference/At-rules/@page) アットルールで定義されている、大文字小文字を区別する名前。
+  - : {{cssxref("@page")}} アットルールで定義されている、大文字小文字を区別する名前。
 
 ## 公式定義
 
@@ -194,7 +193,7 @@ CSS の次の部分では、[属性セレクター](/ja/docs/Web/CSS/Reference/S
   }
   section {
     font-size: 2rem;
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
   }
   .chapter {
     border: tomato 2px solid;
@@ -202,22 +201,22 @@ CSS の次の部分では、[属性セレクター](/ja/docs/Web/CSS/Reference/S
   [data-print="grouped"] > #toc,
   [data-print="paged"] > #toc {
     page: toc;
-    font-family: Courier;
+    font-family: "Courier New";
   }
   [data-print="grouped"] > #foreword,
   [data-print="paged"] > #foreword {
     page: foreword;
-    font-family: Courier;
+    font-family: "Courier New";
   }
   [data-print="grouped"] > #introduction,
   [data-print="paged"] > #introduction {
     page: introduction;
-    font-family: Courier;
+    font-family: "Courier New";
   }
   [data-print="grouped"] > #conclusion,
   [data-print="paged"] > #conclusion {
     page: conclusion;
-    font-family: Courier;
+    font-family: "Courier New";
   }
   [data-print="grouped"] > .chapter,
   [data-print="paged"] > .chapter {

@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : virtualkeyboardpolicy"
+title: "Attribut HTML universel : `virtualkeyboardpolicy`"
 short-title: virtualkeyboardpolicy
 slug: Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 {{SeeCompatTable}}

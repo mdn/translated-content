@@ -15,11 +15,11 @@ Nos artigos anteriores, analisamos todos os detalhes essenciais da teoria e da s
       <td>
         Conhecimentos básicos de informática, conhecimento básico de HTML e CSS,
         familiaridade com o básico de JavaScript (veja
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">First steps</a> e
-        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">First steps</a> e
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
           >Building blocks</a
         >) e o básico de OOJS (veja
-        <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting/Object_basics"
           >Introduction to objects</a
         >).
       </td>

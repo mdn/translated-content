@@ -73,7 +73,7 @@ export function myFunction() {
 ```js-nolint example-bad
 export using resource1 = getResource(); // SyntaxError
 
-// 構文場は許されるが、避けるべき
+// 構文上は許されるが、避けるべき
 using resource2 = getResource();
 export { resource2 };
 ```

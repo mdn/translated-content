@@ -15,7 +15,7 @@ new FinalizationRegistry(callbackFn)
 ```
 
 > [!NOTE]
-> `FinalizationRegistry()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` déclenche une {{JSxRef("TypeError")}}.
+> `FinalizationRegistry()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` déclenche une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 

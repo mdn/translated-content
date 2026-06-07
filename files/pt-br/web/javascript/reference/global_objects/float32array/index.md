@@ -25,9 +25,9 @@ Para mais informações sobre a síntaxe de construção e os parâmetros, veja 
   - : Retorna um número valor do tamanho do elemento. `4` no caso de uma `Float32Array`.
 - Float32Array.length
   - : Método estático cujo o valor é `0`. Para o tamanho atual (número de elementos), veja {{jsxref("TypedArray.prototype.length", "Float32Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Float32Array.name")}}
+- {{jsxref("Function.name", "Float32Array.name")}}
   - : Retorna o valor em string do nome do constructor. No caso de `Float32Array` é "Float32Array".
-- {{jsxref("TypedArray.prototype", "Float32Array.prototype")}}
+- {{jsxref("TypedArray", "Float32Array.prototype")}}
   - : Prototype para os objetos _TypedArray_.
 
 ## Métodos
@@ -39,7 +39,7 @@ Para mais informações sobre a síntaxe de construção e os parâmetros, veja 
 
 ## `Float32Array` prototype
 
-Todos os objetos `Float32Array` herdam de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+Todos os objetos `Float32Array` herdam de {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Propriedades
 
@@ -108,7 +108,7 @@ Todos os objetos `Float32Array` herdam de {{jsxref("TypedArray.prototype", "%Typ
   - : Retorna uma string localizada representando a array e seus elementos. Veja também {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Float32Array.prototype.toString()")}}
   - : Retorna uma string representando a array e seus elementos. Veja também {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Float32Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Float32Array.prototype[@@iterator]()")}}
   - : Retorna um novo objeto `Array Iterator` que contém os valores para cada índex na Array.
 
 ## Exemplos
@@ -154,7 +154,7 @@ var float32 = new Float32Array(iterable);
 
 ## Notas de compatibilidade
 
-Começando com o ECMAScript 2015, construtores da Array `Float32Array` requerem o uso do operador {{jsxref("Operators/new", "new")}}. Chamando o construtor da Array `Float32Array` como uma função, sem o `new`, irá gerar um erro {{jsxref("TypeError")}} de agora em diante.
+Começando com o ECMAScript 2015, construtores da Array `Float32Array` requerem o uso do operador {{jsxref("new")}}. Chamando o construtor da Array `Float32Array` como uma função, sem o `new`, irá gerar um erro {{jsxref("TypeError")}} de agora em diante.
 
 ```js example-bad
 var dv = Float32Array([1, 2, 3]);

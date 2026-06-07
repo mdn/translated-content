@@ -1,8 +1,9 @@
 ---
-title: orientation
+title: Caractéristique média CSS `orientation`
+short-title: orientation
 slug: Web/CSS/Reference/At-rules/@media/orientation
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`orientation`** permet de tester l'orientation de la {{Glossary("viewport", "zone d'affichage")}} (ou de la boîte de page, pour les [médias paginés](/fr/docs/Web/CSS/Guides/Paged_media)).

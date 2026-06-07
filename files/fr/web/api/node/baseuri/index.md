@@ -17,7 +17,7 @@ En général, l'URL de base est simplement l'emplacement du document, mais elle 
 var baseURI = node.baseURI;
 ```
 
-- `baseURI` est une {{ domxref("DOMString") }} (_chaîne de caractères_) représentant l'URL de base du {{domxref("Node")}} spécifié. Elle peut être `null` s'il est impossible d'obtenir une URI absolue.
+- `baseURI` est une {{ jsxref("String") }} (_chaîne de caractères_) représentant l'URL de base du {{domxref("Node")}} spécifié. Elle peut être `null` s'il est impossible d'obtenir une URI absolue.
 - `node.baseURI` est en lecture seule.
 - `node.baseURI` peut changer avec le temps (voir ci-dessous).
 

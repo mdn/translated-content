@@ -1,8 +1,9 @@
 ---
-title: font-feature-settings
+title: Propriété CSS `font-feature-settings`
+short-title: font-feature-settings
 slug: Web/CSS/Reference/Properties/font-feature-settings
 l10n:
-  sourceCommit: c5a0ee66baf779b702ffae6d964d1f365381767c
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-feature-settings`** permet de contrôler les fonctionnalités typographiques des polices OpenType.

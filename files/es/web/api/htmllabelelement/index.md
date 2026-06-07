@@ -7,7 +7,7 @@ slug: Web/API/HTMLLabelElement
 
 La interfaz **`HTMLLabelElement`** proporciona acceso a propiedades especificas de los elementos {{HTMLElement("label")}}. A su vez, hereda métodos y propiedades de la interfaz base {{domxref("HTMLElement")}}.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Propiedades
 

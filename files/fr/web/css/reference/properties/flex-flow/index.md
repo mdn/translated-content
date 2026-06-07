@@ -1,8 +1,9 @@
 ---
-title: flex-flow
+title: Propriété CSS `flex-flow`
+short-title: flex-flow
 slug: Web/CSS/Reference/Properties/flex-flow
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS **`flex-flow`**) définit la direction d'un conteneur flexible ainsi que son comportement de retour à la ligne.

@@ -22,7 +22,7 @@ JavaScript-фреймворки являются неотъемлемой час
 
 ## Prerequisites
 
-You should really learn the basics of the core web languages first before attempting to move on to learning client-side frameworks — [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn/CSS), and especially [JavaScript](/ru/docs/Learn/JavaScript).
+You should really learn the basics of the core web languages first before attempting to move on to learning client-side frameworks — [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn_web_development/Core/Styling_basics), and especially [JavaScript](/ru/docs/Learn_web_development/Core/Scripting).
 
 Your code will be richer and more professional as a result, and you'll be able to troubleshoot problems with more confidence if you understand the fundamental web platform features that the frameworks are building on top of.
 

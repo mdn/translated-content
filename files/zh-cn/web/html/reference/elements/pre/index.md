@@ -41,12 +41,12 @@ pre {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">内容类别</a></th>
-   <td>流内容 ( <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>) , 可触知的内容 (palpable content).</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类别</a></th>
+   <td>流内容 ( <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>) , 可触知的内容 (palpable content).</td>
   </tr>
   <tr>
    <th scope="row">允许的 内容</th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -54,7 +54,7 @@ pre {
   </tr>
   <tr>
    <th scope="row">允许的 父元素</th>
-   <td>任何可以接受流内容 ( <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>) 的元素</td>
+   <td>任何可以接受流内容 ( <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>) 的元素</td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>

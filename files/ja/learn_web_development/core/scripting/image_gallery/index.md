@@ -1,104 +1,251 @@
 ---
-title: "課題: イメージギャラリー"
+title: "課題: 画像ギャラリー"
 slug: Learn_web_development/Core/Scripting/Image_gallery
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 50a1895c9c499b1b9207f7af945a0fe45de58cca
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}
-
-JavaScript の基本的な構成要素を見てきたところで、これからたくさんのウェブサイトで見かける項目、JavaScript で動作するイメージギャラリーをつくってみることで、あなたが得た繰り返し、関数、条件とイベントの知識を試してみましょう。
+この課題では、多くのウェブサイトでよく見かける、JavaScript を使った画像ギャラリーを作成してもらいます。その過程で、ループ、関数、条件分岐、イベント、DOM スクリプティング、およびオブジェクトの基礎に関する知識が試されます。
 
 ## 出発点
 
-この評価を始めるために、サンプルが入っているサイトへ行って [ZIP ファイルを取得](https://raw.githubusercontent.com/mdn/learning-area/main/javascript/building-blocks/gallery/gallery-start.zip)して、コンピューターのどこかに展開し、ローカルで始めてください。
+始めるには、下記コードサンプルパネルにある **Play** ボタンをクリックし、提供された本文テキストを MDN Playground で開いてください。[プロジェクト概要](#プロジェクト概要)の節の手順に従い、JavaScript の機能を完成させてください。
 
-別の方法として、オンラインエディターを使用することもできます。例えば、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などです。
+HTML は次のようになります。
 
-> [!NOTE]
-> もし行き詰まったら、私たちの[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
-
-## プロジェクト概要
-
-HTML、CSS と画像および数行の JavaScript のコードが提供されています。必要な JavaScript を書いて、これを動くプログラムにする必要があります。HTML の本体は次のようになっています。
-
-```html-nolint
-<h1>イメージギャラリーの例</h1>
+```html-nolint live-sample___gallery-start live-sample___gallery-finish
+<h1>画像ギャラリーの例</h1>
 
 <div class="full-img">
   <img
     class="displayed-img"
-    src="images/pic1.jpg"
-    alt="人間の青い目の拡大" />
+    src="https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic1.jpg"
+    alt="人間の目の拡大" />
   <div class="overlay"></div>
-  <button class="dark">Darken</button>
+  <button class="dark">暗く</button>
 </div>
 
 <div class="thumb-bar"></div>
 ```
 
-例ではこのように見えます。
+出発点の JavaScript はこのようになります。
 
-![上部に大きな画像、下記に 5 つのサムネイルを配置した画像ギャラリー。](gallery.png)
+```js live-sample___gallery-start
+const displayedImage = document.querySelector(".displayed-img");
+const thumbBar = document.querySelector(".thumb-bar");
 
-例にある CSS ファイルで最も興味深い部分は次の通りです。
-
-- `full-img <div>` の内側に 3 つの要素が絶対位置指定されています ー `<img>` にはフルサイズの画像が表示されています。その上に `<img>` と同じサイズになるようにサイズ調整された空の`<div>` が置かれています (これは半透明の背景色で画像を暗くする効果に使われます)。そして `<button>` は暗くする効果をコントロールするために使われます。
-- `thumb-bar <div>` (いわゆるサムネイル画像) 内の画像は幅を 20% に設定し、左側に浮かせて一行に並べています。
-
-JavaScript に必要なものは次の通りです。
-
-- `const` 配列を宣言し、各画像のファイル名を `'pic1.jpg'` のように列挙します。
-- `const` オブジェクトを宣言し、各画像の代替テキストを列挙します。
-- ファイル名の配列をループし、それぞれの要素に対して `<img>` 要素を `thumb-bar <div>` の中に挿入し、その画像を代替テキストとともにページに埋め込みます。
-- `thumb-bar <div>` 内の各 `<img>` にクリックイベントリスナーを追加し、クリックされたときに対応する画像と代替テキストが `displayed-img <img>` 要素に表示されるようにします。
-- `<button>` にクリックイベントリスナーを追加し、クリックされるとフルサイズの画像に暗転効果が適用されるようにします。再びクリックされると、暗転効果は再び除去されます。
-
-もっとアイデアを加えると、[最終的な例](https://mdn.github.io/learning-area/javascript/building-blocks/gallery/) のようになります (ソースコードをのぞかないように！)
-
-## 完成へのステップ
-
-次のセクションですべきことを説明します。
-
-## 画像ファイル名の配列を宣言する
-
-ギャラリーに掲載する画像のファイル名をすべて列挙した配列を作成する必要があります。配列は定数として宣言する必要があります。
-
-### 画像をループ処理する
-
-すでに `thumbBar` という変数に `thumb-bar <div>` の参照を格納するようにしています。新しい `<img>` 要素を作って、その `src` および `alt` 属性にプレースホルダーとして値 `xxx` を設定してください。そして、新しい `<img>` 要素を `thumbBar` に追加してください。
-
-必要なことは次の通りです。
-
-1. "Looping through images" コメントの下の部分のコードを、配列内のファイル名をすべてループするループの中に入れてください。
-2. ループの反復処理ごとに、プレースホルダー `xxx` の値を、画像へのパスと alt 属性に等しい文字列で置き換えます。それぞれのケースで `src` と `alt` 属性の値をこれらの値に設定します。画像は images ディレクトリー内にあり、その名前は `pic1.jpg`、`pic2.jpg` などであることを忘れないでください。
-
-### クリックイベントリスナーをそれぞれのサムネイル画像に追加
-
-ループの反復処理ごとに、現在の `newImage` にクリックリスナーを追加する必要があります。このリスナーは現在の画像の `src` 属性の値を見つけます。`displayed-img <img>` の `src` 属性の値を引数として渡されたものの `src` 値へ設定します。次に `alt` 属性についても同じようにします。
-
-その代わりに、サムネイルバーへ単一のイベントリスナーを追加しても構いません。
-
-### 暗くする/明るくするボタンを処理するハンドラーを書く
-
-暗くする/明るくする `<button>` が残っています。`btn` という変数に `<button>` への参照を格納するコードはすでにご紹介しています。それらにクリックイベントリスナーに追加する必要があります。
-
-1. `<button>` にセットされている現在のクラス名をチェックします。これもまた、`getAttribute()` を使えば取得できます。
-2. クラス名が `"dark"` なら、`<button>` のクラスを ([`setAttribute()`](/ja/docs/Web/API/Element/setAttribute) を使って) `"light"` に変更します。テキストも "Lighten" にします。そして、オーバーレイ `<div>` の {{cssxref("background-color")}} を `"rgba(0,0,0,0.5)"` にします。
-3. クラス名が `"dark"` でなければ、`<button>` のクラスを `"dark"` に変更します。テキストを "Darken" に戻します。そしてオーバーレイの `<div>` の {{cssxref("background-color")}} を `"rgb(0 0 0 / 0%)"` にします。
-
-次のコードは上記の 2 と 3 で示された変更を行う基本的なものです。
-
-```js
-btn.setAttribute("class", xxx);
-btn.textContent = xxx;
-overlay.style.backgroundColor = xxx;
+const btn = document.querySelector("button");
+const overlay = document.querySelector(".overlay");
 ```
+
+{{EmbedLiveSample("gallery-start", "100%", 700)}}
+
+```css hidden live-sample___gallery-start live-sample___gallery-finish
+body {
+  font-family: sans-serif;
+  width: 640px;
+  margin: 0 auto;
+  background-color: lightgray;
+}
+
+h1 {
+  text-align: center;
+}
+
+.full-img {
+  position: relative;
+  display: block;
+  width: 640px;
+  height: 480px;
+  margin-bottom: 2px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 480px;
+}
+
+button {
+  background: rgb(150 150 150 / 0.6);
+  border: 1px solid #999999;
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 2px;
+}
+
+button:hover,
+button:focus {
+  color: rgb(150 150 150 / 1);
+  background-color: black;
+}
+
+.thumb-bar {
+  display: flex;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.thumb-bar img {
+  display: block;
+  width: 100px;
+  flex: 1;
+}
+
+.thumb-bar img:hover,
+.thumb-bar img:focus {
+  outline: 2px solid blue;
+}
+```
+
+簡潔にするため、このギャラリーの CSS は非表示にしていますが、このアプリを MDN Playground を表示すると見ることができます。
+
+## プロジェクト概要
+
+HTML と CSS と数行の JavaScript コードが提供されています。以下の指示に従い、これらを実際に動作する画像ギャラリーにするために必要な JavaScript を記述してください。
+
+ギャラリーは、大きな画像とサムネイルの列で構成されます。サムネイルをクリックするか、タブキーで移動して <kbd>Enter</kbd>/<kbd>Return</kbd> キーを押すと、そのサムネイルが大きな画像として表示されるようになります。また、該当する `<img>` 要素も、`alt` テキストを正しく更新する必要があります。
+
+左上隅にはボタンがあり、これを繰り返し押すと、大きな画像の上に重ねられた `<div>` 要素の透明度を変更することで、画像の色調を暗い色と明るい色の間で切り替えることができます。
+
+例文に埋め込む必要のある画像と、必要な `alt` テキストは次のとおりです。
+
+- [`pic1.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic1.jpg): "人間の目のクローズアップ"
+- [`pic2.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic2.jpg): "波のような岩"
+- [`pic3.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic3.jpg): "紫と白のパンジー"
+- [`pic4.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic4.jpg): "ファラオの墓にある壁画"
+- [`pic5.jpg`](https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic5.jpg): "葉の上の大きな蛾"
+
+### データオブジェクトの作成
+
+まず、`images` という名前のオブジェクトの配列を宣言していただきます。各オブジェクトには、次の 2 つのプロパティを含める必要があります。
+
+- `filename`: 画像ファイルの名前（完全 URL ではありません）。
+- `alt`: 画像の `alt` テキスト。
+
+### 画像をサムネイルバーに追加
+
+次に、`images` をループ処理し、DOM スクリプトを使用して、`<img>` 要素を介してそれらをすべてページに埋め込んでください。これらは、`thumbBar` 定数ですでに参照している、クラス名 `thumb-bar` の `<div>` 要素の子要素として配置する必要があります。
+
+1. `baseURL` という名前の定数を作成し、各画像ファイルのベース URL（ファイル名を除いた URL 全体）を格納します。
+2. `for ... of` ループを作成し、`images` の中をループ処理します。
+3. それぞれの画像に対して、新しい `<img>` 要素を作成します。
+4. `<img>` のソースを画像の URL と等しくなるように設定します。これは `baseURL` と `filename` の組み合わせとします。さらに、`alt` 属性が `alt` テキストと等しくなるようにします。
+5. もう一つ属性を追加して、`<img>` がキーボードからフォーカス設定できるようにします。
+6. その `<img>` を `thumbBar` に追加します。
+7. `click` イベントハンドラーを `<img>` に追加し、クリックされたときに `updateDisplayedImage()` という関数が実行され、クリックされた画像がフルサイズで表示されるようにします。この関数は後で作成します。
+8. この `<img>` に、もう 1 つイベントハンドラーを追加します。これにより、キーボードでフォーカスが移動した後、<kbd>Enter</kbd>/<kbd>Return</kbd> キー（他のキーは除く）を押すことで、クリックされた画像をフルサイズで表示できるようにします。これは、実現には少し調査が必要な追加目標です。
+
+### `updateDisplayedImage()` 関数の作成
+
+それでは、選択されたサムネイルをフルサイズで表示する関数を作成しましょう。フルサイズの `<img>` 要素への参照は、`displayedImage` という定数に格納されています。
+
+1. `updateDisplayedImage()` 関数を定義します。
+2. 関数本体内で、`displayedImage` のソースを、アクティブになった `<img>` のソースと同じに設定します。
+3. `displayedImage` の代替テキストを、アクティブになった `<img>` の代替テキストと同じに設定します。
+
+### 暗く/明るくボタンに配線する
+
+「暗く/明るく」の `<button>` への参照を `btn` 定数に、フルサイズの `<img>` の上に重ねた透明な `<div>` への参照を `overlay` 定数に保存しました。以下の作業を行ってください。
+
+1. `click` イベントハンドラーを `<button>` に追加し、ハンドラー関数として無名関数を設定します。
+2. 関数本体の中で、`<button>` 要素の `class` 属性に `dark` が設定されているかどうかを判定する条件分岐を追加してください。
+3. クリックされた時に `<button>` 要素の `class` が `dark` になっている場合、そのテキストコンテンツを `明るく` に変更し、`overlay` 要素の背景色を `rgb(0 0 0 / 0.5)` に変更します。その後、`<button>` 要素の `dark`クラスを削除します。
+4. クリックされた時に `<button>` 要素の `class` 属性に `dark` が設定されていない場合、そのテキストコンテンツを `暗く` に変更し、`overlay` 要素の背景色を `rgb(0 0 0 / 0)` に変更してください。また、`<button>` 要素に `dark` クラスを追加してください。
+5. 条件分岐の後に、たった 1 行のコードを実行して `dark` クラスを切り替える方法は分かりますか？これもまた、少し難易度の高い目標ですが、ぜひ挑戦してみてください。
 
 ## ヒントとコツ
 
 - HTML と CSS は全く編集する必要はありません。
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}
+## 例
+
+完成したアプリは、次のライブ例のように動作するはずです。
+
+{{EmbedLiveSample("gallery-finish", "100%", 700)}}
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+完成した JavaScript はこのようになるはずです。
+
+```js live-sample___gallery-finish
+const displayedImage = document.querySelector(".displayed-img");
+const thumbBar = document.querySelector(".thumb-bar");
+
+const btn = document.querySelector("button");
+const overlay = document.querySelector(".overlay");
+
+// 模範解答: データオブジェクトの作成
+
+const images = [
+  { filename: "pic1.jpg", alt: "人間の目のクローズアップ" },
+  { filename: "pic2.jpg", alt: "波のような岩" },
+  { filename: "pic3.jpg", alt: "紫と白のパンジー" },
+  { filename: "pic4.jpg", alt: "ファラオの墓にある壁画" },
+  { filename: "pic5.jpg", alt: "葉の上の大きな蛾" },
+];
+
+// 模範解答: すべての画像を反復処理
+
+// 画像のベース URL を含む baseURL 定数を作成
+const baseURL =
+  "https://mdn.github.io/shared-assets/images/examples/learn/gallery/";
+
+// for...of ループを使用してすべての画像を反復処理
+for (const image of images) {
+  // 新しい画像要素を作成
+  const newImage = document.createElement("img");
+  // その画像のソースと代替テキストを設定
+  newImage.src = `${baseURL}${image.filename}`;
+  newImage.alt = image.alt;
+  // 画像をキーボードからフォーカス設定できるようにする
+  newImage.tabIndex = "0";
+  // 画像を thumbBar の子として追加
+  thumbBar.appendChild(newImage);
+  // サムネイルをクリックした際に、画像をフルサイズで表示するように画面を更新
+  newImage.addEventListener("click", updateDisplayedImage);
+  // フォーカスが当たった状態で "Enter" キーが押された際、
+  // 画像をフルサイズで表示するように画面を更新
+  newImage.addEventListener("keydown", (e) => {
+    if (e.code === "Enter") {
+      updateDisplayedImage(e);
+    }
+  });
+}
+
+// 模範解答: updateDisplayedImage() 関数の作成
+
+function updateDisplayedImage(e) {
+  displayedImage.src = e.target.src;
+  displayedImage.alt = e.target.alt;
+}
+
+// 模範解答: 暗く/明るくボタンに配線する
+
+// ボタンに click イベントリスナーを追加
+btn.addEventListener("click", () => {
+  // ボタンに "dark" クラスが設定されていたら、
+  // テキストを "明るく" に変更してオーバーレイを暗くする
+  if (btn.classList.contains("dark")) {
+    btn.textContent = "明るく";
+    overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
+  } else {
+    // 送電返れば、テキストを "暗く" に変更して
+    // オーバーレイを明るくする
+    btn.textContent = "暗く";
+    overlay.style.backgroundColor = "rgb(0 0 0 / 0)";
+  }
+  // 次のボタンが押される準備としてクラスを切り替える
+  btn.classList.toggle("dark");
+});
+```
+
+</details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}

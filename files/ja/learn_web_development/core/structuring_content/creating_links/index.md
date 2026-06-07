@@ -72,7 +72,7 @@ l10n:
 [Mozilla ホームページ](https://www.mozilla.org/ja/)へのリンクを作成しています。
 
 > [!NOTE]
-> Scrimba の [Anchor tags](https://scrimba.com/learn-html-and-css-c0p/~0a?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> スクリムは、 HTML を使用してリンクを作成する方法をインタラクティブに実演し、さらに自分自身でリンクを作成するための課題を提示します。
+> Scrimba の [Anchor tags](https://scrimba.com/learn-html-and-css-c0p/~0a?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> スクリムは、 HTML を使用してリンクを作成する方法をインタラクティブに実演し、さらに自分自身でリンクを作成するための課題を提示します。
 
 ### ブロックレベルリンク
 

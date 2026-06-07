@@ -7,7 +7,7 @@ slug: Web/API/HTMLHeadingElement
 
 **`HTMLHeadingElement`** интерфейс представляет различные элементы заголовков. Наследует методы и свойства из {{domxref("HTMLElement")}}.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 

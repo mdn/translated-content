@@ -138,14 +138,14 @@ li li {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >，如果 <code>&#x3C;ul></code> 元素的子元素包含至少一个 {{HTMLElement("li")}} 元素，则为<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容">可感知内容</a>。
+        >，如果 <code>&#x3C;ul></code> 元素的子元素包含至少一个 {{HTMLElement("li")}} 元素，则为<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容">可感知内容</a>。
       </td>
     </tr>
     <tr>
@@ -161,7 +161,7 @@ li li {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的元素。
       </td>
@@ -170,7 +170,7 @@ li li {
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
             >list</a
           ></code
         >

@@ -21,7 +21,7 @@ boombox の外見は次の通りです。
 
 [こちらから最終的なデモを Codepen で確認する](https://codepen.io/Rumyra/pen/qyMzqN/)か、[ソースコードを GitHub で](https://github.com/mdn/webaudio-examples/tree/master/audio-basics)見るかしてください。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 最新のブラウザーは Web Audio API のほとんどの機能によく対応しています。 API の機能はたくさんありますので、もっと正確な情報は、各リファレンスページのブラウザー互換性一覧表をチェックする必要があるでしょう。
 

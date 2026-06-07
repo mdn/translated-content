@@ -25,7 +25,7 @@ x | y
 
 ## 解説
 
-`|` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。数値の場合、この演算子は 32 ビット整数をを返します。長整数の場合、演算子は長整数をを返します。最初のオペランドを[数値型に変換し](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への変換)、その型を検査します。オペランドが長整数になった場合、長整数の OR を実行します。そうでない場合、オペランドを [32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)に変換し、数値のビット単位の OR を実行します。もし一方のオペランドが長整数になり、もう一方が数値になる場合は、 {{jsxref("TypeError")}} が発生します。
+`|` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。数値の場合、この演算子は 32 ビット整数を返します。長整数の場合、演算子は長整数を返します。最初のオペランドを[数値型に変換し](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への変換)、その型を検査します。オペランドが長整数になった場合、長整数の OR を実行します。そうでない場合、オペランドを [32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)に変換し、数値のビット単位の OR を実行します。もし一方のオペランドが長整数になり、もう一方が数値になる場合は、 {{jsxref("TypeError")}} が発生します。
 
 この演算子は、オペランドのビット表現を [2 の補数](https://ja.wikipedia.org/wiki/2の補数)で操作します。最初のオペランドのそれぞれのビットは、対応する 2 つ目のオペランドのビットと、 1 番目のビット同士、 2 番目のビット同士というようにペアになります。演算はそれぞれのビットのペアに適用され、結果はビット単位で構築されます。
 

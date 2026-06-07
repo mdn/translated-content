@@ -94,7 +94,7 @@ console.log(geo.invalidReason);
 <div id="cover">カバー要素</div>
 ```
 
-次に {{htmlelement("p")}} 要素を提供し、それぞれのスタイルセットによって生成された `invalidReason` を表示できるようにします。。
+次に {{htmlelement("p")}} 要素を提供し、それぞれのスタイルセットによって生成された `invalidReason` を表示できるようにします。
 
 ```html
 <p id="reason"></p>

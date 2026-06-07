@@ -67,10 +67,10 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 ### JavaScript
 
 - [Numeric separators](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#数値の区切り文字) をサポートしました ([Firefox バグ 1435818](https://bugzil.la/1435818))。
-- {{jsxref("RelativeTimeFormat.formatToParts", "Intl.RelativeTimeFormat.formatToParts()")}} メソッドを実装しました ([Firefox バグ 1473229](https://bugzil.la/1473229))。
-- ECMAScript 402 Intl API に対応して、{{jsxref("BigInt.prototype.toLocaleString()")}} メソッドが `locales` および `options` 引数とともに動作するように更新しました。また、{{jsxref("NumberFormat.format", "Intl.NumberFormat.format()")}} および {{jsxref("NumberFormat.formatToParts", "Intl.NumberFormat.formatToParts()")}} が {{jsxref("BigInt")}} 値を受け入れるようになりました ([Firefox バグ 1543677](https://bugzil.la/1543677))。
+- {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.formatToParts()")}} メソッドを実装しました ([Firefox バグ 1473229](https://bugzil.la/1473229))。
+- ECMAScript 402 Intl API に対応して、{{jsxref("BigInt.prototype.toLocaleString()")}} メソッドが `locales` および `options` 引数とともに動作するように更新しました。また、{{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.format()")}} および {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.formatToParts()")}} が {{jsxref("BigInt")}} 値を受け入れるようになりました ([Firefox バグ 1543677](https://bugzil.la/1543677))。
 - 最新の ECMAScript 仕様に対応して、先頭のゼロを [BigInt リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#長整数リテラル) で拒否するようになりました。`08n` や `09n` は、`07n` のような古い 8 進数値を使用した場合のエラーと同様に無効です。8 進 `BigInt` 数値では常に、先頭のゼロと文字 "o" (小文字または大文字) を使用してください (すなわち `0755n` ではなく `0o755n`)。[Firefox バグ 1568619](https://bugzil.la/1568619) をご覧ください。
-- {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} コンストラクターで Unicode 拡張キーの "nu" をサポートしました。また、{{jsxref("RelativeTimeFormat.resolvedOptions", "Intl.RelativeTimeFormat.resolvedOptions()")}} メソッドが `numberingSystem` も返すようになりました ([Firefox バグ 1521819](https://bugzil.la/1521819))。
+- {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} コンストラクターで Unicode 拡張キーの "nu" をサポートしました。また、{{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.resolvedOptions()")}} メソッドが `numberingSystem` も返すようになりました ([Firefox バグ 1521819](https://bugzil.la/1521819))。
 
 ### API
 

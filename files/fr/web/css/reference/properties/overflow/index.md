@@ -1,14 +1,14 @@
 ---
-title: overflow
+title: Propriété CSS `overflow`
+short-title: overflow
 slug: Web/CSS/Reference/Properties/overflow
-original_slug: Web/CSS/overflow
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`overflow`** définit le comportement souhaité lorsque le contenu ne tient pas dans la boîte de remplissage (<i lang="en">padding</i> en anglais) de l'élément (dépassements) dans la direction horizontale et/ou verticale.
 
-La propriété CSS **`overflow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui définit comment gérer le dépassement du contenu d'un élément dans son bloc. Elle définit les valeurs des propriétés {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}}.
-
-{{InteractiveExample("CSS Demo: overflow")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: overflow")}}
 
 ```css interactive-example-choice
 overflow: visible;
@@ -33,9 +33,10 @@ overflow: auto;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <p id="example-element">
-    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
-    Inn Hall. Implacable November weather. As much mud in the streets as if the
-    waters had but newly retired from the face of the earth.
+    Le trimestre de la Saint-Michel vient de s'achever, et le Lord Chancelier
+    siège à Lincoln's Inn Hall. Le temps de novembre est implacable. Il y a
+    autant de boue dans les rues que si les eaux venaient à peine de se retirer
+    de la surface de la terre.
   </p>
 </section>
 ```
@@ -50,15 +51,12 @@ overflow: auto;
 }
 ```
 
-Lorsqu'on utilise la propriété `overflow` avec une autre valeur que `visible` (la valeur par défaut), cela entraîne la création [d'un nouveau contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context). Cette création est nécessaire d'un point de vue technique. Ceci est nécessaire techniquement puisque si un élément flottant traverse l'élément avec barres de défilement, cela forcera l'encapsulation du contenu de ce dernier autour de l'élément flottant. L'encapsulation devrait alors se produire après chaque défilement de la barre et mènerait à une expérience utilisateur dégradée
+## Propriétés constitutives
 
-Afin que la propriété `overflow` puisse avoir un effet, le conteneur de niveau de bloc doit avoir une hauteur limite (définie grâce à {{cssxref("height")}} ou {{cssxref("max-height")}}) ou avoir `white-space` avec la valeur `nowrap.`
+Cette propriété est un raccourci pour les propriétés CSS suivantes&nbsp;:
 
-> [!NOTE]
-> Si on définit un axe avec `visible` (la valeur par défaut) et qu'on définit l'autre axe avec une valeur différente, alors la valeur du premier axe (`visible`) sera considérée comme `auto`.
-
-> [!NOTE]
-> Lorsqu'on définit, via un script, la propriété `scrollTop` sur les éléments HTML pertinents, même lorsque `overflow` vaut `hidden`, il faut parfois faire défiler l'élément.
+- {{CSSxRef("overflow-x")}}
+- {{CSSxRef("overflow-y")}}
 
 ## Syntaxe
 
@@ -74,37 +72,42 @@ overflow: hidden visible;
 /* Valeurs globales */
 overflow: inherit;
 overflow: initial;
+overflow: revert;
+overflow: revert-layer;
 overflow: unset;
 ```
 
-La propriété `overflow` peut être définie grâce à un ou deux des mots-clés suivants. Si deux mots-clés sont utilisé, le premier sera appliqué à `overflow-x` et le second à `overflow-y`. Si une seule valeur est utilisée, elle sera appliquée à `overflow-x` et à `overflow-y`.
+La propriété `overflow` est définie avec un ou deux mots-clés {{CSSxRef("overflow_value", "&lt;overflow&gt;")}}. Si un seul mot-clé est défini, `overflow-x` et `overflow-y` sont définis avec la même valeur. Si deux mots-clés sont définis, la première valeur s'applique à `overflow-x` dans la direction horizontale et la seconde valeur s'applique à `overflow-y` dans la direction verticale.
 
 ### Valeurs
 
 - `visible`
-  - : La valeur par défaut. Le contenu n'est pas rogné. Le contenu peut éventuellement être affiché en dehors de la boîte de remplissage (_padding_).
+  - : Le contenu débordant n'est pas coupé et peut être visible en dehors de la boîte de remplissage de l'élément. La boîte de l'élément n'est pas un {{Glossary("scroll container", "conteneur de défilement")}}. C'est la valeur par défaut de la propriété `overflow`.
 - `hidden`
-  - : Le contenu est rogné si besoin pour s'inscrire dans la boîte de remplissage (_padding_) et aucune barre de défilement n'est affichée.
+  - : Le contenu débordant est coupé à la boîte de remplissage de l'élément. Il n'y a pas de barres de défilement, et le contenu coupé n'est pas visible (c'est-à-dire que le contenu coupé est masqué), mais le contenu existe toujours. Les agents utilisateurs n'ajoutent pas de barres de défilement et n'autorisent pas non plus les utilisateur·ice·s à voir le contenu en dehors de la zone coupée par des actions telles que le glissement sur un écran tactile ou l'utilisation de la molette de la souris. Le contenu _peut_ être défilé par programmation (par exemple, en liant à un texte d'ancrage, en tabulant vers un élément masqué mais focalisable, ou en définissant la valeur de la propriété {{DOMxRef("Element.scrollLeft", "scrollLeft")}} ou de la méthode {{DOMxRef("Element.scrollTo", "scrollTo()")}}), auquel cas la boîte de l'élément est un conteneur de défilement.
 - `clip`
-  - : Se comporte comme `hidden` au sens où le contenu est rogné pour s'inscrire dans la boîte de remplissage. Comme `hidden`, `clip` ne présente pas de barre de défilement mais contrairement à `hidden`, `clip` empêche tout défilement, y compris à l'aide de scripts. La boîte n'est pas un conteneur de défilement et ne définit pas de nouveau contexte de formatage. Si on souhaite obtenir un nouveau contexte de formatage, il faudra utiliser {{cssxref("display", "display: flow-root", "#flow-root")}}.
-    Certains navigateurs ne prennent pas encore cette fonctionnalité en charge.
+  - : Le contenu débordant est coupé à la _bordure de découpe du débordement_ de l'élément, définie à l'aide de la propriété {{CSSxRef("overflow-clip-margin")}}. En conséquence, le contenu déborde de la boîte de remplissage de l'élément de la valeur {{CSSxRef("&lt;length&gt;")}} de `overflow-clip-margin` ou de `0px` si elle n'est pas définie. Le contenu débordant en dehors de la zone découpée n'est pas visible, les agents utilisateurs n'ajoutent pas de barre de défilement et le défilement programmatique n'est pas non plus pris en charge. Aucun nouveau [contexte de formatage](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) n'est créé. Pour établir un contexte de formatage, utilisez `overflow: clip` avec {{CSSxRef("display", "display: flow-root", "#flow-root")}}. La boîte de l'élément n'est pas un conteneur de défilement.
 - `scroll`
-  - : Le contenu est rogné pour s'inscrire dans la boîte de remplissage (_padding_) et les navigateurs de bureau affichent des barres de défilement dans tous les cas. Cela évite d'avoir des barres qui apparaissent et disparaissent sans cesse avec du contenu dynamique. Les imprimantes peuvent éventuellement imprimer le contenu qui dépasse.
+  - : Le contenu débordant est coupé à la boîte de remplissage de l'élément, et le contenu débordant peut être défilé dans la vue à l'aide de barres de défilement. Les agents utilisateurs affichent des barres de défilement que le contenu déborde ou non, donc dans les directions horizontale et verticale si la valeur s'applique aux deux directions. L'utilisation de ce mot-clé peut donc empêcher les barres de défilement d'apparaître et de disparaître lorsque le contenu change. Les imprimantes peuvent toujours imprimer le contenu débordant. La boîte de l'élément est un conteneur de défilement.
 - `auto`
-  - : Le comportement est laissé à la discrétion de l'agent utilisateur. Les navigateurs comme Firefox affichent des ascenseurs si le contenu dépasse dans la boîte de remplissage (_padding_)
-- `overlay` {{Deprecated_inline}}
-  - : Cette valeur se comporte comme `auto` sauf que les barres de défilement sont au-dessus du contenu plutôt que de prendre de la place. Cette valeur est uniquement prise en charge par les navigateurs basés sur WebKit (Safari) ou Blink (Chrome, Opera).
+  - : Le contenu débordant est coupé à la boîte de remplissage de l'élément, et le contenu débordant peut être défilé dans la vue à l'aide de barres de défilement. Contrairement à `scroll`, les agents utilisateurs affichent des barres de défilement _uniquement si_ le contenu déborde. Si le contenu tient dans la boîte de remplissage de l'élément, il ressemble à `visible` mais établit toujours un nouveau contexte de formatage. La boîte de l'élément est un conteneur de défilement.
 
-#### Extensions propres au moteur Mozilla
+> [!NOTE]
+> La valeur de mot-clé `overlay` est une valeur héritée équivalente à `auto`. Avec `overlay`, les barres de défilement sont dessinées par-dessus le contenu au lieu de prendre de la place.
 
-- `-moz-scrollbars-none` {{deprecated_inline}}
-  - : `overflow:hidden` doit être utilisé à la place. À partir de Firefox 63, cette fonctionnalité est placée derrière une préférence qui doit être activée. Dans `about:config`, il faut passer `layout.css.overflow.moz-scrollbars.enabled` à `true`.
-- `-moz-scrollbars-horizontal` {{Deprecated_inline}}
-  - : Utilisez {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}} à la place. À partir de Firefox 63, cette fonctionnalité est placée derrière une préférence qui doit être activée. Dans `about:config`, il faut passer `layout.css.overflow.moz-scrollbars.enabled` à `true`.
-- `-moz-scrollbars-vertical` {{Deprecated_inline}}
-  - : Utilisez {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}} à la place. À partir de Firefox 63, cette fonctionnalité est placée derrière une préférence qui doit être activée. Dans `about:config`, il faut passer `layout.css.overflow.moz-scrollbars.enabled` à `true`.
-- `-moz-hidden-unscrollable` {{non-standard_inline}}
-  - : Principalement utilisé en interne et par les thèmes. Cela désactive le défilement pour les éléments XML racines `<html>`, `<body>` (avec les flèches du clavier et la roue de la souris).
+## Description
+
+Les options de débordement incluent la possibilité de masquer le contenu débordant, d'activer les barres de défilement pour visualiser le contenu débordant ou d'afficher le contenu s'écoulant en dehors de la boîte d'un élément dans la zone environnante, ainsi que des combinaisons de ces options.
+
+Les nuances suivantes doivent être prises en compte lors de l'utilisation des différents mots-clés pour `overflow`&nbsp;:
+
+- Définir une valeur autre que `visible` (la valeur par défaut) ou `clip` pour `overflow` crée un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context). Cela est nécessaire pour des raisons techniques&nbsp;; si un flottant intersecte avec un élément défilant, il réorganiserait de force le contenu après chaque étape de défilement, ce qui entraînerait une expérience de défilement lente.
+- Pour qu'un réglage de `overflow` produise l'effet souhaité, l'élément de niveau bloc doit avoir soit une hauteur définie ({{CSSxRef("height")}} ou {{CSSxRef("max-height")}}) si le débordement est dans la direction verticale, une largeur définie ({{CSSxRef("width")}} ou {{CSSxRef("max-width")}}) si le débordement est dans la direction horizontale, une taille de bloc définie ({{CSSxRef("block-size")}} ou {{CSSxRef("max-block-size")}}) si le débordement est dans la direction du bloc, ou une taille en ligne définie ({{CSSxRef("inline-size")}} ou {{CSSxRef("max-inline-size")}}) ou {{CSSxRef("white-space")}} définie sur `nowrap` si le débordement est dans la direction en ligne.
+- Définir overflow sur `visible` dans une direction (c'est-à-dire `overflow-x` ou `overflow-y`) lorsqu'il n'est pas défini sur `visible` ou `clip` dans l'autre direction entraîne le comportement de la valeur `visible` comme `auto`.
+- Définir overflow sur `clip` dans une direction lorsqu'il n'est pas défini sur `visible` ou `clip` dans l'autre direction entraîne le comportement de la valeur `clip` comme `hidden`.
+- La propriété JavaScript {{DOMxRef("Element.scrollTop")}} peut être utilisée pour faire défiler le contenu dans un conteneur de défilement, sauf lorsque `overflow` est défini sur `clip`.
+- Définir `overflow` sur des images et d'autres {{Glossary("replaced elements", "éléments remplacés")}} fonctionne comme prévu dans les navigateurs qui prennent en charge le module CSS Overflow Level 4&nbsp;; dans les versions précédentes de la spécification, les éléments remplacés étaient toujours coupés au conteneur de délimitation.
+  Voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) pour les navigateurs pris en charge.
 
 ## Définition formelle
 
@@ -114,9 +117,15 @@ La propriété `overflow` peut être définie grâce à un ou deux des mots-clé
 
 {{CSSSyntax}}
 
+## Accessibilité
+
+Une zone de contenu défilante n'est pas focalisable au clavier, elle ne peut donc pas être défilée par un utilisateur utilisant uniquement le clavier. Firefox et Chrome 132 et versions ultérieures font exception&nbsp;; ils rendent les conteneurs de défilement focalisables par défaut.
+
+Pour les autres navigateurs, pour permettre aux utilisateur·ice·s utilisant uniquement le clavier de faire défiler le conteneur, vous devrez attribuer un [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) au conteneur en utilisant `tabindex="0"`. Malheureusement, lorsqu'un lecteur d'écran rencontre ce point de tabulation, il peut ne pas avoir de contexte sur le conteneur et pourrait annoncer l'intégralité du contenu du conteneur. Pour atténuer cela, donnez au conteneur un [rôle WAI-ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Roles) approprié (`role="region"`, par exemple) et un nom accessible (avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)).
+
 ## Exemples
 
-### Définir différentes valeurs d'overflow pour le texte
+### Démonstration des résultats des différents mots-clés `overflow`
 
 #### HTML
 
@@ -124,61 +133,97 @@ La propriété `overflow` peut être définie grâce à un ou deux des mots-clé
 <div>
   <code>visible</code>
   <p class="visible">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+    Maya Angelou&nbsp;: «&nbsp;J'ai appris que les gens oublieront ce que vous
+    avez dit, les gens oublieront ce que vous avez fait, mais les gens
+    n'oublieront jamais comment vous les avez fait se sentir.&nbsp;»
   </p>
 </div>
 
 <div>
   <code>hidden</code>
   <p class="hidden">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+    Maya Angelou&nbsp;: «&nbsp;J'ai appris que les gens oublieront ce que vous
+    avez dit, les gens oublieront ce que vous avez fait, mais les gens
+    n'oublieront jamais comment vous les avez fait se sentir.&nbsp;»
+  </p>
+</div>
+
+<div>
+  <code>clip</code>
+  <p class="clip">
+    Maya Angelou&nbsp;: «&nbsp;J'ai appris que les gens oublieront ce que vous
+    avez dit, les gens oublieront ce que vous avez fait, mais les gens
+    n'oublieront jamais comment vous les avez fait se sentir.&nbsp;»
   </p>
 </div>
 
 <div>
   <code>scroll</code>
   <p class="scroll">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+    Maya Angelou&nbsp;: «&nbsp;J'ai appris que les gens oublieront ce que vous
+    avez dit, les gens oublieront ce que vous avez fait, mais les gens
+    n'oublieront jamais comment vous les avez fait se sentir.&nbsp;»
   </p>
 </div>
 
 <div>
   <code>auto</code>
   <p class="auto">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium.
+    Maya Angelou&nbsp;: «&nbsp;J'ai appris que les gens oublieront ce que vous
+    avez dit, les gens oublieront ce que vous avez fait, mais les gens
+    n'oublieront jamais comment vous les avez fait se sentir.&nbsp;»
+  </p>
+</div>
+
+<div>
+  <code>overlay</code>
+  <p class="overlay">
+    Maya Angelou&nbsp;: «&nbsp;J'ai appris que les gens oublieront ce que vous
+    avez dit, les gens oublieront ce que vous avez fait, mais les gens
+    n'oublieront jamais comment vous les avez fait se sentir.&nbsp;»
   </p>
 </div>
 ```
 
 #### CSS
 
-```css
+```css hidden
 body {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: start;
 }
 
 div {
-  margin: 1em;
+  margin: 2em;
   font-size: 1.2em;
 }
 
 p {
-  width: 8em;
+  width: 5em;
   height: 5em;
   border: dotted;
+  margin-top: 0.5em;
 }
 
+div:nth-of-type(5),
+div:nth-of-type(6) {
+  margin-top: 200px;
+}
+```
+
+```css
 p.visible {
   overflow: visible;
 }
 
 p.hidden {
   overflow: hidden;
+}
+
+p.clip {
+  overflow: clip;
+  overflow-clip-margin: 1em;
 }
 
 p.scroll {
@@ -188,11 +233,15 @@ p.scroll {
 p.auto {
   overflow: auto;
 }
+
+p.overlay {
+  overflow: overlay;
+}
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Exemples", "600", "250")}}
+{{EmbedLiveSample("Démonstration des résultats des différents mots-clés `overflow`", 500, 620)}}
 
 ## Spécifications
 
@@ -204,11 +253,9 @@ p.auto {
 
 ## Voir aussi
 
-- {{cssxref("text-overflow")}},
-- {{cssxref("white-space")}},
-- {{cssxref("overflow-x")}},
-- {{cssxref("overflow-y")}},
-- {{cssxref("overflow-inline")}},
-- {{cssxref("overflow-block")}},
-- {{cssxref("clip")}},
-- {{cssxref("display")}}
+- Les propriétés {{CSSxRef("overflow-x")}}, {{CSSxRef("overflow-y")}}
+- Les propriétés {{CSSxRef("overflow-block")}}, {{CSSxRef("overflow-clip-margin")}}, {{CSSxRef("overflow-inline")}}
+- Les propriétés {{CSSxRef("clip")}}, {{CSSxRef("display")}}, {{CSSxRef("text-overflow")}}, {{CSSxRef("white-space")}}
+- L'attribut SVG {{SVGAttr("overflow")}}
+- Le module [de débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
+- [Zones de défilement accessibles uniquement au clavier <sup>(angl.)</sup>](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) sur adrianroselli.com (2022)

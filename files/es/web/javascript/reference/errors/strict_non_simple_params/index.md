@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
 
 {{jsSidebar("Errors", "Errores")}}
 
-La excepción de JavaScript: "`'use strict' no permitida en función`" ocurre cuando se usa una directiva `"use strict"` en la parte superior de una función con {{jsxref("Functions/Default_parameters", "parámetros predeterminados", "", 1)}}, {{jsxref("Functions/rest_parameters", "parámetros rest", "", 1)}} o {{jsxref("Operators/Destructuring_assignment" , "Desestructuración de parámetros", "", 1)}}.
+La excepción de JavaScript: "`'use strict' no permitida en función`" ocurre cuando se usa una directiva `"use strict"` en la parte superior de una función con {{jsxref("Functions/Default_parameters", "parámetros predeterminados", "", 1)}}, {{jsxref("Functions/rest_parameters", "parámetros rest", "", 1)}} o {{jsxref("Operators/Destructuring" , "Desestructuración de parámetros", "", 1)}}.
 
 ## Mensaje
 
@@ -39,7 +39,7 @@ Se escribió una directiva `"use strict"` en la parte superior de una función q
 
 - {{jsxref("Functions/Default_parameters", "Parámetros predeterminados", "", 1)}}
 - {{jsxref("Functions/rest_parameters", "Parámetros rest", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Desestructuración de parámetros", "", 1)}}
+- {{jsxref("Operators/Destructuring", "Desestructuración de parámetros", "", 1)}}
 
 No está permitida una directiva `"use strict"` en la parte superior de dichas funciones según la especificación ECMAScript.
 
@@ -119,4 +119,4 @@ var callback = (() => {
 - {{jsxref("Operators/function", "Expresión function", "", 1)}}
 - {{jsxref("Functions/Default_parameters", "Parámetros predeterminados", "", 1)}}
 - {{jsxref("Functions/rest_parameters", "Parámetros rest", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Desestructuración de parámetros", "", 1)}}
+- {{jsxref("Operators/Destructuring", "Desestructuración de parámetros", "", 1)}}

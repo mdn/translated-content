@@ -1,7 +1,6 @@
 ---
 title: Stratégies pour mener à bien vos tests
 slug: Learn_web_development/Extensions/Testing/Testing_strategies
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}
@@ -14,11 +13,11 @@ Cet article commence en donnant un aperçu sur le sujet des tests sur navigateur
       <th scope="row">Prérequis :</th>
       <td>
         Connaissances avec le noyau des langages
-        <a href="/fr/docs/Learn/HTML">HTML</a>,
-        <a href="/fr/docs/Learn/CSS">CSS</a>, et
-        <a href="/fr/docs/Learn/JavaScript">JavaScript</a> ; une idée du haut
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et
+        <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a> ; une idée du haut
         niveau<a
-          href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/fr/docs/Learn_web_development/Extensions/Testing/Introduction"
         >
           des principes du test en navigateur croisé</a
         >.

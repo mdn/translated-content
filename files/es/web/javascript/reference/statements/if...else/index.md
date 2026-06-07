@@ -195,5 +195,5 @@ El cual es mucho más claro. Sin embargo, en el raro caso que te encuentres en l
 
 ## Véase También
 
-- {{jsxref("Sentencias/block", "block")}}
-- {{jsxref("Sentencias/switch", "switch")}}
+- {{jsxref("Statements/block", "block")}}
+- {{jsxref("Statements/switch", "switch")}}

@@ -300,7 +300,7 @@ label {
 | [`colorspace`](#colorspace)                   | `color`                                                              | 选择颜色值时需要使用的[颜色空间](/zh-CN/docs/Glossary/Color_space)         |
 | [`dirname`](#dirname)                         | `hidden`、`text`、`search`、`url`、`tel`、`email`                    | 表单字段的名称，用于在提交表单时发送元素的方向性                           |
 | [`disabled`](#disabled)                       | 所有类型                                                             | 表单控件是否禁用                                                           |
-| [`form`](#form)                               | 所有类型                                                             | 将控件与表单元素建立练习                                                   |
+| [`form`](#form)                               | 所有类型                                                             | 将控件与表单元素建立联系                                                   |
 | [`formaction`](#formaction)                   | `image`、`submit`                                                    | 要提交表单的 URL 地址                                                      |
 | [`formenctype`](#formenctype)                 | `image`、`submit`                                                    | 提交表单时使用的表单数据编码类型                                           |
 | [`formmethod`](#formmethod)                   | `image`、`submit`                                                    | 提交表单时所使用的 HTTP 方法                                               |

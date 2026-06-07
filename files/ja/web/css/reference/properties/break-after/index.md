@@ -1,12 +1,11 @@
 ---
 title: break-after
 slug: Web/CSS/Reference/Properties/break-after
-original_slug: Web/CSS/break-after
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-**`break-after`** は [CSS](/ja/docs/Web/CSS) のプロパティで、生成されたボックスの後で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
+**`break-after`** は [CSS](/ja/docs/Web/CSS) のプロパティで、生成されたボックスの後で、ページ、段、領域を分割する方法を設定します。ボックスが生成されない場合は、このプロパティは無視されます。
 
 {{InteractiveExample("CSS デモ: break-after")}}
 
@@ -19,19 +18,17 @@ break-after: page;
 ```
 
 ```html-nolint interactive-example
-<section id="default-example">
-  <div>
-    <p>
-      このプロパティの効果は、文書が印刷される時、または印刷のプレビューが表示された時に確認できます。
-    </p>
-    <button id="print-btn">印刷プレビューを表示</button>
-    <div class="box-container">
-      <div class="box">プロパティの前のコンテンツ</div>
-      <div class="box" id="example-element">'break-after' の付いたコンテンツ</div>
-      <div class="box">プロパティの後のコンテンツ</div>
-    </div>
+<div>
+  <p>
+    このプロパティの効果は、文書が印刷される時、または印刷のプレビューが表示された時に確認できます。
+  </p>
+  <button id="print-btn">印刷プレビューを表示</button>
+  <div class="box-container">
+    <div class="box">プロパティの前のコンテンツ</div>
+    <div class="box" id="example-element">'break-after' の付いたコンテンツ</div>
+    <div class="box">プロパティの後のコンテンツ</div>
   </div>
-</section>
+</div>
 ```
 
 ```css interactive-example
@@ -47,43 +44,20 @@ break-after: page;
   background-color: #ffc129;
   color: black;
 }
-
-.hide-element {
-  display: none;
-}
 ```
 
 ```js interactive-example
 const btn = document.getElementById("print-btn");
-const editorContainer = document.getElementsByClassName(
-  "css-editor-container",
-)[0];
-const exampleHTMLElement = document.getElementById("default-example");
-
-const printableSection = document.createElement("div");
-printableSection.setAttribute("id", "printable-section");
-printableSection.classList.add("hide-element");
-document.body.appendChild(printableSection);
 
 btn.addEventListener("click", () => {
-  const exampleContent = exampleHTMLElement.innerHTML;
-
-  editorContainer.classList.add("hide-element");
-  printableSection.innerHTML = exampleContent;
-  printableSection.classList.remove("hide-element");
-
   window.print();
-
-  printableSection.classList.add("hide-element");
-  printableSection.innerHTML = "";
-  editorContainer.classList.remove("hide-element");
 });
 ```
 
 ## 構文
 
 ```css
-/* 一般の区切り値 */
+/* 一般の分割値 */
 break-after: auto;
 break-after: avoid;
 break-after: always;
@@ -97,11 +71,11 @@ break-after: right;
 break-after: recto;
 break-after: verso;
 
-/* 段区切り値 */
+/* 改段値 */
 break-after: avoid-column;
 break-after: column;
 
-/* 領域区切り値 */
+/* 領域分割値 */
 break-after: avoid-region;
 break-after: region;
 
@@ -113,60 +87,60 @@ break-after: revert-layer;
 break-after: unset;
 ```
 
-区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の `break-after` の値、次の要素の {{cssxref("break-before")}} の値、包含要素の {{cssxref("break-inside")}} の値です。
+分割位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の `break-after` の値、次の要素の {{cssxref("break-before")}} の値、包含要素の {{cssxref("break-inside")}} の値です。
 
 分割が行われるかどうかを判断するためには、以下の規則が適用されます。
 
-1. 考慮される 3 つの値の中の何れかに*区切りを強制する値* (`always`, `left`, `right`, `page`, `column`, `region` の何れか) がある場合、それが優先されます。そのような区切りが複数ある場合は、フローの中で最も後に現れる要素のものが使用されます (つまり、 `break-before` の値は `break-after` の値より優先し、それは更に `break-inside` よりも優先します)。
-2. 考慮される 3 つの値の中に*区切りを防止する値* (`avoid`, `avoid-page`, `avoid-region`, `avoid-column` の何れか) が含まれていた場合は、その場所で区切りは適用されません。
+1. 影響される 3 つの値のいずれかに分割を強制する値 (`always`, `left`, `right`, `page`, `column`, `region` のいずれか) がある場合、それが優先されます。そのような分割指定が複数ある場合は、フローの中で最も後に現れる要素のものが使用されます (つまり、 `break-before` の値は `break-after` の値より優先し、それは更に `break-inside` よりも優先します)。
+2. 影響される 3 つの値の分割を抑止する値 (`avoid`, `avoid-page`, `avoid-region`, `avoid-column` のいずれか) が含まれていた場合は、その場所で分割は適用されません。
 
-強制的な区切りが適用されると、必要に応じてソフトな区切りが追加される場合がありますが、 `avoid` に関する値に解決される要素の境界には追加されません。
+強制的な分割が適用されると、必要に応じてソフトな分割が追加される場合がありますが、 `avoid` に関する値に解決される要素の境界には追加されません。
 
 ### 値
 
-#### 一般の区切り値
+#### 一般の分割値
 
 - `auto`
-  - : 該当するボックスの直後に何らかの (ページ、段、領域の) 区切りを挿入することを許可しますが、強制はしません。
+  - : 対象ボックスの直後に何らかの分割（改ページ、改段、領域分割）を挿入することを許可しますが、強制はしません。
 - `avoid`
-  - : 該当するボックスの直後に何らかの (ページ、段、領域の) 区切りを挿入することを禁止します。
+  - : 対象ボックスの直後に何らかの分割（改ページ、改段、領域分割）を挿入することを禁止します。
 - `always`
-  - : 該当するボックスの直後で強制的に改ページを行います。この区切りの種類は断片化のコンテキストを直接含むものです。段組みコンテナーの中であれば強制的な段区切りとなり、ページ付きメディアの (ただし段組みコンテナーの中ではない) 場合はページ区切りになります。
+  - : 対象ボックスの直後で強制的に分割を行います。この分割は、この対象ボックスを直接含む断片化コンテキストで行われます。段組みコンテナーの中であれば強制的な改段となり、ページメディアの場合は（段組みコンテナーの中でなければ）改ページになります。
 - `all`
-  - : 該当するボックスの直後で強制的に改ページを行います。すべての分断しうるコンテキストを通して区切ります。よって、段組みコンテナーの中での区切りは、ページコンテナーの中であれば強制的に段組みとページを区切ります。
+  - : 対象ボックスの直後で強制的に分割を行います。すべての分断しうるコンテキストを通して分割されます。よって、段組みコンテナーの中での分割は、ページコンテナーの中であれば強制的に段組みとページを分割されます。
 
 #### 改ページ値
 
 - `avoid-page`
-  - : 該当するボックスの直後の改ページを禁止します。
+  - : 対象ボックスの直後の改ページを禁止します。
 - `page`
-  - : 該当するボックスの直後で改ページを行います。
+  - : 対象ボックスの直後で改ページを行います。
 - `left`
-  - : 該当するボックスの直後で 1 つまたは 2 つの改ページを行い、次のページが左ページになるようにします。横書きの本では、本の背の左側に置かれているページ、両面印刷では裏側のページです。
+  - : 対象ボックスの直後で 1 回または 2 回の改ページを行い、次のページが左ページになるようにします。横書きの本では、本の背の左側に置かれているページ、両面印刷では裏側のページです。
 - `right`
-  - : 該当するボックスの直後で 1 つまたは 2 つの改ページを行い、次のページが右ページになるようにします。横書きの本では、本の背の右側に置かれているページ、両面印刷では表側のページです。
+  - : 対象ボックスの直後で 1 回または 2 回の改ページを行い、次のページが右ページになるようにします。横書きの本では、本の背の右側に置かれているページ、両面印刷では表側のページです。
 - `recto`
-  - : 該当するボックスの直後で一つまたは二つの改ページを行い、次のページが奇数ページになるようにします。 (奇数ページは左から右に開く場合は右ページになり、右から左に開く場合は左ページになります。)
+  - : 対象ボックスの直後で 1 回または 2 回の改ページを行い、次のページが奇数ページになるようにします。（奇数ページは左から右に開く場合は右ページになり、右から左に開く場合は左ページになります。）
 - `verso`
-  - : 該当するボックスの直後で一つまたは二つの改ページを行い、次のページが偶数ページになるようにします。 (奇数ページは左から右に開く場合は左ページになり、右から左に開く場合は右ページになります。)
+  - : 対象ボックスの直後で 1 回または 2 回の改ページを行い、次のページが偶数ページになるようにします。（奇数ページは左から右に開く場合は左ページになり、右から左に開く場合は右ページになります。）
 
-#### 段区切り値
+#### 改段値
 
 - `avoid-column`
-  - : 該当するボックスの直後の段区切りを禁止します。
+  - : 対象ボックスの直後の改段を禁止します。
 - `column`
-  - : 該当するボックスの直後で段区切りを行います。
+  - : 対象ボックスの直後で改段を行います。
 
-#### 領域区切り値
+#### 領域分割値
 
 - `avoid-region`
-  - : 該当するボックスの直後の領域区切りを禁止します。
+  - : 対象ボックスの直後の領域分割を禁止します。
 - `region`
-  - : 該当するボックスの直後で領域区切りを行います。
+  - : 対象ボックスの直後で領域分割を行います。
 
 ## 改ページの別名
 
-互換性のため、古い {{cssxref("page-break-after")}} はブラウザーから `break-after` の別名として扱われます。これにより、 `page-break-after` を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。
+互換性のため、ブラウザーは古い {{cssxref("page-break-after")}} を `break-after` の別名として扱います。これにより、 `page-break-after` を使用しているサイトが引き続き設計通りに動作することを保証します。一部の値には、次のような別名があります。
 
 | page-break-after | break-after |
 | ---------------- | ----------- |
@@ -177,7 +151,7 @@ break-after: unset;
 | `always`         | `page`      |
 
 > [!NOTE]
-> ブラウザーにおいては `always` の値は `page-break-*` において、段区切りではなくページ区切りとして実装されています。したがって、 Level 4 の仕様書では `always` の値ではなく `page` の別名となっています。
+> `always` の値は `page-break-*` において、ブラウザーにおける改段ではなく改ページとして実装されています。したがって、レベル 4 の仕様書では `always` の値ではなく `page` の別名となっています。
 
 ## 公式定義
 
@@ -189,11 +163,11 @@ break-after: unset;
 
 ## 例
 
-### きれいに段に分割
+### きれいに段を分割
 
 次の例では、すべての段にまたがる `<h1>` (`column-span: all` を使用して実現) と、一連の `<h2>` と段落を `column-width: 200px` を使用して段組みレイアウトしたコンテナーを用意しています。
 
-既定では、小見出しと段落は、見出しの位置が統一されていないため、かなり乱雑にレイアウトされていました。しかし、 `break-after: column` を `<p>` 要素に使うことで、それぞれの要素の後に強制的に改行するようにしたので、各段の先頭に `<h2>` がきちんと配置されます。
+既定では、小見出しと段落は、見出しの位置が統一されていないため、かなり乱雑にレイアウトされていました。しかし、 `break-after: column` を `<p>` 要素に使うことで、それぞれのこの要素の後に強制的に改行するようにしたので、各段の先頭に `<h2>` がきちんと配置されます。
 
 #### HTML
 
@@ -244,7 +218,7 @@ break-after: unset;
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {

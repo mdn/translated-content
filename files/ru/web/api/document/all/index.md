@@ -3,7 +3,7 @@ title: Document.all
 slug: Web/API/Document/all
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header("HTML5")}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 The {{DOMxRef("Document")}} Свойство **`all`** только для чтения интерфейса возвращает: {{DOMxRef("HTMLAllCollection")}} С корнем в узле документа. Другими словами, он возвращает все содержимое страницы.
 

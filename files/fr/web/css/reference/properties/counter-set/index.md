@@ -1,8 +1,9 @@
 ---
-title: counter-set
+title: Propriété CSS `counter-set`
+short-title: counter-set
 slug: Web/CSS/Reference/Properties/counter-set
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`counter-set`** permet d'attribuer des valeurs aux [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) sur l'élément.

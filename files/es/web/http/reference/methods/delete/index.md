@@ -32,7 +32,7 @@ El **método de solicitud HTTP `DELETE`** elimina el recurso especificado.
     </tr>
     <tr>
       <th scope="row">
-        Permitido en <a href="/es/docs/Learn/Forms">formularios HTML</a>
+        Permitido en <a href="/es/docs/Learn_web_development/Extensions/Forms">formularios HTML</a>
       </th>
       <td>No</td>
     </tr>

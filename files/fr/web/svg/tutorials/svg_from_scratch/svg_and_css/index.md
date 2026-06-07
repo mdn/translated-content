@@ -393,7 +393,7 @@ Notes sur cette démonstration :
 > [!NOTE]
 > Modifiez la feuille de style de sorte que les pétales intérieurs deviennent tous roses lorsque le pointeur de la souris passe sur l'un d'entre eux, sans modifier le fonctionnement des pétales extérieurs.<!--</p-->
 
-[Voir une solution à ce défi.](/fr/docs/Web/Guide/CSS/Getting_started/Challenge_solutions#svg_and_css)
+[Voir une solution à ce défi.](/fr/docs/Learn_web_development/Core#svg_and_css)
 
 ## Structure simplifiée
 

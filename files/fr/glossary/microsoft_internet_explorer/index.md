@@ -2,7 +2,7 @@
 title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
 l10n:
-  sourceCommit: ac287b7a4b7de33be5f649a0d3bb7bfca882808f
+  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
 ---
 
 Internet Explorer (ou IE) est un {{Glossary("Browser", "navigateur web")}} graphique gratuit maintenu par Microsoft pour conserver une compatibilité avec son utilisation en entreprise. {{Glossary("Microsoft Edge")}} est actuellement le navigateur par défaut sous Windows.
@@ -18,7 +18,6 @@ Microsoft a mis fin au support d'IE le 15 juin 2022.
 - [Internet Explorer](https://fr.wikipedia.org/wiki/Internet_Explorer) sur Wikipédia
 - [Historique d'Internet Explorer](https://fr.wikipedia.org/wiki/Internet_Explorer#Historique) sur Wikipédia
 - [Versions d'Internet Explorer](https://fr.wikipedia.org/wiki/Internet_Explorer#Versions) sur Wikipédia
-- [Compte à rebours de la fin du support d'IE11 <sup>(angl.)</sup>](https://death-to-ie11.com/)
 - Termes associés du glossaire&nbsp;:
   - {{Glossary("Browser", "Navigateur web")}}
   - {{Glossary("Trident")}} (moteur de rendu d'IE)

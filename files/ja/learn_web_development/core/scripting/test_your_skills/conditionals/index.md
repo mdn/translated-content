@@ -1,10 +1,12 @@
 ---
 title: "確認テスト: 条件文"
-short-title: 条件文
+short-title: "テスト: 条件文"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
 l10n:
-  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
+  sourceCommit: b36d59a0df933597c7d3b55e363f7a59e30d3ba3
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
 
 この確認テストの目的は、あなたが[コードでの意思決定 — 条件文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals)を理解したかどうかを判定することです。
 
@@ -25,11 +27,11 @@ l10n:
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___conditionals-1 live-sample___conditionals-2 live-sample___conditionals-3
+```html hidden live-sample___conditionals-1 live-sample___conditionals-2 live-sample___conditionals-3 live-sample___conditionals-1-finish live-sample___conditionals-2-finish live-sample___conditionals-3-finish
 <section></section>
 ```
 
-```css hidden live-sample___conditionals-1 live-sample___conditionals-2 live-sample___conditionals-3
+```css hidden live-sample___conditionals-1 live-sample___conditionals-2 live-sample___conditionals-3 live-sample___conditionals-1-finish live-sample___conditionals-2-finish live-sample___conditionals-3-finish
 * {
   box-sizing: border-box;
 }
@@ -41,6 +43,12 @@ p {
 ```
 
 <!-- Example-specific code -->
+
+この課題の出発点は次のようなものです（まだ何も見えません）。
+
+{{ EmbedLiveSample("conditionals-1", "100%", 60) }}
+
+この出発点の基盤となるコードは次の通りです。
 
 ```js live-sample___conditionals-1
 let season = "summer";
@@ -56,28 +64,49 @@ para1.textContent = response;
 section.appendChild(para1);
 ```
 
-{{ EmbedLiveSample("conditionals-1", "100%", 60) }}
+更新後の出力の初期状態は、次のようになるはずです。
+
+{{ EmbedLiveSample("conditionals-1-finish", "100%", 60) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完成した JavaScript は、次のようになるでしょう。
 
-```js
+```js-nolint
 let season = "summer";
 let response;
 
 if (season === "summer") {
-  response = "It's probably nice and warm where you are; enjoy the sun!";
+  response = "きっと暖かくて気持ちいいでしょうね。日差しを楽しんで！";
 } else if (season === "winter") {
-  response = "I hope you are not too cold. Put some warm clothes on!";
+  response = "寒すぎないといいのですが。暖かい服を着てください！";
 } else {
   response =
-    "I don't know what the season is where you are. Hope you are well.";
+    "そちらの季節がどうなっているのかは分かりませんが、お元気で。";
 }
 
 // 以下のコードは編集しないでください。
 // ...
+```
+
+```js-nolint hidden live-sample___conditionals-1-finish
+let season = "summer";
+let response;
+
+if (season === "summer") {
+  response = "きっと暖かくて気持ちいいでしょうね。日差しを楽しんで！";
+} else if (season === "winter") {
+  response = "寒すぎないといいのですが。暖かい服を着てください！";
+} else {
+  response =
+    "そちらの季節がどうなっているのかは分かりませんが、お元気で。";
+}
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+para1.textContent = response;
+section.appendChild(para1);
 ```
 
 </details>
@@ -104,6 +133,12 @@ if (season === "summer") {
 下記のライブコードを更新して、完了例を再現してみてください。コードを入力したら、 `machineActive` を `true` に変更して、これがうまく動作するかどうか試してみてください。
 この演習では、`machineActive` 変数の値に関係なく、`Your score is __` という文字列は画面に残ったままになることに注意してください。
 
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample("conditionals-2", "100%", 60) }}
+
+この出発点の基盤となるコードは次の通りです。
+
 ```js live-sample___conditionals-2
 let response;
 let score = 75;
@@ -122,7 +157,9 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-{{ EmbedLiveSample("conditionals-2", "100%", 60) }}
+更新後の出力の初期状態は、次のようになるはずです。
+
+{{ EmbedLiveSample("conditionals-2-finish", "100%", 80) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
@@ -136,12 +173,12 @@ let machineActive = false;
 
 if (machineActive) {
   if (score < 0 || score > 100) {
-    response = ありえません。エラーが発生しました。";
+    response = "ありえません。エラーが発生しました。";
   } else if (score >= 0 && score < 20) {
     response = "ひどい点数だ。完全に失敗だ！";
   } else if (score >= 20 && score < 40) {
     response =
-      "いくらか知っているようだが、かなり悪い点数だ。改善が必要だ。";
+      "いくらか分かっているようですが、かなり悪い点数です。改善が必要です。";
   } else if (score >= 40 && score < 70) {
     response = "悪くない仕事をしましたね！";
   } else if (score >= 70 && score < 90) {
@@ -150,11 +187,44 @@ if (machineActive) {
     response = "すごい点数だね。カンニングしてない？本当？";
   }
 } else {
-  response = "マシンの電源がオフになっています。電源を入れてスコアを処理してください。";
+  response = "電源がオフになっています。電源を入れてスコアを処理してください。";
 }
 
 // 以下のコードは編集しないでください。
 // ...
+```
+
+```js hidden live-sample___conditionals-2-finish
+let response;
+let score = 75;
+let machineActive = false;
+
+if (machineActive) {
+  if (score < 0 || score > 100) {
+    response = "ありえません。エラーが発生しました。";
+  } else if (score >= 0 && score < 20) {
+    response = "ひどい点数だ。完全に失敗だ！";
+  } else if (score >= 20 && score < 40) {
+    response =
+      "いくらか分かっているようですが、かなり悪い点数です。改善が必要です。";
+  } else if (score >= 40 && score < 70) {
+    response = "悪くない仕事をしましたね！";
+  } else if (score >= 70 && score < 90) {
+    response = "素晴らしい点数だ、実によく分かっている。";
+  } else if (score >= 90 && score <= 100) {
+    response = "すごい点数だね。カンニングしてない？本当？";
+  }
+} else {
+  response = "電源がオフになっています。電源を入れてスコアを処理してください。";
+}
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+para1.textContent = `あなたの点数は ${score} です。`;
+para2.textContent = response;
+section.appendChild(para1);
+section.appendChild(para2);
 ```
 
 </details>
@@ -172,6 +242,12 @@ if (machineActive) {
 
 1. マシンのスイッチがオンになっているかどうかを調べる `if...else` 構造を作成し、 `machineResult` 変数に、マシンがオンになっているかオフになっているかをユーザーに指示するメッセージを格納したいと思います。
 2. マシンの電源が入っている場合、2 つ目の条件も実行して、 `pwd` が `cheese` と等しいかどうかを調べます。もしそうなら、 `pwdResult` に文字列を割り当てて、ユーザーにログインに成功したことを指示します。そうでない場合は、`pwdResult` に異なる形の文字列を割り当てて、ログインに失敗したことをユーザーに指示しなければなりません。これを単一の行で、`if...else` 構造でないものを使用してほしいと思います。
+
+この課題の出発点は次のようなものです（まだ何も見えません）。
+
+{{ EmbedLiveSample("conditionals-3", "100%", 60) }}
+
+この出発点の基盤となるコードは次の通りです。
 
 ```js live-sample___conditionals-3
 let machineActive = true;
@@ -193,7 +269,9 @@ section.appendChild(para1);
 section.appendChild(para2);
 ```
 
-{{ EmbedLiveSample("conditionals-3", "100%", 60) }}
+更新後の出力は次のようになります。
+
+{{ EmbedLiveSample("conditionals-3-finish", "100%", 80) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
@@ -208,17 +286,47 @@ let machineResult;
 let pwdResult;
 
 if (machineActive) {
-  machineResult = "Machine is active. Trying login.";
+  machineResult = "マシンは動作中です。ログインを試みています。";
   pwdResult =
     pwd === "cheese"
-      ? "Login successful."
-      : "Password incorrect; login failed.";
+      ? "ログインに成功しました。"
+      : "パスワードが違います。ログインに失敗しました。";
 } else {
-  machineResult = "Machine is inactive. Activate and try logging in again.";
+  machineResult =
+    "マシンは動作していません。起動してログインしなおしてください。";
 }
 
 // 以下のコードは編集しないでください。
 // ...
 ```
 
+```js hidden live-sample___conditionals-3-finish
+let machineActive = true;
+let pwd = "cheese";
+
+let machineResult;
+let pwdResult;
+
+if (machineActive) {
+  machineResult = "マシンは動作中です。ログインを試みています。";
+  pwdResult =
+    pwd === "cheese"
+      ? "ログインに成功しました。"
+      : "パスワードが違います。ログインに失敗しました。";
+} else {
+  machineResult =
+    "マシンは動作していません。起動してログインしなおしてください。";
+}
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+para1.textContent = machineResult;
+para2.textContent = pwdResult;
+section.appendChild(para1);
+section.appendChild(para2);
+```
+
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}

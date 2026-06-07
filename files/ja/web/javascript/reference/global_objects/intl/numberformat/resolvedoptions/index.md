@@ -3,7 +3,7 @@ title: Intl.NumberFormat.prototype.resolvedOptions()
 short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
 **`resolvedOptions()`** は {{jsxref("Intl.NumberFormat")}} インスタンスのメソッドで、この `NumberFormat` オブジェクトの初期化中に計算されたオプションを反映するプロパティを持つ、新しいオブジェクトを返します。
@@ -15,8 +15,7 @@ const numberFormat = new Intl.NumberFormat("de-DE");
 const options = numberFormat.resolvedOptions();
 
 console.log(options.locale);
-// 予想される結果 (Firefox / Safari): "de-DE"
-// 予想される結果 (Chrome): "de"
+// 予想される結果: "de-DE"
 
 console.log(options.numberingSystem);
 // 予想される結果: "latn"
@@ -37,12 +36,12 @@ resolvedOptions()
 
 ### 返値
 
-この `NumberFormat` オブジェクトの初期化中に計算されたオプションを反映するプロパティを持つ新しいオブジェクト。このオブジェクトには、掲載る順に次のプロパティがあります。
+この `NumberFormat` オブジェクトの初期化時に計算されたオプションを反映したプロパティを持つ新しいオブジェクト。このオブジェクトには、記載順に以下のプロパティがあります。
 
 - `locale`
-  - : 実際に使用されているロケールに対する BCP 47 言語タグは、[ロケールネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)プロセスによって決定されます。リクエストされた場合、出力に入る可能性があるのは Unicode 拡張キーの `nu` のみです。
+  - : 実際に使用されているロケールの {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}です。これは、[ロケールネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)のプロセスによって決定されます。出力には、Unicode の `nu` 拡張キーのみが含まれる可能性があります。
 - `numberingSystem`
-  - : `options` 引数で指定されたこのプロパティの値、または Unicode 拡張キー `"nu"` を使用して、必要に応じて既定値が設定されます。これは、このロケールに対応している[記数法](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している記数法)です。既定値はロケールによって異なります。
+  - : `options` 引数で指定された値、または Unicode 拡張キー `"nu"` を使用して指定された値です。必要に応じてデフォルト値が設定されます。これは、このロケールで対応している[記数法](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している記数法)です。デフォルト値はロケールによって異なります。
 - `style`
   - : `options` 引数で指定されたこのプロパティの値で、必要に応じて既定値が入力されます。値は `"decimal"`、`"percent"`、`"currency"`、または`"unit"` のいずれかです。既定値は `"decimal"` です。
 - `currency` {{optional_inline}}

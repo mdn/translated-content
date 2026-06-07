@@ -1,8 +1,9 @@
 ---
-title: columns
+title: Propriété CSS `columns`
+short-title: columns
 slug: Web/CSS/Reference/Properties/columns
 l10n:
-  sourceCommit: 04defe50e601cf53adde40c4bd652a7a4e6eae55
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`columns`** permet de définir le nombre maximum de colonnes à utiliser pour afficher le contenu d'un élément, ainsi que la largeur minimale et la hauteur maximale des colonnes de l'élément.

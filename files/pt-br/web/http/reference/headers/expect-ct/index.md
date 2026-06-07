@@ -28,7 +28,7 @@ Os requerimentos do CT podem ser satisfeitos utilizando qualquer um dos seguinte
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>sim</td>
     </tr>
   </tbody>

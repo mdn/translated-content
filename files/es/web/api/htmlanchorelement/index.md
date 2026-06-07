@@ -8,7 +8,7 @@ La interfaz **HTMLAnchorElement** representa elementos de hipervínculo y propor
 
 ## Propiedades
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 Hereda propiedades de su elemento primario, {{domxref ("HTMLElement")}}, y las implementa desde {{domxref ("HTMLHyperlinkElementUtils")}}.
 

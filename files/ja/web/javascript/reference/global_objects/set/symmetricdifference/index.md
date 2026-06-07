@@ -37,7 +37,7 @@ symmetricDifference(other)
 
 ![2 つの円が重なっているベン図。A と B の対称差は、どちらかの円に含まれるが、両方の円に含まれない領域です。](diagram.svg)
 
-`symmetricDifference()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("Operators/this", "this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。次に、`other` の `keys()` メソッドを呼び出して繰り返し処理を行い、`this` に存在し、`other` に存在しないすべての要素と、`other` に存在し、`this` に存在しないすべての要素をすべて含む新しい Set を構築します。
+`symmetricDifference()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。次に、`other` の `keys()` メソッドを呼び出して繰り返し処理を行い、`this` に存在し、`other` に存在しないすべての要素と、`other` に存在し、`this` に存在しないすべての要素をすべて含む新しい Set を構築します。
 
 返される Set 内の要素の順序は、まず `this` の要素、次に `other` の要素となります。
 

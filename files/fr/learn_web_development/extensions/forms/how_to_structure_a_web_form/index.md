@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 original_slug: Learn/Forms/How_to_structure_a_web_form
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 Les bases vues, nous examinons maintenant plus en détail les éléments utilisés pour structurer et donner un sens aux différentes parties d'un formulaire.
 
@@ -14,7 +14,7 @@ Les bases vues, nous examinons maintenant plus en détail les éléments utilis�
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions concernant les ordinateurs et les
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >connaissances de base du HTML</a
         >.
       </td>
@@ -181,7 +181,7 @@ Au-delà des structures propres aux formulaires HTML,rappelons‑nous que les fo
 
 Comme vous avez pu le voir dans les exemples, il est de pratique courante d'envelopper une étiquette et son widget avec un élément {{HTMLElement("div")}}. Les éléments {{HTMLElement("p")}} sont aussi couramment utilisés, tout comme les listes HTML (ces dernières sont très courantes pour structurer plusieurs cases à cocher ou boutons radio).
 
-En plus de l'élément {{HTMLElement("fieldset")}}, il est habituel d'utiliser des titres HTML (par exemple {{htmlelement("h1")}}, {{htmlelement("h2")}}) et des sections (par exemple {{htmlelement("section")}}) pour structurer un formulaire complexe.
+En plus de l'élément {{HTMLElement("fieldset")}}, il est habituel d'utiliser des titres HTML (par exemple `{{htmlelement("Heading_Elements", "&lt;h1&gt;")}}`, {{htmlelement("h2")}}) et des sections (par exemple {{htmlelement("section")}}) pour structurer un formulaire complexe.
 
 Par-dessus tout, il vous appartient de trouver un style où vous vous sentez à l'aise pour coder, et qui se traduit aussi par des formulaires accessibles et utilisables.
 
@@ -326,4 +326,4 @@ Nous savons maintenant ce qu'il faut faire pour structurer de manière appropri�
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}

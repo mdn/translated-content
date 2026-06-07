@@ -1,8 +1,9 @@
 ---
-title: :heading
+title: Pseudo-classe CSS `:heading`
+short-title: :heading
 slug: Web/CSS/Reference/Selectors/:heading
 l10n:
-  sourceCommit: 56d7fc5f9d1b010fc55d0384facd2b1477baee0c
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{SeeCompatTable}}

@@ -1,8 +1,9 @@
 ---
-title: "@view-transition"
+title: Règle CSS `@view-transition`
+short-title: "@view-transition"
 slug: Web/CSS/Reference/At-rules/@view-transition
 l10n:
-  sourceCommit: baf0cb6bfe8bf2418122300d3f93e3aa94f72dca
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@view-transition`** est utilisée pour choisir les documents actuels et de destination qui subiront [une transition d'affichage](/fr/docs/Web/API/View_Transition_API), dans le cas d'une navigation entre plusieurs documents.
@@ -29,8 +30,8 @@ Pour qu'une transition d'affichage inter-document fonctionne, les documents actu
 
 - `types`
   - : Définit les [types](/fr/docs/Web/API/View_Transition_API/Using_types) de transition d'affichage à définir pour la transition d'affichage active des documents actuel et de destination. Les valeurs possibles sont&nbsp;:
-    - `<custom-ident>#`
-      - : Une ou plusieurs valeurs {{CSSxRef("&lt;custom-ident>")}} séparées par des virgules représentant les types à définir.
+    - `<custom-ident>+`
+      - : Une ou plusieurs valeurs {{CSSxRef("&lt;custom-ident&gt;")}} séparées par des espaces représentant les types à définir.
     - `none`
       - : Aucun type n'est défini.
 
@@ -121,4 +122,4 @@ Voir [Utiliser les types avec les transitions d'affichage inter-documents via `@
 - L'[API View Transition](/fr/docs/Web/API/View_Transition_API)
 - [Utiliser les types de transition de vue](/fr/docs/Web/API/View_Transition_API/Using_types)
 - [Les règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rules)
-- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)
+- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/Reference/At-rules/At-rule_functions)

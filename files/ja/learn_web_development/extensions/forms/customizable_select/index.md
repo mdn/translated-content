@@ -47,7 +47,7 @@ l10n:
 さらに、`<select>` 要素とそのドロップダウンピッカーには、以下の動作が自動的に割り当てられます。
 
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API) で指定されているように、呼び出し元/ポップオーバーの関係を持ちます。これにより、{{cssxref(":popover-open")}} 擬似クラスを使ってピッカーが開いているときに選択できます。ポップオーバーの動作の詳細は [ポップオーバー API の使用](/ja/docs/Web/API/Popover_API/Using) を参照してください。
-- 暗黙的なアンカー参照を持ち、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning) を介してピッカーが自動的に `<select>` 要素に関連付けられます。ブラウザーのデフォルトスタイルは、ピッカーをボタン（アンカー）に対して位置指定し、[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor) で説明されているように、この位置をカスタマイズできます。また、ビューポートからはみ出しそうな場合にピッカーを再配置するポジション・トライ・フォールバックも定義されています。詳細は [オーバーフローの処理: トライ・フォールバックと条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) を参照してください。
+- 暗黙的なアンカー参照を持ち、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning) を介してピッカーが自動的に `<select>` 要素に関連付けられます。ブラウザーのデフォルトスタイルは、ピッカーをボタン（アンカー）に対して位置指定し、[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor) で説明されているように、この位置をカスタマイズできます。また、ビューポートからはみ出しそうな場合にピッカーを再配置するポジション・トライ・フォールバックも定義されています。詳細は [オーバーフローの処理: トライ・フォールバックと条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) を参照してください。
 
 > [!NOTE]
 > カスタマイズ可能な `<select>` のブラウザー対応状況は、{{htmlelement("selectedcontent")}}、{{cssxref("::picker()", "::picker(select)")}}、{{cssxref("::checkmark")}} など関連機能のリファレンスページの互換性表で確認できます。

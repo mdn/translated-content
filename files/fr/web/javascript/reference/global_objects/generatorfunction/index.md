@@ -56,7 +56,7 @@ Ces propriétés sont définies sur `GeneratorFunction.prototype` et partagées 
 Ces propriétés sont propres à chaque instance de `GeneratorFunction`.
 
 - {{JSxRef("GeneratorFunction/prototype", "prototype")}}
-  - : Utilisée quand la fonction est utilisée comme constructeur avec l'opérateur {{JSxRef("Operators/new", "new")}}. Elle devient le prototype du nouvel objet.
+  - : Utilisée quand la fonction est utilisée comme constructeur avec l'opérateur {{JSxRef("new")}}. Elle devient le prototype du nouvel objet.
 
 ## Méthodes d'instance
 

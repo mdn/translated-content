@@ -106,7 +106,7 @@ l10n:
       <td>CSS トランジション</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/CSS/CSS_transitions">CSS トランジション</a>に関するイベント。
+          <a href="/ja/docs/Web/CSS/Guides/Transitions">CSS トランジション</a>に関するイベント。
         </p>
         <p>
           CSS トランジションの開始、終了、キャンセルなどの時の通知イベントを提供する。

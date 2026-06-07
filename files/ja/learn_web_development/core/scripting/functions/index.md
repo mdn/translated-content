@@ -1,13 +1,12 @@
 ---
 title: 関数 — 再利用可能なコードブロック
+short-title: 関数
 slug: Learn_web_development/Core/Scripting/Functions
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
 
 コーディングにおいて、不可欠な概念が**関数**です。関数を使用することで、特定のタスクをこなすコードを定義し、保持しておいて、いつでも簡単なコマンドで呼び出すことを可能にしてくれます。同じコードを何度も打たなければならないよりとっても簡単です。この記事では関数の書き方や、関数を実行する方法、定義の仕方、スコープ、引数といった関数に関する基礎を学びます。
 
@@ -38,13 +37,13 @@ l10n:
 
 ## 関数はどこにあるか
 
-JavaScript の中で、関数はあらゆるところに見つかるでしょう。実際、これまでのところすべての場面で関数を使用してきました。これについてはあまり触れてきませんでした。しかし、今こそ明確に関数について話し始め、本当に構文を探索する時期です。
+JavaScript の中で、関数はあらゆるところに見つかるでしょう。実のところ、これまでのコース全体を通して、関数を使ってきました。これについてはあまり触れてきませんでした。しかし、今こそ明確に関数について話し始め、構文を探求する時期です。
 
 括弧のペアを特徴とする JavaScript の構造を使用するほとんどの場合、そして [for ループ](/ja/docs/Learn_web_development/Core/Scripting/Loops#標準的な_for_ループ)、[while と do...while ループ](/ja/docs/Learn_web_development/Core/Scripting/Loops#while_と_do...while)、または [if...else 文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals#if...else_文)のような一般的な組み込みの言語構造を使用**していない**場合、関数を使用していることになります。
 
 ## ブラウザー組み込み関数
 
-このコースの中で、ブラウザーに組み込まれている関数を何度も使用してきました。
+このコースでは、ブラウザーの組み込み機能を幅広く活用してきました。
 
 例えば、テキスト文字列を操作するとき。
 
@@ -81,15 +80,15 @@ const myNumber = Math.random();
 > [!NOTE]
 > これらの機能に慣れるために、必要なときにはこういった行をあなたのブラウザーの JavaScript コンソールにいつでも入力してみてください。
 
-JavaScript 言語にはたくさんの組込み関数があるので、いろいろあるあなたのやりたい事を、全部をあなた自身で書かなくてもすみます。実は、あなたが呼び出して起動（走らせたり実行する事の別の言い方）するコードのいくつかは、JavaScript では書けない、ブラウザー組込み関数です — こういった関数の多くは、背後のブラウザーのコードを呼び出していて、これらは JavaScript のようなウェブ言語ではなく、大半が C++ のような低レベルのシステム言語で書かれています。
+JavaScript 言語にはたくさんの組み込み関数があるので、いろいろあるあなたのやりたい事を、全部をあなた自身で書かなくてもすみます。実は、あなたが呼び出して起動（走らせたり実行する事の別の言い方）するコードのいくつかは、JavaScript では書けない、ブラウザー組み込み関数です — こういった関数の多くは、背後のブラウザーのコードを呼び出していて、これらは JavaScript のようなウェブ言語ではなく、大半が C++ のような低レベルのシステム言語で書かれています。
 
 ブラウザー関数のいくつかは JavaScript 言語のコアに含まれないことを心に留めておいてください。いくつかはブラウザー API の一部として定義されていて、もっと多くの機能を提供すべく既定の言語の上で構築されています（詳しくは[私たちのコースのこの以前の節](/ja/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#実際に何ができるのか)を見てください）。ブラウザー API のもっと詳しい使い方については、後の方のモジュールで見ていく事になるでしょう。
 
 ## 関数とメソッド
 
-**関数**のうち、オブジェクトの一部であるものは**メソッド**と呼ばれます。オブジェクトについては、このモジュールの後半で学びます。 ここでは、メソッドと関数について可能な限り混乱を解消したいと思います。ウェブ上で利用できる関連のリソースを見ていくと、どちらの用語にも出会う可能性が高いでしょう。
+**関数**のうち、オブジェクトの一部であるものは**メソッド**と呼ばれます。オブジェクトについては、このモジュールの後半で学びます。 ここでは、メソッドと関数について可能な限り混乱を解消したいと思います。ウェブ上の関連リソースを見ていくと、この 2 つの用語にどちらも目にする機会があるでしょう。
 
-これまで利用してきた組込み関数は両方です: 関数でありメソッドでもあります。組み込みオブジェクトとそのメソッドと同様に、組み込み関数の一覧を[こちらで](/ja/docs/Web/JavaScript/Reference/Global_Objects)確認できます。
+これまで利用してきた組み込み関数は両方です。関数でありメソッドでもあります。組み込みオブジェクトとそのメソッドと同様に、組み込み関数の一覧は [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference/Global_Objects)で確認できます。
 
 このコースのここまででもたくさんのカスタム関数を見てきました。ブラウザーの内部でではなくあなたのコードの中で定義された関数です。独自の名前の直後にカッコがついてるものを見かけたら、それはカスタム関数を使っているということです。[ループの記事](/ja/docs/Learn_web_development/Core/Scripting/Loops)で出てきた [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) の例（[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)はこちら）には、独自に作った `draw()` 関数が含まれていました。次のようなものです。
 
@@ -105,13 +104,13 @@ function draw() {
 }
 ```
 
-この関数は、{{htmlelement("canvas")}} 要素の中に 100 個のランダムな円を描きます。同じことをやりたい時には、いつでも次のように関数を起動するだけです。
+この関数は、{{htmlelement("canvas")}} 要素の中に 100 個のランダムな円を描きます。同じことをやりたい時には、いつでも次のように関数を呼び出すことができます。
 
 ```js
 draw();
 ```
 
-繰り返しのたびに、コードをすべて書き直す必要がなくなります。関数の中には好きなコードを何でも書くことができます。関数の中で他の関数を呼び出すこともできます。例えば上の例では、次のコードで定義されている `random()` 関数を 3 回呼び出しています。
+繰り返しのたびに、コードをすべて書き直す必要がなくなります。関数の中には好きなコードを何でも書くことができます。関数の中で他の関数を呼び出すこともできます。たとえば、前述の `draw()` 関数は `random()` 関数を 3 回呼び出します。`random()` は次のコードで定義されています。
 
 ```js
 function random(number) {
@@ -123,7 +122,7 @@ function random(number) {
 
 ## 関数の呼び出し
 
-もうよくご存知でしょう、でも念のため、定義した後で実際に関数を使うには、関数を走らせ — あるいは呼び出さ — なければなりません。これはコードのどこかに関数の名前、直後にカッコの組を書けばできます。
+もうよくご存知でしょう、でも念のため、定義した後で実際に関数を使うには、関数を走らせます（呼び出します）。これはコードのどこかに関数の名前、直後にカッコの組を書けばできます。
 
 ```js
 function myFunction() {
@@ -215,7 +214,7 @@ function myFunction() {
 
 ### 無名関数の例
 
-例えば、ユーザーがテキストボックスに入力したときに何らかのコードを実行したいとします。これを行うには、テキストボックスの {{domxref("EventTarget/addEventListener", "addEventListener()")}} 関数を呼び出します。この関数は（少なくとも） 2 つの引数が渡されることを期待します。
+例えば、ユーザーがテキストボックスに入力したときに何らかのコードを実行したいとします。これを行うには、テキストボックスの {{domxref("EventTarget/addEventListener", "addEventListener()")}} 関数を呼び出します。この関数は少なくとも 2 つの引数が渡されることを期待します。
 
 - 待ち受けするイベントの名前。この場合は {{domxref("Element/keydown_event", "keydown")}} です。
 - イベント発生時に実行する関数。
@@ -224,7 +223,7 @@ function myFunction() {
 
 ```js
 function logKey(event) {
-  console.log(`"${event.key}" を押しました。`);
+  console.log(`"${event.key}" が押されました。`);
 }
 
 textBox.addEventListener("keydown", logKey);
@@ -234,7 +233,7 @@ textBox.addEventListener("keydown", logKey);
 
 ```js
 textBox.addEventListener("keydown", function (event) {
-  console.log(`"${event.key}" を押しました。`);
+  console.log(`"${event.key}" が押されました。`);
 });
 ```
 
@@ -244,7 +243,7 @@ textBox.addEventListener("keydown", function (event) {
 
 ```js
 textBox.addEventListener("keydown", (event) => {
-  console.log(`"${event.key}" を押しました。`);
+  console.log(`"${event.key}" が押されました。`);
 });
 ```
 
@@ -252,7 +251,7 @@ textBox.addEventListener("keydown", (event) => {
 
 ```js-nolint
 textBox.addEventListener("keydown", event => {
-  console.log(`"${event.key}" を押しました。`);
+  console.log(`"${event.key}" が押されました。`);
 });
 ```
 
@@ -266,21 +265,21 @@ const doubled = originals.map(item => item * 2);
 console.log(doubled); // [2, 4, 6]
 ```
 
-`map()` メソッドは配列のそれぞれの要素を順番に受け取り、指定された関数に渡します。そして、その関数が返す値を受け取り、新しい配列に追加します。
+`map()` メソッドは、配列内の各要素を指定された関数に渡し、その関数が返した値を新しい配列に追加します。
 
-例えばこの例では、 `item => item * 2` がアロー関数に相当します。
+アロー関数はとても簡潔です。`map()` のコードを、通常の無名コールバック関数を使って書き直すと、次のようになります。
 
 ```js
-function doubleItem(item) {
+const doubled = originals.map(function (item) {
   return item * 2;
-}
+});
 ```
 
-同じ簡潔な構文を使用して `addEventListener` の例を書き換えることができます。
+同じ簡潔なアロー関数構文を使用して `addEventListener()` の例を書き換えることができます。
 
-```js
+```js-nolint
 textBox.addEventListener("keydown", (event) =>
-  console.log(`"${event.key}" を押しました。`),
+  console.log(`"${event.key}" が押されました。`)
 );
 ```
 
@@ -293,7 +292,7 @@ textBox.addEventListener("keydown", (event) =>
 
 ### アロー関数のライブサンプル
 
-ここでは、上で説明した "keydown" の例を完全に動作するようにしています。
+次のものは、先ほど説明した `keydown` のサンプルを完全に動作するようにしたものです。
 
 HTML:
 
@@ -309,7 +308,7 @@ const textBox = document.querySelector("#textBox");
 const output = document.querySelector("#output");
 
 textBox.addEventListener("keydown", (event) => {
-  output.textContent = `"${event.key}" を押しました。`;
+  output.textContent = `"${event.key}" が押されました。`;
 });
 ```
 
@@ -325,16 +324,16 @@ div {
 
 ## 関数のスコープと競合
 
-{{glossary("scope", "スコープ")}}という言葉について説明しておきましょう。関数を扱う際にはとても大切な概念です。関数を作成するとき、関数の中で定義されている変数や関数は、内部でそれぞれ独自の**スコープ**というものを持ちます。これはそれぞれが独自の小部屋に閉じ込められていて、別の関数の内部から、あるいはこの関数の外部のコードから触れられくなることを意味しています。
+{{glossary("scope", "スコープ")}}という言葉について説明しておきましょう。関数を扱う際には大切な概念です。関数を作成するとき、関数の中で定義されている変数や関数は、内部でそれぞれ独自の**スコープ**というものを持ちます。これはそれぞれが独自の小部屋に閉じ込められていて、別の関数の内部から、あるいはこの関数の外部のコードから触れられくなることを意味しています。
 
 すべての関数の外側である最上位を、**グローバルスコープ**と呼びます。グローバルスコープで定義された値はすべて、コードのどこからでもアクセスできます。
 
-JavaScript がこう作られているのにはいくつも理由があります。が、主な理由はセキュリティと組織化のためです。時には変数にコードのどこからでもアクセスされないようにしたい場合もあるでしょう。どこかから呼び込んだ外部スクリプトが、あなたのコードをおかしくして問題を起す場合があるかもしれません。別の場所でたまたま同じ名前の変数を使っていて、衝突していたために。これは悪意をもってわざとやっている場合や、単なる偶然の場合もあります。
+JavaScript がこのように動作するのは、主にセキュリティとコードの整理整頓のためです。コード内のあらゆる場所から変数にアクセスできる状態にしたくない場合があるからです。外部から呼び出されたスクリプトが、同じ変数名を使用することでコードを混乱させ、競合を引き起こし、問題を生じさせる可能性があります。これは悪意を持って行われる場合もあれば、単なる偶然の場合もあります。
 
-例えば、ある HTML ファイルが 2 つの外部 JavaScript ファイルを呼び出しているとして、そのどちらも同じ名前の変数と関数を定義しているとします。
+例えば、ある HTML ファイルが 2 つの外部 JavaScript ファイルを参照しているとして、そのどちらも同じ名前の変数と関数を定義しているとします。
 
 ```html
-<!-- Excerpt from my HTML -->
+<!-- Excerpt from the HTML -->
 <script src="first.js"></script>
 <script src="second.js"></script>
 <script>
@@ -358,20 +357,23 @@ function greeting() {
 }
 ```
 
-呼び出したい関数はどちらも `greeting()` と呼ばれていますが、 `first.js` ファイルの `greeting()` 関数にしかアクセスすることができません（2 つ目は無視されます）。さらに、（`second.js`ファイルで）変数 `name` に新しい値を割り当てようとするとエラーになります。既に `const` で宣言されているので、再代入できないからです。
+この例を [GitHub でライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) できます（[ソースコード](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)はこちら）。以下の説明を読む前に、別のブラウザータブで開いてください。
 
-> [!NOTE]
-> この例を [GitHub でライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) できます（[ソースコード](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)はこちら）。
+- このサンプルをブラウザで表示すると、まず `Hello Chris: welcome to our company.` と表示されたアラートボックスが表示されます。これは、最初のスクリプトファイル内で定義された `greeting()` 関数が、内部スクリプト内の `greeting()` の呼び出しによって実行されたことを意味します。
 
-コードの一部を関数の中に閉じ込めておくことは、このような問題を避けることができ、最善の手法と考えられています。
+- しかし、2 つ目のスクリプトはまったく読み込まれず、実行されず、コンソールに `Uncaught SyntaxError: Identifier 'name' has already been declared` というエラーが表示されます。これは、`name` という定数がすでに `first.js` で宣言されており、同じスコープ内で同じ定数を 2 回宣言することはできないためです。2 つ目のスクリプトが読み込まれなかったため、`second.js` の `greeting()` 関数を呼び出すことはできません。
 
-これは動物園に似ています。ライオン、シマウマ、トラ、ペンギンはそれぞれの檻の中にいて、それぞれの檻の中のものにしか触れられません。関数のスコープと同じことです。もし彼らが他の檻の中に侵入できたら問題が起きることでしょう。良くて、知らない住人に囲まれて気まずい思いをします。寒くて水だらけのペンギンの檻に入ったライオンやトラは酷い気分になるでしょう。最悪の場合、ライオンやトラはペンギンを食べてみようとするかもしれません。
+- もし `const name = "Zaptec";` という行を `second.js` から削除してページを再読み込みすると、両方のスクリプトが実行されます。アラートボックスには、`Our company is called Chris.` と表示されるようになります。関数が再宣言された場合、ソースコード内の順序で最後に記述された宣言が使用されます。それ以前の宣言は事実上上書きされます。
+
+コードの一部を関数内にまとめることで、こうした問題を回避でき、ベストプラクティスとされています。
+
+これは動物園に似ています。ライオン、シマウマ、トラ、ペンギンはそれぞれ専用の檻に入れられており、その中にあるものしか利用できません。これは関数スコープに似ています。もし彼らが他の檻の中に侵入できたら問題が起きることでしょう。良くて、知らない住人に囲まれて気まずい思いをします。寒くて水だらけのペンギンの檻に入ったライオンやトラは酷い気分になるでしょう。最悪の場合、ライオンやトラはペンギンを食べてみようとするかもしれません。
 
 ![動物園でそれぞれの生息地に囲まれた 4 匹の動物](mdn-mozilla-zoo.png)
 
 動物園の飼育係はグローバルスコープのようなものです。彼らはすべての檻にアクセスする鍵を持っており、餌を補充したり、病気の動物の世話をしたりします。
 
-### アクティブラーニング: スコープで遊んでみよう
+### スコープで遊んでみよう
 
 スコープを示すための実際の例を見てみましょう。
 
@@ -415,7 +417,7 @@ function greeting() {
    b();
    ```
 
-   ページに `y` と `z` の値の出力が表示されます。 `output()` 関数が他の関数の中、つまり表示される変数が定義されているのと同じスコープでそれぞれ呼び出されているので、これはうまくいきます。 `output()` 自体はグローバルスコープで定義されているので、どこからでも利用できます。
+   ブラウザーのビューポートに `y` と `z` の値が表示されるはずです。これは正常に動作します。なぜなら、`output()` 関数は他の関数内で呼び出されており、出力される変数が定義されているのと同じスコープ内にあるからです。`output()` 自体はグローバルスコープで定義されているため、どこからでも利用可能です。
 
 6. 今度は次のようにコードを更新してみてください。
 
@@ -464,14 +466,43 @@ function greeting() {
    今度は `a()` と `b()` の両方の呼び出しで、迷惑な "[ReferenceError: _variable name_ is not defined](/ja/docs/Web/JavaScript/Reference/Errors/Not_defined)" エラーが返されます。これは `output()` 呼び出しと、出力しようとしている変数が同じ関数のスコープにない、つまりこれらの関数呼び出しからは変数が参照できない状態だからです。
 
 > [!NOTE]
-> 同じスコープルールはループ（`for() { }` など）と条件ブロック（`if() { }` など）には適用されません。それらはとてもよく似ていますが、同じものではありません。混乱しないように注意してください。
-
-> [!NOTE]
 > [ReferenceError: "x" is not defined](/ja/docs/Web/JavaScript/Reference/Errors/Not_defined) というエラーは、遭遇する最も一般的なエラーの 1 つです。このエラーが発生し、問題の変数が定義されていると確信できる場合は、変数のスコープを確認してください。
 
-## 確認テスト
+#### ループと条件式のスコープに関する補足
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト: 関数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions)を見てください。このテストは次の 2 つの記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。
+なお、[条件分岐](/ja/docs/Learn_web_development/Core/Scripting/Conditionals) や [ループ](/ja/docs/Learn_web_development/Core/Scripting/Loops) 内で宣言された変数のスコープは、`let` や `const` を使用して変数を宣言した場合の関数スコープと同様に機能することに注意してください。たとえば、上記の例に次のようなブロックを追加した場合は次のようになります。
+
+```js
+if (x === 1) {
+  const c = 4;
+  let d = 5;
+}
+
+for (let i = 0; i <= 1; i++) {
+  const e = 6;
+  let f = 7;
+}
+```
+
+`output(c)`、`output(d)`、`output(e)`、`output(f)` を呼び出すと、先ほどと同じ same **"ReferenceError: [変数名] is not defined"** というエラーが発生します。これらの変数はそれぞれのスコープ内に閉じ込められているため、`output()` 関数からはアクセスできません。
+
+従来の `var` キーワードの動作は異なります。もし `c`、`d`、`e`、`f` が `var` を使って宣言されていた場合、次のようになります。
+
+```js
+if (x === 1) {
+  var c = 4;
+  var d = 5;
+}
+
+for (let i = 0; i <= 1; i++) {
+  var e = 6;
+  var f = 7;
+}
+```
+
+これらはグローバルスコープに持ち上げられるため、コンソールに出力する（例えば、`output(c)` を使用するなど）と正常に動作します。一方、関数内で `var` を使用して宣言された変数は、その関数内にスコープが限定されたままとなります。
+
+この一貫性のなさは混乱やエラーを招く恐れがあり、`var` の代わりに `let` や `const` を使うべきもう一つの理由となります。
 
 ## まとめ
 
@@ -481,7 +512,6 @@ function greeting() {
 
 - [関数の詳細ガイド](/ja/docs/Web/JavaScript/Guide/Functions) — ここに含まれていないいくつかの高度な機能について説明します。
 - [関数](/ja/docs/Web/JavaScript/Reference/Functions)
-- [Using functions to write less code](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>_MDN カリキュラムパートナー_</sup>
-  - : An interactive lesson providing a useful functions introduction.
+- [Using functions to write less code](https://scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> - 便利な関数の概要を紹介するインタラクティブなレッスンです。
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

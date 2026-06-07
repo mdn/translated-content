@@ -7,7 +7,7 @@ slug: Web/API/SVGGraphicsElement
 
 **`SVGGraphicsElement`** 接口表示 SVG 元素，其主要目的是将图形直接渲染到组中。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 > [!NOTE]
 > 该接口是 SVG 2 中引入的，它取代了 SVG 1.1 中的{{domxref("SVGLocatable")}}和{{domxref("SVGTransformable")}}接口。

@@ -3,7 +3,7 @@ title: Jeu de casse-briques 2D en pur JavaScript
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 ---
 
-{{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher")}}
+{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 
 Dans ce tutoriel, nous allons créer pas à pas un jeu de casse-briques MDN, créé entièrement avec JavaScript et sans framework, et rendu avec la balise HTML5 {{htmlelement("canvas")}}.
 
@@ -40,4 +40,4 @@ Commencer avec du Javascript pur et dur est le meilleur moyen d'acquérir des co
 
 Ok, c'est parti&nbsp;! Rendez-vous au premier chapitre pour commencer — Créer l'élément canvas et dessiner dessus
 
-{{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher")}}
+{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}

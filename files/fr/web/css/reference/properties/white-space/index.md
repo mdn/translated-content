@@ -1,14 +1,14 @@
 ---
-title: white-space
+title: Propriété CSS `white-space`
+short-title: white-space
 slug: Web/CSS/Reference/Properties/white-space
-original_slug: Web/CSS/white-space
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`white-space`** détermine comment les {{Glossary("whitespace", "espaces blancs")}} à l'intérieur d'un élément sont gérés.
 
-La propriété **`white-space`** est utilisée pour décrire la façon dont les blancs sont gérés au sein de l'élément.
-
-{{InteractiveExample("CSS Demo: white-space")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: white-space")}}
 
 ```css interactive-example-choice
 white-space: normal;
@@ -42,9 +42,10 @@ white-space: preserve nowrap;
 <section class="default-example" id="default-example">
   <div id="example-element">
     <p>
-      But ere she from the church-door stepped She smiled and told us why: 'It
-      was a wicked woman's curse,' Quoth she, 'and what care I?' She smiled, and
-      smiled, and passed it off Ere from the door she stept—
+      Mais avant qu'elle ne quitte la porte de l'église, elle sourit et nous
+      expliqua pourquoi&nbsp;: «&nbsp;C'était la malédiction d'une femme
+      méchante,&nbsp;» dit-elle, «&nbsp;et qu'importe&nbsp;?&nbsp;» Elle sourit,
+      et sourit encore, et passa outre Avant de quitter la porte—
     </p>
   </div>
 </section>
@@ -62,42 +63,63 @@ white-space: preserve nowrap;
 }
 ```
 
+La propriété définit deux choses&nbsp;:
+
+- Si et comment les espaces blancs sont [regroupés](/fr/docs/Web/CSS/Guides/Text/Whitespace#regroupement_et_transformation).
+- Si et comment les lignes se replient.
+
 > [!NOTE]
-> Afin d'obtenir une césure au sein des mots, il faudra utiliser {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}} ou bien {{cssxref("hyphens")}}.
+> Afin d'obtenir une césure _au sein des mots_, il faut utiliser {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}} ou bien {{CSSxRef("hyphens")}}.
+
+## Propriétés constitutives
+
+Cette propriété est un raccourci pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("white-space-collapse")}}
+- {{CSSxRef("text-wrap-mode")}}
+
+> [!NOTE]
+> La spécification définit une troisième propriété constitutive&nbsp;: `white-space-trim`, qui n'est encore implémentée dans aucun navigateur.
 
 ## Syntaxe
 
 ```css
-/* Avec un mot-clé */
+/* Valeurs avec un mot-clé */
 white-space: normal;
-white-space: nowrap;
 white-space: pre;
 white-space: pre-wrap;
 white-space: pre-line;
+
+/* Valeurs raccourcies de white-space-collapse et text-wrap-mode */
+white-space: nowrap;
+white-space: wrap;
 white-space: break-spaces;
+white-space: collapse;
+white-space: preserve nowrap;
 
 /* Valeurs globales */
 white-space: inherit;
 white-space: initial;
+white-space: revert;
+white-space: revert-layer;
 white-space: unset;
 ```
 
-La propriété `white-space` se définit avec l'un des mots-clés suivants.
-
 ### Valeurs
 
-- `break-spaces`
-  - : Le comportement est identique à celui de `pre-wrap` mais chaque séquence de blancs continue d'occuper un espace, y compris en fin de ligne. Il y aura une opportunité de saut de ligne après chaque blanc. De tels espaces auront un impact sur les dimensions intrinsèques de la boîte (`min-content` et `max-content`).
+Les valeurs de la propriété `white-space` peuvent être définies par un ou deux mots-clés représentant les valeurs des propriétés {{CSSxRef("white-space-collapse")}} et {{CSSxRef("text-wrap-mode")}}, ou par les mots-clés spéciaux suivants&nbsp;:
+
 - `normal`
-  - : Les séries de blancs sont regroupées, les caractères de saut de ligne sont gérés comme les autres blancs. Les passages à la ligne sont faits naturellement pour remplir les boîtes.
-- `nowrap`
-  - : Les blancs sont regroupés comme avec `normal` mais les passages à la ligne automatiques sont supprimés.
+  - : Les séquences d'espaces blancs sont [regroupées](/fr/docs/Web/CSS/Guides/Text/Whitespace#regroupement_et_transformation). Les caractères de saut de ligne dans la source sont traités comme les autres espaces blancs. Les lignes sont coupées selon les besoins pour remplir les boîtes de ligne. Équivaut à `collapse wrap`.
 - `pre`
-  - : Les séries de blancs sont conservées telles quelles. Les sauts de ligne ont uniquement lieu avec les caractères de saut de ligne et avec les éléments {{HTMLElement("br")}}.
+  - : Les séquences d'espaces blancs sont préservées. Les lignes ne sont cassées qu'aux caractères de saut de ligne dans la source et aux éléments HTML {{HTMLElement("br")}}. Équivaut à `preserve nowrap`.
 - `pre-wrap`
-  - : Les séries de blancs sont conservées telles quelles. Les sauts de ligne ont lieu avec les caractères de saut de ligne, avec {{HTMLElement("br")}} et on a des passages à la ligne automatiques.
+  - : Les séquences d'espaces blancs sont préservées. Les lignes sont cassées aux caractères de saut de ligne, aux {{HTMLElement("br")}}, et selon les besoins pour remplir les boîtes de ligne. Équivaut à `preserve wrap`.
 - `pre-line`
-  - : Les séries de blancs sont regroupées, les sauts de lignes ont lieu avec les caractères de saut de ligne, les éléments {{HTMLElement("br")}} et on a des passages à la ligne automatiques.
+  - : Les séquences d'espaces blancs sont [regroupées](/fr/docs/Web/CSS/Guides/Text/Whitespace#regroupement_et_transformation). Les lignes sont cassées aux caractères de saut de ligne, aux {{HTMLElement("br")}}, et selon les besoins pour remplir les boîtes de ligne. Équivaut à `preserve-breaks wrap`.
+
+> [!NOTE]
+> La propriété `white-space` en tant que raccourci est une fonctionnalité relativement récente (voir la [compatibilité des navigateurs](#compatibilité_des_navigateurs)). À l'origine, elle possédait six valeurs par mot-clé&nbsp;; désormais, la valeur `nowrap` est interprétée comme une valeur pour {{CSSxRef("text-wrap-mode")}}, tandis que la valeur `break-spaces` est interprétée comme une valeur pour {{CSSxRef("white-space-collapse")}}. Les quatre mots-clés ci‑dessus restent spécifiques à `white-space`, mais ils ont des équivalents en version longue. Le fait de faire de `white-space` un raccourci étend les valeurs acceptables à encore plus de mots-clés et de combinaisons, tels que `wrap` et `collapse`.
 
 Le tableau qui suit résume le comportement des différentes valeurs :
 
@@ -109,6 +131,7 @@ Le tableau qui suit résume le comportement des différentes valeurs :
       <th>Espaces et tabulations</th>
       <th>Retour à la ligne automatique</th>
       <th>Espaces en fin de ligne</th>
+      <th>Séparateurs d'espaces en fin de ligne</th>
     </tr>
   </thead>
   <tbody>
@@ -118,6 +141,7 @@ Le tableau qui suit résume le comportement des différentes valeurs :
       <td>Regroupés</td>
       <td>Oui</td>
       <td>Retirés</td>
+      <td>Conservés</td>
     </tr>
     <tr>
       <th><code>nowrap</code></th>
@@ -125,6 +149,7 @@ Le tableau qui suit résume le comportement des différentes valeurs :
       <td>Regroupés</td>
       <td>Non</td>
       <td>Retirés</td>
+      <td>Pas de retour à la ligne</td>
     </tr>
     <tr>
       <th><code>pre</code></th>
@@ -132,13 +157,15 @@ Le tableau qui suit résume le comportement des différentes valeurs :
       <td>Préservés</td>
       <td>Non</td>
       <td>Conservés</td>
+      <td>Conservés</td>
     </tr>
     <tr>
       <th><code>pre-wrap</code></th>
       <td>Préservées</td>
       <td>Préservés</td>
       <td>Oui</td>
-      <td>Suspendus</td>
+      <td>Conservés</td>
+      <td>Conservés</td>
     </tr>
     <tr>
       <th><code>pre-line</code></th>
@@ -146,16 +173,22 @@ Le tableau qui suit résume le comportement des différentes valeurs :
       <td>Regroupés</td>
       <td>Oui</td>
       <td>Retirés</td>
-    </tr>
-    <tr>
-      <th><code>break-spaces</code></th>
-      <td>Préservées</td>
-      <td>Regroupés</td>
-      <td>Oui</td>
-      <td>Passent à la ligne.</td>
+      <td>Conservés</td>
     </tr>
   </tbody>
 </table>
+
+Une tabulation par défaut correspond à 8 espaces et peut être configurée à l'aide de la propriété {{CSSxRef("tab-size")}}. Dans le cas des valeurs `normal`, `nowrap` et `pre-line`, chaque tabulation est convertie en un caractère espace (U+0020).
+
+> [!NOTE]
+> Il existe une distinction entre **espaces** et **autres séparateurs d'espaces**. Ceux-ci sont définis comme suit&nbsp;:
+>
+> - espaces
+>   - : Les espaces (U+0020), les tabulations (U+0009) et les sauts de segment (comme les nouvelles lignes).
+> - autres séparateurs d'espaces
+>   - : Tous les autres séparateurs d'espaces définis dans Unicode, autres que ceux déjà définis comme espaces.
+>
+> Lorsque l'on dit que les espaces blancs _pendent_, cela peut affecter la taille de la boîte lorsqu'elle est mesurée pour le dimensionnement intrinsèque.
 
 ## Définition formelle
 
@@ -169,52 +202,155 @@ Le tableau qui suit résume le comportement des différentes valeurs :
 
 ### Exemple simple
 
-#### HTML
-
-```html
-<code>
-  var coucou = function(){ // on notera l'indentation // avec deux espaces
-  console.log("Hello World"); var toto = function(){ // ici 4 espaces
-  console.log("Toto"); } toto(); }
-</code>
-```
-
-#### CSS
-
 ```css
 code {
   white-space: pre;
 }
 ```
 
-#### Résultat
+### Passer automatique à la ligne dans un élément `<pre>`
 
-{{EmbedLiveSample("Exemple_simple")}}
+```css
+pre {
+  white-space: pre-wrap;
+}
+```
 
-### Passage automatique à la ligne dans un élément `pre`
+### En action
+
+```html hidden
+<div id="css-code" class="box">
+  p { white-space:
+  <select>
+    <option>normal</option>
+    <option>nowrap</option>
+    <option>pre</option>
+    <option>pre-wrap</option>
+    <option>pre-line</option>
+    <option>break-spaces</option>
+  </select>
+  }
+</div>
+<div id="results" class="box">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</div>
+```
+
+```css hidden
+.box {
+  width: 350px;
+  padding: 16px;
+}
+
+#css-code {
+  background-color: gainsboro;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+#css-code select {
+  font-family: inherit;
+  width: 100px;
+}
+
+#results {
+  background-color: rgb(230 230 230);
+  overflow-x: scroll;
+  white-space: normal;
+  font-size: 14px;
+}
+```
+
+```js hidden
+const select = document.querySelector("#css-code select");
+const results = document.querySelector("#results p");
+select.addEventListener("change", (e) => {
+  results.style.setProperty("white-space", e.target.value);
+});
+```
+
+{{EmbedLiveSample("En action", "100%", 450)}}
+
+### Contrôler le passage à la ligne dans les tableaux
 
 #### HTML
 
 ```html
-<pre>
-function jeNAuraisJamaisDuAppelerCetteFonctionAvecUnNomAussiLong(toto){
-  console.log("Tout ça pour ça");
-}
-</pre>
+<table>
+  <tbody>
+    <tr>
+      <td></td>
+      <td>Contenu très long qui se divise</td>
+      <td class="nw">Contenu très long qui ne se divise pas</td>
+    </tr>
+    <tr>
+      <td class="nw">white-space:</td>
+      <td>normal</td>
+      <td>nowrap</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 #### CSS
 
 ```css
-pre {
-  word-wrap: break-word; /* IE 5.5-7 */
-  white-space: pre-wrap; /* current browsers */
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+td {
+  border: solid 1px black;
+  text-align: center;
+}
+.nw {
+  white-space: nowrap;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Passage_automatique_à_la_ligne_dans_un_élément_pre")}}
+{{EmbedLiveSample("Contrôler le passage à la ligne dans les tableaux", "100%", "100%")}}
+
+### Plusieurs lignes dans un élément de texte SVG
+
+La propriété CSS `white-space` peut être utilisée pour créer plusieurs lignes dans un élément {{SVGElement("text")}}, qui ne se divise pas par défaut.
+
+#### HTML
+
+Le texte à l'intérieur de l'élément `<text>` doit être divisé en plusieurs lignes pour que les nouvelles lignes soient détectées. Après la première ligne, le reste doit avoir ses espaces blancs supprimés.
+
+```html-nolint
+<svg viewBox="0 0 320 150">
+  <text y="20" x="10">Voici un paragraphe en français
+qui est divisé en plusieurs lignes
+dans le code source afin qu'il puisse
+être plus facilement lu et édité
+dans un éditeur de texte.
+  </text>
+</svg>
+```
+
+#### CSS
+
+```css
+text {
+  white-space: break-spaces;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Plusieurs lignes dans un élément de texte SVG", "100%", 350)}}
 
 ## Spécifications
 
@@ -226,6 +362,6 @@ pre {
 
 ## Voir aussi
 
-- {{cssxref("overflow-wrap")}}
-- {{cssxref("word-break")}}
-- {{cssxref("hyphens")}}
+- Propriétés qui définissent comment les mots se coupent _à l'intérieur d'eux-mêmes_&nbsp;: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}
+- La propriété {{CSSxRef("tab-size")}}
+- [Gérer les espaces blancs en CSS](/fr/docs/Web/CSS/Guides/Text/Whitespace)

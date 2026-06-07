@@ -27,7 +27,7 @@ l10n:
 
 ## 値
 
-作成または取得の要求を検証するために、依存する側のスクリプトが受信し、依存する側がのサーバーに送信されるべきデータを含む {{domxref("AuthenticatorResponse")}} オブジェクトです。このオブジェクトには、クライアントからのデータ ({{domxref("AuthenticatorResponse/clientDataJSON")}}) と認証器からのデータが含まれます。
+作成または取得の要求を検証するために、依存する側のスクリプトが受信し、依存する側のサーバーに送信されるべきデータを含む {{domxref("AuthenticatorResponse")}} オブジェクトです。このオブジェクトには、クライアントからのデータ ({{domxref("AuthenticatorResponse/clientDataJSON")}}) と認証器からのデータが含まれます。
 
 ## 例
 

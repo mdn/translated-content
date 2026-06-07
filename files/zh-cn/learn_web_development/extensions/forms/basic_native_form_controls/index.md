@@ -316,12 +316,12 @@ HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](
    </td>
   </tr>
   <tr>
-   <td><code><a href="/zh-CN/docs/Web/HTML/Element/Input#name">name</a></code></td>
+   <td><code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#name">name</a></code></td>
    <td></td>
    <td>元素的名称；这是跟表单数据一起提交的。</td>
   </tr>
   <tr>
-   <td><code><a href="/zh-CN/docs/Web/HTML/Element/Input#value">value</a></code></td>
+   <td><code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#value">value</a></code></td>
    <td></td>
    <td>元素的初始值。</td>
   </tr>
@@ -330,7 +330,7 @@ HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](
 
 ## 技能测试！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：基础控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：基础控件](/zh-CN/docs/Learn_web_development/Extensions/Forms)。
 
 ## 总结
 

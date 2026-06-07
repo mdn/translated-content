@@ -384,7 +384,7 @@ Vous pouvez voir l'utilisation de l'opérateur d'égalité stricte dans la fonct
 
 ## Testez vos compétences&nbsp;!
 
-Vous voilà parvenu⋅e à la fin de cet article. Mais saurez-vous vous rappeler des informations les plus importantes&nbsp;? Vous pouvez passer quelques tests afin de vérifier que vous avez retenu les concepts importants avant de continuer. Voir [Testez vos compétences&nbsp;: les mathématiques](/fr/docs/Learn/JavaScript/First_steps/Test_your_skills:_Math).
+Vous voilà parvenu⋅e à la fin de cet article. Mais saurez-vous vous rappeler des informations les plus importantes&nbsp;? Vous pouvez passer quelques tests afin de vérifier que vous avez retenu les concepts importants avant de continuer. Voir [Testez vos compétences&nbsp;: les mathématiques](/fr/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Math).
 
 ## Résumé
 

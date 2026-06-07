@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
 
 O símbolo **`Symbol.search`** é um método conhecido por retornar o índice com uma string que corresponde a expressão regular. Essa função é chamada pelo método {{jsxref("String.prototype.search()")}}.
 
-Para mais informação, veja {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} e {{jsxref("String.prototype.search()")}}.
+Para mais informação, veja {{jsxref("RegExp/Symbol.search", "RegExp.prototype[@@search]()")}} e {{jsxref("String.prototype.search()")}}.
 
 {{InteractiveExample("JavaScript Demo: Symbol.search")}}
 
@@ -58,4 +58,4 @@ console.log("foobar".search(new caseInsensitiveSearch("BaR")));
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp/Symbol.search", "RegExp.prototype[@@search]()")}}

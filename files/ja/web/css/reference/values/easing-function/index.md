@@ -1,8 +1,9 @@
 ---
-title: <easing-function>
+title: CSS `<easing-function>` 型
+short-title: <easing-function>
 slug: Web/CSS/Reference/Values/easing-function
 l10n:
-  sourceCommit: ed2725c99c6011da9d4afa5e47546fe0722ee814
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 **`<easing-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、値が変化する割合を記述する数学的な関数を表します。
@@ -57,7 +58,7 @@ steps(10, jump-both)
       - : 複数の進行の点を {{cssxref("&lt;number&gt;")}} 値で定義し、オプションの {{cssxref("&lt;percentage&gt;")}} 値でそのタイミングを制御します。
 
 - `<cubic-bezier-easing-function>`
-  - : 変化を可変の割合で行うスムーズな繊維を作成します。この関数は次のいずれかで指定することができます。
+  - : 変化を可変の割合で行うスムーズな遷移を作成します。この関数は次のいずれかで指定することができます。
     - `ease`
       - : イージング関数 `cubic-bezier(0.25, 0.1, 0.25, 1)` を表します。
         これは補間がゆっくり始まり、急激に加速し、終わりに向かって徐々に遅くなることを示します。

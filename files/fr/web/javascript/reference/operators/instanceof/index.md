@@ -141,5 +141,5 @@ Pour tester qu'un objet n'est pas une instance d'un constructeur donné, on pour
 
 ## Voir aussi
 
-- {{jsxref("Opérateurs/L_opérateur_typeof","typeof")}}
+- {{jsxref("Operators/typeof","typeof")}}
 - {{jsxref("Symbol.hasInstance")}}

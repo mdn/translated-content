@@ -98,7 +98,7 @@ anchor-size(<anchor-name> <anchor-size>, <length-percentage>)
 
 寸法の長さの基準となるアンカー要素は、`<anchor-name>` 引数で指定された `anchor-name` を持つ要素です。複数の要素が同じアンカー名を持つ場合、DOM 順序でそのアンカー名を持つ最後の要素が使用されます。
 
-関数呼び出しに `<anchor-name>` 引数が含まれていない場合、要素の**デフォルトアンカー**が使用されます。これは、その{{cssxref(「position-anchor」)}}プロパティで参照されるか、[`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) HTML属性によって要素に関連付けられたものです。
+関数呼び出しに `<anchor-name>` 引数が含まれていない場合、要素の**デフォルトアンカー**が使用されます。これは、その{{cssxref("position-anchor")}}プロパティで参照されるか、[`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) HTML属性によって要素に関連付けられたものです。
 
 `<anchor-name>` 引数が含まれており、そのアンカー名に一致する要素が存在しない場合、代替値が使用されます。代替値が含まれていない場合、宣言は無視されます。例えば、配置された要素に `width: anchor-size(--foo width, 50px); height: anchor-size(--foo width);` が指定されているが、DOM 内に `--foo` という名前のアンカーが存在しない場合、`width` は `50px` となり、`height` 宣言は効果がありません。
 

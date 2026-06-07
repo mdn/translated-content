@@ -15,13 +15,13 @@ Ahora que ya sabes qué es el CSS y conoces sus conceptos básicos, es hora de p
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conocimientos básicos de
-        <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajo con archivos</a
         >, conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y una idea de
         <a href="/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS"
@@ -251,7 +251,7 @@ Las reglas de especificidad y de cascada pueden parecer un poco complicadas al p
 
 En su nivel más básico, el CSS consta de dos componentes básicos:
 
-- **Propiedades**: Identificadores legibles por los humanos que indican qué características de estilo (por ejemplo, [`font-size`](/es/docs/Web/CSS/font-size), [`width`](/es/docs/Web/CSS/width), [`background-color`](/es/docs/Web/CSS/background-color)) deseas cambiar.
+- **Propiedades**: Identificadores legibles por los humanos que indican qué características de estilo (por ejemplo, [`font-size`](/es/docs/Web/CSS/Reference/Properties/font-size), [`width`](/es/docs/Web/CSS/Reference/Properties/width), [`background-color`](/es/docs/Web/CSS/Reference/Properties/background-color)) deseas cambiar.
 - **Valores**: A cada propiedad especificada se le asigna un valor que indica cómo quieres que cambien esas características de estilo (por ejemplo, lo que quieres que cambie de la fuente, el ancho o el color de fondo).
 
 La siguiente imagen resalta una sola propiedad y valor. El nombre de la propiedad es `color` y el valor `blue`.
@@ -344,13 +344,13 @@ El resultado del código anterior se ve así:
 
 ## @rules
 
-Las [`@rules`](/es/docs/Web/CSS/CSS_syntax/At-rule) (leído "at-rules" en inglés) dan al CSS algunas instrucciones sobre cómo comportarse. Algunas `@rules` son simples, con el nombre de la regla y un valor. Por ejemplo, para importar una hoja de estilo adicional a tu hoja de estilo CSS principal, puedes usar `@import`:
+Las [`@rules`](/es/docs/Web/CSS/Guides/Syntax/At-rules) (leído "at-rules" en inglés) dan al CSS algunas instrucciones sobre cómo comportarse. Algunas `@rules` son simples, con el nombre de la regla y un valor. Por ejemplo, para importar una hoja de estilo adicional a tu hoja de estilo CSS principal, puedes usar `@import`:
 
 ```css
 @import "styles2.css";
 ```
 
-Una de las `@rules` más comunes con las que te encontrarás es `@media`, que permite usar [consultas a medios](/es/docs/Web/CSS/CSS_media_queries) para aplicar CSS solo cuando se dan ciertas condiciones (por ejemplo, cuando la resolución de la pantalla supera un valor determinado o la anchura supera un valor concreto).
+Una de las `@rules` más comunes con las que te encontrarás es `@media`, que permite usar [consultas a medios](/es/docs/Web/CSS/Guides/Media_queries) para aplicar CSS solo cuando se dan ciertas condiciones (por ejemplo, cuando la resolución de la pantalla supera un valor determinado o la anchura supera un valor concreto).
 
 En el CSS que se muestra a continuación, tenemos una hoja de estilo que le da al elemento `<body>` un color de fondo rosado. Sin embargo, luego usamos `@media` para crear una sección de nuestra hoja de estilo que solo se aplicará en los navegadores con una ventana gráfica de más de 30em de ancho. Si el navegador es más ancho que 30em, el color de fondo será azul.
 

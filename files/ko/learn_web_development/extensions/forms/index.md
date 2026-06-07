@@ -16,7 +16,7 @@ original_slug: Learn/Forms
 4. CSS와 HTML 폼
    1. [HTML 폼 스타일](/ko/docs/Learn/Forms/Styling_web_forms)
    2. [HTML 폼을 위한 고급 스타일](/ko/docs/Learn/Forms/Advanced_form_styling)
-   3. [폼 위젯을 위한 호환성 테이블 속성](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+   3. [폼 위젯을 위한 호환성 테이블 속성](/ko/docs/Learn_web_development/Extensions/Forms)
 
 5. [데이터 주고 받기](/ko/docs/Learn/Forms/Sending_and_retrieving_form_data)
 6. [데이터 유효성 검사](/ko/docs/Learn/Forms/Form_validation)

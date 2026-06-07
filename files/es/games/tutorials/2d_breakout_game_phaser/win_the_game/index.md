@@ -3,7 +3,7 @@ title: Win the game
 slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/The_score", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
 
 Este es el paso **12º** del tutorial 16 de [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente tal y como queda al completar el tutorial en [Gamedev-Phaser-Content-Kit/demos/lesson12.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html).
 
@@ -44,4 +44,4 @@ Puedes comprobar el código terminado de esta lección en la siguiente demo, y j
 
 Ganar y perder están implementados, por lo que la jugabilidad de nuestro juego está terminada. Ahora añadiremos algo extra — vamos a dar al jugador tres vidas en lugar de una.
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/The_score", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}

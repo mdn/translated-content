@@ -1,14 +1,14 @@
 ---
-title: text-underline-offset
+title: Propriété CSS `text-underline-offset`
+short-title: text-underline-offset
 slug: Web/CSS/Reference/Properties/text-underline-offset
-original_slug: Web/CSS/text-underline-offset
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`text-underline-offset`** définit la distance de décalage d'une ligne de décoration de texte soulignée (appliquée à l'aide de {{CSSxRef("text-decoration")}}) par rapport à sa position originale.
 
-La propriété CSS **`text-underline-offset`** définit le décalage de la ligne de décoration du texte par rapport à sa position originale.
-
-{{InteractiveExample("CSS Demo: text-underline-offset")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: text-underline-offset")}}
 
 ```css interactive-example-choice
 text-underline-offset: auto;
@@ -24,7 +24,7 @@ text-underline-offset: -0.5rem;
 
 ```html interactive-example
 <section id="default-example">
-  <p id="example-element">And after all we are only ordinary</p>
+  <p id="example-element">Et après tout, nous ne sommes que des ordinaires</p>
 </section>
 ```
 
@@ -32,24 +32,30 @@ text-underline-offset: -0.5rem;
 p {
   font: 1.5em sans-serif;
   text-decoration-line: underline;
-  text-decoration-color: #ff0000;
+  text-decoration-color: red;
 }
 ```
 
-> [!NOTE]
-> `text-underline-offset` n'est pas une propriété détaillée de {{cssxref('text-decoration')}}. Bien qu'un élément puisse avoir plusieurs lignes décoratives, `text-underline-offset` n'aura qu'un impact sur le soulignage (et pas sur les autres lignes telles que celles fournies par {{cssxref('text-decoration-line')}} avec `overline` ou `line-through`).
+`text-underline-offset` ne fait pas partie de la propriété raccourcie {{CSSxRef('text-decoration')}}. Lorsqu'un élément peut avoir plusieurs lignes de `text-decoration`, `text-underline-offset` n'affecte que le soulignement, et **pas** les autres options de décoration de ligne possibles telles que `overline` ou `line-through`.
 
 ## Syntaxe
 
 ```css
-/* Valeur simple */
-text-underline-offset: none;
-text-underline-offset: from-font;
-text-underline-offset: 0.2em;
+/* Valeurs avec un mot-clé */
+text-underline-offset: auto;
+
+/* Valeurs de type <length> */
+text-underline-offset: 0.1em;
+text-underline-offset: 3px;
+
+/* Valeurs de type <percentage> */
+text-underline-offset: 20%;
 
 /* Valeurs globales */
 text-underline-offset: inherit;
 text-underline-offset: initial;
+text-underline-offset: revert;
+text-underline-offset: revert-layer;
 text-underline-offset: unset;
 ```
 
@@ -59,45 +65,47 @@ La propriété `text-underline-offset` est définie avec le mot-clé `none` ou a
 
 - `auto`
   - : Le navigateur choisit un décalage approprié pour le soulignage.
-- `from-font`
-  - : Si le fichier de fonte inclut des informations quant à un décalage préféré, c'est cette valeur qui sera utilisée. Si le fichier de fonte n'a pas cette information, cette valeur se comportera comme `auto`.
-- `<length>`
-  - : Une longueur (valeur de type {{cssxref("&lt;length&gt;")}}) indiquant le décalage à utiliser. Il est recommandé d'utiliser des [`em`](/fr/docs/Web/CSS/Reference/Values/length#em) comme unité afin que le décalage suive la taille de la police (quand on zoome par exemple).
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Définit le décalage des soulignements en tant que longueur ({{CSSxRef("&lt;length&gt;")}}), remplaçant la suggestion du fichier de police et la valeur par défaut du navigateur. Il est recommandé d'utiliser des unités `em` afin que le décalage s'adapte à la taille de la police.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Définit le décalage des soulignements en tant que pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) de **1em** dans la police de l'élément. Un pourcentage hérite en tant que valeur relative, et donc s'adapte aux changements de la police. Pour une application donnée de cette propriété, le décalage est constant sur toute la boîte à laquelle le soulignement est appliqué, même s'il y a des éléments enfants avec des tailles de police ou un alignement vertical différents.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
-### CSS
+### Démonstration de `text-underline-offset`
+
+```html
+<p class="ligne-une">
+  Voici un texte souligné avec une ligne ondulée rouge&nbsp;!
+</p>
+<br />
+<p class="ligne-deux">
+  Ce texte a des lignes à la fois au-dessus et en dessous. Seule la ligne du bas
+  est décalée.
+</p>
+```
 
 ```css
 p {
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: red;
+  text-decoration: underline wavy red;
   text-underline-offset: 1em;
 }
 
-.deuxlignes {
+.ligne-deux {
+  text-decoration-color: purple;
   text-decoration-line: underline overline;
 }
 ```
 
-### HTML
-
-```html
-<p class="uneligne">Voici un texte souligné avec une ligne ondulée rouge !</p>
-<p class="deuxlignes">
-  Ce texte a une ligne en dessous et une ligne au dessus. Seule la ligne du
-  dessous est déplacée.
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample('Exemples', '', '', '')}}
+{{EmbedLiveSample("Démonstration de `text-underline-offset`")}}
 
 ## Spécifications
 
@@ -109,4 +117,5 @@ p {
 
 ## Voir aussi
 
-- {{cssxref("text-decoration")}}
+- La propriété {{CSSxRef("text-decoration")}}
+- La propriété {{CSSxRef("text-decoration-thickness")}}

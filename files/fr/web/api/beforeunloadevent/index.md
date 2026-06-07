@@ -9,7 +9,7 @@ L'évènement **`beforeunload`** est déclenché quand la fenêtre, le document 
 
 Si une chaine non vide est assignée à la propriété `returnValue` de l'évènement, une boite de confirmation apparait pour demander à l'utilisateur de valider le changement d'adresse (voir les exemples ci-dessous). Si aucune valeur n'est fournise, l'évènement est traité silencieusement. Certaines implantations ne demandent confirmation que si le cadre ou tout cadre embarqué reçoit une action utilisateur. Voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus d'informations.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>

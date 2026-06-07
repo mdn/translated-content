@@ -56,7 +56,7 @@ l10n:
 
 - [CSS レイアウト料理帳](/ja/docs/Web/CSS/How_to/Layout_cookbook)
   - : CSSレイアウトの料理帳は、一般的なレイアウトパターンのレシピをまとめることを目的としています。自分のプロジェクトの出発点として使用することができるコードを提供するだけでなく、これらのレシピは、レイアウト仕様を使用するさまざまな方法と、開発者として行うことができる選択を強調します。
-- [Learn Flexbox](https://scrimba.com/learn-flexbox-c0k?via=mdn) および [Learn CSS Grid](https://scrimba.com/learn-css-grid-c02k?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Learn Flexbox](https://scrimba.com/learn-flexbox-c0k?via=mdn) および [Learn CSS Grid](https://scrimba.com/learn-css-grid-c02k?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>
   - : Scrimba のこれらのコースでは、フレックスボックスとグリッドについて知っておく必要があるすべてをインタラクティブなレッスンで学べます。
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core")}}

@@ -24,7 +24,7 @@ new EvalError([message[, fileName[, lineNumber]]])
 
 ## Propriedades
 
-- {{jsxref("EvalError.prototype")}}
+- {{jsxref("EvalError")}}
   - : Permite a adição de propriedades para um objeto `EvalError`.
 
 ## Métodos
@@ -72,5 +72,5 @@ try {
 ## Veja também
 
 - {{jsxref("Error")}}
-- {{jsxref("EvalError.prototype")}}
+- {{jsxref("EvalError")}}
 - {{jsxref("Global_Objects/eval", "eval()")}}

@@ -11,7 +11,7 @@ slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
   <tbody>
     <tr>
       <th scope="row">Необходимые знания:</th>
-      <td>Базовое знакомство с HTML , описанное в <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Начало работы с HTML</a>.</td>
+      <td>Базовое знакомство с HTML , описанное в <a href="/ru/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax">Начало работы с HTML</a>.</td>
     </tr>
     <tr>
       <th scope="row">Цель:</th>

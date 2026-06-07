@@ -29,7 +29,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se
 - `value`
   - : La valeur du paramètre. Le type de cette propriété est déterminé par le paramètre particulier.
 - `levelOfControl`
-  - : `string`. Cela représente la façon dont la paramètre est actuellement controllé. Vous pouvez l'utiliser pour vérifier si vous pouvez modifier le paramètre. Voir [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) pour plus détails. Sa valeur peut-être l'une des suivantes :<table class="standard-table">
+  - : `string`. Cela représente la façon dont la paramètre est actuellement controllé. Vous pouvez l'utiliser pour vérifier si vous pouvez modifier le paramètre. Voir [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) pour plus détails. Sa valeur peut-être l'une des suivantes :<table class="standard-table">
       <tbody>
         <tr>
           <td><code>"not_controllable"</code></td>

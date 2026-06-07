@@ -1,8 +1,9 @@
 ---
-title: :blank
+title: Pseudo-classe CSS `:blank`
+short-title: :blank
 slug: Web/CSS/Reference/Selectors/:blank
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{SeeCompatTable}}

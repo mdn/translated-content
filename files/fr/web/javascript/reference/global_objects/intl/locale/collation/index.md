@@ -1,163 +1,41 @@
 ---
-title: Intl.Locale.prototype.collation
+title: "Intl.Locale : propriété collation"
+short-title: collation
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
+l10n:
+  sourceCommit: e509776556a47f12843b91ab5c6e9be6585698c6
 ---
 
-{{JSRef}}
-
-La propriété **`Intl.Locale.prototype.collation`** est une propriété (à laquelle on accède via un accesseur) qui renvoie le [type de collation](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_Collation) pour l'instance de `Locale` courante. La collation est la méthode qui permet d'ordonner des chaînes de caractères en fonction des règles de la locale.
+La propriété d'accesseur **`collation`** des instances de {{JSxRef("Intl.Locale")}} retourne le [type de collation <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_Collation) pour cette locale, qui est utilisé pour ordonner les chaînes de caractères selon les règles de la locale.
 
 ## Description
 
-La collation est la façon dont les chaînes de caractères sont ordonnées. Elle est utilisée lorsqu'on doit trier des chaînes de caractères (des résultats de recherche, des enregistrements dans une base de donnée, etc.). Bien que cela puisse sembler trivial, la collation varie d'une région à l'autre et d'une langue à une autre. Cette propriété permet aux développeurs de connaître le type de collation pour une locale donnée.
+La collation est le processus de tri des chaînes de caractères. Elle est utilisée chaque fois que des chaînes de caractères doivent être triées et placées dans un certain ordre, des résultats de recherche à l'organisation des enregistrements dans une base de données. Bien que l'idée de placer des chaînes de caractères dans un ordre puisse sembler triviale, la notion d'ordre peut varier d'une région à l'autre et d'une langue à l'autre. Pour une liste des types de collation pris en charge, voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_collation_pris_en_charge).
 
-Voici un tableau listant les types de collation possibles tels que définis dans [la spécification Unicode sur la collation](https://github.com/unicode-org/cldr/blob/2dd06669d833823e26872f249aa304bc9d9d2a90/common/bcp47/collation.xml).
+La valeur de la propriété `collation` est définie au moment de la construction, soit avec la clé `co` de l'identifiant de la locale, soit avec l'option `collation` du constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}}. Cette dernière prend le pas si les deux sont présentes&nbsp;; et si aucune n'est présente, la propriété a pour valeur `undefined`.
 
-<table class="standard-table">
-  <caption>
-    Les différents types de collation
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">Type de collation</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>big5han</code></td>
-      <td>
-        Ordre pinyin pour l'alphabet latin et ordre big5 pour les caractères CJK
-        (utilisés en chinois)
-      </td>
-    </tr>
-    <tr>
-      <td><code>compat</code></td>
-      <td>
-        Une version précédente de l'ordre, utilisée à des fins de compatibilité
-      </td>
-    </tr>
-    <tr>
-      <td><code>dict</code></td>
-      <td>Ordre à la façon d'un dictionnaire (comme utilisé en cingalais)</td>
-    </tr>
-    <tr>
-      <td>
-        <div class="warning">
-          <p>
-            <strong>Attention :</strong> Le type <code>direct</code> a été
-            déprécié et ne doit pas être utilisé.
-          </p>
-        </div>
-        <p><code>direct</code></p>
-      </td>
-      <td>Ordre des points de code binaires (utilisé en hindoux)</td>
-    </tr>
-    <tr>
-      <td><code>ducet</code></td>
-      <td>La collation Unicode par défaut pour les éléments d'un tableau</td>
-    </tr>
-    <tr>
-      <td><code>emoji</code></td>
-      <td>L'ordre recommandé pour les émojis</td>
-    </tr>
-    <tr>
-      <td><code>eor</code></td>
-      <td>Règles d'ordre européennes</td>
-    </tr>
-    <tr>
-      <td><code>gb2312</code></td>
-      <td>
-        Ordre pinyin pour l'alphabet latin et ordre gb2312han pour les
-        caractères CJK (utilisés en chinois)
-      </td>
-    </tr>
-    <tr>
-      <td><code>phonebk</code></td>
-      <td>Ordre à la façon d'un annuaire (tel qu'en allemand)</td>
-    </tr>
-    <tr>
-      <td><code>phonetic</code></td>
-      <td>Ordre phonétique, basé sur la prononciation</td>
-    </tr>
-    <tr>
-      <td><code>pinyin</code></td>
-      <td>
-        Ordre pinyin pour les caractères de l'alphabet latin et les caractères
-        CJK (utilisés en chniois)
-      </td>
-    </tr>
-    <tr>
-      <td><code>reformed</code></td>
-      <td>Ordre réformé (tel qu'en suédois)</td>
-    </tr>
-    <tr>
-      <td><code>search</code></td>
-      <td>
-        Collation spéciale pour les chaînes de caractères utilisées pour des
-        recherches
-      </td>
-    </tr>
-    <tr>
-      <td><code>searchjl</code></td>
-      <td>
-        Collation spéciale pour la recherche des consonnes initiales en coréen
-      </td>
-    </tr>
-    <tr>
-      <td><code>standard</code></td>
-      <td>L'ordre par défaut pour chaque langue</td>
-    </tr>
-    <tr>
-      <td><code>stroke</code></td>
-      <td>
-        Ordre pinyin pour l'alphabet latin et ordre de dessin (<em>stroke</em>)
-        pour les caractères CJK (utilisés en chinois)
-      </td>
-    </tr>
-    <tr>
-      <td><code>trad</code></td>
-      <td>Ordre traditionnel (tel qu'en espagnol)</td>
-    </tr>
-    <tr>
-      <td><code>unihan</code></td>
-      <td>
-        Ordre pinyin pour l'alphabet latin et ordre Unihan radical pour les
-        caractères CJK (utilisés en chinois)
-      </td>
-    </tr>
-    <tr>
-      <td><code>zhuyin</code></td>
-      <td>
-        <p>
-          Ordre pinyin pour l'alphabet latin, ordre zhuyin pour les caractères
-          Bopomofo et CJK (utilisés en chinois)
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+Le mutateur d'accesseur de `collation` est `undefined`. Vous ne pouvez pas modifier cette propriété directement.
 
 ## Exemples
 
-À l'instar des autres étiquettes, le type de collation peut être défini pour l'objet {{jsxref("Locale", "Intl.Locale")}} via la chaîne de caractères qui définit la locale ou grâce au deuxième paramètre du constructeur qui est un objet de configuration.
+Comme les autres sous-balises de locale, le type de classement peut être ajouté à l'objet {{JSxRef("Intl.Locale")}} par le biais de la chaîne de locale ou d'un argument d'objet de configuration passé au constructeur.
 
-### Définir le type de collation via la chaîne décrivant la locale
+### Ajouter un type de collation par le biais de la chaîne de locale
 
-Le premier argument passé à [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) est une chaîne de caractères qui décrit la locale. Cette chaîne peut contenir des fragments additionnels (en plus de l'identifiant canonique de la locale). Pour cela, on ajoutera `-u` afin d'indiquer qu'on définit une extension. On ajoutera ensuite la clé identifiant cette extension, ici `-co` pour la collation. Enfin, on ajoutera la valeur souhaitée pour cette extension (dans cet exemple, `-emoji`) :
+Dans la [spécification Unicode des chaînes de caractères de locale <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/), `collation` est une «&nbsp;sous-balise d'extension&nbsp;». Ces sous-balises ajoutent des informations supplémentaires concernant la locale et sont ajoutées aux identifiants de locale à l'aide de la clé d'extension `-u`. Pour ajouter le type de collation à la chaîne de caractères d'identifiant de locale initiale passée au constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}}, ajoutez d'abord la clé d'extension `-u` si elle n'existe pas. Ensuite, ajoutez l'extension `-co` pour indiquer que vous ajoutez un type de collation. Enfin, ajoutez le type de collation.
 
 ```js
-let stringColl = new Intl.Locale("en-Latn-US-u-co-emoji");
-console.log(stringColl.collation); // Affichera "emoji" dans la console
+const locale = new Intl.Locale("zh-Hant-u-co-zhuyin");
+console.log(locale.collation); // "zhuyin"
 ```
 
-### Définir le type de collation via l'objet de configuration
+### Ajouter un type de collation par le biais de l'objet de configuration
 
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) possède un deuxième argument optionnel qui est un objet de configuration. Chaque propriété de cet objet pourra permettre de préciser une extension à la locale, y compris un type de collation. Pour définir le type de collation, on pourra utiliser une propriété `collation` sur cet objet avec une des valeurs indiquées ci-avant :
+Le constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}} a un argument d'objet de configuration optionnel, qui peut contenir n'importe lequel de plusieurs types d'extensions, y compris les types de collation. Définissez la propriété `collation` de l'objet de configuration sur le type de collation souhaité, puis passez-le dans le constructeur.
 
 ```js
-let configColl = new Intl.Locale("en-Latn-US", { collation: "emoji" });
-console.log(configColl.collation); // Affichera "emoji" dans la console
+const locale = new Intl.Locale("zh-Hant", { collation: "zhuyin" });
+console.log(locale.collation); // "zhuyin"
 ```
 
 ## Spécifications
@@ -170,4 +48,5 @@ console.log(configColl.collation); // Affichera "emoji" dans la console
 
 ## Voir aussi
 
-- {{jsxref("Locale", "Intl.Locale")}}
+- L'objet {{JSxRef("Intl.Locale")}}
+- La méthode {{JSxRef("Intl.Locale.prototype.getCollations()")}}

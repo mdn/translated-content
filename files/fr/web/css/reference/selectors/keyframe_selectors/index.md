@@ -2,7 +2,7 @@
 title: Sélecteurs d'images clés
 slug: Web/CSS/Reference/Selectors/Keyframe_selectors
 l10n:
-  sourceCommit: f8ef875113a7d3e9952f41de68be1e3a3a1e6988
+  sourceCommit: f94b7a0b06a0e32df81ec8197720d306fe50a4a0
 ---
 
 Les **sélecteurs d'images clés** CSS identifient des points spécifiques dans une chronologie d'animation où les styles d'images clés doivent être appliqués. Ces sélecteurs sont utilisés exclusivement dans la règle {{CSSxRef("@keyframes")}}.
@@ -53,7 +53,7 @@ to {
 
 ## Description
 
-Un `<keyframe-selector>` peut être le mot clé `to` ou `from`, un pourcentage compris entre `0%` et `100%`, inclus, ou une liste séparée par des virgules de ces mots clés et/ou pourcentages. Lorsque le pourcentage est précédé d'un {{CSSxRef("timeline-range-name")}}, il définit une plage chronologique si la chronologie de l'animation est une chronologie de progression de vue&nbsp;; sinon, le sélecteur est ignoré. Lorsqu'une liste de `<keyframe-selector>` séparée par des virgules est utilisée, le bloc de style qui suit s'applique à tous les points de progression spécifiés.
+Un `<keyframe-selector>` peut être le mot clé `to` ou `from`, un pourcentage compris entre `0%` et `100%`, inclus, ou une liste séparée par des virgules de ces mots clés et/ou pourcentages. Lorsque le pourcentage est précédé d'un {{CSSxRef("timeline-range-name")}}, il définit une plage chronologique si la chronologie de l'animation est une chronologie de progression de vue&nbsp;; sinon, le sélecteur est ignoré. Lorsqu'une liste de `<keyframe-selector>` séparée par des virgules est utilisée, le bloc de style qui suit s'applique à tous les points de progression définis.
 
 ### Valeurs à pourcentage valides
 
@@ -69,7 +69,7 @@ Le drapeau `!important` n'est pas valide dans une définition `@keyframes`.
 
 ### Sélecteurs de début et de fin omis
 
-Si aucun keyframe `0%` (ou `from`) ou `100%` (ou `to`) n'est spécifié, le navigateur utilisera les styles calculés de l'élément pour ces états, permettant à l'animation de passer en douceur depuis ou vers les valeurs de propriété non animées de l'élément. Autrement dit, si une propriété est définie dans un keyframe au milieu de la chronologie sans être définie dans un bloc de sélecteur de début ou de fin, la propriété s'animera depuis sa valeur d'origine vers cette valeur.
+Si aucun keyframe `0%` (ou `from`) ou `100%` (ou `to`) n'est défini, le navigateur utilisera les styles calculés de l'élément pour ces états, permettant à l'animation de passer en douceur depuis ou vers les valeurs de propriété non animées de l'élément. Autrement dit, si une propriété est définie dans un keyframe au milieu de la chronologie sans être définie dans un bloc de sélecteur de début ou de fin, la propriété s'animera depuis sa valeur d'origine vers cette valeur.
 
 Par exemple, si un élément a une couleur d'arrière-plan `red` et que l'animation suivante est appliquée&nbsp;:
 
@@ -197,7 +197,7 @@ Définie à l'origine dans le [module d'animation CSS](/fr/docs/Web/CSS/Guides/A
 }
 ```
 
-Si la chronologie d'animation de l'élément n'a pas de plage chronologique nommée correspondante, alors toutes les images clés attachées à des points sur cette plage chronologique nommée sont ignorées. Ces points d'attachement peuvent être en dehors de l'intervalle actif de l'animation. Lorsque cela se produit, les images clés automatiques `from` (`0%`) et `to` (`100%`) ne sont générées que pour les propriétés qui n'ont pas d'images clés à ou avant `0%` ou à ou après `100%`, respectivement.
+Si la chronologie d'animation de l'élément n'a pas de plage chronologique nommée correspondante, alors toutes les images clés attachées à des points sur cette plage chronologique nommée sont ignorées. Ces points d'attachement peuvent être en dehors de l'intervalle actif de l'animation. Lorsque cela se produit, les images clés automatiques `from` (`0%`) et `to` (`100%`) ne sont générées que pour les propriétés qui n'ont pas d'images clés à ou avant `0%` ou à ou après `100%`, respectivement. Voir le [guide des noms de plages chronologiques](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names) pour plus d'informations.
 
 ## Exemples
 

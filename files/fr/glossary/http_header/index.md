@@ -2,17 +2,17 @@
 title: En-tête HTTP
 slug: Glossary/HTTP_header
 l10n:
-  sourceCommit: bd348e521463e3d0d0bdc4c91d35c1de82a0f5c3
+  sourceCommit: 81bf621759d3a52fdf737c2d75f186a0073d1406
 ---
 
 Un **en-tête HTTP** est un champ de requête ou de réponse HTTP permettant de transmettre des informations supplémentaires modifiant ou précisant la sémantique du message ou de son contenu. Les en-têtes ne sont pas sensibles à la casse, commencent au début d'une ligne et sont immédiatement suivis d'un `':'` et d'une valeur dépendant de l'en-tête en question. La valeur se termine au retour chariot suivant ou à la fin du message.
 
 Traditionnellement, les en-têtes sont classés en catégories, mais cette classification ne fait plus partie d'aucune spécification&nbsp;:
 
-- {{Glossary("General header", "en-tête général")}}&nbsp;: en-têtes applicables à la fois aux requêtes et aux réponses, mais sans lien avec les données éventuellement transmises dans le corps du message.
 - {{Glossary("Request header", "en-tête de requête")}}&nbsp;: en-têtes contenant des informations supplémentaires sur la ressource à récupérer ou sur le client lui-même.
 - {{Glossary("Response header", "en-tête de réponse")}}&nbsp;: en-têtes contenant des informations supplémentaires à propos de la réponse, telles que son emplacement, ou à propos du serveur lui-même (nom, version…).
-- {{Glossary("Entity header", "en-tête d'entité")}}&nbsp;: en-têtes contenant des informations supplémentaires sur le corps de l'entité, telles que la taille de son contenu ou son type MIME.
+- {{Glossary("Representation header", "en-tête de représentation")}}&nbsp;: métadonnées sur la ressource dans le corps du message (par exemple, encodage, type de média, etc.).
+- {{Glossary("Fetch metadata request header", "en-tête de requête de métadonnées de récupération")}}&nbsp;: en-têtes fournissant des informations sur le contexte dans lequel la requête est effectuée.
 
 Requête basique avec un seul en-tête&nbsp;:
 

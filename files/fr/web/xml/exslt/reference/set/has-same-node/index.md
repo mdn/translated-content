@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/set/has-same-node
 original_slug: Web/EXSLT/set/has-same-node
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
 `set:has-same-node()` détermine si deux ensembles de nœuds ont ou non des nœuds communs.
 

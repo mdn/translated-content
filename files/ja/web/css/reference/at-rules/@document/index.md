@@ -1,14 +1,16 @@
 ---
-title: "@document"
+title: "`@document` CSS アットルール"
+short-title: "@document"
 slug: Web/CSS/Reference/At-rules/@document
-original_slug: Web/CSS/@document
 l10n:
-  sourceCommit: d585bcffcda6ed5a1555c65ab62670567925679f
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 {{Deprecated_header}}{{Non-standard_header}}
 
-**`@document`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、文書の URL に基づいて、その中に含まれるスタイルルールを制約します。これは主にユーザー定義スタイルシート用に設計されていますが、独自定義のスタイルシートにも使うことができます。
+**`@document`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、文書の URL に基づいて、その中に含まれるスタイルルールを制約します。これは主にユーザー定義スタイルシート用に設計されていますが（[userchrome.org](https://www.userchrome.org/) を参照）、独自定義のスタイルシートにも使うことができます。
+
+## 構文
 
 ```css
 @document url("https://www.example.com/")
@@ -18,8 +20,6 @@ l10n:
   }
 }
 ```
-
-## 構文
 
 `@document` ルールには 1 つ以上の照合関数を指定します。関数が URL に適用されると、ルールがその URL に効果を及ぼします。利用可能な関数は次の通りです。
 
@@ -34,7 +34,7 @@ l10n:
 - `regexp()`
   - : 文書の URL が、指定された[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)に一致する場合に一致します。正規表現は URL 全体に一致する必要があります。
 
-`url()`, `url-prefix()`, `domain()`, `media-document()` 関数に与える値は、単一引用符または二重引用符で囲ムこともできます。 `regexp()` 関数に与える値は、引用符で囲む*必要があります*。
+`url()`, `url-prefix()`, `domain()`, `media-document()` 関数に与える値は、単一引用符または二重引用符で囲むこともできます。 `regexp()` 関数に与える値は、引用符で囲む*必要があります*。
 
 エスケープされた値を `regexp()` 関数に与える場合は、 CSS でさらにエスケープする必要があります。例えば、一つの `.` (ピリオド) は正規表現ではどんな文字にも一致します。リテラルのピリオドに一致させるには、まず正規表現のルールを使ってエスケープし (`\.` にします)、次に CSS のルールを使ってエスケープしなければなりません (`\\.` にします)。
 
@@ -45,7 +45,7 @@ l10n:
 
 ## 形式文法
 
-```
+```plain
 @document [ <url>                    |
             url-prefix(<string>)     |
             domain(<string>)         |

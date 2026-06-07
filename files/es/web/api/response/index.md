@@ -61,7 +61,7 @@ Tú puedes crear un nuevo objeto `Response` usando el constructor{{domxref("Resp
 - {{domxref("Body.json()")}}
   - : Recibe un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve como {{jsxref("JSON")}} el texto del Body enviado.
 - {{domxref("Body.text()")}}
-  - : Recibe un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{domxref("USVString")}} (texto).
+  - : Recibe un flujo {{domxref("Response")}} y lo lee hasta completarlo. Devuelve una promesa que resuelve con un {{jsxref("String")}} (texto).
 
 ## Examples
 

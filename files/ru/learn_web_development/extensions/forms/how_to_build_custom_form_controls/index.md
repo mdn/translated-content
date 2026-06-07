@@ -1973,4 +1973,4 @@ window.addEventListener("load", () => {
 
 Если вы хотите двигаться далее, то код в этом примере нуждается в некотором улучшении прежде чем станет универсальным и многоразовым. Это упражнение, которое вы можете попробовать выполнить. Две подсказки, которые помогут вам в этом: первый аргумент всех наших функций одинаков, это значит что эти функции должны быть в одном контексте. Было бы разумным создать объект для совместного использования этого контекста. Также вам нужно сделать его функциональным; это значит, что ему необходимо одинаково хорошо работать с различными браузерами, чья совместимость с Web стандартами очень отличается. Повеселись!
 
-{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript", "Learn_web_development/Extensions/Forms")}}

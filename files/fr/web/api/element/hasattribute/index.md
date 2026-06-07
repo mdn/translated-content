@@ -1,13 +1,14 @@
 ---
 title: "Element : méthode hasAttribute()"
+short-title: hasAttribute()
 slug: Web/API/Element/hasAttribute
 l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`hasAttribute()`**, associée à l'interface [`Element`](/fr/docs/Web/API/Element), renvoie une **valeur booléenne** indiquant si l'élément courant possède l'attribut spécifié ou non.
+La méthode **`hasAttribute()`** de l'interface {{DOMxRef("Element")}} retourne une valeur **booléenne** indiquant si l'élément courant possède l'attribut défini ou non.
 
 ## Syntaxe
 
@@ -18,11 +19,11 @@ hasAttribute(name)
 ### Paramètres
 
 - `name`
-  - : Une chaine de caractères représentant le nom de l'attribut recherché.
+  - : Une chaîne de caractères représentant le nom de l'attribut recherché.
 
 ### Valeur de retour
 
-Un booléen indiquant la présence de l'attribut.
+Un booléen.
 
 ## Exemples
 
@@ -43,9 +44,8 @@ if (toto.hasAttribute("truc")) {
 
 ## Voir aussi
 
-- [`Element.hasAttributes()`](/fr/docs/Web/API/Element/hasAttributes)
-- [`Element.hasAttributeNS()`](/fr/docs/Web/API/Element/hasAttributeNS)
-- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute)
-- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
-- [`Element.removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute)
-- [`Element.toggleAttribute()`](/fr/docs/Web/API/Element/toggleAttribute)
+- La méthode {{DOMxRef("Element.hasAttributes()")}}
+- La méthode {{DOMxRef("Element.getAttribute()")}}
+- La méthode {{DOMxRef("Element.setAttribute()")}}
+- La méthode {{DOMxRef("Element.removeAttribute()")}}
+- La méthode {{DOMxRef("Element.toggleAttribute()")}}

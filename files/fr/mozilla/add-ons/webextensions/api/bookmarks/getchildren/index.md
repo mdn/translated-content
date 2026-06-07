@@ -20,7 +20,7 @@ var gettingChildren = browser.bookmarks.getChildren(
 ### Paramètres
 
 - `id`
-  - : Un {{jsxref("string")}} qui spécifie l'ID du dossier dont les enfants doivent être récupérés.
+  - : Un {{jsxref("String")}} qui spécifie l'ID du dossier dont les enfants doivent être récupérés.
 
 ### Valeur retournée
 

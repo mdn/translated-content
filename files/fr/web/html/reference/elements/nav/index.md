@@ -1,8 +1,9 @@
 ---
-title: "<nav> : l'élément de section de navigation"
+title: "Élément HTML `<nav>` : l'élément de section de navigation"
+short-title: <nav>
 slug: Web/HTML/Reference/Elements/nav
 l10n:
-  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<nav>`** représente une section d'une page dont le but est de fournir des liens de navigation, soit au sein du document courant, soit vers d'autres documents. Des exemples courants de sections de navigation sont les menus, les tables des matières et les index.

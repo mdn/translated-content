@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/stylesheet
 original_slug: Web/XSLT/Element/stylesheet
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:stylesheet>`(나 동등한 `<xsl:transform>`) 요소는 스타일시트의 최외곽 요소입니다.
 

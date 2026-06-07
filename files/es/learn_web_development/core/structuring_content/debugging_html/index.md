@@ -15,14 +15,14 @@ Escribir HTML es fácil, pero ¿qué pasa si algo va mal y desconocemos dónde e
       <td>
         Estar familiarizado con los principios básicos de HTML, como los vistos
         en el apartado
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML/iniciar"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Empezar con el HTML</a
         >,
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML/texto"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >Conocimientos básicos de aplicación de formato a textos con HTML</a
         >
         y
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Creating_links"
           >Creación de hiperenlaces</a
         >.
       </td>

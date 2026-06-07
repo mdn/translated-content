@@ -13,11 +13,11 @@ Instruções de processamento definidas por usuário não podem começar com `'x
 
 Instruções de processamento herdam métodos e propriedades do [`Node`](/pt-BR/docs/Web/API/Node).
 
-{{InheritanceDiagram(700,70)}}
+{{InheritanceDiagram}}
 
 ### Atributos
 
-- alvo (DOMString) - depois do `<?` e antes do _[whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace)_ separando-o de `data`.
+- alvo (DOMString) - depois do `<?` e antes do _[whitespace](/pt-BR/docs/Web/CSS/Guides/Text/Whitespace)_ separando-o de `data`.
 - dado (DOMString) - primeiro caractere _whitespace_ brancodepois de `target` e antes de `?>`
 
 ## Especificações
@@ -31,4 +31,4 @@ Instruções de processamento herdam métodos e propriedades do [`Node`](/pt-BR/
 ### Veja também
 
 - [document.createProcessingInstruction](/pt-BR/docs/DOM/document.createProcessingInstruction)
-- [whitespace no DOM](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace)
+- [whitespace no DOM](/pt-BR/docs/Web/CSS/Guides/Text/Whitespace)
