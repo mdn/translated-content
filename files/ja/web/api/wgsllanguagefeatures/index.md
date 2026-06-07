@@ -89,7 +89,7 @@ l10n:
 
 ### 拡張機能が利用可能かどうかをチェック
 
-```js
+```js-nolint
 if (
   navigator.gpu.wgslLanguageFeatures.has(
     "readonly_and_readwrite_storage_textures",
