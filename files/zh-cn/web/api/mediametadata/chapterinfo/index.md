@@ -29,4 +29,4 @@ l10n:
 
 ## 参见
 
-* {{domxref("ChapterInformation")}}
+- {{domxref("ChapterInformation")}}
