@@ -2,10 +2,10 @@
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
 l10n:
-  sourceCommit: d65814793b7c76e11cb03ed60267d0d447dc0a64
+  sourceCommit: 47962c4ebad5a138673422ec63a282ab9a63d454
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 **`WebGLRenderingContext`** インターフェイスは、 {{HTMLElement("canvas")}} 要素の描画サーフェスのための OpenGL ES 2.0 の描画コンテキストを提供します。
 
@@ -262,7 +262,6 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
   - : 指定された位置の頂点属性についての情報を返します。
 - {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
   - : 与えられた頂点配列のアドレスを返します。
-  <!-- markdownlint-disable MD052 -- text in code block is misidentified as image -->
 - [`WebGLRenderingContext.uniform[1234][fi][v]()`](/ja/docs/Web/API/WebGLRenderingContext/uniform)
   - : ユニフォーム変数の値を指定します。
 - {{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}
@@ -289,7 +288,7 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 
 - {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}}
   - : WebGL 描画バッファーの色空間を指定します。
-- {{domxref("WebGLRenderingContext.unpackColorSpace")}} {{Experimental_Inline}}
+- {{domxref("WebGLRenderingContext.unpackColorSpace")}}
   - : テクスチャのインポート時に変換する色空間を指定します。
 
 ## 拡張機能の使用

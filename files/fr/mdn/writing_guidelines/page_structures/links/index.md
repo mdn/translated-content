@@ -2,7 +2,7 @@
 title: Macros de liens
 slug: MDN/Writing_guidelines/Page_structures/Links
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 94e900db86109d76e8a1e120e3b135db0d543c87
 ---
 
 MDN propose de nombreuses macros pour créer des liens toujours à jour vers le contenu MDN. Ce guide présente les macros de renvoi croisé MDN que vous pouvez utiliser pour inclure un lien unique vers une autre page ou une liste de liens vers toutes les sous-pages d'un document.
@@ -18,11 +18,9 @@ MDN propose des macros qui créent une liste de liens&nbsp;:
   - : Sans paramètre, insère une liste ordonnée de liens vers les sous-pages de la page courante. Le premier paramètre est le slug de la page parente de l'arborescence. Le texte du lien est affiché comme code. Un second paramètre à `true` ou `1` convertit les liens en texte brut. Un troisième paramètre à `true` ou `1` ajoute un lien vers la page parente en haut de la liste avec «&nbsp;Aperçu&nbsp;» comme texte du lien.
 
 - [`\{{QuickLinksWithSubpages()}}` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs)
-  - : Crée un ensemble de liens rapides utilisant les enfants de la page courante (ou de la page spécifiée) comme destinations. Cela crée des listes hiérarchiques jusqu'à deux niveaux. Les titres des pages sont utilisés comme texte du lien et leurs résumés comme info-bulle.
+  - : Crée un ensemble de liens rapides utilisant les enfants de la page courante (ou de la page définie) comme destinations. Cela crée des listes hiérarchiques jusqu'à deux niveaux. Les titres des pages sont utilisés comme texte du lien et leurs résumés comme info-bulle.
 
-### Exemple de liste de liens
-
-Pour inclure une liste ordonnée de liens qui inclut cette page et ses pages sœurs, écrivez&nbsp;:
+Par exemple, pour inclure une liste ordonnée de liens qui inclut cette page et ses pages sœurs, écrivez&nbsp;:
 
 ```md
 \{{ListSubpagesForSidebar("/fr/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
@@ -44,21 +42,81 @@ Ces macros sont&nbsp;:
 - [`\{{HTTPMethod("")}}` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs)
 - [`\{{HTTPStatus("")}}` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs)
 
-Le premier paramètre de chaque macro est la dernière section du slug du document référencé. Par exemple, pour les éléments HTML, incluez `\{{HTMLElement("")}}` avec la partie du slug qui suit `Web/HTML/Reference/Elements/` comme premier paramètre. Avec `\{{CSSxRef("")}}`, ajoutez la partie du slug qui suit `Web/CSS/`. Le lien pointera vers cette page.
+### Utilisation simple
 
-Par défaut, le texte affiché est la ressource liée telle qu'écrite dans le premier paramètre, entre chevrons pour `\{{HTMLElement()}}`. Ce n'est pas toujours ce que vous souhaitez. Par exemple, le slug pour le type d'entrée range est `Web/HTML/Reference/Elements/input/range`. Inclure `\{{HTMLElement("input/range")}}` produit «&nbsp;{{HTMLElement("input/range")}}&nbsp;». Ce n'est pas ce que vous voulez. Toutes les macros acceptent des paramètres supplémentaires, vous pouvez donc fournir le texte à afficher.
+Pour le premier paramètre requis, vous dérivez le nom de la fonctionnalité à partir de la dernière section du slug du document vers lequel vous souhaitez créer un lien.
+Par exemple, pour créer un lien vers la page de l'élément `<select>` avec le slug `Web/HTML/Reference/Elements/select`, vous écrivez la macro comme `\{{HTMLElement("select")}}`.
+Cela produit le lien «&nbsp;{{HTMLElement("select")}}&nbsp;», qui est à la fois formaté en code et inclut les chevrons.
+C'est parce que les macros ajoutent un formatage spécifique à la fonctionnalité au texte du lien.
+Ainsi, vous n'avez jamais à vous soucier de quoi que ce soit d'autre que le nom de la fonctionnalité elle-même lors de l'utilisation d'une macro.
+C'est pourquoi l'utilisation des macros pour ajouter des liens est rapide et facile.
 
-Le second paramètre, s'il est présent, fournit le texte du lien. Dans le cas de l'entrée range, on écrira `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}` qui produit «&nbsp;{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}&nbsp;». Cette macro retire le {{HTMLElement("code")}} et les chevrons si le second paramètre contient un espace, donc on ajoute les balises et chevrons.
+### Personnaliser le texte affiché
 
-Chaque macro est différente&nbsp;!
+Par défaut, le texte affiché du lien est le premier paramètre passé à la macro. Pour afficher un texte différent, utilisez le deuxième paramètre. Par exemple, `\{{JSxRef("Array")}}` produit {{JSxRef("Array")}}. Pour afficher une variation de ce texte, utilisez `\{{JSxRef("Array", "Tableaux JavaScript")}}`, ce qui produit {{JSxRef("Array", "Tableaux JavaScript")}}. Vous pouvez remarquer que le lien résultant est formaté en code en raison du comportement par défaut de la macro. Consultez la section sur [Désactiver le formatage du code](#disabling_code_formatting) pour voir comment ignorer le style de code.
 
-Pour éviter le rendu HTML ou le style code CSS, certaines macros de renvoi croisé acceptent un paramètre `"nocode"` pour désactiver ce style.
+### Lien vers des pages imbriquées
 
-Par exemple, `\{{CSSxRef("background-color")}}` crée le lien code «&nbsp;{{CSSxRef("background-color")}}&nbsp;» et `\{{DOMxRef("CSS.supports_static", "voir la prise en charge", "", "nocode")}}` crée le lien texte «&nbsp;{{DOMxRef("CSS.supports_static", "voir la prise en charge", "", "nocode")}}&nbsp;».
+Certaines fonctionnalités de référence ont des pages imbriquées pour des fonctionnalités connexes. Par exemple, l'élément HTML `<input>` a plusieurs pages imbriquées pour différents types d'entrée, comme `Web/HTML/Reference/Elements/input/range` pour le type d'entrée range.
 
-Consultez le code source pour comprendre le fonctionnement de la macro utilisée et l'ordre des paramètres&nbsp;: même si la documentation est généralement complète, il existe des exceptions comme «&nbsp;ne pas afficher en code si le second paramètre contient un espace&nbsp;» pour `\{{HTMLElement("")}}` qui n'est documentée que dans le code.
+En passant les informations de chemin à la macro dans le premier paramètre comme dans `\{{HTMLElement("input/range")}}`, cela produit le lien «&nbsp;{{HTMLElement("input/range")}}&nbsp;», ce qui n'est pas ce que vous voulez. Utilisez le deuxième paramètre pour afficher un texte de lien différent. Ainsi, pour un lien vers le type d'entrée range, nous écririons la macro comme `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}` pour produire «&nbsp;{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}&nbsp;». (Notez que si le deuxième paramètre inclut un espace, comme celui entre `input` et `type` ici, cette macro supprime le formatage du code&nbsp;; nous avons donc ajouté les balises {{HTMLElement("code")}} explicitement.)
 
-Pour connaître les paramètres de chaque macro et leur ordre, le fichier source de la macro (lien ci-dessus) inclut la documentation. Il existe une [liste des macros courantes](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), qui produisent toutes des liens dans le contenu principal de la page.
+### Utiliser `CSSxRef` avec la référence CSS
+
+Chaque macro est légèrement différente.
+
+La macro `CSSxRef` détermine automatiquement le chemin correct à partir du nom de la fonctionnalité que vous fournissez en tant que premier paramètre à la macro. La macro détecte si une fonctionnalité est une propriété, un sélecteur, une règle @, une fonction ou un type de données, et crée un lien vers le document approprié sous `Web/CSS/Reference/`.
+
+Par exemple&nbsp;:
+
+- `\{{CSSxRef("cursor")}}` crée un lien vers la page de la propriété à `Web/CSS/Reference/Properties/cursor`.
+- `\{{CSSxRef(":hover")}}` crée un lien vers la page de la pseudo-classe à `Web/CSS/Reference/Selectors/:hover`.
+- `\{{CSSxRef("@media")}}` crée un lien vers la page de la règle @ à `Web/CSS/Reference/At-rules/@media`.
+- `\{{CSSxRef("pow")}}` crée un lien vers la page de la fonction à `Web/CSS/Reference/Values/pow`.
+- `\{{CSSxRef("<color>")}}` crée un lien vers la page du type de données à `Web/CSS/Reference/Values/color_value`.
+
+Tout comme la macro `HTMLElement`, la macro `CSSxRef` ajoute le style approprié au texte du lien en fonction du type de fonctionnalité. Ainsi, `\{{CSSxRef("acos")}}` ajoute des crochets angulaires au texte du lien résultant comme dans {{CSSxRef("acos")}}.
+
+Quelques autres comportements de la macro `CSSxRef` méritent d'être notés&nbsp;:
+
+- Les pages imbriquées sont gérées automatiquement. Par exemple&nbsp;:
+  - `\{{CSSxRef("basic-shape/circle")}}` crée un lien vers le document à `Web/CSS/Reference/Values/basic-shape/circle` avec le lien {{CSSxRef("basic-shape/circle")}}.
+  - `\{{CSSxRef("animation-timeline/scroll")}}` crée un lien vers le document à `Web/CSS/Reference/Properties/animation-timeline/scroll` avec le lien {{CSSxRef("animation-timeline/scroll")}}.
+- Certaines fonctionnalités CSS ont le même nom. En plus de leur emplacement dans le répertoire, leurs chemins contiennent des suffixes pour refléter leur type. Par exemple, la propriété `position` a le chemin `Web/CSS/Reference/Properties/position`, tandis que le type de données `<position>` a le chemin `Web/CSS/Reference/Values/position_value`.
+
+  La macro `CSSxRef` gère automatiquement ces fonctionnalités ayant le même nom. Ainsi, `\{{CSSxRef("position")}}` crée un lien vers la page de la propriété avec le lien {{CSSxRef("position")}}, et `\{{CSSxRef("<position>")}}` crée un lien vers la page du type de données avec le lien {{CSSxRef("&lt;position&gt;")}}.
+
+  D'autres fonctionnalités ayant des noms partagés incluent&nbsp;:
+  - La propriété `color` (`Web/CSS/Reference/Properties/color`) et le type de données `<color>` (`Web/CSS/Reference/Values/color_value`)
+
+    **Macro**&nbsp;: `\{{CSSxRef("color")}}` et `\{{CSSxRef("<color>")}}`
+
+  - La fonction `fit-content()` (`Web/CSS/Reference/Values/fit-content_function`) et le mot-clé `fit-content` (`Web/CSS/Reference/Values/fit-content`)
+
+    **Macro**&nbsp;: `\{{CSSxRef("fit-content_function", "fit-content()")}}` et `\{{CSSxRef("fit-content")}}` (c'est actuellement une exception où vous devez fournir le deuxième paramètre pour obtenir le texte de lien correct pour la fonction.)
+
+  - La propriété `flex` (`Web/CSS/Reference/Properties/flex`) et le type de données `<flex>` (`Web/CSS/Reference/Values/flex_value`)
+
+    **Macro**&nbsp;: `\{{CSSxRef("flex")}}` et `\{{CSSxRef("<flex>")}}`
+
+  - La pseudo-classe `:host` (`Web/CSS/Reference/Selectors/:host`) et la fonction pseudo-classe `:host()` (`Web/CSS/Reference/Values/:host_function`)
+
+    **Macro**&nbsp;: `\{{CSSxRef(":host")}}` et `\{{CSSxRef(":host()")}}`
+
+  - La propriété `overflow` (`Web/CSS/Reference/Properties/overflow`) et le type de données `<overflow>` (`Web/CSS/Reference/Values/overflow_value`)
+
+    **Macro**&nbsp;: `\{{CSSxRef("overflow")}}` et `\{{CSSxRef("<overflow>")}}`
+
+  - La fonction `url()` (`Web/CSS/Reference/Values/url_function`) et le type de données `<url>` (`Web/CSS/Reference/Values/url_value`)
+
+    **Macro**&nbsp;: `\{{CSSxRef("url()")}}` et `\{{CSSxRef("<url>")}}`
+
+### Désactiver le formatage du code
+
+Les macros de référence croisée appliquent par défaut un formatage de code au texte du lien.
+Pour éviter les styles de code HTML et CSS appliqués par les macros, utilisez le paramètre `"nocode"`.
+
+Par exemple, `\{{CSSxRef("background-color")}}` crée le lien "{{CSSxRef("background-color")}}" avec le style de code, tandis que `\{{DOMxRef("CSS.supports_static", "check support", "", "nocode")}}` crée le lien en texte brut «&nbsp;{{DOMxRef("CSS.supports_static", "check support", "", "nocode")}}&nbsp;». De même, pour créer le lien vers le tableau JavaScript sans formatage de code, nous écririons `\{{JSxRef("Array", "JavaScript arrays", "", "nocode")}}` pour produire «&nbsp;{{JSxRef("Array", "JavaScript arrays", "", "nocode")}}&nbsp;».
 
 ## Voir aussi
 

@@ -171,7 +171,7 @@ let duration = vacations.trip?.getTime?.();
 
 ### Combinando con el operador de fusión nulo
 
-El {{JSxRef("Operators/Nullish_Coalescing_Operator", "operador de fusión nulo", '', 1)}} se puede usar después del encadenamiento opcional para generar un valor predeterminado cuando no se encontró ninguno:
+El {{JSxRef("Operators/Nullish_coalescing", "operador de fusión nulo", '', 1)}} se puede usar después del encadenamiento opcional para generar un valor predeterminado cuando no se encontró ninguno:
 
 ```js
 let customer = {
@@ -192,4 +192,4 @@ console.log(customerCity); // Unknown city
 
 ## Ver también
 
-- El {{JSxRef("Operators/Nullish_Coalescing_Operator", "Nullish Coalescing Operator", '', 1)}}
+- El {{JSxRef("Operators/Nullish_coalescing", "Nullish Coalescing Operator", '', 1)}}

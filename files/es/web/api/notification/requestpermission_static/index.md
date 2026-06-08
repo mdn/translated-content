@@ -33,7 +33,7 @@ Notification.requestPermission(callback);
 
 ### Valor de retorno
 
-Una {{jsxref("Promise")}} que se convierte en una {{domxref("DOMString")}} con el permiso elegido por el usuario. Los valores posibles para este son:
+Una {{jsxref("Promise")}} que se convierte en una {{jsxref("String")}} con el permiso elegido por el usuario. Los valores posibles para este son:
 
 - `granted`
 - `denied`

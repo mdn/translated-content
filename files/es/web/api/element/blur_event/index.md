@@ -30,7 +30,7 @@ El evento `blur` es disparado cuando un elemento ha perdido su foco. La diferenc
 | Propiedad                          | Tipo                                     | Descripción                                 |
 | ---------------------------------- | ---------------------------------------- | ------------------------------------------- |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Objetivo del evento (elemento DOM)          |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | El tipo de evento.                          |
+| `type` {{readonlyInline}}          | {{jsxref("String")}}                     | El tipo de evento.                          |
 | `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Si el elemento normalmente se propaga o no. |
 | `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Si el evento es cancelable o no.            |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                        |

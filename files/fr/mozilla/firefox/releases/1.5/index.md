@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Basé sur le moteur {{Glossary("Gecko")}} 1.8, Firefox 1.5 améliore son déjà excellent support des standards et apporte de nouvelles fonctionnalités permettant la prochaine génération d'applications web. Firefox 1.5 propose un meilleur support de CSS2 et CSS3, des API pour des graphiques 2D scriptables et programmables via [SVG](/fr/docs/Web/SVG) 1.1 et [`<canvas>`](/fr/docs/Web/API/Canvas_API), [XForms](/fr/docs/Glossary/XForms) et les évènements XML, ainsi que de nombreuses améliorations de DHTML, JavaScript et du DOM.
+Basé sur le moteur {{Glossary("Gecko")}} 1.8, Firefox 1.5 améliore son déjà excellent support des standards et apporte de nouvelles fonctionnalités permettant la prochaine génération d'applications web. Firefox 1.5 propose un meilleur support de CSS2 et CSS3, des API pour des graphiques 2D scriptables et programmables avec [SVG](/fr/docs/Web/SVG) 1.1 et [`<canvas>`](/fr/docs/Web/API/Canvas_API), [XForms](/fr/docs/Glossary/XForms) et les évènements XML, ainsi que de nombreuses améliorations de DHTML, JavaScript et du DOM.
 
 ## Outils de développement
 
@@ -18,13 +18,13 @@ Plusieurs outils et extensions de navigateur sont disponibles pour aider les dé
 - [Extensions de navigateur <sup>(angl.)</sup>](https://addons.mozilla.org/en-US/firefox/search/?q=Developer%20Tools) incluant [FireBug <sup>(angl.)</sup>](https://web.archive.org/web/20061205073236/http://www.joehewitt.com/software/firebug/), [barre d'outils Web Developer <sup>(angl.)</sup>](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Live HTTP Headers <sup>(angl.)</sup>](https://web.archive.org/web/20200628024648/http://livehttpheaders.mozdev.org/), [HTML Validator <sup>(angl.)</sup>](https://validator.w3.org/) et bien d'autres.
 
 > [!NOTE]
-> Certaines extensions ne sont pas encore supportées par Firefox 1.5 et seront automatiquement désactivées.
+> Certaines extensions ne sont pas encore supportées par Firefox 1.5 et sont automatiquement désactivées.
 
 ## Aperçu
 
 Voici certaines des nouvelles fonctionnalités de Firefox 1.5&nbsp;:
 
-### Site Web et développeurs d'applications
+### Site web et développeur·euse·s d'applications
 
 - SVG est pris en charge dans XHTML
   - : Le SVG peut être utilisé dans des pages XHTML. JavaScript et CSS peuvent être utilisés pour manipuler l'image comme vous le feriez avec du XHTML dans un script. Voir [SVG dans Firefox <sup>(angl.)</sup>](https://web.archive.org/web/20210413180914/https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox) pour connaître l'état et les problèmes connus de l'implémentation du SVG dans Firefox.
@@ -38,7 +38,7 @@ Voici certaines des nouvelles fonctionnalités de Firefox 1.5&nbsp;:
 ### XUL et développeur·euse·s d'extensions
 
 - [Construire une extension](/fr/docs/Mozilla/Add-ons)
-  - : Ce tutoriel vous guidera étape par étape dans la création d'une extension très simple pour Firefox. Consultez également [un autre tutoriel sur la base de connaissance de MozillaZine <sup>(angl.)</sup>](https://kb.mozillazine.org/Getting_started_with_extension_development), qui montre comment il est encore plus simple de créer une nouvelle extension avec les nouvelles fonctionnalités du gestionnaire d'extensions dans la version 1.5.
+  - : Ce tutoriel vous guide étape par étape dans la création d'une extension très simple pour Firefox. Consultez également [un autre tutoriel sur la base de connaissance de MozillaZine <sup>(angl.)</sup>](https://kb.mozillazine.org/Getting_started_with_extension_development), qui montre comment il est encore plus simple de créer une nouvelle extension avec les nouvelles fonctionnalités du gestionnaire d'extensions dans la version 1.5.
 - [XPCNativeWrapper <sup>(angl.)</sup>](https://web.archive.org/web/20140604075216/https://developer.mozilla.org/en-US/docs/XPCNativeWrapper)
   - : `XPCNativeWrapper` est un moyen pour empaqueter un objet afin qu'il puisse [accéder à des privilèges chrome <sup>(angl.)</sup>](https://web.archive.org/web/20130905110328/https://developer.mozilla.org/en-US/docs/Safely_accessing_content_DOM_from_chrome). Il peut être utilisé dans toutes les versions de Firefox, bien que son comportement ait changé à partir de Firefox 1.5 (Gecko 1.8).
 - [Système de préférences <sup>(angl.)</sup>](https://web.archive.org/web/20210620034317/https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preferences_system)
@@ -53,12 +53,12 @@ Voici certaines des nouvelles fonctionnalités de Firefox 1.5&nbsp;:
 #### Changements liés au réseau
 
 - Les invites de certificat peuvent désormais être remplacées par canal. Cela fonctionne en définissant un demandeur d'interface comme notificationCallbacks d'un `nsIChannel` et en fournissant une interface pour `nsIBadCertListener`.
-- Les écouteurs de nsIWebBrowserPersist peuvent maintenant implémenter `nsIInterfaceRequestor::GetInterface` et auront l'opportunité de fournir toutes les interfaces que les canaux pourraient demander, y compris `nsIProgressEventSink` (peu utile, redondant avec `nsIWebProgressListener`). Les interfaces utiles ici incluent `nsIChannelEventSink` et `nsIBadCertListener`.
-- Les extensions ou autres consommateurs necko, y compris XMLHttpRequest, peuvent définir explicitement un en-tête Cookie, et necko ne le remplacera pas. Les cookies stockés seront fusionnés avec l'en-tête défini explicitement, de sorte que l'en-tête explicite remplacera les cookies stockés.
+- Les écouteurs de nsIWebBrowserPersist peuvent maintenant implémenter `nsIInterfaceRequestor::GetInterface` et a l'opportunité de fournir toutes les interfaces que les canaux pourraient demander, y compris `nsIProgressEventSink` (peu utile, redondant avec `nsIWebProgressListener`). Les interfaces utiles ici incluent `nsIChannelEventSink` et `nsIBadCertListener`.
+- Les extensions ou autres consommateurs necko, y compris XMLHttpRequest, peuvent définir explicitement un en-tête Cookie, et necko ne le remplace pas. Les cookies stockés sont fusionnés avec l'en-tête défini explicitement, de sorte que l'en-tête explicite remplace les cookies stockés.
 
 ## Nouvelles fonctionnalités pour l'utilisateur·ice
 
-### Expéreince utilisateur
+### Expérience utilisateur·ice
 
 - **Navigation plus rapide** avec une performance accrue des boutons permettant de reculer ou d'avancer d'une page.
 - **Réorganisation des onglets par glisser-déposer.**
@@ -72,7 +72,7 @@ Voici certaines des nouvelles fonctionnalités de Firefox 1.5&nbsp;:
 
 - **Mises à jour automatiques** pour rationaliser les mises à niveau du navigateur. La notification d'une mise à jour est plus visible et les mises à jour de Firefox n'excèdent plus le demi méga-octet. La mise à jour des extensions a également été améliorée.
 - **Améliorations du système de blocage de l'ouverture intempestive de fenêtres (popups).**
-- **La fonctionnalité d'effacement des traces** offre un accès simplifié et rapide pour supprimer toutes vos données personnelles via un menu ou un raccourci clavier.
+- **La fonctionnalité d'effacement des traces** offre un accès simplifié et rapide pour supprimer toutes vos données personnelles avec un menu ou un raccourci clavier.
 
 ### Support des standards Web ouverts
 

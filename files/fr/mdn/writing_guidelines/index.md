@@ -2,7 +2,7 @@
 title: Règles d'écriture
 slug: MDN/Writing_guidelines
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: ca0b474bb2e153ce72718cb304306e540065a888
 ---
 
 MDN Web Docs est un projet open source. Les sections ci-dessous décrivent nos règles pour _ce que_ nous documentons et _comment_ nous le faisons sur MDN Web Docs. Pour en savoir plus sur _comment contribuer_, consultez nos [règles de contribution](/fr/docs/MDN/Community).
@@ -20,12 +20,15 @@ MDN Web Docs est un projet open source. Les sections ci-dessous décrivent nos r
   - : La section «&nbsp;Apprendre le développement web&nbsp;» de MDN s'adresse spécifiquement aux personnes qui découvrent les bases du développement web, et nécessite donc une approche différente du reste du contenu. Cet article donne des conseils pour rédiger du contenu pédagogique.
 
 - [Comment écrire pour MDN Web Docs](/fr/docs/MDN/Writing_guidelines/Howto)
-  - : Cette section regroupe toutes les informations pour créer et modifier des pages, y compris les processus et techniques à respecter. Vous y trouverez comment débuter, une vue d'ensemble de la structure des pages, et où trouver des guides pratiques pour des tâches spécifiques. Cette section inclut notamment&nbsp;:
+  - : Cette section regroupe toutes les informations pour créer et modifier des pages, y compris les processus et techniques à respecter. Vous pouvez y trouver comment débuter, une vue d'ensemble de la structure des pages, et où trouver des guides pratiques pour des tâches spécifiques. Cette section inclut notamment&nbsp;:
     - [Comment rechercher une technologie](/fr/docs/MDN/Writing_guidelines/Howto/Research_technology)
       - : Cette section donne des conseils pratiques pour rechercher une technologie à documenter.
 
     - [Comment créer, déplacer et supprimer des pages](/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
       - : Cette section explique comment créer, déplacer ou supprimer une page sur MDN Web Docs, ainsi que la gestion des redirections lors de ces opérations.
+
+    - [Comment retirer une section de contenu](/fr/docs/MDN/Writing_guidelines/Howto/Retiring_content)
+      - : Cette section explique le processus de retrait de sections entières du contenu de MDN Web Docs de manière planifiée et transparente, y compris la prise de décision, les délais de préavis, l'archivage et la suppression.
 
     - [Comment utiliser le markdown](/fr/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
       - : Le format markdown utilisé sur MDN Web Docs est basé sur le [GitHub flavored markdown (GFM) <sup>(angl.)</sup>](https://github.github.com/gfm/). Cette section est un guide du markdown utilisé, y compris les formats pour les notes et listes de définitions.

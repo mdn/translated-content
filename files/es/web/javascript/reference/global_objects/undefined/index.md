@@ -37,10 +37,10 @@ El valor primitivo `{{Glossary("Undefined", "undefined")}}`.
 
 En navegadores modernos (JavaScript 1.8.5 / Firefox 4+), `undefined` es una propiedad _no-configurable_, _no-grabable_ según la especificación ECMAScript 5. Aún cuando este no sea el caso, evite sobreescribirlo.
 
-Una variable a la que no se le ha asignado valor es de tipo `undefined`. Un método o sentencia también devuelve `undefined` si la variable que se está evaluando no tiene asignado un valor. Una función devuelve `undefined` si no se ha {{jsxref("Sentencias/return", "devuelto")}} un valor.
+Una variable a la que no se le ha asignado valor es de tipo `undefined`. Un método o sentencia también devuelve `undefined` si la variable que se está evaluando no tiene asignado un valor. Una función devuelve `undefined` si no se ha {{jsxref("Statements/return", "devuelto")}} un valor.
 
 > [!NOTE]
-> Aunque es posible usarlo como un {{Glossary("Identifier", "identificador")}} (nombre de variable) en cualquier otro ámbito que no sea el ámbito global (porque `undefined` no es una {{jsxref("Reserved_Words", "palabra reservada")}}), hacerlo es una mala idea que provocará que tú código sea difícil de mantener y depurar.
+> Aunque es posible usarlo como un {{Glossary("Identifier", "identificador")}} (nombre de variable) en cualquier otro ámbito que no sea el ámbito global (porque `undefined` no es una {{jsxref("Lexical_grammar", "palabra reservada")}}), hacerlo es una mala idea que provocará que tú código sea difícil de mantener y depurar.
 >
 > ```js example-bad
 > //NO HAGAS ESTO
@@ -74,11 +74,11 @@ if (x === undefined) {
 ```
 
 > [!NOTE]
-> Aquí se debe usar el operador de igualdad estricta en lugar del operador de igualdad estándar, ya que `x == undefined` también verifica si `x` es `null`, mientras que el de igualdad estricta no. `null` no es equivalente a `undefined`. Vea {{jsxref("Operadores/Comparison_Operators", "operadores de comparación")}} para más detalles.
+> Aquí se debe usar el operador de igualdad estricta en lugar del operador de igualdad estándar, ya que `x == undefined` también verifica si `x` es `null`, mientras que el de igualdad estricta no. `null` no es equivalente a `undefined`. Vea {{jsxref("Operators", "operadores de comparación")}} para más detalles.
 
 ### Typeof operador y `undefined`
 
-Alternativamente se puede usar {{jsxref("Operadores/typeof","typeof")}}. Recuerda que este siempre devolverá una cadena de texto con el tipo:
+Alternativamente se puede usar {{jsxref("Operators/typeof","typeof")}}. Recuerda que este siempre devolverá una cadena de texto con el tipo:
 
 ```js
 let x;
@@ -87,7 +87,7 @@ if (typeof x === "undefined") {
 }
 ```
 
-Una razón para usar {{jsxref("Operadores/typeof","typeof")}} es que no devuelve un error si la variable no fue declarada.
+Una razón para usar {{jsxref("Operators/typeof","typeof")}} es que no devuelve un error si la variable no fue declarada.
 
 ```js
 // x no fue declarada antes
@@ -113,7 +113,7 @@ if ("x" in window) {
 
 ### Operador void y `undefined`
 
-El operador {{jsxref("Operadores/void", "void")}} es una tercer alternativa.
+El operador {{jsxref("Operators/void", "void")}} es una tercer alternativa.
 
 ```js
 let x;
