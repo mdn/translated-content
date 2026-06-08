@@ -114,7 +114,7 @@ const header = React.createElement(
 
 你也可以使用 Yarn 软件包管理器作为替代方案，但是我们假设在这套教程中使用 npm。有关 npm 和 yarn 的更多信息，请参见[程序包管理基础](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)。
 
-如果你使用的是 Windows，则需要安装一些软件以与 Unix/macOS 终端保持同等地位，才能使用本教程中提到的终端命令。**Gitbash**（作为 [git Windows 工具集](https://gitforwindows.org/)的一部分提供）或 **[适用于 Linux 的 Windows 子系统](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）均适用。有关这些以及一般终端命令的更多信息，请参见[命令行速成课程](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)。
+如果你使用的是 Windows，则需要安装一些软件以与 Unix/macOS 终端保持同等地位，才能使用本教程中提到的终端命令。**Gitbash**（作为 [git Windows 工具集](https://gitforwindows.org/)的一部分提供）或[**适用于 Linux 的 Windows 子系统**](https://docs.microsoft.com/en-us/windows/wsl/about)（**WSL**）均适用。有关这些以及一般终端命令的更多信息，请参见[命令行速成课程](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)。
 
 还请记住，React 和 ReactDOM 生成的应用程序只能在相当现代的一组浏览器上运行——通过某些 polyfill 可以使用 IE9+。在阅读这些教程时，建议你使用 Firefox，Safari 或 Chrome 等现代浏览器。
 
