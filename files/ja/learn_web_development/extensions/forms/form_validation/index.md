@@ -784,7 +784,7 @@ input:focus:invalid {
 }
 ```
 
-```js hidden live-sample___detailed-custom-validation
+```js-nolint hidden live-sample___detailed-custom-validation
 // DOM ノードを取得する方法はたくさんありますが、ここではフォーム本体と
 // メールアドレス入力欄、そしてエラーメッセージを表示する span 要素を取得
 const form = document.getElementsByTagName("form")[0];
