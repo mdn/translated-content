@@ -1,8 +1,9 @@
 ---
-title: ellipse()
+title: CSS `ellipse()` 関数
+short-title: ellipse()
 slug: Web/CSS/Reference/Values/basic-shape/ellipse
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`ellipse()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("basic-shape")}} [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)の一つです。
