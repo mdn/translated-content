@@ -1,5 +1,6 @@
 ---
-title: rel="noopener"
+title: HTML 属性值 `rel="noopener"`
+short-title: noopener
 slug: Web/HTML/Reference/Attributes/rel/noopener
 l10n:
   sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4

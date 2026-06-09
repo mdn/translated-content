@@ -1,5 +1,6 @@
 ---
-title: rel="noreferrer"
+title: HTML 属性值 `rel="noreferrer"`
+short-title: noreferrer
 slug: Web/HTML/Reference/Attributes/rel/noreferrer
 l10n:
   sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
