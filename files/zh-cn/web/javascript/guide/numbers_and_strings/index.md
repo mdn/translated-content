@@ -26,7 +26,7 @@ l10n:
 42
 ```
 
-十进制字面量可以以零（`0`）开头，后跟另一个十进制数字，但如果开头的 `0` 之后的所有数字均小于 8，则该数字将被解释为八进制数。这被视为一种遗留语法，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#旧式八进制字面量) 下，无论被解释为八进制还是十进制，以 `0` 开头的数字字面量都会引发语法错误——因此，请改用 `0o` 前缀。
+十进制字面量可以以零（`0`）开头，后跟另一个十进制数字，但如果开头的 `0` 之后的所有数字均小于 8，则该数字将被解释为八进制数。这被视为一种遗留语法，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#旧式八进制字面量)下，无论被解释为八进制还是十进制，以 `0` 开头的数字字面量都会引发语法错误——因此，请改用 `0o` 前缀。
 
 ```js-nolint example-bad
 0888 // 888 以十进制解析
@@ -63,7 +63,7 @@ const m = 0644; // 420
 
 ### 十六进制
 
-十六进制数字语法以零为开头，后面接一个小写或大写的拉丁文字母“X”（`0x 或 0X`）。假如 `0x` 后面的数字超出范围（0123456789ABCDEF），那么就会抛出{{jsxref("SyntaxError")}} “Identifier starts immediately after numeric literal”。
+十六进制数字语法以零为开头，后面接一个小写或大写的拉丁文字母“X”（`0x 或 0X`）。假如 `0x` 后面的数字超出范围（0123456789ABCDEF），那么就会抛出 {{jsxref("SyntaxError")}} “Identifier starts immediately after numeric literal”。
 
 ```js-nolint
 0xFFFFFFFFFFFFF // 4503599627370495
@@ -123,7 +123,7 @@ const notANum = Number.NaN;
 | {{jsxref("Number.POSITIVE_INFINITY")}} | 特殊值“正无穷”；在溢出时返回                                                                   |
 | {{jsxref("Number.EPSILON")}}           | `1` 与能够表示为 {{jsxref("Number")}} 的最小大于 `1` 的值之间的差值（`2.220446049250313e-16`） |
 | {{jsxref("Number.MIN_SAFE_INTEGER")}}  | JavaScript 最小安全整数（−2^53 + 1 或 `−9007199254740991`）                                    |
-| {{jsxref("Number.MAX_SAFE_INTEGER")}}  | JavaScript 最大安全整数（(+2^53 − 1 或 `+9007199254740991`）                                   |
+| {{jsxref("Number.MAX_SAFE_INTEGER")}}  | JavaScript 最大安全整数（+2^53 − 1 或 `+9007199254740991`）                                    |
 
 | 方法                                 | 描述                                                                                 |
 | ------------------------------------ | ------------------------------------------------------------------------------------ |
@@ -150,7 +150,7 @@ const notANum = Number.NaN;
 Math.PI;
 ```
 
-同理，标准数学函数也是 `Math` 的方法。这些包括三角函数、对数、指数，和其他函数。比方说你想使用正弦函数，你可以这么写：
+同理，标准数学函数也是 `Math` 的方法。这些包括三角函数、对数、指数和其他函数。比方说你想使用正弦函数，你可以这么写：
 
 ```js
 Math.sin(1.56);
