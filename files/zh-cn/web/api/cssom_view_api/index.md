@@ -12,9 +12,9 @@ l10n:
 ## 指南
 
 - [坐标系](/zh-CN/docs/Web/API/CSSOM_view_API/Coordinate_systems)
-  - : 坐标系常用于指示上下文中位置，例如显示器的窗口、移动设备上的视口，或打印时纸张上的位置。
+  - : 坐标系常用于指定显示上下文中位置，例如显示器的窗口、移动设备上的视口，或打印时纸张上的位置。
 - [视口概念](/zh-CN/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
-  - : 视口的概念——什么是视口，视口在 CSS、SVG 和移动设备中的影响，以及视觉视口与布局视口之间的区别。
+  - : 视口的概念——什么是视口，视口在 CSS、SVG 和移动设备中的影响，以及可视视口与布局视口之间的区别。
 
 ## 接口
 
@@ -38,8 +38,8 @@ l10n:
 - {{domxref("Window.moveTo", "moveTo()")}}
 - {{domxref("Window.outerHeight", "outerHeight")}}
 - {{domxref("Window.outerWidth", "outerWidth")}}
-- `pageXOffset` (查看 {{domxref("Window.scrollX", "scrollX")}})
-- `pageYOffset` (查看 {{domxref("Window.scrollY", "scrollY")}})
+- `pageXOffset`（查看 {{domxref("Window.scrollX", "scrollX")}}）
+- `pageYOffset`（查看 {{domxref("Window.scrollY", "scrollY")}}）
 - {{domxref("Window.resizeBy", "resizeBy()")}}
 - {{domxref("Window.resizeTo", "resizeTo()")}}
 - {{domxref("Window.screen", "screen")}}
@@ -122,11 +122,11 @@ l10n:
 
 ## 参见
 
-- [CSS 对象模型（CSSOM）](/zh-CN/docs/Web/API/CSS_Object_Model)
-- [CSS 对象模型视图](/zh-CN/docs/Web/CSS/Guides/CSSOM_view)
-- [CSS 溢出](/zh-CN/docs/Web/CSS/Guides/Overflow)
-- [CSS 滚动行为](/zh-CN/docs/Web/CSS/Guides/Overscroll_behavior)
-- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/Guides/Scroll_snap)
+- [CSS 对象模型（CSSOM）](/zh-CN/docs/Web/API/CSS_Object_Model) API
+- [CSS 对象模型视图](/zh-CN/docs/Web/CSS/Guides/CSSOM_view)模块
+- [CSS 溢出](/zh-CN/docs/Web/CSS/Guides/Overflow)模块
+- [CSS 滚动行为](/zh-CN/docs/Web/CSS/Guides/Overscroll_behavior)模块
+- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/Guides/Scroll_snap)模块
 - {{glossary("Viewport", "视口")}}
 - {{glossary("Layout viewport", "布局视口")}}
 - {{glossary("Visual viewport", "可视视口")}}
