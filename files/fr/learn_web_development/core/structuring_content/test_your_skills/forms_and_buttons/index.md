@@ -481,11 +481,20 @@ Votre code HTML final doit ressembler à ceci&nbsp;:
     </li>
     <li>
       <label for="telephone">Numéro de téléphone :</label>
-      <input type="tel" name="telephone" id="telephone" required maxlength="15" />
+      <input
+        type="tel"
+        name="telephone"
+        id="telephone"
+        required
+        maxlength="15" />
     </li>
     <li>
       <label for="commentaire">Commentaire :</label>
-      <textarea name="commentaire" id="commentaire" required maxlength="200"></textarea>
+      <textarea
+        name="commentaire"
+        id="commentaire"
+        required
+        maxlength="200"></textarea>
     </li>
     <li>
       <button>Envoyer le commentaire</button>
