@@ -36,16 +36,19 @@ Voici le code sous-jacent pour ce point de départ&nbsp;:
 <p>Commençons par une citation&nbsp;:</p>
 
 <p>
-  HTML, Hypertext Markup Language est par défaut accessible, si utilisé correctement.
+  HTML, Hypertext Markup Language est par défaut accessible, si utilisé
+  correctement.
 </p>
 
-<p>CSS peut également être utilisé pour rendre les pages web plus ou moins accessibles.</p>
+<p>
+  CSS peut également être utilisé pour rendre les pages web plus ou moins
+  accessibles.
+</p>
 
 <p>Formules chimiques : H2O (Eau), C2H6O (Éthanol).</p>
 
 <p>
-  Dates : 25 Décembre 2019 (Jour de Noël), 2 Novembre 2019 (Día de los
-  Muertos).
+  Dates : 25 Décembre 2019 (Jour de Noël), 2 Novembre 2019 (Día de los Muertos).
 </p>
 ```
 
@@ -111,10 +114,8 @@ Votre code HTML final doit ressembler à ceci&nbsp;:
 
 <p>
   Dates :
-  <time datetime="2019-12-25">25 Décembre 2019</time> (Jour de Noël),
-  (Christmas Day),
-  <time datetime="2019-11-02">2 Novembre 2019</time> (Día de los
-  Muertos).
+  <time datetime="2019-12-25">25 Décembre 2019</time> (Jour de Noël), (Christmas
+  Day), <time datetime="2019-11-02">2 Novembre 2019</time> (Día de los Muertos).
 </p>
 ```
 
