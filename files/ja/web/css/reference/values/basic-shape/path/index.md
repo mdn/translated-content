@@ -1,8 +1,9 @@
 ---
-title: path()
+title: CSS `path()` 関数
+short-title: path()
 slug: Web/CSS/Reference/Values/basic-shape/path
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
 ---
 
 **`path()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、[SVG パス](/ja/docs/Web/SVG/Reference/Element/path)文字列を受け取り、 [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)や CSS モーションパスで描かれるを図形を有効にするために使用します。`path()` 関数は、{{cssxref("basic-shape")}} データ型の値です。これは、CSS の {{cssxref("offset-path")}} および {{cssxref("clip-path")}} プロパティ、それに SVG の [`d`](/ja/docs/Web/SVG/Reference/Attribute/d) 属性で使用できます。
@@ -177,7 +178,7 @@ svg {
 
 ## 関連情報
 
-- {{cssxref("&lt;shape-outside&gt;")}}
+- {{cssxref("shape-outside")}}
 - [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)モジュール
 - [CSS シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
 - [The SVG `path` syntax: an illustrated guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/) - CSS-tricks (2021)
