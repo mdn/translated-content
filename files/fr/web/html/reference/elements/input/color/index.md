@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="color">`
 short-title: <input type="color">
 slug: Web/HTML/Reference/Elements/input/color
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`color`** fournissent un élément d'interface utilisateur permettant à l'utilisateur·ice de définir une couleur, soit en utilisant une interface visuelle de sélection de couleur, soit en saisissant la couleur dans un champ texte au format [valeur de couleur CSS](/fr/docs/Web/CSS/Reference/Values/color_value).
@@ -85,7 +85,7 @@ Vous pouvez modifier l'exemple ci-dessus pour définir une valeur par défaut, a
 
 {{EmbedLiveSample("Fournir une couleur par défaut", 700, 30)}}
 
-Si vous n'indiquez pas de valeur ou si la valeur est invalide ou non prise en charge par le navigateur, la valeur par défaut sera `#000000`, c'est-à-dire le noir opaque.
+Si vous n'indiquez pas de valeur ou si la valeur est invalide ou non prise en charge par le navigateur, la valeur par défaut est `#000000`, c'est-à-dire le noir opaque.
 
 ### Détecter le changement de couleur
 
@@ -106,7 +106,7 @@ function watchColorPicker(event) {
 
 ### Sélectionner la valeur
 
-Lorsque le navigateur ne prend pas en charge une interface de sélection de couleur, son implémentation des contrôles de couleur sera une zone de texte qui valide automatiquement le contenu afin de s'assurer que la valeur est au bon format. Dans ce cas, vous pouvez utiliser la méthode {{DOMxRef("HTMLInputElement.select", "select()")}} pour sélectionner le texte actuellement présent dans le champ de saisie.
+Lorsque le navigateur ne prend pas en charge une interface de sélection de couleur, son implémentation des contrôles de couleur est une zone de texte qui valide automatiquement le contenu afin de s'assurer que la valeur est au bon format. Dans ce cas, vous pouvez utiliser la méthode {{DOMxRef("HTMLInputElement.select", "select()")}} pour sélectionner le texte actuellement présent dans le champ de saisie.
 
 Si le navigateur utilise à la place un sélecteur de couleur, `select()` ne fait rien. Vous devez être conscient·e de ce comportement afin que votre code puisse réagir correctement dans chaque cas.
 
@@ -124,7 +124,7 @@ Créons un exemple qui va un peu plus loin avec le contrôle de couleur en suiva
 
 ### HTML
 
-Le code HTML est assez simple — quelques paragraphes descriptifs avec un élément {{HTMLElement("input")}} de type `color` dont l'identifiant est `color-picker`, que nous utiliserons pour changer la couleur du texte des paragraphes.
+Le code HTML est assez simple — quelques paragraphes descriptifs avec un élément {{HTMLElement("input")}} de type `color` dont l'identifiant est `color-picker`, que nous utilisons pour changer la couleur du texte des paragraphes.
 
 ```html
 <p>
@@ -165,7 +165,7 @@ Enfin, on appelle {{DOMxRef("HTMLInputElement.select", "select()")}} afin de sé
 
 #### Réagir suite aux modifications de couleurs
 
-On dispose de deux fonctions qui gèrent les modifications de couleurs. La fonction `updateFirst()` permet de répondre à l'évènement `input` et modifie la couleur du premier paragraphe dans le document en utilisant la nouvelle valeur saisie. Étant donné que les évènements `input` ont lieu à chaque fois qu'un ajustement est fait, cette fonction sera appelée sans cesse lorsque le sélecteur de couleur est utilisé.
+On dispose de deux fonctions qui gèrent les modifications de couleurs. La fonction `updateFirst()` permet de répondre à l'évènement `input` et modifie la couleur du premier paragraphe dans le document en utilisant la nouvelle valeur saisie. Étant donné que les évènements `input` ont lieu à chaque fois qu'un ajustement est fait, cette fonction est appelée sans cesse lorsque le sélecteur de couleur est utilisé.
 
 ```js
 function updateFirst(event) {
@@ -176,7 +176,7 @@ function updateFirst(event) {
 }
 ```
 
-Lorsque le sélecteur de couleur est fermé, ce qui indique que la valeur ne changera plus (sauf si l'utilisateur·ice rouvre le sélecteur), un évènement `change` est envoyé à l'élément. Nous gérons cet évènement avec la fonction `updateAll()`, en utilisant [`Event.target.value`](/fr/docs/Web/HTML/Reference/Elements/input#value) pour obtenir la couleur finale sélectionnée&nbsp;:
+Lorsque le sélecteur de couleur est fermé, ce qui indique que la valeur ne change plus (sauf si l'utilisateur·ice rouvre le sélecteur), un évènement `change` est envoyé à l'élément. Nous gérons cet évènement avec la fonction `updateAll()`, en utilisant [`Event.target.value`](/fr/docs/Web/HTML/Reference/Elements/input#value) pour obtenir la couleur finale sélectionnée&nbsp;:
 
 ```js
 function updateAll(event) {
@@ -186,7 +186,7 @@ function updateAll(event) {
 }
 ```
 
-Cela définit la couleur de chaque bloc {{HTMLElement("p")}} afin que son attribut {{CSSxRef("color")}} corresponde à la valeur actuelle du contrôle de couleur, qui est référencée via {{DOMxRef("Event.target", "event.target")}}.
+Cela définit la couleur de chaque bloc {{HTMLElement("p")}} afin que son attribut {{CSSxRef("color")}} corresponde à la valeur actuelle du contrôle de couleur, qui est référencée par {{DOMxRef("Event.target", "event.target")}}.
 
 ### Résultat
 
@@ -228,12 +228,6 @@ Le résultat final ressemble à ceci&nbsp;:
       </td>
     </tr>
     <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-    <tr>
       <td><strong>Rôle ARIA implicite</strong></td>
       <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">Pas de rôle correspondant <sup>(angl.)</sup></a></td>
     </tr>
@@ -251,4 +245,4 @@ Le résultat final ressemble à ceci&nbsp;:
 ## Voir aussi
 
 - La propriété API {{DOMxRef("HTMLInputElement.alpha")}}
-- La propriété API {{DOMxRef("HTMLInputElement.colorspace")}}
+- La propriété API {{DOMxRef("HTMLInputElement.colorSpace")}}

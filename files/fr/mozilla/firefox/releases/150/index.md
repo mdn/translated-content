@@ -3,7 +3,7 @@ title: Firefox 150 note de version pour les développeurs
 short-title: Firefox 150
 slug: Mozilla/Firefox/Releases/150
 l10n:
-  sourceCommit: 0b214cbce88da71a9d4470364e378285c2a921a5
+  sourceCommit: 35be74828a1a06cdd0a1bf0a20c16d29b8adb11f
 ---
 
 Cet article présente les informations concernant les changements de Firefox 150 qui concernent les développeur·euse·s.
@@ -45,11 +45,19 @@ Pas de changements notables.
 - La méthode {{DOMxRef("Sanitizer.replaceElementWithChildren()")}} retourne désormais `false` si l'élément à remplacer est {{HTMLElement("html")}} dans [l'espace de noms HTML](/fr/docs/Web/API/Sanitizer/replaceElementWithChildren#namespace).
   En d'autres termes, vous ne pouvez pas utiliser cette méthode pour créer un {{DOMxRef("Sanitizer")}} qui remplace l'élément `<html>` par son contenu interne. ([bogue Firefox 2022176 <sup>(angl.)</sup>](https://bugzil.la/2022176)).
 
+- [L'évènement `scrollend`](/fr/docs/Web/API/VisualViewport/scrollend_event) est désormais pris en charge sur {{DOMxRef("VisualViewport")}}, permettant de mettre à jour les éléments lorsqu'une action de défilement est terminée.
+  Cela peut être utilisé, par exemple, pour afficher ou ajuster la position des éléments d'interface utilisateur fixes une fois qu'un·e utilisateur·ice a terminé·e de faire défiler un écran zoomé par pincement.
+  ([bogue Firefox 1801658 <sup>(angl.)</sup>](https://bugzil.la/1801658)).
+
 #### DOM
 
 - L'argument [`options.shadowRoots`](/fr/docs/Web/API/Document/caretPositionFromPoint#shadowroots) de la méthode {{DOMxRef('Document.caretPositionFromPoint()')}} est désormais pris en charge.
   Cela permet à la méthode de retourner le nœud contenant le curseur à l'intérieur d'un DOM d'ombre, à condition que son {{DOMxRef("ShadowRoot")}} associé ait été passé en option.
   ([bogue Firefox 1914596 <sup>(angl.)</sup>](https://bugzil.la/1914596)).
+
+- La méthode {{DOMxRef("HighlightRegistry.highlightsFromPoint()")}} est désormais prise en charge, fournissant un mécanisme permettant aux pages web d'obtenir des informations sur toutes les [surlignages CSS personnalisés](/fr/docs/Web/API/CSS_Custom_Highlight_API) appliqués à un point particulier.
+  Cela inclut les surlignages à l'intérieur des DOM d'ombre, à condition que l'instance {{DOMxRef("ShadowRoot")}} associée ait été passée à la méthode.
+  ([bogue Firefox 1917991 <sup>(angl.)</sup>](https://bugzil.la/1917991)).
 
 - L'interface {{DOMxRef("CSSFontFaceDescriptors")}} est désormais prise en charge, et une instance de ce type est retournée par la propriété {{DOMxRef("CSSFontFaceRule.style")}}. ([bogue Firefox 2019904 <sup>(angl.)</sup>](https://bugzil.la/2019904)).
 

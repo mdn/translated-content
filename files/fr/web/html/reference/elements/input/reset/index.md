@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="reset">`
 short-title: <input type="reset">
 slug: Web/HTML/Reference/Elements/input/reset
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`"reset"`** sont affichés sous la forme de boutons permettant de réinitialiser l'ensemble des champs du formulaire avec leurs valeurs initiales.
@@ -106,7 +106,7 @@ Pour essayer, saisissez un peu de texte dans le champ puis appuyez sur le bouton
 
 Les raccourcis claviers permettent de déclencher un bouton grâce à une touche ou à une combinaison de touches sur le clavier. Pour ajouter un raccourci clavier à un bouton de réinitialisation, il suffit d'utiliser l'attribut [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes#accesskey).
 
-Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faudra donc appuyer sur <kbd>r</kbd> et d'autres touches propres au navigateur et au système d'exploitation, se référer à [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes#accesskey) pour le détails).
+Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faut donc appuyer sur <kbd>r</kbd> et d'autres touches propres au navigateur et au système d'exploitation, se référer à [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes#accesskey) pour le détails).
 
 ```html
 <form>
@@ -122,7 +122,7 @@ Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faudra donc appuyer sur 
 
 {{EmbedLiveSample("Ajouter un raccourci au bouton", 650, 100)}}
 
-Le problème avec l'exemple ci-dessus est qu'il n'y a aucun moyen pour l'utilisateur·ice de savoir quelle est la touche d'accès rapide&nbsp;! Cela est particulièrement vrai puisque les modificateurs sont généralement non standard pour éviter les conflits. Lors de la création d'un site, assurez-vous de fournir cette information d'une manière qui n'interfère pas avec le design du site (par exemple en fournissant un lien facilement accessible qui pointe vers des informations sur les touches d'accès rapide du site). Ajouter une info-bulle au bouton (en utilisant l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title)) peut également aider, bien que ce ne soit pas une solution complète pour l'accessibilité.
+Le problème avec l'exemple ci-dessus est qu'il n'y a aucun moyen pour l'utilisateur·ice de savoir quelle est la touche d'accès rapide&nbsp;! C'est particulièrement vrai puisque les modificateurs sont généralement non standard pour éviter les conflits. Lors de la création d'un site, assurez-vous de fournir cette information d'une manière qui n'interfère pas avec le design du site (par exemple en fournissant un lien facilement accessible qui pointe vers des informations sur les touches d'accès rapide du site). Ajouter une info-bulle au bouton (en utilisant l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title)) peut également aider, bien que ce ne soit pas une solution complète pour l'accessibilité.
 
 ### Désactiver/Activer un bouton
 
