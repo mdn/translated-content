@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="file">`
 short-title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
 l10n:
-  sourceCommit: 30221c85132f8cb77ca73fbb033100cc2f10bba7
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`file"`** permettent à l'utilisateur·ice de choisir un ou plusieurs fichiers stockés sur son appareil. Une fois sélectionnés, les fichiers peuvent être téléversés vers un serveur à l'aide de [l'envoi de formulaire](/fr/docs/Learn_web_development/Extensions/Forms), ou manipulés à l'aide du code JavaScript et de [l'API File](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
@@ -32,7 +32,7 @@ label {
 
 ## Valeur
 
-L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) d'un champ de type fichier contient une chaîne de caractères qui représente le chemin vers le ou les fichiers sélectionnés. Si aucun fichier n'est encore sélectionné, la valeur est une chaîne vide (`""`). Lorsque l'utilisateur·ice sélectionne plusieurs fichiers, le `value` représente le premier fichier dans la liste des fichiers qu'il·elle a sélectionnés. Les autres fichiers peuvent être identifiés à l'aide de la [propriété `HTMLInputElement.files` du champ](/fr/docs/Web/API/File_API/Using_files_from_web_applications#obtenir_des_informations_sur_les_fichiers_sélectionnés).
+L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) d'un champ de type fichier contient une chaîne de caractères qui représente le chemin vers le ou les fichiers sélectionnés. Si aucun fichier n'est encore sélectionné, la valeur est une chaîne de caractères vide (`""`). Lorsque l'utilisateur·ice sélectionne plusieurs fichiers, le `value` représente le premier fichier dans la liste des fichiers qu'il·elle a sélectionnés. Les autres fichiers peuvent être identifiés à l'aide de la [propriété `HTMLInputElement.files` du champ](/fr/docs/Web/API/File_API/Using_files_from_web_applications#obtenir_des_informations_sur_les_fichiers_sélectionnés).
 
 > [!NOTE]
 > La valeur est [toujours le nom du fichier précédé de `C:\fakepath\` <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), ce qui n'est pas le vrai chemin du fichier. Cela permet d'empêcher un logiciel malveillant de deviner la structure des fichiers de l'utilisateur·ice.
@@ -45,7 +45,7 @@ En complément des attributs partagés par l'ensemble des éléments {{HTMLEleme
 
 L'attribut [`accept`](/fr/docs/Web/HTML/Reference/Attributes/accept) est une chaîne de caractères qui définit les types de fichiers que le champ de fichier doit accepter. Cette chaîne de caractères est une liste séparée par des virgules de **[identifiants de type de fichier uniques](#identifiants_de_type_de_fichier_uniques)**. Comme un type de fichier donné peut être identifié de plusieurs manières, il est utile de fournir un ensemble complet d'identifiants de type lorsque vous avez besoin de fichiers d'un format donné.
 
-Par exemple, il existe plusieurs façons d'identifier les fichiers Microsoft Word, donc un site qui accepte les fichiers Word pourrait utiliser un `<input>` comme ceci&nbsp;:
+Par exemple, il existe plusieurs façons d'identifier les fichiers Microsoft Word, donc un site qui accepte les fichiers Word peut utiliser un `<input>` comme ceci&nbsp;:
 
 ```html
 <input
@@ -83,7 +83,7 @@ Un **identifiant de type de fichier unique** est une chaîne de caractères qui 
 - La chaîne de caractères `video/*` qui signifie «&nbsp;n'importe quel fichier vidéo&nbsp;».
 - La chaîne de caractères `image/*` qui signifie «&nbsp;n'importe quel fichier image&nbsp;».
 
-L'attribut `accept` prend comme valeur une chaîne de caractères contenant un ou plusieurs de ces identifiants de type de fichier uniques, séparés par des virgules. Par exemple, un sélecteur de fichiers qui doit permettre de sélectionner du contenu pouvant être présenté comme une image, incluant à la fois les formats d'image standards et les fichiers PDF, pourrait ressembler à ceci&nbsp;:
+L'attribut `accept` prend comme valeur une chaîne de caractères contenant un ou plusieurs de ces identifiants de type de fichier uniques, séparés par des virgules. Par exemple, un sélecteur de fichiers qui doit permettre de sélectionner du contenu pouvant être présenté comme une image, incluant à la fois les formats d'image standards et les fichiers PDF, peut ressembler à ceci&nbsp;:
 
 ```html
 <input type="file" accept="image/*,.pdf" />
@@ -314,7 +314,7 @@ Pour l'instant, le fragment HTML ressemble à ce que nous avons déjà vu avant,
 
 Voyons maintenant le code JavaScript utilisé.
 
-Pour les premières lignes du script, on récupère des références au formulaire et à l'élément {{HTMLElement("div")}} qui possède la classe `.preview`. Ensuite, on masque l'élément {{HTMLElement("input")}} car leur apparence peut être incohérente entre les navigateurs et qu'il est difficile de les mettre en forme. Cliquer sur l'élément {{HTMLElement("label")}} suffit à ouvrir le sélecteur et nous mettons donc en forme cet élément à la façon d'un bouton. Ainsi, l'utilisateur·ice sait comment interagir avec le document pour téléverser des fichiers.
+Pour les premières lignes du script, on récupère des références au formulaire et à l'élément {{HTMLElement("div")}} qui possède la classe `.preview`. Ensuite, on masque l'élément {{HTMLElement("input")}}, car leur apparence peut être incohérente entre les navigateurs et qu'il est difficile de les mettre en forme. Cliquer sur l'élément {{HTMLElement("label")}} suffit à ouvrir le sélecteur et nous mettons donc en forme cet élément à la façon d'un bouton. Ainsi, l'utilisateur·ice sait comment interagir avec le document pour téléverser des fichiers.
 
 ```js
 const input = document.querySelector("input");
@@ -385,7 +385,7 @@ function updateImageDisplay() {
 }
 ```
 
-La fonction personnalisée `validFileType()` prend un objet {{DOMxRef("File")}} en paramètre, puis utilise {{JSxRef("Array.prototype.includes()")}} pour vérifier si une valeur dans `fileTypes` correspond à la propriété `type` du fichier. Si une correspondance est trouvée, la fonction renvoie `true`. Si aucune correspondance n'est trouvée, elle renvoie `false`.
+La fonction personnalisée `validFileType()` prend un objet {{DOMxRef("File")}} en paramètre, puis utilise {{JSxRef("Array.prototype.includes()")}} pour vérifier si une valeur dans `fileTypes` correspond à la propriété `type` du fichier. Si une correspondance est trouvée, la fonction retourne `true`. Si aucune correspondance n'est trouvée, elle retourne `false`.
 
 ```js
 // https://developer.mozilla.org/fr/docs/Web/Media/Guides/Formats/Image_types
@@ -421,7 +421,7 @@ function returnFileSize(number) {
 ```
 
 > [!NOTE]
-> Les unités «&nbsp;Ko&nbsp;» et «&nbsp;Mo&nbsp;» utilisées ici respectent la convention de [préfixe SI](https://fr.wikipedia.org/wiki/Pr%C3%A9fixe_binaire) selon laquelle 1 Ko = 1 000 octets, comme sous macOS. Différents systèmes représentent différemment la taille des fichiers. Par exemple, Ubuntu utilise les préfixes IEC où 1 Ko = 1024 octets, tandis que les spécifications RAM utilisent souvent les préfixes SI pour représenter les puissances de deux (1 Ko = 1024 octets). C'est pourquoi nous avons utilisé `1e3` (`1000`) et `1e6` (`1000000`) au lieu de `1024` et `1048576`. Dans votre application, vous devriez communiquer clairement le système d'unités à vos utilisateur·ice·s si la taille exacte est importante.
+> Les unités «&nbsp;Ko&nbsp;» et «&nbsp;Mo&nbsp;» utilisées ici respectent la convention de [préfixe SI](https://fr.wikipedia.org/wiki/Pr%C3%A9fixe_binaire) selon laquelle 1 Ko = 1 000 octets, comme sous macOS. Différents systèmes représentent différemment la taille des fichiers. Par exemple, Ubuntu utilise les préfixes IEC où 1 Ko = 1024 octets, tandis que les spécifications RAM utilisent souvent les préfixes SI pour représenter les puissances de deux (1 Ko = 1024 octets). C'est pourquoi nous avons utilisé `1e3` (`1000`) et `1e6` (`1000000`) au lieu de `1024` et `1048576`. Dans votre application, vous devez communiquer clairement le système d'unités à vos utilisateur·ice·s si la taille exacte est importante.
 
 ```js hidden
 const button = document.querySelector("form button");
@@ -474,12 +474,6 @@ Et voici le résultat&nbsp;:
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

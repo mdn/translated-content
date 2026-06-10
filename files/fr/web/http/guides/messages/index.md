@@ -215,7 +215,7 @@ Comme pour les en-têtes de requête, il existe de nombreux en-têtes différent
 
 ### Corps de la réponse
 
-Un corps de réponse est inclus dans la plupart des messages envoyés en réponse à un·e client·e.
+Un corps de réponse est inclus dans la plupart des messages envoyés en réponse à un client.
 Dans le cas de requêtes réussies, le corps de la réponse contient les données que le client a demandées dans une requête `GET`.
 S'il y a des problèmes avec la requête du client, il est courant que le corps de la réponse explique pourquoi la requête a échoué, et indique si l'échec est permanent ou temporaire.
 
@@ -234,7 +234,7 @@ Vous pouvez compresser les corps des messages avec `gzip` ou d'autres algorithme
 Les en-têtes sont souvent similaires ou identiques dans une interaction client-serveur, mais ils sont répétés dans les messages successifs sur une connexion.
 Il existe de nombreuses méthodes connues pour compresser du texte répétitif de façon très efficace, ce qui laisse beaucoup d'économies de bande passante inexploitées.
 
-HTTP/1.x présente aussi un problème appelé [blocage de tête de ligne (HOL)](/fr/docs/Glossary/Head_of_line_blocking), où un·e client·e doit attendre une réponse du serveur avant d'envoyer la requête suivante.
+HTTP/1.x présente aussi un problème appelé [blocage de tête de ligne (HOL)](/fr/docs/Glossary/Head_of_line_blocking), où un client doit attendre une réponse du serveur avant d'envoyer la requête suivante.
 Le [chaînage HTTP](/fr/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x#chaînage_http) a tenté de contourner ce problème, mais le manque de support et la complexité font qu'il est rarement utilisé et difficile à maîtriser.
 Plusieurs connexions doivent être ouvertes pour envoyer des requêtes simultanément&nbsp;; et les connexions chaudes (établies et actives) sont plus efficaces que les connexions froides à cause du démarrage lent de TCP.
 
