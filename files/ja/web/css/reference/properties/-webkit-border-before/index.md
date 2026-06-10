@@ -10,9 +10,9 @@ l10n:
 
 **`-webkit-border-before`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理ブロックの境界の先頭側のプロパティ値をスタイルシートの一箇所で設定するための一括指定プロパティです。
 
-## 構成プロパティ
+## 構成要素のプロパティ
 
-このプロパティは、以下の CSS プロパティの省略形です。
+このプロパティは、以下の CSS プロパティの一括指定です。
 
 - {{cssxref("-webkit-border-before-color")}}
 - {{cssxref("-webkit-border-before-style")}}
