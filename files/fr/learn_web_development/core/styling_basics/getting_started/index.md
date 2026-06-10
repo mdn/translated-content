@@ -1,294 +1,422 @@
 ---
-title: Comment CSS est structuré
+title: Commencer avec le CSS
+short-title: Commencer le CSS
 slug: Learn_web_development/Core/Styling_basics/Getting_started
-original_slug: Learn/CSS/First_steps/How_CSS_is_structured
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Getting_started")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}
 
-Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de son fonctionnement. Il est temps d'explorer plus avant la structure du langage lui-même. Nous avons déjà rencontré nombre des concepts apparaissant dans ce tutoriel ; reportez vous aux leçons précédentes si un concept vous semble peu clair.
+Dans cet article, nous allons vous montrer comment prendre un document HTML simple et y appliquer du CSS, en apprenant quelques détails pratiques du langage en cours de route. Nous passerons également en revue certaines fonctionnalités supplémentaires de la syntaxe CSS que vous n'avez pas encore vues.
 
-<table class="standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Maîtrise élémentaire de l'informatique,
-        <a
-          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
-          >suite logicielle de base installée</a
-        >, compétences élémentaires pour
-        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
-          >travailler avec des fichiers</a
-        >, connaissance de base du HTML (cf.
-        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
-          >Introduction à HTML</a
-        >), et une idée de
-        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS"
-          >Comment fonctionne CSS</a
-        >.
+        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">Logiciel de base installé</a>, connaissances de base en
+        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">gestion des fichiers</a>, et notions de base en HTML (étudier
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Introduction à HTML</a>.)
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif&nbsp;:</th>
-      <td>Approfondir les structures syntaxiques fondamentales de CSS</td>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
+      <td>
+        <ul>
+          <li>Appliquer le CSS à un document HTML.</li>
+          <li>Expérience pratique de l'écriture de CSS de base.</li>
+          <li>Connaissance pratique des types de sélecteurs fondamentaux et des combinateurs.</li>
+          <li>Le concept d'état tel qu'il s'applique au CSS.</li>
+          <li>Familiarité avec d'autres fonctionnalités de la syntaxe CSS telles que les at-rules, les fonctions, les propriétés abrégées et les espaces blancs.</li>
+        <ul>
+      </td>
     </tr>
   </tbody>
 </table>
 
-## Appliquer CSS à votre document HTML
+## Commencer avec du HTML
 
-Regardons d'abord les trois méthodes pour appliquer CSS à un document.
+Notre point de départ est un document HTML. Vous pouvez copier le code ci-dessous si vous souhaitez travailler sur votre propre ordinateur. Enregistrez le code ci-dessous sous le nom `index.html` dans un dossier sur votre machine.
 
-### Feuille de style externe
-
-Dans la leçon [Démarrer avec CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started) nous avons lié une feuille de style externe à notre document. C'est la méthode la plus commune pour appliquer CSS à un document. C'est aussi la plus utile : dans la plupart des cas, les différentes pages d'un site ont à peu près la même apparence, on peut donc utiliser le même jeu de règles pour l'apparence de base. Il est dans ce cas commode d'écrire ces règles une seule fois dans une feuille de style commune à toutes les pages.
-
-Dans le cas d'une feuille de style externe, les règles CSS sont écrites dans un fichier séparé, avec l'extension `.css`. Un élément HTML `<link>` fait référence à ce fichier.
-
-```html
+```html live-sample___unstyled
 <!doctype html>
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <title>Une expérience avec CSS</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Commencer avec le CSS</title>
   </head>
+
   <body>
-    <h1>Hello World!</h1>
-    <p>ceci est mon premier exemple CSS</p>
+    <h1>Je suis un titre de premier niveau</h1>
+
+    <p>
+      Ceci est un paragraphe de texte. Dans le texte se trouve un
+      <span>élément span</span> et aussi un
+      <a href="https://exemple.com">lien</a>.
+    </p>
+
+    <p>
+      Ceci est le deuxième paragraphe. Il contient un élément
+      <em>emphasized</em>.
+    </p>
+
+    <ul>
+      <li>Élément <span>un</span></li>
+      <li>Élément deux</li>
+      <li>Élément <em>trois</em></li>
+    </ul>
   </body>
 </html>
 ```
 
-Le fichier CSS devrait ressembler à cela :
+Cela s'affiche comme suit&nbsp;:
+
+{{EmbedLiveSample("unstyled", "", 240)}}
+
+> [!NOTE]
+> Si vous lisez ceci sur un appareil ou dans un environnement où vous ne pouvez pas facilement créer des fichiers, ne vous inquiétez pas — cliquez sur le bouton «&nbsp;Exécuter&nbsp;» dans l'exemple en direct ci-dessus pour l'ouvrir dans le MDN Playground. Là, vous pouvez éditer le code CSS et HTML comme indiqué plus loin et voir les résultats combinés en direct.
+
+## Ajouter du CSS à notre document
+
+La toute première chose que nous devons faire est d'informer le document HTML que nous avons des règles CSS que nous voulons qu'il utilise. Il existe trois façons différentes d'appliquer du CSS à un document HTML que vous rencontrez couramment — les feuilles de style externes, les feuilles de style internes et les styles en incise. Voyons cela maintenant.
+
+Si vous suivez cet article en utilisant le MDN Playground, vous ne pouvez pas suivre les étapes détaillées dans cette section de la même manière que les personnes écrivant le code sur leurs ordinateurs locaux. C'est dû au fait que MDN Playground gère l'ajout du CSS au HTML de manière implicite en arrière-plan. Vous devez cependant lire la section pour être conscient du contenu.
+
+### Feuille de style externe
+
+Une feuille de style externe contient du CSS dans un fichier séparé avec une extension `.css`. C'est la méthode la plus courante et la plus utile pour ajouter du CSS à un document. Vous pouvez lier un seul fichier CSS à plusieurs pages web, en stylisant toutes avec la même feuille de style CSS.
+
+Créez un fichier dans le même dossier que votre document HTML et enregistrez-le sous le nom `styles.css`.
+
+Pour lier `styles.css` à `index.html`, ajoutez la ligne suivante quelque part dans l'élément {{htmlelement("head")}} du document HTML&nbsp;:
+
+```html
+<link rel="stylesheet" href="styles.css" />
+```
+
+Cet élément {{htmlelement("link")}} indique au navigateur que nous avons une feuille de style, en utilisant l'attribut `rel`, et l'emplacement de cette feuille de style comme valeur de l'attribut `href`. Vous pouvez tester que le CSS fonctionne en ajoutant une règle à `styles.css`. En utilisant votre éditeur de code, ajoutez ce qui suit à votre fichier CSS&nbsp;:
 
 ```css
 h1 {
-  color: blue;
-  background-color: yellow;
-  border: 1px solid black;
-}
-
-p {
   color: red;
 }
 ```
 
-L'attribut `href` de l'élément [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) doit pointer vers un fichier dans votre système de fichiers.
+Enregistrez vos fichiers HTML et CSS, puis rechargez la page dans un navigateur web. Le titre de niveau un en haut du document doit maintenant être rouge. Si c'est le cas, félicitations — vous avez réussi à appliquer du CSS à un document HTML. Si ce n'est pas le cas, vérifiez attentivement que vous avez tout tapé correctement.
 
-Dans l'exemple ci-dessus, le fichier CSS et le document HTML sont dans le même dossier, mais vous pouvez le placer ailleurs et ajuster le chemin, par exemple :
+#### Localiser les feuilles de style à différents endroits
+
+Dans l'exemple ci-dessus, le fichier CSS se trouve dans le même dossier que le document HTML, mais vous pouvez le placer ailleurs et ajuster le chemin (de la même manière que pour les [images HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images)). Voici trois exemples&nbsp;:
 
 ```html
-<!-- Dans un sous-répertoire nommé styles dans le répertoire courant -->
+<!-- Dans un sous-dossier appelé styles dans le répertoire actuel -->
 <link rel="stylesheet" href="styles/style.css" />
 
-<!-- Dans un sous-répertoire nommé general, lui-même dans un sous-répertoire nommé styles, dans le répertoire courant -->
+<!-- Dans un sous-dossier appelé general, qui se trouve dans un sous-dossier appelé styles, dans le répertoire actuel -->
 <link rel="stylesheet" href="styles/general/style.css" />
 
-<!-- Dans un sous-répertoire nommé styles, un niveau plus haut -->
+<!-- Remonter d'un niveau de répertoire, puis dans un sous-dossier appelé styles -->
 <link rel="stylesheet" href="../styles/style.css" />
 ```
 
 ### Feuille de style interne
 
-Les règles CSS peuvent être écrites directement dans l'en-tête HTML [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) dans un élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style). On parle alors de feuille de style interne.
+Les feuilles de style internes sont contenues dans des éléments HTML {{htmlelement("style")}}, qui se trouvent à l'intérieur de l'élément HTML {{htmlelement("head")}}. Créons-en une maintenant.
 
-Le code HTML ci-dessous illustre cette technique :
-
-```html
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Mes expérimentations CSS</title>
-    <style>
-      h1 {
-        color: blue;
-        background-color: yellow;
-        border: 1px solid black;
-      }
-
-      p {
-        color: red;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <p>Ceci est mon premier exemple CSS</p>
-  </body>
-</html>
-```
-
-Cette méthode peut être utile dans certaines circonstances (un système de gestion de contenu (CMS) qui n'autoriserait pas la modification du fichier `style.css`). Cette solution est un pis-aller, on préfèrera quand c'est possible une feuille de style externe — dans un site web, avec la méthode de styles internes, le CSS doit être recopié dans chaque page : la mise à jour des styles nécessite donc de modifier chaque fichier.
-
-### Styles en ligne
-
-Les styles en ligne sont des déclarations CSS qui n'affectent qu'un seul élément, elles sont déclarées grâce à l'attribut `style`:
+Dans votre document HTML, ajoutez le fragment suivant quelque part entre les balises `<head>` et `</head>`&nbsp;:
 
 ```html
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Mes expérimentations CSS</title>
-  </head>
-  <body>
-    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">
-      Hello World!
-    </h1>
-    <p style="color:red;">Ceci est mon premier exemple CSS</p>
-  </body>
-</html>
+<style>
+  p {
+    color: purple;
+  }
+</style>
 ```
 
-**Cette approche est vraiment à proscrire !** Le code produit n'est pas maintenable (les modifications ne doivent plus se faire pour chaque page, mais dans chaque page, élément par élément !). Par ailleurs, mélanger le CSS avec le HTML rend la lecture du code plus difficile. En plus d'une meilleure lisibilité du code, séparer le fond de la forme rend le travail d'équipe plus facile.
+Enregistrez vos fichiers HTML et CSS, puis rechargez la page dans un navigateur web. Tous vos paragraphes devraient maintenant être violets.
 
-Il existe quelques endroits où les styles en ligne sont communs, voire recommandés. Vous devrez peut-être les utiliser si votre environnement de travail est vraiment restrictif (votre CMS ne vous permet peut-être que de modifier le corps du HTML). Vous les verrez également beaucoup utilisés dans les e-mails HTML afin d'être compatibles avec autant de clients de messagerie que possible.
+Dans certaines circonstances, les feuilles de style internes peuvent être utiles. Par exemple, peut-être que vous travaillez avec un système de gestion de contenu où vous êtes bloqué pour modifier les fichiers CSS externes.
 
-## Jouer avec le CSS de cet article
+Cependant, pour les sites comportant plus d'une page, les feuilles de style internes sont moins efficaces que les feuilles de style externes. Pour appliquer un style CSS uniforme à plusieurs pages en utilisant des feuilles de style internes, vous devez répéter la feuille de style interne sur chaque page web. La pénalité d'efficacité se répercute également sur la maintenance du site. Avec le CSS dans les feuilles de style internes, il existe un risque que même un simple changement de style nécessite des modifications sur plusieurs pages web.
 
-Les exemples de cet article sont autant d'occasions pour faire vos premiers tests. Pour ce faire, nous vous recommandons de créer un nouveau répertoire sur votre ordinateur et d'y créer une copie des deux fichiers suivants :
+Avant de continuer, supprimez l'élément `<style>` et son contenu de votre exemple HTML.
 
-**index.html** :
+### Styles en incise
+
+Les styles en incise sont des déclarations CSS qui n'affectent qu'un seul élément HTML, contenues dans un attribut `style`. Essayons d'en implémenter un maintenant.
+
+Ajoutez un attribut `style` à l'élément HTML {{htmlelement("span")}} dans votre HTML, afin qu'il ressemble à ce qui suit&nbsp;:
 
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Mes expériences CSS</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <p>Créez votre test ici !</p>
-  </body>
-</html>
+<span style="color: purple; font-weight: bold">élément span</span>
 ```
 
-**styles.css** :
+Enregistrez et actualisez, vous devez voir uniquement le texte à l'intérieur du `<span>` devenir violet et en gras. Essayez d'ajouter d'autres déclarations à l'intérieur de votre attribut `style` (séparées par des points-virgules), ou d'autres attributs `style` à d'autres éléments.
+
+Une fois que vous avez terminé vos expérimentations, supprimez tous vos attributs `style`.
+
+**Évitez d'utiliser le CSS de cette manière si possible.** C'est une mauvaise pratique. Tout d'abord, c'est la mise en œuvre la moins efficace du CSS pour la maintenance. Un changement de style peut nécessiter plusieurs modifications au sein d'une seule page web. Deuxièmement, le CSS en incise mélange également le code de présentation (CSS) avec le HTML et le contenu, rendant tout plus difficile à lire et à comprendre. Séparer le code et le contenu facilite la maintenance pour tous ceux qui travaillent sur le site web.
+
+Vous pouvez être amené à utiliser des styles en incise si votre environnement de travail est très restrictif. Par exemple, peut-être que votre CMS ne vous permet de modifier que le corps HTML. Vous pouvez également voir beaucoup de styles en incise dans les emails HTML pour assurer la compatibilité avec le plus grand nombre possible de clients de messagerie. Il est également assez courant de définir des styles en incise lors de l'application dynamique de styles à l'aide de JavaScript.
+
+## Utiliser des sélecteurs courants
+
+Dans cette section, nous allons faire un bref tour d'horizon de certains des types de sélecteurs les plus courants que vous pouvez rencontrer.
+
+### Sélectionner des éléments HTML
+
+En rendant notre titre rouge, nous avons déjà démontré que nous pouvons cibler et mettre en forme un élément HTML. Nous faisons cela en ciblant un **sélecteur d'élément** (également connu sous le nom de **sélecteur de type**) — c'est un sélecteur qui correspond directement à un nom d'élément HTML. Pour cibler tous les paragraphes du document, vous utilisez le sélecteur `p`. Pour rendre tous les paragraphes verts, vous utilisez&nbsp;:
 
 ```css
-/* Créez votre test CSS ici */
-
 p {
-  color: red;
+  color: green;
 }
 ```
 
-Ensuite, lorsque vous rencontrez du code à tester : collez le HTML à mettre en forme entre les balises `<body>`…`</body>` dans le fichier `index.html` ; ajoutez les règles CSS dans la feuille `styles.css`.
-
-Si le système que vous utilisez rend difficile la création de fichiers, vous pouvez utiliser l'éditeur interactif ci-dessous pour vos expériences.
-
-{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 600)}}
-
-Bonne lecture !
-
-## Sélecteurs
-
-Vous ne pouvez pas parler de CSS sans rencontrer les sélecteurs et nous en avons déjà découvert différents types dans le tutoriel [Démarrer avec CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started). Un sélecteur cible quelque chose dans le document HTML afin de lui appliquer des styles. Quand une mise en forme ne s'applique pas comme prévu, il est probable que le sélecteur concerné ne fonctionne pas comme vous l'attendiez.
-
-Chaque règle CSS commence par un sélecteur ou une liste de sélecteurs afin d'indiquer au navigateur les éléments auxquels les règles doivent s'appliquer. Tous les exemples suivants sont des exemples de sélecteurs valides ou de listes de sélecteurs.
+Vous pouvez cibler plusieurs sélecteurs en même temps en les séparant par une virgule. Si vous voulez que tous les paragraphes et tous les éléments de liste soient verts, votre règle ressemble à ceci&nbsp;:
 
 ```css
-h1
-a:link
-.manythings
-#onething
-*
-.box p
-.box p:first-child
-h1, h2, .intro
+p,
+li {
+  color: green;
+}
 ```
 
-Essayez de créer des règles CSS qui utilisent les sélecteurs ci-dessus et du code HTML à styler. Si vous ne savez pas ce que signifie la syntaxe ci-dessus, essayez de la rechercher sur MDN !
+Essayez ceci dans l'exemple ci-dessous (cliquez sur «&nbsp;Exécuter&nbsp;») ou dans votre copie locale&nbsp;:
+
+```html hidden live-sample___started-types
+<h1>Je suis un titre de premier niveau</h1>
+
+<p>
+  Ceci est un paragraphe de texte. Dans le texte se trouve un
+  <span>élément span</span> et également un
+  <a href="https://exemple.com">lien</a>.
+</p>
+
+<p>
+  Ceci est le deuxième paragraphe. Il contient un élément <em>en emphase</em>.
+</p>
+
+<ul>
+  <li>Élément un</li>
+  <li>Élément deux</li>
+  <li>Élément <em>trois</em></li>
+</ul>
+```
+
+```css live-sample___started-types
+h1 {
+  color: red;
+}
+
+p,
+li {
+}
+```
+
+{{EmbedLiveSample("started-types", "", 240)}}
+
+La leçon interactive suivante enseigne les concepts de base du CSS et offre quelques exercices pratiques.
+
+<mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~015" scrimtitle="Écrire vos premières lignes de CSS !"></mdn-scrim-inline>
+
+### Ajouter une classe
+
+Jusqu'à présent, nous avons mis en forme les éléments en fonction de leurs noms d'éléments HTML. Cela fonctionne tant que vous voulez que tous les éléments de ce type dans votre document aient le même aspect. Pour sélectionner un sous-ensemble des éléments sans modifier les autres, vous pouvez ajouter une `class` à votre élément HTML et cibler cette classe dans votre CSS.
+
+1. Dans votre document HTML, ajoutez un [attribut de classe](/fr/docs/Web/HTML/Reference/Global_attributes/class) au deuxième élément de la liste. Votre liste ressemble maintenant à ceci&nbsp;:
+
+   ```html
+   <ul>
+     <li>Élément un</li>
+     <li class="special">Élément deux</li>
+     <li>Élément <em>trois</em></li>
+   </ul>
+   ```
+
+2. Dans votre CSS, vous pouvez cibler la classe `special` en créant un sélecteur qui commence par un point. Ajoutez ce qui suit à votre fichier CSS&nbsp;:
+
+   ```css
+   .special {
+     color: orange;
+     font-weight: bold;
+   }
+   ```
+
+3. Enregistrez et actualisez pour voir le résultat.
+
+Vous pouvez maintenant appliquer la classe `special` à d'autres éléments de votre page que vous souhaitez avoir le même aspect que cet élément de liste. Ajoutez une classe `special` au `<span>` à l'intérieur du paragraphe, puis rechargez votre page&nbsp;: il doit également être orange et en gras.
+
+### Mettre en forme les éléments en fonction de leur emplacement dans un document
+
+Il y a des moments où vous voulez que quelque chose ait un aspect différent en fonction de son emplacement dans le document. Il existe un certain nombre de sélecteurs qui peuvent vous aider ici, mais pour l'instant, nous allons en examiner seulement quelques-uns. Dans notre document, il y a deux éléments `<em>` — un à l'intérieur d'un paragraphe et l'autre à l'intérieur d'un élément de liste. Pour sélectionner uniquement un `<em>` qui est imbriqué à l'intérieur d'un `<li>`, vous pouvez utiliser un sélecteur appelé **combinateur descendant**, qui prend la forme d'un espace entre deux autres sélecteurs.
+
+Ajoutez la règle suivante à votre feuille de style&nbsp;:
+
+```css
+li em {
+  color: rebeccapurple;
+}
+```
+
+Ce sélecteur sélectionne tout élément `<em>` qui est un descendant d'un `<li>`. Ainsi, dans votre document exemple, vous devez constater que le `<em>` dans le troisième élément de la liste est maintenant violet, mais celui à l'intérieur du paragraphe reste inchangé.
+
+Vous pouvez également essayer de mettre en forme un paragraphe lorsqu'il se trouve directement après un titre au même niveau hiérarchique dans le HTML. Pour ce faire, placez un `+` (un **combinateur de voisin suivant**) entre les sélecteurs.
+
+Essayez d'ajouter cette règle à votre feuille de style également&nbsp;:
+
+```css
+h1 + p {
+  font-size: 200%;
+}
+```
+
+L'exemple interactif ci-dessous inclut les deux règles ci-dessus. Essayez d'ajouter une règle pour rendre un `<span>` rouge s'il se trouve à l'intérieur d'un paragraphe. Vous savez quand vous avez réussi, car le `<span>` dans le premier paragraphe est rouge, mais celui dans le premier élément de la liste ne change pas de couleur.
+
+```html hidden live-sample___started-combinators
+<h1>Je suis un titre de premier niveau</h1>
+
+<p>
+  Ceci est un paragraphe de texte. Dans le texte se trouve un
+  <span>élément span</span> et aussi un <a href="https://exemple.com">lien</a>.
+</p>
+
+<p>
+  Ceci est le deuxième paragraphe. Il contient un élément <em>en emphase</em>.
+</p>
+
+<ul>
+  <li>Élément <span>un</span></li>
+  <li>Élément deux</li>
+  <li>Élément <em>trois</em></li>
+</ul>
+```
+
+```css live-sample___started-combinators
+li em {
+  color: rebeccapurple;
+}
+
+h1 + p {
+  font-size: 200%;
+}
+```
+
+{{EmbedLiveSample("started-combinators", "", 340)}}
 
 > [!NOTE]
-> Vous en apprendrez beaucoup plus sur les sélecteurs dans nos tutoriels sur [les sélecteurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), dans un prochain cours.
+> Comme vous pouvez le voir, CSS nous offre plusieurs façons de cibler les éléments, et nous n'avons fait qu'effleurer la surface jusqu'à présent&nbsp;! Nous examinerons de manière approfondie tous ces sélecteurs et bien d'autres plus tard dans le cours.
 
-### Spécificité
+### Mettre en forme les éléments en fonction de leur état
 
-Dans de nombreux cas, deux sélecteurs différents peuvent cibler le même élément HTML. Considérons la feuille de style ci-dessous où j'ai une règle avec un sélecteur `p` qui colore les paragraphes en bleu, puis une règle qui colore en rouge les éléments dans la classe `special`.
-
-```css
-.special {
-  color: red;
-}
-
-p {
-  color: blue;
-}
-```
-
-Disons que dans notre document HTML, nous avons un paragraphe avec un attribut `class` valant `special`. Les deux règles pourraient s'appliquer. Selon vous, quelle sera la couleur du paragraphe ?
-
-```html
-<p class="special">De quelle couleur suis-je?</p>
-```
-
-Le langage CSS a des règles pour déterminer quelle mise en forme appliquer en cas de collision de sélecteurs — elles sont appelées **cascade** et **spécificité**. Dans le bloc de code ci-dessous, nous avons défini deux règles pour le sélecteur `p`, mais le paragraphe finit par être coloré en bleu. En effet, la déclaration qui l'a défini en bleu apparaît plus tard dans la feuille de style et les styles ultérieurs remplacent les précédents. C'est la _cascade_ en action.
+Le dernier type de mise en forme que nous allons examiner dans ce tutoriel est la capacité de mettre en forme les éléments en fonction de leur état. Un exemple simple de c'est la mise en forme des liens. Lorsque nous mettons en forme un lien, nous devons cibler l'élément {{HTMLElement("a")}} (ancre). Cet élément a différents états en fonction de s'il est non visité, visité, survolé, sélectionné par le clavier ou en cours de clic (activé). Vous pouvez utiliser CSS pour cibler ces différents états — le CSS ci-dessous met en forme les liens non visités en rose et les liens visités en vert.
 
 ```css
-p {
-  color: red;
+a:link {
+  color: pink;
 }
 
-p {
-  color: blue;
+a:visited {
+  color: green;
 }
 ```
 
-Cependant, dans l'exemple plus haut avec le sélecteur de classe et le sélecteur d'élément, la classe l'emportera, rendant le paragraphe rouge — même s'il apparaît plus tôt dans la feuille de style. Une classe est décrite comme étant plus spécifique ou ayant plus de _spécificité_ que le sélecteur d'élément, elle gagne donc.
+Vous pouvez changer l'apparence du lien lorsque l'utilisateur·ice le survole, par exemple en supprimant le soulignement, ce qui est réalisé par la règle suivante&nbsp;:
 
-**Tentez vous-même l'expérience ci-dessus** — **ajoutez le code HTML à votre expérience, puis ajoutez les deux règles `p {…}` à votre feuille de style. Ensuite, changez le premier sélecteur `p` en `.special` pour voir comment il affecte le style.**
+```css
+a:hover {
+  text-decoration: none;
+}
+```
 
-Au premier abord, les règles de cascade et de spécificité peuvent sembler compliquées ; avec une meilleure connaissance de CSS, elles vous paraîtront plus naturelles. Dans le prochain module, l'article [Cascade et héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) vous détaillera ces principes et expliquera notamment comment calculer la spécificité. Pour le moment, rappelez vous que de tels cas existent et que le CSS peut parfois ne pas s'appliquer comme prévu. Dans une telle situation, souvenez-vous qu'un même élément peut être la cible de plusieurs sélecteurs concurrents.
+Dans l'exemple ci-dessous, vous pouvez expérimenter avec différentes valeurs pour les différents états d'un lien. Nous avons ajouté les règles ci-dessus, et maintenant vous vous rendez compte que la couleur rose est assez claire et difficile à lire — pourquoi ne pas la changer pour une meilleure couleur&nbsp;? Pouvez-vous rendre les liens en gras&nbsp;?
 
-## Propriétés et valeurs
+```html hidden live-sample___started-states
+<h1>Je suis un titre de premier niveau</h1>
 
-Au niveau le plus fondamental, CSS se compose de deux blocs de construction :
+<p>
+  Ceci est un paragraphe de texte. Dans le texte se trouve un
+  <span>élément span</span> et aussi un <a href="https://exemple.com">lien</a>.
+</p>
 
-- **Propriétés** : des identifiants lisibles par l'homme indiquant les caractéristiques stylistiques ([`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size), [`width`](/fr/docs/Web/CSS/Reference/Properties/width), [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color), par exemple) que vous souhaitez modifier ;
-- **Valeurs** : une valeur est attribuée à chaque propriété spécifiée. Elle indique comment vous souhaitez modifier ces caractéristiques stylistiques (par exemple, en modifiant la couleur de la police, la largeur ou l'arrière-plan).
+<p>
+  Ceci est le deuxième paragraphe. Il contient un élément <em>en emphase</em>.
+</p>
 
-L'image ci-dessous met en évidence une propriété et une valeur uniques. Le nom de la propriété est `color` et la valeur `blue`.
+<ul>
+  <li>Élément un</li>
+  <li>Élément deux</li>
+  <li>Élément <em>trois</em></li>
+</ul>
+```
 
-![Une déclaration surlignée au sein du code CSS](declaration.png)
+```css live-sample___started-states
+a:link {
+  color: pink;
+}
 
-Une propriété associée à une valeur s'appelle une _déclaration CSS_. Les déclarations CSS sont placées dans des _blocs de déclaration CSS_. L'image suivante montre notre CSS avec le bloc de déclaration en surbrillance.
+a:visited {
+  color: green;
+}
 
-![Un bloc de déclaration surligné](declaration-block.png)
+a:hover {
+  text-decoration: none;
+}
+```
 
-Enfin, les blocs de déclaration CSS sont associés à des _sélecteurs_ pour produire des _ensembles de règles CSS_ (ou _règles CSS_). L'image contient deux règles, une pour le sélecteur `h1` et une pour le sélecteur `p`. La règle pour `h1` est mise en surbrillance.
+{{EmbedLiveSample("started-states", "", 240)}}
 
-![La règle ciblant h1 est surlignée](rules.png)
+Nous avons supprimé le soulignement de notre lien au survol. Vous pouvez supprimer le soulignement de tous les états d'un lien. Il est cependant important de se rappeler que sur un site réel, vous voulez vous assurer que les visiteur·euse·s savent qu'un lien est un lien. Laisser le soulignement en place peut être un indice important pour que les gens réalisent qu'un texte à l'intérieur d'un paragraphe peut être cliqué — c'est le comportement auquel ils sont habitués. Comme pour tout en CSS, il y a un potentiel de rendre le document moins accessible avec vos modifications — nous visons à mettre en évidence les pièges potentiels aux endroits appropriés.
 
-Définir les propriétés CSS sur des valeurs spécifiques est la fonction principale du langage CSS. Le moteur CSS calcule les déclarations qui s'appliquent à chaque élément d'une page afin de le présenter et de le styler de manière appropriée. Ce qui est important à retenir est que les propriétés et les valeurs sont sensibles à la casse en CSS. La propriété et la valeur de chaque paire sont séparées par deux points (`:`).
+> [!NOTE]
+> Vous verrez souvent mention de [l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility) dans ces leçons et sur MDN. Lorsque nous parlons d'accessibilité, nous faisons référence à l'exigence que nos pages web soient compréhensibles et utilisables par tous, que ce soit en utilisant un ordinateur avec une souris ou un pavé tactile, un téléphone avec un écran tactile, en naviguant uniquement au clavier, ou avec un lecteur d'écran, qui lit le contenu du document.
 
-**Recherchez différentes valeurs possibles pour les propriétés suivantes puis écrivez des règles CSS qui les appliquent à différents éléments HTML :**
+### Combiner les sélecteurs et les combinateurs
 
-- **[`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size)**
-- **[`width`](/fr/docs/Web/CSS/Reference/Properties/width)**
-- **[`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)**
-- **[`color`](/fr/docs/Web/CSS/Reference/Properties/color)**
-- **[`border`](/fr/docs/Web/CSS/Reference/Properties/border)**
+Il est important de noter que vous pouvez combiner plusieurs sélecteurs et combinateurs ensemble. Par exemple&nbsp;:
 
-> [!WARNING]
-> Si la propriété est inconnue ou si la valeur est invalide pour une propriété donnée, la déclaration est considérée comme _invalide_ et complètement ignorée par le moteur CSS du navigateur.
+```css
+/* sélectionne tout <span> qui est à l'intérieur d'un <p>, qui est à l'intérieur d'un <article> */
+article p span {
+}
 
-> [!WARNING]
-> En CSS (et dans les autres standards web), l'orthographe américaine a été adoptée comme norme à respecter en cas d'incertitude linguistique. Par exemple, la couleur doit _toujours_ être notée `color`. `couleur` ne fonctionnera pas.
+/* sélectionne tout <p> qui vient directement après un <ul>, qui vient directement après un <h1> */
+h1 + ul + p {
+}
+```
+
+Vous pouvez également combiner plusieurs types ensemble. Essayez d'ajouter ce qui suit dans votre code&nbsp;:
+
+```css
+h1 + p .special {
+  color: yellow;
+  background-color: black;
+  padding: 5px;
+}
+```
+
+Cela met en forme tout élément avec une classe `special`, qui se trouve à l'intérieur d'un `<p>`, qui vient juste après un `<h1>`. Ouf&nbsp;! Cela doit cibler l'élément `<span class="special">élément span</span>` dans votre code.
+
+Ne vous inquiétez pas si cela semble compliqué pour le moment — vous commencerez bientôt à comprendre au fur et à mesure que vous écrirez plus de CSS.
+
+## Autres fonctionnalités de la syntaxe CSS
+
+Maintenant que nous avons exploré quelques fonctionnalités CSS, nous allons vous donner un aperçu général de certaines des autres fonctionnalités de la syntaxe CSS que vous pouvez rencontrer au cours de ce module. Si vous souhaitez rechercher plus de détails sur l'une de ces fonctionnalités, vous pouvez essayer de taper le nom de la fonctionnalité dans le champ de recherche en haut de cette page, ou parcourir la [référence CSS](/fr/docs/Web/CSS/Reference) de MDN.
+
+Pour expérimenter avec les extraits de code dans chaque cas, vous pouvez ajouter le HTML et le CSS fournis à l'exemple local ou à l'instance MDN Playground sur laquelle vous avez travaillé ci-dessus.
 
 ### Fonctions
 
-Bien que la plupart des valeurs soient des mots-clés relativement simples ou des valeurs numériques, on peut aussi appeler une fonction pour calculer une valeur dans une déclaration CSS. Un exemple serait la fonction `calc()`. Cette fonction vous permet de faire des calculs simples à partir de CSS, par exemple :
+Bien que la plupart des valeurs soient des mots-clés relativement simples ou des valeurs numériques, il existe certaines valeurs qui prennent la forme d'une fonction.
 
-#### Exemple calc
+#### La fonction `calc()`
+
+Un exemple est la fonction `calc()`, qui peut effectuer des calculs simples dans CSS&nbsp;:
 
 ```html
 <div class="outer">
-  <div class="box">la boite interne vaut 90% - 30px.</div>
+  <div class="box">La boîte interne vaut 90% - 30px.</div>
 </div>
 ```
 
@@ -305,15 +433,15 @@ Bien que la plupart des valeurs soient des mots-clés relativement simples ou de
 }
 ```
 
-La page devrait s'afficher comme ceci :
+La page doit s'afficher comme ceci&nbsp;:
 
-{{EmbedLiveSample('Exemple_calc', '100%', 200)}}
+{{EmbedLiveSample("La fonction `calc()`", "100%", 200)}}
 
-Une fonction est composée du nom de la fonction suivi d'une paire de parenthèses entre lesquelles sont placées les valeurs autorisées pour cette fonction. Dans le cas de l'exemple `calc()` ci-dessus, on demande que la largeur de cette zone soit égale à 90% de la largeur du bloc conteneur, moins 30 pixels. Ce n'est pas quelque chose que l'on peut calculer à l'avance et simplement entrer la valeur dans le CSS, car on ne sait pas ce que seront 90%. Comme pour toutes les valeurs, chaque fonction a sa page de documentation sur MDN avec des exemples d'utilisation pour en voir le fonctionnement.
+Une fonction est composée du nom de la fonction suivi d'une paire de parenthèses entre lesquelles sont placées les valeurs autorisées pour cette fonction. Dans le cas de l'exemple `calc()` ci-dessus, les valeurs définissent la largeur de cette boîte pour qu'elle soit égale à 90% de la largeur du bloc contenant, moins 30 pixels.
 
-Un autre exemple serait les différentes valeurs de la propriété [`<transform>`](/fr/docs/Web/CSS/Reference/Properties/transform), telles que `rotate()`.
+#### Les fonctions de `transform`
 
-#### Exemple transform
+Un autre exemple est sur les différentes valeurs de la propriété {{CSSxRef("transform")}}, telles que `rotate()`.
 
 ```html
 <div class="box"></div>
@@ -329,61 +457,50 @@ Un autre exemple serait les différentes valeurs de la propriété [`<transform>
 }
 ```
 
-La page devrait s'afficher comme ceci :
+La page doit s'afficher comme ceci&nbsp;:
 
-{{EmbedLiveSample('Exemple_transform', '100%', 200)}}
+{{EmbedLiveSample("Les fonctions de `transform`", "100%", 200)}}
 
-**Essayez de rechercher différentes valeurs des propriétés suivantes et d'écrire des règles CSS qui les appliquent à différents éléments HTML :**
+Recherchez différentes valeurs des propriétés listées ci-dessous. Essayez d'écrire des règles CSS qui appliquent des styles à différents éléments HTML en utilisant les fonctions suivantes&nbsp;:
 
-- **[`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)**
-- **[`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image), en particulier les valeurs de dégradé**
-- **[`color`](/fr/docs/Web/CSS/Reference/Properties/color), en particulier les valeurs rgb/rgba/hsl/hsla**
+- {{CSSxRef("transform")}}
+- {{CSSxRef("background-image")}}, en particulier les valeurs de dégradé
+- {{CSSxRef("color")}}, en particulier les valeurs rgb et hsl
 
-## @rules
+### Les règles @
 
-e
+[Les règles @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) CSS (prononcées «&nbsp;<i lang="en">at-rules</i>&nbsp;» en anglais) fournissent des instructions sur le comportement du CSS. Une règle @ courante que vous êtes susceptible de rencontrer est `@media`, qui est utilisée pour créer des [requêtes de médias](/fr/docs/Web/CSS/Guides/Media_queries). Les requêtes de médias utilisent une logique conditionnelle pour appliquer le style CSS.
 
-Nous n'avons pas rencontré jusqu'ici les [`@rules`](/fr/docs/Web/CSS/Guides/Syntax/At-rules) (prononcer "at-rules"). Ce sont des règles spéciales dictant un comportement CSS. Certaines `@rules` simples sont composées d'un nom et d'une valeur. Par exemple, pour importer une feuille de style additionnelle dans le CSS principal on utilisera `@import` :
-
-```css
-@import "styles2.css";
-```
-
-L'une des `@rules` les plus fréquemment rencontrée est `@media`, qui permet d'utiliser les [<i lang="en">media queries</i>](/fr/docs/Web/CSS/Guides/Media_queries) pour appliquer CSS seulement quand certaines conditions sont vérifiées (par ex. quand la résolution de l'écran dépasse une certaine valeur, ou quand l'écran dépasse une certaine largeur).
-
-Dans le CSS ci-dessous, une règle donne à l'élément `<body>` un fond rose. La section `@media` ne s'appliquera que dans les navigateurs dont la fenêtre est plus large que 30em. Dans ce cas la couleur de fond sera redéfinie à bleue.
+Dans l'exemple ci-dessous, la feuille de style définit un fond rose par défaut pour l'élément `<body>`. Cependant, une requête de médias suit et définit un fond bleu pour l'élément `<body>` si la fenêtre du navigateur est plus large que `30em`.
 
 ```css
 body {
   background-color: pink;
 }
 
-@media (min-width: 30em) {
+@media (width >= 30em) {
   body {
     background-color: blue;
   }
 }
 ```
 
-Tout au long de nos tutoriels CSS, vous rencontrerez d'autres `@rules`.
+### Les propriétés raccourcies
 
-**Ajoutez une <i lang="en">media query</i> à votre CSS pour obtenir des changements de styles basés sur la largeur de la fenêtre. Changez la largeur de la fenêtre de votre navigateur pour contrôler le résultat.**
+Certaines propriétés comme {{CSSxRef("font")}}, {{CSSxRef("background")}}, {{CSSxRef("padding")}}, {{CSSxRef("border")}} et {{CSSxRef("margin")}} sont appelées **propriétés raccourcies**. Cela s'explique par le fait que les propriétés raccourci permettent de définir plusieurs valeurs en une seule ligne.
 
-## Raccourcis
-
-Certaines propriétés comme [`font`](/fr/docs/Web/CSS/Reference/Properties/font), [`background`](/fr/docs/Web/CSS/Reference/Properties/background), [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding), [`border`](/fr/docs/Web/CSS/Reference/Properties/border), ou [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) sont appelées **propriétés raccourci** — elles permettent d'attribuer plusieurs couples propriété : valeur en une seule ligne. On gagne du temps et le code est plus joli.
-
-Par exemple, la ligne suivante :
+Par exemple, cette ligne de code&nbsp;:
 
 ```css
-/* Dans les raccourcis à 4 valeurs comme padding ou margin, les valeurs sont données
-   dans l'ordre top, right, bottom, left (sens des aiguilles d'une montre depuis top).
-   Il y a d'autres raccourcis, a 2 valeurs par exemple qui padding ou margin
-   pour top/bottom, puis left/right */
+/* Dans les raccourcis à 4 valeurs comme padding ou margin, les valeurs
+   sont données dans l'ordre top, right, bottom, left (sens des aiguilles
+   d'une montre depuis top).
+   Il y a d'autres raccourcis, à 2 valeurs par exemple, qui définissent
+   padding ou margin pour top/bottom, puis left/right */
 padding: 10px 15px 15px 5px;
 ```
 
-produit le même effet que les quatre lignes suivantes réunies :
+produit le même effet que les quatre lignes suivantes réunies&nbsp;:
 
 ```css
 padding-top: 10px;
@@ -392,42 +509,37 @@ padding-bottom: 15px;
 padding-left: 5px;
 ```
 
-Alors que :
+Cette ligne seule&nbsp;:
 
 ```css
-background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+background: red url("bg-graphic.png") 10px 10px repeat-x fixed;
 ```
 
-produit la même chose que tout ce qui suit :
+produit la même chose que ces cinq lignes&nbsp;:
 
 ```css
 background-color: red;
-background-image: url(bg-graphic.png);
+background-image: url("bg-graphic.png");
 background-position: 10px 10px;
 background-repeat: repeat-x;
-background-scroll: fixed;
+background-attachment: fixed;
 ```
 
-Ce n'est pas le moment d'apprendre tous ces raccourcis — vous les croiserez à travers de nombreux exemples tout au long de ce cours, vous vous réfèrerez alors à notre [référence CSS](/fr/docs/Web/CSS/Reference) pour en savoir plus.
+Plus tard dans le cours, vous rencontrerez de nombreux autres exemples de propriétés raccourcies. Pour l'instant, essayez d'utiliser les déclarations ci-dessus (ou d'autres que vous connaissez peut-être) dans votre propre code pour vous familiariser avec leur fonctionnement.
 
-**Ajoutez les déclarations précédentes à votre CSS pour voir comment elles affectent la mise en forme de votre document HTML. Testez différentes valeurs.**
+### Commentaires CSS
 
-> [!WARNING]
-> Les raccourcis vous autorisent à ne pas déclarer certaines valeurs, mais dans ce cas, les valeurs non déclarées sont restaurées à leur valeur par défaut. Cela garantit l'usage d'un ensemble de valeurs qui restent raisonnables. Cela peut par contre vous surprendre, si vous pensiez que le raccourci ne changeait que les valeurs passées en argument.
+Comme pour tout travail de programmation, il est recommandé d'ajouter des commentaires dans votre code CSS. Cela vous aide à vous rappeler le fonctionnement du code lorsque vous y revenez plus tard pour apporter des corrections ou des améliorations. Cela aide également les autres à comprendre le code.
 
-## Commentaires
-
-En CSS comme en HTML il est recommandé d'ajouter des commentaires, pour vous permettre de retrouver comment votre code fonctionne quand vous vous y replongez après quelques mois et pour permettre aussi à d'autres personnes de comprendre votre code quand elles sont amenées à travailler dessus.
-
-En CSS le début des commentaires est signalé par `/*` et la fin par `*/`. Dans le bloc de code ci-dessous, j'ai utilisé des commentaires pour marquer les différentes sections. Cela devient intéressant pour un code de taille importante — on peut alors utiliser les fonctionnalités de recherche de l'éditeur de code pour naviguer dans le fichier.
+Les commentaires CSS commencent par `/*` et se terminent par `*/`. Dans l'exemple ci-dessous, les commentaires marquent le début de sections distinctes du code. Cela facilite la navigation dans le code à mesure qu'il s'étoffe. Grâce à ce type de commentaires, la recherche de commentaires dans votre éditeur de code devient un moyen efficace de trouver une section de code.
 
 ```css
 /* mise en forme des éléments de base */
-/* -------------------------------------------------------------------------------------------- */
+/* ---------------------------------- */
 body {
   font:
-    1em/150% Helvetica,
-    Arial,
+    1em/150% "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0 auto;
@@ -448,11 +560,11 @@ h1 {
 }
 
 /* mise en forme des éléments imbriqués dans le DOM */
-/* -------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------ */
 div p,
-#id:first-line {
+#id::first-line {
   background-color: red;
-  background-style: none;
+  border-radius: 3px;
 }
 
 div p {
@@ -465,7 +577,7 @@ div p + p {
 }
 ```
 
-Les commentaires sont aussi parfois utiles pour rendre temporairement inactive une zone de code (les sections commentées ne sont pas interprétées par le navigateur), par exemple pour identifier la partie de code responsable d'une erreur. Dans l'exemple suivant, la règle pour le sélecteur `.special` a été désactivée par des commentaires :
+La «&nbsp;mise en commentaire&nbsp;» du code est également utile pour désactiver temporairement certaines sections de code à des fins de test. Dans l'exemple ci-dessous, les règles pour `.special` sont désactivées en «&nbsp;mettant en commentaire&nbsp;» le code.
 
 ```css
 /*.special {
@@ -477,26 +589,26 @@ p {
 }
 ```
 
-**Ajoutez des commentaires à votre CSS, il est bon que cela devienne une habitude.**
+Essayez d'ajouter des commentaires à votre CSS.
 
-## Espace
+### Les espaces blancs dans le CSS
 
-On parle ici d'espaces laissés blancs dans le texte, de tabulations, de retour à la ligne. Le navigateur tend à ignorer les espaces dans les codes CSS et HTML ; les espaces dans le code CSS sont la plupart du temps présents pour le rendre plus lisible.
+Les espaces blancs désignent les espaces, les tabulations et les sauts de ligne. Tout comme les navigateurs ignorent les espaces blancs superflus dans le code HTML, ils ignorent également ceux présents dans le code CSS. L'intérêt des espaces blancs est qu'ils facilitent la lecture du code.
 
-L'exemple ci-dessous propose d'écrire une déclaration par ligne — le code produit est facile à comprendre et à maintenir : c'est un bon code.
+Dans l'exemple ci-dessous, chaque déclaration (ainsi que le début et la fin de chaque règle) occupe sa propre ligne. C'est sans doute une bonne façon d'écrire du CSS. Cela facilite la maintenance et la compréhension du code CSS.
 
 ```css
 body {
   font:
-    1em/150% Helvetica,
-    Arial,
+    1em/150% "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
 }
 
-@media (min-width: 70em) {
+@media (width >= 70em) {
   body {
     font-size: 130%;
   }
@@ -505,83 +617,40 @@ body {
 h1 {
   font-size: 1.5em;
 }
-
-div p,
-#id:first-line {
-  background-color: red;
-  background-style: none;
-}
-
-div p {
-  margin: 0;
-  padding: 1em;
-}
-
-div p + p {
-  padding-top: 0;
-}
 ```
 
-On peut écrire le même code CSS en retirant la plupart des espaces — le code ci-dessous est équivalent au précédent pour un navigateur, mais, vous l'admettrez, plus difficile à lire pour un humain !
+L'exemple suivant présente le même code CSS sous une forme plus condensée, tous les espaces superflus ayant été supprimés. Bien que les deux exemples fonctionnent de la même manière, celui ci-dessous est plus difficile à lire.
 
-```css
-body {
-  font:
-    1em/150% Helvetica,
-    Arial,
-    sans-serif;
-  padding: 1em;
-  margin: 0 auto;
-  max-width: 33em;
-}
-@media (min-width: 70em) {
-  body {
-    font-size: 130%;
-  }
-}
-
-h1 {
-  font-size: 1.5em;
-}
-
-div p,
-#id:first-line {
-  background-color: red;
-  background-style: none;
-}
-div p {
-  margin: 0;
-  padding: 1em;
-}
-div p + p {
-  padding-top: 0;
-}
+```css-nolint
+body{font:1em/150% "Helvetica","Arial",sans-serif;padding:1em;margin:0 auto;max-width:33em;}
+@media(width>=70em){body{font-size:130%;}}
+h1{font-size:1.5em;}
 ```
 
-La mise en forme de votre code est une question de goût personnel. Si vous travaillez en équipe, vous devrez sans doute vous plier aux conventions admises au sein de cette équipe.
-
-Il n'est pourtant pas possible de supprimer tous les espaces dans un fichier CSS. La suppression ou l'ajout d'espaces dans le code CSS peut produire des erreurs. Par exemple, les déclarations suivantes sont valides en CSS :
+Gardez à l'esprit que certaines modifications des espaces peuvent entraîner des erreurs. Les noms de propriétés ne contiennent jamais d'espaces, tandis que les valeurs de propriétés qui nécessitent un espace entre plusieurs valeurs ne sont plus valides si cet espace est supprimé. Par exemple, ces déclarations sont valides en CSS&nbsp;:
 
 ```css
 margin: 0 auto;
 padding-left: 10px;
 ```
 
-Mais les suivantes sont invalides :
+Mais les déclarations suivantes sont invalides&nbsp;:
 
-```css
+```css example-bad
 margin: 0auto;
 padding- left: 10px;
 ```
 
-`0auto` n'est pas reconnu comme une valeur possible pour la propriété `margin` (`0` et `auto` sont chacune une valeur possible). Deux valeurs attribuées à une même propriété devront toujours être séparées par au moins un espace.
+Voyez-vous les erreurs d'espacement&nbsp;? Tout d'abord, `0auto` n'est pas reconnu comme une valeur valide pour la propriété `margin`. L'entrée `0auto` est censée être deux valeurs distinctes&nbsp;: `0` et `auto`. Ensuite, le navigateur ne reconnaît pas `padding-` comme une propriété valide. Le nom correct de la propriété (`padding-left`) ne contient pas d'espace.
 
-Le navigateur ne connaît pas la propriété `padding-` . Les noms de propriété ou de valeur doivent être écrits tels quels sans rajouter d'espace.
+Vous devez toujours vous assurer de séparer les valeurs distinctes les unes des autres par au moins un espace. Gardez les noms de propriétés et les valeurs de propriétés ensemble en tant que chaînes de caractères continues.
 
-**À votre tour, ajoutez ou supprimez des espaces dans votre CSS pour voir dans quels cas rien ne change et dans quels cas tout est cassé.**
+Pour découvrir comment les espaces peuvent casser le CSS, essayez de jouer avec les espaces dans votre CSS de test.
 
-## À suivre…
+## Résumé
 
-Il est utile de comprendre, au moins dans les grandes lignes, comment votre navigateur calcule le rendu d'une page web à partir des fichiers HTML et CSS. Dans la prochaine leçon — [Comment CSS fonctionne](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) — nous examinerons donc ce point.
+Dans cet article, nous avons examiné plusieurs façons de styliser un document en utilisant le CSS. Nous continuerons à développer ces connaissances au fur et à mesure des leçons. Cependant, vous savez déjà suffisamment pour styliser du texte et appliquer du CSS en fonction de différentes façons de cibler les éléments dans le document.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Getting_started")}}
+Ensuite, nous vous proposerons un défi pour tester vos nouvelles connaissances.
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}
