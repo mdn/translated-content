@@ -7,11 +7,6 @@ l10n:
 
 {{APIRef("Media Session API")}}
 
-The **`artwork`** property of the
-{{domxref("MediaMetadata")}} interface returns or sets an array of
-objects representing images associated with playing
-media.
-
 {{domxref("MediaMetadata")}} 接口的 **`artwork`** 属性用于返回或设置一个对象数组，该数组表示与正在播放的媒体相关的图像。
 
 ## 值
