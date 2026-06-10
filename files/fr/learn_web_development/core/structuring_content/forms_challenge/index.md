@@ -3,7 +3,7 @@ title: "Défi : Structurer un formulaire de retour d'expérience"
 short-title: "Défi : Formulaire de retour d'expérience"
 slug: Learn_web_development/Core/Structuring_content/Forms_challenge
 l10n:
-  sourceCommit: 2e427c5c185433c5a6612c63bf877753a5fedc99
+  sourceCommit: 8126a04c73f0c6821b2ac4e5571fa83320d3a65a
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
@@ -33,7 +33,7 @@ Pour résoudre ce défi, nous attendons de vous que vous créiez un projet de si
        dans les bois, et nous voulons savoir ce que vous en avez
        pensé&nbsp;! Veuillez remplir les sections ci-dessous. Vous n'avez
        pas besoin de fournir votre nom ou vos coordonnées, mais si vous
-       le faites, nous vous inscrirons à un tirage au sort où vous aurez
+       le faites, nous vous inscrivons à un tirage au sort où vous avez
        la chance de gagner des prix.
 
        --
@@ -98,7 +98,7 @@ Pour résoudre ce défi, nous attendons de vous que vous créiez un projet de si
 
 3. Sauvegardez la feuille de style CSS suivante dans un fichier à l'intérieur de votre dossier appelé `style.css` (ou collez-la dans le volet CSS de votre éditeur en ligne).
 
-   ```css
+   ```css live-sample___form-finished
    /* Mise en forme de base des polices */
 
    body {
@@ -106,7 +106,7 @@ Pour résoudre ce défi, nous attendons de vous que vous créiez un projet de si
      color: #333333;
      font: 1em / 1.4 system-ui;
      padding: 1em;
-     width: 800px;
+     max-width: 800px;
      margin: 0 auto;
    }
 
@@ -226,14 +226,14 @@ Nous vous demandons d'imaginer que vous venez de séjourner dans un hôtel appel
 
 1. Enveloppez le formulaire dans un élément conteneur approprié pour définir l'ensemble comme un formulaire.
 2. Ajoutez des éléments structurels répétitifs à l'intérieur du formulaire, pour envelopper chaque section du formulaire. Donnez à chaque élément de section de formulaire une `class` de `form-section`. Pour faciliter les choses, chaque section de formulaire est entourée de deux ensembles de doubles tirets (`--`). Vous pouvez supprimer les doubles tirets une fois que vous avez ajouté vos éléments structurels.
-3. Vous devrez inclure des éléments structurels supplémentaires autour de certaines paires contrôle/libellé pour les faire tenir sur leurs propres lignes séparées. Ajoutez-les maintenant, en leur donnant une `class` de `separator`.
+3. Vous devez inclure des éléments structurels supplémentaires autour de certaines paires contrôle/libellé pour les faire tenir sur leurs propres lignes séparées. Ajoutez-les maintenant, en leur donnant une `class` de `separator`.
 4. Ajoutez un élément de saut de ligne entre la zone de saisie de texte multiligne et son libellé pour les séparer.
 
 ### Fonctionnalités HTML supplémentaires
 
 1. Le texte comporte plusieurs titres qui doivent être balisés à l'aide d'éléments appropriés&nbsp;:
-   1. Le titre de niveau supérieur : «&nbsp;Nous voulons connaître votre avis&nbsp;!&nbsp;».
-   2. Les titres de niveau secondaire : «&nbsp;Installations&nbsp;», «&nbsp;À propos de vos hôtes&nbsp;», «&nbsp;D'autres commentaires ?&nbsp;» et «&nbsp;Vos coordonnées&nbsp;».
+   1. Le titre de niveau supérieur&nbsp;: «&nbsp;Nous voulons connaître votre avis&nbsp;!&nbsp;».
+   2. Les titres de niveau secondaire&nbsp;: «&nbsp;Installations&nbsp;», «&nbsp;À propos de vos hôtes&nbsp;», «&nbsp;D'autres commentaires&nbsp;?&nbsp;» et «&nbsp;Vos coordonnées&nbsp;».
 2. Le paragraphe d'ouverture sous le titre de niveau supérieur doit être balisé de manière appropriée.
 3. Dans le paragraphe d'ouverture, transformez également le texte «&nbsp;petite maison dans les bois&nbsp;» et «&nbsp;tirage au sort&nbsp;» en liens. Nous n'avons pas encore de pages vers lesquelles les lier, donc pour l'instant, définissez l'URL cible sur `#` comme espace réservé.
 4. Nous voulons que vous placiez une image large et plate sous le paragraphe d'ouverture à des fins décoratives. Le chemin de l'image est `https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg`, et nous souhaitons que vous définissiez le texte alternatif sur une valeur vide, étant donné qu'elle est uniquement décorative.
@@ -242,20 +242,20 @@ Nous vous demandons d'imaginer que vous venez de séjourner dans un hôtel appel
 ## Conseils et astuces
 
 - Utilisez le [validateur HTML du W3C <sup>(angl.)</sup>](https://validator.w3.org/) pour détecter les erreurs involontaires dans votre HTML — afin de pouvoir les corriger.
-- Si vous êtes bloqué et que vous ne pouvez pas envisager quels éléments mettre où, dessinez un simple diagramme de blocs de la mise en page de la page, et notez sur les éléments que vous pensez devoir envelopper chaque bloc. Cela est extrêmement utile.
+- Si vous êtes bloqué et que vous ne pouvez pas envisager quels éléments mettre où, dessinez un simple diagramme de blocs de la mise en page de la page, et notez sur les éléments que vous pensez devoir envelopper chaque bloc. C'est extrêmement utile.
 
 ## Exemple
 
-La capture d'écran suivante montre un exemple de ce à quoi le formulaire pourrait ressembler après avoir été balisé. Si vous êtes bloqué sur la façon de réaliser certaines parties, consultez la solution ci-dessous l'exemple en direct.
+L'exemple interactif suivant montre un exemple de ce à quoi le formulaire peut ressembler après avoir été balisé. Si vous êtes bloqué sur la façon de réaliser certaines parties, consultez la solution ci-dessous l'exemple en direct.
 
-![L'exemple terminé pour le défi ; un formulaire de retour d'information montrant deux ensembles de boutons radio, un ensemble de cases à cocher et deux menus déroulants](page-exemple.png)
+{{EmbedLiveSample("form-finished", "100%", 500)}}
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Votre HTML final devrait ressembler à ceci&nbsp;:
+Votre HTML final doit ressembler à ceci&nbsp;:
 
-```html
+```html-nolint live-sample___form-finished
 <!doctype html>
 <html lang="fr">
   <head>
@@ -265,15 +265,16 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
     <script defer src="index.js"></script>
   </head>
   <body>
-    <h1>Nous voulons votre avis&nbsp;!</h1>
+    <h1>Nous voulons votre avis !</h1>
 
     <p>
       Nous sommes très heureux que vous ayez visité la
-      <a href="#">petite maison dans les bois</a>, et nous voulons savoir ce que
-      vous en avez pensé&nbsp;! Veuillez remplir les sections ci-dessous. Vous
-      n'avez pas besoin de fournir votre nom ou vos coordonnées, mais si vous le
-      faites, nous vous inscrirons à un <a href="#">tirage au sort</a> où vous
-      aurez une chance de gagner des prix.
+      <a href="#">petite maison dans les bois</a>, et nous voulons savoir
+      ce que vous en avez pensé ! Veuillez remplir les sections
+      ci-dessous. Vous n'avez pas besoin de fournir votre nom ou vos
+      coordonnées, mais si vous le faites, nous vous inscrivons à un
+      <a href="#">tirage au sort</a> où vous avez une chance de gagner
+      des prix.
     </p>
 
     <img
@@ -286,66 +287,48 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
 
         <fieldset>
           <legend>Le porridge était-il</legend>
-          <input
-            type="radio"
-            id="porridge-1"
-            name="porridge"
-            value="hot"
-            checked /><label for="porridge-1">Trop chaud&nbsp;?</label>
-          <input
-            type="radio"
-            id="porridge-2"
-            name="porridge"
-            value="cold" /><label for="porridge-2">Trop froid&nbsp;?</label>
-          <input
-            type="radio"
-            id="porridge-3"
-            name="porridge"
-            value="right" /><label for="porridge-3"
-            >Juste ce qu'il faut&nbsp;?</label
-          >
+
+          <input type="radio" id="porridge-1" name="porridge" value="chaud" checked />
+          <label for="porridge-1">Trop chaud ?</label>
+
+          <input type="radio" id="porridge-2" name="porridge" value="froid" />
+          <label for="porridge-2">Trop froid ?</label>
+
+          <input type="radio" id="porridge-3" name="porridge" value="juste" />
+          <label for="porridge-3">Juste ce qu'il faut ?</label>
         </fieldset>
 
         <fieldset>
           <legend>Les lits étaient-ils</legend>
-          <input
-            type="radio"
-            id="beds-1"
-            name="beds"
-            value="hard"
-            checked /><label for="beds-1">Trop durs&nbsp;?</label>
-          <input type="radio" id="beds-2" name="beds" value="soft" /><label
-            for="beds-2"
-            >Trop mous&nbsp;?</label
-          >
-          <input type="radio" id="beds-3" name="beds" value="right" /><label
-            for="beds-3"
-            >Juste ce qu'il faut&nbsp;?</label
-          >
+
+          <input type="radio" id="lits-1" name="lits" value="durs" checked />
+          <label for="lits-1">Trop durs ?</label>
+
+          <input type="radio" id="lits-2" name="lits" value="mous" />
+          <label for="lits-2">Trop mous ?</label>
+
+          <input type="radio" id="lits-3" name="lits" value="juste" />
+          <label for="lits-3">Juste ce qu'il faut ?</label>
         </fieldset>
 
         <fieldset>
           <legend>
             Décrivez les chaises (sélectionnez tout ce qui vous convient)
           </legend>
-          <input type="checkbox" id="comfy" name="comfy" /><label for="comfy"
-            >Confortables</label
-          >
-          <input type="checkbox" id="luxurious" name="luxurious" /><label
-            for="luxurious"
-            >Luxueuses</label
-          >
-          <input type="checkbox" id="hi-tech" name="hi-tech" /><label
-            for="hi-tech"
-            >High tech</label
-          >
-          <input type="checkbox" id="pretty" name="pretty" /><label for="pretty"
-            >Jolies</label
-          >
-          <input type="checkbox" id="majestic" name="majestic" /><label
-            for="majestic"
-            >Majestueuses</label
-          >
+          <input type="checkbox" id="confortables" name="confortables" />
+          <label for="confortables">Confortables</label>
+
+          <input type="checkbox" id="luxueuses" name="luxueuses" />
+          <label for="luxueuses">Luxueuses</label>
+
+          <input type="checkbox" id="hi-tech" name="hi-tech" />
+          <label for="hi-tech">High tech</label>
+
+          <input type="checkbox" id="jolies" name="jolies" />
+          <label for="jolies">Jolies</label>
+
+          <input type="checkbox" id="majestueuses" name="majestueuses" />
+          <label for="majestueuses">Majestueuses</label>
         </fieldset>
       </div>
 
@@ -353,52 +336,52 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
         <h2>À propos de vos hôtes</h2>
 
         <div class="separator">
-          <label for="favorite">Quel est votre ours préféré&nbsp;?</label>
+          <label for="favorite">Quel est votre ours préféré ?</label>
           <select name="favorite" id="favorite">
             <option value="papa">Papa ours</option>
             <option value="mama">Maman ours</option>
             <option value="junior">Junior</option>
-            <option value="randy">Cousin Randy</option>
+            <option value="dozer">Dozer</option>
           </select>
         </div>
 
         <div class="separator">
-          <label for="greeting"
-            >Quelle salutation avez-vous préférée&nbsp;?</label
+          <label for="salutations"
+            >Quelle salutation avez-vous préférée ?</label
           >
-          <select name="greeting" id="greeting">
-            <option value="papa">Signe de la main</option>
-            <option value="mama">Salutation amicale</option>
-            <option value="junior">Grognement</option>
-            <option value="randy">Marques de griffes sur la porte</option>
+          <select name="salutations" id="salutations">
+            <option value="signe-main">Signe de la main</option>
+            <option value="amicale">Salutation amicale</option>
+            <option value="grognement">Grognement</option>
+            <option value="griffes">Marques de griffes sur la porte</option>
           </select>
         </div>
       </div>
 
       <div class="form-section">
-        <h2>D'autres commentaires&nbsp;?</h2>
+        <h2>D'autres commentaires ?</h2>
 
-        <label for="comments">Donnez-nous vos commentaires</label>
+        <label for="commentaires">Donnez-nous vos commentaires</label>
         <br />
-        <textarea id="comments" name="comments"></textarea>
+        <textarea id="commentaires" name="commentaires"></textarea>
       </div>
 
       <div class="form-section">
         <h2>Vos coordonnées</h2>
 
         <div class="separator">
-          <label for="name">Nom</label>
-          <input type="text" id="name" name="name" />
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" />
         </div>
 
         <div class="separator">
-          <label for="email">Courriel</label>
-          <input type="email" id="email" name="email" />
+          <label for="courriel">Courriel</label>
+          <input type="email" id="courriel" name="courriel" />
         </div>
 
         <div class="separator">
-          <label for="phone">Téléphone</label>
-          <input type="tel" id="phone" name="phone" />
+          <label for="telephone">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone" />
         </div>
       </div>
 
@@ -410,7 +393,7 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
 </html>
 ```
 
-Pour l'objectif supplémentaire, une meilleure façon d'ajouter des images décoratives à une page web consiste à utiliser les [images d'arrière-plan CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders#images_darrière-plan). Supprimez l'élément `<img>` et utilisez la propriété CSS {{CSSxRef("background")}} pour placer l'image sur la page. Un bon élément pour placer l'image d'arrière-plan serait l'élément `<form>`, et vous devez indiquer au navigateur de ne pas répéter l'image. Vous devez également fournir un peu de {{CSSxRef("margin")}} et de {{CSSxRef("padding")}} pour espacer l'image d'arrière-plan afin qu'elle ne chevauche pas le texte.
+Pour l'objectif supplémentaire, une meilleure façon d'ajouter des images décoratives à une page web consiste à utiliser les [images d'arrière-plan CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders#images_darrière-plan). Supprimez l'élément `<img>` et utilisez la propriété CSS {{CSSxRef("background")}} pour placer l'image sur la page. Un bon élément pour placer l'image d'arrière-plan est l'élément `<form>`, et vous devez indiquer au navigateur de ne pas répéter l'image. Vous devez également fournir un peu de {{CSSxRef("margin")}} et de {{CSSxRef("padding")}} pour espacer l'image d'arrière-plan afin qu'elle ne chevauche pas le texte.
 
 ```css
 form {

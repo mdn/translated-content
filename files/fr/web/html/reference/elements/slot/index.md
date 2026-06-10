@@ -3,7 +3,7 @@ title: "Élément HTML `<slot>` : l'élément d'emplacement de composant web"
 short-title: <slot>
 slug: Web/HTML/Reference/Elements/slot
 l10n:
-  sourceCommit: f77236a72e479b61c6b1cb6059c9ae1e90f4c7cd
+  sourceCommit: 8dd50fa9cb734907685508144376dbdd28f98be6
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<slot>`** est un emplacement à l'intérieur d'un [Composant Web](/fr/docs/Web/API/Web_components) que vous pouvez remplir avec votre propre balisage lorsque le composant est utilisé.
