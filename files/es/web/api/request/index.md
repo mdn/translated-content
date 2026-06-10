@@ -62,7 +62,7 @@ Puedes crear un nuevo objeto `Request` usando el constructor {{domxref("Request.
 - {{domxref("Body.json()")}}
   - : Devuelve una promesa que se resuelve con una representación {{domxref ("JSON")}} del cuerpo de la solicitud.
 - {{domxref("Body.text()")}}
-  - : Devuelve una promesa que se resuelve con una representación {{domxref("USVString")}} (text) del cuerpo de la solicitud.
+  - : Devuelve una promesa que se resuelve con una representación {{jsxref("String")}} (text) del cuerpo de la solicitud.
 
 > [!NOTE]
 > Las funciones {{domxref("Body")}} solo pueden ser ejecutadas una vez; Las siguientes llamadas se resolverán con strings/ArrayBuffers vacíos.
@@ -104,7 +104,7 @@ const bodyUsed = myRequest.bodyUsed; // true
 ```
 
 > [!NOTE]
-> El tipo de cuerpo solo puede ser {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} o tipo {{domxref("ReadableStream")}}, así que para añadir un objeto JSON a la carga útil, necesitas convertir a string (stringify) dicho objeto.
+> El tipo de cuerpo solo puede ser {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{jsxref("String")}} o tipo {{domxref("ReadableStream")}}, así que para añadir un objeto JSON a la carga útil, necesitas convertir a string (stringify) dicho objeto.
 
 Puede obtener esta solicitud de API pasando el objeto `Request` como parámetro a una llamada {{domxref("GlobalFetch.fetch()")}}, por ejemplo, y obtener la respuesta:
 

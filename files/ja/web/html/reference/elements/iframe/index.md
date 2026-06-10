@@ -3,7 +3,7 @@ title: HTML `<iframe>` インラインフレーム要素
 short-title: <iframe>
 slug: Web/HTML/Reference/Elements/iframe
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<iframe>`** は [HTML](/ja/docs/Web/HTML) の要素で、入れ子になった{{Glossary("browsing context", "閲覧コンテキスト")}}を表現し、現在の HTML ページに別のページを埋め込むことができます。

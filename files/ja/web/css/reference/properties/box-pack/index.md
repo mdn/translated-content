@@ -1,15 +1,21 @@
 ---
-title: box-pack
+title: CSS `box-pack` プロパティ
+short-title: box-pack
 slug: Web/CSS/Reference/Properties/box-pack
-original_slug: Web/CSS/box-pack
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{Non-standard_header}}
+{{Non-standard_header}}{{Deprecated_Header}}
 
 > [!WARNING]
-> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)を参照してください。
+> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) を参照してください。
 
 **`-moz-box-pack`** および **`-webkit-box-pack`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 `-moz-box` または `-webkit-box` がどのようにレイアウトの方向に内容をまとめるかを指定します。この効果はボックス内に空間がある場合のみ見ることができます。
+
+レイアウトの方向は要素の方向、 horizontal または vertical に依存します。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -23,10 +29,6 @@ box-pack: inherit;
 box-pack: initial;
 box-pack: unset;
 ```
-
-レイアウトの方向は要素の方向、 horizontal または vertical に依存します。
-
-## 構文
 
 `box-pack` プロパティは、以下に列挙されたキーワード値のうちの一つで指定します。
 
@@ -78,7 +80,7 @@ start と反対の端は _end_ で表されます。
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{CSSSyntaxRaw(`box-pack = start | center | end | justify`)}}
 
 ## 例
 

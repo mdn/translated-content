@@ -2,40 +2,38 @@
 title: Intl.DurationFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat
 l10n:
-  sourceCommit: a4e9bce1e8bac1b845b32536e0e44f335233eab6
+  sourceCommit: c43e46090257fbfd33c4dd5cac0cdbd1d5d1c274
 ---
 
-{{JSRef}}
-
-**`Intl.DurationFormat`** オブジェクトにより、言語に依存した経過時間の書式化ができます。
+**`Intl.DurationFormat`** オブジェクトにより、言語を考慮した経過時間の書式化ができます。
 
 ## コンストラクター
 
 - {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}}
-  - : 新しい `Intl.DurationFormat` オブジェクトを作成します。
+  - : 新しい `Intl.DurationFormat` オブジェクトを生成します。
 
 ## 静的メソッド
 
 - {{jsxref("Intl/DurationFormat/supportedLocalesOf", "Intl.DurationFormat.supportedLocalesOf()")}}
-  - : 指定されたロケールのうち、ランタイムの既定のロケールで代替することなく対応しているものを配列として返します。
+  - : 指定されたロケールのうち、実行環境のデフォルトのロケールで代替されることなく対応するものを、配列に収めて返します。
 
 ## インスタンスプロパティ
 
 これらのプロパティは `Intl.DurationFormat.prototype` で定義されており、すべての `Intl.DurationFormat` インスタンスで共有されます。
 
 - {{jsxref("Object/constructor", "Intl.DurationFormat.prototype.constructor")}}
-  - : インスタンスオブジェクトを作成したコンストラクター関数。`Intl.DurationFormat` インスタンスの場合、初期値は {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat")}} コンストラクターです。
+  - : このインスタンスオブジェクトを作成したコンストラクター関数です。`Intl.DurationFormat` インスタンスの場合、初期値は {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat")}} コンストラクターとなります。
 - `Intl.DurationFormat.prototype[Symbol.toStringTag]`
-  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"Intl.DurationFormat"` です。このプロパティは、 {{jsxref("Object.prototype.toString()")}} で使用されます。
+  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"Intl.DurationFormat"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド
 
 - {{jsxref("Intl/DurationFormat/format", "Intl.DurationFormat.prototype.format()")}}
-  - : この `DurationFormat` オブジェクトのロケールおよび書式設定オプションに従って経過時間を書式化するゲッター関数です。
+  - : この `DurationFormat` オブジェクトのロケールおよび書式化オプションに従って経過時間を書式化するゲッター関数です。
 - {{jsxref("Intl/DurationFormat/formatToParts", "Intl.DurationFormat.prototype.formatToParts()")}}
-  - : 書式化された経過時間を各部分で表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。
+  - : 書式化された経過時間の各部分を表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。
 - {{jsxref("Intl/DurationFormat/resolvedOptions", "Intl.DurationFormat.prototype.resolvedOptions()")}}
-  - : オブジェクトの初期化時に計算されたロケールおよび書式化オプションを反映したプロパティを持つ新しいオブジェクトを返します。
+  - : オブジェクトの初期化時に計算されたロケールや書式化オプションを反映したプロパティを持つ、新しいオブジェクトを返します。
 
 ## 例
 
@@ -60,7 +58,7 @@ new Intl.DurationFormat("en", { style: "short" }).format(duration);
 
 // スタイルを "narrow" に、ロケールを "pt" に設定
 new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
-// "1h 46min 40s"
+// "1 h 46 min 40 s"
 ```
 
 ## 仕様書

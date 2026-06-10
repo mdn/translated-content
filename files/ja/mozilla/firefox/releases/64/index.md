@@ -11,7 +11,7 @@ Firefox 64 は、米国時間 2018 年 12 月 11 日 にリリースされまし
 
 - [アクセシビリティインスペクターの情報バー](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting_of_ui_items) が、ページ上のテキストや画像の色のコントラスト比に関する情報を表示するようになりました ([Firefox バグ 1473037](https://bugzil.la/1473037))。
 - [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で選択したデバイスが、セッションをまたいで保存されるようになりました ([Firefox バグ 1248619](https://bugzil.la/1248619))。
-- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) で、[トラッキング防止](/ja/docs/Web/Privacy/Firefox_tracking_protection) の影響を受ける可能性があるリソースに印をつけるようになりました ([Firefox バグ 1333994](https://bugzil.la/1333994))。
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) で、[トラッキング防止](/ja/docs/Web/Privacy/Guides/Firefox_tracking_protection) の影響を受ける可能性があるリソースに印をつけるようになりました ([Firefox バグ 1333994](https://bugzil.la/1333994))。
 - [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) で、コードの入力や評価の機能が向上しました:
   - コンソールの式の [オートコンプリート](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#autocomplete) が、大文字・小文字を区別しないようになりました ([Firefox バグ 672733](https://bugzil.la/672733))。
   - bash のような reverse search によって [コンソールの式の履歴](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#command_history) をたどれるようになりました ([Firefox バグ 1024913](https://bugzil.la/1024913))。

@@ -183,7 +183,7 @@ _Esta interfaz también hereda de las interfaces {{DOMxRef("Node")}} y {{DOMxRef
 - {{DOMxRef("Document.adoptNode()")}}
   - : Adopta un nodo de un documento externo.
 - {{DOMxRef("Document.append()")}}
-  - : Inserta un conjunto de objetos {{domxref("Node")}} u objetos {{domxref("DOMString")}} después del último elemento hijo del documento.
+  - : Inserta un conjunto de objetos {{domxref("Node")}} u objetos {{jsxref("String")}} después del último elemento hijo del documento.
 - {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
   - : Consulte {{DOMxRef("Window.captureEvents")}}.
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
@@ -253,7 +253,7 @@ _Esta interfaz también hereda de las interfaces {{DOMxRef("Node")}} y {{DOMxRef
 - {{DOMxRef("Document.normalizeDocument()")}} {{deprecated_inline}}
   - : Reemplaza entidades, normaliza nodos de texto, etc.
 - {{DOMxRef("Document.prepend()")}}
-  - : Inserta un conjunto de objetos {{domxref("Node")}} u objetos {{domxref("DOMString")}} antes del primer elemento hijo del documento.
+  - : Inserta un conjunto de objetos {{domxref("Node")}} u objetos {{jsxref("String")}} antes del primer elemento hijo del documento.
 - {{DOMxRef("Document.querySelector()")}}
   - : Devuelve el primer nodo [_Element_](/es/docs/Web/API/Element) dentro del documento, en el orden del documento, que coincide con los selectores especificados.
 - {{DOMxRef("Document.querySelectorAll()")}}

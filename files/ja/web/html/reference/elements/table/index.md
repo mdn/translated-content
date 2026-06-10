@@ -3,7 +3,7 @@ title: HTML `<table>` 表要素
 short-title: <table>
 slug: Web/HTML/Reference/Elements/table
 l10n:
-  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<table>`** は [HTML](/ja/docs/Web/HTML) の要素で、表形式のデータ、つまり、行と列の組み合わせによるセルに含まれたデータによる二次元の表で表現される情報です。
