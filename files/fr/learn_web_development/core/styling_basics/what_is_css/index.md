@@ -1,174 +1,170 @@
 ---
-title: CSS, comment ça marche ?
+title: Qu'est-ce que le CSS ?
 slug: Learn_web_development/Core/Styling_basics/What_is_CSS
-original_slug: Learn/CSS/First_steps/How_CSS_works
+l10n:
+  sourceCommit: 79b46675e64c9b3e7c4333c17b21b692f78b39ec
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics/Getting_started")}}
+{{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
-Jusqu'ici, nous avons appris les bases du CSS, ses objectifs et comment écrire des feuilles de style élémentaires. Dans cette leçon, nous allons voir comment un navigateur prend du HTML et du CSS pour les transformer en une page web.
+**{{Glossary("CSS")}}** (Cascading Style Sheets) permet de créer des pages web attrayantes, mais comment fonctionne-t-il en coulisses&nbsp;? Cet article explique ce qu'est le CSS, à quoi ressemble la syntaxe de base et comment votre navigateur applique le CSS au HTML pour le mettre en forme.
 
-<table class="standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Notions de base en l'informatique,
         <a
           href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
-          >logiciels de base installés</a
-        >,
-        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
-          >savoir manipuler des fichiers</a
-        >, connaissance de base de HTML (cf. <a
-          href="/fr/docs/Learn_web_development/Core/Structuring_content"
-          >Introduction au HTML</a
+          >Logiciels de base installés</a
+        >, connaissances de base en matière de
+        <a
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
+          >gestion de fichiers</a
+        >, et être familiarisé avec le HTML (étudiez le module
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
+          >Structurer le contenu avec HTML</a
         >.)
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
-        Comprendre, à un niveau élémentaire, comment un navigateur traite les
-        codes CSS et HTML et ce qui se passe quand le navigateur rencontre du
-        CSS qu'il ne sait pas interpréter.
+        <ul>
+          <li>Le but du CSS.</li>
+          <li>Que le HTML n'a rien à voir avec la mise en forme.</li>
+          <li>Le concept des styles par défaut du navigateur.</li>
+          <li>À quoi ressemble le code CSS.</li>
+          <li>Comment le CSS est appliqué au HTML.</li>
+        <ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## CSS&nbsp;: comment ça marche, en fait&nbsp;?
+## Styles par défaut du navigateur
 
-Pour afficher un document, un navigateur doit combiner le contenu du document et les informations de mise en forme. Le traitement se fait en plusieurs phases que nous détaillons ci-dessous. Gardez à l'esprit que cette description est simplifiée, selon le modèle du navigateur, les étapes pourraient changer. Mais dans les grandes lignes, voilà ce qui se passe&nbsp;:
+Dans le module [Structurer le contenu avec HTML](/fr/docs/Learn_web_development/Core/Structuring_content), nous avons expliqué ce qu'est le HTML et comment il est utilisé pour baliser les documents. Ces documents sont lisibles dans un navigateur web. Les titres apparaissent plus grands que le texte normal, les paragraphes passent à une nouvelle ligne et ont un espace entre eux. Les liens sont colorés et soulignés pour les distinguer du reste du texte.
 
-1. Le navigateur charge le HTML (par exemple, il le reçoit à travers le réseau).
-2. Il traduit le [HTML](/fr/docs/Glossary/HTML) en un [DOM](/fr/docs/Glossary/DOM) (_Document Object Model_)&nbsp;: une représentation du document HTML stockable en mémoire sur votre ordinateur. Nous expliquons le DOM plus en détails dans la prochaine section.
-3. Le navigateur récupère ensuite la plupart des ressources attachées au document HTML, telles les images, les vidéos ajoutées à la page… et la feuille CSS externe&nbsp;! JavaScript est traité un peu plus tard et nous n'en parlerons pas ici pour simplifier la présentation.
-4. Le navigateur _parse_ le CSS, classe les différentes règles par types de sélecteur (par exemple, élément, classe, ID, etc.) dans des «&nbsp;_buckets_&nbsp;». En fonction des sélecteurs trouvés, le navigateur calcule quelle règle s'applique à quel nœud du DOM. Chaque nœud du DOM ciblé par CSS est étiqueté par sa règle de style. L'arbre ainsi obtenu s'appelle l'arbre de rendu (<i lang="en">render tree</i>).
-5. Pour chaque nœud de l'arbre de rendu, le navigateur calcule l'effet visuel de la règle CSS associée.
-6. Le visuel ainsi produit est affiché à l'écran (cette étape s'appelle «&nbsp;_painting_&nbsp;»).
+Ce que vous voyez, ce sont les styles par défaut du navigateur — une mise en forme très basique que le navigateur applique au code HTML afin de garantir la lisibilité de la page, même si l'auteur·ice de celle-ci n'a pas définit de style explicite. Ces styles sont définis dans des feuilles de style CSS par défaut intégrées au navigateur — ils n'ont rien à voir avec le code HTML.
 
-Le diagramme suivant propose une vue synthétique de ce traitement.
+![Les styles par défaut utilisés par un navigateur](html-example.png)
 
-![](rendering.svg)
+Le web serait un endroit ennuyeux si tous les sites web ressemblaient à ça. C'est pourquoi vous devez apprendre le CSS.
 
-## À propos du DOM
+## À quoi sert le CSS ?
 
-Tout DOM a une structure d'arbre. Chaque élément, attribut et bout de texte du langage de balises est traduit en un [nœud du DOM](/fr/docs/Glossary/Node/DOM) dans la structure en arbre. Les nœuds sont définis par leurs relations à d'autres nœuds du DOM. Certains éléments sont les parents de nœuds enfants (<i lang="en">child nodes</i>) et les nœuds enfants peuvent avoir des frères et sœurs (<i lang="en">siblings</i>).
+En utilisant le CSS, vous pouvez contrôler exactement l'apparence des éléments HTML dans le navigateur, présentant vos documents à vos utilisateur·ice·s avec le design et la mise en page que vous souhaitez.
 
-Comprendre le DOM vous aidera à concevoir, déboguer et maintenir votre CSS, car le DOM est le point de jonction entre CSS et le contenu HTML du document.
+- Un **document** est généralement un fichier texte structuré à l'aide d'un langage de balisage, le plus couramment {{Glossary("HTML")}} (ces fichiers sont appelés _documents HTML_). Vous pouvez également rencontrer des documents écrits dans d'autres langages de balisage tels que {{Glossary("SVG")}} ou {{Glossary("XML")}}. Un document HTML contient le contenu d'une page web et en définit la structure.
+- **Présenter** un document à un·e utilisateur·ice signifie le convertir en une forme utilisable par votre audience. Les {{Glossary("browser", "navigateurs")}} comme {{Glossary("Mozilla Firefox", "Firefox")}}, {{Glossary("Google Chrome", "Chrome")}}, {{Glossary("Apple_Safari", "Safari")}} et {{Glossary("Microsoft Edge", "Edge")}} sont conçus pour présenter visuellement les documents, par exemple sur un écran d'ordinateur, un projecteur, un appareil mobile ou une imprimante. Dans un contexte web, c'est généralement appelé _rendu_&nbsp;; nous avons fourni une description simplifiée du processus par lequel une page web est rendue dans [Comment les navigateurs chargent les sites web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites).
 
-Avec les DevTools de votre navigateur, vous pourrez naviguer à travers le DOM en sélectionnant les éléments pour les inspecter et voir quelles règles s'appliquent sur eux.
+> [!NOTE]
+> Un navigateur est parfois appelé {{Glossary("User agent", "agent utilisateur")}}, ce qui signifie essentiellement un programme informatique qui représente une personne à l'intérieur d'un système informatique.
 
-## Une représentation concrète du DOM
+CSS peut être utilisé à de nombreuses fins liées à l'apparence et à la convivialité de votre page web, par exemple&nbsp;:
 
-Plutôt qu'une explication longue et ennuyeuse, regardons comment un fragment de code HTML est converti en un DOM.
+- Mise en forme du texte, y compris le changement de la [couleur](/fr/docs/Web/CSS/Reference/Values/color_value) et de la [taille](/fr/docs/Web/CSS/Reference/Properties/font-size) des titres et des liens.
+- Création de mises en page, telles que des [grilles](/fr/docs/Learn_web_development/Core/CSS_layout/Grids) ou des [mises en page à colonnes multiples](/fr/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts).
+- Effets spéciaux tels que [l'animation](/fr/docs/Web/CSS/Guides/Animations).
 
-Partons du code ci-dessous&nbsp;:
+Le langage CSS est organisé en _modules_ qui contiennent des fonctionnalités liées. Par exemple, jetez un œil aux pages de référence MDN pour le module [Arrière-plans et bordures](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders) pour découvrir son objectif et les propriétés et fonctionnalités qu'il contient. Dans nos pages de module, vous trouverez également des liens vers les _Spécifications_ qui définissent les technologies.
 
-```html
-<p>
-  Let's use:
-  <span>Cascading</span>
-  <span>Style</span>
-  <span>Sheets</span>
-</p>
+## Bases de la syntaxe CSS
+
+CSS est un langage basé sur des règles — vous définissez des règles en définissant des groupes de styles qui doivent être appliqués à un élément particulier ou à des groupes d'éléments sur votre page web.
+
+Par exemple, vous pouvez décider de mettre en forme le titre principal de votre page en texte rouge et de grande taille. Le code suivant montre une règle CSS très simple qui permet d'obtenir ce résultat&nbsp;:
+
+```css
+h1 {
+  color: red;
+  font-size: 2.5em;
+}
 ```
 
-Dans le DOM, le nœud correspondant à l'élément `<p>` est un parent. Ses enfants sont le nœud texte et les trois nœuds associés aux éléments `<span>`. Les nœuds `SPAN` sont eux-mêmes parents, avec pour enfant le nœud associé à leur texte&nbsp;:
+- Dans l'exemple ci-dessus, la règle CSS commence par un {{Glossary("CSS Selector", "sélecteur")}}. Cela _sélectionne_ les éléments HTML que nous allons mettre en forme. Dans ce cas, nous stylisons les titres de niveau un (`{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}`).
+- Nous incluons ensuite un ensemble d'accolades — `{ }`.
+- Les accolades contiennent une ou plusieurs **déclarations**, qui prennent la forme de paires **propriété** et **valeur**. Nous spécifions la propriété (par exemple, `color` dans l'exemple ci-dessus) avant les deux-points, et nous spécifions la valeur de la propriété après les deux-points (`red` est la valeur définie pour la propriété `color`).
+- Cet exemple contient deux déclarations, une pour `color` et une autre pour `font-size`.
 
-```
-P
-├─ "Let's use:"
-├─ SPAN
-|  └─ "Cascading"
-├─ SPAN
-|  └─ "Style"
-└─ SPAN
-    └─ "Sheets"
-```
+Les différentes {{Glossary("property/CSS", "propriétés CSS")}} ont des valeurs autorisées différentes. Dans notre exemple, nous avons la propriété `color`, qui peut prendre différentes [valeurs de couleur](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#couleur). Nous avons également la propriété `font-size`. Cette propriété peut prendre différentes [unités de taille](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#nombres_longueurs_et_pourcentages) comme valeur.
 
-C'est ainsi que le navigateur interprète notre fragment HTML — il transforme ce DOM en arbre de rendu puis affiche le résultat comme suit&nbsp;:
+Une feuille de style CSS contient de nombreuses règles de ce type, écrites les unes après les autres.
 
-{{EmbedLiveSample('', '100%', 55)}}
+```css
+h1 {
+  color: red;
+  font-size: 2.5em;
+}
 
-```css hidden
 p {
-  margin: 0;
+  color: aqua;
+  padding: 5px;
+  background: midnightblue;
 }
 ```
 
-## Appliquer CSS au DOM
+Vous pouvez constater que vous apprenez rapidement certaines valeurs, tandis que d'autres nécessitent une recherche. Les pages de propriétés individuelles sur MDN vous offrent un moyen rapide de rechercher des propriétés et leurs valeurs.
 
-Supposons maintenant que nous avons ajouté du CSS à notre document pour le mettre en forme. Le HTML n'a pas changé&nbsp;:
+> [!NOTE]
+> Vous pouvez trouver des liens vers toutes les pages de propriétés CSS (ainsi que d'autres fonctionnalités CSS) listées dans la [référence CSS](/fr/docs/Web/CSS/Reference) de MDN. Alternativement, vous devez vous habituer à rechercher «&nbsp;mdn _nom-de-la-fonctionnalité-css_&nbsp;» dans votre moteur de recherche préféré chaque fois que vous avez besoin d'en savoir plus sur une fonctionnalité CSS. Par exemple, essayez de rechercher «&nbsp;mdn color&nbsp;» ou «&nbsp;mdn font-size&nbsp;»&nbsp;!
+
+## Comment le CSS est-il appliqué au HTML ?
+
+Comme expliqué dans [Comment les navigateurs chargent les sites web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites), lorsque vous naviguez vers une page web, le navigateur reçoit d'abord le document HTML contenant le contenu de la page web et le convertit en un **arbre DOM**.
+
+Ensuite, toutes les règles CSS trouvées dans la page web (soit insérées directement dans le HTML, soit dans des fichiers `.css` externes référencés) sont triées dans différents «&nbsp;groupes&nbsp;», en fonction des différents éléments auxquels elles sont appliquées (comme défini par leurs sélecteurs). Les règles CSS sont ensuite appliquées à l'arbre DOM, ce qui donne une **arborescence de rendu**, qui est ensuite peinte dans la fenêtre du navigateur.
+
+Regardons un exemple. Tout d'abord, définissons un extrait HTML auquel le CSS peut être appliqué&nbsp;:
 
 ```html
-<p>
-  Let's use:
-  <span>Cascading</span>
-  <span>Style</span>
-  <span>Sheets</span>
-</p>
+<h1>CSS est génial</h1>
+
+<p>Vous pouvez mettre en forme le texte.</p>
+
+<p>Et créer des mises en page et des effets spéciaux.</p>
 ```
 
-On lui applique le CSS suivant&nbsp;:
+Maintenant, notre CSS, répété de la section précédente&nbsp;:
 
 ```css
-span {
-  border: 1px solid black;
-  background-color: lime;
+h1 {
+  color: red;
+  font-size: 2.5em;
 }
-```
 
-Le navigateur parse le HTML, calcule son DOM, puis parse le CSS. Puisque notre CSS a une unique règle avec un unique sélecteur `span`, ça va être rapide à trier&nbsp;! La règle est attachée à chaque nœud `SPAN` du DOM pour obtenir l'arbre de rendu. Reste à calculer les rendus puis à peindre (<i lang="en">paint</i>) la représentation visuelle finale à l'écran.
-
-Voilà le résultat après mise à jour&nbsp;:
-
-{{EmbedLiveSample('', '100%', 55)}}
-
-Dans le prochain module, dans l'article [Débogage de CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS), nous utiliserons les DevTools du navigateur pour déboguer des erreurs CSS. Ce sera aussi l'occasion de mieux comprendre comment le navigateur interprète CSS.
-
-## Que se passe-t-il quand un navigateur rencontre du CSS qu'il ne comprend pas&nbsp;?
-
-Les navigateurs n'implémentent pas tous en même temps une fonctionnalité CSS nouvelle — j'avais mentionné ce fait [dans une leçon précédente](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#prise_en_charge_par_les_navigateurs). Rajoutez à cela le fait que trop de gens n'utilisent pas une version à jour de leur navigateur. CSS, lui, est en développement constant et donc toujours en avance par rapport à ce que les navigateurs peuvent implémenter. On doit donc se demander ce qui se passe quand un navigateur tombe sur un sélecteur ou une déclaration qu'il ne sait pas interpréter.
-
-La réponse&nbsp;: ne rien faire et passer à la suite&nbsp;!
-
-Quand un navigateur parse vos règles et rencontre une propriété ou une valeur qu'il ne comprend pas, il l'ignore et passe à la déclaration suivante. Cela se produit si vous avez mal orthographié le nom de la propriété ou de la valeur, ou s'ils sont trop nouveaux et pas encore pris en charge par le navigateur.
-
-De même quand le navigateur rencontre un sélecteur qu'il ne sait pas interpréter, il ignore la règle correspondante et passe à la suivante.
-
-Dans l'exemple ci-dessous, j'ai utilisé l'orthographe anglaise `colour` pour le mot _couleur._ Cela contredit la convention CSS et rend ce code incompréhensible pour le navigateur. En conséquence, le paragraphe n'a pas été colorié en bleu. Par contre, tout le reste du CSS est appliqué&nbsp;; seule la ligne invalide est ignorée.
-
-```html
-<p>Je veux que ce texte soit grand, gras et bleu.</p>
-```
-
-```css
 p {
-  font-weight: bold;
-  colour: blue; /* orthographe incorrecte de la propriété color */
-  font-size: 200%;
+  color: aqua;
+  padding: 5px;
+  background: midnightblue;
 }
 ```
 
-{{EmbedLiveSample('', '100%', 200)}}
+Ce CSS&nbsp;:
 
-Le comportement décrit ci-dessus est très utile&nbsp;: vous pouvez utiliser du CSS récent pour perfectionner la mise en forme de vos pages, sachant qu'aucune erreur ne se produira quand votre code n'est pas compris — le navigateur interprète la règle ou ne fait rien. Rappelez-vous maintenant la _cascade_&nbsp;: entre deux règles de même spécificité, le navigateur choisira la dernière rencontrée. La cascade permet d'offrir une alternative pour les navigateurs qui ne prennent pas en charge le CSS le plus récent.
+- Sélectionne tous les éléments `<h1>` de la page, coloriant leur texte en rouge et les agrandissant par rapport à leur taille par défaut. Comme il n'y a qu'un seul `<h1>` dans notre exemple HTML, seul cet élément reçoit le style.
+- Sélectionne tous les éléments `<p>` de la page, leur donnant une couleur de texte et de fond personnalisée ainsi qu'un peu d'espace autour du texte. Il y a deux éléments `<p>` dans notre exemple HTML, et ils reçoivent tous les deux le style.
 
-Cela fonctionne particulièrement bien quand on désire utiliser une valeur CSS introduite récemment, pas encore prise en charge partout. Par exemple, quelques vieux navigateurs ne savent pas interpréter `calc()` pour les valeurs. Je pourrais donc donner une valeur en pixels pour la largeur de ma boîte, puis proposer une déclaration où la valeur de `width` est calculée par `calc(100% - 50px)`. Un vieux navigateur utilisera la première déclaration ayant une valeur en pixels&nbsp;; il ignore la seconde parce qu'il ne le comprend pas. Les navigateurs récents interprètent la déclaration en pixels, puis celle avec `calc()` qui, par cascade, écrase la déclaration précédente.
+Quand le CSS est appliqué au HTML, le rendu est le suivant&nbsp;:
 
-```css
-.box {
-  width: 500px;
-  width: calc(100% - 50px);
-}
-```
+{{EmbedLiveSample("Comment le CSS est-il appliqué au HTML ?", "100%", 200)}}
 
-Dans les leçons à venir, nous rencontrerons d'autres méthodes pour adapter le code aux différents navigateurs.
+## Jouez avec un peu de CSS
 
-## Et enfin
+Essayez de jouer avec l'exemple ci-dessus. Pour ce faire, appuyez sur le bouton «&nbsp;Exécuter&nbsp;» dans le coin supérieur droit pour le charger dans notre éditeur MDN Playground.
 
-Ce cours est presque achevé&nbsp;; il nous reste un seul point à voir. Dans la prochaine leçon, vous allez [mettre en œuvre vos nouvelles connaissances](/fr/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page)&nbsp;: vous allez remettre en forme un exemple, une occasion d'appliquer tout ce que vous avez appris sur les CSS.
+Faites ce qui suit&nbsp;:
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics/Getting_started")}}
+1. Ajoutez un autre paragraphe de texte sous les deux existants, et notez comment la deuxième règle CSS est automatiquement appliquée au nouveau paragraphe.
+2. Ajoutez un sous-titre `<h2>` quelque part sous le `<h1>`, peut-être après l'un des paragraphes.
+3. Essayez de donner aux éléments `<h2>` une couleur différente en ajoutant une nouvelle règle CSS. Faites une copie de la règle `h1`, changez le sélecteur en `h2` et changez la valeur de `color` de `red` à `purple`, par exemple.
+4. Si vous vous sentez aventureux, essayez de rechercher de nouvelles propriétés et valeurs CSS dans la [référence CSS](/fr/docs/Web/CSS/Reference) de MDN pour les ajouter à vos règles&nbsp;!
+
+Pour un peu de pratique supplémentaire avec les bases du CSS, consultez [Écrivez vos premières lignes de CSS&nbs! <sup>(angl.)</sup>](https://scrimba.com/learn-html-and-css-c0p/~0j?via=mdn) de Scrimba <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>. Ce cours fournit un aperçu utile de la syntaxe de base du CSS et propose un défi interactif où vous pouvez vous exercer davantage à écrire des déclarations CSS.
+
+## Résumé
+
+Maintenant que vous avez une certaine compréhension de ce qu'est le CSS et de son fonctionnement, passons à la pratique en écrivant vous-même du CSS et en expliquant la syntaxe plus en détail.
+
+{{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
