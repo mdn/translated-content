@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="image">`
 short-title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`image`** sont utilisés pour créer des boutons d'envoi de formulaire graphiques. Autrement dit, il s'agit de boutons d'envoi qui affichent une image plutôt qu'un texte.
@@ -52,10 +52,10 @@ En complément des attributs partagés par l'ensemble des éléments {{HTMLEleme
 
 L'attribut `alt` fournit une chaîne de caractères alternative à utiliser si l'image du bouton ne peut être affichée (suite à une erreur, à un {{Glossary("user agent", "agent utilisateur")}} qui ne peut pas ou n'est pas configuré pour afficher les images, ou si la personne utilise un outil de lecture d'écran). Si cet attribut est fourni, il doit être une chaîne de caractères non-vide qui est un libellé pertinent pour le bouton.
 
-Ainsi, si un bouton graphique affiche une image avec une icône ou une image avec un texte «&nbsp;Se connecter&nbsp;», l'attribut `alt` devrait être renseigné avec une valeur comme `Se connecter`.
+Ainsi, si un bouton graphique affiche une image avec une icône ou une image avec un texte «&nbsp;Se connecter&nbsp;», l'attribut `alt` doit être renseigné avec une valeur comme `Se connecter`.
 
 > [!NOTE]
-> Bien que l'attribut `alt` soit optionnel sur le plan technique, il devrait en pratique toujours être inclus afin de maximiser l'utilisabilité du contenu.
+> Bien que l'attribut `alt` soit optionnel sur le plan technique, il doit en pratique toujours être inclus afin de maximiser l'utilisabilité du contenu.
 
 D'un point de vue fonctionnel, l'attribut `alt` de `<input type="image">` se comporte de façon analogue à l'attribut [`alt`](/fr/docs/Web/HTML/Reference/Elements/img#alt) des éléments {{HTMLElement("img")}}.
 
@@ -95,7 +95,7 @@ Cet attribut est également disponible pour les éléments [`<input type="submit
 
 ### `formnovalidate`
 
-Un attribut booléen qui, s'il est présent, indique que le formulaire ne devrait pas être validé avant envoi au serveur. Cette valeur surcharge la valeur de l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) sur le formulaire propriaitaire de l'élément.
+Un attribut booléen qui, s'il est présent, indique que le formulaire ne doit pas être validé avant envoi au serveur. Cette valeur surcharge la valeur de l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) sur le formulaire propriétaire de l'élément.
 
 Cet attribut est également disponible pour les éléments [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit) et {{HTMLElement("button")}}.
 
@@ -126,7 +126,7 @@ Une chaîne de caractères qui indique l'URL du fichier contenant l'image à aff
 
 ### `width`
 
-Un nombre qui indique la largeur selon lequelle dessiner l'image, exprimée en pixels CSS.
+Un nombre qui indique la largeur selon lequel dessiner l'image, exprimée en pixels CSS.
 
 ## Attributs obsolètes
 
@@ -157,33 +157,33 @@ Prenons un exemple simple qui utilise les différentes fonctionnalités essentie
 {{EmbedLiveSample("Fonctionnalités essentielles des boutons d'image", 600, 50)}}
 
 - L'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/input#src) est utilisé afin d'indiquer le chemin vers l'image à afficher sur le bouton.
-- L'attribut [`alt`](/fr/docs/Web/HTML/Reference/Elements/input#alt) permet de fournir un texte alternatif afin que les personnes qui utilisent un outil de lecture d'écran puissent avoir une meilleure idée du rôle du bouton. Ce texte sera également affiché si l'image ne peut être affichée pour quelque raison que ce soit (par exemple si le chemin contient une coquille). Si possible, on utilisera un texte qui correspond au libellé qui aurait été choisi si le bouton avait été un bouton d'envoi texte classique.
-- Les attributs [`width`](/fr/docs/Web/HTML/Reference/Elements/input#width) et [`height`](/fr/docs/Web/HTML/Reference/Elements/input#height) indiquent respectivement la largeur et la hauteur, exprimées en pixels, selon lesquelles afficher l'image. Le bouton aura la même taille que l'image. S'il faut que la zone couverte par le bouton soit plus grande que l'image, on utilisera du CSS (par exemple la propriété {{CSSxRef("padding")}}). Si une seule dimension est indiquée, la seconde est automatiquement ajustée pour que l'image conserve son {{Glossary("aspect ratio", "rapport d'aspect")}} original.
+- L'attribut [`alt`](/fr/docs/Web/HTML/Reference/Elements/input#alt) permet de fournir un texte alternatif afin que les personnes qui utilisent un outil de lecture d'écran puissent avoir une meilleure idée du rôle du bouton. Ce texte est également affiché si l'image ne peut être affichée pour quelque raison que ce soit (par exemple si le chemin contient une coquille). Si possible, on utilise un texte qui correspond au libellé qui a été choisi si le bouton avait été un bouton d'envoi texte classique.
+- Les attributs [`width`](/fr/docs/Web/HTML/Reference/Elements/input#width) et [`height`](/fr/docs/Web/HTML/Reference/Elements/input#height) indiquent respectivement la largeur et la hauteur, exprimées en pixels, selon lesquelles afficher l'image. Le bouton a la même taille que l'image. S'il faut que la zone couverte par le bouton soit plus grande que l'image, on utilise du CSS (par exemple la propriété {{CSSxRef("padding")}}). Si une seule dimension est indiquée, la seconde est automatiquement ajustée pour que l'image conserve son {{Glossary("aspect ratio", "rapport d'aspect")}} original.
 
 ### Surcharger le comportement par défaut du formulaire
 
 Les éléments `<input type="image">`, comme [les boutons d'envoi classiques](/fr/docs/Web/HTML/Reference/Elements/input/submit), acceptent certains attributs qui surchargent le comportement indiqué par le formulaire&nbsp;:
 
 - `formaction`
-  - : L'URI d'un programme qui traite les informations soumises par l'élément d'entrée de formulaire&nbsp;; remplace l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) du formulaire propriétaire de l'élément.
+  - : L'URI d'un programme qui traite les informations envoyées par l'élément d'entrée de formulaire&nbsp;; remplace l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) du formulaire propriétaire de l'élément.
 - `formenctype`
-  - : Définit le type de contenu utilisé pour soumettre le formulaire au serveur. Les valeurs possibles sont&nbsp;:
+  - : Définit le type de contenu utilisé pour envoyer le formulaire au serveur. Les valeurs possibles sont&nbsp;:
     - `application/x-www-form-urlencoded`&nbsp;: La valeur par défaut si l'attribut n'est pas défini.
     - `text/plain`.
 
     Si cet attribut est défini, il remplace l'attribut [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#enctype) du formulaire propriétaire de l'élément.
 
 - `formmethod`
-  - : Définit la méthode HTTP que le navigateur utilise pour soumettre le formulaire. Les valeurs possibles sont&nbsp;:
+  - : Définit la méthode HTTP que le navigateur utilise pour envoyer le formulaire. Les valeurs possibles sont&nbsp;:
     - `post`&nbsp;: Les données du formulaire sont incluses dans le corps du formulaire et envoyées au serveur.
     - `get`&nbsp;: Les données du formulaire sont ajoutées à l'URI de l'attribut **`form`**, avec un «&nbsp;?&nbsp;» comme séparateur, et l'URI résultante est envoyée au serveur. Utilisez cette méthode lorsque le formulaire n'a pas d'effets secondaires et ne contient que des caractères ASCII.
 
     Si défini, cet attribut remplace l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method) du formulaire propriétaire de l'élément.
 
 - `formnovalidate`
-  - : Un attribut booléen définissant que le formulaire ne doit pas être validé lorsqu'il est soumis. Si cet attribut est défini, il remplace l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) du formulaire propriétaire de l'élément.
+  - : Un attribut booléen définissant que le formulaire ne doit pas être validé lorsqu'il est envoyé. Si cet attribut est défini, il remplace l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) du formulaire propriétaire de l'élément.
 - `formtarget`
-  - : Un nom ou un mot-clé indiquant où afficher la réponse reçue après la soumission du formulaire. Il s'agit d'un nom ou d'un mot-clé pour un _contexte de navigation_ (par exemple, un onglet, une fenêtre ou un cadre en ligne). Si cet attribut est défini, il remplace l'attribut [`target`](/fr/docs/Web/HTML/Reference/Elements/form#target) du formulaire propriétaire de l'élément. Les mots-clés suivants ont des significations particulières&nbsp;:
+  - : Un nom ou un mot-clé indiquant où afficher la réponse reçue après l'envoi du formulaire. Il s'agit d'un nom ou d'un mot-clé pour un _contexte de navigation_ (par exemple, un onglet, une fenêtre ou un cadre en ligne). Si cet attribut est défini, il remplace l'attribut [`target`](/fr/docs/Web/HTML/Reference/Elements/form#target) du formulaire propriétaire de l'élément. Les mots-clés suivants ont des significations particulières&nbsp;:
     - `_self`&nbsp;: Charger la réponse dans le même contexte de navigation que celui en cours. Cette valeur est la valeur par défaut si l'attribut n'est pas défini.
     - `_blank`&nbsp;: Charger la réponse dans un nouveau contexte de navigation sans nom.
     - `_parent`&nbsp;: Charger la réponse dans le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, cette option se comporte de la même manière que `_self`.
@@ -193,9 +193,9 @@ Les éléments `<input type="image">`, comme [les boutons d'envoi classiques](/f
 
 Lors de l'envoi d'un formulaire avec un bouton graphique `<input type="image">`, deux données supplémentaires sont automatiquement envoyées au serveur par le navigateur — les coordonnées `x` et `y` de l'emplacement du clic sur l'image. Vous pouvez voir ceci à l'œuvre dans [l'exemple sur les coordonnées X Y <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/forms/image-type-example/xy-coordinates-example.html).
 
-Lorsqu'on clique sur l'image pour envoyer le formulaire, des données sont ajoutées aux paramètres de l'URL, comme `?x=52&y=55`. Attention, si le bouton utilise un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name), sa valeur sera utilisée comme préfixe pour chaque attribut, par exemple si `name` vaut `position`, les coordonnées envoyées dans l'URL seraient transmises sous la forme `?position.x=52&position.y=55`. Cela vaut également pour les autres attributs.
+Lorsqu'on clique sur l'image pour envoyer le formulaire, des données sont ajoutées aux paramètres de l'URL, comme `?x=52&y=55`. Attention, si le bouton utilise un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name), sa valeur est utilisée comme préfixe pour chaque attribut, par exemple si `name` vaut `position`, les coordonnées envoyées dans l'URL seraient transmises sous la forme `?position.x=52&position.y=55`. Cela vaut également pour les autres attributs.
 
-Il s'agit des coordonnées X et Y de l'image sur laquelle la souris a cliqué pour envoyer le formulaire, où (`0,0`) correspond au coin supérieur gauche de l'image et constitue la valeur par défaut si l'envoi a lieu sans clic sur l'image. Ces coordonnées peuvent être utilisées lorsque l'emplacement où l'on a cliqué sur l'image est important, par exemple si vous disposez d'une carte qui, lorsqu'on clique dessus, envoie les coordonnées de l'emplacement cliqué au serveur. Le code côté serveur détermine alors l'emplacement sur lequel l'utilisateur·ice a cliqué et renvoie des informations sur les lieux à proximité.
+Il s'agit des coordonnées X et Y de l'image sur laquelle la souris a cliqué pour envoyer le formulaire, où (`0,0`) correspond au coin supérieur gauche de l'image et constitue la valeur par défaut si l'envoi a lieu sans clic sur l'image. Ces coordonnées peuvent être utilisées lorsque l'emplacement où l'on a cliqué sur l'image est important, par exemple si vous disposez d'une carte qui, lorsqu'on clique dessus, envoie les coordonnées de l'emplacement cliqué au serveur. Le code côté serveur détermine alors l'emplacement sur lequel l'utilisateur·ice a cliqué et retourne des informations sur les lieux à proximité.
 
 Dans l'exemple ci-dessus, nous pourrions écrire du code côté serveur qui détermine la couleur sur laquelle l'utilisateur·ice a cliqué à partir des coordonnées transmises, et qui comptabilise les couleurs préférées pour lesquelles les utilisateur·ice·s ont voté.
 
@@ -304,7 +304,7 @@ label {
 }
 ```
 
-Ici, `object-position` est configuré afin que l'image soit dessinée au coin supérieur droit de l'élément et `object-fit` est paramétré avec la valeur `contain`, qui indique que l'image doit être dessinée avec la taille la plus grande possible qui puisse tenir dans la boîte de l'élément, sans modifier ses proportions. On notera que l'arrière-plan gris de l'élément est toujours visible sur la zone qui n'est pas couverte par l'image.
+Ici, `object-position` est configuré afin que l'image soit dessinée au coin supérieur droit de l'élément et `object-fit` est paramétré avec la valeur `contain`, qui indique que l'image doit être dessinée avec la taille la plus grande possible qui puisse tenir dans la boîte de l'élément, sans modifier ses proportions. Notez que l'arrière-plan gris de l'élément est toujours visible sur la zone qui n'est pas couverte par l'image.
 
 ## Résumé technique
 
@@ -312,7 +312,7 @@ Ici, `object-position` est configuré afin que l'image soit dessinée au coin su
   <tbody>
     <tr>
       <td><strong><a href="#valeur">Valeur</a></strong></td>
-      <td>Aucune — l'attribut <code>value</code> ne devrait pas être renseigné.</td>
+      <td>Aucune — l'attribut <code>value</code> ne doit pas être renseigné.</td>
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
@@ -339,10 +339,6 @@ Ici, `object-position` est configuré afin que l'image soit dessinée au coin su
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>Aucune.</td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

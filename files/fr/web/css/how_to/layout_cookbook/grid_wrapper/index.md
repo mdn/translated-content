@@ -2,7 +2,7 @@
 title: Envelopper une grille
 slug: Web/CSS/How_to/Layout_cookbook/Grid_wrapper
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
 ---
 
 Le motif d'enveloppe de grille est utile pour aligner le contenu d'une grille dans un conteneur central tout en permettant à des éléments de sortir et de s'aligner sur le bord de l'élément ou de la page.
@@ -82,7 +82,7 @@ body {
 
 ## Choix effectués
 
-Cette recette utilise la fonction {{CSSxRef("minmax", "minmax()")}} de la grille CSS pour définir la taille des pistes dans la propriété {{CSSxRef("grid-template-columns")}}. Pour les colonnes centrales avec une largeur maximale, on peut définir une valeur minimale de `0` ou plus et une valeur maximale qui spécifie la taille maximale que les pistes de colonne peuvent atteindre. L'utilisation d'unités [relatives](/fr/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_font) ou [absolues](/fr/docs/Web/CSS/Reference/Values/length#absolute_length_units) {{CSSxRef("length")}} (pixels, em, rem) crée une taille maximale fixe pour le conteneur central, tandis que l'utilisation de valeurs en {{CSSxRef("percentage")}} ou d'[unités de la zone d'affichage](/fr/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport) permet au conteneur de s'adapter à son contexte.
+Cette recette utilise la fonction {{CSSxRef("minmax()")}} de la grille CSS pour définir la taille des pistes dans la propriété {{CSSxRef("grid-template-columns")}}. Pour les colonnes centrales avec une largeur maximale, on peut définir une valeur minimale de `0` ou plus et une valeur maximale qui définit la taille maximale que les pistes de colonne peuvent atteindre. L'utilisation d'unités [relatives](/fr/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_font) ou [absolues](/fr/docs/Web/CSS/Reference/Values/length#absolute_length_units) {{CSSxRef("&lt;length&gt;")}} (pixels, em, rem) crée une taille maximale fixe pour le conteneur central, tandis que l'utilisation de valeurs en {{CSSxRef("&lt;percentage&gt;")}} ou [d'unités de la zone d'affichage](/fr/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport) permet au conteneur de s'adapter à son contexte.
 
 Les deux colonnes extérieures ont une taille maximale de `1fr`, ce qui signifie qu'elles s'étendent pour occuper l'espace restant dans le conteneur de grille.
 

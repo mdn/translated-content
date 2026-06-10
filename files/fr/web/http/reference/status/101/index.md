@@ -21,14 +21,14 @@ Le serveur envoie alors une réponse avec un en-tête de réponse {{HTTPHeader("
 ### Basculement de protocole vers WebSockets
 
 L'exemple suivant montre comment le basculement de protocole peut être utilisé avec [WebSockets](/fr/docs/Web/API/WebSockets_API).
-Un·e client·e envoie une requête HTTP {{HTTPMethod("GET")}} avec un en-tête {{HTTPHeader("Upgrade")}} qui doit également être listé dans l'en-tête {{HTTPHeader("Connection")}}.
+Un client envoie une requête HTTP {{HTTPMethod("GET")}} avec un en-tête {{HTTPHeader("Upgrade")}} qui doit également être listé dans l'en-tête {{HTTPHeader("Connection")}}.
 Le serveur accepte de basculer de protocole, retournant une réponse 101 signifiant que la connexion est passée de HTTP à WebSocket.
 À ce stade, le client et le serveur peuvent commencer à échanger des données WebSocket.
 Des informations sur la manière de définir les en-têtes `Sec-WebSocket-*` pour la négociation de l'initialisation sont disponibles dans [En-têtes spécifiques à WebSocket](/fr/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism#en-têtes_propres_à_websocket).
 
 ```http
 GET /notifications HTTP/1.1
-Host: example.com
+Host: exemple.com
 Upgrade: websocket
 Connection: Upgrade
 ```

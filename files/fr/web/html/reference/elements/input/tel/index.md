@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="tel">`
 short-title: <input type="tel">
 slug: Web/HTML/Reference/Elements/input/tel
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`tel`** permettent de saisir un numéro de téléphone. Contrairement aux contrôles utilisés pour [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email) et [`<input type="url">`](/fr/docs/Web/HTML/Reference/Elements/input/url), la valeur saisie n'est pas automatiquement validée selon un format donné, car les formats des numéros de téléphone varient à travers le monde.
@@ -41,7 +41,7 @@ label {
 Bien que les entrées de type `tel` soient fonctionnellement identiques aux entrées `text` standard, elles présentent néanmoins des avantages concrets&nbsp;; le plus évident est que les navigateurs mobiles — en particulier sur les téléphones portables — peuvent choisir d'afficher un clavier personnalisé, optimisé pour la saisie de numéros de téléphone. L'utilisation d'un type d'entrée spécifique pour les numéros de téléphone facilite également la mise en place d'une validation personnalisée et la gestion de ces numéros.
 
 > [!NOTE]
-> Les navigateurs qui ne prennent pas en charge le type `tel` utiliseront à la place un champ `{{HTMLElement("input/text", "text")}}` standard.
+> Les navigateurs qui ne prennent pas en charge le type `tel` utilisent à la place un champ `{{HTMLElement("input/text", "text")}}` standard.
 
 ## Valeur
 
@@ -53,56 +53,56 @@ En plus des attributs présents pour tous les éléments [`<input>`](/fr/docs/We
 
 ### `list`
 
-La valeur de cet attribut est l'identifiant ({{DOMxRef("Element.id", "id")}}) d'un élément {{HTMLElement("datalist")}} situé dans le même document. L'élément {{HTMLElement("datalist")}} fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Reference/Elements/input#type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
+La valeur de cet attribut est l'identifiant ({{DOMxRef("Element.id", "id")}}) d'un élément {{HTMLElement("datalist")}} situé dans le même document. L'élément {{HTMLElement("datalist")}} fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Reference/Elements/input#type)) n'est pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
 
 ### `maxlength`
 
 Le nombre maximum de caractères (exprimé en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}) qu'il est possible de saisir dans le champ. Cette valeur doit un entier positif ou nul. Si aucune valeur n'est fournie pour `maxlength` ou qu'une valeur invalide est fournie, il n'y a pas de contrainte de taille maximale. La valeur indiquée par cet attribut doit être supérieure à `minlength`.
 
-Le champ [ne sera pas valide](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du numéro de téléphone dépasse `maxlength` en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}. La validation de contrainte est seulement appliquée lorsque la valeur est modifée par l'utilisateur·ice.
+Le champ [n'est pas valide](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du numéro de téléphone dépasse `maxlength` en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}. La validation de contrainte est seulement appliquée lorsque la valeur est modifiée par l'utilisateur·ice.
 
 ### `minlength`
 
 Le nombre minimal de caractères (exprimé en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}) que l'utilisateur·ice peut saisir dans le champ. Cette valeur doit être un entier positif ou nul. Si aucune valeur n'est fournie pour `minlength` ou qu'une valeur invalide est fournie, il n'y a pas de contrainte de taille minimale. La valeur indiquée par cet attribut doit être inférieure à `maxlength`.
 
-Le champ [ne sera pas valide](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du numéro de téléphone est inférieure à `minlength` en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}. La validation de contrainte est seulement appliquée lorsque la valeur est modifée par l'utilisateur·ice.
+Le champ [n'est pas valide](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du numéro de téléphone est inférieure à `minlength` en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}. La validation de contrainte est seulement appliquée lorsque la valeur est modifiée par l'utilisateur·ice.
 
 ### `pattern`
 
 L'attribut `pattern`, lorsqu'il est défini, est une expression régulière à laquelle la [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) de l'élément `input` doit correspondre pour que la valeur passe la [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Il doit s'agir d'une expression régulière JavaScript valide, telle qu'utilisée par le type {{JSxRef("RegExp")}} et telle que documentée dans notre [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)&nbsp;; le marqueur `"u"` est défini lors de la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode, plutôt que de {{Glossary("ASCII", "l'ASCII")}}. Aucune barre oblique ne doit être définie autour du texte du motif.
 
-Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format ne sera appliquée et cet attribut sera ignoré complètement.
+Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format n'est appliquée et cet attribut est ignoré complètement.
 
 > [!NOTE]
-> On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
+> On utilise l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pour définir le texte que la plupart des navigateurs affichent comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
 
 Voir [Motif de validation](#motif_de_validation) pour plus de détails et un exemple.
 
 ### `placeholder`
 
-L'attribut `placeholder` est une chaîne de caractères qui fournit une indication courte sur le type d'information attendue dans le champ. Ce devrait être un mot ou une phrase courte qui illustre le type de données attendu plutôt qu'un message explicatif. Le texte _ne doit pas_ inclure de saut de ligne ou de retour chariot.
+L'attribut `placeholder` est une chaîne de caractères qui fournit une indication courte sur le type d'information attendue dans le champ. Ce doit être un mot ou une phrase courte qui illustre le type de données attendu plutôt qu'un message explicatif. Le texte _ne doit pas_ inclure de saut de ligne ou de retour charriot.
 
 Si le contenu du contrôle utilise une direction (écriture de gauche à droite ou de droite à gauche), mais que le texte indicatif doit être présenté dans la direction inverse, vous pouvez utiliser des caractères de formatage pour l'algorithme bidirectionnel Unicode dans la valeur. Voir [comment utiliser des contrôles Unicode pour le texte bidirectionnel <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
 > [!NOTE]
-> On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [les libellés de `<input>`](/fr/docs/Web/HTML/Reference/Elements/input#libellés) pour plus d'informations.
+> On évite d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [les libellés de `<input>`](/fr/docs/Web/HTML/Reference/Elements/input#libellés) pour plus d'informations.
 
 ### `readonly`
 
-Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript, qui changerait la propriété `value` de l'interface {{DOMxRef("HTMLInputElement")}}.
+Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript, qui change la propriété `value` de l'interface {{DOMxRef("HTMLInputElement")}}.
 
 > [!NOTE]
 > Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
 
 ### `size`
 
-L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à 0 et la valeur par défaut est 20. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant pourra être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS {{CSSxRef("font")}}) utilisée.
+L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à 0 et la valeur par défaut est 20. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant peut être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS {{CSSxRef("font")}}) utilisée.
 
-Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent être saisis. Il indique uniquement, de façon approximative, le nombre de caractères visibles au même moment. Pour imposer une contrainte de taille sur la longueur maximale de la valeur saisissable, on pourra utiliser l'attribut [`maxlength`](#maxlength).
+Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent être saisis. Il indique uniquement, de façon approximative, le nombre de caractères visibles au même moment. Pour imposer une contrainte de taille sur la longueur maximale de la valeur saisissable, on peut utiliser l'attribut [`maxlength`](#maxlength).
 
 ## Utiliser le champ de téléphone
 
-Les numéros de téléphone sont un type de données très fréquemment collecté sur le web. Par exemple, lors de la création d'un site d'inscription ou de commerce électronique, vous devrez probablement demander à l'utilisateur·ice un numéro de téléphone, que ce soit pour des raisons professionnelles ou pour les contacts en cas d'urgence. Étant donné la fréquence à laquelle les numéros de téléphone sont saisis, il est regrettable qu'une solution «&nbsp;taille unique&nbsp;» pour valider les numéros de téléphone ne soit pas pratique.
+Les numéros de téléphone sont un type de données très fréquemment collecté sur le web. Par exemple, lors de la création d'un site d'inscription ou de commerce électronique, vous devez probablement demander à l'utilisateur·ice un numéro de téléphone, que ce soit pour des raisons professionnelles ou pour les contacts en cas d'urgence. Étant donné la fréquence à laquelle les numéros de téléphone sont saisis, il est regrettable qu'une solution «&nbsp;taille unique&nbsp;» pour valider les numéros de téléphone ne soit pas pratique.
 
 Heureusement, vous pouvez prendre en compte les exigences de votre propre site et mettre en œuvre un niveau de validation approprié vous-même. Voir [Validation](#validation), ci-dessous, pour plus de détails.
 
@@ -125,7 +125,7 @@ Dans sa forme la plus simple, on peut implémenter un tel contrôle avec ce frag
 
 {{EmbedLiveSample("Un champ simple", 600, 40)}}
 
-Rien de bien surprenant ici. Lorsque les données seront envoyées au serveur, elles auront la forme `telNo=0123456789`.
+Rien de bien surprenant ici. Lorsque les données sont envoyées au serveur, elles ont la forme `telNo=0123456789`.
 
 ### Textes indicatifs
 
@@ -145,7 +145,7 @@ On peut contrôler la taille physique allouée au contrôle ainsi que les longue
 
 #### La taille physique d'un champ
 
-La taille physique de la boîte de saisie peut être contrôlée avec l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size). La valeur de cet attribut indique le nombre de caractères que la boîte peut afficher simultanément. Si, par exemple, on souhaite que le contrôle mesure 20 caractères de large, on pourra utiliser le code suivant&nbsp;:
+La taille physique de la boîte de saisie peut être contrôlée avec l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size). La valeur de cet attribut indique le nombre de caractères que la boîte peut afficher simultanément. Si, par exemple, on souhaite que le contrôle mesure 20 caractères de large, on peut utiliser le code suivant&nbsp;:
 
 ```html
 <input id="telNo" name="telNo" type="tel" size="20" />
@@ -155,7 +155,7 @@ La taille physique de la boîte de saisie peut être contrôlée avec l'attribut
 
 #### La longueur de la valeur
 
-L'attribut `size` ne contraint pas la taille de la valeur qui peut être saisie dans le contrôle. Si on souhaite avoir une longueur minimale (en nombre de caractères), on pourra utiliser l'attribut [`minlength`](/fr/docs/Web/HTML/Reference/Elements/input#minlength). De même, si on souhaite qu'un numéro de téléphone valide mesure au maximum X caractères, on pourra employer l'attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength).
+L'attribut `size` ne contraint pas la taille de la valeur qui peut être saisie dans le contrôle. Si on souhaite avoir une longueur minimale (en nombre de caractères), on peut utiliser l'attribut [`minlength`](/fr/docs/Web/HTML/Reference/Elements/input#minlength). De même, si on souhaite qu'un numéro de téléphone valide mesure au maximum X caractères, on peut employer l'attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength).
 
 Dans l'exemple qui suit, on crée un contrôle qui mesure 20 caractères de large et dont le contenu doit être plus long que 9 caractères et plus court que 14 caractères.
 
@@ -172,7 +172,7 @@ Dans l'exemple qui suit, on crée un contrôle qui mesure 20 caractères de larg
 {{EmbedLiveSample("La longueur de la valeur", 600, 40)}}
 
 > [!NOTE]
-> Ces deux attributs jouent un rôle lors de la [validation](#validation). Dans l'exemple précédent, la valeur sera considérée comme invalide si elle contient moins de 9 caractères ou plus de 14. La plupart des navigateurs ne permettront pas de saisir une valeur plus longue que la taille maximale.
+> Ces deux attributs jouent un rôle lors de la [validation](#validation). Dans l'exemple précédent, la valeur est considérée comme invalide si elle contient moins de 9 caractères ou plus de 14. La plupart des navigateurs ne permettent pas de saisir une valeur plus longue que la taille maximale.
 
 ### Fournir une valeur par défaut
 
@@ -188,7 +188,7 @@ Il est possible de fournir une valeur par défaut en renseignant au préalable l
 
 #### Afficher des suggestions
 
-Si on souhaite aller plus loin, on peut fournir une liste de suggestions parmi lesquelles on pourra choisir (on pourra également saisir la valeur de son choix si celle-ci ne fait pas partie de la liste). Pour cela, on utilisera l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#list) dont la valeur est l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) qui contient autant d'éléments [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option) que de valeurs suggérées. C'est la valeur de l'attribut `value` de chaque élément `<option>` qui sera utilisée comme suggestion.
+Si on souhaite aller plus loin, on peut fournir une liste de suggestions parmi lesquelles on peut choisir (on peut également saisir la valeur de son choix si celle-ci ne fait pas partie de la liste). Pour cela, on utilise l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#list) dont la valeur est l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) qui contient autant d'éléments [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option) que de valeurs suggérées. C'est la valeur de l'attribut `value` de chaque élément `<option>` qui est utilisée comme suggestion.
 
 ```html
 <input id="telNo" name="telNo" type="tel" list="defaultTels" />
@@ -203,9 +203,9 @@ Si on souhaite aller plus loin, on peut fournir une liste de suggestions parmi l
 
 {{EmbedLiveSample("Afficher des suggestions", 600, 40)}}
 
-Avec l'élément {{HTMLElement("datalist")}} contenant ces différentes valeurs {{HTMLElement("option")}}, le navigateur affichera une liste déroulante (ou un autre élément d'interface utilisateur) afin que l'utilisateur·ice puisse éventuellement choisir parmi les suggestions. Lorsqu'on saisit dans le contrôle, la liste des suggestions est restreinte à celles qui correspondent encore.
+Avec l'élément {{HTMLElement("datalist")}} contenant ces différentes valeurs {{HTMLElement("option")}}, le navigateur affiche une liste déroulante (ou un autre élément d'interface utilisateur) afin que l'utilisateur·ice puisse éventuellement choisir parmi les suggestions. Lorsqu'on saisit dans le contrôle, la liste des suggestions est restreinte à celles qui correspondent encore.
 
-Voici une capture d'écran de ce à quoi cela pourrait ressembler&nbsp;:
+Voici une capture d'écran de ce à quoi cela peut ressembler&nbsp;:
 
 ![Une zone de saisie a la sélection avec un anneau de sélection bleu. La zone de saisie a un menu déroulant affichant quatre numéros de téléphone que l'utilisateur·ice peut sélectionner.](phone-number-with-options.png)
 
@@ -214,11 +214,11 @@ Voici une capture d'écran de ce à quoi cela pourrait ressembler&nbsp;:
 Comme évoqué ci-avant, il est difficile de fournir une solution qui convienne pour l'ensemble des formats utilisés et qui permette de valider correctement les numéros de téléphone.
 
 > [!WARNING]
-> La validation des formulaires HTML ne remplace _pas_ les scripts côté serveur qui garantissent que les données saisies sont au format approprié avant d'être enregistrées dans la base de données. Il est bien trop facile pour quelqu'un de modifier le code HTML afin de contourner la validation, voire de la supprimer complètement. Il est également possible pour quelqu'un de contourner complètement votre code HTML et d'envoyer les données directement à votre serveur. Si votre code côté serveur ne parvient pas à valider les données qu'il reçoit, une catastrophe pourrait se produire lorsque des données mal formatées (ou des données trop volumineuses, de type incorrect, etc.) sont enregistrées dans votre base de données.
+> La validation des formulaires HTML ne remplace _pas_ les scripts côté serveur qui garantissent que les données saisies sont au format approprié avant d'être enregistrées dans la base de données. Il est bien trop facile pour quelqu'un de modifier le code HTML afin de contourner la validation, voire de la supprimer complètement. Il est également possible pour quelqu'un de contourner complètement votre code HTML et d'envoyer les données directement à votre serveur. Si votre code côté serveur ne parvient pas à valider les données qu'il reçoit, une catastrophe peut se produire lorsque des données mal formatées (ou des données trop volumineuses, de type incorrect, etc.) sont enregistrées dans votre base de données.
 
 ### Rendre la valeur obligatoire
 
-Il est possible de rendre la saisie obligatoire avant de pouvoir envoyer le formulaire. Pour cela, on utilisera l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required)&nbsp;:
+Il est possible de rendre la saisie obligatoire avant de pouvoir envoyer le formulaire. Pour cela, on utilise l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required)&nbsp;:
 
 ```html
 <form>
@@ -235,7 +235,7 @@ Il est possible de rendre la saisie obligatoire avant de pouvoir envoyer le form
 </form>
 ```
 
-On utilisera la feuille de style suivante pour indiquer les éléments valides ou invalides du formulaire&nbsp;:
+On utilise la feuille de style suivante pour indiquer les éléments valides ou invalides du formulaire&nbsp;:
 
 ```css
 div {
@@ -274,7 +274,7 @@ Voici le résultat obtenu&nbsp;:
 
 Si on souhaite restreindre le format de la valeur qui peut être saisie, on peut utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) dont la valeur est une expression rationnelle que la valeur doit respecter pour être valide.
 
-Dans cet exemple, on utilisera la même feuille de style que précédemment mais le code HTML sera celui-ci&nbsp;:
+Dans cet exemple, on utilise la même feuille de style que précédemment mais le code HTML est celui-ci&nbsp;:
 
 ```html
 <form>
@@ -327,13 +327,13 @@ input:valid + span::after {
 
 {{EmbedLiveSample("Motif de validation", 700, 130)}}
 
-Remarquez que la valeur saisie est considérée comme non valide si elle ne correspond pas au format `xx xx xx xx xx`&nbsp;; par exemple, 331 23 45 56 78 ne sera pas accepté, idem pour AB 12 CD 34 EF. En revanche, 01 23 45 67 89 sera accepté. Ce format particulier n'est évidemment utile que pour certaines zones géographiques — dans une application réelle, vous devrez probablement adapter le format utilisé en fonction de la zone géographique de l'utilisateur·ice.
+Remarquez que la valeur saisie est considérée comme non valide si elle ne correspond pas au format `xx xx xx xx xx`&nbsp;; par exemple, 331 23 45 56 78 ne est pas accepté, idem pour AB 12 CD 34 EF. En revanche, 01 23 45 67 89 est accepté. Ce format particulier n'est évidemment utile que pour certaines zones géographiques — dans une application réelle, vous devez probablement adapter le format utilisé en fonction de la zone géographique de l'utilisateur·ice.
 
 ## Exemples
 
 Dans cet exemple, on présente une interface simple avec un élément {{HTMLElement("select")}} qui permet à l'utilisateur·ice de sélectionner son pays, ainsi qu'un ensemble d'éléments `<input type="tel">` lui permettant de saisir chaque partie de son numéro de téléphone&nbsp;; rien ne vous empêche d'utiliser plusieurs champs `tel`.
 
-Chaque boîte de saisie possède un attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) qui indique le format pressenti. On utilise également l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) afin d'indiquer le nombre de caractères ainsi qu'un attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) qui pourra être lu par un lecteur d'écran et qui décrit quoi saisir dans le contrôle.
+Chaque boîte de saisie possède un attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) qui indique le format pressenti. On utilise également l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) afin d'indiquer le nombre de caractères ainsi qu'un attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) qui peut être lu par un lecteur d'écran et qui décrit quoi saisir dans le contrôle.
 
 ```html
 <form>
@@ -441,9 +441,9 @@ Voici le résultat obtenu&nbsp;:
 
 {{EmbedLiveSample("Exemples", 600, 140)}}
 
-C'est une idée intéressante, qui offre une solution potentielle au problème posé par le traitement des numéros de téléphone internationaux. Il faudrait bien sûr adapter cet exemple pour fournir le format correct pour chaque pays, ce qui représenterait beaucoup de travail, sans pour autant garantir à 100 % que les utilisateur·ice·s saisissent correctement leurs numéros.
+C'est une idée intéressante, qui offre une solution potentielle au problème posé par le traitement des numéros de téléphone internationaux. Il faut bien sûr adapter cet exemple pour fournir le format correct pour chaque pays, ce qui représente beaucoup de travail, sans pour autant garantir à 100 % que les utilisateur·ice·s saisissent correctement leurs numéros.
 
-On peut se demander s'il vaut la peine de se donner tout ce mal côté client, alors qu'il suffirait de laisser l'utilisateur·ice saisir son numéro dans le format de son choix côté client, puis de le valider et de le nettoyer côté serveur. Mais c'est à vous de faire ce choix.
+On peut se demander s'il vaut la peine de se donner tout ce mal côté client, alors qu'il suffit de laisser l'utilisateur·ice saisir son numéro dans le format de son choix côté client, puis de le valider et de le nettoyer côté serveur. Mais c'est à vous de faire ce choix.
 
 ```css hidden
 div {
@@ -515,14 +515,6 @@ input:valid + span::after {
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}},
-        {{DOMxRef("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{DOMxRef("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

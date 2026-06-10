@@ -2,7 +2,7 @@
 title: Modèle de sous-page d'évènement d'API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 1d08cee771feea858e4fdb594bac036b9cd210a6
 ---
 
 > [!NOTE]
@@ -115,15 +115,6 @@ Ou, par exemple&nbsp;:
 _Un {{DOMxRef("XRSessionEvent")}}. Hérite de {{DOMxRef("Event")}}._
 
 {{InheritanceDiagram("XRSessionEvent")}}
-
-## Propriétés de l'évènement
-
-Si l'évènement n'est pas simplement un {{DOMxRef("Event")}} générique, énumérez les propriétés supplémentaires de l'évènement.
-
-_En plus des propriétés énumérées ci-dessous, les propriétés de l'interface parente, {{DOMxRef("Event")}}, sont disponibles._
-
-- {{DOMxRef("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
-  - : Le {{DOMxRef("XRSession")}} auquel l'évènement se réfère.
 
 ## Description
 
