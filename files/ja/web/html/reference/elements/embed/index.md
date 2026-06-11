@@ -1,12 +1,10 @@
 ---
-title: "<embed>: 埋め込み外部コンテンツ要素"
+title: HTML `<embed>` 埋め込み外部コンテンツ要素
+short-title: <embed>
 slug: Web/HTML/Reference/Elements/embed
-original_slug: Web/HTML/Element/embed
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<embed>`** は [HTML](/ja/docs/Web/HTML) の要素で、外部のコンテンツを文書中の指定された場所に埋め込みます。コンテンツは外部アプリケーションや、対話型コンテンツの他の出所（ブラウザーのプラグインなど）によって提供されます。
 
@@ -14,14 +12,14 @@ l10n:
 
 ```html interactive-example
 <embed
-  type="video/mp4"
-  src="/shared-assets/videos/flower.mp4"
+  type="image/jpeg"
+  src="/shared-assets/images/examples/flowers.jpg"
   width="250"
   height="200" />
 ```
 
 > [!NOTE]
-> 本文書は、[HTML Living Standard](https://html.spec.whatwg.org/#the-embed-element) の一部として定義された要素についてのみ記載します。以前の標準化されていない要素の実装については扱いません。
+> 本文書は、[HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element) の一部として定義された要素についてのみ記載します。以前の標準化されていない要素の実装については扱いません。
 
 最近のほとんどのブラウザーは、ブラウザーのプラグインの対応を非推奨にして削除しているため、サイトを平均的なユーザーのブラウザーで操作できるようにしたいのであれば、 `<embed>` に頼ることは賢明ではないということを意識しておいてください。
 
@@ -40,7 +38,14 @@ l10n:
 
 ## 使用上のメモ
 
-{{cssxref("object-position")}} プロパティを使用して、要素のフレーム内の埋め込みオブジェクトの位置を調整することができ、 {{cssxref("object-fit")}} プロパティを使用して、オブジェクトの寸法をフレーム内にどのように合わせるかを制御することができます。
+{{cssxref("object-position")}} プロパティを使用して、要素のフレーム内の埋め込みオブジェクトの位置を調整することができます。
+
+> [!NOTE]
+>  {{cssxref("object-fit")}} プロパティは `<embed>` 要素では効果がありません。
+
+## アクセシビリティ
+
+`embed` 要素の [`title` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/title)を使用して、そのコンテンツにラベルを付け、スクリーンリーダーなどの支援技術を使用して操作するユーザーが、その内容を確認できるようにしてください。タイトルの値は、埋め込まれたコンテンツを簡潔に説明するものでなければなりません。タイトルがない場合、ユーザーは埋め込まれたコンテンツが何であるかを判断できない可能性があります。特に `embed` 要素に動画や音声などの対話型コンテンツが含まれている場合、この文脈の突然の切り替えは混乱を招き、時間を要することになります。
 
 ## 例
 
@@ -50,12 +55,8 @@ l10n:
   src="movie.mov"
   width="640"
   height="480"
-  title="Title of my video" />
+  title="動画のタイトル" />
 ```
-
-## アクセシビリティの考慮
-
-`embed` 要素に [`title` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/title)を使用してコンテンツにラベルを付けるようにしてください。そうすれば、読み上げソフトのような支援技術を使用して捜査している人々が内容を理解することができるようになります。題名がないと、埋め込みコンテンツが何であるかを特定することができません。このようにして文脈を見失うと、特に `embed` 要素が動画や音声のような対話的なコンテンツを含んでいたとに、混乱したり時間を浪費したりします。
 
 ## 技術的概要
 
@@ -93,7 +94,7 @@ l10n:
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>
