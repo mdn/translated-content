@@ -1,8 +1,9 @@
 ---
-title: "<select>: HTML 選択要素"
+title: HTML `<select>` 選択要素
+short-title: <select>
 slug: Web/HTML/Reference/Elements/select
 l10n:
-  sourceCommit: f29e825161ee6776a395cd846f8570686f784341
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<select>`** は [HTML](/ja/docs/Web/HTML) の要素で、選択式のメニューを提供するコントロールを表します。
@@ -102,7 +103,11 @@ select {
 
 ## CSS によるスタイル設定
 
-`<select>` 要素は、従来は CSS を使って生産的にスタイル設定することが困難であったため、[完全にカスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)が作成できる機能が導入されつつあります。
+`<select>` 要素は、これまで CSS を使って効果的にスタイルを設定するのが困難でした。
+以下のガイドには、`<select>`要素を完全にカスタマイズ可能にする機能に関する情報が記載されています。
+
+- [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- [カスタマイズ可能な select リストボックス](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes)
 
 ### 従来の select のスタイル設定
 
@@ -126,10 +131,9 @@ select {
 
 ### 基本的な select
 
-以下の例では、 3 つの選択肢があるドロップダウンメニューを生成し、既定で 2 番目の選択肢を選択状態にしておきます。
+次の例では、3 つの選択肢からなるドロップダウンメニューを作成します。2 番目の選択肢には `selected` 属性が設定されており、その選択肢がデフォルトで選択された状態になります。
 
 ```html
-<!-- 最初に 2 番目の値が選択されます。 -->
 <select name="choice">
   <option value="first">1 番目の値</option>
   <option value="second" selected>2 番目の値</option>
@@ -187,6 +191,11 @@ select {
 
 以下の例はもっと複雑で、 `<select>` 要素で使用できる機能をもっと示しています。
 
+- `multiple` 属性により、複数の選択肢を選択できるようになります。
+- `size` 属性は `4` に設定されており、一度に 4 行が表示されることを意味します。ユーザーはスクロールしてすべての選択肢を表示できます。
+- 2 つの {{htmlelement("optgroup")}} 要素が含まれており、2 つの視覚的なグループが形成されています。通常、グループ名は太字で表示され、ネストされた選択肢はインデントされます。
+- "Hamster" の選択肢には `disabled` 属性が付与されており、その選択肢は選択できません。
+
 ```html
 <label>
   1 つ以上のペットを選択してください:
@@ -208,13 +217,6 @@ select {
 #### 結果
 
 {{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}
-
-次のことが分かるでしょう。
-
-- `multiple` 属性を設定してあるので、複数の選択肢を選択することができます。
-- `size` 属性は、同時に 4 行だけ表示できるようにします。スクロールしてすべての選択肢を表示することができます。
-- {{htmlelement("optgroup")}} を入れることで、選択肢を複数のグループに分割しています。これは純粋に視覚的なグループ化であり、視覚表現は通常、太字のグループ名と字下げした選択肢で構成されます。
-- "Hamster" の選択肢には `disabled` 属性が設定されているので、選択することができません。
 
 ## 技術的概要
 
@@ -255,11 +257,10 @@ select {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        従来の <code>&lt;select&gt;</code> 要素の場合、 0 個以上の {{HTMLElement("option")}} 要素、{{HTMLElement("optgroup")}} 要素、{{HTMLElement("hr")}} 要素。
-        <a href="/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select">カスタマイズ可能な select 要素</a>の場合:
         <ul>
-        <li>選択要素の {{htmlelement("button")}}。オプションで子要素として、内部に {{htmlelement("selectedcontent")}} 要素を含んだ <code>&lt;button&gt;</code> 要素を含むことができます。</li>
-        <li>ドロップダウンピッカー。他のコンテンツを定義するものであり、ゼロ個以上の <code>&lt;option&gt;</code>、<code>&lt;optgroup&gt;</code>、<code>&lt;hr&gt;</code>、{{htmlelement("div")}}、{{htmlelement("script")}}、{{htmlelement("template")}}、{{htmlelement("noscript")}} 要素を含むことができます。
+        <li>{{HTMLElement("option")}}、{{HTMLElement("optgroup")}}、{{HTMLElement("hr")}} 要素のいずれか。ドロップダウンボックスの場合は、その前に {{htmlelement("button")}} 要素を配置し、その内部に {{htmlelement("selectedcontent")}} 要素を含めることも可能です。</li>
+        <li>{{htmlelement("div")}}、{{htmlelement("script")}}、{{htmlelement("template")}}、{{htmlelement("noscript")}} の各要素。</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -309,7 +310,7 @@ select {
 
 ## 関連情報
 
-- `<select>` で発生するイベント: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("Element/input_event", "input")}}
 - {{HTMLElement("option")}} 要素
 - {{HTMLElement("optgroup")}} 要素
 - [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- `<select>` で発生するイベント: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("Element/input_event", "input")}}
