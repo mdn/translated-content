@@ -1,13 +1,12 @@
 ---
-title: <input type="button">
+title: HTML `<input type="button">` 属性値
+short-title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
-{{HTMLSidebar}}
-
-{{HTMLElement("input")}} 要素の **`button`** 型は、プッシュボタンとして描画され、イベントハンドラー関数 (ふつうは {{domxref("Element/click_event", "click")}} イベント) を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。
+{{HTMLElement("input")}} 要素の **`button`** 型は、プッシュボタンとして描画され、イベントハンドラー関数（ふつうは {{domxref("Element/click_event", "click")}} イベント）を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
@@ -22,15 +21,15 @@ l10n:
   padding: 0 20px;
   font-size: 1rem;
   text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  color: white;
+  text-shadow: 1px 1px 1px black;
   border-radius: 10px;
-  background-color: rgb(220 0 0 / 100%);
+  background-color: tomato;
   background-image: linear-gradient(
     to top left,
     rgb(0 0 0 / 20%),
     rgb(0 0 0 / 20%) 30%,
-    rgb(0 0 0 / 0%)
+    transparent
   );
   box-shadow:
     inset 2px 2px 3px rgb(255 255 255 / 60%),
@@ -38,7 +37,7 @@ l10n:
 }
 
 .styled:hover {
-  background-color: rgb(255 0 0 / 100%);
+  background-color: red;
 }
 
 .styled:active {
@@ -75,7 +74,7 @@ l10n:
 
 ## ボタンの使用
 
-`<input type="button">` 要素には既定の動作がありません（親戚である `<input type="submit">` や [`<input type="reset">`](/ja/docs/Web/HTML/Reference/Elements/input/reset) は、それぞれフォームの送信とリセットに使用されます）。ボタンに何かをさせる場合は、処理を行うための JavaScript コードを書く必要があります。
+`<input type="button">` 要素にはデフォルトの動作がありません（親戚である `<input type="submit">` や [`<input type="reset">`](/ja/docs/Web/HTML/Reference/Elements/input/reset) は、それぞれフォームの送信とリセットに使用されます）。ボタンに何かをさせる場合は、処理を行うための JavaScript コードを書く必要があります。
 
 ### 基本的なボタン
 
@@ -238,13 +237,13 @@ function disableButton() {
 
 ```css hidden
 body {
-  background: #ccc;
+  background: #cccccc;
   margin: 0;
   overflow: hidden;
 }
 
 .toolbar {
-  background: #ccc;
+  background: #cccccc;
   width: 150px;
   height: 75px;
   padding: 5px;
