@@ -52,7 +52,7 @@ l10n:
 
 以下の HTML は、{{domxref("HTMLImageElement.src", "src")}} 属性に記述されている既定の画像リソースを 1x の画面で使用し、400 ピクセル版（`srcset` 属性で記述され、`2x` 記述子が割り当てられているもの）は 2x の画面で使用するよう示しています。
 
-```html
+```html-nolint
 <div class="box">
   <img
     src="/ja/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png"
