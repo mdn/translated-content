@@ -1,7 +1,6 @@
 ---
 title: 資格情報の種類
 slug: Web/API/Credential_Management_API/Credential_types
-page-type: guide
 l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
