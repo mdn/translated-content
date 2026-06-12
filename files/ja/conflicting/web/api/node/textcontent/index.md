@@ -1,7 +1,8 @@
 ---
 title: "SVGAElement: text プロパティ"
 short-title: text
-slug: Web/API/SVGAElement/text
+slug: conflicting/Web/API/Node/textContent
+original_slug: Web/API/SVGAElement/text
 l10n:
   sourceCommit: 55bb65bb6a84808896ed0f6c83e57c60dbd8480e
 ---
