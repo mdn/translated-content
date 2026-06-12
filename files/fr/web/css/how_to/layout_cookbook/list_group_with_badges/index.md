@@ -2,7 +2,7 @@
 title: Liste de groupes avec indicateurs
 slug: Web/CSS/How_to/Layout_cookbook/List_group_with_badges
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Dans cette recette, vous allez créer un motif de liste de groupes avec des indicateurs affichant un nombre.

@@ -3,7 +3,7 @@ title: Propriété CSS `position`
 short-title: position
 slug: Web/CSS/Reference/Properties/position
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 14a91e1ff94b106c2e2a83ce252dbd380c38d7ff
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`position`** définit la façon dont un élément est positionné dans un document. Les propriétés {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} et {{CSSxRef("left")}}, et les propriétés logiques relatives au flux {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}} et {{CSSxRef("inset-inline-end")}} peuvent être utilisées pour déterminer l'emplacement final des éléments positionnés.
@@ -46,9 +46,9 @@ top: 20px;
       l'option <code>position: sticky</code> et faites défiler ce conteneur.
     </p>
     <p>
-      L'élément défilera avec son conteneur, jusqu'à ce qu'il atteigne le haut
-      du conteneur (ou atteigne le décalage défini dans
-      <code>top</code>), puis il cessera de défiler, restant ainsi visible.
+      L'élément défile avec son conteneur, jusqu'à ce qu'il atteigne le haut du
+      conteneur (ou atteigne le décalage défini dans
+      <code>top</code>), puis il cesse de défiler, restant ainsi visible.
     </p>
     <p>
       Le reste de ce texte est fourni uniquement pour s'assurer que le conteneur
@@ -145,7 +145,7 @@ position: unset;
     Cette valeur crée toujours un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context). Notez qu'un élément attaché «&nbsp;adhère&nbsp;» à son ancêtre le plus proche qui possède un «&nbsp;mécanisme de défilement&nbsp;» (créé lorsque `overflow` est `hidden`, `scroll`, `auto` ou `overlay`), même si cet ancêtre n'est pas le plus proche ancêtre réellement défilant.
 
     > [!NOTE]
-    > Au moins une propriété [d'encart](/fr/docs/Web/CSS/Reference/Properties/inset) ({{CSSxRef("top")}}, {{CSSxRef("inset-block-start")}}, {{CSSxRef("right")}}, {{CSSxRef("inset-inline-end")}}, etc.) doit être définie avec une valeur différente de `auto` pour l'axe sur lequel l'élément doit être rendu adhérent. Si les deux propriétés `inset` pour un axe sont définies sur `auto`, sur cet axe la valeur `sticky` se comportera comme `relative`.
+    > Au moins une propriété [d'encart](/fr/docs/Web/CSS/Reference/Properties/inset) ({{CSSxRef("top")}}, {{CSSxRef("inset-block-start")}}, {{CSSxRef("right")}}, {{CSSxRef("inset-inline-end")}}, etc.) doit être définie avec une valeur différente de `auto` pour l'axe sur lequel l'élément doit être rendu adhérent. Si les deux propriétés `inset` pour un axe sont définies sur `auto`, sur cet axe la valeur `sticky` se comporte comme `relative`.
 
 ## Description
 
@@ -377,9 +377,9 @@ La règle CSS suivante positionne l'élément avec l'identifiant `un` de manièr
 
 #### Liste avec des en-têtes adhérents
 
-Une utilisation courante du positionnement adhérent est pour les en-têtes dans une liste alphabétique. L'en-tête «&nbsp;B&nbsp;» apparaîtra juste en dessous des éléments commençant par «&nbsp;A&nbsp;» jusqu'à ce qu'ils soient défilés hors de l'écran. Plutôt que de glisser hors de l'écran avec le reste du contenu, l'en-tête «&nbsp;B&nbsp;» restera fixé en haut de la zone d'affichage jusqu'à ce que tous les éléments «&nbsp;B&nbsp;» aient été défilés hors de l'écran, moment auquel il sera recouvert par l'en-tête «&nbsp;C&nbsp;», et ainsi de suite.
+Une utilisation courante du positionnement adhérent est pour les en-têtes dans une liste alphabétique. L'en-tête «&nbsp;B&nbsp;» apparaît juste en dessous des éléments commençant par «&nbsp;A&nbsp;» jusqu'à ce qu'ils soient défilés hors de l'écran. Plutôt que de glisser hors de l'écran avec le reste du contenu, l'en-tête «&nbsp;B&nbsp;» reste fixé en haut de la zone d'affichage jusqu'à ce que tous les éléments «&nbsp;B&nbsp;» aient été défilés hors de l'écran, moment auquel il est recouvert par l'en-tête «&nbsp;C&nbsp;», et ainsi de suite.
 
-Vous devez définir un seuil avec au moins une des propriétés `top`, `right`, `bottom` ou `left` pour que le positionnement adhérent fonctionne comme prévu. Sinon, il sera indiscernable du positionnement relatif.
+Vous devez définir un seuil avec au moins une des propriétés `top`, `right`, `bottom` ou `left` pour que le positionnement adhérent fonctionne comme prévu. Sinon, il est indiscernable du positionnement relatif.
 
 ##### HTML
 
@@ -465,7 +465,7 @@ dd + dd {
 
 #### Positionnement adhérent avec toutes les limites définies
 
-L'exemple suivant démontre le comportement d'un élément lorsque toutes les limites sont définies. Ici, nous avons deux emojis d'ampoule dans un paragraphe. Les ampoules utilisent le positionnement adhérent, et les limites sont définies à 50px du haut, 100px de la droite, 50px du bas et 50px de la gauche. Un fond gris sur l'élément div parent marque la zone des limites.
+L'exemple suivant illustre le comportement d'un élément lorsque toutes les marges intérieures sont définies. Ici, nous avons deux emojis représentant des ampoules dans un paragraphe. Les ampoules utilisent un positionnement adhérent, et les marges intérieures sont définies à 50px du haut et du bas, et à 100px de la gauche et de la droite. Un fond gris sur l'élément `div` parent délimite la zone de marge intérieure.
 
 ##### HTML
 
@@ -479,7 +479,7 @@ dans le texte suivant&nbsp;:
     ou la naissance d'une nouvelle idée. L'association entre une ampoule et une
     idée peut être retracée jusqu'à l'invention de l'ampoule à incandescence
     (<span class="bulb">💡</span>) par Thomas Edison à la fin du 19ème siècle.
-    L'ampoule est un symbole puissant car elle représente l'illumination, la
+    L'ampoule est un symbole puissant, car elle représente l'illumination, la
     clarté et l'éclaircissement soudain des pensées ou de la compréhension.
     Lorsqu'une personne a une idée, on décrit souvent cela comme une ampoule qui
     s'allume dans son esprit, signifiant un moment d'intuition ou de créativité.
@@ -527,7 +527,7 @@ div {
 
 {{EmbedLiveSample("Positionnement adhérent avec toutes les limites définies", "", 300)}}
 
-Lorsque vous placez les deux ampoules à leur place correcte, vous remarquerez qu'elles sont positionnées relativement à l'intérieur de la zone définie par les limites inset. Lorsque vous les déplacez en dehors de cette zone, elles restent fixes (adhérentes) à la limite inset dans cette direction.
+Lorsque vous placez les deux ampoules à leur place correcte, vous pouvez remarquer qu'elles sont positionnées relativement à l'intérieur de la zone définie par les limites inset. Lorsque vous les déplacez en dehors de cette zone, elles restent fixes (adhérentes) à la limite inset dans cette direction.
 
 ## Spécifications
 

@@ -1,11 +1,10 @@
 ---
-title: <input type="hidden">
+title: HTML `<input type="hidden">` 属性値
+short-title: <input type="hidden">
 slug: Web/HTML/Reference/Elements/input/hidden
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`hidden`** 型は、フォームの送信時にユーザーが見たり変更したりすることができないデータをウェブ開発者が含めることができます。例えば、現在注文中又は編集中の ID や、一意のセキュリティトークンなどに利用できます。隠し入力欄はページの表示で完全に非表示になり、ページの中で表示させる方法はありません。
 
@@ -164,7 +163,7 @@ textarea {
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
+      <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>

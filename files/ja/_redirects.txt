@@ -3331,6 +3331,7 @@
 /ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/ja/docs/Web/API/Performance_API/Resource_timing
 /ja/docs/Web/API/Response/error	/ja/docs/Web/API/Response/error_static
 /ja/docs/Web/API/Response/redirect	/ja/docs/Web/API/Response/redirect_static
+/ja/docs/Web/API/SVGAElement/text	/ja/docs/Web/API/Node/textContent
 /ja/docs/Web/API/SVGCursorElement	/ja/docs/Web/API/SVGElement
 /ja/docs/Web/API/SVGEvent	/ja/docs/Web/API/Event
 /ja/docs/Web/API/SVGFontElement	/ja/docs/Web/API/SVGElement
