@@ -295,7 +295,7 @@ Los objetos básicos con tipos como {{jsxref("String")}} (ya sea un `DOMString` 
 Para los objetos de interfaz, el comportamiento predeterminado es devolver una _referencia_ al objeto interno. Esto debe mencionarse tanto en la descripción breve de la página de la interfaz como en la descripción de las subpáginas específicas.
 
 > [!NOTE]
-> La palabra clave `readonly` usada con una propiedad que devuelve un objeto se aplica a la referencia (el objeto interno no se puede cambiar). Las propiedades del objeto devuelto sí pueden modificarse, incluso si estén marcadas como de solo lectura en la interfaz correspondiente.
+> La palabra clave `readonly` usada con una propiedad que devuelve un objeto se aplica a la referencia (el objeto interno no se puede cambiar). Las propiedades del objeto devuelto sí pueden modificarse, incluso si están marcadas como de solo lectura en la interfaz correspondiente.
 
 A veces, una API debe devolver un objeto _nuevo_ o una _copia_ de uno interno. Este caso se indica en el WebIDL mediante la anotación `[NewObject]`.
 
