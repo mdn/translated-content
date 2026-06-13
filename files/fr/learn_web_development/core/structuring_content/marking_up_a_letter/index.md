@@ -11,7 +11,7 @@ Tôt ou tard nous apprenons tous à écrire une lettre&nbsp;; c'est aussi un exe
 
 ## Point de départ
 
-Pour commencer, cliquez sur le bouton **Play** dans le panneau d'exemple de code ci-dessous pour ouvrir le corps du texte fourni dans MDN Playground. Vous suivrez les instructions des sections suivantes pour baliser le texte de manière appropriée.
+Pour commencer, cliquez sur le bouton **Exécuter** dans le panneau d'exemple de code ci-dessous pour ouvrir le corps du texte fourni dans MDN Playground. Vous suivez les instructions des sections suivantes pour baliser le texte de manière appropriée.
 
 ```html-nolint live-sample___start
 Dr. Eleanor Gaye
@@ -109,7 +109,7 @@ Devise : Soyez géniaux les uns envers les autres. --
 Les mémoires de M. Bill S Preston
 ```
 
-{{EmbedLiveSample("start", "100%", "200px")}}
+{{EmbedLiveSample("start", "100%", 200)}}
 
 ## Résumé du projet
 
@@ -167,7 +167,7 @@ h2 {
 
 L'exemple suivant montre à quoi doit ressembler la lettre après avoir été structurée. Si vous avez des difficultés à réaliser certaines de ces étapes, consultez la solution ci-dessous avec l'exemple en direct.
 
-{{EmbedLiveSample("finish", "100%", "500px")}}
+{{EmbedLiveSample("finish", "100%", 500)}}
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
