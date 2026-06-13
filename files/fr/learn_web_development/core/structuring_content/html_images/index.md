@@ -101,7 +101,7 @@ Le prochain attribut que nous allons étudier est `alt`. Sa valeur est supposée
             il a une grande tête avec de longues dents pointues" />
 ```
 
-La manière la plus simple de tester votre texte `alt` est de mal épeler votre nom de fichier intentionnellement. Si dans l'exemple, la photo était épelée `dinosooooor.jpg`, le navigateur ne l'afficherait pas mais afficherait le texte alt à la place&nbsp;:
+La manière la plus simple de tester votre texte `alt` est de mal épeler votre nom de fichier intentionnellement. Si dans l'exemple, la photo était épelée `dinosooooor.jpg`, le navigateur ne l'affiche pas, mais affiche le texte alternatif à la place&nbsp;:
 
 ![Le titre « Images en HTML », mais cette fois l'image du dinosaure n'est pas affichée, et le texte alt est à la place.](alt-text.png)
 
