@@ -7,10 +7,6 @@ l10n:
 
 {{APIRef("Media Session API")}}
 
-The **`title`** property of the
-{{domxref("MediaMetadata")}} interface returns or sets the title of the media to be
-played.
-
 {{domxref("MediaMetadata")}} 接口的 **`title`** 属性用于返回或设置待播放媒体的标题。
 
 ## 值
