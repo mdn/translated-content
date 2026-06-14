@@ -6,7 +6,7 @@ slug: Web/API/BarcodeDetector/detect
 
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-**`detect()`** は {{domxref("BarcodeDetector")}} インターフェイスのメソッドで、画像内に検出されたバーコードの配列 ({{jsxref('Array')}}) で解決されるプロミス ({{jsxref('Promise')}}) を返します。
+**`detect()`** は {{domxref("BarcodeDetector")}} インターフェイスのメソッドで、画像内に検出されたバーコードの配列 ({{jsxref('Array')}}) で履行されるプロミス ({{jsxref('Promise')}}) を返します。
 
 ## 構文
 
@@ -21,7 +21,7 @@ detect(imageBitmapSource)
 
 ### 戻り値
 
-以下のプロパティを持つ `detectedBarcode` オブジェクトの配列で解決される {{jsxref('Promise')}} を返します。
+以下のプロパティを持つ `detectedBarcode` オブジェクトの配列で履行される {{jsxref('Promise')}} を返します。
 
 - `boundingBox`
   - : {{domxref('DOMRectReadOnly')}} 。検出されたバーコードの範囲を表す矩形の寸法を、画像に合わせて返します。

@@ -1,5 +1,5 @@
 ---
-title: "BarcodeDetector: BarcodeDetector() コンストラクタ"
+title: "BarcodeDetector: BarcodeDetector() コンストラクター"
 short-title: BarcodeDetector()
 slug: Web/API/BarcodeDetector/BarcodeDetector
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-**`BarcodeDetector()`** コンストラクタは、画像内の線形バーコードと 2 次元バーコードを検出する新しい {{domxref("BarcodeDetector")}} （検出器）オブジェクトを作ります。
+**`BarcodeDetector()`** コンストラクターは、画像内の線形バーコードと 2 次元バーコードを検出する新しい {{domxref("BarcodeDetector")}} （検出器）オブジェクトを作ります。
 
 ## 構文
 
