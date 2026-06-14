@@ -2,7 +2,7 @@
 title: font-size
 slug: Web/SVG/Reference/Attribute/font-size
 l10n:
-  sourceCommit: da8c3171b7a7ea6694af71fac7a3194d8e9ba869
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`font-size`** フォントサイズ属性は、複数行レイアウト環境でテキストを複数行にわたって設定する際に、{{Glossary("baseline/typography", "ベースライン")}}からベースラインまでのフォントのサイズを参照します。
