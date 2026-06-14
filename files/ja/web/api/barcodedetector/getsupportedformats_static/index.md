@@ -33,7 +33,7 @@ BarcodeDetector.getSupportedFormats()
 次の例では、静的メソッド `getSupportedFormats()` を呼び出し、その結果をコンソールにログ出力しています。
 
 ```js
-// check supported types
+// 対応している型をチェック
 BarcodeDetector.getSupportedFormats().then((supportedFormats) => {
   supportedFormats.forEach((format) => console.log(format));
 });

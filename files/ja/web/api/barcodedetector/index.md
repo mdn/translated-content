@@ -41,7 +41,7 @@ if (!("BarcodeDetector" in globalThis)) {
 } else {
   console.log("Barcode Detector に対応しています。");
 
-  // create new detector
+  // 新しい検出器の生成
   const barcodeDetector = new BarcodeDetector({
     formats: ["code_39", "codabar", "ean_13"],
   });
