@@ -41,7 +41,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>medium</code></td>
     </tr>
     <tr>
