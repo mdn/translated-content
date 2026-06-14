@@ -150,7 +150,7 @@ div > div::before {
 
 この出発点の基盤となるコードは次の通りです。
 
-```html live-sample___aria-3
+```html-nolint live-sample___aria-3
 <section class="preview">
   <div class="animal-list">
     <h1>動物の概要</h1>
