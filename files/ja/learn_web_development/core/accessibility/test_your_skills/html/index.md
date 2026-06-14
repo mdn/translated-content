@@ -3,7 +3,7 @@ title: "確認テスト: HTML のアクセシビリティ"
 short-title: "テスト: HTML のアクセシビリティ"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/HTML
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2bda943b59604eb44f5d759708845c5f56970635
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
