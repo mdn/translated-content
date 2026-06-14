@@ -29,12 +29,12 @@ l10n:
 
 CSR 的优点包括：
 
-- 交互性：包括路由切换在内的任何页面更新都不需要整页重新加载。这让应用感觉更快、更灵敏。
+- 交互性：包括路由切换在内的任何页面更新都不需要整页重新加载。这让应用更快、更灵敏。
 - 性能：服务器只需要发送初始 HTML 内容和 JavaScript 资源。后续页面更新可以从 API 获取，这可能比获取整页 HTML 更快，也能减轻服务器负载。
 
 SSR 和 CSR 各有性能权衡，可以结合使用以兼顾两者优势。例如，服务器可生成带有空白占位符的页面骨架，客户端再获取额外数据并按需更新页面。
 
-请注意，{{glossary("SPA", "单页应用")}}并不要求站点必须采用 CSR。现代框架，如 [React](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)、[Vue](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)和 [Svelte](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)，都可以用来构建具备 SSR 能力的 SPA。
+请注意，{{glossary("SPA", "单页应用")}}并不要求站点必须采用 CSR。现代框架（如 [React](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)、[Vue](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started) 和 [Svelte](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)）都可用于构建具备 SSR 能力的 SPA。
 
 ## 参见
 
