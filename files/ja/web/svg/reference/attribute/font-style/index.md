@@ -38,7 +38,7 @@ l10n:
       <td><code>normal</code> | <code>italic</code> | <code>oblique</code></td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>normal</code></td>
     </tr>
     <tr>
