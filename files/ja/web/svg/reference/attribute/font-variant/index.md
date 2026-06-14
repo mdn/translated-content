@@ -21,9 +21,9 @@ l10n:
 ### SVG のフォントバリエーションの制御
 
 ```html
-<svg viewBox="0 0 250 30" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" font-variant="normal">Normal text</text>
-  <text x="100" y="20" font-variant="small-caps">Small-caps text</text>
+<svg viewBox="0 0 250 60" xmlns="http://www.w3.org/2000/svg">
+  <text y="20" font-variant="normal">Normal テキスト</text>
+  <text y="45" font-variant="small-caps">Small-caps テキスト</text>
 </svg>
 ```
 
