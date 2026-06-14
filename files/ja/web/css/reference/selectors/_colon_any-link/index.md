@@ -1,9 +1,9 @@
 ---
-title: :any-link
+title: CSS `:any-link` 擬似クラス
+short-title: :any-link
 slug: Web/CSS/Reference/Selectors/:any-link
-original_slug: Web/CSS/:any-link
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:any-link`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)セレクターで、訪問の有無とは独立したソースアンカーとして振る舞う要素を表します。言い換えれば、 `href` 属性を持つすべての {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素を選択します。つまり、 {{cssxref(":link")}} または {{cssxref(":visited")}} に一致するすべての要素を選択します。
@@ -92,5 +92,5 @@ a:-webkit-any-link {
 - [ハイパーリンクの作成](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)
 - 一致する HTML 要素: [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) および [`<area>`](/ja/docs/Web/HTML/Reference/Elements/area) に [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性が付いたもの
 - 関連する CSS セレクター:
-  - [`:visited`](/ja/docs/Web/CSS/Reference/Selectors/:visited)
-  - [`:link`](/ja/docs/Web/CSS/Reference/Selectors/:link)
+  - {{cssxref(":visited")}}
+  - {{cssxref(":link")}}
