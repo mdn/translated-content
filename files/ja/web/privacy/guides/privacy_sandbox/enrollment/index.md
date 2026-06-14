@@ -1,6 +1,6 @@
 ---
 title: プライバシーサンドボックスの登録
-short-title: Enrollment
+short-title: 登録
 slug: Web/Privacy/Guides/Privacy_sandbox/Enrollment
 l10n:
   sourceCommit: 923adb616baa87402ca965ebd18a73380cc84d27
