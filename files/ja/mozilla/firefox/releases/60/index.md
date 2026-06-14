@@ -1,8 +1,9 @@
 ---
-title: Firefox 60 for developers
+title: Firefox 60 開発者向けリリースノート
+short-title: Firefox 60
 slug: Mozilla/Firefox/Releases/60
 l10n:
-  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Firefox 60 は、米国時間 2018 年 5 月 9 日にリリースされました。このページでは、開発者に影響する Firefox 60 の変更点をまとめています。
@@ -23,7 +24,7 @@ Firefox 60 は、米国時間 2018 年 5 月 9 日にリリースされました
 
 ### HTML
 
-- `designMode` および `contenteditable` の状況で、ブロックレベルの編集ホストの子であるインライン要素またはテキストノードの内部にキャレットがあるときに Enter キーを押下すると、`<div>` 要素を挿入するようになりました。以前は、`<br>` 要素を挿入していました。アプリで以前の動作を望む場合は、`document.execCommand()` で実現できます。詳しくは [マークアップ生成の違い](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation) をご覧ください ([Firefox バグ 1430551](https://bugzil.la/1430551))。
+- `designMode` および `contenteditable` の状況で、ブロックレベルの編集ホストの子であるインライン要素またはテキストノードの内部にキャレットがあるときに Enter キーを押下すると、`<div>` 要素を挿入するようになりました。以前は、`<br>` 要素を挿入していました。アプリで以前の動作を望む場合は、`document.execCommand()` で実現できます ([Firefox バグ 1430551](https://bugzil.la/1430551))。
 
 ### CSS
 
@@ -50,16 +51,16 @@ _変更なし。_
 
 #### DOM
 
-- [ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API) で、`MakePublicKeyCredentialOptions` 辞書オブジェクトが {{domxref("PublicKeyCredentialCreationOptions")}} に改名されました。これを Firefox でも実施しました ([Firefox バグ 1436473](https://bugzil.la/1436473))。
+- [ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API) で、`MakePublicKeyCredentialOptions` 辞書オブジェクトが `PublicKeyCredentialCreationOptions` に改名されました。これを Firefox でも実施しました ([Firefox バグ 1436473](https://bugzil.la/1436473))。
 - 設定項目 `dom.workers.enabled` を削除しました。すなわち、ワーカーを無効化できなくなりました ([Firefox バグ 1434934](https://bugzil.la/1434934))。
 - {{domxref("Document.body","body")}} プロパティを {{domxref("Document")}} インターフェイスに実装しました。以前は {{domxref("HTMLDocument")}} インターフェイスにありました ([Firefox バグ 1276438](https://bugzil.la/1276438))。
 - {{domxref("PerformanceResourceTiming")}} がワーカーで使用可能になりました ([Firefox バグ 1425458](https://bugzil.la/1425458))。
 - {{domxref("PerformanceObserver.takeRecords()")}} メソッドを実装しました ([Firefox バグ 1436692](https://bugzil.la/1436692))。
-- アクティブなキーボードレイアウトが ASCII 文字を生成しない場合でも、句読点キーの {{domxref("KeyboardEvent.keyCode")}} 属性は 0 ではない値になります。[詳しくはこちらをご覧ください](/ja/docs/Web/API/KeyboardEvent/keyCode#keycode_of_punctuation_keys_on_some_keyboard_layout)。新しいアプリケーションでは `KeyboardEvent.keyCode` を**使用しない**ようにしてください。代わりに {{domxref("KeyboardEvent.key")}} または {{domxref("KeyboardEvent.code")}} を使用します。
+- アクティブなキーボードレイアウトが ASCII 文字を生成しない場合でも、句読点キーの {{domxref("KeyboardEvent.keyCode")}} 属性は 0 ではない値になります。[詳しくはこちらをご覧ください](/ja/docs/Web/API/KeyboardEvent/keyCode#標準位置で表示可能なキー)。新しいアプリケーションでは `KeyboardEvent.keyCode` を**使用しない**ようにしてください。代わりに {{domxref("KeyboardEvent.key")}} または {{domxref("KeyboardEvent.code")}} を使用します。
 - {{domxref("Animation.updatePlaybackRate()")}} メソッドを実装しました ([Firefox バグ 1436659](https://bugzil.la/1436659))。
-- [句読点キーの keyCode の値](/ja/docs/Web/API/KeyboardEvent/keyCode#keycode_of_punctuation_keys_on_some_keyboard_layout) を決定するための新しい規則を導入しました ([Firefox バグ 1036008](https://bugzil.la/1036008))。
-- Gecko 限定の option オブジェクトである、{{domxref("IDBFactory.open()")}} メソッドの `storage` オプション ([Experimental Gecko options object](/ja/docs/Web/API/IDBFactory/open#experimental_gecko_options_object) もご覧ください) が非推奨になりました ([Firefox バグ 1442560](https://bugzil.la/1442560))。
-- [プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) が [IndexedDB](/ja/docs/Web/API/IndexedDB_API) のコード内で使用可能になりました ([Firefox バグ 1193394](https://bugzil.la/1193394))。
+- [句読点キーの keyCode の値](/ja/docs/Web/API/KeyboardEvent/keyCode#標準位置で表示可能なキー) を決定するための新しい規則を導入しました ([Firefox バグ 1036008](https://bugzil.la/1036008))。
+- Gecko 限定の option オブジェクトである、{{domxref("IDBFactory.open()")}} メソッドの `storage` オプションが非推奨になりました ([Firefox バグ 1442560](https://bugzil.la/1442560))。
+- [プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)が [IndexedDB](/ja/docs/Web/API/IndexedDB_API) のコード内で使用可能になりました ([Firefox バグ 1193394](https://bugzil.la/1193394))。
 
 #### DOM イベント
 
@@ -71,9 +72,9 @@ _変更なし。_
 
 #### メディアと WebRTC
 
-- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使用して取得したメディアを録画または共有するとき、対応するトラックの {{domxref("MediaStreamTrack.enabled")}} プロパティを `false` に設定してカメラをミュートすると、カメラを使用していないことをユーザーにわかりやすくするために、カメラが "使用中" であることを示すランプを消灯するようになりました ([Firefox バグ 1299515](https://bugzil.la/1299515))。詳しくは [MediaDevices.getUserMedia()](/ja/docs/Web/API/MediaDevices/getUserMedia) の [User privacy](/ja/docs/Web/API/MediaDevices/getUserMedia#yser_privacy) をご覧ください。また、[こちらのブログ記事](https://blog.mozilla.org/webrtc/better-privacy-on-camera-mute-in-firefox-60/) もご覧ください。
-- {{domxref("RTCPeerConnection.removeTrack", "removeTrack()")}} を使用して {{domxref("RTCPeerConnection")}} からトラックを削除するときに、{{domxref("RTCPeerConnection.getSenders", "getSenders()")}} が報告する送信者のピアコネクションのリストからトラックの {{domxref("RTCRtpSender")}} を削除しないようになりました ([Firefox バグ 1290949](https://bugzil.la/1290949))。
-- {{domxref("RTCRtpContributingSource")}} および {{domxref("RTCRtpSynchronizationSource")}} オブジェクトのタイムスタンプは、以前は {{jsxref("Date.getTime()")}} が返す値に基づいて報告されていました。Firefox 60 で、正しく [Performance Timing API](/ja/docs/Web/API/Performance_API) を使用するように修正しました ([Firefox バグ 1433576](https://bugzil.la/1433576))。
+- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使用して取得したメディアを録画または共有するとき、対応するトラックの {{domxref("MediaStreamTrack.enabled")}} プロパティを `false` に設定してカメラをミュートすると、カメラを使用していないことをユーザーにわかりやすくするために、カメラが「使用中」であることを示すランプを消灯するようになりました ([Firefox バグ 1299515](https://bugzil.la/1299515))。詳しくは[ユーザーのプライバシー](/ja/docs/Web/API/MediaDevices/getUserMedia#ユーザーのプライバシー)をご覧ください。また、[こちらのブログ記事](https://blog.mozilla.org/webrtc/better-privacy-on-camera-mute-in-firefox-60/) もご覧ください。
+- {{domxref("RTCPeerConnection")}} から {{domxref("RTCPeerConnection.removeTrack", "removeTrack()")}} を使用してトラックを削除するときに、{{domxref("RTCPeerConnection.getSenders", "getSenders()")}} が報告する送信者のピアコネクションのリストからトラックの {{domxref("RTCRtpSender")}} を削除しないようになりました ([Firefox バグ 1290949](https://bugzil.la/1290949))。
+- `RTCRtpContributingSource` および `RTCRtpSynchronizationSource` オブジェクトのタイムスタンプは、以前は {{jsxref("Date.getTime()")}} が返す値に基づいて報告されていました。Firefox 60 で、正しく [Performance Timing API](/ja/docs/Web/API/Performance_API) を使用するように修正しました ([Firefox バグ 1433576](https://bugzil.la/1433576))。
 - 仕様書に合わせて {{domxref("ConvolverNode.ConvolverNode","ConvolverNode()")}} コンストラクターで、参照される {{domxref("AudioBuffer")}} のチャンネル数が 1、2、あるいは 4 でない場合に `NotSupportedError` が発生するようになりました ([Firefox バグ 1443228](https://bugzil.la/1443228))。
 - {{domxref("RTCPeerConnection")}} で廃止されたイベントハンドラーである {{domxref("RTCPeerConnection.onremovestream")}} を削除しました。代わりに {{domxref("MediaStream/removetrack_event", "removetrack")}} イベントを使用するべきです ([Firefox バグ 1442385](https://bugzil.la/1442385))。
 - {{domxref("RTCDataChannel")}} は `DataChannel` の別名ではなく、`RTCDataChannel` そのものが本名になりました。`DataChannel` という名前はサポートしません ([Firefox バグ 1173851](https://bugzil.la/1173851))。
@@ -88,7 +89,7 @@ _変更なし。_
 
 ### HTTP
 
-_変更なし。_
+- `SameSite` クッキーに対応しました ([Firefox bug 795346](https://bugzil.la/795346))。詳しくは {{HTTPHeader("Set-Cookie")}} を参照してください。
 
 ### セキュリティ
 
@@ -111,11 +112,11 @@ _変更なし。_
 ### CSS
 
 - 独自仕様である {{cssxref("-moz-user-input")}} プロパティの `enabled` および `disabled` 値が使用できなくなりました ([Firefox バグ 1405087](https://bugzil.la/1405087))。
-- 独自仕様である {{cssxref("-moz-border-top-colors")}}、{{cssxref("-moz-border-right-colors")}}、{{cssxref("-moz-border-bottom-colors")}}、{{cssxref("-moz-border-left-colors")}} プロパティを、プラットフォームから完全に削除しました ([Firefox バグ 1429723](https://bugzil.la/1429723))。
+- 独自仕様である `-moz-border-top-colors`、`-moz-border-right-colors`、`-moz-border-bottom-colors`、`-moz-border-left-colors` の各プロパティを、プラットフォームから完全に削除しました ([Firefox バグ 1429723](https://bugzil.la/1429723))。
 
 ### JavaScript
 
-- 非標準の [式クロージャ](/ja/docs/Web/JavaScript/Reference/Operators/Expression_closures) 構文を削除しました ([Firefox バグ 1426519](https://bugzil.la/1426519))。
+- 非標準の [式クロージャ](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#文_2) 構文を削除しました ([Firefox バグ 1426519](https://bugzil.la/1426519))。
 
 ### API
 
@@ -149,7 +150,3 @@ _変更なし。_
   - **frame_inactive**
   - **button_background_active**
   - **button_background_hover**
-
-## 過去のバージョン
-
-{{Firefox_for_developers(59)}}
