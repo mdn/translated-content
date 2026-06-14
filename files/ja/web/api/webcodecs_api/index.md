@@ -2,7 +2,7 @@
 title: WebCodecs API
 slug: Web/API/WebCodecs_API
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: e81cf36acffe197d01b1ad282c3582ebd7b0b54d
 ---
 
 {{DefaultAPISidebar("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
