@@ -21,9 +21,9 @@ l10n:
 ### SVG のフォントスタイルの制御
 
 ```html
-<svg viewBox="0 0 250 30" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" font-style="normal">Normal font style</text>
-  <text x="150" y="20" font-style="italic">Italic font style</text>
+<svg viewBox="0 0 250 60" xmlns="http://www.w3.org/2000/svg">
+  <text y="20" font-style="normal">Normal フォントスタイル</text>
+  <text y="45" font-style="italic">Italic フォントスタイル</text>
 </svg>
 ```
 
