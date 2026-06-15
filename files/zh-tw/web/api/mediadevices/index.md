@@ -13,11 +13,11 @@ l10n:
 
 ## 實例屬性
 
-*繼承自其父介面 {{domxref("EventTarget")}} 的屬性。*
+_繼承自其父介面 {{domxref("EventTarget")}} 的屬性。_
 
 ## 實例方法
 
-*繼承自其父介面 {{domxref("EventTarget")}} 的方法。*
+_繼承自其父介面 {{domxref("EventTarget")}} 的方法。_
 
 - {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}
   - : 取得包含系統可用媒體輸入與輸出裝置資訊的陣列。
@@ -62,9 +62,7 @@ navigator.mediaDevices
         `你的裝置不支援解析度 ${constraints.video.width.exact}x${constraints.video.height.exact} px。`,
       );
     } else if (error.name === "NotAllowedError") {
-      console.error(
-        "你需要授予此頁面存取攝影機與麥克風的權限。",
-      );
+      console.error("你需要授予此頁面存取攝影機與麥克風的權限。");
     } else {
       console.error(`getUserMedia 錯誤：${error.name}`, error);
     }
