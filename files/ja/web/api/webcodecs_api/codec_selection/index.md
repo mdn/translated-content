@@ -232,7 +232,7 @@ for (const codec of candidates) {
 }
 ```
 
-VP9 についても同様のパターンが当てはまります。
+VP9についても同様のパターンが当てはまります。
 
 ```js
 const candidates = [
@@ -258,7 +258,7 @@ for (const codec of candidates) {
 }
 ```
 
-音声ついても同様のパターンが適用されます。{{domxref("AudioEncoder")}} はすべてのブラウザーで利用可能ではないため、`isConfigSupported()` を呼び出す前に、その存在を確認してください。
+音声ついても同様のパターンが適用されます。{{domxref("AudioEncoder")}} はすべてのブラウザーで利用可能ではないため、`isConfigSupported()` を呼び出す前に、その存在を確認してください：
 
 ```js
 if (typeof AudioEncoder !== "undefined") {

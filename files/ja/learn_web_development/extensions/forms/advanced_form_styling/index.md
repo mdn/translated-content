@@ -174,7 +174,7 @@ form > div {
 
 ### 検索ボックスと `appearance`
 
-`appearance: none;` の値は、[`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search) 要素を一貫してスタイル設定するのに特に便利でした。これがないと、Safari ではこれらの要素に {{cssxref("height")}} や {{cssxref("font-size")}} の値を設定することはできませんでした。ただし、この制限はSafari 16 以降ではなくなりました。ただし、ブラウザーの対応範囲に Safari 16 より古いバージョンが含まれている場合、`input[type="search"]` 要素を明示的にターゲットとして、`appearance: none;` を適用することを検討してください。
+`appearance: none;` の値は、[`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search) 要素を一貫してスタイル設定するのに特に便利でした。これがないと、Safari ではこれらの要素に {{cssxref("height")}} や {{cssxref("font-size")}} の値を設定することはできませんでした。ただし、この制限はSafari 16 以降ではなくなりました。ただし、ブラウザーの対応範囲に Safari 16 より古いバージョンが含まれている場合、`input[type="search"]` 要素を明示的にターゲットとして、`appearance: none;` を適用することを検討してください。
 
 検索入力欄において、値が null でない場合に現れる "x" 削除ボタンは、Edge と Chrome では入力欄がフォーカスを失うと消えますが、Safari では表示されたままになります。 次のルールを使用することで、CSS により除去することができます。
 

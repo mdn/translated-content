@@ -11,7 +11,7 @@ l10n:
 
 ## 動画のエンコード
 
-{{domxref(「VideoEncoder」)}} の基本的な使用パターンは、インスタンス化から始まります。この際、`output` および `error` コールバック関数を定義します。`output` コールバックは、`EncodedVideoChunk` と `metadata` を引数として受け取ります。`metadata` は `EncodedVideoChunkMetadata` 辞書であり、オプションの [decoderConfig](/ja/docs/Web/API/VideoEncoder/VideoEncoder#decoderconfig) プロパティを含みます。このメタデータは、動画ファイルへの多重化を行う際に、多重化ライブラリーによって必要とされます。
+{{domxref("VideoEncoder")}} の基本的な使用パターンは、インスタンス化から始まります。この際、`output` および `error` コールバック関数を定義します。`output` コールバックは、`EncodedVideoChunk` と `metadata` を引数として受け取ります。`metadata` は `EncodedVideoChunkMetadata` 辞書であり、オプションの [decoderConfig](/ja/docs/Web/API/VideoEncoder/VideoEncoder#decoderconfig) プロパティを含みます。このメタデータは、動画ファイルへの多重化を行う際に、多重化ライブラリーによって必要とされます。
 
 ```js
 const encoder = new VideoEncoder({

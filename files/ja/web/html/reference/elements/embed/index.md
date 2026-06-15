@@ -41,7 +41,7 @@ l10n:
 {{cssxref("object-position")}} プロパティを使用して、要素のフレーム内の埋め込みオブジェクトの位置を調整することができます。
 
 > [!NOTE]
->  {{cssxref("object-fit")}} プロパティは `<embed>` 要素では効果がありません。
+> {{cssxref("object-fit")}} プロパティは `<embed>` 要素では効果がありません。
 
 ## アクセシビリティ
 
