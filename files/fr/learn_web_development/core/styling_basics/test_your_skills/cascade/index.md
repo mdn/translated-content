@@ -13,7 +13,7 @@ L'objectif de ce test de compétences est de vous aider à évaluer si vous comp
 > [!NOTE]
 > Pour obtenir de l'aide, consultez notre guide d'utilisation [Testez vos compétences](/fr/docs/Learn_web_development#testez_vos_compétences). Vous pouvez également nous contacter par l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
 
-## La cascade 1
+## La cascade n°1
 
 Dans cette tâche, nous voulons que vous utilisiez l'une des valeurs spéciales que nous avons examinées dans la section [contrôler l'héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#contrôler_lhéritage).
 
@@ -70,7 +70,7 @@ Ensuite, vous devez vous rappeler qu'il existe des valeurs de mot-clé spéciale
 
 </details>
 
-## La cascade 2
+## La cascade n°2
 
 Pour compléter cette tâche, manipulez l'ordre des couches de la cascade pour colorer les liens en `rebeccapurple`. Ne modifiez pas la déclaration `lightgreen`&nbsp;!
 

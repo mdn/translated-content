@@ -16,7 +16,7 @@ L'objectif de ce test de compétences est d'évaluer si vous comprenez comment [
 > [!NOTE]
 > Certains des liens dans le code de départ de ces tâches ont l'attribut `target="_blank"` défini. Ainsi, lorsque vous cliquez dessus, ils essaient d'ouvrir la page liée dans un nouvel onglet plutôt que dans le même onglet. Ce n'est pas strictement une bonne pratique, mais nous l'avons fait ici pour que les pages ne s'ouvrent pas dans un `<iframe>` intégré de MDN Playground, ce qui efface votre code d'exemple dans le processus&nbsp;!
 
-## Liens 1
+## Les liens n°1
 
 Dans cette tâche, nous voulons que vous aidiez à remplir les liens sur notre page d'information sur les baleines.
 
@@ -103,7 +103,7 @@ Votre HTML final doit ressembler à ceci&nbsp;:
 
 </details>
 
-## Liens 2
+## Les liens n°2
 
 Dans cette tâche, nous voulons que vous remplissiez les quatre liens afin qu'ils pointent vers les endroits appropriés.
 
@@ -198,7 +198,7 @@ Votre HTML final doit ressembler à ceci&nbsp;:
 
 </details>
 
-## Liens 3
+## Les liens n°3
 
 Les liens suivants pointent vers une page d'information sur les narvals, une adresse email de support et un fichier PDF de 4 Mo.
 
