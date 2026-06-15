@@ -13,7 +13,7 @@ L'objectif de ce test de compétences est de vous aider à évaluer si vous comp
 > [!NOTE]
 > Pour obtenir de l'aide, consultez notre guide d'utilisation [Testez vos compétences](/fr/docs/Learn_web_development#testez_vos_compétences). Vous pouvez également nous contacter par l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
 
-## Texte avancé 1
+## Texte avancé n°1
 
 Dans cette tâche, nous vous demandons d'ajouter des fonctionnalités sémantiques au HTML fourni.
 
