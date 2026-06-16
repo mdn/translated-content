@@ -32,7 +32,7 @@ new MediaMetadata(metadata)
         - `sizes` {{optional_inline}}
           - : 指定多种尺寸的资源，以便用户代理无需对单张图片进行缩放。默认为空字符串（`""`）。
         - `type` {{optional_inline}}
-          - : {{Glossary("MIME type", "MIME 类型")}}提示用户代理忽略其不支持类型的图像。不过，用户代理在下载图像后仍可能通过 MIME 类型嗅探来确定其类型。默认为空字符串（`""`）。
+          - : 允许用户代理忽略其不支持类型图像的 {{Glossary("MIME type", "MIME 类型")}}提示。不过，用户代理在下载图像后仍可能通过 MIME 类型嗅探来确定其类型。默认为空字符串（`""`）。
     - `chapterInfo` {{optional_inline}}
       - : 包含 {{domxref("ChapterInformation")}} 对象实例的数组，这些实例表示与媒体相关的章节信息元数据。对象结构如下：
         - `artwork` {{optional_inline}}
