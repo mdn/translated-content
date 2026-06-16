@@ -164,7 +164,7 @@ section {
 
 这一行声明就满足了我们所有需求。太神奇了，对吧？我们得到了一个多列布局，所有列的宽度相等，高度也完全一致。这是因为弹性项目（弹性容器的子元素）的默认值正是为了解决此类常见问题而设计的。
 
-让我们回顾一下这里发生了什么。为元素添加 `display: flex` 值，会将其转换为弹性容器。就其与页面其余部分的交互方式而言，该容器被视为[块级内容](/zh-CN/docs/Glossary/Block-level_content)。当元素转换为弹性容器时，其子元素也会被转换为（并按弹性项目进行布局）弹性项目。
+让我们回顾一下这里发生了什么。为元素添加值为 `flex` 的 {{cssxref("display")}}，会将其转换为弹性容器。就其与页面其余部分的交互方式而言，该容器被视为[块级内容](/zh-CN/docs/Glossary/Block-level_content)。当元素转换为弹性容器时，其子元素也会被转换为（并按弹性项目进行布局）弹性项目。
 
 你可以使用[外部 `display` 值](/zh-CN/docs/Web/CSS/Reference/Properties/display#外部表现)（例如 `display: inline flex`）将容器设置为行内布局，这会影响容器本身在页面中的布局方式。旧版 `inline-flex` 显示值同样会将容器显示为行内元素。本教程将重点探讨容器内内容的行为，但若想了解行内布局与块级布局的效果差异，可查阅 `display` 属性页面上的[值比较](/zh-CN/docs/Web/CSS/Reference/Properties/display#比较_display_的值)。
 
