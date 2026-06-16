@@ -1,20 +1,20 @@
 ---
-title: Firefox 39 pour les développeurs
+title: Firefox 39 note de version pour les développeurs
 short-title: Firefox 39
 slug: Mozilla/Firefox/Releases/39
 l10n:
   sourceCommit: 83f4e64da466670c3700110da364546253eae127
 ---
 
-Firefox 39 est sorti le 2 juillet 2015. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais également pour les développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.
+Firefox 39 est sorti le 2 juillet 2015. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeur·euse·s Web, mais également pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'add-on.
 
-## Changements pour les développeurs Web
+## Changements pour les développeur·euse·s Web
 
 ### Outils de développement
 
 Points forts&nbsp;:
 
-- _WebIDE_ prend désormais en charge le débogage des appareils Firefox OS via Wi-Fi
+- _WebIDE_ prend désormais en charge le débogage des appareils Firefox OS avec Wi-Fi
 - _WebIDE_ soutient désormais les projets Cordova
 - [Affichage des animations: rembobinage, avance rapide et passage à une heure spécifique <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox-39)
 - [L'éditeur de courbe de Bézier cubique comprend désormais 31 préréglages <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox-39)
@@ -30,7 +30,8 @@ Points forts&nbsp;:
 - Prise en charge du type {{CSSxRef("&lt;string&gt;")}} sur {{CSSxRef("list-style-type")}}, ainsi que sa propriété abrégée {{CSSxRef("list-style")}} a été implémenté ([bogue Firefox 1144607 <sup>(angl.)</sup>](https://bugzil.la/1144607)).
 - CSS Scroll Snapping a été implémenté ([bogue Firefox 945584 <sup>(angl.)</sup>](https://bugzil.la/945584) et [bogue Firefox 1138658 <sup>(angl.)</sup>](https://bugzil.la/1138658)).
 - La cascade des animations CSS et des transitions CSS a été réécrite pour correspondre à la dernière spécification ([bogue Firefox 1125455 <sup>(angl.)</sup>](https://bugzil.la/1125455)).
-- La prise en charge des scripts verticaux, avec le {{CSSxRef("writing-mode")}} est maintenant activée par défaut sur Nightly et Developer Edition, mais pas sur Firefox Beta et Firefox Release ([bogue Firefox 1099032 <sup>(angl.)</sup>](https://bugzil.la/1099032)). Notez que l'implémentation n'est pas encore terminée et que certains widgets, comme les tables, n'obéiront pas à toutes les valeurs.
+- La prise en charge des scripts verticaux, avec le {{CSSxRef("writing-mode")}} est maintenant activée par défaut sur Nightly et Developer Edition, mais pas sur Firefox Beta et Firefox Release ([bogue Firefox 1099032 <sup>(angl.)</sup>](https://bugzil.la/1099032)). Notez que l'implémentation n'est pas encore terminée et que certains widgets, comme les tables, n'obéissent pas à toutes les valeurs.
+- La propriété CSS {{cssxref("filter")}} agit comme `position: relative` + `overflow: hidden` ([bogue Firefox 1125767 <sup>(angl.)</sup>](https://bugzil.la/1125767)).
 
 ### HTML
 
@@ -42,12 +43,12 @@ Points forts&nbsp;:
 - Le [constructeur `RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) ne se lance plus lorsque le premier argument est un `RegExp` et que le second argument `flags` est présent ([bogue Firefox 1108949 <sup>(angl.)</sup>](https://bugzil.la/1108949)).
 - La propriété `Object.prototype.__noSuchMethod__` est désormais obsolète et émet un avertissement de console (voir [bogue Firefox 1140428 <sup>(angl.)</sup>](https://bugzil.la/1140428) et cette [annonce de plate-forme <sup>(angl.)</sup>](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)).
 - L'implémentation de l'objet {{JSxRef("Proxy")}} a été mise à jour pour se conformer davantage à la spécification ES2015&nbsp;:
-  - Les gestionnaires {{JSxRef("Proxy/Proxy/defineProperty", "defineProperty")}} et {{JSxRef("Proxy/Proxy/set", "set")}} doivent maintenant renvoyer explicitement `true` pour réussir, sinon une exception {{JSxRef("TypeError")}} sera lancée en mode strict ([bogue Firefox 1132522 <sup>(angl.)</sup>](https://bugzil.la/1132522)).
+  - Les gestionnaires {{JSxRef("Proxy/Proxy/defineProperty", "defineProperty")}} et {{JSxRef("Proxy/Proxy/set", "set")}} doivent maintenant renvoyer explicitement `true` pour réussir, sinon une exception {{JSxRef("TypeError")}} est lancée en mode strict ([bogue Firefox 1132522 <sup>(angl.)</sup>](https://bugzil.la/1132522)).
   - Si l'objet {{DOMxRef("window")}} est défini comme cible, ces gestionnaires lancent désormais une `TypeError` ([bogue Firefox 828137 <sup>(angl.)</sup>](https://bugzil.la/828137)).
 
 - Lors de l'utilisation des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`), un terminateur de ligne (`\n`) n'est plus autorisé après les arguments de fonction fléchée (`() \n => {}`) ([bogue Firefox 1141392 <sup>(angl.)</sup>](https://bugzil.la/1141392)).
 - {{JSxRef("RegExp.prototype.toString")}} est maintenant une fonction générique ([bogue Firefox 1079919 <sup>(angl.)</sup>](https://bugzil.la/1079919)).
-- L'argument de `flags` non standard de {{JSxRef("String.prototype.match()")}}, {{JSxRef("String.prototype.search()")}}, et {{JSxRef("String.prototype.replace()")}} est désormais obsolètee et émet un avertissement de console ([bogue Firefox 1142351 <sup>(angl.)</sup>](https://bugzil.la/1142351)).
+- L'argument de `flags` non standard de {{JSxRef("String.prototype.match()")}}, {{JSxRef("String.prototype.search()")}}, et {{JSxRef("String.prototype.replace()")}} est désormais obsolète et émet un avertissement de console ([bogue Firefox 1142351 <sup>(angl.)</sup>](https://bugzil.la/1142351)).
 - Le comportement try/catch de {{JSxRef("Object.assign()")}} a été supprimé pour se conformer au dernier projet ES6 ([bogue Firefox 1103344 <sup>(angl.)</sup>](https://bugzil.la/1103344)).
 
 ### Interfaces/APIs/DOM
@@ -69,7 +70,7 @@ _Pas de changement._
 
 _Pas de changement._
 
-### Audio/Video
+### Audio/Vidéo
 
 _Pas de changement._
 
@@ -79,7 +80,7 @@ _Pas de changement._
 - L'option de ligne de commande [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) a été supprimée ([bogue Firefox 1080319 <sup>(angl.)</sup>](https://bugzil.la/1080319)).
 - Prise en charge des nouveaux [emoji de couleur chair Unicode 8.0](https://www.bbc.co.uk/newsbeat/article/32220611/diverse-thumbs-up-emojis-with-different-skin-tones-finally-here) ([bogue Firefox 1153460 <sup>(angl.)</sup>](https://bugzil.la/1153460)).
 
-## La mise en réseau
+## Réseau
 
 - La prise en charge de SSLv3 a été complètement supprimée ([bogue Firefox 1106470 <sup>(angl.)</sup>](https://bugzil.la/1106470)).
 
@@ -87,6 +88,6 @@ _Pas de changement._
 
 _Pas de changement._
 
-## Changements pour les développeurs d'add-on et de Mozilla
+## Changements pour les développeur·euse·s de Mozilla et d'extensions
 
 _Pas de changement._

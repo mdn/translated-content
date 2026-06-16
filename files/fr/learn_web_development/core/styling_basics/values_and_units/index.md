@@ -15,7 +15,7 @@ Dans cette leçon, nous allons examiner certains des types de valeurs les plus f
 > [!NOTE]
 > Chaque [page de propriété CSS](/fr/docs/Web/CSS/Reference#index) possède une section de syntaxe qui liste les types de valeurs que vous pouvez utiliser avec cette propriété.
 
-<table class="standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
@@ -59,13 +59,13 @@ h1 {
 }
 ```
 
-Un type de valeur en CSS définit un ensemble de valeurs autorisées. Cela signifie que si vous voyez `<color>` comme valide, vous n'avez pas besoin de vous demander quel type de valeur de couleur peut être utilisé — mots-clés, valeurs hexadécimales, fonctions `rgb()`, etc. Vous pouvez utiliser _n'importe quelle_ valeur `<color>` disponible, à condition qu'elle soit prise en charge par votre navigateur. La page MDN pour chaque valeur vous donne des informations sur la compatibilité avec les navigateurs. Par exemple, si vous consultez la page pour {{CSSxRef("&lt;color&gt;")}}, vous verrez que la section sur la compatibilité des navigateurs liste différents types de valeurs de couleur et leur support.
+Un type de valeur en CSS définit un ensemble de valeurs autorisées. Cela signifie que si vous voyez `<color>` comme valide, vous n'avez pas besoin de vous demander quel type de valeur de couleur peut être utilisé — mots-clés, valeurs hexadécimales, fonctions `rgb()`, etc. Vous pouvez utiliser _n'importe quelle_ valeur `<color>` disponible, à condition qu'elle soit prise en charge par votre navigateur. La page MDN pour chaque valeur vous donne des informations sur la compatibilité avec les navigateurs. Par exemple, si vous consultez la page pour {{CSSxRef("&lt;color&gt;")}}, vous pouvez voir que la section sur la compatibilité des navigateurs liste différents types de valeurs de couleur et leur support.
 
 Observons quelques-uns des types de valeurs et d'unités que vous pouvez fréquemment rencontrer, avec des exemples, pour que vous puissiez essayer différentes valeurs possibles.
 
 ## Nombres, longueurs et pourcentages
 
-Il existe plusieurs types de valeur numérique que vous pouvez utiliser en CSS. Les types qui suivent sont classés comme numériques :
+Il existe plusieurs types de valeur numérique que vous pouvez utiliser en CSS. Les types qui suivent sont classés comme numériques&nbsp;:
 
 <table class="standard-table no-markdown">
   <thead>
@@ -80,7 +80,7 @@ Il existe plusieurs types de valeur numérique que vous pouvez utiliser en CSS. 
         <code><a href="/fr/docs/Web/CSS/Reference/Values/integer">&#x3C;integer></a></code>
       </td>
       <td>
-        Un <code>&#x3C;integer></code> est un nombre entier tel que
+        Un entier (<code>&#x3C;integer></code>) est un nombre entier tel que
         <code>1024</code> ou <code>-55</code>.
       </td>
     </tr>
@@ -89,7 +89,7 @@ Il existe plusieurs types de valeur numérique que vous pouvez utiliser en CSS. 
         <code><a href="/fr/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></code>
       </td>
       <td>
-        Un <code>&#x3C;number></code> représente un nombre décimal — il peut ou non avoir un point décimal avec une composante fractionnaire. Par exemple, <code>0.255</code>, <code>128</code>, ou <code>-1.2</code>.
+        Un nombre (<code>&#x3C;number></code>) représente un nombre décimal — il peut ou non avoir un point décimal avec une composante fractionnaire. Par exemple, <code>0.255</code>, <code>128</code>, ou <code>-1.2</code>.
       </td>
     </tr>
     <tr>
@@ -114,7 +114,7 @@ Il existe plusieurs types de valeur numérique que vous pouvez utiliser en CSS. 
     <tr>
       <td>{{CSSxRef("percentage")}}</td>
       <td>
-        Un <code>&#x3C;percentage></code> représente une fraction d'une autre valeur.
+        Un pourcentage (<code>&#x3C;percentage></code>) représente une fraction d'une autre valeur.
         Par exemple, <code>50%</code>. Les valeurs en pourcentage sont toujours
         relatives à une autre quantité. Par exemple, la longueur d'un élément est
         relative à la longueur de son élément parent.
@@ -162,29 +162,29 @@ Dans cette section, nous allons explorer certaines des unités relatives les plu
 
 Dans l'exemple ci-dessous, vous pouvez voir comment certaines unités de longueur relative et absolue se comportent. La première boîte a une largeur ({{CSSxRef("width")}}) définie en pixels. En tant qu'unité absolue, cette largeur reste la même, quels que soient les autres changements.
 
-La deuxième boîte a une largeur définie en unités `vw` (largeur de la zone d'affichage). Cette valeur est relative à la largeur de la zone d'affichage, donc `10vw` correspond à 10 pourcents de la largeur de la zone d'affichage. Si vous changez la largeur de votre fenêtre de navigateur, la taille de la boîte devrait changer. Cependant, cet exemple est intégré dans la page à l'aide d'un {{HTMLElement("iframe")}}, donc cela ne fonctionne pas. Pour voir cela en action, vous devez [essayer l'exemple après l'avoir ouvert dans son propre onglet de navigateur <sup>(angl.)</sup>](https://mdn.github.io/css-examples/learn/values-units/length.html).
+La deuxième boîte a une largeur définie en unités `vw` (largeur de la zone d'affichage). Cette valeur est relative à la largeur de la zone d'affichage, donc `10vw` correspond à 10 pourcents de la largeur de la zone d'affichage. Si vous changez la largeur de votre fenêtre de navigateur, la taille de la boîte doit changer. Cependant, cet exemple est intégré dans la page à l'aide d'un {{HTMLElement("iframe")}}, donc cela ne fonctionne pas. Pour voir cela en action, vous devez [essayer l'exemple après l'avoir ouvert dans son propre onglet de navigateur <sup>(angl.)</sup>](https://mdn.github.io/css-examples/learn/values-units/length.html).
 
-La troisième boîte utilise des unités `em`. Celles-ci sont relatives à la taille de la police de l'élément. J'ai défini une taille de police de `1em` sur le {{HTMLElement("div")}} contenant, qui a une classe `.wrapper`. Changez cette valeur à `1.5em` et vous voyez que la taille de la police de tous les éléments augmente, mais seul le dernier élément devient plus large, car sa largeur est relative à cette taille de police.
+La troisième boîte utilise des unités `em`. Celles-ci sont relatives à la taille de la police de l'élément. J'ai défini une taille de police de `1em` sur le {{HTMLElement("div")}} contenant, qui a une classe `.enveloppe`. Changez cette valeur à `1.5em` et vous voyez que la taille de la police de tous les éléments augmente, mais seul le dernier élément devient plus large, car sa largeur est relative à cette taille de police.
 
 Après avoir suivi les instructions ci-dessus, essayez d'exécuter avec les valeurs d'autres manières, pour voir ce que vous obtenez.
 
 ```html live-sample___length
-<div class="wrapper">
-  <div class="box px">Je suis large de 200px</div>
-  <div class="box vw">Je suis large de 10vw</div>
-  <div class="box em">Je suis large de 10em</div>
+<div class="enveloppe">
+  <div class="boite px">Je suis large de 200px</div>
+  <div class="boite vw">Je suis large de 10vw</div>
+  <div class="boite em">Je suis large de 10em</div>
 </div>
 ```
 
 ```css live-sample___length
-.box {
+.boite {
   background-color: lightblue;
   border: 5px solid darkblue;
   padding: 10px;
   margin: 1em 0;
 }
 
-.wrapper {
+.enveloppe {
   font-size: 1em;
 }
 
@@ -280,22 +280,22 @@ La différence est que le deuxième ensemble de deux boîtes se trouve à l'int�
 Essayez de modifier la largeur du conteneur ou la valeur en pourcentage pour voir comment cela fonctionne&nbsp;:
 
 ```html live-sample___percentage
-<div class="box px">Je suis large de 200px</div>
-<div class="box percent">Je suis large de 40%</div>
-<div class="wrapper">
-  <div class="box px">Je suis large de 200px</div>
-  <div class="box percent">Je suis large de 40%</div>
+<div class="boite px">Je suis large de 200px</div>
+<div class="boite pourcent">Je suis large de 40%</div>
+<div class="enveloppe">
+  <div class="boite px">Je suis large de 200px</div>
+  <div class="boite pourcent">Je suis large de 40%</div>
 </div>
 ```
 
 ```css live-sample___percentage
-.box {
+.boite {
   background-color: lightblue;
   border: 5px solid darkblue;
   padding: 10px;
   margin: 1em 0;
 }
-.wrapper {
+.enveloppe {
   width: 400px;
   border: 5px solid rebeccapurple;
 }
@@ -304,7 +304,7 @@ Essayez de modifier la largeur du conteneur ou la valeur en pourcentage pour voi
   width: 200px;
 }
 
-.percent {
+.pourcent {
   width: 40%;
 }
 ```
@@ -349,20 +349,20 @@ Certains types de valeur acceptent des nombres sans unité&nbsp;; un exemple est
 Dans l'exemple ci-dessous, essayez de modifier la valeur de `opacity` en utilisant différentes valeurs décimales entre `0` et `1` afin de voir comment la boîte et son contenu deviennent plus ou moins opaques&nbsp;:
 
 ```html live-sample___opacity
-<div class="wrapper">
-  <div class="box">Je suis une boîte avec une opacité</div>
+<div class="enveloppe">
+  <div class="boite">Je suis une boîte avec une opacité</div>
 </div>
 ```
 
 ```css live-sample___opacity
-.wrapper {
+.enveloppe {
   background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   background-repeat: no-repeat;
   background-position: bottom left;
   padding: 20px;
 }
 
-.box {
+.boite {
   margin: 40px auto;
   width: 200px;
   background-color: lightblue;
@@ -397,28 +397,28 @@ Vous pouvez voir les mots-clés de couleur (ou «&nbsp;couleurs nommées&nbsp;»
 Dans l'exemple suivant, essayez de manipuler différentes valeurs de mots-clés de couleur pour mieux comprendre leur fonctionnement. Vous pouvez les consulter en utilisant la page de référence {{CSSxRef("&lt;named-color&gt;")}}.
 
 ```html live-sample___color-keywords
-<div class="wrapper">
-  <div class="box one">antiquewhite</div>
-  <div class="box two">blueviolet</div>
-  <div class="box three">greenyellow</div>
+<div class="enveloppe">
+  <div class="boite un">antiquewhite</div>
+  <div class="boite deux">blueviolet</div>
+  <div class="boite trois">greenyellow</div>
 </div>
 ```
 
 ```css live-sample___color-keywords
-.box {
+.boite {
   padding: 10px;
   margin: 0.5em 0;
   border-radius: 0.5em;
 }
-.one {
+.un {
   background-color: antiquewhite;
 }
 
-.two {
+.deux {
   background-color: blueviolet;
 }
 
-.three {
+.trois {
   background-color: greenyellow;
 }
 ```
@@ -431,34 +431,34 @@ Le type de valeur de couleur suivant que vous êtes susceptible de rencontrer es
 
 Les nombres hexadécimaux utilisent 16 caractères de `0-9` et `a-f`, donc la plage complète est `0123456789abcdef`. Chaque valeur de couleur hexadécimale se compose d'un symbole dièse (`#`) suivi de six caractères hexadécimaux (`#ffc0cb`, par exemple). Chaque **paire** de caractères hexadécimaux représente l'un des canaux d'une couleur RVB — rouge, vert et bleu — et nous permet de définir n'importe laquelle des 256 valeurs disponibles pour chacun (16 x 16 = 256).
 
-Ces valeurs sont moins intuitives que les mots-clés pour définir les couleurs, mais elles sont beaucoup plus polyvalentes car vous pouvez _représenter_ n'importe quelle couleur RVB avec elles.
+Ces valeurs sont moins intuitives que les mots-clés pour définir les couleurs, mais elles sont beaucoup plus polyvalentes, car vous pouvez _représenter_ n'importe quelle couleur RVB avec elles.
 
 Dans l'exemple suivant, essayez de changer les valeurs pour voir comment les couleurs varient&nbsp;:
 
 ```html live-sample___color-hex
-<div class="wrapper">
-  <div class="box one">#02798b</div>
-  <div class="box two">#c55da1</div>
-  <div class="box three">#128a7d</div>
+<div class="enveloppe">
+  <div class="boite un">#02798b</div>
+  <div class="boite deux">#c55da1</div>
+  <div class="boite trois">#128a7d</div>
 </div>
 ```
 
 ```css live-sample___color-hex
-.box {
+.boite {
   padding: 10px;
   margin: 0.5em 0;
   border-radius: 0.5em;
 }
 
-.one {
+.un {
   background-color: #02798b;
 }
 
-.two {
+.deux {
   background-color: #c55da1;
 }
 
-.three {
+.trois {
   background-color: #128a7d;
 }
 ```
@@ -475,28 +475,28 @@ Pour créer des valeurs RGB directement, la fonction {{CSSxRef("color_value/rgb"
 Réécrivons notre dernier exemple pour utiliser des couleurs RGB&nbsp;:
 
 ```html live-sample___color-rgb
-<div class="wrapper">
-  <div class="box one">rgb(2 121 139)</div>
-  <div class="box two">rgb(197 93 161)</div>
-  <div class="box three">rgb(18 138 125)</div>
+<div class="enveloppe">
+  <div class="boite un">rgb(2 121 139)</div>
+  <div class="boite deux">rgb(197 93 161)</div>
+  <div class="boite trois">rgb(18 138 125)</div>
 </div>
 ```
 
 ```css live-sample___color-rgb
-.box {
+.boite {
   padding: 10px;
   margin: 0.5em 0;
   border-radius: 0.5em;
 }
-.one {
+.un {
   background-color: rgb(2 121 139);
 }
 
-.two {
+.deux {
   background-color: rgb(197 93 161);
 }
 
-.three {
+.trois {
   background-color: rgb(18 138 125);
 }
 ```
@@ -510,39 +510,39 @@ Dans l'exemple suivant, nous avons ajouté une image de fond au bloc contenant n
 Essayez de modifier les valeurs du canal alpha pour voir comment cela affecte le rendu des couleurs.
 
 ```html live-sample___color-rgba
-<div class="wrapper">
-  <div class="box one">rgb(2 121 139 / .3)</div>
-  <div class="box two">rgb(197 93 161 / .7)</div>
-  <div class="box three">rgb(18 138 125 / .9)</div>
+<div class="enveloppe">
+  <div class="boite un">rgb(2 121 139 / .3)</div>
+  <div class="boite deux">rgb(197 93 161 / .7)</div>
+  <div class="boite trois">rgb(18 138 125 / .9)</div>
 </div>
 ```
 
 ```css live-sample___color-rgba
-.wrapper {
+.enveloppe {
   background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   padding: 40px 20px;
 }
 
-.box {
+.boite {
   padding: 10px;
   margin: 0.5em 0;
   border-radius: 0.5em;
 }
 
-.one {
+.un {
   background-color: rgb(2 121 139 / 0.3);
 }
 
-.two {
+.deux {
   background-color: rgb(197 93 161 / 0.7);
 }
 
-.three {
+.trois {
   background-color: rgb(18 138 125 / 0.9);
 }
 ```
 
-{{EmbedLiveSample("color-rgba", "", "250px")}}
+{{EmbedLiveSample("color-rgba", "", 250)}}
 
 > [!NOTE]
 > Définir un canal alpha sur une couleur présente une différence clé par rapport à l'utilisation de la propriété {{CSSxRef("opacity")}} que nous avons mentionnée précédemment. Lorsque vous utilisez `opacity`, vous rendez l'élément et tout ce qu'il contient transparent, tandis qu'utiliser RGB avec un paramètre alpha ne rend transparente que la couleur que vous définissez.
@@ -551,7 +551,7 @@ Essayez de modifier les valeurs du canal alpha pour voir comment cela affecte le
 
 Si vous voulez aller au-delà des mots-clés, des valeurs hexadécimales et de {{CSSxRef("color_value/rgb")}} pour les couleurs, vous pouvez essayer d'utiliser {{CSSxRef("hue")}}.
 La teinte est le type de valeur qui nous permet de distinguer ou de rapprocher des couleurs comme le rouge, l'orange, le jaune, le vert, le bleu, etc.
-Le concept clé est que vous pouvez définir une teinte dans un angle ({{CSSxRef("angle")}}) car la plupart des modèles de couleurs décrivent les teintes en utilisant une {{Glossary("color wheel", "roue des couleurs")}}.
+Le concept clé est que vous pouvez définir une teinte dans un angle ({{CSSxRef("angle")}}), car la plupart des modèles de couleurs décrivent les teintes en utilisant une {{Glossary("color wheel", "roue des couleurs")}}.
 
 Il existe plusieurs fonctions de couleur qui incluent un composant {{CSSxRef("hue")}}, y compris {{CSSxRef("color_value/hsl")}}, {{CSSxRef("color_value/hwb")}}, et {{CSSxRef("color_value/lch")}}. D'autres fonctions de couleur, comme {{CSSxRef("color_value/lab")}}, définissent les couleurs en fonction de ce que les humains peuvent percevoir.
 
@@ -580,29 +580,29 @@ La valeur de couleur {{CSSxRef("color_value/hsl")}} a également une quatrième 
 Mettons à jour l'exemple RGB pour utiliser des couleurs HSL à la place&nbsp;:
 
 ```html live-sample___color-hsl
-<div class="wrapper">
-  <div class="box one">hsl(188 97% 28%)</div>
-  <div class="box two">hsl(321 47% 57%)</div>
-  <div class="box three">hsl(174 77% 31%)</div>
+<div class="enveloppe">
+  <div class="boite un">hsl(188 97% 28%)</div>
+  <div class="boite deux">hsl(321 47% 57%)</div>
+  <div class="boite trois">hsl(174 77% 31%)</div>
 </div>
 ```
 
 ```css live-sample___color-hsl
-.box {
+.boite {
   padding: 10px;
   margin: 0.5em 0;
   border-radius: 0.5em;
 }
 
-.one {
+.un {
   background-color: hsl(188 97% 28%);
 }
 
-.two {
+.deux {
   background-color: hsl(321 47% 57%);
 }
 
-.three {
+.trois {
   background-color: hsl(174 77% 31%);
 }
 ```
@@ -612,34 +612,34 @@ Mettons à jour l'exemple RGB pour utiliser des couleurs HSL à la place&nbsp;:
 Tout comme avec `rgb()`, vous pouvez passer un paramètre alpha à `hsl()` pour définir l'opacité&nbsp;:
 
 ```html live-sample___color-hsla
-<div class="wrapper">
-  <div class="box one">hsl(188 97% 28% / .3)</div>
-  <div class="box two">hsl(321 47% 57% / .7)</div>
-  <div class="box three">hsl(174 77% 31% / .9)</div>
+<div class="enveloppe">
+  <div class="boite un">hsl(188 97% 28% / .3)</div>
+  <div class="boite deux">hsl(321 47% 57% / .7)</div>
+  <div class="boite trois">hsl(174 77% 31% / .9)</div>
 </div>
 ```
 
 ```css live-sample___color-hsla
-.wrapper {
+.enveloppe {
   background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   padding: 40px 20px;
 }
 
-.box {
+.boite {
   padding: 10px;
   margin: 0.5em 0;
   border-radius: 0.5em;
 }
 
-.one {
+.un {
   background-color: hsl(188 97% 28% / 0.3);
 }
 
-.two {
+.deux {
   background-color: hsl(321 47% 57% / 0.7);
 }
 
-.three {
+.trois {
   background-color: hsl(174 77% 31% / 0.9);
 }
 ```
@@ -655,12 +655,12 @@ Le type de valeur {{CSSxRef("&lt;image&gt;")}} est utilisé à chaque endroit o�
 Dans l'exemple ci-dessous, nous utilisons une image et un dégradé comme valeurs pour la propriété CSS `background-image`.
 
 ```html live-sample___image
-<div class="box image"></div>
-<div class="box gradient"></div>
+<div class="boite image"></div>
+<div class="boite degrade"></div>
 ```
 
 ```css live-sample___image
-.box {
+.boite {
   height: 150px;
   width: 300px;
   margin: 20px auto;
@@ -671,7 +671,7 @@ Dans l'exemple ci-dessous, nous utilisons une image et un dégradé comme valeur
   background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
 }
 
-.gradient {
+.degrade {
   background-image: linear-gradient(
     90deg,
     rgb(119 0 255 / 39%),
@@ -720,14 +720,14 @@ Essayez d'exécuter avec ces valeurs pour voir comment vous pouvez déplacer l'i
 
 Tout au long des exemples ci-dessus, nous avons vu des endroits où des mots-clés sont utilisés comme valeur (par exemple, les mots-clés `<color>` comme `red`, `black`, `rebeccapurple` et `goldenrod`). Ces mots-clés sont plus précisément décrits comme des _identifiants_, une valeur spéciale que CSS comprend. En tant que tels, ils ne sont pas entre guillemets — ils ne sont pas traités comme des chaînes de caractères.
 
-Il existe des endroits où vous utilisez des chaînes de caractères en CSS. Par exemple, [lors de la spécification de contenu généré](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#générer_du_contenu_avec_before_et_after). Dans ce cas, la valeur est entre guillemets pour montrer qu'il s'agit d'une chaîne de caractères. Dans l'exemple ci-dessous, nous utilisons des mots-clés de couleur non cités avec une chaîne de contenu généré citée.
+Il existe des endroits où vous utilisez des chaînes de caractères en CSS. Par exemple, [lors de la spécification de contenu généré](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#générer_du_contenu_avec_before_et_after). Dans ce cas, la valeur est entre guillemets pour montrer qu'il s'agit d'une chaîne de caractères. Dans l'exemple ci-dessous, nous utilisons des mots-clés de couleur hors guillemets avec une chaîne de caractères de contenu généré entre guillemets.
 
 ```html live-sample___strings-idents
-<div class="box"></div>
+<div class="boite"></div>
 ```
 
 ```css live-sample___strings-idents
-.box {
+.boite {
   width: 400px;
   padding: 1em;
   border-radius: 0.5em;
@@ -735,7 +735,7 @@ Il existe des endroits où vous utilisez des chaînes de caractères en CSS. Par
   background-color: lightblue;
 }
 
-.box::after {
+.boite::after {
   content: "Ceci est une chaîne de caractères. Je le sais parce qu'elle est citée dans le CSS.";
 }
 ```
@@ -745,7 +745,7 @@ Il existe des endroits où vous utilisez des chaînes de caractères en CSS. Par
 ## Fonctions
 
 En programmation, une fonction est un morceau de code qui effectue une tâche spécifique.
-Les fonctions sont utiles car vous pouvez écrire du code une fois, puis le réutiliser plusieurs fois au lieu d'écrire la même logique encore et encore.
+Les fonctions sont utiles, car vous pouvez écrire du code une fois, puis le réutiliser plusieurs fois au lieu d'écrire la même logique encore et encore.
 La plupart des langages de programmation non seulement prennent en charge les fonctions, mais sont également livrés avec des fonctions intégrées pratiques pour des tâches courantes afin que vous n'ayez pas à les écrire vous-même à partir de zéro.
 
 Le CSS a également des [fonctions](/fr/docs/Web/CSS/Reference/Values/Functions), qui fonctionnent de manière similaire aux fonctions dans d'autres langages.
@@ -753,13 +753,13 @@ En fait, nous avons déjà vu des fonctions CSS dans la section [Couleur](#coule
 
 En dehors de l'application des couleurs, vous pouvez utiliser des fonctions en CSS pour faire beaucoup d'autres choses.
 Par exemple, les [fonctions de transformation](/fr/docs/Web/CSS/Reference/Values/Functions#fonctions_de_transformation) sont un moyen courant de déplacer, faire pivoter et redimensionner des éléments sur une page.
-Vous pourriez voir {{CSSxRef("transform-function/translate")}} pour déplacer quelque chose horizontalement ou verticalement, {{CSSxRef("transform-function/rotate")}} pour faire pivoter quelque chose, ou {{CSSxRef("transform-function/scale")}} pour agrandir ou réduire quelque chose.
+Vous pouvez voir {{CSSxRef("transform-function/translate")}} pour déplacer quelque chose horizontalement ou verticalement, {{CSSxRef("transform-function/rotate")}} pour faire pivoter quelque chose, ou {{CSSxRef("transform-function/scale")}} pour agrandir ou réduire quelque chose.
 
 ### Fonctions mathématiques
 
 Lorsque vous créez des styles pour un projet, vous allez commencer probablement avec des nombres comme `300px` pour les longueurs ou `200ms` pour les durées.
 Si vous voulez que ces valeurs changent en fonction d'autres valeurs, vous allez devoir faire un peu de mathématiques.
-Vous pourriez calculer le pourcentage d'une valeur ou ajouter un nombre à un autre, puis mettre à jour votre CSS avec le résultat.
+Vous pouvez calculer le pourcentage d'une valeur ou ajouter un nombre à un autre, puis mettre à jour votre CSS avec le résultat.
 
 Le CSS prend en charge les [fonctions mathématiques](/fr/docs/Web/CSS/Reference/Values/Functions#fonctions_mathématiques), qui nous permettent d'effectuer des calculs en CSS au lieu de nous fier à des valeurs statiques ou de faire les calculs en JavaScript.
 L'une des fonctions mathématiques les plus courantes est {{CSSxRef("calc()")}}, qui permet de faire des opérations comme l'addition, la soustraction, la multiplication et la division.
@@ -767,19 +767,19 @@ L'une des fonctions mathématiques les plus courantes est {{CSSxRef("calc()")}},
 Par exemple, supposons que nous voulons définir la largeur d'un élément pour qu'elle soit `20%` de son conteneur parent plus `100px`.
 Nous ne pouvons pas définir cette largeur avec une valeur statique — si le parent utilise une largeur en pourcentage (ou une unité relative comme `em` ou `rem`), elle varie en fonction du contexte dans lequel elle est utilisée, et d'autres facteurs tels que l'appareil de l'utilisateur·ice ou la largeur de la fenêtre du navigateur.
 Cependant, nous pouvons utiliser `calc()` pour définir la largeur de l'élément à `20%` de son conteneur parent plus `100px`.
-Le `20%` est basé sur la largeur du conteneur parent (`.wrapper`) et si cette largeur change, le calcul change également&nbsp;:
+Le `20%` est basé sur la largeur du conteneur parent (`.enveloppe`) et si cette largeur change, le calcul change également&nbsp;:
 
 ```html live-sample___calc
-<div class="wrapper">
-  <div class="box">Ma largeur est calculée.</div>
+<div class="enveloppe">
+  <div class="boite">Ma largeur est calculée.</div>
 </div>
 ```
 
 ```css live-sample___calc
-.wrapper {
+.enveloppe {
   width: 400px;
 }
-.box {
+.boite {
   padding: 1em;
   border-radius: 0.5em;
   border: 5px solid rebeccapurple;
@@ -792,11 +792,11 @@ Le `20%` est basé sur la largeur du conteneur parent (`.wrapper`) et si cette l
 
 Il existe de nombreuses autres fonctions mathématiques que vous pouvez utiliser en CSS, telles que {{CSSxRef("min()")}}, {{CSSxRef("max()")}}, et {{CSSxRef("clamp()")}}&nbsp;; elles vous permettent respectivement de choisir la valeur la plus petite, la plus grande ou la valeur intermédiaire parmi un ensemble de valeurs. Explorez notre page de référence sur les [fonctions de valeurs CSS](/fr/docs/Web/CSS/Reference/Values/Functions) pour découvrir toutes les fonctions CSS disponibles.
 
-Connaître les fonctions CSS est utile pour les reconnaître lorsque vous les voyez. Vous devriez commencer à les expérimenter dans vos projets — elles vous aident à éviter d'écrire du code personnalisé ou répétitif pour obtenir des résultats que vous pouvez obtenir avec le CSS régulier.
+Connaître les fonctions CSS est utile pour les reconnaître lorsque vous les voyez. Vous devez commencer à les expérimenter dans vos projets — elles vous aident à éviter d'écrire du code personnalisé ou répétitif pour obtenir des résultats que vous pouvez obtenir avec le CSS régulier.
 
 ## Résumé
 
-Ceci a été un aperçu rapide des types de valeurs et d'unités les plus courants que vous pourriez rencontrer. Vous pouvez consulter tous les différents types sur la page du module [Valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units) — vous en rencontrez beaucoup en les utilisant au fur et à mesure que vous travaillez sur ces leçons.
+Ceci a été un aperçu rapide des types de valeurs et d'unités les plus courants que vous pouvez rencontrer. Vous pouvez consulter tous les différents types sur la page du module [Valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units) — vous en rencontrez beaucoup en les utilisant au fur et à mesure que vous travaillez sur ces leçons.
 
 L'essentiel à retenir est que chaque propriété a une liste définie de types de valeurs autorisés, et chaque type de valeur a une définition expliquant ce que sont les valeurs. Vous pouvez ensuite consulter les détails ici sur MDN. Par exemple, comprendre que {{CSSxRef("&lt;image&gt;")}} permet également de créer un dégradé de couleurs est utile mais peut-être une connaissance non évidente à avoir&nbsp;!
 

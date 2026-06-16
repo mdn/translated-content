@@ -3,7 +3,7 @@ title: Propriété CSS `dynamic-range-limit`
 short-title: dynamic-range-limit
 slug: Web/CSS/Reference/Properties/dynamic-range-limit
 l10n:
-  sourceCommit: 314e1451345c061ad4ecc7a9d1845e3e8a9a23f4
+  sourceCommit: 468c261821b7443db6fdb748f733f21186597501
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`dynamic-range-limit`** définit la luminance maximale autorisée pour le contenu <abbr>HDR</abbr> pour <i lang="en">High Dynamic Range</i>, signifiant Grande Plage Dynamique.
@@ -44,11 +44,11 @@ La propriété `dynamic-range-limit` définit la luminance maximale autorisée s
 
 ### SDR, HDR et marge de manœuvre
 
-Le contenu web traditionnel utilise **<i lang="en">Standard Dynamic Range</i> (<abbr>SDR</abbr>)**, où la couleur la plus lumineuse équivaut à la couleur CSS `white` (`#ffffff` in hexadecimal). La luminosité dans **High Dynamic Range (HDR)** peut dépasser ce blanc standard. En terminologie HDR, le CSS `white` standard est aussi appelé blanc de référence HDR.
+Le contenu web traditionnel utilise **<i lang="en">Standard Dynamic Range</i> (<abbr>SDR</abbr>)**, où la couleur la plus lumineuse équivaut à la couleur CSS `white` (`#ffffff` en hexadécimal). La luminosité dans **High Dynamic Range (HDR)** peut dépasser ce blanc standard. En terminologie HDR, le CSS `white` standard est aussi appelé blanc de référence HDR.
 
 La luminance maximale à laquelle le contenu peut être affiché dépend du contenu, du matériel d'affichage disponible et des préférences de l'utilisateur·ice. L'écart par lequel la luminance maximale du blanc peut dépasser le blanc de référence HDR est appelé **marge HDR** et s'exprime généralement en stops photographiques.
 
-Le contenu SDR a toujours une marge HDR de `0` car son blanc le plus lumineux _est_ le blanc de référence HDR. Les anciens moniteurs ont aussi une marge HDR de `0` car ils ne peuvent pas afficher de couleurs plus lumineuses. Les moniteurs plus récents peuvent avoir une marge HDR supérieure à `0`, ce qui leur permet d'afficher les couleurs plus lumineuses disponibles dans le contenu HDR.
+Le contenu SDR a toujours une marge HDR de `0`, car son blanc le plus lumineux _est_ le blanc de référence HDR. Les anciens moniteurs ont aussi une marge HDR de `0`, car ils ne peuvent pas afficher de couleurs plus lumineuses. Les moniteurs plus récents peuvent avoir une marge HDR supérieure à `0`, ce qui leur permet d'afficher les couleurs plus lumineuses disponibles dans le contenu HDR.
 
 ### Cas d'usage de `dynamic-range-limit`
 
@@ -68,7 +68,7 @@ La propriété `dynamic-range-limit` permet de contrôler la luminosité du cont
 
 ### Utilisation simple de `dynamic-range-limit`
 
-Dans notre [démonstration de la propriété `dynamic-range-limit` <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/dynamic-range-limit), nous incluons une image HDR qui peut être survolée et sélectionnée pour faire évoluer la valeur de `dynamic-range-limit`. [Voir l'exemple en direct <sup>(angl.)</sup>](https://mdn.github.io/dom-examples/dynamic-range-limit/) sur un écran capable d'afficher des couleurs HDR, et essayez-le. Le code est expliqué ci-dessous.
+Cet exemple démontre l'utilisation de base de la propriété `dynamic-range-limit` et la différence entre les images HDR et SDR.
 
 #### HTML
 
@@ -76,19 +76,18 @@ Dans le balisage, nous intégrons une image HDR avec un élément {{HTMLElement(
 
 ```html
 <img
-  src="gioia-pixel-ultrahdr.jpg"
-  alt="Une station de métro, avec des bandes lumineuses blanches éclairant le quai et des affiches publicitaires en arrière-plan"
+  src="https://mdn.github.io/shared-assets/images/examples/ultra-hdr.jpg"
+  alt="Une station de métro, avec des bandes lumineuses blanches
+       éclairant le quai et des affiches publicitaires en arrière-plan"
   tabindex="0" />
 ```
 
 #### CSS
 
-Nous appliquons quelques styles de base à notre élément `<img>`, puis nous définissons sa propriété `dynamic-range-limit` sur `standard`, ce qui signifie qu'il n'est pas affiché plus lumineux que le blanc de référence HDR. Nous ajoutons également la propriété {{CSSxRef("transition")}} pour que la valeur de `dynamic-range-limit` de l'élément `<img>` évolue sur `0,6` seconde lors d'un changement d'état.
+Nous limitons la luminosité de l'image à celle du SDR en définissant la propriété `dynamic-range-limit` sur `standard`, ce qui fait que l'image n'est pas plus lumineuse que le blanc de référence HDR. Nous définissons également une propriété {{CSSxRef("transition")}} afin que la valeur de `dynamic-range-limit` de l'élément `<img>` évolue sur `0,6` seconde lors d'un changement d'état.
 
 ```css
 img {
-  width: 50%;
-  border: 1px solid black;
   dynamic-range-limit: standard;
   transition: dynamic-range-limit 0.6s;
 }
@@ -102,6 +101,34 @@ img:focus {
   dynamic-range-limit: no-limit;
 }
 ```
+
+```css hidden
+img {
+  max-height: 100vh;
+}
+@media not (dynamic-range: high) {
+  body::before {
+    content: "Votre appareil peut ne pas afficher l'image à pleine luminosité.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+  }
+}
+@supports not (dynamic-range-limit: standard) {
+  body::before {
+    content: "Votre navigateur ne prend pas en charge la propriété dynamic-range-limit.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+  }
+}
+```
+
+#### Résultats
+
+{{EmbedLiveSample("Exemples", 300, 400)}}
+
+L'image est ultra HDR mais est limitée à la luminosité SDR par défaut. Survolez ou sélectionnez l'image. Remarquez comment elle passe à des couleurs HDR vives sur les écrans compatibles.
 
 ## Spécifications
 

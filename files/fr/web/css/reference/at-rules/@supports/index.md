@@ -3,14 +3,14 @@ title: Règle CSS `@supports`
 short-title: "@supports"
 slug: Web/CSS/Reference/At-rules/@supports
 l10n:
-  sourceCommit: e328268bb418551ab451881845881b5837c9da83
+  sourceCommit: 4179ddfb7690019d23f529cbd316c35d2381c75c
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@supports`** permet de définir des déclarations CSS qui dépendent du support de certaines fonctionnalités CSS par le navigateur.
 L'utilisation de cette règle est couramment appelée «&nbsp;requête de fonctionnalité&nbsp;».
 La règle doit être placée au niveau supérieur de votre code ou imbriquée dans une autre règle conditionnelle de groupe.
 
-En JavaScript, `@supports` peut être accédée via le modèle d'objet CSS et l'interface {{DOMxRef("CSSSupportsRule")}}.
+En JavaScript, `@supports` peut être accédée par le modèle d'objet CSS et l'interface {{DOMxRef("CSSSupportsRule")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: @supports", "tabbed-standard")}}
 
@@ -74,7 +74,22 @@ L'exemple suivant retourne vrai si le navigateur prend en charge l'expression `t
 
 ### Syntaxe fonctionnelle
 
-Cette fonction évalue si le navigateur prend en charge la syntaxe de sélecteur définie.
+La syntaxe fonctionnelle vérifie si un navigateur prend en charge des valeurs ou des expressions au sein de la fonction.
+Les fonctions prises en charge dans la syntaxe fonctionnelle sont décrites dans les sections suivantes.
+
+#### `at-rule()`
+
+Cette fonction vérifie si un navigateur prend en charge la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) définie.
+L'exemple suivant retourne vrai et applique le style CSS si le navigateur prend en charge la règle {{cssxref("@keyframes")}}&nbsp;:
+
+```css
+@supports at-rule(@keyframes) {
+}
+```
+
+#### `selector()`
+
+Cette fonction vérifie si un navigateur prend en charge la syntaxe de sélecteur définie.
 L'exemple suivant retourne vrai et applique le style CSS si le navigateur prend en charge le [combinateur d'enfant](/fr/docs/Web/CSS/Reference/Selectors/Child_combinator)&nbsp;:
 
 ```css
@@ -85,7 +100,7 @@ L'exemple suivant retourne vrai et applique le style CSS si le navigateur prend 
 #### `font-tech()`
 
 Cette fonction vérifie si le navigateur prend en charge la technologie de police définie pour la mise en page et le rendu.
-L'exemple suivant retourne vrai et applique le style CSS si le navigateur prend en charge la technologie de police `COLRv1`&nbsp;:
+L'exemple suivant retourne vrai et applique le style CSS contenu si le navigateur prend en charge la technologie de police `COLRv1`&nbsp;:
 
 ```css
 @supports font-tech(color-COLRv1) {
@@ -115,8 +130,8 @@ Le tableau ci-dessous décrit les technologies de police (`<font-tech>`), y comp
 
 #### `font-format()`
 
-Cette fonction vérifie si le navigateur prend en charge le format de police définit pour la mise en page et le rendu.
-L'exemple suivant renvoie vrai et applique le style CSS si le navigateur prend en charge le format de police `opentype`&nbsp;:
+Cette fonction vérifie si le navigateur prend en charge le format de police défini pour la mise en page et le rendu.
+L'exemple suivant retourne vrai et applique le style CSS contenu si le navigateur prend en charge le format de police `opentype`&nbsp;:
 
 ```css
 @supports font-format(opentype) {
@@ -144,7 +159,7 @@ L'opérateur `not` peut être utilisé avant une expression afin de créer une e
 }
 ```
 
-renvoie VRAI si la propriété {{CSSxRef("transform-origin")}} du navigateur ne considère pas la valeur `10em 10em 10em` comme valide.
+Retourne `true` si la propriété {{CSSxRef("transform-origin")}} du navigateur ne considère pas la valeur `10em 10em 10em` comme valide.
 
 Comme pour les autres opérateurs, on peut appliquer l'opérateur `not` à une déclaration, quelle que soit sa complexité. Les exemples qui suivent sont donc des expressions valides&nbsp;:
 
@@ -156,11 +171,11 @@ Comme pour les autres opérateurs, on peut appliquer l'opérateur `not` à une d
 ```
 
 > [!NOTE]
-> Au niveau le plus haut, il n'est pas nécessaire d'encadrer l'opérateur `not` entre parenthèses. Si on souhaite le combiner avec d'autres opérateurs comme `and` ou `or`, il faudra utiliser des parenthèses.
+> Au niveau le plus haut, il n'est pas nécessaire d'encadrer l'opérateur `not` entre parenthèses. Si on souhaite le combiner avec d'autres opérateurs comme `and` ou `or`, il faut utiliser des parenthèses.
 
 ### L'opérateur `and`
 
-L'opérateur `and` peut être utilisé pour former une nouvelle expression à partir de deux expressions. L'expression résultante sera la conjonction des deux expressions originelles. Autrement dit, le résultat de cette nouvelle expression sera VRAI si et seulement si les deux expressions de départ sont vraies et FAUX sinon. Dans l'exemple suivant, l'expression complète ne sera vérifiée que si les deux expressions sont vérifiées&nbsp;:
+L'opérateur `and` peut être utilisé pour former une nouvelle expression à partir de deux expressions. L'expression résultante est la conjonction des deux expressions originelles. Autrement dit, le résultat de cette nouvelle expression est VRAI si et seulement si les deux expressions de départ sont vraies et FAUX sinon. Dans l'exemple suivant, l'expression complète n'est pas vérifiée que si les deux expressions sont vérifiées&nbsp;:
 
 ```css
 @supports (display: table-cell) and (display: list-item) {
@@ -179,7 +194,7 @@ Plusieurs conjonctions peuvent être juxtaposées sans nécessiter plus de paren
 
 ### L'opérateur `or`
 
-L'opérateur `or` peut être utilisé pour former une nouvelle expression à partir de deux expressions. L'expression résultante sera la disjonction des deux expressions originelles. Autrement dit, le résultat de cette nouvelle expression sera VRAI si au moins une des deux expressions est vraie. Dans l'exemple qui suit, l'expression complète est vérifiée si au moins une des deux (ce peuvent être les deux) expressions est vérifiée&nbsp;:
+L'opérateur `or` peut être utilisé pour former une nouvelle expression à partir de deux expressions. L'expression résultante est la disjonction des deux expressions originelles. Autrement dit, le résultat de cette nouvelle expression est VRAI si au moins une des deux expressions est vraie. Dans l'exemple qui suit, l'expression complète est vérifiée si au moins une des deux (ce peuvent être les deux) expressions est vérifiée&nbsp;:
 
 ```css
 @supports (transform-style: preserve) or (-moz-transform-style: preserve) {
@@ -202,7 +217,7 @@ Plusieurs disjonctions peuvent être juxtaposées sans nécessiter plus de paren
 ```
 
 > [!NOTE]
-> Lorsqu'on utilise à la fois l'opérateur `and` et l'opérateur `or`, il devient nécessaire d'utiliser des parenthèses pour que l'ordre d'application des opérateurs soit défini. Si on n'utilise pas de parenthèses, la condition sera considérée comme invalide et l'ensemble de la règle @ sera ignorée.
+> Lorsqu'on utilise à la fois l'opérateur `and` et l'opérateur `or`, il devient nécessaire d'utiliser des parenthèses pour que l'ordre d'application des opérateurs soit défini. Si on n'utilise pas de parenthèses, la condition est considérée comme invalide et l'ensemble de la règle @ est ignorée.
 
 ### Syntaxe formelle
 
@@ -303,6 +318,35 @@ L'exemple suivant applique le style CSS si le navigateur prend en charge le form
   p {
     font-family: "Open Sans", sans-serif;
     src: url("open-sans.woff2") format("woff2");
+  }
+}
+```
+
+### Tester la prise en charge d'une règle @
+
+L'exemple suivant applique un ensemble de styles de schéma de couleurs portée si le navigateur prend en charge la règle {{cssxref("@scope")}}&nbsp;:
+
+```css
+@supports at-rule(@scope) {
+  @scope (.light-scheme) {
+    :scope {
+      background-color: plum;
+    }
+
+    a {
+      color: darkmagenta;
+    }
+  }
+
+  @scope (.dark-scheme) {
+    :scope {
+      background-color: darkmagenta;
+      color: antiquewhite;
+    }
+
+    a {
+      color: plum;
+    }
   }
 }
 ```

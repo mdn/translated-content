@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
-{{htmlelement("input")}} 要素の **`checkbox`** 型は、既定でボックスとして描画され、政府の書類で見られるように、有効な時にはチェックが入ります。正確な外見はブラウザーが実行されているオペレーティングシステムの構成によります。一般にこれは四角形ですが、角が丸くなることもあります。チェックボックスによって、フォームで単一の値を選択して（または選択せずに）送信することができます。
+{{htmlelement("input")}} 要素の **`checkbox`** 型は、デフォルトでボックスとして描画され、政府の書類で見られるように、有効な時にはチェックが入ります。正確な外見はブラウザーが実行されているオペレーティングシステムの構成によります。一般にこれは四角形ですが、角が丸くなることもあります。チェックボックスによって、フォームで単一の値を選択して（または選択せずに）送信することができます。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
 
@@ -64,23 +64,23 @@ input {
 
 この例では、name を `subscribe` に、 value を `newsletter` に設定しました。フォームが送信されると、データの名前と値の組み合わせは `subscribe=newsletter` となります。
 
-`value` 属性が省略された場合は、チェックボックスの既定値は `on` ですので、その場合の送信されるデータは `subscribe=on` となります。
+`value` 属性が省略された場合は、チェックボックスのデフォルト値は `on` ですので、その場合の送信されるデータは `subscribe=on` となります。
 
 > [!NOTE]
-> フォームが送信されたとき、チェックボックスがチェックされていない場合、名前も値もサーバーに送信されません。HTML のみでチェックボックスがチェックされていない状態を表す方法（`value=unchecked` のように）はありません。チェックボックスがチェックされていないときの既定値を送信したい場合は、JavaScript を記述して、フォーム内にチェックされていない状態を示す値を持つ {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} を作成することで実現できます。
+> フォームが送信されたとき、チェックボックスがチェックされていない場合、名前も値もサーバーに送信されません。HTML のみでチェックボックスがチェックされていない状態を表す方法（`value=unchecked` のように）はありません。チェックボックスがチェックされていないときのデフォルト値を送信したい場合は、JavaScript を記述して、フォーム内にチェックされていない状態を示す値を持つ {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} を作成することで実現できます。
 
 ## 追加の属性
 
 すべての {{HTMLElement("input")}} 型で[共通する属性](/ja/docs/Web/HTML/Reference/Elements/input#属性)に加え、 "`checkbox`" 型の入力欄は次の属性にも対応しています。
 
 - `checked`
-  - : [論理](/ja/docs/Glossary/Boolean/HTML)属性で、チェックボックスが既定で（ページが読み込まれたときに）チェックされているかどうかを示します。チェックボックスが現在チェックされているかどうかを示すものでは*ありません*。チェックボックスの状態が変化した場合、このコンテンツ属性は変化を反映しません。（{{domxref("HTMLInputElement")}} の `checked` IDL 属性のみが更新されます。）
+  - : [論理](/ja/docs/Glossary/Boolean/HTML)属性で、チェックボックスがデフォルトで（ページが読み込まれたときに）チェックされているかどうかを示します。チェックボックスが現在チェックされているかどうかを示すものでは*ありません*。チェックボックスの状態が変化した場合、このコンテンツ属性は変化を反映しません。（{{domxref("HTMLInputElement")}} の `checked` IDL 属性のみが更新されます。）
     > [!NOTE]
     > 他の入力コントロールとは異なり、チェックボックスの値は現在 `checked` の状態にある場合のみ、送信データに含まれます。その場合、チェックボックスの `value` 属性の値、または `value` が設定されていない場合は `on` が入力欄の値として報告されます。
-    > 他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性を使用してください。
+    > 他のブラウザーとは異なり、 Firefox はデフォルトでページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性を使用してください。
 
 - `value`
-  - : `value` 属性はすべての {{HTMLElement("input")}} 要素で共通のものです。しかし、 `checkbox` 型の入力欄では特殊な用途を提供します。フォームが送信されると、現在チェックされているチェックボックスのみがサーバーに送信され、報告される値が `value` 属性の値になります。 `value` が指定されていない場合は、既定で `on` の文字列になります。これは前述の[値](#値)の節で紹介されています。
+  - : `value` 属性はすべての {{HTMLElement("input")}} 要素で共通のものです。しかし、 `checkbox` 型の入力欄では特殊な用途を提供します。フォームが送信されると、現在チェックされているチェックボックスのみがサーバーに送信され、報告される値が `value` 属性の値になります。 `value` が指定されていない場合は、デフォルトで `on` の文字列になります。これは前述の[値](#値)の節で紹介されています。
 
 - `switch`
   - : [論理](/ja/docs/Glossary/Boolean/HTML)属性で、`checkbox` 入力にのみ適用されます。この属性が存在する場合、その `checkbox` は通常の `checkbox` ではなく、オン/オフを切り替えるスイッチ (`switch`) であることを示します。これにより `checkbox` コントロールの外観は変化しますが、基本的な動作は通常の `checkbox` と同じです。
@@ -119,9 +119,9 @@ input {
 
 この例では、両方のチェックボックスに同じ `name` を設定しました。両方のチェックボックスがチェックされてフォームが送信されると、名前/値の組み合わせの文字列は `interest=coding&interest=music` のように送信されます。データがサーバー側に届いたときには、連想配列以外の方法で解析して、 `interest` の値を持つ値を、最後の値だけでなくすべて拾う必要があります。 Python を使用したやり方としては、例えば、[単一のサーバー側の変数で複数のチェックボックスを扱う](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable)を参照してください。
 
-### 既定のチェックボックス
+### デフォルトのチェックボックス
 
-チェックボックスを既定でチェック状態にするには、 `checked` 属性を設定するだけです。次の例を見てください。
+チェックボックスをデフォルトでチェック状態にするには、 `checked` 属性を設定するだけです。次の例を見てください。
 
 ```html
 <fieldset>

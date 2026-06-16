@@ -1,12 +1,10 @@
 ---
-title: "<noscript>: スクリプト無し要素"
+title: HTML `<noscript>` スクリプト無し要素
+short-title: <noscript>
 slug: Web/HTML/Reference/Elements/noscript
-original_slug: Web/HTML/Element/noscript
 l10n:
-  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<noscript>`** は [HTML](/ja/docs/Web/HTML) の要素で、ブラウザーがこのページ上のスクリプトの種類に対応していない場合や、スクリプトの実行が無効にされている場合に表示する HTML の部分を定義します。
 
@@ -34,20 +32,31 @@ l10n:
 
 ロック！！
 
+## 使用上のメモ
+
+`<noscript>` 要素は、スクリプトが有効かどうかに応じて、その子要素の表示方法を変更します。
+
+- スクリプトが無効になっている場合、`<noscript>` 要素は、その子要素を [HTML コンテンツ](/ja/docs/Web/API/HTMLElement)として表します。
+- スクリプトが有効になっている場合、`<noscript>` 要素は、その子要素を[テキスト](/ja/docs/Web/API/Text)として表します。
+
 ## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -55,18 +64,11 @@ l10n:
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        スクリプトの実行が無効かつ {{HTMLElement("head")}}
-        要素の子孫である場合: 任意の順序で、0 個以上の
-        {{HTMLElement("link")}}
-        要素、0 個以上の{{HTMLElement("style")}} 要素、0 個以上の
-        {{HTMLElement("meta")}} 要素。<br />スクリプトの実行が無効かつ
-        {{HTMLElement("head")}} 要素の子孫ではない場合: 任意の<a
-          href="/ja/docs/Web/HTML/Guides/Content_categories#透過的コンテンツ"
-          >透過的コンテンツ</a
-        >、ただし
-        <code>&#x3C;noscript></code>
-        要素を入れ子にしてはならない。<br />上記以外の場合:
-        フローコンテンツ、記述コンテンツ。
+        スクリプトの実行が無効かつ {{HTMLElement("head")}} 要素の子孫である場合:
+        任意の順序で、0 個以上の {{HTMLElement("link")}} 要素、0 個以上の{{HTMLElement("style")}} 要素、0 個以上の {{HTMLElement("meta")}} 要素。<br />
+        スクリプトの実行が無効かつ {{HTMLElement("head")}} 要素の子孫ではない場合:
+        任意の<a href="/ja/docs/Web/HTML/Guides/Content_categories#透過的コンテンツ">透過的コンテンツ</a>、ただし <code>&#x3C;noscript></code> 要素を入れ子にしてはならない。<br />
+        上記以外の場合: フローコンテンツ、記述コンテンツ。
       </td>
     </tr>
     <tr>
@@ -76,20 +78,13 @@ l10n:
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        祖先要素に <code>&#x3C;noscript></code> が存在しない場合に、<a
-          href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >
-        を受け入れるすべての要素。または、祖先要素に
-        <code>&#x3C;noscript></code>
-        が存在しない場合に、{{HTMLElement("head")}} 要素 (HTML
-        文書に限る)。
+        祖先に <code>&#x3C;noscript></code> 要素が存在しない場合、または、{{HTMLElement("head")}} 要素（ただし HTML 文書に限る）の中の場合、こちらも祖先に <code>&#x3C;noscript></code> 要素が存在しない場合は、<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>

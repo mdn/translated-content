@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Storage Access API")}}{{SeeCompatTable}}
 
-**`requestStorageAccessFor()`** は {{domxref("Document")}} インターフェイスのメソッドで、最上位のサイトが、同じ[一連の関連ウェブサイト](/ja/docs/Web/API/Storage_Access_API/Related_website_sets)内の別のサイトを元とする埋め込みコンテンツに代わって、サードパーティのクッキーへのアクセスをリクエストできるようにします。アクセスが許可された場合は解決されたプロミス ({{jsxref("Promise")}}) を返し、アクセスが拒否された場合は拒否されたプロミスを返します。
+**`requestStorageAccessFor()`** は {{domxref("Document")}} インターフェイスのメソッドで、最上位のサイトが、同じ[一連の関連ウェブサイト](/ja/docs/Web/API/Storage_Access_API)内の別のサイトを元とする埋め込みコンテンツに代わって、サードパーティのクッキーへのアクセスをリクエストできるようにします。アクセスが許可された場合は解決されたプロミス ({{jsxref("Promise")}}) を返し、アクセスが拒否された場合は拒否されたプロミスを返します。
 
 ## 構文
 
@@ -40,7 +40,7 @@ requestStorageAccessFor(requestedOrigin)
     - この文書が最上位の文書でない場合。
     - この文書のオリジンが `null` であった場合。
     - 指定された `requestedOrigin` が[不透明](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque)であった場合。
-    - 最上位のサイトと埋め込まれたサイトが同じ[関連する一連のウェブサイト](/ja/docs/Web/API/Storage_Access_API/Related_website_sets)でない場合。
+    - 最上位のサイトと埋め込まれたサイトが同じ[関連する一連のウェブサイト](/ja/docs/Web/API/Storage_Access_API)でない場合。
     - 埋め込まれた {{htmlelement("iframe")}} がサンドボックス化されており、`allow-storage-access-by-user-activation` トークンが設定されていない場合。
     - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって、使用がブロックされた場合。
     - ユーザーエージェントの権限リクエストにより、この API の使用が拒否された場合。

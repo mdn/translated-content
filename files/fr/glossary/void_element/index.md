@@ -2,16 +2,16 @@
 title: Élément vide
 slug: Glossary/Void_element
 l10n:
-  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
+  sourceCommit: bd1e27169f37922f382d98c98bf4ab68bff08edd
 ---
 
 Un **élément vide** (<i lang="en">void element</i> en anglais) est un {{Glossary("element", "élément")}} HTML qui **ne peut pas** avoir de nœud enfant (c'est-à-dire des éléments imbriqués ou des nœuds texte). Les éléments vides n'ont qu'une balise ouvrante&nbsp;; les balises fermantes ne doivent pas être indiquées pour ces éléments.
 
-En HTML, un élément vide ne doit pas avoir de balise fermante. Ainsi, `<input type="text"></input>` sera invalide en HTML. En revanche, pour SVG ou MathML, les éléments qui ne peuvent pas avoir de nœuds enfants peuvent utiliser une balise fermante plutôt que la syntaxe auto-fermante XML.
+En HTML, un élément vide ne doit pas avoir de balise fermante. Ainsi, `<input type="text"></input>` est invalide en HTML. En revanche, pour SVG ou MathML, les éléments qui ne peuvent pas avoir de nœuds enfants peuvent utiliser une balise fermante plutôt que la syntaxe auto-fermante XML.
 
 Les spécifications [HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/), [SVG <sup>(angl.)</sup>](https://w3c.github.io/svgwg/svg2-draft/), et [MathML <sup>(angl.)</sup>](https://w3c.github.io/mathml/spec.html) définissent précisément ce que chaque élément peut contenir. Aussi, certaines combinaisons de balises n'ont pas de sémantique correcte associée.
 
-Bien qu'on puisse ajouter des nœuds enfants à un élément vide par le biais du DOM en utilisant JavaScript, ce n'est pas une bonne pratique et le résultat obtenu pourra ne pas être fiable.
+Bien qu'on puisse ajouter des nœuds enfants à un élément vide par le biais du DOM en utilisant JavaScript, ce n'est pas une bonne pratique et le résultat obtenu peut ne pas être fiable.
 
 Voici la liste des éléments vides en HTML&nbsp;:
 
@@ -40,10 +40,10 @@ Toutefois, certains outils de formatage de code ajoutent une barre oblique de fi
 
 Les balises auto-fermantes sont requises pour les éléments vides en {{Glossary("XML")}}, {{Glossary("XHTML")}} et {{Glossary("SVG")}} (par exemple, `<circle cx="50" cy="50" r="50" />`).
 
-Pour SVG et MathML, les éléments qui ne peuvent pas avoir de nœud enfant peuvent utiliser une balise auto-fermante. Dans ces cas, si l'élément utilise une balise auto-fermante, il ne doit pas avoir de balise fermante en plus.
+En SVG et MathML, un élément sans nœuds enfants peut être marqué comme auto-fermant en ajoutant une barre oblique à la fin de sa balise ouvrante. Si la balise ouvrante d'un élément est marquée comme auto-fermante, l'élément ne doit pas avoir de balise fermante.
 
 > [!NOTE]
-> Si une barre oblique `/` est présente dans la balise ouvrante et directement précédée (sans espace) par une valeur d'attribut sans quotes, la barre oblique fera alors partie de la valeur de l'attribut plutôt que d'être ignorée par l'analyseur syntaxique. Ainsi, si on écrit `<img src=http://www.example.com/logo.svg/>`, cela signifie que l'attribut `src` contient la valeur `http://www.example.com/logo.svg/` et l'URL ainsi construite est invalide.
+> Si une barre oblique `/` est présente dans la balise ouvrante et directement précédée (sans espace) par une valeur d'attribut sans quotes, la barre oblique fait alors partie de la valeur de l'attribut plutôt que d'être ignorée par l'analyseur syntaxique. Ainsi, si on écrit `<img src=http://www.example.com/logo.svg/>`, cela signifie que l'attribut `src` contient la valeur `http://www.example.com/logo.svg/` et l'URL ainsi construite est invalide.
 
 ## Voir aussi
 

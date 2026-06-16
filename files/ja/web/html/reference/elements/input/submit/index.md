@@ -1,11 +1,10 @@
 ---
-title: <input type="submit">
+title: HTML `<input type="submit">` 属性値
+short-title: <input type="submit">
 slug: Web/HTML/Reference/Elements/input/submit
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`submit`** 型は、ボタンとして描画されます。 {{domxref("Element/click_event", "click")}} イベントが発生したとき（ふつうはユーザーがボタンをクリックしたとき）、{{Glossary("User agent", "ユーザーエージェント")}}はサーバーへフォームを送信しようとします。
 
@@ -23,7 +22,7 @@ l10n:
 
 ### value 属性の省略
 
-`value` を指定しなかった場合、ボタンにはユーザーエージェントによって選ばれた既定のラベルが表示されます。このラベルは「送信」または「クエリーを送信」などのものです。次のものはこのブラウザーにおける送信ボタンの既定のラベルです。
+`value` を指定しなかった場合、ボタンにはユーザーエージェントによって選ばれたデフォルトのラベルが表示されます。このラベルは「送信」または「クエリーを送信」などのものです。次のものはこのブラウザーにおける送信ボタンのデフォルトのラベルです。
 
 ```html
 <input type="submit" />
@@ -46,7 +45,7 @@ l10n:
 文字列で、フォームのデータをサーバーに送信する際に使われるエンコーディング方法を識別します。許されている値は 3 つです。
 
 - `application/x-www-form-urlencoded`
-  - : これは既定値で、フォームのデータを {{jsxref("encodeURI()")}} などのアルゴリズムを使ってテキストを{{Glossary("Percent-encoding", "パーセントエンコーディング")}}した後のテキストとして送信します。
+  - : これはデフォルト値で、フォームのデータを {{jsxref("encodeURI()")}} などのアルゴリズムを使ってテキストを{{Glossary("Percent-encoding", "パーセントエンコーディング")}}した後のテキストとして送信します。
 - `multipart/form-data`
   - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) が `file` ([`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
 - `text/plain`
@@ -61,7 +60,7 @@ l10n:
 文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) を上書きします。許可されている値は次の通りです。
 
 - `get`
-  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性で指定された URL に疑問符 ("?") を追加し、 `formenctype` または [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性で指定された方法でエンコードされたフォームのデータが続くものになります。この URL は HTTP の {{HTTPMethod("GET")}} リクエストを用いてサーバーに送信されます。このメソッドは {{Glossary("ASCII")}} 文字のみを含むフォームでうまく動作し、副作用はありません。これが既定値です。
+  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性で指定された URL に疑問符 ("?") を追加し、 `formenctype` または [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性で指定された方法でエンコードされたフォームのデータが続くものになります。この URL は HTTP の {{HTTPMethod("GET")}} リクエストを用いてサーバーに送信されます。このメソッドは {{Glossary("ASCII")}} 文字のみを含むフォームでうまく動作し、副作用はありません。これがデフォルト値です。
 - `post`
   - : フォームのデータは、 `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) で指定された URL に HTTP の {{HTTPMethod("POST")}} メソッドを用いて送信されるリクエストの本文に含められます。このメソッドは複雑なデータやファイルの添付に対応しています。
 - `dialog`
@@ -82,7 +81,7 @@ l10n:
 タブ、ウィンドウ、インラインフレームなどの実際の名前の他に、使用できる特別なキーワードがいくつかあります。
 
 - `_self`
-  - : レスポンスを、形式を形成しているのと同じ閲覧コンテキストに読み込みます。これにより、現在の文書が受信したデータで置き換わります。これは、何も指定されなかった場合に使用される既定値です。
+  - : レスポンスを、形式を形成しているのと同じ閲覧コンテキストに読み込みます。これにより、現在の文書が受信したデータで置き換わります。これは、何も指定されなかった場合に使用されるデフォルト値です。
 - `_blank`
   - : レスポンスを新しい、名前のない、閲覧コンテキストに読み込みます。これは通常、現在の文書内の同じウィンドウの新しいタブですが、{{Glossary("User agent", "ユーザーエージェント")}}の設定によって異なる形となる場合があります。
 - `_parent`

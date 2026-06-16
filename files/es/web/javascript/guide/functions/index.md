@@ -118,7 +118,7 @@ if (num === 0) {
 
 Además de definir funciones como se describe aquí, también puedes usar el constructor {{JSxRef("Function")}} para crear funciones a partir de una cadena en tiempo de ejecución, muy al estilo de {{JSxRef("Global_Objects/eval", "eval()")}}.
 
-Un **método** es una función que es propiedad de un objeto. Obten más información sobre objetos y métodos en [Trabajar con objetos](/es/docs/Web/JavaScript/Guide/Working_with_Objects).
+Un **método** es una función que es propiedad de un objeto. Obten más información sobre objetos y métodos en [Trabajar con objetos](/es/docs/Web/JavaScript/Guide/Working_with_objects).
 
 ## Llamar funciones
 
@@ -155,7 +155,7 @@ El ámbito de una función es la función en la que se declara (o el programa co
 > }
 > ```
 
-Los argumentos de una función no se limitan a cadenas y números. Puedes pasar objetos completos a una función. La función `show_props()` (definida en [Trabajar con objetos](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Objetos_y_propiedades) es un ejemplo de una función que toma un objeto como argumento.
+Los argumentos de una función no se limitan a cadenas y números. Puedes pasar objetos completos a una función. La función `show_props()` (definida en [Trabajar con objetos](/es/docs/Web/JavaScript/Guide/Working_with_objects#Objetos_y_propiedades) es un ejemplo de una función que toma un objeto como argumento.
 
 Una función se puede llamar a sí misma. Por ejemplo, aquí hay una función que calcula factoriales de forma recursiva:
 

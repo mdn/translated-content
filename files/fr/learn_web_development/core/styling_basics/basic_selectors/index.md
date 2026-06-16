@@ -3,12 +3,12 @@ title: Sélecteurs CSS de base
 short-title: Sélecteurs de base
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors
 l10n:
-  sourceCommit: 427efbee9e0da53517f45420af87a66a2a6b6e19
+  sourceCommit: bb4be34c00686ddc46a1cef3123cdf825e9495ec
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}
 
-Dans cette leçon, nous examinons les sélecteurs les plus simples qu'on puisse trouver, ce sont ceux que vous utiliserez le plus couramment dans votre travail.
+Dans cette leçon, nous examinons les sélecteurs les plus simples qu'on puisse trouver, ce sont ceux que vous utilisez le plus couramment dans votre travail.
 
 <table class="standard-table">
   <tbody>
@@ -45,7 +45,7 @@ Dans les articles précédents, vous avez rencontré différents sélecteurs et 
 
 ## Sélecteur de type
 
-Un **sélecteur de type** est parfois appelé _sélecteur de nom de balise_ ou _sélecteur d'élément_ car il sélectionne une balise/un élément HTML dans votre document. Dans l'exemple ci-dessous, nous avons utilisé les sélecteurs `span`, `em` et `strong`.
+Un **sélecteur de type** est parfois appelé _sélecteur de nom de balise_ ou _sélecteur d'élément_, car il sélectionne une balise/un élément HTML dans votre document. Dans l'exemple ci-dessous, nous avons utilisé les sélecteurs `span`, `em` et `strong`.
 
 Essayez de modifier l'exemple suivant (cliquez sur **«&nbsp;Exécuter&nbsp;»** pour l'ouvrir dans le MDN Playground) afin d'ajouter une règle CSS qui sélectionne l'élément `<h1>` et change sa couleur en bleu&nbsp;:
 
@@ -64,10 +64,10 @@ Essayez de modifier l'exemple suivant (cliquez sur **«&nbsp;Exécuter&nbsp;»**
 </p>
 
 <p>
-  Feuilles de navet achillée haricot riz rutabaga <em>endive chou-fleur</em>
-  laitue de mer chou-rave amarante épinard d'eau avocat daikon chou napa asperge
-  pourpier d'hiver chou frisé. Céleri pomme de terre oignon vert raisin du
-  désert raifort épinard
+  Feuilles de navet achillée haricot riz rutabaga
+  <em>endive chou-fleur</em> laitue de mer chou-rave amarante épinard d'eau
+  avocat daikon chou napa asperge pourpier d'hiver chou frisé. Céleri pomme de
+  terre oignon vert raisin du désert raifort épinard
 </p>
 ```
 
@@ -132,7 +132,7 @@ Essayez de modifier l'exemple ci-dessus (en utilisant le MDN Playground) pour ef
 
 ### Cibler des classes d'un élément donné
 
-Vous pouvez créer un sélecteur qui ciblera des éléments spécifiques ayant la classe appliquée. Dans l'exemple suivant, nous allons mettre en surbrillance un `<span>` avec la classe `highlight` différemment d'un titre `<h1>` avec la classe `highlight`. Nous faisons cela en utilisant le sélecteur de type pour l'élément à cibler, avec la classe ajoutée à l'aide d'un point, sans espace entre les deux.
+Vous pouvez créer un sélecteur qui cible des éléments spécifiques ayant la classe appliquée. Dans l'exemple suivant, nous allons mettre en surbrillance un `<span>` avec la classe `highlight` différemment d'un titre `<h1>` avec la classe `highlight`. Nous faisons cela en utilisant le sélecteur de type pour l'élément à cibler, avec la classe ajoutée à l'aide d'un point, sans espace entre les deux.
 
 ```html live-sample___class-type
 <h1 class="highlight">Sélecteurs de classe</h1>
@@ -165,7 +165,7 @@ h1.highlight {
 
 {{EmbedLiveSample("class-type", "", 200)}}
 
-Cette approche réduit la portée d'une règle. La règle ne s'appliquera qu'à cette combinaison particulière d'élément et de classe. Vous devrez ajouter un autre sélecteur si vous souhaitez que la règle s'applique à d'autres éléments.
+Cette approche réduit la portée d'une règle. La règle ne s'applique qu'à cette combinaison particulière d'élément et de classe. Vous devez ajouter un autre sélecteur si vous souhaitez que la règle s'applique à d'autres éléments.
 
 ### Cibler un élément appartenant à plus d'une classe
 
@@ -173,7 +173,7 @@ Vous pouvez attribuer plusieurs classes à un même élément et les sélectionn
 
 L'exemple ci-dessous présente trois `<div>` contenant chacun une note. Si la boîte est dans la classe `notebox` elle a une bordure grise. Si de plus elle est dans la classe `warning` ou `danger`, on change la {{CSSxRef("border-color")}}.
 
-Nous pouvons indiquer au navigateur que nous voulons cibler l'élément uniquement s'il possède deux classes appliquées, en les enchaînant sans espace entre elles. Vous verrez que le dernier `<div>` ne reçoit aucun style, car il n'a que la classe `danger`. Pour que des styles lui soient appliqués, il doit aussi avoir la classe `notebox`.
+Nous pouvons indiquer au navigateur que nous voulons cibler l'élément uniquement s'il possède deux classes appliquées, en les enchaînant sans espace entre elles. Vous pouvez voir que le dernier `<div>` ne reçoit aucun style, car il n'a que la classe `danger`. Pour que des styles lui soient appliqués, il doit aussi avoir la classe `notebox`.
 
 ```html live-sample___class-many
 <div class="notebox">Ceci est une note d'information.</div>
@@ -183,7 +183,7 @@ Nous pouvons indiquer au navigateur que nous voulons cibler l'élément uniqueme
 <div class="notebox danger">Cette note affiche un danger&nbsp;!</div>
 
 <div class="danger">
-  Ceci ne sera pas mis en forme — il faut aussi la classe notebox
+  Ceci n'est pas mis en forme — il faut aussi la classe notebox
 </div>
 ```
 
@@ -246,7 +246,7 @@ h1#heading {
 {{EmbedLiveSample("id", "", 200)}}
 
 > [!WARNING]
-> Utiliser le même ID plusieurs fois dans un document peut sembler fonctionner pour la mise en forme, mais ne le faites pas. Cela produit un code invalide et provoquera des comportements étranges à de nombreux endroits.
+> Utiliser le même ID plusieurs fois dans un document peut sembler fonctionner pour la mise en forme, mais ne le faites pas. Cela produit un code invalide et provoque des comportements étranges à de nombreux endroits.
 
 ### Jouer avec les sélecteurs d'ID
 
@@ -254,6 +254,165 @@ Essayez de modifier l'exemple ci-dessus pour effectuer les changements suivants&
 
 1. Modifiez le HTML pour appliquer les styles de `#one` au premier paragraphe plutôt qu'au second.
 2. Modifiez le CSS pour changer les déclarations à l'intérieur des sélecteurs d'ID, et observez comment cela modifie l'apparence du HTML.
+
+## Listes de sélecteurs
+
+Si vous souhaitez appliquer le même CSS à plusieurs éléments, vous pouvez combiner des sélecteurs individuels en une _liste de sélecteurs_. La règle est alors appliquée à tous les sélecteurs individuels. Par exemple, si j'ai le même CSS pour un sélecteur `h1` et un sélecteur `.special`, je pourrais écrire cela comme deux règles séparées.
+
+```css
+h1 {
+  color: blue;
+}
+
+.special {
+  color: blue;
+}
+```
+
+Vous pouvez également combiner ces sélecteurs en une liste de sélecteurs en ajoutant une virgule entre eux.
+
+```css-nolint
+h1, .special {
+  color: blue;
+}
+```
+
+Les espaces blancs sont valides avant ou après la virgule. Vous pouvez également trouver les sélecteurs plus lisibles si chacun est sur une nouvelle ligne.
+
+```css
+h1,
+.special {
+  color: blue;
+}
+```
+
+### Jouer avec les listes de sélecteurs
+
+Dans l'exemple ci-dessous, essayez de combiner les deux sélecteurs qui ont des déclarations identiques. L'affichage visuel doit être le même par la suite.
+
+```html live-sample___selector-list
+<h1>Sélecteurs de type</h1>
+<p>
+  Les légumes sont un bonus pour vous, donc vous devez en manger plus chou-rave
+  oignon gallois daikon amarante tatsoi tomatillo melon haricot azuki ail.
+</p>
+
+<p>
+  Bette à carde gombo maïs soko <strong>endive</strong> courge. Persil échalote
+  courgette tatsoi pois germes fève chou cavalier pissenlit gombo wakamé tomate.
+  Pissenlit concombre pois de terre cacahuète soko courgette.
+</p>
+
+<p>
+  Feuilles de navet achillée millefeuille haricot blanc rutabaga
+  <em>endive chou-fleur</em> laitue de mer chou-rave amarante épinard d'eau
+  avocat daikon chou chinois asperges d'hiver pourpier chou frisé. Céleri pomme
+  de terre oignon vert raisin sec raifort épinard
+</p>
+```
+
+```css live-sample___selector-list
+body {
+  font-family: sans-serif;
+}
+span {
+  background-color: yellow;
+}
+
+strong {
+  color: rebeccapurple;
+}
+
+em {
+  color: rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("selector-list", "", 280)}}
+
+### Sélecteurs invalides dans les listes de sélecteurs
+
+Lorsque vous regroupez des sélecteurs de cette manière, si un seul sélecteur est syntaxiquement invalide, toute la règle est ignorée.
+
+Dans l'exemple suivant, la règle de sélecteur de classe invalide est ignorée, tandis que le `h1` est toujours mis en forme.
+
+```css-nolint
+h1 {
+  color: blue;
+}
+
+..special {
+  color: blue;
+}
+```
+
+Cependant, lorsqu'ils sont combinés, ni le `h1` ni la classe ne sont mis en forme, car toute la règle est considérée comme invalide.
+
+```css-nolint
+h1, ..special {
+  color: blue;
+}
+```
+
+## Le sélecteur universel
+
+Le sélecteur universel est indiqué par un astérisque (`*`). Il sélectionne tout dans le document. Si `*` est enchaîné en utilisant un [combinateur descendant](/fr/docs/Web/CSS/Reference/Selectors/Descendant_combinator), il sélectionne tout à l'intérieur de cet élément ancêtre. Par exemple, `p *` sélectionne tous les éléments imbriqués à l'intérieur de l'élément `<p>`.
+
+Dans l'exemple suivant, nous utilisons le sélecteur universel pour supprimer les marges sur tous les éléments. Au lieu du style par défaut du navigateur, qui espace les titres et les paragraphes avec des marges, tout est rapproché.
+
+```html live-sample___universal
+<h1>Sélecteur universel</h1>
+<p>
+  Les légumes sont un bonus pour vous, donc vous devez en manger plus
+  <span>chou-rave oignon gallois</span> daikon amarante tatsoi tomatillo melon
+  haricot azuki ail.
+</p>
+
+<p>
+  Bette à carde gombo maïs soko <strong>endive</strong> courge. Persil échalote
+  courgette tatsoi pois germes fève chou cavalier pissenlit gombo wakamé tomate.
+  Pissenlit concombre pois de terre cacahuète soko courgette.
+</p>
+```
+
+```css live-sample___universal
+body {
+  font-family: sans-serif;
+}
+
+* {
+  margin: 0;
+}
+```
+
+{{EmbedLiveSample("universal")}}
+
+Ce type de comportement peut parfois être observé dans les «&nbsp;feuilles de style de réinitialisation&nbsp;», qui suppriment tous les styles du navigateur. Comme le sélecteur universel apporte des modifications globales, nous l'utilisons pour des situations très spécifiques, comme celle décrite ci-dessous.
+
+### Utiliser le sélecteur universel pour rendre vos sélecteurs plus lisibles
+
+Une utilisation du sélecteur universel consiste à rendre les sélecteurs plus lisibles et plus intuitifs. Par exemple, si nous voulons sélectionner tous les éléments descendants d'un élément `<article>` qui sont le premier enfant de leur parent, y compris les enfants directs, nous pourrions utiliser la pseudo-classe {{CSSxRef(":first-child")}}. Nous en apprendrons davantage sur cela dans [pseudo-classes et pseudo-éléments](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)&nbsp;:
+
+```css
+article :first-child {
+  font-weight: bold;
+}
+```
+
+Cependant, ce sélecteur peut être confondu avec `article:first-child`, qui sélectionne tout élément `<article>` qui est le premier enfant d'un autre élément.
+
+Pour éviter cette confusion, nous pourrions ajouter le sélecteur universel à la pseudo-classe `:first-child`, afin qu'il soit plus évident ce que fait le sélecteur. Il sélectionne _tout_ élément qui est le premier enfant d'un élément `<article>`, ou le premier enfant de tout élément descendant de `<article>`&nbsp;:
+
+```css
+article *:first-child {
+  font-weight: bold;
+}
+```
+
+Les deux sont équivalents, mais certaines personnes trouvent la deuxième option plus facile à lire.
+
+> [!NOTE]
+> Vous êtes peu susceptible de voir cette technique utilisée dans des sites Web publiés. Nous ne l'utilisons pas beaucoup sur MDN, par exemple. Cependant, vous devez quand même envisager de l'utiliser dans votre code si vous trouvez cela plus facile à comprendre.
 
 ## Résumé
 
@@ -264,7 +423,7 @@ Dans cet article, nous avons récapitulé les sélecteurs CSS, qui vous permette
 
 ## Voir aussi
 
-- [Classes CSS <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j/~01d?via=mdn), Scrimba <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
+- [Les classes CSS <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j/~01d?via=mdn), Scrimba <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
   - : Une leçon interactive qui fournit des conseils sur les classes CSS.
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}

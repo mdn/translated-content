@@ -1,12 +1,10 @@
 ---
-title: "<rt>: ルビテキスト要素"
+title: HTML `<rt>` ルビテキスト要素
+short-title: <rt>
 slug: Web/HTML/Reference/Elements/rt
-original_slug: Web/HTML/Element/rt
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<rt>`** は [HTML](/ja/docs/Web/HTML) の要素で、ルビによる注釈（振り仮名）のルビテキストの部分を指定します。東アジアの組版において発音、翻訳、音写などの情報を提供するために使用します。 `<rt>` 要素は常に {{HTMLElement("ruby")}} 要素の中で使用されます。
 
@@ -56,7 +54,9 @@ body {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>なし</td>
     </tr>
@@ -71,9 +71,7 @@ body {
     <tr>
       <th scope="row">タグの省略</th>
       <td>
-        <code>&#x3C;rt></code> 要素の直後に <code>&#x3C;rt></code>
-        要素または {{HTMLElement("rp")}}
-        要素がある場合、または親要素内に他のコンテンツがない場合は終了タグを省略可能。
+        <code>&#x3C;rt></code> 要素の直後に <code>&#x3C;rt></code> 要素または {{HTMLElement("rp")}} 要素がある場合、または親要素内に他のコンテンツがない場合は終了タグを省略可能。
       </td>
     </tr>
     <tr>
@@ -83,7 +81,7 @@ body {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>
@@ -114,3 +112,4 @@ body {
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
 - {{CSSXRef("text-transform", "text-transform: full-size-kana")}}
+- [CSS ルビレイアウト](/ja/docs/Web/CSS/Guides/Ruby_layout)モジュール

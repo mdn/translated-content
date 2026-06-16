@@ -1,13 +1,12 @@
 ---
 title: JavaScript オブジェクトの基本
+short-title: オブジェクト
 slug: Learn_web_development/Core/Scripting/Object_basics
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 952d0a3a076d16f0cf7566040e5cbe059996138d
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Events","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics", "Learn_web_development/Core/Scripting")}}
 
 この記事では、基本的な JavaScript オブジェクトの構文を学び、このコースで以前に見た一部の JavaScript の機能を復習し、すでに提供された多くの機能がオブジェクトであるという事実を再確認します。
 
@@ -279,14 +278,15 @@ person.height;
 メソッドの中で、少し見慣れない点に気付いたかもしれません。 次の例でその点について考えてみましょう。
 
 ```js
-introduceSelf() {
-  console.log(`こんにちは、${this.name[0]}です。`);
-}
+const person = {
+  // …
+  introduceSelf() {
+    console.log(`こんにちは、${this.name[0]}です。`);
+  },
+};
 ```
 
-"this" とは何だろうと思ったことでしょう。 この `this` キーワードはコードの中がその中で書かれている、現在のオブジェクトを参照しています。なので、この場合では `person` を指します。 なぜ `this` の代わりに単に `person` と書かないのでしょうか。
-
-まあ、オブジェクトリテラルを単一のものしか作成しない場合は、それほど有益なものではありません。しかし、複数のオブジェクトを作成する場合、`this`を使用すると、作成するすべてのオブジェクトに対して同じメソッド定義を使用することができます。
+"this" とは何だろうと思ったことでしょう。`this` キーワードは通常、コードが実行されている現在のオブジェクトを指します。オブジェクトメソッドの文脈では、`this` はそのメソッドが呼び出されたオブジェクトを指します。
 
 それでは、簡略化した `person` オブジェクトを使って、その意味を説明していきましょう。
 
@@ -407,14 +407,10 @@ const myVideo = document.querySelector("video");
 const myNotification = new Notification("Hello!");
 ```
 
-## 確認テスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト: オブジェクトの基本](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Object_basics) を見てください。
-
 ## まとめ
 
 お疲れ様でした。最初の JS オブジェクトの記事の終わりまで到達しました。JavaScript のオブジェクトがどのように機能するかについて、良い考えを得ることができたのではないでしょうか。記事では、簡単なオリジナルオブジェクトの作成を含んでいました。オブジェクトは関連するデータと機能を保存する構造として非常に便利であることも理解しなければいけません。もし別々の変数と関数として、`person` オブジェクトのすべてのプロパティとメソッドを記録していくとすると、非効率でありストレスが溜まります。そして同じ名前の他の変数や関数をクラッシュしてしまう危険性も抱えてしまいます。オブジェクトは有害な方法を避けて、パッケージの中で安全に鍵をして情報を守ってくれます。
 
-次の記事では、「オブジェクトの基本」に関する理解を確認するための確認テストに取り組みます。これは、JavaScript がオブジェクトに他のオブジェクトのプロパティを継承させるための基本的な方法です。
+次回の記事では、これらの情報をどれだけ理解し、身についたかを確認するためのテストをいくつかご紹介します。
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Events","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics", "Learn_web_development/Core/Scripting")}}

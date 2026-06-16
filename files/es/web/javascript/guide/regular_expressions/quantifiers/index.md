@@ -27,10 +27,10 @@ console.log(modifiedQuote.match(regexpTooGreedy));
 
 ## Tipos
 
-La siguiente tabla también está duplicada en [esta hoja de referencia](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet). No olvides editarla también, ¡gracias!
+La siguiente tabla también está duplicada en [esta hoja de referencia](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet). No olvides editarla también, ¡gracias!
 
 > [!NOTE]
-> A continuación, _elemento_ se refiere no solo a caracteres individuales, sino que también incluye [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
+> A continuación, _elemento_ se refiere no solo a caracteres individuales, sino que también incluye [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
 <table class="standard-table">
     <thead>
@@ -166,13 +166,13 @@ console.log(texto.match(regexpNoCodiciosa));
 
 ## Compatibilidad del navegador
 
-Para obtener información sobre la compatibilidad del navegador, consulta la [tabla principal de compatibilidad de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions#Compatibilidad_del_navegador).
+Para obtener información sobre la compatibilidad del navegador, consulta la [tabla principal de compatibilidad de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions#Compatibilidad_del_navegador).
 
 ## Ve también
 
-- [Guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions)
-  - [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
+- [Guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions)
+  - [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
