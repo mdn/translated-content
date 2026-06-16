@@ -1,5 +1,6 @@
 ---
 title: MediaMetadata：artist 属性
+short-title: artist
 slug: Web/API/MediaMetadata/artist
 l10n:
   sourceCommit: 033bcb33784ef00e5c95c0333d51c771125f9f94
