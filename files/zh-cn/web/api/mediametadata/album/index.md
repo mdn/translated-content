@@ -1,5 +1,6 @@
 ---
 title: MediaMetadata：album 属性
+short-title: album
 slug: Web/API/MediaMetadata/album
 l10n:
   sourceCommit: 033bcb33784ef00e5c95c0333d51c771125f9f94
