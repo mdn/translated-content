@@ -28,7 +28,7 @@ mutationObserver.observe(target[, options])
     - `childList` {{optional_inline}}
       - : 当为 `true` 时，监听 `target` 节点中发生的节点的新增与删除（同时，如果 `subtree` 为 `true`，会针对整个子树生效）。默认值为 `false`。
     - `attributes` {{optional_inline}}
-      - : 当为 `true` 时观察所有监听的节点属性值的变化。当声明了 `attributeFilter` 或 `attributeOldValue`时，默认值为 `true`；否则默认值为 `false`。
+      - : 当为 `true` 时观察所有监听的节点属性值的变化。当声明了 `attributeFilter` 或 `attributeOldValue` 时，默认值为 `true`；否则默认值为 `false`。
     - `attributeFilter` {{optional_inline}}
       - : 一个用于声明哪些属性名会被监听的数组。如果不声明该属性，所有属性的变化都将触发通知。
     - `attributeOldValue` {{optional_inline}}
