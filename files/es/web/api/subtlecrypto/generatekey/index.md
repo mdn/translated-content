@@ -20,17 +20,17 @@ generateKey(algorithm, extractable, keyUsages)
 
 - `algorithm`
   - : Un objeto que define el tipo de clave que se va a generar y proporciona parámetros adicionales específicos del algoritmo.
-    - Para [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss),
-      o [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep):
-      pase un objeto [`RsaHashedKeyGenParams`](/en-US/docs/Web/API/RsaHashedKeyGenParams).
-    - Para [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) o [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh):
-      pase un objeto [`EcKeyGenParams`](/en-US/docs/Web/API/EcKeyGenParams).
-    - Para [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac): pase un objeto [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams).
-    - Para [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), o [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
-      pase un objeto [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams).
-    - Para [Ed25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519): pase una cadena de texto `Ed25519` o un objeto de la forma `{ name: "Ed25519" }`.
-    - Para [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519): pase la cadena de texto `X25519` o un objeto de la forma `{ name: "X25519" }`.
+    - Para [RSASSA-PKCS1-v1_5](/es/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/es/docs/Web/API/SubtleCrypto/sign#rsa-pss),
+      o [RSA-OAEP](/es/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep):
+      pase un objeto [`RsaHashedKeyGenParams`](/es/docs/Web/API/RsaHashedKeyGenParams).
+    - Para [ECDSA](/es/docs/Web/API/SubtleCrypto/sign#ecdsa) o [ECDH](/es/docs/Web/API/SubtleCrypto/deriveKey#ecdh):
+      pase un objeto [`EcKeyGenParams`](/es/docs/Web/API/EcKeyGenParams).
+    - Para [HMAC](/es/docs/Web/API/SubtleCrypto/sign#hmac): pase un objeto [`HmacKeyGenParams`](/es/docs/Web/API/HmacKeyGenParams).
+    - Para [AES-CTR](/es/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/es/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
+      [AES-GCM](/es/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), o [AES-KW](/es/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
+      pase un objeto [`AesKeyGenParams`](/es/docs/Web/API/AesKeyGenParams).
+    - Para [Ed25519](/es/docs/Web/API/SubtleCrypto/sign#ed25519): pase una cadena de texto `Ed25519` o un objeto de la forma `{ name: "Ed25519" }`.
+    - Para [X25519](/es/docs/Web/API/SubtleCrypto/deriveKey#x25519): pase la cadena de texto `X25519` o un objeto de la forma `{ name: "X25519" }`.
 
 - `extractable`
   - : Un valor booleano que indica si será posible exportar la clave utilizando {{domxref("SubtleCrypto.exportKey()")}} o {{domxref("SubtleCrypto.wrapKey()")}}.
@@ -91,7 +91,7 @@ let keyPair = await window.crypto.subtle.generateKey(
 );
 ```
 
-### Generación de un par de claves de curva elíptica. 
+### Generación de un par de claves de curva elíptica
 
 Este código genera un par de claves de firma ECDSA.
 [Consulta el código completo en GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ecdsa.js)
@@ -190,7 +190,7 @@ button.addEventListener("click", () => {
 
 async function test() {
   try {
-    // Crea un par de claves y usa desestructuración para asignarlas a las variables. 
+    // Crea un par de claves y usa desestructuración para asignarlas a las variables.
     const { publicKey, privateKey } = await crypto.subtle.generateKey(
       {
         name: "Ed25519",
@@ -218,13 +218,13 @@ async function test() {
 
 #### Resultado
 
- La información sobre las claves creadas se muestran a continuación. (o un mensaje de error en el navegador si no permite crear la clave). 
+La información sobre las claves creadas se muestran a continuación. (o un mensaje de error en el navegador si no permite crear la clave).
 
 {{EmbedLiveSample("Ed25519", "100%", "240px")}}
 
-### Generación de clave X25519 
+### Generación de clave X25519
 
-Este código genera un par de claves pública y privada X25519 que se puede utilizar en {{domxref("SubtleCrypto.deriveKey()")}} para crear una clave compartida o un {{domxref("SubtleCrypto.deriveBits()")}} para crear un secreto compartido. 
+Este código genera un par de claves pública y privada X25519 que se puede utilizar en {{domxref("SubtleCrypto.deriveKey()")}} para crear una clave compartida o un {{domxref("SubtleCrypto.deriveBits()")}} para crear un secreto compartido.
 
 ```html hidden
 <input id="run-button" type="button" value="Run" />
@@ -272,7 +272,7 @@ button.addEventListener("click", () => {
 
 async function test() {
   try {
-     // Crea un par de claves y usa desestructuración para asignarlas a las variables. 
+    // Crea un par de claves y usa desestructuración para asignarlas a las variables.
     const { publicKey, privateKey } = await crypto.subtle.generateKey(
       {
         name: "X25519",
