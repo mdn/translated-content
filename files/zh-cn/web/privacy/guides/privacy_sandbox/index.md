@@ -11,7 +11,7 @@ Google 的*隐私沙盒*项目是一系列提案，旨在无需第三方 cookie 
 
 - [归因报告 API](/zh-CN/docs/Web/API/Attribution_Reporting_API)
   - : 使开发人员能够测量转化率——例如，当用户在一个网站上点击嵌入的广告，然后在供应商的网站上购买该商品时——并访问这些转化的报告。它无需依赖第三方跟踪 cookie 即可实现这一点。
-- [独立分区状态的 cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)
+- [独立分区状态的 cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies)
   - : 也称为**分区 cookie**，CHIPS 允许开发人员将 cookie 选择为分区存储，每个顶级站点都有一个单独的 cookie 罐。
 - [围栏框架 API](/zh-CN/docs/Web/API/Fenced_frame_API)
   - : 提供控制嵌入 {{htmlelement("fencedframe")}} 元素中的内容的功能，这些元素允许嵌入内容同时解决 {{htmlelement("iframe")}} 的隐私问题。
