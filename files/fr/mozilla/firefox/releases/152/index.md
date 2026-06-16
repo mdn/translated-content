@@ -3,7 +3,7 @@ title: Firefox 152 note de version pour les développeurs
 short-title: Firefox 152
 slug: Mozilla/Firefox/Releases/152
 l10n:
-  sourceCommit: bfaf90116752cffcff6098be4d40f843b8e9f6ee
+  sourceCommit: 681ee4beb90b7e0d001f8938df41d5af0f602fe7
 ---
 
 Cet article présente les informations concernant les changements de Firefox 152 qui concernent les développeur·euse·s.
@@ -47,8 +47,8 @@ Pas de changements notables.
 
 #### DOM
 
-- La propriété en lecture seule {{DOMxRef("Notification/actions", "actions")}} et la propriété statique en lecture seule {{DOMxRef("Notification/maxActions_static", "maxActions")}} de l'interface {{DOMxRef("Notification")}} sont prises en charge.
-  Celles-ci contiennent les actions de notification définies avec {{DOMxRef("ServiceWorkerRegistration.showNotification()")}}, et le nombre maximum d'actions pouvant être définies pour une notification, respectivement.
+- Les actions de notification sont prises en charge. Cela inclut le paramètre {{DOMxRef("ServiceWorkerRegistration.showNotification#actions", "actions")}} de {{DOMxRef("ServiceWorkerRegistration.showNotification()")}}, ainsi que la propriété en lecture seule {{DOMxRef("Notification/actions","actions")}} et la propriété statique en lecture seule {{DOMxRef("Notification/maxActions_static", "maxActions")}} de l'interface {{DOMxRef("Notification")}}.
+  Cela permet d'inclure des boutons d'action sur les notifications de l'appareil et de réagir lorsqu'ils sont pressés.
   ([bogue Firefox 1959931 <sup>(angl.)</sup>](https://bugzil.la/1959931)).
 - La méthode {{DOMxRef("Element.getAnimations()")}} peut désormais accepter le paramètre [`options.pseudoElement`](/fr/docs/Web/API/Element/getAnimations#pseudoelement).
   Cela permet de cibler directement un pseudo-élément spécifique, plutôt que de filtrer les résultats de `{ subtree: true }`.
@@ -112,3 +112,7 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
   La clause `with` [`{ type: "text" }`](/fr/docs/Web/JavaScript/Reference/Statements/import/with#modules_de_texte_type_text) permet d'importer le code source d'un module en tant que valeur de chaîne de caractères.
   Le type de média de la réponse est ignoré, et le contenu est analysé comme du texte même si la source contient des scripts ou d'autres codes exécutables.
   ([bogue Firefox 2024854 <sup>(angl.)</sup>](https://bugzil.la/2024854)).
+
+- **Valeurs `<timeline-range-name>` dans les sélecteurs `@keyframes`**&nbsp;: `layout.css.scroll-driven-animations.enabled`
+
+  La règle {{CSSxRef("@keyframes")}} prend désormais en charge les valeurs {{CSSxRef("&lt;timeline-range-name&gt;")}}. Ces [valeurs](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#noms_des_plages_chronologiques) permettent de définir le segment dans lequel une animation pilotée par le défilement se déroule. ([bogue Firefox 1824875 <sup>(angl.)</sup>](https://bugzil.la/1824875)).
