@@ -7,11 +7,11 @@ l10n:
 
 {{APIRef("Media Session API")}}
 
-{{domxref(“MediaMetadata”)}} 接口的 **`artist`** 属性用于返回或设置待播放媒体的艺术家、乐队、创作者等的名称。
+{{domxref("MediaMetadata")}} 接口的 **`artist`** 属性用于返回或设置待播放媒体的艺术家、乐队、创作者等的名称。
 
 ## 值
 
-一个包含艺术家姓名的{{jsxref(“String”, "字符串")}}。
+一个包含艺术家姓名的{{jsxref("String", "字符串", , 1)}}。
 
 ## 示例
 
