@@ -1,5 +1,6 @@
 ---
 title: MediaMetadata：MediaMetadata() 构造函数
+short-title: MediaMetadata()
 slug: Web/API/MediaMetadata/MediaMetadata
 l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
@@ -25,7 +26,7 @@ new MediaMetadata(metadata)
     - `artist` {{optional_inline}}
       - : 包含待播放媒体的艺术家、乐队、创作者等的名称。默认为空字符串（`""`）。
     - `artwork` {{optional_inline}}
-      - : 表示与正在播放的媒体相关联的图像的{{jsxref("Array", "对象数组")}}，默认值为空数组。对象结构如下：
+      - : 表示与正在播放的媒体相关联的图像的对象{{jsxref("Array", "数组", , 1)}}，默认值为空数组。对象结构如下：
         - `src`
           - : 用户代理用于获取图像数据的 URL。
         - `sizes` {{optional_inline}}
@@ -35,7 +36,7 @@ new MediaMetadata(metadata)
     - `chapterInfo` {{optional_inline}}
       - : 包含 {{domxref("ChapterInformation")}} 对象实例的数组，这些实例表示与媒体相关的章节信息元数据。对象结构如下：
         - `artwork` {{optional_inline}}
-          - : 包含 `artwork` 对象的{{jsxref("Array", "数组")}}（参见上文），这些对象代表与该章节相关的图片。如果缺省，`artwork` 默认为空数组。
+          - : 包含 `artwork` 对象的{{jsxref("Array", "数组", , 1)}}（参见上文），这些对象代表与该章节相关的图片。如果省略此属性，`artwork` 默认为空数组。
         - `startTime` {{optional_inline}}
           - : 表示章节开始时间的秒数。如果缺省，`startTime` 的默认值为 `0`。
         - `title` {{optional_inline}}
