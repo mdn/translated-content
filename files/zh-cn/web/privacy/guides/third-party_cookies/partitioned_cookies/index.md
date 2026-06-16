@@ -1,12 +1,9 @@
 ---
 title: 具有独立分区状态的 Cookie（CHIPS）
-slug: orphaned/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
-original_slug: Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
+slug: Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies
 l10n:
   sourceCommit: 81dbd6314e340cfff2a489b370a3ec6d53c74287
 ---
-
-{{SeeCompatTable}}
 
 **具有独立分区状态的 Cookie**（Cookies Having Independent Partitioned State，CHIPS），也称之为**分区 Cookie**（Partitioned cookie），允许开发人员选择将 cookie 放入分区存储中，每个顶级站点都有一个单独的 cookie 存储空间。
 
