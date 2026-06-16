@@ -21,8 +21,8 @@ l10n:
 > slug: Web/CSS/Guides/NameOfTheModule
 > page-type: css-module
 > spec-urls:
->  - url1
->  - url2
+>   - url1
+>   - url2
 > sidebar: cssref
 > ---
 > ```
@@ -69,25 +69,25 @@ Crea las subsecciones pertinentes para enumerar las propiedades, funciones, tipo
 
 ### Propiedades
 
-Una lista de todas las propiedades (abreviadas y completas) proporcionadas por el módulo que estén soportados en al menos un navegador principal.
+Una lista de todas las propiedades (abreviadas y completas) proporcionadas por el módulo que estén soportadas en al menos un navegador principal.
 
-Añade un párrafo indicando las propiedades introducidas por el módulo que aún no están soportados por ningún navegador, si las hay.
+Añade un párrafo indicando las propiedades introducidas por el módulo que aún no están soportadas por ningún navegador, si las hay.
 
 Omite esta sección si el módulo no define ninguna propiedad.
 
 ### Reglas-at (@rules)
 
-Una lista de las reglas-at de CSS proporcionadas por el módulo que estén soportados en al menos un navegador principal.
+Una lista de las reglas-at de CSS proporcionadas por el módulo que estén soportadas en al menos un navegador principal.
 
-Añade un párrafo indicando las reglas-at introducidas por el módulo que aún no están soportados por ningún navegador, si las hay.
+Añade un párrafo indicando las reglas-at introducidas por el módulo que aún no están soportadas por ningún navegador, si las hay.
 
 Omite esta sección si el módulo no define ninguna regla-at.
 
 ### Funciones
 
-Una lista de las funciones CSS proporcionadas por el módulo que estén soportados en al menos un navegador principal.
+Una lista de las funciones CSS proporcionadas por el módulo que estén soportadas en al menos un navegador principal.
 
-Añade un párrafo indicando las funciones introducidas por el módulo que aún no están soportados por ningún navegador, si las hay.
+Añade un párrafo indicando las funciones introducidas por el módulo que aún no están soportadas por ningún navegador, si las hay.
 
 Omite esta sección si el módulo no define ninguna función CSS.
 
@@ -109,9 +109,9 @@ Omite esta sección si el módulo no define ningún evento.
 
 ### Interfaces
 
-Una lista de las interfaces de API relacionadas proporcionadas por el módulo que estén soportados en al menos un navegador principal.
+Una lista de las interfaces de API relacionadas proporcionadas por el módulo que estén soportadas en al menos un navegador principal.
 
-Añade un párrafo indicando las interfaces introducidas por el módulo que aún no están soportados por ningún navegador, si las hay.
+Añade un párrafo indicando las interfaces introducidas por el módulo que aún no están soportadas por ningún navegador, si las hay.
 
 Omite esta sección si el módulo no define ninguna interfaz de API.
 
@@ -138,9 +138,9 @@ Enumera todas las demás propiedades, tipos de datos, términos del glosario, et
 
 _Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo markdown._
 
-## Vease también
+## Véase también
 
-Incluye enlaces a cualquier otra página de referencia y otro contenido que sea relevante pero que no encaje en las otras secciones. Si hay guías externas relevantes que valga la pena enlazar, colócalas al final de la lista (no bajo la sección "Guías", que está limitada a guías de MDN). Consulta la sección [Vease también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en nuestra _Guía de estilo de escritura_ para más consejos e instrucciones.
+Incluye enlaces a cualquier otra página de referencia y otro contenido que sea relevante pero que no encaje en las otras secciones. Si hay guías externas relevantes que valga la pena enlazar, colócalas al final de la lista (no bajo la sección "Guías", que está limitada a guías de MDN). Consulta la sección [Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en nuestra _Guía de estilo de escritura_ para más consejos e instrucciones.
 
 - enlace1
 - enlace2
