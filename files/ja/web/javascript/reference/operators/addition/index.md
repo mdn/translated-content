@@ -69,7 +69,7 @@ false + false; // 0
 1n + 2n; // 3n
 ```
 
-加算で長整数と数値のオペランドを混在させることはできません。 `null` 、 `undefined` および真偽値は数値に強制変換されるため、使用することはできません。
+加算で長整数と数値のオペランドを混在させることはできません。`null`、`undefined` および真偽値は数値に強制変換されるため、使用することはできません。
 
 ```js example-bad
 1n + 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
