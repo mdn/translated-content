@@ -2,7 +2,7 @@
 title: Flux de travail et processus
 slug: Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes
 l10n:
-  sourceCommit: 62ab95d20f246369cfab654c5a7a8727deb21ea6
+  sourceCommit: 30f3ddc823c82f8135f96a5a7ca081baebda7a33
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Finding_a_job", "Learn_web_development/Getting_started/Soft_skills")}}
@@ -36,11 +36,11 @@ Un aspect important des projets techniques que les débutant·e·s négligent so
 Lorsque vous créez un site web, vous utilisez une combinaison de différentes technologies, souvent appelée **pile technologique** (<i lang="en">tech stack</i> en anglais). Plus un site devient grand et complexe, plus la pile technologique s'étoffe. Elle peut être très simple pour une démo regardée par vous et quelques collègues, mais la pile d'un site en production, même apparemment simple, peut être bien plus complexe qu'il n'y paraît, car il faut&nbsp;:
 
 - Charger rapidement (c'est l'objectif de la [performance](/fr/docs/Learn_web_development/Extensions/Performance/why_web_performance)).
-- Gérer un grand nombre d'utilisateurs·rices simultanément (il doit **passer à l'échelle**).
+- Gérer un grand nombre d'utilisateur·ice·s simultanément (il doit **passer à l'échelle**).
 - Être bien conçu pour que les utilisateur·ice·s accèdent facilement aux informations et services.
 - Être facile à maintenir et à faire évoluer en équipe.
 
-À un niveau très général, une pile technologique d'application web pourrait ressembler à ceci&nbsp;:
+À un niveau très général, une pile technologique d'application web peut ressembler à ceci&nbsp;:
 
 ```plain
 Front-end
@@ -57,19 +57,19 @@ Le vôtre, construit autour d'un produit serveur comme Apache, ou un service com
 ```
 
 > [!NOTE]
-> Vous verrez souvent des acronymes qui désignent des piles technologiques populaires, comme [MEAN <sup>(angl.)</sup>](https://www.mongodb.com/resources/languages/mean-stack) (MongoDB, Express, Angular, Node) ou [LAMP](https://fr.wikipedia.org/wiki/LAMP) (Linux, Apache, MySQL, PHP ou Python).
+> Vous pouvez souvent voir des acronymes qui désignent des piles technologiques populaires, comme [MEAN <sup>(angl.)</sup>](https://www.mongodb.com/resources/languages/mean-stack) (MongoDB, Express, Angular, Node) ou [LAMP](https://fr.wikipedia.org/wiki/LAMP) (Linux, Apache, MySQL, PHP ou Python).
 
 Sur MDN, nous nous concentrons surtout sur la partie front-end, mais même celle-ci se divise en de nombreux éléments. Par exemple&nbsp;:
 
-- Vous utiliserez probablement un framework JavaScript (comme [React](/fr/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)) pour définir les composants qui composent l'interface utilisateur.
-- Le framework utilisera sans doute un langage de template (comme [Mustache <sup>(angl.)</sup>](https://mustache.github.io/)) pour définir la structure HTML et inclure dynamiquement du contenu variable.
-- Vous ajouterez des styles via du CSS compatible avec le framework. Cela peut être du CSS pur, un framework CSS (comme [Tailwind <sup>(angl.)</sup>](https://tailwindcss.com/)) ou un préprocesseur (comme [Sass <sup>(angl.)</sup>](https://sass-lang.com/)).
-- Un projet JavaScript doit inclure des tests pour s'assurer que les ajouts de code ne cassent rien. Les tests sont généralement réalisés avec un framework de test (comme [Jest <sup>(angl.)</sup>](https://jestjs.io/)).
+- Vous utiliserez probablement un cadriciel (<i lang="en">framework</i> en anglais) JavaScript (comme [React](/fr/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)) pour définir les composants qui composent l'interface utilisateur.
+- Le cadriciel utilisera sans doute un langage de template (comme [Mustache <sup>(angl.)</sup>](https://mustache.github.io/)) pour définir la structure HTML et inclure dynamiquement du contenu variable.
+- Vous ajouterez des styles avec du CSS compatible avec le cadriciel. Cela peut être du CSS pur, un cadriciel CSS (comme [Tailwind <sup>(angl.)</sup>](https://tailwindcss.com/)) ou un préprocesseur (comme [Sass <sup>(angl.)</sup>](https://sass-lang.com/)).
+- Un projet JavaScript doit inclure des tests pour s'assurer que les ajouts de code ne cassent rien. Les tests sont généralement réalisés avec un cadriciel de test (comme [Jest <sup>(angl.)</sup>](https://jestjs.io/)).
 - Les sites plus importants utilisent un outil de packaging/build (comme [Parcel <sup>(angl.)</sup>](https://parceljs.org/)) pour améliorer la performance, réduire la taille des fichiers, supprimer les composants inutilisés, etc.
 - Et ainsi de suite.
 
 > [!NOTE]
-> Vous entendrez aussi parler de **schémas d'architecture**. Par exemple, [modèle-vue-contrôleur (MVC)](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur) est un schéma suivi par de nombreux frameworks JavaScript, tandis que [publish–subscribe (pub/sub) <sup>(angl.)</sup>](https://dev.to/willvelida/the-publisher-subscriber-pattern-pubsub-messaging-10in) est courant dans les applications de messagerie. Il n'est pas nécessaire de tout comprendre en détail, mais une certaine familiarité aide à appréhender un nouvel outil ou framework.
+> Vous entendrez aussi parler de **schémas d'architecture**. Par exemple, [modèle-vue-contrôleur (MVC)](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur) est un schéma suivi par de nombreux cadriciels JavaScript, tandis que [publish-subscribe (pub/sub) <sup>(angl.)</sup>](https://dev.to/willvelida/the-publisher-subscriber-pattern-pubsub-messaging-10in) est courant dans les applications de messagerie. Il n'est pas nécessaire de tout comprendre en détail, mais une certaine familiarité aide à appréhender un nouvel outil ou cadriciel.
 
 Il existe aussi des outils hors de la pile technique elle-même pour vous aider à la gérer ou à créer des ressources pour le site&nbsp;:
 
@@ -80,7 +80,7 @@ Il existe aussi des outils hors de la pile technique elle-même pour vous aider 
 
 Cela fait beaucoup d'informations à assimiler. Notre conseil&nbsp;: **ne paniquez pas&nbsp;!** Le but de cet article n'est pas de vous inquiéter en vous faisant croire que vous avez soudainement dix fois plus de choses à apprendre. Il s'agit simplement de vous donner une vision d'ensemble des projets web et de vous familiariser avec certains termes que vous croiserez.
 
-Avec le temps, vous développerez des connaissances sur plusieurs de ces outils et technologies, mais vous ne serez pas expert·e en tout, et ce n'est pas nécessaire&nbsp;: c'est le rôle de l'équipe. Pour l'instant, vous faites exactement ce qu'il faut en apprenant les compétences de base comme HTML, CSS et JavaScript. Les autres outils et spécialisations viendront plus tard dans votre parcours.
+Avec le temps, vous allez développer des connaissances sur plusieurs de ces outils et technologies, mais vous ne serez pas expert·e en tout, et ce n'est pas nécessaire&nbsp;: c'est le rôle de l'équipe. Pour l'instant, vous faites exactement ce qu'il faut en apprenant les compétences de base comme HTML, CSS et JavaScript. Les autres outils et spécialisations viendront plus tard dans votre parcours.
 
 ## Métiers
 
@@ -97,7 +97,7 @@ Dans une équipe de développement web, il existe de nombreux métiers différen
 - **Développeur·euse front-end**
   - : C'est (probablement) ce que vous visez si vous lisez ceci&nbsp;! Les développeur·euse·s front-end utilisent HTML, CSS et JavaScript pour créer la partie visuelle du site web avec laquelle les utilisateur·ice·s interagissent, donnant vie aux maquettes fonctionnelles et visuelles créées par les designers UX et graphiques.
 - **Développeur·euse back-end**
-  - : Responsable des parties non visuelles du site web. Il·elle écrit le code back-end pour demander des données internes, générer des pages HTML à partir de modèles et traiter les données externes soumises par les utilisateur·ice·s. Il·elle gère aussi la configuration du serveur web, la sécurité du site, etc.
+  - : Responsable des parties non visuelles du site web. Il·elle écrit le code back-end pour demander des données internes, générer des pages HTML à partir de modèles et traiter les données externes envoyées par les utilisateur·ice·s. Il·elle gère aussi la configuration du serveur web, la sécurité du site, etc.
 - **Développeur·euse full-stack**
   - : Prend en charge à la fois les tâches de développement front-end et back-end.
 - **Ingénieur·e assurance qualité (QA)**
@@ -134,11 +134,11 @@ Il s'agit d'une vue simplifiée&nbsp;: d'autres phases existent autour de la mis
 
 ## Processus de gestion de projet
 
-Un·e chef·fe de projet utilisera un certain type de processus pour gérer le projet web, suivre l'avancement des différentes tâches, s'assurer qu'elles sont réalisées dans le bon ordre et à temps, etc. Les deux principaux types de processus sont&nbsp;:
+Un·e chef·fe de projet utilise un certain type de processus pour gérer le projet web, suivre l'avancement des différentes tâches, s'assurer qu'elles sont réalisées dans le bon ordre et à temps, etc. Les deux principaux types de processus sont&nbsp;:
 
 - **Cascade**
   - : Désigne la gestion d'un projet en phases claires et fixes, où chacune dépend de la précédente, et où peu de changements d'exigences sont anticipés. En général, un seul grand résultat est livré à la fin du projet. La gestion de l'équipe tend à être plus bureaucratique, avec moins d'autonomie.
-    - Les projets en cascade ont tendance à être mieux spécifiés au départ et à avoir moins de dérive des objectifs (ajout d'exigences en cours de projet). De plus, les livraisons de produits plus importantes et moins fréquentes sont plus faciles à gérer en termes de planification des sorties, de marketing, de formation et de documentation.
+    - Les projets en cascade ont tendance à être mieux définis au départ et à avoir moins de dérive des objectifs (ajout d'exigences en cours de projet). De plus, les livraisons de produits plus importantes et moins fréquentes sont plus faciles à gérer en termes de planification des sorties, de marketing, de formation et de documentation.
     - Cependant, le modèle en cascade est moins flexible, et les changements se produisent beaucoup plus lentement. Attendre plusieurs mois pour une correction de bogue peut être frustrant.
 - **Agile**
   - : Désigne la gestion d'un projet de manière plus flexible, où plusieurs phases peuvent avancer simultanément, et où plusieurs résultats plus petits sont livrés à différents jalons tout au long du projet. Les changements d'exigences sont attendus et peuvent être gérés en modifiant les priorités selon les besoins. Les équipes sont généralement plus autonomes.
@@ -169,7 +169,7 @@ Des outils comme [Trello](https://trello.com/fr) et [Asana](https://asana.com/fr
 
 ## S'exercer aux workflows de projet
 
-Vous devriez vous renseigner sur les processus ci-dessus, et vous entraîner à suivre certains de vos projets professionnels ou personnels à l'aide d'un tableau kanban. Ne vous inquiétez pas d'utiliser une méthodologie scrum complexe&nbsp;: le kanban de base suffit pour le moment. Même en solo, il peut être intéressant de s'exercer au workflow suivant&nbsp;:
+Vous devez vous renseigner sur les processus ci-dessus, et vous entraîner à suivre certains de vos projets professionnels ou personnels à l'aide d'un tableau kanban. Ne vous inquiétez pas d'utiliser une méthodologie scrum complexe&nbsp;: le kanban de base suffit pour le moment. Même en solo, il peut être intéressant de s'exercer au workflow suivant&nbsp;:
 
 1. Créer des tâches.
 2. Décider de leur taille ou de leur durée.
@@ -184,7 +184,7 @@ Suivez l'avancement d'un projet complet du début à la fin&nbsp;: essayez avec 
 
 - [Qu'est-ce qu'une pile technologique et comment ça fonctionne&nbsp;? <sup>(angl.)</sup>](https://www.mongodb.com/resources/basics/technology-stack), mongodb.com
 - [Structure d'équipe de développement web&nbsp;: rôles et processus <sup>(angl.)</sup>](https://www.truemark.dev/blog/web-development-team-structure-role-process/), truemark.dev (2017)
-- [Agile contre Cascade <sup>(angl.)</sup>](https://www.productplan.com/learn/agile-vs-waterfall/), ProductPlan
+- [Agile contre Cascade <sup>(angl.)</sup>](https://www.productplan.com/learn/agile-vs-waterfall), ProductPlan
 - [Qu'est-ce que Scrum&nbsp;? <sup>(angl.)</sup>](https://www.scrum.org/learning-series/what-is-scrum/), scrum.org
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Finding_a_job", "Learn_web_development/Getting_started/Soft_skills")}}
