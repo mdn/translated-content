@@ -1,5 +1,6 @@
 ---
 title: MediaMetadata：title 属性
+short-title: title
 slug: Web/API/MediaMetadata/title
 l10n:
   sourceCommit: 033bcb33784ef00e5c95c0333d51c771125f9f94
@@ -11,7 +12,7 @@ l10n:
 
 ## 值
 
-一个包含媒体标题的{{jsxref("String", "字符串")}}。
+一个包含媒体标题的{{jsxref("String", "字符串", , 1)}}。
 
 ## 示例
 
