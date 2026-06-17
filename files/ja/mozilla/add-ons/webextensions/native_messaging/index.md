@@ -1,11 +1,11 @@
 ---
 title: ネイティブメッセージング
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
+l10n:
+  sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
 
-{{AddonSidebar}}
-
-**ネイティブメッセージング**はユーザーのコンピューターにインストールされたアプリケーションと拡張機能との間のメッセージ交換を可能にします。ネイティブメッセージングにより、拡張機能が追加のウェブを介したアクセスなしにサービスを提供できます。
+**ネイティブメッセージング**は、ユーザーのコンピューターにインストールされたアプリケーションと拡張機能との間のメッセージ交換を可能にします。ネイティブメッセージングにより、拡張機能が追加のウェブを介したアクセスなしにサービスを提供できます。
 
 パスワードマネージャーは、パスワードの管理、保管、暗号化を行うネイティブアプリケーションです。ネイティブアプリケーションは拡張機能と通信してウェブフォームに入力を行います。
 
@@ -17,14 +17,14 @@ slug: Mozilla/Add-ons/WebExtensions/Native_messaging
 
 インストール後、拡張機能はネイティブアプリケーションと JSON メッセージを交換することができます。 {{WebExtAPIRef("runtime")}} API の一連の関数を使用します。ネイティブアプリ側では、メッセージは標準入力 (`stdin`) を使用して受信し、標準出力 (`stdout`) を使用して送信します。
 
-![](native-messaging.png)
+![アプリケーションの処理フロー：ネイティブアプリのJSONファイルはユーザーのコンピュータ上に存在し、ネイティブアプリケーションにリソース情報を提供します。ネイティブアプリケーションの読み取りおよび書き込み機能は、ブラウザ拡張機能のランタイムイベントと連携します。](native-messaging.png)
 
 ネイティブメッセージングの対応は Chrome とほぼ互換性がありますが、主に 2 つの違いがあります。
 
 - アプリマニフェストには `allowed_extensions` にアプリの ID の配列を記述します。 Chrome では `allowed_origins` に "chrome-extension" URL の配列を記述します。
 - アプリマニフェストは [Chrome と比較して](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location)異なる場所に格納されます。
 
-GitHub の "webextensions-examples" リポジトリーの ["`native-messaging`" ディレクトリー](https://github.com/mdn/webextensions-examples/tree/master/native-messaging)に完全な例があります。この記事におけるサンプルコードの大半は、この例から直接持ち込んでいます。
+GitHub の "webextensions-examples" リポジトリーの [`native-messaging` ディレクトリー](https://github.com/mdn/webextensions-examples/tree/main/native-messaging)に完全な例があります。この記事におけるサンプルコードの大半は、この例から直接持ち込んでいます。
 
 ## セットアップ
 
@@ -129,16 +129,15 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 
 ブラウザーは、特定の場所にある レジストリーキー に基づいて拡張機能を見つけます。最終的なアプリケーションでプログラム的に追加するか、 GitHub の例を使用する場合は手動で追加する必要があります。詳細については、[マニフェストの場所](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location)を参照してください。
 
-`ping_pong` の例にならって、 Firefox を使用する場合（[Chrome の場合はこのページ](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location)を参照）、メッセージングが動作するように 2 つのレジストリー項目を作成する必要があります。
+`ping_pong` の例にならって、 Firefox を使用する場合（[Chrome の場合はこのページ](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location)を参照）、メッセージングが動作するように 2 つのレジストリー項目のどちらかを作成する必要があります。
 
 - `HKEY_CURRENT_USER\Software\Mozilla\NativeMessagingHosts\ping_pong`
-  - このキーの既定値は、*アプリケーションマニフェスト*へのパスとなります。例: `C:\Users\<myusername>\webextensions-examples\native-messaging\app\ping_pong.json`
-
 - `HKEY_LOCAL_MACHINE\Software\Mozilla\NativeMessagingHosts\ping_pong`
-  - このキーの既定値は、アプリケーションマニフェストへのパスへのパスとなります。
+
+このキーのデフォルト値は、_application_ マニフェストへのパスである必要があります。例えば、`C:\Users\<myusername>\webextensions-examples\native-messaging\app\ping_pong.json` です。
 
 > [!NOTE]
-> GitHub にあるサンプルを元に作業を行う場合は、ブラウザーに WebExtension をインストールする前に、 [readme のこの部分](https://github.com/SphinxKnight/webextensions-examples/tree/master/native-messaging#windows-setup)を読み、 `check_config_win.py` の出力をチェックしてください。
+> GitHub にある例を元に作業を行う場合は、ブラウザーに WebExtension をインストールする前に、 [readme のこの部分](https://github.com/SphinxKnight/webextensions-examples/tree/master/native-messaging#windows-setup)を読み、 `check_config_win.py` の出力をチェックしてください。
 
 ## メッセージの交換
 
@@ -181,7 +180,7 @@ let port = browser.runtime.connectNative("ping_pong");
 Listen for messages from the app.
 */
 port.onMessage.addListener((response) => {
-  console.log("Received: " + response);
+  console.log(`Received: ${response}`);
 });
 
 /*
@@ -212,7 +211,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 ```js
 function onResponse(response) {
-  console.log("Received " + response);
+  console.log(`Received ${response}`);
 }
 
 function onError(error) {
@@ -237,75 +236,58 @@ browser.browserAction.onClicked.addListener(() => {
 
 アプリケーションからの一つのメッセージの最大サイズは 1MB です。アプリケーションへの一つのメッセージの最大サイズは 4GB です。
 
-次の NodeJS コードで、すぐにメッセージを送受信することができます。
+次の NodeJS コード `nm_nodejs.mjs` で、すぐにメッセージを送受信することができます。
 
 ```js
-#!/usr/local/bin/node
+#!/usr/bin/env -S /full/path/to/node
 
-(() => {
-  let payloadSize = null;
+import fs from "node:fs/promises";
 
-  // A queue to store the chunks as we read them from stdin.
-  // This queue can be flushed when `payloadSize` data has been read
-  let chunks = [];
+async function getMessage() {
+  const header = new Uint32Array(1);
+  await readFullAsync(1, header);
+  const message = await readFullAsync(header[0]);
+  return message;
+}
 
-  // Only read the size once for each payload
-  const sizeHasBeenRead = () => Boolean(payloadSize);
-
-  // All the data has been read, reset everything for the next message
-  const flushChunksQueue = () => {
-    payloadSize = null;
-    chunks.splice(0);
-  };
-
-  const processData = () => {
-    // Create one big buffer with all the chunks
-    const stringData = Buffer.concat(chunks);
-
-    // The browser will emit the size as a header of the payload,
-    // if it hasn't been read yet, do it.
-    // The next time we'll need to read the payload size is when all of the data
-    // of the current payload has been read (ie. data.length >= payloadSize + 4)
-    if (!sizeHasBeenRead()) {
-      payloadSize = stringData.readUInt32LE(0);
+async function readFullAsync(length, buffer = new Uint8Array(65536)) {
+  const data = [];
+  while (data.length < length) {
+    const input = await fs.open("/dev/stdin");
+    const { bytesRead } = await input.read({ buffer });
+    await input.close();
+    if (bytesRead === 0) {
+      break;
     }
+    data.push(...buffer.subarray(0, bytesRead));
+  }
+  return new Uint8Array(data);
+}
 
-    // If the data we have read so far is >= to the size advertised in the header,
-    // it means we have all of the data sent.
-    // We add 4 here because that's the size of the bytes that old the payloadSize
-    if (stringData.length >= payloadSize + 4) {
-      // Remove the header
-      const contentWithoutSize = stringData.slice(4, payloadSize + 4);
+async function sendMessage(message) {
+  const header = Buffer.from(new Uint32Array([message.length]).buffer);
+  const stdout = process.stdout;
+  await stdout.write(header);
+  await stdout.write(message);
+}
 
-      // Reset the read size and the queued chunks
-      flushChunksQueue();
-
-      const json = JSON.parse(contentWithoutSize);
-      // Do something with the data…
-    }
-  };
-
-  process.stdin.on("readable", () => {
-    // A temporary variable holding the nodejs.Buffer of each
-    // chunk of data read off stdin
-    let chunk = null;
-
-    // Read all of the available data
-    while ((chunk = process.stdin.read()) !== null) {
-      chunks.push(chunk);
-    }
-
-    processData();
-  });
-})();
+while (true) {
+  try {
+    const message = await getMessage();
+    await sendMessage(message);
+  } catch (e) {
+    console.error(e);
+    process.exit(1);
+  }
+}
 ```
 
-もうひとつ、 Python による例を示します。このアプリケーションはアドオンからのメッセージを受信します。 Linuxでは、このファイルを実行可能にしてください。メッセージが "ping" であった場合、 "pong" というメッセージを返します。
+Python で書かれたもう 1 つの例をご紹介します。これは、拡張機能からのメッセージを待機するものです。Linux では、このファイルに実行権限を設定する必要がある点に注意してください。メッセージが `"ping"` の場合、`"pong"` というメッセージで応答します。
 
-これは Python 2 のバージョンです。
+こちらは Python 2 版です。
 
 ```python
-#!/usr/bin/python -u
+#!/usr/bin/env -S python2 -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
@@ -326,7 +308,12 @@ def get_message():
 
 # Encode a message for transmission, given its content.
 def encode_message(message_content):
-    encoded_content = json.dumps(message_content)
+    # https://docs.python.org/3/library/json.html#basic-usage
+    # To get the most compact JSON representation, you should specify
+    # (',', ':') to eliminate whitespace.
+    # We want the most compact representation because the browser rejects
+    # messages that exceed 1 MB.
+    encoded_content = json.dumps(message_content, separators=(',', ':'))
     encoded_length = struct.pack('=I', len(encoded_content))
     return {'length': encoded_length, 'content': encoded_content}
 
@@ -345,43 +332,46 @@ while True:
 Python 3 では、受信したバイナリーデータを文字列にデコードしないといけません。アドオンに送り返されるコンテンツは構造体を使ってバイナリーデータにエンコードする必要があります。
 
 ```python
-#!/usr/bin/python -u
+#!/usr/bin/env -S python3 -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
 # than text, mode.
 
-import json
 import sys
+import json
 import struct
 
 # Read a message from stdin and decode it.
-def get_message():
-    raw_length = sys.stdin.buffer.read(4)
-
-    if not raw_length:
+def getMessage():
+    rawLength = sys.stdin.buffer.read(4)
+    if len(rawLength) == 0:
         sys.exit(0)
-    message_length = struct.unpack('=I', raw_length)[0]
-    message = sys.stdin.buffer.read(message_length).decode("utf-8")
+    messageLength = struct.unpack('@I', rawLength)[0]
+    message = sys.stdin.buffer.read(messageLength).decode('utf-8')
     return json.loads(message)
 
-# Encode a message for transmission, given its content.
-def encode_message(message_content):
-    encoded_content = json.dumps(message_content).encode("utf-8")
-    encoded_length = struct.pack('=I', len(encoded_content))
-    #  use struct.pack("10s", bytes), to pack a string of the length of 10 characters
-    return {'length': encoded_length, 'content': struct.pack(str(len(encoded_content))+"s",encoded_content)}
+# Encode a message for transmission,
+# given its content.
+def encodeMessage(messageContent):
+    # https://docs.python.org/3/library/json.html#basic-usage
+    # To get the most compact JSON representation, you should specify
+    # (',', ':') to eliminate whitespace.
+    # We want the most compact representation because the browser rejects # messages that exceed 1 MB.
+    encodedContent = json.dumps(messageContent, separators=(',', ':')).encode('utf-8')
+    encodedLength = struct.pack('@I', len(encodedContent))
+    return {'length': encodedLength, 'content': encodedContent}
 
-# Send an encoded message to stdout.
-def send_message(encoded_message):
-    sys.stdout.buffer.write(encoded_message['length'])
-    sys.stdout.buffer.write(encoded_message['content'])
+# Send an encoded message to stdout
+def sendMessage(encodedMessage):
+    sys.stdout.buffer.write(encodedMessage['length'])
+    sys.stdout.buffer.write(encodedMessage['content'])
     sys.stdout.buffer.flush()
 
 while True:
-    message = get_message()
-    if message == "ping":
-        send_message(encode_message("pong"))
+    receivedMessage = getMessage()
+    if receivedMessage == "ping":
+        sendMessage(encodeMessage("pong"))
 ```
 
 ## ネイティブアプリを閉じる
@@ -391,7 +381,7 @@ while True:
 ネイティブアプリケーションを閉じるためには、次のようにします。
 
 - OS X や Linux のような \*nix システムでは、ブラウザーはネイティブアプリケーションが正しく終了する機会を与えるために SIGTERM を送信し、その後 SIGKILL を送信します。これらのシグナルは新しいプロセスグループを作成して分けない限りすべてのサブプロセスに伝播します。
-- Windows では、ブラウザーはネイティブアプリケーションのプロセスを [Job オブジェクト](<https://msdn.microsoft.com/en-us/library/windows/desktop/ms684161(v=vs.85).aspx>)とし、ジョブを kill します。 ネイティブアプリケーションが追加でプロセスを立ち上げ、アプリケーション自体が kill された後もそのままにしたい場合、ネイティブアプリケーションは追加のプロセスを [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) フラグを立てて立ち上げる必要があります。
+- Windows では、ブラウザーはネイティブアプリケーションのプロセスを [Job オブジェクト](https://learn.microsoft.com/ja-jp/windows/win32/procthread/job-objects)とし、ジョブを kill します。 ネイティブアプリケーションが追加でプロセスを立ち上げ、アプリケーション自体が kill された後もそのままにしたい場合、ネイティブアプリケーションは追加のプロセスを [`CREATE_BREAKAWAY_FROM_JOB`](https://learn.microsoft.com/en-us/windows/win32/procthread/process-creation-flags) フラグを立てて立ち上げる必要があります。
 
 ## トラブルシューティング
 
@@ -399,29 +389,29 @@ while True:
 
 アプリケーションが起動できていなかった場合、問題の手がかりとなるエラーメッセージを確認してください。
 
-```
+```plain
 "No such native application <name>"
 ```
 
 - `runtime.connectNative()` に渡した名前がアプリマニフェスト中の名前と一致しているか確認してください。
 - OS X/Linux: アプリマニフェストのファイル名が `<name>.json` となっていることを確認してください。
-- OS X/Linux: ネイティブアプリのマニフェストの場所が[ここ](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#mac_os_x)で述べているところにあるのを確認してください。
-- Windows: レジストリキーが正しい場所にあり、その名前がアプリマニフェスト中の名前と一致していることを確認してください。
-- Windows: レジストリキーに指定されたパスがアプリマニフェストを指していることを確認してください。
+- OS X/Linux: [ネイティブマニフェストのリファレンス](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#macos)に記載されているとおり、ネイティブアプリケーションのマニフェストファイルの場所を確認してください。
+- Windows: レジストリーキーが正しい場所にあり、その名前がアプリマニフェスト中の名前と一致していることを確認してください。
+- Windows: レジストリーキーに指定されたパスがアプリマニフェストを指していることを確認してください。
 
-  ```
+  ```plain
   "Error: Invalid application <name>"
   ```
 
 - アプリケーションの名前に不正な文字が含まれていないことを確認してください。
 
-  ```
+  ```plain
   "'python' is not recognized as an internal or external command, ..."
   ```
 
 - Windows: アプリケーションが Python スクリプトの場合、Python がインストールされており、パスが正しく設定されていることを確認してください。
 
-  ```
+  ```plain
   "File at path <path> does not exist, or is not executable"
   ```
 
@@ -431,19 +421,19 @@ while True:
 - アプリがアプリマニフェストの "path" プロパティで示された場所に配置されていることを確認してください。
 - アプリが実行可能であることを確認してください。
 
-  ```
+  ```plain
   "This extension does not have permission to use native application <name>"
   ```
 
 - アプリマニフェストの "allowed_extensions" がアドオンの ID を含んでいることを確認してください。
 
-  ```
+  ```plain
       "TypeError: browser.runtime.connectNative is not a function"
   ```
 
 - アドオンが "nativeMessaging" permission を持っているか確認してください。
 
-  ```
+  ```plain
   "[object Object]       NativeMessaging.jsm:218"
   ```
 
@@ -452,4 +442,4 @@ while True:
 ## Chrome での非互換性
 
 ウェブ拡張機能のネイティブメッセージングに影響を与えるブラウザー間の違いは、ネイティブアプリに渡される引数、マニフェストファイルの場所など、多数あります。
-これらの違いについては、 [Chrome の非互換性 > ネイティブメッセージング](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#native_messaging)で説明されています。
+これらの違いについては、 [Chrome の非互換性 > ネイティブメッセージング](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#ネイティブメッセージング)で説明されています。
