@@ -395,7 +395,7 @@ while True:
 
 - `runtime.connectNative()` に渡した名前がアプリマニフェスト中の名前と一致しているか確認してください。
 - OS X/Linux: アプリマニフェストのファイル名が `<name>.json` となっていることを確認してください。
-- OS X/Linux: [ネイティブマニフェストのリファレンス](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#macos)に記載されているとおり、ネイティブアプリケーションのマニフェストファイルの場所を確認してください。
+- OS X/Linux: [ネイティブマニフェストのリファレンス](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#macos)に記載されているとおり、ネイティブアプリケーションのマニフェストファイルの場所を確認してください。
 - Windows: レジストリーキーが正しい場所にあり、その名前がアプリマニフェスト中の名前と一致していることを確認してください。
 - Windows: レジストリーキーに指定されたパスがアプリマニフェストを指していることを確認してください。
 
