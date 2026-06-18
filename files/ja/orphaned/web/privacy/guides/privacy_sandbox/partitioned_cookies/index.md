@@ -1,7 +1,8 @@
 ---
 title: 個別区画化された状態を持つクッキー (CHIPS)
 short-title: CHIPS
-slug: Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
+slug: orphaned/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
+original_slug: Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
 l10n:
   sourceCommit: d7a0ef33dfce20818a160557b5a72d6565cec254
 ---
