@@ -1,8 +1,8 @@
 ---
 title: Social engineering
 slug: Glossary/Social_engineering
-page-type: glossary-definition
-sidebar: glossarysidebar
+l10n:
+    sourceCommit: 5e3308146f872a133a3221e612ea8c6ee85dd77d
 ---
 
 In computer security, **social engineering** is a technique in which an attacker psychologically manipulates users into harmful actions, such as divulging their {{glossary("credential", "credentials")}} or other sensitive information.
