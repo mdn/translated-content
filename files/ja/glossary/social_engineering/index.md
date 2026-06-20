@@ -5,6 +5,8 @@ l10n:
     sourceCommit: 5e3308146f872a133a3221e612ea8c6ee85dd77d
 ---
 
+{{GlossarySidebar}}
+
 In computer security, **social engineering** is a technique in which an attacker psychologically manipulates users into harmful actions, such as divulging their {{glossary("credential", "credentials")}} or other sensitive information.
 
 For example, in a [phishing](/en-US/docs/Web/Security/Attacks/Phishing) attack, the user thinks that they are signing into a site with which they have an account, when in reality they are giving their login details to a fake site controlled by the attacker.
