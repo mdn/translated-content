@@ -9,7 +9,7 @@ l10n:
 
 連合アイデンティティシステムでは、リソースへのアクセスを制御する必要がある{{glossary("relying party", "信頼当事者")}}（例えば、ユーザーのサインインを許可するかどうかを判断するウェブサイト）は、ユーザーの認証行為を、認証の判断を信頼できる第三者に委託します。この第三者がアイデンティティプロバイダーと呼ばれます。
 
-Examples of identity providers on the web include Google, Microsoft, and Facebook. This enables websites to allow users to sign in using the user's Google, Microsoft, or Facebook account.
+ウェブ上のアイデンティティプロバイダーの例として、Google、Microsoft、Facebook などがあります。これにより、ウェブサイトはユーザーが Google、Microsoft、または Facebook のアカウントを使用してサインインすることを許可できます。
 
 ## See also
 
