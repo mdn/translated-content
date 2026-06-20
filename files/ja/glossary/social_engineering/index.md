@@ -1,5 +1,5 @@
 ---
-title: Social engineering
+title: Social engineering (ソーシャルエンジニアリング)
 slug: Glossary/Social_engineering
 l10n:
     sourceCommit: 5e3308146f872a133a3221e612ea8c6ee85dd77d
