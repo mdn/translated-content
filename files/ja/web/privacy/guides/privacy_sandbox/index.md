@@ -17,7 +17,7 @@ Google の**プライバシーサンドボックス**プロジェクトは、サ
   - : 開発者が、コンバージョン（例えば、ユーザーがあるサイトに埋め込まれた広告をクリックし、その後で販売者のサイトで商品を購入するといったケース）を測定し、そのコンバージョンに関するレポートを確認できるようになります。この機能は、サードパーティのトラッキングクッキーに依存することなく実現されます。
 - [バウンストラッキング対策](/ja/docs/Web/Privacy/Guides/Bounce_tracking_mitigations)
   - : バウンストラッキング対策は、ヒューリスティック手法を用いてトラッカーサイトを特定し、それらに関連するクッキーやその他の状態データを定期的に削除することで、ユーザーをバウンストラッキングから保護します。
-- [個別区画化された状態を持つクッキー (CHIPS)](/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)
+- [個別区画化された状態を持つクッキー (CHIPS)](/ja/docs/orphaned/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)
   - : **区画化クッキー**とも呼ばれる CHIPS は、開発者がクッキーを区画化されたストレージに格納できるようにするもので、最上位サイトごとに個別のクッキー容器が用意されます。
 - [フェンスフレーム API](/ja/docs/Web/API/Fenced_frame_API)
   - : {{htmlelement("fencedframe")}} 要素に埋め込まれたコンテンツを制御する機能を提供します。これにより、{{htmlelement("iframe")}} のプライバシー上の課題を解決しつつ、コンテンツを埋め込むことが可能になります。
