@@ -11,9 +11,9 @@ l10n:
 
 ウェブ上のアイデンティティプロバイダーの例として、Google、Microsoft、Facebook などがあります。これにより、ウェブサイトはユーザーが Google、Microsoft、または Facebook のアカウントを使用してサインインすることを許可できます。
 
-## See also
+## 関連情報
 
-- Related glossary terms:
-  - {{glossary("Federated identity")}}
-  - {{glossary("Relying party")}}
-- [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API)
+- 関連する用語:
+  - {{glossary("Federated identity", "連合アイデンティティ")}}
+  - {{glossary("Relying party", "信頼当事者")}}
+- [連合認証情報管理 (FedCM) API](/ja/docs/Web/API/FedCM_API)
