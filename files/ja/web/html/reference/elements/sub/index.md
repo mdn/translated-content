@@ -133,7 +133,7 @@ p {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">subscript</a
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">subscript</a
           ></code
         >
       </td>

@@ -17,7 +17,8 @@ l10n:
 
 ```html interactive-example
 <p>
-  You could use this element to highlight <u>speling</u> mistakes, so the writer can <u>corect</u> them.
+  You could use this element to highlight <u>speling</u> mistakes, so the writer
+  can <u>corect</u> them.
 </p>
 ```
 
