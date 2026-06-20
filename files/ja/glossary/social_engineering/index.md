@@ -9,7 +9,7 @@ l10n:
 
 コンピューターセキュリティーにおいて、**ソーシャルエンジニアリング**とは、攻撃者がユーザーを心理的に操作し、{{glossary("credential", "資格情報")}}やその他の機密情報を漏えいさせるなどの有害な行動を取らせる手法のことです。
 
-For example, in a [phishing](/en-US/docs/Web/Security/Attacks/Phishing) attack, the user thinks that they are signing into a site with which they have an account, when in reality they are giving their login details to a fake site controlled by the attacker.
+例えば[フィッシング攻撃](/ja/docs/Web/Security/Attacks/Phishing)では、ユーザーは自分がアカウントを持つ正規のサイトにログインしていると思い込みますが、実際には攻撃者が管理する偽サイトにログイン情報を渡してしまっています。
 
 Social engineering attacks can be distinguished from other attacks because they do not target vulnerabilities in software or hardware, but target users, causing them to make bad decisions. This can make them hard to defend against, although system design choices can make them less likely to succeed or even effectively impossible.
 
