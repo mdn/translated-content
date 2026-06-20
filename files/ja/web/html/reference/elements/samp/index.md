@@ -10,7 +10,7 @@ l10n:
 
 {{InteractiveExample("HTML デモ: &lt;samp&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>パソコンを起動しようとしたところ、こんな笑えるメッセージが表示されました。</p>
 
 <p>
@@ -49,7 +49,7 @@ samp {
 
 この基本的な例では、段落にプログラムの出力の例を含めます。
 
-```html
+```html-nolint
 <p>
   処理が完了すると、このユーティリティから「<samp>スキャンが完了しました。<em>N</em> 件の結果が見つかりました。</samp>」というテキストが出力されます。その後、次の手順に進むことができます。
 </p>
