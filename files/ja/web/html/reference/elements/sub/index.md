@@ -1,12 +1,10 @@
 ---
-title: "<sub>: 下付き文字要素"
+title: HTML `<sub>` 下付き文字要素
+short-title: <sub>
 slug: Web/HTML/Reference/Elements/sub
-original_slug: Web/HTML/Element/sub
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<sub>`** は [HTML](/ja/docs/Web/HTML) の要素で、表記上の理由で下付き文字として表示するべきインラインテキストを示します。下付き文字は普通、小さめのテキストを使用してベースラインよりも低く表示されます。
 
@@ -14,9 +12,9 @@ l10n:
 
 ```html interactive-example
 <p>
-  Almost every developer's favorite molecule is
-  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
-  "caffeine."
+  ほとんどすべての開発者が大好きな分子は、
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>
+  であり、これは「カフェイン」とも呼ばれています。
 </p>
 ```
 
@@ -36,7 +34,7 @@ p {
 
 `<sub>` 要素は、単純に表現や表示の結果を得るためではなく、表記規則上の理由、つまり、表記上の習慣や規則でテキストの位置を変更する必要がある場合にのみ使用してください。
 
-例えば、変更したベースラインを[ワードマーク](https://ja.wikipedia.org/wiki/ワードマーク)の中で使用している企業名にスタイル付けするために `<sub>` を使用することは適切ではありません。このような場合には CSS を使用してください（例えば {{cssxref("vertical-align")}} プロパティを、 `vertical-align: sub` または、もっと詳細にベースラインの位置を制御するために、 `vertical-align: -25%` など）。
+例えば、変更したベースラインを[ワードマーク](https://ja.wikipedia.org/wiki/ワードマーク)の中で使用している企業名にスタイル付けするために `<sub>` を使用することは適切ではありません。このような場合には CSS を使用してください（例えば {{cssxref("vertical-align")}} プロパティを、`vertical-align: sub` または、もっと詳細にベースラインの位置を制御するために、`vertical-align: -25%` など）。
 
 `<sub>` の適切な利用場面には次のようなものがあります（これに限定されるものでありません）。
 
@@ -66,7 +64,7 @@ p {
 
 ```html-nolint
 <p>
-  X軸に沿った水平座標の位置は <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var> と表します。
+  X 軸に沿った水平座標の位置は <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var> と表します。
 </p>
 ```
 
@@ -82,8 +80,9 @@ p {
 
 ```html
 <p>
-  ほぼすべての開発者が大好きな分子は
-  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>、「カフェイン」としてよく知られています。
+  ほとんどすべての開発者が大好きな分子は、
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>
+  であり、これは「カフェイン」とも呼ばれています。
 </p>
 ```
 
@@ -97,7 +96,9 @@ p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
@@ -131,8 +132,9 @@ p {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">subscript</a
+          ></code
         >
       </td>
     </tr>
@@ -158,5 +160,5 @@ p {
 ## 関連情報
 
 - 上付き文字を表現する HTML の {{HTMLElement("sup")}} 要素。sub 要素と同時に使用することはできません。化学式で上付き文字と下付き文字の両方が必要な場合には、[MathML](/ja/docs/Web/MathML) を用いる必要があります。
-- MathML 要素: [`<msub>`](/ja/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/ja/docs/Web/MathML/Reference/Element/msup), [`<msubsup>`](/ja/docs/Web/MathML/Reference/Element/msubsup)
+- MathML の [`<msub>`](/ja/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/ja/docs/Web/MathML/Reference/Element/msup), [`<msubsup>`](/ja/docs/Web/MathML/Reference/Element/msubsup) 要素
 - CSS の {{cssxref("vertical-align")}} プロパティ
