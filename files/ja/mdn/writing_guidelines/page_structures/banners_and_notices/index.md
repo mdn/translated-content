@@ -74,4 +74,4 @@ browser-compat: api.AudioDecoder
 - 上記バナーと同じページに、標準の「仕様書」の下位セクションとして「規格の状況」を追加します。
 
 > [!NOTE]
-> [Related Website Sets](/ja/docs/Web/API/Storage_Access_API/Related_website_sets) がランディングページのバナー、「規格の状況」セクション、何を記述べきかという例になります。
+> [Related Website Sets](/ja/docs/Web/API/Storage_Access_API) がランディングページのバナー、「規格の状況」セクション、何を記述べきかという例になります。
