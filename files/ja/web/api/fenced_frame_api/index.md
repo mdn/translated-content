@@ -19,7 +19,7 @@ l10n:
 
 埋め込み先の文書は、スクリプトを使用して `<iframe>` から様々な情報を読み取ることができます。例えば、埋め込まれた URL が [URL 引数](/ja/docs/Web/URI/Reference/Query)を含んでいる場合、 `src` プロパティから URL を読み取ることで、重要なトラッキング/フィンガープリントのデータを取得できる可能性があります。 `<iframe>` は埋め込みコンテキストの DOM にもアクセスすることができます。
 
-ほとんどの現行ブラウザーは、クッキーのデータが追跡のために使用できなくなるようにストレージを分割する仕組みに取り組んでいます（例えば、 [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) や [Firefox State Partitioning](/ja/docs/Web/Privacy/Guides/State_Partitioning) を参照してください）。
+ほとんどの現行ブラウザーは、クッキーのデータが追跡のために使用できなくなるようにストレージを分割する仕組みに取り組んでいます（例えば、 [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/orphaned/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) や [Firefox State Partitioning](/ja/docs/Web/Privacy/Guides/State_Partitioning) を参照してください）。
 
 `<fencedframe>` 要素は、このパズルのもう一つのピースを解決することを目指しています。形状と機能において、 `<iframe>` ととてもよく似ています。
 
