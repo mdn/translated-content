@@ -70,7 +70,7 @@ if ("documentPictureInPicture" in window) {
 
 次の JavaScript は、{{domxref("DocumentPictureInPicture.requestWindow", "window.documentPictureInPicture.requestWindow()")}} を呼び出して、空のピクチャインピクチャウィンドウを開きます。返される {{jsxref("Promise")}} は、ピクチャインピクチャ {{domxref("Window")}} オブジェクトで解決されます。{{domxref("Element.append()")}} を使用して動画プレーヤーをそのウィンドウに移動し、移動されたことをユーザーに知らせるメッセージを表示します。
 
-`requestWindow()` の `width` および `height` オプションを使用すると、ピクチャインピクチャウィンドウを希望のサイズに設定できます。オプションの値が大きすぎたり小さすぎたりして、ユーザーにとって使いやすいウィンドウサイズに収まらない場合、ブラウザはその値を調整することがあります。
+`requestWindow()` の `width` および `height` オプションを使用すると、ピクチャインピクチャウィンドウを希望のサイズに設定できます。オプションの値が大きすぎたり小さすぎたりして、ユーザーにとって使いやすいウィンドウサイズに収まらない場合、ブラウザーはその値を調整することがあります。
 
 ```js
 async function togglePictureInPicture() {
