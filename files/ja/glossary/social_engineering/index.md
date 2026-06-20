@@ -11,6 +11,6 @@ l10n:
 
 例えば[フィッシング攻撃](/ja/docs/Web/Security/Attacks/Phishing)では、ユーザーは自分がアカウントを持つ正規のサイトにログインしていると思い込みますが、実際には攻撃者が管理する偽サイトにログイン情報を渡してしまっています。
 
-Social engineering attacks can be distinguished from other attacks because they do not target vulnerabilities in software or hardware, but target users, causing them to make bad decisions. This can make them hard to defend against, although system design choices can make them less likely to succeed or even effectively impossible.
+ソーシャルエンジニアリング攻撃は、ソフトウェアやハードウェアの脆弱性を狙うのではなく、ユーザーに誤った判断をさせようとする点で、他の攻撃と区別されます。そのため防御が難しいですが、システム設計によって攻撃が成功する可能性を下げたり、事実上不可能にしたりできます。
 
 Defenses against social engineering attacks often focus on teaching users safe practices, such as not clicking links in emails. However, experience has shown that all users can be vulnerable to social engineering attacks especially when they are tired, busy, or stressed.
