@@ -7,7 +7,7 @@ l10n:
 
 **アイデンティティプロバイダー** (IdP) は、{{glossary("federated identity", "連合アイデンティティ")}}システムにおいて、ユーザーの{{glossary("credential", "資格情報")}}を管理し、ユーザーを{{glossary("authentication", "認証")}}できる主体です。
 
-In federated identity systems, {{glossary("relying party", "relying parties")}}, that need to control access to a resource (for example, a website deciding whether to sign a user in) outsource the act of authenticating users to a third party, which they trust to make authentication decisions. These third parties are called identity providers.
+連合アイデンティティシステムでは、リソースへのアクセスを制御する必要がある{{glossary("relying party", "信頼当事者")}}（例えば、ユーザーのサインインを許可するかどうかを判断するウェブサイト）は、ユーザーの認証行為を、認証の判断を信頼できる第三者に委託します。この第三者がアイデンティティプロバイダーと呼ばれます。
 
 Examples of identity providers on the web include Google, Microsoft, and Facebook. This enables websites to allow users to sign in using the user's Google, Microsoft, or Facebook account.
 
