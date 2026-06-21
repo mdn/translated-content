@@ -8,7 +8,7 @@ l10n:
 
 {{ ApiRef("DOM") }}
 
-**`Selection.anchorOffset`** は読み取り専用プロパティで、選択範囲のアンカーが{{domxref("Selection.anchorNode")}} 内でオフセットされている文字数を返します。ただし、当該ノードの型が {{domxref("Text")}}、{{domxref("CDATASection")}} または {{domxref("Comment")}} である場合に限ります。
+**`Selection.anchorOffset`** は読み取り専用プロパティで、選択範囲のアンカーが{{domxref("Selection.anchorNode")}} 内でオフセットされている文字数を返します。ただし、当該ノードの型が {{domxref("Text")}}、{{domxref("CDATASection")}}、{{domxref("Comment")}} のいずれかであるである場合に限ります。
 
 {{domxref("Selection.anchorNode")}} がそれ以外の種類のノードである場合、**`Selection.anchorOffset`** は、選択範囲のアンカーが {{domxref("Selection.anchorNode")}} 内でオフセットされている {{domxref("Node.childNodes")}} の数を返します。
 
