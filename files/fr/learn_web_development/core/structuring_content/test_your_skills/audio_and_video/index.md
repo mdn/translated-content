@@ -13,7 +13,7 @@ L'objectif de ce test de compétences est de vous aider à évaluer si vous comp
 > [!NOTE]
 > Pour obtenir de l'aide, consultez notre guide d'utilisation [Testez vos compétences](/fr/docs/Learn_web_development#testez_vos_compétences). Vous pouvez également nous contacter par l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
 
-## Audio et vidéo 1
+## Audio et vidéo n°1
 
 Dans cette tâche, nous vous demandons d'intégrer un fichier audio sur la page.
 
@@ -76,7 +76,7 @@ Votre code HTML final doit ressembler à ceci&nbsp;:
 
 </details>
 
-## Audio et vidéo 2
+## Audio et vidéo n°2
 
 Dans cette tâche, nous vous demandons de marquer un lecteur vidéo un peu plus complexe, avec plusieurs sources, sous-titres et d'autres fonctionnalités.
 
