@@ -1,9 +1,9 @@
 ---
-title: :-moz-only-whitespace
+title: CSS `:-moz-only-whitespace` 擬似クラス
+short-title: :-moz-only-whitespace
 slug: Web/CSS/Reference/Selectors/:-moz-only-whitespace
-original_slug: Web/CSS/:-moz-only-whitespace
 l10n:
-  sourceCommit: e1608631832f2608632569d0bd4061372adc5199
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{Non-standard_header}}
@@ -15,13 +15,15 @@ l10n:
 
 ## 構文
 
-```
-:-moz-only-whitespace
+```css
+:-moz-only-whitespace {
+  /* ... */
+}
 ```
 
 ## 例
 
-### 単純な :-moz-only-whitespace の例
+### 基本的な :-moz-only-whitespace の例
 
 #### HTML
 
@@ -43,7 +45,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('Simple_-moz-only-whitespace_example', '100%', 50)}}
+{{EmbedLiveSample('Basic_-moz-only-whitespace_example', '100%', 50)}}
 
 ## 仕様書
 
@@ -55,5 +57,5 @@ div {
 
 ## 関連情報
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":blank")}}
 - {{CSSxRef(":empty")}}
