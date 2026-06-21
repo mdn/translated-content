@@ -127,7 +127,7 @@ Supports-Loading-Mode: fenced-frame
 
 ## 登録とローカルテスト
 
-{{domxref("FencedFrameConfig")}} を作成する一部の API 機能、{{domxref("Navigator.runAdAuction()")}}（[保護オーディエンス API](https://privacysandbox.google.com/private-advertising/protected-audience)<sup>(英語)</sup>）や {{domxref("WindowSharedStorage.selectURL()")}} （[共有ストレージ API](/ja/docs/Web/API/Shared_Storage_API)）、{{domxref("Fence.reportEvent()")}} などの機能は、[プライバシーサンドボックス登録プロセス](/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment)にウェブサイトを登録するよう要求されます。これを行わないと、 API 呼び出しはコンソールの警告とともに失敗します。
+{{domxref("FencedFrameConfig")}} を作成する一部の API 機能、{{domxref("Navigator.runAdAuction()")}}（[保護オーディエンス API](https://privacysandbox.google.com/private-advertising/protected-audience)<sup>(英語)</sup>）や {{domxref("WindowSharedStorage.selectURL()")}} （[共有ストレージ API](/ja/docs/Web/API/Shared_Storage_API)）、{{domxref("Fence.reportEvent()")}} などの機能は、[プライバシーサンドボックス登録プロセス](/ja/docs/orphaned/Web/Privacy/Guides/Privacy_sandbox/Enrollment)にウェブサイトを登録するよう要求されます。これを行わないと、 API 呼び出しはコンソールの警告とともに失敗します。
 
 > [!NOTE]
 > Chrome では、登録しなくてもフレームコードをローカルでテストすることができます。ローカルテストを許可するには、以下の Chrome 開発者フラグを有効にしてください。
