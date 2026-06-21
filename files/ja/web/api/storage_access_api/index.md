@@ -42,7 +42,7 @@ SSO (`sso-example.com`) や一般的なパーソナライズサービス (`servi
 これは、パーティション化されたクッキーとは対照的です。パーティション化されたクッキーでは、それぞれの最上位サイトの下にある埋め込みリソースに固有のクッキー保存空間が指定され、他のサイトのものとは隔離されています。
 パーティション化されたクッキーでは、サイトをまたいでユーザーを追跡することができないため、プライバシー上のリスクはありません。そのため、ブラウザーはリクエストにパーティション化されたクッキーを含め、埋め込みリソースがそれらを利用できるようにします。
 ただし、クッキーはサイト間で共有されないため、サイト間で自動的に同期されることもない点にご注意ください。
-ブラウザーには、サードパーティクッキーへのアクセスをパーティション化するさまざまな仕組みがあります。例えば、[Firefox Total Cookie Protection](https://blog.mozilla.org/en/mozilla/firefox-rolls-out-total-cookie-protection-default-to-all-users-worldwide/) や [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) などがあります。
+ブラウザーには、サードパーティクッキーへのアクセスをパーティション化するさまざまな仕組みがあります。例えば、[Firefox Total Cookie Protection](https://blog.mozilla.org/en/mozilla/firefox-rolls-out-total-cookie-protection-default-to-all-users-worldwide/) や[個別区画化された状態を持つクッキー (CHIPS)](/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) などがあります。
 
 ストレージアクセス API の文脈でサードパーティクッキーについて言及する場合、それは暗黙のうちにパーティション化されていないサードパーティクッキーです。
 
