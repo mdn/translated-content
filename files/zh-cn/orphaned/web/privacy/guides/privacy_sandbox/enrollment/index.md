@@ -1,7 +1,8 @@
 ---
 title: 隐私沙盒注册
 short-title: 注册
-slug: Web/Privacy/Guides/Privacy_sandbox/Enrollment
+slug: orphaned/Web/Privacy/Guides/Privacy_sandbox/Enrollment
+original_slug: Web/Privacy/Guides/Privacy_sandbox/Enrollment
 l10n:
   sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
 ---
