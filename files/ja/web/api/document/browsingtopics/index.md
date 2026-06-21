@@ -12,7 +12,7 @@ l10n:
 > この機能は現在2つのブラウザーベンダーによって反対されています。反対の詳細については下記の[標準の位置づけ](/ja/docs/Web/API/Topics_API#standards_positions)の節を参照してください。
 
 > [!NOTE]
-> アプリケーションでこの機能を使用するには、[登録プロセス](/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment)が要求されます。
+> アプリケーションでこの機能を使用するには、[登録プロセス](/ja/docs/orphaned/Web/Privacy/Guides/Privacy_sandbox/Enrollment)が要求されます。
 
 `browsingTopics()` は {{domxref("Document")}} インターフェイスのメソッドで、ユーザーのトップトピックを表すオブジェクトの配列で履行されるプロミスを返します。これらのトピックは、その後のフェッチリクエストで広告技術プラットフォームに返すことができます。既定では、このメソッドは呼び出し側が監視する現在のページ訪問をブラウザーに記録するので、ページのホスト名を後でトピックの計算に使用することができます。
 
@@ -67,7 +67,7 @@ browsingTopics(options)
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 以下の場合に発生します。
     - [トピック API](/ja/docs/Web/API/Topics_API)の使用が {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって不許可になっていた場合。
-    - 呼び出されたウェブサイトに、成功した[プライバシーサンドボックスの登録プロセス](/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment)に含まれるトピック API がない場合。
+    - 呼び出されたウェブサイトに、成功した[プライバシーサンドボックスの登録プロセス](/ja/docs/orphaned/Web/Privacy/Guides/Privacy_sandbox/Enrollment)に含まれるトピック API がない場合。
 
 ## 例
 

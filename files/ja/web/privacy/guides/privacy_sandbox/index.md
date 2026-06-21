@@ -32,7 +32,7 @@ Google の**プライバシーサンドボックス**プロジェクトは、サ
 
 ## その他のトピック
 
-- [プライバシーサンドボックスの登録](/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment)
+- [プライバシーサンドボックスの登録](/ja/docs/orphaned/Web/Privacy/Guides/Privacy_sandbox/Enrollment)
   - : 特定のプライバシーサンドボックス機能を利用するには、開発者は**登録**手続きを完了する必要があります。
 
 ## 関連情報
