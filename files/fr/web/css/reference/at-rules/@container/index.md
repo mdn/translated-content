@@ -605,7 +605,7 @@ En d'autres termes, `style(0 < --n < 10)` est équivalent à `style(0 < --n) and
 
 ### Requêtes d'état de défilement
 
-Voir [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) pour des exemples.
+Voir [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) pour des exemples.
 
 ### Requêtes d'ancrage
 
@@ -623,7 +623,7 @@ Voir [Utiliser les requêtes de conteneur avec une ancre](/fr/docs/Web/CSS/Guide
 
 - [Utiliser les requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Utiliser les requêtes de taille et de style de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
-- [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+- [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
 - [Utiliser les requêtes de conteneur avec une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 - La propriété {{CSSxRef("container-name")}}
 - La propriété {{CSSxRef("container-type")}}
