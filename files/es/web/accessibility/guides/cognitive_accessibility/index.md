@@ -198,7 +198,7 @@ La [Pauta 3.2 (Inglés)](https://www.w3.org/WAI/WCAG22/Understanding/predictable
 
 ### Usar la activación, no el foco, para cambiar el contexto
 
-Un cambio de contexto debe producirse de manera intencional. Por este motivo, cuando una característica de la interfaz recibe [el foco (Inglés)](/es/docs/Web/API/HTMLElement/focus), no debe desencadenar acciones visibles para el usuario. En su lugar, el usuario debe activar la característica para provocar el cambio.
+Un cambio de contexto debe producirse de manera intencional. Por este motivo, cuando una característica de la interfaz recibe [el foco](/es/docs/Web/API/HTMLElement/focus), no debe desencadenar acciones visibles para el usuario. En su lugar, el usuario debe activar la característica para provocar el cambio.
 
 ### Cambiar una configuración solo tras una acción activa del usuario
 
