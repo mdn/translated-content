@@ -24,7 +24,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">学习成果：</th>
-      <td>        
+      <td>
         <ul>
           <li>熟悉可用于解决无障碍问题的各类工具，例如审计工具。</li>
           <li>配置屏幕阅读器，并利用其在桌面端和移动端测试网站。</li>
@@ -85,7 +85,7 @@ l10n:
 
 ![Axe 工具识别出的无障碍问题截图。](axe-screenshot.png)
 
-aXe 还可以通过 `npm` 安装，并可与 [Grunt](https://gruntjs.com/) 和 [Gulp](https://gulpjs.com/) 等任务运行器、[Selenium](https://www.selenium.dev/) 和 [Cucumber](https://cucumber.io/) 等自动化框架、 以及 [Jasmine](https://jasmine.github.io/) 等单元测试框架，此外还有更多支持（详情请参阅 [aXe 主页](https://www.deque.com/axe/)）。
+aXe 还可以通过 `npm` 安装，并可与 [Grunt](https://gruntjs.com/) 和 [Gulp](https://gulpjs.com/) 等任务运行器、[Selenium](https://www.selenium.dev/) 和 [Cucumber](https://cucumber.io/) 等自动化框架、以及 [Jasmine](https://jasmine.github.io/) 等单元测试框架，此外还有更多支持（详情请参阅 [aXe 主页](https://www.deque.com/axe/)）。
 
 ## 屏幕阅读器
 
@@ -402,7 +402,7 @@ NVDA 拥有许多键盘命令，我们在此不会一一列举。下表列出了
 
 1. 确保你的 HTML 尽可能语义化正确。[验证它](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML#html_验证)是一个不错的开始，使用[审计工具](#审计工具)也是如此。
 2. 检查在 CSS 关闭的情况下，你的内容是否仍然有意义。
-3. 确保你的功能可通过键盘访问（参见[尽可能使用语义化 UI 控件](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#尽可能使用语义化_ui_控件)），使用 Tab、Return/Enter 等键进行测试。
+3. 确保你的功能可通过键盘访问（参见[尽可能使用语义化 UI 控件](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#尽可能使用语义化_ui_控件)），使用 Tab、Return/Enter 等键进行测试。
 4. 确保你的非文本内容都有[替代文本](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#替代文本)。[审计工具](#审计工具)可帮助你发现此类问题。
 5. 确保网站的[颜色对比度](/zh-CN/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#颜色和颜色对比度)可接受，使用合适的检查工具。
 6. 确保[隐藏内容](/zh-CN/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#隐藏的东西)可被屏幕阅读器识别。
