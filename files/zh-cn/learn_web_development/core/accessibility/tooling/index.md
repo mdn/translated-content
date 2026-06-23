@@ -15,11 +15,8 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        熟悉 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
-        href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和 <a
-          href="/zh-CN/docs/Learn_web_development/Core/Scripting"
-          >JavaScript</a
-        > 语言；理解<a
+        熟悉 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a> 和 <a
+        href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 语言；理解<a
           href="/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility"
           >基本的无障碍概念</a
         >。
