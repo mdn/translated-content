@@ -164,7 +164,7 @@ Las abreviaturas pueden resultar confusas para las personas que:
 - Tienen dificultades para usar el contexto como apoyo para la comprensión.
 - Dependen de magnificadores de pantalla (que a menudo reducen las pistas contextuales).
 
-Proporciona la forma desarrollada de la abreviatura la primera vez que aparezca, seguida de la abreviatura dentro de un elemento {{HTMLElement('abbr')}}. Si una abreviatura no tiene forma extendida, o corresponde a una palabra que no está en el idioma principal del documento (como ocurre con términos en latín), explica su significado. También considera usar [ruby text (Inglés)](/es/docs/Web/HTML/Reference/Elements/ruby) para indicar la pronunciación de siglas o acrónimos.
+Proporciona la forma desarrollada de la abreviatura la primera vez que aparezca, seguida de la abreviatura dentro de un elemento {{HTMLElement('abbr')}}. Si una abreviatura no tiene forma expandida, o corresponde a una palabra que no está en el idioma principal del documento (como ocurre con términos en latín), explica su significado. También considera usar [ruby text (Inglés)](/es/docs/Web/HTML/Reference/Elements/ruby) para indicar la pronunciación de siglas o acrónimos.
 
 ### Nivel de lectura
 
