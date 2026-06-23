@@ -33,7 +33,7 @@ const helperPath = import.meta.resolve("./lib/helper.js");
 console.log(helperPath); // "https://example.com/lib/helper.js"
 ```
 
-请注意，`import.meta.resolve()` 仅执行解析，不会尝试加载或导入结果路径。因此，其返回值是相同的，*无论返回的路径是否对应一个存在的文件，也无论该文件是否包含有效的模块代码*。这使得 `import.meta.resolve()` 成为*同步*操作。
+请注意，`import.meta.resolve()` 仅执行解析，不会尝试加载或导入结果路径。因此，其返回值是相同的，_无论返回的路径是否对应一个存在的文件，也无论该文件是否包含有效的模块代码_。这使得 `import.meta.resolve()` 成为*同步*操作。
 
 它与[动态导入](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)不同，因为尽管两者都接受模块标识符作为第一个参数，但 `import.meta.resolve()` 返回*将会被导入*的路径，而不尝试访问该路径。因此，以下两段代码实际上是等效的：
 
