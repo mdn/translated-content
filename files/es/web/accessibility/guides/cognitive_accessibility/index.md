@@ -7,7 +7,7 @@ l10n:
 
 La accesibilidad cognitiva abarca las consideraciones de accesibilidad para personas con discapacidades cognitivas y dificultades del aprendizaje. Este documento presenta las bases de la accesibilidad cognitiva y explica cómo mejorar la accesibilidad web para personas con diferencias cognitivas y del aprendizaje.
 
-La discapacidad cognitiva hace referencia a una amplia gama de discapacidades, desde personas con discapacidad intelectual que pueden tener las capacidades más limitadas, hasta problemas relacionados con la edad que afectan al pensamiento y la memoria. Este espectro Este abanico incluye a personas que conviven con condiciones de salud mental, como la depresión y la esquizofrenia. También engloba a personas con dificultades del aprendizaje, como la dislexia y el trastorno por déficit de atención e hiperactividad (TDAH).
+La discapacidad cognitiva hace referencia a una amplia gama de discapacidades, desde personas con discapacidad intelectual que pueden tener las capacidades más limitadas, hasta problemas relacionados con la edad que afectan al pensamiento y la memoria. Este abanico incluye a personas que conviven con condiciones de salud mental, como la depresión y la esquizofrenia. También engloba a personas con dificultades del aprendizaje, como la dislexia y el trastorno por déficit de atención e hiperactividad (TDAH).
 
 Aunque existe una gran diversidad dentro de los criterios clínicos sobre las condiciones cognitivas, las personas que las presentan comparten una serie de dificultades comunes en su día a día. Estas dificultades incluyen problemas para comprender el contenido, recordar cómo completar ciertas tareas, y confusión causada por diseños de páginas web inconsistentes o poco familiares. En este documento nos centramos en las medidas que los desarrolladores deben adoptar para mejorar la accesibilidad cognitiva de sus sitios web y aplicaciones.
 
@@ -33,23 +33,23 @@ Un enfoque sólido para ofrecer soluciones accesibles a personas con diferencias
 - Utilizar contenido fácil de comprender, redactado bajo los estándares de un lenguaje claro y sencillo.
 - Centrar la atención en el contenido importante.
 - Reducir las distracciones, así como el contenido innecesario o la publicidad intrusiva.
-- Mantener una estructura y una navegación consitentes en todo el sitio web.
+- Mantener una estructura y una navegación consistentes en todo el sitio web.
 - Incorporar elementos familiares y reconocibles, como enlaces subrayados que sean azules cuando no se han visitado y morados cuando ya se han visitado.
 - Dividir los procesos en pasos lógicos y esenciales con indicadores de progreso.
-- Hacer que la autenticación en el sitio web sea lo más sencilla posible sin comprometer la seguridad
+- Hacer que la autenticación en el sitio web sea lo más sencilla posible sin comprometer la seguridad.
 - Y por último, hacer que los formularios sean fáciles de completar, por ejemplo, con mensajes de error claros y opciones de recuperación de errores.
 
 ## Pautas WCAG
 
-Las WCAG (Pautas de Accesibilidad para el Contenido Web) incluyen varias directrices para mejorar la accesibilidad cognitiva. Estas pautas están publicadas por la Iniciativa de Accesibilidad Web (WAI) del Consorcio de la World Wide Web (W3C), la organización internacional principal de los estándares para Internet. Este grupo también es responsable de las [pautas de Aplicaciones de Internet Enriquecidas y Accesibles (ARIA) (Inglés)](/en-US/docs/Web/Accessibility/ARIA/Guides).
+Las WCAG (Pautas de Accesibilidad para el Contenido Web) incluyen varias directrices para mejorar la accesibilidad cognitiva. Estas pautas están publicadas por la Iniciativa de Accesibilidad Web (WAI) del Consorcio de la World Wide Web (W3C), la organización internacional principal de los estándares para Internet. Este grupo también es responsable de las [pautas de Aplicaciones de Internet Enriquecidas y Accesibles (ARIA) (Inglés)](/es/docs/Web/Accessibility/ARIA/Guides).
 
-Las WCAG se guían por cuatro principios: los sitios web deben ser Perceptibles, Operables, Comprensibles y Robustos. Con este fin, se definen 17 pautas específicas, de las cuales seis, son especialmente relevantes para la accesibilidad cognitiva.
+Las WCAG se guían por cuatro principios: los sitios web deben ser Perceptibles, Operables, Comprensibles y Robustos. Con este fin, se definen 17 pautas específicas, de las cuales seis son especialmente relevantes para la accesibilidad cognitiva.
 
 Todas las siguientes pautas no ayudan solo a las personas con discapacidad cognitiva. Por ejemplo, poder ampliar el tiempo de expiración en una aplicación que requiere un código de autenticación enviado al dispositivo móvil por mensaje de texto ayuda en situaciones como las siguientes:
 
 - Personas con ansiedad o dificultades de atención.
 - Personas que tienen una memoria a corto plazo reducida o que no pueden realizar varias tareas a la vez.
-- Personas con menos competencias digitales o menos familizarizadas con la tecnología.
+- Personas con menos competencias digitales o menos familiarizadas con la tecnología.
 - Personas con una conexión de red inestable.
 - Personas con discapacidad funcional.
 
@@ -80,7 +80,7 @@ Proporcionar una opción que permita a los usuarios habilitar un límite de tiem
 
 Es importante evitar distracciones para los usuarios, especialmente para aquellas personas con discapacidades cognitivas.
 
-Si la información que se mueve, parpadea, se desplaza automáticamente o se actualiza automáticamente, se inicia por sí sola, dura más de cinco segundos y se muestra al mismo tiempo que otro contenido, el usuario debe poder pausarla, detenerla, ocultarla o controlar su comportamiento, salvo que forme parte de una funcionalidad esencial. “Esencial” significa que eliminar el movimiento, parpadeo, desplazamiento o la actualización automática de la información cambiaría de forma fundamental el significado del contenido y/o su funcionalidad, y que dicha información o funcionalidad no puede lograrse de otra manera que cumpla con los requisitos. Esto incluye los GIF animados, si la animación dura más de 5 segundos.
+Si la información que se mueve, parpadea, se desplaza automáticamente o se actualiza automáticamente, se inicia por sí sola, dura más de cinco segundos y se muestra al mismo tiempo que otro contenido, el usuario debe poder pausarla, detenerla, ocultarla o controlar su comportamiento, salvo que forme parte de una funcionalidad esencial. "Esencial" significa que eliminar el movimiento, parpadeo, desplazamiento o la actualización automática de la información cambiaría de forma fundamental el significado del contenido y/o su funcionalidad, y que dicha información o funcionalidad no puede lograrse de otra manera que cumpla con los requisitos. Esto incluye los GIF animados, si la animación dura más de 5 segundos.
 
 Criterios adicionales de temporización a tener en cuenta:
 
@@ -91,7 +91,7 @@ Criterios adicionales de temporización a tener en cuenta:
 
 ## Navegación
 
-[La Pauta 2.4 (Inglés)](https://www.w3.org/WAI/WCAG22/Understanding/navigable) establece: “proporcionar maneras de ayudar a los usuarios a navegar, encontrar contenido y determinar dónde se encuentran”, y ofrece 10 pautas destinadas a garantizar que el sitio sea navegable y que el contenido pueda encontrarse fácilmente.
+[La Pauta 2.4 (Inglés)](https://www.w3.org/WAI/WCAG22/Understanding/navigable) establece: "proporcionar maneras de ayudar a los usuarios a navegar, encontrar contenido y determinar dónde se encuentran", y ofrece 10 pautas destinadas a garantizar que el sitio sea navegable y que el contenido pueda encontrarse fácilmente.
 
 ### Incluir un `<title>`
 
@@ -115,7 +115,7 @@ Proporcionar más de una vía de navegación en tu sitio puede ayudar a las pers
 
 ### Posibilidad de omitir bloques de contenido
 
-Proporciona un mecanismo, como un [enlace de salto (Inglés)](/en-US/docs/Web/HTML/Reference/Elements/a#skip_links), para omitir bloques de contenido que se repiten en varias páginas web.
+Proporciona un mecanismo, como un [enlace de salto (Inglés)](/es/docs/Web/HTML/Reference/Elements/a#skip_links), para omitir bloques de contenido que se repiten en varias páginas web.
 
 ### El orden de enfoque debe tener sentido
 
@@ -129,7 +129,7 @@ Cuando un usuario navega utilizando el teclado, la interfaz debe dejar claro qu�
 
 El texto de un enlace debe comunicar de forma clara y concisa a qué página se dirigirá el usuario si decide pulsar sobre el. Un texto de enlace mal formulado puede confundir sobre su propósito o destino.
 
-Algunas tecnologías de asistencia permiten a los usuarios navegar mediante listas que contienen todos los enlaces presentes en la página. En ese contexto, los enlaces se muestran sin el contenido que los rodea, lo que hace aún más importante que el texto del enlace sea comprensible por sí mismo. Un ejemplo de mala experiencia es una página llena de enlaces cuyo texto dice “Haz clic aquí”. Sin indicar adónde lleva ese “aquí”, el propósito del enlace queda poco claro.
+Algunas tecnologías de asistencia permiten a los usuarios navegar mediante listas que contienen todos los enlaces presentes en la página. En ese contexto, los enlaces se muestran sin el contenido que los rodea, lo que hace aún más importante que el texto del enlace sea comprensible por sí mismo. Un ejemplo de mala experiencia es una página llena de enlaces cuyo texto dice "Haz clic aquí". Sin indicar adónde lleva ese "aquí", el propósito del enlace queda poco claro.
 
 Para los lectores de pantalla, es fundamental que el texto enlazado describa el propósito de cada enlace. Si has añadido contenido adicional para lectores de pantalla y ese contenido resulta demasiado extenso o potencialmente confuso para usuarios videntes, considera recortarlo visualmente para ocultarlo a quienes no utilizan tecnologías de asistencia.
 
@@ -137,11 +137,11 @@ Para los lectores de pantalla, es fundamental que el texto enlazado describa el 
 
 Los usuarios deben poder orientarse de forma autónoma dentro de un sitio o aplicación. Esto es especialmente importante y útil para las personas con menor capacidad de atención, que pueden confundirse al seguir una larga serie de pasos de navegación.
 
-Todos los usuarios se benefician de disponer de información sobre dónde se encuentran dentro de la jerarquía del sitio, especialmente en sitios o aplicaciones con grandes cantidades de contenido o muchas subsecciones. Las [migas de pan](/es/docs/Glossary/Breadcrumb), los [mapas del sitio (Inglés)](/en-US/docs/Glossary/Site_map) y marcar la página actual en la navegación como “actual” son técnicas que ayudan a comunicar la ubicación actual.
+Todos los usuarios se benefician de disponer de información sobre dónde se encuentran dentro de la jerarquía del sitio, especialmente en sitios o aplicaciones con grandes cantidades de contenido o muchas subsecciones. Las [migas de pan](/es/docs/Glossary/Breadcrumb), los [mapas del sitio (Inglés)](/es/docs/Glossary/Site_map) y marcar la página actual en la navegación como "actual" son técnicas que ayudan a comunicar la ubicación actual.
 
 ## Legibilidad
 
-La [Pauta 3.1](https://www.w3.org/WAI/WCAG22/Understanding/readable) establece: “hacer que el contenido textual sea legible y comprensible”. Para algunas personas, puede resultar difícil deducir el significado de una palabra o frase a partir del contexto, especialmente cuando se utiliza de una forma poco habitual o con un significado especializado.
+La [Pauta 3.1](https://www.w3.org/WAI/WCAG22/Understanding/readable) establece: "hacer que el contenido textual sea legible y comprensible". Para algunas personas, puede resultar difícil deducir el significado de una palabra o frase a partir del contexto, especialmente cuando se utiliza de una forma poco habitual o con un significado especializado.
 
 Para estos usuarios, la capacidad de leer y comprender puede depender de la disponibilidad de definiciones específicas o de las formas desarrolladas de siglas y abreviaturas. Algunas personas pueden tener grandes dificultades para reconocer palabras escritas, aunque pueden comprender documentos muy complejos cuando el texto se les lee en voz alta o cuando los procesos e ideas clave se representan visualmente.
 
@@ -164,7 +164,7 @@ Las abreviaturas pueden resultar confusas para las personas que:
 - Tienen dificultades para usar el contexto como apoyo para la comprensión.
 - Dependen de magnificadores de pantalla (que a menudo reducen las pistas contextuales).
 
-Proporciona la forma desarrollada de la abreviatura la primera vez que aparezca, seguida de la abreviatura dentro de un elemento {{HTMLElement('abbr')}}. Si una abreviatura no tiene forma extendidad, o corresponde a una palabra que no está en el idioma principal del documento (como ocurre con términos en latín), explica su significado. También considera usar [ruby text (Inglés)](/en-US/docs/Web/HTML/Reference/Elements/ruby) para indicar la pronunciación de siglas o acrónimos.
+Proporciona la forma desarrollada de la abreviatura la primera vez que aparezca, seguida de la abreviatura dentro de un elemento {{HTMLElement('abbr')}}. Si una abreviatura no tiene forma extendida, o corresponde a una palabra que no está en el idioma principal del documento (como ocurre con términos en latín), explica su significado. También considera usar [ruby text (Inglés)](/es/docs/Web/HTML/Reference/Elements/ruby) para indicar la pronunciación de siglas o acrónimos.
 
 ### Nivel de lectura
 
@@ -175,7 +175,7 @@ El contenido debe estar redactado de la forma más clara posible. Una buena regl
 - Utilizar voz activa en tiempo presente.
 - Emplear gramática y ortografía correctas.
 
-Para las personas con discapacidades cognitivas, puede ser útil proporcionar un resumen del texto (a veces llamado TL;DR, “demasiado largo; no leído”) redactado en un nivel de lectura bajo. Otra técnica consiste en añadir elementos visuales que ayuden a explicar ideas, eventos y procesos.
+Para las personas con discapacidades cognitivas, puede ser útil proporcionar un resumen del texto (a veces llamado TL;DR, "demasiado largo; no leído") redactado en un nivel de lectura bajo. Otra técnica consiste en añadir elementos visuales que ayuden a explicar ideas, eventos y procesos.
 
 Existen herramientas que pueden evaluar el nivel de lectura de tu contenido. Por ejemplo, este documento tiene un nivel medio equivalente a un grado 11. Esto significa que debería ser fácilmente comprensible para una persona hablante nativa de español de entre 16 y 17 años. Algunas herramientas incluso pueden ofrecer sugerencias para simplificarlo.
 
@@ -194,11 +194,11 @@ Otra solución consiste en usar glifos o marcas diacríticas para ilustrar la pr
 
 ## Predictibilidad
 
-La [Pauta 3.2 (Inglés)](https://www.w3.org/WAI/WCAG22/Understanding/predictable) de las WCAG establece: “hacer que las páginas web se presenten y funcionen de manera predecible”. Este es un principio fundamental del diseño de experiencia de usuario. La coherencia es especialmente importante para las personas con dificultades cognitivas. Esto incluye mantener consistencia en la estructura de la página y en el comportamiento predecible de los componentes interactivos.
+La [Pauta 3.2 (Inglés)](https://www.w3.org/WAI/WCAG22/Understanding/predictable) de las WCAG establece: "hacer que las páginas web se presenten y funcionen de manera predecible". Este es un principio fundamental del diseño de experiencia de usuario. La coherencia es especialmente importante para las personas con dificultades cognitivas. Esto incluye mantener consistencia en la estructura de la página y en el comportamiento predecible de los componentes interactivos.
 
 ### Usar la activación, no el foco, para cambiar el contexto
 
-Un cambio de contexto debe producirse de manera intencional. Por este motivo, cuando una característica de la interfaz recibe [el foco (Inglés)](/en-US/docs/Web/API/HTMLElement/focus), no debe desencadenar acciones visibles para el usuario. En su lugar, el usuario debe activar la característica para provocar el cambio.
+Un cambio de contexto debe producirse de manera intencional. Por este motivo, cuando una característica de la interfaz recibe [el foco (Inglés)](/es/docs/Web/API/HTMLElement/focus), no debe desencadenar acciones visibles para el usuario. En su lugar, el usuario debe activar la característica para provocar el cambio.
 
 ### Cambiar una configuración solo tras una acción activa del usuario
 
@@ -220,7 +220,7 @@ Aunque la iconografía sin etiquetas no es el método más eficaz para transmiti
 
 ## Asistencia en la introducción de datos
 
-La [Pauta 3.3](https://www.w3.org/WAI/WCAG22/Understanding/input-assistance.html) ayuda a garantizar una introducción de datos precisa y establece: “ayudar a los usuarios a evitar y corregir errores”. Aunque todas las personas cometen errores, algunas tienen más probabilidades de cometerlos, menos probabilidades de detectarlos o más dificultades para corregirlos una vez que ocurren.
+La [Pauta 3.3](https://www.w3.org/WAI/WCAG22/Understanding/input-assistance.html) ayuda a garantizar una introducción de datos precisa y establece: "ayudar a los usuarios a evitar y corregir errores". Aunque todas las personas cometen errores, algunas tienen más probabilidades de cometerlos, menos probabilidades de detectarlos o más dificultades para corregirlos una vez que ocurren.
 
 Las pautas de asistencia en la introducción de datos buscan reducir la probabilidad de que los usuarios, especialmente aquellos con discapacidades, cometan errores y, si los cometen, aumentar la probabilidad de que vean y comprendan el mensaje de error y puedan corregirlo con éxito.
 
@@ -265,16 +265,16 @@ Debe ofrecerse ayuda contextual cuando sea necesaria. Si un formulario requiere 
 Las prácticas anteriores son buenas prácticas de diseño. Benefician a todas las personas.
 
 - Muchas personas con discapacidades cognitivas también tienen discapacidades físicas. Los sitios web deben cumplir con las [Pautas de Accesibilidad para el Contenido Web](https://www.w3.org/WAI/standards-guidelines/wcag/es) del W3C.
-- El [Grupo de Trabajo sobre Discapacidades Cognitivas y de Aprendizaje (Ingles)](https://www.w3.org/WAI/GL/task-forces/coga/) el W3C produce pautas de accesibilidad web para personas con discapacidades cognitivas.
+- El [Grupo de Trabajo sobre Discapacidades Cognitivas y de Aprendizaje (Inglés)](https://www.w3.org/WAI/GL/task-forces/coga/) del W3C produce pautas de accesibilidad web para personas con discapacidades cognitivas.
 - WebAIM cuenta con una [página dedicada a la discapacidad cognitivas (Inglés)](https://webaim.org/articles/cognitive/) con información y recursos relevantes.
 - Los Centros para el Control y la Prevención de Enfermedades de Estados Unidos (CDC) estiman que, desde 2018, 1 de cada 4 ciudadanos estadounidenses tiene alguna discapacidad, y entre ellos, [la discapacidad cognitiva es la más común entre la población joven (Inglés)](https://archive.cdc.gov/www_cdc_gov/media/releases/2018/p0816-disability.html).
-- En Estados Unidos, el término “intellectual disabilities” solía denominarse “mental retardation”. En el Reino Unido, “intellectual disabilities” se conoce comúnmente como “learning disabilities” o “learning difficulties”.
+- En Estados Unidos, el término "intellectual disabilities" solía denominarse "mental retardation". En el Reino Unido, "intellectual disabilities" se conoce comúnmente como "learning disabilities" o "learning difficulties".
 
 ## Véase también
 
 - [Guía de accesibilidad (Inglés)](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
 - [Qué es la accesibilidad.](/es/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
-- [Accesibilidad para trastornos convulsivos (Inglés)](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders)
+- [Accesibilidad para trastornos convulsivos (Inglés)](/es/docs/Web/Accessibility/Guides/Seizure_disorders)
 - [Comprender las pautas WCAG](/es/docs/Web/Accessibility/Guides/Understanding_WCAG)
 - [Descripción general de accesibilidad](/es/docs/Learn_web_development/Core/Accessibility)
 - [Pautas de Accesibilidad para el Contenido Web](https://www.w3.org/WAI/standards-guidelines/wcag/es), incluyendo las [pautas de accesibilidad cognitiva](#wcag_guidelines)
