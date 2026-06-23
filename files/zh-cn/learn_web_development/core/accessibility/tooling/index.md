@@ -26,7 +26,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">学习成果</th>
+      <th scope="row">学习成果：</th>
       <td>        
         <ul>
           <li>熟悉可用于解决无障碍问题的各类工具，例如审计工具。</li>
