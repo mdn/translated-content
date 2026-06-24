@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-UTF-16 是一种用于 {{Glossary("Unicode")}} 的{{Glossary("character encoding", "字符编码")}}标准。它使用一个或两个 {{Glossary("code unit", "码元")}}来编码每个 Unicode {{Glossary("code point", "码位")}}。每个码元都是一个 16 位值。
+UTF-16 是一种用于 {{Glossary("Unicode")}} 的{{Glossary("character encoding", "字符编码")}}标准。它使用一个或两个{{Glossary("code unit", "码元")}}来编码每个 Unicode {{Glossary("code point", "码位")}}。每个码元都是一个 16 位值。
 
-值小于 2<sup>16</sup> 的码位会被编码成单个码元，该码元的数值与码位的值相等。这些码位构成了[基本多文种平面（BMP）](<https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane>)，其中包括最常见的字符，例如拉丁字母、希腊字母、西里尔字母以及许多东亚字符。
+值小于 2<sup>16</sup> 的码位会被编码成单个码元，该码元的数值与码位的值相等。这些码位构成了[基本多文种平面（BMP）](https://zh.wikipedia.org/wiki/Unicode字符平面映射#基本多文种平面)，其中包括最常见的字符，例如拉丁字母、希腊字母、西里尔字母以及许多东亚字符。
 
 例如，拉丁字母“A”在 Unicode 中被分配的码位是 `U+0041`，它在 UTF-16 中表示为单个码元 `41`。
 
@@ -35,7 +35,7 @@ console.log(string.charCodeAt(1).toString(16)); // dd8a
 console.log(string.codePointAt(0).toString(16)); // 1f98a
 ```
 
-有关使用 UTF-16 字符串的更多信息，参见[UTF-16 字符、Unicode 码位和字素簇](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)。
+有关在 JavaScript 中使用 UTF-16 字符串的更多信息，参见 [UTF-16 字符、Unicode 码位和字素簇](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)。
 
 ## UTF-16 和 UTF-8
 
