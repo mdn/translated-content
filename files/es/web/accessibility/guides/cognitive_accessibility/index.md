@@ -115,7 +115,7 @@ Proporcionar más de una vía de navegación en tu sitio puede ayudar a las pers
 
 ### Posibilidad de omitir bloques de contenido
 
-Proporciona un mecanismo, como un [enlace de salto (Inglés)](/es/docs/Web/HTML/Reference/Elements/a#skip_links), para omitir bloques de contenido que se repiten en varias páginas web.
+Proporciona un mecanismo, como un [enlace de salto](/es/docs/Web/HTML/Reference/Elements/a#skip_links), para omitir bloques de contenido que se repiten en varias páginas web.
 
 ### El orden de enfoque debe tener sentido
 
