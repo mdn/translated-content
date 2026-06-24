@@ -16,8 +16,8 @@ Están agrupados por funciones para ayudarte a encontrar lo que tienes en mente 
 
 ## Raíz principal
 
-| Elemento                | Descripción                                                                                                                                        |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Elemento                | Descripción                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{HTMLElement("html")}} | Representa la raiz de un documento HTML (el elemento del nivel superior), así que se refiere a él como el elemento raíz. Todos los otros elementos deben ser descendientes de este elemento. |
 
 ## Metadatos del documento
