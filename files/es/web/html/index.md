@@ -32,7 +32,7 @@ Nuestros [Módulos centrales de aprendizaje](/es/docs/Learn_web_development/Core
 Las [Guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a construir con HTML en la web. Cubren temas como, formularios, CORS, precarga de contenido e imágenes responsivas.
 
 - [Hoja de referencia para sintaxis y tareas comunes HTML](/es/docs/Web/HTML/Guides/Cheatsheet)
-  - : Referencia rápida para sintaxis y tareas comuned de HTML.
+  - : Referencia rápida para sintaxis y tareas comunes de HTML.
 - [Usando comentarios HTML `<!-- … -->`](/es/docs/Web/HTML/Guides/Comments)
   - : Los comentarios HTML son usados para agregar explicaciones a las etiquetas o para prevenir que el navegador interprete partes del documento.
 - [Usando validación de formularios HTML y la API de validación de restricciones](/es/docs/Web/HTML/Guides/Constraint_validation)
