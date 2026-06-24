@@ -55,7 +55,7 @@ Las [Guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a construir con HTML en
 ## Cómo hacer
 
 - [Definir términos con HTML](/es/docs/Web/HTML/How_to/Define_terms_with_HTML)
-  - : HTML provee multiples maneras de transmitir descipciones semánticas, ya sea en linea o como glosarios estructurados. Este artículo muestra cómo marcar apropiadamente palabras clave al definirlos.
+  - : HTML provee múltiples maneras de transmitir descripciones semánticas, ya sea en línea o como glosarios estructurados. Este artículo muestra cómo marcar apropiadamente palabras clave al definirlos.
 - [Usar atributos data](/es/docs/Web/HTML/How_to/Use_data_attributes)
   - : HTML5 esta diseñado con extensibilidad en mente para datos que debería asociarse con un elemento en particular, pero que no necesita tener algún significado definido. Los atributos `data-*` nos permiten guardar información extra en elementos HTML semanticos estándar.
 - [Usar imágenes cross-origin en canvas](/es/docs/Web/HTML/How_to/CORS_enabled_image)
