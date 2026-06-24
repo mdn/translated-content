@@ -46,7 +46,7 @@ Las [Guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a construir con HTML en
 - [Usando microformatos en HTML](/es/docs/Web/HTML/Guides/Microformats)
   - : Los microformatos son estándares utilizaods para fijar datos semánticos y estructurados en HTML para ser usados por aplicaciones web sociales, motores de busqueda, agregadores y otras herramientas.
 - [Comprende los modos quirk y estándar](/es/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
-  - : Información historica acerca de el modo quirk y el modo estándar.
+  - : Información histórica acerca del modo quirk y el modo estándar.
 - [Usando imágenes responsivas en HTML](/es/docs/Web/HTML/Guides/Responsive_images)
   - : Aprende acerca de imágenes responsivas que funcionan bien en dispositivos con un amplia variedad de tamaños de pantalla, resoluciones y otras características, mejorando el rendimiento en diferentes dispositivos.
 - [Tipos de medios y formatos en la web](/es/docs/Web/Media/Guides/Formats)
