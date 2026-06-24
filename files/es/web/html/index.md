@@ -22,7 +22,7 @@ Nuestros [Módulos centrales de aprendizaje](/es/docs/Learn_web_development/Core
 
 - [Tú primer sitio web: Creando el contenido](/es/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
   - : Este artículo provee un breve tour acerca de qué es HTML y cómo usarlo. Enfocado para personas que son completamente nuevas en el desarrollo web.
-- [Estructurando contenido con HTML](/es/docs/Learn_web_development/Core/Structuring_content).
+- [Estructurando contenido con HTML](/es/docs/Learn_web_development/Core/Structuring_content)
   - : Este módulo cubre los fundamentos de el lenguaje HTML, antes de ver areas clave como estructura del documento, enlaces, listas, imágenes, formularios y más.
 - [Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)
   - : Los formularios son una parte muy importante de la Web - estos proveen mucha de la funcionalidad que necesitas para interactuar con sitios web, p. ej., registrarte e iniciar sesión, enviar retroalimentación, comprar productos y más. Este módulo te ayuda a iniciar a crear las partes de formularios para la interfaz de usuario.
