@@ -20,7 +20,7 @@ Los siguientes artículos pueden ayudarte a obtener más información sobre HTML
 
 Nuestros [Módulos centrales de aprendizaje](/es/docs/Learn_web_development/Core) contienen tutoriales modernos y actualizados que cubren los fundamentos de HTML.
 
-- [Tú primer sitio web: Creando el contenido](/es/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
+- [Tu primer sitio web: Creando el contenido](/es/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
   - : Este artículo provee un breve tour acerca de qué es HTML y cómo usarlo. Enfocado para personas que son completamente nuevas en el desarrollo web.
 - [Estructurando contenido con HTML](/es/docs/Learn_web_development/Core/Structuring_content)
   - : Este módulo cubre los fundamentos de el lenguaje HTML, antes de ver areas clave como estructura del documento, enlaces, listas, imágenes, formularios y más.
