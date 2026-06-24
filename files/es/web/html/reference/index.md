@@ -14,7 +14,7 @@ Esta referencia [HTML](/es/docs/Web/HTML) describe todos los **elementos** y **a
   - : Los elementos en HTML tienen atributos; estos son valores adicionales que configuran los elementos o ajustan su comportamiento de diversas formas para cumplir los criterios de los usuarios.
 - [Atributos Globales](/es/docs/Web/HTML/Reference/Global_attributes)
   - : Los atributos globales son atributos comunes a todos los elementos HTML; pueden usarse en todos los elementos, aunque pueden no tener efecto en algunos de ellos.
-- [Categorías de Contenido](/en-US/docs/Web/HTML/Guides/Content_categories)
+- [Categorías de Contenido](/es/docs/Web/HTML/Guides/Content_categories)
   - : Cada elemento HTML es miembro de una o más categorías de contenido — éstas categorías agrupan elementos que comparten caracteristicas en común.
 - [Comentarios HTML](/es/docs/Web/HTML/Guides/Comments)
   - : Los comentarios HTML se utilizan para agregar explicaciones al marcado o para prevenit que el navegador interprete partes especificas del documento.
