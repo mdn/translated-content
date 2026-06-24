@@ -84,7 +84,7 @@ console.log(helperPath);
 - `import.meta.resolve()` 返回一个字符串，而 `new URL()` 返回一个 `URL` 对象。可以在构造的 `URL` 上使用 [`href`](/zh-CN/docs/Web/API/URL/href) 或 [`toString()`](/zh-CN/docs/Web/API/URL/toString) 方法，但在某些 JavaScript 环境或使用打包工具进行静态分析时，可能仍无法产生完全相同的结果。
 - `import.meta.resolve()` 能够感知额外的解析配置，例如使用导入映射解析裸模块名，如上所述。`new URL()` 不知道导入映射的存在，并将裸模块名视为相对路径（即 `new URL("my-module", import.meta.url)` 等同于 `new URL("./my-module", import.meta.url)`）。
 
-某些工具会将 `new URL("./lib/helper.js", import.meta.url).href` 识别为对 `"./lib/helper.js"` 的依赖（类似于导入），并在打包、重写已移动文件的导入、"跳转到源码"等功能中加以考虑。然而，由于 `import.meta.resolve()` 歧义更少且专门用于指示模块路径解析依赖，你应该尽可能在这些用例中使用 `import.meta.resolve(moduleName)` 而不是 `new URL(moduleName, import.meta.url)`。
+某些工具会将 `new URL("./lib/helper.js", import.meta.url).href` 识别为对 `"./lib/helper.js"` 的依赖（类似于导入），并在打包、重写已移动文件的导入、“跳转到源码”等功能中加以考虑。然而，由于 `import.meta.resolve()` 歧义更少且专门用于指示模块路径解析依赖，你应该尽可能在这些用例中使用 `import.meta.resolve(moduleName)` 而不是 `new URL(moduleName, import.meta.url)`。
 
 ### 非 ECMAScript 特性
 
