@@ -213,8 +213,9 @@ HTML ofrece una selección de elementos que pueden ayudar a crear objetos de int
 
 | Elemento                   | Descripción                                                                                                                                                                                                                         |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{HTMLElement("details")}} | El elemento HTML Details **\<details>** es usado como un widget de revelación a través del cual el usuario puede obtener información adicional .                                                                                    |
-| {{HTMLElement("dialog")}}  | El **elemento** **HTML `<dialog>`** representa una caja de diálogo u otro componente interactivo, como inspector o ventana.                                                                                                         |
+| {{HTMLElement("details")}} | Es usado como un widget de revelación a través del cual la información es visible solo cuando el widget cambia a un estado "abierto". Un resumen o una etiquta deben ser provistos utilizando el elemento {{HTMLElement("summary")}}                                                                                  |
+| {{HTMLElement("dialog")}}  | Representa una caja de diálogo u otro componente interactivo, como lo son una alerta descartable, un inspecor o una ventana auxiliar.                                                                                                      |
+| {{HTMLElement("geolocation")}} {{experimental_inline}} | Crea un control interactivo para que el usuario comparta su ubicación geográfica con la página.                                                                                                           |
 | {{HTMLElement("summary")}} | Especifica un resumen, un título o una leyenda para el cuadro de información de un elemento de detalles. Al hacer clic en el elemento `<summary>`, el estado del elemento principal {{HTMLElement("details")}} se abre y se cierra. |
 
 ## Componentes Web
@@ -223,8 +224,8 @@ Los Componentes Web son una tecnología relacionada con HTML que hacen que sea p
 
 | Elemento                    | Descripción                                                                                                                                                                                                                                                                   |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{HTMLElement("slot")}}     | **El elemento HTML `<slot>`** —parte de la suite tecnologica [Web Components](/es/docs/Web/API/Web_components) — es un placeholder en un componente que tu puedes llenar con tu propio marcado, que te permite crear árboles DOM por separado y presentarlos juntos.          |
-| {{HTMLElement("template")}} | El **elemento** **HTML `<template>`** es un mecanismo para mantener el contenido {{Glossary("HTML")}} del lado del cliente que no se renderiza cuando se carga una página, pero que posteriormente puede ser instanciado durante el tiempo de ejecución empleando JavaScript. |
+| {{HTMLElement("slot")}}     | Este es parte de la suite tecnológica [Web Components](/es/docs/Web/API/Web_components), es un placeholder en un componente que tu puedes llenar con tu propio marcado, que te permite crear árboles DOM por separado y presentarlos juntos.          |
+| {{HTMLElement("template")}} | Es un mecanismo para mantener HTML que no debe presentarse inmediatamente cuando la página es cargada, pero que puede inicializarse subsequentemente durante tiempo de ejecución usando JavaScript.|
 
 ## Elementos obsoletos y en desuso
 
