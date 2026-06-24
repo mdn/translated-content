@@ -324,7 +324,7 @@ import { name as circleName } from "shapes/circle.js";
 
 ## 参见
 
-- [JavaScript 模块 > 使用导入映射导入模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)
+- [JavaScript 模块 > 使用导入映射导入模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#使用导入映射导入模块)
 - [HTML `<script>` 元素的 `type` 属性](/zh-CN/docs/Web/HTML/Reference/Elements/script/type)
 - [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)
 - [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)
