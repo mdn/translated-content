@@ -111,7 +111,7 @@ import { name as circleName } from "shapes/circle.js";
 
 ### 作用域模块标识符映射
 
-您可以使用 `scopes` 键来提供仅在导入模块的脚本包含特定 URL 路径时才使用的映射。如果加载脚本的 URL 与提供的路径匹配，则将使用与该作用域关联的映射。这允许根据执行导入的代码使用不同版本的模块。
+你可以使用 `scopes` 键来提供仅在导入模块的脚本包含特定 URL 路径时才使用的映射。如果加载脚本的 URL 与提供的路径匹配，则将使用与该作用域关联的映射。这允许根据执行导入的代码使用不同版本的模块。
 
 例如，仅当加载模块的 URL 包含路径 "/modules/custom-shapes/" 时，下面的映射才会使用作用域映射。
 
@@ -134,7 +134,7 @@ import { name as circleName } from "shapes/circle.js";
 
 ### 完整性元数据映射
 
-您可以使用 `integrity` 键来提供模块[完整性元数据](/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity#using_subresource_integrity)的映射。这使您能够确保动态或静态导入模块的完整性。`integrity` 还使您能够为顶层或预加载模块提供回退，以防它们尚未包含 `integrity` 属性。
+你可以使用 `integrity` 键来提供模块[完整性元数据](/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity#using_subresource_integrity)的映射。这使你能够确保动态或静态导入模块的完整性。`integrity` 还使你能够为顶层或预加载模块提供回退，以防它们尚未包含 `integrity` 属性。
 
 映射键表示模块 URL，可以是绝对 URL 或相对 URL（以 `/`、`./` 或 `../` 开头）。映射值表示完整性元数据，与 [`integrity`](/zh-CN/docs/Web/HTML/Reference/Elements/script#integrity) 属性值中使用的元数据相同。
 
