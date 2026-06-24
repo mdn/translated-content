@@ -63,7 +63,7 @@ Las [Guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a construir con HTML en
 - [Agregar un hitmap sobre una imagen](/es/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image)
   - : Los mapas de imágenes permiten asociar hiperenlaces con diferentes partes de una imágen. Este artículo muestra cómo se les puede crear e implementar.
 - [Crea páginas HTML de carga rápida](/es/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
-  - : Estos consejos están basados en conocmiento común y experimentación. Una página web optimizada, no solo provee un sitio más responsivo para tús visitantes, pero también reduce la carga en tús servidores web y la conección de internet.
+  - : Estos consejos están basados en conocimiento común y experimentación. Una página web optimizada, no solo provee un sitio más responsivo para tus visitantes, pero también reduce la carga en tus servidores web y la conexión de internet.
 - [Agregar JavaScript a tu página web](/es/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)
   - : Este artículo explica cómo agregar código JavaScript a un archivo HTML.
 
