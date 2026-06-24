@@ -16,7 +16,7 @@ Un elemento HTML se distingue de otro texto en un documento mediante "etiquetas"
 
 Los siguientes artículos pueden ayudarte a obtener más información sobre HTML.
 
-## Tutorialas para principiantes
+## Tutoriales para principiantes
 
 Nuestros [Módulos centrales de aprendizaje](/es/docs/Learn_web_development/Core) contienen tutoriales modernos y actualizados que cubren los fundamentos de HTML.
 
