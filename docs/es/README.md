@@ -268,7 +268,7 @@ Cuando en inglés aparece `{{Glossary("TLD")}}` y el término natural en españo
 
 Usa la forma de **tú** (tuteo) cuando te dirijas directamente al lector. MDN español adoptó el tuteo como convención moderna: "abre el archivo", "asegúrate de incluir", "puedes omitir". Evita el ustedeo ("abra el archivo", "asegúrese de incluir").
 
-#### Bloques de aviso GFM
+#### Bloques de aviso GFM (GitHub Flavored Markdown)
 
 Los bloques de aviso con sintaxis GFM deben conservar la palabra clave **en inglés**. Son: `[!NOTE]`, `[!WARNING]`, `[!CALLOUT]`. Rari/Yari solo los renderiza como cajas con estilo si están escritos exactamente así. Si los traduces (`[!Nota]`, `[!Advertencia]`), se muestran como una cita simple sin formato especial.
 
