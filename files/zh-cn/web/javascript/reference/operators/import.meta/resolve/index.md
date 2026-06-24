@@ -50,7 +50,7 @@ console.log(await import(helperPath));
 
 ### 裸模块名
 
-只要名称定义了模块解析，你就可以将裸模块名（也称为裸模块标识符）传递给 `import.meta.resolve()`。例如，你可以在浏览器中使用[导入映射（import map）](/zh-CN/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)来定义：
+只要名称定义了模块解析，你就可以将裸模块名（也称为裸模块标识符）传递给 `import.meta.resolve()`。例如，你可以在浏览器中使用[导入映射](/zh-CN/docs/Web/JavaScript/Guide/Modules#使用导入映射导入模块)来定义：
 
 ```html
 <!-- index.html -->
