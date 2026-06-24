@@ -44,7 +44,7 @@ Las [Guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a construir con HTML en
 - [Usando microdatos en HTML](/es/docs/Web/HTML/Guides/Microdata)
   - : Los microdatos son utilizados para anidar metadatos dentro de contenido existente en las páginas web. Los motores de busqueda y rastreadores web pueden extraer y procesar microdatos para proveer una experiencia de navegación más enriquecedora.
 - [Usando microformatos en HTML](/es/docs/Web/HTML/Guides/Microformats)
-  - : Los microformatos son estándares utilizaods para fijar datos semánticos y estructurados en HTML para ser usados por aplicaciones web sociales, motores de busqueda, agregadores y otras herramientas.
+  - : Los microformatos son estándares utilizados para fijar datos semánticos y estructurados en HTML para ser usados por aplicaciones web sociales, motores de búsqueda, agregadores y otras herramientas.
 - [Comprende los modos quirk y estándar](/es/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
   - : Información histórica acerca del modo quirk y el modo estándar.
 - [Usando imágenes responsivas en HTML](/es/docs/Web/HTML/Guides/Responsive_images)
