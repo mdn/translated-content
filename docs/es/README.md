@@ -150,7 +150,7 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
    - ¿Existe `files/es/…/A/index.md` en el repositorio con ese encabezado traducido? → usa la ancla en español.
    - ¿No existe o la sección no está traducida? → cambia la URL a `/es/` pero **conserva la ancla en inglés**: `/es/docs/Web/A#hello`.
 
-   Para los **enlaces dentro de la misma página** (`[ver más](#como-funciona)`), la ancla debe coincidir con el ID generado por el encabezado traducido. Si tradujiste `## How it works` como `## Cómo funciona`, el enlace debe ser `#cómo_funciona`.
+   Para los **enlaces dentro de la misma página** (`[ver más](#cómo_funciona)`), la ancla debe coincidir con el ID generado por el encabezado traducido. Si tradujiste `## How it works` como `## Cómo funciona`, el enlace debe ser `#cómo_funciona`.
 
 5. Revisa el _front-matter_ YAML (`title`, `slug`, `l10n.sourceCommit`) como se describe en la siguiente sección.
 
