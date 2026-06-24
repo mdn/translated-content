@@ -134,6 +134,24 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 
    Por eso la regla es: **siempre usar `/es/` para los enlaces internos de MDN**. Si el apartado al que enlazas no existe en español, el sistema lo muestra en inglés de forma transparente. No es necesario conservar `/en-US/` para "que funcione"; de hecho, un enlace `/en-US/` lleva al lector fuera del contexto de su idioma preferido.
 
+   **Anclas (`#fragmento`): deben coincidir con el encabezado que se renderiza**
+
+   Cuando un enlace incluye un fragmento (`#`), la ancla debe coincidir con el ID del encabezado **tal como se renderiza en la página destino**. No es simplemente "español si la URL es `/es/`": lo que importa es qué contenido sirve MDN en esa URL.
+
+   | Caso                    | URL de destino   | Página destino              | Ancla correcta                 |
+   | ----------------------- | ---------------- | --------------------------- | ------------------------------ |
+   | Página _sin_ traducción | `/es/docs/Web/A` | MDN sirve inglés (fallback) | Ancla en inglés: `#hello`      |
+   | Página _con_ traducción | `/es/docs/Web/B` | MDN sirve español           | Ancla en español: `#hola`      |
+   | Misma página            | `#fragmento`     | El archivo actual           | Ancla del encabezado traducido |
+
+   **Ejemplo del problema frecuente:** el inglés tiene `/en-US/docs/Web/A#hello`. Al traducir la página que contiene ese enlace, lo cambias mecánicamente a `/es/docs/Web/A#hola`. Pero si la página A no tiene traducción española, MDN la sirve en inglés y el encabezado `#hola` no existe: el lector llega a la página A pero sin desplazarse a la sección correcta.
+
+   La solución es verificar antes de cambiar la ancla:
+   - ¿Existe `files/es/…/A/index.md` en el repositorio con ese encabezado traducido? → usa la ancla en español.
+   - ¿No existe o la sección no está traducida? → cambia la URL a `/es/` pero **conserva la ancla en inglés**: `/es/docs/Web/A#hello`.
+
+   Para los **enlaces dentro de la misma página** (`[ver más](#como-funciona)`), la ancla debe coincidir con el ID generado por el encabezado traducido. Si tradujiste `## How it works` como `## Cómo funciona`, el enlace debe ser `#cómo_funciona`.
+
 5. Revisa el _front-matter_ YAML (`title`, `slug`, `l10n.sourceCommit`) como se describe en la siguiente sección.
 
 ---
