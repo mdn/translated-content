@@ -2,7 +2,7 @@
 title: Requêtes de tirage soumission et révisions
 slug: MDN/Community/Pull_requests
 l10n:
-  sourceCommit: 20cff31570e35c6da44ddd84158fcebd9f4f42d9
+  sourceCommit: f8ef875113a7d3e9952f41de68be1e3a3a1e6988
 ---
 
 Ce document explique comment les contributeur·ice·s apportent des modifications à MDN Web Docs, comment ces changements sont relus et publiés sur le site.
@@ -45,7 +45,7 @@ Lorsque vous souhaitez contribuer au projet MDN, vous pouvez vous trouver dans l
   Les issues étiquetées `good first issue` sont un bon point de départ.
 
 - **Si vous avez trouvé un problème sur MDN**, ouvrez d'abord un ticket (issue).
-  **Les issues doivent recevoir une réponse des mainteneur·euse·s avant de commencer à travailler** afin de s'assurer que le problème traité par la pull request est valide et que votre contribution sera acceptée.
+  **Les issues doivent recevoir une réponse des mainteneur·euse·s avant de commencer à travailler** afin de s'assurer que le problème traité par la pull request est valide et que votre contribution est acceptée.
   Plus d'informations sur les issues sont disponibles sur nos [pages Communauté pour les issues GitHub <sup>(angl.)</sup>](https://github.com/mdn/mdn/issues/new?labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here).
 
 - **Si vous souhaitez proposer un nouveau contenu ou une nouvelle fonctionnalité**, soumettez une proposition via le [modèle d'issue GitHub «&nbsp;New content or feature suggestion&nbsp;» <sup>(angl.)</sup>](https://github.com/mdn/mdn/issues/new/choose).
@@ -83,7 +83,7 @@ Lorsque vous êtes prêt·e à ouvrir une requête de tirage, suivez ces recomma
 - **Soyez patient·e pendant la relecture.**
   L'organisation MDN reçoit un grand nombre de requêtes de tirage et l'équipe peut avoir besoin de temps pour examiner votre contribution.
 - **Ne rouvrez pas de requêtes fermées.**
-  Si besoin, créez une nouvelle requête qui pourra faire référence à l'ancienne.
+  Si besoin, créez une nouvelle requête qui peut faire référence à l'ancienne.
 
 ## Processus de relecture des requêtes de tirage
 
@@ -184,20 +184,19 @@ Cette section précise les délais attendus pour répondre aux commentaires de r
 ### Relecteur·ice·s externes
 
 Certaines requêtes sur le dépôt de contenu MDN concernent des travaux spécifiques de fournisseurs de navigateurs ou d'organisations avec des auteur·ice·s et relecteur·ice·s défini·e·s.
-Dans ce cas, l'auteur·ice indique le nom d'utilisateur du·de la relecteur·ice à la fin de la description de la requête, par exemple&nbsp;:
+Dans ce cas, l'auteur·ice indique le nom d'utilisateur·ice du·de la relecteur·ice à la fin de la description de la requête, par exemple&nbsp;:
 
 ```md
 reviewer: @tristantheb
 ```
 
 Si vous recevez une demande de relecture et qu'une autre personne a été désignée comme relecteur·ice, ne relisez pas les changements.
-Une fois que la personne mentionnée a approuvé les modifications, elle demandera l'approbation requise par le fichier `CODEOWNERS`.
+Une fois que la personne mentionnée a approuvé les modifications, elle demande l'approbation requise par le fichier `CODEOWNERS`.
 
 ## Pour aller plus loin
 
 Les relecteur·ice·s sont encouragé·e·s à lire les articles suivants pour s'aider dans les tâches courantes&nbsp;:
 
 - [The Art of Closing <sup>(angl.)</sup>](https://blog.jessfraz.com/post/the-art-of-closing/) explique comment fermer une requête inachevée ou refusée
-- [Kindness and Code Reviews: Improving the Way We Give Feedback <sup>(angl.)</sup>](https://product.voxmedia.com/2018/8/21/17549400/kindness-and-code-reviews-improving-the-way-we-give-feedback) donne des conseils pour formuler des retours
 - [Code Review Guidelines for the Reviewer <sup>(angl.)</sup>](https://phauer.com/2018/code-review-guidelines/#code-reviews-guidelines-for-the-reviewer) fournit des exemples de bons et mauvais retours
 - [How to do a code review <sup>(angl.)</sup>](https://google.github.io/eng-practices/review/reviewer/) sur google.github.io/eng-practices

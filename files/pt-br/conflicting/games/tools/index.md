@@ -32,7 +32,7 @@ original_slug: Games/Introduction_to_HTML5_Game_Development
   - : Use gamepads ou outros controladores de jogos.
 - [HTML](/pt-BR/docs/Web/HTML) e [CSS](/pt-BR/docs/Web/CSS)
   - : Contrua, estilize e disponha a interface de usuário do seu jogo.
-- [HTML audio](/pt-BR/docs/Web/HTML/Element/audio)
+- [HTML audio](/pt-BR/docs/Web/HTML/Reference/Elements/audio)
   - : Reproduza facilmente efeitos sonoros simples e música.
 - [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API)
   - : Armazene os dados de usuário em seu próprio computador ou dispositivo.

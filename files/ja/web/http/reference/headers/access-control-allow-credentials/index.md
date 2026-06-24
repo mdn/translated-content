@@ -19,7 +19,7 @@ HTTP の **`Access-Control-Allow-Credentials`** は{{Glossary("response header",
 
 資格情報が添付されるのは次の場合です。
 
-- {{glossary("Preflight_request", "プリフライト")}}のあるリクエストの場合、プリフラウとリクエストには資格情報を添付しません。
+- {{glossary("Preflight_request", "プリフライト")}}のあるリクエストの場合、プリフライトリクエストには資格情報を添付しません。
   プリフライトリクエストに対するサーバーのレスポンスで `Access-Control-Allow-Credentials` ヘッダーが `true` に設定されている場合、実際のリクエストには資格情報を添付します。そうでない場合、ブラウザーはネットワークエラーを報告します。
 - プリフライトのないリクエストの場合、リクエストには資格情報が添付されます。サーバーのレスポンスで `Access-Control-Allow-Credentials` ヘッダーが `true` に設定されていない場合、ブラウザーはネットワークエラーを報告します。
 

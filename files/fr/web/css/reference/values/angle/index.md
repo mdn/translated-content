@@ -1,9 +1,9 @@
 ---
-title: <angle>
+title: Type CSS `<angle>`
+short-title: <angle>
 slug: Web/CSS/Reference/Values/angle
-original_slug: Web/CSS/angle
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 06d31d3fa6fbe7ecf0d2c3f3f0b14e1d5fe874c5
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<angle>`** représente une valeur d'angle exprimée en degrés, grades, radians ou tours. Il est utilisé, par exemple, dans les {{CSSxRef("&lt;gradient&gt;")}} et dans certaines fonctions {{CSSxRef("transform")}}.
@@ -46,9 +46,10 @@ transform: rotate(1.75turn);
 
 ## Syntaxe
 
-Le type **`<angle>`** se compose d'une valeur {{CSSxRef("&lt;number&gt;")}} suivie de l'une des unités listées ci-dessous. Comme pour toutes les dimensions, il n'y a pas d'espace entre le littéral de l'unité et le nombre. L'unité d'angle est facultative après le nombre `0`.
+Le type **`<angle>`** se compose d'une valeur {{CSSxRef("&lt;number&gt;")}} suivie de l'une des unités listées ci-dessous. Comme pour toutes les dimensions, il n'y a pas d'espace entre le littéral de l'unité et le nombre.
+Bien que certaines utilisations héritées acceptent un `0` sans unité, vous devez toujours inclure une unité pour les valeurs nulles, par exemple&nbsp;: `0deg`, `0grad`, `0rad` ou `0turn`.
 
-Il peut être précédé d'un seul signe `+` ou `-`. Les nombres positifs représentent des angles dans le sens horaire, tandis que les nombres négatifs représentent des angles dans le sens antihoraire. Pour les propriétés statiques d'une unité donnée, un angle peut être représenté par plusieurs valeurs équivalentes. Par exemple, `90deg` équivaut à `-270deg`, et `1turn` équivaut à `4turn`. Pour les propriétés dynamiques, comme lors de l'application d'une {{CSSxRef("animation")}} ou d'une {{CSSxRef("transition")}}, l'effet obtenu sera néanmoins différent.
+Il peut être précédé d'un seul signe `+` ou `-`. Les nombres positifs représentent des angles dans le sens horaire, tandis que les nombres négatifs représentent des angles dans le sens antihoraire. Pour les propriétés statiques d'une unité donnée, un angle peut être représenté par plusieurs valeurs équivalentes. Par exemple, `90deg` équivaut à `-270deg`, et `1turn` équivaut à `4turn`. Pour les propriétés dynamiques, comme lors de l'application d'une {{CSSxRef("animation")}} ou d'une {{CSSxRef("transition")}}, l'effet obtenu est néanmoins différent.
 
 ### Unités
 
@@ -102,7 +103,7 @@ Il peut être précédé d'un seul signe `+` ou `-`. Les nombres positifs repré
   <tbody>
     <tr>
       <td><img src="angle0.png" alt="Un schéma montrant une rotation de 0 degré. Il n'y a aucun mouvement." /></td>
-      <td><code>0 = 0deg = 0grad = 0turn = 0rad</code></td>
+      <td><code>0deg = 0grad = 0turn = 0rad</code></td>
     </tr>
   </tbody>
 </table>
@@ -118,8 +119,8 @@ Il peut être précédé d'un seul signe `+` ou `-`. Les nombres positifs repré
 ## Voir aussi
 
 - [Types de données CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
-- Le type de donnée {{CSSxRef("gradient")}}
-- Transformations CSS de rotation&nbsp;: [`rotate()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate), [`rotate3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate3d), [`rotateX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotateX), [`rotateY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotateY), [`rotateZ()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotateZ)
+- Le type de donnée {{CSSxRef("&lt;gradient&gt;")}}
+- Transformations CSS de rotation&nbsp;: {{CSSxRef("transform-function/rotate", "rotate()")}}, {{CSSxRef("transform-function/rotate3d", "rotate3d()")}}, {{CSSxRef("transform-function/rotateX", "rotateX()")}}, {{CSSxRef("transform-function/rotateY", "rotateY()")}}, {{CSSxRef("transform-function/rotateZ", "rotateZ()")}}
 - [Transformations CSS](/fr/docs/Web/CSS/Guides/Transforms)
 - [Utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)

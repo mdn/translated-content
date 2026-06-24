@@ -59,4 +59,4 @@ var selectFormElement = document.forms[index].elements[index];
 
 ## 参见
 
-- [DOM:form](/zh-CN/docs/DOM/HTMLFormElement)
+- [DOM:form](/zh-CN/docs/Web/API/HTMLFormElement)

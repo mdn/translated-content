@@ -141,7 +141,7 @@ Note, contudo, que muitas das dicas listadas neste artigo são técnicas de sens
 
 ## Use async and defer, se possível
 
-Faça com que scripts JavaScript sejam compatíveis tanto com [async](/pt-BR/docs/Web/HTML/Element/script#attributes) como [defer](/pt-BR/docs/Web/HTML/Element/script#attributes) e use [async](/pt-BR/docs/Web/HTML/Element/script#attributes) sempre que possível, especialmente se você tiver múltiplas tags de script.
+Faça com que scripts JavaScript sejam compatíveis tanto com [async](/pt-BR/docs/Web/HTML/Reference/Elements/script#attributes) como [defer](/pt-BR/docs/Web/HTML/Reference/Elements/script#attributes) e use [async](/pt-BR/docs/Web/HTML/Reference/Elements/script#attributes) sempre que possível, especialmente se você tiver múltiplas tags de script.
 
 Com isso, a página pode parar de renderizar enquanto o JavaScript ainda estiver sendo carregado. Do contrário, o _browser_ não renderizará nada que estiver após as tags de script sem esses atributos.
 

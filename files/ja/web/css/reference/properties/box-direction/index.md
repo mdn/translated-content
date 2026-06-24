@@ -1,15 +1,19 @@
 ---
-title: box-direction
+title: CSS `box-direction` プロパティ
+short-title: box-direction
 slug: Web/CSS/Reference/Properties/box-direction
-original_slug: Web/CSS/box-direction
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_header}}
 
 > [!WARNING]
-> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。以前の標準であった `box-direction` は `flex-direction` に置き換えられたので、 `-moz-box-direction` は XUL でのみ使用されます。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)を参照してください。
+> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。以前の標準であった `box-direction` は `flex-direction` に置き換えられたので、 `-moz-box-direction` は XUL でのみ使用されます。現在の標準についての情報は [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) を参照してください。
 
 **`box-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスが内容を通常通りに (上または左から) 配置するか、逆方向に (下または右から) 配置するかを指定します。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -20,12 +24,11 @@ box-direction: reverse;
 box-direction: inherit;
 box-direction: initial;
 box-direction: revert;
+box-direction: revert-layer;
 box-direction: unset;
 ```
 
-## 構文
-
-`box-direction` プロパティは以下に挙げたキーワード値のうちの一つで指定します。
+`box-direction` プロパティは以下に挙げたキーワード値のうちの 1 つで指定します。
 
 ### 値
 
@@ -51,7 +54,7 @@ start の反対側の端は _end_ となります。
 
 ## 形式文法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`box-direction = normal | reverse`)}}
 
 ## 例
 

@@ -1,9 +1,9 @@
 ---
-title: <meta name="viewport">
+title: Valeur d'attribut HTML `<meta name="viewport">`
 short-title: viewport
 slug: Web/HTML/Reference/Elements/meta/name/viewport
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 La valeur **`viewport`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) d'un élément HTML {{HTMLElement("meta")}} donne des indications sur la façon dont la {{Glossary("viewport", "zone d'affichage")}} doit être dimensionnée.

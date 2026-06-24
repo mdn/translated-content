@@ -18,7 +18,7 @@ const array1 = [1, 2, 3];
 for (let i = 0; i < array1.length; array1[i++] = 0 /* empty statement */);
 
 console.log(array1);
-// Expected output: Array [0, 0, 0]
+// 予想される結果: Array [0, 0, 0]
 ```
 
 ## 構文

@@ -1,8 +1,9 @@
 ---
-title: text-align-last
+title: Propriété CSS `text-align-last`
+short-title: text-align-last
 slug: Web/CSS/Reference/Properties/text-align-last
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-align-last`** définit la façon dont la dernière ligne d'un bloc, ou une ligne avant un retour à la ligne forcé, doit être alignée.

@@ -4,7 +4,7 @@ slug: Web/SVG/Reference/Element/script
 original_slug: Web/SVG/Element/script
 ---
 
-Um elemento `script` é equivalente a um elemento [`script`](/pt-BR/docs/HTML/Element/Script) em HTML e, portanto, é o lugar para os scripts (por exemplo, ECMAScript).
+Um elemento `script` é equivalente a um elemento [`script`](/pt-BR/docs/Web/HTML/Reference/Elements/script) em HTML e, portanto, é o lugar para os scripts (por exemplo, ECMAScript).
 
 Quaisquer funções definidas dentro de qualquer elemento `script` tem um escopo global em todo o documento atual.
 
@@ -51,8 +51,8 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
+- [Atributos XLink](/pt-BR/docs/Web/SVG/Reference/Attribute#xlink) »
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### Atributos específicos
@@ -70,6 +70,6 @@ Este elemento implementa a interface do [`SVGScriptElement`](/pt-BR/docs/DOM/SVG
 
 ## Veja também
 
-- [Elemento `script` em HTML](/pt-BR/docs/HTML/Element/Script)
+- [Elemento `script` em HTML](/pt-BR/docs/Web/HTML/Reference/Elements/script)
 
 {{SVGRef}}

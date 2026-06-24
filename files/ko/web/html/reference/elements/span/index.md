@@ -33,13 +33,13 @@ span.ingredient {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_컨텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_컨텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_컨텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_컨텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -47,7 +47,7 @@ span.ingredient {
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_컨텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_컨텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -59,11 +59,11 @@ span.ingredient {
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_컨텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_컨텐츠"
           >구문 콘텐츠</a
         >
         또는
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_컨텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_컨텐츠"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>

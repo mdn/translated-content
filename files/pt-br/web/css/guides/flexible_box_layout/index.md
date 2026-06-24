@@ -52,11 +52,11 @@ A propriedade `align-content`, `align-self`, `align-items` e `justify-content` a
 
 ## Guia
 
-- [Conceitos básicos de flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Conceitos básicos de flexbox](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
   - : Uma visão geral sobre as funcionalidades do Flexbox
 - [Relação entre o Flexbox e os outros métodos de layout](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
   - : Como o Flexbox está relacionado aos outros métodos de layout, e outras especificações CSS
-- [Alinhando itens em um contêiner flex](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Alinhando itens em um contêiner flex](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
   - : Como as propriedades Box Alignment trabalham com Flexbox.
 - [Ordenando itens flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
   - : Explicando as diferentes formas de mudar a order e direção dos itens, e cobrindo os possíveis problemas em fazer isso.

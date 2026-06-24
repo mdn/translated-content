@@ -14,7 +14,7 @@ slug: Web/HTTP/Reference/Headers/X-XSS-Protection
     <tr>
       <th scope="row">
         <p>Запрещённое имя заголовка</p>
-        <p>{{Glossary("Forbidden header name")}}</p>
+        <p>{{Glossary("Forbidden request header")}}</p>
       </th>
       <td>no</td>
     </tr>

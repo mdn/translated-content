@@ -20,14 +20,14 @@ O elemento `source` é utilizado para especificar múltiplos recursos de mídia 
 
 ## Atributos
 
-Como todos os outros elementos de HTML, esse elemento suporta os [global attributes](/pt-BR/docs/HTML/Global_attributes).
+Como todos os outros elementos de HTML, esse elemento suporta os [global attributes](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `src`
   - : Requerido, endereço do arquivo de mídia.
 - `type`
   - : O tipo MIME do arquivo, opcionalmente com um parametro de `codecs`. Veja o [RFC 4281](https://www.rfc-editor.org/rfc/rfc4281.txt) para informações sobre como especificar codec.
 - `media`
-  - : Definição do tipo de mídia ([Media query](/pt-BR/docs/CSS/Media_queries)) pretendido.
+  - : Definição do tipo de mídia ([Media query](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using)) pretendido.
 
 Se o atributo **type** não está especificado, o tipo da mídia é obtido no servidor e é verificado se o Gecko consegue reproduzi-lo; se não for possível reproduzi-lo, o próximo **source** é verificado. Se o atributo **type** está definido, ele é comparado aos tipos que o Gecko consegue reproduzir, e se não for reconhecido, o servido não é solicitado; ao invés disso, o próximo elemento **source** é verificado.
 

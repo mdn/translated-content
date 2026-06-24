@@ -50,7 +50,7 @@ flex-wrap: wrap-reverse;
 }
 ```
 
-Veja [Using CSS flexible boxes](/pt-BR/docs/CSS/Using_CSS_flexible_boxes) para mais propriedades e informação.
+Veja [Using CSS flexible boxes](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) para mais propriedades e informação.
 
 ## Syntax
 
@@ -171,5 +171,5 @@ Os seguintes valores são aceitos :
 
 ## Veja também
 
-- Guia CSS Flexbox: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guia CSS Flexbox: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
 - Guia CSS Flexbox: _[Mastering wrapping of flex items](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_

@@ -1,9 +1,9 @@
 ---
-title: Firefox 149 release notes for developers (Stable)
-short-title: Firefox 149 (Stable)
+title: Firefox 149 release notes for developers
+short-title: Firefox 149
 slug: Mozilla/Firefox/Releases/149
 l10n:
-  sourceCommit: 05b5b1f7d349d5e48e197394c1c4ced51d5fc8ce
+  sourceCommit: ce29b1c36065db92c2a59ba507a4941fbf0a5159
 ---
 
 このページでは、開発者に影響する Firefox 149 の変更点をまとめています。
@@ -43,7 +43,7 @@ Firefox 149 は、米国時間 [2026 年 3 月 24 日](https://whattrainisitnow.
   この API は {{domxref("ReportingObserver")}} を使用して、違反しているページの {{domxref("CSPViolationReport")}} および {{domxref("IntegrityViolationReport")}} オブジェクトを報告できます (報告は `type` プロパティの `"csp-violation"` または `"integrity-violation"` によってフィルタリングできます)。
   シリアライズした報告オブジェクトは、対応する HTTP ヘッダーで指定した報告サーバーへ送信することもできます。エンドポイントの名前と対応する URL は、はじめに {{httpheader('Reporting-Endpoints')}} または {{httpheader('Report-To')}} HTTP レスポンスヘッダーで定義しなければなりません ([Firefox bug 1976074](https://bugzil.la/1976074)、[Firefox bug 2008916](https://bugzil.la/2008916))。
 
-- Firefox 148 まで `structuredClone.call(iframe.contentWindow)` が、誤って iframe の [レルム](/ja/docs/Web/JavaScript/Reference/Execution_model#realms) ではなく呼び出し元のレルムでオブジェクトを作成していました。この実装が `this` のレルムでオブジェクトをインスタンス化するようになり、メソッドの動作がより厳密に、仕様書に準拠します。
+- Firefox 148 まで `structuredClone.call(iframe.contentWindow)` が、誤って iframe の [レルム](/ja/docs/Web/JavaScript/Reference/Execution_model#realms) ではなく呼び出し元のレルムでオブジェクトを作成していました。この実装が `this` のレルムでオブジェクトをインスタンス化するようになり、メソッドの動作がより厳密に、仕様書に準拠します ([Firefox bug 2017797](https://bugzil.la/2017797))。
 
 #### DOM
 
@@ -98,8 +98,7 @@ Firefox 149 は、米国時間 [2026 年 3 月 24 日](https://whattrainisitnow.
 - {{WebExtAPIRef("action.isEnabled")}} および {{WebExtAPIRef("browserAction.isEnabled")}} のトップレベルの引数として `tabId` を追加しました。この変更は、Chrome の `action.isEnabled` の実装との互換性を提供します ([Firefox bug 2013477](https://bugzil.la/2013477))。
 - ポップアップを開くための {{WebExtAPIRef("action.openPopup")}} および {{WebExtAPIRef("browserAction.openPopup")}} で、ユーザーのジェスチャーが必要ではなくなりました。この機能は Firefox 108 から、設定 `extensions.openPopupWithoutUserGesture.enabled` によって使用できました。この変更は、Firefox の動作を Chrome や Safari に合わせるものです ([Firefox bug 1799344](https://bugzil.la/1799344))。
 - {{WebExtAPIRef("action.openPopup")}} または {{WebExtAPIRef("browserAction.openPopup")}} に `windowId` が渡された場合に、ポップアップを開くためにウィンドウにフォーカス (アクティブ) を設定しなければなりません。フォーカスがないウィンドウでポップアップを開くには、初めに {{WebExtAPIRef("windows.update","windows.update(windowId, { focused: true })")}} を呼び出さなければなりません。この変更は Firefox の動作を Chrome に合わせるものです ([Firefox bug 2011516](https://bugzil.la/2011516))。
-- {{domxref("structuredClone")}} の実装を、呼び出し元のレルムではなく `this` のレルムでオブジェクトをインスタンス化するように変更しました。後方互換性のためコンテンツスクリプトのグローバルスコープに、`window.structuredClone` をシャドーイングする独自の `structuredClone` メソッドを含むようになりました。詳しくは [Sharing objects with page scripts の `structuredClone`](/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone) をご覧ください。
-
+- {{domxref("structuredClone")}} の実装を、呼び出し元のレルムではなく `this` のレルムでオブジェクトをインスタンス化するように変更しました。後方互換性のためコンテンツスクリプトのグローバルスコープに、`window.structuredClone` をシャドーイングする独自の `structuredClone` メソッドを含むようになりました。詳しくは [Sharing objects with page scripts の `structuredClone`](/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone) をご覧ください ([Firefox bug 2017797](https://bugzil.la/2017797))。
 - 拡張機能が {{WebExtAPIRef("tabs.executeScript")}}、{{WebExtAPIRef("tabs.insertCSS")}}、{{WebExtAPIRef("tabs.removeCSS")}}、{{WebExtAPIRef("scripting.executeScript")}}、{{WebExtAPIRef("scripting.insertCSS")}}、{{WebExtAPIRef("scripting.removeCSS")}} によって、`moz-extension:` 文書で動的にコードを実行する機能が非推奨になりました ([Firefox bug 2011234](https://bugzil.la/2011234))。この機能は Firefox Nightly では使用できず、Beta および Release 版の Firefox ではタブのコンソールで警告が表示されます。この制限は Firefox 152 以降ですべてのバージョンに適用する予定です。([Firefox bug 2015559](https://bugzil.la/2015559)) 代替手段として文書のスクリプトで {{WebExtAPIRef("runtime.onMessage")}} リスナーを登録して、要求したコードを実行するためにメッセージを送信することで、拡張機能が文書内で動的にコードを実行できます。
 - ダークテーマで [ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) の SVG アイコンに適用される暗黙的な CSS フィルターが、Nightly ビルドで無効化されました ([Firefox bug 2001318](https://bugzil.la/2001318))。また Firefox 152 から、ほかのエディションでも無効化する予定です ([Firefox bug 2016509](https://bugzil.la/2016509))。ほかの Firefox エディションでは、`about:config` でブーリアン型の設定項目 `extensions.webextensions.pageActionIconDarkModeFilter.enabled` を作成して `false` を設定することで、CSS フィルターを無効にしたページアクション SVG アイコンのテストを行えます。
 

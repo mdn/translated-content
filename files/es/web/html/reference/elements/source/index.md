@@ -24,7 +24,7 @@ El **elemento HTML `<source>`** especifica recursos de medios múltiples para lo
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
@@ -46,7 +46,7 @@ El **elemento HTML `<source>`** especifica recursos de medios múltiples para lo
         <div>
           Un elemento multimedia—{{HTMLElement("audio")}} o
           {{HTMLelement("video")}}—y se debe colocar antes que cualquier
-          <a href="/es/docs/HTML/Content_categories#Flow_content"
+          <a href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content"
             >contenido de flujo</a
           >
           o elemento {{HTMLElement("track")}}.

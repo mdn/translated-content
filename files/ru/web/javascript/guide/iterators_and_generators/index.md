@@ -3,7 +3,7 @@ title: Итераторы и  генераторы
 slug: Web/JavaScript/Guide/Iterators_and_generators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Meta_programming")}}
 
 Обработка каждого элемента коллекции является весьма распространённой операцией. JavaScript предоставляет несколько способов перебора коллекции, от простого цикла [`for`](/ru/docs/Web/JavaScript/Reference/Statements/for) до [`map()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`filter()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) и [array comprehensions](/ru/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features). Итераторы и генераторы внедряют концепцию перебора непосредственно в ядро языка и обеспечивают механизм настройки поведения [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) циклов.
 
@@ -158,4 +158,4 @@ console.log(sequence.next().value); // 3
 
 У генераторов есть метод {{jsxref("Global_Objects/Generator/return","return(value)")}}, который возвращает заданное значение и останавливает работу генератора.
 
-{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
+{{PreviousNext("Web/JavaScript/Guide/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Meta_programming")}}

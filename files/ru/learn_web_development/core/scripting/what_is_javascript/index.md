@@ -3,7 +3,7 @@ title: Что такое JavaScript?
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Первые_шаги/A_first_splash", "Learn/JavaScript/Первые_шаги")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Добро пожаловать на курс MDN JavaScript для начинающих! В первой статье курса мы дадим базовое определение JavaScript, ответим на вопросы «Что такое JavaScript?» и «Что он делает?», узнаем как работает JavaScript и как добавить его на веб-страницу.
 
@@ -13,7 +13,7 @@ slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 
 ## Определение высокого уровня
 
-JavaScript это язык, который позволяет вам применять сложные вещи на web странице — каждый раз, когда на web странице происходит что-то большее, чем просто её статичное отображение — отображение периодически обновляемого контента, или интерактивных карт, или анимация 2D/3D графики, или прокрутка видео в проигрывателе, и т.д. — можете быть уверены, что скорее всего, не обошлось без JavaScript. Это третий слой слоёного пирога стандартных web технологий, два из которых ([HTML](/ru/docs/Learn_web_development/Core/Structuring_content) и [CSS](/ru/docs/Learn/CSS)) мы детально раскрыли в других частях учебного пособия.
+JavaScript это язык, который позволяет вам применять сложные вещи на web странице — каждый раз, когда на web странице происходит что-то большее, чем просто её статичное отображение — отображение периодически обновляемого контента, или интерактивных карт, или анимация 2D/3D графики, или прокрутка видео в проигрывателе, и т.д. — можете быть уверены, что скорее всего, не обошлось без JavaScript. Это третий слой слоёного пирога стандартных web технологий, два из которых ([HTML](/ru/docs/Learn_web_development/Core/Structuring_content) и [CSS](/ru/docs/Learn_web_development/Core/Styling_basics)) мы детально раскрыли в других частях учебного пособия.
 
 ![Три слоя стандартных веб-технологий: HTML, CSS и JavaScript](cake.png)
 
@@ -330,4 +330,4 @@ for (var i = 0; i < buttons.length; i++) {
 
 JavaScript может показаться немного пугающим в данным момент, но не переживайте - в этом курсе мы проведём вас сквозь него простыми шагами, которые имеют смысл, забегая наперёд. В следующей главе мы [погрузимся непосредственно в практику](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/A_first_splash), подталкивая вас погрузиться в код и сделать ваши собственные примеры JavaScript.
 
-{{NextMenu("Learn/JavaScript/Первые_шаги/A_first_splash", "Learn/JavaScript/Первые_шаги")}}
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "conflicting/Learn_web_development/Core/Scripting")}}

@@ -1,8 +1,9 @@
 ---
-title: font-stretch
+title: Propriété CSS `font-stretch`
+short-title: font-stretch
 slug: Web/CSS/Reference/Properties/font-stretch
 l10n:
-  sourceCommit: 3c91c067a4d36b532a4bce72e5d8a2c5a9279db5
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 > [!NOTE]

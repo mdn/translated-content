@@ -32,13 +32,13 @@ x++
 
 ## 解説
 
-`++` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。最初に[オペランドを数値の値に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換)し、その型を検査します。オペランドが長整数になった場合、長整数の加算を実行し、そうでない場合は数値の加算を実行します。
+`++` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。最初に[オペランドを数値の値に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換)し、その型を検査します。オペランドが長整数になった場合、長整数のインクリメントを実行し、そうでない場合は数値のインクリメントを実行します。
 
-後置演算子として使用した場合（演算子がオペランドの後ろにあった場合、例えば `x++`）、インクリメント演算子はインクリメントを行い、インクリメント前の値を返します。
+演算子をオペランドの後ろに付けて後置演算子として使用した場合（例えば `x++`）、インクリメント演算子はインクリメントを行い、インクリメント前の値を返します。
 
-接頭辞として使用され、演算子がオペランドの前に置かれた場合（例えば `++x`）、インクリメント演算子はインクリメントを行い、インクリメント後の値を返します。
+演算子をオペランドの前に付けて前置演算子として使用した場合（例えば `++x`）、インクリメント演算子はインクリメントを行い、インクリメント後の値を返します。
 
-インクリメント演算子は、参照（変数やオブジェクトのプロパティ、つまり有効な[代入対象](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)であるオペランドにのみ適用することができます。 `++x` 自体は値として評価され、参照ではないため、複数のインクリメント演算子を連結することはできません。
+インクリメント演算子は、参照（変数やオブジェクトのプロパティ、つまり有効な[代入対象](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)）であるオペランドにのみ適用することができます。 `++x` 自体は値として評価され、参照ではないため、複数のインクリメント演算子を連結することはできません。
 
 ```js-nolint example-bad
 ++(++x); // SyntaxError: Invalid left-hand side expression in prefix operation
@@ -66,7 +66,7 @@ const y = ++x;
 // x は 4; y = 4
 
 let x2 = 3n;
-const y2 = --x2;
+const y2 = ++x2;
 // x2 は 4n; y2 は 4n
 ```
 
@@ -86,6 +86,6 @@ const y2 = --x2;
 - [乗算演算子 (`*`)](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication)
 - [剰余演算子 (`%`)](/ja/docs/Web/JavaScript/Reference/Operators/Remainder)
 - [べき乗演算子 (`**`)](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [デクリメント演算子 (`--`)](/ja/docs/Web/JavaScript/Reference/Operators/Increment)
+- [デクリメント演算子 (`--`)](/ja/docs/Web/JavaScript/Reference/Operators/Decrement)
 - [単項マイナス演算子 (`-`)](/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 - [単項プラス演算子 (`+`)](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)

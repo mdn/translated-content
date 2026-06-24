@@ -20,7 +20,7 @@ El primer artículo de nuestra serie de tutoriales prácticos explica qué puede
             >Introducción a Django</a
           >. Durante los siguientes artículos necesitarás tener
           <a
-            href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"
+            href="/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"
             >levantado un entorno de desarrollo Django</a
           >.
         </p>

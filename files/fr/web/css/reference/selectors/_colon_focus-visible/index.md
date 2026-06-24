@@ -1,8 +1,9 @@
 ---
-title: :focus-visible
+title: Pseudo-classe CSS `:focus-visible`
+short-title: :focus-visible
 slug: Web/CSS/Reference/Selectors/:focus-visible
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus-visible`** s'applique lorsqu'un élément correspond à la pseudo-classe {{CSSxRef(":focus")}} et que {{Glossary("User Agent", "l'agent utilisateur")}} détermine, via une heuristique, que le focus devrait être mis en évidence sur l'élément (la plupart des navigateurs affichent un contour en surbrillance par défaut).

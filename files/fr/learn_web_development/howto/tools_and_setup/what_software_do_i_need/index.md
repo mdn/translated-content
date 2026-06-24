@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 721a334af54dd04cbd005bb91edc2c8ce2ad4744
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre en ligne ou consulter un site web.
 
 <table class="standard-table">
@@ -16,7 +14,7 @@ Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre e
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez déjà connaître
-        <a href="/fr/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >la différence entre une page web, un serveur web et un moteur de
           recherche.</a
         >

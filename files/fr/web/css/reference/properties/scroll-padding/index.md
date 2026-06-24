@@ -1,8 +1,9 @@
 ---
-title: scroll-padding
+title: Propriété CSS `scroll-padding`
+short-title: scroll-padding
 slug: Web/CSS/Reference/Properties/scroll-padding
 l10n:
-  sourceCommit: 57b9e55cd708d8ff4bfd9dc65c568bdee4089453
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-padding`** définit le padding de défilement sur tous les côtés d'un élément à la fois. Elle définit des décalages qui déterminent la zone de visualisation optimale d'un viewport de défilement à l'intérieur d'un {{Glossary("scroll container", "conteneur de défilement")}}.

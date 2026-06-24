@@ -1,8 +1,9 @@
 ---
-title: grid-auto-flow
+title: Propriété CSS `grid-auto-flow`
+short-title: grid-auto-flow
 slug: Web/CSS/Reference/Properties/grid-auto-flow
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`grid-auto-flow`** contrôle le fonctionnement de l'algorithme de placement automatique, en définissant précisément la façon dont les éléments placés automatiquement sont intégrés dans la grille.

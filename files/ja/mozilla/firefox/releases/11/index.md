@@ -56,7 +56,7 @@ _変更なし。_
 
 - [IDBFactory.cmp()](/ja/docs/Web/API/IDBFactory/cmp) の対応が追加されました。
 - [IndexedDB のキー](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#キー) の型が、(String や Integer だけでなく) Date、Arrays、Float のいずれかにできるようになりました。
-- 今後、トランザクションは、最初にリクエストが行われた時ではなく、トランザクションが作成された時に開始されるようになりました。。例えば、以下のようなケースを考えてみましょう。
+- 今後、トランザクションは、最初にリクエストが行われた時ではなく、トランザクションが作成された時に開始されるようになりました。例えば、以下のようなケースを考えてみましょう。
 
   ```js
   var trans1 = db.transaction("foo", READ_WRITE);

@@ -1,11 +1,12 @@
 ---
-title: <input type="checkbox">
+title: Valeur d'attribut HTML `<input type="checkbox">`
+short-title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
 l10n:
-  sourceCommit: 539dea64b179cea3f12270fe2b5203a9d2d08795
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
-Les éléments {{HTMLElement("input")}} de type **`checkbox`** sont affichés par défaut sous la forme de cases qui sont cochées lorsqu'elles sont activées, comme vous pourriez le voir sur un formulaire papier gouvernemental. L'apparence exacte dépend de la configuration du système d'exploitation sous lequel le navigateur fonctionne. Il s'agit généralement d'un carré, mais il peut avoir des coins arrondis. Une case à cocher permet de sélectionner des valeurs individuelles à soumettre dans un formulaire (ou pas).
+Les éléments {{HTMLElement("input")}} de type **`checkbox`** sont affichés par défaut sous la forme de cases qui sont cochées lorsqu'elles sont activées, comme vous pouvez le voir sur un formulaire papier gouvernemental. L'apparence exacte dépend de la configuration du système d'exploitation sous lequel le navigateur fonctionne. Il s'agit généralement d'un carré, mais il peut avoir des coins arrondis. Une case à cocher permet de sélectionner des valeurs individuelles à soumettre dans un formulaire (ou pas).
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
 
@@ -39,7 +40,7 @@ input {
 ```
 
 > [!NOTE]
-> [Les boutons radio](/fr/docs/Web/HTML/Reference/Elements/input/radio) sont semblables aux cases à cocher, mais il existe une différence importante&nbsp;: les boutons radio permettent de sélectionner une seule valeur parmi plusieurs d'[un même groupe (identifié par le nom)](/fr/docs/Web/HTML/Reference/Elements/input/radio#définir_un_groupe_de_boutons_radio) alors que les cases à cocher permettent de cocher/décocher plusieurs valeurs d'un groupe.
+> [Les boutons radio](/fr/docs/Web/HTML/Reference/Elements/input/radio) sont semblables aux cases à cocher, mais il existe une différence importante&nbsp;: les boutons radio permettent de sélectionner une seule valeur parmi plusieurs [d'un même groupe (identifié par le nom)](/fr/docs/Web/HTML/Reference/Elements/input/radio#définir_un_groupe_de_boutons_radio) alors que les cases à cocher permettent de cocher/décocher plusieurs valeurs d'un groupe.
 
 ## Valeur
 
@@ -54,7 +55,7 @@ Une chaîne de caractères représentant la valeur de la case à cocher. Celle-c
       name="subscribe"
       value="newsletter" />
     <label for="subscribeNews">
-      Souhaitez-vous vous abonner à la newsletter ?
+      Souhaitez-vous vous abonner à la newsletter&nbsp;?
     </label>
   </div>
   <div>
@@ -63,12 +64,12 @@ Une chaîne de caractères représentant la valeur de la case à cocher. Celle-c
 </form>
 ```
 
-Dans cet exemple, on a le nom (l'attribut `name`) `subscribe` utilisé pour la case à cocher avec une valeur (l'attribut `value`) qui est `newsletter`. Lorsque le formulaire est envoyé, les données seront transmises sous la forme `subscribe=newsletter`.
+Dans cet exemple, on a le nom (l'attribut `name`) `subscribe` utilisé pour la case à cocher avec une valeur (l'attribut `value`) qui est `newsletter`. Lorsque le formulaire est envoyé, les données sont transmises sous la forme `subscribe=newsletter`.
 
-Si l'attribut `value` n'était pas renseigné, la valeur par défaut serait `on` (dans l'exemple, les données envoyées au serveur auraient eu la forme `subscribe=on`).
+Si l'attribut `value` n'était pas renseigné, la valeur par défaut est `on` (dans l'exemple, les données envoyées au serveur auraient eu la forme `subscribe=on`).
 
 > [!NOTE]
-> Si la case à cocher n'est pas cochée lorsque le formulaire est envoyé, ni le nom ni la valeur ne sont envoyés au serveur pour indiquer cet état (autrement dit, le client n'envoie pas quelque chose comme `value=unchecked`)&nbsp;; la valeur n'est pas transmise au serveur du tout. Si on veut envoyer une valeur par défaut lorsque la case à cocher est décochée, une solution pourrait être d'utiliser du JavaScript pour créer un élément `{{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}}`.
+> Si la case à cocher n'est pas cochée lorsque le formulaire est envoyé, ni le nom ni la valeur ne sont envoyés au serveur pour indiquer cet état (autrement dit, le client n'envoie pas quelque chose comme `value=unchecked`)&nbsp;; la valeur n'est pas transmise au serveur du tout. Si on veut envoyer une valeur par défaut lorsque la case à cocher est décochée, une solution peut être d'utiliser du JavaScript pour créer un élément `{{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}}`.
 
 ## Attributs supplémentaires
 
@@ -81,24 +82,24 @@ En plus des [attributs communs](/fr/docs/Web/HTML/Reference/Elements/input#attri
     > À la différence des autres navigateurs, Firefox [conserve l'état coché placé dynamiquement <sup>(angl.)</sup>](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un champ `<input>` après les rechargements de la page. L'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
 - `value`
-  - : L'attribut `value` est partagé par l'ensemble des éléments {{HTMLElement("input")}}&nbsp;; mais il a un rôle spécifique pour les champs de type `checkbox`&nbsp;: lorsqu'un formulaire est envoyé, seules les cases à cocher qui sont cochées sont envoyées au serveur et c'est la valeur de l'attribut `value` qui est envoyée. Si l'attribut `value` n'est pas renseigné, ce sera la chaîne de caractères `"on"` qui sera envoyée par défaut (voir [la section précédente](#valeur))
+  - : L'attribut `value` est partagé par l'ensemble des éléments {{HTMLElement("input")}}&nbsp;; mais il a un rôle spécifique pour les champs de type `checkbox`&nbsp;: lorsqu'un formulaire est envoyé, seules les cases à cocher qui sont cochées sont envoyées au serveur et c'est la valeur de l'attribut `value` qui est envoyée. Si l'attribut `value` n'est pas renseigné, c'est la chaîne de caractères `"on"` qui est envoyée par défaut (voir [la section précédente](#valeur))
 
 - `switch` {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Un attribut [booléen](/fr/docs/Glossary/Boolean/HTML) qui s'applique uniquement aux champs de type `checkbox`. Lorsqu'il est présent, il indique que la `checkbox` représente un `switch` d'activation/désactivation plutôt qu'une `checkbox` classique. Il modifie l'apparence du contrôle `checkbox`, mais le comportement sous-jacent reste identique à celui d'une `checkbox` normale.
 
     > [!NOTE]
-    > Cet attribut permet aux agents utilisateurs d'exposer la sémantique ARIA `switch` aux technologies d'assistance — sans obliger les documents à spécifier explicitement `role="switch"`. Le balisage et l'API sont similaires à ceux des cases à cocher, sauf que la pseudo-classe `:indeterminate` ne correspond jamais.
+    > Cet attribut permet aux agents utilisateurs d'exposer la sémantique ARIA `switch` aux technologies d'assistance — sans obliger les documents à définir explicitement `role="switch"`. Le balisage et l'API sont similaires à ceux des cases à cocher, sauf que la pseudo-classe `:indeterminate` ne correspond jamais.
 
     > [!WARNING]
     > Cet attribut est encore expérimental et bénéficie d'un support limité dans les navigateurs. L'attribut est ignoré par les navigateurs qui ne le prennent pas en charge.
 
 ## Utiliser les cases à cocher
 
-Nous avons déjà couvert l'utilisation la plus basique des cases à cocher ci-dessus. Voyons maintenant les autres fonctionnalités et techniques courantes liées aux cases à cocher dont vous aurez besoin.
+Nous avons déjà couvert l'utilisation la plus basique des cases à cocher ci-dessus. Voyons maintenant les autres fonctionnalités et techniques courantes liées aux cases à cocher dont vous avez besoin.
 
 ### Gérer plusieurs cases à cocher
 
-L'exemple que nous avons vu ci-dessus ne contenait qu'une seule case à cocher&nbsp;; dans des situations réelles, vous rencontrerez probablement plusieurs cases à cocher. Si elles sont complètement indépendantes, vous pouvez simplement les gérer séparément, comme montré ci-dessus. Cependant, si elles sont toutes liées, les choses ne sont pas aussi simples.
+L'exemple que nous avons vu ci-dessus ne contenait qu'une seule case à cocher&nbsp;; dans des situations réelles, vous allez probablement rencontrer plusieurs cases à cocher. Si elles sont complètement indépendantes, vous pouvez simplement les gérer séparément, comme montré ci-dessus. Cependant, si elles sont toutes liées, les choses ne sont pas aussi simples.
 
 Dans l'exemple qui suit, on affiche différentes cases à cocher pour représenter les intérêts d'une personne (voir l'exemple complet dans la section [d'exemples](#exemples)).
 
@@ -118,7 +119,7 @@ Dans l'exemple qui suit, on affiche différentes cases à cocher pour représent
 
 {{EmbedLiveSample("Gérer plusieurs cases à cocher", 600, 100)}}
 
-Dans cet exemple on voit que chaque case à cocher utilise le même attribut `name`. Si les deux cases sont cochées lorsque le formulaire est envoyé, la chaîne des paires nom/valeur qui sera envoyée au serveur sera&nbsp;: `interest=coding&interest=music`. Lorsque les données parviennent au serveur, on peut ainsi récupérer un tableau des valeurs sélectionnées (voir [la question StackOverflow&nbsp;: Gérer plusieurs cases à cocher avec une seule variable côté serveur <sup>(angl.)</sup>](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable) par exemple).
+Dans cet exemple on voit que chaque case à cocher utilise le même attribut `name`. Si les deux cases sont cochées lorsque le formulaire est envoyé, la chaîne de caractères des paires nom/valeur qui est envoyée au serveur est&nbsp;: `interest=coding&interest=music`. Lorsque les données parviennent au serveur, on peut ainsi récupérer un tableau des valeurs sélectionnées (voir [la question StackOverflow&nbsp;: Gérer plusieurs cases à cocher avec une seule variable côté serveur <sup>(angl.)</sup>](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable) par exemple).
 
 ### Cocher certaines cases par défaut
 
@@ -174,7 +175,7 @@ En plus des raisons liées à l'accessibilité, il s'agit d'une bonne raison pou
 
 ### Gérer un état indéterminé
 
-Il existe un état indéterminé pour les cases à cocher qui indique que la case n'est ni cochée, ni décochée mais indéterminée. Cet état peut être obtenu via la propriété `indeterminate` d'un élément [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) en JavaScript (il est impossible d'obtenir cet état en utilisant uniquement du HTML)&nbsp;:
+Il existe un état indéterminé pour les cases à cocher qui indique que la case n'est ni cochée, ni décochée mais indéterminée. Cet état peut être obtenu avec la propriété `indeterminate` d'un élément [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) en JavaScript (il est impossible d'obtenir cet état en utilisant uniquement du HTML)&nbsp;:
 
 ```js
 inputInstance.indeterminate = true;
@@ -183,7 +184,7 @@ inputInstance.indeterminate = true;
 Lorsque `indeterminate` vaut `true`, la case à cocher affiche une ligne horizontale dans la boîte (cela ressemble à un trait d'union ou un signe moins) au lieu d'une coche dans la plupart des navigateurs.
 
 > [!NOTE]
-> Il s'agit uniquement d'un changement visuel. Cela n'a aucun impact sur l'utilisation de la `value` de la case à cocher lors de la soumission d'un formulaire. C'est l'état `checked` qui détermine cela, indépendamment de l'état `indeterminate`.
+> Il s'agit uniquement d'un changement visuel. Cela n'a aucun impact sur l'utilisation de la `value` de la case à cocher lors de l'envoi d'un formulaire. C'est l'état `checked` qui détermine cela, indépendamment de l'état `indeterminate`.
 
 Il n'y a pas beaucoup de cas d'usage pour cette propriété. Le plus courant est lorsqu'une case à cocher est disponible et «&nbsp;possède&nbsp;» un certain nombre de sous-options (qui sont aussi des cases à cocher). Si toutes les sous-options sont cochées, la case à cocher principale est aussi cochée, et si elles sont toutes décochées, la case à cocher principale est décochée. Si une ou plusieurs des sous-options ont un état différent des autres, la case à cocher principale est dans l'état indéterminé.
 
@@ -402,10 +403,6 @@ otherCheckbox.addEventListener("change", () => {
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>{{DOMxRef("HTMLInputElement.select", "select()")}}</td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

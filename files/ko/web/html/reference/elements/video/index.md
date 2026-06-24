@@ -79,7 +79,7 @@ original_slug: Web/HTML/Element/video
 
 ## 이벤트
 
-`<video>` 요소는 많은 [이벤트](/ko/docs/Web/Events#media)를 발생시킬 수 있습니다.
+`<video>` 요소는 많은 [이벤트](/ko/docs/Web/API/Document_Object_Model/Events#media)를 발생시킬 수 있습니다.
 
 ## 예제
 

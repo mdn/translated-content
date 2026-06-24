@@ -1,12 +1,9 @@
 ---
 title: ::view-transition
 slug: Web/CSS/Reference/Selectors/::view-transition
-original_slug: Web/CSS/::view-transition
 l10n:
-  sourceCommit: 1a27ade8c981c8a98c8fac9881b362e881a4d236
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
-
-{{SeeCompatTable}}
 
 **`::view-transition`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、[ビュー遷移](/ja/docs/Web/API/View_Transition_API)のオーバーレイのルートを表します。これはすべてのビュー遷移を含み、他のすべてのページコンテンツの最上位の上に位置します。
 
@@ -15,7 +12,7 @@ l10n:
 `::view-transition` は UA スタイルシートでは以下の既定値が指定されています。
 
 ```css
-html::view-transition {
+:root::view-transition {
   position: fixed;
   inset: 0;
 }
@@ -35,7 +32,7 @@ html::view-transition {
 
 ```css
 ::view-transition {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgb(0 0 0 / 25%);
 }
 ```
 
@@ -50,4 +47,4 @@ html::view-transition {
 ## 関連情報
 
 - [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

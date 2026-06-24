@@ -14,11 +14,11 @@ A la hora de dar estilo a los [enlaces](/es/docs/Learn_web_development/Core/Stru
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática, conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >), conocimientos básicos de CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>),
-        <a href="/es/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>),
+        <a href="/es/docs/Learn_web_development/Core/Text_styling/Fundamentals"
           >nociones de aplicación de estilo con CSS a textos y tipos de letra</a
         >.
       </td>

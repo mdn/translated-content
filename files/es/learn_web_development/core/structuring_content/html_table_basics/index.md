@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
 original_slug: Learn/HTML/Tables/Basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
 
 Este artículo te ayudará a comenzar con las tablas HTML. Vamos a exponer conceptos básicos como filas y celdas, encabezados, celdas que abarcan múltiples columnas y filas, y la forma de agrupar todas las celdas de una columna para aplicarles estilo.
 
@@ -14,7 +14,7 @@ Este artículo te ayudará a comenzar con las tablas HTML. Vamos a exponer conce
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conceptos básicos de HTML (ver
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >).
       </td>
@@ -558,4 +558,4 @@ Mira cómo sigue en el ejemplo. Si te encallas o quieres verificar tu trabajo, p
 
 Con esto casi hemos abarcado todos los conceptos básicos de las tablas HTML. En el próximo artículo, veremos algunas características un poco más avanzadas de las tablas y comenzaremos a pensar acerca de su accesibilidad para las personas con discapacidad visual.
 
-{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}

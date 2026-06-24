@@ -418,6 +418,6 @@ Para adicionar uma linha e algumas células a uma tabela existente:
 ## Subnav
 
 - [DOM Reference](/pt-BR/docs/Web/API/Document_Object_Model)
-- [Introduction to the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
+- [Introduction to the DOM](/pt-BR/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef)
 - [Events and the DOM](/pt-BR/docs/Learn_web_development/Core/Scripting/Events)
-- [Examples](/pt-BR/docs/Web/API/Document_Object_Model/Examples)
+- [Examples](/pt-BR/docs/conflicting/Web/API/Document_Object_Model)

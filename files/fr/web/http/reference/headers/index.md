@@ -371,12 +371,12 @@ L'[API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) permet
 
 Les [indications client (ou <i lang="en">client hints</i> en anglais)](/fr/docs/Web/HTTP/Guides/Client_hints) sont des en-têtes de requêtes qui fournissent des informations à propos du client comme le type d'appareil ou les conditions réseau et qui permettent aux serveurs d'optimiser ce qui peut alors être servi dans ces conditions.
 
-C'est aux serveurs de demander aux clients les indications qui les intéressent à l'aide de l'en-tête [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH). Le client pourra alors choisir d'inclure les en-têtes demandés dans les requêtes à venir.
+C'est aux serveurs de demander aux clients les indications qui les intéressent à l'aide de l'en-tête [`Accept-CH`](/fr/docs/Web/HTTP/Reference/Headers/Accept-CH). Le client pourra alors choisir d'inclure les en-têtes demandés dans les requêtes à venir.
 
 - {{HTTPHeader("Accept-CH")}}
   - : Les serveurs peuvent indiquer leur prise en charge des indications client à l'aide de l'en-tête `Accept-CH` ou d'un élément `<meta>` équivalent doté de l'attribut [`http-equiv`](/fr/docs/Web/HTML/Reference/Elements/meta#http-equiv).
 - {{HTTPHeader("Critical-CH")}} {{Experimental_Inline}}
-  - : Utilisé avec [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH), `Critical-CH` est utilisé pour indiquer que les indications client acceptées sont [des indications client critiques](/fr/docs/Web/HTTP/Guides/Client_hints#indications_client_critiques).
+  - : Utilisé avec [`Accept-CH`](/fr/docs/Web/HTTP/Reference/Headers/Accept-CH), `Critical-CH` est utilisé pour indiquer que les indications client acceptées sont [des indications client critiques](/fr/docs/Web/HTTP/Guides/Client_hints#indications_client_critiques).
 
 Les différentes catégories d'indication client sont listées ci-après.
 

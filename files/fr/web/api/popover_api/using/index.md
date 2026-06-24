@@ -450,7 +450,7 @@ Les <i lang="en">popovers</i> sont mis en forme avec la déclaration `display: n
 - Quand `display` est animé de `block` (ou toute autre valeur visible de `display`) à `none`, la valeur passera à `none` à 100% de la durée de l'animation, ce qui la rendra visible du début à la fin.
 
 > [!NOTE]
-> Quand on anime en utilisant [les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions), la déclaration [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/transition-behavior) doit être appliquée sur l'élément <i lang="en">popover</i> pour activer le comportement décrit ci-avant. Quand on anime avec [les animations CSS](/fr/docs/Web/CSS/Guides/Animations), le comportement décrit ci-avant est activé par défaut, et il n'y a pas besoin de définir cette propriété.
+> Quand on anime en utilisant [les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions), la déclaration [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/Reference/Properties/transition-behavior) doit être appliquée sur l'élément <i lang="en">popover</i> pour activer le comportement décrit ci-avant. Quand on anime avec [les animations CSS](/fr/docs/Web/CSS/Guides/Animations), le comportement décrit ci-avant est activé par défaut, et il n'y a pas besoin de définir cette propriété.
 
 ### Les transitions sur les <i lang="en">popovers</i>
 

@@ -1,12 +1,10 @@
 ---
-title: "<dt>: 説明用語要素"
+title: HTML `<dt>` 説明用語要素
+short-title: <dt>
 slug: Web/HTML/Reference/Elements/dt
-original_slug: Web/HTML/Element/dt
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<dt>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明または定義リストの中で用語を表す部分であり、{{HTMLElement("dl")}} の子要素としてのみ用いることができます。普通は {{HTMLElement("dd")}} 要素が続きます。しかし、複数の `<dt>` 要素が続くと、複数の用語がすぐ後に続く {{HTMLElement("dd")}} 要素で定義されていることを表します。
 
@@ -15,15 +13,15 @@ l10n:
 {{InteractiveExample("HTML デモ: &lt;dt&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Please use the following paint colors for the new house:</p>
+<p>新しい家には次の塗装を使用してください。</p>
 
 <dl>
-  <dt>Denim (semigloss finish)</dt>
-  <dd>Ceiling</dd>
+  <dt>デニム（半光沢仕上げ）</dt>
+  <dd>屋根</dd>
 
-  <dt>Denim (eggshell finish)</dt>
-  <dt>Evening Sky (eggshell finish)</dt>
-  <dd>Layered on the walls</dd>
+  <dt>デニム（卵殻仕上げ）</dt>
+  <dt>夕焼け空（卵殻仕上げ）</dt>
+  <dd>壁に重ね塗り</dd>
 </dl>
 ```
 
@@ -59,14 +57,18 @@ dd {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>なし</td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>。ただし配下に {{HTMLElement("header")}}、{{HTMLElement("footer")}}、区分コンテンツ、見出しコンテンツがないもの。
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >。ただし配下に {{HTMLElement("header")}}、{{HTMLElement("footer")}}、区分コンテンツ、見出しコンテンツがないもの。
       </td>
     </tr>
     <tr>
@@ -78,18 +80,22 @@ dd {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        {{HTMLElement("dl")}} または（{{Glossary("WHATWG")}} HTML および {{Glossary("W3C")}} HTML 5.2 以降においては）{{HTMLElement("dl")}} の子である {{HTMLElement("div")}}。<br />この要素は {{HTMLElement("dd")}} または他の {{HTMLElement("dt")}} の前で使用することができる。
+        {{HTMLElement("dl")}} または（{{Glossary("WHATWG")}} HTML および {{Glossary("W3C")}} HTML 5.2 以降においては）{{HTMLElement("dl")}} の子である {{HTMLElement("div")}}。<br />この要素は {{HTMLElement("dd")}} または他の <code>&lt;dt&gt;</code> の前で使用することができる。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/term_role"><code>term</code></a></td>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Listitem_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role"
             >listitem</a
           ></code
         >

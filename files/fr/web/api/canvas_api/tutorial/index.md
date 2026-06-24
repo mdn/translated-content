@@ -36,4 +36,4 @@ L'utilisation de l'élément `<canvas>` n'a rien de très compliqué, mais néce
 - [Page du sujet canvas](/fr/docs/Web/API/Canvas_API)
 - [HTML5CanvasTutorials](https://www.html5canvastutorials.com/) (en)
 
-{{ Next("Tutoriel_canvas/Utilisation_de_base") }}
+{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}

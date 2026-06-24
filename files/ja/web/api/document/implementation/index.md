@@ -27,7 +27,7 @@ console.log(`DOM ${modName} ${modVer} supported?: ${conformTest}`);
 ```
 
 > [!WARNING]
-> これを昨日検出に使用しないでください。 `hasFeature()` メソッドは常に true を返します。
+> これを機能検出に使用しないでください。 `hasFeature()` メソッドは常に true を返します。
 
 ## メモ
 

@@ -1,11 +1,12 @@
 ---
-title: "@keyframes"
+title: Règle CSS `@keyframes`
+short-title: "@keyframes"
 slug: Web/CSS/Reference/At-rules/@keyframes
 l10n:
-  sourceCommit: f94b7a0b06a0e32df81ec8197720d306fe50a4a0
+  sourceCommit: f2a9542e6c266ac7028eae954b5c7913e499d1f1
 ---
 
-La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/Guides/Transitions).
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@keyframes`** permet aux auteur·ice·s de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/Guides/Transitions).
 
 ## Syntaxe
 
@@ -23,34 +24,34 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 
 ### Valeurs
 
-- `<identifier>`
-  - : Un nom ({{CSSxRef("custom-ident")}}) qui permet d'identifier la liste d'étapes. Cela doit être [un identifiant valide selon la syntaxe CSS](/fr/docs/Web/CSS/Reference/Values/custom-ident).
+- `<keyframes-name>`
+  - : Un identifiant personnalisé ({{CSSxRef("&lt;custom-ident&gt;")}}) sensible à la casse ou une chaîne de caractères nommant la liste des étapes.
 - `from`
-  - : Indique le point de départ de l'animation (correspond à un avancement de `0%`).
+  - : Équivalent à la valeur `0%`.
 - `to`
-  - : Indique la fin de l'animation (correspond à un avancement de `100%`).
+  - : Équivalent à la valeur `100%`.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : Le pourcentage d'avancement de l'animation auquel l'étape décrite s'applique.
-
-Il est possible de manipuler la règle `@keyframes` via JavaScript et le CSSOM, notamment avec l'interface {{DOMxRef("CSSKeyframesRule")}}.
+  - : Un pourcentage de l'animation auquel l'étape définie doit se produire.
+- {{CSSxRef("&lt;timeline-range-name&gt;")}} {{CSSxRef("&lt;percentage&gt;")}}
+  - : Un pourcentage à travers la propriété {{CSSxRef("animation-range")}} définie auquel l'étape clé définie doit se produire.
 
 ## Description
 
-Afin d'utiliser ces règles, on créera une règle `@keyframes` avec un nom pour chaque étape et on utilisera ce nom avec la propriété {{CSSxRef("animation-name")}} afin qu'une animation corresponde à la liste des étapes qui la composent. Chaque règle `@keyframes` contient une liste de sélecteurs d'étapes dont chacun contient le pourcentage d'avancement de l'animation auquel il correspond ainsi que les informations de styles qui correspondent à cette étape.
+Afin d'utiliser ces règles, on créera une règle `@keyframes` avec un nom pour chaque étape et on utilise ce nom avec la propriété {{CSSxRef("animation-name")}} afin qu'une animation corresponde à la liste des étapes qui la composent. Chaque règle `@keyframes` contient une liste de sélecteurs d'étapes dont chacun contient le pourcentage d'avancement de l'animation auquel il correspond ainsi que les informations de styles qui correspondent à cette étape.
 
-Les étapes peuvent être listées dans n'importe quel ordre. Elles seront enchaînées dans l'ordre indiqué par le pourcentage d'avancement.
+Les étapes peuvent être listées dans n'importe quel ordre. Elles sont enchaînées dans l'ordre indiqué par le pourcentage d'avancement.
 
 ### Validité de la liste des étapes
 
 Si une liste d'étapes ne définit pas le début (`0%`/`from`) ou la fin (`100%`/`to`) d'une animation, le navigateur va utiliser les styles de l'élement définis par ailleurs. C'est assez pratique pour animer un élément depuis et vers son état initial.
 
-Si les étapes décrivent des propriétés qui ne peuvent pas être animées, elles seront ignorées mais les autres propriétés seront bien animées.
+Si les étapes décrivent des propriétés qui ne peuvent pas être animées, elles sont ignorées mais les autres propriétés sont bien animées.
 
 ### Résolution des doublons
 
-Si plusieurs règles `@keyframes` existent avec le même nom, c'est la dernière qui est utilisée. Les règles `@keyframes` ne forment pas de cascade et il n'y a donc pas de dérivation entre les différentes règles qui porteraient le même nom.
+Si plusieurs règles `@keyframes` existent avec le même nom, c'est la dernière qui est utilisée. Les règles `@keyframes` ne forment pas de cascade et il n'y a donc pas de dérivation entre les différentes règles qui portent le même nom.
 
-Si, au sein d'une même règle, deux étapes décrivent le même pourcentage d'avancement, c'est la dernière qui est utilisée pour décrire ce moment de l'animation. Il n'y a aucune cascade qui composerait différentes étapes décrivant le même avancement.
+Si, au sein d'une même règle, deux étapes décrivent le même pourcentage d'avancement, c'est la dernière qui est utilisée pour décrire ce moment de l'animation. Il n'y a aucune cascade qui compose différentes étapes décrivant le même avancement.
 
 ### Gestion des propriétés absentes
 
@@ -102,11 +103,9 @@ Si une étape clé est définie plusieurs fois mais que toutes les propriétés 
 
 Dans cet exemple, à l'étape clé `50%`, les valeurs utilisées sont `top: 10px` et `left: 20px`.
 
-Les étapes clés en cascade sont prises en charge à partir de Firefox 14.
-
 ### `!important` dans une étape
 
-Les déclarations qui utilisent `!important` dans une description d'étape sont ignorées.
+Les déclarations qui utilisent le drapeau {{CSSxRef("important", "!important")}} dans une description d'étape sont ignorées.
 
 ```css
 @keyframes important1 {
@@ -155,9 +154,9 @@ Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
 
 - La propriété {{CSSxRef("animation-range")}}
 - [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
-- Le module [d'animations CSS](/fr/docs/Web/CSS/Guides/Animations)
 - Le module [des chronologies d'animations basées sur le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - [Comprendre les noms de plage de chronologie](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
+- Le module [d'animations CSS](/fr/docs/Web/CSS/Guides/Animations)
 - Le module [des animations basées sur le défilement en CSS](/fr/docs/Web/CSS/CSS_scroll-driven_animations)
-- [Animer les éléments lors du défilement avec les animations basées sur le défilement](https://developer.chrome.com/docs/css-ui/scroll-driven-animations?hl=fr)
 - L'interface API {{DOMxRef("AnimationEvent")}}
+- [Animer les éléments lors du défilement avec les animations basées sur le défilement](https://developer.chrome.com/docs/css-ui/scroll-driven-animations?hl=fr)

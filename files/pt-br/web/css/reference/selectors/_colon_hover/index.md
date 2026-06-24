@@ -8,9 +8,9 @@ original_slug: Web/CSS/:hover
 
 ## Resumo
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) `:hover` corresponde quando o usuário designa um elemento com um dispositivo apontador, mas não necessariamente o ativa. Este estilo pode ser substituído por qualquer outra pseudo-classe de link-relacionados, isto é {{ cssxref(":link") }}, {{ cssxref(":visited") }}, e {{ cssxref(":active") }}, aparecendo em regras subsequentes. Na ordem para estilizar apropriadamente links, você precisa colocar a regra`:hover`depois das regras `:link` e `:visited` mas antes da regra `:active`, como definido pela ordem _LVHA_: `:link — :visited — :hover — :active.`
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:hover` corresponde quando o usuário designa um elemento com um dispositivo apontador, mas não necessariamente o ativa. Este estilo pode ser substituído por qualquer outra pseudo-classe de link-relacionados, isto é {{ cssxref(":link") }}, {{ cssxref(":visited") }}, e {{ cssxref(":active") }}, aparecendo em regras subsequentes. Na ordem para estilizar apropriadamente links, você precisa colocar a regra`:hover`depois das regras `:link` e `:visited` mas antes da regra `:active`, como definido pela ordem _LVHA_: `:link — :visited — :hover — :active.`
 
-A pseudo-class `:hover` pode ser aplicada a qualquer [pseudo-elemento.](/pt-BR/docs/Web/CSS/Pseudo-elements) {{experimental_inline}}.
+A pseudo-class `:hover` pode ser aplicada a qualquer [pseudo-elemento.](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements) {{experimental_inline}}.
 
 User agents visuais como Firefox, Internet Explorer, Safari, Opera ou Chrome, aplicam o estilo associado quando o cursor(mouse pointer) passa sobre um elemento.
 

@@ -77,5 +77,5 @@ Emscripten 提供了一个 API 帮助处理这种重构；比如你可以用 `em
 
 ## 参见
 
-- [Apps](/zh-CN/docs/Web/Apps)
+- [Apps](/zh-CN/docs/Web/Progressive_web_apps)
 - [Games](/zh-CN/docs/Games)

@@ -128,4 +128,4 @@ Por favor, veja o tipo de dados [`<transform-function>`](/pt-BR/docs/Web/CSS/tra
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`rotate3d()`](/pt-BR/docs/Web/CSS/transform-function/rotate3d)
+- [`rotate3d()`](/pt-BR/docs/Web/CSS/Reference/Values/transform-function/rotate3d)

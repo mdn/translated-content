@@ -58,7 +58,7 @@ l10n:
 ```
 
 > [!NOTE]
-> このプロパティは内部 DOM ストレージの大文字小文字を忠実に返しますが、{{domxref("element.tagName", "tagName")}} プロパティは HTML DOM における HTML 要素でを大文字で返します。
+> このプロパティは内部 DOM ストレージの大文字小文字を忠実に返しますが、{{domxref("element.tagName", "tagName")}} プロパティは HTML DOM における HTML 要素を大文字で返します。
 
 ## 仕様書
 

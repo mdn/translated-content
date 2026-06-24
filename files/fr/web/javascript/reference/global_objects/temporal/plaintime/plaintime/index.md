@@ -23,7 +23,7 @@ new Temporal.PlainTime(hour, minute, second, millisecond, microsecond, nanosecon
 ```
 
 > [!NOTE]
-> `Temporal.PlainTime()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
+> `Temporal.PlainTime()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 

@@ -1,8 +1,9 @@
 ---
-title: scroll-snap-type
+title: Propriété CSS `scroll-snap-type`
+short-title: scroll-snap-type
 slug: Web/CSS/Reference/Properties/scroll-snap-type
 l10n:
-  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scroll-snap-type`** est définie sur un {{Glossary("scroll container", "conteneur de défilement")}}, l'optant pour l'accrochage au défilement en définissant la direction et la rigueur de l'application des points d'accroche dans le [port d'accrochage](/fr/docs/Glossary/Scroll_snap#port_daccrochage).

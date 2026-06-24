@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-この図形生成ツールはを使用すると、 {{cssxref("basic-shape")}} を使用する機能の座標と構文を定義することができます。
+この図形生成ツールを使用すると、 {{cssxref("basic-shape")}} を使用する機能の座標と構文を定義することができます。
 
 - {{HTMLElement("area")}} 要素の [`coords`](/ja/docs/Web/HTML/Reference/Elements/area#coords) 属性
 - CSS の {{cssxref("basic-shape/inset()")}}, {{cssxref("basic-shape/xywh()")}}, {{cssxref("basic-shape/rect()")}}, {{cssxref("basic-shape/circle()")}}, {{cssxref("basic-shape/polygon()")}} の各関数

@@ -55,15 +55,15 @@ header > time {
 >
 > - O elemento `<header>` não é separador de conteúdo (sectioning content), portanto, não introduz uma nova seção no [outline](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
 
-- _[Categoria de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), conteúdo palpável.
-- _Conteúdo permitido_[Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), mas não com descendentes de {{HTMLElement("header")}} ou {{HTMLElement("footer")}}
+- _[Categoria de conteúdo](/pt-BR/docs/Web/HTML/Guides/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content), conteúdo palpável.
+- _Conteúdo permitido_[Flow content](/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content), mas não com descendentes de {{HTMLElement("header")}} ou {{HTMLElement("footer")}}
 - _Omissão da tag_ Nenhuma, as tags de abertura e fechamento são obrigatórias.
-- _Elementos-pai permitidos_ Qualquer elemento que aceite [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content). Note que o elemento {{HTMLElement("header")}} não deve ser descendente de {{HTMLElement("address")}}, {{HTMLElement("footer")}} ou outro elemento {{HTMLElement("header")}} .
+- _Elementos-pai permitidos_ Qualquer elemento que aceite [flow content](/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content). Note que o elemento {{HTMLElement("header")}} não deve ser descendente de {{HTMLElement("address")}}, {{HTMLElement("footer")}} ou outro elemento {{HTMLElement("header")}} .
 - _Interface DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos
 
-Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes), comuns a todos os elementos.
+Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes), comuns a todos os elementos.
 
 ## Exemplos
 

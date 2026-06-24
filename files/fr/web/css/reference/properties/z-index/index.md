@@ -1,8 +1,9 @@
 ---
-title: z-index
+title: Propriété CSS `z-index`
+short-title: z-index
 slug: Web/CSS/Reference/Properties/z-index
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`z-index`** définit l'ordre d'empilement sur l'axe Z d'un élément [positionné](/fr/docs/Web/CSS/Reference/Properties/position) et de ses descendants ou des éléments flexibles et de grille. Les éléments qui se chevauchent avec un `z-index` plus élevé recouvrent ceux avec un `z-index` plus faible.

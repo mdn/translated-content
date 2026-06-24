@@ -41,7 +41,7 @@ Nous pouvons obtenir une référence aux images sur la même page que le canevas
 
 ### Utilisation d'images d'un autre domaine
 
-En utilisant l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/img#attr-crossorigin) d'un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) (reflété par la propriété [`HTMLImageElement.crossOrigin`](/fr/docs/Web/API/HTMLImageElement/crossOrigin)), vous pouvez demander la permission de charger une image d'un autre domaine pour l'utiliser dans votre appel à `drawImage()`. Si le domaine d'hébergement permet un accès interdomaine à l'image, l'image peut être utilisée dans votre canevas sans l'altérer; sinon utiliser l'image va [corrompre le canevas](/fr/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+En utilisant l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/img#crossorigin) d'un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) (reflété par la propriété [`HTMLImageElement.crossOrigin`](/fr/docs/Web/API/HTMLImageElement/crossOrigin)), vous pouvez demander la permission de charger une image d'un autre domaine pour l'utiliser dans votre appel à `drawImage()`. Si le domaine d'hébergement permet un accès interdomaine à l'image, l'image peut être utilisée dans votre canevas sans l'altérer; sinon utiliser l'image va [corrompre le canevas](/fr/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 
 ### Utilisation d'autres éléments canvas
 

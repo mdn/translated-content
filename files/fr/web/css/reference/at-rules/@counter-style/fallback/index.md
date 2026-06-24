@@ -1,8 +1,9 @@
 ---
-title: fallback
+title: Descripteur de règle CSS `fallback`
+short-title: fallback
 slug: Web/CSS/Reference/At-rules/@counter-style/fallback
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`fallback`** de la règle {{CSSxRef("@counter-style")}} permet de définir un style de compteur de repli si le style de compteur défini ne peut pas créer de représentation pour une certaine valeur du compteur.

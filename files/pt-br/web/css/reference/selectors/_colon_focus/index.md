@@ -8,7 +8,7 @@ original_slug: Web/CSS/:focus
 
 ## Resumo
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) `:focus` do CSS é aplicada quando um elemento recebe foco, o que pode ocorrer quando o usuário seleciona o elemento utilizando o teclado ou ativando o mesmo com o mouse (ex: um campo de um formulário).
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:focus` do CSS é aplicada quando um elemento recebe foco, o que pode ocorrer quando o usuário seleciona o elemento utilizando o teclado ou ativando o mesmo com o mouse (ex: um campo de um formulário).
 
 A pseudo classe é aplicada apenas ao elemento focado, e não aos seus elementos ascendentes, como ocorre com {{ Cssxref(":checked") }} e {{ Cssxref(":enabled") }} e diferentemente de {{ Cssxref(":active") }} ou {{ Cssxref(":hover") }}.
 

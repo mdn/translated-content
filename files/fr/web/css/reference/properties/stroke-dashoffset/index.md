@@ -1,8 +1,9 @@
 ---
-title: stroke-dashoffset
+title: Propriété CSS `stroke-dashoffset`
+short-title: stroke-dashoffset
 slug: Web/CSS/Reference/Properties/stroke-dashoffset
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stroke-dashoffset`** définit un décalage pour le point de départ du rendu d'un [élément SVG](/fr/docs/Web/SVG) associé à un [tableau de tirets](/fr/docs/Web/CSS/Reference/Properties/stroke-dasharray). Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("stroke-dashoffset")}} de l'élément.

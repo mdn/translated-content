@@ -1,81 +1,246 @@
 ---
 title: "Testez vos compétences : Flexbox"
+short-title: "Test : Flexbox"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox
-original_slug: Learn/CSS/CSS_layout/Flexbox_skills
+l10n:
+  sourceCommit: 143f7345a4276156679d816a153470fe1fc6f3f8
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
-Le but de cette tâche est de vous faire travailler avec Flexbox et de démontrer votre compréhension du comportement des éléments flexibles. Vous trouverez ci-dessous quatre modèles de conception courants que vous pourriez utiliser pour créer avec Flexbox, votre tâche est de les construire.
+Le but de ce test de compétences est de vous aider à évaluer si vous comprenez comment [les boîtes flexibles et les éléments flexibles](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox) se comportent. Vous trouverez ci-dessous quatre séries de problèmes de conception que vous pouvez résoudre en utilisant <i lang="en">flexbox</i>. Votre tâche consiste à corriger les problèmes.
 
 > [!NOTE]
-> Vous pouvez tester des solutions dans les éditeurs interactifs ci-dessous ou, si vous le préférez, sur un site comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/).
->
-> N'hésitez pas à nous contacter si vous avez besoin d'aide — voir la section [Évaluation ou aide supplémentaire](#évaluation_ou_aide_supplémentaire) au bas de cette page.
+> Pour obtenir de l'aide, lisez notre guide d'utilisation [Testez vos compétences](/fr/docs/Learn_web_development#testez_vos_compétences). Vous pouvez également nous contacter en utilisant l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
+
+## Défi interactif
+
+Tout d'abord, nous vous proposons un défi interactif amusant sur les boîtes flexibles créé par notre [partenaire d'apprentissage](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations), [Scrimba <sup>(angl.)</sup>](https://scrimba.com/home).
+
+Regardez le scrim intégré et complétez toutes les tâches sur la frise chronologique (les petites icônes fantômes) en suivant les instructions et en modifiant le code. Lorsque vous avez terminé, vous pouvez reprendre le visionnage du scrim pour vérifier comment la solution de l'enseignant·e correspond à la vôtre.
+
+<mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~03a" scrimtitle="Flexbox alignment challenges" survey="true"></scrim-inline>
 
 ## Disposition flexible 1
 
-Ces éléments de liste constituent la navigation pour un site. Ils doivent être disposés en ligne, avec un espace égal entre chaque élément. L'exemple fini doit ressembler à l'image ci-dessous.
+Dans cette tâche, nous utilisons quelques éléments de liste pour créer la navigation d'un site. Pour réaliser la tâche, utilisez les boîtes flexibles pour disposer les éléments de liste en ligne, avec un espace égal entre chaque élément.
 
-![Éléments flexibles organisés sur une ligne avec de l'espace entre chaque.](flex-task1.png)
+Le point de départ de la tâche ressemble à ceci&nbsp;:
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+{{EmbedLiveSample("flexbox1-start", "", 240)}}
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox1.html", '100%', 700)}}
+Voici le code sous-jacent pour ce point de départ&nbsp;:
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (1re mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox1-download.html).
+```html live-sample___flexbox1-start live-sample___flexbox1-finish
+<nav>
+  <ul>
+    <li><a href="/">Accueil</a></li>
+    <li><a href="/about">À propos</a></li>
+    <li><a href="/products">Nos produits</a></li>
+    <li><a href="/contact">Contactez-nous</a></li>
+  </ul>
+</nav>
+```
+
+```css live-sample___flexbox1-start live-sample___flexbox1-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+nav ul {
+  max-width: 750px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav a:link,
+nav a:visited {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+  display: inline-block;
+  text-decoration: none;
+}
+
+nav ul {
+  /* Ajoutez des styles ici */
+}
+```
+
+Lorsque la tâche est terminée, les éléments devraient ressembler à ceci&nbsp;:
+
+{{EmbedLiveSample("flexbox1-finish", "", 100)}}
+
+<details>
+<summary>Cliquez ici pour afficher la solution</summary>
+
+Vous pouvez appliquer `display: flex` et contrôler l'espacement en utilisant la propriété `justify-content`&nbsp;:
+
+```css live-sample___flexbox1-finish
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+```
+
+</details>
 
 ## Disposition flexible 2
 
-Ces éléments de liste sont tous de tailles différentes, mais nous voulons qu'ils soient affichés sous forme de trois colonnes de taille égale, quel que soit le contenu de chaque élément.
+Dans cette tâche, les éléments de liste sont tous de tailles différentes, mais nous voulons qu'ils soient affichés sous forme de trois colonnes de taille égale, quel que soit le contenu de chaque élément.
 
-![Les éléments flexibles sont organisés comme trois colonnes de même taille avec une quantité différente de contenu.](flex-task2.png)
+**Question bonus&nbsp;:** Pouvez-vous maintenant faire en sorte que le premier élément soit deux fois plus grand que les autres&nbsp;?
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+Le point de départ de la tâche ressemble à ceci&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox2.html", '100%', 800)}}
+{{EmbedLiveSample("flexbox2-start", "", 240)}}
 
-Questions supplémentaires&nbsp;:
+Voici le code sous-jacent pour ce point de départ&nbsp;:
 
-- Pouvez-vous maintenant faire en sorte que le premier article soit deux fois plus grand que les autres&nbsp;?
+```html live-sample___flexbox2-start live-sample___flexbox2-finish
+<ul>
+  <li>Je suis petit</li>
+  <li>J'ai plus de contenu que le très petit élément.</li>
+  <li>
+    J'ai beaucoup de contenu. Tellement de contenu que je ne sais pas où tout
+    cela va aller. Je suis content que CSS soit assez bon pour gérer les
+    situations où nous avons plus de mots que prévu&nbsp;!
+  </li>
+</ul>
+```
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (2e mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox2-download.html).
+```css live-sample___flexbox2-start live-sample___flexbox2-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+ul {
+  max-width: 750px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+}
+
+ul {
+  /* Ajoutez des styles ici */
+}
+
+li {
+  /* Ajoutez des styles ici */
+}
+```
+
+Lorsque la tâche est terminée, les éléments devraient ressembler à ceci&nbsp;:
+
+{{EmbedLiveSample("flexbox2-finish", "", 380)}}
+
+<details>
+<summary>Cliquez ici pour afficher la solution</summary>
+
+Il est préférable d'utiliser des raccourcis, donc dans ce scénario `flex: 1` est probablement la meilleure réponse, et donc le résultat le plus optimal serait&nbsp;:
+
+```css live-sample___flexbox2-finish
+ul {
+  display: flex;
+}
+
+li {
+  flex: 1;
+}
+```
+
+Pour la question bonus, ajoutez un sélecteur qui cible le premier élément et définit `flex: 2;` (ou `flex: 2 0 0;` ou `flex-grow: 2`)&nbsp;:
+
+```css live-sample___flexbox2-finish
+li:first-child {
+  flex: 2;
+}
+```
+
+</details>
 
 ## Disposition flexible 3
 
-Il y a deux éléments dans le HTML ci-dessous, une `div` avec une classe `.parent` qui contient une autre `div` avec une classe `.child`. Utilisez Flexbox pour centrer le fichier enfant à l'intérieur du parent.
+Dans cette tâche, nous voulons disposer les éléments de la liste en lignes.
 
-![Une boîte centrée à l'intérieur d'une autre boîte.](flex-task3.png)
+Le point de départ de la tâche ressemble à ceci&nbsp;:
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+{{EmbedLiveSample("flexbox3-start", "", 260)}}
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox3.html", '100%', 800)}}
+Voici le code sous-jacent pour ce point de départ&nbsp;:
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (3e mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox3-download.html).
+```html live-sample___flexbox3-start live-sample___flexbox3-finish
+<ul>
+  <li>Navet</li>
+  <li>Feuilles de navet</li>
+  <li>Achillée</li>
+  <li>Haricot riz</li>
+  <li>Rutabaga</li>
+  <li>Endive</li>
+  <li>Chou-fleur</li>
+  <li>Laitue de mer</li>
+  <li>Chou-rave</li>
+  <li>Amarante</li>
+</ul>
+```
 
-## Disposition flexible 4
+```css live-sample___flexbox3-start live-sample___flexbox3-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+ul {
+  width: 450px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-Dans cette dernière tâche, placez ces éléments en lignes comme dans l'image.
+li {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+  margin: 0.5em;
+}
 
-![Un ensemble d'éléments affichés en lignes.](flex-task4.png)
+ul {
+  /* Ajoutez des styles ici */
+}
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+li {
+  /* Ajoutez des styles ici */
+}
+```
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox4.html", '100%', 800)}}
+Lorsque la tâche est terminée, les éléments devraient ressembler à ceci&nbsp;:
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox4-download.html).
+{{EmbedLiveSample("flexbox3-finish", "", 260)}}
 
-## Évaluation ou aide supplémentaire
+<details>
+<summary>Cliquez ici pour afficher la solution</summary>
 
-Si vous souhaitez que votre travail soit évalué, ou si vous voulez demander de l'aide&nbsp;:
+Cette tâche nécessite une compréhension de la propriété `flex-wrap` pour envelopper les lignes flexibles. De plus, pour vous assurer que vous obtenez quelque chose qui ressemble à l'exemple, vous devez définir `flex: auto` sur l'enfant (ou `flex: 1 1 auto;`).
 
-1. Mettez votre travail dans un éditeur partageable en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez écrire votre propre code ou utiliser celui des fichiers de démarrage fournis ci-dessus.
-2. Rédigez un sujet pour demander une évaluation et/ou une aide dans le [forum Discourse du MDN](https://discourse.mozilla.org/c/mdn) et ajoutez la balise "learning" à votre message pour que nous puissions le trouver plus facilement. Incluez dans votre message&nbsp;:
-   - Un titre descriptif tel que «&nbsp;Évaluation demandée pour la mise en page flexible 1&nbsp;».
-   - Des détails sur ce que vous souhaitez que nous fassions — par exemple, si vous êtes bloqué et avez besoin d'aide, écrivez ce que vous avez déjà essayé.
-   - Un lien vers l'exemple que vous souhaitez faire évaluer ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne. C'est une bonne pratique à adopter — il est très difficile d'aider une personne ayant un problème de codage si on ne peut pas voir son code.
-   - Un lien vers la page de la tâche ou de l'évaluation proprement dite, afin que nous puissions trouver la question pour laquelle vous souhaitez de l'aide.
+```css live-sample___flexbox3-finish
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  flex: auto;
+}
+```
+
+</details>
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}

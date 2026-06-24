@@ -8,17 +8,17 @@ original_slug: Web/HTML/Element/button
 
 O **Elemento HTML _`<button>`_** representa um botão clicável.
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), [Conteúdo iterativo](/pt-BR/docs/Web/HTML/Content_categories#interactive_content), [listado](/pt-BR/docs/Web/HTML/Content_categories#form_listed), [rotulável](/pt-BR/docs/Web/HTML/Content_categories#form_labelable), e elemento [enviável](/pt-BR/docs/Web/HTML/Content_categories#form_submittable) [associado a formulário](/pt-BR/docs/Web/HTML/Content_categories#form-associated_), conteúdo palpável.
-- _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Guides/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content), [conteúdo fraseado](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content), [Conteúdo iterativo](/pt-BR/docs/Web/HTML/Guides/Content_categories#interactive_content), [listado](/pt-BR/docs/Web/HTML/Guides/Content_categories#form_listed), [rotulável](/pt-BR/docs/Web/HTML/Guides/Content_categories#form_labelable), e elemento [enviável](/pt-BR/docs/Web/HTML/Guides/Content_categories#form_submittable) [associado a formulário](/pt-BR/docs/Web/HTML/Guides/Content_categories#form-associated_), conteúdo palpável.
+- _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content).
 - _Omissão de Tag_ Nenhuma, as tags de abertura e fechamento são obrigatórias.
-- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
+- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo fraseado](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content).
 - _Interface DOM_ {{domxref("HTMLButtonElement")}}
 - _Tipo de elemento_ Inline
 -
 
 ## Atributos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `autofocus`
   - : Esse atributo booleano permite-o especificar que o botão possuirá o foco de entrada assim que a página carrega, a menos que o usuário sobrecreva esse comportamento digitanto um controle diferente. Apenas um elemento de um documento associado a um formulário pode ter esse atributo específico.
@@ -36,7 +36,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `formenctype`
   - : Se o botão é um botão de envio, esse atributo especifica o tipo de conteúdo que é usado para enviar o formulário para o servidor; Possíveis valores são:
     - `application/x-www-form-urlencoded`: O valor padrão se o atributo não está especificado.
-    - `multipart/form-data`: Use esse valor se você está usando um elemento {{HTMLElement("input")}} com o atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) definido para o `arquivo`.
+    - `multipart/form-data`: Use esse valor se você está usando um elemento {{HTMLElement("input")}} com o atributo [`type`](/pt-BR/docs/Web/HTML/Reference/Elements/input#type) definido para o `arquivo`.
     - `text/plain`
 
     Se esse atributo fro especificado, ele sobrescreve o atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do formulário proprietário do botão.

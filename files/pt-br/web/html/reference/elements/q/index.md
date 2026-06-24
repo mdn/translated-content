@@ -10,13 +10,13 @@ original_slug: Web/HTML/Element/q
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/HTML/Content_categories">Categorias de conteúdo</a>
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories">Categorias de conteúdo</a>
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Fluxo de conteúdo</a
         >,
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >conteúdo textual</a
         >, conteúdo palpável.
       </td>
@@ -24,7 +24,7 @@ original_slug: Web/HTML/Element/q
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >Conteúdo textual</a
         >.
       </td>
@@ -37,7 +37,7 @@ original_slug: Web/HTML/Element/q
       <th scope="row">Parents permitidos</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >conteúdo textual</a
         >.
       </td>
@@ -58,7 +58,7 @@ original_slug: Web/HTML/Element/q
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `cite`
   - : O valor deste atributo é uma URL que designa uma fonte ou mensagem para a informação citada. A intenção deste atributo é indicar a informação e explicar o contexto ou referência para a citação.

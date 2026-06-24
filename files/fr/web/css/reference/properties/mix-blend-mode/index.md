@@ -1,11 +1,16 @@
 ---
-title: mix-blend-mode
+title: Propriété CSS `mix-blend-mode`
+short-title: mix-blend-mode
 slug: Web/CSS/Reference/Properties/mix-blend-mode
 l10n:
-  sourceCommit: fa647850ec257db6f807993c556f21a6c269cc4f
+  sourceCommit: 3a1539b859a7e1b1daedd1880c610b71debde782
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`mix-blend-mode`** définit la façon dont le contenu d'un élément doit se mélanger avec le contenu de l'élément parent et avec son arrière-plan.
+La propriété [CSS](/fr/docs/Web/CSS) **`mix-blend-mode`** définit la façon dont le contenu d'un élément doit se mélanger avec son _arrière-plan_ — le contenu rendu derrière l'élément dans le même [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
+
+> [!NOTE]
+> Cette propriété mélange l'élément avec le contenu _derrière_ lui dans le contexte d'empilement.
+> Pour mélanger les propres couches d'arrière-plan d'un élément entre elles, utilisez plutôt {{CSSxRef("background-blend-mode")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: mix-blend-mode")}}
 

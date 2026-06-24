@@ -1,8 +1,9 @@
 ---
-title: inset()
+title: CSS `inset()` 関数
+short-title: inset()
 slug: Web/CSS/Reference/Values/basic-shape/inset
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`inset()`** は [CSS](/ja/docs/Web/CSS) の関数は、参照ボックスの各辺から指定された内側への距離で矩形を定義します。これは、 {{cssxref("basic-shape")}} [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)の一つを定義するために使用される基本シェイプ関数です。

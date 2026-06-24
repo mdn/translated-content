@@ -4,9 +4,7 @@ slug: Learn_web_development/Core/Scripting/Conditionals
 original_slug: Learn/JavaScript/Building_blocks/conditionals
 ---
 
-{{LearnSidebar}}
-
-{{NextMenu("Apprendre/JavaScript/Building_blocks/Looping_code", "Apprendre/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Test_your_skills/Conditionals", "Learn_web_development/Core/Scripting")}}
 
 Dans tout langage de programmation, le code doit prendre des décisions et agir en fonction des différents paramètres. Par exemple dans un jeu, si le nombre de vies du joueur atteint 0, alors le jeu est terminé. Dans une application météo, si elle est consultée le matin, l'application montrera une image du lever de soleil&nbsp;; l'application proposera des étoiles et la lune s'il fait nuit. Dans cet article nous allons découvrir comment ces instructions conditionnelles fonctionnent en JavaScript.
 
@@ -17,7 +15,7 @@ Dans tout langage de programmation, le code doit prendre des décisions et agir 
       <td>
         Connaissances du vocabulaire informatique, compréhension des bases du
         HTML et des CSS,
-        <a href="/fr/docs/Learn/JavaScript/First_steps"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting"
           >Premiers pas en JavaScript</a
         >.
       </td>
@@ -427,7 +425,7 @@ select.onchange = function () {
 
 {{ EmbedLiveSample('Exemple_opérateur_ternaire', '100%', 300) }}
 
-Nous mettons un élément {{htmlelement('select')}} pour choisir un thème (noir ou blanc), plus un simple élément {{htmlelement('h1')}} pour afficher un titre de site web. Nous avons aussi une fonction `update()`, qui prend deux couleurs en paramètre (entrées). La couleur de fond du site est déterminée par la couleur indiquée dans le premier paramètre fourni, et la couleur du texte par le deuxième.
+Nous mettons un élément {{htmlelement('select')}} pour choisir un thème (noir ou blanc), plus un simple élément `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}` pour afficher un titre de site web. Nous avons aussi une fonction `update()`, qui prend deux couleurs en paramètre (entrées). La couleur de fond du site est déterminée par la couleur indiquée dans le premier paramètre fourni, et la couleur du texte par le deuxième.
 
 Nous avons également mis un écouteur d'événement [onchange](/fr/docs/Web/API/HTMLElement/change_event) qui sert à exécuter une fonction contenant un opérateur ternaire. Il débute par un test de condition — `select.value === 'black'`. Si le test renvoie `true`, nous exécutons la fonction `update()` avec les paramètres blanc et noir&nbsp;: cela signifie que le fond sera noir et le texte blanc. S'il renvoie `false`, nous exécutons `update()` avec les paramètres noir et blanc, les couleurs du site seront inversées.
 
@@ -440,7 +438,7 @@ Dans cet exemple nous allons vous aider à finaliser une application de calendri
 
 - Un élément {{htmlelement("select")}} permettant à l'utilisateur de choisir un mois.
 - Un pilote d'événement `onchange` pour détecter si la valeur choisie dans le menu `<select>` a été modifiée.
-- Une fonction `createCalendar()` qui trace le calendrier et affiche le mois voulu dans l'élément {{htmlelement("h1")}}.
+- Une fonction `createCalendar()` qui trace le calendrier et affiche le mois voulu dans l'élément `{{htmlelement("Heading_Elements", "&lt;h1&gt;")}}`.
 
 Vous aurez besoin d'écrire une instruction conditionnelle dans la fonction `onchange`, juste au dessous du commentaire `// AJOUTER LA CONDITION ICI`. Elle doit&nbsp;:
 
@@ -649,4 +647,4 @@ C'est tout ce qu'il est nécessaire de connaître à propos des structures condi
 - [Référence if...else](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Référence opérateur conditionnel (ternaire)](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
-{{NextMenu("Apprendre/JavaScript/Building_blocks/Looping_code", "Apprendre/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Test_your_skills/Conditionals", "Learn_web_development/Core/Scripting")}}

@@ -2,7 +2,7 @@
 title: y
 slug: Web/SVG/Reference/Attribute/y
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
 ---
 
 **`y`** 属性はユーザー座標系の Y 軸の座標を定義します。
@@ -793,7 +793,7 @@ l10n:
 
 ### `<filter>`
 
-{{SVGElement('filter')}} の場合、 `y` はこのフィルターの描画領域における左上隅の Y 座標をを定義します。
+{{SVGElement('filter')}} の場合、 `y` はこのフィルターの描画領域における左上隅の Y 座標を定義します。
 
 <table class="properties">
   <tbody>
@@ -826,7 +826,7 @@ l10n:
 
 ### `<foreignObject>`
 
-{{SVGElement('foreignObject')}} の場合、 `y` はビューポートの左上隅の Y 座標をを定義します。
+{{SVGElement('foreignObject')}} の場合、 `y` はビューポートの左上隅の Y 座標を定義します。
 
 <table class="properties">
   <tbody>

@@ -329,7 +329,7 @@ console.log(b.toto); // Affiche 1 : la propriété n'est plus disponible sur l'o
 
 ### Objets créés avec le mot-clé `class`
 
-ECMAScript 2015 introduit plusieurs mots-clés destinés à créer du sucre syntaxique pour manipuler des [classes](/fr/docs/Web/JavaScript/Reference/Classes). Ces mots-clés sont {{jsxref("Instructions/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}} et {{jsxref("Opérateurs/super", "super")}}.
+ECMAScript 2015 introduit plusieurs mots-clés destinés à créer du sucre syntaxique pour manipuler des [classes](/fr/docs/Web/JavaScript/Reference/Classes). Ces mots-clés sont {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}} et {{jsxref("Operators/super", "super")}}.
 
 ```js
 "use strict";

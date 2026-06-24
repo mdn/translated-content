@@ -17,7 +17,7 @@ var extensions = aWebSocket.extensions;
 
 ## 返回值
 
-A {{domxref("DOMString")}}.
+A {{jsxref("String")}}.
 
 ## 规范
 

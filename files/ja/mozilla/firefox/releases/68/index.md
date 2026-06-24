@@ -117,7 +117,7 @@ _変更なし。_
 
 #### DOM
 
-- [Visual Viewport API](/ja/docs/Web/API/Visual_Viewport_API) が Android 版でデフォルトで有効になりました ([Firefox バグ 1512813](https://bugzil.la/1512813))。デスクトップ版 Firefox にこの API を追加する作業は [Firefox バグ 1551302](https://bugzil.la/1551302) で追跡しています。
+- [Visual Viewport API](/ja/docs/Web/API/VisualViewport) が Android 版でデフォルトで有効になりました ([Firefox バグ 1512813](https://bugzil.la/1512813))。デスクトップ版 Firefox にこの API を追加する作業は [Firefox バグ 1551302](https://bugzil.la/1551302) で追跡しています。
 - {{domxref("Window")}} の [`noreferrer`](/ja/docs/Web/API/Window/open#noreferrer) 機能をサポートしました。これを指定するとホスト名、IP アドレス、URL、その他のホスト端末を識別する情報を共有せずに、新しいウィンドウのコンテンツを読み込みます ([Firefox バグ 1527287](https://bugzil.la/1527287))。
 - `HTMLImageElement` の {{domxref("HTMLImageElement.decode", "decode()")}} メソッドを実装しました。これは画像を、DOM に追加する前に読み込みおよびデコードするために使用できます ([Firefox バグ 1501794](https://bugzil.la/1501794))。
 - {{domxref("XMLHttpRequest")}} を、{{domxref("XMLHttpRequest.responseType", "responseType")}} で非標準の値 `moz-chunked-arraybuffer` を受け入れないように更新しました。この値を使用しているコードは、[Fetch API をストリームとして使用する](/ja/docs/Web/API/Streams_API/Using_readable_streams#consuming_a_fetch_as_a_stream) ように更新してください ([Firefox バグ 1120171](https://bugzil.la/1120171))。

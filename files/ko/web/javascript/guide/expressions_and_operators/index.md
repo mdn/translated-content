@@ -305,7 +305,7 @@ const var2 = 4;
       <td>
         두 피연산자의 값과 타입이 모두 같은 경우 <code>true</code>를 반환합니다.
         {{jsxref("Object.is")}}와
-        <a href="/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness"
+        <a href="/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness"
           >JavaScript에서의 같음</a
         >을 참고하세요.
       </td>

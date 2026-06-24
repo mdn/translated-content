@@ -149,7 +149,7 @@ ctx.fill();
 
 ### for...of ループ
 
-コレクションをループ処理する基本的なツールは {{jsxref("statements/for...of","for...of")}} ループです。
+コレクションをループ処理する基本的なツールは {{jsxref("Statements/for...of","for...of")}} ループです。
 
 ```js
 const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
@@ -184,7 +184,7 @@ console.log(upperCats);
 // [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
 ```
 
-ここでは、 {{jsxref("Array.prototype.map()","cats.map()")}} に関数を渡すと、`map()` は配列内のそれぞれのアイテムにその関数を 1 回ずつ、そのアイテムを渡して呼び出します。そして、それぞれの関数呼び出しの返値を新しい配列に追加し、最後に新しい配列を返します。この場合、提供した関数はアイテムを大文字に変換するので、結果として得られる配列には、すべてのネコ科動物がが大文字で格納されます。
+ここでは、 {{jsxref("Array.prototype.map()","cats.map()")}} に関数を渡すと、`map()` は配列内のそれぞれのアイテムにその関数を 1 回ずつ、そのアイテムを渡して呼び出します。そして、それぞれの関数呼び出しの返値を新しい配列に追加し、最後に新しい配列を返します。この場合、提供した関数はアイテムを大文字に変換するので、結果として得られる配列には、すべてのネコ科動物が大文字で格納されます。
 
 ```js-nolint
 [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
@@ -226,7 +226,7 @@ console.log(filtered);
 ## 標準的な for ループ
 
 上の「円を描く」例では、ループさせるアイテムのコレクションがある訳ではありません。実際には、同じコードを 100 回実行したいだけです。
-このような用途では、{{jsxref("statements/for","for")}} ループを使用する必要があります。
+このような用途では、{{jsxref("Statements/for","for")}} ループを使用する必要があります。
 これは以下のような構文があります。構文は以下の通りです。
 
 ```js-nolint

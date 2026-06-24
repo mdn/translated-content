@@ -11,7 +11,7 @@ O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro compone
     <tr>
       <th scope="row">Categorias de conteúdo</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Flow content</a
         >,
         <a
@@ -23,7 +23,7 @@ O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro compone
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Flow content</a
         >
       </td>
@@ -36,7 +36,7 @@ O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro compone
       <th scope="row">Permitted parents</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >flow content</a
         >
       </td>

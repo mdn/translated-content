@@ -53,7 +53,7 @@ Por último, tenga en cuenta que para los elementos en línea no modificados, la
   - Valores
     - [Valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
     - [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
-    - [Valor usado](/es/docs/Web/CSS/used_value)
+    - [Valor usado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
     - [Valor real](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
   - [Sintaxis de definición de valor](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - [Propiedades abreviadas](/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties)

@@ -1,36 +1,36 @@
 ---
-title: "<legend>: フィールドセット凡例要素"
+title: HTML `<legend>` フィールドセット凡例要素
+short-title: <legend>
 slug: Web/HTML/Reference/Elements/legend
-original_slug: Web/HTML/Element/legend
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
-
 **`<legend>`** は [HTML](/ja/docs/Web/HTML) の要素で、その親要素である {{HTMLElement("fieldset")}} の内容のキャプションを表します。
+
+[カスタマイズ可能な `<select>` 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select) では、 `<legend>` 要素を `<optgroup>` 要素の子要素として指定することができ、これにより、ターゲット設定やスタイル設定が容易なラベルを提供できます。これは、 `<optgroup>` 要素の `label` 属性に設定されたテキストを置き換え、同じ意味を持ちます。
 
 {{InteractiveExample("HTML デモ: &lt;legend&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <fieldset>
-  <legend>Choose your favorite monster</legend>
+  <legend>好きなモンスターを選択</legend>
 
   <input type="radio" id="kraken" name="monster" value="K" />
-  <label for="kraken">Kraken</label><br />
+  <label for="kraken">クラーケン</label><br />
 
   <input type="radio" id="sasquatch" name="monster" value="S" />
-  <label for="sasquatch">Sasquatch</label><br />
+  <label for="sasquatch">サスカッチ</label><br />
 
   <input type="radio" id="mothman" name="monster" value="M" />
-  <label for="mothman">Mothman</label>
+  <label for="mothman">モスマン</label>
 </fieldset>
 ```
 
 ```css interactive-example
 legend {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   padding: 3px 6px;
 }
 
@@ -66,7 +66,7 @@ input {
           >記述コンテンツ</a
         >
         および
-        <a href="/ja/docs/Web/HTML/Element/Heading_Elements">見出し</a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/Heading_Elements">見出し</a>
         （h1–h6 要素）
       </td>
     </tr>
@@ -77,16 +77,13 @@ input {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        {{HTMLElement("fieldset")}} 要素。<code>&#x3C;legend></code>
-        要素は
-        <code>&#x3C;fieldset></code>
-        の最初の子要素として配置しなくてはならない。
+        最初の子要素としてこの <code>&#x3C;legend></code> 要素を持つ {{HTMLElement("fieldset")}}。<a href="/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select">カスタマイズ可能な select 要素</a>では、<code>&#x3C;legend></code> 要素を {{htmlelement("optgroup")}} の子要素として使用することが許可されています。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>

@@ -19,7 +19,7 @@ l10n:
 - `granted`
   - : ユーザーは以前、{{htmlelement("geolocation")}} 要素またはその他の仕組みを通じて、ブラウザーが `geolocation` 機能を使用することを許可しました。`<geolocation>` 要素を使用する場合、これはユーザーが以前、表示されたボタンを押して「許可」オプションを選択したことを意味します。
 
-    `<geolocation>` 要素の [`autolocate`](/ja/docs/Web/HTML/Reference/Elements/geolocation#autolocate) 属性が `true` に設定されており、かつ事前ににその権限が与えられている場合、ブラウザーはページ読み込み直後に位置情報のリクエストを開始します。ユーザーがボタンを押す必要はありません。
+    `<geolocation>` 要素の [`autolocate`](/ja/docs/Web/HTML/Reference/Elements/geolocation#autolocate) 属性が `true` に設定されており、かつ事前にその権限が与えられている場合、ブラウザーはページ読み込み直後に位置情報のリクエストを開始します。ユーザーがボタンを押す必要はありません。
 
 - `denied`
   - : ユーザーは以前、`<geolocation>` 要素またはその他の仕組みを通じて、ブラウザーが `geolocation` 機能を使用することを拒否しました。`<geolocation>` 要素を使用する場合、これは以前、表示されたボタンをユーザーがボタンを押して「許可しない」オプションを選択したことを意味します。

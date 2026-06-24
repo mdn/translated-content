@@ -56,7 +56,7 @@ Esta seção dispõe de um resumo das etapas básicas para adicionar a funcional
 
 ### Identificando o que é arrastável _(draggable)_
 
-Para fazer um elemento se tornar arrastável, é necessária a adição de um atributo [`draggable`](/pt-BR/docs/Web/HTML/Global_attributes#draggable) além da adição do manipulador de eventos global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}, conforme descrito no exemplo a seguir
+Para fazer um elemento se tornar arrastável, é necessária a adição de um atributo [`draggable`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#draggable) além da adição do manipulador de eventos global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}, conforme descrito no exemplo a seguir
 
 ```js
 function dragstart_handler(ev) {
@@ -78,7 +78,7 @@ Veja a [referência do atributo draggable](/pt-BR/docs/Web/HTML/Global_attribute
 
 ### Defina os dados do drag
 
-A aplicação é livre para incluir qualquer quantidade de dados do item em uma operação drag. Cada dado de um item é uma {{domxref("DOMString","string")}} de um tipo particular, tipicamente um MIME type como por exemplo `text/html`.
+A aplicação é livre para incluir qualquer quantidade de dados do item em uma operação drag. Cada dado de um item é uma {{jsxref("String","string")}} de um tipo particular, tipicamente um MIME type como por exemplo `text/html`.
 
 Cada {{domxref("DragEvent","evento drag")}} tem uma propriedade {{domxref("DragEvent.dataTransfer","dataTransfer")}} que _segura_ os dados do evento. Essa propridade (que é um objeto {{domxref("DataTransfer")}}) também tem um método para _gerenciar_ os dados do arraste (drag). O método {{domxref("DataTransfer.setData","setData()")}} é usado para adicionar um item aos dados do arraste, como demonstrado no exemplo a seguir.
 

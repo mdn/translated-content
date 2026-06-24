@@ -1,11 +1,12 @@
 ---
-title: scroll-timeline-axis
+title: Propriété CSS `scroll-timeline-axis`
+short-title: scroll-timeline-axis
 slug: Web/CSS/Reference/Properties/scroll-timeline-axis
 l10n:
-  sourceCommit: f89de66a773484024ab5d914bc88fa08d894db1c
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`scroll-timeline-axis`** est utilisée pour définir la direction de la barre de défilement qui sera utilisée pour fournir la [chronologie d'une animation pilotée par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), qui progresse en faisant défiler un élément défilable (_défileur_).
+La propriété [CSS](/fr/docs/Web/CSS) **`scroll-timeline-axis`** est utilisée pour définir la direction de la barre de défilement qui est utilisée pour fournir la [chronologie d'une animation pilotée par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), qui progresse en faisant défiler un élément défilable (_défileur_).
 
 ## Syntaxe
 
@@ -33,9 +34,9 @@ scroll-timeline-axis: unset;
 
 ## Description
 
-La propriété `scroll-timeline-axis` définit quelle barre de défilement sera utilisée pour fournir la chronologie d'une [animation pilotée par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines). La valeur correspond à l'axe (`<axis>`) de la barre de défilement. La propriété `scroll-timeline` est définie sur l'élément conteneur de défilement qui fournira la chronologie.
+La propriété `scroll-timeline-axis` définit quelle barre de défilement est utilisée pour fournir la chronologie d'une [animation pilotée par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines). La valeur correspond à l'axe (`<axis>`) de la barre de défilement. La propriété `scroll-timeline` est définie sur l'élément conteneur de défilement qui fournit la chronologie.
 
-Si l'élément conteneur de défilement ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement ne sera créée.
+Si l'élément conteneur de défilement ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement n'est créée.
 
 Les propriétés `scroll-timeline-axis` et {{CSSxRef("scroll-timeline-name")}} peuvent également être définies en utilisant la propriété raccourcie {{CSSxRef("scroll-timeline")}}.
 
@@ -124,12 +125,12 @@ body {
 ```css hidden
 @layer no-support {
   @supports not (scroll-timeline-axis: block) {
-    body::before {
+    :root::before {
       content: "Votre navigateur ne prend pas en charge la propriété `scroll-timeline-axis`.";
       background-color: wheat;
       display: block;
-      width: 100%;
       text-align: center;
+      padding: 1rem 0;
     }
   }
 }

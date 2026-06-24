@@ -2,7 +2,7 @@
 title: Comment fonctionne le Web
 slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
 l10n:
-  sourceCommit: 4d0079996a0621722f0a9f45f29ff60c27f1cf4c
+  sourceCommit: 19cee96ad42daadec1e4b66e87536ec7a5d5cb80
 ---
 
 {{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
@@ -12,7 +12,7 @@ _Comment fonctionne le Web_ fournit une description générale de ce qui se pass
 Cette théorie n'est pas essentielle pour écrire du code web à court terme, mais vous en tirerez rapidement profit en comprenant ce qui se passe en arrière-plan.
 
 > [!NOTE]
-> Cet article n'explique pas comment les navigateurs web transforment le code en pages web. Cela est abordé dans [Comment les navigateurs chargent les sites web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites).
+> Cet article n'explique pas comment les navigateurs web transforment le code en pages web. C'est abordé dans [Comment les navigateurs chargent les sites web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites).
 
 <table>
   <tbody>
@@ -40,12 +40,16 @@ Cette théorie n'est pas essentielle pour écrire du code web à court terme, ma
 
 ## Clients et serveurs
 
-Les ordinateurs connectés à internet sont appelés **clients** et **serveurs**. Un schéma simplifié de leur interaction pourrait ressembler à ceci&nbsp;:
+Les ordinateurs connectés à internet sont appelés **clients** et **serveurs**. Un schéma simplifié de leur interaction peut ressembler à ceci&nbsp;:
 
 ![Deux cercles représentant le client et le serveur. Une flèche « requête » va du client vers le serveur, et une flèche « réponse » va du serveur vers le client](simple-client-server.png)
 
 - Les clients sont les appareils connectés à internet des utilisateur·ice·s du Web (par exemple, votre ordinateur connecté à votre Wi-Fi, ou votre téléphone connecté à votre réseau mobile) et les logiciels permettant d'accéder au Web sur ces appareils (généralement un navigateur web comme Firefox ou Chrome).
-- Les serveurs sont des ordinateurs qui stockent des pages web, des sites ou des applications. Lorsqu'un client souhaite accéder à une page web, une copie du code de la page est téléchargée depuis le serveur vers la machine cliente pour être interprétée par le navigateur et affichée à l'utilisateur·rice.
+- Les serveurs sont des ordinateurs qui stockent des pages web, des sites ou des applications. Lorsqu'un client souhaite accéder à une page web, une copie du code de la page est téléchargée depuis le serveur vers la machine cliente pour être interprétée par le navigateur et affichée à l'utilisateur·ice.
+
+Le contenu intégré suivant de Scrimba<sup>[_partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup> fournit des informations supplémentaires sur les clients et les serveurs, y compris un quiz et une discussion.
+
+<mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~0lq" scrimtitle="Clients et serveurs"></mdn-scrim-inline>
 
 ## Les autres éléments de la boîte à outils
 
@@ -58,11 +62,11 @@ Pour l'instant, imaginons qu'Internet est une route. À une extrémité de la ro
 Pour que les données puissent circuler dans les deux sens, il nous faut les éléments suivants&nbsp;:
 
 - **Votre connexion Internet**&nbsp;: permet d'envoyer et de recevoir des données sur Internet. C'est en quelque sorte la rue entre votre maison et le magasin.
-- **TCP/IP**&nbsp;: le **Transmission Control Protocol** et l'**Internet Protocol** (TCP/IP) sont des protocoles de communication qui définissent comment les données doivent circuler sur Internet. Cela correspond aux moyens de transport qui vous permettent de passer commande, d'aller au magasin et d'acheter vos biens. Dans notre exemple, il s'agit d'une voiture ou d'un vélo (ou tout autre moyen de transport sur la route).
+- **TCP/IP**&nbsp;: **Transmission Control Protocol** et **Internet Protocol** (TCP/IP) sont des protocoles de communication qui définissent comment les données doivent circuler sur Internet. Cela correspond aux moyens de transport qui vous permettent de passer commande, d'aller au magasin et d'acheter vos biens. Dans notre exemple, il s'agit d'une voiture ou d'un vélo (ou tout autre moyen de transport sur la route).
 - **DNS**&nbsp;: le **Domain Name System** (DNS) est comme un carnet d'adresses pour les sites web. Lorsque vous saisissez une adresse web dans votre navigateur, celui-ci consulte le DNS pour trouver l'adresse IP du site — l'adresse réelle où se trouve le serveur — avant de pouvoir récupérer le site (voir [Explication du DNS](#explication_du_dns) ci-dessous pour plus d'informations). Le navigateur doit savoir sur quel serveur se trouve le site afin d'envoyer les messages HTTP au bon endroit (voir ci-dessous). C'est comme chercher l'adresse du magasin avant de s'y rendre.
 - **HTTP**&nbsp;: le **Hypertext Transfer Protocol** (HTTP) est un {{Glossary("Protocol", "protocole")}} applicatif qui définit un langage pour que les clients et les serveurs puissent communiquer. C'est comme la langue que vous utilisez pour passer commande. Voir [Notions de base sur HTTP](#notions_de_base_sur_http) ci-dessous.
 - **Fichiers**&nbsp;: un site web est composé de nombreux fichiers différents, qui sont comme les différents biens que vous achetez au magasin. Ces fichiers se répartissent en deux grandes catégories&nbsp;:
-  - **Code**&nbsp;: les sites web sont principalement construits à partir de HTML, CSS et JavaScript — les différents langages de programmation dans lesquels les sites sont écrits, que le navigateur interprète et assemble en une page web à afficher à l'utilisateur·rice.
+  - **Code**&nbsp;: les sites web sont principalement construits à partir de HTML, CSS et JavaScript — les différents langages de programmation dans lesquels les sites sont écrits, que le navigateur interprète et assemble en une page web à afficher à l'utilisateur·ice.
   - **Ressources**&nbsp;: terme générique pour tous les autres éléments présents sur un site web — comme les images, la musique, la vidéo, les documents Word et les PDF — qui ne sont pas du code interprété par le navigateur.
 
   > [!NOTE]
@@ -79,17 +83,11 @@ Lorsque vous saisissez une adresse web (qui fait techniquement partie d'une [URL
 
 ## Explication du DNS
 
-Les véritables adresses web ([URL](#composants_dune_url)) ne sont pas les jolies chaînes faciles à retenir que vous saisissez dans votre barre d'adresse pour trouver vos sites préférés. Ce sont des nombres spéciaux qui ressemblent à ceci&nbsp;: `192.0.2.172`.
+Les véritables adresses web ([URL](#composants_dune_url)) ne sont pas les jolies chaînes de caractères faciles à retenir que vous saisissez dans votre barre d'adresse pour trouver vos sites préférés. Ce sont des nombres spéciaux qui ressemblent à ceci&nbsp;: `192.0.2.172`.
 
-C'est ce qu'on appelle une {{Glossary("IP Address", "adresse IP")}}, et cela représente un emplacement unique sur le Web. Cependant, ce n'est pas très facile à retenir, n'est-ce pas&nbsp;? C'est pourquoi le système DNS a été inventé. Ce système utilise des serveurs spéciaux qui associent une adresse web saisie dans votre navigateur (comme «&nbsp;mozilla.org&nbsp;») à la véritable adresse (IP) du site.
+C'est ce qu'on appelle une {{Glossary("IP Address", "adresse IP")}}, et cela représente un emplacement unique sur le Web. Cependant, ce n'est pas très facile à retenir, n'est-ce pas&nbsp;? C'est pourquoi le système DNS a été inventé. Ce système utilise des serveurs spéciaux qui associent une adresse web saisie dans votre navigateur (comme `mozilla.org`) à la véritable adresse (IP) du site. Les grands sites web sont souvent disponibles sur plusieurs serveurs, afin de se charger efficacement pour différent·e·s utilisateur·ice·s dans le monde entier. Par conséquent, l'adresse IP peut varier en fonction de votre emplacement.
 
-Les sites web peuvent être atteints directement via leur adresse IP. Vous pouvez utiliser un outil de recherche DNS pour trouver l'adresse IP d'un site web.
-
-Voyons maintenant l'adresse IP de MDN, et prouvons qu'elle pointe bien vers le même endroit que l'adresse web&nbsp;:
-
-1. Rendez-vous sur l'[outil de recherche DNS NsLookup.io <sup>(angl.)</sup>](https://www.nslookup.io/website-to-ip-lookup/), saisissez `developer.mozilla.org` et appuyez sur le bouton.
-2. Sur l'écran de résultats, copiez l'adresse IP (l'adresse IPv4) dans votre presse-papiers.
-3. Ouvrez un nouvel onglet de navigateur, collez l'adresse IP dans la barre d'adresse et appuyez sur <kbd>Entrée</kbd>/<kbd>Retour</kbd>. Vous devriez voir MDN s'afficher, prouvant que l'adresse IP y mène bien.
+Vous pouvez utiliser un outil de recherche DNS pour trouver les adresses IP d'un site web. Par exemple, allez sur [l'outil de recherche DNS NsLookup.io <sup>(angl.)</sup>](https://www.nslookup.io/website-to-ip-lookup/), saisissez `developer.mozilla.org` et appuyez sur le bouton.
 
 ## Explication des paquets
 
@@ -107,7 +105,7 @@ Il existe plusieurs raisons pour lesquelles les données sont envoyées en petit
 
 ## Notions de base sur HTTP
 
-HTTP utilise un langage simple de verbes pour effectuer des actions comme faire des requêtes (voir [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)). La méthode HTTP {{HTTPMethod("GET")}} est celle normalement utilisée pour effectuer les requêtes HTTP du type décrit ci-dessus. Par exemple, une requête pour la page d'accueil de MDN pourrait ressembler à ceci&nbsp;:
+HTTP utilise un langage simple de verbes pour effectuer des actions comme faire des requêtes (voir [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)). La méthode HTTP {{HTTPMethod("GET")}} est celle normalement utilisée pour effectuer les requêtes HTTP du type décrit ci-dessus. Par exemple, une requête pour la page d'accueil de MDN peut ressembler à ceci&nbsp;:
 
 ```http
 GET /fr/ HTTP/2
@@ -115,7 +113,7 @@ GET /fr/ HTTP/2
 Host: developer.mozilla.org
 ```
 
-La réponse envoyée par le serveur pourrait ressembler à ceci&nbsp;:
+La réponse envoyée par le serveur peut ressembler à ceci&nbsp;:
 
 ```http
 HTTP/2 200
@@ -152,7 +150,7 @@ Plus haut, nous avons rencontré le [code d'état](/fr/docs/Web/HTTP/Reference/S
 - `400`
   - : Le serveur ne peut pas traiter la requête. Cela se produit généralement lorsque la requête n'est pas dans un format compris par le serveur, ou contient des erreurs.
 - `403`
-  - : Le serveur ne donnera pas accès à la ressource demandée au client. Cela arrive généralement lorsque le serveur sait qui est le client, mais que celui-ci n'a pas la permission d'accéder à la page demandée.
+  - : Le serveur ne donne pas accès à la ressource demandée au client. Cela arrive généralement lorsque le serveur sait qui est le client, mais que celui-ci n'a pas la permission d'accéder à la page demandée.
 - `404`
   - : Le serveur ne trouve pas la ressource demandée. Ce code est souvent renvoyé si l'URL est incorrecte ou si un contenu a été supprimé sans redirection.
 - `503`
@@ -162,7 +160,7 @@ Plus haut, nous avons rencontré le [code d'état](/fr/docs/Web/HTTP/Reference/S
 
 Techniquement, les adresses web que vous saisissez dans la barre d'adresse du navigateur font partie des **Uniform Resource Locators** (**URL**). Les URL définissent l'emplacement de ressources uniques sur Internet.
 
-Une URL est une adresse web plus un protocole&nbsp;: par exemple, si vous ouvrez un nouvel onglet dans votre navigateur, saisissez `developer.mozilla.org` dans la barre d'adresse et appuyez sur <kbd>Entrée</kbd>/<kbd>Retour</kbd>, vous serez redirigé·e vers une URL comme celle-ci&nbsp;:
+Une URL est une adresse web plus un protocole&nbsp;: par exemple, si vous ouvrez un nouvel onglet dans votre navigateur, saisissez `developer.mozilla.org` dans la barre d'adresse et appuyez sur <kbd>Entrée</kbd>/<kbd>Retour</kbd>, vous êtes redirigé·e vers une URL comme celle-ci&nbsp;:
 
 ```plain
 https://developer.mozilla.org/fr/
@@ -173,11 +171,11 @@ Les principales parties de l'URL sont&nbsp;:
 - `https`
   - : Le **protocole** utilisé pour envoyer la requête. Dans ce cas, nous utilisons {{Glossary("HTTPS")}}, qui est une version sécurisée de HTTP empêchant des personnes malveillantes de lire vos données pendant leur transport. Sur le Web moderne, pratiquement tous les serveurs utilisent HTTPS, donc si vous ne le précisez pas, le navigateur suppose que c'est ce que vous utilisez et l'ajoute pour vous.
 - `developer.mozilla.org`
-  - : Le [**nom de domaine**](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) de l'URL, qui représente l'emplacement principal du serveur auquel vous vous connectez. Dans ce cas, l'adresse web que vous avez saisie est égale au nom de domaine, mais ce n'est pas toujours le cas — vous pourriez saisir une adresse web plus complexe. Notez que la partie `developer` est un **sous-domaine** (zone de contenu distincte) du domaine `mozilla.org` de Mozilla. Il existe d'autres sous-domaines sur le site de Mozilla qui hébergent des contenus distincts — voir par exemple [support.mozilla.org <sup>(angl.)</sup>](https://support.mozilla.org/) et [bugzilla.mozilla.org <sup>(angl.)</sup>](https://bugzilla.mozilla.org/).
+  - : Le [**nom de domaine**](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) de l'URL, qui représente l'emplacement principal du serveur auquel vous vous connectez. Dans ce cas, l'adresse web que vous avez saisie est égale au nom de domaine, mais ce n'est pas toujours le cas — vous pouvez saisir une adresse web plus complexe. Notez que la partie `developer` est un **sous-domaine** (zone de contenu distincte) du domaine `mozilla.org` de Mozilla. Il existe d'autres sous-domaines sur le site de Mozilla qui hébergent des contenus distincts — voir par exemple [support.mozilla.org <sup>(angl.)</sup>](https://support.mozilla.org/) et [bugzilla.mozilla.org <sup>(angl.)</sup>](https://bugzilla.mozilla.org/).
 - `/fr/`
   - : Le **chemin** vers la ressource sur le serveur à laquelle vous accédez. MDN conserve tout son contenu en français dans un dossier appelé `fr`, ce à quoi cette URL fait référence.
 
-    Si votre navigateur est configuré pour préférer le contenu en français par défaut, alors c'est l'URL vers laquelle vous serez redirigé·e lorsque vous saisissez `developer.mozilla.org`. Si votre navigateur est configuré pour préférer une autre langue prise en charge par MDN, comme l'anglais', vous serez redirigé·e vers une URL différente, comme `https://developer.mozilla.org/en-US/`. Ce n'est pas disponible par défaut sur tous les sites&nbsp;: les développeur·euse·s de MDN ont mis en place ce système pour permettre à chacun·e d'accéder facilement à la langue de son choix.
+    Si votre navigateur est configuré pour préférer le contenu en français par défaut, alors c'est l'URL vers laquelle vous êtes redirigé·e lorsque vous saisissez `developer.mozilla.org`. Si votre navigateur est configuré pour préférer une autre langue prise en charge par MDN, comme l'anglais', vous êtes redirigé·e vers une URL différente, comme `https://developer.mozilla.org/en-US/`. Ce n'est pas disponible par défaut sur tous les sites&nbsp;: les développeur·euse·s de MDN ont mis en place ce système pour permettre à chacun·e d'accéder facilement à la langue de son choix.
 
 > [!NOTE]
 > Il existe de nombreux autres composants qui peuvent apparaître dans les URL. Voir [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) pour plus de détails.

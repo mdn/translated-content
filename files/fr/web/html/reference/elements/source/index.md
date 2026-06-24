@@ -1,8 +1,9 @@
 ---
-title: "<source> : l'élément de source d'image et média"
+title: "Élément HTML `<source>` : l'élément de source d'image et média"
+short-title: <source>
 slug: Web/HTML/Reference/Elements/source
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<source>`** définit une ou plusieurs ressources média pour les éléments {{HTMLElement("picture")}}, {{HTMLElement("audio")}} et {{HTMLElement("video")}}. C'est un {{Glossary("void element", "élément vide")}}, ce qui signifie qu'il n'a pas de contenu et ne nécessite pas de balise fermante. Cet élément est couramment utilisé pour proposer le même contenu média dans plusieurs formats de fichiers afin d'assurer la compatibilité avec un large éventail de navigateurs, compte tenu de leur prise en charge différente des [formats de fichiers image](/fr/docs/Web/Media/Guides/Formats/Image_types) et des [formats de fichiers média](/fr/docs/Web/Media/Guides/Formats).

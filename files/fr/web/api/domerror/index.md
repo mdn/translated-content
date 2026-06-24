@@ -10,9 +10,9 @@ L'interface **`DOMError`** décrit un objet d'erreur contenant le nom de l'erreu
 ## Propriétés
 
 - {{domxref("DOMError.name")}} {{readOnlyInline}}
-  - : Retourne une {{ domxref("DOMString") }} _(chaîne de caractères)_ représentant l'un des noms de type d'erreur (voir ci-dessous).
+  - : Retourne une {{ jsxref("String") }} _(chaîne de caractères)_ représentant l'un des noms de type d'erreur (voir ci-dessous).
 - {{domxref("DOMError.message")}} {{readOnlyInline}}
-  - : Retourne une {{ domxref("DOMString") }} _(chaîne de caractères)_ représentant un message ou une description associée avec le nom de type d'erreur.
+  - : Retourne une {{ jsxref("String") }} _(chaîne de caractères)_ représentant un message ou une description associée avec le nom de type d'erreur.
 
 ## Type d'erreurs
 

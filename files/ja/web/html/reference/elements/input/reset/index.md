@@ -1,13 +1,12 @@
 ---
-title: <input type="reset">
+title: HTML `<input type="reset">` 属性値
+short-title: <input type="reset">
 slug: Web/HTML/Reference/Elements/input/reset
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
-{{HTMLSidebar}}
-
-{{HTMLElement("input")}} 要素の **`reset`** 型はボタンとして表示され、既定の {{domxref("Element/click_event", "click")}} イベントのハンドラーは、フォーム内の入力欄すべてを初期値にリセットします。
+{{HTMLElement("input")}} 要素の **`reset`** 型はボタンとして表示され、デフォルトの {{domxref("Element/click_event", "click")}} イベントのハンドラーは、フォーム内の入力欄すべてを初期値にリセットします。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;reset&quot;&gt;", "tabbed-standard")}}
 
@@ -71,7 +70,7 @@ input[type="submit"] {
 
 ### value 属性の省略
 
-`value` を指定しなかった場合は、既定のラベルが付いたボタンが表示されます（通常は「リセット」ですが、{{Glossary("User agent", "ユーザーエージェント")}}によって異なります）。
+`value` を指定しなかった場合は、デフォルトのラベルが付いたボタンが表示されます（通常は「リセット」ですが、{{Glossary("User agent", "ユーザーエージェント")}}によって異なります）。
 
 ```html
 <input type="reset" />

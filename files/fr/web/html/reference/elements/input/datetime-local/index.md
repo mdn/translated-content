@@ -1,8 +1,9 @@
 ---
-title: <input type="datetime-local">
+title: Valeur d'attribut HTML `<input type="datetime-local">`
+short-title: <input type="datetime-local">
 slug: Web/HTML/Reference/Elements/input/datetime-local
 l10n:
-  sourceCommit: 991d9809b3ecd8e01b5be871a1f30581e55ee060
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"datetime-local"`** permettent de créer des champs destinés à saisir simplement une date (définie par une année, un mois, et un jour) et une heure (définie par une heure et une minute). Il n'y a pas de secondes dans ce contrôle.
@@ -58,10 +59,10 @@ Vous pouvez définir une valeur par défaut pour le champ en incluant une date e
 
 {{EmbedLiveSample("", 600, 60)}}
 
-Il convient de noter que les formats de date et d'heure affichés diffèrent de la véritable valeur&nbsp;; la date et l'heure affichées sont formatées selon la locale de l'utilisateur·ice telle que rapportée par son système d'exploitation, tandis que la valeur de date/heure est toujours formatée `YYYY-MM-DDTHH:mm`. Lorsque la valeur ci-dessus est envoyée au serveur, par exemple, elle ressemblera à `party-date=2024-06-01T08:30`.
+Il convient de noter que les formats de date et d'heure affichés diffèrent de la véritable valeur&nbsp;; la date et l'heure affichées sont formatées selon la locale de l'utilisateur·ice telle que rapportée par son système d'exploitation, tandis que la valeur de date/heure est toujours formatée `YYYY-MM-DDTHH:mm`. Lorsque la valeur ci-dessus est envoyée au serveur, par exemple, elle ressemble à `party-date=2024-06-01T08:30`.
 
 > [!NOTE]
-> Gardez également à l'esprit que si ces données sont envoyées via HTTP {{HTTPMethod("GET")}}, le caractère deux-points devra être échappé pour être inclus dans les paramètres de l'URL, par exemple, `party-date=2024-06-01T08%3A30`. Voir {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}} pour une façon de faire cela.
+> Gardez également à l'esprit que si ces données sont envoyées par HTTP {{HTTPMethod("GET")}}, le caractère deux-points doit être échappé pour être inclus dans les paramètres de l'URL, par exemple, `party-date=2024-06-01T08%3A30`. Voir {{JSxRef("encodeURI()")}} pour une façon de faire cela.
 
 Vous pouvez également obtenir et définir la valeur de la date en JavaScript à l'aide de la propriété `value` de {{DOMxRef("HTMLInputElement")}}&nbsp;:
 
@@ -76,13 +77,13 @@ En complément des attributs communs à tous les éléments {{HTMLElement("input
 
 ### `max`
 
-La date/heure la plus avancée qui peut être saisie dans le contrôle. Si la [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) saisie dans l'élément est postérieure à cette date/heure, l'élément ne respectera pas [les contraintes de validation](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `max` n'est pas une chaîne de caractères valide qui suit le format `YYYY-MM-DDTHH:mm`, l'élément n'a pas de valeur maximale.
+La date/heure la plus avancée qui peut être saisie dans le contrôle. Si la [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) saisie dans l'élément est postérieure à cette date/heure, l'élément ne respecte pas [les contraintes de validation](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `max` n'est pas une chaîne de caractères valide qui suit le format `YYYY-MM-DDTHH:mm`, l'élément n'a pas de valeur maximale.
 
 Cette valeur doit définir une chaîne de caractères de date postérieure ou égale à celle définie par l'attribut `min`.
 
 ### `min`
 
-La date/heure la plus ancienne qui peut être saisie&nbsp;; toute date/heure antérieure entraînera l'échec de [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `min` n'est pas une chaîne de caractères valide qui suit le format `YYYY-MM-DDTHH:mm`, l'élément n'a pas de valeur minimale.
+La date/heure la plus ancienne qui peut être saisie&nbsp;; toute date/heure antérieure entraîne l'échec de [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `min` n'est pas une chaîne de caractères valide qui suit le format `YYYY-MM-DDTHH:mm`, l'élément n'a pas de valeur minimale.
 
 Cette valeur doit définir une chaîne de caractères de date antérieure ou égale à celle définie par l'attribut `max`.
 
@@ -92,7 +93,7 @@ L'attribut `step` est un nombre qui indique la granularité à laquelle la valeu
 
 Pour les champs `datetime-local`, la valeur de `step` est donnée en secondes et est traitée comme un nombre de millisecondes égal à 1000 fois la valeur de `step` (la valeur numérique sous-jacente est en millisecondes). La valeur par défaut est 60, ce qui indique 1 minute.
 
-Une chaîne de caractères `any` signifie qu'aucun pas n'est imposé, et toute valeur est autorisée (sous réserve d'autres contraintes, telles que [`min`](#min) et [`max`](#max)). En réalité, cela a le même effet que `60` pour les champs `datetime-local` car l'interface de sélection ne permet alors de choisir que des minutes entières.
+Une chaîne de caractères `any` signifie qu'aucun pas n'est imposé, et toute valeur est autorisée (sous réserve d'autres contraintes, telles que [`min`](#min) et [`max`](#max)). En réalité, cela a le même effet que `60` pour les champs `datetime-local`, car l'interface de sélection ne permet alors de choisir que des minutes entières.
 
 > [!NOTE]
 > Lorsque les données saisies par l'utilisateur·ice ne respectent pas la configuration du pas, {{Glossary("user agent", "l'agent utilisateur")}} peut arrondir à la valeur valide la plus proche, en privilégiant les nombres dans le sens positif lorsqu'il y a deux options aussi proches.
@@ -103,7 +104,7 @@ Les champs de saisie de date et d'heure sont pratiques pour le·la développeur�
 
 ### Contrôler la taille du champ
 
-`<input type="datetime-local">` ne prend pas en charge les attributs de dimensionnement des contrôles de formulaire comme [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size). Vous devrez utiliser [CSS](/fr/docs/Web/CSS) pour personnaliser la taille de ces éléments.
+`<input type="datetime-local">` ne prend pas en charge les attributs de dimensionnement des contrôles de formulaire comme [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size). Vous devez utiliser [CSS](/fr/docs/Web/CSS) pour personnaliser la taille de ces éléments.
 
 ### Paramétrer le fuseau horaire
 
@@ -115,7 +116,7 @@ Par exemple, si vous créez un système où l'utilisateur·ice est probablement 
 <input type="hidden" id="timezone" name="timezone" value="-08:00" />
 ```
 
-À l'inverse, si vous deviez permettre à l'utilisateur·ice de saisir un fuseau horaire en plus de la date et de l'heure, vous pourriez utiliser un élément {{HTMLElement("select")}} pour lui permettre de choisir le bon fuseau horaire en sélectionnant un lieu parmi une liste de lieux&nbsp;:
+À l'inverse, si vous deviez permettre à l'utilisateur·ice de saisir un fuseau horaire en plus de la date et de l'heure, vous pouvez utiliser un élément {{HTMLElement("select")}} pour lui permettre de choisir le bon fuseau horaire en sélectionnant un lieu parmi une liste de lieux&nbsp;:
 
 ```html
 <select name="timezone" id="timezone">
@@ -127,13 +128,13 @@ Par exemple, si vous créez un système où l'utilisateur·ice est probablement 
 </select>
 ```
 
-Dans les deux cas, les valeurs de date/heure et de fuseau horaire seront envoyées au serveur comme des données distinctes, et il faudra ensuite les stocker correctement dans la base de données côté serveur.
+Dans les deux cas, les valeurs de date/heure et de fuseau horaire sont envoyées au serveur comme des données distinctes, et il faut ensuite les stocker correctement dans la base de données côté serveur.
 
 ## Validation
 
 Par défaut, `<input type="datetime-local">` n'applique aucune validation aux valeurs saisies. Les interfaces utilisateur ne permettent généralement pas de saisir autre chose qu'une date et une heure — ce qui est utile — mais un·e utilisateur·ice peut tout de même laisser le champ vide et soumettre, ou saisir une date et/ou une heure invalide (par exemple le 33 décembre).
 
-Vous pouvez utiliser [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) pour restreindre les dates disponibles (voir [Définir des dates et heures maximales et minimales](#définir_des_dates_et_heures_maximales_et_minimales)), et vous pouvez utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) pour rendre la saisie de la date et de l'heure obligatoire. Ainsi, les navigateurs afficheront une erreur si vous essayez de soumettre une date en dehors de l'intervalle ou un champ vide.
+Vous pouvez utiliser [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) pour restreindre les dates disponibles (voir [Définir des dates et heures maximales et minimales](#définir_des_dates_et_heures_maximales_et_minimales)), et vous pouvez utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) pour rendre la saisie de la date et de l'heure obligatoire. Ainsi, les navigateurs affichent une erreur si vous essayez d'envoyer une date en dehors de l'intervalle ou un champ vide.
 
 Voyons un exemple&nbsp;; ici, nous avons défini des valeurs minimales et maximales pour la date et l'heure, et rendu le champ obligatoire&nbsp;:
 
@@ -159,7 +160,7 @@ Voyons un exemple&nbsp;; ici, nous avons défini des valeurs minimales et maxima
 </form>
 ```
 
-Si vous essayez d'envoyer le formulaire avec une date incomplète (ou en dehors de l'intervalle indiqué), le navigateur affichera une erreur. Essayez de tester l'exemple maintenant&nbsp;:
+Si vous essayez d'envoyer le formulaire avec une date incomplète (ou en dehors de l'intervalle indiqué), le navigateur affiche une erreur. Essayez de tester l'exemple maintenant&nbsp;:
 
 {{EmbedLiveSample("Validation", 600, 120)}}
 
@@ -189,7 +190,7 @@ input:valid + span::after {
 ```
 
 > [!WARNING]
-> La validation des formulaires HTML par le navigateur _n'est pas un substitut_ aux scripts qui garantissent que les données saisies sont au bon format. Il est bien trop facile pour quelqu'un de modifier le HTML afin de contourner la validation, ou de la supprimer entièrement. Il est aussi possible de contourner totalement votre HTML et d'envoyer les données directement à votre serveur. Si votre code côté serveur ne valide pas les données reçues, des problèmes peuvent survenir lorsque des données mal formatées sont soumises (ou des données trop volumineuses, d'un type incorrect, etc.).
+> La validation des formulaires HTML par le navigateur _n'est pas un substitut_ aux scripts qui garantissent que les données saisies sont au bon format. Il est bien trop facile pour quelqu'un de modifier le HTML afin de contourner la validation, ou de la supprimer entièrement. Il est aussi possible de contourner totalement votre HTML et d'envoyer les données directement à votre serveur. Si votre code côté serveur ne valide pas les données reçues, des problèmes peuvent survenir lorsque des données mal formatées sont envoyées (ou des données trop volumineuses, d'un type incorrect, etc.).
 
 > [!NOTE]
 > Avec un champ `datetime-local`, la valeur de la date est toujours normalisée au format `YYYY-MM-DDTHH:mm`.
@@ -233,14 +234,14 @@ Vous pouvez utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/
 
 {{EmbedLiveSample("Définir des dates et heures maximales et minimales", 600, 40)}}
 
-Seuls les jours de juin 2025 peuvent être sélectionnés. Selon le navigateur utilisé, les heures en dehors des valeurs définies peuvent ne pas être sélectionnables. Dans d'autres navigateurs, les dates et heures invalides sont sélectionnables mais correspondront à {{CSSxRef(":invalid")}} et {{CSSxRef(":out-of-range")}} et échoueront à la [validation](#validation).
+Seuls les jours de juin 2025 peuvent être sélectionnés. Selon le navigateur utilisé, les heures en dehors des valeurs définies peuvent ne pas être sélectionnables. Dans d'autres navigateurs, les dates et heures invalides sont sélectionnables mais correspondent à {{CSSxRef(":invalid")}} et {{CSSxRef(":out-of-range")}} et échouent à la [validation](#validation).
 
-Dans certains navigateurs (Safari), le sélecteur de date semble permettre n'importe quelle date, mais la valeur sera limitée à l'intervalle valide lorsqu'une date est sélectionnée.
+Dans certains navigateurs (Safari), le sélecteur de date semble permettre n'importe quelle date, mais la valeur est limitée à l'intervalle valide lorsqu'une date est sélectionnée.
 
 L'intervalle valide inclut toutes les heures comprises entre les valeurs `min` et `max`&nbsp;; l'heure de la journée n'est contrainte que pour le premier et le dernier jour de l'intervalle.
 
 > [!NOTE]
-> Vous devriez pouvoir utiliser l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) pour faire varier le nombre de jours sautés à chaque incrémentation de la date (par exemple, si vous souhaitez ne rendre sélectionnables que les samedis). Cependant, cela ne semble fonctionner efficacement dans aucune implémentation à l'heure actuelle.
+> Vous devez utiliser l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) pour faire varier le nombre de jours sautés à chaque incrémentation de la date (par exemple, si vous souhaitez ne rendre sélectionnables que les samedis). Cependant, cela ne semble fonctionner efficacement dans aucune implémentation à l'heure actuelle.
 
 ## Résumé technique
 
@@ -280,14 +281,6 @@ L'intervalle valide inclut toutes les heures comprises entre les valeurs `min` e
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}},
-        {{DOMxRef("HTMLInputElement.stepDown", "stepDown()")}},
-        {{DOMxRef("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

@@ -10,21 +10,21 @@ O **elemento HTML `<picture>`** é um container usado para especificar múltiplo
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
         <a
-          href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conteúdo_de_fluxo"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Conteúdo_de_fluxo"
           >Conteúdo de fluxo</a
         >,
         <a
-          href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conteúdo_fraseado"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Conteúdo_fraseado"
           >conteúdo fraseado</a
         >,
         <a
-          href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conteúdo_embutido"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Conteúdo_embutido"
           >conteúdo embutido</a
         >
       </td>
@@ -60,7 +60,7 @@ O **elemento HTML `<picture>`** é um container usado para especificar múltiplo
 
 ## Atributos
 
-Esse elemento só inclui [elementos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento só inclui [elementos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemplo 1: Uso com atributo `media`
 

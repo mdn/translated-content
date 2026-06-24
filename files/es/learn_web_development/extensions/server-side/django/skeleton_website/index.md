@@ -14,7 +14,7 @@ Este segundo artículo de nuestro [Tutorial Django](/es/docs/Learn_web_developme
       <th scope="row">Pre-requisitos:</th>
       <td>
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/development_environment"
+          href="/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"
           >Poner en marcha un entorno de desarrollo Django</a
         >. Repasar el
         <a

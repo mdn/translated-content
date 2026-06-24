@@ -283,7 +283,7 @@ l.speak();
 
 ### 实例方法与静态方法的 this 绑定
 
-当在没有 {{jsxref("Operators/this", "this")}} 值的情况下调用一个静态方法或实例方法，例如通过将方法赋值给一个变量然后调用，在方法中，`this` 值将会是 `undefined`。即便没有写 [`"use strict"`](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 指令，表现依然会相同，因为 `class` 主体中的代码永远是在严格模式下执行的。
+当在没有 {{jsxref("this")}} 值的情况下调用一个静态方法或实例方法，例如通过将方法赋值给一个变量然后调用，在方法中，`this` 值将会是 `undefined`。即便没有写 [`"use strict"`](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 指令，表现依然会相同，因为 `class` 主体中的代码永远是在严格模式下执行的。
 
 ```js
 class Animal {

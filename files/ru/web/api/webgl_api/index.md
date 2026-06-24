@@ -17,7 +17,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
         <dl>
           <dt>
             <a
-              href="/ru/docs/Web/WebGL/Getting_started_with_WebGL"
+              href="/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL"
               title="/en-US/docs/WebGL/Getting started with WebGL"
               >Начало работы с WebGL</a
             >
@@ -25,7 +25,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           <dd>Как настроить контекст WebGL .</dd>
           <dt>
             <a
-              href="/ru/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context"
+              href="/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context"
               title="/en-US/docs/WebGL/Adding 2D content to a WebGL context"
               >Добавление 2D контента в контекст WebGL</a
             >
@@ -52,7 +52,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/ru/docs/WebGL/Creating_3D_objects_using_WebGL"
+              href="/ru/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL"
               >Создание 3D объектов с помощью WebGL</a
             >
           </dt>
@@ -62,14 +62,14 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/ru/docs/WebGL/Using_textures_in_WebGL"
+              href="/ru/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL"
               >Использование текстур в WebGL</a
             >
           </dt>
           <dd>Демонстрирует как разместить текстуры на гранях объекта.</dd>
           <dt>
             <a
-              href="/ru/docs/WebGL/Lighting_in_WebGL"
+              href="/ru/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL"
               >Освещение в WebGL</a
             >
           </dt>
@@ -86,7 +86,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/ru/docs/WebGL/WebGL_best_practices"
+              href="/ru/docs/Web/API/WebGL_API/WebGL_best_practices"
               >WebGL: советы по применению на практике</a
             >
           </dt>
@@ -96,7 +96,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/ru/docs/WebGL/Cross-Domain_Textures"
+              href="/ru/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL"
               >Текстуры с других доменов</a
             >
           </dt>

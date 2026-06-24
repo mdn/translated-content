@@ -11,4 +11,4 @@ l10n:
 
 ## Véase también
 
-- [Compatibilidad del navegador para manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [Compatibilidad del navegador para manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json)

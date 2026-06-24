@@ -1,11 +1,12 @@
 ---
-title: <input type="button">
+title: Valeur d'attribut HTML `<input type="button">`
+short-title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
-Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement {{DOMxRef("Element/click_event", "click")}}).
+Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page avec un gestionnaire d'évènement (la plupart du temps pour l'évènement {{DOMxRef("Element/click_event", "click")}}).
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
@@ -103,15 +104,15 @@ function updateButton() {
 }
 ```
 
-Dans ce script, on récupère une référence à l'objet {{DOMxRef("HTMLInputElement")}} qui représente l'élément `<input>` du DOM et on stocke cette référence dans la variable `btn`. {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} pour ensuite lui rattacher une fonction qui sera utilisée lorsque l'évènement [`click`](/fr/docs/Web/API/Element/click_event) se produira sur le bouton.
+Dans ce script, on récupère une référence à l'objet {{DOMxRef("HTMLInputElement")}} qui représente l'élément `<input>` du DOM et on stocke cette référence dans la variable `btn`. {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} pour ensuite lui rattacher une fonction qui est utilisée lorsque l'évènement [`click`](/fr/docs/Web/API/Element/click_event) se produit sur le bouton.
 
 {{EmbedLiveSample("Un bouton simple", 650, 100)}}
 
 ### Ajouter des raccourcis clavier
 
-Les raccourcis clavier permettent à un·e utilisateur·ice de déclencher une action grâce à une touche ou grâce à une combinaison de touches du clavier. Pour ajouter un raccourci clavier déclenchant le bouton, on pourra ajouter l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes/accesskey) (qu'on peut d'ailleurs utiliser pour les autres éléments {{HTMLElement("input")}}).
+Les raccourcis clavier permettent à un·e utilisateur·ice de déclencher une action grâce à une touche ou grâce à une combinaison de touches du clavier. Pour ajouter un raccourci clavier déclenchant le bouton, on peut ajouter l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes/accesskey) (qu'on peut d'ailleurs utiliser pour les autres éléments {{HTMLElement("input")}}).
 
-Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes/accesskey) pour la liste de ces touches).
+Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faut appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes/accesskey) pour la liste de ces touches).
 
 ```html
 <form>
@@ -140,7 +141,7 @@ function updateButton() {
 {{EmbedLiveSample("Ajouter des raccourcis clavier", 650, 100)}}
 
 > [!NOTE]
-> Un problème de cet exemple est que l'utilisateur·ice ne saura pas quelle touche utiliser comme raccourci&nbsp;! Sur un site réel, il faudrait fournir cette information d'une manière qui n'interfère pas avec la présentation du site (par exemple en fournissant un lien facilement accessible qui pointe vers une page listant les raccourcis du site).
+> Un problème de cet exemple est que l'utilisateur·ice ne sait pas quelle touche utiliser comme raccourci&nbsp;! Sur un site réel, il faut fournir cette information d'une manière qui n'interfère pas avec la présentation du site (par exemple en fournissant un lien facilement accessible qui pointe vers une page listant les raccourcis du site).
 
 ### Désactiver et activer un bouton
 
@@ -367,10 +368,6 @@ draw();
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>Aucune</td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

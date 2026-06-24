@@ -11,4 +11,4 @@ No CSS, um seletor do tipo **pseudo-classe** referencia um elemento dependendo d
 
 ### Referencia técnica
 
-- [Documentação de pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes)
+- [Documentação de pseudo-class](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

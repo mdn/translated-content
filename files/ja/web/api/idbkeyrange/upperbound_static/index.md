@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-**`upperBound()`** は {{domxref("IDBKeyRange")}} インターフェイスのメソッドはで、上限のみを持つ新しいキーの範囲を生成します。既定では、端点を含む「閉」です。
+**`upperBound()`** は {{domxref("IDBKeyRange")}} インターフェイスのメソッドで、上限のみを持つ新しいキーの範囲を生成します。既定では、端点を含む「閉」です。
 
 ## 構文
 

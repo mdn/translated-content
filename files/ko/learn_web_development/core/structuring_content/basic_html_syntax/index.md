@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 original_slug: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 이 문서는 HTML 의 기본적인 내용에 대한 글입니다. 이 글에서는 HTML 에 관련된 용어들(Element, Attribute ..)의 정의에 대해 설명할 것입니다. 또한 HTML이 무엇으로 이루어져 있는지(구성요소), 어떻게 구성되어 있는지(구조), 중요한 특징은 무엇인지에 대해 설명할 것입니다. 독자의 흥미를 위해 간단한 HTML 을 작성하는 과정도 포함되어 있습니다.
 
@@ -756,4 +756,4 @@ HTML 기본 사항을 둘러 보셨기를 바랍니다.
 > [!NOTE]
 > HTML에 대해 더 배우기 시작하면 CSS (Cascading Style Sheets)의 기본 사항을 배우십시오. [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)는 웹 페이지의 스타일을 지정하는데 사용되는 언어입니다. (예 : 글꼴 또는 색상 변경 또는 페이지 레이아웃 변경) HTML과 CSS는 곧 발견 될 것입니다.
 
-{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "conflicting/Learn_web_development/Core/Structuring_content")}}

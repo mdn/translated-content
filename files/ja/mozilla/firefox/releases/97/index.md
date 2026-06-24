@@ -34,7 +34,7 @@ slug: Mozilla/Firefox/Releases/97
 ### SVG
 
 - SVG で描画するパスを定義するために使用する {{SVGAttr('d')}} 属性を、CSS でプロパティとして使用できるようになりました。
-  これは [path()](</ja/docs/Web/CSS/path()>) または `none` の値を受け入れます。(詳しくは [Firefox バグ 1744599](https://bugzil.la/1744599) をご覧ください)
+  これは [path()](/ja/docs/Web/CSS/Reference/Values/basic-shape/path) または `none` の値を受け入れます。(詳しくは [Firefox バグ 1744599](https://bugzil.la/1744599) をご覧ください)
 
 #### 廃止
 

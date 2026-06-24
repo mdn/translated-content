@@ -1,8 +1,9 @@
 ---
-title: transition
+title: Propriété CSS `transition`
+short-title: transition
 slug: Web/CSS/Reference/Properties/transition
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`transition`** permet de définir les propriétés {{CSSxRef("transition-property")}}, {{CSSxRef("transition-duration")}}, {{CSSxRef("transition-timing-function")}}, {{CSSxRef("transition-delay")}} et {{CSSxRef("transition-behavior")}}.

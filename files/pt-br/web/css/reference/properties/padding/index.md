@@ -119,4 +119,4 @@ h3 {
 
 ## Veja também
 
-- [CSS Box Model](/pt-BR/docs/CSS/box_model)
+- [CSS Box Model](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction)

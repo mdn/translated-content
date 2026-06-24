@@ -25,7 +25,7 @@ l10n:
 ## ガイド
 
 - [学習: 表のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)
-  - : HTML 表の外観を改善するためのガイドで、表のスタイル設定手法にを扱います。
+  - : HTML 表の外観を改善するためのガイドで、表のスタイル設定手法を扱います。
 
 - [学習: HTML の表の基本](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : HTML の表の概要で、行とセル、見出し、および複数の列と行にまたがるセルを作成するための HTML を含みます。

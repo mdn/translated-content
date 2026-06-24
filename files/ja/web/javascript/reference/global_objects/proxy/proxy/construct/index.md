@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-**`handler.construct()`** メソッドは、オブジェクトの `[[Construct]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/new", "new")}} 演算子などの操作で使用されます。結果としてのプロキシーオブジェクトが new 演算子を使用できるようにするためには、プロキシーを初期化するために使用されるターゲット自体が有効なコンストラクターである必要があります。
+**`handler.construct()`** メソッドは、オブジェクトの `[[Construct]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("new")}} 演算子などの操作で使用されます。結果としてのプロキシーオブジェクトが new 演算子を使用できるようにするためには、プロキシーを初期化するために使用されるターゲット自体が有効なコンストラクターである必要があります。
 
 {{InteractiveExample("JavaScript デモ: handler.construct()", "taller")}}
 
@@ -76,7 +76,7 @@ new Proxy(target, {
 
 ### new 演算子のトラップ
 
-次のコードでは {{jsxref("Operators/new", "new")}} 操作をトラップします。
+次のコードでは {{jsxref("new")}} 操作をトラップします。
 
 ```js
 const p = new Proxy(function () {}, {
@@ -102,7 +102,7 @@ const p = new Proxy(function () {}, {
 new p(); // TypeError is thrown
 ```
 
-次のコードはプロキシーを正しく初期化していません。プロキシーの `target` の初期化は、それ自身が {{jsxref("Operators/new", "new")}} 演算子に有効なコンストラクターでなければなりません。
+次のコードはプロキシーを正しく初期化していません。プロキシーの `target` の初期化は、それ自身が {{jsxref("new")}} 演算子に有効なコンストラクターでなければなりません。
 
 ```js example-bad
 const p = new Proxy(
@@ -129,5 +129,5 @@ new p(); // TypeError is thrown, "p" is not a constructor
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
 - {{jsxref("Reflect.construct()")}}

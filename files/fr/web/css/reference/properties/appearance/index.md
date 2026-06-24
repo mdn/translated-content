@@ -1,8 +1,9 @@
 ---
-title: appearance
+title: Propriété CSS `appearance`
+short-title: appearance
 slug: Web/CSS/Reference/Properties/appearance
 l10n:
-  sourceCommit: 76936e1d9ff271ac59307a0f858d0d7b57f3866a
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`appearance`** définit l'apparence rendue des éléments de module d'interface utilisateur remplacés, tels que les contrôles de formulaire. Le plus souvent, ces éléments reçoivent une mise en forme native, spécifique à la plateforme, basée sur le thème du système d'exploitation, ou une apparence primitive avec des styles pouvant être remplacés à l'aide de CSS.

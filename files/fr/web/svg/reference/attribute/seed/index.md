@@ -24,7 +24,7 @@ Si l'attribut n'est pas spécifié, alors le palier sera fixé à **0**.
       <th scope="row">Valeur</th>
       <td>
         <a
-          href="/fr/docs/SVG/Content_type#Number"
+          href="/fr/docs/Web/SVG#Number"
           >&#x3C;number></a
         >
       </td>
