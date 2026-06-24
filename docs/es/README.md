@@ -14,6 +14,7 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 - [Traducir un documento](#traducir-un-documento)
 - [Mantener el `l10n.sourceCommit` al día](#mantener-el-l10nsourcecommit-al-día)
 - [Convención de traducciones](#convención-de-traducciones)
+  - [Estilo de escritura](#estilo-de-escritura)
 - [Arreglar "flaws" (defectos)](#arreglar-flaws-defectos)
 - [Charla con nosotros](#charla-con-nosotros)
 - [Enlaces relevantes](#enlaces-relevantes)
@@ -128,6 +129,11 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 
 4. Cambia los enlaces internos de `/en-US/` a `/es/`.
 
+   **¿Por qué `/es/` aunque la página no exista en español?**
+   MDN renderiza el contenido en inglés como respaldo (_fallback_) para las secciones o páginas que aún no han sido traducidas, pero siempre bajo la URL `/es/`. Esto significa que un enlace como `/es/docs/Web/API/Fetch_API` funciona correctamente aunque la página no tenga traducción completa: el lector verá el contenido en inglés en el contexto de la interfaz en español.
+
+   Por eso la regla es: **siempre usar `/es/` para los enlaces internos de MDN**. Si el apartado al que enlazas no existe en español, el sistema lo muestra en inglés de forma transparente. No es necesario conservar `/en-US/` para "que funcione"; de hecho, un enlace `/en-US/` lleva al lector fuera del contexto de su idioma preferido.
+
 5. Revisa el _front-matter_ YAML (`title`, `slug`, `l10n.sourceCommit`) como se describe en la siguiente sección.
 
 ---
@@ -237,6 +243,38 @@ Cuando en inglés aparece `{{Glossary("TLD")}}` y el término natural en españo
 ```
 
 > Excepción: si la frase en español ya explica el término justo después del macro (por ejemplo, `{{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel`), deja el macro con un solo argumento para evitar duplicar el texto renderizado.
+
+### Estilo de escritura
+
+#### Tuteo (tú) en lugar de usted
+
+Usa la forma de **tú** (tuteo) cuando te dirijas directamente al lector. MDN español adoptó el tuteo como convención moderna: "abre el archivo", "asegúrate de incluir", "puedes omitir". Evita el ustedeo ("abra el archivo", "asegúrese de incluir").
+
+#### Bloques de aviso GFM
+
+Los bloques de aviso con sintaxis GFM deben conservar la palabra clave **en inglés**. Son: `[!NOTE]`, `[!WARNING]`, `[!CALLOUT]`. Rari/Yari solo los renderiza como cajas con estilo si están escritos exactamente así. Si los traduces (`[!Nota]`, `[!Advertencia]`), se muestran como una cita simple sin formato especial.
+
+```markdown
+<!-- Correcto -->
+
+> [!NOTE]
+> Este comportamiento cambió en Firefox 130.
+
+<!-- Incorrecto — se renderiza como blockquote sin estilos -->
+
+> [!Nota]
+> Este comportamiento cambió en Firefox 130.
+```
+
+El texto **dentro** del bloque sí debe ir en español.
+
+#### Nombres de macros (mayúsculas importan)
+
+Rari/Yari distingue mayúsculas en los nombres de macro. Usa exactamente la capitalización del archivo en inglés:
+
+- `{{Deprecated_Header}}`, no `{{deprecated_header}}`
+- `{{SeeCompatTable}}`, no `{{seecompattable}}`
+- `{{Non-standard_Header}}`, no `{{non-standard_header}}`
 
 ---
 
