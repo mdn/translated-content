@@ -42,7 +42,7 @@ Las [Guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a construir con HTML en
 - [Usando formatos de fechas y horas en HTML](/es/docs/Web/HTML/Guides/Date_and_time_formats)
   - : Ciertos elementos usan valores de fechas y/u horas. Esta guía describe los formatos de las cadenas de caracteres que especifican estos valores.
 - [Usando microdatos en HTML](/es/docs/Web/HTML/Guides/Microdata)
-  - : Los microdatos son utilizados para anidar metadatos dentro de contenido existente en las páginas web. Los motores de busqueda y rastreadores web pueden extraer y procesar microdatos para proveer una experiencia de navegación más enriquecedora.
+  - : Los microdatos son utilizados para anidar metadatos dentro de contenido existente en las páginas web. Los motores de búsqueda y rastreadores web pueden extraer y procesar microdatos para proveer una experiencia de navegación más enriquecedora.
 - [Usando microformatos en HTML](/es/docs/Web/HTML/Guides/Microformats)
   - : Los microformatos son estándares utilizados para fijar datos semánticos y estructurados en HTML para ser usados por aplicaciones web sociales, motores de búsqueda, agregadores y otras herramientas.
 - [Comprende los modos quirk y estándar](/es/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
