@@ -18,6 +18,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 - [IndexedDB](/ja/docs/Web/API/IndexedDB_API)
 - [ウィンドウ制御 API](/ja/docs/Web/API/Window_Management_API)
 - [ウィンドウ制御オーバーレイ API](/ja/docs/Web/API/Window_Controls_Overlay_API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
 - [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
 - [ウェブ共有 API](/ja/docs/Web/API/Web_Share_API)
 - [ウェブシリアル API](/ja/docs/Web/API/Web_Serial_API)
@@ -56,6 +57,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 ### ハ
 
+- [バイブレーション API](/ja/docs/Web/API/Vibration_API)
 - [バックグラウンドタスク API](/ja/docs/Web/API/Background_Tasks_API)
 - [バックグラウンド同期 API](/ja/docs/Web/API/Background_Synchronization_API)
 - [バックグラウンドフェッチ API](/ja/docs/Web/API/Background_Fetch_API)

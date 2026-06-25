@@ -42,7 +42,7 @@ El [área de aprendizaje de accesibilidad](/es/docs/Learn_web_development/Core/A
   - : Accessible Rich Internet Applications (ARIA) es una colección de atributos que definen como realizar contenido y aplicaciónes web (especialmente las desarrolladas con Javascript) más accesibles para las personas con discapacidades.
 - [Lista de comprobación de accesibilidad móvil](/es/docs/Web/Accessibility/Mobile_accessibility_checklist)
   - : Este artículo proporciona una lista de comprobación concisa de los requisitos de accesibilidad para los desarrolladores de aplicaciones móviles.
-- [Accesibilidad cognitiva](/es/docs/Web/Accessibility/Cognitive_accessibility)
+- [Accesibilidad cognitiva](/es/docs/Web/Accessibility/Guides/Cognitive_accessibility)
   - : Este artículo explica cómo asegurarse de que el contenido web que está creando sea accesible para personas con discapacidades cognitivas.
 - [Accesibilidad para trastornos convulsivos](/es/docs/Web/Accessibility/Seizure_disorders)
   - : Algunos tipos de contenido web visual pueden provocar convulsiones en personas con ciertos trastornos cerebrales. Este artículo te ayuda a comprender los tipos de contenido que pueden ser problemáticos y a encontrar herramientas y estrategias para ayudarte a evitarlos.
