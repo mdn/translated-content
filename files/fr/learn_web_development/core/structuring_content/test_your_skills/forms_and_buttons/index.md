@@ -13,7 +13,7 @@ L'objectif de ce test de compétences est de vous aider à évaluer si vous comp
 > [!NOTE]
 > Pour obtenir de l'aide, consultez notre guide d'utilisation [Testez vos compétences](/fr/docs/Learn_web_development#testez_vos_compétences). Vous pouvez également nous contacter par l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
 
-## Formulaires et boutons 1
+## Formulaires et boutons n°1
 
 Cette tâche commence doucement en vous demandant de créer deux éléments `<input>`, pour l'identifiant et le mot de passe d'un·e utilisateur·ice, ainsi qu'un bouton d'envoi.
 
@@ -86,7 +86,7 @@ Votre code HTML final doit ressembler à ceci&nbsp;:
 
 </details>
 
-## Formulaires et boutons 2
+## Formulaires et boutons n°2
 
 La tâche suivante vous demande de créer des ensembles fonctionnels de cases à cocher et de boutons radio, à partir des étiquettes de texte fournies.
 
@@ -190,7 +190,7 @@ Votre code HTML final doit ressembler à ceci&nbsp;:
 
 </details>
 
-## Formulaires et boutons 3
+## Formulaires et boutons n°3
 
 Dans cette tâche, vous allez explorer des types d'entrée plus spécifiques. Nous voulons que vous créiez des entrées appropriées pour qu'un·e utilisateur·ice puisse mettre à jour ses informations&nbsp;:
 
@@ -266,7 +266,7 @@ Votre code HTML final doit ressembler à ceci&nbsp;:
 
 </details>
 
-## Formulaires et boutons 4
+## Formulaires et boutons n°4
 
 Maintenant, il est temps d'essayer de mettre en place un menu déroulant, pour permettre à un·e utilisateur·ice de choisir son plat préféré parmi les options fournies.
 
@@ -335,7 +335,7 @@ Votre code HTML final doit ressembler à ceci&nbsp;:
 
 </details>
 
-## Formulaires et boutons 5
+## Formulaires et boutons n°5
 
 Dans cette tâche, nous voulons que vous structuriez les fonctionnalités de formulaire fournies.
 
@@ -409,7 +409,7 @@ Votre code HTML final doit ressembler à ceci&nbsp;:
 
 </details>
 
-## Formulaires et boutons 6
+## Formulaires et boutons n°6
 
 Dans cette tâche, nous vous fournissons un formulaire simple de demande de support, et nous voulons que vous y ajoutiez certaines fonctionnalités de validation. Cette tâche nécessite des connaissances que nous n'enseignons pas dans l'article «&nbsp;Formulaires et boutons en HTML&nbsp;», vous devez donc peut-être faire des recherches ailleurs.
 

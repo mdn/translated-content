@@ -1,9 +1,9 @@
 ---
-title: :modal
+title: CSS `:modal` 擬似クラス
+short-title: :modal
 slug: Web/CSS/Reference/Selectors/:modal
-original_slug: Web/CSS/:modal
 l10n:
-  sourceCommit: 632289fcc10e926d166e1b49e5ba3505de182856
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:modal`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、操作が解除されるまで、それ以外の要素とのすべての操作を除外する状態にある要素と一致します。 `:modal` 擬似クラスを使用して、複数の要素を同時に選択することができますが、アクティブになり、入力を受け付けることができるのはそのうちの 1 つのみです。
@@ -30,13 +30,13 @@ p {
 ```
 
 ```html interactive-example
-<p>Would you like to see a new random number?</p>
-<button id="showNumber">Show me</button>
+<p>新しい乱数を見たいですか？</p>
+<button id="showNumber">見せて</button>
 
 <dialog id="favDialog">
   <form method="dialog">
-    <p>Lucky number is: <strong id="number"></strong></p>
-    <button>Close dialog</button>
+    <p>ラッキーナンバー: <strong id="number"></strong></p>
+    <button>ダイアログを閉じる</button>
   </form>
 </dialog>
 ```
@@ -65,7 +65,7 @@ showNumber.addEventListener("click", () => {
 ページの他の部分をユーザーが操作できないようにし、 `:modal` 擬似クラスによって選択される要素の例としては、例えば以下のようなものが含まれます。
 
 - [`dialog`](/ja/docs/Web/HTML/Reference/Elements/dialog) 要素が `showModal()` API で開かれたとき。
-- `requestFullscreen()` API で開かれたときに [`:fullscreen`](/ja/docs/Web/CSS/Reference/Selectors/:fullscreen) 擬似クラスで選択される要素。
+- `requestFullscreen()` API で開かれたときに {{cssxref(":fullscreen")}} 擬似クラスで選択される要素。
 
 ## 例
 

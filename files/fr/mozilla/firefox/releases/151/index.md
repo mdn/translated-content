@@ -3,7 +3,7 @@ title: Firefox 151 note de version pour les développeurs
 short-title: Firefox 151
 slug: Mozilla/Firefox/Releases/151
 l10n:
-  sourceCommit: d9835ea7d100660d8d845f358277d5b25b825a20
+  sourceCommit: 681ee4beb90b7e0d001f8938df41d5af0f602fe7
 ---
 
 Cet article présente les informations concernant les changements de Firefox 151 qui concernent les développeur·euse·s.
@@ -78,8 +78,8 @@ Pas de changements notables.
 ## Changements pour les développeur·euse·s d'extensions
 
 - L'évènement {{WebExtAPIRef("webRequest.onErrorOccurred")}} se rabat désormais sur `NS_ERROR_NET_ON_RECEIVING_FROM` au lieu d'une chaîne de caractères commençant par `NS_ERROR_NET_ON_` ou `NS_ERROR_NET_UNKNOWN_`. Ce changement fait partie des améliorations de performance et de fiabilité de l'évènement `onErrorOccurred`. ([bogue Firefox 1881986 <sup>(angl.)</sup>](https://bugzil.la/1881986))
-- {{WebExtAPIRef("tabs.group()")}} et {{WebExtAPIRef("tabs.ungroup()")}} ajoutent et suppriment désormais correctement une vue fractionnée lorsqu'un appel inclut l'un des onglets de la vue fractionnée. Auparavant, un appel échouait ou séparait la vue fractionnée. ([bogue Firefox 2029099 <sup>(angl.)</sup>](https://bugzil.la/2029099))
-- {{WebExtAPIRef("tabs.move()")}} déplace désormais correctement une vue fractionnée vers la droite lorsqu'un appel inclut l'un des onglets de la vue fractionnée. Auparavant, un appel ne déplaçait une vue fractionnée que vers la gauche ou à la fin de la liste des onglets. ([bogue Firefox 2027855 <sup>(angl.)</sup>](https://bugzil.la/2027855))
+- {{WebExtAPIRef("tabs.group()")}} et {{WebExtAPIRef("tabs.ungroup()")}} ajoutent et suppriment désormais correctement une vue scindée lorsqu'un appel inclut l'un des onglets de la vue scindée. Auparavant, un appel échouait ou séparait la vue scindée. ([bogue Firefox 2029099 <sup>(angl.)</sup>](https://bugzil.la/2029099))
+- {{WebExtAPIRef("tabs.move()")}} déplace désormais correctement une vue scindée vers la droite lorsqu'un appel inclut l'un des onglets de la vue scindée. Auparavant, un appel ne déplaçait une vue scindée que vers la gauche ou à la fin de la liste des onglets. ([bogue Firefox 2027855 <sup>(angl.)</sup>](https://bugzil.la/2027855))
 
 ## Fonctionnalités web expérimentales
 
