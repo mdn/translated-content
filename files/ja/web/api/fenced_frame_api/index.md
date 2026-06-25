@@ -2,7 +2,7 @@
 title: フェンスフレーム API
 slug: Web/API/Fenced_frame_API
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 0c906f7f464d8ff632baf8d25fa63eed3f03b632
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Fenced Frame API")}}
@@ -19,7 +19,7 @@ l10n:
 
 埋め込み先の文書は、スクリプトを使用して `<iframe>` から様々な情報を読み取ることができます。例えば、埋め込まれた URL が [URL 引数](/ja/docs/Web/URI/Reference/Query)を含んでいる場合、 `src` プロパティから URL を読み取ることで、重要なトラッキング/フィンガープリントのデータを取得できる可能性があります。 `<iframe>` は埋め込みコンテキストの DOM にもアクセスすることができます。
 
-ほとんどの現行ブラウザーは、クッキーのデータが追跡のために使用できなくなるようにストレージを分割する仕組みに取り組んでいます（例えば、 [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/orphaned/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) や [Firefox State Partitioning](/ja/docs/Web/Privacy/Guides/State_Partitioning) を参照してください）。
+ほとんどの現行ブラウザーは、クッキーのデータが追跡のために使用できなくなるようにストレージを分割する仕組みに取り組んでいます（例えば、[個別区画化された状態を持つクッキー (CHIPS)](/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) や [Firefox State Partitioning](/ja/docs/Web/Privacy/Guides/State_Partitioning) を参照してください）。
 
 `<fencedframe>` 要素は、このパズルのもう一つのピースを解決することを目指しています。形状と機能において、 `<iframe>` ととてもよく似ています。
 
@@ -127,7 +127,7 @@ Supports-Loading-Mode: fenced-frame
 
 ## 登録とローカルテスト
 
-{{domxref("FencedFrameConfig")}} を作成する一部の API 機能、{{domxref("Navigator.runAdAuction()")}}（[保護オーディエンス API](https://privacysandbox.google.com/private-advertising/protected-audience)<sup>(英語)</sup>）や {{domxref("WindowSharedStorage.selectURL()")}} （[共有ストレージ API](/ja/docs/Web/API/Shared_Storage_API)）、{{domxref("Fence.reportEvent()")}} などの機能は、[プライバシーサンドボックス登録プロセス](/ja/docs/orphaned/Web/Privacy/Guides/Privacy_sandbox/Enrollment)にウェブサイトを登録するよう要求されます。これを行わないと、 API 呼び出しはコンソールの警告とともに失敗します。
+{{domxref("FencedFrameConfig")}} を作成する一部の API 機能、{{domxref("Navigator.runAdAuction()")}}（[保護オーディエンス API](https://privacysandbox.google.com/private-advertising/protected-audience)<sup>(英語)</sup>）や {{domxref("WindowSharedStorage.selectURL()")}} （[共有ストレージ API](/ja/docs/Web/API/Shared_Storage_API)）、{{domxref("Fence.reportEvent()")}} などの機能は、[プライバシーサンドボックス登録プロセス](/ja/docs/Web/Privacy/Guides/Privacy_sandbox#登録)にウェブサイトを登録するよう要求されます。これを行わないと、 API 呼び出しはコンソールの警告とともに失敗します。
 
 > [!NOTE]
 > Chrome では、登録しなくてもフレームコードをローカルでテストすることができます。ローカルテストを許可するには、以下の Chrome 開発者フラグを有効にしてください。
