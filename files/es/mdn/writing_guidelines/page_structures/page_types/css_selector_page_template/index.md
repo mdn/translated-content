@@ -5,8 +5,8 @@ l10n:
   sourceCommit: d2fb8cdc9422dd2b68ff23f616d70811729f1fbd
 ---
 
-> **Nota:**
-> _Elimina toda esta nota explicativa antes de publicar_
+> [!NOTE]
+> _Elimina toda esta nota explicativa antes de publicar._
 >
 > ---
 >
@@ -35,20 +35,17 @@ l10n:
 > - **slug**
 >   - : El final de la ruta de la URL después de `https://developer.mozilla.org/en-US/docs/`. Se formatea como `Web/CSS/Reference/Selectors/:name-of-the-selector`.
 >     Por ejemplo, el slug del selector {{cssxref(":hover")}} es `Web/CSS/Reference/Selectors/:hover`.
->
 > - **page-type**
 >   - : La clave `page-type` para propiedades CSS es una de `css-selector`, `css-pseudo-class` o `css-pseudo-element`, dependiendo de si el selector es una pseudo-clase, un pseudo-elemento, un combinador o un selector simple.
->
 > - **status**
 >   - : Indicadores que describen el estado de esta funcionalidad. Es un arreglo que puede contener uno o más de los siguientes: `experimental`, `deprecated`, `non-standard`. Esta clave no debe establecerse manualmente: se define automáticamente según los valores en los datos de compatibilidad de navegadores para la funcionalidad. Consulta ["Cómo se agregan o actualizan los estados de funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
->
->   * : Reemplaza el valor de marcador de posición <code>css.selectors.NameOfTheSelector</code> con la cadena de consulta del selector en el repositorio de datos de compatibilidad de navegadores.
+>   - : Reemplaza el valor de marcador de posición <code>css.selectors.NameOfTheSelector</code> con la cadena de consulta del selector en el repositorio de datos de compatibilidad de navegadores.
 >     La cadena de herramientas utiliza automáticamente esta clave para completar las secciones de compatibilidad y especificaciones (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}` en dichas secciones, respectivamente).
 >
 >     Ten en cuenta que puede que primero necesites crear o actualizar una entrada para el selector y su especificación en nuestro repositorio de datos de compatibilidad de navegadores.
 >     Consulta nuestra guía sobre cómo hacerlo.
 >
->   * : Esto es `cssref` para todas las páginas de guía y referencia de CSS.
+>   - : Esto es `cssref` para todas las páginas de guía y referencia de CSS.
 >     Consulta "Estructuras de página: Barras laterales" para más detalles.
 >
 > ---
@@ -58,7 +55,7 @@ l10n:
 > Varias macros aparecen en la parte superior de la sección de contenido inmediatamente después del front matter de la página.
 > Estas macros se agregan automáticamente mediante herramientas, por lo que debes evitar agregarlas o eliminarlas:
 >
-> * `\{{SeeCompatTable}}` — genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es experimental.
+> - `\{{SeeCompatTable}}` — genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es experimental.
 >   Si es experimental y la tecnología está oculta detrás de una preferencia en Firefox, también debes completar una entrada para ella en la página de funcionalidades experimentales de Firefox.
 > - `\{{Deprecated_Header}}` — genera un banner de **Obsoleto** que indica que el uso de la tecnología está desaconsejado.
 > - `\{{Non-standard_Header}}` — genera un banner de **No estándar** que indica que la funcionalidad no forma parte de ninguna especificación.
@@ -150,7 +147,7 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ## Véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con el selector actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+Incluye enlaces a páginas de referencia y guías relacionadas con el selector actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#seccion_vease_tambien) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2
