@@ -8,7 +8,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 
-接下来，我们将关注无障碍工具，介绍可用于解决无障碍问题的各类工具，并帮助你了解残障人士为方便浏览网页所使用的辅助技术。在后续文章中，将使用本文介绍的这些工具。
+接下来，我们将关注无障碍工具，介绍可用于解决无障碍问题的各类工具，并帮助你了解残障人士为方便浏览网页所使用的**辅助技术**。在后续文章中，将使用本文介绍的这些工具。
 
 <table>
   <tbody>
@@ -16,7 +16,7 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         熟悉 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a> 和 <a
-        href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 语言；理解<a
+        href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 语言，理解<a
           href="/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility"
           >基本的无障碍概念</a
         >。
@@ -46,7 +46,7 @@ l10n:
 
 要测试源代码顺序，你可以关闭网站的 CSS，看看在没有 CSS 的情况下内容是否易于理解。你可以手动从代码中移除 CSS 来实现这一点，但最简单的方法是使用浏览器功能，例如：
 
-- Firefox：从主菜单中选择 _“视图” > “页面样式” > “无样式”_。
+- Firefox：从主菜单中选择*视图 > 页面样式 > 无样式*。
 - Safari：[打开浏览器开发者工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#如何在浏览器中打开开发者工具)，点击开发者工具面板左上角附近的“设备设置”按钮（形状像一台电脑显示器），然后在弹出的面板中勾选“禁用 CSS”复选框。
 - Chrome/Edge：安装 [Web Developer Toolbar](https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm) 扩展程序，然后重启浏览器。点击扩展程序菜单中现已出现的“Web Developer”齿轮图标，然后选择 _CSS > 禁用所有样式_。
 
