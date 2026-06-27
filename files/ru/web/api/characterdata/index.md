@@ -14,7 +14,7 @@ slug: Web/API/CharacterData
 _Наследует свойства родителя, {{domxref("Node")}}, реализуется с помощью {{domxref("ChildNode")}} и {{domxref("NonDocumentTypeChildNode")}}интерфейсов._
 
 - {{domxref("CharacterData.data")}}
-  - : - это {{domxref("DOMString")}}, представляющая(ий) текстовые данные, которые содержит этот объект (DOMString).
+  - : - это {{jsxref("String")}}, представляющая(ий) текстовые данные, которые содержит этот объект (DOMString).
 - {{domxref("CharacterData.length")}} {{readonlyInline}}
   - : Возвращает an `unsigned long` и отображает размер строки, содержащейся в `CharacterData.data`.
 - {{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}
@@ -27,17 +27,17 @@ _Наследует свойства родителя, {{domxref("Node")}}, ре
 *Наследует методы родителя, {{domxref("Node")}}, и реализует(ся) (через) ({{domxref("ChildNode")}} *и {{domxref("NonDocumentTypeChildNode")}}интерфейсы*.*
 
 - {{domxref("CharacterData.appendData()")}}
-  - : Добавляет указанную {{domxref("DOMString")}} к строке `CharacterData.data`; после выполненияданные содержат объединённый(элемент) {{domxref("DOMString")}}.
+  - : Добавляет указанную {{jsxref("String")}} к строке `CharacterData.data`; после выполненияданные содержат объединённый(элемент) {{jsxref("String")}}.
 - {{domxref("CharacterData.deleteData()")}}
-  - : Удаляет указанное количество символов, начиная с указанного отступа, из строки `CharacterData.data`; после выполнения метода, данные(`data)` содержат урезанный {{domxref("DOMString")}}.
+  - : Удаляет указанное количество символов, начиная с указанного отступа, из строки `CharacterData.data`; после выполнения метода, данные(`data)` содержат урезанный {{jsxref("String")}}.
 - {{domxref("CharacterData.insertData()")}}
-  - : Inserts the specified characters, at the specified offset, in the `CharacterData.data` string; when this method returns, `data` contains the modified {{domxref("DOMString")}}.
+  - : Inserts the specified characters, at the specified offset, in the `CharacterData.data` string; when this method returns, `data` contains the modified {{jsxref("String")}}.
 - {{domxref("ChildNode.remove()")}} {{experimental_inline}}
   - : Удаляет объект из its parent children списка.
 - {{domxref("CharacterData.replaceData()")}}
-  - : Заменяет указанное количество символов, начиная с указанного отступа, с указанным {{domxref("DOMString")}}; после выполнения метода, данные(`data)` содержат изменений {{domxref("DOMString")}}.
+  - : Заменяет указанное количество символов, начиная с указанного отступа, с указанным {{jsxref("String")}}; после выполнения метода, данные(`data)` содержат изменений {{jsxref("String")}}.
 - {{domxref("CharacterData.substringData()")}}
-  - : Возвращает {{domxref("DOMString")}}, содержащую(ий) часть `CharacterData.data` указанной длины и начиная с указанного отступа.
+  - : Возвращает {{jsxref("String")}}, содержащую(ий) часть `CharacterData.data` указанной длины и начиная с указанного отступа.
 
 ## Спецификации
 
