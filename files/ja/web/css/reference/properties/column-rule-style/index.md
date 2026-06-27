@@ -1,8 +1,9 @@
 ---
-title: column-rule-style
+title: CSS `column-rule-style` プロパティ
+short-title: column-rule-style
 slug: Web/CSS/Reference/Properties/column-rule-style
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`column-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段の間に引かれる線（段間罫）のスタイルを設定します。

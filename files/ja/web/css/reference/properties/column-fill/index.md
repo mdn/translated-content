@@ -1,8 +1,9 @@
 ---
-title: column-fill
+title: CSS `column-fill` プロパティ
+short-title: column-fill
 slug: Web/CSS/Reference/Properties/column-fill
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`column-fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで要素のコンテンツが複数の段に分割されるとき、どのようにバランスを取るのかを制御します。

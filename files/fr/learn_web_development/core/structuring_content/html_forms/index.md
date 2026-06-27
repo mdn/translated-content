@@ -10,7 +10,7 @@ l10n:
 
 Les formulaires et les boutons HTML sont des outils puissants pour interagir avec les utilisateur·ice·s d'un site web. Le plus souvent, ils fournissent aux utilisateur·ice·s des contrôles pour manipuler une interface utilisateur (UI) ou saisir des données lorsque c'est nécessaire.
 
-Dans cet article, nous proposons une introduction aux bases des formulaires et des boutons. Il y a beaucoup plus à savoir — de nombreux types d'entrée et fonctionnalités de formulaire ne sont pas mentionnés — mais cet article vous donne une base solide pour la plupart des cas. Vous pouvez apprendre les utilisations avancées ou spécialisées au fur et à mesure de vos besoins dans le cadre de l'apprentissage constant que vous ferez tout au long de votre carrière.
+Dans cet article, nous proposons une introduction aux bases des formulaires et des boutons. Il y a beaucoup plus à savoir — de nombreux types d'entrée et fonctionnalités de formulaire ne sont pas mentionnés — mais cet article vous donne une base solide pour la plupart des cas. Vous pouvez apprendre les utilisations avancées ou spécialisées au fur et à mesure de vos besoins dans le cadre de l'apprentissage constant que vous faites tout au long de votre carrière.
 
 <table>
   <tbody>

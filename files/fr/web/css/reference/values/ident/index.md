@@ -3,10 +3,10 @@ title: Type CSS `<ident>`
 short-title: <ident>
 slug: Web/CSS/Reference/Values/ident
 l10n:
-  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
+  sourceCommit: cad9096502d2a74b34a67377bbb0ac88fcfa58c2
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<ident>`** désigne une chaîne de caractères arbitraire utilisée comme {{Glossary("identifier", "identifiant")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<ident>`** désigne une chaîne de caractères arbitraire sans guillemets utilisée comme {{Glossary("identifier", "identifiant")}}.
 
 ## Syntaxe
 
@@ -21,7 +21,7 @@ Un identifiant CSS se compose d'un ou plusieurs caractères, qui peuvent être&n
 
 De plus, un identifiant ne doit pas commencer par un chiffre non échappé, ni par un tiret non échappé suivi d'un chiffre non échappé.
 
-Notez que `id1`, `Id1`, `iD1` et `ID1` sont tous des identifiants différents car ils sont [sensibles à la casse](https://fr.wikipedia.org/wiki/Sensibilit%C3%A9_%C3%A0_la_casse). En revanche, comme il existe plusieurs façons d'échapper un caractère, `toto\?` et `toto\3F` sont le même identifiant.
+Notez que `id1`, `Id1`, `iD1` et `ID1` sont tous des identifiants différents, car ils sont [sensibles à la casse](https://fr.wikipedia.org/wiki/Sensibilit%C3%A9_%C3%A0_la_casse). En revanche, comme il existe plusieurs façons d'échapper un caractère, `toto\?` et `toto\3F` sont le même identifiant.
 
 ### Échappement de caractères
 
@@ -32,7 +32,7 @@ Vous pouvez également échapper n'importe quel caractère avec une barre obliqu
 - Placez un espace ou un autre caractère d'espacement après le point de code Unicode.
 - Fournissez le point de code Unicode complet à six chiffres du caractère à échapper.
 
-Par exemple, la chaîne `&123` peut être échappée en `\26 123` (avec un espace) ou `\000026123` (avec le point de code Unicode à six chiffres pour `&`) afin de s'assurer que `123` n'est pas considéré comme faisant partie du motif d'échappement.
+Par exemple, la chaîne de caractères `&123` peut être échappée en `\26 123` (avec un espace) ou `\000026123` (avec le point de code Unicode à six chiffres pour `&`) afin de s'assurer que `123` n'est pas considéré comme faisant partie du motif d'échappement.
 
 ## Exemples
 
@@ -50,14 +50,14 @@ scooby\.doo   /* Un point correctement échappé */
 🔥123         /* Un caractère non-ASCII suivi de chiffres */
 ```
 
-### Invalid identifiers
+### Identifiants invalides
 
 ```plain example-bad
 34rem       /* Ne doit pas commencer par un chiffre décimal */
 -12rad      /* Ne doit pas commencer par un tiret suivi d'un chiffre décimal */
 scooby.doo  /* Les caractères ASCII autres qu'alphanumériques doivent être échappés */
-'scoobyDoo' /* Interprété comme une chaîne */
-"scoobyDoo" /* Interprété comme une chaîne */
+'scoobyDoo' /* Interprété comme une chaîne de caractères */
+"scoobyDoo" /* Interprété comme une chaîne de caractères */
 ```
 
 ## Spécifications

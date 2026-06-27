@@ -3,7 +3,7 @@ title: Propriété CSS `field-sizing`
 short-title: field-sizing
 slug: Web/CSS/Reference/Properties/field-sizing
 l10n:
-  sourceCommit: ee2ece4eb07c07cae8baf6ab7b2ee748f4644565
+  sourceCommit: cd0d465d5512de499b5da36abc5735c14897af7c
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`field-sizing`** permet de contrôler le comportement de dimensionnement des éléments qui reçoivent une taille préférée par défaut, comme les éléments de contrôle de formulaire. Cette propriété permet de remplacer le comportement de dimensionnement par défaut, afin que les contrôles de formulaire s'ajustent à la taille de leur contenu.
@@ -48,14 +48,14 @@ Plus précisément, `field-sizing` à `content` affecte les éléments suivants&
 - Les contrôles {{HTMLElement("textarea")}}. À noter que les éléments `<textarea>` avec `field-sizing: content` se comportent comme des champs de texte sur une seule ligne, avec les ajouts suivants&nbsp;:
   - Si les éléments `<textarea>` ne peuvent pas grandir à cause d'une contrainte de largeur, ils commencent à grandir en hauteur pour afficher des lignes supplémentaires. Lorsqu'une contrainte de hauteur est atteinte, une barre de défilement apparaît pour permettre de voir tout le contenu.
   - Les attributs [`rows`](/fr/docs/Web/HTML/Reference/Elements/textarea#rows) et [`cols`](/fr/docs/Web/HTML/Reference/Elements/textarea#cols) modifient la taille préférée par défaut d'un `<textarea>`. Par conséquent, `rows`/`cols` n'ont aucun effet sur les éléments `<textarea>` avec `field-sizing: content`.
-- Les contrôles {{HTMLElement("select")}}. Ceux-ci se comportent un peu différemment de ce que l'on pourrait attendre avec `field-sizing: content`. L'effet dépend du type de contrôle `<select>` créé&nbsp;:
+- Les contrôles {{HTMLElement("select")}}. Ceux-ci se comportent un peu différemment de ce que l'on peut attendre avec `field-sizing: content`. L'effet dépend du type de contrôle `<select>` créé&nbsp;:
   - Les menus déroulants classiques changent de largeur pour toujours s'adapter à la valeur de l'option affichée au fur et à mesure que de nouvelles valeurs sont sélectionnées. (Par défaut, la taille du menu déroulant est suffisante pour afficher la valeur de l'option la plus longue.)
   - Les boîtes de liste (`<select>` avec l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/select#multiple) ou [`size`](/fr/docs/Web/HTML/Reference/Elements/select#size)) sont assez grandes pour afficher toutes les options sans avoir besoin de faire défiler. (Par défaut, la boîte déroulante nécessite un défilement pour voir toutes les options.)
   - L'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/select#size) a très peu d'effet sur les éléments `<select>` ayant `field-sizing: content`. Dans ce cas, le navigateur vérifie si `size` vaut `1` pour déterminer si le contrôle `<select>` doit apparaître comme un menu déroulant ou une boîte de liste. Cependant, il affiche toujours toutes les options d'une boîte de liste, même si `size` est inférieur au nombre d'options.
 
 ### Interaction de `field-sizing` avec d'autres réglages de taille
 
-La flexibilité de dimensionnement offerte aux contrôles de formulaire par `field-sizing: content` peut être annulée si vous utilisez d'autres propriétés CSS de dimensionnement. Évitez de définir une {{CSSxRef("width")}} ou une {{CSSxRef("height")}} fixe avec `field-sizing: content`, car cela réimpose une taille fixe au contrôle. Cependant, utiliser des propriétés comme {{CSSxRef("min-width")}} et {{CSSxRef("max-width")}} avec `field-sizing: content` est très efficace car cela permet au contrôle de grandir et de rétrécir avec le texte saisi tout en évitant qu'il ne devienne trop grand ou trop petit.
+La flexibilité de dimensionnement offerte aux contrôles de formulaire par `field-sizing: content` peut être annulée si vous utilisez d'autres propriétés CSS de dimensionnement. Évitez de définir une {{CSSxRef("width")}} ou une {{CSSxRef("height")}} fixe avec `field-sizing: content`, car cela réimpose une taille fixe au contrôle. Cependant, utiliser des propriétés comme {{CSSxRef("min-width")}} et {{CSSxRef("max-width")}} avec `field-sizing: content` est très efficace, car cela permet au contrôle de grandir et de rétrécir avec le texte saisi tout en évitant qu'il ne devienne trop grand ou trop petit.
 
 L'attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength) fait que le contrôle cesse de grandir lorsque la limite maximale de caractères est atteinte.
 
@@ -75,26 +75,31 @@ Cet exemple illustre l'effet de `field-sizing: content` sur les champs de texte 
 
 #### HTML
 
-Le HTML de cet exemple contient trois champs de formulaire, chacun avec un {{HTMLElement("label")}} associé&nbsp;: deux éléments HTML `<input>` de types [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text) et [`email`](/fr/docs/Web/HTML/Reference/Elements/input/email) et un élément HTML {{HTMLElement("textarea")}}.
+Le HTML de cet exemple contient quatre champs de formulaire, chacun avec un {{HTMLElement("label")}} associé&nbsp;: deux éléments HTML `<input>` de types [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text), [`email`](/fr/docs/Web/HTML/Reference/Elements/input/email) et [`tel`](/fr/docs/Web/HTML/Reference/Elements/input/tel) et un élément HTML {{HTMLElement("textarea")}}.
 
 ```html
 <div>
-  <label for="name">Entrer le nom&nbsp;:</label>
-  <input type="text" id="name" maxlength="50" />
+  <label for="name">Entrez un nom&nbsp;:</label>
+  <input type="text" id="name" />
 </div>
 <div>
-  <label for="email">Entrer l'adresse électronique&nbsp;:</label>
-  <input type="email" id="email" maxlength="50" placeholder="exemple a@b.com" />
+  <label for="email">Entrez une adresse électronique&nbsp;:</label>
+  <input type="email" id="email" placeholder="exemple a@b.com" />
 </div>
 <div>
-  <label for="comment">Entrer un commentaire&nbsp;:</label>
+  <label for="tel">Entrez un numéro de téléphone&nbsp;:</label>
+  <input type="tel" id="tel" maxlength="15" />
+</div>
+<div>
+  <label for="comment">Entrez un commentaire&nbsp;:</label>
   <textarea id="comment">Ceci est un commentaire.</textarea>
 </div>
 ```
 
 Remarquez les points suivants concernant le HTML&nbsp;:
 
-- Les deux premiers champs ont un attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength) qui empêche la taille du champ d'augmenter lorsque la limite de caractères est atteinte.
+- Les deux premiers champs n'ont pas de restrictions de longueur définies.
+- Le troisième champ (de type `tel`) a un attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength) défini, ce qui empêche la taille du champ d'augmenter lorsque la limite de caractères est atteinte.
 - Le `<textarea>` grandit dans la direction en ligne jusqu'à atteindre la contrainte {{CSSxRef("min-width")}} (définie dans le code CSS ci-dessous), puis commence à ajouter de nouvelles lignes dans la direction bloc pour contenir les caractères supplémentaires.
 - Le champ `email` a un texte d'exemple (placeholder). Cela fait que le champ est affiché assez grand pour montrer tout le texte d'exemple. Une fois le champ sélectionné et que l'utilisateur·ice commence à saisir, le champ change de taille pour la valeur de `min-width`. Le champ `text`, qui n'a pas de texte d'exemple, s'affiche initialement à `min-width`.
 
@@ -139,11 +144,11 @@ Essayez d'entrer et de supprimer du texte dans les champs ci-dessous pour explor
 
 ### Contrôler l'affichage des éléments `<select>`
 
-Cet exemple illustre l'effet de `field-sizing: content` sur les éléments HTML {{HTMLElement("select")}}, aussi bien pour les menus déroulants que pour les boîtes de liste multiligne.
+Cet exemple illustre l'effet de `field-sizing: content` sur les éléments HTML {{HTMLElement("select")}}, aussi bien pour les menus déroulants que pour les boîtes de liste multi-ligne.
 
 #### HTML
 
-Le HTML contient deux ensembles d'éléments `<select>`&nbsp;: un avec `field-sizing: content` appliqué, et un sans, pour permettre de voir la différence (même si l'effet peut être moins visible que sur les champs de texte). Chaque ensemble inclut un menu déroulant et une boîte de liste multiligne (avec l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/select#multiple)).
+Le HTML contient deux ensembles d'éléments `<select>`&nbsp;: un avec `field-sizing: content` appliqué, et un sans, pour permettre de voir la différence (même si l'effet peut être moins visible que sur les champs de texte). Chaque ensemble inclut un menu déroulant et une boîte de liste multi-ligne (avec l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/select#multiple)).
 
 ```html
 <div class="field-sizing">

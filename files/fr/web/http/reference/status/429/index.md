@@ -2,7 +2,7 @@
 title: 429 Too Many Requests
 slug: Web/HTTP/Reference/Status/429
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: d45b7a7d45dac4a0012c138aba7afedc0f9e570c
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`429 Too Many Requests`** indique que le client a envoyé trop de requêtes dans un laps de temps donné.
@@ -31,7 +31,7 @@ Host: example.com
 ```
 
 Dans cet exemple, la limitation de débit à l'échelle du serveur est active lorsqu'un client dépasse un seuil défini de demandes par minute.
-Une réponse 429 est retournée avec un en-tête {{HTTPHeader("Retry-After")}} qui indique que les requêtes seront à nouveau autorisées pour ce client dans 60 minutes&nbsp;:
+Une réponse 429 est retournée avec un en-tête {{HTTPHeader("Retry-After")}} qui indique que les requêtes sont à nouveau autorisées pour ce client après 3600 secondes (60 minutes)&nbsp;:
 
 ```http
 HTTP/1.1 429 Too Many Requests
@@ -40,7 +40,7 @@ Retry-After: 3600
 
 <html lang="fr">
   <head>
-    <title>Too Many Requests</title>
+    <title>Trop de requêtes</title>
   </head>
   <body>
     <h1>Trop de requêtes</h1>

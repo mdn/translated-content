@@ -3,19 +3,19 @@ title: Règle CSS `@container`
 short-title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 l10n:
-  sourceCommit: 3e5fd6765f891b6fedae20ce1e31e2fdefe55b3c
+  sourceCommit: 2ce88199869b63f8da3bbeafd899400f7579cce9
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries#nommer_les_contextes_de_conteneur).
 Les déclarations de style sont filtrées par une condition et appliquées aux élément à l'intérieur du conteneur si la condition est vraie.
 La condition est évaluée lorsque la taille du conteneur interrogé, le [`<style-feature>`](#requêtes_de_style_de_conteneur) ou l'état de défilement changent.
 
-La condition doit définir un ou les deux de {{CSSxRef("container-name")}} et `<container-query>`.
+La condition doit définir un ou les deux de {{CSSxRef("container-name")}} et `<container-query>`, ou les deux.
 
-La propriété {{CSSxRef("container-name")}} définit une liste de noms de conteneurs de requête, qui sont utilisés pour filtrer les conteneurs ciblés par les règles `@container`.
+La propriété {{CSSxRef("container-name")}} définit une liste de noms de conteneurs de requête, qui sont utilisés pour filtrer les conteneurs ciblés par les règles `@container`. Si seule une valeur `container-name` est incluse (une [requête de conteneur uniquement par nom](/fr/docs/Web/CSS/Guides/Containment/Container_queries#name-only_container_queries)), les règles contenues sont appliquées à tous les conteneurs ayant une ou plusieurs de ces valeurs `container-name` définies.
+
 Les fonctionnalités de conteneur dans le `<container-query>` sont évaluées par rapport aux conteneurs sélectionnés.
 Si aucun `<container-name>` n'est défini, les fonctionnalités du `<container-query>` sont évaluées par rapport au conteneur de requête ancêtre le plus proche qui a le {{CSSxRef("container-type")}} correspondant.
-Si aucun `<container-query>` n'est défini, les conteneurs nommés sont sélectionnés.
 
 ## Syntaxe
 
@@ -605,7 +605,7 @@ En d'autres termes, `style(0 < --n < 10)` est équivalent à `style(0 < --n) and
 
 ### Requêtes d'état de défilement
 
-Voir [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) pour des exemples.
+Voir [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) pour des exemples.
 
 ### Requêtes d'ancrage
 
@@ -623,7 +623,7 @@ Voir [Utiliser les requêtes de conteneur avec une ancre](/fr/docs/Web/CSS/Guide
 
 - [Utiliser les requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Utiliser les requêtes de taille et de style de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
-- [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+- [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
 - [Utiliser les requêtes de conteneur avec une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 - La propriété {{CSSxRef("container-name")}}
 - La propriété {{CSSxRef("container-type")}}

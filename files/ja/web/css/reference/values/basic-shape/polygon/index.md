@@ -1,8 +1,9 @@
 ---
-title: polygon()
+title: CSS `polygon()` 関数
+short-title: polygon()
 slug: Web/CSS/Reference/Values/basic-shape/polygon
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`polygon()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("basic-shape")}} [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)の一つです。[多角形](https://ja.wikipedia.org/wiki/多角形)を描画するために使用します。 1 つ以上の座標のペアを指定し、それぞれが図形の頂点を表します。

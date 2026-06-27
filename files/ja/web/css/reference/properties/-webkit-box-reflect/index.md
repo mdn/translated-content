@@ -1,12 +1,16 @@
 ---
-title: -webkit-box-reflect
+title: CSS `-webkit-box-reflect` プロパティ
+short-title: -webkit-box-reflect
 slug: Web/CSS/Reference/Properties/-webkit-box-reflect
-original_slug: Web/CSS/-webkit-box-reflect
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_Header}}
 
 **`-webkit-box-reflect`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の内容を特定の方向に反射させることができます。
+
+## 構文
 
 ```css
 /* 方向の値 */
@@ -24,13 +28,10 @@ original_slug: Web/CSS/-webkit-box-reflect
 /* グローバル値 */
 -webkit-box-reflect: inherit;
 -webkit-box-reflect: initial;
+-webkit-box-reflect: revert;
+-webkit-box-reflect: revert-layer;
 -webkit-box-reflect: unset;
 ```
-
-> [!WARNING]
-> この機能は**ウェブサイトで使うためのものではありません**。ウェブで反射効果を実現する上で、標準の方法は CSS の {{CSSxRef("element()", "element()")}} 関数を使用することです。
-
-## 構文
 
 ### 値
 
@@ -47,7 +48,7 @@ original_slug: Web/CSS/-webkit-box-reflect
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{CSSSyntaxRaw(`-webkit-box-reflect = [ above | below | right | left ]? <length>? <image>?`)}}
 
 ## 仕様書
 
@@ -59,6 +60,6 @@ original_slug: Web/CSS/-webkit-box-reflect
 
 ## 関連情報
 
-- Apple の[ドキュメント](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16)
-- Webkit の[仕様書](https://www.webkit.org/blog/182/css-reflections/).
+- Apple の [ドキュメント](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16)
+- Webkit の [仕様書](https://www.webkit.org/blog/182/css-reflections/).
 - Lea Verou's article on reflection using [CSS features on the standard track](https://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/).

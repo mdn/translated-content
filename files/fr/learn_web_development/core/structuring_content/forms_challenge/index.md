@@ -15,7 +15,7 @@ Dans ce défi, nous allons tester votre capacité à créer et structurer un for
 Pour résoudre ce défi, nous attendons de vous que vous créiez un projet de site web de base, soit dans un dossier sur le disque dur de votre ordinateur, soit en utilisant un éditeur en ligne tel que [CodePen <sup>(angl.)</sup>](https://codepen.io/) ou [JSFiddle <sup>(angl.)</sup>](https://jsfiddle.net/). Une grande partie du code dont vous avez besoin est déjà fournie sur cette page.
 
 1. Créez un nouveau dossier à un emplacement approprié sur votre ordinateur appelé `forms-challenge` (ou ouvrez un éditeur en ligne et effectuez les étapes nécessaires pour créer un nouveau projet).
-2. Enregistrez le listing HTML suivant dans un fichier à l'intérieur de votre dossier appelé `index.html` (ou collez-le dans le volet HTML de votre éditeur en ligne).
+2. Enregistrez la liste HTML suivante dans un fichier à l'intérieur de votre dossier appelé `index.html` (ou collez-la dans le volet HTML de votre éditeur en ligne).
 
    ```html-nolint
    <!doctype html>
@@ -218,7 +218,7 @@ Nous vous demandons d'imaginer que vous venez de séjourner dans un hôtel appel
 1. Dans la section «&nbsp;Installations&nbsp;», transformez les deux premiers groupes de lignes en groupes de boutons radio avec un libellé pour décrire chacun et une légende décrivant l'ensemble du groupe. Ajoutez un attribut pour que le premier bouton radio de chaque groupe soit sélectionné par défaut.
 2. Dans la section «&nbsp;Installations&nbsp;», transformez le troisième groupe de lignes en un groupe de cases à cocher, avec un libellé pour chacune et une légende décrivant l'ensemble du groupe.
 3. Dans la section «&nbsp;À propos de vos hôtes&nbsp;», transformez les deux groupes de lignes en menus déroulants d'options, avec un libellé pour chacun.
-4. Dans la section «&nbsp;Autres commentaires&nbsp;?&nbsp;», ajoutez une zone de saisie de texte multiligne et transformez la ligne existante en son libellé descriptif.
+4. Dans la section «&nbsp;Autres commentaires&nbsp;?&nbsp;», ajoutez une zone de saisie de texte multi-ligne et transformez la ligne existante en son libellé descriptif.
 5. Dans la section «&nbsp;Vos coordonnées&nbsp;», ajoutez un type de champ de saisie adapté pour recueillir chacune des trois valeurs listées. Transformez les lignes existantes en leurs libellés.
 6. Transformez «&nbsp;Envoyer&nbsp;» en un bouton d'envoi pour le formulaire.
 
@@ -227,7 +227,7 @@ Nous vous demandons d'imaginer que vous venez de séjourner dans un hôtel appel
 1. Enveloppez le formulaire dans un élément conteneur approprié pour définir l'ensemble comme un formulaire.
 2. Ajoutez des éléments structurels répétitifs à l'intérieur du formulaire, pour envelopper chaque section du formulaire. Donnez à chaque élément de section de formulaire une `class` de `form-section`. Pour faciliter les choses, chaque section de formulaire est entourée de deux ensembles de doubles tirets (`--`). Vous pouvez supprimer les doubles tirets une fois que vous avez ajouté vos éléments structurels.
 3. Vous devez inclure des éléments structurels supplémentaires autour de certaines paires contrôle/libellé pour les faire tenir sur leurs propres lignes séparées. Ajoutez-les maintenant, en leur donnant une `class` de `separator`.
-4. Ajoutez un élément de saut de ligne entre la zone de saisie de texte multiligne et son libellé pour les séparer.
+4. Ajoutez un élément de saut de ligne entre la zone de saisie de texte multi-ligne et son libellé pour les séparer.
 
 ### Fonctionnalités HTML supplémentaires
 

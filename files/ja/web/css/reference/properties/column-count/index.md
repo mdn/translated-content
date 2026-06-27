@@ -1,11 +1,14 @@
 ---
-title: column-count
+title: CSS `column-count` プロパティ
+short-title: column-count
 slug: Web/CSS/Reference/Properties/column-count
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`column-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のコンテンツを指定された段数の段組みに分割します。
+
+{{cssxref("columns")}} 一括指定プロパティを使用すると、`column-count`、{{cssxref("column-height")}}、{{cssxref("column-width")}} の各プロパティ値を、単一の宣言で設定することができます。
 
 {{InteractiveExample("CSS デモ: column-count")}}
 
@@ -107,7 +110,9 @@ column-count: unset;
 
 ## 関連情報
 
-- {{CSSXref("column-width")}}, {{CSSXref("columns")}} 一括指定
+- {{cssxref("column-height")}}
+- {{cssxref("column-width")}}
+- {{cssxref("columns")}} 一括指定
 - {{CSSXref("column-rule-color")}}, {{CSSXref("column-rule-style")}}, {{CSSXref("column-rule-width")}}, {{CSSXref("column-rule")}} 一括指定
 - [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)（レイアウトの学習）
 - [段組みの基本概念](/ja/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)
