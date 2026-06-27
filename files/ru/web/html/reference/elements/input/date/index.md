@@ -49,7 +49,7 @@ label {
 
 ![Datepicker UI in firefox](firefox_datepicker.png)
 
-| [Value](#value)             | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку\*\*                                                                                                                                                                       |
+| [Value](#value)             | Возвращает {{jsxref("String")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку\*\*                                                                                                                                                                           |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **События**                 | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event)                                                                                                                                                                |
 | **Поддерживаемые атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Reference/Elements/input#autocomplete), [`list`](/ru/docs/Web/HTML/Reference/Elements/input#list), [`readonly`](/ru/docs/Web/HTML/Reference/Elements/input#readonly), and [`step`](/ru/docs/Web/HTML/Reference/Elements/input#step) |
@@ -58,7 +58,7 @@ label {
 
 ## Значение
 
-Возвращает {{domxref("DOMString")}}, представляющий значение даты введённой в input. Вы можете установить значение по умолчанию для элемента с помощью добавления атрибута в [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value), например:
+Возвращает {{jsxref("String")}}, представляющий значение даты введённой в input. Вы можете установить значение по умолчанию для элемента с помощью добавления атрибута в [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value), например:
 
 ```html
 <input id="date" type="date" value="2017-06-01" />

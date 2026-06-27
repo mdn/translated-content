@@ -16,7 +16,7 @@ const newDoc = document.implementation.createHTMLDocument(title)
 ### Параметры
 
 - `title` {{optional_inline}} (except in IE)
-  - : {{domxref("DOMString")}}, содержащий заголовок для создания нового HTML-документа.
+  - : {{jsxref("String")}}, содержащий заголовок для создания нового HTML-документа.
 
 ## Пример
 

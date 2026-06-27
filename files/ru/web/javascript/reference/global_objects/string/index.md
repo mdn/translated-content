@@ -218,5 +218,5 @@ for (var i = 0, n = inputValues.length; i < n; ++i) {
 
 ## Смотрите также
 
-- {{domxref("DOMString")}}
+- {{jsxref("String")}}
 - [Двоичные строки](/ru/docs/Web/API/DOMString/Binary)
