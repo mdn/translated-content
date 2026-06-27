@@ -26,7 +26,7 @@ l10n:
 
 この例では、文書が全画面モードであるかどうかによってボタンの色が変化します。これは JavaScript でスタイルの変更を適用せずに行われます。
 
-```html
+```html-nolint
 <div class="element">
   <h1><code>:fullscreen</code> 擬似クラスのデモ</h1>
 
