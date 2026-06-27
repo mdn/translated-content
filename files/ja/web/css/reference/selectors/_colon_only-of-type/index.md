@@ -20,7 +20,7 @@ dd:only-of-type {
 }
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
   <b>QUIC</b> の詳細を探すには、<a href="#">RFC 9000</a> および <a href="#">RFC 9114</a> を調べてください。
 </p>
