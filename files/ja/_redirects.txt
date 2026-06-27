@@ -6693,6 +6693,8 @@
 /ja/docs/Web/Performance/Navigation_and_resource_timings	/ja/docs/Web/Performance/Guides/Navigation_and_resource_timings
 /ja/docs/Web/Performance/Speculative_loading	/ja/docs/Web/Performance/Guides/Speculative_loading
 /ja/docs/Web/Performance/dns-prefetch	/ja/docs/Web/Performance/Guides/dns-prefetch
+/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment	/ja/docs/Web/Privacy/Guides/Privacy_sandbox#登録
+/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies	/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies
 /ja/docs/Web/Progressive_web_apps/Add_to_home_screen	/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ja/docs/Web/Progressive_web_apps/App_structure	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure

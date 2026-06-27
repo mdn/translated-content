@@ -1,5 +1,6 @@
 ---
 title: Apprendre le développement web
+short-title: Apprendre
 slug: Learn_web_development
 l10n:
   sourceCommit: 57bc2729e3963907c0b54158ae1a31318a2ebbd1
