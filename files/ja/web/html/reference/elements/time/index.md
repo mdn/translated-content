@@ -3,7 +3,7 @@ title: HTML `<time>` （日付）時刻要素
 short-title: <time>
 slug: Web/HTML/Reference/Elements/time
 l10n:
-  sourceCommit: c6894b701b2297a7523d07855b47605c06f29c91
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<time>`** は [HTML](/ja/docs/Web/HTML) の要素で、特定の時の区間を表します。`datetime` 属性を使用して、機械可読な形式の日付を記述することができ、検索エンジンの結果を改善したりリマインダーなどの独自機能に使用したりすることができます。
