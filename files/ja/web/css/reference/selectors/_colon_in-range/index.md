@@ -21,7 +21,7 @@ input:in-range {
 }
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <form>
   <label for="amount">チケットの枚数は？（2～6 枚）</label>
   <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
