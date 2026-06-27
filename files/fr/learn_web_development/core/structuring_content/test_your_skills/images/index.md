@@ -13,7 +13,7 @@ L'objectif de ce test de compétences est de vous aider à évaluer si vous comp
 > [!NOTE]
 > Pour obtenir de l'aide, consultez notre guide d'utilisation [Testez vos compétences](/fr/docs/Learn_web_development#testez_vos_compétences). Vous pouvez également nous contacter par l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
 
-## Images 1
+## Les images n°1
 
 Dans cette tâche, nous vous demandons d'intégrer une image de quelques myrtilles dans la page.
 
@@ -21,7 +21,7 @@ Pour compléter cette tâche&nbsp;:
 
 1. Ajoutez le chemin vers l'image dans un attribut approprié pour l'intégrer dans la page. L'image s'appelle `blueberries.jpg` et est disponible à l'adresse `https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images/blueberries.jpg?raw=true`.
 2. Ajoutez un texte alternatif dans un attribut approprié pour décrire l'image, pour les personnes qui ne peuvent pas la voir.
-3. Donnez à l'élément `<img>` un attribut `width` de `400` et un attribut `height` approprié afin qu'il s'affiche avec le bon {{glossary("aspect ratio", "rapport d'aspect")}} et qu'il ne provoque pas de re-render lors du chargement. La {{glossary("intrinsic size", "taille intrinsèque")}} de l'image est de 615 x 419 pixels.
+3. Donnez à l'élément `<img>` un attribut `width` de `400` et un attribut `height` approprié afin qu'il s'affiche avec le bon {{Glossary("aspect ratio", "rapport d'aspect")}} et qu'il ne provoque pas de re-render lors du chargement. La {{Glossary("intrinsic size", "taille intrinsèque")}} de l'image est de 615 x 419 pixels.
 
 Le point de départ de la tâche ressemble à ceci&nbsp;:
 
@@ -81,7 +81,7 @@ Nous avons calculé la valeur correcte de `height` à définir en utilisant le c
 
 </details>
 
-## Images 2
+## Les images n°2
 
 Dans cette tâche, vous avez déjà une image complète, mais nous aimerions que vous ajoutiez une info-bulle qui apparaît lorsque l'image est survolée par la souris. Vous devez y mettre des informations appropriées.
 

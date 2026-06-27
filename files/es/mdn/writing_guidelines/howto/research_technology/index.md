@@ -39,7 +39,7 @@ Esto puede parecer un poco extraño al principio, pero cuanto más lo haces, má
 - [Cómo leer las especificaciones web, Parte I – O: WebVR, ¿cómo funciona?](https://surma.dev/things/reading-specs/) explica específicamente la lectura de las especificaciones WebVR, pero es una excelente introducción a leyendo las especificaciones de la API web.
 - [Cómo leer las especificaciones web Parte IIa – O: Símbolos ECMAScript](https://surma.dev/things/reading-specs-2/) la segunda parte del enlace anterior contiene información sobre cómo comprender la especificación ECMAScript que describe JavaScript
 
-Además, tenemos una guía sobre [Información contenida en un archivo WebIDL](/es/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file), que puede ser de gran ayuda a la hora de leer las especificaciones de la API Web.
+Además, tenemos una guía sobre [Información contenida en un archivo WebIDL](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file), que puede ser de gran ayuda a la hora de leer las especificaciones de la API Web.
 
 ## Explorando las características
 

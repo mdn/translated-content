@@ -1,12 +1,12 @@
 ---
-title: "<plaintext>: プレーンテキスト要素（非推奨）"
+title: HTML `<plaintext>` プレーンテキスト要素
+short-title: <plaintext>
 slug: Web/HTML/Reference/Elements/plaintext
-original_slug: Web/HTML/Element/plaintext
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<plaintext>`** は [HTML](/ja/docs/Web/HTML) の要素で、開始タグ以降のすべてを生のテキストとして表示し、それ以降の HTML を無視します。開始タグ以降は全て生のテキスト扱いになるので、終了タグはありません。
 
@@ -27,7 +27,7 @@ l10n:
 
 この要素は {{domxref('HTMLElement')}} インターフェイスを提供します。
 
-<!-- ## Technical summary -->
+<!-- ## 技術的概要 -->
 
 ## 仕様書
 
@@ -40,4 +40,4 @@ l10n:
 ## 関連情報
 
 - {{HTMLElement("pre")}} および {{HTMLElement("code")}} 要素を代わりに使用してください。
-- {{HTMLElement("xmp")}} も {{HTMLElement("plaintext")}} と同様に廃止されています。
+- {{HTMLElement("xmp")}} も `<plaintext>` と同様に廃止されています。

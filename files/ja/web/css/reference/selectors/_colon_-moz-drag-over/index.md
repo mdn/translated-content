@@ -1,9 +1,9 @@
 ---
-title: :-moz-drag-over
+title: CSS `:-moz-drag-over` 擬似クラス
+short-title: :-moz-drag-over
 slug: Web/CSS/Reference/Selectors/:-moz-drag-over
-original_slug: Web/CSS/:-moz-drag-over
 l10n:
-  sourceCommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{Non-standard_header}}
@@ -24,17 +24,17 @@ l10n:
 
 ```html
 <div id="drop-target">
-  <p>Drop target</p>
+  <p>ドロップターゲット</p>
 </div>
 
 <div draggable="true">
-  <p>Draggable</p>
+  <p>ドラッグ可能</p>
 </div>
 ```
 
 ### JavaScript
 
-ほとんどの要素はデータをドロップするのに妥当な場所ではないため、ドロップを許可するには、[`dragenter`](/ja/docs/Web/API/HTMLElement/dragenter_event) イベントまたは [`dragover`](/ja/docs/Web/API/HTMLElement/dragover_event) イベント (またはその両方) を取り消すことで既定の動作を防ぐ必要があります。
+ほとんどの要素はデータをドロップするのに妥当な場所ではないため、ドロップを許可するには、[`dragenter`](/ja/docs/Web/API/HTMLElement/dragenter_event) イベントまたは [`dragover`](/ja/docs/Web/API/HTMLElement/dragover_event) イベント (またはその両方) を取り消すことでデフォルトの動作を防ぐ必要があります。
 この例では、`dragenter` イベントを取り消すだけです。これは、要素がドロップ対象になるかどうかをブラウザーが評価するときに最初に発生するイベントです。
 詳細情報については、ドラッグ処理を運営しています： ドロップ対象を指定します。
 詳しくは、[ドラッグ操作: ドロップ先の指定](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#ドロップ先の指定)を参照してください。
@@ -42,21 +42,17 @@ l10n:
 ```js
 const target = document.getElementById("drop-target");
 /* dragenter イベントはドロップ先に発生する */
-target.addEventListener(
-  "dragenter",
-  (event) => {
-    // ドロップを受け付けるために、既定の動作が出て来ないようにする
-    event.preventDefault();
-  },
-  false,
-);
+target.addEventListener("dragenter", (event) => {
+  // ドロップを受け付けるために、デフォルトの動作を防ぐ
+  event.preventDefault();
+});
 ```
 
 ### CSS
 
 ```css
 body {
-  font-family: arial;
+  font-family: "Arial";
 }
 div {
   display: inline-block;

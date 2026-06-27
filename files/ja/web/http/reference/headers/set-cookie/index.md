@@ -105,7 +105,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Partitioned` {{optional_inline}}
   - : 分割ストレージを使用してクッキーが格納されるべきであることを示します。
     この設定を行う場合は、 [`Secure` ディレクティブ](#secure)も設定する必要があることに注意してください。
-    詳細は、[分割された独立した状態を持つクッキー (CHIPS)](/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)を参照してください。
+    詳細は、[個別区画化された状態を持つクッキー (CHIPS)](/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) を参照してください。
 
 - `Path=<path-value>` {{optional_inline}}
   - : リクエストの URL に含む必要があるパスを示します。含まれていないと、ブラウザーは `Cookie` ヘッダーを送信しません。
