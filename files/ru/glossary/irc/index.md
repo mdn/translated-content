@@ -1,6 +1,8 @@
 ---
 title: IRC
 slug: Glossary/IRC
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
 **IRC** (_Internet Relay Chat_) — это всемирная система чатов, требующая подключения к Интернету и IRC-клиента, который отправляет и получает сообщения через IRC-сервер.
