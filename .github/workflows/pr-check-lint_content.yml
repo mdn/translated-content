@@ -168,7 +168,7 @@ jobs:
           DIFF_DOCUMENTS: ${{ steps.check.outputs.DIFF_DOCUMENTS }}
         run: |
           readarray -t files_to_lint <<< "$DIFF_DOCUMENTS"
-          npx autocorrect --fix "${files_to_lint[@]}"
+          npx autocorrect-node --fix "${files_to_lint[@]}"
 
       - name: Diff
         if: steps.check.outputs.HAS_FILES == 'true'

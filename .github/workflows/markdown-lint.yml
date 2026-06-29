@@ -111,7 +111,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint with autocorrect
-        run: npx autocorrect --lint .
+        run: npx autocorrect-node --lint .
 
   prettier:
     if: github.repository == 'mdn/translated-content'
