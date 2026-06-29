@@ -1682,7 +1682,12 @@
 /ru/docs/Web/JavaScript/Reference/Properties_Index	/ru/docs/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Reference/Statements/import.meta	/ru/docs/Web/JavaScript/Reference/Operators/import.meta
 /ru/docs/Web/JavaScript/Reference/Statements/Блок	/ru/docs/Web/JavaScript/Reference/Statements/block
+/ru/docs/Web/JavaScript/Reference/delete	/ru/docs/Web/JavaScript/Reference/Operators/delete
+/ru/docs/Web/JavaScript/Reference/instanceof	/ru/docs/Web/JavaScript/Reference/Operators/instanceof
+/ru/docs/Web/JavaScript/Reference/new	/ru/docs/Web/JavaScript/Reference/Operators/new
+/ru/docs/Web/JavaScript/Reference/null	/ru/docs/Web/JavaScript/Reference/Operators/null
 /ru/docs/Web/JavaScript/Reference/template_strings	/ru/docs/Web/JavaScript/Reference/Template_literals
+/ru/docs/Web/JavaScript/Reference/this	/ru/docs/Web/JavaScript/Reference/Operators/this
 /ru/docs/Web/JavaScript/Typed_arrays	/ru/docs/Web/JavaScript/Guide/Typed_arrays
 /ru/docs/Web/JavaScript/Справочник_по_JavaScript_1.5	/ru/docs/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Справочник_по_JavaScript_1.5/Methods_Index	/ru/docs/Web/JavaScript/Reference
