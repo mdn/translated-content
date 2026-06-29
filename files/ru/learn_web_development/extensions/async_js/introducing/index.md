@@ -227,7 +227,7 @@ console.log("all done");
 Чтобы увидеть это в действии попробуйте изменить третий вызов `console.log ()` следующим образом:
 
 ```js
-console.log("All done! " + image + "displayed.");
+console.log("All done! " + image + " displayed.");
 ```
 
 Теперь вы увидете сообщение:
