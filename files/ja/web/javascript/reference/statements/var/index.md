@@ -2,7 +2,7 @@
 title: var
 slug: Web/JavaScript/Reference/Statements/var
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 **`var`** 文は関数スコープまたはグローバルスコープの変数を宣言し、任意でそれをある値に初期化します。
