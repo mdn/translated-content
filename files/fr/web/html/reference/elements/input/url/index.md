@@ -1,8 +1,9 @@
 ---
-title: <input type="url">
+title: Valeur d'attribut HTML `<input type="url">`
+short-title: <input type="url">
 slug: Web/HTML/Reference/Elements/input/url
 l10n:
-  sourceCommit: 5ebca2edd6095fb3f61d442ed3146fa37fffbf7d
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`url`** sont employées afin de permettre à un·e utilisateur·ice de saisir ou d'éditer une URL.
@@ -57,36 +58,36 @@ En complément des [attributs universels](/fr/docs/Web/HTML/Reference/Global_att
 
 ### `list`
 
-La valeur de cet attribut est l'identifiant ({{DOMxRef("Element.id", "id")}}) d'un élément {{HTMLElement("datalist")}} situé dans le même document. L'élément {{HTMLElement("datalist")}} fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Reference/Elements/input#type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
+La valeur de cet attribut est l'identifiant ({{DOMxRef("Element.id", "id")}}) d'un élément {{HTMLElement("datalist")}} situé dans le même document. L'élément {{HTMLElement("datalist")}} fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Reference/Elements/input#type)) n'est pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
 
 ### `maxlength`
 
 Le nombre maximum de caractères (exprimé en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}) qu'il est possible de saisir dans le champ. Cette valeur doit être un entier positif ou nul. Si aucune valeur n'est fournie pour `maxlength` ou qu'une valeur invalide est fournie, il n'y a pas de contrainte de taille maximale. La valeur indiquée par cet attribut doit être supérieure à `minlength`.
 
-Le champ échouera à [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du texte dépasse `maxlength` en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}. La validation de contrainte est uniquement appliquée lorsque la valeur est modifiée par l'utilisateur·ice.
+Le champ échoue à [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du texte dépasse `maxlength` en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}. La validation de contrainte est uniquement appliquée lorsque la valeur est modifiée par l'utilisateur·ice.
 
 ### `minlength`
 
-Le nombre minimal de caractères (en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}) qui doivent être saisis dans le champ de l'URL. Cette valeur doit être un entier positif ou nul. Si aucune valeur n'est fournie pour `minlength` ou qu'une valeur invalide est fournie, le champ n'aura pas de longueur minimale. La valeur de cet attribut doit être inférieure ou égale à celle de l'attribut `maxlength`.
+Le nombre minimal de caractères (en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}) qui doivent être saisis dans le champ de l'URL. Cette valeur doit être un entier positif ou nul. Si aucune valeur n'est fournie pour `minlength` ou qu'une valeur invalide est fournie, le champ n'a pas de longueur minimale. La valeur de cet attribut doit être inférieure ou égale à celle de l'attribut `maxlength`.
 
-Le champ échouera à [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du texte saisi est inférieure à cet attribut. Le champ [ne sera pas valide](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du texte dépasse `maxlength` en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}. La validation de contrainte est uniquement appliquée lorsque la valeur est modifiée par l'utilisateur·ice.
+Le champ échoue à [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du texte saisi est inférieure à cet attribut. Le champ [n'est pas valide](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du texte dépasse `maxlength` en nombre de {{Glossary("UTF-16", "points de code UTF-16")}}. La validation de contrainte est uniquement appliquée lorsque la valeur est modifiée par l'utilisateur·ice.
 
 ### `pattern`
 
 L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value), que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/HTML/Guides/Constraint_validation) . Le contenu de `pattern` doit être une expression rationnelle JavaScript valide, comme utilisé par le type {{JSxRef("RegExp")}} et comme documenté dans [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions). Le marqueur `"u"` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non {{Glossary("ASCII")}}. Il ne faut pas entourer l'expression de barres obliques.
 
-Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format ne sera appliquée et cet attribut sera ignoré complètement.
+Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format n'est appliquée et cet attribut est ignoré complètement.
 
 > [!NOTE]
-> On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
+> On utilise l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pour définir le texte que la plupart des navigateurs affichent comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
 
 Voir [la section ci-après sur le format](#utiliser_un_format_particulier) pour plus de détails et d'exemples.
 
 ### `placeholder`
 
-L'attribut `placeholder` est une chaîne de caractères qui fournit un indice bref à l'utilisateur·ice sur le type d'information attendu dans le champ. Il doit s'agir d'un mot ou d'une courte phrase qui démontre le type de données attendu, plutôt qu'un message explicatif. Le texte _ne doit pas_ inclure de retours chariot ou de sauts de ligne.
+L'attribut `placeholder` est une chaîne de caractères qui fournit un indice bref à l'utilisateur·ice sur le type d'information attendu dans le champ. Il doit s'agir d'un mot ou d'une courte phrase qui démontre le type de données attendu, plutôt qu'un message explicatif. Le texte _ne doit pas_ inclure de retours charriot ou de sauts de ligne.
 
-Si le contenu du contrôle a une directionnalité ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) mais doit présenter le texte indicatif dans la direction opposée, vous pouvez utiliser des caractères de formatage de l'algorithme bidirectionnel Unicode pour remplacer la directionnalité dans le texte indicatif&nbsp;; voir [Comment utiliser les contrôles Unicode pour le texte bidi <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
+Si le contenu du contrôle a une direction ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) mais doit présenter le texte indicatif dans la direction opposée, vous pouvez utiliser des caractères de formatage de l'algorithme bidirectionnel Unicode pour remplacer la direction dans le texte indicatif&nbsp;; voir [Comment utiliser les contrôles Unicode pour le texte bidi <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
 > [!NOTE]
 > Évitez d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi sémantiquement utile que d'autres moyens d'expliquer votre formulaire et peut provoquer des problèmes techniques inattendus avec votre contenu. Voir [les libellés de `<input>`](/fr/docs/Web/HTML/Reference/Elements/input#libellés) pour plus d'informations.
@@ -100,9 +101,9 @@ L'attribut booléen [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly
 
 ### `size`
 
-L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à `0` et la valeur par défaut est `20`. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant pourra être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS {{CSSxRef("font")}}) utilisée.
+L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à `0` et la valeur par défaut est `20`. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant peut être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS {{CSSxRef("font")}}) utilisée.
 
-Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent être saisis. Il indique uniquement, de façon approximative, le nombre de caractères visibles au même moment. Pour imposer une contrainte de taille sur la longueur maximale de la valeur saisissable, on pourra utiliser l'attribut [`maxlength`](#maxlength).
+Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent être saisis. Il indique uniquement, de façon approximative, le nombre de caractères visibles au même moment. Pour imposer une contrainte de taille sur la longueur maximale de la valeur saisissable, on peut utiliser l'attribut [`maxlength`](#maxlength).
 
 ### `spellcheck`
 
@@ -112,7 +113,7 @@ L'attribut universel [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attribute
   - : La vérification orthographique est désactivée pour l'élément.
 - `true`
   - : La vérification orthographique est activée pour l'élément.
-- `""` (la chaîne vide) ou aucune valeur
+- `""` (la chaîne de caractères vide) ou aucune valeur
   - : C'est le comportement par défaut de l'élément qui est utilisé pour déterminer si la vérification est active ou non. Cela peut être déduit de la valeur `spellcheck` sur un élément parent ou d'autres facteurs.
 
 Un champ de saisie peut avoir la vérification orthographique activée s'il n'utilise pas l'attribut [`readonly`](#readonly) et qu'il n'est pas désactivé.
@@ -130,11 +131,11 @@ Lorsqu'on crée un champ avec un attribut `type` qui vaut `url`, on obtient une 
 Il est important de noter, cependant, que cela ne suffit pas à garantir que le texte défini est une URL qui existe réellement, correspond à l'utilisateur·ice du site ou est acceptable d'une quelconque manière. Cela garantit seulement que la valeur du champ est correctement formatée pour être une URL.
 
 > [!NOTE]
-> Un·e utilisateur·ice peut modifier votre HTML en arrière-plan, donc votre site _ne doit pas_ utiliser cette validation à des fins de sécurité. Vous _devez_ vérifier l'URL côté serveur pour toute transaction dans laquelle le texte fourni pourrait avoir des implications de sécurité de quelque nature que ce soit.
+> Un·e utilisateur·ice peut modifier votre HTML en arrière-plan, donc votre site _ne doit pas_ utiliser cette validation à des fins de sécurité. Vous _devez_ vérifier l'URL côté serveur pour toute transaction dans laquelle le texte fourni peut avoir des implications de sécurité de quelque nature que ce soit.
 
 ### Un champ de saisie simple d'URL
 
-Actuellement, l'ensemble des navigateurs implémentent ce type de champ comme un champ texte qui dispose de fonctionnalités de validation basiques. Dans sa forme la plus simple, un champ de saisie d'URL ressemblera à&nbsp;:
+Actuellement, l'ensemble des navigateurs implémentent ce type de champ comme un champ texte qui dispose de fonctionnalités de validation basiques. Dans sa forme la plus simple, un champ de saisie d'URL ressemble à&nbsp;:
 
 ```html
 <input id="monURL" name="monURL" type="url" />
@@ -144,7 +145,7 @@ Actuellement, l'ensemble des navigateurs implémentent ce type de champ comme un
 
 La valeur du champ est considérée valide lorsqu'elle est vide ou qu'il s'agit d'une URL correctement formatée, autrement elle est invalide. Si on ajoute l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required), la valeur vide n'est plus valide, il est nécessaire de saisir une valeur.
 
-Ainsi, si l'utilisateur·ice saisit l'URL `http://www.exemple.com`, voici ce qui sera envoyé vers le serveur&nbsp;: `monURL=http%3A%2F%2Fwww.exemple.com` (on notera la façon dont certains caractères sont échappés).
+Ainsi, si l'utilisateur·ice saisit l'URL `http://www.exemple.com`, voici ce qui est envoyé vers le serveur&nbsp;: `monURL=http%3A%2F%2Fwww.exemple.com` (notez la façon dont certains caractères sont échappés).
 
 ### Textes indicatifs
 
@@ -168,7 +169,7 @@ Il est possible de contrôler la taille physique de la boîte utilisée pour le 
 
 #### La taille physique
 
-C'est l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size) qui permet de contrôler la taille de la boîte utilisée. La valeur de cet attribut correspond au nombre de caractères qui seront affichés en même temps dans la boîte. Dans l'exemple suivant, on souhaite que la boîte de saisie mesure 30 caractères de large&nbsp;:
+C'est l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size) qui permet de contrôler la taille de la boîte utilisée. La valeur de cet attribut correspond au nombre de caractères qui sont affichés en même temps dans la boîte. Dans l'exemple suivant, on souhaite que la boîte de saisie mesure 30 caractères de large&nbsp;:
 
 ```html
 <input id="monURL" name="monURL" type="url" size="30" />
@@ -178,7 +179,7 @@ C'est l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size) qui p
 
 #### La longueur de la valeur
 
-L'attribut `size` ne limite pas la valeur qui peut être saisie mais uniquement l'affichage de celle-ci. Pour indiquer une longueur (exprimée en nombre de caractères) minimale d'URL à saisir, on pourra utiliser l'attribut [`minlength`](/fr/docs/Web/HTML/Reference/Elements/input#minlength). De même, l'attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength) indique la longueur maximale d'une URL qui peut être saisie dans le contrôle.
+L'attribut `size` ne limite pas la valeur qui peut être saisie mais uniquement l'affichage de celle-ci. Pour indiquer une longueur (exprimée en nombre de caractères) minimale d'URL à saisir, on peut utiliser l'attribut [`minlength`](/fr/docs/Web/HTML/Reference/Elements/input#minlength). De même, l'attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength) indique la longueur maximale d'une URL qui peut être saisie dans le contrôle.
 
 Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 30 caractères de large et on souhaite que l'URL soit plus longue que 10 caractères et moins longue que 80.
 
@@ -195,7 +196,7 @@ Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 30 caractèr
 {{EmbedLiveSample("La longueur de la valeur", 600, 40)}}
 
 > [!NOTE]
-> Ces attributs ont également une incidence sur la validation&nbsp;; toute valeur plus courte ou plus longue que les longueurs minimale et maximale définies sera considérée comme non valide&nbsp;; de plus, la plupart des navigateurs empêcheront l'utilisateur de saisir une valeur dépassant la longueur maximale définie.
+> Ces attributs ont également une incidence sur la validation&nbsp;; toute valeur plus courte ou plus longue que les longueurs minimale et maximale définies est considérée comme non valide&nbsp;; de plus, la plupart des navigateurs empêchent l'utilisateur·ice de saisir une valeur dépassant la longueur maximale définie.
 
 ### Fournir des valeurs par défaut
 
@@ -211,7 +212,7 @@ On peut fournir une valeur par défaut grâce à l'attribut [`value`](/fr/docs/W
 
 #### Fournir des suggestions
 
-On peut également fournir une liste d'options parmi lesquelles la personne saisissant une URL peut choisir via l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#list). Cette liste ne limite pas l'utilisateur·ice à ces choix mais permet de choisir certaines URL fréquemment utilisées plus facilement. Cette liste peut également être utilisée par l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete). La valeur de l'attribut `list` est un identifiant d'un élément {{HTMLElement("datalist")}} qui contient autant d'éléments {{HTMLElement("option")}} que de valeurs suggérées. La valeur de l'attribut `value` de chacun de ces éléments `<option>` correspondra à la valeur qui sera suggérée dans le champ de saisie.
+On peut également fournir une liste d'options parmi lesquelles la personne saisissant une URL peut choisir avec l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#list). Cette liste ne limite pas l'utilisateur·ice à ces choix mais permet de choisir certaines URL fréquemment utilisées plus facilement. Cette liste peut également être utilisée par l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete). La valeur de l'attribut `list` est un identifiant d'un élément {{HTMLElement("datalist")}} qui contient autant d'éléments {{HTMLElement("option")}} que de valeurs suggérées. La valeur de l'attribut `value` de chacun de ces éléments `<option>` correspond à la valeur qui est suggérée dans le champ de saisie.
 
 ```html
 <input id="monURL" name="monURL" type="url" list="defaultURLs" />
@@ -227,11 +228,11 @@ On peut également fournir une liste d'options parmi lesquelles la personne sais
 
 {{EmbedLiveSample("Fournir des suggestions", 600, 40)}}
 
-Avec cet élément {{HTMLElement("datalist")}} et les éléments {{HTMLElement("option")}} associés, le navigateur affichera les valeurs proposées sous la forme d'une liste déroulante (voire sous un autre format). Au fur et à mesure que la personne saisit dans le champ, la liste se réduit pour ne contenir que les valeurs correspondantes (et ce jusqu'à ce que la personne saisisse une autre valeur ou sélectionne une valeur parmi la liste).
+Avec cet élément {{HTMLElement("datalist")}} et les éléments {{HTMLElement("option")}} associés, le navigateur affiche les valeurs proposées sous la forme d'une liste déroulante (voire sous un autre format). Au fur et à mesure que la personne saisit dans le champ, la liste se réduit pour ne contenir que les valeurs correspondantes (et ce jusqu'à ce que la personne saisisse une autre valeur ou sélectionne une valeur parmi la liste).
 
 #### Utiliser des libellés pour les valeurs suggérées
 
-Il est aussi possible d'inclure des attributs [`label`](/fr/docs/Web/HTML/Reference/Elements/option#label) sur un ou plusieurs des éléments `<option>` afin de fournir un libellé textuel. Certains navigateurs n'afficheront que les libellés tandis que d'autres afficheront le libellé et l'URL.
+Il est aussi possible d'inclure des attributs [`label`](/fr/docs/Web/HTML/Reference/Elements/option#label) sur un ou plusieurs des éléments `<option>` afin de fournir un libellé textuel. Certains navigateurs n'affichent que les libellés tandis que d'autres affichent le libellé et l'URL.
 
 ```html
 <input id="monURL" name="monURL" type="url" list="defaultURLs" />
@@ -266,7 +267,7 @@ Comme indiqué précédemment, pour rendre un champ URL obligatoire avant que le
 
 ### Utiliser un format particulier
 
-Si vous souhaitez restreindre davantage l'URL saisie, au-delà d'une simple « chaîne ressemblant à une URL », vous pouvez utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) pour définir une {{Glossary("regular expression", "expression rationnelle")}} à laquelle la valeur doit correspondre pour être valide.
+Si vous souhaitez restreindre davantage l'URL saisie, au-delà d'une simple «&nbsp;chaîne de caractères ressemblant à une URL&nbsp;», vous pouvez utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) pour définir une {{Glossary("regular expression", "expression rationnelle")}} à laquelle la valeur doit correspondre pour être valide.
 
 ## Exemples
 
@@ -276,24 +277,24 @@ Dans cet exemple, nous nous assurons qu'une URL est remplie en utilisant l'attri
 
 #### HTML
 
-Dans le champ `url`, nous définissons `pattern` sur `".*\.mozilla\.org.*"`. Cette expression rationnelle valide une chaîne qui peut comporter un nombre quelconque de caractères, suivie de «&nbsp;.mozilla.org&nbsp;», puis d'un nombre quelconque de caractères. Comme le navigateur exécute à la fois le filtre standard des URL _et_ notre motif personnalisé sur le texte défini, la validation exige «&nbsp;assurez-vous qu'il s'agit d'une URL valide, et qu'elle contient `.mozilla.org`.&nbsp;»
+Dans le champ `url`, nous définissons `pattern` sur `".*\.mozilla\.org.*"`. Cette expression rationnelle valide une chaîne de caractères qui peut comporter un nombre quelconque de caractères, suivie de «&nbsp;.mozilla.org&nbsp;», puis d'un nombre quelconque de caractères. Comme le navigateur exécute à la fois le filtre standard des URL _et_ notre motif personnalisé sur le texte défini, la validation exige «&nbsp;assurez-vous qu'il s'agit d'une URL valide, et qu'elle contient `.mozilla.org`.&nbsp;»
 
-Notez qu'un `pattern` strict comme `https://developer\.mozilla\.org.*` serait plus robuste, mais cela rendrait l'attribut `type="url"` redondant dans ce cas.
+Notez qu'un `pattern` strict comme `https://developer\.mozilla\.org.*` est plus robuste, mais cela rend l'attribut `type="url"` redondant dans ce cas.
 
 L'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) décrit également le `pattern` pour les utilisateur·ice·s recourant à des technologies d'assistance.
 
 ```html live-sample___url-validation
 <form>
-  <label for="myURL">
+  <label for="monUrl">
     Entrez une URL de ce site&nbsp;:
     <input
-      id="myURL"
-      name="myURL"
+      id="monUrl"
+      name="monUrl"
       type="url"
       required
       pattern=".*\.mozilla\.org.*"
       title="L'URL doit inclure mozilla.org" />
-    <span class="validity"></span>
+    <span class="validite"></span>
   </label>
   <button>Submit</button>
 </form>
@@ -327,9 +328,9 @@ input:valid + span::after {
 }
 ```
 
-#### Result
+#### Résultat
 
-Copiez l'URL de cette page et collez-la dans le champ de saisie et vous verrez un contour vert et une coche verte. Saisissez toute autre URL qui ne contient pas **mozilla.org** ou une URL invalide et vous verrez un contour rouge et une croix rouge.
+Copiez l'URL de cette page et collez-la dans le champ de saisie et vous pouvez voir un contour vert et une coche verte. Saisissez toute autre URL qui ne contient pas **mozilla.org** ou une URL invalide et vous pouvez voir un contour rouge et une croix rouge.
 
 {{EmbedLiveSample("url-validation", "40px", , , , , "allow-forms")}}
 
@@ -373,15 +374,6 @@ Consultez les sections [Validation par motif](#utiliser_un_format_particulier) e
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}},
-        {{DOMxRef("HTMLInputElement.setRangeText", "setRangeText()")}}
-        et
-        {{DOMxRef("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
-      </td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

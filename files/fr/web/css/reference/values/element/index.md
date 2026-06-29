@@ -1,111 +1,117 @@
 ---
-title: element
+title: Fonction CSS `element()`
+short-title: element()
 slug: Web/CSS/Reference/Values/element
-original_slug: Web/CSS/element
+l10n:
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-La fonction **`element()`** définit une valeur {{cssxref("&lt;image&gt;")}} générée à partir d'un élément HTML arbitraire. L'image est calculée dynamiquement : si l'élément HTML change, les propriétés CSS utilisant la valeur seront automatiquement mis à jour.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`element()`** est une valeur générée à partir d'un élément HTML quelconque. Cette image est dynamique, ce qui signifie que si l'élément HTML est modifié, les propriétés CSS utilisant la valeur résultante sont automatiquement mises à jour.
 
-Un scénario pour lequel cette fonction est particulièrement utile : on génère une image dans un élément HTML {{HTMLElement("canvas")}} et on l'utilise comme arrière-plan.
+Un scénario particulièrement utile pour utiliser cette fonction serait de rendre une image dans un élément HTML {{HTMLElement("canvas")}}, puis de l'utiliser comme arrière-plan.
 
-Pour les navigateurs basés sur Gecko, on peut utiliser la méthode {{domxref("document.mozSetImageElement()")}} pour modifier l'élément utilisé comme arrière-plan pour un `background` CSS donné.
+Pour les navigateurs basés sur Gecko, vous pouvez utiliser la méthode non standard {{DOMxRef("document.mozSetImageElement()")}} pour modifier l'élément utilisé comme arrière-plan pour un élément CSS donné.
 
 ## Syntaxe
 
-```
+```css
 element(id)
 ```
 
-### Paramètres
+où&nbsp;:
 
-- **`id`**
-  - : L'identifiant (correspondant à l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id)) de l'élément HTML visé.
+- _id_
+  - : L'identifiant de l'élément à utiliser comme arrière-plan, défini à l'aide de l'attribut HTML #_id_ sur l'élément.
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
-### Un premier exemple réaliste
+Ces exemples fonctionnent dans les versions de Firefox qui prennent en charge `-moz-element()`.
 
-#### CSS
+### Un exemple quelque peu réaliste
 
-```css
-.exemple {
-  width: 400px;
-  height: 400px;
-  background: -moz-element(#monArrierePlan) no-repeat;
-}
-
-.paragraphe {
-  transform-origin: 0 0;
-  transform: rotate(45deg);
-  color: white;
-}
-
-#monArrierePlan {
-  width: 1024px;
-  height: 1024px;
-  background-image: linear-gradient(to right, red, orange, yellow, white);
-}
-.cache {
-  overflow: hidden;
-  height: 0;
-}
-```
+Cet exemple utilise un {{HTMLElement("div")}} caché comme arrière-plan. L'élément d'arrière-plan utilise un dégradé, mais inclut également du texte qui est rendu comme partie de l'arrière-plan.
 
 #### HTML
 
 ```html
-<div class="exemple">
-  <p>Cet élément utilise l'élément #monArrierePlan comme image de fond !</p>
+<div id="boite-cible">
+  <p>
+    Cet élément utilise l'élément #mon-arriere-plan comme image de fond&nbsp;!
+  </p>
 </div>
 
-<div class="cache">
-  <div id="monArrierePlan">
-    <p class="paragraphe">Et voici un texte inscrit sur l'arrière-plan.</p>
-    <div>
-      <div></div>
-    </div>
+<div id="conteneur-arriere-plan">
+  <div id="mon-arriere-plan">
+    <p>Et voici un texte inscrit sur l'arrière-plan.</p>
   </div>
 </div>
 ```
 
-#### Résultat
-
-Pour les navigateurs qui prennent en charge `element`, on peut ici voir un arrière-plan généré avec un paragraphe HTML.
-
-{{EmbedLiveSample("Un_premier_exemple_réaliste","400","400")}}
-
-### Un second exemple plus méchant
-
 #### CSS
 
 ```css
-.exemple {
+#boite-cible {
   width: 400px;
-  height: 100px;
-  background: -moz-element(#monArrierePlan);
+  height: 400px;
+  background: -moz-element(#mon-arriere-plan) no-repeat;
 }
 
-.cache {
+#conteneur-arriere-plan {
   overflow: hidden;
   height: 0;
 }
+
+#mon-arriere-plan {
+  width: 1024px;
+  height: 1024px;
+  background-image: linear-gradient(to right, red, orange, yellow, white);
+}
+
+#mon-arriere-plan p {
+  transform-origin: 0 0;
+  rotate: 45deg;
+  color: white;
+}
 ```
+
+{{EmbedLiveSample("Un exemple quelque peu réaliste")}}
+
+L'élément HTML {{HTMLElement("div")}} avec l'ID «&nbsp;mon-arriere-plan&nbsp;» est utilisé comme arrière-plan pour le contenu, y compris le paragraphe «&nbsp;Cette boîte utilise l'élément avec l'ID #mon-arriere-plan comme arrière-plan&nbsp;!&nbsp;».
+
+### Aperçu de la page
+
+Cet [exemple basé sur Vincent De Oliveira <sup>(angl.)</sup>](https://iamvdo.me/en/blog/css-element-function) crée un aperçu du `<div id="css-source">` à l'intérieur du `<div id="css-result">`.
 
 #### HTML
 
 ```html
-<div class="exemple"></div>
-
-<div class="cache">
-  <button id="monArrierePlan" type="button">Méchant bouton</button>
+<div id="css-source">
+  <h1>Aperçu de la page</h1>
 </div>
+<div id="css-result"></div>
+```
+
+#### CSS
+
+```css
+#css-result {
+  background: -moz-element(#css-source) no-repeat;
+  width: 256px;
+  height: 32px;
+  background-size: 80%;
+  border: dashed;
+}
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Un_second_exemple_plus_méchant","400","400")}}
+{{EmbedLiveSample("Aperçu de la page")}}
 
 ## Spécifications
 
@@ -117,11 +123,9 @@ Pour les navigateurs qui prennent en charge `element`, on peut ici voir un arri�
 
 ## Voir aussi
 
-- {{domxref("document.mozSetImageElement()")}}
-- {{cssxref("_image", "image()")}}
-- {{cssxref("image-set", "image-set()")}}
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element()")}}
-- {{cssxref("cross-fade")}}
-- {{domxref("document.mozSetImageElement()")}}
+- La fonction {{CSSxRef("image/image", "image()")}}
+- La fonction {{CSSxRef("image/image-set", "image-set()")}}
+- Le type de donnée {{CSSxRef("&lt;image&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;gradient&gt;")}}
+- La fonction {{CSSxRef("cross-fade()")}}
+- La méthode API {{DOMxRef("document.mozSetImageElement()")}} {{Non-standard_Inline}}

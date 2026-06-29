@@ -52,5 +52,5 @@ console.log(x.toString()); // affiche "coucou monde"
 
 ## Voir aussi
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}
 - {{jsxref("String.prototype.valueOf()")}}

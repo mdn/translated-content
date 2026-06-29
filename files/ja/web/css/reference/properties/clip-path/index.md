@@ -1,9 +1,9 @@
 ---
-title: clip-path
+title: CSS `clip-path` プロパティ
+short-title: clip-path
 slug: Web/CSS/Reference/Properties/clip-path
-original_slug: Web/CSS/clip-path
 l10n:
-  sourceCommit: 611edf6335e4a833a6f394d0d98b117e7b0a36bf
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`clip-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のどの部分を表示するかを設定するクリッピング領域を作ります。具体的には、領域の内部の部分は表示され、外側の部分は非表示になります。
@@ -42,7 +42,7 @@ clip-path: xywh(0 5px 100% 75% round 15% 0);
       id="example-element"
       src="/shared-assets/images/examples/balloon-small.jpg"
       width="150" />
-    私の仲間と私は、夕食の後、11時までに彼の家に電話して迎えに行くことを決めていました。この運動神経の優れた若いフランス人は、パリのスポーツマンたちの小さなグループに所属しており、彼らは「気球」を趣味としています。通常のスポーツで得られるすべてのスリル、さらには猛スピードで走る「自動車」のスリルさえも尽くした後、この「エアロクラブ」のメンバーたちは、今では空で、あらゆる大胆な技に挑戦し、地上ではもはや得られない、神経を刺激する興奮を求めています。
+    私の仲間と私は、夕食の後、11 時までに彼の家に電話して迎えに行くことを決めていました。この運動神経の優れた若いフランス人は、パリのスポーツマンたちの小さなグループに所属しており、彼らは「気球」を趣味としています。通常のスポーツで得られるすべてのスリル、さらには猛スピードで走る「自動車」のスリルさえも尽くした後、この「エアロクラブ」のメンバーたちは、今では空で、あらゆる大胆な技に挑戦し、地上ではもはや得られない、神経を刺激する興奮を求めています。
   </div>
 </section>
 ```
@@ -71,7 +71,7 @@ section {
 clip-path: none;
 
 /* <clip-source> 値 */
-clip-path: url(resources.svg#c1);
+clip-path: url("resources.svg#c1");
 
 /* <geometry-box> 値 */
 clip-path: margin-box;
@@ -111,7 +111,7 @@ clip-path: unset;
 
 - `<clip-source>`
   - : {{cssxref("url_value", "&lt;url&gt;")}} で、[SVG](/ja/docs/Web/SVG) の {{SVGElement("clipPath")}} 要素を参照します。
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}
   - : `<geometry-box>` 値で寸法と位置が定義されるシェイプです。ジオメトリーボックスが指定されない場合、参照ボックスとして `border-box` が使用されます。以下のいずれかです。
     - {{cssxref("basic-shape/inset","inset()")}}
       - : 内部の長方形を定義します。
@@ -139,7 +139,7 @@ clip-path: unset;
     - `padding-box`
       - : [パディングボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#padding-box)を参照ボックスとして使用します。
     - `content-box`
-      - : [コンテンボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#content-box)を参照ボックスとして使用します。
+      - : [コンテンツボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#content-box)を参照ボックスとして使用します。
     - `fill-box`
       - : オブジェクトの境界ボックスを参照ボックスとして使用します。
     - `stroke-box`
@@ -271,7 +271,7 @@ div {
 
 #### CSS
 
-[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)を使用して、利用可能な空間がある場合に、要素を隙間を空けて横に並べるようにしています。 `<div>` 要素の両方に {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 背景画像を定義し、 {{cssxref("border")}} とともに、クリップしたときの興味深い視覚効果を提供しています。
+[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)を使用して、利用可能な空間がある場合に、要素を隙間を空けて横に並べるようにしています。 `<div>` 要素の両方に {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 背景画像を定義し、{{cssxref("border")}} とともに、クリップしたときの興味深い視覚効果を提供しています。
 
 ```css
 body {
@@ -301,11 +301,11 @@ div {
 
 ```css
 .window {
-  clip-path: url(#window);
+  clip-path: url("#window");
 }
 
 .cross {
-  clip-path: url(#cross);
+  clip-path: url("#cross");
   align-content: center;
 }
 ```
@@ -361,7 +361,7 @@ HTML には、クリップされる `<img>`、星形の `<clipPath>`、および
 ```css
 #clipped {
   margin-bottom: 20px;
-  clip-path: url(#star);
+  clip-path: url("#star");
 }
 ```
 

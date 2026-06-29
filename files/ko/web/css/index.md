@@ -82,7 +82,7 @@ MDN [CSS 학습지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basi
   - [쌓임 맥락](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)과
     [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)
   - [초기 값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing), [계산 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e),
-    [사용 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2), [실제 값](/ko/docs/Web/CSS/actual_value)
+    [사용 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2), [실제 값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)
   - [CSS 단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
   - [CSS 플렉스박스 레이아웃](/ko/docs/Web/CSS/Guides/Flexible_box_layout)
   - [CSS 그리드 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout)

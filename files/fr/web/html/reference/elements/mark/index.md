@@ -1,8 +1,9 @@
 ---
-title: "<mark> : l'élément de marquage du texte"
+title: "Élément HTML `<mark>` : l'élément de marquage du texte"
+short-title: <mark>
 slug: Web/HTML/Reference/Elements/mark
 l10n:
-  sourceCommit: 17813cceb76950fea2acc1a39eb64ae3c57f038c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<mark>`** représente du texte qui est **marqué** ou **surligné** à des fins de référence ou de notation, en raison de la pertinence du passage marqué dans le contexte qui l'entoure.

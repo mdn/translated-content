@@ -1,30 +1,46 @@
 ---
-title: fit-content
+title: Mot-clé CSS `fit-content`
+short-title: fit-content
 slug: Web/CSS/Reference/Values/fit-content
-original_slug: Web/CSS/fit-content
 l10n:
-  sourceCommit: 059c9c1d93926bec5383fcfeb301f282ed40a9b9
+  sourceCommit: aaedffba9f47d6dce7967a4191963378026d9406
 ---
 
-{{CSSRef}}
-
-Le mot-clé **`fit-content`** se comporte comme `fit-content(stretch)`. En pratique, cela signifie que le conteneur utilisera l'espace disponible, mais jamais plus que [`max-content`](/fr/docs/Web/CSS/Reference/Values/max-content).
-
-Lorsqu'elle est utilisée comme taille de boîte pour [`width`](/fr/docs/Web/CSS/Reference/Properties/width), [`height`](/fr/docs/Web/CSS/Reference/Properties/height), [`min-width`](/fr/docs/Web/CSS/Reference/Properties/min-width), [`min-height`](/fr/docs/Web/CSS/Reference/Properties/min-height), [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width) et [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height), les tailles maximale et minimale se réfèrent à la taille du contenu.
+Le mot-clé [CSS](/fr/docs/Web/CSS) `fit-content` représente une taille d'élément qui s'adapte à son contenu tout en restant dans les limites de son conteneur.
+Le mot-clé garantit que l'élément n'est jamais plus petit que sa taille intrinsèque minimale ({{CSSxRef("min-content")}}) ou plus grand que sa taille intrinsèque maximale ({{CSSxRef("max-content")}}).
 
 > [!NOTE]
-> La spécification <i lang="en">CSS Sizing</i> définit également la fonction [`fit-content`](/fr/docs/Web/CSS/Reference/Values/fit-content_function). Cette page détaille le mot-clé.
+> Ce mot-clé est différent de la fonction {{CSSxRef("fit-content()")}}. La fonction est utilisée pour le dimensionnement des pistes de grille (par exemple dans {{CSSxRef("grid-template-columns")}} et {{CSSxRef("grid-auto-rows")}}) et pour le dimensionnement des boîtes mises en page pour des propriétés telles que {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("min-width")}} et {{CSSxRef("max-height")}}.
 
 ## Syntaxe
 
 ```css
+/* Utilisé dans les propriétés de dimensionnement */
 width: fit-content;
+height: fit-content;
+inline-size: fit-content;
 block-size: fit-content;
 ```
 
+## Description
+
+Ce mot-clé est utilisé avec des propriétés de dimensionnement telles que {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("block-size")}}, {{CSSxRef("inline-size")}}, {{CSSxRef("min-width")}} et {{CSSxRef("max-width")}}. Lorsqu'il est utilisé sur ces propriétés, la taille calculée se réfère à la [boîte de contenu](/fr/docs/Web/CSS/Reference/Values/box-edge#content-box) de l'élément.
+
+Lorsque `fit-content` est défini, l'élément grandit ou rétrécit pour s'adapter à son contenu, mais cesse de s'étendre une fois que la dimension pertinente atteint la limite de taille de son conteneur.
+
+La taille `fit-content` est calculée en utilisant la formule suivante&nbsp;:
+
+```plain
+min(max-content, max(min-content, stretch))
+```
+
+où, [`stretch`](/fr/docs/Web/CSS/Reference/Properties/width#stretch) correspond à la [marge de boîte](/fr/docs/Web/CSS/Reference/Values/box-edge#margin-box) de l'élément par rapport à la largeur de son [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block#identifier_le_bloc_englobant). Le mot-clé est essentiellement équivalent à `fit-content(stretch)`.
+
+Vous pouvez activer les animations vers et depuis `fit-content` en utilisant la propriété {{CSSxRef("interpolate-size")}} et la fonction {{CSSxRef("calc-size()")}}.
+
 ## Exemple
 
-### Utilisation de `fit-content` pour le dimensionnement des boîtes
+### Dimensionner des boîtes avec `fit-content`
 
 #### HTML
 
@@ -43,7 +59,7 @@ block-size: fit-content;
 
 ```css
 .container {
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
   padding: 10px;
   width: 20em;
 }
@@ -58,7 +74,7 @@ block-size: fit-content;
 
 #### Résultat
 
-{{EmbedLiveSample("utilisation_de_fit-content_pour_le_dimensionnement_des_bo%C3%AEtes", "100%", 230)}}
+{{EmbedLiveSample("Dimensionner des boîtes avec `fit-content`", "100%", 200)}}
 
 ## Spécifications
 
@@ -70,4 +86,5 @@ block-size: fit-content;
 
 ## Voir aussi
 
-- Mots-clés relatifs à la taille&nbsp;: [`min-content`](/fr/docs/Web/CSS/Reference/Values/min-content), [`max-content`](/fr/docs/Web/CSS/Reference/Values/max-content)
+- Mot-clés de dimensionnement associés&nbsp;: {{CSSxRef("min-content")}}, {{CSSxRef("max-content")}}
+- Le module [de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_sizing)

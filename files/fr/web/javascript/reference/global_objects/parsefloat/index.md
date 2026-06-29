@@ -125,8 +125,8 @@ Attention : ce code n'est qu'un exemple et renverra `NaN` pour des valeurs pourt
 
 ## Voir aussi
 
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
 - {{jsxref("Number.toFixed()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

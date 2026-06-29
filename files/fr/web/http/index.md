@@ -9,7 +9,7 @@ l10n:
 **_<i lang="en">Hypertext Transfer Protocol</i> (HTTP) (ou protocole de transfert hypertexte en français)_** est un protocole de [la couche application](https://fr.wikipedia.org/wiki/Couche_application) qui permet de transmettre des documents hypermédias, comme HTML.
 Il est conçu pour la communication entre les navigateurs web et les serveurs web, mais s'utilise aussi dans d'autres contextes.
 
-HTTP suit un modèle classique [client-serveur](https://fr.wikipedia.org/wiki/Client-serveur), avec un·e client·e qui ouvre une connexion pour effectuer une requête, puis attend jusqu'à ce qu'il·elle reçoive une réponse du serveur.
+HTTP suit un modèle classique [client-serveur](https://fr.wikipedia.org/wiki/Client-serveur), avec un client qui ouvre une connexion pour effectuer une requête, puis attend jusqu'à ce qu'il reçoive une réponse du serveur.
 HTTP est un [protocole sans état](https://fr.wikipedia.org/wiki/Protocole_sans_état), ce qui signifie que le serveur ne conserve aucune donnée de session entre deux requêtes, bien que l'ajout ultérieur des [cookies](/fr/docs/Web/HTTP/Guides/Cookies) ajoute un état à certaines interactions client-serveur.
 
 ## Guides
@@ -40,11 +40,11 @@ Nous vous conseillons de commencer par les guides fondamentaux avant d'explorer 
   - : La mise en cache est un mécanisme essentiel pour offrir des expériences rapides sur le Web et pour optimiser l'utilisation des ressources.
     Ce guide décrit différentes méthodes de mise en cache et comment utiliser les en-têtes HTTP pour les contrôler.
 - [Authentification HTTP](/fr/docs/Web/HTTP/Guides/Authentication)
-  - : L'authentification permet de vérifier l'identité d'un·e client·e lors de requêtes vers un serveur.
+  - : L'authentification permet de vérifier l'identité d'un client lors de requêtes vers un serveur.
     Elle garantit que seules les personnes ou systèmes autorisés accèdent à certaines ressources.
 - [Utilisation des cookies HTTP](/fr/docs/Web/HTTP/Guides/Cookies)
   - : Bien que HTTP soit un protocole sans état, un serveur peut envoyer un en-tête {{HTTPHeader("Set-Cookie")}} dans la réponse.
-    Le client renvoie alors la valeur du cookie à chaque requête suivante vers le serveur via l'en-tête de requête {{HTTPHeader("Cookie")}}.
+    Le client retourne alors la valeur du cookie à chaque requête suivante vers le serveur avec l'en-tête de requête {{HTTPHeader("Cookie")}}.
     Cela permet de stocker et d'échanger une petite quantité de données, ajoutant ainsi un état à certaines interactions client-serveur.
 - [Redirections HTTP](/fr/docs/Web/HTTP/Guides/Redirections)
   - : La redirection d'URL, aussi appelée réacheminement d'URL, est une technique qui permet d'attribuer plusieurs adresses à une page, un formulaire, un site web ou une application web.
@@ -63,7 +63,7 @@ Nous vous conseillons de commencer par les guides fondamentaux avant d'explorer 
     Ce guide explique ces deux concepts, avec leurs avantages et inconvénients.
 - [Mécanisme de mise à niveau du protocole](/fr/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
   - : HTTP/1.1 propose un mécanisme pour mettre à niveau une connexion déjà établie vers un autre protocole à l'aide de l'en-tête {{HTTPHeader("Upgrade")}}.
-    Un·e client·e peut ainsi passer de HTTP/1.1 à HTTP/2, ou d'une connexion HTTP(S) à un [WebSocket](/fr/docs/Web/API/WebSocket) (`ws` / `wss`).
+    Un client peut ainsi passer de HTTP/1.1 à HTTP/2, ou d'une connexion HTTP(S) à un [WebSocket](/fr/docs/Web/API/WebSocket) (`ws` / `wss`).
 - [Serveurs mandataires et tunnels](/fr/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling)
   - : Un serveur mandataire (proxy) peut se trouver sur l'ordinateur de l'utilisateur·ice ou n'importe où entre l'ordinateur et le serveur de destination sur Internet.
     Ce guide présente les bases des proxys et introduit quelques options de configuration.
@@ -83,12 +83,12 @@ Nous vous conseillons de commencer par les guides fondamentaux avant d'explorer 
   - : La politique d'autorisations (<i lang="en">Permissions Policy</i> en anglais) fournit aux développeur·euse·s web des mécanismes pour déclarer explicitement quelles fonctionnalités peuvent ou non être utilisées sur un site web.
     Vous définissez un ensemble de «&nbsp;politiques&nbsp;» qui restreignent les API auxquelles le code du site peut accéder ou modifient le comportement par défaut du navigateur pour certaines fonctionnalités.
 - [Partage de ressources entre origines (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
-  - : Les requêtes HTTP intersites sont des requêtes pour des ressources provenant d'un domaine différent de celui de la ressource effectuant la requête.
-    Les pages web chargent aujourd'hui très fréquemment des ressources intersites, par exemple, une page du «&nbsp;Domaine A&nbsp;» (`http://domaina.example/`) demande une image sur le «&nbsp;Domaine B&nbsp;» (`http://domainb.foo/image.jpg`) via l'élément `img`.
-    CORS permet aux développeur·euse·s web de contrôler la façon dont leur site réagit aux requêtes intersites.
+  - : Les requêtes HTTP inter-sites sont des requêtes pour des ressources provenant d'un domaine différent de celui de la ressource effectuant la requête.
+    Les pages web chargent aujourd'hui très fréquemment des ressources inter-sites, par exemple, une page du «&nbsp;Domaine A&nbsp;» (`http://domaina.example/`) demande une image sur le «&nbsp;Domaine B&nbsp;» (`http://domainb.foo/image.jpg`) avec l'élément `img`.
+    CORS permet aux développeur·euse·s web de contrôler la façon dont leur site réagit aux requêtes inter-sites.
 - [Politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP)
   - : CSP permet aux administrateur·ice·s de sites web d'utiliser l'en-tête de réponse {{HTTPHeader("Content-Security-Policy")}} pour contrôler quelles ressources le client est autorisé à charger pour une page donnée.
-    Le guide CSP décrit le mécanisme général de la politique de sécurité du contenu, qui aide à détecter et à atténuer certains types d'attaques, notamment les attaques par injection de données et de scripts intersites (XSS).
+    Le guide CSP décrit le mécanisme général de la politique de sécurité du contenu, qui aide à détecter et à atténuer certains types d'attaques, notamment les attaques par injection de données et de scripts inter-sites (XSS).
 - [Politique de ressources entre origines (CORP)](/fr/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)
   - : CORP permet aux sites et applications de choisir d'activer une protection contre des requêtes spécifiques provenant d'autres origines (comme celles effectuées avec des éléments `<script>` et `<img>`), afin d'atténuer les attaques spéculatives par canal auxiliaire.
 - [Recommandations de sécurité web de Mozilla <sup>(angl.)</sup>](https://infosec.mozilla.org/guidelines/web_security)

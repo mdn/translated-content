@@ -1,8 +1,9 @@
 ---
-title: "<frameset> : l'élément contenant des frames"
+title: "Élément HTML `<frameset>` : l'élément contenant des frames"
+short-title: <frameset>
 slug: Web/HTML/Reference/Elements/frameset
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 {{Deprecated_Header}}
@@ -16,9 +17,9 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<frameset>`** est utilisé pour conteni
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `cols` {{Deprecated_Inline}}
+- `cols` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut définit le nombre et la taille des espaces horizontaux dans un `<frameset>`.
-- `rows` {{Deprecated_Inline}}
+- `rows` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut définit le nombre et la taille des espaces verticaux dans un `<frameset>`.
 
 ## Exemple

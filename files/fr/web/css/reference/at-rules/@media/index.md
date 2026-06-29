@@ -1,14 +1,15 @@
 ---
-title: "@media"
+title: Règle CSS `@media`
+short-title: "@media"
 slug: Web/CSS/Reference/At-rules/@media
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 3869bc5647462538141417d68fc14362c7929ce9
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/Guides/Media_queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
 
 > [!NOTE]
-> Il est possible de manipuler la règle `@media` via le CSSOM (et JavaScript) grâce à l'interface {{DOMxRef("CSSMediaRule")}}.
+> Il est possible de manipuler la règle `@media` avec le CSSOM (et JavaScript) grâce à l'interface {{DOMxRef("CSSMediaRule")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: @media", "tabbed-standard")}}
 
@@ -84,11 +85,11 @@ _Les types de média_ décrivent la catégorie générale d'un appareil. Sauf qu
   - : Destiné principalement aux écrans.
 
 > [!NOTE]
-> CSS2.1 et [le module de spécification sur les requêtes média de niveau 3](https://drafts.csswg.org/mediaqueries-3/#background) ont défini des types de média supplémentaires (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, et `aural`), mais ceux-ci ont été dépréciés avec [le module de spécification sur les requêtes média de niveau 4](https://dev.w3.org/csswg/mediaqueries/#media-types) et ne devraient donc pas être utilisés.
+> CSS2.1 et [le module de spécification sur les requêtes média de niveau 3 <sup>(angl.)</sup>](https://drafts.csswg.org/mediaqueries-3/#background) ont défini des types de média supplémentaires (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, et `aural`), mais ceux-ci ont été dépréciés avec [le module de spécification sur les requêtes média de niveau 4 <sup>(angl.)</sup>](https://dev.w3.org/csswg/mediaqueries/#media-types) et ne devraient donc pas être utilisés.
 
 ### Caractéristiques média
 
-Une _`<media feature>`_ décrit une caractéristique spécifique de l'{{Glossary("user agent", "agent utilisateur")}}, du périphérique de sortie ou de l'environnement.
+Une _`<media feature>`_ décrit une caractéristique spécifique de {{Glossary("user agent", "l'agent utilisateur")}}, du périphérique de sortie ou de l'environnement.
 Les expressions de caractéristique média testent leur présence, leur valeur ou une plage de valeurs, et sont entièrement optionnelles. Chaque expression de caractéristique média doit être entourée de parenthèses.
 
 - {{CSSxRef("@media/any-hover", "any-hover")}}
@@ -108,7 +109,7 @@ Les expressions de caractéristique média testent leur présence, leur valeur o
 - {{CSSxRef("@media/device-height", "device-height")}}
   - : Hauteur de la surface de rendu du périphérique de sortie. Déprécié dans Media Queries niveau 4.
 - {{CSSxRef("@media/device-posture", "device-posture")}}
-  - : Détecte la posture actuelle du périphérique, c'est-à-dire si la zone d'affichage est à plat ou pliée. Défini dans l'[API Device Posture](/fr/docs/Web/API/Device_Posture_API).
+  - : Détecte la posture actuelle du périphérique, c'est-à-dire si la zone d'affichage est à plat ou pliée. Défini dans [l'API Device Posture](/fr/docs/Web/API/Device_Posture_API).
 - {{CSSxRef("@media/device-width", "device-width")}}
   - : Largeur de la surface de rendu du périphérique de sortie. Déprécié dans Media Queries niveau 4.
 - {{CSSxRef("@media/display-mode", "display-mode")}}
@@ -124,7 +125,7 @@ Les expressions de caractéristique média testent leur présence, leur valeur o
 - {{CSSxRef("@media/height", "height")}}
   - : Hauteur de la zone d'affichage (<i lang="en">viewport</i> en anglais).
 - {{CSSxRef("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
-  - : Détecte si le périphérique possède un nombre spécifié de segments de zone d'affichage disposés horizontalement.
+  - : Détecte si le périphérique possède un nombre défini de segments de zone d'affichage disposés horizontalement.
 - {{CSSxRef("@media/hover", "hover")}}
   - : Le mécanisme d'entrée principal permet-il à l'utilisateur·ice de survoler des éléments&nbsp;?
 - {{CSSxRef("@media/inverted-colors", "inverted-colors")}}
@@ -165,7 +166,7 @@ Les expressions de caractéristique média testent leur présence, leur valeur o
 - {{CSSxRef("@media/update", "update")}}
   - : Fréquence à laquelle le périphérique de sortie peut modifier l'apparence du contenu.
 - {{CSSxRef("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
-  - : Détecte si le périphérique possède un nombre spécifié de segments de zone d'affichage disposés verticalement. Ajouté dans Media Queries niveau 5.
+  - : Détecte si le périphérique possède un nombre défini de segments de zone d'affichage disposés verticalement. Ajouté dans Media Queries niveau 5.
 - {{CSSxRef("@media/video-dynamic-range", "video-dynamic-range")}}
   - : Combinaison de la luminosité, du contraste et de la profondeur de couleur prise en charge par le plan vidéo de l'agent utilisateur et du périphérique de sortie. Ajouté dans Media Queries niveau 5.
 - {{CSSxRef("@media/width", "width")}}
@@ -191,7 +192,7 @@ Il est aussi possible de combiner plusieurs requêtes média en une seule règle
 - `and`
   - : Cet opérateur permet de combiner plusieurs tests de caractéristiques afin que le résultat du test vaille `true` si chacun des tests individuels vaut `true`. Il permet également de joindre des tests de caractéristiques média et des tests de type de média.
 - `not`
-  - : Cet opérateur donne la négation d'une requête média, renvoyant `true` si la requête devait renvoyer `false`. Si cet opérateur est présent dans une liste de requêtes séparées par des virgules, la négation portera uniquement sur la requête sur laquelle l'opérateur est appliqué. Si l'opérateur `not` est utilisé, il _est nécessaire_ d'indiquer un type de média.
+  - : Cet opérateur donne la négation d'une requête média, renvoyant `true` si la requête devait renvoyer `false`. Si cet opérateur est présent dans une liste de requêtes séparées par des virgules, la négation porte uniquement sur la requête sur laquelle l'opérateur est appliqué. Si l'opérateur `not` est utilisé, il _est nécessaire_ d'indiquer un type de média.
 
     > [!NOTE]
     > Dans la spécification de niveau 3, le mot-clé `not` permet uniquement de prendre la négation d'une requête média entière (et pas d'une caractéristique seule).
@@ -199,13 +200,13 @@ Il est aussi possible de combiner plusieurs requêtes média en une seule règle
 - `only`
   - : Applique la mise en forme uniquement si toute la requête correspond. Ce mot-clé est utile pour empêcher les anciens navigateurs d'appliquer les styles en question. Sans utiliser `only`, les anciens navigateurs interpréteraient la requête `screen and (max-width: 500px)` comme `screen`, en ignorant le reste et en appliquant donc le style à tous les écrans. Si l'opérateur `only` est utilisé, il _est nécessaire_ d'indiquer un type de média.
 - `,` (virgule)
-  - : Les virgules sont utilisées pour combiner plusieurs requêtes média en une seule règle. Chaque requête d'une liste de requêtes séparées par des virgules est traitée séparément des autres. Ainsi, si une des requêtes de la liste vaut `true`, l'ensemble de l'instruction renverra `true`. Autrement dit, la virgule agit comme un opérateur logique `or`.
+  - : Les virgules sont utilisées pour combiner plusieurs requêtes média en une seule règle. Chaque requête d'une liste de requêtes séparées par des virgules est traitée séparément des autres. Ainsi, si une des requêtes de la liste vaut `true`, l'ensemble de l'instruction retourne `true`. Autrement dit, la virgule agit comme un opérateur logique `or`.
 - `or`
   - : Équivalent à l'opérateur `,`. Ajouté dans Media Queries Level 4.
 
 ### Indications client de l'agent utilisateur
 
-Certaines requêtes média disposent d'[indications client de l'agent utilisateur](/fr/docs/Web/HTTP/Guides/Client_hints) correspondantes.
+Certaines requêtes média disposent [d'indications client de l'agent utilisateur](/fr/docs/Web/HTTP/Guides/Client_hints) correspondantes.
 Ce sont des en-têtes HTTP qui demandent un contenu pré-optimisé pour une exigence média particulière.
 Elles incluent {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} et {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}.
 
@@ -229,7 +230,7 @@ Pour cette raison, un navigateur peut choisir de modifier les valeurs renvoyées
 
 ## Exemples
 
-### Tester les types de média print et screen
+### Tester les types de média `print` et `screen`
 
 ```css
 @media print {

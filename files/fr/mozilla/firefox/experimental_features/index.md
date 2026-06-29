@@ -3,7 +3,7 @@ title: Fonctionnalités expérimentales dans Firefox
 short-title: Fonctionnalités expérimentales
 slug: Mozilla/Firefox/Experimental_features
 l10n:
-  sourceCommit: fa3c5c29a9d186b9970860bff1f513d3fb4ca354
+  sourceCommit: 291993c57c245249cf27c80f33f3dd22f8dd140d
 ---
 
 Cette page répertorie les fonctionnalités expérimentales et partiellement implémentées de Firefox, y compris les standards de la plateforme web en évolution ou proposés.
@@ -133,7 +133,7 @@ Vous pouvez également utiliser la notation fonctionnelle {{CSSxRef("animation-t
 
 Pour plus d'informations, voir [le bogue Firefox 1807685 <sup>(angl.)</sup>](https://bugzil.la/1807685), [le bogue Firefox 1804573 <sup>(angl.)</sup>](https://bugzil.la/1804573), [le bogue Firefox 1809005 <sup>(angl.)</sup>](https://bugzil.la/1809005), [le bogue Firefox 1676791 <sup>(angl.)</sup>](https://bugzil.la/1676791), [le bogue Firefox 1754897 <sup>(angl.)</sup>](https://bugzil.la/1754897), [le bogue Firefox 1817303 <sup>(angl.)</sup>](https://bugzil.la/1817303) et [le bogue Firefox 1737918 <sup>(angl.)</sup>](https://bugzil.la/1737918).
 
-Les propriétés {{CSSxRef('timeline-scope')}}, {{CSSxRef('animation-range-start')}} et {{CSSxRef('animation-range-end')}} (ainsi que la propriété abrégée {{CSSxRef('animation-range')}}) ne sont pas encore prises en charge. Pour plus d'informations, voir [le bogue Firefox 1676779 <sup>(angl.)</sup>](https://bugzil.la/1676779).
+La propriété {{CSSxRef('timeline-scope')}} n'est pas encore prise en charge. Pour plus d'informations, voir [le bogue Firefox 1676779 <sup>(angl.)</sup>](https://bugzil.la/1676779).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -161,7 +161,8 @@ La fonctionnalité média CSS {{CSSxRef("@media/prefers-reduced-transparency")}}
 
 ### Fonctionnalité média `inverted-colors`
 
-La fonctionnalité média CSS {{CSSxRef("@media/inverted-colors")}} permet de détecter si un agent utilisateur ou le système d'exploitation sous-jacent inverse les couleurs. (Voir [le bogue Firefox 1794628 <sup>(angl.)</sup>](https://bugzil.la/1794628) pour plus de détails.)
+La fonctionnalité média CSS {{CSSxRef("@media/inverted-colors")}} permet de détecter si un agent utilisateur ou le système d'exploitation sous-jacent inverse les couleurs.
+Voir [le bogue Firefox 1794628 <sup>(angl.)</sup>](https://bugzil.la/1794628) pour plus de détails.
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -191,7 +192,8 @@ Ce nom peut ensuite être assigné à `animation-timeline`, ce qui permet d'anim
 ### Fonction anonyme de progression de la vue
 
 La fonction CSS {{CSSxRef("animation-timeline/view")}} permet d'indiquer que la propriété `animation-timeline` d'un élément est une timeline de progression de la vue, ce qui animera l'élément lorsqu'il se déplace dans la zone visible de son élément de défilement ancêtre.
-La fonction définit l'axe de l'élément parent qui fournit la timeline, ainsi que l'encart dans la zone visible où l'animation commence et se termine. (Voir [le bogue Firefox 1808410 <sup>(angl.)</sup>](https://bugzil.la/1808410) pour plus de détails.)
+La fonction définit l'axe de l'élément parent qui fournit la timeline, ainsi que l'encart dans la zone visible où l'animation commence et se termine.
+Voir [le bogue Firefox 1808410 <sup>(angl.)</sup>](https://bugzil.la/1808410) pour plus de détails.
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -320,17 +322,17 @@ La règle CSS {{CSSxRef("@custom-media")}} permet de définir des alias pour des
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
-| Nightly           | 146                    | Non                 |
-| Developer Edition | 146                    | Non                 |
-| Beta              | 146                    | Non                 |
-| Release           | 146                    | Non                 |
+| Nightly           | 148                    | Non                 |
+| Developer Edition | 148                    | Non                 |
+| Beta              | 148                    | Non                 |
+| Release           | 148                    | Non                 |
 
 - `layout.css.custom-media.enabled`
   - : Mettre sur `true` pour activer.
 
 ### Valeurs `<attr-type>` dans la fonction CSS `attr()`
 
-La fonction CSS {{CSSxRef("attr")}} prend désormais en charge les valeurs [`<attr-type>`](/fr/docs/Web/CSS/Reference/Values/attr#attr-type). Cela vous permet de spécifier comment une valeur d'attribut est analysée en une valeur CSS et de prendre ces valeurs directement à partir de [`data-*`](/fr/docs/Web/HTML/How_to/Use_data_attributes). ([Bogue Firefox 1986631 <sup>(angl.)</sup>](https://bugzil.la/1986631), [bogue Firefox 1998245 <sup>(angl.)</sup>](https://bugzil.la/1998245))
+La fonction CSS {{CSSxRef("attr")}} prend désormais en charge les valeurs [`<attr-type>`](/fr/docs/Web/CSS/Reference/Values/attr#attr-type). Cela vous permet de spécifier comment une valeur d'attribut est analysée en une valeur CSS et de prendre ces valeurs directement à partir de [`data-*`](/fr/docs/Web/HTML/How_to/Use_data_attributes). ([bogue Firefox 1986631 <sup>(angl.)</sup>](https://bugzil.la/1986631), [bogue Firefox 1998245 <sup>(angl.)</sup>](https://bugzil.la/1998245).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -342,32 +344,48 @@ La fonction CSS {{CSSxRef("attr")}} prend désormais en charge les valeurs [`<at
 - `layout.css.attr.enabled`
   - : Mettre sur `true` pour activer.
 
-### `color-mix()` accepte plusieurs arguments de couleur
+### Attributs avec espace de noms dans la fonction CSS `attr()`
 
-La fonction CSS [`color-mix()`](/fr/docs/Web/CSS/Reference/Values/color_value/color-mix) prend désormais en charge plusieurs valeurs [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value), et pas seulement deux. Cela vous permet de mélanger plusieurs couleurs et de définir les pourcentages de chacune. ([Bogues Firefox 2007772 <sup>(angl.)</sup>](https://bugzil.la/2007772)).
+La fonction CSS {{CSSxRef("attr")}} prend désormais en charge les [attributs avec espace de noms](/fr/docs/Web/CSS/Reference/Values/attr#namespaces). Cela vous permet de prendre des attributs d'éléments de langages basés sur [XML](/fr/docs/Web/XML), tels que [SVG](/fr/docs/Web/SVG), et de les mettre en forme en conséquence. ([bogue Firefox 2014060 <sup>(angl.)</sup>](https://bugzil.la/2014060))
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
-| Nightly           | 150                    | Oui                 |
-| Developer Edition | 149                    | Non                 |
-| Beta              | 149                    | Non                 |
-| Release           | 149                    | Non                 |
+| Nightly           | 150                    | Non                 |
+| Developer Edition | 150                    | Non                 |
+| Beta              | 150                    | Non                 |
+| Release           | 150                    | Non                 |
 
-- `layout.css.color-mix-multi-color.enabled`
+- `layout.css.attr.enabled`
   - : Mettre sur `true` pour activer.
 
-### Pseudo-classes basées sur les médias
+### Requêtes `@container style()`
 
-Les pseudo-classes basées sur les médias {{CSSxRef(":buffering")}}, {{CSSxRef(":muted")}}, {{CSSxRef(":paused")}}, {{CSSxRef(":playing")}}, {{CSSxRef(":seeking")}}, {{CSSxRef(":stalled")}}, et {{CSSxRef(":volume-locked")}} vous permettent de mettre en forme les éléments HTML {{HTMLElement("audio")}} et {{HTMLElement("video")}} en fonction de leur état actuel, comme en lecture ou en pause. ([Bogue Firefox 1707584](https://bugzil.la/1707584), [bogue Firefox 2014512](https://bugzil.la/2014512)).
+La règle CSS [`@container`](/fr/docs/Web/CSS/Reference/At-rules/@container) prend en charge les requêtes [`style()`](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#conteneurs_de_requêtes_de_style). Cela vous permet de vérifier si un conteneur possède une déclaration CSS valide, une propriété CSS ou une propriété personnalisée, et d'appliquer des styles à ses enfants en conséquence. ([bogue Firefox 2014404 <sup>(angl.)</sup>](https://bugzil.la/2014404)).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
-| Nightly           | 150                    | Oui                 |
+| Nightly           | 149                    | Oui                 |
 | Developer Edition | 149                    | Non                 |
 | Beta              | 149                    | Non                 |
 | Release           | 149                    | Non                 |
 
-- `dom.media.pseudo-classes.enabled`
+- `layout.css.style-queries.enabled`
+  - : Mettre sur `true` pour activer.
+
+### Éléments positionnés en absolu dans des conteneurs multi-colonnes et lors de l'impression
+
+Les éléments positionnés en absolu à l'intérieur des [conteneurs multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout) et lors de l'impression sont désormais correctement positionnés et fragmentés.
+Cela améliore l'interopérabilité avec d'autres navigateurs et empêche les problèmes de mise en page tels que le chevauchement du texte ou la perte de contenu.
+([bogue Firefox 2018797 <sup>(angl.)</sup>](https://bugzil.la/2018797)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 150                    | Oui                 |
+| Developer Edition | 150                    | Non                 |
+| Beta              | 150                    | Non                 |
+| Release           | 150                    | Non                 |
+
+- `layout.abspos.fragmentainer-aware-positioning.enabled`
   - : Mettre sur `true` pour activer.
 
 ## SVG
@@ -376,15 +394,50 @@ Les pseudo-classes basées sur les médias {{CSSxRef(":buffering")}}, {{CSSxRef(
 
 ## JavaScript
 
-**Aucune fonctionnalité expérimentale dans ce cycle de publication.**
+### Tableaux associatifs multiples d'import
+
+Support pour [les tableaux associatifs multiples d'import](/fr/docs/Web/HTML/Reference/Elements/script/type/importmap#fusion_de_plusieurs_tableaux_associatifs_dimport).
+Cela donne aux développeur·euse·s plus de flexibilité lors de la structuration et du chargement des modules JavaScript, car ils n'ont plus besoin de connaître toutes leurs correspondances de modules à l'avance et de les déclarer dans un seul tableau associatif d'importation chargeant tous les modules.
+([bogue Firefox 1916277 <sup>(angl.)</sup>](https://bugzil.la/1916277)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 150                    | Non                 |
+| Developer Edition | 150                    | Non                 |
+| Beta              | 150                    | Non                 |
+| Release           | 150                    | Non                 |
+
+- `dom.multiple_import_maps.enabled`
+  - : Mettre sur `true` pour activer.
 
 ## Les API Web
+
+### Registres d'éléments personnalisés à portée limitée
+
+La prise en charge des [registres d'éléments personnalisés à portée limitée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_des_éléments_personnalisés_à_portée_limitée) est en cours d'implémentation.
+Les registres à portée permettent à un arbre d'ombre de créer un {{DOMxRef("CustomElementRegistry")}} indépendant dont les définitions ne s'appliquent qu'à ce sous-arbre DOM spécifique.
+Cela permet d'éviter les collisions lorsque plusieurs composants Web déclarent des éléments portant le même nom.
+
+L'implémentation inclut&nbsp;:
+
+- La propriété `customElementRegistry` sur {{DOMxRef("Document")}}, {{DOMxRef("Element")}} et {{DOMxRef("ShadowRoot")}}.
+  ([bogue Firefox 2018900 <sup>(angl.)</sup>](https://bugzil.la/2018900)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 150                    | Non                 |
+| Developer Edition | 150                    | Non                 |
+| Beta              | 150                    | Non                 |
+| Release           | 150                    | Non                 |
+
+- `dom.scoped-custom-element-registries.enabled`
+  - : Mettre sur `true` pour activer.
 
 ### CSS Typed Object Model Level 1
 
 Le travail d'implémentation a commencé sur le [CSS Typed OM Level 1 <sup>(angl.)</sup>](https://drafts.css-houdini.org/css-typed-om/).
 Par exemple, la méthode {{DOMxRef("CSSNumericValue/to", "to()")}} de l'interface {{DOMxRef("CSSNumericValue")}} est prise en charge pour convertir une valeur numérique CSS d'une unité à une autre.
-([Bogue Firefox 1278697 <sup>(angl.)</sup>](https://bugzil.la/1278697)).
+([bogue Firefox 1278697 <sup>(angl.)</sup>](https://bugzil.la/1278697)).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |

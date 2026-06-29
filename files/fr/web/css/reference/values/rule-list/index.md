@@ -1,8 +1,9 @@
 ---
-title: <rule-list>
+title: Type CSS `<rule-list>`
+short-title: <rule-list>
 slug: Web/CSS/Reference/Values/rule-list
 l10n:
-  sourceCommit: 3ee2355c3c90cf92c3119b82f8ebfa5d16c91c53
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<rule-list>`** représente une séquence de **zéro ou plusieurs règles CSS**. Il est utilisé pour définir les endroits du CSS où plusieurs règles peuvent apparaître, comme le niveau supérieur d'une feuille de style ou à l'intérieur des règles @ de regroupement telles que `@media` ou `@supports`.
@@ -94,6 +95,6 @@ body {
 
 ## Voir aussi
 
-- La règle @ {{CSSxRef("@supports")}}
-- La règle @ {{CSSxRef("@media")}}
-- La règle @ {{CSSxRef("@custom-media")}}
+- La règle {{CSSxRef("@supports")}}
+- La règle {{CSSxRef("@media")}}
+- La règle {{CSSxRef("@custom-media")}}

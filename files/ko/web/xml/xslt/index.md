@@ -29,25 +29,25 @@ original_slug: Web/XSLT
 
 <div id="Quick_links">
   <ol>
-    <li><strong><a href="/ko/docs/Web/XSLT">XSLT</a></strong></li>
-    <li><strong><a href="/ko/docs/Web/EXSLT">EXSLT</a></strong></li>
-    <li><strong><a href="/ko/docs/Web/XPath">XPath</a></strong></li>
+    <li><strong><a href="/ko/docs/Web/XML/XSLT">XSLT</a></strong></li>
+    <li><strong><a href="/ko/docs/Web/XML/EXSLT">EXSLT</a></strong></li>
+    <li><strong><a href="/ko/docs/Web/XML/XPath">XPath</a></strong></li>
     <li class="toggle">
       <details open>
         <summary>Guides</summary>
         <ol>
           <li><a href="/ko/docs/Web/XSLT/Common_errors">Common XSLT Errors</a></li>
           <li><a href="/ko/docs/Web/XSLT/PI_Parameters">PI Parameters</a></li>
-          <li><a href="/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko">The XSLT/JavaScript Interface in Gecko</a></li>
-          <li><a href="/ko/docs/Web/XSLT/Transforming_XML_with_XSLT">Transforming XML with XSLT</a></li>
-          <li><a href="/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations">Using the
+          <li><a href="/ko/docs/conflicting/Web/API/XSLTProcessor">The XSLT/JavaScript Interface in Gecko</a></li>
+          <li><a href="/ko/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT">Transforming XML with XSLT</a></li>
+          <li><a href="/ko/docs/Web/API/XSLTProcessor">Using the
               Mozilla JavaScript interface to XSL Transformations</a></li>
         </ol>
       </details>
     </li>
     <li class="toggle">
       <details open>
-        <summary><a href="/ko/docs/XSLT/Element">XSLT Elements</a></summary>
+        <summary><a href="/ko/docs/Web/XML/XSLT/Reference/Element/element">XSLT Elements</a></summary>
         {{ListSubpagesForSidebar("/ko/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}
       </details>
     </li>

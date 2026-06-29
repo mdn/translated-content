@@ -1,8 +1,9 @@
 ---
-title: anchor-scope
+title: Propriété CSS `anchor-scope`
+short-title: anchor-scope
 slug: Web/CSS/Reference/Properties/anchor-scope
 l10n:
-  sourceCommit: f8ef875113a7d3e9952f41de68be1e3a3a1e6988
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`anchor-scope`** permet de limiter la portée dans laquelle un élément positionné peut être associé à des éléments d'ancre à un sous-arbre particulier.

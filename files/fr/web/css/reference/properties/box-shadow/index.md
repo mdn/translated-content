@@ -1,8 +1,9 @@
 ---
-title: box-shadow
+title: Propriété CSS `box-shadow`
+short-title: box-shadow
 slug: Web/CSS/Reference/Properties/box-shadow
 l10n:
-  sourceCommit: 710429f3ae667556b60370b3d3d355cbdcc6ebf0
+  sourceCommit: 2e4a849f599a666ea778b577d176529061e61efb
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`box-shadow`** ajoute des effets d'ombre autour du cadre d'un élément. Vous pouvez définir plusieurs effets séparés par des virgules. Une ombre de boîte est décrite par des décalages X et Y relatifs à l'élément, un rayon de flou, un rayon d'étalement et une couleur.
@@ -102,20 +103,20 @@ Pour définir plusieurs ombres, fournissez une liste d'ombres séparées par des
   - : Définit la longueur de décalage de l'ombre. Ce paramètre accepte deux, trois ou quatre valeurs. Les troisième et quatrième valeurs sont optionnelles. Elles sont interprétées comme suit&nbsp;:
     - Si deux valeurs sont définies, elles sont interprétées comme les valeurs `<offset-x>` (décalage horizontal) et `<offset-y>` (décalage vertical). Une valeur `<offset-x>` négative place l'ombre à gauche de l'élément. Une valeur `<offset-y>` négative place l'ombre au-dessus de l'élément.\
       Si elles ne sont pas définies, la valeur `0` est utilisée pour la longueur manquante. Si `<offset-x>` et `<offset-y>` valent toutes deux `0`, l'ombre est placée derrière l'élément (et peut générer un effet de flou si `<blur-radius>` et/ou `<spread-radius>` est défini)
-    - Si trois valeurs sont définies, la troisième valeur est interprétée comme `<blur-radius>`. Plus cette valeur est grande, plus le flou est important, donc l'ombre devient plus grande et plus légère. Les valeurs négatives ne sont pas autorisées. Si elle n'est pas définie, elle sera fixée à `0` (ce qui signifie que le bord de l'ombre sera net). La spécification n'inclut pas d'algorithme exact pour le calcul du rayon de flou&nbsp;; cependant, elle précise&nbsp;:
+    - Si trois valeurs sont définies, la troisième valeur est interprétée comme `<blur-radius>`. Plus cette valeur est grande, plus le flou est important, donc l'ombre devient plus grande et plus légère. Les valeurs négatives ne sont pas autorisées. Si elle n'est pas définie, elle est fixée à `0` (ce qui signifie que le bord de l'ombre est net). La spécification n'inclut pas d'algorithme exact pour le calcul du rayon de flou&nbsp;; cependant, elle précise&nbsp;:
 
       > …pour un bord d'ombre long et droit, cela doit créer une transition de couleur sur la longueur de la distance de flou, perpendiculaire et centrée sur le bord de l'ombre, et qui va de la couleur complète de l'ombre à l'extrémité du rayon à l'intérieur de l'ombre jusqu'à totalement transparent à l'extrémité extérieure.
 
-    - Si quatre valeurs sont définies, la quatrième valeur est interprétée comme `<spread-radius>`. Les valeurs positives feront que l'ombre s'étendra et deviendra plus grande, les valeurs négatives feront que l'ombre rétrécira. Si elle n'est pas définie, elle sera fixée à `0` (c'est-à-dire que l'ombre aura la même taille que l'élément).
+    - Si quatre valeurs sont définies, la quatrième valeur est interprétée comme `<spread-radius>`. Les valeurs positives font que l'ombre s'étend et devient plus grande, les valeurs négatives font que l'ombre rétrécit. Si elle n'est pas définie, elle est fixée à `0` (c'est-à-dire que l'ombre a la même taille que l'élément).
 
 - `inset` {{Optional_Inline}}
-  - : Modifie l'ombre d'une ombre portée extérieure à une ombre portée intérieure (comme si le contenu était enfoncé dans la boîte). Les ombres intérieures sont dessinées à l'intérieur de la bordure de la boîte (même si la bordure est transparente), et elles apparaissent au-dessus de l'arrière-plan mais sous le contenu. Par défaut, l'ombre se comporte comme une ombre portée, donnant l'apparence que la boîte est surélevée par rapport à son contenu. C'est le comportement par défaut lorsque `inset` n'est pas défini.
+  - : Modifie l'ombre d'une ombre portée extérieure à une ombre portée intérieure (comme si le contenu était enfoncé dans la boîte). Les ombres intérieures sont limitées à la zone de remplissage de l'élément et apparaissent au-dessus de l'arrière-plan mais sous le contenu. Par défaut, l'ombre se comporte comme une ombre portée, donnant l'apparence que la boîte est surélevée par rapport à son contenu. C'est le comportement par défaut lorsque `inset` n'est pas défini.
 
 ### Interpolation
 
 Lors de l'animation des ombres, par exemple lorsque plusieurs valeurs d'ombre sur une boîte changent lors d'un survol, les valeurs sont interpolées. {{Glossary("Interpolation")}} détermine les valeurs intermédiaires des propriétés, comme le rayon de flou, le rayon d'étalement et la couleur, lors de la transition des ombres. Pour chaque ombre dans une liste d'ombres, la couleur, x, y, flou et étalement changent&nbsp;; la couleur comme {{CSSxRef("&lt;color&gt;")}}, et les autres valeurs comme {{CSSxRef("length")}}.
 
-Lors de l'interpolation de plusieurs ombres entre deux listes séparées par des virgules, les ombres sont appariées, dans l'ordre, avec interpolation entre les ombres appariées. Si les listes d'ombres ont des longueurs différentes, la liste la plus courte est complétée à la fin avec des ombres dont la couleur est `transparent`, et X, Y et flou sont à `0`, avec l'inset, ou l'absence d'inset, ajusté pour correspondre. Si, dans une paire d'ombres, l'une a `inset` et l'autre non, toute la liste d'ombres n'est pas interpolée&nbsp;; les ombres passeront aux nouvelles valeurs sans effet d'animation.
+Lors de l'interpolation de plusieurs ombres entre deux listes séparées par des virgules, les ombres sont appariées, dans l'ordre, avec interpolation entre les ombres appariées. Si les listes d'ombres ont des longueurs différentes, la liste la plus courte est complétée à la fin avec des ombres dont la couleur est `transparent`, et X, Y et flou sont à `0`, avec l'encart, ou l'absence d'encart, ajusté pour correspondre. Si, dans une paire d'ombres, l'une a `inset` et l'autre non, toute la liste d'ombres n'est pas interpolée&nbsp;; les ombres passent aux nouvelles valeurs sans effet d'animation.
 
 ## Description
 
@@ -169,7 +170,7 @@ blockquote {
 
 ### Définir zéro pour le décalage et le flou
 
-Lorsque les valeurs de `x-offset`, `y-offset` et `blur` sont toutes à zéro, l'ombre portée sera un contour uni de même taille sur tous les côtés. Les ombres sont dessinées de l'arrière vers l'avant, donc la première ombre se place au-dessus des suivantes. Lorsque la propriété `border-radius` est fixée à 0, ce qui est la valeur par défaut, les coins de l'ombre seront, eh bien, des coins. Si nous avions mis une valeur différente pour `border-radius`, les coins auraient été arrondis.
+Lorsque les valeurs de `x-offset`, `y-offset` et `blur` sont toutes à zéro, l'ombre portée est un contour uni de même taille sur tous les côtés. Les ombres sont dessinées de l'arrière vers l'avant, donc la première ombre se place au-dessus des suivantes. Lorsque la propriété `border-radius` est fixée à 0, ce qui est la valeur par défaut, les coins de l'ombre sont, eh bien, des coins. Si nous avions mis une valeur différente pour `border-radius`, les coins auraient été arrondis.
 
 Nous avons ajouté une marge de la taille de la plus large ombre portée pour garantir que l'ombre ne chevauche pas les éléments adjacents et ne dépasse pas la bordure du bloc englobant. Une ombre portée n'affecte pas les dimensions du [modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model).
 

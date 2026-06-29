@@ -1,13 +1,14 @@
 ---
-title: <input type="range">
+title: Valeur d'attribut HTML `<input type="range">`
+short-title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
 l10n:
-  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
-Les éléments {{HTMLElement("input")}} de type **`range`** permettent à l'utilisatrice ou l'utilisateur d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de `{{HTMLElement("input/number", "number")}}` par exemple).
+Les éléments {{HTMLElement("input")}} de type **`range`** permettent à l'utilisateur·ice d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de `{{HTMLElement("input/number", "number")}}` par exemple).
 
-Ce genre de composant n'étant pas précis, ce type ne devrait pas être utilisé lorsque la valeur exacte fournie est importante.
+Ce genre de composant n'étant pas précis, ce type ne doit pas être utilisé lorsque la valeur exacte fournie est importante.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
 
@@ -45,7 +46,7 @@ input {
 }
 ```
 
-Si le navigateur de l'utilisatrice ou l'utilisateur ne prend pas en charge le type `range`, il utilisera le type `{{HTMLElement('input/text', 'text')}}` à la place.
+Si le navigateur de l'utilisateur·ice ne prend pas en charge le type `range`, il utilise le type `{{HTMLElement('input/text', 'text')}}` à la place.
 
 ## Valeur
 
@@ -75,24 +76,24 @@ En complément des attributs communs à l'ensemble des éléments {{HTMLElement(
 
 ### `list`
 
-La valeur de cet attribut est l'identifiant ({{DOMxRef("Element.id", "id")}}) d'un élément {{HTMLElement("datalist")}} situé dans le même document. L'élément {{HTMLElement("datalist")}} fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Reference/Elements/input#type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
+La valeur de cet attribut est l'identifiant ({{DOMxRef("Element.id", "id")}}) d'un élément {{HTMLElement("datalist")}} situé dans le même document. L'élément {{HTMLElement("datalist")}} fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Reference/Elements/input#type)) n'est pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
 
 Voir l'exemple ci-après sur [le contrôle d'intervalle avec les marques](#un_contrôle_avec_des_marques) qui illustre comment ces options s'affichent dans les navigateurs qui prennent en charge la fonctionnalité.
 
 ### `max`
 
-La plus grande valeur autorisée sur l'intervalle. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)) dépasse ce seuil, [la validation échouera](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur fournie n'est pas un nombre, aucun maximum ne sera fixé pour la valeur du contrôle.
+La plus grande valeur autorisée sur l'intervalle. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)) dépasse ce seuil, [la validation échoue](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur fournie n'est pas un nombre, aucun maximum n'est fixé pour la valeur du contrôle.
 
 Cette valeur doit être supérieure ou égale à celle indiquée par l'attribut [`min`](/fr/docs/Web/HTML/Reference/Attributes/min). Voir l'attribut HTML [`max`](/fr/docs/Web/HTML/Reference/Attributes/max).
 
 ### `min`
 
-La plus petite valeur autorisée sur l'intervalle. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)) est inférieure à ce seuil, [la validation échouera](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur fournie n'est pas un nombre, aucun minimum (`min`) ne sera fixé pour la valeur du contrôle.
+La plus petite valeur autorisée sur l'intervalle. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)) est inférieure à ce seuil, [la validation échoue](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur fournie n'est pas un nombre, aucun minimum (`min`) n'est fixé pour la valeur du contrôle.
 
 Cette valeur doit être inférieure ou égale à celle indiquée par l'attribut [`max`](/fr/docs/Web/HTML/Reference/Attributes/max). Voir l'attribut HTML [`min`](/fr/docs/Web/HTML/Reference/Attributes/min).
 
 > [!NOTE]
-> Si les valeurs de `min` et `max` sont égales ou si la valeur de `max` est inférieure à la valeur de `min`, l'utilisateur·ice ne pourra pas interagir avec l'intervalle.
+> Si les valeurs de `min` et `max` sont égales ou si la valeur de `max` est inférieure à la valeur de `min`, l'utilisateur·ice ne peut pas interagir avec l'intervalle.
 
 ### `step`
 
@@ -100,10 +101,10 @@ L'attribut `step` est un nombre qui définit la granularité à laquelle la vale
 
 La valeur par défaut du pas pour les entrées `step` est `1`, ce qui permet de saisir uniquement des nombres entiers — à moins que la base du pas ne soit pas un nombre entier.
 
-Si cet attribut utilise la chaîne de caractère `any`, cela signifie qu'il n'y a aucune contrainte d'incrément et que toute valeur est autorisée (sous réserve de respecter les autres contraintes, comme celles indiquées par [`min`](#min) et [`max`](#max)). Voir l'exemple [Définir l'étape sur la valeur `any`](#utiliser_lattribut_step_avec_any) pour voir comment cela fonctionne dans les navigateurs pris en charge.
+Si cet attribut utilise la chaîne de caractères `any`, cela signifie qu'il n'y a aucune contrainte d'incrément et que toute valeur est autorisée (sous réserve de respecter les autres contraintes, comme celles indiquées par [`min`](#min) et [`max`](#max)). Voir l'exemple [Définir l'étape sur la valeur `any`](#utiliser_lattribut_step_avec_any) pour voir comment cela fonctionne dans les navigateurs pris en charge.
 
 > [!NOTE]
-> Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, {{Glossary("user agent", "l'agent utilisateur")}} pourra arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
+> Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, {{Glossary("user agent", "l'agent utilisateur")}} peut arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
 
 ## Attributs non standard
 
@@ -113,7 +114,7 @@ Semblable à la propriété CSS non standard `-moz-orient` qui agit sur les él�
 
 ## Exemples
 
-Bien que le type `number` permette à l'utilisatrice ou l'utilisateur de saisir un nombre avec certaines contraintes optionnelles (par exemple, pour que la valeur soit comprise entre un minimum et un maximum), ce type nécessite de saisir une valeur spécifique. Le type `range` permet de saisir une valeur lorsque l'exactitude de celle-ci importe peu.
+Bien que le type `number` permette à l'utilisateur·ice de saisir un nombre avec certaines contraintes optionnelles (par exemple, pour que la valeur soit comprise entre un minimum et un maximum), ce type nécessite de saisir une valeur spécifique. Le type `range` permet de saisir une valeur lorsque l'exactitude de celle-ci importe peu.
 
 Voici quelques scénarios où un contrôle de saisie avec un intervalle est plus pertinent&nbsp;:
 
@@ -122,13 +123,13 @@ Voici quelques scénarios où un contrôle de saisie avec un intervalle est plus
 - Les contrôles relatifs à la configuration de jeux vidéos (difficulté, distance de visibilité, taille du monde généré, etc.).
 - La longueur du mot de passe pour les mots de passe générés par un gestionnaire de mots de passe.
 
-De façon générale, si une utilisatrice ou un utilisateur est plutôt intéressé dans un pourcentage représentant la distance entre la borne minimale et la borne maximale, un intervalle de saisie sera plus pertinent (par exemple, pour le volume, on pensera plutôt «&nbsp;augmenter le volume jusqu'à la moitié du maximum&nbsp;» que «&nbsp;mettre le volume à 0.5&nbsp;»).
+De façon générale, si un·e utilisateur·ice est plutôt intéressé dans un pourcentage représentant la distance entre la borne minimale et la borne maximale, un intervalle de saisie est plus pertinent (par exemple, pour le volume, on pense plutôt «&nbsp;augmenter le volume jusqu'à la moitié du maximum&nbsp;» que «&nbsp;mettre le volume à 0.5&nbsp;»).
 
 ### Définir le minimum et le maximum
 
 Par défaut, le minimum vaut `0` et le maximum vaut `100`. Si ces bornes ne conviennent pas, on peut facilement les changer avec les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et/ou [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max). Ces attributs acceptent des nombres décimaux.
 
-Par exemple, afin de demander à une utilisatrice ou un utilisateur de choisir une valeur approximative dans l'intervalle `[-10, 10]`, on pourra utiliser&nbsp;:
+Par exemple, afin de demander à un·e utilisateur·ice de choisir une valeur approximative dans l'intervalle `[-10, 10]`, on peut utiliser&nbsp;:
 
 ```html
 <input type="range" min="-10" max="10" />
@@ -138,7 +139,7 @@ Par exemple, afin de demander à une utilisatrice ou un utilisateur de choisir u
 
 ### Définir la granularité
 
-Par défaut, la granularité vaut `1`, ce qui signifie que la valeur est toujours un entier. Cela peut être modifié grâce à l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) qui permet de contrôler la granularité. Ainsi, si on souhaite une valeur comprise entre `5` et `10` et précise avec deux chiffres après la virgule, on pourra utiliser l'attribut `step` avec la valeur `0.5`&nbsp;:
+Par défaut, la granularité vaut `1`, ce qui signifie que la valeur est toujours un entier. Cela peut être modifié grâce à l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) qui permet de contrôler la granularité. Ainsi, si on souhaite une valeur comprise entre `5` et `10` et précise avec deux chiffres après la virgule, on peut utiliser l'attribut `step` avec la valeur `0.5`&nbsp;:
 
 #### Utiliser l'attribut `step`
 
@@ -202,7 +203,7 @@ Pour ajouter des marques à un contrôle d'intervalle, incluez l'attribut `list`
 Pour éviter de répéter du code, vous pouvez réutiliser le même élément {{HTMLElement("datalist")}} pour plusieurs éléments `<input type="range">`, ainsi que pour d'autres types d'éléments {{HTMLElement("input")}}.
 
 > [!NOTE]
-> Si vous souhaitez également [afficher les étiquettes](#ajouter_des_étiquettes) comme dans l'exemple ci-dessous, vous aurez besoin d'un `datalist` pour chaque contrôle d'intervalle.
+> Si vous souhaitez également [afficher les étiquettes](#ajouter_des_étiquettes) comme dans l'exemple ci-dessous, vous avez besoin d'un `datalist` pour chaque contrôle d'intervalle.
 
 #### HTML
 
@@ -236,7 +237,7 @@ Pour éviter de répéter du code, vous pouvez réutiliser le même élément {{
 
 ### Ajouter des étiquettes
 
-Vous pouvez ajouter des étiquettes aux marques en donnant aux éléments `<option>` des attributs `label`. Cependant, le contenu des étiquettes ne sera pas affiché par défaut. Vous pouvez utiliser CSS pour afficher les étiquettes et les positionner correctement. Voici une façon de le faire.
+Vous pouvez ajouter des étiquettes aux marques en donnant aux éléments `<option>` des attributs `label`. Cependant, le contenu des étiquettes n'est pas affiché par défaut. Vous pouvez utiliser CSS pour afficher les étiquettes et les positionner correctement. Voici une façon de le faire.
 
 #### HTML
 
@@ -343,13 +344,6 @@ Voir [Créer des contrôles de formulaire verticaux](/fr/docs/Web/CSS/Guides/Wri
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.stepDown", "stepDown()")}}
-        et {{DOMxRef("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

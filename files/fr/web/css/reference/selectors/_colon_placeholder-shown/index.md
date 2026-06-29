@@ -1,8 +1,9 @@
 ---
-title: :placeholder-shown
+title: Pseudo-classe CSS `:placeholder-shown`
+short-title: :placeholder-shown
 slug: Web/CSS/Reference/Selectors/:placeholder-shown
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:placeholder-shown`** représente n'importe quel élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/HTML/Reference/Elements/input#placeholder).

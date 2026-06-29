@@ -1,10 +1,16 @@
 ---
-title: "CSP : script-src-elem"
+title: "Content-Security-Policy : directive script-src-elem"
+short-title: script-src-elem
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem
-original_slug: Web/HTTP/Headers/Content-Security-Policy/script-src-elem
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`script-src-elem`** indique les sources valides pour des éléments [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script). Elle ne porte pas sur les scripts embarqués via les attributs HTML pour la gestion d'évènements comme `onclick` (voir [`script-src-attr`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr) à ce propos).
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-elem`** indique les sources valides pour des éléments HTML {{HTMLElement("script")}}.
+
+Cette directive ne définit que les sources valides pour les éléments `<script>` (à la fois les requêtes de script et les blocs).
+Elle ne s'applique pas aux autres sources JavaScript pouvant déclencher l'exécution de scripts, telles que les gestionnaires d'évènements JavaScript embarqués (`onclick`), les méthodes d'exécution de scripts [soumis à la vérification `"unsafe-eval"`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#expression_unsafe-eval), et les [feuilles de style XSLT](/fr/docs/Web/XML/XSLT).
+(Les sources valides peuvent être définies pour toutes les sources de scripts JavaScript en utilisant {{CSP("script-src")}}, ou uniquement pour les gestionnaires de scripts embarqués en utilisant {{CSP("script-src-attr")}}.)
 
 <table class="properties">
   <tbody>
@@ -14,43 +20,52 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
+      <td>{{Glossary("Fetch directive", "Directive de récupération")}}</td>
     </tr>
     <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+      <th scope="row">Solution de repli {{CSP("default-src")}}</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src"><code>script-src</code></a>, qui a pour valeur par défaut celle de la directive <code>default-src</code>.
+        Oui, si cette directive est absente, l'agent utilisateur consultera la directive {{CSP("script-src")}}, qui a pour valeur par défaut celle de la directive <code>default-src</code>.
     </tr>
   </tbody>
 </table>
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
 ```http
-Content-Security-Policy: script-src-elem <source>;
-Content-Security-Policy: script-src-elem <source> <source>;
+Content-Security-Policy: script-src-elem 'none';
+Content-Security-Policy: script-src-elem <source-expression-list>;
 ```
 
-`script-src-elem` peut être utilisée avec [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)&nbsp;:
+Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
+
+- `'none'`
+  - : Aucune ressource de ce type ne peut être chargée. Les guillemets simples sont obligatoires.
+- `<source-expression-list>`
+  - : Une liste de valeurs _d'expressions de source_ séparées par des espaces. Les ressources de ce type peuvent être chargées si elles correspondent à l'une des expressions de source données. Pour cette directive, toutes les valeurs d'expression de source énumérées dans [la syntaxe des directives de récupération](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#syntaxe_des_directives_de_récupération) sont applicables, à l'exception de [`'unsafe-hashes'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-hashes).
+
+`script-src-elem` peut être utilisé en conjonction avec {{CSP("script-src")}}:
 
 ```http
 Content-Security-Policy: script-src <source>;
 Content-Security-Policy: script-src-elem <source>;
 ```
 
-### Sources
-
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associées)).
-
 ## Exemples
 
-### Valeur par défaut avec `script-src`
+### Cas de violation
 
-Si la directive `script-src-elem` est absente, l'agent utilisateur se rabat sur la valeur de la directive [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src), qui elle-même a pour valeur par défaut celle de la directive [`default-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src).
+Étant donné cet en-tête CSP&nbsp;:
+
+```http
+Content-Security-Policy: script-src-elem https://exemple.com/
+```
+
+…le script suivant est bloqué et ne sera ni chargé ni exécuté&nbsp;:
+
+```html
+<script src="https://hors-exemple.com/js/library.js"></script>
+```
 
 ## Spécifications
 
@@ -62,7 +77,7 @@ Si la directive `script-src-elem` est absente, l'agent utilisateur se rabat sur 
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
-- [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script)
-- [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)
-- [`script-src-attr`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr)
+- L'en-tête {{HTTPHeader("Content-Security-Policy")}}
+- L'élément HTML {{HTMLElement("script")}}
+- La directive CSP {{CSP("script-src")}}
+- La directive CSP {{CSP("script-src-attr")}}

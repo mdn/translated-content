@@ -3,7 +3,7 @@ title: "Défi : Page d'accueil effrayante"
 short-title: "Défi : Page d'accueil"
 slug: Learn_web_development/Core/Structuring_content/Splash_page
 l10n:
-  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
+  sourceCommit: 3b8fdeeaa5b96796870166b989de523261e5fc05
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video", "Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content")}}
@@ -378,7 +378,7 @@ Plus tard, vous devrez inclure les URL suivantes dans votre page.
 - `bee.jpg`: [Image pour la section "Abeilles, guêpes, fourmis (Hyménoptères)"](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/bee.jpg).
 - `beetle.png`: [Image pour la section "Coléoptères (Coleoptera)"](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/beetle.png).
 - `butterfly.jpg`: [Image pour la section "Papillons & mites (Lepidoptera)"](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/butterfly.jpg).
-- `mosquito.jpg`: [Image pour la section "Mouches & moustiques (Diptera)"](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/mosquito.jpg).
+- `fly.jpg`: [Image pour la section "Mouches & moustiques (Diptera)"](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/fly.jpg).
 - `spider.jpg`: [Image pour la section "Araignées (Araneae)"](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/spider.jpg).
 - `true_bug.jpg`: [Image pour la section "Punaises (Hemiptera)"](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/true_bug.jpg).
 - `bug_video_640.mp4`: [vidéo d'en-tête](https://mdn.github.io/shared-assets/videos/learn/bug_video_640.mp4).
@@ -603,11 +603,11 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
 
         <figure>
           <img
-            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/mosquito.jpg"
+            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/fly.jpg"
             alt="A hairy flying insect with long legs"
             width="250"
             height="180" />
-          <figcaption>A mosquito.</figcaption>
+          <figcaption>Une mouche.</figcaption>
         </figure>
 
         <p>
@@ -714,9 +714,9 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
           Les araignées se rencontrent dans presque tous les habitats sur Terre,
           des déserts aux grottes en passant par les habitations. Si certaines
           personnes les craignent, très peu d'espèces représentent un danger
-          pour les humains. En réalité, les araignées sont très utiles car elles
-          contribuent au contrôle des populations d'insectes, y compris des
-          ravageurs. Elles jouent un rôle crucial dans l'équilibre des
+          pour les humains. En réalité, les araignées sont très utiles, car
+          elles contribuent au contrôle des populations d'insectes, y compris
+          des ravageurs. Elles jouent un rôle crucial dans l'équilibre des
           écosystèmes, faisant d'elles l'un des «&nbsp;bestioles&nbsp;» non
           insectes les plus couramment rencontrés par les gens.
         </p>

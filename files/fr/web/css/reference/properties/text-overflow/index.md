@@ -1,8 +1,9 @@
 ---
-title: text-overflow
+title: Propriété CSS `text-overflow`
+short-title: text-overflow
 slug: Web/CSS/Reference/Properties/text-overflow
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-overflow`** définit la façon dont le contenu débordant masqué est signalé aux utilisateur·ice·s. Ce contenu peut être rogné, affiché avec une ellipse (`…`) ou affiché avec une chaîne de caractères personnalisée.

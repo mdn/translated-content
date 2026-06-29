@@ -3,12 +3,12 @@ title: Guide de style rédactionnel
 short-title: Style rédactionnel
 slug: MDN/Writing_guidelines/Writing_style_guide
 l10n:
-  sourceCommit: e5b34bf966c5183bd8ebfe720208a49b7ab639fd
+  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
 ---
 
 Ce guide de style rédactionnel décrit comment le contenu doit être rédigé, organisé, orthographié et mis en forme sur MDN Web Docs.
 
-Ces directives visent à assurer la cohérence de la langue et du style sur l'ensemble du site. Cela dit, nous nous intéressons davantage au contenu qu'à sa mise en forme, vous n'avez donc pas à apprendre l'intégralité du guide de style avant de contribuer. Toutefois, ne soyez pas surpris·e si une autre personne modifie ensuite votre travail pour le conformer à ce guide. Les relecteur·ice·s pourront aussi vous renvoyer vers ce guide lors de la soumission d'une proposition de contenu.
+Ces directives visent à assurer la cohérence de la langue et du style sur l'ensemble du site. Cela dit, nous nous intéressons davantage au contenu qu'à sa mise en forme, vous n'avez donc pas à apprendre l'intégralité du guide de style avant de contribuer. Toutefois, ne soyez pas surpris·e si une autre personne modifie ensuite votre travail pour le conformer à ce guide. Les relecteur·ice·s peuvent aussi vous renvoyer vers ce guide lors de la soumission d'une proposition de contenu.
 
 > [!NOTE]
 > Les aspects linguistiques de ce guide s'appliquent principalement à la documentation en **anglais**. D'autres langues peuvent, et sont encouragées à, créer leur propre guide de style. Ceux-ci doivent être publiés comme sous-pages de la page de l'équipe de localisation correspondante. Cependant, ce guide reste à consulter pour la mise en forme et l'organisation du contenu.
@@ -37,7 +37,7 @@ Gardez le public cible du contenu en tête. Par exemple, une page sur des techni
 Les trois C d'une bonne rédaction sont&nbsp;: clarté, concision et cohérence.
 
 - **Clair**&nbsp;: Assurez-vous que votre texte est clair et simple. En général, utilisez la voix active et des pronoms non ambigus. Écrivez des phrases courtes, une idée par phrase. Définissez les nouveaux termes, en tenant compte du public, avant de les utiliser.
-- **Concis**&nbsp;: Il est important de savoir quelle quantité d'information fournir. Trop de détails rend la page fastidieuse à lire et elle sera rarement utilisée.
+- **Concis**&nbsp;: Il est important de savoir quelle quantité d'information fournir. Trop de détails rend la page fastidieuse à lire et elle est rarement utilisée.
 - **Cohérent**&nbsp;: Utilisez la même terminologie de manière cohérente sur la page et entre plusieurs pages.
 
 ### Incluez des exemples pertinents
@@ -49,39 +49,39 @@ Vous pouvez aussi utiliser des exemples pour montrer des solutions à des tâche
 
 ### Fournissez une introduction descriptive
 
-Assurez-vous que le ou les premiers paragraphes avant le premier titre résument adéquatement les informations que la page va couvrir et ce que les lecteur·ice·s pourront accomplir après lecture. Ainsi, la personne qui lit peut déterminer rapidement si la page est pertinente pour ses besoins et ses objectifs d'apprentissage.
+Assurez-vous que le ou les premiers paragraphes avant le premier titre résument adéquatement les informations que la page va couvrir et ce que les lecteur·ice·s peuvent accomplir après lecture. Ainsi, la personne qui lit peut déterminer rapidement si la page est pertinente pour ses besoins et ses objectifs d'apprentissage.
 
-Dans un guide ou un tutoriel, l'introduction doit informer des sujets traités ainsi que des prérequis éventuels. Le premier paragraphe doit mentionner les technologies et/ou API documentées ou discutées, avec des liens vers les informations associées, et donner des indications sur les situations où le contenu de l'article sera utile.
+Dans un guide ou un tutoriel, l'introduction doit informer des sujets traités ainsi que des prérequis éventuels. Le premier paragraphe doit mentionner les technologies et/ou API documentées ou discutées, avec des liens vers les informations associées, et donner des indications sur les situations où le contenu de l'article est utile.
 
 - **Exemple d'introduction trop courte**&nbsp;: Cet exemple d'introduction est beaucoup trop court. Il omet trop d'informations, comme ce que signifie exactement «&nbsp;tracer&nbsp;» du texte, où le texte est dessiné, et ainsi de suite.
 
-  > **`CanvasRenderingContext2D.strokeText()`** dessine une chaîne.
+  > **`CanvasRenderingContext2D.strokeText()`** dessine une chaîne de caractères.
 
 - **Exemple d'introduction trop longue**&nbsp;: Cet exemple met à jour l'introduction, mais elle devient alors trop longue.
   Trop de détails sont inclus, et le texte part trop en profondeur dans la description d'autres méthodes et propriétés.
-  L'introduction devrait plutôt se concentrer sur la méthode `strokeText()` et renvoyer vers les guides appropriés pour les autres détails.
+  L'introduction doit plutôt se concentrer sur la méthode `strokeText()` et renvoyer vers les guides appropriés pour les autres détails.
 
-  > Lorsqu'elle est appelée, la méthode **`CanvasRenderingContext2D.strokeText()`** de l'API Canvas 2D trace les contours des caractères de la chaîne spécifiée à partir des coordonnées indiquées, en utilisant la couleur de stylo courante.
-  > En imagerie informatique, «&nbsp;tracer&nbsp;» un texte signifie dessiner le contour des glyphes de la chaîne sans remplir chaque caractère avec de la couleur.
+  > Lorsqu'elle est appelée, la méthode **`CanvasRenderingContext2D.strokeText()`** de l'API Canvas 2D trace les contours des caractères de la chaîne de caractères définie à partir des coordonnées indiquées, en utilisant la couleur de stylo courante.
+  > En imagerie informatique, «&nbsp;tracer&nbsp;» un texte signifie dessiner le contour des glyphes de la chaîne de caractères sans remplir chaque caractère avec de la couleur.
   >
-  > Le texte est dessiné en utilisant la police courante du contexte telle que définie par la propriété {{domxref("CanvasRenderingContext2D.font", "font")}} du contexte.
+  > Le texte est dessiné en utilisant la police courante du contexte telle que définie par la propriété {{DOMxRef("CanvasRenderingContext2D.font", "font")}} du contexte.
   >
-  > Le placement du texte par rapport aux coordonnées spécifiées est déterminé par les propriétés `textAlign`, `textBaseline` et `direction` du contexte.
-  > `textAlign` contrôle le placement de la chaîne par rapport à l'abscisse spécifiée&nbsp;; si la valeur est `"center"`, la chaîne est dessinée à partir de `x - (stringWidth / 2)`, plaçant l'abscisse spécifiée au milieu de la chaîne.
-  > Si la valeur est `"left"`, la chaîne est dessinée à partir de la valeur de `x` spécifiée.
-  > Et si `textAlign` vaut `"right"`, le texte est dessiné de sorte qu'il se termine à l'abscisse spécifiée.
+  > Le placement du texte par rapport aux coordonnées définies est déterminé par les propriétés `textAlign`, `textBaseline` et `direction` du contexte.
+  > `textAlign` contrôle le placement de la chaîne de caractères par rapport à l'abscisse définie&nbsp;; si la valeur est `"center"`, la chaîne de caractères est dessinée à partir de `x - (stringWidth / 2)`, plaçant l'abscisse définie au milieu de la chaîne de caractères.
+  > Si la valeur est `"left"`, la chaîne de caractères est dessinée à partir de la valeur de `x` définie.
+  > Et si `textAlign` vaut `"right"`, le texte est dessiné de sorte qu'il se termine à l'abscisse définie.
   >
   > (…)
   >
-  > Vous pouvez, en option, fournir un quatrième paramètre qui permet d'indiquer une largeur maximale pour la chaîne, en pixels.
+  > Vous pouvez, en option, fournir un quatrième paramètre qui permet d'indiquer une largeur maximale pour la chaîne de caractères, en pixels.
   > Si vous fournissez ce paramètre, le texte est compressé horizontalement ou mis à l'échelle (ou autrement ajusté) pour tenir dans un espace de cette largeur lors du rendu.
   >
-  > Vous pouvez appeler la méthode **`fillText()`** pour dessiner les caractères d'une chaîne remplis avec une couleur au lieu de ne tracer que leurs contours.
+  > Vous pouvez appeler la méthode **`fillText()`** pour dessiner les caractères d'une chaîne de caractères remplis avec une couleur au lieu de ne tracer que leurs contours.
 
 - **Exemple d'introduction appropriée**&nbsp;: La section suivante donne un bien meilleur aperçu de la méthode `strokeText()`.
 
-  > La méthode {{domxref("CanvasRenderingContext2D")}} **`strokeText()`**, qui fait partie de l'[API Canvas 2D](/fr/docs/Web/API/Canvas_API), trace les contours des caractères d'une chaîne donnée, ancrés à la position indiquée par les coordonnées X et Y fournies.
-  > Le texte est dessiné en utilisant la {{domxref("CanvasRenderingContext2D.font", "police")}} courante du contexte, et est justifié et aligné selon les propriétés {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}} et {{domxref("CanvasRenderingContext2D.direction", "direction")}}.
+  > La méthode {{DOMxRef("CanvasRenderingContext2D")}} **`strokeText()`**, qui fait partie de [l'API Canvas 2D](/fr/docs/Web/API/Canvas_API), trace les contours des caractères d'une chaîne de caractères donnée, ancrés à la position indiquée par les coordonnées X et Y fournies.
+  > Le texte est dessiné en utilisant la {{DOMxRef("CanvasRenderingContext2D.font", "police")}} courante du contexte, et est justifié et aligné selon les propriétés {{DOMxRef("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{DOMxRef("CanvasRenderingContext2D.textBaseline", "textBaseline")}} et {{DOMxRef("CanvasRenderingContext2D.direction", "direction")}}.
   >
   > Pour plus de détails et des exemples, voir la section [Texte](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#texte) de la page «&nbsp;Dessiner des graphiques&nbsp;» ainsi que notre article principal sur le sujet, [Dessiner du texte](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -89,16 +89,22 @@ Dans un guide ou un tutoriel, l'introduction doit informer des sujets traités a
 
 MDN a un public large et divers.
 Nous recommandons fortement de rendre le texte aussi inclusif que possible.
-Voici des alternatives à certains termes couramment utilisés dans la documentation&nbsp;:
+Certains termes, bien qu'ils n'aient pas l'intention d'être offensants, peuvent aliéner des lecteur·ice·s de certains horizons, tels que&nbsp;:
 
 - Évitez **maître** et **esclave**, préférez **principal** et **réplica**.
 - Remplacez **liste blanche** et **liste noire** par **liste d'autorisation** et **liste d'interdiction**.
 - **Sanity** doit être remplacé par **cohérence**.
 - À la place de **dummy**, utilisez **exemple**.
-- Vous ne devriez pas avoir besoin d'utiliser **fou** et **insensé** dans la documentation&nbsp;; si c'est le cas, envisagez d'utiliser **fantastique** à la place.
+- Vous ne devez pas avoir besoin d'utiliser **fou** et **insensé** dans la documentation&nbsp;; si c'est le cas, envisagez d'utiliser **fantastique** à la place.
+
+Évitez les idiomes figuratifs avec des représentations de violence ou de cruauté, qui peuvent choquer certains publics et donner un ton inapproprié à la documentation. Par exemple&nbsp;:
+
+- Au lieu de «&nbsp;tuer deux oiseaux avec une pierre&nbsp;», utilisez «&nbsp;faire d'une pierre deux coups&nbsp;».
+- Au lieu de «&nbsp;battre un cheval mort&nbsp;», utilisez «&nbsp;insister sur ce point&nbsp;» ou «&nbsp;tourner en rond&nbsp;».
+- Au lieu de «&nbsp;plus d'une façon de dépouiller un chat&nbsp;», utilisez «&nbsp;plus d'une façon de faire cela&nbsp;».
 
 Il est préférable d'utiliser un langage épicène lorsque le genre n'est pas pertinent.
-Par exemple, si vous parlez des actions d'un homme spécifique, utiliser «&nbsp;il&nbsp;»/«&nbsp;son&nbsp;» convient&nbsp;; mais si le sujet est une personne de n'importe quel genre, «&nbsp;il·elle&nbsp;»/«&nbsp;son·sa&nbsp;» n'est pas approprié.
+Par exemple, si vous parlez des actions d'un homme spécifique, utiliser «&nbsp;il·elle&nbsp;»/«&nbsp;son·sa&nbsp;» convient&nbsp;; mais si le sujet est une personne de n'importe quel genre, «&nbsp;il&nbsp;»/«&nbsp;lui&nbsp;» n'est pas approprié.
 
 Exemples&nbsp;:
 
@@ -160,28 +166,28 @@ L'objectif principal de tout texte sur MDN Web Docs doit toujours être d'expliq
 
 Cette section couvre les pratiques standard, recommandations et exigences pour aider les moteurs de recherche à catégoriser et indexer facilement notre contenu afin que les lecteur·ice·s trouvent ce dont iels ont besoin.
 
-La liste de contrôle suivante est utile lors de la rédaction et de la relecture afin de s'assurer que la page et ses voisines seront correctement indexées par les moteurs&nbsp;:
+La liste de contrôle suivante est utile lors de la rédaction et de la relecture afin de s'assurer que la page et ses voisines sont correctement indexées par les moteurs&nbsp;:
 
-- **Veillez à ce que les pages ne soient pas trop similaires**&nbsp;: Si le contenu de différentes pages se ressemble trop textuellement, les moteurs de recherche considéreront que les pages traitent du même sujet même si ce n'est pas le cas.
+- **Veillez à ce que les pages ne soient pas trop similaires**&nbsp;: Si le contenu de différentes pages se ressemble trop textuellement, les moteurs de recherche considèrent que les pages traitent du même sujet même si ce n'est pas le cas.
   Par exemple, si une interface a les propriétés `width` et `height`, il est facile que les textes se ressemblent étonnamment sur les deux pages, avec quelques mots échangés et le même exemple. Cela complique le travail des moteurs pour différencier les pages, qui finissent par se partager le classement, rendant chacune plus difficile à trouver.
 
   Il est donc important de s'assurer que chaque page a son propre contenu. Les suggestions suivantes peuvent aider&nbsp;:
-  - **Expliquez davantage de notions distinctives**&nbsp;: Cherchez des cas d'usage où il pourrait y avoir plus de différences qu'on ne le pense. Par exemple, pour `width` et `height`, parlez des différences d'usage de l'espace horizontal et vertical, et proposez une discussion adaptée. Vous pouvez mentionner par exemple l'usage de `width` pour faire de la place à une barre latérale, tandis que `height` gère le défilement vertical ou les pieds de page. Inclure des informations d'accessibilité est aussi utile et important.
+  - **Expliquez davantage de notions distinctives**&nbsp;: Cherchez des cas d'usage où il peut y avoir plus de différences qu'on ne le pense. Par exemple, pour `width` et `height`, parlez des différences d'usage de l'espace horizontal et vertical, et proposez une discussion adaptée. Vous pouvez mentionner par exemple l'usage de `width` pour faire de la place à une barre latérale, tandis que `height` gère le défilement vertical ou les pieds de page. Inclure des informations d'accessibilité est aussi utile et important.
   - **Utilisez des exemples différents**&nbsp;: Les exemples sont souvent encore plus similaires que le corps du texte, car ils peuvent utiliser plusieurs des mêmes méthodes ou propriétés. Écrivez donc un nouvel exemple, ou fournissez-en plusieurs, dont au moins certains différents.
   - **Ajoutez des descriptions pour les exemples**&nbsp;: Incluez un aperçu de ce que fait l'exemple ainsi qu'une explication de son fonctionnement, avec un niveau de détail adapté au sujet et au public cible.
 
   La façon la plus simple d'éviter une trop grande similarité est d'écrire chaque article à partir de zéro si le temps le permet.
 
-- **Veillez à ce que les pages ne soient pas trop courtes**&nbsp;: Si une page contient trop peu de contenu (appelées «&nbsp;pages maigres&nbsp;» en SEO), les moteurs de recherche ne les catalogueront pas correctement, voire pas du tout. Ces pages sont difficiles à trouver. À titre indicatif, veillez à ce que les pages ne fassent pas moins de 300 mots environ. N'allongez pas artificiellement une page&nbsp;; considérez ce seuil comme un objectif minimal quand c'est possible.
+- **Veillez à ce que les pages ne soient pas trop courtes**&nbsp;: Si une page contient trop peu de contenu (appelées «&nbsp;pages maigres&nbsp;» en SEO), les moteurs de recherche ne les cataloguent pas correctement, voire pas du tout. Ces pages sont difficiles à trouver. À titre indicatif, veillez à ce que les pages ne fassent pas moins de 300 mots environ. N'allongez pas artificiellement une page&nbsp;; considérez ce seuil comme un objectif minimal quand c'est possible.
 
   Ces lignes directrices de base peuvent aider à créer des pages suffisamment riches sans les encombrer de texte inutile&nbsp;:
   - **Évitez les ébauches**&nbsp;: Si l'article est une ébauche ou manque de contenu, complétez-le. Nous essayons d'éviter les pages «&nbsp;brouillon&nbsp;» sur MDN Web Docs, même si elles existent, et de nombreuses pages manquent de sections entières.
   - **Vérifiez la structure de la page**&nbsp;: Vérifiez que la page est structurée correctement pour son [type de page](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types). Assurez-vous que toutes les sections sont présentes et correctement remplies.
   - **Assurez l'exhaustivité**&nbsp;: Vérifiez que rien ne manque. Assurez-vous que tous les paramètres sont listés et expliqués. Couvrez les exceptions éventuelles — c'est un endroit où manquent souvent des informations.
-  - **Développez tous les concepts**&nbsp;: Il est facile de donner une explication rapide. Assurez-vous que toutes les nuances sont couvertes. Y a-t-il des cas particuliers&nbsp;? Des restrictions connues dont le lectorat devrait être informé&nbsp;?
-  - **Ajoutez des exemples**&nbsp;: Il devrait y avoir des exemples couvrant tous les paramètres ou au moins ceux que les personnes débutantes à intermédiaires utiliseront, ainsi que ceux avancés qui demandent des explications supplémentaires. Chaque exemple doit être précédé d'un aperçu de ce qu'il fait, des connaissances nécessaires, etc. Après l'exemple (ou entre des parties), ajoutez du texte expliquant le fonctionnement du code. Ne négligez pas les détails ni la gestion des erreurs. Gardez à l'esprit que les utilisateur·ice·s copieront vos exemples et que votre code finira en production.
+  - **Développez tous les concepts**&nbsp;: Il est facile de donner une explication rapide. Assurez-vous que toutes les nuances sont couvertes. Y a-t-il des cas particuliers&nbsp;? Des restrictions connues dont le lectorat doit être informé&nbsp;?
+  - **Ajoutez des exemples**&nbsp;: Il doit y avoir des exemples couvrant tous les paramètres ou au moins ceux que les personnes débutantes à intermédiaires utilisont, ainsi que ceux avancés qui demandent des explications supplémentaires. Chaque exemple doit être précédé d'un aperçu de ce qu'il fait, des connaissances nécessaires, etc. Après l'exemple (ou entre des parties), ajoutez du texte expliquant le fonctionnement du code. Ne négligez pas les détails ni la gestion des erreurs. Gardez à l'esprit que les utilisateur·ice·s copient vos exemples et que votre code finit en production.
     Voir nos [recommandations pour les exemples de code](/fr/docs/MDN/Writing_guidelines/Code_style_guide) pour plus d'informations.
-  - **Expliquez les cas d'usage**&nbsp;: S'il existe des cas d'usage fréquents pour la fonctionnalité décrite, parlez-en. Au lieu de supposer qu'une personne déduira qu'une méthode peut résoudre un problème courant, ajoutez une section avec un exemple et une explication.
+  - **Expliquez les cas d'usage**&nbsp;: S'il existe des cas d'usage fréquents pour la fonctionnalité décrite, parlez-en. Au lieu de supposer qu'une personne déduit qu'une méthode peut résoudre un problème courant, ajoutez une section avec un exemple et une explication.
   - **Ajoutez des informations sur les images**&nbsp;: Incluez un texte [`alt`](/fr/docs/Web/HTML/Reference/Elements/img#alt) approprié sur toutes les images et schémas. Ce texte, ainsi que les légendes, comptent, car les robots d'indexation ne lisent pas les images, donc le texte `alt` leur décrit le contenu.
 
     > [!NOTE]
@@ -288,7 +294,7 @@ La capitalisation officielle du site ou de la documentation doit toujours être 
 
 ### Contractions
 
-Notre style rédactionnel a tendance à être informel, donc vous pouvez utiliser des contractions (par exemple, «&nbsp;n'est pas&nbsp;», «&nbsp;ne peut pas&nbsp;», «&nbsp;ne devrait pas&nbsp;») si vous le souhaitez.
+Notre style rédactionnel a tendance à être informel, donc vous pouvez utiliser des contractions (par exemple, «&nbsp;n'est pas&nbsp;», «&nbsp;ne peut pas&nbsp;», «&nbsp;ne doit pas&nbsp;») si vous le souhaitez.
 
 ### Nombres et numéraux
 
@@ -338,8 +344,8 @@ La liste suivante décrit des situations courantes où il faut connaître les r�
     - **Incorrect**&nbsp;: «&nbsp;Sur les plateformes mobiles vous obtenez généralement un clavier numérique pour saisir des données.&nbsp;»
 
 - **Avant les conjonctions**&nbsp;: La virgule dite «&nbsp;d'Oxford&nbsp;» est la virgule qui précède la conjonction dans une série de trois éléments ou plus. Sur MDN Web Docs, nous utilisons la virgule d'Oxford. Les virgules séparent aussi chaque élément de la liste.
-  - **Correct**&nbsp;: «&nbsp;Je voyagerai en train, en avion, et en voiture.&nbsp;»
-  - **Incorrect**&nbsp;: «&nbsp;Je voyagerai en train, en avion et en voiture.&nbsp;»
+  - **Correct**&nbsp;: «&nbsp;Je voyage en train, en avion, et en voiture.&nbsp;»
+  - **Incorrect**&nbsp;: «&nbsp;Je voyage en train, en avion et en voiture.&nbsp;»
 
   N'utilisez pas de virgule avant «&nbsp;et&nbsp;» et «&nbsp;ou&nbsp;» dans une liste de deux éléments.
   - **Correct**&nbsp;: «&nbsp;Mon chien est mignon et intelligent.&nbsp;»
@@ -366,8 +372,8 @@ La liste suivante décrit des situations courantes où il faut connaître les r�
   - **Incorrect**&nbsp;: «&nbsp;L'objet Array possède des méthodes pour manipuler les tableaux de différentes façons comme les joindre, les inverser et les trier.&nbsp;»
 
   Exemple sans virgule&nbsp;: la proposition contenant «&nbsp;comme&nbsp;» est ici essentielle au sens.
-  - **Correct**&nbsp;: «&nbsp;Les applications web deviennent plus puissantes en ajoutant des fonctionnalités comme la manipulation audio et vidéo et en permettant l'accès aux données brutes via WebSockets.&nbsp;»
-  - **Incorrect**&nbsp;: «&nbsp;Les applications web deviennent plus puissantes en ajoutant des fonctionnalités, comme la manipulation audio et vidéo, et en permettant l'accès aux données brutes via WebSockets.&nbsp;»
+  - **Correct**&nbsp;: «&nbsp;Les applications web deviennent plus puissantes en ajoutant des fonctionnalités comme la manipulation audio et vidéo et en permettant l'accès aux données brutes avec les WebSockets.&nbsp;»
+  - **Incorrect**&nbsp;: «&nbsp;Les applications web deviennent plus puissantes en ajoutant des fonctionnalités, comme la manipulation audio et vidéo, et en permettant l'accès aux données brutes avec les WebSockets.&nbsp;»
 
 ### Traits d'union
 
@@ -380,13 +386,13 @@ Les mots composés ne doivent être traités avec un trait d'union que lorsque l
 
 Utilisez l'orthographe du français moderne.
 
-De manière générale, utilisez la première entrée du [Dictionnaire de l'Académie française](https://www.dictionnaire-academie.fr/), sauf si cette entrée est une variante ou est principalement utilisée dans une autre forme du français. Par exemple, si vous [recherchez «&nbsp;événement&nbsp;»](https://www.dictionnaire-academie.fr/article/A9E3137*), vous trouverez la mention «&nbsp;événement&nbsp;» comme forme principale, et «&nbsp;évènement&nbsp;» comme variante admise mais moins courante.
+De manière générale, utilisez la première entrée du [Dictionnaire de l'Académie française](https://www.dictionnaire-academie.fr/), sauf si cette entrée est une variante ou est principalement utilisée dans une autre forme du français. Par exemple, si vous [recherchez «&nbsp;évènement&nbsp;»](https://www.dictionnaire-academie.fr/article/A9E3137*), vous pouvez trouver la mention «&nbsp;évènement&nbsp;» comme forme principale, et «&nbsp;évènement&nbsp;» comme variante admise mais moins courante.
 N'utilisez pas les variantes orthographiques non recommandées.
 
-<!-- cSpell:ignore évènement -->
+<!-- cSpell:ignore événement -->
 
-- **Correct**&nbsp;: événement
-- **Incorrect**&nbsp;: évènement
+- **Correct**&nbsp;: évènement
+- **Incorrect**&nbsp;: événement
 
 > [!NOTE]
 > Ceci ne concerne que la documentation anglaise.
@@ -403,7 +409,7 @@ Dans le dépôt, nous maintenons plusieurs listes de mots, situées dans [`.vsco
 
 Voici nos recommandations pour certains termes techniques&nbsp;:
 
-- **Éléments HTML**&nbsp;: Utilisez le terme «&nbsp;élément&nbsp;» pour parler des éléments HTML et XML, plutôt que «&nbsp;balise&nbsp;». En outre, l'élément doit être entouré de chevrons «&nbsp;<>&nbsp;» et stylé avec des accents graves (backticks). Par exemple, utiliser \<input\> entre accents graves l'affichera comme `<input>` comme attendu.
+- **Éléments HTML**&nbsp;: Utilisez le terme «&nbsp;élément&nbsp;» pour parler des éléments HTML et XML, plutôt que «&nbsp;balise&nbsp;». En outre, l'élément doit être entouré de chevrons «&nbsp;<>&nbsp;» et stylé avec des accents graves (backticks). Par exemple, utiliser \<input\> entre accents graves l'affiche comme `<input>` comme attendu.
   - **Correct**&nbsp;: l'élément `<span>`
   - **Incorrect**&nbsp;: la balise span
 
@@ -442,13 +448,13 @@ Cette section liste les lignes directrices à suivre pour différentes parties d
 
 Une page MDN Web Docs peut contenir plusieurs exemples de code. Les recommandations suivantes s'appliquent à l'écriture d'exemples&nbsp;:
 
-- Chaque extrait devrait inclure&nbsp;:
+- Chaque extrait doit inclure&nbsp;:
   - **Titre**&nbsp;: Un court titre `###` (`<h3>`) décrivant le scénario démontré par l'exemple. Par exemple, «&nbsp;Utilisation de l'impression offset&nbsp;» et «&nbsp;Revenir au style du calque précédent&nbsp;».
   - **Description**&nbsp;: Une brève description avant le code qui précise ce sur quoi attirer l'attention. Par exemple, «&nbsp;Dans l'exemple suivant, deux couches de cascade sont définies en CSS, `base` et `special`.&nbsp;»
   - **Explication du résultat**&nbsp;: Une explication après le code qui décrit le résultat et le fonctionnement.
-- En général, l'exemple doit non seulement montrer la syntaxe et l'usage de la fonctionnalité, mais aussi mettre en avant l'objectif et les situations où une personne développeuse voudrait ou devrait l'utiliser.
+- En général, l'exemple doit non seulement montrer la syntaxe et l'usage de la fonctionnalité, mais aussi mettre en avant l'objectif et les situations où une personne développeuse veut ou doit l'utiliser.
 - Si vous travaillez avec un grand exemple, il peut être pertinent de le scinder en parties plus petites qui peuvent être décrites individuellement.
-- Lors de l'ajout d'[exemples interactifs](/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples), notez que tous les blocs de code d'un même type (HTML, CSS, JavaScript) sont concaténés avant l'exécution. Vous pouvez donc scinder le code en plusieurs segments, chacun avec ses propres descriptions, titres, etc. Cela rend la documentation de code très puissante et flexible.
+- Lors de l'ajout [d'exemples interactifs](/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples), notez que tous les blocs de code d'un même type (HTML, CSS, JavaScript) sont concaténés avant l'exécution. Vous pouvez donc scinder le code en plusieurs segments, chacun avec ses propres descriptions, titres, etc. Cela rend la documentation de code très puissante et flexible.
 
 Pour le style et la mise en forme des exemples, voir nos [Recommandations de style pour les exemples de code](/fr/docs/MDN/Writing_guidelines/Code_style_guide).
 
@@ -474,7 +480,7 @@ Nous suivons des recommandations similaires dans les sections [Voir aussi](#voir
 
 ### Liens externes
 
-Les liens externes sont autorisés dans des situations spécifiques. Utilisez les règles ci-dessous pour décider si un lien externe est pertinent. Les demandes qui ajoutent des liens externes seront refusées si elles ne respectent pas ces règles.
+Les liens externes sont autorisés dans des situations spécifiques. Utilisez les règles ci-dessous pour décider si un lien externe est pertinent. Les demandes qui ajoutent des liens externes sont refusées si elles ne respectent pas ces règles.
 
 Si vous envisagez d'ajouter un lien externe au contenu [Apprendre le développement web](/fr/docs/Learn_web_development), lisez aussi [Lignes directrices du contenu d'apprentissage &gt; Liens et intégrations partenaires](/fr/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds).
 
@@ -497,7 +503,7 @@ De manière générale, si vous envisagez d'ajouter un lien externe, assurez-vou
 - **Mauvais liens externes**&nbsp;: Ils manquent de pertinence, de maintenabilité, d'accessibilité, ou posent des obstacles aux lecteur·ice·s. Évitez les liens vers un contenu&nbsp;:
   - Générique ou non spécifique (par exemple, la page d'accueil d'un fournisseur plutôt que sa documentation pertinente)
   - Éphémère ou non maintenu (par exemple, une annonce ponctuelle)
-  - Auto-liant ou auto-promotionnel (par exemple, le propre travail de l'auteur en dehors de MDN)
+  - Auto-liant ou auto-promotionnel (par exemple, le propre travail de l'auteur·ice en dehors de MDN)
   - Payant derrière un péage (par exemple, un cours coûteux inaccessible à beaucoup)
   - Inaccessible (par exemple, une vidéo sans sous-titres)
 
@@ -512,7 +518,7 @@ De manière générale, si vous envisagez d'ajouter un lien externe, assurez-vou
 
 Un raccourcisseur d'URL peut être utile pour raccourcir des liens longs en adresses plus courtes et mémorisables. Cependant, ils masquent la destination. De plus, pour certains services, la destination peut être modifiée après création, ce qui peut être utilisé de manière malveillante.
 
-N'utilisez pas de liens créés via des raccourcisseurs tiers ouverts. Par exemple, si `https://monliencourt.lien/tototata` est une URL courte générée par une personne et redirige vers `https://exemple.fr/unlientroplong/details/show?page_id=tototata`, utilisez l'URL longue d'`exemple.fr`.
+N'utilisez pas de liens créés avec des raccourcisseurs tiers ouverts. Par exemple, si `https://monliencourt.lien/tototata` est une URL courte générée par une personne et redirige vers `https://exemple.fr/unlientroplong/details/show?page_id=tototata`, utilisez l'URL longue d'`exemple.fr`.
 
 <!-- markdownlint-disable search-replace -->
 
@@ -540,7 +546,7 @@ Gardez à l'esprit les recommandations suivantes lors de la création de sous-ti
 
 Si vous incluez des images ou d'autres médias sur une page, suivez ces règles&nbsp;:
 
-- Assurez-vous que la licence du média autorise son usage. Essayez d'utiliser des licences très permissives comme [CC0 <sup>(angl.)</sup>](https://creativecommons.org/public-domain/cc0/) ou au moins compatibles avec notre licence générale — [Creative Commons Attribution - Partage dans les mêmes conditions](https://creativecommons.org/licenses/by-sa/2.5/deed.fr).
+- Assurez-vous que la licence du média autorise son usage. Essayez d'utiliser des licences très permissives comme [CC0 <sup>(angl.)</sup>](https://wiki.creativecommons.org/wiki/CC0) ou au moins compatibles avec notre licence générale — [Creative Commons Attribution - Partage dans les mêmes conditions](https://creativecommons.org/licenses/by-sa/2.5/deed.fr).
 - Pour les images, passez-les par <https://tinypng.com> ou <https://imageoptim.com> pour réduire le poids.
 - Pour les `SVG`, faites passer le code par [SVGOMG <sup>(angl.)</sup>](https://jakearchibald.github.io/svgomg/), et assurez-vous que le fichier `SVG` a une ligne vide à la fin.
 - Chaque image doit [inclure un texte `alt` descriptif](/fr/docs/MDN/Writing_guidelines/Howto/Images_media#adding_alternative_text_to_images).
@@ -597,27 +603,27 @@ Pour maintenir la cohérence, gardez à l'esprit les points suivants lors de l'a
 
 #### Texte des liens
 
-- Le texte du lien doit être le même que le titre de la page ou de la section cible. Par exemple, le texte du lien vers la page [ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes) intitulée «&nbsp;ARIA states and properties&nbsp;» sera&nbsp;:
+- Le texte du lien doit être le même que le titre de la page ou de la section cible. Par exemple, le texte du lien vers la page [ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes) intitulée «&nbsp;ARIA states and properties&nbsp;» est&nbsp;:
   - **Correct**&nbsp;: [ARIA states and properties](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes)
-- Utilisez la casse phrase même si elle diffère du titre de la page ou de la section liée. Par exemple, le texte du lien vers la page [Mode Quirks](/fr/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) en casse phrase correcte sera&nbsp;:
+- Utilisez la casse phrase même si elle diffère du titre de la page ou de la section liée. Par exemple, le texte du lien vers la page [Mode Quirks](/fr/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) en casse phrase correcte est&nbsp;:
   - **Correct**&nbsp;: [Mode Quirks](/fr/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
 - Pour les liens externes, utilisez aussi la casse phrase même si la casse de l'article cible diffère. Exception&nbsp;: les titres de livres.
   > [!NOTE]
-  > Si le lien mène vers une page en anglais, on ajoutera la mention «&nbsp;<sup>(angl.)</sup>&nbsp;» après le texte du lien.
+  > Si le lien mène vers une page en anglais, on ajoute la mention «&nbsp;<sup>(angl.)</sup>&nbsp;» après le texte du lien.
 - Sur MDN, vous pouvez utiliser une macro pour lier une page, comme expliqué dans [Lier des pages dans les références](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#lien_vers_les_pages_de_références) sur la page _Macros couramment utilisées_. L'usage d'une macro ajoute un formatage de code au mot-clé dans le texte du lien, comme ci-dessous.
-- Aucune ponctuation en fin d'élément, il s'agira d'un terme ou d'un syntagme.
-  - **Correct**&nbsp;: Le mot-clé [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
-  - **Incorrect**&nbsp;: [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
-  - **Correct**&nbsp;: L'[API HTML DOM](/fr/docs/Web/API/HTML_DOM_API)
+- Aucune ponctuation en fin d'élément, il s'agit d'un terme ou d'un syntagme.
+  - **Correct**&nbsp;: Le mot-clé [`revert-layer`](/fr/docs/Web/CSS/Reference/Values/revert-layer)
+  - **Incorrect**&nbsp;: [`revert-layer`](/fr/docs/Web/CSS/Reference/Values/revert-layer)
+  - **Correct**&nbsp;: [L'API HTML DOM](/fr/docs/Web/API/HTML_DOM_API)
   - **Incorrect**&nbsp;: [HTML DOM API](/fr/docs/Web/API/HTML_DOM_API)
-- Comme montré, ajoutez un formatage code avec des accents graves aux mots-clés et littéraux dans le texte du lien, même si ce formatage n'apparaît pas dans les titres. Par exemple, pour le titre «&nbsp;le constructeur Array()&nbsp;», le texte du lien sera [le constructeur `Array()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
+- Comme montré, ajoutez un formatage code avec des accents graves aux mots-clés et littéraux dans le texte du lien, même si ce formatage n'apparaît pas dans les titres. Par exemple, pour le titre «&nbsp;le constructeur Array()&nbsp;», le texte du lien est [le constructeur `Array()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
 
 #### Texte descriptif
 
 - Gardez le texte descriptif autour du lien minimal. En cas de description, placez-la après le lien et un deux-points. Formulez comme un syntagme sans ponctuation finale. Gardez tout le texte lié en tête pour faciliter le balayage.
-  - **Correct**&nbsp;: {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}&nbsp;: Sélecteurs CSS pour mettre en forme des cases à cocher
+  - **Correct**&nbsp;: {{CSSxRef(":checked")}}, {{CSSxRef(":indeterminate")}}&nbsp;: Sélecteurs CSS pour mettre en forme des cases à cocher
 - N'utilisez pas la conjonction «&nbsp;and&nbsp;» avant le dernier élément d'une série.
-  - **Correct**&nbsp;: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}&nbsp;: Autres propriétés liées à la couleur
+  - **Correct**&nbsp;: {{CSSxRef("background-color")}}, {{CSSxRef("border-color")}}, {{CSSxRef("color")}}, {{CSSxRef("caret-color")}}, {{CSSxRef("column-rule-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}&nbsp;: Autres propriétés liées à la couleur
 - Pour les liens externes, essayez d'indiquer la source et l'année de publication ou de mise à jour entre parenthèses quand c'est pertinent. Cela renseigne la destination et aide la maintenance. Pour un article sur [l'attente au niveau supérieur](https://v8.dev/features/top-level-await) sur v8.dev (2019)&nbsp;:
   - **Correct**&nbsp;: [Top-level await <sup>(angl.)</sup>](https://v8.dev/features/top-level-await) sur v8.dev (2019)
 - Pour les livres, vous pouvez aussi fournir les auteur·ice·s. Évitez de le faire pour des billets de blog ou dépôts GitHub.
@@ -630,7 +636,7 @@ Pour maintenir la cohérence, gardez à l'esprit les points suivants lors de l'a
 
 ### Sous-pages
 
-Quand vous ajoutez des articles sur un sujet, vous le ferez typiquement en créant une page d'atterrissage, puis des sous-pages pour chaque article.
+Quand vous ajoutez des articles sur un sujet, vous le faites typiquement en créant une page d'atterrissage, puis des sous-pages pour chaque article.
 La page d'atterrissage doit commencer par un ou deux paragraphes décrivant le sujet ou la technologie, puis fournir une liste des sous-pages avec leur description.
 Vous pouvez automatiser l'insertion des pages dans la liste à l'aide de macros.
 
@@ -674,7 +680,7 @@ Gardez à l'esprit&nbsp;:
   - **Construction parallèle**&nbsp;: Utilisez un langage similaire pour des titres d'un même niveau. Par exemple, si un niveau `###` utilise des gérondifs en «&nbsp;-ing&nbsp;», essayez de tous les écrire ainsi. Si un titre commence par un verbe à l'impératif («&nbsp;Utiliser&nbsp;», «&nbsp;Configurer&nbsp;»), faites de même pour les autres au même niveau.
   - **Évitez de répéter le titre parent**&nbsp;: Ne répétez pas le texte d'un titre de niveau supérieur dans les titres de niveau inférieur. Par exemple, dans une section «&nbsp;Virgules&nbsp;», nommez une sous-section «&nbsp;Après une proposition introductive&nbsp;» plutôt que «&nbsp;Virgules après une proposition introductive&nbsp;».
   - **N'utilisez pas d'article initial**&nbsp;: Évitez de commencer les titres par «&nbsp;a&nbsp;», «&nbsp;an&nbsp;» ou «&nbsp;the&nbsp;».
-  - **Ajoutez un texte introductif**&nbsp;: Après un titre, ajoutez un court texte pour expliquer ce qui sera couvert.
+  - **Ajoutez un texte introductif**&nbsp;: Après un titre, ajoutez un court texte pour expliquer ce qui est couvert.
 
 ## Voir aussi
 

@@ -1,8 +1,9 @@
 ---
-title: mask-composite
+title: Propriété CSS `mask-composite`
+short-title: mask-composite
 slug: Web/CSS/Reference/Properties/mask-composite
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-composite`** permet d'effectuer une opération de composition entre le masque situé sur la couche de l'élément et le masque présent en dessous.

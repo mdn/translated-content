@@ -21,13 +21,13 @@ l10n:
           >설치된 기본 소프트웨어</a
         >,
         <a
-          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >파일 작업</a
         >에 대한 기본 지식, HTML 기초 (
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >를 공부하세요), CSS 작동 방식에 대한 아이디어 (
-        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 단계</a>를 공부하세요)
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS 첫 단계</a>를 공부하세요)
       </td>
     </tr>
     <tr>

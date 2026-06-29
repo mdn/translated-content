@@ -1,9 +1,9 @@
 ---
-title: "<html> : l'élément de racine du document HTML"
+title: "Élément HTML `<html>` : l'élément de racine du document HTML"
+short-title: <html>
 slug: Web/HTML/Reference/Elements/html
-original_slug: Web/HTML/Element/html
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML. Tout autre élément du document doit être un descendant de cet élément.
@@ -13,8 +13,8 @@ L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML.
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `version` {{Deprecated_Inline}}
-  - : Définit la version du document HTML <i lang="en">{{Glossary("Doctype", "Document Type Definition")}}</i> qui s'applique pour le document courant. Cet attribut n'est pas nécessaire car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
-- `xmlns`
+  - : Définit la version du document HTML <i lang="en">{{Glossary("Doctype", "Document Type Definition")}}</i> qui s'applique pour le document courant. Cet attribut n'est pas nécessaire, car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
+- `xmlns` {{Non-standard_Inline}}
   - : Définit {{Glossary("Namespace", "l'espace de noms")}} {{Glossary("XML")}} du document. La valeur par défaut est `"http://www.w3.org/1999/xhtml"`. Ceci est requis dans les documents analysés avec des {{Glossary("parser", "analyseurs")}} XML, et optionnel dans les documents text/html.
 
 ## Exemples

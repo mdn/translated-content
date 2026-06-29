@@ -1,8 +1,9 @@
 ---
-title: color
+title: Propriété CSS `color`
+short-title: color
 slug: Web/CSS/Reference/Properties/color
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`color`** permet de définir la valeur de couleur du texte d'un élément et de ses décorations de texte, et définit la valeur [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor). `currentColor` peut être utilisée comme valeur indirecte pour d'autres propriétés et constitue la valeur par défaut pour d'autres propriétés de couleur, telles que {{CSSxRef("border-color")}}.

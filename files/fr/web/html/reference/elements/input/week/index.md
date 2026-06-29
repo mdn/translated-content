@@ -1,8 +1,9 @@
 ---
-title: <input type="week">
+title: Valeur d'attribut HTML `<input type="week">`
+short-title: <input type="week">
 slug: Web/HTML/Reference/Elements/input/week
 l10n:
-  sourceCommit: 13856107d2cab5bb9e40de608ee38a5770ef7c4d
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`week`** créent des champs de saisie permettant de saisir facilement une année ainsi que le [numéro de semaine ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601#Semaine) correspondant à cette année (c'est-à-dire de la semaine 1 à la semaine [52 ou 53](https://fr.wikipedia.org/wiki/ISO_8601#Semaine)).
@@ -14,7 +15,7 @@ Les éléments {{HTMLElement("input")}} de type **`week`** créent des champs de
 
 <input
   type="week"
-  name="week"
+  name="semaine"
   id="camp-week"
   min="2018-W18"
   max="2018-W26"
@@ -37,7 +38,7 @@ label {
 
 L'interface utilisateur du contrôle varie d'un navigateur à l'autre&nbsp;; la prise en charge inter-navigateurs est actuellement un peu limitée, seuls Chrome/Opera et Microsoft Edge le prennent en charge pour l'instant. Dans les navigateurs qui ne le prennent pas en charge, le contrôle se dégrade gracieusement pour fonctionner de manière identique à [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text).
 
-![Un champ affichant 'semaine 01, 2017'. L'arrière-plan du 2017 utilise le même bleu que l'anneau de focus. Le champ contient 3 icônes : une croix pour effacer, un sélecteur avec de petites flèches haut et bas, et une flèche vers le bas plus grande. Un calendrier apparaît en pop-up sous le champ, réglé sur janvier 2017. La première colonne du calendrier indique la semaine : 52, 1, 2, 3, 4, 5. Le calendrier mensuel complet se trouve à droite. La ligne correspondant à la semaine 1 (du 2 au 8 janvier) est mise en surbrillance. Sur la même ligne que le mois, des boutons permettent de passer au mois suivant ou précédent.](week-control-chrome.png)
+![Un champ affichant 'semaine 01, 2017'. L'arrière-plan du 2017 utilise le même bleu que l'anneau de sélection. Le champ contient 3 icônes : une croix pour effacer, un sélecteur avec de petites flèches haut et bas, et une flèche vers le bas plus grande. Un calendrier apparaît en pop-up sous le champ, réglé sur janvier 2017. La première colonne du calendrier indique la semaine : 52, 1, 2, 3, 4, 5. Le calendrier mensuel complet se trouve à droite. La ligne correspondant à la semaine 1 (du 2 au 8 janvier) est mise en surbrillance. Sur la même ligne que le mois, des boutons permettent de passer au mois suivant ou précédent.](week-control-chrome.png)
 
 ## Valeur
 
@@ -46,13 +47,13 @@ Une chaîne de caractères qui représente la valeur de la semaine et de l'anné
 Il est possible de définir une valeur par défaut grâce à l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) de la façon suivante&nbsp;:
 
 ```html
-<label for="week"> À quelle semaine souhaiteriez-vous démarrer&nbsp;? </label>
-<input id="week" type="week" name="week" value="2017-W01" />
+<label for="semaine">À quelle semaine souhaitez-vous démarrer&nbsp;?</label>
+<input id="semaine" type="week" name="semaine" value="2017-W01" />
 ```
 
 {{EmbedLiveSample("Valeur", 600, 60)}}
 
-Une chose à noter est que le format affiché peut différer de la `value` réelle, qui est toujours formatée en `yyyy-Www`. Lorsque la valeur ci‑dessus est envoyée au serveur, par exemple, les navigateurs peuvent l'afficher sous la forme `Semaine 01, 2017`, mais la valeur soumise restera toujours `week=2017-W01`.
+Une chose à noter est que le format affiché peut différer de la `value` réelle, qui est toujours formatée en `yyyy-Www`. Lorsque la valeur ci‑dessus est envoyée au serveur, par exemple, les navigateurs peuvent l'afficher sous la forme `Semaine 01, 2017`, mais la valeur envoyée reste toujours `week=2017-W01`.
 
 Vous pouvez également obtenir et définir la valeur en JavaScript en utilisant la propriété {{DOMxRef("HTMLInputElement.value", "value")}} de l'élément d'entrée, par exemple&nbsp;:
 
@@ -79,21 +80,21 @@ Cette valeur doit être inférieure ou égale à la valeur de l'attribut `max`.
 
 ### `readonly`
 
-Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité par l'utilisateur·ice. La valeur de l'attribut `value` peut, toutefois, être modifiée avec du code JavaScript qui modifierait la valeur de la propriété `value` de l'objet {{DOMxRef("HTMLInputElement")}}.
+Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité par l'utilisateur·ice. La valeur de l'attribut `value` peut, toutefois, être modifiée avec du code JavaScript qui modifie la valeur de la propriété `value` de l'objet {{DOMxRef("HTMLInputElement")}}.
 
 > [!NOTE]
 > Puisqu'un champ en lecture seule ne peut pas avoir de valeur, `required` n'a pas d'effet sur les champs qui ont également `readonly` présent.
 
 ### `step`
 
-L'attribut `step` est un nombre qui définit la granularité à laquelle la valeur doit se conformer, ou la valeur spéciale `any`, décrite ci-dessous. Seules les valeurs qui sont un nombre entier de pas à partir de la base de pas sont valides. La base de pas est [`min`](#min) si spécifiée, [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) sinon, ou −259,200,000 (le début de la semaine `1970-W01`) si aucune n'est fournie.
+L'attribut `step` est un nombre qui définit la granularité à laquelle la valeur doit se conformer, ou la valeur spéciale `any`, décrite ci-dessous. Seules les valeurs qui sont un nombre entier de pas à partir de la base de pas sont valides. La base de pas est [`min`](#min) si définie, [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) sinon, ou −259,200,000 (le début de la semaine `1970-W01`) si aucune n'est fournie.
 
 Pour les champs `week`, la valeur de `step` est donnée en semaines et est traitée comme un nombre de millisecondes égal à 604,800,000 fois la valeur de `step` (la valeur numérique sous-jacente est en millisecondes). La valeur par défaut est 1, indiquant 1 semaine.
 
-Une valeur de chaîne de caractères `any` signifie qu'aucun pas n'est implicite, et toute valeur est autorisée (sauf autres contraintes, telles que [`min`](#min) et [`max`](#max)). En réalité, cela a le même effet que `1` pour les champs `week` car l'interface de sélection ne permet de choisir que des semaines entières.
+Une valeur de chaîne de caractères `any` signifie qu'aucun pas n'est implicite, et toute valeur est autorisée (sauf autres contraintes, telles que [`min`](#min) et [`max`](#max)). En réalité, cela a le même effet que `1` pour les champs `week`, car l'interface de sélection ne permet de choisir que des semaines entières.
 
 > [!NOTE]
-> Lorsque les données saisies par l'utilisateur·ice ne respectent pas cette contrainte, {{Glossary("user agent", "l'agent utilisateur")}} pourra arrondir à la valeur valide la plus proche, avec une préférence pour les dates les plus avancées quand deux dates sont aussi proches de la valeur saisie.
+> Lorsque les données saisies par l'utilisateur·ice ne respectent pas cette contrainte, {{Glossary("user agent", "l'agent utilisateur")}} peut arrondir à la valeur valide la plus proche, avec une préférence pour les dates les plus avancées quand deux dates sont aussi proches de la valeur saisie.
 
 ## Utiliser les contrôles de type `week`
 
@@ -107,10 +108,10 @@ La forme la plus simple de `<input type="week">` se compose d'un élément `<inp
 
 ```html
 <form>
-  <label for="week">
-    À quelle semaine souhaiteriez-vous commencer&nbsp;?
+  <label for="semaine">
+    À quelle semaine souhaitez-vous commencer&nbsp;?
   </label>
-  <input id="week" type="week" name="week" />
+  <input id="semaine" type="week" name="semaine" />
 </form>
 ```
 
@@ -118,11 +119,11 @@ La forme la plus simple de `<input type="week">` se compose d'un élément `<inp
 
 ### Contrôler la taille du champ
 
-`<input type="week">` ne prend pas en charge des attributs de dimensionnement (tel que [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size)). Il sera nécessaire d'utiliser [CSS](/fr/docs/Web/CSS) si on a besoin de modifier la taille du contrôle.
+`<input type="week">` ne prend pas en charge des attributs de dimensionnement (tel que [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size)). Il est nécessaire d'utiliser [CSS](/fr/docs/Web/CSS) si on a besoin de modifier la taille du contrôle.
 
 ### Utiliser l'attribut `step`
 
-En théorie, l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) devrait pouvoir être employé pour définir l'incrément minimal entre chaque semaine sélectionnable. Toutefois, il ne semble avoir encore aucun effet pour les navigateurs qui prennent en charge ce contrôle.
+En théorie, l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) doit pouvoir être employé pour définir l'incrément minimal entre chaque semaine sélectionnable. Toutefois, il ne semble avoir encore aucun effet pour les navigateurs qui prennent en charge ce contrôle.
 
 ## Validation
 
@@ -134,17 +135,22 @@ Les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`]
 
 ```html
 <form>
-  <label for="week">
-    À quelle semaine souhaiteriez-vous commencer&nbsp;?
+  <label for="semaine">
+    À quelle semaine souhaitez-vous commencer&nbsp;?
   </label>
-  <input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
-  <span class="validity"></span>
+  <input
+    id="semaine"
+    type="week"
+    name="semaine"
+    min="2017-W01"
+    max="2017-W52" />
+  <span class="validite"></span>
 </form>
 ```
 
 {{EmbedLiveSample("Paramétrer des semaines minimum et maximum", 600, 40)}}
 
-Voici la feuille de style utilisée dans l'exemple précédent. Vous pourrez noter qu'on utilise les pseudo-classes CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} afin de mettre en forme le contrôle selon que la valeur saisie est valide ou non. Les icônes associées sont placées dans un élément {{HTMLElement("span")}} situé à côté du champ et non sur le champ même car, pour Chrome, le contenu généré dynamiquement avec les pseudo-éléments serait placé dans le contrôle du formulaire et ne pourrait être mis en forme efficacement.
+Voici la feuille de style utilisée dans l'exemple précédent. Notez qu'on utilise les pseudo-classes CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} afin de mettre en forme le contrôle selon que la valeur saisie est valide ou non. Les icônes associées sont placées dans un élément {{HTMLElement("span")}} situé à côté du champ et non sur le champ même car, pour Chrome, le contenu généré dynamiquement avec les pseudo-éléments est placé dans le contrôle du formulaire et ne peut être mis en forme efficacement.
 
 ```css
 div {
@@ -152,7 +158,7 @@ div {
   position: relative;
 }
 
-input[type="number"] {
+input[type="week"] {
   width: 100px;
 }
 
@@ -173,28 +179,28 @@ input:valid + span::after {
 }
 ```
 
-Pour les navigateurs qui prennent en charge ce contrôle et ces fonctionnalités, on ne pourra sélectionner que les semaines de l'année 2017.
+Pour les navigateurs qui prennent en charge ce contrôle et ces fonctionnalités, on ne peut sélectionner que les semaines de l'année 2017.
 
 ### Rendre la valeur obligatoire
 
-On peut aussi utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) afin que la saisie de la valeur soit obligatoire. Pour les navigateurs qui prennent en charge cette fonctionnalité, une erreur sera affichée lorsqu'on tentera d'envoyer un formulaire avec un champ vide pour une semaine.
+On peut aussi utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) afin que la saisie de la valeur soit obligatoire. Pour les navigateurs qui prennent en charge cette fonctionnalité, une erreur est affichée lorsqu'on tente d'envoyer un formulaire avec un champ vide pour une semaine.
 
 Prenons un autre exemple (où la période a été restreinte comme précédemment) et où le champ est obligatoire&nbsp;:
 
 ```html
 <form>
   <div>
-    <label for="week">
-      À quelle semaine souhaiteriez-vous commencer&nbsp;?
+    <label for="semaine">
+      À quelle semaine souhaitez-vous commencer&nbsp;?
     </label>
     <input
-      id="week"
+      id="semaine"
       type="week"
-      name="week"
+      name="semaine"
       min="2017-W01"
       max="2017-W52"
       required />
-    <span class="validity"></span>
+    <span class="validite"></span>
   </div>
   <div>
     <input type="submit" value="Envoyer le formulaire" />
@@ -202,13 +208,13 @@ Prenons un autre exemple (où la période a été restreinte comme précédemmen
 </form>
 ```
 
-Si vous essayez de soumettre le formulaire sans aucune valeur, le navigateur affichera une erreur. Vous pouvez tester avec l'exemple qui suit&nbsp;:
+Si vous essayez d'envoyer le formulaire sans aucune valeur, le navigateur affiche une erreur. Vous pouvez tester avec l'exemple qui suit&nbsp;:
 
 {{EmbedLiveSample("Rendre la valeur obligatoire", 600, 120)}}
 
 Voici une capture d'écran du résultat obtenu si votre navigateur ne prend pas en charge cette fonctionnalité&nbsp;:
 
-![Le contrôle de formulaire de type « semaine » affiche deux tirets là où devrait se trouver le numéro de semaine. Une fenêtre contextuelle avec un symbole d'avertissement jaune et le message «Veuillez remplir ce champ» émane de ces deux tirets, qui sont mis en surbrillance en bleu, le même bleu que la bordure du champ lors de la sélection.](week-validation-chrome.png)
+![Le contrôle de formulaire de type « semaine » affiche deux tirets là où doit se trouver le numéro de semaine. Une fenêtre contextuelle avec un symbole d'avertissement jaune et le message «Veuillez remplir ce champ» émane de ces deux tirets, qui sont mis en surbrillance en bleu, le même bleu que la bordure du champ lors de la sélection.](week-validation-chrome.png)
 
 > [!WARNING]
 > La validation des formulaires HTML _ne remplace pas_ les scripts qui garantissent que les données saisies sont au bon format. Il est très facile pour quelqu'un de modifier le HTML pour contourner la validation, ou de la supprimer entièrement. Il est également possible pour quelqu'un de contourner complètement votre HTML et d'envoyer les données directement à votre serveur. Si votre code côté serveur ne valide pas les données qu'il reçoit, des catastrophes peuvent survenir lorsque des données mal formatées (ou des données trop volumineuses, de type incorrect, etc.) sont saisies dans votre base de données.
@@ -242,31 +248,29 @@ Voici le code HTML utilisé&nbsp;:
 
 ```html
 <form>
-  <div class="nativeWeekPicker">
-    <label for="week">
-      À quelle semaine souhaiteriez-vous commencer&nbsp;?
+  <div class="selectSemaineNatif">
+    <label for="semaine">
+      À quelle semaine souhaitez-vous commencer&nbsp;?
     </label>
     <input
-      id="week"
+      id="semaine"
       type="week"
-      name="week"
+      name="semaine"
       min="2017-W01"
       max="2018-W52"
       required />
-    <span class="validity"></span>
+    <span class="validite"></span>
   </div>
-  <p class="fallbackLabel">
-    À quelle semaine souhaiteriez-vous commencer&nbsp;?
-  </p>
-  <div class="fallbackWeekPicker">
+  <p class="etiquetteRepli">À quelle semaine souhaitez-vous commencer&nbsp;?</p>
+  <div class="selectSemaineRepli">
     <div>
       <span>
-        <label for="week">Semaine&nbsp;:</label>
-        <select id="fallbackWeek" name="week"></select>
+        <label for="semaine">Semaine&nbsp;:</label>
+        <select id="semaineRepli" name="semaine"></select>
       </span>
       <span>
-        <label for="year">Année&nbsp;:</label>
-        <select id="year" name="year">
+        <label for="annee">Année&nbsp;:</label>
+        <select id="annee" name="annee">
           <option value="2017" selected>2017</option>
           <option value="2018">2018</option>
         </select>
@@ -284,7 +288,7 @@ div {
   position: relative;
 }
 
-input[type="number"] {
+input[type="week"] {
   width: 100px;
 }
 
@@ -305,20 +309,20 @@ input:valid + span::after {
 }
 ```
 
-Dans le fragment de code JavaScript qui suit, on montre comment détecter si la fonctionnalité est prise en charge ou non. Pour cela, on crée un nouvel élément {{HTMLElement("input")}} et on règle son `type` sur `week` puis on vérifie immédiatement la valeur de son type. Les navigateurs qui ne prennent pas en charge la fonctionnalité renverront `text`. Si c'est le cas, on masque le sélecteur natif et on affiche le sélecteur alternatif composé des deux éléments {{HTMLElement("select")}}.
+Dans le fragment de code JavaScript qui suit, on montre comment détecter si la fonctionnalité est prise en charge ou non. Pour cela, on crée un nouvel élément {{HTMLElement("input")}} et on règle son `type` sur `week` puis on vérifie immédiatement la valeur de son type. Les navigateurs qui ne prennent pas en charge la fonctionnalité retournent `text`. Si c'est le cas, on masque le sélecteur natif et on affiche le sélecteur alternatif composé des deux éléments {{HTMLElement("select")}}.
 
 ```js
 // On définit certaines variables
-const nativePicker = document.querySelector(".nativeWeekPicker");
-const fallbackPicker = document.querySelector(".fallbackWeekPicker");
-const fallbackLabel = document.querySelector(".fallbackLabel");
+const selectSemaineNatif = document.querySelector(".selectSemaineNatif");
+const selectSemaineRepli = document.querySelector(".selectSemaineRepli");
+const etiquetteRepli = document.querySelector(".etiquetteRepli");
 
-const yearSelect = document.querySelector("#year");
-const weekSelect = document.querySelector("#fallbackWeek");
+const anneeSelect = document.querySelector("#annee");
+const semaineSelect = document.querySelector("#semaineRepli");
 
 // À l'état initial, on masque le sélecteur alternatif
-fallbackPicker.style.display = "none";
-fallbackLabel.style.display = "none";
+selectSemaineRepli.style.display = "none";
+etiquetteRepli.style.display = "none";
 
 // On teste si le sélecteur natif se transforme en
 // contrôle de saisie de texte ou non
@@ -335,26 +339,26 @@ try {
 if (test.type === "text") {
   // On masque alors le sélecteur natif et
   // on affiche le sélecteur alternatif
-  nativePicker.style.display = "none";
-  fallbackPicker.style.display = "block";
-  fallbackLabel.style.display = "block";
+  selectSemaineNatif.style.display = "none";
+  selectSemaineRepli.style.display = "block";
+  etiquetteRepli.style.display = "block";
 
   // On ajoute les semaines dynamiquement
-  populateWeeks();
+  remplirSemaines();
 }
 
-function populateWeeks() {
+function remplirSemaines() {
   // On ajoute 52 semaines grâce à une boucle
   for (let i = 1; i <= 52; i++) {
     let option = document.createElement("option");
     option.textContent = i < 10 ? "0" + i : i;
-    weekSelect.appendChild(option);
+    semaineSelect.appendChild(option);
   }
 }
 ```
 
 > [!NOTE]
-> N'oubliez pas que certaines années comptent 53 semaines (voir [Nombre de semaines par an <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))&nbsp;! Vous devrez en tenir compte lors du développement d'applications de production.
+> N'oubliez pas que certaines années comptent 53 semaines (voir [Nombre de semaines par an <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))&nbsp;! Vous devez en tenir compte lors du développement d'applications de production.
 
 ## Résumé technique
 
@@ -394,14 +398,6 @@ function populateWeeks() {
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}},
-        {{DOMxRef("HTMLInputElement.stepDown", "stepDown()")}},
-        et {{DOMxRef("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

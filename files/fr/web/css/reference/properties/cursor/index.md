@@ -1,8 +1,9 @@
 ---
-title: cursor
+title: Propriété CSS `cursor`
+short-title: cursor
 slug: Web/CSS/Reference/Properties/cursor
 l10n:
-  sourceCommit: 466df2f8d3da592e8d83b46ca1c31cc63e9a4563
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`cursor`** définit la forme du curseur (s'il y en a un) lorsque le pointeur est au-dessus de l'élément.

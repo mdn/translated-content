@@ -1,9 +1,9 @@
 ---
-title: <corner-shape-value>
+title: Type CSS `<corner-shape-value>`
+short-title: <corner-shape-value>
 slug: Web/CSS/Reference/Values/corner-shape-value
-original_slug: Web/CSS/corner-shape-value
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 {{SeeCompatTable}}
@@ -166,4 +166,4 @@ setCorners();
 - La propriété {{CSSxRef("corner-shape")}}
 - La propriété {{CSSxRef("border-radius")}}
 - La fonction {{CSSxRef("superellipse()")}}
-- Le module des [bordures et décorations de boîte CSS](/fr/docs/Web/CSS/CSS_borders_and_box_decorations)
+- Le module des [bordures et décorations de boîte CSS](/fr/docs/Web/CSS/Guides/Borders_and_box_decorations)

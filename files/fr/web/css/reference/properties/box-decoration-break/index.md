@@ -1,8 +1,9 @@
 ---
-title: box-decoration-break
+title: Propriété CSS `box-decoration-break`
+short-title: box-decoration-break
 slug: Web/CSS/Reference/Properties/box-decoration-break
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`box-decoration-break`** définit comment les [fragments](/fr/docs/Web/CSS/Guides/Fragmentation) d'un élément doivent être affichés lorsqu'ils sont coupés sur plusieurs lignes, colonnes ou pages.

@@ -1,8 +1,9 @@
 ---
-title: grid-template-columns
+title: Propriété CSS `grid-template-columns`
+short-title: grid-template-columns
 slug: Web/CSS/Reference/Properties/grid-template-columns
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`grid-template-columns`** définit les noms de lignes et les fonctions de dimensionnement des pistes des {{Glossary("grid column", "colonnes de grille")}}.

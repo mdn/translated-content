@@ -16,7 +16,7 @@ l10n:
       <th scope="row">필요한 사전 지식:</th>
       <td>
         HTML 기초
-        (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        (<a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >를 확인하세요).
       </td>

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Your_first_form
 original_slug: Learn/Forms/Your_first_form
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
 
 El primer artículo de nuestra serie te proporciona una primera experiencia de creación de un formulario web, que incluye diseñar un formulario sencillo con controles de formulario adecuados y otros elementos HTML, añadir un poco de estilo muy simple con CSS y describir cómo se envían los datos a un servidor. Ampliaremos cada uno de estos subtemas más adelante.
 
@@ -355,7 +355,7 @@ button {
 
 Pero esto es solo el comienzo: ahora ha llegado el momento de profundizar en el tema. Los formularios tienen mucho más potencial de lo que hemos visto aquí y los artículos siguientes de este módulo te ayudarán a dominarlo.
 
-{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
+{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
 
 ### Temas avanzados
 

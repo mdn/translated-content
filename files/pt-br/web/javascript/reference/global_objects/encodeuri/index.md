@@ -61,7 +61,7 @@ Não escapado:
 
 ### encodeURI vs encodeURIComponent
 
-`encodeURI()` se difere de {{jsxref("encodeURIComponent", "encodeURIComponent()")}} como a seguir:
+`encodeURI()` se difere de {{jsxref("encodeURIComponent()")}} como a seguir:
 
 ```js
 var set1 = ";,/?:@&=+$#"; // Caracteres reservados
@@ -114,6 +114,6 @@ function fixedEncodeURI(str) {
 
 ## Veja também
 
-- {{jsxref("decodeURI", "decodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("decodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}
+- {{jsxref("decodeURIComponent()")}}

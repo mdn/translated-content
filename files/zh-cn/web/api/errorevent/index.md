@@ -12,9 +12,9 @@ slug: Web/API/ErrorEvent
 除了从 {{domxref("Event")}} 接口继承来的属性外，还有下面这些自身属性。
 
 - {{domxref("ErrorEvent.prototype.message")}} {{readonlyInline}}
-  - : 一个{{domxref("DOMString","字符串")}}，包含了所发生错误的描述信息。
+  - : 一个{{jsxref("String","字符串")}}，包含了所发生错误的描述信息。
 - {{domxref("ErrorEvent.prototype.filename")}} {{readonlyInline}}
-  - : 一个 {{domxref("DOMString","字符串")}}，包含了发生错误的脚本文件的文件名。
+  - : 一个 {{jsxref("String","字符串")}}，包含了发生错误的脚本文件的文件名。
 - {{domxref("ErrorEvent.prototype.lineno")}} {{readonlyInline}}
   - : 一个数字，包含了错误发生时所在的行号。
 - {{domxref("ErrorEvent.prototype.colno")}} {{readonlyInline}}

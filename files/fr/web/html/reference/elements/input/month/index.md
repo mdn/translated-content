@@ -1,8 +1,9 @@
 ---
-title: <input type="month">
+title: Valeur d'attribut HTML `<input type="month">`
+short-title: <input type="month">
 slug: Web/HTML/Reference/Elements/input/month
 l10n:
-  sourceCommit: 13856107d2cab5bb9e40de608ee38a5770ef7c4d
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`month`** permettent de créer des contrôles où l'utilisateur·ice peut saisir un mois et année.
@@ -45,7 +46,7 @@ Voici un aperçu du contrôle sous Edge&nbsp;:
 ## Valeur
 
 Une chaîne de caractères représentant la valeur du mois et de l'année saisies dans le champ, au format YYYY-MM (année sur quatre chiffres ou plus, suivie d'un tiret (`-`), puis du mois sur deux chiffres).
-Le format de la chaîne de mois utilisée par ce type de champ est décrit dans [Représentation des mois](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_mois).
+Le format de la chaîne de caractères de mois utilisée par ce type de champ est décrit dans [Représentation des mois](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_mois).
 
 ### Fournir une valeur par défaut
 
@@ -60,7 +61,7 @@ Vous pouvez définir une valeur par défaut pour le contrôle en incluant un moi
 
 À noter que le format de date affiché diffère de la véritable `value`&nbsp;; la plupart des {{Glossary("user agent", "agents utilisateur")}} affichent le mois et l'année dans un format adapté à la langue du système d'exploitation de l'utilisateur·ice, tandis que la date `value` est toujours formatée `yyyy-MM`.
 
-Lorsque la valeur ci-dessus est envoyée au serveur, par exemple, elle aura la forme `bday-month=1978-06`.
+Lorsque la valeur ci-dessus est envoyée au serveur, par exemple, elle a la forme `bday-month=1978-06`.
 
 ### Définir la valeur en JavaScript
 
@@ -84,7 +85,7 @@ En complément des attributs pris en charge par l'ensemble des éléments {{HTML
 
 ### `list`
 
-La valeur de l'attribut list est l'{{DOMxRef("Element.id", "id")}} d'un élément {{HTMLElement("datalist")}} situé dans le même document.
+La valeur de l'attribut list est un {{DOMxRef("Element.id", "id")}} d'un élément {{HTMLElement("datalist")}} situé dans le même document.
 L'élément {{HTMLElement("datalist")}} fournit une liste de valeurs prédéfinies à suggérer à l'utilisateur·ice pour ce champ.
 Toute valeur de la liste qui n'est pas compatible avec le [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) n'est pas incluse dans les options suggérées.
 Les valeurs fournies sont des suggestions et non des obligations&nbsp;: l'utilisateur·ice peut sélectionner une valeur de cette liste prédéfinie ou en fournir une différente.
@@ -92,7 +93,7 @@ Les valeurs fournies sont des suggestions et non des obligations&nbsp;: l'utilis
 ### `max`
 
 L'année et le mois les plus tardifs, au format de chaîne de caractères décrit dans la section [Valeur](#valeur) ci-dessus, à accepter.
-Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)) est supérieure à cette date, [la validation échouera](/fr/docs/Web/HTML/Guides/Constraint_validation).
+Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)) est supérieure à cette date, [la validation échoue](/fr/docs/Web/HTML/Guides/Constraint_validation).
 Si la valeur de l'attribut `max` n'est pas une chaîne de caractères valide au format `yyyy-MM`, alors l'élément n'a pas de valeur maximale.
 
 Cette valeur doit être supérieure ou égale à celle définie par l'attribut `min`.
@@ -100,7 +101,7 @@ Cette valeur doit être supérieure ou égale à celle définie par l'attribut `
 ### `min`
 
 Le mois le plus tôt, indiqué avec l'année, sous la forme d'une chaîne de caractères au format `yyyy-MM`.
-Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)) est antérieure à cette date, [la validation échouera](/fr/docs/Web/HTML/Guides/Constraint_validation).
+Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)) est antérieure à cette date, [la validation échoue](/fr/docs/Web/HTML/Guides/Constraint_validation).
 Si une valeur est définie pour `min` qui n'est pas une chaîne de caractères valide pour une année et un mois, le champ n'a pas de valeur minimale.
 
 Cette valeur doit être inférieure ou égale à celle définie par l'attribut `max`.
@@ -111,7 +112,7 @@ Un attribut booléen qui, s'il est présent, indique que ce champ ne peut pas ê
 Sa `value` peut cependant toujours être modifiée par du code JavaScript qui définit directement la valeur de la propriété {{DOMxRef("HTMLInputElement.value")}}.
 
 > [!NOTE]
-> Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'aura aucun effet si l'attribut `readonly` est défini.
+> Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'a aucun effet si l'attribut `readonly` est défini.
 
 ### `step`
 
@@ -119,7 +120,7 @@ L'attribut `step` est un nombre qui définit la granularité à respecter pour l
 
 Pour les champs de type `month`, la valeur de `step` est exprimée en mois. La valeur par défaut de `step` est 1, ce qui correspond à 1 mois.
 
-Une chaîne de caractères `any` signifie qu'aucune contrainte de pas n'est appliquée et que n'importe quelle valeur est autorisée (sous réserve des autres contraintes, comme [`min`](#min) et [`max`](#max)). En réalité, cela a le même effet que `1` pour les champs `month` car l'interface de sélection ne permet de choisir que des mois entiers.
+Une chaîne de caractères `any` signifie qu'aucune contrainte de pas n'est appliquée et que n'importe quelle valeur est autorisée (sous réserve des autres contraintes, comme [`min`](#min) et [`max`](#max)). En réalité, cela a le même effet que `1` pour les champs `month`, car l'interface de sélection ne permet de choisir que des mois entiers.
 
 > [!NOTE]
 > Lorsque les données saisies par l'utilisateur·ice ne respectent pas la configuration du pas, {{Glossary("user agent", "l'agent utilisateur")}} peut arrondir à la valeur valide la plus proche, en privilégiant les nombres dans le sens positif lorsque deux options sont aussi proches l'une de l'autre.
@@ -127,7 +128,7 @@ Une chaîne de caractères `any` signifie qu'aucune contrainte de pas n'est appl
 ## Utiliser les entrées de mois
 
 Les champs liés aux dates (y compris `month`) semblent pratiques au premier abord&nbsp;; ils promettent une interface simple pour choisir des dates et normalisent le format des données envoyées au serveur, quelle que soit la langue de l'utilisateur·ice.
-Cependant, il existe des problèmes avec `<input type="month">` car à ce jour, de nombreux navigateurs majeurs ne le prennent pas encore en charge.
+Cependant, il existe des problèmes avec `<input type="month">`, car à ce jour, de nombreux navigateurs majeurs ne le prennent pas encore en charge.
 
 Nous allons examiner des utilisations simples puis plus complexes de `<input type="month">`, puis donner des conseils pour pallier le problème de prise en charge des navigateurs dans la section [Gérer la prise en charge des navigateurs](#gérer_la_prise_en_charge_des_navigateurs).
 
@@ -150,7 +151,7 @@ On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/inpu
 
 ```html
 <form>
-  <label for="bday-month">Quel est le mois de votre naissance ?</label>
+  <label for="bday-month">Quel est le mois de votre naissance&nbsp;?</label>
   <input
     id="bday-month"
     type="month"
@@ -162,20 +163,20 @@ On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/inpu
 
 {{EmbedLiveSample("Indiquer une date maximale et une date minimale", 600, 40)}}
 
-Grâce ce fragment de code&nbsp;:
+Grâce à ce fragment de code&nbsp;:
 
 - Seuls les mois entre janvier 1900 et août 2017 peuvent être sélectionnés (le contrôle ne doit pas permettre de sélectionner un mois en dehors de cette période)
   Selon le navigateur utilisé, vous pouvez constater que les mois en dehors de la période définie ne sont pas sélectionnables dans le sélecteur de mois (par exemple, Edge), ou non valides (voir [Validation](#validation)) mais restent disponibles (par exemple, Chrome).
 
 ### Contrôler la taille du champ
 
-`<input type="month">` ne peut pas être dimensionné grâce à [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size), il vous faudra utiliser [CSS](/fr/docs/Web/CSS) si besoin.
+`<input type="month">` ne peut pas être dimensionné grâce à [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size), il vous faut utiliser [CSS](/fr/docs/Web/CSS) si besoin.
 
 ## Validation
 
 Par défaut, `<input type="month">` n'applique pas de validation particulière sur la valeur saisie. C'est l'interface utilisateur qui ne permet pas de choisir autre chose qu'un mois.
 
-Les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) permettent de limiter la période valide et l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) rend le champ obligatoire. Avec ces attributs, les navigateurs afficheront un message d'erreur si la date choisie est hors de la période ou si la valeur est vide.
+Les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) permettent de limiter la période valide et l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) rend le champ obligatoire. Avec ces attributs, les navigateurs affichent un message d'erreur si la date choisie est hors de la période ou si la valeur est vide.
 
 Prenons un exemple avec une période délimitée et un champ obligatoire&nbsp;:
 
@@ -210,7 +211,7 @@ Voici une capture d'écran qui illustre le résultat obtenu avec un navigateur p
 
 Voici ensuite la feuille de style CSS utilisée dans l'exemple précédent.
 On utilise {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} afin de mettre en forme le contrôle selon que la valeur saisie est invalide.
-Les icônes ajoutées sont placées dans un élément {{HTMLElement("span")}} à part car Chrome ne permet pas de gérer du contenu généré à même le contrôle ni de mettre en forme ce contenu généré.
+Les icônes ajoutées sont placées dans un élément {{HTMLElement("span")}} à part, car Chrome ne permet pas de gérer du contenu généré à même le contrôle ni de mettre en forme ce contenu généré.
 
 ```css
 div {
@@ -252,7 +253,7 @@ Comme évoqué plus haut, le problème principal relatif à ces contrôles est l
 
 ![Sélecteur de mois sur Chrome pour Android](month-android.png)
 
-Les navigateurs ne prenant pas en charge basculent gracieusement vers un champ de type texte, mais cela pose des problèmes à la fois en termes de cohérence de l'interface utilisateur (le contrôle présenté sera différent), et de gestion des données.
+Les navigateurs ne prenant pas en charge basculent gracieusement vers un champ de type texte, mais cela pose des problèmes à la fois en termes de cohérence de l'interface utilisateur (le contrôle présenté est différent), et de gestion des données.
 
 Le second problème est le plus grave des deux.
 Comme indiqué plus haut, pour un champ `month` la valeur réelle est toujours normalisée au format `yyyy-mm`.
@@ -267,7 +268,7 @@ Par exemple&nbsp;:
 - …et ainsi de suite.
 
 Une façon de contourner ce problème consiste à ajouter un attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) sur votre champ `month`.
-Bien que le champ `month` ne l'utilise pas, si le navigateur revient à le traiter comme un champ `text`, le motif sera utilisé.
+Bien que le champ `month` ne l'utilise pas, si le navigateur revient à le traiter comme un champ `text`, le motif est utilisé.
 Par exemple, essayez d'afficher la démonstration suivante dans un navigateur qui ne prend pas en charge les champs `month`&nbsp;:
 
 ```html
@@ -294,10 +295,10 @@ Par exemple, essayez d'afficher la démonstration suivante dans un navigateur qu
 
 {{EmbedLiveSample("Gérer la prise en charge des navigateurs", 600, 100)}}
 
-Si vous tentez de l'envoyer, vous verrez que le navigateur affiche désormais un message d'erreur (et indique que le champ est invalide) si votre saisie ne correspond pas au motif `nnnn-nn`, où `n` est un chiffre entre 0 et 9.
+Si vous tentez de l'envoyer, vous pouvez voir que le navigateur affiche désormais un message d'erreur (et indique que le champ est invalide) si votre saisie ne correspond pas au motif `nnnn-nn`, où `n` est un chiffre entre 0 et 9.
 Bien entendu, cela n'empêche pas les personnes de saisir des dates invalides (comme `0000-42`) ou des dates mal formatées qui respectent le motif.
 
-Il y a aussi le problème que l'utilisateur·ice ne saura pas nécessairement quel format de date est attendu.
+Il y a aussi le problème que l'utilisateur·ice ne sait pas nécessairement quel format de date est attendu.
 Il reste du travail à faire.
 
 ```css hidden
@@ -416,8 +417,8 @@ input:valid + span::after {
 Le code JavaScript qui gère le choix de la méthode à utiliser et qui prépare la liste des années à inclure dans le `<select>` non natif suit.
 
 La partie la plus intéressante de l'exemple est le code de détection de fonctionnalité.
-Pour détecter si le navigateur prend en charge `<input type="month">`, on crée un nouvel élément {{HTMLElement("input")}}, on essaie de définir son `type` à month, puis on vérifie immédiatement la valeur de son type.
-Les navigateurs qui ne prennent pas en charge le type month retourneront text, car c'est la valeur de repli lorsque month n'est pas pris en charge.
+Pour détecter si le navigateur prend en charge `<input type="month">`, on crée un nouvel élément {{HTMLElement("input")}}, on essaie de définir son `type` à `month`, puis on vérifie immédiatement la valeur de son type.
+Les navigateurs qui ne prennent pas en charge le type `month` retournent `text`, car c'est la valeur de repli lorsque `month` n'est pas pris en charge.
 Si `<input type="month">` n'est pas pris en charge, on masque le sélecteur natif et on affiche l'interface de sélection alternative.
 
 ```js
@@ -470,7 +471,7 @@ function populateYears() {
 ```
 
 > [!NOTE]
-> Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.
+> Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)) Il vous faut prendre cela en compte si vous souhaitez développer des applications réelles.
 
 ## Résumé technique
 
@@ -479,7 +480,7 @@ function populateYears() {
     <tr>
       <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
-        Une chaîne de caractères représentant un mois et une année, ou bien la chaîne vide.
+        Une chaîne de caractères représentant un mois et une année, ou bien la chaîne de caractères vide.
       </td>
     </tr>
     <tr>
@@ -510,14 +511,6 @@ function populateYears() {
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}},
-        {{DOMxRef("HTMLInputElement.stepDown", "stepDown()")}},
-        {{DOMxRef("HTMLInputElement.stepUp", "stepUp()")}}.
-      </td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

@@ -20,7 +20,7 @@ object.assign(url);
 ### Paramètres
 
 - _url_
-  - : Une {{domxref("DOMString")}} contenant l'URL de la page vers laquelle naviguer.
+  - : Une {{jsxref("String")}} contenant l'URL de la page vers laquelle naviguer.
 
 ## Examples
 

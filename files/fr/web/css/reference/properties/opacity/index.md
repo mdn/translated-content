@@ -1,8 +1,9 @@
 ---
-title: opacity
+title: Propriété CSS `opacity`
+short-title: opacity
 slug: Web/CSS/Reference/Properties/opacity
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`opacity`** définit la transparence d'un élément. Autrement dit, elle permet de définir le degré de visibilité de l'arrière-plan sur lequel est placé l'élément.

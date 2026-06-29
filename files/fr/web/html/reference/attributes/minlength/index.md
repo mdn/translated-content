@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : minlength"
+title: "Attribut HTML : `minlength`"
 short-title: minlength
 slug: Web/HTML/Reference/Attributes/minlength
 l10n:
-  sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`minlength`** définit la [longueur minimale de chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/length) que l'utilisateur·ice peut saisir dans un élément HTML {{HTMLElement("input")}} ou un élément {{HTMLElement("textarea")}}. L'attribut doit avoir une valeur entière supérieure ou égale à 0.

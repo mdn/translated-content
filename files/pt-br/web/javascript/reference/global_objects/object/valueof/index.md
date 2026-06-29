@@ -93,5 +93,5 @@ myObj + 3; // 7
 ## Veja também
 
 - {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
 - {{jsxref("Symbol.toPrimitive")}}

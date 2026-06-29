@@ -1,38 +1,16 @@
 ---
 title: ARIA ライブリージョン
 slug: Web/Accessibility/ARIA/Guides/Live_regions
-original_slug: Web/Accessibility/ARIA/ARIA_Live_Regions
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Annotations">ARIA アノテーション</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Guides">ARIA ガイド</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions">ARIA ライブリージョン</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA スクリーンリーダー実装ガイド</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Guides/Techniques">ARIA の使用: ロール、ステート、プロパティ</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Guides/Multipart_labels">マルチパートラベル</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">ARIA 関連のバグの報告方法</a></li>
-    <li class="toggle">
-      <details><summary>ARIA ステートとプロパティ</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details><summary>WAI-ARIA ロール</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
-      </details>
-    </li>
-  </ol>
-</section>
-
-JavaScript を使うと、検索結果のリストを瞬時に更新する、もしくはユーザーの操作を必要としないような控えめなアラートや通知を表示するなど、ページ全体をリロードせずにページの一部を動的に変更することができます。 これらの変更は通常ページを見ることのできるユーザーにとっては視覚的に明らかですが、支援技術ユーザーにとっては明確ではないかもしれません。ARIA ライブリージョンはこのギャップを埋め、動的なコンテンツの変更を支援技術により通知できるやり方で、プログラムによって表出させる方法を提供します。
+JavaScript を使うと、検索結果のリストを瞬時に更新する、もしくはユーザーの操作を必要としないような控えめなアラートや通知を表示するなど、ページ全体をリロードせずにページの一部を動的に変えられます。 これらの変更は通常ページを見ることのできるユーザーにとっては視覚的に明らかですが、支援技術ユーザーにとっては明らかではないかもしれません。ARIA ライブリージョンはこのギャップを埋め、支援技術によって通知できるやり方で、動的なコンテンツの変更をプログラム的に公開するやり方を提供します。
 
 > [!NOTE]
 > 支援技術はライブリージョンへのコンテンツの _動的な_ 変更を通知します。
-> `aria-live` 属性もしくは 特化したライブリージョン `role` （例えば `role="alert"` ）を、変更をアナウンスしたい要素に含めることで有効になりますが、変更が起こる前にこれらの属性が追加されている必要があります。 —　最初からマークアップに含まれていても、 JavaScript で動的に追加しても構いません。
+> 変更を通知したい要素に `aria-live` 属性または特殊なライブリージョン `role` ([`role="status"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/status_role) など) を含めると、変わる前に属性が加われば機能します。属性の追加は、元のマークアップで行うか、JavaScript を使用して動的に加えます。まず空のライブリージョンを作り、次に別の手順でリージョン内のコンテンツを変えます。
+> 仕様書には明示的に書かれていませんが、ブラウザーや支援技術には [`role="alert"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) の特別な処理が含まれています。ほとんどの場合、`role="alert"` 領域内のコンテンツは、その領域（通知/メッセージが既に含まれている）がページの初期マークアップに存在する場合や、ページに動的に挿入された場合でも読み上げられます。ただし、`role="alert"` 領域は、ブラウザーと支援技術の組み合わせによっては、読み上げ時に自動的に "Alert" という接頭辞が付けられることに注意してください。
 
 ## ライブリージョン
 
@@ -44,7 +22,7 @@ JavaScript を使うと、検索結果のリストを瞬時に更新する、も
 
 `aria-live="assertive"` は、即時に伝えてユーザーの注意を引く必要のある、時間にシビアな通知にのみ使用します。 一般的に assertive なライブリージョンへの変更は、スクリーンリーダーがその時に読み上げているものに割り込みます。つまり、うるさかったり、混乱の元になり得るので、控えめに使うべきです。
 
-`aria-live="off"` は要素の既定として扱われるので、明示的に指定する必要はありません。ただし、暗黙のライブリージョンロール（例えば `role="alert"`）を持つ要素からの出力を止めたい場合は話が別です。
+意外なことに、`aria-live="off"` は変更を通知しないことを意味しません。要素に `aria-live="off"` が設定されている場合（または `role="marquee"` や `role="timer"` など、この暗黙的な値を持つ `role` が設定されている場合）、要素の内容の変更は、フォーカスが要素上にあるか、要素内にある場合にのみ通知されるはずです。
 
 ### 基本的な例: 有益な画面上の情報を更新するドロップダウンボックス
 
@@ -186,7 +164,7 @@ renderPlanetInfoButton.addEventListener("click", (event) => {
 
 ## ライブリージョン属性についてのさらなる説明
 
-ライブリージョンはとてもよくサポートされています。The Paciello Group は、2014年に、[ライブリージョンのサポート状況についての情報](https://www.tpgi.com/screen-reader-support-aria-live-regions/) (2014) を投稿しました。Paul Jadam は特に [`aira-atomic` と `aria-relevant` のサポート](https://pauljadam.com/demos/aria-atomic-relevant.html)についてのリサーチをしました。
+ライブリージョンはとてもよくサポートされています。Vispero は 2014 年に [ライブリージョンのサポート状況についての情報](https://vispero.com/resources/screen-reader-support-aria-live-regions/) を公開しました。特に Paul J. Adam は [`aria-atomic` と `aria-relevant` のサポート](https://pauljadam.com/demos/aria-atomic-relevant.html) について調べています。
 
 1. **`aria-atomic`**: `aria-atomic=BOOLEAN` は領域の一部だけが変更された場合でも、スクリーンリーダーが常にライブリージョン全体を読み上げるかどうかを設定します。可能な設定は `false` または `true` で、既定は `false` です。
 2. [**`aria-relevant`**](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
@@ -195,7 +173,7 @@ renderPlanetInfoButton.addEventListener("click", (event) => {
 
 ### 基本的な例: `aria-atomic`
 
-`aria-atomic` についての説明のために、時間と分を表するシンプルな時計を表示するサイトを考えます。時計は毎分更新され、新しい残り時間でそのときのコンテンツを上書きします。
+`aria-atomic` の例として、時間と分を表示する基本的な時計を備えたサイトを考えてみましょう。時計は毎分更新され、新しい残り時間が現在の表示を上書きします。
 
 ```html
 <div id="clock" role="timer" aria-live="polite">
@@ -210,7 +188,7 @@ function updateClock() {
   const now = new Date();
   document.getElementById("clock-hours").textContent = now.getHours();
   document.getElementById("clock-mins").textContent =
-    `0${now.getMinutes()}`.substr(-2);
+    `0${now.getMinutes()}`.slice(-2);
 }
 
 /* first run */
@@ -222,9 +200,9 @@ setInterval(updateClock, 60000);
 
 関数が初めて実行されるとき、追加された文字列のすべてが通知されます。 その後の呼び出しでは、過去のコンテンツと比較して変更されたコンテンツの一部が通知されます。例えば、時計が "17:33" から "17:34" へ変更されたとき、支援技術は "4" のみを通知します。これはユーザーにとってほとんど役に立たないでしょう。
 
-一つの回避策は最初にライブリージョンのコンテンツをクリア（この場合、`<span id="clock-hours">` と `<span id="clock-mins">` の `innerHTML` を空にセット）してから、新しいコンテンツを挿入することです。しかしながら、この方法はこれら2つの更新の正確なタイミングに依存するため、しばしば信頼性にかけることがあります。
+一つの回避策は最初にライブリージョンのコンテンツをクリア（この場合、`<span id="clock-hours">` と `<span id="clock-mins">` の `innerHTML` を空にセット）してから、新しいコンテンツを挿入することです。しかしながら、この方法はこれら 2 つの更新の正確なタイミングに依存するため、しばしば信頼性にかけることがあります。
 
-`aria-atomic="true"` はライブリージョンが更新されるたびに、コンテンツの全体 (例 "17:34") が通知されることを保証します。
+`aria-atomic="true"` を設定すると、ライブリージョンが更新されるたびに、コンテンツ全体が完全に通知されます（例： "17:34"）。
 
 ```html
 <div id="clock" role="timer" aria-live="polite" aria-atomic="true">…</div>
@@ -235,7 +213,7 @@ setInterval(updateClock, 60000);
 ```html
 <div id="date-input">
   <label for="year">Year:</label>
-  <input type="text" id="year" value="1990" onblur="change(event)" />
+  <input type="text" id="year" value="1990" />
 </div>
 
 <div id="date-output" aria-atomic="true" aria-live="polite">
@@ -250,10 +228,8 @@ function change(event) {
 
   switch (event.target.id) {
     case "year":
-      yearOut.innerHTML = event.target.value;
+      yearOut.textContent = event.target.value;
       break;
-    default:
-      return;
   }
 }
 ```
@@ -281,3 +257,4 @@ ARIA ライブプロパティの内訳:
 ## 関連情報
 
 - [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)
+- {{domxref("Document.ariaNotify()")}}, {{domxref("Element.ariaNotify()")}}

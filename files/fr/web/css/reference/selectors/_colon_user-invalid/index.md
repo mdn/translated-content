@@ -1,8 +1,9 @@
 ---
-title: :user-invalid
+title: Pseudo-classe CSS `:user-invalid`
+short-title: :user-invalid
 slug: Web/CSS/Reference/Selectors/:user-invalid
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:user-invalid`** représente tout élément de formulaire validé dont la valeur n'est pas valide selon ses [contraintes de validation](/fr/docs/Web/HTML/Guides/Constraint_validation), après que l'utilisateur·ice a interagi avec lui.

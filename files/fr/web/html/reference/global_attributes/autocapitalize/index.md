@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : autocapitalize"
+title: "Attribut HTML universel : `autocapitalize`"
 short-title: autocapitalize
 slug: Web/HTML/Reference/Global_attributes/autocapitalize
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`autocapitalize`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui contrôle si le texte saisi est automatiquement mis en majuscule et, le cas échéant, de quelle manière. Cela concerne&nbsp;:

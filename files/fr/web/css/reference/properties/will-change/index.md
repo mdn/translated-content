@@ -1,8 +1,9 @@
 ---
-title: will-change
+title: Propriété CSS `will-change`
+short-title: will-change
 slug: Web/CSS/Reference/Properties/will-change
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`will-change`** fournit une indication au navigateur sur la propension d'un élément à changer (afin que le navigateur puisse mettre en place les optimisations nécessaires avant que l'élément change vraiment). Ce type d'optimisation permet d'augmenter la réactivité de la page en effectuant des calculs (éventuellement coûteux) en prévision du changement.

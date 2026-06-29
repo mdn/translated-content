@@ -3,7 +3,7 @@ title: Firefox 148 note de version pour les développeurs
 short-title: Firefox 148
 slug: Mozilla/Firefox/Releases/148
 l10n:
-  sourceCommit: 4e100cee733013cb48babc0c734fe96dda9ece6c
+  sourceCommit: d9e71f8b15265a041b550a54a1d0970f049053e4
 ---
 
 Cet article présente les informations concernant les changements de Firefox 148 qui concernent les développeur·euse·s.
@@ -68,7 +68,7 @@ Firefox 148 est sorti le [24 février 2026 <sup>(angl.)</sup>](https://whattrain
 #### DOM
 
 - Les commandes «&nbsp;coller&nbsp;» peuvent désormais être utilisées avec {{DOMxRef("Document.execCommand()")}} dans le contenu web (en plus des extensions web).
-  Cela est implémenté en utilisant [l'API Clipboard](/fr/docs/Web/API/Clipboard_API) et partage les mêmes [considérations de sécurité](/fr/docs/Web/API/Clipboard_API#considérations_de_sécurité), telles que l'exigence d'une activation transitoire et la reconnaissance de l'utilisateur·ice lors du collage de contenu inter-origine.
+  C'est implémenté en utilisant [l'API Clipboard](/fr/docs/Web/API/Clipboard_API) et partage les mêmes [considérations de sécurité](/fr/docs/Web/API/Clipboard_API#considérations_de_sécurité), telles que l'exigence d'une activation transitoire et la reconnaissance de l'utilisateur·ice lors du collage de contenu inter-origine.
   ([bogue Firefox 1998195 <sup>(angl.)</sup>](https://bugzil.la/1998195)).
 
 ### Conformité WebDriver (WebDriver BiDi, Marionette)
@@ -80,7 +80,7 @@ Firefox 148 est sorti le [24 février 2026 <sup>(angl.)</sup>](https://whattrain
 
 #### WebDriver BiDi
 
-- Ajout de la prise en charge initiale de l'interaction avec le contexte chrome du navigateur (la fenêtre Firefox elle-même). La commande `browsingContext.getTree` accepte désormais le paramètre spécifique au fournisseur `moz:scope` et retourne des contextes chrome lorsque celui-ci est défini sur `chrome` et que Firefox a été lancé avec l'argument `--remote-allow-system-access`. Ces contextes peuvent être utilisés avec `script.evaluate` et `script.callFunction` pour exécuter du JavaScript privilégié avec accès aux API Gecko. Les autres commandes ne prennent pas encore en charge les contextes chrome, mais la prise en charge sera ajoutée progressivement selon les besoins ([bogue Firefox 1944568 <sup>(angl.)</sup>](https://bugzil.la/1944568), [bogue Firefox 1944570 <sup>(angl.)</sup>](https://bugzil.la/1944570), et [bogue Firefox 1851788 <sup>(angl.)</sup>](https://bugzil.la/1851788)).
+- Ajout de la prise en charge initiale de l'interaction avec le contexte chrome du navigateur (la fenêtre Firefox elle-même). La commande `browsingContext.getTree` accepte désormais le paramètre spécifique au fournisseur `moz:scope` et retourne des contextes chrome lorsque celui-ci est défini sur `chrome` et que Firefox a été lancé avec l'argument `--remote-allow-system-access`. Ces contextes peuvent être utilisés avec `script.evaluate` et `script.callFunction` pour exécuter du JavaScript privilégié avec accès aux API Gecko. Les autres commandes ne prennent pas encore en charge les contextes chrome, mais la prise en charge est ajoutée progressivement selon les besoins ([bogue Firefox 1944568 <sup>(angl.)</sup>](https://bugzil.la/1944568), [bogue Firefox 1944570 <sup>(angl.)</sup>](https://bugzil.la/1944570), et [bogue Firefox 1851788 <sup>(angl.)</sup>](https://bugzil.la/1851788)).
 - Mise à jour des commandes `emulation.setGeolocationOverride` et `emulation.setScreenOrientationOverride` pour implémenter le nouveau comportement de réinitialisation&nbsp;: les contextes ne sont réinitialisés que lorsque le paramètre `contexts` est fourni, et les contextes utilisateur uniquement lorsque le paramètre `userContexts` est défini ([bogue Firefox 1998732 <sup>(angl.)</sup>](https://bugzil.la/1998732) et [bogue Firefox 1998734 <sup>(angl.)</sup>](https://bugzil.la/1998734)).
 - Correction d'une condition de concurrence dans `browsingContext.create` où l'ouverture d'un nouvel onglet au premier plan pouvait retourner avant que le document ne devienne visible ([bogue Firefox 2003857 <sup>(angl.)</sup>](https://bugzil.la/2003857)).
 - Correction d'un problème survenant lorsqu'une navigation redirigeait vers une page d'erreur ([bogue Firefox 2013822 <sup>(angl.)</sup>](https://bugzil.la/2013822)).
@@ -90,7 +90,7 @@ Firefox 148 est sorti le [24 février 2026 <sup>(angl.)</sup>](https://whattrain
 
 #### Marionette
 
-- Ajout de la commande `Reporting:GenerateTestReport` pour [générer un rapport de test via l'API Reporting <sup>(angl.)</sup>](https://w3c.github.io/reporting/#generate-test-report-command) ([bogue Firefox 1909662 <sup>(angl.)</sup>](https://bugzil.la/1909662)).
+- Ajout de la commande `Reporting:GenerateTestReport` pour [générer un rapport de test avec l'API Reporting <sup>(angl.)</sup>](https://w3c.github.io/reporting/#generate-test-report-command) ([bogue Firefox 1909662 <sup>(angl.)</sup>](https://bugzil.la/1909662)).
 
 ## Fonctionnalités web expérimentales
 
@@ -102,3 +102,7 @@ Vous pouvez trouver d'autres fonctionnalités de ce type sur la page [Fonctionna
 
   [L'API Document Picture-in-Picture](/fr/docs/Web/API/Document_Picture-in-Picture_API) permet d'ouvrir une fenêtre toujours au premier plan qui peut être remplie avec du contenu HTML arbitraire, comme une vidéo avec des contrôles personnalisés ou un ensemble de flux montrant les participant·e·s d'un appel de visioconférence.
   ([bogue Firefox 1858562 <sup>(angl.)</sup>](https://bugzil.la/1858562)).
+
+- **Requêtes médias personnalisées**&nbsp;: `layout.css.custom-media.enabled`
+
+  La règle {{CSSxRef("@custom-media")}} définit des alias pour des requêtes médias longues ou complexes. Plutôt que de répéter le même `<media-query-list>` codé en dur dans plusieurs `@media`, il peut être défini une fois dans une règle `@custom-media` et référencé dans la feuille de style chaque fois que nécessaire. ([bogue Firefox 1744292 <sup>(angl.)</sup>](https://bugzil.la/1744292)).

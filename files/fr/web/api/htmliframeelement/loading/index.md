@@ -3,12 +3,12 @@ title: "HTMLIFrameElement : propriété loading"
 short-title: loading
 slug: Web/API/HTMLIFrameElement/loading
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 8db892b3e7ca294621898441e7db2481e0e6d939
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`loading`** de l'interface {{DOMxRef("HTMLIFrameElement")}} est une chaîne de caractères qui fournit une indication à l'{{Glossary("user agent", "agent utilisateur")}} pour savoir si l'élément HTML {{HTMLElement("iframe")}} doit être chargée immédiatement au chargement de la page, ou seulement lorsqu'elle est nécessaire.
+La propriété **`loading`** de l'interface {{DOMxRef("HTMLIFrameElement")}} est une chaîne de caractères qui fournit une indication au navigateur pour savoir si l'élément HTML {{HTMLElement("iframe")}} doit être chargée immédiatement au chargement de la page, ou seulement lorsqu'elle est nécessaire.
 
 Cela peut être utilisé pour optimiser le chargement du contenu du document.
 Les cadres intégrés (<i lang="en">iframe</i> en anglais) visibles lors du chargement de la page peuvent être téléchargés immédiatement (de façon anticipée), tandis que les cadres intégrés susceptibles d'être hors écran au chargement initial peuvent être téléchargés de façon différée — juste avant qu'elles n'apparaissent dans la {{Glossary("visual viewport", "zone d'affichage visuelle")}} de la fenêtre.
@@ -22,7 +22,7 @@ Les valeurs possibles sont&nbsp;:
   - : Charger le cadre intégré dès que l'élément est traité.
     Il s'agit de la valeur par défaut.
 - `lazy`
-  - : Charger le cadre intégré lorsque le navigateur estime qu'elle sera probablement nécessaire dans un avenir proche.
+  - : Charger le cadre intégré lorsque le navigateur estime qu'elle est probablement nécessaire dans un avenir proche.
 
 ## Notes d'utilisation
 
@@ -41,8 +41,10 @@ Tous les cadres intégrés chargés de façon anticipée dans le document doiven
 
 ## Exemples
 
+### Utilisation simple
+
 L'exemple ci-dessous montre comment définir un cadre intégré (<i lang="en">iframe</i> en anglais) à chargement différé puis l'ajouter à un `<div>` dans le document.
-Le cadre ne sera alors chargé que lorsqu'il sera sur le point de devenir visible.
+Le cadre ne est alors chargé que lorsqu'il est sur le point de devenir visible.
 
 ```js
 // Définir une iframe avec chargement différé

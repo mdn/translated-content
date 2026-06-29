@@ -39,7 +39,7 @@ AsyncFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
 > [!NOTE]
-> `AsyncFunction()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}. Les deux créent une nouvelle instance de `AsyncFunction`.
+> `AsyncFunction()` peut être appelé avec ou sans {{JSxRef("new")}}. Les deux créent une nouvelle instance de `AsyncFunction`.
 
 ### Paramètres
 

@@ -20,11 +20,11 @@ l10n:
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        <a href="/ko/docs/Web/HTTP/Client_hints">클라이언트 힌트</a>
+        <a href="/ko/docs/Web/HTTP/Guides/Client_hints">클라이언트 힌트</a>
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
       <td>yes</td>
     </tr>
   </tbody>

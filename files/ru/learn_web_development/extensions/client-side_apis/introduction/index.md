@@ -3,7 +3,7 @@ title: Введение в web APIs
 slug: Learn_web_development/Extensions/Client-side_APIs/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Начнём с рассмотрения того что представляют собой API на высоком уровне и выясним, как они работают, как их использовать в своих программах и как они структурированы. Также рассмотрим основные виды API и их применение.
 
@@ -256,4 +256,4 @@ Web Audio и HTMLMediaElement API подчиняются механизму бе
 
 На данном этапе, у вас должно сформироваться представление о том, что такое API, как они работают и как вы можете применить их в своём JavaScript-коде. Вам наверняка не терпится начать делать по-настоящему интересные вещи с конкретными API, так вперёд! В следующий раз мы рассмотрим работу с документом с помощью Document Object Model (DOM).
 
-{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs")}}

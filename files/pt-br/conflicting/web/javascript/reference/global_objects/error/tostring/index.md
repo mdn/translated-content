@@ -46,4 +46,4 @@ Não faz parte de nenhum padrão.
 - {{jsxref("Error.prototype.lineNumber")}}
 - {{jsxref("Error.prototype.message")}}
 - {{jsxref("Error.prototype.name")}}
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

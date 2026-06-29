@@ -125,7 +125,7 @@ Comme les informations se trouvent dans une base de données, elles peuvent éga
 
 ### Expérience utilisateur·ice personnalisée
 
-Les serveurs peuvent stocker et utiliser des informations sur les client·e·s pour fournir une expérience utilisateur·ice personnalisée. Par exemple, beaucoup de sites proposent d'enregistrer une carte de crédit pour que les détails n'aient pas à être saisis de nouveau. Des sites comme Google Maps peuvent utiliser les emplacements enregistrés ou l'emplacement en cours pour fournir des informations d'itinéraire et chercher ou utiliser l'historique des voyages précédents pour trouver des boutiques locales dans les résultats de recherche.
+Les serveurs peuvent stocker et utiliser des informations sur les clients pour fournir une expérience utilisateur·ice personnalisée. Par exemple, beaucoup de sites proposent d'enregistrer une carte de crédit pour que les détails n'aient pas à être saisis de nouveau. Des sites comme Google Maps peuvent utiliser les emplacements enregistrés ou l'emplacement en cours pour fournir des informations d'itinéraire et chercher ou utiliser l'historique des voyages précédents pour trouver des boutiques locales dans les résultats de recherche.
 
 Une analyse plus approfondie des habitudes des utilisateur·ice·s peut être utilisée pour anticiper leurs intérêts et personnaliser les réponses ou les notifications du serveur, par exemple pour fournir une liste des lieux précédemment visités ou les plus populaires que vous pourriez vouloir chercher sur la carte.
 

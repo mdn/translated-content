@@ -23,7 +23,7 @@ asyncGeneratorObject.next(value)
 
 ### 返値
 
-{{jsxref("Promise")}} で、2 つのプロパティを持つ {{jsxref("Global_Objects/Object", "Object")}} に解決します。
+{{jsxref("Promise")}} で、2 つのプロパティを持つ {{jsxref("Object")}} に解決します。
 
 - `done`
   - : 論理値です。

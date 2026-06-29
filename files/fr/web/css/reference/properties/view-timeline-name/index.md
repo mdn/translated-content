@@ -1,8 +1,9 @@
 ---
-title: view-timeline-name
+title: Propriété CSS `view-timeline-name`
+short-title: view-timeline-name
 slug: Web/CSS/Reference/Properties/view-timeline-name
 l10n:
-  sourceCommit: 5310a5bff0e1f3e2dfafa44bc2aadbb39e1c4673
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 La propéiété [CSS](/fr/docs/Web/CSS) **`view-timeline-name`** définit les noms d'un ou plusieurs [chronomètres de progression de vue nommés](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_la_vue_nommée) associés à l'élément.
@@ -38,9 +39,9 @@ view-timeline-name: unset;
 
 La propriété `view-timeline-name` est utilisée pour définir le nom d'une [chronologie de progression de vue](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_la_vue). Une chronologie de progression de vue progresse en fonction du changement de visibilité d'un élément, appelé le _sujet_, à l'intérieur d'un élément défilable, appelé le _défileur_. La propriété `view-timeline-name` est définie sur le sujet. Vous pouvez également définir `view-timeline-name` en utilisant la propriété raccourcie {{CSSxRef("view-timeline")}}.
 
-Si l'élément défilable nommé du sujet ne déborde pas de son conteneur dans la [dimension de l'axe](/fr/docs/Web/CSS/Reference/Properties/view-timeline-axis) ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement ne sera créée.
+Si l'élément défilable nommé du sujet ne déborde pas de son conteneur dans la [dimension de l'axe](/fr/docs/Web/CSS/Reference/Properties/view-timeline-axis) ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement ne est créée.
 
-Une fois créé, les valeurs de nom `<dashed-ident>` définies peuvent être référencées dans les déclarations {{CSSxRef("animation-timeline")}} pour indiquer l'élément qui sera animé au fur et à mesure de la progression de la chronologie.
+Une fois créé, les valeurs de nom `<dashed-ident>` définies peuvent être référencées dans les déclarations {{CSSxRef("animation-timeline")}} pour indiquer l'élément qui est animé au fur et à mesure de la progression de la chronologie.
 
 ## Définition formelle
 
@@ -129,7 +130,7 @@ p {
 }
 ```
 
-Le `<div>` avec la classe `sujet` reçoit également une classe `animation` — c'est ici que `view-timeline-name` est défini pour créer une chronologie de progression de vue nommée. Il reçoit également un nom `animation-timeline` avec la même valeur pour déclarer que cet élément sera animé au fur et à mesure de la progression de la chronologie de progression de la vue.
+Le `<div>` avec la classe `sujet` reçoit également une classe `animation` — c'est ici que `view-timeline-name` est défini pour créer une chronologie de progression de vue nommée. Il reçoit également un nom `animation-timeline` avec la même valeur pour déclarer que cet élément est animé au fur et à mesure de la progression de la chronologie de progression de la vue.
 
 Enfin, une animation est définie sur l'élément qui anime son opacité et son échelle, ce qui lui permet de s'estomper et de grandir à mesure qu'il se déplace vers le haut du défileur.
 
@@ -164,7 +165,7 @@ Enfin, une animation est définie sur l'élément qui anime son opacité et son 
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }

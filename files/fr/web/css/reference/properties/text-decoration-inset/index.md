@@ -1,8 +1,9 @@
 ---
-title: text-decoration-inset
+title: Propriété CSS `text-decoration-inset`
+short-title: text-decoration-inset
 slug: Web/CSS/Reference/Properties/text-decoration-inset
 l10n:
-  sourceCommit: 0fe625f488d9b548f57bb7f4c714287ba093d96b
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 {{SeeCompatTable}}
@@ -136,9 +137,8 @@ li {
     content: "Votre navigateur ne prend pas en charge la propriété text-decoration-inset.";
     background-color: wheat;
     display: block;
-    padding: 10px 0;
-    width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
@@ -195,9 +195,8 @@ u {
     content: "Votre navigateur ne prend pas en charge la propriété text-decoration-inset.";
     background-color: wheat;
     display: block;
-    padding: 10px 0;
-    width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 }
 ```

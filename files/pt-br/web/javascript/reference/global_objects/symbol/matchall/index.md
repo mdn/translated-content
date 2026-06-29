@@ -20,7 +20,7 @@ console.log(Array.from(result, (x) => x[0]));
 
 ## Descrição
 
-Esse símbolo é usado pelo {{jsxref("String.prototype.matchAll()")}} e especificado no {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. Os próximos dois exemplos retornam o mesmo resultado:
+Esse símbolo é usado pelo {{jsxref("String.prototype.matchAll()")}} e especificado no {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}. Os próximos dois exemplos retornam o mesmo resultado:
 
 ```js
 "abc".matchAll(/a/);
@@ -50,7 +50,7 @@ console.log(Array.from(str.matchAll(numbers)));
 //  Array ["2016", "01", "02", "2019", "03", "07"]
 ```
 
-Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} para mais exemplos.
+Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}} para mais exemplos.
 
 ## Especificações
 
@@ -63,4 +63,4 @@ Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp.@@matchAll", "
 ## Veja também
 
 - {{jsxref("String.prototype.matchAll()")}}
-- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}
+- {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}

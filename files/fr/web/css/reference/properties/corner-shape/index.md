@@ -1,8 +1,9 @@
 ---
-title: corner-shape
+title: Propriété CSS `corner-shape`
+short-title: corner-shape
 slug: Web/CSS/Reference/Properties/corner-shape
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 {{SeeCompatTable}}
@@ -57,7 +58,7 @@ La propriété `corner-shape` peut être définie avec une, deux, trois ou quatr
 
 La propriété `corner-shape` permet de modifier la forme des coins arrondis créés par la propriété {{CSSxRef("border-radius")}} et ses variantes détaillées. Les coins déjà arrondis peuvent être personnalisés davantage selon le degré d'arrondi appliqué, ce qui permet de créer, par exemple, des coins biseautés, encochés ou en forme de carré-rond (<i lang="en">squircle</i> en anglais). Les bordures, contours, ombres et effets d'arrière-plan appliqués au conteneur suivront la forme définie du coin.
 
-Si aucune valeur de `border-radius` n'est appliquée à un conteneur, ou si `border-radius` vaut `0`, `corner-shape` n'aura aucun effet.
+Si aucune valeur de `border-radius` n'est appliquée à un conteneur, ou si `border-radius` vaut `0`, `corner-shape` n'a aucun effet.
 
 La propriété raccourcie `corner-shape` et ses variantes associées [`corner-*-shape`](#corner--shape_shorthands_and_longhands) acceptent de une à quatre valeurs {{CSSxRef("&lt;corner-shape-value>")}}. Chacune est définie directement comme une fonction {{CSSxRef("superellipse()")}} ou un mot-clé décrivant une forme courante. Chaque mot-clé correspond à une valeur précise de `superellipse()`.
 
@@ -173,22 +174,12 @@ div {
 }
 
 @supports not (corner-shape: scoop) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "Votre navigateur ne prend pas en charge la propriété 'corner-shape'.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -259,22 +250,12 @@ div {
 }
 
 @supports not (corner-shape: scoop notch) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "Votre navigateur ne prend pas en charge la propriété 'corner-shape'.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -401,22 +382,12 @@ section {
 }
 
 @supports not (corner-shape: scoop) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "Votre navigateur ne prend pas en charge la propriété 'corner-shape'.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -530,22 +501,12 @@ section {
 }
 
 @supports not (corner-shape: superellipse(0)) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "Votre navigateur ne prend pas en charge la propriété 'corner-shape'.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -620,22 +581,12 @@ div {
 }
 
 @supports not (corner-shape: square) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "Votre navigateur ne prend pas en charge la propriété 'corner-shape'.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```

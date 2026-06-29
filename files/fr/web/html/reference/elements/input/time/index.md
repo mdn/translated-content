@@ -1,8 +1,9 @@
 ---
-title: <input type="time">
+title: Valeur d'attribut HTML `<input type="time">`
+short-title: <input type="time">
 slug: Web/HTML/Reference/Elements/input/time
 l10n:
-  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`time`** permettent de créer des contrôles où l'utilisateur·ice peut saisir une heure (avec des minutes et éventuellement des secondes).
@@ -40,7 +41,7 @@ En complément des attributs communs à l'ensemble des éléments {{HTMLElement(
 
 ### `list`
 
-La valeur de cet attribut est l'identifiant ({{DOMxRef("Element.id", "id")}}) d'un élément {{HTMLElement("datalist")}} situé dans le même document. L'élément {{HTMLElement("datalist")}} fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Reference/Elements/input#type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
+La valeur de cet attribut est l'identifiant ({{DOMxRef("Element.id", "id")}}) d'un élément {{HTMLElement("datalist")}} situé dans le même document. L'élément {{HTMLElement("datalist")}} fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Reference/Elements/input#type)) n'est pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
 
 ### `max`
 
@@ -52,7 +53,7 @@ Une chaîne de caractères indiquant l'heure la plus tôt qui peut être accept�
 
 ### `readonly`
 
-Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité par l'utilisateur·ice. La valeur de l'attribut `value` peut, toutefois, être modifiée avec du code JavaScript qui modifierait la valeur de la propriété `value` sur l'objet {{DOMxRef("HTMLInputElement")}}.
+Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité par l'utilisateur·ice. La valeur de l'attribut `value` peut, toutefois, être modifiée avec du code JavaScript qui modifie la valeur de la propriété `value` sur l'objet {{DOMxRef("HTMLInputElement")}}.
 
 > [!NOTE]
 > Puisqu'un champ en lecture seule ne peut pas avoir de valeur, `required` n'a pas d'effet sur les champs qui ont également `readonly` présent.
@@ -66,11 +67,11 @@ Pour les champs de type `time`, la valeur de `step` est exprimée en secondes et
 Une valeur de chaînes de caractères `any` signifie qu'aucun pas n'est implicite et que toute valeur est autorisée (sous réserve d'autres contraintes, telles que [`min`](#min) et [`max`](#max)). En réalité, cela a le même effet que `60` pour les champs `time`, car l'interface utilisateur du sélecteur ne permet dans ce cas que de sélectionner des minutes entières.
 
 > [!NOTE]
-> Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, {{Glossary("user agent", "l'agent utilisateur")}} pourra arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
+> Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, {{Glossary("user agent", "l'agent utilisateur")}} peut arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
 
 ## Validation
 
-Par défaut, `<input type="time">` ne valide pas les valeurs saisies, autre que l'interface utilisateur qui ne permet généralement pas de saisir autre chose qu'une valeur temporelle. Cela est utile, mais vous ne pouvez pas vous fier entièrement à la valeur pour être une chaîne de temps correcte, car elle pourrait être une chaîne de caractères vide (`""`), ce qui est autorisé. Pour des exemples de validation des contraintes utilisant les attributs `min`, `max`, `step` et `required`, voir la section [définir les heures maximales et minimales](#définir_les_heures_minimales_et_maximales).
+Par défaut, `<input type="time">` ne valide pas les valeurs saisies, autre que l'interface utilisateur qui ne permet généralement pas de saisir autre chose qu'une valeur temporelle. C'est utile, mais vous ne pouvez pas vous fier entièrement à la valeur pour être une chaîne de temps correcte, car elle peut être une chaîne de caractères vide (`""`), ce qui est autorisé. Pour des exemples de validation des contraintes utilisant les attributs `min`, `max`, `step` et `required`, voir la section [définir les heures maximales et minimales](#définir_les_heures_minimales_et_maximales).
 
 ## Exemples
 
@@ -136,7 +137,7 @@ input:valid + span::after {
 
 ### Contrôler la taille du champ
 
-`<input type="time">` ne prend pas en charge les attributs de taille de formulaire tels que [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size), car les heures ont toujours à peu près le même nombre de caractères. Vous devrez utiliser le [CSS](/fr/docs/Web/CSS) pour les besoins de dimensionnement.
+`<input type="time">` ne prend pas en charge les attributs de taille de formulaire tels que [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size), car les heures ont toujours à peu près le même nombre de caractères. Vous devez utiliser le [CSS](/fr/docs/Web/CSS) pour les besoins de dimensionnement.
 
 ### Définir l'attribut `value`
 
@@ -196,22 +197,24 @@ startTime.addEventListener("input", () => {
 
 {{EmbedLiveSample("Format de la valeur de l'heure", 600, 80)}}
 
-Lorsque un formulaire incluant un champ `time` est soumis, la valeur est encodée avant d'être incluse dans les données du formulaire. L'entrée de données du formulaire pour un champ de type time sera toujours sous la forme `name=HH%3Amm`, ou `name=HH%3Amm%3Ass` si des secondes sont incluses (voir [Utiliser l'attribut `step`](#utiliser_lattribut_step)).
+Lorsque un formulaire incluant un champ `time` est soumis, la valeur est encodée avant d'être incluse dans les données du formulaire. L'entrée de données du formulaire pour un champ de type `time` est toujours sous la forme `name=HH%3Amm`, ou `name=HH%3Amm%3Ass` si des secondes sont incluses (voir [Utiliser l'attribut `step`](#utiliser_lattribut_step)).
 
 ### Utiliser l'attribut `step`
 
-You can use the [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) attribute to vary the amount of time jumped whenever the time is incremented or decremented (for example, so the time moves by 10 minutes at a time when clicking the little arrow widgets).
+Vous pouvez utiliser l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) pour varier la quantité de temps sautée chaque fois que l'heure est incrémentée ou décrémentée (par exemple, pour que l'heure avance de 10 minutes à la fois lorsque vous cliquez sur les petites flèches).
 
-It takes an integer value defining the number of seconds you want to increment by; the default value is 60 seconds. With this as the default, most user agent time UIs display hours and minutes but not seconds. Including the [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) attribute with any numeric value other than a value divisible by `60` adds seconds to the UI, if the `min` or `max` value has not already caused the seconds to be visible.
+Il prend une valeur entière définissant le nombre de secondes que vous souhaitez incrémenter&nbsp;; la valeur par défaut est de 60 secondes. Avec cette valeur par défaut, la plupart des interfaces utilisateur de temps des agents utilisateurs affichent les heures et les minutes mais pas les secondes. Inclure l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) avec une valeur numérique autre qu'une valeur divisible par `60` ajoute des secondes à l'interface utilisateur, si la valeur `min` ou `max` n'a pas déjà rendu les secondes visibles.
 
 ```html
 <form>
-  <label for="appointment-time">Choose an appointment time: </label>
+  <label for="appointment-time">
+    Choisissez une heure de rendez-vous&nbsp;:
+  </label>
   <input id="appointment-time" type="time" name="appointment-time" step="2" />
 </form>
 ```
 
-{{EmbedLiveSample('utiliser_lattribut_step', 600, 40)}}
+{{EmbedLiveSample("Utiliser l'attribut `step`", 600, 40)}}
 
 Pour définir des minutes ou des heures comme pas, définissez le nombre de minutes ou d'heures en secondes, par exemple 120 pour 2 minutes, ou 7200 pour 2 heures.
 
@@ -268,11 +271,11 @@ input:valid + span::after {
 
 Le résultat ici est que&nbsp;:
 
-- Seules les heures comprises entre 12:00 et 18:00 seront considérées comme valides&nbsp;; les heures en dehors de cette plage seront considérées comme invalides.
+- Seules les heures comprises entre 12:00 et 18:00 sont considérées comme valides&nbsp;; les heures en dehors de cette plage sont considérées comme invalides.
 
 #### Avoir un minimum et un maximum autour de minuit
 
-En définissant un attribut [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) supérieur à l'attribut [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max), la plage horaire valide contournera minuit pour produire une plage horaire valide. Cette fonctionnalité n'est pas prise en charge par d'autres types de champs de saisie.
+En définissant un attribut [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) supérieur à l'attribut [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max), la plage horaire valide contourne minuit pour produire une plage horaire valide. Cette fonctionnalité n'est pas prise en charge par d'autres types de champs de saisie.
 
 ```js
 const input = document.createElement("input");
@@ -290,7 +293,7 @@ if (input.validity.valid && input.type === "time") {
 
 ### Rendre les heures obligatoires
 
-De plus, vous pouvez utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) pour rendre la saisie de l'heure obligatoire. Les navigateurs afficheront une erreur si vous essayez de soumettre une heure en dehors des limites définies ou un champ horaire vide.
+De plus, vous pouvez utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) pour rendre la saisie de l'heure obligatoire. Les navigateurs affichent une erreur si vous essayez d'envoyer une heure en dehors des limites définies ou un champ horaire vide.
 
 Voyons un exemple&nbsp;; ici, nous avons défini des heures minimales et maximales, et avons également rendu le champ obligatoire&nbsp;:
 
@@ -316,12 +319,12 @@ Voyons un exemple&nbsp;; ici, nous avons défini des heures minimales et maximal
 </form>
 ```
 
-Si vous essayez de soumettre le formulaire avec une heure incomplète (ou avec une heure en dehors des limites définies), le navigateur affichera une erreur. Essayez de jouer avec l'exemple maintenant&nbsp;:
+Si vous essayez d'envoyer le formulaire avec une heure incomplète (ou avec une heure en dehors des limites définies), le navigateur affiche une erreur. Essayez de jouer avec l'exemple maintenant&nbsp;:
 
 {{EmbedLiveSample("Rendre les heures obligatoires", 600, 120)}}
 
 > [!WARNING]
-> La validation des formulaires HTML _ne remplace pas_ les scripts qui garantissent que les données saisies sont au bon format. Il est beaucoup trop facile pour quelqu'un de modifier le HTML pour contourner la validation, ou de la supprimer entièrement. Il est également possible pour quelqu'un de contourner complètement votre HTML et de soumettre les données directement à votre serveur. Si votre code côté serveur ne valide pas les données qu'il reçoit, des catastrophes peuvent survenir lorsque des données mal formatées sont soumises (ou des données trop volumineuses, du mauvais type, etc.).
+> La validation des formulaires HTML _ne remplace pas_ les scripts qui garantissent que les données saisies sont au bon format. Il est beaucoup trop facile pour quelqu'un de modifier le HTML pour contourner la validation, ou de la supprimer entièrement. Il est également possible pour quelqu'un de contourner complètement votre HTML et d'envoyer les données directement à votre serveur. Si votre code côté serveur ne valide pas les données qu'il reçoit, des catastrophes peuvent survenir lorsque des données mal formatées sont envoyées (ou des données trop volumineuses, du mauvais type, etc.).
 
 ## Résumé technique
 
@@ -361,15 +364,6 @@ Si vous essayez de soumettre le formulaire avec une heure incomplète (ou avec u
       <td>{{DOMxRef("HTMLInputElement")}}</td>
     </tr>
     <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}},
-        {{DOMxRef("HTMLInputElement.stepDown", "stepDown()")}},
-        et
-        {{DOMxRef("HTMLInputElement.stepUp", "stepUp()")}}.
-      </td>
-    </tr>
-     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>
       <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">Pas de rôle correspondant <sup>(angl.)</sup></a></td>
     </tr>

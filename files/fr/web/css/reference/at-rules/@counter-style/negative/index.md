@@ -1,8 +1,9 @@
 ---
-title: negative
+title: Descripteur de règle CSS `negative`
+short-title: negative
 slug: Web/CSS/Reference/At-rules/@counter-style/negative
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`negative`** de la règle {{CSSxRef("@counter-style")}} permet de définir comment les valeurs négatives du compteur sont représentées lors de la création de styles de compteur personnalisés. La valeur du descripteur `negative` définit les symboles à ajouter avant et après la représentation du compteur lorsque la valeur du compteur est négative.

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-**`Reflect.deleteProperty()`** は静的メソッドで、{{jsxref("Operators/delete", "delete")}} 演算子と同様に実装されていますが、関数として動作します。オブジェクトからプロパティを削除します。
+**`Reflect.deleteProperty()`** は静的メソッドで、{{jsxref("delete")}} 演算子と同様に実装されていますが、関数として動作します。オブジェクトからプロパティを削除します。
 
 {{InteractiveExample("JavaScript デモ: Reflect.deleteProperty()", "taller")}}
 

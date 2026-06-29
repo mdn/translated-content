@@ -2,7 +2,7 @@
 title: method
 slug: Web/SVG/Reference/Attribute/method
 l10n:
-  sourceCommit: d22284cbba8b64afd6ad8c965d4ac2c927c59550
+  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
 ---
 
 **`method`** 属性は、{{SVGElement("textPath")}} 要素のパスに沿ってテキストをレンダリングする方法を指定します。

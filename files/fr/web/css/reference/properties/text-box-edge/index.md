@@ -1,8 +1,9 @@
 ---
-title: text-box-edge
+title: Propriété CSS `text-box-edge`
+short-title: text-box-edge
 slug: Web/CSS/Reference/Properties/text-box-edge
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-box-edge`** définit une quantité d'espace à supprimer du conteneur de bloc d'un élément de texte.

@@ -1,8 +1,9 @@
 ---
-title: ::-moz-focus-inner
+title: Pseudo-élément CSS `::-moz-focus-inner`
+short-title: ::-moz-focus-inner
 slug: Web/CSS/Reference/Selectors/::-moz-focus-inner
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{Non-standard_Header}}{{Deprecated_Header}}

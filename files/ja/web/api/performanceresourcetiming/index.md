@@ -2,18 +2,18 @@
 title: PerformanceResourceTiming
 slug: Web/API/PerformanceResourceTiming
 l10n:
-  sourceCommit: 9a35e1c5480419efc4cd7bcfd856ff64cdfb5b54
+  sourceCommit: 40fa68f80d38ba7142d47f52cdd0960325d63a44
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 **`PerformanceResourceTiming`** インターフェイスは、アプリケーションのリソースの読み込みに関する詳細なネットワークタイミングデータの取得と分析を可能にします。アプリケーションはタイミングメトリックを使用して、{{domxref("XMLHttpRequest")}}、{{SVGElement("SVG","SVG 要素")}}、画像、スクリプトなどの特定のリソースを取得するのにかかる時間を判断できます。
+
+{{InheritanceDiagram}}
 
 ## 解説
 
 このインターフェイスのプロパティは、リダイレクトの開始時刻と終了時刻、フェッチの開始時刻、DNS ルックアップの開始時刻と終了時刻、レスポンスの開始時刻と終了時刻などのネットワークイベントに対する高解像度タイムスタンプを含むリソース読み込みタイムラインを作成します。さらに、このインターフェイスは、取得したリソースのサイズや取得を開始したリソースの種類に関するデータを提供する他のプロパティを使用して {{domxref("PerformanceEntry")}} を拡張します。
-
-{{InheritanceDiagram}}
 
 ### 一般的なリソースタイミングメトリクス
 
@@ -22,7 +22,9 @@ l10n:
 - TCP ハンドシェイク時間の計測 (`connectEnd` - `connectStart`)
 - DNS ルックアップ時間の計測 (`domainLookupEnd` - `domainLookupStart`)
 - リダイレクト時間の計測 (`redirectEnd` - `redirectStart`)
+- 中間リクエスト時間の計測 (`firstInterimResponseStart` - `finalResponseHeadersStart`)
 - リクエスト時間の計測 (`responseStart` - `requestStart`)
+- 文書のリクエスト時間の計測 (`finalResponseHeadersStart` - `requestStart`)
 - TLS ネゴシエーション時間の計測 (`requestStart` - `secureConnectionStart`)
 - フェッチ時間の計測（リダイレクトなし） (`responseEnd` - `fetchStart`)
 - サービスワーカー処理時間の計測 (`fetchStart` - `workerStart`)
@@ -30,6 +32,22 @@ l10n:
 - ローカルキャッシュがヒットしたかどうかのチェック (`transferSize` が `0` になる)
 - 最新の高速プロトコルが使用されているかどうかのチェック (`nextHopProtocol` が HTTP/2 または HTTP/3)
 - リソースがレンダーブロッキングであることのチェック (`renderBlockingStatus`)
+
+### リソースバッファーサイズの管理
+
+デフォルトで、リソースタイミングの項目は 250 件のみバッファーに保存されます。情報については、リソースタイミングガイドの[リソースバッファーサイズ](/ja/docs/Web/API/Performance_API/Resource_timing#リソースバッファーサイズの管理)を参照してください。
+
+### オリジン間のタイミング情報
+
+リソースタイミングプロパティの多くは、リソースがオリジン間リクエストであった場合に `0` または空文字列を返すよう制約されています。オリジン間のタイミング情報を見るためには、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
+
+ウェブページ自体とは異なるオリジンからリソースを読み込む際、デフォルトで `0` が返されるプロパティは、`redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, `responseStart` です。
+
+例えば、`https://developer.mozilla.org` にタイミングリソースを見ることを許可するには、オリジン間リソースで次のものを送信する必要があります。
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
+```
 
 ## インスタンスプロパティ
 
@@ -50,7 +68,7 @@ l10n:
 
 このインターフェイスは、以下のタイムスタンププロパティに対応しています。図に示すように、リソースのフェッチに記録される順番で掲載されています。アルファベット順の一覧は、左のナビゲーションに掲載されています。
 
-![リソースのフェッチに記録された順にタイムスタンプを掲載しているタイムスタンプ図](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
+![リソースのフェッチに記録された順にタイムスタンプを掲載しているタイムスタンプ図](timestamp-diagram.svg)
 
 - {{domxref('PerformanceResourceTiming.redirectStart')}} {{ReadOnlyInline}}
   - : リダイレクトを開始するフェッチの開始時刻を表す {{domxref("DOMHighResTimeStamp")}} です。
@@ -72,8 +90,12 @@ l10n:
   - : ブラウザーがリソースを取得するためにサーバーとの接続を完了した直後の {{domxref("DOMHighResTimeStamp")}} です。
 - {{domxref('PerformanceResourceTiming.requestStart')}} {{ReadOnlyInline}}
   - : ブラウザーがサーバーからリソースのリクエストを始める直前の {{domxref("DOMHighResTimeStamp")}} です。
+- {{domxref('PerformanceResourceTiming.firstInterimResponseStart')}} {{ReadOnlyInline}}
+  - : {{domxref("DOMHighResTimeStamp")}} で、中間レスポンス（100 Continue や 103 Early Hints など）の時刻を表します。
 - {{domxref('PerformanceResourceTiming.responseStart')}} {{ReadOnlyInline}}
-  - : ブラウザーがサーバーからレスポンスの最初のバイトを受け取った直後の {{domxref("DOMHighResTimeStamp")}} です。
+  - : ブラウザーがサーバーからレスポンスの最初のバイトを受け取った直後の {{domxref("DOMHighResTimeStamp")}} です（中間レスポンスである可能性があります）。
+- {{domxref('PerformanceResourceTiming.finalResponseHeadersStart')}} {{ReadOnlyInline}}
+  - : {{domxref("DOMHighResTimeStamp")}} で、中間レスポンス時間を経た後の、最終ヘッダー（200 Success など）のレスポンス時刻を表します。
 - {{domxref('PerformanceResourceTiming.responseEnd')}} {{ReadOnlyInline}}
   - : ブラウザーがリソースの最後のバイトを受信した直後、またはトランスポート接続が閉じられる直前の、どちらか早い方の {{domxref("DOMHighResTimeStamp")}} です。
 
@@ -81,8 +103,12 @@ l10n:
 
 さらに、このインターフェイスは、リソースに関するより詳細な情報を含む以下のプロパティを公開します。
 
+- {{domxref("PerformanceResourceTiming.contentType")}} {{ReadOnlyInline}}
+  - : 取得されたリソースの MIME タイプを、最小化および標準化した形式で表す文字列です。
 - {{domxref('PerformanceResourceTiming.decodedBodySize')}} {{ReadOnlyInline}}
   - : メッセージ本体のフェッチ（HTTPまたはキャッシュ）から受け取ったサイズ（オクテット単位）を表す数値で、適用されたコンテンツエンコーディングを削除した後の値です。
+- {{domxref("PerformanceResourceTiming.deliveryType")}} {{ReadOnlyInline}}
+  - : リソースがどのように配信されたかを示します。例えば、キャッシュから配信されたか、ナビゲーションの先読みから配信されたかなどです。
 - {{domxref('PerformanceResourceTiming.encodedBodySize')}} {{ReadOnlyInline}}
   - : フェッチ（HTTP またはキャッシュ）から受け取ったペイロード本体のサイズ（オクテット単位）を表す数値で、適用されたコンテンツエンコーディングを削除する前のものです。
 - {{domxref('PerformanceResourceTiming.initiatorType')}} {{ReadOnlyInline}}
@@ -90,7 +116,7 @@ l10n:
 - {{domxref('PerformanceResourceTiming.nextHopProtocol')}} {{ReadOnlyInline}}
   - : 文字列で、 [ALPN プロトコル ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301) によって識別される、リソースを取得するために使用されたネットワークプロトコルを表します。
 - {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
-  - : レンダーブロッキングの状態を表す文字列。"`blocking`" または "`non-blocking`" のどちらかです。
+  - : 文字列で、レンダリングをブロックする状態を表します。`"blocking"` または `"non-blocking"` のどちらかです。
 - {{domxref('PerformanceResourceTiming.responseStatus')}} {{experimental_inline}} {{ReadOnlyInline}}
   - : リソースのフェッチ時に返される HTTP レスポンスステータスコードを表す数値です。
 - {{domxref('PerformanceResourceTiming.transferSize')}} {{ReadOnlyInline}}
@@ -128,18 +154,6 @@ resources.forEach((entry) => {
 });
 ```
 
-## セキュリティ要件
-
-### オリジン間のタイミング情報
-
-リソースタイミングプロパティの多くは、リソースがオリジン間リクエストであった場合に `0` または空文字列を返すよう制約されています。オリジン間のタイミング情報を見るためには、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
-
-例えば、`https://developer.mozilla.org` にタイミングリソースを見ることを許可するには、オリジン間リソースで次のものを送信する必要があります。
-
-```http
-Timing-Allow-Origin: https://developer.mozilla.org
-```
-
 ## 仕様書
 
 {{Specifications}}
@@ -151,4 +165,3 @@ Timing-Allow-Origin: https://developer.mozilla.org
 ## 関連情報
 
 - [リソースタイミング（概要）](/ja/docs/Web/API/Performance_API/Resource_timing)
-- [リソースタイミング API の使用](/ja/docs/Web/API/Performance_API/Resource_timing)

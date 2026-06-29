@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 En este primer artículo de Django responderemos la pregunta ¿Qué es Django? y daremos una visión general de lo que hace que este framework sea tan especial. Vamos a delinear las características principales, incluidas algunas de las funcionalidades avanzadas que no tendremos tiempo de cubrir con detalle en este módulo. Tambien mostraremos algunos de los componentes principales de una aplicación de Django. (aunque en este momento no cuentes con un entorno de desarrollo en el cual probarlo).
 
@@ -246,4 +246,4 @@ Las secciones prededentes muestran las principales características que usarás 
 
 Has visto ya algo de código real de Django más arriba, pero a diferencia del código de lado cliente, necesitas configurar un entorno de desarrollo para hacerlo funcionar. Ese será nuestro siguiente paso.
 
-{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}

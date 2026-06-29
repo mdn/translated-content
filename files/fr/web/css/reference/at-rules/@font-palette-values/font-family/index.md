@@ -1,8 +1,9 @@
 ---
-title: font-family
+title: Descripteur de règle CSS `font-family`
+short-title: font-family
 slug: Web/CSS/Reference/At-rules/@font-palette-values/font-family
 l10n:
-  sourceCommit: 0b926fc3e79782401461d389fc9f17d522b39ed3
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-family`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-palette-values")}} est utilisé pour spécifier à quelle famille de police les valeurs de palette doivent s'appliquer. Cette valeur doit correspondre exactement à celle utilisée lors de la définition de la propriété CSS {{CSSxRef("font-family")}}.

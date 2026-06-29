@@ -1,9 +1,9 @@
 ---
-title: invert()
+title: Fonction CSS `invert()`
+short-title: invert()
 slug: Web/CSS/Reference/Values/filter-function/invert
-original_slug: Web/CSS/filter-function/invert
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`invert()`** permet d'inverser les couleurs de l'image. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.

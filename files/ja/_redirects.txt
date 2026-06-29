@@ -1333,7 +1333,7 @@
 /ja/docs/Glossary/Signature/関数	/ja/docs/Glossary/Signature/Function
 /ja/docs/Glossary/Simple_header	/ja/docs/Glossary/CORS-safelisted_request_header
 /ja/docs/Glossary/Simple_response_header	/ja/docs/Glossary/CORS-safelisted_response_header
-/ja/docs/Glossary/Symbol	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol
+/ja/docs/Glossary/Stylesheet	/ja/docs/Glossary/Style_sheet
 /ja/docs/Glossary/Transferable_objects	/ja/docs/Web/API/Web_Workers_API/Transferable_objects
 /ja/docs/Glossary/XHR_(XMLHttpRequest)	/ja/docs/Glossary/XMLHttpRequest
 /ja/docs/Glossary/XSS	/ja/docs/Glossary/Cross-site_scripting
@@ -3331,6 +3331,7 @@
 /ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/ja/docs/Web/API/Performance_API/Resource_timing
 /ja/docs/Web/API/Response/error	/ja/docs/Web/API/Response/error_static
 /ja/docs/Web/API/Response/redirect	/ja/docs/Web/API/Response/redirect_static
+/ja/docs/Web/API/SVGAElement/text	/ja/docs/Web/API/Node/textContent
 /ja/docs/Web/API/SVGCursorElement	/ja/docs/Web/API/SVGElement
 /ja/docs/Web/API/SVGEvent	/ja/docs/Web/API/Event
 /ja/docs/Web/API/SVGFontElement	/ja/docs/Web/API/SVGElement
@@ -3906,7 +3907,6 @@
 /ja/docs/Web/Accessibility/ARIA/Roles/table_role	/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role
 /ja/docs/Web/Accessibility/ARIA/Roles/term_role	/ja/docs/Web/Accessibility/ARIA/Reference/Roles/term_role
 /ja/docs/Web/Accessibility/ARIA/Roles/textbox_role	/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role
-/ja/docs/Web/Accessibility/ARIA/Roles/toolbar_role	/ja/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role
 /ja/docs/Web/Accessibility/ARIA/Roles/tooltip_role	/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tooltip_role
 /ja/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/ja/docs/Web/Accessibility/ARIA
 /ja/docs/Web/Accessibility/ARIA/forms	/ja/docs/Web/Accessibility/ARIA
@@ -6562,7 +6562,12 @@
 /ja/docs/Web/JavaScript/Reference/Statements/yield	/ja/docs/Web/JavaScript/Reference/Operators/yield
 /ja/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
 /ja/docs/Web/JavaScript/Reference/arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+/ja/docs/Web/JavaScript/Reference/delete	/ja/docs/Web/JavaScript/Reference/Operators/delete
+/ja/docs/Web/JavaScript/Reference/instanceof	/ja/docs/Web/JavaScript/Reference/Operators/instanceof
+/ja/docs/Web/JavaScript/Reference/new	/ja/docs/Web/JavaScript/Reference/Operators/new
+/ja/docs/Web/JavaScript/Reference/null	/ja/docs/Web/JavaScript/Reference/Operators/null
 /ja/docs/Web/JavaScript/Reference/template_strings	/ja/docs/Web/JavaScript/Reference/Template_literals
+/ja/docs/Web/JavaScript/Reference/this	/ja/docs/Web/JavaScript/Reference/Operators/this
 /ja/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Defenses/Same-origin_policy
 /ja/docs/Web/JavaScript/Shells	/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /ja/docs/Web/JavaScript/Strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
@@ -6688,6 +6693,8 @@
 /ja/docs/Web/Performance/Navigation_and_resource_timings	/ja/docs/Web/Performance/Guides/Navigation_and_resource_timings
 /ja/docs/Web/Performance/Speculative_loading	/ja/docs/Web/Performance/Guides/Speculative_loading
 /ja/docs/Web/Performance/dns-prefetch	/ja/docs/Web/Performance/Guides/dns-prefetch
+/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment	/ja/docs/Web/Privacy/Guides/Privacy_sandbox#登録
+/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies	/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies
 /ja/docs/Web/Progressive_web_apps/Add_to_home_screen	/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ja/docs/Web/Progressive_web_apps/App_structure	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure

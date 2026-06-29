@@ -1,8 +1,9 @@
 ---
-title: <input type="password">
+title: Valeur d'attribut HTML `<input type="password">`
+short-title: <input type="password">
 slug: Web/HTML/Reference/Elements/input/password
 l10n:
-  sourceCommit: cc7f29133a331628d623e8cd705394b538d4368c
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 Les éléments `<input>` de type **`password`** permettent à l'utilisateur·ice de saisir un mot de passe de manière sécurisée.
@@ -47,7 +48,7 @@ Ces deux approches aident l'utilisateur·ice à vérifier qu'il·elle a bien sai
 
 ## Valeur
 
-L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) contient une chaîne de caractères dont la valeur correspond au contenu actuel du contrôle d'édition de texte utilisé pour saisir le mot de passe. Si l'utilisateur·ice n'a encore rien saisi, cette valeur est une chaîne vide (`""`). Si la propriété [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) est présente, le champ de saisie du mot de passe doit contenir une valeur différente d'une chaîne vide pour être valide.
+L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) contient une chaîne de caractères dont la valeur correspond au contenu actuel du contrôle d'édition de texte utilisé pour saisir le mot de passe. Si l'utilisateur·ice n'a encore rien saisi, cette valeur est une chaîne de caractères vide (`""`). Si la propriété [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) est présente, le champ de saisie du mot de passe doit contenir une valeur différente d'une chaîne de caractères vide pour être valide.
 
 Si l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) est présent, le contenu du contrôle `password` n'est considéré comme valide que si la valeur respecte la validation&nbsp;; voir la section [Validation](#validation) pour plus d'informations.
 
@@ -65,13 +66,13 @@ En plus des [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes
 
 Le nombre maximum de caractères (mesuré en {{Glossary("UTF-16", "unités de code UTF-16")}}) que l'utilisateur·ice peut saisir dans le champ de mot de passe. Cette valeur doit être un entier positif ou nul. Si aucun `maxlength` n'est défini, ou si une valeur invalide est indiquée, le champ n'a pas de limite de taille maximale. Cette valeur doit également être supérieure ou égale à la valeur de `minlength`.
 
-Le champ [ne sera pas valide](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du texte saisi dans le champ dépasse `maxlength` en {{Glossary("UTF-16", "unités de code UTF-16")}}. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur·ice.
+Le champ [n'est pas valide](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du texte saisi dans le champ dépasse `maxlength` en {{Glossary("UTF-16", "unités de code UTF-16")}}. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur·ice.
 
 ### `minlength`
 
 Le nombre minimal de caractères (mesuré en {{Glossary("UTF-16", "unités de code UTF-16")}}) que l'utilisateur·ice peut saisir dans le champ de mot de passe. Cette valeur doit être un entier positif inférieur ou égal à la valeur indiquée par `maxlength`. Si aucun `minlength` n'est défini, ou si une valeur invalide est indiquée, le champ n'a pas de limite de taille minimale.
 
-Le champ [ne sera pas valide](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du texte saisi dans le champ est inférieure à `minlength` en {{Glossary("UTF-16", "unités de code UTF-16")}}. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur·ice.
+Le champ [n'est pas valide](/fr/docs/Web/HTML/Guides/Constraint_validation) si la longueur du texte saisi dans le champ est inférieure à `minlength` en {{Glossary("UTF-16", "unités de code UTF-16")}}. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur·ice.
 
 ### `pattern`
 
@@ -80,7 +81,7 @@ L'attribut `pattern`, lorsqu'il est défini, est une expression rationnelle que 
 Si le motif défini n'est pas présent ou est invalide, aucune expression rationnelle n'est appliquée et cet attribut est ignoré.
 
 > [!NOTE]
-> Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pour définir un texte que la plupart des navigateurs afficheront comme info-bulle pour expliquer les exigences du motif. Vous devriez aussi inclure un texte explicatif à proximité du champ.
+> Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pour définir un texte que la plupart des navigateurs affichent comme info-bulle pour expliquer les exigences du motif. Vous devez aussi inclure un texte explicatif à proximité du champ.
 
 L'utilisation d'un motif est fortement recommandée pour les champs de mot de passe, afin d'aider à garantir que des mots de passe valides utilisant une grande variété de classes de caractères soient choisis et utilisés par les utilisateur·ices. Avec un motif, vous pouvez imposer des règles de casse, exiger l'utilisation d'un certain nombre de chiffres et/ou de caractères de ponctuation, etc. Voir la section [Validation](#validation) pour plus de détails et un exemple.
 
@@ -98,7 +99,7 @@ Si le contenu du contrôle a une directionnalité ({{Glossary("LTR")}} ou {{Glos
 Un attribut booléen qui, lorsqu'il est présent, signifie que ce champ ne peut pas être édité par l'utilisateur·ice. Sa valeur (`value`) peut cependant toujours être modifiée par du code JavaScript qui définit directement la valeur de la propriété {{DOMxRef("HTMLInputElement","HTMLInputElement.value")}}.
 
 > [!NOTE]
-> Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
+> Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'a pas d'effet si l'attribut `readonly` est également présent.
 
 ### `size`
 
@@ -123,7 +124,7 @@ Voici le champ de saisie de mot de passe le plus basique, avec un libellé étab
 
 ### Paramétrer l'autocomplétion
 
-Afin de permettre au gestionnaire de mots de passe de saisir automatiquement le mot de passe, on pourra utiliser l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete). Pour les mots de passe, celui-ci aura l'une des valeurs suivantes&nbsp;:
+Afin de permettre au gestionnaire de mots de passe de saisir automatiquement le mot de passe, on peut utiliser l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete). Pour les mots de passe, celui-ci a l'une des valeurs suivantes&nbsp;:
 
 - `on`
   - : Cette valeur permet au navigateur ou à un gestionnaire de mot de passe de remplir automatiquement le champ. Cette valeur n'est pas aussi informative que `current-password` ou `new-password`.
@@ -205,7 +206,7 @@ document.getElementById("selectAll").onclick = () => {
 
 {{EmbedLiveSample("Sélectionner le texte saisi", 600, 40)}}
 
-Vous pouvez également utiliser {{DOMxRef("HTMLInputElement.selectionStart", "selectionStart")}} et {{DOMxRef("HTMLInputElement.selectionEnd", "selectionEnd")}} pour obtenir (ou définir) la plage de caractères actuellement sélectionnée dans le contrôle, et {{DOMxRef("HTMLInputElement.selectionDirection", "selectionDirection")}} pour connaître la direction dans laquelle la sélection a été effectuée (ou sera étendue, selon la plateforme&nbsp;; voir sa documentation pour plus d'explications). Cependant, étant donné que le texte est masqué, l'utilité de ces propriétés reste limitée.
+Vous pouvez également utiliser {{DOMxRef("HTMLInputElement.selectionStart", "selectionStart")}} et {{DOMxRef("HTMLInputElement.selectionEnd", "selectionEnd")}} pour obtenir (ou définir) la plage de caractères actuellement sélectionnée dans le contrôle, et {{DOMxRef("HTMLInputElement.selectionDirection", "selectionDirection")}} pour connaître la direction dans laquelle la sélection a été effectuée (ou est étendue, selon la plateforme&nbsp;; voir sa documentation pour plus d'explications). Cependant, étant donné que le texte est masqué, l'utilité de ces propriétés reste limitée.
 
 ## Validation
 
@@ -249,7 +250,7 @@ Dans l'exemple qui suit, on construit un formulaire avec un mot de passe qui doi
 <span id="current"></span>
 ```
 
-On utilise l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) afin d'imposer certaines contraintes de saisie afin que les chaînes aient le bon format. Cette expression rationnelle ne garantit pas un numéro valide, mais elle permet de s'assurer que la valeur saisie _peut_ être un numéro de sécurité sociale valide. De plus, elle permet d'avoir un séparateur variable entre les trois groupes (une espace, un tiret ou rien).
+On utilise l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) afin d'imposer certaines contraintes de saisie afin que les chaînes de caractères aient le bon format. Cette expression rationnelle ne garantit pas un numéro valide, mais elle permet de s'assurer que la valeur saisie _peut_ être un numéro de sécurité sociale valide. De plus, elle permet d'avoir un séparateur variable entre les trois groupes (une espace, un tiret ou rien).
 
 L'attribut [`inputmode`](/fr/docs/Web/HTML/Reference/Elements/input#inputmode) vaut `number`, ce qui incite les appareils mobiles à utiliser un clavier virtuel uniquement numérique pour la saisie d'un tel champ. Les attributs [`minlength`](/fr/docs/Web/HTML/Reference/Elements/input#minlength) et [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength) valent respectivement 9 et 12 et l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) indique que cette valeur est nécessaire pour envoyer le formulaire. Enfin, [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete) vaut `off`, ce qui évite que les gestionnaires de mots de passe ou que les fonctionnalités de restauration de session remplissent automatiquement cette valeur.
 
@@ -311,15 +312,6 @@ ssn.oninput = (event) => {
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}},
-        {{DOMxRef("HTMLInputElement.setRangeText", "setRangeText()")}},
-        et
-        {{DOMxRef("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

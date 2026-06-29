@@ -20,7 +20,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">값</th>
-      <td><a href="/ko/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/ko/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
     </tr>
     <tr>
       <th scope="row">기본 값</th>

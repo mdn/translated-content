@@ -1,8 +1,9 @@
 ---
-title: letter-spacing
+title: Propriété CSS `letter-spacing`
+short-title: letter-spacing
 slug: Web/CSS/Reference/Properties/letter-spacing
 l10n:
-  sourceCommit: 21b975609b233dbc6fde334ff97ee9cde75e7c0f
+  sourceCommit: d62aeb53943b4861f18a3e895d32b020e09ce0aa
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`letter-spacing`** définit l'espacement entre les caractères du texte. Cette valeur s'ajoute à l'espacement naturel entre les caractères lors du rendu du texte. Des valeurs positives de `letter-spacing` écartent davantage les caractères, tandis que des valeurs négatives de `letter-spacing` rapprochent les caractères.
@@ -33,8 +34,8 @@ letter-spacing: -1px;
 <section id="default-example">
   <p id="example-element">
     Il y a autant de boue dans les rues que si les eaux venaient à peine de se
-    retirer de la surface de la terre, et il ne serait pas étonnant de croiser
-    un Mégalosaure, long d'une douzaine de mètres, se dandinant comme un lézard
+    retirer de la surface de la terre, et il n'est pas étonnant de croiser un
+    Mégalosaure, long d'une douzaine de mètres, se dandinant comme un lézard
     éléphantesque dans Holborn Hill.
   </p>
 </section>
@@ -82,11 +83,15 @@ letter-spacing: unset;
 
     Les valeurs en pourcentage sont calculées par rapport à la largeur du caractère espace de la police appliquée au texte.
 
+    > [!NOTE]
+    > Lorsque `letter-spacing` est différent de zéro, les agents utilisateur n'appliquent pas les ligatures optionnelles, telles que les ligatures standard (`liga`) et les ligatures contextuelles (`clig`) des fonctionnalités OpenType normalement contrôlées par {{CSSxRef("font-variant-ligatures")}}.
+    > Ces fonctionnalités peuvent être réactivées explicitement avec {{CSSxRef("font-feature-settings")}}.
+
 ## Accessibilité
 
-Utiliser une valeur trop grande (positive ou négative) pour `letter-spacing` rendra les mots illisibles. Si une valeur positive trop importante est utilisée, les lettres seront trop éloignées les unes des autres et on ne pourra pas distinguer les mots. Si une valeur négative trop faible est employée, les lettres peuvent se chevaucher et on ne pourra pas lire le texte.
+Utiliser une valeur trop grande (positive ou négative) pour `letter-spacing` rend les mots illisibles. Si une valeur positive trop importante est utilisée, les lettres sont trop éloignées les unes des autres et on ne peut pas distinguer les mots. Si une valeur négative trop faible est employée, les lettres peuvent se chevaucher et on ne peut pas lire le texte.
 
-L'espacement doit être déterminé au cas par cas car chaque famille de polices utilise des caractères de largeurs différentes. Il n'existe pas de valeur unique qui permette de s'assurer que, quelle que soit la police utilisée, le texte soit lisible.
+L'espacement doit être déterminé au cas par cas, car chaque famille de polices utilise des caractères de largeurs différentes. Il n'existe pas de valeur unique qui permette de s'assurer que, quelle que soit la police utilisée, le texte soit lisible.
 
 - [Explications de MDN sur les WCAG, règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
 - [Comprendre le critère de succès 1.4.8 | W3C Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
@@ -166,7 +171,7 @@ Le code affiche plusieurs paragraphes ayant le même `letter-spacing` appliqué 
 
 #### HTML
 
-Le HTML contient plusieurs éléments HTML {{HTMLElement("p")}} contenant du texte, ainsi qu'un [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) que nous utiliserons pour basculer entre une valeur de `letter-spacing` en longueur et une valeur en pourcentage.
+Le HTML contient plusieurs éléments HTML {{HTMLElement("p")}} contenant du texte, ainsi qu'un [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) que nous utilisons pour basculer entre une valeur de `letter-spacing` en longueur et une valeur en pourcentage.
 
 ```html live-sample___percentage-versus-length
 <p class="x-small">X-small font-size (0.8em)</p>
@@ -190,7 +195,7 @@ Notre CSS commence par appliquer des valeurs de {{CSSxRef("font-size")}} croissa
 
 ```css hidden live-sample___percentage-versus-length
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 ```
 
