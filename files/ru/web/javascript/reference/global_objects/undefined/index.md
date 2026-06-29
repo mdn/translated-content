@@ -54,7 +54,10 @@ undefined
 (function (undefined) {
   console.log(undefined, typeof undefined);
 })("foo");
-```
+> [!NOTE]
+> Несмотря на то, что `undefined` можно использовать в качестве {{Glossary("identifier", "идентификатора")}} (имени переменной) в любой области видимости, кроме глобальной (поскольку `undefined` не является [зарезервированным словом](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#зарезервированные_ключевые_слова_в_ecmascript_2015)), это очень плохая идея, которая затруднит поддержку и отладку кода.
+>
+> 
 
 ## Примеры
 

@@ -128,7 +128,8 @@ toString.call(null); // [object Null]
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}
+- [Полифил `Object.prototype.toString` с поддержкой `Symbol.toStringTag` в `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.valueOf()")}}
 - {{jsxref("Number.prototype.toString()")}}
 - {{jsxref("Symbol.toPrimitive")}}
+- {{jsxref("Symbol.toStringTag")}}
