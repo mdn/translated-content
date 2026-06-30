@@ -54,8 +54,7 @@ ctx.stroke();
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.stroke();</textarea
->
+ctx.stroke();</textarea>
 ```
 
 ```js hidden

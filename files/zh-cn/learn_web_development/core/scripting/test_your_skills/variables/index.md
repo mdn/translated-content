@@ -48,8 +48,7 @@ slug: Learn_web_development/Core/Scripting/Test_your_skills/Variables
   para2.textContent = myAge;
   section.appendChild(para1);
   section.appendChild(para2);
-    </textarea
-  >
+    </textarea>
 
   <div class="playable-buttons">
     <input id="reset" type="button" value="Reset" />
@@ -94,8 +93,7 @@ section.innerHTML = ' ';
 let para = document.createElement('p');
 para.textContent = myName;
 section.appendChild(para);
-    </textarea
-  >
+    </textarea>
 
   <div class="playable-buttons">
     <input id="reset" type="button" value="Reset" />
@@ -145,8 +143,7 @@ para1.textContent = `我是 ${myName}`;
 para2.textContent = `20 年后我 ${myAge + 20} 岁`;
 section.appendChild(para1);
 section.appendChild(para2);
-    </textarea
-  >
+    </textarea>
 
   <div class="playable-buttons">
     <input id="reset" type="button" value="Reset" />

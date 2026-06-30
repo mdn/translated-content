@@ -75,7 +75,8 @@ function* generate(a, b) {
   yield b;
 }
 
-for (let x of generate) // TypeError: генерация не является итерационной
+for (let x of generate)
+  // TypeError: генерация не является итерационной
   console.log(x);
 ```
 

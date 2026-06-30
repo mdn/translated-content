@@ -55,8 +55,7 @@ ctx.moveTo(20,20);
 ctx.lineTo(200,20);
 ctx.lineTo(120,120);
 ctx.closePath(); // draws last line of the triangle
-ctx.stroke();</textarea
->
+ctx.stroke();</textarea>
 ```
 
 ```js hidden

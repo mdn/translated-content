@@ -1016,8 +1016,7 @@ textarea:read-write {
 Viscous,
 Bright Ridge,
 CA
-</textarea
-      >
+</textarea>
     </div>
     <div>
       <label for="zip-code">郵便番号: </label>

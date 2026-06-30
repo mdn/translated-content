@@ -45,7 +45,6 @@ l10n:
 >
 >     Notez que vous devez d'abord créer ou mettre à jour une entrée pour le sélecteur et sa spécification dans notre <a href="https://github.com/mdn/browser-compat-data">dépôt de données de compatibilité des navigateurs <sup>(angl.)</sup></a>.
 >     Consultez notre [guide sur la façon de procéder](/fr/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
->
 > - **sidebar** (pages anglaises uniquement)
 >   - : Ceci est `cssref` pour toutes les pages de guide et de référence CSS.
 >     Voir [Structures de page&nbsp;: Barres latérales](/fr/docs/MDN/Writing_guidelines/Page_structures/Sidebars) pour plus de détails.

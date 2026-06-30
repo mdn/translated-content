@@ -101,8 +101,7 @@ La chose à retenir est que si l'objet change de taille, le motif lui-même sera
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
-rect.setAttribute('width', 300);</textarea
->
+rect.setAttribute('width', 300);</textarea>
 ```
 
 ```js hidden
@@ -259,8 +258,7 @@ Bien sûr, cela veut dire que le motif ne sera pas mis à l'échelle si vous mod
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
-rect.setAttribute('width', 300);</textarea
->
+rect.setAttribute('width', 300);</textarea>
 ```
 
 ```js hidden

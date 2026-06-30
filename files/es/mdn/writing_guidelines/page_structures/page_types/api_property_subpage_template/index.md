@@ -39,7 +39,6 @@ l10n:
 >     Esto se formateará como `Web/API/NameOfTheParentInterface/NameOfTheProperty`.
 >
 >     Si la propiedad es estática, entonces el slug debe tener un sufijo `_static`, como: `Web/API/NameOfTheParentInterface/NameOfTheProperty_static`. Esto nos permite admitir propiedades de instancia y estáticas que tienen el mismo nombre.
->
 > - **page-type**
 >   - : La clave `page-type` para las propiedades Web/API es `web-api-instance-property` (por ejemplo, propiedades) o `web-api-static-property` (para propiedades estáticas).
 > - **status**

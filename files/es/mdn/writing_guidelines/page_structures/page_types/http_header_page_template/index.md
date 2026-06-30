@@ -46,7 +46,6 @@ l10n:
 >
 >     La compatibilidad con navegadores no aplica para encabezados HTTP sin implementación específica definida.
 >     En esos casos, elimina la clave `browser-compat` y su valor.
->
 > - **sidebar**
 >   - : Siempre es `http`.
 >     Consulta [Estructuras de página: barras laterales](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars) para más detalles.
