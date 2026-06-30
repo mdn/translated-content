@@ -25,7 +25,7 @@ _A interface `PositionError` não herda nenhuma propriedade_.
 
 ## Métodos
 
-**A interface `PositionError` não implementa nem herda qualquer método*.***
+_*A interface `PositionError` não implementa nem herda qualquer método*._**
 
 ## Especificações
 

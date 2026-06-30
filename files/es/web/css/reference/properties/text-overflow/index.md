@@ -65,7 +65,7 @@ La propiedad `text-overflow` ha de ser especificada usando uno o dos valores. Si
 Cada valor se especificará como una de las siguientes opciones:
 
 - Una palabra clave: [`clip`](#clip), [`ellipsis`](#ellipsis), [`fade`](#fade)
-- La función [`fade()`](<#fade( \<length\> | \<percentage\> )>), que recibe {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} para controlar la distancia de desvanecimiento
+- La función [`fade()`](<#fade( %3Clength%3E | %3Cpercentage%3E )>), que recibe {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} para controlar la distancia de desvanecimiento
 - Un [`<string>`](#string).
 
 ### Valores

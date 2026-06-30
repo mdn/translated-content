@@ -225,15 +225,15 @@ defaultValue =
 
 </pre
         >
-      </td>
-      <td>
-        <img
+</td>
+<td>
+<img
           alt="Screenshot of a plain slider control on macOS"
           src="macslider-ticks.png"
           style="height: 28px; width: 184px"
         />
-      </td>
-    </tr>
+</td>
+</tr>
   </tbody>
 </table>
 
@@ -268,15 +268,15 @@ defaultValue =
 
 </pre
         >
-      </td>
-      <td>
-        <img
+</td>
+<td>
+<img
           alt="Screenshot of a plain slider control on macOS"
           src="macslider-labels.png"
           style="height: 44px; width: 184px"
         />
-      </td>
-    </tr>
+</td>
+</tr>
   </tbody>
 </table>
 

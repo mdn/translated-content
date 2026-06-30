@@ -83,7 +83,7 @@ Mas a exportação padrão pode ser importada com qualquer nome, por exemplo:
 ```js
 // arquivo test.js
 let k;
-export default k = 12;
+export default (k = 12);
 ```
 
 ```js

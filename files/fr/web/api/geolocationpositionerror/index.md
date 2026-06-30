@@ -25,7 +25,7 @@ _L'interface `GeolocationPositionError` n'hérite d'aucune propriété._
 
 ## Méthodes
 
-**L'interface* `GeolocationPositionError` *n'implémente et n'hérite d'aucune méthode.**
+_*L'interface* `GeolocationPositionError` *n'implémente et n'hérite d'aucune méthode.*_
 
 ## Spécifications
 

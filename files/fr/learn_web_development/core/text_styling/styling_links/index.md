@@ -226,8 +226,7 @@ Si vous faites une erreur, vous pouvez toujours l'annuler en utilisant le bouton
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <p>Il y a plusieurs navigateurs disponibles, tels que <a href="#">Mozilla
  Firefox</a>, <a href="#">Google Chrome</a>, et
-<a href="#">Microsoft Edge</a>.</p></textarea
-  >
+<a href="#">Microsoft Edge</a>.</p></textarea>
 
   <h2>Zone de saisie de la CSS</h2>
   <textarea
@@ -256,8 +255,7 @@ a:hover {
 
 a:active {
 
-}</textarea
-  >
+}</textarea>
 
   <h2>Zone de rendu</h2>
   <div

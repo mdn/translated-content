@@ -26,9 +26,7 @@ Bien que `duplex` puisse être passé comme option lors de la construction d'une
 ### Vérifier le mode duplex d'une requête
 
 ```js
-const flux = new ReadableStream({
-  /* ... */
-});
+const flux = new ReadableStream({/* ... */});
 const requete = new Request("/upload", {
   method: "POST",
   body: flux,

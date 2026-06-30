@@ -49,7 +49,6 @@ l10n:
 >
 >     La compatibilité des navigateurs ne s'applique pas aux en-têtes HTTP pour lesquels aucune implémentation spécifique n'est fournie (comme l'ajout automatique d'un en-tête de requête à certaines requêtes ou la modification du comportement en fonction des données d'un en-tête de réponse).
 >     Dans ces cas, supprimez la clé et la valeur `browser-compat`.
->
 > - **sidebar**
 >   - : Conservez toujours `http`.
 >     Voir [Structures de page&nbsp;: Barres latérales](/fr/docs/MDN/Writing_guidelines/Page_structures/Sidebars) pour plus de détails.

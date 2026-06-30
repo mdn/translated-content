@@ -119,8 +119,7 @@ Huevos
 El pegamento que une el pastel.
 Café
 La bebida que hace que el mundo funcione por la mañana.
-Un color marrón claro.</textarea
->
+Un color marrón claro.</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Restablecer" />
