@@ -385,9 +385,9 @@ If-None-Match: "deadbeef"
 If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
 ```
 
-[来自 Chrome、Edge 和 Firefox 的请求看起来很像上面的；来自 Safari 的请求看起来会有点不同。）
+（来自 Chrome、Edge 和 Firefox 的请求看起来很像上面的；来自 Safari 的请求看起来会有点不同。）
 
-请求中的 `max-age=0` 指令指定“重用 age 为 0 或更少的响应”——因此，中间存储的响应不会被重用。
+请求中的 `max-age=0` 指令指定“重用存活时间为 0 或更少的响应”——因此，中间存储的响应不会被重用。
 
 请求通过 `If-None-Match` 和 `If-Modified-Since` 进行验证。
 
