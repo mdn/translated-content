@@ -39,7 +39,7 @@ Cache-Control: private
 
 除了访问控制的功能外，一些代理还实现了缓存以减少网络流量。这通常不由服务开发人员管理，因此必须由恰当的 HTTP 标头等控制。然而，在过去，过时的代理缓存实现——例如没有正确理解 HTTP 缓存标准的实现——经常给开发人员带来问题。
 
-**Kitchen-sink 标头**如下所示，用于尝试解决不理解当前 HTTP 缓存规范指令（如 `no-store`）的“旧且未更新的代理缓存”的实现。
+类似于下面这种**面面俱到的标头**，用于尝试解决不理解当前 HTTP 缓存规范指令（如 `no-store`）的“旧且未更新的代理缓存”的实现。
 
 ```http
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
@@ -65,7 +65,7 @@ Cache-Control: no-store
 
 例如，Varnish Cache 使用 VCL（Varnish Configuration Language，一种 {{Glossary("DSL/Domain_specific_language", "DSL")}}）逻辑来处理缓存存储，而 service worker 结合缓存 API 允许你在 JavaScript 中创建该逻辑。
 
-这意味着如果托管缓存故意忽略 `no-store` 指令，则无需将其视为“不符合”标准。你应该做的是，避免使用 kitchen-sink 标头，但请仔细阅读你正在使用的任何托管缓存机制的文档，并确保你选择的方式可以正确的控制缓存。
+这意味着如果托管缓存故意忽略 `no-store` 指令，则无需将其视为“不符合”标准。你应该做的是，避免使用大杂烩式的标头，但请仔细阅读你正在使用的任何托管缓存机制的文档，并确保你选择的方式可以正确的控制缓存。
 
 请注意，某些 CDN 提供自己的标头，这些标头仅对该 CDN 有效（例如，`Surrogate-Control`）。目前，正在努力定义一个 [`CDN-Cache-Control`](https://httpwg.org/specs/rfc9213.html) 标头来标准化这些标头。
 
@@ -90,7 +90,7 @@ Last-Modified: Tue, 22 Feb 2021 22:22:22 GMT
 
 根据经验法则，如果内容整整一年未更新，那么此后的一段时间内也不会更新。因此，客户端会存储该响应（尽管缺少 `max-age` 字段），并在一段时间内重复使用它。重复使用的时间长短取决于具体实现，但规范建议约为存储后时间的 10%（本例中为 0.1 年）。
 
-启发式缓存是一种在 `Cache-Control` 支持尚未广泛采用时出现的变通方案，原则上所有响应都应显式指定 `Cache-Control` 头。
+启发式缓存是一种在 `Cache-Control` 支持尚未广泛采用时出现的变通方案，原则上所有响应都应显式指定 `Cache-Control` 标头。
 
 ## 基于 age 的缓存策略
 
@@ -234,7 +234,7 @@ Cache-Control: max-age=3600
 
 `ETag` 响应标头的值是服务器生成的任意值。服务器对于生成值没有任何限制，因此服务器可以根据他们选择的任何方式自由设置值——例如主体内容的散列或版本号。
 
-举个例子，如果 `ETag` 标头使用了 hash 值，`index.html` 资源的 hash 值是 `33a64df5`，响应如下：
+举个例子，如果 `ETag` 标头使用了散列值，`index.html` 资源的散列值是 `33a64df5`，响应如下：
 
 ```http
 HTTP/1.1 200 OK
@@ -262,7 +262,7 @@ If-None-Match: "33a64df5"
 但是，如果服务器确定请求的资源现在应该具有不同的 `ETag` 值，则服务器将其改为 `200 OK` 和资源的最新版本进行响应。
 
 > [!NOTE]
-> RFC9110 建议服务器在发送 `200` 响应时，尽可能同时发送 `ETag` 和 `Last-Modified`。在缓存重新验证过程中，如果同时存在 `If-Modified-Since` 和 `If-None-Match`，则对验证器而言，`If-None-Match` 具有优先级。如果你仅考虑缓存，可能会认为 `Last-Modified` 没有必要。然而，`Last-Modified` 不仅对缓存有用；它还是一种标准 HTTP 头，内容管理系统（CMS）会利用它显示最后修改时间，爬虫会利用它调整抓取频率，此外还有其他各种用途。因此，从整个 HTTP 生态系统的角度来看，最好同时提供 `ETag` 和 `Last-Modified`。
+> RFC9110 建议服务器在发送 `200` 响应时，尽可能同时发送 `ETag` 和 `Last-Modified`。在缓存重新验证过程中，如果同时存在 `If-Modified-Since` 和 `If-None-Match`，则对验证器而言，`If-None-Match` 具有优先级。如果你仅考虑缓存，可能会认为 `Last-Modified` 没有必要。然而，`Last-Modified` 不仅对缓存有用；它还是一种标准 HTTP 标头，内容管理系统（CMS）会利用它显示最后修改时间，爬虫会利用它调整抓取频率，此外还有其他各种用途。因此，从整个 HTTP 生态系统的角度来看，最好同时提供 `ETag` 和 `Last-Modified`。
 
 ### 强制重新验证
 
@@ -343,7 +343,7 @@ Cache-Control: no-cache
 
 ### 兼容过时的实现
 
-作为忽略 `no-store` 的过时实现的解决方法，你可能会看到使用了诸如以下内容的 kitchen-sink 标头：
+作为忽略 `no-store` 的过时实现的解决方法，你可能会看到使用了诸如以下内容的大杂烩式的标头：
 
 ```http
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
@@ -468,7 +468,7 @@ Cache-Control: max-age=31536000
 
 因此，如果多个相同的请求同时到达共享缓存，中间缓存将代表自己将单个请求转发到源，然后源可以将结果重用于所有客户端。这称为***请求合并***。
 
-当请求同时到达时会发生请求折叠，因此即使响应中给出了 `max-age=0` 或 `no-cache`，它也会被重用。
+当请求同时到达时会发生请求合并，因此即使响应中给出了 `max-age=0` 或 `no-cache`，它也会被重用。
 
 如果响应是针对特定用户个性化的，并且你不希望它在合并中共享，则应添加 `private` 指令：
 
@@ -559,7 +559,7 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 如果你选择其中一个编号选项，则可以在通过 HTTP3 传输时将值压缩为 1 个字节。
 
-数字`37`、`38` 和 `41` 分别代表一周、一个月和一年。
+数字 `37`、`38` 和 `41` 分别代表一周、一个月和一年。
 
 因为缓存会在保存新条目时删除旧条目，所以一周后存储的响应仍然存在的可能性并不高——即使 `max-age` 设置为 1 周。因此，在实践中，你选择哪一种并没有太大的区别。
 
