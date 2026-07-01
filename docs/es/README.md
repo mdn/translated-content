@@ -175,7 +175,7 @@ Es el SHA del commit de `mdn/content` cuyo contenido en inglés refleja exactame
 
 ### Reglas del _front-matter_
 
-- Sólo deben aparecer: `title`, `short-title` (si lo tiene el inglés), `slug` y `l10n.sourceCommit`.
+- Solo debe incluir: `title`, `short-title` (únicamente si está presente en el archivo en inglés), `slug` y `l10n.sourceCommit`.
 - **No** incluir `page-type`, `browser-compat`, `tags`, `sidebar` ni `original_slug`.
 - El `slug` debe ser idéntico al del archivo en inglés.
 
@@ -267,6 +267,18 @@ Cuando en inglés aparece `{{Glossary("TLD")}}` y el término natural en españo
 #### Tuteo (tú) en lugar de usted
 
 Usa la forma de **tú** (tuteo) cuando te dirijas directamente al lector. MDN español adoptó el tuteo como convención moderna: "abre el archivo", "asegúrate de incluir", "puedes omitir". Evita el ustedeo ("abra el archivo", "asegúrese de incluir").
+
+Esta convención adapta al español la [guía de estilo general de MDN](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#voice), que recomienda una redacción directa (voz activa) y cercana (tono conversacional). La fórmula estandarizada en español combina: **voz activa + tuteo (implícito) + modo imperativo**.
+
+**El imperativo hace innecesario el pronombre "tú".** Al conjugar en segunda persona, el sujeto queda implícito:
+
+- ❌ Redundante: "Tú haz clic aquí."
+- ✅ Imperativo natural: "Haz clic aquí."
+
+**Alterna con construcciones impersonales o pasivas para suavizar el tono.** Acumular órdenes seguidas puede sonar rígido; intercalar frases descriptivas mantiene la fluidez:
+
+- ❌ Demasiado imperativo: "Registra tu correo. Verifica tu contraseña."
+- ✅ Balance fluido: "Registra tu correo. Una vez que tu cuenta sea verificada, podrás ingresar."
 
 #### Bloques de aviso GFM (GitHub Flavored Markdown)
 
