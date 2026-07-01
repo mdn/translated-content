@@ -1,21 +1,12 @@
 ---
-title: :read-write
+title: CSS `:read-write` 擬似クラス
+short-title: :read-write
 slug: Web/CSS/Reference/Selectors/:read-write
-original_slug: Web/CSS/:read-write
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:read-write`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、ユーザーが編集できる要素 (`input` や `textarea` など) を表します。
-
-```css
-input:read-write,
-textarea:read-write {
-  background-color: #bbf;
-}
-
-p:read-write {
-  background-color: #bbf;
-}
-```
 
 {{InteractiveExample("CSS デモ: :read-write", "tabbed-shorter")}}
 
@@ -34,16 +25,16 @@ input[type="submit"] {
 ```
 
 ```html interactive-example
-<p>Please fill in your details:</p>
+<p>詳細を記入してください:</p>
 
 <form>
-  <label for="email">Email Address:</label>
+  <label for="email">メールアドレス:</label>
   <input id="email" name="email" type="email" value="test@example.com" />
 
-  <label for="note">Short note about yourself:</label>
-  <textarea id="note" name="note">Don't be shy</textarea>
+  <label for="note">あなた自身についての一言メモ:</label>
+  <textarea id="note" name="note">恥ずかしがるな</textarea>
 
-  <label for="pic">Your picture:</label>
+  <label for="pic">あなたの写真:</label>
   <input id="pic" name="pic" type="file" />
 
   <input type="submit" value="Submit form" />
@@ -52,38 +43,96 @@ input[type="submit"] {
 
 ## 構文
 
-```
-:read-write
+```css
+:read-write {
+  /* ... */
+}
 ```
 
 ## 例
 
-### 読み取り専用/読み書きコントロールによるフォーム情報の確認
+### 読み取り専用のコントロールを使用したフォームの詳細の確認
 
-`readonly` のフォームコントロールの使用方法の一つは、ユーザーが以前のフォームに入力した情報 (例えば、配送方法の詳細など) をチェックして確認しながら、フォームの残りの部分と一緒に情報を送信することができるようにすることです。以下の例では、これを実現しています。
+[`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) フォームコントロールは、ユーザーに以前入力した情報を確認してもらい、その情報を読み書き可能なコントロールに入力された新しいデータとともに送信したい場合に使用することができます。
+下記例では、{{cssxref(":read-only")}} 擬似クラスを使用して、{{htmlelement("textarea")}}（ユーザーの住所）を通常の段落のように表示しています。`:read-write` 擬似クラスを使用すると、編集可能な `<textarea>`（配送指示）を強調表示することができます。
 
-`:read-only` 擬似クラスは、入力欄をクリック可能なフィールドのように見せるスタイル付けをすべて削除するために使用されており、読み取り専用の段落のように見えます。一方、 `:read-write` 擬似クラスは、編集可能な `<textarea>` により良いスタイル付けを行うために使用されています。
-
-```css
-input:-moz-read-only,
-textarea:-moz-read-only,
-input:read-only,
-textarea:read-only {
-  border: 0;
-  box-shadow: none;
-  background-color: white;
+```css hidden
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 10px auto;
 }
 
-textarea:-moz-read-write,
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button,
+label,
+textarea {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 5px;
+  height: 30px;
+}
+
+textarea {
+  width: 50%;
+}
+
+textarea {
+  height: 70px;
+  resize: none;
+}
+
+label {
+  width: 40%;
+}
+```
+
+```css
+textarea:read-only {
+  border: 0;
+}
+
 textarea:read-write {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 ```
 
-完全なソースコードは [readonly-confirmation.html](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/readonly-confirmation.html) にあります。以下のように表示されます。
+```html
+<form>
+  <fieldset>
+    <legend>詳細を確認</legend>
+    <div>
+      <label for="address">住所:</label>
+      <textarea id="address" name="address" readonly>
+123 Choco Mountain,
+Awesome Ridge,
+CA</textarea
+      >
+    </div>
+    <div>
+      <label for="instructions">配達指示</label>
+      <textarea id="instructions" name="instructions"></textarea>
+    </div>
+  </fieldset>
+  <button type="submit">確認</button>
+</form>
+```
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
+{{embedlivesample("confirming_form_details_using_read-only_controls", , "300")}}
 
 ### フォーム以外の読み書き用コントロールのスタイル付け
 
@@ -96,6 +145,10 @@ textarea:read-write {
 ```
 
 ```css
+body {
+  font-family: sans-serif;
+}
+
 p {
   font-size: 150%;
   padding: 5px;
@@ -112,7 +165,7 @@ p:read-write {
 }
 ```
 
-{{EmbedLiveSample('Styling_read-write_non-form_controls', '100%', 400)}}
+{{EmbedLiveSample('Styling_read-write_non-form_controls')}}
 
 ## 仕様書
 
