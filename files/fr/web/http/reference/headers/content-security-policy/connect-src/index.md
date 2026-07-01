@@ -80,9 +80,7 @@ Les connexions suivantes seront bloquées et ne se chargeront pas&nbsp;:
 
   const es = new EventSource("https://hors-exemple.com/");
 
-  navigateur.sendBeacon("https://hors-exemple.com/", {
-    /* … */
-  });
+  navigateur.sendBeacon("https://hors-exemple.com/", {/* … */});
 </script>
 ```
 

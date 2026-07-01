@@ -116,8 +116,7 @@ My short story
 
 I am a policewoman and my name is Trish.
 
-My legs are made of cardboard and I am married to a fish.</textarea
->
+My legs are made of cardboard and I am married to a fish.</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -246,8 +245,7 @@ HTML 순서 없는(unordered) 리스트를 만들기 위해 아래에 있는 샘
 milk
 eggs
 bread
-hummus</textarea
->
+hummus</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -340,8 +338,7 @@ Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
 Turn left at the third roundabout
-The school is on your right, 300 meters up the road</textarea
->
+The school is on your right, 300 meters up the road</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -435,8 +432,7 @@ Quick hummus recipe
 
     Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.
 
-    Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea
->
+    Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -591,8 +587,7 @@ spotted stealing several garden gnomes from a shopping
 center in downtown Milwaukee. They were all wearing green
 jumpsuits and silly hats, and seemed to be having a whale
 of a time. If anyone has any information about this
-incident, please contact the police now.</p></textarea
->
+incident, please contact the police now.</p></textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">

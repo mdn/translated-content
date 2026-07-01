@@ -3,7 +3,7 @@ title: "Selection: removeAllRanges() メソッド"
 short-title: removeAllRanges()
 slug: Web/API/Selection/removeAllRanges
 l10n:
-  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
+  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
 {{ ApiRef("DOM") }}

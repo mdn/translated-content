@@ -678,8 +678,7 @@ Si te equivocas, puedes volver a empezar con el botón _Reinicio_.
     id="code"
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Un texto de muestra para tu deleite.</p></textarea
-  >
+  <p>Un texto de muestra para tu deleite.</p></textarea>
 
   <h2>Entrada CSS</h2>
   <textarea
@@ -688,8 +687,7 @@ Si te equivocas, puedes volver a empezar con el botón _Reinicio_.
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 p {
 
-  }</textarea
-  >
+  }</textarea>
 
   <h2>Resultado</h2>
   <div

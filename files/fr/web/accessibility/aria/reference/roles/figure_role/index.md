@@ -77,8 +77,7 @@ Nous pourrions étendre l'exemple initial sur la page pour identifier également
   <pre>
 `
         let awesome = ['music', 'cats', 'nature', 'ice cream'];
-      `</pre
-  >
+      `</pre>
   <p id="figure-1">Figure 1&nbsp;: Les quatre niveaux d'excellence.</p>
 </div>
 ```
@@ -98,8 +97,7 @@ Si possible, vous devriez utiliser les éléments HTML sémantiques appropriés 
   <pre>
 `
     let awesome = ['music', 'cats', 'nature', 'ice cream'];
-  `</pre
-  >
+  `</pre>
   <figcaption>Figure 1&nbsp;: Les quatre niveaux d'excellence.</figcaption>
 </figure>
 ```

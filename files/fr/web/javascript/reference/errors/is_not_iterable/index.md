@@ -75,7 +75,8 @@ function* generate(a, b) {
   yield b;
 }
 
-for (let x of generate) // TypeError: generate is not iterable
+for (let x of generate)
+  // TypeError: generate is not iterable
   console.log(x);
 ```
 

@@ -16,7 +16,7 @@ NodeList.forEach(callback[, thisArg]);
 ### Parameters
 
 - `callback`
-  - : 각각의 요소에 대해 실행하는 함수로, 3개의 인수(arguments)를 갖습니다:_ *`currentValue`*
+  - : 각각의 요소에 대해 실행하는 함수로, 3개의 인수(arguments)를 갖습니다:_ _`currentValue`_
     _ : NodeList에서 처리중인 현재 요소(element)입니다.
     - `currentIndex`
       - : NodeList에서 처리중인 현재 요소의 인덱스입니다.

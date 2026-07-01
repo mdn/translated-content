@@ -70,8 +70,7 @@ La pseudo-classe `:read-only` est utilisée pour supprimer tout le style qui fai
 16 Rue des Blagues,
 Blagues en Cascades,
 France
-</textarea
-      >
+</textarea>
     </div>
     <div>
       <label for="postal-code">Code postal&nbsp;: </label>

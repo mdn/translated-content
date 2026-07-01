@@ -120,8 +120,7 @@ Si te equivocas, siempre puedes restablecer el código anterior pulsando el bot�
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 Mi breve relato Soy estadístico y mi nombre es Trish.
 
-Mis piernas son de cartón y estoy casada con un pez.</textarea
->
+Mis piernas son de cartón y estoy casada con un pez.</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Restablecer" />
@@ -312,8 +311,7 @@ Edita el siguiente ejemplo para crear tu propia lista HTML no ordenada.
 leche
 huevos
 pan
-hummus</textarea
->
+hummus</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Restablecer" />
@@ -473,8 +471,7 @@ Conduce hasta el final de la calle
 Gira a la derecha
 Sigue derecho por las dos primeras glorietas
 Gira a la izquierda en la tercer glorieta
-La escuela está a tu derecha, 300 metros por más adelante</textarea
->
+La escuela está a tu derecha, 300 metros por más adelante</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Restablecer" />
@@ -637,8 +634,7 @@ Almacenamiento
 
 Refrigera el hummus terminado en un recipiente sellado. Deberías poder usarlo durante aproximadamente una semana después de haberlo hecho. Si comienza a burbujear, definitivamente debes desecharlo.
 
-El hummus es apto para congelar; debes descongelarlo y usarlo en un par de meses.</textarea
->
+El hummus es apto para congelar; debes descongelarlo y usarlo en un par de meses.</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Restablecer" />
@@ -863,8 +859,7 @@ centro comercial en el centro de Milwaukee. Todos ellos
 vistiendo monos verdes y tontos sombreros, y
 al parecer estaban pasando un buen rato. Si alguien
 tiene alguna información sobre este incidente, por favor
-póngase en contacto con la policía ahora.</p></textarea
->
+póngase en contacto con la policía ahora.</p></textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Restablecer" />

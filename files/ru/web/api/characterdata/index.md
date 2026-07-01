@@ -24,7 +24,7 @@ _Наследует свойства родителя, {{domxref("Node")}}, ре
 
 ## Методы
 
-*Наследует методы родителя, {{domxref("Node")}}, и реализует(ся) (через) ({{domxref("ChildNode")}} *и {{domxref("NonDocumentTypeChildNode")}}интерфейсы*.*
+_Наследует методы родителя, {{domxref("Node")}}, и реализует(ся) (через) ({{domxref("ChildNode")}} *и {{domxref("NonDocumentTypeChildNode")}}интерфейсы*._
 
 - {{domxref("CharacterData.appendData()")}}
   - : Добавляет указанную {{jsxref("String")}} к строке `CharacterData.data`; после выполненияданные содержат объединённый(элемент) {{jsxref("String")}}.

@@ -104,8 +104,7 @@ Cet exemple montre comment des éléments liés à un formulaire peuvent être a
 <label
   >Description&nbsp;:
   <textarea form="loginForm" rows="4" name="description">
-Bonjour le monde&nbsp;!</textarea
-  >
+Bonjour le monde&nbsp;!</textarea>
 </label>
 <button form="loginForm" type="submit" name="submitLogin" value="Login">
   Envoyer
