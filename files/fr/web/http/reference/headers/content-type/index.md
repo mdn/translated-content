@@ -3,10 +3,10 @@ title: En-tête Content-Type
 short-title: Content-Type
 slug: Web/HTTP/Reference/Headers/Content-Type
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: b4e920ce0a34d9e609080ccb937a1a30c3cd558a
 ---
 
-L' HTTP **`Content-Type`** est utilisé pour indiquer le {{Glossary("MIME type", "type de média")}} original d'une ressource avant qu'un encodage de contenu ne soit appliqué.
+{{Glossary("Representation header", "L'en-tête de représentation")}} HTTP **`Content-Type`** est utilisé pour indiquer le {{Glossary("MIME type", "type de média")}} original d'une ressource avant qu'un encodage de contenu ne soit appliqué.
 
 Dans les réponses, l'en-tête `Content-Type` informe le client du type de média des données retournées.
 Dans les requêtes telles que {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}}, le client utilise l'en-tête `Content-Type` pour définir le type de contenu envoyé au serveur.
@@ -15,8 +15,8 @@ Si une implémentation ou une configuration serveur est stricte concernant la ge
 L'en-tête `Content-Type` diffère de {{HTTPHeader("Content-Encoding")}} en ce que `Content-Encoding` aide le destinataire à comprendre comment décoder les données vers leur forme originale.
 
 > [!NOTE]
-> Cette valeur peut être ignorée si les navigateurs effectuent de la [détection MIME](/fr/docs/Web/HTTP/Guides/MIME_types#mime_sniffing) (ou de la détection de contenu) sur les réponses.
-> Pour empêcher les navigateurs d'utiliser le MIME sniffing, définissez la valeur de l'en-tête {{HTTPHeader("X-Content-Type-Options")}} à `nosniff`.
+> Cette valeur peut être ignorée si les navigateurs effectuent de la [détection du type MIME](/fr/docs/Web/HTTP/Guides/MIME_types#détection_du_type_mime_mime_sniffing) (ou de la détection de contenu) sur les réponses.
+> Pour empêcher les navigateurs d'utiliser la détection du type MIME, définissez la valeur de l'en-tête {{HTTPHeader("X-Content-Type-Options")}} à `nosniff`.
 > Consultez [Vérification du type MIME](/fr/docs/Web/Security/Practical_implementation_guides/MIME_types) pour plus de détails.
 
 <table class="properties">
@@ -147,7 +147,7 @@ Quand les formulaires ne comportent pas de téléversement de fichiers et utilis
 <form action="/submit" method="post">
   <label for="comment">Commentaire&nbsp;:</label>
   <input type="text" id="comment" name="comment" value="Bonjour !" />
-  <button type="submit">Enoyver</button>
+  <button type="submit">Envoyer</button>
 </form>
 ```
 
@@ -155,9 +155,9 @@ Quand les formulaires ne comportent pas de téléversement de fichiers et utilis
 POST /submit HTTP/1.1
 Host: exemple.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 15
+Content-Length: 17
 
-comment=Bonjour%20!
+comment=Bonjour%20%21
 ```
 
 ### `Content-Type` dans une API REST utilisant JSON

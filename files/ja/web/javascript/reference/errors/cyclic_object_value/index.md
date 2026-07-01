@@ -1,18 +1,18 @@
 ---
 title: "TypeError: cyclic object value"
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Errors")}}
 
 JavaScript の例外 "cyclic object value" は、 [JSON](https://www.json.org/) の中にオブジェクトの参照が見つかったときに発生します。 {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。
 
-## メッセージ
+## エラーメッセージ
 
-```
+```plain
+TypeError: Converting circular structure to JSON (V8-based)
 TypeError: cyclic object value (Firefox)
-TypeError: Converting circular structure to JSON (Chrome and Opera)
-TypeError: Circular reference in value argument not supported (Edge)
+TypeError: JSON.stringify cannot serialize cyclic structures. (Safari)
 ```
 
 ## エラーの種類
@@ -21,7 +21,7 @@ TypeError: Circular reference in value argument not supported (Edge)
 
 ## エラーの原因
 
-[JSON 形式](https://www.json.org/)はオブジェクト参照に対応していません ([IETF の草案はありますが](https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03))。したがって {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。
+[JSON 形式](https://www.json.org/)はオブジェクト参照に対応していません ([IETF の草案はありますが](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03))。したがって {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。
 
 ## 例
 
@@ -30,7 +30,7 @@ TypeError: Circular reference in value argument not supported (Edge)
 次のような循環構造体では、
 
 ```js
-var circularReference = { otherData: 123 };
+const circularReference = { otherData: 123 };
 circularReference.myself = circularReference;
 ```
 
@@ -46,24 +46,35 @@ JSON.stringify(circularReference);
 次のスニペットは、 {{jsxref("JSON.stringify()")}} の `replacer` 引数を使用して循環参照を検索してフィルタリングする方法を示しています (これによりデータ損失が発生します)。
 
 ```js
-const getCircularReplacer = () => {
-  const seen = new WeakSet();
-  return (key, value) => {
-    if (typeof value === "object" && value !== null) {
-      if (seen.has(value)) {
-        return;
-      }
-      seen.add(value);
+function getCircularReplacer() {
+  const ancestors = [];
+  return function (key, value) {
+    if (typeof value !== "object" || value === null) {
+      return value;
     }
+    // `this` は、その値が含まれているオブジェクトです。
+    // すなわち、直接の親です。
+    while (ancestors.length > 0 && ancestors.at(-1) !== this) {
+      ancestors.pop();
+    }
+    if (ancestors.includes(value)) {
+      return "[Circular]";
+    }
+    ancestors.push(value);
     return value;
   };
-};
+}
 
 JSON.stringify(circularReference, getCircularReplacer());
-// {"otherData":123}
+// {"otherData":123,"myself":"[Circular]"}
+
+const o = {};
+const notCircularReference = [o, o];
+JSON.stringify(notCircularReference, getCircularReplacer());
+// [{},{}]
 ```
 
 ## 関連情報
 
-- {{jsxref("JSON.stringify")}}
-- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) – `JSON.decycle` と `JSON.retrocycle` という 2 つの関数を導入し、循環構造と dag を JSON でエンコードしてからリカバリーできます。
+- {{jsxref("JSON.stringify()")}}
+- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) – GitHub 上

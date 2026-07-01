@@ -1,55 +1,60 @@
 ---
 title: WeakSet.prototype.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
+l10n:
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-{{JSRef}}
-
-**`has()`** メソッドは、特定の値をもつ要素が `WeakSet` オブジェクト内に存在するかどうかを示す真偽値を返します。
+**`has()`** は {{jsxref("WeakSet")}} インターフェイスのメソッドで、指定された値がこの `WeakSet` に存在するかどうかを示す論理値を返します。
 
 {{InteractiveExample("JavaScript デモ: WeakSet.Prototype.has()")}}
 
 ```js interactive-example
-const weakset1 = new WeakSet();
+const weakset = new WeakSet();
 const object1 = {};
 const object2 = {};
 
-weakset1.add(object1);
+weakset.add(object1);
 
-console.log(weakset1.has(object1));
-// Expected output: true
+console.log(weakset.has(object1));
+// 予想される結果: true
 
-console.log(weakset1.has(object2));
-// Expected output: false
+console.log(weakset.has(object2));
+// 予想される結果: false
 ```
 
 ## 構文
 
-```
-ws.has(value);
+```js-nolint
+has(value)
 ```
 
 ### 引数
 
 - `value`
-  - : `WeakSet` オブジェクトに存在するかテストする値です。
+  - : `WeakSet` オブジェクト内で存在の有無を検査する値。オブジェクトの比較は、値ではなく[参照](/ja/docs/Glossary/Object_reference)によって行われます。
 
 ### 返値
 
-- Boolean
-  - : `WeakSet` オブジェクト内に特定の値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
+指定された値が `WeakSet` オブジェクト内に存在する場合、`true` を返します。存在しない場合は `false` を返します。`value` がオブジェクトでも[未登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)でもない場合は、常に `false` を返します。
 
 ## 例
 
 ### has() メソッドの使用
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+const ws = new WeakSet();
+const obj = {};
 ws.add(window);
 
-mySet.has(window); // returns true
-mySet.has(obj); // returns false
+ws.has(window); // true を返す
+ws.has(obj); // false を返す
+
+// 未登録シンボルを格納
+const sym = Symbol("foo");
+ws.add(sym);
+ws.add(Symbol.iterator);
 ```
 
 ## 仕様書

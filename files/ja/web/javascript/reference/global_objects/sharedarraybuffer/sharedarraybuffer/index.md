@@ -51,7 +51,7 @@ console.log(buffer.byteLength); // 8
 
 ### SharedArrayBuffer を生成するには常に new 演算子を使用する
 
-`SharedArrayBuffer` コンストラクターは {{jsxref("Operators/new", "new")}} 演算子で構築する必要があります。 `SharedArrayBuffer` コンストラクターを `new` なしで呼び出すと、 {{jsxref("TypeError")}} が発生します。
+`SharedArrayBuffer` コンストラクターは {{jsxref("new")}} 演算子で構築する必要があります。 `SharedArrayBuffer` コンストラクターを `new` なしで呼び出すと、 {{jsxref("TypeError")}} が発生します。
 
 ```js example-bad
 const sab = SharedArrayBuffer(1024);

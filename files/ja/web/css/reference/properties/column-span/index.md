@@ -1,8 +1,9 @@
 ---
-title: column-span
+title: "`column-span` CSS property"
+short-title: column-span
 slug: Web/CSS/Reference/Properties/column-span
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`column-span`** は [CSS](/ja/docs/Web/CSS) のプロパティで、値に `all` を設定した場合、段組みレイアウトで要素をすべての段にまたがらせることができます。

@@ -3,7 +3,7 @@ title: Propriété CSS `counter-reset`
 short-title: counter-reset
 slug: Web/CSS/Reference/Properties/counter-reset
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`counter-reset`** permet de créer des compteurs CSS nommés [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) et de les initialiser à une valeur précise. Elle permet de créer des compteurs qui comptent à partir de un jusqu'au nombre d'éléments, ainsi que ceux qui comptent à rebours du nombre d'éléments jusqu'à un.
@@ -186,7 +186,7 @@ ol {
 
 {{EmbedLiveSample("Remplacer le compteur `list-item`", 140, 300)}}
 
-Avec `counter-reset`, vous définissez le compteur implicite `list-item` pour commencer à compter à partir de `3` pour chaque `ol`. Ainsi, le premier élément sera numéroté 4, le deuxième sera numéroté 5, etc., ce qui revient au même effet que d'écrire [`<ol start="4">`](/fr/docs/Web/HTML/Reference/Elements/ol#start) en HTML.
+Avec `counter-reset`, vous définissez le compteur implicite `list-item` pour commencer à compter à partir de `3` pour chaque `ol`. Ainsi, le premier élément est numéroté 4, le deuxième est numéroté 5, etc., ce qui revient au même effet que d'écrire [`<ol start="4">`](/fr/docs/Web/HTML/Reference/Elements/ol#start) en HTML.
 
 ### Utiliser un compteur inversé
 
@@ -204,11 +204,12 @@ Dans l'exemple suivant, un compteur inversé nommé «&nbsp;priorite&nbsp;» est
 
 ```css hidden
 @supports not (counter-reset: reversed(priorite)) {
-  .stack {
-    display: none;
-  }
-  body::after {
-    content: "Votre navigateur ne prend pas encore en charge les compteurs inversés.";
+  body::before {
+    content: "Votre navigateur ne prend pas en charge la fonction `reversed()`.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```

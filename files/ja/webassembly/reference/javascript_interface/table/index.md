@@ -18,23 +18,23 @@ original_slug: WebAssembly/JavaScript_interface/Table
 
 ## インスタンスプロパティ
 
-- {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}
+- [`Table.prototype.length`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/length)
   - : テーブルの長さを返します。すなわち、要素数です。
 
 ## インスタンスメソッド
 
-- {{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}
+- [`Table.prototype.get()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/get)
   - : アクセサー関数です。指定した位置に格納された要素を取得します。
-- {{jsxref("WebAssembly/Table/grow","Table.prototype.grow()")}}
+- [`Table.prototype.grow()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/grow)
   - : Table インスタンスを指定した要素数だけ拡張します。
-- {{jsxref("WebAssembly/Table/set","Table.prototype.set()")}}
+- [`Table.prototype.set()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/set)
   - : 指定した位置に要素を格納します。
 
 ## 例
 
 ### 新しい WebAssembly Table インスタンスの生成
 
-次の例では ([table2.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)を確認してください)、新しい WebAssembly Table メソッドを初期サイズ 2 要素で生成します。それからそのテーブルの長さと 2 つの位置の内容を ({{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} を使用して受け取って) 表示し、長さが 2 で両方の要素が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) であることを示します。
+次の例では ([table2.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)を確認してください)、新しい WebAssembly Table メソッドを初期サイズ 2 要素で生成します。それからそのテーブルの長さと 2 つの位置の内容を ([`Table.prototype.get()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/get) を使用して受け取って) 表示し、長さが 2 で両方の要素が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) であることを示します。
 
 ```js
 var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
@@ -53,7 +53,7 @@ var importObj = {
 };
 ```
 
-<p>最後に {{jsxref("WebAssembly.instantiateStreaming()")}} を使用して wasm モジュール (table2.wasm) をロード し、インスタンス化します。table2.wasm モジュールは2の関数を持っていて (1つは42を、もう1つは83を返す) 、インポートされたテーブルの0、1番目に両方の要素が格納されます (<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat">text representation</a>を参照) 。そして、インスタンス化された後、テーブルの長さは2のままです。しかし、今はJSから呼び出し可能な <a href="/ja/docs/WebAssembly/Guides/Exported_functions">エクスポートされたWebAssembly関数</a> が含まれています。</p>
+<p>最後に [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) を使用して wasm モジュール (table2.wasm) をロード し、インスタンス化します。table2.wasm モジュールは2の関数を持っていて (1つは42を、もう1つは83を返す) 、インポートされたテーブルの0、1番目に両方の要素が格納されます (<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat">text representation</a>を参照) 。そして、インスタンス化された後、テーブルの長さは2のままです。しかし、今はJSから呼び出し可能な <a href="/ja/docs/WebAssembly/Guides/Exported_functions">エクスポートされたWebAssembly関数</a> が含まれています。</p>
 
 <pre class="brush: js">WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {

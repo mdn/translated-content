@@ -1,9 +1,9 @@
 ---
-title: border-bottom-width
+title: CSS `border-bottom-width` プロパティ
+short-title: border-bottom-width
 slug: Web/CSS/Reference/Properties/border-bottom-width
-original_slug: Web/CSS/border-bottom-width
 l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`border-bottom-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの下の境界の幅を設定します。
@@ -33,7 +33,7 @@ border-bottom-width: 0;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これはボックスと、それを囲む境界線です。
   </div>
 </section>
 ```
@@ -41,7 +41,7 @@ border-bottom-width: 0;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;
@@ -75,11 +75,11 @@ border-bottom-width: unset;
 - `<line-width>`
   - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
     - `thin`
+      - `1px` と同じです。
     - `medium`
+      - `3px` と同じです。
     - `thick`
-
-> [!NOTE]
-> 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+      - `5px` と同じです。
 
 ## 公式定義
 
@@ -95,14 +95,14 @@ border-bottom-width: unset;
 
 #### HTML
 
-```html live-sample___comparing_bottom_border_widths
-<div>Element 1</div>
-<div>Element 2</div>
+```html
+<div>要素 1</div>
+<div>要素 2</div>
 ```
 
 #### CSS
 
-```css live-sample___comparing_bottom_border_widths
+```css
 div {
   border: 1px solid red;
   margin: 1em 0;

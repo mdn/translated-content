@@ -16,7 +16,7 @@ eventSource = new EventSource(url, configuration);
 ### Parâmetros
 
 - `url`
-  - : Uma {{domxref("USVString")}} que representa a localização de um recurso remoto servindo os eventos/mensagens.
+  - : Uma {{jsxref("String")}} que representa a localização de um recurso remoto servindo os eventos/mensagens.
 - `configuration` {{optional_inline}}
   - : Fornece opções para configurar a nova conexão. Os atributos possíveis são:
     - `withCredentials`, valor padrão `false`, indicando se o CORS deve ser instruído a `incluir` credenciais.

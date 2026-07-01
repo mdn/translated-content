@@ -1,15 +1,20 @@
 ---
-title: DNT
+title: DNT ヘッダー
+short-title: DNT
 slug: Web/HTTP/Reference/Headers/DNT
-original_slug: Web/HTTP/Headers/DNT
 l10n:
-  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{Deprecated_header}}
+{{Deprecated_header}}{{non-standard_header}}
 
-**`DNT`** (**D**o **N**ot
-**T**rack) リクエストヘッダーは、ユーザーのトラッキングの設定を示します。これにより、ユーザーはパーソナライズされたコンテンツではなく、プライバシーを優先するかどうかを指定できます。
+> [!NOTE]
+> DNT（Do Not Track）仕様は廃止されました。詳しくは、{{domxref("Navigator.doNotTrack")}} を参照してください。
+
+HTTP の **`DNT`** (Do Not Track) {{Glossary("request header", "リクエストヘッダー")}}は、ユーザーのトラッキングの設定を示します。
+これにより、ユーザーはパーソナライズされたコンテンツではなく、プライバシーを優先するかどうかを指定できます。
+
+DNT は、[グローバルプライバシー制御](https://globalprivacycontrol.org/)に取って代わられ、非推奨となりました。グローバルプライバシー制御は、{{HTTPHeader("Sec-GPC")}} ヘッダーを使用してサーバーに通知され、クライアント側では {{domxref("navigator.globalPrivacyControl")}} からアクセス可能です。
 
 <table class="properties">
   <tbody>
@@ -34,11 +39,11 @@ DNT: null
 
 ## ディレクティブ
 
-- 0
+- `0`
   - : ユーザーは対象のサイトでトラッキングを許可している。
-- 1
+- `1`
   - : ユーザーは対象のサイトでトラッキングを拒否している。
-- null
+- `null`
   - : ユーザーはトラッキングに関する設定を指定していない。
 
 ## 例
@@ -48,12 +53,12 @@ DNT: null
 ユーザーの DNT 設定は {{domxref("Navigator.doNotTrack")}} プロパティを使用して JavaScript から読み取ることもできます。
 
 ```js
-navigator.doNotTrack; // "0" or "1"
+navigator.doNotTrack; // "0" または "1" または null
 ```
 
 ## 仕様書
 
-{{Specifications}}
+廃止された [Tracking Preference Expression (DNT)](https://w3c.github.io/dnt/drafts/tracking-dnt.html#dnt-header-field) 仕様書に掲載されています。
 
 ## ブラウザーの互換性
 
@@ -69,3 +74,5 @@ navigator.doNotTrack; // "0" or "1"
 - DNT ブラウザー設定のヘルプ:
   - [Firefox](https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature)
   - [Chrome](https://support.google.com/chrome/answer/2790761)
+- [GPC - Global Privacy Control](https://globalprivacycontrol.org/)
+  - [Enabling GPC in Firefox](https://support.mozilla.org/en-US/kb/global-privacy-control?as=u&utm_source=inproduct)

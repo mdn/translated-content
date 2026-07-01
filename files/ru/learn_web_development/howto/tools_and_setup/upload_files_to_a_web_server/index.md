@@ -3,7 +3,7 @@ title: Как загрузить файлы на веб-сервер
 slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 Данная статья покажет, как можно опубликовать сайт в Интернет с помощью инструментов передачи файлов(file transfer tools).
 

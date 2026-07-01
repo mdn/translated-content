@@ -6,8 +6,8 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Proxy-Authenticate`** définit la méthode [d'authentification](/fr/docs/Web/HTTP/Guides/Authentication) (ou {{Glossary("Challenge", "challenge")}}) à utiliser pour accéder à une ressource derrière un {{Glossary("proxy server", "serveur mandataire")}}.
-Il est envoyé dans une réponse {{HTTPStatus("407", "407 Proxy Authentication Required")}} afin que le·la client·e puisse s'identifier auprès d'un mandataire qui requiert une authentification.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Proxy-Authenticate`** définit la méthode [d'authentification](/fr/docs/Web/HTTP/Guides/Authentication) (ou {{Glossary("Challenge", "challenge")}}) à utiliser pour accéder à une ressource derrière un {{Glossary("proxy server", "serveur mandataire")}}.
+Il est envoyé dans une réponse {{HTTPStatus("407", "407 Proxy Authentication Required")}} afin que le client puisse s'identifier auprès d'un mandataire qui requiert une authentification.
 
 <table class="properties">
   <tbody>
@@ -24,7 +24,7 @@ Il est envoyé dans une réponse {{HTTPStatus("407", "407 Proxy Authentication R
 Proxy-Authenticate: <challenge>, …
 ```
 
-La valeur est une liste de challenges séparés par des virgules, où un `<challenge>` est composé d'un `<auth-scheme>`, suivi éventuellement d'un `<token68>` ou d'une liste séparée par des virgules de `<auth-params>`&nbsp;:
+La valeur est une liste de «&nbsp;défis&nbsp;» séparés par des virgules, où un `<challenge>` est composé d'un `<auth-scheme>`, suivi éventuellement d'un `<token68>` ou d'une liste séparée par des virgules de `<auth-params>`&nbsp;:
 
 ```plain
 challenge = <auth-scheme> <auth-param>, …, <auth-paramN>
@@ -55,23 +55,23 @@ Proxy-Authenticate: Basic realm="Dev", charset="UTF-8"
     L'IANA maintient une [liste des schémas d'authentification <sup>(angl.)</sup>](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), mais il existe d'autres schémas proposés par les services hôtes.
 - `<auth-param>` {{Optional_Inline}}
   - : Un paramètre d'authentification dont le format dépend du `<auth-scheme>`.
-    `<realm>` est décrit ci-dessous car c'est un paramètre courant parmi de nombreux schémas d'authentification.
+    `<realm>` est décrit ci-dessous, car c'est un paramètre courant parmi de nombreux schémas d'authentification.
     - `<realm>` {{Optional_Inline}}
       - : La chaîne de caractères «&nbsp;domaine&nbsp;» (`realm`) suivie de `=` et d'une chaîne de caractères entre guillemets décrivant une zone protégée, par exemple `realm="staging environment"`.
         Un domaine permet à un serveur de partitionner les zones qu'il protège (si le schéma le permet).
-        Certain·e·s client·e·s affichent cette valeur à l'utilisateur·ice pour l'informer des identifiants requis — la plupart des navigateurs ont cessé de le faire pour contrer l'hameçonnage.
+        Certains clients affichent cette valeur à l'utilisateur·ice pour l'informer des identifiants requis — la plupart des navigateurs ont cessé de le faire pour contrer l'hameçonnage.
         Le seul jeu de caractères pris en charge de façon fiable pour cette valeur est `us-ascii`.
-        Si aucun domaine n'est défini, les client·e·s affichent souvent un nom d'hôte formaté à la place.
+        Si aucun domaine n'est défini, les clients affichent souvent un nom d'hôte formaté à la place.
 - `<token68>` {{Optional_Inline}}
   - : Un jeton qui peut être utile pour certains schémas.
     Le jeton autorise les 66 caractères URI non réservés plus quelques autres.
     Il peut contenir une {{Glossary("base64")}}, base64url, base32 ou base16 (hexadécimal), avec ou sans remplissage, mais sans espaces.
     L'alternative `token68` aux listes de paramètres d'authentification est prise en charge pour la compatibilité avec les anciens schémas d'authentification.
 
-Generally, you will need to check the relevant specifications for the authentication parameters needed for each `<auth-scheme>`.
+En général, vous devez vérifier les spécifications pertinentes pour les paramètres d'authentification nécessaires pour chaque `<auth-scheme>`.
 
 > [!NOTE]
-> See {{HTTPHeader("WWW-Authenticate")}} for more details on authentication parameters.
+> Voir {{HTTPHeader("WWW-Authenticate")}} pour plus de détails sur les paramètres d'authentification.
 
 ## Exemples
 

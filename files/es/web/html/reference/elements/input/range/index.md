@@ -25,7 +25,7 @@ Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un 
         <strong><a href="#value">Value</a></strong>
       </td>
       <td>
-        Un {{domxref("DOMString")}} que contiene la cadena que
+        Un {{jsxref("String")}} que contiene la cadena que
         representa el valor numérico seleccionado; use
         {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
         to get the value as a {{jsxref("Number")}}.
@@ -63,7 +63,7 @@ Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un 
 
 ## Value
 
-El atributo [`value`](/es/docs/Web/HTML/Reference/Elements/input#value) contiene un {{domxref("DOMString")}} que es la representación de tipo cadena del número seleccionado. El valor nunca es una cadena vacía (`""`). El valor por defecto es el punto intermedio entre los valores mínimo y máximo especificados, a menos que el valor máximo sea menor que el valor mínimo, en cuyo caso el valor por defecto será el valor del atributo `min`. El algoritmo de determina el valor por defecto es:
+El atributo [`value`](/es/docs/Web/HTML/Reference/Elements/input#value) contiene un {{jsxref("String")}} que es la representación de tipo cadena del número seleccionado. El valor nunca es una cadena vacía (`""`). El valor por defecto es el punto intermedio entre los valores mínimo y máximo especificados, a menos que el valor máximo sea menor que el valor mínimo, en cuyo caso el valor por defecto será el valor del atributo `min`. El algoritmo de determina el valor por defecto es:
 
 ```js
 defaultValue =

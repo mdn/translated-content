@@ -38,23 +38,23 @@ WebAssembly разработан для дополнения JavaScript – ис
 
 ## Ссылки на API
 
-- {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
+- [`WebAssembly`](/ru/docs/WebAssembly/Reference/JavaScript_interface)
   - : Этот объект является пространством имён для всех функций, связанных с WebAssembly.
-- {{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module()")}}
+- [`WebAssembly.Module()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Module)
   - : Объект `WebAssembly.Module` содержит не контролируемый WebAssembly код, который уже скомпилирован браузером и может эффективно использоваться совместно с [Workers](/ru/docs/Web/API/Worker/postMessage) и иметь несколько экземпляров.
-- {{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance()")}}
+- [`WebAssembly.Instance()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Instance)
   - : Объект `WebAssembly.Instance` это контролируемый, исполняемый экземпляр `Module`. `Instance` содержит все [экспортированные функции WebAssembly](/ru/docs/WebAssembly/Guides/Exported_functions), которые позволяют вызывать код WebAssembly из JavaScript.
-- {{jsxref("Global_objects/WebAssembly/instantiateStreaming", "WebAssembly.instantiateStreaming()")}}
+- [`WebAssembly.instantiateStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming)
   - : Функция `WebAssembly.instantiateStreaming()` является основной для компиляции и создания экземпляра кода WebAssembly, возвращающая одновременно `Module` и `Instance`.
-- {{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}
-  - : `WebAssembly.Memory` это изменяемый {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}} содержащий в себе данные не имеющие типа к которым обращается `Instance`.
-- {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
+- [`WebAssembly.Memory()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Memory)
+  - : `WebAssembly.Memory` это изменяемый {{jsxref("Global_Objects/ArrayBuffer", "ArrayBuffer")}} содержащий в себе данные не имеющие типа к которым обращается `Instance`.
+- [`WebAssembly.Table()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : `WebAssembly.Table` объект является изменяемым типизированным массивом значений, таких как ссылки на функции, которые доступны `Instance`.
-- {{jsxref("WebAssembly.CompileError()")}}
+- [`WebAssembly.CompileError()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
   - : Создаёт новый WebAssembly `CompileError` объект.
-- {{jsxref("WebAssembly.LinkError()")}}
+- [`WebAssembly.LinkError()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
   - : Создаёт новый WebAssembly `LinkError` объект.
-- {{jsxref("WebAssembly.RuntimeError()")}}
+- [`WebAssembly.RuntimeError()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
   - : Создаёт новый WebAssembly `RuntimeError` объект.
 
 ## Примеры

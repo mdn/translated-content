@@ -24,7 +24,7 @@ DOM чаще всего используется в JavaScript, но не явл
 - {{domxref("DOMError")}}
 - {{domxref("DOMException")}}
 - {{domxref("DOMImplementation")}}
-- {{domxref("DOMString")}}
+- {{jsxref("String")}}
 - {{domxref("DOMTimeStamp")}}
 - {{domxref("DOMSettableTokenList")}}
 - {{domxref("DOMStringList")}}

@@ -18,7 +18,7 @@ let srcset = htmlImageElement.srcset;
 
 ### Значение
 
-A {{domxref("USVString")}} containing a comma-separated list of one or more image candidate strings to be used when determining which image resource to present inside the {{HTMLElement("img")}} element represented by the `HTMLImageElement`_._
+A {{jsxref("String")}} containing a comma-separated list of one or more image candidate strings to be used when determining which image resource to present inside the {{HTMLElement("img")}} element represented by the `HTMLImageElement`_._
 
 Each image candidate string must begin with a valid URL referencing a non-interactive graphic resource. This is followed by a comma (`,`) character and then a condition descriptor that indicates the circumstances in which the indicated image should be used. Space characters, other than the whitespace separating the URL and the corresponding condition descriptor, are ignored; this includes both leading and trailing space, as well as space before or after each comma.
 

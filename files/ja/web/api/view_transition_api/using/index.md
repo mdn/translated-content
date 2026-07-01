@@ -2,7 +2,7 @@
 title: ビュー遷移 API の使用
 slug: Web/API/View_Transition_API/Using
 l10n:
-  sourceCommit: daa0f08c15e7626dd089a011b310a94db99dbfc1
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{DefaultAPISidebar("View Transition API")}}
@@ -18,7 +18,7 @@ l10n:
    - 文書間 (MPA) の遷移の場合、新しい文書への移動を開始するとビュー遷移が開始されます。移動元と移動先の文書はどちらも同じオリジンに存在する必要があり、CSS に {{cssxref("@view-transition")}} アットルールを記述し、`navigation` 記述子を `auto` に設定することで、ビュー遷移に同意する必要があります。
      > [!NOTE]
      > アクティブなビュー遷移は、関連する {{domxref("ViewTransition")}} インスタンスを保有しています（例えば、同一文書内 (SPA) の遷移の場合、`startViewTransition()` によって返されます）。`ViewTransition` オブジェクトには、いくつかのプロミスが含まれており、ビュー遷移プロセスのさまざまな段階に到達した際に、それに対応するコードを実行することができます。 詳しくは、[JavaScript によるビュー遷移の制御](#javascript_によるビュー遷移の制御)を参照してください。
-2. 現在の（古いページ）ビューでは、API は {{cssxref("view-transition-name")}} が宣言された要素のスナップショットを取得します。
+2. 現在の（古いページ）ビューでは、API は {{cssxref("view-transition-name")}} が宣言された要素の静的な画像の**スナップショット**を取得します。
 3. ビューの変更が発生します。
    - 同一文書内 (SPA) の遷移の場合、`startViewTransition()` に渡したコールバックが呼び出され、DOM の変更を行います。
 
@@ -26,15 +26,23 @@ l10n:
 
    - 文書間 (MPA) の遷移の場合、現在の文書と遷移先の文書間で移動します。
 
-4. API は、新しいビューのスナップショットをライブ表示としてキャプチャします。
+4. この API は、新しいビューから「ライブ」スナップショット（つまり、インタラクティブな DOM 領域）をキャプチャします。
 
-   この時点で、ビューの遷移が実行されようとしており、{{domxref("ViewTransition.ready")}} プロミスが履行されたため、例えば既定ではなく独自の JavaScript アニメーションを実行するなどして応答することができます。
+   この時点で、ビューの遷移が実行されようとしており、{{domxref("ViewTransition.ready")}} プロミスが履行されたため、例えばデフォルトではなく独自の JavaScript アニメーションを実行するなどして応答することができます。
 
-5. 古いページのスナップショットは "out" アニメーションで、新しいビューのスナップショットは "in" アニメーションで表示されます。既定では、古いビューのスナップショットは `opacity` が 1 から 0 に、新しいビューのスナップショットは `opacity` が 0 から 1 にアニメーションで変化して、クロスフェード効果になります。
+5. 古いページのスナップショットは "out" アニメーションで、新しいビューのスナップショットは "in" アニメーションで表示されます。デフォルトでは、古いビューのスナップショットは `opacity` が 1 から 0 に、新しいビューのスナップショットは `opacity` が 0 から 1 にアニメーションで変化して、クロスフェード効果になります。
 6. 遷移アニメーションが終わりに達すると、{{domxref("ViewTransition.finished")}} プロミスが履行され、応答することができます。
 
 > [!NOTE]
 > 文書内の[ページの可視状態](/ja/docs/Web/API/Page_Visibility_API)が `hidden` の場合（例えば、文書がウィンドウの下に覆われていたり、ブラウザーが最小化されていたり、他のブラウザータブがアクティブになっている場合など）、{{domxref("Document.startViewTransition()", "document.startViewTransition()")}} を呼び出した際に、ビュー遷移は完全にスキップされます。
+
+### スナップショットについての余談
+
+ビュー遷移について言及する際、`view-transition-name` が宣言されているページの一部を参照するために、一般的にスナップショットという用語が使用される点に留意してください。これらの部分は、異なる `view-transition-name` 値が設定されたページの他の部分とは別にアニメーション処理されます。ビュー遷移によるスナップショットのアニメーション処理には、実際には古い UI 状態と新しい UI 状態という 2 つの別個のスナップショットが関与していますが、分かりやすいように、ページ領域全体を「スナップショット」という用語で参照しています。
+
+古い UI の状態を写したスナップショットは静的な画像であるため、アニメーションで「消滅」するまでの間、ユーザーはそれに対して操作を行うことができません。
+
+新しい UI の状態のスナップショットは操作可能な DOM 領域であるため、ユーザーは新しいコンテンツが「出現」するアニメーション中に、そのコンテンツを操作し始めることができます。
 
 ### ビュー遷移の擬似要素ツリー
 
@@ -48,15 +56,12 @@ l10n:
       └─ ::view-transition-new(root)
 ```
 
-> [!NOTE]
-> {{cssxref("::view-transition-group")}} のサブツリーは、キャプチャされたそれぞれの `view-transition-name` ごとに作成されます。
-
 同一文書内 (SPA) の遷移の場合、擬似要素ツリーは文書内で利用できます。異なる文書間 (MPA) の遷移の場合、擬似要素ツリーは出力先文書でのみ利用できます。
 
 ツリー構造の最も特徴的な部分は以下の通りです。
 
-- {{cssxref("::view-transition")}} はビュー遷移オーバーレイのルートであり、すべてのビュー遷移のスナップショットグループを格納し、他のすべてのページコンテンツの上に位置します。
-- {{cssxref("::view-transition-group")}} は、各ビュー遷移のスナップショットグループのコンテナーとして機能します。引数 `root` は既定のスナップショットグループを指定し、ビュー遷移アニメーションは `view-transition-name` が `root` であるスナップショットに適用されます。 既定では、これは {{cssxref(":root")}} 要素です。これは、既定のブラウザーのスタイル設定がこれを定義しているためです。
+- {{cssxref("::view-transition")}} はビュー遷移オーバーレイのルートであり、すべてのビュー遷移グループを含み、他のすべてのページコンテンツの上に配置されます。
+- {{cssxref("::view-transition-group()")}} は、各ビュー遷移のスナップショットのコンテナーとして機能します。引数 `root` はデフォルトのスナップショットを指定し、ビュー遷移アニメーションは `view-transition-name` が `root` であるスナップショットに適用されます。 デフォルトでは、これは {{cssxref(":root")}} 要素のスナップショットです。これは、デフォルトのブラウザーのスタイル設定がこれを定義しているためです。
 
   ```css
   :root {
@@ -66,13 +71,13 @@ l10n:
 
   ただし、ページの作成者は、上記の設定を解除し、別の要素に `view-transition-name: root` を設定することで、これを変更できることに注意してください。
 
-- {{cssxref("::view-transition-old")}} は古いページ要素の静的なスナップショットを対象とし、{{cssxref("::view-transition-new")}} は新しいページ要素の動的なスナップショットを対象とします。どちらも、{{htmlelement("img")}} や {{htmlelement("video")}} と同様に置換コンテンツとしてレンダリングされるため、{{cssxref("object-fit")}} や {{cssxref("object-position")}} などの便利なプロパティでスタイル設定できるということです。
+- {{cssxref("::view-transition-old()")}} は古いページ要素の静的なスナップショットを対象とし、{{cssxref("::view-transition-new()")}} は新しいページ要素の動的なスナップショットを対象とします。どちらも、{{htmlelement("img")}} や {{htmlelement("video")}} と同様に置換コンテンツとしてレンダリングされるため、{{cssxref("object-fit")}} や {{cssxref("object-position")}} などのプロパティでスタイル設定できるということです。
 
 > [!NOTE]
-> 異なるカスタムビュー遷移アニメーションを異なる DOM 要素に適用することは可能です。各要素に異なる {{cssxref("view-transition-name")}} を設定することで、異なるアニメーションを適用できます。このような場合、各要素に対して `::view-transition-group` が作成されます。例えば、異なる要素に異なるアニメーションを適用する方法については、[さまざまな要素に対する様々なアニメーション](#さまざまな要素に対する様々なアニメーション)を参照してください。
+> 異なるカスタムビュー遷移アニメーションを異なる DOM 要素に適用することは可能です。各要素に異なる {{cssxref("view-transition-name")}} を設定することで、異なるアニメーションを適用できます。このような場合、各要素に対して `::view-transition-group()` が作成されます。例えば、異なる要素に異なるアニメーションを適用する方法については、[さまざまな要素に対する様々なアニメーション](#さまざまな要素に対する様々なアニメーション)を参照してください。
 
 > [!NOTE]
-> 後ほど説明しますが、流出と流入のアニメーションをカスタマイズするには、それぞれ {{cssxref("::view-transition-old")}} および {{cssxref("::view-transition-new")}} 擬似要素をアニメーションの対象とする必要があります。
+> 後ほど説明しますが、流出と流入のアニメーションをカスタマイズするには、それぞれ {{cssxref("::view-transition-old()")}} および {{cssxref("::view-transition-new()")}} 擬似要素をアニメーションの対象とする必要があります。
 
 ## 基本的なビュー遷移の作成
 
@@ -80,7 +85,11 @@ l10n:
 
 ### 基本的な SPA ビュー遷移
 
-例えば、SPA には、新しいコンテンツを取得し、ナビゲーションリンクがクリックされたり、サーバーから更新がプッシュされたりといった何らかのイベントに応答して DOM を更新する機能などを盛り込むことができます。[SPA のビュー遷移のデモ](https://mdn.github.io/dom-examples/view-transitions/spa/)では、この処理を、クリックされたサムネイルに基づいて新しいフルサイズの画像を表示させる `displayNewImage()` 関数に単純化しています。 また、この処理を `updateView()` 関数内にカプセル化し、ブラウザーが対応している場合にのみビュー遷移 API を呼び出すようにしています。
+SPA には、新しいコンテンツを取得し、ナビゲーションリンクがクリックされたり、サーバーから更新がプッシュされたりといった何らかのイベントに応答して DOM を更新する機能などを盛り込むことができます。
+
+[ビュー遷移 SPA デモ](https://mdn.github.io/dom-examples/view-transitions/spa/)は、基本的な画像ギャラリーです。JavaScript を使用して動的に生成された、サムネイル画像（{{htmlelement("img")}}）を含む一連の {{htmlelement("a")}} 要素があります。また、 {{htmlelement("figcaption")}} と、ギャラリー画像をフルサイズで表示させる `<img>` を含む {{htmlelement("figure")}} 要素もあります。
+
+サムネイルがクリックされると、{{domxref("Document.startViewTransition()")}} を介して `displayNewImage()` 関数が実行され、フルサイズの画像とその関連付けられたキャプションが `<figure>` 内に表示されます。これを `updateView()` 関数内にカプセル化しており、この関数はブラウザーがビュー遷移 API に対応している場合にのみ、その API を呼び出します。
 
 ```js
 function updateView(event) {
@@ -104,7 +113,7 @@ function updateView(event) {
 }
 ```
 
-このコードで、表示されている画像間の遷移を十分に処理できます。対応しているブラウザーでは、古い画像から新しい画像、キャプションへの変更がスムーズなクロスフェード(既定の表示遷移)で表示されます。これは、対応していないブラウザーでも動作しますが、素敵なアニメーションは表示されません。
+このコードで、表示されている画像間の遷移を十分に処理できます。対応しているブラウザーでは、古い画像から新しい画像、キャプションへの変更がスムーズなクロスフェード(デフォルトの表示遷移)で表示されます。これは、対応していないブラウザーでも動作しますが、素敵なアニメーションは表示されません。
 
 ### 基本的な MPA ビュー遷移
 
@@ -123,14 +132,14 @@ function updateView(event) {
 
 ## アニメーションのカスタマイズ
 
-ビュー遷移の擬似要素は、既定で [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)が設定されています。（詳細は[リファレンスページ](/ja/docs/Web/API/View_Transition_API#擬似要素)を参照）。
+ビュー遷移の擬似要素は、デフォルトで [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)が設定されています。（詳細は[リファレンスページ](/ja/docs/Web/API/View_Transition_API#擬似要素)を参照）。
 
-ほとんどの外観の遷移には、前述のとおり、既定でスムーズなクロスフェードのアニメーションが指定されています。ただし、例外もあります。
+ほとんどの外観の遷移には、前述のとおり、デフォルトでスムーズなクロスフェードのアニメーションが指定されています。ただし、例外もあります。
 
 - `height` と `width` の遷移には、スムーズな拡大縮小アニメーションが適用されます。
 - `position` と `transform` の遷移には、スムーズな動きのアニメーションが適用されます。
 
-既定のアニメーションは、通常の CSS を使用して好きなように変更することができます。"from" アニメーションを対象とするには {{cssxref("::view-transition-old")}} を、"to" アニメーションを対象とするには {{cssxref("::view-transition-new")}} を使用します。
+デフォルトのアニメーションは、通常の CSS を使用して好きなように変更することができます。"from" アニメーションを対象とするには {{cssxref("::view-transition-old()")}} を、"to" アニメーションを対象とするには {{cssxref("::view-transition-new()")}} を使用します。
 
 例えば、両方の速度を変更するには、次のようにします。
 
@@ -141,7 +150,7 @@ function updateView(event) {
 }
 ```
 
-`::view-transition-group()` を対象として `::view-transition-old()` と `::view-transition-new()` にスタイルを適用することをお勧めします。擬似要素の階層と既定のユーザーエージェントスタイル設定により、どちらもスタイルが継承されます。例えば次のようにします。
+`::view-transition-group()` を対象として `::view-transition-old()` と `::view-transition-new()` にスタイルを適用することをお勧めします。擬似要素の階層とデフォルトのユーザーエージェントスタイル設定により、どちらもスタイルが継承されます。例えば次のようにします。
 
 ```css
 ::view-transition-group(root) {
@@ -152,9 +161,9 @@ function updateView(event) {
 > [!NOTE]
 > これは、コードを保護するのにも良いオプションです。`::view-transition-group()` もアニメーションするので、 `group`/`image-pair` 擬似要素と `old` および `new` 擬似要素で再生時間が異なるという結果になる可能性があります。
 
-文書間 (MPA) 遷移の場合、ビュー遷移が機能するには、擬似要素を出力先文書にも記載する必要があります。双方向でビュー遷移を使用したい場合は、もちろんどちらにも記載する必要があります。
+文書間 (MPA) 遷移の場合、ビュー遷移が機能するには、擬似要素を出力先文書にも記載する必要があります。双方向でビュー遷移を使用したい場合は、どちらにも記載する必要があります。
 
-私たちの [MPA のビュー遷移のデモ](https://mdn.github.io/dom-examples/view-transitions/mpa/)では、上記の CSS を含んでいますが、カスタマイズをさらに一歩進め、カスタムアニメーションを定義し、それを `::view-transition-old(root)` および `::view-transition-new(root)` 擬似要素に適用しています。その結果、ナビゲーションが発生すると、既定のクロスフェード遷移が「スワイプアップ」遷移に置き換わります。
+私たちの [MPA のビュー遷移のデモ](https://mdn.github.io/dom-examples/view-transitions/mpa/)では、上記の CSS を含んでいますが、カスタマイズをさらに一歩進め、カスタムアニメーションを定義し、それを `::view-transition-old(root)` および `::view-transition-new(root)` 擬似要素に適用しています。その結果、ナビゲーションが発生すると、デフォルトのクロスフェード遷移が「スワイプアップ」遷移に置き換わります。
 
 ```css
 /* 独自アニメーションの作成 */
@@ -192,7 +201,7 @@ function updateView(event) {
 
 ## さまざまな要素に対する様々なアニメーション
 
-既定では、ビューの更新中に変更されるそれぞれの要素はすべて、同じアニメーションを使用して遷移します。 既定の `root` アニメーションとは異なるアニメーションを適用したい要素がある場合は、{{cssxref("view-transition-name")}} プロパティを使用してそれらを分離することができます。 例えば、[SPA のビュー遷移のデモ](https://mdn.github.io/dom-examples/view-transitions/spa/)では、{{htmlelement("figcaption")}} 要素に `view-transition-name` として `figure-caption` が指定され、ビュー遷移の観点からページの他の部分と区別されています。
+デフォルトでは、ビューの更新中に変更されるそれぞれの要素はすべて、同じアニメーションを使用して遷移します。 デフォルトの `root` アニメーションとは異なるアニメーションを適用したい要素がある場合は、{{cssxref("view-transition-name")}} プロパティを使用してそれらを分離することができます。 例えば、[SPA のビュー遷移のデモ](https://mdn.github.io/dom-examples/view-transitions/spa/)では、{{htmlelement("figcaption")}} 要素に `view-transition-name` として `figure-caption` が指定され、ビュー遷移の観点からページの他の部分と区別されています。
 
 ```css
 figcaption {
@@ -215,11 +224,6 @@ figcaption {
 ```
 
 2 つ目の疑似要素を設定することで、`<figcaption>` だけに別個のビュー遷移スタイル設定を適用することができます。 異なる古いビューと新しいビューは、それぞれ別個に処理されます。
-
-> [!NOTE]
-> `view-transition-name` の値は、`none` を除いて何らかの値にすることができます。`none` の値は、特定の要素がビュー遷移に参加しないということを意味しています。
->
-> `view-transition-name` の値も固有のものでなければなりません。 レンダリングされた要素が同時に同じ `view-transition-name` を保有している場合、{{domxref("ViewTransition.ready")}} が拒否され、遷移がスキップされます。
 
 以下のコードは `<figcaption>` だけに独自のアニメーションを適用します。
 
@@ -258,7 +262,7 @@ figcaption {
 }
 ```
 
-ここでは、独自の CSS アニメーションを作成し、それを `::view-transition-old(figure-caption)` および `::view-transition-new(figure-caption)` 擬似要素に適用しています。 また、どちらも同じ位置に維持し、既定のスタイルが独自のアニメーションに干渉しないように、他にもいくつかのスタイルを追加しています。
+ここでは、独自の CSS アニメーションを作成し、それを `::view-transition-old(figure-caption)` および `::view-transition-new(figure-caption)` 擬似要素に適用しています。 また、どちらも同じ位置に維持し、デフォルトのスタイルが独自のアニメーションに干渉しないように、他にもいくつかのスタイルを追加しています。
 
 > [!NOTE]
 > 擬似要素の識別子として `*` を使用すると、名前に関係なく、すべてのスナップショット擬似要素を対象とすることができます。例えば、次のようにします。
@@ -269,7 +273,16 @@ figcaption {
 > }
 > ```
 
-### 既定のアニメーションスタイルの利点
+### 有効な `view-transition-name` 値
+
+`view-transition-name` プロパティには、固有の {{cssxref("custom-ident")}} 値を指定できます。この値は、キーワードと誤認されない限り、どのような識別子でも構いません。レンダリングされたそれぞれの要素の `view-transition-name` の値は、固有である必要があります。2 つのレンダリング済み要素が同時に同じ `view-transition-name` を保有している場合、{{domxref("ViewTransition.ready")}} はエラーとなり、遷移はスキップされます。
+
+同時に、以下のキーワード値も指定できます。
+
+- `none`: この要素は、`view-transition-name` が設定された親要素を持たない限り、別個のスナップショットには含まれません。親要素がある場合は、その要素の一部としてスナップショットに含められます。
+- `match-element`: 選択されたすべての要素に対して、固有の `view-transition-name` 値を自動的に設定します。
+
+### デフォルトのアニメーションスタイルの利点
 
 なお、よりシンプルで、より良い結果をもたらす別の遷移オプションも発見しました。最終的な `<figcaption>`ビュー遷移は、以下のような形になりました。
 
@@ -283,10 +296,10 @@ figcaption {
 }
 ```
 
-これはうまく動作します。既定では、`::view-transition-group` が、古いビューと新しいビューの間でスムーズに変倍しながら、`width` と `height` を移行させるからです。どちらの状態でも `height` を固定して設定するだけで、うまくいくようになりました。
+これはうまく動作します。デフォルトでは、`::view-transition-group` が、古いビューと新しいビューの間でスムーズに変倍しながら、`width` と `height` を移行させるからです。どちらの状態でも `height` を固定して設定するだけで、うまくいくようになりました。
 
 > [!NOTE]
-> [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/) には、他にもいくつかのカスタマイズ例があります。
+> [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/) には、他にもいくつかのカスタマイズ例があります。
 
 ## JavaScript によるビュー遷移の制御
 
@@ -294,8 +307,9 @@ figcaption {
 
 `ViewTransition` には次のようにアクセスできます。
 
-1. 同一文書内 (SPA) の遷移の場合、{{domxref("Document.startViewTransition()", "document.startViewTransition()")}} メソッドが遷移に関連付けられた `ViewTransition` を返します。
-2. 文書間 (MPA) の遷移の場合は、次のようになります。
+1. {{domxref("Document.activeViewTransition")}} プロパティ経由で。これは、どのコンテキストでもアクティブなビュー遷移に一貫した方法でアクセスできる仕組みであり、後で簡単にアクセスできるように保存しておく必要がありません。
+2. 同一文書内 (SPA) の遷移の場合、{{domxref("Document.startViewTransition()", "document.startViewTransition()")}} メソッドが遷移に関連付けられた `ViewTransition` を返します。
+3. 文書間 (MPA) の遷移の場合は、次のようになります。
    - ナビゲーションにより文書がアンロードされようとするときに、{{domxref("Window.pageswap_event", "pageswap")}} イベントが発行されます。イベントオブジェクト ({{domxref("PageSwapEvent")}}) は、`ViewTransition` に{{domxref("PageSwapEvent.viewTransition")}} プロパティからアクセスできるほか、ナビゲーションの種類と現在の文書および移動先文書の履歴項目を含む {{domxref("NavigationActivation")}} にも {{domxref("PageSwapEvent.activation")}} からアクセスできます。
      > [!NOTE]
      > ナビゲーションのリダイレクトチェーンのどこかにオリジンをまたいだ URL がある場合、`activation` プロパティは `null` を返します。
@@ -354,7 +368,7 @@ function spaNavigate(data) {
 }
 ```
 
-このアニメーションでは、以下の CSS も必要となります。これは、既定の CSS アニメーションを無効にし、新旧のビューの状態が混ざり合うのを防ぐためです（遷移ではなく新しい状態が古い状態の上に「ワイプ」されるようになります）。
+このアニメーションでは、以下の CSS も必要となります。これは、デフォルトの CSS アニメーションを無効にし、新旧のビューの状態が混ざり合うのを防ぐためです（遷移ではなく新しい状態が古い状態の上に「ワイプ」されるようになります）。
 
 ```css
 ::view-transition-image-pair(root) {
@@ -489,7 +503,7 @@ window.addEventListener("pagereveal", async (e) => {
 2. 重要なスクリプトが読み込まれ、実行されます。
 3. ユーザーが最初にページを表示した際に目にする HTML は解釈できるので、一貫した表示が可能です。
 
-スタイルは既定ではレンダーブロックされ、スクリプトは [`blocking="render"`](/ja/docs/Web/HTML/Reference/Elements/script#blocking) 属性を使用してレンダーブロックすることができます。
+スタイルは、スクリプトを介して動的にドキュメントに追加されない限り、デフォルトでレンダリングをブロックします。スクリプトと動的に追加されたスタイルの両方について、[`blocking="render"`](/ja/docs/Web/HTML/Reference/Elements/script#blocking) 属性を使用することで、レンダリングをブロックすることができます。
 
 遷移アニメーションが実行される前に、初期の HTML が確実に解析され、常に一貫したレンダリングが行われることを保証するには、[`<link rel="expect">`](/ja/docs/Web/HTML/Reference/Attributes/rel#expect) を使用することができます。この要素には、以下の属性を含めることができます。
 
@@ -497,22 +511,25 @@ window.addEventListener("pagereveal", async (e) => {
 - `href="#element-id"` は、レンダーブロックしたい要素の ID を示します。
 - `blocking="render"` は、指定された HTML のレンダーブロックをします。
 
+> [!NOTE]
+> レンダリングをブロックするには、`script`、`link`、`style` の各要素に `blocking="render"` 属性をつけ、文書の `head` 内に配置しなければなりません。
+
 この例を単純な例の HTML 文書で見ていきましょう。
 
-```html-nolint
+```html
 <!doctype html>
 <html lang="ja">
   <head>
-    <!-- これは既定でレンダーブロックされる -->
+    <!-- これはデフォルトでレンダーブロックされる -->
     <link rel="stylesheet" href="style.css" />
 
     <!-- 重要なスクリプトをレンダーブロックとしてマークすると、
          ビュー遷移が有効化される前に確実に実行されるよう保証される -->
-    <script async href="layout.js" blocking="render"></script>
+    <script async src="layout.js" blocking="render"></script>
 
     <!-- rel="expect" およびお blocking="render" を使用して、
-         "#lead-content" 要素が確実に表示され、完全に解釈できる状態に
-         したまま、遷移を起動する -->
+         "#lead-content" 要素が確実に表示され、完全に解釈できる
+         状態にしたまま、遷移を起動する -->
     <link rel="expect" href="#lead-content" blocking="render" />
   </head>
   <body>
@@ -537,10 +554,10 @@ window.addEventListener("pagereveal", async (e) => {
   rel="expect"
   href="#lead-content"
   blocking="render"
-  media="screen and (min-width: 641px)" />
+  media="screen and (width > 640px)" />
 <link
   rel="expect"
   href="#first-section"
   blocking="render"
-  media="screen and (max-width: 640px)" />
+  media="screen and (width <= 640px)" />
 ```

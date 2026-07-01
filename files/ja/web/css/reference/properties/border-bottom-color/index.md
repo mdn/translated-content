@@ -1,9 +1,9 @@
 ---
-title: border-bottom-color
+title: CSS `border-bottom-color` プロパティ
+short-title: border-bottom-color
 slug: Web/CSS/Reference/Properties/border-bottom-color
-original_slug: Web/CSS/border-bottom-color
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`border-bottom-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の[境界線](/ja/docs/Web/CSS/Reference/Properties/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-bottom")}} でも設定することができます。
@@ -19,11 +19,11 @@ border-bottom-color: #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-bottom-color: rgb(170, 50, 220, 0.6);
+border-bottom-color: rgb(170 50 220 / 0.6);
 ```
 
 ```css interactive-example-choice
-border-bottom-color: hsl(60, 90%, 50%, 0.8);
+border-bottom-color: hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice
@@ -33,15 +33,15 @@ border-bottom-color: transparent;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これはボックスと、それを囲む境界線です。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -57,7 +57,7 @@ border-bottom-color: red;
 border-bottom-color: #ffbb00;
 border-bottom-color: rgb(255 0 0);
 border-bottom-color: hsl(100deg 50% 25% / 75%);
-border-bottom-color: currentcolor;
+border-bottom-color: currentColor;
 border-bottom-color: transparent;
 
 /* グローバル値 */
@@ -85,11 +85,11 @@ border-bottom-color: unset;
 
 ## 例
 
-### 境界線が付いた単純な div
+### 境界線が付いた div
 
 #### HTML
 
-```html-nolint live-sample___a_simple_div_with_a_border
+```html-nolint
 <div class="my-box">
   <p>
     これは周囲に境界線があるボックスです。 なお、ボックスのその辺が<span class="red-text">赤</span>になっています。
@@ -99,7 +99,7 @@ border-bottom-color: unset;
 
 #### CSS
 
-```css live-sample___a_simple_div_with_a_border
+```css
 .my-box {
   border: solid 0.3em gold;
   border-bottom-color: red;
@@ -113,7 +113,7 @@ border-bottom-color: unset;
 
 #### 結果
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{EmbedLiveSample('A_div_with_a_border')}}
 
 ## 仕様書
 

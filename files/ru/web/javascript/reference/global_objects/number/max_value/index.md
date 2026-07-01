@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 
 Свойство `MAX_VALUE` имеет значение, приблизительно равное `1.79E+308`. Значения, большие `MAX_VALUE` представляются как «бесконечность».
 
-Поскольку `MAX_VALUE` является статическим свойством объекта {{jsxref("Global_Objects/Number", "Number")}}, вы всегда должны использовать его как `Number.MAX_VALUE`, а не как свойство созданного вами объекта {{jsxref("Global_Objects/Number", "Number")}}.
+Поскольку `MAX_VALUE` является статическим свойством объекта {{jsxref("Number")}}, вы всегда должны использовать его как `Number.MAX_VALUE`, а не как свойство созданного вами объекта {{jsxref("Number")}}.
 
 ## Примеры
 

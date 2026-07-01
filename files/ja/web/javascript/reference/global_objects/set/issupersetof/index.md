@@ -40,7 +40,7 @@ isSupersetOf(other)
 > [!NOTE]
 > 上位集合の関係は、真の上位集合ではありません。つまり、`this` と `other` の中の要素が同じである場合、`isSupersetOf()` は `true` を返します。
 
-`isSupersetOf()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("Operators/this", "this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。その後、その動作は `this` と `other` のサイズに依存します。
+`isSupersetOf()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。その後、その動作は `this` と `other` のサイズに依存します。
 
 - `this` の要素数が `other.size` より少ない場合は、直接 `false` を返します。
 - そうでなければ、`other` の `keys()` メソッドを呼び出して走査し、`other` の要素が `this` に存在しない場合は `false` を返します（そして、`return()` メソッドを呼び出して `keys()` イテレータを終了します）。 そうでなければ、`true` を返します。

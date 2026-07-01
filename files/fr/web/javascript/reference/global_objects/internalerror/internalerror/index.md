@@ -27,7 +27,7 @@ InternalError(message, fileName, lineNumber)
 ```
 
 > [!NOTE]
-> `InternalError()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}. Les deux créent une nouvelle instance de `InternalError`.
+> `InternalError()` peut être appelé avec ou sans {{JSxRef("new")}}. Les deux créent une nouvelle instance de `InternalError`.
 
 ### Paramètres
 

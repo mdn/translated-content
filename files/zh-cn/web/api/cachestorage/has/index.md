@@ -18,7 +18,7 @@ has(cacheName)
 ### 参数
 
 - cacheName
-  - : 一个表示你正在 {{domxref("CacheStorage")}} 中查找的 {{domxref("Cache")}} 对象 name 的 {{domxref("DOMString")}}.
+  - : 一个表示你正在 {{domxref("CacheStorage")}} 中查找的 {{domxref("Cache")}} 对象 name 的 {{jsxref("String")}}.
 
 ### 返回值
 

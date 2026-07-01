@@ -17,7 +17,7 @@ slug: Web/API/Node/baseURI
 var baseURI = node.baseURI;
 ```
 
-- `baseURI` это {{ domxref("DOMString") }} представляющий базовый URL обусловленный {{domxref("Node")}}. Может быть `null` если не удалось получить абсолютный URI
+- `baseURI` это {{ jsxref("String") }} представляющий базовый URL обусловленный {{domxref("Node")}}. Может быть `null` если не удалось получить абсолютный URI
 - `node.baseURI` только для чтения.
 - `node.baseURI` может измениться со временем (с.м. ниже).
 

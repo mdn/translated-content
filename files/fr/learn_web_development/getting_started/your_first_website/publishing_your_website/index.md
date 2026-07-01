@@ -2,9 +2,8 @@
 title: Publier votre site web
 short-title: Publication
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
-original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
 l10n:
-  sourceCommit: 73a73bc44e12181c778910f3b7d73962e0dd9a29
+  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
@@ -19,7 +18,7 @@ Une fois que vous avez terminé d'écrire le code et d'organiser les fichiers qu
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Connaissance de base de votre système d'exploitation, des logiciels de base que vous utiliserez pour créer un site web, et des systèmes de fichiers.
+        Connaissance de base de votre système d'exploitation, des logiciels de base que vous utilisez pour créer un site web, et des systèmes de fichiers.
       </td>
     </tr>
     <tr>
@@ -48,27 +47,28 @@ Pour avoir plus de contrôle sur le contenu et l'apparence du site, la plupart d
 - L'hébergement web est un espace de fichiers loué sur le [serveur web](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) d'une société d'hébergement. Vous placez les fichiers de votre site web sur le serveur web. Le serveur web fournit le contenu du site aux visiteur·euse·s.
 - Un [nom de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) est l'adresse unique où les gens trouvent votre site web, comme `https://www.mozilla.org` ou `https://www.bbc.co.uk`. Vous pouvez louer votre nom de domaine pour autant d'années que vous le souhaitez auprès d'un **bureau d'enregistrement**.
 
-Si vous obtenez l'hébergement _et_ le nom de domaine auprès de la même société, ils sont généralement configurés automatiquement pour fonctionner ensemble. Cependant, si vous les obtenez auprès de sociétés différentes, ou si vous souhaitez changer d'hébergeur, il faudra effectuer quelques réglages pour que le nom de domaine pointe vers le bon serveur. Cela permet aux gens de voir votre site lorsqu'ils saisissent cette adresse web. Cela se fait généralement en se connectant sur le site du bureau d'enregistrement et en configurant les [serveurs de noms <sup>(angl.)</sup>](https://kinsta.com/knowledgebase/what-is-a-nameserver/) fournis par votre hébergeur.
+Si vous obtenez l'hébergement _et_ le nom de domaine auprès de la même société, ils sont généralement configurés automatiquement pour fonctionner ensemble. Cependant, si vous les obtenez auprès de sociétés différentes, ou si vous souhaitez changer d'hébergeur, il faut effectuer quelques réglages pour que le nom de domaine pointe vers le bon serveur. Cela permet aux gens de voir votre site lorsqu'ils saisissent cette adresse web. Cela se fait généralement en se connectant sur le site du bureau d'enregistrement et en configurant les [serveurs de noms <sup>(angl.)</sup>](https://kinsta.com/blog/what-is-a-nameserver/) fournis par votre hébergeur.
 
 Les sociétés proposent différents moyens pour transférer les fichiers sur leurs serveurs web. Beaucoup offrent plusieurs options&nbsp;:
 
 - Une interface de glisser-déposer (vous en verrez un exemple dans la section [Publier sur GitHub](#publier_sur_github) plus loin).
-- Un programme {{Glossary("FTP", "Protocole de transfert de fichiers (FTP)")}}. Les programmes <abbr>FTP</abbr> varient beaucoup, mais en général, il faut se connecter au serveur web avec les identifiants fournis par l'hébergeur (nom d'utilisateur, mot de passe, nom d'hôte). Le programme affiche alors vos fichiers locaux et ceux du serveur dans deux fenêtres, et permet de transférer les fichiers dans les deux sens.
+- Un programme {{Glossary("FTP", "Protocole de transfert de fichiers (FTP)")}}. Les programmes <abbr>FTP</abbr> varient beaucoup, mais en général, il faut se connecter au serveur web avec les identifiants fournis par l'hébergeur (nom d'utilisateur·ice, mot de passe, nom d'hôte). Le programme affiche alors vos fichiers locaux et ceux du serveur dans deux fenêtres, et permet de transférer les fichiers dans les deux sens.
 - Garder le code source du site dans un dépôt GitHub (voir plus bas) et donner accès à l'hébergeur pour qu'il puisse récupérer le code source, le construire si besoin, et le publier.
 - Certaines sociétés fournissent des [outils en ligne de commande](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) pour transférer vos fichiers.
 
 #### Suggestions pour trouver hébergement et domaines
 
 - MDN ne fait pas la promotion de sociétés commerciales d'hébergement ou de bureaux d'enregistrement particuliers. Pour en trouver, faites une recherche pour «&nbsp;hébergement web&nbsp;» et «&nbsp;noms de domaine&nbsp;». Tous les bureaux d'enregistrement proposent une fonctionnalité pour vérifier si le nom de domaine souhaité est disponible.
-- Votre {{Glossary("ISP", "Fournisseur d'Accès Internet (FAI)")}} domestique ou professionnel propose peut-être un hébergement limité pour un petit site web. Les fonctionnalités seront limitées, mais cela peut être parfait pour vos premières expériences.
+- Votre {{Glossary("ISP", "Fournisseur d'Accès Internet (FAI)")}} domestique ou professionnel propose peut-être un hébergement limité pour un petit site web. Les fonctionnalités sont limitées, mais cela peut être parfait pour vos premières expériences.
 - Il existe aussi des services gratuits comme [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/) et [WordPress](https://wordpress.com/). Ces services sont limités, mais suffisants pour des expérimentations initiales.
 
-### Utiliser un outil en ligne comme GitHub ou Google App Engine
+### Utiliser un outil en ligne
 
 Certains outils permettent de publier votre site web en ligne&nbsp;:
 
 - [GitHub <sup>(angl.)</sup>](https://github.com/) est un site de «&nbsp;codage collaboratif&nbsp;». Il permet de téléverser des dépôts de code pour stockage dans le **système de gestion de versions** [Git <sup>(angl.)</sup>](https://git-scm.com/). Vous pouvez alors collaborer à des projets de code&nbsp;; le système est open source par défaut, ce qui signifie que n'importe qui dans le monde peut trouver votre code GitHub, l'utiliser, en tirer des leçons et l'améliorer. GitHub propose une fonctionnalité très utile appelée [Pages GitHub <sup>(angl.)</sup>](https://pages.github.com/), qui permet de présenter du code de site web en direct sur le web.
-- [Google App Engine](https://cloud.google.com/appengine) est une plateforme puissante qui permet de créer et d'exécuter des applications sur l'infrastructure de Google — que vous ayez besoin de créer une application web multi-couches à partir de zéro ou d'héberger un site web statique. Voir [Comment héberger votre site Web sur Google App Engine&nbsp;?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) pour plus d'informations.
+- [Netlify <sup>(angl.)</sup>](https://www.netlify.com/) est une plateforme d'hébergement web qui fournit un hébergement pour les sites web statiques directement à partir de votre dépôt GitHub. Elle offre également un certain nombre de fonctionnalités supplémentaires, telles que l'aperçu des déploiements, les fonctions sans serveur et la gestion des formulaires.
+- [Fly.io <sup>(angl.)</sup>](https://fly.io/) est une plateforme qui permet de déployer des applications et des bases de données près de vos utilisateur·ice·s. Cela convient mieux si vous avez une application web nécessitant des services en arrière-plan.
 
 Ces options sont généralement gratuites, mais avec un nombre de fonctionnalités limité.
 
@@ -89,9 +89,9 @@ Voyons maintenant comment publier votre site sur les Pages GitHub.
 
 1. Tout d'abord, [inscrivez-vous sur GitHub <sup>(angl.)</sup>](https://github.com/) et vérifiez votre adresse e-mail.
 2. Ensuite, vous devez [créer un dépôt <sup>(angl.)</sup>](https://github.com/new) pour stocker vos fichiers. Sur cette page&nbsp;:
-   1. Dans la case <i lang="en">Repository name</i>, saisissez <i lang="en">username</i>.github.io, où <i lang="en">username</i> est votre nom d'utilisateur. Par exemple, notre ami Bob Smith saisirait _bobsmith.github.io_.
+   1. Dans la case <i lang="en">Repository name</i>, saisissez <i lang="en">username</i>.github.io, où <i lang="en">username</i> est votre nom d'utilisateur. Par exemple, notre ami Bob Smith saisit _bobsmith.github.io_.
    2. Cliquez sur le bouton <i lang="en">Create repository</i> (Créer un dépôt) en bas de la page.
-3. Sur la page suivante, trouvez le lien <i lang="en">uploading an existing file</i> (téléverser un fichier existant) et cliquez dessus. Cela vous amènera à la page de téléversement de fichiers.
+3. Sur la page suivante, trouvez le lien <i lang="en">uploading an existing file</i> (téléverser un fichier existant) et cliquez dessus. Cela vous amène à la page de téléversement de fichiers.
 4. À ce stade, vous pouvez glisser-déposer les fichiers de votre système de fichiers local sur la page web pour les téléverser dans le dépôt GitHub. Pour ce faire&nbsp;:
    1. Ouvrez une fenêtre de l'explorateur de fichiers (ou Finder) sur votre ordinateur.
    2. Assurez-vous de voir à la fois l'explorateur de fichiers _et_ la fenêtre du navigateur web — placez-les côte à côte sur votre écran.

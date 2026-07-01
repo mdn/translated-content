@@ -37,7 +37,7 @@ console.log(obj.latest);
 
 ## Description
 
-Il est parfois utile de créer une propriété qui renvoie une valeur dynamique calculée, ou de ne pas avoir recours à l'appel explicite d'une méthode pour renvoyer le statut d'une variable interne. En JavaScript, il est possible de faire cela en utilisant un _accesseur_. Il n'est pas possible d'avoir simultanément un _accesseur_ assimilé à une propriété et d'avoir cette propriété initialisée à une valeur, mais il est possible d'utiliser un _accesseur_ et un {{jsxref("Fonctions/set","mutateur","",1)}} pour créer une sorte de pseudo-propriété.
+Il est parfois utile de créer une propriété qui renvoie une valeur dynamique calculée, ou de ne pas avoir recours à l'appel explicite d'une méthode pour renvoyer le statut d'une variable interne. En JavaScript, il est possible de faire cela en utilisant un _accesseur_. Il n'est pas possible d'avoir simultanément un _accesseur_ assimilé à une propriété et d'avoir cette propriété initialisée à une valeur, mais il est possible d'utiliser un _accesseur_ et un {{jsxref("Functions/set","mutateur","",1)}} pour créer une sorte de pseudo-propriété.
 
 On notera que l'opérateur `get` :
 
@@ -45,7 +45,7 @@ On notera que l'opérateur `get` :
 - ne doit pas posséder de paramètre (lire la page [Changement ES5 : les fonctions _d'accession_ et _de mutation_ littérales doivent avoir maintenant zéro ou un paramètre.](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) _(en anglais)_ pour plus d'informations)
 - ne doit pas apparaître dans un littéral objet avec un autre `get` ou une autre propriété avec le même identifiant (les codes suivants : `{ get x() { }, get x() { } }` et `{ x: ..., get x() { } }` sont interdits).
 
-Un _accesseur_ peut être supprimé grâce à l'opérateur {{jsxref("Opérateurs/L_opérateur_delete","delete")}}.
+Un _accesseur_ peut être supprimé grâce à l'opérateur {{jsxref("delete")}}.
 
 ## Exemples
 
@@ -163,7 +163,7 @@ console.log(
 ## Voir aussi
 
 - [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

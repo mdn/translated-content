@@ -14,22 +14,22 @@ original_slug: WebAssembly/JavaScript_interface
 
 `WebAssembly` オブジェクトの主な用途は次のとおりです。
 
-- {{jsxref("WebAssembly.instantiate()")}} 関数を用いた WebAssembly コードの読み込み。
-- {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}} コンストラクターによる新しいメモリーやテーブルインスタンスの生成。
-- {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}} コンストラクターによる、WebAssembly で発生するエラーの処理する機能の提供。
+- [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate) 関数を用いた WebAssembly コードの読み込み。
+- [`WebAssembly.Memory()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory)/[`WebAssembly.Table()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table) コンストラクターによる新しいメモリーやテーブルインスタンスの生成。
+- [`WebAssembly.CompileError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/CompileError)/[`WebAssembly.LinkError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError)/[`WebAssembly.RuntimeError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) コンストラクターによる、WebAssembly で発生するエラーの処理する機能の提供。
 
 ## コンストラクタープロパティ
 
 - [`WebAssembly.CompileError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/CompileError/CompileError)
   - : WebAssembly のデコードまたは検証中のエラーを示します。
 - [`WebAssembly.Global()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global/Global)
-  - : グローバル変数のインスタンスを表し、 JavaScript からアクセス可能で、 1 つ以上の {{jsxref("WebAssembly.Module")}} インスタンスの間でインポート/エクスポート可能です。これにより、複数のモジュールを動的リンクすることができます。
+  - : グローバル変数のインスタンスを表し、 JavaScript からアクセス可能で、 1 つ以上の [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) インスタンスの間でインポート/エクスポート可能です。これにより、複数のモジュールを動的リンクすることができます。
 - [`WebAssembly.Instance()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance/Instance)
   - : ステートフルで、実行可能な [WebAssembly.Module](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) のインスタンスです。
 - [`WebAssembly.LinkError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError/LinkError)
   - : (関数開始後の[トラップ](https://webassembly.org/docs/semantics/#traps)ではなく) モジュールの初期化時に発生したエラーを示します。
 - [`WebAssembly.Memory()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/Memory)
-  - : {{jsxref("WebAssembly/Memory/buffer","buffer")}} プロパティが可変長の [ArrayBuffer](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) であり、これが WebAssembly の `Instance` からアクセス可能なメモリーのバイト列を保持しています。
+  - : [`buffer`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) プロパティが可変長の [ArrayBuffer](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) であり、これが WebAssembly の `Instance` からアクセス可能なメモリーのバイト列を保持しています。
 - [`WebAssembly.Module()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module/Module)
   - : ステートレスの WebAssembly のコードであり、ブラウザーでコンパイルされ、効率的に[ワーカーと共有](/ja/docs/Web/API/Worker/postMessage)することができ、複数回インスタンス化することができます。
 - [`WebAssembly.RuntimeError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError/RuntimeError)
@@ -39,15 +39,15 @@ original_slug: WebAssembly/JavaScript_interface
 
 ## 静的メソッド
 
-- {{jsxref("WebAssembly.instantiate()")}}
+- [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate)
   - : WebAssembly コードをコンパイル、インスタンス化するための主要な API で、 `Module` と、その最初の `Instance` を返します。
-- {{jsxref("WebAssembly.instantiateStreaming()")}}
+- [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming)
   - : ソースのストリームから直接 WebAssembly モジュールをコンパイル、インスタンス化し、 `Module` と、その最初の `Instance` を返します。
-- {{jsxref("WebAssembly.compile()")}}
-  - : {{jsxref("WebAssembly.Module")}} を用いて WebAssembly バイナリーコードからコンパイルします。インスタンス化は別ステップとして分離されます。
-- {{jsxref("WebAssembly.compileStreaming()")}}
-  - : ソースのストリームから直接 {{jsxref("WebAssembly.Module")}} にコンパイルします。インスタンス化は別ステップとして分離されます。
-- {{jsxref("WebAssembly.validate()")}}
+- [`WebAssembly.compile()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/compile)
+  - : [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) を用いて WebAssembly バイナリーコードからコンパイルします。インスタンス化は別ステップとして分離されます。
+- [`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming)
+  - : ソースのストリームから直接 [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) にコンパイルします。インスタンス化は別ステップとして分離されます。
+- [`WebAssembly.validate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/validate)
   - : WebAssembly バイナリーコードの型付き配列を検証し、バイト列が有効な WebAssembly コードか (`true`) 否か (`false`) を返します。
 
 ## 例

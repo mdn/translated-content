@@ -84,12 +84,10 @@ const header = (
 > [!NOTE]
 > Les parenthèses dans l'extrait de code précédent ne sont pas propres à JSX et n'ont aucun effet sur votre application. Elles sont un signal pour vous (et votre ordinateur) que plusieurs lignes de code à l'intérieur font partie de la même expression. Vous pourriez tout aussi bien écrire l'expression d'en-tête comme ceci&nbsp;:
 >
-> ```js
-> const header = (
->   <header>
->     <h1>Mozilla Developer Network</h1>
->   </header>
-> );
+> ```jsx-nolint
+> const header = <header>
+>   <h1>Mozilla Developer Network</h1>
+> </header>;
 > ```
 >
 > Cependant, cela semble un peu gênant, car la balise [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header) qui commence l'expression n'est pas indentée à la même position que sa balise de fermeture correspondante.

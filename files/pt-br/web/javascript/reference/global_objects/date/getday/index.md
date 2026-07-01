@@ -27,7 +27,7 @@ O valor retornado por `getDay()` é um inteiro que corresponde com o dia da sema
 
 ### Exemplo: Usando `getDay()`
 
-O segundo statement abaixo atribui o valor 1 à variável weekday (dia da semana), baseado no valor do objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`. A data 25 de Dezembro de 1995 é uma Segunda-Feira.
+O segundo statement abaixo atribui o valor 1 à variável weekday (dia da semana), baseado no valor do objeto {{jsxref("Date")}} `Xmas95`. A data 25 de Dezembro de 1995 é uma Segunda-Feira.
 
 ```js
 var Xmas95 = new Date("December 25, 1995 23:15:30");

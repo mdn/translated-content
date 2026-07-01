@@ -11,7 +11,7 @@ Especifica la función que se está ejecutando actualmente.
 
 ## Descripción
 
-`callee` es una propiedad de la variable local `arguments` disponible dentro de todos los objetos function; `callee` como una propiedad de {{jsxref("Funciones/arguments", "Function.arguments")}} ya no se utiliza. (`Function.arguments` en sí mismo está también desaconsejado.)
+`callee` es una propiedad de la variable local `arguments` disponible dentro de todos los objetos function; `callee` como una propiedad de {{jsxref("Functions/arguments", "Function.arguments")}} ya no se utiliza. (`Function.arguments` en sí mismo está también desaconsejado.)
 
 `arguments.callee` permite a funciones anónimas referirse a ellas mismas, lo cual es necesario en funciones anónimas recursivas.
 
@@ -21,7 +21,7 @@ La palabra clave `this` no se refiere a la función que se ejecuta actualmente. 
 
 ### Ejemplo: Usando `arguments.callee` en funciones anónimas recursivas
 
-Una función recursiva debe ser capaz de referirse a sí misma. Típicamente, una función se refiere a sí misma por su nombre. Sin embargo, una función anónima no tiene nombre y por tanto es una variable de referencia para ella, es decir, si la función no está asignada a ninguna variable, la función no puede referirse a sí misma. (Se pueden crear funciones anónimas mediante una expresión {{jsxref("Operadores/function", "function")}} o el constructor {{jsxref("Function")}}.) Aquí es donde entra `arguments.callee`.
+Una función recursiva debe ser capaz de referirse a sí misma. Típicamente, una función se refiere a sí misma por su nombre. Sin embargo, una función anónima no tiene nombre y por tanto es una variable de referencia para ella, es decir, si la función no está asignada a ninguna variable, la función no puede referirse a sí misma. (Se pueden crear funciones anónimas mediante una expresión {{jsxref("Operators/function", "function")}} o el constructor {{jsxref("Function")}}.) Aquí es donde entra `arguments.callee`.
 
 El siguiente ejemplo define una función, la cuál, en cada turno, define y devuelve una función factorial.
 

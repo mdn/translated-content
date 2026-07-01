@@ -32,7 +32,7 @@ union(other)
 
 ![有部分重叠的两个圆的维恩图。A 和 B 的并集是被任意一个圆包含的区域。](diagram.svg)
 
-`union()` 接受[类集合](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set#类_set_浏览器_api)对象作为 `other` 参数。方法要求 {{jsxref("Operators/this", "this")}} 是一个 {{jsxref("Set")}} 的实例，因为它不调用任何用户代码而直接获取 `this` 中存储的数据。然后，它通过调用 `other` 的 `keys()` 方法迭代 `other`，并构造一个新的集合。这个集合首先包含所有来自 `this` 的元素，然后是所有在 `other` 里但不在 `this` 里的元素。
+`union()` 接受[类集合](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set#类_set_浏览器_api)对象作为 `other` 参数。方法要求 {{jsxref("this")}} 是一个 {{jsxref("Set")}} 的实例，因为它不调用任何用户代码而直接获取 `this` 中存储的数据。然后，它通过调用 `other` 的 `keys()` 方法迭代 `other`，并构造一个新的集合。这个集合首先包含所有来自 `this` 的元素，然后是所有在 `other` 里但不在 `this` 里的元素。
 
 返回的集合里的元素的顺序首先是 `this` 中的元素，其次是 `other` 中的元素。
 

@@ -81,9 +81,7 @@ navigator.credentials
 
 ```js
 const options = {
-  challenge: new Uint8Array([
-    /* bytes sent from the server */
-  ]),
+  challenge: new Uint8Array([/* bytes sent from the server */]),
 };
 
 navigator.credentials

@@ -1,22 +1,19 @@
 ---
-title: "<strong>: 強い重要性要素"
+title: HTML `<strong>` 強い重要性要素
+short-title: <strong>
 slug: Web/HTML/Reference/Elements/strong
-original_slug: Web/HTML/Element/strong
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<strong>`** は [HTML](/ja/docs/Web/HTML) の要素で、内容の重要性、重大性、または緊急性が高いテキストを表します。ブラウザーは一般的に太字で描画します。
 
 {{InteractiveExample("HTML デモ: &lt;strong&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
-  ... the most important rule, the rule you can never forget, no matter how much
-  he cries, no matter how much he begs:
-  <strong>never feed him after midnight</strong>.
+  ... 最も重要なルール、どんなに泣こうとも、どんなに頼もうとも、決して忘れてはならないルールがあります。
+  <strong>深夜以降は絶対に餌を与えないでください</strong>。
 </p>
 ```
 
@@ -34,7 +31,7 @@ p {
 
 `<strong>` 要素は「強い重要性」のある内容、つまり（警告など）高い重大性や緊急性のある物事のためのものです。これは、ページ全体にとって非常に重要な文である可能性があります。または、いくつかの単語が周囲のコンテンツと比較して重要であると指摘することができます。
 
-通常、この要素は既定で太字で表示されます。しかし、単に太字にするために使用*しない*でください。そのような用途には CSS の {{cssxref("font-weight")}} プロパティを使用してください。高い水準の重要性を示すことなく、あるテキストに注意を引かせたい場合は {{HTMLElement("b")}} 要素を使用してください。強調する文字列をマークしたい場合は {{HTMLElement("em")}} 要素を使用してください。
+通常、この要素はデフォルトで太字で表示されます。しかし、単に太字にするために使用*しない*でください。そのような用途には CSS の {{cssxref("font-weight")}} プロパティを使用してください。高い水準の重要性を示すことなく、あるテキストに注意を引かせたい場合は {{HTMLElement("b")}} 要素を使用してください。強調する文字列をマークしたい場合は {{HTMLElement("em")}} 要素を使用してください。
 
 他に、ページのテキストの中でメモや警告を表す段落のラベルを記述することも `<strong>` の許容される使い方です。
 
@@ -44,7 +41,7 @@ p {
 
 それは正しくありません。`<strong>` 要素はより高い重要性を持つコンテンツのためのものであるのに対し、 `<b>` 要素はより重要であるという意味なしに、テキストに注意を引かせるために使用します。
 
-HTML ではどちらも有効で意味のある要素であり、ほとんどのブラウザーでは、同じ既定のスタイル（太字）が使用されていることは間違いありません（ただし、古いブラウザーの中には `<strong>` に下線を引くものもあります）。それぞれの要素は特定の種類のシナリオで使用するためのものです。単に装飾のために太字のテキストを使用する場合は、代わりに CSS の {{cssxref("font-weight")}} プロパティを使用してください。
+HTML ではどちらも有効で意味のある要素であり、ほとんどのブラウザーでは、同じデフォルトのスタイル（太字）が使用されていることは間違いありません（ただし、古いブラウザーの中には `<strong>` に下線を引くものもあります）。それぞれの要素は特定の種類のシナリオで使用するためのものです。単に装飾のために太字のテキストを使用する場合は、代わりに CSS の {{cssxref("font-weight")}} プロパティを使用してください。
 
 囲まれたテキストの意図された意味または目的によって、使用する要素を決定してください。伝えられる意味がどのような意味であるかがすべてです。
 
@@ -58,21 +55,25 @@ HTML ではどちらも有効で意味のある要素であり、ほとんどの
 
 ### 基本的な例
 
-```html
-<p>作業を進める前に、<strong>必ず安全ゴーグルを装着してください</strong>。</p>
+```html-nolint
+<p>
+  作業を進める前に、<strong>必ず安全ゴーグルを装着してください</strong>。
+</p>
 ```
 
-結果は次のようになります。
+#### 結果
 
 {{EmbedLiveSample("Basic_example", 650, 80)}}
 
 ### 警告のラベル表示
 
-```html
-<p><strong>重要:</strong> その前に、バターをたっぷり追加してください。</p>
+```html-nolint
+<p>
+  <strong>重要:</strong> その前に、バターをたっぷり追加してください。
+</p>
 ```
 
-結果は次のようになります。
+#### 結果
 
 {{EmbedLiveSample("Labeling_warnings", 650, 80)}}
 
@@ -82,7 +83,9 @@ HTML ではどちらも有効で意味のある要素であり、ほとんどの
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
@@ -119,8 +122,9 @@ HTML ではどちらも有効で意味のある要素であり、ほとんどの
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">strong</a
+          ></code
         >
       </td>
     </tr>

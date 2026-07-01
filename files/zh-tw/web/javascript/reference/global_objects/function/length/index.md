@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/length
 
 ## 描述
 
-`length` 是 function 物件的一個 property，表示該 function 預期被傳入的參數數量，這個數量並不包含 {{jsxref("rest_parameters", "rest parameter", "", 1)}} 且只包涵第一個預設參數(Default Parameters)前的參數。相較之下 {{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} 是 function 內部的物件，會提供真正傳進 function 中的參數數量。
+`length` 是 function 物件的一個 property，表示該 function 預期被傳入的參數數量，這個數量並不包含 {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} 且只包涵第一個預設參數(Default Parameters)前的參數。相較之下 {{jsxref("Functions/arguments/length", "arguments.length")}} 是 function 內部的物件，會提供真正傳進 function 中的參數數量。
 
 ### `Function` 建構子的 data property
 

@@ -22,6 +22,8 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 
 - {{domxref("HTMLImageElement.alt")}}
   - : 文字列で、HTML の [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) 属性を反映します。画像が読み込まれなかった場合に表示される代替フォールバックコンテンツを表します。
+- {{domxref("HTMLImageElement.attributionSrc")}} {{securecontext_inline}} {{experimental_inline}}
+  - : {{htmlelement("img")}} 要素の [`attributionsrc`](/ja/docs/Web/HTML/Reference/Elements/img#attributionsrc) 属性をプログラムで取得および設定し、その属性の値を反映します。 `attributionsrc` は、ブラウザーに画像リクエストとともに {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信するように指示します。サーバー側では、 {{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーをレスポンスで送信し、それぞれ画像ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers)を登録します。
 - {{domxref("HTMLImageElement.complete")}} {{ReadOnlyInline}}
   - : 論理値で、ブラウザーが画像の取得を完了した場合、成功したかどうかに関わらず `true` を返します。つまり、読み込むべき画像を示す {{domxref("HTMLImageElement.src", "src")}} の値が存在しない場合も、この値は `true` となります。
 - {{domxref("HTMLImageElement.crossOrigin")}}
@@ -51,7 +53,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLImageElement.srcset")}}
   - : HTML の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性を反映した文字列です。これは、画像候補のリストをカンマ (`',', U+002C COMMA`) 区切りで指定します。それぞれの候補画像は、 URL の後にスペースが続き、その後に画像のサイズを示す特別な形式の文字列が続きます。サイズは、幅またはサイズの倍数で指定することができます。サイズの部分文字列の形式については、 {{domxref("HTMLImageElement.srcset", "srcset")}} ページをお読みください。
 - {{domxref("HTMLImageElement.useMap")}}
-  - : HTML の [`usemap`](/ja/docs/Web/HTML/Reference/Elements/img#usemap) 属性を反映した文字列です。これは、使用するイメージマップを記述した {{HTMLElement("map")}} 要素のページローカルな URL を含みます。ページローカルの URL は、ポンド (ハッシュ) 記号 (`#`) の後に `<map>` 要素の ID を続けたもの、例えば `#my-map-element` のようになります。 `<map>` には、画像内のクリック可能な領域を示す {{HTMLElement("area")}} 要素が順番に入ります。
+  - : HTML の [`usemap`](/ja/docs/Web/HTML/Reference/Elements/img#usemap) 属性を反映した文字列です。これは、使用するイメージマップを記述した {{HTMLElement("map")}} 要素のページローカルな URL を含みます。ページローカルの URL は、ポンド（ハッシュ）記号 (`#`) の後に `<map>` 要素の ID を続けたもの、例えば `#my-map-element` のようになります。 `<map>` には、画像内のクリック可能な領域を示す {{HTMLElement("area")}} 要素が順番に入ります。
 - {{domxref("HTMLImageElement.width")}}
   - : HTML の [`width`](/ja/docs/Web/HTML/Reference/Elements/img#width) 属性を反映した整数値で、画像のレンダリング幅を CSS ピクセルで表します。
 - {{domxref("HTMLImageElement.x")}} {{ReadOnlyInline}}

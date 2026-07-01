@@ -17,7 +17,7 @@ _Un {{domxref("MediaStreamEvent")}} étant un {{domxref("Event")}}, cet événem
 ## Constructeurs
 
 - {{domxref("MediaStreamEvent.MediaStreamEvent()", "MediaStreamEvent()")}}
-  - : Renvoie un nouveau `MediaStreamEvent`. Il prend deux paramètres, le premier étant un {{domxref("DOMString")}} représentant le type de l'événement; le second un dictionnaire contenant le {{domxref("MediaStream")}} auquel il se réfère.
+  - : Renvoie un nouveau `MediaStreamEvent`. Il prend deux paramètres, le premier étant un {{jsxref("String")}} représentant le type de l'événement; le second un dictionnaire contenant le {{domxref("MediaStream")}} auquel il se réfère.
 
 ## Méthodes
 

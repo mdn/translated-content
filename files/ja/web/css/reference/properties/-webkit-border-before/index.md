@@ -1,12 +1,24 @@
 ---
-title: -webkit-border-before
+title: CSS `-webkit-border-before` プロパティ
+short-title: -webkit-border-before
 slug: Web/CSS/Reference/Properties/-webkit-border-before
-original_slug: Web/CSS/-webkit-border-before
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_header}}
 
 **`-webkit-border-before`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理ブロックの境界の先頭側のプロパティ値をスタイルシートの一箇所で設定するための一括指定プロパティです。
+
+## 構成要素のプロパティ
+
+このプロパティは、以下の CSS プロパティの一括指定です。
+
+- {{cssxref("-webkit-border-before-color")}}
+- {{cssxref("-webkit-border-before-style")}}
+- {{cssxref("-webkit-border-before-width")}}
+
+## 構文
 
 ```css
 /* border の値 */
@@ -17,16 +29,10 @@ original_slug: Web/CSS/-webkit-border-before
 /* グローバル値 */
 -webkit-border-before: inherit;
 -webkit-border-before: initial;
+-webkit-border-before: revert;
+-webkit-border-before: revert-layer;
 -webkit-border-before: unset;
 ```
-
-`-webkit-border-before` は {{cssxref("-webkit-border-before-width")}}, {{cssxref("-webkit-border-before-style")}}, {{cssxref("-webkit-border-before-color")}} のうちの 1 つ以上の値で設定することができます。これはその要素の書字方向やテキストの向きに応じて、物理的な境界に対応付けられます。これは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} の各プロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に基づいて対応付けられます。
-
-これは要素の他の境界を定義する {{cssxref("-webkit-border-after")}}, {{cssxref("-webkit-border-start")}}, {{cssxref("-webkit-border-end")}} に関連しています。
-
-このプロパティは {{cssxref("border-block-start")}} として標準化過程にあります。
-
-## 構文
 
 ### 値
 
@@ -39,13 +45,21 @@ original_slug: Web/CSS/-webkit-border-before
 - `<'color'>`
   - : See {{cssxref("color")}}
 
+## 説明
+
+`-webkit-border-before` は {{cssxref("-webkit-border-before-width")}}, {{cssxref("-webkit-border-before-style")}}, {{cssxref("-webkit-border-before-color")}} のうちの 1 つ以上の値で設定することができます。これはその要素の書字方向やテキストの向きに応じて、物理的な境界に対応付けられます。これは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} の各プロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に基づいて対応付けられます。
+
+これは要素の他の境界を定義する {{cssxref("-webkit-border-after")}}, {{cssxref("-webkit-border-start")}}, {{cssxref("-webkit-border-end")}} に関連しています。
+
+このプロパティは {{cssxref("border-block-start")}} として標準化過程にあります。
+
 ## 公式定義
 
 {{CSSInfo}}
 
 ## 形式文法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`-webkit-border-before = <'border-width'> || <'border-style'> || <color>`)}}
 
 ## 例
 

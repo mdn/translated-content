@@ -1,8 +1,9 @@
 ---
-title: column-gap
+title: CSS `column-gap` プロパティ
+short-title: column-gap
 slug: Web/CSS/Reference/Properties/column-gap
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`column-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の段または列の間のすき間（{{glossary("gutters", "溝")}}）の寸法を設定します。

@@ -54,10 +54,10 @@ Ou, nous pourrions indiquer que ce texte est un titre de niveau supérieur en l'
 
 Le HTML se trouve dans des fichiers texte appelés **documents HTML**, ou simplement **documents**, avec une extension de fichier `.html`. Là où nous avons précédemment parlé de pages web, un document HTML contient le contenu de la page web et en définit la structure.
 
-Le fichier HTML le plus courant que vous rencontrerez est `index.html`, qui est généralement utilisé pour contenir le contenu de la page d'accueil d'un site web. Il est également fréquent de voir des sous-dossiers contenant leur propre fichier `index.html`, de sorte qu'un site web peut avoir plusieurs fichiers index à différents endroits.
+Le fichier HTML le plus courant que vous rencontrez est `index.html`, qui est généralement utilisé pour contenir le contenu de la page d'accueil d'un site web. Il est également fréquent de voir des sous-dossiers contenant leur propre fichier `index.html`, de sorte qu'un site web peut avoir plusieurs fichiers index à différents endroits.
 
 > [!NOTE]
-> Les balises en HTML ne sont pas sensibles à la casse. Cela signifie qu'elles peuvent être écrites en majuscules ou en minuscules. Par exemple, une balise {{HTMLElement("title")}} peut être écrite `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., et cela fonctionnera. Cependant, il est recommandé d'écrire toutes les balises en minuscules pour des raisons de cohérence et de lisibilité.
+> Les balises en HTML ne sont pas sensibles à la casse. Cela signifie qu'elles peuvent être écrites en majuscules ou en minuscules. Par exemple, une balise {{HTMLElement("title")}} peut être écrite `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., et cela fonctionne. Cependant, il est recommandé d'écrire toutes les balises en minuscules pour des raisons de cohérence et de lisibilité.
 
 ## Anatomie d'un élément HTML
 
@@ -93,7 +93,7 @@ Ceci est mon texte
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Votre ligne HTML finale devrait ressembler à ceci&nbsp;:
+Votre ligne HTML finale doit ressembler à ceci&nbsp;:
 
 ```html
 <em>Ceci est mon texte</em>
@@ -103,7 +103,7 @@ Votre ligne HTML finale devrait ressembler à ceci&nbsp;:
 
 ### Éléments imbriqués
 
-Il est possible de placer des éléments à l'intérieur d'autres éléments. Cela s'appelle l'_imbrication_. Si nous voulions affirmer que notre chat est **très** grincheux, nous pourrions encadrer le mot _très_ avec un élément HTML {{HTMLElement("strong")}}, ce qui donne au mot une mise en forme de texte plus marquée&nbsp;:
+Il est possible de placer des éléments à l'intérieur d'autres éléments. Cela s'appelle _l'imbrication_. Si nous voulions affirmer que notre chat est **très** grincheux, nous pourrions encadrer le mot _très_ avec un élément HTML {{HTMLElement("strong")}}, ce qui donne au mot une mise en forme de texte plus marquée&nbsp;:
 
 ```html
 <p>Mon chat est <strong>très</strong> grincheux.</p>
@@ -139,7 +139,7 @@ Ceci s'affiche comme suit&nbsp;:
 {{EmbedLiveSample('void-example', "100%", 100)}}
 
 > [!NOTE]
-> Dans certains exemples HTML, vous verrez un `/` ajouté à la fin de la balise d'un élément vide, par exemple `<br />`. Il s'agit d'un style différent de syntaxe de balisage, qui n'est pas incorrect, mais cette «&nbsp;barre oblique de fermeture&nbsp;» n'est pas nécessaire.
+> Dans certains exemples HTML, vous pouvez voir un `/` ajouté à la fin de la balise d'un élément vide, par exemple `<br />`. Il s'agit d'un style différent de syntaxe de balisage, qui n'est pas incorrect, mais cette «&nbsp;barre oblique de fermeture&nbsp;» n'est pas nécessaire.
 
 ## Attributs
 
@@ -159,8 +159,8 @@ Un attribut doit avoir&nbsp;:
 
 À vous de jouer à nouveau. Dans cette section, vous allez explorer l'élément HTML {{HTMLElement("img")}}, qui sert à afficher une image sur la page. L'élément `<img>` peut recevoir plusieurs attributs, dont&nbsp;:
 
-- `src`&nbsp;: un attribut **obligatoire** qui définit l'{{Glossary("URL")}} de l'image. Par exemple&nbsp;: `src="https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png"`.
-- `alt`&nbsp;: définit une description textuelle pour décrire l'image aux personnes qui ne peuvent pas la voir. Par exemple&nbsp;: `alt="Icône Firefox Nightly"`. Cet attribut n'est pas techniquement obligatoire, mais vous devriez toujours fournir une description textuelle pour toutes les images qui véhiculent un sens (et non pour celles purement décoratives).
+- `src`&nbsp;: un attribut **obligatoire** qui définit {{Glossary("URL", "l'URL")}} de l'image. Par exemple&nbsp;: `src="https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png"`.
+- `alt`&nbsp;: définit une description textuelle pour décrire l'image aux personnes qui ne peuvent pas la voir. Par exemple&nbsp;: `alt="Icône Firefox Nightly"`. Cet attribut n'est pas techniquement obligatoire, mais vous devez toujours fournir une description textuelle pour toutes les images qui véhiculent un sens (et non pour celles purement décoratives).
 - `width`&nbsp;: définit la largeur de l'image en pixels. Par exemple&nbsp;: `width="300"`.
 - `height`&nbsp;: définit la hauteur de l'image en pixels. Par exemple&nbsp;: `height="300"`.
 
@@ -183,7 +183,7 @@ Si vous faites une erreur, vous pouvez effacer votre travail avec le bouton _Ré
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Votre élément HTML final devrait ressembler à ceci&nbsp;:
+Votre élément HTML final doit ressembler à ceci&nbsp;:
 
 ```html
 <img
@@ -228,7 +228,7 @@ L'exemple HTML ci-dessus s'affiche comme suit&nbsp;:
 {{EmbedLiveSample('boolean-example', "100%", 100)}}
 
 > [!NOTE]
-> Les éléments HTML {{HTMLElement("label")}} inclus dans le code ci-dessus permettent d'associer des libellés descriptifs aux éléments de formulaire. Nous les avons inclus car c'est une bonne pratique, et pour apporter une séparation entre les champs de formulaire.
+> Les éléments HTML {{HTMLElement("label")}} inclus dans le code ci-dessus permettent d'associer des libellés descriptifs aux éléments de formulaire. Nous les avons inclus, car c'est une bonne pratique, et pour apporter une séparation entre les champs de formulaire.
 
 ### Omettre des guillemets autour des valeurs d'attribut
 
@@ -240,13 +240,13 @@ L'élément dans l'extrait de code ci-dessous, {{HTMLElement("a")}}, s'appelle u
 <a href=https://www.mozilla.org>mon site web favori</a>
 ```
 
-Cependant, vous rencontrerez rapidement des problèmes si vous omettez les guillemets autour des valeurs d'attribut _contenant_ des espaces. Prenons l'attribut `title` ci-dessous, qui fournit une description de la page liée («&nbsp;La page d'accueil Mozilla&nbsp;») devant apparaître comme info-bulle lorsque le lien est survolé par le pointeur de la souris.
+Cependant, vous rencontrez rapidement des problèmes si vous omettez les guillemets autour des valeurs d'attribut _contenant_ des espaces. Prenons l'attribut `title` ci-dessous, qui fournit une description de la page liée («&nbsp;La page d'accueil Mozilla&nbsp;») devant apparaître comme info-bulle lorsque le lien est survolé par le pointeur de la souris.
 
 ```html-nolint example-bad live-sample___bad-no-quotes
 <a href=https://www.mozilla.org/ title=La page d'accueil Mozilla>mon site web favori</a>
 ```
 
-Parce que les guillemets ne sont pas inclus autour de la valeur de l'attribut `title`, le navigateur l'interprète comme trois attributs&nbsp;: un attribut `title` avec la valeur `La`, et deux attributs booléens — `page` et `d'accueil Mozilla`. Évidemment, ce n'est pas ce que nous voulions&nbsp;! Si vous utilisez un appareil avec un pointeur de souris, vous pouvez essayer de survoler le lien pour voir l'infobulle du titre (elle affichera «&nbsp;La&nbsp;» au lieu de «&nbsp;La page d'accueil Mozilla&nbsp;»).
+Parce que les guillemets ne sont pas inclus autour de la valeur de l'attribut `title`, le navigateur l'interprète comme trois attributs&nbsp;: un attribut `title` avec la valeur `La`, et deux attributs booléens — `page` et `d'accueil Mozilla`. Évidemment, ce n'est pas ce que nous voulions&nbsp;! Si vous utilisez un appareil avec un pointeur de souris, vous pouvez essayer de survoler le lien pour voir l'infobulle du titre (elle affiche «&nbsp;La&nbsp;» au lieu de «&nbsp;La page d'accueil Mozilla&nbsp;»).
 
 {{EmbedLiveSample('bad-no-quotes', 700, 100)}}
 
@@ -262,7 +262,7 @@ Dans cet article, nous avons entouré toutes les valeurs d'attribut de guillemet
 <a href="http://www.example.com">Un lien vers mon exemple</a>
 ```
 
-Assurez-vous de ne pas mélanger les guillemets simples et doubles. L'exemple ci-dessous mélange les guillemets, ce qui entraînera des erreurs car, pour le navigateur, la valeur de l'attribut `href` n'est pas terminée&nbsp;:
+Assurez-vous de ne pas mélanger les guillemets simples et doubles. L'exemple ci-dessous mélange les guillemets, ce qui entraîne des erreurs car, pour le navigateur, la valeur de l'attribut `href` n'est pas terminée&nbsp;:
 
 ```html example-bad
 <a href="http://www.exemple.com'>Un lien vers mon exemple.</a>
@@ -276,7 +276,7 @@ Si vous utilisez un type de guillemet, vous pouvez inclure l'autre type de guill
 >
 ```
 
-Pour utiliser des guillemets à l'intérieur d'autres guillemets du même type (guillemet simple ou double), vous pouvez utiliser [des références de caractères](#références_dentités_inclure_les_caractères_spéciaux_en_html). Par exemple, ceci ne fonctionnera pas&nbsp;:
+Pour utiliser des guillemets à l'intérieur d'autres guillemets du même type (guillemet simple ou double), vous pouvez utiliser [des références de caractères](#références_dentités_inclure_les_caractères_spéciaux_en_html). Par exemple, ceci ne fonctionne pas&nbsp;:
 
 ```html-nolint example-bad
 <a href='http://www.exemple.com' title='N'est-ce pas drôle ?'>Un lien vers mon exemple.</a>
@@ -321,7 +321,7 @@ De nos jours, le doctype est un artefact historique qui doit être inclus pour q
 
 1. `<html></html>`&nbsp;: l'élément {{HTMLElement("html")}}. Cet élément englobe tout le contenu de la page. Il est parfois appelé l'élément racine.
 2. `<head></head>`&nbsp;: l'élément {{HTMLElement("head")}}. Cet élément sert de conteneur pour les informations sur la page qui ne font _pas_ partie du contenu visible par les utilisateur·ice·s. Cela peut inclure des mots-clés et une description de la page à afficher dans les résultats de recherche, du CSS pour la mise en forme du contenu, des déclarations d'encodage de caractères, et plus encore. Vous en apprendrez davantage sur l'en-tête de la page dans l'article suivant.
-3. `<meta charset="utf-8">`&nbsp;: un élément {{HTMLElement("meta")}}. Cet élément représente des métadonnées qui décrivent la page. L'attribut [`charset`](/fr/docs/Web/HTML/Reference/Elements/meta#charset) définit l'encodage des caractères utilisé par votre document. UTF-8 inclut la plupart des caractères de la grande majorité des langues écrites humaines, ce qui signifie que la page pourra afficher différentes langues sans problème. Il n'y a aucune raison de ne pas le définir, et cela peut éviter certains problèmes plus tard.
+3. `<meta charset="utf-8">`&nbsp;: un élément {{HTMLElement("meta")}}. Cet élément représente des métadonnées qui décrivent la page. L'attribut [`charset`](/fr/docs/Web/HTML/Reference/Elements/meta#charset) définit l'encodage des caractères utilisé par votre document. UTF-8 inclut la plupart des caractères de la grande majorité des langues écrites humaines, ce qui signifie que la page peut afficher différentes langues sans problème. Il n'y a aucune raison de ne pas le définir, et cela peut éviter certains problèmes plus tard.
 4. `<title></title>`&nbsp;: l'élément {{HTMLElement("title")}}. Il définit le titre de la page, c'est-à-dire le titre qui apparaît dans l'onglet du navigateur où la page est chargée. Le titre de la page est également utilisé pour décrire la page lorsqu'elle est ajoutée aux favoris.
 5. `<body></body>`&nbsp;: l'élément {{HTMLElement("body")}}. Il contient _tout_ le contenu affiché sur la page, y compris le texte, les images, les vidéos, les jeux, les pistes audio lisibles, etc.
 
@@ -367,7 +367,7 @@ Si vous êtes vraiment bloqué·e, vous pouvez consulter une solution possible i
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Le contenu final de l'élément HTML body devrait ressembler à ceci&nbsp;:
+Le contenu final de l'élément HTML `<body>` doit ressembler à ceci&nbsp;:
 
 ```html
 <h1>Un peu de musique</h1>
@@ -400,7 +400,7 @@ Dans les exemples précédents, vous avez peut-être remarqué que beaucoup d'es
 
 Les deux s'affichent exactement de la même façon&nbsp;:
 
-{{EmbedLiveSample('whitespace-example', 700, 100)}}
+{{EmbedLiveSample("whitespace-example", 700, 100)}}
 
 Dans presque tous les éléments (il existe des exceptions comme {{HTMLElement("pre")}}), peu importe la quantité d'espace que vous utilisez à l'intérieur du contenu d'un élément HTML, l'analyseur HTML réduit chaque séquence d'espaces à un seul espace lors du rendu du code.
 
@@ -430,7 +430,7 @@ Vous devez utiliser des {{Glossary("character reference", "références de carac
 | '                  | `&apos;`             |
 | &                  | `&amp;`              |
 
-Les références de caractères sont assez faciles à mémoriser car le texte qu'elles utilisent est une abréviation du nom du caractère — par exemple «&nbsp;lt&nbsp;» = «&nbsp;<i lang="en">less than</i>&nbsp;» (inférieur à), «&nbsp;quot&nbsp;» = «&nbsp;<i lang="en">quotation</i>&nbsp;» (guillemet), et «&nbsp;amp&nbsp;» = «&nbsp;<i lang="en">ampersand</i>&nbsp;» (esperluette). Pour en savoir plus sur les références d'entités, consultez la [Liste des entités caractère de XML et HTML](https://fr.wikipedia.org/wiki/Liste_des_entit%C3%A9s_de_caract%C3%A8re_de_XML_et_HTML).
+Les références de caractères sont assez faciles à mémoriser, car le texte qu'elles utilisent est une abréviation du nom du caractère — par exemple «&nbsp;lt&nbsp;» = «&nbsp;<i lang="en">less than</i>&nbsp;» (inférieur à), «&nbsp;quot&nbsp;» = «&nbsp;<i lang="en">quotation</i>&nbsp;» (guillemet), et «&nbsp;amp&nbsp;» = «&nbsp;<i lang="en">ampersand</i>&nbsp;» (esperluette). Pour en savoir plus sur les références d'entités, consultez la [Liste des entités caractère de XML et HTML](https://fr.wikipedia.org/wiki/Liste_des_entit%C3%A9s_de_caract%C3%A8re_de_XML_et_HTML).
 
 Dans l'exemple ci-dessous, il y a deux paragraphes&nbsp;:
 
@@ -444,10 +444,10 @@ Le rendu est le suivant&nbsp;:
 
 {{EmbedLiveSample("entity-ref-example", 700, 150)}}
 
-Vous pouvez voir que le premier paragraphe n'est pas correctement affiché, car le navigateur a interprété la seconde occurrence de `<p>` comme le début d'un nouveau paragraphe. Le second paragraphe s'affiche correctement car les chevrons du contenu «&nbsp;&lt;p&gt;&nbsp;» sont représentés par des références de caractères.
+Vous pouvez voir que le premier paragraphe n'est pas correctement affiché, car le navigateur a interprété la seconde occurrence de `<p>` comme le début d'un nouveau paragraphe. Le second paragraphe s'affiche correctement, car les chevrons du contenu «&nbsp;&lt;p&gt;&nbsp;» sont représentés par des références de caractères.
 
 > [!NOTE]
-> Vous n'avez pas besoin d'utiliser des références d'entité pour d'autres symboles, car les navigateurs modernes les afficheront correctement tant que [l'encodage de caractères de votre HTML est défini sur UTF-8](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#définir_lencodage_des_caractères_du_document).
+> Vous n'avez pas besoin d'utiliser des références d'entité pour d'autres symboles, car les navigateurs modernes les affichent correctement tant que [l'encodage de caractères de votre HTML est défini sur UTF-8](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#définir_lencodage_des_caractères_du_document).
 
 ## Commentaires en HTML
 
@@ -458,20 +458,20 @@ Pour écrire un commentaire HTML, entourez-le des marqueurs spéciaux `<!--` et 
 ```html live-sample___comment-example
 <p>Je ne suis pas dans un commentaire</p>
 
-<!-- <p>Je suis dans un commmentaire!</p> -->
+<!-- <p>Je suis dans un commentaire!</p> -->
 ```
 
 Le rendu est le suivant&nbsp;:
 
-{{EmbedLiveSample('comment-example', 700, 100)}}
+{{EmbedLiveSample("comment-example", 700, 100)}}
 
-Seul le premier paragraphe s'affiche dans la sortie en direct&nbsp;; la seconde ligne n'est pas rendue car il s'agit d'un commentaire HTML.
+Seul le premier paragraphe s'affiche dans la sortie en direct&nbsp;; la seconde ligne n'est pas rendue, car il s'agit d'un commentaire HTML.
 
 ## Résumé
 
 Vous êtes arrivé·e au bout de l'article&nbsp;! Nous espérons que vous avez apprécié votre tour des bases du HTML.
 
-À ce stade, vous devez comprendre à quoi ressemble le HTML et comment il fonctionne à un niveau de base. Vous devriez également être capable d'écrire quelques éléments et attributs. Les articles suivants de ce module approfondissent certains des sujets introduits ici et présentent d'autres sujets.
+À ce stade, vous devez comprendre à quoi ressemble le HTML et comment il fonctionne à un niveau de base. Vous devez également être capable d'écrire quelques éléments et attributs. Les articles suivants de ce module approfondissent certains des sujets introduits ici et présentent d'autres sujets.
 
 > [!NOTE]
 > Lorsque vous commencez à en apprendre davantage sur le HTML, envisagez également d'apprendre les bases du [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), le langage utilisé pour mettre en forme les pages Web (par exemple, changer les couleurs, les polices et les espacements). HTML et CSS sont utilisés ensemble sur la plupart des pages Web, et les apprendre simultanément peut être efficace.

@@ -17,7 +17,7 @@ selectElt.setCustomValidity(string);
 
 ### Parameters
 
-- _string_ 将作为错误信息包含到 {{domxref("DOMString")}} 之中。
+- _string_ 将作为错误信息包含到 {{jsxref("String")}} 之中。
 
 ## Specifications
 

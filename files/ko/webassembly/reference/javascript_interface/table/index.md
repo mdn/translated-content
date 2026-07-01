@@ -22,7 +22,7 @@ var myTable = new WebAssembly.Table(tableDescriptor);
 ### Parameters
 
 - _tableDescriptor_
-  - : 다음 멤버를 포함 할 수있는 객체입니다:_ *element*
+  - : 다음 멤버를 포함 할 수있는 객체입니다:_ _element_
     _ : 테이블에 저장 될 값 유형을 나타내는 문자열. 현재로서는 `"anyfunc"`(함수) 값만있을 수 있습니다.
     - _initial_
       - : WebAssembly 테이블의 초기 요소 수입니다.

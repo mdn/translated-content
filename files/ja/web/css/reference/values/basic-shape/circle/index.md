@@ -1,8 +1,9 @@
 ---
-title: circle()
+title: CSS `circle()` 関数
+short-title: circle()
 slug: Web/CSS/Reference/Values/basic-shape/circle
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`circle()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、半径と位置を使用して円を定義します。これは {{cssxref("basic-shape")}} データ型の一つです。

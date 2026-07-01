@@ -213,7 +213,7 @@ function doDragOver(event) {
 
 ### Updates to DataTransfer.types
 
-Note that the latest spec now dictates that {{domxref("DataTransfer.types")}} should return a frozen array of {{domxref("DOMString")}}s rather than a {{domxref("DOMStringList")}} (this is supported in Firefox 52 and above).
+Note that the latest spec now dictates that {{domxref("DataTransfer.types")}} should return a frozen array of {{jsxref("String")}}s rather than a {{domxref("DOMStringList")}} (this is supported in Firefox 52 and above).
 
 As a result, the [contains](/zh-TW/docs/Web/API/Node/contains) method no longer works on the property; the [includes](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method should be used instead to check if a specific type of data is provided, using code like the following:
 

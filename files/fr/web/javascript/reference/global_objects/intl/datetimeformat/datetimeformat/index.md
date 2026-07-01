@@ -46,7 +46,7 @@ Intl.DateTimeFormat(locales, options)
 ```
 
 > [!NOTE]
-> `Intl.DateTimeFormat()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}. Les deux créent une nouvelle instance de `Intl.DateTimeFormat`. Cependant, il existe un comportement spécial lorsque la fonction est appelée sans `new` et que la valeur de `this` est une autre instance de `Intl.DateTimeFormat`&nbsp;; voir [Valeur de retour](#valeur_de_retour).
+> `Intl.DateTimeFormat()` peut être appelé avec ou sans {{JSxRef("new")}}. Les deux créent une nouvelle instance de `Intl.DateTimeFormat`. Cependant, il existe un comportement spécial lorsque la fonction est appelée sans `new` et que la valeur de `this` est une autre instance de `Intl.DateTimeFormat`&nbsp;; voir [Valeur de retour](#valeur_de_retour).
 
 ### Paramètres
 
@@ -196,7 +196,7 @@ Un nouvel objet `Intl.DateTimeFormat`.
 > [!NOTE]
 > Le texte ci-dessous décrit un comportement marqué comme «&nbsp;optionnel&nbsp;» par la spécification. Il se peut qu'il ne fonctionne pas dans tous les environnements. Consultez le [tableau de compatibilité des navigateurs](#compatibilité_des_navigateurs).
 
-Normalement, `Intl.DateTimeFormat()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}, et une nouvelle instance `Intl.DateTimeFormat` est retournée dans les deux cas. Cependant, si la valeur de {{JSxRef("Operators/this", "this")}} est un objet qui est {{JSxRef("Operators/instanceOf", "instanceOf")}} de `Intl.DateTimeFormat` (cela ne signifie pas nécessairement qu'il a été créé via `new Intl.DateTimeFormat`&nbsp;; cela signifie simplement qu'il possède `Intl.DateTimeFormat.prototype` dans sa chaîne de prototypes), alors la valeur de `this` est retournée à la place, avec le nouvel objet `Intl.DateTimeFormat` caché dans une propriété `[Symbol(IntlLegacyConstructedSymbol)]` (un symbole unique réutilisé entre les instances).
+Normalement, `Intl.DateTimeFormat()` peut être appelé avec ou sans {{JSxRef("new")}}, et une nouvelle instance `Intl.DateTimeFormat` est retournée dans les deux cas. Cependant, si la valeur de {{JSxRef("this")}} est un objet qui est {{JSxRef("Operators/instanceOf", "instanceOf")}} de `Intl.DateTimeFormat` (cela ne signifie pas nécessairement qu'il a été créé via `new Intl.DateTimeFormat`&nbsp;; cela signifie simplement qu'il possède `Intl.DateTimeFormat.prototype` dans sa chaîne de prototypes), alors la valeur de `this` est retournée à la place, avec le nouvel objet `Intl.DateTimeFormat` caché dans une propriété `[Symbol(IntlLegacyConstructedSymbol)]` (un symbole unique réutilisé entre les instances).
 
 ```js
 const formateur = Intl.DateTimeFormat.call(

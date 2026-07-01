@@ -204,8 +204,7 @@ Si te equivocas, puedes volver a empezar pulsando el botón _Reinicio_. Si te qu
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <p> Hay varios navegadores disponibles, tales como <a href="#">Mozilla
  Firefox</a>, <a href="#">Google Chrome</a> y
-<a href="#">Microsoft Edge</a>.</p></textarea
-  >
+<a href="#">Microsoft Edge</a>.</p></textarea>
 
   <h2>Entrada CSS</h2>
   <textarea
@@ -234,8 +233,7 @@ a:hover {
 
 a:active {
 
-}</textarea
-  >
+}</textarea>
 
   <h2>Salida</h2>
   <div

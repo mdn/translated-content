@@ -3,7 +3,7 @@ title: Fonction CSS `attr()`
 short-title: attr()
 slug: Web/CSS/Reference/Values/attr
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
 ---
 
 > [!NOTE]
@@ -79,7 +79,7 @@ Les paramètres sont les suivants&nbsp;:
         ```css
         @namespace svg url("http://www.w3.org/2000/svg");
         a {
-          fill: attr(svg|myattr type(*), green);
+          fill: attr(svg|myAttr type(*), green);
         }
         ```
 
@@ -96,7 +96,7 @@ Les paramètres sont les suivants&nbsp;:
         ```
 
         > [!NOTE]
-        > Ce mot-clé était à l'origine nommé et pris en charge dans les navigateurs Chromium sous le nom de `string`. Les deux mots-clés seront pris en charge pendant une courte période, à des fins de rétrocompatibilité.
+        > Ce mot-clé était à l'origine nommé et pris en charge dans les navigateurs Chromium sous le nom de `string`. Les deux mots-clés sont pris en charge pendant une courte période, à des fins de rétrocompatibilité.
 
     - {{CSSxRef("type()")}}
       - : La fonction `type()` prend un `<syntax>` comme argument qui définit le type de données dans lequel analyser la valeur.
@@ -119,9 +119,9 @@ Les paramètres sont les suivants&nbsp;:
 
 La valeur de retour de `attr()` est la valeur de l'attribut HTML dont le nom est `<attr-name>` analysée selon le `<attr-type>` donné ou analysée comme une chaîne de caractères CSS.
 
-Lorsque un `<attr-type>` est défini, `attr()` tentera d'analyser l'attribut dans ce `<attr-type>` défini et de le retourner. Si l'attribut ne peut pas être analysé dans le `<attr-type>` donné, la `<fallback-value>` sera retournée à la place. Lorsqu'aucun `<attr-type>` n'est défini, l'attribut sera analysé en tant que chaîne de caractères CSS.
+Lorsque un `<attr-type>` est défini, `attr()` tente d'analyser l'attribut dans ce `<attr-type>` défini et de le retourner. Si l'attribut ne peut pas être analysé dans le `<attr-type>` donné, la `<fallback-value>` est retournée à la place. Lorsqu'aucun `<attr-type>` n'est défini, l'attribut est analysé en tant que chaîne de caractères CSS.
 
-Si aucune valeur `<fallback-value>` n'est définie, la valeur de retour sera par défaut une chaîne de caractères vide lorsque aucun `<attr-type>` n'est défini ou la [valeur garantie invalide](/fr/docs/Glossary/guaranteed_invalid_value) lorsqu'un `<attr-type>` est défini.
+Si aucune valeur `<fallback-value>` n'est définie, la valeur de retour est par défaut une chaîne de caractères vide lorsque aucun `<attr-type>` n'est défini ou la [valeur garantie invalide](/fr/docs/Glossary/guaranteed_invalid_value) lorsqu'un `<attr-type>` est défini.
 
 ## Description
 
@@ -130,7 +130,7 @@ Si aucune valeur `<fallback-value>` n'est définie, la valeur de retour sera par
 La fonction `attr()` peut référencer des attributs qui n'étaient jamais destinés à être utilisés pour le style et qui pourraient contenir des informations sensibles (par exemple, un jeton de sécurité utilisé par des scripts sur la page). En général, cela ne pose pas de problème, mais cela peut devenir une menace pour la sécurité lorsqu'il est utilisé dans des URL. Par conséquent, vous ne pouvez pas utiliser `attr()` pour construire dynamiquement des URL.
 
 ```html
-<!-- Ceci ne fonctionnera pas ! -->
+<!-- Ceci ne fonctionne pas ! -->
 <span data-icon="https://example.org/icons/question-mark.svg">aide</span>
 ```
 
@@ -156,7 +156,7 @@ En général, la syntaxe moderne de `attr()` est rétrocompatible, car l'ancienn
 
 Cependant, il existe deux cas limites où la syntaxe moderne de `attr()` se comporte différemment de l'ancienne syntaxe.
 
-Dans l'extrait suivant, les navigateurs qui ne prennent pas en charge la syntaxe moderne de `attr()` ignoreront la deuxième déclaration car ils ne peuvent pas l'analyser. Le résultat dans ces navigateurs est `"Bonjour le monde"`.
+Dans l'extrait suivant, les navigateurs qui ne prennent pas en charge la syntaxe moderne de `attr()` ignorent la deuxième déclaration car ils ne peuvent pas l'analyser. Le résultat dans ces navigateurs est `"Bonjour le monde"`.
 
 ```html
 <div text="Bonjour"></div>
@@ -171,7 +171,7 @@ div::before {
 }
 ```
 
-Dans les navigateurs qui prennent en charge la syntaxe moderne, le résultat sera… rien. Ces navigateurs analyseront correctement la deuxième déclaration, mais comme elle est un contenu invalide pour la propriété `content`, la déclaration devient [«&nbsp;invalide au moment du calcul de la valeur&nbsp;» ou IACVT pour faire court <sup>(angl.)</sup>](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
+Dans les navigateurs qui prennent en charge la syntaxe moderne, le résultat est… rien. Ces navigateurs analysent correctement la deuxième déclaration, mais comme elle est un contenu invalide pour la propriété `content`, la déclaration devient [«&nbsp;invalide au moment du calcul de la valeur&nbsp;» ou IACVT pour faire court <sup>(angl.)</sup>](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 Pour éviter ce genre de situation, il est recommandé d'utiliser la [détection de fonctionnalités](#détection_de_fonctionnalités).
 
@@ -384,7 +384,7 @@ Le HTML contient quatre cartes avec différents attributs `id` et un `<button>` 
 <div class="warning">
   <p>
     Votre navigateur ne prend pas en charge les fonctionnalités avancées de
-    <code>attr()</code>. Par conséquent, cette démonstration ne fera rien.
+    <code>attr()</code>. Par conséquent, cette démonstration ne fait rien.
   </p>
 </div>
 ```
@@ -512,5 +512,5 @@ document.querySelector("button").addEventListener("click", (e) => {
 ## Voir aussi
 
 - [Sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
-- [Attributs HTML `data-*`](/fr/docs/Web/HTML/Reference/Global_attributes/data-*)
-- [Attributs SVG `data-*`](/fr/docs/Web/SVG/Attribute/data-*)
+- [Les attributs HTML `data-*`](/fr/docs/Web/HTML/Reference/Global_attributes/data-*)
+- [Les attributs SVG `data-*`](/fr/docs/Web/SVG/Attribute/data-*)

@@ -19,7 +19,7 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
 ### Parameters
 
 - _memoryDescriptor_
-  - : 다음의 멤버를 가질수 있는 객체입니다._ *initial*
+  - : 다음의 멤버를 가질수 있는 객체입니다._ _initial_
     _ : WebAssembly Page의 단위별 WebAssembly 메모리의 초기 크기입니다.
     - _maximum {{optional_inline}}_
       - : WebAssembly 메모리의 최대 크기는 WebAssembly 페이지 단위로 증가 할 수 있습니다. 이 매개 변수가 있으면 `maximum` 매개 변수는 엔진에 대해 메모리를 전면에 예약하도록 합니다. 그러나 엔진은 이 예약 요청을 무시하거나 클램핑 할 수 있습니다. 일반적으로 대부분의 WebAssembly 모듈은 `maximum` 값을 설정할 필요가 없습니다.

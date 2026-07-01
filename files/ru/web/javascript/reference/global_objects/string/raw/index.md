@@ -29,8 +29,8 @@ String.raw`templateString`
 
 ### Выбрасываемые исключения
 
-- {{jsxref("Global_Objects/TypeError", "TypeError")}}
-  - : Если первый аргумент не является правильно сформированным объектом вызова, выбрасывается исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}.
+- {{jsxref("TypeError")}}
+  - : Если первый аргумент не является правильно сформированным объектом вызова, выбрасывается исключение {{jsxref("TypeError")}}.
 
 ## Описание
 
@@ -75,5 +75,5 @@ String.raw({ raw: "тест" }, 0, 1, 2);
 ## Смотрите также
 
 - [Шаблонные строки](/ru/docs/Web/JavaScript/Reference/Template_literals)
-- {{jsxref("Global_Objects/String", "String")}}
+- {{jsxref("String")}}
 - [Лексическая грамматика](/ru/docs/Web/JavaScript/Reference/Lexical_grammar)
