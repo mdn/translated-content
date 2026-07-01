@@ -7,11 +7,11 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Scaling")}}
 
-这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser)系列的第一步。在开始编写游戏功能之前，我们需要创建一个用于渲染游戏的基本结构。这可以通过 HTML 来实现——Phaser 框架会生成所需的 {{htmlelement("canvas")}} 元素。
+这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的的第一步。在开始编写游戏功能之前，我们需要创建一个用于渲染游戏的基本结构。这可以通过 HTML 来实现——Phaser 框架会生成所需的 {{htmlelement("canvas")}} 元素。
 
 ## 游戏的 HTML
 
-HTML 文档结构非常简单，这个游戏将整个被渲染在框架生成的{{htmlelement("canvas")}} 元素上。使用你喜欢的文本编辑器，创建一个新的 HTML 文档，将其保存为 `index.html`，放在一个合适的位置，并在其中添加以下代码：
+HTML 文档结构非常简单，这个游戏将整个被渲染在框架生成的 {{htmlelement("canvas")}} 元素上。使用你喜欢的文本编辑器，创建一个新的 HTML 文档，将其保存为 `index.html`，放在一个合适的位置，并在其中添加以下代码：
 
 ```html
 <!doctype html>
