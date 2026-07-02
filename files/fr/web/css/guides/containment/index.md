@@ -34,7 +34,7 @@ Les requêtes de conteneur sont similaires aux [requêtes média](/fr/docs/Web/C
 ## Guides
 
 - [Requêtes de conteneur CSS](/fr/docs/Web/CSS/Guides/Containment/Container_queries)
-  - : Guide sur l'utilisation des requêtes de conteneur avec `@container`, y compris le nommage des contextes de containment.
+  - : Guide sur l'utilisation des requêtes de conteneur avec `@container`, y compris le nommage des contextes de compartimentation.
 
 - [Utiliser la compartimentation CSS](/fr/docs/Web/CSS/Guides/Containment/Using)
   - : Décrit les objectifs de base de la compartimentation CSS et comment tirer parti de `contain` et `content-visibility` pour une meilleure expérience utilisateur·ice.
