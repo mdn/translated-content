@@ -20,7 +20,7 @@ ctx.strokeStyle = pattern;
 ### Значения
 
 - `color`
-  - : {{domxref("DOMString")}} строка содержащая цвет в формате, поддерживающимся стандартом CSS ({{cssxref("&lt;color&gt;")}}).
+  - : {{jsxref("String")}} строка содержащая цвет в формате, поддерживающимся стандартом CSS ({{cssxref("&lt;color&gt;")}}).
 - `gradient`
   - : Объект класса {{domxref("CanvasGradient")}} (линейный или круговой градиент ).
 - `pattern`
@@ -58,8 +58,7 @@ ctx.strokeRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.strokeStyle = "blue";
-ctx.strokeRect(10, 10, 100, 100);</textarea
->
+ctx.strokeRect(10, 10, 100, 100);</textarea>
 ```
 
 ```js hidden

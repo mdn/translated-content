@@ -24,19 +24,19 @@ Promise<Response> fetch(input[, init]);
 
 - _input_
   - : Определяет желаемый для получения ресурс. Это может быть:
-    - {{domxref("USVString")}} (строка), содержащая прямую URL ссылку на ресурс. Некоторые браузеры принимают `blob:` и `data:` , как схемы.
+    - {{jsxref("String")}} (строка), содержащая прямую URL ссылку на ресурс. Некоторые браузеры принимают `blob:` и `data:` , как схемы.
     - {{domxref("Request")}} объект (объект ответа).
 
 - _init_ {{optional_inline}}
   - : Объект с опциями, содержащий пользовательские настройки, которые вы желаете применить к запросу. Возможные варианты:
     - `method`: Метод запроса, например, `GET`, `POST`.
     - `headers`: Заголовки, содержащиеся в объекте {{domxref("Headers")}} или в объекте литерале с побитовыми значениями ({{domxref("ByteString")}}).
-    - `body`: Тело запроса, которое может быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, или {{domxref("USVString")}} объектами. Обратите внимание, что `GET` или `HEAD` запрос не может иметь тела.
+    - `body`: Тело запроса, которое может быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, или {{jsxref("String")}} объектами. Обратите внимание, что `GET` или `HEAD` запрос не может иметь тела.
     - `mode`: Режим, например, `cors`, `no-cors` или `same-origin`.
     - `credentials`: Полномочия: `omit`, `same-origin` или `include`. Для автоматической отправки куки для текущего домена, эта опция должна быть указана. Начиная с Chrome 50, это свойство также принимает экземпляр класса {{domxref("FederatedCredential")}} или {{domxref("PasswordCredential")}}.
     - `cache`: Режим кеширования запроса `default`, `no-store`, `reload`, `no-cache`, `force-cache` или `only-if-cached`.
     - `redirect`: Режим редиректа: `follow` (автоматически переадресовывать), `error` (прерывать перенаправление ошибкой) или `manual` (управлять перенаправлениями вручную). В Chrome по дефолту стоит `follow` (ранее, в Chrome 47, стояло `manual`).
-    - `referrer`: {{domxref("USVString")}}, определяющая `no-referrer`, `client` или a URL. Дефолтное значение - `client`.
+    - `referrer`: {{jsxref("String")}}, определяющая `no-referrer`, `client` или a URL. Дефолтное значение - `client`.
     - `referrerPolicy`: Определяет значение HTTP заголовка реферера. Может быть: `no-referrer`, `no-referrer-when-downgrade`, `origin`, `origin-when-cross-origin`, `unsafe-url`.
     - `integrity`: Содержит значение целостности субресурсов ([subresource integrity](/ru/docs/Web/Security/Subresource_Integrity)) запроса (например, `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
     - `keepalive`: Эта опция может быть использована, чтобы разрешить запросу "пережить" страницу. Получение ресурсов с флагом `keepalive` - это альтернатива {{domxref("Navigator.sendBeacon()")}} API.

@@ -387,8 +387,7 @@ Si vous faites une erreur, vous pourrez toujours tout remettre à zéro avec le 
       <li>la statue du lutin.</li>
     </ol>
   </li>
-</ul></textarea
-  >
+</ul></textarea>
 
   <h2>Zone de saisie de la CSS</h2>
   <textarea

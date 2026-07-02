@@ -19,7 +19,7 @@ slug: Web/API/BroadcastChannel
 _Этот интерфейс также наследует свойства от своего родителя, {{domxref("EventTarget")}}._
 
 - {{domxref("BroadcastChannel.name")}}
-  - : Возвращает {{domxref("DOMString")}}, имя канала.
+  - : Возвращает {{jsxref("String")}}, имя канала.
 
 ### Обработчики событий
 

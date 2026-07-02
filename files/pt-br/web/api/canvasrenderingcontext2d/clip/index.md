@@ -66,8 +66,7 @@ Edite o código abaixo e veja suas mudanças atualizadas ao vivo no canvas:
 <textarea id="code" class="playable-code">
 ctx.arc(100, 100, 75, 0, Math.PI*2, false);
 ctx.clip();
-ctx.fillRect(0, 0, 100,100);</textarea
->
+ctx.fillRect(0, 0, 100,100);</textarea>
 ```
 
 ```js hidden

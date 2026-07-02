@@ -88,4 +88,4 @@ if (!Array.isArray) {
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/Array", "Array")}}
+- {{jsxref("Array")}}

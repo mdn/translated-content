@@ -1,12 +1,12 @@
 ---
-title: "<rb>: ルビベース要素"
+title: HTML `<rb>` ルビベース要素
+short-title: <rb>
 slug: Web/HTML/Reference/Elements/rb
-original_slug: Web/HTML/Element/rb
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<rb>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("ruby") }} 表記のベースとなるテキストの部分、すなわち修飾される文字列を区切るために使用されます。一つの `<rb>` 要素がベーステキストの不可分な区間を区切るように囲みます。
 
@@ -60,7 +60,9 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>なし</td>
     </tr>
@@ -107,3 +109,4 @@ l10n:
 - {{HTMLElement("rt")}}
 - {{HTMLElement("rp")}}
 - {{HTMLElement("rtc")}}
+- [CSS ルビレイアウト](/ja/docs/Web/CSS/Guides/Ruby_layout)モジュール

@@ -1,12 +1,16 @@
 ---
-title: -webkit-mask-position-x
+title: CSS `-webkit-mask-position-x` プロパティ
+short-title: -webkit-mask-position-x
 slug: Web/CSS/Reference/Properties/-webkit-mask-position-x
-original_slug: Web/CSS/-webkit-mask-position-x
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_header}}
 
 `-webkit-mask-position-x` は CSS のプロパティで、マスク画像の初期の水平方向の位置を設定します。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -31,12 +35,10 @@ original_slug: Web/CSS/-webkit-mask-position-x
 /* グローバル値 */
 -webkit-mask-position-x: inherit;
 -webkit-mask-position-x: initial;
+-webkit-mask-position-x: revert;
+-webkit-mask-position-x: revert-layer;
 -webkit-mask-position-x: unset;
 ```
-
-{{cssinfo}}
-
-## 構文
 
 ### 値
 
@@ -55,7 +57,7 @@ original_slug: Web/CSS/-webkit-mask-position-x
 
 ## 形式文法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`-webkit-mask-position-x = [ <length-percentage> | left | center | right ]#`)}}
 
 ## 例
 
@@ -63,12 +65,12 @@ original_slug: Web/CSS/-webkit-mask-position-x
 
 ```css
 .exampleOne {
-  -webkit-mask-image: url(mask.png);
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-position-x: right;
 }
 
 .exampleTwo {
-  -webkit-mask-image: url(mask.png);
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-position-x: 25%;
 }
 ```
@@ -83,4 +85,4 @@ original_slug: Web/CSS/-webkit-mask-position-x
 
 ## 関連情報
 
-{{cssxref("-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}
+{{cssxref("mask-position", "-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("mask-origin", "-webkit-mask-origin")}}

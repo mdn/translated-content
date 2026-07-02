@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/unescape
 
 Устаревший метод **`unescape(str)`** создаёт новую строку в которой шестнадцатеричная последовательность символов вида %xx заменяется эквивалентами из кодировки ASCII. Знаки, закодированные в формате %uxxxx (знаки Юникода), заменяются знаками Юникода в шестнадцатеричной кодировке xxxx.
 
-Последовательность может быть результатом работы функции вроде {{jsxref("Global_Objects/escape", "escape")}}. Т.к. {{jsxref("Global_Objects/decodeURIComponent", "unescape")}} является устаревшей, используйте {{jsxref("Global_Objects/decodeURI", "decodeURI")}} или {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} вместо неё.
+Последовательность может быть результатом работы функции вроде {{jsxref("escape")}}. Т.к. {{jsxref("decodeURIComponent", "unescape")}} является устаревшей, используйте {{jsxref("decodeURI")}} или {{jsxref("decodeURIComponent")}} вместо неё.
 
 > [!NOTE]
 > Не рекомендуется использовать `unescape` чтобы декодировать URI, используйте `decodeURI` вместо него.
@@ -45,5 +45,5 @@ unescape("%u0107"); // "ć"
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/decodeURI", "decodeURI")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}}
+- {{jsxref("decodeURI")}}
+- {{jsxref("decodeURIComponent")}}

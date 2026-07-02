@@ -4565,7 +4565,9 @@
 /zh-CN/docs/Web/Performance/Speculative_loading	/zh-CN/docs/Web/Performance/Guides/Speculative_loading
 /zh-CN/docs/Web/Performance/dns-prefetch	/zh-CN/docs/Web/Performance/Guides/dns-prefetch
 /zh-CN/docs/Web/Performance/浏览器渲染页面的工作原理	/zh-CN/docs/Web/Performance/Guides/How_browsers_work
-/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies	/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
+/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment	/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox#注册
+/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies	/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies
+/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies	/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies
 /zh-CN/docs/Web/Progressive_web_apps/Add_to_home_screen	/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /zh-CN/docs/Web/Progressive_web_apps/App_structure	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /zh-CN/docs/Web/Progressive_web_apps/Installable_PWAs	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs

@@ -1,7 +1,9 @@
 ---
-title: -moz-orient
+title: CSS `-moz-orient` プロパティ
+short-title: -moz-orient
 slug: Web/CSS/Reference/Properties/-moz-orient
-original_slug: Web/CSS/-moz-orient
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_header}}
@@ -10,7 +12,16 @@ original_slug: Web/CSS/-moz-orient
 
 ## 構文
 
-`-moz-orient` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
+```css
+-moz-orient: inline;
+
+/* グローバル値 */
+-moz-orient: inherit;
+-moz-orient: initial;
+-moz-orient: revert;
+-moz-orient: revert-layer;
+-moz-orient: unset;
+```
 
 ### 値
 
@@ -19,9 +30,9 @@ original_slug: Web/CSS/-moz-orient
 - `block`
   - : 要素をテキストの軸と直交するように描画します。横書きモードでは垂直方向に、縦書きモードでは水平方向に描画します。
 - `horizontal`
-  - : 要素が水平方向に描画される
+  - : 要素を水平方向に描画します。
 - `vertical`
-  - : 要素が垂直方向に描画される
+  - : 要素を垂直方向に描画します。
 
 ## 公式定義
 
@@ -29,9 +40,9 @@ original_slug: Web/CSS/-moz-orient
 
 ## 形式文法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`-moz-orient = inline | block | horizontal | vertical`)}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 

@@ -664,8 +664,7 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ avec le bouton 
     id="code"
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Un peu de texte pour vous délecter&nbsp;!</p></textarea
-  >
+  <p>Un peu de texte pour vous délecter&nbsp;!</p></textarea>
 
   <h2>Zone de saisie de la CSS</h2>
   <textarea
@@ -674,8 +673,7 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ avec le bouton 
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 p {
 
-  }</textarea
-  >
+  }</textarea>
 
   <h2>Zone de rendu</h2>
   <div

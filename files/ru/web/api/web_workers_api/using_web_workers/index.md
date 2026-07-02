@@ -798,7 +798,7 @@ Worker устанавливает свойство `onmessage` для функц
 
 - {{domxref("Navigator")}}
 - {{domxref("XMLHttpRequest")}}
-- {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, и {{jsxref("Global_Objects/String", "String")}}
+- {{jsxref("Array")}}, {{jsxref("Date")}}, {{jsxref("Math")}}, и {{jsxref("String")}}
 - {{domxref("Window.requestAnimationFrame")}}, {{domxref("WindowTimers.setTimeout")}}, и {{domxref("WindowTimers.setInterval")}}
 
 Главное, что вы не можете сделать в Worker это напрямую повлиять на родительскую страницу. Это включает в себя манипулирование DOM и использование объектов этой страницы. Вы должны сделать это косвенно, отправив сообщение обратно основному сценарию через {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, а затем выполнив изменения оттуда.

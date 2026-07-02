@@ -10,8 +10,8 @@ l10n:
 
 El método **`encrypt()`** de la interfaz {{domxref("SubtleCrypto")}} cifra datos.
 
-Recibe como argumento una {{glossary("key", "clave")}} para cifrar, los parámetros específicos del algoritmo, y los datos que se van a cifrar (también conocido como "texto plano" o "plaintext" en inglés).
-Retorna un objeto {{jsxref("Promise")}} que se resolverá con los datos cifrados (También conocidos como "texto cifrado" o "ciphertext" en inglés).
+Recibe como argumento una {{glossary("key", "clave")}} para cifrar, los parámetros específicos del algoritmo, y los datos que se van a cifrar (también conocidos como "texto plano" o "plaintext" en inglés).
+Retorna un objeto {{jsxref("Promise")}} que se resolverá con los datos cifrados (también conocidos como "texto cifrado" o "ciphertext" en inglés).
 
 ## Sintaxis
 
@@ -36,7 +36,7 @@ encrypt(algorithm, key, data)
 
 ### Valor de retorno
 
-Un objeto {{jsxref("Promise")}} que se resuelve con un {{jsxref("ArrayBuffer")}} que contiene "el texto cifrado".
+Un objeto {{jsxref("Promise")}} que se resuelve con un {{jsxref("ArrayBuffer")}} que contiene el texto cifrado.
 
 ### Excepciones
 
@@ -84,13 +84,13 @@ Un valor de bloque contador determinado nunca debe usarse más de una vez con la
 
 Normalmente, esto se logra dividiendo el valor inicial del bloque contador en dos partes concatenadas:
 
-- Un {{Glossary("Nonce", "nonce")}} (un número que solo se puede usar una vez). La parte del nonce permanece igual para cada bloque del mensaje. Cada vez que se cifra un mensaje nuevo, se elige un nonce nuevo. Los nonces no tienen que ser secretos, pero no deben reutilizarse con la misma clave.
+- Un {{Glossary("Nonce")}} (un número que solo se puede usar una vez). La parte del nonce permanece igual para cada bloque del mensaje. Cada vez que se cifra un mensaje nuevo, se elige un nonce nuevo. Los nonces no tienen que ser secretos, pero no deben reutilizarse con la misma clave.
 - Un contador. Esta parte del bloque se incrementa cada vez que se cifra un bloque.
 
 En esencia: el nonce garantiza que los bloques contadores no se reutilicen entre mensajes, mientras que el contador garantiza que no se reutilicen dentro de un mismo mensaje.
 
 > [!NOTE]
-> Consulta el [Appendix B of the NIST SP800-38A standard](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A70%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D) para más información.
+> Consulte el [Appendix B of the NIST SP800-38A standard](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A70%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D) para más información.
 
 ### AES-CBC
 
@@ -212,7 +212,7 @@ function encryptMessage(key) {
 ## Véase también
 
 - {{domxref("SubtleCrypto.decrypt()")}}.
-- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) especifica RSAOAEP.
+- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) especifica RSA-OAEP.
 - [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) especifica el modo CTR.
 - [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) especifica el modo CBC.
 - [NIST SP800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final) especifica el modo GCM.

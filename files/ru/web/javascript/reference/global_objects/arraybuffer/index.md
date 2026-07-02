@@ -35,7 +35,7 @@ new ArrayBuffer(length)
 
 - `ArrayBuffer.length`
   - : Длина конструктора `ArrayBuffer`, которая равна 1.
-- {{jsxref("ArrayBuffer.prototype")}}
+- {{jsxref("ArrayBuffer")}}
   - : Позволяет расширить прототип всех `ArrayBuffer` объектов.
 
 ## Методы
@@ -47,7 +47,7 @@ new ArrayBuffer(length)
 
 ## Пример
 
-В этом примере мы создаём 8-байтный буфер с {{jsxref("Global_Objects/Int32Array", "Int32Array")}} представлением:
+В этом примере мы создаём 8-байтный буфер с {{jsxref("Int32Array")}} представлением:
 
 ```js
 var buffer = new ArrayBuffer(8);

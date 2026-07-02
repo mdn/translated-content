@@ -3,7 +3,7 @@ title: CSS スクロールスナップ
 short-title: スクロールスナップ
 slug: Web/CSS/Guides/Scroll_snap
 l10n:
-  sourceCommit: 11d748f9e217b6a9fd16291d7815a6f803f0136d
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
 **CSS スクロールスナップ** (CSS scroll snap) モジュールは、スナップ位置を定義することで、パンおよびスクロールの動作を制御するためのプロパティを提供します。ユーザーが{{Glossary("scroll container", "スクロールコンテナー")}}内のスクロール可能なコンテンツをスクロールすると、コンテンツは指定された位置にスナップされ、ページングおよびスクロール位置指定の機能を提供します。
@@ -262,7 +262,7 @@ article.snapDisabled ul {
 
 ### 子の CSS プロパティ
 
-- {{cssxref("scroll-snap-align")}}
+- {{cssxref("scroll-initial-target")}}
 - {{cssxref("scroll-margin")}}
   - {{cssxref("scroll-margin-top")}}
   - {{cssxref("scroll-margin-right")}}
@@ -274,6 +274,7 @@ article.snapDisabled ul {
   - {{cssxref("scroll-margin-block")}}
   - {{cssxref("scroll-margin-block-start")}}
   - {{cssxref("scroll-margin-block-end")}}
+- {{cssxref("scroll-snap-align")}}
 - {{cssxref("scroll-snap-stop")}}
 
 ### イベント

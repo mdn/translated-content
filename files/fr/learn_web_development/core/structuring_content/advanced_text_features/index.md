@@ -55,7 +55,7 @@ Si une section de contenu de niveau bloc (qu'il s'agisse d'un paragraphe, de plu
 </p>
 ```
 
-Pour le changer en bloc de citation, on ferait simplement ceci&nbsp;:
+Pour le changer en bloc de citation, on fait simplement ceci&nbsp;:
 
 ```html
 <blockquote
@@ -68,7 +68,7 @@ Pour le changer en bloc de citation, on ferait simplement ceci&nbsp;:
 </blockquote>
 ```
 
-La mise en forme par défaut du navigateur affichera ceci comme un paragraphe indenté, pour indiquer qu'il s'agit d'une citation&nbsp;: le paragraphe au-dessus de la citation est là pour le démontrer.
+La mise en forme par défaut du navigateur affiche ceci comme un paragraphe indenté, pour indiquer qu'il s'agit d'une citation&nbsp;: le paragraphe au-dessus de la citation est là pour le démontrer.
 
 {{EmbedLiveSample("Blocs de citation", "100%", 200)}}
 
@@ -91,9 +91,9 @@ Le navigateur l'affichera par défaut comme du texte normal entre guillemets pou
 
 ### Citations
 
-Le contenu de l'attribut [`cite`](/fr/docs/Web/HTML/Reference/Elements/blockquote#cite) semble utile, mais malheureusement les navigateurs, lecteurs d'écran, etc. n'en font pas grand chose. Il n'y a aucun moyen de faire afficher le contenu de `cite` par le navigateur sans écrire votre propre solution en JavaScript ou CSS. Si vous souhaitez rendre la source de la citation disponible sur la page, il faut la rendre accessible dans le texte via un lien ou un autre moyen approprié.
+Le contenu de l'attribut [`cite`](/fr/docs/Web/HTML/Reference/Elements/blockquote#cite) semble utile, mais malheureusement les navigateurs, lecteurs d'écran, etc. n'en font pas grand chose. Il n'y a aucun moyen de faire afficher le contenu de `cite` par le navigateur sans écrire votre propre solution en JavaScript ou CSS. Si vous souhaitez rendre la source de la citation disponible sur la page, il faut la rendre accessible dans le texte avec un lien ou un autre moyen approprié.
 
-Il existe un élément HTML {{HTMLElement("cite")}}, mais il est destiné à contenir le titre de la ressource citée, par exemple le nom du livre. Il n'y a aucune raison, cependant, pour laquelle vous ne pourriez pas lier le texte à l'intérieur de `<cite>` à la source de la citation d'une manière ou d'une autre&nbsp;:
+Il existe un élément HTML {{HTMLElement("cite")}}, mais il est destiné à contenir le titre de la ressource citée, par exemple le nom du livre. Il n'y a aucune raison, cependant, pour laquelle vous ne pouvez pas lier le texte à l'intérieur de `<cite>` à la source de la citation d'une manière ou d'une autre&nbsp;:
 
 ```html-nolint
 <p>
@@ -165,7 +165,7 @@ Si vous faites une erreur, vous pouvez effacer votre travail en utilisant le bou
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Le HTML final devrait ressembler à ceci&nbsp;:
+Le HTML final doit ressembler à ceci&nbsp;:
 
 ```html
 <p>
@@ -199,7 +199,7 @@ Le HTML final devrait ressembler à ceci&nbsp;:
 
 ## Abréviations
 
-Un autre élément assez courant que vous rencontrerez en parcourant le Web est {{HTMLElement("abbr")}} — il sert à entourer une abréviation ou un acronyme. Lorsque vous utilisez l'un ou l'autre, fournissez l'expansion complète du terme en texte clair lors de la première occurrence, ainsi que la balise `<abbr>` pour marquer l'abréviation. Cela donne un indice aux agents utilisateurs sur la manière d'annoncer/afficher le contenu tout en informant tous les utilisateur·ice·s de la signification de l'abréviation.
+Un autre élément assez courant que vous rencontrez en parcourant le Web est {{HTMLElement("abbr")}} — il sert à entourer une abréviation ou un acronyme. Lorsque vous utilisez l'un ou l'autre, fournissez l'expansion complète du terme en texte clair lors de la première occurrence, ainsi que la balise `<abbr>` pour marquer l'abréviation. Cela donne un indice aux agents utilisateurs sur la manière d'annoncer/afficher le contenu tout en informant tous les utilisateur·ice·s de la signification de l'abréviation.
 
 Si fournir l'expansion en plus de l'abréviation a peu de sens, et que l'abréviation ou l'acronyme est un terme fortement abrégé, fournissez l'expansion complète du terme comme valeur de l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title)&nbsp;:
 
@@ -231,7 +231,7 @@ Ils sont rendus comme suit&nbsp;:
 Pour cet exercice, nous vous demandons de marquer une abréviation.
 
 1. Cliquez sur **«&nbsp;Exécuter&nbsp;»** dans le bloc de code ci‑dessous pour modifier l'exemple dans le MDN Playground.
-2. Baliserez les abréviations fournies en utilisant le HTML approprié. Vous pouvez aussi les remplacer par vos propres abréviations et essayer de les baliser.
+2. Balisez les abréviations fournies en utilisant le HTML approprié. Vous pouvez aussi les remplacer par vos propres abréviations et essayer de les baliser.
 
 Si vous faites une erreur, vous pouvez effacer votre travail à l'aide du bouton _Réinitialiser_ dans le MDN Playground. Si vous êtes vraiment bloqué, vous pouvez consulter la solution sous le bloc de code.
 
@@ -246,7 +246,7 @@ Si vous faites une erreur, vous pouvez effacer votre travail à l'aide du bouton
 <details>
 <summary>Cliquer ici pour afficher la solution</summary>
 
-Votre HTML final devrait ressembler à peu près au code suivant&nbsp;:
+Votre HTML final doit ressembler à peu près au code suivant&nbsp;:
 
 ```html
 <p>
@@ -260,8 +260,8 @@ Votre HTML final devrait ressembler à peu près au code suivant&nbsp;:
 </p>
 ```
 
-- On pourrait soutenir que l'acronyme NASA devrait être développé lors de sa première occurrence, car il s'agit d'une information utile que tout le monde devrait pouvoir trouver dans le texte.
-- Les acronymes tels que «&nbsp;LGTM&nbsp;», en revanche, sont utilisés uniquement pour gagner de la place et du temps. Il ne serait donc pas logique de les écrire en toutes lettres, d'où leur inclusion dans l'attribut `title`. Dans une application réelle, vous ne le feriez probablement pas à la main, mais vous utiliseriez un script pour les ajouter automatiquement aux termes connus.
+- On peut soutenir que l'acronyme NASA doit être développé lors de sa première occurrence, car il s'agit d'une information utile que tout le monde doit pouvoir trouver dans le texte.
+- Les acronymes tels que «&nbsp;LGTM&nbsp;», en revanche, sont utilisés uniquement pour gagner de la place et du temps. Il n'est donc pas logique de les écrire en toutes lettres, d'où leur inclusion dans l'attribut `title`. Dans une application réelle, vous ne le ferez probablement pas à la main, mais vous utilisez un script pour les ajouter automatiquement aux termes connus.
 
 </details>
 
@@ -293,7 +293,7 @@ Cela peut également inclure un balisage plus complexe, et d'autres formes de co
 </address>
 ```
 
-Notez que ce type de balisage serait également acceptable, si la page liée contenait les coordonnées&nbsp;:
+Notez que ce type de balisage est également acceptable, si la page liée contenait les coordonnées&nbsp;:
 
 ```html
 <address>
@@ -302,11 +302,11 @@ Notez que ce type de balisage serait également acceptable, si la page liée con
 ```
 
 > [!NOTE]
-> L'élément HTML {{HTMLElement("address")}} doit uniquement être utilisé pour fournir les coordonnées du document contenu par l'élément HTML {{HTMLElement("article")}} ou {{HTMLElement("body")}} le plus proche. Il serait correct de l'utiliser dans le pied de page d'un site pour inclure les coordonnées de l'ensemble du site, ou à l'intérieur d'un article pour les coordonnées de l'auteur, mais pas pour baliser une liste d'adresses sans rapport avec le contenu de cette page.
+> L'élément HTML {{HTMLElement("address")}} doit uniquement être utilisé pour fournir les coordonnées du document contenu par l'élément HTML {{HTMLElement("article")}} ou {{HTMLElement("body")}} le plus proche. Il est correct de l'utiliser dans le pied de page d'un site pour inclure les coordonnées de l'ensemble du site, ou à l'intérieur d'un article pour les coordonnées de l'auteur, mais pas pour baliser une liste d'adresses sans rapport avec le contenu de cette page.
 
 ## Exposants et indices
 
-Vous devrez parfois utiliser exposants et indices pour marquer des éléments comme des dates, des formules chimiques et des équations mathématiques afin qu'ils aient la bonne signification. Les éléments HTML {{HTMLElement("sup")}} et {{HTMLElement("sub")}} effectuent ce travail. Par exemple&nbsp;:
+Vous devez parfois utiliser exposants et indices pour marquer des éléments comme des dates, des formules chimiques et des équations mathématiques afin qu'ils aient la bonne signification. Les éléments HTML {{HTMLElement("sup")}} et {{HTMLElement("sub")}} effectuent ce travail. Par exemple&nbsp;:
 
 ```html
 <p>Ma date de naissance est le 1<sup>er</sup> mai 2001.</p>
@@ -326,7 +326,7 @@ Le résultat de ce code ressemble à ceci&nbsp;:
 HTML met à votre disposition un certain nombre d'éléments pour marquer du code informatique&nbsp;:
 
 - {{HTMLElement("code")}}&nbsp;: Pour marquer des parties génériques de code informatique.
-- {{HTMLElement("pre")}}&nbsp;: Pour conserver les blancs (généralement dans les blocs de code) — si vous indentez ou mettez des blancs en excès dans votre texte, les navigateurs les ignoreront et vous ne les verrez pas sur la page rendue. Si vous enveloppez le texte dans des balises `<pre></pre>` tags cependant, les blancs seront rendus identiquement à ce que vous voyez dans votre éditeur de texte.
+- {{HTMLElement("pre")}}&nbsp;: Pour conserver les blancs (généralement dans les blocs de code) — si vous indentez ou mettez des blancs en excès dans votre texte, les navigateurs les ignorent et vous ne les voyez pas sur la page rendue. Si vous enveloppez le texte dans des balises `<pre></pre>` cependant, les blancs sont rendus identiquement à ce que vous voyez dans votre éditeur de texte.
 - {{HTMLElement("var")}}&nbsp;: Pour marquer spécifiquement les noms de variables.
 - {{HTMLElement("kbd")}}&nbsp;: Pour marquer les touches de clavier (et autres types d'entrée) saisies sur l'ordinateur.
 - {{HTMLElement("samp")}}&nbsp;: Pour marquer la sortie d'un programme informatique.
@@ -373,7 +373,7 @@ HTML fournit également l'élément HTML {{HTMLElement("time")}} pour marquer le
 <time datetime="2016-01-20">20 janvier 2016</time>
 ```
 
-En quoi est-ce utile&nbsp;? Eh bien, il y a beaucoup de façons différentes dont les humains écrivent les dates. La date ci-dessus pourrait s'écrire comme suit&nbsp;:
+En quoi est-ce utile&nbsp;? Eh bien, il y a beaucoup de façons différentes dont les humains écrivent les dates. La date ci-dessus peut s'écrire comme suit&nbsp;:
 
 <!-- markdownlint-disable MD033 -->
 
@@ -389,7 +389,7 @@ En quoi est-ce utile&nbsp;? Eh bien, il y a beaucoup de façons différentes don
 
 <!-- markdownlint-enable MD033 -->
 
-Mais ces différents formes ne sont pas facilement reconnaissables par les ordinateurs — que se passerait‑il si vous vouliez saisir automatiquement les dates de tous les événements dans une page et les insérer dans un calendrier&nbsp;? L'élément {{HTMLElement("time")}} vous permettra d'attacher un horodatage non ambigu lisible par machine à cette fin.
+Mais ces différents formes ne sont pas facilement reconnaissables par les ordinateurs — que se passe-t‑il si vous vouliez saisir automatiquement les dates de tous les évènements dans une page et les insérer dans un calendrier&nbsp;? L'élément {{HTMLElement("time")}} vous permet d'attacher un horodatage non ambigu lisible par machine à cette fin.
 
 L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, mais il y a beaucoup d'autres options possibles, par exemple&nbsp;:
 
@@ -416,7 +416,7 @@ L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, m
 
 ## Résumé
 
-Nous voici arrivés à la fin de notre étude de la sémantique des textes HTML moins courants. Ce que vous avez vu dans ce cours ne constitue pas une liste exhaustive des éléments texte HTML — nous avons essayé de couvrir les éléments essentiels, ainsi que certains des plus courants que vous rencontrerez dans la nature.
+Nous voici arrivés à la fin de notre étude de la sémantique des textes HTML moins courants. Ce que vous avez vu dans ce cours ne constitue pas une liste exhaustive des éléments texte HTML — nous avons essayé de couvrir les éléments essentiels, ainsi que certains des plus courants que vous rencontrez dans la nature.
 
 Ensuite, nous vous proposerons quelques tests pour vérifier dans quelle mesure vous avez compris et retenu les informations fournies sur les fonctionnalités de texte HTML moins courantes.
 

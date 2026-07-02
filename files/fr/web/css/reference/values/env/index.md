@@ -3,7 +3,7 @@ title: Fonction CSS `env()`
 short-title: env()
 slug: Web/CSS/Reference/Values/env
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 4607393c465f5a8bdbb36047f2ec03c2fb058af5
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`env()`** peut être utilisée pour insérer la valeur d'une [variable d'environnement](/fr/docs/Web/CSS/Guides/Environment_variables/Using) définie par l'agent utilisateur dans votre CSS.
@@ -36,6 +36,8 @@ La fonction `env( <environment-variable>, <fallback> )` accepte les paramètres 
       - : Les dimensions d'une zone `titlebar-area-*` visible. Ces variables sont disponibles lors de l'utilisation du champ de manifeste [`display_override`](/fr/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) `window-controls-overlay`. Les valeurs des variables peuvent être utilisées pour s'assurer que le contenu ne chevauche pas les boutons de contrôle de la fenêtre (c'est-à-dire réduire, agrandir et fermer) avec les applications web progressives (PWA) installées sur les appareils de bureau.
     - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
       - : Les marges par rapport au bord de la zone d'affichage et les dimensions du clavier virtuel à l'écran de l'appareil. Définies dans {{DOMxRef("VirtualKeyboard API", "l'API VirtualKeyboard", "", 1)}}.
+    - `preferred-text-scale`
+      - : Le facteur d'échelle des polices préféré de l'utilisateur·ice, une valeur définie dans les préférences du navigateur ou du système d'exploitation. Cela permet d'adapter la taille du contenu proportionnellement à celle des polices définie par le navigateur ou le système d'exploitation.
     - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
       - : Les dimensions et les positions de décalage de segments spécifiques de la zone d'affichage. Le mot-clé `viewport-segment-*` est suivi de deux valeurs entières ({{CSSxRef("&lt;integer&gt;")}}) séparées par un espace qui indiquent la position horizontale et verticale du segment, ou les indices. Les mots-clés `viewport-segment` ne sont définis que lorsque la zone d'affichage est composée de deux segments ou plus, comme avec les appareils pliables ou articulés.
 
@@ -58,11 +60,24 @@ Lorsque la substitution `env()` est invalide, et qu'une valeur de secours invali
 
 ### Cas d'utilisation
 
-Initialement fournie par le navigateur iOS pour permettre aux développeur·euse·s de placer leur contenu dans une zone sûre de la zone d'affichage, et de ne pas être masqué par les encoches ou les coins arrondis des appareils, les valeurs `safe-area-inset-*` peuvent être utilisées pour garantir que le contenu est visible pour les utilisateur·ice·s. Cette fonctionnalité a ensuite été étendue au-delà de son objectif initial pour permettre des cas d'utilisation tels que [d'empêcher les notifications de l'appareil de couvrir une partie de l'interface utilisateur de l'application](#using_env_to_ensure_buttons_are_not_obscured_by_device_ui).
+Initialement fournie par le navigateur iOS pour permettre aux développeur·euse·s de placer leur contenu dans une zone sûre de la zone d'affichage, et de ne pas être masqué par les encoches ou les coins arrondis des appareils, les valeurs `safe-area-inset-*` peuvent être utilisées pour garantir que le contenu est visible pour les utilisateur·ice·s. Cette fonctionnalité a ensuite été étendue au-delà de son objectif initial pour permettre des cas d'utilisation tels que [d'empêcher les notifications de l'appareil de couvrir une partie de l'interface utilisateur de l'application](#utiliser_env_pour_sassurer_que_les_boutons_ne_sont_pas_masqués_par_linterface_utilisateur_de_lappareil).
 
-Un autre cas d'utilisation des variables `env()` concerne les [applications web progressives](/fr/docs/Web/Progressive_web_apps) (PWAs) de bureau qui utilisent la fonctionnalité [Window Controls Overlay](/fr/docs/Web/API/Window_Controls_Overlay_API) pour tirer parti de toute la surface de la fenêtre de l'application. En utilisant les valeurs [`titlebar-area-*`](#titlebar-area-x), les développeur·euse·s peuvent positionner des éléments là où se trouvait la barre de titre et [s'assurer que le contenu n'est pas masqué par les boutons de contrôle de la fenêtre](#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
+Un autre cas d'utilisation des variables `env()` concerne les [applications web progressives](/fr/docs/Web/Progressive_web_apps) (PWAs) de bureau qui utilisent la fonctionnalité [Window Controls Overlay](/fr/docs/Web/API/Window_Controls_Overlay_API) pour tirer parti de toute la surface de la fenêtre de l'application. En utilisant les valeurs [`titlebar-area-*`](#titlebar-area-x), les développeur·euse·s peuvent positionner des éléments là où se trouvait la barre de titre et [s'assurer que le contenu n'est pas masqué par les boutons de contrôle de la fenêtre](#utiliser_env_pour_sassurer_que_le_contenu_nest_pas_masqué_par_les_boutons_de_contrôle_de_la_fenêtre_dans_les_pwa_de_bureau).
 
 Les noms de variables `viewport-segment-*` peuvent être utilisés pour ajuster vos conteneurs afin qu'ils s'adaptent parfaitement aux segments disponibles d'un appareil à plusieurs segments de zone d'affichage, comme un appareil à charnière ou pliable. Les entiers suivant le nom `viewport-segment-*` indiquent quel segment des multiples segments la variable d'environnement référence.
+
+La variable `preferred-text-scale` peut être utilisée pour dimensionner le texte du site Web ou d'autres éléments de l'interface utilisateur proportionnellement aux tailles de police définies par le navigateur ou le système d'exploitation. Par exemple, vous pouvez définir la taille de la police du corps comme un pourcentage basé sur l'échelle de texte définie par l'utilisateur·ice&nbsp;:
+
+```css
+body {
+  font-size: calc(100% * env(preferred-text-scale));
+}
+```
+
+Les tailles peuvent également être définies pour être proportionnelles à la taille de police définie par le navigateur ou le système d'exploitation en incluant [`<meta name="text-scale" content="scale">`](/fr/docs/Web/HTML/Reference/Elements/meta/name/text-scale) dans le `<head>` du document. L'élément `<meta>` doit être utilisé de préférence à `env(preferred-text-scale)` lorsque c'est possible, car l'élément `<meta>` est pris en charge sur un plus large éventail de plateformes et est également plus simple à utiliser.
+
+> [!WARNING]
+> Faites attention à l'utilisation de `env(preferred-text-scale)` lorsque `<meta name="text-scale" content="scale">` est défini, car cela entraîne l'application de la mise à l'échelle du texte deux fois lorsqu'elle est combinée avec des tailles relatives, telles que `em` et `rem`. Par exemple, lorsque le `<meta>` est défini, une déclaration telle que `font-size: calc(2rem * env(preferred-text-scale))` fait en sorte que les petites tailles de police deviennent encore plus petites et que les grandes tailles de police deviennent plus grandes.
 
 ### Noms suivis d'entiers
 
@@ -245,6 +260,7 @@ La [démonstration de l'API des segments de la fenêtre <sup>(angl.)</sup>](http
 - La fonction {{CSSxRef("var()")}}
 - Le module [des propriétés personnalisées pour les variables en cascade CSS](/fr/docs/Web/CSS/Guides/Cascading_variables)
 - [Les propriétés personnalisées (--\*)](/fr/docs/Web/CSS/Reference/Properties/--*)
+- L'élément HTML [`<meta name="text-scale">`](/fr/docs/Web/HTML/Reference/Elements/meta/name/text-scale)
 - [Utiliser les propriétés CSS personnalisées](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
 - [L'API des segments de la fenêtre](/fr/docs/Web/API/Viewport_segments_API)
 - [Personnaliser la superposition des contrôles de fenêtre de la barre de titre de votre PWA <sup>(angl.)</sup>](https://web.dev/articles/window-controls-overlay)

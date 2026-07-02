@@ -35,7 +35,7 @@ Cet article montre la syntaxe requise pour créer un lien et discute des bonnes 
           <li>La syntaxe des chemins en détail — barres obliques, point unique et double point.</li>
           <li>Les états des liens et pourquoi ils sont importants — <code>:hover</code>, <code>:focus</code>, <code>:visited</code>, et <code>:active</code>.</li>
           <li>Les liens en ligne et les liens de niveau bloc.</li>
-          <li>Comprendre les avantages de rédiger un bon texte de lien, tels qu'une meilleure accessibilité pour les utilisateurs de lecteurs d'écran et des effets SEO potentiellement positifs.</li>
+          <li>Comprendre les avantages de rédiger un bon texte de lien, tels qu'une meilleure accessibilité pour les utilisateur·ice·s de lecteurs d'écran et des effets SEO potentiellement positifs.</li>
         </ul>
       </td>
     </tr>
@@ -59,7 +59,7 @@ La page d'accueil de la BBC, par exemple, contient un nombre important de liens 
 
 ## Anatomie d'un lien
 
-Un lien élémentaire se crée en intégrant le texte ou tout autre contenu que vous voulez transformer en lien dans un élément {{HTMLElement("a")}} et en lui affectant un attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) (qui sera la **référence hypertexte**) contenant l'adresse web vers laquelle vous voulez que le lien pointe.
+Un lien élémentaire se crée en intégrant le texte ou tout autre contenu que vous voulez transformer en lien dans un élément {{HTMLElement("a")}} et en lui affectant un attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) (qui est la **référence hypertexte**) contenant l'adresse web vers laquelle vous voulez que le lien pointe.
 
 ```html
 <p>
@@ -137,7 +137,7 @@ Nous obtenons le résultat suivant et le survol du lien affiche le titre sous fo
 {{EmbedLiveSample("Ajouter des informations avec l'attribut `title`", "100%", 150)}}
 
 > [!NOTE]
-> Le titre d'un lien n'est révélé que lors du survol de la souris, ce qui signifie que les personnes utilisant les commandes clavier ou les écrans tactiles pour naviguer dans les pages web auront des difficultés à accéder aux informations du titre.
+> Le titre d'un lien n'est révélé que lors du survol de la souris, ce qui signifie que les personnes utilisant les commandes clavier ou les écrans tactiles pour naviguer dans les pages web ont des difficultés à accéder aux informations du titre.
 > Si une information de titre est vraiment importante pour l'utilisation d'une page, alors vous devez la présenter de manière plus accessible, par exemple en la mettant dans le texte normal.
 
 ### Créer vos propres exemples de liens
@@ -176,12 +176,12 @@ Si vous faites une erreur, vous pouvez effacer votre travail en utilisant le bou
 </p>
 ```
 
-{{EmbedLiveSample('links-1', "100%", 280)}}
+{{EmbedLiveSample("links-1", "100%", 280)}}
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Votre HTML final devrait ressembler à ceci&nbsp;:
+Votre HTML final doit ressembler à ceci&nbsp;:
 
 ```html
 <h1>Les écureuils</h1>
@@ -233,15 +233,15 @@ Les cibles des liens sont des URL. Une URL, ou Uniform Resource Locator, est une
 Un [serveur web](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) reçoit des requêtes pour des URL et répond avec la ressource appropriée. La plupart des ressources sont stockées sous forme de fichiers dans le système de fichiers du serveur, donc les URL de ces ressources ressemblent souvent à des chemins de fichiers.
 
 > [!NOTE]
-> Les chemins de fichiers et les URL ne sont pas la même chose, mais pour l'instant, nous allons en parler comme si c'était le cas pour faciliter la compréhension. Nous discuterons plus en détail des différences dans la section [comment les URL se traduisent-elles en chemins de fichiers ?](#how_do_urls_translate_into_file_paths).
+> Les chemins de fichiers et les URL ne sont pas la même chose, mais pour l'instant, nous allons en parler comme si c'était le cas pour faciliter la compréhension. Nous discuterons plus en détail des différences dans la section [comment les URL se traduisent-elles en chemins de fichiers&nbsp;?](#comment_les_url_sont-elles_traduites_en_chemins_de_fichiers).
 
 Regardons un exemple de structure de répertoires sur un serveur&nbsp;:
 
 ![Une simple structure de répertoires. Le répertoire parent s'appelle creating-hyperlinks et contient deux fichiers appelés index.html et contacts.html, et deux répertoires appelés projects et pdfs, qui contiennent respectivement un fichier index.html et un fichier project-brief.pdf.](simple-directory.png)
 
-La **racine** de cette structure de répertoires s'appelle `creating-hyperlinks`. Quand vous travaillez localement sur un site web, vous avez un dossier contenant l'intégralité du site. Dans la **racine**, nous avons un fichier `index.html` et un `contacts.html`. Sur un site réel, `index.html` serait notre page d'accueil ou portail (page web servant de point d'entrée à un site web ou à une section particulière d'un site web).
+La **racine** de cette structure de répertoires s'appelle `creating-hyperlinks`. Quand vous travaillez localement sur un site web, vous avez un dossier contenant l'intégralité du site. Dans la **racine**, nous avons un fichier `index.html` et un `contacts.html`. Sur un site réel, `index.html` est notre page d'accueil ou portail (page web servant de point d'entrée à un site web ou à une section particulière d'un site web).
 
-Il y a aussi deux répertoires dans la racine — `pdfs` et `projects`. Chacun d'eux comporte un seul fichier — respectivement un PDF (`project-brief.pdf`) et un fichier `index.html`. Notez que vous pouvez avoir plusieurs fichiers `index.html` dans un projet, tant qu'ils se trouvent dans des emplacements différents du système de fichiers. Le second `index.html` serait peut-être la page d'accueil principale pour les informations relatives au projet.
+Il y a aussi deux répertoires dans la racine — `pdfs` et `projects`. Chacun d'eux comporte un seul fichier — respectivement un PDF (`project-brief.pdf`) et un fichier `index.html`. Notez que vous pouvez avoir plusieurs fichiers `index.html` dans un projet, tant qu'ils se trouvent dans des emplacements différents du système de fichiers. Le second `index.html` est peut-être la page d'accueil principale pour les informations relatives au projet.
 
 Regardons quelques exemples de liens entre différents fichiers dans cette structure de répertoires pour démontrer différents types de chemins.
 
@@ -260,18 +260,18 @@ Vous pouvez également commencer un chemin vers un fichier dans le même répert
 
 ```html
 <p>
-  Voulez‑vous contacter un membre du personnel en particulier&nbsp;? Voyez
-  comment faire sur notre page
+  Voulez‑vous contacter un membre du personnel en particulier? Voyez comment
+  faire sur notre page
   <a href="./contacts.html">Contacts</a>.
 </p>
 ```
 
 > [!NOTE]
-> Il existe certaines situations où inclure `./` dans votre chemin fera une différence, par exemple lors de la spécification des chemins pour les [modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules), mais vous n'avez pas besoin de vous en préoccuper pour les liens HTML et CSS statiques.
+> Il existe certaines situations où inclure `./` dans votre chemin fait une différence, par exemple lors de la spécification des chemins pour les [modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules), mais vous n'avez pas besoin de vous en préoccuper pour les liens HTML et CSS statiques.
 
 ### Descendre dans les sous-répertoires
 
-Si vous désirez inclure un hyperlien dans `index.html` (`celui` de plus haut niveau) pointant vers `projects/index.html`, vous avez besoin de descendre dans le dossier `projects` avant d'indiquer le fichier auquel vous voulez vous lier. Cela se fait en indiquant le nom du dossier, suivi d'une barre oblique normale, puis le nom du fichier. Donc l'URL à utiliser sera `projects/index.html`&nbsp;:
+Si vous désirez inclure un hyperlien dans `index.html` (`celui` de plus haut niveau) pointant vers `projects/index.html`, vous avez besoin de descendre dans le dossier `projects` avant d'indiquer le fichier auquel vous voulez vous lier. Cela se fait en indiquant le nom du dossier, suivi d'une barre oblique normale, puis le nom du fichier. Donc l'URL à utiliser est `projects/index.html`&nbsp;:
 
 ```html
 <p>
@@ -281,7 +281,7 @@ Si vous désirez inclure un hyperlien dans `index.html` (`celui` de plus haut ni
 
 ### Remonter dans les dossiers parents
 
-Si vous voulez inclure un hyperlien dans `projects/index.html` qui pointe vers `pdfs/projects-brief.pdf`, vous aurez besoin de monter dans le répertoire au niveau au‑dessus, puis de descendre dans le dossier `pdfs`. «&nbsp;Monter dans le répertoire au niveau au‑dessus&nbsp;» est indiqué avec deux points — `..` — de sorte que l'URL à utiliser sera `../pdfs/project‑brief.pdf`&nbsp;:
+Si vous voulez inclure un hyperlien dans `projects/index.html` qui pointe vers `pdfs/projects-brief.pdf`, vous avez besoin de monter dans le répertoire au niveau au‑dessus, puis de descendre dans le dossier `pdfs`. «&nbsp;Monter dans le répertoire au niveau au‑dessus&nbsp;» est indiqué avec deux points — `..` — de sorte que l'URL à utiliser est `../pdfs/project‑brief.pdf`&nbsp;:
 
 ```html
 <p>
@@ -295,9 +295,9 @@ Si vous voulez inclure un hyperlien dans `projects/index.html` qui pointe vers `
 
 ### Lien relatif au document racine
 
-Les URL ci-dessus fonctionnent, mais gardez à l'esprit que si vous déplacez le fichier de lien ou le fichier lié à un autre emplacement, vous romprez le lien.
+Les URL ci-dessus fonctionnent, mais gardez à l'esprit que si vous déplacez le fichier de lien ou le fichier lié à un autre emplacement, vous rompez le lien.
 
-Si vous souhaitez créer un lien vers un emplacement spécifique qui ne se rompra pas si vous déplacez le fichier de lien, vous pouvez le faire en mettant une seule barre oblique au début du chemin — cela indique que le chemin commence dans le répertoire racine du site. Par exemple, le lien précédent à l'intérieur de `projects/index.html` pourrait être réécrit comme suit&nbsp;:
+Si vous souhaitez créer un lien vers un emplacement spécifique qui ne se rompt pas si vous déplacez le fichier de lien, vous pouvez le faire en mettant une seule barre oblique au début du chemin — cela indique que le chemin commence dans le répertoire racine du site. Par exemple, le lien précédent à l'intérieur de `projects/index.html` peut être réécrit comme suit&nbsp;:
 
 ```html
 <p>
@@ -306,26 +306,26 @@ Si vous souhaitez créer un lien vers un emplacement spécifique qui ne se rompr
 </p>
 ```
 
-Maintenant, le chemin commencera toujours à partir du répertoire racine (`creating-hyperlinks`), se déplacera vers le répertoire `pdfs` et trouvera le fichier `project-brief.pdf`. Cela fonctionnera toujours si vous déplacez le fichier de lien à un autre emplacement, par exemple `a/b/c/d/e/index.html`.
+Maintenant, le chemin commence toujours à partir du répertoire racine (`creating-hyperlinks`), se déplace vers le répertoire `pdfs` et trouve le fichier `project-brief.pdf`. Cela fonctionne toujours si vous déplacez le fichier de lien à un autre emplacement, par exemple `a/b/c/d/e/index.html`.
 
-Si vous déplacez le fichier lié `project-brief.pdf` à un autre emplacement, vous romperez toujours le lien.
+Si vous déplacez le fichier lié `project-brief.pdf` à un autre emplacement, vous rompez toujours le lien.
 
-Deux termes que vous rencontrerez sur le web sont **chemin absolu** et **chemin relatif**.
+Deux termes que vous rencontrez sur le web sont **chemin absolu** et **chemin relatif**.
 
 - Chemin absolu&nbsp;: Pointe vers un emplacement défini par son emplacement absolu dans votre site (ou ailleurs sur le web). Par exemple, vous pouvez créer un lien absolu qui pointe toujours vers le même emplacement par rapport au répertoire racine du site en utilisant la barre oblique unique au début du chemin, comme nous l'avons vu précédemment&nbsp;: `/pdfs/project-brief.pdf`.
-- Chemin relatif&nbsp;: Pointe vers un emplacement qui est _relatif_ au fichier à partir duquel vous créez le lien. Dans notre exemple précédent, nous avons utilisé `projects/index.html` pour créer un lien relatif entre le fichier actuel et un fichier appelé `index.html` qui se trouve dans un sous-répertoire `projects`. Si vous déplaciez le fichier actuel à un autre emplacement, le chemin serait toujours relatif à ce fichier, mais il pointerait vers un emplacement absolu différent.
+- Chemin relatif&nbsp;: Pointe vers un emplacement qui est _relatif_ au fichier à partir duquel vous créez le lien. Dans notre exemple précédent, nous avons utilisé `projects/index.html` pour créer un lien relatif entre le fichier actuel et un fichier appelé `index.html` qui se trouve dans un sous-répertoire `projects`. Si vous déplaciez le fichier actuel à un autre emplacement, le chemin est toujours relatif à ce fichier, mais il pointe vers un emplacement absolu différent.
 
 Ces termes ne sont pas toujours utilisés de manière cohérente. Par exemple, `/pdfs/project-brief.pdf` est absolu par rapport à l'emplacement du fichier actuel, mais relatif au [nom de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name). Une URL qui inclut le nom de domaine complet, comme `https://exemple.com/pdfs/project-brief.pdf`, est absolue par rapport à l'ensemble du web.
 
 ### Lien avec des URL complètes
 
-Vous pouvez définir une URL complète comme chemin, ce qui pointera toujours vers le même emplacement sur le web, peu importe où elle est utilisée. Par exemple&nbsp;:
+Vous pouvez définir une URL complète comme chemin, ce qui pointe toujours vers le même emplacement sur le web, peu importe où elle est utilisée. Par exemple&nbsp;:
 
 ```html
 <a href="https://www.exemple.com/projects/">projets</a>
 ```
 
-Ce lien pointera toujours vers `https://www.exemple.com/projects/`, même si votre site est déplacé vers un autre domaine.
+Ce lien pointe toujours vers `https://www.exemple.com/projects/`, même si votre site est déplacé vers un autre domaine.
 
 ### Liens internes et externes
 
@@ -347,12 +347,12 @@ Lors de la spécification d'un lien interne, vous pouvez utiliser un chemin rela
 <a href="projects">projets</a>
 ```
 
-Nous recommandons la seconde option sans le nom de domaine complet, pour des raisons de portabilité. Comme nous l'avons dit précédemment, si vous définissez `https://www.exemple.com/projects/`, cela pointera toujours vers `https://www.exemple.com/projects/`. Si vous déplacez ensuite votre site vers un autre domaine, par exemple `autre-exemple.com`, tous vos liens avec l'URL complète devront être modifiés. Si vous définissez des chemins tels que `/projects`, ils fonctionneront toujours, car ils sont toujours relatifs à la structure des répertoires.
+Nous recommandons la seconde option sans le nom de domaine complet, pour des raisons de portabilité. Comme nous l'avons dit précédemment, si vous définissez `https://www.exemple.com/projects/`, cela pointe toujours vers `https://www.exemple.com/projects/`. Si vous déplacez ensuite votre site vers un autre domaine, par exemple `autre-exemple.com`, tous vos liens avec l'URL complète doivent être modifiés. Si vous définissez des chemins tels que `/projects`, ils fonctionnent toujours, car ils sont toujours relatifs à la structure des répertoires.
 
 ### Fragments de documents
 
 Il est possible de faire un lien vers une partie donnée d'un document HTML, qu'on appelle un **fragment de document**, plutôt que vers le haut du document.
-Pour ce faire, vous devrez d'abord assigner un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) à l'élément vers lequel vous voulez pointer.
+Pour ce faire, vous devez d'abord assigner un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) à l'élément vers lequel vous voulez pointer.
 
 Il est généralement logique d'établir un lien vers une rubrique précise, ainsi cela ressemble à quelque chose comme&nbsp;:
 
@@ -388,21 +388,21 @@ Le serveur prend simplement la partie {{DOMxRef("URL/pathname", "pathname")}} de
 > [!NOTE]
 > De nombreux serveurs génèrent du contenu pour une URL à la volée plutôt que de le récupérer à partir d'un fichier statique. Si vous utilisez un [cadre web](/fr/docs/Learn_web_development/Core/Frameworks_libraries), votre répertoire de code source peut également être très différent de ce qui est déployé sur le serveur. Lorsque vous travaillez avec votre propre site web, vous devez comprendre vos outils de construction et la configuration de votre serveur pour savoir comment les URL sont associées à vos fichiers sources.
 
-Si nous démarrons un serveur web (voir [Comment configurer un serveur de test local&nbsp;?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)) en utilisant notre dossier d'exemple comme racine, et que le {{Glossary("domain name", "nom de domaine")}} du site est défini sur `exemple.com`, notre fichier `pdfs/project-brief.pdf` serait disponible à l'adresse `https://www.exemple.com/pdfs/project-brief.pdf`.
+Si nous démarrons un serveur web (voir [Comment configurer un serveur de test local&nbsp;?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)) en utilisant notre dossier d'exemple comme racine, et que le {{Glossary("domain name", "nom de domaine")}} du site est défini sur `exemple.com`, notre fichier `pdfs/project-brief.pdf` est disponible à l'adresse `https://www.exemple.com/pdfs/project-brief.pdf`.
 
 Tous les liens sont résolus par rapport à l'URL du document courant, donc&nbsp;:
 
 - Pour toutes les pages du domaine `https://exemple.com`, un lien vers `/pdfs/project-brief.pdf` crée toujours un lien vers `https://www.exemple.com/pdfs/project-brief.pdf`, dont le chemin est `/pdfs/project-brief.pdf`. Le serveur recherche le dossier `pdfs` dans le répertoire racine, puis recherche le fichier `project-brief.pdf` à l'intérieur de ce dossier.
-- Un lien vers `projects/index.html` créerait un lien vers `https://www.exemple.com/projects/index.html`, mais seulement lorsqu'il est inclus dans un fichier situé dans le répertoire racine, comme le fichier `index.html` de niveau supérieur, ou `contacts.html`. Si vous l'incluiez, par exemple, dans un fichier HTML à `pdfs/index.html`, il pointerait vers `https://www.exemple.com/pdfs/projects/index.html`, dont le chemin est `/pdfs/projects/index.html`, qui n'existe pas, donc vous obtiendriez un lien brisé.
+- Un lien vers `projects/index.html` crée un lien vers `https://www.exemple.com/projects/index.html`, mais seulement lorsqu'il est inclus dans un fichier situé dans le répertoire racine, comme le fichier `index.html` de niveau supérieur, ou `contacts.html`. Si vous l'incluiez, par exemple, dans un fichier HTML à `pdfs/index.html`, il pointe vers `https://www.exemple.com/pdfs/projects/index.html`, dont le chemin est `/pdfs/projects/index.html`, qui n'existe pas, donc vous obtenez un lien cassé.
 
 #### La page `index.html` par défaut
 
 Lorsque vous faites référence à un fichier `index.html`, vous n'avez généralement pas besoin d'inclure `index.html` dans l'URL/chemin, car les serveurs web recherchent une page d'accueil par défaut appelée `index.html` lorsqu'aucun nom de fichier n'est précisé.
 
-En reprenant notre exemple de chemin `projects/index.html`, nous pourrions simplement écrire le chemin comme `projects`, et cela créerait un lien vers `https://www.exemple.com/projects/index.html`. Lors de la navigation vers la page, nous pourrions écrire l'URL comme `https://www.exemple.com/projects/` et cela nous amènerait toujours au bon endroit.
+En reprenant notre exemple de chemin `projects/index.html`, nous pourrions simplement écrire le chemin comme `projects`, et cela crée un lien vers `https://www.exemple.com/projects/index.html`. Lors de la navigation vers la page, nous pourrions écrire l'URL comme `https://www.exemple.com/projects/` et cela nous amène toujours au bon endroit.
 
 > [!NOTE]
-> La barre oblique finale (`/`) à la fin de l'URL est importante. Avec elle, un lien relatif vers `contacts.html` à l'intérieur de `projects/index.html` se résoudrait en `https://www.exemple.com/projects/contacts.html` (qui se trouve dans le même dossier). Sans elle, l'URL serait traitée comme un fichier, et le lien relatif se résoudrait en `https://www.exemple.com/contacts.html` (qui est un dossier au-dessus).
+> La barre oblique finale (`/`) à la fin de l'URL est importante. Avec elle, un lien relatif vers `contacts.html` à l'intérieur de `projects/index.html` se résout en `https://www.exemple.com/projects/contacts.html` (qui se trouve dans le même dossier). Sans elle, l'URL est traitée comme un fichier, et le lien relatif se résout en `https://www.exemple.com/contacts.html` (qui est un dossier au-dessus).
 >
 > [Différents serveurs web gèrent une URL comme `https://www.exemple.com/projects` différemment <sup>(angl.)</sup>](https://github.com/slorber/trailing-slash-guide) — certains redirigent automatiquement vers l'URL avec une barre oblique finale, tandis que d'autres servent le même `index.html` sans redirection. Ce dernier comportement peut casser les liens relatifs.
 
@@ -416,7 +416,7 @@ Il est facile de mettre des liens sur une page. Mais ce n'est pas suffisant. Nou
 
 - Les utilisateur·ice·s de lecteurs d'écran passent d'un lien à un autre sur une page, et les lisent hors contexte.
 - Les moteurs de recherche utilisent le texte des liens pour indexer les fichiers cibles, c'est donc une bonne idée que d'inclure des mots-clés dans le texte du lien pour décrire effectivement à quoi il est lié.
-- Les utilisateur·ice·s visuels survolent la page plutôt que d'en lire chaque mot, et leurs yeux seront forcément attirés par les particularités qui se détachent de la page, comme les liens. Ils trouveront utile le texte descriptif du lien.
+- Les utilisateur·ice·s visuels survolent la page plutôt que d'en lire chaque mot, et leurs yeux sont forcément attirés par les particularités qui se détachent de la page, comme les liens. Ils trouvent utile le texte descriptif du lien.
 
 Regardons un premier exemple correct&nbsp;:
 
@@ -439,13 +439,13 @@ Regardons un premier exemple correct&nbsp;:
 Autres conseils&nbsp;:
 
 - Ne répétez pas l'URL dans le texte du lien — les URL ne sont pas particulièrement lisibles par une personne, et c'est encore pire à entendre quand un lecteur d'écran les épèle.
-- Ne dites pas «&nbsp;lien&nbsp;» ou «&nbsp;liens vers…&nbsp;» dans le texte du lien — ce n'est que du rabâchage. Les lecteurs d'écran indiquent aux gens qu'il y a un lien. Les personnes navigant visuellement verront aussi qu'il y a un lien, du fait que les liens sont généralement de couleur différente et soulignés (de façon générale, cette convention tacite ne devrait pas être trahie, car les personnes y sont habituées).
+- Ne dites pas «&nbsp;lien&nbsp;» ou «&nbsp;liens vers…&nbsp;» dans le texte du lien — ce n'est que du rabâchage. Les lecteurs d'écran indiquent aux gens qu'il y a un lien. Les personnes navigant visuellement voient aussi qu'il y a un lien, du fait que les liens sont généralement de couleur différente et soulignés (de façon générale, cette convention tacite ne doit pas être trahie, car les personnes y sont habituées).
 - Faites que vos libellés de lien soient aussi courts que possible — les liens longs agacent particulièrement les utilisateur·ice·s de lecteurs d'écran, qui doivent en écouter la lecture entière.
-- Minimiser les cas où plusieurs copies d'un même texte pointent vers des emplacements différents. Afficher une liste de liens hors contexte peut poser problème aux utilisateur·ice·s de lecteurs d'écran&nbsp;: ainsi plusieurs liens tous étiquetés «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;» seront source de confusion.
+- Minimiser les cas où plusieurs copies d'un même texte pointent vers des emplacements différents. Afficher une liste de liens hors contexte peut poser problème aux utilisateur·ice·s de lecteurs d'écran&nbsp;: ainsi plusieurs liens tous étiquetés «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;» sont source de confusion.
 
 ### Indiquer clairement les liens vers des ressources qui ne sont pas HTML
 
-Lorsque vous créez un lien vers une ressource qui sera téléchargée (comme un document PDF ou Word), diffusée (comme une vidéo ou un fichier audio) ou qui a un autre effet potentiellement inattendu (ouverture d'une fenêtre contextuelle), vous devez ajouter une formulation claire pour éviter toute confusion. Si vous êtes sur une connexion à faible bande passante, cliquer sur un lien et initier un téléchargement de plusieurs mégaoctets de façon inattendue pourrait poser problème, autant indiquer ces informations dans le texte du lien.
+Lorsque vous créez un lien vers une ressource qui est téléchargée (comme un document PDF ou Word), diffusée (comme une vidéo ou un fichier audio) ou qui a un autre effet potentiellement inattendu (ouverture d'une fenêtre contextuelle), vous devez ajouter une formulation claire pour éviter toute confusion. Si vous êtes sur une connexion à faible bande passante, cliquer sur un lien et initier un téléchargement de plusieurs mégaoctets de façon inattendue peut poser problème, autant indiquer ces informations dans le texte du lien.
 
 Voici quelques exemples suggérant les genres de texte pouvant être employé&nbsp;:
 
@@ -500,7 +500,7 @@ Si vous ouvrez des liens dans de nouveaux onglets, il est alors recommandé de f
 
 Pour cet exercice, nous vous proposons de relier quelques pages entre elles à l'aide d'un menu de navigation pour créer un site web multi-pages. C'est une manière courante de créer un site web — la même structure de page est utilisée sur chaque page, y compris le même menu de navigation, donc lorsque les liens sont cliqués cela donne l'impression que vous restez au même endroit, et qu'un contenu différent est affiché.
 
-Vous devrez faire des copies locales des quatre pages suivantes, toutes dans le même dossier. Pour une liste complète des fichiers, consultez le répertoire [navigation-menu-start <sup>(angl.)</sup>](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/navigation-menu-start)&nbsp;:
+Vous devez faire des copies locales des quatre pages suivantes, toutes dans le même dossier. Pour une liste complète des fichiers, consultez le répertoire [navigation-menu-start <sup>(angl.)</sup>](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/navigation-menu-start)&nbsp;:
 
 - [`index.html` <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/index.html)
 - [`projects.html` <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/projects.html)
@@ -516,7 +516,7 @@ Pour cet exercice&nbsp;:
 4. Sur chaque page, retirez uniquement le lien vers cette même page — il est déroutant et inutile pour une page d'inclure un lien vers elle-même.
    Et, l'absence de lien constitue un bon rappel visuel de la page sur laquelle vous vous trouvez actuellement.
 
-L'exemple terminé devrait finir par ressembler à quelque chose comme ce qui suit&nbsp;:
+L'exemple terminé doit finir par ressembler à quelque chose comme ce qui suit&nbsp;:
 
 ![Un exemple d'un menu de navigation HTML simple, avec les éléments page d'accueil, images, projets et menu des réseaux sociaux.](navigation-example.png)
 
@@ -536,7 +536,7 @@ Sous sa forme la plus basique et la plus communément utilisée, un lien `mailto
 
 Cela donne un lien qui ressemble à ceci&nbsp;: [Envoyer un courriel à nullepart](mailto:nullepart@mozilla.org).
 
-En fait, l'adresse de courriel est optionnelle. Si vous l'omettez et que votre [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) est `"mailto:"`, une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel de l'utilisateur·ice sans adresse de destination.
+En fait, l'adresse de courriel est optionnelle. Si vous l'omettez et que votre [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) est `"mailto:"`, une nouvelle fenêtre de courriel sortant est ouverte par le client de courriel de l'utilisateur·ice sans adresse de destination.
 C'est souvent utile pour des liens «&nbsp;Partager&nbsp;» sur lesquels les utilisateur·ice·s peuvent cliquer pour envoyer un courriel à l'adresse de leur choix.
 
 ### Fournir d'autres informations

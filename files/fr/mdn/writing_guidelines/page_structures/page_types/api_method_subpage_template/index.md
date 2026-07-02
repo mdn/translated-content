@@ -39,7 +39,6 @@ l10n:
 >     Si la méthode est statique, le slug doit avoir un suffixe `_static`, comme&nbsp;: `Web/API/NameOfTheParentInterface/NameOfTheMethod_static`. Cela nous permet de prendre en charge les méthodes d'instance et les méthodes statiques qui ont le même nom.
 >
 >     Notez que le nom de la méthode dans le slug omet les parenthèses (il se termine par `NameOfTheMethod` et non `NameOfTheMethod()`).
->
 > - **page-type**
 >   - : La clé `page-type` pour les méthodes Web/API est soit `web-api-instance-method` (pour les méthodes d'instance) soit `web-api-static-method` (pour les méthodes statiques).
 > - **status**

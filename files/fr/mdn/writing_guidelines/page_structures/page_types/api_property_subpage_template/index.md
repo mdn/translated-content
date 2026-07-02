@@ -40,7 +40,6 @@ l10n:
 >     C'est formaté comme `Web/API/NameOfTheParentInterface/NameOfTheProperty`.
 >
 >     Si la propriété est statique, le slug doit avoir un suffixe `_static`, comme&nbsp;: `Web/API/NameOfTheParentInterface/NameOfTheProperty_static`. Cela nous permet de prendre en charge les propriétés d'instance et statiques qui ont le même nom.
->
 > - **page-type**
 >   - : La clé `page-type` pour les propriétés Web/API est soit `web-api-instance-property` (pour les propriétés d'instance) soit `web-api-static-property` (pour les propriétés statiques).
 > - **status**

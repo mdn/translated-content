@@ -231,6 +231,7 @@ Une abréviation est une version raccourcie d'un mot plus long, tandis qu'un acr
   - **Incorrect**&nbsp;: «&nbsp;Les navigateurs ex Firefox peuvent être utilisés…&nbsp;»
   - **Incorrect**&nbsp;: «&nbsp;Les navigateurs, ex. Firefox, peuvent être utilisés…&nbsp;»
   - **Incorrect**&nbsp;: «&nbsp;Les navigateurs, (ex: Firefox) peuvent être utilisés…&nbsp;»
+
   <!-- markdownlint-enable search-replace -->
 
   Dans le texte normal (c'est-à-dire hors notes ou parenthèses), utilisez l'équivalent en toutes lettres en français.
