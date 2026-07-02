@@ -268,7 +268,7 @@ body {
 
 ## Les propriétés et valeurs logiques
 
-Une fois que vous travaillez dans des modes d'écriture autres que `horizontal-tb`, de nombreuses propriétés et valeurs qui sont mappées aux dimensions physiques de l'écran semblent étranges. Par exemple, si vous donnez à une boîte une largeur de 100px, dans `horizontal-tb` cela contrôle la taille dans la direction en ligne. Dans `vertical-lr`, cela contrôle la taille dans la direction de bloc, car elle ne tourne pas avec le texte.
+Une fois que vous travaillez dans des modes d'écriture autres que `horizontal-tb`, de nombreuses propriétés et valeurs qui sont associées aux dimensions physiques de l'écran semblent étranges. Par exemple, si vous donnez à une boîte une largeur de 100px, dans `horizontal-tb` cela contrôle la taille dans la direction en ligne. Dans `vertical-lr`, cela contrôle la taille dans la direction de bloc, car elle ne tourne pas avec le texte.
 
 ```html live-sample___width
 <div class="boite">
@@ -326,7 +326,7 @@ body {
 
 {{EmbedLiveSample("inline-size", "", 200)}}
 
-Le module [des propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) inclut des versions logiques des propriétés qui contrôlent les marges, le padding et les bordures, ainsi que d'autres mappages pour des éléments que nous avons typiquement utilisés avec des directions physiques.
+Le module [des propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) inclut des versions logiques des propriétés qui contrôlent les marges, le padding et les bordures, ainsi que d'autres associations pour des éléments que nous avons typiquement utilisés avec des directions physiques.
 
 ## Résumé
 
