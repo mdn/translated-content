@@ -101,7 +101,7 @@ Après avoir chargé le HTML et construit la représentation DOM du document, l'
 
 Dans ce diagramme, les nœuds représentant les éléments HTML sont affichés en vert. Chaque ligne en dessous montre le niveau de profondeur suivant dans l'arbre DOM. Les nœuds bleus sont des nœuds de texte, contenant le texte qui s'affiche à l'écran. Le contenu de chaque élément est lié en dessous dans l'arbre, pouvant potentiellement générer une série de branches en dessous à mesure que les éléments incluent d'autres éléments et nœuds de texte.
 
-Si vous souhaitez créer une plage qui inclut le contenu de l'élément {{HTMLElement("p")}} dont le contenu est `"Une <em>très</em> chose intéressante s'est produite en chemin vers le forum…"`, vous pouvez le faire comme ceci&nbsp;:
+Si vous souhaitez créer une plage qui inclut le contenu de l'élément HTML {{HTMLElement("p")}} dont le contenu est `"Une <em>très</em> chose intéressante s'est produite en chemin vers le forum…"`, vous pouvez le faire comme ceci&nbsp;:
 
 ```js
 const pRange = document.createRange();
@@ -110,7 +110,7 @@ pRange.selectNodeContents(document.querySelector("#entree1 p"));
 
 Comme nous souhaitons sélectionner l'intégralité du contenu de l'élément `<p>`, y compris ses descendants, cela fonctionne parfaitement.
 
-Si nous souhaitons plutôt copier le texte «&nbsp;Une chose intéressante…&nbsp;» depuis le titre de la {{HTMLElement("section")}} (un élément {{HTMLElement("Heading_Elements", "h2")}}) jusqu'à la fin des lettres "très" dans l'élément {{HTMLElement("em")}} à l'intérieur du paragraphe ci-dessous, le code suivant fonctionne&nbsp;:
+Si nous souhaitons plutôt copier le texte «&nbsp;Une chose intéressante…&nbsp;» depuis le titre de la {{HTMLElement("section")}} (un élément HTML `{{HTMLElement("Heading_Elements", "&lt;h2&gt;")}}`) jusqu'à la fin des lettres «&nbsp;très&nbsp;» dans l'élément {{HTMLElement("em")}} à l'intérieur du paragraphe ci-dessous, le code suivant fonctionne&nbsp;:
 
 ```js
 const plage = document.createRange();
