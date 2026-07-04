@@ -13,17 +13,17 @@ Un segment peut être crée en utilisant la méthode [createRange](/fr/docs/Web/
 
 ### Propriétés
 
-- [collapsed](/fr/docs/Web/API/range/collapsed)
+- [collapsed](/fr/docs/Web/API/AbstractRange/collapsed)
   - : Renvoie un booléen indiquant si le point de départ et le point final du segment sont confondus.
 - [commonAncestorContainer](/fr/docs/Web/API/range/commonAncestorContainer)
   - : Renvoie le nœud le plus profond qui contient à la fois les nœuds `startContainer` et `endContainer`.
-- [endContainer](/fr/docs/Web/API/range/endContainer)
+- [endContainer](/fr/docs/Web/API/AbstractRange/endContainer)
   - : Renvoie le nœud dans lequel le segment se termine.
-- [endOffset](/fr/docs/Web/API/range/endOffset)
+- [endOffset](/fr/docs/Web/API/AbstractRange/endOffset)
   - : Renvoie un nombre représentant l'endroit où le segment se termine dans `endContainer`.
-- [startContainer](/fr/docs/Web/API/range/startContainer)
+- [startContainer](/fr/docs/Web/API/AbstractRange/startContainer)
   - : Renvoie le nœud dans lequel le segment débute.
-- [startOffset](/fr/docs/Web/API/range/startOffset)
+- [startOffset](/fr/docs/Web/API/AbstractRange/startOffset)
   - : Renvoie un nombre représentant l'endroit où le segment débute dans `startContainer`.
 
 ### Méthodes
