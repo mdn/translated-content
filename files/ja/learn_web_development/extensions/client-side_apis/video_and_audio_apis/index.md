@@ -415,6 +415,7 @@ function setTime() {
      </body>
    </html>
    ```
+
 3. その中に `style.css` という名前の新しいファイルをもう 1 つ作成し、以下の内容を記述します。
 
    ```css
