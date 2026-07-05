@@ -1,9 +1,9 @@
 ---
-title: stroke-miterlimit
+title: CSS `stroke-miterlimit` プロパティ
+short-title: stroke-miterlimit
 slug: Web/CSS/Reference/Properties/stroke-miterlimit
-original_slug: Web/CSS/stroke-miterlimit
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`stroke-miterlimit`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[SVG](/ja/docs/Web/SVG) 要素のストロークパスの角に使用される形状がマイター接合である場合、マイター長と {{CSSxref("stroke-width") }} の比率に対する制限を定義します。このプロパティで定義された制限値を超えると、接合方法が `miter` から `bevel` に変換され、角が切り取られるようになります。
