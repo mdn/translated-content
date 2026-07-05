@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-**`<mtable>`** は [MathML](/en-US/docs/Web/MathML) の要素で、表や行列を作ることができます。子には {{ MathMLElement("mtr") }} 要素（行を表す）であり、それぞれに子として {{ MathMLElement("mtd") }} 要素（セルを表す）を置くことができます。これらの要素の関係は、[HTML](/ja/docs/Web/HTML) の {{ HTMLElement("table") }}、{{ HTMLElement("tr") }}、{{ HTMLElement("td") }} の関係に似ています。
+**`<mtable>`** は [MathML](/ja/docs/Web/MathML) の要素で、表や行列を作ることができます。子には {{ MathMLElement("mtr") }} 要素（行を表す）であり、それぞれに子として {{ MathMLElement("mtd") }} 要素（セルを表す）を置くことができます。これらの要素の関係は、[HTML](/ja/docs/Web/HTML) の {{ HTMLElement("table") }}、{{ HTMLElement("tr") }}、{{ HTMLElement("td") }} の関係に似ています。
 
 ## 属性
 
