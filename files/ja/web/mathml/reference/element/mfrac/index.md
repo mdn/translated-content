@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c263f06fa14ed56153e345006bb459c9df014b98
 ---
 
-**`<mfrac>`** は [MathML](/en-US/docs/Web/MathML) の要素で、分数を表示させるために使用します。同時に、[二項係数](https://en.wikipedia.org/wiki/Binomial_coefficient)や[ルジャンドル記号](https://en.wikipedia.org/wiki/Legendre_symbol)など、分数に似たものを記述するためにも使用できます。
+**`<mfrac>`** は [MathML](/ja/docs/Web/MathML) の要素で、分数を表示させるために使用します。同時に、[二項係数](https://en.wikipedia.org/wiki/Binomial_coefficient)や[ルジャンドル記号](https://en.wikipedia.org/wiki/Legendre_symbol)など、分数に似たものを記述するためにも使用できます。
 
 ## 構文
 
