@@ -51,7 +51,7 @@ getAll(options)
   - : Cookie の名前が入った文字列です。
 
 - `partitioned`
-  - : 論理値で、 Cookie がパーティション化 Cookie であるか (`true`) そうでないか (`false`) を表します。詳しくは[個別区画化された状態を持つ Cookie  (CHIPS)](/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) を参照してください。
+  - : 論理値で、 Cookie がパーティション化 Cookie であるか (`true`) そうでないか (`false`) を表します。詳しくは[個別区画化された状態を持つ Cookie (CHIPS)](/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) を参照してください。
 
 - `path`
   - : Cookie のパスが入った文字列です。
