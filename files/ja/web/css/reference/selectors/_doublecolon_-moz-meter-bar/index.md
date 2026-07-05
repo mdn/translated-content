@@ -36,9 +36,7 @@ meter {
 スタイル設定: <meter class="styled" min="0" max="10" value="6">
   スコア 6/10
 </meter>
-<br />
-スタイル設定:
-<meter class="styled" min="0" max="10" value="6">Score 6/10</meter>
+```
 
 ### CSS
 
