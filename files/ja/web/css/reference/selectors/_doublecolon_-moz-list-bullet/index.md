@@ -1,5 +1,5 @@
 ---
-title: CSS `::-moz-list-bullet` 擬似クラス
+title: CSS `::-moz-list-bullet` 擬似要素
 short-title: ::-moz-list-bullet
 slug: Web/CSS/Reference/Selectors/::-moz-list-bullet
 l10n:
