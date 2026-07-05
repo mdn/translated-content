@@ -10,7 +10,6 @@ l10n:
 
 **`toJSON()`** は {{domxref("LargestContentfulPaint")}} インターフェイスのメソッドで、{{Glossary("Serialization","シリアライザー")}}です。これはこの {{domxref("LargestContentfulPaint")}} オブジェクトの JSON 表現を返します。
 
-
 ## 構文
 
 ```js-nolint
