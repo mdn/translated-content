@@ -1,410 +1,522 @@
 ---
 title: Element
 slug: Web/API/Element
+l10n:
+  sourceCommit: 361dd9caf4ac5db8a73cc33e4d8ee43fa2e35fcc
 ---
 
 {{APIRef("DOM")}}
 
-**`Element`** est la classe de base la plus générique dont héritent tous les objets qui représentent des éléments d'un [`Document`](/fr/docs/Web/API/Document). Elle contient uniquement des méthodes et propriétés communes à l'ensemble des éléments. Des classes plus spécifiques héritent d'`Element`. Ainsi, l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) correspond à l'interface de base pour les éléments HTML tandis que l'interface [`SVGElement`](/fr/docs/Web/API/SVGElement) représente la base pour les éléments SVG. La plupart des fonctionnalités sont définies dans les classes situées plus loin dans la hiérarchie.
+**`Element`** est la classe de base la plus générale dont héritent tous les objets représentant des éléments (c'est-à-dire des objets qui représentent des éléments) dans un {{DOMxRef("Document")}}. Elle ne possède que des méthodes et des propriétés communes à tous les types d'éléments. Des classes plus spécifiques héritent de `Element`.
 
-## Propriétés
+Par exemple, l'interface {{DOMxRef("HTMLElement")}} est l'interface de base pour les éléments HTML. De même, l'interface {{DOMxRef("SVGElement")}} est la base pour tous les éléments SVG, et l'interface {{DOMxRef("MathMLElement")}} est l'interface de base pour les éléments MathML. La plupart des fonctionnalités sont définies plus bas dans la hiérarchie des classes.
 
-_`Element` hérite des propriétés de son interface parente : [`Node`](/fr/docs/Web/API/Node) (et donc indirectement des propriétés du parent de celle-ci : [`EventTarget`](/fr/docs/Web/API/EventTarget))._
+Les langages en dehors du domaine de la plateforme Web, comme XUL par le biais de l'interface `XULElement`, implémentent également `Element`.
 
-- [`Element.assignedSlot`](/fr/docs/Web/API/Element/assignedSlot){{readonlyInline}}
-  - : Renvoie un objet [`HTMLSlotElement`](/fr/docs/Web/API/HTMLSlotElement) représentant l'emplacement ([`<slot>`](/fr/docs/Web/HTML/Reference/Elements/slot)) dans lequel le nœud est inséré.
-- [`Element.attributes`](/fr/docs/Web/API/Element/attributes) {{readOnlyInline}}
-  - : Renvoie un objet [`NamedNodeMap`](/fr/docs/Web/API/NamedNodeMap) contenant les attributs affectés de l'élément HTML correspondant.
-- [`Element.childElementCount`](/fr/docs/Web/API/Element/childElementCount) {{readonlyInline}}
-  - : Renvoie le nombre d'éléments enfants de cet élément.
-- [`Element.children`](/fr/docs/Web/API/Element/children) {{readonlyInline}}
-  - : Renvoie les éléments enfants de cet élément.
-- [`Element.classList`](/fr/docs/Web/API/Element/classList) {{readOnlyInline}}
-  - : Renvoie un objet [`DOMTokenList`](/fr/docs/Web/API/DOMTokenList) contenant la liste des attributs de classe.
-- [`Element.className`](/fr/docs/Web/API/Element/className)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui représente la classe de l'élément.
-- [`Element.clientHeight`](/fr/docs/Web/API/Element/clientHeight) {{readOnlyInline}}
-  - : Renvoie un nombre ([`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)) représentant la hauteur intérieure de l'élément.
-- [`Element.clientLeft`](/fr/docs/Web/API/Element/clientLeft) {{readOnlyInline}}
-  - : Renvoie un nombre ([`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)) représentant la largeur de la bordure gauche de l'élément.
-- [`Element.clientTop`](/fr/docs/Web/API/Element/clientTop) {{readOnlyInline}}
-  - : Renvoie un nombre ([`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)) représentant la largeur de la bordure haute de l'élément.
-- [`Element.clientWidth`](/fr/docs/Web/API/Element/clientWidth) {{readOnlyInline}}
-  - : Renvoie un nombre ([`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)) représentant la largeur intérieure de l'élément.
-- [`Element.firstElementChild`](/fr/docs/Web/API/Element/firstElementChild) {{readonlyInline}}
-  - : Renvoie le premier élément enfant de cet élément.
-- [`Element.id`](/fr/docs/Web/API/Element/id)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui représente l'identifiant de l'élément.
-- [`Element.innerHTML`](/fr/docs/Web/API/Element/innerHTML)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui représente le balisage du contenu de l'élément.
-- [`Element.lastElementChild`](/fr/docs/Web/API/Element/lastElementChild) {{readonlyInline}}
-  - : Renvoie le dernier élément enfant de cet élément.
-- [`Element.localName`](/fr/docs/Web/API/Element/localName) {{readOnlyInline}}
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui représente la partie locale pour le nom qualifié de l'élément.
-- [`Element.namespaceURI`](/fr/docs/Web/API/Element/namespaceURI) {{readonlyInline}}
-  - : L'URI pour l'espace de noms de l'élément ou `null` s'il n'y en a pas.
+{{InheritanceDiagram}}
 
-    > [!NOTE]
-    > Pour Firefox 3.5 et les versions antérieures, les éléments HTML ne sont pas situés dans un espace de noms. Dans les versions ultérieures, les éléments HTML s'inscrivent dans l'espace de noms [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) tant pour les arbres HTML que XML.
+## Propriétés d'instance
 
-- [`Element.nextElementSibling`](/fr/docs/Web/API/Element/nextElementSibling) {{readOnlyInline}}
-  - : Un objet `Element` qui représente l'élément qui suit immédiatement l'élément courant dans l'arbre ou `null` si l'élément courant n'a pas de voisin.
-- [`Element.outerHTML`](/fr/docs/Web/API/Element/outerHTML)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui représente le balisage de l'élément (incluant son contenu). Lorsque cette propriété est utilisée en modification, cela remplace l'élément avec les noeuds construits à partir de l'analyse de la chaîne de caractères fournie.
-- [`Element.part`](/fr/docs/Web/API/Element/part)
-  - : Représente les identifiants des parties de l'élément (c'est-à-dire ceux définis avec l'attribut `part`) sous la forme d'un objet [`DOMTokenList`](/fr/docs/Web/API/DOMTokenList).
-- [`Element.prefix`](/fr/docs/Web/API/Element/prefix) {{readOnlyInline}}
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui représente le préfixe de l'espace de nom pour l'élément ou `null` si aucun préfixe n'est défini.
-- [`Element.previousElementSibling`](/fr/docs/Web/API/Element/previousElementSibling) {{readOnlyInline}}
-  - : Un objet `Element` qui représente l'élément qui précède immédiatement l'élément courant dans l'arbre ou `null` si l'élément courant n'a pas de voisin.
-- [`Element.scrollHeight`](/fr/docs/Web/API/Element/scrollHeight) {{readOnlyInline}}
-  - : Renvoie un nombre ([`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)) représentant la hauteur de la vue de défilement pour l'élément.
-- [`Element.scrollLeft`](/fr/docs/Web/API/Element/scrollLeft)
-  - : Un nombre ([`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)) qui représente le décalage à gauche de l'élément lié au défilement.
-- [`Element.scrollLeftMax`](/fr/docs/Web/API/Element/scrollLeftMax) {{Non-standard_Inline}} {{readOnlyInline}}
-  - : Renvoie un nombre ([`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)) représentant le décalage à gauche maximal pour l'élément lors du défilement.
-- [`Element.scrollTop`](/fr/docs/Web/API/Element/scrollTop)
-  - : Un nombre ([`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)) qui représente le nombre de pixels dont on a fait défiler verticalement le haut de l'élément.
-- [`Element.scrollTopMax`](/fr/docs/Web/API/Element/scrollTopMax) {{Non-standard_Inline}} {{readOnlyInline}}
-  - : Renvoie un nombre ([`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)) représentant le décalage maximal depuis le haut de l'élément lors du défilement.
-- [`Element.scrollWidth`](/fr/docs/Web/API/Element/scrollWidth) {{readOnlyInline}}
-  - : Renvoie un nombre ([`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)) représentant la largeur de la vue de défilement pour l'élément.
-- [`Element.shadowRoot`](/fr/docs/Web/API/Element/shadowRoot){{readOnlyInline}}
-  - : Renvoie la racine sombre ouverte (
+_`Element` hérite des propriétés de son interface parente, {{DOMxRef("Node")}}, et par extension de celles de l'interface parente de celle-ci, {{DOMxRef("EventTarget")}}._
 
-    <i lang="en">open shadow root</i>
+- {{DOMxRef("Element.activeViewTransition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Retourne une instance de {{DOMxRef("ViewTransition")}} représentant la [transition de vue](/fr/docs/Web/API/View_Transition_API) actuellement active sur un élément.
+- {{DOMxRef("Element.assignedSlot")}} {{ReadOnlyInline}}
+  - : Retourne un objet {{DOMxRef("HTMLSlotElement")}} représentant le {{HTMLElement("slot")}} dans lequel le nœud est inséré.
+- {{DOMxRef("Element.attributes")}} {{ReadOnlyInline}}
+  - : Retourne un objet {{DOMxRef("NamedNodeMap")}} contenant les attributs assignés de l'élément HTML correspondant.
+- {{DOMxRef("Element.childElementCount")}} {{ReadOnlyInline}}
+  - : Retourne le nombre d'éléments enfants de cet élément.
+- {{DOMxRef("Element.children")}} {{ReadOnlyInline}}
+  - : Retourne les éléments enfants de cet élément.
+- {{DOMxRef("Element.classList")}} {{ReadOnlyInline}}
+  - : Retourne un objet {{DOMxRef("DOMTokenList")}} contenant la liste des attributs de classe.
+- {{DOMxRef("Element.className")}}
+  - : Une chaîne de caractères représentant la classe de l'élément.
+- {{DOMxRef("Element.clientHeight")}} {{ReadOnlyInline}}
+  - : Retourne un nombre représentant la hauteur intérieure de l'élément.
+- {{DOMxRef("Element.clientLeft")}} {{ReadOnlyInline}}
+  - : Retourne un nombre représentant la largeur de la bordure gauche de l'élément.
+- {{DOMxRef("Element.clientTop")}} {{ReadOnlyInline}}
+  - : Retourne un nombre représentant la largeur de la bordure supérieure de l'élément.
+- {{DOMxRef("Element.clientWidth")}} {{ReadOnlyInline}}
+  - : Retourne un nombre représentant la largeur intérieure de l'élément.
+- {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}}
+  - : Un nombre indiquant la taille de zoom effective de l'élément, ou 1.0 si l'élément n'est pas rendu.
+- {{DOMxRef("Element.customElementRegistry")}} {{ReadOnlyInline}}
+  - : L'objet {{DOMxRef("CustomElementRegistry")}} associé à cet élément, ou `null` si aucun n'a été défini.
+- {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
+  - : Une chaîne de caractères reflétant l'attribut [`elementtiming`](/fr/docs/Web/HTML/Reference/Attributes/elementtiming) qui marque un élément pour observation dans l'API {{DOMxRef("PerformanceElementTiming")}}.
+- {{DOMxRef("Element.firstElementChild")}} {{ReadOnlyInline}}
+  - : Retourne le premier élément enfant de cet élément.
+- {{DOMxRef("Element.id")}}
+  - : Une chaîne de caractères représentant l'identifiant de l'élément.
+- {{DOMxRef("Element.innerHTML")}}
+  - : Une chaîne de caractères représentant le balisage du contenu de l'élément.
+- {{DOMxRef("Element.lastElementChild")}} {{ReadOnlyInline}}
+  - : Retourne le dernier élément enfant de cet élément.
+- {{DOMxRef("Element.localName")}} {{ReadOnlyInline}}
+  - : Une chaîne de caractères représentant la partie locale du nom qualifié de l'élément.
+- {{DOMxRef("Element.namespaceURI")}} {{ReadOnlyInline}}
+  - : L'URI de l'espace de noms de l'élément, ou `null` s'il n'y a pas d'espace de noms.
+- {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
+  - : Un objet `Element`, l'élément immédiatement suivant celui donné dans l'arbre, ou `null` s'il n'y a pas de nœud voisin.
+- {{DOMxRef("Element.outerHTML")}}
+  - : Une chaîne de caractères représentant le balisage de l'élément, y compris son contenu. Lorsqu'elle est utilisée comme un mutateur, elle remplace l'élément par des nœuds analysés à partir de la chaîne de caractères donnée.
+- {{DOMxRef("Element.part")}}
+  - : Représente l'identifiant de partie(s) de l'élément (c'est-à-dire, défini en utilisant l'attribut `part`), retourné en tant que {{DOMxRef("DOMTokenList")}}.
+- {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
+  - : Une chaîne de caractères représentant le préfixe de l'espace de noms de l'élément, ou `null` si aucun préfixe n'est défini.
+- {{DOMxRef("Element.previousElementSibling")}} {{ReadOnlyInline}}
+  - : Un objet `Element`, l'élément immédiatement précédent celui donné dans l'arbre, ou `null` s'il n'y a pas de nœud voisin.
+- {{DOMxRef("Element.scrollHeight")}} {{ReadOnlyInline}}
+  - : Retourne un nombre représentant la hauteur de la zone de défilement d'un élément.
+- {{DOMxRef("Element.scrollLeft")}}
+  - : Un nombre représentant le décalage de défilement horizontal de l'élément.
+- {{DOMxRef("Element.scrollLeftMax")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
+  - : Retourne un nombre représentant le décalage de défilement horizontal maximal possible pour l'élément.
+- {{DOMxRef("Element.scrollTop")}}
+  - : Un nombre représentant le nombre de pixels que le haut de l'élément est défilé verticalement.
+- {{DOMxRef("Element.scrollTopMax")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
+  - : Retourne un nombre représentant le décalage de défilement vertical maximal possible pour l'élément.
+- {{DOMxRef("Element.scrollWidth")}} {{ReadOnlyInline}}
+  - : Retourne un nombre représentant la largeur de la zone de défilement de l'élément.
+- {{DOMxRef("Element.shadowRoot")}} {{ReadOnlyInline}}
+  - : Retourne la racine d'ombre (<i lang="en">shadow root</i> en anglais) ouverte hébergée par l'élément, ou `null` si aucune racine d'ombre ouverte n'est présente.
+- {{DOMxRef("Element.slot")}}
+  - : Retourne le nom de l'emplacement du DOM d'ombre (<i lang="en">shadow DOM slot</i> en anglais) dans lequel l'élément est inséré.
+- {{DOMxRef("Element.tagName")}} {{ReadOnlyInline}}
+  - : Retourne une chaîne de caractères avec le nom de la balise pour l'élément donné.
 
-    ) hébergée par l'élément ou `null` si aucune racine sombre ouverte n'est présente.
+### Propriétés d'instance provenant de l'ARIA
 
-- [`Element.openOrClosedShadowRoot`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/dom/openOrClosedShadowRoot) {{Non-standard_Inline}}{{readOnlyInline}}
-  - : Renvoie la racine sombre hébergée par l'élément (qu'elle soit ouverte ou fermée). **Uniquement disponible pour [les WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions).**
-- [`Element.slot`](/fr/docs/Web/API/Element/slot) {{Experimental_Inline}}
-  - : Renvoie le nom de l'emplacement du DOM sombre dans lequel l'élément est inséré.
-- [`Element.tagName`](/fr/docs/Web/API/Element/tagName) {{readOnlyInline}}
-  - : Renvoie une chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui est le nom de la balise pour l'élément courant.
+_L'interface `Element` inclut également les propriétés suivantes._
 
-### Propriétés provenant d'ARIA
+- {{DOMxRef("Element.ariaAtomic")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic), qui indique si les technologies d'assistance présentent toutes les parties ou seulement certaines parties de la région modifiée en fonction des notifications de changement définies par l'attribut [`aria-relevant`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant).
+- {{DOMxRef("Element.ariaAutoComplete")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-autocomplete`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete), qui indique si la saisie de texte peut déclencher l'affichage d'une ou plusieurs prédictions de la valeur prévue par l'utilisateur·ice pour une zone de combinaison, une zone de recherche ou une zone de texte, et définit comment les prédictions seraient présentées si elles étaient faites.
+- {{DOMxRef("Element.ariaBrailleLabel")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-braillelabel`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel), qui définit l'étiquette braille de l'élément.
+- {{DOMxRef("Element.ariaBrailleRoleDescription")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-brailleroledescription`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription), qui définit la description du rôle braille ARIA de l'élément.
+- {{DOMxRef("Element.ariaBusy")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-busy`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy), qui indique si un élément est en cours de modification, car les technologies d'assistance peuvent vouloir attendre que les modifications soient terminées avant de les exposer à l'utilisateur·ice.
+- {{DOMxRef("Element.ariaChecked")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked), qui indique l'état actuel «&nbsp;coché&nbsp;» des cases à cocher, des boutons radio et d'autres widgets ayant un état coché.
+- {{DOMxRef("Element.ariaColCount")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-colcount`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount), qui définit le nombre de colonnes dans un tableau, une grille ou une arborescence de grille.
+- {{DOMxRef("Element.ariaColIndex")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-colindex`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex), qui définit l'index ou la position d'une colonne par rapport au nombre total de colonnes dans un tableau, une grille ou une arborescence de grille.
+- {{DOMxRef("Element.ariaColIndexText")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-colindextext`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext), qui définit une alternative textuelle lisible par un·e humain·e pour `aria-colindex`.
+- {{DOMxRef("Element.ariaColSpan")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-colspan`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan), qui définit le nombre de colonnes couvertes par une cellule ou une cellule de grille dans un tableau, une grille ou une arborescence de grille.
+- {{DOMxRef("Element.ariaCurrent")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-current`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current), qui indique l'élément représentant l'élément actuel dans un conteneur ou un ensemble d'éléments liés.
+- {{DOMxRef("Element.ariaDescription")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-description`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description), qui définit une valeur de chaîne de caractères décrivant ou annotant l'élément actuel.
+- {{DOMxRef("Element.ariaDisabled")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-disabled`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled), qui indique que l'élément est perceptible mais désactivé, donc il n'est pas modifiable ou autrement opérationnel.
+- {{DOMxRef("Element.ariaExpanded")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded), qui indique si un élément de regroupement possédé ou contrôlé par cet élément est développé ou réduit.
+- {{DOMxRef("Element.ariaHasPopup")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-haspopup`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup), qui indique la disponibilité et le type d'élément contextuel interactif, tel qu'un menu ou une boîte de dialogue, pouvant être déclenché par un élément.
+- {{DOMxRef("Element.ariaHidden")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden), qui indique si l'élément est exposé à une API d'accessibilité.
+- {{DOMxRef("Element.ariaInvalid")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-invalid`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid), qui indique que la valeur saisie ne correspond pas au format attendu par l'application.
+- {{DOMxRef("Element.ariaKeyShortcuts")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-keyshortcuts`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts), qui indique les raccourcis clavier qu'un·e auteur·ice a mis en œuvre pour activer ou donner la sélection à un élément.
+- {{DOMxRef("Element.ariaLabel")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label), qui définit une valeur de chaîne de caractères étiquetant l'élément actuel.
+- {{DOMxRef("Element.ariaLevel")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-level`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level), qui définit le niveau hiérarchique d'un élément au sein d'une structure.
+- {{DOMxRef("Element.ariaLive")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live), qui indique qu'un élément est mis à jour et décrit les types de mises à jour que les agents utilisateurs, les technologies d'assistance et l'utilisateur·ice peuvent attendre de la région dynamique.
+- {{DOMxRef("Element.ariaModal")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-modal`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal), qui indique si un élément est modal lorsqu'il est affiché.
+- {{DOMxRef("Element.ariaMultiline")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-multiline`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline), qui indique si une zone de texte accepte plusieurs lignes de saisie ou seulement une seule ligne.
+- {{DOMxRef("Element.ariaMultiSelectable")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-multiselectable`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable), qui indique que l'utilisateur·ice peut sélectionner plusieurs éléments parmi les descendants sélectionnables actuels.
+- {{DOMxRef("Element.ariaOrientation")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-orientation`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation), qui indique si l'orientation de l'élément est horizontale, verticale ou inconnue/ambiguë.
+- {{DOMxRef("Element.ariaPlaceholder")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-placeholder`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder), qui définit un court indice destiné à aider l'utilisateur·ice lors de la saisie de données lorsque le contrôle n'a pas de valeur.
+- {{DOMxRef("Element.ariaPosInSet")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset), qui définit le numéro ou la position d'un élément dans l'ensemble actuel de `listitems` ou `treeitems`.
+- {{DOMxRef("Element.ariaPressed")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed), qui indique l'état actuel «&nbsp;pressé&nbsp;» des boutons bascule.
+- {{DOMxRef("Element.ariaReadOnly")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly), qui indique que l'élément n'est pas modifiable, mais reste autrement opérationnel.
+- {{DOMxRef("Element.ariaRelevant")}} {{Non-standard_Inline}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-relevant`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant), qui indique quelles notifications l'agent utilisateur déclenche lorsque l'arbre d'accessibilité dans une région dynamique est modifié. C'est utilisé pour décrire quels changements dans une région `aria-live` sont pertinents et doivent être annoncés.
+- {{DOMxRef("Element.ariaRequired")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required), qui indique que l'utilisateur·ice doit fournir une saisie sur l'élément avant qu'un formulaire puisse être envoyé.
+- {{DOMxRef("Element.ariaRoleDescription")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-roledescription`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription), qui définit une description lisible par un·e humain·e et localisée par l'auteur·ice pour le rôle d'un élément.
+- {{DOMxRef("Element.ariaRowCount")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-rowcount`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount), qui définit le nombre total de lignes dans un tableau, une grille ou un arbre de grille.
+- {{DOMxRef("Element.ariaRowIndex")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-rowindex`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex), qui définit l'index ou la position d'une ligne par rapport au nombre total de lignes dans un tableau, une grille ou un arbre de grille.
+- {{DOMxRef("Element.ariaRowIndexText")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-rowindextext`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext), qui définit une alternative textuelle lisible par un·e humain·e pour `aria-rowindex`.
+- {{DOMxRef("Element.ariaRowSpan")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-rowspan`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan), qui définit le nombre de lignes couvertes par une cellule ou une cellule de grille dans un tableau, une grille ou un arbre de grille.
+- {{DOMxRef("Element.ariaSelected")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected), qui indique l'état actuel «&nbsp;sélectionné&nbsp;» des éléments qui ont un état de sélection.
+- {{DOMxRef("Element.ariaSetSize")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize), qui définit le nombre d'éléments dans l'ensemble actuel de `listitems` ou `treeitems`.
+- {{DOMxRef("Element.ariaSort")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-sort`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort), qui indique si les éléments d'un tableau ou d'une grille sont triés par ordre croissant ou décroissant.
+- {{DOMxRef("Element.ariaValueMax")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-valueMax`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax), qui définit la valeur maximale autorisée pour un composant de plage.
+- {{DOMxRef("Element.ariaValueMin")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-valueMin`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin), qui définit la valeur minimale autorisée pour un composant de plage.
+- {{DOMxRef("Element.ariaValueNow")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-valueNow`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow), qui définit la valeur actuelle pour un composant de plage.
+- {{DOMxRef("Element.ariaValueText")}}
+  - : Une chaîne de caractères reflétant l'attribut [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext), qui définit une alternative textuelle lisible par un·e humain·e pour `aria-valuenow`.
+- {{DOMxRef("Element.role")}}
+  - : Une chaîne de caractères reflétant explicitement l'attribut [`role`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles), qui fournit le rôle sémantique de l'élément.
 
-_L'interface `Element` inclut les propriétés suivantes, définies sur le <i lang="en">mixin</i> `ARIAMixin`._
+#### Propriétés d'instance réfléchies à partir des références d'éléments ARIA
 
-- [`Element.ariaAtomic`](/fr/docs/Web/API/Element/ariaAtomic)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-atomic` qui indique si des technologies d'assistance présenteront tout ou partie de la région modifiée selon les notifications définies par l'attribut `aria-relevant`.
-- [`Element.ariaAutoComplete`](/fr/docs/Web/API/Element/ariaAutoComplete)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-autocomplete` qui indique si la saisie de texte peut déclencher l'affichage d'une ou plusieurs prédictions pour la valeur saisie par l'utilisateur à destination d'une liste de choix, d'une boîte de recherche ou d'une zone de texte. Elle indique également la façon dont les éventuelles prédictions seraient présentées.
-- [`Element.ariaBusy`](/fr/docs/Web/API/Element/ariaBusy)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-busy` qui indique d'un élément est en train d'être modifié. Les technologies d'assistance peuvent alors faire le choix d'attendre la fin de la modification avant d'exposer le contenu à l'utilisateur.
-- [`Element.ariaChecked`](/fr/docs/Web/API/Element/ariaChecked)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-checked` indiquant l'état coché (ou non) des cases à cocher, des boutons radio ou des autres éléments d'interface graphique qui peuvent être cochés.
-- [`Element.ariaColCount`](/fr/docs/Web/API/Element/ariaColCount)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-colcount` indiquant le nombre de colonnes d'un tableau, d'une grille ou d'une grille arborescente.
-- [`Element.ariaColIndex`](/fr/docs/Web/API/Element/ariaColIndex)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-colindex` qui définit l'indice de la colonne d'un élément ou sa position par rapport au nombre total de colonnes d'un tableau, d'une grille ou d'une grille arborescente.
-- [`Element.ariaColIndexText`](/fr/docs/Web/API/Element/ariaColIndexText)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-colindextext` qui définit texte alternatif à `aria-colindex` qui soit compréhensible par un humain.
-- [`Element.ariaColSpan`](/fr/docs/Web/API/Element/ariaColSpan)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-colspan` qui définit le nombre de colonnes sur lesquelles s'étend une cellule dans un tableau, une grille ou une grille arborescente.
-- [`Element.ariaCurrent`](/fr/docs/Web/API/Element/ariaCurrent)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-current` qui indique l'élément représente l'objet courant dans un conteneur ou un ensemble d'éléments.
-- [`Element.ariaDescription`](/fr/docs/Web/API/Element/ariaDescription)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-description` qui définit la chaîne de caractères pour décrire ou annoter l'élément courant.
-- [`Element.ariaDisabled`](/fr/docs/Web/API/Element/ariaDisabled)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-disabled` qui indique que l'élément est perceptible mais désactivé et qu'il ne peut être édité ou manipulé.
-- [`Element.ariaExpanded`](/fr/docs/Web/API/Element/ariaExpanded)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-expanded` qui indique si un élément de groupement contrôlé par l'élément courant est développé ou replié.
-- [`Element.ariaHasPopup`](/fr/docs/Web/API/Element/ariaHasPopup)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-haspopup` qui indique la disponibilité et le type d'élément interactif visuel comme un menu ou une boîte de dialogue pouvant être généré par l'élément courant.
-- [`Element.ariaHidden`](/fr/docs/Web/API/Element/ariaHidden)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-hidden` qui indique si l'élément est exposé à une API d'accessibilité.
-- [`Element.ariaKeyShortcuts`](/fr/docs/Web/API/Element/ariaKeyShortcuts)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-keyshortcuts` qui indique les raccourcis clavier implémentés spécifiquement pour activer ou fournir le focus à un élément.
-- [`Element.ariaLabel`](/fr/docs/Web/API/Element/ariaLabel)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-label` qui définit une chaîne de caractères étant un libellé pour l'élément courant.
-- [`Element.ariaLevel`](/fr/docs/Web/API/Element/ariaLevel)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-level` qui définit le niveau hiérarchique de l'élément au sein d'une structure.
-- [`Element.ariaLive`](/fr/docs/Web/API/Element/ariaLive)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-live` qui indique que l'élément sera mis à jour et qui décrit les types de mises à jour qui peuvent être attendues par les agents utilisateur, les outils d'assistance et l'utilisateur.
-- [`Element.ariaModal`](/fr/docs/Web/API/Element/ariaModal)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-modal` qui indique si un élément est modal lorsqu'il est affiché.
-- [`Element.ariaMultiline`](/fr/docs/Web/API/Element/ariaMultiline)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-multiline` qui indique si une zone de texte accepte une saisie sur plusieurs lignes ou sur une seule ligne.
-- [`Element.ariaMultiSelectable`](/fr/docs/Web/API/Element/ariaMultiSelectable)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-multiselectable` qui indique que la personne peut choisir plus d'un élément parmi les éléments descendants qui peuvent être sélectionnés.
-- [`Element.ariaOrientation`](/fr/docs/Web/API/Element/ariaOrientation)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-orientation` qui indique si l'orientation de l'élément est horizontale, verticale ou inconnue voire ambigüe.
-- [`Element.ariaPlaceholder`](/fr/docs/Web/API/Element/ariaPlaceholder)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-placeholder` qui définit une indication courte destinée à aider l'utilisateur à saisir une valeur lorsque le contrôle ne possède pas de valeur.
-- [`Element.ariaPosInSet`](/fr/docs/Web/API/Element/ariaPosInSet)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-posinset` qui définit l'index ou la position de l'élément courant dans l'ensemble ou l'arbre d'éléments.
-- [`Element.ariaPressed`](/fr/docs/Web/API/Element/ariaPressed)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-pressed` qui indique l'état actif/pressé des boutons.
-- [`Element.ariaReadOnly`](/fr/docs/Web/API/Element/ariaReadOnly)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-readonly` qui indique que l'élément ne peut pas être édité mais qu'il peut être utilisé sinon.
-- [`Element.ariaRelevant`](/fr/docs/Web/API/Element/ariaRelevant)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-relevant` qui indique les notifications qui seront déclenchées par l'agent utilisateur lorsque l'arbre d'accessibilité d'une région interactive sera modifié. Cette propriété est utilisée afin de décrire quels changements d'une région `aria-live` sont pertinents et devraient être annoncés.
-- [`Element.ariaRequired`](/fr/docs/Web/API/Element/ariaRequired)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-required` qui indique que la saisie d'une utilisatrice ou d'un utilisateur est requise sur l'élément avant qu'un formulaire puisse être envoyé.
-- [`Element.ariaRoleDescription`](/fr/docs/Web/API/Element/ariaRoleDescription)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-roledescription` qui définit une description compréhensible par un humain, adaptée par l'autrice ou l'auteur du document pour le rôle de l'élément courant.
-- [`Element.ariaRowCount`](/fr/docs/Web/API/Element/ariaRowCount)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-rowcount` qui définit le nombre total de lignes dans un tableau, une grille ou une grille arborescente.
-- [`Element.ariaRowIndex`](/fr/docs/Web/API/Element/ariaRowIndex)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-rowindex` qui définit l'index ou la position de la ligne de l'élément par rapport au nombre total de lignes dans le tableau, la grille ou la grille arborescente.
-- [`Element.ariaRowIndexText`](/fr/docs/Web/API/Element/ariaRowIndexText)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-rowindextext` qui définit un libellé alternatif à `aria-rowindex`, compréhensible par un humain.
-- [`Element.ariaRowSpan`](/fr/docs/Web/API/Element/ariaRowSpan)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-rowspan` qui définit le nombre de lignes sur lesquelles s'étend une cellule dans un tableau, une grille ou une grille arborescente.
-- [`Element.ariaSelected`](/fr/docs/Web/API/Element/ariaSelected)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-selected` qui indique l'état de sélection pour les éléments qui peuvent être sélectionnés.
-- [`Element.ariaSetSize`](/fr/docs/Web/API/Element/ariaSetSize)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-setsize` qui définit le nombre d'objets dans l'ensemble d'éléments d'une liste ou d'un arbre.
-- [`Element.ariaSort`](/fr/docs/Web/API/Element/ariaSort)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-sort` qui indique si les objets d'un tableau ou d'une grille sont triés par ordre croissant ou décroissant.
-- [`Element.ariaValueMax`](/fr/docs/Web/API/Element/ariaValueMax)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-valueMax` qui définit la valeur maximale autorisée pour un élément d'interface utilisateur décrivant un intervalle.
-- [`Element.ariaValueMin`](/fr/docs/Web/API/Element/ariaValueMin)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-valueMin` qui définit la valeur minimale autorisée pour un élément d'interface utilisateur décrivant un intervalle.
-- [`Element.ariaValueNow`](/fr/docs/Web/API/Element/ariaValueNow)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-valueNow` qui définit la valeur courante d'un élément d'interface utilisateur décrivant un intervalle.
-- [`Element.ariaValueText`](/fr/docs/Web/API/Element/ariaValueText)
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui reflète l'attribut `aria-valuetext` qui définit une alternative textuelle à `aria-valuenow` compréhensible par un humain.
+Les propriétés reflètent les éléments définis par la référence `id` dans les attributs correspondants, mais avec certaines exceptions. Voir [Références d'éléments réfléchis](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes#références_déléments_réfléchis) dans le guide _Attributs réfléchis_ pour plus d'informations.
 
-### Gestionnaires d'évènements
+- {{DOMxRef("Element.ariaActiveDescendantElement")}}
+  - : Un élément qui représente l'élément actif actuel lorsque la sélection est sur un composant [`composite`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role), [`combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`textbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), [`group`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) ou [`application`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role).
+    Reflète l'attribut [`aria-activedescendant`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant).
+- {{DOMxRef("Element.ariaControlsElements")}}
+  - : Un tableau d'éléments dont le contenu ou la présence est contrôlé par l'élément auquel il est appliqué.
+    Reflète l'attribut [`aria-controls`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls).
+- {{DOMxRef("Element.ariaDescribedByElements")}}
+  - : Un tableau d'éléments qui contiennent la description accessible pour l'élément auquel il est appliqué.
+    Reflète l'attribut [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
+- {{DOMxRef("Element.ariaDetailsElements")}}
+  - : Un tableau d'éléments qui fournissent des détails accessibles pour l'élément auquel il est appliqué.
+    Reflète l'attribut [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details).
+- {{DOMxRef("Element.ariaErrorMessageElements")}}
+  - : Un tableau d'éléments qui fournissent un message d'erreur pour l'élément auquel il est appliqué.
+    Reflète l'attribut [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage).
+- {{DOMxRef("Element.ariaFlowToElements")}}
+  - : Un tableau d'éléments qui identifient l'élément suivant (ou les éléments suivants) dans un ordre de lecture alternatif du contenu, remplaçant l'ordre de lecture par défaut général à la discrétion de l'utilisateur·ice.
+    Reflète l'attribut [`aria-flowto`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto).
+- {{DOMxRef("Element.ariaLabelledByElements")}}
+  - : Un tableau d'éléments qui fournissent le nom accessible pour l'élément auquel il est appliqué.
+    Reflète l'attribut [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
+- {{DOMxRef("Element.ariaOwnsElements")}}
+  - : Un tableau d'éléments possédés par l'élément auquel il est appliqué.
+    C'est utilisé pour définir une relation visuelle, fonctionnelle ou contextuelle entre un parent et ses éléments enfants lorsque la hiérarchie DOM ne peut pas être utilisée pour représenter la relation.
+    Reflète l'attribut [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns).
 
-- [`Element.onfullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event)
-  - : Un gestionnaire d'évènement pour l'évènement [`fullscreenchange`](/fr/docs/Web/API/Document/fullscreenchange_event) qui est envoyé lorsque l'élément passe en mode plein écran ou sort de celui-ci. Cet évènement peut être utilisé pour surveiller les transitions entre les deux modes mais aussi pour surveiller les modifications inattendues comme lorsque l'application s'exécute en arrière-plan.
-- [`Element.onfullscreenerror`](/fr/docs/Web/API/Element/fullscreenerror_event)
-  - : Un gestionnaire d'évènement pour [`fullscreenerror`](/fr/docs/Web/API/Document/fullscreenerror_event) qui est envoyé lorsqu'une erreur se produit lors du passage au mode plein écran.
+## Méthodes d'instance
 
-## Méthodes
+_`Element` hérite des méthodes de ses parents {{DOMxRef("Node")}}, et de son propre parent, {{DOMxRef("EventTarget")}}._
 
-_`Element` hérite des méthodes fournit par la classe parente [`Node`](/fr/docs/Web/API/Node) et de sa classe parente avant elle : [`EventTarget`](/fr/docs/Web/API/EventTarget)._
-
-- [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener)
-  - : Enregistre un gestionnaire d'évènement sur l'élément pour un type d'évènement donné.
-- [`Element.after()`](/fr/docs/Web/API/Element/after)
-  - : Insère un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) dans la liste des enfants du parent de l'élément courant, juste après ce dernier.
-- [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow)
-  - : Attache un arbre du DOM sombre à l'élément indiqué puis renvoie une référence à sa racine [`ShadowRoot`](/fr/docs/Web/API/ShadowRoot).
-- [`Element.animate()`](/fr/docs/Web/API/Element/animate) {{Experimental_Inline}}
-  - : Une méthode synthétique pour créer et exécuter une animation sur un élément. Renvoie l'instance de l'objet `Animation` créé.
-- [`Element.append()`](/fr/docs/Web/API/Element/append)
-  - : Insère un ensemble d'objet [`Node`](/fr/docs/Web/API/Node) ou [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) après le dernier enfant de l'élément.
-- [`Element.before()`](/fr/docs/Web/API/Element/before)
-  - : Insère un ensemble d'objet [`Node`](/fr/docs/Web/API/Node) ou [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) dans la liste des enfants du parent de l'élément courant, juste avant ce dernier.
-- [`Element.closest()`](/fr/docs/Web/API/Element/closest)
-  - : Renvoie l'élément (`Element`) qui est le plus proche ancêtre de l'élément courant (ou l'élément courant lui-même) qui correspond au sélecteur passé en paramètre.
-- [`Element.createShadowRoot()`](/fr/docs/Web/API/Element/shadowRoot) {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Crée un [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) sur l'élément, le transformant ainsi en hôte sombre. Renvoie un objet [`ShadowRoot`](/fr/docs/Web/API/ShadowRoot).
-- [`Element.computedStyleMap()`](/fr/docs/Web/API/Element/computedStyleMap) {{Experimental_Inline}}
-  - : Renvoie une interface [`StylePropertyMapReadOnly`](/fr/docs/Web/API/StylePropertyMapReadOnly) qui fournit une représentation en lecture seule d'un bloc de déclaration CSS alternatif à [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration).
-- [`EventTarget.dispatchEvent()`](/fr/docs/Web/API/EventTarget/dispatchEvent)
-  - : Diffuse un évènement sur ce nœud dans le DOM et renvoie un booléen qui indique si aucun gestionnaire n'a annulé l'évènement.
-- [`Element.getAnimations()`](/fr/docs/Web/API/Element/getAnimations) {{Experimental_Inline}}
-  - : Renvoie un tableau des objets `Animation` actuellement actifs sur l'élément.
-- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute)
-  - : Récupère la valeur de l'attribut nommé pour le nœud courant et le renvoie comme un [objet](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object).
-- [`Element.getAttributeNames()`](/fr/docs/Web/API/Element/getAttributeNames)
-  - : Renvoie un tableau de noms d'attribut pour l'élément courant.
-- [`Element.getAttributeNode()`](/fr/docs/Web/API/Element/getAttributeNode)
-  - : Récupère la représentation du nœud pour l'attrtibut nommé du nœud courant et le renvoie comme un objet [`Attr`](/fr/docs/Web/API/Attr).
-- [`Element.getAttributeNodeNS()`](/fr/docs/Web/API/Element/getAttributeNodeNS)
-  - : Depuis le nœud courant, récupère la représentation du nœud pour l'attribut avec le nom et l'espace de noms indiqués et renvoie la valeur obtenue sous la forme d'un objet [`Attr`](/fr/docs/Web/API/Attr).
-- [`Element.getAttributeNS()`](/fr/docs/Web/API/Element/getAttributeNS)
-  - : Depuis le nœud courant, récupère la valeur de l'attribut avec le nom et l'espace de noms indiqués et la renvoie sous la forme d'un [objet](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object).
-- [`Element.getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect)
-  - : Renvoie la taille d'un élément et sa position relative dans la zone d'affichage (
-
-    <i lang="en">viewport</i>
-
-    ).
-
-- [`Element.getBoxQuads()`](/fr/docs/Web/API/Element/getBoxQuads) {{experimental_inline}}
-  - : Renvoie une liste d'objets [`DOMQuad`](/fr/docs/Web/API/DOMQuad) qui représentent les fragments CSS pour le nœud.
-- [`Element.getClientRects()`](/fr/docs/Web/API/Element/getClientRects)
-  - : Renvoie une collection de rectangles qui indique les rectangles englobants pour chaque ligne de texte d'un client.
-- [`Element.getElementsByClassName()`](/fr/docs/Web/API/Element/getElementsByClassName)
-  - : Renvoie une collection dynamique [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) qui contient tous les descendants de l'élément courant et qui possèdent la liste de classes fournie en paramètre.
-- [`Element.getElementsByTagName()`](/fr/docs/Web/API/Element/getElementsByTagName)
-  - : Renvoie une collection dynamique [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) qui contient tous les descendants de l'élément courant avec un nom de balise donné.
-- [`Element.getElementsByTagNameNS()`](/fr/docs/Web/API/Element/getElementsByTagNameNS)
-  - : Renvoie une collection dynamique [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) qui contient tous les descendants de l'élément courant qui ont un nom de balise et un espace de noms donnés.
-- [`Element.hasAttribute()`](/fr/docs/Web/API/Element/hasAttribute)
-  - : Renvoie un booléen indiquant si l'élément courant possède l'attribut donné.
-- [`Element.hasAttributeNS()`](/fr/docs/Web/API/Element/hasAttributeNS)
-  - : Renvoie un booléen indiquant si l'élément courant possède l'attribut donné pour l'espace de noms donné.
-- [`Element.hasAttributes()`](/fr/docs/Web/API/Element/hasAttributes)
-  - : Renvoie un booléen qui indique si l'élément courant a un ou plusieurs attributs HTML.
-- [`Element.hasPointerCapture()`](/fr/docs/Web/API/Element/hasPointerCapture)
-  - : Indique si l'élément a la capture du pointeur pour le pointeur identifié par l'identifiant passé en argument.
-- [`Element.insertAdjacentElement()`](/fr/docs/Web/API/Element/insertAdjacentElement)
-  - : Insère un nœud d'élément à la position relative indiquée par rapport à l'élément courant.
-- [`Element.insertAdjacentHTML()`](/fr/docs/Web/API/Element/insertAdjacentHTML)
-  - : Analyse le texte comme HTML ou XML puis insère les nœuds résultatns dans l'arbre à la position indiquée.
-- [`Element.insertAdjacentText()`](/fr/docs/Web/API/Element/insertAdjacentText)
-  - : Insère un nœud textuel à la position relative indiquée, par rapport à l'élément courant.
-- [`Element.matches()`](/fr/docs/Web/API/Element/matches)
-  - : Renvoie un booléen qui indique si l'élément serait ciblé par la chaîne de caractères passée en argument qui décrit un sélecteur.
-- [`Element.prepend()`](/fr/docs/Web/API/Element/prepend)
-  - : Insère un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) avant le premier enfant de l'élément courant.
-- [`Element.querySelector()`](/fr/docs/Web/API/Element/querySelector)
-  - : Renvoie le premier objet [`Node`](/fr/docs/Web/API/Node) qui correspond au sélecteur donné, relatif à l'élément courant.
-- [`Element.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll)
-  - : Renvoie un objet [`NodeList`](/fr/docs/Web/API/NodeList) contenant les nœuds pour lesquels le sélecteur, passé en argument, relatif à l'élément courant.
-- [`Element.releasePointerCapture()`](/fr/docs/Web/API/Element/releasePointerCapture)
-  - : Libère (arrête) la capture du pointeur précédemment activée pour un évènement de pointeur spécifique.
-- [`Element.remove()`](/fr/docs/Web/API/Element/remove)
-  - : Retire l'élément de la liste des éléments enfants de son parent.
-- [`Element.removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute)
-  - : Retire l'attribut nommé du nœud courant.
-- [`Element.removeAttributeNode()`](/fr/docs/Web/API/Element/removeAttributeNode)
-  - : Retire la représentation nodale de l'attribut nommé pour le nœud courant.
-- [`Element.removeAttributeNS()`](/fr/docs/Web/API/Element/removeAttributeNS)
-  - : Sur le nœud courant, retire l'attribut avec le nom et l'espace de noms indiqués.
-- [`EventTarget.removeEventListener()`](/fr/docs/Web/API/EventTarget/removeEventListener)
-  - : Retire un gestionnaire d'évènement de l'élément.
-- [`Element.replaceChildren()`](/fr/docs/Web/API/Element/replaceChildren)
-  - : Remplace l'enfant existant d'un nœud avec un nouvel ensemble d'enfants.
-- [`Element.replaceWith()`](/fr/docs/Web/API/Element/replaceWith)
-  - : Remplace l'élément dans la liste des enfants de son parent par un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
-- [`Element.requestFullscreen()`](/fr/docs/Web/API/Element/requestFullscreen) {{Experimental_Inline}}
-  - : Demande au navigateur, de façon asynchrone, d'afficher l'élément en plein écran.
-- [`Element.requestPointerLock()`](/fr/docs/Web/API/Element/requestPointerLock) {{Experimental_Inline}}
-  - : Demande au navigateur, de façon asynchrone, de bloquer le pointeur sur l'élément indiqué.
-- [`Element.scroll()`](/fr/docs/Web/API/Element/scroll)
-  - : Défile jusqu'à un ensemble de coordonnées données à l'intérieur de l'élément courant.
-- [`Element.scrollBy()`](/fr/docs/Web/API/Element/scrollBy)
-  - : Défile un élément de la quantité indiquée.
-- [`Element.scrollIntoView()`](/fr/docs/Web/API/Element/scrollIntoView) {{Experimental_Inline}}
-  - : Défile la page jusqu'à ce que l'élément apparaisse dans la vue.
-- [`Element.scrollTo()`](/fr/docs/Web/API/Element/scrollTo)
-  - : Défile jusqu'à un ensemble de coordonnées particulier à l'intérieur de l'élément donné.
-- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
-  - : Définit la valeur d'un attribut nommé pour le nœud courant.
-- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)
-  - : Définit la représentation nodale d'un attribut nommé pour le nœud courant.
-- [`Element.setAttributeNodeNS()`](/fr/docs/Web/API/Element/setAttributeNodeNS)
-  - : Pour le nœud courant, définit la représentation nodale d'un attribut avec le nom et l'espace de noms indiqués.
-- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)
-  - : Pour le nœud courant, définit la valeur de l'attribut avec le nom et l'espace de noms indiqués.
-- [`Element.setCapture()`](/fr/docs/Web/API/Element/setCapture) {{Non-standard_Inline}}{{Deprecated_Inline}}
-  - : Initialise la capture des évènements liés à la souris, redirigeant ainsi tous les évènements de la souris sur cet élément.
-- [`Element.setPointerCapture()`](/fr/docs/Web/API/Element/setPointerCapture)
-  - : Désigne un élément spécifique comme future cible pour la capture des [évènements de pointeur](/fr/docs/Web/API/Pointer_events).
-- [`Element.toggleAttribute()`](/fr/docs/Web/API/Element/toggleAttribute)
-  - : Active/désactive un attribut booléen sur l'élément courant : s'il est présent, cela le retire et s'il est absent, cela l'ajoute.
+- {{DOMxRef("Element.after()")}}
+  - : Insère un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères dans la liste des enfants du parent d'un `Element`, juste après un `Element`.
+- {{DOMxRef("Element.animate()")}}
+  - : Une méthode raccourcie pour créer et exécuter une animation sur un élément. Retourne l'instance de l'objet `Animation` créée.
+- {{DOMxRef("Element.ariaNotify()")}}
+  - : Définit qu'une chaîne de caractères de texte donnée doit être annoncée par un lecteur d'écran.
+- {{DOMxRef("Element.append()")}}
+  - : Insère un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères après le dernier enfant de l'élément.
+- {{DOMxRef("Element.attachShadow()")}}
+  - : Attache un arbre de DOM d'ombre à l'élément défini et retourne une référence à son {{DOMxRef("ShadowRoot")}}.
+- {{DOMxRef("Element.before()")}}
+  - : Insère un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères dans la liste des enfants du parent d'un `Element`, juste avant un `Element`.
+- {{DOMxRef("Element.checkVisibility()")}}
+  - : Retourne si un élément est censé être visible ou non en fonction de vérifications configurables.
+- {{DOMxRef("Element.closest()")}}
+  - : Retourne un `Element` qui est l'ancêtre le plus proche de l'élément actuel (ou l'élément actuel lui-même) qui correspond aux sélecteurs donnés en paramètre.
+- {{DOMxRef("Element.computedStyleMap()")}}
+  - : Retourne une interface {{DOMxRef("StylePropertyMapReadOnly")}} qui fournit une représentation en lecture seule d'un bloc de déclaration CSS, alternative à {{DOMxRef("CSSStyleDeclaration")}}.
+- {{DOMxRef("Element.getAnimations()")}}
+  - : Retourne un tableau d'objets `Animation` actuellement actifs sur l'élément.
+- {{DOMxRef("Element.getAttribute()")}}
+  - : Retourne la valeur de l'attribut nommé de l'élément actuel et la retourne sous forme de chaîne de caractères.
+- {{DOMxRef("Element.getAttributeNames()")}}
+  - : Retourne un tableau des noms d'attributs de l'élément actuel.
+- {{DOMxRef("Element.getAttributeNode()")}}
+  - : Récupère la représentation en nœud de l'attribut nommé de l'élément actuel et la retourne sous forme d'un {{DOMxRef("Attr")}}.
+- {{DOMxRef("Element.getAttributeNodeNS()")}}
+  - : Récupère la représentation en nœud de l'attribut avec le nom et l'espace de noms définis, à partir de l'élément actuel, et la retourne sous forme d'un objet {{DOMxRef("Attr")}}.
+- {{DOMxRef("Element.getAttributeNS()")}}
+  - : Récupère la valeur de l'attribut avec l'espace de noms et le nom définis à partir de l'élément actuel et la retourne sous forme de chaîne de caractères.
+- {{DOMxRef("Element.getBoundingClientRect()")}}
+  - : Retourne la taille d'un élément et sa position par rapport à la fenêtre d'affichage.
+- {{DOMxRef("Element.getBoxQuads()")}} {{Experimental_Inline}}
+  - : Retourne une liste d'objets {{DOMxRef("DOMQuad")}} représentant les fragments CSS du nœud.
+- {{DOMxRef("Element.getClientRects()")}}
+  - : Retourne une collection de rectangles qui indiquent les rectangles englobants pour chaque ligne de texte dans un client.
+- {{DOMxRef("Element.getElementsByClassName()")}}
+  - : Retourne une {{DOMxRef("HTMLCollection")}} dynamique contenant tous les descendants de l'élément actuel qui possèdent la liste des classes données en paramètre.
+- {{DOMxRef("Element.getElementsByTagName()")}}
+  - : Retourne une {{DOMxRef("HTMLCollection")}} dynamique contenant tous les éléments descendants, d'un nom de balise particulier, à partir de l'élément actuel.
+- {{DOMxRef("Element.getElementsByTagNameNS()")}}
+  - : Retourne une {{DOMxRef("HTMLCollection")}} dynamique contenant tous les éléments descendants, d'un nom de balise et d'un espace de noms particuliers, à partir de l'élément actuel.
+- {{DOMxRef("Element.getHTML()")}}
+  - : Retourne le contenu DOM de l'élément sous forme de chaîne de caractères HTML, incluant éventuellement tout DOM d'ombre.
+- {{DOMxRef("Element.hasAttribute()")}}
+  - : Retourne une valeur booléenne indiquant si l'élément possède l'attribut défini ou non.
+- {{DOMxRef("Element.hasAttributeNS()")}}
+  - : Retourne une valeur booléenne indiquant si l'élément possède l'attribut défini, dans l'espace de noms défini, ou non.
+- {{DOMxRef("Element.hasAttributes()")}}
+  - : Retourne une valeur booléenne indiquant si l'élément possède un ou plusieurs attributs HTML présents.
+- {{DOMxRef("Element.hasPointerCapture()")}}
+  - : Indique si l'élément sur lequel il est invoqué a la capture du pointeur pour le pointeur identifié par l'ID de pointeur donné.
+- {{DOMxRef("Element.insertAdjacentElement()")}}
+  - : Insère un nœud élément donné à une position donnée par rapport à l'élément sur lequel il est invoqué.
+- {{DOMxRef("Element.insertAdjacentHTML()")}}
+  - : Analyse le texte comme HTML ou XML et insère les nœuds résultants dans l'arbre à la position donnée.
+- {{DOMxRef("Element.insertAdjacentText()")}}
+  - : Insère un nœud texte donné à une position donnée par rapport à l'élément sur lequel il est invoqué.
+- {{DOMxRef("Element.matches()")}}
+  - : Retourne une valeur booléenne indiquant si l'élément est sélectionné par la chaîne de caractères de sélecteur définie.
+- {{DOMxRef("Element.moveBefore()")}}
+  - : Déplace un nœud ({{DOMxRef("Node")}}) donné à l'intérieur du nœud invoqué en tant qu'enfant direct, avant un nœud de référence donné, sans supprimer puis insérer le nœud.
+- {{DOMxRef("Element.prepend()")}}
+  - : Insère un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères avant le premier enfant de l'élément.
+- {{DOMxRef("Element.pseudo()")}} {{Experimental_Inline}}
+  - : Retourne un objet {{DOMxRef("CSSPseudoElement")}} représentant le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) du type défini associé à l'élément.
+- {{DOMxRef("Element.querySelector()")}}
+  - : Retourne le premier {{DOMxRef("Node")}} qui correspond à la chaîne de caractères de sélecteur définie relative à l'élément.
+- {{DOMxRef("Element.querySelectorAll()")}}
+  - : Retourne une {{DOMxRef("NodeList")}} de nœuds qui correspondent à la chaîne de caractères de sélecteur définie relative à l'élément.
+- {{DOMxRef("Element.releasePointerCapture()")}}
+  - : Libère (arrête) la capture du pointeur qui avait été précédemment définie pour un {{DOMxRef("PointerEvent")}} spécifique.
+- {{DOMxRef("Element.remove()")}}
+  - : Supprime l'élément de la liste des enfants de son parent.
+- {{DOMxRef("Element.removeAttribute()")}}
+  - : Supprime l'attribut nommé du nœud actuel.
+- {{DOMxRef("Element.removeAttributeNode()")}}
+  - : Supprime la représentation du nœud de l'attribut nommé du nœud actuel.
+- {{DOMxRef("Element.removeAttributeNS()")}}
+  - : Supprime l'attribut avec le nom et l'espace de noms définis du nœud actuel.
+- {{DOMxRef("Element.replaceChildren()")}}
+  - : Remplace les enfants existants d'un {{DOMxRef("Node")}} par un nouvel ensemble d'enfants définis.
+- {{DOMxRef("Element.replaceWith()")}}
+  - : Remplace l'élément dans la liste des enfants de son parent par un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères.
+- {{DOMxRef("Element.requestFullscreen()")}}
+  - : Demande de manière asynchrone au navigateur de mettre l'élément en plein écran.
+- {{DOMxRef("Element.requestPointerLock()")}}
+  - : Permet de demander de manière asynchrone que le pointeur soit verrouillé sur l'élément donné.
+- {{DOMxRef("Element.scroll()")}}
+  - : Fait défiler vers un ensemble particulier de coordonnées à l'intérieur d'un élément donné.
+- {{DOMxRef("Element.scrollBy()")}}
+  - : Fait défiler un élément de la quantité donnée.
+- {{DOMxRef("Element.scrollIntoView()")}}
+  - : Fait défiler la page jusqu'à ce que l'élément soit visible.
+- {{DOMxRef("Element.scrollIntoViewIfNeeded()")}} {{Non-standard_Inline}}
+  - : Fait défiler l'élément actuel dans la zone visible de la fenêtre du navigateur s'il n'est pas déjà dans la zone visible de la fenêtre du navigateur. **Utilisez plutôt la méthode standard {{DOMxRef("Element.scrollIntoView()")}}.**
+- {{DOMxRef("Element.scrollTo()")}}
+  - : Fait défiler vers un ensemble particulier de coordonnées à l'intérieur d'un élément donné.
+- {{DOMxRef("Element.setAttribute()")}}
+  - : Définit la valeur d'un attribut nommé du nœud actuel.
+- {{DOMxRef("Element.setAttributeNode()")}}
+  - : Définit la représentation du nœud de l'attribut nommé du nœud actuel.
+- {{DOMxRef("Element.setAttributeNodeNS()")}}
+  - : Définit la représentation du nœud de l'attribut avec le nom et l'espace de noms définis, à partir du nœud actuel.
+- {{DOMxRef("Element.setAttributeNS()")}}
+  - : Définit la valeur de l'attribut avec le nom et l'espace de noms définis, à partir du nœud actuel.
+- {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Configure la capture des évènements de la souris, redirigeant tous les évènements de la souris vers cet élément.
+- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}}
+  - : Analyse et [assainit](/fr/docs/Web/API/HTML_Sanitizer_API) une chaîne de caractères HTML en un fragment de document, qui remplace ensuite le sous-arbre original de l'élément dans le DOM.
+- {{DOMxRef("Element.setHTMLUnsafe()")}}
+  - : Analyse une chaîne de caractères HTML en un fragment de document, sans assainissement, qui remplace ensuite le sous-arbre original de l'élément dans le DOM. La chaîne de caractères HTML peut inclure des racines d'ombre déclaratives, qui seraient analysées comme des éléments de modèle si le HTML était défini en utilisant {{DOMxRef("Element.innerHTML")}}.
+- {{DOMxRef("Element.setPointerCapture()")}}
+  - : Désigne un élément spécifique comme cible de capture des futurs [évènements de pointeur](/fr/docs/Web/API/Pointer_events).
+- {{DOMxRef("Element.startViewTransition()")}} {{Experimental_Inline}}
+  - : Démarre une nouvelle [transition de vue](/fr/docs/Web/API/View_Transition_API) dans le même document (SPA) et retourne un objet {{DOMxRef("ViewTransition")}} pour la représenter.
+- {{DOMxRef("Element.toggleAttribute()")}}
+  - : Bascule un attribut booléen, le supprimant s'il est présent et l'ajoutant s'il n'est pas présent, sur l'élément défini.
 
 ## Évènements
 
-On peut écouter ces évènements en utilisant la méthode `addEventListener()` ou en affectant un gestionnaire d'évènement à la propriété `onnomevenement` de cette interface.
+Écoutez ces évènements en utilisant `addEventListener()` ou en assignant un écouteur d'évènements à la propriété `oneventname` de cette interface.
 
-- [`cancel`](/fr/docs/Web/API/HTMLDialogElement/cancel_event)
-  - : Déclenché sur un élément [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) lorsque la personne indique au navigateur le souhait de fermer la boîte de dialogue courante. Un navigateur pourra par exemple déclencher cet évènement lors d'un appui sur la touche
+- {{DOMxRef("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Déclenché lorsqu'un script a été exécuté.
+- {{DOMxRef("Element/beforeinput_event", "beforeinput")}}
+  - : Déclenché lorsque la valeur d'un élément de saisie est sur le point d'être modifiée.
+- {{DOMxRef("Element/beforematch_event", "beforematch")}}
+  - : Déclenché sur un élément qui est dans l'état [_caché jusqu'à ce qu'il soit trouvé_](/fr/docs/Web/HTML/Reference/Global_attributes/hidden), lorsque le navigateur est sur le point de révéler son contenu parce que l'utilisateur·ice a trouvé le contenu avec la fonction «&nbsp;rechercher dans la page&nbsp;» ou avec la navigation par fragment.
+- {{DOMxRef("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Déclenché lorsqu'un script est sur le point d'être exécuté.
+- {{DOMxRef("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
+  - : Déclenché avant que les évènements de sélection WebXR ({{DOMxRef("XRSession/select_event", "select")}}, {{DOMxRef("XRSession/selectstart_event", "selectstart")}}, {{DOMxRef("XRSession/selectend_event", "selectend")}}) ne soient dispatchés.
+- {{DOMxRef("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
+  - : Déclenché sur tout élément avec {{CSSxRef("content-visibility", "content-visibility: auto")}} lorsqu'il commence ou cesse d'être [pertinent pour l'utilisateur·ice](/fr/docs/Web/CSS/Guides/Containment/Using#pertinent_pour_lutilisatrice_et_lutilisateur) et [ignore son contenu](/fr/docs/Web/CSS/Guides/Containment/Using#ignorer_le_contenu).
+- {{DOMxRef("Element/input_event","input")}}
+  - : Déclenché lorsqu'une valeur d'un élément est modifiée directement par une action de l'utilisateur·ice.
+- {{DOMxRef("Element/securitypolicyviolation_event","securitypolicyviolation")}}
+  - : Déclenché lorsqu'une [Politique de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) est violée.
+- {{DOMxRef("Element/wheel_event","wheel")}}
+  - : Déclenché lorsque l'utilisateur·ice fait tourner un bouton de molette sur un dispositif de pointage (généralement une souris).
 
-    <kbd>Echap</kbd>
+### Évènements d'animation
 
-    ou lors d'un clic sur le bouton « Fermer cette boîte de dialogue » fourni par le navigateur. Également disponible via la propriété [`oncancel`](/fr/docs/Web/API/GlobalEventHandlers/oncancel).
-
-- [`error`](/fr/docs/Web/API/HTMLElement/error_event)
-  - : Déclenché lors de l'échec du chargement d'une ressource ou lorsque celle-ci ne peut être utilisée. Cet évènement sera par exemple déclenché lors d'une erreur d'exécution d'un script ou lorsqu'une image ne peut être trouvée ou est invalide. Également disponible via la propriété [`onerror`](/fr/docs/Web/API/Window/error_event).
-- [`scroll`](/fr/docs/Web/API/Element/scroll_event)
-  - : Déclenché lors du défilement de la vue du document ou d'un élément. Également disponible via la propriété [`onscroll`](/fr/docs/Web/API/Element/scroll_event).
-- [`select`](/fr/docs/Web/API/HTMLInputElement/select_event)
-  - : Déclenché lors de la sélection de texte. Également disponible via la propriété [`onselect`](/fr/docs/Web/API/HTMLInputElement/select_event).
-- [`show`](/fr/docs/Web/API/Element/show_event)
-  - : Déclenché lorsqu'un évènement [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event) a été déclenché ou a bouillonné sur un élément qui dispose de l'attribut [`contextmenu`](/fr/docs/Web/HTML/Reference/Elements/menu) attribute. {{deprecated_inline}} Également disponible via la propriété [`onshow`](/fr/docs/Web/API/GlobalEventHandlers/onshow).
-- [`wheel`](/fr/docs/Web/API/Element/wheel_event)
-  - : Déclenché lorsque l'utilisateur fait tourner la molette d'un appareil de pointage (généralement une souris). Également disponible via la propriété [`onwheel`](/fr/docs/Web/API/Element/wheel_event).
+- {{DOMxRef("Element/animationcancel_event", "animationcancel")}}
+  - : Déclenché lorsqu'une animation est interrompue de manière inattendue.
+- {{DOMxRef("Element/animationend_event", "animationend")}}
+  - : Déclenché lorsqu'une animation est terminée normalement.
+- {{DOMxRef("Element/animationiteration_event", "animationiteration")}}
+  - : Déclenché lorsqu'une itération d'animation est terminée.
+- {{DOMxRef("Element/animationstart_event", "animationstart")}}
+  - : Déclenché lorsqu'une animation commence.
 
 ### Évènements du presse-papiers
 
-- [`copy`](/fr/docs/Web/API/Element/copy_event)
-  - : Déclenché lorsque l'utilisateur initie une action de copie via l'interface du navigateur. Également disponible via la propriété [`oncopy`](/fr/docs/Web/API/Element/copy_event).
-- [`cut`](/fr/docs/Web/API/Element/cut_event)
-  - : Déclenché lorsque l'utilisateur initie une action de coupe via l'interface du navigateur. Également disponible via la propriété [`oncut`](/fr/docs/Web/API/Element/cut_event).
-- [`paste`](/fr/docs/Web/API/Element/paste_event)
-  - : Déclenché lorsque l'utilisateur initie une action pour coller via l'interface du navigateur. Également disponible via la propriété [`onpaste`](/fr/docs/Web/API/Element/paste_event).
+- {{DOMxRef("Element/copy_event", "copy")}}
+  - : Déclenché lorsque l'utilisateur·ice initie une action de copie avec l'interface du navigateur.
+- {{DOMxRef("Element/cut_event", "cut")}}
+  - : Déclenché lorsque l'utilisateur·ice initie une action de coupe avec l'interface du navigateur.
+- {{DOMxRef("Element/paste_event", "paste")}}
+  - : Déclenché lorsque l'utilisateur·ice initie une action de collage avec l'interface du navigateur.
 
 ### Évènements de composition
 
-- [`compositionend`](/fr/docs/Web/API/Element/compositionend_event)
-  - : Déclenché lorsqu'un système de composition textuel tel qu'un [éditeur de méthode de saisie](/fr/docs/Glossary/Input_method_editor) termine ou annule la session de composition courante.
-- [`compositionstart`](/fr/docs/Web/API/Element/compositionstart_event)
-  - : Déclenché lorsqu'un système de composition textuel tel qu'un [éditeur de méthode de saisie](/fr/docs/Glossary/Input_method_editor) démarre une nouvelle session de composition.
-- [`compositionupdate`](/fr/docs/Web/API/Element/compositionupdate_event)
-  - : Déclenché lorsqu'un nouveau caractère est reçu dans le contexte d'une session de composition textuelle.
+- {{DOMxRef("Element/compositionend_event", "compositionend")}}
+  - : Déclenché lorsqu'un système de composition textuel tel qu'un {{Glossary("input method editor", "éditeur de méthode de saisie")}} termine ou annule la session de composition courante.
+- {{DOMxRef("Element/compositionstart_event", "compositionstart")}}
+  - : Déclenché lorsqu'un système de composition textuel tel qu'un {{Glossary("input method editor", "éditeur de méthode de saisie")}} démarre une nouvelle session de composition.
+- {{DOMxRef("Element/compositionupdate_event", "compositionupdate")}}
+  - : Déclenché lorsqu'un nouveau caractère est reçu dans le contexte d'une session de composition textuelle contrôlée par un système de composition textuelle tel qu'un {{Glossary("input method editor", "éditeur de méthode de saisie")}}.
 
-### Évènements pour le focus
+### Évènements pour la sélection
 
-- [`blur`](/fr/docs/Web/API/Element/blur_event)
-  - : Déclenché lorsqu'un élément a perdu le focus. Également disponible via la propriété [`onblur`](/fr/docs/Web/API/Window/blur_event).
-- [`focus`](/fr/docs/Web/API/Element/focus_event)
-  - : Déclenché lorsqu'un élément reçoit le focus. Également disponible via la propriété [`onfocus`](/fr/docs/Web/API/Window/focus_event).
-- [`focusin`](/fr/docs/Web/API/Element/focusin_event)
-  - : Déclenché lorsqu'un élément s'apprête à recevoir le focus.
-- [`focusout`](/fr/docs/Web/API/Element/focusout_event)
-  - : Déclenché lorsqu'un élément s'apprête à perdre le focus.
+- {{DOMxRef("Element/blur_event", "blur")}}
+  - : Déclenché lorsqu'un élément a perdu la sélection.
+- {{DOMxRef("Element/focus_event", "focus")}}
+  - : Déclenché lorsqu'un élément a reçu la sélection.
+- {{DOMxRef("Element/focusin_event", "focusin")}}
+  - : Déclenché lorsqu'un élément a reçu la sélection, après {{DOMxRef("Element/focus_event", "focus")}}.
+- {{DOMxRef("Element/focusout_event", "focusout")}}
+  - : Déclenché lorsqu'un élément a perdu la sélection, après {{DOMxRef("Element/blur_event", "blur")}}.
 
 ### Évènements relatifs au plein écran
 
-- [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event)
-  - : Envoyé à un élément (`Element`) lorsque celui-ci effectue une transition (entrée ou sortie) pour le mode [plein écran](/fr/docs/Web/API/Fullscreen_API/Guide). Également disponible via la propriété [`onfullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event).
-- [`fullscreenerror`](/fr/docs/Web/API/Element/fullscreenerror_event)
-  - : Envoyé à un élément `Element` si une erreur se produit lors d'une transition (entrée ou sortie) pour le mode [plein écran](/fr/docs/Web/API/Fullscreen_API/Guide). Également disponible via la propriété [`onfullscreenerror`](/fr/docs/Web/API/Element/fullscreenerror_event).
+- {{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}}
+  - : Envoyé à un objet `Element` lorsqu'il passe en mode [plein écran](/fr/docs/Web/API/Fullscreen_API/Guide) ou en sort.
+- {{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}}
+  - : Envoyé à un objet `Element` si une erreur se produit lors de la tentative de passage en mode [plein écran](/fr/docs/Web/API/Fullscreen_API/Guide) ou d'en sortie.
 
 ### Évènements relatifs au clavier
 
-- [`keydown`](/fr/docs/Web/API/Element/keydown_event)
-  - : Déclenché lors de l'appui sur une touche du clavier. Également disponible via la propriété [`onkeydown`](/fr/docs/Web/API/Element/keydown_event).
-- [`keypress`](/fr/docs/Web/API/Element/keypress_event)
-  - : Déclenché lorsqu'une touche produit un caractère lorsqu'elle est pressée. {{deprecated_inline}} Également disponible via la propriété [`onkeypress`](/fr/docs/Web/API/Element/keypress_event).
-- [`keyup`](/fr/docs/Web/API/Element/keyup_event)
-  - : Déclenché lorsqu'une touche est relâchée. Également disponible via la propriété [`onkeyup`](/fr/docs/Web/API/Element/keyup_event).
+- {{DOMxRef("Element/keydown_event", "keydown")}}
+  - : Déclenché lorsqu'une touche est enfoncée.
+- {{DOMxRef("Element/keypress_event", "keypress")}} {{Deprecated_Inline}}
+  - : Déclenché lorsqu'une touche qui produit une valeur de caractère est enfoncée.
+- {{DOMxRef("Element/keyup_event", "keyup")}}
+  - : Déclenché lorsqu'une touche est relâchée.
 
 ### Évènements relatifs à la souris
 
-- [`auxclick`](/fr/docs/Web/API/Element/auxclick_event)
-  - : Déclenché lorsqu'un bouton non primaire d'un appareil de pointage (c'est-à-dire tout bouton de la souris en dehors du bouton gauche) a été pressé puis relâché sur un élément. Également disponible via la propriété [`onauxclick`](/fr/docs/Web/API/Element/auxclick_event).
-- [`click`](/fr/docs/Web/API/Element/click_event)
-  - : Déclenché lorsqu'un bouton d'un appareil de pointage (par exemple le bouton gauche de la souris) a été pressé puis relâche sur un élément. Également disponible via la propriété [`onclick`](/fr/docs/Web/API/Element/click_event).
-- [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)
-  - : Déclenché lorsqu'un utilisateur tente d'ouvrir un menu contextuel. Également disponible via la propriété [`oncontextmenu`](/fr/docs/Web/API/Element/contextmenu_event).
-- [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - : Déclenché lorsqu'un bouton d'un appareil de pointage (par exemple le bouton gauche de la souris) a été utilisé pour un double-clic sur un élément. Également disponible via la propriété [`ondblclick`](/fr/docs/Web/API/Element/dblclick_event).
-- [`DOMActivate`](/fr/docs/Web/API/Element/DOMActivate_event) {{Deprecated_Inline}}
-  - : Se produit lorsqu'un élément est activé, par exemple avec un clic de souris ou l'appui d'une touche.
-- [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-  - : Déclenché lorsqu'un bouton d'un appareil de pointage est pressé sur un élément. Également disponible via la propriété [`onmousedown`](/fr/docs/Web/API/Element/mousedown_event).
-- [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-  - : Déclenché lorsqu'un appareil de pointage (généralement une souris) est déplacé pour arriver sur l'élément disposant du gestionnaire d'évènement. Également disponible via la propriété [`onmouseenter`](/fr/docs/Web/API/Element/mouseenter_event).
-- [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
-  - : Déclenché lorsque le pointeur d'un appareil de pointage (généralement une souris) est déplacée en dehors de l'élément qui dispose du gestionnaire d'évènement. Également disponible via la propriété [`onmouseleave`](/fr/docs/Web/API/Element/mouseleave_event).
-- [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
-  - : Déclenché lorsqu'un appareil de pointage (généralement une souris) est déplacé sur un élément. Également disponible via la propriété [`onmousemove`](/fr/docs/Web/API/Element/mousemove_event).
-- [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
-  - : Déclenché lorsqu'un appareil de pointage (généralement une souris) se déplace pour quitter l'élément qui dispose du gestionnaire d'évènement (ou lorsque le pointeur quitte l'un des enfants de cet élément). Également disponible via la propriété [`onmouseout`](/fr/docs/Web/API/Element/mouseout_event).
-- [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
-  - : Déclenché lorsqu'un appareil de pointage arrive sur l'élément (ou l'un de ses enfants) qui dispose du gestionnaire d'évènement. Également disponible via la propriété [`onmouseover`](/fr/docs/Web/API/Element/mouseover_event).
-- [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
-  - : Déclenché lorsque le bouton d'un appareil de pointage est relâché pour un élément. Également disponible via la propriété [`onmouseup`](/fr/docs/Web/API/Element/mouseup_event).
-- [`webkitmouseforcechanged`](/fr/docs/Web/API/Element/webkitmouseforcechanged_event)
-  - : Déclenché à chaque fois que la quantite dé pression change sur le pavé ou l'écran tactile.
-- [`webkitmouseforcedown`](/fr/docs/Web/API/Element/webkitmouseforcedown_event)
-  - : Déclenché après l'évènement `mousedown` dès que suffisamment de pression a été appliquée pour qualifier ce clic de clic forcé.
-- [`webkitmouseforcewillbegin`](/fr/docs/Web/API/Element/webkitmouseforcewillbegin_event)
-  - : Déclenché avant l'évènement [`mousedown`](/fr/docs/Web/API/Element/mousedown_event).
-- [`webkitmouseforceup`](/fr/docs/Web/API/Element/webkitmouseforceup_event)
-  - : Déclenché après l'évènement [`webkitmouseforcedown`](/fr/docs/Web/API/Element/webkitmouseforcedown_event) dès que suffisamment de pression a été relâchée pour terminer le clic forcé.
+- {{DOMxRef("Element/auxclick_event", "auxclick")}}
+  - : Déclenché lorsqu'un bouton de dispositif de pointage secondaire (par exemple, tout bouton de souris autre que le bouton gauche) est enfoncé et relâché sur un élément.
+- {{DOMxRef("Element/click_event", "click")}}
+  - : Déclenché lorsqu'un bouton de dispositif de pointage principal (par exemple, le bouton gauche de la souris) est enfoncé et relâché sur un élément.
+- {{DOMxRef("Element/contextmenu_event", "contextmenu")}}
+  - : Déclenché lorsque l'utilisateur·ice tente d'ouvrir un menu contextuel.
+- {{DOMxRef("Element/dblclick_event", "dblclick")}}
+  - : Déclenché lorsqu'un bouton de dispositif de pointage (par exemple, le bouton principal de la souris) est cliqué deux fois sur un seul élément.
+- {{DOMxRef("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}
+  - : Survient lorsqu'un élément est activé, par exemple, par un clic de souris ou une pression sur une touche.
+- {{DOMxRef("Element/DOMMouseScroll_event", "DOMMouseScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Survient lorsque la molette de la souris ou un dispositif similaire est utilisé et que la quantité de défilement accumulée dépasse 1 ligne ou 1 page depuis le dernier évènement.
+- {{DOMxRef("Element/mousedown_event", "mousedown")}}
+  - : Déclenché lorsqu'un bouton de dispositif de pointage est enfoncé sur un élément.
+- {{DOMxRef("Element/mouseenter_event", "mouseenter")}}
+  - : Déclenché lorsqu'un dispositif de pointage (généralement une souris) est déplacé sur l'élément auquel le gestionnaire est attaché.
+- {{DOMxRef("Element/mouseleave_event", "mouseleave")}}
+  - : Déclenché lorsque le pointeur d'un dispositif de pointage (généralement une souris) est déplacé hors d'un élément auquel le gestionnaire est attaché.
+- {{DOMxRef("Element/mousemove_event", "mousemove")}}
+  - : Déclenché lorsqu'un dispositif de pointage (généralement une souris) est déplacé tout en étant au-dessus d'un élément.
+- {{DOMxRef("Element/mouseout_event", "mouseout")}}
+  - : Déclenché lorsqu'un dispositif de pointage (généralement une souris) est déplacé hors de l'élément auquel le gestionnaire est attaché ou hors de l'un de ses enfants.
+- {{DOMxRef("Element/mouseover_event", "mouseover")}}
+  - : Déclenché lorsqu'un dispositif de pointage (généralement une souris) est déplacé sur l'élément auquel le gestionnaire est attaché ou sur l'un de ses enfants.
+- {{DOMxRef("Element/mouseup_event", "mouseup")}}
+  - : Déclenché lorsqu'un bouton de dispositif de pointage est relâché sur un élément.
+- {{DOMxRef("Element/mousewheel_event", "mousewheel")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Déclenché lorsque la molette de la souris ou un dispositif similaire est utilisé.
+- {{DOMxRef("Element/MozMousePixelScroll_event", "MozMousePixelScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Déclenché lorsque la molette de la souris ou un dispositif similaire est utilisé.
+- {{DOMxRef("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}} {{Non-standard_Inline}}
+  - : Déclenché chaque fois que la quantité de pression change sur l'écran tactile du pavé tactile.
+- {{DOMxRef("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} {{Non-standard_Inline}}
+  - : Déclenché après l'évènement `mousedown` dès que la pression appliquée est suffisante pour être considérée comme un «&nbsp;clic forcé&nbsp;».
+- {{DOMxRef("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}} {{Non-standard_Inline}}
+  - : Déclenché avant l'évènement {{DOMxRef("Element/mousedown_event", "mousedown")}}.
+- {{DOMxRef("Element/webkitmouseforceup_event", "webkitmouseforceup")}} {{Non-standard_Inline}}
+  - : Déclenché après l'évènement {{DOMxRef("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} dès que la pression a été réduite suffisamment pour mettre fin au «&nbsp;clic forcé&nbsp;».
+
+### Évènements relatifs aux pointeurs
+
+- {{DOMxRef("Element/gotpointercapture_event", "gotpointercapture")}}
+  - : Déclenché lorsqu'un élément capture un pointeur en utilisant {{DOMxRef("Element/setPointerCapture", "setPointerCapture()")}}.
+- {{DOMxRef("Element/lostpointercapture_event", "lostpointercapture")}}
+  - : Déclenché lorsqu'un [pointeur capturé](/fr/docs/Web/API/Pointer_events#pointer_capture) est libéré.
+- {{DOMxRef("Element/pointercancel_event", "pointercancel")}}
+  - : Déclenché lorsqu'un évènement de pointeur est annulé.
+- {{DOMxRef("Element/pointerdown_event", "pointerdown")}}
+  - : Déclenché lorsqu'un pointeur devient actif.
+- {{DOMxRef("Element/pointerenter_event", "pointerenter")}}
+  - : Déclenché lorsqu'un pointeur est déplacé dans les limites de test de collision d'un élément ou de l'un de ses descendants.
+- {{DOMxRef("Element/pointerleave_event", "pointerleave")}}
+  - : Déclenché lorsqu'un pointeur est déplacé en dehors des limites de test de collision d'un élément.
+- {{DOMxRef("Element/pointermove_event", "pointermove")}}
+  - : Déclenché lorsqu'un pointeur change de coordonnées.
+- {{DOMxRef("Element/pointerout_event", "pointerout")}}
+  - : Déclencé lorsqu'un ponteur est déplacé en dehors des limites de _test de collision_ d'un élément (entre autres raisons).
+- {{DOMxRef("Element/pointerover_event", "pointerover")}}
+  - : Déclenché lorsqu'un pointeur est déplacé dans les limites de test de collision d'un élément.
+- {{DOMxRef("Element/pointerrawupdate_event", "pointerrawupdate")}}
+  - : Déclenché lorsqu'un pointeur change de propriétés qui ne déclenchent pas les évènements {{DOMxRef("Element/pointerdown_event", "pointerdown")}} ou {{DOMxRef("Element/pointerup_event", "pointerup")}}.
+- {{DOMxRef("Element/pointerup_event", "pointerup")}}
+  - : Déclenché lorsqu'un pointeur n'est plus actif.
+
+### Évènements relatifs au défilement
+
+- {{DOMxRef("Element/scroll_event", "scroll")}}
+  - : Déclenché lorsque la vue du document ou un élément a été défilé.
+- {{DOMxRef("Element/scrollend_event", "scrollend")}}
+  - : Déclenché lorsque la vue du document a terminé le défilement.
+- {{DOMxRef("Element/scrollsnapchange_event", "scrollsnapchange")}} {{Experimental_Inline}}
+  - : Déclenché sur le conteneur de défilement à la fin d'une opération de défilement lorsqu'une nouvelle cible d'accroche de défilement a été sélectionnée.
+- {{DOMxRef("Element/scrollsnapchanging_event", "scrollsnapchanging")}} {{Experimental_Inline}}
+  - : Déclenché sur le conteneur de défilement lorsque le navigateur détermine qu'une nouvelle cible d'accroche de défilement est en attente, c'est-à-dire qu'elle est sélectionnée lorsque le geste de défilement actuel se termine.
 
 ### Évènements tactiles
 
-- [`touchcancel`](/fr/docs/Web/API/Element/touchcancel_event)
-  - : Déclenché lorsqu'un ou plusieurs points de toucher ont été perturbés de façon spécifique à l'implémentation (par exemple lorsque trop de points de toucher ont été créés). Également disponible avec la propriété [`ontouchcancel`](/fr/docs/Web/API/Element/touchcancel_event).
-- [`touchend`](/fr/docs/Web/API/Element/touchend_event)
-  - : Déclenché lorsqu'un ou plusieurs points de toucher sont retirés de la surface tactile. Également disponible via la propriété [`ontouchend`](/fr/docs/Web/API/Element/touchend_event).
-- [`touchmove`](/fr/docs/Web/API/Element/touchmove_event)
-  - : Déclenché lorsqu'un ou plusieurs points de toucher se déplacent sur la surface tactile. Également disponible via la propriété [`ontouchmove`](/fr/docs/Web/API/Element/touchmove_event).
-- [`touchstart`](/fr/docs/Web/API/Element/touchstart_event)
-  - : Déclenché lorsqu'un ou plusieurs points de toucher sont placés sur la surface tactile. Également disponible via la propriété [`ontouchstart`](/fr/docs/Web/API/Element/touchstart_event).
+- {{DOMxRef("Element/gesturechange_event","gesturechange")}} {{Non-standard_Inline}}
+  - : Déclenché lorsque les doigts se déplacent pendant une action tactile.
+- {{DOMxRef("Element/gestureend_event","gestureend")}} {{Non-standard_Inline}}
+  - : Déclenché lorsqu'il n'y a plus plusieurs doigts en contact avec la surface tactile, mettant ainsi fin au geste.
+- {{DOMxRef("Element/gesturestart_event","gesturestart")}} {{Non-standard_Inline}}
+  - : Déclenché lorsque plusieurs doigts entrent en contact avec la surface tactile, marquant ainsi le début d'un nouveau geste.
+- {{DOMxRef("Element/touchcancel_event", "touchcancel")}}
+  - : Déclenché lorsqu'un ou plusieurs points de contact ont été interrompus d'une manière spécifique à l'implémentation (par exemple, si un nombre trop élevé de points de contact est créé).
+- {{DOMxRef("Element/touchend_event", "touchend")}}
+  - : Déclenché lorsqu'un ou plusieurs points de contact sont retirés de la surface tactile.
+- {{DOMxRef("Element/touchmove_event", "touchmove")}}
+  - : Déclenché lorsqu'un ou plusieurs points de contact sont déplacés le long de la surface tactile.
+- {{DOMxRef("Element/touchstart_event", "touchstart")}}
+  - : Déclenché lorsqu'un ou plusieurs points de contact sont placés sur la surface tactile.
+
+### Évènements relatifs aux transitions
+
+- {{DOMxRef("Element/transitioncancel_event", "transitioncancel")}}
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions) a été annulée.
+- {{DOMxRef("Element/transitionend_event", "transitionend")}}
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions) a terminé son exécution.
+- {{DOMxRef("Element/transitionrun_event", "transitionrun")}}
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions) est créée (c'est-à-dire lorsqu'elle est ajoutée à un ensemble de transitions en cours), mais pas nécessairement démarrée.
+- {{DOMxRef("Element/transitionstart_event", "transitionstart")}}
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions) a commencé à se dérouler.
 
 ## Spécifications
 
