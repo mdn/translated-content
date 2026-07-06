@@ -84,7 +84,7 @@ _`Element` hérite des propriétés de son interface parente, {{DOMxRef("Node")}
 - {{DOMxRef("Element.shadowRoot")}} {{ReadOnlyInline}}
   - : Retourne la racine d'ombre (<i lang="en">shadow root</i> en anglais) ouverte hébergée par l'élément, ou `null` si aucune racine d'ombre ouverte n'est présente.
 - {{DOMxRef("Element.slot")}}
-  - : Retourne le nom de l'emplacement du DOM d'ombre (<i lang="en">shadow DOM slot</i> en anglais) dans lequel l'élément est inséré.
+  - : Retourne le nom de l'emplacement du DOM d'ombre (<i lang="en">shadow DOM</i> en anglais) dans lequel l'élément est inséré.
 - {{DOMxRef("Element.tagName")}} {{ReadOnlyInline}}
   - : Retourne une chaîne de caractères avec le nom de la balise pour l'élément donné.
 
