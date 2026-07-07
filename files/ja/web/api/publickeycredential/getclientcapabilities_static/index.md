@@ -175,7 +175,7 @@ function log(text) {
 
 このコードは前回の例と似ていますが、特定の返された能力を調べている点と、`getClientCapabilities()` が対応していない場合を捕捉するために `try...catch` を使用している点が異なります。
 
-```js
+```js-nolint
 checkIsUserVerifyingPlatformAuthenticatorAvailable();
 
 async function checkIsUserVerifyingPlatformAuthenticatorAvailable() {
