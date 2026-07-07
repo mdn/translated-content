@@ -1,32 +1,50 @@
 ---
-title: element.childNodes
+title: "Node : propriété childNodes"
+short-title: childNodes
 slug: Web/API/Node/childNodes
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Node.childNodes`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) de {{domxref("Node","noeuds")}} enfants de l'élément donné avec le premier noeud enfant affecté à l'index 0.
+La propriété en lecture seule **`childNodes`** de l'interface {{DOMxRef("Node")}} retourne un objet {{DOMxRef("NodeList")}} dynamique des {{DOMxRef("Node", "nœuds enfants")}} de l'élément donné, où le premier nœud enfant se voit attribuer l'index `0`. Les nœuds enfants incluent les éléments, le texte et les commentaires.
 
-## Syntaxe
+> [!NOTE]
+> Le fait que l'objet {{DOMxRef("NodeList")}} soit dynamique signifie que son contenu est modifié chaque fois que de nouveaux enfants sont ajoutés ou supprimés.
+>
+> Les navigateurs insèrent des nœuds texte dans un document pour représenter les espaces blancs dans le balisage source.
+> Par conséquent, un nœud obtenu, par exemple en utilisant `Node.childNodes[0]`, peut faire référence à un nœud texte représentant un espace blanc plutôt qu'à l'élément réel que l'auteur·ice souhaitait obtenir.
+>
+> Voir [Travailler avec les espaces blancs dans le DOM](/fr/docs/Web/CSS/Guides/Text/Whitespace#travailler_avec_les_espaces_blancs_dans_le_dom) pour plus d'informations.
 
-```js
-var collNoeuds = elementDeReference.childNodes;
-```
+Les éléments de la collection de nœuds sont des objets et non des chaînes de caractères. Pour en obtenir les données, vous devez utiliser leurs propriétés. Par exemple, pour obtenir le nom du premier nœud enfant, vous pouvez utiliser `elementNodeReference.childNodes[0].nodeName`.
+
+L'objet {{DOMxRef("document")}} lui-même a deux enfants&nbsp;: la déclaration Doctype et l'élément racine, généralement appelés `documentElement`. Dans les documents HTML, ce dernier est l'élément {{HTMLElement("html")}}.
+
+Il est important de garder à l'esprit que `childNodes` inclut _tous_ les nœuds enfants, y compris les nœuds qui ne sont pas des éléments comme les nœuds texte et commentaire. Pour obtenir une collection contenant uniquement des éléments, utilisez {{DOMxRef("Element.children")}} à la place.
+
+## Valeur
+
+Un objet {{DOMxRef("NodeList")}} dynamique contenant les enfants du nœud.
+
+> [!NOTE]
+> Plusieurs appels à `childNodes` retournent la _même_ {{DOMxRef("NodeList")}}.
 
 ## Exemples
 
 ### Utilisation simple
 
 ```js
-// parg est une référence d'objet pour un élément <p>
+// Notez que para est une référence d'objet à un élément <p>
 
-// D'abord vérifier que l'élément a des noeuds enfants
-if (parg.hasChildNodes()) {
-  var children = parg.childNodes;
+// D'abord vérifier que l'élément a des nœuds enfants
+if (para.hasChildNodes()) {
+  let enfants = para.childNodes;
 
-  for (var i = 0; i < children.length; i++) {
-    // faire quelque chose avec chaque enfant[i]
-    // NOTE: La liste est en ligne, l'ajout ou la suppression des enfants changera la liste
+  for (const noeud of enfants) {
+    // Faire quelque chose avec chaque enfant comme enfants[i]
+    // NOTE: la liste est dynamique ! L'ajout ou la suppression d'enfants change la `length` de la liste
   }
 }
 ```
@@ -35,20 +53,12 @@ if (parg.hasChildNodes()) {
 
 ```js
 // Voici une manière de supprimer tous les enfants d'un nœud
-// (boite est une référence à un élément ayant des enfants)
+// boite est une référence à un élément
 while (boite.firstChild) {
-  // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
+  // La liste est dynamique, elle est donc ré-indexée à chaque appel
   boite.removeChild(boite.firstChild);
 }
 ```
-
-## Notes
-
-Les éléments de la collection de noeuds sont des objets et non des chaînes de caractères. Pour en obtenir les données, vous devez utiliser leurs propriétés (par exemple `elementNodeReference.childNodes[1].nodeName` pour obtenir son nom, etc.)
-
-L'objet [`document`](/fr/docs/Web/API/Document) lui-même a deux enfants&nbsp;: la déclaration [Doctype](/fr/docs/Web/API/Document/doctype) et l'élément racine, généralement appelés `documentElement` . (Dans les documents (X)HTML il s'agit d'éléments [`HTML`](/fr/docs/Web/HTML/Reference/Elements/html)).
-
-`childNodes` inclut tous les noeuds enfants, y compris les noeuds qui ne sont pas des éléments comme les noeuds texte et commentaire. Pour obtenir une collection des seuls éléments, utilisez {{domxref("ParentNode.children")}} à la place.
 
 ## Spécifications
 
@@ -60,8 +70,8 @@ L'objet [`document`](/fr/docs/Web/API/Document) lui-même a deux enfants&nbsp;: 
 
 ## Voir aussi
 
-- {{domxref("Node.firstChild")}}
-- {{domxref("Node.lastChild")}}
-- {{domxref("Node.nextSibling")}}
-- {{domxref("Node.previousSibling")}}
-- {{domxref("ParentNode.children")}}
+- La propriété {{DOMxRef("Node.firstChild")}}
+- La propriété {{DOMxRef("Node.lastChild")}}
+- La propriété {{DOMxRef("Node.nextSibling")}}
+- La propriété {{DOMxRef("Node.previousSibling")}}
+- La propriété {{DOMxRef("Element.children")}}
