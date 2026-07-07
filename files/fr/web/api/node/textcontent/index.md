@@ -1,95 +1,78 @@
 ---
-title: element.textContent
+title: "Node : propriété textContent"
+short-title: textContent
 slug: Web/API/Node/textContent
+l10n:
+  sourceCommit: 5c513c8e3075989886ae5f3b00d92f2b2988085a
 ---
 
 {{APIRef("DOM")}}
 
-La propriété **`Node.textContent`** représente le contenu textuel d'un nœud et de ses descendants.
+La propriété **`textContent`** de l'interface {{DOMxRef("Node")}} représente le contenu textuel du nœud et de ses descendants.
 
-## Syntaxe
+> [!NOTE]
+> `textContent` et {{DOMxRef("HTMLElement.innerText")}} sont facilement confondus, mais les deux propriétés sont [différentes de manière importante](#differences_avec_innertext).
 
-```js
-var text = element.textContent;
-element.textContent = "ceci est un simple exemple de texte";
-```
+## Valeur
 
-## Description
+Une chaîne de caractères, ou [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null). Sa valeur dépend de la situation&nbsp;:
 
-- `textContent` renvoie `null` si l'élément est un [document](/fr/docs/Web/API/Document), un type de document (doctype) ou une notation. Pour saisir toutes les données textuelles et CDATA pour l'ensemble du document, on peut utiliser `document.documentElement.textContent` .
-- Si le nœud est une section CDATA, un commentaire, une instruction de traitement ou un nœud texte, `textContent` renvoie le texte à l'intérieur du nœud (la valeur [nodeValue](/fr/docs/Web/API/Node/nodeValue)).
-- Pour les autres types de nœuds, `textContent` renvoie la concaténation des valeurs de propriété `textContent` de chaque nœud enfant, à l'exception des commentaires et nœuds d'instructions de traitement. Si le nœud n'a pas d'enfants, il s'agira d'une chaîne vide.
-- En définissant cette propriété sur un nœud, on enlève tous ses enfants et ceux-ci sont remplacés par un seul nœud texte avec la valeur donnée.
+- Si le nœud est un {{DOMxRef("document")}} ou un {{Glossary("doctype")}}, `textContent` retourne [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null).
+
+  > [!NOTE]
+  > Pour obtenir _tout_ le texte et les [données CDATA](/fr/docs/Web/API/CDATASection) pour l'ensemble du document, utilisez `document.documentElement.textContent`.
+
+- Si le nœud est une [section CDATA](/fr/docs/Web/API/CDATASection), un commentaire, une [instruction de traitement](/fr/docs/Web/API/ProcessingInstruction) ou un [nœud texte](/fr/docs/Web/API/Text), `textContent` retourne, ou définit, le texte à l'intérieur du nœud, c'est-à-dire le {{DOMxRef("Node.nodeValue")}}.
+- Pour les autres types de nœuds, `textContent` retourne la concaténation du `textContent` de chaque nœud enfant, à l'exclusion des commentaires et des instructions de traitement. (C'est une chaîne de caractères vide si le nœud n'a pas d'enfants.)
+
+> [!WARNING]
+> La définition de `textContent` sur un nœud supprime _tous_ les enfants du nœud et les remplace par un seul nœud texte avec la valeur de chaîne de caractères donnée.
 
 ### Différences avec `innerText`
 
-Internet Explorer a introduit une propriété {{domxref("node.innerText")}}. L'intention est similaire mais comporte les différences suivantes :
+Ne vous laissez pas tromper par les différences entre `Node.textContent` et {{DOMxRef("HTMLElement.innerText")}}. Bien que les noms semblent similaires, il existe des différences importantes&nbsp;:
 
-- `textContent` récupère le contenu de tous les éléments, y compris {{HTMLElement("script")}} et {{HTMLElement("style")}}, ce qui n'est pas le cas de `innerText`.
-- `innerText` prend en compte le style de l'élément et ne retournera rien pour les éléments cachés. Aussi, il déclenchera un reflow à l'inverse de `textContent`.
-- Comme `innerText` reconnaît le style CSS, il déclenchera une refusion (_reflow_), alors que `textContent` ne le fera pas.
-- Contrairement à `textContent`, la modification `innerText` dans Internet Explorer (jusqu'à la version 11 incluse), non seulement supprime les nœuds enfants de l'élément, mais détruit aussi définitivement tout nœud de texte descendant (il est donc impossible d'insérer à nouveau des nœuds dans un autre élément ou dans le même élément) .
+- `textContent` récupère le contenu de _tous_ les éléments, y compris {{HTMLElement("script")}} et {{HTMLElement("style")}}. En revanche, `innerText` ne montre que les éléments "lisibles par l'homme".
+- `textContent` retourne chaque élément dans le nœud. En revanche, `innerText` prend en compte le style et ne retourne pas le texte des éléments «&nbsp;cachés&nbsp;».
+  - De plus, comme `innerText` prend en compte les styles CSS, la lecture de la valeur de `innerText` déclenche un {{Glossary("reflow", "re-calcul de mise en page")}} pour garantir des styles calculés à jour. (Les re-calculs de mise en page peuvent être coûteux en termes de calcul, et doivent donc être évités autant que possible.)
 
 ### Différences avec `innerHTML`
 
-{{domxref("Element.innerHTML")}} renvoie le HTML comme son nom l'indique. Souvent, pour récupérer ou écrire du texte dans un élément, les utilisateurs utilisent `innerHTML`. Cependant, `textContent` a souvent de meilleures performances car le texte n'est pas analysé en HTML. De plus, l'utilisation de `textContent` peut empêcher les attaques XSS.
+{{DOMxRef("Element.innerHTML")}} retourne ou définit le HTML, comme son nom l'indique. Nous déconseillons d'utiliser `innerHTML` pour obtenir ou définir du texte à l'intérieur d'un élément, car il traite du HTML brut plutôt que du texte brut et peut être vulnérable aux {{Glossary("Cross-site_scripting", "attaques XSS")}}. Même si vous êtes sûr que le texte ne contient jamais de syntaxe HTML, il reste moins sémantique et plus lent, car il doit invoquer l'analyseur HTML.
 
-## Exemple
+## Exemples
 
-```js
-// Étant donné le fragment de HTML suivant&nbsp;:
-//   <div id="divA">Ceci est un <span>exemple de</span> texte</div>
+Commençons avec ce fragment HTML.
 
-// On obtient le contenu textuel&nbsp;:
-var text = document.getElementById("divA").textContent;
-// |text| vaut "Ceci est un exemple de texte".
-
-// On définit le contenu textuel&nbsp;:
-document.getElementById("divA").textContent = "Ceci est un exemple de texte";
-// Le HTML pour divA est à présent <div id="divA">Ceci est un exemple de texte</div>
+```html
+<div id="divA">Ceci est un <span>exemple de</span> texte</div>
 ```
 
-## Polyfill pour IE8
+Vous pouvez utiliser `textContent` pour obtenir le contenu textuel de l'élément&nbsp;:
 
 ```js
-// Source: Eli Grey @ http://eligrey.com/blog/post/textcontent-in-ie8
-if (
-  Object.defineProperty &&
-  Object.getOwnPropertyDescriptor &&
-  Object.getOwnPropertyDescriptor(Element.prototype, "textContent") &&
-  !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get
-) {
-  (function () {
-    var innerText = Object.getOwnPropertyDescriptor(
-      Element.prototype,
-      "innerText",
-    );
-    Object.defineProperty(
-      Element.prototype,
-      "textContent",
-      // Passing innerText or innerText.get directly does not work,
-      // wrapper function is required.
-      {
-        get: function () {
-          return innerText.get.call(this);
-        },
-        set: function (s) {
-          return innerText.set.call(this, s);
-        },
-      },
-    );
-  })();
-}
+let texte = document.getElementById("divA").textContent;
+// La variable texte vaut maintenant : 'Ceci est un exemple de texte'
 ```
 
-## Compatibilité des navigateurs
+Si vous préférez définir le contenu textuel de l'élément, vous pouvez faire&nbsp;:
 
-{{Compat}}
+```js
+document.getElementById("divA").textContent = "Ceci est un texte différent !";
+// Le HTML pour divA est à présent :
+// <div id="divA">Ceci est un texte différent !</div>
+```
 
 ## Spécifications
 
 {{Specifications}}
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 ## Voir aussi
 
-- [Plus sur les différences entre `innerText` et `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/) (blog post en)
+- Les propriétés {{DOMxRef("HTMLScriptElement.textContent")}} et {{DOMxRef("HTMLScriptElement.text")}}
+- La propriété {{DOMxRef("HTMLElement.innerText")}}
+- La propriété {{DOMxRef("Element.innerHTML")}}
