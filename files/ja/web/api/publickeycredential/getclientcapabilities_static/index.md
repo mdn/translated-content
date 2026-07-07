@@ -62,7 +62,7 @@ WebAuthn のクライアント能力文字列は次の通りです。
 
 ### 例外
 
-返される {{jsxref(「Promise」)}} は、以下の値で拒否されることがあります。
+返される {{jsxref("Promise")}} は、以下の値で拒否されることがあります。
 
 - `SecurityError` {{domxref("DOMException")}}
   - : RP のドメインが有効ではありません。
