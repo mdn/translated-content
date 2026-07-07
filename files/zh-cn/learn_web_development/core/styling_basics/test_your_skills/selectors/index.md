@@ -163,7 +163,7 @@ body {
 
 以下是该起始点的底层代码：
 
-```html live-sample___pseudo
+```html live-sample___selectors3-start live-sample___selectors3-finish
 <div class="container">
   <p>
     Veggies es <a href="http://example.com">bonus vobis</a>, proinde vos postulo
@@ -230,7 +230,7 @@ th {
 
 更新的样式应该类似如下：
 
-{{EmbedLiveSample("selectors3-finish", "", "5400px")}}
+{{EmbedLiveSample("selectors3-finish", "", "540px")}}
 
 <details>
 <summary>点击查看答案</summary>
