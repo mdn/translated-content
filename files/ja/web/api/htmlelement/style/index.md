@@ -51,9 +51,7 @@ l10n:
 
 ```html
 <div style="font-weight: bold;">
-  <div style="border-top: 1px solid blue; color: red;" id="elt">
-    div の例
-  </div>
+  <div style="border-top: 1px solid blue; color: red;" id="elt">div の例</div>
   <pre id="log"></pre>
 </div>
 ```
@@ -134,9 +132,7 @@ log(`"fontWeight" = '${elementStyle.fontWeight}'`);
 
 ```html
 <div style="font-weight: bold;">
-  <div style="border-top: 1px solid blue; color: red;" id="elt">
-    div の例
-  </div>
+  <div style="border-top: 1px solid blue; color: red;" id="elt">div の例</div>
   <pre id="log"></pre>
 </div>
 ```
