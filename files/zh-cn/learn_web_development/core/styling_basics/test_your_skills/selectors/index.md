@@ -1,38 +1,43 @@
 ---
 title: 技能测试：选择器
+short-title: 测试：选择器
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 l10n:
-  sourceCommit: 782d88782968782657abad748e20770229c6aab6
+  sourceCommit: a623d4459e2aa00d17dc0fd6b6bc44f56c589950
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 这个技能测试的目的是帮助你理解 [CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)。
 
+为完成这些任务，只需编辑 CSS，而无需编辑 HTML。
+
 > [!NOTE]
-> 点击下方代码块中的“**Play**”即可在 MDN 代码演练场中编辑示例。你也可以将代码复制并粘贴到在线编辑器（比如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)）中。如果你卡住了，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
+> 如需帮助，请阅读我们的[技能测试](/zh-CN/docs/Learn_web_development#技能测试)使用指南。你也可以通过我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)之一联系我们。
 
-## 任务一
+## 第一个选择器
 
-在此任务中，请在不改变 HTML 的情况下，使用 CSS 去完成下面的要求：
+要完成此任务，需要：
 
-- 使 `<h1>` 标题变为蓝色。
-- 使 `<h2>` 标题具有蓝色背景和白色文本。
-- 使 `<span>` 中的文本的字体大小为 200%。
+1. 使 `<h1>` 标题变为蓝色。
+2. 使 `<h2>` 标题具有蓝色背景和白色文本。
+3. 使 `<span>` 中的文本的字体大小为 200%。
 
-你的最终结果应该与下面的图片类似：
+任务的起始点类似如下：
 
-![应用了任务 1 解决方案的 CSS 的文本。](selectors1.jpg)
+{{EmbedLiveSample("selectors1-start", "", "370px")}}
 
-尝试更新下面的代码，以重现完整的示例：
+以下是该起始点的底层代码：
 
-```html live-sample___type
+```html live-sample___selectors1-start live-sample___selectors1-finish
 <div class="container">
-  <h1>This is a heading</h1>
+  <h1>这是标题</h1>
   <p>
     Veggies es <span>bonus vobis</span>, proinde vos postulo essum magis
     kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean
     garlic.
   </p>
-  <h2>A level 2 heading</h2>
+  <h2>一个二级标题</h2>
   <p>
     Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
     tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
@@ -41,21 +46,23 @@ l10n:
 </div>
 ```
 
-```css live-sample___type
+```css live-sample___selectors1-start live-sample___selectors1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
 /* 在这里添加样式 */
 ```
 
-{{EmbedLiveSample("type", "", "260px")}}
+更新的样式应该类似如下：
+
+{{EmbedLiveSample("selectors1-finish", "", "400px")}}
 
 <details>
 <summary>点击显示答案</summary>
 
 你需要对 `h1`、`h2` 和 `span` 用选择器来更改它们的颜色或大小。
 
-```css
+```css live-sample___selectors1-finish
 h1 {
   color: blue;
 }
@@ -72,32 +79,32 @@ span {
 
 </details>
 
-## 任务二
+## 第二个选择器
 
-在此任务中，我们希望你在不改变 HTML 的情况下，对本例中内容的外观进行以下更改：
+要完成此任务，需要：
 
-- 为 id 为 `special` 的元素设置黄色背景。
-- 为 `alert` 类的元素添加 2px 灰色边框。
-- 为同时是 `alert` 类和 `stop` 类的元素设置红色背景。
-- 为同时是 `alert` 类和 `go` 类的元素设置绿色背景。
+1. 为 id 为 `special` 的元素设置黄色背景。
+2. 为 `alert` 类的元素添加 2px 灰色边框。
+3. 为同时是 `alert` 类和 `stop` 类的元素设置红色背景。
+4. 为同时是 `alert` 类和 `go` 类的元素设置绿色背景。
 
-你的最终结果应该与下面的图片类似：
+任务的起始点类似如下：
 
-![应用了任务 2 解决方案的 CSS 的文本。](selectors2.jpg)
+{{EmbedLiveSample("selectors2-start", "", "480px")}}
 
-尝试更新下面的代码，以重现完整的示例：
+以下是该起始点的底层代码：
 
-```html live-sample___class-id
+```html live-sample___selectors2-start live-sample___selectors2-finish
 <div class="container">
-  <h1>This is a heading</h1>
+  <h1>这是标题</h1>
   <p>
     Veggies es <span class="alert">bonus vobis</span>, proinde vos postulo
     <span class="alert stop">essum magis</span> kohlrabi welsh onion daikon
     amaranth tatsoi tomatillo melon azuki bean garlic.
   </p>
-  <h2 id="special">A level 2 heading</h2>
+  <h2 id="special">一个二级标题</h2>
   <p>Gumbo beet greens corn soko endive gumbo gourd.</p>
-  <h2>Another level 2 heading</h2>
+  <h2>另一个二级标题</h2>
   <p>
     <span class="alert go">Parsley shallot</span> courgette tatsoi pea sprouts
     fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
@@ -113,7 +120,9 @@ body {
 /* 在这里添加样式 */
 ```
 
-{{EmbedLiveSample("class-id", "", "320px")}}
+更新的样式应该类似如下：
+
+{{EmbedLiveSample("selectors2-finish", "", "480px")}}
 
 <details>
 <summary>点击查看答案</summary>
@@ -140,19 +149,19 @@ body {
 
 </details>
 
-## 任务三
+## 第三个选择器
 
-在此任务中，我们希望你在不改变 HTML 的情况下进行以下更改。
+要完成此任务，需要：
 
-- 设置链接样式，将链接设为橙色，访问过的链接设为绿色，并在悬停时移除下划线。
-- 为容器内的第一个元素设置 `font-size: 150%` ，并将其第一行文字设为红色。
-- 为表格每隔一行添加条纹效果，设置背景颜色为 `#333`，前景色为白色。
+1. 设置链接样式，将链接设为橙色，访问过的链接设为绿色，并在悬停时移除下划线。
+2. 为容器内的第一个元素设置 `font-size: 150%` ，并将其第一行文字设为红色。
+3. 为表格每隔一行添加条纹效果，设置背景颜色为 `#333`，前景色为白色。
 
-你的最终结果应该与下面的图片类似：
+任务的起始点类似如下：
 
-![应用了任务 3 解决方案的 CSS 的文本。](selectors3.jpg)
+{{EmbedLiveSample("selectors3-start", "", "440px")}}
 
-尝试更新下面的代码，以重现完整的示例：
+以下是该起始点的底层代码：
 
 ```html live-sample___pseudo
 <div class="container">
@@ -169,35 +178,35 @@ body {
   <table>
     <tbody>
       <tr>
-        <th>Fruits</th>
-        <th>Vegetables</th>
+        <th>水果</th>
+        <th>蔬菜</th>
       </tr>
       <tr>
-        <td>Apple</td>
-        <td>Potato</td>
+        <td>苹果</td>
+        <td>土豆</td>
       </tr>
       <tr>
-        <td>Orange</td>
-        <td>Carrot</td>
+        <td>橙子</td>
+        <td>胡萝卜</td>
       </tr>
       <tr>
-        <td>Tomato</td>
-        <td>Parsnip</td>
+        <td>西红柿</td>
+        <td>欧洲防风草</td>
       </tr>
       <tr>
-        <td>Kiwi</td>
-        <td>Onion</td>
+        <td>奇异果</td>
+        <td>洋葱</td>
       </tr>
       <tr>
-        <td>Banana</td>
-        <td>Beet</td>
+        <td>香蕉</td>
+        <td>甜菜</td>
       </tr>
     </tbody>
   </table>
 </div>
 ```
 
-```css hidden live-sample___pseudo
+```css live-sample___selectors3-start live-sample___selectors3-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -215,20 +224,20 @@ th {
   padding: 0.2em;
   text-align: left;
 }
-```
 
-```css live-sample___pseudo
 /* 在这里添加样式 */
 ```
 
-{{EmbedLiveSample("pseudo", "", "320px")}}
+更新的样式应该类似如下：
+
+{{EmbedLiveSample("selectors3-finish", "", "5400px")}}
 
 <details>
 <summary>点击查看答案</summary>
 
 对内容应用伪类（`:first-child`）和伪元素（`::first-line`）。设置 `a` 元素的 `:link`、`:visited` 和 `:hover` 状态，并使用 `:nth-child` 伪类为表格行创建条纹效果。
 
-```css
+```css live-sample___selectors3-finish
 .container p:first-child {
   font-size: 150%;
 }
@@ -250,99 +259,103 @@ a:hover {
 }
 
 tr:nth-child(even) {
-  background-color: #333;
-  color: #fff;
+  background-color: #333333;
+  color: white;
 }
 ```
 
 </details>
 
-## 任务四
+## 第四个选择器
 
-在此任务中，我们希望你做到：
+要完成此任务，需要：
 
-- 将 `<h2>` 元素后的首个段落文字设为红色。
-- 为 `list` 类的无序列表（ul）移除其子元素的项目符号，并为其添加 1px 的灰色下边框。
+1. 将 `<h2>` 元素后的首个段落文字设为红色。
+2. 为作为 `<ul>` 的直接子元素且类名为 `list` 的列表项设置样式，具体如下：
+   - 移除项目符号。
+   - 添加 `1px` 的灰色下边框。
 
-你的最终结果应该与下面的图片类似：
+任务的起始点类似如下：
 
-![应用了任务 4 解决方案的 CSS 的文本。](selectors4.jpg)
+{{EmbedLiveSample("selectors4-start", "", "500px")}}
 
-尝试更新下面的代码，以重现完整的示例：
+以下是该起始点的底层代码：
 
-```html live-sample___combinators
+```html live-sample___selectors4-start live-sample___selectors4-finish
 <div class="container">
-  <h2>This is a heading</h2>
-  <p>This paragraph comes after the heading.</p>
-  <p>This is the second paragraph.</p>
+  <h2>这是标题</h2>
+  <p>这是标题后的段落。</p>
+  <p>这是第二段。</p>
 
-  <h2>Another heading</h2>
-  <p>This paragraph comes after the heading.</p>
+  <h2>另外一个标题</h2>
+  <p>这个段落紧随标题之后。</p>
   <ul class="list">
-    <li>One</li>
+    <li>一</li>
     <li>
-      Two
+      二
       <ul>
         <li>2.1</li>
         <li>2.2</li>
       </ul>
     </li>
-    <li>Three</li>
+    <li>三</li>
   </ul>
 </div>
 ```
 
-```css live-sample___combinators
+```css live-sample___selectors4-start live-sample___selectors4-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
 /* 在这里添加样式 */
 ```
 
-{{EmbedLiveSample("combinators", "", "350px")}}
+更新的样式应该类似如下：
+
+{{EmbedLiveSample("selectors4-finish", "", "500px")}}
 
 <details>
 <summary>点击查看答案</summary>
 
 这个任务旨在检查你是否理解如何使用不同的组合器。以下是一个合适的解决方案：
 
-```css
+```css live-sample___selectors4-finish
 h2 + p {
   color: red;
 }
 
 .list > li {
   list-style: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
 }
 ```
 
 </details>
 
-## 任务五
+## 第五个选择器
 
-在此任务中，添加 CSS 并使用属性选择器以执行以下操作：
+要完成该任务，请使用属性选择器解决以下挑战：
 
-- 选择带有 `title` 属性的 `<a>` 元素，将其边框颜色设置为粉色（`border-color: pink`）。
-- 选择带有 `href` 属性且属性值中包含 `contact` 的 `<a>` 元素，将其边框颜色设置为橙色（`border-color: orange`）。
-- 选择 `href` 属性值以 `https` 开头的 `<a>` 元素，将其边框颜色设置为绿色（`border-color: green`）。
+1. 选择带有 `title` 属性的 `<a>` 元素，将其边框颜色设置为粉色（`border-color: pink`）。
+2. 选择带有 `href` 属性且属性值中包含 `contact` 的 `<a>` 元素，将其边框颜色设置为橙色（`border-color: orange`）。
+3. 选择 `href` 属性值以 `https` 开头的 `<a>` 元素，将其边框颜色设置为绿色（`border-color: green`）。
 
-你的最终结果应该与下面的图片类似：
+任务的起始点类似如下：
 
-![4 个具有不同的颜色边框的链接。](selectors-attribute.png)
+{{EmbedLiveSample("selectors5-start", "", "300px")}}
 
-尝试更新下面的代码，以重现完整的示例：
+以下是该起始点的底层代码：
 
-```html live-sample___attribute-links
+```html live-sample___selectors5-start live-sample___selectors5-finish
 <ul>
-  <li><a href="https://example.com">Link 1</a></li>
-  <li><a href="http://example.com" title="Visit example.com">Link 2</a></li>
-  <li><a href="/contact">Link 3</a></li>
-  <li><a href="../contact/index.html">Link 4</a></li>
+  <li><a href="https://example.com">链接 1</a></li>
+  <li><a href="http://example.com" title="Visit example.com">链接 2</a></li>
+  <li><a href="/contact">链接 3</a></li>
+  <li><a href="../contact/index.html">链接 4</a></li>
 </ul>
 ```
 
-```css hidden live-sample___attribute-links
+```css live-sample___selectors5-start live-sample___selectors5-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -361,16 +374,17 @@ a {
   display: block;
   padding: 0.5em;
 }
-```
 
-```css live-sample___attribute-links
 a {
   border: 5px solid grey;
 }
+
 /* 在这里添加样式 */
 ```
 
-{{EmbedLiveSample("attribute-links", "", "300px")}}
+更新的样式应该类似如下：
+
+{{EmbedLiveSample("selectors5-finish", "", "300px")}}
 
 <details>
 <summary>点击查看答案</summary>
@@ -379,7 +393,7 @@ a {
 - 选择 `href` 属性中包含“contact”的 `<a>` 元素，并将其边框设为橙色（`border-color: orange`）。这里需要匹配两种情况：`/contact` 和 `../contact`。因此，我们可以使用 `*=` 来匹配 href 值中任意位置包含“contact”的链接。这样会选中第三个和第四个链接。
 - 选择 href 值以 `https` 开头的 `<a>` 元素，并将其边框设为绿色（`border-color: green`）。查找 href 值以“https”开头的链接，因此使用 `^=` 来仅选中第一个链接。
 
-```css
+```css live-sample___selectors5-finish
 a[title] {
   border-color: pink;
 }
@@ -393,6 +407,4 @@ a[href^="https"] {
 
 </details>
 
-## 参见
-
-- [CSS 样式基础](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
