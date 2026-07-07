@@ -166,7 +166,7 @@ elementStyle.borderBottom = "5px solid green";
 この HTML では、いくつかのスタイルが設定された {{htmlelement("div")}} を定義しており、その中に `font-weight` を設定する別の要素が入れ子になっています。
 同時に、その要素のインラインスタイルや計算済みスタイルを取得するためのボタンも用意されています（さらに、リセットボタンやログ出力用の非表示コードも含まれています）。
 
-```html
+```html-nolint
 <div style="font-weight: bold;">
   <div style="border-top: 1px solid blue; color: red;" id="elt">
     div の例
