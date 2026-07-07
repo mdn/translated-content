@@ -29,7 +29,7 @@ const options = {
     id: "login.example.com",
   },
   user: {
-    id: new Uint8Array(26) /* To be changed for each user */,
+    id: new Uint8Array(26) /* ユーザーごとに変更される */,
     name: "canand@example.com",
     displayName: "Carina Anand",
   },
