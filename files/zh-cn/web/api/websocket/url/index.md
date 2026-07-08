@@ -1,21 +1,18 @@
 ---
-title: WebSocket.url
+title: WebSocket：url 属性
+short-title: url
 slug: Web/API/WebSocket/url
+l10n:
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
 {{APIRef("Web Sockets API")}}
 
-**`WebSocket.url`** 是一个只读属性，返回值为当构造函数创建{{domxref("WebSocket")}}实例对象时 URL 的绝对路径。
+**`WebSocket.url`** 只读属性返回由构造函数解析出的 {{domxref("WebSocket")}} 的绝对 URL。
 
-## 语法
+## 值
 
-```plain
-var url = aWebSocket.url;
-```
-
-## 返回值
-
-一个 [`DOMString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)。
+一个字符串。
 
 ## 规范
 
