@@ -32,7 +32,7 @@ Une chaîne de caractères, ou [`null`](/fr/docs/Web/JavaScript/Reference/Operat
 
 Ne vous laissez pas tromper par les différences entre `Node.textContent` et {{DOMxRef("HTMLElement.innerText")}}. Bien que les noms semblent similaires, il existe des différences importantes&nbsp;:
 
-- `textContent` récupère le contenu de _tous_ les éléments, y compris {{HTMLElement("script")}} et {{HTMLElement("style")}}. En revanche, `innerText` ne montre que les éléments "lisibles par l'homme".
+- `textContent` récupère le contenu de _tous_ les éléments, y compris {{HTMLElement("script")}} et {{HTMLElement("style")}}. En revanche, `innerText` ne montre que les éléments «&nbsp;lisibles par une personne&nbsp;».
 - `textContent` retourne chaque élément dans le nœud. En revanche, `innerText` prend en compte le style et ne retourne pas le texte des éléments «&nbsp;cachés&nbsp;».
   - De plus, comme `innerText` prend en compte les styles CSS, la lecture de la valeur de `innerText` déclenche un {{Glossary("reflow", "re-calcul de mise en page")}} pour garantir des styles calculés à jour. (Les re-calculs de mise en page peuvent être coûteux en termes de calcul, et doivent donc être évités autant que possible.)
 
