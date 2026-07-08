@@ -14,7 +14,7 @@ l10n:
 ## 関連情報
 
 - [ノンス](https://ja.wikipedia.org/wiki/ノンス) - ウィキペディア
-- [コンテンツセキュリティポリシー (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)
+- [コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP)
 - [リプレイ攻撃](https://ja.wikipedia.org/wiki/リプレイ攻撃) - ウィキペディア
 - 関連用語:
   - {{Glossary("cryptography", "暗号学")}}
