@@ -3,7 +3,7 @@ title: Propriété CSS `border-style`
 short-title: border-style
 slug: Web/CSS/Reference/Properties/border-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a06cf3dca37bb7da1d5e5ad98c5d15a10dde3e8c
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-style`** permet de définir le style de ligne pour les quatre côtés de la bordure d'un élément.
@@ -112,9 +112,9 @@ Chacune des valeurs peut être un des mots-clés parmi la liste suivante.
 - `<line-style>`
   - : Un mot-clé qui décrit le style utilisé pour la bordure sur les côtés de la boîte. Ce mot-clé peut prendre l'une des valeurs suivantes&nbsp;:
     - `none`
-      - : L'effet obtenu est le même qu'avec `hidden`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec {{CSSxRef("background-image")}}), la valeur calculée de {{CSSxRef("border-width")}} sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `none` a la priorité la plus _basse_&nbsp;; donc, si une autre bordure est définie et fusionne avec celle-ci, elle sera affichée.
+      - : L'effet obtenu est le même qu'avec `hidden`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec {{CSSxRef("background-image")}}), la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de {{CSSxRef("border-width")}} vaut `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `none` a la priorité la plus _basse_&nbsp;; donc, si une autre bordure est définie et fusionne avec celle-ci, elle est affichée.
     - `hidden`
-      - : L'effet obtenu est le même qu'avec `none`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec {{CSSxRef("background-image")}}), la valeur calculée de {{CSSxRef("border-width")}} sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `hidden` a _la plus haute priorité_ et donc si une autre bordure est définie et fusionne avec celle-ci, aucune ne sera affichée.
+      - : L'effet obtenu est le même qu'avec `none`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec {{CSSxRef("background-image")}}), la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de {{CSSxRef("border-width")}} vaut `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `hidden` a _la plus haute priorité_ et donc si une autre bordure est définie et fusionne avec celle-ci, aucune ne est affichée.
     - `dotted`
       - : Affiche une série de points ronds. L'espace entre ces points n'est pas défini par la spécification et est donc laissé à l'implémentation. Le rayon des points correspond à la moitié de {{CSSxRef("border-width")}}.
     - `dashed`

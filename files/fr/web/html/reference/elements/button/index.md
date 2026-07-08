@@ -66,8 +66,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
         C'est l'équivalent déclaratif de l'appel à la méthode {{DOMxRef("HTMLDialogElement.close()")}} sur l'élément `<dialog>`.
         Lorsqu'il est utilisé avec l'attribut `value`, la valeur du bouton sera transmise comme propriété {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} de la boîte de dialogue.
     - `"request-close"`
-      - : Le bouton déclenchera un événement {{DOMxRef("HTMLDialogElement.cancel_event", "cancel")}} sur un élément {{HTMLElement("dialog")}} pour demander au navigateur de le fermer, suivi d'un événement {{DOMxRef("HTMLDialogElement.close_event", "close")}}.
-        Cela diffère de la commande `close` car les auteur·ice·s peuvent appeler {{DOMxRef("Event.preventDefault()")}} sur l'événement `cancel` pour empêcher la fermeture du `<dialog>`.
+      - : Le bouton déclenchera un évènement {{DOMxRef("HTMLDialogElement.cancel_event", "cancel")}} sur un élément {{HTMLElement("dialog")}} pour demander au navigateur de le fermer, suivi d'un évènement {{DOMxRef("HTMLDialogElement.close_event", "close")}}.
+        Cela diffère de la commande `close` car les auteur·ice·s peuvent appeler {{DOMxRef("Event.preventDefault()")}} sur l'évènement `cancel` pour empêcher la fermeture du `<dialog>`.
         Si la boîte de dialogue est déjà fermée, aucune action ne sera effectuée.
         C'est l'équivalent déclaratif de l'appel à la méthode {{DOMxRef("HTMLDialogElement.requestClose()")}} sur l'élément `<dialog>`.
         Lorsqu'il est utilisé avec l'attribut `value`, la valeur du bouton sera transmise comme propriété {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} de la boîte de dialogue.
@@ -141,7 +141,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Le comportement par défaut du bouton. Les valeurs possibles sont&nbsp;:
     - `submit`&nbsp;: Le bouton soumet les données du formulaire au serveur. C'est la valeur par défaut si l'attribut n'est pas défini pour les boutons associés à un `<form>`, ou si l'attribut est une valeur vide ou invalide.
     - `reset`&nbsp;: Le bouton réinitialise tous les contrôles à leur valeur initiale, comme [`<input type="reset">`](/fr/docs/Web/HTML/Reference/Elements/input/reset). (Ce comportement a tendance à agacer les utilisateur·ice·s).
-    - `button`&nbsp;: Le bouton n'a pas de comportement par défaut et ne fait rien lorsqu'il est pressé par défaut. Les scripts côté client peuvent écouter les événements de l'élément, qui sont déclenchés lorsque les événements se produisent.
+    - `button`&nbsp;: Le bouton n'a pas de comportement par défaut et ne fait rien lorsqu'il est pressé par défaut. Les scripts côté client peuvent écouter les évènements de l'élément, qui sont déclenchés lorsque les évènements se produisent.
 
 - `value`
   - : Définit la valeur associée au `name` du bouton lorsqu'il est soumis avec les données du formulaire.
@@ -311,9 +311,9 @@ dialog.addEventListener("cancel", (e) => {
 Le bouton **Ouvrir la boîte de dialogue** ouvre l'élément `<dialog>` en utilisant `command="show-modal"`.
 
 Le bouton **Demander la fermeture** a `command="request-close"`, qui cible l'élément `<dialog>` en utilisant l'attribut `commandfor="mydialog"`. Lorsqu'il est cliqué, il demande au `<dialog>` s'il peut être fermé (contrairement à l'attribut `command="close"`, qui fermerait immédiatement le `<dialog>`).
-Cela vérifie si le `<dialog>` est [`cancelable`](/fr/docs/Web/API/Event/cancelable) en utilisant un événement `cancel`.
+Cela vérifie si le `<dialog>` est [`cancelable`](/fr/docs/Web/API/Event/cancelable) en utilisant un évènement `cancel`.
 
-Lorsque l'événement est `cancelable`, la valeur des boutons radio est vérifiée&nbsp;:
+Lorsque l'évènement est `cancelable`, la valeur des boutons radio est vérifiée&nbsp;:
 
 - Si la valeur est `oui`, la boîte de dialogue est fermée.
 - Si la valeur est `non`, l'attribut `hidden` est désactivé sur l'avertissement et la méthode [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault) est appelée, ce qui empêche le comportement de fermeture par défaut du `<dialog>`.

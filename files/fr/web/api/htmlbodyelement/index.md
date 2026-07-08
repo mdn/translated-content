@@ -32,14 +32,14 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
 _Aucune méthode spécifique&nbsp;; hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 
-## Gestionnaires d'événements
+## Gestionnaires d'évènements
 
-Les événements de {{DOMxRef("HTMLElement")}} sont hérités.
+Les évènements de {{DOMxRef("HTMLElement")}} sont hérités.
 
-Les propriétés de gestionnaires d'événements `onXYZ` de {{DOMxRef("Window")}} sont également disponibles comme alias ciblant l'objet `window`. Cependant, il est conseillé de les écouter directement sur l'objet `window` plutôt que sur `HTMLBodyElement`.
+Les propriétés de gestionnaires d'évènements `onXYZ` de {{DOMxRef("Window")}} sont également disponibles comme alias ciblant l'objet `window`. Cependant, il est conseillé de les écouter directement sur l'objet `window` plutôt que sur `HTMLBodyElement`.
 
 > [!NOTE]
-> L'utilisation de `addEventListener()` sur `HTMLBodyElement` ne fonctionnera pas pour les gestionnaires d'événements `onXYZ` listés ci-dessous. Écoutez ces événements sur l'objet {{DOMxRef("window")}} à la place.
+> L'utilisation de `addEventListener()` sur `HTMLBodyElement` ne fonctionnera pas pour les gestionnaires d'évènements `onXYZ` listés ci-dessous. Écoutez ces évènements sur l'objet {{DOMxRef("window")}} à la place.
 
 - {{DOMxRef("window.afterprint_event", "HTMLBodyElement.onafterprint")}}
   - : Se déclenche après que le document associé a commencé à être imprimé ou que l'aperçu avant impression a été fermé.
@@ -90,7 +90,7 @@ Les propriétés de gestionnaires d'événements `onXYZ` de {{DOMxRef("Window")}
 - {{DOMxRef("window.unload_event", "HTMLBodyElement.onunload")}}
   - : Se déclenche lorsque le document est en cours de déchargement.
 
-Notez que bien que `onblur`, `onerror`, `onfocus`, `onload`, `onresize` et `onscroll` soient disponibles sur n'importe quel élément, leur signification sur l'élément `<body>` n'est pas la même que sur les autres éléments. Ils écoutent les événements sur l'objet `window` à la place.
+Notez que bien que `onblur`, `onerror`, `onfocus`, `onload`, `onresize` et `onscroll` soient disponibles sur n'importe quel élément, leur signification sur l'élément `<body>` n'est pas la même que sur les autres éléments. Ils écoutent les évènements sur l'objet `window` à la place.
 
 ## Spécifications
 

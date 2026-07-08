@@ -2,7 +2,7 @@
 title: Modèle de page d'élément SVG
 slug: MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
 l10n:
-  sourceCommit: 39d45a2e71cee2c107a026a59ba0d9229a511592
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 > [!NOTE]

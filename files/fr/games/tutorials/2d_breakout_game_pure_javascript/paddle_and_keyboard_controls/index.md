@@ -2,7 +2,7 @@
 title: Raquette et contrôle clavier
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 l10n:
-  sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
+  sourceCommit: 56718ef243af7c00ad3e848d436e718499c0590f
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
@@ -21,7 +21,7 @@ const paddleWidth = 75;
 let paddleX = (canvas.width - paddleWidth) / 2;
 ```
 
-Ici, nous définissons la hauteur et la largeur de la raquette et son point de départ sur l'axe des x pour l'utiliser dans les calculs plus loin dans le code. Créons une fonction qui dessinera la raquette sur l'écran. Ajoutez ce qui suit juste en dessous de votre fonction `drawBall()`&nbsp;:
+Ici, nous définissons la hauteur et la largeur de la raquette et son point de départ sur l'axe des x pour l'utiliser dans les calculs plus loin dans le code. Créons une fonction qui dessine la raquette sur l'écran. Ajoutez ce qui suit juste en dessous de votre fonction `drawBall()`&nbsp;:
 
 ```js
 function drawPaddle() {
@@ -35,11 +35,11 @@ function drawPaddle() {
 
 ## Permettre à l'utilisateur de contrôler la raquette
 
-Nous pouvons dessiner la raquette où nous voulons, mais elle doit répondre aux actions de l'utilisateur·ice. Il est temps de mettre en place certaines commandes au clavier. Nous aurons besoin de ce qui suit&nbsp;:
+Nous pouvons dessiner la raquette où nous voulons, mais elle doit répondre aux actions de l'utilisateur·ice. Il est temps de mettre en place certaines commandes au clavier. Nous avons besoin de ce qui suit&nbsp;:
 
 - Deux variables pour stocker des informations sur l'état des touches gauche et droite.
 - Deux écouteurs d'évènements pour les évènements `keydown` et `keyup` du clavier. Nous voulons exécuter un code pour gérer le mouvement de la raquette lorsque des appuis sur les touches.
-- Deux fonctions gérant les évènements `keydown` et `keyup` et le code qui sera exécuté lorsque les touches sont pressées.
+- Deux fonctions gérant les évènements `keydown` et `keyup` et le code qui est exécuté lorsque les touches sont pressées.
 - La possibilité de déplacer la raquette vers la gauche et vers la droite
 
 L'état des touches peut être mémorisé dans des variables booléennes comme dans l'exemple ci-dessous. Ajoutez ces lignes près de vos variables&nbsp;:
@@ -49,14 +49,14 @@ let rightPressed = false;
 let leftPressed = false;
 ```
 
-La valeur par défaut pour les deux est fausse car au début, car les touches ne sont pas enfoncés. Pour être informé des appuis sur les touches, nous allons mettre en place deux écouteurs d'évènements. Ajoutez les lignes suivantes juste au-dessus de la ligne `setInterval()` au bas de votre JavaScript&nbsp;:
+La valeur par défaut pour les deux est fausse, car au début, car les touches ne sont pas enfoncés. Pour être informé des appuis sur les touches, nous allons mettre en place deux écouteurs d'évènements. Ajoutez les lignes suivantes juste au-dessus de la définition de la fonction `drawBall()`&nbsp;:
 
 ```js
 document.addEventListener("keydown", keyDownHandler);
 document.addEventListener("keyup", keyUpHandler);
 ```
 
-Lorsque l'évènement `keydown` est déclenché par l'appui d'une des touches de votre clavier (lorsqu'elles sont enfoncées), la fonction `keyDownHandler()` est exécutée. Le même principe est vrai pour le deuxième écouteur : les évènements `keyup` activent la fonction `keyUpHandler()` (lorsque les touches cessent d'être enfoncées). Ajoutez ces lignes à votre code, sous les lignes `addEventListener()`&nbsp;:
+Lorsque l'évènement `keydown` est déclenché par l'appui d'une des touches de votre clavier (lorsqu'elles sont enfoncées), la fonction `keyDownHandler()` est exécutée. Le même principe est vrai pour le deuxième écouteur&nbsp;: les évènements `keyup` activent la fonction `keyUpHandler()` (lorsque les touches cessent d'être enfoncées). Ajoutez ces lignes à votre code, sous les lignes `addEventListener()`&nbsp;:
 
 ```js
 function keyDownHandler(e) {
@@ -76,13 +76,13 @@ function keyUpHandler(e) {
 }
 ```
 
-Quand on presse une touche du clavier, l'information est stockée dans une variable. La variable concernée est mis sur `true`. Quand la touche est relachée, la variable revient à `false`.
+Quand on presse une touche du clavier, l'information est stockée dans une variable. La variable concernée est mis sur `true`. Quand la touche est relâchée, la variable revient à `false`.
 
-Les deux fonctions prennent un évènement comme paramètre, représenté par la variable `e`. De là, vous pouvez obtenir des informations utiles : la propriété `key` contient les informations sur la touche qui a été enfoncée. La plupart des navigateurs utilisent `ArrowRight` et `ArrowLeft` pour les touches de flèche gauche/droite, mais nous devons également tester `Right` and `Left` pour prendre en charge les navigateurs IE/Edge. Si la touche gauche est enfoncé, la variable `leftPressed` est mise à `true`, et lorsqu'elle est relâchée, la variable `leftPressed` est mise à `false`. Le même principe s'applique à la touche droite et à la variable `rightPressed`.
+Les deux fonctions prennent un évènement comme paramètre, représenté par la variable `e`. De là, vous pouvez obtenir des informations utiles&nbsp;: la propriété `key` contient les informations sur la touche qui a été enfoncée. La plupart des navigateurs utilisent `ArrowRight` et `ArrowLeft` pour les touches de flèche gauche/droite, mais nous devons également tester `Right` and `Left` pour prendre en charge les navigateurs IE/Edge. Si la touche gauche est enfoncé, la variable `leftPressed` est mise à `true`, et lorsqu'elle est relâchée, la variable `leftPressed` est mise à `false`. Le même principe s'applique à la touche droite et à la variable `rightPressed`.
 
 ### La logique du déplacement de la raquette
 
-Nous avons maintenant mis en place les variables pour stocker les informations sur les touches pressées, les écouteurs d'évènements et les fonctions associées. Ensuite, nous allons entrer dans le code pour utiliser tout ce que nous venons de configurer et pour déplacer la palette à l'écran. Dans la fonction `draw()`, nous vérifierons si les touches gauche ou droite sont pressées lors du rendu de chaque image. Notre code pourrait ressembler à ceci&nbsp;:
+Nous avons maintenant mis en place les variables pour stocker les informations sur les touches pressées, les écouteurs d'évènements et les fonctions associées. Ensuite, nous allons entrer dans le code pour utiliser tout ce que nous venons de configurer et pour déplacer la palette à l'écran. Dans la fonction `draw()`, nous vérifions si les touches gauche ou droite sont pressées lors du rendu de chaque image. Notre code peut ressembler à ceci&nbsp;:
 
 ```js
 if (rightPressed) {
@@ -92,7 +92,7 @@ if (rightPressed) {
 }
 ```
 
-Si la touche gauche est enfoncée, la raquette se déplacera de sept pixels vers la gauche, et si la droite est enfoncé, la raquette se déplacera de sept pixels vers la droite. Cela fonctionne actuellement, mais la raquette disparaît du bord du canevas si nous maintenons l'une ou l'autre des touches trop longtemps enfoncée. Nous pourrions améliorer cela et déplacer la raquette uniquement dans les limites du canevas en changeant le code comme ceci&nbsp;:
+Si la touche gauche est enfoncée, la raquette se déplace de sept pixels vers la gauche, et si la droite est enfoncée, la raquette se déplace de sept pixels vers la droite. Cela fonctionne actuellement, mais la raquette disparaît du bord du canevas si nous maintenons l'une ou l'autre des touches trop longtemps enfoncée. Nous pourrions améliorer cela et déplacer la raquette uniquement dans les limites du canevas en changeant le code comme ceci&nbsp;:
 
 ```js
 if (rightPressed) {
@@ -108,7 +108,7 @@ if (rightPressed) {
 }
 ```
 
-La position de `paddleX` que nous utilisons variera entre `0` sur le côté gauche du canevas et `canvas.width-paddleWidth` sur le côté droit, ce qui fonctionnera exactement comme nous le souhaitons.
+La position de `paddleX` que nous utilisons varie entre `0` sur le côté gauche du canevas et `canvas.width-paddleWidth` sur le côté droit, ce qui fonctionne exactement comme nous le souhaitons.
 
 Ajoutez le bloc de code ci-dessus dans la fonction `draw()` en bas, juste au-dessus de l'accolade de fermeture.
 

@@ -31,14 +31,14 @@ Une chaîne de caractères. Les valeurs possibles sont les suivantes&nbsp;:
 <video
   id="el"
   controls
-  src="https://exemple.com/media.mp4"
-  poster="https://exemple.com/media.jpg"
+  src="https://example.com/media.mp4"
+  poster="https://example.com/media.jpg"
   width="800"
   height="600"
   preload="metadata">
   Désolé, votre navigateur ne prend pas en charge les vidéos intégrées, mais ne
   vous inquiétez pas, vous pouvez
-  <a href="https://exemple.com/media.mp4" download="media.mp4"
+  <a href="https://example.com/media.mp4" download="media.mp4"
     >le télécharger</a
   >
   et le regarder avec votre lecteur vidéo préféré&nbsp;!

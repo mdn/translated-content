@@ -50,10 +50,10 @@ D'autres alternatives qui fournissent des informations légèrement différentes
 document.domain = domainString;
 ```
 
-Le mutateur de cette propriété peut être utilisé pour _changer_ {{Glossary("origin", "l'origine")}} d'une page, et ainsi modifier la manière dont certaines vérifications de sécurité sont effectuées. Il ne peut être défini que sur le même domaine ou un domaine parent. Par exemple, si `https://a.exemple.com` et `https://b.exemple.com` utilisent tous deux
+Le mutateur de cette propriété peut être utilisé pour _changer_ {{Glossary("origin", "l'origine")}} d'une page, et ainsi modifier la manière dont certaines vérifications de sécurité sont effectuées. Il ne peut être défini que sur le même domaine ou un domaine parent. Par exemple, si `https://a.example.com et `https://b.eexample.comutilisent tous deux
 
 ```js
-document.domain = "exemple.com";
+document.domain = "example.com;
 ```
 
 alors ils ont tous deux modifié leur origine pour avoir le même domaine, et ils peuvent maintenant accéder directement au DOM de l'autre—malgré le fait qu'ils soient inter-origine, ce qui empêcherait normalement un tel accès.
@@ -87,7 +87,7 @@ Le mutateur lèvera une `SecurityError` de {{DOMxRef("DOMException")}} dans plus
 - Le [domaine effectif <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) du document est `null`.
 - La valeur donnée n'est ni la même que le nom d'hôte actuel de la page, ni un domaine parent du domaine actuel.
 
-À titre d'exemple de ce dernier cas d'échec, essayer de définir `document.domain` sur `"exemple.org"` lorsque vous êtes sur `https://exemple.com/` générera une erreur.
+À titre d'exemple de ce dernier cas d'échec, essayer de définir `document.domain` sur `"exemple.org"` lorsque vous êtes sur `https://example.com` générera une erreur.
 
 De plus, dans le cadre de son obsolescence, il ne fera rien lorsqu'il est combiné avec certaines fonctionnalités d'isolation modernes&nbsp;:
 

@@ -43,7 +43,7 @@ Un objet {{DOMxRef("Response")}}.
 ## Exemples
 
 ```js
-Response.redirect("https://www.exemple.com", 302);
+Response.redirect("https://www.example.com, 302);
 ```
 
 ## Spécifications

@@ -16,7 +16,7 @@ La barre d'outils regroupe généralement un sous-ensemble de fonctions présent
 
 Lors de la création d'une barre d'outils, il faut gérer la sélection et les interactions clavier à l'intérieur de la barre, en tenant compte du fait que les mêmes interactions clavier peuvent être utilisées à la fois dans la barre d'outils et dans les contrôles natifs inclus. Les touches <kbd>Flèche vers la gauche</kbd> et <kbd>Flèche vers la droite</kbd> servent à naviguer entre les contrôles d'une barre d'outils horizontale. Les touches <kbd>Flèche vers le haut</kbd> et <kbd>Flèche vers le bas</kbd> sont utilisées si la barre d'outils est verticale — dans ce cas, ajoutez aussi `aria-orientation="vertical"` — ou, dans une barre horizontale, peuvent être réservées à l'opération de contrôles comme les boutons de sélection qui nécessitent les flèches verticales.
 
-Évitez d'inclure des contrôles dont l'utilisation nécessite les touches fléchées utilisées pour la navigation dans la barre d'outils. Si cela est nécessaire, placez ce contrôle en dernier dans la barre. Par exemple, dans une barre d'outils horizontale, une zone de saisie peut être placée en dernier.
+Évitez d'inclure des contrôles dont l'utilisation nécessite les touches fléchées utilisées pour la navigation dans la barre d'outils. Si c'est nécessaire, placez ce contrôle en dernier dans la barre. Par exemple, dans une barre d'outils horizontale, une zone de saisie peut être placée en dernier.
 
 Si certains éléments interactifs de la barre d'outils sont temporairement désactivés, il peut être utile de les laisser sélectionnables afin que les utilisateur·ice·s de lecteurs d'écran soient informé·e·s de leur présence.
 
@@ -81,7 +81,7 @@ Quand la barre d'outils contient la sélection, fournissez des indices visuels. 
 
 ## Problèmes d'accessibilité
 
-Évitez d'inclure des contrôles dont l'utilisation nécessite les touches fléchées utilisées pour la navigation dans la barre d'outils (flèches droite et gauche, ou haut et bas pour les barres verticales). Si cela est nécessaire, placez ce contrôle en dernier dans la barre. Par exemple, dans une barre d'outils horizontale, une zone de saisie peut être placée en dernier.
+Évitez d'inclure des contrôles dont l'utilisation nécessite les touches fléchées utilisées pour la navigation dans la barre d'outils (flèches droite et gauche, ou haut et bas pour les barres verticales). Si c'est nécessaire, placez ce contrôle en dernier dans la barre. Par exemple, dans une barre d'outils horizontale, une zone de saisie peut être placée en dernier.
 
 Si certains éléments interactifs de la barre d'outils sont désactivés, il peut être utile de les laisser sélectionnables afin que les utilisateur·ice·s de lecteurs d'écran soient informé·e·s de leur présence.
 

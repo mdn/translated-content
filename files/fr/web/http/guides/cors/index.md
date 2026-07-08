@@ -254,7 +254,7 @@ Content-Type: text/plain
 
 Tous les navigateurs ne prennent pas encore en charge le suivi des redirections après une requête préliminaire. Si une redirection se produit après une telle requête, certains navigateurs affichent actuellement un message d'erreur tel que le suivant&nbsp;:
 
-> La requête a été redirigée vers `https://exemple.com/toto`, ce qui est interdit pour les requêtes inter-origines nécessitant une prévalidation.
+> La requête a été redirigée vers `https://example.com/toto`, ce qui est interdit pour les requêtes inter-origines nécessitant une prévalidation.
 > La requête nécessite une prévalidation, ce qui est interdit pour suivre les redirections inter-origines.
 
 Le protocole CORS exigeait initialement ce comportement mais [a depuis été modifié pour ne plus l'exiger <sup>(angl.)</sup>](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). Toutefois, tous les navigateurs n'ont pas encore implémenté ce changement et conservent donc le comportement initial.
@@ -344,14 +344,14 @@ Les requêtes de prévalidation CORS ne doivent jamais inclure d'informations d'
 
 Lors de la réponse à une requête avec informations d'authentification&nbsp;:
 
-- Le serveur **ne doit pas** définir le caractère générique `*` pour la valeur de l'en-tête de réponse `Access-Control-Allow-Origin`, mais doit au contraire indiquer une origine explicite&nbsp;; par exemple, `Access-Control-Allow-Origin: https://exemple.com`
+- Le serveur **ne doit pas** définir le caractère générique `*` pour la valeur de l'en-tête de réponse `Access-Control-Allow-Origin`, mais doit au contraire indiquer une origine explicite&nbsp;; par exemple, `Access-Control-Allow-Origin: https://example.com`
 - Le serveur **ne doit pas** définir le caractère générique `*` pour la valeur de l'en-tête de réponse `Access-Control-Allow-Headers`, mais doit au contraire indiquer une liste explicite de noms d'en-têtes&nbsp;; par exemple, `Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
 - Le serveur **ne doit pas** définir le caractère générique `*` pour la valeur de l'en-tête de réponse `Access-Control-Allow-Methods`, mais doit au contraire indiquer une liste explicite de noms de méthodes&nbsp;; par exemple, `Access-Control-Allow-Methods: POST, GET`
 - Le serveur **ne doit pas** définir le caractère générique `*` pour la valeur de l'en-tête de réponse `Access-Control-Expose-Headers`, mais doit au contraire indiquer une liste explicite de noms d'en-têtes&nbsp;; par exemple, `Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision`
 
 Si une requête inclut des informations d'authentification (le plus souvent l'en‑tête `Cookie`) et que la réponse contient un en‑tête `Access-Control-Allow-Origin: *` (c'est‑à‑dire avec le joker), le navigateur bloque l'accès à la réponse et affiche une erreur CORS dans la console des outils de développement.
 
-En revanche, si une requête inclut des informations d'authentification (comme l'en‑tête `Cookie`) et que la réponse contient une origine réelle plutôt que le joker (par exemple `Access-Control-Allow-Origin: https://exemple.com`), alors le navigateur autorise l'accès à la réponse depuis l'origine définie.
+En revanche, si une requête inclut des informations d'authentification (comme l'en‑tête `Cookie`) et que la réponse contient une origine réelle plutôt que le joker (par exemple `Access-Control-Allow-Origin: https://example.com`), alors le navigateur autorise l'accès à la réponse depuis l'origine définie.
 
 Notez aussi qu'un en‑tête de réponse `Set-Cookie` ne définit pas de cookie si la valeur de `Access-Control-Allow-Origin` dans cette réponse est le joker `*` plutôt qu'une origine réelle.
 

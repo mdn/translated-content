@@ -22,13 +22,13 @@ Ils identifient souvent les clients qui ne l'ont pas fait à l'aide de leur adre
 ### Réponse 511 pour une requête GET
 
 Dans l'exemple suivant, un client tente d'accéder à une ressource sur un réseau.
-La requête n'est pas authentifiée, et un serveur mandataire envoie un code d'état `511` pour inviter le visiteur à se connecter.
-Le code `511` garantit que les clients non-navigateurs n'interpréteront pas la réponse comme provenant du serveur d'origine.
-Les navigateurs sont redirigés automatiquement via la balise {{HTMLElement("meta")}} après 10 secondes, ou en cliquant sur le lien dans le corps de la réponse&nbsp;:
+La requête n'est pas authentifiée, et un serveur mandataire envoie un code d'état `511` pour inviter le·la visiteur·euse à se connecter.
+Le code `511` garantit que les clients non-navigateurs n'interprètent pas la réponse comme provenant du serveur d'origine.
+Les navigateurs sont redirigés automatiquement avec la balise {{HTMLElement("meta")}} après 10 secondes, ou en cliquant sur le lien dans le corps de la réponse&nbsp;:
 
 ```http
 GET /document HTTP/1.1
-Host: exemple.com
+Host: example.com
 ```
 
 ```http

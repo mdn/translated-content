@@ -58,7 +58,7 @@ PATCH <request-target>["?"<query>] HTTP/1.1
 
 - `<request-target>`
   - : Identifie la ressource cible de la requête, combinée avec l'information fournie dans l'en-tête {{HTTPHeader("Host")}}.
-    Il s'agit d'un chemin absolu (par exemple, `/chemin/vers/fichier.html`) pour les requêtes vers un serveur d'origine, et d'une URL absolue pour les requêtes vers un proxy (par exemple, `http://www.exemple.fr/chemin/vers/fichier.html`).
+    Il s'agit d'un chemin absolu (par exemple, `/chemin/vers/fichier.html`) pour les requêtes vers un serveur d'origine, et d'une URL absolue pour les requêtes vers un proxy (par exemple, `http://www.example.com/chemin/vers/fichier.html`).
 - `<query>` {{Optional_Inline}}
   - : Un composant de requête optionnel précédé d'un point d'interrogation `?`.
     Souvent utilisé pour transmettre des informations d'identification sous forme de paires `clé=valeur`.
@@ -91,7 +91,7 @@ Cette requête met à jour le champ `status`&nbsp;:
 
 ```http
 PATCH /users/123 HTTP/1.1
-Host: exemple.fr
+Host: example.com
 Content-Type: application/json
 Content-Length: 27
 Authorization: Bearer ABC123

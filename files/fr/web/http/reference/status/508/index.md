@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-Le code de statut de [réponse d'erreur serveur](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_serveur) HTTP **`508 Loop Detected`** indique que l'opération entière a échoué car elle a rencontré une boucle infinie lors du traitement d'une requête avec `Depth: infinity`.
+Le code de statut de [réponse d'erreur serveur](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_serveur) HTTP **`508 Loop Detected`** indique que l'opération entière a échoué, car elle a rencontré une boucle infinie lors du traitement d'une requête avec `Depth: infinity`.
 
 Ce statut peut être donné dans le contexte de <i lang="en">Web Distributed Authoring and Versioning</i> ({{Glossary("WebDAV")}}).
 Il a été introduit comme solution de repli pour les cas où les clients WebDAV ne prennent pas en charge les réponses {{HTTPStatus("208", "208 Already Reported")}} (lorsque les requêtes n'incluent pas explicitement un en-tête `DAV`).
@@ -22,7 +22,7 @@ Il a été introduit comme solution de repli pour les cas où les clients WebDAV
 
 ```http
 PROPFIND /Coll/ HTTP/1.1
-Host: exemple.com
+Host: example.com
 Depth: infinity
 Content-Type: application/xml; charset="utf-8"
 Content-Length: 125
