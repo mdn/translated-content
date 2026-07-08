@@ -13,7 +13,7 @@ l10n:
 `PublicKeyCredential` の作成または取得時（{{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} および {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} を通じて）`PublicKeyCredential` を作成または取得する際、`publicKey` オプションの `extensions` プロパティで指定されたさまざまな拡張機能に対して、クライアントによる「独自の」処理をリクエストできます。さまざまな拡張機能のリクエストに関する情報は、[ウェブ認証の拡張機能](/ja/docs/Web/API/Web_Authentication_API/WebAuthn_extensions)を参照してください。
 
 > [!NOTE]
-> `getClientExtensionResults()` は、ユーザーエージェント（クライアント）によって処理された拡張機能の結果のみを返します。認証器によって処理された拡張機能の結果は、{{domxref("AuthenticatorAssertionResponse.authenticatorData")}} で利用できる[認証器データ](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data)内に得られます。
+> `getClientExtensionResults()` は、ユーザーエージェント（クライアント）によって処理された拡張機能の結果のみを返します。認証器によって処理された拡張機能の結果は、{{domxref("AuthenticatorAssertionResponse.authenticatorData")}} で利用できる[認証器データ](/ja/docs/Web/API/Web_Authentication_API/Authenticator_data)内に得られます。
 
 ## 構文
 
