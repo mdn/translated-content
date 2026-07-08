@@ -89,8 +89,6 @@ divParent.insertBefore(nouveauNoeud, sp2); // Génère "Type Error: Invalid Argu
 // Crée un nouvel élément simple de type <span>
 const sp1 = document.createElement("span");
 
-const sp1 = document.createElement("span");
-
 // Obtient l'élément de référence
 const sp2 = document.getElementById("elementEnfant");
 // Obtient l'élément parent
