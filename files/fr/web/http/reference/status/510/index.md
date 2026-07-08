@@ -24,7 +24,7 @@ Comme le serveur d'origine ne reçoit aucune information sur la méthode `M-GET`
 
 ```http
 M-GET /document HTTP/1.1
-Host: exemple.com
+Host: example.com
 C-Man: "http://www.exemple.org/"
 Connection: C-Man
 ```

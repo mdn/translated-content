@@ -23,7 +23,7 @@ Le rôle `main` est un rôle de [repère](/fr/docs/Web/Accessibility/ARIA/Refere
 
 En classifiant et en étiquetant les sections d'une page, les informations structurelles transmises visuellement par la mise en page peuvent être représentées de manière programmatique. Les lecteurs d'écran utilisent les rôles de repère pour fournir une navigation au clavier vers des sections importantes d'une page. Pour ceux qui naviguent avec des rôles de repère, le rôle `main` est une alternative aux liens "passer au contenu principal".
 
-Il ne devrait y avoir qu'un seul rôle de repère `main` par document.
+Il ne doit y avoir qu'un seul rôle de repère `main` par document.
 
 L'élément {{HTMLElement("main")}} a un rôle de `main`. Les développeur·euse·s devraient utiliser le HTML sémantique — dans ce cas {{HTMLElement("main")}} — plutôt que d'utiliser l'ARIA.
 
@@ -70,13 +70,13 @@ Si un document contient deux rôles `main`, par exemple lors de la mise à jour 
 </main>
 ```
 
-C'est également utile d'inclure un nom accessible pour aider à orienter les utilisateur·ice·s de technologies d'assistance, en particulier dans les applications à page unique où les changements de contenu principal se produisent sans générer d'événement de chargement de page. Cela peut être ajouté avec `aria-labelledby` s'il y a un nom approprié dans le contenu, ou `aria-label` si ce n'est pas le cas.
+C'est également utile d'inclure un nom accessible pour aider à orienter les utilisateur·ice·s de technologies d'assistance, en particulier dans les applications à page unique où les changements de contenu principal se produisent sans générer d'évènement de chargement de page. Cela peut être ajouté avec `aria-labelledby` s'il y a un nom approprié dans le contenu, ou `aria-label` si ce n'est pas le cas.
 
 ## Bonnes pratiques
 
 ### Préférer HTML
 
-L'utilisation de l'élément {{HTMLElement("main")}} communiquera automatiquement que l'élément a un rôle `main`. Si possible, préférez utiliser l'élément sémantique `<main>` à la place du rôle `main`.
+L'utilisation de l'élément {{HTMLElement("main")}} communique automatiquement que l'élément a un rôle `main`. Si possible, préférez utiliser l'élément sémantique `<main>` à la place du rôle `main`.
 
 ### Navigation par saut
 
@@ -96,7 +96,7 @@ Ajouter un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) à 
 </body>
 ```
 
-Qui sera l'équivalent de&nbsp;:
+Qui est l'équivalent de&nbsp;:
 
 ```html
 <body>

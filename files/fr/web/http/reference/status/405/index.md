@@ -8,7 +8,7 @@ l10n:
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`405 Method Not Allowed`** indique que le serveur connaît la méthode de la requête, mais que la ressource ciblée ne la prend pas en charge.
 Le serveur **doit** générer un en-tête {{HTTPHeader("Allow")}} dans une réponse 405, contenant la liste des méthodes actuellement supportées par la ressource ciblée.
 
-Des permissions incorrectes côté serveur sur des fichiers ou des répertoires peuvent provoquer une réponse 405 alors que la requête aurait normalement dû réussir.
+Des permissions incorrectes côté serveur sur des fichiers ou des répertoires peuvent provoquer une réponse 405 alors que la requête a normalement dû réussir.
 
 ## Statut
 
@@ -25,7 +25,7 @@ L'exemple suivant montre une réponse typique où le serveur n'autorise pas l'ut
 
 ```http
 TRACE / HTTP/1.1
-Host: exemple.com
+Host: example.com
 ```
 
 ```http

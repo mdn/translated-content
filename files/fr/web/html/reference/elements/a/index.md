@@ -16,8 +16,8 @@ Le contenu de chaque `<a>` doit indiquer la destination du lien. Si l'attribut `
 <p>Vous pouvez contacter Michaël&nbsp;:</p>
 
 <ul>
-  <li><a href="https://exemple.fr">Site web</a></li>
-  <li><a href="mailto:m.bluth@exemple.fr">Courriel</a></li>
+  <li><a href="https://example.com">Site web</a></li>
+  <li><a href="mailto:m.bluth@example.com">Courriel</a></li>
   <li><a href="tel:+123456789">Téléphone</a></li>
 </ul>
 ```

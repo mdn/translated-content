@@ -362,7 +362,7 @@ function createColumn() {
 
 Lorsque le bouton «&nbsp;Créer une nouvelle colonne&nbsp;» est cliqué, la fonction `createColumn()` est appelée. Elle crée un élément {{HTMLElement("div")}} avec une couleur de fond générée aléatoirement et un bouton {{HTMLElement("button")}} pour fermer le `<div>`. Le bouton est ajouté au `<div>`, puis le `<div>` au conteneur `<section>`.
 
-On ajoute ensuite un écouteur d'événement au bouton de fermeture via {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}. Cliquer sur le bouton fait deux choses&nbsp;:
+On ajoute ensuite un écouteur d'évènement au bouton de fermeture via {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}. Cliquer sur le bouton fait deux choses&nbsp;:
 
 - Ajoute la classe `fade-out` au `<div>`. L'ajout de la classe déclenche l'animation de sortie définie sur cette classe.
 - Retire le `<div>` après un délai de 1000&nbsp;ms. La fonction {{DOMxRef("Window.setTimeout", "setTimeout()")}} retarde le retrait du `<div>` du DOM (via {{DOMxRef("Element.remove()")}}) jusqu'à la fin de l'animation.

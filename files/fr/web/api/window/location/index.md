@@ -49,7 +49,7 @@ Dans cet exemple, on recharge la page avec la méthode [`replace()`](/fr/docs/We
 
 ```js
 function reloadPageWithHash() {
-  location.replace(`https://exemple.com/#${location.pathname}`);
+  location.replace(`https://example.com/#${location.pathname}`);
 }
 ```
 

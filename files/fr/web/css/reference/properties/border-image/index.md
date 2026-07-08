@@ -3,13 +3,13 @@ title: Propriété CSS `border-image`
 short-title: border-image
 slug: Web/CSS/Reference/Properties/border-image
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 0cf00ab40deebad90225815e1881ae89bbca085b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image`** dessine une image autour d'un élément donné. Elle remplace la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) classique de l'élément.
 
 > [!NOTE]
-> Il est conseillé d'indiquer un {{CSSxRef("border-style")}} distinct au cas où l'image de bordure ne se chargerait pas. Bien que la spécification ne l'exige pas strictement, certains navigateurs n'affichent pas l'image de bordure si {{CSSxRef("border-style")}} vaut `none` ou si {{CSSxRef("border-width")}} vaut `0`.
+> Il est conseillé d'indiquer un {{CSSxRef("border-style")}} distinct au cas où l'image de bordure ne se charge pas. Bien que la spécification ne l'exige pas strictement, certains navigateurs n'affichent pas l'image de bordure si {{CSSxRef("border-style")}} vaut `none` ou si {{CSSxRef("border-width")}} vaut `0`.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: border-image")}}
 
@@ -68,6 +68,8 @@ Cette propriété est une propriété raccourcie pour les propriétés CSS suiva
 - {{CSSxRef("border-image-slice")}}
 - {{CSSxRef("border-image-source")}}
 - {{CSSxRef("border-image-width")}}
+
+Cette propriété raccourcie est réinitialisée, toutes les propriétés longues étant définies sur leurs valeurs initiales, par la propriété raccourcie CSS {{CSSxRef("border")}}.
 
 ## Syntaxe
 

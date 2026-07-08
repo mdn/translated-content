@@ -9,11 +9,11 @@ l10n:
 Le rôle `meter` sert à identifier un élément utilisé comme indicateur de mesure.
 
 > [!NOTE]
-> Lorsque cela est possible, il est recommandé d'utiliser l'élément natif {{HTMLElement("meter")}} plutôt que le rôle `meter`, car les éléments natifs sont mieux pris en charge par les navigateurs et les technologies d'assistance.
+> Lorsque c'est possible, il est recommandé d'utiliser l'élément natif {{HTMLElement("meter")}} plutôt que le rôle `meter`, car les éléments natifs sont mieux pris en charge par les navigateurs et les technologies d'assistance.
 
 ## Description
 
-Un indicateur de mesure (<i lang="en">meter</i> en anglais) est une représentation graphique d'une valeur numérique dans une plage définie. Par exemple, l'affichage du pourcentage de batterie. Un indicateur de mesure n'est pas adapté aux valeurs qui n'ont pas de limite maximale significative. Il ne doit pas être utilisé pour indiquer une progression (exemple&nbsp;: chargement), cela doit être communiqué avec l'élément {{HTMLElement('progress')}}.
+Un indicateur de mesure (<i lang="en">meter</i> en anglais) est une représentation graphique d'une valeur numérique dans une plage définie. Par exemple, l'affichage du pourcentage de batterie. Un indicateur de mesure n'est pas adapté aux valeurs qui n'ont pas de limite maximale significative. Il ne doit pas être utilisé pour indiquer une progression (exemple&nbsp;: chargement), cela doit être communiqué avec l'élément {{HTMLElement("progress")}}.
 
 Chaque élément avec `role="meter"` doit également comporter l'un des attributs suivants&nbsp;:
 
@@ -55,7 +55,7 @@ Du point de vue de l'utilisateur·ice de technologies d'assistance, le titre n'e
 - [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
   - : Défini sur une valeur décimale représentant la valeur maximale, et supérieure à `aria-valuemin`.
 
-Il est recommandé d'utiliser l'élément natif {{HTMLElement("meter")}} plutôt que le rôle `meter`. Les navigateurs proposent un widget stylisé pour l'élément {{HTMLElement("meter")}} en fonction de la valeur courante (`value`) par rapport aux valeurs `min` et `max`. Si vous utilisez des éléments non sémantiques, toutes les fonctionnalités de l'élément natif doivent être recréées avec des attributs ARIA, du JavaScript et du CSS.
+Il est recommandé d'utiliser l'élément natif {{HTMLElement("meter")}} plutôt que le rôle `meter`. Les navigateurs proposent un composant mis en forme pour l'élément {{HTMLElement("meter")}} en fonction de la valeur courante (`value`) par rapport aux valeurs `min` et `max`. Si vous utilisez des éléments non sémantiques, toutes les fonctionnalités de l'élément natif doivent être recréées avec des attributs ARIA, du JavaScript et du CSS.
 
 ## Exemples
 
@@ -82,5 +82,5 @@ Dans ce scénario, lorsque la valeur de `aria-valuenow` est mise à jour, la lar
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('meter')}}
-- L'élément HTML {{HTMLElement('progress')}}
+- L'élément HTML {{HTMLElement("meter")}}
+- L'élément HTML {{HTMLElement("progress")}}

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Element`** est la classe de base la plus générale dont héritent tous les objets représentant des éléments (c'est-à-dire des objets qui représentent des éléments) dans un {{DOMxRef("Document")}}. Elle ne possède que des méthodes et des propriétés communes à tous les types d'éléments. Des classes plus spécifiques héritent de `Element`.
+**`Element`** est la classe de base la plus générale dont héritent tous les objets des éléments (c'est-à-dire des objets qui représentent des éléments) dans un {{DOMxRef("Document")}}. Elle ne possède que des méthodes et des propriétés communes à tous les types d'éléments. Des classes plus spécifiques héritent de `Element`.
 
 Par exemple, l'interface {{DOMxRef("HTMLElement")}} est l'interface de base pour les éléments HTML. De même, l'interface {{DOMxRef("SVGElement")}} est la base pour tous les éléments SVG, et l'interface {{DOMxRef("MathMLElement")}} est l'interface de base pour les éléments MathML. La plupart des fonctionnalités sont définies plus bas dans la hiérarchie des classes.
 

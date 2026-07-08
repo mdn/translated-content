@@ -7,7 +7,7 @@ l10n:
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-color-scheme`** permet de détecter si un·e utilisateur·ice a demandé un thème clair ou sombre.
-L'utilisateur·ice indique sa préférence via un réglage du système d'exploitation (par exemple, mode clair ou sombre) ou via un paramètre de l'agent utilisateur·ice.
+L'utilisateur·ice indique sa préférence via un réglage du système d'exploitation (par exemple, mode clair ou sombre) ou via un paramètre de l'agent utilisateur.
 
 ## Éléments embarqués
 

@@ -36,7 +36,7 @@ Un mandataire refuse de transmettre la méthode `M-GET` et envoie une erreur `50
 
 ```http
 M-GET /document HTTP/1.1
-Host: exemple.com
+Host: example.com
 C-Man: "http://www.exemple.org/"
 Connection: C-Man
 ```
