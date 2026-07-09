@@ -33,15 +33,11 @@ l10n:
 <div class="container">
   <h1>这是标题</h1>
   <p>
-    Veggies es <span>bonus vobis</span>, proinde vos postulo essum magis
-    kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean
-    garlic.
+    蔬菜对你们<span>有益</span>，因此我建议你们多吃芜菁、韭葱、白萝卜、苋菜、塔菜、小番茄、甜瓜和红豆，以及大蒜。
   </p>
   <h2>一个二级标题</h2>
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    秋葵、甜菜叶、玉米、索科、菊苣、葫芦。欧芹、红葱头、西葫芦、塔菜、豌豆苗、蚕豆、羽衣甘蓝、蒲公英、秋葵、裙带菜、番茄。蒲公英、黄瓜、花生、豌豆、索科、西葫芦。
   </p>
 </div>
 ```
@@ -98,17 +94,13 @@ span {
 <div class="container">
   <h1>这是标题</h1>
   <p>
-    Veggies es <span class="alert">bonus vobis</span>, proinde vos postulo
-    <span class="alert stop">essum magis</span> kohlrabi welsh onion daikon
-    amaranth tatsoi tomatillo melon azuki bean garlic.
+    蔬菜对你们<span class="alert">有益</span>，因此我建议你们<span class="alert stop">多吃</span>芜菁、韭葱、白萝卜、苋菜、塔菜、小番茄、甜瓜和红豆，以及大蒜。
   </p>
   <h2 id="special">一个二级标题</h2>
-  <p>Gumbo beet greens corn soko endive gumbo gourd.</p>
+  <p>秋葵、甜菜叶、玉米、索科、菊苣、葫芦。</p>
   <h2>另一个二级标题</h2>
   <p>
-    <span class="alert go">Parsley shallot</span> courgette tatsoi pea sprouts
-    fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
-    earthnut pea peanut soko zucchini.
+    <span class="alert go">>欧芹、红葱头</span、西葫芦、塔菜、豌豆苗、蚕豆、羽衣甘蓝、蒲公英、秋葵、裙带菜、番茄。蒲公英、黄瓜、花生、豌豆、索科、西葫芦。
   </p>
 </div>
 ```
@@ -166,14 +158,10 @@ body {
 ```html live-sample___selectors3-start live-sample___selectors3-finish
 <div class="container">
   <p>
-    Veggies es <a href="http://example.com">bonus vobis</a>, proinde vos postulo
-    essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon
-    azuki bean garlic.
+    蔬菜对你们<a href="http://example.com">有益</a>，因此我建议你们多吃芜菁、韭葱、白萝卜、苋菜、塔菜、小番茄、甜瓜和红豆，以及大蒜。
   </p>
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+     秋葵、甜菜叶、玉米、索科、菊苣、葫芦。欧芹、红葱头、西葫芦、塔菜、豌豆苗、蚕豆、羽衣甘蓝、蒲公英、秋葵、裙带菜、番茄。蒲公英、黄瓜、花生、豌豆、索科、西葫芦。
   </p>
   <table>
     <tbody>
