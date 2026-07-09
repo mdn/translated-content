@@ -189,7 +189,7 @@ Les navigateurs ne prennent pas en charge l'ensemble des formats vidéo&nbsp; vo
 </video>
 ```
 
-Lorsque vous utilisez des éléments {{HTMLElement("source")}}, le navigateur tente de charger chaque source séquentiellement. Si une source échoue (par exemple, en raison d'une URL non valide ou d'un format non pris en charge), la source suivante est tentée, etc. Un événement `error` se déclenche sur l'élément `<video>` après que toutes les sources ont échoué&nbsp;; Les événements `error` ne sont pas déclenchés sur chaque élément individuel `<source>`.
+Lorsque vous utilisez des éléments {{HTMLElement("source")}}, le navigateur tente de charger chaque source séquentiellement. Si une source échoue (par exemple, en raison d'une URL non valide ou d'un format non pris en charge), la source suivante est tentée, etc. Un évènement `error` se déclenche sur l'élément `<video>` après que toutes les sources ont échoué&nbsp;; Les évènements `error` ne sont pas déclenchés sur chaque élément individuel `<source>`.
 
 Nous proposons un [Guide des types de fichiers médias substantiel et approfondi](/fr/docs/Web/Media/Guides/Formats) et le [Guide des codecs pris en charge pour la vidéo](/fr/docs/Web/Media/Guides/Formats/Video_codecs). Il y a également un guide disponible pour les [codecs audio qui peuvent être utilisés avec eux](/fr/docs/Web/Media/Guides/Formats/Audio_codecs).
 

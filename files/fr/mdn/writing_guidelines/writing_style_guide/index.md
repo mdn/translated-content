@@ -519,7 +519,7 @@ De manière générale, si vous envisagez d'ajouter un lien externe, assurez-vou
 
 Un raccourcisseur d'URL peut être utile pour raccourcir des liens longs en adresses plus courtes et mémorisables. Cependant, ils masquent la destination. De plus, pour certains services, la destination peut être modifiée après création, ce qui peut être utilisé de manière malveillante.
 
-N'utilisez pas de liens créés avec des raccourcisseurs tiers ouverts. Par exemple, si `https://monliencourt.lien/tototata` est une URL courte générée par une personne et redirige vers `https://exemple.fr/unlientroplong/details/show?page_id=tototata`, utilisez l'URL longue d'`exemple.fr`.
+N'utilisez pas de liens créés avec des raccourcisseurs tiers ouverts. Par exemple, si `https://monliencourt.lien/tototata` est une URL courte générée par une personne et redirige vers `https://example.com/unlientroplong/details/show?page_id=tototata`, utilisez l'URL longue d'`example.com`.
 
 <!-- markdownlint-disable search-replace -->
 

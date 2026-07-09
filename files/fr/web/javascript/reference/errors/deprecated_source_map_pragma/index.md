@@ -32,7 +32,7 @@ La spécification sur cet outil a évolué car il existait un conflit de syntaxe
 La syntaxe utilisant l'arobase (@) est dépréciée :
 
 ```js example-bad
-//@ sourceMappingURL=http://exemple.com/chemin/vers/la/sourcemap.map
+//@ sourceMappingURL=http://example.com/chemin/vers/la/sourcemap.map
 ```
 
 ### Syntaxe standard
@@ -40,7 +40,7 @@ La syntaxe utilisant l'arobase (@) est dépréciée :
 Il faut utiliser le dièse (#) :
 
 ```js example-good
-//# sourceMappingURL=http://exemple.com/chemin/vers/la/sourcemap.map
+//# sourceMappingURL=http://example.com/chemin/vers/la/sourcemap.map
 ```
 
 Autrement, on peut indiquer la correspondance dans un en-tête {{HTTPHeader("SourceMap")}} pour servir le fichier JavaScript afin d'éviter tout commentaire :

@@ -16,7 +16,7 @@ Le rôle `heading` indique aux technologies d'assistance que cet élément doit 
 <div role="heading" aria-level="1">Ceci est un en-tête principal de page</div>
 ```
 
-Ceci définit le texte dans le `<div>` comme étant l'en-tête principal de la page, indiqué par le niveau 1 via l'attribut `aria-level`. Optez plutôt pour l'utilisation de l'élément {{HTMLElement("Heading_Elements", "h1")}} (à travers {{HTMLElement("Heading_Elements", "h6")}}).
+Ceci définit le texte dans le `<div>` comme étant l'en-tête principal de la page, indiqué par le niveau 1 avec l'attribut `aria-level`. Optez plutôt pour l'utilisation de l'élément {{HTMLElement("Heading_Elements", "h1")}} (à travers {{HTMLElement("Heading_Elements", "h6")}}).
 
 ```html
 <h1>Ceci est un en-tête principal de page</h1>
@@ -25,15 +25,15 @@ Ceci définit le texte dans le `<div>` comme étant l'en-tête principal de la p
 ### Propriétés, états et rôles WAI-ARIA associés
 
 - [`aria-level`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level)
-  - : L'attribut `aria-level` spécifie le niveau de l'en-tête dans la structure du document. Cet attribut est requis&nbsp;: les auteurs doivent indiquer le niveau d'imbrication approprié pour garantir que les éléments ayant un rôle d'en-tête sont organisés dans un plan logique. Si l'attribut est erronément omis, les navigateurs utiliseront une [valeur de secours de 2 <sup>(angl.)</sup>](https://w3c.github.io/aria/#authorErrorDefaultValuesTable).
+  - : L'attribut `aria-level` définit le niveau de l'en-tête dans la structure du document. Cet attribut est requis&nbsp;: les auteur·ice·s doivent indiquer le niveau d'imbrication approprié pour garantir que les éléments ayant un rôle d'en-tête sont organisés dans un plan logique. Si l'attribut est erronément omis, les navigateurs utilisent une [valeur de secours de 2 <sup>(angl.)</sup>](https://w3c.github.io/aria/#authorErrorDefaultValuesTable).
 
 ### Interactions au clavier
 
-Ce rôle ne nécessite pas de navigation au clavier spéciale. Comme pour tout en-tête, lui donner un ID garantit qu'il peut être référencé à partir de liens d'ancrage, le rendant accessible via le clavier.
+Ce rôle ne nécessite pas de navigation au clavier spéciale. Comme pour tout en-tête, lui donner un ID garantit qu'il peut être référencé à partir de liens d'ancrage, le rendant accessible avec le clavier.
 
 ### Fonctionnalités JavaScript requises
 
-- Gestionnaires d'événements requis
+- Gestionnaires d'évènements requis
   - : Aucun.
 - Changer les valeurs des attributs
   - : Généralement pas nécessaire, sauf si le contenu est inséré dynamiquement. Dans ce cas, les nouveaux en-têtes ont besoin d'attributs `aria-level` dont les valeurs sont cohérentes avec le reste de la structure du document.
@@ -58,7 +58,7 @@ L'exemple suivant montre une structure de page typique.
 </div>
 ```
 
-Cependant, vous devriez plutôt faire&nbsp;:
+Cependant, vous devez plutôt faire&nbsp;:
 
 ```html
 <div id="container">
@@ -76,7 +76,7 @@ Cependant, vous devriez plutôt faire&nbsp;:
 ## Problèmes d'accessibilité
 
 > [!WARNING]
-> Utiliser [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) masquera le contenu de votre en-tête pour les technologies d'assistance, lisant l'étiquette au lieu de l'en-tête.
+> Utiliser [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) masque le contenu de votre en-tête pour les technologies d'assistance, lisant l'étiquette au lieu de l'en-tête.
 
 Si vous devez utiliser le rôle `heading` et l'attribut [`aria-level`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level), ne dépassez pas le niveau 6 afin de rester cohérent avec HTML. Bien qu'en théorie vous puissiez aller plus haut, et que certains lecteurs d'écran puissent le prendre en charge, les résultats peuvent être imprévisibles avec d'autres combinaisons de navigateurs et de lecteurs d'écran.
 

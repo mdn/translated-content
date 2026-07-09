@@ -83,7 +83,7 @@ body {
 ```js
 let dragged;
 
-/* les événements déclenchés sur la cible déplaçable */
+/* les évènements déclenchés sur la cible déplaçable */
 const source = document.getElementById("draggable");
 source.addEventListener("drag", (event) => {
   console.log("déplacement");
@@ -101,7 +101,7 @@ source.addEventListener("dragend", (event) => {
   event.target.classList.remove("dragging");
 });
 
-/* les événements déclenchés sur les cibles de dépôt */
+/* les évènements déclenchés sur les cibles de dépôt */
 const target = document.getElementById("drop-target");
 target.addEventListener("dragover", (event) => {
   // empêcher le comportement par défaut pour autoriser le dépôt

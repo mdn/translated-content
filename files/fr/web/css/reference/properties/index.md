@@ -1,5 +1,6 @@
 ---
 title: Propriétés CSS
+short-title: Propriétés
 slug: Web/CSS/Reference/Properties
 l10n:
   sourceCommit: 26e03490d14803dc2ae8b85ec5c0c2b26d6b50d1
@@ -14,7 +15,7 @@ img {
 }
 ```
 
-Chaque propriété a un nom (par exemple, `opacity`), une valeur (par exemple `0.8`), et un comportement défini sur le rendu du document. Le CSS définit également des propriétés abrégées, vous permettant de spécifier plusieurs propriétés liées dans une seule déclaration. Par exemple, la propriété {{CSSxRef("margin")}} est un raccourci de {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, et {{CSSxRef("margin-left")}}, qui définit la marge des quatre côtés d'un élément&nbsp;:
+Chaque propriété a un nom (par exemple, `opacity`), une valeur (par exemple `0.8`), et un comportement défini sur le rendu du document. Le CSS définit également des propriétés abrégées, vous permettant de définir plusieurs propriétés liées dans une seule déclaration. Par exemple, la propriété {{CSSxRef("margin")}} est un raccourci de {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, et {{CSSxRef("margin-left")}}, qui définit la marge des quatre côtés d'un élément&nbsp;:
 
 ```css
 /* Donne aux éléments <img> une marge de 1 rem */

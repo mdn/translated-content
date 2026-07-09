@@ -376,7 +376,7 @@ Le rendu initial inclut l'étoile comme source de `clip-path`.
 
 #### JavaScript
 
-Lorsque vous sélectionnez une nouvelle option dans le menu `<select>`, un gestionnaire d'événements met à jour la valeur de `clip-path` définie sur le `<img>`.
+Lorsque vous sélectionnez une nouvelle option dans le menu `<select>`, un gestionnaire d'évènements met à jour la valeur de `clip-path` définie sur le `<img>`.
 
 ```js
 const clipPathSelect = document.getElementById("clipPath");

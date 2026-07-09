@@ -51,7 +51,7 @@ La spécification HTML définit l'ensemble suivant de noms de métadonnées stan
 - [`referrer`](/fr/docs/Web/HTML/Reference/Elements/meta/name/referrer)
   - : Contrôle l'en-tête HTTP {{HTTPHeader("Referer")}} des requêtes envoyées depuis le document.
 - [`theme-color`](/fr/docs/Web/HTML/Reference/Elements/meta/name/theme-color)
-  - : Indique une couleur suggérée que les agents utilisateur·ice·s peuvent utiliser pour personnaliser l'affichage de la page ou de l'interface utilisateur environnante.
+  - : Indique une couleur suggérée que les agents utilisateurs peuvent utiliser pour personnaliser l'affichage de la page ou de l'interface utilisateur environnante.
     L'attribut [`content`](/fr/docs/Web/HTML/Reference/Attributes/content) contient une valeur CSS {{CSSxRef("&lt;color&gt;")}} valide.
     L'attribut [`media`](/fr/docs/Web/HTML/Reference/Elements/meta#media) avec une liste de requêtes média valide peut être inclus pour définir le média auquel la couleur de thème s'applique.
 

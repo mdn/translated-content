@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-Le [rôle abstrait](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#6._rôles_abstraits) `composite` indique un widget qui peut contenir des descendants navigables ou des enfants possédés.
+Le [rôle abstrait](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#6._rôles_abstraits) `composite` définit un composant qui peut contenir des descendants navigables ou des enfants possédés.
 
 > [!WARNING]
 > Le rôle `composite` est un rôle abstrait. Il est inclus ici pour compléter la documentation. Il ne doit pas être utilisé par les développeur·euse·s web.

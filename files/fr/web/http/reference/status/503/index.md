@@ -31,7 +31,7 @@ Une page conviviale expliquant le problème doit être envoyée avec cette répo
 ### Réponse d'erreur serveur 503
 
 La requête suivante tente d'obtenir une page web, mais reçoit en retour une réponse `503`.
-Le corps de la réponse contient une page décrivant l'état du serveur avec un lien vers une page d'assistance pour les visiteurs.
+Le corps de la réponse contient une page décrivant l'état du serveur avec un lien vers une page d'assistance pour les visiteur·euse·s.
 Un identifiant est inclus dans le corps de la réponse pour illustrer une méthode pouvant aider les administrateur·ice·s de serveur à identifier la cause du problème&nbsp;:
 
 ```http

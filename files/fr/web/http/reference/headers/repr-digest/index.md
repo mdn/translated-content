@@ -46,7 +46,7 @@ Repr-Digest: <digest-algorithm>=<digest-value>,…,<digest-algorithmN>=<digest-v
 - `<digest-value>`
   - : Le digest en octets de la représentation en utilisant `<digest-algorithm>`.
     Le choix de l'algorithme de digest détermine également l'encodage à utiliser&nbsp;: `sha-512` et `sha-256` utilisent l'encodage {{Glossary("base64")}}, tandis que certains algorithmes hérités comme `unixsum` utilisent un entier décimal.
-    Contrairement aux brouillons antérieurs de la spécification, les octets du digest encodés en base64 standard sont enveloppés entre deux deux-points (`:`, ASCII 0x3A) dans le cadre de la [syntaxe de dictionnaire <sup>(angl.)</sup>](https://www.rfc-editor.org/rfc/rfc8941#name-byte-sequences).
+    Contrairement aux brouillons antérieurs de la spécification, les octets du digest encodés en base64 standard sont enveloppés entre deux deux-points (`:`, ASCII 0x3A) dans le cadre de la [syntaxe de dictionnaire <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc8941#name-byte-sequences).
 
 L'utilisation d'algorithmes de digest non sécurisés est fortement déconseillée, car des collisions peuvent être réalistement provoquées, rendant l'utilité du digest faible.
 Sauf si vous travaillez avec des systèmes hérités (ce qui est improbable, car la plupart s'attendent à l'en-tête obsolète `Digest` et ne comprendront pas cette spécification), envisagez d'omettre un `Repr-Digest` plutôt que d'en inclure un avec un algorithme de digest non sécurisé.

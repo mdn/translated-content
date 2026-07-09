@@ -113,7 +113,7 @@ Le code vérifie si `autocorrect` est pris en charge en testant sa présence sur
 S'il n'est pas présent, un message est écrit dans le journal.
 S'il est présent, la valeur de la propriété `autocorrect` pour chacun des éléments de saisie est consignées dans le journal.
 
-Un gestionnaire d'événement est ajouté au bouton, permettant de réinitialiser le texte saisi et le journal.
+Un gestionnaire d'évènement est ajouté au bouton, permettant de réinitialiser le texte saisi et le journal.
 
 ```js
 const resetButton = document.querySelector("#reset");

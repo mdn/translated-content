@@ -1,34 +1,24 @@
 ---
-title: Date
+title: Date ヘッダー
+short-title: Date
 slug: Web/HTTP/Reference/Headers/Date
-original_slug: Web/HTTP/Headers/Date
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-**`Date`** は HTTP の一般ヘッダーで、メッセージが発信された日時が含まれています。
-
-> [!WARNING]
-> `Date` は fetch 仕様書において[禁止リクエストヘッダー](https://fetch.spec.whatwg.org/#forbidden-header-name)に挙げられています。 - そのため、このコードは `Date` ヘッダーを送信しません。
->
-> ```js
-> fetch("https://httpbin.org/get", {
->   headers: {
->     Date: new Date().toUTCString(),
->   },
-> });
-> ```
+HTTP の **`Date`** {{Glossary("request header", "リクエスト")}}・{{Glossary("response header", "レスポンスヘッダー")}}は、メッセージが発信された日時が含まれています。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">ヘッダー種別</th>
       <td>
-        {{Glossary("General header", "一般ヘッダー")}}
+        {{Glossary("Request header", "リクエストヘッダー")}},
+        {{Glossary("Response header", "レスポンスヘッダー")}}
       </td>
     </tr>
     <tr>
-      <th scope="row">
-        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
-      </th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>はい</td>
     </tr>
   </tbody>
@@ -43,11 +33,11 @@ Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ## ディレクティブ
 
 - `<day-name>`
-  - : "Mon"、"Tue"、"Wed"、"Thu"、"Fri"、"Sat"、"Sun" のいずれか (大文字小文字を区別)。
+  - : `Mon`、`Tue`、`Wed`、`Thu`、`Fri`、`Sat`、`Sun` のいずれか（大文字小文字を区別）。
 - `<day>`
   - : 2 桁の日番号。例えば "04" または "23"。
 - `<month>`
-  - : "Jan"、"Feb"、"Mar"、"Apr"、"May"、"Jun"、"Jul"、"Aug"、"Sep"、 "Oct"、"Nov"、"Dec" のいずれか (大文字と小文字を区別)。
+  - : `Jan`、`Feb`、`Mar`、`Apr`、`May`、`Jun`、`Jul`、`Aug`、`Sep"、 "Oct`、`Nov`、`Dec` のいずれか（大文字と小文字を区別）。
 - `<year>`
   - : 4 桁の年の数字。たとえば "1990" または "2016"。
 - `<hour>`
@@ -61,20 +51,34 @@ Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## 例
 
-```
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+### Date ヘッダー付きのレスポンス
+
+次の HTTP メッセージは、成功を表す `200` ステータスであり、`Date` ヘッダーにはメッセージの発信時点が示されています。
+簡潔にするため、他のヘッダーは除外しています。
+
+```http
+HTTP/1.1 200
+Content-Type: text/html
+Date: Tue, 29 Oct 2024 16:56:32 GMT
+
+<html lang="en-US" …
 ```
 
-```js
-new Date().toUTCString();
-// "Mon, 09 Mar 2020 08:13:24 GMT"
+### JavaScript でフィールドの値を設定しようとする
+
+`Date` は{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}であるため、このコードは `Date` フィールドを設定できません。
+
+```js example-bad
+fetch("https://httpbin.org/get", {
+  headers: {
+    Date: new Date().toUTCString(),
+  },
+});
 ```
 
 ## 仕様書
 
-| 仕様書                             | 題名                                                          |
-| ---------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Date", "7.1.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

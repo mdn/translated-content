@@ -1,12 +1,12 @@
 ---
 title: Prise en main de Vue
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_resources","Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
+
+> [!NOTE]
+> Cette section de MDN n'est plus maintenue et sera supprimée du site Web dans 2 mois (d'ici le 20 août 2026). Le contenu sera archivé dans le [MDN Museum <sup>(angl.)</sup>](https://github.com/mdn/museum). Voir [cette discussion <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions/827) pour plus d'informations.
 
 Présentons Maintenant Vue, le troisième de nos cadres. Dans cet article, nous allons examiner un peu de fond Vue, apprendre à l'installer et créer un nouveau projet, étudier la structure de haut niveau de l'ensemble du projet et un composant individuel, voir comment exécuter le projet localement, et le préparer à commencer à construire notre exemple.
 

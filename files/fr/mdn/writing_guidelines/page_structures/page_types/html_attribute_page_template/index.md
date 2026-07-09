@@ -2,7 +2,7 @@
 title: Modèle de page d'attribut HTML
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_attribute_page_template
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 Les attributs HTML se divisent en deux catégories&nbsp;: les **attributs spécifiques à un élément**, qui ne s'appliquent qu'à certains éléments (par exemple, l'attribut `accept` sur `<input type="file">`), et les **attributs universels**, qui peuvent être utilisés pour n'importe quel élément HTML (par exemple, `class`, `id`). Les premiers doivent être placés sous `HTML/Reference/Attributes`, tandis que les seconds doivent être placés sous `HTML/Reference/Global_attributes`.

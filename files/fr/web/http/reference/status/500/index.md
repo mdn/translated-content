@@ -28,7 +28,7 @@ Un identifiant est inclus dans le corps de la réponse pour illustrer une métho
 
 ```http
 GET /highlights HTTP/1.1
-Host: exemple.com
+Host: example.com
 User-Agent: curl/8.6.0
 Accept: */*
 ```
@@ -46,7 +46,7 @@ Content-Length: 123
 <body>
   <h1>Erreur interne du serveur</h1>
   <p>Le serveur n'a pas pu traiter votre requête. Veuillez réessayer plus tard.</p>
-  <p>Si ce problème persiste, veuillez <a href="https://exemple.com/support">contacter le support</a>.</p>
+  <p>Si ce problème persiste, veuillez <a href="https://example.com/support">contacter le support</a>.</p>
   <p>Les journaux du serveur contiennent des détails sur cette erreur avec l'identifiant de requête&nbsp;: ABC-123.</p>
 </body>
 </html>

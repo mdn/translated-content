@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-Le rôle `rowgroup` («&nbsp;groupe de lignes&nbsp;») regroupe des [lignes](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) au sein d'une structure tabulaire. Un `rowgroup` contient une ou plusieurs lignes composées de [cellules](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role), de [cellules de grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), d'[en-têtes de colonne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) ou d'[en-têtes de ligne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) à l'intérieur d'une [`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), d'une [`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) ou d'un [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role).
+Le rôle `rowgroup` («&nbsp;groupe de lignes&nbsp;») regroupe des [lignes](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) au sein d'une structure tabulaire. Un `rowgroup` contient une ou plusieurs lignes composées de [cellules](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role), de [cellules de grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [d'en-têtes de colonne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) ou [d'en-têtes de ligne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) à l'intérieur d'une [`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), d'une [`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) ou d'un [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role).
 
 ```html
 <div
@@ -35,27 +35,27 @@ Le rôle `rowgroup` («&nbsp;groupe de lignes&nbsp;») regroupe des [lignes](/fr
 
 ## Description
 
-Le rôle `rowgroup` établit une relation entre les éléments de type ligne qu'il contient et constitue un équivalent structurel des éléments HTML {{HTMLElement('thead')}}, {{HTMLElement('tfoot')}} et {{HTMLElement('tbody')}}. Il n'existe toutefois aucune différenciation entre différents types de groupes de lignes. Les éléments d'un `rowgroup` doivent être contenus dans, ou être la propriété d'éléments ayant le rôle [table](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) ou [grid](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role). Il est fortement recommandé d'utiliser les éléments HTML natifs {{HTMLElement('thead')}}, {{HTMLElement('tfoot')}} et {{HTMLElement('tbody')}} autant que possible.
+Le rôle `rowgroup` établit une relation entre les éléments de type ligne qu'il contient et constitue un équivalent structurel des éléments HTML {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}} et {{HTMLElement("tbody")}}. Il n'existe toutefois aucune différenciation entre différents types de groupes de lignes. Les éléments d'un `rowgroup` doivent être contenus dans, ou être la propriété d'éléments ayant le rôle [table](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) ou [grid](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role). Il est fortement recommandé d'utiliser les éléments HTML natifs {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}} et {{HTMLElement("tbody")}} autant que possible.
 
 Pour créer un en-tête, un pied ou un corps de tableau ARIA, ajoutez `role="rowgroup"` à l'élément concerné. Ce groupe de lignes doit être imbriqué dans une grille, un tableau ou un arbre-grille et englober un ou plusieurs éléments de type ligne. Chaque ligne contient, à son tour, des cellules enfants. Ces cellules peuvent être de types différents, selon qu'il s'agisse d'en-têtes de colonne, d'en-têtes de ligne, de simples cellules ou de cellules de grille.
 
 > [!NOTE]
-> Il est fortement conseillé d'utiliser l'élément HTML natif `<table>` ainsi que `<thead>`, `<tfoot>` et `<tbody>` lorsque cela est possible.
+> Il est fortement conseillé d'utiliser l'élément HTML natif `<table>` ainsi que `<thead>`, `<tfoot>` et `<tbody>` lorsque c'est possible.
 
 ### Propriétés, états et rôles WAI-ARIA associés
 
 #### Rôles de contexte
 
-- [role="table"](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
-  - : L'un des trois contextes possibles (avec grid et treegrid) dans lesquels on trouve des lignes. Il identifie une structure de tableau non interactive contenant des données organisées en lignes et colonnes, similaire à l'élément HTML natif {{HTMLElement('table')}}.
-- [role="grid"](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
-  - : L'un des trois contextes possibles (avec table et treegrid) dans lesquels on trouve des lignes. Il identifie une structure de tableau non interactive contenant des données organisées en lignes et colonnes, similaire à l'élément HTML natif {{HTMLElement('table')}}.
-- [role="treegrid"](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
+- [`role="table"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
+  - : L'un des trois contextes possibles (avec grid et treegrid) dans lesquels on trouve des lignes. Il identifie une structure de tableau non interactive contenant des données organisées en lignes et colonnes, similaire à l'élément HTML natif {{HTMLElement("table")}}.
+- [`role="grid"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
+  - : L'un des trois contextes possibles (avec table et treegrid) dans lesquels on trouve des lignes. Il identifie une structure de tableau non interactive contenant des données organisées en lignes et colonnes, similaire à l'élément HTML natif {{HTMLElement("table")}}.
+- [`role="treegrid"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
   - : Similaire à une grille, mais avec des lignes pouvant être développées ou réduites comme dans un arbre.
 
 #### Rôles descendants
 
-- [role="row"](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+- [`role="row"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
   - : Une ligne de cellules dans une structure tabulaire. Une ligne contient une ou plusieurs [cellules](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role), des [cellules de grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) ou des [en-têtes de colonne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), et parfois un [en-tête de ligne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role).
 
 ### Interactions au clavier
@@ -67,7 +67,7 @@ Aucune.
 Aucune.
 
 > [!NOTE]
-> La première règle d'utilisation d'ARIA est la suivante&nbsp;: si vous pouvez utiliser une fonctionnalité native qui offre déjà la sémantique et le comportement dont vous avez besoin, utilisez-la plutôt que de détourner un élément et d'**ajouter** un rôle, un état ou une propriété ARIA pour le rendre accessible. Préférez l'élément HTML `<table>` au rôle ARIA `table` chaque fois que cela est possible.
+> La première règle d'utilisation d'ARIA est la suivante&nbsp;: si vous pouvez utiliser une fonctionnalité native qui offre déjà la sémantique et le comportement dont vous avez besoin, utilisez-la plutôt que de détourner un élément et **d'ajouter** un rôle, un état ou une propriété ARIA pour le rendre accessible. Préférez l'élément HTML `<table>` au rôle ARIA `table` chaque fois que c'est possible.
 
 ## Exemples
 
@@ -111,7 +111,7 @@ L'exemple ci-dessus illustre une table ARIA non sémantique avec un en-tête et 
 
 ## Bonnes pratiques
 
-Utilisez uniquement {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}} et ainsi de suite pour la structure des tableaux de données. Vous pouvez ajouter ces rôles ARIA afin d'assurer l'accessibilité si la sémantique native du tableau est supprimée, par exemple par des règles CSS. Un cas d'utilisation pertinent du rôle ARIA `table` est lorsque la propriété CSS `display` outrepasse la sémantique native d'un tableau (par exemple `display: grid`). Dans ce cas, vous pouvez rétablir la sémantique à l'aide des rôles ARIA.
+Utilisez uniquement {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}, {{HTMLElement("th")}}, {{HTMLElement("td")}} et ainsi de suite pour la structure des tableaux de données. Vous pouvez ajouter ces rôles ARIA afin d'assurer l'accessibilité si la sémantique native du tableau est supprimée, par exemple par des règles CSS. Un cas d'utilisation pertinent du rôle ARIA `table` est lorsque la propriété CSS `display` outrepasse la sémantique native d'un tableau (par exemple `display: grid`). Dans ce cas, vous pouvez rétablir la sémantique à l'aide des rôles ARIA.
 
 ```html
 <table
@@ -153,7 +153,7 @@ Aucun.
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('table')}}
-- L'élément HTML {{HTMLElement('tbody')}}
-- L'élément HTML {{HTMLElement('tfoot')}}
-- L'élément HTML {{HTMLElement('thead')}}
+- L'élément HTML {{HTMLElement("table")}}
+- L'élément HTML {{HTMLElement("tbody")}}
+- L'élément HTML {{HTMLElement("tfoot")}}
+- L'élément HTML {{HTMLElement("thead")}}

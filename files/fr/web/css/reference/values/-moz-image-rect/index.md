@@ -120,11 +120,11 @@ On inclut un conteneur avec quatre boîtes&nbsp;:
 </div>
 ```
 
-Cela place les quatre segments de notre image dans une grille de deux par deux. Ces quatre segments sont tous contenus dans un bloc {{HTMLElement("div")}} plus grand dont le but principal est de recevoir les événements de clic et de les transmettre à notre code JavaScript.
+Cela place les quatre segments de notre image dans une grille de deux par deux. Ces quatre segments sont tous contenus dans un bloc {{HTMLElement("div")}} plus grand dont le but principal est de recevoir les évènements de clic et de les transmettre à notre code JavaScript.
 
 ### JavaScript
 
-Ce code gère l'événement de clic lorsque le conteneur reçoit un clic de souris.
+Ce code gère l'évènement de clic lorsque le conteneur reçoit un clic de souris.
 
 ```js
 function rotate() {

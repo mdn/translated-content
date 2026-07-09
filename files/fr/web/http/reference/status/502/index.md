@@ -27,11 +27,11 @@ Dans ces cas, les clients doivent vérifier les paramètres réseau, la configur
 ### Réponse d'erreur passerelle 502
 
 La requête suivante tente d'obtenir une page web, mais reçoit en retour une réponse `502`.
-Le corps de la réponse contient une page décrivant l'état du serveur avec un lien vers une page d'assistance pour les visiteurs.
+Le corps de la réponse contient une page décrivant l'état du serveur avec un lien vers une page d'assistance pour les visiteur·euse·s.
 
 ```http
 GET /highlights HTTP/1.1
-Host: exemple.com
+Host: example.com
 User-Agent: curl/8.6.0
 Accept: */*
 ```
@@ -49,7 +49,7 @@ Content-Length: 123
 <body>
   <h1>Mauvaise passerelle</h1>
   <p>Le serveur n'a pas pu traiter votre requête. Veuillez réessayer plus tard.</p>
-  <p>Si ce problème persiste, veuillez <a href="https://exemple.com/support">contacter le support</a>.</p>
+  <p>Si ce problème persiste, veuillez <a href="https://example.com/support">contacter le support</a>.</p>
 </body>
 </html>
 ```

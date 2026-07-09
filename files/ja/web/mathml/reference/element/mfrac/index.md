@@ -1,61 +1,88 @@
 ---
 title: <mfrac>
 slug: Web/MathML/Reference/Element/mfrac
-original_slug: Web/MathML/Element/mfrac
+l10n:
+  sourceCommit: c263f06fa14ed56153e345006bb459c9df014b98
 ---
 
-{{MathMLRef()}}
-
-MathML の `<mfrac>` 要素は分数を表示するのに使います。
+**`<mfrac>`** は [MathML](/ja/docs/Web/MathML) の要素で、分数を表示させるために使用します。同時に、[二項係数](https://en.wikipedia.org/wiki/Binomial_coefficient)や[ルジャンドル記号](https://en.wikipedia.org/wiki/Legendre_symbol)など、分数に似たものを記述するためにも使用できます。
 
 ## 構文
 
-```
-<mfrac>numerator denominator</mfrac>
+```html
+<mfrac>分子 分母</mfrac>
 ```
 
 ## 属性
 
-- `bevelled` {{deprecated_inline}}
-  - : 分数を表示する方法を指定します。`true` のとき分数線は斜線になります。つまりこの場合、分子・分母がスラッシュ (/) を挟んで左右に並ぶことになります。既定値の `false` の場合、分子は分母の上に載ります。
-    この属性は、非推奨で将来削除される予定です。代わりに U+2044 (fraction slash) を使用してください。
-- `class`, `id`, `style`
-  - : [スタイルシート](/ja/docs/Web/CSS) で装飾を行なう際に使われます。
-- `denomalign` {{deprecated_inline}}
-  - : 分数の下に分母をどう揃えるかを指定します。取り得る値は `left`、`center` (既定値) と `right` です。
-    この属性は、非推奨で近日中に廃止されます。代わりに CSS を用いて [`text-align`](/ja/docs/Web/CSS/Reference/Properties/text-align) を指定してください。
-- `href`
-  - : 特定の URI へのハイパーリンクを設定するのに使われます。
+この要素の属性には、[MathML のグローバル属性](/ja/docs/Web/MathML/Reference/Global_attributes)に加え、以下の属性が含まれます。
+
+- `denomalign` {{deprecated_inline}} {{Non-standard_Inline}}
+  - : 分数の下に分母をどう揃えるかを指定します。指定できる値は `left`、`center`（デフォルト値）、`right` です。
 - `linethickness`
-  - : 分数の水平線の太さ。既定値は `medium` で、`thin`、`thick` や、それ以外の [length 値](/ja/docs/Web/CSS/Reference/Values/length) が取り得ます。
-- `mathbackground`
-  - : 数式の背景色を指定するために使われます。`#rgb`、`#rrggbb`のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/Reference/Values/named-color)を使用できます。
-- `mathcolor`
-  - : 数式自体 (テキストと分数線) の色を設定するために使われます。`#rgb`、`#rrggbb` のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/Reference/Values/named-color)を使用できます。
-- `numalign` {{deprecated_inline}}
+  - : {{cssxref("length-percentage")}} で、分数の水平線の太さを示します。
+- `numalign` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 分数の上に分子をどう揃えるかを指定します。取り得る値は `left`、`center` (既定値) と `right` です。
-    この属性は、非推奨で将来削除される予定です。代わりに CSS の [`text-align`](/ja/docs/Web/CSS/Reference/Properties/text-align) を使用してください。
+
+> [!NOTE]
+> `linethickness` 属性については、一部のブラウザーでは、非推奨の値 `medium`、`thin`、`thick`（これらの正確な解釈は実装者に委ねられています）や、[古い MathML の長さの単位](/ja/docs/Web/MathML/Reference/Values#mathml_における古い長さ)も受け入れることがあります。
 
 ## 例
 
-レンダリングのサンプル (画像): ![(a/b)/(c/d)](mfrac.png)
+### 単純な分数
 
-ブラウザーのレンダリング結果: <math><mfrac bevelled="true"><mfrac><mi>a </mi><mi>b </mi></mfrac><mfrac><mi>c </mi><mi>d</mi></mfrac></mfrac></math>
+以下の MathML コードは、分子が "a + 2"、分母が "3 − b" の分数として表示されるはずです。
 
 ```html
-<math>
-  <mfrac bevelled="true">
-    <mfrac>
-      <mi> a </mi>
-      <mi> b </mi>
-    </mfrac>
-    <mfrac>
-      <mi> c </mi>
-      <mi> d </mi>
-    </mfrac>
+<math display="block">
+  <mfrac>
+    <mrow>
+      <mi>a</mi>
+      <mo>+</mo>
+      <mn>2</mn>
+    </mrow>
+    <mrow>
+      <mn>3</mn>
+      <mo>−</mo>
+      <mi>b</mi>
+    </mrow>
   </mfrac>
 </math>
 ```
+
+{{ EmbedLiveSample('simple_fraction', 700, 200, "", "") }}
+
+### 水平線なしの分数
+
+以下の MathML コードは、[二項係数](https://ja.wikipedia.org/wiki/二項係数) として表示されるはずです。
+
+```html
+<math display="block">
+  <mrow>
+    <mo>(</mo>
+    <mfrac linethickness="0">
+      <mi>n</mi>
+      <mi>k</mi>
+    </mfrac>
+    <mo>)</mo>
+  </mrow>
+</math>
+```
+
+{{ EmbedLiveSample('Fraction_without_bar', 700, 200, "", "") }}
+
+## 技術的概要
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles">暗黙の ARIA ロール</a>
+    </th>
+    <td>
+      なし
+    </td>
+  </tr>
+</table>
 
 ## 仕様書
 
