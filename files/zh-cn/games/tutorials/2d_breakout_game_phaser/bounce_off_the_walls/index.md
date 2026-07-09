@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Physics", "Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls")}}
 
-这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 6 步**。现在已经介绍了物理效果，我们可以开始在游戏中实现碰撞检测——首先我们来看看墙壁。
+这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 6 步**。现在已经介绍了物理系统，我们可以开始在游戏中实现碰撞检测——首先我们来看看墙壁。
 
 ## 从世界边界反弹
 
