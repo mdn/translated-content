@@ -37,7 +37,7 @@ delete(options)
     - `path` {{Optional_Inline}}
       - : パスを含む文字列です。デフォルトは `/` です。
     - `partitioned` {{Optional_Inline}}
-      - : 論理値で、デフォルト値は `false` です。`true` に設定すると、削除する Cookie がパーティション化 Cookie であることを表します。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) を参照してください。
+      - : 論理値で、デフォルト値は `false` です。`true` に設定すると、削除する Cookie がパーティション化 Cookie であることを表します。詳しくは[個別区画化された状態を持つクッキー (CHIPS)](/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) を参照してください。
 
 ### 返値
 
