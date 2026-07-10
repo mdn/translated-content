@@ -66,7 +66,6 @@ button {
 
 然后我们可以为它加一点 CSS 让它更好看：
 
-
 ```css live-sample___string-concat-name-css live-sample___string-concat-name-js
 button {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
@@ -128,12 +127,12 @@ API 通常分为两类。
 - [DOM（文档对象模型）API](/zh-CN/docs/Web/API/Document_Object_Model) 能通过创建、移除和修改 HTML，为页面动态应用新样式等手段来操作 HTML 和 CSS。比如当某个页面出现了一个弹窗，或者显示了一些新内容（像上文小演示中看到那样），这就是 DOM 在运行。
 - [地理位置 API](/zh-CN/docs/Web/API/Geolocation_API) 获取地理信息。正是通过这种方式，[谷歌地图](https://www.google.com/maps)可以找到你的位置，而且标示在地图上。
 - [画布](/zh-CN/docs/Web/API/Canvas_API) API 和 [WebGL](/zh-CN/docs/Web/API/WebGL_API) API 可以创建生动的 2D 和 3D 图像。人们正运用这些 web 技术制作令人惊叹的作品。参见 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) 和 [webglsamples](https://webglsamples.org/)。
-- [音频和视频 API](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery)，例如 {{domxref("HTMLMediaElement")}} 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 使您能够实现非常有趣的多媒体功能，例如直接在网页中播放音频和视频，或者从网络摄像头捕获视频并将其显示在其他人的计算机上（请尝试我们的简单[快照演示](https://chrisdavidmills.github.io/snapshot/)以了解其原理）。
+- [音频和视频 API](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery)，例如 {{domxref("HTMLMediaElement")}} 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 使你能够实现非常有趣的多媒体功能，例如直接在网页中播放音频和视频，或者从网络摄像头捕获视频并将其显示在其他人的计算机上（请尝试我们的简单[快照演示](https://chrisdavidmills.github.io/snapshot/)以了解其原理）。
 
 **第三方 API** 并没有默认嵌入浏览器中，一般要从网上取得它们的代码和信息。比如：
 
 - [Bluesky API](https://docs.bsky.app/)、[新浪微博 API](https://open.weibo.com/) 允许在网站上显示最新帖子等。
-- [谷歌地图 API](https://developers.google.com/maps/) 和 [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)、[高德地图 API](https://lbs.amap.com/) 允许将自定义地图嵌入网站，并实现其他类似功能。
+- [谷歌地图 API](https://developers.google.cn/maps/) 和 [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)、[高德地图 API](https://lbs.amap.com/) 允许将自定义地图嵌入网站，并实现其他类似功能。
 
 > [!NOTE]
 > 这些 API 为进阶内容，本模块中不会涉及，更多信息请参考：[客户端 web API 模块](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs)。
