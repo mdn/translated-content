@@ -2,7 +2,7 @@
 title: 502 Bad Gateway
 slug: Web/HTTP/Reference/Status/502
 l10n:
-  sourceCommit: dd0fe980a26938d585691d1429c8a941fa6824ff
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur serveur](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_serveur) HTTP **`502 Bad Gateway`** indique qu'un serveur agissait en tant que passerelle ou {{Glossary("Proxy_server", "serveur mandataire")}} et qu'il a reçu une réponse non valide du serveur en amont.
