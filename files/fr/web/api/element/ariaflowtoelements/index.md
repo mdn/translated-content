@@ -135,4 +135,4 @@ Nous notons ici que l'attribut et la propriété identifient les mêmes élémen
 
 - L'attribut ARIA [`aria-flowto`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto)
 - La propriété {{DOMxRef("ElementInternals.ariaFlowToElements")}}
-- [Références d'éléments réfléchis](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) dans le guide _Réflexion des attributs_.
+- [Références d'éléments réfléchis](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes#références_déléments_réfléchis) dans le guide _Réflexion des attributs_.
