@@ -2,7 +2,7 @@
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Reference/Status/431
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`431 Request Header Fields Too Large`** indique que le serveur refuse de traiter la requête, car les [en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers) de la requête sont trop longs.

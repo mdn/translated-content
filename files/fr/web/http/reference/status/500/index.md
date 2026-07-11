@@ -2,7 +2,7 @@
 title: 500 Internal Server Error
 slug: Web/HTTP/Reference/Status/500
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur serveur](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_serveur) HTTP **`500 Internal Server Error`** indique que le serveur a rencontré une condition inattendue qui l'a empêché de satisfaire la requête.

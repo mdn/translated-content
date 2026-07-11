@@ -2,7 +2,7 @@
 title: 504 Gateway Timeout
 slug: Web/HTTP/Reference/Status/504
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur serveur](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_serveur) HTTP **`504 Gateway Timeout`** indique que le serveur, agissant en tant que passerelle ou {{Glossary("Proxy_server", "serveur mandataire")}}, n'a pas reçu de réponse à temps du serveur en amont pour compléter la requête.
