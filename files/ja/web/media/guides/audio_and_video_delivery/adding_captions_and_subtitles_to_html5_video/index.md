@@ -1,5 +1,5 @@
 ---
-title: HTML5 の動画へのキャプションと字幕の追加
+title: HTML の動画へのキャプションと字幕の追加
 slug: Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 l10n:
   sourceCommit: 9cfc2285428932f448a1747e347b1e35a3e0172b
