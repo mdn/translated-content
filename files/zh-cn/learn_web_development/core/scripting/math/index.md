@@ -175,7 +175,7 @@ myNumber = Number(myNumber) + 3;
         </p>
       </td>
       <td>
-        <code>5 ** 2</code>（返回 <code>3125</code>，相当于
+        <code>5 ** 2</code>（返回 <code>25</code>，相当于
         <code>5 * 5</code> 。）
       </td>
     </tr>
