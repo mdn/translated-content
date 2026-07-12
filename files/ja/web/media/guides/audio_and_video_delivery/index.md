@@ -72,7 +72,7 @@ l10n:
 > [!NOTE]
 > `autoplay`属性は一部のモバイルブラウザーで無視される場合があります。また、誤用された場合、自動再生機能は問題を引き起こす可能性があります。自動再生を適切に使用する方法については、[メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)を必ず読むことを強く推奨します。
 
-詳細については、 [\<video> 要素](/ja/docs/Web/HTML/Reference/Elements/video)および [クロスブラウザー対応動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
+詳細については、 [\<video> 要素](/ja/docs/Web/HTML/Reference/Elements/video)および [ブラウザーに依存しない動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
 
 ### JavaScript オーディオ
 
@@ -483,7 +483,7 @@ lastSource.addEventListener("error", (ev) => {
 
 ## ガイド
 
-- [クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
+- [ブラウザーに依存しない動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
   - : {{ htmlelement("video") }} 要素を使用して、基本的なクロスブラウザー動画プレイヤーを作成するガイドです。
 - [動画プレイヤーのスタイル設定の基本](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)
   - : 前回の記事でクロスブラウザー対応の動画プレイヤーができたので、この記事はプレイヤーの基本的なレスポンシブスタイル設定を指定していきます。
