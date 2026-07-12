@@ -41,7 +41,7 @@ If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 - `<day>`
   - : 2 桁の日番号。例えば "04" または "23"。
 - `<month>`
-  - : `Jan`、`Feb`、`Mar`、`Apr`、`May`、`Jun`、`Jul`、`Aug`、`Sep`、 `Oct`、`Nov`、`Dec` のいずれか（大文字と小文字を区別）。
+  - : `Jan`、`Feb`、`Mar`、`Apr`、`May`、`Jun`、`Jul`、`Aug`、`Sep`、`Oct`、`Nov`、`Dec` のいずれか（大文字と小文字を区別）。
 - `<year>`
   - : 4 桁の年の数字。たとえば "1990" または "2016"。
 - `<hour>`
