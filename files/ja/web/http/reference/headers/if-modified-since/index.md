@@ -8,7 +8,7 @@ l10n:
 
 HTTP の **`If-Modified-Since`** {{Glossary("request header", "リクエストヘッダー")}}は、リクエストを[条件付き](/ja/docs/Web/HTTP/Guides/Conditional_requests)にします。
 サーバーは最後にリソースが変更された時刻が、`If-Modified-Since` の日時よりも後の場合にのみ、リクエストされたリソースを {{HTTPStatus("200")}} ステータスと共に返却します。
-それ以降にリソースが変更されていなければ、レスポンスは本文を持たない {{HTTPStatus("304")}} になります。前回のリクエストの {{HTTPHeader("Last-Modified")}} レスポンスヘッダーは、最後にリソースが変更された日時を含みます。 
+それ以降にリソースが変更されていなければ、レスポンスは本文を持たない {{HTTPStatus("304")}} になります。前回のリクエストの {{HTTPHeader("Last-Modified")}} レスポンスヘッダーは、最後にリソースが変更された日時を含みます。
 
 {{HTTPHeader("If-Unmodified-Since")}} とは異なり、 `If-Modified-Since` は {{HTTPMethod("GET")}} または {{HTTPMethod("HEAD")}} でのみ使用できます。
 {{HTTPHeader("If-None-Match")}} との組み合わせで使用された場合は、サーバーが `If-None-Match` に対応していない場合を除き無視されます。
