@@ -6,17 +6,17 @@ l10n:
   sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
-Le rôle `menu` est un type de widget composite qui offre une liste de choix à l'utilisateur·ice.
+Le rôle `menu` est un type de composant composite qui offre une liste de choix à l'utilisateur·ice.
 
 ## Description
 
 Un `menu` représente généralement un regroupement d'actions ou de fonctions courantes que l'utilisateur·ice peut invoquer. Le rôle `menu` est approprié lorsqu'une liste d'éléments de menu est présentée d'une manière similaire à un menu dans une application de bureau. Les sous-menus, également connus sous le nom de menus contextuels, ont également le rôle `menu`.
 
-Bien que le terme «&nbsp;menu&nbsp;» soit un terme générique utilisé pour décrire la navigation sur un site, le rôle `menu` est destiné à une liste d'actions ou de fonctions qui nécessitent une fonctionnalité complexe, telle que la gestion de la sélection des widgets composites et la navigation par première lettre.
+Bien que le terme «&nbsp;menu&nbsp;» soit un terme générique utilisé pour décrire la navigation sur un site, le rôle `menu` est destiné à une liste d'actions ou de fonctions qui nécessitent une fonctionnalité complexe, telle que la gestion de la sélection des composants composites et la navigation par première lettre.
 
-Un menu peut être une liste de contrôles toujours visible ou un widget qui peut être ouvert et fermé. Un widget `menu` fermé est généralement ouvert, ou rendu visible, en activant un bouton de menu, en choisissant un élément dans un menu qui ouvre un sous-menu, ou en invoquant une commande, telle que <kbd>Shift + F10</kbd> sous Windows, qui ouvre un menu contextuel.
+Un menu peut être une liste de contrôles toujours visible ou un composant qui peut être ouvert et fermé. Un composant `menu` fermé est généralement ouvert, ou rendu visible, en activant un bouton de menu, en choisissant un élément dans un menu qui ouvre un sous-menu, ou en invoquant une commande, telle que <kbd>Shift + F10</kbd> sous Windows, qui ouvre un menu contextuel.
 
-Lorsqu'un utilisateur·ice active un choix dans un menu qui a été ouvert, le menu se ferme généralement. Si l'action de choix du menu invoque un sous-menu, le menu restera ouvert et le sous-menu sera affiché.
+Lorsqu'un utilisateur·ice active un choix dans un menu qui a été ouvert, le menu se ferme généralement. Si l'action de choix du menu invoque un sous-menu, le menu reste ouvert et le sous-menu est affiché.
 
 Lorsqu'un menu s'ouvre, la sélection du clavier est placée sur le premier élément de menu. Pour être accessible au clavier, vous devez [gérer la sélection <sup>(angl.)</sup>](https://primer.style/accessibility/design-guidance/focus-management/) pour tous les éléments descendants&nbsp;: tous les éléments de menu dans le `menu` sont sélectionnables. Le bouton de menu qui ouvre le menu et les éléments de menu, plutôt que le menu lui-même, sont les éléments sélectionnables.
 
@@ -48,7 +48,7 @@ Si le menu est visuellement persistant, envisagez d'utiliser le rôle [`menubar`
 - [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Le `menu` doit avoir un nom accessible. Utilisez `aria-labelledby` si un label visible est présent, sinon utilisez `aria-label`. Incluez soit `aria-labelledby` défini sur l'`id` de l'`menuitem` ou du `button` qui contrôle son affichage, soit utilisez `aria-label` pour définir le label.
 - [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
-  - : Défini uniquement sur le conteneur de menu pour inclure des éléments qui ne sont pas des enfants DOM du conteneur. Si défini, ces éléments apparaîtront dans l'ordre de lecture dans la séquence dans laquelle ils sont référencés et après tout élément qui est un enfant DOM. Lors de la gestion du focus, assurez-vous que l'ordre de focus visuel correspond à cet ordre de lecture de la technologie d'assistance.
+  - : Défini uniquement sur le conteneur de menu pour inclure des éléments qui ne sont pas des enfants DOM du conteneur. Si défini, ces éléments apparaissent dans l'ordre de lecture dans la séquence dans laquelle ils sont référencés et après tout élément qui est un enfant DOM. Lors de la gestion de la sélection, assurez-vous que l'ordre de sélection visuel correspond à cet ordre de lecture de la technologie d'assistance.
 
 ### Interactions au clavier
 
@@ -109,9 +109,9 @@ Voici deux exemples d'implémentations de menus.
 </div>
 ```
 
-Pour améliorer progressivement ce widget de navigation qui est par défaut accessible, la classe pour masquer le `menu` et l'inclusion de `tabindex="-1"` sur le contenu interactif de l'élément de menu doivent être ajoutées avec JavaScript au chargement.
+Pour améliorer progressivement ce composant de navigation qui est par défaut accessible, la classe pour masquer le `menu` et l'inclusion de `tabindex="-1"` sur le contenu interactif de l'élément de menu doivent être ajoutées avec JavaScript au chargement.
 
-Quand on inclut un «&nbsp;menu&nbsp;» pour la navigation du site, il ne faut pas utiliser le rôle `menu`. Au lieu de cela, pour la navigation principale du site, utilisez l'élément HTML natif {{HTMLElement("nav")}} ou simplement une liste de liens. Le rôle `menu` doit être réservé aux widgets composites nécessitant une gestion de la sélection. Voir [Pratiques ARIA pour la navigation dans les informations divulguées <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/) pour une explication et des exemples supplémentaires.
+Quand on inclut un «&nbsp;menu&nbsp;» pour la navigation du site, il ne faut pas utiliser le rôle `menu`. Au lieu de cela, pour la navigation principale du site, utilisez l'élément HTML natif {{HTMLElement("nav")}} ou simplement une liste de liens. Le rôle `menu` doit être réservé aux composants composites nécessitant une gestion de la sélection. Voir [Pratiques ARIA pour la navigation dans les informations divulguées <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/) pour une explication et des exemples supplémentaires.
 
 ### Exemple 2 : sélecteur d'options de sous-menu de barre de menu
 
@@ -155,15 +155,15 @@ Le code suivant est un menu contextuel imbriqué dans une barre de menu. Il s'af
 
 Le bouton qui ouvre le menu a [`aria-haspopup="menu"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) défini, indiquant explicitement que le popup qu'il contrôle est un `menu`.
 
-Pour qu'un menu s'ouvre, l'utilisateur interagit généralement avec un bouton de menu en tant qu'élément déclencheur. Le bouton de menu doit être sélectionnable et répondre à la fois aux événements de clic et aux événements clavier. Lorsqu'il est sélectionné, le fait de choisir <kbd>Entrée</kbd>, <kbd>Espace</kbd>, <kbd>Flèche vers le bas</kbd> ou <kbd>Flèche vers le haut</kbd> doit ouvrir le menu et placer la sélection sur un élément de menu.
+Pour qu'un menu s'ouvre, l'utilisateur·ice interagit généralement avec un bouton de menu en tant qu'élément déclencheur. Le bouton de menu doit être sélectionnable et répondre à la fois aux évènements de clic et aux évènements clavier. Lorsqu'il est sélectionné, le fait de choisir <kbd>Entrée</kbd>, <kbd>Espace</kbd>, <kbd>Flèche vers le bas</kbd> ou <kbd>Flèche vers le haut</kbd> doit ouvrir le menu et placer la sélection sur un élément de menu.
 
 L'ouverture et la fermeture du menu basculent l'attribut [`aria-expanded="true"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) sur le bouton. Il est ajouté lorsque le menu est ouvert. Supprimé ou défini sur `false` lorsque le menu est fermé. La valeur `true` indique que le menu est affiché et que l'activation du bouton de menu ferme le menu.
 
-Lorsque le menu est ouvert, le bouton lui-même ne reçoit généralement pas la sélection, car les utilisateurs naviguent à travers les éléments du menu. Au lieu de cela, <kbd>Échap</kbd> et éventuellement <kbd>Maj + Tab</kbd> ferment le menu et renvoient la sélection au bouton de menu.
+Lorsque le menu est ouvert, le bouton lui-même ne reçoit généralement pas la sélection, car les utilisateur·ice·s naviguent à travers les éléments du menu. Au lieu de cela, <kbd>Échap</kbd> et éventuellement <kbd>Maj + Tab</kbd> ferment le menu et retournent la sélection au bouton de menu.
 
 Le rôle `menu` a été défini sur le {{HTMLElement("ul")}}, identifiant l'élément `<ul>` comme un menu.
 
-L'affichage et la dissimulation du menu peuvent être effectués avec CSS. Par exemple, dans ces exemples de code, nous pouvons utiliser les sélecteurs d'attribut et de frère suivant pour basculer la visibilité du menu&nbsp;:
+L'affichage et la dissimulation du menu peuvent être effectués avec CSS. Par exemple, dans ces exemples de code, nous pouvons utiliser les sélecteurs d'attribut et de voisin suivant pour basculer la visibilité du menu&nbsp;:
 
 ```css
 [role="menu"] {

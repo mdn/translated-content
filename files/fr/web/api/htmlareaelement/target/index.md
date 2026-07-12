@@ -23,7 +23,7 @@ Une chaîne de caractères représentant la cible. Sa valeur peut être&nbsp;:
 
 ```html
 <map name="image-map">
-  <area href="www.exemple.fr" target="_top" alt="left" />
+  <area href="www.example.com" target="_top" alt="left" />
 </map>
 ```
 

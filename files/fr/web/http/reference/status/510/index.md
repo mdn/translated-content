@@ -2,7 +2,7 @@
 title: 510 Not Extended
 slug: Web/HTTP/Reference/Status/510
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur serveur](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_serveur) HTTP **`510 Not Extended`** est envoyé lorsque la requête du client déclare une extension HTTP ({{RFC("2774")}}) qui doit être utilisée pour traiter la requête, mais que l'extension n'est pas prise en charge.
@@ -24,7 +24,7 @@ Comme le serveur d'origine ne reçoit aucune information sur la méthode `M-GET`
 
 ```http
 M-GET /document HTTP/1.1
-Host: exemple.com
+Host: example.com
 C-Man: "http://www.exemple.org/"
 Connection: C-Man
 ```

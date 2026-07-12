@@ -48,7 +48,7 @@ Un bouton radio est un champ de saisie sélectionnable qui, lorsqu'il est associ
 L'attribut `role` ajoute uniquement une sémantique&nbsp;; toutes les fonctionnalités natives du [bouton radio HTML](/fr/docs/Web/HTML/Reference/Elements/input/radio) doivent être ajoutées avec JavaScript et l'attribut HTML [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex).
 
 > [!NOTE]
-> La première règle d'ARIA est&nbsp;: si un élément ou un attribut HTML natif possède la sémantique et le comportement dont vous avez besoin, utilisez-le au lieu de réutiliser un élément et d'ajouter ARIA. Utilisez plutôt l'élément natif [HTML `<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio) (avec un {{HTMLElement('label')}} associé), qui fournit nativement toutes les fonctionnalités requises&nbsp;:
+> La première règle d'ARIA est&nbsp;: si un élément ou un attribut HTML natif possède la sémantique et le comportement dont vous avez besoin, utilisez-le au lieu de réutiliser un élément et d'ajouter ARIA. Utilisez plutôt l'élément natif [HTML `<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio) (avec un {{HTMLElement("label")}} associé), qui fournit nativement toutes les fonctionnalités requises&nbsp;:
 
 ```html
 <fieldset>
@@ -68,17 +68,17 @@ L'attribut `role` ajoute uniquement une sémantique&nbsp;; toutes les fonctionna
 </fieldset>
 ```
 
-Le contrôle natif de formulaire radio HTML ([`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio)) possède deux états («&nbsp;sélectionné&nbsp;» ou «&nbsp;non sélectionné&nbsp;»). De la même manière, un élément avec `role="radio"` peut exposer deux états via l'attribut [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)&nbsp;: `true` pour l'état sélectionné, et `false` pour l'état non sélectionné. La valeur `mixed` pour `aria-checked` n'est pas valide pour un bouton radio.
+Le contrôle natif de formulaire radio HTML ([`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio)) possède deux états («&nbsp;sélectionné&nbsp;» ou «&nbsp;non sélectionné&nbsp;»). De la même manière, un élément avec `role="radio"` peut exposer deux états avec l'attribut [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)&nbsp;: `true` pour l'état sélectionné, et `false` pour l'état non sélectionné. La valeur `mixed` pour `aria-checked` n'est pas valide pour un bouton radio.
 
 Si un bouton radio est sélectionné, l'élément radio a `aria-checked` défini sur `true`. S'il n'est pas sélectionné, il a `aria-checked` défini sur `false`.
 
 Chaque bouton radio possède le rôle `radio`. Le rôle radio doit toujours être imbriqué avec d'autres radios associées dans un `radiogroup`. S'il n'est pas possible d'imbriquer le bouton radio dans un groupe, utilisez l'identifiant (`id`) du radio non groupé dans une liste de valeurs séparées par des espaces comme valeur de l'attribut [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) sur l'élément `radiogroup` pour indiquer la relation entre le groupe et ses membres radio.
 
-Chaque élément radio est labellisé par son contenu, possède un label visible référencé par `aria-labelledby`, ou un label spécifié avec `aria-label`. L'élément `radiogroup` contenant doit avoir un label visible référencé par `aria-labelledby` ou un label spécifié avec `aria-label`. Si des éléments fournissent des informations supplémentaires sur le groupe ou sur chaque bouton radio, ces éléments doivent être référencés par le groupe ou les radios via la propriété [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
+Chaque élément radio est labellisé par son contenu, possède un label visible référencé par `aria-labelledby`, ou un label défini avec `aria-label`. L'élément `radiogroup` contenant doit avoir un label visible référencé par `aria-labelledby` ou un label défini avec `aria-label`. Si des éléments fournissent des informations supplémentaires sur le groupe ou sur chaque bouton radio, ces éléments doivent être référencés par le groupe ou les radios avec la propriété [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 Comme `radio` est un contrôle interactif, il doit être accessible au clavier et pouvoir recevoir la sélection. Si le rôle est appliqué à un élément non sélectionnable, utilisez l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) pour corriger cela. Le raccourci clavier attendu pour activer un radio est la touche <kbd>Espace</kbd>. Utilisez JavaScript pour basculer l'attribut `aria-checked` à `true` lorsqu'un radio devient sélectionné, en veillant à ce que tous les autres rôles radio du groupe soient définis sur `aria-checked="false"`.
 
-Pour indiquer programmatiquement qu'un bouton radio doit être choisi dans un groupe, l'attribut [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) avec la valeur `true` doit être spécifié sur l'élément `radiogroup`. Il n'est pas attendu d'utiliser l'attribut `aria-required` sur les boutons radio individuels.
+Pour indiquer programmatiquement qu'un bouton radio doit être choisi dans un groupe, l'attribut [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) avec la valeur `true` doit être défini sur l'élément `radiogroup`. Il n'est pas attendu d'utiliser l'attribut `aria-required` sur les boutons radio individuels.
 
 ## Tous les descendants sont des éléments de présentation
 
@@ -210,7 +210,7 @@ for (const radioGroup of radioGroups) {
   }
 }
 
-// Gérer les événements de souris et de tactile
+// Gérer les évènements de souris et de tactile
 function handleClick(event) {
   setChecked(this);
   event.stopPropagation();

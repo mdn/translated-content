@@ -1,15 +1,15 @@
 ---
-title: math-depth
+title: CSS `math-depth` プロパティ
+short-title: math-depth
 slug: Web/CSS/Reference/Properties/math-depth
-original_slug: Web/CSS/math-depth
 l10n:
-  sourceCommit: 727078e752e7ed645bb3e739a7615ba3c0f09327
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`math-depth`** プロパティは、数式の各要素について、その数式の最上位コンテナーに対する _深さ_ の概念を記述します。これは、 `font-size: math` が適用されたとき、要素の [font-size](/ja/docs/Web/CSS/Reference/Properties/font-size) の計算値を調整するために使用されます。
 
 > [!NOTE]
-> `font-size: math` は MathML Core の[ユーザーエージェントスタイルシート](https://w3c.github.io/mathml-core/#user-agent-stylesheet)における `<math>` 要素の既定値ですので、明示的に指定する必要はありません。
+> `font-size: math` は MathML Core の[ユーザーエージェントスタイルシート](https://w3c.github.io/mathml-core/#user-agent-stylesheet)における `<math>` 要素のデフォルト値ですので、明示的に指定する必要はありません。
 
 ## 構文
 
@@ -53,29 +53,29 @@ math-depth: unset;
 
 ### 数式の深さの指定
 
-以下の例では、`math-depth`プロパティを変更したときのサブ数式のフォントサイズへの影響を示しています。
-各サブ数式の数字は適用された `math-depth` と拡大率を示しています。
+以下の例では、`math-depth` プロパティを変更したときの部分式のフォントサイズへの影響を示しています。
+各部分式の数字は適用された `math-depth` と拡大率を示しています。
 
-最初の `<mtext>` 要素は他のサブ数式への参照として使用され、特定のスタイルは適用されていません。
-2番目と3番目のサブ数式は `math-depth` が `auto-add` に設定され、`math-style` に応じた倍率の効果が表示されます。
+最初の `<mtext>` 要素は他の部分式への参照として使用され、特定のスタイルは適用されていません。
+2 番目と 3 番目の部分式は `math-depth` が `auto-add` に設定され、`math-style` に応じた倍率の効果が表示されます。
 
-最後の2つのサブ数式は、 `math-depth` を特定の値に設定した場合の効果を示しています。
+最後の 2 つの部分式は、 `math-depth` を特定の値に設定した場合の効果を示しています。
 
 #### HTML
 
 ```html
-<p style="font-size: 3rem; margin: 1rem 0">
+<p>
   <math>
     <mtext>0</mtext>
 
-    <!-- auto-add value has no effect when math-style is normal -->
+    <!-- auto-add の値は、math-style が normal の場合は反映されない -->
     <mrow style="math-style: normal">
       <mrow style="math-depth: auto-add">
         <mtext>0</mtext>
       </mrow>
     </mrow>
 
-    <!-- the inherited math-style is compact, so math-depth is set to 1 -->
+    <!-- math-style の継承値は compact であるため、math-depth は 1 に設定される -->
     <mrow style="math-depth: auto-add">
       <mtext>1</mtext>
     </mrow>
@@ -91,6 +91,13 @@ math-depth: unset;
     </mrow>
   </math>
 </p>
+```
+
+```css hidden
+p {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
 ```
 
 #### 結果

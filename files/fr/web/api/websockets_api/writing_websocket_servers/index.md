@@ -20,7 +20,7 @@ Un serveur WebSocket est expliqué ici à un niveau très bas. Les serveurs WebS
 
 ## La « poignée de mains » du WebSocket
 
-Tout d'abord, le serveur doit écouter les connexions socket entrantes en utilisant une socket TCP standard. Selon votre plateforme, cela peut être géré automatiquement. Par exemple, supposons que votre serveur écoute sur `exemple.com`, port 8000, et que votre serveur de sockets réponde aux requêtes {{HTTPMethod("GET")}} à `exemple.com/chat`.
+Tout d'abord, le serveur doit écouter les connexions socket entrantes en utilisant une socket TCP standard. Selon votre plateforme, cela peut être géré automatiquement. Par exemple, supposons que votre serveur écoute sur `example.com, port 8000, et que votre serveur de sockets réponde aux requêtes {{HTTPMethod("GET")}} à `eexample.comhat`.
 
 > [!WARNING]
 > Le serveur peut écouter sur n'importe quel port qu'il choisit, mais s'il choisit un port autre que 80 ou 443, il peut rencontrer des problèmes avec des pare-feu et/ou des proxies. Les navigateurs exigent généralement une connexion sécurisée pour les WebSockets, bien qu'ils puissent offrir une exception pour les appareils locaux.
@@ -28,7 +28,7 @@ Tout d'abord, le serveur doit écouter les connexions socket entrantes en utilis
 La poignée de mains est le «&nbsp;Web&nbsp;» dans les WebSockets. C'est le pont entre HTTP et les WebSockets. Lors de la poignée de mains, les détails de la connexion sont négociés, et chaque partie peut se retirer avant la fin si les conditions ne sont pas favorables. Le serveur doit veiller à comprendre tout ce que le client demande, sinon des problèmes de sécurité peuvent survenir.
 
 > [!NOTE]
-> L'URI de la requête (`/chat` ici) n'a pas de signification définie dans la spécification. Ainsi, beaucoup de personnes l'utilisent pour permettre à un seul serveur de gérer plusieurs applications WebSocket. Par exemple, `exemple.com/chat` pourrait invoquer une application de dialogue multiutilisateurs, tandis que `/jeu` sur le même serveur pourrait invoquer un jeu multijoueur.
+> L'URI de la requête (`/chat` ici) n'a pas de signification définie dans la spécification. Ainsi, beaucoup de personnes l'utilisent pour permettre à un seul serveur de gérer plusieurs applications WebSocket. Par exemple, `example.comchat` pourrait invoquer une application de dialogue multiutilisateurs, tandis que `/jeu` sur le même serveur pourrait invoquer un jeu multijoueur.
 
 ### Requête de poignée de mains côté client
 
@@ -36,7 +36,7 @@ Même si vous construisez votre serveur, un client doit tout de même initier le
 
 ```http
 GET /chat HTTP/1.1
-Host: exemple.com:8000
+Host: example.com8000
 Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
@@ -294,7 +294,7 @@ Sec-WebSocket-Protocol: soap
 Si vous souhaitez que votre serveur puisse supporter certains sous-protocoles, vous pourriez avoir besoin d'une application ou de scripts supplémentaires sur le serveur. Imaginons par exemple que vous utilisiez le sous-protocole `json`. Dans ce sous-protocole, toutes les données sont transmises au format [JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation). Si le client sollicite ce sous-protocole et que le serveur souhaite l'accepter, le serveur doit disposer d'un parseur JSON. En pratique, cela fera partie d'une bibliothèque, mais le serveur doit pouvoir traiter les données.
 
 > [!NOTE]
-> Pour éviter des conflits d'espaces de noms, il est recommandé d'utiliser le nom du sous-protocole comme partie d'une chaîne de domaine. Si vous développez une application de chat personnalisée qui utilise un format propriétaire exclusif à Exemple SA, vous pourriez utiliser&nbsp;: `Sec-WebSocket-Protocol: chat.exemple.com`. Notez que ce n'est pas obligatoire, c'est simplement une convention optionnelle, et vous pouvez utiliser n'importe quelle chaîne de caractères.
+> Pour éviter des conflits d'espaces de noms, il est recommandé d'utiliser le nom du sous-protocole comme partie d'une chaîne de domaine. Si vous développez une application de chat personnalisée qui utilise un format propriétaire exclusif à Exemple SA, vous pourriez utiliser&nbsp;: `Sec-WebSocket-Protocol: chat.example.com. Notez que ce n'est pas obligatoire, c'est simplement une convention optionnelle, et vous pouvez utiliser n'importe quelle chaîne de caractères.
 
 ## Contenus associés
 

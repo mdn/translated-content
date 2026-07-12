@@ -11,7 +11,7 @@ Le rôle `status` définit une [région dynamique](/fr/docs/Web/Accessibility/AR
 
 ## Description
 
-Un `status` est un type de [région dynamique](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions) fournissant des informations de conseil qui ne sont pas assez importantes pour justifier une alerte, laquelle interromprait immédiatement l'annonce de l'activité courante de l'utilisateur·ice. Il est souvent, mais pas nécessairement, présenté sous forme de barre d'état.
+Un `status` est un type de [région dynamique](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions) fournissant des informations de conseil qui ne sont pas assez importantes pour justifier une alerte, laquelle interrompt immédiatement l'annonce de l'activité courante de l'utilisateur·ice. Il est souvent, mais pas nécessairement, présenté sous forme de barre d'état.
 
 Ne donnez pas de ciblage au status lorsque son contenu est mis à jour. Les régions dynamiques sont conçues pour informer les utilisateur·ice·s des mises à jour dynamiques survenues dans d'autres zones de la page web courante, mais qui ne nécessitent pas d'interrompre l'activité courante de l'utilisateur·ice par un changement de contexte. Si la situation exige de déplacer la sélection, alors l'utilisation d'un `status` ou d'une autre région dynamique n'est probablement pas appropriée.
 

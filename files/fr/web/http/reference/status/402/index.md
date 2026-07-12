@@ -7,7 +7,7 @@ l10n:
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`402 Payment Required`** est un code de statut de réponse **non standard** réservé à un usage futur.
 
-Ce code de statut a été créé pour permettre la mise en place de systèmes de paiement numérique ou (micro)paiement et indiquerait que le contenu demandé n'est pas disponible tant que le client n'a pas effectué de paiement.
+Ce code de statut a été créé pour permettre la mise en place de systèmes de paiement numérique ou (micro)paiement et indique que le contenu demandé n'est pas disponible tant que le client n'a pas effectué de paiement.
 Il n'existe aucune convention d'utilisation standard et différents systèmes l'utilisent dans des contextes variés.
 
 ## Statut
@@ -25,7 +25,7 @@ L'exemple suivant tente d'appeler une API de paiement à l'aide d'une requête P
 
 ```http
 POST /merchant/transfers/payment HTTP/1.1
-Host: payments.exemple.com
+Host: payments.example.com
 Content-Type: application/json
 Content-Length: 402
 
@@ -38,12 +38,12 @@ Content-Length: 402
     "sender": {
       "first_name": "Amelia",
       "middle_name": "Rosenburg",
-      "email": "test123@sender.exemple.com"
+      "email": "test123@sender.example.com"
     },
     "recipient": {
       "first_name": "Tyrone",
       "middle_name": "Johnston",
-      "email": "test123@exemple.com",
+      "email": "test123@example.com",
       "merchant_id": "123"
     },
     "authentication_value": "ucaf:jJJLtQa+Iws8AREAEbjsA1MAAAA",
@@ -62,7 +62,7 @@ Content-Length: 175
 {
   "error": {
     "code": "expired_card",
-    "doc_url": "https://exemple.com/error-codes#expired-card",
+    "doc_url": "https://example.com/error-codes#expired-card",
     "message": "The card has expired. Verify expiration or use a different card.",
   }
 }
@@ -76,7 +76,7 @@ Content-Length: 175
 
 Ce code de statut est _réservé_ mais non défini.
 Les implémentations réelles varient quant au format et au contenu de la réponse.
-Aucun navigateur ne prend en charge le code 402, et une erreur s'affichera comme un code d'état générique `4xx`.
+Aucun navigateur ne prend en charge le code 402, et une erreur s'affiche comme un code d'état générique `4xx`.
 
 ## Voir aussi
 
