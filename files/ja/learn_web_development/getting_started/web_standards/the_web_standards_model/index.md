@@ -162,7 +162,7 @@ pElem.textContent = "テキストを変更しました。";
 - [開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)は、最近のブラウザー内にあり、コードのデバッグに使用することができます。
 - [テストツール](/ja/docs/Learn_web_development/Extensions/Testing)は、コードが意図したとおりに動作しているかどうかをテストすることができます。
 - [ライブラリーやフレームワーク](/ja/docs/Learn_web_development/Core/Frameworks_libraries)は、JavaScript 上に構築されており、ある種のウェブサイトをすばやく効果的に構築することができます。
-- いわゆる**リンター**や**フォーマッター**は、コーディングスタイルに関する一連のルールに基づき、コードを見ていき、そのルールに従うようにコードを修正します。[このコースの前の章](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors#enhancing_your_code_editor_with_extensions)で紹介した Prettier は、フォーマッターの一例です。
+- いわゆる**リンター**や**フォーマッター**は、コーディングスタイルに関する一連のルールに基づき、コードを見ていき、そのルールに従うようにコードを修正します。[このコースの前の章](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors#enhancing_your_code_editor_with_extensions)で紹介した Prettier は、フォーマッターの一例です。
 
 ### サーバーサイドの言語とフレームワーク
 
