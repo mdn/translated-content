@@ -18,16 +18,16 @@ l10n:
 
 - {{SVGAttr("x")}}
   - : 文本基线起点的 x 坐标；若提供的是值列表，则为每个字形各自的 x 坐标。
-    _值类型_：([**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) | [**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数)) 的列表；_默认值_：`0`；_动画性_：**是**
+    _值类型_：（[**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) | [**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数)）的列表；_默认值_：`0`；_动画性_：**是**
 - {{SVGAttr("y")}}
   - : 文本基线起点的 y 坐标；若提供的是值列表，则为每个字形各自的 y 坐标。
-    _值类型_：([**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) | [**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数)) 的列表；_默认值_：`0`；_动画性_：**是**
+    _值类型_：（[**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) | [**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数)）的列表；_默认值_：`0`；_动画性_：**是**
 - {{SVGAttr("dx")}}
   - : 相对于前一个文本元素水平偏移文本位置；若提供的是值列表，则为每个字形各自偏移。
-    _值类型_：([**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) | [**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数)) 的列表；_默认值_：_无_；_动画性_：**是**
+    _值类型_：（[**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) | [**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数)）的列表；_默认值_：_无_；_动画性_：**是**
 - {{SVGAttr("dy")}}
   - : 相对于前一个文本元素垂直偏移文本位置；若提供的是值列表，则为每个字形各自偏移。
-    _值类型_：([**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) | [**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数)) 的列表；_默认值_：_无_；_动画性_：**是**
+    _值类型_：（[**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) | [**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数)）的列表；_默认值_：_无_；_动画性_：**是**
 - {{SVGAttr("rotate")}}
   - : 旋转每个字形的方向。可以单独旋转各个字形。
     _值类型_：[**\<list-of-number>**](/zh-CN/docs/Web/SVG/Guides/Content_type#t_值数列)；_默认值_：无；_动画性_：**是**
