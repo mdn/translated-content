@@ -143,7 +143,7 @@ API 通常分为两类。
 
 现在我们实实在在的学习一些代码，与此同时，探索 JavaScript 运行时背后发生的事情。
 
-让我们简单回顾一下，浏览器在读取一个网页时都发生什么（[CSS 如何工作](/zh-CN/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_如何应用到_html？)一文中首次谈及）。浏览器在加载网页时，代码（HTML、CSS 和 JavaScript）将在一个运行环境（浏览器标签页）中得到执行，就像工厂将原材料（代码）加工为产品（网页）一样。
+让我们简单回顾一下，浏览器在读取一个网页时都发生什么（[什么是 CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_如何应用到_html？) 一文中首次谈及）。浏览器在加载网页时，代码（HTML、CSS 和 JavaScript）将在一个运行环境（浏览器标签页）中得到执行，就像工厂将原材料（代码）加工为产品（网页）一样。
 
 ![当页面加载时，HTML、CSS 和 JavaScript 代码共同创建浏览器标签页中的内容](execution.png)
 
