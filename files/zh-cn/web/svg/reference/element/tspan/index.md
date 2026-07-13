@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-**`<tspan>`** [SVG](/zh-CN/docs/Web/SVG) 元素定义了 {{SVGElement("text")}} 元素或另一个 `<tspan>` 元素内的子文本。它允许按需调整该子文本的样式和/或位置。
+**`<tspan>`** [SVG](/zh-CN/docs/Web/SVG) 元素定义了 {{SVGElement("text")}} 元素或另一个 `<tspan>` 元素内的子文本。它允许按需调整该子文本的样式和位置。
 
 > [!NOTE]
 > `<tspan>` 元素默认不会换行；若要换行，需要使用 {{CSSXRef("white-space")}} CSS 属性进行样式设置。
