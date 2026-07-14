@@ -7,7 +7,7 @@ l10n:
 
 **`<feMerge>`** [SVG](/zh-CN/docs/Web/SVG) 元素允许滤镜效果并发应用，而不是依次应用。实现方式是由其他滤镜通过 {{SVGAttr("result")}} 属性存储其输出，然后在 {{SVGElement("feMergeNode")}} 子元素中访问该输出。
 
-与其他滤镜原语一样，它默认在 `linearRGB` {{glossary("color space", "颜色空间")}}中处理颜色分量。你可以使用 {{svgattr("color-interpolation-filters")}} 改为使用 `sRGB`。
+与其他滤镜原语一样，它默认在 `linearRGB` {{glossary("color space", "色彩空间")}}中处理颜色分量。你可以使用 {{svgattr("color-interpolation-filters")}} 改为使用 `sRGB`。
 
 ## 使用上下文
 
