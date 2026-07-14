@@ -38,7 +38,7 @@ l10n:
 
 その後、グローバルの値は、まず `Global.value` プロパティを使用して `42` に変更され、次に `global.wasm` モジュールからエクスポートされた `incGlobal()` 関数を使用して 43 に変更されます（これは、与えられた値に 1 を追加してから新しい値を返します）。
 
-```js
+```js-nolint
 const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
