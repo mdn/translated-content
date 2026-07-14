@@ -58,9 +58,7 @@ svg {
   </style>
 
   <text x="10" y="30" class="small">
-    You are
-    <tspan>not</tspan>
-    a banana!
+    你<tspan>不是</tspan>香蕉！
   </text>
 </svg>
 ```
