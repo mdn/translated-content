@@ -20,7 +20,7 @@ new WebAssembly.Global(descriptor, value)
   - : オブジェクトで、 2 つのプロパティを持ちます。
     - `value`
       - : 文字列で、そのグローバル変数のデータ型を表します。
-      これは以下のいずれかです。
+        これは以下のいずれかです。
         - `i32`: 32 ビット整数。
         - `i64`: 64 ビット整数。（JavaScript では、これは {{jsxref("BigInt")}} として表される）
         - `f32`: 32 ビット浮動小数点数。
@@ -43,7 +43,7 @@ new WebAssembly.Global(descriptor, value)
 
 その後、グローバルの値は、まず `Global.value` プロパティを使用して `42` に変更され、次に `global.wasm` モジュールからエクスポートされた `incGlobal()` 関数を使用して 43 に変更されます（これは、与えられた値に 1 を追加してから新しい値を返します）。
 
-```js
+```js-nolint
 const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
