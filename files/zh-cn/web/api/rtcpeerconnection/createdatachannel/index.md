@@ -21,7 +21,7 @@ createDataChannel(label, options)
 ### 参数
 
 - `label`
-  - : 通道的人类可读名称。该字符串长度不得超过 65,535 字节。
+  - : 人类可读的通道名称。该字符串长度不得超过 65,535 字节。
 - `options` {{optional_inline}}
   - : 为数据通道提供配置选项的对象。它可以包含以下字段：
     - `ordered` {{optional_inline}}
