@@ -61,7 +61,7 @@ Cada tipo fundamental de JavaScript tiene su propio método `toSource()`. Éstos
 - {{jsxref("Function.prototype.toString()", "Function.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Function")}} object.
 - {{jsxref("Number.prototype.toString()", "Number.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Number")}} object.
 - {{jsxref("RegExp.prototype.toString()", "RegExp.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("RegExp")}} object.
-- {{jsxref("SIMD.toSource()", "SIMD.%type%.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("SIMD")}} objects.
+- `SIMD.%type%.prototype.toSource()` {{non-standard_inline}} — `SIMD` objects.
 - {{jsxref("String.prototype.toString()", "String.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("String")}} object.
 - {{jsxref("Symbol.prototype.toString()", "Symbol.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Symbol")}} object.
 - `Math.toSource()` — Regrsa la cadena "Math".
