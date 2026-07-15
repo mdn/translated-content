@@ -120,6 +120,6 @@ navigator.storage.estimate().then((estimate) => {
 ## 関連情報
 
 - [Permissions API の使用](/ja/docs/Web/API/Permissions_API/Using_the_Permissions_API)
-- [web.dev のウェブ向けのストレージ](https://web.dev/articles/storage-for-the-web?hl=ja) 
+- [web.dev のウェブ向けのストレージ](https://web.dev/articles/storage-for-the-web?hl=ja)
 - [web.dev の永続ストレージ](https://web.dev/articles/persistent-storage?hl=ja)
 - [Chrome の Web ストレージとクォータの概念](https://docs.google.com/document/d/19QemRTdIxYaJ4gkHYf2WWBNPbpuZQDNMpUVf8dQxj4U/edit) (英語)
