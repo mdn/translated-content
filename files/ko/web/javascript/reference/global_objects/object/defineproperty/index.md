@@ -460,8 +460,8 @@ console.log(myclass.prototype.y); // 1
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Object.prototype.watch()")}}
-- {{jsxref("Object.prototype.unwatch()")}}
+- `Object.prototype.watch()`
+- `Object.prototype.unwatch()`
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.create()")}}
