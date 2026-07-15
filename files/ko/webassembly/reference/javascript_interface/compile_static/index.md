@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/compile_static
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.compile()`**함수는 WebAssembly 바이너리 코드에서 {{jsxref ( "WebAssembly.Module")}}을 컴파일합니다. 이 함수는 모듈을 인스턴스화하기 전에 컴파일해야하는 경우에 유용합니다. 그렇지 않으면 {{jsxref ( "WebAssembly.instantiate ()")}} 함수를 사용해야합니다.
+**`WebAssembly.compile()`**함수는 WebAssembly 바이너리 코드에서 [`WebAssembly.Module`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Module)을 컴파일합니다. 이 함수는 모듈을 인스턴스화하기 전에 컴파일해야하는 경우에 유용합니다. 그렇지 않으면 [`WebAssembly.instantiate ()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiate) 함수를 사용해야합니다.
 
 ## Syntax
 
@@ -21,12 +21,12 @@ WebAssembly.compile(bufferSource);
 
 ### Return value
 
-`Promise`는 컴파일 된 모듈로 표현된 {{jsxref ( "WebAssembly.Module")}} 객체로 반환됩니다.
+`Promise`는 컴파일 된 모듈로 표현된 [`WebAssembly.Module`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Module) 객체로 반환됩니다.
 
 ### Exceptions
 
 - `bufferSource`가 [typed array](/ko/docs/Web/JavaScript/Guide/Typed_arrays)가 아니면 {{jsxref("TypeError")}}가 발생합니다.
-- 컴파일에 실패하면 promise는 {{jsxref("WebAssembly.CompileError")}}와 함께 reject가 반환됩니다.
+- 컴파일에 실패하면 promise는 [`WebAssembly.CompileError`](/ko/docs/WebAssembly/Reference/JavaScript_interface/CompileError)와 함께 reject가 반환됩니다.
 
 ## Examples
 
@@ -42,7 +42,7 @@ fetch("simple.wasm")
 ```
 
 > [!NOTE]
-> 대부분의 경우에 {{jsxref("WebAssembly.compileStreaming()")}}를 사용하는 것이 좋습니다. 이는 `compile()`보다 효율적이기 때문입니다.
+> 대부분의 경우에 [`WebAssembly.compileStreaming()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming)를 사용하는 것이 좋습니다. 이는 `compile()`보다 효율적이기 때문입니다.
 
 ## 명세서
 
