@@ -56,12 +56,12 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 ### Iterator
 
-- {{jsxref("StopIteration")}} устарел.
+- `StopIteration` устарел.
 - {{jsxref("Iterator")}} устарел.
 
 ### Object methods
 
-- {{jsxref("Object.watch", "watch")}} and {{jsxref("Object.unwatch", "unwatch")}} are deprecated. Use {{jsxref("Proxy")}} instead.
+- `watch` and `unwatch` are deprecated. Use {{jsxref("Proxy")}} instead.
 - `__iterator__` устарел.
 - `Object.prototype.__noSuchMethod__` is deprecated. Use {{jsxref("Proxy")}} instead.
 
@@ -69,7 +69,7 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 - {{jsxref("Date.getYear", "getYear")}} и {{jsxref("Date.setYear", "setYear")}} are affected by the Year-2000-Problem and have been subsumed by {{jsxref("Date.getFullYear", "getFullYear")}} и {{jsxref("Date.setFullYear", "setFullYear")}}.
 - You should use {{jsxref("Date.toISOString", "toISOString")}} instead of the deprecated {{jsxref("Date.toUTCString", "toGMTString")}} method in new code.
-- {{jsxref("Date.toLocaleFormat", "toLocaleFormat")}} is deprecated.
+- `toLocaleFormat` is deprecated.
 
 ### Functions
 
@@ -92,7 +92,7 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 ### Методы строк
 
 - [HTML wrapper methods](/ru/docs/tag/HTML%20wrapper%20methods) like {{jsxref("String.prototype.fontsize")}} and {{jsxref("String.prototype.big")}}.
-- {{jsxref("String.prototype.quote")}} is removed from Firefox 37.
+- `String.prototype.quote` is removed from Firefox 37.
 - non standard `flags` parameter in {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, and {{jsxref("String.prototype.replace")}} are deprecated.
 - {{jsxref("String.prototype.substr")}} probably won't be removed anytime soon, but it's defined in [Annex B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-string.prototype.substr) of the ECMA-262 standard, whose [introduction](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) states: "… Programmers should not use or assume the existence of these features and behaviours when writing new ECMAScript code. …"
 
@@ -102,39 +102,39 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 
 ### Объект
 
-| Свойство                                             | Описание                                                                       |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------ |
-| {{jsxref("Object.count", "**count**")}}              | Returns the number of enumerable properties directly on a user-defined object. |
-| {{jsxref("Object.Parent", "**parent**")}}            | Points to an object's context.                                                 |
-| {{jsxref("Object.eval", "Object.prototype.eval()")}} | Evaluates a string of JavaScript code in the context of the specified object.  |
-| {{jsxref("Object.observe()")}}                       | Asynchronously observing the changes to an object.                             |
-| {{jsxref("Object.unobserve()")}}                     | Remove observers.                                                              |
-| {{jsxref("Object.getNotifier()")}}                   | Creates an object that allows to synthetically trigger a change.               |
+| Свойство                  | Описание                                                                       |
+| ------------------------- | ------------------------------------------------------------------------------ |
+| `count`                   | Returns the number of enumerable properties directly on a user-defined object. |
+| `parent`                  | Points to an object's context.                                                 |
+| `Object.prototype.eval()` | Evaluates a string of JavaScript code in the context of the specified object.  |
+| `Object.observe()`        | Asynchronously observing the changes to an object.                             |
+| `Object.unobserve()`      | Remove observers.                                                              |
+| `Object.getNotifier()`    | Creates an object that allows to synthetically trigger a change.               |
 
 ### Function
 
-| Свойство                              | Описание                    |
-| ------------------------------------- | --------------------------- |
-| {{jsxref("Function.arity", "arity")}} | Number of formal arguments. |
+| Свойство | Описание                    |
+| -------- | --------------------------- |
+| `arity`  | Number of formal arguments. |
 
 ### Массив
 
-| Свойство                        | Описание                                   |
-| ------------------------------- | ------------------------------------------ |
-| {{jsxref("Array.observe()")}}   | Асинхронный просмотр изменений в массивах. |
-| {{jsxref("Array.unobserve()")}} | Remove observers.                          |
+| Свойство            | Описание                                   |
+| ------------------- | ------------------------------------------ |
+| `Array.observe()`   | Асинхронный просмотр изменений в массивах. |
+| `Array.unobserve()` | Remove observers.                          |
 
 ### Число
 
-- {{jsxref("Number.toInteger()")}}
+- `Number.toInteger()`
 
 ### ParallelArray
 
-- {{jsxref("ParallelArray")}}
+- `ParallelArray`
 
 ### Statements
 
-- {{jsxref("Statements/for_each...in", "for each...in")}} is deprecated. Use {{jsxref("Statements/for...of", "for...of")}} instead.
+- `for each...in` is deprecated. Use {{jsxref("Statements/for...of", "for...of")}} instead.
 - Destructuring {{jsxref("Statements/for...in", "for...in")}} is deprecated. Use {{jsxref("Statements/for...of", "for...of")}} instead.
 - let blocks and let expressions are obsolete.
 
