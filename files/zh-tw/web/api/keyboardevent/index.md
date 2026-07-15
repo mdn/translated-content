@@ -33,7 +33,7 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
   - : 一個 {{jsxref("Boolean")}} 。用來表示在事件建立時， <kbd>Alt</kbd> （OS X 中是 <kbd>Option</kbd> 或 <kbd>⌥</kbd> ） 鍵是否執行中。
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
-  - : 一個 {{domxref("DOMString")}} ，返回鍵盤對應的字符。若是該鍵對應一個實際的字符，則其值為對應該字符的一個非空的 Unicode 字串；若沒對應的話，則返回一個空字串。
+  - : 一個 {{jsxref("String")}} ，返回鍵盤對應的字符。若是該鍵對應一個實際的字符，則其值為對應該字符的一個非空的 Unicode 字串；若沒對應的話，則返回一個空字串。
 
     > [!NOTE]
     > If the key is used as a macro that inserts multiple characters, this attribute's value is the entire string, not just the first character.
@@ -48,13 +48,13 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
     > 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}}。
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
-  - : 一個 {{domxref("DOMString")}} 。返回事件對應的按鍵的代碼。
+  - : 一個 {{jsxref("String")}} 。返回事件對應的按鍵的代碼。
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
   - : 一個 {{jsxref("Boolean")}} 。用來表示在事件建立時， <kbd>Ctrl</kbd> 鍵是否執行中。
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
   - : 一個 {{jsxref("Boolean")}} 。用來表示其觸發時間是否在 `compositionstart` 和 `compositionend` 之間。
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
-  - : 一個 {{domxref("DOMString")}} ，用來事件對應的按鍵的值（key value）。
+  - : 一個 {{jsxref("String")}} ，用來事件對應的按鍵的值（key value）。
 - {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}
   - : Returns a {{jsxref("Number")}} representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
@@ -62,7 +62,7 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
     > 此 attribute 已被淘汰。如果可以，建議使用{{domxref("KeyboardEvent.key")}}。
 
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
-  - : Returns a {{domxref("DOMString")}} representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
+  - : Returns a {{jsxref("String")}} representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
 
     > [!NOTE]
     > This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.

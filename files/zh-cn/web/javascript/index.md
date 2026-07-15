@@ -77,7 +77,7 @@ JavaScript 核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/Jav
 - [标准对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)
   - : 了解 {{jsxref("Array")}}、{{jsxref("Boolean")}}、{{jsxref("Date")}}、{{jsxref("Error")}}、{{jsxref("Function")}}、{{jsxref("JSON")}}、{{jsxref("Math")}}、{{jsxref("Number")}}、{{jsxref("Object")}}、{{jsxref("RegExp")}}、{{jsxref("String")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}} 、{{jsxref("WeakSet")}} 等标准内置对象。
 - [表达式和运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)
-  - : 学习运算符 {{jsxref("Operators/instanceof", "instanceof")}}、{{jsxref("Operators/typeof", "typeof")}}、{{jsxref("Operators/new", "new")}}、{{jsxref("Operators/this", "this")}}，[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)，以及其他运算符的行为。
+  - : 学习运算符 {{jsxref("instanceof")}}、{{jsxref("Operators/typeof", "typeof")}}、{{jsxref("new")}}、{{jsxref("this")}}，[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)，以及其他运算符的行为。
 - [语句和声明](/zh-CN/docs/Web/JavaScript/Reference/Statements)
   - : 学习 {{jsxref("Statements/do...while", "do-while")}}、{{jsxref("Statements/for...in", "for-in")}}、{{jsxref("Statements/for...of", "for-of")}}、{{jsxref("Statements/try...catch", "try-catch")}}、{{jsxref("Statements/let", "let")}}、{{jsxref("Statements/var", "var")}}、{{jsxref("Statements/const", "const")}}、{{jsxref("Statements/if...else", "if-else")}}、{{jsxref("Statements/switch", "switch")}} 以及其他语句和关键字的作用。
 - [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)

@@ -3,7 +3,7 @@ title: "SpeechSynthesis: paused プロパティ"
 short-title: paused
 slug: Web/API/SpeechSynthesis/paused
 l10n:
-  sourceCommit: b5437b737639d6952d18b95ebd1045ed73e4bfa7
+  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
 {{APIRef("Web Speech API")}}

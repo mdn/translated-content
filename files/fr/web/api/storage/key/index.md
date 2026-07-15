@@ -20,7 +20,7 @@ var unNomDeCle = storage.key(cle);
 
 ### Valeur de retour
 
-Un {{domxref("DOMString")}} contenant le nom de la clé .
+Un {{jsxref("String")}} contenant le nom de la clé .
 
 ## Exemple
 

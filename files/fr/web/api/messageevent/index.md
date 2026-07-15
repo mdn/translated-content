@@ -35,9 +35,9 @@ _Cette interface hérite également des propriétés de son parent, {{domxref("E
 - {{domxref("MessageEvent.data")}} {{readonlyInline}}
   - : Les données envoyées par l'émetteur du message.
 - {{domxref("MessageEvent.origin")}} {{readonlyInline}}
-  - : Une chaîne de caractères {{domxref("USVString")}} représentant l'origine de l'émetteur du message.
+  - : Une chaîne de caractères {{jsxref("String")}} représentant l'origine de l'émetteur du message.
 - {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} représentant un identifiant unique pour l'événement.
+  - : Une chaîne de caractères {{jsxref("String")}} représentant un identifiant unique pour l'événement.
 - {{domxref("MessageEvent.source")}} {{readonlyInline}}
   - : Un `MessageEventSource` (qui peut être un objet {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, ou {{domxref("ServiceWorker")}}) représentant l'émetteur du message.
 - {{domxref("MessageEvent.ports")}} {{readonlyInline}}

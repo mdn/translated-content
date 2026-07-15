@@ -101,8 +101,7 @@ Ovos
 A cola que une o bolo juntos.
 Café
 A bebida que faz correr o mundo pela manhã.
-Uma cor castanho claro.</textarea
->
+Uma cor castanho claro.</textarea>
 <h2>Saída</h2>
 <div class="output"></div>
 <div class="controls">
@@ -259,8 +258,7 @@ Se você cometer um erro, sempre poderá redefini-lo usando o botão 'Limpar'. S
 <p>It does not matter how slowly you go as long as you do not stop.</p>
 
 <p>I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk
-(as mentioned in Affirmations for Positive Thinking.)</p></textarea
->
+(as mentioned in Affirmations for Positive Thinking.)</p></textarea>
 <h2>Saída</h2>
 <div class="output"></div>
 <div class="controls">
@@ -342,8 +340,7 @@ Para esta tarefa simples de aprendizado ativo, gostaríamos que você simplesmen
 ```html hidden
 <h2>Entrada</h2>
 <textarea id="code" class="input">
-<p>NASA sure does some exciting work.</p></textarea
->
+<p>NASA sure does some exciting work.</p></textarea>
 <h2>Saída</h2>
 <div class="output"></div>
 <div class="controls">

@@ -96,8 +96,8 @@ Una buena base de accesibilidad para personas con deficiencias cognitivas incluy
 
 ### Observaciones
 
-- Diseñar para la [accesibilidad cognitiva](/es/docs/Web/Accessibility/Cognitive_accessibility) proporcionará buenas prácticas de diseño que beneficiarán a todo el mundo.
-- Muchas personas con discapacidades cognitivas también tienen discapacidades físicas. Los sitios web deben cumplir con las directrices de accesibilidad a los contenidos web [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) de W3C, que incluyen las [directrices de accesibilidad cognitiva](/es/docs/Web/Accessibility/Cognitive_accessibility#Guidelines).
+- Diseñar para la [accesibilidad cognitiva](/es/docs/Web/Accessibility/Guides/Cognitive_accessibility) proporcionará buenas prácticas de diseño que beneficiarán a todo el mundo.
+- Muchas personas con discapacidades cognitivas también tienen discapacidades físicas. Los sitios web deben cumplir con las directrices de accesibilidad a los contenidos web [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) de W3C, que incluyen las [directrices de accesibilidad cognitiva](/es/docs/Web/Accessibility/Guides/Cognitive_accessibility#Guidelines).
 - El apartado [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/) de W3C aporta pautas de accesibilidad web para personas con discapacidades cognitivas.
 - WebAIM tiene una [página cognitiva](https://webaim.org/articles/cognitive/) con la información y los recursos correspondientes.
 - Los Centros para el Control de Enfermedades estimaron que, en 2018, 1 de cada 4 ciudadanos de Estados Unidos presentaba alguna discapacidad y que la discapacidad cognitiva es la más común entre los jóvenes.

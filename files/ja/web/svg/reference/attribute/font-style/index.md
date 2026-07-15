@@ -2,7 +2,7 @@
 title: font-style
 slug: Web/SVG/Reference/Attribute/font-style
 l10n:
-  sourceCommit: da8c3171b7a7ea6694af71fac7a3194d8e9ba869
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`font-style`** 属性は、テキストを通常体、イタリック体、斜体のどれを用いて表示するかどうかを指定します。
@@ -21,9 +21,9 @@ l10n:
 ### SVG のフォントスタイルの制御
 
 ```html
-<svg viewBox="0 0 250 30" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" font-style="normal">Normal font style</text>
-  <text x="150" y="20" font-style="italic">Italic font style</text>
+<svg viewBox="0 0 250 60" xmlns="http://www.w3.org/2000/svg">
+  <text y="20" font-style="normal">Normal フォントスタイル</text>
+  <text y="45" font-style="italic">Italic フォントスタイル</text>
 </svg>
 ```
 
@@ -38,7 +38,7 @@ l10n:
       <td><code>normal</code> | <code>italic</code> | <code>oblique</code></td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>normal</code></td>
     </tr>
     <tr>
@@ -60,4 +60,4 @@ l10n:
 
 ## 関連情報
 
-- CSS の {{cssxref("font-style")}} プロパティ
+- CSS {{cssxref("font-style")}} プロパティ

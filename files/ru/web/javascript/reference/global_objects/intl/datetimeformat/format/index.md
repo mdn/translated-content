@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 
 ## Сводка
 
-Свойство **`Intl.DateTimeFormat.prototype.format`** возвращает функцию-геттер, форматирующую дату согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}}.
+Свойство **`Intl.DateTimeFormat.prototype.format`** возвращает функцию-геттер, форматирующую дату согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}}.
 
 ## Синтаксис
 
@@ -22,7 +22,7 @@ dateTimeFormat.format(date)
 
 ## Описание
 
-Функция, возвращённая геттером `format`, форматирует дату согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}}.
+Функция, возвращённая геттером `format`, форматирует дату согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}}.
 
 ## Примеры
 
@@ -44,7 +44,7 @@ console.log(dateTimeFormat.format(new Date()));
 
 ### Пример: использование функции `format` вместе с `map`
 
-Использование функции, возвращённой геттером `format`, для форматирования всех дат в массиве. Обратите внимание, что функция привязана к объекту {{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}}, из которого она была получена, так что её можно передавать в {{jsxref("Array.prototype.map()")}} напрямую.
+Использование функции, возвращённой геттером `format`, для форматирования всех дат в массиве. Обратите внимание, что функция привязана к объекту {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}}, из которого она была получена, так что её можно передавать в {{jsxref("Array.prototype.map()")}} напрямую.
 
 ```js
 var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
@@ -65,7 +65,7 @@ console.log(formatted.join("; "));
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}

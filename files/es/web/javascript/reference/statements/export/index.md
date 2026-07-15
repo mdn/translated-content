@@ -64,7 +64,7 @@ Los export con nombre son útiles cuando se necesitan exportar múltiples valore
 Pero un export por defecto puede ser importado con cualquier nombre, por ejemplo:
 
 ```js
-export default k = 12; // en el archivo test.js
+export default (k = 12); // en el archivo test.js
 
 import m from "./test"; // notese que tenemos la libertad de usar import m en lugar de import k, porque k era el export por defecto
 
@@ -158,7 +158,7 @@ Tenga en cuenta que no es posible usar `var`, `let` o `const` con `export defaul
 
 ## Vea también
 
-- {{jsxref("Sentencias/import", "import")}}
+- {{jsxref("Statements/import", "import")}}
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), publicación del blog de Hacks por Jason Orendorff
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), publicación del blog de Hacks por Lin Clark
 - [Libro de Axel Rauschmayer: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

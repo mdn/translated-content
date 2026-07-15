@@ -76,7 +76,7 @@ name="nomFichier"; filename="nomfichier.jpg"
     Un `name` avec une valeur de `'_charset_'` indique que la partie n'est pas un champ HTML, mais le jeu de caractères par défaut à utiliser pour les parties sans information de charset explicite.
 
 - `filename`
-  - : Est suivie d'une chaîne de caractères contenant le nom d'origine du fichier transmis. Ce paramètre fournit principalement une information indicative. Les recommandations de la [RFC2183 <sup>(angl.)</sup>](https://www.rfc-editor.org/rfc/rfc2183#section-2.3) s'appliquent&nbsp;:
+  - : Est suivie d'une chaîne de caractères contenant le nom d'origine du fichier transmis. Ce paramètre fournit principalement une information indicative. Les recommandations de la [RFC2183 <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc2183#section-2.3) s'appliquent&nbsp;:
     - Préférer les caractères ASCII si possible (le client peut encoder en pourcentage, tant que l'implémentation serveur le décode).
     - Toute information de chemin doit être supprimée, par exemple en remplaçant `/` par `_`.
     - Lors de l'écriture sur disque, il ne doit pas écraser un fichier existant.

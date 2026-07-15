@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="radio">`
 short-title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`radio`** sont généralement utilisés dans des **groupes de boutons radio** — des ensembles de boutons radio décrivant un ensemble d'options liées.
@@ -46,7 +46,7 @@ input {
 }
 ```
 
-On les appelle boutons radio car ils ressemblent et fonctionnent de manière similaire aux boutons-poussoirs des anciennes radios, comme celle illustrée ci-dessous.
+On les appelle boutons radio, car ils ressemblent et fonctionnent de manière similaire aux boutons-poussoirs des anciennes radios, comme celle illustrée ci-dessous.
 
 ![Illustration de l'apparence des boutons radio sur les anciens appareils.](old-radio.jpg)
 
@@ -59,7 +59,7 @@ L'attribut `value` est une chaîne de caractères qui contient la valeur du bout
 
 ### Définir un groupe de boutons radio
 
-Pour définir un groupe de boutons radio, on leur donne le même nom via l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name). Une fois qu'on a formé un groupe de boutons radio, on ne pourra sélectionner qu'une seule des options de ce groupes (cliquer sur une option désélectionnera automatiquement l'option précédemment choisie dans ce groupe).
+Pour définir un groupe de boutons radio, on leur donne le même nom avec l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name). Une fois qu'on a formé un groupe de boutons radio, on ne peut sélectionner qu'une seule des options de ce groupe (cliquer sur une option désélectionne automatiquement l'option précédemment choisie dans ce groupe).
 
 Il est possible d'avoir autant de groupes de boutons radio que vous le souhaitez sur une page, à condition que chacun ait un attribut `name` unique.
 
@@ -86,24 +86,24 @@ Voici le fragment de code HTML correspondant à cet exemple&nbsp;:
 </form>
 ```
 
-On voit ici trois boutons radio dont l'attribut `name` vaut `contact` et dont chacun possède une valeur unique pour l'attribut `value`. Ils possèdent également un identifiant unique ({{DOMxRef("Element.id", "id")}}) qui est utilisé pour rattacher le libellé fourni par l'élément {{HTMLElement("label")}} via l'attribut [`for`](/fr/docs/Web/HTML/Reference/Elements/label#for).
+On voit ici trois boutons radio dont l'attribut `name` vaut `contact` et dont chacun possède une valeur unique pour l'attribut `value`. Ils possèdent également un identifiant unique ({{DOMxRef("Element.id", "id")}}) qui est utilisé pour rattacher le libellé fourni par l'élément {{HTMLElement("label")}} avec l'attribut [`for`](/fr/docs/Web/HTML/Reference/Elements/label#for).
 
-Voici le résultat obtenu :
+Voici le résultat obtenu&nbsp;:
 
 {{EmbedLiveSample('Définir un groupe de boutons radio', 600, 130)}}
 
 ### La représentation des données d'un groupe de boutons radio
 
-Lorsqu'on envoie le formulaire ci-dessus avec un bouton radio sélectionné, les données du formulaire contiennent une entrée sous la forme `contact=valeur`. Par exemple, si l'utilisateur·ice clique sur le bouton radio «&nbsp;Téléphone&nbsp;» puis envoie le formulaire, les données du formulaire contiendront la ligne `contact=telephone`.
+Lorsqu'on envoie le formulaire ci-dessus avec un bouton radio sélectionné, les données du formulaire contiennent une entrée sous la forme `contact=valeur`. Par exemple, si l'utilisateur·ice clique sur le bouton radio «&nbsp;Téléphone&nbsp;» puis envoie le formulaire, les données du formulaire contiennent la ligne `contact=telephone`.
 
 Si vous omettez l'attribut `value` dans le HTML, les données envoyées par le formulaire attribuent la valeur `on` au groupe. Dans ce cas, si l'utilisateur·ice clique sur l'option «&nbsp;Téléphone&nbsp;» et envoie le formulaire, les données envoyées seraient `contact=on`, ce qui n'est pas utile. N'oubliez donc pas de définir vos attributs `value`&nbsp;!
 
 > [!NOTE]
-> Si aucun bouton radio n'est sélectionné lors de l'envoi du formulaire, le groupe radio n'est pas inclus dans les données envoyées car il n'y a aucune valeur à fournir.
+> Si aucun bouton radio n'est sélectionné lors de l'envoi du formulaire, le groupe radio n'est pas inclus dans les données envoyées, car il n'y a aucune valeur à fournir.
 
 Il est assez rare de vouloir permettre l'envoi du formulaire sans qu'aucun bouton radio d'un groupe ne soit sélectionné, il est donc généralement judicieux d'en avoir un par défaut avec l'état `checked`. Voir [Sélectionner un bouton radio par défaut](#sélectionner_un_bouton_radio_par_défaut) ci-dessous.
 
-Ajoutons un peu de code à notre exemple pour examiner les données générées par ce formulaire. Le HTML est modifié pour ajouter un bloc {{HTMLElement("pre")}} qui affichera les données du formulaire&nbsp;:
+Ajoutons un peu de code à notre exemple pour examiner les données générées par ce formulaire. Le HTML est modifié pour ajouter un bloc {{HTMLElement("pre")}} qui affiche les données du formulaire&nbsp;:
 
 ```html
 <form>
@@ -156,7 +156,7 @@ En complément des attributs partagés par l'ensemble des éléments {{HTMLEleme
     Contrairement aux autres navigateurs, Firefox [conserve par défaut l'état coché dynamique <sup>(angl.)</sup>](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un `<input>` lors des rechargements de page. Utilisez l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete) pour contrôler ce comportement.
 
 - `value`
-  - : L'attribut `value` est partagé par tous les {{HTMLElement("input")}}&nbsp;; cependant, il a un rôle particulier pour les boutons radio&nbsp;: lorsqu'un formulaire est envoyé, seuls les boutons radio actuellement sélectionnés sont envoyés au serveur, et la valeur rapportée est la valeur de l'attribut `value`. Si `value` n'est pas autrement défini, il s'agit de la chaîne `on` par défaut. Cela est illustré dans la section [Valeur](#valeur) ci-dessus.
+  - : L'attribut `value` est partagé par tous les {{HTMLElement("input")}}&nbsp;; cependant, il a un rôle particulier pour les boutons radio&nbsp;: lorsqu'un formulaire est envoyé, seuls les boutons radio actuellement sélectionnés sont envoyés au serveur, et la valeur rapportée est la valeur de l'attribut `value`. Si `value` n'est pas autrement défini, il s'agit de la chaîne de caractères `on` par défaut. C'est illustré dans la section [Valeur](#valeur) ci-dessus.
 
 - [`required`](/fr/docs/Web/HTML/Reference/Attributes/required)
   - : L'attribut `required` est partagé par la plupart des {{HTMLElement("input")}}. Si un bouton radio d'un groupe partageant le même nom possède l'attribut `required`, un bouton de ce groupe doit être sélectionné, même si ce n'est pas forcément celui qui porte l'attribut.
@@ -167,7 +167,7 @@ Nous avons déjà vu certaines techniques ci-avant. Voyons désormais d'autres f
 
 ### Sélectionner un bouton radio par défaut
 
-Pour qu'un bouton radio soit sélectionné par défaut, on ajoutera l'attribut booléen `checked`. Voici ce que ça donne pour l'exemple précédent, légèrement modifié&nbsp;:
+Pour qu'un bouton radio soit sélectionné par défaut, on ajoute l'attribut booléen `checked`. Voici ce que ça donne pour l'exemple précédent, légèrement modifié&nbsp;:
 
 ```html
 <form>
@@ -195,10 +195,10 @@ Pour qu'un bouton radio soit sélectionné par défaut, on ajoutera l'attribut b
 
 {{EmbedLiveSample("Sélectionner un bouton radio par défaut", 600, 130)}}
 
-Ici, c'est le premier bouton radio qui sera sélectionné par défaut.
+Ici, c'est le premier bouton radio qui est sélectionné par défaut.
 
 > [!NOTE]
-> Si vous placez l'attribut `checked` sur plusieurs boutons radio, les instances ultérieures écraseront les précédentes&nbsp;; c'est donc le dernier bouton radio avec `checked` qui sera sélectionné. Cela s'explique par le fait qu'un seul bouton radio d'un groupe peut être sélectionné à la fois, et l'agent utilisateur désélectionne automatiquement les autres chaque fois qu'un nouveau est marqué comme sélectionné.
+> Si vous placez l'attribut `checked` sur plusieurs boutons radio, les instances ultérieures écrasent les précédentes&nbsp;; c'est donc le dernier bouton radio avec `checked` qui est sélectionné. Cela s'explique par le fait qu'un seul bouton radio d'un groupe peut être sélectionné à la fois, et l'agent utilisateur désélectionne automatiquement les autres chaque fois qu'un nouveau est marqué comme sélectionné.
 
 ### Fournir une plus grande zone de sélection
 
@@ -208,7 +208,7 @@ Au-delà des raisons relatives à l'accessibilité, il s'agit d'un autre argumen
 
 ## Validation
 
-Dans le cas d'un bouton radio avec l'attribut [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) défini, ou d'un groupe de boutons radio partageant le même nom dont au moins un possède `required`, un bouton radio doit être sélectionné pour que le contrôle soit considéré comme valide. Si aucun bouton radio n'est coché, la propriété {{DOMxRef("ValidityState.valueMissing", "valueMissing")}} d'un objet {{DOMxRef("ValidityState")}} retournera `true` lors de la validation, et le navigateur demandera à l'utilisateur·ice de sélectionner une option.
+Dans le cas d'un bouton radio avec l'attribut [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) défini, ou d'un groupe de boutons radio partageant le même nom dont au moins un possède `required`, un bouton radio doit être sélectionné pour que le contrôle soit considéré comme valide. Si aucun bouton radio n'est coché, la propriété {{DOMxRef("ValidityState.valueMissing", "valueMissing")}} d'un objet {{DOMxRef("ValidityState")}} retourne `true` lors de la validation, et le navigateur demande à l'utilisateur·ice de sélectionner une option.
 
 ## Mettre en forme les boutons radio
 
@@ -312,7 +312,7 @@ Ce qui est le plus notable ici est l'utilisation de la propriété CSS {{CSSxRef
 
 {{EmbedLiveSample("Mettre en forme les boutons radio", 600, 120)}}
 
-Remarquez qu'en cliquant sur un bouton radio, il y a un bel effet de fondu lors du changement d'état entre les boutons. De plus, le style et la couleur de la légende et du bouton d'envoi sont personnalisés pour offrir un contraste marqué. Ce n'est peut-être pas l'apparence que vous souhaiteriez dans une vraie application web, mais cela illustre bien les possibilités.
+Remarquez qu'en cliquant sur un bouton radio, il y a un bel effet de fondu lors du changement d'état entre les boutons. De plus, le style et la couleur de la légende et du bouton d'envoi sont personnalisés pour offrir un contraste marqué. Ce n'est peut-être pas l'apparence que vous souhaitez dans une vraie application web, mais cela illustre bien les possibilités.
 
 ## Résumé technique
 
@@ -345,12 +345,6 @@ Remarquez qu'en cliquant sur un bouton radio, il y a un bel effet de fondu lors 
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

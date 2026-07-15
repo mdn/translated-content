@@ -20,18 +20,18 @@ Lorsque vous utilisez des éléments non sémantiques comme boutons radio, vous 
 
 Certaines implémentations de `radiogroup` initialisent le groupe avec tous les boutons non sélectionnés. Une fois qu'un bouton radio est sélectionné, il n'est généralement pas possible de revenir à un état où aucun bouton n'est sélectionné.
 
-Le `radiogroup` doit avoir un nom accessible, soit par un label visible référencé par [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby), soit par un label spécifié avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). Si des éléments fournissent des informations supplémentaires sur le groupe, ils sont référencés par le `radiogroup` avec la propriété [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
+Le `radiogroup` doit avoir un nom accessible, soit par une étiquette visible référencée par [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby), soit par une étiquette définie avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). Si des éléments fournissent des informations supplémentaires sur le groupe, ils sont référencés par le `radiogroup` avec la propriété [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 ## Propriétés, états et rôles WAI-ARIA associés
 
 - le rôle [`radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
   - : Un des boutons sélectionnables d'un groupe, dans un `radiogroup`, où un seul bouton peut être sélectionné à la fois.
 - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) / [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-  - : Le `radiogroup` doit avoir un nom accessible, soit par un label visible référencé par `aria-labelledby`, soit par un label spécifié avec `aria-label`.
+  - : Le `radiogroup` doit avoir un nom accessible, soit par une étiquette visible référencée par `aria-labelledby`, soit par une étiquette définie avec `aria-label`.
 - [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
   - : Référence vers des éléments fournissant des informations supplémentaires sur le `radiogroup`.
 - [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
-  - : Indique qu'un bouton radio du groupe doit avoir `aria-checked="true"` avant que le formulaire puisse être soumis. L'état requis est spécifié sur l'élément `radiogroup` et non sur les boutons radio, contrairement à l'attribut HTML [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) qui est défini directement sur un ou plusieurs éléments radio {{HTMLElement('input')}}.
+  - : Indique qu'un bouton radio du groupe doit avoir `aria-checked="true"` avant que le formulaire puisse être envoyé. L'état requis est défini sur l'élément `radiogroup` et non sur les boutons radio, contrairement à l'attribut HTML [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) qui est défini directement sur un ou plusieurs éléments radio {{HTMLElement("input")}}.
 - [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
   - : Identifie l'élément qui fournit un message d'erreur pour le `radiogroup`, si une erreur est présente. Ce message doit être masqué lorsqu'il n'est pas pertinent.
 
@@ -52,15 +52,15 @@ Les flèches sont utilisées pour naviguer entre les éléments d'une barre d'ou
 
 ## Fonctionnalités JavaScript requises
 
-Les interactions utilisateur pour les `radiogroup` doivent reproduire celles d'un groupe de boutons radio HTML natifs avec le même nom. Les événements clavier pour Tab, Espace et les flèches doivent être capturés. Les clics sur les éléments radio et leurs labels associés doivent aussi être capturés. De plus, [la gestion de la sélection <sup>(angl.)</sup>](https://primer.style/accessibility/design-guidance/focus-management/) doit être assurée.
+Les interactions utilisateur pour les `radiogroup` doivent reproduire celles d'un groupe de boutons radio HTML natifs avec le même nom. Les évènements clavier pour Tab, Espace et les flèches doivent être capturés. Les clics sur les éléments radio et leurs étiquettes associés doivent aussi être capturés. De plus, [la gestion de la sélection <sup>(angl.)</sup>](https://primer.style/accessibility/design-guidance/focus-management/) doit être assurée.
 
-En général, quitter un élément sélectionné amène à l'élément sélectionnable suivant dans l'ordre du DOM. Utiliser les flèches pour naviguer dans un groupe de boutons radio maintient la sélection dans le groupe, déplaçant la sélection vers le premier bouton radio lorsque <kbd>Flèche vers la droite</kbd> ou <kbd>Flèche vers le bas</kbd> est relâchée alors que la sélection était sur le dernier bouton, et vers le dernier bouton si <kbd>Flèche vers la gauche</kbd> ou <kbd>Flèche vers le haut</kbd> est relâchée alors que la sélection était sur le premier bouton. La gestion dynamique de [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) est une méthode pour gérer ces événements.
+En général, quitter un élément sélectionné amène à l'élément sélectionnable suivant dans l'ordre du DOM. Utiliser les flèches pour naviguer dans un groupe de boutons radio maintient la sélection dans le groupe, déplaçant la sélection vers le premier bouton radio lorsque <kbd>Flèche vers la droite</kbd> ou <kbd>Flèche vers le bas</kbd> est relâchée alors que la sélection était sur le dernier bouton, et vers le dernier bouton si <kbd>Flèche vers la gauche</kbd> ou <kbd>Flèche vers le haut</kbd> est relâchée alors que la sélection était sur le premier bouton. La gestion dynamique de [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) est une méthode pour gérer ces évènements.
 
 ## Fonctionnalités CSS requises
 
-Utilisez le sélecteur d'attribut `[aria-checked="true"]` ([sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors)) pour styliser l'état sélectionné des boutons radio.
+Utilisez le sélecteur d'attribut `[aria-checked="true"]` ([sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors)) pour mettre en forme l'état sélectionné des boutons radio.
 
-Utilisez les pseudo-classes CSS {{CSSxRef(':hover')}} et {{CSSxRef(':focus')}} pour styliser la sélection visuelle au clavier et le survol. L'effet de sélection et de survol doit englober le bouton radio et le label pour faciliter la perception de l'option choisie et indiquer que cliquer sur le label ou le bouton active le bouton radio.
+Utilisez les pseudo-classes CSS {{CSSxRef(":hover")}} et {{CSSxRef(":focus")}} pour mettre en forme la sélection visuelle au clavier et le survol. L'effet de sélection et de survol doit englober le bouton radio et l'étiquette pour faciliter la perception de l'option choisie et indiquer que cliquer sur l'étiquette ou le bouton active le bouton radio.
 
 ## Exemples
 
@@ -110,7 +110,7 @@ Voici la structure de base d'un `radiogroup` utilisant les rôles ARIA non séma
 </div>
 ```
 
-Cela pourrait être écrit en HTML sémantique, sans CSS ni JavaScript&nbsp;:
+Cela peut être écrit en HTML sémantique, sans CSS ni JavaScript&nbsp;:
 
 ```html
 <fieldset>
@@ -134,7 +134,7 @@ Cela pourrait être écrit en HTML sémantique, sans CSS ni JavaScript&nbsp;:
 </fieldset>
 ```
 
-Dans cet exemple avec {{HTMLElement('fieldset')}}, le rôle `radiogroup` n'est pas nécessaire, mais pour que le regroupement soit explicitement annoncé comme `radiogroup`, ajoutez le rôle ARIA.
+Dans cet exemple avec {{HTMLElement("fieldset")}}, le rôle `radiogroup` n'est pas nécessaire, mais pour que le regroupement soit explicitement annoncé comme `radiogroup`, ajoutez le rôle ARIA.
 
 ## Spécifications
 
@@ -142,8 +142,8 @@ Dans cet exemple avec {{HTMLElement('fieldset')}}, le rôle `radiogroup` n'est p
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('fieldset')}}
-- L'élément HTML {{HTMLElement('input/radio', '&lt;input type="radio">')}} de bouton radio
+- L'élément HTML {{HTMLElement("fieldset")}}
+- L'élément HTML {{HTMLElement("input/radio", "&lt;input type="radio"&gt;")}} de bouton radio
 - [ARIA&nbsp;: rôle `radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
 - [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
 - [`aria-invalid`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)

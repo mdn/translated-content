@@ -71,7 +71,7 @@ var uint32 = new Uint32Array(iterable);
 
 ### 互換性メモ
 
-ECMAScript 2015 から、 `Uint32Array` コンストラクターは構築に {{jsxref("Operators/new", "new")}} 演算子が必要になりました。 `Uint32Array` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
+ECMAScript 2015 から、 `Uint32Array` コンストラクターは構築に {{jsxref("new")}} 演算子が必要になりました。 `Uint32Array` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
 
 ```js example-bad
 var dv = Uint32Array([1, 2, 3]);

@@ -3,18 +3,18 @@ title: "HTMLImageElement: width プロパティ"
 short-title: width
 slug: Web/API/HTMLImageElement/width
 l10n:
-  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
+  sourceCommit: f4372ac9926fc2a1cbe408dae02b381b7f1909da
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`width`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、画像が画面やプリンターなどの視覚媒体に描画または表示される場合は {{Glossary("CSS pixel", "CSS ピクセル")}}で、それ以外は画像のピクセル密度補正後の幅を表します。
+**`width`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、画像が画面やプリンターなどの視覚媒体に描画または表示される場合は {{Glossary("CSS pixel", "CSS ピクセル")}}単位で、それ以外は画像のピクセル密度補正後の幅を表します。
 
 ## 値
 
 画像の幅を表す整数値です。幅がどのように定義されるかは、画像が画面やプリンターのような視覚的媒体にレンダリングされるかどうかに依存します。
 
-- 画像が視覚媒体にレンダリングされる場合、幅は {{Glossary("CSS pixel", "CSS ピクセル")}}で表現されます。
+- 画像が視覚媒体にレンダリングされる場合、幅は {{Glossary("CSS pixel", "CSS ピクセル")}}単位で表現されます。
 - 画像が視覚媒体にレンダリングされない場合、画像の幅は、{{domxref("HTMLImageElement.naturalWidth", "naturalWidth")}} で示される表示密度用に調整された自然の（内在的な）幅で表わされます。
 
 ## 例
@@ -29,11 +29,11 @@ l10n:
 ```html
 <p>画像の幅: <span class="size">?</span>px (リサイズで更新)</p>
 <img
-  src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
+  src="/ja/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png"
   alt="Clock"
   srcset="
-    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
-    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+    /ja/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png 200w,
+    /ja/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png 400w
   "
   sizes="(max-width: 400px) 200px, 400px" />
 ```

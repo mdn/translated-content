@@ -50,12 +50,12 @@ Content-Security-Policy: fenced-frame-src <source-expression-list>;
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: fenced-frame-src https://exemple.com/
+Content-Security-Policy: fenced-frame-src https://example.com/
 ```
 
 Les sources suivantes ne se chargeront pas dans un cadre clôturé&nbsp;:
 
-- `https://hors-exemple.com/` (le domaine ne correspond pas)
+- `https://hors-example.com/` (le domaine ne correspond pas)
 - `https://exemple.org/` (le TLD ne correspond pas)
 
 ## Spécifications

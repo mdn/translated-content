@@ -45,16 +45,16 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 
 ### Autoriser les ressources provenant de domaines de confiance
 
-Étant donné cet en-tête CSP qui n'autorise les scripts que depuis `https://exemple.com`&nbsp;:
+Étant donné cet en-tête CSP qui n'autorise les scripts que depuis `https://example.com`&nbsp;:
 
 ```http
-Content-Security-Policy: script-src https://exemple.com/
+Content-Security-Policy: script-src https://example.com/
 ```
 
 le script suivant est bloqué et ne sera ni chargé ni exécuté&nbsp;:
 
 ```html
-<script src="https://hors-exemple.com/js/library.js"></script>
+<script src="https://hors-example.com/js/library.js"></script>
 ```
 
 On notera que les gestionnaires d'évènements déclarés dans les attributs sont aussi bloqués&nbsp;:
@@ -94,7 +94,7 @@ Le script `exemple-framework.js` ci-dessous devrait se charger car la valeur de 
 
 ```html
 <script
-  src="https://exemple.com/exemple-framework.js"
+  src="https://example.com/exemple-framework.js"
   integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
   crossorigin="anonymous"></script>
 ```
@@ -105,7 +105,7 @@ Le script ci-dessous ne se chargera donc pas, car le deuxième hachage n'est pas
 
 ```html
 <script
-  src="https://exemple.com/exemple-framework.js"
+  src="https://example.com/exemple-framework.js"
   integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC sha256-not-in-csp"
   crossorigin="anonymous"></script>
 ```
@@ -115,7 +115,7 @@ Les valeurs qui ne sont pas reconnues comme des hachages par le navigateur sont 
 
 ```html
 <script
-  src="https://exemple.com/exemple-framework.js"
+  src="https://example.com/exemple-framework.js"
   integrity="invalid-or-unsupported-hash sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
   crossorigin="anonymous"></script>
 ```
@@ -210,7 +210,7 @@ Content-Security-Policy:  script-src 'unsafe-hashes' 'sha256-{HASHED_EVENT_HANDL
 La valeur `'unsafe-eval'` contrôle différents méthodes qui créent du code JavaScript à partir de chaines de caractères. Si `'unsafe-eval'` n'est pas spécifiée avec la directive `script-src`, ces méthodes seront bloquées et n'auront aucun effet&nbsp;:
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("Function", "Function()")}}
+- {{JSxRef("Function()")}}
 - Lors du passage d'une chaîne de caractères littérale à des méthodes telles que&nbsp;: `setTimeout("alert(\"Coucou le monde\");", 500);`
   - {{DOMxRef("Window.setTimeout", "setTimeout()")}}
   - {{DOMxRef("Window.setInterval", "setInterval()")}}
@@ -234,7 +234,7 @@ Content-Security-Policy: script-src 'wasm-unsafe-eval'
 
 La valeur `'strict-dynamic'` indique que la confiance explicitement donnée à un script de la page, par le biais d'un nonce ou d'une empreinte, doit être propagée à tous les scripts chargés par celui-ci. Par conséquent, toute liste de permissions ou expressions de sources telles que `'self'` ou `'unsafe-inline'` sera ignorée.
 
-Par exemple, une règle telle que `script-src 'strict-dynamic' 'nonce-R4nd0m' https://whitelisted.com/` autoriserait le chargement de scripts comme `<script nonce="R4nd0m" src="https://exemple.com/loader.js">` et s'appliquerait ensuite à tous les scripts chargés par `loader.js`, mais interdirait les scripts chargés depuis `https://allowlisted.exemple.com/` à moins qu'ils soient accompagnés d'un nonce ou chargés depuis un script dont la source est de confiance.
+Par exemple, une règle telle que `script-src 'strict-dynamic' 'nonce-R4nd0m' https://whitelisted.com/` autoriserait le chargement de scripts comme `<script nonce="R4nd0m" src="https://example.com/loader.js">` et s'appliquerait ensuite à tous les scripts chargés par `loader.js`, mais interdirait les scripts chargés depuis `https://allowlisted.example.com/` à moins qu'ils soient accompagnés d'un nonce ou chargés depuis un script dont la source est de confiance.
 
 ```http
 Content-Security-Policy: script-src 'strict-dynamic' 'nonce-someNonce'

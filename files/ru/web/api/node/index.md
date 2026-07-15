@@ -16,7 +16,7 @@ slug: Web/API/Node
 _Наследует свойства от родителей {{domxref("EventTarget")}}_.\[1]
 
 - {{domxref("Node.baseURI")}} {{readonlyInline}}
-  - : Возвращает {{domxref("DOMString")}} показывающие основной URL. Понятие основного URL изменяется из одного языка в другой; В HTML, это соответствует протоколу , доменному имени и структуре каталогов, все до последнего `'/'`.
+  - : Возвращает {{jsxref("String")}} показывающие основной URL. Понятие основного URL изменяется из одного языка в другой; В HTML, это соответствует протоколу , доменному имени и структуре каталогов, все до последнего `'/'`.
 - {{domxref("Node.baseURIObject")}} {{Non-standard_inline()}}
   - : (Не доступно для веб-контента.) Только для чтения. Объект `nsIURI`, представляющий базовый URI элемента.
 - {{domxref("Node.childNodes")}} {{readonlyInline}}
@@ -26,14 +26,14 @@ _Наследует свойства от родителей {{domxref("EventTar
 - {{domxref("Node.lastChild")}} {{readonlyInline}}
   - : Возвращает {{domxref("Node")}}, представляющий последний прямой узел потомок узла или `null`, если узел не имеет потомков.
 - {{domxref("Node.localName")}}{{readonlyInline}}
-  - : Возвращает {{domxref("DOMString")}} представляющий локальную часть условного имени элемента. В Firefox 3.5 и более ранних версиях, свойство локального имени в верхнем регистре для HTML-элементов (но не XHTML элементов). В более поздних версиях, такого не произошло, и свойство находится в нижнем регистре для HTML и XHTML. Хотя недавние спецификации требуют от `localName` быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.
+  - : Возвращает {{jsxref("String")}} представляющий локальную часть условного имени элемента. В Firefox 3.5 и более ранних версиях, свойство локального имени в верхнем регистре для HTML-элементов (но не XHTML элементов). В более поздних версиях, такого не произошло, и свойство находится в нижнем регистре для HTML и XHTML. Хотя недавние спецификации требуют от `localName` быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.
 - {{domxref("Node.namespaceURI")}}{{readonlyInline}}
   - : Пространство имён URI данного узла или `null,` если нет пространства имён. В Firefox 3.5 и более ранних версиях, HTML-элементы не имеют пространства имён. В более поздних версиях, HTML-элементы находятся в пространстве имён [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) для деревьев HTML и XML.
     Хотя недавние спецификации требуют `namespaceURI` быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.
 - {{domxref("Node.nextSibling")}} {{readonlyInline}}
   - : Возвращает {{domxref("Node")}} представляющий следующий узел в древе или `null,` если не такого узла.
 - {{domxref("Node.nodeName")}} {{readonlyInline}}
-  - : Возвращает {{domxref("DOMString")}} содержащий имя `узла`. Структура имени будет отличаться от типа имени. Например, {{domxref("HTMLElement")}} будет содержать имя соответствующего тега: `'audio'` для {{domxref("HTMLAudioElement")}}, узел {{domxref("Text")}} будет строкой `'#text'` или узел {{domxref("Document")}} будет строкой `'#document'`.
+  - : Возвращает {{jsxref("String")}} содержащий имя `узла`. Структура имени будет отличаться от типа имени. Например, {{domxref("HTMLElement")}} будет содержать имя соответствующего тега: `'audio'` для {{domxref("HTMLAudioElement")}}, узел {{domxref("Text")}} будет строкой `'#text'` или узел {{domxref("Document")}} будет строкой `'#document'`.
 - {{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}
   - : `nsIPrincipal` представляет основной узел.
 - {{domxref("Node.nodeType")}}{{readonlyInline}}
@@ -55,7 +55,7 @@ _Наследует свойства от родителей {{domxref("EventTar
     | `NOTATION_NODE` {{deprecated_inline()}}         | `12`     |
 
 - {{domxref("Node.nodeValue")}}
-  - : Это {{domxref("DOMString")}}, представляющее значение объектов. Для большинства типов `Node`, возвращает `null` и любой набор операция игнорируется. Для узлов типа `TEXT_NODE` ({{domxref("Text")}} objects), `COMMENT_NODE` ({{domxref("Comment")}} objects), и `PROCESSING_INSTRUCTION_NODE` ({{domxref("ProcessingInstruction")}} objects), значение соответствует текстовым данным, содержащихся в объекте.
+  - : Это {{jsxref("String")}}, представляющее значение объектов. Для большинства типов `Node`, возвращает `null` и любой набор операция игнорируется. Для узлов типа `TEXT_NODE` ({{domxref("Text")}} objects), `COMMENT_NODE` ({{domxref("Comment")}} objects), и `PROCESSING_INSTRUCTION_NODE` ({{domxref("ProcessingInstruction")}} objects), значение соответствует текстовым данным, содержащихся в объекте.
 - {{domxref("Node.ownerDocument")}} {{readonlyInline}}
   - : Возвращает {{domxref("Document")}} к которому принадлежит этот узел. Если нет связанного с ним документа, возвращает `null`.
 - {{domxref("Node.parentNode")}} {{readonlyInline}}
@@ -63,12 +63,12 @@ _Наследует свойства от родителей {{domxref("EventTar
 - {{domxref("Node.parentElement")}} {{readonlyInline}}
   - : Возвращает {{domxref("Element")}} который является родителем данного узла. Если узел не имеет родителя или если родитель не {{domxref("Element")}}, это свойство вернёт `null`.
 - {{domxref("Node.prefix")}}{{readonlyInline}}
-  - : {{domxref("DOMString")}} представляющий префикс пространства имён узла или `null` если нет префикса точно определённого.
+  - : {{jsxref("String")}} представляющий префикс пространства имён узла или `null` если нет префикса точно определённого.
     Хотя недавние спецификации требуют того, чтобы `префикс` был определён как интерфейс {{domxref("Element")}}, браузеры основанные на Gecko ещё реализовывают его как интерфейс {{domxref("Node")}}.
 - {{domxref("Node.previousSibling")}} {{readonlyInline}}
   - : Возвращают {{domxref("Node")}} представляющий предыдущий узел древа или `null`, если нет такого узла.
 - {{domxref("Node.textContent")}}
-  - : Это {{domxref("DOMString")}} представляющее текстовый контент элемента и всех его потомков.
+  - : Это {{jsxref("String")}} представляющее текстовый контент элемента и всех его потомков.
 
 ## Методы
 

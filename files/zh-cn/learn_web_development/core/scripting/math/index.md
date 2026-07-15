@@ -15,7 +15,7 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        初步了解 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a> 和 <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a>。</td>。
+        初步了解 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a> 和 <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a>。
       </td>
     </tr>
     <tr>
@@ -162,9 +162,9 @@ myNumber = Number(myNumber) + 3;
       <td><code>%</code></td>
       <td>求余（有时候也叫取模）</td>
       <td>
-        <p>在你将左边的数分成同右边数字相同的若干整数部分后，返回剩下的余数</p>
+        <p>在将左边的数分成同右边数字相同的若干整数部分后，返回剩下的余数</p>
       </td>
-      <td><code>8 % 3</code>（返回 2，因为 3 可以被 8 整除两次，还剩余 2。）</td>
+      <td><code>8 % 3</code>（返回 2，因为 3 可以被 8 整除两次，还剩余 2）。</td>
     </tr>
     <tr>
       <td><code>**</code></td>
@@ -175,8 +175,8 @@ myNumber = Number(myNumber) + 3;
         </p>
       </td>
       <td>
-        <code>5 ** 2</code>（返回 <code>3125</code>，相当于
-        <code>5 * 5</code> 。）
+        <code>5 ** 2</code>（返回 <code>25</code>，相当于
+        <code>5 * 5</code> ）。
       </td>
     </tr>
   </tbody>

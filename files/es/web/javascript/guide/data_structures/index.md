@@ -34,7 +34,7 @@ El último estándar ECMAScript define nueve tipos:
 - {{Glossary("Object")}}: `typeof instance === "object"`. Tipo estructural especial que no es de datos pero para cualquier instancia de objeto [construido](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#the_constructor) que también se utiliza como estructuras de datos: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("WeakSet")}}, new {{jsxref("Date")}} y casi todo lo hecho con la [palabra clave `new`](/es/docs/Web/JavaScript/Reference/Operators/new);
 - {{Glossary("Function")}}: una estructura sin datos, aunque también responde al operador `typeof`: `typeof instance === "function"`. Esta simplemente es una forma abreviada para funciones, aunque cada constructor de funciones se deriva del constructor `Object`.
 
-Ten en cuenta que el único propósito valioso del uso del operador `typeof` es verificar el tipo de dato. Si deseamos verificar cualquier Tipo Estructural derivado de `Object`, no tiene sentido usar `typeof` para eso, ya que siempre recibiremos "`object`". La forma correcta de comprobar qué tipo de Objeto estamos usando es la palabra clave {{jsxref("Operators/instanceof", "instanceof")}}. Pero incluso en ese caso, puede haber conceptos erróneos.
+Ten en cuenta que el único propósito valioso del uso del operador `typeof` es verificar el tipo de dato. Si deseamos verificar cualquier Tipo Estructural derivado de `Object`, no tiene sentido usar `typeof` para eso, ya que siempre recibiremos "`object`". La forma correcta de comprobar qué tipo de Objeto estamos usando es la palabra clave {{jsxref("instanceof")}}. Pero incluso en ese caso, puede haber conceptos erróneos.
 
 ## Valores primitivos
 
@@ -74,7 +74,7 @@ Infinity
 -Infinity
 ```
 
-Aunque un `number` a menudo representa solo su valor, JavaScript proporciona {{jsxref("Operators/Bitwise_Operators", "operadores binarios (bitwise)")}}.
+Aunque un `number` a menudo representa solo su valor, JavaScript proporciona {{jsxref("Operators", "operadores binarios (bitwise)")}}.
 
 > [!NOTE]
 > Aunque los operadores bit a bit se _pueden_ usar para representar múltiples valores Booleanos dentro de un solo número usando el [enmascaramiento de bits](<https://es.wikipedia.org/wiki/Máscara_(informática)>), esto generalmente se considera una mala práctica. JavaScript ofrece otros medios para representar un conjunto de valores booleanos (como un arreglo de valores booleanos o un objeto con valores booleanos asignados a propiedades con nombre). El enmascaramiento de bits también tiende a hacer que el código sea más difícil de leer, comprender y mantener.

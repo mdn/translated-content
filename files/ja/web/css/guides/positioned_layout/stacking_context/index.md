@@ -24,7 +24,7 @@ l10n:
 - {{cssxref("position")}} の値が `fixed` または `sticky` の要素。
 - {{cssxref("container-type")}} の値が[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)のために `size` または `inline-size` に設定されているもの。
 - [フレックスアイテム](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
-- [グリッドアイテム]()であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
+- [グリッドアイテム](<>)であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
 - {{cssxref("opacity")}} の値が `1` 未満である要素。
 - {{cssxref("mix-blend-mode")}} の値が `normal` 以外の要素。
 - 以下のプロパティのいずれかが `none` 以外の値を持つ要素。

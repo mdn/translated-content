@@ -2,7 +2,7 @@
 title: Pseudo-éléments
 slug: Web/CSS/Reference/Selectors/Pseudo-elements
 l10n:
-  sourceCommit: 21d2342d16ed78d6c72c66a71599125eb2405a31
+  sourceCommit: bc294cca926abf68e1cbf8026f0bae1bf6a95325
 ---
 
 Un **pseudo-élément** [CSS](/fr/docs/Web/CSS) est un mot-clé ajouté à un sélecteur qui vous permet de mettre en forme une partie spécifique du ou des éléments sélectionnés.
@@ -236,7 +236,7 @@ Lorsque vous appliquez des styles aux pseudo-éléments de mise en évidence, il
 1. Leurs éléments parents (suivant l'héritage normal).
 2. Les pseudo-éléments de mise en évidence de leurs éléments parents (suivant l'héritage des surlignages).
 
-Cela signifie que si vous mettez en forme à la fois le pseudo-élément de mise en évidence d'un élément parent et le pseudo-élément de mise en évidence d'un élément enfant, le texte surligné de l'enfant combinera les propriétés des deux sources.
+Cela signifie que si vous mettez en forme à la fois le pseudo-élément de mise en évidence d'un élément parent et le pseudo-élément de mise en évidence d'un élément enfant, le texte surligné de l'enfant combine les propriétés des deux sources.
 
 Voici un exemple concret.
 

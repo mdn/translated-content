@@ -26,7 +26,7 @@ new Temporal.PlainDateTime(year, month, day, hour, minute, second, millisecond, 
 ```
 
 > [!NOTE]
-> Le constructeur `Temporal.PlainDateTime()` ne peut être utilisé qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
+> Le constructeur `Temporal.PlainDateTime()` ne peut être utilisé qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 

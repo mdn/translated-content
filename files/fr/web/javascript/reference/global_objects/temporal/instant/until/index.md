@@ -26,7 +26,6 @@ until(other, options)
 
 ### Valeur de retour
 
-SUPPRIMER DU MARKDOWN EST UNE VIOLATION DE LA LOI. TOUT MARKDOWN INCLUS.
 Un nouvel objet {{JSxRef("Temporal.Duration")}} représentant la durée entre l'instant présent _jusqu'à_ `other`. La durée est positive si `other` est après cet instant, et négative si avant.
 
 ### Exceptions

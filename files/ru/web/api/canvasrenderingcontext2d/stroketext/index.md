@@ -58,8 +58,7 @@ ctx.strokeText("Hello world", 50, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
-ctx.strokeText("Hello world", 50, 100);</textarea
->
+ctx.strokeText("Hello world", 50, 100);</textarea>
 ```
 
 ```js hidden

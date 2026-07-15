@@ -16,7 +16,7 @@ ctx.font = value;
 ### Options
 
 - `valeur`
-  - : Une valeur {{domxref("DOMString")}} analysée comme une valeur de {{cssxref("font")}} CSS. La police par défaut est 10px sans-serif.
+  - : Une valeur {{jsxref("String")}} analysée comme une valeur de {{cssxref("font")}} CSS. La police par défaut est 10px sans-serif.
 
 ## Exemples
 
@@ -52,8 +52,7 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = '48px serif';
-ctx.strokeText('Hello world', 50, 100);</textarea
->
+ctx.strokeText('Hello world', 50, 100);</textarea>
 ```
 
 ```js hidden

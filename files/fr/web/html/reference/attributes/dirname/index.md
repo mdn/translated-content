@@ -32,7 +32,7 @@ Si aucune direction n'est définie, l'agent utilisateur utilisera la direction d
 Dans cet exemple, l'attribut `dir="auto"` sur l'élément textarea permet de déterminer automatiquement la direction du texte en fonction de ce que l'utilisateur·rice saisit&nbsp;:
 
 ```html
-<form method="get" action="https://www.exemple.fr/submit">
+<form method="get" action="https://www.example.com/submit">
   <textarea name="comment" dir="auto" dirname="comment-direction">سيب</textarea>
   <button type="submit">Envoyer mes salutations</button>
 </form>
@@ -42,7 +42,7 @@ Lorsque l'utilisateur·rice soumet le formulaire, l'agent utilisateur inclut deu
 Le corps de la soumission encodé dans l'URL ressemble à&nbsp;:
 
 ```url
-https://www.exemple.fr/submit?comment=%D8%B3%D9%8A%D8%A8&comment-direction=rtl
+https://www.example.com/submit?comment=%D8%B3%D9%8A%D8%A8&comment-direction=rtl
 ```
 
 ### Direction du texte dans un élément input
@@ -50,7 +50,7 @@ https://www.exemple.fr/submit?comment=%D8%B3%D9%8A%D8%A8&comment-direction=rtl
 Dans cet exemple, l'attribut `dir="auto"` sur l'élément input permet de déterminer automatiquement la direction du texte en fonction de ce que l'utilisateur·rice saisit&nbsp;:
 
 ```html
-<form method="get" action="https://www.exemple.fr/submit">
+<form method="get" action="https://www.example.com/submit">
   <input
     type="text"
     name="comment-input"
@@ -64,7 +64,7 @@ Dans cet exemple, l'attribut `dir="auto"` sur l'élément input permet de déter
 Lorsque l'utilisateur·rice soumet le formulaire, l'agent utilisateur inclut deux champs, un appelé `comment-input` avec la valeur «&nbsp;Hello&nbsp;», et un appelé `comment-direction` avec la valeur «&nbsp;ltr&nbsp; »&nbsp;:
 
 ```url
-https://www.exemple.fr/submit?comment-input=Hello&comment-direction=ltr
+https://www.example.com/submit?comment-input=Hello&comment-direction=ltr
 ```
 
 ### Héritage de la direction du texte
@@ -73,7 +73,7 @@ Les éléments `<input>` et `<textarea>` suivants n'ont pas d'attribut `dir`, il
 
 ```html
 <div dir="rtl">
-  <form method="get" action="https://www.exemple.fr/submit">
+  <form method="get" action="https://www.example.com/submit">
     <input
       type="text"
       name="user"
@@ -88,7 +88,7 @@ Les éléments `<input>` et `<textarea>` suivants n'ont pas d'attribut `dir`, il
 Le corps de la soumission encodé dans l'URL ressemble à&nbsp;:
 
 ```url
-https://www.exemple.fr/submit?user=LTR+Username&user-direction=rtl&comment=LTR+Comment&comment-direction=rtl
+https://www.example.com/submit?user=LTR+Username&user-direction=rtl&comment=LTR+Comment&comment-direction=rtl
 ```
 
 ## Spécifications

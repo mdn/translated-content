@@ -54,7 +54,7 @@ TRACE <request-target>["?"<query>] HTTP/1.1
 
 - `<request-target>`
   - : Identifie la ressource cible de la requête lorsqu'elle est combinée avec l'information fournie dans l'en-tête {{HTTPHeader("Host")}}.
-    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) dans les requêtes vers un serveur d'origine, et d'une URL absolue dans les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.exemple.fr/chemin/vers/fichier.html`).
+    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) dans les requêtes vers un serveur d'origine, et d'une URL absolue dans les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.example.com/chemin/vers/fichier.html`).
 - `<query>` {{Optional_Inline}}
   - : Un fragment de requête optionnel précédé d'un point d'interrogation `?`.
     Souvent utilisé pour transmettre des informations sous la forme de paires `clé=valeur`.
@@ -66,14 +66,14 @@ TRACE <request-target>["?"<query>] HTTP/1.1
 Une requête `TRACE` peut être effectuée avec `curl`&nbsp;:
 
 ```bash
-curl -v -X TRACE exemple.fr
+curl -v -X TRACE example.com
 ```
 
 Cela produit la requête HTTP suivante&nbsp;:
 
 ```http
 TRACE / HTTP/1.1
-Host: exemple.fr
+Host: example.com
 User-Agent: curl/8.7.1
 Accept: */*
 ```
@@ -88,7 +88,7 @@ Server: Apache/2.4.59 (Unix)
 Content-Type: message/http
 
 TRACE / HTTP/1.1
-Host: exemple.fr
+Host: example.com
 User-Agent: curl/8.7.1
 Accept: */*
 ```

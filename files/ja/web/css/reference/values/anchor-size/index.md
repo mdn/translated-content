@@ -1,8 +1,9 @@
 ---
-title: anchor-size()
+title: CSS `anchor-size()` 関数
+short-title: anchor-size()
 slug: Web/CSS/Reference/Values/anchor-size
 l10n:
-  sourceCommit: dc2ae626916c7275aa5f01f2d01e00b73d96b458
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`anchor-size()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、アンカー位置指定要素の[サイズ](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#アンカーのサイズに応じて要素をサイズ変更)、[位置](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#アンカーサイズに基づく要素の位置の設定)、[マージン](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#アンカーサイズに基づく要素のマージンの設定)を、アンカー要素のサイズに対して相対的に設定することができます。これは、ターゲットとなるアンカー要素の指定された辺の `<length>` を返します。`anchor-size()` は、アンカー位置指定要素の[サイズ指定、インセット、マージンプロパティ](#anchor-size_関数値を受け入れるプロパティ)の値内で使用される場合にのみ有効です。

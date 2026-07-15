@@ -277,7 +277,7 @@ WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
 
 让我们假设我们已经把一个合适的字符串字节写入到了内存中；那么，我们该如何把那个字符串传递给 JavaScript 呢？
 
-关键在于 JavaScript 能够通过 {{jsxref("WebAssembly.Memory()")}} 接口创建 WebAssembly 线性内存实例，并且能够通过相关的实例方法获取已经存在的内存实例（当前每一个模块实例只能有一个内存实例）。内存实例拥有一个 [buffer](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) 获取器，它返回一个指向整个线性内存的 ArrayBuffer。
+关键在于 JavaScript 能够通过 [`WebAssembly.Memory()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory) 接口创建 WebAssembly 线性内存实例，并且能够通过相关的实例方法获取已经存在的内存实例（当前每一个模块实例只能有一个内存实例）。内存实例拥有一个 [buffer](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) 获取器，它返回一个指向整个线性内存的 ArrayBuffer。
 
 内存实例也能够增长。举例来说，在 JavaScript 中可以调用 [Memory.grow()](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) 方法。由于 ArrayBuffer 不能改变大小，所以，当增长产生的时候，当前的 ArrayBuffer 会被移除，并且一个新的 ArrayBuffer 会被创建并指向新的、更大的内存。这意味着为了向 JavaScript 传递一个字符串，我们所需要做的就是把字符串在线性内存中的偏移量，以及表示其长度的方法传递出去。
 

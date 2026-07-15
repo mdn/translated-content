@@ -119,8 +119,7 @@ Le fichier `index.html` et les fichiers `style.css` sont déjà complets&nbsp;:
     <button id="reload">Recharger</button>
 
     <textarea id="user-input" rows="5" cols="62">
-Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"</textarea
-    >
+Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"</textarea>
 
     <div id="output"></div>
   </body>

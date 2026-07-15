@@ -22,7 +22,7 @@ var myResponse = new Response(body, init);
     - {{domxref("FormData")}}
     - {{domxref("ReadableStream")}}
     - {{domxref("URLSearchParams")}}
-    - {{domxref("USVString")}}
+    - {{jsxref("String")}}
 
 - _init_ {{optional_inline}}
   - : An options object containing any custom settings that you want to apply to the response, or an empty object (which is the default value). The possible options are:

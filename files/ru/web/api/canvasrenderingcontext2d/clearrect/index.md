@@ -71,8 +71,7 @@ ctx.lineTo(120,120);
 ctx.closePath(); // рисует последнюю линию треугольника
 ctx.stroke();
 
-ctx.clearRect(10, 10, 100, 100);</textarea
->
+ctx.clearRect(10, 10, 100, 100);</textarea>
 ```
 
 ```js hidden

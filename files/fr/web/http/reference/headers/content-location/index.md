@@ -41,7 +41,7 @@ Content-Location: <url>
 
 ### Requêter des données auprès d'un serveur dans différents formats
 
-Supposons qu'une API de site puisse retourner des données au format {{Glossary("JSON")}}, {{Glossary("XML")}} ou au format [CSV <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Comma-separated_values). Si l'URL d'un document particulier est `https://exemple.com/documents/toto`, le site pourrait retourner différentes URLs pour `Content-Location` selon l'en-tête {{HTTPHeader("Accept")}} de la requête&nbsp;:
+Supposons qu'une API de site puisse retourner des données au format {{Glossary("JSON")}}, {{Glossary("XML")}} ou au format [CSV <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Comma-separated_values). Si l'URL d'un document particulier est `https://example.com/documents/toto`, le site pourrait retourner différentes URLs pour `Content-Location` selon l'en-tête {{HTTPHeader("Accept")}} de la requête&nbsp;:
 
 | En-tête de requête                    | En-tête de réponse                       |
 | ------------------------------------- | ---------------------------------------- |

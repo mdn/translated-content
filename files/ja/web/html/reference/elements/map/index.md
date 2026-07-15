@@ -1,12 +1,10 @@
 ---
-title: "<map>: イメージマップ要素"
+title: HTML `<map>` イメージマップ要素
+short-title: <map>
 slug: Web/HTML/Reference/Elements/map
-original_slug: Web/HTML/Element/map
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<map>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("area")}} 要素とともにイメージマップ（クリック可能なリンク領域）を定義するために使用します。
 
@@ -92,18 +90,25 @@ img {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>、
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>、
-        知覚可能コンテンツ
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >, 知覚可能コンテンツ
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        すべての<a href="/ja/docs/Web/HTML/Guides/Content_categories#透過的コンテンツ">透過的</a>要素
+        すべての<a href="/ja/docs/Web/HTML/Guides/Content_categories#透過的コンテンツ"
+          >透過的</a
+        >要素
       </td>
     </tr>
     <tr>
@@ -113,13 +118,17 @@ img {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
       </td>
     </tr>
     <tr>

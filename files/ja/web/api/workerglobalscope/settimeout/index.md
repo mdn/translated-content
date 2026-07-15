@@ -26,7 +26,7 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 ### 引数
 
 - `functionRef`
-  - : タイマーが満了した後に実行する{{jsxref("function", "関数")}}。
+  - : タイマーが満了した後に実行する{{jsxref("Operators/function", "関数")}}。
 - `code`
   - : 関数の代わりに文字列を含める代替構文も許容されており、タイマーが満了したときに文字列をコンパイルして実行します。 {{jsxref("Global_Objects/eval", "eval()")}} の使用にリスクがあるのと同じ理由で、この構文は**推奨しません**。
 - `delay` {{optional_inline}}

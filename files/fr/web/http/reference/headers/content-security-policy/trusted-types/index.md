@@ -11,7 +11,7 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-typ
 Cela empêche le code du site web de créer des règles inattendues, ce qui facilite l'audit du code de types de confiance (`createPolicy()` générera une exception si un nom qui n'est pas répertorié dans `trusted-types` est passé).
 
 > [!NOTE]
-> La directive {{CSP("require-trusted-types-for")}} doit être définie pour activer l'application des types de confiance, et le mot-clé [`trusted-types-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) est utilisé pour assouplir les restrictions sur {{JSxRef("eval()")}} et {{JSxRef("Function()")}} lorsque les types de confiance sont activés.
+> La directive {{CSP("require-trusted-types-for")}} doit être définie pour activer l'application des types de confiance, et le mot-clé [`trusted-types-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) est utilisé pour assouplir les restrictions sur {{JSxRef("Global_Objects/eval", "eval()")}} et {{JSxRef("Function()")}} lorsque les types de confiance sont activés.
 >
 > Voir [l'API Trusted Types](/fr/docs/Web/API/Trusted_Types_API) pour plus d'informations.
 

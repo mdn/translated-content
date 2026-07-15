@@ -1,34 +1,39 @@
 ---
-title: "<rtc>: ルビテキストコンテナー要素"
+title: HTML `<rtc>` ルビテキストコンテナー要素
+short-title: <rtc>
 slug: Web/HTML/Reference/Elements/rtc
-original_slug: Web/HTML/Element/rtc
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
-**`<rtc>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("ruby")}} 要素内で使用する {{HTMLElement("rb")}} 要素にルビで与える文字列の、意味を表す注釈を包含します。{{HTMLElement("rb")}} 要素は発音の注釈 ({{HTMLElement("rt")}}) と意味の注釈 ({{HTMLElement("rtc")}}) の両方を持つことができます。
+**`<rtc>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("ruby")}} 要素内で使用する {{HTMLElement("rb")}} 要素にルビで与える文字列の、意味を表す注釈を包含します。{{HTMLElement("rb")}} 要素は発音の注釈 ({{HTMLElement("rt")}}) と意味の注釈 (`<rtc>`) の両方を持つことができます。
 
 {{InteractiveExample("HTML デモ: &lt;rtc&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<ruby xml:lang="zh-Hant" style="ruby-position: under;">
-    <rbc>
-        <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
-        <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
-        <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
-        <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
-    </rbc>
-    <rtc xml:lang="en" style="ruby-position: over;">
-        <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
-    </rtc>
+<ruby lang="zh-Hant">
+  <rbc>
+    <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
+    <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
+    <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
+    <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
+  </rbc>
+  <rtc lang="en">
+    <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
+  </rtc>
 </ruby>
 ```
 
 ```css interactive-example
 ruby {
   font-size: 2em;
+  ruby-position: under;
+}
+
+rtc {
+  ruby-position: over;
 }
 ```
 
@@ -41,11 +46,9 @@ ruby {
 ```html
 <div class="info">
   <ruby>
-    <rtc>
-      <rb>旧</rb><rt>jiù</rt>
-      <rb>金</rb><rt>jīn</rt>
-      <rb>山</rb><rt>shān</rt>
-    </rtc>
+    <rbc>
+      <rb>旧</rb><rt>jiù</rt> <rb>金</rb><rt>jīn</rt> <rb>山</rb><rt>shān</rt>
+    </rbc>
     <rtc>San Francisco</rtc>
   </ruby>
 </div>
@@ -68,7 +71,9 @@ ruby {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>なし</td>
     </tr>
@@ -83,9 +88,7 @@ ruby {
     <tr>
       <th scope="row">タグの省略</th>
       <td>
-        直後に {{HTMLElement("rb")}}, {{HTMLElement("rtc")}},
-        {{HTMLElement("rt")}}
-        要素の開始タグがある、または親要素の終了タグがある場合は、この要素の終了タグを省略可能。
+        直後に {{HTMLElement("rb")}}, <code>&lt;rtc&gt;</code>, {{HTMLElement("rt")}} 要素の開始タグがある、または親要素の終了タグがある場合は、この要素の終了タグを省略可能。
       </td>
     </tr>
     <tr>
@@ -117,3 +120,4 @@ ruby {
 - {{HTMLElement("rp")}}
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rt")}}
+- [CSS ルビレイアウト](/ja/docs/Web/CSS/Guides/Ruby_layout)モジュール

@@ -17,20 +17,20 @@ Comme son nom l'indique, `alertdialog` est un mélange des rôles [`dialog`](/fr
 > [!NOTE]
 > Le rôle `alertdialog` ne doit être utilisé que pour les messages d'alerte qui comportent des contrôles interactifs associés. Si une boîte de dialogue d'alerte ne contient que du contenu statique et aucun contrôle interactif, utilisez [`alert`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) à la place.
 
-Étant donné qu'il s'agit d'un type de boîte de dialogue, les états, propriétés et exigences de focus clavier du rôle [`dialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) s'appliquent également au rôle `alertdialog`.
+Étant donné qu'il s'agit d'un type de boîte de dialogue, les états, propriétés et exigences de sélection clavier du rôle [`dialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) s'appliquent également au rôle `alertdialog`.
 
-En raison de sa nature urgente, il interrompant le flux de travail de l'utilisateur·ice, les boîtes de dialogue d'alerte doivent être [modales](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal).
+En raison de sa nature urgente, interrompant le flux de travail de l'utilisateur·ice, les boîtes de dialogue d'alerte doivent être [modales](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal).
 
-La boîte de dialogue d'alerte doit comporter au moins un contrôle focusable — tel que Confirm, Close et Cancel — et le focus doit être déplacé vers ce contrôle lorsque la boîte de dialogue d'alerte apparaît. Les boîtes de dialogue d'alerte peuvent comporter des contrôles interactifs supplémentaires tels que des champs de texte et des cases à cocher.
+La boîte de dialogue d'alerte doit comporter au moins un contrôle sélectionnable — tel que Confirm, Close et Cancel — et la sélection doit être déplacée vers ce contrôle lorsque la boîte de dialogue d'alerte apparaît. Les boîtes de dialogue d'alerte peuvent comporter des contrôles interactifs supplémentaires tels que des champs de texte et des cases à cocher.
 
 Le rôle `alertdialog` ne doit pas être utilisé comme un substitut à d'autres boîtes de dialogue, y compris les boîtes de dialogue d'alerte sans confirmation requise ([`Window.alert()`](/fr/docs/Web/API/Window/alert)) et les invites ([`Window.prompt()`](/fr/docs/Web/API/Window/prompt)).
 
 Ajouter `role="alertdialog"` seul ne suffit pas à rendre une boîte de dialogue d'alerte accessible. Il faut également :
 
 - La boîte de dialogue d'alerte doit être correctement étiquetée
-- Le focus clavier doit être géré correctement
+- La sélection clavier doit être gérée correctement
 
-La boîte de dialogue d'alerte doit avoir un nom accessible, défini avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). Le texte de la boîte de dialogue d'alerte doit comporter une {{glossary("accessible description")}} utilisant [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
+La boîte de dialogue d'alerte doit avoir un nom accessible, défini avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). Le texte de la boîte de dialogue d'alerte doit comporter une {{Glossary("accessible description", "description accessible")}} utilisant [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 ### Rôles, états et propriétés WAI‑ARIA associés
 
@@ -101,7 +101,7 @@ document.getElementById("confirm-btn").addEventListener("click", (event) => {
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('dialog')}}
+- L'élément HTML {{HTMLElement("dialog")}}
 - [ARIA&nbsp;: rôle `dialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
 - [ARIA&nbsp;: rôle `alert`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
 - L'attribut ARIA [`aria-modal`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
