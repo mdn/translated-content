@@ -1,7 +1,6 @@
 ---
 title: 連合資格情報管理 (FedCM) API
 slug: Web/API/FedCM_API
-page-type: web-api-overview
 l10n:
   sourceCommit: 6722199b4d63fad3c33db1146af380fc98b6c202
 ---
