@@ -1,9 +1,9 @@
 ---
-title: border-bottom-style
+title: CSS `border-bottom-style` プロパティ
+short-title: border-bottom-style
 slug: Web/CSS/Reference/Properties/border-bottom-style
-original_slug: Web/CSS/border-bottom-style
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`border-bottom-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
@@ -40,7 +40,7 @@ border-bottom-style: inset;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これはボックスと、それを囲む境界線です。
   </div>
 </section>
 ```

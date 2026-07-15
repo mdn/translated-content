@@ -23,7 +23,7 @@ l10n:
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigInt64Array.BYTES_PER_ELEMENT")}}
   - : 요소 크기를 숫자로 반환합니다. `BigInt64Array`의 경우 `8` 입니다.
-- {{jsxref("TypedArray.name", "BigInt64Array.name")}}
+- {{jsxref("Function.name", "BigInt64Array.name")}}
   - : `BigInt64Array` 타입의 경우 `"BigInt64Array"`입니다.
 
 ## 정적 메서드

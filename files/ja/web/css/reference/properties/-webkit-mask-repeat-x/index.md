@@ -1,12 +1,16 @@
 ---
-title: -webkit-mask-repeat-x
+title: CSS `-webkit-mask-repeat-x` プロパティ
+short-title: -webkit-mask-repeat-x
 slug: Web/CSS/Reference/Properties/-webkit-mask-repeat-x
-original_slug: Web/CSS/-webkit-mask-repeat-x
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_header}}
 
 `-webkit-mask-repeat-x` プロパティは、マスク画像を水平方向に反復 (タイル) するかどうか、どのように反復するかを指定します。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -21,10 +25,10 @@ original_slug: Web/CSS/-webkit-mask-repeat-x
 /* グローバル値 */
 -webkit-mask-repeat-x: inherit;
 -webkit-mask-repeat-x: initial;
+-webkit-mask-repeat-x: revert;
+-webkit-mask-repeat-x: revert-layer;
 -webkit-mask-repeat-x: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -45,19 +49,19 @@ original_slug: Web/CSS/-webkit-mask-repeat-x
 
 ## 形式文法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`-webkit-mask-repeat-x = [ repeat | no-repeat | space | round ]#`)}}
 
 ## 例
 
 ### 反復あり・反復なしのマスク画像の使用
 
 ```css
-.exampleone {
+.example-one {
   -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: repeat;
 }
 
-.exampletwo {
+.example-two {
   -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: no-repeat;
 }
@@ -68,7 +72,7 @@ original_slug: Web/CSS/-webkit-mask-repeat-x
 マスク画像ごとに異なる `<repeat-style>` の値を、カンマで区切って指定することができます。
 
 ```css
-.examplethree {
+.example-three {
   -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-x: repeat, space;
 }
@@ -86,4 +90,4 @@ original_slug: Web/CSS/-webkit-mask-repeat-x
 
 ## 関連情報
 
-{{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-y")}}
+{{cssxref("mask-repeat", "-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-y")}}

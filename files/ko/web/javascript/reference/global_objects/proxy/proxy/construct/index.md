@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 
 {{JSRef}}
 
-**`handler.construct()`** 메서드는 {{jsxref("Operators/new", "new")}} 연산자에 대한 트랩입니다. 결과 Proxy 객체에서 new 연산이 유효하려면 프록시를 초기화하는 데 사용되는 대상 객체 자체에 내부 `[[Construct]]` 메서드가 있어야 합니다(즉, `new target`이 유효해야 함).
+**`handler.construct()`** 메서드는 {{jsxref("new")}} 연산자에 대한 트랩입니다. 결과 Proxy 객체에서 new 연산이 유효하려면 프록시를 초기화하는 데 사용되는 대상 객체 자체에 내부 `[[Construct]]` 메서드가 있어야 합니다(즉, `new target`이 유효해야 함).
 
 {{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
 
@@ -54,7 +54,7 @@ new Proxy(target, {
 
 ## 설명
 
-**`handler.construct()`** 메서드는 {{jsxref("Operators/new", "new")}} 연산자에 대한 트랩입니다.
+**`handler.construct()`** 메서드는 {{jsxref("new")}} 연산자에 대한 트랩입니다.
 
 ### 가로채기
 
@@ -73,7 +73,7 @@ new Proxy(target, {
 
 ### new 연산자 트랩하기
 
-다음 코드는 {{jsxref("Operators/new", "new")}} 연산자를 트랩합니다.
+다음 코드는 {{jsxref("new")}} 연산자를 트랩합니다.
 
 ```js
 const p = new Proxy(function () {}, {
@@ -99,7 +99,7 @@ const p = new Proxy(function () {}, {
 new p(); // TypeError 예외 발생
 ```
 
-다음 코드는 프록시를 부적절하게 초기화합니다. 프록시 초기화의 `target` 자체는 {{jsxref("Operators/new", "new")}} 연산에 대한 유효한 생성자여야 합니다.
+다음 코드는 프록시를 부적절하게 초기화합니다. 프록시 초기화의 `target` 자체는 {{jsxref("new")}} 연산에 대한 유효한 생성자여야 합니다.
 
 ```js example-bad
 const p = new Proxy(
@@ -126,5 +126,5 @@ new p(); // TypeError is thrown, "p" is not a constructor
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` 생성자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/new", "new")}} 연산자.
+- {{jsxref("new")}} 연산자.
 - {{jsxref("Reflect.construct()")}}

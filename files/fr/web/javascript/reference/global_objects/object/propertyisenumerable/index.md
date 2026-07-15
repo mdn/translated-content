@@ -42,7 +42,7 @@ Un booléen qui indique si la propriété passée en argument est énumérable.
 
 ## Description
 
-Chaque objet possède une méthode `propertyIsEnumerable`. Cette méthode est utilisée afin de savoir s'il est possible d'énumérer la propriété donnée au moyen d'une boucle {{jsxref("Instructions/for...in", "for...in")}}. Cela concerne uniquement les propriétés propres à l'objet (celles qui ne sont pas héritées via la chaîne de prototypes). Si un objet ne possède pas la propriété, cette méthode renverra `false`.
+Chaque objet possède une méthode `propertyIsEnumerable`. Cette méthode est utilisée afin de savoir s'il est possible d'énumérer la propriété donnée au moyen d'une boucle {{jsxref("Statements/for...in", "for...in")}}. Cela concerne uniquement les propriétés propres à l'objet (celles qui ne sont pas héritées via la chaîne de prototypes). Si un objet ne possède pas la propriété, cette méthode renverra `false`.
 
 ## Exemples
 
@@ -124,6 +124,6 @@ o.propertyIsEnumerable("premièreMéthode"); // renvoie false
 ## Voir aussi
 
 - [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Instructions/for...in", "for...in")}}
+- {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

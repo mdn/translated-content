@@ -47,9 +47,9 @@ a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 function handleNewIceCandidate(candidateSDP) {
   var candidateObj = new RTCIceCandidate(candidateSDP);
 
-  myPeerConnection.addIceCandidate(candidateObj).catch({
-    /* handle the error thrown by addIceCandidate() */
-  });
+  myPeerConnection
+    .addIceCandidate(candidateObj)
+    .catch({/* handle the error thrown by addIceCandidate() */});
 }
 ```
 

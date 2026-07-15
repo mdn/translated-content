@@ -99,7 +99,7 @@ function handleEvent(event) {
 
 イベントハンドラーが発行された要素を参照することはよくあることで、似たような要素の設定に汎用ハンドラーを使用する場合などに便利です。
 
-ハンドラー関数を `addEventListener()` を使用して要素に装着する場合、ハンドラー内の {{jsxref("Operators/this","this")}} の値は要素を参照します。ハンドラーに渡すイベント引数の `currentTarget` プロパティの値と同じになります。
+ハンドラー関数を `addEventListener()` を使用して要素に装着する場合、ハンドラー内の {{jsxref("this")}} の値は要素を参照します。ハンドラーに渡すイベント引数の `currentTarget` プロパティの値と同じになります。
 
 ```js
 my_element.addEventListener("click", function (e) {

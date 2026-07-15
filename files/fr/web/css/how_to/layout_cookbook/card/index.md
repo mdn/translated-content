@@ -2,7 +2,7 @@
 title: Carte
 slug: Web/CSS/How_to/Layout_cookbook/Card
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Ce modèle est une liste de composants «&nbsp;carte&nbsp;» (<i lang="en">card</i> en anglais) avec des pieds de page optionnels. Une carte contient un titre, une image, une description ou autre contenu, ainsi qu'une attribution ou un pied de page. Les cartes sont généralement affichées au sein d'un groupe ou d'une collection.
@@ -135,7 +135,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample("card-example", "", "950px")}}
+{{EmbedLiveSample("card-example", "", 950)}}
 
 ## Choix effectués
 
@@ -152,7 +152,7 @@ Chaque carte est agencée en utilisant la [mise en page CSS Grid](/fr/docs/Web/C
 
 Chaque `card` contient un HTML {{HTMLElement("header")}}, une {{HTMLElement("img")}} et un {{HTMLElement("div")}}, dans cet ordre, certaines contenant également un {{HTMLElement("footer")}}.
 
-La piste du titre est réglée sur {{CSSxRef("max-content")}}, ce qui l'empêche de s'étendre. La piste de l'image est fixée à 200 pixels de hauteur. La troisième piste, où se trouve le contenu, est réglée sur `1fr`. Cela signifie qu'elle occupera tout l'espace supplémentaire.
+La piste du titre est réglée sur {{CSSxRef("max-content")}}, ce qui l'empêche de s'étendre. La piste de l'image est fixée à 200 pixels de hauteur. La troisième piste, où se trouve le contenu, est réglée sur `1fr`. Cela signifie qu'elle occupe tout l'espace supplémentaire.
 
 Tout enfant au‑delà des trois ayant des tailles explicitement définies crée des lignes dans la grille implicite, lesquelles s'adaptent au contenu. Celles‑ci sont dimensionnées automatiquement par défaut. Si une carte contient un pied de page, celui‑ci est dimensionné automatiquement. Le pied de page, quand il est présent, reste collé au bas de la grille. Le pied de page est redimensionné pour tenir son contenu&nbsp;; la `<div>` de contenu s'étire ensuite pour occuper l'espace additionnel.
 

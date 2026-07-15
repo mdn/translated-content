@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 
 ## Сводка
 
-Свойство **`Intl.Collator.prototype.compare`** возвращает функцию-геттер, сравнивающую две строки согласно порядку сортировки соответствующего объекта {{jsxref("Global_Objects/Collator", "Collator")}}.
+Свойство **`Intl.Collator.prototype.compare`** возвращает функцию-геттер, сравнивающую две строки согласно порядку сортировки соответствующего объекта {{jsxref("Intl/Collator", "Collator")}}.
 
 ## Синтаксис
 
@@ -24,13 +24,13 @@ collator.compare(string1, string2)
 
 ## Описание
 
-Функция, возвращённая геттером `compare`, возвращает число, указывающее, как строки `string1` и `string2` сравниваются друг с другом в соответствии с порядком сортировки объекта {{jsxref("Global_Objects/Collator", "Collator")}}: отрицательное значение, если строка `string1` предшествует строке `string2`; положительное значение, если строка `string1` следует за строкой `string2`; 0, если строки считаются равными.
+Функция, возвращённая геттером `compare`, возвращает число, указывающее, как строки `string1` и `string2` сравниваются друг с другом в соответствии с порядком сортировки объекта {{jsxref("Intl/Collator", "Collator")}}: отрицательное значение, если строка `string1` предшествует строке `string2`; положительное значение, если строка `string1` следует за строкой `string2`; 0, если строки считаются равными.
 
 ## Примеры
 
 ### Пример: использование функции `compare` для сортировки массива
 
-Использование функции, возвращённой геттером `compare`, для сортировки массивов. Обратите внимание, что функция привязана к объекту {{jsxref("Global_Objects/Collator", "Collator")}}, из которого она была получена, так что её можно передавать в {{jsxref("Array.prototype.sort()")}} напрямую.
+Использование функции, возвращённой геттером `compare`, для сортировки массивов. Обратите внимание, что функция привязана к объекту {{jsxref("Intl/Collator", "Collator")}}, из которого она была получена, так что её можно передавать в {{jsxref("Array.prototype.sort()")}} напрямую.
 
 ```js
 var a = ["Offenbach", "Österreich", "Odenwald"];
@@ -68,5 +68,5 @@ console.log(matches.join(", "));
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}
 - {{jsxref("String.prototype.localeCompare()")}}

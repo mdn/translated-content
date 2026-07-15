@@ -48,14 +48,14 @@ Link: <uri-reference>; param1=value1; param2="value2"
 ### Paramètres
 
 L'en-tête de liaison contient des paramètres, qui sont séparés avec des `;` et sont équivalents aux attributs de l'élément HTML {{HTMLElement("link")}}.
-Les valeurs peuvent être entre guillemets ou non, selon les [règles des composants de valeur de champ <sup>(angl.)</sup>](https://www.rfc-editor.org/rfc/rfc7230.html#section-3.2.6), donc `x=y` est équivalent à `x="y"`.
+Les valeurs peuvent être entre guillemets ou non, selon les [règles des composants de valeur de champ <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc7230.html#section-3.2.6), donc `x=y` est équivalent à `x="y"`.
 
 ## Exemples
 
 L'URI (absolue ou relative) doit être déclarée entre `<` et `>`&nbsp;:
 
 ```http example-good
-Link: <https://exemple.com>; rel="preconnect"
+Link: <https://example.com>; rel="preconnect"
 ```
 
 ```http example-bad
@@ -67,11 +67,11 @@ Link: https://mauvais.exemple; rel="preconnect"
 L'URI (absolue ou relative) doit {{Glossary("Percent-encoding", "être encodée en pourcentage")}} pour les codes de caractères supérieurs à 255&nbsp;:
 
 ```http example-good
-Link: <https://exemple.com/%E8%8B%97%E6%9D%A1>; rel="preconnect"
+Link: <https://example.com/%E8%8B%97%E6%9D%A1>; rel="preconnect"
 ```
 
 ```http example-bad
-Link: <https://exemple.com/苗条>; rel="preconnect"
+Link: <https://example.com/苗条>; rel="preconnect"
 ```
 
 ### Déclarer plusieurs liens
@@ -79,7 +79,7 @@ Link: <https://exemple.com/苗条>; rel="preconnect"
 Il est possible de définir plusieurs liens, en les séparant par des virgules&nbsp;:
 
 ```http
-Link: <https://un.exemple.com>; rel="preconnect", <https://deux.exemple.com>; rel="preconnect", <https://trois.exemple.com>; rel="preconnect"
+Link: <https://un.example.com>; rel="preconnect", <https://deux.example.com>; rel="preconnect", <https://trois.example.com>; rel="preconnect"
 ```
 
 ### Pagination avec des liens
@@ -87,7 +87,7 @@ Link: <https://un.exemple.com>; rel="preconnect", <https://deux.exemple.com>; re
 L'en-tête `Link` peut fournir des informations de pagination à un client, ce qui est couramment utilisé pour accéder à des ressources de manière programmatique&nbsp;:
 
 ```http
-Link: <https://api.exemple.com/issues?page=2>; rel="prev", <https://api.exemple.com/issues?page=4>; rel="next", <https://api.exemple.com/issues?page=10>; rel="last", <https://api.exemple.com/issues?page=1>; rel="first"
+Link: <https://api.example.com/issues?page=2>; rel="prev", <https://api.example.com/issues?page=4>; rel="next", <https://api.example.com/issues?page=10>; rel="last", <https://api.example.com/issues?page=1>; rel="first"
 ```
 
 Dans ce cas, `rel="prev"` et `rel="next"` indiquent les relations de lien pour les pages précédente et suivante, et il y a les paramètres `rel="last"` et `rel="first"` qui fournissent les premières et dernières pages des résultats de recherche.

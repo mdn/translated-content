@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`defer`** de l'interface {{DOMxRef("HTMLScriptElement")}} est une valeur booléenne qui contrôle la façon dont le script est exécuté. Pour les scripts classiques, si la propriété `defer` vaut `true`, le script externe sera exécuté après l'analyse du document, mais avant le déclenchement de l'événement {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}. Pour les [scripts modules](/fr/docs/Web/JavaScript/Guide/Modules), la propriété `defer` n'a aucun effet.
+La propriété **`defer`** de l'interface {{DOMxRef("HTMLScriptElement")}} est une valeur booléenne qui contrôle la façon dont le script est exécuté. Pour les scripts classiques, si la propriété `defer` vaut `true`, le script externe sera exécuté après l'analyse du document, mais avant le déclenchement de l'évènement {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}. Pour les [scripts modules](/fr/docs/Web/JavaScript/Guide/Modules), la propriété `defer` n'a aucun effet.
 
 Elle reflète l'attribut `defer` de l'élément {{HTMLElement("script")}}.
 

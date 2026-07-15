@@ -3,7 +3,7 @@ title: Propriété CSS `animation-composition`
 short-title: animation-composition
 slug: Web/CSS/Reference/Properties/animation-composition
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 68bff8f2a51944e80394307c8e5c2879c167b126
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-composition`** définit une {{Glossary("Composite_operation", "opération composite")}} à utiliser lorsque plusieurs animations touchent simultanément la même propriété.
@@ -30,7 +30,7 @@ animation-composition: unset;
 ```
 
 > [!NOTE]
-> Lorsqu'on indique plusieurs valeurs, séparées par des virgules, à une propriété `animation-*`, celles-ci seront appliquées aux animations selon leur ordre d'apparition dans {{CSSxRef("animation-name")}}. Si le nombre d'animations et de compositions est différent, les valeurs de `animation-composition` seront réutilisées en bouclant depuis le début, jusqu'à ce que toutes les animations aient reçue une valeur `animation-composition`. Pour plus d'informations, voir [définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
+> Lorsqu'on indique plusieurs valeurs, séparées par des virgules, à une propriété `animation-*`, celles-ci sont appliquées aux animations selon leur ordre d'apparition dans {{CSSxRef("animation-name")}}. Si le nombre d'animations et de compositions est différent, les valeurs de `animation-composition` sont réutilisées en bouclant depuis le début, jusqu'à ce que toutes les animations aient reçue une valeur `animation-composition`. Pour plus d'informations, voir [définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
 
 ### Valeurs
 
@@ -66,9 +66,9 @@ Par exemple, dans le fragment CSS qui suit, `blur(5px)` est la valeur sous-jacen
 
 Prenons l'hypothèse d'autres valeurs que celle utilisée avant pour `animation-composition` afin d'illustrer l'impact final&nbsp;:
 
-- Avec `animation-composition: replace;`, `blur(10px)` aurait remplacé `blur(5px)` pour l'image-clé à `0%`. C'est le comportement par défaut de la propriété.
-- Avec `animation-composition: add;`, l'effet de la valeur composite pour l'image-clé à `0%` aurait été `blur(5px) blur(10px)`.
-- Avec `animation-composition: accumulate`, l'effet de la valeur composite pour l'image-clé à `0%` aurait été `blur(15px)`.
+- Avec `animation-composition: replace;`, `blur(10px)` a remplacé `blur(5px)` pour l'image-clé à `0%`. C'est le comportement par défaut de la propriété.
+- Avec `animation-composition: add;`, l'effet de la valeur composite pour l'image-clé à `0%` a été `blur(5px) blur(10px)`.
+- Avec `animation-composition: accumulate`, l'effet de la valeur composite pour l'image-clé à `0%` a été `blur(15px)`.
 
 > [!NOTE]
 > Une opération composite peut également être indiquée dans une image-clé donnée. Dans ce cas, l'opération composite indiquée est utilisée pour chaque propriété, d'abord pour celles de l'image-clé courante, puis sur chaque propriété de l'image-clé suivante.
@@ -90,34 +90,39 @@ L'exemple qui suit illustre les effets des différentes valeurs de `animation-co
 #### HTML
 
 ```html
-<div class="container">
+<div class="conteneur">
   <code>replace</code>
-  <div id="replace" class="target"></div>
+  <div id="remplacer" class="cible"></div>
 </div>
-<div class="container">
+<div class="conteneur">
   <code>add</code>
-  <div id="add" class="target"></div>
+  <div id="ajouter" class="cible"></div>
 </div>
-<div class="container">
+<div class="conteneur">
   <code>accumulate</code>
-  <div id="accumulate" class="target"></div>
+  <div id="accumuler" class="cible"></div>
 </div>
 ```
 
 #### CSS
 
-Ici, la valeur sous-jacente est `translateX(50px) rotate(45deg)`.
-
 ```css hidden
-.container {
-  width: 230px;
+body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.conteneur {
+  flex: 1;
+  min-width: 200px;
   height: 200px;
-  background: cyan;
+  background: lightblue;
   display: inline-block;
   text-align: center;
 }
 
-.target {
+.cible {
   width: 20px;
   height: 50px;
   background: green;
@@ -128,32 +133,25 @@ Ici, la valeur sous-jacente est `translateX(50px) rotate(45deg)`.
 
 ```css
 @keyframes slide {
-  20%,
-  40% {
-    transform: translateX(100px);
-    background: yellow;
+  50% {
+    transform: translateY(30px);
   }
-  80%,
   100% {
     transform: translateX(150px);
-    background: orange;
   }
 }
 
-.target {
+.cible {
   transform: translateX(30px) rotate(45deg);
   animation: slide 5s linear infinite;
 }
-.target:hover {
-  animation-play-state: paused;
-}
-#replace {
+#remplacer {
   animation-composition: replace;
 }
-#add {
+#ajouter {
   animation-composition: add;
 }
-#accumulate {
+#accumuler {
   animation-composition: accumulate;
 }
 ```
@@ -162,9 +160,19 @@ Ici, la valeur sous-jacente est `translateX(50px) rotate(45deg)`.
 
 {{EmbedLiveSample("Comprendre les valeurs de `animation-composition`", "100%", 250)}}
 
-- Avec `replace`, la valeur d'effet finale pour la propriété `transform` pour l'image-clé `20%, 40%` est `translateX(100px)` (qui remplace complètement la valeur sous-jacente `translateX(50px) rotate(45deg)`). Dans ce cas, l'élément pivote de `45deg` vers `0deg`, car l'animation part de la valeur par défaut pour l'élément jusqu'à la valeur d'absence de rotation, comme défini à la progression de 20%. Il s'agit du comportement par défaut.
-- Avec `add`, la valeur d'effet finale pour la propriété `transform` pour l'image-clé `20%, 40%` est `translateX(50px) rotate(45deg)`, suivie par `translateX(100px)`. L'élément est donc déplacé de `50px` vers la droite, tourné de `45deg`, puis translaté de `100px` supplémentaires le long de l'axe X nouvellement orienté.
-- Avec `accumulate`, la valeur d'effet finale pour l'image-clé `20%, 40%` est `translateX(150px) rotate(45deg)`. Cela signifie que les deux translations sur l'axe X, avec les valeurs `50px` et `100px`, sont combinées.
+La valeur sous-jacente de la propriété `transform` est, dans tous les cas, `translateX(30px) rotate(45deg)`. Les effets des différentes valeurs de `animation-composition` sont les suivants&nbsp;:
+
+- Avec `replace`, la propriété `transform` de chaque image clé remplace entièrement la propriété `transform` sous-jacente définie sur l'élément animé. La valeur finale de la propriété `transform` à l'image clé `50%` est `translateY(30px)` (sans `rotate` ni `translateX`)&nbsp;; à l'image clé `100%`, elle est `translateX(150px)` (sans `rotate` ni `translateY`).
+
+  La cible commence à `transform: translateX(30px) rotate(45deg)` et s'anime effectivement vers `transform: translateY(30px)`, puis vers `transform: translateX(150px)`.
+
+- Avec `add`, la valeur finale de l'effet à chaque image clé correspond à la valeur `transform` sous-jacente, suivie immédiatement de la valeur de l'effet.
+
+  Ainsi, la cible commence à `transform: translateX(30px) rotate(45deg)` et s'anime effectivement d'abord vers `transform: translateX(30px) rotate(45deg) translateY(30px)` (ce qui correspond à `30px` "vers le bas" sur l'axe Y tourné), puis vers `transform: translateX(30px) rotate(45deg) translateX(150px)`. Comme l'opération additive est relative au `transform` sous-jacent et non à l'image clé précédente, il n'y a pas de `translateY(30px)` à `100%`, plaçant l'élément à `150px` le long de l'axe X tourné par rapport à la position d'origine.
+
+- Avec `accumulate`, la valeur finale de l'effet est la combinaison du `transform` de l'image clé avec le `transform` sous-jacent. À `50%`, `translateY(30px)` se combine avec le `translateX(30px)` d'origine pour former une seule translation (`translate(30px, 30px)`). À `100%`, le `translateX(150px)` se combine avec le `translateX(30px)` d'origine pour créer `translateX(180px)`.
+
+  Ainsi, la cible commence à `transform: translateX(30px) rotate(45deg)` et s'anime effectivement d'abord vers `transform: translate(30px, 30px) rotate(45deg)`, puis vers `transform: translateX(180px) rotate(45deg)`.
 
 ## Spécifications
 

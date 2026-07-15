@@ -134,9 +134,9 @@ get notifier() {
 
 ### `get` и `defineProperty`
 
-Использование ключевого слова `get` и {{jsxref("Object.defineProperty()")}} даёт похожие результаты, но при использовании в {{jsxref("classes")}} между ними есть тонкая разница.
+Использование ключевого слова `get` и {{jsxref("Object.defineProperty()")}} даёт похожие результаты, но при использовании в {{jsxref("Classes")}} между ними есть тонкая разница.
 
-При использовании `get` свойство будет определено в прототипе объекта, в то время, как при использовании {{jsxref ("Object.defineProperty ()")}} свойство будет определено в экземпляре, к которому применяется.
+При использовании `get` свойство будет определено в прототипе объекта, в то время, как при использовании {{jsxref("Object.defineProperty()")}} свойство будет определено в экземпляре, к которому применяется.
 
 ```js
 class Example {
@@ -167,7 +167,7 @@ console.log(
 ## Смотрите также
 
 - [сеттер](/ru/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

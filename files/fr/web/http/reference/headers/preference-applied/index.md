@@ -3,12 +3,12 @@ title: En-tête Preference-Applied
 short-title: Preference-Applied
 slug: Web/HTTP/Reference/Headers/Preference-Applied
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: a516a9818e8cef06c626d436ee1d73fc6d87ec51
 ---
 
-L'en-tête HTTP **`Preference-Applied`** informe le·la client·e des préférences du·de la client·e, issues de l'en-tête de requête {{HTTPHeader("Prefer")}}, qui ont été appliquées par le serveur.
+L'en-tête HTTP **`Preference-Applied`** informe le client des préférences du client, issues de l'en-tête de requête {{HTTPHeader("Prefer")}}, qui ont été appliquées par le serveur.
 
-Le serveur indique si une préférence est appliquée à une réponse, dans le cas où cela serait ambigu pour le·la client·e.
+Le serveur indique si une préférence est appliquée à une réponse, dans le cas où cela serait ambigu pour le client.
 
 <table class="properties">
   <tbody>
@@ -41,15 +41,15 @@ Preference-Applied: <preference>
 
 ### Appliquer les préférences de fuseau horaire
 
-La requête suivante indique que le client·e préfère que les évènements soient représentés dans un certain fuseau horaire&nbsp;:
+La requête suivante indique que le client préfère que les évènements soient représentés dans un certain fuseau horaire&nbsp;:
 
 ```http
 GET /events HTTP/1.1
-Host: exemple.com
+Host: example.com
 Prefer: timezone=America/Los_Angeles
 ```
 
-Le serveur prend en charge la préférence et renvoie le contenu avec un en-tête `Preference-Applied`&nbsp;:
+Le serveur prend en charge la préférence et retourne le contenu avec un en-tête `Preference-Applied`&nbsp;:
 
 ```http
 HTTP/1.1 200 OK
@@ -70,5 +70,5 @@ Preference-Applied: timezone=America/Los_Angeles
 ## Voir aussi
 
 - L'en-tête {{HTTPHeader("Prefer")}}
-- [L'en-tête Prefer <sup>(angl.)</sup>](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#_Toc31358871) sur docs.oasis-open.org
-- [L'en-tête Prefer <sup>(angl.)</sup>](https://docs.postgrest.org/en/v12/references/api/preferences.html) sur docs.postgrest.org
+- [L'en-tête `Prefer` <sup>(angl.)</sup>](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#_Toc31358871) sur docs.oasis-open.org
+- [L'en-tête `Prefer` <sup>(angl.)</sup>](https://docs.postgrest.org/en/v12/references/api/preferences.html) sur docs.postgrest.org

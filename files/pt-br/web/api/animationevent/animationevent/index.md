@@ -20,13 +20,13 @@ animationEvent = new AnimationEvent(type, {animationName: aPropertyName,
 _O construtor `AnimationEvent()`_ _também herda argumentos do {{domxref("Event.Event", "Event()")}}._
 
 - `type`
-  - : Um {{domxref("DOMString")}} representando o nome do tipo de `AnimationEvent`. É caso sensitivo e pode ser: `'animationstart'`, `'animationend'`, ou `'animationiteration'`.
+  - : Um {{jsxref("String")}} representando o nome do tipo de `AnimationEvent`. É caso sensitivo e pode ser: `'animationstart'`, `'animationend'`, ou `'animationiteration'`.
 - `animationName` {{optional_inline}}
-  - : Um{{domxref("DOMString")}} contendo o valor do {{cssxref("animation-name")}} propriedade CSS associada com a transição. É por padrão `""`.
+  - : Um{{jsxref("String")}} contendo o valor do {{cssxref("animation-name")}} propriedade CSS associada com a transição. É por padrão `""`.
 - `elapsedTime` {{optional_inline}}
   - : Um ponto flutuante dando a quantidade de tempo que a animação esteve rodando, em segundos, quando o evento termina, excluindo qualquer tempo que ela passou pausada. Para um evento `"animationstart"`, `elapsedTime` é `0.0` a não ser que haja um valor negativo para [`animation-delay`](/pt-BR/docs/Web/CSS/Reference/Properties/animation-delay), nesse caso o evento terminará com `elapsedTime contendo` `(-1 *`_delay_`)`. É por padrão `0.0`.
 - `pseudoElement` {{optional_inline}}
-  - : É um `{{domxref("DOMString")}}`, começando com`"::"`, contendo o nome do [pseudo-element](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements) que a animação roda. Se a animação não roda em um pseudo-elementomas em um elemento, então temos um _string_ vazio `"" .`É por padrão `""`.
+  - : É um `{{jsxref("String")}}`, começando com`"::"`, contendo o nome do [pseudo-element](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements) que a animação roda. Se a animação não roda em um pseudo-elementomas em um elemento, então temos um _string_ vazio `"" .`É por padrão `""`.
 
 ## Especificações
 

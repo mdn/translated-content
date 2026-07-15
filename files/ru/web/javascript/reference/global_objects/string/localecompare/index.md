@@ -156,4 +156,4 @@ console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}

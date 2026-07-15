@@ -3,7 +3,7 @@ title: Des objets aux cadres intégrés — les technologies d'intégration
 short-title: Technologies d'intégration
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: f08b3d623c43e0256072013372ba393b5bd1a5a0
 ---
 
 Les développeur·euse·s pensent généralement à intégrer des médias tels que des images, des vidéos et de l'audio dans des pages web. Dans cet article, nous faisons un pas de côté en examinant certains éléments qui permettent d'intégrer une grande variété de types de contenus dans vos pages web&nbsp;: les éléments {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} et {{HTMLElement("object")}}. Les `<iframe>` servent à intégrer d'autres pages web, et les deux autres permettent d'intégrer des ressources externes telles que des fichiers PDF.
@@ -52,14 +52,14 @@ Dans cet article, nous allons plonger directement dans un exercice, afin de vous
 1. Tout d'abord, ouvrez le [Terrain d'essai MDN](/fr/play).
 2. Nous allons maintenant examiner comment YouTube permet d'intégrer une vidéo dans n'importe quelle page à l'aide d'un {{HTMLElement("iframe")}}.
    1. Allez sur YouTube et trouvez une vidéo qui vous plaît.
-   2. Sous la vidéo, vous trouverez un bouton _Partager_ — sélectionnez-le pour afficher les options de partage.
-   3. Sélectionnez le bouton _Intégrer_ et un code `<iframe>` vous sera fourni — copiez-le.
+   2. Sous la vidéo, vous pouvez trouver un bouton _Partager_ — sélectionnez-le pour afficher les options de partage.
+   3. Sélectionnez le bouton _Intégrer_ et un code `<iframe>` est fourni — copiez-le.
    4. Collez-le dans le panneau _HTML_ du Terrain d'essai, puis regardez le résultat dans la sortie.
 3. Pour aller plus loin, vous pouvez aussi essayer d'intégrer une [carte Google](https://www.google.com/maps/) dans le Terrain d'essai&nbsp;:
    1. Allez sur Google Maps et trouvez une carte qui vous plaît.
    2. Cliquez sur le «&nbsp;menu hamburger&nbsp;» (trois lignes horizontales) en haut à gauche de l'interface.
    3. Sélectionnez l'option _Partager ou intégrer la carte_.
-   4. Sélectionnez l'option _Intégrer une carte_, qui vous donnera un code `<iframe>` — copiez-le.
+   4. Sélectionnez l'option _Intégrer une carte_, qui vous donne un code `<iframe>` — copiez-le.
    5. Collez-le dans le panneau _HTML_ du Terrain d'essai, puis regardez le résultat dans la sortie.
 
 Si vous faites une erreur, vous pouvez toujours réinitialiser à l'aide du bouton _Réinitialiser_ dans le Terrain d'essai.
@@ -69,8 +69,8 @@ Si vous faites une erreur, vous pouvez toujours réinitialiser à l'aide du bout
 Alors, c'était facile et amusant, non&nbsp;? Les éléments {{HTMLElement("iframe")}} sont conçus pour vous permettre d'intégrer d'autres documents web dans le document courant. C'est idéal pour incorporer du contenu tiers sur votre site que vous ne contrôlez pas directement et que vous ne souhaitez pas avoir à développer vous-même — comme des vidéos de fournisseurs de vidéos en ligne, des systèmes de commentaires comme [Disqus <sup>(angl.)</sup>](https://disqus.com/), des cartes de fournisseurs de cartes en ligne, des bannières publicitaires, etc. Même les exemples éditables en direct que vous avez utilisés dans ce cours sont implémentés à l'aide de `<iframe>`.
 
 Avant d'utiliser les éléments `<iframe>`, il existe quelques préoccupations de sécurité à connaître.
-Supposons que vous vouliez inclure le glossaire MDN sur l'une de vos pages web à l'aide de l'élément {{HTMLElement("iframe")}}, vous pourriez essayer quelque chose comme l'exemple de code suivant.
-Si vous ajoutiez le code ci-dessous dans l'une de vos pages, vous pourriez être surpris·e de voir un message d'erreur au lieu de la page du glossaire&nbsp;:
+Supposons que vous vouliez inclure le glossaire MDN sur l'une de vos pages web à l'aide de l'élément {{HTMLElement("iframe")}}, vous pouvez essayer quelque chose comme l'exemple de code suivant.
+Si vous ajoutiez le code ci-dessous dans l'une de vos pages, vous pouvez être surpris·e de voir un message d'erreur au lieu de la page du glossaire&nbsp;:
 
 ```html
 <iframe
@@ -88,10 +88,10 @@ iframe {
 }
 ```
 
-Si vous regardez la console de votre navigateur, vous verrez un message d'erreur semblable à celui-ci&nbsp;:
+Si vous regardez la console de votre navigateur, vous pouvez voir un message d'erreur semblable à celui-ci&nbsp;:
 
 ```plain
-Refus d'afficher 'https://developer.mozilla.org/' dans un cadre car la directive 'X-Frame-Options' est définie sur 'deny'.
+Refus d'afficher 'https://developer.mozilla.org/' dans un cadre, car la directive 'X-Frame-Options' est définie sur 'deny'.
 ```
 
 La section [Sécurité](#considérations_de_sécurité) ci-dessous explique plus en détail pourquoi vous voyez cette erreur, mais voyons d'abord ce que fait notre code.
@@ -107,7 +107,7 @@ L'exemple inclut le strict nécessaire pour utiliser un `<iframe>`&nbsp;:
 - [`width`](/fr/docs/Web/HTML/Reference/Elements/iframe#width) et [`height`](/fr/docs/Web/HTML/Reference/Elements/iframe#height)
   - : Ces attributs définissent la largeur et la hauteur que vous souhaitez pour le cadre intégré.
 - [`sandbox`](/fr/docs/Web/HTML/Reference/Elements/iframe#sandbox)
-  - : Cet attribut, qui fonctionne dans des navigateurs un peu plus récents que le reste des fonctionnalités `<iframe>` (par exemple, IE 10 et supérieur), demande des réglages de sécurité renforcés&nbsp;; nous en parlerons plus loin.
+  - : Cet attribut, qui fonctionne dans des navigateurs un peu plus récents que le reste des fonctionnalités `<iframe>` (par exemple, IE 10 et supérieur), demande des réglages de sécurité renforcés&nbsp;; nous en parlons plus loin.
 
 > [!NOTE]
 > Pour améliorer la rapidité, il est conseillé de définir l'attribut `src` du cadre intégré avec JavaScript après le chargement du contenu principal. Cela rend votre page utilisable plus rapidement et diminue le temps de chargement officiel de la page (un indicateur important pour le {{Glossary("SEO")}}).
@@ -116,18 +116,18 @@ L'exemple inclut le strict nécessaire pour utiliser un `<iframe>`&nbsp;:
 
 Nous avons mentionné précédemment les préoccupations en matière de sécurité — examinons cela un peu plus en détail maintenant. Nous ne nous attendons pas à ce que vous compreniez parfaitement tout ce contenu dès la première lecture&nbsp;; nous voulons simplement vous sensibiliser à cette préoccupation et vous fournir une référence à consulter à mesure que vous gagnez en expérience et commencez à envisager l'utilisation des `<iframe>` dans vos expériences et travaux. De plus, il n'est pas nécessaire d'avoir peur et de ne pas utiliser les `<iframe>` — vous devez simplement être prudent. Lisez la suite...
 
-Les créateur·ice·s de navigateurs et les développeur·euse·s web ont appris à leurs dépens que les cadres intégrés sont une cible courante (terme officiel&nbsp;: **vecteur d'attaque**) pour les personnes malveillantes sur le Web (souvent appelées **hackeur·euse·s**, ou plus précisément, **pirates informatiques**) qui cherchent à modifier votre page web de manière malveillante, ou à tromper les utilisateur·ice·s pour leur faire faire quelque chose qu'ils·elles ne veulent pas faire, comme révéler des informations sensibles telles que des noms d'utilisateur·ice et des mots de passe. Pour cette raison, les ingénieur·e·s des spécifications et les développeur·euse·s de navigateurs ont mis au point divers mécanismes de sécurité pour rendre les `<iframe>` plus sûrs, et il existe également de bonnes pratiques à prendre en compte — nous en aborderons certaines ci-dessous.
+Les créateur·ice·s de navigateurs et les développeur·euse·s web ont appris à leurs dépens que les cadres intégrés sont une cible courante (terme officiel&nbsp;: **vecteur d'attaque**) pour les personnes malveillantes sur le Web (souvent appelées **hackeur·euse·s**, ou plus précisément, **pirates informatiques**) qui cherchent à modifier votre page web de manière malveillante, ou à tromper les utilisateur·ice·s pour leur faire faire quelque chose qu'ils·elles ne veulent pas faire, comme révéler des informations sensibles telles que des noms d'utilisateur·ice et des mots de passe. Pour cette raison, les ingénieur·e·s des spécifications et les développeur·euse·s de navigateurs ont mis au point divers mécanismes de sécurité pour rendre les `<iframe>` plus sûrs, et il existe également de bonnes pratiques à prendre en compte — nous en abordons certaines ci-dessous.
 
 > [!NOTE]
 > Le [détournement de clic](/fr/docs/Web/Security/Attacks/Clickjacking) est un type d'attaque courante utilisant les `<iframe>` où des pirates intègrent un `<iframe>` invisible dans votre document (ou intègrent votre document dans leur propre site malveillant) et l'utilisent pour capturer les interactions des utilisateur·ice·s. C'est un moyen courant de tromper les utilisateur·ice·s ou de voler des données sensibles.
 
-Un petit exemple d'abord — essayez de charger l'exemple précédent que nous avons montré ci-dessus dans votre navigateur — vous pouvez [le trouver en direct sur GitHub <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ([voir le code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) aussi.) Au lieu de la page que vous attendiez, vous verrez probablement un message du type «&nbsp;Je ne peux pas ouvrir cette page&nbsp;», et si vous regardez la _Console_ dans les [outils de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), vous verrez un message indiquant pourquoi. Dans Firefox, vous verrez quelque chose comme _Le chargement de "https\://developer.mozilla.org/fr/docs/Glossary" dans un cadre est refusé par la directive "X-Frame-Options" définie sur "DENY"_. Cela est dû au fait que les développeur·euse·s qui ont construit le MDN ont inclus un paramètre sur le serveur qui sert les pages du site Web pour empêcher qu'elles soient intégrées dans des `<iframe>` (voir [Configurer les directives CSP](#configurer_les_directives_csp), ci-dessous.) Cela a du sens — une page entière de MDN n'a pas vraiment de sens à être intégrée dans d'autres pages à moins que vous ne vouliez faire quelque chose comme les intégrer sur votre site et les revendiquer comme les vôtres — ou tenter de voler des données par le [détournement de clic](/fr/docs/Web/Security/Attacks/Clickjacking), ce qui sont toutes deux de très mauvaises choses à faire. De plus, si tout le monde commençait à faire cela, toute la bande passante supplémentaire commencerait à coûter beaucoup d'argent à Mozilla.
+Un petit exemple d'abord — essayez de charger l'exemple précédent que nous avons montré ci-dessus dans votre navigateur — vous pouvez [le trouver en direct sur GitHub <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ([voir le code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) aussi.) Au lieu de la page que vous attendiez, vous voyez probablement un message du type «&nbsp;Je ne peux pas ouvrir cette page&nbsp;», et si vous regardez la _Console_ dans les [outils de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), vous voyez un message indiquant pourquoi. Dans Firefox, vous voyez quelque chose comme _Le chargement de "https\://developer.mozilla.org/fr/docs/Glossary" dans un cadre est refusé par la directive "X-Frame-Options" définie sur "DENY"_. C'est dû au fait que les développeur·euse·s qui ont construit le MDN ont inclus un paramètre sur le serveur qui sert les pages du site Web pour empêcher qu'elles soient intégrées dans des `<iframe>` (voir [Configurer les directives CSP](#configurer_les_directives_csp), ci-dessous.) Cela a du sens — une page entière de MDN n'a pas vraiment de sens à être intégrée dans d'autres pages à moins que vous ne vouliez faire quelque chose comme les intégrer sur votre site et les revendiquer comme les vôtres — ou tenter de voler des données par le [détournement de clic](/fr/docs/Web/Security/Attacks/Clickjacking), ce qui sont toutes deux de très mauvaises choses à faire. De plus, si tout le monde commençait à faire cela, toute la bande passante supplémentaire commence à coûter beaucoup d'argent à Mozilla.
 
 #### N'intégrer que lorsque c'est nécessaire
 
-Parfois, il est pertinent d'intégrer du contenu tiers — comme des vidéos YouTube ou des cartes — mais vous pouvez vous éviter bien des soucis en n'intégrant du contenu tiers que lorsque cela est vraiment nécessaire. Une bonne règle pour la sécurité web est&nbsp;: _«&nbsp;On n'est jamais trop prudent. Si vous l'avez créé, vérifiez-le quand même. Si quelqu'un d'autre l'a créé, considérez-le comme dangereux jusqu'à preuve du contraire.&nbsp;»_
+Parfois, il est pertinent d'intégrer du contenu tiers — comme des vidéos YouTube ou des cartes — mais vous pouvez vous éviter bien des soucis en n'intégrant du contenu tiers que lorsque c'est vraiment nécessaire. Une bonne règle pour la sécurité web est&nbsp;: _«&nbsp;On n'est jamais trop prudent. Si vous l'avez créé, vérifiez-le quand même. Si quelqu'un d'autre l'a créé, considérez-le comme dangereux jusqu'à preuve du contraire.&nbsp;»_
 
-En plus de la sécurité, vous devez également être attentif·ive aux questions de propriété intellectuelle. La plupart des contenus sont protégés par le droit d'auteur, hors ligne comme en ligne, même ceux auxquels vous ne vous attendez pas (par exemple, la plupart des images sur [Wikimedia Commons <sup>(angl.)</sup>](https://commons.wikimedia.org/wiki/Main_Page)). N'affichez jamais de contenu sur votre page web à moins d'en être propriétaire ou que les propriétaires vous aient donné une autorisation écrite et sans équivoque. Les sanctions pour violation du droit d'auteur sont sévères. Encore une fois, on n'est jamais trop prudent.
+En plus de la sécurité, vous devez également être attentif·ive aux questions de propriété intellectuelle. La plupart des contenus sont protégés par le droit d'auteur·ice, hors ligne comme en ligne, même ceux auxquels vous ne vous attendez pas (par exemple, la plupart des images sur [Wikimedia Commons <sup>(angl.)</sup>](https://commons.wikimedia.org/wiki/Main_Page)). N'affichez jamais de contenu sur votre page web à moins d'en être propriétaire ou que les propriétaires vous aient donné une autorisation écrite et sans équivoque. Les sanctions pour violation du droit d'auteur·ice sont sévères. Encore une fois, on n'est jamais trop prudent.
 
 Si le contenu est sous licence, vous devez respecter les conditions de la licence. Par exemple, le contenu de MDN est [sous licence CC-BY-SA](/fr/docs/MDN/Writing_guidelines/Attrib_copyright_license#documentation). Cela signifie que vous devez [nous créditer correctement <sup>(angl.)</sup>](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) lorsque vous citez notre contenu, même si vous y apportez des modifications substantielles.
 
@@ -158,7 +158,7 @@ Cependant, il est peu probable que vous utilisiez beaucoup ces éléments. Si vo
 
 Historiquement, ces éléments ont aussi été utilisés pour intégrer du contenu géré par des {{Glossary("Plugin", "plugins")}} de navigateur comme {{Glossary("Adobe Flash")}}, mais cette technologie est désormais obsolète et n'est plus prise en charge par les navigateurs modernes.
 
-Si vous devez intégrer du contenu de plugin, voici le minimum d'informations dont vous aurez besoin&nbsp;:
+Si vous devez intégrer du contenu de plugin, voici le minimum d'informations dont vous avez besoin&nbsp;:
 
 <table class="standard-table no-markdown">
   <thead>

@@ -17,7 +17,7 @@ Par exemple, un client peut demander à un serveur s'il autoriserait une requêt
 OPTIONS /resource/foo
 Access-Control-Request-Method: DELETE
 Access-Control-Request-Headers: x-requested-with
-Origin: https://www.exemple.com
+Origin: https://www.example.com
 ```
 
 Si le serveur l'accepte, alors celui-ci va répondre à la requête de pré-vérification en envoyant une réponse HTTP contenant l'entête {{HTTPHeader("Access-Control-Allow-Methods")}} dont la valeur contiendra dans sa liste la méthode `DELETE` :
@@ -25,7 +25,7 @@ Si le serveur l'accepte, alors celui-ci va répondre à la requête de pré-vér
 ```http
 HTTP/1.1 204 No Content
 Connection: keep-alive
-Access-Control-Allow-Origin: https://www.exemple.com
+Access-Control-Allow-Origin: https://www.example.com
 Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Max-Age: 86400

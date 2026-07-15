@@ -41,7 +41,7 @@ slug: WebAssembly/Guides/Using_the_JavaScript_API
 
 ### Загрузка wasm-модуля в потоке
 
-Новшество в Firefox 58 - это возможность компилировать и создавать экземпляры (объекты) модулей WebAssembly непосредственно из исходников. Это достигается использованием методов {{jsxref("WebAssembly.compileStreaming()")}} и {{jsxref("WebAssembly.instantiateStreaming()")}}. Эти методы занимают меньше места чем их непотоковые аналоги, потому что они могут преобразовывать байт-код прямо в модуль или экземпляр модуля, исключая необходимость отдельного размещения ответа ({{domxref("Response")}}) в объекте {{domxref("ArrayBuffer")}} после загрузки файла.
+Новшество в Firefox 58 - это возможность компилировать и создавать экземпляры (объекты) модулей WebAssembly непосредственно из исходников. Это достигается использованием методов [`WebAssembly.compileStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming) и [`WebAssembly.instantiateStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming). Эти методы занимают меньше места чем их непотоковые аналоги, потому что они могут преобразовывать байт-код прямо в модуль или экземпляр модуля, исключая необходимость отдельного размещения ответа ({{domxref("Response")}}) в объекте {{domxref("ArrayBuffer")}} после загрузки файла.
 
 Следующий пример (см. наш демонстрационный файл [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) на GitHub и его работу [вживую](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) показывает как использовать `instantiateStreaming()` чтобы загрузить wasm-модуль, импортировать JavaScript функцию в него, компилировать, создать его экземпляр и получить доступ к его экспортируемой функции. Все это в одном шаге.
 
@@ -60,7 +60,7 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 ### Загрузка wasm-модуля без потока
 
-Если вы не можете или не хотите использовать методы описанные выше, то вы можете использовать вместо этого непотоковые методы {{jsxref("WebAssembly.compile")}} / {{jsxref("WebAssembly.instantiate")}}.
+Если вы не можете или не хотите использовать методы описанные выше, то вы можете использовать вместо этого непотоковые методы [`WebAssembly.compile`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compile) / [`WebAssembly.instantiate`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate).
 
 Эти методы не получают непосредственно доступ к байт-коду, так что требуется дополнительный шаг помещения ответа загрузки файла в объект {{domxref("ArrayBuffer")}} перед компилированием и созданием экземпляра wasm-модуля.
 
@@ -119,16 +119,16 @@ fetch("simple.wasm")
 
 ### Расширение памяти
 
-Объект памяти может быть расширен с помощью вызова метода {{jsxref("Memory.prototype.grow()")}}, где аргументом будет количество единиц (размером в 64KB) памяти WebAssembly:
+Объект памяти может быть расширен с помощью вызова метода [`Memory.prototype.grow()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow), где аргументом будет количество единиц (размером в 64KB) памяти WebAssembly:
 
 ```js
 memory.grow(1);
 ```
 
-При превышении максимального значения, указанного при создании объекта памяти, будет выброшено исключение {{jsxref("WebAssembly.RangeError")}}. Движок использует предоставленные верхние границы для резервирования памяти заранее, что делает расширение памяти более эффективным.
+При превышении максимального значения, указанного при создании объекта памяти, будет выброшено исключение [`WebAssembly.RangeError`](/ru/docs/WebAssembly/Reference/JavaScript_interface/RangeError). Движок использует предоставленные верхние границы для резервирования памяти заранее, что делает расширение памяти более эффективным.
 
 > [!NOTE]
-> Так как размер объекта {{domxref("ArrayBuffer")}} неизменен, после успешного вызова метода {{jsxref("Memory.prototype.grow()")}} свойство buffer объекта памяти будет возвращать уже новый объект {{domxref("ArrayBuffer")}} (с новым размером в свойстве byteLength) и любые предыдущие объекты ArrayBuffer станут в некотором роде "отсоединёнными", или отключёнными от низкоуровневой памяти, к которой они ранее относились.
+> Так как размер объекта {{domxref("ArrayBuffer")}} неизменен, после успешного вызова метода [`Memory.prototype.grow()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) свойство buffer объекта памяти будет возвращать уже новый объект {{domxref("ArrayBuffer")}} (с новым размером в свойстве byteLength) и любые предыдущие объекты ArrayBuffer станут в некотором роде "отсоединёнными", или отключёнными от низкоуровневой памяти, к которой они ранее относились.
 
 Подобно функциям, диапазоны линейной памяти могут быть импортированы или определены внутри модуля. Также, модуль имеет возможность экспортировать свою память. Это означает, что JavaScript-код может получить доступ к объекту памяти WebAssembly либо c помощью создания нового объекта через конструктор `WebAssembly.Memory` и передачи его в импортируемый объект, либо с помощью получения объекта памяти через экспортируемый объект (через [`Instance.prototype.exports`](/ru/docs/WebAssembly/JavaScript_interface/Instance/exports)).
 
@@ -221,7 +221,7 @@ memory.grow(1);
 
 ## Глобальные переменные
 
-WebAssembly имеет возможность создавать экземпляры глобальных переменных, доступных как в JavaScript так и в экземплярах модулей WebAssembly ({{jsxref("WebAssembly.Module")}}) посредством импорта или экспорта. Это очень полезная возможность, которая позволяет динамически связывать несколько модулей. Для создания глобальной переменной WebAssembly внутри вашего JavaScript-кода, используйте конструктор {{jsxref("WebAssembly.Global()")}}, который выглядит так:
+WebAssembly имеет возможность создавать экземпляры глобальных переменных, доступных как в JavaScript так и в экземплярах модулей WebAssembly ([`WebAssembly.Module`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Module)) посредством импорта или экспорта. Это очень полезная возможность, которая позволяет динамически связывать несколько модулей. Для создания глобальной переменной WebAssembly внутри вашего JavaScript-кода, используйте конструктор [`WebAssembly.Global()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Global), который выглядит так:
 
 ```js
 const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);

@@ -197,5 +197,5 @@ console.log(customerCity); // Unknown city
 
 ## 참고
 
-- The {{JSxRef("Operators/Nullish_Coalescing_Operator", "Nullish Coalescing Operator", '', 1)}}
+- The {{JSxRef("Operators/Nullish_coalescing", "Nullish Coalescing Operator", '', 1)}}
 - [TC39 proposals](https://github.com/tc39/proposals)

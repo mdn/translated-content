@@ -45,7 +45,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 - {{jsxref ( "SharedArrayBuffer")}} теперь может быть использован в {{jsxref ( "DataView")}} объекты ([Firefox bug 1246597](https://bugzil.la/1246597)).
 - В более ранних версиях спецификации, {{jsxref ( "SharedArrayBuffer")}} объектов необходимо явно переданы в ходе [структурированного клонирования](/ru/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) . В новой спецификации они не являются [переводными объекты](/ru/docs/Web/API/Transferable) больше , и , следовательно , не должны быть в списке передачи. Новое поведение используется для представления консоли предупреждения только, но теперь будет выдавать ошибку ([Firefox bug 1302037](https://bugzil.la/1302037)).
 - {{jsxref ( "ArrayBuffer")}} длина теперь ограничена {{jsxref ( "Number.MAX_SAFE_INTEGER")}} (> = 2 \*\* 53) ([Firefox bug 1255128](https://bugzil.la/1255128)).
-- {{jsxref ( "Error.prototype")}} и другие нативный объект ошибки прототипы , как {{jsxref ( "RangeError.prototype")}} и т.д. теперь обычные объекты вместо соответствующих объектов Error. (В частности, `Object.prototype.toString.call(Error.prototype)` теперь `"[object Object]"`вместо `"[object Error]"`.) ([Firefox bug 1213341](https://bugzil.la/1213341)).
+- {{jsxref("Error")}} и другие нативные объекты ошибки, такие как {{jsxref("RangeError")}} и т.д. теперь обычные объекты вместо соответствующих объектов Error. (В частности, `Object.prototype.toString.call(Error.prototype)` теперь `"[object Object]"`вместо `"[object Error]"`.) ([Firefox bug 1213341](https://bugzil.la/1213341)).
 
 ### Мероприятия
 
@@ -93,7 +93,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 #### WebRTC
 
-- В {{domxref ( "RTCPeerConnection")}} методы {{domxref ( "RTCPeerConnection.createOffer", "createOffer ()")}} и {{domxref ( "RTCPeerConnection.createAnswer", "createAnswer ()")}} Теперь возвращает {{jsxref ( "промис")}} , который возвращает объект , соответствующий словарь {{domxref ( "RTCSessionDescriptionInit")}} вместо возврата {{domxref ( "RTCSessionDescription")}} непосредственно. Существующий код будет продолжать работать, но [новый код можно записать более просто](/ru/docs/Web/API/RTCPeerConnection/setLocalDescription#About_the_session_description_parameter) .
+- В {{domxref("RTCPeerConnection")}} методы {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} и {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} Теперь возвращает {{jsxref("Promise", "промис")}} , который возвращает объект, соответствующий словарь {{domxref("RTCSessionDescriptionInit")}} вместо возврата {{domxref("RTCSessionDescription")}} непосредственно. Существующий код будет продолжать работать, но [новый код можно записать более просто](/ru/docs/Web/API/RTCPeerConnection/setLocalDescription#About_the_session_description_parameter) .
 - Аналогичным образом , {{domxref ( "RTCPeerConnection")}} методы {{domxref ( "RTCPeerConnection.setLocalDescription", "setLocalDescription ()")}} и {{domxref ( "RTCPeerConnection.setRemoteDescription", "setRemoteDescription ()")}} теперь принимают в качестве входных данных объекта , соответствующего словарю {{domxref ( "RTCSessionDescriptionInit")}}. Существующий код продолжает работать, но [может быть упрощена](/ru/docs/Web/API/RTCPeerConnection/setLocalDescription#About_the_session_description_parameter) .
 - {{Domxref ( "RTCPeerConnection.addIceCandidate ()")}} теперь принимает в качестве входных данных объекта, соответствующую {{domxref ( "RTCIceCandidateInit")}} словарь. Это совместимо с существующим кодом, но позволяет новый код, который будет написано чуть более просто при использовании в сочетании с изменениями перечисленных выше ([Firefox bug 1263312](https://bugzil.la/1263312)).
 - {{glossary( "DTMF")}} поддержка теперь включена по умолчанию , используя {{domxref ( "RTCDTMFSender")}}. См [Использование DTMF с WebRTC](/ru/docs/Web/API/WebRTC_API/Using_DTMF) для получения дополнительной информации о том , как это работает.
@@ -127,7 +127,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 ### JavaScript
 
-- Нестандартный {{jsxref("ArrayBuffer.slice ()")}} Метод был удалён (но стандартизированная версия {{jsxref("ArrayBuffer.prototype.slice()")}} сохраняется, см [Firefox bug 1313112](https://bugzil.la/1313112)).
+- Нестандартный {{jsxref("ArrayBuffer.prototype.slice()", "ArrayBuffer.slice()")}} Метод был удалён (но стандартизированная версия {{jsxref("ArrayBuffer.prototype.slice()")}} сохраняется, см [Firefox bug 1313112](https://bugzil.la/1313112)).
 
 ### API-интерфейсы
 

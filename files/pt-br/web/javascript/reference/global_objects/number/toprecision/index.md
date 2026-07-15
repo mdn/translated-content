@@ -43,7 +43,7 @@ Se o parâmetro `precisão` for omitido, este método terá o mesmo comportament
 
 ### Exceções
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+- {{jsxref("RangeError")}}
   - : Se o valor de `precisão` não estiver compreendido entre 1 e 100 (inclusive), um {{jsxref("RangeError")}} será lançado. É permitido às implementações suportar valores menores e maiores que esses, sendo um requisito do ECMA-262 que seja dado suporte a uma precisão de até 21 algarismos significativos.
 
 ## Exemplos

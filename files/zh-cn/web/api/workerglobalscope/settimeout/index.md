@@ -25,7 +25,7 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 ### 参数
 
 - `functionRef`
-  - : 当定时器到期后要执行的{{jsxref("function", "函数", "", 1)}}。
+  - : 当定时器到期后要执行的{{jsxref("Operators/function", "函数", "", 1)}}。
 - `code`
   - : 这是一个代替语法，允许你包含在定时器到期后编译和执行的字符串而非函数。这个语法因为与 {{jsxref("Global_Objects/eval", "eval()")}} 存在相同的安全风险所以**不推荐**使用。
 - `delay` {{optional_inline}}

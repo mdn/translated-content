@@ -3,12 +3,10 @@ title: Propriété CSS `container-name`
 short-title: container-name
 slug: Web/CSS/Reference/Properties/container-name
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 2ce88199869b63f8da3bbeafd899400f7579cce9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`container-name`** définit une liste de noms de conteneurs de requête utilisée par la règle {{CSSxRef("@container")}} dans une [requête de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries).
-Une requête de conteneur applique des styles aux éléments en fonction de la [taille](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#taille_du_conteneur_de_requête) ou de [l'état de défilement](/fr/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) de l'ancêtre le plus proche disposant d'un contexte de compartimentation.
-Lorsqu'un contexte de compartimentation reçoit un nom, il peut être ciblé spécifiquement en utilisant la règle {{CSSxRef("@container")}} au lieu de l'ancêtre le plus proche possédant la compartimentation.
 
 ## Syntaxe
 
@@ -16,10 +14,10 @@ Lorsqu'un contexte de compartimentation reçoit un nom, il peut être ciblé sp�
 container-name: none;
 
 /* Un seul nom */
-container-name: my-layout;
+container-name: mon-calque;
 
 /* Plusieurs noms */
-container-name: my-page-layout my-component-library;
+container-name: mon-calque-page ma-bibliotheque-de-composants;
 
 /* Valeurs globales */
 container-name: inherit;
@@ -32,14 +30,14 @@ container-name: unset;
 ### Valeurs
 
 - `none`
-  - : Valeur par défaut. Le conteneur de requête n'a pas de nom.
+  - : La valeur par défaut. Le conteneur de requête n'a pas de nom.
 
 - {{CSSxRef("&lt;custom-ident&gt;")}}
-  - : Une chaîne sensible à la casse utilisée pour identifier le conteneur.
+  - : Une chaîne de caractères sensible à la casse utilisée pour identifier le conteneur.
     Les conditions suivantes s'appliquent&nbsp;:
     - Le nom ne doit pas être égal à `or`, `and`, `not` ou `default`.
     - La valeur du nom ne doit pas être entre guillemets.
-    - L'identifiant commençant par un tiret destiné à désigner les identifiants définis par l'auteur (par exemple, `--container-name`) est autorisé.
+    - L'identifiant commençant par un tiret destiné à désigner les identifiants définis par le site (par exemple, `--nom-conteneur`) est autorisé.
     - Une liste de plusieurs noms séparés par un espace est autorisée.
 
 ## Définition formelle
@@ -50,6 +48,17 @@ container-name: unset;
 
 {{CSSSyntax}}
 
+## Description
+
+Sans nom défini, une requête de conteneur applique des styles aux éléments en fonction d'attributs tels que la [taille](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#requêtes_de_taille_de_conteneur) ou [l'état de défilement](/fr/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) de l'ancêtre le plus proche avec un [contexte de compartimentation](/fr/docs/Web/CSS/Guides/Containment/Container_queries#nommer_les_contextes_de_confinement).
+
+> [!NOTE]
+> Les descendants des conteneurs de taille peuvent être dimensionnés en utilisant les [unités de longueur des requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries#unités_de_longueur_de_requête_de_conteneur).
+
+Lorsqu'un contexte de compartimentation reçoit un nom, il peut être ciblé spécifiquement en définissant ce nom dans une règle {{CSSxRef("@container")}}.
+
+Il est possible de créer une requête de conteneur en attribuant un {{CSSxRef("container-name")}} à un élément, puis en interrogeant uniquement l'existence de ce nom dans la règle `@container` associée, sans expression de requête définie. Ces soi-disant [**requêtes de conteneur uniquement par un nom**](/fr/docs/Web/CSS/Guides/Containment/Container_queries#requêtes_de_conteneur_uniquement_par_un_nom) permettent d'appliquer sélectivement des styles aux éléments uniquement en fonction de la présence d'un ancêtre avec un `container-name` spécifique défini.
+
 ## Exemples
 
 ### Utiliser un nom de conteneur
@@ -57,14 +66,14 @@ container-name: unset;
 L'exemple HTML ci-dessous est un composant de type carte contenant un titre et du texte&nbsp;:
 
 ```html
-<div class="card">
-  <div class="post-meta">
+<div class="carte">
+  <div class="donnees-publication">
     <h2>Titre de la carte</h2>
     <p>Mes détails de publication.</p>
   </div>
-  <div class="post-excerpt">
+  <div class="extrait-article">
     <p>
-      Un aperçu de mon <a href="https://exemple.com">article de blog</a> sur les
+      Un aperçu de mon <a href="https://example.com">article de blog</a> sur les
       chats.
     </p>
   </div>
@@ -78,21 +87,21 @@ L'exemple suivant crée deux contextes de compartimentation, l'un pour les infor
 > Une syntaxe raccourcie pour ces déclarations est décrite dans la page {{CSSxRef("container")}}.
 
 ```css
-.post-meta {
+.donnees-publication {
   container-type: inline-size;
 }
 
-.post-excerpt {
+.extrait-article {
   container-type: inline-size;
-  container-name: excerpt;
+  container-name: extrait;
 }
 ```
 
-L'écriture d'une requête de conteneur via la règle {{CSSxRef("@container")}} applique des styles aux éléments du conteneur lorsque la requête est vraie.
-L'exemple suivant comporte deux requêtes de conteneur, l'une s'applique uniquement au contenu de l'élément `.post-excerpt` et l'autre s'applique aux contenus de `.post-meta` et de `.post-excerpt`&nbsp;:
+L'écriture d'une requête de conteneur avec la règle {{CSSxRef("@container")}} applique des styles aux éléments du conteneur lorsque la requête est vraie.
+L'exemple suivant comporte deux requêtes de conteneur, l'une s'applique uniquement au contenu de l'élément `.extrait-article` et l'autre s'applique aux contenus de `.donnees-publication` et de `.extrait-article`&nbsp;:
 
 ```css
-@container excerpt (width >= 400px) {
+@container extrait (width >= 400px) {
   p {
     visibility: hidden;
   }
@@ -112,9 +121,9 @@ Pour plus d'informations sur l'écriture des requêtes de conteneur, consulter l
 Vous pouvez également fournir plusieurs noms à un contexte de conteneur séparés par un espace&nbsp;:
 
 ```css
-.post-meta {
+.donnees-publication {
   container-type: inline-size;
-  container-name: meta card;
+  container-name: meta carte;
 }
 ```
 
@@ -128,12 +137,58 @@ Ceci est utile si vous souhaitez cibler le même conteneur avec plusieurs requê
   }
 }
 
-@container card (width <= 200px) {
+@container carte (width <= 200px) {
   h2 {
     font-size: 1.5em;
   }
 }
 ```
+
+### Utiliser une requête de conteneur uniquement par un nom
+
+Cet exemple montre comment utiliser une [requête de conteneur uniquement par un nom](/fr/docs/Web/CSS/Guides/Containment/Container_queries#requêtes_de_conteneur_uniquement_par_un_nom).
+
+#### HTML
+
+Nous incluons un {{HTMLElement("div")}} avec un `id` de `conteneur`, et trois {{HTMLElement("p")}} éléments, deux à l'intérieur du conteneur, et un à l'extérieur du conteneur&nbsp;:
+
+```html live-sample_name-only
+<div id="conteneur">
+  <p>Je suis dans le conteneur.</p>
+  <p>Je suis également dans le conteneur.</p>
+</div>
+<p>Je ne suis pas dans le conteneur.</p>
+```
+
+#### CSS
+
+Nous attribuons un nom au conteneur&nbsp;:
+
+```css live-sample_name-only
+#conteneur {
+  container-name: mon-conteneur;
+}
+```
+
+Nous pouvons ensuite appliquer des styles uniquement aux éléments à l'intérieur des conteneurs avec ce nom défini, comme montré dans l'extrait suivant.
+
+```css live-sample_name-only
+@container mon-conteneur {
+  p {
+    background-color: lime;
+    font-size: 1.3rem;
+    width: 50vw;
+    padding: 0.5rem;
+    font-family: sans-serif;
+  }
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("name-only", "100%", 300)}}
+
+Les styles définis doivent être appliqués uniquement aux premier et deuxième {{HTMLElement("p")}} éléments, mais pas au troisième.
 
 ## Spécifications
 

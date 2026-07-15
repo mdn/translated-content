@@ -42,7 +42,7 @@ console.log(checkNumber(Number.MAX_VALUE * 2));
 - `POSITIVE_INFINITY`를, `POSITIVE_INFINITY`를 제외한 아무 양의 수로 나눈 결과는 `NEGATIVE_INFINITY`입니다.
 - `POSITIVE_INFINITY`를 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} 또는 `POSITIVE_INFINITY`로 나눈 결과는 {{jsxref("NaN")}}입니다.
 
-`Number.POSITIVE_INFINITY`를 사용해 성공 시 유한수를 반환하는 식의 결과를 판별할 수 있습니다. 그러나 이런 경우 {{jsxref("isFinite", "isFinite()")}}를 사용하는 편이 더 적합합니다.
+`Number.POSITIVE_INFINITY`를 사용해 성공 시 유한수를 반환하는 식의 결과를 판별할 수 있습니다. 그러나 이런 경우 {{jsxref("isFinite()")}}를 사용하는 편이 더 적합합니다.
 
 `POSITIVE_INFINITY`는 {{jsxref("Number")}}의 정적 속성이기 때문에, 직접 생성한 {{jsxref("Number")}} 객체의 속성이 아니라 `Number.POSITIVE_INFINITY`의 형식으로 사용해야 합니다.
 
@@ -73,4 +73,4 @@ if (bigNumber === Number.POSITIVE_INFINITY) {
 - {{jsxref("Number.NEGATIVE_INFINITY")}}
 - {{jsxref("Number.isFinite()")}}
 - {{jsxref("Infinity")}}
-- {{jsxref("isFinite", "isFinite()")}}
+- {{jsxref("isFinite()")}}

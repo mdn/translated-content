@@ -63,7 +63,7 @@ Nota: Quando Date for chamado como um construtor com mais de um argumento, se os
 
 ## Propriedades
 
-- {{jsxref("Date.prototype")}}
+- {{jsxref("Date")}}
   - : Permite adicionar propriedades a um objeto javaScript Date.
 - Date.length
   - : O valor de `Date.length` é 7. Esse é o número de argumentos manipulados pelo construtor.
@@ -79,7 +79,7 @@ Nota: Quando Date for chamado como um construtor com mais de um argumento, se os
 
 ## Instâncias JavaScript de `Date`
 
-Todas as instâncias `Date` são herdadas de {{jsxref("Date.prototype")}}. O objeto protótipo do construtor `Date` pode ser modificado para afetar todas as instâncias de `Date`.
+Todas as instâncias `Date` são herdadas de {{jsxref("Date")}}. O objeto protótipo do construtor `Date` pode ser modificado para afetar todas as instâncias de `Date`.
 
 ### Métodos
 

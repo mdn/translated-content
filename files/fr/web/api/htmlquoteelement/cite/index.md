@@ -19,7 +19,7 @@ Une chaîne de caractères représentant une URL.
 ```js
 const quote = document.querySelector("q");
 console.log(`Source d'origine : ${quote.cite}`); // valeur actuelle
-quote.cite = "https://exemple.fr/citations"; // met à jour la valeur
+quote.cite = "https://example.com/citations"; // met à jour la valeur
 ```
 
 ## Spécifications

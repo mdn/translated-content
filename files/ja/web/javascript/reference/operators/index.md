@@ -15,7 +15,7 @@ l10n:
 
 JavaScript での基本的なキーワードと一般的な式です。これらの式は最も高い優先順位を持ちます（[演算子](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)よりも高い）。
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
   - : `this` キーワードは関数の実行コンテキストを示す特別なプロパティです。
 - [リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#リテラル)
   - : 基本的な `null`、論理値、数値、文字列のリテラルです。
@@ -48,10 +48,10 @@ JavaScript での基本的なキーワードと一般的な式です。これら
   - : プロパティアクセス演算子はオブジェクトのプロパティやメソッドへのアクセス (`object.property` や `object["property"]`) を提供します。
 - {{jsxref("Operators/Optional_chaining", "?.")}}
   - : オプショナルチェーン演算子は、参照が[ヌル値](/ja/docs/Glossary/Nullish)（[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined)）であった場合にエラーを発生させる代わりに `undefined` を返します。
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
   - : `new` 演算子はコンストラクターのインスタンスを作成します。
 - {{jsxref("Operators/new.target", "new.target")}}
-  - : コンストラクター内で `new.target` を使うことで、{{jsxref("Operators/new", "new")}} によって呼び出されるコンストラクターを参照できます。
+  - : コンストラクター内で `new.target` を使うことで、{{jsxref("new")}} によって呼び出されるコンストラクターを参照できます。
 - {{jsxref("Operators/import.meta", "import.meta")}}
   - : コンテキストに依存したメタデータを JavaScript モジュールへ公開するオブジェクトです。
 - {{jsxref("Operators/super", "super")}}
@@ -76,7 +76,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 
 単項演算は、単一のオペランドによる演算です。
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
   - : `delete` 演算子は、オブジェクトからプロパティを削除します。
 - {{jsxref("Operators/void", "void")}}
   - : `void` 演算子は、式の返値を破棄します。
@@ -122,7 +122,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
   - : 小なりイコール演算子です。
 - {{jsxref("Operators/Greater_than_or_equal", "&gt;=")}}
   - : 大なりイコール演算子です。
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
   - : `instanceof` 演算子は、オブジェクトが別のオブジェクトのインスタンスかどうかを判別します。
 - {{jsxref("Operators/in", "in")}}
   - : `in` 演算子は、与えられたプロパティをオブジェクトが持っているかどうかを判別します。

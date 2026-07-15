@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/throw
 
 {{jsSidebar("Statements")}}
 
-L'instruction **`throw`** permet de lever une exception définie par l'utilisateur. L'exécution de la fonction courante sera stoppée (les instructions situées après l'instruction `throw` ne seront pas exécutées) et le contrôle sera passé au premier bloc {{jsxref("Instructions/try...catch","catch")}} de la pile d'appels. Si aucun bloc `catch` ne se trouve dans les fonctions de la pile d'appels, le programme sera terminé.
+L'instruction **`throw`** permet de lever une exception définie par l'utilisateur. L'exécution de la fonction courante sera stoppée (les instructions situées après l'instruction `throw` ne seront pas exécutées) et le contrôle sera passé au premier bloc {{jsxref("Statements/try...catch","catch")}} de la pile d'appels. Si aucun bloc `catch` ne se trouve dans les fonctions de la pile d'appels, le programme sera terminé.
 
 {{InteractiveExample("JavaScript Demo: Statement - Throw")}}
 
@@ -44,7 +44,7 @@ throw true; // génère une exception ayant la valeur true
 throw new Error("Obligatoire"); // génère un objet Error avec le message "Obligatoire"
 ```
 
-On notera également que l'instruction `throw` est affectée par {{jsxref("Grammaire_lexicale","l'insertion automatique de point-virgule","#Insertion_automatique_de_points-virgules",1)}} car il n'est pas permis d'avoir un caractère de fin de ligne entre le mot-clé `throw` et l'expression.
+On notera également que l'instruction `throw` est affectée par {{jsxref("Lexical_grammar","l'insertion automatique de point-virgule","#Insertion_automatique_de_points-virgules",1)}} car il n'est pas permis d'avoir un caractère de fin de ligne entre le mot-clé `throw` et l'expression.
 
 ## Exemples
 
@@ -93,7 +93,7 @@ try {
 
 ### Deuxième exemple avec un objet
 
-Ici, on cherche à valider une chaîne de caractères représentant un code postal américain. Si le format utilisé est invalide, cela provoquera une exception avec un objet du type `ZipFormatIncorrectException`. (Le mot-clé {{jsxref("Instructions/const","const")}} introduit avec ECMAScript 6 est utilisé dans cet exemple).
+Ici, on cherche à valider une chaîne de caractères représentant un code postal américain. Si le format utilisé est invalide, cela provoquera une exception avec un objet du type `ZipFormatIncorrectException`. (Le mot-clé {{jsxref("Statements/const","const")}} introduit avec ECMAScript 6 est utilisé dans cet exemple).
 
 ```js
 /*
@@ -165,7 +165,7 @@ e = vérifierZipCode("95060 1234"); // renvoie 95060 1234
 
 ### Propager une exception
 
-L'instruction `throw` peut être utilisée pour transmettre une exception qui aurait été interceptée avec {{jsxref("Instructions/try...catch","catch")}}. Dans l'exemple suivant, on intercepte une exception avec une valeur numérique et on propage l'exception si la valeur est supérieure à 50. L'exception qui est levée se propage dans la fonction appelante ou au niveau le plus haut, visible par l'utilisateur.
+L'instruction `throw` peut être utilisée pour transmettre une exception qui aurait été interceptée avec {{jsxref("Statements/try...catch","catch")}}. Dans l'exemple suivant, on intercepte une exception avec une valeur numérique et on propage l'exception si la valeur est supérieure à 50. L'exception qui est levée se propage dans la fonction appelante ou au niveau le plus haut, visible par l'utilisateur.
 
 ```js
 try {
@@ -190,5 +190,5 @@ try {
 
 ## Voir aussi
 
-- {{jsxref("Instructions/try...catch","try...catch")}}
+- {{jsxref("Statements/try...catch","try...catch")}}
 - {{jsxref("Error")}}

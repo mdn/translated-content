@@ -59,7 +59,7 @@ _Cette interface hérite aussi des méthodes de son parent {{DOMxRef("HTMLElemen
 
 ## Évènements
 
-Écoutez ces évènements en utilisant `addEventListener()`, ou en assignant un écouteur d'événement à la propriété `oneventname` de cette interface.
+Écoutez ces évènements en utilisant `addEventListener()`, ou en assignant un écouteur d'évènement à la propriété `oneventname` de cette interface.
 
 - {{DOMxRef("HTMLFormElement/formdata_event", "formdata")}}
   - : L'évènement `formdata` est déclenché après la construction de la liste d'entrées représentant les données du formulaire.
@@ -176,7 +176,7 @@ document.getElementById("info").addEventListener("click", () => {
 });
 
 document.getElementById("set-info").addEventListener("click", (e) => {
-  // Récupère une référence au formulaire via la cible de l'événement
+  // Récupère une référence au formulaire via la cible de l'évènement
   // e.target est le bouton, et .form est le formulaire auquel il appartient
   const f = e.target.form;
   // L'argument doit être une référence à un élément de formulaire.

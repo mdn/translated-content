@@ -118,7 +118,7 @@ console.log(object[bar]);
 
 ### `eval()` 주의사항
 
-JavaScript 초심자로써는 괄호 표기법을 사용할 수 있는 장소에 {{jsxref("eval", "eval()")}}을 남용하기 쉽습니다. 간혹 스크립트에서 다음과 같은 구문을 찾아볼 수 있습니다.
+JavaScript 초심자로써는 괄호 표기법을 사용할 수 있는 장소에 {{jsxref("Global_Objects/eval", "eval()")}}을 남용하기 쉽습니다. 간혹 스크립트에서 다음과 같은 구문을 찾아볼 수 있습니다.
 
 ```js
 x = eval("document.forms.form_name.elements." + strFormControl + ".value");

@@ -28,12 +28,12 @@ jobs:
           - zh-tw
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           persist-credentials: false
 
       - name: Checkout (content)
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           repository: mdn/content
           path: mdn/content
@@ -73,7 +73,7 @@ jobs:
         run: |
           npx markdownlint-cli2 --fix "**/${{ matrix.lang }}/**/*.md"
           node ./scripts/check-url-locale.js --fix "files/${{ matrix.lang }}"
-          ls -d 2>/dev/null "files/${{ matrix.lang }}" "docs/${{ matrix.lang }}" | xargs npx autocorrect --fix
+          ls -d 2>/dev/null "files/${{ matrix.lang }}" "docs/${{ matrix.lang }}" | xargs npx autocorrect-node --fix
           npx prettier -w "**/${{ matrix.lang }}/**/*.md"
           cd ${{ github.workspace }}/mdn/content && npm run fix:fm -- --config-file ${{ github.workspace }}/.front-matter-config.json "${{ github.workspace }}/files/${{ matrix.lang }}"
 

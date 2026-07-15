@@ -15,7 +15,7 @@ new Iterator()
 ```
 
 > [!NOTE]
-> `Iterator()` peut seulement être construit avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` lance une {{JSxRef("TypeError")}}. De plus, `Iterator()` ne peut pas être construit lui-même — il est généralement construit implicitement via des appels à {{JSxRef("Operators/super", "super()")}} à l'intérieur du constructeur d'une sous-classe.
+> `Iterator()` peut seulement être construit avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` lance une {{JSxRef("TypeError")}}. De plus, `Iterator()` ne peut pas être construit lui-même — il est généralement construit implicitement via des appels à {{JSxRef("Operators/super", "super()")}} à l'intérieur du constructeur d'une sous-classe.
 
 ### Paramètres
 

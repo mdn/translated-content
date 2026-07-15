@@ -15,7 +15,7 @@ Notification.permission;
 
 ### Valeur
 
-Une {{domxref("DOMString")}} représentant l'autorisation actuelle. La valeur peut être:
+Une {{jsxref("String")}} représentant l'autorisation actuelle. La valeur peut être:
 
 - `granted`: L'utilisateur a explicitement accordé l'autorisation à l'origine actuelle d'afficher les notifications système.
 - `denied`: L'utilisateur a explicitement refusé l'autorisation pour l'origine actuelle d'afficher les notifications système.

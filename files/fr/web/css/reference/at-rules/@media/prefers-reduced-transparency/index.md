@@ -19,7 +19,7 @@ La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caracté
 
 ## Préférences utilisateurs
 
-Différents systèmes d'exploitation proposent une préférence pour la réduction de la transparence, et les agents utilisateur·ice·s s'appuient généralement sur ces réglages système.
+Différents systèmes d'exploitation proposent une préférence pour la réduction de la transparence, et les agents utilisateurs s'appuient généralement sur ces réglages système.
 Sur les plateformes qui ne proposent pas de réglage spécifique, les navigateurs peuvent également se baser sur des signaux moins explicites.
 
 - Sous Windows 10/11&nbsp;: Paramètres > Personnalisation > Couleurs > Effets de transparence.
@@ -33,7 +33,7 @@ Cet exemple affiche une boîte translucide par défaut. Si le réglage pour réd
 ### HTML
 
 ```html
-<div class="translucent">translucent box</div>
+<div class="translucent">boîte translucide</div>
 ```
 
 ### CSS

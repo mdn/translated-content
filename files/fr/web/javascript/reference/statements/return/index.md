@@ -152,5 +152,5 @@ réponse(1337); // 56154
 
 ## Voir aussi
 
-- {{jsxref("Fonctions","Les fonctions","",1)}}
+- {{jsxref("Functions","Les fonctions","",1)}}
 - [Les fermetures (closures)](/fr/docs/Web/JavaScript/Guide/Closures)

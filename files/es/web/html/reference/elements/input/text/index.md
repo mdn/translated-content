@@ -44,7 +44,7 @@ label {
         <strong><a href="#value">Value</a></strong>
       </td>
       <td>
-        Un {{DOMxRef("DOMString")}} que representa el texto contenido en
+        Un {{jsxref("String")}} que representa el texto contenido en
         el campo de texto.
       </td>
     </tr>
@@ -87,7 +87,7 @@ label {
 
 ## `Value`
 
-El atributo [`value`](/es/docs/Web/HTML/Reference/Elements/input#value) es un {{DOMxRef("DOMString")}} que contiene el valor actual del texto ingresado en el campo de texto. Puedes recuperar esto usando la propiedad {{DOMxRef("HTMLInputElement.value", "value")}} en JavaScript.
+El atributo [`value`](/es/docs/Web/HTML/Reference/Elements/input#value) es un {{jsxref("String")}} que contiene el valor actual del texto ingresado en el campo de texto. Puedes recuperar esto usando la propiedad {{DOMxRef("HTMLInputElement.value", "value")}} en JavaScript.
 
 ```js
 let theText = myTextInput.value;

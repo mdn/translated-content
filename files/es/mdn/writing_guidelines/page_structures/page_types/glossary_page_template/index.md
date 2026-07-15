@@ -2,49 +2,51 @@
 title: Plantilla de página de glosario
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Glossary_page_template
 l10n:
-  sourceCommit: 77eea2b80f7352068ed59a2c2fb03de4ed85e194
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
-{{MDNSidebar}}
-
 > [!NOTE]
-> _Eliminar toda esta nota explicativa antes de publicar_
+> _Elimina este bloque de notas completo antes de publicar._
 >
 > ---
 >
-> **Metadatos de la página (_frontmatter_):**
+> **Front matter de la página:**
 >
-> El _frontmatter_ en la parte superior de la página se usa para definir los "metadatos de la página".
-> Los valores deben actualizarse adecuadamente para el método en particular.
+> El front matter al principio de la página define los «metadatos de la página».
+> Los valores deben actualizarse apropiadamente para el término en cuestión.
 >
 > ```md
 > ---
-> title: Term_being_defined
-> slug: Glossary/Term_being_defined
-> page-type: glossary-definition OR glossary-disambiguation
+> title: Término a definir
+> slug: Glossary/Término_a_definir
+> page-type: glossary-definition O glossary-disambiguation
+> sidebar: glossarysidebar
 > ---
 > ```
 >
 > - **title**
 >   - : Encabezado del título que se muestra en la parte superior de la página.
->     Formatear como: `Term being defined`. Si es posible traducir al Español.
+>     Formato: `Término a definir`.
 > - **slug**
->   - : El final de la ruta URL despué de `https://developer.mozilla.org/es/docs/`.
->     Esto tendrá el formato _Snake case_ del título en Inglés: `Glossary/Term_being_defined`.
+>   - : El final de la ruta URL después de `https://developer.mozilla.org/es/docs/`.
+>     Se formatea en snake case del título: `Glossary/Término_a_definir`.
 > - **page-type**
->   - : `glossary-definition` para una página de definición o `glossary-desambiguation` para una página de desambiguación (No aplica para Español).
+>   - : `glossary-definition` para una página de definición o `glossary-disambiguation` para una de desambiguación.
+> - **sidebar**
+>   - : Siempre es `glossarysidebar`.
+>     Consulta [Estructuras de página: barras laterales](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars) para más detalles.
 >
 > ---
 >
-> _Recuerda eliminar toda esta nota explicativa antes de publicar_
+> _Recuerda eliminar este bloque de notas completo antes de publicar._
 
-El **Término en proceso de definición** es _(incluye una definición concisa del término)_.
+El **TérminoADefinir** es _(incluye una definición concisa del término)_.
 
-Incluya más información de respaldo según sea necesario, pero no mucha, no más de 2 párrafos pequeños. Cualquier información más detallada, ejemplos de código, tutoriales, etc. deben ir en artículos separados.
+Incluye más información de apoyo según sea necesario, pero no demasiada; no más de 2 párrafos cortos adicionales. Cualquier información detallada adicional, ejemplos de código, tutoriales, etc., debe ir en artículos separados.
 
 ## Véase también
 
-Incluya una lista de enlaces que apunten a información general y técnica más detallada. Por ejemplo, puede agregar enlaces a artículos de Wikipedia, otras entradas de enciclopedia, tutoriales técnicos y especificaciones. Para obtener pautas sobre cómo agregar esta lista de enlaces, consulte la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#véase_también) en la _Guía de estilo de escritura_.
+Incluye una lista de enlaces que apunten a información técnica y general más detallada. Por ejemplo, puedes añadir enlaces a artículos de Wikipedia, otras entradas de enciclopedias, tutoriales técnicos y especificaciones. Para obtener pautas sobre cómo añadir esta lista de enlaces, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#seccion_vease_tambien) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2

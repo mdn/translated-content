@@ -1,11 +1,10 @@
 ---
-title: <input type="image">
+title: HTML `<input type="image">` 属性値
+short-title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`image`** 型は、テキストではなく画像の形をとる送信ボタン、すなわちテキストではなく画像の形をとる送信ボタンを作成するために使用されます。
 
@@ -71,13 +70,13 @@ input[type="image"] {
 文字列で、フォームのデータをサーバーに送信する際に使われるエンコーディング方法を識別します。許されている値は 3 つです。
 
 - `application/x-www-form-urlencoded`
-  - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使ってテキストを{{Glossary("Percent-encoding", "パーセントエンコーディング")}}した後のテキストとして送信します。
+  - : これはデフォルト値で、フォームのデータを {{jsxref("encodeURI()")}} などのアルゴリズムを使ってテキストを{{Glossary("Percent-encoding", "パーセントエンコーディング")}}した後のテキストとして送信します。
 - `multipart/form-data`
   - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) が `file` のもの ([`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
 - `text/plain`
   - : プレーンテキストです。ほとんどデバッグでしか役に立ちませんが、送信されたデータを簡単に見ることができます。
 
-`formenctype` 属性が指定された場合、所属するフォームの [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性を上書きします。
+`formenctype` 属性が指定された場合、所属するフォームの [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性を上書きします。
 
 この属性は [`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit) および {{HTMLElement("button")}} 要素でも使用できます。
 
@@ -86,7 +85,7 @@ input[type="image"] {
 文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) を上書きします。許されている値は次の通りです。
 
 - `get`
-  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性で与えられた URL で始まり、クエスチョンマーク ("?") 文字を付加し、次に `formenctype` またはフォームの [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性の記述に従ってコード化したフォームデータを付加して作成されます。この URL は、 HTTP の {{HTTPMethod("GET")}} リクエストでサーバーに送信されます。この方法は、 {{Glossary("ASCII")}} 文字のみを含み、副作用のないフォームに対してよく機能します。これは既定値です。
+  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性で与えられた URL で始まり、クエスチョンマーク ("?") 文字を付加し、次に `formenctype` またはフォームの [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性の記述に従ってコード化したフォームデータを付加して作成されます。この URL は、 HTTP の {{HTTPMethod("GET")}} リクエストでサーバーに送信されます。この方法は、 {{Glossary("ASCII")}} 文字のみを含み、副作用のないフォームに対してよく機能します。これはデフォルト値です。
 - `post`
   - : フォームのデータは `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性で指定された URL に HTTP の {{HTTPMethod("POST")}} リクエストで送信される本文に含まれます。このメソッドは、複雑なデータやファイルの添付に対応しています。
 - `dialog`
@@ -107,7 +106,7 @@ input[type="image"] {
 タブ、ウィンドウ、インライン枠などの実際の名前のほかに、いくつかの特別なキーワードを使用することができます。
 
 - `_self`
-  - : レスポンスを、フォームを含むものと同じ閲覧コンテキストに読み込みます。これにより、現在の文書が受信したデータで置き換えられます。これは、何も指定されていない場合に使用される既定値です。
+  - : レスポンスを、フォームを含むものと同じ閲覧コンテキストに読み込みます。これにより、現在の文書が受信したデータで置き換えられます。これは、何も指定されていない場合に使用されるデフォルト値です。
 - `_blank`
   - : レスポンスを新しい、名前のない閲覧コンテキストに読み込みます。これは通常、現在の文書と同じウィンドウの新しいタブですが、{{Glossary("User agent", "ユーザーエージェント")}}の設定によって異なる場合があります。
 - `_parent`
@@ -161,15 +160,15 @@ input[type="image"] {
 - [`alt`](/ja/docs/Web/HTML/Reference/Elements/input#alt) 属性は画像の alt テキストを提供し、スクリーンリーダーの利用者がボタンが何に使われるかをより良く理解することができるようにします。また、何らかの理由で画像を表示できない場合にも表示されます（例えば、パスのスペルが間違っている場合など）。可能であれば、標準的な送信ボタンを使用する場合に使用するラベルと一致するテキストを使用してください。
 - [`width`](/ja/docs/Web/HTML/Reference/Elements/input#width) および [`height`](/ja/docs/Web/HTML/Reference/Elements/input#height) 属性は、画像を表示する幅と高さをピクセル単位で指定するために使用されます。ボタンは画像と同じ大きさです。ボタンのヒット領域を画像より大きくしたい場合は、 CSS を使う必要があります（例： {{cssxref("padding")}}）。また、片方の寸法だけを指定した場合、もう片方は自動的に調整され、画像は元の{{glossary("Aspect ratio", "アスペクト比")}}を維持します。
 
-### 既定のフォームの動作の上書き
+### デフォルトのフォームの動作の上書き
 
-`<input type="image">` 要素は — 通常の[送信ボタン](/ja/docs/Web/HTML/Reference/Elements/input/submit)と同様に — 既定のフォームの動作を上書きするいくつかの属性を受け付けます。
+`<input type="image">` 要素は — 通常の[送信ボタン](/ja/docs/Web/HTML/Reference/Elements/input/submit)と同様に — デフォルトのフォームの動作を上書きするいくつかの属性を受け付けます。
 
 - `formaction`
   - : input 要素から送信された情報を処理するプログラムの URI。要素のフォームオーナーの [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性を上書きします。
 - `formenctype`
   - : サーバーにフォームを送信する際に使用するコンテンツの種類を指定します。指定可能な値は以下のとおりです。
-    - `application/x-www-form-urlencoded`: 属性が指定されていない場合の既定値。
+    - `application/x-www-form-urlencoded`: 属性が指定されていない場合のデフォルト値。
     - `text/plain`.
 
     この属性が指定された場合、要素のフォームオーナーの [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性を上書きします。
@@ -185,7 +184,7 @@ input[type="image"] {
   - : 論理属性で、フォーム送信時に検証を行わないことを指定します。この属性が指定された場合、要素のフォームオーナーの [`novalidate`](/ja/docs/Web/HTML/Reference/Elements/form#novalidate) 属性を上書きします。
 - `formtarget`
   - : フォームを送信した後に受信したレスポンスを表示する場所を示す名前またはキーワードです。これは、閲覧コンテキスト（例えば、タブ、ウィンドウ、インライン枠）の名前、またはキーワードです。この属性が指定された場合、要素のフォームオーナーの [`target`](/ja/docs/Web/HTML/Reference/Elements/form#target) 属性を上書きします。次のキーワードは特別な意味を持ちます。
-    - `_self`: 現在のコンテキストと同じ閲覧コンテキストにレスポンスを読み込みます。この属性が指定されていない場合は、この値が既定値となります。
+    - `_self`: 現在のコンテキストと同じ閲覧コンテキストにレスポンスを読み込みます。この属性が指定されていない場合は、この値がデフォルト値となります。
     - `_blank`: 新しい無名の閲覧コンテキストにレスポンスを読み込みます。
     - `_parent`: 現在の閲覧コンテキストの親コンテキストにレスポンスを読み込みます。親が存在しない場合、このオプションは `_self` と同じように動作します。
     - `_top`: 最上位の閲覧コンテキスト（つまり、現在の閲覧コンテキストの祖先のうち、親を持たない閲覧コンテキスト）にレスポンスを読み込みます。親がいない場合、このオプションは `_self` と同じ振る舞いをします。
@@ -196,7 +195,7 @@ input[type="image"] {
 
 画像をクリックしてフォームを送信すると、 `?x=52&y=55` のようなデータが引数として URL に付加されるのがわかります。画像入力に [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) 属性がある場合、指定した名前はすべての属性の先頭に付くことに注意してください。したがって、`name` が `position` である場合、返される座標は URL で `?position.x=52&position.y=55` という書式となります。もちろん、これは他のすべての属性にも当てはまります。
 
-これらは、マウスでクリックしてフォームを送信した画像の X と Y の座標で、 (0,0) が画像の左上となり、画像のクリック以外で送信が発生した場合の既定値もこれになります。これらは、画像の中でクリックされた位置が重要である場合、例えば、地図がクリックされると、クリックされた座標がサーバーに送信されるような場合に利用することができます。サーバー側のコードは、クリックされた場所を特定し、その近くの場所についての情報を返します。
+これらは、マウスでクリックしてフォームを送信した画像の X と Y の座標で、 (0,0) が画像の左上となり、画像のクリック以外で送信が発生した場合のデフォルト値もこれになります。これらは、画像の中でクリックされた位置が重要である場合、例えば、地図がクリックされると、クリックされた座標がサーバーに送信されるような場合に利用することができます。サーバー側のコードは、クリックされた場所を特定し、その近くの場所についての情報を返します。
 
 上記の例では、サーバー側のコードで、送信された座標からどの色がクリックされたかを調べ、人々が投票した好きな色の集計を行うことができます。
 
@@ -293,7 +292,7 @@ div {
 
 label {
   display: inline-block;
-  width: 90px;
+  width: 70px;
   text-align: right;
   padding-right: 10px;
 }
@@ -301,7 +300,7 @@ label {
 #image {
   object-position: right top;
   object-fit: contain;
-  background-color: #ddd;
+  background-color: #dddddd;
 }
 ```
 

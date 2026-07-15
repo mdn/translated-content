@@ -38,7 +38,7 @@ color2 instanceof String; // devuelve falso (color2 no es un objeto String)
 
 ### Ejemplos
 
-También vea los ejemplos de {{jsxref("Sentencias/throw", "throw")}}.
+También vea los ejemplos de {{jsxref("Statements/throw", "throw")}}.
 
 #### Ejemplo: Determinando si `elDia` es un objeto `Date`
 

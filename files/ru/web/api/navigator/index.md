@@ -18,9 +18,9 @@ _Не наследует свойства._
 - {{domxref("Navigator.appCodeName")}} {{readonlyInline}}{{experimental_inline}}
   - : Возвращает внутренний "код" текущего браузера. Не полагайтесь на это свойство для получения правильного значения.
 - {{domxref("Navigator.appName")}} {{readonlyInline}}{{experimental_inline}}
-  - : Возвращает {{domxref("DOMString")}} с официальным названием браузера. Не полагайтесь на это свойство для получения правильного значения.
+  - : Возвращает {{jsxref("String")}} с официальным названием браузера. Не полагайтесь на это свойство для получения правильного значения.
 - {{domxref("Navigator.appVersion")}} {{readonlyInline}}{{experimental_inline}}
-  - : Возвращает версию браузера как {{domxref("DOMString")}}. Не полагайтесь на это свойство для получения правильного значения.
+  - : Возвращает версию браузера как {{jsxref("String")}}. Не полагайтесь на это свойство для получения правильного значения.
 - {{domxref("Navigator.getBattery")}} {{readonlyInline}}
   - : Возвращает {{domxref ("BatteryManager")}} объект, который вы можете использовать для получения информации о статусе заряда аккумулятора.
 - {{domxref("Navigator.connection")}} {{readonlyInline}}{{experimental_inline}}
@@ -32,7 +32,7 @@ _Не наследует свойства._
 - {{domxref("Navigator.language")}} {{readonlyInline}}
   - : Возвращает {{domxref ("DOMString")}}, представляющий предпочитаемый пользователем язык, как правило это язык пользовательского интерфейса браузера. Значение `null` возвращается, когда язык неизвестен.
 - {{domxref("Navigator.languages")}} {{readonlyInline}}
-  - : Возвращает массив {{domxref("DOMString")}}, представляющий собой языки, известные пользователю, в порядке предпочтения.
+  - : Возвращает массив {{jsxref("String")}}, представляющий собой языки, известные пользователю, в порядке предпочтения.
 - {{domxref("Navigator.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}
   - : Возвращает {{domxref("MimeTypeArray")}} листинг MIME типов, поддерживаемых браузером.
 - {{domxref("Navigator.onLine")}} {{readonlyInline}}

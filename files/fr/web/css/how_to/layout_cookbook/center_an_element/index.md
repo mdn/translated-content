@@ -2,10 +2,10 @@
 title: Centrer un élément
 slug: Web/CSS/How_to/Layout_cookbook/Center_an_element
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Dans cette recette, vous verrez comment centrer une boîte à l'intérieur d'une autre en utilisant [flexbox](#utiliser_flexbox) et [grid](#utiliser_grid), en centrant le contenu à la fois horizontalement et verticalement.
+Dans cette recette, vous pouvez voir comment centrer une boîte à l'intérieur d'une autre en utilisant [flexbox](#utiliser_flexbox) et [grid](#utiliser_grid), en centrant le contenu à la fois horizontalement et verticalement.
 
 ![Un élément centré dans une boîte plus grande](cookbook-center.png)
 

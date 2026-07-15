@@ -441,11 +441,11 @@ for (i = 0; i < 4; i++) {
 
 ### Массивы и регулярные выражения
 
-Когда массив является результатом вычислений регулярного выражения над строкой, он содержит свойства и элементы с информацией о совпадениях. Массив возвращается функциями {{jsxref("Global_Objects/RegExp/exec","RegExp.exec()")}}, {{jsxref("Global_Objects/String/match","String.match()")}} и {{jsxref("Global_Objects/String/split","String.split()")}} Подробнее о том, как использовать массивы с регулярными выражениями смотрите в [Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions).
+Когда массив является результатом вычислений регулярного выражения над строкой, он содержит свойства и элементы с информацией о совпадениях. Массив возвращается функциями {{jsxref("RegExp.exec()")}}, {{jsxref("String.match()")}} и {{jsxref("String.split()")}} Подробнее о том, как использовать массивы с регулярными выражениями смотрите в [Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ### Работа с массивоподобными объектами
 
-Некоторые объекты в JavaScript, такие как {{domxref("NodeList")}}, возвращаемые методом {{domxref("document.getElementsByTagName()")}}, или специальный объект {{jsxref("Functions/arguments","arguments")}}, доступный внутри функции, выглядят и ведут себя как обычные массивы, однако не имеет всех присущих массиву методов. Так например, объект `arguments` имеет свойство {{jsxref("Global_Objects/Function/length","length")}}, но не имеет метода {{jsxref("Array.forEach", "forEach()")}}.
+Некоторые объекты в JavaScript, такие как {{domxref("NodeList")}}, возвращаемые методом {{domxref("document.getElementsByTagName()")}}, или специальный объект {{jsxref("Functions/arguments","arguments")}}, доступный внутри функции, выглядят и ведут себя как обычные массивы, однако не имеет всех присущих массиву методов. Так например, объект `arguments` имеет свойство {{jsxref("Function.length","length")}}, но не имеет метода {{jsxref("Array.forEach", "forEach()")}}.
 
 Методы из прототипа Array, могут быть вызваны для массивоподобных объектов. Например:
 

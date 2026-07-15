@@ -174,4 +174,4 @@ with (namespace) {
 - {{jsxref("Statements/block", "block", "", 1)}}
 - [Strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}

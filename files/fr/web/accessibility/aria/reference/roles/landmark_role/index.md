@@ -21,22 +21,22 @@ Chaque rôle de repère concret possède son élément HTML sémantique correspo
 
 | Rôle ARIA                                                                             | Élément HTML               |
 | ------------------------------------------------------------------------------------- | -------------------------- |
-| [`banner`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role)               | {{HTMLElement('header')}}  |
-| [`complementary`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role) | {{HTMLElement('aside')}}   |
-| [`contentinfo`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)     | {{HTMLElement('footer')}}  |
-| [`form`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)                   | {{HTMLElement('form')}}    |
-| [`main`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)                   | {{HTMLElement('main')}}    |
-| [`navigation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role)       | {{HTMLElement('nav')}}     |
-| [`region`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/region_role)               | {{HTMLElement('section')}} |
-| [`search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)               | {{HTMLElement('search')}}  |
+| [`banner`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role)               | {{HTMLElement("header")}}  |
+| [`complementary`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role) | {{HTMLElement("aside")}}   |
+| [`contentinfo`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)     | {{HTMLElement("footer")}}  |
+| [`form`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)                   | {{HTMLElement("form")}}    |
+| [`main`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)                   | {{HTMLElement("main")}}    |
+| [`navigation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role)       | {{HTMLElement("nav")}}     |
+| [`region`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/region_role)               | {{HTMLElement("section")}} |
+| [`search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)               | {{HTMLElement("search")}}  |
 
 Une étiquette visible doit être fournie, référencée avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). Si nécessaire, une étiquette brève et descriptive peut être fournie avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
-Pour les utilisateur·ice·s de lecteurs d'écran, l'ajout de rôles de repère crée effectivement des «&nbsp;liens de saut&nbsp;» pour les utilisateur·ice·s de lecteurs d'écran, mais ne remplace pas la navigation dans la page car les rôles de repère ne sont pas exposés autrement.
+Pour les utilisateur·ice·s de lecteurs d'écran, l'ajout de rôles de repère crée effectivement des «&nbsp;liens de saut&nbsp;» pour les utilisateur·ice·s de lecteurs d'écran, mais ne remplace pas la navigation dans la page, car les rôles de repère ne sont pas exposés autrement.
 
 ## Bonnes pratiques
 
-N'utilisez pas `role="landmark"`&nbsp;: utilisez plutôt les rôles de repère de sous-classe appropriés, ou les éléments HTML sémantique si possible. Bien que cela ne soit plus nécessaire, il est considéré comme une bonne pratique d'inclure de façon redondante les rôles de repère de sous-classe avec l'élément sémantique associé pour les anciens navigateurs. Cela reste préférable à l'utilisation de rôles de repère sur des éléments non sémantiques, comme {{HTMLElement('div')}}&nbsp;; mais utilisez au moins l'un des rôles ou des éléments sémantiques pour créer des repères. Sinon, votre contenu sera moins navigable pour les utilisateur·ice·s de lecteurs d'écran.
+N'utilisez pas `role="landmark"`&nbsp;: utilisez plutôt les rôles de repère de sous-classe appropriés, ou les éléments HTML sémantique si possible. Bien que cela ne soit plus nécessaire, il est considéré comme une bonne pratique d'inclure de façon redondante les rôles de repère de sous-classe avec l'élément sémantique associé pour les anciens navigateurs. Cela reste préférable à l'utilisation de rôles de repère sur des éléments non sémantiques, comme {{HTMLElement("div")}}&nbsp;; mais utilisez au moins l'un des rôles ou des éléments sémantiques pour créer des repères. Sinon, votre contenu est moins navigable pour les utilisateur·ice·s de lecteurs d'écran.
 
 ## Spécifications
 

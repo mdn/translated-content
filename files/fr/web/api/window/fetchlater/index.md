@@ -105,7 +105,7 @@ try {
 ### Différer une requête `POST` pendant environ une minute et créer une fonction pour vérifier si elle a été envoyée
 
 ```js
-const result = fetchLater("https://report.exemple.com", {
+const result = fetchLater("https://report.example.com, {
   method: "POST",
   body: JSON.stringify(myReport),
   activateAfter: 60000 /* 1 minute */,
@@ -153,15 +153,15 @@ Toutes les appels suivants à `fetchLater()` généreraient une exception&nbsp;:
 
 ```js
 // Seules les URL potentiellement fiables sont prises en charge
-fetchLater("http://untrusted.exemple.com");
+fetchLater("http://untrusted.example.com);
 
 // La longueur de la requête différée doit être connue
-fetchLater("https://origin.exemple.com", { body: someDynamicStream });
+fetchLater("https://origin.example.com, { body: someDynamicStream });
 
 // Le fetch différé ne fonctionne que sur les fenêtres actives
 const detachedWindow = iframe.contentWindow;
 iframe.remove();
-detachedWindow.fetchLater("https://origin.exemple.com");
+detachedWindow.fetchLater("https://origin.example.com);
 ```
 
 ## Spécifications

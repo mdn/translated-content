@@ -1,32 +1,30 @@
 ---
-title: element.ownerDocument
+title: "Node : propriété ownerDocument"
+short-title: ownerDocument
 slug: Web/API/Node/ownerDocument
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Node.ownerDocument`** renvoie l'objet document de niveau supérieur pour ce nœud.
+La propriété en lecture seule **`ownerDocument`** de l'interface {{DOMxRef("Node")}} retourne l'objet document de niveau supérieur pour ce nœud.
 
-## Syntaxe
+## Valeur
 
-```js
-document = element.ownerDocument;
-```
+Un objet {{DOMxRef("Document")}} qui est l'objet de niveau supérieur dans lequel tous les nœuds enfants sont créés.
 
-- `document` est l'objet [`document`](/fr/docs/Web/API/Document) parent de l'élément courant.
+Si cette propriété est utilisée sur un nœud qui est lui-même un document, la valeur est `null`.
 
-## Exemple
+## Exemples
 
 ```js
-// étant donné un nœud "p", obtient le premier enfant HTML
-// de l'objet document
-var d = p.ownerDocument;
-var html = d.documentElement;
+// Étant donné un nœud "p", obtient le premier enfant HTML de l'objet
+// document
+
+const d = p.ownerDocument;
+const html = d.documentElement;
 ```
-
-## Notes
-
-L'objet `document` renvoyé par cette propriété est l'objet principal avec lequel tous les nœuds enfants du document HTML réel sont créés. Si cette propriété est utilisée sur un nœud qui est lui-même un document, le résultat est `null`.
 
 ## Spécifications
 

@@ -63,6 +63,6 @@ console.log("foobar".search(new caseInsensitiveSearch("BaR"))); // 3
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp/Symbol.search", "RegExp.prototype[@@search]()")}}
 - {{jsxref("String.prototype.search()")}}
 - [`RegExp.prototype[Symbol.search]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)

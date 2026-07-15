@@ -1,29 +1,27 @@
 ---
-title: "<figcaption>: 図キャプション要素"
+title: HTML `<figcaption>` 図キャプション要素
+short-title: <figcaption>
 slug: Web/HTML/Reference/Elements/figcaption
-original_slug: Web/HTML/Element/figcaption
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
-
-**`<figcaption>`** は [HTML](/ja/docs/Web/HTML) の要素で、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。
+**`<figcaption>`** は [HTML](/ja/docs/Web/HTML) の要素で、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表し、この `<figure>` に{{glossary("accessible name","アクセシブル名")}}を提供します。
 
 {{InteractiveExample("HTML デモ: &lt;figcaption&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <figure>
   <img
     src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
+    alt="日暮れの象" />
+  <figcaption>日暮れの象</figcaption>
 </figure>
 ```
 
 ```css interactive-example
 figure {
-  border: thin #c0c0c0 solid;
+  border: thin silver solid;
   display: flex;
   flex-flow: column;
   padding: 5px;
@@ -37,8 +35,8 @@ img {
 }
 
 figcaption {
-  background-color: #222;
-  color: #fff;
+  background-color: #222222;
+  color: white;
   font: italic smaller sans-serif;
   padding: 3px;
   text-align: center;
@@ -81,8 +79,7 @@ figcaption {
       <th scope="row">許可されている親要素</th>
       <td>
         {{HTMLElement("figure")}} 要素。
-        <code>&#x3C;figcaption></code>
-        要素は最初または最後の子要素でなければなりません。
+        <code>&#x3C;figcaption></code> 要素は最初または最後の子要素でなければなりません。
       </td>
     </tr>
     <tr>

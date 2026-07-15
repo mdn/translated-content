@@ -48,7 +48,7 @@ Un client peut par exemple envoyer la requête `GET` suivante, indiquant les pro
 
 ```http
 GET /index.html HTTP/1.1
-Host: www.exemple.com
+Host: www.example.com
 Connection: upgrade
 Upgrade: exemple/1, toto/2
 ```

@@ -1,12 +1,12 @@
 ---
-title: "<dir>: ディレクトリー要素"
+title: HTML `<dir>` ディレクトリー要素
+short-title: <dir>
 slug: Web/HTML/Reference/Elements/dir
-original_slug: Web/HTML/Element/dir
 l10n:
-  sourceCommit: 1f1418448e3b7f1d987b16db886008e5c5cc7fa1
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`<dir>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("user agent","ユーザーエージェント")}}が適用するスタイルやアイコンを用いて表示する、ファイルやフォルダーのディレクトリーのコンテナーとして使われます。この要素は廃止されたので使わないで下さい。代わりに、ファイル一覧を含め、一覧には {{HTMLElement("ul")}} 要素を使用してください。
 
@@ -21,14 +21,14 @@ l10n:
 
 他のすべての HTML 要素と同様、この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)に対応しています。
 
-- `compact` {{Deprecated_Inline}}
+- `compact` {{Deprecated_Inline}} {{non-standard_inline}}
   - : これは論理属性で、コンパクトなスタイルでディレクトリー一覧をレンダリングするようヒントを与えるものです。この属性の解釈はユーザーエージェントに委ねられ、また全てのブラウザーで動作するものでもありません。
 
 <!-- ## Technical summary -->
 
 ## 仕様書
 
-現在の仕様書には含まれていません。
+{{Specifications}}
 
 ## ブラウザーの互換性
 

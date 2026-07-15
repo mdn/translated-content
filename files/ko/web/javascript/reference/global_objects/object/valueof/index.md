@@ -116,5 +116,5 @@ myObj + 3; // 7
 ## 함께 보기
 
 - {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
 - {{jsxref("Symbol.toPrimitive()")}}

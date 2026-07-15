@@ -2,7 +2,7 @@
 title: Plantilla de página de elemento SVG
 slug: MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
 l10n:
-  sourceCommit: dad6b0e057cd37b4408cdede8b9f568c56df9a82
+  sourceCommit: 39d45a2e71cee2c107a026a59ba0d9229a511592
 ---
 
 {{MDNSidebar}}
@@ -20,11 +20,11 @@ l10n:
 > ```md
 > ---
 > title: <NombreDelElemento>
-> slug: Web/SVG/Element/NombreDelElemento
+> slug: Web/SVG/Reference/Element/NombreDelElemento
 > page-type: svg-element
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: svg.elements.NombreDelElemento
 > ---
@@ -32,49 +32,47 @@ l10n:
 >
 > - **title**
 >   - : El título que se muestra en la parte superior de la página.
->     Debe tener el formato **<**_NombreDelElemento_**>**.
->     Por ejemplo, el elemento "[g](/es/docs/Web/SVG/Reference/Element/g)" tiene un _título_ de `<g>`.
+>     Formateado como **<**_NombreDelElemento_**>**.
+>     Por ejemplo, el elemento "[g](/es/docs/Web/SVG/Reference/Element/g)" tiene un _title_ de `<g>`.
 > - **slug**
 >   - : El final de la ruta de URL después de `https://developer.mozilla.org/es/docs/`.
 >     Esto se formateará como `Web/SVG/Element/NombreDelElemento`.
 > - **page-type**
 >   - : Siempre `svg-element`.
 > - **status**
->   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**desaprobada**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
+>   - : Etiquetas que describen el estado de la funcionalidad. Un array que puede contener uno o más de las siguientes opciones: [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**desaprobada**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares). Esta clave no debe configurarse manualmente: Se configura automáticamente basado en los valores de los datos de compatibilidad del navegador para esta funcionalidad. Consulta ["como se agregan o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
 >   - : Reemplaza el valor de marcador de posición `svg.elements.NombreDelElemento` con la cadena de consulta para el elemento en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
 >     La herramienta utiliza automáticamente la clave para completar las secciones de compatibilidad y especificación (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}`).
 >
 >     Ten en cuenta que es posible que primero necesites crear/actualizar una entrada para el elemento en nuestro [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data), y la entrada debe incluir información de especificación.
 >     Consulta nuestra [guía sobre cómo hacer esto](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+> - **sidebar**
+>   - : Es `svgref` para todas las páginas de guía y referencia de SVG.
+>     Consulta [Estructuras de página: Sidebars](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars) para más detalles.
 >
 > ---
 >
 > **Macros en la parte superior de la página**
 >
-> Aparecen varias llamadas a macros en la parte superior de la sección de contenido (inmediatamente debajo de los metadatos de la página).
-> Debes actualizarlos o eliminarlos según el consejo siguiente:
+> Aparecen varias llamadas a macros en la parte superior de la sección de contenido inmediatamente después de los metadatos de la página.
+> Estas macros son agregados automáticamente mediante herramientas, así que evita añadirlas o eliminarlas:
 >
 > - `\{{SeeCompatTable}}` — esto genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   Si la tecnología que estás documentando no es experimental, debes eliminar esto.
->   Si es experimental, y la tecnología está oculta detrás de una preferencia en Firefox, también debes completar una entrada para ella en la página [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
+>   Si es experimental y la tecnología está oculta mediante una preferencia en Firefox, también debes completar su entrada en la página [Funcionalidades experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features)
 > - `\{{Deprecated_Header}}` — esto genera un banner de **Obsoleto** que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   Si no lo está, puedes eliminar la llamada a la macro.
-> - `\{{SecureContext_Header}}` — esto genera un banner de **Contexto seguro** que indica que la tecnología solo está disponible en un [contexto seguro](/es/docs/Web/Security/Secure_Contexts).
->   Si no lo está, puedes eliminar la llamada a la macro.
->   Si lo está, también debes completar una entrada para ella en la página [Características restringidas a contextos seguros](/es/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts).
-> - `\{{SVGRef}}` — esto genera el menú lateral izquierdo de referencia para el elemento.
->   El contenido del menú lateral depende de las etiquetas en los metadatos de la página.
-> - Recuerda eliminar la macro `\{{MDNSidebar}}` cuando copies esta página.
+> - `\{{Non-standard_Header}}` — esto genera un banner **No estándar** que indica que la funcionalidad no forma parte de ninguna especificación.
 >
-> Se muestran muestras de los banners **Experimental** y **Obsoleto** justo después de este bloque de nota.
+> Consulta ["como se agregan o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para más información.
+>
+> Los ejemplos de los banners para **Experimental**, **Obsoleto**, and **No estándar** se muestran después de este bloque de notas.
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar_
 
-{{SeeCompatTable}}{{deprecated_header}}{{SVGRef}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-Comienza el contenido en la página con un párrafo introductorio — comienza nombrando el elemento y diciendo qué hace.
-Idealmente, esto debería ser una o dos oraciones cortas.
+Comienza el contenido de la página con un párrafo introductorio — empieza nombrando el elemento y explicando qué hace.
+Lo ideal sería que sea de una o dos oraciones cortas.
 
 ## Contexto de uso
 
@@ -88,9 +86,8 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ### Atributos globales
 
-- [Atributos de procesamiento condicional](/es/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes)
 - [Atributos principales](/es/docs/Web/SVG/Reference/Attribute#core_attributes)
-- [Atributos de eventos gráficos](/es/docs/Web/SVG/Reference/Attribute#graphical_event_attributes)
+- [Atributos de evento](/es/docs/Web/SVG/Reference/Attribute#event_attributes)
 - [Atributos de presentación](/es/docs/Web/SVG/Reference/Attribute#presentation_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
@@ -104,11 +101,11 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ## Interfaz DOM
 
-Este elemento implementa la interfaz `\{{domxref("NameOfSVGDOMElement")}}`.
+Este elemento implementa la interfaz `\{{domxref("NameOfSVGDOMElement")}}
 
 ## Ejemplos
 
-Ten en cuenta que usamos el plural "Ejemplos" incluso si la página contiene solo un ejemplo.
+Ten en cuenta que usamos el plural "Ejemplos" incluso si la página contiene sólo un ejemplo.
 
 ### Un encabezado descriptivo
 
@@ -117,7 +114,7 @@ Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encab
 Consulta nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
 
 > [!NOTE]
-> A veces querrás vincular a ejemplos dados en otra página.
+> A veces querrás vincular ejemplos dados en otra página.
 >
 > **Escenario 1:** Si tienes algunos ejemplos en esta página y algunos más en otra página:
 >
@@ -159,7 +156,7 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ## Véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con el elemento actual. Para obtener más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+Incluye enlaces a páginas de referencia y guías relacionadas con el elemento actual. Para obtener más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#véase_también) en la _Guía de estilo de redacción_.
 
 - enlace1
 - enlace2

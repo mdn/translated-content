@@ -19,7 +19,7 @@ performance.clearMarks(name);
 ### Argumentos
 
 - nombre {{optional_inline}}
-  - : Un {{domxref("DOMString")}} representando el nombre de la marca de tiempo. Si este argumento es omitido, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`mark`" serán eliminados.
+  - : Un {{jsxref("String")}} representando el nombre de la marca de tiempo. Si este argumento es omitido, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`mark`" serán eliminados.
 
 ### Valor de retorno
 

@@ -120,8 +120,7 @@ textarea:read-write {
       <textarea id="address" name="address" readonly>
 16 Rue des Blagues,
 Blagues en Cascades,
-France</textarea
-      >
+France</textarea>
     </div>
     <div>
       <label for="instructions">Instructions de livraison&nbsp;:</label>

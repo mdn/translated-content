@@ -403,19 +403,20 @@ asyncEval(
         if (fOnError) {
           oWorker.onerror = fOnError;
         }
-        this.sendQuery =
-          function (/* queryable function name, argument to pass 1, argument to pass 2, etc. etc */) {
-            if (arguments.length < 1) {
-              throw new TypeError(
-                "QueryableWorker.sendQuery - not enough arguments",
-              );
-              return;
-            }
-            oWorker.postMessage({
-              bk4e1h0: arguments[0],
-              ktp3fm1: Array.prototype.slice.call(arguments, 1),
-            });
-          };
+        this.sendQuery = function (
+          /* queryable function name, argument to pass 1, argument to pass 2, etc. etc */
+        ) {
+          if (arguments.length < 1) {
+            throw new TypeError(
+              "QueryableWorker.sendQuery - not enough arguments",
+            );
+            return;
+          }
+          oWorker.postMessage({
+            bk4e1h0: arguments[0],
+            ktp3fm1: Array.prototype.slice.call(arguments, 1),
+          });
+        };
         this.postMessage = function (vMsg) {
           //I just think there is no need to use call() method
           //how about just oWorker.postMessage(vMsg);
@@ -513,7 +514,9 @@ function defaultQuery(vMsg) {
   // do something
 }
 
-function reply(/* listener name, argument to pass 1, argument to pass 2, etc. etc */) {
+function reply(
+  /* listener name, argument to pass 1, argument to pass 2, etc. etc */
+) {
   if (arguments.length < 1) {
     throw new TypeError("reply - not enough arguments");
     return;
@@ -727,7 +730,7 @@ onmessage 事件處理器會接收 worker 回傳的運算結果，然後顯示�
 
 - {{domxref("Navigator")}}
 - {{domxref("WorkerGlobalScope.fetch", "fetch()")}}
-- {{jsxref("Global_Objects/Array", "Array")}}、{{jsxref("Global_Objects/Date", "Date")}}、{{jsxref("Global_Objects/Math", "Math")}} 與 {{jsxref("Global_Objects/String", "String")}}
+- {{jsxref("Array")}}、{{jsxref("Date")}}、{{jsxref("Math")}} 與 {{jsxref("String")}}
 - {{domxref("setTimeout()")}} 與 {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}}
 
 worker 無法操作主頁面的物件與 DOM，如有相關需求，必須要間接透過 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 通知主頁面，讓主頁面執行需求。

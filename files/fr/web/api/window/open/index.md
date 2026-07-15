@@ -73,7 +73,7 @@ open(url, target, windowFeatures)
     - `noreferrer`
       - : Si cette fonctionnalité est utilisée, le navigateur ne fournira pas d'en-tête {{HTTPHeader("Referer")}} et fixera d'office `noopener` à `true`. Voir [`rel="noreferrer"`](/fr/docs/Web/HTML/Reference/Attributes/rel#noreferrer) pour plus d'informations.
 
-    Une valeur {{JSxRef("Operators/null", "null")}} est traitée de la même manière que la chaîne de caractères vide (`""`).
+    Une valeur {{JSxRef("null")}} est traitée de la même manière que la chaîne de caractères vide (`""`).
 
 > [!NOTE]
 > Les valeurs de position demandées (`top`, `left`) et de dimension demandées (`width`, `height`) dans `windowFeatures` **seront corrigées** si l'une de ces valeurs demandées ne permet pas à la popup du navigateur d'être entièrement rendue dans la zone de travail des applications du système d'exploitation de l'utilisateur·ice. En d'autres termes, aucune partie de la nouvelle popup ne peut être initialement positionnée hors écran.
@@ -237,21 +237,21 @@ for (const link of links) {
 Si le contexte de navigation nouvellement ouvert ne partage pas la même {{Glossary("Origin", "origine")}}, le script d'ouverture ne pourra pas interagir (lecture ou écriture) avec le contenu du contexte de navigation.
 
 ```js example-bad
-// Script depuis exemple.com
+// Script depuis example.com
 const otherOriginContext = window.open("https://exemple.org");
-// exemple.com et exemple.org n'ont pas la même origine
+// example.com et exemple.org n'ont pas la même origine
 
 console.log(otherOriginContext.origin);
 // DOMException: Permission denied to access property "origin" on cross-origin object
 ```
 
 ```js example-good
-// Script depuis exemple.com
-const sameOriginContext = window.open("https://exemple.com");
+// Script depuis example.com
+const sameOriginContext = window.open("https://example.com");
 // Cette fois, le nouveau contexte de navigation a la même origine
 
 console.log(sameOriginContext.origin);
-// https://exemple.com
+// https://example.com
 ```
 
 Pour plus d'informations, consultez l'article [Politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy).
