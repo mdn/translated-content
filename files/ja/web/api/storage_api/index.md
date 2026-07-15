@@ -9,7 +9,7 @@ l10n:
 
 [ストレージ標準](https://storage.spec.whatwg.org/) は、ウェブサイトがユーザーのブラウザーにデータを保存するために使えるあらゆる API や技術によって使われることを想定した、共有ストレージシステムを定義しています。
 
-Storage Standard によって管理されるウェブサイトのデータには、通常 [IndexedDB API](/ja/docs/Web/API/IndexedDB_API)や [Cache](/ja/docs/Web/API/Cache)が含まれますが、[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API)のような、サイトからアクセスできるその他の種類のデータが含まれる場合もあります。
+ストレージ標準によって管理されるウェブサイトのデータには、通常 [IndexedDB データベース](/ja/docs/Web/API/IndexedDB_API)や [Cache API のデータ](/ja/docs/Web/API/Cache)が含まれますが、[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API)のような、サイトからアクセスできるその他の種類のデータが含まれる場合もあります。
 
 Storage API を使うと、ウェブサイトは使える容量や現在の使用量を知れるほか、他のデータのために {{Glossary("user agent")}} がデータを捨てる際、事前に通知する必要があるかどうかを制御できます。
 
@@ -93,7 +93,7 @@ navigator.storage.estimate().then((estimate) => {
 
 オリジンに保存されているデータをクリアする場合、オリジンのバケットは単一のエンティティとして扱われます。このオリジンに保存されているデータはすべてクリアされます。
 
-バケットが`"persistent"`としてマークされている場合、データのオリジン自体またはユーザーが明示的に消さない限り、ユーザーエージェントによってバケットの内容はクリアされません。これには、ユーザーが 「キャッシュをクリア」 または 「最近の履歴をクリア」 オプションを選んだ場合などが含まれます。ユーザーには、永続的なサイトストレージバケットを消すための許可を具体的に求められます。
+バケットが `"persistent"` としてマークされている場合、データのオリジン自体またはユーザーが明示的に消さない限り、ユーザーエージェントによってバケットの内容はクリアされません。これには、ユーザーが 「キャッシュをクリア」 または 「最近の履歴をクリア」 オプションを選んだ場合などが含まれます。ユーザーには、永続的なサイトストレージバケットを消すための許可を具体的に求められます。
 
 詳しくは [データが退去されるのはいつか](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#データが退去されるのはいつか) を見てください。
 
@@ -105,7 +105,7 @@ navigator.storage.estimate().then((estimate) => {
 ### 他のインターフェイスへの拡張
 
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}}
-  - : サイトやアプリごとに、永続化の権限を管理し、使えるストレージ容量を推定するために使われるシングルトン {{domxref("StorageManager")}} オブジェクトを返します。
+  - : サイトやアプリごとに、永続化の権限を管理し、使えるストレージ容量を推定するために使われるシングルトンの {{domxref("StorageManager")}} オブジェクトを返します。
 - {{domxref("WorkerNavigator.storage")}} {{ReadOnlyInline}}
   - : 永続化の権限を管理し、使えるストレージ容量を推定するための {{domxref("StorageManager")}} インターフェイスを返します。
 
