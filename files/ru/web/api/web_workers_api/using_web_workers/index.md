@@ -24,13 +24,13 @@ Worker - это объект, создаваемый конструктором 
 
 ## Выделенные Workers
 
-Как уже упоминалось выше, выделенный Worker доступен только для скрипта, который его вызвал. В этом разделе речь пойдёт о JavaScript, который можно найти в нашем [основном примере выделенного Worker](https://github.com/mdn/simple-web-worker) ([запустить скрипт](https://mdn.github.io/simple-web-worker/)): этот пример позволяет ввести два числа для умножения. Эти числа отправляются в Worker, перемножаются, а результат возвращается на страницу и отображается.
+Как уже упоминалось выше, выделенный Worker доступен только для скрипта, который его вызвал. В этом разделе речь пойдёт о JavaScript, который можно найти в нашем [основном примере выделенного Worker](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([запустить скрипт](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)): этот пример позволяет ввести два числа для умножения. Эти числа отправляются в Worker, перемножаются, а результат возвращается на страницу и отображается.
 
 Этот пример достаточно тривиален, но для ознакомления с базовыми концепциями worker-ов мы решили его упростить. Более продвинутые детали описаны далее в статье.
 
 ### Определение поддержки Worker
 
-Для большего контроля над ошибками и обратной совместимости, рекомендуется обернуть ваш код доступа к worker-у в следующий ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
+Для большего контроля над ошибками и обратной совместимости, рекомендуется обернуть ваш код доступа к worker-у в следующий ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)):
 
 ```js
 if (window.Worker) {
@@ -42,7 +42,7 @@ if (window.Worker) {
 
 ### Создание выделенного worker
 
-Создание нового worker-а — это легко. Всё что вам нужно это вызвать конструктор {{domxref("Worker.Worker", "Worker()")}}, указав URI скрипта для выполнения в потоке worker-а ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
+Создание нового worker-а — это легко. Всё что вам нужно это вызвать конструктор {{domxref("Worker.Worker", "Worker()")}}, указав URI скрипта для выполнения в потоке worker-а ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)):
 
 ```js
 var myWorker = new Worker("worker.js");
@@ -50,7 +50,7 @@ var myWorker = new Worker("worker.js");
 
 ### Передача сообщений в и из выделенного worker
 
-Магия worker-ов происходит через {{domxref("Worker.postMessage", "postMessage()")}} метод и обработчик событий {{domxref("Worker.onmessage", "onmessage")}}. Когда вы хотите отправить сообщение в worker, вы доставляете сообщение к нему вот так ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
+Магия worker-ов происходит через {{domxref("Worker.postMessage", "postMessage()")}} метод и обработчик событий {{domxref("Worker.onmessage", "onmessage")}}. Когда вы хотите отправить сообщение в worker, вы доставляете сообщение к нему вот так ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)):
 
 ```js
 first.onchange = function () {
@@ -66,7 +66,7 @@ second.onchange = function () {
 
 В приведённом фрагменте кода мы имеем два {{htmlelement("input")}} элемента, представленных переменными `first` и `second`; когда значение любой из переменных изменяется, `myWorker.postMessage([first.value,second.value])` используется для отправки обоих значений, представленных в виде массива, в worker. Посредством аргумента `message` возможна передача практически любых данных в worker.
 
-Внутри worker-a мы можем обрабатывать сообщения и отвечать на них при помощи добавления обработчика события `onmessage` подобным образом ([worker.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/worker.js)):
+Внутри worker-a мы можем обрабатывать сообщения и отвечать на них при помощи добавления обработчика события `onmessage` подобным образом ([worker.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/worker.js)):
 
 ```js
 onmessage = function (e) {
