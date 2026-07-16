@@ -6,7 +6,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_g
 
 <div>{{LearnSidebar}}</div>
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+<div>{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}</div>
 
 <p class="summary">이 문서에서는 React를 소개합니다. 우리는 React에 대한 약간의 배경지식과 사용 예시, 로컬 컴퓨터에 React 툴체인을 설정하는 방법을 배우고 프로세스에서의 React 동작 원리를 배우기 위해서 간단한 입문 앱을 만들어 봅니다.</p>
 
@@ -15,7 +15,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_g
   <tr>
    <th scope="row">필요한 사전 지식:</th>
    <td>
-    <p>코어 <a href="/ko/docs/Learn/HTML">HTML</a>, <a href="/ko/docs/Learn/CSS">CSS</a>, 및 <a href="/ko/docs/Learn/JavaScript">JavaScript</a> 언어에 익숙할 것. <a href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">터미널/커맨드라인</a>에 대한 지식.</p>
+    <p>코어 <a href="/ko/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>, 및 <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a> 언어에 익숙할 것. <a href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">터미널/커맨드라인</a>에 대한 지식.</p>
        <p>React는 JSX(JavaScript와 XML)라는 HTML-in-JavaScript 문법을 사용합니다. HTML와 JavaScript에 익숙하다면 JSX를 배우는 것에 도움이 됩니다. 또한 애플리케이션에서 발생하는 버그가 JavaScript와 관련이 있는지 아니면 React의 구체적인 도메인과 관련이 있는지 수월하게 식별하는 것에 도움이 됩니다.</p>
    </td>
   </tr>
@@ -452,4 +452,4 @@ React에서는:
 - JSX 속성은 HTML 속성과 다르기 때문에 JavaScript의 예약어와 충돌하지 않습니다. 예를 들어 HTML의 `class`는 JSX에서는 `className`입니다. 여러 개의 단어로 된 속성을 `camelCase`로 명명한다는 것을 기억해주세요.
 - props는 컴포넌트 호출에 속성처럼 쓰이고, 컴포넌트로 전달됩니다.
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+<p>{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}</p>

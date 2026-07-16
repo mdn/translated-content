@@ -33,10 +33,10 @@ Quando uma _string_ é atribuída na propriedade `returnValue` do _Event_, uma c
 | Propriedade                     | Tipo                       | Descrição                                                              |
 | ------------------------------- | -------------------------- | ---------------------------------------------------------------------- |
 | `target` {{readOnlyInline}}     | {{domxref("EventTarget")}} | O evento alvo (the topmost target in the DOM tree).                    |
-| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}   | O tipo de evento.                                                      |
+| `type` {{readOnlyInline}}       | {{jsxref("String")}}       | O tipo de evento.                                                      |
 | `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}      | O evento é normalmente _bubble_?                                       |
 | `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}      | É possível cancelar o evento?                                          |
-| `returnValue`                   | {{domxref("DOMString")}}   | O valor de retorno do evento (a mensagem que será exibida ao usuário). |
+| `returnValue`                   | {{jsxref("String")}}       | O valor de retorno do evento (a mensagem que será exibida ao usuário). |
 
 ## Exemplos
 

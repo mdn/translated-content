@@ -9,7 +9,7 @@ slug: Web/API/Document_Object_Model
 
 DOM чаще всего используется в JavaScript, но не является его частью, поэтому иногда с DOM работают в других языках.
 
-[Введение](/ru/docs/Web/API/Document_Object_Model/Introduction) в DOM доступно.
+[Введение](/ru/docs/conflicting/Web/API/Document_Object_Model) в DOM доступно.
 
 ## DOM интерфейсы
 
@@ -24,7 +24,7 @@ DOM чаще всего используется в JavaScript, но не явл
 - {{domxref("DOMError")}}
 - {{domxref("DOMException")}}
 - {{domxref("DOMImplementation")}}
-- {{domxref("DOMString")}}
+- {{jsxref("String")}}
 - {{domxref("DOMTimeStamp")}}
 - {{domxref("DOMSettableTokenList")}}
 - {{domxref("DOMStringList")}}
@@ -331,4 +331,4 @@ DOM API для типов данных, используемых в опреде
 
 ## Смотрите также
 
-- [Примеры DOM](/ru/docs/Web/API/Document_Object_Model/Examples)
+- [Примеры DOM](/ru/docs/conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b)

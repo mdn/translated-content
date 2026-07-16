@@ -20,11 +20,7 @@ Pour plus d'information, voir le [guide sur les cookies HTTP](/fr/docs/Web/HTTP/
       </td>
     </tr>
     <tr>
-      <th scope="row">
-        <a href="/fr/docs/Glossary/Forbidden_header_name"
-          >Nom d'en-tête interdit</a
-        >
-      </th>
+      <th scope="row">{{Glossary("Forbidden_request_header", "En-tête de requête interdit")}}</th>
       <td>Non</td>
     </tr>
     <tr>
@@ -184,6 +180,6 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 ## Voir aussi
 
 - [Cookies HTTP](/fr/docs/Web/HTTP/Guides/Cookies)
-- [`Cookie`](/fr/docs/Web/HTTP/Headers/Cookie)
+- [`Cookie`](/fr/docs/Web/HTTP/Reference/Headers/Cookie)
 - [`Document.cookie`](/fr/docs/Web/API/Document/cookie)
 - [Cookies SameSite](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)

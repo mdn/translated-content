@@ -24,9 +24,9 @@ Para más información acerca de la sintaxis del constructor y sus parámetros, 
   - : Retorna un número con el valor del tamaño del elemento. `1` en el caso del `Uint8Array`.
 - Uint8Array.length
   - : Propiedad estática de tamaño cuyo valor es 3. Para el tamaño actual (número d elementos), mire {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Uint8Array.name")}}
+- {{jsxref("Function.name", "Uint8Array.name")}}
   - : Devuelve el nombre del constructor en un string. En el caso de `Uint8Array` devuelve: "Uint8Array".
-- {{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}
+- {{jsxref("TypedArray", "Uint8Array.prototype")}}
   - : Prototipo para los objetos _TypedArray_ .
 
 ## Métodos
@@ -38,7 +38,7 @@ Para más información acerca de la sintaxis del constructor y sus parámetros, 
 
 ## `Uint8Array` prototype
 
-Todos los objetos `Uint8Array` son heredados de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+Todos los objetos `Uint8Array` son heredados de {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Propiedades
 
@@ -107,7 +107,7 @@ Todos los objetos `Uint8Array` son heredados de {{jsxref("TypedArray.prototype",
   - : Devuelve una cadena localizada que representa el array y sus elementos. Véase también {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Uint8Array.prototype.toString()")}}
   - : Retorna una cadena representando el array sus elementos. Véase también {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Uint8Array.prototype[@@iterator]()")}}
   - : Retorna un nuevo objeto `Array Iterator` que contiene los valores para cada índice en el array.
 
 ## Ejemplos

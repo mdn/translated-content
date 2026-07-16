@@ -2,10 +2,8 @@
 title: JavaScript ガイド
 slug: Web/JavaScript/Guide
 l10n:
-  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
+  sourceCommit: 0b926fc3e79782401461d389fc9f17d522b39ed3
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 この JavaScript ガイドでは、[JavaScript](/ja/docs/Web/JavaScript) の使い方を紹介し、この言語の概要を説明します。言語機能についてもっと知りたい場合は、[JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)を参照してください。
 
@@ -20,7 +18,7 @@ l10n:
 - [JavaScript と Java](/ja/docs/Web/JavaScript/Guide/Introduction#javascript_と_java)
 - [ECMAScript](/ja/docs/Web/JavaScript/Guide/Introduction#javascript_と_ecmascript_仕様書)
 - [ツール](/ja/docs/Web/JavaScript/Guide/Introduction#javascript_を始めよう)
-- [Hello World](/ja/docs/Web/JavaScript/Guide/Introduction#hello_world)
+- [次に来るもの](/ja/docs/Web/JavaScript/Guide/Introduction#次に来るもの)
 
 ## 文法とデータ型
 
@@ -60,8 +58,7 @@ l10n:
 
 - [関数の定義](/ja/docs/Web/JavaScript/Guide/Functions#関数の定義)
 - [関数の呼び出し](/ja/docs/Web/JavaScript/Guide/Functions#関数の呼び出し)
-- [関数のスコープ](/ja/docs/Web/JavaScript/Guide/Functions#関数のスコープ)
-- [クロージャ](/ja/docs/Web/JavaScript/Guide/Functions#クロージャ)
+- [関数スコープとクロージャ](/ja/docs/Web/JavaScript/Guide/Functions#関数スコープとクロージャ)
 - [実引数](/ja/docs/Web/JavaScript/Guide/Functions#arguments_オブジェクトの使用) と [仮引数](/ja/docs/Web/JavaScript/Guide/Functions#関数の引数)
 - [アロー関数](/ja/docs/Web/JavaScript/Guide/Functions#アロー関数)
 
@@ -155,22 +152,21 @@ l10n:
 - [反復可能オブジェクト](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#反復可能オブジェクト)
 - [ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#ジェネレーター関数)
 
+## リソース管理
+
+概要: [JavaScript のリソース管理](/ja/docs/Web/JavaScript/Guide/Resource_management)
+
+- [`using` 宣言と `await using` 宣言](/ja/docs/Web/JavaScript/Guide/Resource_management#using_宣言と_await_using_宣言)
+- [`DisposableStack` オブジェクトと `AsyncDisposableStack` オブジェクト](/ja/docs/Web/JavaScript/Guide/Resource_management##disposablestack_オブジェクトと_asyncdisposablestack_オブジェクト)
+- [エラー処理](/ja/docs/Web/JavaScript/Guide/Resource_management#エラー処理)
+
 ## 国際化
 
 概要: [国際化](/ja/docs/Web/JavaScript/Guide/Internationalization)
 
-- [日付と時刻の整形](/ja/docs/Web/JavaScript/Guide/Internationalization#日付と時刻の書式化)
-- [数値の整形](/ja/docs/Web/JavaScript/Guide/Internationalization#数値の書式化)
+- [日付と時刻の書式化](/ja/docs/Web/JavaScript/Guide/Internationalization#日付と時刻の書式化)
+- [数値の書式化](/ja/docs/Web/JavaScript/Guide/Internationalization#数値の書式化)
 - [照合](/ja/docs/Web/JavaScript/Guide/Internationalization#照合)
-
-## メタプログラミング
-
-概要: [メタプログラミング](/ja/docs/Web/JavaScript/Guide/Meta_programming)
-
-- [`Proxy`](/ja/docs/Web/JavaScript/Guide/Meta_programming#プロキシー)
-- [ハンドラーとトラップ](/ja/docs/Web/JavaScript/Guide/Meta_programming#ハンドラーとトラップ)
-- [取り消し可能プロキシー](/ja/docs/Web/JavaScript/Guide/Meta_programming#取り消し可能_proxy)
-- [`Reflect`](/ja/docs/Web/JavaScript/Guide/Meta_programming#リフレクション)
 
 ## JavaScript モジュール
 
@@ -182,5 +178,18 @@ l10n:
 - [名前を変更する](/ja/docs/Web/JavaScript/Guide/Modules#インポートやエクスポートの名前を変更する)
 - [モジュールの集約](/ja/docs/Web/JavaScript/Guide/Modules#モジュールの集約)
 - [動的なモジュールの読み込み](/ja/docs/Web/JavaScript/Guide/Modules#動的なモジュールの読み込み)
+
+## 高度なトピック
+
+JavaScriptの基本機能をすべて学び終えたら、より専門的な機能を試してみたり、この言語の仕組みや概念についてさらに深く掘り下げてみたりすることができます。
+
+- [言語概要](/ja/docs/Web/JavaScript/Guide/Language_overview)
+- [データ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [等価性の比較と同一性](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
+- [クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)
+- [メタプログラミング](/ja/docs/Web/JavaScript/Guide/Meta_programming)
+- [メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)
 
 {{Next("Web/JavaScript/Guide/Introduction")}}

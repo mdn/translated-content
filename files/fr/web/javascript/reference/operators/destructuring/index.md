@@ -57,7 +57,7 @@ console.log(rest); // {c: 30, d: 40}
 
 ## Description
 
-Ces expressions utilisant des littéraux pour les [objets](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#litt.c3.a9raux_objets) ou les [tableaux](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#litt.c3.a9raux_de_tableaux) permettent de créer simplement des données regroupées. Une fois créées, on peut les utiliser de n'importe quelle façon, y compris comme valeur renvoyée par une fonction.
+Ces expressions utilisant des littéraux pour les [objets](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#littéraux_objets) ou les [tableaux](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#littéraux_de_tableaux) permettent de créer simplement des données regroupées. Une fois créées, on peut les utiliser de n'importe quelle façon, y compris comme valeur renvoyée par une fonction.
 
 ```js
 const x = [1, 2, 3, 4, 5]; // On crée un "paquet" de données
@@ -111,7 +111,7 @@ console.log(b); // 7
 
 ### Échange de variables
 
-Une fois le fragment de code exécuté, on aura _b_ égal à 1 et _a_ égal à 3. S'il n'avait pas été possible d'utiliser l'affectation par décomposition, l'échange des valeurs aurait nécessité une variable temporaire (pour des données binaires, on aurait pu utiliser une [permutation XOR](<https://fr.wikipedia.org/wiki/Permutation_(informatique)#En_utilisant_l.27op.C3.A9ration_XOR>)).
+Une fois le fragment de code exécuté, on aura _b_ égal à 1 et _a_ égal à 3. S'il n'avait pas été possible d'utiliser l'affectation par décomposition, l'échange des valeurs aurait nécessité une variable temporaire (pour des données binaires, on aurait pu utiliser une [permutation XOR](<https://fr.wikipedia.org/wiki/Permutation_(informatique)#En_utilisant_l'opération_XOR>)).
 
 ```js
 let a = 1;
@@ -406,7 +406,7 @@ Cela permet d'accéder directement à `id`, `displayName` et `firstName` depuis 
 
 ### Les noms de propriétés calculés et la décomposition
 
-Il est possible d'utiliser des noms de propriétés calculés, comme avec les [littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#noms_de_propri.c3.a9t.c3.a9s_calcul.c3.a9s), avec la décomposition.
+Il est possible d'utiliser des noms de propriétés calculés, comme avec les [littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#noms_de_propriétés_calculés), avec la décomposition.
 
 ```js
 let clef = "z";

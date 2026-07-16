@@ -1,27 +1,29 @@
 ---
-title: "<dfn>: 定義要素"
+title: HTML `<dfn>` 定義要素
+short-title: <dfn>
 slug: Web/HTML/Reference/Elements/dfn
-original_slug: Web/HTML/Element/dfn
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
+**`<dfn>`** [HTML](/ja/docs/Web/HTML) 要素は、定義される用語を示します。`<dfn>` 要素は、完全な定義文の中で使用する必要があります。その際、用語の完全な定義は以下のいずれかとなります。
 
-**`<dfn>`** は [HTML](/ja/docs/Web/HTML) の要素で、定義句や文の文脈の中で定義している用語を示すために用いられます。祖先である {{HTMLElement("p")}} 要素、{{HTMLElement("dt")}}/{{HTMLElement("dd")}} の組み合わせ、または直近の {{HTMLElement("section")}} 要素が用語の定義とみなされます。
+- 祖先である段落（テキストのブロック、{{HTMLElement("p")}} 要素で示されることもある）
+- {{HTMLElement("dt")}}/{{HTMLElement("dd")}} の組み合わせ
+- この `<dfn>` 要素の直近の祖先[セクション](/ja/docs/Web/HTML/Guides/Content_categories#区分コンテンツ)
 
 {{InteractiveExample("HTML デモ: &lt;dfn&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
-  A <dfn id="def-validator">validator</dfn> is a program that checks for syntax
-  errors in code or documents.
+  <dfn id="def-validator">バリデーター</dfn>とは、コードや文書に含まれる構文
+  エラーをチェックするプログラムのことです。
 </p>
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 dfn {
+  /* ここにスタイルを追加 */
 }
 ```
 
@@ -62,11 +64,9 @@ dfn {
 
 #### HTML
 
-```html
+```html-nolint
 <p>
-  The <strong>HTML Definition element (<dfn>&lt;dfn&gt;</dfn>)</strong> is used
-  to indicate the term being defined within the context of a definition phrase
-  or sentence.
+  <strong>HTML の定義要素 (<dfn>&lt;dfn&gt;</dfn>)</strong> は、定義句または文の文脈内で定義される用語を示すために使用されます。
 </p>
 ```
 
@@ -84,10 +84,7 @@ dfn {
 
 ```html-nolint
 <p>
-  The
-  <strong>HTML Definition element (<dfn id="definition-dfn">&lt;dfn&gt;</dfn>)</strong>
-  is used to indicate the term being defined within the context of a definition
-  phrase or sentence.
+  <strong>HTML の定義要素 (<dfn>&lt;dfn&gt;</dfn>)</strong> は、定義句または文の文脈内で定義される用語を示すために使用されます。
 </p>
 
 <p>
@@ -97,9 +94,7 @@ dfn {
 </p>
 
 <p>
-  Because of all of that, we decided to use the
-  <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> element for this
-  project.
+  したがって、このプロジェクトでは、<code><a href="#definition-dfn">&lt;dfn&gt;</a></code> 要素を使用することにしました。
 </p>
 ```
 
@@ -115,21 +110,17 @@ dfn {
 
 #### HTML
 
-```html
+```html-nolint
 <p>
-  The <dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn> is among the
-  most productive scientific instruments ever constructed. It has been in orbit
-  for over 20 years, scanning the sky and returning data and photographs of
-  unprecedented quality and detail.
+  <dfn><abbr title="ハッブル宇宙望遠鏡">HST</abbr></dfn>は、これまでに建造された科学観測装置の中でも、最も多くの成果を上げてきたもののひとつです。20 年以上にわたり軌道上にあり、空をくまなく観測し、かつてないほど高品質で詳細なデータや写真を送り続けています。
 </p>
 
 <p>
-  Indeed, the <abbr title="Hubble Space Telescope">HST</abbr> has arguably done
-  more to advance science than any device ever built.
+  実際、<abbr title="ハッブル宇宙望遠鏡">HST</abbr>は、これまでに作られたどの装置よりも、科学の発展に大きく貢献してきたと言えるでしょう。
 </p>
 ```
 
-`<abbr>` 要素が `<dfn>` の中で入れ子になっています。前者は用語が略語 ("HST") であることを示し、完全な用語 ("Hubble Space Telescope") を `title` 属性で定義します。後者は略語が定義される用語であることを表します。
+`<abbr>` 要素が `<dfn>` の中で入れ子になっています。前者は用語が略語 ("HST") であることを示し、完全な用語 ("Hubble Space Telescope") を `title` 属性で定義します。後者は略語が定義された用語であることを表します。
 
 #### 結果
 
@@ -141,17 +132,18 @@ dfn {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>,
+        知覚可能コンテンツ
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、ただし {{HTMLElement("dfn")}} 要素を子孫にしてはいけません。
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>、ただし {{HTMLElement("dfn")}} 要素を子孫にしてはいけません。
       </td>
     </tr>
     <tr>
@@ -161,7 +153,7 @@ dfn {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>

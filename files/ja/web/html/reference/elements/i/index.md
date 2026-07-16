@@ -1,12 +1,10 @@
 ---
-title: "<i>: 慣用テキスト要素"
+title: HTML `<i>` 慣用テキスト要素
+short-title: <i>
 slug: Web/HTML/Reference/Elements/i
-original_slug: Web/HTML/Element/i
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<i>`** は [HTML](/ja/docs/Web/HTML) の要素で、何らかの理由で他のテキストと区別されるテキストの範囲を表します。例えば、慣用句、技術用語、分類学上の呼称、などです。英文においてはよくイタリック体で表現されてきたものであり、それがこの要素の `<i>` という名前の元になっています。
 
@@ -27,8 +25,8 @@ l10n:
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 i {
+  /* ここにスタイルを追加 */
 }
 ```
 
@@ -59,10 +57,9 @@ i {
 
 この例では、 `<i>` 要素を他の言語の文字列を示すために使用することを示します。
 
-```html
+```html-nolint
 <p>
-  The Latin phrase <i lang="la">Veni, vidi, vici</i> is often mentioned in
-  music, art, and literature.
+  ラテン語の句 <i lang="la">Veni, vidi, vici</i> は、音楽、芸術、文学の分野でしばしば言及されます。
 </p>
 ```
 
@@ -76,16 +73,25 @@ i {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >, 知覚可能コンテンツ
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
       </td>
     </tr>
     <tr>
@@ -95,13 +101,19 @@ i {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
+        >
       </td>
     </tr>
     <tr>

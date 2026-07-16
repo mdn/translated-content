@@ -5,7 +5,7 @@ slug: Web/API/Element/transitioncancel_event
 
 {{APIRef("CSS3 Transitions")}}
 
-**`transitioncancel`** 事件在 [CSS 转换](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)被取消时触发。
+**`transitioncancel`** 事件在 [CSS 转换](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)被取消时触发。
 
 当以下情况时，过渡被取消：
 

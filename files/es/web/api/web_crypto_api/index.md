@@ -31,7 +31,7 @@ Esta interfaz permite el acceso a las siguientes primitivos:
 
 La Web Crypto API no resuelve todos los problemas criptográficos a los que un sitio web o una aplicación puedan encontrarse:
 
-- No flexibiliza el modelo de [same-origin security model](/es/docs/Web/Security/Same-origin_policy) del navegador, como los casos en que las claves son emitidas por entidades centralizadas utilizadas por varios sitios web.
+- No flexibiliza el modelo de [same-origin security model](/es/docs/Web/Security/Defenses/Same-origin_policy) del navegador, como los casos en que las claves son emitidas por entidades centralizadas utilizadas por varios sitios web.
 - No interactúa con hardware dedicado, tal y como smart cards, pendrives, o generadores aleatorios.
 
 > [!WARNING]

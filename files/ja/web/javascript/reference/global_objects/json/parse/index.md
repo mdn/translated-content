@@ -1,11 +1,10 @@
 ---
 title: JSON.parse()
+short-title: parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 l10n:
-  sourceCommit: c3951963f6d3397d21624cfc94a72203acad6412
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`JSON.parse()`** 静的メソッドは、文字列を JSON として解析し、文字列によって記述されている JavaScript の値やオブジェクトを構築します。オプションの**リバイバー**関数で、生成されたオブジェクトが返される前に変換を実行することができます。
 
@@ -16,10 +15,10 @@ const json = '{"result":true, "count":42}';
 const obj = JSON.parse(json);
 
 console.log(obj.count);
-// Expected output: 42
+// 予想される結果: 42
 
 console.log(obj.result);
-// Expected output: true
+// 予想される結果: true
 ```
 
 ## 構文
@@ -68,11 +67,11 @@ JSON.parse(text, reviver)
 `reviver` から別の値を返すと、元々解釈できた値はその値によって完全に置き換えます。これはルート値にも適用されます。例えば、このようになります。
 
 ```js
-const transformedObj1 = JSON.parse('[1,5,{"s":1}]', (key, value) => {
-  return typeof value === "object" ? undefined : value;
-});
+const transformedObj = JSON.parse('[1,5,{"s":1}]', (key, value) =>
+  typeof value === "object" ? undefined : value,
+);
 
-console.log(transformedObj1); // undefined
+console.log(transformedObj); // undefined
 ```
 
 一般的にこれを回避する方法はありません。JSON オブジェクトには空文字列のキーも格納することができるため、キーが空文字列の場合を特別に処理することはできません。リバイバーを実装する際には、それぞれのキーに対してどのような変換が必要かをとても正確に知る必要があります。
@@ -150,7 +149,7 @@ console.log(jsonText);
 // [[1,"one"],[2,"two"],[3,"three"]]
 
 const map2 = JSON.parse(jsonText, (key, value) =>
-  Array.isArray(value) ? new Map(value) : value,
+  Array.isArray(value) && value.every(Array.isArray) ? new Map(value) : value,
 );
 
 console.log(map2);

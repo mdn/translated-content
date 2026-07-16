@@ -2,10 +2,8 @@
 title: JavaScript リファレンス
 slug: Web/JavaScript/Reference
 l10n:
-  sourceCommit: 21e2b8f4b57964e00899bf81d9457d04e1f1009d
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
-
-{{jsSidebar}}
 
 JavaScript リファレンスは、 JavaScript 言語に関する事実の保管庫として機能します。言語全体がここで詳細に記述されています。 JavaScript のコードを書いていると、これらのページをよく参照することになります（だから「JavaScript リファレンス」という題名なのです）。
 
@@ -52,6 +50,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 - {{jsxref("EvalError")}}
 - {{jsxref("RangeError")}}
 - {{jsxref("ReferenceError")}}
+- {{jsxref("SuppressedError")}}
 - {{jsxref("SyntaxError")}}
 - {{jsxref("TypeError")}}
 - {{jsxref("URIError")}}
@@ -116,6 +115,8 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 - {{jsxref("Generator")}}
 - {{jsxref("AsyncGenerator")}}
 - {{jsxref("AsyncFunction")}}
+- {{jsxref("DisposableStack")}}
+- {{jsxref("AsyncDisposableStack")}}
 
 ### リフレクション
 
@@ -155,6 +156,8 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/using", "using")}}
+- {{jsxref("Statements/await_using", "await using")}}
 
 ### 関数とクラス
 
@@ -190,7 +193,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 ### 主要な式
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - [リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#リテラル)
 - {{jsxref("Array", "[]")}}
 - {{jsxref("Operators/Object_initializer", "{}")}}
@@ -207,7 +210,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 - {{jsxref("Operators/Property_accessors", "プロパティアクセサー", "", 1)}}
 - {{jsxref("Operators/Optional_chaining", "?.")}}
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
 - {{jsxref("Operators/new.target", "new.target")}}
 - {{jsxref("Operators/import.meta", "import.meta")}}
 - {{jsxref("Operators/super", "super")}}
@@ -222,7 +225,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 ### 単項演算子
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Operators/void", "void")}}
 - {{jsxref("Operators/typeof", "typeof")}}
 - {{jsxref("Operators/Unary_plus", "+")}}
@@ -246,7 +249,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 - {{jsxref("Operators/Greater_than", "&gt;")}} (大なり)
 - {{jsxref("Operators/Less_than_or_equal", "&lt;=")}}
 - {{jsxref("Operators/Greater_than_or_equal", "&gt;=")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Operators/in", "in")}}
 
 ### 等価演算子
@@ -327,7 +330,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 [JavaScript のクラス](/ja/docs/Web/JavaScript/Reference/Classes)
 
-- {{jsxref("Classes/Constructor", "constructor")}}
+- {{jsxref("Classes/constructor", "constructor")}}
 - {{jsxref("Classes/extends", "extends")}}
 - [プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [パブリッククラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)

@@ -95,4 +95,4 @@ svg {
 
 - CSS {{cssxref("mask-type")}} property
 - CSS {{cssxref("mask-mode")}} property
-- [CSS マスク入門](/ja/docs/Web/CSS/CSS_masking/Masking)
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)

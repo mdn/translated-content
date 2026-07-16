@@ -2,10 +2,10 @@
 title: インデックス付きコレクション
 slug: Web/JavaScript/Guide/Indexed_collections
 l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 この章では、インデックス値により順序付けされたデータのコレクションを紹介します。これには配列と、{{jsxref("Array")}} オブジェクトや {{jsxref("TypedArray")}} オブジェクトなどの配列風の構造物があります。
 
@@ -91,7 +91,7 @@ const arr = Array(9.3); // RangeError: Invalid array length
 ES2015 から単一の要素を持つ配列を生成するために {{jsxref("Array.of")}} 静的メソッドを使用することができます。
 
 ```js
-const wisenArray = Array.of(9.3); // wisenArray は 1 つの要素 9.3 だけを持つ配列
+const arr = Array.of(9.3); // arr は 1 つの要素 9.3 だけを持つ配列
 ```
 
 ## 配列要素の参照
@@ -146,7 +146,7 @@ const myArray = ["Mango", "Apple", "Orange"];
 
 実装レベルでは、JavaScript の配列は、配列のインデックスをプロパティ名として使用して、その要素を標準的なオブジェクトのプロパティとして格納します。
 
-`length` プロパティは特別です。これは常に、存在する最後の要素のインデックスより大きな正の整数をになります。（次の例では、`'Dusty'` のインデックスは `30` なので、`cats.length` は `30 + 1` を返します。）
+`length` プロパティは特別です。これは常に、存在する最後の要素のインデックスより大きな正の整数になります。（次の例では、`'Dusty'` のインデックスは `30` なので、`cats.length` は `30 + 1` を返します。）
 
 JavaScript の配列のインデックスは `0` から始まるものであり、 `1` からではないことを思い出してください。これは、`length` プロパティは配列に格納されている最大のインデックスより 1 つ大きい値になるということです。
 

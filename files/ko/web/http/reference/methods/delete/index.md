@@ -32,7 +32,7 @@ original_slug: Web/HTTP/Methods/DELETE
     </tr>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Learn/HTML/Forms">HTML 양식</a>에서 사용 가능
+        <a href="/ko/docs/Learn_web_development/Extensions/Forms">HTML 양식</a>에서 사용 가능
       </th>
       <td>No</td>
     </tr>

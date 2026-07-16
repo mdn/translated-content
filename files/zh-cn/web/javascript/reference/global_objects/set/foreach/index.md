@@ -3,8 +3,6 @@ title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 ---
 
-{{JSRef}}
-
 {{jsxref("Set")}} 实例的 **`forEach()`** 方法按插入顺序为该集合中的每个值执行一次提供的函数。
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
@@ -55,7 +53,7 @@ forEach(callbackFn, thisArg)
 - **元素的键**
 - **被遍历的 `Set`**
 
-`Set` 对象中没有键，所以前两个参数都是 {{jsxref("Set")}} 中包含的**值**。这是为了与 {{jsxref("Map/foreach", "Map")}} 和 {{jsxref("Array/forEach", "Array")}} 的 `forEach()` 方法保持一致。
+`Set` 对象中没有键，所以前两个参数都是 {{jsxref("Set")}} 中包含的**值**。这是为了与 {{jsxref("Map/forEach", "Map")}} 和 {{jsxref("Array/forEach", "Array")}} 的 `forEach()` 方法保持一致。
 
 如果提供了一个 `thisArg` 参数给 `forEach` 函数，则参数将会作为回调函数中的 `this`值。否则 `this` 值为 `undefined`。回调函数中 `this` 的绑定是根据[函数被调用时通用的 `this` 绑定规则来决定的](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)。
 

@@ -44,7 +44,7 @@ Pour identifier notre PWA, le document JSON doit inclure les propriétés `name`
 Lorsque `name` et `short_name` sont tous les deux renseignés, la valeur de `name` est utilisée dans la plupart des cas, tandis que `short_name` est utilisé lorsque l'espace d'affichage est limité.
 
 - [`description`](/fr/docs/Web/Manifest/description)
-  - : Une explication de ce que fait l'application. Elle fournit [une description accessible](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-description) de l'objectif et des fonctionnalités de l'application.
+  - : Une explication de ce que fait l'application. Elle fournit [une description accessible](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) de l'objectif et des fonctionnalités de l'application.
 
 ### Tâche
 
@@ -76,7 +76,7 @@ Il existe également un champ [`orientation`](/fr/docs/Web/Manifest/orientation)
 - [`theme_color`](/fr/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color)
   - : [La couleur par défaut des éléments d'interface du système d'exploitation ou du navigateur](/fr/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#define_a_theme_color) comme la barre d'état sur certains mobiles et la barre du titre d'application sur les systèmes d'exploitation de bureau.
 - [`background_color`](/fr/docs/Web/Manifest/background_color)
-  - : Une couleur de substitution qui peut être affichée [comme arrière-plan de l'application](/fr/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) jusqu'à ce que le CSS soit chargé. Pour créer une transition fluide entre le lancement de l'application et la fin du chargement, mieux vaudra utiliser [la couleur](/fr/docs/Web/CSS/color_value) déclarée pour [l'arrière-plan (propriété CSS `background-color`)](/fr/docs/Web/CSS/background-color) de l'application.
+  - : Une couleur de substitution qui peut être affichée [comme arrière-plan de l'application](/fr/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) jusqu'à ce que le CSS soit chargé. Pour créer une transition fluide entre le lancement de l'application et la fin du chargement, mieux vaudra utiliser [la couleur](/fr/docs/Web/CSS/Reference/Values/color_value) déclarée pour [l'arrière-plan (propriété CSS `background-color`)](/fr/docs/Web/CSS/Reference/Properties/background-color) de l'application.
 
 ### Tâche
 

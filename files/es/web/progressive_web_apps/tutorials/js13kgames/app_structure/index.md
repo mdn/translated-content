@@ -3,7 +3,7 @@ title: Estructura de una aplicación web progresiva
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps")}}
 
 Ahora que conoces la teoría detrás de las PWAs, veamos la estructura recomendada de una aplicación real. Comenzaremos analizando la aplicación [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), veamos por qué está construida de esa manera y qué beneficios aporta.
 
@@ -38,7 +38,7 @@ Es importante recordar las ventajas de PWA y tenerlas en cuenta al diseñar la a
 
 - Enlazable: aunque se comporta como una aplicación nativa, sigue siendo un sitio web; puedes hacer clic en los enlaces dentro de la página y enviar una URL a alguien si deseas compartirla.
 - Progresiva: comienza con el "buen, antiguo sitio web básico" y agrega progresivamente nuevas funciones mientras recuerdas detectar si están disponibles en el navegador y manejas con elegancia cualquier error que surja si no hay soporte disponible. Por ejemplo, un modo fuera de línea con la ayuda del servicio _workers_ es solo un rasgo adicional que mejora la experiencia del sitio web, pero aún se puede usar perfectamente sin él.
-- Adaptable: El diseño web adaptable también se aplica a las aplicaciones web progresivas, ya que ambas son principalmente para dispositivos móviles. Hay una gran variedad de dispositivos con navegadores — es importante preparar tu sitio web para que funcione en diferentes tamaños de pantalla, ventanas gráficas o densidades de píxeles, utilizando tecnologías como [metaetiqueta de la ventana gráfica](/es/docs/Mozilla/Mobile/Viewport_meta_tag), [consultas de medios CSS](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries), [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) y [Rejilla CSS](/es/docs/Web/CSS/CSS_grid_layout).
+- Adaptable: El diseño web adaptable también se aplica a las aplicaciones web progresivas, ya que ambas son principalmente para dispositivos móviles. Hay una gran variedad de dispositivos con navegadores — es importante preparar tu sitio web para que funcione en diferentes tamaños de pantalla, ventanas gráficas o densidades de píxeles, utilizando tecnologías como [metaetiqueta de la ventana gráfica](/es/docs/Mozilla/Mobile/Viewport_meta_tag), [consultas de medios CSS](/es/docs/Web/CSS/Guides/Media_queries/Using), [Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout) y [Rejilla CSS](/es/docs/Web/CSS/Guides/Grid_layout).
 
 ## Concepto diferente: streams o transmisiones
 
@@ -313,6 +313,6 @@ Cada entrada tiene su propia imagen en el directorio `data/img`. Este es nuestro
 
 En el próximo artículo veremos con más detalle cómo se almacenan en caché el intérprete de la aplicación y el contenido para su uso sin conexión con la ayuda del servicio _worker_.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps")}}
 
 {{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}

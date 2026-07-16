@@ -29,7 +29,7 @@ obj.__defineGetter__(prop, func);
 
 ## Description
 
-La méthode `__defineGetter__` permet de définir un {{jsxref("Opérateurs/L_opérateur_get", "accesseur", "", 1)}} sur un objet pré-existant.
+La méthode `__defineGetter__` permet de définir un {{jsxref("Functions/get", "accesseur", "", 1)}} sur un objet pré-existant.
 
 ## Exemples
 
@@ -73,10 +73,10 @@ console.log(o.gimmeFive); // 5
 ## Voir aussi
 
 - [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- L'opérateur {{jsxref("Opérateurs/L_opérateur_get", "get")}}
+- L'opérateur {{jsxref("Functions/get", "get")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [Guide JavaScript : définir des getters et setters](/fr/docs/Web/JavaScript/Guide/Working_with_objects#d.c3.a9finir_des_getters_et_setters)
+- [Guide JavaScript : définir des getters et setters](/fr/docs/Web/JavaScript/Guide/Working_with_objects#définir_des_getters_et_setters)
 - [\[Billet de blog\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) (en anglais)
 - [bug Firefox 647423](https://bugzil.la/647423)

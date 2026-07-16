@@ -2,10 +2,10 @@
 title: その他のフォームコントロール
 slug: Learn_web_development/Extensions/Forms/Other_form_controls
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 5f677b960051016819ecb3b1f40bc3d36a43156d
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
 
 ここでは、`<input>` 以外のフォーム要素の機能を、ドロップダウンリストや複数行のテキストフィールドなどの他の操作型から、 {{htmlelement('output')}} 要素（前回の記事で実際に使用しました）やプログレスバーなどの他の便利なフォーム機能まで、詳しく見ていきましょう。
 
@@ -43,11 +43,11 @@ l10n:
 
 `<textarea>` と通常の単一行のテキストフィールドとの主な違いは、ユーザーが送信データの中に改行を（リターンキーを押すことで）入れることができることです。
 
-`<textarea>` は閉じタグを取ることができ、既定のテキストを開始タグと終了タグの間に置いてください。これに対し、 {{HTMLElement("input")}} は閉じタグのない{{glossary("void element", "空要素")}}です。 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#値) 属性の中に既定の値が入ります。
+`<textarea>` は閉じタグを取ることができ、デフォルトのテキストを開始タグと終了タグの間に置いてください。これに対し、 {{HTMLElement("input")}} は閉じタグのない{{glossary("void element", "空要素")}}です。 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#値) 属性の中にデフォルト値が入ります。
 
 注意として、`<textarea>` 要素（その他の HTML 要素、CSS、JavaScript を含む）には何でも入れられるものの、この性質により、プレーンテキストコンテンツのように描画されます（フォームコントロール以外で [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) を使うと、プレーンテキストの代わりに HTML/「リッチ」コンテンツの API を使用できます）。
 
-視覚的には、入力されたテキストは折り返され、フォームコントロールは既定でサイズ変更可能です。最近のブラウザーではドラッグハンドルを提供しており、これをドラッグすることでテキストエリアのサイズを大きくしたり小さくしたりすることができます。
+視覚的には、入力されたテキストは折り返され、フォームコントロールはデフォルトでサイズ変更可能です。最近のブラウザーではドラッグハンドルを提供しており、これをドラッグすることでテキストエリアのサイズを大きくしたり小さくしたりすることができます。
 
 例えば、この最初の記事で用意した[例](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)でテキストエリアの使用方法が見つかります。
 
@@ -56,17 +56,17 @@ l10n:
 {{htmlelement("textarea")}} では、複数行にまたがってレンダリングするのを制御する 3 つの属性を受け付けます。
 
 - [`cols`](/ja/docs/Web/HTML/Reference/Elements/textarea#cols)
-  - : このテキストコントロールの幅（桁数）を、平均的な文字幅で指定します。これは `<textarea>` をリサイズすることで変更でき、また CSS で上書きもできるため、有効な開始時の幅です。何も指定されていない場合、既定値は 20 です。
+  - : このテキストコントロールの幅（桁数）を、平均的な文字幅で指定します。これは `<textarea>` をリサイズすることで変更でき、また CSS で上書きもできるため、有効な開始時の幅です。何も指定されていない場合、デフォルト値は 20 です。
 - [`rows`](/ja/docs/Web/HTML/Reference/Elements/textarea#rows)
-  - : このコントロールの行数を指定します。これは `<textarea>`をリサイズすることで変更でき、また CSS で上書きもできるため、有効な開始時の高さです。何も指定されていない場合、既定値は 2 です。
+  - : このコントロールの行数を指定します。これは `<textarea>`をリサイズすることで変更でき、また CSS で上書きもできるため、有効な開始時の高さです。何も指定されていない場合、デフォルト値は 2 です。
 - [`wrap`](/ja/docs/Web/HTML/Reference/Elements/textarea#wrap)
-  - : コントロールがどのようにテキストを折り返すかを指定します。値は `soft` （既定値）、この値では送信されるテキストは改行されないが、ブラウザーで表示されるテキストは折り返される、 `hard` （この値を使うには `cols` 属性を指定する必要がある）、この値では送信テキストとレンダリングされるテキストの両方が折り返される、`off`、この値では折り返しを行わない、のいずれかを取ります。
+  - : コントロールがどのようにテキストを折り返すかを指定します。値は `soft` （デフォルト値）、この値では送信されるテキストは改行されないが、ブラウザーで表示されるテキストは折り返される、 `hard` （この値を使うには `cols` 属性を指定する必要がある）、この値では送信テキストとレンダリングされるテキストの両方が折り返される、`off`、この値では折り返しを行わない、のいずれかを取ります。
 
 ### テキストエリアのリサイズの制御
 
 `<textarea>` をリサイズできるかは CSS の `resize` プロパティで制御されます。とりうる値は次の通りです。
 
-- `both`: 既定値 — 水平、垂直ともリサイズ許可
+- `both`: デフォルト値 — 水平、垂直ともリサイズ許可
 - `horizontal`: 水平のみリサイズ許可
 - `vertical`: 垂直のみリサイズ許可
 - `none`: リサイズ許可しない
@@ -95,9 +95,9 @@ l10n:
 </select>
 ```
 
-{{EmbedLiveSample("Basic_example", 120, 120)}}
+{{EmbedLiveSample("基本的な例", 120, 120)}}
 
-必要に応じて、希望する {{HTMLElement("option")}} 要素の [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性を用いて、選択ボックスの既定値を設定することができます。
+必要に応じて、希望する {{HTMLElement("option")}} 要素の [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性を用いて、選択ボックスのデフォルト値を設定することができます。
 この選択肢は、ページが読み込まれたときにあらかじめ選択されています。
 
 #### optgroup の使用
@@ -119,7 +119,7 @@ l10n:
 </select>
 ```
 
-{{EmbedLiveSample("Using_optgroup", 120, 120)}}
+{{EmbedLiveSample("optgroup の使用", 120, 120)}}
 
 {{HTMLElement("optgroup")}} 要素では、 [`label`](/ja/docs/Web/HTML/Reference/Elements/optgroup#label) 属性の値が入れ子になった選択肢の値の前に表示されます。ブラウザーは通常、それらを選択肢から視覚的に離して（すなわち太字にしたり、入れ子レベルを変えたりして）表示しますので、実際の選択肢と混同される可能性は低くなります。
 
@@ -137,11 +137,11 @@ l10n:
 </select>
 ```
 
-既定では、選択ボックスの高さは、単一の値を表示するのに十分です。選択肢の [`size`](/ja/docs/Web/HTML/Reference/Attributes/size) 属性は、選択ボックスにフォーカスがない場合に表示される選択肢の数を制御します。
+デフォルトでは、選択ボックスの高さは、単一の値を表示するのに十分です。選択肢の [`size`](/ja/docs/Web/HTML/Reference/Attributes/size) 属性は、選択ボックスにフォーカスがない場合に表示される選択肢の数を制御します。
 
 ### 複数選択の選択ボックス
 
-既定では、選択ボックスは、ユーザーに単一の値を選択させるだけです。 [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) 属性を {{HTMLElement("select")}} 要素に追加することで、オペレーティングシステムが提供する既定のメカニズム（例えば、デスクトップでは、 <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> を押しながら複数の値をクリックするなど）を使用して、ユーザーが複数の値を選択できるようにすることができます。
+デフォルトでは、選択ボックスは、ユーザーに単一の値を選択させるだけです。 [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) 属性を {{HTMLElement("select")}} 要素に追加することで、オペレーティングシステムが提供するデフォルトのメカニズム（例えば、デスクトップでは、 <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> を押しながら複数の値をクリックするなど）を使用して、ユーザーが複数の値を選択できるようにすることができます。
 
 ```html
 <select id="multi" name="multi" multiple size="2">
@@ -201,7 +201,7 @@ l10n:
 
 例えば、 `range` 入力型で `{{htmlelement("datalist")}}` に対応しているブラウザーでは、 datalist の `{{htmlelement("option")}}` 値の範囲ごとに小さなチェックマークが範囲の上に表示されます。 [`<input type="range">` のリファレンスページの例](/ja/docs/Web/HTML/Reference/Elements/input/range#目盛の追加)で見ることができます。
 
-また、 {{htmlelement('datalist')}} と [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/color) に対応しているブラウザーは、フルカラーパレットを利用できるようにしつつ、カスタマイズしたパレットを既定で表示することができます。
+また、 {{htmlelement('datalist')}} と [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/color) に対応しているブラウザーは、フルカラーパレットを利用できるようにしつつ、カスタマイズしたパレットをデフォルトで表示することができます。
 
 この場合、ブラウザーによって挙動が異なるため、このような使用はプログレッシブエンハンスメントとして考え、グレイスフルデグラデーションを保証するようにしましょう。
 
@@ -218,7 +218,7 @@ l10n:
 
 #### meter
 
-メーターバーは [`max`](/ja/docs/Web/HTML/Reference/Elements/meter#max) と [`min`](/ja/docs/Web/HTML/Reference/Elements/meter#min)t/meter#min) 値で区切られた範囲内の固定された値を表します。この値は視覚的にバーとして表示され、このバーがどのように見えるかを知るために、他のいくつかの設定された値と比較します。
+メーターバーは [`max`](/ja/docs/Web/HTML/Reference/Elements/meter#max) と [`min`](/ja/docs/Web/HTML/Reference/Elements/meter#min) 値で区切られた範囲内の固定された値を表します。この値は視覚的にバーとして表示され、このバーがどのように見えるかを知るために、他のいくつかの設定された値と比較します。
 
 - [`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low) と [`high`](/ja/docs/Web/HTML/Reference/Elements/meter#high) の値は範囲を 3 つに分割します。
   - 範囲の下位の部分は [`min`](/ja/docs/Web/HTML/Reference/Elements/meter#min) と [`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low) 値の間であり、端も含みます。
@@ -260,10 +260,6 @@ l10n:
 
 {{HTMLElement("progress")}} 要素内のコンテンツは、この要素に対応していないブラウザーや、スクリーンリーダーが発声するための代替となります。
 
-## スキルテスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: その他のコントロール](/ja/docs/Learn_web_development/Extensions/Forms) を見てください。
-
 ## まとめ
 
 最も後のいくつかの記事で見てきたように、利用できるフォーム要素にはいろいろな種類がたくさんあります。一見してすべてを詳しく覚えておく必要はなく、詳細について調べたいだけ、記事に戻ることができます。
@@ -271,8 +267,3 @@ l10n:
 いろいろなフォームコントロールの背後にある HTML をざっと理解したので、[それらのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)について見ていきましょう。
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
-
-### 高度なトピック
-
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

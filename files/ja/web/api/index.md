@@ -18,6 +18,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 - [IndexedDB](/ja/docs/Web/API/IndexedDB_API)
 - [ウィンドウ制御 API](/ja/docs/Web/API/Window_Management_API)
 - [ウィンドウ制御オーバーレイ API](/ja/docs/Web/API/Window_Controls_Overlay_API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
 - [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
 - [ウェブ共有 API](/ja/docs/Web/API/Web_Share_API)
 - [ウェブシリアル API](/ja/docs/Web/API/Web_Serial_API)
@@ -39,7 +40,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 - [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)
 - [CSS カスタムハイライト API](/ja/docs/Web/API/CSS_Custom_Highlight_API)
 - [ストレージ API](/ja/docs/Web/API/Storage_API)
 - [ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API)
@@ -56,6 +57,8 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 ### ハ
 
+- [バイブレーション API](/ja/docs/Web/API/Vibration_API)
+- [バックグラウンドタスク API](/ja/docs/Web/API/Background_Tasks_API)
 - [バックグラウンド同期 API](/ja/docs/Web/API/Background_Synchronization_API)
 - [バックグラウンドフェッチ API](/ja/docs/Web/API/Background_Fetch_API)
 - [バッジ API](/ja/docs/Web/API/Badging_API)
@@ -72,6 +75,10 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 ### ヤ
 
 - [URL API](/ja/docs/Web/API/URL_API)
+
+### ラ
+
+- [レポート API](/ja/docs/Web/API/Reporting_API)
 
 ## API 仕様書英語索引
 

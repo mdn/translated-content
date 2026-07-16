@@ -3,7 +3,7 @@ title: Создаём свою функцию
 slug: Learn_web_development/Core/Scripting/Build_your_own_function
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}
 
 Эта статья призвана дать практический опыт на основе теоретических знаний приведённых в [предыдущей статье](/ru/docs/Learn_web_development/Core/Scripting/Functions). Попутно мы также объясним некоторые важные детали работы с функциями.
 
@@ -277,4 +277,4 @@ btn.onclick = displayMessage();
 
 В этой статье мы познакомились со всем процессом создания практической пользовательской функции, которую с небольшими доработками можно перенести в реальный проект. В следующей статье мы рассмотрим ещё одну важную концепцию — возвращаемые значения функций.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}

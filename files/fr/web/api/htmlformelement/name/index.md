@@ -1,32 +1,35 @@
 ---
-title: HTMLFormElement.name
+title: "HTMLFormElement : propriété name"
+short-title: name
 slug: Web/API/HTMLFormElement/name
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété `HTMLFormElement.name` représente le nom de l'élément `form` sous la forme d'une chaîne de caratères.
+La propriété `name` de l'interface {{DOMxRef("HTMLFormElement")}} représente le nom de l'élément HTML {{HTMLElement("form")}} sous la forme d'une chaîne de caractères.
 
-Si votre {{HTMLElement("Form")}} contient un élément appelé _name_, alors ce dernier redéfinit la propriété `form.name`, afin que vous ne puissiez y accéder. Internet Explorer (IE) bloque la définition ou la modification du nom d'un élément créé avec `createElement()` à partir de la propriété `name`.
+Si votre {{HTMLElement("form")}} contient un élément appelé _name_, alors ce dernier redéfinit la propriété `form.name`, afin que vous ne puissiez y accéder.
 
-## Syntaxe
+## Valeur
 
-```js
-string = form.name;
-form.name = string;
-```
+Une chaîne de caractères.
 
 ## Exemple
 
 ```js
-var form1name = document.getElementById("form1").name;
+const form1name = document.getElementById("form1").name;
 
-if (form1name&nbsp;!= document.form.form1) {
-   // browser doesn't support this form of reference
+if (form1name !== document.form.form1) {
+  // le navigateur ne prend pas en charge cette forme de référence
 }
 ```
 
 ## Spécification
 
-- [HTML 5, Section 4.10.3, The form Element](https://www.w3.org/TR/html5/forms.html#dom-form-name)
-- [DOM Level 2 HTML: name](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-22051454)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

@@ -15,7 +15,7 @@ l10n:
 
 ### CSS
 
-- [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient)、[`linear-gradient()`](/ja/docs/Web/CSS/gradient/linear-gradient)、[`radial-gradient()`](/ja/docs/Web/CSS/gradient/radial-gradient) 関数で作成するグラデーション、および繰り返しのグラデーションの [`repeating-conic-gradient()`](/ja/docs/Web/CSS/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/ja/docs/Web/CSS/gradient/repeating-linear-gradient)、[`repeating-radial-gradient()`](/ja/docs/Web/CSS/gradient/repeating-radial-gradient) 関数で、[`<color-interpolation-method>`](/ja/docs/Web/CSS/color-interpolation-method) の使用をサポートしました ([Firefox bug 1861363](https://bugzil.la/1861363))。
+- [`conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient)、[`linear-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)、[`radial-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/radial-gradient) 関数で作成するグラデーション、および繰り返しのグラデーションの [`repeating-conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient)、[`repeating-radial-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient) 関数で、[`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method) の使用をサポートしました ([Firefox bug 1861363](https://bugzil.la/1861363))。
 
 ### JavaScript
 
@@ -36,7 +36,7 @@ l10n:
 
 - 安全なコンテンツで、Firefox は音声、動画、画像のサブリソースの要求を自動的に HTTP から HTTPS へアップグレードして、その他のメディアの HTTP 要求はブロックするようになりました。メディアのホストが HTTPS をサポートしてないためアップグレードした要求が失敗した場合は、メディアを見つけられません。
   これは、コンテンツが HTTPS で安全に提供されている場合はすべてのサブリソースも安全に提供されること、そうでない場合はまったく提供されないことを保証します。
-  ページが [混在コンテンツ](/ja/docs/Web/Security/Mixed_content) を表示することがなくなったため、ページが混在コンテンツを含むことを示すアイコンも Firefox から削除しました。また、コンソールで混在コンテンツの警告を、要求がアップグレードされたことを表す警告に置き換えました ([Firefox bug 1779757](https://bugzil.la/1779757))。
+  ページが [混在コンテンツ](/ja/docs/Web/Security/Defenses/Mixed_content) を表示することがなくなったため、ページが混在コンテンツを含むことを示すアイコンも Firefox から削除しました。また、コンソールで混在コンテンツの警告を、要求がアップグレードされたことを表す警告に置き換えました ([Firefox bug 1779757](https://bugzil.la/1779757))。
 
 ### API
 
@@ -82,7 +82,7 @@ l10n:
 
 - **相対的な色で `calc()` カラーチャンネルをサポート:** `layout.css.relative-color-syntax.enabled`。
 
-  CSS の [`calc()`](/ja/docs/Web/CSS/calc) 関数で、[相対的な色](/ja/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) のカラーチャンネルを解析できるようになりました ([Firefox bug 1889561](https://bugzil.la/1889561))。
+  CSS の [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数で、[相対的な色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors#using_math_functions) のカラーチャンネルを解析できるようになりました ([Firefox bug 1889561](https://bugzil.la/1889561))。
 
 - **JavaScript `Float16Array` 型付き配列**: `javascript.options.experimental.float16array`。
 

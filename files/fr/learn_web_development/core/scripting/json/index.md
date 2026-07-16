@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/JSON
 original_slug: Learn/JavaScript/Objects/JSON
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Le JavaScript Object Notation (JSON) est un format standard utilisé pour représenter des données structurées de façon semblable aux objets Javascript. Il est habituellement utilisé pour structurer et transmettre des données sur des sites web (par exemple, envoyer des données depuis un serveur vers un client afin de les afficher sur une page web ou vice versa). Comme cette notation est extrêmement courante, cet article a pour but de vous donner les connaissances nécessaires pour travailler avec JSON en JavaScript, vous apprendre à analyser la syntaxe du JSON afin d'en extraire des données et écrire vos propres objets JSON.
 
@@ -15,10 +15,10 @@ Le JavaScript Object Notation (JSON) est un format standard utilisé pour repré
       <td>
         Vocabulaire de base d'informatique, connaissances de base en HTML et
         CSS, connaissances de base en JavaScript (voir
-        <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et
-        <a href="/fr/docs/Learn/JavaScript/Building_blocks">Les blocs</a>) et en
+        <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas</a> et
+        <a href="/fr/docs/Learn_web_development/Core/Scripting/Building_blocks">Les blocs</a>) et en
         Javascript orienté objets (voir
-        <a href="/fr/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting/Object-oriented/Introduction"
           >Introduction aux objets</a
         >).
       </td>
@@ -236,7 +236,7 @@ function populateHeader(jsonObj) {
 }
 ```
 
-Nous avons appelé le paramètre de cette fonction `jsonObj` afin de garder en tête que cet objet JavaScript provient du JSON. Ici, nous créons tout d'abord un élément {{HTMLElement("h1")}} à l'aide de [`createElement()`](/fr/docs/Web/API/Document/createElement), nous fixons son [`textContent`](/fr/docs/Web/API/Node/textContent) à la valeur de la propriété `squadName` de l'objet, puis nous l'ajoutons à l'en-tête en utilisant [`appendChild()`](/fr/docs/Web/API/Node/appendChild). Ensuite, nous faisons quelque chose de relativement similaire avec un élément paragraphe : nous le créons, fixons son contenu et l'ajoutons à l'en-tête. La seule différence est que pour son contenu, nous avons concaténé la chaîne de caractère `homeTown` et la propriété `formed` de l'objet.
+Nous avons appelé le paramètre de cette fonction `jsonObj` afin de garder en tête que cet objet JavaScript provient du JSON. Ici, nous créons tout d'abord un élément `{{htmlelement("Heading_Elements", "&lt;h1&gt;")}}` à l'aide de [`createElement()`](/fr/docs/Web/API/Document/createElement), nous fixons son [`textContent`](/fr/docs/Web/API/Node/textContent) à la valeur de la propriété `squadName` de l'objet, puis nous l'ajoutons à l'en-tête en utilisant [`appendChild()`](/fr/docs/Web/API/Node/appendChild). Ensuite, nous faisons quelque chose de relativement similaire avec un élément paragraphe : nous le créons, fixons son contenu et l'ajoutons à l'en-tête. La seule différence est que pour son contenu, nous avons concaténé la chaîne de caractère `homeTown` et la propriété `formed` de l'objet.
 
 ### Création des fiches des héros
 
@@ -345,4 +345,4 @@ Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON dans 
 - [Les méthodes de requêtes HTTP](/fr/docs/Web/HTTP/Reference/Methods)
 - [Le site web officiel avec un lien vers les normes de l'ECMA](http://json.org)
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

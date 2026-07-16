@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Website_security
 original_slug: Learn/Server-side/First_steps/Website_security
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 La Seguridad web require vigilancia en todos los aspectos del diseño y uso de un sitio web. Este artículo introductorio no te hará un gurú de la seguridad en sitios web, pero te ayudará a entender de donde vienen las amenazas y qué puedes hacer para fortalecer tu aplicación web contra los ataques más comunes.
 
@@ -145,4 +145,4 @@ Este artículo ha explicado el concepto de seguridad en sitios web y algunas de 
 
 Hemos llegado al final de [este módulo](/es/docs/Learn_web_development/Extensions/Server-side/First_steps), tratando tus primeros pasos en la programación de lado servidor de un sitio web. Esperamos que hayas disfrutado del aprendizaje de los conceptos fundamentales y estés listo para seleccionar un framework web y empezar a programar.
 
-{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}

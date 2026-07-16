@@ -11,4 +11,4 @@ CSS에서, **가상 클래스(pseudo-class)** 선택자는 문서 트리의 정�
 
 ## 같이 보기
 
-- [가상 클래스 문서](/ko/docs/Web/CSS/Pseudo-classes)
+- [가상 클래스 문서](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

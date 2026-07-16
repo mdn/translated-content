@@ -49,5 +49,5 @@ l10n:
 ## 参见
 
 - HTML [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title)
-- CSS [`:placeholder-shown`](/zh-CN/docs/Web/CSS/:placeholder-shown) 伪类选择器
-- CSS [`::placeholder`](/zh-CN/docs/Web/CSS/::placeholder) 伪元素选择器
+- CSS [`:placeholder-shown`](/zh-CN/docs/Web/CSS/Reference/Selectors/:placeholder-shown) 伪类选择器
+- CSS [`::placeholder`](/zh-CN/docs/Web/CSS/Reference/Selectors/::placeholder) 伪元素选择器

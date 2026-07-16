@@ -17,7 +17,7 @@ slug: Web/HTTP/Reference/Methods/DELETE
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Safe","Безопасный")}}
+        {{Glossary("Safe/HTTP", "Безопасный")}}
       </th>
       <td>Нет</td>
     </tr>
@@ -36,7 +36,7 @@ slug: Web/HTTP/Reference/Methods/DELETE
     <tr>
       <th scope="row">
         Допускается в
-        <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Forms"
+        <a href="/ru/docs/Learn_web_development/Extensions/Forms"
           >HTML-формах</a
         >
       </th>

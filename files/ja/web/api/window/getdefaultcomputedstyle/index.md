@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
-`getDefaultComputedStyle()` メソッドは、要素のすべての CSS プロパティの既定の[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)を返します。この際、作成者によるスタイル設定は無視されます。つまり、ユーザーエージェントとユーザーによるスタイル設定のみが考慮されます。
+`getDefaultComputedStyle()` メソッドは、要素のすべての CSS プロパティの既定の[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)を返します。この際、作成者によるスタイル設定は無視されます。つまり、ユーザーエージェントとユーザーによるスタイル設定のみが考慮されます。
 
 ## 構文
 

@@ -115,5 +115,5 @@ p {
 - Остальные списковые HTML-элементы: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} и устаревший {{HTMLElement("dir")}};
 - CSS-свойства, которые были бы полезны для стилизации `<li>` элементов:
   - свойство {{cssxref("list-style")}}, для выбора стиля маркера/порядкового номера,
-  - [CSS счётчики](/ru/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), для обработки сложных вложенных списков,
+  - [CSS счётчики](/ru/docs/Web/CSS/Guides/Counter_styles/Using_counters), для обработки сложных вложенных списков,
   - свойство {{cssxref("margin")}}, для контроля отступа между элементами списка.

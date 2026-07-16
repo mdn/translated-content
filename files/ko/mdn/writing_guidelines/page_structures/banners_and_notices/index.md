@@ -48,4 +48,4 @@ browser-compat: api.Ink
   또한 페이지 머리말에 `status`를 `deprecated`로 추가합니다.
 - `\{{Non-standard_Header}}` — 기술 사용이 여러 브라우저에서 구현되더라도 공식 사양의 일부가 아님을 나타내는 **비표준** 배너를 생성합니다.
   또한 페이지 머리말에 `status`를 `non-standard`로 추가합니다.
-- `\{{SecureContext_Header}}` — [보안 컨텍스트](/ko/docs/Web/Security/Secure_Contexts)에서만 기술을 사용할 수 있음을 나타내는 **보안 컨텍스트** 배너를 생성합니다.
+- `\{{SecureContext_Header}}` — [보안 컨텍스트](/ko/docs/Web/Security/Defenses/Secure_Contexts)에서만 기술을 사용할 수 있음을 나타내는 **보안 컨텍스트** 배너를 생성합니다.

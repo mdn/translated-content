@@ -1,87 +1,33 @@
 ---
-title: "<base> : l'élément pour l'URL de base du document"
+title: "Élément HTML `<base>` : l'élément pour l'URL de base du document"
+short-title: <base>
 slug: Web/HTML/Reference/Elements/base
-original_slug: Web/HTML/Element/base
+l10n:
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<base>`** définit l'URL de base à utiliser pour toutes les URL _relatives_ d'un document. Il ne peut y avoir qu'un seul élément `<base>` dans un document.
 
-L'élément **`<base>`** définit l'URL de base à utiliser pour recomposer toutes les URL relatives contenues dans un document. Il ne peut y avoir qu'un seul élément `<base>` au sein d'un document.
-
-Il est possible d'accéder à l'URL de base d'un document via un script en utilisant [`Node.baseURI`](/fr/docs/Web/API/Node/baseURI). Si le document ne possède pas d'élément `<base>`; la base par défaut pour la composition des URL sera l'URL courante.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
-        >
-      </th>
-      <td>Contenu de méta-données.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>
-        Aucun, c'est un
-        <a href="/fr/docs/Glossary/Empty_element">élément vide</a>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Il ne doit pas y avoir de balise fermante.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>
-        N'importe quel élément
-        <a href="/fr/docs/Web/HTML/Element/head"><code>&#x3C;head></code></a>
-        qui ne contient pas un autre élément
-        <a href="/fr/docs/Web/HTML/Element/base"><code>&#x3C;base></code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLBaseElement"
-          ><code>HTMLBaseElement</code></a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+L'URL de base utilisée par un document peut être obtenue par les scripts avec {{DOMxRef("Node.baseURI")}}. Si le document ne contient aucun élément `<base>`, alors `baseURI` prend la valeur de {{DOMxRef("location.href")}}.
 
 ## Attributs
 
-Les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) peuvent être utilisés sur cet élément.
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 > [!WARNING]
-> Si l'un des attributs suivants est spécifié, cet élément **doit** venir avant d'autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` de [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link).
+> Un élément `<base>` doit avoir un attribut `href`, un attribut `target` ou les deux.
+> Si au moins un de ces attributs est défini, l'élément `<base>` **doit** précéder les autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` d'un élément {{HTMLElement("link")}}.
 
-- **`href`**
-  - : L'URL de base à utiliser afin de recomposer les URL relatives contenues dans le document. Si cet attribut est défini, cet élément doit être présent avant les éléments dont les attributs sont des URL.
-    Les URI absolues et relatives sont autorisées (voir la note ci-après).
-- **`target`**
-  - : Un **mot-clé** ou un **nom défini par l'auteur** du [contexte de navigation](/fr/docs/Glossary/Browsing_context) par défaut pour afficher les résultats de la navigation à partir des éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a), [`<area>`](/fr/docs/Web/HTML/Reference/Elements/area) ou [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) sans attributs `target` explicites.
-
-    Les mots-clés suivants ont des significations particulières :
-    - `_self` : Charge le résultat dans le contexte de navigation courant. C'est la valeur par défaut de l'attribut s'il n'est pas utilisé.
-    - `_blank` : Charge le résultat dans un nouveau contexte de navigation.
-    - `_parent` : Charge le résultat dans le contexte de navigation parent du contexte courant. S'il n'y a pas de parent, cette option aura le même effet que `_self`.
-    - `_top` : Charge le résultat dans le contexte de navigation de plus haut niveau (c'est-à-dire le contexte de navigation qui est un ancêtre du contexte courant et qui n'a pas de parent). S'il n'y a pas de parent, cette option aura le même effet que `_self`.
+- `href`
+  - : L'URL de base à utiliser dans tout le document pour les URL relatives.
+    Les URL absolues et relatives sont autorisées.
+    Les URL [`data:`](/fr/docs/Web/URI/Reference/Schemes/data) et [`javascript:`](/fr/docs/Web/URI/Reference/Schemes/javascript) ne sont pas autorisées.
+- `target`
+  - : Un **mot-clé** ou un **nom défini par l'auteur** du {{Glossary("browsing context", "contexte de navigation")}} par défaut pour afficher les résultats de la navigation à partir des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} ou {{HTMLElement("form")}} sans attribut `target` explicite. Les mots-clés suivants ont des significations particulières&nbsp;:
+    - `_self` (par défaut)&nbsp;: Affiche le résultat dans le contexte de navigation courant.
+    - `_blank`&nbsp;: Affiche le résultat dans un nouveau contexte de navigation sans nom.
+    - `_parent`&nbsp;: Affiche le résultat dans le contexte de navigation parent du contexte courant, si la page courante est dans un cadre. S'il n'y a pas de parent, agit comme `_self`.
+    - `_top`&nbsp;: Affiche le résultat dans le contexte de navigation le plus haut (le contexte de navigation qui est un ancêtre du contexte courant et qui n'a pas de parent). S'il n'y a pas de parent, agit comme `_self`.
 
 ## Notes d'utilisation
 
@@ -91,15 +37,18 @@ Si plusieurs éléments `<base>` sont utilisés, seules les premières valeurs p
 
 ### Ancres dans la page
 
-Les ancres d'une page ([`<a>`](/fr/docs/Web/HTML/Reference/Elements/a)), par exemple `<a href="#ancre">ancre</a>`, sont résolues avec l'URL de base fournie via `<base>` et déclenche une requête HTTP vers l'URL de base.
+Les liens pointant vers un fragment dans le document — par exemple, `<a href="#un-id">` — sont résolus avec le `<base>`, ce qui déclenche une requête HTTP vers l'URL de base avec le fragment ajouté.
 
-1. Soit `<base href="https://example.com">`
-2. … et ce lien : `<a href="#ancre">Anker</a>`
-3. … le lien enverra vers `https://example.com/#ancre`.
+Par exemple, avec `<base href="https://example.com/">` et ce lien&nbsp;: `<a href="#ancre">Vers l'ancre</a>`. Le lien pointe vers `https://example.com/#ancre`.
+
+### `target` ne doit pas contenir de saut de ligne ASCII, de tabulation ou de <
+
+Si l'attribut [`target`](#target) contient un saut de ligne ASCII, une tabulation ou le caractère `<`, la valeur est réinitialisée à `_blank`.
+Ceci vise à empêcher les attaques d'injection de balisage flottant, une attaque sans script dans laquelle un attribut `target` non fermé est injecté dans la page, de sorte que tout texte qui suit est capturé jusqu'à ce que le navigateur atteigne un caractère qui ferme l'attribut.
 
 ### Open Graph
 
-Les balises [Open Graph](https://ogp.me/) ne tiennent pas de compte de l'élément `<base>`, et doivent toujours avoir des URL absolues complètes. Par exemple :
+Les balises [Open Graph](https://ogp.me/) ne tiennent pas de compte de l'élément `<base>`, et doivent toujours avoir des URL absolues complètes. Par exemple&nbsp;:
 
 ```html
 <meta property="og:image" content="https://example.com/thumbnail.jpg" />
@@ -112,6 +61,57 @@ Les balises [Open Graph](https://ogp.me/) ne tiennent pas de compte de l'éléme
 <base target="_blank" />
 <base target="_top" href="https://example.com/" />
 ```
+
+## Résumé technique
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>Contenu de méta-données.</td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        Aucun&nbsp;; c'est un
+        {{Glossary("void element", "élément vide")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>Il ne doit pas y avoir de balise fermante.</td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        N'importe quel élément
+        {{HTMLElement("head")}}
+        qui ne contient pas un autre élément
+        <code>&#x3C;base></code>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Aucun <code>role</code> autorisé</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{DOMxRef("HTMLBaseElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Spécifications
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Floats
 original_slug: Learn/CSS/CSS_layout/Floats
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
 
 Originalmente pensada para flotar imágenes dentro de bloques de texto, la propiedad {{cssxref("float")}} se convirtió en una de las herramientas más usadas para crear diseños multicolumna en las páginas web. Con la llegada de Flexbox y Grid ha vuelto ahora a su propósito original, como se explica en este artículo.
 
@@ -14,10 +14,10 @@ Originalmente pensada para flotar imágenes dentro de bloques de texto, la propi
       <th scope="row">Requisitos previos:</th>
       <td>
         HTML básico (ver
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >), y una idea de Cómo funciona CSS (ver
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción a CSS</a>.)
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción a CSS</a>.)
       </td>
     </tr>
     <tr>
@@ -587,7 +587,7 @@ Este ejemplo funciona creando lo que se conoce como un _**block formatting conte
 
 ### display: flow-root
 
-La manera moderna de resolver este problema es usar el valor `flow-root` de la propiedad `display`. Esto existe solo para crear un BFC sin usar hacks; no habrá consecuencias no deseadas cuando lo use. Elimina `overflow: auto` de la regla `.wrapper` y añade `display: flow-root`. Asumiendo que tu [navegador sea compatible](/es/docs/Web/CSS/display#browser_compatibility), la caja se limpiará.
+La manera moderna de resolver este problema es usar el valor `flow-root` de la propiedad `display`. Esto existe solo para crear un BFC sin usar hacks; no habrá consecuencias no deseadas cuando lo use. Elimina `overflow: auto` de la regla `.wrapper` y añade `display: flow-root`. Asumiendo que tu [navegador sea compatible](/es/docs/Web/CSS/Reference/Properties/display#browser_compatibility), la caja se limpiará.
 
 ```css
 .wrapper {
@@ -665,4 +665,4 @@ body {
 
 Ahora ya sabes todo lo que tienes que saber sobre los flotadores en el desarrollo web moderno. Consulta el artículo sobre [métodos de diseño anticuados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods) para obtener información de cómo se solían usar, lo que puede serte útil si tienes que trabajar en proyectos antiguos.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}

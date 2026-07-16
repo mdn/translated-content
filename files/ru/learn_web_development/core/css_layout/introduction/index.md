@@ -3,7 +3,7 @@ title: Введение в CSS вёрстку
 slug: Learn_web_development/Core/CSS_layout/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{NextMenu("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout")}}
 
 В этой статье мы рассмотрим некоторые функции макета CSS, которые мы затрагивали в предыдущих статьях, например различные значения свойства {{cssxref("display")}}, и разберём некоторые концепции, которые будут рассмотрены в этой статье.
 
@@ -71,7 +71,7 @@ slug: Learn_web_development/Core/CSS_layout/Introduction
 
 ## Flexbox
 
-Flexbox (сокращение от [Flexible Box Layout](/ru/docs/Web/CSS/CSS_flexible_box_layout)) это модуль, разработанный для облегчения вёрстки в одном из измерений — как ряд или как колонка. Для использования, установите свойство `display: flex` для родительского элемента тех элементов, к которым хотите применить этот тип вёрстки; все его прямые потомки станут flex элементами. Рассмотрим это на простом примере.
+Flexbox (сокращение от [Flexible Box Layout](/ru/docs/Web/CSS/Guides/Flexible_box_layout)) это модуль, разработанный для облегчения вёрстки в одном из измерений — как ряд или как колонка. Для использования, установите свойство `display: flex` для родительского элемента тех элементов, к которым хотите применить этот тип вёрстки; все его прямые потомки станут flex элементами. Рассмотрим это на простом примере.
 
 Разметка HTML, представленная ниже, состоит из элемента `wrapper`, включающего в себя три {{htmlelement("div")}} элемента. По умолчанию все они будут изображаться как блочные, один под другим.
 
@@ -750,4 +750,4 @@ body {
 
 Эта статья предоставила короткое обобщение всех методов макетов о которых вам следует знать. Читайте далее для получения дополнительной информации по каждому методу!
 
-{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{NextMenu("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout")}}

@@ -3,7 +3,7 @@ title: "Django Руководство часть 11: Разворачивани�
 slug: Learn_web_development/Extensions/Server-side/Django/Deployment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Теперь, когда вы создали (и протестировали) свой шикарный сайт [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), у вас скорее всего, есть желание разместить его на публичном веб-сервере, чтобы он стал доступен через интернет персоналу и посетителям библиотеки. Данная статья даёт общее представление о том, каким образом подойти к поиску хостинга для размещения сайта, а также, что нужно сделать чтобы подготовить свой сайт к публикации.
 
@@ -641,4 +641,4 @@ heroku ps   #Display dyno status
   - [Как обслуживать Django Applications вместе с uWSGI и Nginx в Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
   - [Другие документы Digital Ocean Django](https://www.digitalocean.com/community/tutorials?q=django)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}

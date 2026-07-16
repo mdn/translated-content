@@ -5,7 +5,7 @@ slug: Web/API/SharedWorker/SharedWorker
 
 {{APIRef("Web Workers API")}}
 
-**`SharedWorker()`** 构造函数实例化的 {{domxref("SharedWorker")}} 对象可以执行指定的 URL 的脚本。所执行的脚本必须遵守 [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
+**`SharedWorker()`** 构造函数实例化的 {{domxref("SharedWorker")}} 对象可以执行指定的 URL 的脚本。所执行的脚本必须遵守[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)。
 
 如果 URL 的语法无效或者违反了同源策略会抛出 `SECURITY_ERR` 类型的 {{domxref("DOMException")}} 异常。
 
@@ -22,14 +22,14 @@ var myWorker = new SharedWorker(aURL, options);
 ### 参数
 
 - _URL 参数_
-  - : 一个代表了 worker 将执行的脚本 URL 的 {{domxref("DOMString")}}，它必须遵守同源策略。
+  - : 一个代表了 worker 将执行的脚本 URL 的 {{jsxref("String")}}，它必须遵守同源策略。
 - name {{optional_inline}}
-  - : 一个指定表示 worker 范围的{{domxref("SharedWorkerGlobalScope")}}的标识名称的 {{domxref("DOMString")}}，主要用于调试。
+  - : 一个指定表示 worker 范围的{{domxref("SharedWorkerGlobalScope")}}的标识名称的 {{jsxref("String")}}，主要用于调试。
 - _options_ {{optional_inline}}
   - : 创建实例时设定的包含了可选属性的对象。可用的属性包括：
-    - `type`: 一个制定所创建 worker 类型的 {{domxref("DOMString")}}。可设定的值为 `classic` 或者 `module`. 若不指定，默认值为 `classic`.
-    - `credentials`: 一个指定要用于工作程序的凭据类型的 {{domxref("DOMString")}}。可设定的值为* `omit、`*`same-origin` 或 *`include`. *若不指定，*或者 type 设定为 `classic`, *默认值为* `omit` （无需凭据）。*
-    - *`name`: *一个指定表示 worker 范围的{{domxref("SharedWorkerGlobalScope")}}的标识名称的 {{domxref("DOMString")}}，主要用于调试。
+    - `type`: 一个制定所创建 worker 类型的 {{jsxref("String")}}。可设定的值为 `classic` 或者 `module`. 若不指定，默认值为 `classic`.
+    - `credentials`: 一个指定要用于工作程序的凭据类型的 {{jsxref("String")}}。可设定的值为* `omit、`*`same-origin` 或 *`include`. *若不指定，_或者 type 设定为 `classic`, *默认值为* `omit` （无需凭据）。_
+    - *`name`: *一个指定表示 worker 范围的{{domxref("SharedWorkerGlobalScope")}}的标识名称的 {{jsxref("String")}}，主要用于调试。
 
 ### Return value
 

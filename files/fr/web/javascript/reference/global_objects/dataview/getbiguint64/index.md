@@ -1,62 +1,60 @@
 ---
-title: DataView.prototype.getBigUint64()
+title: "DataView : méthode getBigUint64()"
+short-title: getBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`getBigUint64()`** des instances de {{JSxRef("DataView")}} lit 8 octets à partir du décalage d'octet défini de cette `DataView` et les interprète comme un entier non-signé sur 64 bits. Il n'y a pas de contrainte d'alignement&nbsp;; les valeurs sur plusieurs octets peuvent être obtenues depuis n'importe quel décalage valide.
 
-La méthode **`getBigUint64()`** permet de lire un entier non signé sur 64 bits (type _unsigned long long_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.
-
-{{InteractiveExample("JavaScript Demo: DataView.getBigUint64()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: DataView.prototype.getBigUint64()")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// Créer un ArrayBuffer avec une taille en octets
 const buffer = new ArrayBuffer(16);
 
-// Highest possible BigInt value that fits in an unsigned 64-bit integer
+// Valeur BigInt maximale possible qui tient dans un entier non-signé sur 64 bits
 const max = 2n ** 64n - 1n;
 
 const view = new DataView(buffer);
 view.setBigUint64(1, max);
 
 console.log(view.getBigUint64(1));
-// Expected output: 18446744073709551615n
+// Résultat attendu : 18446744073709551615n
 ```
 
 ## Syntaxe
 
-```js
-dataview.getBigUint64(positionOctet [, littleEndian])
+```js-nolint
+getBigUint64(byteOffset)
+getBigUint64(byteOffset, littleEndian)
 ```
 
 ### Paramètres
 
-- `positionOctet`
+- `byteOffset`
   - : La position, exprimée en nombre d'octets depuis le début de la vue, à laquelle lire les données.
-- `littleEndian`
-  - : {{optional_inline}} indique si la valeur sur 64 bits est enregistrée dans l'ordre des octets {{Glossary("Endianness", "de poids faible")}}. Si le paramètre vaut `false` ou `undefined`, la valeur sera lue dans l'ordre des octets de poids forts.
+- `littleEndian` {{Optional_Inline}}
+  - : Indique si la valeur sur 64 bits est enregistrée dans l'ordre des octets {{Glossary("Endianness", "gros-boutiste ou petit-boutiste")}}. Si le paramètre vaut `false` ou `undefined`, la valeur gros-boutiste sera lue.
 
 ### Valeur de retour
 
-Une valeur {{jsxref("BigInt")}}
+Une valeur {{JSxRef("BigInt")}} comprise entre 0 et 2<sup>64</sup>-1 inclus.
 
-### Erreurs renvoyées
+### Exceptions
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel qu'il est en dehors de la vue.
-
-## Description
-
-Il n'y a pas de contrainte d'alignement, les valeurs codées sur plusieurs octets peuvent être obtenues depuis n'importe quelle position.
+- {{JSxRef("RangeError")}}
+  - : Levée si le paramètre `byteOffset` est défini de façon à lire au-delà de la fin de la vue.
 
 ## Exemples
 
-### Utilisation de la méthode `getBigUint64()`
+### Utiliser la méthode `getBigUint64()`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getBigUint64(0); // 0n
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const dataview = new DataView(buffer);
+console.log(dataview.getBigUint64(1)); // 72623859790382856n
 ```
 
 ## Spécifications
@@ -69,6 +67,7 @@ dataview.getBigUint64(0); // 0n
 
 ## Voir aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("BigInt")}}
+- Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
+- L'objet {{JSxRef("DataView")}}
+- L'objet {{JSxRef("ArrayBuffer")}}
+- L'objet {{JSxRef("BigUint64Array")}}

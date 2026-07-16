@@ -19,7 +19,7 @@ l10n:
 
 对此属性的访问受以下约束：
 
-- 必须在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中调用该属性。
+- 必须在[安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)中调用该属性。
 
 ## 规范
 

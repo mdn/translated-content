@@ -1,22 +1,18 @@
 ---
-title: "<var>: 変数要素"
+title: HTML `<var>` 変数要素
+short-title: <var>
 slug: Web/HTML/Reference/Elements/var
-original_slug: Web/HTML/Element/var
 l10n:
-  sourceCommit: 4de810dd8ec0d4a2a62f63991a6897fb5f5ac3e3
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<var>`** は [HTML](/ja/docs/Web/HTML) の要素で、数式やプログラムコード内の変数の名前を表します。挙動はブラウザーに依存しますが、通常は現在のフォントのイタリック体を使って表示されます。
 
 {{InteractiveExample("HTML デモ: &lt;var&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
-  The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where
-  <var>l</var> represents the length, <var>w</var> the width and
-  <var>h</var> the height of the box.
+  箱の体積は、<var>l</var> × <var>w</var> × <var>h</var> です。ここで、<var>l</var> は箱の長さ、<var>w</var> は幅、<var>h</var> は高さを表します。
 </p>
 ```
 
@@ -46,7 +42,7 @@ var {
 - {{HTMLElement("i")}}
 - {{HTMLElement("q")}}
 
-### 既定のスタイル
+### デフォルトのスタイル
 
 多くのブラウザーは `<var>` の表示時に {{cssxref("font-style")}} に `"italic"` を適用します。これは次のように CSS で上書きできます。
 
@@ -60,7 +56,7 @@ var {
 
 ### 基本的な例
 
-これは、 `<var>` を使用して数式の変数名を記述した単純な例です。
+これは、 `<var>` を使用して数式の変数名を記述した基本的な例です。
 
 ```html
 <p>単純な数式: <var>x</var> = <var>y</var> + 2</p>
@@ -70,9 +66,9 @@ var {
 
 {{EmbedLiveSample("Basic_example", 650,80)}}
 
-### 既定のスタイルの上書き
+### デフォルトのスタイルの上書き
 
-CSS を使用して、 `<var>` 要素の既定のスタイルを上書きすることができます。この例では、 Courier フォントがあれば、それを使って太字で表示し、なければ既定の等幅フォントに代替されます。
+CSS を使用して、 `<var>` 要素のデフォルトのスタイルを上書きすることができます。この例では、 Courier フォントがあれば、それを使って太字で表示し、なければデフォルトの等幅フォントに代替されます。
 
 #### CSS
 
@@ -105,13 +101,15 @@ var {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -119,7 +117,7 @@ var {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -131,7 +129,7 @@ var {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -139,7 +137,7 @@ var {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>

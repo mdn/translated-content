@@ -20,7 +20,7 @@ l10n:
 
 - `SecurityError`
   - : 以下のいずれかの場合に発生します。
-    - オリジンが[妥当なスキーム/ホスト名/ポート番号の組み合わせ](/ja/docs/Web/Security/Same-origin_policy#definition_of_an_origin)でない。これは例えば、オリジンが `file:` や `data:` スキームを使うときに起こります。
+    - オリジンが[妥当なスキーム/ホスト名/ポート番号の組み合わせ](/ja/docs/Web/Security/Defenses/Same-origin_policy#definition_of_an_origin)でない。これは例えば、オリジンが `file:` や `data:` スキームを使うときに起こります。
     - リクエストがポリシーの決定に反している。例えば、ユーザーがブラウザーで特定のオリジンにおいてデータの永続化を拒否している場合です。
 
     なお、ユーザーが Cookie をブロックしている場合、ブラウザーはこれをデータの永続化の拒否と解釈する可能性が高いです。

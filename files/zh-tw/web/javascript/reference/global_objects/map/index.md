@@ -41,12 +41,12 @@ new Map([iterable])
     要計算 `Map` 中有多少元素，可以使用 {{jsxref("Map.prototype.size")}}。
 - [`Map[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
   - : 用於創建派生物件的構造函數。
-- {{jsxref("Map.prototype")}}
+- {{jsxref("Map")}}
   - : 表示 `Map` 構造函數的原型，允許對所有的 `Map` 物件添加屬性
 
 ## `Map` 物件實體
 
-所有的 `Map` 實例都繼承自 {{jsxref("Map.prototype")}}.
+所有的 `Map` 實例都繼承自 {{jsxref("Map")}}.
 
 ### 屬性
 

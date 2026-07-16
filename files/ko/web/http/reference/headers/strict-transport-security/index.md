@@ -109,4 +109,4 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 - OWASP 문서: [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
 - 위키백과: [HTTP Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
 - [HSTS 프리로드 서비스](https://hstspreload.org/)
-- [보안 컨텍스트로 제한된 기능](/ko/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- [보안 컨텍스트로 제한된 기능](/ko/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)

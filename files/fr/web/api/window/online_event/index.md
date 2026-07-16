@@ -1,37 +1,39 @@
 ---
-title: "Window: online event"
+title: "Window : évènement online"
+short-title: online
 slug: Web/API/Window/online_event
+l10n:
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
 {{APIRef}}
 
-L'événement **`online`** de l'interface {{domxref("Window")}} est déclenché lorsque le navigateur a obtenu l'accès au réseau et que la valeur de {{domxref("Navigator.onLine")}} passe à `true`.
+L'évènement **`online`** de l'interface {{DOMxRef("Window")}} se déclenche lorsque le navigateur obtient l'accès au réseau et que la valeur de {{DOMxRef("Navigator.onLine")}} passe à `true`.
 
 > [!NOTE]
-> Cet événement ne doit pas être utilisé pour déterminer la disponibilité d'un site Web particulier. Des problèmes de réseau ou des pare-feu peuvent encore empêcher l'accès au site Web.
+> Cet évènement ne doit pas être utilisé pour déterminer la disponibilité d'un site Web particulier. Des problèmes de réseau ou des pare-feu peuvent encore empêcher l'accès au site Web.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
-      <td>
-        {{domxref("GlobalEventHandlers.ononline", "ononline")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènements.
+
+```js-nolint
+addEventListener("online", (event) => { })
+
+ononline = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("Event")}} générique.
+
+## Alias des gestionnaires d'évènements
+
+En plus de l'interface `Window`, la propriété de gestionnaire d'évènements `ononline` est également disponible sur les cibles suivantes&nbsp;:
+
+- {{DOMxRef("HTMLBodyElement")}}
+- {{DOMxRef("HTMLFrameSetElement")}}
+- {{DOMxRef("SVGSVGElement")}}
 
 ## Exemples
 
@@ -57,4 +59,4 @@ window.ononline = (event) => {
 
 ## Voir aussi
 
-- [`offline`](/fr/docs/Web/API/Window/offline_event)
+- L'évènement {{DOMxRef("Window/offline_event", "offline")}}

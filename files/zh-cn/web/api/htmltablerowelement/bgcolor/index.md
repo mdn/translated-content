@@ -24,7 +24,7 @@ l10n:
 
 ## 示例
 
-使用 CSS `background-color` 代替。在 {{cssxref("background-color")}} 页面有个[示例](/zh-CN/docs/Web/CSS/background-color#着色表) 可用。
+使用 CSS `background-color` 代替。在 {{cssxref("background-color")}} 页面有个[示例](/zh-CN/docs/Web/CSS/Reference/Properties/background-color#着色表) 可用。
 
 ## 规范
 

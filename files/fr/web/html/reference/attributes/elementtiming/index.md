@@ -1,10 +1,9 @@
 ---
-title: "Attribut HTML : elementtiming"
+title: "Attribut HTML : `elementtiming`"
 short-title: elementtiming
 slug: Web/HTML/Reference/Attributes/elementtiming
-original_slug: Web/HTML/Attributes/elementtiming
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`elementtiming`** sert à indiquer qu'un élément doit être suivi par des objets {{domxref("PerformanceObserver")}} utilisant le type `"element"`. Pour plus de détails, voir l'interface {{domxref("PerformanceElementTiming")}}.

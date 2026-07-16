@@ -515,7 +515,7 @@ function useDatabase(db) {
 
 ## 安全性
 
-IndexedDB 遵守[同源政策](/zh-TW/docs/Web/Security/Same-origin_policy)，所以它綁定創建它的來源網站，其他來源網站無法存取。就像對載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁的第三方 cookie 所設下的安全性和隱私權考量限制，IndexedDB 無法在載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁上運作，詳情請見 [Firefox bug 595307](https://bugzil.la/595307)。
+IndexedDB 遵守[同源政策](/zh-TW/docs/Web/Security/Defenses/Same-origin_policy)，所以它綁定創建它的來源網站，其他來源網站無法存取。就像對載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁的第三方 cookie 所設下的安全性和隱私權考量限制，IndexedDB 無法在載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁上運作，詳情請見 [Firefox bug 595307](https://bugzil.la/595307)。
 
 ## 瀏覽器關閉風險
 

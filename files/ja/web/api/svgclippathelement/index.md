@@ -35,4 +35,4 @@ _このインターフェイスでは固有のメソッドを実装していま�
 ## 関連情報
 
 - {{SVGElement("clipPath")}}
-- [CSS クリップ入門](/ja/docs/Web/CSS/CSS_masking/Clipping)
+- [CSS クリップ入門](/ja/docs/Web/CSS/Guides/Masking/Clipping)

@@ -1,11 +1,12 @@
 ---
-title: CSSTransformValue()
+title: "CSSTransformValue: CSSTransformValue() コンストラクター"
+short-title: CSSTransformValue()
 slug: Web/API/CSSTransformValue/CSSTransformValue
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 **`CSSTransformValue()`** コンストラクターは、個々の座標変換オブジェクトのリストを表す、新しい {{domxref("CSSTransformValue")}} オブジェクトを作成します。
 
@@ -18,7 +19,7 @@ new CSSTransformValue(transforms)
 ### 引数
 
 - `transforms`
-  - : 反復処理を行う {{domxref("CSSTransformComponent")}} オブジェクトのリスト
+  - : 反復処理を行う {{domxref("CSSTransformComponent")}} オブジェクトのリストです。
 
 ### 返値
 

@@ -22,7 +22,7 @@ fontcolor(color)
 ### 引数
 
 - `color`
-  - : 16 進数の RGB 値または文字列リテラルで色を表す文字列です。 [CSS 色リファレンス](/ja/docs/Web/CSS/color_value)に、色名の文字列リテラルの一覧があります。
+  - : 16 進数の RGB 値または文字列リテラルで色を表す文字列です。 [CSS 色リファレンス](/ja/docs/Web/CSS/Reference/Values/color_value)に、色名の文字列リテラルの一覧があります。
 
 ### 返値
 

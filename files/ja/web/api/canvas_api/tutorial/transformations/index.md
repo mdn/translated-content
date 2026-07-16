@@ -2,7 +2,7 @@
 title: 座標変換
 slug: Web/API/Canvas_API/Tutorial/Transformations
 l10n:
-  sourceCommit: 6ecd7270275030fac931e168d987d209b7237351
+  sourceCommit: bc9f7bec1ab48f29d241e38a9f1598f783f6b60a
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
@@ -53,11 +53,11 @@ function draw() {
   ctx.fillRect(0, 0, 150, 150); // 既定の設定で黒い長方形を描画
   ctx.save(); // 当初の既定の状態を保存
 
-  ctx.fillStyle = "#09F"; // 保存した設定を変更
+  ctx.fillStyle = "#0099ff"; // 保存した設定を変更
   ctx.fillRect(15, 15, 120, 120); // 新たな設定で青い長方形を描画
   ctx.save(); // 現在の状態を保存
 
-  ctx.fillStyle = "#FFF"; // 保存した設定を変更
+  ctx.fillStyle = "white"; // 保存した設定を変更
   ctx.globalAlpha = 0.5;
   ctx.fillRect(30, 30, 90, 90); // 新たな設定で 50% 白の長方形を描画
 
@@ -238,28 +238,33 @@ draw();
 - {{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}
   - : 引数で表した行列と、現在の変換行列で乗算を行います。変換行列は以下のとおりです。
 
-    <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
+    <!-- prettier-ignore-start -->
+
+    <math display="block">
+      <semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a & c & e \\ b & d & f \\ 0 & 0 & 1 \end{array} \right]</annotation></semantics>
+    </math>
+    <!-- prettier-ignore-end -->
 
   - : いずれかの引数が [`Infinity`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity) になる場合は、メソッドで例外を発生させないように行列を infinite としてマークしなければなりません。
 
 この関数の引数は以下のとおりです。
 
-- `a (m11)`
+- `a` (`m11`)
   - : 水平方向の拡大。
-- `b (m12)`
+- `b` (`m12`)
   - : 水平方向の歪み。
-- `c (m21)`
+- `c` (`m21`)
   - : 垂直方向の歪み。
-- `d (m22)`
+- `d` (`m22`)
   - : 垂直方向の拡大。
-- `e (dx)`
+- `e` (`dx`)
   - : 水平方向の移動。
-- `f (dy)`
+- `f` (`dy`)
   - : 垂直方向の移動。
 - {{domxref("CanvasRenderingContext2D.setTransform", "setTransform(a, b, c, d, e, f)")}}
-  - : 現在の座標変換を単位行列にリセットして、同じ引数で `transform()` メソッドを呼び出します。これは基本的に、現在の座標変換をアンドゥしてから指定した座標変換を行う操作を一度に行うものです。
+  - : 現在の座標変換を恒等行列にリセットして、同じ引数で `transform()` メソッドを呼び出します。これは基本的に、現在の座標変換をアンドゥしてから指定した座標変換を行う操作を一度に行うものです。
 - {{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}
-  - : 現在の座標変換を単位行列にリセットします。これは `ctx.setTransform(1, 0, 0, 1, 0, 0);` を呼び出すことと同じです。
+  - : 現在の座標変換を恒等行列にリセットします。これは `ctx.setTransform(1, 0, 0, 1, 0, 0);` を呼び出すことと同じです。
 
 ### `transform` と `setTransform` の例
 

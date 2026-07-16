@@ -181,7 +181,7 @@ AOM이 만들어지기 전까지, [화면 리더기](/ko/docs/Web/Accessibility/
 
 부드러운 스크롤이나 애니메이션을 위해서, 스타일 계산, 리플로우, 페인팅과 같이 메인 쓰레드를 점유하는 모든 작업은 브라우저를 16.67ms 미만만 차지해야만 합니다. 2048 X 1536 화면에서 iPad는 화면에 페인트해야 할 3,145,000 픽셀을 가지고 있습니다. 이는 매우 많은 픽셀이며, 이 픽셀은 매우 빠르게 페인팅되어야 합니다. 첫 페인팅보다 다시 페인팅하는 것이 더 빠르게 마무리되기 위해서, 화면에 그리는 작업은 일반적으로 몇 개의 레이어로 구분됩니다. 이것이 일어나면 합성이 필요합니다.
 
-페인팅은 레이아웃 트리의 요소를 레이어로 분리할 수 있습니다. 컨텐츠를 CPU의 메인 쓰레드에서 GPU 레이어로 격상하는 것은 페인트 및 리페인트 성능을 높입니다. 레이어를 가동시키는 구체적인 속성과 요소가 있습니다. 요소에는 [`<video>`](/ko/docs/Web/HTML/Reference/Elements/video) 그리고 [`<canvas>`](/ko/docs/Web/HTML/Reference/Elements/canvas)가 포함되어 있습니다. 구체적인 속성에는 [`opacity`](/ko/docs/Web/CSS/opacity), 3D [`transform`](/ko/docs/Web/CSS/transform), [`will-change`](/ko/docs/Web/CSS/will-change) 등이 있습니다. 자손 노드가 위의 이유 중 하나(혹은 여러 개)로 자신만의 레이어를 필요로 하는 것이 아니라면, 이 노드는 그들의 레이어에서 그들의 자손과 함께 그려집니다.
+페인팅은 레이아웃 트리의 요소를 레이어로 분리할 수 있습니다. 컨텐츠를 CPU의 메인 쓰레드에서 GPU 레이어로 격상하는 것은 페인트 및 리페인트 성능을 높입니다. 레이어를 가동시키는 구체적인 속성과 요소가 있습니다. 요소에는 [`<video>`](/ko/docs/Web/HTML/Reference/Elements/video) 그리고 [`<canvas>`](/ko/docs/Web/HTML/Reference/Elements/canvas)가 포함되어 있습니다. 구체적인 속성에는 [`opacity`](/ko/docs/Web/CSS/Reference/Properties/opacity), 3D [`transform`](/ko/docs/Web/CSS/Reference/Properties/transform), [`will-change`](/ko/docs/Web/CSS/Reference/Properties/will-change) 등이 있습니다. 자손 노드가 위의 이유 중 하나(혹은 여러 개)로 자신만의 레이어를 필요로 하는 것이 아니라면, 이 노드는 그들의 레이어에서 그들의 자손과 함께 그려집니다.
 
 레이어는 성능을 향상시킵니다. 하지만 메모리 관리 측면에서 봤을 때는 비싼 작업입니다. 따라서 웹 성능 최적화 전략으로 과도하게 쓰이지는 않아야 합니다.
 

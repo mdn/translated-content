@@ -3,13 +3,13 @@ title: Реализация функции обнаружения
 slug: Learn_web_development/Extensions/Testing/Feature_detection
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
 
 Обнаружение функций включает определение того, поддерживает ли браузер определённый блок кода, и выполнение другого кода в зависимости от того, поддерживает ли он или нет, так что браузер всегда может обеспечить работу, а не сбой / ошибку в некоторых браузерах. В этой статье подробно описывается, как написать собственное простое обнаружение функций, как использовать библиотеку для ускорения реализации, а также встроенные функции для обнаружения функций, такие как `@supports`.
 
-| Предусловия: | Знакомство с основными языками [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn/CSS), и [JavaScript](/ru/docs/Learn/JavaScript); идея высокого уровня [принципов кросс-браузерного тестирования.](/ru/docs/Learn_web_development/Extensions/Testing/Introduction). |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:      | Понять, что такое концепция выявления функций, и уметь внедрять подходящие решения в CSS и JavaScript.                                                                                                                                                                                                  |
+| Предусловия: | Знакомство с основными языками [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn_web_development/Core/Styling_basics), и [JavaScript](/ru/docs/Learn_web_development/Core/Scripting); идея высокого уровня [принципов кросс-браузерного тестирования.](/ru/docs/Learn_web_development/Extensions/Testing/Introduction). |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача:      | Понять, что такое концепция выявления функций, и уметь внедрять подходящие решения в CSS и JavaScript.                                                                                                                                                                                                                                                      |
 
 ## Концепция обнаружения функций
 
@@ -80,7 +80,7 @@ if ("geolocation" in navigator) {
 
 #### @supports
 
-Недавно, в CSS появился собственный механизм обнаружения собственных функций — @-правило {{cssxref("@supports")}}. Это работает аналогично [медиавыражениям](/ru/docs/Web/CSS/CSS_media_queries) (см. Также [Адаптивные проблемы дизайна](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems)) — за исключением того, что вместо выборочного применения CSS в зависимости от медиа-функции, такой как разрешение, ширина экрана или соотношение сторон, выборочно применяется CSS в зависимости от того, поддерживается ли функция CSS.
+Недавно, в CSS появился собственный механизм обнаружения собственных функций — @-правило {{cssxref("@supports")}}. Это работает аналогично [медиавыражениям](/ru/docs/Web/CSS/Guides/Media_queries) (см. Также [Адаптивные проблемы дизайна](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems)) — за исключением того, что вместо выборочного применения CSS в зависимости от медиа-функции, такой как разрешение, ширина экрана или соотношение сторон, выборочно применяется CSS в зависимости от того, поддерживается ли функция CSS.
 
 Например, мы могли бы переписать наш предыдущий пример для использования `@supports` — см. [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) и [`supports-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). Если вы посмотрите на последнее, вы увидите пару блоков `@supports` например:
 
@@ -304,4 +304,4 @@ Modernizr.fetch
 
 Далее мы начнём изучать автоматизированное тестирование.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}

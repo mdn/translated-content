@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ac5dfaa2f71a7381cd8fdd4cb554507f375ac19c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
 Los eventos son cosas que pasan en el sistema que estás programando, el cual se encarga de avisarte para que tu código pueda hacer algo al respecto.
 
@@ -19,7 +19,7 @@ Este no será un estudio exhaustivo, solo veremos lo que necesitas saber en esta
     <tr>
       <th scope="row">Pre-requisitos:</th>
       <td>
-  Conocimientos básicos de informática, entendimiento básico de HTML y CSS, <a href="/es/docs/Learn/JavaScript/First_steps"
+  Conocimientos básicos de informática, entendimiento básico de HTML y CSS, <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting"
           >Primeros pasos con JavaScript</a
         >.
       </td>
@@ -114,7 +114,7 @@ El elemento HTML {{HTMLElement("button")}} lanzará un evento cuando el usuario 
 
 - la cadena `"click"`, para indicar que queremos detectar el evento de clic.
   Los botones pueden lanzar muchos otros eventos, como [`"mouseover"`](/es/docs/Web/API/Element/mouseover_event) cuando el usuario mueve el ratón por encima del botón, o [`"keydown"`](/es/docs/Web/API/Element/keydown_event) cuando el usuario presiona una tecla y el botón está enfocado.
-- una función a llamar cuando el evento ocurra. En este caso, la función genera un color RGB aleatorio y establece el [`background-color`](/es/docs/Web/CSS/background-color) de la página [`<body>`](/es/docs/Web/HTML/Reference/Elements/body) a ese color.
+- una función a llamar cuando el evento ocurra. En este caso, la función genera un color RGB aleatorio y establece el [`background-color`](/es/docs/Web/CSS/Reference/Properties/background-color) de la página [`<body>`](/es/docs/Web/HTML/Reference/Elements/body) a ese color.
 
 Es válido crear una función manejador con su propio nombre, de la siguiente forma:
 
@@ -804,4 +804,4 @@ Si hay algo que no te quedó muy claro, tómate la libertad de leer de nuevo el 
 - [Orden de eventos](https://www.quirksmode.org/js/events_order.html) (debate sobre captura y burbujeo) - un excelente y detallado artículo por Peter-Paul Koch.
 - [Event accessing](https://www.quirksmode.org/js/events_access.html) (debate sobre el objeto evento) - otro excelente y detallado artículo por Peter-Paul Koch.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

@@ -1,37 +1,42 @@
 ---
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{Non-standard_Header}}
 
-L'objet **`InternalError`** indique qu'une erreur interne liée au moteur JavaScript s'est produite.
-De telles erreurs se produisent généralement au dépassement d'un seuil, par exemple&nbsp;:
+L'objet **`InternalError`** indique une erreur qui s'est produite en interne dans le moteur JavaScript.
+
+Les cas d'exemple concernent principalement des situations où quelque chose est trop grand, par exemple&nbsp;:
 
 - «&nbsp;trop de cas pour le `switch`&nbsp;»&nbsp;;
 - «&nbsp;trop de parenthèses dans l'expression rationnelle&nbsp;»&nbsp;;
 - «&nbsp;initialisateur de tableau trop grand&nbsp;»&nbsp;;
 - «&nbsp;trop de niveaux de récursion&nbsp;».
 
+`InternalError` est une sous-classe de {{JSxRef("Error")}}.
+
 ## Constructeur
 
-- [`InternalError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/InternalError/InternalError)
+- {{JSxRef("InternalError/InternalError", "InternalError()")}} {{Non-standard_Inline}}
   - : Crée un nouvel objet `InternalError`.
 
-## Propriétés des instances
+## Propriétés d'instance
 
-- [`InternalError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
-  - : Message d'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`InternalError.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
-  - : Nom d'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`InternalError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
-  - : Le chemin du fichier qui a déclenché cette erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`InternalError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
-  - : Le numéro de la ligne du fichier qui a déclenché cette erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`InternalError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
-  - : Le numéro de colonne de la ligne du fichier qui a déclenché cette erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`InternalError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
-  - : La pile d'appels, héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+_Hérite aussi des propriétés d'instance de son parent {{JSxRef("Error")}}._
+
+Ces propriétés sont définies sur `InternalError.prototype` et partagées par toutes les instances de `InternalError`.
+
+- {{JSxRef("Object/constructor", "InternalError.prototype.constructor")}}
+  - : La fonction constructeur qui a créé l'objet d'instance. Pour les instances de `InternalError`, la valeur initiale est le constructeur {{JSxRef("InternalError/InternalError", "InternalError")}}.
+- {{JSxRef("Error/name", "InternalError.prototype.name")}}
+  - : Représente le nom du type d'erreur. Pour `InternalError.prototype.name`, la valeur initiale est `"InternalError"`.
+
+## Méthodes d'instance
+
+_Hérite des méthodes d'instance de son parent {{JSxRef("Error")}}._
 
 ## Exemples
 
@@ -41,10 +46,9 @@ Cette fonction récursive s'appelle 10 fois, comme indiquée par la condition d'
 
 ```js
 function boucle(x) {
-  if (x >= 10) {
-    // "x >= 10" représente la condition d'arrêt
-    return;
-  }
+  // "x >= 10" représente la condition d'arrêt
+  if (x >= 10) return;
+
   // faire des trucs
   boucle(x + 1); // l'appel récursif
 }
@@ -55,9 +59,8 @@ En changeant cette condition avec une valeur extrêmement grande, cela ne foncti
 
 ```js example-bad
 function boucle(x) {
-  if (x >= 1000000000000) {
-    return;
-  }
+  if (x >= 1000000000000) return;
+
   // faire des trucs
   boucle(x + 1);
 }
@@ -70,7 +73,7 @@ Pour plus d'informations, voir [la page sur `InternalError: too much recursion`]
 
 ## Spécifications
 
-Cet objet ne fait partie d'aucune spécification.
+Ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -78,5 +81,5 @@ Cet objet ne fait partie d'aucune spécification.
 
 ## Voir aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- L'objet {{JSxRef("Error")}}
 - [`InternalError: too much recursion`](/fr/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)

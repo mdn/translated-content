@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`isSecureContext`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、現在の[コンテキストが安全か](/ja/docs/Web/Security/Secure_Contexts) (`true`) 否か (`false`) を示す論理値を返します。
+**`isSecureContext`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、現在の[コンテキストが安全か](/ja/docs/Web/Security/Defenses/Secure_Contexts) (`true`) 否か (`false`) を示す論理値を返します。
 
 ## 値
 
@@ -24,4 +24,4 @@ l10n:
 
 ## 関連情報
 
-- [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
+- [保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)

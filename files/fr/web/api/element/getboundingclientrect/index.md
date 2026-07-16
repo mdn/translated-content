@@ -17,7 +17,7 @@ objetRect = object.getBoundingClientRect();
 
 La valeur de retour est un objet {{domxref("DOMRect")}} qui est le plus petit rectangle contenant l'élément en entier, incluant sa zone de remplissage et la largeur de sa bordure. Les propriétés `left`, `top`, `right`, `bottom`, `x`, `y`, `width`, et `height`, décrivent la position et la taille du rectangle en pixels. Les propriétés autres que `width` et `height` sont relatives au coin en haut à gauche de la zone d'affichage.![Schéma d'un élément dans sa zone de remplissage, décrivant les propriétés retournées par la méthode.](element-box-diagram.png)
 
-Les propriétés `width` et `height` de l'objet {{domxref("DOMRect")}} retourné par la méthode incluent le `padding` et `border-width`, et non pas seulement la largeur/hauteur du contenu. Avec le modèle standard de boîte, cela correspondrait à la propriété `width` ou `height` de l'élément + `padding` + `border-width`. Mais si [`box-sizing: border-box`](/fr/docs/Web/CSS/box-sizing) est défini pour l'élément, cela correpondrait seulement `width` ou `height`.
+Les propriétés `width` et `height` de l'objet {{domxref("DOMRect")}} retourné par la méthode incluent le `padding` et `border-width`, et non pas seulement la largeur/hauteur du contenu. Avec le modèle standard de boîte, cela correspondrait à la propriété `width` ou `height` de l'élément + `padding` + `border-width`. Mais si [`box-sizing: border-box`](/fr/docs/Web/CSS/Reference/Properties/box-sizing) est défini pour l'élément, cela correpondrait seulement `width` ou `height`.
 
 La valeur retournée peut être conceptualisée comme l'union des rectangles retournés par {{domxref("Element.getClientRects", "getClientRects()")}} pour l'élément, i.e. les boîtes de bordure CSS associées à l'élément.
 

@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_Header}}{{SeeCompatTable}}
 
-**`anchor`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)用于将定位元素与锚点元素相关联。该属性的值即为用于指定定位元素的锚定目标元素 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性值。随后可通过 [CSS 锚点定位](/zh-CN/docs/Web/CSS/CSS_anchor_positioning/Using)对该元素进行定位。
+**`anchor`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)用于将定位元素与锚点元素相关联。该属性的值即为用于指定定位元素的锚定目标元素 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性值。随后可通过 [CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using)对该元素进行定位。
 
 > [!NOTE]
 > 或者，你可以通过 CSS 的 {{cssxref("anchor-name")}} 和 {{cssxref("position-anchor")}} 属性将定位元素与锚点元素相关联。如果同一个元素上同时使用了以上两种技术，则 CSS 定位技术优先于 HTML 定位技术。
@@ -78,7 +78,7 @@ body {
 
 - {{cssxref("position")}} 属性为 `fixed`，将其转换为定位元素以便相对于锚点位置定位。
 - 将 {{cssxref("left")}} 属性设置为 {{cssxref("anchor()")}} 函数并赋值 `right`。此操作将定位元素与锚点绑定，使其左边缘与锚点右边缘齐平。
-- {{cssxref("align-self")}} 属性设置为 [`anchor-center`](/zh-CN/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)。这将使信息框在行内方向上居中对齐于锚点的中心。
+- {{cssxref("align-self")}} 属性设置为 [`anchor-center`](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)。这将使信息框在行内方向上居中对齐于锚点的中心。
 - 将 {{cssxref("margin-left")}} 设置为 `10px`，在锚定位元素与其锚点之间创建间距。
 
 ```css
@@ -109,4 +109,4 @@ body {
 - {{domxref("HTMLElement.anchorElement")}}
 - CSS {{cssxref("anchor-name")}} 属性
 - CSS {{cssxref("position-anchor")}} 属性
-- [CSS 锚点定位](/zh-CN/docs/Web/CSS/CSS_anchor_positioning)模块
+- [CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning)模块

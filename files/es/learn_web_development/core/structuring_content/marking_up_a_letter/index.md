@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Marking_up_a_letter
 original_slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Todos aprendemos a escribir una carta más tarde o más temprano; es también práctico practicar con nuestras habilidades para dar forma a los textos. En esta prueba deberás demostrar tus habilidades para dar forma a textos, incluyendo enlaces, además pondremos a prueba tu familiaridad con algunos contenidos de encabezamiento `<head>` en HTML.
 
@@ -14,23 +14,23 @@ Todos aprendemos a escribir una carta más tarde o más temprano; es también pr
       <th scope="row">Prerrequisitos:</th>
       <td>
         Antes de intentar este examen deberías haber trabajado los artículos
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Getting started with HTML</a
         >,
         <a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
+          href="/es/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata"
           >What's in the head? Metadata in HTML</a
         >,
         <a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >HTML text fundamentals</a
         >,
         <a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/es/docs/Learn_web_development/Core/Structuring_content/Creating_links"
           >Creating hyperlinks</a
         >, y
         <a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"
+          href="/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features"
           >Advanced text formatting</a
         >.
       </td>
@@ -93,4 +93,4 @@ La siguiente captura de pantalla muestra un ejemplo de cómo se vería la carta 
 
 Si estás haciendo esta prueba como parte de un curso organizado, deberías entregar tu trabajo al profesor para que lo corrija. Si estás auto-aprendiendo puedes conseguir la guía de corrección fácilmente pidiendola en el [Hilo del area de aprendizaje](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), o en el canal IRC de [#mdn](irc://irc.mozilla.org/mdn) en [Mozilla IRC](https://wiki.mozilla.org/IRC). Intenta hacerlo primero — no ganarás nada haciendo trampas.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "conflicting/Learn_web_development/Core/Structuring_content")}}

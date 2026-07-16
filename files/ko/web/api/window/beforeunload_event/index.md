@@ -38,7 +38,7 @@ onbeforeunload = (event) => {};
 
 ## 보안
 
-[임시 사용자 활성화](/ko/docs/Web/Security/User_activation)가 필요합니다. beforeunload 이벤트가 동작하기 위해선 사용자가 페이지 또는 UI 요소와 상호 작용해야 합니다.
+[임시 사용자 활성화](/ko/docs/Web/Security/Defenses/User_activation)가 필요합니다. beforeunload 이벤트가 동작하기 위해선 사용자가 페이지 또는 UI 요소와 상호 작용해야 합니다.
 
 ## 사용 일람
 

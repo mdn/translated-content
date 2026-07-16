@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 值的 **`includes()`** 方法执行区分大小写的搜索，以确定是否可以在一个字符串中找到另一个字符串，并根据情况返回 `true` 或 `false`。
 
 {{InteractiveExample("JavaScript Demo: String.includes()", "shorter")}}

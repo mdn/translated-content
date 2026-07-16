@@ -6,7 +6,7 @@ original_slug: Web/SVG/Tutorial/Patterns
 
 {{SVGRef}}
 
-{{ PreviousNext("Web/SVG/Tutoriel/Gradients", "Web/SVG/Tutoriel/Texts") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Gradients", "Web/SVG/Tutorials/SVG_from_scratch/Texts") }}
 
 Les motifs (_patterns_ en anglais) sont sans aucun doute les types de remplissages les plus complexes à utiliser en SVG. Ce sont également des outils très puissants, ils méritent donc d'être abordés pour que vous en connaissiez les fondamentaux. Comme les dégradés, l'élément {{SVGElement('pattern')}} doit être placé dans la section `<defs>` du fichier SVG.
 
@@ -101,8 +101,7 @@ La chose à retenir est que si l'objet change de taille, le motif lui-même sera
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
-rect.setAttribute('width', 300);</textarea
->
+rect.setAttribute('width', 300);</textarea>
 ```
 
 ```js hidden
@@ -259,8 +258,7 @@ Bien sûr, cela veut dire que le motif ne sera pas mis à l'échelle si vous mod
   <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
-rect.setAttribute('width', 300);</textarea
->
+rect.setAttribute('width', 300);</textarea>
 ```
 
 ```js hidden
@@ -295,4 +293,4 @@ Les trois exemples sont illustrés ci-dessous sur un rectangle allongé à une h
 
 ![](svg_pattern_comparison_of_units.png)
 
-{{ PreviousNext("Web/SVG/Tutoriel/Gradients", "Web/SVG/Tutoriel/Texts") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Gradients", "Web/SVG/Tutorials/SVG_from_scratch/Texts") }}

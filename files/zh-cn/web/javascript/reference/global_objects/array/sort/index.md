@@ -3,8 +3,6 @@ title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 
-{{JSRef}}
-
 **`sort()`** 方法[_就地_](https://zh.wikipedia.org/wiki/原地算法)对数组的元素进行排序，并返回对相同数组的引用。默认排序是将元素转换为字符串，然后按照它们的 UTF-16 码元值升序排序。
 
 由于它取决于具体实现，因此无法保证排序的时间和空间复杂度。

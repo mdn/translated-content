@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3918b803fda416a26fc2b7a62976d2cd87187460
 ---
 
-{{JSRef}}
-
 **`Promise()`** 构造函数创建 {{jsxref("Promise")}} 对象。它主要用于封装尚未支持 Promise 的基于回调的 API。
 
 {{InteractiveExample("JavaScript Demo: Promise Constructor", "taller")}}
@@ -39,7 +37,7 @@ new Promise(executor)
 ### 参数
 
 - `executor`
-  - : 在构造函数中执行的 {{jsxref("function")}}。它接收两个函数作为参数：`resolveFunc` 和 `rejectFunc`。`executor` 中抛出的任何错误都会导致 Promise 被拒绝，并且返回值将被忽略。`executor` 的语义将在下文详细介绍。
+  - : 在构造函数中执行的 {{jsxref("Operators/function", "function")}}。它接收两个函数作为参数：`resolveFunc` 和 `rejectFunc`。`executor` 中抛出的任何错误都会导致 Promise 被拒绝，并且返回值将被忽略。`executor` 的语义将在下文详细介绍。
 
 ### 返回值
 

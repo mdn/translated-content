@@ -27,7 +27,7 @@ var myRequest = new Request(input, init);
     - `cache`: Request에서 사용할 [cache mode](/ko/docs/Web/API/Request/cache) 입니다.
     - `redirect`: Request에서 사용할 리다이렉트 모드입니다. `follow`, `error`, `manual`.이 사용 가능합니다. 크롬 47 이전 버전에서의 기본값은 `manual` 이며, 47 이후로부터 `follow` 가 사용 가능하게 되었습니다.
     - `referrer`: `no-referrer`나 `client`, URL을 지정하는 {{domxref("USVString")}}입니다.. 기본값은 `client`입니다.
-    - `integrity`: `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`같은 Request의 하위 리소스 무결성([subresource integrity](/ko/docs/Web/Security/Subresource_Integrity)) 값을 포함합니다.
+    - `integrity`: `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`같은 Request의 하위 리소스 무결성([subresource integrity](/ko/docs/Web/Security/Defenses/Subresource_Integrity)) 값을 포함합니다.
 
 ## 에러
 

@@ -3,10 +3,6 @@ title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`global`** 属性表明正则表达式是否使用了 "`g`" 标志。`global` 是一个正则表达式实例的只读属性。
 
 {{js_property_attributes(0,0,0)}}

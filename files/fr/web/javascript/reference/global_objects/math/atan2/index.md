@@ -1,13 +1,14 @@
 ---
-title: Math.atan2()
+title: "Math : méthode statique atan2()"
+short-title: atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
+l10n:
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-{{JSRef}}
+La méthode statique **`Math.atan2()`** retourne l'angle dans le plan (en radians) entre l'axe des abscisses positif et le rayon partant de (0, 0) vers le point (x, y), pour `Math.atan2(y, x)`.
 
-La fonction **`Math.atan2()`** renvoie l'arc tangente du quotient de ses arguments, ce qui, pour `Math.atan2(y,x)`, correspond à l'angle plan (exprimé en radians) entre la droite passant par l'origine et le point de coordonnées (x,y).
-
-{{InteractiveExample("JavaScript Demo: Math.atan2()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.atan2()")}}
 
 ```js interactive-example
 function calcAngleDegrees(x, y) {
@@ -15,19 +16,19 @@ function calcAngleDegrees(x, y) {
 }
 
 console.log(calcAngleDegrees(5, 5));
-// Expected output: 45
+// Sortie attendue : 45
 
 console.log(calcAngleDegrees(10, 10));
-// Expected output: 45
+// Sortie attendue : 45
 
 console.log(calcAngleDegrees(0, 10));
-// Expected output: 90
+// Sortie attendue : 90
 ```
 
 ## Syntaxe
 
-```js
-Math.atan2(y, x);
+```js-nolint
+Math.atan2(y, x)
 ```
 
 ### Paramètres
@@ -39,37 +40,115 @@ Math.atan2(y, x);
 
 ### Valeur de retour
 
-L'arc tangente du quotient formé par les deux arguments (compris dans <math><semantics><mrow><mo stretchy="false">[</mo><mo>-</mo><mi>π</mi><mo>,</mo><mi>π</mi><mo stretchy="false">]</mo></mrow><annotation encoding="TeX">[-\pi, \pi]</annotation></semantics></math>), c'est-à-dire l'angle, exprimé en radians entre l'axe des abscisses et la droite passant par l'origin (0,0) et le point de coordonnées (x,y).
+L'angle en radians (compris entre -π et π, inclus) entre l'axe des abscisses positif et le rayon partant de (0, 0) vers le point (x, y).
 
 ## Description
 
-La méthode `Math.atan2()` renvoie une valeur numérique comprise entre -Pi et Pi qui représente l'angle theta d'un point de coordonnées (x,y). Cela correspond à l'angle (dans le sens trigonométrique) entre l'axe des abscisses et le point de coordonnées (`x,y`). Attention, le premier argument de la fonction est l'ordonnée (y) et le second est l'abscisse (x).
+La méthode `Math.atan2()` mesure l'angle θ dans le sens trigonométrique, en radians, entre l'axe des abscisses positif et le point `(x, y)`. Notez que les arguments de cette fonction passent d'abord la coordonnée en ordonnée, puis la coordonnée en abscisse.
 
-![Graphique explicitant l'angle donné par un point de coordonnées X/Y](atan2.png)
+![Un diagramme montrant l'angle retourné par atan2(y, x)](atan2.png)
 
-`Math.atan2()` utilise deux arguments `x` et `y`, alors que la méthode `Math.atan()` utilise le ratio de deux nombres comme un seul argument.
+`Math.atan2()` reçoit séparément les arguments `x` et `y`, tandis que [`Math.atan()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/atan) reçoit le ratio de ces deux arguments. `Math.atan2(y, x)` diffère de `Math.atan(y / x)` dans les cas suivants&nbsp;:
 
-`atan2()` est une méthode statique de l'objet `Math`, elle doit toujours être utilisée avec la syntaxe `Math.atan2()`, elle ne doit pas être utilisée comme la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+| `x`               | `y`         | `Math.atan2(y, x)` | `Math.atan(y / x)` |
+| ----------------- | ----------- | ------------------ | ------------------ |
+| `Infinity`        | `Infinity`  | π / 4              | `NaN`              |
+| `Infinity`        | `-Infinity` | -π / 4             | `NaN`              |
+| `-Infinity`       | `Infinity`  | 3π / 4             | `NaN`              |
+| `-Infinity`       | `-Infinity` | -3π / 4            | `NaN`              |
+| 0                 | 0           | 0                  | `NaN`              |
+| 0                 | -0          | -0                 | `NaN`              |
+| < 0 (inclus `-0`) | 0           | π                  | 0                  |
+| < 0 (inclus `-0`) | -0          | -π                 | 0                  |
+| `-Infinity`       | > 0         | π                  | -0                 |
+| -0                | > 0         | π / 2              | -π / 2             |
+| `-Infinity`       | < 0         | -π                 | 0                  |
+| -0                | < 0         | -π / 2             | π / 2              |
+
+De plus, pour les points situés dans les deuxième et troisième quadrants (`x < 0`), `Math.atan2()` renverra un angle inférieur à <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> ou supérieur à <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math>.
+
+Parce que `atan2()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.atan2()`, et non comme méthode d'un objet `Math` que vous auriez créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
-### Utiliser `Math.atan2()`
+### Utiliser la méthode `Math.atan2()`
 
 ```js
 Math.atan2(90, 15); // 1.4056476493802699
 Math.atan2(15, 90); // 0.16514867741462683
+```
 
-Math.atan2( ±0, -0 );               // ±PI.
-Math.atan2( ±0, +0 );               // ±0.
-Math.atan2( ±0, -x );               // ±PI pour x > 0.
-Math.atan2( ±0, x );                // ±0 pour x > 0.
-Math.atan2( -y, ±0 );               // -PI/2 pour y > 0.
-Math.atan2( y, ±0 );                // PI/2 pour y > 0.
-Math.atan2( ±y, -Infinity );        // ±PI pour y qui est un nombre fini > 0.
-Math.atan2( ±y, +Infinity );        // ±0 pour y qui est un nombre fini > 0.
-Math.atan2( ±Infinity, x );         // ±PI/2 pour x qui est un nombre fini.
-Math.atan2( ±Infinity, -Infinity ); // ±3*PI/4.
-Math.atan2( ±Infinity, +Infinity ); // ±PI/4.
+### Différence entre `Math.atan2(y, x)` et `Math.atan(y / x)`
+
+Le script suivant affiche toutes les entrées qui produisent une différence entre `Math.atan2(y, x)` et `Math.atan(y / x)`.
+
+```js
+const formattedNumbers = new Map([
+  [-Math.PI, "-π"],
+  [(-3 * Math.PI) / 4, "-3π/4"],
+  [-Math.PI / 2, "-π/2"],
+  [-Math.PI / 4, "-π/4"],
+  [Math.PI / 4, "π/4"],
+  [Math.PI / 2, "π/2"],
+  [(3 * Math.PI) / 4, "3π/4"],
+  [Math.PI, "π"],
+  [-Infinity, "-∞"],
+  [Infinity, "∞"],
+]);
+
+function format(template, ...args) {
+  return String.raw(
+    { raw: template },
+    ...args.map((num) =>
+      (Object.is(num, -0)
+        ? "-0"
+        : (formattedNumbers.get(num) ?? String(num))
+      ).padEnd(5),
+    ),
+  );
+}
+
+console.log(`| x     | y     | atan2 | atan  |
+|-------|-------|-------|-------|`);
+
+for (const x of [-Infinity, -1, -0, 0, 1, Infinity]) {
+  for (const y of [-Infinity, -1, -0, 0, 1, Infinity]) {
+    const atan2 = Math.atan2(y, x);
+    const atan = Math.atan(y / x);
+    if (!Object.is(atan2, atan)) {
+      console.log(format`| ${x} | ${y} | ${atan2} | ${atan} |`);
+    }
+  }
+}
+```
+
+Le résultat est&nbsp;:
+
+```plain
+| x     | y     | atan2 | atan  |
+|-------|-------|-------|-------|
+| -∞    | -∞    | -3π/4 | NaN   |
+| -∞    | -1    | -π    | 0     |
+| -∞    | -0    | -π    | 0     |
+| -∞    | 0     | π     | -0    |
+| -∞    | 1     | π     | -0    |
+| -∞    | ∞     | 3π/4  | NaN   |
+| -1    | -∞    | -π/2  | π/2   |
+| -1    | -1    | -3π/4 | π/4   |
+| -1    | -0    | -π    | 0     |
+| -1    | 0     | π     | -0    |
+| -1    | 1     | 3π/4  | -π/4  |
+| -1    | ∞     | π/2   | -π/2  |
+| -0    | -∞    | -π/2  | π/2   |
+| -0    | -1    | -π/2  | π/2   |
+| -0    | -0    | -π    | NaN   |
+| -0    | 0     | π     | NaN   |
+| -0    | 1     | π/2   | -π/2  |
+| -0    | ∞     | π/2   | -π/2  |
+| 0     | -0    | -0    | NaN   |
+| 0     | 0     | 0     | NaN   |
+| ∞     | -∞    | -π/4  | NaN   |
+| ∞     | ∞     | π/4   | NaN   |
 ```
 
 ## Spécifications
@@ -82,9 +161,10 @@ Math.atan2( ±Infinity, +Infinity ); // ±PI/4.
 
 ## Voir aussi
 
-- [`Math.acos()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/acos)
-- [`Math.asin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/asin)
-- [`Math.atan()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/atan)
-- [`Math.cos()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/cos)
-- [`Math.sin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sin)
-- [`Math.tan()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/tan)
+- La méthode statique {{JSxRef("Math.acos()")}}
+- La méthode statique {{JSxRef("Math.asin()")}}
+- La méthode statique {{JSxRef("Math.atan()")}}
+- La méthode statique {{JSxRef("Math.cos()")}}
+- La méthode statique {{JSxRef("Math.sin()")}}
+- La méthode statique {{JSxRef("Math.tan()")}}
+- La fonction CSS {{CSSxRef("atan2()")}}

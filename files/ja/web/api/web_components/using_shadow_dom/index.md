@@ -382,10 +382,10 @@ customElements.define("filled-circle", FilledCircle);
 - {{domxref("CSSStyleSheet.replace()")}}
 - {{domxref("CSSStyleSheet.replaceSync()")}}
 - {{HTMLelement("template")}}
-- [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping)モジュール
+- [CSS スコープ化](/ja/docs/Web/CSS/Guides/Scoping)モジュール
 - {{CSSXref(":host")}}
 - {{CSSXref(":host_function", ":host()")}}
 - {{CSSXref(":host-context", ":host-context()")}}
 - {{CSSXref("::slotted", "::slotted()")}}
-- [CSS シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール
+- [CSS シャドウパーツ](/ja/docs/Web/CSS/Guides/Shadow_parts)モジュール
 - {{CSSXref("::part")}}

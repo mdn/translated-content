@@ -9,7 +9,7 @@ JavaScript admite un compacto conjunto de declaraciones, específicamente declar
 
 La {{JSxRef("Sentencias", "referencia de JavaScript")}} contiene detalles exhaustivos sobre las declaraciones de este capítulo. El carácter de punto y coma (`;`) se utiliza para separar declaraciones en código JavaScript.
 
-Todas las expresiones e instrucciones de JavaScript también son una declaración. Consulta {{JSxRef("Guide/Expressions_and_Operators", "Expresiones y operadores")}} para obtener información completa sobre las expresiones.
+Todas las expresiones e instrucciones de JavaScript también son una declaración. Consulta [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_operators) para obtener información completa sobre las expresiones.
 
 ## Declaración de bloque
 
@@ -50,7 +50,7 @@ Aquí, `{ x++; }` es la declaración de bloque.
 >
 > Esto muestra `2` porque la instrucción `var x` dentro del bloque está en el mismo ámbito que la instrucción `var x` anterior del bloque. (En C o Java, el código equivalente habría generado `1`).
 >
-> **A partir de ECMAScript2015**, las declaraciones de variables `let` y `const` tienen un ámbito de bloque. Consulta las páginas de referencia de {{JSxRef("Sentencias/let", "let")}} y {{JSxRef("Sentencias/const", "const")}} para obtener más información.
+> **A partir de ECMAScript2015**, las declaraciones de variables `let` y `const` tienen un ámbito de bloque. Consulta las páginas de referencia de {{JSxRef("Statements/let", "let")}} y {{JSxRef("Statements/const", "const")}} para obtener más información.
 
 ## Expresiones condicionales
 
@@ -70,7 +70,7 @@ if (condition) {
 }
 ```
 
-Aquí, la `condition` puede ser cualquier expresión que se evalúe como `true` o `false`. (Consulta {{JSxRef("Objetos_globales/Boolean", "Boolean", "#Description")}} para obtener una explicación de lo que se evalúa como `true` y `false`).
+Aquí, la `condition` puede ser cualquier expresión que se evalúe como `true` o `false`. (Consulta {{JSxRef("Boolean", "Boolean", "#Description")}} para obtener una explicación de lo que se evalúa como `true` y `false`).
 
 Si `condition` se evalúa como `true`, se ejecuta `statement_1`. De lo contrario, se ejecuta `statement_2`. `statement_1` y `statement_2` pueden ser cualquier declaración, incluidas otras declaraciones `if` anidadas.
 
@@ -238,7 +238,7 @@ Puedes lanzar excepciones usando la instrucción `throw` y manejarlas usando las
 
 Casi cualquier objeto se puede lanzar en JavaScript. Sin embargo, no todos los objetos lanzados son iguales. Si bien es común lanzar números o cadenas como errores, con frecuencia es más efectivo usar uno de los tipos de excepción creados específicamente para este propósito:
 
-- {{JSxRef("Objetos_globales/Error", "excepciones ECMAScript", "#Tipos_Error")}}
+- {{JSxRef("Error", "excepciones ECMAScript", "#Tipos_Error")}}
 - La interfaz [DOMException](/es/docs/Web/API/DOMException) representa un evento anormal (llamado excepción) que ocurre como resultado de llamar a un método o acceder a una propiedad de una API web y la interfaz [DOMError](/es/docs/Web/API/DOMError) describe un objeto de error que contiene un nombre de error.
 
 ### Expresión `throw`
@@ -436,7 +436,7 @@ Si un bloque `try` interno _no_ tiene un bloque `catch` correspondiente:
 1. _debe_ contener un bloque `finally`, y
 2. el bloque `catch` adjunto de la declaración `try...catch` se comprueba para una coincidencia.
 
-Para obtener más información, consulta {{JSxRef("Sentencias/try...catch", "bloques try anidados", "#Nested_try-blocks")}} en la una página de referencia {{JSxRef("Sentencias/try...catch", "try...catch")}}.
+Para obtener más información, consulta {{JSxRef("Statements/try...catch", "bloques try anidados", "#Nested_try-blocks")}} en la una página de referencia {{JSxRef("Statements/try...catch", "try...catch")}}.
 
 ### Utilizar objetos `Error`
 

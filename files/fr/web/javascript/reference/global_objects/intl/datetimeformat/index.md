@@ -1,27 +1,27 @@
 ---
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+L'objet **`Intl.DateTimeFormat`** permet le formatage des dates et heures sensible à la langue.
 
-L'objet **`Intl.DateTimeFormat`** est un constructeur d'objets permettant de formater des dates et des heures selon une langue.
-
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.DateTimeFormat", "taller")}}
 
 ```js interactive-example
 const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
-// Results below assume UTC timezone - your results may vary
+// Résultats ci-dessous supposent le fuseau horaire UTC - vos résultats peuvent varier
 
-// Specify default date formatting for language (locale)
+// Définir le format de date par défaut pour la langue (locale)
 console.log(new Intl.DateTimeFormat("en-US").format(date));
-// Expected output: "12/20/2020"
+// Résultat attendu : "12/20/2020"
 
-// Specify default date formatting for language with a fallback language (in this case Indonesian)
+// Définir le format de date par défaut pour la langue avec une langue de secours (dans ce cas l'indonésien)
 console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
-// Expected output: "20/12/2020"
+// Résultat attendu : "20/12/2020"
 
-// Specify date and time format using "style" options (i.e. full, long, medium, short)
+// Définir le format de date et d'heure en utilisant les options de "style" (c'est-à-dire full, long, medium, short)
 console.log(
   new Intl.DateTimeFormat("en-GB", {
     dateStyle: "full",
@@ -29,31 +29,40 @@ console.log(
     timeZone: "Australia/Sydney",
   }).format(date),
 );
-// Expected output: "Sunday, 20 December 2020 at 14:23:16 GMT+11"
+// Résultat attendu : "Sunday, 20 December 2020 at 14:23:16 GMT+11"
 ```
 
 ## Constructeur
 
-- [`Intl.DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
+- {{JSxRef("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
   - : Crée un nouvel objet `Intl.DateTimeFormat`.
 
 ## Méthodes statiques
 
-- [`Intl.DateTimeFormat.supportedLocalesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf)
-  - : Renvoie un tableau qui contient les locales, parmi celles fournies en arguments, qui sont prises en charge sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
+- {{JSxRef("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
+  - : Retourne un tableau qui contient les locales, parmi celles fournies en arguments, qui sont prises en charge sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
 
-## Méthodes des instances
+## Propriétés d'instance
 
-- [`Intl.DateTimeFormat.prototype.format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format)
-  - : Une fonction d'accès qui formate une date selon les options de locale et de format fournies par l'objet `DateTimeFormat` courant.
-- [`Intl.DateTimeFormat.prototype.formatToParts()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts)
-  - : Renvoie un [tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) d'objets représentant la date sous forme de plusieurs chaînes de caractères qui peuvent être utilisées pour un formatage selon la locale.
-- [`Intl.DateTimeFormat.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
-  - : Renvoie un nouvel objet dont les propriétés reflètent les options de locale et de collation calculées à l'initialisation de l'objet.
-- [`Intl.DateTimeFormat.prototype.formatRange()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)
-  - : Cette méthode prend deux [dates](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) comme arguments et formate l'intervalle de temps de la façon la plus concise selon les options de locale et de format fournis à l'instanciation de l'objet `DateTimeFormat`.
-- [`Intl.DateTimeFormat.prototype.formatRangeToParts()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts)
-  - : Cette méthode prend deux [dates](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) comme arguments et renvoie un tableau d'objets qui sont chacun des fragments de l'intervalle de temps formaté selon la locale.
+Ces propriétés sont définies sur `Intl.DateTimeFormat.prototype` et partagées par toutes les instances de `Intl.DateTimeFormat`.
+
+- {{JSxRef("Object/constructor", "Intl.DateTimeFormat.prototype.constructor")}}
+  - : La fonction constructeur qui a créé l'objet instance. Pour les instances de `Intl.DateTimeFormat`, la valeur initiale est le constructeur {{JSxRef("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat")}}.
+- `Intl.DateTimeFormat.prototype[Symbol.toStringTag]`
+  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"Intl.DateTimeFormat"`. Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
+
+## Méthodes d'instance
+
+- {{JSxRef("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}
+  - : Fonction d'accès qui formate une date selon la locale et les options de format de cet objet `DateTimeFormat`.
+- {{JSxRef("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
+  - : Cette méthode prend deux [dates](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) et formate l'intervalle de temps de la façon la plus concise selon la locale et les options fournies lors de l'instanciation de `DateTimeFormat`.
+- {{JSxRef("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
+  - : Cette méthode prend deux [dates](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) et retourne un tableau d'objets contenant les fragments spécifiques à la locale représentant chaque partie de l'intervalle de temps formaté.
+- {{JSxRef("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
+  - : Retourne un {{JSxRef("Array")}} d'objets représentant la chaîne de caractères de la date en parties pouvant être utilisées pour un formatage personnalisé selon la locale.
+- {{JSxRef("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
+  - : Retourne un nouvel objet dont les propriétés reflètent la locale et les options de format calculées lors de l'initialisation de l'objet.
 
 ## Exemples
 
@@ -62,7 +71,7 @@ console.log(
 Dans une utilisation basique sans préciser de locale, `DateTimeFormat()` utilise la locale et les options par défaut.
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // DateTimeFormat sans arguments dépend de l'implémentation,
 // la locale par défaut, et le fuseau horaire par défaut
@@ -70,66 +79,64 @@ console.log(new Intl.DateTimeFormat().format(date));
 // → "20/12/2012" avec une locale fr-FR et un fuseau horaire CEST
 ```
 
-### Utiliser `locales`
+### Utiliser l'argument `locales`
 
 Cet exemple montre quelques variations de formatage pour les dates et les heures localisées. Afin d'obtenir la locale utilisée au sein de l'interface utilisateur de votre application, vérifiez de bien fournir cette locale (et éventuellement des locales de recours) en utilisant l'argument `locales`&nbsp;:
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
-// les formats qui suivent se basent sur le
-// fuseau horaire CEST
+// Les résultats ci-dessous utilisent le fuseau horaire America/Los_Angeles (UTC-0800, heure normale du Pacifique)
 
-// l'anglais américain utilise l'ordre mois-jour-année
+// L'anglais américain utilise l'ordre mois-jour-année
 console.log(new Intl.DateTimeFormat("en-US").format(date));
-// → "12/20/2012"
+// "12/20/2012"
 
-// l'anglais britannique utilise l'ordre jour-mois-année
+// L'anglais britannique utilise l'ordre jour-mois-année
 console.log(new Intl.DateTimeFormat("en-GB").format(date));
-// → "20/12/2012"
+// "20/12/2012"
 
-// le coréen utilise l'ordre année-mois-jour
+// Le coréen utilise l'ordre année-mois-jour
 console.log(new Intl.DateTimeFormat("ko-KR").format(date));
-// → "2012. 12. 20."
+// "2012. 12. 20."
 
-// l'arabe, dans la plupart des pays arabophones, utilise les chiffres arabes
+// L'arabe, dans la plupart des pays arabophones, utilise les chiffres arabes
 console.log(new Intl.DateTimeFormat("ar-EG").format(date));
-// → "٢٠‏/١٢‏/٢٠١٢"
+// "٢٠‏/١٢‏/٢٠١٢"
 
-// en ce qui concerne le japonais, les applications peuvent
-// souhaiter utiliser le calendrier japonais
+// Pour le japonais, les applications peuvent souhaiter utiliser le calendrier japonais,
 // pour lequel 2012 était l'année 24 de l'ère Heisei
 console.log(new Intl.DateTimeFormat("ja-JP-u-ca-japanese").format(date));
-// → "24/12/20"
+// "H24/12/20"
 
-// quand une locale non prise en charge est demandée (par exemple le balinais)
-// il est possible de fournir une locale de recours (ici l'indonésien)
+// Lorsqu'une langue demandée peut ne pas être prise en charge, comme
+// le balinais, inclure une langue de secours, dans ce cas l'indonésien
 console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
-// → "20/12/2012"
+// "20/12/2012"
 ```
 
-### Utiliser `options`
+### Utiliser l'argument `options`
 
 Les formats de la date et de l'heure peuvent être personnalisés en utilisant l'argument `options`&nbsp;:
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
 
 // fournir le jour de la semaine avec une date longue
-var options = {
+let options = {
   weekday: "long",
   year: "numeric",
   month: "long",
   day: "numeric",
 };
 console.log(new Intl.DateTimeFormat("de-DE", options).format(date));
-// → "Donnerstag, 20. Dezember 2012"
+// "Donnerstag, 20. Dezember 2012"
 
 // une application peut vouloir utiliser UTC et le rendre visible
 options.timeZone = "UTC";
 options.timeZoneName = "short";
 console.log(new Intl.DateTimeFormat("en-US", options).format(date));
-// → "Thursday, December 20, 2012, GMT"
+// "Thursday, December 20, 2012, GMT"
 
 // parfois, il faut plus de précision
 options = {
@@ -139,7 +146,7 @@ options = {
   timeZoneName: "short",
 };
 console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
-// → "2:00:00 pm AEDT"
+// "2:00:00 pm AEDT"
 
 // voire beaucoup plus de précision
 options.fractionalSecondDigits = 3; // le nombre de chiffres décimaux pour les fractions de secondes
@@ -157,33 +164,33 @@ options = {
   hour12: false,
 };
 console.log(new Intl.DateTimeFormat("en-US", options));
-// → "12/19/2012, 19:00:00"
+// "2:00:00.200 pm AEDT"
 
-// pour utiliser la locale par défaut du navigateur, on utilise default
-console.log(new Intl.DateTimeFormat("default", options).format(date));
-// → "12/19/2012, 19:00:00" (peut varier selon la locale du navigateur)
+// pour définir des options tout en utilisant la locale par défaut du navigateur, utilisez undefined
+console.log(new Intl.DateTimeFormat(undefined, options).format(date));
+// "12/19/2012, 19:00:00"
 
 // on peut aussi inclure la période du jour
 options = { hour: "numeric", dayPeriod: "short" };
 console.log(new Intl.DateTimeFormat("en-US", options).format(date));
-// → "4 at night"
+// 10 at night
 ```
 
 Le calendrier et la numération utilisés peuvent être choisis indépendamment avec l'argument `options`&nbsp;:
 
 ```js
-var options = { calendar: "chinese", numberingSystem: "arab" };
-var dateFormat = new Intl.DateTimeFormat("default", options);
-var usedOptions = dateFormat.resolvedOptions();
+const options = { calendar: "chinese", numberingSystem: "arab" };
+const dateFormat = new Intl.DateTimeFormat(undefined, options);
+const usedOptions = dateFormat.resolvedOptions();
 
 console.log(usedOptions.calendar);
-// → "chinese"
+// "chinese"
 
 console.log(usedOptions.numberingSystem);
-// → "arab"
+// "arab"
 
 console.log(usedOptions.timeZone);
-// → "Europe/Paris" (le fuseau horaire par défaut)
+// "America/New_York" (the users default timezone)
 ```
 
 ## Spécifications
@@ -196,5 +203,15 @@ console.log(usedOptions.timeZone);
 
 ## Voir aussi
 
-- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
-- [Une prothèse d'émulation pour `Intl.DateTimeFormat` avec la bibliothèque FormatJS](https://formatjs.io/docs/polyfills/intl-datetimeformat)
+- [Prothèse d'émulation pour `Intl.DateTimeFormat` avec la bibliothèque FormatJS <sup>(angl.)</sup>](https://formatjs.github.io/docs/polyfills/intl-datetimeformat/)
+- L'objet {{JSxRef("Intl")}}
+- La méthode {{JSxRef("Date.prototype.toLocaleString()")}}
+- La méthode {{JSxRef("Date.prototype.toLocaleDateString()")}}
+- La méthode {{JSxRef("Date.prototype.toLocaleTimeString()")}}
+- La méthode {{JSxRef("Temporal/Instant/toLocaleString", "Temporal.Instant.prototype.toLocaleString()")}}
+- La méthode {{JSxRef("Temporal/PlainDate/toLocaleString", "Temporal.PlainDate.prototype.toLocaleString()")}}
+- La méthode {{JSxRef("Temporal/PlainDateTime/toLocaleString", "Temporal.PlainDateTime.prototype.toLocaleString()")}}
+- La méthode {{JSxRef("Temporal/PlainTime/toLocaleString", "Temporal.PlainTime.prototype.toLocaleString()")}}
+- La méthode {{JSxRef("Temporal/PlainYearMonth/toLocaleString", "Temporal.PlainYearMonth.prototype.toLocaleString()")}}
+- La méthode {{JSxRef("Temporal/PlainMonthDay/toLocaleString", "Temporal.PlainMonthDay.prototype.toLocaleString()")}}
+- La méthode {{JSxRef("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}}

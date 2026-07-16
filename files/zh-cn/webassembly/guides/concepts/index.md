@@ -20,7 +20,7 @@ WebAssembly 是一种运行在现代 Web 浏览器中的新型代码，不仅提
 作为 [W3C WebAssembly 社区组](https://www.w3.org/community/webassembly/)中的一项开放标准，WebAssembly 是为下列目标而生的：
 
 - 快速、高效、可移植——通过利用[常见的硬件能力](http://webassembly.org/docs/portability/#assumptions-for-efficient-execution)，WebAssembly 代码在不同平台上能够以接近本地速度运行。
-- 可读、可调试——WebAssembly 是一门低阶语言，但是它也确实可以用一种人类可读的文本格式表示（其标准即将得到最终版本），这就允许开发者直接手工编写、查看以及调试代码。
+- 可读、可调试——WebAssembly 是一门低级语言，但是它也确实可以用一种人类可读的文本格式表示（其标准即将得到最终版本），这就允许开发者直接手工编写、查看以及调试代码。
 - 保持安全——WebAssembly 被限制运行在一个安全的沙箱执行环境中。像其他 Web 代码一样，它遵循浏览器的同源策略和授权策略。
 - 不破坏 Web——WebAssembly 的设计原则是与其他 Web 技术和谐共处并保持向后兼容。
 

@@ -1,13 +1,14 @@
 ---
-title: Math.cos()
+title: "Math : méthode statique cos()"
+short-title: cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
+l10n:
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-{{JSRef}}
+La méthode statique **`Math.cos()`** retourne le cosinus d'un nombre exprimé en radians.
 
-La fonction **`Math.cos()`** retourne le [cosinus](https://fr.wikipedia.org/wiki/Cosinus) d'un angle dont la valeur est exprimée en [radians](https://fr.wikipedia.org/wiki/Radian).
-
-{{InteractiveExample("JavaScript Demo: Math.cos()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.cos()")}}
 
 ```js interactive-example
 function getCircleX(radians, radius) {
@@ -15,46 +16,46 @@ function getCircleX(radians, radius) {
 }
 
 console.log(getCircleX(1, 10));
-// Expected output: 5.403023058681398
+// Sortie attendue : 5.403023058681398
 
 console.log(getCircleX(2, 10));
-// Expected output: -4.161468365471424
+// Sortie attendue : -4.161468365471424
 
 console.log(getCircleX(Math.PI, 10));
-// Expected output: -10
+// Sortie attendue : -10
 ```
 
 ## Syntaxe
 
-```js
-Math.cos(x);
+```js-nolint
+Math.cos(x)
 ```
 
 ### Paramètres
 
 - `x`
-  - : Une valeur numérique (exprimée en radians).
+  - : Un nombre représentant un angle en radians.
 
 ### Valeur de retour
 
-Le cosinus de l'angle fourni en argument (exprimé en radians).
+Le cosinus de `x`, compris entre -1 et 1, inclus. Si `x` est {{JSxRef("Infinity")}}, `-Infinity` ou {{JSxRef("NaN")}}, retourne {{JSxRef("NaN")}}.
 
 ## Description
 
-La méthode `Math.cos()` renvoie une valeur numérique comprise entre -1 et 1. Cela représente la valeur du cosinus de l'angle correspondant à cette valeur.
-
-`cos` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.cos()`, ne pas utiliser une méthode d'un objet qui aurait été créé (`Math` n'est pas un constructeur).
+Parce que `cos()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.cos()`, plutôt que comme une méthode d'un objet `Math` que vous auriez créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
-### Utiliser `Math.cos()`
+### Utiliser la méthode `Math.cos()`
 
 ```js
+Math.cos(-Infinity); // NaN
+Math.cos(-0); // 1
 Math.cos(0); // 1
 Math.cos(1); // 0.5403023058681398
-
 Math.cos(Math.PI); // -1
 Math.cos(2 * Math.PI); // 1
+Math.cos(Infinity); // NaN
 ```
 
 ## Spécifications
@@ -67,9 +68,10 @@ Math.cos(2 * Math.PI); // 1
 
 ## Voir aussi
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- La méthode statique {{JSxRef("Math.acos()")}}
+- La méthode statique {{JSxRef("Math.asin()")}}
+- La méthode statique {{JSxRef("Math.atan()")}}
+- La méthode statique {{JSxRef("Math.atan2()")}}
+- La méthode statique {{JSxRef("Math.sin()")}}
+- La méthode statique {{JSxRef("Math.tan()")}}
+- La fonction CSS {{CSSxRef("cos()")}}

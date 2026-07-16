@@ -38,7 +38,7 @@ input {
 }
 ```
 
-| **[Value](#value)**               | 7-значная {{domxref("DOMString")}} , указывающая {{cssxref("&lt;color&gt;")}} в строчной шестнадцатеричной системе счисления          |
+| **[Value](#value)**               | 7-значная {{jsxref("String")}} , указывающая {{cssxref("&lt;color&gt;")}} в строчной шестнадцатеричной системе счисления              |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | **События**                       | {{domxref("HTMLElement/change_event", "change")}} и {{domxref("HTMLElement/input_event", "input")}}                                   |
 | **Поддерживаемые общие атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Reference/Elements/input#autocomplete) и [`list`](/ru/docs/Web/HTML/Reference/Elements/input#list) |
@@ -204,4 +204,4 @@ function updateAll(event) {
 
 ## Изучите также
 
-- [Compatibility of CSS properties](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibility of CSS properties](/ru/docs/Learn_web_development/Extensions/Forms)

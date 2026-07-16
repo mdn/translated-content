@@ -1,29 +1,45 @@
 ---
-title: document.createDocumentFragment
+title: "Document : méthode createDocumentFragment()"
+short-title: createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
+l10n:
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM WHATWG")}}
 
-Crée un nouvel objet vide de type {{domxref("DocumentFragment")}}.
+La méthode **`createDocumentFragment()`** de l'interface {{DOMxRef("Document")}} crée un nouvel objet vide de type {{DOMxRef("DocumentFragment")}} dans lequel des nœuds du DOM peuvent être ajoutés pour construire un arbre DOM hors écran.
 
 ## Syntaxe
 
-```js
-var fragment = document.createDocumentFragment();
+```js-nolint
+createDocumentFragment()
 ```
 
-`fragment` est une référence vers un objet vide de type {{domxref("DocumentFragment")}} .
+### Paramètres
+
+Aucun.
+
+### Valeur de retour
+
+Un objet {{DOMxRef("DocumentFragment")}} nouvellement créé et vide, prêt à recevoir des nœuds.
 
 ## Description
 
-Les objets `DocumentFragments` sont analogues à des nœuds du DOM, mais ne font jamais partie de l'arbre DOM. Le cas d'usage le plus courant consiste à créer un fragment pour y stocker des éléments, puis à ajouter en une seule opération le fragment à l'arbre DOM, ce qui a pour effet de le remplacer par tous ses éléments enfants.
+Les objets `DocumentFragment` sont des objets {{DOMxRef("Node")}} du DOM qui ne font jamais partie de l'arbre DOM principal. Le cas d'utilisation habituel consiste à créer le fragment de document, à y ajouter des éléments, puis à ajouter le fragment de document à l'arbre DOM.
+Dans l'arbre DOM, le fragment de document est remplacé par tous ses enfants.
 
-Le principal avantage de cette méthode de mise à jour du DOM vient du fait que le fragment est stocké en mémoire, et pas dans l'arbre DOM lui-même, de sorte que le modifier ne déclenche pas de [reflow](https://code.google.com/speed/articles/reflow.html) (le calcul des positions et de la géométrie de chacun des éléments de la page affichée). Par conséquent, l´utilisation de fragments pour effectuer des mises à jour du DOM donne souvent lieu à une [amélioration des performance](http://ejohn.org/blog/dom-documentfragments/)s.
+Étant donné que le fragment de document est _en mémoire_ et ne fait pas partie de l'arbre DOM principal, l'utilisation de fragments de document peut entraîner une [meilleure performance <sup>(angl.)</sup>](https://johnresig.com/blog/dom-documentfragments/) dans certains anciens moteurs.
 
-## Exemple
+Vous pouvez également utiliser le constructeur `DocumentFragment` pour créer un nouveau fragment&nbsp;:
 
-Cet exemple crée une liste des principaux navigateurs du web.
+```js
+const fragment = new DocumentFragment();
+```
+
+## Exemples
+
+Cet exemple crée une liste des principaux navigateurs du web dans un `DocumentFragment`, puis ajoute le nouveau sous-arbre DOM au document pour l'afficher.
 
 ### HTML
 
@@ -34,13 +50,13 @@ Cet exemple crée une liste des principaux navigateurs du web.
 ### JavaScript
 
 ```js
-var element = document.getElementById("ul"); // en supposant qu'ul existe
-var fragment = document.createDocumentFragment();
-var browsers = ["Firefox", "Chrome", "Opera", "Safari", "Internet Explorer"];
+const element = document.getElementById("ul"); // en supposant qu'ul existe
+const fragment = document.createDocumentFragment();
+const navigateurs = ["Firefox", "Chrome", "Opera", "Safari"];
 
-browsers.forEach(function (browser) {
-  var li = document.createElement("li");
-  li.textContent = browser;
+navigateurs.forEach((navigateur) => {
+  const li = document.createElement("li");
+  li.textContent = navigateur;
   fragment.appendChild(li);
 });
 
@@ -61,5 +77,5 @@ element.appendChild(fragment);
 
 ## Voir aussi
 
-- {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
-- {{domxref("documentFragment")}}
+- La méthode {{DOMxRef("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
+- L'interface {{DOMxRef("DocumentFragment")}}

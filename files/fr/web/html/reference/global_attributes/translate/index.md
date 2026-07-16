@@ -1,33 +1,29 @@
 ---
-title: translate
+title: "Attribut HTML universel : `translate`"
+short-title: translate
 slug: Web/HTML/Reference/Global_attributes/translate
-original_slug: Web/HTML/Global_attributes/translate
+l10n:
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`translate`** est un attribut [énuméré](/fr/docs/Glossary/Enumerated) utilisé pour définir si les valeurs _des attributs traduisibles_ d'un élément et ses nœuds enfants {{DOMxRef("Text")}} doivent être traduits lors de la localisation de la page, ou laissés inchangés.
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`translate`** est un attribut à valeur contrainte qui peut être utilisé afin d'indiquer si les valeurs d'attribut d'un élément et si les valeurs de ses nœuds {{domxref("Text")}} descendants doivent être traduits lorsque la page est localisée ou s'il faut les laisser inchangés. Les valeurs autorisées pour cet attribut sont :
+Il peut prendre les valeurs suivantes&nbsp;:
 
-- `"yes"` (ou une chaîne vide), qui indique que l'élément devrait être traduit lorsque la page est localisée ;
-- `"no"`, qui indique que l'élément ne doit pas être traduit.
+- Une chaîne de caractères vide ou `yes`, ce qui indique que l'élément doit être traduit lors de la localisation de la page.
+- `no`, ce qui indique que l'élément ne doit pas être traduit.
 
-> [!NOTE]
-> Bien que la prise en charge de cet attribut ne soit pas homogène pour les navigateurs, celui-ci est pris en compte par les outils de traduction automatique (Google Translate par exemple) et les outils de traduction utilisés par les traducteurs. Aussi, cet attribut doit être utilisé par les auteurs web afin d'indiquer correctement le contenu qui ne devrait pas être traduit.
+Bien que tous les navigateurs ne reconnaissent pas cet attribut, il est respecté par des systèmes de traduction automatique tels que Google Translate, et peut aussi être pris en compte par des outils utilisés par des traducteur·ice·s humain·e·s. Il est donc important que les auteur·ice·s web utilisent cet attribut pour marquer le contenu qui ne doit pas être traduit.
 
 ## Exemples
 
-### HTML
+Dans cet exemple, l'attribut `translate` est utilisé pour demander aux outils de traduction de ne pas traduire le nom de la marque de l'entreprise dans le pied de page.
 
 ```html
-<label for="postcode" translate="no">
-  <span translate="yes">Enter your postcode to find the nearest store</span>
-</label>
-<input id="postcode" type="text" />
+<footer>
+  <small>© 2020 <span translate="no">NomDeMarque</span></small>
+</footer>
 ```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","250","250")}}
 
 ## Spécifications
 
@@ -39,5 +35,7 @@ L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`transla
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
-- La propriété {{domxref("HTMLElement.translate")}} qui reflète cet attribut.
+- [Tous les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
+- La propriété {{DOMxRef("HTMLElement.translate")}} qui reflète cet attribut.
+- [Utiliser l'attribut translate de HTML <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-translate-flag).
+- L'attribut HTML universel [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang)

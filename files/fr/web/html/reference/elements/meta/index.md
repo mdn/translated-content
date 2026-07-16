@@ -1,9 +1,9 @@
 ---
-title: "<meta> : l'élément de métadonnées"
+title: "Élément HTML `<meta>` : l'élément de métadonnées"
+short-title: <meta>
 slug: Web/HTML/Reference/Elements/meta
-original_slug: Web/HTML/Element/meta
 l10n:
-  sourceCommit: c7a8b2584452bcd5d2c135b637f4ec659ff74b99
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<meta>`** représente toute information de {{Glossary("Metadata","métadonnées")}} qui ne peut pas être représentée par un des autres éléments de métadonnées, tels que {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} ou {{HTMLElement("title")}}.
@@ -17,7 +17,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<meta>`** représente toute information
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
 > L'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) possède une signification spécifique pour l'élément `<meta>`.
@@ -30,7 +30,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - [`http-equiv`](/fr/docs/Web/HTML/Reference/Elements/meta/http-equiv)
   - : Définit une directive de pragma, c'est-à-dire une instruction pour le navigateur concernant le traitement du document. Le nom de l'attribut est l'abréviation de «&nbsp;http-equivalent&nbsp;», car les valeurs autorisées correspondent aux noms d'en-têtes HTTP équivalents.
 - `media`
-  - : L'attribut `media` définit à quel média la couleur de thème définie dans l'attribut `content` doit s'appliquer. Sa valeur est une [requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries), qui prend la valeur par défaut «&nbsp;all&nbsp;» si l'attribut est absent. Cet attribut n'est pertinent que lorsque l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément est défini à [`theme-color`](/fr/docs/Web/HTML/Reference/Elements/meta/name/theme-color). Sinon, il n'a aucun effet et ne doit pas être inclus.
+  - : L'attribut `media` définit à quel média la couleur de thème définie dans l'attribut `content` doit s'appliquer. Sa valeur est une [requête média](/fr/docs/Web/CSS/Guides/Media_queries/Using), qui prend la valeur par défaut «&nbsp;all&nbsp;» si l'attribut est absent. Cet attribut n'est pertinent que lorsque l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément est défini à [`theme-color`](/fr/docs/Web/HTML/Reference/Elements/meta/name/theme-color). Sinon, il n'a aucun effet et ne doit pas être inclus.
 - [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name)
   - : Les attributs `name` et `content` peuvent être utilisés ensemble pour fournir des métadonnées au document sous forme de paires nom-valeur, l'attribut `name` donnant le nom de la métadonnée et l'attribut `content` sa valeur.
 

@@ -618,4 +618,4 @@ Transcrit par Célestes™
 
 ## 関連情報
 
-- CSS の [`::cue` および `::cue()`](/ja/docs/Web/CSS/::cue) 擬似要素
+- CSS の [`::cue` および `::cue()`](/ja/docs/Web/CSS/Reference/Selectors/::cue) 擬似要素

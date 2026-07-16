@@ -16,8 +16,8 @@ l10n:
 ### CSS
 
 - 已更新 {{cssxref("align-content")}} 属性，使其适用于 `display: block;` 布局。这将 `flex` 和 `grid` 中所有的布局定位带到 `block`，使开发人员能够对齐块级元素，而无需将其容器转换为 `flex` 或 `grid` 容器。（[Firefox bug 1882853](https://bugzil.la/1882853)）。
-- CSS 属性 [`transform-box`](/zh-CN/docs/Web/CSS/transform-box) 现已支持 `content-box` 和 `stroke-box` 值。对于参照的盒子，`content-box` 值使用[内容盒子](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model#盒模型的各个部分)，而 `stroke-box` 值使用包含 SVG 形状的描边边界框（stroke bounding box）（[Firefox bug 1868374](https://bugzil.la/1868374)）。
-- [`content-visibility`](/zh-CN/docs/Web/CSS/content-visibility) CSS 属性值 `auto` 现已默认启用。其允许在内容不[与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)的情况下跳过对其的渲染。（[Firefox bug 1874874](https://bugzil.la/1874874)）。
+- CSS 属性 [`transform-box`](/zh-CN/docs/Web/CSS/Reference/Properties/transform-box) 现已支持 `content-box` 和 `stroke-box` 值。对于参照的盒子，`content-box` 值使用[内容盒子](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model#盒模型的各个部分)，而 `stroke-box` 值使用包含 SVG 形状的描边边界框（stroke bounding box）（[Firefox bug 1868374](https://bugzil.la/1868374)）。
+- [`content-visibility`](/zh-CN/docs/Web/CSS/Reference/Properties/content-visibility) CSS 属性值 `auto` 现已默认启用。其允许在内容不[与用户相关](/zh-CN/docs/Web/CSS/Guides/Containment#与用户相关)的情况下跳过对其的渲染。（[Firefox bug 1874874](https://bugzil.la/1874874)）。
 
 ### JavaScript
 
@@ -33,8 +33,8 @@ l10n:
   - [`HTMLElement`](/zh-CN/docs/Web/API/HTMLElement) 的 [`popover`](/zh-CN/docs/Web/API/HTMLElement/popover) 属性，[`hidePopover()`](/zh-CN/docs/Web/API/HTMLElement/hidePopover)、[`showPopover()`](/zh-CN/docs/Web/API/HTMLElement/showPopover) 和 [`togglePopover()`](/zh-CN/docs/Web/API/HTMLElement/togglePopover) 方法，[`beforetoggle`](/zh-CN/docs/Web/API/HTMLElement/beforetoggle_event) 和 [`toggle_event`](/zh-CN/docs/Web/API/HTMLElement/toggle_event) 事件（类型为 [`ToggleEvent`](/zh-CN/docs/Web/API/ToggleEvent)）。
 
   已支持以下用于弹出框的 CSS 伪类和元素：
-  - [`:popover-open`](/zh-CN/docs/Web/CSS/:popover-open)
-  - [`::backdrop`](/zh-CN/docs/Web/CSS/::backdrop) 已被扩展以支持弹出框
+  - [`:popover-open`](/zh-CN/docs/Web/CSS/Reference/Selectors/:popover-open)
+  - [`::backdrop`](/zh-CN/docs/Web/CSS/Reference/Selectors/::backdrop) 已被扩展以支持弹出框
 
   已支持以下 HTML 全局属性：
   - [`popovertarget`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertarget)
@@ -90,7 +90,7 @@ l10n:
 
 - **CSS `transition-behavior`**：`layout.css.transition-behavior.enabled`。
 
-  {{cssxref("transition-behavior")}} 属性在 Nightly 版本中默认启用。作者可以使用此属性来控制是否将 CSS 过渡应用于具有[离散动画类型](/zh-CN/docs/Web/CSS/CSS_animated_properties#离散)的属性（[Firefox bug 1882408](https://bugzil.la/1882408)、[Firefox bug 1805727](https://bugzil.la/1805727)）。
+  {{cssxref("transition-behavior")}} 属性在 Nightly 版本中默认启用。作者可以使用此属性来控制是否将 CSS 过渡应用于具有[离散动画类型](/zh-CN/docs/Web/CSS/Guides/Animations/Animatable_properties#离散)的属性（[Firefox bug 1882408](https://bugzil.la/1882408)、[Firefox bug 1805727](https://bugzil.la/1805727)）。
 
 - **嵌套在分段元素中的 `<h1>` 的用户代理样式**：`layout.css.h1-in-section-ua-styles.enabled`。
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Arrays
 original_slug: Learn/JavaScript/First_steps/Arrays
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
 
 Dans le dernier article de ce module, nous examinerons les tableaux — une façon de stocker proprement une liste d'éléments de données sous un seul nom de variable. Ici nous verrons pourquoi c'est utile, puis nous apprendrons comment créer un tableau, y retrouver, y ajouter ou en enlever les éléments dedans, et quelques à‑côtés en bonus.
 
@@ -220,7 +220,7 @@ Dans ce paragraphe nous examinerons quelques méthodes de tableaux à connaître
 
 ### Conversions entre chaînes et tableaux
 
-Souvent, vous serez confronté à des données brutes contenues dans une longue chaîne de caractères, et vous voudrez peut-être en extraire les éléments utiles sous une forme plus pratique pour en faire quelque chose, comme les afficher dans un tableau de données. Pour ce faire, nous pouvons utiliser la méthode {{jsxref ("String. prototype. prototype. split ()","split ()")}}. Dans sa formulation la plus simple, elle prend un seul paramètre, le caractère servant de séparateur ; elle renverra les sous-chaînes entre séparateurs en tant qu'éléments d'un tableau.
+Souvent, vous serez confronté à des données brutes contenues dans une longue chaîne de caractères, et vous voudrez peut-être en extraire les éléments utiles sous une forme plus pratique pour en faire quelque chose, comme les afficher dans un tableau de données. Pour ce faire, nous pouvons utiliser la méthode {{jsxref("String.prototype.split()", "split()")}}. Dans sa formulation la plus simple, elle prend un seul paramètre, le caractère servant de séparateur ; elle renverra les sous-chaînes entre séparateurs en tant qu'éléments d'un tableau.
 
 > [!NOTE]
 > D'accord, techniquement parlant c'est une méthode de chaîne, et non une méthode de tableau, mais nous la mettons dans le chapitre des tableaux car elle est bien à sa place ici.
@@ -519,4 +519,4 @@ La seule chose restant à faire est de procéder à l'évaluation de ce module p
 - [Collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections) — un guide de niveau avancé à propos des tableaux et de leurs cousins, les tableaux typés.
 - {{jsxref("Array")}} — la page de référence de l'objet `Array` — pour un guide de référence détaillé à propos des fonctionnalités discutées dans cette page, et plus encore.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}

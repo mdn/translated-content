@@ -1,44 +1,39 @@
 ---
-title: HTMLInputElement.labels
+title: "HTMLInputElement : propriété labels"
+short-title: labels
 slug: Web/API/HTMLInputElement/labels
+l10n:
+  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`HTMLInputElement.labels`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) des éléments {{HTMLElement("label")}} (_étiquette_) associés avec l'élément {{HTMLElement("input")}} (_entrée_).
+La propriété en lecture seule **`labels`** de l'interface {{DOMxRef("HTMLInputElement")}} retourne une liste de nœuds ({{DOMxRef("NodeList")}}) des éléments HTML {{HTMLElement("label")}} associés à l'élément HTML {{HTMLElement("input")}}, si l'élément n'est pas caché. Si l'élément a le type `hidden`, la propriété retourne `null`.
 
-## Syntaxe
+## Valeur
 
-```js
-var labelElements = input.labels;
-```
+Un objet {{DOMxRef("NodeList")}} contenant les éléments `<label>` associés avec l'élément `<input>`.
 
-### Valeur retournée
-
-Une {{domxref("NodeList")}} contenant les éléments `<label>` associés avec l'élément `<input>`.
-
-## Exemple
+## Exemples
 
 ### HTML
 
 ```html
-<label id="label1" for="test">Label 1</label>
+<label id="label1" for="test">Libellé 1</label>
 <input id="test" />
-<label id="label2" for="test">Label 2</label>
+<label id="label2" for="test">Libellé 2</label>
 ```
 
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function () {
-  const input = document.getElementById("test");
-  for (var i = 0; i < input.labels.length; i++) {
-    console.log(input.labels[i].textContent); // "Label 1" et "Label 2"
-  }
-});
+const input = document.getElementById("test");
+for (const label of input.labels) {
+  console.log(label.textContent); // "Libellé 1" et "Libellé 2"
+}
 ```
 
-{{EmbedLiveSample("Exemple", "100%", 30)}}
+{{EmbedLiveSample("Exemples", "100%", 30)}}
 
 ## Spécifications
 

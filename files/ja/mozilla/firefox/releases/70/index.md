@@ -67,10 +67,10 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 ### JavaScript
 
 - [Numeric separators](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#数値の区切り文字) をサポートしました ([Firefox バグ 1435818](https://bugzil.la/1435818))。
-- {{jsxref("RelativeTimeFormat.formatToParts", "Intl.RelativeTimeFormat.formatToParts()")}} メソッドを実装しました ([Firefox バグ 1473229](https://bugzil.la/1473229))。
-- ECMAScript 402 Intl API に対応して、{{jsxref("BigInt.prototype.toLocaleString()")}} メソッドが `locales` および `options` 引数とともに動作するように更新しました。また、{{jsxref("NumberFormat.format", "Intl.NumberFormat.format()")}} および {{jsxref("NumberFormat.formatToParts", "Intl.NumberFormat.formatToParts()")}} が {{jsxref("BigInt")}} 値を受け入れるようになりました ([Firefox バグ 1543677](https://bugzil.la/1543677))。
+- {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.formatToParts()")}} メソッドを実装しました ([Firefox バグ 1473229](https://bugzil.la/1473229))。
+- ECMAScript 402 Intl API に対応して、{{jsxref("BigInt.prototype.toLocaleString()")}} メソッドが `locales` および `options` 引数とともに動作するように更新しました。また、{{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.format()")}} および {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.formatToParts()")}} が {{jsxref("BigInt")}} 値を受け入れるようになりました ([Firefox バグ 1543677](https://bugzil.la/1543677))。
 - 最新の ECMAScript 仕様に対応して、先頭のゼロを [BigInt リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#長整数リテラル) で拒否するようになりました。`08n` や `09n` は、`07n` のような古い 8 進数値を使用した場合のエラーと同様に無効です。8 進 `BigInt` 数値では常に、先頭のゼロと文字 "o" (小文字または大文字) を使用してください (すなわち `0755n` ではなく `0o755n`)。[Firefox バグ 1568619](https://bugzil.la/1568619) をご覧ください。
-- {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} コンストラクターで Unicode 拡張キーの "nu" をサポートしました。また、{{jsxref("RelativeTimeFormat.resolvedOptions", "Intl.RelativeTimeFormat.resolvedOptions()")}} メソッドが `numberingSystem` も返すようになりました ([Firefox バグ 1521819](https://bugzil.la/1521819))。
+- {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} コンストラクターで Unicode 拡張キーの "nu" をサポートしました。また、{{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.resolvedOptions()")}} メソッドが `numberingSystem` も返すようになりました ([Firefox バグ 1521819](https://bugzil.la/1521819))。
 
 ### API
 
@@ -102,7 +102,7 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 
 ### HTTP
 
-- [強化型トラッキング防止機能](/ja/docs/Web/Privacy/Firefox_tracking_protection) が有効であるときの、サードパーティーのトラッキングリソースに対する既定のリファラーのポリシーが `strict-origin-when-cross-origin` になりました ([Firefox バグ 1569996](https://bugzil.la/1569996))。
+- [強化型トラッキング防止機能](/ja/docs/Web/Privacy/Guides/Firefox_tracking_protection) が有効であるときの、サードパーティーのトラッキングリソースに対する既定のリファラーのポリシーが `strict-origin-when-cross-origin` になりました ([Firefox バグ 1569996](https://bugzil.la/1569996))。
 - {{httpheader("Referer")}} 要求ヘッダーのサイズが 4 KB (4,096 バイト) に制限されました。過大なリファラーが制限を超えた場合は、オリジンの部分のみ送信します ([Firefox バグ 1557346](https://bugzil.la/1557346))。
 - [HTTP キャッシュ](/ja/docs/Web/HTTP/Guides/Caching) が、トップレベルドキュメントのオリジンごとに分割されました ([Firefox バグ 1536058](https://bugzil.la/1536058))。
 
@@ -112,7 +112,7 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 
 ### WebDriver conformance (Marionette)
 
-- `WebDriver:TakeScreenshot` コマンドを、[Fission](https://wiki.mozilla.org/Project_Fission) 互換に更新しました。[クロスオリジン](/ja/docs/Web/Security/Same-origin_policy) iframe 由来のコンテンツが、ページのスクリーンショットに含まれるようになります。あるいは chrome スコープから呼び出したとき、ブラウザーウィンドウの内部に、アクティブなタブの内容が見えるようになります ([Firefox バグ 1559592](https://bugzil.la/1559592))。
+- `WebDriver:TakeScreenshot` コマンドを、[Fission](https://wiki.mozilla.org/Project_Fission) 互換に更新しました。[クロスオリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy) iframe 由来のコンテンツが、ページのスクリーンショットに含まれるようになります。あるいは chrome スコープから呼び出したとき、ブラウザーウィンドウの内部に、アクティブなタブの内容が見えるようになります ([Firefox バグ 1559592](https://bugzil.la/1559592))。
 - `WebDriver:TakeScreenshot` が、ハイライトに使用する DOM 要素のリストを受け入れないようになりました ([Firefox バグ 1575511](https://bugzil.la/1575511))。
 - `WebDriver:ExecuteScript` および `WebDriver:ExecuteAsyncScript` が、`window.onunload` をウェブに公開される方法で設定しないようになりました ([Firefox バグ 1568991](https://bugzil.la/1568991))。
 

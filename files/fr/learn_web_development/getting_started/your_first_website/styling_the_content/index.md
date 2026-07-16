@@ -2,9 +2,8 @@
 title: "CSS : Mettre en forme le contenu"
 short-title: Mettre en forme le contenu
 slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
-original_slug: Learn/Getting_started_with_the_web/CSS_basics
 l10n:
-  sourceCommit: 62ab95d20f246369cfab654c5a7a8727deb21ea6
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
@@ -16,7 +15,7 @@ CSS (pour <i lang="en">Cascading Style Sheets</i> en anglais, qu'on peut traduir
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Connaissance de base de votre système d'exploitation, des logiciels de base que vous utiliserez pour créer un site web, et des systèmes de fichiers.
+        Connaissance de base de votre système d'exploitation, des logiciels de base que vous utilisez pour créer un site web, et des systèmes de fichiers.
       </td>
     </tr>
     <tr>
@@ -52,7 +51,7 @@ Cela s'affiche ainsi tout seul&nbsp;:
 
 {{EmbedLiveSample("basic-html", "100%", "140px")}}
 
-Si on ajoute un peu de CSS, on peut changer l'apparence du HTML. L'extrait suivant sélectionne l'élément {{htmlelement("p")}} et lui donne une [police](/fr/docs/Web/CSS/font-family) différente et un texte de couleur ({{cssxref("color")}}) rouge. Il sélectionne ensuite tous les éléments {{htmlelement("li")}} et leur donne une couleur de remplissage ({{cssxref("background-color")}}) vert-jaune, une bordure ({{cssxref("border")}}) noire pleine de 1 pixel, et une [marge inférieure](/fr/docs/Web/CSS/margin-bottom) de 5 pixels&nbsp;:
+Si on ajoute un peu de CSS, on peut changer l'apparence du HTML. L'extrait suivant sélectionne l'élément {{HTMLElement("p")}} et lui donne une [police](/fr/docs/Web/CSS/Reference/Properties/font-family) différente et un texte de couleur ({{CSSxRef("color")}}) rouge. Il sélectionne ensuite tous les éléments {{HTMLElement("li")}} et leur donne une couleur de remplissage ({{CSSxRef("background-color")}}) vert-jaune, une bordure ({{CSSxRef("border")}}) noire pleine de 1 pixel, et une [marge inférieure](/fr/docs/Web/CSS/Reference/Properties/margin-bottom) de 5 pixels&nbsp;:
 
 ```css live-sample___basic-css
 p {
@@ -80,7 +79,7 @@ CSS a de nombreuses autres fonctions&nbsp;: définir des images ou des dégradé
 Lorsque vous utilisez CSS, la première chose à vérifier est que votre CSS est bien appliqué à votre HTML. Dans cette section, nous allons ajouter une **feuille de style** CSS à votre dossier `mon-premier-site` et l'appliquer à votre page.
 
 1. Dans votre dossier `mon-premier-site`, créez un nouveau dossier appelé `styles`.
-2. À l'aide d'un éditeur de texte, collez le CSS suivant dans un nouveau fichier, qui donnera à vos éléments `<p>` une couleur de texte rouge. Il est utile de commencer par quelque chose comme ceci pour tester si votre feuille de style est bien appliquée à votre HTML.
+2. À l'aide d'un éditeur de texte, collez le CSS suivant dans un nouveau fichier, qui donne à vos éléments `<p>` une couleur de texte rouge. Il est utile de commencer par quelque chose comme ceci pour tester si votre feuille de style est bien appliquée à votre HTML.
 
    ```css
    p {
@@ -95,7 +94,7 @@ Lorsque vous utilisez CSS, la première chose à vérifier est que votre CSS est
    <link href="styles/style.css" rel="stylesheet" />
    ```
 
-5. Enregistrez `index.html` et chargez-le dans votre navigateur. Vous devriez obtenir quelque chose comme ceci&nbsp;:
+5. Enregistrez `index.html` et chargez-le dans votre navigateur. Vous devez obtenir quelque chose comme ceci&nbsp;:
 
 ![Un logo Mozilla et quelques paragraphes. Le texte du paragraphe a été mis en rouge par notre CSS.](website-screenshot-styled.png)
 
@@ -139,7 +138,7 @@ Dans cette règle CSS, on a inclus un **sélecteur d'élément** (ou **sélecteu
 Revenons à notre exemple et utilisons CSS pour améliorer l'apparence du texte. Nous allons définir une nouvelle police pour la page et modifier certains paramètres de texte pour différents éléments.
 
 1. Commencez par retrouver [le résultat de Google Fonts](/fr/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#choix_dune_police_de_caractères) que vous avez enregistré précédemment. Si vous n'avez pas encore choisi de police, suivez le lien et faites-le maintenant.
-2. Ajoutez les éléments HTML {{htmlelement("link")}} dans l'élément {{htmlelement("head")}} de votre `index.html`, juste avant la balise de fermeture `</head>`. Cela devrait ressembler à ceci&nbsp;:
+2. Ajoutez les éléments HTML {{HTMLElement("link")}} dans l'élément {{HTMLElement("head")}} de votre `index.html`, juste avant la balise de fermeture `</head>`. Cela doit ressembler à ceci&nbsp;:
 
    ```html
    <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -174,9 +173,9 @@ Revenons à notre exemple et utilisons CSS pour améliorer l'apparence du texte.
    font-family: "Roboto", sans-serif;
    ```
 
-   La propriété `font-family` définit la ou les police(s) que vous souhaitez appliquer à votre HTML. Cette règle définit une police et une taille de base globale pour toute la page. Tous les éléments à l'intérieur de l'élément {{HTMLElement("html")}} hériteront de la même `font-size` et `font-family`.
+   La propriété `font-family` définit la ou les police(s) que vous souhaitez appliquer à votre HTML. Cette règle définit une police et une taille de base globale pour toute la page. Tous les éléments à l'intérieur de l'élément {{HTMLElement("html")}} héritent de la même `font-size` et `font-family`.
 
-6. Maintenant, définissons quelques styles de police et de texte sur nos éléments HTML {{htmlelement("Heading_Elements", "<code>&lt;h1&gt;</code>")}}, {{htmlelement("li")}} et {{htmlelement("p")}}. Nous allons définir de nouvelles valeurs de {{cssxref("font-size")}} pour chaque élément. Nous allons aussi centrer le titre avec {{cssxref("text-align")}} et augmenter la hauteur de ligne ({{cssxref("line-height")}}) et l'espacement entre les lettres ({{cssxref("letter-spacing")}}) des paragraphes et des éléments de liste pour rendre le contenu du corps plus lisible.
+6. Maintenant, définissons quelques styles de police et de texte sur nos éléments HTML {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>")}}, {{HTMLElement("li")}} et {{HTMLElement("p")}}. Nous allons définir de nouvelles valeurs de {{CSSxRef("font-size")}} pour chaque élément. Nous allons aussi centrer le titre avec {{CSSxRef("text-align")}} et augmenter la hauteur de ligne ({{CSSxRef("line-height")}}) et l'espacement entre les lettres ({{CSSxRef("letter-spacing")}}) des paragraphes et des éléments de liste pour rendre le contenu du corps plus lisible.
 
    ```css
    h1 {
@@ -192,7 +191,7 @@ Revenons à notre exemple et utilisons CSS pour améliorer l'apparence du texte.
    }
    ```
 
-7. Enregistrez votre code et chargez votre HTML dans un navigateur (rafraîchissez-le si vous l'aviez déjà ouvert). Votre travail en cours devrait ressembler à ceci&nbsp;:
+7. Enregistrez votre code et chargez votre HTML dans un navigateur (rafraîchissez-le si vous l'aviez déjà ouvert). Votre travail en cours doit ressembler à ceci&nbsp;:
 
    ![Un logo Mozilla et quelques paragraphes. Une police sans-serif a été définie, les tailles de police, l'interligne et l'espacement des lettres sont ajustés, et le titre principal de la page est centré.](website-screenshot-font-small.png)
 
@@ -207,17 +206,17 @@ Vous remarquerez en utilisant CSS que beaucoup de choses tournent autour des bo�
 
 Chaque boîte qui occupe de l'espace sur votre page possède des propriétés comme&nbsp;:
 
-- {{cssxref("padding")}}&nbsp;: L'espace autour du contenu. Dans l'exemple précédent, c'est l'espace autour du texte du paragraphe.
-- {{cssxref("border")}}&nbsp;: La ligne pleine juste à l'extérieur du padding.
-- {{cssxref("margin")}}&nbsp;: L'espace à l'extérieur de la bordure.
+- {{CSSxRef("padding")}}&nbsp;: L'espace autour du contenu. Dans l'exemple précédent, c'est l'espace autour du texte du paragraphe.
+- {{CSSxRef("border")}}&nbsp;: La ligne pleine juste à l'extérieur du remplissage.
+- {{CSSxRef("margin")}}&nbsp;: L'espace à l'extérieur de la bordure.
 
 Dans cette section, nous utilisons aussi les propriétés suivantes, dont certaines ont déjà été vues&nbsp;:
 
-- {{cssxref("width")}}&nbsp;: La largeur d'un élément.
-- {{cssxref("background-color")}}&nbsp;: La couleur derrière le contenu et le padding d'un élément.
-- {{cssxref("color")}}&nbsp;: La couleur du contenu d'un élément (généralement du texte).
-- {{cssxref("text-shadow")}}&nbsp;: Une ombre portée sur le texte à l'intérieur d'un élément.
-- {{cssxref("display")}}&nbsp;: Le mode d'affichage d'un élément (c'est-à-dire la façon dont il apparaît ou est disposé sur la page web).
+- {{CSSxRef("width")}}&nbsp;: La largeur d'un élément.
+- {{CSSxRef("background-color")}}&nbsp;: La couleur derrière le contenu et le remplissage d'un élément.
+- {{CSSxRef("color")}}&nbsp;: La couleur du contenu d'un élément (généralement du texte).
+- {{CSSxRef("text-shadow")}}&nbsp;: Une ombre portée sur le texte à l'intérieur d'un élément.
+- {{CSSxRef("display")}}&nbsp;: Le mode d'affichage d'un élément (c'est-à-dire la façon dont il apparaît ou est disposé sur la page web).
 
 Dans chacune des sections suivantes&nbsp;:
 
@@ -252,13 +251,27 @@ body {
 }
 ```
 
-Le code ci-dessus définit de nouvelles valeurs pour plusieurs propriétés de l'élément HTML {{htmlelement("body")}}. Passons-les en revue ligne par ligne&nbsp;:
+Le code ci-dessus définit de nouvelles valeurs pour plusieurs propriétés de l'élément HTML {{HTMLElement("body")}}. Passons-les en revue ligne par ligne&nbsp;:
 
 - `width: 600px;`&nbsp;: Cette déclaration force le corps à toujours faire 600 pixels de large.
 - `margin: 0 auto;`&nbsp;: Lorsque vous définissez deux valeurs sur une propriété comme `margin` ou `padding`, la première valeur concerne le haut **et** le bas de l'élément (ici `0`), la seconde concerne la gauche **et** la droite. `auto` est une valeur spéciale qui répartit l'espace horizontal disponible également entre la gauche et la droite.
-- `background-color: #FF9500;`&nbsp;: Cela définit la couleur d'arrière-plan de l'élément. Notre projet utilise un orange-rouge pour l'arrière-plan du `<body>` afin de contraster avec le bleu foncé utilisé pour l'élément {{htmlelement("html")}}.
-- `padding: 0 20px 20px 20px;`&nbsp;: Cela définit quatre valeurs pour le padding. Le but est de créer un peu d'espace autour du contenu. Dans cet exemple, il n'y a pas de padding en haut du corps, et 20 pixels à droite, en bas et à gauche. Les valeurs correspondent au padding en haut, à droite, en bas et à gauche, dans cet ordre.
+- `background-color: #FF9500;`&nbsp;: Cela définit la couleur d'arrière-plan de l'élément. Notre projet utilise un orange-rouge pour l'arrière-plan du `<body>` afin de contraster avec le bleu foncé utilisé pour l'élément {{HTMLElement("html")}}.
+- `padding: 0 20px 20px 20px;`&nbsp;: Cela définit quatre valeurs pour le remplissage. Le but est de créer un peu d'espace autour du contenu. Dans cet exemple, il n'y a pas de remplissage en haut du corps, et 20 pixels à droite, en bas et à gauche. Les valeurs correspondent au remplissage en haut, à droite, en bas et à gauche, dans cet ordre.
 - `border: 5px solid black;`&nbsp;: Cela définit la largeur, le style et la couleur de la bordure. Ici, il s'agit d'une bordure noire pleine de 5 pixels autour de tout le corps de la page.
+
+### Une parenthèse sur les propriétés raccourcies
+
+Les valeurs de propriété CSS qui définissent plusieurs propriétés en une seule fois sont appelées **propriétés raccourcies**. Par exemple, `padding: 0 20px 20px 20px` est équivalent aux quatre propriétés suivantes&nbsp;:
+
+```css
+padding-top: 0;
+padding-right: 20px;
+padding-bottom: 20px;
+padding-left: 20px;
+```
+
+> [!NOTE]
+> Le cours interactif de Scrimba sur les [propriétés raccourcies de marge et de remplissage <sup>(angl.)</sup>](https://scrimba.com/frontend-path-c0j/~0g?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup> fournit un guide pratique sur l'utilisation des propriétés raccourcies pour les marges et les remplissages.
 
 ## Positionner et mettre en forme le titre principal de la page
 
@@ -275,7 +288,7 @@ h1 {
 
 Vous avez peut-être remarqué un grand espace en haut du corps de la page. Cela arrive parce que les navigateurs appliquent un style par défaut à l'élément `<h1>`. Cela peut sembler une mauvaise idée, mais l'objectif est d'assurer une lisibilité minimale pour les pages non mises en forme. Pour supprimer cet espace, on surcharge le style par défaut du navigateur avec `margin: 0;`.
 
-Ensuite, on définit un padding de 20 pixels en haut et en bas du titre, et on donne au texte du titre la même couleur que l'arrière-plan de l'élément HTML.
+Ensuite, on définit un remplissage de 20 pixels en haut et en bas du titre, et on donne au texte du titre la même couleur que l'arrière-plan de l'élément HTML.
 
 Enfin, `text-shadow` applique une ombre au texte de l'élément&nbsp;:
 
@@ -298,20 +311,20 @@ img {
 
 Ensuite, on centre l'image pour qu'elle soit plus jolie. On peut utiliser la même astuce `margin: 0 auto` que pour le corps, mais il y a des différences qui nécessitent un réglage supplémentaire pour que le CSS fonctionne.
 
-L'élément {{htmlelement("body")}} est un **élément de type bloc**, ce qui signifie qu'il occupe de l'espace sur la page et peut accepter des marges extérieures (<i lang="en">margin</i>), intérieures (<i lang="en">padding</i>) et d'autres propriétés de boîte. Les éléments {{htmlelement("img")}} (image), en revanche, sont des éléments **en ligne**&nbsp;: par défaut, ils n'acceptent pas les marges de la même manière que les éléments de bloc. Pour que l'astuce de la marge automatique fonctionne sur cette image, il faut lui donner un comportement de bloc avec `display: block;`.
+L'élément {{HTMLElement("body")}} est un **élément de type bloc**, ce qui signifie qu'il occupe de l'espace sur la page et peut accepter des marges extérieures (<i lang="en">margin</i>), intérieures (<i lang="en">padding</i>) et d'autres propriétés de boîte. Les éléments {{HTMLElement("img")}} (image), en revanche, sont des éléments **en ligne**&nbsp;: par défaut, ils n'acceptent pas les marges de la même manière que les éléments de bloc. Pour que l'astuce de la marge automatique fonctionne sur cette image, il faut lui donner un comportement de bloc avec `display: block;`.
 
-Enfin, on définit la propriété {{cssxref("max-width")}} à `100%` pour s'assurer que si l'image est plus large que la largeur définie sur le corps (600 pixels), elle sera limitée à `600px` et ne s'étirera pas au-delà.
+Enfin, on définit la propriété {{CSSxRef("max-width")}} à `100%` pour s'assurer que si l'image est plus large que la largeur définie sur le corps (600 pixels), elle est limitée à `600px` et ne s'étire pas au-delà.
 
 > [!NOTE]
-> Ne vous inquiétez pas si vous ne comprenez pas complètement `display: block;` et la différence entre un élément de bloc et un élément en ligne, ou `max-width: 100%;`. Cela deviendra plus clair au fur et à mesure que vous étudierez CSS.
+> Ne vous inquiétez pas si vous ne comprenez pas complètement `display: block;` et la différence entre un élément de bloc et un élément en ligne, ou `max-width: 100%;`. Cela devient plus clair au fur et à mesure que vous étudiez le CSS.
 
 ## Conclusion
 
-Si vous avez suivi toutes les instructions de cet article, vous devriez obtenir une page qui ressemble à ceci&nbsp;:
+Si vous avez suivi toutes les instructions de cet article, vous devez obtenir une page qui ressemble à ceci&nbsp;:
 
 ![Un logo Mozilla, centré, un titre et des paragraphes. La page est maintenant bien stylisée, avec un fond bleu pour toute la page et un fond orange pour la bande de contenu principal centrée.](website-screenshot-final.png)
 
-Vous pouvez [voir notre version ici <sup>(angl.)</sup>](https://mdn.github.io/beginner-html-site-styled/). Si vous êtes bloqué·e, vous pouvez toujours comparer votre travail avec [le code final de cet exemple sur GitHub <sup>(angl.)</sup>](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
+Vous pouvez [voir notre version ici <sup>(angl.)</sup>](https://mdn.github.io/beginner-html-site-styled/). Si vous êtes bloqué·e, vous pouvez toujours comparer votre travail avec [le code final de cet exemple sur GitHub <sup>(angl.)</sup>](https://github.com/mdn/beginner-html-site-styled/blob/main/styles/style.css).
 
 Dans cet article, nous n'avons fait qu'effleurer la surface de CSS. Vous en apprendrez beaucoup plus dans notre module principal [Bases de la mise en forme CSS](/fr/docs/Learn_web_development/Core/Styling_basics) plus loin dans le cours.
 

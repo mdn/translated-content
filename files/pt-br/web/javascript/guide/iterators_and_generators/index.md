@@ -3,9 +3,9 @@ title: Iteratores e geradores
 slug: Web/JavaScript/Guide/Iterators_and_generators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Meta_programming")}}
 
-Processar cada item em uma coleção é uma operação muito comum. O JavaScript disponibiliza uma série de maneiras de iterar sobre uma coleção, desde um simples laço {{jsxref("Statements/for","for")}}, até um {{jsxref("Global_Objects/Array/map","map()")}} e também com o {{jsxref("Global_Objects/Array/filter","filter()")}}. Iteradores e Geradores trazem o conceito da interação ocorrer diretamente no núcleo da linguagem e prover um mecanismo para a customização do comportamento dos laços {{jsxref("Statements/for...of","for...of")}}.
+Processar cada item em uma coleção é uma operação muito comum. O JavaScript disponibiliza uma série de maneiras de iterar sobre uma coleção, desde um simples laço {{jsxref("Statements/for","for")}}, até um {{jsxref("Array.map","map()")}} e também com o {{jsxref("Array.filter","filter()")}}. Iteradores e Geradores trazem o conceito da interação ocorrer diretamente no núcleo da linguagem e prover um mecanismo para a customização do comportamento dos laços {{jsxref("Statements/for...of","for...of")}}.
 
 Para detalhes, também veja:
 
@@ -69,7 +69,7 @@ myIterable[Symbol.iterator] = function* () {
 
 ### Syntaxes expecting iterables
 
-Algumas declarações e expressões esperam por iteradores, por exemplo o {{jsxref("Statements/for...of","for-of")}} loops, {{jsxref("Operators/Spread_operator","spread operator","",1)}}, {{jsxref("Operators/yield*","yield*")}}, e {{jsxref("Operators/Destructuring_assignment","destructuring assignment","",1)}}.
+Algumas declarações e expressões esperam por iteradores, por exemplo o {{jsxref("Statements/for...of","for-of")}} loops, {{jsxref("Operators/Spread_syntax","spread operator","",1)}}, {{jsxref("Operators/yield*","yield*")}}, e {{jsxref("Operators/Destructuring","destructuring assignment","",1)}}.
 
 ```js
 for (let value of ["a", "b", "c"]) {
@@ -93,7 +93,7 @@ a; // "a"
 
 ## Generators
 
-Enquanto os iteradores são ferramentas muito úteis, sua criação requer um cuidado devido à necessidade de manter explícito seu estado interno. **{{jsxref("Global_Objects/Generator","Generators","",1)}}** provêm uma alternativa poderosa: eles te permitem definir um algoritmo iterativo escrevendo uma função simples que pode manter seu estado próprio.
+Enquanto os iteradores são ferramentas muito úteis, sua criação requer um cuidado devido à necessidade de manter explícito seu estado interno. **{{jsxref("Generator","Generators","",1)}}** provêm uma alternativa poderosa: eles te permitem definir um algoritmo iterativo escrevendo uma função simples que pode manter seu estado próprio.
 
 Generator é um tipo especial de função que trabalha como uma factory para iteradores. A função vira um generator se ela contém uma ou mais expressões {{jsxref("Operators/yield","yield")}} e se ela usa a sintaxe {{jsxref("Statements/function*","function*")}}.
 
@@ -115,7 +115,7 @@ console.log(gen.next().value); // 2
 
 Generators computam seus valores "yielded" por demanda, que os permitem representar sequências de forma eficiente que costumam ser trabalhosas ao serem computadas, ou até sequências infinitas como demonstradas acima.
 
-O método {{jsxref("Global_Objects/Generator/next","next()")}} também aceita um valor que pode ser usado para modificar o estado interno de um generator. O valor passado pro `next()` será tratado como o resultado da última expressão yield que pausou o generator.
+O método {{jsxref("Generator.next","next()")}} também aceita um valor que pode ser usado para modificar o estado interno de um generator. O valor passado pro `next()` será tratado como o resultado da última expressão yield que pausou o generator.
 
 Aqui um gerador de sequência Fibonacci usando `next(x)` pra restartar a sequência:
 
@@ -152,10 +152,10 @@ console.log(sequence.next().value); // 3
 > [!NOTE]
 > Como um ponto de interesse, chamando `next(undefined)` é o mesmo que chamar `next()`. Entretanto, estartar um novo generator com qualquer valor que não seja undefined na chamada next() terá `TypeError` exception.
 
-Você pode forçar um generator a lançar uma exceção chamando o seu método {{jsxref("Global_Objects/Generator/throw","throw()")}} e passando o valor da exceção que ele deve lançar. Essa exceção será lançada do contexto suspenso atual do generator, como se o `yield` atualmente suspenso fosse um `throw`.
+Você pode forçar um generator a lançar uma exceção chamando o seu método {{jsxref("Generator.throw","throw()")}} e passando o valor da exceção que ele deve lançar. Essa exceção será lançada do contexto suspenso atual do generator, como se o `yield` atualmente suspenso fosse um `throw`.
 
 Se um yield não for encontrado durante o processo de lançamento de um thrown exception, então o exception será propagado através da chamada do `throw()`, e pra subsequente chamada do `next()` que terá a propriedade done resultando em `true`.
 
-Generators têm o método {{jsxref("Global_Objects/Generator/return","return(value)")}} que retorna o valor pego e finaliza o generator.
+Generators têm o método {{jsxref("Generator.return","return(value)")}} que retorna o valor pego e finaliza o generator.
 
-{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
+{{PreviousNext("conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Meta_programming")}}

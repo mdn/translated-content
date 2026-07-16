@@ -1,24 +1,27 @@
 ---
-title: Document.hidden
+title: "Document : propriété hidden"
+short-title: hidden
 slug: Web/API/Document/hidden
+l10n:
+  sourceCommit: 9b89bf6c59aa5f4dfe7e68b7e4fee42507d67cc4
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
-La propriété **`Document.hidden`** retourne un Booléen qui indique si la page est considérée cachée ou pas.
+La propriété en lecture seule **`hidden`** de l'interface {{DOMxRef("Document")}} retourne une valeur booléenne indiquant si la page est considérée comme cachée ou non.
 
-## Syntaxe
+La propriété {{DOMxRef("Document.visibilityState")}} fournit un moyen alternatif de déterminer si la page est cachée.
 
-```js
-var boolean = document.hidden;
-```
+## Valeur
+
+Une valeur booléenne, `true` si la page est cachée, sinon `false`.
 
 ## Exemples
 
 ```js
-document.addEventListener("visibilitychange", function () {
+document.addEventListener("visibilitychange", () => {
   console.log(document.hidden);
-  // Modifier le comportement...
+  // Modifier le comportement…
 });
 ```
 
@@ -29,3 +32,7 @@ document.addEventListener("visibilitychange", function () {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{DOMxRef("Document.visibilityState")}}

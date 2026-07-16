@@ -8,9 +8,9 @@ l10n:
 
 Une **fonction de hachage** est une fonction qui prend une entrée de longueur variable et produit une sortie de longueur fixe, aussi appelée _empreinte_ (ou simplement «&nbsp;hachage&nbsp;»). Les fonctions de hachage doivent être rapides à calculer, et des entrées différentes doivent autant que possible produire des sorties différentes (c'est ce qu'on appelle la _résistance aux collisions_).
 
-Les fonctions de hachage ont des usages à la fois {{glossary("cryptography", "cryptographiques")}} et non cryptographiques. En dehors de la cryptographie, par exemple, les fonctions de hachage peuvent servir à générer les clés d'un tableau associatif comme une map ou un dictionnaire.
+Les fonctions de hachage ont des usages à la fois {{Glossary("cryptography", "cryptographiques")}} et non cryptographiques. En dehors de la cryptographie, par exemple, les fonctions de hachage peuvent servir à générer les clés d'un tableau associatif comme une map ou un dictionnaire.
 
-La fonction {{domxref("SubtleCrypto.digest()", "digest()")}} de l'interface {{domxref("SubtleCrypto")}} met différentes fonctions de hachage à disposition des applications web.
+La fonction {{DOMxRef("SubtleCrypto.digest()", "digest()")}} de l'interface {{DOMxRef("SubtleCrypto")}} met différentes fonctions de hachage à disposition des applications web.
 
 ## Fonctions de hachage cryptographiques
 
@@ -29,8 +29,8 @@ SHA-2 est le successeur de l'algorithme SHA-1, qui n'est plus considéré comme 
 
 ## Voir aussi
 
-- {{domxref("SubtleCrypto.digest()")}}
-- [Fonction de hachage <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Hash_function) sur Wikipédia
-- [Fonction de hachage cryptographique <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Cryptographic_hash_function) sur Wikipédia
-- Termes du glossaire associés&nbsp;:
-  - {{Glossary("Symmetric-key cryptography")}}
+- La méthode {{DOMxRef("SubtleCrypto.digest()")}}
+- [Fonction de hachage](https://fr.wikipedia.org/wiki/Fonction_de_hachage) sur Wikipédia
+- [Fonction de hachage cryptographique](https://fr.wikipedia.org/wiki/Fonction_de_hachage_cryptographique) sur Wikipédia
+- Terme associé du glossaire&nbsp;:
+  - {{Glossary("Symmetric-key cryptography", "Cryptographie à clé secrète")}}

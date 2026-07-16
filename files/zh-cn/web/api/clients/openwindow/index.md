@@ -9,7 +9,7 @@ slug: Web/API/Clients/openWindow
 
 在 Firefox 中，只有在作为通知点击事件的结果调用时，才允许该方法显示弹出窗口。
 
-在 Chrome for Android 中，该方法可以改为在先前添加到用户主屏幕的 [standalone web app](/zh-CN/docs/Web/Apps/Progressive/Installable) 提供的现有浏览上下文中打开 URL.
+在 Chrome for Android 中，该方法可以改为在先前添加到用户主屏幕的 [standalone web app](/zh-CN/docs/Web/Progressive_web_apps) 提供的现有浏览上下文中打开 URL.
 
 ## 语法
 
@@ -22,7 +22,7 @@ ServiceWorkerClients.openWindow(url).then(function (WindowClient) {
 ### 参数
 
 - `url`
-  - : 一个 {{domxref("USVString")}}，表示要在窗口中打开的 client 的 URL。通常，此值必须是与调用脚本有相同域的 URL.
+  - : 一个 {{jsxref("String")}}，表示要在窗口中打开的 client 的 URL。通常，此值必须是与调用脚本有相同域的 URL.
 
 ### 返回值
 

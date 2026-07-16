@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Models
 original_slug: Learn/Server-side/Django/Models
 ---
 
-803{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+803{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
 
 이 문서에서는 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 웹사이트의 모델을 어떻게 정의할지 보여줄 것입니다. 모델이라는 것이 무엇인지, 어떻게 선언하는지, 그리고 주된 필드 타입들에 대해서 설명합니다. 그리고 모델의 데이터에 접근할 수 있는 몇몇 방법에 대해서 간단히 보여줄 것입니다.
 
@@ -13,7 +13,7 @@ original_slug: Learn/Server-side/Django/Models
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/ko/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website"
           >Django Tutorial Part 2: Creating a skeleton website</a
         >.
       </td>
@@ -431,4 +431,4 @@ At this point we'll divert briefly from creating the site, and check out the _Dj
 - [Making queries](https://docs.djangoproject.com/en/2.0/topics/db/queries/) (Django Docs)
 - [QuerySet API Reference](https://docs.djangoproject.com/en/2.0/ref/models/querysets/) (Django Docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}

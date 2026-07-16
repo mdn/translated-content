@@ -3,7 +3,7 @@ title: "Аттестация: Структурирование данных о �
 slug: Learn_web_development/Core/Structuring_content/Planet_data_table
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
 
 В нашей аттестации, мы предоставим вам некоторые данные о планетах солнечной системы, и убедим вас структурировать их в HTML таблицу.
 
@@ -57,4 +57,4 @@ slug: Learn_web_development/Core/Structuring_content/Planet_data_table
    - Ссылка на пример, который вы хотите оценить или в котором вам нужна помощь, в онлайн-редакторе (как упомянуто в шаге 1 выше). Это хорошая практика в решении проблем - очень сложно помочь кому-то с проблемой кода, если вы не видите его код.
    - Ссылка на актуальную задачу или страницу оценки, чтобы мы могли найти вопрос, с которым вам нужно помочь.
 
-{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{PreviousMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}

@@ -5,7 +5,7 @@ slug: Web/API/Element/focusout_event
 
 {{APIRef}}
 
-Событие `focusout` вызывается перед потерей элементом фокуса. Главное отличие между этим событием и [`blur`](</ru/docs/Mozilla_event_reference/blur_(event)>) в том, что у последнего нет фазы всплытия.
+Событие `focusout` вызывается перед потерей элементом фокуса. Главное отличие между этим событием и [`blur`](/ru/docs/Web/API/Element/blur_event) в том, что у последнего нет фазы всплытия.
 
 Основная информация
 
@@ -27,7 +27,7 @@ slug: Web/API/Element/focusout_event
 | Свойство                           | Тип                                      | Описание                                      |
 | ---------------------------------- | ---------------------------------------- | --------------------------------------------- |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Цель события, теряющая фокус.                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | Тип события.                                  |
+| `type` {{readonlyInline}}          | {{jsxref("String")}}                     | Тип события.                                  |
 | `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Всплывает ли событие при нормальных условиях. |
 | `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Возможно ли отменить событие.                 |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM-элемент) | Цель события, получающая фокус.               |

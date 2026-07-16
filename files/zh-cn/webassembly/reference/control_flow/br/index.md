@@ -1,5 +1,6 @@
 ---
-title: br
+title: br：Wasm 文本指令
+short-title: br
 slug: WebAssembly/Reference/Control_flow/br
 l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
@@ -9,7 +10,7 @@ l10n:
 
 `br` 有两个变体，`br_if` 按条件进行跳转，`br_table` 则基于参数的值跳转到不同的块。
 
-{{InteractiveExample("Wat Demo: br", "tabbed-taller")}}
+{{InteractiveExample("Wat 演示：br", "tabbed-taller")}}
 
 ```wat interactive-example
 (module

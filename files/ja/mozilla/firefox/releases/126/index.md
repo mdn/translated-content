@@ -47,12 +47,12 @@ l10n:
 
   ([Firefox bug 1322186](https://bugzil.la/1322186))
 
-- 要素で有効な CSS [zoom](/ja/docs/Web/CSS/zoom) を取得する、読み取り専用の {{domxref("Element.currentCSSZoom")}} プロパティをサポートしました ([Firefox bug 1880189](https://bugzil.la/1880189))。
+- 要素で有効な CSS [zoom](/ja/docs/Web/CSS/Reference/Properties/zoom) を取得する、読み取り専用の {{domxref("Element.currentCSSZoom")}} プロパティをサポートしました ([Firefox bug 1880189](https://bugzil.la/1880189))。
 
 #### DOM
 
 - カスタム要素の状態を定義して、CSS セレクターを使用してそれらをマッチさせる機能をサポートしました。
-  カスタム状態は要素の {{domxref("ElementInternals.states")}} プロパティ ({{domxref("CustomStateSet")}}) で追加または削除できる、カスタム識別子として表されます。CSS の [`:state()`](/ja/docs/Web/CSS/:state) 擬似クラスはカスタム識別子を引数として持ち、識別子が状態セットに含まれているカスタム要素にマッチします ([Firefox bug 1887543](https://bugzil.la/1887543))。
+  カスタム状態は要素の {{domxref("ElementInternals.states")}} プロパティ ({{domxref("CustomStateSet")}}) で追加または削除できる、カスタム識別子として表されます。CSS の [`:state()`](/ja/docs/Web/CSS/Reference/Selectors/:state) 擬似クラスはカスタム識別子を引数として持ち、識別子が状態セットに含まれているカスタム要素にマッチします ([Firefox bug 1887543](https://bugzil.la/1887543))。
 - 選択範囲の方向を示す {{domxref("Selection.direction")}} プロパティをサポートしました ([Firefox bug 1867058](https://bugzil.la/1867058))。
 
 #### Media、WebRTC、Web Audio
@@ -91,7 +91,7 @@ l10n:
 
 - **CSS `shape()` 関数:** `layout.css.basic-shape-shape.enabled`。
 
-  [`shape()`](/ja/docs/Web/CSS/basic-shape/shape) 関数を使用して、{{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティでシェイプを定義できます。この関数は定義できるシェイプをきめ細かく設定することができ、`{{cssxref("path","path()")}}` 関数より多くの利点をもたらします (`clip-path` における `shape()` 関数のサポートは [Firefox bug 1823463](https://bugzil.la/1823463)、`offset-path` における `shape()` 関数のサポートは [Firefox bug 1884424](https://bugzil.la/1884424)、`shape()` の補完のサポートは [Firefox bug 1884425](https://bugzil.la/1884425))。
+  [`shape()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/shape) 関数を使用して、{{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティでシェイプを定義できます。この関数は定義できるシェイプをきめ細かく設定することができ、`{{cssxref("path","path()")}}` 関数より多くの利点をもたらします (`clip-path` における `shape()` 関数のサポートは [Firefox bug 1823463](https://bugzil.la/1823463)、`offset-path` における `shape()` 関数のサポートは [Firefox bug 1884424](https://bugzil.la/1884424)、`shape()` の補完のサポートは [Firefox bug 1884425](https://bugzil.la/1884425))。
 
 ## 過去のバージョン
 

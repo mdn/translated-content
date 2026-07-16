@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-El constructor **`Event()`** crea un nuevo objeto {{domxref("Event")}}. Un evento creado de esta manera se denomina _evento sintético_, a diferencia de un evento activado por el navegador, y se puede [enviar](/es/docs/Web/Events/Creating_and_Triggering_Events) mediante una secuencia de comandos.
+El constructor **`Event()`** crea un nuevo objeto {{domxref("Event")}}. Un evento creado de esta manera se denomina _evento sintético_, a diferencia de un evento activado por el navegador, y se puede [enviar](/es/docs/Web/API/Document_Object_Model/Events) mediante una secuencia de comandos.
 
 ## Sintaxis
 
@@ -58,4 +58,4 @@ myDiv.dispatchEvent(evento);
 
 - {{domxref("Event")}}
 - {{domxref("EventTarget.dispatchEvent()")}}
-- [Creando y lanzando eventos](/es/docs/Web/Events/Creating_and_triggering_events)
+- [Creando y lanzando eventos](/es/docs/Web/API/Document_Object_Model/Events)

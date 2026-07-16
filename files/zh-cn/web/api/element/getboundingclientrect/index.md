@@ -23,7 +23,7 @@ getBoundingClientRect()
 
 ![](element-box-diagram.png)
 
-该方法返回的 {{domxref("DOMRect")}} 对象中的 `width` 和 `height` 属性是包含了 `padding` 和 `border-width` 的，而不仅仅是内容部分的宽度和高度。在标准盒子模型中，这两个属性值分别与元素的 `width`/`height` + `padding` + `border-width` 相等。而如果是 [`box-sizing: border-box`](/zh-CN/docs/Web/CSS/box-sizing)，两个属性则直接与元素的 `width` 或 `height` 相等。
+该方法返回的 {{domxref("DOMRect")}} 对象中的 `width` 和 `height` 属性是包含了 `padding` 和 `border-width` 的，而不仅仅是内容部分的宽度和高度。在标准盒子模型中，这两个属性值分别与元素的 `width`/`height` + `padding` + `border-width` 相等。而如果是 [`box-sizing: border-box`](/zh-CN/docs/Web/CSS/Reference/Properties/box-sizing)，两个属性则直接与元素的 `width` 或 `height` 相等。
 
 这个对象是由该元素的 {{domxref("Element.getClientRects", "getClientRects()")}} 方法返回的一组矩形的集合，就是该元素的 CSS 边框大小。
 

@@ -1,22 +1,23 @@
 ---
 title: HTMLCanvasElement：toDataURL() 方法
+short-title: toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
 ---
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** 方法會返回包含影像表示的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data)，格式由參數 `type` 指定。
+**`HTMLCanvasElement.toDataURL()`** 方法會回傳一個包含圖片展示的[資料 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data)，其格式由 `type` 參數指定。
 
-可以指定所需的檔案格式和影像品質。如果未指定檔案格式，或者指定的格式不受支援，則數據會以 `image/png` 格式匯出。換句話說，如果對於任何其他類型（type）的請求地返回值是以 `data:image/png` 開頭，則表示該格式不受支援。
+可以指定想要的檔案格式與圖片品質。若未指定檔案格式，或不支援給定的格式，則資料會匯出為 `image/png`。換句話說，如果對任何其他請求的 `type` 回傳值是以 `data:image/png` 開頭，則表示不支援該格式。
 
-瀏覽器必須支援 `image/png` 格式；許多瀏覽器也會支援額外的格式，例如 `image/jpeg` 和 `image/webp`。
+瀏覽器必須支援 `image/png`；許多瀏覽器也支援其他格式，包含 `image/jpeg` 與 `image/webp`。
 
-對於支援編碼解析度中繼資料的檔案格式，創建的影像數據將有 96dpi 的解析度。
+對於支援編碼解析度後設資料的檔案格式，建立的圖片資料解析度將為 96dpi。
 
 > [!WARNING]
-> `toDataURL()` 會將整個影像編碼為一個內存字串。對於較大的影像，這可能會帶來效能問題，甚至在指定給 {{domxref("HTMLImageElement.src")}} 時超過瀏覽器的 URL 長度限制。建議一般使用 [`toBlob()`](/zh-TW/docs/Web/API/HTMLCanvasElement/toBlob)，並搭配 {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}}。
+> `toDataURL()` 會將整張圖片編碼為記憶體內的字串。對於較大的圖片，這可能會影響效能，且在指派給 {{domxref("HTMLImageElement.src")}} 時，甚至可能超出瀏覽器的 URL 長度限制。你通常應該優先使用 [`toBlob()`](/zh-TW/docs/Web/API/HTMLCanvasElement/toBlob) 搭配 {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}} 來代替。
 
 ## 語法
 
@@ -29,30 +30,30 @@ toDataURL(type, quality)
 ### 參數
 
 - `type` {{optional_inline}}
-  - : 表示影像格式的字串。預設格式為 `image/png`；如果指定的格式不支援，也會使用此格式。
+  - : 指示圖片格式的字串。預設類型為 `image/png`；若不支援指定的類型，也會使用此圖片格式。
 - `quality` {{optional_inline}}
-  - : 一個介於 `0` 和 `1` 之間的 {{jsxref("Number")}}，表示創建有損壓縮格式（如 `image/jpeg` 或 `image/webp`）影像時所用的影像品質。如果未指定此選項或數值超出允許範圍，則用戶代理將使用預設的品質值。
+  - : 一個 `0` 到 `1` 之間的 {{jsxref("Number")}}，指示在使用支援失真壓縮的檔案格式（如 `image/jpeg` 或 `image/webp`）建立圖片時所使用的圖片品質。若未指定此選項，或數值超出允許範圍，使用者代理將使用其預設的品質數值。
 
-### 返回值
+### 回傳值
 
-包含請求的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 的字串。
+包含請求 [data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 的字串。
 
-如果畫布的高度或寬度為 `0`，或超過[畫布的最大尺寸](/zh-TW/docs/Web/HTML/Reference/Elements/canvas#最大畫布尺寸)，將返回字串 `"data:,"`。
+若畫布的高度或寬度為 `0` 或大於[最大畫布尺寸](/zh-TW/docs/Web/HTML/Reference/Elements/canvas#最大畫布尺寸)，則回傳字串 `"data:,"`。
 
 ### 例外
 
 - `SecurityError`
-  - : 當畫布的點陣圖非來源乾淨，或其內容有部分可能來自與載入的文件本身不同的網站時。
+  - : 畫布的點陣圖不是來源乾淨的；其內容至少有一部分是（或可能是）從文件本身載入來源以外的網站載入的。
 
 ## 範例
 
-以下是此 {{HTMLElement("canvas")}} 元素：
+給定這個 {{HTMLElement("canvas")}} 元素：
 
 ```html
 <canvas id="canvas" width="5" height="5"></canvas>
 ```
 
-可以使用以下程式碼取得該畫布的數據 URL：
+你可以用下列程式碼取得畫布的資料 URL：
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -62,7 +63,7 @@ console.log(dataURL);
 // blAAAADElEQVQImWNgoBMAAABpAAFEI8ARAAAAAElFTkSuQmCC"
 ```
 
-### 設定 jpeg 格式的影像品質
+### 設定 jpeg 的圖片品質
 
 ```js
 const fullQuality = canvas.toDataURL("image/jpeg", 1.0);
@@ -71,9 +72,9 @@ const mediumQuality = canvas.toDataURL("image/jpeg", 0.5);
 const lowQuality = canvas.toDataURL("image/jpeg", 0.1);
 ```
 
-### 範例：動態變更影像
+### 範例：動態變更圖片
 
-可以搭配滑鼠事件，動態更改影像（例如切換為灰階或彩色影像）。
+你可以搭配滑鼠事件使用此技術，以動態變更圖片（此範例為灰階與彩色的切換）：
 
 #### HTML
 
@@ -84,8 +85,6 @@ const lowQuality = canvas.toDataURL("image/jpeg", 0.1);
 #### JavaScript
 
 ```js
-window.addEventListener("load", removeColors);
-
 function showColorImg() {
   this.style.display = "none";
   this.nextSibling.style.display = "inline";
@@ -126,6 +125,8 @@ function removeColors() {
     colorImg.parentNode.insertBefore(grayImg, colorImg);
   }
 }
+
+removeColors();
 ```
 
 ## 規範
@@ -138,4 +139,4 @@ function removeColors() {
 
 ## 參見
 
-- [HTTP](/zh-TW/docs/Web/HTTP) 參考中的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data)。
+- [HTTP](/zh-TW/docs/Web/HTTP) 參考文件中的[資料 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data)。

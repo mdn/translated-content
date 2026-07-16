@@ -9,14 +9,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/Uint8ClampedArray/Uint8ClampedArray", "Uint8ClampedArray()")}}
+- {{jsxref("Uint8ClampedArray.Uint8ClampedArray", "Uint8ClampedArray()")}}
   - : 新しい `Uint8ClampedArray` オブジェクトを生成します。
 
 ## 静的プロパティ
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8ClampedArray.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`Uint8ClampedArray` の場合は `1` です。
-- {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
+- {{jsxref("Function.name", "Uint8ClampedArray.name")}}
   - : コンストラクター名を文字列値で返します。`Uint8ClampedArray` の場合、 "`Uint8ClampedArray`" です。
 
 ## 静的メソッド
@@ -89,7 +89,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
   - : 配列とその要素を表すローカライズされた文字列を返します。{{jsxref("Array.prototype.toLocaleString()")}} も参照してください。
 - {{jsxref("TypedArray.toString", "Uint8ClampedArray.prototype.toString()")}}
   - : 配列とその要素を表す文字列を返します。{{jsxref("Array.prototype.toString()")}} も参照してください。
-- {{jsxref("TypedArray.@@iterator", "Uint8ClampedArray.prototype[Symbol.iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Uint8ClampedArray.prototype[Symbol.iterator]()")}}
   - : 配列内ですべての位置における値を提供する新しい*配列イテレーター*を返します。
 
 ## 例
@@ -138,6 +138,6 @@ var uintc8 = new Uint8ClampedArray(iterable);
 ## 関連情報
 
 - `Uint8ClampedArray` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays) で利用できます
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

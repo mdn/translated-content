@@ -12,7 +12,7 @@ l10n:
 
 이는 원본과 연관된 네트워크, 쿠키 혹은 데이터 저장소에 접근 권한을 가지고 있지 않습니다. 이는 최상위 문서의 생애주기 동안 로컬 컨텍스트를 사용한다는 것을 의미합니다. 그로 인해 {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) 임베딩 규칙이 완화될 수 있어, COEP가 설정된 문서가 COEP가 설정되지 않은 타 문서를 임베드할 수 있습니다.
 
-더 자세한 설명은 [자격 증명이 없는 IFrame](/ko/docs/Web/Security/IFrame_credentialless) 를 확인하세요.
+더 자세한 설명은 [자격 증명이 없는 IFrame](/ko/docs/Web/HTTP/Guides/IFrame_credentialless) 를 확인하세요.
 
 ## 값
 

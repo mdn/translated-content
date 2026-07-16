@@ -2,10 +2,8 @@
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
 l10n:
-  sourceCommit: 47962c4ebad5a138673422ec63a282ab9a63d454
+  sourceCommit: ab03131120acd9e210a5da979d685457e0762d2b
 ---
-
-{{JSRef}}
 
 **`JSON`** 名前空間オブジェクトは、 [JavaScript Object Notation](https://json.org/) ({{Glossary("JSON")}}) を解釈したり、値を JSON に変換したりする静的メソッドを持ちます。
 
@@ -33,7 +31,7 @@ JavaScript のオブジェクトリテラルと JSON との間で、同じテキ
 有効な JSON の構文は、[ABNF](https://ja.wikipedia.org/wiki/ABNF) で表現された以下の文法で公式に定義されています。これは [IETF の JSON 標準 (RFC)](https://datatracker.ietf.org/doc/html/rfc8259) からコピーしたものです。
 
 ```plain
-JSON-text = object / array
+JSON-text = ws value ws
 begin-array     = ws %x5B ws  ; [ left square bracket
 begin-object    = ws %x7B ws  ; { left curly bracket
 end-array       = ws %x5D ws  ; ] right square bracket
@@ -240,7 +238,6 @@ const parsedData = JSON.parse(str, (key, value, context) => {
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.toJSON()")}}
 - [JSON Diff](https://json-diff.com/)
 - [JSON Beautifier/editor](https://jsonbeautifier.org/)
 - [JSON Parser](https://jsonparser.org/)

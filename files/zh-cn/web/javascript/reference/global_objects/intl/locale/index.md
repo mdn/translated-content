@@ -3,8 +3,6 @@ title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 ---
 
-{{JSRef}}
-
 **`Intl.Locale`** 对象是 Intl 对象的标准内置属性，用于表示 Unicode 区域标识。
 
 {{InteractiveExample("JavaScript Demo: Intl.Locale")}}
@@ -34,7 +32,7 @@ console.log(korean.hourCycle, japanese.hourCycle);
 
 ## 构造函数
 
-- {{jsxref("Locale/Locale", "Intl.Locale()")}}
+- {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}}
   - : 实例化一个 `Locale` 对象。
 
 ## 实例属性
@@ -73,7 +71,7 @@ console.log(korean.hourCycle, japanese.hourCycle);
 
 ### 基本使用
 
-很简单，就是需要给{{jsxref("Locale/Locale", "Intl.Locale")}} 构造函数传入一个 locale 标识字符串作为参数：
+很简单，就是需要给{{jsxref("Intl/Locale/Locale", "Intl.Locale")}} 构造函数传入一个 locale 标识字符串作为参数：
 
 ```js
 let us = new Intl.Locale("zh-Hans-CN");

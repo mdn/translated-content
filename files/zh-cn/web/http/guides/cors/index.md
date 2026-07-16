@@ -9,7 +9,7 @@ l10n:
 
 跨源 HTTP 请求的一个例子：运行在 `https://domain-a.com` 的 JavaScript 代码使用 {{domxref("XMLHttpRequest")}} 来发起一个到 `https://domain-b.com/data.json` 的请求。
 
-出于安全性，浏览器限制脚本内发起的跨源 HTTP 请求。例如，`XMLHttpRequest` 和 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 遵循[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。这意味着使用这些 API 的 Web 应用程序只能从加载应用程序的同一个域请求 HTTP 资源，除非响应报文包含了正确 CORS 响应头。
+出于安全性，浏览器限制脚本内发起的跨源 HTTP 请求。例如，`XMLHttpRequest` 和 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 遵循[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)。这意味着使用这些 API 的 Web 应用程序只能从加载应用程序的同一个域请求 HTTP 资源，除非响应报文包含了正确 CORS 响应头。
 
 ![CORS 机制的图表表示](https://mdn.github.io/shared-assets/images/diagrams/http/cors/fetching-page-cors.svg)
 
@@ -23,7 +23,7 @@ CORS 机制允许 Web 应用服务器进行跨源访问控制，从而使跨源�
 - Web 字体（CSS 中通过 `@font-face` 使用跨源字体资源），[因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)。
 - [WebGL 贴图](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - 使用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 将图片或视频画面绘制到 canvas。
-- [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)。
+- [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/Guides/Shapes/From_images)。
 
 本文概述了跨源资源共享机制及其所涉及的 HTTP 标头。
 

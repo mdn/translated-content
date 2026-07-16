@@ -1,12 +1,12 @@
 ---
-title: "Types de liens : manifest"
+title: Valeur d'attribut HTML `rel="manifest"`
+short-title: manifest
 slug: Web/HTML/Reference/Attributes/rel/manifest
-original_slug: Web/HTML/Attributes/rel/manifest
+l10n:
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
-{{HTMLSidebar}}
-
-Le mot-clé **`manifest`** de l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément {{HTMLElement("link")}} est une information indiquant que la ressource ciblée est un [manifeste d'application web](/fr/docs/Web/Progressive_web_apps/Manifest).
+Le mot-clé **`manifest`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément {{HTMLElement("link")}} indique que la ressource cible est un [manifest d'application Web](/fr/docs/Web/Progressive_web_apps/Manifest).
 
 ## Spécifications
 

@@ -1,19 +1,32 @@
 ---
-title: HTMLFormElement.reset()
+title: "HTMLFormElement : méthode reset()"
+short-title: reset()
 slug: Web/API/HTMLFormElement/reset
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`HTMLFormElement.reset()`** restaure les valeurs par défaut des éléments du formulaire. Cette méthode fait la même chose que lorsqu'on clique sur un bouton de type `reset`.
+La méthode **`reset()`** de l'interface {{DOMxRef("HTMLFormElement")}} restaure les valeurs par défaut d'un élément de formulaire. Cette méthode a le même effet que le clic sur le contrôle [`<input type="reset">`](/fr/docs/Web/HTML/Reference/Elements/input/reset) du formulaire.
 
-Si un élément du formulaire (comme un bouton reset par exemple) a un `name` ou `id` valant _reset_, celui-ci remplacera la méthode reset du formulaire. Les attributs des éléments, comme `disabled`, ne sont pas réinitialisés.
+Si un contrôle de formulaire (comme un bouton de réinitialisation) a pour nom ou un identifiant <i lang="en">reset</i>, il masquera la méthode de réinitialisation du formulaire. Il ne réinitialise pas d'autres attributs dans l'entrée, tels que `disabled`.
+
+Notez que si {{DOMxRef("Element.setAttribute", "setAttribute()")}} est appelé pour définir la valeur d'un attribut particulier, un appel ultérieur à `reset()` ne réinitialisera pas l'attribut à sa valeur par défaut, mais plutôt le conservera à la valeur que l'appel {{DOMxRef("Element.setAttribute", "setAttribute()")}} lui a attribuée.
 
 ## Syntaxe
 
-```js
-HTMLFormElement.reset();
+```js-nolint
+reset()
 ```
+
+### Paramètres
+
+Aucun.
+
+### Valeur de retour
+
+Aucun ({{JSxRef("undefined")}}).
 
 ## Exemple
 
@@ -21,4 +34,10 @@ HTMLFormElement.reset();
 document.getElementById("myform").reset();
 ```
 
-## Spécification
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

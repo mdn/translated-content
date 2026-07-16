@@ -13,9 +13,9 @@ slug: Mozilla/Firefox/Releases/101
 
 ### CSS
 
-- ウェブコンテンツに高いコントラスト (`more`) または低いコントラスト(`less`) の設定をユーザーが指定しているかを検知するために使用できる、[`prefers-contrast`](/ja/docs/Web/CSS/@media/prefers-contrast) メディア特性をデフォルトで有効にしました。また、この特性の新しい値 `custom` で、コントラストのために使用する色のセットをユーザーが指定できます ([Firefox バグ 1656363](https://bugzil.la/1656363))。
+- ウェブコンテンツに高いコントラスト (`more`) または低いコントラスト(`less`) の設定をユーザーが指定しているかを検知するために使用できる、[`prefers-contrast`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) メディア特性をデフォルトで有効にしました。また、この特性の新しい値 `custom` で、コントラストのために使用する色のセットをユーザーが指定できます ([Firefox バグ 1656363](https://bugzil.la/1656363))。
 
-- 3 種類の新たなビューポートの寸法である小 (`s`)、大 (`l`)、動的 (`d`) を導入しました。これらの新しい寸法で、既存の単位である `vh`、`vw`、`vmax`、`vmin` に加えて新しい [ビューポートのパーセント値による寸法](/ja/docs/Web/CSS/length) が追加されました。新しいビューポートのパーセント値による寸法の単位は `svh`、`lvh`、`dvh`、`svw`、`lvw`、`dvw`、`svmax`、`lvmax`、`dvmax`、`svmin`、`lvmin`、`dvmin` です ([Firefox バグ 1610815](https://bugzil.la/1610815))。また、単位 `vb` および `vi` をデフォルトで有効にしました ([Firefox バグ 1610815](https://bugzil.la/1610815))。
+- 3 種類の新たなビューポートの寸法である小 (`s`)、大 (`l`)、動的 (`d`) を導入しました。これらの新しい寸法で、既存の単位である `vh`、`vw`、`vmax`、`vmin` に加えて新しい [ビューポートのパーセント値による寸法](/ja/docs/Web/CSS/Reference/Values/length) が追加されました。新しいビューポートのパーセント値による寸法の単位は `svh`、`lvh`、`dvh`、`svw`、`lvw`、`dvw`、`svmax`、`lvmax`、`dvmax`、`svmin`、`lvmin`、`dvmin` です ([Firefox バグ 1610815](https://bugzil.la/1610815))。また、単位 `vb` および `vi` をデフォルトで有効にしました ([Firefox バグ 1610815](https://bugzil.la/1610815))。
 
 ### JavaScript
 

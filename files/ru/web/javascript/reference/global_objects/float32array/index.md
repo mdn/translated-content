@@ -25,9 +25,9 @@ new Float32Array(buffer [, byteOffset [, length]]);
   - : Возвращает число, соответствующее размеру элемента массива в байтах. Для `Float32Array` это `4`.
 - Float32Array.length
   - : Статическое свойство "длина" со значением 0. Если хотите получить актуальную длину массива (число элементов) используйте {{jsxref("TypedArray.prototype.length", "Float32Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Float32Array.name")}}
+- {{jsxref("Function.name", "Float32Array.name")}}
   - : Возвращает строковое представление названия конструктора. В данном случае `Float32Array` вернёт `"Float32Array"`.
-- {{jsxref("TypedArray.prototype", "Float32Array.prototype")}}
+- {{jsxref("TypedArray", "Float32Array.prototype")}}
   - : Прототип объекта `TypedArray`.
 
 ## Методы
@@ -39,7 +39,7 @@ new Float32Array(buffer [, byteOffset [, length]]);
 
 ## `Float32Array` prototype
 
-``Любые `Float32Array` объекты наследуются от {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+``Любые `Float32Array` объекты наследуются от {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Свойства
 
@@ -106,7 +106,7 @@ new Float32Array(buffer [, byteOffset [, length]]);
   - : Возвращает локализированную строку представляющую массив и его элементы. Смотрите также {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Float32Array.prototype.toString()")}}
   - : Возвращает строку представляющую массив и его элементы. Смотрите также {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Float32Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Float32Array.prototype[@@iterator]()")}}
   - : `Возвращает новый объект Array Iterator который содержит значения всех элементов в массиве.`
 
 ## Примеры
@@ -152,7 +152,7 @@ var float32 = new Float32Array(iterable);
 
 ## Примечания по совместимости
 
-Начиная с ECMAScript 2015 (ES6), `Float32Array` конструктор обязательно должен вызываться с ключевым словом {{jsxref("Operators/new", "new")}}. Вызов `Float32Array` конструктора как функцию приведёт к исключению {{jsxref("TypeError")}}.
+Начиная с ECMAScript 2015 (ES6), `Float32Array` конструктор обязательно должен вызываться с ключевым словом {{jsxref("new")}}. Вызов `Float32Array` конструктора как функцию приведёт к исключению {{jsxref("TypeError")}}.
 
 ```js example-bad
 var dv = Float32Array([1, 2, 3]);

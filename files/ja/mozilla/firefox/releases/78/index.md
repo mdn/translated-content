@@ -69,7 +69,7 @@ Mozilla hacks の記事「[New in Firefox 78: DevTools improvements, new regex e
 
 ### TLS 1.0 および 1.1 の廃止
 
-- [Transport Layer Security](/ja/docs/Web/Security/Transport_Layer_Security) (TLS) プロトコルのバージョン 1.0 および 1.1 のサポートを、すべてのブラウザーで廃止しました。以前の告知と、影響を受ける場合の対処について、[TLS 1.0 and 1.1 Removal Update](https://hacks.mozilla.org/2019/05/tls-1-0-and-1-1-removal-update/) をご覧ください ([Firefox バグ 1643229](https://bugzil.la/1643229))。
+- [Transport Layer Security](/ja/docs/Web/Security/Defenses/Transport_Layer_Security) (TLS) プロトコルのバージョン 1.0 および 1.1 のサポートを、すべてのブラウザーで廃止しました。以前の告知と、影響を受ける場合の対処について、[TLS 1.0 and 1.1 Removal Update](https://hacks.mozilla.org/2019/05/tls-1-0-and-1-1-removal-update/) をご覧ください ([Firefox バグ 1643229](https://bugzil.la/1643229))。
 
 ## アドオン開発者向けの変更点
 

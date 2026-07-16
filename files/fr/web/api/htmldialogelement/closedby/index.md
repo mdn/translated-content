@@ -3,12 +3,12 @@ title: "HTMLDialogElement : propriété closedBy"
 short-title: closedBy
 slug: Web/API/HTMLDialogElement/closedBy
 l10n:
-  sourceCommit: bec7ef59277e752985de0ee963c86f6e8e4b3400
+  sourceCommit: 6aca3e5157dbc163fe8209d9bf8cc3f2e8ec3f9d
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`closedBy`** de l'interface {{domxref("HTMLDialogElement")}} indique les types d'actions utilisateur·ice·s qui peuvent être utilisées pour fermer l'élément {{HTMLElement("dialog")}} associé. Elle définit ou retourne la valeur de l'attribut {{HTMLElement("dialog", "<code>closedby</code>", "closedby")}} du dialogue.
+La propriété **`closedBy`** de l'interface {{DOMxRef("HTMLDialogElement")}} indique les types d'actions utilisateur·ice·s qui peuvent être utilisées pour fermer l'élément {{HTMLElement("dialog")}} associé. Elle définit ou retourne la valeur de l'attribut {{HTMLElement("dialog", "<code>closedby</code>", "closedby")}} du dialogue.
 
 ## Valeur
 
@@ -21,26 +21,48 @@ Une chaîne de caractères&nbsp;; les valeurs possibles sont&nbsp;:
 - `none`
   - : La boîte de dialogue ne peut être fermée que par un mécanisme défini par le·la développeur·euse.
 
+### Comportement par défaut
+
+Si l'attribut `closedby` est absent ou invalide, il revient à l'état **Auto**. Dans l'état **Auto**&nbsp;:
+
+- lorsque le `<dialog>` est ouvert avec `showModal()`, il se comporte comme si&nbsp;: `closedby="closerequest"`
+- lorsque le `<dialog>` est ouvert par tout autre moyen, il se comporte comme si&nbsp;: `closedby="none"`
+
 ## Exemples
 
 ### Utilisation simple de `closedBy`
 
 ```html
-<dialog open closedby="any">
+<dialog closedby="any">
   <h2>Ma boîte de dialogue</h2>
   <p>
-    Fermable avec la touche Échap ou en cliquant en dehors de la boîte de
-    dialogue. Comportement de «&nbsp;fermeture légère&nbsp;».
+    Peut être fermé avec la touche <kbd>Échap</kbd> ou en cliquant en dehors de
+    la boîte de dialogue («&nbsp;fermeture légère&nbsp;»).
   </p>
 </dialog>
 ```
 
-```js
-const dialogElem = document.querySelector("dialog");
-
-// Affiche "any" dans la console
-console.log(dialogElem.closedBy);
+```html hidden
+<pre id="journal"></pre>
 ```
+
+```js hidden
+const elementJournal = document.getElementById("journal");
+function journaliser(texte) {
+  elementJournal.innerText = `${elementJournal.innerText}${texte}\n`;
+  elementJournal.scrollTop = elementJournal.scrollHeight;
+}
+```
+
+```js
+const dialogue = document.querySelector("dialog");
+dialogue.showModal();
+journaliser(`closedBy: ${dialogue.closedBy}`);
+```
+
+### Résultat
+
+{{EmbedLiveSample("Utilisation simple de `closedBy`", "100%", 250)}}
 
 ## Spécifications
 
@@ -52,5 +74,4 @@ console.log(dialogElem.closedBy);
 
 ## Voir aussi
 
-- Élément HTML implémentant cette interface&nbsp;:
-  - {{HTMLElement("dialog")}}
+- L'élément HTML {{HTMLElement("dialog")}}

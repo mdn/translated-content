@@ -1,11 +1,10 @@
 ---
 title: RegExp.prototype.test()
+short-title: test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`test()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、正規表現と指定された文字列を照合するための検索を実行します。一致があった場合は `true` を、それ以外の場合は `false` を返します。
 
@@ -20,19 +19,19 @@ const regex = new RegExp("foo*");
 const globalRegex = new RegExp("foo*", "g");
 
 console.log(regex.test(str));
-// Expected output: true
+// 予想される結果: true
 
 console.log(globalRegex.lastIndex);
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(globalRegex.test(str));
-// Expected output: true
+// 予想される結果: true
 
 console.log(globalRegex.lastIndex);
-// Expected output: 9
+// 予想される結果: 9
 
 console.log(globalRegex.test(str));
-// Expected output: false
+// 予想される結果: false
 ```
 
 ## 構文

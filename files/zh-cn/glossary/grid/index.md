@@ -60,7 +60,7 @@ l10n:
 
 ## 参见
 
-- [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [网格布局的基本概念](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - 属性参考：
   - {{cssxref("grid-template-columns")}}
   - {{cssxref("grid-template-rows")}}

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Workers API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
-**`Worker()`** コンストラクターは、指定された URL で指定されたスクリプトを実行する {{domxref("Worker")}} オブジェクトを作成します。このスクリプトは [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に従わなければいけません。
+**`Worker()`** コンストラクターは、指定された URL で指定されたスクリプトを実行する {{domxref("Worker")}} オブジェクトを作成します。このスクリプトは [同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)に従わなければいけません。
 
 > [!NOTE]
 > data URL が 同一オリジンであるかどうかについては、ブラウザーベンダーの間で意見が分かれています。 Firefox 10 以降のリリースでは data URL を受け入れますが、すべてのブラウザーでそうなるとは限りません。

@@ -1,162 +1,112 @@
 ---
-title: Array.prototype.copyWithin()
+title: "Array : méthode copyWithin()"
+short-title: copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`copyWithin()`** des instances de {{JSxRef("Array")}} copie superficiellement une partie de ce tableau à un autre emplacement dans le même tableau et retourne ce tableau sans en modifier la longueur.
 
-La méthode **`copyWithin()`** effectue une copie superficielle (_shallow copy_) d'une partie d'un tableau sur ce même tableau et le renvoie, sans modifier sa taille.
-
-{{InteractiveExample("JavaScript Demo: Array.copyWithin()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.copyWithin()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c", "d", "e"];
+const array = ["a", "b", "c", "d", "e"];
 
-// Copy to index 0 the element at index 3
-console.log(array1.copyWithin(0, 3, 4));
-// Expected output: Array ["d", "b", "c", "d", "e"]
+// Copie à l'indice 0 l'élément à l'indice 3
+console.log(array.copyWithin(0, 3, 4));
+// Résultat attendu : Array ["d", "b", "c", "d", "e"]
 
-// Copy to index 1 all elements from index 3 to the end
-console.log(array1.copyWithin(1, 3));
-// Expected output: Array ["d", "d", "e", "d", "e"]
+// Copie à l'indice 1 tous les éléments de l'indice 3 à la fin
+console.log(array.copyWithin(1, 3));
+// Résultat attendu : Array ["d", "d", "e", "d", "e"]
 ```
 
 ## Syntaxe
 
-```js
-arr.copyWithin(cible);
-arr.copyWithin(cible, début);
-arr.copyWithin(cible, début, fin);
+```js-nolint
+copyWithin(target, start)
+copyWithin(target, start, end)
 ```
 
 ### Paramètres
 
-- `cible`
-  - : Indice à partir duquel la séquence sera copiée. Si la valeur est négative, `cible` sera compté à partir de la fin du tableau.
-
-    Si `cible` est supérieur ou égal à `arr.length`, rien ne sera copié. Si `cible` est positionné apès `début`, la séquence copiée sera réduite pour correspondre à `arr.length`.
-
-- `début` {{optional_inline}}
-  - : Indice de début de la séquence a copier. Si la valeur est négative, `début` sera compté à partir de la fin du tableau. Si `début` est omis, `copyWithin` copiera à partir du début du tableau (par défaut 0).
-- `fin` {{optional_inline}}
-  - : Indice de fin de la séquence a copier. `copyWithin` copie jusqu'à `fin` (non-inclusif). Si la valeur est négative, `end` sera compté à partir de la fin du tableau. Si `end` est omis, `copyWithin` copiera jusqu'à la fin du tableau (par défaut `arr.length`).
+- `target`
+  - : L'indice (à partir de zéro) auquel copier la séquence, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière). Cela correspond à l'emplacement où l'élément à l'indice `start` sera copié, et tous les éléments compris entre `start` et `end` seront copiés aux indices suivants.
+    - Un indice négatif compte à rebours depuis la fin du tableau — si `-array.length <= target < 0`, on utilise `target + array.length`.
+    - Si `target < -array.length`, on utilise `0`.
+    - Si `target >= array.length`, rien n'est copié.
+    - Si `target` est positionné après `start` après normalisation, la copie ne se fait que jusqu'à la fin de `array.length` (autrement dit, `copyWithin()` n'étend jamais le tableau).
+- `start`
+  - : L'indice (à partir de zéro) à partir duquel commencer à copier les éléments, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+    - Un indice négatif compte à rebours depuis la fin du tableau — si `-array.length <= start < 0`, on utilise `start + array.length`.
+    - Si `start < -array.length`, on utilise `0`.
+    - Si `start >= array.length`, rien n'est copié.
+- `end` {{Optional_Inline}}
+  - : L'indice (à partir de zéro) auquel arrêter de copier les éléments, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière). `copyWithin()` copie jusqu'à (mais sans inclure) `end`.
+    - Un indice négatif compte à rebours depuis la fin du tableau — si `-array.length <= end < 0`, on utilise `end + array.length`.
+    - Si `end < -array.length`, on utilise `0`.
+    - Si `end >= array.length` ou si `end` est omis ou `undefined`, on utilise `array.length`, ce qui fait que tous les éléments jusqu'à la fin sont copiés.
+    - Si `end` implique une position avant ou à la même position que celle impliquée par `start`, rien n'est copié.
 
 ### Valeur de retour
 
-Le tableau modifié par la méthode.
+Le tableau modifié.
 
 ## Description
 
-La fonction `copyWithin()` fonctionne de la même façon que `memmove` en C/C++. C'est une méthode très performante pour décaler les données d'un {{jsxref("Array")}} ou d'un {{jsxref("TypedArray")}} (dans ce cas, on pourra utiliser {{jsxref("TypedArray/copyWithin", "TypedArray.copyWithin()")}}). La séquence est copiée et collée en une opération. La séquence collée aura les valeurs copiées même si les zones de copiage et de collage se chevauchent.
+La méthode `copyWithin()` fonctionne comme `memmove` en C et C++&nbsp;; c'est une méthode très performante pour décaler les données d'un tableau ({{JSxRef("Array")}}). Cela s'applique en particulier à la méthode {{JSxRef("TypedArray/copyWithin", "TypedArray")}} du même nom. La séquence est copiée et collée en une seule opération&nbsp;; la séquence collée aura les valeurs copiées même si les zones de copie et de collage se chevauchent.
 
-La fonction `copyWithin()` est intentionnellement générique, il n'est pas nécessaire que `this` soit un objet {{jsxref("Array", "Array")}}.
+Comme `undefined` devient `0` lorsqu'il est converti en entier, omettre le paramètre `start` a le même effet que de passer `0`, ce qui copie tout le tableau à la position cible, équivalent à un décalage vers la droite où la borne droite est tronquée et la borne gauche est dupliquée. Ce comportement peut prêter à confusion pour les lecteurs·rices de votre code&nbsp;; il est donc préférable de passer explicitement `0` comme valeur de `start`.
 
-De plus, `copyWithin()` est une méthode qui modifie l'objet courant. Elle ne modifie pas la longueur de `this`, mais change son contenu et créé de nouvelles propriétés si nécessaire.
+```js
+console.log([1, 2, 3, 4, 5].copyWithin(2));
+// [1, 2, 1, 2, 3] ; décale tous les éléments de 2 positions vers la droite
+```
+
+La méthode `copyWithin()` est une [méthode de mutation](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_méthodes_de_mutation). Elle ne modifie pas la longueur de `this`, mais elle modifie le contenu de `this` et peut créer de nouvelles propriétés ou supprimer des propriétés existantes si nécessaire.
+
+La méthode `copyWithin()` préserve les cases vides. Si la région à copier est [creuxe](/fr/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), les nouveaux indices correspondants des cases vides sont [supprimés](/fr/docs/Web/JavaScript/Reference/Operators/delete) et deviennent aussi des cases vides.
+
+La méthode `copyWithin()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières. Bien que les chaînes de caractères soient aussi similaires à des tableaux, cette méthode n'est pas adaptée pour être appliquée sur elles, car les chaînes sont immuables.
 
 ## Exemples
 
-```js
-[1, 2, 3, 4, 5].copyWithin(-2);
-// [1, 2, 3, 1, 2]
+### Utilisation de `copyWithin()`
 
-[1, 2, 3, 4, 5].copyWithin(0, 3);
+```js
+console.log([1, 2, 3, 4, 5].copyWithin(0, 3));
 // [4, 5, 3, 4, 5]
 
-[1, 2, 3, 4, 5].copyWithin(0, 3, 4);
+console.log([1, 2, 3, 4, 5].copyWithin(0, 3, 4));
 // [4, 2, 3, 4, 5]
 
-[1, 2, 3, 4, 5].copyWithin(-2, -3, -1);
+console.log([1, 2, 3, 4, 5].copyWithin(-2, -3, -1));
 // [1, 2, 3, 3, 4]
-
-[].copyWithin.call({ length: 5, 3: 1 }, 0, 3);
-// {0: 1, 3: 1, length: 5}
-
-// Les tableaux typés ES2015 sont des sous-classes d'Array
-var i32a = new Int32Array([1, 2, 3, 4, 5]);
-
-i32a.copyWithin(0, 2);
-// Int32Array [3, 4, 5, 4, 5]
-
-// Sur les plates-formes qui ne supportent pas encore ES2015 :
-[].copyWithin.call(new Int32Array([1, 2, 3, 4, 5]), 0, 3, 4);
-// Int32Array [4, 2, 3, 4, 5]
 ```
 
-## Prothèse d'émulation (_polyfill_)
+### Utilisation de `copyWithin()` sur des tableaux creux
 
-Cette méthode a été ajoutée à la spécification ECMAScript 6 et peut ne pas être utilisable dans tous les environnements. Voici un fragment de code qui permet d'émuler cette méthode :
+`copyWithin()` propage les cases vides.
 
 ```js
-if (!Array.prototype.copyWithin) {
-  Object.defineProperty(Array.prototype, "copyWithin", {
-    value: function (target, start /*, end*/) {
-      // Steps 1-2.
-      if (this == null) {
-        throw new TypeError("this is null or not defined");
-      }
+console.log([1, , 3].copyWithin(2, 1, 2)); // [1, vide, vide]
+```
 
-      var O = Object(this);
+### Appel de `copyWithin()` sur des objets qui ne sont pas des tableaux
 
-      // Steps 3-5.
-      var len = O.length >>> 0;
+La méthode `copyWithin()` lit la propriété `length` de `this` puis manipule les indices entiers concernés.
 
-      // Steps 6-8.
-      var relativeTarget = target >> 0;
-
-      var to =
-        relativeTarget < 0
-          ? Math.max(len + relativeTarget, 0)
-          : Math.min(relativeTarget, len);
-
-      // Steps 9-11.
-      var relativeStart = start >> 0;
-
-      var from =
-        relativeStart < 0
-          ? Math.max(len + relativeStart, 0)
-          : Math.min(relativeStart, len);
-
-      // Steps 12-14.
-      var end = arguments[2];
-      var relativeEnd = end === undefined ? len : end >> 0;
-
-      var final =
-        relativeEnd < 0
-          ? Math.max(len + relativeEnd, 0)
-          : Math.min(relativeEnd, len);
-
-      // Step 15.
-      var count = Math.min(final - from, len - to);
-
-      // Steps 16-17.
-      var direction = 1;
-
-      if (from < to && to < from + count) {
-        direction = -1;
-        from += count - 1;
-        to += count - 1;
-      }
-
-      // Step 18.
-      while (count > 0) {
-        if (from in O) {
-          O[to] = O[from];
-        } else {
-          delete O[to];
-        }
-
-        from += direction;
-        to += direction;
-        count--;
-      }
-
-      // Step 19.
-      return O;
-    },
-    configurable: true,
-    writable: true,
-  });
-}
+```js
+const objetSimilaireTableau = {
+  length: 5,
+  3: 1,
+};
+console.log(Array.prototype.copyWithin.call(objetSimilaireTableau, 0, 3));
+// { '0': 1, '3': 1, length: 5 }
+console.log(Array.prototype.copyWithin.call(objetSimilaireTableau, 3, 1));
+// { '0': 1, length: 5 }
+// La propriété '3' est supprimée car la source copiée est une case vide
 ```
 
 ## Spécifications
@@ -169,4 +119,8 @@ if (!Array.prototype.copyWithin) {
 
 ## Voir aussi
 
-- {{jsxref("Array", "Array")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("TypedArray.prototype.copyWithin()")}}
+- [Prothèse d'émulation de `Array.prototype.copyWithin` dans `core-js`<sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation es-shims de `Array.prototype.copyWithin`<sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.copywithin)

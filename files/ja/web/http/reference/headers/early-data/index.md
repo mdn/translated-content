@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Early-Data
 
 {{SeeCompatTable}}
 
-**`Early-Data`** ヘッダーは中間者により設定され、リクエストが [TLS 早期データ](/ja/docs/Web/Security/Transport_Layer_Security#tls_1.3)で伝えられたこと、そして中間者が {{HTTPStatus("425", "425 (Too Early)")}} ステータスコードを理解していることを示します。
+**`Early-Data`** ヘッダーは中間者により設定され、リクエストが [TLS 早期データ](/ja/docs/Web/Security/Defenses/Transport_Layer_Security#tls_1.3)で伝えられたこと、そして中間者が {{HTTPStatus("425", "425 (Too Early)")}} ステータスコードを理解していることを示します。
 
 **`Early-Data`** ヘッダーはリクエストの発信者 (つまり、ブラウザー) によって設定されることはありません。
 

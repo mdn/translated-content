@@ -4,8 +4,6 @@ slug: Web/Performance/Guides/How_browsers_work
 original_slug: Web/Performance/How_browsers_work
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
-
 Les utilisateurs veulent des expériences Web avec un contenu rapide à charger et une interaction fluide. Par conséquent, un développeur doit s'efforcer d'atteindre ces deux objectifs.
 
 Pour comprendre comment améliorer les performances et les performances perçues, il est utile de comprendre le fonctionnement du navigateur.
@@ -193,7 +191,7 @@ Pour assurer un défilement et une animation fluides, tout ce qui occupe le fil 
 
 La peinture peut diviser les éléments de l'arborescence en couches. La promotion du contenu en couches sur le GPU (au lieu du thread principal sur le CPU) améliore la performances de la peinture originale et chaque la performances de repeinte supplémentaire.
 
-Il existe des propriétés et des éléments spécifiques qui instancient un calque, notamment `<video>` et `<canvas>`, ainsi que tout élément possédant les propriétés CSS d'[opacité](/fr/docs/Web/CSS/opacity), de [transformation 3D](/fr/docs/Web/CSS/CSS_transforms), de et de plusieurs valeur de [`will-change`](/fr/docs/Web/CSS/will-change), [`isolation`](/fr/docs/Web/CSS/isolation) et [`contain`](/fr/docs/Web/CSS/contain). Ces nœuds seront peints sur leur propre calque, avec leurs descendants, à moins qu'un descendant ne nécessite son propre calque pour une (ou plusieurs) des raisons ci-dessus.
+Il existe des propriétés et des éléments spécifiques qui instancient un calque, notamment `<video>` et `<canvas>`, ainsi que tout élément possédant les propriétés CSS d'[opacité](/fr/docs/Web/CSS/Reference/Properties/opacity), de [transformation 3D](/fr/docs/Web/CSS/Guides/Transforms), de et de plusieurs valeur de [`will-change`](/fr/docs/Web/CSS/Reference/Properties/will-change), [`isolation`](/fr/docs/Web/CSS/Reference/Properties/isolation) et [`contain`](/fr/docs/Web/CSS/Reference/Properties/contain). Ces nœuds seront peints sur leur propre calque, avec leurs descendants, à moins qu'un descendant ne nécessite son propre calque pour une (ou plusieurs) des raisons ci-dessus.
 
 Les couches améliorent les performances, mais sont coûteuses en termes de gestion de la mémoire et ne doivent donc pas être utilisées de manière excessive dans les stratégies d'optimisation des performances Web.
 

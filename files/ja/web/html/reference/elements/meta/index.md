@@ -2,7 +2,7 @@
 title: "<meta>: メタデータ要素"
 slug: Web/HTML/Reference/Elements/meta
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`<meta>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("Metadata","メタデータ")}}を表します。これは、他のメタ関連要素 ({{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}) で表すことができないものを表します。
@@ -31,7 +31,7 @@ l10n:
     属性名が `http-equivalent` の短縮形なのは、利用できる値が同等の HTTP ヘッダーの名前だからです。
 - `media`
   - : `media` 属性は、 `content` 属性で定義されたテーマ色を適用するメディアを定義します。
-    値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)で、属性が指定されていない場合は既定で `all` になります。
+    値は[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)で、属性が指定されていない場合は既定で `all` になります。
     この属性は、要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性が [`theme-color`](/ja/docs/Web/HTML/Reference/Elements/meta/name/theme-color) に設定されている場合にのみ関連します。
     それ以外の場合、効果はありませんので、含めないでください。
 - [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name)
@@ -144,4 +144,3 @@ l10n:
 
 - [標準メタデータ名](/ja/docs/Web/HTML/Reference/Elements/meta/name)
 - [学習: `<meta>`](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#メタデータ_meta_要素)
-- [viewport メタタグ](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)

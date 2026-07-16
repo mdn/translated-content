@@ -1,19 +1,19 @@
 ---
-title: "<u>: 非言語的注釈（下線）要素"
+title: HTML `<u>` 非言語的注釈（下線）要素
+short-title: <u>
 slug: Web/HTML/Reference/Elements/u
-original_slug: Web/HTML/Element/u
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
-
-**`<u>`** は [HTML](/ja/docs/Web/HTML) の要素で、非言語的に注釈があることを示す方法で表示する行内テキストの区間を示します。これは既定で単純な実線の下線として表示されますが、 CSS を使用して変更することもできます。
+**`<u>`** は [HTML](/ja/docs/Web/HTML) の要素で、非言語的に注釈があることを示す方法で表示する行内テキストの区間を示します。これはデフォルトで単純な実線の下線として表示されますが、 CSS を使用して変更することもできます。
 
 > [!WARNING]
 > この要素は古いバージョンの HTML で "Underline" (下線) 要素と呼ばれる傾向があり、現在でもそのように誤用されることがあります。テキストに下線を引くのであれば、代わりに CSS の {{cssxref("text-decoration")}} プロパティを `underline` に設定したスタイルを適用してください。
 
 {{InteractiveExample("HTML デモ: &lt;u&gt;", "tabbed-shorter")}}
+
+<!-- cSpell:ignore speling corect -->
 
 ```html interactive-example
 <p>
@@ -28,7 +28,7 @@ p {
 }
 
 u {
-  text-decoration: #f00 wavy underline;
+  text-decoration: red wavy underline;
 }
 ```
 
@@ -43,7 +43,7 @@ u {
 他の純粋な整形要素と同様に、以前の HTML の下線 (`<u>`) 要素は HTML 4 で非推奨になりました。しかし `<u>` は、 HTML 5 で新しい意味論的な、何らかの曖昧な注釈が適用されるテキストをマークするという意味で復活しました。
 
 > [!NOTE]
-> （既定で下線が引かれる）ハイパーリンクと誤認されるような方法で、（これも既定で下線が引かれる）`<u>` 要素を使用することは避けるように注意してください。
+> （デフォルトで下線が引かれる）ハイパーリンクと誤認されるような方法で、（これもデフォルトで下線が引かれる）`<u>` 要素を使用することは避けるように注意してください。
 
 ### 用途
 
@@ -73,6 +73,8 @@ u {
 この例は、 `<u>` 要素と CSS を使用して、綴り間違いのエラーを含む段落を表示し、エラー箇所をこの目的でよく使用される、赤い波線の下線スタイルで示します。
 
 #### HTML
+
+<!-- cSpell:ignore wrnogly -->
 
 ```html
 <p>This paragraph includes a <u class="spelling">wrnogly</u> spelled word.</p>
@@ -128,20 +130,20 @@ Chicken Noodle Soup With Carrots
 
 書籍の題名は `<u>` や `<i>` でもなく、 {{HTMLElement("cite")}} 要素を使用して表現してください。
 
-##### HTML
+##### cite 要素の使用
 
 ```html
-<p>The class read <cite>Moby Dick</cite> in the first term.</p>
+<p>The class read <cite>Moby-Dick</cite> in the first term.</p>
 ```
 
 {{EmbedLiveSample("Using_the_cite_element", 650, 80)}}
 
 ##### cite 要素のスタイル付け
 
-なお、 `<cite>` 要素の既定のスタイルではテキストを斜体で表示します。 CSS を使用して上書きすることができます。
+なお、 `<cite>` 要素のデフォルトのスタイルではテキストを斜体で表示します。 CSS を使用して上書きすることができます。
 
 ```html
-<p>The class read <cite>Moby Dick</cite> in the first term.</p>
+<p>The class read <cite>Moby-Dick</cite> in the first term.</p>
 ```
 
 ```css
@@ -159,13 +161,15 @@ cite {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -173,7 +177,7 @@ cite {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -185,7 +189,7 @@ cite {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -193,8 +197,10 @@ cite {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

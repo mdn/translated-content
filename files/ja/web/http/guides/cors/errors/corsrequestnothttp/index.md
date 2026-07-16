@@ -20,7 +20,7 @@ Reason: CORS request not HTTP
 
 ### ローカルファイルの読み込み
 
-同じディレクトリーおよびサブディレクトリーにあるローカルファイルは、以前は[同一オリジン](/ja/docs/Web/Security/Same-origin_policy)から取得されたものとして扱われていました。
+同じディレクトリーおよびサブディレクトリーにあるローカルファイルは、以前は[同一オリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy)から取得されたものとして扱われていました。
 つまり、テスト中にファイルとそのリソースすべてを、CORS エラーが発生することなく、ローカルディレクトリーまたはサブディレクトリーから読み込むことができたということです。
 
 残念ながら、この問題にはセキュリティ上の問題があり、勧告（[CVE-2019-11730](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730)）で指摘されています。

@@ -1,42 +1,47 @@
 ---
-title: HTMLElement.isContentEditable
+title: "HTMLElement : propriété isContentEditable"
+short-title: isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
+l10n:
+  sourceCommit: 6d2000984203c51f1aad49107ebcebe14d3c1238
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-La propriété en lecture seule **`HTMLElement.isContentEditable`** renvoie un booléen qui est `true` _(vrai)_ si le contenu de l'élément est éditable&nbsp;; sinon elle renvoie `false` _(faux)_.
+La propriété en lecture seule **`isContentEditable`** de l'interface {{DOMxRef("HTMLElement")}} retourne un booléen qui est `true` _(vrai)_ si le contenu de l'élément est éditable&nbsp;; sinon elle retourne `false` _(faux)_.
 
-## Syntaxe
+## Valeur
 
-```js
-editable = element.isContentEditable;
-```
+Une valeur booléenne.
 
-## Exemple
-
-### JavaScript
-
-```js
-document.getElementById("infoText1").innerHTML +=
-  document.getElementById("myText1").isContentEditable;
-document.getElementById("infoText2").innerHTML +=
-  document.getElementById("myText2").isContentEditable;
-```
+## Exemples
 
 ### HTML
 
 ```html
-<p id="myText1">Uneditable Paragraph</p>
-<p id="myText2" contenteditable="true">Editable Paragraph</p>
+<p id="firstParagraph">Paragraphe non éditable</p>
+<p id="secondParagraph" contenteditable="true">Paragraphe éditable</p>
 
-<p id="infoText1">Can edit the first paragraph?</p>
-<p id="infoText2">Can edit the second paragraph?</p>
+<p id="infoText1">Le premier paragraphe est-il éditable&nbsp;?</p>
+<p id="infoText2">Le second paragraphe est-il éditable&nbsp;?</p>
+```
+
+### JavaScript
+
+```js
+const firstParagraph = document.getElementById("firstParagraph");
+const secondParagraph = document.getElementById("secondParagraph");
+
+const infoText1 = document.getElementById("infoText1");
+const infoText2 = document.getElementById("infoText2");
+
+infoText1.textContent += ` ${firstParagraph.isContentEditable}`;
+infoText2.textContent += ` ${secondParagraph.isContentEditable}`;
 ```
 
 ### Résultat
 
-{{ EmbedLiveSample('Exemple') }}
+{{EmbedLiveSample('Exemples', '100%', 160)}}
 
 ## Spécifications
 
@@ -48,5 +53,5 @@ document.getElementById("infoText2").innerHTML +=
 
 ## Voir aussi
 
-- {{domxref("element.contentEditable")}}
-- L'attribut global [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).
+- La propriété {{DOMxRef("HTMLElement.contentEditable")}}
+- L'attribut HTML universel [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).

@@ -27,10 +27,10 @@ slug: Web/API/Element/animationstart_event
 | 属性                               | 类型                       | 描述                                                                                                                                                                                                                              |
 | ---------------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `target` {{ReadOnlyInline}}        | {{domxref("EventTarget")}} | 事件来源（DOM 顶层目标）。                                                                                                                                                                                                        |
-| `type` {{ReadOnlyInline}}          | {{domxref("DOMString")}}   | 事件类型                                                                                                                                                                                                                          |
+| `type` {{ReadOnlyInline}}          | {{jsxref("String")}}       | 事件类型                                                                                                                                                                                                                          |
 | `bubbles` {{ReadOnlyInline}}       | `boolean`                  | 事件是否正常冒泡？                                                                                                                                                                                                                |
 | `cancelable` {{ReadOnlyInline}}    | `boolean`                  | 可否取消该事件？                                                                                                                                                                                                                  |
-| `animationName` {{ReadOnlyInline}} | {{domxref("DOMString")}}   | 与该动画相关的 CSS 属性值。                                                                                                                                                                                                       |
+| `animationName` {{ReadOnlyInline}} | {{jsxref("String")}}       | 与该动画相关的 CSS 属性值。                                                                                                                                                                                                       |
 | `elapsedTime` {{ReadOnlyInline}}   | `Float`                    | 动画运行时长，单位为秒，与直到该事件被触发的时间相一致，不包括任何动画暂停时的时长。此值应为 0 除非 `animation-delay` 是一个负值，这种情况下此值为 (-1 \* {{cssxref("animation-delay")}})，并且动画将直接从此值后的序列开始播放。 |
 
 ## 规范
@@ -45,4 +45,4 @@ slug: Web/API/Element/animationstart_event
 
 ## 参见
 
-- [Using CSS Animations](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS Animations](/zh-CN/docs/Web/CSS/Guides/Animations/Using)

@@ -2,7 +2,7 @@
 title: 200 OK
 slug: Web/HTTP/Reference/Status/200
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`200 OK`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示請求已成功。默認情況下，`200 OK` 回應是可快取的。

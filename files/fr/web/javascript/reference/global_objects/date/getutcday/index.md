@@ -1,46 +1,51 @@
 ---
-title: Date.prototype.getUTCDay()
+title: "Date : méthode getUTCDay()"
+short-title: getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`getUTCDay()`** des instances de {{JSxRef("Date")}} retourne le jour de la semaine pour cette date selon le temps universel, où 0 correspond à dimanche.
 
-La méthode **`getUTCDay()`** renvoie le jour de la semaine pour la date renseignée d'après UTC. La numérotation commence à 0, et dimanche est considéré comme le premier jour de la semaine.
-
-{{InteractiveExample("JavaScript Demo: Date.getUTCDay()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.getUTCDay()")}}
 
 ```js interactive-example
 const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");
 const date2 = new Date("August 19, 1975 23:15:30 GMT-11:00");
 
-// Tuesday
+// Mardi
 console.log(date1.getUTCDay());
-// Expected output: 2
+// Résultat attendu : 2
 
-// Wednesday
+// Mercredi
 console.log(date2.getUTCDay());
-// Expected output: 3
+// Résultat attendu : 3
 ```
 
 ## Syntaxe
 
-```js
-dateObj.getUTCDay();
+```js-nolint
+getUTCDay()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-La valeur renvoyée par `getUTCDay()` est un entier correspondant au jour de la semaine de la date indiquée selon le temps universel (0 pour dimanche, 1 pour lundi, 2 pour mardi, et ainsi de suite).
+Un entier correspondant au jour de la semaine pour la date indiquée selon le temps universel&nbsp;: 0 pour dimanche, 1 pour lundi, 2 pour mardi, et ainsi de suite. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
 
 ## Exemples
 
-### Utiliser `getUTCDay()`
+### Utiliser la méthode `getUTCDay()`
 
 L'exemple suivant assigne le jour de la semaine de la date actuelle à la variable `jourSemaine`.
 
 ```js
-var aujourdhui = new Date();
-var jourSemaine = aujourdhui.getUTCDay();
+const aujourdhui = new Date();
+const jourSemaine = aujourdhui.getUTCDay();
 ```
 
 ## Spécifications
@@ -53,6 +58,6 @@ var jourSemaine = aujourdhui.getUTCDay();
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getDay()")}}
-- {{jsxref("Date.prototype.setUTCDate()")}}
+- La méthode {{JSxRef("Date.prototype.getUTCDate()")}}
+- La méthode {{JSxRef("Date.prototype.getDay()")}}
+- La méthode {{JSxRef("Date.prototype.setUTCDate()")}}

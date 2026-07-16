@@ -3,7 +3,7 @@ title: "ARIA : rôle rowheader"
 short-title: rowheader
 slug: Web/Accessibility/ARIA/Reference/Roles/rowheader_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 Le rôle `role="rowheader"` désigne une [cellule](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) contenant l'information d'en-tête d'une [ligne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) au sein d'une structure tabulaire, comme une [`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), une [`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) ou un [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role).
@@ -37,7 +37,7 @@ Le rôle `role="rowheader"` désigne une [cellule](/fr/docs/Web/Accessibility/AR
 </div>
 ```
 
-C'est l'équivalent structurel de l'élément HTML {{HTMLElement('th')}} avec l'attribut `scope="row"` (soit `<th scope="row">`). Il est fortement recommandé d'utiliser l'élément HTML natif {{HTMLElement('th')}}.
+C'est l'équivalent structurel de l'élément HTML {{HTMLElement("th")}} avec l'attribut `scope="row"` (soit `<th scope="row">`). Il est fortement recommandé d'utiliser l'élément HTML natif {{HTMLElement("th")}}.
 
 Pour créer un en-tête de ligne ARIA, ajoutez `role="rowheader"` à l'élément. Cet en-tête doit être imbriqué dans une `row`, laquelle est, à son tour, imbriquée dans un `rowgroup`, ou peut être placée directement dans une `grid`, `table` ou `treegrid`.
 
@@ -48,8 +48,8 @@ Pour créer un en-tête de ligne ARIA, ajoutez `role="rowheader"` à l'élément
 
 #### Rôles de contexte
 
-- [role="row"](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
-  - : Le seul contexte dans lequel on trouve un `row`. Il englobe une cellule ou un groupe de cellules constitutives d'une ligne, dont une seule devrait avoir le type `rowheader`. Similaire à l'élément HTML natif {{HTMLElement('tr')}}.
+- [`role="row"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+  - : Le seul contexte dans lequel on trouve un `row`. Il englobe une cellule ou un groupe de cellules constitutives d'une ligne, dont une seule doit avoir le type `rowheader`. Similaire à l'élément HTML natif {{HTMLElement("tr")}}.
 
 ### Interactions au clavier
 
@@ -60,7 +60,7 @@ Aucune.
 Aucune.
 
 > [!NOTE]
-> La première règle d'utilisation d'ARIA est la suivante&nbsp;: si vous pouvez utiliser une fonctionnalité native qui offre déjà la sémantique et le comportement requis, utilisez‑la plutôt que de détourner un élément et d'**ajouter** un rôle, un état ou une propriété ARIA pour le rendre accessible. Employez les éléments HTML `<table>`, `<tr>`, `<th>`, `<td>` et autres éléments de tableau [natifs](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) plutôt que les rôles ARIA de tableau lorsque cela est possible.
+> La première règle d'utilisation d'ARIA est la suivante&nbsp;: si vous pouvez utiliser une fonctionnalité native qui offre déjà la sémantique et le comportement requis, utilisez‑la plutôt que de détourner un élément et **d'ajouter** un rôle, un état ou une propriété ARIA pour le rendre accessible. Employez les éléments HTML `<table>`, `<tr>`, `<th>`, `<td>` et autres éléments de tableau [natifs](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) plutôt que les rôles ARIA de tableau lorsque c'est possible.
 
 ## Exemples
 
@@ -104,7 +104,7 @@ L'exemple ci‑dessus illustre une table ARIA non sémantique avec un en-tête e
 
 ## Bonnes pratiques
 
-Utilisez uniquement {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}} et ainsi de suite pour la structure des tableaux de données. Vous pouvez ajouter ces rôles ARIA afin d'assurer l'accessibilité si la sémantique native du tableau est supprimée, par exemple par des règles CSS. Un cas d'utilisation pertinent du rôle ARIA `table` est lorsque la propriété CSS `display` outrepasse la sémantique native d'un tableau (par exemple `display: grid`). Dans ce cas, vous pouvez rétablir la sémantique à l'aide des rôles ARIA.
+Utilisez uniquement {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}, {{HTMLElement("th")}}, {{HTMLElement("td")}} et ainsi de suite pour la structure des tableaux de données. Vous pouvez ajouter ces rôles ARIA afin d'assurer l'accessibilité si la sémantique native du tableau est supprimée, par exemple par des règles CSS. Un cas d'utilisation pertinent du rôle ARIA `table` est lorsque la propriété CSS `display` outrepasse la sémantique native d'un tableau (par exemple `display: grid`). Dans ce cas, vous pouvez rétablir la sémantique à l'aide des rôles ARIA.
 
 ```html
 <table
@@ -134,7 +134,7 @@ Utilisez uniquement {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLEl
 </table>
 ```
 
-Ci‑dessus, la manière sémantique d'écrire un tableau. Les rôles ARIA ne sont nécessaires que si la sémantique native du tableau (et donc des en‑têtes de lignes) est supprimée, par exemple en appliquant la [propriété `display` à `flex` ou `grid`](/fr/docs/Web/CSS/display#accessibilit%C3%A9).
+Ci‑dessus, la manière sémantique d'écrire un tableau. Les rôles ARIA ne sont nécessaires que si la sémantique native du tableau (et donc des en‑têtes de lignes) est supprimée, par exemple en appliquant la propriété [`display:` `flex` ou `grid`](/fr/docs/Web/CSS/Reference/Properties/display#accessibilité).
 
 ### Bénéfices supplémentaires
 
@@ -146,8 +146,8 @@ Aucun.
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('table')}}
-- L'élément HTML {{HTMLElement('th')}} d'en-tête de ligne
+- L'élément HTML {{HTMLElement("table")}}
+- L'élément HTML {{HTMLElement("th")}} d'en-tête de ligne
 - [Tutoriel sur les tableaux HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - [ARIA&nbsp;: rôle `cell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
 - [ARIA&nbsp;: rôle `row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)

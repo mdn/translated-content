@@ -3,7 +3,7 @@ title: Hacer que las PWAs trabajen desconectadas con servicio workers
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps")}}
 
 Ahora que hemos visto cómo se ve la estructura de js13kPWA y hemos visto el intérprete básico en funcionamiento, veamos cómo se implementan las capacidades sin conexión con el Servicio _Worker_. En este artículo, analizamos cómo se usa en nuestro [ejemplo de js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) ([ve el código fuente también](<https: //github.com/mdn/pwa-examples/tree/master/js13kpwa>)). Examinamos cómo agregar funcionalidad fuera de línea.
 
@@ -11,7 +11,7 @@ Ahora que hemos visto cómo se ve la estructura de js13kPWA y hemos visto el int
 
 El servicio _workers_ son un delegado virtual entre el navegador y la red. Finalmente, solucionan problemas con los que los desarrolladores de aplicaciones para el usuario han luchado durante años, en particular, cómo almacenar correctamente en caché los activos de un sitio web y ponerlos a disposición cuando el dispositivo del usuario está desconectado.
 
-Se ejecutan en un hilo separado del código JavaScript principal de nuestra página y no tienen acceso a la estructura DOM. Esto introduce un enfoque diferente al de la programación web tradicional — la API no bloquea y puede enviar y recibir comunicación entre diferentes contextos. Puede darle a un servicio _worker_ algo en lo que trabajar y recibir el resultado cuando esté listo utilizando un enfoque basado en una {{JSxRef("Objetos_globales/Promise", "promesa")}}.
+Se ejecutan en un hilo separado del código JavaScript principal de nuestra página y no tienen acceso a la estructura DOM. Esto introduce un enfoque diferente al de la programación web tradicional — la API no bloquea y puede enviar y recibir comunicación entre diferentes contextos. Puede darle a un servicio _worker_ algo en lo que trabajar y recibir el resultado cuando esté listo utilizando un enfoque basado en una {{JSxRef("Promise", "promesa")}}.
 
 Pueden hacer mucho más que "solo" ofrecer capacidades sin conexión, incluido el manejo de notificaciones, la realización de cálculos pesados en un hilo separado, etc. El servicio _workers_ es bastante poderoso, ya que pueden tomar el control de las solicitudes de red, modificarlas, entregar respuestas personalizadas recuperadas de la caché o sintetizar respuestas por completo.
 
@@ -225,6 +225,6 @@ En este artículo, analizamos cómo puedes hacer que tu PWA funcione sin conexi�
 
 El servicio _workers_ también se utilizan cuando se trata de [notificaciones push](/es/docs/Web/API/Push_API); esto se explicará en un artículo posterior.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps")}}
 
 {{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}

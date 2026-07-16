@@ -22,7 +22,7 @@ Por exemplo, para permitir que um site da origem `https://example.com` acesse ao
 Access-Control-Allow-Origin: https://example.com
 ```
 
-Você também pode configurar um site para permitir que qualquer site o acesse usando o curinga `"*"`. Você só deve usar isso para APIs públicas. As APIs privadas nunca devem usar `"*"` e devem ter um domínio ou domínios específicos definidos. Além disso, o curinga só funciona para solicitações feitas com o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Global_attributes#crossorigin) definido como `"anonymous"`.
+Você também pode configurar um site para permitir que qualquer site o acesse usando o curinga `"*"`. Você só deve usar isso para APIs públicas. As APIs privadas nunca devem usar `"*"` e devem ter um domínio ou domínios específicos definidos. Além disso, o curinga só funciona para solicitações feitas com o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#crossorigin) definido como `"anonymous"`.
 
 ```http
 Access-Control-Allow-Origin: *

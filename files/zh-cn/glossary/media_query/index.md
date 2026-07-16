@@ -19,5 +19,5 @@ l10n:
 
 ## 参见
 
-- [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)模块
+- [使用媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)
+- [CSS 媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)模块

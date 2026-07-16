@@ -1,13 +1,14 @@
 ---
 title: "EventSource: open イベント"
+short-title: open
 slug: Web/API/EventSource/open_event
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
-`open` は {{domxref("EventSource")}} API のイベントで、イベントソースとのコネクションが開かれたときに発生します。
+**`open`** は {{domxref("EventSource")}} インターフェイスのイベントで、イベントソースとのコネクションが開かれたときに発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -15,10 +16,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("open", (event) => {});
+```js-nolint
+addEventListener("open", (event) => { })
 
-onopen = (event) => {};
+onopen = (event) => { }
 ```
 
 ## イベント型
@@ -52,6 +53,5 @@ evtSource.onopen = (e) => {
 ## 関連情報
 
 - [サーバー送信イベントの使用](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)
-- {{domxref("EventSource/open_event", "open")}}
 - {{domxref("EventSource/error_event", "error")}}
 - {{domxref("EventSource/message_event", "message")}}

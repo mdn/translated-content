@@ -1,13 +1,13 @@
 ---
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+L'objet **`Intl.ListFormat`** permet le formatage de listes sensible à la langue.
 
-L'objet **`Intl.ListFormat`** permet de formater des listes de façon différente selon la locale utilisée.
-
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.ListFormat", "taller")}}
 
 ```js interactive-example
 const vehicles = ["Motorcycle", "Bus", "Car"];
@@ -17,36 +17,47 @@ const formatter = new Intl.ListFormat("en", {
   type: "conjunction",
 });
 console.log(formatter.format(vehicles));
-// Expected output: "Motorcycle, Bus, and Car"
+// Résultat attendu : "Motorcycle, Bus, and Car"
 
 const formatter2 = new Intl.ListFormat("de", {
   style: "short",
   type: "disjunction",
 });
 console.log(formatter2.format(vehicles));
-// Expected output: "Motorcycle, Bus oder Car"
+// Résultat attendu : "Motorcycle, Bus oder Car"
 
 const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
 console.log(formatter3.format(vehicles));
-// Expected output: "Motorcycle Bus Car"
+// Résultat attendu : "Motorcycle Bus Car"
 ```
 
 ## Constructeur
 
-- [`Intl.ListFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat)
+- {{JSxRef("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
   - : Crée un nouvel objet `Intl.ListFormat`.
 
 ## Méthodes statiques
 
-- [`Intl.ListFormat.supportedLocalesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf)
-  - : Renvoie un tableau qui contient les locales, parmi celles fournies en arguments, qui sont prises en charge sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
+- {{JSxRef("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
+  - : Retourne un tableau qui contient les locales, parmi celles fournies en arguments, qui sont prises en charge sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
 
-## Méthodes des instances
+## Propriétés d'instance
 
-- [`Intl.ListFormat.prototype.format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format)
-  - : Renvoie une chaîne de caractères, formatée selon la locale, qui représente les éléments de la liste.
-- [`Intl.ListFormat.prototype.formatToParts()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts)
-  - : Renvoie un tableau d'objets qui sont chacun des fragments pouvant être utilisés pour formater la liste de valeurs en tenant compte de la locale.
+Ces propriétés sont définies sur `Intl.ListFormat.prototype` et partagées par toutes les instances de `Intl.ListFormat`.
+
+- {{JSxRef("Object/constructor", "Intl.ListFormat.prototype.constructor")}}
+  - : La fonction constructeur qui a créé l'objet d'instance. Pour les instances de `Intl.ListFormat`, la valeur initiale est le constructeur {{JSxRef("Intl/ListFormat/ListFormat", "Intl.ListFormat")}}.
+- `Intl.ListFormat.prototype[Symbol.toStringTag]`
+  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"Intl.ListFormat"`. Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
+
+## Méthodes d'instance
+
+- {{JSxRef("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
+  - : Retourne une chaîne de caractères formatée selon la langue, représentant les éléments de la liste.
+- {{JSxRef("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}
+  - : Retourne un tableau d'objets représentant les différents composants pouvant être utilisés pour formater une liste de valeurs en tenant compte de la locale.
+- {{JSxRef("Intl/ListFormat/resolvedOptions", "Intl.ListFormat.prototype.resolvedOptions()")}}
+  - : Retourne un nouvel objet avec des propriétés reflétant les options de locale et de mise en forme calculées lors de la construction de l'objet `Intl.ListFormat` courant.
 
 ## Exemples
 
@@ -55,39 +66,39 @@ console.log(formatter3.format(vehicles));
 Dans l'exemple qui suit, on voit comment créer un formateur de liste pour l'anglais.
 
 ```js
-const list = ["Motorcycle", "Bus", "Car"];
+const liste = ["Motorcycle", "Bus", "Car"];
 
 console.log(
   new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
-    list,
+    liste,
   ),
 );
-// > Motorcycle, Bus and Car
+// Motorcycle, Bus and Car
 
 console.log(
   new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
-    list,
+    liste,
   ),
 );
-// > Motorcycle, Bus or Car
+// Motorcycle, Bus or Car
 
 console.log(
-  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(liste),
 );
-// > Motorcycle Bus Car
+// Motorcycle Bus Car
 ```
 
 ### Utiliser `formatToParts()`
 
-Dans l'exemple qui suit, on voit comment créer un formateur de liste, renvoyant les fragments, pour l'anglais.
+L'exemple suivant montre comment créer un formateur de liste renvoyant les fragments formatés.
 
 ```js
-const list = ["Motorcycle", "Bus", "Car"];
+const liste = ["Motorcycle", "Bus", "Car"];
 console.log(
   new Intl.ListFormat("en-GB", {
     style: "long",
     type: "conjunction",
-  }).formatToParts(list),
+  }).formatToParts(liste),
 );
 
 // [ { "type": "element", "value": "Motorcycle" },
@@ -107,5 +118,5 @@ console.log(
 
 ## Voir aussi
 
-- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
-- [Une prothèse d'émulation pour `Intl.ListFormat` avec la bibliothèque FormatJS](https://formatjs.io/docs/polyfills/intl-listformat)
+- [Prothèse d'émulation de `Intl.ListFormat` dans FormatJS <sup>(angl.)</sup>](https://formatjs.github.io/docs/polyfills/intl-listformat/)
+- L'objet {{JSxRef("Intl")}}

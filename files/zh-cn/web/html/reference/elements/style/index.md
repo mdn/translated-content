@@ -39,17 +39,17 @@ p {
 
 如果在文档中包含多个 `<style>` 和 `<link>` 元素，它们将按照在文档中包含的顺序应用到 DOM，请确保按照正确的顺序包含它们，以避免出现意想不到的层叠问题。
 
-与 `<link>` 元素的方式相同，`<style>` 元素可以包含用于[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)的 `media` 属性，这样就可以根据视口宽度等媒体特性，有选择性地将内部样式表应用到文档中。
+与 `<link>` 元素的方式相同，`<style>` 元素可以包含用于[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries)的 `media` 属性，这样就可以根据视口宽度等媒体特性，有选择性地将内部样式表应用到文档中。
 
 ## 属性
 
 该元素包含所有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `blocking`
-  - : 该属性明确指出在获取关键子资源时应阻止某些操作。通常，[`@import`](/zh-CN/docs/Web/CSS/@import) 样式表被视为关键子资源，而 [`background-image`](/zh-CN/docs/Web/CSS/background-image) 和字体则不被视为关键子资源。要阻止的操作必须是下面列出的以空格分隔的阻止标记列表。
+  - : 该属性明确指出在获取关键子资源时应阻止某些操作。通常，[`@import`](/zh-CN/docs/Web/CSS/Reference/At-rules/@import) 样式表被视为关键子资源，而 [`background-image`](/zh-CN/docs/Web/CSS/Reference/Properties/background-image) 和字体则不被视为关键子资源。要阻止的操作必须是下面列出的以空格分隔的阻止标记列表。
     - `render`：屏幕上的内容渲染被阻断。
 - `media`
-  - : 该属性规定该样式适用于哪个媒体。属性的取值为[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，如果属性缺失，则默认为 `all`。
+  - : 该属性规定该样式适用于哪个媒体。属性的取值为[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)，如果属性缺失，则默认为 `all`。
 - `nonce`
   - : 用于允许在 [style-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src) 中使用内联样式的密码学 nonce（只使用一次的数字）。每次传输策略时，服务器都必须生成一个唯一的 nonce 值。提供一个无法猜测的 nonce 值至关重要，否则绕过资源策略将变得微不足道。
 - `title`
@@ -88,7 +88,7 @@ p {
 
 ### 多个样式元素
 
-在本例中，我们包含了两个 `<style>` 元素。请注意，如果后一个 `<style>` 元素中的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)相同，那么后一个元素中的冲突声明将覆盖前一个元素中的冲突声明。
+在本例中，我们包含了两个 `<style>` 元素。请注意，如果后一个 `<style>` 元素中的[优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)相同，那么后一个元素中的冲突声明将覆盖前一个元素中的冲突声明。
 
 ```html
 <!doctype html>

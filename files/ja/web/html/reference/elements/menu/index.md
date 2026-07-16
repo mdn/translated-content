@@ -1,23 +1,21 @@
 ---
-title: "<menu>: メニュー要素"
+title: HTML `<menu>` メニュー要素
+short-title: <menu>
 slug: Web/HTML/Reference/Elements/menu
-original_slug: Web/HTML/Element/menu
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
-
-**`<menu>`** は [HTML](/ja/docs/Web/HTML) の要素で、HTML 仕様書では {{HTMLElement("ul")}} とは異なる意味づけとして記述されていますが、ブラウザーでは {{HTMLElement("ul")}} と違いのないものとして扱われます（そしてアクセシビリティツリーで公開されます）。これは（{{HTMLElement("li")}} 要素で表現される）項目の順序のないリストを表します。
+**`<menu>`** は [HTML](/ja/docs/Web/HTML) の要素で、HTML 仕様書では {{HTMLElement("ul")}} とは異なる意味づけとして記述されていますが、ブラウザーでは {{HTMLElement("ul")}} と違いのないものとして扱われます（そしてアクセシビリティツリーで公開されます）。これは（{{HTMLElement("li")}} 要素で表現される）アイテムの順序のないリストを表します。
 
 {{InteractiveExample("HTML デモ: &lt;menu&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <div class="news">
-  <a href="#">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+  <a href="#">NASA's Webb Delivers Deepest Infrared Image of Universe Yet</a>
   <menu>
-    <li><button id="save">Save for later</button></li>
-    <li><button id="share">Share this news</button></li>
+    <li><button id="save">保存して後で見る</button></li>
+    <li><button id="share">このニュースを共有</button></li>
   </menu>
 </div>
 ```
@@ -42,12 +40,15 @@ menu {
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
+- `compact` {{Deprecated_inline}}
+  - : この論理属性は、リストをコンパクトなスタイルで表示することを指示します。この属性の解釈はブラウザーによって異なります。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、CSS の {{cssxref("line-height")}} プロパティに値 `80%` を指定します。
+
 ## 使用上の注意
 
-`<menu>` 要素と {{HTMLElement("ul")}} 要素はともに順序なしリストの項目を表すものです。主な違いは、{{HTMLElement("ul")}} は主に項目の表示を目的とするのに対し、 `<menu>` 要素は操作を行うための対話型の項目のためのものです。関連する {{HTMLElement("menuitem")}} 要素は非推奨になりました。
+`<menu>` 要素と {{HTMLElement("ul")}} 要素は、ともにアイテムの順序なしリストを表すものです。主な違いは、{{HTMLElement("ul")}} は主にアイテムの表示を目的とするのに対し、`<menu>` 要素は操作を行うための対話型のアイテムのためのものです。
 
 > [!NOTE]
-> HTML 仕様書の初期の版では、`<menu>` 要素にはコンテキストメニューとしての追加の用途がありました。この機能は廃止されたと考えており、仕様書にはありません。
+> HTML 仕様書の初期の版では、`<menu>` 要素にはコンテキストメニューとしての追加の用途がありました。この機能は廃止されたとみなされており、仕様書にはありません。
 
 ## 例
 
@@ -105,17 +106,17 @@ button {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
         <p>
-          <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
             >フローコンテンツ</a
           >。この要素の子に 1 個以上の {{HTMLElement("li")}}
           要素がある場合は<a
-            href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+            href="/ja/docs/Web/HTML/Guides/Content_categories#知覚可能コンテンツ"
             >知覚可能コンテンツ</a
           >。
         </p>
@@ -138,7 +139,7 @@ button {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -147,7 +148,7 @@ button {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/List_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
             >list</a
           ></code
         >

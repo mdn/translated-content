@@ -7,11 +7,11 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`deferred-fetch-minimal`** は {{HTTPHeader("Permissions-Policy")}} のディレクティブで、 [`fetchLater()` API](/ja/docs/Web/API/fetchLater_API) の一部です。
+**`deferred-fetch-minimal`** は {{HTTPHeader("Permissions-Policy")}} のディレクティブで、 [`fetchLater()` API](/ja/docs/Web/API/Fetch_API) の一部です。
 
 このディレクティブは、 {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}} と共に、 640KiB のクォータ制限全体が最上位のオリジンと異なるオリジンのサブフレームにどのように分配されるかを決定します。既定では、最上位のオリジンには 512KiB が割り当てられ、残りの 128KiB から各サブフレームに 8KiB が割り当てられます。 `deferred-fetch-minimal` 権限ポリシーでは、すべてのオリジンをブロックすることもできます。これにより、 128KiB の共有制限が最上位のクォータに再割り当てされ、 640KiB の制限全体にアクセスできるようになります。
 
-詳しい説明と例は、 [`fetchLater()` のクォータ](/ja/docs/Web/API/fetchLater_API/fetchLater_quotas)を参照してください。
+詳しい説明と例は、 [`fetchLater()` のクォータ](/ja/docs/Web/API/Fetch_API/Using_Deferred_Fetch)を参照してください。
 
 ## 構文
 
@@ -33,7 +33,7 @@ Permissions-policy: deferred-fetch-minimal=(<urllist>)
 
 ## 例
 
-これ以外の例は [`fetchLater()` のクォータ](/ja/docs/Web/API/fetchLater_API/fetchLater_quotas) を参照してください。
+これ以外の例は [`fetchLater()` のクォータ](/ja/docs/Web/API/Fetch_API/Using_Deferred_Fetch) を参照してください。
 
 ### 最小クォータを使い切る
 
@@ -89,7 +89,7 @@ Permissions-Policy: deferred-fetch-minimal=("https://c.com")
 
 ## 関連情報
 
-- [`fetchLater()` のクオータ](/ja/docs/Web/API/fetchLater_API/fetchLater_quotas)
-- [`fetchLater()` API](/ja/docs/Web/API/fetchLater_API)
+- [`fetchLater()` のクオータ](/ja/docs/Web/API/Fetch_API/Using_Deferred_Fetch)
+- [`fetchLater()` API](/ja/docs/Web/API/Fetch_API)
 - {{HTTPHeader("Permissions-Policy")}} ヘッダー
 - [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)

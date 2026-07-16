@@ -38,7 +38,7 @@ new.target
 - 通常の関数では、関数が [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) で直接構築された場合、 `new.target` はその関数自体を参照します。関数が `new` なしで呼び出された場合、`new.target` は {{jsxref("undefined")}} になります。関数は [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) の基底クラスとして使用されることがあり、その場合 `new.target` はサブクラスを参照する可能性があります。
 - コンストラクター（クラスまたは関数）が {{jsxref("Reflect.construct()")}} 経由で呼び出された場合、 `new.target` は `newTarget` として渡された値（既定は `target`）を参照します。
 - [アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)では、 `new.target` は周囲のスコープから継承されます。アロー関数が `new.target` の{{Glossary("binding", "バインディング")}}を持つ別のクラスや関数内で定義されていない場合、構文エラーが発生します。
-- [政敵初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)内では、 `new.target` は {{jsxref("undefined")}} です。
+- [静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)内では、 `new.target` は {{jsxref("undefined")}} です。
 
 ## 解説
 

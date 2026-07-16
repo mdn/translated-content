@@ -165,7 +165,7 @@ showOffsetPos("content");
 - [пустая инструкция](/ru/docs/Web/JavaScript/Reference/Statements/Empty)
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/empty", "empty")}}
+- {{jsxref("Statements/Empty", "empty")}}
 - {{jsxref("Statements/while", "while")}}
 - [`do...while`](/ru/docs/Web/JavaScript/Reference/Statements/do...while)
 - [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in)

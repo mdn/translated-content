@@ -3,65 +3,83 @@ title: "HTMLDialogElement : propriété open"
 short-title: open
 slug: Web/API/HTMLDialogElement/open
 l10n:
-  sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650
+  sourceCommit: 661a04e7a61abe3d8c7245f04cdd1d0bc865fe69
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`open`** de l'interface {{domxref("HTMLDialogElement")}} est une valeur booléenne reflétant l'attribut HTML {{HTMLElement("dialog", "<code>open</code>", "open")}}, indiquant si la boîte de dialogue {{HTMLElement("dialog")}} est disponible pour l'interaction.
+La propriété **`open`** de l'interface {{DOMxRef("HTMLDialogElement")}} est une valeur booléenne reflétant l'attribut HTML {{HTMLElement("dialog", "<code>open</code>", "open")}}, indiquant si la boîte de dialogue {{HTMLElement("dialog")}} est disponible pour l'interaction.
 
 ## Valeur
 
 Une valeur booléenne représentant l'état de l'attribut HTML {{HTMLElement("dialog", "<code>open</code>", "open")}}. Une valeur `true` signifie que la boîte de dialogue est affichée, tandis que `false` signifie qu'elle ne l'est pas.
 
 > [!WARNING]
-> Bien que la propriété `open` ne soit techniquement pas en lecture seule et puisse être modifiée directement, cela est fortement déconseillé par [la spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-dialog-closedby), car cela peut perturber le fonctionnement normal des boîtes de dialogue de façon inattendue. Par exemple, l'événement {{domxref("HTMLDialogElement.close_event", "close")}} ne sera pas déclenché si `open` est défini à `false` par programmation, et les appels suivants à {{domxref("HTMLDialogElement.close()", "close()")}} et {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} n'auront aucun effet. Il est donc préférable d'utiliser les méthodes {{domxref("HTMLDialogElement.show()", "show()")}}, {{domxref("HTMLDialogElement.showModal()", "showModal()")}}, `close()` et `requestClose()` pour modifier la valeur de l'attribut `open`.
+> Bien que la propriété `open` ne soit techniquement pas en lecture seule et puisse être définie directement, il est fortement déconseillé de le faire selon [la spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/interactive-elements.html#note-dialog-remove-open-attribute), car cela peut perturber les interactions normales avec la boîte de dialogue de manière inattendue.
+> Par exemple, l'évènement [`close`](/fr/docs/Web/API/HTMLDialogElement/close_event) ne se déclenche pas lorsque la propriété `open` est définie programmatiquement sur `false`, et les appels ultérieurs aux méthodes [`close()`](/fr/docs/Web/API/HTMLDialogElement/close) et [`requestClose()`](/fr/docs/Web/API/HTMLDialogElement/requestClose) n'ont aucun effet.
+> Il est préférable d'utiliser des méthodes telles que [`show()`](/fr/docs/Web/API/HTMLDialogElement/show), [`showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal), `close()`, et `requestClose()` pour modifier la valeur de l'attribut `open`.
 
 ## Exemples
 
-L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre une boîte de dialogue {{HTMLElement("dialog")}} contenant un formulaire via la méthode `showModal()`. Vous pouvez ensuite cliquer sur le bouton _Annuler_ pour fermer la boîte de dialogue (via la méthode {{domxref("HTMLDialogElement.close()")}}), ou soumettre le formulaire avec le bouton de validation.
+### Ouvrir une boîte de dialogue
+
+L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre une boîte de dialogue {{HTMLElement("dialog")}} contenant un formulaire avec la méthode `showModal()`. Vous pouvez ensuite cliquer sur le bouton _Annuler_ pour fermer la boîte de dialogue (avec la méthode {{DOMxRef("HTMLDialogElement.close()")}}), ou envoyer le formulaire avec le bouton de validation.
+
+Le code enregistre la valeur de `open` lorsque l'état de la boîte de dialogue change.
+
+#### HTML
 
 ```html
 <!-- Boîte de dialogue simple -->
-<dialog id="dialog">
+<dialog id="dialogue">
   <form method="dialog">
     <button type="submit">Fermer</button>
   </form>
 </dialog>
 
-<p>
-  <button id="openDialog">Ouvrir la boîte de dialogue</button>
-</p>
-<p id="dialogStatus"></p>
+<button id="ouvrir">Ouvrir la boîte de dialogue</button>
+```
+
+```html hidden
+<pre id="journal"></pre>
+```
+
+```css hidden
+#journal {
+  height: 170px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+```js hidden
+const elementJournal = document.getElementById("journal");
+function log(text) {
+  elementJournal.innerText = `${elementJournal.innerText}${text}\n`;
+  elementJournal.scrollTop = elementJournal.scrollHeight;
+}
 ```
 
 ```js
-const openDialog = document.getElementById("openDialog");
-const dialog = document.getElementById("dialog");
-const text = document.getElementById("dialogStatus");
+const dialogue = document.getElementById("dialogue");
+const boutonOuvrir = document.getElementById("ouvrir");
 
-function openCheck(dialog) {
-  if (dialog.open) {
-    text.innerText = "Boîte de dialogue ouverte";
-  } else {
-    text.innerText = "Boîte de dialogue fermée";
-  }
+function verifierOuverture(dialogue) {
+  log(dialogue.open ? "Boîte : ouverte" : "Boîte : fermée");
 }
 
-// Le bouton met à jour et ouvre la boîte de dialogue modale
-openDialog.addEventListener("click", () => {
-  dialog.showModal();
-  openCheck(dialog);
-});
-
-dialog.addEventListener("close", () => {
-  openCheck(dialog);
+boutonOuvrir.addEventListener("click", () => {
+  dialogue.showModal();
+  verifierOuverture(dialogue);
 });
 ```
 
 ### Résultat
 
-{{ EmbedLiveSample('exemples', '100%', '200px') }}
+{{EmbedLiveSample(" Ouvrir une boîte de dialogue", "100%", 250)}}
 
 ## Spécifications
 
@@ -73,5 +91,4 @@ dialog.addEventListener("close", () => {
 
 ## Voir aussi
 
-- Élément HTML implémentant cette interface&nbsp;:
-  - {{HTMLElement("dialog")}}
+- L'élément HTML {{HTMLElement("dialog")}}

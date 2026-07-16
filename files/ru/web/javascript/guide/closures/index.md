@@ -133,45 +133,44 @@ document.getElementById("size-16").onclick = size16;
 
 {{JSFiddleEmbed("https://jsfiddle.net/vnkuZ/7726/","","200")}}
 
-## Эмуляция частных (private) методов с помощью замыканий
+## Эмуляция приватных методов с помощью замыканий
 
-Языки вроде Java позволяют нам объявлять частные (private) методы . Это значит, что они могут быть вызваны только методами того же класса, в котором объявлены.
+В таких языках, как Java, можно объявлять методы как приватные, то есть они могут быть вызваны только другими методами того же класса.
 
-JavaScript не имеет встроенной возможности сделать такое, но это можно эмулировать с помощью замыкания. Частные методы полезны не только тем, что ограничивают доступ к коду, это также мощное средство глобальной организации пространства имён, позволяющее не засорять публичный интерфейс вашего кода внутренними методами классов.
+В JavaScript до появления [классов](/ru/docs/Web/JavaScript/Reference/Classes) не было встроенного способа объявления [приватных методов](/ru/docs/Web/JavaScript/Reference/Classes/Private_elements#приватные_методы), но можно было эмулировать приватные методы с помощью замыканий. Приватные методы полезны не только для ограничения доступа к коду, они также предоставляют мощный способ управления глобальным пространством имён.
 
-Код ниже иллюстрирует, как можно использовать замыкания для определения публичных функций, которые имеют доступ к закрытым от пользователя (private) функциям и переменным. Такая манера программирования называется [модульное программирование](https://www.google.com/search?q=javascript+module+pattern):
+Приведённый ниже код иллюстрирует, как можно использовать замыкания для определения публичных функций, которые могут получать доступ к приватным функциям и переменным. Обратите внимание, что эти замыкания соответствуют [шаблону проектирования «Модуль»](https://www.google.com/search?q=javascript+module+pattern).
 
 ```js
-var Counter = (function () {
-  var privateCounter = 0;
-
+const counter = (function () {
+  let privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
 
   return {
-    increment: function () {
+    increment() {
       changeBy(1);
     },
-    decrement: function () {
+
+    decrement() {
       changeBy(-1);
     },
-    value: function () {
+
+    value() {
       return privateCounter;
     },
   };
 })();
 
-alert(Counter.value()); /* Alerts 0 */
+console.log(counter.value()); // 0.
 
-Counter.increment();
-Counter.increment();
+counter.increment();
+counter.increment();
+console.log(counter.value()); // 2.
 
-alert(Counter.value()); /* Alerts 2 */
-
-Counter.decrement();
-
-alert(Counter.value()); /* Alerts 1 */
+counter.decrement();
+console.log(counter.value()); // 1.
 ```
 
 Тут много чего поменялось. В предыдущем примере каждое замыкание имело свой собственный контекст исполнения (окружение). Здесь мы создаём единое окружение для трёх функций: `Counter.increment`, `Counter.decrement`, и `Counter.value`.
@@ -377,4 +376,4 @@ function MyObject(name, message) {
 
 В обоих примерах выше методы определяются один раз — в прототипе. И все объекты, использующие данный прототип, будут использовать это определение без дополнительного расхода вычислительных ресурсов. Смотрите подробное описание в статье [Подробнее об объектной модели](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
-{{PreviousNext("Web/JavaScript/Equality_comparisons_and_sameness")}}
+{{PreviousNext("Web/JavaScript/Guide/Equality_comparisons_and_sameness")}}

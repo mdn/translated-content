@@ -9,7 +9,7 @@ slug: Web/API/HTMLVideoElement
 
 [지원하는 미디어 포맷](/ko/docs/Web/Media/Formats) 목록은 브라우저마다 다릅니다. 여러분은 적절한 범위의 브라우저에서 지원하는 한가지 비디어 포맷을 제공하던가, 지원할 모든 브라우저를 위한 여러 종류의 미디어 포맷을 제공해야 합니다.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## 속성(Properties)
 
@@ -39,7 +39,7 @@ _{{domxref("HTMLMediaElement")}}와_ _{{domxref("HTMLElement")}}의 속성들도
 - {{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
   - : 지연 출력된 비디오 프레임을 초 단위로 `double` 값으로 반환한다.
 - {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : 비디오와 연관된 오디오 존재 여부를 {{JSxRef("Boolean","boolean")}} 값으로 반환한다.
+  - : 비디오와 연관된 오디오 존재 여부를 {{JSxRef("Boolean")}} 값으로 반환한다.
 
 ### Microsoft 확장 속성
 

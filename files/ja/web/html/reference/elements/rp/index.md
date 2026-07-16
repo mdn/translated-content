@@ -1,12 +1,10 @@
 ---
-title: "<rp>: ルビの代替表示用括弧要素"
+title: HTML `<rp>` ルビの代替表示用括弧要素
+short-title: <rp>
 slug: Web/HTML/Reference/Elements/rp
-original_slug: Web/HTML/Element/rp
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<rp>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("ruby")}} 要素によるルビの表示に対応していないブラウザー向けの代替表示用の括弧を提供するために使用します。それぞれ 1 つの `<rp>` 要素で、注釈の文字列を含む {{HTMLElement("rt")}} 要素を囲む開き括弧と閉じ括弧をそれぞれ囲む必要があります。
 
@@ -78,7 +76,9 @@ body {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>なし</td>
     </tr>
@@ -89,23 +89,19 @@ body {
     <tr>
       <th scope="row">タグの省略</th>
       <td>
-        要素の直後に {{HTMLElement("rt")}} または他の
-        <code>&#x3C;rp></code>
-        要素が続くとき、または親要素内にそれ以上のコンテンツがない場合は、終了タグを省略可。
+        要素の直後に {{HTMLElement("rt")}} または他の <code>&#x3C;rp></code> 要素が続くとき、または親要素内にそれ以上のコンテンツがない場合は、終了タグを省略可。
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        {{HTMLElement("ruby")}} 要素。 <code>&#x3C;rp></code> 要素は
-        {{HTMLElement("rt")}}
-        要素の直前または直後に配置しなければなりません。
+        {{HTMLElement("ruby")}} 要素。 <code>&#x3C;rp></code> 要素は {{HTMLElement("rt")}} 要素の直前または直後に配置しなければなりません。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>
@@ -135,3 +131,4 @@ body {
 - {{HTMLElement("rt")}}
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
+- [CSS ルビレイアウト](/ja/docs/Web/CSS/Guides/Ruby_layout)モジュール

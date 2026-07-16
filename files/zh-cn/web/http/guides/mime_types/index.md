@@ -18,9 +18,9 @@ MIME 类型通常仅包含两个部分：_类型_（type）和*子类型*（subt
 type/subtype
 ```
 
-**_类型_**代表数据类型所属的大致分类，例如 `video` 或 `text`。
+***类型***代表数据类型所属的大致分类，例如 `video` 或 `text`。
 
-**_子类型_**标识了 MIME 类型所代表的指定类型的确切数据类型。以 `text` 类型为例，它的子类型包括：`plain`（纯文本）、`html`（{{Glossary("HTML")}} 源代码）、`calender`（iCalendar/`.ics` 文件）。
+***子类型***标识了 MIME 类型所代表的指定类型的确切数据类型。以 `text` 类型为例，它的子类型包括：`plain`（纯文本）、`html`（{{Glossary("HTML")}} 源代码）、`calender`（iCalendar/`.ics` 文件）。
 
 每种类型都有自己的一组可能的子类型。一个 MIME 类型总是包含类型与子类型这两部分，且二者必需成对出现。
 

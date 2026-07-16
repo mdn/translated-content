@@ -43,7 +43,7 @@ moveBefore(movedNode, referenceNode)
 
 `moveBefore()` メソッドは、指定されたノードをこの DOM 内の新しい場所に移動します。これは `Node.insertBefore()` メソッドと同様の機能を提供しますが、ノードを除去せずに、再挿入される点が異なります。つまり、 `insertBefore()` や類似のメカニズムで移動した場合にリセットされる、次のようなノードの状態が、移動後も保持されます。
 
-- [アニメーション](/ja/docs/Web/CSS/CSS_animations)や[トランジション](/ja/docs/Web/CSS/CSS_transitions)の状態。
+- [アニメーション](/ja/docs/Web/CSS/Guides/Animations)や[トランジション](/ja/docs/Web/CSS/Guides/Transitions)の状態。
 - {{htmlelement("iframe")}} の読み込み状態。
 - 操作の状態（例えば {{cssxref(":focus")}} や {{cssxref(":active")}}）。
 - 要素の[全画面](/ja/docs/Web/API/Fullscreen_API)の状態。

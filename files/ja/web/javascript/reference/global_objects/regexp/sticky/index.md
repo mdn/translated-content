@@ -1,30 +1,29 @@
 ---
 title: RegExp.prototype.sticky
+short-title: sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`sticky`** は {{jsxref("RegExp")}} インスタンスのアクセサープロパティで、この正規表現に `y` フラグが使用されているかどうかを返します。
 
 {{InteractiveExample("JavaScript デモ: RegExp.prototype.sticky", "taller")}}
 
 ```js interactive-example
-const str1 = "table football";
-const regex1 = new RegExp("foo", "y");
+const str = "table football";
+const regex = /foo/y;
 
-regex1.lastIndex = 6;
+regex.lastIndex = 6;
 
-console.log(regex1.sticky);
-// Expected output: true
+console.log(regex.sticky);
+// 予想される結果: true
 
-console.log(regex1.test(str1));
-// Expected output: true
+console.log(regex.test(str));
+// 予想される結果: true
 
-console.log(regex1.test(str1));
-// Expected output: false
+console.log(regex.test(str));
+// 予想される結果: false
 ```
 
 ## 解説
@@ -87,9 +86,9 @@ Firefox の SpiderMonkey エンジンの一部のバージョンでは `^` 指�
 以下は正しい挙動の例です。
 
 ```js
-const regex = /^foo/y;
-regex.lastIndex = 2;
-regex.test("..foo"); // false - インデックス 2 は文字列の先頭ではない
+const regex1 = /^foo/y;
+regex1.lastIndex = 2;
+regex1.test("..foo"); // false - インデックス 2 は文字列の先頭ではない
 
 const regex2 = /^foo/my;
 regex2.lastIndex = 2;

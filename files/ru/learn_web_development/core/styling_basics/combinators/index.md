@@ -3,7 +3,7 @@ title: Комбинаторы
 slug: Learn_web_development/Core/Styling_basics/Combinators
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 Наконец мы рассмотрим селекторы, которые называются комбинаторами, поскольку они соединяют другие селекторы, создавая полезную связь селекторов друг с другом и расположением содержимого в документе.
 
@@ -84,4 +84,4 @@ ul > li[class="a"] {
 
 Это последний раздел в наших уроках по селекторам. Далее мы перейдём к другой важной части CSS — [CSS модель коробки](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}

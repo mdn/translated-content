@@ -3,7 +3,7 @@ title: Paddle과 키보드 컨트롤
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 ---
 
-{{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Bounce_off_the_walls", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Game_over")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
 
 이 글은 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 10단계 중 4단계 입니다. 이 글을 다 읽고 난 뒤 완성된 소스코드는 [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html) 에서 확인할 수 있습니다.
 
@@ -123,4 +123,4 @@ drawPaddle();
 
 게임과 비슷해지긴 했지만 한가지 문제는 게임이 끝나지 않는다는 것입니다. 5단계에서 [Game over](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)를 추가할 것입니다.
 
-{{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Bounce_off_the_walls", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Game_over")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}

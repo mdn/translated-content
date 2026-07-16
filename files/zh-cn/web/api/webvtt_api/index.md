@@ -587,4 +587,4 @@ WebVTT 在 Firefox 24 的首选项 `media.webvtt.enabled` 之后实现，默认�
 
 ## 参见
 
-- CSS 伪类 [`::cue` 和 `::cue()`](/zh-CN/docs/Web/CSS/::cue)
+- CSS 伪类 [`::cue` 和 `::cue()`](/zh-CN/docs/Web/CSS/Reference/Selectors/::cue)

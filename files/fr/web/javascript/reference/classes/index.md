@@ -100,7 +100,7 @@ console.log(carré.area);
 
 ### Méthodes statiques
 
-Le mot-clé [`static`](/fr/docs/Web/JavaScript/Reference/Classes/static) permet de définir une méthode statique pour une classe. Les méthodes statiques sont appelées par rapport à la classe entière et non par rapport à une [instance](/fr/docs/Learn/JavaScript/Objects#l'instance) donnée (ces méthodes ne peuvent pas être appelées « depuis » une instance). Ces méthodes sont généralement utilisées sous formes d'utilitaires au sein d'applications.
+Le mot-clé [`static`](/fr/docs/Web/JavaScript/Reference/Classes/static) permet de définir une méthode statique pour une classe. Les méthodes statiques sont appelées par rapport à la classe entière et non par rapport à une [instance](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#instance) donnée (ces méthodes ne peuvent pas être appelées « depuis » une instance). Ces méthodes sont généralement utilisées sous formes d'utilitaires au sein d'applications.
 
 ```js
 class Point {
@@ -399,8 +399,8 @@ Pour relancer une définition, il faut utiliser le menu Exécuter > Recharger et
 ## Voir aussi
 
 - [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)
-- {{jsxref("Instructions/class", "Les déclarations de classes","",1)}}
-- {{jsxref("Opérateurs/class", "Les expressions de classes","",1)}}
-- {{jsxref("Opérateurs/super", "super")}}
+- {{jsxref("Statements/class", "Les déclarations de classes","",1)}}
+- {{jsxref("Operators/class", "Les expressions de classes","",1)}}
+- {{jsxref("Operators/super", "super")}}
 - [Billet sur les classes (traduction en français)](https://tech.mozfr.org/post/2015/07/29/ES6-en-details-%3A-les-classes)
 - [Champs publics et privés pour les classes (proposition de niveau 3)](https://github.com/tc39/proposal-class-fields)

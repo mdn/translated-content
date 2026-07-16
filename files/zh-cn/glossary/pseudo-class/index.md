@@ -9,4 +9,4 @@ l10n:
 
 ## 参见
 
-- [伪类文档](/zh-CN/docs/Web/CSS/Pseudo-classes)
+- [伪类文档](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

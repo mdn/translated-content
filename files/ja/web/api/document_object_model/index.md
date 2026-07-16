@@ -2,7 +2,7 @@
 title: ドキュメントオブジェクトモデル (DOM)
 slug: Web/API/Document_Object_Model
 l10n:
-  sourceCommit: 231152e9a749aaeba8de45f4cc712845a470dda9
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -57,7 +57,7 @@ alert(paragraphs[0].nodeName);
 
 ![ルートとコンテンツを含むノード要素を保有する文書のツリー状表現としての DOM](using_the_w3c_dom_level_1_core-doctree.jpg)
 
-なお、上位のツリーは上記の文書の DOM ツリーと似ていますが、同じではありません。実際の DOM ツリーは[ホワイトスペース](/ja/docs/Web/CSS/CSS_text/Whitespace)を温存するからです。
+なお、上位のツリーは上記の文書の DOM ツリーと似ていますが、同じではありません。実際の DOM ツリーは[ホワイトスペース](/ja/docs/Web/CSS/Guides/Text/Whitespace)を温存するからです。
 
 ウェブブラウザーが HTML 文書を解釈するとき、ブラウザーは DOM ツリーを構築し、文書を表示するために使用します。
 
@@ -478,12 +478,14 @@ root.appendChild(body);
 
 ```html
 <table id="t-daddy">
-  <tr id="tbl1">
-    <td id="c1">one</td>
-  </tr>
-  <tr>
-    <td id="c2">two</td>
-  </tr>
+  <tbody>
+    <tr id="tbl1">
+      <td id="c1">one</td>
+    </tr>
+    <tr>
+      <td id="c2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

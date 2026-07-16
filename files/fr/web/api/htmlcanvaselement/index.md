@@ -1,320 +1,60 @@
 ---
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
+l10n:
+  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
 
-{{ApiRef}}
+{{APIRef("Canvas API")}}
 
-L'interface **`HTMLCanvasElement`** fournit un ensemble de propriétés et de méthodes pour manipuler la disposition et la représentation des éléments canvas. L'interface `HTMLCanvasElement` hérite également des propriétés et des méthodes de l'interface {{domxref("HTMLElement")}}.
+L'interface **`HTMLCanvasElement`** fournit des propriétés et des méthodes pour manipuler la disposition et la présentation des éléments HTML {{HTMLElement("canvas")}}. L'interface `HTMLCanvasElement` hérite également des propriétés et des méthodes de l'interface {{DOMxRef("HTMLElement")}}.
 
-## Propriétés
+{{InheritanceDiagram}}
 
-_Propriétés hérités de son parent,_ _{{domxref("HTMLElement")}}._
+## Propriétés d'instance
 
-| Nom      | Type            | Description                                                                                                                                                   |
-| -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `height` | `unsigned long` | Représente l'attribut HTML [`height`](/fr/docs/Web/HTML/Reference/Elements/canvas#height), qui spécifie la hauteur de l'espace des coordonnées en pixels CSS. |
-| `width`  | `unsigned long` | Représente l'attribut HTML [`width`](/fr/docs/Web/HTML/Reference/Elements/canvas#width), qui spécifie la largeur de l'espace des coordonnées en pixels CSS.   |
+_Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-## Méthodes
+- {{DOMxRef("HTMLCanvasElement.height")}}
+  - : L'attribut HTML [`height`](/fr/docs/Web/HTML/Reference/Elements/canvas#height) de l'élément {{HTMLElement("canvas")}} est un entier non négatif reflétant le nombre de pixels logiques (ou valeurs RGBA) descendant d'une colonne du canevas. Lorsque l'attribut n'est pas défini, ou s'il est défini sur une valeur invalide (par exemple une valeur négative), la valeur par défaut `150` est utilisée. Si aucune hauteur CSS \[separate] n'est assignée au {{HTMLElement("canvas")}}, cette valeur sera également utilisée comme hauteur du canevas en pixels CSS.
+- {{DOMxRef("HTMLCanvasElement.width")}}
+  - : L'attribut HTML [`width`](/fr/docs/Web/HTML/Reference/Elements/canvas#width) de l'élément {{HTMLElement("canvas")}} est un entier non négatif reflétant le nombre de pixels logiques (ou valeurs RGBA) parcourant une rangée du canevas. Lorsque l'attribut n'est pas défini, ou s'il est défini sur une valeur invalide (par exemple une valeur négative), la valeur par défaut `300` est utilisée. Si aucune largeur CSS \[separate] n'est assignée au {{HTMLElement("canvas")}}, cette valeur sera également utilisée comme largeur du canevas en pixels CSS.
+- {{DOMxRef("HTMLCanvasElement.mozOpaque")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Une valeur booléenne reflétant l'attribut HTML [`moz-opaque`](/fr/docs/Web/HTML/Reference/Elements/canvas#moz-opaque) de l'élément {{HTMLElement("canvas")}}. Elle indique au canevas si la translucidité sera prise en compte ou non. Si le canevas sait qu'il n'y a pas de translucidité, les performances de rendu peuvent être optimisées. Ceci n'est pris en charge que par les navigateurs basés sur Mozilla&nbsp;; utilisez plutôt la méthode standardisée {{DOMxRef("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}}.
+- `HTMLCanvasElement.mozPrintCallback` {{Non-standard_Inline}}
+  - : Une `fonction` initialement nulle. Le contenu Web peut définir cette propriété sur une fonction JavaScript qui sera appelée lorsque le canevas doit être redessiné pendant l'impression de la page. Lors de l'appel, la fonction de rappel reçoit un objet "printState" qui implémente l'interface [MozCanvasPrintState <sup>(angl.)</sup>](https://searchfox.org/firefox-main/search?q=interface%20MozCanvasPrintState&path=HTMLCanvasElement.webidl). La fonction de rappel peut obtenir le contexte de dessin depuis l'objet printState et doit ensuite appeler `done()` dessus lorsqu'elle a terminé. L'objectif de `mozPrintCallback` est d'obtenir un rendu à plus haute résolution du canevas, adapté à la résolution de l'imprimante utilisée. [Voir cet article de blog <sup>(angl.)</sup>](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)
 
-_Méthodes héritées de son parent,_ _{{domxref("HTMLElement")}}._
+## Méthodes d'instance
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Nom &#x26; arguments</th>
-      <th scope="col">Résultat</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>getContext(in {{domxref("DOMString")}} contextId)</code>
-      </td>
-      <td>{{domxref("RenderingContext")}}</td>
-      <td>
-        Renvoie un contexte de dessin sur le canvas, ou null si l'ID de contexte
-        n'est pas supporté. Un contexte de dessin vous permet de dessiner sur le
-        canvas. Appeler getContext avec <code>"2d"</code> renvoie un object
-        {{domxref("CanvasRenderingContext2D")}}, alors que
-        l'appeler avec <code>"experimental-webgl"</code> (ou
-        <code>"webgl"</code>) renvoie un objet
-        {{domxref("WebGLRenderingContext")}} . Ce dernier contexte
-        n'est disponible que dans les navigateur qui implémentent
-        <a href="/fr/docs/Web/WebGL">WebGL</a>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>supportsContext()</code> {{experimental_inline}}</td>
-      <td>{{domxref("Boolean")}}</td>
-      <td>
-        Renvoie une valeur {{domxref("Boolean")}} indiquant si le contexte
-        donné est supporté par ce canvas.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <em><code>setContext()</code></em> {{experimental_inline}}
-      </td>
-      <td><code>void</code></td>
-      <td>Chnage de contexte de l'élément en rapport avec celui fourni.</td>
-    </tr>
-    <tr>
-      <td>
-        <code>transferControlToProxy()</code> {{experimental_inline}}
-      </td>
-      <td>{{domxref("CanvasProxy")}}</td>
-      <td>
-        Retourne un mandataire pour autoriser le canvas à être utilisé dans un
-        autre {{domxref("Worker")}}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>toDataURL</code>(in optional {{domxref("DOMString")}}
-        type, in any ...args)
-      </td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Renvoie une <code>data:</code> URL contenant une représentation de
-        l'image au format spécifié par l'argument <code>type</code> (PNG par
-        défaut). L'image renvoyée est en 96dpi.
-        <ul>
-          <li>
-            Si la hauteur ou la largeur du canvas est <code>0</code>,
-            <code>"data:,</code>" représentant une chaîne vide, est renvoyée.
-          </li>
-          <li>
-            Si le format demandé n'est pas <code>image/png</code>, mais que la
-            valeur renvoyée commence par <code>data:image/png</code>, alors le
-            format demandé n'est pas supporté.
-          </li>
-          <li>Chrome supporte le format <code>image/webp</code>.</li>
-          <li>
-            Si le format demandé est <code>image/jpeg </code>ou
-            <code>image/webp</code>, alors le second argument, s'il est compris
-            entre <code>0.0</code> et <code>1.0</code>, est considéré comme une
-            indication de la qualité d'image ; si le second argument est
-            n'importe quoi d'autre, la valeur par défaut pour la qualité est
-            utilisé. Les autres arguments sont ignorés.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><code>toDataURLHD()</code>{{experimental_inline}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Renvoie une <code>data:</code> URL contenant une représentation de
-        l'image au format spécifié par <code>type</code> (PNG par défaut).
-        L'image renvoyée est à la résolution native du canvas.
-        <ul>
-          <li>
-            Si la hauteur ou la largeur du canvas est <code>0</code>,
-            <code>"data:,</code>" représentant une chaîne vide, est renvoyée.
-          </li>
-          <li>
-            Si le format demandé n'est pas <code>image/png</code>, mais que la
-            valeur renvoyée commence par <code>data:image/png</code>, alors le
-            format demandé n'est pas supporté.
-          </li>
-          <li>Chrome supporte le format <code>image/webp</code>.</li>
-          <li>
-            Si le format demandé est <code>image/jpeg </code>ou
-            <code>image/webp</code>, alors le second argument, s'il est compris
-            entre <code>0.0</code> et <code>1.0</code>, est considéré comme une
-            indication de la qualité d'image ; si le second argument est
-            n'importe quoi d'autre, la valeur par défaut pour la qualité est
-            utilisé. Les autres arguments sont ignorés.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>toBlob</code>(in FileCallback callback, in optional
-        {{domxref("DOMString")}} type, in any ...args)
-      </td>
-      <td><code>void</code></td>
-      <td>
-        Renvoie un objet {{domxref("Blob")}} représentant l'image contenue
-        dans le canvas ; ce fichier peut être mis en cache sur le disque ou
-        stocké en mémoire au choix du navigateur. Si <code>type</code> n'est pas
-        précisé, le format de l'image est <code>image/png</code>. L'image
-        renvoyée est en 96dpi.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>toBlobHD</code>(in FileCallback callback, in optional
-        {{domxref("DOMString")}} type, in any ...args)
-        {{experimental_inline}}
-      </td>
-      <td><code>void</code></td>
-      <td>
-        Renvoie un objet {{domxref("Blob")}} représentant l'image contenue
-        dans le canvas ; ce fichier peut être mis en cache sur le disque ou
-        stocké en mémoire au choix du navigateur. Si <code>type</code> n'est pas
-        précisé, le format de l'image est <code>image/png</code>. L'image
-        renvoyée est à la résolution native du canvas.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>mozGetAsFile</code>(in {{domxref("DOMString")}} name, in
-        optional {{domxref("DOMString")}} type)
-        {{non-standard_inline}}
-      </td>
-      <td>{{domxref("File")}}</td>
-      <td>
-        Renvoie un objet {{domxref("File")}} représentant l'image contenue
-        dans le canvas ; ce fichier est en mémoire avec le
-        <code>nom</code> précisé. Si <code>type</code> n'est pas précisé, le
-        fotmat de l'image est <code>image/png</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          >void mozFetchAsStream(in
-          `nsIInputStreamCallback` callback,
-          [optional] in DOMString type)</code
-        >
-        {{non-standard_inline}}
-      </td>
-      <td><code>void</code></td>
-      <td>
-        Crée un nouveau flux d'entrée qui, quand il est prêt, fournit le contenu
-        du canvas en tant que données d'image. Quand le nouveau flux est prêt,
-        la fonction de rappel spécifiée
-        <code>nsIInputStreamCallback.onInputStreamReady()</code>
-        est appelée. Si <code>type</code> n'est pas précisée, Le format de
-        l'image est <code>image/png.</code>
-        <div class="note">
-          <p>
-            <strong>Note :</strong> Cette méthode ne peut être utilisée que
-            depuis le code chrome.
-          </p>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+_Hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 
-## Examples
+- {{DOMxRef("HTMLCanvasElement.captureStream()")}}
+  - : Retourne un {{DOMxRef("CanvasCaptureMediaStreamTrack")}} qui est une capture vidéo en temps réel de la surface du canevas.
+- {{DOMxRef("HTMLCanvasElement.getContext()")}}
+  - : Retourne un contexte de dessin sur le canevas, ou [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) si l'identifiant de contexte n'est pas pris en charge, ou si le canevas a déjà été configuré pour un autre mode de contexte.
+- {{DOMxRef("HTMLCanvasElement.toDataURL()")}}
+  - : Retourne une data-URL contenant une représentation de l'image au format défini par le paramètre `type` (par défaut `png`). L'image retournée est à une résolution de 96 dpi.
+- {{DOMxRef("HTMLCanvasElement.toBlob()")}}
+  - : Crée un objet {{DOMxRef("Blob")}} représentant l'image contenue dans le canevas&nbsp;; ce fichier peut être mis en cache sur le disque ou stocké en mémoire à la discrétion de l'agent utilisateur.
+- {{DOMxRef("HTMLCanvasElement.transferControlToOffscreen()")}}
+  - : Transfère le contrôle à un objet {{DOMxRef("OffscreenCanvas")}}, soit sur le thread principal, soit sur un worker.
 
-### Example: Obtenir la data-url du canvas
+## Évènements
 
-D'abord, dessinez dans le canvas, ensuite appelez `canvas.toDataURL()` pour obtenir la data: URL du canvas.
+_Hérite des évènements de son parent, {{DOMxRef("HTMLElement")}}._
 
-```js
-function test() {
-  var canvas = document.getElementById("canvas");
-  var url = canvas.toDataURL();
+Écoutez ces évènements en utilisant {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} ou en assignant un gestionnaire d'évènement à la propriété `oneventname` de cette interface.
 
-  var nouvelleImg = document.createElement("img");
-  nouvelleImg.src = url;
-  document.body.appendChild(nouvelleImg);
-}
-```
-
-### Example: Obtenir un fichier représentant le canvas
-
-Une fois que vous avez dessiné du contenu dans un canvas, vous pouvez le convertir dans un fichier avec l'un des formats supportés. Par exemple, l'extrait de code ci-dessous récupère l'image contenue dans l'élément canvas avec l'ID "canvas", en effectue une copie au format PNG, puis ajoute un nouvel élément {{HTMLElement("img")}} au document, dont l'image source est celle créée en utilisant le canvas.
-
-```js
-function test() {
-  var canvas = document.getElementById("canvas");
-  canvas.toBlob(function (blob) {
-    var nouvelleImg = document.createElement("img"),
-      url = URL.createObjectURL(blob);
-    nouvelleImg.onload = function () {
-      // Il n'est plus nécessaire de lire le blob, il est donc révoqué
-      URL.revokeObjectURL(url);
-    };
-    nouvelleImg.src = url;
-    document.body.appendChild(nouvelleImg);
-  });
-}
-```
-
-Vous pouvez utiliser cette technique en association avec les événemments de souris pour effectuer un changement d'images dynamique (niveau de gris et couleur dans cet exemple) :
-
-```html
-<!doctype html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>MDC Example</title>
-    <script type="text/javascript">
-      function afficherImageCouleur() {
-        this.style.display = "none";
-        this.nextSibling.style.display = "inline";
-      }
-
-      function afficherImageGrise() {
-        this.previousSibling.style.display = "inline";
-        this.style.display = "none";
-      }
-
-      function supprimerCouleurs() {
-        var aImages = document.getElementsByClassName("grayscale"),
-          nImgsLong = aImages.length,
-          oCanvas = document.createElement("canvas"),
-          oCtx = oCanvas.getContext("2d");
-        for (
-          var nLargeur,
-            nHauteur,
-            oImgData,
-            oImgGrise,
-            nPixel,
-            aPix,
-            nPixLong,
-            nImgId = 0;
-          nImgId < nImgsLong;
-          nImgId++
-        ) {
-          oImgCouleur = aImages[nImgId];
-          nLargeur = oImgCouleur.offsetWidth;
-          nHauteur = oImgCouleur.offsetHeight;
-          oCanvas.width = nWidth;
-          oCanvas.height = nHeight;
-          oCtx.drawImage(oImgCouleur, 0, 0);
-          oImgData = oCtx.getImageData(0, 0, nLargeur, nHauteur);
-          aPix = oImgData.data;
-          nPixLong = aPix.length;
-          for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
-            aPix[nPixel + 2] =
-              aPix[nPixel + 1] =
-              aPix[nPixel] =
-                (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
-          }
-          oCtx.putImageData(oImgData, 0, 0);
-          oImgGrise = new Image();
-          oImg.src = oCanvas.toDataURL();
-          oImgGrise.onmouseover = afficherImageCouleur;
-          oImgCouleur.onmouseout = afficherImageGrise;
-          oCtx.clearRect(0, 0, nLargeur, nHauteur);
-          oImgCouleur.style.display = "none";
-          oImgCouleur.parentNode.insertBefore(oImgGrise, oImgCouleur);
-        }
-      }
-    </script>
-  </head>
-
-  <body onload="supprimerCouleurs();">
-    <p><img class="grayscale" src="chagall.jpg" alt="" /></p>
-  </body>
-</html>
-```
-
-Remarquez qu'ici nous créons une image PNG ; si vous ajoutez un second paramètre à l'appel de `toBlob()`, vous pouvez spécifier le type d'image. Par exemple, pour obtenir l'image au format JPEG :
-
-```js
- canvas.toBlob(function(blob){...}, "image/jpeg", 0.95); // JPEG avec une qualité de 95%
-```
+- [`contextlost`](/fr/docs/Web/API/HTMLCanvasElement/contextlost_event)
+  - : Déclenché si le navigateur détecte que le contexte `CanvasRenderingContext2D` a été perdu.
+- [`contextrestored`](/fr/docs/Web/API/HTMLCanvasElement/contextrestored_event)
+  - : Déclenché si le navigateur restaure avec succès un contexte `CanvasRenderingContext2D`.
+- [`webglcontextcreationerror`](/fr/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
+  - : Déclenché si l'agent utilisateur est incapable de créer un contexte `WebGLRenderingContext` ou `WebGL2RenderingContext`.
+- [`webglcontextlost`](/fr/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
+  - : Déclenché si l'agent utilisateur détecte que le tampon de dessin associé à un objet `WebGLRenderingContext` ou `WebGL2RenderingContext` a été perdu.
+- [`webglcontextrestored`](/fr/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
+  - : Déclenché si l'agent utilisateur restaure le tampon de dessin pour un objet `WebGLRenderingContext` ou `WebGL2RenderingContext`.
 
 ## Spécifications
 
@@ -326,4 +66,4 @@ Remarquez qu'ici nous créons une image PNG ; si vous ajoutez un second paramèt
 
 ## Voir aussi
 
-- Elément HTML implementant cette interface : {{HTMLElement("canvas")}}.
+- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("canvas")}}

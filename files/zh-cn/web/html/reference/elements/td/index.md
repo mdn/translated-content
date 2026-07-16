@@ -91,7 +91,7 @@ caption {
 以下属性已被弃用，不应再使用。下文记录了这些属性，供更新现有代码时参考，也仅供参考。
 
 - `abbr` {{deprecated_inline}}
-  - : 包含对数据单元格内容的简短描述。某些用户代理（如语音阅读器）可能会在内容本身之前显示该描述。将简短内容放在单元格内，并将较长的描述放在 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title) 属性中，因为该属性已被弃用。或者，最好将内容包含在数据单元格中，并使用 CSS 来[可视化地截断溢出的文本](/zh-CN/docs/Web/CSS/text-overflow)。
+  - : 包含对数据单元格内容的简短描述。某些用户代理（如语音阅读器）可能会在内容本身之前显示该描述。将简短内容放在单元格内，并将较长的描述放在 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title) 属性中，因为该属性已被弃用。或者，最好将内容包含在数据单元格中，并使用 CSS 来[可视化地截断溢出的文本](/zh-CN/docs/Web/CSS/Reference/Properties/text-overflow)。
 
 - `align` {{deprecated_inline}}
   - : 指定数据单元格的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值包括 `left`、`center`、`right`、`justify` 和 "char"。如果支持，`char` 值将根据 [`char`](#char) 属性中定义的字符和 [`charoff`](#charoff) 属性定义的偏移量对文本内容进行对齐。请使用 {{cssxref("text-align")}} CSS 属性代替，因为该属性已被弃用。
@@ -100,7 +100,7 @@ caption {
   - : 包含以空格分隔的字符串列表，每个字符串与数据单元格适用的单元格组的 `id` 属性相对应。
 
 - `bgcolor` {{deprecated_inline}}
-  - : 定义数据单元格的背景颜色。该值是 HTML 颜色；可以是以 `#` 为前缀的 [6 位十六进制 RGB 代码](/zh-CN/docs/Web/CSS/hex-color)，也可以是[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。由于该属性已被弃用，请使用 {{cssxref("background-color")}} CSS 属性代替。
+  - : 定义数据单元格的背景颜色。该值是 HTML 颜色；可以是以 `#` 为前缀的 [6 位十六进制 RGB 代码](/zh-CN/docs/Web/CSS/Reference/Values/hex-color)，也可以是[颜色关键字](/zh-CN/docs/Web/CSS/Reference/Values/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。由于该属性已被弃用，请使用 {{cssxref("background-color")}} CSS 属性代替。
 
 - `char` {{deprecated_inline}}
   - : 没有任何作用。其最初目的是指定内容与数据单元格中的某个字符对齐。当尝试对齐数字或货币值时，其典型值包括句号（`.`）。如果 [`align`](#align) 未设置为 `char`，该属性将被忽略。
@@ -172,7 +172,7 @@ caption {
 
 #### CSS
 
-表格及其单元格的样式使用了一些基本的 CSS。CSS [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)和 {{cssxref(":nth-of-type")}} 伪类用于替换单元格的外观，使表格中的信息更易于理解和识别。
+表格及其单元格的样式使用了一些基本的 CSS。CSS [属性选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Attribute_selectors)和 {{cssxref(":nth-of-type")}} 伪类用于替换单元格的外观，使表格中的信息更易于理解和识别。
 
 ```css
 td,

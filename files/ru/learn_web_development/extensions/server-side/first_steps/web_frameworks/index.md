@@ -3,7 +3,7 @@ title: Выполняемые на сервере веб-фреймворки
 slug: Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 В предыдущей статье было показано, как выглядит общение между веб-клиентами и серверами, характер HTTP-запросов и ответов, а также то, что веб-приложение на стороне сервера должно выполнять, чтобы отвечать на запросы из веб-браузера. Благодаря этим знаниям настало время изучить, как веб-интерфейсы могут упростить эти задачи, и дать вам представление о том, как выбрать структуру для своего первого веб-приложения на стороне сервера.
 
@@ -258,4 +258,4 @@ ASP.NET используется Microsoft, Xbox.com, Stack Overflow и мног
 
 Для следующей статьи в этом модуле мы немного изменим направление и рассмотрим веб-безопасность.
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}

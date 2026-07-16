@@ -10,7 +10,7 @@ Le rôle `menubar` est une présentation de `menu` qui reste généralement visi
 
 ## Description
 
-Un menu est un widget qui offre une liste de choix à l'utilisateur·ice, comme un ensemble d'actions ou de fonctions. Le type de menu menubar est généralement présenté sous la forme d'une barre horizontale de commandes toujours visible. Les menubars se comportent comme les menubars natifs des systèmes d'exploitation, tels que les menubars contenant des menus déroulants, que l'on trouve couramment en haut de nombreuses fenêtres d'applications de bureau.
+Un menu est un composant qui offre une liste de choix à l'utilisateur·ice, comme un ensemble d'actions ou de fonctions. Le type de menu menubar est généralement présenté sous la forme d'une barre horizontale de commandes toujours visible. Les menubars se comportent comme les menubars natifs des systèmes d'exploitation, tels que les menubars contenant des menus déroulants, que l'on trouve couramment en haut de nombreuses fenêtres d'applications de bureau.
 
 Le rôle `menubar` est utilisé pour créer une barre de menu similaire à celles que l'on trouve près du haut de la fenêtre dans de nombreuses applications de bureau, une barre d'éléments de menu visuellement persistante, généralement horizontale, offrant à l'utilisateur·ice un accès rapide à un ensemble cohérent de commandes.
 

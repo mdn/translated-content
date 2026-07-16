@@ -1,29 +1,25 @@
 ---
-title: "<small>: 附随コメント要素"
+title: HTML `<small>` 附随コメント要素
+short-title: <small>
 slug: Web/HTML/Reference/Elements/small
-original_slug: Web/HTML/Element/small
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<small>`** は [HTML](/ja/docs/Web/HTML) の要素で、スタイルの表現とは独立して、著作権表示や法的表記のような、注釈や小さく表示される文を表します。既定では、 `small` から `x-small` のように、一段階小さいフォントでテキストが表示されます。
 
 {{InteractiveExample("HTML デモ: &lt;small&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
-  MDN Web Docs is a learning platform for Web technologies and the software that
-  powers the Web.
+  MDN Web Docs は、ウェブ技術およびウェブを形作るソフトウェアについて学ぶプラットフォームです。
 </p>
 
 <hr />
 
 <p>
   <small
-    >The content is licensed under a Creative Commons Attribution-ShareAlike 2.5
-    Generic License.</small
+    >本コンテンツは、クリエイティブ・コモンズ 表示 - 継承 2.5 一般ライセンスの下で提供されています。</small
   >
 </p>
 ```
@@ -58,8 +54,14 @@ small {
 ```html
 <p>
   これは最初の文です。
-  <span style="font-size:0.8em">この文は小さい文字で表記されています。</span>
+  <span class="small">この文は小さい文字で表記されています。</span>
 </p>
+```
+
+```css
+.small {
+  font-size: 0.8em;
+}
 ```
 
 #### 結果
@@ -75,12 +77,16 @@ small {
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">コンテンツカテゴリー</th>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -88,7 +94,7 @@ small {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -100,10 +106,10 @@ small {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素、または<a
-          href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素。
       </td>
@@ -111,8 +117,10 @@ small {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>
@@ -141,4 +149,3 @@ small {
 - {{HTMLElement("sub")}} と {{HTMLElement("sup")}}
 - {{HTMLElement("font")}}
 - {{HTMLElement("style")}}
-- HTML 4.01 仕様書: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)

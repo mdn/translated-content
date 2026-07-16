@@ -3,7 +3,7 @@ title: "ARIA : rôle tab"
 short-title: tab
 slug: Web/Accessibility/ARIA/Reference/Roles/tab_role
 l10n:
-  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
+  sourceCommit: 7ba6358a0ff684cc67c60b76d6d972722bbf0d18
 ---
 
 Le rôle `tab` indique un élément interactif à l'intérieur d'un `tablist` qui, lorsqu'il est activé, affiche son `tabpanel` associé.
@@ -18,7 +18,7 @@ Le rôle `tab` indique un élément interactif à l'intérieur d'un `tablist` qu
 
 Un élément avec le rôle `tab` contrôle la visibilité d'un élément associé avec le rôle [`tabpanel`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role). Le schéma d'expérience utilisateur·ice courant est un groupe d'onglets visuels au‑dessus ou sur le côté d'une zone de contenu, et la sélection d'un autre onglet modifie le contenu et rend l'onglet sélectionné plus visible que les autres.
 
-Les éléments avec le rôle `tab` _doivent_ soit être enfants d'un élément avec le rôle `tablist`, soit avoir leur `id` inclus dans la propriété [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) d'un `tablist`. Cette combinaison indique aux technologies d'assistance que l'élément fait partie d'un groupe d'éléments liés. Certaines technologies d'assistance fourniront le nombre d'éléments avec le rôle `tab` dans un `tablist`, et indiqueront à l'utilisateur·ice quel onglet est actuellement ciblé. De plus, un élément avec le rôle `tab` _devrait_ contenir la propriété [`aria-controls`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) identifiant un `tabpanel` correspondant (qui possède le rôle `tabpanel`) par l'`id` de cet élément. Lorsqu'un élément avec le rôle `tabpanel` a la sélection, ou qu'un de ses enfants l'a, cela indique que l'élément connecté avec le rôle `tab` est l'onglet actif dans un `tablist`.
+Les éléments avec le rôle `tab` _doivent_ soit être enfants d'un élément avec le rôle `tablist`, soit avoir leur `id` inclus dans la propriété [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) d'un `tablist`. Cette combinaison indique aux technologies d'assistance que l'élément fait partie d'un groupe d'éléments liés. Certaines technologies d'assistance fournit le nombre d'éléments avec le rôle `tab` dans un `tablist`, et indiquent à l'utilisateur·ice quel onglet est actuellement ciblé. De plus, un élément avec le rôle `tab` _devrait_ contenir la propriété [`aria-controls`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) identifiant un `tabpanel` correspondant (qui possède le rôle `tabpanel`) par l'`id` de cet élément. Lorsqu'un élément avec le rôle `tabpanel` a la sélection, ou qu'un de ses enfants l'a, cela indique que l'élément connecté avec le rôle `tab` est l'onglet actif dans un `tablist`.
 
 Lorsque des éléments avec le rôle `tab` sont sélectionnés ou actifs, ils doivent avoir leur attribut [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) défini sur `true`. Sinon, leur attribut `aria-selected` doit être défini sur `false`. Lorsqu'un `tablist` à sélection unique est sélectionné ou actif, l'attribut `hidden` des autres tabpanels doit être défini sur true jusqu'à ce que l'utilisateur·ice sélectionne l'onglet associé à ce tabpanel. Lorsqu'un `tablist` à sélection multiple est sélectionné ou actif, son `tabpanel` contrôlé correspondant doit avoir son attribut [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) défini sur `true` et son attribut `hidden` défini sur `false`, sinon l'inverse.
 
@@ -38,7 +38,7 @@ Par exemple, considérez l'élément `tab` ci‑dessous qui contient un titre&nb
 <div role="tab"><h3 role="presentation">Titre de mon onglet</h3></div>
 ```
 
-Du point de vue de l'utilisateur·ice de technologie d'assistance, le titre n'existe pas puisque les extraits précédents sont équivalents à ce qui suit dans l'[arbre d'accessibilité](/fr/docs/Glossary/Accessibility_tree)&nbsp;:
+Du point de vue de l'utilisateur·ice de technologie d'assistance, le titre n'existe pas puisque les extraits précédents sont équivalents à ce qui suit dans [l'arbre d'accessibilité](/fr/docs/Glossary/Accessibility_tree)&nbsp;:
 
 ```html
 <div role="tab">Titre de mon onglet</div>
@@ -67,11 +67,11 @@ Du point de vue de l'utilisateur·ice de technologie d'assistance, le titre n'ex
 > [!NOTE]
 > Il existe des moyens de créer des onglets sans JavaScript, mais aucune combinaison utilisant uniquement HTML et CSS ne permet d'obtenir toutes les fonctionnalités requises ci‑dessus pour des onglets accessibles avec contenu.
 
-## Exemple
+## Exemples
 
-Cet exemple combine le rôle `tab` avec `tablist` et des éléments avec le rôle `tabpanel` pour créer un groupe interactif de contenus à onglets. Ici, le groupe de contenu est englobé dans une `div`, le `tablist` possède un attribut `aria-label` qui le décrit pour les technologies d'assistance. Chaque `tab` est un bouton avec les attributs mentionnés précédemment. Le premier onglet possède à la fois `tabindex="0"` et `aria-selected="true"`. Ces deux attributs doivent toujours être coordonnés ainsi&nbsp;: lorsqu'un autre onglet est sélectionné, il aura alors `tabindex="0"` et `aria-selected="true"`. Tous les onglets non sélectionnés doivent avoir `aria-selected="false"` et `tabindex="-1"`.
+Cet exemple combine le rôle `tab` avec `tablist` et des éléments avec le rôle `tabpanel` pour créer un groupe interactif de contenus à onglets. Ici, le groupe de contenu est englobé dans une `div`, le `tablist` possède un attribut `aria-label` qui le décrit pour les technologies d'assistance. Chaque `tab` est un bouton avec les attributs mentionnés précédemment. Le premier onglet possède à la fois `tabindex="0"` et `aria-selected="true"`. Ces deux attributs doivent toujours être coordonnés ainsi&nbsp;: lorsqu'un autre onglet est sélectionné, il a alors `tabindex="0"` et `aria-selected="true"`. Tous les onglets non sélectionnés doivent avoir `aria-selected="false"` et `tabindex="-1"`.
 
-Tous les éléments `tabpanel` ont `tabindex="0"` pour être accessibles à la tabulation, et tous sauf celui actuellement actif ont l'attribut `hidden`. L'attribut `hidden` sera retiré lorsqu'un `tabpanel` devient visible via JavaScript. Un style de base est appliqué pour restyler les boutons et modifier le [`z-index`](/fr/docs/Web/CSS/z-index) des éléments `tab` afin de donner l'illusion qu'ils sont connectés au `tabpanel` pour les éléments actifs, et que les éléments inactifs sont derrière le `tabpanel` actif.
+Tous les éléments `tabpanel` ont `tabindex="0"` pour être accessibles à la tabulation, et tous sauf celui actuellement actif ont l'attribut `hidden`. L'attribut `hidden` est retiré lorsqu'un `tabpanel` devient visible avec JavaScript. Un style de base est appliqué pour restyler les boutons et modifier le [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index) des éléments `tab` afin de donner l'illusion qu'ils sont connectés au `tabpanel` pour les éléments actifs, et que les éléments inactifs sont derrière le `tabpanel` actif.
 
 ```html
 <div class="tabs">
@@ -153,9 +153,9 @@ Tous les éléments `tabpanel` ont `tabindex="0"` pour être accessibles à la t
 
 Il y a deux choses à faire en JavaScript&nbsp;: il faut changer la sélection et l'index de tabulation des éléments `tab` avec les flèches droite et gauche, et il faut changer l'onglet et le `tabpanel` actif lorsqu'on clique sur un onglet.
 
-Pour la première, on écoute l'événement [`keydown`](/fr/docs/Web/API/Element/keydown_event) sur le `tablist`. Si la [`key`](/fr/docs/Web/API/KeyboardEvent/key) de l'événement est `ArrowRight` ou `ArrowLeft`, on réagit à l'événement. On commence par définir le `tabindex` de l'onglet courant à -1, le rendant non accessible à la tabulation. Si la flèche droite est pressée, on incrémente le compteur de sélection d'onglet. Si le compteur dépasse le nombre d'onglets, on revient au premier onglet en mettant le compteur à 0. Si la flèche gauche est pressée, on décrémente le compteur, et s'il devient inférieur à 0, on le met au nombre d'onglets moins un (pour aller au dernier élément). Enfin, on place la sélection sur l'onglet dont l'index correspond au compteur, et on définit son `tabindex` à 0 pour le rendre accessible à la tabulation.
+Pour la première, on écoute l'évènement [`keydown`](/fr/docs/Web/API/Element/keydown_event) sur le `tablist`. Si la [`key`](/fr/docs/Web/API/KeyboardEvent/key) de l'évènement est `ArrowRight` ou `ArrowLeft`, on réagit à l'évènement. On commence par définir le `tabindex` de l'onglet courant à -1, le rendant non accessible à la tabulation. Si la flèche droite est pressée, on incrémente le compteur de sélection d'onglet. Si le compteur dépasse le nombre d'onglets, on revient au premier onglet en mettant le compteur à 0. Si la flèche gauche est pressée, on décrémente le compteur, et s'il devient inférieur à 0, on le met au nombre d'onglets moins un (pour aller au dernier élément). Enfin, on place la sélection sur l'onglet dont l'index correspond au compteur, et on définit son `tabindex` à 0 pour le rendre accessible à la tabulation.
 
-Pour gérer le changement d'onglet et de `tabpanel` actif, on utilise une fonction qui prend l'événement, récupère l'élément déclencheur, son parent et son grand-parent. On trouve tous les onglets avec `aria-selected="true"` dans le parent et on les passe à `false`, puis on met l'onglet déclencheur à `aria-selected="true"`. Ensuite, on trouve tous les éléments `tabpanel` dans le grand-parent, on les rend tous cachés, et enfin on sélectionne l'élément dont l'`id` correspond à l'attribut `aria-controls` de l'onglet déclencheur et on retire l'attribut `hidden` pour le rendre visible.
+Pour gérer le changement d'onglet et de `tabpanel` actif, on utilise une fonction qui prend l'évènement, récupère l'élément déclencheur, son parent et son grand-parent. On trouve tous les onglets avec `aria-selected="true"` dans le parent et on les passe à `false`, puis on met l'onglet déclencheur à `aria-selected="true"`. Ensuite, on trouve tous les éléments `tabpanel` dans le grand-parent, on les rend tous cachés, et enfin on sélectionne l'élément dont l'`id` correspond à l'attribut `aria-controls` de l'onglet déclencheur et on retire l'attribut `hidden` pour le rendre visible.
 
 ```js
 // Ne gérer qu'un seul tablist : si vous avez plusieurs listes d'onglets
@@ -163,7 +163,7 @@ Pour gérer le changement d'onglet et de `tabpanel` actif, on utilise une foncti
 const tabList = document.querySelector('[role="tablist"]');
 const tabs = tabList.querySelectorAll(':scope > [role="tab"]');
 
-// Ajouter un gestionnaire d'événement click à chaque onglet
+// Ajouter un gestionnaire d'évènement click à chaque onglet
 tabs.forEach((tab) => {
   tab.addEventListener("click", changeTabs);
 });
@@ -220,15 +220,15 @@ function changeTabs(e) {
 }
 ```
 
-{{EmbedLiveSample("exemple", 600, 130)}}
+{{EmbedLiveSample("Exemples", 600, 130)}}
 
 ## Bonnes pratiques
 
-Il est recommandé d'utiliser un élément {{HTMLElement('button')}} avec le rôle `tab` pour bénéficier de ses fonctionnalités natives et accessibles, plutôt que d'avoir à les ajouter soi‑même. Pour contrôler la fonctionnalité de la touche Tab pour les éléments avec le rôle `tab`, il est recommandé de définir tous les éléments non actifs sur `tabindex="-1"`, et de définir l'élément actif sur `tabindex="0"`.
+Il est recommandé d'utiliser un élément {{HTMLElement("button")}} avec le rôle `tab` pour bénéficier de ses fonctionnalités natives et accessibles, plutôt que d'avoir à les ajouter soi‑même. Pour contrôler la fonctionnalité de la touche Tab pour les éléments avec le rôle `tab`, il est recommandé de définir tous les éléments non actifs sur `tabindex="-1"`, et de définir l'élément actif sur `tabindex="0"`.
 
 ## Ordre de priorité
 
-Quelles sont les propriétés associées, et dans quel ordre cet attribut ou cette propriété sera lue, quelle propriété aura priorité sur celle‑ci, et quelle propriété sera écrasée.
+Quelles sont les propriétés associées, et dans quel ordre cet attribut ou cette propriété est lue, quelle propriété a priorité sur celle‑ci, et quelle propriété est écrasée.
 
 ## Spécifications
 
@@ -236,6 +236,6 @@ Quelles sont les propriétés associées, et dans quel ordre cet attribut ou cet
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('button')}}
-- [KeyboardEvent.key](/fr/docs/Web/API/KeyboardEvent/key)
+- L'élément HTML {{HTMLElement("button")}}
+- La propriété [`KeyboardEvent.key`](/fr/docs/Web/API/KeyboardEvent/key)
 - [ARIA&nbsp;: rôle `tabpanel`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role)

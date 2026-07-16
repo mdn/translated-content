@@ -2,10 +2,8 @@
 title: 独自の関数を作る
 slug: Learn_web_development/Core/Scripting/Build_your_own_function
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 30cb9ca54d74a63bd95e0e0f5281e9ade578c044
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}
 
@@ -31,7 +29,7 @@ l10n:
   </tbody>
 </table>
 
-## アクティブラーニング: 関数を作ってみよう
+## 関数を作ってみよう
 
 これから作るカスタム関数は `displayMessage()` と呼ばれます。この関数はウェブページにカスタムメッセージボックスを表示し、ブラウザー内蔵の [alert()](/ja/docs/Web/API/Window/alert) 関数をカスタマイズして置き換える働きをします。これは以前にも見たことがありますが、記憶を呼び起こしましょう。ブラウザーの JavaScript コンソールで、好きなページに以下を入力してください。
 
@@ -56,9 +54,9 @@ alert("これはメッセージです");
 1. [function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html) ファイルにアクセスして、ローカルコピーを作成するところから始めます。HTML は単純です。 body にはボタン一つしかありません。特製メッセージボックス用の基本的な CSS スタイルと、JavaScript を追加していく用の空の {{htmlelement("script")}} 要素が含まれています。
 2. 次に、`<script>` 要素の中に以下を追加して下さい。
 
-   ```js-nolint
+   ```js
    function displayMessage() {
-     ...
+     // …
    }
    ```
 
@@ -81,9 +79,7 @@ alert("これはメッセージです");
    closeBtn.textContent = "x";
    panel.appendChild(closeBtn);
 
-   closeBtn.addEventListener("click", () =>
-     panel.parentNode.removeChild(panel),
-   );
+   closeBtn.addEventListener("click", () => body.removeChild(panel));
    ```
 
 読むとかなりのコード量になるので、少しずつ説明していきます。
@@ -120,10 +116,10 @@ panel.appendChild(closeBtn);
 
 最後に、 {{domxref("EventTarget/addEventListener", "addEventListener()")}} を呼び出して、ユーザーが「閉じる」ボタンをクリックしたときに呼ばれる関数を追加します。このコードは、メッセージボックスを閉じるために、ページからパネル全体を削除します。
 
-簡単に説明すると、 `addEventListener()` メソッドはボタン（または実際にはページ上の任意の要素）で使用でき、関数とイベントの名前を渡すことができます。この場合、イベントの名前は `click` なので、ユーザーがボタンをクリックしたときに関数が実行されます。イベントについては[イベントの記事](/ja/docs/Learn_web_development/Core/Scripting/Events)の記事で、もっと詳しく学びます。関数内の行では、 {{domxref("Node.removeChild()")}} DOM API を使用して HTML 要素の特定の子要素（この場合は `<div>` パネル）を削除することを指定します。
+簡単に言えば、`addEventListener()` メソッドはページ上のどの要素に対しても呼び出すことができ、通常は 2 つの引数（イベント名と、イベントが発生した際に実行する関数）が渡されます。この場合、イベント名は `click` であり、ユーザーがボタンをクリックすると、その関数が実行されることを意味します。イベントについては[イベントの記事](/ja/docs/Learn_web_development/Core/Scripting/Events)の記事で、もっと詳しく学びます。関数内の行では、 {{domxref("Node.removeChild()", "removeChild()")}} メソッドを使用して `<body>` 要素の特定の子要素（この場合は `<div>` パネル）を削除することを指定します。
 
 ```js
-closeBtn.addEventListener("click", () => panel.parentNode.removeChild(panel));
+closeBtn.addEventListener("click", () => body.removeChild(panel));
 ```
 
 基本的には、このコードブロック全体が HTML のブロックを生成してページに挿入しています。
@@ -151,18 +147,19 @@ closeBtn.addEventListener("click", () => panel.parentNode.removeChild(panel));
 
 2. ブラウザーの開発者ツールで例のページを開き、 JavaScript コンソールに移動してその行をもう一度入力すると、また表示されます。楽しいですね。いつでも呼び出せる再利用可能な関数ができました。
 
-   しかし、おそらくユーザーやシステムのアクションに応じて表示されるようにしたいでしょう。実際のアプリケーションでは、このようなメッセージボックスは、新しいデータが利用可能になったとき、エラーが発生したとき、ユーザーが自分のプロフィールを削除しようとしたとき（「本当に実行しますか？」）、ユーザーが新しい連絡先を追加して操作が正常に完了したときなどに呼び出されるでしょう。
+ただし、おそらくは、ユーザーやシステムの操作に応じてメッセージボックスが表示されるようにしたいでしょう。実際のアプリケーションでは、このようなメッセージボックスは、新しいデータが利用可能になったとき、エラーが発生したとき、ユーザーが自分のプロフィールを削除しようとしたとき（「本当に実行しますか？」）、ユーザーが新しい連絡先を追加して操作が正常に完了したときなどに呼び出されるでしょう。
 
-   このデモでは、ユーザーがボタンをクリックするとメッセージボックスが表示されます。
+このデモでは、ユーザーがボタンをクリックしたときにメッセージボックスを表示させます。
+これを動作させるには、以下の手順に従ってください。
 
-3. 追加した前の行を削除します。
-4. 次に、ボタンを選択し、そのボタンへの参照を定数に格納します。関数定義の上のコードに次の行を追加します。
+1. 追加した前の行 (`displayMessage();`) を削除します。
+2. `<button>` 要素を選択し、そのボタンへの参照を定数に格納します。関数定義の上のコードに次の行を追加します。
 
    ```js
    const btn = document.querySelector("button");
    ```
 
-5. 最後に、前の行の下に次の行を追加します。
+3. ボタンのクリックを検知して関数を呼び出すイベントリスナーを作成します。`const btn =` の行の後に、次の行を追加してください。
 
    ```js
    btn.addEventListener("click", displayMessage);
@@ -170,17 +167,20 @@ closeBtn.addEventListener("click", () => panel.parentNode.removeChild(panel));
 
    closeBtn のクリックイベントハンドラーと同じように、ここではボタンがクリックされたことに応答してコードを呼び出しています。しかし、この場合、コードを含む無名関数を呼び出すのではなく、名前を指定して `displayMessage()` 関数を呼び出しています。
 
-6. 保存して再表示してみてください。ボタンをクリックするとメッセージボックスが表示されるはずです。
+4. 最後に、保存して再表示してみてください。ボタンをクリックするとメッセージボックスが表示されるはずです。
 
 なぜ関数名の後に括弧を付けないのか不思議に思うかもしれません。これは、関数をすぐに呼び出したくないからです。ボタンがクリックされた後に呼び出すのです。この行を次のように変更してみてください。
 
-```js
+```js example-bad
 btn.addEventListener("click", displayMessage());
 ```
 
 そして、保存して再読み込みすると、ボタンがクリックされなくてもメッセージボックスが表示されることがわかります！このコンテキストでの括弧は「関数呼び出し演算子」と呼ばれることもあります。括弧を使うのは、現在のスコープで関数をすぐに実行したいときだけです。同じ点で、無名関数の中のコードは、関数スコープの中にあるので、すぐに実行されるわけではありません。
 
 最後の実験を試した場合は、最後の変更を取り消してから実行してください。
+
+> [!NOTE]
+> 関数についての練習問題は、他にも Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> の演習 [Write your first function](https://scrimba.com/fullstack-path-c0fullstack/~04h?via=mdn) にもあります。
 
 ## 引数で関数を改善
 
@@ -237,7 +237,7 @@ btn.addEventListener("click", displayMessage());
 1. まず始めに、この実習に必要なアイコン（[warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) と [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)）を GitHub からダウンロードしてください。 HTML ファイルと同じ場所にある `icons` という新しいフォルダーに保存してください。
 
    > [!NOTE]
-   > [iconfinder.com](https://www.iconfinder.com/) にある warning と chat のアイコンは [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) によってデザインされたものです。ありがとう！（実際のアイコンのページは移動か削除されています。）
+   > この警告アイコンとチャットアイコンは、もともとiconfinder.comに掲載されていたもので、Nazarrudin Ansyari氏によってデザインされました。ありがとうございます！（実際のアイコンのページは、その後移動または削除されています。）
 
 2. 次に、 HTML ファイル内の CSS を探します。私たちは、アイコンの道を作るためにいくつかの変更を行います。まず `.msgBox` の幅を次のように更新します。
 
@@ -263,17 +263,17 @@ btn.addEventListener("click", displayMessage());
 
    ```js
    if (msgType === "warning") {
-     msg.style.backgroundImage = "url(icons/warning.png)";
+     msg.style.backgroundImage = 'url("icons/warning.png")';
      panel.style.backgroundColor = "red";
    } else if (msgType === "chat") {
-     msg.style.backgroundImage = "url(icons/chat.png)";
+     msg.style.backgroundImage = 'url("icons/chat.png")';
      panel.style.backgroundColor = "aqua";
    } else {
      msg.style.paddingLeft = "20px";
    }
    ```
 
-   ここで、 `msgType` 引数に `'warning'` を設定すると、警告アイコンが表示され、パネルの背景色は赤に設定されます。また、 `'chat'` に設定すると、チャットアイコンが表示され、パネルの背景色は水色に設定されます。もし `msgType` 引数がまったく設定されていない場合（または異なる値に設定されている場合）、コードの `else { }` の部分が有効になり、段落には既定のパディングが指定され、アイコンは表示されず、パネルの背景色も設定されません。これは `msgType` 引数が指定されなかった場合の既定の状態を提供するもので、引数が省略可能であることを意味しています。
+   ここで、 `msgType` 引数に `"warning"` を設定すると、警告アイコンが表示され、パネルの背景色は赤に設定されます。また、`"chat"` に設定すると、チャットアイコンが表示され、パネルの背景色は水色に設定されます。もし `msgType` 引数がまったく設定されていない場合（または異なる値に設定されている場合）、コードの `else { }` の部分が有効になり、段落には既定のパディングが指定され、アイコンは表示されず、パネルの背景色も設定されません。これは `msgType` 引数が指定されなかった場合の既定の状態を提供するもので、引数が省略可能であることを意味しています。
 
 5. 更新された関数をテストしましょう。この `displayMessage()` 呼び出しを更新してください。
 
@@ -292,10 +292,6 @@ btn.addEventListener("click", displayMessage());
 
 > [!NOTE]
 > サンプルをうまく動作させることができない場合は、コードを [GitHub の完成バージョン](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html)と比較して（[ライブで確認](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)してください）チェックしてください。もしくは私たちにヘルプを依頼してください。
-
-## スキルテスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions)を見てください。このテストは次の記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。
 
 ## まとめ
 

@@ -141,4 +141,4 @@ SVG 2 对此属性的定义进行了一些更改。特别是：`auto`、`before-
 
 ## 参见
 
-- [CSS 基线对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment#基线对齐)
+- [CSS 基线对齐](/zh-CN/docs/Web/CSS/Guides/Box_alignment#基线对齐)

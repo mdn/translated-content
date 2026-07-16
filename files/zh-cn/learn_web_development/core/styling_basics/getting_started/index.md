@@ -115,7 +115,7 @@ li {
 
 把上述代码加到你的 CSS 里面试一试！
 
-欢迎参阅 MDN 上的 `list-style-type` 属性，看看到底有哪些值被支持。 [`list-style-type`](/zh-CN/docs/Web/CSS/list-style-type) 页首提供互动性示例，你可以输入不同的值来瞅一瞅它们到底有什么用。关于每个值的详细描述都规规整整地列在下面。
+欢迎参阅 MDN 上的 `list-style-type` 属性，看看到底有哪些值被支持。 [`list-style-type`](/zh-CN/docs/Web/CSS/Reference/Properties/list-style-type) 页首提供互动性示例，你可以输入不同的值来瞅一瞅它们到底有什么用。关于每个值的详细描述都规规整整地列在下面。
 
 通过参阅上述页面，你会发现你不仅能移除项目符号——你甚至能改变它们。赶快试试 `square`，它能把默认的小黑球变成方框框。
 

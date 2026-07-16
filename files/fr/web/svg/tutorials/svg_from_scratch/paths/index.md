@@ -6,7 +6,7 @@ original_slug: Web/SVG/Tutorial/Paths
 
 {{SVGRef}}
 
-{{ PreviousNext("Web/SVG/Tutoriel/Formes_de_base", "Web/SVG/Tutoriel/Fills_and_Strokes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes") }}
 
 L'élément [`<path>`](/fr/docs/Web/SVG/Reference/Element/path) (_chemin_ en français) est le plus versatile des éléments de la bibliothèque SVG parmi les [formes basiques](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes). Vous pouvez l'utiliser pour créer des lignes, des courbes, des arcs et autres.
 
@@ -402,4 +402,4 @@ Comme les points de départ et d'arrivée de tout chemin parcourant un cercle so
 
 Vous pouvez trouver une démo interactive à l'adresse suivante, pour vous aider à comprendre les concepts derrière les arcs SVG: <https://codepen.io/lingtalfi/pen/yaLWJG> (testé avec Chrome et Firefox seulement, peut ne pas marcher avec votre navigateur).
 
-{{ PreviousNext("Web/SVG/Tutoriel/Formes_de_base", "Web/SVG/Tutoriel/Fills_and_Strokes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes") }}

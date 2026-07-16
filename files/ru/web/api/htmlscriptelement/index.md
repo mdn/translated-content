@@ -26,23 +26,23 @@ _Наследует свойства от своего родителя, {{domxr
   <tbody>
     <tr>
       <td><code id="type_property">type</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         Представляет тип MIME сценария. Он отражает атрибут
-        <a href="/ru/docs/Web/HTML/Element/script#type"><code>type</code></a>.
+        <a href="/ru/docs/Web/HTML/Reference/Elements/script#type"><code>type</code></a>.
       </td>
     </tr>
     <tr>
       <td><code id="src_property">src</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         Получает и отдаёт URL внешнего скрипта. Он отражает атрибут
-        <a href="/ru/docs/Web/HTML/Element/script#src"><code>src</code></a>.
+        <a href="/ru/docs/Web/HTML/Reference/Elements/script#src"><code>src</code></a>.
       </td>
     </tr>
     <tr>
       <td><code id="event_property">event</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         Старый, способ регистрации обработчиков событий на элементы в
         HTML-документе.
@@ -50,10 +50,10 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code id="charset_property">charset</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         Представляет кодировку символов внешнего скрипта. Он отражает атрибут
-        <a href="/ru/docs/Web/HTML/Element/script#charset"><code>charset</code></a>.
+        <a href="/ru/docs/Web/HTML/Reference/Elements/script#charset"><code>charset</code></a>.
       </td>
     </tr>
     <tr>
@@ -62,7 +62,7 @@ _Наследует свойства от своего родителя, {{domxr
       <td rowspan="2">
         <p>
           Атрибуты <code>async</code> и <code>defer</code>
-          <a href="/ru/docs/JavaScript/Reference/Global_Objects/Boolean"
+          <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean"
             >булевы</a
           >
           атрибуты, которые контролируют как скрипт должен выполняться.
@@ -80,7 +80,7 @@ _Наследует свойства от своего родителя, {{domxr
           <li>
             Если атрибут <code>async</code> отсутствует, но представлен атрибут
             <code>defer</code>, то скрипт будет выполняться когда
-            <a href="/ru/docs/Web/Events/DOMContentLoaded"
+            <a href="/ru/docs/Web/API/Document/DOMContentLoaded_event"
               >страница полностью загружена</a
             >.
           </li>
@@ -123,7 +123,7 @@ _Наследует свойства от своего родителя, {{domxr
           >
             XML</a
           >; правиле для метода
-          <a href="/ru/docs/DOM/document.write"
+          <a href="/ru/docs/Web/API/Document/write"
             ><code>document.write()</code></a
           >; обработке
           <a
@@ -142,10 +142,10 @@ _Наследует свойства от своего родителя, {{domxr
         <code id="crossOrigin_property">crossOrigin </code
         >{{experimental_inline}}
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
-        {{domxref("DOMString")}}, отражающий
-        <a href="/ru/docs/Web/HTML/CORS_settings_attributes"
+        {{jsxref("String")}}, отражающий
+        <a href="/ru/docs/Web/HTML/Reference/Attributes/crossorigin"
           >настройку CORS </a
         >для элементов скрипта. Для скриптов из других
         <a href="/ru/docs/Glossary/Origin">источников</a>, он контролирует,
@@ -154,26 +154,26 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code id="text_property">text</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           IDL атрибут <code>text</code> объединяет и возвращает содержимое всех
-          <a href="/ru/docs/DOM/Text"><code>Text</code> нод</a> внутри
+          <a href="/ru/docs/Web/API/Text"><code>Text</code> нод</a> внутри
           элемента {{HTMLElement("script")}} (игнорируя другие ноды,
           такие как комментарии) в древовидном порядке. При установке, он
           действует также, как и IDL атрибут
-          <a href="/ru/docs/DOM/Node.textContent"><code>textContent</code></a
+          <a href="/ru/docs/Web/API/Node/textContent"><code>textContent</code></a
           >.
         </p>
         <div class="note">
           <strong>Примечание:</strong> При вставке с использованием метода
-          <a href="/ru/docs/DOM/document.write"
+          <a href="/ru/docs/Web/API/Document/write"
             ><code>document.write()</code></a
           >, элементы {{HTMLElement("script")}} выполняются (обычно
           синхронно), когда при вставке используются
-          <a href="/ru/docs/DOM/element.innerHTML"><code>innerHTML</code></a>
+          <a href="/ru/docs/Web/API/Element/innerHTML"><code>innerHTML</code></a>
           или
-          <a href="/ru/docs/DOM/element.outerHTML"><code>outerHTML</code></a
+          <a href="/ru/docs/Web/API/Element/outerHTML"><code>outerHTML</code></a
           >, они вообще не выполняются.
         </div>
       </td>
@@ -193,10 +193,10 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code>referrerPolicy</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
-        {{domxref("DOMString")}}, который отражает HTML атрибут
-        <a href="/ru/docs/Web/HTML/Element/script#referrerpolicy"><code>referrerpolicy</code></a>
+        {{jsxref("String")}}, который отражает HTML атрибут
+        <a href="/ru/docs/Web/HTML/Reference/Elements/script#referrerpolicy"><code>referrerpolicy</code></a>
         указывающий, какой реферер использовать при извлечении скриптов и
         выборках, выполненных сценариев.
       </td>

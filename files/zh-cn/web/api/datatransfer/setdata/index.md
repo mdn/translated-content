@@ -1,17 +1,16 @@
 ---
-title: DataTransfer.setData()
+title: DataTransfer：setData() 方法
+short-title: setData()
 slug: Web/API/DataTransfer/setData
+l10n:
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DataTransfer.setData()`** 方法用来设置拖放操作的{{domxref("DataTransfer","drag data")}}到指定的数据和类型。
+**`DataTransfer.setData()`** 方法用来设置拖动操作的[拖动数据](/zh-CN/docs/Web/API/DataTransfer)为指定的数据和类型。如果给定类型的数据不存在，则将其添加到拖动数据存储的末尾，使得 {{domxref("DataTransfer.types","types")}} 列表中的最后一个项目将是新类型。如果给定类型的数据已经存在，则现有数据将在相同的位置被替换。即当替换相同类型的数据时，{{domxref("DataTransfer.types","types")}} 列表的顺序不会更改。
 
-如果给定类型的数据不存在，则将其添加到拖动数据存储的末尾，使得 {{domxref("DataTransfer.types","types")}} 列表中的最后一个项目将是新类型。
-
-如果给定类型的数据已经存在，现有数据将被替换为相同的位置。也就是说，替换相同类型的数据时 {{domxref("DataTransfer.types","types")}}列表的顺序不会更改。
-
-示例数据类型为："`text/plain`" 和 "`text/uri-list`".
+示例数据类型包括 `text/plain` 和 `text/uri-list`。
 
 ## 语法
 
@@ -21,89 +20,94 @@ setData(format, data)
 
 ### 参数
 
-- _format_
-  - : 一个{{domxref("DOMString")}} 表示要添加到 {{domxref("DataTransfer","drag object")}}的拖动数据的类型。
-- _data_
-  - : 一个 {{domxref("DOMString")}}表示要添加到 {{domxref("DataTransfer","drag object")}}的数据。
+- `format`
+  - : 表示要添加到 {{domxref("DataTransfer"}} 的拖动数据的类型。
+- `data`
+  - : 表示要添加到 {{domxref("DataTransfer")}} 的数据。
 
 ### 返回值
 
-无
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-此示例显示了使用 {{domxref("DataTransfer")}} 对象的 {{domxref("DataTransfer.getData","getData()")}}, {{domxref("DataTransfer.setData","setData()")}} }和{{domxref("DataTransfer.clearData","clearData()")}} 方法。
+在本示例中，我们可以将一个 {{HTMLElement("p")}} 元素拖动到目标 {{HTMLElement("div")}} 元素中。
+
+- 在 `dragstart` 处理器中，我们使用 `setData()` 将 `<p>` 元素的 `id` 添加到 {{domxref("DataTransfer")}} 对象中。
+
+- 在 `drop` 处理器中，我们检索 `id` 并使用它将相应的 `<p>` 元素移动到目标中。
+
+#### HTML
 
 ```html
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <title>DataTransfer.setData()/.getData()/.clearData()</title>
-    <style>
-      div {
-        margin: 0em;
-        padding: 2em;
-      }
-      #source {
-        color: blue;
-        border: 1px solid black;
-      }
-      #target {
-        border: 1px solid black;
-      }
-    </style>
-  </head>
-  <body>
-    <section>
-      <h1>
-        <code>DataTransfer.setData()</code> <br />
-        <code>DataTransfer.getData()</code> <br />
-        <code>DataTransfer.clearData()</code>
-      </h1>
-      <div>
-        <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
-          Select this element, drag it to the Drop Zone and then release the
-          selection to move the element.
-        </p>
-      </div>
-      <div
-        id="target"
-        ondrop="drop_handler(event);"
-        ondragover="dragover_handler(event);">
-        Drop Zone
-      </div>
-    </section>
-    <!-- js -->
-    <script>
-      function dragstart_handler(ev) {
-        console.log("dragStart");
-        // Change the source element's background color to signify drag has started
-        ev.currentTarget.style.border = "dashed";
-        // Set the drag's format and data. Use the event target's id for the data
-        ev.dataTransfer.setData("text/plain", ev.target.id);
-      }
+<div>
+  <p id="source" draggable="true">
+    选中该元素并将其拖动到可放置区域，然后释放选择以移动该元素。
+  </p>
+</div>
+<div id="target">可放置区域</div>
 
-      function dragover_handler(ev) {
-        console.log("dragOver");
-        // prevent Default event
-        ev.preventDefault();
-      }
-
-      function drop_handler(ev) {
-        console.log("Drop");
-        ev.preventDefault();
-        // Get the data, which is the id of the drop target
-        var data = ev.dataTransfer.getData("text");
-        // appendChild
-        ev.target.appendChild(document.getElementById(data));
-        // Clear the drag data cache (for all formats/types)
-        ev.dataTransfer.clearData();
-      }
-    </script>
-  </body>
-</html>
+<button id="reset">重置示例</button>
 ```
+
+#### CSS
+
+```css
+div {
+  margin: 0.5em 0;
+  padding: 2em;
+}
+
+#target,
+#source {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+.dragging {
+  background-color: pink;
+}
+```
+
+#### JavaScript
+
+```js
+const source = document.querySelector("#source");
+source.addEventListener("dragstart", (ev) => {
+  console.log("dragStart");
+  // 更改源元素的背景颜色来表示已开始拖动
+  ev.currentTarget.classList.add("dragging");
+  // 清除拖动数据缓存（对于所有格式/类型）
+  ev.dataTransfer.clearData();
+  // 设置拖动的数据格式和数据
+  // 使用事件目标的 id 作为数据
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+});
+source.addEventListener("dragend", (ev) =>
+  ev.target.classList.remove("dragging"),
+);
+
+const target = document.querySelector("#target");
+target.addEventListener("dragover", (ev) => {
+  console.log("dragOver");
+  ev.preventDefault();
+});
+target.addEventListener("drop", (ev) => {
+  console.log("Drop");
+  ev.preventDefault();
+  // 获取数据，即源元素的 id
+  const data = ev.dataTransfer.getData("text");
+  const source = document.getElementById(data);
+  ev.target.appendChild(source);
+});
+
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => document.location.reload());
+```
+
+#### 结果
+
+{{EmbedLiveSample("拖动一个元素", "", 250)}}
 
 ## 规范
 
@@ -116,6 +120,5 @@ setData(format, data)
 ## 参见
 
 - [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [使用拖拽数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
-- [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)
+- [拖动操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [使用拖动数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

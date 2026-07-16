@@ -44,7 +44,7 @@ showOpenFilePicker(options)
 - `AbortError` {{domxref("DOMException")}}
   - : 如果用户在没有做出选择的情况下关闭提示，或者如果用户代理认为任何选定的文件过于敏感或危险，则抛出此异常。
 - `SecurityError` {{domxref("DOMException")}}
-  - : 如果调用被[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)阻止，或者不是通过用户交互（例如按下按钮）调用，则抛出该异常。
+  - : 如果调用被[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)阻止，或者不是通过用户交互（例如按下按钮）调用，则抛出该异常。
 - {{jsxref("TypeError")}}
   - : 如果无法处理接受类型，则抛出该异常，它可能会在出现以下情况时发生：
     - `types` 选项中任何项目的 `accept` 选项的任何键字符串都无法解析为有效的 MIME 类型。
@@ -53,7 +53,7 @@ showOpenFilePicker(options)
 
 ## 安全性
 
-[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)是必需的。用户必须与页面或 UI 元素进行交互才能使该特性正常运行。
+[瞬态用户激活](/zh-CN/docs/Web/Security/Defenses/User_activation)是必需的。用户必须与页面或 UI 元素进行交互才能使该特性正常运行。
 
 ## 示例
 

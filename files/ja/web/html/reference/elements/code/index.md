@@ -1,29 +1,26 @@
 ---
-title: "<code>: インラインコード要素"
+title: HTML `<code>` インラインコード要素
+short-title: <code>
 slug: Web/HTML/Reference/Elements/code
-original_slug: Web/HTML/Element/code
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<code>`** は [HTML](/ja/docs/Web/HTML) の要素で、コンピューターコードの短い断片の文字列であると識別できるような外見のコンテンツを表示します。既定では、中の文字列が{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントを使用して表示されます。
 
 {{InteractiveExample("HTML デモ: &lt;code&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
-  The <code>push()</code> method adds one or more elements to the end of an
-  array and returns the new length of the array.
+  <code>push()</code> メソッドは、配列の末尾に 1 つ以上の要素を追加し、配列の新しい長さを返します。
 </p>
 ```
 
 ```css interactive-example
 code {
-  background-color: #eee;
+  background-color: #eeeeee;
   border-radius: 3px;
-  font-family: courier, monospace;
+  font-family: "Courier New", monospace;
   padding: 0 3px;
 }
 ```
@@ -59,15 +56,15 @@ CSS のルールによって、`code` セレクターを定義して、ブラウ
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -75,7 +72,7 @@ CSS のルールによって、`code` セレクターを定義して、ブラウ
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -87,7 +84,7 @@ CSS のルールによって、`code` セレクターを定義して、ブラウ
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -95,8 +92,9 @@ CSS のルールによって、`code` セレクターを定義して、ブラウ
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">code</a
+          ></code
         >
       </td>
     </tr>

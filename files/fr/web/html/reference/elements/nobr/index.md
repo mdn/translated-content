@@ -1,18 +1,26 @@
 ---
-title: "<nobr> : l'élément de non-rupture de texte (obsolète)"
+title: "Élément HTML `<nobr>` : l'élément de non-rupture de texte"
+short-title: <nobr>
 slug: Web/HTML/Reference/Elements/nobr
-original_slug: Web/HTML/Element/nobr
+l10n:
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}{{non-standard_header}}
+{{Deprecated_Header}}
 
-L'élément HTML **`<nobr>`** évite qu'un texte soit coupé par un retour à la ligne automatique ; il est donc affiché sur une seule ligne. Il peut être alors nécessaire d'utiliser les barres de défilement pour lire le texte en intégralité.
+L'élément [HTML](/fr/docs/Web/HTML) **`<nobr>`** empêche le texte qu'il contient d'être automatiquement renvoyé à la ligne, ce qui peut obliger l'utilisateur·ice à faire défiler horizontalement pour voir toute la largeur du texte.
 
 > [!WARNING]
-> Cet élément n'est pas standard en HTML et ne doit donc pas être utilisé. **C'est la propriété CSS {{cssxref("white-space")}} doit être utilisée à la place**, de cette manière :
+> Bien que cet élément soit largement supporté, il n'a _jamais_ été standardisé en HTML, donc il ne faut pas l'utiliser. Utilisez plutôt la propriété CSS {{CSSxRef("white-space")}} ainsi&nbsp;:
 
 ```html
-<span style="white-space: nowrap">Un texte long sans retour à la ligne.</span>
+<span class="nobr">Un texte long sans retour à la ligne.</span>
+```
+
+```css
+.nobr {
+  white-space: nowrap;
+}
 ```
 
 ## Spécifications
@@ -25,5 +33,5 @@ L'élément HTML **`<nobr>`** évite qu'un texte soit coupé par un retour à la
 
 ## Voir aussi
 
-- {{cssxref("white-space")}}
-- {{cssxref("overflow")}}
+- La propriété CSS {{CSSxRef("white-space")}}
+- La propriété CSS {{CSSxRef("overflow")}}

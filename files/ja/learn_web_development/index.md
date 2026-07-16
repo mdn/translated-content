@@ -31,11 +31,11 @@ MDN の**ウェブ開発の学習**（または**学習**）へようこそ。�
 - 学校で働いている方
   - : 私たちのモジュールを指導のガイドとして使い、さらにアイディアをお探しの方は[教育者ページ](/ja/docs/Learn_web_development/Educators)を参照するか、または Scrimba の [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> に生徒を登録してください。
 
-## スキルテスト
+## 確認テスト
 
 このコースでは、このコースで学んだ内容を理解しているかどうかを評価するための記事がいくつか用意されています。記事には 2 種類あります。
 
-- 「スキルテスト」の記事は頻繁に現れ、HTML リンク、CSS ボックスモデル、JavaScript 関数など、単一の機能に関する知識を検査します。
+- 「確認テスト」の記事は頻繁に現れ、HTML リンク、CSS ボックスモデル、JavaScript 関数など、単一の機能に関する知識を検査します。
 - 「チャレンジ」はそれほど頻繁には現れませんが、複数の機能を組み合わせて、完全なウェブサイトやプログラムを作成するための能力を検査します。
 
 ほとんどの質問には、それぞれのタスクの開始コードを示す HTML/CSS/JavaScript コードブロックが含まれています。それぞれを解くには、コードブロックの **"Play"** ボタンを押して [MDN Playground](/en-US/play) でサンプルを開き、質問の指示に従ってコードを編集することをお勧めします。

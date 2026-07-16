@@ -27,7 +27,7 @@ SyntaxError: Illegal 'use strict' directive in function with non-simple paramete
 
 - {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
 - {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}
+- {{jsxref("Operators/Destructuring", "Destructuring parameters", "", 1)}}
 
 ECMAScript 仕様に則って、このような関数の先頭では `"use strict"` を使用できません。
 
@@ -100,11 +100,11 @@ var callback = (() => {
 })();
 ```
 
-## 関連項目
+## 関連情報
 
 - {{jsxref("Strict_mode", "Strict mode", "", 1)}}
 - {{jsxref("Statements/function", "function statement", "", 1)}}
 - {{jsxref("Operators/function", "function expression", "", 1)}}
 - {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
 - {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}
+- {{jsxref("Operators/Destructuring", "Destructuring parameters", "", 1)}}

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Typed OM")}}{{AvailableInWorkers}}
 
-**`CSSSkewX()`** 构造函数创建一个新的 {{domxref("CSSSkewX")}} 对象，用于表示 CSS 中单个 {{CSSXRef('transform')}} 属性的 [`skewX()`](/zh-CN/docs/Web/CSS/transform-function/skewX) 值。
+**`CSSSkewX()`** 构造函数创建一个新的 {{domxref("CSSSkewX")}} 对象，用于表示 CSS 中单个 {{CSSXRef('transform')}} 属性的 [`skewX()`](/zh-CN/docs/Web/CSS/Reference/Values/transform-function/skewX) 值。
 
 ## 语法
 

@@ -3,7 +3,7 @@ title: 문법과 자료형
 slug: Web/JavaScript/Guide/Grammar_and_types
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/소개", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 이 장은 JavaScript의 기본 문법과 변수 선언, 자료형 및 리터럴을 다룹니다.
 
@@ -353,8 +353,8 @@ y = 42 + " is the answer"; // "42 is the answer"
 
 숫자를 나타내는 값이 문자열로 메모리에 있는 경우, 변환을 위한 메서드가 있습니다.
 
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseInt()")}}
+- {{jsxref("parseFloat()")}}
 
 `parseInt`는 오직 정수만 반환하므로, 소수에서는 사용성이 떨어집니다.
 
@@ -793,4 +793,4 @@ and so is foo.`;
 
 다음 장에서는, 흐름 제어 구조와 에러 처리를 살펴 볼 것입니다.
 
-{{PreviousNext("Web/JavaScript/Guide/소개", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}

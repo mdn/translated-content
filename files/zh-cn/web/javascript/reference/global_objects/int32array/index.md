@@ -3,8 +3,6 @@ title: Int32Array
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array
 ---
 
-{{JSRef}}
-
 该 **`Int32Array`** 类型表示在平台顺序字节中一个双补码 32 位有符号的整型数组。如果需要控制字节顺序，请改用 {{jsxref("DataView")}}。此内容的初始化为 `0`。一旦创建，你可以使用对象的方法或者标准数组索引的语法 (即使用括号表示法)。
 
 ## 语法
@@ -24,7 +22,7 @@ new Int32Array(buffer [, byteOffset [, length]]);
   - : Returns a number value of the element size. `4` in the case of an `Int32Array`.
 - Int32Array.length
   - : Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.
-- {{jsxref("TypedArray.prototype", "Int32Array.prototype")}}
+- {{jsxref("TypedArray", "Int32Array.prototype")}}
   - : Prototype for the _TypedArray_ objects.
 
 ## 静态方法
@@ -89,7 +87,7 @@ var z = new Int32Array(buffer, 0, 4);
 
 ## 兼容性说明
 
-Starting with ECMAScript 2015 (ES6), `In32Array` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `Int32Array` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+Starting with ECMAScript 2015 (ES6), `In32Array` constructors require to be constructed with a {{jsxref("new")}} operator. Calling a `Int32Array` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
 var dv = Int32Array([1, 2, 3]);

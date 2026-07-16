@@ -1,11 +1,10 @@
 ---
 title: Iterator.prototype.some()
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/some
 l10n:
-  sourceCommit: 75c5e27d00ae191a3f549820c61d5bfff31428f8
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`some()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、 {{jsxref("Array.prototype.some()")}} と似ています。これは、イテレーターによって生成された要素の少なくとも 1 つが、指定された関数で実装されている検査に合格しているかどうかを判定します。論理値を返します。
 
@@ -75,6 +74,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 ## 関連情報
 
 - [`Iterator.prototype.some` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims による `Iterator.prototype.some` のポリフィル](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.every()")}}
 - {{jsxref("Iterator.prototype.find()")}}

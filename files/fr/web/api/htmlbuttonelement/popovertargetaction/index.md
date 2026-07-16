@@ -1,13 +1,14 @@
 ---
 title: "HTMLButtonElement : propriété popoverTargetAction"
+short-title: popoverTargetAction
 slug: Web/API/HTMLButtonElement/popoverTargetAction
 l10n:
-  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
+  sourceCommit: 847f754b374ed8928a270ab17672a1675802776f
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Popover API")}}
 
-La propriété **`popoverTargetAction`** de l'interface [`HTMLButtonElement`](/fr/docs/Web/API/HTMLButtonElement) permet de lire et de définir l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur un élément <i lang="en">popover</i> contrôlé par un bouton.
+La propriété **`popoverTargetAction`** de l'interface {{DOMxRef("HTMLButtonElement")}} permet d'obtenir et de définir l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur une fenêtre contextuelle (<i lang="en">popover</i> en anglais) contrôlée par un bouton.
 
 Elle reflète la valeur de l'attribut HTML [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/button#popovertargetaction).
 
@@ -16,26 +17,29 @@ Elle reflète la valeur de l'attribut HTML [`popovertargetaction`](/fr/docs/Web/
 Une valeur énumérée. Les valeurs possibles sont&nbsp;:
 
 - `"hide"`
-  - : Le bouton masquera un <i lang="en">popover</i> affiché. Si vous essayez de masquer un <i lang="en">popover</i> déjà masqué, aucune action ne sera effectuée.
+  - : Le bouton masquera une fenêtre contextuelle (<i lang="en">popover</i> en anglais) affichée. Si vous essayez de masquer une fenêtre contextuelle déjà masquée, aucune action ne sera effectuée.
 - `"show"`
-  - : Le bouton affichera un <i lang="en">popover</i> masqué. Si vous essayez d'afficher un <i lang="en">popover</i> déjà affiché, aucune action ne sera effectuée.
+  - : Le bouton affichera une fenêtre contextuelle (<i lang="en">popover</i> en anglais) masquée. Si vous essayez d'afficher une fenêtre contextuelle déjà affichée, aucune action ne sera effectuée.
 - `"toggle"`
-  - : Le bouton basculera un <i lang="en">popover</i> entre les états visible et masqué. Si le <i lang="en">popover</i> est masqué, il sera affiché&nbsp;; si le <i lang="en">popover</i> est affiché, il sera masqué. Si `popoverTargetAction` n'est pas défini, `"toggle"` est l'action par défaut qui sera effectuée par le bouton de contrôle.
+  - : Le bouton basculera une fenêtre contextuelle (<i lang="en">popover</i> en anglais) entre affichée et masquée. Si la fenêtre contextuelle est masquée, elle sera affichée&nbsp;; si elle est affichée, elle sera masquée. Si `popoverTargetAction` n'est pas défini, `"toggle"` est l'action par défaut qui sera effectuée par le bouton de contrôle.
 
 ## Exemples
 
-### L'action `toggle` avec un <i lang="en">popover</i> automatique
+### L'action `toggle` avec une fenêtre contextuelle automatique
 
-Cet exemple montre l'utilisation de base de l'API Popover avec la valeur `toggle` définie pour la propriété `popoverTargetAction`. L'attribut `popover` est défini sur [`"auto"`](/fr/docs/Web/API/Popover_API/Using#l_état_automatique_et_la_fermeture_légère), de sorte que le popover peut être fermé («&nbsp;<i lang="en">light-dismissed</i>&nbsp;») en cliquant en dehors de la zone du <i lang="en">popover</i>.
+Cet exemple montre l'utilisation basique de l'API des fenêtres contextuelles (<i lang="en">popover</i> en anglais) avec la valeur `"toggle"` définie pour la propriété `popoverTargetAction`.
+L'attribut `popover` est défini sur [`"auto"`](/fr/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss), donc la fenêtre contextuelle peut être fermée («&nbsp;<i lang="en">light-dismissed</i>&nbsp;») en cliquant en dehors de la zone de la fenêtre contextuelle.
 
-Tout d'abord, nous définissons un élément HTML `<button>` que nous utiliserons pour afficher et masquer le <i lang="en">popover</i>, et un `<div>` qui sera le <i lang="en">popover</i>. Dans ce cas, nous ne définissons pas l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/button#l_attribut_popovertargetaction) sur le `<button>` ou l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) sur le `<div>`, car nous le ferons de manière programmatique.
+On définit d'abord un élément HTML `<button>` qui servira à afficher et masquer la fenêtre contextuelle, et un `<div>` qui sera la fenêtre contextuelle.
+Dans ce cas, on ne définit pas l'attribut HTML [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/button#popovertargetaction) sur le `<button>` ni l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) sur le `<div>`, car cela sera fait par programmation.
 
 ```html
-<button id="toggleBtn">Afficher/masquer le popover</button>
-<div id="monpopover">Ceci est le contenu du popover !</div>
+<button id="toggleBtn">Afficher/masquer la fenêtre</button>
+<div id="monpopover">Ceci est le contenu&nbsp;!</div>
 ```
 
-Le code JavaScript récupère d'abord une référence vers les éléments `<div>` et `<button>`. Il définit ensuite une fonction pour vérifier la prise en charge du <i lang="en">popover</i>.
+Le code JavaScript commence par récupérer une référence vers les éléments `<div>` et `<button>`.
+Il définit ensuite une fonction pour vérifier la prise en charge de l'API des fenêtres contextuelles.
 
 ```js
 const popover = document.getElementById("monpopover");
@@ -47,16 +51,18 @@ function supportsPopover() {
 }
 ```
 
-Si l'API Popover est prise en charge, le code définit l'attribut `popover` de l'élément `<div>` sur `"auto"` et en fait la cible du <i lang="en">popover</i> du bouton de basculement. Nous définissons ensuite la `popoverTargetAction` du `<button>` sur `"toggle"`. Si l'API Popover n'est pas prise en charge, nous changeons le contenu textuel de l'élément `<div>` pour indiquer cela, et masquons le bouton de basculement.
+Si l'API des fenêtres contextuelles est prise en charge, le code définit l'attribut `popover` de l'élément `<div>` à `"auto"` et fait de ce `<div>` la cible du bouton de bascule.
+On définit ensuite la propriété `popoverTargetAction` du `<button>` à `"toggle"`.
+Si l'API des fenêtres contextuelles n'est pas prise en charge, on modifie le texte du `<div>` pour l'indiquer et on masque le bouton de bascule.
 
 ```js
 if (supportsPopover()) {
-  // Définit l'élément <div> comme étant un popover automatique
+  // Définit l'élément <div> comme étant une fenêtre contextuelle automatique
   popover.popover = "auto";
-  // Définit le bouton comme étant le contrôle du popover
+  // Définit le bouton comme étant le contrôle de la fenêtre contextuelle
   toggleBtn.popoverTargetElement = popover;
 
-  // Définit que le bouton peut afficher/masquer le popover
+  // Définit que le bouton peut afficher/masquer la fenêtre contextuelle
   toggleBtn.popoverTargetAction = "toggle";
 } else {
   popover.textContent = "L'API Popover n'est pas prise en charge.";
@@ -65,22 +71,24 @@ if (supportsPopover()) {
 ```
 
 > [!NOTE]
-> Un élément <i lang="en">popover</i> est masqué par défaut, mais si l'API n'est pas prise en charge, il s'affichera de façon classique.
+> Un élément fenêtre contextuelle (<i lang="en">popover</i> en anglais) est masqué par défaut, mais si l'API n'est pas prise en charge, votre élément s'affichera «&nbsp;comme d'habitude&nbsp;».
 
-Vous pouvez essayer l'exemple ci-après. Affichez et masquez le <i lang="en">popover</i> en activant le bouton. Le <i lang="en">popover</i> `"auto"` peut également être fermé facilement («&nbsp;<i lang="en">light-dismissed</i>&nbsp;») en cliquant en dehors des limites du <i lang="en">popover</i>.
+Vous pouvez essayer l'exemple ci-dessous.
+Affichez et masquez la fenêtre contextuelle en cliquant sur le bouton.
+La fenêtre contextuelle `"auto"` peut aussi être «&nbsp;<i lang="en">light-dismissed</i>&nbsp;» en cliquant en dehors du texte de la fenêtre contextuelle.
 
-{{EmbedLiveSample("", "100%")}}
+{{EmbedLiveSample("L'action `toggle` avec une fenêtre contextuelle automatique", "100%")}}
 
-### L'action `show`/`hide` avec un <i lang="en">popover</i> manuel
+### L'action `show`/`hide` avec une fenêtre contextuelle manuelle
 
 Cet exemple montre comment utiliser les valeurs `"show"` et `"hide"` de l'attribut `popoverTargetAction`.
 
-Le code est quasiment identique à l'exemple précédent, sauf qu'il y a deux `<button>` et que le <i lang="en">popover</i> est défini avec la valeur [`"manual"`](/fr/docs/Web/API/Popover_API/Using#l_état_manuel). Un popover manuel doit être fermé explicitement et ne peut pas être fermé facilement par un clic hors du <i lang="en">popover</i>.
+Le code est quasiment identique à l'exemple précédent, sauf qu'il y a deux `<button>` et que le <i lang="en">popover</i> est défini avec la valeur [`"manual"`](/fr/docs/Web/API/Popover_API/Using#l_état_manuel). Une fenêtre contextuelle manuelle doit être fermée explicitement et ne peut pas être fermée facilement par un clic hors de la fenêtre contextuelle.
 
 ```html
-<button id="showBtn">Afficher le popover</button>
-<button id="hideBtn">Masquer le popover</button>
-<div id="monpopover">Ceci est le contenu du popover !</div>
+<button id="showBtn">Afficher la fenêtre</button>
+<button id="hideBtn">Masquer la fenêtre</button>
+<div id="monpopover">Ceci est le contenu de la fenêtre&nbsp;!</div>
 ```
 
 ```js
@@ -95,10 +103,10 @@ const hideBtn = document.getElementById("hideBtn");
 const popoverSupported = supportsPopover();
 
 if (supportsPopover()) {
-  // Définit l'élément <div> comme étant un popover manuel
+  // Définit l'élément <div> comme étant une fenêtre contextuelle manuelle
   popover.popover = "manual";
 
-  // Définit les boutons comme étant les contrôles du popover
+  // Définit les boutons comme étant les contrôles de la fenêtre contextuelle
   showBtn.popoverTargetElement = popover;
   hideBtn.popoverTargetElement = popover;
 
@@ -112,9 +120,9 @@ if (supportsPopover()) {
 }
 ```
 
-Le popover peut être affiché en cliquant sur le bouton «&nbsp;Afficher le popover&nbsp;» et masqué en cliquant sur le bouton «&nbsp;Masquer le popover&nbsp;».
+La fenêtre contextuelle peut être affichée en cliquant sur le bouton «&nbsp;Afficher la fenêtre&nbsp;» et masquée en cliquant sur le bouton «&nbsp;Masquer la fenêtre&nbsp;».
 
-{{EmbedLiveSample("", "100%")}}
+{{EmbedLiveSample("L'action `show`/`hide` avec une fenêtre contextuelle manuelle", "100%")}}
 
 ## Spécifications
 

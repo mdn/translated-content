@@ -20,7 +20,7 @@ l10n:
 ## 参见
 
 - 维基百科的[空白字符](https://zh.wikipedia.org/wiki/空白字元)词条
-- [HTML、CSS、DOM 中如何处理空白字符](/zh-CN/docs/Web/CSS/CSS_text/Whitespace)
+- [HTML、CSS、DOM 中如何处理空白字符](/zh-CN/docs/Web/CSS/Guides/Text/Whitespace)
 - {{cssxref("white-space")}}
 - 规范
   - [ASCII 空白字符规范](https://infra.spec.whatwg.org/#ascii-whitespace)

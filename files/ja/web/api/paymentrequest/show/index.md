@@ -89,7 +89,7 @@ show(details)
 
 ## セキュリティ
 
-[単発のユーザー活性化](/ja/docs/Web/Security/User_activation)が必要です。動作するためには、ユーザーがページや UI 要素と対話する必要があります。
+[単発のユーザー活性化](/ja/docs/Web/Security/Defenses/User_activation)が必要です。動作するためには、ユーザーがページや UI 要素と対話する必要があります。
 
 ## 使用上の注意
 

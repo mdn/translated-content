@@ -25,4 +25,4 @@ CSS Counter Styles 모듈은 사용자 정의 카운터 스타일을 정의할 �
 
 ## 같이 보기
 
-- [CSS 카운터 사용하기](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+- [CSS 카운터 사용하기](/ko/docs/Web/CSS/Guides/Counter_styles/Using_counters)

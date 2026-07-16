@@ -5,7 +5,7 @@ original_slug: Learn/CSS/First_steps/How_CSS_works
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}
 
 Nós aprendemos o básico de CSS, porque e como escrever simples folhas de estílo. Nesta lição, nós daremos uma olhada em como um navegador transforma um CSS e HTML em uma página da web.
 
@@ -23,7 +23,7 @@ Nós aprendemos o básico de CSS, porque e como escrever simples folhas de estí
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >trabalhar com arquivos</a
         >, e o básico de HTML (estude
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
         >.)
       </td>
@@ -171,4 +171,4 @@ Iremos visualizar várias outras maneiras de auxiliar diferentes browsers em li�
 
 Você está quase encerrando este módulo; só temos mais uma tarefa para fazer. No próximo artigo, você utilizará seu novo conhecimento para reestilizar um exemplo, testando seus aprendizados de CSS no processo.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}

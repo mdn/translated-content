@@ -30,10 +30,10 @@ l10n:
 >
 > - **title**
 >   - : `title` の値はページの先頭に表示されます。タイトルの書式は _NameOfTheFunction()_ です。
->     例えば、 [`pow()`](/ja/docs/Web/CSS/pow) プロパティのタイトルは _pow()_ です。
+>     例えば、 [`pow()`](/ja/docs/Web/CSS/Reference/Values/pow) プロパティのタイトルは _pow()_ です。
 > - **slug**
 >   - : `slug` の値は`https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。 これは `Web/CSS/NameOfTheFunction` のような書式です。スラッグには括弧が付かないことに注意してください。
->     例えば、 [`pow()`](/ja/docs/Web/CSS/pow) 関数のスラッグは `Web/CSS/pow` です。
+>     例えば、 [`pow()`](/ja/docs/Web/CSS/Reference/Values/pow) 関数のスラッグは `Web/CSS/pow` です。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >

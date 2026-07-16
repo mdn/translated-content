@@ -2,14 +2,14 @@
 title: Libellés et noms textuels
 slug: Web/Accessibility/Guides/Understanding_WCAG/Text_labels_and_names
 l10n:
-  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
+  sourceCommit: fd60358f242f522accc5f548be62cd79610f8c0f
 ---
 
 Il existe de nombreuses situations où un contrôle, une boîte de dialogue ou une autre fonctionnalité d'un site web doit recevoir un nom ou un libellé descriptif afin que les utilisateur·ice·s de technologies d'assistance comprennent son but et sachent comment l'utiliser. Il existe plusieurs types de problèmes dans cette catégorie, selon le contexte, chacun ayant sa propre solution. Les différents problèmes et solutions sont présentés dans les sections ci-dessous.
 
 ## Utiliser l'attribut `alt` pour décrire les éléments `area` ayant l'attribut `href`
 
-Dans les images réactives (<i lang="en">image maps</i> en anglais), donnez à chaque élément HTML {{htmlelement("area")}} un attribut `alt` contenant un nom qui décrit la ressource vers laquelle la zone mène. Ne pas le faire rend l'image réactive difficile à utiliser pour les utilisateur·ice·s de technologies d'assistance&nbsp;: ils·elles ont besoin d'un texte alternatif pour comprendre le but de l'image.
+Dans les images réactives (<i lang="en">image maps</i> en anglais), donnez à chaque élément HTML {{HTMLElement("area")}} un attribut `alt` contenant un nom qui décrit la ressource vers laquelle la zone mène. Ne pas le faire rend l'image réactive difficile à utiliser pour les utilisateur·ice·s de technologies d'assistance&nbsp;: ils·elles ont besoin d'un texte alternatif pour comprendre le but de l'image.
 
 ### Exemples
 
@@ -35,7 +35,7 @@ Consultez la [page de référence de l'élément HTML `<area>`](/fr/docs/Web/HTM
 
 ### Voir aussi
 
-- L'élément HTML {{htmlelement("area")}}
+- L'élément HTML {{HTMLElement("area")}}
 - [H24&nbsp;: Fournir des alternatives textuelles pour les éléments area des images réactives <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/H24.html)
 
 ## Les boîtes de dialogue doivent être étiquetées
@@ -88,11 +88,11 @@ Si la boîte de dialogue n'a pas d'en-tête, vous pouvez utiliser `aria-label` p
 
 ## Les documents doivent avoir un titre
 
-Il est important que chaque document HTML inclue un élément {{htmlelement("title")}} qui décrit le but de la page. Une technique de navigation courante pour les utilisateur·ice·s de technologies d'assistance consiste à déduire le contenu d'une page en lisant son titre. Si le titre n'est pas disponible, ils·elles doivent parcourir la page pour en déterminer le contenu, ce qui peut être long et source de confusion.
+Il est important que chaque document HTML inclue un élément {{HTMLElement("title")}} qui décrit le but de la page. Une technique de navigation courante pour les utilisateur·ice·s de technologies d'assistance consiste à déduire le contenu d'une page en lisant son titre. Si le titre n'est pas disponible, ils·elles doivent parcourir la page pour en déterminer le contenu, ce qui peut être long et source de confusion.
 
 ### Exemples
 
-Le titre de l'article de référence sur l'élément {{htmlelement("title")}} est le suivant&nbsp;:
+Le titre de l'article de référence sur l'élément {{HTMLElement("title")}} est le suivant&nbsp;:
 
 ```html
 <title>
@@ -117,11 +117,11 @@ Pour aider l'utilisateur·ice, vous pouvez mettre à jour la valeur du titre de 
 
 ### Voir aussi
 
-- L'élément HTML {{htmlelement("title")}}
+- L'élément HTML {{HTMLElement("title")}}
 
 ## Le contenu embarqué doit être étiqueté
 
-Assurez-vous que les éléments qui intègrent du contenu possèdent un attribut [title](/fr/docs/Web/HTML/Reference/Global_attributes/title) qui décrit le contenu embarqué. Cela inclut les éléments {{htmlelement("embed")}} et {{htmlelement("object")}}, souvent utilisés pour du contenu graphique, tout comme l'élément {{HTMLelement("img")}}. Un titre descriptif aide les utilisateur·ice·s de technologies d'assistance à comprendre ce que l'élément affiche.
+Assurez-vous que les éléments qui intègrent du contenu possèdent un attribut [title](/fr/docs/Web/HTML/Reference/Global_attributes/title) qui décrit le contenu embarqué. Cela inclut les éléments {{HTMLElement("embed")}} et {{HTMLElement("object")}}, souvent utilisés pour du contenu graphique, tout comme l'élément {{HTMLElement("img")}}. Un titre descriptif aide les utilisateur·ice·s de technologies d'assistance à comprendre ce que l'élément affiche.
 
 ## Les figures avec légende optionnelle doivent être étiquetées
 
@@ -129,7 +129,7 @@ Pour une meilleure accessibilité, incluez un élément {{HTMLElement("figcaptio
 
 ### Exemple
 
-L'exemple suivant montre le code d'une figure avec une légende. L'attribut `alt` de {{htmlelement("img")}} décrit l'apparence de l'image&nbsp;; {{htmlelement("figcaption")}} la décrit d'un point de vue fonctionnel (ici, le nom latin de la fleur illustrée).
+L'exemple suivant montre le code d'une figure avec une légende. L'attribut `alt` de {{HTMLElement("img")}} décrit l'apparence de l'image&nbsp;; {{HTMLElement("figcaption")}} la décrit d'un point de vue fonctionnel (ici, le nom latin de la fleur illustrée).
 
 ```html
 <figure>
@@ -142,11 +142,11 @@ L'exemple suivant montre le code d'une figure avec une légende. L'attribut `alt
 
 ## Les éléments `fieldset` doivent être étiquetés
 
-Les éléments fieldset doivent avoir une description textuelle, comme les autres éléments de formulaire. Utilisez l'élément {{htmlelement("legend")}} pour décrire le but d'un fieldset.
+Les éléments fieldset doivent avoir une description textuelle, comme les autres éléments de formulaire. Utilisez l'élément {{HTMLElement("legend")}} pour décrire le but d'un fieldset.
 
 ## Utiliser une légende pour étiqueter un `fieldset`
 
-Lorsque vous regroupez un ensemble de champs de formulaire avec un élément {{htmlelement("fieldset")}}, incluez un élément {{htmlelement("legend")}} imbriqué à l'intérieur, contenant une description claire du groupe.
+Lorsque vous regroupez un ensemble de champs de formulaire avec un élément {{HTMLElement("fieldset")}}, incluez un élément {{HTMLElement("legend")}} imbriqué à l'intérieur, contenant une description claire du groupe.
 
 Les utilisateur·ice·s de technologies d'assistance trouvent cette description utile pour comprendre le but global du groupe. Sans la légende, ils·elles devraient parcourir chaque champ pour en déduire l'objectif, ce qui pourrait entraîner de la confusion.
 
@@ -173,14 +173,14 @@ Vous pouvez voir une version interactive de cet exemple sur la [page de référe
 
 ### Voir aussi
 
-- L'élément HTML {{htmlelement("fieldset")}}
-- L'élément HTML {{htmlelement("legend")}}
+- L'élément HTML {{HTMLElement("fieldset")}}
+- L'élément HTML {{HTMLElement("legend")}}
 
 ## Les éléments de formulaire doivent être étiquetés
 
-Tous les éléments d'un formulaire doivent avoir un {{htmlelement("label")}} qui identifie leur but. Cela s'applique à tous les types de {{htmlelement("input")}}, ainsi qu'aux éléments {{htmlelement("button")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, {{htmlelement("textarea")}}, {{htmlelement("progress")}} et {{htmlelement("meter")}}, ainsi qu'à tout élément avec le rôle ARIA [`switch`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role).
+Tous les éléments d'un formulaire doivent avoir un {{HTMLElement("label")}} qui identifie leur but. Cela s'applique à tous les types de {{HTMLElement("input")}}, ainsi qu'aux éléments {{HTMLElement("button")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}, ainsi qu'à tout élément avec le rôle ARIA [`switch`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role).
 
-L'élément de formulaire peut être placé à l'intérieur du {{htmlelement("label")}}, auquel cas l'association est évidente. Sinon, vous pouvez associer un {{htmlelement("label")}} à un élément de formulaire en spécifiant la valeur de l'attribut `id` de l'élément comme valeur de l'attribut `for` du label.
+L'élément de formulaire peut être placé à l'intérieur du {{HTMLElement("label")}}, auquel cas l'association est évidente. Sinon, vous pouvez associer un {{HTMLElement("label")}} à un élément de formulaire en spécifiant la valeur de l'attribut `id` de l'élément comme valeur de l'attribut `for` du label.
 
 ### Exemple
 
@@ -198,15 +198,15 @@ L'élément de formulaire peut être placé à l'intérieur du {{htmlelement("la
 
 ## Les éléments de formulaire doivent avoir un libellé textuel visible
 
-En plus d'avoir un élément HTML {{htmlelement("label")}} pour chaque élément de formulaire, ces libellés doivent être visibles, pas cachés. Les libellés visibles aident _tous_ les utilisateur·ice·s à comprendre le but d'un champ. Ne vous fiez pas au texte d'espace réservé (<i lang="en">placeholder</i> en anglais), car il disparaît dès que l'utilisateur·ice commence à saisir.
+En plus d'avoir un élément HTML {{HTMLElement("label")}} pour chaque élément de formulaire, ces libellés doivent être visibles, pas cachés. Les libellés visibles aident _tous_ les utilisateur·ice·s à comprendre le but d'un champ. Ne vous fiez pas au texte d'espace réservé (<i lang="en">placeholder</i> en anglais), car il disparaît dès que l'utilisateur·ice commence à saisir.
 
 ## Les éléments de type `frame` doivent être étiquetés
 
-Les éléments frame, qu'il s'agisse de {{htmlelement("iframe")}} ou de l'ancien {{htmlelement("frame")}}, doivent avoir un titre pour décrire leur contenu. Utilisez l'attribut `title` pour étiqueter un élément frame. Sans titre, les utilisateur·ice·s de technologies d'assistance doivent naviguer dans le cadre pour comprendre son contenu, ce qui peut être difficile et source de confusion.
+Les éléments frame, qu'il s'agisse de {{HTMLElement("iframe")}} ou de l'ancien {{HTMLElement("frame")}}, doivent avoir un titre pour décrire leur contenu. Utilisez l'attribut `title` pour étiqueter un élément frame. Sans titre, les utilisateur·ice·s de technologies d'assistance doivent naviguer dans le cadre pour comprendre son contenu, ce qui peut être difficile et source de confusion.
 
 L'élément {{HTMLElement('frame')}} ne fait plus partie de la spécification HTML. Son support pourrait être supprimé par les navigateurs à l'avenir. De plus, il est difficile pour les lecteurs d'écran de naviguer dans des pages utilisant des frames. Pour une meilleure accessibilité et maintenance, refondez toute page utilisant des frames pour utiliser du CSS à la place.
 
-Par bonne pratique, fournissez aussi un {{htmlelement("title")}} pour le document inclus dans le frame, avec un contenu identique à l'attribut `title` du frame (si le document vous appartient&nbsp;; sinon, essayez d'harmoniser les titres). Certains lecteurs d'écran remplacent le contenu de l'attribut `title` par celui du document inclus. Il est donc plus sûr et accessible de fournir le même titre aux deux endroits.
+Par bonne pratique, fournissez aussi un {{HTMLElement("title")}} pour le document inclus dans le frame, avec un contenu identique à l'attribut `title` du frame (si le document vous appartient&nbsp;; sinon, essayez d'harmoniser les titres). Certains lecteurs d'écran remplacent le contenu de l'attribut `title` par celui du document inclus. Il est donc plus sûr et accessible de fournir le même titre aux deux endroits.
 
 ### Exemple
 
@@ -231,13 +231,15 @@ Assurez-vous que vos titres contiennent du texte non vide et ne sont pas masqué
 
 ## Utiliser l'attribut `title` pour décrire le contenu d'un `<iframe>`
 
-Assurez-vous que les éléments HTML {{htmlelement("iframe")}} possèdent un attribut `title` décrivant le contenu du cadre. Sans titre, les utilisateur·ice·s de technologies d'assistance doivent naviguer dans le cadre pour comprendre son contenu, ce qui peut être difficile et source de confusion.
+Assurez-vous que les éléments HTML {{HTMLElement("iframe")}} possèdent un attribut `title` décrivant le contenu du cadre. Sans titre, les utilisateur·ice·s de technologies d'assistance doivent naviguer dans le cadre pour comprendre son contenu, ce qui peut être difficile et source de confusion.
 
-Par bonne pratique, fournissez aussi un {{htmlelement("title")}} pour le document inclus dans le cadre, avec un contenu identique à l'attribut `title` du cadre (si le document vous appartient&nbsp;; sinon, essayez d'harmoniser les titres). Certains lecteurs d'écran remplacent le contenu de l'attribut `title` par celui du document inclus. Il est donc plus sûr et accessible de fournir le même titre aux deux endroits.
+Par bonne pratique, fournissez aussi un {{HTMLElement("title")}} pour le document inclus dans le cadre, avec un contenu identique à l'attribut `title` du cadre (si le document vous appartient&nbsp;; sinon, essayez d'harmoniser les titres). Certains lecteurs d'écran remplacent le contenu de l'attribut `title` par celui du document inclus. Il est donc plus sûr et accessible de fournir le même titre aux deux endroits.
 
 ## Le contenu avec images doit être étiqueté
 
-Fournissez un texte descriptif pour toutes les images et éléments assimilés (c'est-à-dire non décoratifs). Cela inclut les images SVG, les éléments HTML {{htmlelement("img")}}, {{htmlelement("canvas")}}, {{htmlelement("map")}} et {{htmlelement("area")}}, ainsi que les éléments {{htmlelement("input")}} où `type=image` et {{htmlelement("object")}} dont le type commence par `image/`. La méthode habituelle consiste à utiliser l'attribut `alt`. Veillez à ce que la description reflète ce qui est montré par l'image.
+Fournissez un texte descriptif pour toutes les images et éléments assimilés (c'est-à-dire non décoratifs). Cela inclut les images SVG, les éléments HTML {{HTMLElement("img")}}, {{HTMLElement("canvas")}}, {{HTMLElement("map")}} et {{HTMLElement("area")}}, ainsi que les éléments {{HTMLElement("input")}} où `type=image` et {{HTMLElement("object")}} dont le type commence par `image/`. La méthode habituelle consiste à utiliser l'attribut `alt`, comme pour {{HTMLElement("canvas")}}, utilisez [`role="img"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) et [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) à la place. Veillez à ce que la description reflète ce qui est montré par l'image.
+
+Pour les attributs `alt` sur les images purement décoratives, une valeur vide peut être utilisée pour indiquer aux outils d'accessibilité que l'élément doit être ignoré.
 
 ### Exemple
 
@@ -249,11 +251,11 @@ Fournissez un texte descriptif pour toutes les images et éléments assimilés (
 
 ## Les éléments interactifs doivent être étiquetés
 
-Si un élément est destiné à l'interaction utilisateur, il doit avoir un libellé. Les éléments interactifs incluent les liens ({{htmlelement("a")}}), les éléments de formulaire, les boutons, et tout élément ayant un gestionnaire d'événements souris ou clavier. La façon d'étiqueter dépend du type&nbsp;: pour les champs de formulaire, utilisez un {{htmlelement("label")}}&nbsp;; pour les liens, boutons et éléments cliquables, le texte de l'élément sert généralement de libellé. Si aucune autre option n'est possible, utilisez l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
+Si un élément est destiné à l'interaction utilisateur, il doit avoir un libellé. Les éléments interactifs incluent les liens ({{HTMLElement("a")}}), les éléments de formulaire, les boutons, et tout élément ayant un gestionnaire d'événements souris ou clavier. La façon d'étiqueter dépend du type&nbsp;: pour les champs de formulaire, utilisez un {{HTMLElement("label")}}&nbsp;; pour les liens, boutons et éléments cliquables, le texte de l'élément sert généralement de libellé. Si aucune autre option n'est possible, utilisez l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
 ## Utiliser l'attribut `label` sur les éléments `optgroup`
 
-Dans un élément {{htmlelement("optgroup")}}, utilisez l'attribut `label` pour décrire le groupe afin que les technologies d'assistance puissent y accéder pour leurs utilisateur·ice·s.
+Dans un élément {{HTMLElement("optgroup")}}, utilisez l'attribut `label` pour décrire le groupe afin que les technologies d'assistance puissent y accéder pour leurs utilisateur·ice·s.
 
 ### Exemple
 

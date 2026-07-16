@@ -42,8 +42,8 @@ l10n:
 `aria-hidden="true"` は次のような場合には追加しないでください。
 
 - HTML の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性が存在する場合
-- この要素または要素の祖先が [`display: none`](/ja/docs/Web/CSS/display) により非表示になっている場合
-- この要素または要素の祖先が [`visibility: hidden`](/ja/docs/Web/CSS/visibility) により非表示になっている場合
+- この要素または要素の祖先が [`display: none`](/ja/docs/Web/CSS/Reference/Properties/display) により非表示になっている場合
+- この要素または要素の祖先が [`visibility: hidden`](/ja/docs/Web/CSS/Reference/Properties/visibility) により非表示になっている場合
 
 3 つのシナリオすべてにおいて、要素はすでにアクセシビリティツリーから除去されているため、属性を追加する必要はありません。 `display` や `visibility` で要素を視覚的に隠すと、画面や支援技術からコンテンツを隠すことができます。
 

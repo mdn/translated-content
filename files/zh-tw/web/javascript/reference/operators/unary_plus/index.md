@@ -2,7 +2,7 @@
 title: 一元正號（+）
 slug: Web/JavaScript/Reference/Operators/Unary_plus
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
 **一元正號**（**`+`**）運算子會放在運算元前面，並回傳其運算元，但如果運算元不是數字，則會嘗試[將其轉換為數字](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#數字強制轉換)。

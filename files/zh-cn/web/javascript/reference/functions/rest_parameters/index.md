@@ -1,11 +1,13 @@
 ---
 title: 剩余参数
 slug: Web/JavaScript/Reference/Functions/rest_parameters
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-**剩余参数**语法允许我们将一个不定数量的参数表示为一个数组。
+**剩余参数**语法允许函数将任意数量的参数作为数组接收，从而在 JavaScript 中实现了[可变参数函数](https://zh.wikipedia.org/wiki/可變參數函數)的表示方式。
 
-{{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}
+{{InteractiveExample("JavaScript 演示：剩余参数", "taller")}}
 
 ```js interactive-example
 function sum(...theArgs) {
@@ -17,130 +19,204 @@ function sum(...theArgs) {
 }
 
 console.log(sum(1, 2, 3));
-// Expected output: 6
+// 期望输出：6
 
 console.log(sum(1, 2, 3, 4));
-// Expected output: 10
+// 期望输出：10
 ```
 
 ## 语法
 
-```js
-function(a, b, ...theArgs) {
-  // ...
+```js-nolint
+function f(a, b, ...theArgs) {
+  // …
 }
 ```
+
+有一些额外的语法限制：
+
+- 一个函数定义只能包含一个剩余参数。
+- 剩余参数必须是函数定义的最后一个参数。
+- 剩余参数之后不允许出现[尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)。
+- 剩余参数不能有[默认值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)。
 
 ## 描述
 
-如果函数的最后一个命名参数以`...`为前缀，则它将成为一个由剩余参数组成的真数组，其中从`0`（包括）到`theArgs.length`（排除）的元素由传递给函数的实际参数提供。
-
-在上面的例子中，`theArgs`将收集该函数的第三个参数（因为第一个参数被映射到`a`，而第二个参数映射到`b`）和所有后续参数。
-
-### 剩余参数和 `arguments`对象的区别
-
-剩余参数和 [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)对象之间的区别主要有三个：
-
-- 剩余参数只包含那些没有对应形参的实参，而 `arguments` 对象包含了传给函数的所有实参。
-- `arguments`对象不是一个真正的数组，而剩余参数是真正的 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)实例，也就是说你能够在它上面直接使用所有的数组方法，比如 [`sort`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)，[`map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)，[`forEach`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)或[`pop`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)。
-- `arguments`对象还有一些附加的属性（如`callee`属性）。
-
-### 从 arguments 到数组
-
-引入了剩余参数来减少由参数引起的样板代码。
-
-```plain
-// Before rest parameters, "arguments" could be converted to a normal array using:
-
-function f(a, b) {
-
-  var normalArray = Array.prototype.slice.call(arguments);
-  // -- or --
-  var normalArray = [].slice.call(arguments);
-  // -- or --
-  var normalArray = Array.from(arguments);
-
-  var first = normalArray.shift(); // OK, gives the first argument
-  var first = arguments.shift(); // ERROR (arguments is not a normal array)
-
-}
-
-// Now we can easily gain access to a normal array using a rest parameter
-
-function f(...args) {
-  var normalArray = args;
-  var first = normalArray.shift(); // OK, gives the first argument
-}
-```
-
-### 解构剩余参数
-
-剩余参数可以被解构，这意味着他们的数据可以被解包到不同的变量中。请参阅[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
+函数定义的最后一个参数可添加前缀 `...`（三个 U+002E FULL STOP 字符），这将导致所有剩余（用户提供的）参数被放入一个 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 对象中。
 
 ```js
-function f(...[a, b, c]) {
-  return a + b + c;
+function myFun(a, b, ...manyMoreArgs) {
+  console.log("a", a);
+  console.log("b", b);
+  console.log("manyMoreArgs", manyMoreArgs);
 }
 
-f(1); // NaN (b and c are undefined)
-f(1, 2, 3); // 6
-f(1, 2, 3, 4); // 6 (the fourth parameter is not destructured)
+myFun("one", "two", "three", "four", "five", "six");
+
+// 控制台输出：
+// a, one
+// b, two
+// manyMoreArgs, ["three", "four", "five", "six"]
 ```
+
+剩余参数可以进行[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)，这允许你忽略某些参数位置。
+
+```js
+function ignoreFirst(...[, b, c]) {
+  return b + c;
+}
+```
+
+然而，以下写法将导致语法错误：
+
+```js-nolint example-bad
+function wrong1(...one, ...wrong) {}
+function wrong2(...wrong, arg2, arg3) {}
+function wrong3(...wrong,) {}
+function wrong4(...wrong = []) {}
+```
+
+剩余参数不会计入函数的 [`length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 属性。
+
+### 剩余参数和 `arguments` 对象的区别
+
+剩余参数和 {{jsxref("Functions/arguments", "arguments")}} 对象之间的区别主要有四个：
+
+- `arguments` 对象不是**真正的数组**，而剩余参数是 {{jsxref("Array")}} 实例，也就是说你能够在它上面直接使用所有的数组方法，比如 {{jsxref("Array/sort", "sort()")}}、{{jsxref("Array/map", "map()")}}、{{jsxref("Array/forEach", "forEach()")}} 或 {{jsxref("Array/pop", "pop()")}}。
+- `arguments` 对象还包含额外的（已弃用的）[`callee`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee) 属性。
+- 在非严格模式且参数简单的函数中，`arguments` 对象会[将索引值与参数值同步](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments#通过索引赋值)。当具名参数被重新赋值时，剩余参数数组的值永远不会更新。
+- 剩余参数将所有*额外*参数打包为单一数组，但不包含任何在 `...restParam` *之前*定义的具名参数。`arguments` 对象则包含所有参数（包括 `...restParam` 数组中的参数），这些参数被打包为类数组对象。
 
 ## 示例
 
-因为`theArgs`是个数组，所以你可以使用`length`属性得到剩余参数的个数：
+### 使用剩余参数
+
+在此示例中，第一个参数映射为 `a`，第二个映射为 `b`，因此这些命名参数可按常规方式使用。
+
+然而，第三个参数 `manyMoreArgs` 将是一个数组，其中包含第三、第四、第五、第六……直至第 n 个参数——具体数量取决于用户指定的参数个数。
+
+```js
+function myFun(a, b, ...manyMoreArgs) {
+  console.log("a", a);
+  console.log("b", b);
+  console.log("manyMoreArgs", manyMoreArgs);
+}
+
+myFun("one", "two", "three", "four", "five", "six");
+
+// a, "one"
+// b, "two"
+// manyMoreArgs, ["three", "four", "five", "six"] <-- 一个数组
+```
+
+如下所示，即使只有一个值，最后一个参数仍会被放入数组中。
+
+```js
+// 使用上述示例中同样的函数定义
+
+myFun("one", "two", "three");
+
+// a, "one"
+// b, "two"
+// manyMoreArgs, ["three"] <-- 具有一个值的数组
+```
+
+如下所示，即使没有提供第三个参数，`manyMoreArgs` 仍然是一个数组（尽管为空）。
+
+```js
+// 使用上述示例中同样的函数定义
+
+myFun("one", "two");
+
+// a, "one"
+// b, "two"
+// manyMoreArgs, [] <-- 还是一个数组
+```
+
+如下所示，只提供了一个参数，所以 `b` 为默认值 `undeifned`，但是 `manyMoreArgs` 仍然是一个空数组。
+
+```js
+// 使用上述示例中同样的函数定义
+
+myFun("one");
+
+// a, "one"
+// b, undefined
+// manyMoreArgs, [] <-- 还是一个数组
+```
+
+### argument 长度
+
+由于 `theArgs` 是数组，其元素数量可通过 {{jsxref("Array/length", "length")}} 属性获取。若函数的唯一参数为剩余参数，则 `restParams.length` 将等于 [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length)。
 
 ```js
 function fun1(...theArgs) {
-  alert(theArgs.length);
+  console.log(theArgs.length);
 }
 
-fun1(); // 弹出 "0", 因为 theArgs 没有元素
-fun1(5); // 弹出 "1", 因为 theArgs 只有一个元素
-fun1(5, 6, 7); // 弹出 "3", 因为 theArgs 有三个元素
+fun1(); // 0
+fun1(5); // 1
+fun1(5, 6, 7); // 3
 ```
 
-下例中，剩余参数包含了从第二个到最后的所有实参，然后用第一个实参依次乘以它们：
+### 普通参数与剩余参数结合使用
+
+在下一个示例中，使用剩余参数将第一个参数之后的所有参数收集到一个数组中。随后将数组中收集到的每个参数值与第一个参数相乘，并返回该数组：
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(function (element) {
-    return multiplier * element;
-  });
+  return theArgs.map((element) => multiplier * element);
 }
 
-var arr = multiply(2, 1, 2, 3);
-console.log(arr); // [2, 4, 6]
+const arr = multiply(2, 15, 25, 42);
+console.log(arr); // [30, 50, 84]
 ```
 
-下例演示了你可以在剩余参数上使用任意的数组方法，而`arguments`对象不可以：
+### 从 arguments 到数组
+
+{{jsxref("Array")}} 方法可以用于剩余参数，但不能用在 `arguments` 对象上：
 
 ```js
 function sortRestArgs(...theArgs) {
-  var sortedArgs = theArgs.sort();
+  const sortedArgs = theArgs.sort();
   return sortedArgs;
 }
 
-alert(sortRestArgs(5, 3, 7, 1)); // 弹出 1,3,5,7
+console.log(sortRestArgs(5, 3, 7, 1)); // 1, 3, 5, 7
 
 function sortArguments() {
-  var sortedArgs = arguments.sort();
-  return sortedArgs; // 不会执行到这里
+  const sortedArgs = arguments.sort();
+  return sortedArgs; // 永远不会返回
 }
 
-alert(sortArguments(5, 3, 7, 1)); // 抛出 TypeError 异常:arguments.sort is not a function
+console.log(sortArguments(5, 3, 7, 1));
+// 抛出 TypeError（arguments.sort is not a function）
 ```
 
-为了在`arguments`对象上使用`Array`方法，它必须首先被转换为一个真正的数组。
+剩余参数的引入旨在减少将一组参数转换为数组时常用的冗余代码。
+
+在引入剩余参数之前，必须先将 `arguments` 转换为普通数组，才能对其调用数组方法：
 
 ```js
-function sortArguments() {
-  var args = Array.prototype.slice.call(arguments);
-  var sortedArgs = args.sort();
-  return sortedArgs;
+function fn(a, b) {
+  const normalArray = Array.prototype.slice.call(arguments);
+  // — 或 —
+  const normalArray2 = [].slice.call(arguments);
+  // — 或 —
+  const normalArrayFrom = Array.from(arguments);
+
+  const first = normalArray.shift(); // 没问题，返回第一个参数
+  const firstBad = arguments.shift(); // 报错，arguments 不是普通数组
 }
-console.log(sortArguments(5, 3, 7, 1)); // shows 1, 3, 5, 7
+```
+
+现在，你可以轻松地使用剩余参数访问普通数组：
+
+```js
+function fn(...args) {
+  const normalArray = args;
+  const first = normalArray.shift(); // 没问题，返回第一个参数
+}
 ```
 
 ## 规范
@@ -154,7 +230,7 @@ console.log(sortArguments(5, 3, 7, 1)); // shows 1, 3, 5, 7
 ## 参见
 
 - [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)指南
-- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)参考
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
 - [展开语法（`...`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 - {{jsxref("Functions/arguments", "arguments")}}

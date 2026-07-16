@@ -1,11 +1,10 @@
 ---
 title: Iterator.prototype.take()
+short-title: take()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/take
 l10n:
-  sourceCommit: 7df171ff1d6da6a5e3911b7aedd56f6312bf0cca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`take()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、このイテレーター内で指定された数の要素を生成し、その後終了する新しい[イテレーターヘルパーオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator#イテレーターヘルパーオブジェクト)を返します。
 
@@ -69,7 +68,7 @@ for (const n of fibonacci().take(5)) {
 // 5
 ```
 
-`fibonacci()` は無限イテレーターであるため、`for` ループを使用して直接反復処理することはできません。
+`fibonacci()` は無限イテレーターであるため、早期終了ロジック（{{jsxref("Statements/break", "break")}} 文など）なしで `for` ループを用いて反復処理を行うと、無限ループが発生します。
 
 ### drop() と take() の組み合わせ
 
@@ -130,5 +129,6 @@ for (const n of new Set([1, 2, 3]).values().take(Infinity)) {
 ## 関連情報
 
 - [`Iterator.prototype.take` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims による `Iterator.prototype.take` のポリフィル](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.drop()")}}

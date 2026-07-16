@@ -3,7 +3,7 @@ title: "ARIA : rôle treegrid"
 short-title: treegrid
 slug: Web/Accessibility/ARIA/Reference/Roles/treegrid_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 Le rôle `treegrid` identifie un élément comme étant une grille dont les lignes peuvent être développées ou réduites, de la même manière qu'une «&nbsp;arborescence&nbsp;» (<i lang="en">tree</i> en anglais).
@@ -12,7 +12,7 @@ Le rôle `treegrid` identifie un élément comme étant une grille dont les lign
 
 Une «&nbsp;grille arborescente&nbsp;» (<i lang="en">`treegrid`</i> en anglais) est une grille de données hiérarchique, ou un tableau, composé d'informations tabulaires éditables ou interactives. Un `treegrid` combine les rôles [`tree`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role) et [`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role). Comme une «&nbsp;grille&nbsp;» (<i lang="en">grid</i>), le `treegrid` est constitué de lignes, de colonnes et de cellules. Comme une «&nbsp;arborescence&nbsp;», les nœuds parents sont extensibles et réductibles.
 
-Le widget `treegrid` contient un ou plusieurs éléments [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role), éventuellement regroupés par des éléments [`rowgroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role). Chaque ligne contient une ou plusieurs cellules. Chaque cellule est soit un descendant DOM, soit possédée par un élément ligne, et possède le rôle [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) ou [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role). Le rôle `gridcell` est utilisé pour toutes les cellules qui ne contiennent pas d'informations d'en-tête de colonne ou de ligne.
+Le composant `treegrid` contient un ou plusieurs éléments [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role), éventuellement regroupés par des éléments [`rowgroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role). Chaque ligne contient une ou plusieurs cellules. Chaque cellule est soit un descendant DOM, soit possédée par un élément ligne, et possède le rôle [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) ou [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role). Le rôle `gridcell` est utilisé pour toutes les cellules qui ne contiennent pas d'informations d'en-tête de colonne ou de ligne.
 
 Une ligne pouvant être développée ou réduite pour afficher ou masquer un ensemble de lignes enfants est appelée **ligne parente**. Chaque ligne parente possède l'état [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) défini soit sur l'élément ligne, soit sur une cellule contenue dans la ligne.
 
@@ -24,7 +24,7 @@ Chaque `row` ou `gridcell` d'une ligne doit pouvoir recevoir la sélection clavi
 
 ### Grilles arborescentes à sélection unique ou multiple
 
-Si le `treegrid` permet à l'utilisateur·ice de choisir un seul élément pour une action, il s'agit d'une **grille arborescente à sélection unique**. Dans ce cas, l'élément ayant la sélection possède également l'état sélectionné via [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected).
+Si le `treegrid` permet à l'utilisateur·ice de choisir un seul élément pour une action, il s'agit d'une **grille arborescente à sélection unique**. Dans ce cas, l'élément ayant la sélection possède également l'état sélectionné avec [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected).
 
 Si la grille arborescente permet la sélection de plusieurs lignes ou cellules, il s'agit d'une **grille arborescente à sélection multiple**. Dans ce cas, l'état sélectionné est indépendant de la sélection clavier. La conception visuelle et les technologies d'assistance doivent distinguer les éléments sélectionnés de l'élément ayant la sélection.
 
@@ -32,7 +32,7 @@ Pour les grilles arborescentes à sélection multiple, incluez [`aria-multiselec
 
 ### Lignes orphelines
 
-Si une ligne ou un groupe de lignes enfant n'est pas imbriqué dans le `treegrid` dans le DOM, l'attribut [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns), référant tous les identifiants des enfants non descendants, doit être défini sur l'élément `treegrid`. Si des lignes ou cellules sont incluses via `aria-owns`, elles seront présentées aux technologies d'assistance après les descendants DOM de l'élément `treegrid`, sauf si les descendants DOM sont aussi inclus dans l'attribut `aria-owns`.
+Si une ligne ou un groupe de lignes enfant n'est pas imbriqué dans le `treegrid` dans le DOM, l'attribut [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns), référant tous les identifiants des enfants non descendants, doit être défini sur l'élément `treegrid`. Si des lignes ou cellules sont incluses avec `aria-owns`, elles sont présentées aux technologies d'assistance après les descendants DOM de l'élément `treegrid`, sauf si les descendants DOM sont aussi inclus dans l'attribut `aria-owns`.
 
 ### Grilles arborescentes avec contenu chargé dynamiquement
 
@@ -40,7 +40,7 @@ Si certaines lignes ou colonnes ne sont pas dans le DOM et sont chargées dynami
 
 ### Nom accessible, description et sélection d'une grille arborescente
 
-L'élément ayant le rôle `treegrid` doit posséder un nom accessible. Si un libellé approprié est visible dans le contenu, fournissez le nom via [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). Autrement dit, si un élément de l'interface sert de libellé à la grille arborescente, incluez `aria-labelledby` comme attribut sur l'élément ayant le rôle `treegrid`, et définissez la valeur de l'attribut sur l'identifiant du ou des éléments de libellé. Si aucun libellé visible n'est présent, utilisez [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) à la place, mais jamais les deux.
+L'élément ayant le rôle `treegrid` doit posséder un nom accessible. Si un libellé approprié est visible dans le contenu, fournissez le nom avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). Autrement dit, si un élément de l'interface sert de libellé à la grille arborescente, incluez `aria-labelledby` comme attribut sur l'élément ayant le rôle `treegrid`, et définissez la valeur de l'attribut sur l'identifiant du ou des éléments de libellé. Si aucun libellé visible n'est présent, utilisez [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) à la place, mais jamais les deux.
 
 Si le contenu inclut une légende ou une description pour le `treegrid`, ajoutez [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) sur l'élément `treegrid`, avec pour valeur l'identifiant de l'élément contenant la description.
 
@@ -60,7 +60,7 @@ Si le `treegrid` possède un [`menu`](/fr/docs/Web/Accessibility/ARIA/Reference/
 
 Par défaut, les grilles arborescentes sont considérées comme éditables. Si une grille arborescente n'est pas éditable, utilisez l'attribut [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) pour informer les technologies d'assistance qu'elle est en lecture seule. La valeur de l'attribut, lorsqu'elle est définie sur l'élément ayant le rôle `treegrid`, se propage à tous les éléments `columnheader`, `rowheader` et `gridcell`. Cette valeur globale peut être remplacée pour des cellules individuelles en ajoutant `aria-readonly` sur les descendants concernés.
 
-Comme tous les attributs ARIA, ajouter `aria-readonly` informe uniquement les technologies d'assistance du caractère éditable ou non du contenu, mais n'active ni ne désactive l'interactivité. Cela doit être géré via l'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) ou en JavaScript.
+Comme tous les attributs ARIA, ajouter `aria-readonly` informe uniquement les technologies d'assistance du caractère éditable ou non du contenu, mais n'active ni ne désactive l'interactivité. Cela doit être géré avec l'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) ou en JavaScript.
 
 ## Propriétés, états et rôles WAI-ARIA associés
 
@@ -69,9 +69,9 @@ Comme tous les attributs ARIA, ajouter `aria-readonly` informe uniquement les te
 - [`rowgroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
   - : Groupe de [lignes](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) dans une structure tabulaire.
 - [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-  - : Destiné à reproduire le fonctionnement de l'élément HTML {{HTMLElement('td')}}. Se trouve dans les rôles `grid` et `treegrid` et doit être un enfant direct d'une ligne.
+  - : Destiné à reproduire le fonctionnement de l'élément HTML {{HTMLElement("td")}}. Se trouve dans les rôles `grid` et `treegrid` et doit être un enfant direct d'une ligne.
 - [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-  - : Cellule d'une ligne contenant des informations d'en-tête de colonne, similaire à l'élément natif {{HTMLElement('th')}} avec portée colonne.
+  - : Cellule d'une ligne contenant des informations d'en-tête de colonne, similaire à l'élément natif {{HTMLElement("th")}} avec portée colonne.
 - [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
   - : Cellule contenant des informations d'en-tête de ligne dans une structure tabulaire.
 - [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
@@ -92,7 +92,7 @@ Les interactions clavier suivantes doivent être prises en charge lorsqu'un él�
 - <kbd>Entrée</kbd>
   - : Si seule la sélection cellule est activée et que la sélection est sur la première cellule avec la propriété `aria-expanded`, ouvre ou ferme les lignes enfants. Sinon, effectue l'action par défaut de la cellule.
 - <kbd>Tab</kbd>
-  - : Si la ligne contenant la sélection possède des éléments sélectionnables comme un {{HTMLElement('input')}}, {{HTMLElement('button')}} ou {{HTMLElement('a')}}, déplace la sélection vers l'élément suivant de la ligne. Si la sélection est sur le dernier élément sélectionnable de la ligne, la sélection sort du widget treegrid vers l'élément sélectionnable suivant.
+  - : Si la ligne contenant la sélection possède des éléments sélectionnables comme un {{HTMLElement("input")}}, {{HTMLElement("button")}} ou {{HTMLElement("a")}}, déplace la sélection vers l'élément suivant de la ligne. Si la sélection est sur le dernier élément sélectionnable de la ligne, la sélection sort du composant `treegrid` vers l'élément sélectionnable suivant.
 - <kbd>Flèche vers la droite</kbd>
   - : Si la sélection est sur une ligne réduite, développe la ligne. Si la sélection est sur une ligne développée ou une ligne sans enfants, déplace la sélection vers la première cellule de la ligne. Si la sélection est sur la cellule la plus à droite, la sélection ne bouge pas. Sinon, déplace la sélection d'une cellule vers la droite.
 - <kbd>Flèche vers la gauche</kbd>
@@ -127,7 +127,7 @@ Si la grille arborescente prend en charge la sélection de cellules, lignes ou c
 - <kbd>Maj + Flèche vers le haut</kbd>
   - : Si la sélection est sur une ligne, étend la sélection à toutes les cellules de la ligne précédente. Si la sélection est sur une cellule, étend la sélection d'une cellule vers le haut.
 
-Si les fonctions de navigation peuvent ajouter dynamiquement des lignes ou colonnes au DOM, les événements clavier qui déplacent la sélection au début ou à la fin de la grille, comme <kbd>Ctrl + Fin</kbd>, peuvent déplacer la sélection sur la dernière ligne du DOM plutôt que sur la dernière ligne disponible dans les données.
+Si les fonctions de navigation peuvent ajouter dynamiquement des lignes ou colonnes au DOM, les évènements clavier qui déplacent la sélection au début ou à la fin de la grille, comme <kbd>Ctrl + Fin</kbd>, peuvent déplacer la sélection sur la dernière ligne du DOM plutôt que sur la dernière ligne disponible dans les données.
 
 Lorsque les touches de navigation, comme les flèches, déplacent la sélection de cellule en cellule, elles ne sont pas disponibles pour, par exemple, manipuler un «&nbsp;menu déroulant&nbsp;» (<i lang="en">combobox</i>) ou déplacer le curseur d'édition dans une cellule. Si cette fonctionnalité est nécessaire, voir [Édition et navigation dans une cellule <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/grid/#gridNav_inside).
 

@@ -5,7 +5,7 @@ slug: Web/HTTP/Guides/CSP
 
 **内容安全策略**（{{Glossary("CSP")}}）是一个额外的安全层，用于检测并削弱某些特定类型的攻击，包括跨站脚本（{{Glossary("Cross-site_scripting", "XSS")}}）和数据注入攻击等。无论是数据盗取、网站内容污染还是恶意软件分发，这些攻击都是主要的手段。
 
-CSP 被设计成完全向后兼容（除 CSP2 在向后兼容有明确提及的不一致; 更多细节查看[这里](https://www.w3.org/TR/CSP2) 章节 1.1）。不支持 CSP 的浏览器也能与实现了 CSP 的服务器正常工作，反之亦然：不支持 CSP 的浏览器只会忽略它，如常运行，默认为网页内容使用标准的同源策略。如果网站不提供 CSP 标头，浏览器也使用标准的[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
+CSP 被设计成完全向后兼容（除 CSP2 在向后兼容有明确提及的不一致; 更多细节查看[这里](https://www.w3.org/TR/CSP2) 章节 1.1）。不支持 CSP 的浏览器也能与实现了 CSP 的服务器正常工作，反之亦然：不支持 CSP 的浏览器只会忽略它，如常运行，默认为网页内容使用标准的同源策略。如果网站不提供 CSP 标头，浏览器也使用标准的[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)。
 
 为使 CSP 可用，你需要配置你的网络服务器返回 {{HTTPHeader("Content-Security-Policy")}} HTTP 标头（有时你会看到 `X-Content-Security-Policy` 标头，但那是旧版本，并且你无须再如此指定它）。
 

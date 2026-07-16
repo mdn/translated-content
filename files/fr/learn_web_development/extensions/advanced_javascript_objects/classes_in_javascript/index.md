@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Les présentations ayant été faites pour les concepts du JavaScript orienté objet, cet article détaille comment il est possible de créer une classe fille qui hérite des propriétés de sa classe mère. Nous verrons ensuite quelques conseils quant à l'utilisation du JavaScript orienté objet.
 
@@ -17,11 +17,11 @@ Les présentations ayant été faites pour les concepts du JavaScript orienté o
       <td>
         Une connaissance générale de l'informatique, des notions de HTML et CSS,
         une connaissance des bases en JavaScript (voir
-        <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et
-        <a href="/fr/docs/Learn/JavaScript/Building_blocks"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas</a> et
+        <a href="/fr/docs/Learn_web_development/Core/Scripting/Building_blocks"
           >Blocs de construction</a
         >) ainsi que des notions de JavaScript orienté objet (JSOO) (voir
-        <a href="/fr/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting/Object-oriented/Introduction"
           >Introduction aux objets</a
         >).
       </td>
@@ -272,4 +272,4 @@ Dans le prochain article, nous jetterons un regard sur comment travailler avec l
 - [<i lang="en">Secrets of the JavaScript Ninja</i>](https://www.amazon.com/gp/product/193398869X/), Chapitre 6 — un bon livre sur les concepts et techniques avancées du JavaScript par John Resig et Bear Bibeault. Le chapitre 6 couvre très bien les divers aspects des prototypes et de l'héritage&nbsp;; vous trouverez sûrement facilement une version imprimée ou une version en ligne.
 - [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — une partie de l'excellente série de manuels sur le JavaScript de Kyle Simpson. Le chapitre 5 en particulier jette un regard beaucoup plus approfondi sur les prototypes que nous ne l'avons fait ici. Nous avons présenté ici une vue simplifiée dans cette série d'articles dédiée aux débutants, tandis que Kyle est allé dans les détails les plus profonds et fournit une image beaucoup plus complexe et plus précise.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

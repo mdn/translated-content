@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Image_gallery
 original_slug: Learn/JavaScript/Building_blocks/Image_gallery
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Scripting/Events", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Agora que analisamos os blocos de construção fundamentais do JavaScript, testaremos seu conhecimento de loops, funções, condicionais e eventos, fazendo com que você crie um item bastante comum que você verá em muitos sites — uma galeria de imagens ativadas em JavaScript.
 
@@ -111,4 +111,4 @@ overlay.style.backgroundColor = xxx;
 
 Se você está seguindo esta avaliação como parte de um curso organizado, você deve poder dar seu trabalho ao seu professor / mentor para marcação. Se você é auto-didata, então pode obter o guia de marcação com bastante facilidade, perguntando no tópico de [discussão sobre este exercício](https://discourse.mozilla.org/t/image-gallery-assessment/24687), ou no canal [#mdn](irc://irc.mozilla.org/mdn) IRC da [Mozilla IRC](https://wiki.mozilla.org/IRC). Tente o exercício primeiro — não há nada a ganhar com a trapaça!
 
-{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenu("Learn_web_development/Core/Scripting/Events", "conflicting/Learn_web_development/Core/Scripting")}}

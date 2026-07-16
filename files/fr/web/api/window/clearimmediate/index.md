@@ -1,39 +1,46 @@
 ---
-title: Window.clearImmediate()
+title: "Window : méthode clearImmediate()"
+short-title: clearImmediate()
 slug: Web/API/Window/clearImmediate
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef("HTML DOM")}}{{Non-standard_header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-Cette méthode efface l'action spécifiée par {{DOMxRef("window.setImmediate")}}.
-
-> [!NOTE]
-> Cette méthode ne devrait pas devenir standard et n'est implémentée que par les versions récentes d'Internet Explorer et de Node.js 0.10+. Il rencontre la résistance à la fois de [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) et [Webkit](https://code.google.com/p/chromium/issues/detail?id=146172) (Google/Apple).
+Le méthode **`clearImmediate()`** de l'interface {{DOMxRef("Window")}} efface l'action définie par {{DOMxRef("window.setImmediate()")}}.
 
 ## Syntaxe
 
-```js
-window.clearImmediate(immediateID);
+```js-nolint
+clearImmediate(immediateID)
 ```
 
-où immediateID est un ID retourné par {{DOMxRef("window.setImmediate")}}.
+### Paramètres
+
+- `immediateID`
+  - : L'identifiant retourné par la méthode {{DOMxRef("window.setImmediate()")}}.
+
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
 ```js
 let immediateID = setImmediate(() => {
   // Exécute du code
-}
+});
 
-document.getElementById("bouton")
-  .addEventListener(() => {
+document.getElementById("button").addEventListener(() => {
   clearImmediate(immediateID);
 });
 ```
 
 ## Spécifications
 
-{{Specifications}}
+Ne fait partie d'aucune spécification actuelle.
+La spécification [Efficient Script Yielding <sup>(angl.)</sup>](https://w3c.github.io/setImmediate/#si-setImmediate) n'est plus en cours de développement.
 
 ## Compatibilité des navigateurs
 
@@ -41,4 +48,5 @@ document.getElementById("bouton")
 
 ## Voir aussi
 
-- {{DOMxRef("Window.setImmediate()")}}
+- [Prothèse d'émulation pour `clearImmediate` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#setimmediate)
+- La méthode {{DOMxRef("Window.setImmediate()")}}

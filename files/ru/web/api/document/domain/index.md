@@ -5,7 +5,7 @@ slug: Web/API/Document/domain
 
 {{APIRef}} {{Deprecated_Header}}
 
-Свойство `domain` у {{domxref("Document")}} интерфейса получает/устанавливает доменную часть источника происхождения (origin) текущего документа, используется в [политике ограничения домена (same origin policy)](/ru/docs/Web/Security/Same-origin_policy).
+Свойство `domain` у {{domxref("Document")}} интерфейса получает/устанавливает доменную часть источника происхождения (origin) текущего документа, используется в [политике ограничения домена (same origin policy)](/ru/docs/Web/Security/Defenses/Same-origin_policy).
 
 ## Синтаксис
 
@@ -61,7 +61,7 @@ if (document.domain == badDomain) {
 
 ## Смотрите также
 
-- [Политика одинакового источника](/ru/docs/Web/Security/Same-origin_policy)
+- [Политика одинакового источника](/ru/docs/Web/Security/Defenses/Same-origin_policy)
 - {{domxref("Location.hostname")}}
 - {{domxref("Location.host")}}
 - {{domxref("Window.origin")}}

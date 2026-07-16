@@ -5,7 +5,7 @@ slug: Web/API/Document
 
 {{APIRef("DOM")}}
 
-La interfaz **`Document`** representa cualquier página web cargada en el navegador y sirve como punto de entrada al contenido de la página web, que es el [árbol DOM (Document Object Model)](/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model).
+La interfaz **`Document`** representa cualquier página web cargada en el navegador y sirve como punto de entrada al contenido de la página web, que es el [árbol DOM (Document Object Model)](/es/docs/conflicting/Web/API/Document_Object_Model).
 
 El árbol DOM incluye elementos como {{HTMLElement("body")}} y {{HTMLElement("table")}}, entre [muchos otros](/es/docs/Web/HTML/Reference/Elements). Proporciona funcionalidad globalmente al documento, como obtener la URL de la página y crear nuevos elementos en el documento.
 
@@ -127,9 +127,9 @@ _La interfaz `Document` se amplía con manejadores de eventos adicionales defini
 - {{DOMxRef("Document.onreadystatechange")}}
   - : Representa el código del manejador de eventos para el evento {{domxref("Document/readystatechange_event", "readystatechange")}}.
 - {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
-  - : Es un [manejador de eventos](/es/docs/Web/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento {{domxref("Document/selectionchange_event", "selectionchange")}}.
+  - : Es un [manejador de eventos](/es/docs/Web/API/Document_Object_Model/Events) que representa el código que se llamará cuando se genere el evento {{domxref("Document/selectionchange_event", "selectionchange")}}.
 - {{DOMxRef("Document.onvisibilitychange")}}
-  - : Es un [manejador de eventos](/es/docs/Web/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento {{domxref("Document/visibilitychange_event", "visibilitychange")}}.
+  - : Es un [manejador de eventos](/es/docs/Web/API/Document_Object_Model/Events) que representa el código que se llamará cuando se genere el evento {{domxref("Document/visibilitychange_event", "visibilitychange")}}.
 
 ### Propiedades obsoletas
 
@@ -183,7 +183,7 @@ _Esta interfaz también hereda de las interfaces {{DOMxRef("Node")}} y {{DOMxRef
 - {{DOMxRef("Document.adoptNode()")}}
   - : Adopta un nodo de un documento externo.
 - {{DOMxRef("Document.append()")}}
-  - : Inserta un conjunto de objetos {{domxref("Node")}} u objetos {{domxref("DOMString")}} después del último elemento hijo del documento.
+  - : Inserta un conjunto de objetos {{domxref("Node")}} u objetos {{jsxref("String")}} después del último elemento hijo del documento.
 - {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
   - : Consulte {{DOMxRef("Window.captureEvents")}}.
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
@@ -253,7 +253,7 @@ _Esta interfaz también hereda de las interfaces {{DOMxRef("Node")}} y {{DOMxRef
 - {{DOMxRef("Document.normalizeDocument()")}} {{deprecated_inline}}
   - : Reemplaza entidades, normaliza nodos de texto, etc.
 - {{DOMxRef("Document.prepend()")}}
-  - : Inserta un conjunto de objetos {{domxref("Node")}} u objetos {{domxref("DOMString")}} antes del primer elemento hijo del documento.
+  - : Inserta un conjunto de objetos {{domxref("Node")}} u objetos {{jsxref("String")}} antes del primer elemento hijo del documento.
 - {{DOMxRef("Document.querySelector()")}}
   - : Devuelve el primer nodo [_Element_](/es/docs/Web/API/Element) dentro del documento, en el orden del documento, que coincide con los selectores especificados.
 - {{DOMxRef("Document.querySelectorAll()")}}
@@ -428,13 +428,13 @@ Puede detectar estos eventos usando `addEventListener()` o asignando un detector
 ### Eventos de transición
 
 - {{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}
-  - : Se activa cuando se cancela una [transición de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitioncancel", "ontransitioncancel")}}.
+  - : Se activa cuando se cancela una [transición de CSS](/es/docs/Web/CSS/Guides/Transitions/Using). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitioncancel", "ontransitioncancel")}}.
 - {{DOMxRef("Document/transitionend_event", "transitionend")}}
-  - : Se activa cuando se completa una [transición de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionend", "ontransitionend")}}.
+  - : Se activa cuando se completa una [transición de CSS](/es/docs/Web/CSS/Guides/Transitions/Using). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionend", "ontransitionend")}}.
 - {{DOMxRef("Document/transitionrun_event", "transitionrun")}}
-  - : Se activa cuando se crea por primera vez una [transición de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}}.
+  - : Se activa cuando se crea por primera vez una [transición de CSS](/es/docs/Web/CSS/Guides/Transitions/Using). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}}.
 - {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
-  - : Se activa cuando realmente ha comenzado una [transición de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}}.
+  - : Se activa cuando realmente ha comenzado una [transición de CSS](/es/docs/Web/CSS/Guides/Transitions/Using). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}}.
 
 ## Extensiones no estándar {{Non-standard_Inline}}
 

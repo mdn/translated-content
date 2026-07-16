@@ -3,7 +3,7 @@ title: RegExp.$1-$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{non-standard_header}}
 
 非标准 **$1, $2, $3, $4, $5, $6, $7, $8, $9** 属性是包含括号子串匹配的正则表达式的静态和只读属性。
 

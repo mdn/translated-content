@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 지난 몇 단원에서 배운 내용을 통해 CSS 를 사용하여 간단한 텍스트 문서의 서식을 지정하여 자신만의 스타일을 추가 할 수 있다는 것을 알게 될 것입니다. 이 평가는 그 기회를 제공합니다.
 
@@ -14,7 +14,7 @@ original_slug: Learn/CSS/First_steps/Styling_a_biography_page
       <th scope="row">전제조건:</th>
       <td>
         이 평가를 시도하기 전에 나머지 CSS 기본 과목을 살펴보고 HTML 기본 사항
-        (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML">HTML 소개</a>
+        (<a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content">HTML 소개</a>
         학습) 을 이해해야 합니다.
       </td>
     </tr>
@@ -78,4 +78,4 @@ CSS 를 사용하여 내가 사용한 속성 값을 변경하여 이 전기(biog
 
 첫 번째 강의를 완료한 것을 축하합니다. 이제 CSS 에 대해 잘 이해하고 스타일 시트에서 발생하는 많은 부분을 이해할 수 있어야 합니다. 다음 강의인 [CSS building blocks](/ko/docs/Learn_web_development/Core/Styling_basics) 에서는 여러 가지 주요 영역을 자세히 살펴보겠습니다.
 
-{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}

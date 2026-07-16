@@ -2,14 +2,12 @@
 title: コンテンツカテゴリー
 slug: Web/HTML/Guides/Content_categories
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: fce59e0706ab0114d9968c23722dccfacaebf998
 ---
 
-{{HTMLSidebar}}
+ほとんどの [HTML](/ja/docs/Web/HTML) 要素は 1 つ以上の**コンテンツカテゴリー**に属していて、カテゴリーごとに共通した特徴を持つ要素を分類しています。これは緩やかなグループ分けです（実際にはこれらのカテゴリーの要素間の関係を作成していません）。しかし、これらは、特にその複雑な詳細に遭遇したときに、カテゴリーの共有動作とその関連ルールを定義し記述するのに役立ちます。[どのカテゴリーにも属さない要素も](#カテゴリーに属さない要素)存在します。
 
-ほとんどの [HTML](/ja/docs/Web/HTML) 要素は 1 つ以上の**コンテンツカテゴリー**に属していて、カテゴリーごとに共通した特徴を持つ要素を分類しています。これは緩やかなグループ分けです（実際にはこれらのカテゴリーの要素間の関係を作成していません）。しかし、これらは、特にその複雑な詳細に遭遇したときに、カテゴリーの共有動作とその関連ルールを定義し記述するのに役立ちます。*どの*カテゴリーにも属さない要素も存在します（{{HTMLElement("track")}} など）。
-
-コンテンツカテゴリーは、要素のコンテンツモデル、言い換えれば各要素が子要素として取り込むことができるものを定義するために使用されます。例えば、 `<p>` 要素は記述コンテンツしか含めることができませんが、 `<div>` 要素はフローコンテンツを含めることができます。
+コンテンツカテゴリーは、要素のコンテンツモデル、言い換えれば各要素が子要素として取り込むことができるものを定義するために使用されます。例えば、`<p>` 要素は記述コンテンツしか含めることができませんが、`<div>` 要素はフローコンテンツを含めることができます。`<ins>` など、一部の要素は[透過的コンテンツモデル](#透過的コンテンツモデル)を持っています。
 
 コンテンツは 7 つのカテゴリーに分類され、以下のベン図で要約できます。
 
@@ -70,6 +68,7 @@ l10n:
 - {{HTMLElement("figure")}}
 - {{HTMLElement("footer")}}
 - {{HTMLElement("form")}}
+- {{HTMLElement("geolocation")}}
 - {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}}
 - {{HTMLElement("header")}}
 - {{HTMLElement("hgroup")}}
@@ -336,6 +335,35 @@ l10n:
 - {{HTMLElement("ol")}}: 子要素に 1 つ以上の {{HTMLElement("li")}} 要素を含む場合
 - {{HTMLElement("ul")}}: 子要素に 1 つ以上の {{HTMLElement("li")}} 要素を含む場合
 
+## カテゴリーに属さない要素
+
+どのコンテンツカテゴリーにも属していない要素もあります。これには以下のようなものがあります。
+
+- {{HTMLElement("caption")}}
+- {{HTMLElement("col")}}
+- {{HTMLElement("colgroup")}}
+- {{HTMLElement("dd")}}
+- {{HTMLElement("dt")}}
+- {{HTMLElement("figcaption")}}
+- {{HTMLElement("head")}}
+- {{HTMLElement("html")}}
+- {{HTMLElement("legend")}}
+- {{HTMLElement("li")}}
+- {{HTMLElement("optgroup")}}
+- {{HTMLElement("option")}}
+- {{HTMLElement("param")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rtc")}}
+- {{HTMLElement("source")}}
+- {{HTMLElement("tbody")}}
+- {{HTMLElement("tfoot")}}
+- {{HTMLElement("th")}}
+- {{HTMLElement("thead")}}
+- {{HTMLElement("tr")}}
+- {{HTMLElement("track")}}
+
 ## スクリプト対応要素
 
 **スクリプト対応要素** (Script-supporting elements) は、文書のレンダリング出力に直接寄与しない要素です。その代わりに、スクリプトコードを直接含むか、指定するか、あるいはスクリプトで使用されるデータを指定することにより、スクリプトに対応する役割を果たします。特定の要素のみを受け入れる要素（{{HTMLElement("li")}} 要素を受け入れる {{HTMLElement("ul")}} など）を含め、ほぼすべての要素は、スクリプト対応要素を含めることができます。
@@ -375,12 +403,40 @@ l10n:
 
 ## 透過的コンテンツモデル
 
-要素が透過的コンテンツモデル (transparent content model) を持っている場合、透過的な要素が削除されたり、子要素で置き換えられたりしても、それ自身のコンテンツが必ず妥当な HTML として構造化されているものです。
+前述のコンテンツカテゴリーに加え、要素のコンテンツモデルは「透過的」と定義される場合があります。要素 X の許可されたコンテンツが「透過的」である場合、X の親要素を見ていきます。X の親要素の許可されたコンテンツと X のコンテンツカテゴリーを交差させ、その結果がこのコンテキストにおける「透過的」の意味となります。X の親要素も透過的なコンテンツモデルを保有する場合、非透過的なコンテンツモデルを探すまでツリーを上方向に探索を続けます。そのような親要素が存在しない場合、「透過的」は「フローコンテンツ」を意味します。
 
-例えば、 {{HTMLElement("del")}} と {{HTMLELement("ins")}} 要素は透過的です。
+例えば、{{HTMLElement("ruby")}} 要素は記述コンテンツを受け入れます。{{HTMLElement("ins")}} 要素は、記述コンテンツのみを含む場合に記述コンテンツカテゴリーに属します。したがって、{{HTMLElement("ins")}} 要素は {{HTMLElement("ruby")}} 要素内に配置できます。`<ins>` 要素の許可されているコンテンツは「透過的」であり、`<ruby>` 内に入れ子になった場合、「記述コンテンツ」となります。しかし、{{HTMLElement("rt")}} 要素は記述コンテンツではありません。したがって、`<ins>` 要素は「透過的」であるにもかかわらず、`<rt>` 要素と `<ins>` 要素の両方が `<ruby>` 内に配置可能である場合でも、`<ins>` 要素を `<rt>` 要素内に入れ子にすることはできません。
 
-```html
-<p><del>買い物</del><ins>返品</ins>リスト</p>
+```html example-bad
+<ruby>
+  Text before
+  <ins>
+    <!-- 不正: rt は ins の中に配置できない -->
+    <rt>Pronunciation</rt>
+  </ins>
+</ruby>
+```
+
+```html example-good
+<ruby>
+  Text before
+  <!-- 妥当: ins は ruby に入れられ、rt が ruby の中に入れられる -->
+  <ins>Inserted text</ins>
+  <rt>Pronunciation</rt>
+</ruby>
+```
+
+```html example-good
+<ruby>
+  Text before
+  <!-- 妥当: rt は ruby に入れられ、ins は rt に入れられる -->
+  <rt><ins>Pronunciation</ins></rt>
+</ruby>
+```
+
+透過性は「コンテンツモデル」であり、「コンテンツカテゴリー」ではないため、要素が何を包含できるかを定義するのみで、要素が配置可能な場所を定義しません。つまり、要素の子要素の許容性を判断する際、透過的な子要素を「透かして見る」ことはできません。例えば、{{HTMLElement("ul")}} 要素は {{HTMLElement("li")}} 要素とスクリプト対応要素のみを受け入れ、`<del>` や `<ins>` は許可しません。たとえ `<del>` が `<li>` 要素のみを含んでいたとしてもです。
+
+```html example-bad
 <ul>
   <del>
     <li>オレンジ</li>
@@ -390,13 +446,10 @@ l10n:
 </ul>
 ```
 
-これらの要素が削除されたとしても、この断片は（文章としては正しくありませんが）妥当な HTML です。
-
-```html
-<p>買い物返品リスト</p>
+```html example-good
 <ul>
-  <li>オレンジ</li>
-  <li>トイレットペーパー</li>
+  <li><del>オレンジ</del></li>
+  <li><del>トイレットペーパー</del></li>
   <li>歯磨き</li>
 </ul>
 ```

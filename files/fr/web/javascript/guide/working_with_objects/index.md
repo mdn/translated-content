@@ -3,7 +3,7 @@ title: Utiliser les objets
 slug: Web/JavaScript/Guide/Working_with_objects
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Inheritance_and_the_prototype_chain")}}
 
 JavaScript est conçu autour d'un paradigme simple, basé sur les objets. Un objet est un ensemble de propriétés et une propriété est une association entre un nom (aussi appelé _clé_) et une valeur. La valeur d'une propriété peut être une fonction, auquel cas la propriété peut être appelée « méthode ». En plus des objets natifs fournis par l'environnement, il est possible de construire ses propres objets. Ce chapitre aborde la manipulation d'objets, l'utilisation des propriétés, fonctions et méthodes, il explique également comment créer ses objets.
 
@@ -177,7 +177,7 @@ let maHonda = {
 };
 ```
 
-De la même façon, on pourra utiliser des initialisateurs pour créer des tableaux. Pour plus d'informations à ce sujet, voir [les littéraux de tableaux](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_litt.c3.a9raux_de_tableaux).
+De la même façon, on pourra utiliser des initialisateurs pour créer des tableaux. Pour plus d'informations à ce sujet, voir [les littéraux de tableaux](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_littéraux_de_tableaux).
 
 ### Utiliser les constructeurs
 
@@ -529,4 +529,4 @@ Pour plus d'informations sur les opérateurs de comparaisons, voir [cet article]
 - Pour aller plus loin, voir [les détails du modèle objet javaScript](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - Pour en savoir plus sur les classes ECMAScript 2015 (une nouvelle façon de créer des objets), lire le chapitre sur les [classes JavaScript](/fr/docs/Web/JavaScript/Reference/Classes).
 
-{{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Inheritance_and_the_prototype_chain")}}

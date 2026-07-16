@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`MediaQueryList`** 物件儲存了套用至文件的[媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries)資訊，並支援針對文件狀態進行立即和事件驅動的匹配。
+**`MediaQueryList`** 物件儲存了套用至文件的[媒體查詢](/zh-TW/docs/Web/CSS/Guides/Media_queries)資訊，並支援針對文件狀態進行立即和事件驅動的匹配。
 
 你可以透過在 {{DOMxRef("window")}} 物件上呼叫 {{DOMxRef("Window.matchMedia", "matchMedia()")}} 來建立一個 `MediaQueryList`。產生的物件會處理在媒體查詢狀態改變時（也就是當媒體查詢測試開始或停止評估為 `true` 時）向監聽器發送通知。
 
@@ -78,8 +78,8 @@ mql.addEventListener("change", screenTest);
 
 ## 參見
 
-- [媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [從程式碼使用媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [媒體查詢](/zh-TW/docs/Web/CSS/Guides/Media_queries/Using)
+- [從程式碼使用媒體查詢](/zh-TW/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryListEvent")}}
 - {{DOMxRef("Window.devicePixelRatio")}} 文章中也有一個有用的範例

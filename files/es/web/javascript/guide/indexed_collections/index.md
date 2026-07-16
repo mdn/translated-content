@@ -3,7 +3,7 @@ title: Colecciones indexadas
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 Este capítulo presenta colecciones de datos ordenados por un valor de índice. Esto incluye arreglos y construcciones similares a arreglos tal como objetos {{jsxref("Array")}} y objetos {{jsxref("TypedArray")}}.
 
@@ -484,11 +484,11 @@ console.log(arr.property); // Registra "value"
 
 ### Arreglos y expresiones regulares
 
-Cuando un arreglo es el resultado de una coincidencia entre una expresión regular y una cadena, el arreglo devuelve propiedades y elementos que proporcionan información sobre la coincidencia. Un arreglo es el valor de retorno de {{jsxref("Global_Objects/RegExp/exec", "RegExp.exec()")}}, {{jsxref("Global_Objects/String/match", "String.match()")}} y {{jsxref("Global_Objects/String/split", "String.split()")}}. Para obtener información sobre el uso de arreglos con expresiones regulares, consulta [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions).
+Cuando un arreglo es el resultado de una coincidencia entre una expresión regular y una cadena, el arreglo devuelve propiedades y elementos que proporcionan información sobre la coincidencia. Un arreglo es el valor de retorno de {{jsxref("RegExp.exec()")}}, {{jsxref("String.match()")}} y {{jsxref("String.split()")}}. Para obtener información sobre el uso de arreglos con expresiones regulares, consulta [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ### Trabajar con objetos tipo array
 
-Algunos objetos JavaScript, como [`NodeList`](/es/docs/Web/API/NodeList) devueltos por [`document.getElementsByTagName()`](/es/docs/Web/API/Document/getElementsByTagName) o un objeto {{jsxref("Functions/arguments", "arguments")}} disponible dentro del cuerpo de una función, se ven y se comportan como arreglos en la superficie pero no comparten todos sus métodos. El objeto `arguments` proporciona un atributo {{jsxref("Global_Objects/Function/length", "length")}} pero no implementa el método {{jsxref("Array.forEach", "forEach()")}}, por ejemplo.
+Algunos objetos JavaScript, como [`NodeList`](/es/docs/Web/API/NodeList) devueltos por [`document.getElementsByTagName()`](/es/docs/Web/API/Document/getElementsByTagName) o un objeto {{jsxref("Functions/arguments", "arguments")}} disponible dentro del cuerpo de una función, se ven y se comportan como arreglos en la superficie pero no comparten todos sus métodos. El objeto `arguments` proporciona un atributo {{jsxref("Function.length", "length")}} pero no implementa el método {{jsxref("Array.forEach", "forEach()")}}, por ejemplo.
 
 Los métodos de arreglo no se pueden llamar directamente en objetos similares a un arreglo.
 
@@ -501,7 +501,7 @@ function printArguments() {
 }
 ```
 
-Pero puedes llamarlos indirectamente usando {{jsxref("Global_Objects/Function/call", "Function.prototype.call()")}}.
+Pero puedes llamarlos indirectamente usando {{jsxref("Function.call", "Function.prototype.call()")}}.
 
 ```js example-good
 function printArguments() {
@@ -553,4 +553,4 @@ Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vi
 
 Para obtener más información, consulta [Arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays) y la documentación de referencia para los diferentes objetos {{jsxref("TypedArray")}}.
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}

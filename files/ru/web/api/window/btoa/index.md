@@ -51,7 +51,7 @@ utf8_to_b64("I \u2661 Unicode!"); // SSUyNTIwJTI1dTI2NjElMjUyMFVuaWNvZGUlMjUyMQ=
 b64_to_utf8("SSUyNTIwJTI1dTI2NjElMjUyMFVuaWNvZGUlMjUyMQ=="); // "I ♡ Unicode!"
 ```
 
-Более правильный и производительный способ - это конвертировать [`DOMString`](/ru/docs/Web/API/DOMString) в UTF-8 строку передав [typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays). Как это сделать узнать можно здесь **[в этом параграфе](</ru/docs/Web/JavaScript/Base64_encoding_and_decoding#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)**.
+Более правильный и производительный способ - это конвертировать [`DOMString`](/ru/docs/Web/API/DOMString) в UTF-8 строку передав [typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays). Как это сделать узнать можно здесь **[в этом параграфе](</ru/docs/Glossary/Base64#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)**.
 
 ## Спецификации
 

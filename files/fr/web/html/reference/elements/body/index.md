@@ -1,9 +1,9 @@
 ---
-title: "<body> : l'élément pour le corps du document"
+title: "Élément HTML `<body>` : l'élément pour le corps du document"
+short-title: <body>
 slug: Web/HTML/Reference/Elements/body
-original_slug: Web/HTML/Element/body
 l10n:
-  sourceCommit: a18c4a4188f856bec56a5df6ee53b65cee66e713
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<body>`** représente le contenu principal du document HTML. Il ne peut y avoir qu'un élément `<body>` par document.
@@ -12,56 +12,56 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<body>`** représente le contenu princi
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-### Attributs d'événement
+### Attributs d'évènement
 
 > [!NOTE]
-> Chacun des noms d'attributs d'événement ci-dessous est lié à son événement équivalent de l'interface {{domxref("Window")}}. Vous pouvez écouter ces événements en utilisant [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) au lieu d'ajouter l'attribut `oneventname` à l'élément `<body>`.
+> Chacun des noms d'attributs d'évènement ci-dessous est lié à son évènement équivalent de l'interface {{DOMxRef("Window")}}. Vous pouvez écouter ces évènements en utilisant {{DOMxRef("EventTarget/addEventListener", "addEventListener()")}} au lieu d'ajouter l'attribut `oneventname` à l'élément `<body>`.
 
-- [`onafterprint`](/fr/docs/Web/API/Window/afterprint_event)
+- {{DOMxRef("Window/afterprint_event", "onafterprint")}}
   - : Fonction appelée après que l'utilisateur·rice a imprimé le document.
-- [`onbeforeprint`](/fr/docs/Web/API/Window/beforeprint_event)
+- {{DOMxRef("Window/beforeprint_event", "onbeforeprint")}}
   - : Fonction appelée lorsque l'utilisateur·rice demande l'impression du document.
-- [`onbeforeunload`](/fr/docs/Web/API/Window/beforeunload_event)
+- {{DOMxRef("Window/beforeunload_event", "onbeforeunload")}}
   - : Fonction appelée lorsque le document est sur le point d'être déchargé.
-- [`onblur`](/fr/docs/Web/API/Window/blur_event)
+- {{DOMxRef("Window/blur_event", "onblur")}}
   - : Fonction appelée lorsque le document perd le focus.
-- [`onerror`](/fr/docs/Web/API/Window/error_event)
+- {{DOMxRef("Window/error_event", "onerror")}}
   - : Fonction appelée lorsque le document n'a pas pu se charger correctement.
-- [`onfocus`](/fr/docs/Web/API/Window/focus_event)
+- {{DOMxRef("Window/focus_event", "onfocus")}}
   - : Fonction appelée lorsque le document reçoit le focus.
-- [`onhashchange`](/fr/docs/Web/API/Window/hashchange_event)
+- {{DOMxRef("Window/hashchange_event", "onhashchange")}}
   - : Fonction appelée lorsque la partie identifiant de fragment (commençant par le caractère dièse (`'#'`)) de l'adresse courante du document a changé.
-- [`onlanguagechange`](/fr/docs/Web/API/Window/languagechange_event)
+- {{DOMxRef("Window/languagechange_event", "onlanguagechange")}}
   - : Fonction appelée lorsque les langues préférées ont changé.
-- [`onload`](/fr/docs/Web/API/Window/load_event)
+- {{DOMxRef("Window/load_event", "onload")}}
   - : Fonction appelée lorsque le document a fini de se charger.
-- [`onmessage`](/fr/docs/Web/API/Window/message_event)
+- {{DOMxRef("Window/message_event", "onmessage")}}
   - : Fonction appelée lorsque le document a reçu un message.
-- [`onmessageerror`](/fr/docs/Web/API/Window/messageerror_event)
+- {{DOMxRef("Window/messageerror_event", "onmessageerror")}}
   - : Fonction appelée lorsque le document a reçu un message qui ne peut pas être désérialisé.
-- [`onoffline`](/fr/docs/Web/API/Window/offline_event)
+- {{DOMxRef("Window/offline_event", "onoffline")}}
   - : Fonction appelée lorsque la communication réseau a échoué.
-- [`ononline`](/fr/docs/Web/API/Window/online_event)
+- {{DOMxRef("Window/online_event", "ononline")}}
   - : Fonction appelée lorsque la communication réseau a été rétablie.
-- [`onpageswap`](/fr/docs/Web/API/Window/pageswap_event)
+- {{DOMxRef("Window/pageswap_event", "onpageswap")}}
   - : Fonction appelée lors de la navigation entre des documents, lorsque le document précédent est sur le point d'être déchargé.
-- [`onpagehide`](/fr/docs/Web/API/Window/pagehide_event)
+- {{DOMxRef("Window/pagehide_event", "onpagehide")}}
   - : Fonction appelée lorsque le navigateur masque la page courante lors de l'affichage d'une autre page de l'historique de session.
-- [`onpagereveal`](/fr/docs/Web/API/Window/pagereveal_event)
+- {{DOMxRef("Window/pagereveal_event", "onpagereveal")}}
   - : Fonction appelée lorsqu'un document est affiché pour la première fois, soit lors du chargement d'un nouveau document depuis le réseau, soit lors de l'activation d'un document.
-- [`onpageshow`](/fr/docs/Web/API/Window/pageshow_event)
+- {{DOMxRef("Window/pageshow_event", "onpageshow")}}
   - : Fonction appelée lorsque le navigateur affiche le document de la fenêtre suite à une navigation.
-- [`onpopstate`](/fr/docs/Web/API/Window/popstate_event)
+- {{DOMxRef("Window/popstate_event", "onpopstate")}}
   - : Fonction appelée lorsque l'utilisateur·rice a navigué dans l'historique de session.
-- [`onresize`](/fr/docs/Web/API/Window/resize_event)
+- {{DOMxRef("Window/resize_event", "onresize")}}
   - : Fonction appelée lorsque le document a été redimensionné.
-- [`onrejectionhandled`](/fr/docs/Web/API/Window/rejectionhandled_event)
-  - : Fonction appelée lorsqu'une {{jsxref("Promise")}} JavaScript est gérée tardivement.
-- [`onstorage`](/fr/docs/Web/API/Window/storage_event)
+- {{DOMxRef("Window/rejectionhandled_event", "onrejectionhandled")}}
+  - : Fonction appelée lorsqu'une {{JSxRef("Promise")}} JavaScript est gérée tardivement.
+- {{DOMxRef("Window/storage_event", "onstorage")}}
   - : Fonction appelée lorsque la zone de stockage a changé.
-- [`onunhandledrejection`](/fr/docs/Web/API/Window/unhandledrejection_event)
-  - : Fonction appelée lorsqu'une {{jsxref("Promise")}} JavaScript sans gestionnaire de rejet est rejetée.
-- [`onunload`](/fr/docs/Web/API/Window/unload_event) {{deprecated_inline}}
+- {{DOMxRef("Window/unhandledrejection_event", "onunhandledrejection")}}
+  - : Fonction appelée lorsqu'une {{JSxRef("Promise")}} JavaScript sans gestionnaire de rejet est rejetée.
+- {{DOMxRef("Window/unload_event", "onunload")}} {{Deprecated_Inline}}
   - : Fonction appelée lorsque le document va être fermé.
 
 ### Attributs obsolètes
@@ -69,36 +69,34 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 > [!WARNING]
 > N'utilisez pas ces attributs obsolètes&nbsp;; privilégiez les alternatives CSS listées pour chaque attribut obsolète.
 
-- `alink` {{deprecated_inline}}
+- `alink` {{Deprecated_Inline}}
   - : Couleur du texte des liens hypertexte lorsqu'ils sont sélectionnés.
-    Utilisez la propriété CSS {{cssxref("color")}} avec les pseudo-classes {{cssxref(":active")}} et {{cssxref(":focus")}} à la place.
-- `background` {{deprecated_inline}}
+    Utilisez la propriété CSS {{CSSxRef("color")}} avec les pseudo-classes {{CSSxRef(":active")}} et {{CSSxRef(":focus")}} à la place.
+- `background` {{Deprecated_Inline}}
   - : URI d'une image à utiliser comme arrière-plan.
-    Utilisez la propriété CSS {{cssxref("background-image")}} à la place.
-- `bgcolor` {{deprecated_inline}}
+    Utilisez la propriété CSS {{CSSxRef("background-image")}} à la place.
+- `bgcolor` {{Deprecated_Inline}}
   - : Couleur d'arrière-plan du document.
-    Utilisez la propriété CSS {{cssxref("background-color")}} à la place.
-- `bottommargin` {{deprecated_inline}}
-  - : Marge inférieure du body.
-    Utilisez la propriété CSS {{cssxref("margin-bottom")}} (ou la propriété logique {{cssxref("margin-block-end")}}) à la place.
-- `leftmargin` {{deprecated_inline}}
-  - : Marge gauche du body.
-    Utilisez la propriété CSS {{cssxref("margin-left")}} (ou la propriété logique {{cssxref("margin-inline-start")}}) à la place.
-- `link` {{deprecated_inline}}
+    Utilisez la propriété CSS {{CSSxRef("background-color")}} à la place.
+- `bottommargin` {{Deprecated_Inline}}
+  - : Ignoré.
+- `leftmargin` {{Deprecated_Inline}}
+  - : La marge gauche et droite du corps.
+    Utilisez les propriétés CSS {{CSSxRef("margin-left")}} et {{CSSxRef("margin-right")}} (ou la propriété logique {{CSSxRef("margin-inline")}}) à la place.
+- `link` {{Deprecated_Inline}}
   - : Couleur du texte des liens hypertexte non visités.
-    Utilisez la propriété CSS {{cssxref("color")}} avec la pseudo-classe {{cssxref(":link")}} à la place.
-- `rightmargin` {{deprecated_inline}}
-  - : Marge droite du body.
-    Utilisez la propriété CSS {{cssxref("margin-right")}} (ou la propriété logique {{cssxref("margin-inline-end")}}) à la place.
-- `text` {{deprecated_inline}}
+    Utilisez la propriété CSS {{CSSxRef("color")}} avec la pseudo-classe {{CSSxRef(":link")}} à la place.
+- `rightmargin` {{Deprecated_Inline}}
+  - : Ignoré.
+- `text` {{Deprecated_Inline}}
   - : Couleur du texte.
-    Utilisez la propriété CSS {{cssxref("color")}} à la place.
-- `topmargin` {{deprecated_inline}}
-  - : Marge supérieure du body.
-    Utilisez la propriété CSS {{cssxref("margin-top")}} (ou la propriété logique {{cssxref("margin-block-start")}}) à la place.
-- `vlink` {{deprecated_inline}}
+    Utilisez la propriété CSS {{CSSxRef("color")}} à la place.
+- `topmargin` {{Deprecated_Inline}}
+  - : Marge supérieure et inférieure du corps.
+    Utilisez les propriétés CSS {{CSSxRef("margin-top")}} et {{CSSxRef("margin-bottom")}} (ou la propriété logique {{CSSxRef("margin-block")}}) à la place.
+- `vlink` {{Deprecated_Inline}}
   - : Couleur du texte des liens hypertexte visités.
-    Utilisez la propriété CSS {{cssxref("color")}} avec la pseudo-classe {{cssxref(":visited")}} à la place.
+    Utilisez la propriété CSS {{CSSxRef("color")}} avec la pseudo-classe {{CSSxRef(":visited")}} à la place.
 
 ## Exemples
 
@@ -119,7 +117,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ### Résultat
 
-{{EmbedLiveSample('exemple')}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Résumé technique
 
@@ -168,13 +166,13 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     <tr>
       <th scope="row">Interface DOM</th>
       <td>
-        {{domxref("HTMLBodyElement")}}
+        {{DOMxRef("HTMLBodyElement")}}
         <ul>
           <li>
-            L'élément <code>&#x3C;body></code> expose l'interface {{domxref("HTMLBodyElement")}}.
+            L'élément <code>&#x3C;body></code> expose l'interface {{DOMxRef("HTMLBodyElement")}}.
           </li>
           <li>
-            Vous pouvez accéder à l'élément <code>&#x3C;body></code> via la propriété {{domxref("document.body")}}.
+            Vous pouvez accéder à l'élément <code>&#x3C;body></code> via la propriété {{DOMxRef("document.body")}}.
           </li>
         </ul>
       </td>
@@ -194,4 +192,4 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 - L'élément {{HTMLElement("html")}}
 - L'élément {{HTMLElement("head")}}
-- [Aperçu de la gestion des événements](/fr/docs/Web/API/Document_Object_Model/Events#enregistrer_des_gestionnaires_dévénements)
+- [Aperçu de la gestion des évènements](/fr/docs/Web/API/Document_Object_Model/Events#enregistrer_des_gestionnaires_dévènements)

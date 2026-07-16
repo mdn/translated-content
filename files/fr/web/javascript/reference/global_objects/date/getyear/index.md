@@ -1,40 +1,34 @@
 ---
-title: Date.prototype.getYear()
+title: "Date : méthode getYear()"
+short-title: getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{Deprecated_header}}
+{{Deprecated_Header}}
 
-La méthode **`getYear()`** renvoie l'année de la date renseignée, d'après l'heure locale. Parce que `getYear()` ne renvoie pas l'année complète (« bug de l'an 2000 »), cette méthode n'est plus utilisée et doit être remplacée par {{jsxref("Date.getFullYear", "getFullYear")}}.
+La méthode **`getYear()`** des instances de {{JSxRef("Date")}} retourne l'année pour cette date selon l'heure locale. Comme `getYear()` ne retourne pas les années complètes (problème de l'an 2000), elle est obsolète et a été remplacée par la méthode {{JSxRef("Date/getFullYear", "getFullYear()")}}.
 
 ## Syntaxe
 
-```js
-dateObj.getYear();
+```js-nolint
+getYear()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Un nombre représentant l'année de la date indiquée, selon l'heure locale, auquel on a soustrait 1900.
+Un entier représentant l'année pour la date indiquée selon l'heure locale, auquel on a soustrait 1900. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
 
-## Description
+- Pour les années supérieures ou égales à 2000, la valeur est 100 ou plus. Par exemple, si l'année est 2026, `getYear()` retourne 126.
+- Pour les années comprises entre 1900 et 1999 inclus, la valeur retournée par `getYear()` est comprise entre 0 et 99. Par exemple, si l'année est 1976, `getYear()` retourne 76.
+- Pour les années inférieures à 1900, la valeur retournée par `getYear()` est inférieure à 0. Par exemple, si l'année est 1800, `getYear()` retourne -100.
 
-La méthode `getYear()` renvoie l'année moins 1900&nbsp;; par conséquent&nbsp;:
-
-- Pour les années supérieures ou égales à 2000, la valeur renvoyée par `getYear()` est supérieure ou égale à 100. Par exemple, si l'année est 2026, `getYear()` renvoie 126.
-- Pour les années entre 1900 et 1999 incluses, la valeur renvoyée par `getYear()` est comprise entre 0 et 99. Par exemple, si l'année est 1976, `getYear()` renvoie 76.
-- Pour les années inférieures à 1900, la valeur renvoyée par `getYear()` est négative. Par exemple, si l'année est 1800, `getYear()` renvoie -100.
-
-Pour prendre en compte les années avant et après 2000, il vaut mieux utiliser {{jsxref("Date.getFullYear", "getFullYear()")}} au lieu de `getYear` afin que l'année soit spécifiée en entier.
-
-## Rétrocompatibilité
-
-### Comportement dans JavaScript 1.2 et versions antérieures
-
-La méthode `getYear()` renvoyait soit une année en deux chiffres, soit une année en quatre chiffres&nbsp;:
-
-- Pour les années entre 1900 et 1999 incluses, la valeur renvoyée par `getYear()` était l'année moins 1900. Par exemple, si l'année était 1976, la valeur renvoyée était 76.
-- Pour les années inférieures à 1900 ou supérieures à 1999, la valeur renvoyée par `getYear` était l'année en quatre chiffres. Par exemple, si l'année était 1856, la valeur renvoyée était 1856. Si l'année était 2026, la valeur renvoyée était 2026.
+Cette méthode retourne essentiellement la valeur de {{JSxRef("Date/getFullYear", "getFullYear()")}} moins 1900. Il est préférable d'utiliser `getFullYear()` afin que l'année soit définie en entier.
 
 ## Exemples
 
@@ -43,8 +37,8 @@ La méthode `getYear()` renvoyait soit une année en deux chiffres, soit une ann
 La seconde instruction assigne la valeur 95 à la variable `annee`.
 
 ```js
-var noel = new Date("December 25, 1995 23:15:00");
-var annee = noel.getYear(); // renvoie 95
+const noel = new Date("December 25, 1995 23:15:00");
+const annee = noel.getYear(); // retourne 95
 ```
 
 ### Années après 1999
@@ -52,8 +46,8 @@ var annee = noel.getYear(); // renvoie 95
 La seconde instruction assigne la valeur 100 à la variable `annee`.
 
 ```js
-var noel = new Date("December 25, 2000 23:15:00");
-var annee = noel.getYear(); // renvoie 100
+const noel = new Date("December 25, 2000 23:15:00");
+const annee = noel.getYear(); // retourne 100
 ```
 
 ### Années avant 1900
@@ -61,18 +55,18 @@ var annee = noel.getYear(); // renvoie 100
 La seconde instruction assigne la valeur -100 à la variable `annee`.
 
 ```js
-var noel = new Date("December 25, 1800 23:15:00");
-var annee = noel.getYear(); // renvoie -100
+const noel = new Date("December 25, 1800 23:15:00");
+const annee = noel.getYear(); // retourne -100
 ```
 
-### Définition et lecture d'une année entre 1900 et 1999
+### Définir et lire une année entre 1900 et 1999
 
 La troisième instruction assigne la valeur 95 à la variable `annee`, représentant l'année 1995.
 
 ```js
-var noel = new Date("December 25, 1800 23:15:00");
-var noel.setYear(95);
-var annee = noel.getYear(); // renvoie 95
+const noel = new Date("December 25, 1800 23:15:00");
+const noel.setYear(95);
+const annee = noel.getYear(); // retourne 95
 ```
 
 ## Spécifications
@@ -85,6 +79,8 @@ var annee = noel.getYear(); // renvoie 95
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.getFullYear()")}}
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setYear()")}}
+- [Prothèse d'émulation de `Date.prototype.getYear` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-date)
+- [Prothèse d'émulation es-shims de `Date.prototype.getYear` <sup>(angl.)</sup>](https://www.npmjs.com/package/date.prototype.getyear)
+- La méthode {{JSxRef("Date.prototype.getFullYear()")}}
+- La méthode {{JSxRef("Date.prototype.getUTCFullYear()")}}
+- La méthode {{JSxRef("Date.prototype.setYear()")}}

@@ -1,117 +1,45 @@
 ---
 title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'interface `HTMLOptionElement` représente l'élément {{HTMLElement("option")}} et hérite de toutes les classes et méthodes de l'intreface {{domxref("HTMLElement")}} .
+L'interface **`HTMLOptionElement`** représente les éléments HTML {{HTMLElement("option")}} et hérite de toutes les propriétés et méthodes de l'interface {{DOMxRef("HTMLElement")}}.
 
-## _Propriétés_
+{{InheritanceDiagram}}
 
-_hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
+## Constructeur
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Nom</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>defaultSelected</code></td>
-      <td>{{domxref("Boolean")}}</td>
-      <td>
-        <p>
-          Contient la valeur initiale de l'attribut HTML
-          <a href="/fr/docs/Web/HTML/Element/option#selected"><code>selected</code></a>, indiquant si
-          l'option est sélectionnée par défaut ou non.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>{{domxref("Boolean")}}</td>
-      <td>
-        <p>
-          Retourne la valeur de l'attribut HTML
-          <a href="/fr/docs/Web/HTML/Element/option#disabled"><code>disabled</code></a>, cet attribut
-          indique que l'option ne peut pas être sélectionnée. Une option peut
-          aussi être désactivée lorsqu'elle est fille d'un élément
-          {{HTMLElement("optgroup")}} désactivé.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>form</code>{{readonlyInline}}</td>
-      <td>{{domxref("HTMLFormElement")}}</td>
-      <td>
-        <p>
-          Si l'option est une fille d'un élément
-          {{HTMLElement("select")}}, cette propriété à la même valeur que
-          l'attribut <code>form</code> de l'objet
-          {{DomXref("HTMLSelectElement")}}
-        </p>
-        <p>correspondant, sinon , sa valeur est <code>null</code>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>index</code>{{readonlyInline}}</td>
-      <td><code>long</code></td>
-      <td>
-        <p>
-          La position de l'option dans la liste d'options à laquelle elle
-          appartient, dans un ordre arborescent. Si l'option ne fait pas partie
-          d'une liste d'options , comme dans le cas où elle appartient à
-          l'élément {{HTMLElement("datalist")}} sa valeur est 0.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>label</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        <p>
-          Reflète la valeur de l'attribut
-          <a href="/fr/docs/Web/HTML/Element/option#label"><code>label</code></a>, qui fourni un
-          libellé à l'option. si cet attribut n'est pas spécifié, sa lecture
-          retourne le text de l'élément en question.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>selected</code></td>
-      <td>{{domxref("Boolean")}}</td>
-      <td><p>Indique si l'option est sélectionnée ou non .</p></td>
-    </tr>
-    <tr>
-      <td><code>text</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td><p>Contient le contenu texte de l'élément.</p></td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        <p>
-          Retourne la valeur de l'attribut HTML
-          <a href="/fr/docs/Web/HTML/Element/option#value"><code>value</code></a>, s'il existe, sinon
-          la valeur de la propriété {{domxref("Node.textContent")}} est
-          retournée.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+- {{DOMxRef("HTMLOptionElement.Option", "Option()")}}
+  - : Retourne un nouvel objet `HTMLOptionElement`. Il possède quatre paramètres&nbsp;: le texte à afficher, `text`, la valeur associée, `value`, la valeur de `defaultSelected` et la valeur de `selected`. Les trois derniers paramètres sont optionnels.
 
-## Méthodes
+## Propriétés d'instance
 
-_Hérite des méthodes de son parent , {{domxref("HTMLElement")}}._
+_Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-- {{domxref("HTMLOptionElement.Option()")}}
-  - : C'est le constructeur créant l'objet `HTMLOptionElement` object. il accepte quatre valeurs : le texte à afficher , `text`, la valeur associée au texte , `value`, la valeur du `defaultSelected`, et la valeur du `selected`. les trois dernières sont optionnelles.
+- {{DOMxRef("HTMLOptionElement.defaultSelected")}}
+  - : Prend la valeur `true` ou `false` et indique la valeur initiale de l'attribut HTML [`selected`](/fr/docs/Web/HTML/Reference/Elements/option#selected), indiquant si l'option est sélectionnée par défaut ou non.
+- {{DOMxRef("HTMLOptionElement.disabled")}}
+  - : Prend la valeur `true` ou `false` et représente la valeur de l'attribut HTML [`disabled`](/fr/docs/Web/HTML/Reference/Elements/option#disabled), qui indique que l'option n'est pas disponible à la sélection.
+- {{DOMxRef("HTMLOptionElement.form")}} {{ReadOnlyInline}}
+  - : Un objet {{DOMxRef("HTMLFormElement")}} représentant la même valeur que le formulaire (`form`) de l'élément HTML {{HTMLElement("select")}} correspondant, si l'option est un descendant d'un élément {{HTMLElement("select")}}, ou `null` si aucun n'est trouvé.
+- {{DOMxRef("HTMLOptionElement.index")}} {{ReadOnlyInline}}
+  - : Un entier `long` représentant la position de l'option dans la liste des options à laquelle elle appartient, selon l'ordre de l'arbre. Si l'option ne fait pas partie d'une liste d'options, comme lorsqu'elle fait partie d'un élément HTML {{HTMLElement("datalist")}}, la valeur est `0`.
+- {{DOMxRef("HTMLOptionElement.label")}}
+  - : Une chaîne de caractères reflétant la valeur de l'attribut HTML [`label`](/fr/docs/Web/HTML/Reference/Elements/option#label), qui fournit une étiquette pour l'option. Si cet attribut n'est pas spécifiquement défini, la lecture retourne le contenu {{DOMxRef("HTMLOptionElement.text", "text")}} de l'élément.
+- {{DOMxRef("HTMLOptionElement.selected")}}
+  - : Prend la valeur `true` ou `false` et indique si l'option est actuellement sélectionnée.
+- {{DOMxRef("HTMLOptionElement.text")}}
+  - : Une chaîne de caractères contenant le contenu textuel de l'élément.
+- {{DOMxRef("HTMLOptionElement.value")}}
+  - : Une chaîne de caractères reflétant la valeur de l'attribut HTML [`value`](/fr/docs/Web/HTML/Reference/Elements/option#value), si elle existe&nbsp;; sinon, reflète la valeur de la propriété {{DOMxRef("Node.textContent")}}.
+
+## Méthodes d'instance
+
+_N'implémente aucune méthode spécifique, mais hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 
 ## Spécifications
 
@@ -123,4 +51,12 @@ _Hérite des méthodes de son parent , {{domxref("HTMLElement")}}._
 
 ## Voir aussi
 
-- L'élément HTML qui implémente cette interface : {{ HTMLElement("option") }}.
+- L'élément HTML {{HTMLElement("option")}}
+- L'élément HTML {{HTMLElement("select")}}
+- L'élément HTML {{HTMLElement("datalist")}}
+- L'élément HTML {{HTMLElement("optgroup")}}
+- L'interface {{DOMxRef("HTMLOptionsCollection")}}
+- L'interface {{DOMxRef("HTMLSelectElement")}}
+- L'interface {{DOMxRef("HTMLOptGroupElement")}}
+- L'interface {{DOMxRef("HTMLElement")}}
+- L'interface {{DOMxRef("HTMLCollection")}}

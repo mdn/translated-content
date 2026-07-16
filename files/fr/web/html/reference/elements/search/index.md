@@ -1,15 +1,16 @@
 ---
-title: "<search>: l'élément de recherche"
+title: "Élément HTML `<search>` : l'élément de recherche"
+short-title: <search>
 slug: Web/HTML/Reference/Elements/search
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<search>`** est un conteneur représentant les parties du document ou de l'application avec des contrôles de formulaire ou d'autres contenus liés à l'exécution d'une opération de recherche ou de filtrage. L'élément `<search>` identifie sémantiquement le but du contenu de l'élément comme ayant des capacités de recherche ou de filtrage. La fonctionnalité de recherche ou de filtrage peut concerner le site Web ou l'application, la page Web ou le document actuel, ou l'ensemble d'Internet ou une sous-section de celui-ci.
 
 ## Attributs
 
-Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -17,13 +18,13 @@ L'élément `<search>` n'est pas destiné à présenter les résultats de recher
 
 ## Accessibilité
 
-L'élément `<search>` définit un repère [`search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role). Cela supprime le besoin d'ajouter `role=search` à un élément {{HTMLElement('form')}}.
+L'élément `<search>` définit un repère [`search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role). Cela supprime le besoin d'ajouter `role=search` à un élément {{HTMLElement("form")}}.
 
 ## Exemples
 
 ### Formulaire de recherche dans l'en-tête
 
-Cet exemple démontre l'utilisation de `<search>` comme conteneur pour une recherche dans l'en-tête d'un site Web afin d'effectuer une recherche sur l'ensemble du site. Le `<search>` est un conteneur sémantique pour le {{HTMLElement("form")}} qui soumet la requête de recherche saisie par l'utilisateur à un serveur.
+Cet exemple démontre l'utilisation de `<search>` comme conteneur pour une recherche dans l'en-tête d'un site Web afin d'effectuer une recherche sur l'ensemble du site. Le `<search>` est un conteneur sémantique pour le {{HTMLElement("form")}} qui soumet la requête de recherche saisie par l'utilisateur·ice à un serveur.
 
 #### HTML
 
@@ -42,7 +43,7 @@ Cet exemple démontre l'utilisation de `<search>` comme conteneur pour une reche
 
 #### Résultat
 
-{{EmbedLiveSample('Header search form')}}
+{{EmbedLiveSample("Formulaire de recherche dans l'en-tête")}}
 
 ### Application Web de recherche
 
@@ -75,14 +76,14 @@ Cet exemple démontre le contenu potentiel du DOM lors de l'inclusion dynamique 
 
 #### Résultat
 
-{{EmbedLiveSample('application_web_de_recherche')}}
+{{EmbedLiveSample("Application Web de recherche")}}
 
 > [!NOTE]
-> Rappelez-vous que certains utilisateurs n'ont pas JavaScript, et aucun de vos utilisateurs n'a JavaScript en cours d'exécution jusqu'à ce que le JavaScript soit téléchargé, analysé et exécuté avec succès. Assurez-vous que vos utilisateurs peuvent accéder au contenu de votre site avec JavaScript désactivé.
+> Rappelez-vous que certains utilisateur·ice·s n'ont pas JavaScript, et aucun de vos utilisateur·ice·s n'a JavaScript en cours d'exécution jusqu'à ce que le JavaScript soit téléchargé, analysé et exécuté avec succès. Assurez-vous que vos utilisateur·ice·s peuvent accéder au contenu de votre site avec JavaScript désactivé.
 
 ### Recherches multiples
 
-This example demonstrates a page with two search features. The first is a global site search located on the header. The second is a search and filter based on the page context, in our example a car search.
+Cet exemple montre une page comportant deux fonctionnalités de recherche. La première est une recherche globale du site, située dans l'en-tête. La seconde est une recherche et un filtrage basés sur le contexte de la page, dans notre exemple, une recherche de voitures.
 
 #### HTML
 
@@ -107,7 +108,7 @@ This example demonstrates a page with two search features. The first is a global
 
 #### Résultat
 
-{{EmbedLiveSample('recherches_multiples')}}
+{{EmbedLiveSample("Recherches multiples")}}
 
 ## Résumé technique
 
@@ -145,7 +146,7 @@ This example demonstrates a page with two search features. The first is a global
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -160,10 +161,5 @@ This example demonstrates a page with two search features. The first is a global
 
 ## Voir aussi
 
-- Autres éléments liés à la recherche&nbsp;:
-  - {{HTMLElement("header")}}
-  - {{HTMLElement("footer")}}
-  - {{HTMLElement("aside")}}
-  - {{HTMLElement("nav")}}
-  - {{HTMLElement("form")}}
-- [ARIA: le rôle de recherche](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)
+- Autres éléments liés à la recherche&nbsp;: {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, {{HTMLElement("form")}}
+- [ARIA: le rôle `search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)

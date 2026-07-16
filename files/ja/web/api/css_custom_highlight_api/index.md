@@ -2,7 +2,7 @@
 title: CSS カスタムハイライト API
 slug: Web/API/CSS_Custom_Highlight_API
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{DefaultAPISidebar("CSS Custom Highlight API")}}
@@ -22,7 +22,7 @@ CSS カスタムハイライト API を使用して、ウェブページ上の�
 1. 範囲 ({{domxref("Range")}}) オブジェクトを作成する。
 2. これらの範囲に対してハイライト ({{domxref("Highlight")}}) オブジェクトを作成する。
 3. ハイライトを {{domxref("HighlightRegistry")}} で登録する。
-4. ハイライトに対して {{cssxref("::highlight", "::highlight()")}} 擬似要素でスタイル設定する。
+4. ハイライトに対して {{cssxref("::highlight()")}} 擬似要素でスタイル設定する。
 
 ### 範囲を作成
 
@@ -84,7 +84,7 @@ CSS.highlights.clear();
 
 ### ハイライトをスタイル設定
 
-最後のステップは、登録したハイライトのスタイルを設定することです。これは、 {{cssxref("::highlight", "::highlight()")}} 擬似要素を使用して行います。例えば、前回のステップで登録した `user-1-highlight` ハイライトのスタイルを設定するには、次のようにします。
+最後のステップは、登録したハイライトのスタイルを設定することです。これは、 {{cssxref("::highlight()")}} 擬似要素を使用して行います。例えば、前回のステップで登録した `user-1-highlight` ハイライトのスタイルを設定するには、次のようにします。
 
 ```css
 ::highlight(user-1-highlight) {
@@ -172,9 +172,7 @@ query.addEventListener("input", () => {
 
   // すべてのテキストノードを反復処理し、一致するものを探す
   const ranges = allTextNodes
-    .map((el) => {
-      return { el, text: el.textContent.toLowerCase() };
-    })
+    .map((el) => ({ el, text: el.textContent.toLowerCase() }))
     .map(({ text, el }) => {
       const indices = [];
       let startPos = 0;
@@ -209,7 +207,7 @@ query.addEventListener("input", () => {
 
 ```css
 ::highlight(search-results) {
-  background-color: #f06;
+  background-color: #ff0066;
   color: white;
 }
 ```
@@ -233,3 +231,4 @@ query.addEventListener("input", () => {
 - [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)
 - HTML の [`contentEditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性
 - CSS {{cssxref("pseudo-elements", "擬似要素", "", "nocode")}}
+- [CSS カスタムハイライト API](/ja/docs/Web/CSS/Guides/Custom_highlight_API)モジュール

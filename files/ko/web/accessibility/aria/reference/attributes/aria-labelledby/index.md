@@ -76,7 +76,7 @@ l10n:
 
 4. `aria-labelledby` 속성은 값에 반복된 `id`를 무시합니다. 요소가 두 번 이상 참조되면, 첫 번째 참조만 처리됩니다. `aria-labelledby="attr attr rm13 rm13"`은 `aria-labelledby="attr rm13"`으로 처리됩니다.
 
-5. `aria-labelledby` 속성 값에는 심지어 보이지 않는 요소의 콘텐츠도 포함될 수 있습니다. 보조 기술 사용자에게 다른 사용자와 동일한 콘텐츠를 제공해야 하지만, HTML [`hidden`](/ko/docs/Web/HTML/Reference/Global_attributes/hidden) 속성, CSS [`display: none`](/ko/docs/Web/CSS/display), CSS [`visibility: hidden`](/ko/docs/Web/CSS/visibility)이 적용된 요소의 콘텐츠도 결정된 이름 문자열에 포함할 수 있습니다.
+5. `aria-labelledby` 속성 값에는 심지어 보이지 않는 요소의 콘텐츠도 포함될 수 있습니다. 보조 기술 사용자에게 다른 사용자와 동일한 콘텐츠를 제공해야 하지만, HTML [`hidden`](/ko/docs/Web/HTML/Reference/Global_attributes/hidden) 속성, CSS [`display: none`](/ko/docs/Web/CSS/display), CSS [`visibility: hidden`](/ko/docs/Web/CSS/Reference/Properties/visibility)이 적용된 요소의 콘텐츠도 결정된 이름 문자열에 포함할 수 있습니다.
 
 6. `aria-labelledby` 속성은 입력 요소의 값을 포함합니다. 값이 `<input>`을 참조하는 경우, 폼 컨트롤의 현재 값이 결정된 이름 문자열에 포함되며, 값이 업데이트되면 그에 따라 변경됩니다.
 

@@ -1,39 +1,52 @@
 ---
-title: Document.onbeforescriptexecute
+title: "Document : évènement beforescriptexecute"
+short-title: beforescriptexecute
 slug: Web/API/Document/beforescriptexecute_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{ApiRef("DOM")}} {{non-standard_header }}
+{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-## Résumé
-
-Lancé lorsque le code dans un élément {{HTMLElement("script")}} déclaré dans un document HTML est sur le point de s'exécuter. N'est pas déclenché si l'élément est ajouté dynamiquement, par exemple avec appendChild().
+L'évènement `beforescriptexecute` de l'interface {{DOMxRef("Document")}} se déclenche lorsqu'un élément HTML {{HTMLElement("script")}} statique est sur le point de commencer à s'exécuter. Il ne se déclenche pas si l'élément est ajouté dynamiquement, par exemple avec {{DOMxRef("Node.appendChild()", "appendChild()")}}.
 
 ## Syntaxe
 
-```js
-document.onbeforescriptexecute = funcRef;
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("beforescriptexecute", (event) => { })
+
+onbeforescriptexecute = (event) => { }
 ```
 
-_funcRef_ est une référence de fonction appelée lorsque l'évènement est lancé. L'attribut de la `target` (_cible_) d'évènement est défini dans l'{{domxref("Element")}} script qui est sur le point d'être exécuté.
+## Type d'évènement
 
-## Exemple
+Un objet {{DOMxRef("Event")}} générique.
+
+## Exemples
 
 ```js
 function starting(e) {
-  logMessage("Starting script with ID: " + e.target.id);
+  logMessage("Démarrage du script avec l'ID : " + e.target.id);
 }
 
-document.addEventListener("beforescriptexecute", starting, true);
+document.addEventListener("beforescriptexecute", starting);
+// ou
+document.onbeforescriptexecute = starting;
 ```
 
-[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/html/currentScript.html)
+[Voir l'exemple en direct <sup>(angl.)</sup>](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
-## Spécification
+## Spécifications
 
-- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+Ne fait partie d'aucune spécification.
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("Document.onafterscriptexecute")}}
-- {{domxref("Document.currentScript")}}
+- L'évènement {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} de `Document`
+- La propriété {{DOMxRef("Document.currentScript")}}

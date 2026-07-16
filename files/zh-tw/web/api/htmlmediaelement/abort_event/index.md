@@ -1,38 +1,59 @@
 ---
-title: abort
+title: HTMLMediaElement：abort 事件
+short-title: abort
 slug: Web/API/HTMLMediaElement/abort_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-當資源載入被拒絕時將會觸發**`abort`**事件。
+**`abort`** 事件會在資源未完全載入，且非因錯誤導致時觸發。
 
-## 一般資訊
+此事件不可取消且不會冒泡。
 
-- 規範
-  - : [DOM L3](https://www.w3.org/TR/uievents/#event-type-abort)
-- 介面
-  - : 若由使用者介面產生，為 UIEvent，否則為 Event。
-- 是否向上(冒泡)
-  - : 否
-- 是否為可取消
-  - : 否
-- 目標對象
-  - : Element
-- 預設行為
-  - : 無
+## 語法
 
-## 屬性
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名稱，或設定事件處理器屬性。
 
-| 屬性                            | 型態                                                                     | 描述                                                                                            |
-| ------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/zh-TW/docs/Web/API/EventTarget)                         | 事件的目標對象 (DOM 樹中最頂層的對象)。                                                         |
-| `type` {{readonlyInline}}       | [`DOMString`](/zh-TW/docs/Web/API/DOMString)                             | 事件的型態。                                                                                    |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | 事件是否向上冒泡。                                                                              |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | 事件是否能夠取消。                                                                              |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/zh-TW/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/zh-TW/docs/Web/API/Document/defaultView) (該文檔(Document)的`window`) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                         | 0.                                                                                              |
+```js-nolint
+addEventListener("abort", (event) => { })
+
+onabort = (event) => { }
+```
+
+## 事件類型
+
+通用的 {{domxref("Event")}}。
+
+## 範例
+
+```js
+const video = document.querySelector("video");
+const videoSrc = "https://example.org/path/to/video.webm";
+
+video.addEventListener("abort", () => {
+  console.log(`中止載入：${videoSrc}`);
+});
+
+const source = document.createElement("source");
+source.setAttribute("src", videoSrc);
+source.setAttribute("type", "video/webm");
+
+video.appendChild(source);
+```
 
 ## 規範
 
 {{Specifications}}
+
+## 瀏覽器相容性
+
+{{Compat}}
+
+## 參見
+
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

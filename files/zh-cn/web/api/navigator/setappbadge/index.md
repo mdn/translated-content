@@ -19,7 +19,7 @@ setAppBadge(contents)
 ### 参数
 
 - `contents` {{optional_inline}}
-  - : 一个将用作徽章值的{{jsxref("number", "数值", "", 1)}}。如果 `contents` 为 `0`，则徽章将设置为 `nothing`，表示已清除徽章。
+  - : 一个将用作徽章值的{{jsxref("Number", "数值", "", 1)}}。如果 `contents` 为 `0`，则徽章将设置为 `nothing`，表示已清除徽章。
 
 ### 返回值
 
@@ -30,7 +30,7 @@ setAppBadge(contents)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 如果文档未完全激活，则抛出该异常。
 - `SecurityError` {{domxref("DOMException")}}
-  - : 如果调用被[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)阻止，则抛出该异常。
+  - : 如果调用被[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)阻止，则抛出该异常。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 如果 {{domxref('PermissionStatus.state')}} 不是 `granted`，则抛出该异常。
 

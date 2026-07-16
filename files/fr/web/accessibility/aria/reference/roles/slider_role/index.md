@@ -2,9 +2,8 @@
 title: "ARIA : rôle slider"
 short-title: slider
 slug: Web/Accessibility/ARIA/Reference/Roles/slider_role
-original_slug: Web/Accessibility/ARIA/Roles/slider_role
 l10n:
-  sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 Le rôle `slider` définit un champ de saisie dans lequel l'utilisateur·ice sélectionne une valeur comprise dans une plage donnée.
@@ -15,19 +14,19 @@ Le rôle `slider` s'applique aux widgets de saisie de plage où l'utilisateur·i
 
 ### Le rôle `slider` comparé aux autres options de plage
 
-ARIA propose aux développeur·euse·s six rôles de widget de plage différents&nbsp;: [rôles de widget](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#2._rôles_de_widgets), dont `progressbar`, `meter` et `slider`.
+ARIA propose aux développeur·euse·s six rôles de composant de plage différents&nbsp;: [rôles de composant](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#2._rôles_de_composants), dont `progressbar`, `meter` et `slider`.
 
-Le rôle [`progressbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role), similaire à l'élément HTML {{HTMLElement('progress')}}, est une plage en lecture seule indiquant la progression d'une tâche dans une seule direction, comme la barre de chargement d'un téléversement de fichier qui atteint 100&nbsp;% une fois le chargement terminé.
+Le rôle [`progressbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role), similaire à l'élément HTML {{HTMLElement("progress")}}, est une plage en lecture seule indiquant la progression d'une tâche dans une seule direction, comme la barre de chargement d'un téléversement de fichier qui atteint 100&nbsp;% une fois le chargement terminé.
 
-Le rôle [`meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role), similaire à l'élément HTML {{HTMLElement('meter')}}, est une jauge en lecture seule indiquant la quantité de quelque chose dans une plage connue, comme l'indicateur de batterie d'un ordinateur ou la jauge d'essence d'une voiture.
+Le rôle [`meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role), similaire à l'élément HTML {{HTMLElement("meter")}}, est une jauge en lecture seule indiquant la quantité de quelque chose dans une plage connue, comme l'indicateur de batterie d'un ordinateur ou la jauge d'essence d'une voiture.
 
-Le rôle `slider`, similaire à l'élément HTML `input` de type `range` ([`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range)), est une plage de saisie en lecture et écriture. Les curseurs permettent à l'utilisateur·ice de sélectionner une valeur entre des valeurs minimale et maximale définies. La sélection s'effectue en déplaçant le curseur (<i lang="en">thumb</i> en anglais) le long d'un curseur horizontal ou vertical.
+Le rôle `slider`, similaire à l'élément HTML `input` de type `range` (`{{HTMLElement("input/range", "&lt;input type=\"range\"&gt;")}}`), est une plage de saisie en lecture et écriture. Les curseurs permettent à l'utilisateur·ice de sélectionner une valeur entre des valeurs minimale et maximale définies. La sélection s'effectue en déplaçant le curseur (<i lang="en">thumb</i> en anglais) le long d'un curseur horizontal ou vertical.
 
 Bien que ces trois plages partagent les mêmes états et propriétés ARIA, le rôle `slider` est le seul à être en lecture et écriture&nbsp;: c'est le seul dont la valeur change par l'interaction de l'utilisateur·ice. Il doit donc pouvoir recevoir la sélection. De plus, la sélection au clavier, les clics de souris et l'interaction tactile doivent être pris en charge.
 
 > [!WARNING]
-> Pour modifier la valeur d'un curseur, les technologies d'assistance tactiles doivent répondre aux gestes utilisateur·ice pour augmenter ou diminuer la valeur en synthétisant des événements clavier.
-> Testez entièrement les widgets curseur avec les technologies d'assistance sur les appareils où le tactile est le principal mode d'entrée avant d'utiliser le rôle `slider` (et tous les widgets de plage).
+> Pour modifier la valeur d'un curseur, les technologies d'assistance tactiles doivent répondre aux gestes utilisateur·ice pour augmenter ou diminuer la valeur en synthétisant des évènements clavier.
+> Testez entièrement les composants curseur avec les technologies d'assistance sur les appareils où le tactile est le principal mode d'entrée avant d'utiliser le rôle `slider` (et tous les composants de plage).
 
 ### Attributs communs
 
@@ -41,13 +40,13 @@ Pour le rôle `slider`, sauf si vous utilisez l'élément [`<input type="range">
 
 L'attribut optionnel [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) est utilisé lorsque la valeur numérique de `aria-valuenow` ne reflète pas la valeur réelle du curseur. Comme les valeurs minimale, maximale et courante sont toutes numériques, lorsque la signification de ces nombres n'est pas numérique, il faut inclure l'attribut `aria-valuetext` avec une chaîne de caractères définissant la valeur. Par exemple, pour un curseur de tailles de t‑shirt, l'attribut `aria-valuetext` doit passer de très petit à très grand au fur et à mesure que la valeur de `aria-valuenow` augmente.
 
-La valeur de `aria-valuetext` doit être mise à jour en même temps que la valeur ou `aria-valuenow`. Il n'existe pas d'attribut HTML équivalent pour `<input type="range">`, mais vous pouvez inclure `aria-valuetext` sur n'importe quel type {{htmlelement('input')}}. Les attributs ARIA sont pris en charge sur les éléments HTML sémantiques.
+La valeur de `aria-valuetext` doit être mise à jour en même temps que la valeur ou `aria-valuenow`. Il n'existe pas d'attribut HTML équivalent pour `<input type="range">`, mais vous pouvez inclure `aria-valuetext` sur n'importe quel type {{HTMLElement("input")}}. Les attributs ARIA sont pris en charge sur les éléments HTML sémantiques.
 
-Lorsque `aria-valuetext` est une fonctionnalité importante pour un curseur, envisagez d'utiliser {{HTMLElement('select')}} avec des éléments {{HTMLElement('option')}} à la place. Même si ce n'est pas visuellement une plage, chaque valeur d'option est plus accessible à tous·tes les utilisateur·ice·s, pas seulement à celles et ceux utilisant une technologie d'assistance.
+Lorsque `aria-valuetext` est une fonctionnalité importante pour un curseur, envisagez d'utiliser {{HTMLElement("select")}} avec des éléments {{HTMLElement("option")}} à la place. Même si ce n'est pas visuellement une plage, chaque valeur d'option est plus accessible à tous·tes les utilisateur·ice·s, pas seulement à celles et ceux utilisant une technologie d'assistance.
 
-Un nom accessible est **obligatoire**. Si le rôle de plage est appliqué à un élément HTML {{HTMLElement('input')}} (ou `<meter>` ou `<progress>`), le nom accessible peut provenir du {{HTMLElement('label')}} associé. Sinon, utilisez [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) si un libellé visible est présent ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) si aucun libellé visible n'est présent.
+Un nom accessible est **obligatoire**. Si le rôle de plage est appliqué à un élément HTML {{HTMLElement("input")}} (ou `<meter>` ou `<progress>`), le nom accessible peut provenir du {{HTMLElement("label")}} associé. Sinon, utilisez [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) si un libellé visible est présent ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) si aucun libellé visible n'est présent.
 
-Si vous n'utilisez pas l'élément HTML {{HTMLElement('input')}} pour créer votre curseur, incluez l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) pour le rendre sélectionnable. Parmi les trois types de plage, seul `slider` est interactif pour l'utilisateur·ice, et donc le seul qui doit pouvoir recevoir la sélection. La sélection doit être placée sur le curseur (<i lang="en">thumb</i> en anglais).
+Si vous n'utilisez pas l'élément HTML {{HTMLElement("input")}} pour créer votre curseur, incluez l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) pour le rendre sélectionnable. Parmi les trois types de plage, seul `slider` est interactif pour l'utilisateur·ice, et donc le seul qui doit pouvoir recevoir la sélection. La sélection doit être placée sur le curseur (<i lang="en">thumb</i> en anglais).
 
 Les curseurs ont une valeur implicite de [`aria-orientation`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) de `horizontal`. Cet attribut n'est pas pris en charge avec `meter` ou `progressbar`.
 
@@ -58,7 +57,7 @@ Contrairement aux rôles `meter` et `progressbar` en lecture seule, un `slider` 
 Le curseur représente la plage des valeurs possibles. La position du curseur (<i lang="en">thumb</i> en anglais) le long du curseur indique la valeur courante. Les actions utilisateur·ice·s à prendre en charge incluent le changement de valeur en faisant glisser le curseur ou en cliquant sur le curseur avec un dispositif de pointage, ainsi que l'utilisation des touches directionnelles telles que les flèches pour les utilisateur·ice·s de clavier. Voir [interactions au clavier](#interactions_au_clavier) ci‑dessous.
 
 > [!NOTE]
-> Il est recommandé d'utiliser l'élément natif [`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range) plutôt que le rôle `slider`. Les agents utilisateur·ice·s fournissent un widget stylisé pour l'élément de saisie de plage, basé sur la valeur courante par rapport aux valeurs minimale et maximale. Lorsque vous utilisez des éléments non sémantiques, toutes les fonctionnalités de l'élément sémantique natif doivent être recréées avec des attributs ARIA, du JavaScript et du CSS.
+> Il est recommandé d'utiliser l'élément natif [`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range) plutôt que le rôle `slider`. Les agents utilisateurs fournissent un composant mis en forme pour l'élément de saisie de plage, basé sur la valeur courante par rapport aux valeurs minimale et maximale. Lorsque vous utilisez des éléments non sémantiques, toutes les fonctionnalités de l'élément sémantique natif doivent être recréées avec des attributs ARIA, du JavaScript et du CSS.
 
 ### Plage avec plusieurs curseurs
 
@@ -86,7 +85,7 @@ Par exemple, considérez l'élément `slider` ci‑dessous qui contient un titre
 </div>
 ```
 
-Du point de vue de l'utilisateur·ice de technologie d'assistance, le titre n'existe pas puisque les extraits précédents sont équivalents à ce qui suit dans l'[arbre d'accessibilité](/fr/docs/Glossary/Accessibility_tree)&nbsp;:
+Du point de vue de l'utilisateur·ice de technologie d'assistance, le titre n'existe pas puisque les extraits précédents sont équivalents à ce qui suit dans [l'arbre d'accessibilité](/fr/docs/Glossary/Accessibility_tree)&nbsp;:
 
 ```html
 <div role="slider">Température en degrés Celsius</div>
@@ -164,9 +163,9 @@ La position du curseur (<i lang="en">thumb</i> en anglais) est calculée comme l
 }
 ```
 
-Pour que cet exemple fonctionne, il faut écrire un script pour gérer tous les événements clavier et pointeur, y compris les écouteurs d'événements pour `pointermove`, `pointerup`, `focus`, `blur` et `keydown`, et fournir des styles pour l'état par défaut et lorsque le curseur et le curseur reçoivent la sélection. La position du curseur, les valeurs de `aria-valuenow` et `aria-valuetext`, ainsi que le texte interne de l'élément avec l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) "temperatureValue" doivent être mis à jour à chaque fois que les touches <kbd>Flèche gauche</kbd>, <kbd>Flèche vers le bas</kbd>, <kbd>Flèche droite</kbd>, <kbd>Flèche vers le haut</kbd>, <kbd>Début</kbd>, <kbd>Fin</kbd>, et, optionnellement, <kbd>Page précédente</kbd> et <kbd>Page suivante</kbd> sont relâchées et lorsque l'utilisateur·ice fait glisser le curseur ou clique sur le curseur de température.
+Pour que cet exemple fonctionne, il faut écrire un script pour gérer tous les évènements clavier et pointeur, y compris les écouteurs d'évènements pour `pointermove`, `pointerup`, `focus`, `blur` et `keydown`, et fournir des styles pour l'état par défaut et lorsque le curseur et le curseur reçoivent la sélection. La position du curseur, les valeurs de `aria-valuenow` et `aria-valuetext`, ainsi que le texte interne de l'élément avec un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) `"temperatureValue"` doivent être mis à jour à chaque fois que les touches <kbd>Flèche gauche</kbd>, <kbd>Flèche vers le bas</kbd>, <kbd>Flèche droite</kbd>, <kbd>Flèche vers le haut</kbd>, <kbd>Début</kbd>, <kbd>Fin</kbd>, et, optionnellement, <kbd>Page précédente</kbd> et <kbd>Page suivante</kbd> sont relâchées et lorsque l'utilisateur·ice fait glisser le curseur ou clique sur le curseur de température.
 
-En utilisant du HTML sémantique, cela pourrait s'écrire ainsi&nbsp;:
+En utilisant du HTML sémantique, cela peut s'écrire ainsi&nbsp;:
 
 ```html
 <label for="temperature"> Température </label>
@@ -187,9 +186,9 @@ En utilisant du HTML sémantique, cela pourrait s'écrire ainsi&nbsp;:
 }
 ```
 
-En utilisant {{HTMLElement('input')}}, on obtient un widget de saisie de plage déjà stylisé, avec sélection clavier, styles de sélection, interactions clavier et mise à jour automatique de la valeur lors de l'interaction utilisateur·ice. Il reste à utiliser du JavaScript pour modifier `aria-valuetext` et la valeur de l'élément {{HTMLElement('output')}}.
+En utilisant {{HTMLElement("input")}}, on obtient un composant de saisie de plage déjà mis en forme, avec sélection clavier, styles de sélection, interactions clavier et mise à jour automatique de la valeur lors de l'interaction utilisateur·ice. Il reste à utiliser du JavaScript pour modifier `aria-valuetext` et la valeur de l'élément {{HTMLElement("output")}}.
 
-Il existe plusieurs façons de rendre un champ de saisie de plage vertical. Dans cet exemple, nous avons utilisé les [transformations CSS](/fr/docs/Web/CSS/transform).
+Il existe plusieurs façons de rendre un champ de saisie de plage vertical. Dans cet exemple, nous avons utilisé les [transformations CSS](/fr/docs/Web/CSS/Reference/Properties/transform).
 
 ## Bonnes pratiques
 
@@ -208,9 +207,9 @@ Il est recommandé d'utiliser un élément natif {{HTMLElement("input")}} de typ
 ## Voir aussi
 
 - [`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range)
-- L'élément HTML {{HTMLElement('progress')}}
-- L'élément HTML {{HTMLElement('meter')}}
-- Autres widgets de plage&nbsp;:
+- L'élément HTML {{HTMLElement("progress")}}
+- L'élément HTML {{HTMLElement("meter")}}
+- Autres composants de plage&nbsp;:
   - [ARIA&nbsp;: rôle `meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)
   - [ARIA&nbsp;: rôle `scrollbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
   - [ARIA&nbsp;: rôle `separator`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (si sélectionnable)

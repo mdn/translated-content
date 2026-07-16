@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance/Web_Performance_Basics", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance/Best_practices", "Learn_web_development/Extensions/Performance")}}
 
 ここまで、ウェブパフォーマンスの重要性についてお話してきました。ウェブパフォーマンスを最適化するために何をすべきかを学びました。しかし、クライアントや経営陣にパフォーマンスに優先順位をつけて投資するように説得するにはどうすればよいのでしょうか？この節では、意思決定者に投資をするように説得するための明確なビジネスケースの作成について説明します。
 

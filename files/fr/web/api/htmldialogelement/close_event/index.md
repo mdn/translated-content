@@ -1,5 +1,5 @@
 ---
-title: "HTMLDialogElement : événement close"
+title: "HTMLDialogElement : évènement close"
 short-title: close
 slug: Web/API/HTMLDialogElement/close_event
 l10n:
@@ -8,13 +8,13 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-L'événement `close` est déclenché sur un objet `HTMLDialogElement` lorsque l'élément {{HTMLElement("dialog")}} qu'il représente a été fermé.
+L'évènement `close` est déclenché sur un objet `HTMLDialogElement` lorsque l'élément {{HTMLElement("dialog")}} qu'il représente a été fermé.
 
-Cet événement n'est pas annulable et ne remonte pas dans la chaîne d'événements (ne se «&nbsp;propage&nbsp;» pas).
+Cet évènement n'est pas annulable et ne remonte pas dans la chaîne d'évènements (ne se «&nbsp;propage&nbsp;» pas).
 
 ## Syntaxe
 
-Utilisez le nom de l'événement dans des méthodes comme {{domxref("EventTarget.addEventListener", "addEventListener()")}}, ou affectez une fonction à la propriété gestionnaire d'événement.
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou affectez une fonction à la propriété gestionnaire d'évènement.
 
 ```js-nolint
 addEventListener("close", (event) => { })
@@ -22,62 +22,86 @@ addEventListener("close", (event) => { })
 onclose = (event) => { }
 ```
 
-## Type d'événement
+## Type d'évènement
 
-Un événement {{domxref("Event")}} générique.
+Un évènement {{DOMxRef("Event")}} générique.
 
 ## Exemples
 
-### Exemple interactif
+### Gérer les évènements `close`
+
+L'exemple suivant montre comment écouter les évènements `close` déclenchés par plusieurs méthodes différentes pour fermer une boîte de dialogue&nbsp;:
+
+- Appel de la méthode {{DOMxRef("HTMLDialogElement.close()", "close()")}}
+- Un formulaire avec `method="dialog"`. L'envoi du formulaire ferme le `dialog` et déclenche un évènement {{DOMxRef("HTMLFormElement/submit_event", "submit")}}, sans envoyer de données ni vider le formulaire
+- La touche <kbd>Échap</kbd>.
+  Voir l'évènement {{DOMxRef("HTMLDialogElement/cancel_event", "cancel")}}
 
 #### HTML
 
 ```html
-<dialog class="example-dialog">
+<dialog id="dialogue">
   <form method="dialog">
-    <button>Fermer via method="dialog"</button>
+    <button type="submit">Fermer avec method="dialog"</button>
   </form>
-  <button class="close">Fermer via la méthode .close()</button>
+  <p><button id="fermer">Fermer avec la méthode .close()</button></p>
   <p>Ou appuyez sur la touche <kbd>Échap</kbd></p>
 </dialog>
 
-<button class="open-dialog">Open dialog</button>
+<button id="ouvrir">Ouvrir la boîte de dialogue</button>
+```
 
-<div class="result"></div>
+```html hidden
+<pre id="journal"></pre>
 ```
 
 ```css hidden
-button,
-div {
-  margin: 0.5rem;
+#journal {
+  height: 170px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const elementJournal = document.getElementById("journal");
+function journaliser(texte, effacer = false) {
+  if (effacer) {
+    elementJournal.innerText = "";
+  }
+  elementJournal.innerText = `${elementJournal.innerText}${texte}\n`;
+  elementJournal.scrollTop = elementJournal.scrollHeight;
 }
 ```
 
 #### JavaScript
 
 ```js
-const result = document.querySelector(".result");
+const dialogue = document.getElementById("dialogue");
+const boutonOuvrir = document.getElementById("ouvrir");
+const boutonFermer = document.getElementById("fermer");
 
-const dialog = document.querySelector(".example-dialog");
-dialog.addEventListener("close", (event) => {
-  result.textContent = "La boîte de dialogue a été fermée";
+boutonOuvrir.addEventListener("click", () => {
+  journaliser("bouton ouvrir cliqué", true);
+  journaliser("dialogue showModal() appelé");
+  dialogue.showModal();
 });
 
-const openDialog = document.querySelector(".open-dialog");
-openDialog.addEventListener("click", () => {
-  dialog.showModal();
-  result.textContent = "";
+boutonFermer.addEventListener("click", () => {
+  journaliser("bouton fermer cliqué");
+  journaliser("dialogue close() appelé");
+  dialogue.close();
 });
 
-const closeButton = document.querySelector(".close");
-closeButton.addEventListener("click", () => {
-  dialog.close();
+dialogue.addEventListener("close", (event) => {
+  journaliser("évènement close du dialogue déclenché");
 });
 ```
 
 #### Résultat
 
-{{ EmbedLiveSample('Live_example', '100%', '200px') }}
+{{EmbedLiveSample("Gérer les évènements `close`", "100%", 200)}}
 
 ## Spécifications
 
@@ -90,4 +114,3 @@ closeButton.addEventListener("click", () => {
 ## Voir aussi
 
 - L'élément HTML {{HTMLElement("dialog")}}
-- L'interface {{domxref("Event")}}

@@ -1,73 +1,16 @@
 ---
-title: "<title>: 文書題名要素"
+title: HTML `<title>` 文書題名要素
+short-title: <title>
 slug: Web/HTML/Reference/Elements/title
-original_slug: Web/HTML/Element/title
 l10n:
-  sourceCommit: c6894b701b2297a7523d07855b47605c06f29c91
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
-
-**`<title>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{glossary("Browser", "ブラウザー")}}の題名バーやページのタブに表示される文書の題名を定義します。テキストのみを含めることができます。要素内のタグはすべて無視されます。
+**`<title>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{glossary("Browser", "ブラウザー")}}の題名バーやページのタブに表示される文書の題名を定義します。テキストのみを含めることができます。要素内に HTML タグが含まれている場合、それらもプレーンテキストとして扱われます。
 
 ```html
-<title>Grandma's Heavy Metal Festival Journal</title>
+<title>おばあちゃんのヘビメタ祭り通信</title>
 ```
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
-          >コンテンツカテゴリー</a
-        >
-      </th>
-      <td>
-        <a
-          href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
-          >メタデータコンテンツ</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        要素間の{{glossary("whitespace", "ホワイトスペース")}}ではないテキスト。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>
-        開始タグと終了タグの両方が必要。なお、
-        <code>&#x3C;/title></code>
-        を忘れると、ブラウザーがページの残りの部分を無視することがある。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        他に {{HTMLElement("title")}} 要素を含まない
-        {{HTMLElement("head")}} 要素。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLTitleElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 属性
 
@@ -79,7 +22,7 @@ l10n:
 
 ### ページの題名と SEO
 
-ページの題名の内容は、検索エンジン最適化 ({{glossary("SEO")}}) に著しい影響を与えることがあります。一般的に、長く、説明的な題名は、短く、一般的な題名よりも効果があります。題名の内容は、検索エンジンのアルゴリズムが検索結果にページを列挙する順序を決定するために使用する材料の一つです。また、題名は検索結果ページを眺めている読者の注意を引く最初の「フック」となります。
+ページの題名のコンテンツは、検索エンジン最適化 ({{glossary("SEO")}}) に著しい影響を与えることがあります。一般的に、長く、説明的な題名は、短く、一般的な題名よりも効果があります。題名のコンテンツは、検索エンジンのアルゴリズムが検索結果にページを列挙する順序を決定するために使用する材料の一つです。また、題名は検索結果ページを眺めている読者の注意を引く最初の「フック」となります。
 
 良い題名を作成するためのガイドラインやコツを示します。
 
@@ -88,15 +31,7 @@ l10n:
 - 「キーワード BLOB」を使用しないでください。題名が単なるキーワードの羅列であると、アルゴリズムはそのページの検索結果内の順位を落とすことがあります。
 - 題名はできるだけサイト内で固有のものにするようにしてください。複写や複写に近いものは検索結果を不正確にすることがあります。
 
-## 例
-
-```html
-<title>素敵で面白いこと</title>
-```
-
-この例ではページの題名全体 (ウィンドウの最上部またはウィンドウのタブに表示されるもの) を「素敵で面白いこと」にします。
-
-## アクセシビリティの考慮
+## アクセシビリティ
 
 正確で簡潔な題名を提供し、ページの目的を記述することが重要です。
 
@@ -122,6 +57,71 @@ l10n:
 - [MDN WCAG を理解する ― ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
 
+## 例
+
+```html
+<title>素敵で面白いこと</title>
+```
+
+この例ではページの題名全体 (ウィンドウの最上部またはウィンドウのタブに表示されるもの) を「素敵で面白いこと」にします。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>
+        <a
+          href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
+          >メタデータコンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        要素間の{{glossary("whitespace", "ホワイトスペース")}}ではないテキスト。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>
+        開始タグと終了タグの両方が必要。なお、
+        <code>&#x3C;/title></code>
+        を忘れると、ブラウザーがページの残りの部分を無視することがある。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        他に <code>&lt;title&gt;</code> 要素を含まない
+        {{HTMLElement("head")}} 要素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLTitleElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
 ## 仕様書
 
 {{Specifications}}
@@ -132,4 +132,4 @@ l10n:
 
 ## 関連情報
 
-- SVG の [`<title>`](/ja/docs/Web/SVG/Reference/Element/title) 要素
+- SVG の {{svgelement("title")}} 要素

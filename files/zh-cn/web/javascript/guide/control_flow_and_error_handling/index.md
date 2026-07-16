@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f0d7ee3bc3a398612c75063fe227a5dcc515f40b
 ---
 
-{{PreviousNext("Web/JavaScript/Guide/Grammar_and_Types", "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript 支持一套小巧的语句，特别是控制流语句，你可以用它在你的应用程序中实现大量的交互性功能。本章将对这些语句进行概览。
 

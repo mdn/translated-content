@@ -1,9 +1,9 @@
 ---
-title: HTML popover グローバル属性
+title: HTML `popover` グローバル属性
 short-title: popover
 slug: Web/HTML/Reference/Global_attributes/popover
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 **`popover`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、要素をポップオーバー要素として示すために使われます。
@@ -18,7 +18,7 @@ l10n:
     > [!NOTE]
     > `popover` に空の値を設定する（`popover` または `popover=""`）ことは、`popover="auto"` を設定することと同じです。
 
-- `"hint"` {{experimental_inline}}
+- `"hint"`
   - : [`hint`](/ja/docs/Web/API/Popover_API/Using#using_hint_popover_state) ポップオーバーは、表示時に `auto` ポップオーバーは閉じませんが、それ以外のヒントポップオーバーは閉じます。
     これらは簡単に閉じることができ、閉じるリクエストに応答します。
 
@@ -47,7 +47,9 @@ JavaScript を使用して制御することもできます。例えば、{{domx
 
 ## 例
 
-以下は、ポップオーバー要素を開くためのボタンを描画するものです。
+### 要素をポップオーバーにする
+
+以下のコードは、クリックするとポップオーバー要素が開くボタンを表示します。この動作は、HTML だけで実現できます。
 
 ```html
 <button popovertarget="my-popover">ポップオーバーを開く</button>
@@ -55,7 +57,126 @@ JavaScript を使用して制御することもできます。例えば、{{domx
 <div popover id="my-popover">私から皆さんへ、こんにちは！</div>
 ```
 
-{{EmbedLiveSample('Examples', 600, 200)}}
+{{EmbedLiveSample('basic_example_of_popover', 600, 100)}}
+
+### ポップオーバー内のポップオーバー
+
+この例では、ボタンをクリックすると、さらに内包されたポップオーバーが含まれているポップオーバーが開きます。これらの内包されたポップオーバーは、元々のメニューポップオーバーを閉じることなく開くことができます。
+
+#### HTML
+
+HTML の最初の部分では、いくつかのお気に入りを含むメニューであるメインのポップオーバーを開くための {{htmlElement("button")}} を作成します。
+
+```html
+<header>
+  <button popovertarget="menu">メニューを開く</button>
+</header>
+<main>
+  <!--  ページコンテンツをここへ配置  -->
+</main>
+```
+
+HTML の後半では、前回作成したボタンによって開かれるメニューポップオーバーを生成します。このメニューポップオーバーには、メニュー項目の箇条書きリストが含まれており、それぞれの項目には内包されたポップオーバーを開く情報ボタンが付いています。メニューポップオーバーでは `popover="auto"` を使用しています。これは、内包されたポップオーバーが開かれても、メニューポップオーバー自体は閉じられないということを意味します。
+
+```html-nolint
+<!-- menu popover -->
+<div id="menu" popover="auto">
+  <ul>
+    <li>
+      <a href="#">新規作成すること</a><button popovertarget="new-info">ⓘ</button>
+    </li>
+    <li>
+      <a href="#">開くこと</a><button popovertarget="open-info">ⓘ</button>
+    </li>
+    <li>
+      <a href="#">保存すること</a><button popovertarget="save-info">ⓘ</button>
+    </li>
+    <li>
+      <a href="#">閉じること</a><button popovertarget="close-info">ⓘ</button>
+    </li>
+  </ul>
+</div>
+```
+
+HTML の最後の部分では、それぞれのメニューアイテム用の情報ポップオーバーを作成します。各ポップオーバーには `popover="hint"` が記載されており、これによって元のメニューポップオーバーは閉じられず、それ以外にも開いている情報ポップオーバーのみが閉じられます。
+
+```html
+<!-- info popovers -->
+<div id="new-info" class="info-popover" popover="hint">
+  <strong>新規作成する</strong>ことについてのいくつかの情報です。
+</div>
+<div id="open-info" class="info-popover" popover="hint">
+  <strong>既存のものを開く</strong>ことについてのいくつかの情報です。
+</div>
+<div id="save-info" class="info-popover" popover="hint">
+  <strong>現在のものを保存する</strong>ことについてのいくつかの情報です。
+</div>
+<div id="close-info" class="info-popover" popover="hint">
+  <strong>現在のものを閉じる</strong>ことについてのいくつかの情報です。
+</div>
+```
+
+#### CSS
+
+```css hidden
+header {
+  display: flex;
+  justify-content: center;
+}
+header button {
+  margin: 0.4rem auto;
+}
+```
+
+メニューのポップオーバーを `<button>` の下記に配置するために[アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使用し、メニュー項目や情報ボタンのレイアウトには[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)を使用しました。
+
+```css
+#menu {
+  margin: 0;
+  margin-top: 0.4rem;
+  inset: auto;
+  position-area: bottom;
+}
+#menu ul {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem;
+  padding: 0.4rem;
+}
+#menu li {
+  grid-column: span 2;
+  display: grid;
+  grid: inherit;
+  grid-template-columns: subgrid;
+  gap: 1.4rem;
+}
+li [popovertarget] {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+li button {
+  border: none;
+  padding: 0;
+  background-color: inherit;
+}
+```
+
+ここでは、アンカー位置指定を使用して、各情報ボタンの右側に情報ポップオーバーが現れるようにしました。
+
+```css
+div.info-popover {
+  margin: 2rem;
+  inset: auto;
+  max-width: 300px;
+  position-area: right;
+}
+```
+
+#### 結果
+
+「メニューを開く」ボタンをクリックしてから、メニュー項目の横にある情報アイコン (ⓘ) をクリックし、情報ポップオーバーを開いてみてください。
+
+{{EmbedLiveSample('popover_hint', 600, 250)}}
 
 > [!NOTE]
 > MDN にあるポップオーバーの例の完全な例にアクセスするには、[ポップオーバー API 例のランディングページ](https://mdn.github.io/dom-examples/popover-api/)を参照してください。
@@ -73,5 +194,5 @@ JavaScript を使用して制御することもできます。例えば、{{domx
 - {{domxref("Popover API", "ポップオーバー API", "", "nocode")}}
 - HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性
 - HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性
-- CSS の [`::backdrop`](/ja/docs/Web/CSS/::backdrop) 擬似要素
-- CSS の [`:popover-open`](/ja/docs/Web/CSS/:popover-open) 擬似クラス
+- CSS の {{cssxref("::backdrop")}} 擬似要素
+- CSS の {{cssxref(":popover-open")}} 擬似クラス

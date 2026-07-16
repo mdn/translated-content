@@ -1,56 +1,57 @@
 ---
-title: DataView.prototype.setInt8()
+title: "DataView : méthode setInt8()"
+short-title: setInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`setInt8()`** des instances de {{JSxRef("DataView")}} prend un nombre et l'enregistre comme un entier signé sur 8 bits dans l'octet au décalage d'octet défini de cette `DataView`.
 
-La méthode **`setInt8()`** permet d'enregister un entier signé sur 8 bits à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
-
-{{InteractiveExample("JavaScript Demo: DataView.setInt8()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: DataView.setInt8()")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// Créer un ArrayBuffer avec une taille en octets
 const buffer = new ArrayBuffer(16);
 
 const view = new DataView(buffer);
-view.setInt8(1, 127); // Max signed 8-bit integer
+view.setInt8(1, 127); // Valeur maximale pour un entier signé sur 8 bits
 
 console.log(view.getInt8(1));
-// Expected output: 127
+// Résultat attendu : 127
 ```
 
 ## Syntaxe
 
-```js
-dataview.setInt8(positionOctet, valeur);
+```js-nolint
+setInt8(byteOffset, value)
 ```
 
 ### Paramètres
 
-- `positionOctet`
-  - : La position, exprimée en numéro d'octet, à partir du début de la vue à laquelle enregistrer la donnée.
-- `valeur`
-  - : La valeur à enregistrer.
+- `byteOffset`
+  - : Le décalage, en octets, depuis le début de la vue où enregistrer la donnée.
+- `value`
+  - : La valeur à enregistrer comme {{JSxRef("BigInt")}}. Pour savoir comment la valeur est encodée en octets, voir [Encodage et normalisation des valeurs](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#encodage_et_normalisation_des_valeurs).
 
 ### Valeur de retour
 
-{{jsxref("undefined")}}.
+Aucune ({{JSxRef("undefined")}}).
 
-### Erreurs renvoyées
+### Exceptions
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel que l'enregistrement sera fait en dehors de la vue.
+- {{JSxRef("RangeError")}}
+  - : Levée si le paramètre `byteOffset` est défini de façon à enregistrer au-delà de la fin de la vue.
 
 ## Exemples
 
-### Utilisation de la méthode `setInt8`
+### Utiliser la méthode `setInt8()`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setInt8(1, 3);
-dataview.getInt8(1); // 3
+const buffer = new ArrayBuffer(10);
+const dataview = new DataView(buffer);
+dataview.setInt8(0, 3);
+dataview.getInt8(0); // 3
 ```
 
 ## Spécifications
@@ -63,5 +64,7 @@ dataview.getInt8(1); // 3
 
 ## Voir aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
+- L'objet {{JSxRef("DataView")}}
+- L'objet {{JSxRef("ArrayBuffer")}}
+- L'objet {{JSxRef("Int8Array")}}

@@ -1,6 +1,9 @@
 ---
-title: Window.outerHeight
+title: "Window: outerHeight プロパティ"
+short-title: outerHeight
 slug: Web/API/Window/outerHeight
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef}}
@@ -17,13 +20,13 @@ slug: Web/API/Window/outerHeight
 
 以下の図は、 `outerHeight` と `innerHeight` の違いを示しています。
 
-![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
+![innerHeight と outerHeight の解説](firefoxinnervsouterheight2.png)
 
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 

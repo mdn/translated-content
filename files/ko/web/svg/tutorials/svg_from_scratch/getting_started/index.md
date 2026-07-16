@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
 original_slug: Web/SVG/Tutorial/Getting_Started
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}
 
 ### 간단한 예제
 
@@ -92,4 +92,4 @@ Vary: Accept-Encoding
 
 SVG를 사용하는데 있어 서버 구성 오류가 SVG로드에 실패하는 가장 일반적인 이유이기에 확인하십시오. 서버가 SVG 파일을 제공하면서 올바른 헤더를 보내도록 설정되어 있지 않다면 Firefox는 SVG파일의 마크업을 텍스트 또는 인코딩된 의미없는 값으로 표시하거나 뷰어에게 열어 볼 응용 프로그램을 선택하도록 요청할 가능성이 큽니다.
 
-{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}

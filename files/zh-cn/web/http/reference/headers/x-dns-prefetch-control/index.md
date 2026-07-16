@@ -7,9 +7,9 @@ slug: Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control
 
 因为预读取会在后台执行，所以 {{glossary("DNS")}} 很可能在链接对应的东西出现之前就已经解析完毕。这能够减少用户点击链接时的延迟。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## 语法
 

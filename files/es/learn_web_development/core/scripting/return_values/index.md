@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Return_values
 original_slug: Learn/JavaScript/Building_blocks/Return_values
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
 Hay un último concepto esencial para que discutamos en este curso, para cerrar nuestra visión de las funciones: — lo valores que se devuelven. Algunas funciones no devuelven un valor significativo después de su finalización, pero otras sí, y es importante comprender cuáles son sus valores, cómo utilizarlos en su código y cómo hacer que sus propias funciones personalizadas devuelvan valores útiles. Cubriremos todos estos a continuación.
 
@@ -126,8 +126,8 @@ Let's have a go at writing our own functions featuring return values.
    ```
 
    Here we are creating an `onchange` event handler that runs whenever the change event fires on the text input — that is, when a new value is entered into the text input, and submitted (enter a value then press tab for example). When this anonymous function runs, the existing value entered into the input is stored in the `num` variable.\
-    Next, we do a conditional test — if the entered value is not a number, we print an error message into the paragraph. The test looks at whether the expression `isNaN(num)` returns true. We use the [isNaN()](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function to test whether the num value is not a number — if so, it returns `true`, and if not, `false`.\
-    If the test returns `false`, the `num` value is a number, so we print out a sentence inside the paragraph element stating what the square, cube, and factorial of the number are. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to get the required values.
+   Next, we do a conditional test — if the entered value is not a number, we print an error message into the paragraph. The test looks at whether the expression `isNaN(num)` returns true. We use the [isNaN()](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function to test whether the num value is not a number — if so, it returns `true`, and if not, `false`.\
+   If the test returns `false`, the `num` value is a number, so we print out a sentence inside the paragraph element stating what the square, cube, and factorial of the number are. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to get the required values.
 
 4. Save your code, load it in a browser, and try it out.
 
@@ -152,4 +152,4 @@ If there is anything you didn't understand, feel free to read through the articl
 - [Functions in-depth](/es/docs/Web/JavaScript/Reference/Functions) — a detailed guide covering more advanced functions-related information.
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — a common JavaScript pattern is to pass a function into another function as an argument, which is then called inside the first function. This is a little beyond the scope of this course, but worth studying before too long.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}

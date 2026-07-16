@@ -3,8 +3,6 @@ title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 ---
 
-{{JSRef}}
-
 **`setSeconds()`** 方法根据本地时间设置一个日期对象的秒数。
 
 {{InteractiveExample("JavaScript Demo: Date.setSeconds()")}}

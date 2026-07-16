@@ -36,7 +36,7 @@ Il n'y a pas de règles strictes concernant les éléments que vous devez utilis
 
 N'utilisez `role="list"` et `role="listitem"` que si vous devez le faire — par exemple, si vous n'avez pas le contrôle sur votre HTML mais que vous êtes en mesure d'améliorer l'accessibilité de manière dynamique après coup avec JavaScript.
 
-Si possible, vous devez utiliser les éléments HTML sémantiques appropriés pour marquer une liste et ses éléments de liste — {{HTMLElement("ol")}}, {{HTMLElement("ul")}} et {{HTMLElement("li")}}. Par exemple, notre exemple ci-dessus devrait être réécrit comme suit&nbsp;:
+Si possible, vous devez utiliser les éléments HTML sémantiques appropriés pour marquer une liste et ses éléments de liste — {{HTMLElement("ol")}}, {{HTMLElement("ul")}} et {{HTMLElement("li")}}. Par exemple, notre exemple ci-dessus doit être réécrit comme suit&nbsp;:
 
 ```html
 <ul>
@@ -60,10 +60,10 @@ ou utilisez une liste ordonnée si l'ordre des éléments de la liste est import
 > Les rôles ARIA `list` / `listitem` ne font pas de distinction entre les listes ordonnées et non ordonnées.
 
 > [!NOTE]
-> Le style d'une liste avec `list-style: none;` en CSS supprime la sémantique de liste. L'ajout de `role="listitem"` renvoie la sémantique.
+> Le style d'une liste avec `list-style: none;` en CSS supprime la sémantique de liste. L'ajout de `role="listitem"` retourne la sémantique.
 
 > [!NOTE]
-> Si vous marquez une liste d'éléments qui fonctionneront comme une interface à onglets, vous devez plutôt utiliser les rôles [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role), [`tabpanel`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) et [`tablist`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role).
+> Si vous marquez une liste d'éléments qui fonctionnent comme une interface à onglets, vous devez plutôt utiliser les rôles [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role), [`tabpanel`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) et [`tablist`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role).
 
 ## Spécifications
 
@@ -71,9 +71,9 @@ ou utilisez une liste ordonnée si l'ordre des éléments de la liste est import
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('li')}}
-- L'élément HTML {{HTMLElement('ul')}}
-- L'élément HTML {{HTMLElement('ol')}}
+- L'élément HTML {{HTMLElement("li")}}
+- L'élément HTML {{HTMLElement("ul")}}
+- L'élément HTML {{HTMLElement("ol")}}
 - [ARIA&nbsp;: rôle `list`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
 - [ARIA&nbsp;: rôle `group`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
 - Le [Modèle d'Objet d'Accessibilité <sup>(angl.)</sup>](https://wicg.github.io/aom/spec/)

@@ -27,7 +27,7 @@ const sym3 = Symbol("foo");
 Symbol("foo") === Symbol("foo"); // false
 ```
 
-{{jsxref("Operators/new", "new")}} 연산자를 사용하면 {{jsxref("TypeError")}}가 발생합니다.
+{{jsxref("new")}} 연산자를 사용하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ```js example-bad
 const sym = new Symbol(); // TypeError
@@ -62,7 +62,7 @@ Symbol.keyFor(Symbol.for("tokenString")) === "tokenString"; // true
 
 ### 잘 알려진 심볼
 
-`Symbol` 생성자의 정적 속성은 모두 스스로가 심볼이며, 그 값은 렐름에 걸쳐 동일합니다. 이 심볼들을 '잘 알려진 심볼'이라고 부르며, JavaScript 내장 작업에서 일종의 "프로토콜"로서 동작합니다. 사용자는 이 심볼들로 언어 동작을 바꿀 수 있습니다. 예를 들어, 생성자 함수에 {{jsxref("Symbol.hasInstance")}}가 이름인 메서드가 있으면, {{jsxref("Operators/instanceof", "instanceof")}} 연산자는 동작 시 이 메서드를 사용합니다.
+`Symbol` 생성자의 정적 속성은 모두 스스로가 심볼이며, 그 값은 렐름에 걸쳐 동일합니다. 이 심볼들을 '잘 알려진 심볼'이라고 부르며, JavaScript 내장 작업에서 일종의 "프로토콜"로서 동작합니다. 사용자는 이 심볼들로 언어 동작을 바꿀 수 있습니다. 예를 들어, 생성자 함수에 {{jsxref("Symbol.hasInstance")}}가 이름인 메서드가 있으면, {{jsxref("instanceof")}} 연산자는 동작 시 이 메서드를 사용합니다.
 
 잘 알려진 심볼 전의 JavaScript는 일부 내장 작업에 일반적인 속성을 사용했습니다. 예컨대 [`JSON.stringify`](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 함수는 객체의 `toJSON()` 메서드를 사용하고, [`String`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/String) 함수는 객체의 `toString()`과 `valueOf()` 메서드를 사용합니다. 하지만, 언어가 포함하는 작업의 수가 점점 늘어감에 따라, 각각의 작업을 "마법 속성"으로 지정하면 하위 호환성을 깨뜨리고 언어의 동작을 추론하기 어렵게 만들 수 있습니다. 잘 알려진 심볼 덕분에, 보통 문자열 속성만 접근하는 일반적인 코드 입장에서 언어 동작 사용자 지정은 "보이지 않게" 됐습니다.
 
@@ -86,7 +86,7 @@ Symbol.keyFor(Symbol.for("tokenString")) === "tokenString"; // true
 - {{jsxref("Symbol.asyncIterator")}}
   - : 객체의 기본 AsyncIterator를 반환하는 메서드입니다. [`for await...of`](/ko/docs/Web/JavaScript/Reference/Statements/for-await...of)에서 사용합니다.
 - {{jsxref("Symbol.hasInstance")}}
-  - : 생성자 객체가 어떤 객체를 자신의 인스턴스로 인지하는지 판별하는 메서드입니다. {{jsxref("Operators/instanceof", "instanceof")}}에서 사용합니다.
+  - : 생성자 객체가 어떤 객체를 자신의 인스턴스로 인지하는지 판별하는 메서드입니다. {{jsxref("instanceof")}}에서 사용합니다.
 - {{jsxref("Symbol.isConcatSpreadable")}}
   - : 객체를 배열 요소로 평탄화할 수 있는지 나타내는 불리언 값입니다. {{jsxref("Array.prototype.concat()")}}에서 사용합니다.
 - {{jsxref("Symbol.iterator")}}

@@ -1,25 +1,36 @@
 ---
-title: Error.prototype.columnNumber
+title: "Error : propriété columnNumber"
+short-title: columnNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`columnNumber`** contient le numéro de la colonne, dans la ligne du fichier qui a déclenché l'erreur.
+La propriété **`columnNumber`** d'une instance de {{JSxRef("Error")}} contient le numéro de la colonne, dans la ligne du fichier qui a déclenché l'erreur.
+
+## Valeur
+
+Un entier positif.
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Exemples
 
-### Utiliser de `columnNumber`
+### Utiliser la propriété `columnNumber`
 
 ```js
-var e = new Error("Ne peut pas lire la donnée");
-throw e;
-console.log(e.columnNumber); // 0
+try {
+  throw new Error("Ne peut pas analyser l'entrée");
+} catch (err) {
+  console.log(err.columnNumber); // 9
+}
 ```
 
 ## Spécifications
 
-Ne fait partie d'aucune spécification. Non standard.
+Ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
@@ -27,6 +38,6 @@ Ne fait partie d'aucune spécification. Non standard.
 
 ## Voir aussi
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+- La propriété {{JSxRef("Error.prototype.stack")}} {{Non-standard_Inline}}
+- La propriété {{JSxRef("Error.prototype.lineNumber")}} {{Non-standard_Inline}}
+- La propriété {{JSxRef("Error.prototype.fileName")}} {{Non-standard_Inline}}

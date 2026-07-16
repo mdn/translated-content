@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-[HTML](/ko/docs/Web/HTML) **`<div>`** 요소는 플로우 콘텐츠를 담는 일반적인 컨테이너입니다. {{glossary("CSS")}}를 통해 직접 스타일을 적용하거나 [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout) 같은 레이아웃 모델이 부모 요소에 적용되지 않는 한, 해당 요소 자체는 콘텐츠나 레이아웃에 아무런 영향을 주지 않습니다.
+[HTML](/ko/docs/Web/HTML) **`<div>`** 요소는 플로우 콘텐츠를 담는 일반적인 컨테이너입니다. {{glossary("CSS")}}를 통해 직접 스타일을 적용하거나 [플렉스박스](/ko/docs/Web/CSS/Guides/Flexible_box_layout) 같은 레이아웃 모델이 부모 요소에 적용되지 않는 한, 해당 요소 자체는 콘텐츠나 레이아웃에 아무런 영향을 주지 않습니다.
 
 {{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
 
@@ -46,7 +46,7 @@ l10n:
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
-> [!NOTE] > `align` 속성은 더 이상 사용되지 않는 구식 속성이므로 사용하지 않습니다. 대신, `<div>` 요소를 정렬하거나 배치할 때는 [CSS Grid](/ko/docs/Web/CSS/CSS_grid_layout)나 [CSS Flexbox](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox) 같은 CSS 속성이나 기술을 사용하는 것이 좋습니다.
+> [!NOTE] > `align` 속성은 더 이상 사용되지 않는 구식 속성이므로 사용하지 않습니다. 대신, `<div>` 요소를 정렬하거나 배치할 때는 [CSS Grid](/ko/docs/Web/CSS/Guides/Grid_layout)나 [CSS Flexbox](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox) 같은 CSS 속성이나 기술을 사용하는 것이 좋습니다.
 
 ## 사용 일람
 

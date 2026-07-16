@@ -17,7 +17,7 @@ l10n:
 
 パフォーマンス項目のほとんどは、何もしなくても記録され、{{domxref("Performance.getEntries()")}} または {{domxref("PerformanceObserver")}} からアクセスできます。例えば、 {{domxref("PerformanceEventTiming")}} の項目は、設定された閾値より時間がかかるイベントに対して記録されます。しかし、パフォーマンス API では {{domxref("PerformanceMark")}} や {{domxref("PerformanceMeasure")}} インターフェイスを使用して、自分自身でカスタムイベントを定義したり記録したりすることも可能です。
 
-主となる {{domxref("Performance")}} インターフェイスは {{domxref("Window.performance", "Window")}} および {{domxref("WorkerGlobalScope.performance", "Worker")}} グローバルスコーの両方にあり、独自のパフォーマンス項目を追加したり、パフォーマンス項目をクリアしたり、パフォーマンス項目を取得したりすることが可能です。
+主となる {{domxref("Performance")}} インターフェイスは {{domxref("Window.performance", "Window")}} および {{domxref("WorkerGlobalScope.performance", "Worker")}} グローバルスコープの両方にあり、独自のパフォーマンス項目を追加したり、パフォーマンス項目をクリアしたり、パフォーマンス項目を取得したりすることが可能です。
 
 このインターフェイスでは、さまざまな種類のパフォーマンス項目が記録されるときに、それを待ち受けするために使用することができます。
 

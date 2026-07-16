@@ -1,80 +1,68 @@
 ---
-title: hashchange
+title: "Window : évènement hashchange"
+short-title: hashchange
 slug: Web/API/Window/hashchange_event
+l10n:
+  sourceCommit: 2ccbd062264d0a2a34f185a3386cb272f42c50f5
 ---
 
 {{APIRef}}
 
-L'événement `hashchange` est déclenché lorsque l'identificateur de fragment de l'URL a changé (la partie de l'URL qui suit le symbole #, y compris le symbole # lui-même).
+L'évènement **`hashchange`** de l'interface {{DOMxRef("Window")}} est déclenché lorsque l'identificateur de fragment de l'URL a changé (la partie de l'URL commençant par et suivant le symbole `#`).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td>Bulles</td>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <td>Annulable</td>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <td>Objets cibles</td>
-      <td>{{domxref("Window")}}</td>
-    </tr>
-    <tr>
-      <td>Interface</td>
-      <td>{{domxref("HashChangeEvent")}}</td>
-    </tr>
-    <tr>
-      <td>Action par défaut</td>
-      <td>Aucune</td>
-    </tr>
-  </tbody>
-</table>
+Cet évènement ne se déclenche pas lorsque le hash est modifié en utilisant {{DOMxRef("history.pushState()")}} ou {{DOMxRef("history.replaceState()")}}.
 
-## Propriétés
+## Syntaxe
 
-| Propriété                       | Type                       | Description                                           |
-| ------------------------------- | -------------------------- | ----------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Type de l'évènement                                   |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.            |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.              |
-| `oldURL` {{readonlyInline}}     | {{jsxref("String")}}       | The previous URL from which the window was navigated. |
-| newURL {{readonlyInline}}       | {{jsxref("String")}}       |                                                       |
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènements.
 
-Il existe plusieurs scripts de secours listés sur [cette page](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills). Fondamentalement, ces scripts vérifient le `location.hash` à intervalles réguliers. Voici une version qui n'autorise qu'un seul gestionnaire à être lié à la propriété `window.onhashchange`:
+```js-nolint
+addEventListener("hashchange", (event) => { })
+
+onhashchange = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("HashChangeEvent")}}. Hérite de {{DOMxRef("Event")}}.
+
+{{InheritanceDiagram("HashChangeEvent")}}
+
+## Propriétés de l'évènement
+
+- {{DOMxRef("HashChangeEvent.newURL")}} {{ReadOnlyInline}}
+  - : Une chaîne de caractères représentant la nouvelle URL vers laquelle la fenêtre navigue.
+- {{DOMxRef("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
+  - : Une chaîne de caractères représentant l'URL précédente à partir de laquelle la fenêtre a navigué.
+
+## Alias des gestionnaires d'évènements
+
+En plus de l'interface `Window`, la propriété du gestionnaire d'évènements `onhashchange` est également disponible sur les cibles suivantes&nbsp;:
+
+- {{DOMxRef("HTMLBodyElement")}}
+- {{DOMxRef("HTMLFrameSetElement")}}
+- {{DOMxRef("SVGSVGElement")}}
+
+## Exemples
+
+Vous pouvez utiliser l'évènement `hashchange` dans une méthode {{DOMxRef("EventTarget/addEventListener", "addEventListener")}} :
 
 ```js
-(function (window) {
-  // Sortir si le navigateur implémente cet événement
-  if ("onhashchange" in window) {
-    return;
+window.addEventListener("hashchange", () => {
+  console.log("Le hash a changé !");
+});
+```
+
+Ou utilisez la propriété du gestionnaire d'évènements `onhashchange`&nbsp;:
+
+```js
+function locationHashChanged() {
+  if (location.hash === "#cool-feature") {
+    console.log("Vous visitez une fonctionnalité intéressante !");
   }
+}
 
-  var location = window.location,
-    oldURL = location.href,
-    oldHash = location.hash;
-
-  // Vérifie la hash de la barre d'adresse toutes les 100ms
-  setInterval(function () {
-    var newURL = location.href,
-      newHash = location.hash;
-
-    // Si le hash a été changé et qu'un gestionnaire a été lié...
-    if (newHash != oldHash && typeof window.onhashchange === "function") {
-      // exécute le gestionnaire
-      window.onhashchange({
-        type: "hashchange",
-        oldURL: oldURL,
-        newURL: newURL,
-      });
-
-      oldURL = newURL;
-      oldHash = newHash;
-    }
-  }, 100);
-})(window);
+window.onhashchange = locationHashChanged;
 ```
 
 ## Spécifications
@@ -87,5 +75,4 @@ Il existe plusieurs scripts de secours listés sur [cette page](https://github.c
 
 ## Voir aussi
 
-- [`popstate`](/fr/docs/Web/API/Window/popstate_event)
-- [WindowEventHandlers.onhashchange](/fr/docs/Web/API/Window/hashchange_event)
+- L'évènement {{DOMxRef("Window/popstate_event", "popstate")}}

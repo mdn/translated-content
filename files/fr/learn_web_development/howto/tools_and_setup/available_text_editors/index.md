@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 original_slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Dans cet article, nous présentons les éléments principaux à connaître pour installer un éditeur de texte utilisé pour du développement web.
 
 <table class="standard-table">
@@ -14,7 +12,7 @@ Dans cet article, nous présentons les éléments principaux à connaître pour 
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez déjà connaître
-        <a href="/fr/Learn/What_software_do_I_need"
+        <a href="/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need"
           >les différents logiciels nécessaires pour construire un site web</a
         >.
       </td>
@@ -384,7 +382,7 @@ La plupart des éditeurs de texte supporte désormais la coloration du code. Ce 
 
 Cela dépendra avant tout de vos besoins et de ce que vous prévoyez de faire. Généralement, ces fonctionnalités s'avèrent plutôt utiles :
 
-- Chercher et remplacer, dans un ou plusieurs documents à la fois, notamment grâce aux {{Glossary("Expressions rationnelles", "expressions rationnelles")}} ou à d'autres motifs de recherche
+- Chercher et remplacer, dans un ou plusieurs documents à la fois, notamment grâce aux {{Glossary("Regular_expression", "expressions rationnelles")}} ou à d'autres motifs de recherche
 - Aller rapidement à une ligne donnée
 - Pouvoir voir deux parties d'un même document simultanément (utile pour les longs documents)
 - Voir le HTML tel qu'il est rendu dans le navigateur
@@ -439,8 +437,8 @@ Lorsque vous installez un nouvel éditeur de texte, il est probable que votre sy
 - Linux
   - [Ubuntu Unity](http://doc.ubuntu-fr.org/changer_l_association_par_defaut_des_fichiers_avec_les_applications)
   - [GNOME](http://www.generation-linux.fr/index.php?post/2008/02/10/59-associations-de-fichier-dans-gnome)
-  - [KDE](https://userbase.kde.org/Dolphin/File_Management/fr#Modifier_une_association_de_fichiers_.C3.A0_la_vol.C3.A9e-)
+  - [KDE](https://userbase.kde.org/Dolphin/File_Management/fr#Modifier_une_association_de_fichiers_à_la_volée)
 
 ## Prochaines étapes
 
-Maintenant que vous avez un bon éditeur de texte, vous pouvez prendre le temps de finaliser [votre environnement de travail](/fr/docs/Learn/Set_up_a_basic_working_environment) ou vous pouvez aussi démarrer tout de suite et écrire [votre première page web](/fr/docs/Learn/HTML/Write_a_simple_page_in_HTML).
+Maintenant que vous avez un bon éditeur de texte, vous pouvez prendre le temps de finaliser [votre environnement de travail](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) ou vous pouvez aussi démarrer tout de suite et écrire [votre première page web](/fr/docs/Learn_web_development/Getting_started/Your_first_website).

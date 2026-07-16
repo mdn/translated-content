@@ -24,8 +24,8 @@ Este artículo proporciona información sobre los cambios en Firefox 66 que afec
 ### CSS
 
 - [El Anclaje de desplazamiento](https://drafts.csswg.org/css-scroll-anchoring/) se ha implementado en Firefox Desktop (pero todavía no en dispositivos móviles), que incluye la {{cssxref("overflow-anchor")}} propiedad ([Error 1305957 en Firefox](https://bugzil.la/1305957)).
-- Hemos implementado el modificador de [selector de atributo](/es/docs/Web/CSS/Attribute_selectors) que distingue entre mayúsculas y minúsculas, `s` ([Error 1512386 en Firefox](https://bugzil.la/1512386)).
-- Varias [propiedades logicas](/es/docs/Web/CSS/CSS_logical_properties_and_values) abreviadas han aterrizado, junto con las propiedades del radio del borde relativo al flujo:
+- Hemos implementado el modificador de [selector de atributo](/es/docs/Web/CSS/Reference/Selectors/Attribute_selectors) que distingue entre mayúsculas y minúsculas, `s` ([Error 1512386 en Firefox](https://bugzil.la/1512386)).
+- Varias [propiedades logicas](/es/docs/Web/CSS/Guides/Logical_properties_and_values) abreviadas han aterrizado, junto con las propiedades del radio del borde relativo al flujo:
   - {{cssxref("padding-block")}} y {{cssxref("padding-inline")}} ([Error 1519847 en Firefox](https://bugzil.la/1519847)).
   - {{cssxref("margin-block")}} y {{cssxref("margin-inline")}} ([Error 1519944 en Firefox](https://bugzil.la/1519944)).
   - {{cssxref("inset")}}, {{cssxref("inset-block")}}, y {{cssxref("inset-inline")}} ([Error 1520229 en Firefox](https://bugzil.la/1520229)).

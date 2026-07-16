@@ -20,7 +20,7 @@ l10n:
 
 #### 廃止
 
-- [`-moz-user-modify`](/ja/docs/Web/CSS/user-modify) CSS プロパティを削除しました。このプロパティは、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) グローバル属性が支持されたため非推奨になっていました ([Firefox bug 1920118](https://bugzil.la/1920118))。
+- [`-moz-user-modify`](/ja/docs/Web/CSS/Reference/Properties/user-modify) CSS プロパティを削除しました。このプロパティは、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) グローバル属性が支持されたため非推奨になっていました ([Firefox bug 1920118](https://bugzil.la/1920118))。
 
 ### JavaScript
 
@@ -35,7 +35,7 @@ l10n:
 
 ### プライバシー
 
-- [厳格な強化型トラッキング防止機能](https://support.mozilla.org/ja/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) で、すべての [サードパーティ Cookie](/ja/docs/Web/Privacy/Third-party_cookies) をブロックするようになりました ([Firefox bug 1918037](https://bugzil.la/1918037))。
+- [厳格な強化型トラッキング防止機能](https://support.mozilla.org/ja/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) で、すべての [サードパーティ Cookie](/ja/docs/Web/Privacy/Guides/Third-party_cookies) をブロックするようになりました ([Firefox bug 1918037](https://bugzil.la/1918037))。
 
 ### API
 

@@ -11,4 +11,4 @@ CSS では**擬似要素**セレクターを使うことで、選択すべき特
 
 ## 関連情報
 
-- [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
+- [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

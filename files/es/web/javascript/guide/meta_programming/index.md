@@ -3,7 +3,7 @@ title: Metaprogramación
 slug: Web/JavaScript/Guide/Meta_programming
 ---
 
-{{jsSidebar("Guía de JavaScript")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
+{{jsSidebar("Guía de JavaScript")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Modules")}}
 
 A partir de ECMAScript 2015, JavaScript gana soporte para los objetos {{jsxref("Proxy")}} y {{jsxref("Reflect")}} lo cual te permite interceptar y definir un comportamiento personalizado para las operaciones fundamentales del lenguaje (por ejemplo, búsqueda de propiedades, asignación, enumeración, invocación de funciones, etc.). Con la ayuda de estos dos objetos, puedes programar en el metanivel de JavaScript.
 
@@ -33,7 +33,7 @@ Hay ejemplos adicionales disponibles en la página de referencia {{jsxref("Proxy
 
 Los siguientes términos se utilizan cuando se habla de la funcionalidad de los proxies.
 
-- {{jsxref("Global_Objects/Proxy/handler","handler","",1)}}
+- {{jsxref("Proxy/Proxy","handler","",1)}}
   - : Objeto marcador de posición que contiene trampas.
 - traps
   - : Los métodos que proporcionan acceso a la propiedad. (Esto es análogo al concepto de _trampas_ en los sistemas operativos).
@@ -56,12 +56,12 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
     </thead>
     <tbody>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}</td>
       <td>{{jsxref("Object.getPrototypeOf()")}}<br>
        {{jsxref("Reflect.getPrototypeOf()")}}<br>
        {{jsxref("Object/proto", "__proto__")}}<br>
        {{jsxref("Object.prototype.isPrototypeOf()")}}<br>
-       {{jsxref("Operators/instanceof", "instanceof")}}</td>
+       {{jsxref("instanceof")}}</td>
       <td>
        <ul>
         <li>El método <code>getPrototypeOf</code> regresa un objeto o <code>null</code>.</li>
@@ -70,25 +70,25 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
       </td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}</td>
       <td>{{jsxref("Object.setPrototypeOf()")}}<br>
        {{jsxref("Reflect.setPrototypeOf()")}}</td>
       <td>Si <code><var>target</var></code> no es extensible, el parámetro <code>prototype</code> debe tener el mismo valor que <code>Object.getPrototypeOf(<var>target</var>)</code>.</td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/is Extensible", "handler.isExtensible()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/isExtensible", "handler.isExtensible()")}}</td>
       <td>{{jsxref("Object.isExtensible()")}}<br>
        {{jsxref("Reflect.isExtensible()")}}</td>
       <td><code>Object.isExtensible(<var>proxy</var>)</code> debe devolver el mismo valor que <code>Object.isExtensible(<var>target</var>)</code>.</td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}</td>
       <td>{{jsxref("Object.preventExtensions()")}}<br>
        {{jsxref("Reflect.preventExtensions()")}}</td>
       <td><code>Object.preventExtensions(<var>proxy</var>)</code> solo devuelve <code>true</code> si <code>Object.isExtensible(<var>proxy</var>)</code> es <code>false</code>.</td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}</td>
       <td>{{jsxref("Object.getOwnPropertyDescriptor()")}}<br>
        {{jsxref("Reflect.getOwnPropertyDescriptor()")}}</td>
       <td>
@@ -103,7 +103,7 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
       </td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}</td>
       <td>{{jsxref("Object.defineProperty()")}}<br>
        {{jsxref("Reflect.defineProperty()")}}</td>
       <td>
@@ -117,7 +117,7 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
       </td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/has", "handler.has()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/has", "handler.has()")}}</td>
       <td>
        <dl>
         <dt>Consulta de propiedad</dt>
@@ -135,7 +135,7 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
       </td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/get", "handler.get()")}}</td>
       <td>
        <dl>
         <dt>Acceso a la propiedad</dt>
@@ -154,7 +154,7 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
       </td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/set", "handler.set()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/set", "handler.set()")}}</td>
       <td>
        <dl>
         <dt>Asignación de propiedad</dt>
@@ -174,7 +174,7 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
       </td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}</td>
       <td>
        <dl>
         <dt>Eliminación de propiedad</dt>
@@ -186,7 +186,7 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
       <td>Una propiedad no se puede eliminar si existe como una propiedad propia no configurable de <code><var>target</var></code>.</td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/enumerate", "handler.enumerate()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/enumerate", "handler.enumerate()")}}</td>
       <td>
        <dl>
         <dt>Enumeración de propiedad/<code>for...in</code>:</dt>
@@ -197,7 +197,7 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
       <td>El método <code>enumerate</code> debe devolver un objeto.</td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/ownKeys", "handler.ownKeys()")}}</td>
       <td>{{jsxref("Object.getOwnPropertyNames()")}}<br>
        {{jsxref("Object.getOwnPropertySymbols()")}}<br>
        {{jsxref("Object.keys()")}}<br>
@@ -212,14 +212,14 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
       </td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/apply", "handler.apply()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/apply", "handler.apply()")}}</td>
       <td><code>proxy(..args)</code><br>
        {{jsxref("Function.prototype.apply()")}} y {{jsxref("Function.prototype.call()")}}<br>
        {{jsxref("Reflect.apply()")}}</td>
       <td>No hay invariantes para el método <code><var>handler</var>.apply</code>.</td>
      </tr>
      <tr>
-      <td>{{jsxref("Global_Objects/Proxy/handler/construct", "handler.construct()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/construct", "handler.construct()")}}</td>
       <td><code>new proxy(...args)</code><br>
        {{jsxref("Reflect.construct()")}}</td>
       <td>El resultado debe ser un <code>Objeto</code>.</td>
@@ -255,7 +255,7 @@ typeof proxy; // "object", typeof no activa ninguna trampa
 
 ## Reflexión
 
-{{jsxref("Reflect")}} es un objeto integrado que proporciona métodos para operaciones JavaScript interceptables. Los métodos son los mismos que los de {{jsxref ("Global_Objects/Proxy/handler", "proxy handlers", "", "true")}}.
+{{jsxref("Reflect")}} es un objeto integrado que proporciona métodos para operaciones JavaScript interceptables. Los métodos son los mismos que los de {{jsxref ("Proxy/Proxy", "proxy handlers", "", "true")}}.
 
 `Reflect` no es un objeto función.
 
@@ -303,4 +303,4 @@ if (Reflect.defineProperty(target, property, attributes)) {
 }
 ```
 
-{{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{Previous("Web/JavaScript/Guide/Iterators_and_generators")}}

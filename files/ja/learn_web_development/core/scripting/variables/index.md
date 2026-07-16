@@ -1,13 +1,12 @@
 ---
 title: 必要な情報を保管する — 変数
+short-title: 変数
 slug: Learn_web_development/Core/Scripting/Variables
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 9d3d642daf9df9ece138fa39972edc5f7d6dcd6b
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Test_your_skills/Variables", "Learn_web_development/Core/Scripting")}}
 
 前回までの記事を読んで、高度な視点からその機能を概観し、JavaScript とは何なのか、それで何ができるのか、他のウェブの技術とどう一緒に使うのか、そして、どのような機能があるのかが分かったのではないでしょうか。この記事では、本当の基本に立ち返り、JavaScript の基本的な構成要素である変数について見てみましょう。
 
@@ -426,12 +425,8 @@ _可能であれば `const` を使用し、必要ならば `let` を使用する
 
 つまり、宣言時に変数を初期化でき、後で再代入する必要がない場合は、その変数を定数にします。
 
-## スキルテスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 変数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables)を見てください。
-
 ## まとめ
 
-ここまでで JavaScript の変数の作り方について理解して、それ以外にもそれなりの知識を得ましたね。次の記事では、数値に焦点を当てて、JavaScript の数値計算の基礎について見ていきます。
+ここまでで JavaScript の変数の作り方について理解して、それ以外にもそれなりの知識を得ましたね。次の記事では、この情報をどれだけ理解し、記憶できているかを調べるためのテストをいくつかご紹介します。
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Test_your_skills/Variables", "Learn_web_development/Core/Scripting")}}

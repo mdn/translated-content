@@ -13,7 +13,7 @@ l10n:
 以下では、ブラウザーで実行するデモを作成します。
 
 > [!NOTE]
-> {{SVGElement("use")}} 要素によって参照される要素は、その要素のスタイルを継承します。したがって、それらに異なるスタイルを適用するには、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)を使用しましょう。
+> {{SVGElement("use")}} 要素によって参照される要素は、その要素のスタイルを継承します。したがって、それらに異なるスタイルを適用するには、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を使用しましょう。
 
 ## 例
 

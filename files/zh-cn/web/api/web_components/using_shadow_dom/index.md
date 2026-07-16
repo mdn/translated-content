@@ -349,10 +349,10 @@ customElements.define("filled-circle", FilledCircle);
 - {{domxref("CSSStyleSheet.replace()")}}
 - {{domxref("CSSStyleSheet.replaceSync()")}}
 - {{HTMLelement("template")}}
-- [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块
+- [CSS 域](/zh-CN/docs/Web/CSS/Guides/Scoping)模块
 - {{CSSXref(":host")}}
 - {{CSSXref(":host_function", ":host()")}}
 - {{CSSXref(":host-context", ":host-context()")}}
 - {{CSSXref("::slotted", "::slotted()")}}
-- [CSS 影子部件](/zh-CN/docs/Web/CSS/CSS_shadow_parts)模块
+- [CSS 影子部件](/zh-CN/docs/Web/CSS/Guides/Shadow_parts)模块
 - {{CSSXref("::part")}}

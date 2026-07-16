@@ -56,7 +56,7 @@ input {
 
 `<fieldset>` 有几种特别的样式方案。
 
-它的 {{cssxref("display")}} 值默认为 `block`，因此建立了一个[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)。如果将 `<fieldset>` 的 `display` 值设置为行内级别，则会表现为 `inline-block`，否则会表现为 `block`。默认情况下 `<fieldset>` 会有 `2px` `groove` 的边界围绕着内容，还有一个默认的小的内边距，还有 {{cssxref("min-inline-size", "min-inline-size: min-content")}} 。
+它的 {{cssxref("display")}} 值默认为 `block`，因此建立了一个[区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)。如果将 `<fieldset>` 的 `display` 值设置为行内级别，则会表现为 `inline-block`，否则会表现为 `block`。默认情况下 `<fieldset>` 会有 `2px` `groove` 的边界围绕着内容，还有一个默认的小的内边距，还有 {{cssxref("min-inline-size", "min-inline-size: min-content")}} 。
 
 如果其中有 {{htmlelement("legend")}} 元素，会放在块级框起始处的边界上。`<legend>` 的宽度会根据内容尽量收缩（shrink-wrap），同时也建立了一个格式化上下文。`display` 值会块级化（例如 `display: inline` 表现为 `block`）。
 
@@ -65,7 +65,7 @@ input {
 你可以以任意方式自行设置 `<fieldset>` 和 `<legend>` 的样式以配合你的页面设计。
 
 > [!NOTE]
-> 截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 [flexbox](/zh-CN/docs/Glossary/Flexbox) 和 [grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 布局。[这个 GitHub issue](https://github.com/w3c/csswg-drafts/issues/321) 跟踪了这个 bug。
+> 截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 [flexbox](/zh-CN/docs/Glossary/Flexbox) 和 [grid](/zh-CN/docs/Web/CSS/Guides/Grid_layout) 布局。[这个 GitHub issue](https://github.com/w3c/csswg-drafts/issues/321) 跟踪了这个 bug。
 
 ## 示例
 
@@ -112,8 +112,8 @@ input {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容目录</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root">sectioning root</a>, <a href="/zh-CN/docs/HTML/Content_categories#form_listed">listed</a>, <a href="/zh-CN/docs/HTML/Content_categories#form-associated_content">form-associated</a> element, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容目录</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root">sectioning root</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#form_listed">listed</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#form-associated_content">form-associated</a> element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -125,7 +125,7 @@ input {
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">默认 ARIA role</th>

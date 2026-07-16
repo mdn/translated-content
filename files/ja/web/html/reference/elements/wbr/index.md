@@ -1,14 +1,12 @@
 ---
-title: "<wbr>: 改行可能要素"
+title: HTML `<wbr>` 改行機会要素
+short-title: <wbr>
 slug: Web/HTML/Reference/Elements/wbr
-original_slug: Web/HTML/Element/wbr
 l10n:
-  sourceCommit: a16e757b697f08201d91de021d523333df6287fc
+  sourceCommit: b7de5fa065848c0d703b6763df7a15d1eb908c91
 ---
 
-{{HTMLSidebar}}
-
-**`<wbr>`** は [HTML](/ja/docs/Web/HTML) の要素で、改行可能位置 — テキスト内でブラウザーが任意で改行してよい位置を表しますが、この改行規則は必要のない場合は改行を行いません。
+**`<wbr>`** は [HTML](/ja/docs/Web/HTML) の要素で、改行機会位置 — テキスト内でブラウザーが任意で改行してよい位置を表しますが、この改行規則は必要のない場合は改行を行いません。
 
 {{InteractiveExample("HTML デモ: &lt;wbr&gt;", "tabbed-shorter")}}
 
@@ -26,7 +24,7 @@ l10n:
   overflow: hidden;
   resize: horizontal;
   width: 9rem;
-  border: 2px dashed #999;
+  border: 2px dashed #999999;
 }
 ```
 
@@ -36,7 +34,7 @@ l10n:
 
 ## メモ
 
-UTF-8 エンコードを使用するページでは、 `<wbr>` 要素は `U+200B ZERO-WIDTH SPACE` コードポイントのように作用します。特に、この要素は Unicode bidi BN コードポイントのように作用するため、{{Glossary("bidi", "双方向性")}}には影響を与えません。 `<div dir=rtl>123,<wbr>456</div>` が 2 行に分かれないときは `456,123` ではなく `123,456` と表示されます。
+`<wbr>` 要素は `U+200B ZERO-WIDTH SPACE` コードポイントのように作用します。特に、この要素は Unicode bidi BN コードポイントのように作用するため、{{Glossary("bidi", "双方向性")}}には影響を与えません。 `<div dir=rtl>123,<wbr>456</div>` が 2 行に分かれないときは `456,123` ではなく `123,456` と表示されます。
 
 同じ理由で、 `<wbr>` 要素は改行位置でハイフンを生成しません。行末にのみハイフンを表示させるには、代わりにソフトハイフンの文字エンティティ (`&shy;`) を使用してください。
 
@@ -60,15 +58,15 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -79,14 +77,12 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>
-        この要素は{{Glossary("void element", "空要素")}}です。開始タグは必須であり、終了タグを記述してはなりません。
-      </td>
+      <td>開始タグは必須であり、終了タグを記述してはなりません。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -94,7 +90,7 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>

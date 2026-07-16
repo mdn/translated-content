@@ -1,7 +1,6 @@
 ---
 title: "XMLHttpRequest: load event"
 slug: Web/API/XMLHttpRequestEventTarget/load_event
-original_slug: Web/API/XMLHttpRequest/load_event
 ---
 
 {{APIRef}}

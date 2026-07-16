@@ -1,49 +1,52 @@
 ---
-title: Map.prototype.delete()
+title: "Map : méthode delete()"
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
+l10n:
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-{{JSRef}}
+La méthode **`delete()`** des instances de {{JSxRef("Map")}} supprime l'entrée définie par la clé de cette `Map`.
 
-La méthode **`delete()`** permet de retirer un élément donné d'un objet `Map` grâce à sa clé.
-
-{{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Map.prototype.delete()")}}
 
 ```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+const map = new Map();
+map.set("bar", "foo");
 
-console.log(map1.delete("bar"));
-// Expected result: true
-// True indicates successful removal
+console.log(map.delete("bar"));
+// Résultat attendu : true
+// True indique une suppression réussie
 
-console.log(map1.has("bar"));
-// Expected result: false
+console.log(map.has("bar"));
+// Résultat attendu : false
 ```
 
 ## Syntaxe
 
-```js
-maMap.delete(clé);
+```js-nolint
+delete(key)
 ```
 
 ### Paramètres
 
-- `clé`
-  - : Ce paramètre obligatoire correspond à la clé de l'élément qu'on souhaite retirer de l'objet `Map`.
+- `key`
+  - : La clé de l'entrée à supprimer de l'objet `Map`. Les clés des objets sont comparées par {{Glossary("Object_reference", "référence")}}, et pas par valeur.
 
 ### Valeur de retour
 
-Un booléen. La méthode renvoie `true` si un élément de l'objet `Map` a bien été retiré ou `false` si l'élément n'existe pas.
+`true` si une entrée a été supprimée avec succès de l'objet `Map`. `false` si la clé n'est pas trouvée dans l'objet `Map`.
 
 ## Exemples
 
+### Utiliser la méthode `delete()`
+
 ```js
-var maMap = new Map();
+const maMap = new Map();
 maMap.set("truc", "toto");
 
-maMap.delete("truc"); // Renvoie true. La suppression est OK.
-maMap.has("truc"); // Renvoie false. "truc" n'est plus présent.
+console.log(maMap.delete("truc")); // Retourne true. Supprimé avec succès.
+console.log(maMap.has("truc")); // Retourne false. L'élément "truc" n'est plus présent.
 ```
 
 ## Spécifications
@@ -56,4 +59,8 @@ maMap.has("truc"); // Renvoie false. "truc" n'est plus présent.
 
 ## Voir aussi
 
-- {{jsxref("Map")}}
+- L'objet {{JSxRef("Map")}}
+- La méthode {{JSxRef("Map.prototype.clear()")}}
+- La méthode {{JSxRef("Map.prototype.get()")}}
+- La méthode {{JSxRef("Map.prototype.set()")}}
+- La méthode {{JSxRef("Map.prototype.has()")}}

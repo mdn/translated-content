@@ -1,10 +1,12 @@
 ---
-title: "CSP : font-src"
+title: "Content-Security-Policy : directive font-src"
+short-title: font-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/font-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/font-src
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`font-src`** spécifie les sources valides pour les polices de caractères chargées avec [`@font-face`](/fr/docs/Web/CSS/@font-face).
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`font-src`** définit les sources valides pour les polices de caractères chargées avec la règle CSS {{CSSxRef("@font-face")}}.
 
 <table class="properties">
   <tbody>
@@ -14,10 +16,10 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
+      <td>{{Glossary("Fetch directive", "Directive de récupération")}}</td>
     </tr>
     <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+      <th scope="row">Solution de repli {{CSP("default-src")}}</th>
       <td>
         Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
       </td>
@@ -27,18 +29,20 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
 ```http
-Content-Security-Policy: font-src <source>;
-Content-Security-Policy: font-src <source> <source>;
+Content-Security-Policy: font-src 'none';
+Content-Security-Policy: font-src <source-expression-list>;
 ```
 
-### Sources
+Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+- `'none'`
+  - : Aucune ressource de ce type ne peut être chargée. Les guillemets simples sont obligatoires.
+- `<source-expression-list>`
+  - : Une liste de valeurs _d'expressions de source_ séparées par des espaces. Les ressources de ce type peuvent être chargées si elles correspondent à l'une des expressions de source données. Pour cette directive, les valeurs d'expression de source suivantes sont applicables&nbsp;:
+    - [`<host-source>`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
 ## Exemples
 
@@ -46,7 +50,7 @@ On notera que cet ensemble de valeurs peut être utilisé pour toutes les [direc
 
 Soit cet en-tête CSP&nbsp;:
 
-```bash
+```http
 Content-Security-Policy: font-src https://example.com/
 ```
 
@@ -55,11 +59,11 @@ Cette définition de police sera bloquée et ne se chargera pas&nbsp;:
 ```html
 <style>
   @font-face {
-    font-family: "MyFont";
-    src: url("https://not-example.com/font");
+    font-family: "MaPolice";
+    src: url("https://hors-example.com/font");
   }
   body {
-    font-family: "MyFont";
+    font-family: "MaPolice";
   }
 </style>
 ```
@@ -74,5 +78,5 @@ Cette définition de police sera bloquée et ne se chargera pas&nbsp;:
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
-- [`@font-face`](/fr/docs/Web/CSS/@font-face)
+- L'en-tête {{HTTPHeader("Content-Security-Policy")}}
+- La règle CSS {{CSSxRef("@font-face")}}

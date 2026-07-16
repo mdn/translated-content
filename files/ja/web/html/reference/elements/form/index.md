@@ -45,7 +45,7 @@ label {
 }
 ```
 
-CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)を使用すると、`<form>` 要素をフォーム内の{{domxref("HTMLFormElement.elements", "要素", "", 1)}}が有効であるかどうかに応じてスタイル付けすることができます。
+CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)を使用すると、`<form>` 要素をフォーム内の{{domxref("HTMLFormElement.elements", "要素", "", 1)}}が有効であるかどうかに応じてスタイル付けすることができます。
 
 ## 属性
 

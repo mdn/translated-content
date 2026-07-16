@@ -26,7 +26,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 この定義のよくある変形は、ファイル名および {{glossary("URL")}} 値で使用しても問題のない文字のみを利用できます。
 {{rfc("4648", "", 5)}} で定義されているこのバージョンでは、パディングを省略し、 `+` と `/` を `-` と `_` に置き換えます。
 
-パス部分またはクエリー引数にデータを格納しない場合は、このエンコード方式は必要ありません。例えば、[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) はどちらもないので、標準の Base64 エンコードを使用することができます。
+パス部分またはクエリー引数にデータを格納しない場合は、このエンコード方式は必要ありません。例えば、[data URL](/ja/docs/Web/URI/Reference/Schemes/data) はどちらもないので、標準の Base64 エンコードを使用することができます。
 
 ## 符号化によるサイズの増加
 
@@ -64,6 +64,6 @@ Browsers also natively provide two JavaScript functions for decoding and encodin
   - {{domxref("Window.atob()")}}（{{domxref("WorkerGlobalScope.atob()", "ワーカーでも利用可能", "", "nocode")}}）
   - {{domxref("Window.btoa()")}}（{{domxref("WorkerGlobalScope.btoa()", "ワーカーでも利用可能", "", "nocode")}}）
   - {{jsxref("Uint8Array")}}
-- [データ URL](/ja/docs/Web/URI/Reference/Schemes/data)
+- [data URL](/ja/docs/Web/URI/Reference/Schemes/data)
 - [Base64](https://ja.wikipedia.org/wiki/Base64)（ウィキペディア）
 - Base64 のアルゴリズム（[RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) の説明）

@@ -48,7 +48,7 @@ svg {
     <tr>
       <th scope="row">値</th>
       <td>
-        <strong><a href="/ja/docs/Web/CSS/string">&#x3C;string></a></strong>
+        <strong><a href="/ja/docs/Web/CSS/Reference/Values/string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -65,7 +65,7 @@ svg {
 ## CSS プロパティとして d を使用
 
 `d` はプレゼンテーション属性であるため、 CSS を使用して変更することもできます。
-このプロパティは、 [`path()`](/ja/docs/Web/CSS/basic-shape/path) または `none` のいずれかをとります。
+このプロパティは、 [`path()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/path) または `none` のいずれかをとります。
 
 以下の例では、要素の上にマウスを置いた際に、新しいパスを適用する方法を示しています。
 新しいパスは古いパスと同じですが、ハートを横切る線が追加されます。

@@ -3,7 +3,7 @@ title: Fin del juego
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
 Este es el quinto paso de 10 del [Gamedev Canvas tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes ver como debería quedar el código fuente después de completar esta lección en [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).
 
@@ -66,4 +66,4 @@ Aquí tienes el código que funciona para que lo compares con el tuyo:
 
 Lo estamos haciendo bastante bien hasta ahora y nuestro juego está empezando a despertar interés ahora que se puede perder. Pero todavía falta algo. Vamos a pasar al sexto capítulo, [Construir el muro de ladrillos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field), y crear algunos ladrillos para que la bola los destruya.
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}

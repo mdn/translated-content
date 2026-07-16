@@ -1,0 +1,134 @@
+---
+title: CSS `border-bottom-width` プロパティ
+short-title: border-bottom-width
+slug: Web/CSS/Reference/Properties/border-bottom-width
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+---
+
+**`border-bottom-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの下の境界の幅を設定します。
+
+{{InteractiveExample("CSS デモ: border-bottom-width")}}
+
+```css interactive-example-choice
+border-bottom-width: thick;
+```
+
+```css interactive-example-choice
+border-bottom-width: 2em;
+```
+
+```css interactive-example-choice
+border-bottom-width: 4px;
+```
+
+```css interactive-example-choice
+border-bottom-width: 2ex;
+```
+
+```css interactive-example-choice
+border-bottom-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    これはボックスと、それを囲む境界線です。
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: black;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
+
+## 構文
+
+```css
+/* キーワード値 */
+border-bottom-width: thin;
+border-bottom-width: medium;
+border-bottom-width: thick;
+
+/* <length> 値 */
+border-bottom-width: 10em;
+border-bottom-width: 3vmax;
+border-bottom-width: 6px;
+
+/* グローバルキーワード */
+border-bottom-width: inherit;
+border-bottom-width: initial;
+border-bottom-width: revert;
+border-bottom-width: revert-layer;
+border-bottom-width: unset;
+```
+
+### 値
+
+- `<line-width>`
+  - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
+    - `thin`
+      - `1px` と同じです。
+    - `medium`
+      - `3px` と同じです。
+    - `thick`
+      - `5px` と同じです。
+
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
+
+{{csssyntax}}
+
+## 例
+
+### 下境界の太さの比較
+
+#### HTML
+
+```html
+<div>要素 1</div>
+<div>要素 2</div>
+```
+
+#### CSS
+
+```css
+div {
+  border: 1px solid red;
+  margin: 1em 0;
+}
+
+div:nth-child(1) {
+  border-bottom-width: thick;
+}
+div:nth-child(2) {
+  border-bottom-width: 2em;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Comparing_bottom_border_widths', '100%')}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- 境界の太さに関する他の CSS プロパティ: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}, {{Cssxref("border-width")}}
+- 下の境界に関する他の CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-bottom")}}, {{Cssxref("border-bottom-style")}}, {{Cssxref("border-bottom-color")}}

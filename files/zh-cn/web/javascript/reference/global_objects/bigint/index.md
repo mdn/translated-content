@@ -3,8 +3,6 @@ title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 
-{{JSRef}}
-
 **`BigInt`** 是一种内置对象，它提供了一种方法来表示大于 `2^53 - 1` 的整数。这原本是 Javascript 中可以用 {{JSxRef("Number")}} 表示的最大数字。**`BigInt`** 可以表示任意大的整数。
 
 ## 描述
@@ -142,7 +140,7 @@ o === o; // true
 
 ### 条件
 
-`BigInt` 在需要转换成 {{jsxref("Global_Objects/Boolean", "Boolean")}} 的时表现跟 {{jsxref("Global_Objects/Number", "Number")}} 类似：如通过 {{jsxref("Global_Objects/Boolean", "Boolean")}} 函数转换；用于 {{jsxref("Operators/Logical_Operators", "Logical Operators")}} `||`, `&&`, 和 `!` 的操作数；或者用于在像 {{jsxref("Statements/if...else", "if statement")}} 这样的条件语句中。
+`BigInt` 在需要转换成 {{jsxref("Global_Objects/Boolean", "Boolean")}} 的时表现跟 {{jsxref("Global_Objects/Number", "Number")}} 类似：如通过 {{jsxref("Global_Objects/Boolean", "Boolean")}} 函数转换；用于{{jsxref("Operators", "二元逻辑运算符", "二元逻辑运算符", 1)}} `||`、`&&` 和 `!` 的操作数；或者用于在像 {{jsxref("Statements/if...else", "if statement")}} 这样的条件语句中。
 
 ```js
 if (0n) {

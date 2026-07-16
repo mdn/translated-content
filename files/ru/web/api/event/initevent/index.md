@@ -12,7 +12,7 @@ Events initialized in this way must have been created with the {{ domxref("Docum
 > [!NOTE]
 > Не используйте этот метод, т.к. он устаревший. (deprecated)
 >
-> Вместо него используйте такой специальный конструктор событий, как {{domxref("Event.Event", "Event()")}}. Страница [Creating and triggering events](/ru/docs/Web/Events/Creating_and_triggering_events) даст больше информации о возможностях использования.
+> Вместо него используйте такой специальный конструктор событий, как {{domxref("Event.Event", "Event()")}}. Страница [Creating and triggering events](/ru/docs/Web/API/Document_Object_Model/Events) даст больше информации о возможностях использования.
 
 ## Синтаксис
 
@@ -21,7 +21,7 @@ event.initEvent(type, bubbles, cancelable);
 ```
 
 - `type`
-  - : {{domxref("DOMString")}}, определяющая тип события.
+  - : {{jsxref("String")}}, определяющая тип события.
 - `bubbles`
   - : Is a {{jsxref("Boolean")}} deciding whether the event should bubble up through the event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }} will give its value.
 - `cancelable`

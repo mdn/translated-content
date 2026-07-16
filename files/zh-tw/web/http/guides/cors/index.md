@@ -9,7 +9,7 @@ l10n:
 
 一個跨來源請求的範例：從 `https://domain-a.com` 提供的前端 JavaScript 代碼使用 {{domxref("fetch()")}} 請求 `https://domain-b.com/data.json`。
 
-出於安全原因，瀏覽器限制從腳本發起的跨來源 HTTP 請求。例如，`fetch()` 和 {{domxref("XMLHttpRequest")}} 遵循[同源政策](/zh-TW/docs/Web/Security/Same-origin_policy)。這意味著，使用這些 API 的 Web 應用程序只能請求與加載該應用程序的相同來源的資源，除非來自其他來源的回應包含正確的 CORS 標頭。
+出於安全原因，瀏覽器限制從腳本發起的跨來源 HTTP 請求。例如，`fetch()` 和 {{domxref("XMLHttpRequest")}} 遵循[同源政策](/zh-TW/docs/Web/Security/Defenses/Same-origin_policy)。這意味著，使用這些 API 的 Web 應用程序只能請求與加載該應用程序的相同來源的資源，除非來自其他來源的回應包含正確的 CORS 標頭。
 
 ![CORS 機制示意圖](cors_principle.png)
 
@@ -23,7 +23,7 @@ CORS 機制支持瀏覽器和伺服器之間的安全跨來源請求和數據傳
 - Web 字體（在 CSS 中使用 `@font-face` 進行跨域字體使用），[以便伺服器可以部署僅允許跨來源加載並由被允許的網站使用的 TrueType 字體。](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - [WebGL 紋理](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - 使用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 繪製到畫布上的圖像/影片幀。
-- [從圖像生成的 CSS 形狀。](/zh-TW/docs/Web/CSS/CSS_shapes/Shapes_from_images)
+- [從圖像生成的 CSS 形狀。](/zh-TW/docs/Web/CSS/Guides/Shapes/From_images)
 
 這是一篇關於跨來源資源共享的通用文章，包含對必要 HTTP 標頭的討論。
 

@@ -15,9 +15,9 @@ MathML `<merror>` 要素は、エラーメッセージとしてコンテンツ�
 - href
   - : 指定された URI へのハイパーリンクの設定に使用されます。
 - mathbackground
-  - : 背景色。`#rgb`、`#rrggbb`および[HTML 色名](/ja/docs/Web/CSS/color_value#color_keywords)を使用できます。
+  - : 背景色。`#rgb`、`#rrggbb`および[HTML 色名](/ja/docs/Web/CSS/Reference/Values/color_value#color_keywords)を使用できます。
 - mathcolor
-  - : 文字色と分数の線の色。`#rgb`、`#rrggbb`および[HTML 色名](/ja/docs/Web/CSS/color_value#color_keywords)を使用できます。
+  - : 文字色と分数の線の色。`#rgb`、`#rrggbb`および[HTML 色名](/ja/docs/Web/CSS/Reference/Values/color_value#color_keywords)を使用できます。
 
 ## 例
 

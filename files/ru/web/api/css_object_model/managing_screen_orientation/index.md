@@ -10,7 +10,7 @@ slug: Web/API/CSS_Object_Model/Managing_screen_orientation
 сохранения или адаптации интерфейса веб-приложения.
 
 Управление ориентацией экрана доступно в CSS и JavaScript.
-Например, [использование медиавыражений](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries) позволяет контенту адаптироваться с помощью CSS в зависимости от того, в каком режиме просмотра находится браузер: альбомный (горизонтальный, когда ширина экрана больше высоты) или портретный (вертикальный, высота экрана больше ширины).
+Например, [использование медиавыражений](/ru/docs/Web/CSS/Guides/Media_queries/Using) позволяет контенту адаптироваться с помощью CSS в зависимости от того, в каком режиме просмотра находится браузер: альбомный (горизонтальный, когда ширина экрана больше высоты) или портретный (вертикальный, высота экрана больше ширины).
 
 Для определения положения экрана и его блокировки можно воспользоваться _JavaScript Screen orientation API_.
 
@@ -169,5 +169,5 @@ screen.lockOrientation("landscape");
 - {{domxref("Screen.lockOrientation()")}}
 - {{domxref("Screen.unlockOrientation()")}}
 - {{domxref("Screen.onorientationchange")}}
-- [The orientation media query](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)
+- [The orientation media query](/ru/docs/Web/CSS/Guides/Media_queries/Using#orientation)
 - [A short introduction to media queries in Firefox 3.5](https://hacks.mozilla.org/2009/06/media-queries/)

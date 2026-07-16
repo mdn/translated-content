@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics
 original_slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 ---
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Un navigateur web contient certains outils graphiques très puissants, comme le langage [SVG](/fr/docs/Web/SVG) ou les API permettant de dessiner sur des éléments HTML [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) (voir [l'API Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API)). Dans cet article, nous verrons une introduction au canevas et les ressources complémentaires pour approfondir ces connaissances.
 
@@ -12,7 +12,7 @@ Un navigateur web contient certains outils graphiques très puissants, comme le 
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Notions élémentaires de JavaScript (voir <a href="/fr/docs/Learn/JavaScript/First_steps">les premiers pas</a>, <a href="/fr/docs/Learn/JavaScript/Building_blocks">les blocs de construction</a>, <a href="/fr/docs/Learn/JavaScript/Objects">les objets en JavaScript</a>), et <a href="/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">les notions de bases pour les API côté client</a></td>
+      <td>Notions élémentaires de JavaScript (voir <a href="/fr/docs/Learn_web_development/Core/Scripting">les premiers pas</a>, <a href="/fr/docs/Learn_web_development/Core/Scripting/Building_blocks">les blocs de construction</a>, <a href="/fr/docs/Learn_web_development/Core/Scripting/Objects">les objets en JavaScript</a>), et <a href="/fr/docs/Learn_web_development/Core/Scripting/Client-side_web_APIs/Introduction">les notions de bases pour les API côté client</a></td>
     </tr>
     <tr>
       <th scope="row">Objectifs&nbsp;:</th>
@@ -23,7 +23,7 @@ Un navigateur web contient certains outils graphiques très puissants, comme le 
 
 ## Les graphismes sur le Web
 
-Nous en parlons dans le module [intégration multimédia en HTML](/fr/docs/Learn_web_development/Core/Structuring_content), le Web était initialement constitué uniquement de textes (ce qui peut sembler un peu austère). Les images ont été introduites par la suite, tout d'abord avec l'élément HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) puis avec les propriétés CSS comme [`background-image`](/fr/docs/Web/CSS/background-image), et la prise en charge du langage [SVG](/fr/docs/Web/SVG).
+Nous en parlons dans le module [intégration multimédia en HTML](/fr/docs/Learn_web_development/Core/Structuring_content), le Web était initialement constitué uniquement de textes (ce qui peut sembler un peu austère). Les images ont été introduites par la suite, tout d'abord avec l'élément HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) puis avec les propriétés CSS comme [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image), et la prise en charge du langage [SVG](/fr/docs/Web/SVG).
 
 Toutefois, ce n'était pas encore suffisant. Il était bien possible d'utiliser [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) et [JavaScript](/fr/docs/Learn_web_development/Core/Scripting) pour animer (et manipuler) les images vectorielles SVG (utilisant un format texte avec un langage de balise), mais il restait impossible de faire la même chose avec les images matricielles et les outils à disposition étaient limités. À cette époque, le Web ne permettait pas de créer des animations, des jeux ou des scènes 3D comme on pouvait en voir créés avec des langages plus bas niveau comme C++ ou Java.
 
@@ -314,7 +314,7 @@ On peut dessiner du texte à l'aide de deux méthodes&nbsp;:
 
 Ces deux méthodes prennent trois paramètres pour une utilisation simple&nbsp;: le texte à dessiner et les coordonnées (horizontale et verticale) du point de départ où commencer à dessiner le texte. Ce point de départ est le coin **inférieur gauche** de la **boîte du texte** (il s'agit de la boîte qui entoure le texte qui est dessiné). Attention, cela peut être source de confusion avec d'autres opérations de dessin qui commencent dans le coin supérieur gauche.
 
-Certaines propriétés permettent de contrôler certains aspects du rendu du texte comme [`font`](/fr/docs/Web/API/CanvasRenderingContext2D/font), qui permet d'indiquer la fonte, la taille, etc. La valeur de cette propriété utilise la même syntaxe que celle de la propriété CSS [`font`](/fr/docs/Web/CSS/font).
+Certaines propriétés permettent de contrôler certains aspects du rendu du texte comme [`font`](/fr/docs/Web/API/CanvasRenderingContext2D/font), qui permet d'indiquer la fonte, la taille, etc. La valeur de cette propriété utilise la même syntaxe que celle de la propriété CSS [`font`](/fr/docs/Web/CSS/Reference/Properties/font).
 
 Ajoutez le bloc suivant à la fin de votre script JavaScript&nbsp;:
 
@@ -353,7 +353,7 @@ Il est possible d'afficher des images externes sur le canevas. Il peut s'agir d'
    image.src = "firefox.png";
    ```
 
-   Ici, on crée un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) grâce au constructeur [`Image()`](/fr/docs/Web/API/HTMLImageElement/Image). L'objet qui est renvoyé a le même type que celui obtenu lorsqu'on récupère une référence à un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) avec les fonctions du DOM. On définit son attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#attr-src) afin qu'il pointe vers l'image du logo de Firefox. C'est à cet instant que le navigateur commence à charger l'image.
+   Ici, on crée un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) grâce au constructeur [`Image()`](/fr/docs/Web/API/HTMLImageElement/Image). L'objet qui est renvoyé a le même type que celui obtenu lorsqu'on récupère une référence à un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) avec les fonctions du DOM. On définit son attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#src) afin qu'il pointe vers l'image du logo de Firefox. C'est à cet instant que le navigateur commence à charger l'image.
 
 3. On peut alors essayer d'intégrer l'image avec la méthode `drawImage()`, mais il faut d'abord s'assurer que le fichier de l'image a bien été chargé, sinon le dessin échouera. Pour cela, on peut utiliser l'évènement `load` qui est uniquement déclenché après que le chargement de l'image est terminé. Ajoutez le bloc qui suit après les instructions précédentes&nbsp;:
 
@@ -518,7 +518,7 @@ Créons maintenant notre propre animation en recréant un personnage d'un ancien
    ctx.translate(width / 2, height / 2);
    ```
 
-3. Créez maintenant un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et faites pointer l'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#attr-src) vers l'image qu'on souhaite afficher. Ajoutez ensuite un gestionnaire d'évènement avec la propriété `onload` pour déclencher l'exécution de la fonction `draw()` lorsque l'image est chargée&nbsp;:
+3. Créez maintenant un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et faites pointer l'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#src) vers l'image qu'on souhaite afficher. Ajoutez ensuite un gestionnaire d'évènement avec la propriété `onload` pour déclencher l'exécution de la fonction `draw()` lorsque l'image est chargée&nbsp;:
 
    ```js
    const image = new Image();
@@ -830,4 +830,4 @@ Nous avons ici uniquement abordé les bases du canevas. Il existe bien plus de c
 - [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic)
   - : Cet exemple utilise un canevas afin de visualiser les données audio de l'API Web Audio en temps réel.
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

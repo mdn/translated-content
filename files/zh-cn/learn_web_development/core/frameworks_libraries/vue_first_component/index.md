@@ -16,7 +16,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
       <th scope="row">前提：</th>
       <td>
         <p>
-          熟悉<a href="/zh-CN/docs/learn/HTML">HTML</a>、<a
+          熟悉<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
             href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
             >CSS</a
           >、<a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a

@@ -1,34 +1,36 @@
 ---
-title: "Window: Evenement offline"
+title: "Window : évènement offline"
+short-title: offline
 slug: Web/API/Window/offline_event
+l10n:
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
 {{APIRef}}
 
-L'événement **`offline`** de l'interface {{domxref("Window")}} se déclenche lorsque le navigateur perd la connexion au réseau et la valeur de {{domxref("Navigator.onLine")}} bascule à `false`.
+L'évènement **`offline`** de l'interface {{DOMxRef("Window")}} se déclenche lorsque le navigateur perd l'accès au réseau et que la valeur de {{DOMxRef("Navigator.onLine")}} passe à `false`.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onoffline", "onoffline")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènements.
+
+```js-nolint
+addEventListener("offline", (event) => { })
+
+onoffline = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("Event")}} générique.
+
+## Alias des gestionnaires d'évènements
+
+En plus de l'interface `Window`, la propriété de gestionnaire d'évènements `onoffline` est également disponible sur les cibles suivantes&nbsp;:
+
+- {{DOMxRef("HTMLBodyElement")}}
+- {{DOMxRef("HTMLFrameSetElement")}}
+- {{DOMxRef("SVGSVGElement")}}
 
 ## Exemples
 
@@ -54,4 +56,4 @@ window.onoffline = (event) => {
 
 ## Voir aussi
 
-- [`online`](/fr/docs/Web/API/Window/online_event)
+- L'évènement {{DOMxRef("Window/online_event", "online")}}

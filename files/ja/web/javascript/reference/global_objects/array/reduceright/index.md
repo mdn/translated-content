@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.reduceRight()
+short-title: reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
@@ -46,7 +47,7 @@ reduceRight(callbackFn, initialValue)
       - : `reduceRight()` が呼び出された配列です。
 
 - `initialValue` {{optional_inline}}
-  - : `callbackFn` の最初の呼び出しのときに、アキュームレーターとして使用する値です。初期値がが渡されなかった場合は、配列の最後の要素が適用され、その要素が飛ばされます。また、 `reduceRight()` を空の配列に対して初期値なしで呼び出すと `TypeError` になります。
+  - : `callbackFn` の最初の呼び出しのときに、アキュームレーターとして使用する値です。初期値が渡されなかった場合は、配列の最後の要素が適用され、その要素が飛ばされます。また、 `reduceRight()` を空の配列に対して初期値なしで呼び出すと `TypeError` になります。
 
 ### 返値
 

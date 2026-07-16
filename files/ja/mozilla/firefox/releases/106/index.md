@@ -22,7 +22,7 @@ l10n:
 
 ### CSS
 
-- [@supports](/ja/docs/Web/CSS/@supports) アットルールで `font-tech()` および `font-format()` 関数をサポートしました。
+- [@supports](/ja/docs/Web/CSS/Reference/At-rules/@supports) アットルールで `font-tech()` および `font-format()` 関数をサポートしました。
   これらの関数で、指定したフォント技術やフォント形式をブラウザーがサポートしているかを確認できます。また、確認結果に基づいて CSS スタイルを適用できます ([Firefox バグ 1786493](https://bugzil.la/1786493))。
 
 #### 廃止

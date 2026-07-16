@@ -1,15 +1,18 @@
 ---
-title: DataTransfer.items
+title: "DataTransfer: items プロパティ"
+short-title: items
 slug: Web/API/DataTransfer/items
+l10n:
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-{{domxref("DataTransfer")}} インターフェイスの `items` プロパティは読み取り専用で、ドラッグ操作での{{domxref("DataTransferItem", "データ転送項目", "", 1)}}の{{domxref("DataTransferItemList", "リスト", "", 1)}}です。リストには操作中の項目ごとに 1 つの項目が含まれており、操作に項目がなかった場合はリストは空になります。
+`items` は {{domxref("DataTransfer")}} インターフェイスの読み取り専用プロパティで、ドラッグ操作での{{domxref("DataTransferItem", "データ転送項目", "", 1)}}の{{domxref("DataTransferItemList", "リスト", "", 1)}}です。リストには操作中のアイテムごとに 1 つの項目が含まれており、操作にアイテムがなかった場合はリストは空になります。
 
 ## 値
 
-ドラッグ操作でドラッグされる項目を表す {{domxref("DataTransferItem")}} オブジェクトを含む {{domxref("DataTransferItemList")}} オブジェクトで、ドラッグされるオブジェクトごとに 1 つのリスト項目があります。ドラッグ操作にデータがない場合、リストは空になります。
+ドラッグ操作でドラッグされるアイテムを表す {{domxref("DataTransferItem")}} オブジェクトを含む {{domxref("DataTransferItemList")}} オブジェクトで、ドラッグされるオブジェクトごとに 1 つのリスト項目があります。ドラッグ操作にデータがない場合、リストは空になります。
 
 ## 例
 
@@ -19,18 +22,13 @@ slug: Web/API/DataTransfer/items
 
 #### HTML
 
-```html
+```html-nolint
 <ul>
-  <li id="source1" draggable="true">
-    項目 1 をドロップゾーンにドラッグしてください
-  </li>
-  <li id="source2" draggable="true">
-    項目 2 をドロップゾーンにドラッグしてください
-  </li>
+  <li id="source1" draggable="true">アイテム 1 をドロップゾーンにドラッグ</li>
+  <li id="source2" draggable="true">アイテム 2 をドロップゾーンにドラッグ</li>
 </ul>
 <div id="target">ドロップゾーン</div>
 
-<pre id="output"></pre>
 <button id="reset">リセット</button>
 ```
 
@@ -45,18 +43,13 @@ div {
 #target {
   border: 1px solid black;
 }
-
-#output {
-  height: 100px;
-  overflow: scroll;
-}
 ```
 
 #### JavaScript
 
 ```js
 function dragstartHandler(ev) {
-  log(`dragstart: target.id = ${ev.target.id}`);
+  console.log(`dragstart: target.id = ${ev.target.id}`);
   // この要素の ID をドラッグの内容に追加し、ドロップハンドラーがどの
   // 要素をツリーに追加すればよいかを知ることができるようにします。
   ev.dataTransfer.setData("text/plain", ev.target.id);
@@ -69,9 +62,9 @@ function dropHandler(ev) {
   const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
   // 各項目の "kind" と "type" を表示する
-  if (ev.dataTransfer.items != null) {
+  if (ev.dataTransfer.items) {
     for (const item of ev.dataTransfer.items) {
-      log(`kind = ${item.kind}, type = ${item.type}`);
+      console.log(`kind = ${item.kind}, type = ${item.type}`);
     }
   }
 }
@@ -90,12 +83,6 @@ source1.addEventListener("dragstart", dragstartHandler);
 source2.addEventListener("dragstart", dragstartHandler);
 target.addEventListener("dragover", dragoverHandler);
 target.addEventListener("drop", dropHandler);
-
-function log(message) {
-  const output = document.querySelector("#output");
-  output.textContent = `${output.textContent}\n${message}`;
-  output.scrollTop = output.scrollHeight;
-}
 
 const reset = document.querySelector("#reset");
 reset.addEventListener("click", () => document.location.reload());
@@ -117,6 +104,4 @@ reset.addEventListener("click", () => document.location.reload());
 
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [ドラッグデータストアでの作業](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

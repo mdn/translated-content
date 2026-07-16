@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 original_slug: Learn/CSS/Building_blocks/Overflowing_content
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
 
 En este artículo veremos otro concepto importante en CSS: el **desbordamiento**. El desbordamiento es lo que sucede cuando hay demasiado contenido para que pueda caber cómodamente en una caja. En esta guía aprenderás qué es y cómo administrarlo.
 
@@ -15,17 +15,17 @@ En este artículo veremos otro concepto importante en CSS: el **desbordamiento**
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico</a
         >
         instalado, conocimientos básicos de
-        <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, conocimientos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y nociones de CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con el CSS</a>).
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos con el CSS</a>).
       </td>
     </tr>
     <tr>
@@ -110,4 +110,4 @@ Hay mucho que absorber en esta lección. ¿Recuerdas la información más import
 
 Este breve artículo ha introducido el concepto de desbordamiento; ahora comprendes que el CSS intenta no hacer invisible el desbordamiento de contenido, porque esto provoca la pérdida de datos. Has descubierto que puedes gestionar el desbordamiento potencial y también que debes probar tu trabajo para asegurarte de que no causa un desbordamiento problemático accidentalmente.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}

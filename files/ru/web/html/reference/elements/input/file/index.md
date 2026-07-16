@@ -252,7 +252,8 @@ var preview = document.querySelector(".preview");
 input.style.opacity = 0;
 ```
 
-> **Примечание:** [`opacity`](/ru/docs/Web/CSS/opacity) is used to hide the file input instead of [`visibility: hidden`](/ru/docs/Web/CSS/visibility) or [`display: none`](/ru/docs/Web/CSS/display), because assistive technology interprets the latter two styles to mean the file input isn't interactive.
+> [!NOTE]
+> [`opacity`](/ru/docs/Web/CSS/Reference/Properties/opacity) is used to hide the file input instead of [`visibility: hidden`](/ru/docs/Web/CSS/Reference/Properties/visibility) or [`display: none`](/ru/docs/Web/CSS/Reference/Properties/display), because assistive technology interprets the latter two styles to mean the file input isn't interactive.
 
 Next, we add an [event listener](/ru/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value changes (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
 
@@ -364,14 +365,14 @@ The example looks like this; have a play:
     </tr>
     <tr>
       <td><strong>Поддерживаемые общие атрибуты</strong></td>
-      <td><a href="/ru/docs/Web/HTML/Element/input#attr-required"><code>required</code></a></td>
+      <td><a href="/ru/docs/Web/HTML/Reference/Elements/input#attr-required"><code>required</code></a></td>
     </tr>
     <tr>
       <td><strong>Дополнительные атрибуты</strong></td>
       <td>
-        <a href="/ru/docs/Web/HTML/Element/input#attr-accept"><code>accept</code></a>,
+        <a href="/ru/docs/Web/HTML/Reference/Elements/input#attr-accept"><code>accept</code></a>,
         <a href="/ru/docs/Web/HTML/Attributes/capture"><code>capture</code></a>,
-        <a href="/ru/docs/Web/HTML/Element/input##attr-multiple"><code>multiple</code></a>
+        <a href="/ru/docs/Web/HTML/Reference/Elements/input##attr-multiple"><code>multiple</code></a>
       </td>
     </tr>
     <tr>

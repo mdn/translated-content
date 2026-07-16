@@ -9,7 +9,7 @@ l10n:
 
 ## 参见
 
-- [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment)模块
+- [CSS 盒子对齐](/zh-CN/docs/Web/CSS/Guides/Box_alignment)模块
 - 属性参考
   - CSS {{CSSXref("align-content")}} 属性
   - CSS {{CSSXref("align-items")}} 属性

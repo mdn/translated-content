@@ -1,10 +1,12 @@
 ---
-title: Referrer-Policy
+title: Referrer-Policy ヘッダー
+short-title: Referrer-Policy
 slug: Web/HTTP/Reference/Headers/Referrer-Policy
-original_slug: Web/HTTP/Headers/Referrer-Policy
+l10n:
+  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-**`Referrer-Policy`** は {{glossary("HTTP header", "HTTP ヘッダー")}}で、 ({{HTTPHeader("Referer")}} ヘッダーで送られる) [リファラー情報](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)をリクエストにどれだけ含めるかを制御します。 HTTP ヘッダーのほかに、 [HTML でこのポリシーを設定する](#html_との統合)こともできます。
+HTTP の **`Referrer-Policy`** は{{Glossary("response header", "レスポンスヘッダー")}}で、 [リファラー情報](/ja/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns)（{{HTTPHeader("Referer")}} ヘッダーで送られる）をリクエストにどれだけ含めるかを制御します。 HTTP ヘッダーのほかに、 [HTML でこのポリシーを設定する](#html_との統合)こともできます。
 
 <table class="properties">
   <tbody>
@@ -12,16 +14,12 @@ original_slug: Web/HTTP/Headers/Referrer-Policy
       <th scope="row">ヘッダー種別</th>
       <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
-      <td>いいえ</td>
-    </tr>
   </tbody>
 </table>
 
 ## 構文
 
-```
+```http
 Referrer-Policy: no-referrer
 Referrer-Policy: no-referrer-when-downgrade
 Referrer-Policy: origin
@@ -40,18 +38,18 @@ Referrer-Policy: unsafe-url
 - `no-referrer`
   - : {{HTTPHeader("Referer")}} ヘッダーが省略されます。送信されるリクエストにはリファラー情報が含まれません。
 - `no-referrer-when-downgrade`
-  - : プロトコルのセキュリティ水準が同一である、または向上する場合 (HTTP→HTTP, HTTP→HTTPS, HTTPS→HTTPS) は、{{glossary("origin", "オリジン")}}、パス、クエリー文字列が {{HTTPHeader("Referer")}} ヘッダーで送信されます。セキュリティ水準が低下するリクエスト (HTTPS→HTTP, HTTPS→file) では {{HTTPHeader("Referer")}} ヘッダーが送信されません。
+  - : プロトコルのセキュリティ水準が同一であるか向上する場合 (HTTP→HTTP, HTTP→HTTPS, HTTPS→HTTPS) は、{{glossary("origin", "オリジン")}}、パス、クエリー文字列が {{HTTPHeader("Referer")}} ヘッダーで送信されます。セキュリティ水準が低下するリクエスト (HTTPS→HTTP, HTTPS→file) では {{HTTPHeader("Referer")}} ヘッダーが送信されません。
 - `origin`
   - : {{glossary("origin", "オリジン")}}のみが {{HTTPHeader("Referer")}} ヘッダーで送信されます。
     たとえば、 `https://example.com/page.html` にある文書からは、 `https://example.com/` というリファラーが送信されます。
 - `origin-when-cross-origin`
-  - : 同一のプロトコル水準 (HTTP→HTTP, HTTPS→HTTPS) で{{glossary("Same-origin_policy", "同一オリジン")}}のリクエストを行う場合は{{glossary("origin", "オリジン")}}、パス、クエリー文字列を送信します。オリジン間リクエストや安全性の低下する移動先 (HTTPS→HTTP) ではオリジンのみを送信します。
+  - : 同一のプロトコル水準 (HTTP→HTTP, HTTPS→HTTPS) で{{glossary("Same-origin_policy", "同一オリジン")}}のリクエストを行う場合は{{glossary("origin", "オリジン")}}、パス、クエリー文字列を送信します。別オリジンへのリクエストや安全性の低下する移動先 (HTTPS→HTTP) ではオリジンのみを送信します。
 - `same-origin`
-  - : {{glossary("Same-origin_policy", "同一オリジン")}}のリクエストでは{{glossary("origin", "オリジン")}}、パス、クエリー文字列を送信します。オリジン間リクエストでは {{HTTPHeader("Referer")}} ヘッダーを送信しません。
+  - : {{glossary("Same-origin_policy", "同一オリジン")}}のリクエストでは{{glossary("origin", "オリジン")}}、パス、クエリー文字列を送信します。別オリジンへのリクエストでは {{HTTPHeader("Referer")}} ヘッダーを送信しません。
 - `strict-origin`
-  - : プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) にのみオリジンを送信します。安全性の低下する移動先 (HTTPS→HTTP) には {{HTTPHeader("Referer")}} ヘッダーを送信しません。
+  - : プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) にオリジンのみを送信します。安全性の低下する移動先 (HTTPS→HTTP) には {{HTTPHeader("Referer")}} ヘッダーを送信しません。
 - `strict-origin-when-cross-origin` (既定値)
-  - : 同一オリジンのリクエストを行う際はオリジン、パス、クエリー文字列を送信します。オリジン間リクエストでは、プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) にのみオリジンを送信します。安全性の低下する移動先 (HTTPS→HTTP) には {{HTTPHeader("Referer")}} ヘッダーを送信しません。
+  - : 同一オリジンのリクエストを行う際はオリジン、パス、クエリー文字列を送信します。別オリジンへのリクエストでは、プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) にオリジンのみを送信します。安全性の低下する移動先 (HTTPS→HTTP) には {{HTTPHeader("Referer")}} ヘッダーを送信しません。
 
     > [!NOTE]
     > これはポリシーが指定されていない場合や、与えられた値が無効であった場合の既定のポリシーです (仕様書改訂 [November 2020](https://github.com/whatwg/fetch/pull/1066) を参照) 。以前の既定値は `no-referrer-when-downgrade` でした。
@@ -73,13 +71,13 @@ HTML 内でリファラーポリシーを設定することもできます。例
 {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("script")}}, {{HTMLElement("link")}} の各要素に `referrerpolicy` 属性を指定し、個別のリクエストにリファラーポリシーを設定することもできます。
 
 ```html
-<a href="http://example.com" referrerpolicy="origin"></a>
+<a href="http://example.com" referrerpolicy="origin">…</a>
 ```
 
 他に、 `noreferrer` [link 関係](/ja/docs/Web/HTML/Reference/Attributes/rel)を `a`, `area`, `link` の各要素に設定することもできます。
 
 ```html
-<a href="http://example.com" rel="noreferrer"></a>
+<a href="http://example.com" rel="noreferrer">…</a>
 ```
 
 > [!WARNING]
@@ -102,11 +100,12 @@ CSS はスタイルシートから参照されるリソースにアクセスす�
 
 ### `no-referrer-when-downgrade`
 
-| 基点の文書                 | 移動先                          | 使用されるリファラー       |
-| -------------------------- | ------------------------------- | -------------------------- |
-| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
-| `https://example.com/page` | `https://mozilla.org`           | `https://example.com/page` |
-| `https://example.com/page` | **http**://example.com          | _（リファラーなし）_       |
+| 基点の文書                  | 移動先                          | 使用されるリファラー       |
+| --------------------------- | ------------------------------- | -------------------------- |
+| `https://example.com/page`  | `https://example.com/otherpage` | `https://example.com/page` |
+| `https://example.com/page`  | `https://mozilla.org`           | `https://example.com/page` |
+| `https://example.com/page`  | **http**://example.com          | _（リファラーなし）_       |
+| **http**://example.com/page | _すべての場所_                  | `http://example.com/page`  |
 
 ### `origin`
 
@@ -155,7 +154,7 @@ CSS はスタイルシートから参照されるリソースにアクセスす�
 
 必要なポリシーのブラウザーの対応状況が十分ではなく、代替ポリシーを設定したい場合は、カンマ区切りのリストを使用し、必要なポリシーを最後に指定してください。
 
-```
+```http
 Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 ```
 
@@ -170,7 +169,7 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 Firefox のユーザー設定では*既定の*リファラーポリシーを構成できます。設定名はバージョンにより異なります。
 
-- Firefox バージョン 59以降: `network.http.referer.defaultPolicy` (プライベートネットワークでは `network.http.referer.defaultPolicy.pbmode`)
+- Firefox バージョン 59 以降: `network.http.referer.defaultPolicy` (プライベートネットワークでは `network.http.referer.defaultPolicy.pbmode`)
 - Firefox バージョン 53 から 58: `network.http.referer.userControlPolicy`
 
 どちらも `0 = no-referrer`, `1 = same-origin`, `2 = strict-origin-when-cross-origin`, `3 = no-referrer-when-downgrade` と、同じ設定値をとります。
@@ -185,9 +184,8 @@ Firefox のユーザー設定では*既定の*リファラーポリシーを構�
 
 ## 関連情報
 
-- [ウェブセキュリティ > Referer ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
-- [Wikipedia の HTTP リファラ](https://ja.wikipedia.org/wiki/HTTPリファラ)
+- [ウェブセキュリティ > Referer ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns)
 - [Fetch](/ja/docs/Web/API/Fetch_API) の使用時: {{domxref("Request.referrerPolicy")}}
-- 廃止された {{HTTPHeader("Content-Security-Policy")}} の {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} ディレクティブ
-- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
+- [同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)
+- [HTTP リファラ](https://ja.wikipedia.org/wiki/HTTPリファラ)（ウィキペディア）
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

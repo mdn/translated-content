@@ -5,7 +5,7 @@ slug: Glossary/Codec
 
 {{GlossarySidebar}}
 
-Un _códec_ (acrónimo de "**_co_**dificador-**_dec_**odificador") es un programa, algoritmo, o dispositivo que codifica o decodifica un flujo de datos. Cada códec sabe cómo tratar un estándar específico de codificado o compresión.
+Un _códec_ (acrónimo de "***co***dificador-***dec***odificador") es un programa, algoritmo, o dispositivo que codifica o decodifica un flujo de datos. Cada códec sabe cómo tratar un estándar específico de codificado o compresión.
 
 ## Saber más
 

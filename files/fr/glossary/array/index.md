@@ -2,14 +2,12 @@
 title: Tableau (Array)
 slug: Glossary/Array
 l10n:
-  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Un **tableau** (ou une **liste** — selon le contexte) de l'anglais <i lang="en">array</i> est une collection ordonnée de données (soit de {{Glossary("primitive", "valeurs primitives")}}, soit d'{{Glossary("object", "objets")}}, selon le langage). Les tableaux servent à stocker plusieurs valeurs sous un même nom de variable. Une variable classique, en revanche, ne peut stocker qu'une seule valeur.
 
-Un tableau (ou liste selon les contextes, <i lang="en">array</i> en anglais) est une collection de données ([primitives](/fr/docs/Glossary/Primitive) ou [objets](/fr/docs/Glossary/Object) selon le langage) ordonnées. Les tableaux permettent de stocker plusieurs valeurs dans une structure affectée à une seule variable, à la différence des variables qui ne stockent qu'une valeur si on leur affecte une valeur primitive.
-
-Chaque élément d'un tableau est associé à un numéro, l'indice numérique, qui permet d'y accéder. En JavaScript, les tableaux sont numérotés à partir de l'indice zéro et peuvent être manipulés avec différentes [méthodes](/fr/docs/Glossary/Method).
+Chaque élément d'un tableau est associé à un numéro, l'indice numérique, qui permet d'y accéder. En JavaScript, les tableaux sont numérotés à partir de l'indice zéro et peuvent être manipulés avec différentes {{Glossary("Method", "méthodes")}}.
 
 Voici quelques exemples utilisant les tableaux en JavaScript.
 
@@ -25,5 +23,4 @@ console.log(tableauNomsChats[2]); // affiche : "Felix"
 
 ## Voir aussi
 
-- [Tableau (structure de données)](<https://fr.wikipedia.org/wiki/Tableau_(structure_de_données)>) sur Wikipédia
-- [La documentation MDN sur `Array` en JavaScript](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- L'objet global JavaScript {{JSxRef("Array")}}

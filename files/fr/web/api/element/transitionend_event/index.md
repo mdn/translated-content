@@ -5,7 +5,7 @@ slug: Web/API/Element/transitionend_event
 
 {{APIRef}}
 
-L'évènement **`transitionend`** est émis quand une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) a terminé. Dans le cas où une transition est supprimée avant d'avoir terminé, comme lorsqu'une {{cssxref("transition-property")}} est supprimée ou lorsque {{cssxref("display")}} reçoit la valeur `none`, l'évènement n'est pas généré.
+L'évènement **`transitionend`** est émis quand une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions/Using) a terminé. Dans le cas où une transition est supprimée avant d'avoir terminé, comme lorsqu'une {{cssxref("transition-property")}} est supprimée ou lorsque {{cssxref("display")}} reçoit la valeur `none`, l'évènement n'est pas généré.
 
 <table class="properties">
   <tbody>
@@ -25,7 +25,7 @@ L'évènement **`transitionend`** est émis quand une [transition CSS](/fr/docs/
       <th>Propriété gestionnaire d'évènement</th>
       <td>
         <code
-          ><a href="/fr/docs/Web/API/GlobalEventHandlers/ontransitionend"
+          ><a href="/fr/docs/Web/API/Element/transitionend_event"
             >ontransitionend</a
           ></code
         >

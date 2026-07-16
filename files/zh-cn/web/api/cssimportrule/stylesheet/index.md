@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("CSSImportRule")}} 接口的只读属性 **`styleSheet`** 返回由 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)指定的 CSS 样式表。这将以 {{domxref("CSSStyleSheet")}} 对象的形式呈现。
+{{domxref("CSSImportRule")}} 接口的只读属性 **`styleSheet`** 返回由 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)指定的 CSS 样式表。这将以 {{domxref("CSSStyleSheet")}} 对象的形式呈现。
 
-一个 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)总是有一个关联的样式表。
+一个 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)总是有一个关联的样式表。
 
 ## 值
 

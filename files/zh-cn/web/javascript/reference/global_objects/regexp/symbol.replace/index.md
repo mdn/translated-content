@@ -3,8 +3,6 @@ title: RegExp.prototype[Symbol.replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace
 ---
 
-{{JSRef}}
-
 {{jsxref("RegExp")}} 实例的 **`[Symbol.replace]()`** 方法指定了 [`String.prototype.replace()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 和 [`String.prototype.replaceAll()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) 在传入作为模式的正则表达式时的行为。
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype[SYmbol.replace]()")}}

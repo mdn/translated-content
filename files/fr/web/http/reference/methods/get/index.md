@@ -2,7 +2,6 @@
 title: Méthode de requête GET
 short-title: GET
 slug: Web/HTTP/Reference/Methods/GET
-original_slug: Web/HTTP/Methods/GET
 l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
@@ -53,7 +52,7 @@ GET <request-target>["?"<query>] HTTP/1.1
 
 - `<request-target>`
   - : Identifie la ressource cible de la requête lorsqu'elle est combinée avec l'information fournie par l'en-tête {{HTTPHeader("Host")}}.
-    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) pour les requêtes vers un serveur d'origine et d'une URL absolue pour les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.exemple.fr/chemin/vers/fichier.html`).
+    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) pour les requêtes vers un serveur d'origine et d'une URL absolue pour les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.example.com/chemin/vers/fichier.html`).
 - `<query>` {{Optional_Inline}}
   - : Un fragment de requête optionnel précédé d'un point d'interrogation `?`.
     Utilisé généralement pour fournir de l'information sous la forme de paires `clé=valeur`.
@@ -62,11 +61,11 @@ GET <request-target>["?"<query>] HTTP/1.1
 
 ### Récupération réussie d'une ressource
 
-La requête `GET` suivante demande la ressource située à `exemple.fr/contact`&nbsp;:
+La requête `GET` suivante demande la ressource située à `example.com/contact`&nbsp;:
 
 ```http
 GET /contact HTTP/1.1
-Host: exemple.fr
+Host: example.com
 User-Agent: curl/8.6.0
 Accept: */*
 ```

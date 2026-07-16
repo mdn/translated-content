@@ -136,7 +136,7 @@ ARIA の表ヘッダー、表フッター、表本体を作成するには、行
 </table>
 ```
 
-上記は、表の意味論的な書き方です。 ARIA のロールが必要になるのは、[`display` プロパティを `flex` や `grid`](/ja/docs/Web/CSS/display#accessibility_concerns) に設定するなどして、表のネイティブな意味論、つまり表の行が完全に破壊されてしまう場合だけです (訳注: ここでの grid は、CSS グリッドレイアウトというグリッドロールとは全く別のものであることに注意してください) 。
+上記は、表の意味論的な書き方です。 ARIA のロールが必要になるのは、[`display` プロパティを `flex` や `grid`](/ja/docs/Web/CSS/Reference/Properties/display#accessibility_concerns) に設定するなどして、表のネイティブな意味論、つまり表の行が完全に破壊されてしまう場合だけです (訳注: ここでの grid は、CSS グリッドレイアウトというグリッドロールとは全く別のものであることに注意してください) 。
 
 ### 追加された利点
 

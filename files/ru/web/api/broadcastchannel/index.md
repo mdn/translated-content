@@ -19,15 +19,15 @@ slug: Web/API/BroadcastChannel
 _Этот интерфейс также наследует свойства от своего родителя, {{domxref("EventTarget")}}._
 
 - {{domxref("BroadcastChannel.name")}}
-  - : Возвращает {{domxref("DOMString")}}, имя канала.
+  - : Возвращает {{jsxref("String")}}, имя канала.
 
 ### Обработчики событий
 
 - {{domxref("BroadcastChannel.onmessage")}}
-  - : свойство [`event handler`](/ru/docs/Web/Events/Event_handlers), определяющее функцию, которая будет запущена, когда произойдёт вызов события [`message`](/ru/docs/Web/API/BroadcastChannel/message_event) на этом объекте.
+  - : свойство [`event handler`](/ru/docs/Web/API/Document_Object_Model/Events), определяющее функцию, которая будет запущена, когда произойдёт вызов события [`message`](/ru/docs/Web/API/BroadcastChannel/message_event) на этом объекте.
 
 - {{domxref("BroadcastChannel.onmessageerror")}}
-  - : [`event handler`](/ru/docs/Web/Events/Event_handlers), который вызывается, когда приходит {{domxref("MessageEvent")}} типа {{domxref("MessageError")}} — когда приходит сообщение, которое не может быть десереализовано.
+  - : [`event handler`](/ru/docs/Web/API/Document_Object_Model/Events), который вызывается, когда приходит {{domxref("MessageEvent")}} типа {{domxref("MessageError")}} — когда приходит сообщение, которое не может быть десереализовано.
 
 ## Методы
 

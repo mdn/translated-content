@@ -7,7 +7,7 @@ slug: Web/API/HTMLOptionElement
 
 **`HTMLOptionElement`** 接口表示了 {{HTMLElement("option")}} 元素并继承{{domxref("HTMLElement")}}接口所有的类和方法。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## 属性
 
@@ -19,10 +19,10 @@ _继承自其父类属性，{{domxref("HTMLElement")}}._
 | `disabled`                | {{domxref("Boolean")}}         | 反映了[`disabled`](/zh-CN/docs/Web/HTML/Reference/Elements/option#disabled) HTML 特性 的值 , 这意味着选项（option）是不可选的。如果一个选项是关闭的{{HTMLElement("optgroup")}}元素的子元素，那么它也可被关闭。 |
 | `form`{{readonlyInline}}  | {{domxref("HTMLFormElement")}} | 如果该选项是{{HTMLElement("select")}} 元素的后代，则该属性与相应{{DomXref("HTMLSelectElement")}} 对象的`form`属性具有相同的值; 否则为`null`。                                                                  |
 | `index`{{readonlyInline}} | `long`                         | 该选项在其所属的选项列表中的位置，以树形顺序排列。如果该选项不是选项列表的一部分，例如为 {{HTMLElement("datalist")}} 元素的一部分时，该值为`0`。                                                               |
-| `label`                   | {{domxref("DOMString")}}       | 反映[`label`](/zh-CN/docs/Web/HTML/Reference/Elements/option#label) HTML 特性的值，该属性为选项提供了一个标签。如果没有特别设置此属性，读取它返回元素的文本内容。                                              |
+| `label`                   | {{jsxref("String")}}           | 反映[`label`](/zh-CN/docs/Web/HTML/Reference/Elements/option#label) HTML 特性的值，该属性为选项提供了一个标签。如果没有特别设置此属性，读取它返回元素的文本内容。                                              |
 | `selected`                | {{domxref("Boolean")}}         | 表示当前该 option 是否被选择。                                                                                                                                                                                 |
-| `text`                    | {{domxref("DOMString")}}       | 包含元素的文本内容。                                                                                                                                                                                           |
-| `value`                   | {{domxref("DOMString")}}       | 反映[`value`](/zh-CN/docs/Web/HTML/Reference/Elements/option#value) HTML 特性的值（如果存在）；否则反映{{domxref("Node.textContent")}} 特性的值。                                                              |
+| `text`                    | {{jsxref("String")}}           | 包含元素的文本内容。                                                                                                                                                                                           |
+| `value`                   | {{jsxref("String")}}           | 反映[`value`](/zh-CN/docs/Web/HTML/Reference/Elements/option#value) HTML 特性的值（如果存在）；否则反映{{domxref("Node.textContent")}} 特性的值。                                                              |
 
 ## 方法
 

@@ -118,5 +118,5 @@ lots of text…
 - [URL 인코딩](https://en.wikipedia.org/wiki/URL_encoding)
 - {{domxref("atob","atob()")}}
 - {{domxref("btoa","btoa()")}}
-- [CSS `url()`](/ko/docs/Web/CSS/url_value)
+- [CSS `url()`](/ko/docs/Web/CSS/Reference/Values/url_value)
 - [URI](/ko/docs/Glossary/URI)

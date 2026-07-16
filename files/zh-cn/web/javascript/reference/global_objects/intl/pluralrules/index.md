@@ -3,8 +3,6 @@ title: Intl.PluralRules
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 ---
 
-{{JSRef}}
-
 **`Intl.PluralRules`** 对象是用于复数敏感的格式化和复数相关的语言规则。
 
 ## 构造函数

@@ -57,7 +57,7 @@ forEach(callbackFn, thisArg)
 - この**要素のキー**
 - **走査を行っている `Set` オブジェクト**
 
-しかし、 `Set` オブジェクトにキーがないので、最初の 2 つの引数は、両方とも {{jsxref("Set")}} に含まれる**値**です。これにより、他の {{jsxref("Map/foreach", "Map")}} や {{jsxref("Array/forEach", "Array")}} の `forEach()` メソッドと整合が取れています。
+しかし、 `Set` オブジェクトにキーがないので、最初の 2 つの引数は、両方とも {{jsxref("Set")}} に含まれる**値**です。これにより、他の {{jsxref("Map/forEach", "Map")}} や {{jsxref("Array/forEach", "Array")}} の `forEach()` メソッドと整合が取れています。
 
 `thisArg` 引数が `forEach()` に渡された場合、 `callback` を呼び出すときにこれが渡され、 `this` 値として使用されます。渡されなかった場合は、さもなければ、`this` 値として使用するために `undefined` 値が渡されます。 `this` の値が最終的に `callback` から見える姿は、[関数から見た `this` を決定するための通常のルール](/ja/docs/Web/JavaScript/Reference/Operators/this)に応じて決まります。
 

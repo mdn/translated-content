@@ -31,7 +31,7 @@ Le premier panneau à gauche possède deux composants&nbsp;:
 
 Ces éléments sont plutôt basiques, nous verrons comment ils sont reliés avec le code JavaScript.
 
-Pour le second panneau, nous avons un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) qui contient les images capturées (éventuellement traitées) et qui sont converties en fichiers image. Le canevas est masqué en utilisant [`display: none`](/fr/docs/Web/CSS/display) pour éviter d'encombrer l'écran. Son contenu ne représente qu'une étape qui n'a pas nécessairement à être montrée.
+Pour le second panneau, nous avons un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) qui contient les images capturées (éventuellement traitées) et qui sont converties en fichiers image. Le canevas est masqué en utilisant [`display: none`](/fr/docs/Web/CSS/Reference/Properties/display) pour éviter d'encombrer l'écran. Son contenu ne représente qu'une étape qui n'a pas nécessairement à être montrée.
 
 Nous avons également un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) sur lequel nous afficherons l'image, dans sa version finale.
 
@@ -455,7 +455,7 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
 
 ## S'amuser avec les filtres
 
-Comme on capture les images à partir d'un élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video), on peut facilement appliquer des filtres et d'autres effets à la vidéo. En fait, tout filtre CSS appliqué à l'élément à l'aide de la propriété [`filter`](/fr/docs/Web/CSS/filter) aura un effet sur l'image capturée. Les filtres en question peuvent être simples (convertir l'image en noir et blanc) ou complexe (appliquer des flous gaussiens ou des rotations de teinte).
+Comme on capture les images à partir d'un élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video), on peut facilement appliquer des filtres et d'autres effets à la vidéo. En fait, tout filtre CSS appliqué à l'élément à l'aide de la propriété [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter) aura un effet sur l'image capturée. Les filtres en question peuvent être simples (convertir l'image en noir et blanc) ou complexe (appliquer des flous gaussiens ou des rotations de teinte).
 
 ## Utiliser une caméra en particulier
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_conte
 original_slug: Learn/Getting_started_with_the_web/CSS_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
 
 CSS (Cascading Style Sheets)는 웹페이지를 꾸미려고 작성하는 코드입니다. _CSS 기초_ 에서 여러분이 처음 시작하며 필요한 내용을 익히도록 도와드립니다. 저희는 다음과 같은 질문에 관한 답을 드리겠습니다. 어떻게 하면 글자색을 검정이나 빨갛게 할 수 있을까? 어떻게 하면 콘텐츠를 화면의 이런 저런 곳에 보이게 할 수 있을까? 어떻게 하면 배경 이미지와 색상들로 웹페이지를 꾸밀 수 있을까?
 
@@ -187,7 +187,7 @@ body {
 이제는 body 요소를 위한 것입니다. 여기 적지 않은 선언들이 있습니다. 하나 하나 모두 살펴 봅시다:
 
 - `width: 600px;` — 이것은 body가 항상 600 pixels 의 너비를 갖도록 강제합니다.
-- `margin: 0 auto;` — 여러분이 `margin` 또는 `padding` 처럼 한 속성에 두개의 값을 설정할 때, 첫 번째 값은 요소의 상단과 하단 (이 예시에서는 0입니다) 에 영향을 주고, 두 번째 값은 좌측 **과** 우측 (여기서, `auto` 는 가능한 수평공간의 왼쪽과 오른쪽을 같게 나눠주는 특별한 값입니다) 에 영향을 줍니다. 여러분은 또한 하나, 셋, 또는 네개의 값을 사용할 수도 있습니다. [여기](/ko/docs/Web/CSS/margin#values)에 문서화 되어 있습니다.
+- `margin: 0 auto;` — 여러분이 `margin` 또는 `padding` 처럼 한 속성에 두개의 값을 설정할 때, 첫 번째 값은 요소의 상단과 하단 (이 예시에서는 0입니다) 에 영향을 주고, 두 번째 값은 좌측 **과** 우측 (여기서, `auto` 는 가능한 수평공간의 왼쪽과 오른쪽을 같게 나눠주는 특별한 값입니다) 에 영향을 줍니다. 여러분은 또한 하나, 셋, 또는 네개의 값을 사용할 수도 있습니다. [여기](/ko/docs/Web/CSS/Reference/Properties/margin#values)에 문서화 되어 있습니다.
 - `background-color: #FF9500;` — 전과 같이, 이것은 요소의 배경색을 설정합니다. `html` 요소를 위한 짙은 파란색에 반대되도록 body 에는 붉은 빛을 띄는 오렌지색 같은 것을 사용했었습니다. 한번 시험해보세요. 흰색이나 여러분이 원하는 어떤 색이든 편하게 사용해보세요.
 - `padding: 0 20px 20px 20px;` — padding 에는 콘텐츠의 주위에 약간의 공간을 주기 위한 네 개의 값이 있습니다. 이번엔 body의 상단에 no padding, 그리고 왼쪽, 아래 그리고 오른쪽에 20 pixels 을 설정하고 있습니다. 상단, 우측, 하단, 좌측 순서로 값을 설정합니다.(12시부터 시계방향)
 - `border: 5px solid black;` — 이것은 간단하게 body 모든 면의 border 를 5 pixels 두깨의 실선으로 설정합니다.
@@ -243,4 +243,4 @@ img {
 
 여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) 페이지로 가보세요.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}

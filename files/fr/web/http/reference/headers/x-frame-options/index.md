@@ -18,11 +18,7 @@ Ce complément de sécurité est uniquement valable lorsque l'utilisateur final 
       <td><a href="/fr/docs/Glossary/Response_header">En-tête de réponse</a></td>
     </tr>
     <tr>
-      <th scope="row">
-        <a href="/fr/docs/Glossary/Forbidden_header_name"
-          >Nom d'en-tête interdit</a
-        >
-      </th>
+      <th scope="row">{{Glossary("Forbidden_request_header", "En-tête de requête interdit")}}</th>
       <td>Non</td>
     </tr>
   </tbody>

@@ -1,13 +1,14 @@
 ---
-title: FileList.item()
+title: "FileList: item() メソッド"
+short-title: item()
 slug: Web/API/FileList/item
 l10n:
-  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
+  sourceCommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-{{domxref("FileList")}} API の **`item()`** メソッドは、ファイルリスト中の指定された位置のファイルを表す {{domxref("File")}} オブジェクトを返します。
+**`item()`** は {{domxref("FileList")}} インターフェイスのメソッドは、ファイルリスト中の指定された位置のファイルを表す {{domxref("File")}} オブジェクトを返します。
 
 ## 構文
 
@@ -18,11 +19,11 @@ item(index)
 ### 引数
 
 - `index`
-  - : リストから取得するファイルの、0 始まりの添字です。
+  - : リストから取得するファイルの位置を表す 0 で始まる添字です。
 
 ### 返値
 
-要求されたファイルを表す [`File`](/ja/docs/Web/API/File) オブジェクトを返します。
+要求されたファイルを表す {{domxref("File")}} オブジェクトを返します。
 
 ## 例
 

@@ -66,5 +66,5 @@ a * c + b * c; // 9
 ## Смотрите также
 
 - [Приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}

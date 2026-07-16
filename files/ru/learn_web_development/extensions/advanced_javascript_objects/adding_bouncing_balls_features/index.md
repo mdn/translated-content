@@ -3,7 +3,7 @@ title: Добавление функций в нашу демонстрацию 
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 В этом упражнении мы будем использовать проект прыгающих шаров из предыдущей статьи и добавим в него новые интересные возможности.
 
@@ -154,7 +154,7 @@ window.onkeydown = function (e) {
 
 Если вы проводите эту оценку в рамках организованного курса, вы должны уметь отдать свою работу своему учителю / наставнику для маркировки. Если вы самообучаетесь, то вы можете получить руководство по маркировке довольно легко, задав [тему обсуждения для этого упражнения](https://discourse.mozilla.org/t/adding-features-to-our-bouncing-balls-demo-assessment/24689) или в IRC-канале [#mdn](irc://irc.mozilla.org/mdn) в [Mozilla IRC](https://wiki.mozilla.org/IRC). Сначала попробуйте упражнение - ничего не выиграть от обмана!
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 ## In this module
 

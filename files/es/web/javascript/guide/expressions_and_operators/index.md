@@ -3,7 +3,7 @@ title: Expresiones y operadores
 slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
-{{jsSidebar("JavaScript Guide", "Guía JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{jsSidebar("JavaScript Guide", "Guía JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 Este capítulo describe las expresiones y los operadores de JavaScript, incluyendo los de asignación, comparación, aritméticos, bit a bit, lógicos, ternarios, de cadena y otros.
 
@@ -52,24 +52,24 @@ Un operador de asignación asigna un valor a su operando izquierdo basándose en
 
 También hay operadores de asignación compuestos que son una abreviatura de las operaciones enumeradas en la siguiente tabla:
 
-| Nombre                                                                                                          | Operador abreviado | Significado      |
-| --------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------- |
-| {{JSxRef("Operadores/Assignment", "Asignación")}}                                                               | `x = y`            | `x = y`          |
-| {{JSxRef("Operadores/Addition_assignment", "Asignación de adición")}}                                           | `x += y`           | `x = x + y`      |
-| {{JSxRef("Operadores/Subtraction_assignment", "Asignación de resta")}}                                          | `x -= y`           | `x = x - y`      |
-| {{JSxRef("Operadores/Multiplication_assignment", "Asignación de multiplicación")}}                              | `x *= y`           | `x = x * y`      |
-| {{JSxRef("Operadores/Division_assignment", "Asignación de división")}}                                          | `x /= y`           | `x = x / y`      |
-| {{JSxRef("Operadores/Remainder_assignment", "Asignación de residuo")}}                                          | `x %= y`           | `x = x % y`      |
-| {{JSxRef("Operadores/Exponentiation_assignment", "Asignación de exponenciación")}}                              | `x **= y`          | `x = x ** y`     |
-| {{JSxRef("Operadores/Left_shift_assignment", "Asignación de desplazamiento a la izquierda")}}                   | `x <<= y`          | `x = x << y`     |
-| {{JSxRef("Operadores/Right_shift_assignment", "Asignación de desplazamiento a la derecha")}}                    | `x >>= y`          | `x = x >> y`     |
-| {{JSxRef("Operadores/Unsigned_right_shift_assignment", "Asignación de desplazamiento a la derecha sin signo")}} | `x >>>= y`         | `x = x >>> y`    |
-| {{JSxRef("Operadores/Bitwise_AND_assignment", "Asignación AND bit a bit")}}                                     | `x &= y`           | `x = x & y`      |
-| {{JSxRef("Operadores/Bitwise_XOR_assignment", "Asignación XOR bit a bit")}}                                     | `x ^= y`           | `x = x ^ y`      |
-| {{JSxRef("Operadores/Bitwise_OR_assignment", "Asignación OR bit a bit")}}                                       | `x \|= y`          | `x = x \| y`     |
-| {{JSxRef("Operadores/Logical_AND_assignment", "Asignación AND lógico")}}                                        | `x &&= y`          | `x && (x = y)`   |
-| {{JSxRef("Operadores/Logical_OR_assignment", "Asignación OR lógico")}}                                          | `x \|\|= y`        | `x \|\| (x = y)` |
-| {{JSxRef("Operadores/Logical_nullish_assignment", "Asignación de anulación lógica")}}                           | `x ??= y`          | `x ?? (x = y)`   |
+| Nombre                                                                                                         | Operador abreviado | Significado      |
+| -------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------- |
+| {{JSxRef("Operators/Assignment", "Asignación")}}                                                               | `x = y`            | `x = y`          |
+| {{JSxRef("Operators/Addition_assignment", "Asignación de adición")}}                                           | `x += y`           | `x = x + y`      |
+| {{JSxRef("Operators/Subtraction_assignment", "Asignación de resta")}}                                          | `x -= y`           | `x = x - y`      |
+| {{JSxRef("Operators/Multiplication_assignment", "Asignación de multiplicación")}}                              | `x *= y`           | `x = x * y`      |
+| {{JSxRef("Operators/Division_assignment", "Asignación de división")}}                                          | `x /= y`           | `x = x / y`      |
+| {{JSxRef("Operators/Remainder_assignment", "Asignación de residuo")}}                                          | `x %= y`           | `x = x % y`      |
+| {{JSxRef("Operators/Exponentiation_assignment", "Asignación de exponenciación")}}                              | `x **= y`          | `x = x ** y`     |
+| {{JSxRef("Operators/Left_shift_assignment", "Asignación de desplazamiento a la izquierda")}}                   | `x <<= y`          | `x = x << y`     |
+| {{JSxRef("Operators/Right_shift_assignment", "Asignación de desplazamiento a la derecha")}}                    | `x >>= y`          | `x = x >> y`     |
+| {{JSxRef("Operators/Unsigned_right_shift_assignment", "Asignación de desplazamiento a la derecha sin signo")}} | `x >>>= y`         | `x = x >>> y`    |
+| {{JSxRef("Operators/Bitwise_AND_assignment", "Asignación AND bit a bit")}}                                     | `x &= y`           | `x = x & y`      |
+| {{JSxRef("Operators/Bitwise_XOR_assignment", "Asignación XOR bit a bit")}}                                     | `x ^= y`           | `x = x ^ y`      |
+| {{JSxRef("Operators/Bitwise_OR_assignment", "Asignación OR bit a bit")}}                                       | `x \|= y`          | `x = x \| y`     |
+| {{JSxRef("Operators/Logical_AND_assignment", "Asignación AND lógico")}}                                        | `x &&= y`          | `x && (x = y)`   |
+| {{JSxRef("Operators/Logical_OR_assignment", "Asignación OR lógico")}}                                          | `x \|\|= y`        | `x \|\| (x = y)` |
+| {{JSxRef("Operators/Nullish_coalescing_assignment", "Asignación de anulación lógica")}}                        | `x ??= y`          | `x ?? (x = y)`   |
 
 #### Valor de retorno y encadenamiento
 
@@ -95,7 +95,7 @@ Al encadenar estas expresiones, cada asignación se evalúa de **derecha a izqui
 
 #### Desestructuración
 
-Para asignaciones más complejas, la sintaxis de {{JSxRef("Operadores/Destructuring_assignment", "asignación de desestructuración")}} es una expresión de JavaScript que hace posible extraer datos de arreglos u objetos usando una sintaxis que refleja la construcción de arreglos y objetos literales.
+Para asignaciones más complejas, la sintaxis de {{JSxRef("Operators/Destructuring", "asignación de desestructuración")}} es una expresión de JavaScript que hace posible extraer datos de arreglos u objetos usando una sintaxis que refleja la construcción de arreglos y objetos literales.
 
 ```js
 var foo = ["one", "two", "three"];
@@ -118,19 +118,19 @@ var var1 = 3;
 var var2 = 4;
 ```
 
-| Operador                                                                                                 | Descripción                                                                                                                                                                   | Ejemplos que devuelven `true`              |
-| -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| {{JSxRef("Operadores/Comparison_Operators", "Igual", "#Igualdad")}} (`==`)                               | Devuelve `true` si los operandos son iguales.                                                                                                                                 | `3 == var1`<br>`"3" == var1`<br>`3 == '3'` |
-| {{JSxRef("Operadores/Comparison_Operators", "No es igual", "#Desigualdad")}} (`!=`)                      | Devuelve `true` si los operandos _no_ son iguales.                                                                                                                            | `var1 != 4`<br>`var2 != "3"`               |
-| {{JSxRef("Operadores/Comparison_Operators", "Estrictamente igual", "#Identidad")}} (`===`)               | Devuelve `true` si los operandos son iguales y del mismo tipo. Consulta también {{JSxRef("Object.is")}} y {{JSxRef("Equality_comparisons_and_sameness", "similitud en JS")}}. | `3 === var1`                               |
-| {{JSxRef("Operadores/Comparison_Operators", "Desigualdad estricta", "#No_Identidad")}} (`!==`)           | Devuelve `true` si los operandos son del mismo tipo pero no iguales, o son de diferente tipo.                                                                                 | `var1 !== "3"`<br>`3 !== '3'`              |
-| {{JSxRef("/Operadores/Comparison_Operators", "Mayor que", "#Mayor_que_el_operador")}} (`>`)              | Devuelve `true` si el operando izquierdo es mayor que el operando derecho.                                                                                                    | `var2 > var1 "12" > 2`                     |
-| {{JSxRef("Operadores/Comparison_Operators", "Mayor o igual que", "#Operador_mayor_que_o_igual")}} (`>=`) | Devuelve `true` si el operando izquierdo es mayor o igual que el operando derecho.                                                                                            | `var2 >= var1 var1 >= 3`                   |
-| {{JSxRef("Operadores/Comparison_Operators", "Menor que", "#Operador_menor_que")}} (`<`)                  | Devuelve `true` si el operando izquierdo es menor que el operando derecho.                                                                                                    | `var1 < var2`<br>`"2" < 12`                |
-| {{JSxRef("Operadores/Comparison_Operators", "Menor o igual", "#Operador_menor_que_o_igual")}} (`<=`)     | Devuelve `true` si el operando izquierdo es menor o igual que el operando derecho.                                                                                            | `var1 <= var2 var2 <= 5`                   |
+| Operador                                                                                    | Descripción                                                                                                                                                                   | Ejemplos que devuelven `true`              |
+| ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| {{JSxRef("Operators", "Igual", "#Igualdad")}} (`==`)                                        | Devuelve `true` si los operandos son iguales.                                                                                                                                 | `3 == var1`<br>`"3" == var1`<br>`3 == '3'` |
+| {{JSxRef("Operators", "No es igual", "#Desigualdad")}} (`!=`)                               | Devuelve `true` si los operandos _no_ son iguales.                                                                                                                            | `var1 != 4`<br>`var2 != "3"`               |
+| {{JSxRef("Operators", "Estrictamente igual", "#Identidad")}} (`===`)                        | Devuelve `true` si los operandos son iguales y del mismo tipo. Consulta también {{JSxRef("Object.is")}} y {{JSxRef("Equality_comparisons_and_sameness", "similitud en JS")}}. | `3 === var1`                               |
+| {{JSxRef("Operators", "Desigualdad estricta", "#No_Identidad")}} (`!==`)                    | Devuelve `true` si los operandos son del mismo tipo pero no iguales, o son de diferente tipo.                                                                                 | `var1 !== "3"`<br>`3 !== '3'`              |
+| {{JSxRef("/Operadores/Comparison_Operators", "Mayor que", "#Mayor_que_el_operador")}} (`>`) | Devuelve `true` si el operando izquierdo es mayor que el operando derecho.                                                                                                    | `var2 > var1 "12" > 2`                     |
+| {{JSxRef("Operators", "Mayor o igual que", "#Operador_mayor_que_o_igual")}} (`>=`)          | Devuelve `true` si el operando izquierdo es mayor o igual que el operando derecho.                                                                                            | `var2 >= var1 var1 >= 3`                   |
+| {{JSxRef("Operators", "Menor que", "#Operador_menor_que")}} (`<`)                           | Devuelve `true` si el operando izquierdo es menor que el operando derecho.                                                                                                    | `var1 < var2`<br>`"2" < 12`                |
+| {{JSxRef("Operators", "Menor o igual", "#Operador_menor_que_o_igual")}} (`<=`)              | Devuelve `true` si el operando izquierdo es menor o igual que el operando derecho.                                                                                            | `var1 <= var2 var2 <= 5`                   |
 
 > [!NOTE]
-> (**=>**) no es un operador, sino la notación para {{JSxRef("Funciones/Arrow_functions", "Funciones flecha")}}.
+> (**=>**) no es un operador, sino la notación para {{JSxRef("Functions/Arrow_functions", "Funciones flecha")}}.
 
 ### Operadores aritméticos
 
@@ -143,14 +143,14 @@ Un operador aritmético toma valores numéricos (ya sean literales o variables) 
 
 Además de las operaciones aritméticas estándar (`+`, `-`, `*`, `/`), JavaScript proporciona los operadores aritméticos enumerados en la siguiente tabla:
 
-| Operador                                                                     | Descripción                                                                                                                                                                                                                                 | Ejemplo                                                                                                                          |
-| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| {{JSxRef("Operadores/Remainder", "Residuo")}} (`%`)                          | Operador binario. Devuelve el resto entero de dividir los dos operandos.                                                                                                                                                                    | 12 % 5 devuelve 2.                                                                                                               |
-| {{JSxRef("Operadores/Increment", "Incremento")}} (`++`)                      | Operador unario. Agrega uno a su operando. Si se usa como operador prefijo (`++x`), devuelve el valor de su operando después de agregar uno; si se usa como operador sufijo (`x++`), devuelve el valor de su operando antes de agregar uno. | Si `x` es 3, `++x` establece `x` en 4 y devuelve 4, mientras que `x++` devuelve 3 y , solo entonces, establece `x` en 4.         |
-| {{JSxRef("Operadores/Decrement", "Decremento")}} (`--`)                      | Operador unario. Resta uno de su operando. El valor de retorno es análogo al del operador de incremento.                                                                                                                                    | Si `x` es 3, entonces `--x` establece `x` en 2 y devuelve 2, mientras que `x--` devuelve 3 y, solo entonces, establece `x` en 2. |
-| {{JSxRef("Operadores/Unary_negation", "Negación unaria")}} (`-`)             | Operador unario. Devuelve la negación de su operando.                                                                                                                                                                                       | Si `x` es 3, entonces `-x` devuelve -3.                                                                                          |
-| {{JSxRef("Operadores/Unary_plus", "Positivo unario")}} (`+`)                 | Operador unario. Intenta convertir el operando en un número, si aún no lo es.                                                                                                                                                               | `+"3"` devuelve `3`. `+true` devuelve `1.`                                                                                       |
-| {{JSxRef("Operadores/Exponentiation", "Operador de exponenciación")}} (`**`) | Calcula la `base` a la potencia de `exponente`, es decir, `baseexponente`                                                                                                                                                                   | `2 ** 3` returns `8`. `10 ** -1` returns `0.1`.                                                                                  |
+| Operador                                                                    | Descripción                                                                                                                                                                                                                                 | Ejemplo                                                                                                                          |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| {{JSxRef("Operators/Remainder", "Residuo")}} (`%`)                          | Operador binario. Devuelve el resto entero de dividir los dos operandos.                                                                                                                                                                    | 12 % 5 devuelve 2.                                                                                                               |
+| {{JSxRef("Operators/Increment", "Incremento")}} (`++`)                      | Operador unario. Agrega uno a su operando. Si se usa como operador prefijo (`++x`), devuelve el valor de su operando después de agregar uno; si se usa como operador sufijo (`x++`), devuelve el valor de su operando antes de agregar uno. | Si `x` es 3, `++x` establece `x` en 4 y devuelve 4, mientras que `x++` devuelve 3 y , solo entonces, establece `x` en 4.         |
+| {{JSxRef("Operators/Decrement", "Decremento")}} (`--`)                      | Operador unario. Resta uno de su operando. El valor de retorno es análogo al del operador de incremento.                                                                                                                                    | Si `x` es 3, entonces `--x` establece `x` en 2 y devuelve 2, mientras que `x--` devuelve 3 y, solo entonces, establece `x` en 2. |
+| {{JSxRef("Operators/Unary_negation", "Negación unaria")}} (`-`)             | Operador unario. Devuelve la negación de su operando.                                                                                                                                                                                       | Si `x` es 3, entonces `-x` devuelve -3.                                                                                          |
+| {{JSxRef("Operators/Unary_plus", "Positivo unario")}} (`+`)                 | Operador unario. Intenta convertir el operando en un número, si aún no lo es.                                                                                                                                                               | `+"3"` devuelve `3`. `+true` devuelve `1.`                                                                                       |
+| {{JSxRef("Operators/Exponentiation", "Operador de exponenciación")}} (`**`) | Calcula la `base` a la potencia de `exponente`, es decir, `baseexponente`                                                                                                                                                                   | `2 ** 3` returns `8`. `10 ** -1` returns `0.1`.                                                                                  |
 
 ### Operadores bit a bit
 
@@ -158,15 +158,15 @@ Un operador bit a bit trata a sus operandos como un conjunto de 32 bits (ceros y
 
 La siguiente tabla resume los operadores bit a bit de JavaScript.
 
-| Operador                                                                                     | Uso       | Descripción                                                                                                                                                                              |
-| -------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{JSxRef("Operadores/Bitwise_AND", "AND a nivel de bits")}}                                  | `a & b`   | Devuelve un uno en cada posición del bit para los que los bits correspondientes de ambos operandos son unos.                                                                             |
-| {{JSxRef("Operadores/Bitwise_OR", "OR a nivel de bits")}}                                    | `a \| b`  | Devuelve un cero en cada posición de bit para el cual los bits correspondientes de ambos operandos son ceros.                                                                            |
-| {{JSxRef("Operadores/Bitwise_XOR", "XOR a nivel de bits")}}                                  | `a ^ b`   | Devuelve un cero en cada posición de bit para la que los bits correspondientes son iguales. [Devuelve uno en cada posición de bit para la que los bits correspondientes son diferentes]. |
-| {{JSxRef("Operadores/Bitwise_NOT", "NOT a nivel de bits")}}                                  | `~ a`     | Invierte los bits de su operando.                                                                                                                                                        |
-| {{JSxRef("Operadores/Left_shift", "Desplazamiento a la izquierda")}}                         | `a << b`  | Desplaza `a` en representación binaria `b` bits hacia la izquierda, desplazándose en ceros desde la derecha.                                                                             |
-| {{JSxRef("Operadores/Right_shift", "Desplazamiento a la derecha de propagación de signo")}}  | `a >> b`  | Desplaza `a` en representación binaria `b` bits a la derecha, descartando los bits desplazados.                                                                                          |
-| {{JSxRef("Operadores/Unsigned_right_shift", "Desplazamiento a la derecha de relleno cero")}} | `a >>> b` | Desplaza `a` en representación binaria `b` bits hacia la derecha, descartando los bits desplazados y desplazándose en ceros desde la izquierda.                                          |
+| Operador                                                                                    | Uso       | Descripción                                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{JSxRef("Operators/Bitwise_AND", "AND a nivel de bits")}}                                  | `a & b`   | Devuelve un uno en cada posición del bit para los que los bits correspondientes de ambos operandos son unos.                                                                             |
+| {{JSxRef("Operators/Bitwise_OR", "OR a nivel de bits")}}                                    | `a \| b`  | Devuelve un cero en cada posición de bit para el cual los bits correspondientes de ambos operandos son ceros.                                                                            |
+| {{JSxRef("Operators/Bitwise_XOR", "XOR a nivel de bits")}}                                  | `a ^ b`   | Devuelve un cero en cada posición de bit para la que los bits correspondientes son iguales. [Devuelve uno en cada posición de bit para la que los bits correspondientes son diferentes]. |
+| {{JSxRef("Operators/Bitwise_NOT", "NOT a nivel de bits")}}                                  | `~ a`     | Invierte los bits de su operando.                                                                                                                                                        |
+| {{JSxRef("Operators/Left_shift", "Desplazamiento a la izquierda")}}                         | `a << b`  | Desplaza `a` en representación binaria `b` bits hacia la izquierda, desplazándose en ceros desde la derecha.                                                                             |
+| {{JSxRef("Operators/Right_shift", "Desplazamiento a la derecha de propagación de signo")}}  | `a >> b`  | Desplaza `a` en representación binaria `b` bits a la derecha, descartando los bits desplazados.                                                                                          |
+| {{JSxRef("Operators/Unsigned_right_shift", "Desplazamiento a la derecha de relleno cero")}} | `a >>> b` | Desplaza `a` en representación binaria `b` bits hacia la derecha, descartando los bits desplazados y desplazándose en ceros desde la izquierda.                                          |
 
 #### Operadores lógicos bit a bit
 
@@ -202,21 +202,21 @@ Los operadores de desplazamiento convierten sus operandos en enteros de treinta 
 
 Los operadores de desplazamiento se enumeran en la siguiente tabla.
 
-| Operador                                                                                             | Descripción                                                                                                                                                                                                                 | Ejemplo                                                                                                                                                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{JSxRef("Operadores/Left_shift", "Desplazamiento a la izquierda")}} (`<<`)                          | Este operador desplaza el primer operando el número especificado de bits a la izquierda. Los bits desplazados en exceso hacia la izquierda se descartan. Los bits cero se desplazan desde la derecha.                       | `9<<2` produce 36, porque 1001 desplazado 2 bits a la izquierda se convierte en 100100, que es 36.                                                                                                                                                                   |
-| {{JSxRef("Operadores/Right_shift", "Desplazamiento a la derecha de propagación de signo")}} (`>>`)   | Este operador desplaza el primer operando el número especificado de bits a la derecha. Los bits desplazados en exceso hacia la derecha se descartan. Las copias del bit más a la izquierda se desplazan desde la izquierda. | `9>>2` produce 2, porque 1001 desplazado 2 bits a la derecha se convierte en 10, que es 2. Del mismo modo, `-9>>2` produce -3, porque el signo se conserva.                                                                                                          |
-| {{JSxRef("Operadores/Unsigned_right_shift", "Desplazamiento a la derecha de relleno cero")}} (`>>>`) | Este operador desplaza el primer operando el número especificado de bits a la derecha. Los bits desplazados en exceso hacia la derecha se descartan. Los bits cero se desplazan desde la izquierda.                         | `19>>>2` produce 4, porque 10011 desplazado 2 bits a la derecha se convierte en 100, que es 4. Para números no negativos, el desplazamiento a la derecha de relleno con ceros y el desplazamiento a la derecha de propagación del signo producen el mismo resultado. |
+| Operador                                                                                            | Descripción                                                                                                                                                                                                                 | Ejemplo                                                                                                                                                                                                                                                              |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{JSxRef("Operators/Left_shift", "Desplazamiento a la izquierda")}} (`<<`)                          | Este operador desplaza el primer operando el número especificado de bits a la izquierda. Los bits desplazados en exceso hacia la izquierda se descartan. Los bits cero se desplazan desde la derecha.                       | `9<<2` produce 36, porque 1001 desplazado 2 bits a la izquierda se convierte en 100100, que es 36.                                                                                                                                                                   |
+| {{JSxRef("Operators/Right_shift", "Desplazamiento a la derecha de propagación de signo")}} (`>>`)   | Este operador desplaza el primer operando el número especificado de bits a la derecha. Los bits desplazados en exceso hacia la derecha se descartan. Las copias del bit más a la izquierda se desplazan desde la izquierda. | `9>>2` produce 2, porque 1001 desplazado 2 bits a la derecha se convierte en 10, que es 2. Del mismo modo, `-9>>2` produce -3, porque el signo se conserva.                                                                                                          |
+| {{JSxRef("Operators/Unsigned_right_shift", "Desplazamiento a la derecha de relleno cero")}} (`>>>`) | Este operador desplaza el primer operando el número especificado de bits a la derecha. Los bits desplazados en exceso hacia la derecha se descartan. Los bits cero se desplazan desde la izquierda.                         | `19>>>2` produce 4, porque 10011 desplazado 2 bits a la derecha se convierte en 100, que es 4. Para números no negativos, el desplazamiento a la derecha de relleno con ceros y el desplazamiento a la derecha de propagación del signo producen el mismo resultado. |
 
 ### Operadores lógicos
 
 Los operadores lógicos se utilizan normalmente con valores booleanos (lógicos); cuando lo son, devuelven un valor booleano. Sin embargo, los operadores `&&` y `||` en realidad devuelven el valor de uno de los operandos especificados, por lo que si estos operadores se utilizan con valores no booleanos, pueden devolver un valor no booleano. Los operadores lógicos se describen en la siguiente tabla.
 
-| Operador                                                  | Uso                | Descripción                                                                                                                                                                                                                                |
-| --------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{JSxRef("Operadores/Logical_AND", "AND Lógico")}} (`&&`) | `expr1 && expr2`   | Devuelve `expr1` si se puede convertir a `false`; de lo contrario, devuelve `expr2`. Por lo tanto, cuando se usa con valores booleanos, `&&` devuelve `true` si ambos operandos son `true`; de lo contrario, devuelve `false`.             |
-| {{JSxRef("Operadores/Logical_OR", "OR lógico")}} (`\|\|`) | `expr1 \|\| expr2` | Devuelve `expr1` si se puede convertir a `true`; de lo contrario, devuelve `expr2`. Por lo tanto, cuando se usa con valores booleanos, `\|\|` devuelve `true` si alguno de los operandos es `true`; si ambos son falsos, devuelve `false`. |
-| {{JSxRef("Operadores/Logical_NOT", "NOT lógico")}} (`!`)  | `!expr`            | Devuelve `false` si su único operando se puede convertir a `true`; de lo contrario, devuelve `true`.                                                                                                                                       |
+| Operador                                                 | Uso                | Descripción                                                                                                                                                                                                                                |
+| -------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{JSxRef("Operators/Logical_AND", "AND Lógico")}} (`&&`) | `expr1 && expr2`   | Devuelve `expr1` si se puede convertir a `false`; de lo contrario, devuelve `expr2`. Por lo tanto, cuando se usa con valores booleanos, `&&` devuelve `true` si ambos operandos son `true`; de lo contrario, devuelve `false`.             |
+| {{JSxRef("Operators/Logical_OR", "OR lógico")}} (`\|\|`) | `expr1 \|\| expr2` | Devuelve `expr1` si se puede convertir a `true`; de lo contrario, devuelve `expr2`. Por lo tanto, cuando se usa con valores booleanos, `\|\|` devuelve `true` si alguno de los operandos es `true`; si ambos son falsos, devuelve `false`. |
+| {{JSxRef("Operators/Logical_NOT", "NOT lógico")}} (`!`)  | `!expr`            | Devuelve `false` si su único operando se puede convertir a `true`; de lo contrario, devuelve `true`.                                                                                                                                       |
 
 Ejemplos de expresiones que se pueden convertir a `false` son aquellos que se evalúan como `null`, 0, `NaN`, la cadena vacía ("") o `undefined`.
 
@@ -261,7 +261,7 @@ Debido a que las expresiones lógicas se evalúan de izquierda a derecha, se pru
 
 Las reglas de la lógica garantizan que estas evaluaciones sean siempre correctas. Ten en cuenta que la parte _anything_ de las expresiones anteriores no se evalúa, por lo que los efectos secundarios de hacerlo no surten efecto.
 
-Ten en cuenta que para el segundo caso, en el código moderno puedes usar el nuevo {{JSxRef("Operadores/Nullish_coalescing_operator", "operador de fusión nulo")}} (`??`) que funciona como `||`, pero solo devuelve la segunda expresión, cuando la primera es "{{Glossary("Nullish", "nullish")}}", es decir, {{JSxRef("Objetos_globales/null", "null")}}, el valor nulo representa la ausencia intencional de cualquier valor de objeto. Es uno de los valores primitivos de JavaScript y se trata como falso para las operaciones booleanas. o {{JSxRef("Objetos_globales/undefined", "undefined")}} la propiedad global undefined representa el valor "`undefined`" primitivo. Es uno de los tipos primitivos de JavaScript. Por tanto, es la mejor alternativa para proporcionar valores predeterminados, cuando valores como `''` o `0` también son valores válidos para la primera expresión.
+Ten en cuenta que para el segundo caso, en el código moderno puedes usar el nuevo {{JSxRef("Operators/Nullish_coalescing", "operador de fusión nulo")}} (`??`) que funciona como `||`, pero solo devuelve la segunda expresión, cuando la primera es "{{Glossary("Nullish", "nullish")}}", es decir, {{JSxRef("null")}}, el valor nulo representa la ausencia intencional de cualquier valor de objeto. Es uno de los valores primitivos de JavaScript y se trata como falso para las operaciones booleanas. o {{JSxRef("undefined")}} la propiedad global undefined representa el valor "`undefined`" primitivo. Es uno de los tipos primitivos de JavaScript. Por tanto, es la mejor alternativa para proporcionar valores predeterminados, cuando valores como `''` o `0` también son valores válidos para la primera expresión.
 
 ### Operadores de cadena
 
@@ -284,7 +284,7 @@ mystring += "bet"; // se evalúa como "alphabet" y asigna este valor a mystring.
 
 ### Operador condicional (ternario)
 
-El {{JSxRef("Operadores/Conditional_Operator", "operador condicional")}} es el único operador de JavaScript que toma tres operandos. El operador puede tener uno de dos valores según una condición. La sintaxis es:
+El {{JSxRef("Operators/Conditional_operator", "operador condicional")}} es el único operador de JavaScript que toma tres operandos. El operador puede tener uno de dos valores según una condición. La sintaxis es:
 
 ```
 condition ? val1 : val2
@@ -302,7 +302,7 @@ Esta declaración asigna el valor "`adult`" a la variable `status` si `age` es d
 
 ### Operador coma
 
-El {{JSxRef("Operadores/Comma_Operator", "operador coma")}} (`,`) simplemente evalúa ambos operandos y devuelve el valor del último operando. Este operador se utiliza principalmente dentro de un bucle `for`, para permitir que se actualicen múltiples variables cada vez a través del bucle. Se considera de mal estilo usarlo en otros lugares, cuando no es necesario. A menudo, en su lugar pueden y se deben utilizar dos declaraciones independientes.
+El {{JSxRef("Operators/Comma_operator", "operador coma")}} (`,`) simplemente evalúa ambos operandos y devuelve el valor del último operando. Este operador se utiliza principalmente dentro de un bucle `for`, para permitir que se actualicen múltiples variables cada vez a través del bucle. Se considera de mal estilo usarlo en otros lugares, cuando no es necesario. A menudo, en su lugar pueden y se deben utilizar dos declaraciones independientes.
 
 Por ejemplo, si `a` es un arreglo bidimensional con 10 elementos en un lado, el siguiente código usa el operador `coma` para actualizar dos variables a la vez. El código imprime los valores de los elementos diagonales en el arreglo:
 
@@ -321,7 +321,7 @@ Una operación unaria es una operación con un solo operando.
 
 #### `delete`
 
-El operador {{JSxRef("Operadores/delete", "delete")}} elimina la propiedad de un objeto. La sintaxis es:
+El operador {{JSxRef("delete")}} elimina la propiedad de un objeto. La sintaxis es:
 
 ```js
 delete object.property;
@@ -332,7 +332,7 @@ delete property; // legal solo dentro de una declaración with
 
 donde `object` es el nombre de un objeto, `property` es una propiedad existente y `propertyKey` es una cadena o símbolo que hace referencia a una propiedad existente.
 
-La cuarta forma es legal solo dentro de una declaración {{JSxRef("Sentencias/with", "with")}}, para eliminar una propiedad de un objeto, y también para las propiedades del objeto global.
+La cuarta forma es legal solo dentro de una declaración {{JSxRef("Statements/with", "with")}}, para eliminar una propiedad de un objeto, y también para las propiedades del objeto global.
 
 Si el operador `delete` tiene éxito, elimina la propiedad del objeto. Intentar acceder a él después dará como resultado `undefined`. El operador `delete` devuelve `true` si la operación es posible; devuelve `false` si la operación no es posible.
 
@@ -349,11 +349,11 @@ delete myobj.h; // devuelve true (puede eliminar propiedades definidas por el us
 
 ##### Eliminar elementos de un arreglo
 
-Dado que los arreglos solo son objetos, técnicamente es posible `delete` elementos de ellos. Sin embargo, esto se considera una mala práctica, trata de evitarlo. Cuando eliminas una propiedad de arreglo, la longitud del arreglo no se ve afectada y otros elementos no se vuelven a indexar. Para lograr ese comportamiento, es mucho mejor simplemente sobrescribir el elemento con el valor `undefined`. Para manipular realmente el arreglo, usa los diversos métodos de arreglo, como {{JSxRef("Objetos_globales/Array/splice", "splice")}}.
+Dado que los arreglos solo son objetos, técnicamente es posible `delete` elementos de ellos. Sin embargo, esto se considera una mala práctica, trata de evitarlo. Cuando eliminas una propiedad de arreglo, la longitud del arreglo no se ve afectada y otros elementos no se vuelven a indexar. Para lograr ese comportamiento, es mucho mejor simplemente sobrescribir el elemento con el valor `undefined`. Para manipular realmente el arreglo, usa los diversos métodos de arreglo, como {{JSxRef("Array.splice", "splice")}}.
 
 #### `typeof`
 
-El {{JSxRef("Operadores/typeof", "operador typeof")}} se utiliza de cualquiera de las siguientes formas:
+El {{JSxRef("Operators/typeof", "operador typeof")}} se utiliza de cualquiera de las siguientes formas:
 
 ```
 typeof operand
@@ -426,7 +426,7 @@ typeof String; // devuelve "function"
 
 #### `void`
 
-El {{JSxRef("Operadores/void", "operador void")}} se utiliza de cualquiera de las siguientes formas:
+El {{JSxRef("Operators/void", "operador void")}} se utiliza de cualquiera de las siguientes formas:
 
 ```
 void (expression)
@@ -441,7 +441,7 @@ Un operador relacional compara sus operandos y devuelve un valor `Boolean` basad
 
 #### `in`
 
-El {{JSxRef("Operadores/in", "operador in")}} devuelve `true` si la propiedad especificada está en el objeto especificado. La sintaxis es:
+El {{JSxRef("Operators/in", "operador in")}} devuelve `true` si la propiedad especificada está en el objeto especificado. La sintaxis es:
 
 ```js
 propNameOrNumber in objectName;
@@ -474,7 +474,7 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 
 #### `instanceof`
 
-El {{JSxRef("Operadores/instanceof", "operador instanceof")}} devuelve `true` si el objeto especificado es del tipo de objeto especificado. La sintaxis es:
+El {{JSxRef("Operators/instanceof", "operador instanceof")}} devuelve `true` si el objeto especificado es del tipo de objeto especificado. La sintaxis es:
 
 ```
 objectName instanceof objectType
@@ -519,7 +519,7 @@ La siguiente tabla describe la precedencia de los operadores, de mayor a menor.
 | asignación               | `= += -= *= /= %= <<= >>= >>>= &= ^= \|= &&= \|\|= ??=` |
 | coma                     | `,`                                                     |
 
-Puedes encontrar una versión más detallada de esta tabla, completa con enlaces a detalles adicionales sobre cada operador, en {{JSxRef("Operadores/Operator_Precedence", "Referencia de JavaScript", "#Table")}}.
+Puedes encontrar una versión más detallada de esta tabla, completa con enlaces a detalles adicionales sobre cada operador, en {{JSxRef("Operators/Operator_precedence", "Referencia de JavaScript", "#Table")}}.
 
 ## Expresiones
 
@@ -545,7 +545,7 @@ Palabras clave básicas y expresiones generales en JavaScript.
 
 #### `this`
 
-Utiliza la {{JSxRef("Operadores/this", "palabra clave this")}} para hacer referencia al objeto actual. En general, `this` se refiere al objeto que llama en un método. Usa `this` con la notación de punto o entre corchetes:
+Utiliza la {{JSxRef("Operators/this", "palabra clave this")}} para hacer referencia al objeto actual. En general, `this` se refiere al objeto que llama en un método. Usa `this` con la notación de punto o entre corchetes:
 
 ```
 this['propertyName']
@@ -597,7 +597,7 @@ Los valores de la izquierda son el destino de una asignación.
 
 #### `new`
 
-Puedes utilizar el {{JSxRef("Operadores/new", "operador new")}} para crear una instancia de un tipo de objeto definido por el usuario o de uno de los tipos de objeto integrados. Utiliza `new` de la siguiente manera:
+Puedes utilizar el {{JSxRef("Operators/new", "operador new")}} para crear una instancia de un tipo de objeto definido por el usuario o de uno de los tipos de objeto integrados. Utiliza `new` de la siguiente manera:
 
 ```js
 var objectName = new objectType([param1, param2, ..., paramN]);
@@ -605,11 +605,11 @@ var objectName = new objectType([param1, param2, ..., paramN]);
 
 #### `super`
 
-La {{JSxRef("Operadores/super", "palabra clave super")}} se utiliza para llamar a funciones en el padre de un objeto. Es útil con {{JSxRef("Classes", "clases")}} llamar al constructor padre, por ejemplo.
+La {{JSxRef("Operators/super", "palabra clave super")}} se utiliza para llamar a funciones en el padre de un objeto. Es útil con {{JSxRef("Classes", "clases")}} llamar al constructor padre, por ejemplo.
 
 ```
 super([arguments]); // llama al constructor padre.
 super.functionOnParent([arguments]);
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}

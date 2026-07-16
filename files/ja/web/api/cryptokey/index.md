@@ -9,7 +9,7 @@ l10n:
 
 **`CryptoKey`** は[ウェブ暗号化 API](/ja/docs/Web/API/Web_Crypto_API) のインターフェイスで、{{domxref("SubtleCrypto")}} メソッドの {{domxref("SubtleCrypto.generateKey", "generateKey()")}}、{{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}、{{domxref("SubtleCrypto.importKey", "importKey()")}}、{{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}} のいずれかから取得した{{glossary("key", "暗号鍵")}}を表します。
 
-セキュリティ上の理由により、`CryptoKey` インターフェイスは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ使用することができます。
+セキュリティ上の理由により、`CryptoKey` インターフェイスは[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ使用することができます。
 
 ## インスタンスプロパティ
 

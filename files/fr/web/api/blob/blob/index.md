@@ -17,7 +17,7 @@ var aBlob = new Blob(array, options);
 ### Paramètres
 
 - `array`
-  - : Un tableau ({{jsxref("Array")}}) d'objets de type {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, ou un mélange de tels objets qui seront insérés dans le {{domxref("Blob")}}. Les chaînes `DOMString` seront encodées en UTF-8.
+  - : Un tableau ({{jsxref("Array")}}) d'objets de type {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{jsxref("String")}}, ou un mélange de tels objets qui seront insérés dans le {{domxref("Blob")}}. Les chaînes `DOMString` seront encodées en UTF-8.
 - `options` {{optional_inline}}
   - : Un paramètre optionnel qui est un dictionnaire `BlobPropertyBag` et qui peut être utilisé pour définir les deux attributs suivants :
     - `type` : cet attribut représente le type MIME du contenu du tableau qui sera inséré dans le blob. La valeur par défaut pour cette propriété est la chaîne vide `""`.

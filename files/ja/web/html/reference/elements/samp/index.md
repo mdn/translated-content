@@ -1,19 +1,17 @@
 ---
-title: "<samp>: サンプル出力要素"
+title: HTML `<samp>` サンプル出力要素
+short-title: <samp>
 slug: Web/HTML/Reference/Elements/samp
-original_slug: Web/HTML/Element/samp
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<samp>`** は [HTML](/ja/docs/Web/HTML) の要素で、コンピュータープログラムからのサンプル出力を表すインラインのテキストを収めるために使用されます。内容は普通、ブラウザーの既定の等幅フォント（[Courier](<https://ja.wikipedia.org/wiki/Courier_(書体)>) や Lucida Console など）を使用して表示されます。
 
 {{InteractiveExample("HTML デモ: &lt;samp&gt;", "tabbed-shorter")}}
 
-```html interactive-example
-<p>I was trying to boot my computer, but I got this hilarious message:</p>
+```html-nolint interactive-example
+<p>パソコンを起動しようとしたところ、こんな笑えるメッセージが表示されました。</p>
 
 <p>
   <samp>Keyboard not found <br />Press F1 to continue</samp>
@@ -49,13 +47,11 @@ samp {
 
 ### 基本的な例
 
-この単純な例では、段落にプログラムの出力の例を含めます。
+この基本的な例では、段落にプログラムの出力の例を含めます。
 
-```html
+```html-nolint
 <p>
-  When the process is complete, the utility will output the text
-  <samp>Scan complete. Found <em>N</em> results.</samp> You can then proceed to
-  the next step.
+  処理が完了すると、このユーティリティから「<samp>スキャンが完了しました。<em>N</em> 件の結果が見つかりました。</samp>」というテキストが出力されます。その後、次の手順に進むことができます。
 </p>
 ```
 
@@ -85,7 +81,7 @@ MD5 ("Hello world") = 3e25960a79dbc69b674cd4ec67a72c62
 
 ```css
 .prompt {
-  color: #b00;
+  color: #bb0000;
 }
 
 samp > kbd {
@@ -93,7 +89,7 @@ samp > kbd {
 }
 
 .cursor {
-  color: #00b;
+  color: #0000bb;
 }
 ```
 
@@ -111,13 +107,13 @@ samp > kbd {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -125,7 +121,7 @@ samp > kbd {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -137,7 +133,7 @@ samp > kbd {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -145,8 +141,10 @@ samp > kbd {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

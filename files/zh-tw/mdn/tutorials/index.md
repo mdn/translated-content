@@ -67,9 +67,9 @@ slug: MDN/Tutorials
 
 ### 高級
 
-- **[Using CSS transforms](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)**
+- **[Using CSS transforms](/zh-TW/docs/Web/CSS/Guides/Transforms/Using)**
   - : Apply rotation, skewing, scaling, and translation using CSS.
-- **[CSS transitions](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)**
+- **[CSS transitions](/zh-TW/docs/Web/CSS/Guides/Transitions/Using)**
   - : CSS transitions, part of the draft CSS3 specification, provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
 - **[Quick Guide to Implement Web Fonts with @font-face](https://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)**
   - : The @font-face feature from CSS3 allows you to use custom typefaces on the web in an accessible, manipulatable, and scalable way.

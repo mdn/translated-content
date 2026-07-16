@@ -12,7 +12,7 @@ Les formulaires HTML peuvent envoyer des requêtes [HTTP](/fr/docs/Web/HTTP) de 
 
 ## Un formulaire parfois détourné
 
-Avec les applications progressives et/ou basées sur un <i lang="en">framework</i>, il est fréquent d'utiliser [les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\) afin d'envoyer des données sans charger un nouveau document lorsque les données de la réponse sont reçues. Voyons d'abord pourquoi une nouvelle approche est nécessaire.
+Avec les applications progressives et/ou basées sur un <i lang="en">framework</i>, il est fréquent d'utiliser [les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms) afin d'envoyer des données sans charger un nouveau document lorsque les données de la réponse sont reçues. Voyons d'abord pourquoi une nouvelle approche est nécessaire.
 
 ### Maîtriser l'interface générale
 

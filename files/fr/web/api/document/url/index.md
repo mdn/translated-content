@@ -1,25 +1,48 @@
 ---
-title: Document.URL
+title: "Document : propriété URL"
+short-title: URL
 slug: Web/API/Document/URL
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
 
-Retourne l'**`URL`** du {{domxref("Document")}} sous forme de string (lecture seule).
+La propriété en lecture seule **`URL`** de l'interface {{DOMxRef("Document")}} retourne l'emplacement du document sous forme de chaîne de caractères.
 
-## Syntaxe
+## Valeur
+
+Une chaîne de caractères contenant l'URL du document.
+
+## Exemples
+
+### JavaScript
 
 ```js
-var string = document.URL;
+document.getElementById("url").textContent = document.URL;
 ```
 
-## Exemple
+### HTML
 
-```js
-var currentURL = document.URL;
-alert(currentURL);
+```html
+<p id="urlText">
+  URL&nbsp;:<br />
+  <span id="url">L'URL va ici</span>
+</p>
 ```
 
-## Specification
+### Résultat
 
-- [DOM Level 2 HTML: URL](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-46183437)
+{{EmbedLiveSample("Exemples", "100%", 100)}}
+
+## Specifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- La propriété {{DOMxRef("document.documentURI")}} qui retourne la même valeur.

@@ -45,7 +45,7 @@ slug: Web/API/Cache
 
 이 코드는 {{domxref("Globalfetch.fetch","fetch()")}} 연산에서 발생한 예외를 처리합니다. HTTP오류 응답(예 : 404)은 예외를 발생시키지 않습니다. 적절한 오류 코드가있는 일반 응답 객체를 리턴합니다.
 
-또한 코드 스니펫은 {domxref ( "ServiceWorker")}}가 사용하는 캐시 버전 관리를 위한 모범 사례를 보여줍니다. 이 예에서는 캐시가 하나 밖에 없지만 동일한 접근법을 여러 캐시에 사용할 수 있습니다. 캐시의 단축 식별자를 특정 버전의 캐시 이름에 매핑합니다. 또한 이 코드는 `CURRENT_CACHES`에 이름이 지정되지 않은 모든 캐시를 삭제합니다.
+또한 코드 스니펫은 {{domxref ( "ServiceWorker")}}가 사용하는 캐시 버전 관리를 위한 모범 사례를 보여줍니다. 이 예에서는 캐시가 하나 밖에 없지만 동일한 접근법을 여러 캐시에 사용할 수 있습니다. 캐시의 단축 식별자를 특정 버전의 캐시 이름에 매핑합니다. 또한 이 코드는 `CURRENT_CACHES`에 이름이 지정되지 않은 모든 캐시를 삭제합니다.
 
 > [!NOTE]
 > 크롬에서, chrome://inspect/#service-workers 를 방문하여 "inspect" 를 클릭하여 [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) 스크립트가 수행중인 다양한 작업에 대한 로깅 구문을 확인합니다.

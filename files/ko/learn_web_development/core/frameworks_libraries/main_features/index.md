@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Introduction","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
 
 주요 JavaScript 프레임워크는 DOM 업데이트하는 방식, 브라우저 이벤트 처리하는 법 그리고 즐거운 개발자 경험 제공을 제공하는 방식에 있어 차이가 있습니다. 이 기사에서는 "빅 4" 프레임워크의 주요 기능을 살펴보고, 프레임워크가 높은 수준에서 작용하는 방식과 프레임워크 간의 차이점을 살펴봅니다.
 
@@ -15,9 +15,9 @@ l10n:
     <tr>
       <th scope="row">전제조건:</th>
       <td>
-        <a href="/ko/docs/Learn/HTML">HTML</a>,
-        <a href="/ko/docs/Learn/CSS">CSS</a>, 및
-        <a href="/ko/docs/Learn/JavaScript">JavaScript</a> 언어 핵심에 대한 친숙도
+        <a href="/ko/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>, 및
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a> 언어 핵심에 대한 친숙도
       </td>
     </tr>
     <tr>
@@ -328,4 +328,4 @@ it("Increments the count when clicked", () => {
 - [Svelte](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)
 - [Angular](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Introduction","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}

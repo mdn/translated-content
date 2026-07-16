@@ -2,10 +2,9 @@
 title: 制御フローとエラー処理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 l10n:
-  sourceCommit: f0d7ee3bc3a398612c75063fe227a5dcc515f40b
+  sourceCommit: 08d55156ba73587da8c20d882dea32ccba85dc0d
 ---
 
-{{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript は、特に制御フロー文についてはコンパクトな文のセットに対応しており、アプリケーションに多様な対話的機能を組み込むために利用することができます。この節ではこれらの文の概要を説明します。
@@ -153,12 +152,11 @@ if (x = y) {
 function checkData() {
   if (document.form1.threeChar.value.length === 3) {
     return true;
-  } else {
-    alert(
-      `Enter exactly three characters. ${document.form1.threeChar.value} is not valid.`,
-    );
-    return false;
   }
+  alert(
+    `正確に 3 文字を入力してください。 ${document.form1.threeChar.value} は有効ではありません。`,
+  );
+  return false;
 }
 ```
 
@@ -267,20 +265,20 @@ throw {
 
 要するに、成功した場合に実行したい `try` ブロックと、失敗した場合に制御を移行させたい `catch` ブロックで構成されています。`try` ブロック内（もしくは `try` ブロック内から呼び出された関数内）のいずれかの文が例外を投げると、制御は*すぐに* `catch` ブロックに移ります。`try` ブロックで例外が発生しなかった場合、`catch` ブロックはスキップされます。`finally` ブロックは `try` および `catch` ブロックを実行した後に実行しますが、`try...catch` 文の後に続く文より先に実行されます。
 
-次の例では `try...catch` 文を使用しています。この例では渡された値に基づいて、配列から月の名前を取り出す関数を実行します。値に対応する月の数字 (`1`–`12`) がない場合は `'InvalidMonthNo'` という値を持つ例外が発生し、`catch` ブロックの中の文は `monthName` という変数に `'unknown'` という値を設定します。
+次の例では `try...catch` 文を使用しています。この例では渡された値に基づいて、配列から月の名前を取り出す関数を実行します。値に対応する月の数字 (`1`–`12`) がない場合は `'Invalid month code'` という値を持つ例外が発生し、`catch` ブロックの中の文は `monthName` という変数に `'unknown'` という値を設定します。
 
 ```js-nolint
 function getMonthName(mo) {
   mo--; // 月の数字を配列のインデックスに合わせる (0 = Jan, 11 = Dec)
+  // prettier-ignore
   const months = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
   ];
-  if (months[mo]) {
-    return months[mo];
-  } else {
-    throw "InvalidMonthNo"; // ここで throw キーワードが使われている
+  if (!months[mo]) {
+    throw new Error("Invalid month code"); // ここで throw キーワードが使われている
   }
+  return months[mo];
 }
 
 try {
@@ -322,7 +320,7 @@ try {
 
 #### finally ブロック
 
-`finally` ブロックは、`try` および `catch` ブロックの実行「後」に実行される文が入ります。また、`finally` ブロックの中のコードは `try…catch…finally` に続く文が実行される「前」に実行されます。
+`finally` ブロックは、`try` および `catch` ブロックの実行「後」に実行される文が入ります。また、`finally` ブロックの中のコードは `try...catch...finally` に続く文が実行される「前」に実行されます。
 
 また、 `finally` ブロックは例外が発生するかどうかにかかわらず、実行されるということに注意することも大切です。また、例外が発生したら、`finally` ブロック内の文は発生した例外が `catch` ブロックで処理されなくても実行されます。
 
@@ -341,7 +339,7 @@ try {
 }
 ```
 
-`finally` ブロックが値を返す場合、その値は `try` および `catch` ブロックの `return` 文にかかわらず `try…catch…finally` 全体が生成する返値になります。
+`finally` ブロックが値を返す場合、その値は `try` および `catch` ブロックの `return` 文にかかわらず `try...catch...finally` 全体が生成する返値になります。
 
 ```js
 function f() {
@@ -353,14 +351,14 @@ function f() {
     // この返値は、finally ブロックが
     // 完了するまで保留となる
     return true;
-    console.log(2); // ここまで到達しない
+    console.log(2); // 到達しない
   } finally {
     console.log(3);
     return false; // 直前の "return" が上書きされる
-    console.log(4); // ここまで到達しない
+    // ここで `f` から出る
+    console.log(4); // 到達しない
   }
-  // ここで "return false" が実行される
-  console.log(5); // ここまで到達しない
+  console.log(5); // 到達しない
 }
 console.log(f()); // 0, 1, 3, false
 ```
@@ -378,8 +376,8 @@ function f() {
     throw e;
   } finally {
     return false; // 直前の "throw" が上書きされる
+    // ここで `f` から出る
   }
-  // ここで "return false" が実行される
 }
 
 try {
@@ -421,9 +419,8 @@ try {
 function doSomethingErrorProne() {
   if (ourCodeMakesAMistake()) {
     throw new Error("メッセージ");
-  } else {
-    doSomethingToGetAJavaScriptError();
   }
+  doSomethingToGetAJavaScriptError();
 }
 
 try {

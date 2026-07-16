@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 
 {{AddonSidebar}}
 
-指定ウィンドウの選択タブの表示領域の画像をエンコードしたデータ URI を作成します。このメソッドを使うには `<all_urls>` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) が必要です (Chrome の場合、`activeTab` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) があり、ユーザーが許可の操作を行えば、このメソッドを使うことができます)。
+指定ウィンドウの選択タブの表示領域の画像をエンコードした data URL を作成します。このメソッドを使うには `<all_urls>` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) が必要です (Chrome の場合、`activeTab` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) があり、ユーザーが許可の操作を行えば、このメソッドを使うことができます)。
 
 これは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
@@ -27,7 +27,7 @@ var capturing = browser.tabs.captureVisibleTab(
 
 ### 戻り値
 
-[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) であり、キャプチャーされたタブの表示領域の画像をエンコードしたデータ URL で fulfilled 状態にされる。このデータ URL は、HTML イメージ要素の 'src' 属性に設定することで、画像を表示できる。もし何らかのエラーが発生した場合、Promise はエラーメッセージによって rejected 状態にされる。
+[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) であり、キャプチャーされたタブの表示領域の画像をエンコードした data URL で fulfilled 状態にされる。この data URL は、HTML イメージ要素の 'src' 属性に設定することで、画像を表示できる。もし何らかのエラーが発生した場合、Promise はエラーメッセージによって rejected 状態にされる。
 
 ## 使用例
 

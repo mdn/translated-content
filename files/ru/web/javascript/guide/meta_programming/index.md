@@ -3,7 +3,7 @@ title: Мета-программирование
 slug: Web/JavaScript/Guide/Meta_programming
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_generators")}}
 
 С приходом ECMAScript 2015, в JavaScript введены объекты {{jsxref("Proxy")}} и {{jsxref("Reflect")}}, позволяющие перехватить и переопределить поведение фундаментальных процессов языка (таких как поиск свойств, присвоение, итерирование, вызов функций и так далее). С помощью этих двух объектов вы можете программировать на мета уровне JavaScript.
 
@@ -30,7 +30,7 @@ console.log(p.a, p.b); // 1, 42
 
 В разговоре о функциях объекта `Proxy` применимы следующие термины:
 
-- {{jsxref("Global_Objects/Proxy/handler","handler","",1)}} (обработчик)
+- {{jsxref("Proxy/Proxy","handler","",1)}} (обработчик)
   - : Объект - обёртка, содержащий в себе функции-ловушки.
 - ловушки (traps)
   - : Методы, реализующие доступ к свойствам. В своей концепции они аналогичны методам перехвата(hooking) в операционных системах.
@@ -54,10 +54,10 @@ console.log(p.a, p.b); // 1, 42
   <tbody>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}
+        {{jsxref("Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
       </td>
       <td>
-        {{jsxref("Object.getPrototypeOf()")}}<br />{{jsxref("Reflect.getPrototypeOf()")}}<br />{{jsxref("Object/proto", "__proto__")}}<br />{{jsxref("Object.prototype.isPrototypeOf()")}}<br />{{jsxref("Operators/instanceof", "instanceof")}}
+        {{jsxref("Object.getPrototypeOf()")}}<br />{{jsxref("Reflect.getPrototypeOf()")}}<br />{{jsxref("Object/proto", "__proto__")}}<br />{{jsxref("Object.prototype.isPrototypeOf()")}}<br />{{jsxref("instanceof")}}
       </td>
       <td>
         <ul>
@@ -75,7 +75,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}
+        {{jsxref("Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
       </td>
       <td>
         {{jsxref("Object.setPrototypeOf()")}}<br />{{jsxref("Reflect.setPrototypeOf()")}}
@@ -88,7 +88,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/isExtensible", "handler.isExtensible()")}}
+        {{jsxref("Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
       </td>
       <td>
         {{jsxref("Object.isExtensible()")}}<br />{{jsxref("Reflect.isExtensible()")}}
@@ -100,7 +100,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}
+        {{jsxref("Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
       </td>
       <td>
         {{jsxref("Object.preventExtensions()")}}<br />{{jsxref("Reflect.preventExtensions()")}}
@@ -113,7 +113,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+        {{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
       </td>
       <td>
         {{jsxref("Object.getOwnPropertyDescriptor()")}}<br />{{jsxref("Reflect.getOwnPropertyDescriptor()")}}
@@ -156,7 +156,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}
+        {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
       </td>
       <td>
         {{jsxref("Object.defineProperty()")}}<br />{{jsxref("Reflect.defineProperty()")}}
@@ -192,7 +192,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/has", "handler.has()")}}
+        {{jsxref("Proxy/Proxy/has", "handler.has()")}}
       </td>
       <td>
         Property query: <code>foo in proxy</code><br />Inherited property query:
@@ -216,7 +216,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}
+        {{jsxref("Proxy/Proxy/get", "handler.get()")}}
       </td>
       <td>
         <!-- markdownlint-disable MD011 -->
@@ -242,7 +242,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/set", "handler.set()")}}
+        {{jsxref("Proxy/Proxy/set", "handler.set()")}}
       </td>
       <td>
         Property assignment: <code>proxy[foo] = bar</code> and
@@ -272,7 +272,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}
+        {{jsxref("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
       </td>
       <td>
         Property deletion: <code>delete proxy[foo]</code> and
@@ -286,7 +286,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/enumerate", "handler.enumerate()")}}
+        {{jsxref("Proxy/Proxy/enumerate", "handler.enumerate()")}}
       </td>
       <td>
         Property enumeration / for...in:
@@ -302,7 +302,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}}
+        {{jsxref("Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
       </td>
       <td>
         {{jsxref("Object.getOwnPropertyNames()")}}<br />{{jsxref("Object.getOwnPropertySymbols()")}}<br />{{jsxref("Object.keys()")}}<br />{{jsxref("Reflect.ownKeys()")}}
@@ -328,7 +328,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/apply", "handler.apply()")}}
+        {{jsxref("Proxy/Proxy/apply", "handler.apply()")}}
       </td>
       <td>
         <code>proxy(..args)</code
@@ -339,7 +339,7 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/construct", "handler.construct()")}}
+        {{jsxref("Proxy/Proxy/construct", "handler.construct()")}}
       </td>
       <td>
         <code>new proxy(...args)</code
@@ -376,7 +376,7 @@ typeof proxy; // "object", для метода typeof нет ловушек
 
 ## Рефлексия
 
-{{jsxref("Reflect")}} это встроенный объект, предоставляющий методы для перехватываемых операций JavaScript. Это те же самые методы, что имеются в {{jsxref("Global_Objects/Proxy/handler","обработчиках Proxy","",1)}}. Объект `Reflect` не является функцией.
+{{jsxref("Reflect")}} это встроенный объект, предоставляющий методы для перехватываемых операций JavaScript. Это те же самые методы, что имеются в {{jsxref("Proxy/Proxy","обработчиках Proxy","",1)}}. Объект `Reflect` не является функцией.
 
 `Reflect` помогает при пересылке стандартных операций из обработчика к целевому объекту.
 
@@ -422,4 +422,4 @@ if (Reflect.defineProperty(target, property, attributes)) {
 }
 ```
 
-{{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{Previous("Web/JavaScript/Guide/Iterators_and_generators")}}

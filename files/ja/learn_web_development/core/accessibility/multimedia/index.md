@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
 
-アクセシビリティの問題を引き起こす他のカテゴリーは、マルチメディアでです。映像、音声、画像といったコンテンツは、支援技術 (assistive technologies) とそのユーザーが理解可能となる適切な代替テキストを必要とします。この記事ではその方法を説明します。
+アクセシビリティの問題を引き起こす他のカテゴリーは、マルチメディアです。映像、音声、画像といったコンテンツは、支援技術 (assistive technologies) とそのユーザーが理解可能となる適切な代替テキストを必要とします。この記事ではその方法を説明します。
 
 <table>
   <tbody>
@@ -226,7 +226,7 @@ player.ontimeupdate = () => {
 
 - [音声と映像の配信](/ja/docs/Web/Media/Guides/Audio_and_video_delivery)
 - [映像プレイヤーのスタイル設定の基本](/ja/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)
-- [ブラウザー間互換の映像プレイヤーの作成](/ja/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
+- [ブラウザー間互換の映像プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
 
 また、ページ上のすべての映像と映像プレイヤーを探し（いくつあってもかまいません）、カスタムコントロールを追加するオブジェクト指向システムを作成する方法を示す高度な例も作成しました。 [custom-controls-oojs](https://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) を見てください（[ソースコード](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/custom-controls-OOJS)も見てください）。
 

@@ -1,34 +1,37 @@
 ---
-title: Math.cbrt()
+title: "Math : méthode statique cbrt()"
+short-title: cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Math.cbrt()`** retourne la racine cubique d'un nombre. C'est-à-dire,
 
-La fonction **`Math.cbrt()`** renvoie la racine cubique (le nom anglais étant _cubic root_) d'un nombre :
+<math display="block">
+  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚌𝚋𝚛𝚝</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><mtext>l'unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;telle que&nbsp;</mtext><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cbrt}(x)} = \sqrt[3]{x} = \text{l'unique } y \text{ telle que } y^3 = x</annotation></semantics>
+</math>
 
-<math><semantics><mrow><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><mtext>le seul</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{Math.cbrt(x)} = \sqrt[3]{x} = \text{the unique} \; y \; \text{such that} \; y^3 = x</annotation></semantics></math>
-
-{{InteractiveExample("JavaScript Demo: Math.cbrt()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.cbrt()")}}
 
 ```js interactive-example
 console.log(Math.cbrt(-1));
-// Expected output: -1
+// Sortie attendue : -1
 
 console.log(Math.cbrt(1));
-// Expected output: 1
+// Sortie attendue : 1
 
 console.log(Math.cbrt(Infinity));
-// Expected output: Infinity
+// Sortie attendue : Infinity
 
 console.log(Math.cbrt(64));
-// Expected output: 4
+// Sortie attendue : 4
 ```
 
 ## Syntaxe
 
-```js
-Math.cbrt(x);
+```js-nolint
+Math.cbrt(x)
 ```
 
 ### Paramètres
@@ -38,26 +41,24 @@ Math.cbrt(x);
 
 ### Valeur de retour
 
-La racine cubique du nombre passé en argument.
+La racine cubique de `x`.
 
 ## Description
 
-`cbrt()` étant une méthode statique de `Math`, il faut utiliser `Math.cbrt()`, et non pas la méthode d'un autre objet créé (`Math` n'est pas un constructeur).
+Parce que `cbrt()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.cbrt()`, et non comme méthode d'un objet `Math` que vous auriez créé (`Math` n'est pas un constructeur).
 
 ## Exemple
 
-### Utiliser `Math.cbrt()`
+### Utiliser la méthode `Math.cbrt()`
 
 ```js
-Math.cbrt(NaN); // NaN
+Math.cbrt(-Infinity); // -Infinity
 Math.cbrt(-1); // -1
 Math.cbrt(-0); // -0
-Math.cbrt(-Infinity); // -Infinity
 Math.cbrt(0); // 0
 Math.cbrt(1); // 1
-Math.cbrt(Infinity); // Infinity
-Math.cbrt(null); // 0
 Math.cbrt(2); // 1.2599210498948732
+Math.cbrt(Infinity); // Infinity
 ```
 
 ## Spécifications
@@ -70,5 +71,7 @@ Math.cbrt(2); // 1.2599210498948732
 
 ## Voir aussi
 
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- [Prothèse d'émulation de `Math.cbrt` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
+- [Prothèse d'émulation es-shims de `Math.cbrt` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.cbrt)
+- La méthode statique {{JSxRef("Math.pow()")}}
+- La méthode statique {{JSxRef("Math.sqrt()")}}

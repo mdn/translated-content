@@ -15,7 +15,7 @@ como para los más inusuales.
 Para enviar una solicitud HTTP, cree un objeto `XMLHttpRequest`, abra una URL y
 envíe la solicitud. Una vez que la transacción haya sido completada, el objeto
 contendrá información útil tal como el cuerpo de la respuesta y el estado [HTTP
-status](/es/docs/Web/HTTP/Status) del resultado.
+status](/es/docs/Web/HTTP/Reference/Status) del resultado.
 
 ```js
 function reqListener() {
@@ -62,10 +62,10 @@ Si utiliza `XMLHttpRequest` para obtener el contenido de un documento XML remoto
 que contiene un documento XML analizado. Esto podría resultar difícil de manipular y analizar.
 Principalmente hay cuatro formas de analizar este documento XML:
 
-1. Usando [XPath](/es/docs/Web/XPath) para dirigir (o apuntar a) partes
+1. Usando [XPath](/es/docs/Web/XML/XPath) para dirigir (o apuntar a) partes
    del mismo.
 2. Manualmente [Analizar y
-   serializar el XML](/es/docs/Web/XML/Parsing_and_serializing_XML) a cadenas u objetos.
+   serializar el XML](/es/docs/Web/XML/Guides/Parsing_and_serializing_XML) a cadenas u objetos.
 3. Usando {{domxref("XMLSerializer")}} para serializar **árboles DOM a cadenas o a
    archivos**.
 4. {{jsxref("RegExp")}} se puede utilizar si siempre se conoce el contenido del documento XML
@@ -297,7 +297,7 @@ dependiendo del tipo de codificación que esté utilizando:
   ```
 
 - Método: `POST`; Tipo de codificación:
-  [`multipart/form-data`](/es/docs/Web/HTTP/MIME_types#multipartform-data):
+  [`multipart/form-data`](/es/docs/Web/HTTP/Guides/MIME_types#multipartform-data):
 
   ```plain
   Content-Type: multipart/form-data; boundary=---------------------------314911788813839
@@ -961,7 +961,7 @@ por favor, lee el artículo sobre {{domxref("document.lastModified")}}.
 
 ## Cross-site XMLHttpRequest
 
-Los navegadores modernos admiten las peticiones cross-site implementando el estándar [Recursos compartidos de origen-cruzado](/es/docs/Web/HTTP/CORS) (CORS).
+Los navegadores modernos admiten las peticiones cross-site implementando el estándar [Recursos compartidos de origen-cruzado](/es/docs/Web/HTTP/Guides/CORS) (CORS).
 Siempre que el servidor esté configurado para permitir las peticiones desde el origen de su aplicación web,
 `XMLHttpRequest` funcionará. En caso contrario, se lanzará una excepción `INVALID_ACCESS_ERR`.
 
@@ -1025,7 +1025,7 @@ Establecer `overrideMimeType` no funciona desde un {{domxref("Worker")}}. Ver
 
 1. [MDN introducción a AJAX](/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e)
 2. [HTML en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-3. [Control de acceso HTTP](/es/docs/Web/HTTP/CORS)
+3. [Control de acceso HTTP](/es/docs/Web/HTTP/Guides/CORS)
 4. [XMLHttpRequest - REST y la experiencia de usuario enriquecida](https://www.peej.co.uk/articles/rich-user-experience.html)
 5. [Documentación de Microsoft](https://msdn.microsoft.com/library/ms535874)
 6. ["Uso del objeto XMLHttpRequest" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)

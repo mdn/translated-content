@@ -3,8 +3,6 @@ title: RegExp[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species
 ---
 
-{{JSRef}}
-
 **`RegExp[Symbol.species]`** 访问器属性返回 `RegExp` 的构造函数。
 
 ## 语法

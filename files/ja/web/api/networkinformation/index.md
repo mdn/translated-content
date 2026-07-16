@@ -56,6 +56,6 @@ _このインターフェイスは、親である {{domxref("EventTarget")}} の
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [オンライン／オフラインイベント](/ja/docs/Web/API/Navigator/onLine)

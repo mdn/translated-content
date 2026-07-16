@@ -1,11 +1,12 @@
 ---
-title: CSSTransformValue.keys()
+title: "CSSTransformValue: keys() メソッド"
+short-title: keys()
 slug: Web/API/CSSTransformValue/keys
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 **`CSSTransformValue.keys()`** メソッドは、配列の各インデックスに対応するキーを格納した新しい _配列イテレーター_ オブジェクトを返します。
 

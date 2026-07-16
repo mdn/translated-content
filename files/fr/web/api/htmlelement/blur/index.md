@@ -1,48 +1,61 @@
 ---
-title: HTMLElement.blur()
+title: "HTMLElement : méthode blur()"
+short-title: blur()
 slug: Web/API/HTMLElement/blur
+l10n:
+  sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`HTMLElement.blur()`** retire le focus du clavier de l'élément courant.
+La méthode **`blur()`** de l'interface {{DOMxRef("HTMLElement")}} retire la sélection du clavier de l'élément courant.
 
 ## Syntaxe
 
-```js
-blur();
+```js-nolint
+blur()
 ```
+
+### Paramètres
+
+Aucun.
+
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
-### Retirer le focus d'un champ texte
+### Retirer la sélection d'un champ texte
 
 #### HTML
 
 ```html
 <input type="text" id="monTexte" value="Texte d'échantillon" /> <br /><br />
-<button type="button" onclick="focusInput()">
-  Cliquez ici pour obtenir le focus
-</button>
-<button type="button" onclick="blurInput()">
-  Cliquez ici pour perdre le focus
-</button>
+<button type="button">Cliquez ici pour obtenir la sélection</button>
 ```
 
 #### JavaScript
 
 ```js
+const textField = document.getElementById("monTexte");
+const button = document.querySelector("button");
+
 function focusInput() {
-  document.getElementById("monTexte").focus();
+  textField.focus();
+
+  // Le champ perdra la sélection après 3 secondes
+  setTimeout(() => {
+    textField.blur();
+  }, 3000);
 }
-function blurInput() {
-  document.getElementById("monTexte").blur();
-}
+
+button.addEventListener("click", focusInput);
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample('Retirer la sélection d'un champ texte')}}
 
 ## Spécifications
 
@@ -54,4 +67,4 @@ function blurInput() {
 
 ## Voir aussi
 
-- [`HTMLElement.focus`](/fr/docs/Web/API/HTMLElement/focus)
+- La propriété {{DOMxRef("HTMLElement.focus")}}

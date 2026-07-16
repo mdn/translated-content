@@ -20,7 +20,7 @@ l10n:
 
 ### 現行のブラウザーを使用する。個人設定とアクセシビリティ設定を学ぶ
 
-現行のブラウザーは CSS メディア特性 [`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) に対応しています。ブラウザーはユーザーが縮小モーションの操作をリクエストされたかどうかを検出することができます。ユーザーは下記のようなアクセシビリティインターフェイスからアクセスします。
+現行のブラウザーは CSS メディア特性 [`prefers-reduced-motion`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) に対応しています。ブラウザーはユーザーが縮小モーションの操作をリクエストされたかどうかを検出することができます。ユーザーは下記のようなアクセシビリティインターフェイスからアクセスします。
 
 ![Windows 10 でアニメーションをオフにする方法を示す画面。](android-remove-animations.png)
 

@@ -3,8 +3,6 @@ title: RegExp() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 ---
 
-{{JSRef}}
-
 **`RegExp`** 用于创建正则表达式对象，该对象用于将文本与一个模式匹配
 
 阅读[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)一节以了解正则表达式。

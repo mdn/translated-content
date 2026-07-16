@@ -5,7 +5,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/development_environmen
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Теперь, когда вы знаете, что такое Django, мы покажем вам, как настроить и протестировать среду разработки Django для Windows, Linux (Ubuntu) и Mac OS X - какую бы операционную систему вы не использовали, эта статья должна дать вам все, что необходимо для возможности начать разрабатывать приложения Django.
 
@@ -316,7 +316,8 @@ py -3 -m django --version
 > [!NOTE]
 > Для Windows вы запускаете скрипты _Python 3_ с префиксом команды `py -3`, в то время как для Linux/Mac OSX префикс - `python3`.
 
-> **Предупреждение:** **Важно**: В оставшейся части материала используется вариант команды _Linux_ для вызова Python 3 (`python3`) . Если вы работаете в _Windows,_ то просто замените этот префикс на: `py -3`
+> [!WARNING]
+> В оставшейся части материала используется вариант команды _Linux_ для вызова Python 3 (`python3`) . Если вы работаете в _Windows,_ то просто замените этот префикс на: `py -3`
 
 ## Проверка вашей установки
 

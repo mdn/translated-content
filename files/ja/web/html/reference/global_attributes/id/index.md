@@ -35,7 +35,7 @@ l10n:
 
 `id` の値に{{glossary("whitespace", "ホワイトスペース")}}文字 (空白やタブなど) を含めてはいけません。ブラウザーはホワイトスペース文字を含む不適合な ID を、ホワイトスペース文字が ID の一部であるかのように扱います。空白区切りで並べた値を受け入れる [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) 属性とは対照的に、要素は ID の値をひとつだけ持つことができます。
 
-技術的には、`id` 属性の値には{{glossary("whitespace", "ホワイトスペース")}}文字を除いて、どんな文字でも入れることができます。ただし、{{domxref("Document.querySelector()")}} のような API を使用して JavaScript から、あるいは CSS スタイルシート内で CSS セレクターとして使用する場合、 ID 属性値は [CSS 識別子](/ja/docs/Web/CSS/ident)として有効でなければなりません。これは、 ID 属性値が有効な CSS 識別子でない場合 （例えば、 `my?id` や `1234`）である場合、セレクターで使用する前に、 {{domxref("CSS.escape_static", "CSS.escape()")}} メソッドまたは [手動](/ja/docs/Web/CSS/ident#escaping_characters) を使用してエスケープする必要があります。
+技術的には、`id` 属性の値には{{glossary("whitespace", "ホワイトスペース")}}文字を除いて、どんな文字でも入れることができます。ただし、{{domxref("Document.querySelector()")}} のような API を使用して JavaScript から、あるいは CSS スタイルシート内で CSS セレクターとして使用する場合、 ID 属性値は [CSS 識別子](/ja/docs/Web/CSS/Reference/Values/ident)として有効でなければなりません。これは、 ID 属性値が有効な CSS 識別子でない場合 （例えば、 `my?id` や `1234`）である場合、セレクターで使用する前に、 {{domxref("CSS.escape_static", "CSS.escape()")}} メソッドまたは [手動](/ja/docs/Web/CSS/Reference/Values/ident#escaping_characters) を使用してエスケープする必要があります。
 
 このため、開発者は、エスケープを必要としない、CSS の識別子として有効な値を ID 属性に選べます。
 
@@ -75,4 +75,4 @@ const content = window.preamble.textContent;
 - すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("Element.id")}} はこの属性を反映します
 - {{domxref("Document.getElementById")}} メソッド
-- CSS の [ID セレクター](/ja/docs/Web/CSS/ID_selectors)
+- CSS の [ID セレクター](/ja/docs/Web/CSS/Reference/Selectors/ID_selectors)

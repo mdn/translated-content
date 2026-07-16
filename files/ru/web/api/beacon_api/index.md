@@ -27,7 +27,7 @@ slug: Web/API/Beacon_API
 
 ## Рабочий контекст
 
-Интерфейс `Beacon API's` предоставляет метод {{domxref("Navigator.sendBeacon()")}}, который используется для отправки _beacon_ данных на сервер из _{{domxref("WorkerGlobalScope","worker global scope")}}_. Метод принимает два аргумента: URL-адрес и данные для отправки в запросе. Аргумент `data` является необязательным, и его тип может быть {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, или {{domxref("FormData")}}. Если браузер успешно поставил в очередь запрос на доставку, то метод возвращает `true` либо возвращает `false` в противном случае.
+Интерфейс `Beacon API's` предоставляет метод {{domxref("Navigator.sendBeacon()")}}, который используется для отправки _beacon_ данных на сервер из _{{domxref("WorkerGlobalScope","worker global scope")}}_. Метод принимает два аргумента: URL-адрес и данные для отправки в запросе. Аргумент `data` является необязательным, и его тип может быть {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{jsxref("String")}}, или {{domxref("FormData")}}. Если браузер успешно поставил в очередь запрос на доставку, то метод возвращает `true` либо возвращает `false` в противном случае.
 
 ## Совместимость с браузерами
 

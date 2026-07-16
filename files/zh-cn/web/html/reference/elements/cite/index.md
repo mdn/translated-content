@@ -37,12 +37,12 @@ cite {
   <tr>
    <th scope="row" style="vertical-align: middle;">内容类别</th>
    <td>
-    <p><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">流内容（Flow Content）</a>，<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a>，可触及的内容（Palpable Content）。</p>
+    <p><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">流内容（Flow Content）</a>，<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a>，可触及的内容（Palpable Content）。</p>
    </td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -50,7 +50,7 @@ cite {
   </tr>
   <tr>
    <th scope="row">允许的父级元素</th>
-   <td>任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a>的元素。</td>
+   <td>任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a>的元素。</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>

@@ -43,5 +43,5 @@ l10n:
 - {{domxref("Popover API", "Popover API", "", "nocode")}}
 - [`popovertarget`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML 属性
 - [`popovertargetaction`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML 属性
-- [`::backdrop`](/zh-CN/docs/Web/CSS/::backdrop) CSS 伪元素
-- [`:popover-open`](/zh-CN/docs/Web/CSS/:popover-open) CSS 伪类
+- [`::backdrop`](/zh-CN/docs/Web/CSS/Reference/Selectors/::backdrop) CSS 伪元素
+- [`:popover-open`](/zh-CN/docs/Web/CSS/Reference/Selectors/:popover-open) CSS 伪类

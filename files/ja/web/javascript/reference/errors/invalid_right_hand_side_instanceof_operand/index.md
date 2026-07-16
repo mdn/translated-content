@@ -54,7 +54,7 @@ x instanceof f; // true
 x instanceof Foo; // true
 ```
 
-## 関連項目
+## 関連情報
 
 - [`instanceof` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/instanceof)
 - [`typeof` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/typeof)

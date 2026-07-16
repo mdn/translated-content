@@ -1,8 +1,9 @@
 ---
-title: "<link>: 外部リソースへのリンク要素"
+title: HTML `<link>` 外部リソースへのリンク要素
+short-title: <link>
 slug: Web/HTML/Reference/Elements/link
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<link>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在の文書と外部のリソースとの関係を指定します。
@@ -134,20 +135,26 @@ l10n:
           </td>
         </tr>
         <tr>
+          <td>json</td>
+          <td>
+            <code>modulepreload</code> の宛先
+          </td>
+        </tr>
+        <tr>
           <td>object</td>
           <td><code>&#x3C;object></code> 属性</td>
         </tr>
         <tr>
           <td>script</td>
           <td>
-            <code>&#x3C;script></code> 要素、ワーカーの <code>importScripts</code>
+            <code>&#x3C;script></code> 要素、ワーカーの <code>importScripts</code> および <code>modulepreload</code> の宛先
           </td>
         </tr>
         <tr>
           <td>style</td>
           <td>
             <code>&#x3C;link rel=stylesheet></code> 要素、 CSS の
-            <code>@import</code>
+            <code>@import</code> および <code>modulepreload</code> の宛先
           </td>
         </tr>
         <tr>
@@ -190,9 +197,8 @@ l10n:
 
     DOM から `disabled` プロパティの値を変更すると、そのスタイルシートを文書の {{domxref("Document.styleSheets")}} の一覧から削除します。
 
-- `fetchpriority`
-  - : 特定の種類のリソースを取得する際に使用する、相対的な優先度の目安を提供します。
-    使用できる値は次の通りです。
+- [`fetchpriority`](/ja/docs/Web/HTML/Reference/Attributes/fetchpriority)
+  - : 特定の種類のリソースを取得する際に使用する、相対的な優先度の目安を提供します。使用できる値は次の通りです。
     - `high`
       - : 他の同種のリソースと比較して、優先度を高く設定してリソースを取得する。
     - `low`
@@ -201,9 +207,6 @@ l10n:
       - : 取得の優先度の設定を行わない。
         これが既定値です。
         値が設定されていない場合、または無効な値が設定されている場合に使用されます。
-
-    詳しくは {{domxref("HTMLLinkElement.fetchPriority")}} を参照してください。
-
 - `href`
   - : この属性は、リンクしたリソースの {{glossary("URL")}} を指定します。 URL は絶対・相対のどちらでもかまいません。
 - `hreflang`
@@ -215,21 +218,22 @@ l10n:
   - : `rel="preload"` および `as="image"` が付いている場合にのみ、 `imagesizes` 属性は [`sizes`](/ja/docs/Web/HTML/Reference/Elements/img#sizes) 属性と同様の構文と意味を持ち、`img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示します。
 - `imagesrcset`
   - : `rel="preload"` および `as="image"` が付いている場合にのみ、 `imagesrcset` 属性は [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性と同様の構文と意味を持ち、`img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示します。
-- `integrity`
-  - : インラインメタデータを格納します。ブラウザーに取得するよう指示するリソース (ファイル) の、base64 エンコードされた暗号化ハッシュです。
-    ブラウザーはこれを使用して、取得したリソースが予期せぬ操作なしに配信されたことを確認することができます。
-    この属性は、`rel` 属性が `stylesheet`、`preload`、`modulepreload` を指定した場合にのみ指定する必要があります。
-    [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)を参照してください。
+- [`integrity`](/ja/docs/Web/HTML/Reference/Attributes/integrity)
+  - : この属性には、リソースの 1 つ以上の{{glossary("hash function", "ハッシュ")}}が含まれます。これは、リソースの内容が開発者が想定した通りであり、[サプライチェーン攻撃](/ja/docs/Web/Security/Attacks/Supply_chain_attacks)によって悪意のあるコピーに置き換えられていないことを保証します。この属性は、`rel` 属性で `stylesheet`、`preload`、`modulepreload` を指定した場合にのみ指定できます。
+    [サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)を参照してください。
 - `media`
-  - : この属性は、リンク先のリソースが適用されるメディアを指定します。この値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)でなければなりません。
+  - : この属性は、リンク先のリソースが適用されるメディアを指定します。この値は[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)でなければなりません。
     この属性は主に外部のスタイルシートから、実行中のデバイスに最適なものをユーザーエージェントが選択できるようにリンクするときに役立ちます。
 
 - `referrerpolicy`
-  - : リソースを読み込む際にどのリファラーを使用するかを示す文字列です。
+  - : リソースを読み込む際にどのリファラーを使用するかを示す文字列です。それぞれのポリシーの詳細な説明や例については、{{HTTPHeader("Referrer-Policy")}} ヘッダーのドキュメントをご覧ください。
     - `no-referrer` は、{{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。
     - `no-referrer-when-downgrade` は、TLS (HTTPS) を使用せずにオリジンへナビゲートする場合は {{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。これは他にポリシーが定められていない場合の、ユーザーエージェントの既定の動作です。
     - `origin` は、ページのオリジン (大まかにいえばスキーム、ホスト、ポート) をリファラーとすることを表します。
     - `origin-when-cross-origin` は、異なるオリジンへの移動ではリファラーをスキーム、ホスト、ポートに制限します。同一オリジンへの移動では、リファラーのパスも含めます。
+    - `same-origin` は、同一オリジンのリクエストではリファラー（オリジン、パス、クエリ文字列）が送信されますが、オリジンを越えるリクエストではリファラーが送信されないことを意味します。
+    - `strict-origin` は、プロトコルのセキュリティ水準が同じ場合 (HTTPS→HTTPS) にのみ、オリジンが送信されます。セキュリティ水準が低い出力先 (HTTPS→HTTP) には、リファラーを送信しません。これは、セキュリティ水準の低いオリジンへのリファラー情報の漏洩を防ぐため、HTTPS ページにとって重要です。
+    - `strict-origin-when-cross-origin` は、同一オリジンのリクエストに対しては完全なリファラーを送信します。オリジン間リクエストの場合、プロトコルが同じ (HTTPS→HTTPS) であるときはオリジンのみを送信し、HTTP にダウングレードする場合はリファラーを送信しません。これがデフォルト値です。HTTPS サイトにおいて機能性とプライバシーおよびセキュリティのバランスをとっています。
     - `unsafe-url` は、リファラーにオリジンとパスを含めることを表します (ただし、フラグメント、パスワード、ユーザー名は含めません)。これはオリジンやパスの情報が TLS で保護されたリソースからセキュアでないオリジンへ漏えいしますので、安全ではありません。
 
 - [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel)
@@ -240,8 +244,8 @@ l10n:
     - ホワイトスペースで区切られたサイズのリスト。サイズはそれぞれ `<幅のピクセル数>x<高さのピクセル数>` または `<幅のピクセル数>X<高さのピクセル数>` という形式です。それぞれのサイズがリソースに含まれていることが必要です。
 
     > [!NOTE]
-    > ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 [`sizes`](#sizes) 属性はエントリーが 1 個だけになります。
-    > Microsoft の ICO 形式と Apple の ICNS 形式は、単一のファイルに複数のアイコンサイズを保存できます。ICO はブラウザーのサポートが良いので、ブラウザー間の対応を気にする場合はこの形式を使用すべきです。
+    > ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 [`sizes`](#sizes) 属性は高億が 1 個だけになります。
+    > Microsoft の ICO 形式と Apple の ICNS 形式は、単一のファイルに複数のアイコンサイズを保存できます。ICO はブラウザーの対応状況が良いので、ブラウザー間の対応を気にする場合はこの形式を使用すべきです。
 
 - `title`
   - : `title` 属性は、`<link>` 要素では特別な意味があります。`<link rel="stylesheet">` で使用すると、[既定のスタイルシートか代替スタイルシートか](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet) を定義します。
@@ -322,7 +326,7 @@ l10n:
 <link rel="icon" href="/favicon.ico" />
 ```
 
-Apple アイコンの適切なサイズ選択については、[Apple のウェブアプリケーションの構成に関するドキュメント](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#///apple_ref/doc/uid/TP40002051-CH3-SW4) および参照されている [Apple ヒューマンインターフェースガイドライン](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes)を参照してください。通常は 192x192 などの大きな画像を用意し、ブラウザーが必要に応じて縮小表示させるだけで十分ですが、Apple のデザインガイドラインが推奨するように、サイズごとに異なる詳細レベルの画像を用意したい場合もあるでしょう。低解像度向けに小さいアイコンを用意すれば、帯域幅の節約にもなります。
+Apple アイコンの適切なサイズ選択については、[Apple のウェブアプリケーションの構成に関するドキュメント](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#///apple_ref/doc/uid/TP40002051-CH3-SW4) および参照されている [Apple ヒューマンインターフェイスガイドライン](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes)を参照してください。通常は 192x192 などの大きな画像を用意し、ブラウザーが必要に応じて縮小表示させるだけで十分ですが、Apple のデザインガイドラインが推奨するように、サイズごとに異なる詳細レベルの画像を用意したい場合もあるでしょう。低解像度向けに小さいアイコンを用意すれば、帯域幅の節約にもなります。
 
 `<link>` 要素を全く提供する必要がない場合もあります。例えば、ブラウザーはサイトのルートから自動的に `/favicon.ico` をリクエストし、Apple も自動的に `/apple-touch-icon-[size].png` や `/apple-touch-icon.png` などを要求します。ただし、明示的なリンクを提供することで、これらの慣習の変更に対して保護されます。
 
@@ -386,7 +390,7 @@ stylesheet.onerror = () => {
       </th>
       <td>
         メタデータコンテンツ。
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> が存在する場合は、
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/itemprop">itemprop</a></code> が存在する場合は、
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>および<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>。
       </td>
     </tr>
@@ -402,7 +406,7 @@ stylesheet.onerror = () => {
       <th>許可されている親要素</th>
       <td>
         メタデータ要素を受け入れるすべての要素。
-        <a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> 属性がある場合は<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes/itemprop">itemprop</a> 属性がある場合は<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
       </td>
     </tr>
     <tr>
@@ -431,3 +435,4 @@ stylesheet.onerror = () => {
 ## 関連情報
 
 - HTTP の {{HTTPHeader("Link")}} ヘッダー
+- HTTP の {{HTTPHeader("Referrer-Policy")}} ヘッダー

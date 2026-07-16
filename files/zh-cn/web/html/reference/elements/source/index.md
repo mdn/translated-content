@@ -98,7 +98,7 @@ l10n:
     列表由以逗号分隔的源尺寸组成。每个源尺寸都是媒体条件——长度对。在布局页面之前，浏览器会使用这些信息来确定 [`srcset`](#srcset) 中要显示的图像。请注意，只有在随 `srcset` 提供宽度描述符而不是像素密度描述符的情况下，`sizes` 才会生效（例如，应使用 `200w` 而不是 `2x`）。
 
 - `media`
-  - : 为资源的预期媒体指定[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)。
+  - : 为资源的预期媒体指定[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries)。
 
 - `height`
   - : 以像素为单位指定图片的固有高度。如果 `<source>` 的父元素是 {{HTMLElement("picture")}}，则允许指定该属性。如果父元素是 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 则不允许指定该属性。
@@ -157,7 +157,7 @@ l10n:
 
 ### 将 `height` 与 `width` 属性与 `<picture>` 搭配使用
 
-在本示例中，{{HTMLElement("picture")}} 元素中包含了三个带有 `height` 和 `width` 属性的 `<source>` 元素。[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)允许浏览器根据[视口](/zh-CN/docs/Glossary/Viewport)尺寸选择带有 `height` 和 `width` 属性的图片来显示。
+在本示例中，{{HTMLElement("picture")}} 元素中包含了三个带有 `height` 和 `width` 属性的 `<source>` 元素。[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)允许浏览器根据[视口](/zh-CN/docs/Glossary/Viewport)尺寸选择带有 `height` 和 `width` 属性的图片来显示。
 
 ```html
 <picture>

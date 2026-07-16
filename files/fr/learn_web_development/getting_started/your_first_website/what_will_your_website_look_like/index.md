@@ -2,9 +2,8 @@
 title: À quoi ressemblera le site web ?
 short-title: À quoi ressemblera-t-il ?
 slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
-original_slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
@@ -43,11 +42,11 @@ Pour commencer, posez-vous ces questions&nbsp;:
 3. **Quelle sera l'apparence de mon site web,** en simple termes de survol&nbsp;? Quelle sera la couleur de l'arrière plan&nbsp;? Quelle sorte de police de caractères est appropriée&nbsp;: formelle, dessin animé, grasse et lourde, subtile&nbsp;?
 
 > [!NOTE]
-> Les projets complexes nécessitent des lignes directrices (guidelines) détaillées précisant tout : couleurs, polices, espacement entre éléments de la page, style d'écriture adapté, etc. Ceci est parfois appelé un guide de conception ou une charte graphique, vous pouvez en voir un exemple dans [Firefox OS Guidelines](https://www.mozilla.org/fr/styleguide/products/firefox-os/).
+> Les projets complexes nécessitent des lignes directrices (<i lang="en">guidelines</i> en anglais) détaillées précisant tout&nbsp;: couleurs, polices, espacement entre éléments de la page, style d'écriture adapté, etc. Ceci est parfois appelé un guide de conception ou une charte graphique, vous pouvez en voir un exemple dans [Firefox OS Guidelines](https://www.mozilla.org/fr/styleguide/products/firefox-os/).
 
 ## Esquisse de votre concept
 
-Ensuite, prenez un crayon et du papier et faites une esquisse de l'apparence souhaitée pour votre site. Pour une première et simple page web, il n'y a pas beaucoup à esquisser, mais vous devriez prendre l'habitude de le faire dès maintenant. Cela aide vraiment — vous n'avez pas à être Van Gogh&nbsp;!
+Ensuite, prenez un crayon et du papier et faites une esquisse de l'apparence souhaitée pour votre site. Pour une première et simple page web, il n'y a pas beaucoup à esquisser, mais vous devez prendre l'habitude de le faire dès maintenant. Cela aide vraiment — vous n'avez pas à être Van Gogh&nbsp;!
 
 ![Un croquis et une esquisse de site web sur papier](website-drawing-scan.png)
 
@@ -56,14 +55,14 @@ Ensuite, prenez un crayon et du papier et faites une esquisse de l'apparence sou
 >
 > Les équipes web incluent souvent à la fois un·e [graphiste](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes#graphiste) et un·e [designer UX (expérience utilisateur)](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes#concepteur_dexpérience_utilisateur_ux). Les graphistes s'occupent des visuels du site web. Les designers UX ont un rôle un peu plus abstrait&nbsp;: ils·elles s'intéressent à la façon dont les utilisateur·ice·s vont découvrir et interagir avec le site web.
 
-À ce stade, il est bon de commencer à regrouper les contenus qui apparaîtront éventuellement sur votre page web. Vous devriez encore avoir vos paragraphes et votre titre de tout à l'heure. Gardez-les à portée de main.
+À ce stade, il est bon de commencer à regrouper les contenus qui vont apparaître sur votre page web. Vous devez encore avoir vos paragraphes et votre titre de tout à l'heure. Gardez-les à portée de main.
 
 ## Choix de la couleur du thème
 
 Choisissons une couleur d'arrière-plan pour votre page.
 
-1. Rendez-vous sur [le sélecteur de couleurs](/fr/docs/Web/CSS/CSS_colors/Color_format_converter) et trouvez une couleur qui vous plaît.
-2. Lorsque vous choisissez une couleur, vous verrez un étrange code à six caractères comme `#660066`. C'est ce qu'on appelle un _code hex_ (abréviation de hexadécimal), et il représente votre couleur. Copiez ce code dans un endroit sûr pour l'instant.
+1. Rendez-vous sur [le sélecteur de couleurs](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter) et trouvez une couleur qui vous plaît.
+2. Lorsque vous choisissez une couleur, vous pouvez voir un étrange code à six caractères comme `#660066`. C'est ce qu'on appelle un _code hex_ (abréviation de hexadécimal), et il représente votre couleur. Copiez ce code dans un endroit sûr pour l'instant.
 
 ![Outil de conversion de format de couleur sur le site MDN Docs](color_format_converter.jpg)
 
@@ -72,7 +71,7 @@ Choisissons une couleur d'arrière-plan pour votre page.
 Il est maintenant temps de trouver une image à afficher sur votre site.
 
 1. Rendez-vous sur [Google Images](https://www.google.com/imghp).
-2. Notez que la plupart des images sur le Web, y compris celles de Google Images, sont protégées par des droits d'auteur. Pour réduire le risque d'enfreindre ces droits, vous pouvez utiliser le filtre de licence de Google. Cliquez sur le bouton _Outils_, puis sur l'option _Droits d'usage_ qui apparaît en dessous. Vous devriez choisir l'option _Licences Creative Commons_.
+2. Notez que la plupart des images sur le Web, y compris celles de Google Images, sont protégées par des droits d'auteur·ice. Pour réduire le risque d'enfreindre ces droits, vous pouvez utiliser le filtre de licence de Google. Cliquez sur le bouton _Outils_, puis sur l'option _Droits d'usage_ qui apparaît en dessous. Vous devez choisir l'option _Licences Creative Commons_.
 
    ![Résultats de recherche filtrés pour obtenir des images sous licence Creative Commons sur Google Images](updated-google-images-licensing.png)
 
@@ -84,7 +83,7 @@ Il est maintenant temps de trouver une image à afficher sur votre site.
 
 ## Choix d'une police de caractères
 
-Il existe un ensemble de polices appelées [polices sûres pour le web](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals#polices_sûres_pour_le_web) — telles que Arial, Times New Roman ou Courier New — qui sont généralement disponibles sur la plupart des systèmes informatiques. Si vous utilisez l'une de ces polices sur votre site web, le navigateur chargera le fichier de police disponible sur l'ordinateur de l'utilisateur·ice.
+Il existe un ensemble de polices appelées [polices sûres pour le web](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals#polices_sûres_pour_le_web) — telles que Arial, Times New Roman ou Courier New — qui sont généralement disponibles sur la plupart des systèmes informatiques. Si vous utilisez l'une de ces polices sur votre site web, le navigateur charge le fichier de police disponible sur l'ordinateur de l'utilisateur·ice.
 
 Cependant, si vous souhaitez utiliser d'autres polices qui ne sont pas généralement disponibles sur les appareils, vous devez soit les inclure avec les fichiers de votre site web, soit référencer les fichiers de police depuis un service tiers afin que le navigateur puisse les télécharger si besoin. [Google Fonts <sup>(angl.)</sup>](https://fonts.google.com/) est un de ces services qui donne accès à de nombreuses polices.
 

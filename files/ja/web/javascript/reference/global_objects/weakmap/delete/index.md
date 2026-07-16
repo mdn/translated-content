@@ -1,53 +1,54 @@
 ---
 title: WeakMap.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
+l10n:
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-{{JSRef}}
-
-**`delete()`** メソッドは、 {{jsxref("WeakMap")}} オブジェクトから指定された要素を削除します。
+**`delete()`** は {{jsxref("WeakMap")}} インスタンスのメソッドで、この `WeakMap` からキーで指定された項目を削除します。
 
 {{InteractiveExample("JavaScript デモ: WeakMap.prototype.delete()")}}
 
 ```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
+const weakmap = new WeakMap();
+const object = {};
 
-weakmap1.set(object1, 42);
+weakmap.set(object, 42);
 
-console.log(weakmap1.delete(object1));
-// Expected output: true
+console.log(weakmap.delete(object));
+// 予想される結果: true
 
-console.log(weakmap1.has(object1));
-// Expected output: false
+console.log(weakmap.has(object));
+// 予想される結果: false
 ```
 
 ## 構文
 
-```
-wm.delete(key);
+```js-nolint
+weakMapInstance.delete(key)
 ```
 
 ### 引数
 
 - `key`
-  - : `WeakMap` オブジェクトから削除する要素のキーです。
+  - : `WeakMap`オブジェクトから削除する項目のキー。オブジェクトのキーは値ではなく[参照](/ja/docs/Glossary/Object_reference)によって比較されます。
 
 ### 返値
 
-`WeakMap` オブジェクト内の要素を削除するのに成功した場合、`true` を返します。`WeakMap` 内でキーが見つからなかったり、キーがオブジェクトでなかったりした場合、`false` を返します。
+`WeakMap` オブジェクト内の項目が正常に削除された場合、`true` を返します。`WeakMap` 内でキーが見つからなかった場合は `false` を返します。`key` がオブジェクトでも[非登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)でもない場合は、常に `false` を返します。
 
 ## 例
 
 ### delete() メソッドの使用
 
 ```js
-var wm = new WeakMap();
+const wm = new WeakMap();
 wm.set(window, "foo");
 
 wm.delete(window); // true を返す。削除に成功。
 
-wm.has(window); // false を返す。 window はもう WeakMap に存在しない。
+wm.has(window); // false を返す。 window オブジェクトはもう WeakMap に存在しない。
 ```
 
 ## 仕様書
@@ -61,3 +62,6 @@ wm.has(window); // false を返す。 window はもう WeakMap に存在しな�
 ## 関連情報
 
 - {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.prototype.get()")}}
+- {{jsxref("WeakMap.prototype.set()")}}
+- {{jsxref("WeakMap.prototype.has()")}}

@@ -1,10 +1,9 @@
 ---
 title: Introduction au test en navigateur croisé
 slug: Learn_web_development/Extensions/Testing/Introduction
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}
 
 Cet article commence en donnant un aperçu sur le sujet des test sur navigateurs (croisé), répondant aux questions telles que "qu'est-ce que le test en navigateur croisé?", "Quels sont les problèmes les plus communs que vous allez rencontrer?", et "quelles sont les principales approches pour tester, identifier, et fixer les problèmes?"
 
@@ -14,9 +13,9 @@ Cet article commence en donnant un aperçu sur le sujet des test sur navigateurs
       <th scope="row">Prérequis:</th>
       <td>
         Etre familier avec les bases des langage
-        <a href="/fr/docs/Learn/HTML">HTML</a>,
-        <a href="/fr/docs/Learn/CSS">CSS</a>, et
-        <a href="/fr/docs/Learn/JavaScript">JavaScript</a>.
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et
+        <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a>.
       </td>
     </tr>
     <tr>
@@ -46,7 +45,7 @@ Il est important de préciser quelque termes de terminologie. Pour commencer, qu
 
 D'un autre côté, ce n'est pas ok qu'un site soit fonctionnel pour les personnes voyantes mais complètement inaccessible pour des utilisateurs qui ont des problèmes de vision parce que leur application de lecture d'écran ne peut lire aucune des données stockées sur le site.
 
-De plus, lorsqu'on dit "à travers un nombre acceptable de navigateurs", on ne veut pas dire 100% des navigateurs dans le monde — c'est tout simplement impossible. Vous pouvez faire des recherches d'informations (analyse sectorielle) pour savoir quels sont les types de supports et de navigateurs que vos utilisateurs vont utiliser (comme on peut en parler dans le second article — voir [Gotta test 'em all?](/fr/docs/Learn_web_development/Extensions/Testing/Testing_strategies#Gotta_test_%27em_all)), mais vous ne pouvez pas tout garantir. En tant que developpeur web, vous devez convenir avec le demandeur du site d'une liste de navigateurs et d'appareils sur lesquels le code doit absolument fonctionner, au-delà de ces prérequis, vous devez vous assurer de donner un maximum de chances aux autres navigateurs de pouvoir afficher votre contenu grâce à du code préventif. Cette étape représente le défi le plus important d'un développeur web.
+De plus, lorsqu'on dit "à travers un nombre acceptable de navigateurs", on ne veut pas dire 100% des navigateurs dans le monde — c'est tout simplement impossible. Vous pouvez faire des recherches d'informations (analyse sectorielle) pour savoir quels sont les types de supports et de navigateurs que vos utilisateurs vont utiliser (comme on peut en parler dans le second article — voir [Gotta test 'em all?](/fr/docs/Learn_web_development/Extensions/Testing/Testing_strategies#gotta_test_em_all)), mais vous ne pouvez pas tout garantir. En tant que developpeur web, vous devez convenir avec le demandeur du site d'une liste de navigateurs et d'appareils sur lesquels le code doit absolument fonctionner, au-delà de ces prérequis, vous devez vous assurer de donner un maximum de chances aux autres navigateurs de pouvoir afficher votre contenu grâce à du code préventif. Cette étape représente le défi le plus important d'un développeur web.
 
 > [!NOTE]
 > Nous traiterons également du code préventif dans ce module.
@@ -116,7 +115,7 @@ Après chaque phase d'implémentation, vous allez avoir besoin de tester les nou
 
 A cet instant, résolvez tous les problèmes que vous avez trouvé sur votre nouveau code.
 
-Ensuite, vous devriez essayer d'étendre votre liste de navigaturs de test à une liste complète des navigateurs du public cible et commencer à vous concentrer sur l'élimination des problèmes en navigateurs croisés (voir le prochaine article [determining your target browsers](/fr/docs/Learn_web_development/Extensions/Testing/Testing_strategies#Gotta_test_%27em_all) pour plus d'informations). Par exemple:
+Ensuite, vous devriez essayer d'étendre votre liste de navigaturs de test à une liste complète des navigateurs du public cible et commencer à vous concentrer sur l'élimination des problèmes en navigateurs croisés (voir le prochaine article [determining your target browsers](/fr/docs/Learn_web_development/Extensions/Testing/Testing_strategies#gotta_test_em_all) pour plus d'informations). Par exemple:
 
 - Essayez de tester vos dernières modifications sur tous les navigateurs modernes que vous pouvez — incluant Firefox, Chrome, Opera, IE, Edge, et Safari sur ordinateur (Mac, Windows, et Linux, idéallement).
 - Testez sur des navigateurs de téléphones et de tablettes populaires (p.e. iOS Safari sur iPhone/iPad, Chrome et Firefox sur iPhone/iPad/Android),
@@ -173,4 +172,4 @@ Juste pour redire ce qui a déjà été dit au-dessus, si vous découvrez des bu
 
 Cet article devrez vous avoir donné un haut niveau de compréhension des concepts les plus importants que vous devez connaître à propos du test en navigateur croisé. Armé de ce savoir, vous êtes maintenant prêt à démarrer et à commencer à apprendre à propos des stratégies de test multi-navigateur.
 
-{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}

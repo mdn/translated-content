@@ -1,44 +1,39 @@
 ---
-title: History.scrollRestoration
+title: History：scrollRestoration 属性
+short-title: scrollRestoration
 slug: Web/API/History/scrollRestoration
+l10n:
+  sourceCommit: f2dc3d5367203c860cf1a71ce0e972f018523849
 ---
 
 {{APIRef("History API")}}
 
-{{DOMxRef("History")}} 的接口——**`滚动恢复属性`**允许 web 应用程序在历史导航上显式地设置默认滚动恢复行为
+{{DOMxRef("History")}} 接口的 **`scrollRestoration`** 属性允许 web 应用显式设置在历史导航（如前进或后退）时的默认滚动位置恢复行为。
 
-## 语法
+## 值
 
-```plain
-const scrollRestore = history.scrollRestoration
-```
-
-### 值
+以下两种取值之一：
 
 - `auto`
-  - : 将恢复用户已滚动到的页面上的位置。
+  - : 会恢复用户在页面上的滚动位置。
 - `manual`
-  - : 未还原页上的位置。用户必须手动滚动到该位置。
+  - : 不会恢复页面的滚动位置。用户需要手动滚动到原来的位置。
 
-## 案例
+## 示例
 
-### 查看当前页面滚动恢复行为
+### 查询当前的滚动恢复行为
 
 ```js
 const scrollRestoration = history.scrollRestoration;
 if (scrollRestoration === "manual") {
-  console.log(
-    "The location on the page is not restored, user will need to scroll manually.",
-  );
+  console.log("页面位置不会自动恢复，用户需要手动滚动。");
 }
 ```
 
-### 防止自动恢复页面位置
+### 禁止自动恢复页面位置
 
 ```js
-if (history.scrollRestoration) {
-  history.scrollRestoration = "manual";
-}
+history.scrollRestoration = "manual";
 ```
 
 ## 规范

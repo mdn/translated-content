@@ -126,7 +126,7 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Perfor
 
 ### CSS
 
-- [will-change](/zh-CN/docs/Web/CSS/will-change)
+- [will-change](/zh-CN/docs/Web/CSS/Reference/Properties/will-change)
 
 ### JavaScript
 

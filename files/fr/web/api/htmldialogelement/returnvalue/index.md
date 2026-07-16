@@ -3,18 +3,18 @@ title: "HTMLDialogElement : propriété returnValue"
 short-title: returnValue
 slug: Web/API/HTMLDialogElement/returnValue
 l10n:
-  sourceCommit: 892f5d7d285d5ed9d79012b5e19c459392a7669e
+  sourceCommit: 661a04e7a61abe3d8c7245f04cdd1d0bc865fe69
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`returnValue`** de l'interface {{domxref("HTMLDialogElement")}} est une chaîne de caractères (`string`) représentant la valeur de retour pour un élément {{htmlelement("dialog")}} lorsqu'il est fermé.
-Vous pouvez définir cette valeur directement (`dialog.returnValue = "résultat"`) ou en fournissant la valeur comme argument de type `string` à {{domxref("HTMLDialogElement.close()", "close()")}} ou {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}}.
+La propriété **`returnValue`** de l'interface {{DOMxRef("HTMLDialogElement")}} est une chaîne de caractères (`string`) représentant la valeur de retour pour un élément {{HTMLElement("dialog")}} lorsqu'il est fermé.
+Vous pouvez définir cette valeur directement (`dialog.returnValue = "résultat"`) ou en fournissant la valeur comme argument de type `string` à {{DOMxRef("HTMLDialogElement.close()", "close()")}} ou {{DOMxRef("HTMLDialogElement.requestClose()", "requestClose()")}}.
 
 ## Valeur
 
 Une chaîne de caractères représentant la valeur de retour (`returnValue`) de la boîte de dialogue.
-La valeur par défaut est une chaîne vide (`""`).
+La valeur par défaut est une chaîne de caractères vide (`""`).
 
 ## Exemples
 
@@ -22,60 +22,81 @@ La valeur par défaut est une chaîne vide (`""`).
 
 L'exemple suivant affiche un bouton pour ouvrir une boîte de dialogue. Celle-ci demande à l'utilisateur·ice s'il·elle accepte les conditions d'utilisation.
 
-La boîte de dialogue contient des boutons «&nbsp;Accepter&nbsp;» ou «&nbsp;Refuser&nbsp;»&nbsp;: lorsque l'utilisateur·ice clique sur l'un des boutons, le gestionnaire d'événement ferme la boîte de dialogue en passant le choix à la fonction {{domxref("HTMLDialogElement.close()", "close()")}}. Ce choix est alors assigné à la propriété `returnValue` de la boîte de dialogue.
+La boîte de dialogue contient des boutons «&nbsp;Accepter&nbsp;» ou «&nbsp;Refuser&nbsp;»&nbsp;: lorsque l'utilisateur·ice clique sur l'un des boutons, le gestionnaire d'évènement ferme la boîte de dialogue en passant le choix à la fonction {{DOMxRef("HTMLDialogElement.close()", "close()")}}. Ce choix est alors assigné à la propriété `returnValue` de la boîte de dialogue.
 
-Dans le gestionnaire d'événement {{domxref("HTMLDialogElement.close_event", "close")}} de la boîte de dialogue, l'exemple met à jour le texte d'état de la page principale pour afficher la valeur de `returnValue`.
+Dans le gestionnaire d'évènement {{DOMxRef("HTMLDialogElement.close_event", "close")}} de la boîte de dialogue, l'exemple met à jour le texte d'état de la page principale pour afficher la valeur de `returnValue`.
 
 Si l'utilisateur·ice ferme la boîte de dialogue sans cliquer sur un bouton (par exemple, en appuyant sur la touche <kbd>Échap</kbd>), alors la valeur de retour n'est pas définie.
 
 #### HTML
 
 ```html
-<dialog id="termsDialog">
+<dialog id="dialogue">
   <p>Acceptez-vous les conditions d'utilisation&nbsp;?</p>
-  <button id="declineButton" value="refusé">Refuser</button>
-  <button id="acceptButton" value="accepté">Accepter</button>
+  <button id="refuse" value="declined">Refuser</button>
+  <button id="accepte" value="accepted">Accepter</button>
 </dialog>
-<p>
-  <button id="openDialogButton">Lire les CGU</button>
-</p>
-<p id="statusText"></p>
+<button id="ouvrir">Ouvrir la boîte de dialogue</button>
+```
+
+```html hidden
+<pre id="journal"></pre>
+```
+
+```css hidden
+#journal {
+  height: 170px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const elementJournal = document.getElementById("journal");
+function journaliser(texte) {
+  elementJournal.innerText = `${elementJournal.innerText}${texte}\n`;
+  elementJournal.scrollTop = elementJournal.scrollHeight;
+}
 ```
 
 #### JavaScript
 
 ```js
-const dialog = document.getElementById("termsDialog");
-const statusText = document.getElementById("statusText");
+const dialogue = document.getElementById("dialogue");
+const boutonOuvrir = document.getElementById("ouvrir");
+const boutonRefuser = document.getElementById("refuse");
+const boutonAccepter = document.getElementById("accepte");
 
-const openDialogButton = document.getElementById("openDialogButton");
-const declineButton = document.getElementById("declineButton");
-const acceptButton = document.getElementById("acceptButton");
-
-openDialogButton.addEventListener("click", () => {
-  dialog.showModal();
+boutonOuvrir.addEventListener("click", () => {
+  // Réinitialiser la valeur de retour à chaque ouverture
+  dialogue.returnValue = "";
+  mettreAJourValeurDeRetour();
+  // Afficher la boîte de dialogue
+  dialogue.showModal();
 });
 
-declineButton.addEventListener("click", closeDialog);
-acceptButton.addEventListener("click", closeDialog);
-
-function closeDialog(event) {
+function fermerDialogue(event) {
   const button = event.target;
-  dialog.close(button.value);
+  dialogue.close(button.value);
 }
 
-dialog.addEventListener("close", () => {
-  statusText.innerText = dialog.returnValue
-    ? `Valeur de retour : ${dialog.returnValue}`
-    : "Aucune valeur de retour";
-});
+function mettreAJourValeurDeRetour() {
+  journaliser(`Valeur de retour : "${dialogue.returnValue}"`);
+}
+
+boutonRefuser.addEventListener("click", fermerDialogue);
+boutonAccepter.addEventListener("click", fermerDialogue);
+
+dialogue.addEventListener("close", mettreAJourValeurDeRetour);
 ```
 
 #### Résultat
 
-Essayez de cliquer sur «&nbsp;Lire les CGU&nbsp;», puis choisissez les boutons «&nbsp;Accepter&nbsp;» ou «&nbsp;Refuser&nbsp;» dans la boîte de dialogue, ou fermez la boîte de dialogue en appuyant sur la touche <kbd>Échap</kbd>, et observez les différents états affichés.
+Cliquez sur «&nbsp;Ouvrir la boîte de dialogue&nbsp;», puis choisissez les boutons «&nbsp;Accepter&nbsp;» ou «&nbsp;Refuser&nbsp;» dans la boîte de dialogue, ou fermez la boîte de dialogue en appuyant sur la touche <kbd>Échap</kbd>.
+Observez les différents états affichés.
 
-{{ EmbedLiveSample('Checking the return value', '100%', '200px') }}
+{{EmbedLiveSample("Vérifier la valeur de retour", "100%", 250)}}
 
 ## Spécifications
 
@@ -87,5 +108,4 @@ Essayez de cliquer sur «&nbsp;Lire les CGU&nbsp;», puis choisissez les boutons
 
 ## Voir aussi
 
-- Élément HTML implémentant cette interface&nbsp;:
-  - {{HTMLElement("dialog")}}
+- L'élément HTML {{HTMLElement("dialog")}}

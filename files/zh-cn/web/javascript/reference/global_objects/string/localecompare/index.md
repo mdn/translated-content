@@ -3,8 +3,6 @@ title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
 
-{{JSRef}}
-
 **`localeCompare()`** 方法返回一个数字，表示参考字符串在排序顺序中是在给定字符串之前、之后还是与之相同。在支持 [`Intl.Collator` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) 的实现中，该方法仅是调用了 `Intl.Collator` 方法。
 
 当比较大量字符串时，例如对大型数组进行排序，最好创建一个 {{jsxref("Intl.Collator")}} 对象，并使用其 {{jsxref("Intl/Collator/compare", "compare()")}} 方法提供的函数。

@@ -1,39 +1,52 @@
 ---
-title: Document.onafterscriptexecute
+title: "Document : évènement afterscriptexecute"
+short-title: afterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{ ApiRef("DOM") }} {{non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-## Résumé
-
-Lancé lorsqu'un élément {{HTMLElement("script")}} statique achève l'exécution de son script. N'est pas lancé si l'élément est ajouté dynamiquement, par exemple avec appendChild().
+L'évènement `afterscriptexecute` de l'interface {{DOMxRef("Document")}} est déclenché lorsqu'un élément HTML {{HTMLElement("script")}} statique termine l'exécution de son script. Il n'est pas déclenché si l'élément est ajouté dynamiquement, par exemple avec la méthode {{DOMxRef("Node.appendChild()", "appendChild()")}}.
 
 ## Syntaxe
 
-```js
-document.onafterscriptexecute = funcRef;
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("afterscriptexecute", (event) => { })
+
+onafterscriptexecute = (event) => { }
 ```
 
-_funcRef_ est une référence de fonction appelée lorsqu'un évènement est lancé. L'attribut de la `target` (cible) d'évènement est défini sur l'{{domxref("Element")}} script dont l'exécution vient de s'achever.
+## Type d'évènement
+
+Un objet {{DOMxRef("Event")}} générique.
 
 ## Exemple
 
 ```js
 function finished(e) {
-  logMessage("Finished script with ID: " + e.target.id);
+  logMessage(`Script terminé avec l'ID : ${e.target.id}`);
 }
 
-document.addEventListener("afterscriptexecute", finished, true);
+document.addEventListener("afterscriptexecute", finished);
+// or
+document.onafterscriptexecute = finished;
 ```
 
-[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/html/currentScript.html)
+[Voir l'exemple en direct <sup>(angl.)</sup>](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## Spécification
 
-- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+Ne fait partie d'aucune spécification.
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("Document.onbeforescriptexecute")}}
-- {{domxref("Document.currentScript")}}
+- L'évènement {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} de `Document`
+- La propriété {{DOMxRef("Document.currentScript")}}
