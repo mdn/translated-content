@@ -28,8 +28,7 @@ SVG 的 `<a>` 元素是一个容器，这意味着你可以像在 HTML 中一样
 - [`referrerpolicy`](/zh-CN/docs/Web/HTML/Reference/Elements/a#referrerpolicy)
   - : 获取 {{Glossary("URL")}} 时要发送哪个 [referrer](/zh-CN/docs/Web/HTTP/Reference/Headers/Referer)。_值类型_：`no-referrer` | `no-referrer-when-downgrade` | `same-origin` | `origin` | `strict-origin` | `origin-when-cross-origin` | `strict-origin-when-cross-origin` | `unsafe-url`；_默认值_：_无_；_动画性_：**否**
 - [`rel`](/zh-CN/docs/Web/HTML/Reference/Elements/a#rel)
-  - : 目标对象与链接对象之间的关系。
-    _值类型_：**[\<list-of-Link-Types>](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)**；_默认值_：_无_；_动画性_：**否**
+  - : 目标对象与链接对象之间的关系。_值类型_：**[\<list-of-Link-Types>](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)**；_默认值_：_无_；_动画性_：**否**
 - {{SVGAttr("target")}}
   - : 在何处显示所链接的 {{Glossary("URL")}}。_值类型_：`_self` | `_parent` | `_top` | `_blank` | **\<XML-Name>**；_默认值_：`_self`；_动画性_：**是**
 - [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/a#type)
