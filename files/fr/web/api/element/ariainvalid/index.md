@@ -31,7 +31,7 @@ Dans cet exemple, l'attribut [`aria-invalid`](/fr/docs/Web/Accessibility/ARIA/Re
 
 ```html
 <div id="citation" role="textbox" contenteditable>
-  vous êtes votre meilleure chose..
+  vous êtes ce qu'il y a de mieux chez vous…
 </div>
 ```
 
