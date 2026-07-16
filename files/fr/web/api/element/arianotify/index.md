@@ -70,7 +70,7 @@ Les annonces `ariaNotify()` ne nécessitent pas {{Glossary("transient activation
 
 Une annonce `ariaNotify()` avec `priority: high` de définie est annoncée avant une annonce `ariaNotify()` avec `priority: normal` de définie.
 
-Les annonces `ariaNotify()` sont approximativement équivalentes aux annonces de régions ARIA live comme suit&nbsp;:
+Les annonces `ariaNotify()` sont approximativement équivalentes aux annonces de régions ARIA dynamiques comme suit&nbsp;:
 
 - `ariaNotify()` `priority: high`&nbsp;: `aria-live="assertive"`.
 - `ariaNotify()` `priority: normal`&nbsp;: `aria-live="polite"`.
