@@ -128,7 +128,7 @@ function journaliser(texte) {
 ```
 
 ```js
-// Feature test for ariaOwnsElements
+// Test de fonctionnalité pour ariaOwnsElements
 if ("ariaOwnsElements" in Element.prototype) {
   const menuParent = document.querySelector("#menuParent");
   journaliser(
