@@ -50,7 +50,7 @@ this.startButton = this.add.sprite(
 );
 ```
 
-除了我们传给其他 `add.sprite` 调用的参数（例如添加球和球拍时使用的参数）之外，这一次还会传入帧编号，也就是这里的 `0`。这表示精灵表的第一帧会用作按钮的初始外观。
+除了我们传给其他 `add.sprite` 调用的参数（例如添加球和球板时使用的参数）之外，这一次还会传入帧编号，也就是这里的 `0`。这表示精灵表的第一帧会用作按钮的初始外观。
 
 为了让按钮响应鼠标点击等各种输入，我们需要在前面的 `add.sprite` 调用之后立即添加以下代码行：
 
@@ -110,9 +110,9 @@ class ExampleScene extends Phaser.Scene {
 
 本节最后一步，回到你的 `create` 方法，找到 `this.ball.body.setVelocity(150, -150);` 这一行并删除它。我们只希望球在按钮被按下时移动，而不是在那之前移动！
 
-## 在游戏开始前保持球拍静止
+## 在游戏开始前保持球板静止
 
-现在的效果已经符合预期，但游戏尚未开始时仍然可以移动球拍，这看起来有点奇怪。为了阻止这种情况，我们可以利用 `playing` 属性，让球拍只有在游戏开始后才能移动。为此，请像下面这样调整 `update()` 方法：
+现在的效果已经符合预期，但游戏尚未开始时仍然可以移动球板，这看起来有点奇怪。为了阻止这种情况，我们可以利用 `playing` 属性，让球板只有在游戏开始后才能移动。为此，请像下面这样调整 `update()` 方法：
 
 ```js
 class ExampleScene extends Phaser.Scene {
@@ -128,7 +128,7 @@ class ExampleScene extends Phaser.Scene {
 }
 ```
 
-这样一来，在所有内容都加载和准备完毕之后、真正开始游戏之前，球拍都无法移动。
+这样一来，在所有内容都加载和准备完毕之后、真正开始游戏之前，球板都无法移动。
 
 ## 比较你的代码
 
@@ -390,6 +390,6 @@ const game = new Phaser.Game(config);
 
 ## 下一步
 
-在本系列文章中我们要做的最后一件事是，为球从球拍上弹开的方式添加一些[随机性](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)，让游戏玩法更加有趣。
+在本系列文章中我们要做的最后一件事是，为球从球板上弹开的方式添加一些[随机性](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)，让游戏玩法更加有趣。
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens", "Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay")}}
