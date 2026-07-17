@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-**`<title>`** [SVG](/zh-CN/docs/Web/SVG) 元素为任意 SVG [容器元素](/zh-CN/docs/Web/SVG/Reference/Element#容器元素)或[图形元素](/zh-CN/docs/Web/SVG/Reference/Element#图形元素)提供可访问的短文本描述。
+**`<title>`** [SVG](/zh-CN/docs/Web/SVG) 元素为任意 SVG [容器元素](/zh-CN/docs/Web/SVG/Reference/Element#容器元素)或[图形元素](/zh-CN/docs/Web/SVG/Reference/Element#图形元素)提供无障碍的短文本描述。
 
 `<title>` 元素中的文本不会作为图形的一部分被渲染，但浏览器通常会将其显示为工具提示。如果元素可以用可见文本来描述，则建议使用 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性引用该文本，而不是使用 `<title>` 元素。
 
