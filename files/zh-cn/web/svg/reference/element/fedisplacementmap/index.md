@@ -13,7 +13,7 @@ l10n:
 
 其中 `P(x,y)` 是输入图像 {{SVGAttr("in")}}，`P'(x,y)` 是目标图像。`XC(x,y)` 和 `YC(x,y)` 分别是由 {{SVGAttr("xChannelSelector")}} 和 {{SVGAttr("yChannelSelector")}} 指定通道的分量值。
 
-与其他滤镜原语一样，它默认在 `linearRGB` {{glossary("color space", "颜色空间")}}中处理颜色分量。你可以使用 {{svgattr("color-interpolation-filters")}} 改为使用 `sRGB`。
+与其他滤镜原语一样，它默认在 `linearRGB` {{glossary("color space", "色彩空间")}}中处理颜色分量。你可以使用 {{svgattr("color-interpolation-filters")}} 改为使用 `sRGB`。
 
 ## 使用上下文
 
