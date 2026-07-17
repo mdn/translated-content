@@ -1,11 +1,15 @@
 ---
 title: media
 slug: Web/SVG/Reference/Attribute/media
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`media`** 属性指定只有符合{{Glossary("media query")}}的样式表才会被应用。
+**`media`** 属性指定样式表生效所必须匹配的[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries)。
 
-只有一个元素使用这个属性： {{SVGElement("style")}}
+你可以和下面的 SVG 元素一起使用该属性：
+
+- {{SVGElement("style")}}
 
 ## 示例
 
@@ -24,28 +28,48 @@ svg {
       fill: black;
     }
   </style>
-  <style media="all and (min-width: 600px)">
+  <style media="(width >= 600px)">
     rect {
       fill: seagreen;
     }
   </style>
 
-  <text y="15">Resize the window to see the effect</text>
+  <text y="15">调整窗口大小以查看效果</text>
   <rect y="20" width="200" height="200" />
 </svg>
 ```
 
 {{EmbedLiveSample("示例", "200", "200")}}
 
-## Usage notes
+## 使用说明
 
-| Value         | [`<media-query-list>`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#media-query-list) |
-| ------------- | -------------------------------------------------------------------------------------- |
-| Default value | `all`                                                                                  |
-| Animatable    | Yes                                                                                    |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td>
+        <code
+          ><a href="/zh-CN/docs/Web/CSS/Reference/At-rules/@media#语法"
+            >&#x3C;media-query-list></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><code>all</code></td>
+    </tr>
+    <tr>
+      <th scope="row">动画性</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 - `<media-query-list>`
-  - : This value holds a media query that needs to match in order for the style sheet to be applied.如果没有指定，样式表就会被应用。
+  - : 该值包含一个媒体查询，样式表需要匹配该查询才会被应用。
+
+    如果未指定，则样式表无条件地应用。
 
 ## 规范
 
