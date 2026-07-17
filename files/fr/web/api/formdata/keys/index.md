@@ -1,44 +1,45 @@
 ---
-title: FormData.keys()
+title: "FormData : méthode keys()"
+short-title: keys()
 slug: Web/API/FormData/keys
+l10n:
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{AvailableInWorkers}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-{{APIRef("XMLHttpRequest API")}}
-
-La méthode `FormData.keys()` renvoie une {{jsxref("Iteration_protocols", "itération")}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des objets {{jsxref("String")}}.
-
-> [!NOTE]
-> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+La méthode **`FormData.keys()`** de l'interface {{DOMxRef("FormData")}} retourne un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des chaînes de caractères.
 
 ## Syntaxe
 
-```js
-formData.keys();
+```js-nolint
+keys()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Retourne une {{jsxref("Iteration_protocols", "itération")}}.
+Un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) des clés de {{DOMxRef("FormData")}}.
 
-## Exemple
+## Exemples
 
 ```js
-// Créer un object FormData test
-var formData = new FormData();
+const formData = new FormData();
 formData.append("cle1", "valeur1");
 formData.append("cle2", "valeur2");
 
 // Affiche les clés
-for (var key of formData.keys()) {
-  console.log(key);
+for (const cle of formData.keys()) {
+  console.log(cle);
 }
 ```
 
-Le résultat est :
+Le résultat est&nbsp;:
 
-```
+```plain
 cle1
 cle2
 ```
@@ -53,7 +54,5 @@ cle2
 
 ## Voir aussi
 
-- {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [Utiliser des objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- L'élément HTML {{HTMLElement("form")}}
