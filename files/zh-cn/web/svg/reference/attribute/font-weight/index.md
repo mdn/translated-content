@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-**`font-weight`** 属性表示用于渲染文本的字形相对于同一字体系列中其他字体的粗细程度。
+**`font-weight`** 属性表示用于渲染文本的字形相对于同一字体家族中其他字体的粗细程度。
 
 > [!NOTE]
 > 作为表现属性，`font-weight` 也有一个对应的 CSS 属性：{{cssxref("font-weight")}}。当两者都被指定时，CSS 属性优先。
