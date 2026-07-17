@@ -26,7 +26,7 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 ### 매개변수
 
 - `functionRef`
-  - : 타이머가 만료된 뒤 실행할 {{jsxref("function")}}입니다.
+  - : 타이머가 만료된 뒤 실행할 {{jsxref("Operators/function", "function")}}입니다.
 - `code`
   - : 함수 대신 문자열을 지정하는 대체 구문으로, 타이머가 만료될 때 코드로 컴파일 후 실행합니다. {{jsxref("Global_Objects/eval", "eval()")}}이 보안 취약점인 것과 같은 이유로 **사용을 권장하지 않습니다**.
 - `delay` {{optional_inline}}

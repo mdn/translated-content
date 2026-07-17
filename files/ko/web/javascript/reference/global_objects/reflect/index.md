@@ -89,4 +89,4 @@ Reflect.set(duck, "eyes", "black");
 ## 같이 보기
 
 - {{jsxref("Proxy")}} 전역 객체.
-- {{jsxref("Proxy.handler", "handler")}} 객체.
+- {{jsxref("Proxy/Proxy", "handler")}} 객체.

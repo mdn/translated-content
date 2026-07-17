@@ -2,10 +2,10 @@
 title: HTML5 の入力型
 slug: Learn_web_development/Extensions/Forms/HTML5_input_types
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 5f677b960051016819ecb3b1f40bc3d36a43156d
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 [前の記事では](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls) {{htmlelement("input")}} 要素を見てきて、 HTML の初期から利用できる `type` 属性の値をカバーしてきました。これで、後から追加した入力型の機能について詳しく見ていきます。
 
@@ -80,7 +80,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 検索フィールドは、ページやアプリの検索ボックス作成に使われるものです。このフィールド型は `search` の値を [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性のに使用することで設定されます。
 
 ```html hidden
-<label for="search">Enter a search term:</label><br />
+<label for="search">検索語を入力してください:</label><br />
 ```
 
 ```html
@@ -251,11 +251,11 @@ HTML の日付コントロールは、カレンダーウィジェットを提供
 ```
 
 ```css hidden live-sample___date1
-input:invalid + span:after {
+input:invalid + span::after {
   content: " ✖";
 }
 
-input:valid + span:after {
+input:valid + span::after {
   content: " ✓";
 }
 ```
@@ -264,9 +264,23 @@ input:valid + span:after {
 
 利用できるいろいろな型を簡単に見ていきましょう。注意としては、この型の使用法はとても複雑で、特にブラウザーの対応考えたに場合そうです（下記を見てください）。完全な詳細情報は、それぞれの型のリファレンスページと、そこにある詳細な例を見てください。
 
+### `date`
+
+[`<input type="date">`](/ja/docs/Web/HTML/Reference/Elements/input/date) は日付（時刻なしの年月日）を表示し選択するウィジェットを生成します。
+
+```html hidden
+<label for="date">日付を入力してください:</label><br />
+```
+
+```html
+<input type="date" name="date" id="date" />
+```
+
+{{EmbedLiveSample('date','100%','50')}}
+
 ### `datetime-local`
 
-[`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local) は特定のタイムゾーン情報のない日付と時刻を表示して選択するウィジェットを作成します。
+[`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local) は、特定のタイムゾーン情報のない日付と時刻を表示して選択するウィジェットを作成します。
 
 ```html hidden
 <label for="month">日付と時刻を入力してください:</label><br />
@@ -341,7 +355,7 @@ input:valid + span:after {
 
 ## 色選択コントロール
 
-色も扱いが難しいです。色の表現がたくさんあります。 RGB 値（10 進数や 16 進数）、HSL 値、キーワードなどです。
+色は常に扱いが難しいものです。色の表現がたくさんあります。 RGB 値（10 進数や 16 進数）、HSL 値、キーワードなどです。
 
 `color` コントロールは {{HTMLElement("input")}} 要素を、 [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性に `color`をつけて作成できます。
 
@@ -357,17 +371,8 @@ input:valid + span:after {
 
 通常、色コントロールをクリックすると、選択するためにオペレーティングシステムで既定の色選択機能が表示されます。返値は常に小文字で 6 桁の 16 進数の色です。
 
-## 確認テスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト: HTML5 のコントロール](/ja/docs/Learn_web_development/Extensions/Forms)を見てください。
-
 ## まとめ
 
 これで、HTML5 フォーム入力型のツアーは終わりです。他にもいくつかコントロール型があり、その動作がとても特殊なため簡単にまとめることはできませんが、知っておく必要があります。次の記事でそれらに応じて説明します。
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
-
-### 高度なトピック
-
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

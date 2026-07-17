@@ -45,77 +45,77 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
 >
 > 즉, 각 브라우저의 결과가 다를 수 있으며, 서로 같은 JS 엔진이라도 운영체제나 아키텍쳐에 따라서 불일치하는 값을 반환할 수 있습니다.
 
-- {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
+- {{jsxref("Math.abs", "Math.abs(x)")}}
   - : 숫자의 절댓값을 반환합니다.
-- {{jsxref("Global_Objects/Math/acos", "Math.acos(x)")}}
+- {{jsxref("Math.acos", "Math.acos(x)")}}
   - : 숫자의 아크코사인 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/acosh", "Math.acosh(x)")}}
+- {{jsxref("Math.acosh", "Math.acosh(x)")}}
   - : 숫자의 쌍곡아크코사인 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/asin", "Math.asin(x)")}}
+- {{jsxref("Math.asin", "Math.asin(x)")}}
   - : 숫자의 아크사인 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/asinh", "Math.asinh(x)")}}
+- {{jsxref("Math.asinh", "Math.asinh(x)")}}
   - : 숫자의 쌍곡아크사인 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/atan", "Math.atan(x)")}}
+- {{jsxref("Math.atan", "Math.atan(x)")}}
   - : 숫자의 아크탄젠트 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/atanh", "Math.atanh(x)")}}
+- {{jsxref("Math.atanh", "Math.atanh(x)")}}
   - : 숫자의 쌍곡아크탄젠트 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/atan2", "Math.atan2(y, x)")}}
+- {{jsxref("Math.atan2", "Math.atan2(y, x)")}}
   - : 인수 몫의 아크탄젠트 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/cbrt", "Math.cbrt(x)")}}
+- {{jsxref("Math.cbrt", "Math.cbrt(x)")}}
   - : 숫자의 세제곱근을 반환합니다.
-- {{jsxref("Global_Objects/Math/ceil", "Math.ceil(x)")}}
+- {{jsxref("Math.ceil", "Math.ceil(x)")}}
   - : 인수보다 크거나 같은 수 중에서 가장 작은 정수를 반환합니다.
-- {{jsxref("Global_Objects/Math/clz32", "Math.clz32(x)")}}
+- {{jsxref("Math.clz32", "Math.clz32(x)")}}
   - : 주어진 32비트 정수의 선행 0 개수를 반환합니다.
-- {{jsxref("Global_Objects/Math/cos", "Math.cos(x)")}}
+- {{jsxref("Math.cos", "Math.cos(x)")}}
   - : 숫자의 코사인 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/cosh", "Math.cosh(x)")}}
+- {{jsxref("Math.cosh", "Math.cosh(x)")}}
   - : 숫자의 쌍곡코사인 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/exp", "Math.exp(x)")}}
+- {{jsxref("Math.exp", "Math.exp(x)")}}
   - : E^x 를 반환합니다. *x*는 인수이며 E 는 오일러 상수(`2.718`...) 또는 자연로그의 밑입니다.
-- {{jsxref("Global_Objects/Math/expm1", "Math.expm1(x)")}}
+- {{jsxref("Math.expm1", "Math.expm1(x)")}}
   - : `exp(x)`에서 `1`을 뺀 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/floor", "Math.floor(x)")}}
+- {{jsxref("Math.floor", "Math.floor(x)")}}
   - : 인수보다 작거나 같은 수 중에서 가장 큰 정수를 반환합니다.
-- {{jsxref("Global_Objects/Math/fround", "Math.fround(x)")}}
+- {{jsxref("Math.fround", "Math.fround(x)")}}
   - : 인수의 가장 가까운 단일 정밀도 표현을 반환합니다.
-- {{jsxref("Global_Objects/Math/hypot", "Math.hypot([x[, y[, …]]])")}}
+- {{jsxref("Math.hypot", "Math.hypot([x[, y[, …]]])")}}
   - : 인수의 제곱합의 제곱근을 반환합니다.
-- {{jsxref("Global_Objects/Math/imul", "Math.imul(x, y)")}}
+- {{jsxref("Math.imul", "Math.imul(x, y)")}}
   - : 두 32비트 정수의 곱을 반환합니다.
-- {{jsxref("Global_Objects/Math/log", "Math.log(x)")}}
+- {{jsxref("Math.log", "Math.log(x)")}}
   - : 숫자의 자연로그(e를 밑으로 하는 로그, 즉 ln) 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/log1p", "Math.log1p(x)")}}
+- {{jsxref("Math.log1p", "Math.log1p(x)")}}
   - : 숫자 `x`에 대해 `1 + x`의 자연로그(e를 밑으로 하는 로그, ln) 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/log10", "Math.log10(x)")}}
+- {{jsxref("Math.log10", "Math.log10(x)")}}
   - : 숫자의 밑이 10인 로그를 반환합니다.
-- {{jsxref("Global_Objects/Math/log2", "Math.log2(x)")}}
+- {{jsxref("Math.log2", "Math.log2(x)")}}
   - : 숫자의 밑이 2인 로그를 반환합니다.
-- {{jsxref("Global_Objects/Math/max", "Math.max([x[, y[, …]]])")}}
+- {{jsxref("Math.max", "Math.max([x[, y[, …]]])")}}
   - : 0개 이상의 인수에서 제일 큰 수를 반환합니다.
-- {{jsxref("Global_Objects/Math/min", "Math.min([x[, y[, …]]])")}}
+- {{jsxref("Math.min", "Math.min([x[, y[, …]]])")}}
   - : 0개 이상의 인수에서 제일 작은 수를 반환합니다.
-- {{jsxref("Global_Objects/Math/pow", "Math.pow(x, y)")}}
+- {{jsxref("Math.pow", "Math.pow(x, y)")}}
   - : x의 y 제곱을 반환합니다.
-- {{jsxref("Global_Objects/Math/random", "Math.random()")}}
+- {{jsxref("Math.random()")}}
   - : 0과 1 사이의 난수를 반환합니다.
-- {{jsxref("Global_Objects/Math/round", "Math.round(x)")}}
+- {{jsxref("Math.round", "Math.round(x)")}}
   - : 숫자에서 가장 가까운 정수를 반환합니다.
-- {{jsxref("Global_Objects/Math/sign", "Math.sign(x)")}}
+- {{jsxref("Math.sign", "Math.sign(x)")}}
   - : x의 양의 수인지 음의 수인지 나타내는 부호를 반환합니다.
-- {{jsxref("Global_Objects/Math/sin", "Math.sin(x)")}}
+- {{jsxref("Math.sin", "Math.sin(x)")}}
   - : 숫자의 사인 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/sinh", "Math.sinh(x)")}}
+- {{jsxref("Math.sinh", "Math.sinh(x)")}}
   - : 숫자의 쌍곡사인 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/sqrt", "Math.sqrt(x)")}}
+- {{jsxref("Math.sqrt", "Math.sqrt(x)")}}
   - : 숫자의 제곱근을 반환합니다.
-- {{jsxref("Global_Objects/Math/tan", "Math.tan(x)")}}
+- {{jsxref("Math.tan", "Math.tan(x)")}}
   - : 숫자의 탄젠트 값을 반환합니다.
-- {{jsxref("Global_Objects/Math/tanh", "Math.tanh(x)")}}
+- {{jsxref("Math.tanh", "Math.tanh(x)")}}
   - : 숫자의 쌍곡탄젠트 값을 반환합니다.
 - `Math.toSource()` {{non-standard_inline}}
   - : 문자열 `"Math"`를 반환합니다.
-- {{jsxref("Global_Objects/Math/trunc", "Math.trunc(x)")}}
+- {{jsxref("Math.trunc", "Math.trunc(x)")}}
   - : 숫자의 정수 부분을 반환합니다.
 
 ## 명세
