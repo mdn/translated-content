@@ -2,7 +2,7 @@
 title: 102 Processing
 slug: Web/HTTP/Reference/Status/102
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 {{Deprecated_Header}}
@@ -32,4 +32,4 @@ Cette fonctionnalité est obsolète et les navigateurs ignorent ce code de statu
 
 - [Les codes de statut de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
 - Le code de statut HTTP {{HTTPStatus("100")}}
-- [Notes de suppression du '102 Processing' dans la RFC 4918 <sup>(angl.)</sup>](https://www.rfc-editor.org/rfc/rfc4918#section-21.4)
+- [Notes de suppression du '102 Processing' dans la RFC 4918 <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc4918#section-21.4)

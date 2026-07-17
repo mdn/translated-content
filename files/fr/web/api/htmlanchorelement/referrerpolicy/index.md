@@ -19,7 +19,7 @@ Une chaîne de caractères parmi&nbsp;:
 - `no-referrer-when-downgrade`
   - : L'URL est envoyée comme référent lorsque le niveau de sécurité du protocole reste identique (par exemple HTTP→HTTP, HTTPS→HTTPS), mais n'est pas envoyée vers une destination moins sécurisée (par exemple HTTPS→HTTP).
 - `origin`
-  - : Seule l'origine du document est envoyée comme référent dans tous les cas. Le document `https://exemple.fr/page.html` envoie le référent `https://exemple.fr/`.
+  - : Seule l'origine du document est envoyée comme référent dans tous les cas. Le document `https://example.com/page.html` envoie le référent `https://example.com/`.
 - `origin-when-cross-origin`
   - : Envoie l'URL complète lors d'une requête same-origin, mais seulement l'origine du document pour les autres cas.
 - `same-origin`

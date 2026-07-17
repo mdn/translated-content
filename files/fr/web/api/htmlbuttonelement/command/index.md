@@ -67,7 +67,7 @@ Chaque bouton cible la même image à l'aide de l'attribut `commandfor`.
 }
 ```
 
-Un écouteur d'événement est attaché à l'image en utilisant l'[événement `command`](/fr/docs/Web/API/CommandEvent).
+Un écouteur d'évènement est attaché à l'image en utilisant l'[évènement `command`](/fr/docs/Web/API/CommandEvent).
 Lorsqu'un des boutons est cliqué, l'écouteur exécute du code en fonction de la valeur personnalisée de `command` assignée au bouton, fait pivoter l'image et met également à jour son texte `alt` pour indiquer le nouvel angle de l'image.
 
 ```js

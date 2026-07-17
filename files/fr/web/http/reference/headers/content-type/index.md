@@ -153,7 +153,7 @@ Quand les formulaires ne comportent pas de téléversement de fichiers et utilis
 
 ```http
 POST /submit HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 17
 
@@ -175,7 +175,7 @@ Content-Type: application/json
     "id": 123,
     "firstName": "Sandra",
     "lastName": "Smith",
-    "email": "s.smith@exemple.com"
+    "email": "s.smith@example.com"
   }
 }
 ```

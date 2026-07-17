@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-Le rôle `columnheader` identifie un élément comme étant une cellule dans une ligne contenant des informations d'en-tête pour une colonne, similaire à l'élément HTML natif {{HTMLElement('th')}} avec une portée de colonne.
+Le rôle `columnheader` identifie un élément comme étant une cellule dans une ligne contenant des informations d'en-tête pour une colonne, similaire à l'élément HTML natif {{HTMLElement("th")}} avec une portée de colonne.
 
 ## Description
 
@@ -59,7 +59,7 @@ Les en-têtes de colonne doivent contenir un titre ou des informations d'en-têt
 
 La première règle de l'ARIA est la suivante&nbsp;: si un élément ou un attribut HTML natif a la sémantique et le comportement requis, utilisez-le au lieu de réutiliser un élément et d'ajouter un rôle, un état ou une propriété ARIA pour le rendre accessible. Il est recommandé d'utiliser l'élément HTML natif `<th>` avec l'attribut `scope` défini sur `<th scope="col">` au lieu d'un `<div>` ou d'un autre élément. Si vous utilisez le `<th scope="col">` de HTML sémantique, l'attribut de rôle n'est pas requis, mais peut être inclus en tant que sauvegarde pour garantir que le tableau conserve sa sémantique si la sémantique par défaut est supprimée avec une valeur de propriété d'affichage CSS.
 
-L'attribut `aria-sort` peut être ajouté à un `<th scope="col">` même lorsque l'attribut de rôle ARIA n'est pas spécifié.
+L'attribut `aria-sort` peut être ajouté à un `<th scope="col">` même lorsque l'attribut de rôle ARIA n'est pas défini.
 
 ### Préférer HTML
 
@@ -76,7 +76,7 @@ Le rôle de columnheader a la même sémantique que `<th scope="col">`.
 - [ARIA&nbsp;: rôle `treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [ARIA&nbsp;: rôle `row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [ARIA&nbsp;: rôle `rowgroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
-- L'élément HTML {{HTMLElement('th')}}
-- L'élément HTML {{HTMLElement('table')}}
-- L'élément HTML {{HTMLElement('tr')}}
-- L'élément HTML {{HTMLElement('td')}}
+- L'élément HTML {{HTMLElement("th")}}
+- L'élément HTML {{HTMLElement("table")}}
+- L'élément HTML {{HTMLElement("tr")}}
+- L'élément HTML {{HTMLElement("td")}}

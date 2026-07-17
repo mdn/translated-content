@@ -12,7 +12,7 @@ Esta característica permite a los lectores comprender exactamente qué producir
 El sistema de ejemplos en vivo puede procesar bloques de código escritos en HTML, CSS y JavaScript, sin importar el orden en el que estén escritos en la página.
 Esto garantiza que la salida corresponda al código fuente combinado, ya que el sistema ejecuta el código directamente dentro de la página.
 
-A diferencia de los [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#what_types_of_code_example_are_on_mdn), los ejemplos en vivo no proporcionan soporte integrado para capturar registros de consola o restablecer ejemplos que han sido modificados por la entrada del usuario.
+A diferencia de los [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#¿qué_tipos_de_ejemplos_de_código_hay_en_mdn), los ejemplos en vivo no proporcionan soporte integrado para capturar registros de consola o restablecer ejemplos que han sido modificados por la entrada del usuario.
 La sección [Ejemplos](#ejemplos) muestra cómo puedes implementar estas y otras características útiles.
 
 ## ¿Cómo funcionan los ejemplos en vivo?

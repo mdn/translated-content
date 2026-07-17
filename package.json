@@ -16,10 +16,10 @@
   "type": "module",
   "scripts": {
     "fix:json": "prettier -w \"**/*.json(c)?\"",
-    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && node ./scripts/check-url-locale.js --fix files && npx autocorrect --fix . && prettier -w \"**/*.md\"",
+    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && node ./scripts/check-url-locale.js --fix files && npx autocorrect-node --fix . && prettier -w \"**/*.md\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
     "lint:json": "prettier -c \"**/*.json(c)?\"",
-    "lint:md": "markdownlint-cli2 \"**/*.md\" && node ./scripts/check-url-locale.js files && npx autocorrect --lint . && prettier -c \"**/*.md\"",
+    "lint:md": "markdownlint-cli2 \"**/*.md\" && node ./scripts/check-url-locale.js files && npx autocorrect-node --lint . && prettier -c \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
     "prepare": "node scripts/npm-check.js"
   },
@@ -39,13 +39,13 @@
     "franc-min": "^6.2.0",
     "front-matter": "^4.0.2",
     "html-to-text": "^10.0.0",
-    "lefthook": "^2.1.9",
-    "markdown-it": "^14.2.0",
-    "markdownlint-cli2": "^0.22.1",
+    "lefthook": "^2.1.10",
+    "markdown-it": "^14.3.0",
+    "markdownlint-cli2": "^0.23.0",
     "markdownlint-rule-search-replace": "^1.2.0",
     "mdast-util-from-markdown": "^2.0.3",
     "ora": "^9.4.1",
-    "prettier": "^3.9.4",
+    "prettier": "^3.9.5",
     "unist-util-visit": "^5.1.0",
     "yargs": "^18.0.0"
   }

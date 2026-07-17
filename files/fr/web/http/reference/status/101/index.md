@@ -28,7 +28,7 @@ Des informations sur la manière de définir les en-têtes `Sec-WebSocket-*` pou
 
 ```http
 GET /notifications HTTP/1.1
-Host: exemple.com
+Host: example.com
 Upgrade: websocket
 Connection: Upgrade
 ```

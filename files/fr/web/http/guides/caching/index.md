@@ -156,9 +156,9 @@ La manière dont les réponses sont distinguées les unes des autres repose esse
 
 | URL                              | Corps de la réponse      |
 | -------------------------------- | ------------------------ |
-| `https://exemple.com/index.html` | `<!doctype html>...`     |
-| `https://exemple.com/style.css`  | `body { ...`             |
-| `https://exemple.com/script.js`  | `function main () { ...` |
+| `https://example.com/index.html` | `<!doctype html>...`     |
+| `https://example.com/style.css`  | `body { ...`             |
+| `https://example.com/script.js`  | `function main () { ...` |
 
 Cependant, le contenu des réponses n'est pas toujours le même, même si elles ont la même URL. Surtout lorsque la négociation de contenu est effectuée, la réponse du serveur peut dépendre des valeurs des en-têtes de requête `Accept`, `Accept-Language` et `Accept-Encoding`.
 
@@ -172,10 +172,10 @@ Cela fait en sorte que le cache soit indexé en fonction d'une combinaison de l'
 
 | URL                              | `Accept-Language` | Corps de la réponse      |
 | -------------------------------- | ----------------- | ------------------------ |
-| `https://exemple.com/index.html` | `ja-JP`           | `<!doctype html>...`     |
-| `https://exemple.com/index.html` | `en-US`           | `<!doctype html>...`     |
-| `https://exemple.com/style.css`  | `ja-JP`           | `body { ...`             |
-| `https://exemple.com/script.js`  | `ja-JP`           | `function main () { ...` |
+| `https://example.com/index.html` | `ja-JP`           | `<!doctype html>...`     |
+| `https://example.com/index.html` | `en-US`           | `<!doctype html>...`     |
+| `https://example.com/style.css`  | `ja-JP`           | `body { ...`             |
+| `https://example.com/script.js`  | `ja-JP`           | `function main () { ...` |
 
 Cependant, si vous fournissez une optimisation du contenu (par exemple, pour un design réactif) basée sur l'agent utilisateur, vous pourriez être tenté d'inclure `User-Agent` dans la valeur de l'en-tête `Vary`. Cependant, l'en-tête de requête `User-Agent` a généralement un très grand nombre de variations, ce qui réduit considérablement les chances que le cache soit réutilisé. Donc, si possible, envisagez plutôt une manière de varier le comportement en fonction de la détection des fonctionnalités plutôt qu'en fonction de l'en-tête de requête `User-Agent`.
 
@@ -446,7 +446,7 @@ Notez que, au lieu d'implémenter cette directive, [Chrome a modifié son implé
 
 Il n'existe aucun moyen de supprimer les réponses sur un serveur intermédiaire qui ont été stockées avec un `max-age` long.
 
-Imaginez que la réponse suivante de `https://exemple.com/` ait été stockée.
+Imaginez que la réponse suivante de `https://example.com/` ait été stockée.
 
 ```http
 HTTP/1.1 200 OK

@@ -57,7 +57,7 @@ _詳細および他の小規模な変更点については [Mozilla Hacks ブロ
 
 - 更新された ECMAScript6 仕様草案に準拠するため、{{jsxref("Map")}} オブジェクトおよび {{jsxref("Set")}} オブジェクトがキーと値の同一性を確認するときは、`-0` と `+0` を同一として扱うようになりました。
 - `Promise` をデフォルトで有効にしました ([Firefox バグ 918806](https://bugzil.la/918806))。
-- 完了した Generator は例外を発生させるのではなく {{jsxref("IteratorResult")}} を返すようになりました ([Firefox バグ 958951](https://bugzil.la/958951))。
+- 完了した Generator は例外を発生させるのではなく `IteratorResult` を返すようになりました ([Firefox バグ 958951](https://bugzil.la/958951))。
 
 ### インターフェイス/API/DOM
 

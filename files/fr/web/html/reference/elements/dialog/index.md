@@ -280,7 +280,7 @@ Cet exemple illustre la propriété [`returnValue`](/fr/docs/Web/API/HTMLDialogE
 
 Cet exemple ouvre une boîte de dialogue modale lorsque le bouton «&nbsp;Afficher la fenêtre&nbsp;» est activé. La boîte de dialogue contient un formulaire avec un {{HTMLElement("select")}} et deux {{HTMLElement("button")}}, dont la valeur par défaut est `type="submit"`. Un écouteur d'évènement met à jour la valeur du bouton «&nbsp;Confirmer&nbsp;» lorsque l'option sélectionnée change. Si le bouton «&nbsp;Confirmer&nbsp;» est activé pour fermer la boîte de dialogue, la valeur actuelle du bouton est la valeur de retour. Si la boîte de dialogue est fermée en appuyant sur le bouton «&nbsp;Annuler&nbsp;», la valeur de retour `returnValue` est `cancel`.
 
-Lorsque le dialogue est fermé, la valeur de retour est affichée sous le bouton «&nbsp;Afficher la fenêtre&nbsp;». Si le dialogue est fermé en appuyant sur la touche <kbd>Échap</kbd>, la valeur de retour `returnValue` n'est pas mise à jour et l'événement `close` ne se produit pas, ce qui signifie que le texte dans l'élément {{HTMLElement("output")}} n'est pas mis à jour.
+Lorsque le dialogue est fermé, la valeur de retour est affichée sous le bouton «&nbsp;Afficher la fenêtre&nbsp;». Si le dialogue est fermé en appuyant sur la touche <kbd>Échap</kbd>, la valeur de retour `returnValue` n'est pas mise à jour et l'évènement `close` ne se produit pas, ce qui signifie que le texte dans l'élément {{HTMLElement("output")}} n'est pas mis à jour.
 
 #### HTML
 
@@ -332,7 +332,7 @@ showButton.addEventListener("click", () => {
   favDialog.showModal();
 });
 
-// Le bouton "Annuler" ferme la boîte de dialogue sans soumettre le formulaire grâce à [formmethod="dialog"], ce qui déclenche un événement de fermeture.
+// Le bouton "Annuler" ferme la boîte de dialogue sans soumettre le formulaire grâce à [formmethod="dialog"], ce qui déclenche un évènement de fermeture.
 favDialog.addEventListener("close", (e) => {
   outputBox.value =
     favDialog.returnValue === "default"
@@ -340,7 +340,7 @@ favDialog.addEventListener("close", (e) => {
       : `Valeur retournée : ${favDialog.returnValue}.`; // Vérifie la présence de "default" au lieu d'une chaîne vide
 });
 
-// Empêche le bouton "Confirmer" de soumettre le formulaire par défaut et ferme la boîte de dialogue avec la méthode `close()`, ce qui déclenche l'événement "close".
+// Empêche le bouton "Confirmer" de soumettre le formulaire par défaut et ferme la boîte de dialogue avec la méthode `close()`, ce qui déclenche l'évènement "close".
 confirmBtn.addEventListener("click", (event) => {
   event.preventDefault(); // Nous ne voulons pas soumettre ce faux formulaire
   favDialog.close(selectEl.value); // Il faut envoyer la valeur du sélecteur ici.
@@ -483,7 +483,7 @@ dialog p {
 
 #### JavaScript
 
-Ici, nous attribuons des variables pour référencer les boutons de contrôle principaux, les éléments `<dialog>` et les boutons «&nbsp;Fermer&nbsp;» à l'intérieur des dialogues. Nous attachons un écouteur d'événement [`click`](/fr/docs/Web/API/Element/click_event) à chaque bouton de contrôle à l'aide de [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener), le gestionnaire d'événement ouvre l'élément `<dialog>` associé avec [`showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal). Nous parcourons ensuite les références aux boutons «&nbsp;Fermer&nbsp;», en affectant à chacun un gestionnaire `click` qui ferme son élément `<dialog>` avec [`close()`](/fr/docs/Web/API/HTMLDialogElement/close).
+Ici, nous attribuons des variables pour référencer les boutons de contrôle principaux, les éléments `<dialog>` et les boutons «&nbsp;Fermer&nbsp;» à l'intérieur des dialogues. Nous attachons un écouteur d'évènement [`click`](/fr/docs/Web/API/Element/click_event) à chaque bouton de contrôle à l'aide de [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener), le gestionnaire d'évènement ouvre l'élément `<dialog>` associé avec [`showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal). Nous parcourons ensuite les références aux boutons «&nbsp;Fermer&nbsp;», en affectant à chacun un gestionnaire `click` qui ferme son élément `<dialog>` avec [`close()`](/fr/docs/Web/API/HTMLDialogElement/close).
 
 ```js live-sample___closedbyvalues
 const noneBtn = document.getElementById("none-btn");
@@ -629,7 +629,7 @@ dialog:open::backdrop {
 
 ##### JavaScript
 
-Le JavaScript ajoute des gestionnaires d'événements aux boutons d'affichage et de fermeture pour ouvrir et fermer le `<dialog>` lorsqu'ils sont cliqués&nbsp;:
+Le JavaScript ajoute des gestionnaires d'évènements aux boutons d'affichage et de fermeture pour ouvrir et fermer le `<dialog>` lorsqu'ils sont cliqués&nbsp;:
 
 ```js
 const dialogElem = document.getElementById("dialog");
@@ -746,7 +746,7 @@ button {
 
 ##### JavaScript
 
-Enfin, le JavaScript ajoute des gestionnaires d'événements aux boutons pour permettre d'afficher et de fermer le `<dialog>`&nbsp;:
+Enfin, le JavaScript ajoute des gestionnaires d'évènements aux boutons pour permettre d'afficher et de fermer le `<dialog>`&nbsp;:
 
 ```js
 const dialogElem = document.getElementById("dialog");

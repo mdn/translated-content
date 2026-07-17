@@ -1,17 +1,12 @@
 ---
-title: :required
+title: CSS `:required` 擬似クラス
+short-title: :required
 slug: Web/CSS/Reference/Selectors/:required
-original_slug: Web/CSS/:required
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:required`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、 {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素のうち [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性が設定されているものを表します。
-
-```css
-/* 必須の <input> をすべて選択 */
-input:required {
-  border: 1px dashed red;
-}
-```
 
 {{InteractiveExample("CSS デモ: :required", "tabbed-standard")}}
 
@@ -32,21 +27,21 @@ label {
 
 ```html interactive-example
 <form>
-  <label for="name">Name: <span class="req">*</span></label>
+  <label for="name">名前: <span class="req">*</span></label>
   <input id="name" name="name" type="text" required />
 
-  <label for="birth">Date of Birth:</label>
+  <label for="birth">生年月日:</label>
   <input id="birth" name="birth" type="date" />
 
   <label for="origin"
-    >How did you find out about us? <span class="req">*</span></label
+    >どうやって見つけましたか？ <span class="req">*</span></label
   >
   <select id="origin" name="origin" required>
     <option>Google</option>
     <option>Facebook</option>
-    <option>Advertisement</option>
+    <option>広告</option>
   </select>
-  <p><span class="req">*</span> - Required field</p>
+  <p><span class="req">*</span> - 必須フィールド</p>
 </form>
 ```
 
@@ -57,9 +52,20 @@ label {
 
 ## 構文
 
+```css
+:required {
+  /* ... */
+}
 ```
-:required
-```
+
+## アクセシビリティ
+
+入力が必須の {{htmlelement("input")}} には [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を適用してください。これによって、読み上げソフトなどの支援技術を使用している人が、フォームを送信するためにどの入力欄が有効なコンテンツを必要とするかを理解することができます。
+
+フォームに[任意](/ja/docs/Web/CSS/Reference/Selectors/:optional)の入力欄も含まれている場合、必須の入力欄を視覚的に示すのを色だけに依存しないようにしてください。通常、説明する文字列やアイコンが使用されます。
+
+- [MDN WCAG を理解する ― ガイドライン 3.3 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#ガイドライン_3.3_—_入力支援_ユーザーが間違いを避けて修正できるようにする)
+- [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
 ## 例
 
@@ -70,12 +76,12 @@ label {
 ```html
 <form>
   <div class="field">
-    <label for="url_input">Enter a URL:</label>
+    <label for="url_input">URL を入力:</label>
     <input type="url" id="url_input" />
   </div>
 
   <div class="field">
-    <label for="email_input">Enter an email address:</label>
+    <label for="email_input">メールアドレスを入力:</label>
     <input type="email" id="email_input" required />
   </div>
 </form>
@@ -96,7 +102,7 @@ label {
 }
 
 input:required {
-  border-color: #800000;
+  border-color: maroon;
   border-width: 3px;
 }
 
@@ -108,15 +114,6 @@ input:required:invalid {
 #### 結果
 
 {{EmbedLiveSample('Examples', 600, 120)}}
-
-## アクセシビリティの考慮
-
-入力が必須の {{htmlelement("input")}} には [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を適用してください。これによって、読み上げソフトなどの支援技術を使用している人が、フォームを送信するためにどの入力欄が有効なコンテンツを必要とするかを理解することができます。
-
-フォームに[任意](/ja/docs/Web/CSS/Reference/Selectors/:optional)の入力欄も含まれている場合、必須の入力欄を視覚的に示すのを色だけに依存しないようにしてください。通常、説明する文字列やアイコンが使用されます。
-
-- [MDN WCAG を理解する ― ガイドライン 3.3 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
-- [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
 ## 仕様書
 
