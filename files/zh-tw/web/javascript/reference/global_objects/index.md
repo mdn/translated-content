@@ -97,19 +97,19 @@ These objects represent collections which use keys; these contain elements which
 
 {{Glossary("SIMD")}} vector data types are objects where data is arranged into lanes.
 
-- {{jsxref("SIMD")}} {{experimental_inline}}
-- {{jsxref("Float32x4", "SIMD.Float32x4")}} {{experimental_inline}}
-- {{jsxref("Float64x2", "SIMD.Float64x2")}} {{experimental_inline}}
-- {{jsxref("Int8x16", "SIMD.Int8x16")}} {{experimental_inline}}
-- {{jsxref("Int16x8", "SIMD.Int16x8")}} {{experimental_inline}}
-- {{jsxref("Int32x4", "SIMD.Int32x4")}} {{experimental_inline}}
-- {{jsxref("Uint8x16", "SIMD.Uint8x16")}} {{experimental_inline}}
-- {{jsxref("Uint16x8", "SIMD.Uint16x8")}} {{experimental_inline}}
-- {{jsxref("Uint32x4", "SIMD.Uint32x4")}} {{experimental_inline}}
-- {{jsxref("Bool8x16", "SIMD.Bool8x16")}} {{experimental_inline}}
-- {{jsxref("Bool16x8", "SIMD.Bool16x8")}} {{experimental_inline}}
-- {{jsxref("Bool32x4", "SIMD.Bool32x4")}} {{experimental_inline}}
-- {{jsxref("Bool64x2", "SIMD.Bool64x2")}} {{experimental_inline}}
+- `SIMD` {{experimental_inline}}
+- `SIMD.Float32x4` {{experimental_inline}}
+- `SIMD.Float64x2` {{experimental_inline}}
+- `SIMD.Int8x16` {{experimental_inline}}
+- `SIMD.Int16x8` {{experimental_inline}}
+- `SIMD.Int32x4` {{experimental_inline}}
+- `SIMD.Uint8x16` {{experimental_inline}}
+- `SIMD.Uint16x8` {{experimental_inline}}
+- `SIMD.Uint32x4` {{experimental_inline}}
+- `SIMD.Bool8x16` {{experimental_inline}}
+- `SIMD.Bool16x8` {{experimental_inline}}
+- `SIMD.Bool32x4` {{experimental_inline}}
+- `SIMD.Bool64x2` {{experimental_inline}}
 
 ### 結構化資料
 
@@ -156,8 +156,8 @@ Additions to the ECMAScript core for language-sensitive functionalities.
 ### 非標準物件
 
 - {{jsxref("Iterator")}} {{non-standard_inline}}
-- {{jsxref("ParallelArray")}} {{non-standard_inline}}
-- {{jsxref("StopIteration")}} {{non-standard_inline}}
+- `ParallelArray` {{non-standard_inline}}
+- `StopIteration` {{non-standard_inline}}
 
 ### 其他
 
