@@ -129,16 +129,16 @@ SVG utilise plusieurs types de données. Cet article les liste avec leur syntaxe
 - \<IRI>
   - : Un **I**dentifiant de **R**essource **I**nternationalisé.
 
-    Sur Internet, les ressources sont identifiées à l'aide d'_IRI_ (Identifiants de Ressource Internationalisés). Par exemple, un fichier SVG nommé `someDrawing.svg` situé sur `http://exemple.com` pourrait avoir l'_IRI_ suivant&nbsp;:
+    Sur Internet, les ressources sont identifiées à l'aide d'_IRI_ (Identifiants de Ressource Internationalisés). Par exemple, un fichier SVG nommé `someDrawing.svg` situé sur `http://example.com` pourrait avoir l'_IRI_ suivant&nbsp;:
 
     ```plain
-    http://exemple.com/someDrawing.svg
+    http://example.com/someDrawing.svg
     ```
 
     Un _IRI_ peut aussi désigner un élément particulier dans un document XML en incluant un identifiant de fragment _IRI_ dans l'_IRI_. Un _IRI_ qui inclut un identifiant de fragment _IRI_ se compose d'un _IRI_ de base optionnel, suivi d'un caractère `#`, puis de l'identifiant de fragment _IRI_. Par exemple, l'_IRI_ suivant peut être utilisé pour définir l'élément dont l'identifiant est `Lamppost` dans le fichier `someDrawing.svg`&nbsp;:
 
     ```plain
-    http://exemple.com/someDrawing.svg#Lamppost
+    http://example.com/someDrawing.svg#Lamppost
     ```
 
     Les _IRI_ sont utilisés dans l'attribut {{SVGAttr("href")}}.

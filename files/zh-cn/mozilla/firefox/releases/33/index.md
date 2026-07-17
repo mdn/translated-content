@@ -21,7 +21,7 @@ _No change._
 
 ### JavaScript
 
-- 移除了非标准的 {{jsxref("Number.toInteger()")}} 方法（[Firefox bug 1022396](https://bugzil.la/1022396)）。
+- 移除了非标准的 `Number.toInteger()` 方法（[Firefox bug 1022396](https://bugzil.la/1022396)）。
 
 ### Interfaces/APIs/DOM
 

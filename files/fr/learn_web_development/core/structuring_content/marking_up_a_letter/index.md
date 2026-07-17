@@ -20,7 +20,7 @@ Université de l'Étonnement
 Bobtown, CA 99999,
 USA
 Tel: 123-456-7890
-Email: no_reply@exemple.fr
+Email: no_reply@example.com
 
 20 janvier 2016
 
@@ -210,7 +210,7 @@ Votre HTML final doit ressembler à ceci&nbsp;:
       Bobtown, CA 99999,<br />
       USA<br />
       <strong>Tél.</strong>: 123-456-7890<br />
-      <strong>Courriel</strong>: no_reply@exemple.fr
+      <strong>Courriel</strong>: no_reply@example.com
     </address>
 
     <p class="sender-column">

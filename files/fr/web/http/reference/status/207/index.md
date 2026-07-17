@@ -2,7 +2,7 @@
 title: 207 Multi-Status
 slug: Web/HTTP/Reference/Status/207
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse de succès](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) HTTP **`207 Multi-Status`** indique un mélange de réponses.
@@ -11,7 +11,7 @@ Cette réponse est utilisée exclusivement dans le contexte de <i lang="en">Web 
 Le corps de la réponse est une entité HTTP `text/xml` ou `application/xml` avec un élément racine `multistatus` qui liste les codes de réponse individuels.
 
 > [!NOTE]
-> Les navigateurs accédant à des pages web ne rencontreront jamais ce code de statut.
+> Les navigateurs accédant à des pages web ne rencontrent jamais ce code de statut.
 > La capacité à retourner une _collection de ressources_ fait partie du protocole {{Glossary("WebDAV")}} et n'est rencontrée que par les applications web qui accèdent à un serveur WebDAV.
 
 ## Statut
@@ -35,7 +35,7 @@ Content-Length: 1241
 <?xml version="1.0" encoding="utf-8" ?>
 <D:multistatus xmlns:D="DAV:">
   <D:response>
-    <D:href>http://www.exemple.com/Coll/</D:href>
+    <D:href>http://www.example.com/Coll/</D:href>
     <D:propstat>
       <D:prop>
         <D:displayname>Boucle de démonstration</D:displayname>
@@ -47,7 +47,7 @@ Content-Length: 1241
     </D:propstat>
   </D:response>
   <D:response>
-    <D:href>http://www.exemple.com/Coll/Toto</D:href>
+    <D:href>http://www.example.com/Coll/Toto</D:href>
     <D:propstat>
       <D:prop>
         <D:displayname>Boucle de démonstration</D:displayname>

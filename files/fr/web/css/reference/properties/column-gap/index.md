@@ -3,14 +3,10 @@ title: Propriété CSS `column-gap`
 short-title: column-gap
 slug: Web/CSS/Reference/Properties/column-gap
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 53745a2089268ce62bf79695d7d347bcbd0abe57
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`column-gap`** définit la taille de l'espace ({{Glossary("Gutters", "Gouttières")}}) entre les colonnes d'un élément.
-
-Initialement définie dans [la disposition multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), la définition de `column-gap` a été élargie pour couvrir plusieurs méthodes de mise en page. Elle est désormais définie dans [l'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment) et peut être utilisée pour les dispositions multi-colonnes, les dispositions flexibles et les dispositions en grille.
-
-Les premières versions de la spécification nommaient cette propriété `grid-column-gap`, et pour maintenir la compatibilité avec les anciens sites, les navigateurs acceptent toujours `grid-column-gap` comme alias de `column-gap`.
+La propriété [CSS](/fr/docs/Web/CSS) **`column-gap`** définit la taille de l'espace ({{Glossary("Gutters", "Gouttières")}}) entre les colonnes d'un élément dans les dispositions multi-colonnes, flexibles et en grille.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: column-gap")}}
 
@@ -64,12 +60,11 @@ column-gap: 20px;
 /* Valeur avec un mot-clé */
 column-gap: normal;
 
-/* Valeurs de type <length> */
+/* Valeurs de type <length-percentage> */
 column-gap: 3px;
 column-gap: 2.5em;
-
-/* Valeurs de type <percentage> */
 column-gap: 3%;
+column-gap: calc(3% - 6px);
 
 /* Valeurs globales */
 column-gap: inherit;
@@ -84,11 +79,23 @@ La propriété `column-gap` est définie par l'une des valeurs listées ci‑des
 ### Valeurs
 
 - `normal`
-  - : Un mot-clé qui indique qu'on souhaite utiliser l'espacement par défaut créé par le navigateur. Pour les dispositions en colonnes, cette valeur correspond à `1em`, sinon elle correspond à `0`.
+  - : Pour les dispositions multi-colonnes, résolu à `1em`&nbsp;; sinon `0`. C'est la valeur par défaut.
 - {{CSSxRef("&lt;length&gt;")}}
-  - : Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) qui définit la taille de l'espace entre les colonnes. Cette valeur ({{CSSxRef("&lt;length&gt;")}}) peut être nulle mais ne doit pas être négative.
+  - : La taille de l'espace entre les colonnes, en tant que valeur {{CSSxRef("&lt;length&gt;")}} qui n'est pas négative.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : Une valeur de pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) qui définit la taille de l'espace entre les colonnes. Cette valeur ({{CSSxRef("&lt;percentage&gt;")}}) peut être nulle mais ne doit pas être négative.
+  - : La taille de l'espace entre les colonnes, en tant que valeur {{CSSxRef("&lt;percentage&gt;")}} qui n'est pas négative.
+
+## Description
+
+La propriété `column-gap` définit la taille de l'espace entre les colonnes d'un élément. La propriété définit un espacement de longueur fixe entre les éléments d'un conteneur, séparant les boîtes dans l'axe en ligne du conteneur. Les valeurs négatives ne sont pas valides. La valeur par défaut `normal` est résolue à `1em` pour les conteneurs multi-colonnes, et à `0` partout ailleurs.
+
+Les pourcentages sont calculés par rapport à la taille de la [boîte de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_contenu) de l'axe en ligne de l'élément conteneur lorsque cette taille est définie, et par rapport à `0` sinon, sauf dans la disposition en grille, pour laquelle les tailles en pourcentage cycliques sont résolues par rapport à zéro pour déterminer les contributions de la {{Glossary("intrinsic size", "taille intrinsèque")}} mais sont résolues par rapport à la boîte de contenu de l'élément lors de la disposition du contenu.
+
+L'espace entre les colonnes peut contenir un séparateur visible en tant qu'élément décoratif. S'il y a une règle entre les colonnes, définie avec la propriété {{CSSxRef("column-rule")}} ou le raccourci {{CSSxRef("rule")}}, elle apparaît au milieu de l'espace, mais n'a aucun effet sur la taille des espaces entre les colonnes.
+
+L'ancienne propriété `grid-column-gap` est un alias pour `column-gap`. Elle a été initialement définie dans la [disposition en grille](/fr/docs/Web/CSS/Guides/Grid_layout) pour créer des espaces entre les colonnes de la grille.
+
+La propriété `column-gap`, ainsi que la propriété {{CSSxRef("row-gap")}}, peut également être définie à l'aide du raccourci {{CSSxRef("gap")}}.
 
 ## Définition formelle
 
@@ -148,7 +155,7 @@ div:nth-of-type(3n) {
 {{EmbedLiveSample("Disposition flexible", "auto", 120)}}
 
 > [!NOTE]
-> Bien qu'il y ait un espace horizontal entre les éléments flex adjacents sur chaque ligne, il n'existe pas d'espace entre les lignes. Pour définir un espace vertical entre les lignes flex, vous pouvez spécifier une valeur non nulle pour la propriété {{CSSxRef("row-gap")}}. La propriété raccourcie {{CSSxRef("gap")}} permet également de définir à la fois `row-gap` et `column-gap` dans une seule déclaration, dans cet ordre.
+> Bien qu'il y ait un espace horizontal entre les éléments flex adjacents sur chaque ligne, il n'existe pas d'espace entre les lignes. Pour définir un espace vertical entre les lignes flex, vous pouvez définir une valeur non nulle pour la propriété {{CSSxRef("row-gap")}}. La propriété raccourcie {{CSSxRef("gap")}} permet également de définir à la fois `row-gap` et `column-gap` dans une seule déclaration, dans cet ordre.
 
 ### Disposition en grille
 
@@ -193,7 +200,7 @@ div:nth-of-type(3n) {
 ```html
 <p class="content-box">
   Un texte sur plusieurs colonnes avec une gouttière de 40px paramétrée grâce à
-  la propriété `column-gap`. C'est plutôt pas mal comme effet non ?
+  la propriété `column-gap`. C'est plutôt pas mal comme effet non&nbsp;?
 </p>
 ```
 
@@ -224,3 +231,4 @@ div:nth-of-type(3n) {
 - La propriété {{CSSxRef("gap")}}
 - [Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#les_gouttières)
 - [Mettre en forme les colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)
+- Le module [d'espacements CSS](/fr/docs/Web/CSS/Guides/Gaps)

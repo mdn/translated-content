@@ -70,7 +70,7 @@ Et ainsi de suite.
 Vous pouvez également intégrer l'image en utilisant son URL absolue, par exemple&nbsp;:
 
 ```html
-<img src="https://www.exemple.fr/images/dinosaur.jpg" alt="Dinosaure" />
+<img src="https://www.example.com/images/dinosaur.jpg" alt="Dinosaure" />
 ```
 
 L'utilisation de URLs absolues n'est cependant pas recommandée. Vous devez héberger les images que vous souhaitez utiliser sur votre site, ce qui, dans des configurations simples, signifie garder les images de votre site sur le même serveur que votre HTML. De plus, il est plus efficace d'utiliser des URLs relatives que des URLs absolues en termes de maintenance (lorsque vous déplacez votre site vers un autre domaine, vous n'avez pas besoin de mettre à jour toutes vos URLs pour inclure le nouveau domaine). Dans des configurations plus avancées, vous pouvez utiliser un [CDN (Content Delivery Network)](/fr/docs/Glossary/CDN) pour distribuer vos images.

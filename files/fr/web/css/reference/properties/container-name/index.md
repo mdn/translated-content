@@ -73,7 +73,7 @@ L'exemple HTML ci-dessous est un composant de type carte contenant un titre et d
   </div>
   <div class="extrait-article">
     <p>
-      Un aperçu de mon <a href="https://exemple.com">article de blog</a> sur les
+      Un aperçu de mon <a href="https://example.com">article de blog</a> sur les
       chats.
     </p>
   </div>

@@ -266,7 +266,7 @@ On notera que le bloc `@starting-style` est utilisé pour définir le style de d
 
 #### JavaScript
 
-Enfin, nous incluons un peu de JavaScript pour configurer des écouteurs d'événements afin de déclencher la transition (avec la classe `showing`).
+Enfin, nous incluons un peu de JavaScript pour configurer des écouteurs d'évènements afin de déclencher la transition (avec la classe `showing`).
 
 ```js
 const divElem = document.querySelector("div");

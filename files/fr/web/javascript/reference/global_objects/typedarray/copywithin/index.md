@@ -42,7 +42,7 @@ Le tableau typé, modifié par la fonction.
 
 Voir la page {{jsxref("Array.prototype.copyWithin")}} pour plus d'informations.
 
-Cette méthode remplace la méthode expérimentale {{jsxref("TypedArray.prototype.move()")}}.
+Cette méthode remplace la méthode expérimentale `TypedArray.prototype.move()`.
 
 ## Exemples
 

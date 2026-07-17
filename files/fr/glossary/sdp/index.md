@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-**SDP** (Session Description {{Glossary("Protocol")}}) est le standard décrivant une connexion {{Glossary("P2P","pair-à-pair")}}. SDP contient le {{Glossary("codec")}}, l'adresse source, et des informations temporelles pour l'audio et la vidéo.
+**SDP** (Session Description {{Glossary("Protocol")}}) est une norme permettant de décrire des sessions multimédias. Il contient des informations telles que les types de médias, les adresses de transport, la synchronisation et les {{Glossary("codec", "codecs")}}.
 
-Voici un message SDP typique :
+Voici un message SDP typique&nbsp;:
 
 ```plain
 v=0
@@ -23,9 +23,11 @@ m=video 53000 RTP/AVP 32
 a=rtpmap:32 MPV/90000
 ```
 
-SDP n'est jamais employé seul, mais des protocoles comme {{Glossary("RTP")}} et {{Glossary("RTSP")}} l'utilisent. SDP est également un composant de {{Glossary("WebRTC")}}, ce dernier se servant de SDP pour décrire une session.
+SDP est utilisé conjointement avec des protocoles tels que {{Glossary("RTP")}} et {{Glossary("RTSP")}}. Il est également utilisé par le {{Glossary("WebRTC")}} pour décrire les sessions multimédias.
 
 ## Voir aussi
 
+- L'interface {{DOMxRef("RTCSessionDescription")}}
+- {{RFC(8866, "Session Description Protocol")}}
 - [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
 - [Session Description Protocol](https://fr.wikipedia.org/wiki/Session_Description_Protocol) sur Wikipédia

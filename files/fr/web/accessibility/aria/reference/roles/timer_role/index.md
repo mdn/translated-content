@@ -30,7 +30,7 @@ Avec [`alert`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role), [`lo
 
 ## Problèmes d'accessibilité
 
-Si une limite de temps doit être imposée, par exemple pour des raisons de sécurité, l'utilisateur·ice doit avoir la possibilité de la désactiver ou de la prolonger. Cette restriction ne s'applique pas si la limite de temps est liée à un événement en direct, comme une vente aux enchères ou un jeu, ou si le temps pour remplir le formulaire est essentiel à la validité de la soumission.
+Si une limite de temps doit être imposée, par exemple pour des raisons de sécurité, l'utilisateur·ice doit avoir la possibilité de la désactiver ou de la prolonger. Cette restriction ne s'applique pas si la limite de temps est liée à un évènement en direct, comme une vente aux enchères ou un jeu, ou si le temps pour remplir le formulaire est essentiel à la validité de l'envoi.
 
 ## Exemples
 

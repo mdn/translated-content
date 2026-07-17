@@ -14,11 +14,11 @@ Incluso si todas las unidades representan la misma resolución para el valor 0, 
 
 ## Unidades
 
-- [`dpi`]()
+- [`dpi`](<>)
   - : Esta unidad representa el número de [dots per inch](http://en.wikipedia.org/wiki/Dots_per_inch) (ppp en español), puntos por pulgada . A screen typically contains 72 or 96 dpi; a printed document usually reach much greater dpi. As 1 inch is 2.54 cm, `1dpi ≈ 0.39dpcm`.
-- [`dpcm`]()
+- [`dpcm`](<>)
   - : Esta unidad representa el número de [dots per centimeter](http://en.wikipedia.org/wiki/Dots_per_centimetre) (ppc en español), puntos por cm. 1 inch(pulgada) son 2.54 cm, `1dpcm ≈ 2.54dpi`.
-- [`dppx`]()
+- [`dppx`](<>)
   - : Esta unidad representa el número de puntos por unidad px. Debido a la relación fija de 1:96 CSS para CSS px, 1 px es equivalente a 96 dpi, que corresponde a la resolución predeterminada de las imágenes mostradas en CSS como se define por {{cssxref("image-resolution")}}.
 
 ## Ejemplos

@@ -382,17 +382,17 @@ Dans l'exemple ci-dessus, seul le premier `"href_matches"` sera évalué relativ
 
 `relative_to` est surtout pertinent si le fichier JSON des règles de spéculation est sur une origine différente de celle du document auquel on souhaite les appliquer&nbsp;:
 
-1. Si le document se trouve à `https://exemple.com/un-dossier/sous-page.html` et les règles à `https://exemple.com/resources/rules.json`, alors `/accueil` correspond toujours à `https://exemple.com/accueil` que `relative_to` soit défini à `document` ou `ruleset`.
+1. Si le document se trouve à `https://example.com/un-dossier/sous-page.html` et les règles à `https://example.com/resources/rules.json`, alors `/accueil` correspond toujours à `https://example.com/accueil` que `relative_to` soit défini à `document` ou `ruleset`.
 
-2. Cependant, si le document se trouve à `https://exemple.com/un-dossier/sous-page.html` et les règles à `https://other.example/resources/rules.json` (par exemple, sur une ressource tierce ou sans cookie), alors&nbsp;:
-   - `"relative_to": "document"` fera que `/accueil` correspondra à `https://exemple.com/accueil`.
+2. Cependant, si le document se trouve à `https://example.com/un-dossier/sous-page.html` et les règles à `https://other.example/resources/rules.json` (par exemple, sur une ressource tierce ou sans cookie), alors&nbsp;:
+   - `"relative_to": "document"` fera que `/accueil` correspondra à `https://example.com/accueil`.
    - `"relative_to": "ruleset"` fera que `/accueil` correspondra à `https://other.example/accueil`.
 
    C'est le cas d'utilisation typique de `"relative_to"`.
 
-3. Un autre cas d'utilisation possible (mais plus rare) est lorsque vos URL sont définies sous la forme `accueil` au lieu de `/accueil`. Si le document se trouve à `https://exemple.com/un-dossier/sous-page.html` et les règles à `https://exemple.com/resources/rules.json`, alors&nbsp;:
-   - `"relative_to": "document"` ferait que `accueil` correspondrait à `https://exemple.com/un-dossier/accueil`.
-   - `"relative_to": "ruleset"` ferait que `accueil` correspondrait à `https://exemple.com/resources/accueil`.
+3. Un autre cas d'utilisation possible (mais plus rare) est lorsque vos URL sont définies sous la forme `accueil` au lieu de `/accueil`. Si le document se trouve à `https://example.com/un-dossier/sous-page.html` et les règles à `https://example.com/resources/rules.json`, alors&nbsp;:
+   - `"relative_to": "document"` ferait que `accueil` correspondrait à `https://example.com/un-dossier/accueil`.
+   - `"relative_to": "ruleset"` ferait que `accueil` correspondrait à `https://example.com/resources/accueil`.
 
 ### Exemple de `"expects_no_vary_search"`
 
@@ -477,7 +477,7 @@ Plusieurs paramètres peuvent être fournis dans un tableau séparé par des esp
 ```
 
 > [!NOTE]
-> En tant que [champ structuré](https://www.rfc-editor.org/rfc/rfc8941), les paramètres doivent être des chaînes entre guillemets séparées par des espaces — comme ci-dessus — et non séparées par des virgules, ce à quoi les développeur·euse·s sont peut-être plus habitué·e·s.
+> En tant que [champ structuré](https://www.rfc-editor.org/info/rfc8941), les paramètres doivent être des chaînes entre guillemets séparées par des espaces — comme ci-dessus — et non séparées par des virgules, ce à quoi les développeur·euse·s sont peut-être plus habitué·e·s.
 
 ### Exemple de `eagerness`
 

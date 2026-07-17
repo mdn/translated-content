@@ -1,62 +1,82 @@
 ---
-title: element.nodeName
+title: "Node : propriété nodeName"
+short-title: nodeName
 slug: Web/API/Node/nodeName
+l10n:
+  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Node.nodeName`** renvoie le nom du nœud courant dans une chaîne.
+La propriété en lecture seule **`nodeName`** de {{DOMxRef("Node")}} retourne le nom du nœud courant sous forme de chaîne de caractères.
 
-Les valeurs retournées pour les différents types de noeuds sont :
+## Valeur
 
-| Interface                            | Valeur nodeName                                          |
-| ------------------------------------ | -------------------------------------------------------- |
-| {{domxref("Attr")}}                  | La valeur de {{domxref("Attr.name")}}                    |
-| {{domxref("CDATASection")}}          | `"#cdata-section"`                                       |
-| {{domxref("Comment")}}               | `"#comment"`                                             |
-| {{domxref("Document")}}              | `"#document"`                                            |
-| {{domxref("DocumentFragment")}}      | `"#document-fragment"`                                   |
-| {{domxref("DocumentType")}}          | La valeur de {{domxref("DocumentType.name")}}            |
-| {{domxref("Element")}}               | La valeur de {{domxref("Element.tagName")}}              |
-| {{domxref("Entity")}}                | Le nom de l'entité                                       |
-| {{domxref("EntityReference")}}       | Le nom de la référence d'entité                          |
-| {{domxref("Notation")}}              | Le nom de notation                                       |
-| {{domxref("ProcessingInstruction")}} | La valeur de {{domxref("ProcessingInstruction.target")}} |
-| {{domxref("Text")}}                  | `"#text"`                                                |
+Une chaîne de caractères. Les valeurs pour les différents types de nœuds sont&nbsp;:
 
-## Syntaxe
+- {{DOMxRef("Attr")}}
+  - : La valeur de {{DOMxRef("Attr.name")}}, c'est-à-dire le _nom qualifié_ de l'attribut.
+- {{DOMxRef("CDATASection")}}
+  - : La chaîne de caractères `"#cdata-section"`.
+- {{DOMxRef("Comment")}}
+  - : La chaîne de caractères `"#comment"`.
+- {{DOMxRef("Document")}}
+  - : La chaîne de caractères `"#document"`.
+- {{DOMxRef("DocumentFragment")}}
+  - : La chaîne de caractères `"#document-fragment"`.
+- {{DOMxRef("DocumentType")}}
+  - : La valeur de {{DOMxRef("DocumentType.name")}}
+- {{DOMxRef("Element")}}
+  - : La valeur de {{DOMxRef("Element.tagName")}}, c'est-à-dire le nom de l'élément en _majuscules_ si c'est un élément HTML,
+    ou le nom de l'élément en _minuscules_ si c'est un élément XML (comme un élément SVG ou MathML).
+- {{DOMxRef("ProcessingInstruction")}}
+  - : La valeur de {{DOMxRef("ProcessingInstruction.target")}}
+- {{DOMxRef("Text")}}
+  - : La chaîne de caractères `"#text"`.
 
-```js
-var str = node.nodeName;
-```
+## Exemples
 
-## Exemple
-
-Avec le balisage suivant&nbsp;:
+Cet exemple affiche les noms des nœuds de plusieurs nœuds&nbsp;:
 
 ```html
-<div id="d1">hello world</div>
-<input type="text" id="t" />
+Ceci est un exemple de HTML&nbsp;:
+<div id="d1">Bonjour le monde</div>
+<!-- Exemple de commentaire -->
+Texte <span>Texte</span> Texte<br />
+<svg height="20" width="20">
+  <circle cx="10" cy="10" r="5" stroke="black" stroke-width="1" fill="red" />
+</svg>
+<hr />
+<output id="resultat">Pas encore calculé.</output>
 ```
 
 et le script suivant&nbsp;:
 
 ```js
-var div1 = document.getElementById("d1");
-var text_field = document.getElementById("t");
-text_field.value = div1.nodeName;
+let noeud = document.querySelector("body").firstChild;
+let resultat = "Noms des nœuds :\n";
+while (noeud) {
+  resultat += `${noeud.nodeName}\n`;
+  noeud = noeud.nextSibling;
+}
+
+const sortie = document.getElementById("resultat");
+sortie.innerText = resultat;
 ```
 
-En XHTML (ou tout autre format XML), la valeur de `text_field` sera «&nbsp;div&nbsp;». Cependant, en HTML, la valeur de `text_field` sera «&nbsp;DIV&nbsp;», parce que `nodeName` et `tagName` renvoient en casse majuscule sur les éléments HTML dans les DOM marqués comme des documents HTML. En lire plus [détails sur la sensibilité à la casse de nodeName dans différents navigateurs](http://ejohn.org/blog/nodename-case-sensitivity/) (en).
+{{EmbedLiveSample("Exemples", "100%", 450)}}
 
-Notez que la propriété [`tagName`](/fr/docs/Web/API/Element/tagName) aurait pu être uilisée à la place, puisque `nodeName` a la même valeur que `tagName` pour un élément. Souvenez vous cependant que `nodeName` renverra `#text` pour les nœuds texte tandis que `tagName` renverra `undefined`.
+## Spécifications
 
-## Spécification
-
-- [DOM Level 2 Core: Node.nodeName](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D095) (non normative)
-- [DOM Level 3 Core: Node.nodeName](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095)
-- [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{DOMxRef("Element.tagName")}}
+- La propriété {{DOMxRef("Attr.name")}}
+- La propriété {{DOMxRef("DocumentType.name")}}
+- La propriété {{DOMxRef("ProcessingInstruction.target")}}

@@ -2,7 +2,7 @@
 title: Modèle de sous-page de propriété d'API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 > [!NOTE]

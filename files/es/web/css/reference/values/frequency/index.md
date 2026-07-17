@@ -10,8 +10,8 @@ El tipo de dato [CSS](/es/docs/Web/CSS) `<frequency>` denota una dimensión en f
 
 Las siguientes unidades deben ser usadas:
 
-- [`Hz`](), que representa una frecuencia en Hertz. Ejemplos: `0Hz`, `1500Hz`, `10000Hz`.
-- [`kHz`](), que representa una frecuencia en kilohertz. Ejemplos: `0kHz`, `1.5kHz`, `10kHz`.
+- [`Hz`](<>), que representa una frecuencia en Hertz. Ejemplos: `0Hz`, `1500Hz`, `10000Hz`.
+- [`kHz`](<>), que representa una frecuencia en kilohertz. Ejemplos: `0kHz`, `1.5kHz`, `10kHz`.
 
 Aunque todas las unidades representen la misma frecuencia para el valor `0`, la unidad no debe ser omitida en ese caso, puesto que no es un valor {{cssxref("length")}}: `0`, no es válido, y no representa `0Hz`, `0kHz`. Aunque las unidades sean insensibles a mayúsculas en CSS, es buena práctica usar una H mayúscula para `Hz` y `kHz`, como indica el [SI](https://es.wikipedia.org/wiki/Sistema_Internacional_de_Unidades), siendo [Hertz](http://en.wikipedia.org/wiki/Heinrich_Hertz) un apellido.
 

@@ -1,24 +1,24 @@
 ---
-title: PublicKeyCredential.getClientExtensionResults()
+title: "PublicKeyCredential: getClientExtensionResults() メソッド"
+short-title: getClientExtensionResults()
 slug: Web/API/PublicKeyCredential/getClientExtensionResults
+l10n:
+  sourceCommit: 3735f39708265a883e5fc9829c4335c31378e3ce
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-**`getClientExtensionResults()`** は {{domxref("PublicKeyCredential")}} インターフェイスのメソッドであり、 {{jsxref("ArrayBuffer")}} の形で拡張機能の識別子と、クライアントが処理した後の結果の対応表を返します。
+**`getClientExtensionResults()`** は {{domxref("PublicKeyCredential")}} インターフェイスのメソッドで、資格情報の作成または認証の際にリクエストされた拡張機能の識別子と、ユーザーエージェントによる処理後の結果を割り当てたオブジェクトを返します。
 
-`PublicKeyCredential` の生成または読み出し中 (それぞれ {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} および {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} で実施) に、それぞれ {{domxref("PublicKeyCredentialCreationOptions.extensions")}} および {{domxref("PublicKeyCredentialRequestOptions.extensions")}} によって与えられる別々の拡張機能のために、クライアントが処理する「専用の」処理を持つことができます。
-
-> [!NOTE]
-> 拡張機能はオプションであり、ブラウザーによって認識する拡張機能は異なります。すべての拡張機能はクライアントが処理することはオプションです。ブラウザーが指定された拡張機能を知らない場合、失敗としてはいけません。
+`PublicKeyCredential` の作成または取得時（{{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} および {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} を通じて）`PublicKeyCredential` を作成または取得する際、`publicKey` オプションの `extensions` プロパティで指定されたさまざまな拡張機能に対して、クライアントによる「独自の」処理をリクエストできます。さまざまな拡張機能のリクエストに関する情報は、[ウェブ認証の拡張機能](/ja/docs/Web/API/Web_Authentication_API/WebAuthn_extensions)を参照してください。
 
 > [!NOTE]
-> このプロパティは最上位のコンテキストでしか使えない可能性があり、例えば {{HTMLElement("iframe")}} の中では利用できません。
+> `getClientExtensionResults()` は、ユーザーエージェント（クライアント）によって処理された拡張機能の結果のみを返します。認証器によって処理された拡張機能の結果は、{{domxref("AuthenticatorAssertionResponse.authenticatorData")}} で利用できる[認証器データ](/ja/docs/Web/API/Web_Authentication_API/Authenticator_data)内に得られます。
 
 ## 構文
 
-```
-mapArrayBuffer = publicKeyCredential.getClientExtensionResults()
+```js-nolint
+getClientExtensionResults()
 ```
 
 ### 引数
@@ -27,45 +27,36 @@ mapArrayBuffer = publicKeyCredential.getClientExtensionResults()
 
 ### 返値
 
-{{jsxref("ArrayBuffer")}} の形で、クライアントが様々な拡張機能を処理した結果です。拡張子の識別子と、クライアントが処理した後の結果の対応表を返します。このオブジェクトには拡張機能の識別子と処理の結果の対応表が入っています。
+それぞれの項目のキーが拡張機能の識別子文字列、値がクライアントによるその拡張機能の処理結果となるオブジェクト。
 
-> [!WARNING]
-> 2019 年 3 月時点で、 `appId` ({{domxref("PublicKeyCredentialRequestOptions.extensions")}} の生成の間に使用される) のみ、 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=818303) および [Edge](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication#api-surface) が対応しています。 Firefox は[どの拡張機能にも対応していない](https://bugzil.la/1370728)ようです。
+### 例外
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : RP のドメインが有効ではありません。
 
 ## 例
 
 ```js
-var publicKey = {
-  // Here are the extensions (as "inputs")
+const publicKey = {
+  // Here are the extension "inputs"
   extensions: {
-    loc: true, // This extension has been defined to include location information in attestation
-    uvi: true, // user verification index: how the user was verified
+    appid: "https://accounts.example.com",
+  },
+  allowCredentials: {
+    id: "fgrt46jfgd...",
+    transports: ["usb", "nfc"],
+    type: "public-key",
   },
   challenge: new Uint8Array(16) /* from the server */,
-  rp: {
-    name: "Example CORP",
-    id: "login.example.com",
-  },
-  user: {
-    id: new Uint8Array(16) /* from the server */,
-    name: "jdoe@example.com",
-    displayName: "John Doe",
-  },
-  pubKeyCredParams: [
-    {
-      type: "public-key",
-      alg: -7,
-    },
-  ],
 };
 
 navigator.credentials
-  .create({ publicKey })
-  .then(function (newCredentialInfo) {
-    var myBuffer = newCredentialInfo.getClientExtensionResults();
-    // myBuffer will contain the result of any of the processing of the "loc" and "uvi" extensions
+  .get({ publicKey })
+  .then((publicKeyCred) => {
+    const myResults = publicKeyCred.getClientExtensionResults();
+    // myResults will contain the output of processing the "appid" extension
   })
-  .catch(function (err) {
+  .catch((err) => {
     console.error(err);
   });
 ```
@@ -78,9 +69,10 @@ navigator.credentials
 
 {{Compat}}
 
+> [!NOTE]
+> 拡張子は任意であり、さまざまなブラウザーで認識される拡張子が異なる場合があります。クライアント側での拡張子の処理は常に任意です。ブラウザーが指定された拡張子を認識しない場合、その拡張子は単に無視されます。どのブラウザーがどの拡張子を対応しているかについては、[ウェブ認証の拡張機能](/ja/docs/Web/API/Web_Authentication_API/WebAuthn_extensions)を参照してください。
+
 ## 関連情報
 
-- [現在定義されている拡張機能の一覧](https://www.w3.org/TR/webauthn/#sctn-defined-extensions)
+- [現在定義されている拡張機能の一覧](https://w3c.github.io/webauthn/#sctn-defined-extensions)
 - {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}: 認証者の実行処理の結果が入る
-- {{domxref("PublicKeyCredentialCreationOptions.extensions")}}: 認証情報を作成するためのクライアント拡張機能の入力値が入る
-- {{domxref("PublicKeyCredentialRequestOptions.extensions")}}: 認証情報を受け取るクライアント拡張機能の入力値が入る

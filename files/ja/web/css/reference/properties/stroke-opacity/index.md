@@ -1,9 +1,9 @@
 ---
-title: stroke-opacity
+title: CSS `stroke-opacity` プロパティ
+short-title: stroke-opacity
 slug: Web/CSS/Reference/Properties/stroke-opacity
-original_slug: Web/CSS/stroke-opacity
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`stroke-opacity`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[SVG](/ja/docs/Web/SVG) 図形のストロークの（不）透明度を定義します。その効果は {{CSSxref('opacity')}} と同一ですが、要素全体ではなくストロークのみに適用されます。指定されている場合、要素の {{SVGAttr("stroke-opacity")}} 属性を上書きします。

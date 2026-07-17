@@ -39,13 +39,13 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
 ### Instance properties
 
 - `Memory.prototype.constructor`
-  - : 이 객체의 인스턴스를 생성 한 함수를 돌려줍니다. 기본적으로 이것은 {{jsxref("WebAssembly.Memory()")}} 생성자입니다.
-- {{jsxref("WebAssembly/Memory/buffer","Memory.prototype.buffer")}}
+  - : 이 객체의 인스턴스를 생성 한 함수를 돌려줍니다. 기본적으로 이것은 [`WebAssembly.Memory()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory) 생성자입니다.
+- [`Memory.prototype.buffer`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer)
   - : 메모리에 포함 된 버퍼를 반환하는 접근 자 속성입니다.
 
 ### Instance methods
 
-- {{jsxref("WebAssembly/Memory/grow","Memory.prototype.grow()")}}
+- [`Memory.prototype.grow()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow)
   - : 지정된 수의 WebAssembly 페이지 (각각 64KB 크기)만큼 메모리 인스턴스의 크기를 늘립니다.
 
 ## Examples
@@ -56,7 +56,7 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
 var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
 ```
 
-`WebAssembly.Memory` 객체를 가져 오는 두 번째 방법은 WebAssembly 모듈에서 내보냅니다. 다음 예제는 (GitHub의 [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)을 보세요. [라이브로 보기](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) 생성된 메모리를 가져 오는 동안 {{jsxref("WebAssembly.instantiateStreaming()")}} 메소드를 사용하여로드 된 memory.wasm 바이트 코드를 가져 와서 인스턴스화합니다. 위의 줄에. 그런 다음 메모리에 일부 값을 저장 한 다음 함수를 내 보낸 다음 일부 값의 합계에 사용합니다.
+`WebAssembly.Memory` 객체를 가져 오는 두 번째 방법은 WebAssembly 모듈에서 내보냅니다. 다음 예제는 (GitHub의 [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)을 보세요. [라이브로 보기](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) 생성된 메모리를 가져 오는 동안 [`WebAssembly.instantiateStreaming()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) 메소드를 사용하여로드 된 memory.wasm 바이트 코드를 가져 와서 인스턴스화합니다. 위의 줄에. 그런 다음 메모리에 일부 값을 저장 한 다음 함수를 내 보낸 다음 일부 값의 합계에 사용합니다.
 
 ```js
 WebAssembly.instantiateStreaming(fetch("memory.wasm"), {

@@ -13,9 +13,9 @@ Le rôle `math` indique que le contenu représente une expression mathématique.
 Le contenu avec le rôle `math` est destiné à être marqué dans un format accessible tel que [MathML](/fr/docs/Web/MathML), ou avec un autre type de représentation textuelle, qui peut être convertie en un format accessible par le navigateur ou une {{Glossary("polyfill", "prothèse d'émulation")}}.
 
 Malheureusement, la prise en charge de MathML par les navigateurs n'est pas universelle. Bien que l'utilisation d'une image d'une expression mathématique ne soit pas optimale, si vous utilisez une image, utilisez le rôle `math`.
-Assurez-vous que toutes les images de mathématiques sont étiquetées par un attribut `alt` qui décrit l'expression mathématique telle qu'elle serait prononcée.
+Assurez-vous que toutes les images de mathématiques sont étiquetées par un attribut `alt` qui décrit l'expression mathématique telle qu'elle est prononcée.
 
-Si l'élément mathématique n'a que des enfants de présentation et que le nom accessible est destiné à transmettre l'expression mathématique, utilisez [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) pour fournir une chaîne qui représente l'expression. Si l'élément mathématique contient un contenu navigable qui transmet l'expression mathématique et qu'une étiquette visible pour l'expression est présente, utilisez [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). Sinon, utilisez `aria-label` pour nommer l'expression, par exemple, `aria-label="Théorème de Pythagore"`.
+Si l'élément mathématique n'a que des enfants de présentation et que le nom accessible est destiné à transmettre l'expression mathématique, utilisez [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) pour fournir une chaîne de caractères qui représente l'expression. Si l'élément mathématique contient un contenu navigable qui transmet l'expression mathématique et qu'une étiquette visible pour l'expression est présente, utilisez [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). Sinon, utilisez `aria-label` pour nommer l'expression, par exemple, `aria-label="Théorème de Pythagore"`.
 
 ## Exemples
 
@@ -33,7 +33,7 @@ Le théorème de Pythagore ci-dessus est écrit de manière accessible comme sui
 </div>
 ```
 
-Si une image avait été utilisée, l'attribut `alt` aurait été utilisé avec le rôle `math`&nbsp;:
+Si une image avait été utilisée, l'attribut `alt` a été utilisé avec le rôle `math`&nbsp;:
 
 ```html
 <img src="pythagorean_theorem.gif" alt="a^{2} + b^{2} = c^{2}" role="math" />

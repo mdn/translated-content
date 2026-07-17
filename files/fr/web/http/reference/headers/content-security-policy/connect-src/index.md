@@ -62,25 +62,25 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: connect-src https://exemple.com/
+Content-Security-Policy: connect-src https://example.com/
 ```
 
 Les connexions suivantes seront bloquées et ne se chargeront pas&nbsp;:
 
 ```html
-<a ping="https://hors-exemple.com" href="/">Lien</a>
+<a ping="https://hors-example.com" href="/">Lien</a>
 <script>
-  const reponse = fetch("https://hors-exemple.com/");
+  const reponse = fetch("https://hors-example.com/");
 
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://hors-exemple.com/");
+  xhr.open("GET", "https://hors-example.com/");
   xhr.send();
 
-  const ws = new WebSocket("wss://hors-exemple.com/");
+  const ws = new WebSocket("wss://hors-example.com/");
 
-  const es = new EventSource("https://hors-exemple.com/");
+  const es = new EventSource("https://hors-example.com/");
 
-  navigateur.sendBeacon("https://hors-exemple.com/", {/* … */});
+  navigateur.sendBeacon("https://hors-example.com/", {/* … */});
 </script>
 ```
 

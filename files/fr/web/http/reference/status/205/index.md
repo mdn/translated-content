@@ -2,12 +2,12 @@
 title: 205 Reset Content
 slug: Web/HTTP/Reference/Status/205
 l10n:
-  sourceCommit: b4e920ce0a34d9e609080ccb937a1a30c3cd558a
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse de succès](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) HTTP **`205 Reset Content`** indique que la requête a été traitée avec succès et que le client doit réinitialiser l'affichage du document.
 
-Cette réponse est destinée à des cas où l'utilisateur·ice reçoit un contenu permettant la saisie de données, soumet des données modifiées dans une requête, et le contenu doit être réinitialisé pour la prochaine saisie.
+Cette réponse est destinée à des cas où l'utilisateur·ice reçoit un contenu permettant la saisie de données, envoie des données modifiées dans une requête, et le contenu doit être réinitialisé pour la prochaine saisie.
 L'instruction «&nbsp;réinitialiser le contenu&nbsp;» peut signifier vider le contenu d'un formulaire, réinitialiser l'état d'un canevas ou rafraîchir une interface&nbsp;; l'implémentation dépend du client.
 
 > [!NOTE]
@@ -28,18 +28,18 @@ La réponse vide peut aussi être indiquée à l'aide de l'en-tête {{HTTPHeader
 
 ### Réinitialisation d'un formulaire après réception d'un `205 Reset Content`
 
-Dans cet exemple, le client envoie une requête `POST` pour soumettre un formulaire avec le commentaire `Bonjour !`&nbsp;:
+Dans cet exemple, le client envoie une requête `POST` pour envoyer un formulaire avec le commentaire `Bonjour !`&nbsp;:
 
 ```http
 POST /submit HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 17
 
 comment=Bonjour%20%21
 ```
 
-Après le traitement réussi de la soumission du formulaire, le serveur répond avec la réponse `205` suivante, indiquant que le client doit réinitialiser le formulaire.
+Après le traitement réussi de l'envoi du formulaire, le serveur répond avec la réponse `205` suivante, indiquant que le client doit réinitialiser le formulaire.
 
 ```http
 HTTP/1.1 205 Reset Content

@@ -3,14 +3,14 @@ title: "ARIA : rôle figure"
 short-title: figure
 slug: Web/Accessibility/ARIA/Reference/Roles/figure_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 Le rôle `figure` peut être utilisé pour identifier une figure à l'intérieur du contenu de la page lorsque des sémantiques appropriées n'existent pas déjà. Une figure est généralement considérée comme une ou plusieurs images, extraits de code ou autres contenus qui transmettent des informations d'une manière différente de celle d'un flux de texte régulier.
 
 ## Description
 
-Une `figure` est une section de contenu perceptible qui contient généralement un document graphique, des images, des extraits de code ou du texte d'exemple. Les parties d'une figure PEUVENT être navigables par l'utilisateur·ice. Tout contenu qui doit être regroupé et consommé comme une figure (qui pourrait inclure des images, des vidéos, de l'audio, des extraits de code ou d'autres contenus) peut être identifié comme une figure en utilisant `role="figure"`.
+Une `figure` est une section de contenu perceptible qui contient généralement un document graphique, des images, des extraits de code ou du texte d'exemple. Les parties d'une figure PEUVENT être navigables par l'utilisateur·ice. Tout contenu qui doit être regroupé et consommé comme une figure (qui peut inclure des images, des vidéos, de l'audio, des extraits de code ou d'autres contenus) peut être identifié comme une figure en utilisant `role="figure"`.
 
 ```html
 <div role="figure" aria-labelledby="caption">
@@ -19,9 +19,9 @@ Une `figure` est une section de contenu perceptible qui contient généralement 
 </div>
 ```
 
-Dans l'exemple ci-dessus, nous avons une figure qui se compose de deux éléments de contenu distincts : une image et une légende. Cela est enveloppé par un élément {{htmlelement("div")}} qui identifie le contenu comme une figure en utilisant `role="figure"`.
+Dans l'exemple ci-dessus, nous avons une figure qui se compose de deux éléments de contenu distincts&nbsp;: une image et une légende. C'est enveloppé par un élément {{HTMLElement("div")}} qui identifie le contenu comme une figure en utilisant `role="figure"`.
 
-Pour HTML, utilisez les éléments {{HTMLElement('figure')}} et {{HTMLElement('figcaption')}}. Le figcaption servira de nom accessible pour la figure. Lorsque vous n'utilisez pas HTML, ou lorsque vous adaptez du HTML hérité, utilisez le [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) sur la figure, pointant vers la légende de la figure.
+Pour HTML, utilisez les éléments {{HTMLElement("figure")}} et {{HTMLElement("figcaption")}}. Le `figcaption` sert de nom accessible pour la figure. Lorsque vous n'utilisez pas HTML, ou lorsque vous adaptez du HTML hérité, utilisez le [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) sur la figure, pointant vers la légende de la figure.
 S'il n'y a pas de légende visible, [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) peut être utilisé.
 
 ```html
@@ -35,7 +35,7 @@ S'il n'y a pas de légende visible, [`aria-label`](/fr/docs/Web/Accessibility/AR
 - Utilisez [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) lorsque le texte est une description plus longue.
 - Utilisez [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) lorsque la légende de la figure n'est pas visible.
 
-Cela peut être fait sémantiquement, sans ARIA, avec l'élément {{HTMLElement('figure')}} de HTML ainsi que {{HTMLElement('figcaption')}}.
+Cela peut être fait sémantiquement, sans ARIA, avec l'élément {{HTMLElement("figure")}} de HTML ainsi que {{HTMLElement("figcaption")}}.
 
 ```html
 <figure>
@@ -45,9 +45,9 @@ Cela peut être fait sémantiquement, sans ARIA, avec l'élément {{HTMLElement(
 ```
 
 > [!NOTE]
-> Si possible dans votre travail, vous devriez utiliser les éléments HTML sémantiques appropriés pour marquer une figure et sa légende — {{htmlelement("figure")}} et {{htmlelement("figcaption")}}.
+> Si possible dans votre travail, vous devez utiliser les éléments HTML sémantiques appropriés pour marquer une figure et sa légende — {{HTMLElement("figure")}} et {{HTMLElement("figcaption")}}.
 
-### Associated WAI-ARIA roles, states, and properties
+### Rôles, états et propriétés WAI-ARIA associés
 
 - [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
   - : L'id d'un élément contenant un texte de référence servant de légende.
@@ -86,7 +86,7 @@ Nous pourrions étendre l'exemple initial sur la page pour identifier également
 
 N'utilisez `role="figure"` que si vous devez le faire — par exemple, si vous n'avez pas le contrôle sur votre HTML mais que vous êtes en mesure d'améliorer l'accessibilité de manière dynamique après coup avec JavaScript.
 
-Si possible, vous devriez utiliser les éléments HTML sémantiques appropriés pour marquer une figure et sa légende — {{htmlelement("figure")}} et {{htmlelement("figcaption")}}. Par exemple, notre exemple ci-dessus devrait être réécrit comme suit&nbsp;:
+Si possible, vous devez utiliser les éléments HTML sémantiques appropriés pour marquer une figure et sa légende — {{HTMLElement("figure")}} et {{HTMLElement("figcaption")}}. Par exemple, notre exemple ci-dessus doit être réécrit comme suit&nbsp;:
 
 ```html
 <figure>
@@ -106,9 +106,9 @@ Si possible, vous devriez utiliser les éléments HTML sémantiques appropriés 
 
 {{Specifications}}
 
-## See also
+## Voir aussi
 
 - [Modèle d'Objet d'Accessibilité <sup>(angl.)</sup>](https://wicg.github.io/aom/spec/)
-- L'[ARIA dans le HTML <sup>(angl.)</sup>](https://w3c.github.io/html-aria/)
-- L'élément HTML {{HTMLElement('figure')}}
-- L'élément HTML {{HTMLElement('figcaption')}}
+- [L'ARIA dans le HTML <sup>(angl.)</sup>](https://w3c.github.io/html-aria/)
+- L'élément HTML {{HTMLElement("figure")}}
+- L'élément HTML {{HTMLElement("figcaption")}}
