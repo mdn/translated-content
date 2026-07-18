@@ -1,49 +1,56 @@
 ---
 title: 拡張機能とは何か？
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
+l10n:
+  sourceCommit: ee33efab7300d7bf7319921a22f2eb2b60df91da
 ---
 
-{{AddonSidebar}}
+> [!NOTE]
+> 拡張機能の基本概念についてすでに理解している場合は、この章をスキップして、[拡張機能ファイルの構成](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)を確認してください。その後、[リファレンスドキュメント](/ja/docs/Mozilla/Add-ons/WebExtensions#リファレンス)を参照して、拡張機能の作成を開始してください。Firefox 拡張機能の開発、テスト、公開に関するワークフローの詳細を学ぶには、[Firefox 拡張機能ワークショップ](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)をご覧ください。
 
-拡張機能はウェブブラウザーに機能を追加します。標準化されているウェブ技術（JavaScript / HTML / CSS）に専用の JavaScript API をいくつか加えて書かれます。とりわけ、拡張機能はブラウザーに新しい機能を追加したり、特定のウェブサイトが持つ見た目やコンテンツを変更したりできます。
+拡張機能は、HTML、CSS、JavaScript といったおなじみのウェブベースの技術を使って作成します。拡張機能は、ウェブページ上の JavaScript と同じ Web API を使用することができますが、同時にさらに追加の JavaScript API 群にアクセスすることも可能です。
 
-**ウェブサイト全体の改良**: アドオンを使ってブラウザー内の機能やウェブサイトからの情報を届けます。ユーザーが訪れたページの詳細を集めるようにできて、サービスを向上させることができます。
+追加の JavaScript API 群である [WebExtensions API](/ja/docs/Mozilla/Add-ons/WebExtensions) は、Google Chrome、Apple Safari、Microsoft Edge、Opera といった主要なブラウザー間で広く互換性があります。Firefox 向けに作成された拡張機能は、ほとんどの場合、他のブラウザーでも、[変更](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)をほとんど、あるいは全く加えることなく動作します。
 
-![](Amazon_add_on.png)
+WebExtensions API を使うと、ウェブページ内のコードだけで実現できる範囲をはるかに超えて、拡張機能でさまざまなことが可能になります。以下に、その一例をいくつか挙げます。
 
-例: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/), [OneNote Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/), [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/)
+**ウェブサイトの機能強化や補完**: 拡張機能を使用して、ブラウザー上で利用可能な追加機能や、ウェブサイトからの情報を配信しましょう。ユーザーが閲覧したページから詳細情報を収集することができるようにすることで、提供するサービスの質を向上させることができます。
 
-**ユーザーの個性を見せる**: ブラウザー機能拡張はユーザーによってブラウズされるページコンテンツを操作できます。例えば、ユーザーのお気に入りのロゴや写真を、訪れるすべてのページの背景として追加できます。拡張機能は Firefox UI の見た目を更新する力を与えることもできます (スタンドアローンの [テーマアドオン](/ja/docs/Mozilla/Add-ons/Themes/Theme_concepts)を使っても同様に Firefox UI を更新できます)。
+例：[Firefox 用 Grammarly](https://addons.mozilla.org/ja/firefox/addon/grammarly-1/) や [Twitter 用 コントロールパネル](https://addons.mozilla.org/ja/firefox/addon/control-panel-for-twitter/) など。
 
-![](MyWeb_New_Tab_add_on.png)
+![GitHub エディター内で編集のヒントを提供する Grammarly 拡張機能。](grammarly-in-github-editor.png)
 
-例: [MyWeb New Tab](https://addons.mozilla.org/en-US/firefox/addon/myweb-new-tab/), [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/), [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/)
+**ユーザーの個性を見せる**: ブラウザー機能拡張はユーザーによってブラウズされるページコンテンツを操作できます。例えば、ユーザーのお気に入りのロゴや写真を、訪れるすべてのページの背景として追加できます。拡張機能は Firefox UI の見た目を更新する力を与えることもできます（スタンドアローンの [テーマアドオン](https://extensionworkshop.com/documentation/themes/)を使っても同様に Firefox UI を更新できます）。
+
+例: [Tabliss](https://addons.mozilla.org/ja/firefox/addon/tabliss/), [Stylus](https://addons.mozilla.org/ja/firefox/addon/styl-us/), [Emoji](https://addons.mozilla.org/ja/firefox/addon/emoji-sav/).
+
+![Tabliss 拡張機能でスタイル設定された新しいタブには、森の風景の写真と時刻、そして挨拶メッセージが表示されます。](tabliss_new_tab.png)
 
 **ウェブページのコンテンツを追加/削除**: ウェブページで触れられた国や都市への旅行ガイドへのアクセスを提供してウェブページのしつこい広告をユーザーがブロックするのを補助したり、読む体験の一貫性を提供するためにページの再フォーマットをしたいかもしれません。ページの HTML と CSS にアクセスして更新する力を持って、拡張機能はユーザーが見たい方法でウェブを見るのを助けることができます。
 
-![](ublock_origin_add_on.png)
+例: [uBlock Origin](https://addons.mozilla.org/ja/firefox/addon/ublock-origin/), [Return YouTube Dislike](https://addons.mozilla.org/ja/firefox/addon/return-youtube-dislikes/), [LeechBlock NG](https://addons.mozilla.org/ja/firefox/addon/leechblock-ng/).
 
-例: [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), [Reader](https://addons.mozilla.org/en-US/firefox/addon/reader/), [Toolbox for Google Play Store™](https://addons.mozilla.org/en-US/firefox/addon/toolbox-google-play-store/)
+![uBlock Origin のポップアップは、ブロックされたトラッカーの統計情報を示します。](ublock_origin_add_on.png)
 
 **ツールや新しいブラウズ機能を追加**: タスクボードに新しい機能を追加したり、URL やハイパーリンクやページのテキストから QR コード画像を生成したりします。[WebExtensions APIs](/ja/docs/Mozilla/Add-ons/WebExtensions) の柔軟な UI オプションや力を得て、ブラウザーに新機能を簡単に追加できます。そしてほぼあらゆるウェブサイトの機能を改良できて、それはあなたのウェブサイトだけとは限りません。
 
-![](QR_Code_Image_Generator_add_on.png)
+例: [Worldwide Radio](https://addons.mozilla.org/ja/firefox/addon/worldwide-radio/), [Flagfox](https://addons.mozilla.org/ja/firefox/addon/flagfox/), [Tomato Clock](https://addons.mozilla.org/ja/firefox/addon/tomato-clock/)
 
-例: [Swimlanes for Trello](https://addons.mozilla.org/en-US/firefox/addon/swimlanes-for-trello/) and [Tomato Clock](https://addons.mozilla.org/en-US/firefox/addon/tomato-clock/)
+![「Worldwide Radio」拡張機能では、カナダのラジオ局の一覧が示されており、再生対象として「RadioOne」が選択されています。](worldwide_radio_extension.png)
 
 **ゲーム**: オフラインで遊べるような伝統的なコンピューターゲームや、新しいゲームの可能性を探検できます。例えば、日々のブラウジングにゲームを取り込むなど。
 
-![](Asteroids_in_Popup_add_on%20.png)
+例: [RPG Game - Dedalium by Loycom Games](https://addons.mozilla.org/ja/firefox/addon/rpg-game-online-dedalium/), [Solitaire Card Game](https://addons.mozilla.org/ja/firefox/addon/solitaire-spider-freecell/), [2048 Prime](https://addons.mozilla.org/ja/firefox/addon/2048-prime/).
 
-例: [Asteroids in Popup](https://addons.mozilla.org/en-US/firefox/addon/asteroids-in-popup/), [Solitaire Card Game New Tab](https://addons.mozilla.org/en-US/firefox/addon/solitaire-card-game-new-tab/), [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
+![プレイ状況を示し、バトルやアドベンチャーを開始するためのオプションを提供する「デダリウム」のポップアップ。](dedalium_popup.png)
 
-**開発ツールを追加**: あなたのビジネスに沿った開発ツールを提供したり、共有しておきたい便利なテクニックやウェブ開発へのアプローチを提供できます。いずれの方法でも、開発者ツールバーに新規タブを追加することで、組み込みの Firefox 開発ツールを改良できます。![](aXe_Developer_Tools_add_on.png)
+**開発ツールを追加**: あなたのビジネスに沿った開発ツールを提供したり、共有しておきたい便利なテクニックやウェブ開発へのアプローチを提供できます。いずれの方法でも、開発者ツールバーに新規タブを追加することで、組み込みの Firefox 開発ツールを改良できます。
 
-例: [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)
+例: [aXe Developer Tools](https://addons.mozilla.org/ja/firefox/addon/axe-devtools/), [Web Developer](https://addons.mozilla.org/ja/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/ja/firefox/addon/react-devtools/)
 
-Firefox 用の拡張機能は [WebExtensions APIs](/ja/docs/Mozilla/Add-ons/WebExtensions) を使って作成され、この API はクロスブラウザーで動作可能な拡張機能を開発するための技術です。この API の大半は、Google Chrome や Opera でサポートされている [extension API](https://developer.chrome.com/docs/extensions) と互換性があります。これらのブラウザー向けに書かれた拡張機能のほとんどは、少し[変更を加えるだけで](/ja/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome) Firefox や Microsoft Edge でも動かせるようになります。この API は完全に[マルチプロセス Firefox](/ja/docs/Mozilla/Firefox/Multiprocess_Firefox) にも対応しています。
+![The Axe accessibility testing extension showing accessibility issues found in a webpage.](axe_developer_tools_add_on.png)
 
-何かアイデアがあったり、レガシーアドオンを WebExtensions API に移植する手助けが必要な場合、ご連絡は [dev-addons メーリングリスト](https://mail.mozilla.org/listinfo/dev-addons) や [Add-ons room](https://chat.mozilla.org/#/room/#addons:mozilla.org) や [Matrix](https://wiki.mozilla.org/Matrix) までお願いします。英語のサポートです。
+何かアイデアがあったり、レガシーアドオンを WebExtensions API に移植する手助けが必要な場合、ご連絡は [Add-ons Discourse](https://discourse.mozilla.org/c/add-ons/35) や [Matrix](https://wiki.mozilla.org/Matrix) までお願いします。英語のサポートです。
 
 ## 次のステップ
 
