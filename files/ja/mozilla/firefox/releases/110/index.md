@@ -43,7 +43,7 @@ l10n:
 
 - {{domxref("CSSContainerRule")}} に対応し、JavaScript から {{cssxref("@container")}} アットルール定義で使用されている名前やクエリーにアクセスすることが可能になりました（[Firefox バグ 1787173](https://bugzil.la/1787173)）。
 
-- `hidden` など、フォーカスを保持できなくなるスタイルが要素に適用されると、その要素はフォーカスが失われ、[`blur` イベント](/en-US/docs/Web/API/Element/blur_event) が発生するようになりました。
+- `hidden` など、フォーカスを保持できなくなるスタイルが要素に適用されると、その要素はフォーカスが失われ、[`blur` イベント](/ja/docs/Web/API/Element/blur_event) が発生するようになりました。
   その後、フォーカスはビューポートに移動します
   以前は、フォーカスがその要素に残ったままでした。
   （詳細については、[Firefox バグ 1810077](https://bugzil.la/1810077) を参照してください。）
