@@ -3,7 +3,7 @@ title: "Window: customElements プロパティ"
 short-title: customElements
 slug: Web/API/Window/customElements
 l10n:
-  sourceCommit: 8193e6db6943958ad6a64eb335e8c724f5c8dc63
+  sourceCommit: 26c6aca187b3718498886f9fba6c1cc4f4833b5d
 ---
 
 {{APIRef("Web Components")}}
