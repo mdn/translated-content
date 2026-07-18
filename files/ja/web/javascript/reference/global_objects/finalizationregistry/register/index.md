@@ -1,16 +1,18 @@
 ---
 title: FinalizationRegistry.prototype.register()
+short-title: register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-`register()` メソッドはオブジェクトを {{jsxref("FinalizationRegistry")}} インスタンスへ登録し、オブジェクトがガベージコレクションで回収された場合、レジストリのコールバックが呼び出されるようになります。
+**`register()`** は {{jsxref("FinalizationRegistry")}} インスタンスのメソッドで、値をこの `FinalizationRegistry` へ登録し、オブジェクトがガベージコレクションで回収された場合、このレジストリーのコールバックが呼び出されるようになります。
 
 ## 構文
 
-```
-registry.register(target, heldValue, [unregisterToken]);
+```js-nolint
+register(target, heldValue)
+register(target, heldValue, unregisterToken)
 ```
 
 ### 引数
@@ -20,15 +22,23 @@ registry.register(target, heldValue, [unregisterToken]);
 - `heldValue`
   - : このオブジェクトのためにファイナライザーへ渡す値です。これは `target` オブジェクトにすることはできません。
 - `unregisterToken` {{optional_inline}}
-  - : のちに対象オブジェクトを登録解除するために `unregister` メソッドと共に使用するトークンです。提供された場合 (かつ `undefined` ではない場合)、これはオブジェクトである必要があります。提供されなかった場合は、対象を登録解除することはできません。
+  - : のちに対象オブジェクトを登録解除するために `unregister` メソッドと共に使用するトークンです。提供される場合（かつ `undefined` ではない場合）、これはオブジェクトまたは[未登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)である必要があります。提供されなかった場合は、対象を登録解除することはできません。
 
 ### 返値
 
-`undefined` です。
+なし ({{jsxref("undefined")}})。
 
-## 注
+### 例外
 
-重要な注意点については、 {{jsxref("FinalizationRegistry")}} ページの[可能な限り避ける](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#avoid_where_possible)と[クリーンアップコールバックに関する注意事項](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#notes_on_cleanup_callbacks)の部分を参照してください。
+- {{jsxref("TypeError")}}
+  - : 以下のいずれかの場合に発生します。
+    - `target` はオブジェクトでも、[未登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)でもない（オブジェクトはプリミティブとは対照的です。関数もオブジェクトです）。
+    - `target` が `heldValue` と同じ値である (`target === heldValue`)
+    - `unregisterToken` がオブジェクトでも[未登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)でもない
+
+## 解説
+
+重要な注意点については、 {{jsxref("FinalizationRegistry")}} ページの[可能な限り避ける](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#可能な限り避ける)と[クリーンアップコールバックの注意](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#クリーンアップコールバックの注意)の部分を参照してください。
 
 ## 例
 
