@@ -85,7 +85,7 @@ registry.unregister(token);
 - {{jsxref("FinalizationRegistry/FinalizationRegistry", "FinalizationRegistry()")}}
   - : 新しい `FinalizationRegistry` オブジェクトを生成します。
 
-## インスタンスメソッド
+## インスタンスプロパティ
 
 これらのプロパティは `FinalizationRegistry.prototype` で定義されており、すべての `FinalizationRegistry` インスタンスで共有されます。
 
