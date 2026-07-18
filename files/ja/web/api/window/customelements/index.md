@@ -3,23 +3,33 @@ title: "Window: customElements プロパティ"
 short-title: customElements
 slug: Web/API/Window/customElements
 l10n:
-  sourceCommit: ce10da0e9d23d241b175d8d68bf93507734b7c48
+  sourceCommit: 8193e6db6943958ad6a64eb335e8c724f5c8dc63
 ---
 
 {{APIRef("Web Components")}}
 
-**`customElements`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、 {{domxref("CustomElementRegistry")}} オブジェクトへのリファレンスを返します。これにより、新しい[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を登録したり、以前に登録したカスタム要素に関する情報を取得したりすることができます。
+**`customElements`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、グローバルな {{domxref("CustomElementRegistry")}} オブジェクトへの参照を返します。これにより、新しい[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を登録したり、以前に登録したカスタム要素に関する情報を取得したりすることができます。
+
+グローバルレジストリーはデフォルトでカスタム要素の登録に使用されますが、シャドウルートでは、定義された要素名における潜在的な衝突を避けるために、[スコープ付きカスタム要素レジストリー](/ja/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries)を使用することができます。
+
+## 値
+
+{{domxref("CustomElementRegistry")}} です。
 
 ## 例
 
-このプロパティが使われている最も一般的な例は、新しいカスタム要素を定義・登録するために {{domxref("CustomElementRegistry.define()")}} メソッドにアクセスすることです。例えば次のようにします。
+### 基本的な使い方
+
+このプロパティが使われている最も一般的な例は、新しいカスタム要素を定義・登録するために {{domxref("CustomElementRegistry.define()")}} メソッドにアクセスすることです。
+
+例えば次のようにします。
 
 ```js
 let customElementRegistry = window.customElements;
 customElementRegistry.define("my-custom-element", MyCustomElement);
 ```
 
-しかし、ふつうは以下のように短縮します。
+なお、カスタム要素のクラスは、以下に示すように、通常は `define()` の呼び出しの直後に定義されます。
 
 ```js
 customElements.define(
@@ -27,11 +37,9 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super();
-      const template = document.getElementById(
-        "element-details-template",
-      ).content;
+      const template = document.getElementById("element-details-template");
       const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-        template.cloneNode(true),
+        document.importNode(template.content, true),
       );
     }
   },
