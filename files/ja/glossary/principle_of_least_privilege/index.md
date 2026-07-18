@@ -1,8 +1,8 @@
 ---
-title: Principle of least privilege
+title: Principle of least privilege (最小権限の原則)
 slug: Glossary/Principle_of_least_privilege
-page-type: glossary-definition
-sidebar: glossarysidebar
+l10n:
+  sourceCommit: 79f65d8322a4e55e9f3f4c91441c9188dbe670e0
 ---
 
 The principle of least privilege is a design consideration in computer security, according to which entities (including users, system processes, or programs) should be granted the minimum amount of access that they need in order to do their jobs.
