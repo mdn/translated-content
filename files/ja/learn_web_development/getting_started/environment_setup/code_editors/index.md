@@ -39,7 +39,7 @@ l10n:
 
 おそらく、お使いのコンピューターにはすでにプレーンテキストエディターがインストールされているでしょう。デフォルトで、Windows には[メモ帳](https://ja.wikipedia.org/wiki/メモ帳)が、macOS には[テキストエディット](https://ja.wikipedia.org/wiki/テキストエディット)が搭載されています。Linux ディストリビューションによって異なりますが、Ubuntu 22.04 LTS リリースには、デフォルトで [GNOME Text Editor](https://en.wikipedia.org/wiki/GNOME_Text_Editor) が搭載されています。OS に標準搭載されているプレーンテキストエディターでも十分ですが、機能には制限があります。
 
-本格的なコードエディター、例えば [Visual Studio Code](https://code.visualstudio.com/) （マルチプラットフォーム、無料）、[Sublime Text](https://www.sublimetext.com/)（マルチプラットフォーム、無料ではない）、[Notepad++](https://notepad-plus-plus.org/)（Windows、無料）などを使った方が良いでしょう。 
+本格的なコードエディター、例えば [Visual Studio Code](https://code.visualstudio.com/) （マルチプラットフォーム、無料）、[Sublime Text](https://www.sublimetext.com/)（マルチプラットフォーム、無料ではない）、[Notepad++](https://notepad-plus-plus.org/)（Windows、無料）などを使った方が良いでしょう。
 
 Visual Studio Code (VS Code) は、私たちが最もよく使用しているエディターなので、お勧めします。まだ VS Code（または他のコードエディター）を持っていない場合は、[先にインストールしてから](https://code.visualstudio.com/)進めてください。
 
