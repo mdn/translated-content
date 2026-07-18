@@ -3,7 +3,7 @@ title: "CustomElementRegistry: define() メソッド"
 short-title: define()
 slug: Web/API/CustomElementRegistry/define
 l10n:
-  sourceCommit: 8a74d8feac267c1ddc37a4a8bc61e9aa8db75b12
+  sourceCommit: ff9dd829bb17d272b7d14c41a442f2c2e3680521
 ---
 
 {{APIRef("Web Components")}}
