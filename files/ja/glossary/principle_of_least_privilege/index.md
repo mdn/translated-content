@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 79f65d8322a4e55e9f3f4c91441c9188dbe670e0
 ---
 
-The principle of least privilege is a design consideration in computer security, according to which entities (including users, system processes, or programs) should be granted the minimum amount of access that they need in order to do their jobs.
+最小権限の原則とは、コンピューターセキュリティにおける設計原則のことで、ユーザーやシステムプロセス、プログラムなどには、それらの動作をするための最小限のアクセス権限が与えられるべきという考え方です。
 
 For example, in a software development team, all members might need the ability to write to the source code repository, but only a subset of the team might need the ability to alter the repository's security settings.
 
