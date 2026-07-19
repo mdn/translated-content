@@ -6,7 +6,7 @@ l10n:
   sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
 ---
 
-ブラウザーの開発者ツールのコンソールに、以下のメッセージのいずれかがログ出力されている場合は、[CSP](/en-US/docs/Web/HTTP/Guides/CSP) に関する問題が発生していることを示しています。
+ブラウザーの開発者ツールのコンソールに、以下のメッセージのいずれかがログ出力されている場合は、[CSP](/ja/docs/Web/HTTP/Guides/CSP) に関する問題が発生していることを示しています。
 
 - [The page's settings blocked the loading of a resource: %1$S](/ja/docs/Web/HTTP/Guides/CSP/Errors/CSPViolation)
 - The page's settings blocked the loading of a resource at %2$S ("%1$S").
