@@ -1,6 +1,6 @@
 ---
 title: WebDriver のエラー
-short-title: Errors
+short-title: エラー
 slug: Web/WebDriver/Reference/Errors
 original_slug: Web/WebDriver/Reference/Classic/Errors
 l10n:
