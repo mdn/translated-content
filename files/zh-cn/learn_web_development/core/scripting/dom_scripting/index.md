@@ -263,7 +263,59 @@ linkPara.parentNode.removeChild(linkPara);
 
 完成后的演示程序看起来有点像这样的：
 
-![购物清单的演示布局。标题是“my shopping list”，后面是“Enter a new item”，有一个输入字段和“add item”按钮。下面是已经添加的项目的列表，每个项目都有一个相应的删除按钮](shopping-list.png)
+```html hidden live-sample___dynamic-shopping-list
+<h1>My shopping list</h1>
+
+<form>
+  <label for="item">Enter a new item:</label>
+  <input type="text" name="item" id="item" />
+  <button>Add item</button>
+</form>
+
+<ul></ul>
+```
+
+```css hidden live-sample___dynamic-shopping-list
+li {
+  margin-bottom: 10px;
+}
+
+li button {
+  font-size: 12px;
+  margin-left: 20px;
+}
+```
+
+```js hidden live-sample___dynamic-shopping-list
+const list = document.querySelector("ul");
+const input = document.querySelector("input");
+const button = document.querySelector("button");
+
+button.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const myItem = input.value;
+  input.value = "";
+
+  const listItem = document.createElement("li");
+  const listText = document.createElement("span");
+  const listBtn = document.createElement("button");
+
+  listItem.appendChild(listText);
+  listText.textContent = myItem;
+  listItem.appendChild(listBtn);
+  listBtn.textContent = "Delete";
+  list.appendChild(listItem);
+
+  listBtn.addEventListener("click", () => {
+    list.removeChild(listItem);
+  });
+
+  input.focus();
+});
+```
+
+{{EmbedLiveSample("dynamic-shopping-list", "100%", 300)}}
 
 要完成实验，要按照下面的步骤，确保购物单的行为如上所述。
 
