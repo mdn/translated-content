@@ -267,9 +267,9 @@ linkPara.parentNode.removeChild(linkPara);
 <h1>我的购物清单</h1>
 
 <form>
-  <label for="item">输入一个新项目：</label>
+  <label for="item">输入一个新物品：</label>
   <input type="text" name="item" id="item" />
-  <button>添加项目</button>
+  <button>添加物品</button>
 </form>
 
 <ul></ul>
