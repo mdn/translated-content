@@ -175,7 +175,7 @@ sect.appendChild(linkPara);
 sect.removeChild(linkPara);
 ```
 
-要删除一个仅基于自身引用的节点可能稍微有点复杂，这也是很常见的。你可以使用 {{domxref("Element.remove()")}}：
+当你想仅通过节点自身的引用来删除它时，这也是很常见的。你可以使用 {{domxref("Element.remove()")}}：
 
 ```js
 linkPara.remove();
