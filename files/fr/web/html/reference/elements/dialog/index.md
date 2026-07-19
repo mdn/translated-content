@@ -3,7 +3,7 @@ title: "Élément HTML `<dialog>` : l'élément de boîte de dialogue"
 short-title: <dialog>
 slug: Web/HTML/Reference/Elements/dialog
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 4280928da7b326df9e358204a23df21b4668a29b
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<dialog>`** représente une boite de dialogue ou un composant interactif (par exemple un inspecteur ou une fenêtre).
@@ -19,7 +19,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Définit les types d'actions utilisateur·ice qui peuvent être utilisées pour fermer l'élément `<dialog>`. Cet attribut distingue trois méthodes de fermeture&nbsp;:
     - Une _action de rejet léger_, où le `<dialog>` est fermé lorsque l'utilisateur·ice clique ou appuie à l'extérieur de la boîte de dialogue. Cela équivaut au comportement [«&nbsp;rejet léger&nbsp;» des fenêtres contextuelles en état «&nbsp;auto&nbsp;»](/fr/docs/Web/API/Popover_API/Using#létat_automatique_et_la_fermeture_légère).
     - Une _action spécifique à la plateforme_, comme l'appui sur la touche <kbd>Échap</kbd> sur les plateformes de bureau, ou un geste «&nbsp;retour&nbsp;» ou «&nbsp;fermer&nbsp;» sur les plateformes mobiles.
-    - Un mécanisme défini par le·la développeur·euse, tel qu'un {{HTMLElement("button")}} avec un gestionnaire [`click`](/fr/docs/Web/API/Element/click_event) qui appelle {{DOMxRef("HTMLDialogElement.close()")}} ou la soumission d'un {{HTMLElement("form")}}.
+    - Un mécanisme défini par le·la développeur·euse, tel qu'un {{HTMLElement("button")}} avec un gestionnaire [`click`](/fr/docs/Web/API/Element/click_event) qui appelle {{DOMxRef("HTMLDialogElement.close()")}} ou l'envoi d'un {{HTMLElement("form")}}.
 
     Valeurs possibles&nbsp;:
     - `any`
@@ -35,27 +35,27 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 - `open`
   - : Indique que la boîte de dialogue est active et disponible pour l'interaction. Si l'attribut `open` n'est pas présent, la boîte de dialogue n'est pas visible pour l'utilisateur·ice.
-    Il est recommandé d'utiliser les méthodes `.show()` ou `.showModal()` pour afficher les dialogues, plutôt que l'attribut `open`. Si un `<dialog>` est ouvert avec l'attribut `open`, il est non-modal.
+    Il est recommandé d'utiliser les méthodes `.show()` ou `.showModal()` pour afficher les dialogues, plutôt que l'attribut `open`. Si un `<dialog>` est ouvert avec l'attribut `open`, il n'est pas bloquant.
 
     > [!NOTE]
-    > Bien qu'il soit possible d'alterner entre les états ouvert et fermé d'une boîte de dialogue non-modale en ajoutant ou retirant l'attribut `open`, cette approche n'est pas recommandée. Voir {{DOMxRef("HTMLDialogElement.open", "open")}} pour plus d'informations.
+    > Bien qu'il soit possible d'alterner entre les états ouvert et fermé d'une boîte de dialogue non bloquant en ajoutant ou retirant l'attribut `open`, cette approche n'est pas recommandée. Voir {{DOMxRef("HTMLDialogElement.open", "open")}} pour plus d'informations.
 
 ## Description
 
-L'élément HTML `<dialog>` est utilisé pour créer des boîtes de dialogue modale qui peuvent être interactives ou non. Les boîtes de dialogue modale interrompent l'interaction, le reste de la page étant inerte, tandis que les boîtes de dialogue non-modale permettent une interaction avec le reste de la page.
+L'élément HTML `<dialog>` est utilisé pour créer des boîtes de dialogue bloquantes qui peuvent être interactives ou non. Les boîtes de dialogue bloquantes interrompent l'interaction, le reste de la page étant inerte, tandis que les boîtes de dialogue non bloquantes permettent une interaction avec le reste de la page.
 
 ### Contrôler les dialogues avec JavaScript
 
-JavaScript peut être utilisé pour afficher l'élément `<dialog>`. L'utilisation de la méthode {{DOMxRef("HTMLDialogElement.showModal()", ".showModal()")}} pour afficher une boîte de dialogue modale et la méthode {{DOMxRef("HTMLDialogElement.show()", ".show()")}} pour afficher une boîte de dialogue non-modale. La boîte de dialogue peut être fermée à l'aide de la méthode {{DOMxRef("HTMLDialogElement.close()", ".close()")}} ou en utilisant la méthode [`dialog`](/fr/docs/Web/HTML/Reference/Elements/form#method) lors de la soumission d'un formulaire `<form>` imbriqué dans l'élément `<dialog>`. Les boîtes de dialogue modales peuvent également être fermées en appuyant sur la touche <kbd>Échap</kbd>.
+JavaScript peut être utilisé pour afficher l'élément `<dialog>`. L'utilisation de la méthode {{DOMxRef("HTMLDialogElement.showModal()", ".showModal()")}} pour afficher une boîte de dialogue bloquante et la méthode {{DOMxRef("HTMLDialogElement.show()", ".show()")}} pour afficher une boîte de dialogue non bloquante. La boîte de dialogue peut être fermée à l'aide de la méthode {{DOMxRef("HTMLDialogElement.close()", ".close()")}} ou en utilisant la méthode [`dialog`](/fr/docs/Web/HTML/Reference/Elements/form#method) lors de l'envoi d'un formulaire `<form>` imbriqué dans l'élément `<dialog>`. Les boîtes de dialogue bloquantes peuvent également être fermées en appuyant sur la touche <kbd>Échap</kbd>.
 
-### Boîtes de dialogue modales utilisant les commandes d'invocation
+### Boîtes de dialogue bloquantes utilisant les commandes d'invocation
 
-Les boîtes de dialogue modales peuvent être ouvertes et fermées de façon déclarative à l'aide des attributs HTML de [l'API des commandes d'invocation](/fr/docs/Web/API/Invoker_Commands_API) HTML attributes [`commandfor`](/fr/docs/Web/HTML/Reference/Elements/button#commandfor) et [`command`](/fr/docs/Web/HTML/Reference/Elements/button#command), qui peuvent être définis sur les éléments {{HTMLElement("button")}}.
+Les boîtes de dialogue bloquantes peuvent être ouvertes et fermées de façon déclarative à l'aide des attributs HTML de [l'API des commandes d'invocation](/fr/docs/Web/API/Invoker_Commands_API) HTML attributes [`commandfor`](/fr/docs/Web/HTML/Reference/Elements/button#commandfor) et [`command`](/fr/docs/Web/HTML/Reference/Elements/button#command), qui peuvent être définis sur les éléments {{HTMLElement("button")}}.
 
 L'attribut `command` définit la commande particulière qui doit être envoyée lorsque l'élément `<button>` est cliqué, tandis que `commandfor` définit un `id` pour la boîte de dialogue cible.
 Les commandes qui peuvent être envoyées pour les boîtes de dialogue sont [`"show-modal"`](/fr/docs/Web/HTML/Reference/Elements/button#show-modal), [`"close"`](/fr/docs/Web/HTML/Reference/Elements/button#close) et [`"request-close"`](/fr/docs/Web/HTML/Reference/Elements/button#request-close).
 
-L'exemple HTML ci-dessous montre comment appliquer les attributs à un élément `<button>` afin qu'il puisse être pressé pour ouvrir une boîte de dialogue modale `<dialog>` avec un `id` de `"mon-dialogue"`.
+L'exemple HTML ci-dessous montre comment appliquer les attributs à un élément `<button>` afin qu'il puisse être pressé pour ouvrir une boîte de dialogue bloquante `<dialog>` avec un `id` de `"mon-dialogue"`.
 
 ```html
 <button command="show-modal" commandfor="mon-dialogue">
@@ -70,15 +70,15 @@ L'exemple HTML ci-dessous montre comment appliquer les attributs à un élément
 </dialog>
 ```
 
-### Boîtes de dialogue non-modales utilisant les commandes de la fenêtre contextuelle
+### Boîtes de dialogue non bloquantes utilisant les commandes de la fenêtre contextuelle
 
-Les boîtes de dialogue non-modales peuvent être ouvertes, fermées et basculées de façon déclarative à l'aide de [l'API Popover](/fr/docs/Web/API/Popover_API) et des attributs HTML [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget) et [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/button#popovertargetaction), qui peuvent être définis sur les éléments {{HTMLElement("button")}} et {{HTMLElement("input")}}.
+Les boîtes de dialogue non bloquantes peuvent être ouvertes, fermées et basculées de façon déclarative à l'aide de [l'API Popover](/fr/docs/Web/API/Popover_API) et des attributs HTML [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget) et [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/button#popovertargetaction), qui peuvent être définis sur les éléments {{HTMLElement("button")}} et {{HTMLElement("input")}}.
 
 L'élément `<dialog>` doit être transformé en fenêtre contextuelle en ajoutant l'attribut `popover`.
-Vous pouvez ensuite utiliser `popovertarget` sur un bouton/une entrée pour indiquer la cible de la fenêtre contextuelle, et `popovertargetaction` pour spécifier l'action à effectuer lorsque le bouton est cliqué.
-Notez que, puisque le dialogue est une fenêtre contextuelle, il sera non-modal, vous pouvez donc le fermer en cliquant à l'extérieur du dialogue.
+Vous pouvez ensuite utiliser `popovertarget` sur un bouton/une entrée pour indiquer la cible de la fenêtre contextuelle, et `popovertargetaction` pour définir l'action à effectuer lorsque le bouton est cliqué.
+Notez que, puisque le dialogue est une fenêtre contextuelle, il est non bloquant, vous pouvez donc le fermer en cliquant à l'extérieur du dialogue.
 
-Le HTML ci-dessous montre comment appliquer les attributs à un élément `<button>` afin qu'il puisse être pressé pour afficher et masquer un `<dialog>` non-modale avec un `id` de `"mon-dialogue"`.
+Le HTML ci-dessous montre comment appliquer les attributs à un élément `<button>` afin qu'il puisse être pressé pour afficher et masquer un `<dialog>` non bloquant avec un `id` de `"mon-dialogue"`.
 
 ```html
 <button popovertarget="mon-dialogue">Ouvrir la boîte de dialogue</button>
@@ -91,7 +91,7 @@ Le HTML ci-dessous montre comment appliquer les attributs à un élément `<butt
 </dialog>
 ```
 
-L'API Popover fournit également des propriétés pouvant être utilisées pour obtenir et définir l'état en JavaScript.
+L'API `Popover` fournit également des propriétés pouvant être utilisées pour obtenir et définir l'état en JavaScript.
 
 ### Fermer les boîtes de dialogue
 
@@ -99,22 +99,22 @@ Il est important de prévoir un mécanisme de fermeture pour chaque élément `<
 
 Il existe de nombreuses façons de fermer une boîte de dialogue&nbsp;:
 
-- Soumettre le formulaire contenu dans l'élément `<dialog>` avec `method="dialog"` défini sur l'élément `<form>` (voir [l'exemple Utiliser l'attribut `open` du dialogue](#utiliser_lattribut_open_du_dialogue)).
+- Envoyer le formulaire contenu dans l'élément `<dialog>` avec `method="dialog"` défini sur l'élément `<form>` (voir [l'exemple Utiliser l'attribut `open` du dialogue](#utiliser_lattribut_open_du_dialogue)).
 - Cliquer à l'extérieur de la zone de dialogue lorsque le «&nbsp;rejet léger&nbsp;» est activé (voir [les attributs HTML de l'API de la fenêtre contextuelle](#attributs_html_de_lapi_popover)).
 - Appuyer sur la touche <kbd>Échap</kbd>, dans les dialogues où ce comportement est activé (voir [les attributs HTML de l'API de la fenêtre contextuelle](#attributs_html_de_lapi_popover)).
-- Appeler la méthode {{DOMxRef("HTMLDialogElement.close()")}} (voir [l'exemple de boîte de dialogue modale](#création_dune_boîte_de_dialogue_modale)).
+- Appeler la méthode {{DOMxRef("HTMLDialogElement.close()")}} (voir [l'exemple de boîte de dialogue bloquante](#création_dune_boîte_de_dialogue_modale)).
 
 ### Mise en forme CSS
 
 Un `<dialog>` peut être sélectionné en utilisant son nom d'élément (comme tout autre élément), et vous pouvez également faire correspondre son état en utilisant des pseudo-classes telles que {{CSSxRef(":modal")}} et {{CSSxRef(":open")}}.
 
-Le pseudo-élément CSS {{CSSxRef("::backdrop")}} peut être utilisé pour créer un style derrière un élément `<dialog>` lorsque le dialogue est affiché avec {{DOMxRef("HTMLDialogElement.showModal()")}}. Par exemple, pour atténuer le contenu inaccessible derrière la boîte de dialogue modale.
+Le pseudo-élément CSS {{CSSxRef("::backdrop")}} peut être utilisé pour créer un style derrière un élément `<dialog>` lorsque le dialogue est affiché avec {{DOMxRef("HTMLDialogElement.showModal()")}}. Par exemple, pour atténuer le contenu inaccessible derrière la boîte de dialogue bloquante.
 
 ## Notes additionnelles
 
-- Les éléments {{HTMLElement("form")}} peuvent fermer un dialogue s'ils possèdent l'attribut `method="dialog"` ou si le bouton utilisé pour soumettre le formulaire a l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Reference/Elements/input#formmethod). Lorsqu'un tel formulaire est soumis, le dialogue se ferme avec sa propriété [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) définie sur la `value` (valeur) du bouton qui a été utilisé pour soumettre le formulaire.
-- L'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) peut être ajouté à l'élément avec lequel la personne est censée interagir immédiatement après l'ouverture d'une boîte de dialogue modale. S'il n'y a pas d'élément impliquant une interaction immédiate, l'attribut `autofocus` peut être ajouté à l'élément `<dialog>` lui-même.
-- Ne pas ajouter l'attribut `tabindex` à l'élément `<dialog>` car il n'est pas interactif et ne reçoit pas la sélection. Le contenu du dialogue, y compris le bouton de fermeture contenu dans le dialogue, peut recevoir la sélection et être interactif.
+- Les éléments {{HTMLElement("form")}} peuvent fermer un dialogue s'ils possèdent l'attribut `method="dialog"` ou si le bouton utilisé pour envoyer le formulaire a l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Reference/Elements/input#formmethod). Lorsqu'un tel formulaire est envoyé, le dialogue se ferme avec sa propriété [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) définie sur la `value` (valeur) du bouton qui a été utilisé pour envoyer le formulaire.
+- L'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) peut être ajouté à l'élément avec lequel la personne est censée interagir immédiatement après l'ouverture d'une boîte de dialogue bloquante. S'il n'y a pas d'élément impliquant une interaction immédiate, l'attribut `autofocus` peut être ajouté à l'élément `<dialog>` lui-même.
+- Ne pas ajouter l'attribut `tabindex` à l'élément `<dialog>`, car il n'est pas interactif et ne reçoit pas la sélection. Le contenu du dialogue, y compris le bouton de fermeture contenu dans le dialogue, peut recevoir la sélection et être interactif.
 
 ## Accessibilité
 
@@ -122,7 +122,7 @@ Lors de l'implémentation d'une fenêtre de dialogue, il est important de consid
 
 Veillez à ce qu'un mécanisme soit prévu pour permettre de fermer la boîte de dialogue. La meilleure façon de s'assurer que toutes les personnes peuvent fermer la boîte de dialogue est d'inclure un bouton explicite à cet effet, tel qu'un bouton de confirmation, d'annulation ou de fermeture.
 
-Par défaut, une boîte de dialogue invoquée par la méthode `showModal()` peut être fermée en appuyant sur la touche <kbd>Échap</kbd>. Une boîte de dialogue non-modale ne se ferme pas par la touche <kbd>Échap</kbd> par défaut, et selon ce que représente la boîte de dialogue non-modale, ce comportement n'est peut-être pas souhaitable. Les utilisateur·ice·s de clavier s'attendent à ce que la touche <kbd>Échap</kbd> ferme les boîtes de dialogue modales&nbsp;; veillez à ce que ce comportement soit implémenté et maintenu. Si plusieurs boîtes de dialogue modales sont ouvertes, l'appui sur la touche <kbd>Échap</kbd> ne doit fermer que la dernière boîte de dialogue affichée. Lorsque l'on utilise `<dialog>`, ce comportement est fourni par le navigateur.
+Par défaut, une boîte de dialogue invoquée par la méthode `showModal()` peut être fermée en appuyant sur la touche <kbd>Échap</kbd>. Une boîte de dialogue non bloquante ne se ferme pas par la touche <kbd>Échap</kbd> par défaut, et selon ce que représente la boîte de dialogue non bloquante, ce comportement n'est peut-être pas souhaitable. Les utilisateur·ice·s de clavier s'attendent à ce que la touche <kbd>Échap</kbd> ferme les boîtes de dialogue bloquante&nbsp;; veillez à ce que ce comportement soit implémenté et maintenu. Si plusieurs boîtes de dialogue bloquantes sont ouvertes, l'appui sur la touche <kbd>Échap</kbd> ne doit fermer que la dernière boîte de dialogue affichée. Lorsque l'on utilise `<dialog>`, ce comportement est fourni par le navigateur.
 
 Bien que les boîtes de dialogue puissent être créées à l'aide d'autres éléments, l'élément natif `<dialog>` offre des caractéristiques d'utilisation et d'accessibilité qui doivent être reproduites si vous utilisez d'autres éléments dans un but similaire. Si vous créez une implémentation de dialogue personnalisée, assurez-vous que tous les comportements par défaut attendus sont pris en charge et que les recommandations d'étiquetage appropriées sont suivies.
 
@@ -130,7 +130,7 @@ L'élément `<dialog>` est exposé par les navigateurs d'une manière similaire 
 
 ## Exemples
 
-### Attributs HTML de l'API Invoker Command
+### Attributs HTML de l'API `Invoker Command`
 
 Cet exemple montre comment vous pouvez ouvrir et fermer une boîte de dialogue modale en utilisant les attributs HTML [`commandfor`](/fr/docs/Web/HTML/Reference/Elements/button#commandfor) et [`command`](/fr/docs/Web/HTML/Reference/Elements/button#command) de [l'API Invoker Commands](/fr/docs/Web/API/Invoker_Commands_API).
 
@@ -153,18 +153,18 @@ Ensuite, nous déclarons un élément `<dialog>` qui contient un `<button>` «&n
 Ouvrez le dialogue en appuyant sur le bouton «&nbsp;Ouvrir le dialogue&nbsp;».
 Vous pouvez fermer le dialogue en sélectionnant le bouton «&nbsp;Fermer&nbsp;» ou en appuyant sur la touche <kbd>Échap</kbd>.
 
-{{EmbedLiveSample("Attributs HTML de l'API Invoker Command", "100%", 200)}}
+{{EmbedLiveSample("Attributs HTML de l'API `Invoker Command`", "100%", 200)}}
 
-### Attributs HTML de l'API Popover
+### Attributs HTML de l'API `Popover`
 
-Cet exemple montre comment vous pouvez ouvrir et fermer un dialogue non modal en utilisant les attributs HTML [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover), [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget) et [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/button#popovertargetaction) de [l'API Popover](/fr/docs/Web/API/Popover_API).
+Cet exemple montre comment vous pouvez ouvrir et fermer un dialogue non bloquant en utilisant les attributs HTML [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover), [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget) et [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/button#popovertargetaction) de [l'API Popover](/fr/docs/Web/API/Popover_API).
 
-Un `<dialog>` est transformé en popover en ajoutant l'attribut `popover`.
+Un `<dialog>` est transformé en fenêtre contextuelle en ajoutant l'attribut `popover`.
 Comme nous n'avons pas défini de valeur pour l'attribut, la valeur par défaut `"auto"` est utilisée.
 Ça permet un comportement de «&nbsp;fermeture légère&nbsp;», permettant de fermer le dialogue en cliquant en dehors du dialogue ou en appuyant sur la touche <kbd>Échap</kbd>.
-Nous aurions pu à la place définir `popover="manual"` pour désactiver le comportement de «&nbsp;fermeture légère&nbsp;», auquel cas le dialogue devrait être fermé en utilisant le bouton «&nbsp;Fermer&nbsp;».
+Nous aurions pu à la place définir `popover="manual"` pour désactiver le comportement de «&nbsp;fermeture légère&nbsp;», auquel cas le dialogue doit être fermé en utilisant le bouton «&nbsp;Fermer&nbsp;».
 
-On notera que nous n'avons pas défini l'attribut `popovertargetaction` pour le `<button>` qui ouvre le dialogue.
+Notez que nous n'avons pas défini l'attribut `popovertargetaction` pour le `<button>` qui ouvre le dialogue.
 Il n'est pas nécessaire dans ce cas, car sa valeur par défaut est `toggle`, ce qui permet de basculer le dialogue entre ses états ouvert et fermé lorsque le bouton est cliqué.
 
 ```html
@@ -182,15 +182,15 @@ Il n'est pas nécessaire dans ce cas, car sa valeur par défaut est `toggle`, ce
 
 Ouvrez le dialogue en appuyant sur le bouton «&nbsp;Ouvrir le dialogue&nbsp;».
 Vous pouvez fermer le dialogue en sélectionnant le bouton «&nbsp;Fermer&nbsp;» ou en appuyant sur la touche <kbd>Échap</kbd>.
-Vous pouvez également le fermer en cliquant en dehors du dialogue, car il est non-modal.
+Vous pouvez également le fermer en cliquant en dehors du dialogue, car il est non bloquant.
 
-{{EmbedLiveSample("Attributs HTML de l'API Popover", "100%", 200)}}
+{{EmbedLiveSample("Attributs HTML de l'API `Popover`", "100%", 200)}}
 
 ### Utiliser l'attribut `open` du dialogue
 
-Cet exemple montre comment vous pouvez définir l'attribut booléen `open` sur un élément `<dialog>`, afin de créer un dialogue non modal uniquement en HTML qui est déjà ouvert lorsque la page se charge.
+Cet exemple montre comment vous pouvez définir l'attribut booléen `open` sur un élément `<dialog>`, afin de créer un dialogue non bloquant uniquement en HTML qui est déjà ouvert lorsque la page se charge.
 
-Le dialogue peut être fermé en cliquant sur le bouton «&nbsp;OK&nbsp;» car l'attribut `method` dans l'élément `<form>` est défini sur `"dialog"`.
+Le dialogue peut être fermé en cliquant sur le bouton «&nbsp;OK&nbsp;», car l'attribut `method` dans l'élément `<form>` est défini sur `"dialog"`.
 Dans ce cas, aucun JavaScript n'est nécessaire pour fermer le formulaire.
 
 ```html
@@ -204,7 +204,7 @@ Dans ce cas, aucun JavaScript n'est nécessaire pour fermer le formulaire.
 
 #### Résultat
 
-Cette boîte de dialogue est initialement ouverte et non-modale en raison de la présence de l'attribut `open`.
+Cette boîte de dialogue est initialement ouverte et non bloquante en raison de la présence de l'attribut `open`.
 Après avoir cliqué sur «&nbsp;OK&nbsp;», la boîte de dialogue est fermée, laissant le cadre de résultat vide.
 
 {{EmbedLiveSample("Dialogue uniquement en HTML", "100%", 200)}}
@@ -212,12 +212,12 @@ Après avoir cliqué sur «&nbsp;OK&nbsp;», la boîte de dialogue est fermée, 
 > [!NOTE]
 > Rechargez la page pour réinitialiser le résultat.
 
-Lorsque la boîte de dialogue est fermée, aucune méthode n'est prévue pour la rouvrir. C'est pourquoi la méthode préférée pour afficher les boîtes de dialogue non-modales consiste à utiliser la méthode {{DOMxRef("HTMLDialogElement.show()")}}.
+Lorsque la boîte de dialogue est fermée, aucune méthode n'est prévue pour la rouvrir. C'est pourquoi la méthode préférée pour afficher les boîtes de dialogue non bloquantes consiste à utiliser la méthode {{DOMxRef("HTMLDialogElement.show()")}}.
 Il est possible de basculer l'affichage de la boîte de dialogue en ajoutant ou en retirant l'attribut booléen `open`, mais ce n'est pas la pratique recommandée.
 
-### Création d'une boîte de dialogue modale
+### Création d'une boîte de dialogue bloquante
 
-Cet exemple montre une boîte de dialogue modale avec un [arrière-plan en dégradé](/fr/docs/Web/CSS/Reference/Values/gradient). La méthode `.showModal()` ouvre la boîte de dialogue modale lorsque le bouton «&nbsp;Afficher la fenêtre&nbsp;» est activé. La boîte de dialogue peut être fermée en appuyant sur la touche <kbd>Échap</kbd> ou avec la méthode `close()` lorsque le bouton «&nbsp;Fermer&nbsp;» de la boîte de dialogue est activé.
+Cet exemple montre une boîte de dialogue bloquante avec un [arrière-plan en dégradé](/fr/docs/Web/CSS/Reference/Values/gradient). La méthode `.showModal()` ouvre la boîte de dialogue bloquante lorsque le bouton «&nbsp;Afficher la fenêtre&nbsp;» est activé. La boîte de dialogue peut être fermée en appuyant sur la touche <kbd>Échap</kbd> ou avec la méthode `close()` lorsque le bouton «&nbsp;Fermer&nbsp;» de la boîte de dialogue est activé.
 
 Lorsqu'une boîte de dialogue s'ouvre, le navigateur donne, par défaut, la sélection au premier élément pouvant la recevoir dans la boîte de dialogue. Dans cet exemple, l'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) est appliqué au bouton «&nbsp;Fermer&nbsp;», lui donnant la sélection à l'ouverture de la boîte de dialogue, car c'est l'élément avec lequel nous nous attendons à ce que la personne interagisse immédiatement après l'ouverture.
 
@@ -226,14 +226,14 @@ Lorsqu'une boîte de dialogue s'ouvre, le navigateur donne, par défaut, la sél
 ```html
 <dialog>
   <button autofocus>Fermer</button>
-  <p>Cette boîte de dialogue modale a un arrière-plan festif&nbsp;!</p>
+  <p>Cette boîte de dialogue bloquante a un arrière-plan festif&nbsp;!</p>
 </dialog>
 <button>Afficher la fenêtre</button>
 ```
 
 #### CSS
 
-Nous pouvons styliser l'arrière-plan du dialogue en utilisant le pseudo-élément {{CSSxRef("::backdrop")}}.
+Nous pouvons mettre en forme l'arrière-plan du dialogue en utilisant le pseudo-élément CSS {{CSSxRef("::backdrop")}}.
 
 ```css
 ::backdrop {
@@ -250,7 +250,7 @@ Nous pouvons styliser l'arrière-plan du dialogue en utilisant le pseudo-éléme
 
 #### JavaScript
 
-Le dialogue est ouvert de façon modale en utilisant la méthode `.showModal()` et fermé en utilisant la méthode `.close()`.
+Le dialogue est ouvert de façon bloquante en utilisant la méthode `.showModal()` et fermé en utilisant la méthode `.close()`.
 
 ```js
 const dialog = document.querySelector("dialog");
@@ -270,22 +270,22 @@ closeButton.addEventListener("click", () => {
 
 #### Résultat
 
-{{EmbedLiveSample("Création d'une boîte de dialogue modale", "100%", 200)}}
+{{EmbedLiveSample("Création d'une boîte de dialogue bloquante", "100%", 200)}}
 
-Lorsque la boîte de dialogue modale est affichée, elle apparaît au-dessus de toutes les autres boîtes de dialogue éventuellement présentes. Tout ce qui se trouve en dehors de la boîte de dialogue modale est inerte et les interactions en dehors de cette dernière sont bloquées. Remarquez que lorsque la boîte de dialogue est ouverte, à l'exception d'elle-même, il n'est pas possible d'interagir avec le document&nbsp;; le bouton «&nbsp;Afficher la fenêtre&nbsp;» est en grande partie masqué par l'arrière-plan presque opaque de la boîte de dialogue et est inerte.
+Lorsque la boîte de dialogue bloquante est affichée, elle apparaît au-dessus de toutes les autres boîtes de dialogue éventuellement présentes. Tout ce qui se trouve en dehors de la boîte de dialogue bloquante est inerte et les interactions en dehors de cette dernière sont bloquées. Remarquez que lorsque la boîte de dialogue est ouverte, à l'exception d'elle-même, il n'est pas possible d'interagir avec le document&nbsp;; le bouton «&nbsp;Afficher la fenêtre&nbsp;» est en grande partie masqué par l'arrière-plan presque opaque de la boîte de dialogue et est inerte.
 
 ### Traitement de la valeur de retour d'une boîte de dialogue
 
-Cet exemple illustre la propriété [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) de l'élément `<dialog>` et la fermeture d'une boîte de dialogue modale à l'aide d'un formulaire. Par défaut, la valeur de retour est la chaîne vide ou la valeur du bouton qui soumet le formulaire dans l'élément `<dialog>`, s'il y en a un.
+Cet exemple illustre la propriété [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) de l'élément `<dialog>` et la fermeture d'une boîte de dialogue bloquante à l'aide d'un formulaire. Par défaut, la valeur de retour est la chaîne de caractères vide ou la valeur du bouton qui envoie le formulaire dans l'élément `<dialog>`, s'il y en a un.
 
-Cet exemple ouvre une boîte de dialogue modale lorsque le bouton «&nbsp;Afficher la fenêtre&nbsp;» est activé. La boîte de dialogue contient un formulaire avec un {{HTMLElement("select")}} et deux {{HTMLElement("button")}}, dont la valeur par défaut est `type="submit"`. Un écouteur d'évènement met à jour la valeur du bouton «&nbsp;Confirmer&nbsp;» lorsque l'option sélectionnée change. Si le bouton «&nbsp;Confirmer&nbsp;» est activé pour fermer la boîte de dialogue, la valeur actuelle du bouton est la valeur de retour. Si la boîte de dialogue est fermée en appuyant sur le bouton «&nbsp;Annuler&nbsp;», la valeur de retour `returnValue` est `cancel`.
+Cet exemple ouvre une boîte de dialogue bloquante lorsque le bouton «&nbsp;Afficher la fenêtre&nbsp;» est activé. La boîte de dialogue contient un formulaire avec un {{HTMLElement("select")}} et deux {{HTMLElement("button")}}, dont la valeur par défaut est `type="submit"`. Un écouteur d'évènement met à jour la valeur du bouton «&nbsp;Confirmer&nbsp;» lorsque l'option sélectionnée change. Si le bouton «&nbsp;Confirmer&nbsp;» est activé pour fermer la boîte de dialogue, la valeur actuelle du bouton est la valeur de retour. Si la boîte de dialogue est fermée en appuyant sur le bouton «&nbsp;Annuler&nbsp;», la valeur de retour `returnValue` est `cancel`.
 
 Lorsque le dialogue est fermé, la valeur de retour est affichée sous le bouton «&nbsp;Afficher la fenêtre&nbsp;». Si le dialogue est fermé en appuyant sur la touche <kbd>Échap</kbd>, la valeur de retour `returnValue` n'est pas mise à jour et l'évènement `close` ne se produit pas, ce qui signifie que le texte dans l'élément {{HTMLElement("output")}} n'est pas mis à jour.
 
 #### HTML
 
 ```html
-<!-- Boîte de dialogue modale contenant un formulaire -->
+<!-- Boîte de dialogue bloquante contenant un formulaire -->
 <dialog id="favDialog">
   <form>
     <p>
@@ -316,9 +316,9 @@ Lorsque le dialogue est fermé, la valeur de retour est affichée sous le bouton
 Le dialogue est ouvert grâce à un écouteur d'évènement sur le bouton «&nbsp;Afficher la fenêtre&nbsp;», qui appelle {{DOMxRef("HTMLDialogElement.showModal()")}} lorsque le bouton est activé.
 
 Le dialogue se ferme lorsque le bouton «&nbsp;Annuler&nbsp;» est activé, car le `<button>` comprend l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Reference/Elements/input/submit#formmethod).
-Lorsque la méthode d'un formulaire est [`dialog`](#notes_additionnelles), l'état du formulaire est enregistré mais non soumis, et le dialogue est fermé (l'attribut remplace la méthode par défaut {{HTTPMethod("GET")}} de l'élément {{HTMLElement("form")}}).
-Sans `action`, la soumission du formulaire avec la méthode par défaut {{HTTPMethod("GET")}} entraîne le rechargement de la page.
-Nous utilisons JavaScript pour empêcher la soumission et fermer le dialogue avec les méthodes {{DOMxRef("event.preventDefault()")}} et {{DOMxRef("HTMLDialogElement.close()")}}, respectivement.
+Lorsque la méthode d'un formulaire est [`dialog`](#notes_additionnelles), l'état du formulaire est enregistré mais non envoyé, et le dialogue est fermé (l'attribut remplace la méthode par défaut {{HTTPMethod("GET")}} de l'élément {{HTMLElement("form")}}).
+Sans `action`, l'envoi du formulaire avec la méthode par défaut {{HTTPMethod("GET")}} entraîne le rechargement de la page.
+Nous utilisons JavaScript pour empêcher l'envoi et fermer le dialogue avec les méthodes {{DOMxRef("event.preventDefault()")}} et {{DOMxRef("HTMLDialogElement.close()")}}, respectivement.
 
 ```js
 const showButton = document.getElementById("showDialog");
@@ -327,12 +327,12 @@ const outputBox = document.querySelector("output");
 const selectEl = favDialog.querySelector("select");
 const confirmBtn = favDialog.querySelector("#confirmBtn");
 
-// Le bouton "Afficher la fenêtre" ouvre la boîte de dialogue modale
+// Le bouton "Afficher la fenêtre" ouvre la boîte de dialogue bloquante
 showButton.addEventListener("click", () => {
   favDialog.showModal();
 });
 
-// Le bouton "Annuler" ferme la boîte de dialogue sans soumettre le formulaire grâce à [formmethod="dialog"], ce qui déclenche un évènement de fermeture.
+// Le bouton "Annuler" ferme la boîte de dialogue sans envoi du formulaire grâce à [formmethod="dialog"], ce qui déclenche un évènement de fermeture.
 favDialog.addEventListener("close", (e) => {
   outputBox.value =
     favDialog.returnValue === "default"
@@ -340,9 +340,9 @@ favDialog.addEventListener("close", (e) => {
       : `Valeur retournée : ${favDialog.returnValue}.`; // Vérifie la présence de "default" au lieu d'une chaîne vide
 });
 
-// Empêche le bouton "Confirmer" de soumettre le formulaire par défaut et ferme la boîte de dialogue avec la méthode `close()`, ce qui déclenche l'évènement "close".
+// Empêche le bouton "Confirmer" d'envoyer le formulaire par défaut et ferme la boîte de dialogue avec la méthode `close()`, ce qui déclenche l'évènement "close".
 confirmBtn.addEventListener("click", (event) => {
-  event.preventDefault(); // Nous ne voulons pas soumettre ce faux formulaire
+  event.preventDefault(); // Nous ne voulons pas envoyer ce faux formulaire
   favDialog.close(selectEl.value); // Il faut envoyer la valeur du sélecteur ici.
 });
 ```
@@ -353,7 +353,7 @@ confirmBtn.addEventListener("click", (event) => {
 
 ### Fermer un dialogue contenant un champ requis
 
-Lorsqu'un formulaire à l'intérieur d'un dialogue contient un champ requis, l'agent utilisateur n'autorisera la fermeture du dialogue que si une valeur est fournie pour ce champ requis. Pour fermer un tel dialogue, utilisez soit l'attribut [`formnovalidate`](/fr/docs/Web/HTML/Reference/Elements/input#formnovalidate) sur le bouton de fermeture, soit appelez la méthode `close()` sur l'objet dialogue lorsque le bouton de fermeture est cliqué.
+Lorsqu'un formulaire à l'intérieur d'un dialogue contient un champ requis, l'agent utilisateur n'autorise la fermeture du dialogue que si une valeur est fournie pour ce champ requis. Pour fermer un tel dialogue, utilisez soit l'attribut [`formnovalidate`](/fr/docs/Web/HTML/Reference/Elements/input#formnovalidate) sur le bouton de fermeture, soit appelez la méthode `close()` sur l'objet dialogue lorsque le bouton de fermeture est cliqué.
 
 ```html
 <dialog id="dialog">
@@ -525,12 +525,12 @@ Essayez de cliquer sur chaque bouton pour ouvrir un dialogue. Le premier ne peut
 
 ### Animation des boîtes de dialogue
 
-Les éléments `<dialog>` sont réglés sur [`display: none;`](/fr/docs/Web/CSS/Reference/Properties/display) lorsqu'ils sont masqués et sur `display: block;` lorsqu'ils sont affichés, et sont retirés / ajoutés de la {{Glossary("top layer", "couche supérieure")}} ainsi que de l'[arbre d'accessibilité](/fr/docs/Web/Performance/Guides/How_browsers_work#construction_de_larbre_daccessibilité). Par conséquent, pour pouvoir animer les éléments `<dialog>`, la propriété {{CSSxRef("display")}} doit être animable. Les [navigateurs compatibles](/fr/docs/Web/CSS/Reference/Properties/display#compatibilité_des_navigateurs) animent la propriété `display` avec une variation du [type d'animation discrète](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties#discrète). Concrètement, le navigateur basculera entre `none` et une autre valeur de `display` afin que le contenu animé soit visible pendant toute la durée de l'animation.
+Les éléments `<dialog>` sont réglés sur [`display: none;`](/fr/docs/Web/CSS/Reference/Properties/display) lorsqu'ils sont masqués et sur `display: block;` lorsqu'ils sont affichés, et sont retirés / ajoutés de la {{Glossary("top layer", "couche supérieure")}} ainsi que de [l'arbre d'accessibilité](/fr/docs/Web/Performance/Guides/How_browsers_work#construction_de_larbre_daccessibilité). Par conséquent, pour pouvoir animer les éléments `<dialog>`, la propriété {{CSSxRef("display")}} doit pouvoir être animée. Les [navigateurs compatibles](/fr/docs/Web/CSS/Reference/Properties/display#compatibilité_des_navigateurs) animent la propriété `display` avec une variation du [type d'animation discrète](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties#discrète). Concrètement, le navigateur bascule entre `none` et une autre valeur de `display` afin que le contenu animé soit visible pendant toute la durée de l'animation.
 
 Par exemple&nbsp;:
 
-- Lorsqu'on anime `display` de `none` à `block` (ou vers une autre valeur visible de `display`), la valeur basculera en `block` à `0%` de la durée de l'animation pour être visible pendant toute la durée.
-- Lorsqu'on anime `display` de `block` (ou d'une autre valeur visible) vers `none`, la valeur basculera en `none` à `100%` de la durée de l'animation pour rester visible pendant toute la durée.
+- Lorsqu'on anime `display` de `none` à `block` (ou vers une autre valeur visible de `display`), la valeur bascule en `block` à `0%` de la durée de l'animation pour être visible pendant toute la durée.
+- Lorsqu'on anime `display` de `block` (ou d'une autre valeur visible) vers `none`, la valeur bascule en `none` à `100%` de la durée de l'animation pour rester visible pendant toute la durée.
 
 > [!NOTE]
 > Lorsqu'on anime en utilisant des [transitions CSS](/fr/docs/Web/CSS/Guides/Transitions), il est nécessaire de définir [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/Reference/Properties/transition-behavior) pour activer le comportement décrit ci‑dessus. Ce comportement est disponible par défaut lors de l'utilisation des [animations CSS](/fr/docs/Web/CSS/Guides/Animations)&nbsp;; une étape équivalente n'est pas requise.
@@ -546,7 +546,7 @@ Lorsqu'on anime des éléments `<dialog>` à l'aide de transitions CSS, les fonc
 - la propriété {{CSSxRef("overlay")}}
   - : Incluez `overlay` dans la liste des transitions pour que le retrait du `<dialog>` de la couche supérieure soit différé jusqu'à la fin de la transition, assurant ainsi la visibilité de la transition.
 - la propriété {{CSSxRef("transition-behavior")}}
-  - : Définissez `transition-behavior: allow-discrete` sur les transitions `display` et `overlay` (ou avec le raccourci {{CSSxRef("transition")}}) pour permettre des transitions discrètes sur ces deux propriétés qui ne sont pas animables par défaut.
+  - : Définissez `transition-behavior: allow-discrete` sur les transitions `display` et `overlay` (ou avec le raccourci {{CSSxRef("transition")}}) pour permettre des transitions discrètes sur ces deux propriétés qui ne sont pas animées par défaut.
 
 Voici un exemple rapide pour illustrer.
 
@@ -590,8 +590,8 @@ dialog {
 }
 
 /* État avant ouverture */
-/* Doit se trouver après la règle dialog:open précédente pour prendre effet,
-    car la spécificité est la même */
+/* Doit se trouver après la règle dialog:open précédente pour prendre
+   effet, car la spécificité est la même */
 @starting-style {
   dialog:open {
     opacity: 0;
@@ -599,7 +599,7 @@ dialog {
   }
 }
 
-/* Transition du ::backdrop lorsque la boîte de dialogue modale est promue en couche supérieure */
+/* Transition du ::backdrop lorsque la boîte de dialogue bloquante est promue en couche supérieure */
 dialog::backdrop {
   background-color: transparent;
   transition:
@@ -625,11 +625,11 @@ dialog:open::backdrop {
 ```
 
 > [!NOTE]
-> Dans les navigateurs qui ne prennent pas en charge la pseudo-classe {{CSSxRef(":open")}}, vous pouvez utiliser le sélecteur d'attribut `dialog[open]` pour styliser l'élément `<dialog>` lorsqu'il est ouvert.
+> Dans les navigateurs qui ne prennent pas en charge la pseudo-classe {{CSSxRef(":open")}}, vous pouvez utiliser le sélecteur d'attribut `dialog[open]` pour mettre en forme l'élément `<dialog>` lorsqu'il est ouvert.
 
 ##### JavaScript
 
-Le JavaScript ajoute des gestionnaires d'évènements aux boutons d'affichage et de fermeture pour ouvrir et fermer le `<dialog>` lorsqu'ils sont cliqués&nbsp;:
+Le JavaScript ajoute des gestionnaires d'évènements aux boutons d'affichage et de fermeture pour ouvrir et fermer le `<dialog>` lorsqu'ils sont cliqué&nbsp;:
 
 ```js
 const dialogElem = document.getElementById("dialog");
@@ -661,11 +661,11 @@ Le code s'affiche comme suit&nbsp;:
 Lorsqu'on anime un `<dialog>` à l'aide d'animations CSS basées sur des images‑clés, il y a quelques différences à noter par rapport aux transitions&nbsp;:
 
 - Vous ne fournissez pas de `@starting-style`.
-- Vous incluez la valeur `display` dans une image‑clé&nbsp;; cette valeur sera celle utilisée pendant toute la durée de l'animation, ou jusqu'à ce qu'une autre valeur visible (non `none`) de `display` soit rencontrée.
+- Vous incluez la valeur `display` dans une image‑clé&nbsp;; cette valeur est celle utilisée pendant toute la durée de l'animation, ou jusqu'à ce qu'une autre valeur visible (non `none`) de `display` soit rencontrée.
 - Il n'est pas nécessaire d'activer explicitement les animations discrètes&nbsp;; il n'existe pas d'équivalent à `allow-discrete` dans les images‑clés.
 - Il n'est pas non plus nécessaire de définir `overlay` dans les images‑clés&nbsp;; l'animation de `display` gère l'animation du `<dialog>` entre l'état affiché et l'état masqué.
 
-Let's have a look at an example so you can see what this looks like.
+Voyons un exemple pour que vous puissiez vous faire une idée de ce à quoi cela ressemble.
 
 ##### HTML
 
