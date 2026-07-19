@@ -193,7 +193,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 通过 JavaScript 以不同的方式来操作 CSS 样式是可能的。
 
-首先，你可以使用 {{domxref("Document.stylesheets")}} 来获得一个附加在文档上的所有样式表的列表，它返回一个包含 {{domxref("CSSStyleSheet")}} 对象的类数组。然后你就可以根据需要添加/删除样式了。然而，我们不打算对这些功能进行扩展，因为它们是一种有点过时的、难以操作样式的方式。还有更多更简单的方法。
+首先，你可以使用 {{domxref("Document.styleSheets")}} 来获得一个附加在文档上的所有样式表的列表，它返回一个包含 {{domxref("CSSStyleSheet")}} 对象的类数组。然后你就可以根据需要添加/删除样式了。然而，我们不打算对这些功能进行扩展，因为它们是一种有点过时的、难以操作样式的方式。还有更多更简单的方法。
 
 第一种方法是直接将内联样式添加到你想动态样式的元素上。这是通过 {{domxref("HTMLElement.style")}} 属性实现的，它包含了文档中每个元素的内联样式信息。你可以设置这个对象的属性来直接更新元素样式。
 
@@ -255,7 +255,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 ## 动手练习：一个动态的购物单
 
-在这个挑战中，我们想做一个简单的购物清单例子，允许你使用表单输入和按钮动态地将物品添加到清单中。当你在输入中添加一个项目并按下按钮时：
+在这个挑战中，我们想做一个简单的购物清单例子，允许你使用表单输入和按钮动态地将物品添加到清单中。当你在输入框中输入一个项目并点击按钮或按下 <kbd>Enter</kbd> 键时：
 
 - 购物项应该出现在清单中。
 - 每个购物项都应该给出一个按钮，可以按下按钮从清单中删除该项。
@@ -319,17 +319,18 @@ button.addEventListener("click", (event) => {
 
 要完成实验，要按照下面的步骤，确保购物单的行为如上所述。
 
-1. 首先，下载 [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) 文件，并存入本地。你会看到它有一些极小的 CSS，一个带有 label、input 和 button 的 div 和一个空的列表以及 {{htmlelement("script")}} 元素。要添加的所有程序都在 script 里面。
+1. 首先，下载 [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) 文件，并存入本地。你会看到它有一些极小的 CSS，一个带有 label、input 和 button 的 form 和一个空的列表以及 {{htmlelement("script")}} 元素。要添加的所有程序都在 script 里面。
 2. 创建三个变量来保存列表（{{htmlelement("ul")}}）、{{htmlelement("input")}} 和 {{htmlelement("button")}} 元素的引用。
 3. 创建一个[函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions)响应点击按钮。
-4. 在函数体内，开始要在一个变量中存储输入框的当前[值](/zh-CN/docs/Web/API/HTMLInputElement#属性)。
-5. 然后，为输入框元素设置空字符串 `''` 以清空它。
-6. 创建三个新元素：一个列表元素（{{htmlelement('li')}}）、{{htmlelement('span')}} 和 {{htmlelement('button')}}，并把它们存入变量之中。
-7. 将 span 和按钮附加到列表元素的子节点。
-8. 把之前保存的输入框元素的值设置为 span 的文本内容，按钮的文本内容设置为“Delete”。
-9. 将列表元素附加到列表的子节点中。
-10. 为删除按钮绑定事件处理程序。当点击按钮时，删除它所在的整个列表元素（`<li>...</li>`）。
-11. 最后，使用 [`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus) 方法聚焦输入框准备输入下一个购物项。
+4. 在函数体内，首先调用 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)。由于输入框包含在 form 元素中，按下 <kbd>Enter</kbd> 键会触发表单提交。调用 `preventDefault()` 可以阻止表单刷新页面，从而将新项目添加到清单中。
+5. 接着，将输入框当前的[值](/en-US/docs/Web/API/HTMLInputElement/value)存储在一个变量中。
+6. 然后，为输入框元素设置空字符串 `''` 以清空它。
+7. 创建三个新元素：一个列表元素（{{htmlelement('li')}}）、{{htmlelement('span')}} 和 {{htmlelement('button')}}，并把它们存入变量之中。
+8. 将 span 和 button 附加到列表元素的子节点。
+9. 把之前保存的输入框元素的值设置为 span 的文本内容，按钮的文本内容设置为“删除”。
+10. 将列表元素附加到列表的子节点中。
+11. 为**删除**按钮绑定事件处理程序。当点击按钮时，删除它所在的整个列表元素（`<li>...</li>`）。
+12. 最后，使用 [`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus) 方法使输入框获得焦点，以便输入下一个购物清单项目。
 
 > [!NOTE]
 > 如果你卡住了，请查看[完成的购物清单](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html)（[查看其在线版本](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)）。
