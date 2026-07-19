@@ -141,7 +141,7 @@ div::after {
 
 - [スクロール駆動アニメーションのタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
   - : スクロール駆動アニメーションのタイムラインとスクロール駆動アニメーションの作成についてです。
-- [タイムライン範囲名](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
+- [タイムライン範囲名を理解する](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
   - : {{cssxref("timeline-range-name")}} データ型: さまざまなタイムライン範囲名を理解します。
 - [ビュー進行タイムラインのインセット](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets)
   - : スクロール連動アニメーションのアニメーション適用範囲をインセットします。
