@@ -3,7 +3,7 @@ title: Pseudo-classe CSS `:read-only`
 short-title: :read-only
 slug: Web/CSS/Reference/Selectors/:read-only
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:read-only`** permet de cibler les éléments (tels que certains types de {{HTMLElement("input")}} et {{HTMLElement("textarea")}}) qui ne sont pas modifiables par l'utilisateur·ice. Les éléments sur lesquels l'attribut HTML [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) n'a pas d'effet (tels que [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio), [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) et tous les autres éléments non liés à un formulaire) sont également sélectionnés par la pseudo-classe `:read-only`. En fait, `:read-only` correspond à tout ce qui ne correspond pas à {{CSSxRef(":read-write")}}, ce qui le rend équivalent à `:not(:read-write)`.
@@ -36,7 +36,7 @@ input[type="submit"] {
   <label for="pic">Votre photo&nbsp;:</label>
   <input id="pic" name="pic" type="file" />
 
-  <input type="submit" value="Soumettre le formulaire" />
+  <input type="submit" value="Envoyer le formulaire" />
 </form>
 ```
 
@@ -50,9 +50,9 @@ input[type="submit"] {
 
 ## Exemples
 
-### Confirmation des informations du formulaire à l'aide de contrôles en lecture seule ou en lecture-écriture
+### Confirmer les informations du formulaire à l'aide de contrôles en lecture seule ou en lecture-écriture
 
-Une utilisation des contrôles de formulaire en lecture seule est de permettre à l'utilisateur·ice de vérifier les informations qu'il a pu saisir dans un formulaire précédent (par exemple, les détails d'expédition), tout en étant en mesure de soumettre les informations avec le reste du formulaire. C'est exactement ce que nous faisons dans l'exemple ci-dessous.
+Une utilisation des contrôles de formulaire en lecture seule est de permettre à l'utilisateur·ice de vérifier les informations qu'il a pu saisir dans un formulaire précédent (par exemple, les détails d'expédition), tout en étant en mesure d'envoyer les informations avec le reste du formulaire. C'est exactement ce que nous faisons dans l'exemple ci-dessous.
 
 La pseudo-classe `:read-only` est utilisée pour supprimer tout le style qui fait que les champs de saisie ressemblent à des champs cliquables, les faisant ressembler davantage à des paragraphes en lecture seule. La pseudo-classe `:read-write`, en revanche, est utilisée pour fournir un style plus agréable à la `<textarea>` modifiable.
 
@@ -95,7 +95,7 @@ France
     </div>
   </fieldset>
 
-  <div><button type="submit">Modifier les détails et soumettre</button></div>
+  <div><button type="submit">Modifier les détails et envoyer</button></div>
 </form>
 ```
 
@@ -178,7 +178,7 @@ textarea:read-write {
 }
 ```
 
-{{EmbedLiveSample("confirmation_des_informations_du_formulaire_à_laide_de_contrôles_en_lecture_seule_ou_en_lecture_ecriture", "100%", 620)}}
+{{EmbedLiveSample("Confirmer les informations du formulaire à l'aide de contrôles en lecture seule ou en lecture-écriture", "100%", 620)}}
 
 ### Mise en forme des contrôles non-formulaires en lecture seule
 
@@ -213,7 +213,7 @@ p:read-write {
 
 #### Résultat
 
-{{EmbedLiveSample("mise_en_forme_des_contrôles_non-formulaires_en_lecture_seule", '100%', 200)}}
+{{EmbedLiveSample("Mise en forme des contrôles non-formulaires en lecture seule", "100%", 200)}}
 
 ## Spécifications
 

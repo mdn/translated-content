@@ -1,8 +1,9 @@
 ---
 title: Fonctions de valeur CSS
+short-title: Fonctions
 slug: Web/CSS/Reference/Values/Functions
 l10n:
-  sourceCommit: 8a74d8feac267c1ddc37a4a8bc61e9aa8db75b12
+  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
 ---
 
 Les **fonctions de valeur CSS** (<i lang="en">CSS value functions</i> en anglais) sont des instructions qui invoquent un traitement de données spécial ou des calculs pour retourner une [valeur](/fr/docs/Web/CSS/Guides/Values_and_units) [CSS](/fr/docs/Web/CSS) pour une propriété CSS. Les fonctions de valeur CSS représentent des [types de données](/fr/docs/Web/CSS/Reference/Values/Data_types) plus complexes et peuvent prendre certains arguments d'entrée pour calculer la valeur de retour.
@@ -279,7 +280,7 @@ Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) CSS {{CSSxRe
 - {{CSSxRef("ray()")}}
   - : Valide avec {{CSSxRef("offset-path")}}&nbsp;; définit le segment de ligne qu'un élément animé peut suivre.
 - {{CSSxRef("superellipse()")}}
-  - : Définit la courbure d'une ellipse&nbsp;; peut être utilisé pour définir une {{CSSxRef("corner-shape-value")}}, qui est utilisée avec {{CSSxRef("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/Reference/Properties/corner-shape#constituent_properties) et [associées](/fr/docs/Web/CSS/Reference/Properties/corner-shape#properties_that_follow_the_corner_shape).
+  - : Définit la courbure d'une ellipse&nbsp;; peut être utilisé pour définir une {{CSSxRef("corner-shape-value")}}, qui est utilisée avec {{CSSxRef("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/Reference/Properties/corner-shape#propriétés_constitutives) et [associées](/fr/docs/Web/CSS/Reference/Properties/corner-shape#propriétés_qui_suivent_corner-shape).
 
 ## Les fonctions de référence
 
@@ -358,9 +359,9 @@ Les fonctions de positionnement des ancres sont utilisées lors du positionnemen
 Les fonctions suivantes retournent une valeur entière basée sur l'arbre DOM, plutôt que sur l'arbre plat comme la plupart des valeurs CSS le font&nbsp;:
 
 - {{CSSxRef("sibling-index()")}}
-  - : Retourne un entier reflétant la position de l'élément sélectionné parmi ses frères.
+  - : Retourne un entier reflétant la position de l'élément sélectionné parmi ses voisins.
 - {{CSSxRef("sibling-count()")}}
-  - : Retourne un entier reflétant le nombre total de frères, y compris l'élément sélectionné.
+  - : Retourne un entier reflétant le nombre total de voisins, y compris l'élément sélectionné.
 
 ## Index alphabétique des fonctions
 

@@ -3,7 +3,7 @@ title: "Élément HTML `<iframe>` : l'élément de cadre intégré"
 short-title: <iframe>
 slug: Web/HTML/Reference/Elements/iframe
 l10n:
-  sourceCommit: 75016e5d37ecff3b11de4c2ef6665178f654797e
+  sourceCommit: 04c41175b160dc00b1a1b8e4e13b2183d89fdf1a
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<iframe>`** représente un {{Glossary("Browsing context", "contexte de navigation")}} imbriqué, intégrant une autre page HTML dans la page courante.
@@ -57,7 +57,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > Cet attribut est considéré comme historique et a été redéfini avec `allow="payment"`.
 
 - `browsingtopics` {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Un attribut booléen qui, s'il est présent, indique que les sujets sélectionnés pour l'utilisateur·ice courant·e doivent être envoyés avec la requête pour la source de l'`<iframe>`. Voir [Utilisation de l'API Topics](/fr/docs/Web/API/Topics_API/Using) pour plus de détails.
+  - : Un attribut booléen qui, s'il est présent, indique que les sujets sélectionnés pour l'utilisateur·ice courant·e doivent être envoyés avec la requête pour la source d'un `<iframe>`.
 
 - `credentialless` {{Experimental_Inline}}
   - : Mettre à `true` pour rendre l'`<iframe>` sans identifiants, son contenu est chargé dans un contexte éphémère qui n'a pas accès au réseau, aux cookies ni aux données de stockage associées à son origine. Il utilise un contexte local à la durée de vie du document de plus haut niveau. En contrepartie, les règles d'intégration de {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) peuvent être levées, permettant à des documents avec COEP défini d'intégrer des documents tiers qui ne le sont pas. Voir [IFrame credentialless](/fr/docs/Web/HTTP/Guides/IFrame_credentialless) pour plus de détails.
@@ -106,7 +106,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `allow-forms`
       - : Permet à la page d'envoyer des formulaires. Si ce mot-clé n'est pas utilisé, un formulaire s'affiche normalement, mais son envoi n'active pas la validation des champs, n'envoie pas de données au serveur web et ne ferme pas un dialogue.
     - `allow-modals`
-      - : Permet à la page d'ouvrir des fenêtres modales avec {{DOMxRef("Window.alert()")}}, {{DOMxRef("Window.confirm()")}}, {{DOMxRef("Window.print()")}} et {{DOMxRef("Window.prompt()")}}&nbsp;; l'ouverture d'un {{HTMLElement("dialog")}} est autorisée indépendamment de ce mot-clé. Il permet également à la page de recevoir l'évènement {{DOMxRef("BeforeUnloadEvent")}}.
+      - : Permet à la page d'ouvrir des fenêtres bloquantes avec {{DOMxRef("Window.alert()")}}, {{DOMxRef("Window.confirm()")}}, {{DOMxRef("Window.print()")}} et {{DOMxRef("Window.prompt()")}}&nbsp;; l'ouverture d'un {{HTMLElement("dialog")}} est autorisée indépendamment de ce mot-clé. Il permet également à la page de recevoir l'évènement {{DOMxRef("BeforeUnloadEvent")}}.
     - `allow-orientation-lock`
       - : Permet à la ressource de verrouiller l'orientation de l'écran avec {{DOMxRef("Screen.lockOrientation")}}.
     - `allow-pointer-lock`
@@ -114,7 +114,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `allow-popups`
       - : Permet l'ouverture de popups (créées, par exemple, par {{DOMxRef("Window.open()")}} ou `target="_blank"`). Si ce mot-clé n'est pas utilisé, cette fonctionnalité échoue silencieusement.
     - `allow-popups-to-escape-sandbox`
-      - : Permet à un document en bac à sable d'ouvrir un nouveau contexte de navigation sans lui appliquer les drapeaux de sandbox. Cela permet, par exemple, à une publicité tierce d'être mise en bac à sable sans imposer les mêmes restrictions à la page vers laquelle la publicité pointe. Si ce drapeau n'est pas inclus, une page redirigée, une fenêtre popup ou un nouvel onglet est envoyé aux mêmes restrictions de sandbox que l'`<iframe>` d'origine.
+      - : Permet à un document en bac à sable d'ouvrir un nouveau contexte de navigation sans lui appliquer les drapeaux de sandbox. Cela permet, par exemple, à une publicité tierce d'être mise en bac à sable sans imposer les mêmes restrictions à la page vers laquelle la publicité pointe. Si ce drapeau n'est pas inclus, une page redirigée, une fenêtre intrusive ou un nouvel onglet est envoyé aux mêmes restrictions de sandbox qu'un `<iframe>` d'origine.
     - `allow-presentation`
       - : Permet aux intégrateurs de contrôler si un cadre intégré peut démarrer une [session de présentation](/fr/docs/Web/API/PresentationRequest).
     - `allow-same-origin`
@@ -138,7 +138,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > - La mise en bac à sable est inutile si un·e attaquant·e peut afficher du contenu en dehors d'un `iframe` sandboxé — par exemple si le·a visiteur·euse ouvre le cadre dans un nouvel onglet. Un tel contenu doit également être servi depuis une _origine séparée_ pour limiter les dommages potentiels.
 
     > [!NOTE]
-    > Lorsqu'on redirige l'utilisateur·ice, ouvre une fenêtre popup ou un nouvel onglet depuis une page intégrée dans un `<iframe>` avec l'attribut `sandbox`, le nouveau contexte de navigation est envoyé aux mêmes restrictions `sandbox`. Cela peut poser des problèmes — par exemple, si une page intégrée dans un `<iframe>` sans l'attribut `sandbox="allow-forms"` ou `sandbox="allow-popups-to-escape-sandbox"` ouvre un nouveau site dans un onglet séparé, l'envoi d'un formulaire dans ce nouveau contexte de navigation échoue silencieusement.
+    > Lorsqu'on redirige l'utilisateur·ice, ouvre une fenêtre intrusive ou un nouvel onglet depuis une page intégrée dans un `<iframe>` avec l'attribut `sandbox`, le nouveau contexte de navigation est envoyé aux mêmes restrictions `sandbox`. Cela peut poser des problèmes — par exemple, si une page intégrée dans un `<iframe>` sans l'attribut `sandbox="allow-forms"` ou `sandbox="allow-popups-to-escape-sandbox"` ouvre un nouveau site dans un onglet séparé, l'envoi d'un formulaire dans ce nouveau contexte de navigation échoue silencieusement.
 
 - `src`
   - : L'URL de la page à intégrer. Utilisez la valeur `about:blank` pour intégrer une page vide conforme à la {{Glossary("Same-origin policy", "politique de même origine")}}. Notez également que supprimer par programme l'attribut `src` d'un `<iframe>` (par exemple avec {{DOMxRef("Element.removeAttribute()")}}) provoque le chargement de `about:blank` dans la frame pour Firefox (à partir de la version 65), les navigateurs basés sur Chromium et Safari/iOS.
@@ -211,6 +211,26 @@ En tant {{Glossary("replaced elements", "qu'élément remplacé")}}, la position
 ## Comportement des évènements `error` et `load`
 
 Les évènements `error` et `load` déclenchés sur des `<iframe>` pourraient être utilisés pour sonder l'espace d'URL des serveurs HTTP du réseau local. Par conséquent, par mesure de sécurité, les agents utilisateur ne déclenchent pas l'évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event) sur les `<iframe>`, et l'évènement [`load`](/fr/docs/Web/API/HTMLElement/load_event) est toujours déclenché même si le contenu de l'`<iframe>` échoue à se charger.
+
+## Dimensionnement adaptatif de `<iframe>`
+
+Pour des raisons de sécurité et de confidentialité, les éléments {{HTMLElement("iframe")}} n'exposent pas par défaut d'informations au document parent sur la taille du contenu dans le document qu'ils intègrent.
+
+Pour permettre le dimensionnement adaptatif des éléments {{HTMLElement("iframe")}} en fonction de leur contenu, la balise [`<meta name="responsive-embedded-sizing">`](/fr/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) peut être incluse dans un document intégré pour lui permettre de partager les informations sur sa taille avec le document parent. La propriété CSS {{CSSxRef("frame-sizing")}} peut ensuite être définie sur l'`<iframe>` pour qu'il adopte la même taille horizontale ou verticale que la taille réelle du contenu du document intégré. Cela garantit que le contenu d'un `<iframe>` s'intègre parfaitement dans son conteneur, évitant ainsi les barres de défilement inutiles.
+
+Pour redimensionner dynamiquement un `<iframe>` lorsque le document intégré modifie la taille de sa mise en page, vous pouvez appeler la méthode {{DOMxRef("Window.requestResize()")}} depuis le document intégré pour lui faire signaler une taille mise à jour.
+
+## Accessibilité
+
+Les personnes utilisant des technologies d'assistance telles qu'un lecteur d'écran peuvent utiliser [l'attribut `title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) sur un `<iframe>` pour étiqueter son contenu. La valeur de l'attribut `title` doit décrire de manière concise le contenu intégré&nbsp;:
+
+```html
+<iframe
+  title="Page Wikipedia pour les avocatiers"
+  src="https://fr.wikipedia.org/wiki/Avocatier"></iframe>
+```
+
+Sans ce titre, ils doivent naviguer dans un `<iframe>` pour déterminer quel est le contenu intégré. Ce changement de contexte peut être déroutant et chronophage, en particulier pour les pages comportant plusieurs `<iframe>` et/ou si les contenus intégrés contiennent du contenu interactif comme de la vidéo ou de l'audio.
 
 ## Exemples
 

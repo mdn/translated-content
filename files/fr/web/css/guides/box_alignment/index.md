@@ -3,7 +3,7 @@ title: Alignement de boîte CSS
 short-title: Alignement de boîte
 slug: Web/CSS/Guides/Box_alignment
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 53745a2089268ce62bf79695d7d347bcbd0abe57
 ---
 
 Le module **d'alignement de boîte CSS** définit les fonctionnalités CSS relatives à l'alignement des boîtes dans leurs conteneurs. Il définit l'alignement des différents modèles de mise en page CSS, y compris la mise en page en bloc, la mise en page en tableau, la mise en page flexible (<i lang="en">flexbox</i>) et la mise en page en grille, créant une méthode d'alignement cohérente dans tout le CSS.
@@ -21,15 +21,12 @@ L'alignement du texte et du contenu en ligne est défini respectivement dans le 
 - {{CSSxRef("align-content")}}
 - {{CSSxRef("align-items")}}
 - {{CSSxRef("align-self")}}
-- {{CSSxRef("column-gap")}}
-- {{CSSxRef("gap")}}
 - {{CSSxRef("justify-content")}}
 - {{CSSxRef("justify-items")}}
 - {{CSSxRef("justify-self")}}
 - {{CSSxRef("place-content")}}
 - {{CSSxRef("place-items")}}
 - {{CSSxRef("place-self")}}
-- {{CSSxRef("row-gap")}}
 
 ### Types de données
 
@@ -73,6 +70,12 @@ L'alignement du texte et du contenu en ligne est défini respectivement dans le 
 - L'attribut SVG {{SVGAttr("dominant-baseline")}}
 - {{Glossary("Cross axis", "Axe transversal")}}
 - {{Glossary("Main axis", "Axe principal")}}
+
+Le module [des écarts CSS](/fr/docs/Web/CSS/Guides/Gaps)
+
+- {{CSSxRef("column-gap")}}
+- {{CSSxRef("gap")}}
+- {{CSSxRef("row-gap")}}
 
 ## Spécifications
 
