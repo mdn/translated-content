@@ -1,6 +1,6 @@
 ---
 title: 開発者向けのウェブ技術
-short-title: Web
+short-title: ウェブ
 slug: Web
 l10n:
   sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
