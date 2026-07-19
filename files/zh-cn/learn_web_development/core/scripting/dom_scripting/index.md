@@ -255,11 +255,11 @@ linkPara.parentNode.removeChild(linkPara);
 
 ## 动手练习：一个动态的购物单
 
-在这个挑战中，我们想做一个简单的购物清单例子，允许你使用表单输入和按钮动态地将物品添加到清单中。当你在输入框中输入一个项目并点击按钮或按下 <kbd>Enter</kbd> 键时：
+在这个挑战中，我们想做一个简单的购物清单例子，允许你使用表单输入和按钮动态地将物品添加到清单中。当你在输入框中输入一个物品并点击按钮或按下 <kbd>Enter</kbd> 键时：
 
-- 购物项应该出现在清单中。
-- 每个购物项都应该给出一个按钮，可以按下按钮从清单中删除该项。
-- 输入框应该是清空的，并已经聚焦，为你准备好输入另一个项。
+- 物品应该出现在清单中。
+- 每件物品都应该给出一个按钮，可以按下按钮从清单中删除这件物品。
+- 输入框应该是清空的，并已经聚焦，以便输入下一件物品。
 
 完成后的演示程序看起来有点像这样的：
 
@@ -322,7 +322,7 @@ button.addEventListener("click", (event) => {
 1. 首先，下载 [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) 文件，并存入本地。你会看到它有一些极小的 CSS，一个带有 label、input 和 button 的 form 和一个空的列表以及 {{htmlelement("script")}} 元素。要添加的所有程序都在 script 里面。
 2. 创建三个变量来保存列表（{{htmlelement("ul")}}）、{{htmlelement("input")}} 和 {{htmlelement("button")}} 元素的引用。
 3. 创建一个[函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions)响应点击按钮。
-4. 在函数体内，首先调用 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)。由于输入框包含在 form 元素中，按下 <kbd>Enter</kbd> 键会触发表单提交。调用 `preventDefault()` 可以阻止表单刷新页面，从而将新项目添加到清单中。
+4. 在函数体内，首先调用 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)。由于输入框包含在 form 元素中，按下 <kbd>Enter</kbd> 键会触发表单提交。调用 `preventDefault()` 可以阻止表单刷新页面，从而将新物品添加到清单中。
 5. 接着，将输入框当前的[值](/zh-CN/docs/Web/API/HTMLInputElement/value)存储在一个变量中。
 6. 然后，为输入框元素设置空字符串 `''` 以清空它。
 7. 创建三个新元素：一个列表元素（{{htmlelement('li')}}）、{{htmlelement('span')}} 和 {{htmlelement('button')}}，并把它们存入变量之中。
@@ -330,7 +330,7 @@ button.addEventListener("click", (event) => {
 9. 把之前保存的输入框元素的值设置为 span 的文本内容，按钮的文本内容设置为“删除”。
 10. 将列表元素附加到列表的子节点中。
 11. 为**删除**按钮绑定事件处理程序。当点击按钮时，删除它所在的整个列表元素（`<li>...</li>`）。
-12. 最后，使用 [`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus) 方法使输入框获得焦点，以便输入下一个购物清单项目。
+12. 最后，使用 [`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus) 方法使输入框获得焦点，以便输入下一件物品。
 
 > [!NOTE]
 > 如果你卡住了，请查看[完成的购物清单](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html)（[查看其在线版本](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)）。
