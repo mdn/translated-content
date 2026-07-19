@@ -21,8 +21,8 @@ WebDriver は、HTTP を使用する [WebDriver classic](/ja/docs/Web/WebDriver/
 - [WebDriver classic](/ja/docs/Web/WebDriver/Reference/Classic)
   - : WebDriver classic のコマンドとタイムアウトのリファレンスです。
 
-- [能力](/ja/docs/Web/WebDriver/Reference/Capabilities)
-  - : WebDriver の能力のリファレンスです。
+- [キャパビリティ](/ja/docs/Web/WebDriver/Reference/Capabilities)
+  - : WebDriver のキャパビリティのリファレンスです。
 
 - [エラー](/ja/docs/Web/WebDriver/Reference/Errors)
   - : WebDriver のエラーのリファレンスです。
