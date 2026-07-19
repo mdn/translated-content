@@ -323,7 +323,7 @@ button.addEventListener("click", (event) => {
 2. 创建三个变量来保存列表（{{htmlelement("ul")}}）、{{htmlelement("input")}} 和 {{htmlelement("button")}} 元素的引用。
 3. 创建一个[函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions)响应点击按钮。
 4. 在函数体内，首先调用 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)。由于输入框包含在 form 元素中，按下 <kbd>Enter</kbd> 键会触发表单提交。调用 `preventDefault()` 可以阻止表单刷新页面，从而将新项目添加到清单中。
-5. 接着，将输入框当前的[值](/en-US/docs/Web/API/HTMLInputElement/value)存储在一个变量中。
+5. 接着，将输入框当前的[值](/zh-CN/docs/Web/API/HTMLInputElement/value)存储在一个变量中。
 6. 然后，为输入框元素设置空字符串 `''` 以清空它。
 7. 创建三个新元素：一个列表元素（{{htmlelement('li')}}）、{{htmlelement('span')}} 和 {{htmlelement('button')}}，并把它们存入变量之中。
 8. 将 span 和 button 附加到列表元素的子节点。
