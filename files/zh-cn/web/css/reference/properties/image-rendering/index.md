@@ -104,11 +104,11 @@ image-rendering: unset;
     src="blumen.jpg" />
   <img
     class="pixelated"
-    alt="与上一张相同的照片，放大程度也相同。支持 image-rendering 属性的 pixelated 值的浏览器会以非常像素化的方式显示该图像。单个像素清晰可见，边缘看起来更加锐利。"
+    alt="与第一张相同的照片，放大程度也相同。支持 image-rendering 属性的 pixelated 值的浏览器会以非常像素化的方式显示该图像。单个像素清晰可见，边缘看起来更加锐利。"
     src="blumen.jpg" />
   <img
     class="crisp-edges"
-    alt="与前面相同的照片，放大程度也相同。支持 image-rendering 属性的 crisp-edges 值的浏览器会以非常像素化的方式显示该图像。在这些示例中，pixelated 与 crisp-edges 版本几乎看不出差别。"
+    alt="与第一张相同的照片，放大程度也相同。支持 image-rendering 属性的 crisp-edges 值的浏览器会以非常像素化的方式显示该图像。在这些示例中，pixelated 与 crisp-edges 版本几乎看不出差别。"
     src="blumen.jpg" />
 </div>
 ```
