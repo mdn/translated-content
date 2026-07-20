@@ -7,7 +7,7 @@ l10n:
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes") }}
 
-{{SVGElement('path')}} 元素是 SVG [基本形状](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)中最强大的一个。你可以用它创建线条，曲线，弧形等等。
+{{SVGElement('path')}} 元素是 SVG [基本形状](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)中最强大的一个。你可以用它创建线条、曲线、弧形等等。
 
 路径通过组合多条直线或曲线来创建复杂形状。仅由直线组成的复杂形状可以使用 [`<polyline>`](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes#polyline) 元素来创建。虽然 `<polyline>` 和 `<path>` 元素可以绘制出外观相似的形状，但 `<polyline>` 元素需要大量细小的直线来模拟曲线，且在放大时难以保持良好的比例。
 
