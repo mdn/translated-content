@@ -3,7 +3,7 @@ title: Firefox 153 note de version pour les développeurs
 short-title: Firefox 153
 slug: Mozilla/Firefox/Releases/153
 l10n:
-  sourceCommit: 67f14a7fc50b40202e72b1425ade28e38046ecd9
+  sourceCommit: eb6fe94faaedf826c11def7956876403b04199d9
 ---
 
 Cet article présente les informations concernant les changements de Firefox 153 qui concernent les développeur·euse·s.
@@ -123,6 +123,10 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 
   Les fonctions {{CSSxRef("sibling-count")}} et {{CSSxRef("sibling-index")}} sont désormais prises en charge. La fonction `sibling-count()` retourne le nombre d'éléments voisins ainsi que l'élément lui-même. La fonction `sibling-index()` retourne l'index de l'élément par rapport à ses voisins, en commençant à `1` et non à `0`.
   ([bogue Firefox 2042063 <sup>(angl.)</sup>](https://bugzil.la/2042063)).
+
+- **Mise à jour des attributs des ressources externes**&nbsp;: `layout.css.link-parameters.enabled`
+
+  La propriété CSS {{CSSxRef("link-parameters")}} et la fonction CSS {{CSSxRef("param()")}} sont désormais prises en charge. Cela permet à l'utilisateur·ice de mettre à jour les attributs des ressources externes, telles que les SVG, dont les attributs sont définis avec la fonction CSS {{CSSxRef("env()")}}. Cela signifie qu'une seule ressource externe peut être utilisée plutôt que de créer plusieurs variantes qui n'ont que des couleurs ou d'autres valeurs différentes. ([bogue Firefox 2046153 <sup>(angl.)</sup>](https://bugzil.la/2046153)).
 
 - **Les formes de base CSS autorisent les mots-clés `farthest-corner` et `closest-corner`** (Nightly)&nbsp;: `layout.css.ellipse-corners.enabled`
 
