@@ -100,7 +100,7 @@ image-rendering: unset;
     src="blumen.jpg" />
   <img
     class="smooth"
-    alt="与上一张相同的照片，放大程度也相同。支持 image-rendering 属性的 smooth 值的浏览器会以尽量优化外观的方式显示该图像。"
+    alt="与第一张相同的照片，放大程度也相同。支持 image-rendering 属性的 smooth 值的浏览器会以尽量优化外观的方式显示该图像。"
     src="blumen.jpg" />
   <img
     class="pixelated"
