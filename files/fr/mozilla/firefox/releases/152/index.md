@@ -3,7 +3,7 @@ title: Firefox 152 note de version pour les développeurs
 short-title: Firefox 152
 slug: Mozilla/Firefox/Releases/152
 l10n:
-  sourceCommit: 97a6738de30dbb1072346dca78f24dca67da9eca
+  sourceCommit: cb5a9829f49b8ef7a28311ca419538194fd6525e
 ---
 
 Cet article présente les informations concernant les changements de Firefox 152 qui concernent les développeur·euse·s.
