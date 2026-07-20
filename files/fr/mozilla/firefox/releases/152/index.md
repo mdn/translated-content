@@ -3,7 +3,7 @@ title: Firefox 152 note de version pour les développeurs
 short-title: Firefox 152
 slug: Mozilla/Firefox/Releases/152
 l10n:
-  sourceCommit: 681ee4beb90b7e0d001f8938df41d5af0f602fe7
+  sourceCommit: 97a6738de30dbb1072346dca78f24dca67da9eca
 ---
 
 Cet article présente les informations concernant les changements de Firefox 152 qui concernent les développeur·euse·s.
@@ -90,6 +90,11 @@ Ces fonctionnalités sont disponibles dans Firefox 152 mais sont désactivées p
 Pour les tester, recherchez la préférence appropriée dans la page `about:config` et définissez-la sur `true`.
 Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/fr/docs/Mozilla/Firefox/Experimental_features).
 
+- **Intégration de WebAssembly avec les promesses JavaScript (JS-PI)**: `javascript.options.wasm_js_promise_integration`
+
+  [L'intégration de WebAssembly avec les promesses JavaScript (JS-PI) <sup>(angl.)</sup>](https://github.com/WebAssembly/js-promise-integration/blob/main/proposals/js-promise-integration/Overview.md) permet aux modules WebAssembly d'inter-opérer avec des API JavaScript asynchrones basées sur les promesses ({{JSxRef("Promise")}}). Cela permet au code WebAssembly de se suspendre en attendant qu'une promesse JavaScript soit résolue et de reprendre lorsque la promesse est réglée.
+  ([bogue Firefox 2015877 <sup>(angl.)</sup>](https://bugzil.la/2015877)).
+
 - **Vérifier si une configuration d'encodage/décodage multimédia est prise en charge pour WebRTC**&nbsp;: `media.mediacapabilities.webrtc.enabled`
 
   Le type `webrtc` peut désormais être passé en option pour [`MediaCapabilities.decodingInfo()`](/fr/docs/Web/API/MediaCapabilities/decodingInfo#webrtc) et [`MediaCapabilities.encodingInfo()`](/fr/docs/Web/API/MediaCapabilities/encodingInfo#webrtc) afin de vérifier si une configuration d'encodage/décodage peut être utilisée pour WebRTC.
@@ -116,3 +121,8 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 - **Valeurs `<timeline-range-name>` dans les sélecteurs `@keyframes`**&nbsp;: `layout.css.scroll-driven-animations.enabled`
 
   La règle {{CSSxRef("@keyframes")}} prend désormais en charge les valeurs {{CSSxRef("&lt;timeline-range-name&gt;")}}. Ces [valeurs](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#noms_des_plages_chronologiques) permettent de définir le segment dans lequel une animation pilotée par le défilement se déroule. ([bogue Firefox 1824875 <sup>(angl.)</sup>](https://bugzil.la/1824875)).
+
+- **Rapport de plantage** (Nightly)&nbsp;: `dom.reporting.crash.enabled`
+
+  Les rapports de plantage peuvent désormais être envoyés par [l'API Reporting](/fr/docs/Web/API/Reporting_API).
+  ([bogue Firefox 2036160 <sup>(angl.)</sup>](https://bugzil.la/2036160)).
