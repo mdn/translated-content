@@ -326,6 +326,8 @@ Q x1 y1, x y
 （或）
 q dx1 dy1, dx dy
 ```
+
+```html live-sample___quadratic_bezier
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
   <path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent" />
 </svg>
