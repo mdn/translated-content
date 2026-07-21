@@ -1,5 +1,5 @@
 ---
-title: "Content-Security-Policy：upgrade-insecure-requests 指令"
+title: Content-Security-Policy：upgrade-insecure-requests 指令
 short-title: upgrade-insecure-requests
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests
 l10n:
