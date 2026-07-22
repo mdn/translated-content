@@ -100,7 +100,7 @@ _以下のメソッドに加えて、親である {{DOMxRef("EventTarget")}} か
 ## イベント
 
 - {{domxref("Node/selectstart_event", "selectstart")}}
-  - : ユーザがこのノード内で新しく選択を開始した時発火します。
+  - : ユーザーがこのノード内で新しく選択を開始した時発火します。
 
 ## 例
 
