@@ -3,10 +3,10 @@ title: Propiedades CSS
 short-title: Propiedades
 slug: Web/CSS/Reference/Properties
 l10n:
-  sourceCommit: a802db4db338925f1e5f3d104dea81f9ac53165b
+  sourceCommit: 26e03490d14803dc2ae8b85ec5c0c2b26d6b50d1
 ---
 
-Una **_propiedad_** [CSS](/es/docs/Web/CSS) es un parámetro usado en una [declaración CSS](/es/docs/Web/CSS/Guides/Syntax/Introduction##declaraciones_de_css) que permite definir el estilo de ciertos aspectos de elementos seleccionados.
+Una **_propiedad_** [CSS](/es/docs/Web/CSS) es un parámetro usado en una [declaración CSS](/es/docs/Web/CSS/Guides/Syntax/Introduction#declaraciones_de_css) que permite definir el estilo de ciertos aspectos de elementos seleccionados.
 Por ejemplo, se usa la propiedad {{CSSxRef("opacity")}} para configurar la opacidad del elemento seleccionado, que permite controlar la visibilidad del contenido detrás de ese elemento:
 
 ```css
@@ -50,7 +50,7 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("align-items")}}
 - {{CSSxRef("align-self")}}
 - {{CSSxRef("alignment-baseline")}}
-- {{CSSxRef("all")}} (shorthand)
+- {{CSSxRef("all")}} (abreviada)
 - {{CSSxRef("anchor-name")}}
 - {{CSSxRef("anchor-scope")}}
 - {{CSSxRef("animation-composition")}}
@@ -63,10 +63,10 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("animation-play-state")}}
 - {{CSSxRef("animation-range-end")}}
 - {{CSSxRef("animation-range-start")}}
-- {{CSSxRef("animation-range")}} (shorthand)
+- {{CSSxRef("animation-range")}} (abreviada)
 - {{CSSxRef("animation-timeline")}}
 - {{CSSxRef("animation-timing-function")}}
-- {{CSSxRef("animation")}} (shorthand)
+- {{CSSxRef("animation")}} (abreviada)
 - {{CSSxRef("appearance")}}
 - {{CSSxRef("aspect-ratio")}}
 
@@ -83,11 +83,11 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("background-position-x")}}
 - {{CSSxRef("background-position-y")}}
 - {{CSSxRef("background-position")}}
-- {{CSSxRef("background-repeat")}} (shorthand)
+- {{CSSxRef("background-repeat")}} (abreviada)
 - {{CSSxRef("background-repeat-x")}}
 - {{CSSxRef("background-repeat-y")}}
 - {{CSSxRef("background-size")}}
-- {{CSSxRef("background")}} (shorthand)
+- {{CSSxRef("background")}} (abreviada)
 - {{CSSxRef("baseline-shift")}}
 - {{CSSxRef("baseline-source")}}
 - {{CSSxRef("block-size")}}
@@ -98,22 +98,22 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("border-block-end-color")}}
 - {{CSSxRef("border-block-end-style")}}
 - {{CSSxRef("border-block-end-width")}}
-- {{CSSxRef("border-block-end")}} (shorthand)
+- {{CSSxRef("border-block-end")}} (abreviada)
 - {{CSSxRef("border-block-start-color")}}
 - {{CSSxRef("border-block-start-style")}}
 - {{CSSxRef("border-block-start-width")}}
-- {{CSSxRef("border-block-start")}} (shorthand)
+- {{CSSxRef("border-block-start")}} (abreviada)
 - {{CSSxRef("border-block-style")}}
 - {{CSSxRef("border-block-width")}}
-- {{CSSxRef("border-block")}} (shorthand)
+- {{CSSxRef("border-block")}} (abreviada)
 - {{CSSxRef("border-bottom-color")}}
 - {{CSSxRef("border-bottom-left-radius")}}
 - {{CSSxRef("border-bottom-right-radius")}}
 - {{CSSxRef("border-bottom-style")}}
 - {{CSSxRef("border-bottom-width")}}
-- {{CSSxRef("border-bottom")}} (shorthand)
+- {{CSSxRef("border-bottom")}} (abreviada)
 - {{CSSxRef("border-collapse")}}
-- {{CSSxRef("border-color")}} (shorthand)
+- {{CSSxRef("border-color")}} (abreviada)
 - {{CSSxRef("border-end-end-radius")}}
 - {{CSSxRef("border-end-start-radius")}}
 - {{CSSxRef("border-image-outset")}}
@@ -121,40 +121,40 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("border-image-slice")}}
 - {{CSSxRef("border-image-source")}}
 - {{CSSxRef("border-image-width")}}
-- {{CSSxRef("border-image")}} (shorthand)
+- {{CSSxRef("border-image")}} (abreviada)
 - {{CSSxRef("border-inline-color")}}
 - {{CSSxRef("border-inline-end-color")}}
 - {{CSSxRef("border-inline-end-style")}}
 - {{CSSxRef("border-inline-end-width")}}
-- {{CSSxRef("border-inline-end")}} (shorthand)
+- {{CSSxRef("border-inline-end")}} (abreviada)
 - {{CSSxRef("border-inline-start-color")}}
 - {{CSSxRef("border-inline-start-style")}}
 - {{CSSxRef("border-inline-start-width")}}
-- {{CSSxRef("border-inline-start")}} (shorthand)
+- {{CSSxRef("border-inline-start")}} (abreviada)
 - {{CSSxRef("border-inline-style")}}
 - {{CSSxRef("border-inline-width")}}
-- {{CSSxRef("border-inline")}} (shorthand)
+- {{CSSxRef("border-inline")}} (abreviada)
 - {{CSSxRef("border-left-color")}}
 - {{CSSxRef("border-left-style")}}
 - {{CSSxRef("border-left-width")}}
-- {{CSSxRef("border-left")}} (shorthand)
-- {{CSSxRef("border-radius")}} (shorthand)
+- {{CSSxRef("border-left")}} (abreviada)
+- {{CSSxRef("border-radius")}} (abreviada)
 - {{CSSxRef("border-right-color")}}
 - {{CSSxRef("border-right-style")}}
 - {{CSSxRef("border-right-width")}}
-- {{CSSxRef("border-right")}} (shorthand)
+- {{CSSxRef("border-right")}} (abreviada)
 - {{CSSxRef("border-spacing")}}
 - {{CSSxRef("border-start-end-radius")}}
 - {{CSSxRef("border-start-start-radius")}}
-- {{CSSxRef("border-style")}} (shorthand)
+- {{CSSxRef("border-style")}} (abreviada)
 - {{CSSxRef("border-top-color")}}
 - {{CSSxRef("border-top-left-radius")}}
 - {{CSSxRef("border-top-right-radius")}}
 - {{CSSxRef("border-top-style")}}
 - {{CSSxRef("border-top-width")}}
-- {{CSSxRef("border-top")}} (shorthand)
-- {{CSSxRef("border-width")}} (shorthand)
-- {{CSSxRef("border")}} (shorthand)
+- {{CSSxRef("border-top")}} (abreviada)
+- {{CSSxRef("border-width")}} (abreviada)
+- {{CSSxRef("border")}} (abreviada)
 
 ### B - C
 
@@ -177,7 +177,7 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("caret-animation")}}
 - {{CSSxRef("caret-color")}}
 - {{CSSxRef("caret-shape")}}
-- {{CSSxRef("caret")}} (shorthand)
+- {{CSSxRef("caret")}} (abreviada)
 - {{CSSxRef("clear")}}
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("clip-rule")}}
@@ -193,39 +193,39 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("column-rule-color")}}
 - {{CSSxRef("column-rule-style")}}
 - {{CSSxRef("column-rule-width")}}
-- {{CSSxRef("column-rule")}} (shorthand)
+- {{CSSxRef("column-rule")}} (abreviada)
 - {{CSSxRef("column-span")}}
 - {{CSSxRef("column-width")}}
 - {{CSSxRef("column-wrap")}}
-- {{CSSxRef("columns")}} (shorthand)
+- {{CSSxRef("columns")}} (abreviada)
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-height")}}
 - {{CSSxRef("contain-intrinsic-inline-size")}}
-- {{CSSxRef("contain-intrinsic-size")}} (shorthand)
+- {{CSSxRef("contain-intrinsic-size")}} (abreviada)
 - {{CSSxRef("contain-intrinsic-width")}}
 - {{CSSxRef("contain")}}
 - {{CSSxRef("container-name")}}
 - {{CSSxRef("container-type")}}
-- {{CSSxRef("container")}} (shorthand)
+- {{CSSxRef("container")}} (abreviada)
 - {{CSSxRef("content-visibility")}}
 - {{CSSxRef("content")}}
 - {{CSSxRef("corner-block-end-shape")}}
 - {{CSSxRef("corner-block-start-shape")}}
 - {{CSSxRef("corner-bottom-left-shape")}}
 - {{CSSxRef("corner-bottom-right-shape")}}
-- {{CSSxRef("corner-bottom-shape")}} (shorthand)
+- {{CSSxRef("corner-bottom-shape")}} (abreviada)
 - {{CSSxRef("corner-end-end-shape")}}
 - {{CSSxRef("corner-end-start-shape")}}
 - {{CSSxRef("corner-inline-end-shape")}}
 - {{CSSxRef("corner-inline-start-shape")}}
-- {{CSSxRef("corner-left-shape")}} (shorthand)
-- {{CSSxRef("corner-right-shape")}} (shorthand)
-- {{CSSxRef("corner-shape")}} (shorthand)
+- {{CSSxRef("corner-left-shape")}} (abreviada)
+- {{CSSxRef("corner-right-shape")}} (abreviada)
+- {{CSSxRef("corner-shape")}} (abreviada)
 - {{CSSxRef("corner-start-end-shape")}}
 - {{CSSxRef("corner-start-start-shape")}}
 - {{CSSxRef("corner-top-left-shape")}}
 - {{CSSxRef("corner-top-right-shape")}}
-- {{CSSxRef("corner-top-shape")}} (shorthand)
+- {{CSSxRef("corner-top-shape")}} (abreviada)
 - {{CSSxRef("counter-increment")}}
 - {{CSSxRef("counter-reset")}}
 - {{CSSxRef("counter-set")}}
@@ -248,11 +248,11 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("filter")}}
 - {{CSSxRef("flex-basis")}}
 - {{CSSxRef("flex-direction")}}
-- {{CSSxRef("flex-flow")}} (shorthand)
+- {{CSSxRef("flex-flow")}} (abreviada)
 - {{CSSxRef("flex-grow")}}
 - {{CSSxRef("flex-shrink")}}
 - {{CSSxRef("flex-wrap")}}
-- {{CSSxRef("flex")}} (shorthand)
+- {{CSSxRef("flex")}} (abreviada)
 - {{CSSxRef("float")}}
 - {{CSSxRef("flood-color")}}
 - {{CSSxRef("flood-opacity")}}
@@ -271,7 +271,7 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("font-synthesis-small-caps")}}
 - {{CSSxRef("font-synthesis-style")}}
 - {{CSSxRef("font-synthesis-weight")}}
-- {{CSSxRef("font-synthesis")}} (shorthand)
+- {{CSSxRef("font-synthesis")}} (abreviada)
 - {{CSSxRef("font-variant-alternates")}}
 - {{CSSxRef("font-variant-caps")}}
 - {{CSSxRef("font-variant-east-asian")}}
@@ -279,31 +279,31 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("font-variant-ligatures")}}
 - {{CSSxRef("font-variant-numeric")}}
 - {{CSSxRef("font-variant-position")}}
-- {{CSSxRef("font-variant")}} (shorthand)
+- {{CSSxRef("font-variant")}} (abreviada)
 - {{CSSxRef("font-variation-settings")}}
 - {{CSSxRef("font-weight")}}
 - {{CSSxRef("font-width")}}
-- {{CSSxRef("font")}} (shorthand)
+- {{CSSxRef("font")}} (abreviada)
 - {{CSSxRef("forced-color-adjust")}}
 
 ### G - I
 
-- {{CSSxRef("gap")}} (shorthand)
-- {{CSSxRef("grid-area")}} (shorthand)
+- {{CSSxRef("gap")}} (abreviada)
+- {{CSSxRef("grid-area")}} (abreviada)
 - {{CSSxRef("grid-auto-columns")}}
 - {{CSSxRef("grid-auto-flow")}}
 - {{CSSxRef("grid-auto-rows")}}
 - {{CSSxRef("grid-column-end")}}
 - {{CSSxRef("grid-column-start")}}
-- {{CSSxRef("grid-column")}} (shorthand)
+- {{CSSxRef("grid-column")}} (abreviada)
 - {{CSSxRef("grid-row-end")}}
 - {{CSSxRef("grid-row-start")}}
-- {{CSSxRef("grid-row")}} (shorthand)
+- {{CSSxRef("grid-row")}} (abreviada)
 - {{CSSxRef("grid-template-areas")}}
 - {{CSSxRef("grid-template-columns")}}
 - {{CSSxRef("grid-template-rows")}}
-- {{CSSxRef("grid-template")}} (shorthand)
-- {{CSSxRef("grid")}} (shorthand)
+- {{CSSxRef("grid-template")}} (abreviada)
+- {{CSSxRef("grid")}} (abreviada)
 - {{CSSxRef("hanging-punctuation")}}
 - {{CSSxRef("height")}}
 - {{CSSxRef("hyphenate-character")}}
@@ -316,14 +316,14 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("inline-size")}}
 - {{CSSxRef("inset-block-end")}}
 - {{CSSxRef("inset-block-start")}}
-- {{CSSxRef("inset-block")}} (shorthand)
-- {{CSSxRef("inset-block")}} (shorthand)
+- {{CSSxRef("inset-block")}} (abreviada)
+- {{CSSxRef("inset-block")}} (abreviada)
 - {{CSSxRef("inset-inline-end")}}
 - {{CSSxRef("inset-inline-start")}}
-- {{CSSxRef("inset-inline")}} (shorthand)
-- {{CSSxRef("inset-inline")}} (shorthand)
-- {{CSSxRef("inset")}} (shorthand)
-- {{CSSxRef("inset")}} (shorthand)
+- {{CSSxRef("inset-inline")}} (abreviada)
+- {{CSSxRef("inset-inline")}} (abreviada)
+- {{CSSxRef("inset")}} (abreviada)
+- {{CSSxRef("inset")}} (abreviada)
 - {{CSSxRef("interactivity")}}
 - {{CSSxRef("interest-delay")}}
 - {{CSSxRef("interest-delay-end")}}
@@ -346,20 +346,20 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("list-style-image")}}
 - {{CSSxRef("list-style-position")}}
 - {{CSSxRef("list-style-type")}}
-- {{CSSxRef("list-style")}} (shorthand)
-- {{CSSxRef("list-style")}} (shorthand)
+- {{CSSxRef("list-style")}} (abreviada)
+- {{CSSxRef("list-style")}} (abreviada)
 - {{CSSxRef("margin-block-end")}}
 - {{CSSxRef("margin-block-start")}}
-- {{CSSxRef("margin-block")}} (shorthand)
+- {{CSSxRef("margin-block")}} (abreviada)
 - {{CSSxRef("margin-bottom")}}
 - {{CSSxRef("margin-inline-end")}}
 - {{CSSxRef("margin-inline-start")}}
-- {{CSSxRef("margin-inline")}} (shorthand)
+- {{CSSxRef("margin-inline")}} (abreviada)
 - {{CSSxRef("margin-left")}}
 - {{CSSxRef("margin-right")}}
 - {{CSSxRef("margin-top")}}
 - {{CSSxRef("margin-trim")}}
-- {{CSSxRef("margin")}} (shorthand)
+- {{CSSxRef("margin")}} (abreviada)
 - {{CSSxRef("marker-end")}}
 - {{CSSxRef("marker-mid")}}
 - {{CSSxRef("marker-start")}}
@@ -370,7 +370,7 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("mask-border-slice")}}
 - {{CSSxRef("mask-border-source")}}
 - {{CSSxRef("mask-border-width")}}
-- {{CSSxRef("mask-border")}} (shorthand)
+- {{CSSxRef("mask-border")}} (abreviada)
 - {{CSSxRef("mask-clip")}}
 - {{CSSxRef("mask-composite")}}
 - {{CSSxRef("mask-image")}}
@@ -380,7 +380,7 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("mask-repeat")}}
 - {{CSSxRef("mask-size")}}
 - {{CSSxRef("mask-type")}}
-- {{CSSxRef("mask")}} (shorthand)
+- {{CSSxRef("mask")}} (abreviada)
 - {{CSSxRef("math-depth")}}
 - {{CSSxRef("math-shift")}}
 - {{CSSxRef("math-style")}}
@@ -404,7 +404,7 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("offset-path")}}
 - {{CSSxRef("offset-position")}}
 - {{CSSxRef("offset-rotate")}}
-- {{CSSxRef("offset")}} (shorthand)
+- {{CSSxRef("offset")}} (abreviada)
 - {{CSSxRef("opacity")}}
 - {{CSSxRef("order")}}
 - {{CSSxRef("orphans")}}
@@ -412,7 +412,7 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("outline-offset")}}
 - {{CSSxRef("outline-style")}}
 - {{CSSxRef("outline-width")}}
-- {{CSSxRef("outline")}} (shorthand)
+- {{CSSxRef("outline")}} (abreviada)
 - {{CSSxRef("overflow-anchor")}}
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-clip-margin")}}
@@ -420,24 +420,24 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("overflow-wrap")}}
 - {{CSSxRef("overflow-x")}}
 - {{CSSxRef("overflow-y")}}
-- {{CSSxRef("overflow")}} (shorthand)
+- {{CSSxRef("overflow")}} (abreviada)
 - {{CSSxRef("overlay")}}
 - {{CSSxRef("overscroll-behavior-block")}}
 - {{CSSxRef("overscroll-behavior-inline")}}
 - {{CSSxRef("overscroll-behavior-x")}}
 - {{CSSxRef("overscroll-behavior-y")}}
-- {{CSSxRef("overscroll-behavior")}} (shorthand)
+- {{CSSxRef("overscroll-behavior")}} (abreviada)
 - {{CSSxRef("padding-block-end")}}
 - {{CSSxRef("padding-block-start")}}
-- {{CSSxRef("padding-block")}} (shorthand)
+- {{CSSxRef("padding-block")}} (abreviada)
 - {{CSSxRef("padding-bottom")}}
 - {{CSSxRef("padding-inline-end")}}
 - {{CSSxRef("padding-inline-start")}}
-- {{CSSxRef("padding-inline")}} (shorthand)
+- {{CSSxRef("padding-inline")}} (abreviada)
 - {{CSSxRef("padding-left")}}
 - {{CSSxRef("padding-right")}}
 - {{CSSxRef("padding-top")}}
-- {{CSSxRef("padding")}} (shorthand)
+- {{CSSxRef("padding")}} (abreviada)
 - {{CSSxRef("page-break-after")}}
 - {{CSSxRef("page-break-before")}}
 - {{CSSxRef("page-break-inside")}}
@@ -445,15 +445,15 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("paint-order")}}
 - {{CSSxRef("perspective-origin")}}
 - {{CSSxRef("perspective")}}
-- {{CSSxRef("place-content")}} (shorthand)
-- {{CSSxRef("place-items")}} (shorthand)
-- {{CSSxRef("place-self")}} (shorthand)
+- {{CSSxRef("place-content")}} (abreviada)
+- {{CSSxRef("place-items")}} (abreviada)
+- {{CSSxRef("place-self")}} (abreviada)
 - {{CSSxRef("pointer-events")}}
 - {{CSSxRef("position-anchor")}}
 - {{CSSxRef("position-area")}}
 - {{CSSxRef("position-try-fallbacks")}}
 - {{CSSxRef("position-try-order")}}
-- {{CSSxRef("position-try")}} (shorthand)
+- {{CSSxRef("position-try")}} (abreviada)
 - {{CSSxRef("position-visibility")}}
 - {{CSSxRef("position")}}
 - {{CSSxRef("print-color-adjust")}}
@@ -478,34 +478,34 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("scroll-initial-target")}}
 - {{CSSxRef("scroll-margin-block-end")}}
 - {{CSSxRef("scroll-margin-block-start")}}
-- {{CSSxRef("scroll-margin-block")}} (shorthand)
+- {{CSSxRef("scroll-margin-block")}} (abreviada)
 - {{CSSxRef("scroll-margin-bottom")}}
 - {{CSSxRef("scroll-margin-inline-end")}}
 - {{CSSxRef("scroll-margin-inline-start")}}
-- {{CSSxRef("scroll-margin-inline")}} (shorthand)
+- {{CSSxRef("scroll-margin-inline")}} (abreviada)
 - {{CSSxRef("scroll-margin-left")}}
 - {{CSSxRef("scroll-margin-right")}}
 - {{CSSxRef("scroll-margin-top")}}
-- {{CSSxRef("scroll-margin")}} (shorthand)
+- {{CSSxRef("scroll-margin")}} (abreviada)
 - {{CSSxRef("scroll-marker-group")}}
 - {{CSSxRef("scroll-padding-block-end")}}
 - {{CSSxRef("scroll-padding-block-start")}}
-- {{CSSxRef("scroll-padding-block")}} (shorthand)
+- {{CSSxRef("scroll-padding-block")}} (abreviada)
 - {{CSSxRef("scroll-padding-bottom")}}
 - {{CSSxRef("scroll-padding-inline-end")}}
 - {{CSSxRef("scroll-padding-inline-start")}}
-- {{CSSxRef("scroll-padding-inline")}} (shorthand)
+- {{CSSxRef("scroll-padding-inline")}} (abreviada)
 - {{CSSxRef("scroll-padding-left")}}
 - {{CSSxRef("scroll-padding-right")}}
 - {{CSSxRef("scroll-padding-top")}}
-- {{CSSxRef("scroll-padding")}} (shorthand)
+- {{CSSxRef("scroll-padding")}} (abreviada)
 - {{CSSxRef("scroll-snap-align")}}
 - {{CSSxRef("scroll-snap-stop")}}
 - {{CSSxRef("scroll-snap-type")}}
 - {{CSSxRef("scroll-target-group")}}
 - {{CSSxRef("scroll-timeline-axis")}}
 - {{CSSxRef("scroll-timeline-name")}}
-- {{CSSxRef("scroll-timeline")}} (shorthand)
+- {{CSSxRef("scroll-timeline")}} (abreviada)
 - {{CSSxRef("scrollbar-color")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("scrollbar-width")}}
@@ -535,7 +535,7 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("text-autospace")}}
 - {{CSSxRef("text-box-edge")}}
 - {{CSSxRef("text-box-trim")}}
-- {{CSSxRef("text-box")}} (shorthand)
+- {{CSSxRef("text-box")}} (abreviada)
 - {{CSSxRef("text-combine-upright")}}
 - {{CSSxRef("text-decoration-color")}}
 - {{CSSxRef("text-decoration-inset")}}
@@ -544,11 +544,11 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("text-decoration-skip")}}
 - {{CSSxRef("text-decoration-style")}}
 - {{CSSxRef("text-decoration-thickness")}}
-- {{CSSxRef("text-decoration")}} (shorthand)
+- {{CSSxRef("text-decoration")}} (abreviada)
 - {{CSSxRef("text-emphasis-color")}}
 - {{CSSxRef("text-emphasis-position")}}
 - {{CSSxRef("text-emphasis-style")}}
-- {{CSSxRef("text-emphasis")}} (shorthand)
+- {{CSSxRef("text-emphasis")}} (abreviada)
 - {{CSSxRef("text-indent")}}
 - {{CSSxRef("text-justify")}}
 - {{CSSxRef("text-orientation")}}
@@ -562,7 +562,7 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("text-underline-position")}}
 - {{CSSxRef("text-wrap-mode")}}
 - {{CSSxRef("text-wrap-style")}}
-- {{CSSxRef("text-wrap")}} (shorthand)
+- {{CSSxRef("text-wrap")}} (abreviada)
 - {{CSSxRef("timeline-scope")}}
 - {{CSSxRef("top")}}
 - {{CSSxRef("touch-action")}}
@@ -575,17 +575,17 @@ Las propiedades estándar definidas por especificaciones CSS incluyen las siguie
 - {{CSSxRef("transition-duration")}}
 - {{CSSxRef("transition-property")}}
 - {{CSSxRef("transition-timing-function")}}
-- {{CSSxRef("transition")}} (shorthand)
+- {{CSSxRef("transition")}} (abreviada)
 - {{CSSxRef("translate")}}
 - {{CSSxRef("unicode-bidi")}}
 - {{CSSxRef("user-modify")}}
 - {{CSSxRef("user-select")}}
 - {{CSSxRef("vector-effect")}}
-- {{CSSxRef("vertical-align")}} (shorthand)
+- {{CSSxRef("vertical-align")}} (abreviada)
 - {{CSSxRef("view-timeline-axis")}}
 - {{CSSxRef("view-timeline-inset")}}
 - {{CSSxRef("view-timeline-name")}}
-- {{CSSxRef("view-timeline")}} (shorthand)
+- {{CSSxRef("view-timeline")}} (abreviada)
 - {{CSSxRef("view-transition-class")}}
 - {{CSSxRef("view-transition-name")}}
 - {{CSSxRef("visibility")}}
@@ -617,8 +617,8 @@ Las propiedades no estándar con prefijo del proveedor incluyen:
 #### Prefijo `-webkit-`
 
 - {{CSSxRef("-webkit-box-reflect")}}
-- {{CSSxRef("-webkit-border-before")}} (shorthand)
-- {{CSSxRef("-webkit-mask-box-image")}} (shorthand)
+- {{CSSxRef("-webkit-border-before")}} (abreviada)
+- {{CSSxRef("-webkit-mask-box-image")}} (abreviada)
 - {{CSSxRef("-webkit-mask-composite")}}
 - {{CSSxRef("-webkit-mask-position-x")}}
 - {{CSSxRef("-webkit-mask-position-y")}}
@@ -627,7 +627,7 @@ Las propiedades no estándar con prefijo del proveedor incluyen:
 - {{CSSxRef("-webkit-tap-highlight-color")}}
 - {{CSSxRef("-webkit-text-fill-color")}}
 - {{CSSxRef("-webkit-text-security")}}
-- {{CSSxRef("-webkit-text-stroke")}} (shorthand)
+- {{CSSxRef("-webkit-text-stroke")}} (abreviada)
 - {{CSSxRef("-webkit-text-stroke-color")}}
 - {{CSSxRef("-webkit-text-stroke-width")}}
 - {{CSSxRef("-webkit-touch-callout")}}
@@ -636,7 +636,7 @@ Las propiedades no estándar con prefijo del proveedor incluyen:
 
 {{Specifications}}
 
-## Ver también
+## Véase también
 
 - [Sintaxis CSS](/es/docs/Web/CSS/Guides/Syntax/Introduction)
 - [Pseudoelementos](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
