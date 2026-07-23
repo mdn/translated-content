@@ -3,7 +3,7 @@ title: "Élément HTML `<td>` : l'élément de cellule de tableau"
 short-title: <td>
 slug: Web/HTML/Reference/Elements/td
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 3871111d7fb958626f9d926d8809222d318b8c72
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<td>`** définit une cellule d'un tableau qui contient des données et peut être utilisé comme enfant de l'élément {{HTMLElement("tr")}}.
@@ -85,7 +85,7 @@ caption {
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `colspan`
-  - : Cet attribut contient un entier positif indiquant le nombre de colonnes sur lesquelles s'étend la cellule. La valeur par défaut est `1`. Des valeurs supérieures à 1000 peuvent être considérées comme incorrectes et seront interprétées comme valant la valeur par défaut (`1`).
+  - : Cet attribut contient un entier positif indiquant le nombre de colonnes sur lesquelles s'étend la cellule. Les valeurs supérieures à `1000` sont ramenées à `1000`.
 - `headers`
   - : Cet attribut est une liste de chaînes de caractères séparées par des espaces. Chacune correspond à l'attribut `id` de l'élément {{HTMLElement("th")}} qui s'applique à la cellule courante.
 - `rowspan`
@@ -99,7 +99,7 @@ Les attributs suivants sont obsolètes et ne doivent pas être utilisés. Ils so
   - : Contient une courte description abrégée du contenu de la cellule de données. Certains agents utilisateurs, comme les lecteurs vocaux, peuvent présenter cette description avant le contenu lui-même. Placez le contenu abrégé dans la cellule et la description (plus longue) dans l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title), car cet attribut est obsolète. Ou, de préférence, incluez le contenu dans la cellule de données et utilisez le CSS pour [masquer visuellement le texte débordant](/fr/docs/Web/CSS/Reference/Properties/text-overflow).
 
 - `align` {{Deprecated_Inline}}
-  - : Définit l'alignement horizontal de la cellule de données. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `left`, `center`, `right`, `justify` et `char`. Lorsque cela est pris en charge, la valeur `char` aligne le contenu textuel sur le caractère défini dans l'attribut [`char`](#char) et sur le décalage défini par l'attribut [`charoff`](#charoff). Utilisez la propriété CSS {{CSSxRef("text-align")}} à la place, car cet attribut est obsolète.
+  - : Définit l'alignement horizontal de la cellule de données. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `left`, `center`, `right`, `justify` et `char`. Lorsque c'est pris en charge, la valeur `char` aligne le contenu textuel sur le caractère défini dans l'attribut [`char`](#char) et sur le décalage défini par l'attribut [`charoff`](#charoff). Utilisez la propriété CSS {{CSSxRef("text-align")}} à la place, car cet attribut est obsolète.
 
 - `axis` {{Deprecated_Inline}}
   - : Contient une liste de chaînes de caractères séparées par des espaces, chacune correspondant à l'attribut `id` d'un groupe de cellules auquel la cellule de données s'applique.
@@ -148,7 +148,7 @@ Cet exemple utilise des éléments `<td>` avec d'autres éléments liés aux tab
 Certaines lignes de tableau (éléments {{HTMLElement("tr")}}) contiennent à la fois des cellules d'en-tête (éléments {{HTMLElement("th")}}) et des cellules de données `<td>`. L'élément {{HTMLElement("th")}} qui est le premier enfant de chaque ligne forme la première colonne du tableau, chaque `<th>` fournissant l'en-tête de ligne pour les cellules de données de cette ligne. Chaque élément `<td>` correspondant contient des données alignées avec son en-tête de colonne et son en-tête de ligne.
 
 > [!NOTE]
-> Normalement, un groupe d'en-tête de tableau avec des en-têtes de colonnes serait mis en place pour faciliter la compréhension des informations dans les colonnes. Les éléments {{HTMLElement("thead")}} et {{HTMLElement("tbody")}} seraient utilisés pour regrouper ces lignes d'en-tête et de données dans les sections respectives d'en-tête et de corps du tableau. Ce n'est pas mis en œuvre dans cet exemple afin de se concentrer sur les cellules de données et de réduire la complexité de l'exemple.
+> Normalement, un groupe d'en-tête de tableau avec des en-têtes de colonnes est mis en place pour faciliter la compréhension des informations dans les colonnes. Les éléments {{HTMLElement("thead")}} et {{HTMLElement("tbody")}} seraient utilisés pour regrouper ces lignes d'en-tête et de données dans les sections respectives d'en-tête et de corps du tableau. Ce n'est pas mis en œuvre dans cet exemple afin de se concentrer sur les cellules de données et de réduire la complexité de l'exemple.
 
 ```html
 <table>
@@ -217,7 +217,7 @@ Cet exemple étend et améliore le tableau de base du [précédent exemple](#cel
 
 Une cellule de données supplémentaire (`<td>`) est introduite dans la première ligne (élément {{HTMLElement("tr")}}). Cela crée une quatrième colonne dans le tableau.
 
-En utilisant l'attribut [`rowspan`](#rowspan), la cellule «&nbsp;ABC&nbsp;» s'étend sur les trois premières lignes du tableau. Les dernières cellules de données des lignes suivantes s'étendent chacune sur deux colonnes. Cela est réalisé avec l'attribut [`colspan`](#colspan), les alignant correctement dans la structure du tableau. Notez qu'une ligne supplémentaire (élément {{HTMLElement("tr")}}) est ajoutée au tableau pour illustrer cela.
+En utilisant l'attribut [`rowspan`](#rowspan), la cellule «&nbsp;ABC&nbsp;» s'étend sur les trois premières lignes du tableau. Les dernières cellules de données des lignes suivantes s'étendent chacune sur deux colonnes. C'est réalisé avec l'attribut [`colspan`](#colspan), les alignant correctement dans la structure du tableau. Notez qu'une ligne supplémentaire (élément {{HTMLElement("tr")}}) est ajoutée au tableau pour illustrer cela.
 
 ```html
 <table>
@@ -298,7 +298,7 @@ Pour des relations plus complexes entre les cellules de données (`<td>`) et les
 
 #### HTML
 
-Pour améliorer l'{{Glossary("accessibility", "accessibilité")}} du [précédent exemple](#extension_sur_colonnes_et_lignes) et permettre aux lecteurs d'écran, par exemple, d'énoncer les en-têtes associés à chaque cellule de données, l'attribut [`headers`](#headers) peut être introduit avec des attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Chaque cellule d'en-tête de ligne (élément {{HTMLElement("th")}}) associée à la cellule de données «&nbsp;ABC&nbsp;», c'est-à-dire les lettres «&nbsp;A&nbsp;», «&nbsp;B&nbsp;» et «&nbsp;C&nbsp;», reçoit un identifiant unique avec l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). La cellule de données «&nbsp;ABC&nbsp;» (`<td>`) utilise ensuite ces valeurs d'`id` dans une liste séparée par des espaces pour l'attribut [`headers`](#headers).
+Pour améliorer {{Glossary("accessibility", "l'accessibilité")}} du [précédent exemple](#extension_sur_colonnes_et_lignes) et permettre aux lecteurs d'écran, par exemple, d'énoncer les en-têtes associés à chaque cellule de données, l'attribut [`headers`](#headers) peut être introduit avec des attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Chaque cellule d'en-tête de ligne (élément {{HTMLElement("th")}}) associée à la cellule de données «&nbsp;ABC&nbsp;», c'est-à-dire les lettres «&nbsp;A&nbsp;», «&nbsp;B&nbsp;» et «&nbsp;C&nbsp;», reçoit un identifiant unique avec l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). La cellule de données «&nbsp;ABC&nbsp;» (`<td>`) utilise ensuite ces valeurs d'`id` dans une liste séparée par des espaces pour l'attribut [`headers`](#headers).
 
 > [!NOTE]
 > Il est recommandé d'utiliser des valeurs plus descriptives et utiles pour l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Chaque `id` dans un document doit être unique. Dans cet exemple, les valeurs d'`id` sont des caractères uniques afin de mettre l'accent sur le concept de l'attribut [`headers`](#headers).

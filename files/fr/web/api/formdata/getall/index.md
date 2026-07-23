@@ -1,51 +1,43 @@
 ---
-title: FormData.getAll()
+title: "FormData : méthode getAll()"
+short-title: getAll()
 slug: Web/API/FormData/getAll
+l10n:
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{AvailableInWorkers}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-{{APIRef("XMLHttpRequest API")}}
-
-La méthode **`getAll()`** de l'interface {{domxref("FormData")}} renvoie toutes les valeurs associées à une clé donnée à partir d'un objet `FormData`.
-
-> [!NOTE]
-> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+La méthode **`getAll()`** de l'interface {{DOMxRef("FormData")}} retourne toutes les valeurs associées à une clé donnée à partir d'un objet `FormData`.
 
 ## Syntaxe
 
-```js
-formData.getAll(name);
+```js-nolint
+getAll(name)
 ```
 
 ### Paramètres
 
 - `name`
-  - : Un {{jsxref("String")}} représentant le nom de la clé que vous voulez récupérer.
+  - : Une chaîne de caractères représentant le nom de la clé que vous souhaitez retrouver.
 
-### Retours
+### Valeur de retour
 
-Un tableau de {{domxref("FormDataEntryValue")}} dont la clé correspond à la valeur passée dans le paramètre `name`. Si la clé n'existe pas, la méthode renvoie une liste vide.
+Un tableau de valeurs dont la clé correspond au `name` défini. Sinon, une liste vide.
 
-## Exemple
+## Exemples
 
-La ligne suivante crée un objet `FormData` vide :
-
-```js
-var formData = new FormData();
-```
-
-Si nous ajoutons deux valeurs `username` en utilisant {{domxref("FormData.append")}} :
+Si nous ajoutons deux valeurs `username` à un {{DOMxRef("FormData")}} en utilisant {{DOMxRef("FormData.append", "append()")}}&nbsp;:
 
 ```js
 formData.append("username", "Chris");
 formData.append("username", "Bob");
 ```
 
-La fonction `getAll()` suivante va retourner chaque valeurs de `username` dans un tableau :
+La méthode `getAll()` suivante retourner les deux valeurs `username` dans un tableau&nbsp;:
 
 ```js
-formData.getAll("username"); // Returns ["Chris", "Bob"]
+formData.getAll("username"); // Retourne ["Chris", "Bob"]
 ```
 
 ## Spécifications
@@ -58,7 +50,5 @@ formData.getAll("username"); // Returns ["Chris", "Bob"]
 
 ## Voir aussi
 
-- {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [Utiliser des objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- L'élément HTML {{HTMLElement("form")}}

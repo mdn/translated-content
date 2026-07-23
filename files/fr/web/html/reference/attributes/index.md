@@ -3,7 +3,7 @@ title: Référence des attributs HTML
 short-title: Attributs
 slug: Web/HTML/Reference/Attributes
 l10n:
-  sourceCommit: fef6630e9b90f9794d3194ea8389ff70599c6884
+  sourceCommit: b8ffa5128ed5afe5f76b8936723f91d86b8fc7df
 ---
 
 Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateur·ice·s.
@@ -107,6 +107,17 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         Un texte alternatif à afficher lorsque l'élément ne peut pas être
         affiché.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Attributes">aria-*</a></code>
+      </td>
+      <td>
+        Tous les éléments
+      </td>
+      <td>
+        Modifie l'état ou les propriétés d'un élément dans l'arborescence d'accessibilité. L'applicabilité dépend de l'attribut <a href="/fr/docs/Web/Accessibility/ARIA">ARIA</a> spécifique.
       </td>
     </tr>
     <tr>

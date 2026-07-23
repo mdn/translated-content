@@ -2,7 +2,7 @@
 title: SDP
 slug: Glossary/SDP
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: c991fefbc489687770643d743ca04abc40d7ae1f
 ---
 
 **SDP** (Session Description {{Glossary("Protocol")}}) est une norme permettant de décrire des sessions multimédias. Il contient des informations telles que les types de médias, les adresses de transport, la synchronisation et les {{Glossary("codec", "codecs")}}.

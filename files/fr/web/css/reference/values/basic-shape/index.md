@@ -3,10 +3,10 @@ title: Type CSS `<basic-shape>`
 short-title: <basic-shape>
 slug: Web/CSS/Reference/Values/basic-shape
 l10n:
-  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
+  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<basic-shape>`** représente une forme utilisée dans les propriétés {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}} et {{CSSxRef("offset-path")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<basic-shape>`** représente une forme utilisée dans les propriétés {{CSSxRef("border-shape")}}, {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}} et {{CSSxRef("shape-outside")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: &lt;basic-shape&gt;")}}
 
@@ -94,21 +94,21 @@ inset( <length-percentage>{1,4} [ round <'border-radius'> ]? )
 
 Lorsque les quatre premiers arguments sont fournis, ils représentent les décalages haut, droite, bas et gauche depuis la boîte de référence vers l'intérieur, définissant la position des bords du rectangle en retrait. Ces arguments suivent la syntaxe de la propriété abrégée {{CSSxRef("margin")}}, permettant de définir les quatre retraits avec une, deux, trois ou quatre valeurs.
 
-Si la somme des deux marges d'une dimension dépasse 100&nbsp;% de cette dimension, les deux valeurs sont réduites proportionnellement pour que leur somme soit égale à 100&nbsp;%. Par exemple, la valeur `inset(90% 10% 60% 10%)` a un retrait haut de `90%` et un retrait bas de `60%`. Ces valeurs sont réduites proportionnellement à `inset(60% 10% 40% 10%)`. Les formes de ce type, qui n'enferment aucune zone et n'ont pas de {{CSSxRef("shape-margin")}}, n'affectent pas l'habillage.
+Si la somme des deux marges d'une dimension dépasse 100% de cette dimension, les deux valeurs sont réduites proportionnellement pour que leur somme soit égale à 100%. Par exemple, la valeur `inset(90% 10% 60% 10%)` a un retrait haut de `90%` et un retrait bas de `60%`. Ces valeurs sont réduites proportionnellement à `inset(60% 10% 40% 10%)`. Les formes de ce type, qui n'enferment aucune zone et n'ont pas de {{CSSxRef("shape-margin")}}, n'affectent pas l'habillage.
 
 ### Syntaxe pour les rectangles par distance
 
-La fonction {{CSSxRef("basic-shape/rect","rect()")}} définit un rectangle en utilisant les distances spécifiées depuis les bords supérieur et gauche de la boîte de référence, avec des coins arrondis optionnels.
+La fonction {{CSSxRef("basic-shape/rect","rect()")}} définit un rectangle en utilisant les distances définies depuis les bords supérieur et gauche de la boîte de référence, avec des coins arrondis optionnels.
 
 ```plain
 rect( [ <length-percentage> | auto ]{4} [ round <'border-radius'> ]? )
 ```
 
-Avec la fonction `rect()`, vous ne définissez pas la largeur et la hauteur du rectangle. Vous spécifiez plutôt quatre valeurs pour créer le rectangle, ses dimensions étant déterminées par la taille de la boîte de référence et les quatre valeurs de décalage. Chaque valeur peut être soit une {{CSSxRef("length")}}, une {{CSSxRef("percentage")}} ou le mot-clé `auto`. Le mot-clé `auto` est interprété comme `0%` pour les valeurs haut et gauche, et comme `100%` pour les valeurs bas et droite.
+Avec la fonction `rect()`, vous ne définissez pas la largeur et la hauteur du rectangle. Vous définissez plutôt quatre valeurs pour créer le rectangle, ses dimensions étant déterminées par la taille de la boîte de référence et les quatre valeurs de décalage. Chaque valeur peut être soit une {{CSSxRef("length")}}, une {{CSSxRef("percentage")}} ou le mot-clé `auto`. Le mot-clé `auto` est interprété comme `0%` pour les valeurs haut et gauche, et comme `100%` pour les valeurs bas et droite.
 
 ### Syntaxe pour les rectangles à dimensions
 
-La fonction {{CSSxRef("basic-shape/xywh","xywh()")}} définit un rectangle situé à des distances spécifiées depuis les bords gauche (`x`) et haut (`y`) de la boîte de référence, et dimensionné par la largeur (`w`) et la hauteur (`h`) du rectangle, dans cet ordre, avec des coins arrondis optionnels.
+La fonction {{CSSxRef("basic-shape/xywh","xywh()")}} définit un rectangle situé à des distances définies depuis les bords gauche (`x`) et haut (`y`) de la boîte de référence, et dimensionné par la largeur (`w`) et la hauteur (`h`) du rectangle, dans cet ordre, avec des coins arrondis optionnels.
 
 ```plain
 xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <'border-radius'> ]? )
@@ -122,7 +122,7 @@ La fonction {{CSSxRef("basic-shape/circle","circle()")}} définit un cercle à l
 circle( <shape-radius>? [ at <position> ]? )
 ```
 
-L'argument `<shape-radius>` représente le rayon du cercle, défini comme une longueure ({{CSSxRef("length")}}) ou un pourcentage ({{CSSxRef("percentage")}}). Une valeur en pourcentage est résolue à partir de la largeur et de la hauteur utilisées de la boîte de référence comme `sqrt(width^2+height^2)/sqrt(2)`. Si omis, le rayon est défini par `closest-side`.
+L'argument `<shape-radius>` représente le rayon du cercle, défini comme une longueur ({{CSSxRef("length")}}) ou un pourcentage ({{CSSxRef("percentage")}}). Une valeur en pourcentage est résolue à partir de la largeur et de la hauteur utilisées de la boîte de référence comme `sqrt(width^2+height^2)/sqrt(2)`. Si omis, le rayon est défini par `closest-side`.
 
 ### Syntaxe pour les ellipses
 
@@ -132,7 +132,7 @@ La fonction {{CSSxRef("basic-shape/ellipse","ellipse()")}} définit une ellipse 
 ellipse( [ <shape-radius>{2} ]? [ at <position> ]? )
 ```
 
-Les arguments `<shape-radius>` représentent _rx_ et _ry_, les rayons selon les axes x et y de l'ellipse, dans cet ordre. Ces valeurs sont spécifiées comme une longueure ({{CSSxRef("length")}}) ou un pourcentage ({{CSSxRef("percentage")}}). Les valeurs en pourcentage sont résolues par rapport à la largeur utilisée (pour rx) et la hauteur utilisée (pour ry) de la boîte de référence. Si un seul rayon est fourni, la fonction `ellipse()` est invalide. Si aucune valeur n'est fournie, `50% 50%` est utilisé.
+Les arguments `<shape-radius>` représentent _rx_ et _ry_, les rayons selon les axes x et y de l'ellipse, dans cet ordre. Ces valeurs sont définies comme une longueur ({{CSSxRef("length")}}) ou un pourcentage ({{CSSxRef("percentage")}}). Les valeurs en pourcentage sont résolues par rapport à la largeur utilisée (pour rx) et la hauteur utilisée (pour ry) de la boîte de référence. Si un seul rayon est fourni, la fonction `ellipse()` est invalide. Si aucune valeur n'est fournie, `50% 50%` est utilisé.
 
 ### Syntaxe pour les polygones
 
@@ -152,7 +152,7 @@ La fonction {{CSSxRef("basic-shape/path","path()")}} définit une forme à l'aid
 path( <'fill-rule'>? , <string> )
 ```
 
-La chaîne de caractères (`<string>`) requise est un [chemin SVG](/fr/docs/Web/SVG/Reference/Attribute/d) sous forme de chaîne entre guillemets. La fonction `path()` n'est pas une valeur valide pour la propriété {{CSSxRef("shape-outside")}}.
+La chaîne de caractères (`<string>`) requise est un [chemin SVG](/fr/docs/Web/SVG/Reference/Attribute/d) sous forme de chaîne de caractères entre guillemets. La fonction `path()` n'est pas une valeur valide pour la propriété {{CSSxRef("shape-outside")}}.
 
 ### Syntaxe pour les formes
 
@@ -174,10 +174,10 @@ La boîte de référence par défaut est la [`margin-box`](/fr/docs/Web/CSS/Refe
 
 ### Valeurs calculées des formes de base
 
-Les valeurs dans une fonction `<basic-shape>` sont calculées comme spécifié, avec les considérations supplémentaires suivantes&nbsp;:
+Les valeurs dans une fonction `<basic-shape>` sont calculées comme définies, avec les considérations supplémentaires suivantes&nbsp;:
 
 - Pour toute valeur omise, sa valeur par défaut est utilisée.
-- Une valeur {{CSSxRef("position_value", "&lt;position&gt;")}} dans `circle()` ou `ellipse()` est calculée comme une paire de coordonnées de décalages depuis le coin supérieur gauche de la boîte de référence&nbsp;: le premier décalage est horizontal, le second est vertical. Chaque décalage est spécifié comme une valeur {{CSSxRef("length-percentage")}}.
+- Une valeur {{CSSxRef("position_value", "&lt;position&gt;")}} dans `circle()` ou `ellipse()` est calculée comme une paire de coordonnées de décalages depuis le coin supérieur gauche de la boîte de référence&nbsp;: le premier décalage est horizontal, le second est vertical. Chaque décalage est défini comme une valeur {{CSSxRef("length-percentage")}}.
 - Une valeur [`<border-radius>`](/fr/docs/Web/CSS/Reference/Properties/border-radius) dans `inset()` est développée en une liste de huit valeurs, chacune étant soit une {{CSSxRef("length")}} soit une {{CSSxRef("percentage")}}.
 - Les fonctions {{CSSxRef("basic-shape/inset","inset()")}}, {{CSSxRef("basic-shape/rect","rect()")}} et {{CSSxRef("basic-shape/xywh","xywh()")}} sont calculées comme la fonction `inset()` équivalente.
 
@@ -187,13 +187,13 @@ Lors de l'animation entre deux fonctions `<basic-shape>`, les règles {{Glossary
 
 Chaque valeur dans les listes des deux fonctions `<basic-shape>` est interpolée selon sa valeur calculée comme {{CSSxRef("number")}}, {{CSSxRef("length")}}, {{CSSxRef("percentage")}}, {{CSSxRef("angle")}} ou {{CSSxRef("calc", "calc()")}} lorsque c'est possible. L'interpolation peut tout de même avoir lieu si les valeurs ne sont pas de ces types mais sont identiques entre les deux fonctions de forme de base interpolées, comme `nonzero`.
 
-- **Les deux formes sont de type `ellipse()` ou `circle()`**&nbsp;: l'interpolation s'applique à chaque valeur correspondante si leurs rayons sont spécifiés comme {{CSSxRef("length")}} ou {{CSSxRef("percentage")}} (et non par des mots-clés comme `closest-side` ou `farthest-side`).
+- **Les deux formes sont de type `ellipse()` ou `circle()`**&nbsp;: l'interpolation s'applique à chaque valeur correspondante si leurs rayons sont définis comme {{CSSxRef("length")}} ou {{CSSxRef("percentage")}} (et non par des mots-clés comme `closest-side` ou `farthest-side`).
 
 - **Les deux formes sont de type `inset()`**&nbsp;: l'interpolation s'applique à chaque valeur correspondante.
 
 - **Les deux formes sont de type `polygon()`**&nbsp;: l'interpolation s'applique à chaque valeur correspondante si elles utilisent la même `<fill-rule>` et ont le même nombre de paires de coordonnées séparées par des virgules.
 
-- **Les deux formes sont de type `path()`**&nbsp;: l'interpolation s'applique à chaque paramètre comme {{CSSxRef("&lt;number&gt;")}} si les chaînes de chemin dans les deux formes correspondent en nombre, type et séquence de [commandes de données de chemin](/fr/docs/Web/SVG/Reference/Attribute/d#commandes_de_chemin).
+- **Les deux formes sont de type `path()`**&nbsp;: l'interpolation s'applique à chaque paramètre comme {{CSSxRef("&lt;number&gt;")}} si les chaînes de caractères de chemin dans les deux formes correspondent en nombre, type et séquence de [commandes de données de chemin](/fr/docs/Web/SVG/Reference/Attribute/d#commandes_de_chemin).
 
 - **Les deux formes sont de type `shape()`**&nbsp;: l'interpolation s'applique à chaque valeur correspondante si elles ont le même mot-clé de commande et utilisent le même mot-clé `<by-to>`. Si `shape()` est utilisé dans la propriété {{CSSxRef("clip-path")}}, les deux formes interpolent si elles ont aussi la même `<fill-rule>`.
   - Si elles utilisent la `<curve-command>` ou la `<smooth-command>`, le nombre de points de contrôle doit correspondre pour l'interpolation.
@@ -280,7 +280,7 @@ div {
 
 ## Voir aussi
 
-- Propriétés utilisant ce type&nbsp;: {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, {{CSSxRef("shape-outside")}}
+- Propriétés utilisant ce type&nbsp;: {{CSSxRef("border-shape")}}, {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, {{CSSxRef("shape-outside")}}
 - Éléments SVG&nbsp;: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 - [Présentation des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
 - Le module de [formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
