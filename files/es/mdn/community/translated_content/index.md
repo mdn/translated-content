@@ -50,7 +50,7 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 ### Español (es)
 
 - Discusiones: [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
-- Colaboradores actuales: [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz)
+- Colaboradores actuales: [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz), [mariomorillo](https://github.com/mariomorillo)
 
 > [!NOTE]
 > Si quiere hablar sobre la posibilidad de _descongelar_ una localización, las [directrices sobre lo que se requiere se pueden encontrar aquí](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)
