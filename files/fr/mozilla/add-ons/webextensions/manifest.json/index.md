@@ -6,7 +6,7 @@ l10n:
 ---
 
 > [!NOTE]
-> Cet article décrit le fichier `manifest.json` pour les extensions web. Si vous cherchez des informations sur le `manifest.json` dans les PWA, consultez l'article [Web App Manifest](/fr/docs/Web/Progressive_web_apps/Manifest).
+> Cet article décrit le fichier `manifest.json` pour les extensions web. Si vous cherchez des informations sur le `manifest.json` dans les applications web progressives (PWA), consultez l'article sur [les manifestes d'application web](/fr/docs/Web/Progressive_web_apps/Manifest).
 
 Le fichier `manifest.json` est le seul fichier que toute extension utilisant les API WebExtension doit contenir.
 
