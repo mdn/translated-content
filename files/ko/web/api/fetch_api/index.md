@@ -7,9 +7,9 @@ l10n:
 
 {{DefaultAPISidebar("Fetch API")}}
 
-Fetch API는 네트워크 통신을 포함한 리소스 취득을 위한 인터페이스를 제공하며, {{domxref("XMLHttpRequest")}}보다 강력하고 유연한 대체제입니다.
-
 {{AvailableInWorkers}}
+
+Fetch API는 네트워크 통신을 포함한 리소스 취득을 위한 인터페이스를 제공하며, {{domxref("XMLHttpRequest")}}보다 강력하고 유연한 대체제입니다.
 
 ## 개념과 사용법
 
@@ -23,14 +23,14 @@ Fetch API는 {{domxref("Request")}}와 {{domxref("Response")}} 객체, 그리고
 
 {{domxref("Request.Request", "Request()")}}와 {{domxref("Response.Response", "Response()")}} 생성자를 직접 호출해서 요청과 응답을 생성할 수 있지만, 이런 사용법은 흔치 않습니다. 보통 이 두 객체는 다른 API(예를 들어, 서비스 워커의 {{domxref("FetchEvent.respondWith()")}})에 의해 생성됩니다.
 
-Fetch API가 제공하는 기능의 자세한 정보는 [Fetch 사용하기](/ko/docs/Web/API/Fetch_API/Using_Fetch)에서, 개념 학습은 [Fetch 기본 개념](/ko/docs/conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b)에서 확인하세요.
+Fetch API 기능 사용법에 대해서는 [Fetch 사용하기](/ko/docs/Web/API/Fetch_API/Using_Fetch) 문서를 참고하세요.
 
-## Fetch 인터페이스
+## 인터페이스
 
-- {{domxref("fetch()")}}
-  - : 리소스를 취득하기 위한 `fetch()` 메서드입니다.
+- {{domxref("Window.fetch()")}} 및 {{domxref("WorkerGlobalScope.fetch()")}}
+  - : 리소스를 가져오기 위한 `fetch()` 메서드입니다.
 - {{domxref("Headers")}}
-  - : 요청/응답 헤더를 나타냅니다. 헤더를 질의하고 그 결과에 따라 다양한 동작을 취하기 위해 사용할 수 있습니다.
+  - : 요청/응답 헤더를 나타내며, 이를 조회하고 결과에 따라 다른 동작을 수행할 수 있습니다.
 - {{domxref("Request")}}
   - : 리소스 요청을 나타냅니다.
 - {{domxref("Response")}}
@@ -50,5 +50,3 @@ Fetch API가 제공하는 기능의 자세한 정보는 [Fetch 사용하기](/ko
 - [Service Worker API](/ko/docs/Web/API/Service_Worker_API)
 - [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ko/docs/Web/HTTP)
-- [Fetch 폴리필](https://github.com/github/fetch)
-- [Fetch 기본 개념](/ko/docs/conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b)
