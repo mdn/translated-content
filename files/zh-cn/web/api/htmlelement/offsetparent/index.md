@@ -1,30 +1,41 @@
 ---
-title: HTMLElement.offsetParent
+title: HTMLElement：offsetParent 属性
+short-title: offsetParent
 slug: Web/API/HTMLElement/offsetParent
+l10n:
+  sourceCommit: 678f7ed93e03b90cae88e9a3c7e4b81b0f969664
 ---
 
-{{APIRef}}
+{{ APIRef("HTML DOM") }}
 
-**`HTMLElement.offsetParent`** 是一个只读属性，返回一个指向最近的（指包含层级上的最近）包含该元素的定位元素或者最近的 `table`, `td`, `th`, `body` 元素。当元素的 `style.display` 设置为 "none" 时，`offsetParent` 返回 `null`。`offsetParent` 很有用，因为 {{domxref("HTMLElement.offsetTop","offsetTop")}} 和 {{domxref("HTMLElement.offsetLeft","offsetLeft")}} 都是相对于其内边距边界的。
+**`HTMLElement.offsetParent`** 只读属性返回对最近的（在包含层级中最近的）已定位祖先元素的引用。
 
-## 语法
+已定位祖先可能是：
 
-```plain
-parentObj = element.offsetParent;
-```
+- 绝对定位元素的[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block#确定包含块)
+- 与当前元素有效 [zoom](/zh-CN/docs/Web/CSS/Reference/Properties/zoom) 值不同的元素（即其所有父元素缩放比例的乘积）
+- 当元素本身为静态定位时的 `td`、`th`、`table`
 
-- _parentObj_ 是一个对象引用，当前元素相对于该对象偏移（offset）。
+如果没有已定位的祖先元素，则返回 `body`。
 
-## 浏览器兼容性
+> [!NOTE]
+> 在下列情况下，`offsetParent` 返回 `null`：
+>
+> - 该元素或任一祖先元素的 `display` 属性被设置为 `none`。
+> - 该元素的 `position` 属性被设置为 `fixed`，且其包含块是视口。
+>   如果包含块不是视口，则 `offsetParent` 返回形成包含块的最近祖先，例如设置了 `transform`、`perspective` 或 `filter` 样式的祖先。
+> - 该元素是 `<body>` 或 `<html>`。
 
-在 Webkit 中，如果元素为隐藏的（该元素或其祖先元素的 `style.display` 为 "none"），或者该元素的 `style.position` 被设为 "fixed"，则该属性返回 `null`。
+`offsetParent` 很有用，因为 {{domxref("HTMLElement.offsetTop","offsetTop")}} 和 {{domxref("HTMLElement.offsetLeft","offsetLeft")}} 是相对于其内边距边缘的。
 
-在 IE 9 中，如果该元素的 `style.position` 被设置为 "fixed"，则该属性返回 `null`。（`display:none` 无影响。）
+## 值
+
+对当前元素在其中发生偏移的那个元素的对象引用。
 
 ## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
