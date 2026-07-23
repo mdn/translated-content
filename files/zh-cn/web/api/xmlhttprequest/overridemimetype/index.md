@@ -1,40 +1,45 @@
 ---
-title: XMLHttpRequest.overrideMimeType()
+title: XMLHttpRequest：overrideMimeType() 方法
+short-title: overrideMimeType()
 slug: Web/API/XMLHttpRequest/overrideMimeType
+l10n:
+  sourceCommit: 2ccbd062264d0a2a34f185a3386cb272f42c50f5
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-XMLHttpRequest 的 **`overrideMimeType`** 方法是指定一个 MIME 类型用于替代服务器指定的类型，使服务端响应信息中传输的数据按照该指定 MIME 类型处理。例如强制使流方式处理为"text/xml"类型处理时会被使用到，即使服务器在响应头中并没有这样指定。此方法必须在 send 方法之前调用方为有效。
+{{domxref("XMLHttpRequest")}} 方法 **`overrideMimeType()`** 指定在解释请求中传输的数据时，使用不同于服务器所提供的 MIME 类型。
 
-## Syntax
+例如，这可用于强制将流按 `"text/xml"` 处理并解析，即使服务器并未如此报告。此方法必须在调用 {{domxref("XMLHttpRequest.send", "send()")}} 之前调用。
 
-```plain
-XMLHttpRequest.overrideMimeType(mimeType)
+## 语法
+
+```js-nolint
+overrideMimeType(mimeType)
 ```
 
-### Parameters
+### 参数
 
 - `mimeType`
-  - : 一个 {{jsxref("String")}} 指定具体的 MIME 类型去代替有服务器指定的 MIME 类型。如果服务器没有指定类型，那么 `XMLHttpRequest` 将会默认为 `"text/xml"`.
+  - : 一个字符串，指定用于替代服务器所指定类型的 MIME 类型。如果服务器未指定类型，`XMLHttpRequest` 会假定为 `"text/xml"`。
 
-### Return value
+### 返回值
 
-`undefined`.
+无（{{jsxref("undefined")}}）。
 
-## Example
+## 示例
 
-这个样例指定 Content-Type 为“text/plain",为接受的数据重写 ContentType
+本示例将 MIME 类型指定为 `"text/plain"`，从而覆盖服务器为所接收数据声明的类型。
 
 > [!NOTE]
-> 如果服务器没有指定一个[`Content-Type`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Type) 头，{{domxref("XMLHttpRequest")}} 默认 MIME 类型为`"text/xml"`. 如果接受的数据不是有效的 XML，将会出现格”格式不正确“的错误。你能够通过调用 `overrideMimeType()` 指定各种类型来避免这种情况。
+> 如果服务器未提供 [`Content-Type`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Type) 标头，{{domxref("XMLHttpRequest")}} 会假定 MIME 类型为 `"text/xml"`。如果内容不是有效的 XML，则会发生“XML Parsing Error: not well-formed”错误。你可以通过调用 `overrideMimeType()` 指定其他类型来避免此问题。
 
 ```js
-// Interpret the received data as plain text
+// 将接收到的数据解释为纯文本
 
 req = new XMLHttpRequest();
 req.overrideMimeType("text/plain");
-req.addEventListener("load", callback, false);
+req.addEventListener("load", callback);
 req.open("get", url);
 req.send();
 ```
