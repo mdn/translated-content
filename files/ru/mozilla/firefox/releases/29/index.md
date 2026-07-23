@@ -57,7 +57,7 @@ _Больше деталей и изменений смотрите в [блог
 
 - To match the updated ECMAScript6 draft specification, the {{jsxref("Map")}} and {{jsxref("Set")}} objects now treat `-0` and `+0` as the same when checking for key and value equality.
 - `Promise` has been enabled by default ([Firefox bug 918806](https://bugzil.la/918806)).
-- Completed generators now returns an {{jsxref("IteratorResult")}} object instead of throwing ([Firefox bug 958951](https://bugzil.la/958951)).
+- Completed generators now returns an `IteratorResult` object instead of throwing ([Firefox bug 958951](https://bugzil.la/958951)).
 - A malformed JSON string parsed by {{jsxref("JSON.parse()")}} now yields a more detailed error message containing the line and column number that caused the parsing error. This is useful when debugging large JSON data.
 
 ### Интерфейс/APIs/DOM
