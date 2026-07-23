@@ -1,5 +1,5 @@
 ---
-title: setTimeout() 전역 함수
+title: Window:setTimeout()
 slug: Web/API/Window/setTimeout
 original_slug: Web/API/setTimeout
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-전역 **`setTimeout()`** 메서드는 만료된 후 함수나 지정한 코드 조각을 한 번 실행하는 타이머를 설정합니다.
+Window 인터페이스의 **`setTimeout()`** 메서드는 타이머를 설정하고 타이머가 만료되면 함수나 지정된 코드 조각을 한 번 실행합니다.
 
 ## 구문
 
@@ -36,9 +36,9 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 
 ### 반환 값
 
-반환하는 `timeoutID`는 양의 정수로서 `setTimeout()`이 생성한 타이머를 식별할 때 사용합니다. 이 값을 {{domxref("clearTimeout()")}}에 전달하면 타임아웃을 취소할 수 있습니다.
+반환하는 `timeoutID`는 양의 정수(보통 1에서 2,147,483,647 범위)로서 `setTimeout()`이 생성한 타이머를 식별할 때 사용합니다. 이 값을 {{domxref("clearTimeout()")}}에 전달하면 타임아웃을 취소할 수 있습니다.
 
-같은 객체(창이나 워커)에서 반복해 호출하는 `setTimeout()` 또는 {{domxref("setInterval()")}} 메서드는 절대 같은 `timeoutID`를 사용하지 않습니다. 그러나 다른 객체끼리는 다른 ID 풀을 사용합니다.
+같은 전역 환경(창이나 워커)에서 반복해 호출하는 `setTimeout()` 또는 {{domxref("setInterval()")}} 메서드는 절대 같은 `timeoutID`를 사용하지 않습니다. 그러나 다른 전역 환경끼리는 다른 ID 풀을 별도로 사용합니다.
 
 ## 설명
 
@@ -282,9 +282,27 @@ table {
 
 정확한 동작은 브라우저에 따라 다릅니다.
 
-- Firefox Desktop과 Chrome 모두 비활성 탭에 최소 1초의 지연 시간을 강제합니다.
+- Firefox Desktop은 비활성 탭에 최소 1초의 지연 시간을 강제합니다.
 - Firefox Android에서는 15분의 최소 지연 시간이 존재하고, 탭 전체를 언로드하는 경우도 있습니다.
 - Firefox는 비활성 탭이 {{domxref("AudioContext")}}를 포함하는 경우 최소 지연 시간을 강제하지 않습니다.
+
+- Chrome은 탭의 활동 상태에 따라 여러 수준의 타이머 제한(throttling)을 적용합니다:
+
+  - 최소 제한(Minimal throttling): 페이지가 보이거나, 최근에 소리를 재생했거나, Chrome이 페이지를 활성 상태로 간주하는 경우 적용됩니다. 타이머는 요청한 간격에 가깝게 실행됩니다.
+
+  - 제한(Throttling): 최소 제한 조건을 만족하지 않으면서 다음 조건 중 하나라도 충족할 경우 적용됩니다:
+  - 타이머의 중첩 호출 횟수(nesting count)가 5 미만일 경우
+  - 페이지가 보이지 않게 된 시간이 5분 미만일 경우
+  - WebRTC가 활성 상태인 경우
+
+    이 상태에서는 타이머가 1초에 한 번만 확인되며, 비슷한 타이머끼리 함께 실행될 수 있습니다.
+
+  - 강력 제한(Intensive throttling): Chrome 88(2021년 1월 도입)부터 적용되었습니다. 최소 제한 및 일반 제한 조건을 모두 만족하지 않으며, 아래 모든 조건을 동시에 만족하는 경우 적용됩니다:
+    - 중첩 호출 횟수가 5 이상일 경우
+    - 페이지가 5분 이상 보이지 않았을 경우
+    - 페이지가 30초 이상 소리를 재생하지 않았을 경우
+    - WebRTC가 비활성 상태일 경우
+      이 상태에서는 타이머가 1분에 한 번만 확인되며, 역시 비슷한 타이머끼리 함께 실행될 수 있습니다.
 
 #### 추적 스크립트 스로틀링
 
