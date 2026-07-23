@@ -2,12 +2,14 @@
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 l10n:
-  sourceCommit: 6f0b1e294dc3aa8d6423df8aae059081a3464676
+  sourceCommit: 9cc2c59a86a7987f8a6a4ee854bbb65a29ce21dd
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 Intersection Observer API는 상위 요소 또는 최상위 문서의 {{Glossary("viewport")}}와 대상 요소 사이의 변화를 비동기적으로 관찰할 수 있는 수단을 제공합니다.
+
+## 개요
 
 역사적으로, 요소의 가시성 또는 관련된 두 요소 사이의 상대적 가시성을 감지하는 것은 해결책을 신뢰할 수 없고 브라우저와 사용자가 접근하는 사이트를 느리게 만드는 어려운 작업이었습니다. Web이 성숙해짐에 따라, 이러한 종류의 정보의 요구가 늘어났습니다. 교차 정보는 다음과 같은 많은 이유로 필요합니다.
 
@@ -61,8 +63,14 @@ threshold가 1.0이라는 의미는 `root` 옵션으로 지정된 요소 내에�
   - : 대상 가시성을 체크하기 위한 뷰포트로 사용되는 요소. 반드시 타겟의 상위 요소이어야 합니다. 만약 뷰포트를 지정하지 않거나 `null` 이면 브라우저 뷰포트가 기본으로 설정됩니다.
 - `rootMargin`
   - : 루트 주위의 여백입니다. CSS {{cssxref("margin")}} 속성과 비슷한 값을 가질 수 있습니다. 예시. `"10px 20px 30px 40px"` (위, 오른쪽, 아래, 왼쪽). 값은 백분율이 될 수 있습니다. 이 값의 집합은 교차 지점을 계산하기 전에 루트 요소 경계 박스의 각 사이드 값을 늘리거나 줄일 수 있습니다. 기본 값은 0입니다.
+- `scrollMargin`
+  - : 중첩된 {{glossary("scroll container","scroll containers")}} 주위에 적용되는 여백으로, `rootMargin`과 동일한 값/기본값을 사용합니다. 이 여백은 교차 지점을 계산하기 전에 중첩된 스크롤 가능한 컨테이너에 적용됩니다. 양수 값은 컨테이너의 클리핑 사각형을 확장하여, 타겟이 실제로 보이기 전에 감지되도록 허용하며, 음수 값은 이 영역을 축소합니다.
 - `threshold`
   - : 관찰자의 콜백이 무조건 실행되어야 하는 대상의 가시성 백분율을 나타내는 숫자 또는 숫자 배열입니다. 만약 가시성이 50% 지점을 넘는 경우만 감지하고 싶다면, 0.5를 지정하여 사용할 수 있습니다. 만약 가시성이 25%만큼 넘어갈 때마다 콜백을 실행하고 싶다면, \[0, 0.25, 0.5, 0.75, 1]을 지정하여 사용할 수 있습니다. 기본 값은 0 입니다. (1 픽셀이라도 보이면, 콜백이 실행됩니다.) 1.0의 값은 모든 픽셀이 가시 상태가 될 때까지 임계값이 통과되지 않는다는 것을 의미합니다.
+- `delay` {{experimental_inline}}
+  - : 타겟의 가시성을 추적할 때([trackVisibility](#trackvisibility)가 `true`일 때), 관찰자로부터 발생하는 알림 간에 최소 지연 시간(ms)을 설정하는 데 사용할 수 있습니다. 가시성 계산은 연산 비용이 크기 때문에 알림 빈도를 제한하는 것이 바람직합니다. 가시성을 추적할 때, 100 미만의 값은 자동으로 100으로 설정되며, 허용 가능한 가장 큰 값을 사용하는 것이 권장됩니다. 기본값은 0입니다.
+- `trackVisibility` {{experimental_inline}}
+  - : `IntersectionObserver`가 타겟의 가시성 변화를 추적할지 여부를 나타내는 boolean 값입니다. 값이 `false`인 경우, 브라우저는 타겟 요소가 루트 요소의 뷰포트로 스크롤되어 들어올 때 교차를 보고합니다. 값이 `true`인 경우, 브라우저는 타겟이 실제로 보이는지, 다른 요소에 의해 가려지지 않았는지, 필터, 투명도 감소, 변형 등에 의해 왜곡되거나 숨겨졌는지를 추가로 확인합니다. 가시성 추적은 연산 비용이 크기 때문에 기본값은 `false`입니다. 이 값을 설정하는 경우 [`delay`](#delay) 옵션도 함께 설정해야 합니다.
 
 #### 관찰할 요소를 대상으로 하기
 
@@ -117,6 +125,335 @@ Intersection Observer API가 고려하는 모든 영역은 직사각형입니다
 - 위 두 가지 경우가 아니라면, root 교차 직사각형은 교차 루트 경계 클라이언트 직사각형입니다.({{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}}를 호출하여 반환된)
 
 루트 교차 직사각형은 {{domxref("IntersectionObserver")}}를 생성할 때, **root margin** , `rootMargin`을 설정함으로 인해 조정될 수 있습니다. `rootMargin` 값은 최종 교차 루트 경계 (콜백이 실행될 때 {{domxref("IntersectionObserverEntry.rootBounds")}}에 공개된)를 생성하기 위해 교차 루트 경계 박스의 각 측면을 더해 오프셋을 정의합니다.
+양수 값으로 설정하면 박스가 확장되고, 음수 값으로 설정하면 박스가 축소됩니다. 각 오프셋 값은 픽셀(px) 또는 퍼센트(%) 단위로만 지정할 수 있습니다.
+
+루트 여백을 사용하여 박스를 확장하면, 타겟 요소가 실제로 화면에 보이기 전에 루트와 교차하도록 만들 수 있습니다.
+예를 들어, 이미지가 보이기 시작하는 순간이 아니라, 화면에 나타나기 직전에 미리 로딩을 시작하는 데 활용할 수 있습니다.
+
+아래 예제에는 스크롤 가능한 상자와, 초기에는 화면 밖에 있는 요소가 있습니다.
+루트의 오른쪽 바깥 여백을 조정하면 다음의 결과를 확인할 수 있습니다.
+
+- 바깥 여백이 양수인 경우, 빨간색 요소가 실제로 보이지 않더라도, 루트의 바깥 여백 영역과 교차하므로 루트와 교차한 것으로 간주됩니다.
+- 바깥 여백이 음수인 경우, 빨간색 요소가 보이기 시작하더라도, 루트의 경계 박스가 축소되었기 때문에 루트와 교차한 것으로 간주되지 않습니다.
+
+```html hidden
+<div class="demo">
+  <div id="container">
+    <div id="elem"></div>
+    <div id="gutter"></div>
+  </div>
+  <div id="marginIndicator"></div>
+</div>
+<div class="controls">
+  <label>
+    Set the right margin of the root:
+    <input id="margin" type="number" value="0" step="5" />px
+  </label>
+  <label>
+    You can also use this slider to scroll the container:
+    <input id="scrollAmount" type="range" min="0" max="300" value="0" />
+  </label>
+  <p>Current intersection ratio: <span id="output"></span></p>
+</div>
+```
+
+```css hidden
+.demo {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  overflow-x: scroll;
+  border: 1px solid black;
+}
+
+#marginIndicator {
+  position: relative;
+  height: 100px;
+  background-color: blue;
+  opacity: 0.5;
+}
+
+#elem {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 200px;
+}
+
+#gutter {
+  width: 500px;
+  height: 100px;
+}
+```
+
+```js hidden
+let observer;
+function createObserver() {
+  if (observer) {
+    observer.disconnect();
+  }
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        output.textContent = entry.intersectionRatio.toFixed(2);
+      });
+    },
+    {
+      threshold: Array.from({ length: 1000 }, (_, i) => i / 1000),
+      root: container,
+      rootMargin: `0px ${margin.value}px 0px 0px`,
+    },
+  );
+  if (margin.valueAsNumber < 0) {
+    marginIndicator.style.width = `${-margin.valueAsNumber}px`;
+    marginIndicator.style.left = `${margin.valueAsNumber}px`;
+
+    marginIndicator.style.backgroundColor = "blue";
+  } else {
+    marginIndicator.style.width = `${margin.valueAsNumber}px`;
+    marginIndicator.style.left = "0px";
+    marginIndicator.style.backgroundColor = "green";
+  }
+  observer.observe(elem);
+}
+createObserver();
+margin.addEventListener("input", () => {
+  createObserver();
+});
+scrollAmount.addEventListener("input", () => {
+  container.scrollLeft = scrollAmount.value;
+});
+```
+
+{{EmbedLiveSample("교차 루트와 루트 여백", "", 200)}}
+
+#### 교차 루트와 스크롤 여백
+
+루트 요소 안에 중첩된 {{glossary("scroll container","scroll containers")}}가 있고, 그중 스크롤 가능한 컨테이너 하나의 내부에 있는 타겟과의 교차를 관찰하려는 경우를 생각해 봅시다.
+기본적으로 타겟 요소와의 교차는 루트에 의해 정의된 영역 안에서 타겟이 보이기 시작할 때, 즉 컨테이너가 루트의 뷰 안으로 스크롤되어 들어오고, 동시에 타겟 요소가 해당 컨테이너의 클리핑 사각형 안으로 스크롤되어 들어왔을 때 관찰되기 시작합니다.
+
+스크롤 여백을 사용하면 타겟이 스크롤 컨테이너 안에서 실제로 보이기 전이나 후에 교차 관찰을 시작할 수 있습니다.
+이 바깥 여백은 루트 내의 모든 중첩된 스크롤 컨테이너에 추가되며, 루트 요소 자체가 스크롤 컨테이너인 경우도 포함됩니다. 그 결과 교차 계산에 사용되는 클리핑 영역이 확장(양수 바깥 여백)되거나 축소(음수 바깥 여백)되는 효과가 있습니다.
+
+> [!NOTE]
+> 스크롤 여백을 적용하고자 하는 각 스크롤 컨테이너마다 개별적으로 교차 관찰자를 생성하고, rootMargin 속성을 사용하면 비슷한 효과를 낼 수도 있습니다.
+> 하지만 스크롤 여백을 사용하는 방식이 더 효율적이며, 대부분의 경우 중첩된 타겟을 하나의 교차 관찰자로 관리할 수 있습니다.
+
+아래 예제에는 스크롤 가능한 상자와 초기에는 화면에 밖에 있는 이미지 캐러셀이 있습니다.
+루트 요소의 관찰자가 캐러셀 내부의 이미지 요소를 타겟으로 관찰합니다.
+이미지 요소가 루트 요소와 교차하기 시작하면, 해당 이미지를 로드하고, 교차를 기록한 뒤 관찰자를 제거합니다.
+
+아래로 스크롤하여 캐러셀을 화면에 표시해보세요.
+화면에 보이는 이미지들은 즉시 로딩되어야 합니다.
+캐러셀 내부를 스크롤하면, 요소가 눈에 보이는 순간 이미지가 로딩되는 것을 관찰할 수 있습니다.
+
+예제를 초기화한 후, 제공된 컨트롤을 사용하여 스크롤 여백 비율을 변경할 수 있습니다.
+만약 20%와 같은 양수 값을 설정하면 스크롤 컨테이너의 클립 사각형이 20% 확장되어, 이미지가 화면에 들어오기 전에 미리 감지되고 로드되는 것을 확인할 수 있습니다.
+반대로 음수 값을 설정하면, 이미지가 화면에 들어온 이후에야 교차가 감지됩니다.
+
+```html hidden
+<button id="reset" type="button">Reset</button>
+```
+
+```html hidden
+<div id="root-container">
+  <p>content before (scroll down to carousel)</p>
+
+  <div class="flex-container">
+    <div class="carousel">
+      <img
+        src=""
+        data-src="ballon-portrait.jpg"
+        class="lazy-carousel-img"
+        alt="Balloon portrait" />
+      <img
+        src=""
+        data-src="balloon-small.jpg"
+        class="lazy-carousel-img"
+        alt="balloon-small" />
+      <img
+        src=""
+        data-src="surfer.jpg"
+        class="lazy-carousel-img"
+        alt="surfer" />
+      <img
+        src=""
+        data-src="border-diamonds.png"
+        class="lazy-carousel-img"
+        alt="border-diamonds" />
+      <img src="" data-src="fire.png" class="lazy-carousel-img" alt="fire" />
+      <img
+        src=""
+        data-src="puppy-header.jpg"
+        class="lazy-carousel-img"
+        alt="puppy" />
+      <img src="" data-src="moon.jpg" class="lazy-carousel-img" alt="moon" />
+      <img src="" data-src="rhino.jpg" class="lazy-carousel-img" alt="rhino" />
+    </div>
+    <div id="margin-indicator"></div>
+  </div>
+  <p>content after</p>
+</div>
+```
+
+```html hidden
+<div class="controls">
+  <label>
+    Set the right margin of the scroll root:
+    <input id="margin" type="number" value="0" step="5" />%
+  </label>
+</div>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#root-container {
+  height: 250px;
+  overflow-y: auto;
+  border: solid blue;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+p {
+  height: 50vh;
+}
+
+.flex-container {
+  display: flex;
+}
+
+#margin-indicator {
+  position: relative;
+  height: 100px;
+  width: 1px;
+  background-color: red;
+  opacity: 0.5;
+  display: flex;
+}
+
+.carousel {
+  width: 300px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  border: solid;
+  /* outline: 200px solid rgba(0, 0, 0, 0.1); */
+}
+.carousel img {
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+  display: block;
+  width: 195px;
+  height: 99px;
+  min-width: 195px;
+  min-height: 99px;
+  margin-right: 10px;
+  background-color: #eeeeee; /* Placeholder background */
+}
+
+#log {
+  height: 100px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const reload = document.querySelector("#reset");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
+
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```js hidden
+const rootContainer = document.getElementById("root-container");
+const marginIndicator = document.getElementById("margin-indicator");
+const carousel = document.querySelector(".carousel");
+const lazyImages = carousel.querySelectorAll(".lazy-carousel-img");
+let imageObserver;
+
+function createImageObserver() {
+  if (imageObserver) {
+    imageObserver.disconnect();
+  }
+
+  let observerOptions = {
+    root: rootContainer,
+    rootMargin: "0px", // No extra margin
+    scrollMargin: `${margin.valueAsNumber}%`, // No extra margin / Can be set
+    threshold: 0.01, // Trigger when 1% of the image is visible
+  };
+
+  imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        log(`intersect: ${img.dataset.src}`); // Only on first intersection
+        img.src = `https://mdn.github.io/shared-assets/images/examples/${img.dataset.src}`; // Load image by setting src
+        img.classList.remove("lazy-carousel-img"); // Remove the class
+        observer.unobserve(img); // Stop observing once loaded
+      }
+    });
+  }, observerOptions);
+
+  if (margin.valueAsNumber < 0) {
+    marginIndicator.style.width = `${-margin.valueAsNumber}px`;
+    marginIndicator.style.left = `${margin.valueAsNumber}px`;
+    marginIndicator.style.backgroundColor = "blue";
+  } else {
+    marginIndicator.style.width = `${margin.valueAsNumber}px`;
+    marginIndicator.style.left = "0px";
+    marginIndicator.style.backgroundColor = "green";
+  }
+
+  lazyImages.forEach((image) => {
+    imageObserver.observe(image); // Start observing each image
+  });
+}
+
+if ("IntersectionObserver" in window) {
+  createImageObserver();
+  margin.addEventListener("input", () => {
+    createImageObserver();
+  });
+} else {
+  // Fallback for browsers that don't support Intersection Observer
+  // Loads all images immediately if Intersection Observer is not supported.
+  lazyImages.forEach((img) => {
+    img.src = img.dataset.src;
+    img.classList.remove("lazy-carousel-img");
+  });
+  console.warn(
+    "Intersection Observer not supported. All carousel images loaded.",
+  );
+}
+```
+
+{{EmbedLiveSample("교차 루트와 스크롤 여백","100%","500px")}}
 
 #### Thresholds
 
@@ -301,6 +638,18 @@ startup();
 ```
 
 {{EmbedLiveSample("Thresholds", 500, 500)}}
+
+#### 가시성 추적과 지연
+
+기본적으로 관찰자는 타겟 요소가 루트 요소의 뷰포트 안으로 스크롤되어 들어올 때 알림을 제공합니다.
+대부분의 상황에서 이것만으로 충분하지만, 때로는 타겟이 "시각적으로 방해받는" 상태일 때 교차가 보고되지 않는 것이 중요한 경우도 있습니다. 예를 들어, 분석 지표나 광고 노출을 계산할 때는 타겟 요소의 전체 또는 일부가 가려지거나 왜곡되지 않았는지가 중요합니다.
+
+`trackVisibility` 값을 설정하면, 투명도 변경이나 필터나 변형 적용 등으로 인해 브라우저가 시각적으로 방해받았다고 생각되지 않는 타겟에 대해서만 교차를 보고하도록 합니다.
+이 알고리즘은 보수적으로 설계되어 있어서, 투명도를 아주 약간만 줄여 기술적으로는 보이는 요소일지라도 보고를 생략할 수 있습니다.
+
+가시성 계산은 연산 비용이 크므로, 꼭 필요한 경우에만 사용해야 합니다.
+가시성을 추적할 때는 최소 보고 주기를 제한하기 위해 {{domxref("IntersectionObserver/delay","delay")}} 옵션을 함께 설정해야 합니다.
+delay 값은 허용 가능한 가장 큰 값으로 설정하는 것이 권장되며, 가시성 추적 시 최소 delay는 100ms입니다.
 
 #### 잘라내기와 교차 직사각형
 
