@@ -39,7 +39,6 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json
 - [incognito](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito)
 - [manifest_version](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
 - [name](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
-- [offline_enabled](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 - [omnibox](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)
 - [optional_permissions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)
 - [options_page](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page)
