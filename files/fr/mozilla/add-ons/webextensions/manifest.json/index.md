@@ -1,34 +1,74 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
+l10n:
+  sourceCommit: 6d09b387b3a5137be8fc24137d8052403d26ecc6
 ---
 
-{{AddonSidebar}}
-
 > [!NOTE]
-> Cet article décrit le format du fichier `manifest.json` pour les extensions web. Si vous cherchez des informations quant au manifeste des applications web progressives (PWA), consultez plutôt [l'article sur les manifestes d'application web](/fr/docs/Web/Progressive_web_apps/Manifest).
+> Cet article décrit le fichier `manifest.json` pour les extensions web. Si vous cherchez des informations sur le `manifest.json` dans les PWA, consultez l'article [Web App Manifest](/fr/docs/Web/Progressive_web_apps/Manifest).
 
-Le fichier `manifest.json` est le seul fichier que toute extension basée sur les API WebExtension doit contenir.
+Le fichier `manifest.json` est le seul fichier que toute extension utilisant les API WebExtension doit contenir.
 
-Avec `manifest.json`, on fournit les différentes métadonnées simples de l'extension, comme le nom et la version. On peut également y définir certains aspects des fonctionnalités de l'extension (tels que les scripts d'arrière-plan, les scripts de contenu et les actions du navigateur).
+Avec `manifest.json`, vous définissez les métadonnées de base de votre extension, telles que le nom et la version, et vous pouvez également définir certains aspects des fonctionnalités de votre extension (tels que les scripts d'arrière-plan, les scripts de contenu et les actions du navigateur).
 
-Ce fichier est au format [JSON](/fr/docs/Glossary/JSON) avec une exception&nbsp;: il peut contenir des commentaires sous la forme `// toto titi`.
+Il est au format {{Glossary("JSON")}} avec une exception&nbsp;: il peut contenir des commentaires sous la forme `// toto titi`.
 
 ## Liste des clés du fichier `manifest.json`
 
 Les différentes clés utilisées dans le fichier `manifest.json` sont listées ici&nbsp;:
 
-{{ListSubpages("/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}
+- [action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) (Manifest V3 et supérieur)
+- [author](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author)
+- [background](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background)
+- [browser_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) (Manifest V2 seulement)
+- [browser_specific_settings](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
+- [chrome_settings_overrides](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)
+- [chrome_url_overrides](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides)
+- [commands](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)
+- [content_scripts](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)
+- [content_security_policy](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy)
+- [dark_theme](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/dark_theme)
+- [declarative_net_request](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request)
+- [default_locale](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale)
+- [description](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)
+- [developer](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer)
+- [devtools_page](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)
+- [dictionaries](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries)
+- [externally_connectable](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) (N'est pas pris en charge dans Firefox)
+- [homepage_url](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url)
+- [host_permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) (Manifest V3 et supérieur)
+- [icons](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
+- [incognito](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito)
+- [manifest_version](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
+- [name](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
+- [omnibox](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)
+- [optional_host_permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) (Manifest V3 et supérieur)
+- [optional_permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)
+- [options_page](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page)
+- [options_ui](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)
+- [page_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) (Manifest V2 seulement dans Chrome)
+- [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)
+- [protocol_handlers](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) (Firefox seulement)
+- [short_name](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name)
+- [sidebar_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
+- [storage](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) (N'est pas pris en charge dans Firefox)
+- [theme](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme)
+- [theme_experiment](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment) (Firefox seulement) (expérimental)
+- [user_scripts](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) (Manifest V2 seulement)
+- [version](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)
+- [version_name](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name)
+- [web_accessible_resources](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
 
 ### Notes sur les clés du fichier `manifest.json`
 
 - `"manifest_version"`, `"version"`, et `"name"` sont les seules clés obligatoires.
-- `"default_locale"` doit être présente si le répertoire "`_locales`" est présent&nbsp;; elle doit être absente sinon.
+- `"default_locale"` doit être présente si le répertoire `_locales` est présent, elle doit être absente sinon.
 - `"browser_specific_settings"` n'est pas prise en charge par Google Chrome.
 
 ### Accéder aux clés du fichier `manifest.json` à l'exécution
 
-Il est possible d'accéder au manifeste de l'extension depuis le code de l'extension, à l'aide de la fonction [`runtime.getManifest()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest)&nbsp;:
+Il est possible d'accéder au manifeste de l'extension depuis le code de l'extension, à l'aide de la fonction {{WebExtAPIRef("runtime.getManifest()")}}&nbsp;:
 
 ```js
 browser.runtime.getManifest().version;
@@ -47,7 +87,7 @@ Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'e
 {
   "browser_specific_settings": {
     "gecko": {
-      "id": "addon@example.com",
+      "id": "@exemple-extension",
       "strict_min_version": "42.0"
     }
   },
@@ -71,7 +111,7 @@ Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'e
         "default": "Ctrl+Shift+Y",
         "linux": "Ctrl+Shift+U"
       },
-      "description": "Utiliser un évènement 'toggle-feature'"
+      "description": "Envoyer un évènement 'toggle-feature'"
     }
   },
 
@@ -87,7 +127,7 @@ Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'e
 
   "default_locale": "en",
 
-  "description": "...",
+  "description": "…",
 
   "icons": {
     "48": "icon.png",
@@ -96,7 +136,7 @@ Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'e
 
   "manifest_version": 2,
 
-  "name": "...",
+  "name": "…",
 
   "page_action": {
     "default_icon": {
@@ -121,10 +161,8 @@ Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'e
 
 ## Compatibilité des navigateurs
 
-Pour un aperçu complet de l'ensemble des clés de manifeste et des sous-clés correspondantes, voir [le tableau de compatibilité complet pour `manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
-
 {{Compat}}
 
 ## Voir aussi
 
-- L'API JavaScript [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/permissions)
+- L'API JavaScript {{WebExtAPIRef("permissions")}}

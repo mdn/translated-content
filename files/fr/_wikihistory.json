@@ -38533,11 +38533,5 @@
     "contributors": [
       "SphinxKnight"
     ]
-  },
-  "conflicting/Mozilla/Add-ons/WebExtensions/manifest.json": {
-    "modified": "2020-10-15T22:11:14.653Z",
-    "contributors": [
-      "hellosct1"
-    ]
   }
 }
