@@ -98,7 +98,7 @@ fetch(request)
 Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` avec des données initiales et du contenu de corps pour une requête API qui nécessite une charge utile de corps&nbsp;:
 
 ```js
-const request = new Request("https://exemple.com", {
+const request = new Request("https://example.com", {
   method: "POST",
   body: '{"toto": "tata"}',
 });

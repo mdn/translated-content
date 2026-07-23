@@ -73,7 +73,7 @@ const selectFormElement = document.forms[index].elements[index];
 
 ```js
 const loginForm = document.forms.login; // Ou document.forms['login']
-loginForm.elements.email.placeholder = "test@exemple.com";
+loginForm.elements.email.placeholder = "test@example.com;
 loginForm.elements.password.placeholder = "mot de passe";
 ```
 

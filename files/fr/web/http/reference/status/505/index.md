@@ -20,13 +20,13 @@ Par exemple, des intermédiaires comme les répartiteurs de charge peuvent ne pa
 
 ### Un 505 dû à une ligne de requête mal formée
 
-Dans l'exemple suivant, un client demande `exemple.com/dog%20trainers`, mais en raison d'une configuration incorrecte du répartiteur de charge, la {{Glossary("Percent-encoding", "encodage pourcentage")}} dans l'URL n'est pas correctement traitée.
+Dans l'exemple suivant, un client demande `example.com/dog%20trainers`, mais en raison d'une configuration incorrecte du répartiteur de charge, la {{Glossary("Percent-encoding", "encodage pourcentage")}} dans l'URL n'est pas correctement traitée.
 Dans ce cas, le serveur d'origine voit `trainers` au lieu de la version HTTP, et une réponse `505` est retournée à la place.
 Un identifiant de requête est inclus dans le corps de la réponse pour illustrer une méthode pouvant aider les administrateur·ice·s de serveur à identifier la cause du problème&nbsp;:
 
 ```http
 GET /dog trainers HTTP/1.1
-Host: exemple.com
+Host: example.com
 ```
 
 ```http
@@ -41,7 +41,7 @@ Content-Length: 123
 </head>
 <body>
   <h1>505 Version HTTP non prise en charge</h1>
-  <p>Si ce problème persiste, veuillez <a href="https://exemple.com/support">contacter le support</a>.</p>
+  <p>Si ce problème persiste, veuillez <a href="https://example.com/support">contacter le support</a>.</p>
   <p>Les journaux du serveur contiennent des détails sur cette erreur avec l'identifiant de requête&nbsp;: ABC-123.</p>
 </body>
 </html>

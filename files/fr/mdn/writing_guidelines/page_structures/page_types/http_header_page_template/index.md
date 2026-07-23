@@ -2,7 +2,7 @@
 title: Modèle de page d'en-tête HTTP
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 > [!NOTE]
@@ -49,7 +49,6 @@ l10n:
 >
 >     La compatibilité des navigateurs ne s'applique pas aux en-têtes HTTP pour lesquels aucune implémentation spécifique n'est fournie (comme l'ajout automatique d'un en-tête de requête à certaines requêtes ou la modification du comportement en fonction des données d'un en-tête de réponse).
 >     Dans ces cas, supprimez la clé et la valeur `browser-compat`.
->
 > - **sidebar**
 >   - : Conservez toujours `http`.
 >     Voir [Structures de page&nbsp;: Barres latérales](/fr/docs/MDN/Writing_guidelines/Page_structures/Sidebars) pour plus de détails.

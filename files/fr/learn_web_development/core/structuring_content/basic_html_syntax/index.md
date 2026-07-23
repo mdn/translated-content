@@ -257,7 +257,7 @@ Incluez toujours des guillemets autour des valeurs d'attribut. Cela évite les e
 Dans cet article, nous avons entouré toutes les valeurs d'attribut de guillemets doubles (`"`). Cependant, vous pouvez voir des guillemets simples (`'`) utilisés dans certains codes HTML. C'est une question de style. Vous pouvez choisir librement ce que vous préférez. Les deux lignes suivantes sont équivalentes&nbsp;:
 
 ```html-nolint
-<a href='http://www.exemple.com'>Un lien vers mon exemple.</a>
+<a href='http://www.example.com'>Un lien vers mon exemple.</a>
 
 <a href="http://www.example.com">Un lien vers mon exemple</a>
 ```
@@ -265,13 +265,13 @@ Dans cet article, nous avons entouré toutes les valeurs d'attribut de guillemet
 Assurez-vous de ne pas mélanger les guillemets simples et doubles. L'exemple ci-dessous mélange les guillemets, ce qui entraîne des erreurs car, pour le navigateur, la valeur de l'attribut `href` n'est pas terminée&nbsp;:
 
 ```html example-bad
-<a href="http://www.exemple.com'>Un lien vers mon exemple.</a>
+<a href="http://www.example.com'>Un lien vers mon exemple.</a>
 ```
 
 Si vous utilisez un type de guillemet, vous pouvez inclure l'autre type de guillemet _à l'intérieur_ de vos valeurs d'attribut. Cela fonctionne très bien&nbsp;:
 
 ```html
-<a href="http://www.exemple.com" title="N'est-ce pas drôle ?"
+<a href="http://www.example.com" title="N'est-ce pas drôle ?"
   >Un lien vers mon exemple.</a
 >
 ```
@@ -279,13 +279,13 @@ Si vous utilisez un type de guillemet, vous pouvez inclure l'autre type de guill
 Pour utiliser des guillemets à l'intérieur d'autres guillemets du même type (guillemet simple ou double), vous pouvez utiliser [des références de caractères](#références_dentités_inclure_les_caractères_spéciaux_en_html). Par exemple, ceci ne fonctionne pas&nbsp;:
 
 ```html-nolint example-bad
-<a href='http://www.exemple.com' title='N'est-ce pas drôle ?'>Un lien vers mon exemple.</a>
+<a href='http://www.example.com' title='N'est-ce pas drôle ?'>Un lien vers mon exemple.</a>
 ```
 
 Faites plutôt ceci&nbsp;:
 
 ```html-nolint
-<a href="http://www.exemple.com" title="N'est-ce pas drôle ?"
+<a href="http://www.example.com" title="N'est-ce pas drôle ?"
   >Un lien vers mon exemple.</a
 >
 ```

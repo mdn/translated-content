@@ -13,7 +13,7 @@ Esta guía presume que tienes los siguientes antecedentes básicos:
 
 - Comprensión general de Internet y la ({{Glossary("WWW", "World Wide Web")}}).
 - Buen conocimiento práctico del {{Glossary("HTML", "lenguaje de marcado de hipertexto (HTML)")}}.
-- Alguna experiencia en programación. Si eres nuevo en la programación, prueba uno de los tutoriales vinculados en la página principal sobre {{JSxRef("JavaScript", "JavaScript")}}.
+- Alguna experiencia en programación. Si eres nuevo en la programación, prueba uno de los tutoriales vinculados en la página principal sobre [JavaScript](/es/docs/Web/JavaScript).
 
 ## Dónde encontrar información sobre JavaScript
 

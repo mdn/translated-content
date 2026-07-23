@@ -2,10 +2,10 @@
 title: フォームデータの送信
 slug: Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 6ef7bc04d63cf8b512bdbea149a6cb875cc063e3
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 フォームがクライアント側での検証が終わったら、次はフォームの送信です。前の記事では検証を扱ったので、送信する準備はできています。この記事では、ユーザーがフォームを送信したときに何が起こるか、つまりデータがどこへ行くのか、そこに来たときにどう扱うのかを見ます。また、フォームデータの送信に関連するセキュリティの考慮事項のいくつかも見てみます。
 
@@ -53,10 +53,10 @@ l10n:
 
 [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 [URL](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。
 
-この例では、データを絶対 URL の `http://example.com` に送信します。
+この例では、データを絶対 URL の `https://www.example.com` に送信します。
 
 ```html
-<form action="https://example.com">…</form>
+<form action="https://www.example.com">…</form>
 ```
 
 こちらは、相対 URL を使用しています。データは同一オリジン上の別の URL に送信されます。
@@ -82,7 +82,7 @@ l10n:
 
 [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) 属性は、どのようにデータを送信するかを定義します。[HTTP プロトコル](/ja/docs/Web/HTTP)はリクエストを実行するための方法をいくつか提供しています。HTML フォームのデータは複数の方法で送信することができます。もっとも一般的なものは `GET` メソッドと `POST` メソッドです。
 
-これら 2 つのメソッドの違いを理解するために、一歩戻って [HTTP の動作](/ja/docs/Web/HTTP/Guides/Overview)についてみていきましょう。ウェブ上のリソースにたどり着こうとするたびに、ブラウザーは URL へリクエストを送信します。HTTP リクエストは 2 つの部分で構成されます。ブラウザーの機能に関する包括的なメタデータのセットを持つヘッダーと、指定されたリクエストをサーバーが処理するために必要な情報を持つ本文です。
+これら 2 つのメソッドの違いを理解するために、一歩戻って [HTTP の動作](/ja/docs/Web/HTTP/Guides/Overview)についてみていきましょう。ウェブ上のリソースにたどり着こうとするたびに、ブラウザーは URL へリクエストを送信します。HTTP リクエストは 2 つの部分で構成されます。ブラウザーの機能に関する包括的なメタデータのセットを持つ[ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)と、指定されたリクエストをサーバーが処理するために必要な情報を持つ本文です。
 
 #### GET メソッド
 
@@ -91,7 +91,7 @@ l10n:
 以下のフォームについて考えてみましょう。
 
 ```html
-<form action="http://www.foo.com" method="GET">
+<form action="https://www.example.com/greet" method="GET">
   <div>
     <label for="say">What greeting do you want to say?</label>
     <input name="say" id="say" value="Hi" />
@@ -106,7 +106,7 @@ l10n:
 </form>
 ```
 
-`GET` メソッドが使用されているので、フォームを送信するときにブラウザーのアドレスバーに `www.foo.com/?say=Hi&to=Mom` という URL が見えるでしょう。
+`GET` メソッドが使用されているので、フォームを送信するときにブラウザーのアドレスバーに `https://www.example.com/greet?say=Hi&to=Mom` という URL が見えるでしょう。
 
 ![変更された引数付き URL によって GET メソッドでフォームを送信した後の "server not found" のブラウザーエラーページです。](url-parameters.png)
 
@@ -119,7 +119,7 @@ HTTP リクエストは次のようになります。
 
 ```http
 GET /?say=Hi&to=Mom HTTP/2.0
-Host: foo.com
+Host: example.com
 ```
 
 > [!NOTE]
@@ -135,7 +135,7 @@ Host: foo.com
 例を見てみましょう。— これは前述の `GET` の節で見たものと同じフォームですが、[`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) 属性が `post` に設定されています。
 
 ```html
-<form action="http://www.foo.com" method="POST">
+<form action="https://www.example.com/greet" method="POST">
   <div>
     <label for="say">What greeting do you want to say?</label>
     <input name="say" id="say" value="Hi" />
@@ -154,7 +154,7 @@ Host: foo.com
 
 ```http
 POST / HTTP/2.0
-Host: foo.com
+Host: example.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 13
 
@@ -171,13 +171,13 @@ say=Hi&to=Mom
 
 ### HTTP リクエストの表示
 
-当然ながら HTTP リクエストはユーザーには表示されません (見たいのであれば、[Firefox ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)や [Chrome デベロッパー ツール](https://developer.chrome.com/docs/devtools/)などのツールが必要です)。例のように、フォームのデータは Chrome の Network タブに以下のように表示されます。フォームの送信後に、以下のように操作してください。
+当然ながら HTTP リクエストはユーザーには表示されません（見たいのであれば、[Firefox ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)や [Chrome DevTools](https://developer.chrome.com/docs/devtools/)などのツールが必要です）。例のように、フォームのデータは Chrome の Network タブに以下のように表示されます。フォームの送信後に、以下のように操作してください。
 
 1. 開発者ツールを開く
-2. "Network" を選択
-3. "All" を選択
-4. "Name" タブから "foo.com" を選択
-5. "Headers" を選択
+2. 「ネットワーク」を選択
+3. 「すべて」を選択
+4. 「名前」タブから "example.com" を選択
+5. 「リクエスト」 (Firefox) または「ペイロード」 (Chrome/Edge) を選択
 
 これで下の画像にあるように、フォームデータを取得することができます。
 
@@ -200,10 +200,10 @@ say=Hi&to=Mom
 <?php
   // $_POST グローバル変数は、POST メソッドで送信されたデータへ名前でアクセスを可能にする
   // GET メソッドで送信されたデータにアクセスするには、$_GET が使用できる
-  $say = htmlspecialchars($_POST['say']);
-  $to  = htmlspecialchars($_POST['to']);
+  $say = htmlspecialchars($_POST["say"]);
+  $to  = htmlspecialchars($_POST["to"]);
 
-  echo  $say, ' ', $to;
+  echo  $say, " ", $to;
 ?>
 ```
 
@@ -290,7 +290,10 @@ if __name__ == "__main__":
 例:
 
 ```html
-<form method="post" action="https://www.foo.com" enctype="multipart/form-data">
+<form
+  method="post"
+  action="https://example.com/upload"
+  enctype="multipart/form-data">
   <div>
     <label for="file">Choose a file</label>
     <input type="file" id="file" name="myFile" />
@@ -337,8 +340,3 @@ if __name__ == "__main__":
 - [Web Security by Mozilla](https://infosec.mozilla.org/guidelines/web_security)
 
 {{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
-
-### 高度なトピック
-
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

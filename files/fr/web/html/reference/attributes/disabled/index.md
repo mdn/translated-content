@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
-L'attribut booléen **`disabled`**, lorsqu'il est présent, rend l'élément non modifiable, non sélectionnable, ou même non soumis avec le formulaire. L'utilisateur·rice ne peut ni modifier ni sélectionner le contrôle, ni les descendants du contrôle de formulaire. Si l'attribut `disabled` est défini sur un contrôle de formulaire, l'élément et ses descendants de contrôle de formulaire ne participent pas à la validation des contraintes. Souvent, les navigateurs grisent ces contrôles et ils ne reçoivent aucun événement de navigation, comme les clics de souris ou les événements liés à la sélection.
+L'attribut booléen **`disabled`**, lorsqu'il est présent, rend l'élément non modifiable, non sélectionnable, ou même non soumis avec le formulaire. L'utilisateur·rice ne peut ni modifier ni sélectionner le contrôle, ni les descendants du contrôle de formulaire. Si l'attribut `disabled` est défini sur un contrôle de formulaire, l'élément et ses descendants de contrôle de formulaire ne participent pas à la validation des contraintes. Souvent, les navigateurs grisent ces contrôles et ils ne reçoivent aucun évènement de navigation, comme les clics de souris ou les évènements liés à la sélection.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: disabled", "tabbed-standard")}}
 
@@ -68,7 +68,7 @@ La différence entre `disabled` et [`readonly`](/fr/docs/Web/HTML/Reference/Attr
 
 ### Utilisation
 
-Les navigateurs affichent les contrôles de formulaire désactivés en grisé, car ces contrôles sont immuables, ne reçoivent pas de sélection ou d'événements de navigation, comme les clics de souris ou les événements liés à la sélection, et ne sont pas soumis avec le formulaire.
+Les navigateurs affichent les contrôles de formulaire désactivés en grisé, car ces contrôles sont immuables, ne reçoivent pas de sélection ou d'évènements de navigation, comme les clics de souris ou les évènements liés à la sélection, et ne sont pas soumis avec le formulaire.
 
 S'il est présent sur un élément supporté, la pseudo-classe {{CSSxRef(":disabled")}} correspondra. Si l'attribut n'est pas inclus, la pseudo-classe {{CSSxRef(":enabled")}} correspondra. Si l'élément ne prend pas en charge l'attribut `disabled`, celui-ci n'aura aucun effet, y compris sur les pseudo-classes `:disabled` et `:enabled`.
 

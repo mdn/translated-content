@@ -2,7 +2,7 @@
 title: HTTP レスポンスステータスコード
 slug: Web/HTTP/Reference/Status
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: cd8ed9bfa89d5ced4fd6c2083d7d90bcda41e441
 ---
 
 HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/Web/HTTP) リクエストが正常に完了したどうかを示します。
@@ -38,7 +38,6 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
     - {{HTTPMethod("HEAD")}}: メッセージ本文がなく、表現ヘッダーがレスポンスに含まれている。
     - {{HTTPMethod("PUT")}} または {{HTTPMethod("POST")}}: 操作の結果を表すリソースがメッセージ本文で送信される。
     - {{HTTPMethod("TRACE")}}: メッセージ本文に、サーバーが受け取ったリクエストメッセージが含まれている。
-
 - {{HTTPStatus(201, "201 Created")}}
   - : リクエストは成功し、その結果新たなリソースが作成されたことを示します。これは一般的に、 {{HTTPMethod("POST")}} リクエストや、一部の {{HTTPMethod("PUT")}} リクエストを送信した後のレスポンスになります。
 - {{HTTPStatus(202, "202 Accepted")}}
@@ -175,7 +174,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
   - : サーバー側で処理方法がわからない事態が発生したことを示します。
     このエラーは汎用的なエラーで、サーバーが応答に適切な `5XX` ステータスコードを見つけることができないことを示しています。
 - {{HTTPStatus(501, "501 Not Implemented")}}
-  - : リクエストメソッドをサーバーが対応しておらず、扱えないことを示します。サーバーが対応しなければならない (従って、このコードを返してはならない) メソッドは {{HTTPMethod("GET")}} と {{HTTPMethod("HEAD")}} だけです。
+  - : そのリクエストメソッドにサーバーが対応しておらず、扱えないことを示します。サーバーが対応しなければならない (従って、このコードを返してはならない) メソッドは {{HTTPMethod("GET")}} と {{HTTPMethod("HEAD")}} だけです。
 - {{HTTPStatus(502, "502 Bad Gateway")}}
   - : このエラーレスポンスは、リクエストの処理に必要なレスポンスを受け取るゲートウェイとして動作するサーバーが無効なレスポンスを受け取ったことを示します。
 - {{HTTPStatus(503, "503 Service Unavailable")}}
@@ -205,5 +204,5 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 
 ## 関連情報
 
-- [HTTP ステータスコードの一覧 (Wikipedia)](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-- [HTTP ステータスコードの、IANA 公式レジストリー](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [HTTP ステータスコードの一覧（ウィキペディア）](https://ja.wikipedia.org/wiki/HTTPステータスコード)
+- [HTTP ステータスコードの、IANA 公式レジストリー](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)<sup>(英語)</sup>

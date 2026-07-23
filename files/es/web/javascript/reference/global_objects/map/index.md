@@ -274,7 +274,7 @@ interface RTCStatsReport {
 
 Los objetos similares a `Map` son o de solo-lectura o lectura-escritura (véase la palabra clave `readonly` en el IDL de arriba).
 
-- Los obejtos similares a `Map` de solo-lectura tienen la propiedad [`size`](#map.prototype.size), y los métodos: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), y [`[Symbol.iterator]()`](#map.prototypesymbol.iterator).
+- Los objetos similares a `Map` de solo-lectura tienen la propiedad [`size`](#map.prototype.size), y los métodos: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), y [`[Symbol.iterator]()`](#map.prototypesymbol.iterator).
 - Los objetos similares a `Map` de lectura-escritura tienen métodos adicionales: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), y [`set()`](#map.prototype.set).
 
 Los métodos y propiedades tienen el mismo comportamiento que las entidades equivalentes en el objeto `Map`, excepto por la restricción en los tipos de llaves y valores.

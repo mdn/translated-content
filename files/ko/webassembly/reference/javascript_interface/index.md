@@ -14,40 +14,40 @@ original_slug: WebAssembly/JavaScript_interface
 
 `WebAssembly` 객체의 기본적인 사용례는 다음과 같습니다:
 
-- {{jsxref("WebAssembly.instantiate()")}} 함수를 사용해서 웹어셈블리 코드 불러오기.
-- {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}} 생성자로 새 메모리와 테이블 인스턴스 생성하기.
-- {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}} 생성자로 웹어셈블리에서 발생하는 에러에 대한 처리장치 만들기.
+- [`WebAssembly.instantiate()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiate) 함수를 사용해서 웹어셈블리 코드 불러오기.
+- [`WebAssembly.Memory()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory)/[`WebAssembly.Table()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table) 생성자로 새 메모리와 테이블 인스턴스 생성하기.
+- [`WebAssembly.CompileError()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/CompileError)/[`WebAssembly.LinkError()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/LinkError)/[`WebAssembly.RuntimeError()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) 생성자로 웹어셈블리에서 발생하는 에러에 대한 처리장치 만들기.
 
 ## 메서드
 
-- {{jsxref("WebAssembly.instantiate()")}}
+- [`WebAssembly.instantiate()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiate)
   - : WebAssembly 코드를 컴파일하고 인스턴스화하여 `Module`과 첫 번째 `Instance`를 반환하는 기본 API입니다.
-- {{jsxref("WebAssembly.instantiateStreaming()")}}
+- [`WebAssembly.instantiateStreaming()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming)
   - : 스트리밍 된 원본 소스에서 직접 WebAssembly 모듈을 컴파일하고 인스턴스화하여 `Module`과 첫 번째 `Instance`를 반환합니다.
-- {{jsxref("WebAssembly.compile()")}}
-  - : WebAssembly 바이너리 코드에서 {{jsxref("WebAssembly.Module")}}을 컴파일하여 인스턴스화를 별도의 단계로 남겨 둡니다.
-- {{jsxref("WebAssembly.compileStreaming()")}}
-  - : {{jsxref("WebAssembly.Module")}}을 스트림 된 원본 소스에서 직접 컴파일하여 인스턴스화를 별도의 단계로 남겨 둡니다.
-- {{jsxref("WebAssembly.validate()")}}
+- [`WebAssembly.compile()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/compile)
+  - : WebAssembly 바이너리 코드에서 [`WebAssembly.Module`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Module)을 컴파일하여 인스턴스화를 별도의 단계로 남겨 둡니다.
+- [`WebAssembly.compileStreaming()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming)
+  - : [`WebAssembly.Module`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Module)을 스트림 된 원본 소스에서 직접 컴파일하여 인스턴스화를 별도의 단계로 남겨 둡니다.
+- [`WebAssembly.validate()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/validate)
   - : 바이트가 유효한 WebAssembly 코드 (`true`)인지 아닌지 (`false`)를 반환하여 WebAssembly 바이너리 코드의 지정된 입력 된 배열을 확인합니다.
 
 ## 생성자
 
-- {{jsxref("WebAssembly.Global()")}}
+- [`WebAssembly.Global()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Global)
   - : Creates a new WebAssembly `Global` object.
-- {{jsxref("WebAssembly.Module()")}}
+- [`WebAssembly.Module()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Module)
   - : Creates a new WebAssembly `Module` object.
-- {{jsxref("WebAssembly.Instance()")}}
+- [`WebAssembly.Instance()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Instance)
   - : Creates a new WebAssembly `Instance` object.
-- {{jsxref("WebAssembly.Memory()")}}
+- [`WebAssembly.Memory()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory)
   - : Creates a new WebAssembly `Memory` object.
-- {{jsxref("WebAssembly.Table()")}}
+- [`WebAssembly.Table()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : Creates a new WebAssembly `Table` object.
-- {{jsxref("WebAssembly.CompileError()")}}
+- [`WebAssembly.CompileError()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
   - : Creates a new WebAssembly `CompileError` object.
-- {{jsxref("WebAssembly.LinkError()")}}
+- [`WebAssembly.LinkError()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
   - : Creates a new WebAssembly `LinkError` object.
-- {{jsxref("WebAssembly.RuntimeError()")}}
+- [`WebAssembly.RuntimeError()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
   - : Creates a new WebAssembly `RuntimeError` object.
 
 ## 예제

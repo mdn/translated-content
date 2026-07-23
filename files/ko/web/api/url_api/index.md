@@ -104,5 +104,5 @@ function fillTableWithParameters(tbl) {
 
 - [Fetch API](/ko/docs/Web/API/Fetch_API)
 - CSS {{cssxref("&lt;url&gt;")}} type
-- {{jsxref("encodeURI", "encodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("encodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}

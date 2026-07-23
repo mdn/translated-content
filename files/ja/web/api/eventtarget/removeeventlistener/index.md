@@ -3,7 +3,7 @@ title: "EventTarget: removeEventListener() メソッド"
 short-title: removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -108,10 +108,10 @@ function makeBackgroundYellow() {
   toggle = !toggle;
 }
 
-clickTarget.addEventListener("click", makeBackgroundYellow, false);
+clickTarget.addEventListener("click", makeBackgroundYellow);
 
 mouseOverTarget.addEventListener("mouseover", () => {
-  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
+  clickTarget.removeEventListener("click", makeBackgroundYellow);
 });
 ```
 

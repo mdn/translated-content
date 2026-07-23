@@ -202,7 +202,7 @@ function deplacerIndicateur(event) {
     return;
   }
   event.preventDefault();
-  // Doit exister car l'ID est ajouté pour tous les événements de glissement avec une entrée de données "task"
+  // Doit exister car l'ID est ajouté pour tous les évènements de glissement avec une entrée de données "task"
   const tacheGlissee = document.getElementById("dragged-task");
   const colonne = event.currentTarget;
   const taches = colonne.children[1];

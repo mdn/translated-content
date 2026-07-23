@@ -80,9 +80,7 @@ Content-Security-Policy: connect-src https://example.com/
 
   const es = new EventSource("https://not-example.com/");
 
-  navigator.sendBeacon("https://not-example.com/", {
-    /* … */
-  });
+  navigator.sendBeacon("https://not-example.com/", {/* … */});
 </script>
 ```
 

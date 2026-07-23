@@ -162,8 +162,7 @@ Este exemplo tem um número mínimo e máximo de caracteres - de 10 e 20, respec
 
 ```html
 <textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="20">
-Write something here</textarea
->
+Write something here</textarea>
 ```
 
 {{ EmbedLiveSample('Min_and_max_length','600','80') }}
@@ -192,11 +191,9 @@ Este exemplo mostra dois `<textarea>`s — um dos quais é `disabled`, e o outro
 
 ```html
 <textarea name="textarea" rows="5" cols="30" disabled>
-I am a disabled textarea</textarea
->
+I am a disabled textarea</textarea>
 <textarea name="textarea" rows="5" cols="30" readonly>
-I am a readonly textarea</textarea
->
+I am a readonly textarea</textarea>
 ```
 
 {{ EmbedLiveSample('Disabled_and_readonly','600','80') }}

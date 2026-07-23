@@ -3,7 +3,7 @@ title: Fonction CSS `polygon()`
 short-title: polygon()
 slug: Web/CSS/Reference/Values/basic-shape/polygon
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`polygon()`** fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Elle permet de dessiner un [polygone](https://fr.wikipedia.org/wiki/Polygone) en fournissant une ou plusieurs paires de coordonnées, chacune représentant un sommet de la forme.
@@ -193,5 +193,5 @@ p {
 
 ## Voir aussi
 
-- Propriétés utilisant ce type de données&nbsp;: {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}}
+- Propriétés utilisant ce type de données&nbsp;: {{CSSxRef("border-shape")}}, {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}}
 - [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

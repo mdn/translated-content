@@ -64,7 +64,7 @@ Los export con nombre son útiles cuando se necesitan exportar múltiples valore
 Pero un export por defecto puede ser importado con cualquier nombre, por ejemplo:
 
 ```js
-export default k = 12; // en el archivo test.js
+export default (k = 12); // en el archivo test.js
 
 import m from "./test"; // notese que tenemos la libertad de usar import m en lugar de import k, porque k era el export por defecto
 

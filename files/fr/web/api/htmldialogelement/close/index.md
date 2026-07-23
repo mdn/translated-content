@@ -3,13 +3,15 @@ title: "HTMLDialogElement : méthode close()"
 short-title: close()
 slug: Web/API/HTMLDialogElement/close
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: 661a04e7a61abe3d8c7245f04cdd1d0bc865fe69
 ---
 
 {{APIRef("HTML DOM")}}
 
 La méthode **`close()`** de l'interface {{DOMxRef("HTMLDialogElement")}} ferme l'élément {{HTMLElement("dialog")}}.
 Une chaîne de caractères optionnelle peut être passée en argument, ce qui met à jour la propriété `returnValue` de la boîte de dialogue.
+L'évènement {{DOMxRef("HTMLDialogElement.close_event", "close")}} est déclenché après la fermeture de la boîte de dialogue.
+Contrairement à l'appel de {{DOMxRef("HTMLDialogElement.requestClose()")}}, l'opération de fermeture ne peut pas être annulée.
 
 ## Syntaxe
 
@@ -21,7 +23,7 @@ close(returnValue)
 ### Paramètres
 
 - `returnValue` {{Optional_Inline}}
-  - : Chaîne de caractères représentant la nouvelle valeur de {{DOMxRef("HTMLDialogElement.returnValue")}} de la boîte de dialogue.
+  - : Une chaîne de caractères qui remplace la valeur existante de {{DOMxRef("HTMLDialogElement.returnValue")}}.
 
 ### Valeur de retour
 
@@ -29,72 +31,87 @@ Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
-L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre un élément {{HTMLElement("dialog")}} contenant un formulaire via la méthode `showModal()`.
-Depuis cette boîte de dialogue, vous pouvez cliquer sur le bouton _X_ pour la fermer (via la méthode `HTMLDialogElement.close()`), ou soumettre le formulaire avec le bouton de validation.
+### Fermer un dialogue
+
+L'exemple suivant montre un bouton qui, lorsqu'il est cliqué, ouvre un élément {{HTMLElement("dialog")}} avec la méthode {{DOMxRef("HTMLDialogElement.showModal()", "showModal()")}}.
+Depuis cette boîte de dialogue, vous pouvez cliquer sur le bouton _Fermer_ pour fermer la boîte de dialogue (avec la méthode `close()`).
+
+Le bouton _Fermer_ ferme la boîte de dialogue sans {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}}, tandis que le bouton _Fermer avec valeur de retour_ ferme la boîte de dialogue avec un {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}}.
+
+#### HTML
 
 ```html
-<!-- Boîte de dialogue simple contenant un formulaire -->
-<dialog id="favDialog">
-  <form method="dialog">
-    <button type="button" id="close" aria-label="fermer">X</button>
-    <section>
-      <p>
-        <label for="favAnimal">Animal préféré&nbsp;:</label>
-        <select id="favAnimal" name="favAnimal">
-          <option></option>
-          <option>Crevette de saumure</option>
-          <option>Panda roux</option>
-          <option>Singe-araignée</option>
-        </select>
-      </p>
-    </section>
-    <menu>
-      <li>
-        <button type="reset">Réinitialiser</button>
-      </li>
-      <li>
-        <button type="submit">Valider</button>
-      </li>
-    </menu>
-  </form>
+<dialog id="dialogue">
+  <button type="button" id="fermer">Fermer</button>
+  <button type="button" id="fermer-avec-valeur">
+    Fermer avec valeur de retour
+  </button>
 </dialog>
 
-<button id="updateDetails">Mettre à jour les informations</button>
+<button id="ouvrir">Ouvrir la boîte de dialogue</button>
+```
+
+```html hidden
+<pre id="journal"></pre>
+```
+
+```css hidden
+#journal {
+  height: 170px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+```js hidden
+const elementJournal = document.getElementById("journal");
+function journaliser(texte) {
+  elementJournal.innerText = `${elementJournal.innerText}${texte}\n`;
+  elementJournal.scrollTop = elementJournal.scrollHeight;
+}
 ```
 
 ```js
-const updateButton = document.getElementById("updateDetails");
-const closeButton = document.getElementById("close");
-const dialog = document.getElementById("favDialog");
-dialog.returnValue = "favAnimal";
+const dialogue = document.getElementById("dialogue");
+const boutonOuvrir = document.getElementById("ouvrir");
+const boutonFermer = document.getElementById("fermer");
+const boutonFermerAvecValeur = document.getElementById("fermer-avec-valeur");
 
-function openCheck(dialog) {
-  if (dialog.open) {
-    console.log("Boîte de dialogue ouverte");
-  } else {
-    console.log("Boîte de dialogue fermée");
-  }
-}
+// Le bouton d'ouverture ouvre une boîte de dialogue modale
+boutonOuvrir.addEventListener("click", () => {
+  // Réinitialiser la valeur de retour
+  dialogue.returnValue = "";
+  // Afficher la boîte de dialogue
+  dialogue.showModal();
+});
 
-// Le bouton de mise à jour ouvre la boîte de dialogue modale
-updateButton.addEventListener("click", () => {
-  dialog.showModal();
-  openCheck(dialog);
+// Le bouton Fermer ferme la boîte de dialogue
+boutonFermer.addEventListener("click", () => {
+  dialogue.close();
+});
+
+// Le bouton Fermer avec valeur de retour ferme la boîte de dialogue avec une valeur de retour
+boutonFermerAvecValeur.addEventListener("click", () => {
+  dialogue.close(`Fermé à ${new Date().toLocaleTimeString()}`);
 });
 
 // Le bouton de fermeture du formulaire ferme la boîte de dialogue
-closeButton.addEventListener("click", () => {
-  dialog.close("animalNonChoisi");
-  openCheck(dialog);
+dialogue.addEventListener("close", () => {
+  journaliser(
+    `Boîte de dialogue fermée. Valeur de retour : "${dialogue.returnValue}"`,
+  );
 });
 ```
 
-Si le bouton «&nbsp;X&nbsp;» avait été de `type="submit"`, la boîte de dialogue se serait fermée sans nécessiter de JavaScript.
-La soumission d'un formulaire ferme la balise `<dialog>` dans laquelle il est imbriqué si {{HTMLElement("form", "la méthode du formulaire est <code>method</code>", "method")}}, donc aucun bouton «&nbsp;close&nbsp;» n'est requis.
+> [!NOTE]
+> Vous savez que vous pouvez également fermer automatiquement une `<dialog>` en envoyant un élément {{HTMLElement("form")}} avec un attribut [`method="dialog"`](/fr/docs/Web/HTML/Reference/Elements/form#method).
 
 ### Résultat
 
-{{EmbedLiveSample('Examples', '100%', 200)}}
+{{EmbedLiveSample("Fermer un dialogue", "100%", 200)}}
 
 ## Spécifications
 
@@ -106,4 +123,6 @@ La soumission d'un formulaire ferme la balise `<dialog>` dans laquelle il est im
 
 ## Voir aussi
 
-- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("dialog")}}
+- L'élément HTML {{HTMLElement("dialog")}}
+- L'évènement {{DOMxRef("HTMLDialogElement.close_event", "close")}}
+- La méthode {{DOMxRef("HTMLDialogElement.requestClose()")}}

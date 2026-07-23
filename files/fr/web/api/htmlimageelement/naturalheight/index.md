@@ -67,7 +67,7 @@ image.addEventListener("load", (event) => {
 });
 ```
 
-Le code JavaScript affiche les tailles naturelle et affichée dans l'élément {{HTMLElement("pre")}}. Cela se fait en réponse à l'événement {{DOMxRef("HTMLElement.load_event", "load")}} de l'image, afin de s'assurer que l'image est disponible avant d'examiner sa largeur et sa hauteur.
+Le code JavaScript affiche les tailles naturelle et affichée dans l'élément {{HTMLElement("pre")}}. Cela se fait en réponse à l'évènement {{DOMxRef("HTMLElement.load_event", "load")}} de l'image, afin de s'assurer que l'image est disponible avant d'examiner sa largeur et sa hauteur.
 
 ### Résultat
 

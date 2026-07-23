@@ -3,7 +3,7 @@ title: Fonction CSS `inset()`
 short-title: inset()
 slug: Web/CSS/Reference/Values/basic-shape/inset
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`inset()`** définit un rectangle aux distances d'encart définies depuis chaque côté de la boîte de référence. C'est une fonction de forme de base utilisée pour définir l'un des [types de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}.
@@ -48,6 +48,7 @@ clip-path: inset(4rem 20% round 1rem 2rem 3rem 4rem);
 
 ```css
 shape-outside: inset(20px 50px 10px 0 round 50px);
+border-shape: inset(10px 20px 10px 20px round 20px);
 ```
 
 ### Valeurs
@@ -118,6 +119,6 @@ Dans l'exemple ci-dessous, nous avons une forme `inset()` utilisée pour déplac
 
 ## Voir aussi
 
-- Propriétés utilisant ce type de donnée&nbsp;: {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}}
+- Propriétés utilisant ce type de donnée&nbsp;: {{CSSxRef("border-shape")}}, {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}}
 - Le module [des formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
 - [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)
