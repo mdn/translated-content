@@ -1,16 +1,19 @@
 ---
-title: TimeRanges.start()
+title: "TimeRanges: start() メソッド"
+short-title: start()
 slug: Web/API/TimeRanges/start
+l10n:
+  sourceCommit: 87440643d71bf81a5bf4b8fa21db9e3d56ead395
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 **`start()`** は {{domxref("TimeRanges")}} インターフェイスのメソッドで、指定した時間範囲が開始する時刻オフセットを返します。
 
 ## 構文
 
-```js
-start(index);
+```js-nolint
+start(index)
 ```
 
 ### 引数

@@ -1,8 +1,9 @@
 ---
-title: Firefox 127 for developers
+title: Firefox 127 開発者向けリリースノート
+short-title: Firefox 127
 slug: Mozilla/Firefox/Releases/127
 l10n:
-  sourceCommit: 81b27da7107783b4a4d9ff245a99d93f6d3efc3a
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 このページでは、開発者に影響する Firefox 127 の変更点をまとめています。Firefox 127 は、米国時間 [2024 年 6 月 11 日](https://whattrainisitnow.com/release/?version=127) にリリースされました。
@@ -11,7 +12,7 @@ l10n:
 
 ### HTML
 
-- `data:` および `javascript:` URL が、`<base>` 要素の [`href`](/ja/docs/Web/HTML/Reference/Elements/base#href) 属性で禁止されました ([Firefox bug 1850967](https://bugzil.la/1850967))。
+- [`data:`](/ja/docs/Web/URI/Reference/Schemes/data) および [`javascript:`](/ja/docs/Web/URI/Reference/Schemes/javascript) URL が、`<base>` 要素の [`href`](/ja/docs/Web/HTML/Reference/Elements/base#href) 属性で禁止されました ([Firefox bug 1850967](https://bugzil.la/1850967))。
 
 ### CSS
 
@@ -30,7 +31,7 @@ l10n:
 
 ### SVG
 
-- CSS では [Firefox 120](/ja/docs/Mozilla/Firefox/Releases/120#css) で初めにサポートされた行の高さの単位 [`lh` および `rlh`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) を、SVG でもサポートしました。これらは CSS プロパティの値 `stroke-width: 0.5lh` や SVG 属性の値 `stroke-width="0.5lh"` のどちらでも使用できます ([Firefox bug 1892089](https://bugzil.la/1892089))。
+- 行の高さの単位 [`lh`](/ja/docs/Web/CSS/Reference/Values/length#lh) および [`rlh`](/ja/docs/Web/CSS/Reference/Values/length#rlh) は、CSS では [Firefox 120](/ja/docs/Mozilla/Firefox/Releases/120#css) で初めてサポートされましたが、SVG でもサポートされました。これらは CSS プロパティの値 `stroke-width: 0.5lh` や SVG 属性の値 `stroke-width="0.5lh"` のどちらでも使用できます ([Firefox bug 1892089](https://bugzil.la/1892089))。
 
 ### セキュリティ
 
@@ -40,9 +41,8 @@ l10n:
 
 ### API
 
-- 非同期の {{domxref('Clipboard API')}} を完全にサポートしました。{{domxref('ClipboardItem')}} インターフェイスと、{{domxref('Clipboard')}} インターフェイスの [`read()`](/ja/docs/Web/API/Clipboard/read) および [`write()`](/ja/docs/Web/API/Clipboard/write) メソッドが有効になりました ([Firefox bug 1887845](https://bugzil.la/1887845)、[Firefox bug 1858788](https://bugzil.la/1858788))。
+- 非同期の[クリップボード API](/ja/docs/Web/API/Clipboard_API) を完全にサポートしました。{{domxref('ClipboardItem')}} インターフェイスと、{{domxref('Clipboard')}} インターフェイスの [`read()`](/ja/docs/Web/API/Clipboard/read) および [`write()`](/ja/docs/Web/API/Clipboard/write) メソッドが有効になりました ([Firefox bug 1887845](https://bugzil.la/1887845)、[Firefox bug 1858788](https://bugzil.la/1858788))。
 - [ウェブビデオテキストトラック形式 (WebVTT)](/ja/docs/Web/API/WebVTT_API) のキュー、タイトル文字列、コメント、注釈などで、すべての {{glossary("character reference","HTML 文字参照")}} をサポートしました ([Firefox bug 1395924](https://bugzil.la/1395924))。
-- {{domxref('WebGLRenderingContext.drawingBufferColorSpace')}} および [`WebGL2RenderingContext.drawingBufferColorSpace`](/ja/docs/Web/API/WebGL2RenderingContext) をサポートしました ([Firefox bug 1885491](https://bugzil.la/1885491))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -52,7 +52,7 @@ l10n:
 
 #### WebDriver BiDi
 
-- ブラウザーのパーミッション (`geolocation` など) を更新できる、`permissions.setPermission` コマンドを追加しました。パーミッションモジュールは [Permissions 仕様で定義されている](https://www.w3.org/TR/permissions/#webdriver-bidi-module-permissions)、WebDriver BiDi 仕様の拡張です ([Firefox bug 1875065](https://bugzil.la/1875065))。
+- ブラウザーのパーミッション (`geolocation` など) を更新できる、`permissions.setPermission` コマンドを追加しました。パーミッションモジュールは [Permissions 仕様で定義されている](https://w3c.github.io/permissions/#webdriver-bidi-module-permissions)、WebDriver BiDi 仕様の拡張です ([Firefox bug 1875065](https://bugzil.la/1875065))。
 - `browsingContext.locateNodes` コマンドで、アクセシビリティ属性 `name` および `role` をロケーターとしてサポートしました ([Firefox bug 1885577](https://bugzil.la/1885577))。
 - `browsingContext.setViewport` で引数 `devicePixelRatio` をサポートしました。デバイスピクセル比率が異なるスクリーンの動作をエミュレートできます ([Firefox bug 1857961](https://bugzil.la/1857961))。
 - コマンドを解決する前に不必要な待ち状態が発生する競合状態を避けるように `browsingContext.navigate` を改良しました ([Firefox bug 1894305](https://bugzil.la/1894305))。
@@ -71,6 +71,7 @@ l10n:
 - Manifest V3 拡張機能の [`host_permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) を、インストール中にユーザーへ表示するようになりました ([Firefox bug 1889402](https://bugzil.la/1889402))。ただし、更新した拡張機能が新たなホストパーミッションを要求してもユーザーに表示されません ([Firefox bug 1893232](https://bugzil.la/1893232))。
 - 拡張機能に関連付けられたコンテキストの情報を返す {{WebExtAPIRef("runtime.getContexts")}} 関数を追加しました ([Firefox bug 1875480](https://bugzil.la/1875480))。
 - Manifest V3 拡張機能向けに、`_execute_action` のユーザー定義ショートカットがない場合に、特殊な [`_execute_browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#特殊なショートカット) コマンドをユーザー定義ショートカットにフォールバックする機能を追加しました。これにより、Manifest V2 から V3 へ移行する拡張機能がブラウザーアクションのユーザー定義ショートカットを維持できます ([Firefox bug 1797811](https://bugzil.la/1797811))。
+- [オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) が埋め込まれた拡張機能では、ユーザーの環境設定に基づいてダークテーマへの自動切り替えが対応するようになりました（[Firefox バグ 1888866](https://bugzil.la/1888866)）。
 
 ## 実験的なウェブ機能
 
@@ -82,12 +83,8 @@ l10n:
 
 - **相対的な色で `calc()` カラーチャンネルをサポート:** `layout.css.relative-color-syntax.enabled`。
 
-  CSS の [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数で、[相対的な色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors#using_math_functions) のカラーチャンネルを解析できるようになりました ([Firefox bug 1889561](https://bugzil.la/1889561))。
+  CSS の [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数で、[相対的な色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors#数学関数の使用) のカラーチャンネルを解析できるようになりました ([Firefox bug 1889561](https://bugzil.la/1889561))。
 
 - **JavaScript `Float16Array` 型付き配列**: `javascript.options.experimental.float16array`。
 
-  {{jsxref("Float16Array")}} 型付き配列、{{jsxref("DataView")}} から `Float16Array` の値を読み取りおよび書き込みする {{jsxref("DataView.prototype.getFloat16()")}} および {{jsxref("DataView.prototype.setFloat16()")}}、数値を 16 ビット値に丸めるために使用できる静的メソッド {{jsxref("Math.f16round()")}} をサポートしました。新しい型は、特にメモリ消費量のために精度を犠牲にすることが合理的な用途で、GPU とデータを共有するのに便利です ([Firefox bug 1833647](https://bugzil.la/1833647)。
-
-## 過去のバージョン
-
-{{Firefox_for_developers}}
+  {{jsxref("Float16Array")}} 型付き配列、{{jsxref("DataView")}} から `Float16Array` の値を読み取りおよび書き込みする {{jsxref("DataView.prototype.getFloat16()")}} および {{jsxref("DataView.prototype.setFloat16()")}}、数値を 16 ビット値に丸めるために使用できる静的メソッド {{jsxref("Math.f16round()")}} をサポートしました。新しい型は、特にメモリー消費量のために精度を犠牲にすることが合理的な用途で、GPU とデータを共有するのに便利です（[Firefox bug 1833647](https://bugzil.la/1833647)）。

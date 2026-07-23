@@ -188,7 +188,7 @@ l10n:
 
 その他の利用上の注意:
 
-- `controls` 属性を指定しないと、 video はブラウザーの標準のコントロールを含めません。 JavaScript と {{domxref("HTMLMediaElement")}} を使用して、独自のコントロールを作成することもできます。詳しくは[クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
+- `controls` 属性を指定しないと、 video はブラウザーの標準のコントロールを含めません。 JavaScript と {{domxref("HTMLMediaElement")}} を使用して、独自のコントロールを作成することもできます。詳しくは[クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
 - 動画（および音声）コンテンツを詳細に制御できるよう、 `HTMLMediaElement` はたくさんの種類の[イベント](/ja/docs/Web/API/HTMLMediaElement#events)を発行します。これらのイベントは、制御を可能にするだけでなく、メディアのダウンロードと再生の両方の進行状況や再生状態、再生位置を監視することができます。
 - {{cssxref("object-position")}} プロパティを用いて、要素の枠内での動画の位置を調整することができ、 {{cssxref("object-fit")}} プロパティを用いて動画の寸法がどのように枠内に合わせられるかを制御することができます。
 - 動画と同時に字幕を表示するには、 JavaScript と共に {{htmlelement("track")}} 要素と [WebVTT](/ja/docs/Web/API/WebVTT_API) を使用します。詳しくは、 [HTML 動画への字幕の追加](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。

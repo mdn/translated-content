@@ -260,7 +260,7 @@ function setEdgeTrim() {
 }
 ```
 
-Dans la dernière partie du JavaScript, nous exécutons la fonction `setEdgeTrim()` une fois pour définir un état initial pour l'interface utilisateur. Nous appliquons ensuite des écouteurs d'événements {{DOMxRef("HTMLElement/change_event", "change")}} à tous les éléments `<select>` (avec {{DOMxRef("EventTarget/addEventListener", "addEventListener")}}) afin que `setEdgeTrim()` soit exécuté chaque fois que l'une des valeurs `<select>` change pour mettre à jour l'interface utilisateur en conséquence&nbsp;:
+Dans la dernière partie du JavaScript, nous exécutons la fonction `setEdgeTrim()` une fois pour définir un état initial pour l'interface utilisateur. Nous appliquons ensuite des écouteurs d'évènements {{DOMxRef("HTMLElement/change_event", "change")}} à tous les éléments `<select>` (avec {{DOMxRef("EventTarget/addEventListener", "addEventListener")}}) afin que `setEdgeTrim()` soit exécuté chaque fois que l'une des valeurs `<select>` change pour mettre à jour l'interface utilisateur en conséquence&nbsp;:
 
 ```js
 setEdgeTrim();

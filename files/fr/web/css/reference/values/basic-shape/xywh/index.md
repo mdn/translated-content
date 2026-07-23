@@ -3,16 +3,17 @@ title: Fonction CSS `xywh()`
 short-title: xywh()
 slug: Web/CSS/Reference/Values/basic-shape/xywh
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`xywh()`** crée un rectangle à partir des distances définies depuis le bord gauche (`x`) et le bord supérieur (`y`) du bloc englobant, ainsi que la largeur (`w`) et la hauteur (`h`) du rectangle. Il s'agit d'une fonction de forme de base du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Vous pouvez utiliser la fonction `xywh()` dans des propriétés CSS telles que {{CSSxRef("offset-path")}} pour créer le chemin rectangulaire le long duquel un élément se déplace, ou dans {{CSSxRef("clip-path")}} pour définir la forme de la région de découpe.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`xywh()`** crée un rectangle à partir des distances définies depuis le bord gauche (`x`) et le bord supérieur (`y`) du bloc englobant, ainsi que la largeur (`w`) et la hauteur (`h`) du rectangle. Il s'agit d'une fonction de forme de base du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Vous pouvez utiliser la fonction `xywh()` dans des propriétés CSS telles que {{CSSxRef("offset-path")}} pour créer le chemin rectangulaire le long duquel un élément se déplace, dans {{CSSxRef("clip-path")}} pour définir la forme de la région de découpe et dans {{CSSxRef("border-shape")}} pour définir la forme de la bordure d'un élément.
 
 ## Syntaxe
 
 ```css
 offset-path: xywh(0 1% 2px 3% round 0 1px 2% 3px);
 clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
+border-shape: xywh(5% 5% 90% 90% round 20px);
 ```
 
 ### Valeurs
@@ -101,6 +102,7 @@ Dans l'exemple ci-dessous, la propriété {{CSSxRef("offset-path")}} utilise la 
 
 - La fonction {{CSSxRef("basic-shape/inset","inset()")}}
 - La fonction {{CSSxRef("basic-shape/rect","rect()")}}
+- La propriété {{CSSxRef("border-shape")}}
 - La propriété {{CSSxRef("clip-path")}}
 - La propriété {{CSSxRef("offset-path")}}
 - Le type de données {{CSSxRef("&lt;basic-shape&gt;")}}

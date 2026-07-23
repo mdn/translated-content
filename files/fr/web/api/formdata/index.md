@@ -1,46 +1,43 @@
 ---
 title: FormData
 slug: Web/API/FormData
+l10n:
+  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{AvailableInWorkers}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-{{APIRef("XMLHttpRequest API")}}
+L'interface **`FormData`** fournit un moyen de construire un ensemble de paires clé/valeur représentant les champs du formulaire et leurs valeurs, qui peuvent être envoyées en utilisant les méthodes {{DOMxRef("Window/fetch", "fetch()")}}, {{DOMxRef("XMLHttpRequest.send()")}} ou {{DOMxRef("navigator.sendBeacon()")}}. Elle utilise le même format qu'un formulaire utilise si le type d'encodage était défini sur `"multipart/form-data"`.
 
-L'interface **`FormData`** permet de construire facilement un ensemble de paires clé/valeur représentant les champs du formulaire et leurs valeurs, qui peuvent ensuite être facilement envoyées en utilisant la méthode [`XMLHttpRequest.send()`](/fr/docs/Web/API/XMLHttpRequest/send) de l'objet `XMLHttpRequest`. Elle utilise le même format qu'utilise un formulaire si le type d'encodage est mis à `"multipart/form-data"`.
+Vous pouvez également le passer directement au constructeur {{DOMxRef("URLSearchParams")}} si vous souhaitez générer des paramètres de requête de la même manière qu'un {{HTMLElement("form")}} le ferait s'il utilisait un simple envoi `GET`.
 
-Vous pouvez également le passer directement au constructeur [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams) si vous souhaitez générer des paramètres de requête de la même manière qu'un [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) le ferait s'il utilisait une simple soumission `GET`.
-
-Un objet implémentant `FormData` peut être utilisé directement dans une structure [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), au lieu de [`entries()`](/fr/docs/Web/API/FormData/entries)&nbsp;: `for (var p of myFormData)` est équivalent à `for (var p of myFormData.entries())`.
-
-> [!NOTE]
-> Cette fonctionnalité est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+Un objet implémentant `FormData` peut être utilisé directement dans une structure {{JSxRef("Statements/for...of", "for...of")}}, au lieu de {{DOMxRef('FormData.entries()', 'entries()')}}&nbsp;: `for (const p of myFormData)` est équivalent à `for (const p of myFormData.entries())`.
 
 ## Constructeur
 
-- [`FormData()`](/fr/docs/Web/API/FormData/FormData)
+- {{DOMxRef("FormData.FormData","FormData()")}}
   - : Crée un nouvel objet `FormData`.
 
-## Méthodes
+## Méthodes d'instance
 
-- [`FormData.append()`](/fr/docs/Web/API/FormData/append)
-  - : Ajoute une nouvelle valeur à une clé existante dans un objet `FormData`, ou ajoute la clé si elle n'existe pas encore.
-- [`FormData.delete()`](/fr/docs/Web/API/FormData/delete)
+- {{DOMxRef("FormData.append()")}}
+  - : Ajoute une nouvelle valeur à une clé existante au sein d'un objet `FormData`, ou crée la clé si elle n'existe pas encore.
+- {{DOMxRef("FormData.delete()")}}
   - : Supprime une paire clé/valeur d'un objet `FormData`.
-- [`FormData.entries()`](/fr/docs/Web/API/FormData/entries)
-  - : Renvoie un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de passer en revue toutes les paires clé/valeur contenues dans cet objet.
-- [`FormData.get()`](/fr/docs/Web/API/FormData/get)
-  - : Renvoie la première valeur associée à une clé donnée à partir d'un objet `FormData`.
-- [`FormData.getAll()`](/fr/docs/Web/API/FormData/getAll)
-  - : Renvoie un tableau de toutes les valeurs associées à une clé donnée à partir d'un objet `FormData`.
-- [`FormData.has()`](/fr/docs/Web/API/FormData/has)
-  - : Renvoie un booléen indiquant si un objet `FormData` contient une certaine clé.
-- [`FormData.keys()`](/fr/docs/Web/API/FormData/keys)
-  - : Renvoie un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de parcourir toutes les clés des paires clé/valeur contenues dans cet objet.
-- [`FormData.set()`](/fr/docs/Web/API/FormData/set)
-  - : Définit une nouvelle valeur pour une clé existante dans un objet `FormData`, ou ajoute la clé/valeur si elle n'existe pas encore.
-- [`FormData.values()`](/fr/docs/Web/API/FormData/values)
-  - : Renvoie un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de parcourir toutes les valeurs contenues dans cet objet.
+- {{DOMxRef("FormData.entries()")}}
+  - : Retourne un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) qui parcourt toutes les paires clé/valeur contenues dans l'objet `FormData`.
+- {{DOMxRef("FormData.get()")}}
+  - : Retourne la première valeur associée à une clé donnée dans un objet `FormData`.
+- {{DOMxRef("FormData.getAll()")}}
+  - : Retourne un tableau de toutes les valeurs associées à une clé donnée dans un objet `FormData`.
+- {{DOMxRef("FormData.has()")}}
+  - : Retourne un booléen si un objet `FormData` contient une clé donnée.
+- {{DOMxRef("FormData.keys()")}}
+  - : Retourne un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) qui parcourt toutes les clés des paires clé/valeur contenues dans l'objet `FormData`.
+- {{DOMxRef("FormData.set()")}}
+  - : Définit une nouvelle valeur pour une clé existante au sein d'un objet `FormData`, ou ajoute la paire clé/valeur si elle n'existe pas encore.
+- {{DOMxRef("FormData.values()")}}
+  - : Retourne un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) qui parcourt toutes les valeurs contenues dans l'objet `FormData`.
 
 ## Spécifications
 
@@ -52,7 +49,5 @@ Un objet implémentant `FormData` peut être utilisé directement dans une struc
 
 ## Voir aussi
 
-- [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
-- [Utilisation de `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utilisation des objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)
+- [Utiliser des objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- L'élément HTML {{HTMLElement("form")}}

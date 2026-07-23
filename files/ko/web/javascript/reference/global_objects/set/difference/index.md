@@ -34,7 +34,7 @@ difference(other)
 
 ![두 개의 원이 겹치는 벤 다이어그램입니다. A와 B의 차집합은 A에서 B와 겹치지 않는 부분입니다.](diagram.svg)
 
-`difference()`는 [유사 집합](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)객체를 `other` 매개변수로 받습니다. 사용자 코드를 호출하지 않고 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 실제 {{jsxref("Set")}} 인스턴스가 되기 위해 {{jsxref("Operators/this", "this")}}가 필요합니다. 그런 다음 동작은 `this`와 `other`의 크기에 따라 달라집니다.
+`difference()`는 [유사 집합](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)객체를 `other` 매개변수로 받습니다. 사용자 코드를 호출하지 않고 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 실제 {{jsxref("Set")}} 인스턴스가 되기 위해 {{jsxref("this")}}가 필요합니다. 그런 다음 동작은 `this`와 `other`의 크기에 따라 달라집니다.
 
 - `this`에 `other.size`보다 더 많은 요소가 있으면 `other.size`의 `keys()` 메서드를 호출하여 `other`을 순회하고 `other`에 표시되지 않는 모든 요소로 새 집합을 구성합니다.
 - 그렇지 않으면, `this`의 요소를 순회하고 `other.has(e)`가 [거짓 같은 값](/ko/docs/Glossary/Falsy)을 반환하게 만드는 모든 요소 `e`를 포함하는 새 집합을 구성합니다.

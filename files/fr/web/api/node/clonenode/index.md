@@ -1,54 +1,81 @@
 ---
-title: element.cloneNode
+title: "Node : méthode cloneNode()"
+short-title: cloneNode()
 slug: Web/API/Node/cloneNode
+l10n:
+  sourceCommit: 730741c750cc299b85798f1adbaf7adbd6e2016d
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`Node.cloneNode()`** renvoie une copie du nœud sur lequel elle a été appelée.
+La méthode **`cloneNode()`** de l'interface {{DOMxRef("Node")}} retourne une copie du nœud sur lequel cette méthode a été appelée. Son paramètre contrôle si le sous-arbre contenu dans le nœud est également cloné ou non.
+
+Par défaut, le clonage d'un nœud copie tous ses attributs et leurs valeurs, y compris les écouteurs d'évènements définis par des attributs. En définissant le paramètre `deep`, vous pouvez également copier le sous-arbre contenu dans le nœud. Il ne copie _pas_ d'autres données internes, telles que les écouteurs d'évènements ajoutés à l'aide de [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou des propriétés `onevent` (par exemple, `node.onclick = someFunction`), ou l'image peinte pour un élément HTML {{HTMLElement("canvas")}}.
+
+La méthode {{DOMxRef("Document.importNode()")}} crée également une copie d'un nœud. La différence est que `importNode()` clone le nœud dans le contexte du document appelant, tandis que `cloneNode()` utilise le document du nœud cloné. Le contexte du document détermine le {{DOMxRef("CustomElementRegistry")}} pour la construction de tout élément personnalisé. Pour cette raison, pour cloner des nœuds à utiliser dans un autre document, utilisez `importNode()` sur le document cible. Le {{DOMxRef("HTMLTemplateElement.content")}} appartient à un document séparé, il doit donc également être cloné en utilisant `document.importNode()` afin que les descendants des éléments personnalisés soient construits en utilisant les définitions du document actuel.
+
+> [!WARNING]
+> `cloneNode()` peut entraîner des ID d'éléments en double dans un document&nbsp;! Si le nœud d'origine a un attribut `id`, et que le clone est placé dans le même document, vous devez modifier l'ID du clone pour qu'il soit unique.
+>
+> De même, les attributs `name` peuvent devoir être modifiés, en fonction de la manière dont les noms en double sont attendus.
 
 ## Syntaxe
 
-```js
-var dupNode = node.cloneNode([deep]);
+```js-nolint
+cloneNode()
+cloneNode(deep)
 ```
 
-- node
-  - : Le noeud à dupliquer.
-- dupNode
-  - : Le nouveau noeud qui sera un clone du `node`.
-- deep _{{optional_inline}} (profondeur)_
-  - : `true` (_vrai_) si les enfants du noeud doivent aussi être clonés ou `false` (_faux_) si seul le noeud spécifié doit l'être.
+### Paramètres
 
-> [!NOTE]
-> Dans la spécification DOM4 (telle qu'implémentée dans Gecko 13.0), `deep` est un argument facultatif. S'il est omis, la méthode agit comme si la valeur de `deep` était **`true`** par défaut, elle utilise le clonage profond comme comportement par défaut. Pour créer un clone superficiel, `deep` doit être défini sur `false`.
->
-> Le comportement a été modifié dans la dernière spécification et, s'il est omis, la méthode doit agir comme si la valeur de `deep` était **`false`**. Bien que ce soit toujours facultatif, vous devriez toujours fournir l'argument `deep` pour la compatibilité amont et aval. Avec Gecko 28.0, la console a averti les développeurs de ne pas omettre l'argument. À partir de Gecko 29.0, un clone superficiel est défini par défaut au lieu d'un clone profond.
+- `deep` {{Optional_Inline}}
+  - : Si `true`, le nœud et tout son sous-arbre, y compris le texte qui peut se trouver dans des nœuds {{DOMxRef("Text")}} enfants, sont également copiés.
 
-## Exemple
+    Si `false` ou omis, seul le nœud est cloné.
+    Le sous-arbre, y compris tout texte que le nœud contient, n'est pas cloné.
+
+    Notez que `deep` n'a aucun effet sur les {{Glossary("void element", "éléments vides")}}, tels que les éléments HTML {{HTMLElement("img")}} et {{HTMLElement("input")}}.
+
+## Exemples
+
+### Utiliser `cloneNode()`
 
 ```js
-p = document.getElementById("para1");
-p_prime = p.cloneNode(true);
+const p = document.getElementById("para1");
+const p2 = p.cloneNode(true);
 ```
 
-## Notes
+### Utiliser `cloneNode()` avec des modèles
 
-Cloner un nœud copie tous ses attributs ainsi que leurs valeurs, y compris les auditeurs intrinsèques (en ligne). Il ne copie pas les auditeurs d'évènement ajoutés avec [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou ceux assignés au propriétés d'éléments (par exemple `node.onclick = fn`). De plus, pour un élément {{HTMLElement("canvas")}} l'image peinte n'est pas copiée.
+Évitez d'utiliser `cloneNode()` sur le contenu d'un élément HTML {{HTMLElement("template")}}, car si le modèle contient des éléments personnalisés, ils ne sont pas mis à jour tant qu'ils ne sont pas insérés dans le document.
 
-Le nœud dupliqué renvoyé par `cloneNode` ne fera pas partie du document tant qu'il n'y est pas ajouté via la méthode {{domxref("Node.appendChild()")}} ou une méthode similaire. De même, il n'a pas de parent tant qu'il n'a pas été ajouté à un autre nœud.
+```js
+class MonElement extends HTMLElement {
+  constructor() {
+    super();
+    console.log("MonElement créé");
+  }
+}
+customElements.define("mon-element", MonElement);
 
-Si `deep` est défini à `false`, aucun des nœuds enfants n'est copié.
-*T*out texte contenu dans le nœud n'est pas copié non plus , car il fait partie d'un ou plusieurs nœuds {{domxref("Text")}} enfants.
+const template = document.createElement("template");
+template.innerHTML = `<mon-element></mon-element>`;
 
-Si `deep` est évalué à `true`, le sous-arbre entier est copié également (y compris le texte qui peut être contenu dans des nœuds {{domxref("Text")}} enfants). Pour les nœuds vides (par exemple les éléments {{HTMLElement("img")}} et {{HTMLElement("input")}} ) le fait de mettre `deep` à `true` ou `false` n'a aucune incidence sur la copie, mais il est tout de même nécessaire de fournir une valeur.
+const clone = template.content.cloneNode(true);
+// Pas de journalisation ici ; mon-element n'est pas défini dans le document du modèle
+customElements.upgrade(clone);
+// Toujours pas de journalisation ; mon-element n'est toujours pas défini dans le document du modèle
+document.body.appendChild(clone);
+// Journalisation "MonElement créé" ; mon-element est maintenant mis à jour
+```
 
-> [!WARNING]
-> `cloneNode()` peut conduire à dupliquer des ID (_identifiant_) d'éléments dans un document.
+Au lieu de cela, utilisez `document.importNode()` pour cloner le contenu du modèle, afin que tous les éléments personnalisés soient mis à jour en utilisant les définitions du document actuel&nbsp;:
 
-Si le noeud d'origine a un identifiant et que le clone doit être placé dans le même document, l'identifiant du clone peut être modifié pour être unique. Les attributs du nom peuvent devoir être modifiés également, selon que les noms en double sont attendus.
-
-Pour cloner un noeud à ajouter dans un document différent, utilisez {{domxref("Document.importNode()")}} à la place.
+```js
+const clone = document.importNode(template.content, true);
+// Journalisation "MonElement créé" ; mon-element est mis à jour en utilisant les définitions du document
+document.body.appendChild(clone);
+```
 
 ## Spécifications
 

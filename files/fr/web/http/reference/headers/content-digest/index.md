@@ -51,7 +51,7 @@ Content-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-val
 - `<digest-value>`
   - : Le condensé en octets du contenu du message à l'aide de `<digest-algorithm>`.
     Le choix de l'algorithme de condensé détermine également l'encodage à utiliser&nbsp;: `sha-512` et `sha-256` utilisent l'encodage {{Glossary("base64")}}, tandis que certains anciens algorithmes de condensé comme `unixsum` utilisent un entier décimal.
-    Contrairement aux premiers brouillons de la spécification, les octets du condensé encodés en base64 standard sont entourés de deux-points (`:`, ASCII 0x3A) dans le cadre de la [syntaxe de dictionnaire](https://www.rfc-editor.org/rfc/rfc8941#name-byte-sequences).
+    Contrairement aux premiers brouillons de la spécification, les octets du condensé encodés en base64 standard sont entourés de deux-points (`:`, ASCII 0x3A) dans le cadre de la [syntaxe de dictionnaire](https://www.rfc-editor.org/info/rfc8941#name-byte-sequences).
 
 ## Description
 

@@ -1,9 +1,9 @@
 ---
-title: d
+title: CSS `d` プロパティ
+short-title: d
 slug: Web/CSS/Reference/Properties/d
-original_slug: Web/CSS/d
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`d`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 SVG の {{SVGElement("path")}} 要素が描画するパスを定義します。存在すれば、要素の {{SVGAttr("d")}} 属性よりも優先されます。
@@ -14,7 +14,7 @@ l10n:
 ## 構文
 
 ```css
-/* 既定 */
+/* デフォルト */
 d: none;
 
 /* 基本的な使用 */
@@ -66,7 +66,7 @@ d: unset;
 
 #### CSS
 
-CSS ではそれぞれのパスに、黒い {{cssxref("stroke")}} と半透明の赤の {{cssxref("fill")}} を設定します。それから `d` プロパティを使用して、後者のパスのみ SVG の {{SVGAttr("d")}} 属性を上書きします。ブラウザーは既定で `300px` の幅、 `150px` の高さの SVG 画像を描画します。
+CSS ではそれぞれのパスに、黒い {{cssxref("stroke")}} と半透明の赤の {{cssxref("fill")}} を設定します。それから `d` プロパティを使用して、後者のパスのみ SVG の {{SVGAttr("d")}} 属性を上書きします。ブラウザーはデフォルトで `300px` の幅、 `150px` の高さの SVG 画像を描画します。
 
 ```css
 svg {
@@ -74,8 +74,8 @@ svg {
 }
 
 path {
-  fill: #f338;
-  stroke: #000;
+  fill: #ff333388;
+  stroke: black;
 }
 
 path:last-of-type {
@@ -107,7 +107,7 @@ path:last-of-type {
 
 #### CSS
 
-`d` 属性を使って、斜線を引いたハートを定義します。 CSS を使用して、そのパスの {{cssxref("fill")}}、{{cssxref("stroke")}}、{{cssxref("stroke-width")}} を定義し、 2 秒間の {{cssxref("transition")}} を追加します。 {{cssxref(":hover")}} スタイルを追加し、少し異なる {{cssxref("basic-shape/path", "path()")}} 関数を使用します。パスには、既定の状態と同じ数のデータポイントがあり、パスをアニメーション可能にします。
+`d` 属性を使って、斜線を引いたハートを定義します。 CSS を使用して、そのパスの {{cssxref("fill")}}、{{cssxref("stroke")}}、{{cssxref("stroke-width")}} を定義し、 2 秒間の {{cssxref("transition")}} を追加します。 {{cssxref(":hover")}} スタイルを追加し、少し異なる {{cssxref("basic-shape/path", "path()")}} 関数を使用します。パスには、デフォルトの状態と同じ数のデータポイントがあり、パスをアニメーション可能にします。
 
 ```css
 svg {
@@ -153,5 +153,5 @@ svg:hover path {
 - {{cssxref("stroke")}}
 - {{cssxref("basic-shape/path", "path()")}} 関数
 - {{cssxref("basic-shape")}} データ型
-- [CSS 図形の概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
-- [CSS 図形](/ja/docs/Web/CSS/Guides/Shapes)モジュール
+- [CSS シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
+- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)モジュール

@@ -51,7 +51,7 @@ new Request(input, options)
     - L'utilisation des opérations de [l'API Private State Token](/fr/docs/Web/API/Private_State_Token_API) est explicitement interdite par une {{HTTPHeader("Permissions-Policy/private-state-token-issuance","private-state-token-issuance")}} ou {{HTTPHeader("Permissions-Policy/private-state-token-redemption","private-state-token-redemption")}} [politique d'autorisations](/fr/docs/Web/HTTP/Guides/Permissions_Policy), et l'option `privateToken` est définie, y compris un type d'opération `privateToken.operation` non autorisé.
 - `TypeError`
   - : Levée si&nbsp;:
-    - L'URL contient des identifiants, comme `http://utilisateur:motdepasse@exemple.com`, ou ne peut pas être analysée.
+    - L'URL contient des identifiants, comme `http://utilisateur:motdepasse@example.com, ou ne peut pas être analysée.
     - L'option d'initialisation `privateToken` est définie, y compris un type `privateToken.operation` de `send-redemption-record`, et le tableau `privateToken.issues` était vide ou non défini, ou un ou plusieurs des `issuers` définis ne sont pas des URL HTTPS de confiance.
 
 ## Exemple

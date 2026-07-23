@@ -32,25 +32,25 @@ Content-Security-Policy: upgrade-insecure-requests;
   content="upgrade-insecure-requests" />
 ```
 
-Avec cet en-tête défini sur le domaine exemple.com souhaitant migrer de HTTP vers HTTPS, les requêtes pour des ressources non sécurisées et qui ne peuvent pas avoir de navigation sécurisée sont automatiquement converties (qu'elles soient internes ou externes).
+Avec cet en-tête défini sur le domaine example.com souhaitant migrer de HTTP vers HTTPS, les requêtes pour des ressources non sécurisées et qui ne peuvent pas avoir de navigation sécurisée sont automatiquement converties (qu'elles soient internes ou externes).
 
 ```html
-<img src="http://exemple.com/image.png" />
-<img src="http://hors-exemple.com/image.png" />
+<img src="http://example.com/image.png" />
+<img src="http://hors-example.com/image.png" />
 ```
 
 Ces URL seront réécrites avant que la requête ne soit effectuée, ce qui signifie qu'aucune requête non sécurisée n'atteindra le réseau. Notez que, si la ressource demandée n'est pas réellement disponible par HTTPS, la requête échouera sans aucun retour à HTTP.
 
 ```html
-<img src="https://exemple.com/image.png" />
-<img src="https://hors-exemple.com/image.png" />
+<img src="https://example.com/image.png" />
+<img src="https://hors-example.com/image.png" />
 ```
 
 Les mises à niveau de navigation vers des ressources tierces présentent un potentiel de rupture beaucoup plus élevé, elles ne sont donc pas mises à niveau&nbsp;:
 
 ```html
-<a href="https://exemple.com/">Accueil</a>
-<a href="http://hors-exemple.com/">Accueil</a>
+<a href="https://example.com/">Accueil</a>
+<a href="http://hors-example.com/">Accueil</a>
 ```
 
 ### Identifier des requêtes non sécurisées

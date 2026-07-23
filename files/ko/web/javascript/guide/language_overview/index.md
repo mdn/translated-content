@@ -78,8 +78,8 @@ const circumference = 2 * Math.PI * r;
 
 문자열을 숫자로 변환하는 세 가지 방법이 있습니다.
 
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}, 문자열에서 정수를 구문 분석합니다.
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}, 부동소수점 숫자에 대한 문자열을 구문 분석합니다.
+- {{jsxref("parseInt()")}}, 문자열에서 정수를 구문 분석합니다.
+- {{jsxref("parseFloat()")}}, 부동소수점 숫자에 대한 문자열을 구문 분석합니다.
 - [`Number()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) 함수는 문자열을 숫자 리터럴인 것처럼 구문 분석하고 다양한 숫자 표현을 지원합니다.
 
 [단항 더하기 `+`](/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus)를 `Number()`의 줄임말로 사용할 수도 있습니다.

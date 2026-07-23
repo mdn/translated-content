@@ -15,7 +15,7 @@ Es uno de los siguientes:
 
 > [!WARNING]
 > No actualices manualmente los estados de las características en el repositorio `mdn/content`.
-> La documentación se [actualiza automáticamente](#how_feature_statuses_are_added_or_updated) a partir de la información del repositorio `mdn/browser-compat-data` en GitHub.
+> La documentación se [actualiza automáticamente](#¿cómo_se_agregan_o_actualizan_los_estados_de_las_características) a partir de la información del repositorio `mdn/browser-compat-data` en GitHub.
 
 Si no se aplica ninguno de los estados anteriores, la característica se considera _estable y estándar_.
 Para más información sobre estos términos, consulta la página ["Experimental, obsoleta y en desuso"](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete).

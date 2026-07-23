@@ -1,13 +1,10 @@
 ---
 title: 開発者向けのウェブ技術
+short-title: ウェブ
 slug: Web
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
-
-<section id="Quick_links">
-  {{ListSubpages("", 1, 0, 1)}}
-</section>
 
 オープンなウェブは、開発者に素晴らしい機会をもたらします。これらの技術を最大限に活用するには、それらの使い方を知る必要があります。以下に、ウェブ技術のドキュメントへのリンクがあります。
 
@@ -40,8 +37,6 @@ l10n:
   - : JavaScript は、ウェブのネイティブプログラミング言語です。
 - [WebAssembly](/ja/docs/WebAssembly)
   - : WebAssembly により、C、C++、Rust、Swift、C#、Go などで書かれたプログラムをウェブで実行できます。
-- [イベント](/ja/docs/Web/API/Document_Object_Model/Events)
-  - : イベントとは、ウェブアプリで応答するために構築するものです。例えば、ウェブページの読み込みが完了したとき、ユーザーが何かを選択したとき、キーを押したとき、ウィンドウのサイズを変更したとき、フォームを送信したとき、動画を一時停止したとき、などです。
 - [HTTP](/ja/docs/Web/HTTP)
   - : HTTP は、文書、スタイルシート、スクリプト、画像、動画、フォント、その他のリソースをウェブ上で取得し、ウェブサーバーにデータを送り返すための基本的なインターネットプロトコルです。
 - [メディア](/ja/docs/Web/Media)
@@ -73,11 +68,11 @@ l10n:
 
 ## 開発者ツールの文書
 
-- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)<sup>（英語）</sup>
   - : Firefox に組み込まれた一連のウェブ開発者ツールのためのドキュメントです。
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
   - : Chrome に組み込まれた一連のウェブ開発者ツールのためのドキュメントです。
-- [Safari Web Inspector](https://webkit.org/web-inspector/)（英語）
+- [Safari Web Inspector](https://webkit.org/web-inspector/)<sup>（英語）</sup>
   - : Safari に組み込まれた一連のウェブ開発者ツールのためのドキュメントです。
-- [Edge DevTools](https://learn.microsoft.com/ja-jp/microsoft-edge/devtools-guide-chromium/landing/)
+- [Edge DevTools](https://learn.microsoft.com/ja-jp/microsoft-edge/devtools/landing/)
   - : Edge に組み込まれた一連のウェブ開発者ツールのためのドキュメントです。

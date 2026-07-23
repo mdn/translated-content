@@ -64,4 +64,4 @@ ws.has(window); // Renvoie false, window n'appartient plus au WeakSet.
 ## Voir aussi
 
 - {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.clear()")}}
+- `WeakSet.prototype.clear()`
