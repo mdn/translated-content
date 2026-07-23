@@ -1,6 +1,7 @@
 ---
 title: offline_enabled
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled
+slug: conflicting/Mozilla/Add-ons/WebExtensions/manifest.json
+original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled
 ---
 
 {{AddonSidebar}}

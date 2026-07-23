@@ -2102,6 +2102,7 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 /fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/arriere-plan	/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background
 /fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/auteur	/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author
+/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled	/fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/manifest.json
 /fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme_experimentation	/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
 /fr/docs/Mozilla/Add-ons/WebExtensions/manifests_native	/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests
 /fr/docs/Mozilla/Add-ons/WebExtensions/partage_d_objets_avec_des_scripts_de_page	/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
