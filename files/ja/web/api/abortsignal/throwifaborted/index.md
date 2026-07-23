@@ -3,7 +3,7 @@ title: "AbortSignal: throwIfAborted() メソッド"
 short-title: throwIfAborted()
 slug: Web/API/AbortSignal/throwIfAborted
 l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+  sourceCommit: bc7e82aa6db60568d7146ee285918550bbe4b8ce
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
