@@ -1,40 +1,35 @@
 ---
-title: HTMLMediaElement.muted
+title: HTMLMediaElement：muted 属性
 slug: Web/API/HTMLMediaElement/muted
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.muted`** 表示媒体元素是否被静音。
+**`HTMLMediaElement.muted`** 属性用于指示媒体元素是否处于静音状态。
 
-## Syntax
+## 值
 
-```plain
-var isMuted = audioOrVideo.muted
-audio.muted = true;
-```
+布尔值。`true` 表示静音，`false` 表示未静音。
 
-### Value
-
-A {{domxref("Boolean")}}. `true` 表示被静音， `false` 表示未被静音。
-
-## Example
+## 示例
 
 ```js
-var obj = document.createElement("video");
+const obj = document.createElement("video");
 console.log(obj.muted); // false
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}：用于定义 `HTMLMediaElement.muted` 属性的接口
 - {{domxref("HTMLMediaElement.defaultMuted")}}
 - {{domxref("HTMLMediaElement.volume")}}
