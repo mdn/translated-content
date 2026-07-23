@@ -484,7 +484,7 @@ Lorsque cette fonctionnalité est activée, l'attribut global [`href`](/fr/docs/
 ### Proposition du TC39 d'inclusion pour l'itérateur
 
 La méthode [`Iterator.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) teste si une instance de `Iterator` produit une valeur définie.
-La comparaison utilise [l'algorithme `SameValueZero`](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#égualité_same-value-zero).
+La comparaison utilise [l'algorithme `SameValueZero`](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#égalité_same-value-zero).
 Cet algorithme est similaire à l'égalité stricte `===` (où `-0` et `+0` sont considérés comme égaux), mais diffère en ce que {{JSxRef("NaN")}} est considéré comme égal à lui-même.
 ([bogue Firefox 2025779 <sup>(angl.)</sup>](https://bugzil.la/2025779)).
 
