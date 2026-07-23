@@ -7,7 +7,7 @@ slug: Web/JavaScript/Guide/Expressions_and_operators
 
 Este capítulo describe las expresiones y los operadores de JavaScript, incluyendo los de asignación, comparación, aritméticos, bit a bit, lógicos, ternarios, de cadena y otros.
 
-También se encuentra disponible una lista completa y detallada de operadores y expresiones en la {{JSxRef("Operadores", "referencia")}}.
+También se encuentra disponible una lista completa y detallada de operadores y expresiones en la {{JSxRef("Operators", "referencia")}}.
 
 ## Operadores
 
@@ -118,16 +118,16 @@ var var1 = 3;
 var var2 = 4;
 ```
 
-| Operador                                                                                    | Descripción                                                                                                                                                                   | Ejemplos que devuelven `true`              |
-| ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| {{JSxRef("Operators", "Igual", "#Igualdad")}} (`==`)                                        | Devuelve `true` si los operandos son iguales.                                                                                                                                 | `3 == var1`<br>`"3" == var1`<br>`3 == '3'` |
-| {{JSxRef("Operators", "No es igual", "#Desigualdad")}} (`!=`)                               | Devuelve `true` si los operandos _no_ son iguales.                                                                                                                            | `var1 != 4`<br>`var2 != "3"`               |
-| {{JSxRef("Operators", "Estrictamente igual", "#Identidad")}} (`===`)                        | Devuelve `true` si los operandos son iguales y del mismo tipo. Consulta también {{JSxRef("Object.is")}} y {{JSxRef("Equality_comparisons_and_sameness", "similitud en JS")}}. | `3 === var1`                               |
-| {{JSxRef("Operators", "Desigualdad estricta", "#No_Identidad")}} (`!==`)                    | Devuelve `true` si los operandos son del mismo tipo pero no iguales, o son de diferente tipo.                                                                                 | `var1 !== "3"`<br>`3 !== '3'`              |
-| {{JSxRef("/Operadores/Comparison_Operators", "Mayor que", "#Mayor_que_el_operador")}} (`>`) | Devuelve `true` si el operando izquierdo es mayor que el operando derecho.                                                                                                    | `var2 > var1 "12" > 2`                     |
-| {{JSxRef("Operators", "Mayor o igual que", "#Operador_mayor_que_o_igual")}} (`>=`)          | Devuelve `true` si el operando izquierdo es mayor o igual que el operando derecho.                                                                                            | `var2 >= var1 var1 >= 3`                   |
-| {{JSxRef("Operators", "Menor que", "#Operador_menor_que")}} (`<`)                           | Devuelve `true` si el operando izquierdo es menor que el operando derecho.                                                                                                    | `var1 < var2`<br>`"2" < 12`                |
-| {{JSxRef("Operators", "Menor o igual", "#Operador_menor_que_o_igual")}} (`<=`)              | Devuelve `true` si el operando izquierdo es menor o igual que el operando derecho.                                                                                            | `var1 <= var2 var2 <= 5`                   |
+| Operador                                                                           | Descripción                                                                                                                                                                                   | Ejemplos que devuelven `true`              |
+| ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| {{JSxRef("Operators", "Igual", "#Igualdad")}} (`==`)                               | Devuelve `true` si los operandos son iguales.                                                                                                                                                 | `3 == var1`<br>`"3" == var1`<br>`3 == '3'` |
+| {{JSxRef("Operators", "No es igual", "#Desigualdad")}} (`!=`)                      | Devuelve `true` si los operandos _no_ son iguales.                                                                                                                                            | `var1 != 4`<br>`var2 != "3"`               |
+| {{JSxRef("Operators", "Estrictamente igual", "#Identidad")}} (`===`)               | Devuelve `true` si los operandos son iguales y del mismo tipo. Consulta también {{JSxRef("Object.is")}} y [similitud en JS](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). | `3 === var1`                               |
+| {{JSxRef("Operators", "Desigualdad estricta", "#No_Identidad")}} (`!==`)           | Devuelve `true` si los operandos son del mismo tipo pero no iguales, o son de diferente tipo.                                                                                                 | `var1 !== "3"`<br>`3 !== '3'`              |
+| {{JSxRef("Operators/Greater_than", "Mayor que")}} (`>`)                            | Devuelve `true` si el operando izquierdo es mayor que el operando derecho.                                                                                                                    | `var2 > var1 "12" > 2`                     |
+| {{JSxRef("Operators", "Mayor o igual que", "#Operador_mayor_que_o_igual")}} (`>=`) | Devuelve `true` si el operando izquierdo es mayor o igual que el operando derecho.                                                                                                            | `var2 >= var1 var1 >= 3`                   |
+| {{JSxRef("Operators", "Menor que", "#Operador_menor_que")}} (`<`)                  | Devuelve `true` si el operando izquierdo es menor que el operando derecho.                                                                                                                    | `var1 < var2`<br>`"2" < 12`                |
+| {{JSxRef("Operators", "Menor o igual", "#Operador_menor_que_o_igual")}} (`<=`)     | Devuelve `true` si el operando izquierdo es menor o igual que el operando derecho.                                                                                                            | `var1 <= var2 var2 <= 5`                   |
 
 > [!NOTE]
 > (**=>**) no es un operador, sino la notación para {{JSxRef("Functions/Arrow_functions", "Funciones flecha")}}.
