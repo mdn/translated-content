@@ -3,7 +3,7 @@ title: Propriété CSS `padding-top`
 short-title: padding-top
 slug: Web/CSS/Reference/Properties/padding-top
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 0c62b082755017d0773ecaaee7e74efd5e066d0b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`padding-top`** définit la hauteur de la [zone de remplissage](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_remplissage) en haut d'un élément.
@@ -84,9 +84,9 @@ La propriété `padding-top` est définie comme une seule valeur choisie parmi l
 ### Valeurs
 
 - {{CSSxRef("&lt;length&gt;")}}
-  - : La taille du remplissage en tant que valeur fixe. Doit être non négative.
+  - : La taille du remplissage en tant que valeur fixe. Cette valeur doit être positive.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille du remplissage en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Doit être non négative.
+  - : La taille du remplissage en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur doit être positive.
 
 ## Définition formelle
 
@@ -101,10 +101,10 @@ La propriété `padding-top` est définie comme une seule valeur choisie parmi l
 ### Définir le remplissage supérieur en utilisant des pixels et des pourcentages
 
 ```css
-.content {
+.contenu {
   padding-top: 5%;
 }
-.side-box {
+.bord-boite {
   padding-top: 10px;
 }
 ```
