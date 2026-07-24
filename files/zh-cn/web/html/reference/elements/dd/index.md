@@ -8,7 +8,7 @@ l10n:
 
 **`<dd>`** [HTML](/zh-CN/docs/Web/HTML) 元素为描述列表（{{HTMLElement("dl")}}）中前一个术语（{{HTMLElement("dt")}}）提供描述、定义或值。
 
-{{InteractiveExample("HTML Demo: &lt;dd&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML 示例：&lt;dd&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>康沃尔的神秘生物：</p>
