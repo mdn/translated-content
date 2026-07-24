@@ -2,12 +2,14 @@
 title: CSS `box-flex-group` プロパティ
 short-title: box-flex-group
 slug: Web/CSS/Reference/Properties/box-flex-group
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_Header}}{{Deprecated_Header}}
 
 > [!WARNING]
-> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) を参照してください。
+> これはもともと CSS flexible box layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) を参照してください。
 
 **`box-flex-group`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスボックスの子要素をフレックスグループに割り当てます。
 
