@@ -3,7 +3,7 @@ title: Fonctionnalités expérimentales dans Firefox
 short-title: Fonctionnalités expérimentales
 slug: Mozilla/Firefox/Experimental_features
 l10n:
-  sourceCommit: 291993c57c245249cf27c80f33f3dd22f8dd140d
+  sourceCommit: eb6fe94faaedf826c11def7956876403b04199d9
 ---
 
 Cette page répertorie les fonctionnalités expérimentales et partiellement implémentées de Firefox, y compris les standards de la plateforme web en évolution ou proposés.
@@ -65,7 +65,7 @@ Les éléments HTML [`<input type="datetime-local">`](/fr/docs/Web/HTML/Referenc
 
 ### Les attributs `alpha` et `colorspace` dans les éléments de saisie `color`
 
-L'élément HTML [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/input/color) prend en charge les attributs [`alpha`](/fr/docs/Web/HTML/Reference/Elements/input/color#alpha) et [`colorspace`](/fr/docs/Web/HTML/Reference/Elements/input/color#colorspace). ([Le bogue Firefox 1919718](https://bugzil.la/1919718)).
+L'élément HTML [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/input/color) prend en charge les attributs [`alpha`](/fr/docs/Web/HTML/Reference/Elements/input/color#alpha) et [`colorspace`](/fr/docs/Web/HTML/Reference/Elements/input/color#colorspace) ([bogue Firefox 1919718](https://bugzil.la/1919718)).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -78,6 +78,20 @@ L'élément HTML [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/i
   - : Mettre sur `true` pour activer.
 
 ## CSS
+
+### `circle()` et `ellipse()` autorisent les mots-clés `farthest-corner` et `closest-corner`
+
+Les mots-clés `farthest-corner` et `closest-corner` peuvent désormais être utilisés pour définir les valeurs des rayons des formes de base CSS [`ellipse()`](/fr/docs/Web/CSS/Reference/Values/basic-shape/ellipse) et [`circle()`](/fr/docs/Web/CSS/Reference/Values/basic-shape/circle). (Voir le [bogue Firefox 2037673 <sup>(angl.)</sup>](https://bugzil.la/2037673) pour plus de détails.)
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 153                    | Oui                 |
+| Developer Edition | 153                    | Non                 |
+| Beta              | 153                    | Non                 |
+| Release           | 153                    | Non                 |
+
+- `layout.css.ellipse-corners.enabled`
+  - : Mettre sur `true` pour activer.
 
 ### Affichage des caractères de contrôle (rectangle avec valeur hexadécimale)
 
@@ -109,7 +123,7 @@ La propriété CSS {{CSSxRef("initial-letter")}} fait partie du module de spéci
 
 ### Fonction `fit-content()`
 
-La fonction {{CSSxRef("fit-content()")}} appliquée à {{CSSxRef("width")}} et aux autres propriétés de dimensionnement. Cette fonction est déjà bien prise en charge pour le dimensionnement des pistes de la mise en page CSS Grid. (Voir [le bogue Firefox 1312588 <sup>(angl.)</sup>](https://bugzil.la/1312588) pour plus de détails.)
+La fonction {{CSSxRef("fit-content_function", "fit-content()")}} appliquée à {{CSSxRef("width")}} et aux autres propriétés de dimensionnement. Cette fonction est déjà bien prise en charge pour le dimensionnement des pistes de la mise en page CSS Grid. (Voir [le bogue Firefox 1312588 <sup>(angl.)</sup>](https://bugzil.la/1312588) pour plus de détails.)
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -133,7 +147,7 @@ Vous pouvez également utiliser la notation fonctionnelle {{CSSxRef("animation-t
 
 Pour plus d'informations, voir [le bogue Firefox 1807685 <sup>(angl.)</sup>](https://bugzil.la/1807685), [le bogue Firefox 1804573 <sup>(angl.)</sup>](https://bugzil.la/1804573), [le bogue Firefox 1809005 <sup>(angl.)</sup>](https://bugzil.la/1809005), [le bogue Firefox 1676791 <sup>(angl.)</sup>](https://bugzil.la/1676791), [le bogue Firefox 1754897 <sup>(angl.)</sup>](https://bugzil.la/1754897), [le bogue Firefox 1817303 <sup>(angl.)</sup>](https://bugzil.la/1817303) et [le bogue Firefox 1737918 <sup>(angl.)</sup>](https://bugzil.la/1737918).
 
-La propriété {{CSSxRef('timeline-scope')}} n'est pas encore prise en charge. Pour plus d'informations, voir [le bogue Firefox 1676779 <sup>(angl.)</sup>](https://bugzil.la/1676779).
+Les propriétés {{CSSxRef("timeline-scope")}}, {{CSSxRef("animation-range-start")}} et {{CSSxRef("animation-range-end")}} (et la propriété raccourcie {{CSSxRef("animation-range")}}) ne sont pas encore prises en charge. Pour plus d'informations, voir [le bogue Firefox 1676779 <sup>(angl.)</sup>](https://bugzil.la/1676779).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -181,7 +195,7 @@ Ce nom peut ensuite être assigné à `animation-timeline`, ce qui permet d'anim
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
-| Nightly           | 114                    | Non                 |
+| Nightly           | 136                    | Oui                 |
 | Developer Edition | 114                    | Non                 |
 | Beta              | 114                    | Non                 |
 | Release           | 114                    | Non                 |
@@ -197,7 +211,7 @@ Voir [le bogue Firefox 1808410 <sup>(angl.)</sup>](https://bugzil.la/1808410) po
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
-| Nightly           | 114                    | Non                 |
+| Nightly           | 136                    | Oui                 |
 | Developer Edition | 114                    | Non                 |
 | Beta              | 114                    | Non                 |
 | Release           | 114                    | Non                 |
@@ -226,21 +240,6 @@ Plus précisément, cette préférence désactivera les propriétés préfixées
 | Release           | 120                    | Oui                 |
 
 - `layout.css.prefixes.transforms`
-  - : Mettre sur `true` pour activer.
-
-#### Points de contrôle relatifs dans les commandes de courbe CSS `shape()`
-
-Vous pouvez utiliser des valeurs [`<relative-control-point>`](/fr/docs/Web/CSS/Reference/Values/basic-shape/shape#relative-control-point) lors de la définition d'une [`<curve-command>`](/fr/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) ou d'une [`<smooth-command>`](/fr/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) dans une fonction CSS `shape()`. Ces valeurs permettent d'indiquer des points de contrôle positionnés par rapport au point de départ ou d'arrivée de la commande en cours, ou par rapport à l'origine (coin supérieur gauche) du conteneur dans lequel la forme est dessinée.
-(Voir [le bogue Firefox 1921501 <sup>(angl.)</sup>](https://bugzil.la/1921501)).
-
-| Canal de parution | Ajouté dans la version | Activé par défaut ? |
-| ----------------- | ---------------------- | ------------------- |
-| Nightly           | 146                    | Oui                 |
-| Developer Edition | 146                    | Non                 |
-| Beta              | 146                    | Non                 |
-| Release           | 146                    | Non                 |
-
-- `layout.css.basic-shape-shape.enabled`
   - : Mettre sur `true` pour activer.
 
 ### Espacement symétrique des lettres `letter-spacing`
@@ -332,7 +331,21 @@ La règle CSS {{CSSxRef("@custom-media")}} permet de définir des alias pour des
 
 ### Valeurs `<attr-type>` dans la fonction CSS `attr()`
 
-La fonction CSS {{CSSxRef("attr")}} prend désormais en charge les valeurs [`<attr-type>`](/fr/docs/Web/CSS/Reference/Values/attr#attr-type). Cela vous permet de spécifier comment une valeur d'attribut est analysée en une valeur CSS et de prendre ces valeurs directement à partir de [`data-*`](/fr/docs/Web/HTML/How_to/Use_data_attributes). ([bogue Firefox 1986631 <sup>(angl.)</sup>](https://bugzil.la/1986631), [bogue Firefox 1998245 <sup>(angl.)</sup>](https://bugzil.la/1998245).
+La fonction CSS {{CSSxRef("attr")}} prend désormais en charge les valeurs [`<attr-type>`](/fr/docs/Web/CSS/Reference/Values/attr#attr-type). Cela vous permet de définir comment une valeur d'attribut est analysée en une valeur CSS et de prendre ces valeurs directement à partir de [`data-*`](/fr/docs/Web/HTML/How_to/Use_data_attributes). ([bogue Firefox 1986631 <sup>(angl.)</sup>](https://bugzil.la/1986631), [bogue Firefox 1998245 <sup>(angl.)</sup>](https://bugzil.la/1998245).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 152                    | Oui                 |
+| Developer Edition | 149                    | Non                 |
+| Beta              | 149                    | Non                 |
+| Release           | 149                    | Non                 |
+
+- `layout.css.attr.enabled`
+  - : Mettre sur `true` pour activer.
+
+### La valeur `base-select` pour la propriété CSS `appearance`
+
+La valeur [`base-select`](/fr/docs/Web/CSS/Reference/Properties/appearance#base-select) pour la propriété CSS {{CSSxRef("appearance")}}, pertinente uniquement pour l'élément HTML {{HTMLElement("select")}} et le pseudo-élément {{CSSxRef("::picker()", "::picker(select)")}}, permet de les mettre en forme complètement. Actuellement, seul le style de l'élément `<select>` est pris en charge. Le style du pseudo-élément `::picker(select)` est ajouté dans les versions futures. Cette fonctionnalité fait partie du travail sur les [éléments de sélecteurs personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select). Deux préférences doivent être activées pour l'utiliser. ([bogue Firefox 1974787 <sup>(angl.)</sup>](https://bugzil.la/1974787)).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -341,7 +354,9 @@ La fonction CSS {{CSSxRef("attr")}} prend désormais en charge les valeurs [`<at
 | Beta              | 149                    | Non                 |
 | Release           | 149                    | Non                 |
 
-- `layout.css.attr.enabled`
+- `dom.select.customizable_select.enabled`
+  - : Mettre sur `true` pour activer.
+- `layout.css.appearance-base.enabled`
   - : Mettre sur `true` pour activer.
 
 ### Attributs avec espace de noms dans la fonction CSS `attr()`
@@ -356,20 +371,6 @@ La fonction CSS {{CSSxRef("attr")}} prend désormais en charge les [attributs av
 | Release           | 150                    | Non                 |
 
 - `layout.css.attr.enabled`
-  - : Mettre sur `true` pour activer.
-
-### Requêtes `@container style()`
-
-La règle CSS [`@container`](/fr/docs/Web/CSS/Reference/At-rules/@container) prend en charge les requêtes [`style()`](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#conteneurs_de_requêtes_de_style). Cela vous permet de vérifier si un conteneur possède une déclaration CSS valide, une propriété CSS ou une propriété personnalisée, et d'appliquer des styles à ses enfants en conséquence. ([bogue Firefox 2014404 <sup>(angl.)</sup>](https://bugzil.la/2014404)).
-
-| Canal de parution | Ajouté dans la version | Activé par défaut ? |
-| ----------------- | ---------------------- | ------------------- |
-| Nightly           | 149                    | Oui                 |
-| Developer Edition | 149                    | Non                 |
-| Beta              | 149                    | Non                 |
-| Release           | 149                    | Non                 |
-
-- `layout.css.style-queries.enabled`
   - : Mettre sur `true` pour activer.
 
 ### Éléments positionnés en absolu dans des conteneurs multi-colonnes et lors de l'impression
@@ -388,11 +389,130 @@ Cela améliore l'interopérabilité avec d'autres navigateurs et empêche les pr
 - `layout.abspos.fragmentainer-aware-positioning.enabled`
   - : Mettre sur `true` pour activer.
 
+### Requêtes `@container style()`
+
+La règle CSS [`@container`](/fr/docs/Web/CSS/Reference/At-rules/@container) prend en charge les requêtes [`style()`](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#conteneurs_de_requêtes_de_style). Cela vous permet de vérifier si un conteneur possède une déclaration CSS valide, une propriété CSS ou une propriété personnalisée, et d'appliquer des styles à ses enfants en conséquence. ([bogue Firefox 2014404 <sup>(angl.)</sup>](https://bugzil.la/2014404)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 149                    | Oui                 |
+| Developer Edition | 149                    | Non                 |
+| Beta              | 149                    | Non                 |
+| Release           | 149                    | Non                 |
+
+- `layout.css.style-queries.enabled`
+  - : Mettre sur `true` pour activer.
+
+### Valeurs de type `<timeline-range-name>`
+
+Les propriétés CSS {{CSSxRef("animation-range-start")}}, {{CSSxRef("animation-range-end")}} et la propriété raccourcie {{CSSxRef("animation-range")}} prennent désormais en charge les valeurs {{CSSxRef("&lt;timeline-range-name&gt;")}}. Ces valeurs [`<timeline-range-name>`](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#noms_des_plages_de_chronologie) permettent de préciser dans quel segment une animation déclenchée par le défilement a lieu. ([bogue Firefox 1804775 <sup>(angl.)</sup>](https://bugzil.la/1804775)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 151                    | Oui                 |
+| Developer Edition | 151                    | Non                 |
+| Beta              | 151                    | Non                 |
+| Release           | 151                    | Non                 |
+
+- `layout.css.scroll-driven-animations.enabled`
+  - : Mettre sur `true` pour activer.
+
+### Valeurs de type `<timeline-range-name>` dans les sélecteurs `@keyframes`
+
+La règle {{CSSxRef("@keyframes")}} prend désormais en charge les valeurs {{CSSxRef("&lt;timeline-range-name&gt;")}}. Ces [valeurs](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#noms_des_plages_de_chronologie) permettent de préciser dans quel segment une animation déclenchée par le défilement a lieu. ([bogue Firefox 1824875 <sup>(angl.)</sup>](https://bugzil.la/1824875)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 152                    | Oui                 |
+| Developer Edition | 152                    | Non                 |
+| Beta              | 152                    | Non                 |
+| Release           | 152                    | Non                 |
+
+- `layout.css.scroll-driven-animations.enabled`
+  - : Mettre sur `true` pour activer.
+
+### Fonctions CSS de comptage d'arbres
+
+Les fonctions {{CSSxRef("sibling-count")}} et {{CSSxRef("sibling-index")}} sont désormais prises en charge. La fonction `sibling-count()` retourne le nombre d'éléments voisins ainsi que l'élément lui-même. La fonction `sibling-index()` retourne le numéro d'index de l'élément par rapport à ses voisins, en commençant à `1` et non à `0`. ([bogue Firefox 2042063 <sup>(angl.)</sup>](https://bugzil.la/2042063)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 154                    | Oui                 |
+| Developer Edition | 153                    | Non                 |
+| Beta              | 153                    | Non                 |
+| Release           | 153                    | Non                 |
+
+- `layout.css.tree-counting-functions.enabled`
+  - : Mettre sur `true` pour activer.
+
+### Mise à jour des attributs des ressources externes
+
+La propriété CSS {{CSSxRef("link-parameters")}} et la fonction CSS {{CSSxRef("param()")}} sont désormais prises en charge. Cela permet à l'utilisateur·ice de mettre à jour les attributs des ressources externes, telles que les SVG, dont les attributs sont définis avec la fonction CSS {{CSSxRef("env()")}}. Cela signifie qu'une seule ressource externe peut être utilisée plutôt que de créer plusieurs variantes qui n'ont que des couleurs ou d'autres valeurs différentes. ([bogue Firefox 2046153 <sup>(angl.)</sup>](https://bugzil.la/2046153)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 154                    | Oui                 |
+| Developer Edition | 153                    | Non                 |
+| Beta              | 153                    | Non                 |
+| Release           | 153                    | Non                 |
+
+- `layout.css.link-parameters.enabled`
+  - : Mettre sur `true` pour activer.
+
 ## SVG
 
 **Aucune fonctionnalité expérimentale dans ce cycle de publication.**
 
+## MathML
+
+### Désactiver `href` sur les éléments MathML qui ne sont pas `<a>`
+
+Lorsque cette fonctionnalité est activée, l'attribut global [`href`](/fr/docs/Web/MathML/Reference/Global_attributes/href) ne crée plus de lien hypertexte sur les éléments MathML autres que `<a>`, alignant ainsi Firefox sur la [spécification MathML Core <sup>(angl.)</sup>](https://w3c.github.io/mathml-core/#the-a-element), qui ne définit les liens hypertexte que sur l'élément `<a>`. ([bogue Firefox 2026848 <sup>(angl.)</sup>](https://bugzil.la/2026848)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 151                    | Oui                 |
+| Developer Edition | 151                    | Non                 |
+| Beta              | 151                    | Non                 |
+| Release           | 151                    | Non                 |
+
+- `mathml.href_link_on_non_anchor_element.disabled`
+  - : Mettre sur `true` pour activer.
+
 ## JavaScript
+
+### Proposition du TC39 d'inclusion pour l'itérateur
+
+La méthode [`Iterator.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) teste si une instance de `Iterator` produit une valeur définie.
+La comparaison utilise [l'algorithme `SameValueZero`](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#égalité_same-value-zero).
+Cet algorithme est similaire à l'égalité stricte `===` (où `-0` et `+0` sont considérés comme égaux), mais diffère en ce que {{JSxRef("NaN")}} est considéré comme égal à lui-même.
+([bogue Firefox 2025779 <sup>(angl.)</sup>](https://bugzil.la/2025779)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 152                    | Non                 |
+| Developer Edition | 152                    | Non                 |
+| Beta              | 152                    | Non                 |
+| Release           | 152                    | Non                 |
+
+- `javascript.options.experimental.iterator_includes`
+  - : Mettre sur `true` pour activer.
+
+### Proposition du TC39 d'information `Intl.Locale`
+
+La [proposition du TC39 d'information `Intl.Locale`](https://github.com/tc39/proposal-intl-locale-info) est maintenant prise en charge.
+Cela inclut toutes les méthodes d'instance de `Intl.Locale` qui sont préfixées par «&nbsp;get&nbsp;» — {{JSxRef("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}}, {{JSxRef("Intl/Locale/getCollations", "Intl.Locale.prototype.getCollations()")}}, {{JSxRef("Intl/Locale/getHourCycles", "Intl.Locale.prototype.getHourCycles()")}}, {{JSxRef("Intl/Locale/getNumberingSystems", "Intl.Locale.prototype.getNumberingSystems()")}}, {{JSxRef("Intl/Locale/getTextInfo", "Intl.Locale.prototype.getTextInfo()")}}, {{JSxRef("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones()")}}, {{JSxRef("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}}.
+([bogue Firefox 1693576 <sup>(angl.)</sup>](https://bugzil.la/1693576)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 152                    | Non                 |
+| Developer Edition | —                      | —                   |
+| Beta              | —                      | —                   |
+| Release           | —                      | —                   |
+
+- `javascript.options.experimental.intl_locale_info`
+  - : Mettre sur `true` pour activer sur Nightly.
 
 ### Tableaux associatifs multiples d'import
 
@@ -411,6 +531,22 @@ Cela donne aux développeur·euse·s plus de flexibilité lors de la structurati
   - : Mettre sur `true` pour activer.
 
 ## Les API Web
+
+### Rapports de plantage
+
+Les rapports de plantage peuvent désormais être envoyés avec [l'API Reporting](/fr/docs/Web/API/Reporting_API) au point de terminaison `default`.
+Notez que Firefox ne prend pas en charge la fourniture de {{DOMxRef("CrashReportContext")}} dans le corps du rapport.
+([bogue Firefox 2036160 <sup>(angl.)</sup>](https://bugzil.la/2036160)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 152                    | Oui                 |
+| Developer Edition | 152                    | Non                 |
+| Beta              | 152                    | Non                 |
+| Release           | 152                    | Non                 |
+
+- `dom.reporting.crash.enabled`
+  - : Mettre sur `true` pour activer (activé par défaut dans Nightly).
 
 ### Registres d'éléments personnalisés à portée limitée
 
@@ -449,22 +585,6 @@ Par exemple, la méthode {{DOMxRef("CSSNumericValue/to", "to()")}} de l'interfac
 - `layout.css.typed-om.enabled`
   - : Mettre sur `true` pour activer.
 
-### Propriétés `actions` et `maxActions` de Notification
-
-La propriété en lecture seule {{DOMxRef("Notification/actions","actions")}} et la propriété statique en lecture seule [`maxActions`](/fr/docs/Web/API/Notification/maxActions_static) de l'interface {{DOMxRef("Notification")}} sont prises en charge dans Nightly sur bureau.
-Celles-ci contiennent respectivement les actions de notification définies avec {{DOMxRef("ServiceWorkerRegistration.showNotification()")}} et le nombre maximal d'actions pouvant être définies.
-(Voir [le bogue Firefox 1225110 <sup>(angl.)</sup>](https://bugzil.la/1225110), [le bogue Firefox 1963263 <sup>(angl.)</sup>](https://bugzil.la/1963263)).
-
-| Canal de parution | Ajouté dans la version | Activé par défaut ?     |
-| ----------------- | ---------------------- | ----------------------- |
-| Nightly           | 138                    | Oui (bureau uniquement) |
-| Developer Edition | 138                    | Non                     |
-| Beta              | 138                    | Non                     |
-| Release           | 138                    | Non                     |
-
-- `dom.webnotifications.actions.enabled`
-  - : Mettre sur `true` pour activer.
-
 ### Graphismes : Canvas, WebGL et WebGPU
 
 #### WebGL : extensions en brouillon
@@ -474,8 +594,8 @@ Lorsque cette préférence est activée, toutes les extensions WebGL actuellemen
 #### L'API WebGPU
 
 [L'API WebGPU](/fr/docs/Web/API/WebGPU_API) fournit une prise en charge bas niveau pour effectuer des calculs et du rendu graphique en utilisant le [Graphics Processing Unit](https://fr.wikipedia.org/wiki/Processeur_graphique) (GPU) de l'appareil ou de l'ordinateur de l'utilisateur·ice.
-Depuis la version 142, cela est activé sous Windows dans tous les contextes sauf les service workers.
-Depuis la version 147, cela est activé sous macOS sur Apple Silicon dans tous les contextes de navigation sauf les service workers.
+Depuis la version 142, c'est activé sous Windows dans tous les contextes sauf les service workers.
+Depuis la version 147, c'est activé sous macOS sur Apple Silicon dans tous les contextes de navigation sauf les service workers.
 Pour d'autres plateformes comme Linux et macOS sur Intel, c'est activé dans Nightly.
 Voir [le bogue Firefox 1602129 <sup>(angl.)</sup>](https://bugzil.la/1602129) pour suivre l'avancement de cette API.
 
@@ -495,7 +615,7 @@ Voir [le bogue Firefox 1602129 <sup>(angl.)</sup>](https://bugzil.la/1602129) po
 
 Les fonctionnalités expérimentales suivantes incluent celles trouvées dans les API multimédia telles que [l'API WebRTC](/fr/docs/Web/API/WebRTC_API), [l'API Web Audio](/fr/docs/Web/API/Web_Audio_API), [l'API Media Source Extensions](/fr/docs/Web/API/Media_Source_Extensions_API), [l'API Encrypted Media Extensions](/fr/docs/Web/API/Encrypted_Media_Extensions_API) et [l'API Media Capture and Streams](/fr/docs/Web/API/Media_Capture_and_Streams_API).
 
-#### Propriétés `audioTracks` et `videoTracks` de HTMLMediaElement
+#### Propriétés `audioTracks` et `videoTracks` de `HTMLMediaElement`
 
 L'activation de cette fonctionnalité ajoute les propriétés {{DOMxRef("HTMLMediaElement.audioTracks")}} et {{DOMxRef("HTMLMediaElement.videoTracks")}} à tous les éléments média HTML. Cependant, comme Firefox ne prend actuellement pas en charge plusieurs pistes audio et vidéo, les cas d'utilisation les plus courants pour ces propriétés ne fonctionnent pas, elles sont donc toutes deux désactivées par défaut. Voir [le bogue Firefox 1057233 <sup>(angl.)</sup>](https://bugzil.la/1057233) pour plus de détails.
 
@@ -543,35 +663,19 @@ Cela permet aux utilisateur·ice·s de Firefox d'afficher des images qui s'affic
 
 #### Prise en charge de JPEG XL
 
-Firefox prend en charge les images [JPEG XL <sup>(angl.)</sup>](https://jpeg.org/jpegxl/) si cette fonctionnalité est activée.
-Voir [le bogue Firefox 1539075 <sup>(angl.)</sup>](https://bugzil.la/1539075) pour plus de détails.
+Firefox prend en charge le format d'image [JPEG XL <sup>(angl.)</sup>](https://jpeg.org/jpegxl/), un successeur moderne du JPEG qui offre une meilleure compression et qualité d'image, ainsi que de nouvelles fonctionnalités telles que la transparence, l'animation et la prise en charge du HDR.
+Voir [le bogue Firefox 1539075 <sup>(angl.)</sup>](https://bugzil.la/1539075) et [le bogue Firefox 2016688 <sup>(angl.)</sup>](https://bugzil.la/2016688) pour plus de détails.
 
-Notez que, comme indiqué ci-dessous, la fonctionnalité n'est disponible que dans les versions Nightly (peu importe si la préférence est activée).
 Dans Firefox 149, le précédent décodeur d'images [JPEG XL <sup>(angl.)</sup>](https://jpeg.org/jpegxl/) en C++ a été remplacé par une nouvelle implémentation en Rust utilisant la bibliothèque `jxl-rs` ([bogue Firefox 1986393 <sup>(angl.)</sup>](https://bugzil.la/1986393)).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
-| Nightly           | 90                     | Non                 |
-| Developer Edition | —                      | —                   |
-| Beta              | —                      | —                   |
-| Release           | —                      | —                   |
+| Nightly           | 153                    | Oui                 |
+| Developer Edition | 152                    | Non                 |
+| Beta              | 152                    | Non                 |
+| Release           | 152                    | Non                 |
 
 - `image.jxl.enabled`
-  - : Mettre sur `true` pour activer.
-
-#### L'API Document Picture-in-Picture
-
-[L'API Document Picture-in-Picture](/fr/docs/Web/API/Document_Picture-in-Picture_API) permet d'ouvrir une fenêtre toujours au premier plan pouvant être remplie avec du contenu HTML arbitraire, comme une vidéo avec des contrôles personnalisés ou un ensemble de flux affichant les participant·e·s à un appel vidéo.
-Voir [le bogue Firefox 1858562 <sup>(angl.)</sup>](https://bugzil.la/1858562) pour plus de détails.
-
-| Canal de parution | Ajouté dans la version | Activé par défaut ? |
-| ----------------- | ---------------------- | ------------------- |
-| Nightly           | 148                    | Oui                 |
-| Developer Edition | 148                    | Non                 |
-| Beta              | 148                    | Non                 |
-| Release           | 148                    | Non                 |
-
-- `dom.documentpip.enabled`
   - : Mettre sur `true` pour activer.
 
 ### API WebVR (désactivée)
@@ -595,12 +699,12 @@ Les méthodes `GeometryUtils` `convertPointFromNode()`, `convertRectFromNode()` 
 
 | Canal de parution | Version ajoutée | Activé par défaut ? |
 | ----------------- | --------------- | ------------------- |
-| Nightly           | 31              | Oui                 |
+| Nightly           | 31              | Non                 |
 | Developer Edition | 31              | Non                 |
 | Beta              | 31              | Non                 |
 | Release           | 31              | Non                 |
 
-- `layout.css.convertFromNode.enable`
+- `layout.css.convertFromNode.enabled`
   - : Mettre sur `true` pour activer.
 
 ### Méthode `GeometryUtils` : `getBoxQuads()`
@@ -609,7 +713,7 @@ La méthode `GeometryUtils` `getBoxQuads()` retourne les boîtes CSS pour un {{D
 
 | Canal de parution | Version ajoutée | Activé par défaut ? |
 | ----------------- | --------------- | ------------------- |
-| Nightly           | 31              | Oui                 |
+| Nightly           | 31              | Non                 |
 | Developer Edition | 31              | Non                 |
 | Beta              | 31              | Non                 |
 | Release           | 31              | Non                 |
@@ -765,7 +869,7 @@ Lorsque `Integrity-Policy` est utilisé, le navigateur bloque le chargement des 
 
 Les en-têtes HTTP {{HTTPHeader("Sec-Fetch-Storage-Access")}} et {{HTTPHeader("Activate-Storage-Access")}} sont désormais pris en charge, permettant un flux de travail plus efficace avec la [Storage Access API](/fr/docs/Web/API/Storage_Access_API). (Voir [le bogue Firefox 1991688 <sup>(angl.)</sup>](https://bugzil.la/1991688)).
 
-Dans le flux de travail uniquement JavaScript, une ressource tierce doit être demandée et chargée pour activer une permission d'accès au stockage pour un contexte particulier (comme un nouvel onglet du navigateur). Cela est requis même si la permission a déjà été accordée.
+Dans le flux de travail uniquement JavaScript, une ressource tierce doit être demandée et chargée pour activer une permission d'accès au stockage pour un contexte particulier (comme un nouvel onglet du navigateur). C'est requis même si la permission a déjà été accordée.
 Les en-têtes d'accès au stockage permettent au navigateur d'indiquer l'état de la permission pour le contexte particulier, afin que le serveur puisse demander l'activation d'une permission déjà accordée.
 Cela évite la surcharge de récupération et de chargement inutile de la ressource.
 
