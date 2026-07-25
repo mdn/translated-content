@@ -1,6 +1,6 @@
 ---
-title: "JavaScript: 操作の追加"
-short-title: 操作の追加
+title: "JavaScript: 操作性の追加"
+short-title: 操作性の追加
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 l10n:
   sourceCommit: b5a6d8bc5fd751032f70b88e7ec1ec61339937de
