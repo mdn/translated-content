@@ -110,5 +110,4 @@ Firefox 152 は、米国時間 [2026 年 6 月 16 日](https://whattrainisitnow.
 
 - **Crash Reporting** (Nightly): `dom.reporting.crash.enabled`
 
-  [Reporting API](/ja/docs/Web/API/Reporting_API) を介してクラッシュレポートを送信できます 
-  ([Firefox bug 2036160](https://bugzil.la/2036160))。
+  [Reporting API](/ja/docs/Web/API/Reporting_API) を介してクラッシュレポートを送信できます ([Firefox bug 2036160](https://bugzil.la/2036160))。
