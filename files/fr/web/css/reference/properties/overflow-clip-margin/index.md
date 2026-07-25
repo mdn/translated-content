@@ -3,7 +3,7 @@ title: Propriété CSS `overflow-clip-margin`
 short-title: overflow-clip-margin
 slug: Web/CSS/Reference/Properties/overflow-clip-margin
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 0c62b082755017d0773ecaaee7e74efd5e066d0b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overflow-clip-margin`** détermine jusqu'où un élément avec [`overflow: clip`](/fr/docs/Web/CSS/Reference/Properties/overflow) peut être peint en dehors de ses limites avant d'être rogné. La limite définie par cette propriété est appelée _bord de découpe du débordement_ de la boîte.
@@ -26,10 +26,10 @@ overflow-clip-margin: revert-layer;
 overflow-clip-margin: unset;
 ```
 
-La valeur `<visual-box>`, qui par défaut est `padding-box`, définit le bord de la boîte à utiliser comme origine du bord de découpe du débordement. La valeur {{CSSxRef("&lt;length&gt;")}} définie dans `overflow-clip-margin` doit être non négative.
+La valeur `<visual-box>`, qui par défaut est `padding-box`, définit le bord de la boîte à utiliser comme origine du bord de découpe du débordement. La valeur {{CSSxRef("&lt;length&gt;")}} définie dans `overflow-clip-margin` doit être positive.
 
 > [!NOTE]
-> Si l'élément n'a pas `overflow: clip`, cette propriété sera ignorée.
+> Si l'élément n'a pas `overflow: clip`, cette propriété est ignorée.
 
 ## Définition formelle
 
@@ -44,7 +44,7 @@ La valeur `<visual-box>`, qui par défaut est `padding-box`, définit le bord de
 ### HTML
 
 ```html
-<div class="box">
+<div class="boite">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -56,7 +56,7 @@ La valeur `<visual-box>`, qui par défaut est `padding-box`, définit le bord de
 ### CSS
 
 ```css
-.box {
+.boite {
   border: 3px solid black;
   width: 250px;
   height: 100px;

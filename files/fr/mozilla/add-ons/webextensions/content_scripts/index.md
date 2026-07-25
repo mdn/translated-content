@@ -51,7 +51,7 @@ Il n'y a qu'une seule portée globale pour chaque _frame_ et pour chaque extensi
 
 À l'aide des méthodes (1) et (2), vous ne pouvez charger des scripts que dans des pages dont les URL peuvent être représentées par un [motif de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
-En utilisant la méthode (3), vous pouvez également charger des scripts dans des pages packagées avec votre extension, mais vous ne pouvez pas charger des scripts dans des pages privilégiées du navigateur (comme [`about:debugging`]() ou [`about:addons`]()).
+En utilisant la méthode (3), vous pouvez également charger des scripts dans des pages packagées avec votre extension, mais vous ne pouvez pas charger des scripts dans des pages privilégiées du navigateur (comme [`about:debugging`](<>) ou [`about:addons`](<>)).
 
 ## Environnement des scripts de contenu
 

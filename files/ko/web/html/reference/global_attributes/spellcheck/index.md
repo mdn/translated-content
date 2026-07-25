@@ -12,12 +12,10 @@ original_slug: Web/HTML/Global_attributes/spellcheck
 
 ```html interactive-example
 <textarea spellcheck="true">
-This exampull will be checkd fur spellung when you try to edit it.</textarea
->
+This exampull will be checkd fur spellung when you try to edit it.</textarea>
 
 <textarea spellcheck="false">
-This exampull will nut be checkd fur spellung when you try to edit it.</textarea
->
+This exampull will nut be checkd fur spellung when you try to edit it.</textarea>
 ```
 
 가능한 값은 다음과 같습니다.

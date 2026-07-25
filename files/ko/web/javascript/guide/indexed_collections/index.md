@@ -652,7 +652,7 @@ console.log(arr.property); // "value"
 
 ## 유사 배열 객체 다루기
 
-[`document.getElementsByTagName()`](/ko/docs/Web/API/Document/getElementsByTagName)에서 반환되는 [`NodeList`](/ko/docs/Web/API/NodeList) 또는 함수 본문 내에서 사용할 수 있는 {{jsxref("Functions/arguments","arguments")}} 객체와 같은 일부 JavaScript 객체는 표면적으로는 배열처럼 보이고 동작하지만 모든 메서드를 공유하지는 않습니다. `arguments` 객체는 {{jsxref("Global_Objects/Function/length","length")}} 속성을 제공하지만 [`forEach()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)와 같은 배열 메서드는 구현하지 않습니다.
+[`document.getElementsByTagName()`](/ko/docs/Web/API/Document/getElementsByTagName)에서 반환되는 [`NodeList`](/ko/docs/Web/API/NodeList) 또는 함수 본문 내에서 사용할 수 있는 {{jsxref("Functions/arguments","arguments")}} 객체와 같은 일부 JavaScript 객체는 표면적으로는 배열처럼 보이고 동작하지만 모든 메서드를 공유하지는 않습니다. `arguments` 객체는 {{jsxref("Function.length","length")}} 속성을 제공하지만 [`forEach()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)와 같은 배열 메서드는 구현하지 않습니다.
 
 배열 메서드는 유사 배열 객체에서 직접적으로 호출할 수 없습니다.
 
@@ -664,7 +664,7 @@ function printArguments() {
 }
 ```
 
-하지만 {{jsxref("Global_Objects/Function/call","Function.prototype.call()")}}을 사용하여 간접적으로 호출할 수 있습니다.
+하지만 {{jsxref("Function.call","Function.prototype.call()")}}을 사용하여 간접적으로 호출할 수 있습니다.
 
 ```js example-good
 function printArguments() {

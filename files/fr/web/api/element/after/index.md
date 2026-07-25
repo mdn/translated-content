@@ -1,29 +1,35 @@
 ---
-title: Element.after()
+title: "Element : méthode after()"
+short-title: after()
 slug: Web/API/Element/after
+l10n:
+  sourceCommit: 8374946642c18a9cc4bf510de767011124e832a2
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`Element.after()`** permet d'insérer un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères dans la liste des enfants du parent de l'objet `Element` courant, juste après ce dernier.
-Les objets qui sont des chaînes de caractères sont insérés comme des nœuds [`Text`](/fr/docs/Web/API/Text).
+La méthode **`after()`** de l'interface {{DOMxRef("Element")}} permet d'insérer un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères dans la liste des enfants du parent de l'objet `Element` courant, juste après ce dernier. Les chaînes de caractères sont insérées comme des nœuds {{DOMxRef("Text")}} équivalents.
 
 ## Syntaxe
 
-```js
-after(noeud1);
-after(noeud1, noeud2);
-after(noeud1, noeud2, /* ... ,*/ noeudN);
+```js-nolint
+after(node1)
+after(node1, node2)
+after(node1, node2, /* …, */ nodeN)
 ```
 
 ### Paramètres
 
-- `noeud1`, …, `noeudN`
-  - : Un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères à insérer.
+- `node1`, …, `nodeN`
+  - : Un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères à insérer.
+
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
 
 ### Exceptions
 
-- [`DOMException`](/fr/docs/Web/API/DOMException) `HierarchyRequestError`
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
   - : Levée lorsque le nœud ne peut pas être inséré à l'emplacement indiqué dans la hiérarchie.
 
 ## Exemples
@@ -31,41 +37,41 @@ after(noeud1, noeud2, /* ... ,*/ noeudN);
 ### Insérer un élément
 
 ```js
-let container = document.createElement("div");
+let conteneur = document.createElement("div");
 let p = document.createElement("p");
-container.appendChild(p);
+conteneur.appendChild(p);
 let span = document.createElement("span");
 
 p.after(span);
 
-console.log(container.outerHTML);
+console.log(conteneur.outerHTML);
 // "<div><p></p><span></span></div>"
 ```
 
 ### Insérer du texte
 
 ```js
-let container = document.createElement("div");
+let conteneur = document.createElement("div");
 let p = document.createElement("p");
-container.appendChild(p);
+conteneur.appendChild(p);
 
 p.after("Texte");
 
-console.log(container.outerHTML);
+console.log(conteneur.outerHTML);
 // "<div><p></p>Texte</div>"
 ```
 
 ### Insérer un élément et du texte
 
 ```js
-let container = document.createElement("div");
+let conteneur = document.createElement("div");
 let p = document.createElement("p");
-container.appendChild(p);
+conteneur.appendChild(p);
 let span = document.createElement("span");
 
 p.after(span, "Texte");
 
-console.log(container.outerHTML);
+console.log(conteneur.outerHTML);
 // "<div><p></p><span></span>Texte</div>"
 ```
 
@@ -79,8 +85,10 @@ console.log(container.outerHTML);
 
 ## Voir aussi
 
-- [`Element.before()`](/fr/docs/Web/API/Element/before)
-- [`Element.append()`](/fr/docs/Web/API/Element/append)
-- [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)
-- [`Element.insertAdjacentElement()`](/fr/docs/Web/API/Element/insertAdjacentElement)
-- [`NodeList`](/fr/docs/Web/API/NodeList)
+- La méthode {{DOMxRef("Element.before()")}}
+- La méthode {{DOMxRef("Element.append()")}}
+- La méthode {{DOMxRef("Element.insertAdjacentElement()")}}
+- La méthode {{DOMxRef("CharacterData.after()")}}
+- La méthode {{DOMxRef("DocumentType.after()")}}
+- La méthode {{DOMxRef("Node.appendChild()")}}
+- L'interface {{DOMxRef("NodeList")}}

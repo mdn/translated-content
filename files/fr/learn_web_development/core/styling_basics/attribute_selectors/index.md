@@ -37,12 +37,12 @@ Comme vous l'avez appris en étudiant le HTML, les éléments peuvent posséder 
 
 Ces sélecteurs permettent de cibler un élément selon la simple présence d'un attribut (par exemple `href`), ou selon certains critères sur la valeur de l'attribut.
 
-| Sélecteur         | Exemple                        | Description                                                                                                                                                |
-| ----------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `[attr]`          | `a[title]`                     | Cible les éléments avec un attribut _`attr`_ (le nom de l'attribut est indiqué entre crochets).                                                            |
-| `[attr=valeur]`   | `a[href="https://exemple.fr"]` | Cible les éléments avec un attribut _`attr`_ qui vaut exactement _`value`_. La valeur attendue est alors indiquée entre doubles quotes.                    |
-| `[attr~=valeur]`  | `p[class~="special"]`          | Cible les éléments avec un attribut _`attr`_ qui vaut exactement _`value`_, ou qui contient _`value`_ dans sa liste de valeurs (séparées par des espaces). |
-| `[attr\|=valeur]` | `div[lang\|="zh"]`             | Cible les éléments avec un attribut _`attr`_ qui vaut exactement _`value`_, ou qui commence par _`value`_ suivie immédiatement d'un tiret.                 |
+| Sélecteur         | Exemple                         | Description                                                                                                                                                |
+| ----------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `[attr]`          | `a[title]`                      | Cible les éléments avec un attribut _`attr`_ (le nom de l'attribut est indiqué entre crochets).                                                            |
+| `[attr=valeur]`   | `a[href="https://example.com"]` | Cible les éléments avec un attribut _`attr`_ qui vaut exactement _`value`_. La valeur attendue est alors indiquée entre doubles quotes.                    |
+| `[attr~=valeur]`  | `p[class~="special"]`           | Cible les éléments avec un attribut _`attr`_ qui vaut exactement _`value`_, ou qui contient _`value`_ dans sa liste de valeurs (séparées par des espaces). |
+| `[attr\|=valeur]` | `div[lang\|="zh"]`              | Cible les éléments avec un attribut _`attr`_ qui vaut exactement _`value`_, ou qui commence par _`value`_ suivie immédiatement d'un tiret.                 |
 
 Voyons un cas d'usage de ces sélecteurs avec un exemple.
 

@@ -60,8 +60,7 @@ var gradient = ctx.createLinearGradient(0,0,200,0);
 gradient.addColorStop(0,"green");
 gradient.addColorStop(1,"white");
 ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);</textarea
->
+ctx.fillRect(10,10,200,100);</textarea>
 ```
 
 ```js hidden

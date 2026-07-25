@@ -27,7 +27,7 @@ str.normalize([form])
 ### Параметры
 
 - `form`
-  - : Одно из значений `"NFC"`, `"NFD"`, `"NFKC"` или `"NFKD"`, определяющих форму нормализации Юникода. Если параметр опущен или равен {{jsxref("Global_Objects/undefined", "undefined")}}, будет использоваться значение `"NFC"`.
+  - : Одно из значений `"NFC"`, `"NFD"`, `"NFKC"` или `"NFKD"`, определяющих форму нормализации Юникода. Если параметр опущен или равен {{jsxref("undefined")}}, будет использоваться значение `"NFC"`.
     - `NFC` — форма нормализации канонической композицией (Normalization Form Canonical Composition, 'NFC'), по умолчанию;
     - `NFD` — форма нормализации канонической декомпозицией (Normalization Form Canonical Decomposition, 'NFD');
     - `NFKC` — форма нормализации совместимой композицией (Normalization Form Compatibility Composition, 'NFKC');
@@ -35,8 +35,8 @@ str.normalize([form])
 
 ### Выбрасываемые исключения
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-  - : Если параметр `form` не является одним из вышеперечисленных значений, будет выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}.
+- {{jsxref("RangeError")}}
+  - : Если параметр `form` не является одним из вышеперечисленных значений, будет выброшено исключение {{jsxref("RangeError")}}.
 
 ## Описание
 

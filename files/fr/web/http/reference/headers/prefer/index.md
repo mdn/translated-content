@@ -65,7 +65,7 @@ Il s'agit généralement d'une réponse contenant uniquement les en-têtes (par 
 
 ```http
 POST /resource HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: application/json
 Prefer: return=minimal
 
@@ -87,7 +87,7 @@ Cet exemple demande au serveur de démarrer une tâche de traitement asynchrone&
 
 ```http
 POST /process HTTP/1.1
-Host: exemple.com
+Host: example.com
 Prefer: respond-async
 
 {
@@ -100,7 +100,7 @@ Un en-tête `Location` pointe vers un moniteur de statut représentant l'état d
 
 ```http
 HTTP/1.1 202 Accepted
-Location: http://exemple.com/tasks/123/status
+Location: http://example.com/tasks/123/status
 ```
 
 ### Fournir plusieurs préférences
@@ -109,7 +109,7 @@ La requête suivante inclut deux préférences&nbsp;; `timezone=Jupiter/Red_Spot
 
 ```http
 GET /events HTTP/1.1
-Host: exemple.com
+Host: example.com
 Prefer: handling=strict, timezone=Jupiter/Red_Spot
 ```
 

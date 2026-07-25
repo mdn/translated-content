@@ -10,7 +10,7 @@ Le rôle `option` est utilisé pour les éléments sélectionnables dans une `li
 
 ## Description
 
-Le rôle `option` sert à identifier les choix qu'un·e utilisateur·ice peut sélectionner dans une [`listbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role). Ces options sont similaires aux éléments {{HTMLElement('option')}} dans un élément {{HTMLElement('select')}}, mais elles peuvent contenir des images.
+Le rôle `option` sert à identifier les choix qu'un·e utilisateur·ice peut sélectionner dans une [`listbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role). Ces options sont similaires aux éléments {{HTMLElement("option")}} dans un élément {{HTMLElement("select")}}, mais elles peuvent contenir des images.
 
 Toutes les options sélectionnables doivent avoir [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) correspondant à leur état&nbsp;: `true` si sélectionnée, `false` sinon. Si une option n'est pas sélectionnable, `aria-selected` peut être omis. Une option désactivée peut avoir [`aria-disabled="true"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) et `aria-selected="false"` pour indiquer à l'utilisateur·ice que l'option est présente mais désactivée.
 
@@ -18,7 +18,7 @@ Le rôle `option` sert à identifier les choix sélectionnables d'un `listbox`. 
 
 Il est aussi possible de fournir explicitement un nom accessible en utilisant [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) sur l'élément ayant le rôle `option`. Si vous utilisez `aria-label` ou `aria-labelledby` et que l'option affiche aussi un label texte visible, veillez à respecter le [critère de succès WCAG 2.5.3 Label in Name <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html).
 
-Il est fortement recommandé d'utiliser un élément {{HTMLElement('select')}} ou un élément {{HTMLElement('input')}} de type `checkbox` ou `radio` lorsque cela est possible. Ces éléments HTML natifs gèrent automatiquement l'interactivité clavier et la gestion du focus pour tous les descendants.
+Il est fortement recommandé d'utiliser un élément {{HTMLElement("select")}} ou un élément {{HTMLElement("input")}} de type `checkbox` ou `radio` lorsque c'est possible. Ces éléments HTML natifs gèrent automatiquement l'interactivité clavier et la gestion de la sélection pour tous les descendants.
 
 ### Tous les descendants sont des éléments de présentation
 
@@ -87,9 +87,9 @@ Du point de vue de l'utilisateur·ice de technologies d'assistance, le titre n'e
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('select')}}
-- L'élément HTML {{HTMLElement('label')}}
-- L'élément HTML {{HTMLElement('option')}}
+- L'élément HTML {{HTMLElement("select")}}
+- L'élément HTML {{HTMLElement("label")}}
+- L'élément HTML {{HTMLElement("option")}}
 - [ARIA&nbsp;: rôle `combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
 - [ARIA&nbsp;: rôle `list`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
 - [ARIA&nbsp;: rôle `listbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)

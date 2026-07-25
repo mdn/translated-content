@@ -1,5 +1,5 @@
 ---
-title: "HTMLSlotElement : événement slotchange"
+title: "HTMLSlotElement : évènement slotchange"
 short-title: slotchange
 slug: Web/API/HTMLSlotElement/slotchange_event
 l10n:

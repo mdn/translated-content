@@ -45,11 +45,11 @@ Prenons l'exemple suivant d'une requête HTTP `POST` envoyée après la soumissi
 
 ```http
 POST /users HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 49
 
-name=FirstName+LastName&email=ssmth%40exemple.com
+name=FirstName+LastName&email=ssmth%40example.com
 ```
 
 La ligne de départ dans les requêtes HTTP/1.x (`POST /users HTTP/1.1` dans l'exemple ci-dessus) est appelée «&nbsp;ligne de requête&nbsp;» et se compose de trois parties&nbsp;:
@@ -108,7 +108,7 @@ Les en-têtes sont des métadonnées envoyées avec une requête après la ligne
 Dans l'[exemple de soumission de formulaire](#requêtes_http) ci-dessus, il s'agit des lignes suivantes du message&nbsp;:
 
 ```http
-Host: exemple.com
+Host: example.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 49
 ```
@@ -132,7 +132,7 @@ Seules les requêtes `PATCH`, `POST` et `PUT` possèdent un corps.
 Dans [l'exemple de soumission de formulaire](#requêtes_http), cette partie correspond au corps&nbsp;:
 
 ```http
-name=FirstName+LastName&email=ssmth%40exemple.com
+name=FirstName+LastName&email=ssmth%40example.com
 ```
 
 Le corps de la requête de soumission de formulaire contient une quantité relativement faible d'informations sous forme de paires `key=value` (clé-valeur), mais un corps de requête peut contenir d'autres types de données attendues par le serveur&nbsp;:
@@ -141,7 +141,7 @@ Le corps de la requête de soumission de formulaire contient une quantité relat
 {
   "firstName": "Sandra",
   "lastName": "Smith",
-  "email": "ssmth@exemple.com",
+  "email": "ssmth@example.com",
   "more": "data"
 }
 ```
@@ -169,7 +169,7 @@ Voici un exemple de réponse HTTP/1.1 à une requête `POST` qui a créé un·e 
 ```http
 HTTP/1.1 201 Created
 Content-Type: application/json
-Location: http://exemple.com/users/123
+Location: http://example.com/users/123
 
 {
   "message": "Nouvel utilisateur créé",
@@ -177,7 +177,7 @@ Location: http://exemple.com/users/123
     "id": 123,
     "firstName": "Personne",
     "lastName": "Exemple",
-    "email": "ssmth@exemple.com"
+    "email": "ssmth@example.com"
   }
 }
 ```
@@ -272,11 +272,11 @@ Dans les requêtes, on trouve les pseudo-en-têtes suivants&nbsp;:
 
 Dans les réponses, il n'y a qu'un seul pseudo-en-tête, et c'est `:status` qui fournit le code de la réponse.
 
-On peut effectuer une requête HTTP/2 avec [nghttp <sup>(angl.)</sup>](https://github.com/nghttp2/nghttp2) pour interroger `exemple.com`, ce qui affichera la requête dans une forme plus lisible.
+On peut effectuer une requête HTTP/2 avec [nghttp <sup>(angl.)</sup>](https://github.com/nghttp2/nghttp2) pour interroger `example.com`, ce qui affichera la requête dans une forme plus lisible.
 Vous pouvez lancer la requête avec cette commande, où l'option `-n` ignore les données téléchargées et `-v` active le mode verbeux, affichant la réception et la transmission des trames&nbsp;:
 
 ```bash
-nghttp -nv https://www.exemple.com
+nghttp -nv https://www.example.com
 ```
 
 En parcourant la sortie, vous verrez le minutage de chaque trame transmise et reçue&nbsp;:
@@ -294,14 +294,14 @@ Dans les lignes qui suivent la transmission de l'en-tête, vous verrez les ligne
           :method: GET
           :path: /
           :scheme: https
-          :authority: www.exemple.com
+          :authority: www.example.com
           accept: */*
           accept-encoding: gzip, deflate
           user-agent: nghttp2/1.61.0
 ```
 
 Cela devrait vous sembler familier si vous êtes déjà à l'aise avec HTTP/1.x et que les concepts abordés plus haut dans ce guide s'appliquent toujours.
-Il s'agit de la trame binaire contenant la requête `GET` pour `exemple.com`, convertie en forme lisible par `nghttp`.
+Il s'agit de la trame binaire contenant la requête `GET` pour `example.com`, convertie en forme lisible par `nghttp`.
 En descendant plus loin dans la sortie de la commande, vous verrez le pseudo-en-tête `:status` dans l'un des flux reçus du serveur&nbsp;:
 
 ```http

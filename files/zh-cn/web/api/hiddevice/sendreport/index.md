@@ -45,9 +45,7 @@ await device.sendReport(0x01, new Uint8Array(enableVibrationData));
 
 // 然后，发送一条命令以使 Joy-Con 设备震动。
 // 实际的字节序列在示例中提供。
-const rumbleData = [
-  /* … */
-];
+const rumbleData = [/* … */];
 await device.sendReport(0x10, new Uint8Array(rumbleData));
 ```
 

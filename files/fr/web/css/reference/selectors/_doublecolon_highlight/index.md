@@ -129,6 +129,6 @@ for (let i = 0; i < textNode.textContent.length; i++) {
 
 ## Voir aussi
 
-- Le module CSS de [Mise en évidence personnalisée](/fr/docs/Web/CSS/CSS_custom_highlight_API)
+- Le module CSS de [Mise en évidence personnalisée](/fr/docs/Web/CSS/Guides/Custom_highlight_API)
 - [L'API CSS de mise en évidence personnalisée](/fr/docs/Web/API/CSS_Custom_Highlight_API)
 - Le module de [pseudo-éléments CSS](/fr/docs/Web/CSS/CSS_pseudo-elements)

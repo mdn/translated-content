@@ -75,7 +75,7 @@ Mais un export par défaut peut être importé avec n'importe quel nom, par exem
 
 ```js
 let k;
-export default k = 12; // dans le fichier test.js
+export default (k = 12); // dans le fichier test.js
 import m from "./test"; // notez que nous avons la liberté d'utiliser import m au lieu de import k, parce que k était l'export par défaut
 console.log(m); // enregistrera 12
 ```

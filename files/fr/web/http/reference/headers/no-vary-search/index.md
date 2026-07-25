@@ -73,15 +73,15 @@ No-Vary-Search: key-order
 Lorsque cet en-tête est ajouté aux réponses associées, les URL suivantes seront considérées comme équivalentes lors de la recherche dans le cache&nbsp;:
 
 ```plain
-https://search.exemple.com?a=1&b=2&c=3
-https://search.exemple.com?b=2&a=1&c=3
+https://search.example.com?a=1&b=2&c=3
+https://search.example.com?b=2&a=1&c=3
 ```
 
 La présence de paramètres d'URL différents entraînera toutefois la mise en cache séparée de ces URL. Par exemple&nbsp;:
 
 ```plain
-https://search.exemple.com?a=1&b=2&c=3
-https://search.exemple.com?b=2&a=1&c=3&d=4
+https://search.example.com?a=1&b=2&c=3
+https://search.example.com?b=2&a=1&c=3&d=4
 ```
 
 Les exemples ci-dessous illustrent comment contrôler quels paramètres sont ignorés pour la correspondance du cache.
@@ -113,7 +113,7 @@ No-Vary-Search: params=("id" "order" "lang")
 ```
 
 > [!NOTE]
-> En tant que [champ structuré <sup>(angl.)</sup>](https://www.rfc-editor.org/rfc/rfc8941), les paramètres doivent être des chaînes de caractères entre guillemets séparées par des espaces — comme indiqué ci-dessus — et non séparées par des virgules, ce à quoi les développeurs peuvent être plus habitués.
+> En tant que [champ structuré <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc8941), les paramètres doivent être des chaînes de caractères entre guillemets séparées par des espaces — comme indiqué ci-dessus — et non séparées par des virgules, ce à quoi les développeurs peuvent être plus habitués.
 
 Si vous souhaitez que le navigateur les ignore tous _et_ tout autre paramètre éventuellement présent, vous pouvez utiliser la forme booléenne de `params`&nbsp;:
 

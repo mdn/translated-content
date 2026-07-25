@@ -1,109 +1,129 @@
 ---
-title: element.removeChild
+title: "Node : méthode removeChild()"
+short-title: removeChild()
 slug: Web/API/Node/removeChild
+l10n:
+  sourceCommit: ffff697fbd3004c3da50323ef4d868b3ad47e4d0
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
-La méthode **`Node.removeChild()`** retire un nœud enfant de l'arbre DOM et retourne le nœud retiré.
+La méthode **`removeChild()`** de l'interface {{DOMxRef("Node")}} supprime un nœud enfant du DOM et retourne le nœud supprimé.
+
+> [!NOTE]
+> Tant qu'une référence est conservée sur l'enfant supprimé, il existe toujours en mémoire, mais ne fait plus partie du DOM.
+> Il peut encore être réutilisé plus tard dans le code.
+>
+> Si la valeur de retour de `removeChild()` n'est pas stockée et qu'aucune autre référence n'est conservée, elle est [automatiquement supprimée](/fr/docs/Web/JavaScript/Guide/Memory_management) de la mémoire après un court laps de temps.
+
+Contrairement à {{DOMxRef("Node.cloneNode()")}}, la valeur de retour conserve les objets `EventListener` qui y sont associés.
 
 ## Syntaxe
 
-```js
-var oldChild = node.removeChild(child);
+```js-nolint
+removeChild(child)
 ```
 
-ou
+### Paramètres
 
-```js
-node.removeChild(child);
-```
+- `child`
+  - : Un objet {{DOMxRef("Node")}} représentant le nœud enfant à supprimer du DOM.
 
-- `child` est le nœud enfant à retirer du DOM.
-- `node` est le nœud parent de `child`.
-- `oldchild` conserve une référence au nœud enfant retiré. `oldchild` === `child`.
+### Valeur de retour
 
-Le nœud enfant retiré existe toujours en mémoire, mais ne fait plus partie du DOM. Avec la première syntaxe, il est possible de réutiliser ultérieurement dans le code le nœud retiré, à l'aide de la référence à l'objet `ancienEnfant`_._
+Le nœud `child` supprimé.
 
-Avec la seconde forme montrée en exemple, aucune référence à l'objet `ancienEnfant` n'est conservée ; ainsi, en supposant que votre code n'a conservé nulle part ailleurs cette référence à ce nœud, il devient immédiatement inutilisable et irrécupérable, et sera en général [automatiquement supprimé](/fr/docs/Web/JavaScript/Guide/Memory_management) de la mémoire après un court moment.
+### Exceptions
 
-Si `child` n'est pas un enfant du nœud `element`, la méthode provoque une exception. Une exception sera aussi lancée dans le cas où le nœud `child` est bien un enfant du nœud `element` au moment de l'appel à la méthode, mais qu'il a été retiré par un gestionnaire d'évènement invoqué dans la cadre d'une tentative de suppression du nœud `element` (comme `blur`).
-
-La méthode peut lever une exception de deux façons :
-
-1. Si `enfant` était bien un enfant de element et qu'il existe donc dans le DOM, mais qu'il a déjà été retiré, la méthode provoque l'exception suivante :``
-`Uncaught NotFoundError: Failed to execute 'removeChild' on 'element': The node to be removed is not a child of this node`.
-2. si l'`enfant` n'existe pas dans le DOM de la page, la méthode provoque l'exception suivante :
-   `Uncaught TypeError: Failed to execute 'removeChild' on 'element': parameter 1 is not of type 'Node'.`
+- `NotFoundError` {{DOMxRef("DOMException")}}
+  - : Levée si le `child` n'est pas un enfant du nœud.
+- {{JSxRef("TypeError")}}
+  - : Levée si le `child` est `null`.
 
 ## Exemples
 
-```html
-<!--Sample HTML code-->
-<div id="top" align="center"></div>
+### Exemples simples
 
-<script type="text/javascript">
-  var top = document.getElementById("top");
-  var nested = document.getElementById("nested");
-
-  var garbage = top.removeChild(nested); //Cas test 2: la méthode lance l'exception (2)
-</script>
-
-<!--Sample HTML code-->
-<div id="top" align="center">
-  <div id="nested"></div>
-</div>
-
-<script type="text/javascript">
-  var top = document.getElementById("top");
-  var nested = document.getElementById("nested");
-
-  var garbage = top.removeChild(nested); // Ce premier appel supprime correctement le noeud
-
-  // ......
-  garbage = top.removeChild(nested); // Cas test 1 : la méthode dans le second appel ici, lance l'exception (1)
-</script>
-```
+Étant donné ce HTML&nbsp;:
 
 ```html
-<!--Sample HTML code-->
-
-<div id="top" align="center">
-  <div id="nested"></div>
+<div id="parent">
+  <div id="enfant"></div>
 </div>
 ```
 
-```js
-// Supprime un élément spécifié quand son noeud parent est connu
-var d = document.getElementById("top");
-var d_nested = document.getElementById("nested");
-var throwawayNode = d.removeChild(d_nested);
-```
+Pour supprimer un élément défini en connaissant son nœud parent&nbsp;:
 
 ```js
-// Supprime un élément spécifié sans avoir à spécifier son noeud parent
-var node = document.getElementById("nested");
-if (node.parentNode) {
-  node.parentNode.removeChild(node);
+const parent = document.getElementById("parent");
+const enfant = document.getElementById("enfant");
+const noeudSupprime = parent.removeChild(enfant);
+```
+
+Pour supprimer un élément défini sans avoir à définir son nœud parent&nbsp;:
+
+```js
+const noeud = document.getElementById("enfant");
+if (noeud.parentNode) {
+  noeud.parentNode.removeChild(noeud);
 }
 ```
 
+Pour supprimer tous les enfants d'un élément&nbsp;:
+
 ```js
-// Supprime tous les enfant d'un élément
-var element = document.getElementById("top");
+const element = document.getElementById("idOfParent");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }
 ```
 
+### Provoquer une `TypeError`
+
+```html
+<!--Exemple de code HTML-->
+<div id="parent"></div>
+```
+
+```js
+const parent = document.getElementById("parent");
+const enfant = document.getElementById("enfant");
+
+// Lève une `TypeError` non interceptée
+const ramasseMiettes = parent.removeChild(enfant);
+```
+
+### Provoquer une `NotFoundError`
+
+```html
+<!--Exemple de code HTML-->
+<div id="parent">
+  <div id="enfant"></div>
+</div>
+```
+
+```js
+const parent = document.getElementById("parent");
+const enfant = document.getElementById("enfant");
+
+// Ce premier appel supprime correctement le nœud
+const ramasseMiettes = parent.removeChild(enfant);
+
+// Le second appel lève une `NotFoundError`
+parent.removeChild(enfant);
+```
+
 ## Spécifications
 
-- [DOM Level 1 Core: removeChild](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild) — [traduction en français](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild) (non normative)
-- [DOM Level 2 Core: removeChild](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-1734834066) (non normative)
-- [DOM Level 3 Core: removeChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("Node.replaceChild")}}
-- {{domxref("Node.parentNode")}}
-- {{domxref("ChildNode.remove")}}
+- La méthode {{DOMxRef("Node.replaceChild()")}}
+- La propriété {{DOMxRef("Node.parentNode")}}
+- La méthode {{DOMxRef("Element.remove()")}}
+- La méthode {{DOMxRef("Node.cloneNode()")}}

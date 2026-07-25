@@ -18,11 +18,11 @@ Intl.DateTimeFormat.supportedLocalesOf(locales[, options])
 ### Параметры
 
 - `locales`
-  - : Строка с языковой меткой BCP 47, либо массив таких строк. Описание общей формы и интерпретации аргумента `locales` смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_identification_and_negotiation", 1)}}.
+  - : Строка с языковой меткой BCP 47, либо массив таких строк. Описание общей формы и интерпретации аргумента `locales` смотрите на {{jsxref("Intl", "странице, посвящённой объекту Intl", "#Locale_identification_and_negotiation", 1)}}.
 - `options`
   - : Необязательный параметр. Объект, который может содержать следующее свойство:
     - `localeMatcher`
-      - : Используемый алгоритм сопоставления локалей. Возможными значениями являются `"lookup"` и `"best fit"`; значением по умолчанию является `"best fit"`. Информацию по этой опции смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_negotiation", 1)}}.
+      - : Используемый алгоритм сопоставления локалей. Возможными значениями являются `"lookup"` и `"best fit"`; значением по умолчанию является `"best fit"`. Информацию по этой опции смотрите на {{jsxref("Intl", "странице, посвящённой объекту Intl", "#Locale_negotiation", 1)}}.
 
 ## Описание
 
@@ -53,4 +53,4 @@ console.log(
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}

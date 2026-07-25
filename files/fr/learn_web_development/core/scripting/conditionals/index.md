@@ -598,8 +598,7 @@ select.onchange = function() {
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
-}</textarea
->
+}</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Réinitialiser" />

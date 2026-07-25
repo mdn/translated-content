@@ -1,8 +1,9 @@
 ---
-title: counters()
+title: CSS `counters()` 関数
+short-title: counters()
 slug: Web/CSS/Reference/Values/counters
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`counters()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)により、カウンターが入れ子になっている場合にマーカーを組み合わせることができます。この関数は、指定された文字列と、存在する場合は名前付きで入れ子になったカウンターの現在の値を連結した文字列を返します。 3 番目はオプションの引数で、リストのスタイルを定義することができます。

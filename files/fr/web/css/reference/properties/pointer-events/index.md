@@ -156,21 +156,21 @@ img {
 
 ### Désactiver les évènements de pointeur pour un lien
 
-Dans l'exemple qui suit, on désactive les évènements de pointeur pour le lien `http://exemple.com`.
+Dans l'exemple qui suit, on désactive les évènements de pointeur pour le lien `http://example.com`.
 
 #### HTML
 
 ```html
 <ul>
   <li><a href="https://developer.mozilla.org">MDN</a></li>
-  <li><a href="http://exemple.com">exemple.com</a></li>
+  <li><a href="http://example.com">example.com</a></li>
 </ul>
 ```
 
 #### CSS
 
 ```css
-a[href="http://exemple.com"] {
+a[href="http://example.com"] {
   pointer-events: none;
 }
 ```

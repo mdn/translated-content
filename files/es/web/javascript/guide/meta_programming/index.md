@@ -186,12 +186,12 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
       <td>Una propiedad no se puede eliminar si existe como una propiedad propia no configurable de <code><var>target</var></code>.</td>
      </tr>
      <tr>
-      <td>{{jsxref("Proxy/Proxy/enumerate", "handler.enumerate()")}}</td>
+      <td><code>handler.enumerate()</code></td>
       <td>
        <dl>
         <dt>Enumeración de propiedad/<code>for...in</code>:</dt>
         <dd><code>for (let name in <var>proxy</var>) {...}</code><br>
-        {{jsxref("Reflect.enumerate()")}}</dd>
+        <code>Reflect.enumerate()</code></dd>
        </dl>
       </td>
       <td>El método <code>enumerate</code> debe devolver un objeto.</td>

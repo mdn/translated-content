@@ -18,7 +18,7 @@ Dans les anciennes versions, le code JavaScript sur le web pouvait ajouter un le
 ```js
 navigator.registerContentHandler(
   "application/vnd.mozilla.maybe.feed",
-  "https://www.exemple.com/?feed-feed=%s",
+  "https://www.example.com?feed-feed=%s",
   "Mon lecteur de flux",
 );
 ```

@@ -1,14 +1,12 @@
 ---
 title: MathML 表
+short-title: 表
 slug: Web/MathML/Tutorials/For_beginners/Tables
-original_slug: Web/MathML/Guides/Tables
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{MathMLRef}}
-
-{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Tutorials/For_beginners")}}
 
 基本的な数式表記がすべてわかったら、あとは行列のような式や他にも高度な数式レイアウトを使用することができる表形式レイアウトを考えることができます。
 
@@ -287,4 +285,4 @@ MathML の表形式要素は [HTML 表](/ja/docs/Learn_web_development/Core/Stru
 - [`<mtr>` 要素](/ja/docs/Web/MathML/Reference/Element/mtr)
 - [`<mtd>` 要素](/ja/docs/Web/MathML/Reference/Element/mtd)
 
-{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Tutorials/For_beginners")}}

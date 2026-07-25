@@ -22,9 +22,9 @@ N'importe quel ensemble de contenu qui doit être consommé comme une seule imag
 Vous ne devez pas compter sur le texte alternatif des images individuelles pour transmettre le contexte aux technologies d'assistance&nbsp;; la plupart des lecteurs d'écran considèrent l'élément avec `role="img"` comme une boîte noire et n'accèdent pas aux éléments individuels à l'intérieur. Par conséquent, fournissez une description globale et complète de l'image, soit dans le texte autour de l'image, soit en utilisant l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). Ajoutez également des attributs `alt` aux images individuelles afin que les moteurs de recherche et les utilisateur·ice·s voyants puissent voir ce texte si une image ne s'affiche pas&nbsp;:
 
 ```html
-<div role="img" aria-label="Description of the overall image">
-  <img src="graphic1.png" alt="alternative text" />
-  <img src="graphic2.png" alt="in case the images don't load" />
+<div role="img" aria-label="Description de l'image globale">
+  <img src="graphic1.png" alt="texte alternatif" />
+  <img src="graphic2.png" alt="au cas où les images ne se chargeraient pas" />
 </div>
 ```
 
@@ -42,11 +42,11 @@ Par exemple&nbsp;:
 </div>
 ```
 
-Si une image est purement présentational, envisagez d'utiliser le rôle [`presentation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role).
+Si une image est purement présentationnelle, envisagez d'utiliser le rôle [`presentation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role).
 
 ### Le SVG et role="img"
 
-Si vous utilisez des images SVG intégrées dans votre page, il est judicieux de définir `role="img"` sur l'élément {{SVGElement('svg')}} externe et de lui donner une étiquette. Cela amènera les lecteurs d'écran à le considérer comme une seule entité et à le décrire en utilisant l'étiquette, plutôt que d'essayer de lire tous les nœuds enfants&nbsp;:
+Si vous utilisez des images SVG intégrées dans votre page, il est judicieux de définir `role="img"` sur l'élément {{SVGElement("svg")}} externe et de lui donner une étiquette. Cela amène les lecteurs d'écran à le considérer comme une seule entité et à le décrire en utilisant l'étiquette, plutôt que d'essayer de lire tous les nœuds enfants&nbsp;:
 
 ```html
 <svg role="img" aria-label="Description de votre image SVG">
@@ -56,9 +56,9 @@ Si vous utilisez des images SVG intégrées dans votre page, il est judicieux de
 
 ### Utilisation de role="img" pour conférer un sens qui est obscurci ou implicite
 
-Dans certains cas, les utilisateur·ice·s de technologies d'assistance ne peuvent pas comprendre le sens du contenu exprimé de certaines manières, à travers certains médias, ou implicite de certaines manières. Cela est évident à corriger dans le cas des images (vous pouvez utiliser l'attribut `alt`), mais dans le cas de contenus mixtes ou d'autres types de contenus, ce n'est pas si évident, et `role="img"` peut entrer en jeu.
+Dans certains cas, les utilisateur·ice·s de technologies d'assistance ne peuvent pas comprendre le sens du contenu exprimé de certaines manières, à travers certains médias, ou implicite de certaines manières. C'est évident à corriger dans le cas des images (vous pouvez utiliser l'attribut `alt`), mais dans le cas de contenus mixtes ou d'autres types de contenus, ce n'est pas si évident, et `role="img"` peut entrer en jeu.
 
-Par exemple, si vous utilisez des emojis dans votre texte, le sens peut être évident pour un·e utilisateur·ice voyant, mais quelqu'un utilisant un lecteur d'écran peut être confus car les emojis peuvent n'avoir aucune représentation textuelle du tout, ou le texte alternatif peut être déroutant et ne pas correspondre au contexte dans lequel il est utilisé. Par exemple, prenez le code suivant&nbsp;:
+Par exemple, si vous utilisez des emojis dans votre texte, le sens peut être évident pour un·e utilisateur·ice voyant, mais quelqu'un utilisant un lecteur d'écran peut être confus, car les emojis peuvent n'avoir aucune représentation textuelle du tout, ou le texte alternatif peut être déroutant et ne pas correspondre au contexte dans lequel il est utilisé. Par exemple, prenez le code suivant&nbsp;:
 
 ```html
 <div role="img" aria-label="Ce chat est tellement mignon">
@@ -70,7 +70,7 @@ Par exemple, si vous utilisez des emojis dans votre texte, le sens peut être é
 
 Cela semble fonctionner correctement dans certaines combinaisons de navigateurs/lecteurs d'écran, mais certains d'entre eux finissent par lire l'étiquette deux fois. Utilisez avec prudence et testez soigneusement.
 
-Un autre exemple où cela pourrait être approprié est lors de l'utilisation de combinaisons d'emojis {{Glossary("ASCII")}}, comme le légendaire «&nbsp;Table renversée&nbsp;»&nbsp;:
+Un autre exemple où cela peut être approprié est lors de l'utilisation de combinaisons d'emojis {{Glossary("ASCII")}}, comme le légendaire «&nbsp;Table renversée&nbsp;»&nbsp;:
 
 ```html
 <div role="img" aria-label="Table renversée">
@@ -78,7 +78,7 @@ Un autre exemple où cela pourrait être approprié est lors de l'utilisation de
 </div>
 ```
 
-Si `aria-labelledby` était utilisé, le lecteur d'écran le lirait. Dans ce cas, seuls les contenus de l'`aria-label` sont annoncés aux utilisateur·ice·s de lecteurs d'écran, cachant le charabia des caractères sans avoir besoin d'ARIA descendant pour cacher les choses, mais cachant également le contenu potentiel qui pourrait faire partie de l'image.
+Si `aria-labelledby` était utilisé, le lecteur d'écran le lit. Dans ce cas, seuls les contenus de l'`aria-label` sont annoncés aux utilisateur·ice·s de lecteurs d'écran, cachant le charabia des caractères sans avoir besoin d'ARIA descendant pour cacher les choses, mais cachant également le contenu potentiel qui peut faire partie de l'image.
 
 ### Tous les descendants sont présentatifs
 
@@ -96,7 +96,7 @@ Parce que les descendants de `img` sont présentatifs, le code suivant est équi
 <div role="img"><h3 role="presentation">Le titre de mon image</h3></div>
 ```
 
-Du point de vue de l'utilisateur·ice de la technologie d'assistance, le titre n'existe pas puisque les extraits de code précédents sont équivalents à ce qui suit dans l'[arbre d'accessibilité](/fr/docs/Glossary/Accessibility_tree)&nbsp;:
+Du point de vue de l'utilisateur·ice de la technologie d'assistance, le titre n'existe pas puisque les extraits de code précédents sont équivalents à ce qui suit dans [l'arbre d'accessibilité](/fr/docs/Glossary/Accessibility_tree)&nbsp;:
 
 ```html
 <div role="img">Le titre de mon image</div>
@@ -105,7 +105,7 @@ Du point de vue de l'utilisateur·ice de la technologie d'assistance, le titre n
 ### Propriétés, états et rôles WAI-ARIA associés
 
 - `aria-label` ou `aria-labelledby`
-  - : Un nom accessible est requis. Pour l'élément HTML {{HTMLElement('img')}}, utilisez l'attribut `alt`. Pour tous les autres éléments avec le rôle `img`, utilisez `aria-labelledby` si une étiquette visible est présente, sinon utilisez `aria-label`.
+  - : Un nom accessible est requis. Pour l'élément HTML {{HTMLElement("img")}}, utilisez l'attribut `alt`. Pour tous les autres éléments avec le rôle `img`, utilisez `aria-labelledby` si une étiquette visible est présente, sinon utilisez `aria-label`.
 
 ## Exemples
 
@@ -125,11 +125,11 @@ Du point de vue de l'utilisateur·ice de la technologie d'assistance, le titre n
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('img')}}
-- L'élément HTML {{SVGElement('svg')}}
-- L'élément HTML {{HTMLElement('picture')}}
-- L'élément HTML {{HTMLElement('audio')}}
-- L'élément HTML {{HTMLElement('video')}}
+- L'élément HTML {{HTMLElement("img")}}
+- L'élément HTML {{SVGElement("svg")}}
+- L'élément HTML {{HTMLElement("picture")}}
+- L'élément HTML {{HTMLElement("audio")}}
+- L'élément HTML {{HTMLElement("video")}}
 - [ARIA&nbsp;: rôle `presentation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)
 - [Modèle d'Objet d'Accessibilité <sup>(angl.)</sup>](https://wicg.github.io/aom/spec/)
-- L'[ARIA dans le HTML <sup>(angl.)</sup>](https://w3c.github.io/html-aria/)
+- [L'ARIA dans le HTML <sup>(angl.)</sup>](https://w3c.github.io/html-aria/)

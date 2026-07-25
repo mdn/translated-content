@@ -58,7 +58,7 @@ Puedes encontrarlas por orden alfabético en la columna de la izquierda .
   - : Crea un bucle que ejecuta una instrucción especificada hasta que la condición de prueba se evalúa como falsa. La condición se evalúa después de ejecutar la instrucción, lo que da como resultado que la instrucción especificada se ejecute al menos una vez.
 - {{jsxref("Statements/for", "for")}}
   - : Creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement executed in the loop.
-- {{deprecated_inline()}} {{non-standard_inline()}}{{jsxref("Statements/for_each...in", "for each...in")}}
+- {{deprecated_inline()}} {{non-standard_inline()}}`for each...in`
   - : Itera una variable especificada sobre todos los valores de las propiedades del objeto. Para cada propiedad distinta, se ejecuta una instrucción especificada.
 - {{jsxref("Statements/for...in", "for...in")}}
   - : Itera sobre las propiedades enumerables de un objeto, en orden albitrario. Para cada propiedad distinta, las instrucciones pueden ser ejecutadas.

@@ -55,7 +55,7 @@ span {
 Dans cet exemple, le sélecteur ne correspondra qu'aux éléments `<h1>` dans l'espace de noms example.
 
 ```css
-@namespace example url("http://www.exemple.com/");
+@namespace example url("http://www.example.com/");
 example|h1 {
   color: blue;
 }

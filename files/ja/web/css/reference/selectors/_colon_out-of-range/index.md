@@ -1,18 +1,12 @@
 ---
-title: :out-of-range
+title: CSS `:out-of-range` 擬似クラス
+short-title: :out-of-range
 slug: Web/CSS/Reference/Selectors/:out-of-range
-original_slug: Web/CSS/:out-of-range
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:out-of-range`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、 {{htmlelement("input")}} 要素のうち、現在の値が [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性で指定された範囲を外れているものを表します。
-
-```css
-/* 入力範囲が設定されていて、値がその範囲外である
-   <input> 要素をすべて選択 */
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
-}
-```
 
 {{InteractiveExample("CSS デモ: :out-of-range", "tabbed-shorter")}}
 
@@ -29,10 +23,10 @@ input:out-of-range {
 
 ```html interactive-example
 <form>
-  <label for="amount">How many tickets? (You can buy 2-6 tickets)</label>
+  <label for="amount">チケットの枚数は？（2～6 枚）</label>
   <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
 
-  <label for="dep">Departure Date: (Whole year 2022 is acceptable)</label>
+  <label for="dep">出発日: （2022 年はすべて利用可能）</label>
   <input
     id="dep"
     name="dep"
@@ -41,7 +35,7 @@ input:out-of-range {
     max="2022-12-31"
     value="2025-05-05" />
 
-  <label for="ret">Return Date: (Whole year 2022 is acceptable)</label>
+  <label for="ret">帰還日: （2022 年はすべて利用可能）</label>
   <input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
 </form>
 ```
@@ -49,12 +43,14 @@ input:out-of-range {
 この擬似クラスは。入力欄の現在の値が許可された範囲外にあることをユーザーに視覚的に示すのに便利です。
 
 > [!NOTE]
-> この擬似クラスは範囲制限を持つ (または設定できる) 要素にのみ適用されます。そのような制限がない場合は、要素は "in-range" にも "out-of-range" にもなりません。
+> この擬似クラスは範囲制限を持つ（または設定できる）要素にのみ適用されます。そのような制限がない場合は、要素は "in-range" にも "out-of-range" にもなりません。
 
 ## 構文
 
-```
-:out-of-range
+```css
+:out-of-range {
+  /* ... */
+}
 ```
 
 ## 例
@@ -93,11 +89,11 @@ input {
 }
 
 input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+  background-color: rgb(0 255 0 / 25%);
 }
 
 input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
+  background-color: rgb(255 0 0 / 25%);
   border: 2px solid red;
 }
 

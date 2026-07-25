@@ -1,17 +1,17 @@
 ---
-title: <strike>
+title: HTML `<strike>` 取り消し線要素
+short-title: <strike>
 slug: Web/HTML/Reference/Elements/strike
-original_slug: Web/HTML/Element/strike
 l10n:
-  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<strike>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストの上に取り消し線（水平線）を引きます。
 
 > [!WARNING]
-> この要素は HTML 4 および XHTML 1 で非推奨になり、HTML5 で廃止されました。意味的に適切であれば、すなわち、*削除された*コンテンツを表すのであれば、代わりに {{HTMLElement("del")}} を使用してください。それ以外の場合は {{HTMLElement("s")}} を使用してください。
+> この要素は HTML 4 および XHTML 1 で非推奨になり、[HTML Living Standard](https://html.spec.whatwg.org/multipage/obsolete.html#strike) で廃止されました。意味的に適切であれば、すなわち、削除されたコンテンツを表すのであれば、代わりに {{HTMLElement("del")}} を使用してください。それ以外の場合は {{HTMLElement("s")}} を使用してください。
 
 ## 属性
 
@@ -24,7 +24,7 @@ l10n:
 &lt;s&gt;: <s>今日のおすすめ: サーモン</s> 売り切れ
 ```
 
-このコードの結果は次の通りです。
+### 結果
 
 {{EmbedLiveSample("Example")}}
 
@@ -50,5 +50,5 @@ l10n:
 ## 関連情報
 
 - {{HTMLElement("s")}} 要素
-- {{HTMLElement("del")}} 要素（データが*削除された*場合に使用）
-- CSS の {{cssxref("text-decoration")}} プロパティ（取り消し線のスタイルを実現するために用いることができる）
+- {{HTMLElement("del")}} 要素（データが削除された場合に使用）
+- CSS の {{CSSxRef("text-decoration")}} プロパティ（取り消し線のスタイルを実現するために用いることができる）

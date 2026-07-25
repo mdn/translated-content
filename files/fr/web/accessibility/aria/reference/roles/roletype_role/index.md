@@ -9,11 +9,11 @@ l10n:
 Le rôle abstrait **`roletype`** est la base à partir de laquelle tous les autres rôles ARIA héritent.
 
 > [!WARNING]
-> Le rôle `roletype` est un [rôle abstrait](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#6._rôles_abstraits) utilisé pour l'ontologie. Il est inclus ici pour compléter la documentation. Il ne doit pas être utilisé par les auteurs web.
+> Le rôle `roletype` est un [rôle abstrait](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#6._rôles_abstraits) utilisé pour l'ontologie. Il est inclus ici pour compléter la documentation. Il ne doit pas être utilisé par les sites web.
 
 ## Description
 
-Les propriétés du rôle `roletype` décrivent l'objectif structurel et fonctionnel des objets qui se voient attribuer ce rôle, ou "instances". Un rôle est un concept qui peut être utilisé pour comprendre et manipuler des instances.
+Les propriétés du rôle `roletype` décrivent l'objectif structurel et fonctionnel des objets qui se voient attribuer ce rôle, ou «&nbsp;instances&nbsp;». Un rôle est un concept qui peut être utilisé pour comprendre et manipuler des instances.
 
 ## Spécifications
 

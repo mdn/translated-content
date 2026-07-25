@@ -2,7 +2,7 @@
 title: Comprendre les frameworks JavaScript côté client
 slug: Learn_web_development/Core/Frameworks_libraries
 l10n:
-  sourceCommit: 04158640487c17d515de8078c9307a2f906377d0
+  sourceCommit: f5be60d013af8bfa3ff9db9a12c3c72fc7eb3988
 ---
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Introduction", "Learn_web_development/Core")}}
@@ -61,6 +61,9 @@ Votre code n'en sera que de meilleure qualité et plus professionnel, et vous se
   - : Notre dernier article vous fournit une liste de ressources sur React que vous pouvez utiliser pour aller plus loin dans votre apprentissage.
 
 ## Autres choix de frameworks
+
+> [!NOTE]
+> Cette section de MDN n'est plus maintenue et sera supprimée du site Web dans 2 mois (d'ici le 20 août 2026). Le contenu sera archivé dans le [MDN Museum <sup>(angl.)</sup>](https://github.com/mdn/museum). Voir [cette discussion <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions/827) pour plus d'informations.
 
 ### Tutoriels sur Ember
 

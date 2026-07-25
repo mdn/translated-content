@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_Header}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-drag-over`** permet de mettre en forme un élément lorsqu'un événement `drag-over` est appelé dessus.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-drag-over`** permet de mettre en forme un élément lorsqu'un évènement `drag-over` est appelé dessus.
 
 ## Syntaxe
 
@@ -34,13 +34,13 @@ La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/f
 
 ### JavaScript
 
-La plupart des éléments ne sont pas des emplacements valides pour déposer des données. Pour autoriser un dépôt, vous devez donc empêcher le comportement par défaut en annulant les événements [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event) ou [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event) (ou les deux).
-Dans cet exemple, nous devons uniquement annuler l'événement `dragenter`, qui est le premier événement déclenché lorsque le navigateur évalue si un élément peut être une cible de dépôt.
+La plupart des éléments ne sont pas des emplacements valides pour déposer des données. Pour autoriser un dépôt, vous devez donc empêcher le comportement par défaut en annulant les évènements [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event) ou [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event) (ou les deux).
+Dans cet exemple, nous devons uniquement annuler l'évènement `dragenter`, qui est le premier évènement déclenché lorsque le navigateur évalue si un élément peut être une cible de dépôt.
 Pour plus d'informations, consultez l'article [Opérations de glissement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#spécifier_les_cibles_de_dépôt).
 
 ```js
 const target = document.getElementById("drop-target");
-/* événement dragenter déclenché sur la cible de dépôt */
+/* évènement dragenter déclenché sur la cible de dépôt */
 target.addEventListener(
   "dragenter",
   (event) => {

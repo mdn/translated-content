@@ -1,9 +1,9 @@
 ---
-title: cy
+title: CSS `cy` プロパティ
+short-title: cy
 slug: Web/CSS/Reference/Properties/cy
-original_slug: Web/CSS/cy
 l10n:
-  sourceCommit: c5f403bb08c91ae77ddfe47f937438fb5e6fcae5
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`cy`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 SVG の {{SVGElement("circle")}} または {{SVGElement("ellipse")}} 要素の中心の Y 座標を定義します。存在する場合、その要素の {{SVGAttr("cy")}} 属性を上書きします。
@@ -14,16 +14,16 @@ l10n:
 ## 構文
 
 ```css
-/* length and percentage values */
-cx: 20px;
-cx: 20%;
+/* 長さとパーセント値 */
+cy: 3px;
+cy: 20%;
 
-/* Global values */
-cx: inherit;
-cx: initial;
-cx: revert;
-cx: revert-layer;
-cx: unset;
+/* グローバル値 */
+cy: inherit;
+cy: initial;
+cy: revert;
+cy: revert-layer;
+cy: unset;
 ```
 
 ### 値

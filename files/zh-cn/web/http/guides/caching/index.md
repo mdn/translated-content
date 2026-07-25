@@ -1,9 +1,9 @@
 ---
 title: HTTP 缓存
 slug: Web/HTTP/Guides/Caching
+l10n:
+  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
 ---
-
-## 概览
 
 HTTP 缓存会存储与请求关联的响应，并将存储的响应复用于后续请求。
 
@@ -15,7 +15,7 @@ HTTP 缓存会存储与请求关联的响应，并将存储的响应复用于后
 
 ## 不同种类的缓存
 
-在 [HTTP Caching](https://httpwg.org/specs/rfc9111.html) 标准中，有两种不同类型的缓存：**私有缓存**和**共享缓存**。
+在 [HTTP 缓存](https://httpwg.org/specs/rfc9111.html)规范中，有两种不同类型的缓存：**私有缓存**和**共享缓存**。
 
 ### 私有缓存
 
@@ -31,8 +31,6 @@ Cache-Control: private
 
 个性化内容通常由 cookie 控制，但 cookie 的存在并不能表明它是私有的，因此单独的 cookie 不会使响应成为私有的。
 
-请注意，如果响应具有 `Authorization` 标头，则不能将其存储在私有缓存（或共享缓存，除非 Cache-Control 指定的是 `public`）中。
-
 ### 共享缓存
 
 共享缓存位于客户端和服务器之间，可以存储能在用户之间共享的响应。共享缓存可以进一步细分为**代理缓存**和**托管缓存**。
@@ -41,15 +39,15 @@ Cache-Control: private
 
 除了访问控制的功能外，一些代理还实现了缓存以减少网络流量。这通常不由服务开发人员管理，因此必须由恰当的 HTTP 标头等控制。然而，在过去，过时的代理缓存实现——例如没有正确理解 HTTP 缓存标准的实现——经常给开发人员带来问题。
 
-**Kitchen-sink 标头**如下所示，用于尝试解决不理解当前 HTTP 缓存规范指令（如 `no-store`）的“旧且未更新的代理缓存”的实现。
+类似于下面这种**面面俱到的标头**，用于尝试解决不理解当前 HTTP 缓存规范指令（如 `no-store`）的“旧且未更新的代理缓存”的实现。
 
 ```http
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 ```
 
-然而，近年来，随着 HTTPS 变得越来越普遍，客户端/服务器通信变得加密，在许多情况下，路径中的代理缓存只能传输响应而不能充当缓存。因此，在这种情况下，无需担心甚至无法看到响应的过时代理缓存的实现。
+然而，近年来，随着 HTTPS 的普及以及客户端/服务器通信的加密化，路径中的代理缓存往往只能隧道传输响应，而无法发挥缓存作用。因此，在这种情况下，无需担心那些甚至无法查看响应的过时代理缓存实现。
 
-另一方面，如果 {{Glossary("TLS")}} 桥接代理通过在 PC 上安装来自组织管理的 {{Glossary("Certificate_authority", "CA")}} 证书，以中间人方式解密所有通信，并执行访问控制等，则可以查看响应的内容并将其缓存。但是，由于[证书透明度（certificate transparency）](/zh-CN/docs/Web/Security/Defenses/Certificate_Transparency)在最近几年变得很普遍，并且一些浏览器只允许使用证书签署时间戳（signed certificate timestamp）颁发的证书，因此这种方法需要应用于企业策略。在这样的受控环境中，无需担心代理缓存“已过时且未更新”。
+另一方面，如果 {{Glossary("TLS")}} 桥接代理通过在 PC 上安装来自组织管理的 {{Glossary("Certificate_authority", "CA（证书颁发机构）")}}证书，以中间人方式解密所有通信，并执行访问控制等，则可以查看响应的内容并将其缓存。但是，由于[证书透明度](/zh-CN/docs/Web/Security/Defenses/Certificate_Transparency)在最近几年变得很普遍，并且某些浏览器仅允许使用带有 SCT（签名证书时间戳）签发的证书，因此这种方法需要应用于企业策略。在这样的受控环境中，无需担心代理缓存“已过时且未更新”。
 
 #### 托管缓存
 
@@ -67,17 +65,17 @@ Cache-Control: no-store
 
 例如，Varnish Cache 使用 VCL（Varnish Configuration Language，一种 {{Glossary("DSL/Domain_specific_language", "DSL")}}）逻辑来处理缓存存储，而 service worker 结合缓存 API 允许你在 JavaScript 中创建该逻辑。
 
-这意味着如果托管缓存故意忽略 `no-store` 指令，则无需将其视为“不符合”标准。你应该做的是，避免使用 kitchen-sink 标头，但请仔细阅读你正在使用的任何托管缓存机制的文档，并确保你选择的方式可以正确的控制缓存。
+这意味着如果托管缓存故意忽略 `no-store` 指令，则无需将其视为“不符合”标准。你应该做的是，避免使用大杂烩式的标头，但请仔细阅读你正在使用的任何托管缓存机制的文档，并确保你选择的方式可以正确的控制缓存。
 
 请注意，某些 CDN 提供自己的标头，这些标头仅对该 CDN 有效（例如，`Surrogate-Control`）。目前，正在努力定义一个 [`CDN-Cache-Control`](https://httpwg.org/specs/rfc9213.html) 标头来标准化这些标头。
 
-![缓存的类型](type-of-cache.png)
+![缓存的类型，包括浏览器中的私有缓存、共享（代理）缓存、反向代理缓存以及 CDN 中最终指向源服务器的共享（托管）缓存](https://mdn.github.io/shared-assets/images/diagrams/http/cache/type-of-cache.svg)
 
 ## 启发式缓存
 
 HTTP 旨在尽可能多地缓存，因此即使没有给出 `Cache-Control`，如果满足某些条件，响应也会被存储和重用。这称为**启发式缓存**。
 
-例如，采取以下响应。此回复最后一次更新是在 1 年前。
+以下列响应为例，此响应最后一次更新是在 1 年前。
 
 ```http
 HTTP/1.1 200 OK
@@ -90,17 +88,17 @@ Last-Modified: Tue, 22 Feb 2021 22:22:22 GMT
 …
 ```
 
-试探性地知道，整整一年没有更新的内容在那之后的一段时间内不会更新。因此，客户端存储此响应（尽管缺少 `max-age`）并重用它一段时间。复用多长时间取决于实现，但规范建议存储后大约 10%（在本例中为 0.1 年）的时间。
+根据经验法则，如果内容整整一年未更新，那么此后的一段时间内也不会更新。因此，客户端会存储该响应（尽管缺少 `max-age` 字段），并在一段时间内重复使用它。重复使用的时间长短取决于具体实现，但规范建议约为存储后时间的 10%（本例中为 0.1 年）。
 
-启发式缓存是在 `Cache-Control` 被广泛采用之前出现的一种解决方法，基本上所有响应都应明确指定 `Cache-Control` 标头。
+启发式缓存是一种在 `Cache-Control` 支持尚未广泛采用时出现的变通方案，原则上所有响应都应显式指定 `Cache-Control` 标头。
 
 ## 基于 age 的缓存策略
 
-存储的 HTTP 响应有两种状态：**fresh** 和 **stale**。_fresh_ 状态通常表示响应仍然有效，可以重复使用，而 _stale_ 状态表示缓存的响应已经过期。
+存储的 HTTP 响应有两种状态：**新鲜**和**过期**。*新鲜*状态通常表示该响应仍然有效且可以重复使用，而*过期*状态则意味着缓存的响应已经过期。
 
-确定响应何时是 fresh 的和何时是 stale 的标准是 **age**。在 HTTP 中，age 是自响应生成以来经过的时间。这类似于其他缓存机制中的 {{Glossary("TTL")}}。
+判断响应是“新鲜”还是“过期”的标准是**存活时间**。在 HTTP 中，存活时间是指响应生成以来经过的时间。这类似于其他缓存机制中的 {{Glossary("TTL")}}。
 
-以下面的示例响应为例（604800 秒是一周）：
+以下是一个响应示例（604800 秒相当于一周）：
 
 ```http
 HTTP/1.1 200 OK
@@ -113,16 +111,16 @@ Cache-Control: max-age=604800
 …
 ```
 
-存储示例响应的缓存会计算响应生成后经过的时间，并将结果用作响应的 _age_。
+存储示例响应的缓存会计算响应生成后经过的时间，并将结果用作响应的*存活时间*。
 
 对于该示例的响应，`max-age` 的含义如下：
 
-- 如果响应的 age *小于*一周，则响应为 _fresh_。
-- 如果响应的 age *超过*一周，则响应为 _stale_。
+- 如果响应的存活时间*小于*一周，则响应为*新鲜的*。
+- 如果响应的存活时间*超过*一周，则响应为*过期的*。
 
-只要存储的响应保持有效（fresh），它将用于兑现客户端请求。
+只要存储的响应保持新鲜，它将用于兑现客户端请求。
 
-当响应存储在共享缓存中时，有必要通知客户端响应的 age。继续看示例，如果共享缓存将响应存储了一天，则共享缓存将向后续客户端请求发送以下响应。
+当响应存储在共享缓存中时，可以向客户端告知该响应的存活时间。继续上面的示例，如果共享缓存将响应存储了一天，那么对于后续的客户端请求，共享缓存会返回以下响应。
 
 ```http
 HTTP/1.1 200 OK
@@ -152,31 +150,40 @@ Expires: Tue, 28 Feb 2022 22:22:22 GMT
 
 如果 `Expires` 和 `Cache-Control: max-age` 都可用，则将 `max-age` 定义为首选。因此，由于 HTTP/1.1 已被广泛使用，无需特地提供 `Expires`。
 
-## Vary 响应
+## Vary
 
 区分响应的方式本质上是基于它们的 URL：
 
-![使用 url 作为键](keyed-with-url.png)
+| URL                              | 响应体                   |
+| -------------------------------- | ------------------------ |
+| `https://example.com/index.html` | `<!doctype html>...`     |
+| `https://example.com/style.css`  | `body { ...`             |
+| `https://example.com/script.js`  | `function main () { ...` |
 
 但是响应的内容并不总是相同的，即使它们具有相同的 URL。特别是在执行内容协商时，来自服务器的响应可能取决于 `Accept`、`Accept-Language` 和 `Accept-Encoding` 请求标头的值。
 
-例如，对于带有 `Accept-Language: en` 标头并已缓存的英语内容，不希望再对具有 `Accept-Language: ja` 请求标头的请求重用该缓存响应。在这种情况下，你可以通过在 `Vary` 标头的值中添加“`Accept-Language`”，根据语言单独缓存响应。
+例如，对于带有 `Accept-Language: en` 标头并已缓存的英语内容，不希望再对具有 `Accept-Language: ja` 请求标头的请求重用该缓存响应。在这种情况下，你可以通过在 `Vary` 标头的值中添加 `Accept-Language`，根据语言单独缓存响应。
 
 ```http
 Vary: Accept-Language
 ```
 
-这会导致缓存基于响应 URL 和 `Accept-Language`请求标头的组合进行键控——而不是仅仅基于响应 URL。
+这会导致缓存基于响应 URL 和 `Accept-Language` 请求标头的组合进行键控——而不是仅仅基于响应 URL。
 
-![使用 url 和语言作为键](keyed-with-url-and-language.png)
+| URL                              | `Accept-Language` | 响应体                   |
+| -------------------------------- | ----------------- | ------------------------ |
+| `https://example.com/index.html` | `ja-JP`           | `<!doctype html>...`     |
+| `https://example.com/index.html` | `en-US`           | `<!doctype html>...`     |
+| `https://example.com/style.css`  | `ja-JP`           | `body { ...`             |
+| `https://example.com/script.js`  | `ja-JP`           | `function main () { ...` |
 
-此外，如果你基于用户代理提供内容优化（例如，响应式设计），你可能会想在 `Vary` 标头的值中包含“`User-Agent`”。但是，`User-Agent` 请求标头通常具有非常多的变体，这大大降低了缓存被重用的机会。因此，如果可能，请考虑一种基于特征检测而不是基于 `User-Agent` 请求标头来改变行为的方法。
+此外，如果你基于用户代理提供内容优化（例如，响应式设计），你可能会想在 `Vary` 标头的值中包含 `User-Agent`。但是，`User-Agent` 请求标头通常具有非常多的变体，这大大降低了缓存被重用的机会。因此，如果可能，请考虑一种基于特性检测而不是基于 `User-Agent` 请求标头来改变行为的方法。
 
 对于使用 cookie 来防止其他人重复使用缓存的个性化内容的应用程序，你应该指定 `Cache-Control: private` 而不是为 `Vary` 指定 cookie。
 
-## 验证响应
+## 验证
 
-过时的响应不会立即被丢弃。HTTP 有一种机制，可以通过询问源服务器将陈旧的响应转换为新的响应。这称为**验证**，有时也称为**重新验证**。
+过期的响应不会立即被丢弃。HTTP 有一种机制，可以通过询问源服务器将旧响应转换为新响应。这称为**验证**，有时也称为**重新验证**。
 
 验证是通过使用包含 `If-Modified-Since` 或 `If-None-Match` 请求标头的**条件请求**完成的。
 
@@ -227,27 +234,27 @@ Cache-Control: max-age=3600
 
 `ETag` 响应标头的值是服务器生成的任意值。服务器对于生成值没有任何限制，因此服务器可以根据他们选择的任何方式自由设置值——例如主体内容的散列或版本号。
 
-举个例子，如果 `ETag` 标头使用了 hash 值，`index.html` 资源的 hash 值是 `deadbeef`，响应如下：
+举个例子，如果 `ETag` 标头使用了散列值，`index.html` 资源的散列值是 `33a64df5`，响应如下：
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
 Date: Tue, 22 Feb 2022 22:22:22 GMT
-ETag: "deadbeef"
+ETag: "33a64df5"
 Cache-Control: max-age=3600
 
 <!doctype html>
 …
 ```
 
-如果该响应是陈旧的，则客户端获取缓存响应的 `ETag` 响应标头的值，并将其放入 `If-None-Match` 请求标头中，以询问服务器资源是否已被修改：
+如果该响应是过期的，则客户端获取缓存响应的 `ETag` 响应标头的值，并将其放入 `If-None-Match` 请求标头中，以询问服务器资源是否已被修改：
 
 ```http
 GET /index.html HTTP/1.1
 Host: example.com
 Accept: text/html
-If-None-Match: "deadbeef"
+If-None-Match: "33a64df5"
 ```
 
 如果服务器为请求的资源确定的 `ETag` 标头的值与请求中的 `If-None-Match` 值相同，则服务器将返回 `304 Not Modified`。
@@ -255,7 +262,7 @@ If-None-Match: "deadbeef"
 但是，如果服务器确定请求的资源现在应该具有不同的 `ETag` 值，则服务器将其改为 `200 OK` 和资源的最新版本进行响应。
 
 > [!NOTE]
-> 在评估如何使用 `ETag` 和 `Last-Modified` 时，请考虑以下几点：在缓存重新验证期间，如果 `ETag` 和 `Last-Modified` 都存在，则 `ETag` 优先。因此，如果你只考虑缓存，你可能会认为 `Last-Modified` 是不必要的。然而，`Last-Modified` 不仅仅对缓存有用；相反，它是一个标准的 HTTP 标头，内容管理 (CMS) 系统也使用它来显示上次修改时间，由爬虫调整爬取频率，以及用于其他各种目的。所以考虑到整个 HTTP 生态系统，最好同时提供 `ETag` 和 `Last-Modified`。
+> RFC9110 建议服务器在发送 `200` 响应时，尽可能同时发送 `ETag` 和 `Last-Modified`。在缓存重新验证过程中，如果同时存在 `If-Modified-Since` 和 `If-None-Match`，则对验证器而言，`If-None-Match` 具有优先级。如果你仅考虑缓存，可能会认为 `Last-Modified` 没有必要。然而，`Last-Modified` 不仅对缓存有用；它还是一种标准 HTTP 标头，内容管理系统（CMS）会利用它显示最后修改时间，爬虫会利用它调整抓取频率，此外还有其他各种用途。因此，从整个 HTTP 生态系统的角度来看，最好同时提供 `ETag` 和 `Last-Modified`。
 
 ### 强制重新验证
 
@@ -269,7 +276,7 @@ Content-Type: text/html
 Content-Length: 1024
 Date: Tue, 22 Feb 2022 22:22:22 GMT
 Last-Modified: Tue, 22 Feb 2022 22:00:00 GMT
-ETag: deadbeef
+ETag: "deadbeef"
 Cache-Control: no-cache
 
 <!doctype html>
@@ -282,7 +289,7 @@ Cache-Control: no-cache
 Cache-Control: max-age=0, must-revalidate
 ```
 
-`max-age=0` 意味着响应立即过时，而 `must-revalidate` 意味着一旦过时就不得在没有重新验证的情况下重用它——因此，结合起来，语义似乎与 `no-cache` 相同。
+`max-age=0` 意味着响应立即过期，而 `must-revalidate` 意味着一旦过期就不得在没有重新验证的情况下重用它——因此，结合起来，语义似乎与 `no-cache` 相同。
 
 然而，`max-age=0` 的使用是解决 HTTP/1.1 之前的许多实现无法处理 `no-cache` 这一指令——因此为了解决这个限制，`max-age=0` 被用作解决方法。
 
@@ -310,7 +317,7 @@ Cache-Control: no-store
 
 ### 不与其他用户共享
 
-如果具有个性化内容的响应意外地对缓存的其他用户可见，那将是有问题的。
+如果具有个性化内容的响应意外地对缓存的其他用户可见，那就会造成问题。
 
 在这种情况下，使用 `private` 指令将导致个性化响应仅与特定客户端一起存储，而不会泄露给缓存的任何其他用户。
 
@@ -336,13 +343,13 @@ Cache-Control: no-cache
 
 ### 兼容过时的实现
 
-作为忽略 `no-store` 的过时实现的解决方法，你可能会看到使用了诸如以下内容的 kitchen-sink 标头：
+作为忽略 `no-store` 的过时实现的解决方法，你可能会看到使用了诸如以下内容的大杂烩式的标头：
 
 ```http
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 ```
 
-[推荐](https://docs.microsoft.com/zh-cn/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching)使用 `no-cache` 作为处理这种过时的实现的替代方案，如果从一开始就设置 `no-cache` 就没问题，因为服务器总是会收到请求。
+[推荐](https://learn.microsoft.com/zh-cn/previous-versions/troubleshoot/browsers/connectivity-navigation/how-to-prevent-caching)使用 `no-cache` 作为处理这种过时的实现的替代方案，如果从一开始就设置 `no-cache` 就没问题，因为服务器总是会收到请求。
 
 如果你关心的是共享缓存，你可以通过添加 `private` 来防止意外缓存：
 
@@ -380,7 +387,7 @@ If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
 
 （来自 Chrome、Edge 和 Firefox 的请求看起来很像上面的；来自 Safari 的请求看起来会有点不同。）
 
-请求中的 `max-age=0` 指令指定“重用 age 为 0 或更少的响应”——因此，中间存储的响应不会被重用。
+请求中的 `max-age=0` 指令指定“重用存活时间为 0 或更少的响应”——因此，中间存储的响应不会被重用。
 
 请求通过 `If-None-Match` 和 `If-Modified-Since` 进行验证。
 
@@ -429,7 +436,7 @@ Cache-Control: max-age=31536000, immutable
 
 这可以防止在重新加载期间进行不必要的重新验证。
 
-请注意，[Chrome 已更改其实现](https://blog.chromium.org/2017/01/reload-reloaded-faster-and-leaner-page_26.html)而不是实现该指令，因此重新验证不是在重新加载子资源期间执行。
+请注意，[Chrome 已更改其实现方式](https://blog.chromium.org/2017/01/reload-reloaded-faster-and-leaner-page_26.html)，不再在重新加载子资源时执行重新验证，而非直接实现该指令。
 
 ## 删除存储的响应
 
@@ -449,25 +456,23 @@ Cache-Control: max-age=31536000
 
 一旦响应在服务器上过期，你可能希望覆盖该响应，但是一旦存储响应，服务器就无法执行任何操作——因为由于缓存，不再有请求到达服务器。
 
-规范中提到的方法之一是使用不安全的方法（例如 POST）发送对同一 URL 的请求，但对于许多客户端而言，通常很难故意这样做。
+规范中提到的方法之一是使用不安全的方法（例如 `POST`）发送对同一 URL 的请求，但对于许多客户端而言，这很难实现。
 
-还有一个 `Clear-Site-Data: cache` 标头和值的规范，但[并非所有浏览器都支持它](https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4)——即使使用它，它也只会影响浏览器缓存，而不会影响中间缓存。
-
-因此，除非用户手动执行重新加载、强制重新加载或清除历史操作，否则应该假设任何存储的响应都将保留其 `max-age` 期间。
+[`Clear-Site-Data: cache`](/zh-CN/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) 标头及其指令值可用于清除浏览器缓存——但对中间缓存无效。响应将一直保留在浏览器缓存中，直到 `max-age` 过期为止，除非用户手动执行刷新、强制刷新或清除历史记录操作。
 
 缓存减少了对服务器的访问，这意味着服务器失去了对该 URL 的控制。如果服务器不想失去对 URL 的控制——例如，在资源被频繁更新的情况下——你应该添加 `no-cache`，以便服务器始终接收请求并发送预期的响应。
 
-## 请求折叠
+## 请求合并
 
 共享缓存主要位于源服务器之前，旨在减少到源服务器的流量。
 
-因此，如果多个相同的请求同时到达共享缓存，中间缓存将代表自己将单个请求转发到源，然后源可以将结果重用于所有客户端。这称为***请求折叠***。
+因此，如果多个相同的请求同时到达共享缓存，中间缓存将代表自己将单个请求转发到源，然后源可以将结果重用于所有客户端。这称为***请求合并***。
 
-当请求同时到达时会发生请求折叠，因此即使响应中给出了 `max-age=0` 或 `no-cache`，它也会被重用。
+当请求同时到达时会发生请求合并，因此即使响应中给出了 `max-age=0` 或 `no-cache`，它也会被重用。
 
-如果响应是针对特定用户个性化的，并且你不希望它在折叠中共享，则应添加 `private` 指令：
+如果响应是针对特定用户个性化的，并且你不希望它在合并中共享，则应添加 `private` 指令：
 
-![请求折叠](request-collapse.png)
+![请求合并示例：多个客户端发送 GET 请求，缓存将这些请求合并为一个 GET 请求发送至源服务器。源服务器返回 200 OK 响应，缓存将该响应分发给所有客户端。](https://mdn.github.io/shared-assets/images/diagrams/http/cache/request-collapse.svg)
 
 ## 常见的缓存模式
 
@@ -503,27 +508,27 @@ Cache-Control: no-cache, private
 <script src="bundle.js"></script>
 <link rel="stylesheet" href="build.css" />
 <body>
-  hello
+  你好
 </body>
 ```
 
-在现代 Web 开发中，JavaScript 和 CSS 资源会随着开发的进展而频繁更新。此外，如果客户端使用的 JavaScript 和 CSS 资源的版本不同步，则显示将中断。
+在现代 Web 开发中，随着开发进程的推进，JavaScript 和 CSS 资源经常会被更新。此外，如果客户端使用的 JavaScript 和 CSS 资源版本不一致，页面显示将会出现异常。
 
 所以上面的 HTML 用 `max-age` 缓存 `bundle.js` 和 `build.css` 变得很困难。
 
 因此，你可以使用包含基于版本号或散列值的更改部分的 URL 来提供 JavaScript 和 CSS。一些方法如下所示。
 
 ```plain
-# version in filename
+# 文件名中的版本号
 bundle.v123.js
 
-# version in query
+# 查询中的版本号
 bundle.js?v=123
 
-# hash in filename
+# 文件名散列
 bundle.YsAIAAAA-QG4G6kCMAMBAAAAAAAoK.js
 
-# hash in query
+# 查询散列
 bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 ```
 
@@ -533,7 +538,7 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 <script src="bundle.v123.js"></script>
 <link rel="stylesheet" href="build.v123.css" />
 <body>
-  hello
+  你好
 </body>
 ```
 
@@ -554,11 +559,11 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 如果你选择其中一个编号选项，则可以在通过 HTTP3 传输时将值压缩为 1 个字节。
 
-数字“37”、“38”和“41”分别代表一周、一个月和一年。
+数字 `37`、`38` 和 `41` 分别代表一周、一个月和一年。
 
 因为缓存会在保存新条目时删除旧条目，所以一周后存储的响应仍然存在的可能性并不高——即使 `max-age` 设置为 1 周。因此，在实践中，你选择哪一种并没有太大的区别。
 
-请注意，数字“41”具有最长的 `max-age`（1 年），但具有 `public`。
+请注意，数字 `41` 具有最长的 `max-age`（1 年），但具有 `public`。
 
 `public` 值具有使响应可存储的效果，即使存在 `Authorization` 标头。
 
@@ -568,12 +573,12 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 因此，如果响应是使用基本身份验证进行个性化的，`public` 的存在可能会导致问题。如果你对此感到担忧，你可以选择第二长的值 `38`（1 个月）。
 
 ```http
-# response for bundle.v123.js
+# bundle.v123.js 文件响应
 
-# If you never personalize responses via Authorization
+# 如果不通过 Authorization 头进行个性化响应
 Cache-Control: public, max-age=31536000
 
-# If you can't be certain
+# 如果不太确定
 Cache-Control: max-age=2592000
 ```
 
@@ -584,7 +589,7 @@ Cache-Control: max-age=2592000
 这里的 `ETag` 值可能是文件的散列值。
 
 ```http
-# response for bundle.v123.js
+# bundle.v123.js 文件响应
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
 ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 ```
@@ -595,12 +600,12 @@ ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 ```http
 # bundle.v123.js
-200 OK HTTP/1.1
-Content-Type: application/javascript
+HTTP/1.1 200 OK
+Content-Type: text/javascript
 Content-Length: 1024
 Cache-Control: public, max-age=31536000, immutable
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
+ETag: "YsAIAAAA-QG4G6kCMAMBAAAAAAAoK"
 ```
 
 **缓存破坏**是一种通过在内容更改时更改 URL 来使响应在很长一段时间内可缓存的技术。该技术可以应用于所有子资源，例如图像。
@@ -623,7 +628,7 @@ Cache-Control: immutable
 <script src="bundle.v123.js"></script>
 <link rel="stylesheet" href="build.v123.css" />
 <body>
-  hello
+  你好
 </body>
 ```
 
@@ -632,23 +637,23 @@ Cache-Control: immutable
 此外，添加 `Last-Modified` 和 `ETag` 将允许客户端发送条件请求，如果 HTML 没有更新，则可以返回 `304 Not Modified`：
 
 ```http
-200 OK HTTP/1.1
+HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
+ETag: "AAPuIbAOdvAGEETbgAAAAAAABAAE"
 ```
 
 该设置适用于非个性化 HTML，但对于使用 cookie 进行个性化的响应（例如，在登录后），不要忘记同时指定 `private`：
 
 ```http
-200 OK HTTP/1.1
+HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache, private
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
+ETag: "AAPuIbAOdvAGEETbgAAAAAAABAAE"
 Set-Cookie: __Host-SID=AHNtAyt3fvJrUL5g5tnGwER; Secure; Path=/; HttpOnly
 ```
 
@@ -660,7 +665,7 @@ Set-Cookie: __Host-SID=AHNtAyt3fvJrUL5g5tnGwER; Secure; Path=/; HttpOnly
 
 使用前面章节描述的方法，子资源可以通过缓存破坏来缓存很长时间，但主资源（通常是 HTML 文档）不能。
 
-缓存主要资源很困难，因为仅使用 HTTP 缓存规范中的标准指令，在服务器上更新内容时无法主动删除缓存内容。
+缓存主资源很困难，因为仅使用 HTTP 缓存规范中的标准指令，在服务器上更新内容时无法主动删除缓存内容。
 
 但是，可以通过部署托管缓存（例如 CDN 或 service worker）来实现。
 
@@ -672,5 +677,5 @@ Set-Cookie: __Host-SID=AHNtAyt3fvJrUL5g5tnGwER; Secure; Path=/; HttpOnly
 
 ## 参见
 
-- [RFC 9111: Hypertext Transfer Protocol (HTTP/1.1): Caching](https://datatracker.ietf.org/doc/html/RFC9111)
-- [Caching Tutorial - Mark Nottingham](https://www.mnot.net/cache_docs/)
+- [RFC 9111：超文本传输协议（HTTP/1.1）](https://datatracker.ietf.org/doc/html/RFC9111)
+- [缓存教程——Mark Nottingham](https://mnot.net/cache_docs/)

@@ -14,7 +14,7 @@ l10n:
 > Cependant, tant que `report-to` n'est pas largement pris en charge, vous pouvez définir les deux directives comme suit&nbsp;:
 >
 > ```http
-> Content-Security-Policy: …; report-uri https://endpoint.exemple.com; report-to endpoint_name
+> Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to endpoint_name
 > ```
 
 La directive obsolète HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`report-uri`** demande à l'agent utilisateur de rapporter les violations de règles CSP.
@@ -90,11 +90,11 @@ L'objet JSON du rapport a une seule propriété de niveau supérieur, `"csp-repo
 
 ### Rapport de violation CSP avec `Content-Security-Policy`
 
-Considérons une page située à `http://exemple.com/signup.html`.
-Elle utilise la politique suivante, interdisant tout sauf les feuilles de style chargées depuis `cdn.exemple.com`.
+Considérons une page située à `http://example.com/signup.html`.
+Elle utilise la politique suivante, interdisant tout sauf les feuilles de style chargées depuis `cdn.example.com`.
 
 ```http
-Content-Security-Policy: default-src 'none'; style-src cdn.exemple.com; report-uri /_/csp-reports
+Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
 ```
 
 Le HTML de `signup.html` ressemble à ceci&nbsp;:
@@ -113,17 +113,17 @@ Le HTML de `signup.html` ressemble à ceci&nbsp;:
 </html>
 ```
 
-Pouvez-vous repérer l'erreur&nbsp;? Les feuilles de style ne peuvent être chargées que depuis `cdn.exemple.com`, mais le site essaie d'en charger une depuis sa propre origine (`http://exemple.com`).
-Un navigateur capable d'appliquer la CSP enverrait le rapport de violation suivant en tant que requête `POST` à `http://exemple.com/_/csp-reports` lorsque le document est consulté&nbsp;:
+Pouvez-vous repérer l'erreur&nbsp;? Les feuilles de style ne peuvent être chargées que depuis `cdn.example.com`, mais le site essaie d'en charger une depuis sa propre origine (`http://example.com`).
+Un navigateur capable d'appliquer la CSP enverrait le rapport de violation suivant en tant que requête `POST` à `http://example.com/_/csp-reports` lorsque le document est consulté&nbsp;:
 
 ```json
 {
   "csp-report": {
-    "blocked-uri": "http://exemple.com/css/style.css",
+    "blocked-uri": "http://example.com/css/style.css",
     "disposition": "report",
-    "document-uri": "http://exemple.com/signup.html",
+    "document-uri": "http://example.com/signup.html",
     "effective-directive": "style-src-elem",
-    "original-policy": "default-src 'none'; style-src cdn.exemple.com; report-uri /_/csp-reports",
+    "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports",
     "referrer": "",
     "status-code": 200,
     "violated-directive": "style-src-elem"
@@ -133,8 +133,8 @@ Un navigateur capable d'appliquer la CSP enverrait le rapport de violation suiva
 
 Comme vous pouvez le voir, le rapport inclut le chemin complet vers la ressource violant la politique dans `blocked-uri`.
 Ce n'est pas toujours le cas.
-Par exemple, si `signup.html` tentait de charger du CSS depuis `http://unautrecdn.exemple.com/stylesheet.css`, le navigateur n'inclurait _pas_ le chemin complet, seulement l'origine,
-(`http://unautrecdn.exemple.com`) afin d'éviter de divulguer des informations sensibles sur les ressources cross-origin.
+Par exemple, si `signup.html` tentait de charger du CSS depuis `http://unautrecdn.example.com/stylesheet.css`, le navigateur n'inclurait _pas_ le chemin complet, seulement l'origine,
+(`http://unautrecdn.example.com`) afin d'éviter de divulguer des informations sensibles sur les ressources cross-origin.
 La spécification CSP [donne une explication <sup>(angl.)</sup>](https://w3c.github.io/webappsec-csp/#security-violation-reports) de ce comportement.
 
 ### Rapport de violation CSP avec `Content-Security-Policy-Report-Only`
@@ -145,7 +145,7 @@ Cet en-tête permet au navigateur de signaler les violations sans les bloquer lo
 L'en-tête HTTP serait à peu près le même.
 
 ```http
-Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.exemple.com; report-to /_/csp-reports
+Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-to /_/csp-reports
 ```
 
 Le rapport serait le même, sauf pour la disposition `"report"` et bien sûr la `"original-policy"`&nbsp;:
@@ -153,11 +153,11 @@ Le rapport serait le même, sauf pour la disposition `"report"` et bien sûr la 
 ```json
 {
   "csp-report": {
-    "blocked-uri": "http://exemple.com/css/style.css",
+    "blocked-uri": "http://example.com/css/style.css",
     "disposition": "report",
-    "document-uri": "http://exemple.com/signup.html",
+    "document-uri": "http://example.com/signup.html",
     "effective-directive": "style-src-elem",
-    "original-policy": "default-src 'none'; style-src cdn.exemple.com; report-uri /_/csp-reports",
+    "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports",
     "referrer": "",
     "status-code": 200,
     "violated-directive": "style-src-elem"
@@ -181,7 +181,7 @@ Content-Security-Policy: default-src https:; report-uri /csp-violation-report-en
 // Début de la configuration
 $log_file = dirname(__FILE__) . "/csp-violations.log";
 $log_file_size_limit = 1000000; // bytes - une fois dépassé, aucune entrée supplémentaire n'est ajoutée
-$email_address = "admin@exemple.com";
+$email_address = "admin@example.com";
 $email_subject = "Content-Security-Policy violation";
 // Fin de la configuration
 

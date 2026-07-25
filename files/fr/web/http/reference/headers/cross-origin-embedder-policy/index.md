@@ -87,11 +87,11 @@ Pour plus d'informations, voir {{DOMxRef("COEPViolationReport")}}.
 
 Cet exemple montre un document qui bloque le chargement des ressources demandées en mode [no-cors](/fr/docs/Web/API/Request/mode#no-cors) qui ne définissent pas un en-tête CORP approprié.
 
-Le document est un fichier HTML hébergé sur l'origine `https://exemple.com`, et inclut dans son corps un élément HTML {{HTMLElement("img")}} qui définit comme source la ressource (inter-origine) `une-image.png`.
+Le document est un fichier HTML hébergé sur l'origine `https://example.com`, et inclut dans son corps un élément HTML {{HTMLElement("img")}} qui définit comme source la ressource (inter-origine) `une-image.png`.
 Comme l'élément n'a pas [l'attribut `cross-origin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin), il est demandé en mode `no-cors`&nbsp;:
 
 ```html
-<img src="https://autre-exemple.com/une-image.png" />
+<img src="https://autre-example.com/une-image.png" />
 ```
 
 L'en-tête de réponse pour le document définit les en-têtes `Cross-Origin-Embedder-Policy` et {{HTTPHeader("Reporting-Endpoints")}} comme indiqué ci-dessous.
@@ -99,7 +99,7 @@ Comme la directive `require-corp` est définie, toutes les ressources inter-orig
 Le paramètre `report-to` définit le nom `"coep-endpoint"` comme nom du point de terminaison où les rapports doivent être envoyés, et `Reporting-Endpoints` définit comment ce nom est mis en correspondance à une URL particulière.
 
 ```http
-Reporting-Endpoints: coep-endpoint="https://un-exemple.com/coep"
+Reporting-Endpoints: coep-endpoint="https://un-example.com/coep"
 Cross-Origin-Embedder-Policy: require-corp; report-to="coep-endpoint"
 ```
 
@@ -113,13 +113,13 @@ Le rapport envoyé dans la requête `POST` de rapport sera similaire à l'objet 
   {
     "age": 717139,
     "body": {
-      "blockedURL": "https://autre-exemple.com/une-image.png",
+      "blockedURL": "https://autre-example.com/une-image.png",
       "destination": "image",
       "disposition": "enforce",
       "type": "corp"
     },
     "type": "coep",
-    "url": "https://exemple.com",
+    "url": "https://example.com",
     "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
   }
 ]

@@ -82,7 +82,7 @@ L'exemple suivant utilise `nofollow` pour demander à un robot de ne pas suivre 
 
 ## Spécifications
 
-Bien que ne faisant partie d'aucune spécification, il s'agit d'une méthode de facto pour communiquer avec les robots d'indexation, les robots d'exploration web et des agents utilisateur·ice·s similaires.
+Bien que ne faisant partie d'aucune spécification, il s'agit d'une méthode de facto pour communiquer avec les robots d'indexation, les robots d'exploration web et des agents utilisateurs similaires.
 
 ## Compatibilité des navigateurs
 

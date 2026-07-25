@@ -122,7 +122,7 @@ Supports-Loading-Mode: fenced-frame
 
 ## 注册和本地测试
 
-某些创建 {{domxref("FencedFrameConfig")}} 的 API 特性，如 {{domxref("Navigator.runAdAuction()")}}（[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience)）和 {{domxref("WindowSharedStorage.selectURL()")}}（[共享存储 API](/zh-CN/docs/Web/API/Shared_Storage_API)），以及其他特性如 {{domxref("Fence.reportEvent()")}}，要求你将你的网站注册到[隐私沙盒注册流程](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment)中。如果你不注册，API 调用将失败，并在控制台中显示警告。
+某些创建 {{domxref("FencedFrameConfig")}} 的 API 特性，如 {{domxref("Navigator.runAdAuction()")}}（[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience)）和 {{domxref("WindowSharedStorage.selectURL()")}}（[共享存储 API](/zh-CN/docs/Web/API/Shared_Storage_API)），以及其他特性如 {{domxref("Fence.reportEvent()")}}，要求你将你的网站注册到[隐私沙盒注册流程](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox#注册)中。如果你不注册，API 调用将失败，并在控制台中显示警告。
 
 > [!NOTE]
 > 在 Chrome 中，你仍然可以在未注册情况下本地测试你的围栏框架代码。要允许本地测试，请启用以下 Chrome 开发者标志：

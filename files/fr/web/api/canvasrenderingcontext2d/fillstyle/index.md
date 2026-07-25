@@ -60,8 +60,7 @@ ctx.fillRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = 'blue';
-ctx.fillRect(10, 10, 100, 100);</textarea
->
+ctx.fillRect(10, 10, 100, 100);</textarea>
 ```
 
 ```js hidden

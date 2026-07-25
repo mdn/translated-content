@@ -41,4 +41,4 @@ calculateCircumference(1); // 6.283185307179586
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/Math", "Math")}}
+- {{jsxref("Math")}}

@@ -52,7 +52,7 @@ Refresh: 5
 Cet en-tête fera en sorte que le navigateur redirige vers une URL 5 secondes après son chargement complet&nbsp;:
 
 ```http
-Refresh: 5; url=https://exemple.com/
+Refresh: 5; url=https://example.com/
 ```
 
 > [!NOTE]

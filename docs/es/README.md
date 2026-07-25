@@ -14,6 +14,7 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 - [Traducir un documento](#traducir-un-documento)
 - [Mantener el `l10n.sourceCommit` al día](#mantener-el-l10nsourcecommit-al-día)
 - [Convención de traducciones](#convención-de-traducciones)
+  - [Estilo de escritura](#estilo-de-escritura)
 - [Arreglar "flaws" (defectos)](#arreglar-flaws-defectos)
 - [Charla con nosotros](#charla-con-nosotros)
 - [Enlaces relevantes](#enlaces-relevantes)
@@ -128,6 +129,39 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 
 4. Cambia los enlaces internos de `/en-US/` a `/es/`.
 
+   **¿Por qué `/es/` aunque la página no exista en español?**
+   MDN renderiza el contenido en inglés como respaldo (_fallback_) para las secciones o páginas que aún no han sido traducidas, pero siempre bajo la URL `/es/`. Un enlace como `/es/docs/Web/API/Fetch_API` funciona correctamente aunque la página no tenga traducción completa: el lector verá el contenido en inglés dentro del contexto de la interfaz en español.
+
+   Por eso la regla general es: **usa siempre `/es/` en los enlaces internos absolutos de MDN**, sin excepción. Si la página de destino no existe en español, el sistema la muestra en inglés de forma transparente. No conserves `/en-US/` "para que funcione": un enlace en `/en-US/` saca al lector del contexto de su idioma preferido, incluso si la traducción sí existe.
+
+   **Anclas (`#fragmento`): deben coincidir con el encabezado que se renderiza**
+
+   Cuando un enlace incluye un fragmento (`#`), la ancla debe coincidir con el ID del encabezado **tal como se renderiza en la página destino**. No es simplemente "español si la URL es `/es/`": lo que importa es qué contenido sirve MDN en esa URL.
+
+   | Caso                    | URL de destino               | Página destino              | Ancla correcta                                      |
+   | ----------------------- | ---------------------------- | --------------------------- | --------------------------------------------------- |
+   | Página _sin_ traducción | `/es/docs/Web/API/Fetch_API` | MDN sirve inglés (fallback) | Ancla en inglés: `#browser_compatibility`           |
+   | Página _con_ traducción | `/es/docs/Web/API/Fetch_API` | MDN sirve español           | Ancla en español: `#compatibilidad_con_navegadores` |
+   | Misma página            | `#fragmento`                 | El archivo actual           | Ancla del encabezado traducido                      |
+
+   **Ejemplo del problema frecuente:** el inglés tiene `/en-US/docs/Web/API/Fetch_API#browser_compatibility`. Al traducir la página que contiene ese enlace, es tentador cambiar ambas partes a la vez: `/es/docs/Web/API/Fetch_API#compatibilidad_con_navegadores`. Pero si esa página no tiene traducción española, MDN la sirve en inglés y el encabezado `#compatibilidad_con_navegadores` no existe: el lector llega a la página pero sin desplazarse a la sección correcta.
+
+   La solución es verificar antes de cambiar la ancla:
+   - ¿Existe `files/es/…/Fetch_API/index.md` en el repositorio con ese encabezado ya traducido? → usa la ancla en español.
+   - ¿No existe o la sección puntual sigue en inglés? → cambia la URL a `/es/` pero **conserva la ancla en inglés**: `/es/docs/Web/API/Fetch_API#browser_compatibility`.
+
+   Para los **enlaces dentro de la misma página** (`[ver más](#cómo_funciona)`), la ancla debe coincidir con el ID generado por el encabezado traducido. Si tradujiste `## How it works` como `## Cómo funciona`, el enlace debe ser `#cómo_funciona`.
+
+   **Cómo verificar el ID real de un encabezado:** la forma exacta en que un encabezado se convierte en ID (si conserva tildes, mayúsculas, guiones bajos, etc.) depende de la versión actual del motor de _build_ (Rari), así que no conviene deducirlo a mano. Para confirmarlo, levanta el sitio localmente:
+
+   ```bash
+   # Desde tu clon de mdn/content, con CONTENT_TRANSLATED_ROOT apuntando a translated-content
+   cd /ruta/a/content
+   npm start
+   ```
+
+   Abre la página en `http://localhost:5042/es/docs/...`, inspecciona el encabezado con las herramientas de desarrollo del navegador y copia el `id` real generado por el _build_. Ese es el único valor confiable; no lo derives manualmente del texto del encabezado.
+
 5. Revisa el _front-matter_ YAML (`title`, `slug`, `l10n.sourceCommit`) como se describe en la siguiente sección.
 
 ---
@@ -151,7 +185,7 @@ Es el SHA del commit de `mdn/content` cuyo contenido en inglés refleja exactame
 
 ### Reglas del _front-matter_
 
-- Sólo deben aparecer: `title`, `short-title` (si lo tiene el inglés), `slug` y `l10n.sourceCommit`.
+- Solo debe incluir: `title`, `short-title` (únicamente si está presente en el archivo en inglés), `slug` y `l10n.sourceCommit`.
 - **No** incluir `page-type`, `browser-compat`, `tags`, `sidebar` ni `original_slug`.
 - El `slug` debe ser idéntico al del archivo en inglés.
 
@@ -237,6 +271,50 @@ Cuando en inglés aparece `{{Glossary("TLD")}}` y el término natural en españo
 ```
 
 > Excepción: si la frase en español ya explica el término justo después del macro (por ejemplo, `{{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel`), deja el macro con un solo argumento para evitar duplicar el texto renderizado.
+
+### Estilo de escritura
+
+#### Tuteo (tú) en lugar de usted
+
+Usa la forma de **tú** (tuteo) cuando te dirijas directamente al lector. MDN español adoptó el tuteo como convención moderna: "abre el archivo", "asegúrate de incluir", "puedes omitir". Evita el ustedeo ("abra el archivo", "asegúrese de incluir").
+
+Esta convención adapta al español la [guía de estilo general de MDN](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#voice), que recomienda una redacción directa (voz activa) y cercana (tono conversacional). La fórmula estandarizada en español combina: **voz activa + tuteo (implícito) + modo imperativo**.
+
+**El imperativo hace innecesario el pronombre "tú".** Al conjugar en segunda persona, el sujeto queda implícito:
+
+- ❌ Redundante: "Tú haz clic aquí."
+- ✅ Imperativo natural: "Haz clic aquí."
+
+**Alterna con construcciones impersonales o pasivas para suavizar el tono.** Acumular órdenes seguidas puede sonar rígido; intercalar frases descriptivas mantiene la fluidez:
+
+- ❌ Demasiado imperativo: "Registra tu correo. Verifica tu contraseña."
+- ✅ Balance fluido: "Registra tu correo. Una vez que tu cuenta sea verificada, podrás ingresar."
+
+#### Bloques de aviso GFM (GitHub Flavored Markdown)
+
+Los bloques de aviso con sintaxis GFM deben conservar la palabra clave **en inglés**. Son: `[!NOTE]`, `[!WARNING]`, `[!CALLOUT]`. Rari/Yari solo los renderiza como cajas con estilo si están escritos exactamente así. Si los traduces (`[!Nota]`, `[!Advertencia]`), se muestran como una cita simple sin formato especial.
+
+```markdown
+<!-- Correcto -->
+
+> [!NOTE]
+> Este comportamiento cambió en Firefox 130.
+
+<!-- Incorrecto — se renderiza como blockquote sin estilos -->
+
+> [!Nota]
+> Este comportamiento cambió en Firefox 130.
+```
+
+El texto **dentro** del bloque sí debe ir en español.
+
+#### Nombres de macros (mayúsculas importan)
+
+Rari/Yari distingue mayúsculas en los nombres de macro. Usa exactamente la capitalización del archivo en inglés:
+
+- `{{Deprecated_Header}}`, no `{{deprecated_header}}`
+- `{{SeeCompatTable}}`, no `{{seecompattable}}`
+- `{{Non-standard_Header}}`, no `{{non-standard_header}}`
 
 ---
 

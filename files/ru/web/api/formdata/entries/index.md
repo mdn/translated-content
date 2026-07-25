@@ -7,7 +7,7 @@ slug: Web/API/FormData/entries
 
 {{APIRef("XMLHttpRequest API")}}
 
-Метод **`FormData.entries()`** возвращает {{jsxref("Iteration_protocols",'iterator')}}, позволяя пройтись по всем ключам/значениям в этом объекте. Ключ каждой пары - это объект {{domxref("USVString")}}, значение - это {{domxref("USVString")}} или {{domxref("Blob")}}.
+Метод **`FormData.entries()`** возвращает {{jsxref("Iteration_protocols",'iterator')}}, позволяя пройтись по всем ключам/значениям в этом объекте. Ключ каждой пары - это объект {{jsxref("String")}}, значение - это {{jsxref("String")}} или {{domxref("Blob")}}.
 
 ## Синтаксис
 

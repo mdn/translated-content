@@ -237,21 +237,21 @@ for (const link of links) {
 Si le contexte de navigation nouvellement ouvert ne partage pas la même {{Glossary("Origin", "origine")}}, le script d'ouverture ne pourra pas interagir (lecture ou écriture) avec le contenu du contexte de navigation.
 
 ```js example-bad
-// Script depuis exemple.com
+// Script depuis example.com
 const otherOriginContext = window.open("https://exemple.org");
-// exemple.com et exemple.org n'ont pas la même origine
+// example.com et exemple.org n'ont pas la même origine
 
 console.log(otherOriginContext.origin);
 // DOMException: Permission denied to access property "origin" on cross-origin object
 ```
 
 ```js example-good
-// Script depuis exemple.com
-const sameOriginContext = window.open("https://exemple.com");
+// Script depuis example.com
+const sameOriginContext = window.open("https://example.com");
 // Cette fois, le nouveau contexte de navigation a la même origine
 
 console.log(sameOriginContext.origin);
-// https://exemple.com
+// https://example.com
 ```
 
 Pour plus d'informations, consultez l'article [Politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy).

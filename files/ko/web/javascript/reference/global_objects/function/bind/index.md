@@ -35,7 +35,7 @@ console.log(boundGetX());
 ### 매개변수
 
 - `thisArg`
-  - : 바인딩 함수가 대상 함수(target function)의 `this`에 전달하는 값입니다. 바인딩 함수를 {{jsxref("Operators/new", "new")}} 연산자로 생성한 경우 무시됩니다. `bind`를 사용하여 `setTimeout` 내에 콜백 함수를 만들 때, `thisArg`로 전달된 원시 값은 객체로 변환됩니다. `bind`할 인수(argument)가 제공되지 않으면 실행 스코프 내의 `this`는 새로운 함수의 `thisArg`로 처리됩니다.
+  - : 바인딩 함수가 대상 함수(target function)의 `this`에 전달하는 값입니다. 바인딩 함수를 {{jsxref("new")}} 연산자로 생성한 경우 무시됩니다. `bind`를 사용하여 `setTimeout` 내에 콜백 함수를 만들 때, `thisArg`로 전달된 원시 값은 객체로 변환됩니다. `bind`할 인수(argument)가 제공되지 않으면 실행 스코프 내의 `this`는 새로운 함수의 `thisArg`로 처리됩니다.
 - `arg1, arg2, ...`
   - : 대상 함수의 인수 앞에 사용될 인수.
 
@@ -56,7 +56,7 @@ console.log(boundGetX());
 
 바인딩된 함수가 호출될 때 `[[BoundTargetFunction]]`의 내부 메소드 `[[Call]]`을 호출합니다. `[[Call]]` 은 `Call(boundThis, args)`와 같은 인자를 가집니다. 이 때, `boundThis`는 `[[BoundThis]]`이고, `args`는 함수가 호출될 때 전달되어 따라오는 `[[BoundArguments]]` 입니다.
 
-바인딩된 함수는 {{jsxref("Operators/new", "new")}} 연산자를 사용하여 생성될 수도 있습니다: 그렇게 하면 대상 함수가 마치 대신 생성된 것처럼 행동합니다. 제공된 `this` 값은 무시됩니다, 앞에 붙인(prepend) 인수는 에뮬레이트된 함수에 제공되지만.
+바인딩된 함수는 {{jsxref("new")}} 연산자를 사용하여 생성될 수도 있습니다: 그렇게 하면 대상 함수가 마치 대신 생성된 것처럼 행동합니다. 제공된 `this` 값은 무시됩니다, 앞에 붙인(prepend) 인수는 에뮬레이트된 함수에 제공되지만.
 
 ## 예제
 
@@ -147,7 +147,7 @@ flower.bloom();
 > [!WARNING]
 > 이 부분은 JavaScript 능력을 보이고 `bind()` 메소드의 일부 극단 상황(edge case)을 기록합니다. 아래 보이는 메소드는 일을 하는 가장 좋은 방법은 아니며 아마도 상용 환경에서 전혀 사용되지 않을 겁니다.
 
-바인딩된 함수는 자동으로 대상 함수에 의해 생성되는 새로운 인스턴스를 생성하는 {{jsxref("Operators/new", "new")}} 연산자와 함께 쓰기에 적합합니다. 바인딩된 함수가 값을 생성하는 데 쓰이는 경우, 제공된 `this`는 무시됩니다. 그러나, 제공된 인수는 여전히 생성자 호출에 (인수부) 앞에 붙습니다:
+바인딩된 함수는 자동으로 대상 함수에 의해 생성되는 새로운 인스턴스를 생성하는 {{jsxref("new")}} 연산자와 함께 쓰기에 적합합니다. 바인딩된 함수가 값을 생성하는 데 쓰이는 경우, 제공된 `this`는 무시됩니다. 그러나, 제공된 인수는 여전히 생성자 호출에 (인수부) 앞에 붙습니다:
 
 ```js
 function Point(x, y) {
@@ -179,7 +179,7 @@ axisPoint instanceof YAxisPoint; // true
 new Point(17, 42) instanceof YAxisPoint; // true
 ```
 
-{{jsxref("Operators/new", "new")}}와 함께 쓰기 위한 바인딩된 함수를 만들기 위해 특별한 일을 할 필요가 없음을 주의하세요. 그 결과 분명히 호출되는 바인딩된 함수를 만들기 위해 특별히 아무것도 할 필요가 없습니다, 오히려 {{jsxref("Operators/new", "new")}}를 사용해서만 호출되는 바인딩된 함수를 요구하는 경우에도.
+{{jsxref("new")}}와 함께 쓰기 위한 바인딩된 함수를 만들기 위해 특별한 일을 할 필요가 없음을 주의하세요. 그 결과 분명히 호출되는 바인딩된 함수를 만들기 위해 특별히 아무것도 할 필요가 없습니다, 오히려 {{jsxref("new")}}를 사용해서만 호출되는 바인딩된 함수를 요구하는 경우에도.
 
 ```js
 // 예는 JavaScript 콘솔에서 직접 실행될 수 있음
@@ -193,7 +193,7 @@ emptyObj.x + "," + emptyObj.y;
 // >  '0,13'
 ```
 
-오로지 {{jsxref("Operators/new", "new")}}를 사용하거나 호출해서만 바인딩된 함수의 사용을 지원하고 싶은 경우, 대상 함수는 그 제한을 강제해야 합니다.
+오로지 {{jsxref("new")}}를 사용하거나 호출해서만 바인딩된 함수의 사용을 지원하고 싶은 경우, 대상 함수는 그 제한을 강제해야 합니다.
 
 ### 바로 가기 생성
 
@@ -209,7 +209,7 @@ var slice = Array.prototype.slice;
 slice.apply(arguments);
 ```
 
-`bind()`로, 이는 단순화될 수 있습니다. 다음 조각 코드에서, `slice`는 {{jsxref("Function.prototype")}}의 {{jsxref("Function.prototype.apply()", "apply()")}} 함수에 바인딩된 함수입니다, `this` 값을 {{jsxref("Array.prototype")}}의 {{jsxref("Array.prototype.slice()", "slice()")}} 함수로 설정한 채. 이는 추가 `apply()` 호출은 삭제될 수 있음을 뜻합니다:
+`bind()`로, 이는 단순화될 수 있습니다. 다음 조각 코드에서, `slice`는 {{jsxref("Function")}}의 {{jsxref("Function.prototype.apply()", "apply()")}} 함수에 바인딩된 함수입니다, `this` 값을 {{jsxref("Array")}}의 {{jsxref("Array.prototype.slice()", "slice()")}} 함수로 설정한 채. 이는 추가 `apply()` 호출은 삭제될 수 있음을 뜻합니다:
 
 ```js
 // 이전 예에서 "slice"와 같음
@@ -260,7 +260,7 @@ if (!Function.prototype.bind) {
 이 알고리즘과 스펙화된 알고리즘 간 많은 차이(충분히 다른 차이가 있을 수 있습니다, 이 목록은 정말 철저히 하지 않았기에) 중 일부는 다음입니다:
 
 - 부분 구현은 {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}} 및 {{jsxref("Function.prototype.apply()")}}, 원래 값을 갖는 내장 메소드에 의존합니다.
-- 부분 구현은 불변(immutable) "poison pill" {{jsxref("Function.caller", "caller")}} 및 get, set 또는 삭제 시 {{jsxref("Global_Objects/TypeError", "TypeError")}}가 발생하는 `arguments` 속성이 없는 함수를 만듭니다. (이는 구현이 {{jsxref("Object.defineProperty")}}를 지원하는 경우 추가 또는 구현이 [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 및 [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 메소드를 지원하는 경우 \[삭제 시 오류 발생(throw-on-delete) 동작(behavior) 없이] 부분 구현될 수 있습니다.)
+- 부분 구현은 불변(immutable) "poison pill" {{jsxref("Function.caller", "caller")}} 및 get, set 또는 삭제 시 {{jsxref("TypeError")}}가 발생하는 `arguments` 속성이 없는 함수를 만듭니다. (이는 구현이 {{jsxref("Object.defineProperty")}}를 지원하는 경우 추가 또는 구현이 [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 및 [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 메소드를 지원하는 경우 \[삭제 시 오류 발생(throw-on-delete) 동작(behavior) 없이] 부분 구현될 수 있습니다.)
 - 부분 구현은 `prototype` 속성이 있는 함수를 만듭니다. (고유 바인딩된 함수는 없습니다.)
 - 부분 구현은 {{jsxref("Function.length", "length")}} 속성이 ECMA-262에 의해 부여된(mandated) 그것과 일치하지 않는 바인딩된 함수를 만듭니다: 길이 0인 함수를 만듭니다, 반면에 전체 구현은 대상 함수의 길이 및 미리 지정된 인수의 수에 따라 0이 아닌 길이를 반환할 수 있습니다.
 

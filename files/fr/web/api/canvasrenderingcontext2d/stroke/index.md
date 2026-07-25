@@ -52,8 +52,7 @@ Editer le code en dessous et voir vos modifications mises à jour en direct dans
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.stroke();</textarea
->
+ctx.stroke();</textarea>
 ```
 
 ```js hidden

@@ -27,7 +27,7 @@ slug: Web/API/Element/focusin_event
 | Property                           | Type                                     | Description                                |
 | ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target losing focus.                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | The type of event.                         |
+| `type` {{readonlyInline}}          | {{jsxref("String")}}                     | The type of event.                         |
 | `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
 | `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | Event target receiving focus.              |

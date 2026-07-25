@@ -195,7 +195,7 @@ for (let i = 0, getI = () => i; i < 3; i++, getI = () => i) {
 `initialization` 内部的 `i` 变量与每次迭代中的 `i` 变量是不同的，包括第一次。因此，在这个例子中，`getI` 返回 0，即使在迭代中 `i` 的值已经递增了：
 
 ```js
-for (let i = 0, getI = () => i; i < 3; ) {
+for (let i = 0, getI = () => i; i < 3;) {
   i++;
   console.log(getI());
 }

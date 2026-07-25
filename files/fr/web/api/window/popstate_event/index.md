@@ -79,7 +79,7 @@ Comme vous pouvez le constater, l'évènement `popstate` est presque la dernièr
 
 ## Exemples
 
-Une page `http://exemple.com/exemple.html` exécutant le code suivant génèrera un journal comme indiqué&nbsp;:
+Une page `http://example.com/exemple.html` exécutant le code suivant génèrera un journal comme indiqué&nbsp;:
 
 ```js
 window.addEventListener("popstate", (event) => {
@@ -90,9 +90,9 @@ window.addEventListener("popstate", (event) => {
 history.pushState({ page: 1 }, "title 1", "?page=1");
 history.pushState({ page: 2 }, "title 2", "?page=2");
 history.replaceState({ page: 3 }, "title 3", "?page=3");
-history.back(); // Journalise "location: http://exemple.com/exemple.html?page=1, state: {"page":1}"
-history.back(); // Journalise "location: http://exemple.com/exemple.html, state: null"
-history.go(2); // Journalise "location: http://exemple.com/exemple.html?page=3, state: {"page":3}"
+history.back(); // Journalise "location: http://example.com/exemple.html?page=1, state: {"page":1}"
+history.back(); // Journalise "location: http://example.com/exemple.html, state: null"
+history.go(2); // Journalise "location: http://example.com/exemple.html?page=3, state: {"page":3}"
 ```
 
 Le même exemple en utilisant la propriété de gestionnaire d'évènement `onpopstate`&nbsp;:
@@ -106,12 +106,12 @@ window.onpopstate = (event) => {
 history.pushState({ page: 1 }, "title 1", "?page=1");
 history.pushState({ page: 2 }, "title 2", "?page=2");
 history.replaceState({ page: 3 }, "title 3", "?page=3");
-history.back(); // Journalise "location: http://exemple.com/exemple.html?page=1, state: {"page":1}"
-history.back(); // Journalise "location: http://exemple.com/exemple.html, state: null"
-history.go(2); // Journalise "location: http://exemple.com/exemple.html?page=3, state: {"page":3}"
+history.back(); // Journalise "location: http://example.com/exemple.html?page=1, state: {"page":1}"
+history.back(); // Journalise "location: http://example.com/exemple.html, state: null"
+history.go(2); // Journalise "location: http://example.com/exemple.html?page=3, state: {"page":3}"
 ```
 
-Notez que même si l'entrée d'historique originelle (pour `http://exemple.com/exemple.html`) n'a pas d'objet state associé, un événement `popstate` est tout de même exécuté lorsque nous activons cette entrée au second appel à `history.back()`.
+Notez que même si l'entrée d'historique originelle (pour `http://example.com/exemple.html`) n'a pas d'objet state associé, un événement `popstate` est tout de même exécuté lorsque nous activons cette entrée au second appel à `history.back()`.
 
 ## Spécifications
 

@@ -1,9 +1,9 @@
 ---
-title: :buffering
+title: CSS `:buffering` 擬似クラス
+short-title: :buffering
 slug: Web/CSS/Reference/Selectors/:buffering
-original_slug: Web/CSS/:buffering
 l10n:
-  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:buffering`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)セレクターで、再生可能な要素（{{htmlelement("audio")}} や {{htmlelement("video")}} など）がメディアリソースをバッファリングしているときに、その要素が再生可能であることを表します。

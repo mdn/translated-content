@@ -28,7 +28,7 @@ _Наследует свойства от родительского узла {{
 - {{ domxref("ParentNode.children") }}
   - : Is a live {{ domxref("HTMLCollection") }}, содержащая все дочерние элементы, в виде коллекции.
 - {{ domxref("Element.className") }}
-  - : Это {{domxref("DOMString")}}, представляющая класс элемента.
+  - : Это {{jsxref("String")}}, представляющая класс элемента.
 - {{ domxref("Element.clientHeight") }} {{experimental_inline}} {{readOnlyInline}}
   - : Возвращает {{jsxref("Number")}}, представляющее внутреннюю высоту элемента.
 - {{ domxref("Element.clientLeft") }} {{experimental_inline}} {{readOnlyInline}}
@@ -40,9 +40,9 @@ _Наследует свойства от родительского узла {{
 - {{ domxref("ParentNode.firstElementChild") }}
   - : Возвращает {{ domxref("Element") }}, первый дочерний элемент элемента или `null`, если у элемента нет дочерних элементов.
 - {{ domxref("Element.id") }}
-  - : Возвращает {{domxref("DOMString")}}, представляющий идентификатор (Id) элемента.
+  - : Возвращает {{jsxref("String")}}, представляющий идентификатор (Id) элемента.
 - {{ domxref("Element.innerHTML") }} {{experimental_inline}}
-  - : Является {{domxref("DOMString")}}, представляющей разметку контента элемента.
+  - : Является {{jsxref("String")}}, представляющей разметку контента элемента.
 - {{domxref("Element.namespaceURI")}} {{readonlyInline}}
   - : Пространство имён URI элемента или null, если это не пространство имён.
 
@@ -54,7 +54,7 @@ _Наследует свойства от родительского узла {{
 - {{ domxref("NonDocumentTypeChildNode.nextElementSibling") }}
   - : Является {{ domxref("Element") }}, элементом, непосредственно следующим за данным в древе, или `null`, если соседний элемент отсутствует.
 - {{ domxref("Element.outerHTML") }} {{experimental_inline}}
-  - : Является {{domxref("DOMString")}}, представляющей разметку элемента, включая его контент. При использовании в качестве сеттера заменяет элемент узлами, структурированными из указанной строки.
+  - : Является {{jsxref("String")}}, представляющей разметку элемента, включая его контент. При использовании в качестве сеттера заменяет элемент узлами, структурированными из указанной строки.
 - {{ domxref("NonDocumentTypeChildNode.previousElementSibling") }}
   - : Является {{ domxref("Element") }}, элементом, непосредственно предшествующим в древе данному, или `null`, если соседний элемент отсутствует.
 - {{ domxref("Element.scrollHeight") }} {{experimental_inline}} {{readOnlyInline}}

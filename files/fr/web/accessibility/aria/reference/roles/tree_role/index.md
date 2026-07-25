@@ -39,17 +39,17 @@ Chaque élément servant de nœud d'arbre porte le rôle `treeitem`, sauf la rac
 
 Les nœuds `treeitem` peuvent être des enfants directs de la racine, imbriqués dans un autre `treeitem`, ou, optionnellement, dans un élément [`group`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), qui, dans un arbre, est une collection extensible d'éléments treeitem.
 
-Ne mettez pas `aria-expanded` sur les nœuds terminaux — ceux sans enfants treeitem — car cela décrirait à tort le nœud comme parent pour les technologies d'assistance.
+Ne mettez pas `aria-expanded` sur les nœuds terminaux — ceux sans enfants treeitem — car cela décrit à tort le nœud comme parent pour les technologies d'assistance.
 
 ### Placement et présence dans le DOM
 
-Tous les treeitem sont contenus ou possédés par un élément avec le rôle `tree`. Si certains treeitem ne sont pas des descendants directs du `tree` dans le code, ajoutez [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) sur le conteneur pour inclure les éléments qui ne sont pas enfants dans le DOM. Ces éléments apparaîtront dans l'ordre de lecture à la suite des treeitem enfants du DOM. Les scripts qui gèrent la sélection doivent s'assurer que l'ordre visuel de sélection correspond à cet ordre de lecture pour les technologies d'assistance.
+Tous les treeitem sont contenus ou possédés par un élément avec le rôle `tree`. Si certains treeitem ne sont pas des descendants directs du `tree` dans le code, ajoutez [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) sur le conteneur pour inclure les éléments qui ne sont pas enfants dans le DOM. Ces éléments apparaissent dans l'ordre de lecture à la suite des treeitem enfants du DOM. Les scripts qui gèrent la sélection doivent s'assurer que l'ordre visuel de sélection correspond à cet ordre de lecture pour les technologies d'assistance.
 
 Si l'ensemble des nœuds disponibles n'est pas présent dans le DOM à cause d'un chargement dynamique lors du déplacement ou du défilement dans l'arbre, chaque nœud doit avoir [`aria-level`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level), [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) et [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) renseignés.
 
 ### Nom accessible
 
-Le `tree` doit avoir un nom accessible. Référencez une étiquette visible avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou spécifiez une étiquette avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
+Le `tree` doit avoir un nom accessible. Référencez une étiquette visible avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou définissez une étiquette avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
 ### Orientation de l'arbre
 
@@ -64,7 +64,7 @@ Les éléments avec le rôle `tree` ont une valeur implicite [`aria-orientation`
 - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Identifie l'élément (ou les éléments) qui étiquettent le `tree` pour fournir le nom accessible requis si une étiquette visible est présente. Sinon, utilisez `aria-label`.
 - [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-  - : Définit une chaîne qui étiquette le `tree` si aucune étiquette visible n'est présente.
+  - : Définit une chaîne de caractères qui étiquette le `tree` si aucune étiquette visible n'est présente.
 - [`aria-orientation`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
   - : Indique si l'arbre est horizontal ou vertical&nbsp;; la valeur par défaut est `vertical` si omise.
 - [`aria-multiselectable`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
@@ -135,12 +135,12 @@ Pour un arbre vertical (orientation par défaut)&nbsp;:
     <td>
       <ul>
         <li>La sélection se déplace vers le nœud suivant dont le nom commence par le caractère tapé.
-        <li>Si plusieurs caractères sont tapés rapidement, la sélection se déplace vers le nœud suivant dont le nom commence par la chaîne tapée.
+        <li>Si plusieurs caractères sont tapés rapidement, la sélection se déplace vers le nœud suivant dont le nom commence par la chaîne de caractères tapée.
     </td>
   </tr>
   <tr>
     <td><kbd>*</kbd> (optionnel)</td>
-    <td>Développe tous les nœuds frères au même niveau que le nœud courant.</td>
+    <td>Développe tous les nœuds voisins au même niveau que le nœud courant.</td>
   </tr>
 </table>
 

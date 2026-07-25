@@ -1,9 +1,9 @@
 ---
-title: -moz-force-broken-image-icon
+title: CSS `-moz-force-broken-image-icon` プロパティ
+short-title: -moz-force-broken-image-icon
 slug: Web/CSS/Reference/Properties/-moz-force-broken-image-icon
-original_slug: Web/CSS/-moz-force-broken-image-icon
 l10n:
-  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_header}}{{Deprecated_Header}}
@@ -11,6 +11,18 @@ l10n:
 **`-moz-force-broken-image-icon`** は拡張 CSS プロパティで、壊れた画像に `alt` 属性が付いていても、壊れた画像のアイコンを強制的に表示することができます。
 
 ## 構文
+
+```css
+-moz-force-broken-image-icon: 1;
+-moz-force-broken-image-icon: 0;
+
+/* グローバル値 */
+-moz-force-broken-image-icon: inherit;
+-moz-force-broken-image-icon: initial;
+-moz-force-broken-image-icon: revert;
+-moz-force-broken-image-icon: revert-layer;
+-moz-force-broken-image-icon: unset;
+```
 
 ### 値
 
@@ -26,9 +38,7 @@ l10n:
 
 ## 形式文法
 
-```plain
--moz-force-broken-image-icon = {{cssxref("&lt;integer&gt;")}}
-```
+{{CSSSyntaxRaw(`-moz-force-broken-image-icon = <integer>`)}}
 
 ## 例
 

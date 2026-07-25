@@ -1,8 +1,9 @@
 ---
-title: ::grammar-error
+title: CSS `::grammar-error` 擬似要素
+short-title: ::grammar-error
 slug: Web/CSS/Reference/Selectors/::grammar-error
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 **`::grammar-error`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、{{glossary("user agent", "ユーザーエージェント")}}が文法的に正しくないとしたテキストの部分を示します。

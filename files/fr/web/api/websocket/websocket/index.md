@@ -95,4 +95,4 @@ relativeWebSocket.close();
 
 ## Voir aussi
 
-- [RFC 6455 <sup>(angl.)</sup>](https://www.rfc-editor.org/rfc/rfc6455.html) (la spécification du protocole WebSocket)
+- [RFC 6455 <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc6455.html) (la spécification du protocole WebSocket)

@@ -24,7 +24,7 @@ _부모 {{domxref("Node")}} 로부터 프로퍼티를 상속받고 {{domxref("Ch
 
 ## 메소드
 
-_부모 {{domxref("Node")}} 로부터 메소드를 상속받고 {{domxref("ChildNode")}} 와 _{{domxref("NonDocumentTypeChildNode")}}_ 인터페이스를 구현합니다._
+_부모 {{domxref("Node")}} 로부터 메소드를 상속받고 {{domxref("ChildNode")}} 와 *{{domxref("NonDocumentTypeChildNode")}}* 인터페이스를 구현합니다._
 
 - {{domxref("CharacterData.appendData()")}}
   - : 주어진 {{domxref("DOMString")}} 을 `CharacterData.data` 문자열에 붙입니다. 이 메소드가 반환할 때 `data` 는 이어 붙여진 {{domxref("DOMString")}} 을 갖게됩니다.

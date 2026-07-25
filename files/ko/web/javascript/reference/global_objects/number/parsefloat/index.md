@@ -45,13 +45,13 @@ Number.parseFloat(string);
 
 ### Number.parseFloat vs parseFloat
 
-`Number.parseFloat()`은 전역 {{jsxref("parseFloat", "parseFloat()")}} 함수와 같은 기능을 가지고 있습니다.
+`Number.parseFloat()`은 전역 {{jsxref("parseFloat()")}} 함수와 같은 기능을 가지고 있습니다.
 
 ```js
 Number.parseFloat === parseFloat; // true
 ```
 
-`Number.parseFloat()`은 ECMAScript 2015에서 전역 객체의 모듈화를 위해 추가됐습니다. 상세한 정보와 예제는 {{jsxref("parseFloat", "parseFloat()")}}를 참고하세요.
+`Number.parseFloat()`은 ECMAScript 2015에서 전역 객체의 모듈화를 위해 추가됐습니다. 상세한 정보와 예제는 {{jsxref("parseFloat()")}}를 참고하세요.
 
 ## 명세
 
@@ -65,4 +65,4 @@ Number.parseFloat === parseFloat; // true
 
 - `core-js`의 [`Number.parseFloat` 폴리필](https://github.com/zloirock/core-js#ecmascript-number)
 - 이 메서드가 속한 {{jsxref("Number")}} 객체
-- 전역 {{jsxref("parseFloat", "parseFloat()")}} 메서드
+- 전역 {{jsxref("parseFloat()")}} 메서드

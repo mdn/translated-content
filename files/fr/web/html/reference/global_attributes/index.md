@@ -13,7 +13,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 
 - `xml:lang` et `xml:base` — ceux-ci sont hérités des spécifications XHTML et sont obsolètes, mais conservés pour des raisons de compatibilité.
 - L'attribut ARIA [`role`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles) et les multiples états et propriétés [`aria-*`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes), utilisés pour garantir l'accessibilité.
-- Les [attributs de gestionnaire d'événements](#liste_des_attributs_globaux_de_gestionnaire_dévénements) listés ci-dessous.
+- Les [attributs de gestionnaire d'évènements](#liste_des_attributs_globaux_de_gestionnaire_dévènements) listés ci-dessous.
 
 ## Liste des attributs universels
 
@@ -58,7 +58,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id)
   - : Définit un identifiant (<abbr>ID</abbr>) qui doit être unique dans tout le document. Il sert à identifier l'élément lors de la création de liens (avec un identifiant de fragment), de scripts ou de mise en forme (avec le CSS).
 - [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert)
-  - : Un booléen qui fait que le navigateur ignore les événements d'entrée utilisateur·ice pour l'élément. Utile lorsque des événements de clic sont présents.
+  - : Un booléen qui fait que le navigateur ignore les évènements d'entrée utilisateur·ice pour l'élément. Utile lorsque des évènements de clic sont présents.
 - [`inputmode`](/fr/docs/Web/HTML/Reference/Global_attributes/inputmode)
   - : Fournit une indication au navigateur sur le type de configuration du clavier virtuel à utiliser lors de la modification de cet élément ou de son contenu. Principalement utilisé sur les éléments HTML {{HTMLElement("input")}}, mais utilisable sur n'importe quel élément en mode [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 - [`is`](/fr/docs/Web/HTML/Reference/Global_attributes/is)
@@ -119,11 +119,11 @@ En plus des attributs universels HTML, il existe également les attributs univer
     - `false`, ce qui désactive les suggestions d'écriture du navigateur.
     - `true` ou une chaîne de caractères vide, ce qui active les suggestions d'écriture.
 
-## Liste des attributs globaux de gestionnaire d'événements
+## Liste des attributs globaux de gestionnaire d'évènements
 
-Les attributs HTML de gestionnaire d'événements sont déconseillés&nbsp;: voir la [référence des attributs HTML](/fr/docs/Web/HTML/Reference/Attributes#event_handler_attributes) pour leur fonctionnement.
+Les attributs HTML de gestionnaire d'évènements sont déconseillés&nbsp;: voir la [référence des attributs HTML](/fr/docs/Web/HTML/Reference/Attributes#event_handler_attributes) pour leur fonctionnement.
 
-Bien que les attributs listés ci-dessous s'appliquent à tous les éléments, ils ne sont pas utiles sur tous les éléments. Par exemple, l'attribut HTML `onvolumechange` est accepté par tous les éléments et attache un écouteur d'événement pour `volumechange`, mais seuls les éléments média recevront un événement `volumechange` déclenché par le navigateur. Pour les autres éléments, vous pouvez uniquement utiliser {{DOMxRef("EventTarget.dispatchEvent()")}} pour déclencher manuellement un tel événement. [Certains attributs](/fr/docs/Web/HTML/Reference/Elements/body#event_attributes) peuvent être définis sur {{HTMLElement("body")}}, mais ils écouteront alors les événements sur `window`.
+Bien que les attributs listés ci-dessous s'appliquent à tous les éléments, ils ne sont pas utiles sur tous les éléments. Par exemple, l'attribut HTML `onvolumechange` est accepté par tous les éléments et attache un écouteur d'évènement pour `volumechange`, mais seuls les éléments média recevront un évènement `volumechange` déclenché par le navigateur. Pour les autres éléments, vous pouvez uniquement utiliser {{DOMxRef("EventTarget.dispatchEvent()")}} pour déclencher manuellement un tel évènement. [Certains attributs](/fr/docs/Web/HTML/Reference/Elements/body#event_attributes) peuvent être définis sur {{HTMLElement("body")}}, mais ils écouteront alors les évènements sur `window`.
 
 - [`onabort`](/fr/docs/Web/API/HTMLMediaElement/abort_event)
 - [`onanimationcancel`](/fr/docs/Web/API/Element/animationcancel_event)

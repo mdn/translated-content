@@ -1,9 +1,9 @@
 ---
-title: fill-rule
+title: CSS `fill-rule` プロパティ
+short-title: fill-rule
 slug: Web/CSS/Reference/Properties/fill-rule
-original_slug: Web/CSS/fill-rule
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`fill-rule`** は [CSS](/ja/docs/Web/CSS) のプロパティで、SVG シェイプのキャンバスのどの部分が塗りつぶすシェイプ内に記載されるかを決定するルールを定義します。これが存在する場合、要素の {{SVGAttr("fill-rule")}} 属性よりも優先されます。
@@ -16,11 +16,11 @@ l10n:
 ## 構文
 
 ```css
-/* keywords */
+/* キーワード */
 fill-rule: evenodd;
 fill-rule: nonzero;
 
-/* Global values */
+/* グローバル値 */
 fill-rule: inherit;
 fill-rule: initial;
 fill-rule: revert;

@@ -61,7 +61,7 @@ Cela définit un groupe de points de terminaison `url` identifié par le nom de 
 Report-To: { "group": "csp-endpoints",
               "max_age": 10886400,
               "endpoints": [
-                { "url": "https://exemple.com/reports" },
+                { "url": "https://example.com/reports" },
                 { "url": "https://backup.com/reports" }
               ] }
 ```
@@ -69,7 +69,7 @@ Report-To: { "group": "csp-endpoints",
 Le serveur peut ensuite définir que ce groupe doit être la cible pour l'envoi des rapports d'infraction CSP en utilisant le nom du groupe comme valeur de la directive {{CSP("report-to")}}&nbsp;:
 
 ```http
-Content-Security-Policy: script-src https://exemple.com/; report-to csp-endpoints
+Content-Security-Policy: script-src https://example.com/; report-to csp-endpoints
 ```
 
 L'en-tête ci-dessus montre que toute violation de CSP sur `script-src` entraînerait l'envoi de rapports de violation vers les deux URL listées dans `Report-To`.
@@ -83,19 +83,19 @@ Remarquez que chaque groupe possède un nom unique et que les groupes ne sont pa
 Report-To: { "group": "csp-endpoint-1",
               "max_age": 10886400,
               "endpoints": [
-                { "url": "https://exemple.com/csp-reports" }
+                { "url": "https://example.com/csp-reports" }
               ] },
             { "group": "hpkp-endpoint",
               "max_age": 10886400,
               "endpoints": [
-                { "url": "https://exemple.com/hpkp-reports" }
+                { "url": "https://example.com/hpkp-reports" }
               ] }
 ```
 
 On peut sélectionner un groupe de points de terminaison comme cible des rapports d'infraction en utilisant son nom, de la même manière que dans l'exemple précédent&nbsp;:
 
 ```http
-Content-Security-Policy: script-src https://exemple.com/; report-to csp-endpoint-1
+Content-Security-Policy: script-src https://example.com/; report-to csp-endpoint-1
 ```
 
 ## Spécifications

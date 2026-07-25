@@ -2,10 +2,10 @@
 title: ALPN
 slug: Glossary/ALPN
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-**Application-Layer Protocol Negotiation** (**ALPN**) est une extension {{Glossary("TLS")}} (definie dans la [RFC 7301](https://www.rfc-editor.org/rfc/rfc7301)) qui indique quel protocole de couche d'application négocie la connexion chiffrée sans nécessiter d'aller-retour supplémentaires.
+**Application-Layer Protocol Negotiation** (**ALPN**) est une extension {{Glossary("TLS")}} (définie dans la [RFC 7301](https://www.rfc-editor.org/info/rfc7301/)) qui indique quel protocole de couche d'application négocie la connexion chiffrée sans nécessiter d'aller-retour supplémentaires.
 
 | Protocole                               | Séquence d'identification                              |
 | --------------------------------------- | ------------------------------------------------------ |

@@ -1715,6 +1715,11 @@
 /ko/docs/Web/JavaScript/Reference/Operators/연산자_우선순위	/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence
 /ko/docs/Web/JavaScript/Reference/Properties_Index	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/ko/docs/Web/JavaScript/Reference/Strict_mode
+/ko/docs/Web/JavaScript/Reference/delete	/ko/docs/Web/JavaScript/Reference/Operators/delete
+/ko/docs/Web/JavaScript/Reference/instanceof	/ko/docs/Web/JavaScript/Reference/Operators/instanceof
+/ko/docs/Web/JavaScript/Reference/new	/ko/docs/Web/JavaScript/Reference/Operators/new
+/ko/docs/Web/JavaScript/Reference/null	/ko/docs/Web/JavaScript/Reference/Operators/null
+/ko/docs/Web/JavaScript/Reference/this	/ko/docs/Web/JavaScript/Reference/Operators/this
 /ko/docs/Web/JavaScript/Shells	/ko/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /ko/docs/Web/JavaScript/Tutorials	/ko/docs/Web/JavaScript
 /ko/docs/Web/JavaScript/Typed_arrays	/ko/docs/Web/JavaScript/Guide/Typed_arrays

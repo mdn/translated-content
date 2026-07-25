@@ -106,7 +106,7 @@ Content-Type: application/problem+json
 Content-Language: fr
 
 {
-    "type": "https://developer.exemple.com/idempotency/docs",
+    "type": "https://developer.example.com/idempotency/docs",
     "title": "Idempotency-Key manquante",
     "detail": "Cette opération est idempotente et nécessite l'utilisation correcte de la clé d'idempotence.",
 }
@@ -117,18 +117,18 @@ Content-Language: fr
 ### Une requête `POST` avec une clé
 
 Le message suivant montre une requête `POST` pour créer un·e nouvel·le utilisateur·ice.
-La clé `9c7d2b4a0e1f6c835a2d1b0f4e3c5a7d` est une valeur unique qui correspond aux exigences publiées par l'hôte (exemple.com ne prend pas en charge cet en-tête, la valeur est donc fictive).
+La clé `9c7d2b4a0e1f6c835a2d1b0f4e3c5a7d` est une valeur unique qui correspond aux exigences publiées par l'hôte (example.com ne prend pas en charge cet en-tête, la valeur est donc fictive).
 
 ```http
 POST /api/users HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: application/json
 Idempotency-Key: 9c7d2b4a0e1f6c835a2d1b0f4e3c5a7d
 
 {
   "user_id": "12345",
   "name": "Sharma Chow",
-  "email": "sharmac@exemple.com"
+  "email": "sharmac@example.com"
 }
 ```
 
@@ -143,7 +143,7 @@ Content-Type: application/problem+json
 Content-Language: fr
 
 {
-    "type": "https://exemple.com/idempotency/docs",
+    "type": "https://example.com/idempotency/docs",
     "title": "Le serveur traite la requête précédente.",
     "detail": "Une requête avec la même clé est actuellement/en cours de traitement.",
 }

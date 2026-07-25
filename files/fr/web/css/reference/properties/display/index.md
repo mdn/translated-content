@@ -3,7 +3,7 @@ title: Propriété CSS `display`
 short-title: display
 slug: Web/CSS/Reference/Properties/display
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`display`** définit si un élément est traité comme une [boîte de bloc ou en ligne](/fr/docs/Web/CSS/Guides/Display/Flow_layout) et le mode de disposition utilisé pour ses enfants, comme la [mise en flux](/fr/docs/Web/CSS/Guides/Display/Flow_layout), la disposition [grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou la disposition [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
@@ -127,13 +127,13 @@ Les valeurs de mots-clés peuvent être regroupées en six catégories de valeur
     - `block`
       - : L'élément génère une boîte de bloc, créant des retours à la ligne avant et après l'élément dans le flux normal.
     - `inline`
-      - : L'élément génère une ou plusieurs boîtes en ligne qui ne créent pas de retour à la ligne avant ou après elles-mêmes. En flux normal, l'élément suivant sera sur la même ligne s'il y a de la place.
+      - : L'élément génère une ou plusieurs boîtes en ligne qui ne créent pas de retour à la ligne avant ou après elles-mêmes. En flux normal, l'élément suivant est sur la même ligne s'il y a de la place.
 
 > [!NOTE]
 > Lorsqu'une propriété d'affichage est définie avec uniquement une valeur **extérieure** (par exemple, `display: block` ou `display: inline`), la valeur intérieure par défaut est `flow` (par exemple, `display: block flow` et `display: inline flow`).
 
 > [!NOTE]
-> Vous pouvez utiliser la syntaxe à valeur unique comme solution de repli pour la syntaxe à plusieurs mots-clés, par exemple `display: inline flex` pourrait avoir la solution de repli suivante
+> Vous pouvez utiliser la syntaxe à valeur unique comme solution de repli pour la syntaxe à plusieurs mots-clés, par exemple `display: inline flex` peut avoir la solution de repli suivante
 >
 > ```css
 > .container {
@@ -142,7 +142,7 @@ Les valeurs de mots-clés peuvent être regroupées en six catégories de valeur
 > }
 > ```
 >
-> Voir [Utiliser la syntaxe a mots-cles multiples avec display en CSS](/fr/docs/Web/CSS/Guides/Display/Multi-keyword_syntax) pour plus d'informations.
+> Voir [Utiliser la syntaxe à mots-clés multiples avec `display` en CSS](/fr/docs/Web/CSS/Guides/Display/Multi-keyword_syntax) pour plus d'informations.
 
 ### Intérieur
 
@@ -174,14 +174,14 @@ Les valeurs de mots-clés peuvent être regroupées en six catégories de valeur
 - {{CSSxRef("&lt;display-listitem&gt;")}}
   - : L'élément génère une boîte de bloc pour le contenu et une boîte en ligne distincte pour l'élément de liste.
 
-Une valeur unique de `list-item` fera que l'élément se comportera comme un élément de liste.
+Une valeur unique de `list-item` fait que l'élément se comporte comme un élément de liste.
 Cela peut être utilisé avec {{CSSxRef("list-style-type")}} et {{CSSxRef("list-style-position")}}.
 
 `list-item` peut aussi être combiné avec n'importe quel mot-clé {{CSSxRef("&lt;display-outside&gt;")}} et le mot-clé `flow` ou `flow-root` {{CSSxRef("&lt;display-inside&gt;")}}.
 
 > [!NOTE]
-> Si aucune valeur intérieure n'est définie, elle sera par défaut `flow`.
-> Si aucune valeur extérieure n'est définie, la boîte principale aura un type d'affichage extérieur `block`.
+> Si aucune valeur intérieure n'est définie, elle est par défaut `flow`.
+> Si aucune valeur extérieure n'est définie, la boîte principale a un type d'affichage extérieur `block`.
 
 ### Interne
 
@@ -222,7 +222,7 @@ Cela peut être utilisé avec {{CSSxRef("list-style-type")}} et {{CSSxRef("list-
 
     - `none`
       - : Désactive l'affichage d'un élément afin qu'il n'ait aucun effet sur la mise en page (le document est rendu comme si l'élément n'existait pas). Tous les éléments descendants ont également leur affichage désactivé.
-        Pour qu'un élément occupe l'espace qu'il prendrait normalement, mais sans rien afficher, utilisez plutôt la propriété {{CSSxRef("visibility")}}.
+        Pour qu'un élément occupe l'espace qu'il prend normalement, mais sans rien afficher, utilisez plutôt la propriété {{CSSxRef("visibility")}}.
 
 ### Précomposées
 
@@ -334,7 +334,7 @@ Pour des exemples de transition de la propriété `display`, consultez les pages
 
 ### `display: none;`
 
-Utiliser la propriété `display` avec la valeur `none` sur un élément entraînera son retrait de l'[arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis). Cet élément ainsi que ses descendants ne seront plus annoncés par les lecteurs d'écrans.
+Utiliser la propriété `display` avec la valeur `none` sur un élément entraîne son retrait de [l'arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis). Cet élément ainsi que ses descendants ne sont plus annoncés par les lecteurs d'écrans.
 
 Si vous souhaitez masquer un élément visuellement, une alternative plus accessible consiste à utiliser [une combinaison de propriétés <sup>(angl.)</sup>](https://webaim.org/techniques/css/invisiblecontent/) afin de le retirer de l'écran mais de le conserver lisible pour les technologies d'assistance.
 
@@ -342,16 +342,16 @@ Bien que `display: none` masque le contenu de l'arbre d'accessibilité, les él�
 
 ### `display: contents;`
 
-Tout élément ciblé avec `display: contents` sera retiré de [l'arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#api_daccessibilité) par la plupart des navigateurs. Ainsi, l'élément et ses descendants ne seront plus annoncés par les outils d'assistance tels que les lecteurs d'écran. Ce comportement est incorrect selon [la spécification CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-display/#valdef-display-content).
+Tout élément ciblé avec `display: contents` est retiré de [l'arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#api_daccessibilité) par la plupart des navigateurs. Ainsi, l'élément et ses descendants ne sont plus annoncés par les outils d'assistance tels que les lecteurs d'écran. Ce comportement est incorrect selon [la spécification CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-display/#valdef-display-content).
 
 - [Obtenir un balisage plus accessible grâce à `display: contents`, par Hidde de Vries <sup>(angl.)</sup>](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [`display: contents` n'est pas un outil de réinitialisation CSS, par Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 
 ### Les tableaux
 
-Modifier la valeur de `display` pour un élément HTML {{HTMLElement("table")}} afin d'utiliser la valeur `block`, `grid` ou `flex` modifiera sa représentation au sein de [l'arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#api_daccessibilité). Aussi, le tableau ne sera plus correctement annoncé par les technologies d'assistance.
+Modifier la valeur de `display` pour un élément HTML {{HTMLElement("table")}} afin d'utiliser la valeur `block`, `grid` ou `flex` modifie sa représentation au sein de [l'arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#api_daccessibilité). Aussi, le tableau n'est plus correctement annoncé par les technologies d'assistance.
 
-- [Du contenu masqué avec une meilleure accessibilité - Go Make Things <sup>(angl.)</sup>](https://gomakethings.com/hidden-content-for-better-a11y/)
+- [Du contenu masqué avec une meilleure accessibilité - Go Make Things <sup>(angl.)</sup>](https://gomakethings.com/articles/hidden-content-for-better-a11y/)
 - [Explications sur la règle 1.3 de WCAG sur MDN](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.3_—_créer_du_contenu_pouvant_être_présenté_de_différentes_façons)
 - [Comprendre le critère de succès 1.3.1, W3C Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 

@@ -56,7 +56,7 @@ Pour utiliser la directive {{CSP("report-to")}}, vous devez d'abord définir un 
 Dans l'exemple ci-dessous, nous définissons un point de terminaison nommé `csp-endpoint`.
 
 ```http
-Reporting-Endpoints: csp-endpoint="https://exemple.com/rapports-csp"
+Reporting-Endpoints: csp-endpoint="https://example.com/rapports-csp"
 ```
 
 Vous pouvez ensuite définir la destination du rapport avec {{CSP("report-to")}} et {{CSP("report-uri")}}, comme illustré ci-dessous.

@@ -3,7 +3,7 @@ title: HTML `<progress>`  進捗インジケーター要素
 short-title: <progress>
 slug: Web/HTML/Reference/Elements/progress
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<progress>`** は [HTML](/ja/docs/Web/HTML) の要素で、タスクの進捗状況を表示します。ふつうはプログレスバーとして表示されます。

@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 **`isPrototypeOf()`** 메소드는 해당 객체가 다른 객체의 프로토타입 체인에 속한 객체인지 확인하기 위해 사용됩니다.
 
 > [!NOTE]
-> `isPrototypeOf` 는 {{jsxref("Operators/instanceof", "instanceof")}} 연산자와 다릅니다. "`object instanceof AFunction`" 표현식에서는 `object` 의 프로토타입 체인을 AFunction 자체가 아니라 `AFunction.prototype` 에 대해 확인을 합니다.
+> `isPrototypeOf` 는 {{jsxref("instanceof")}} 연산자와 다릅니다. "`object instanceof AFunction`" 표현식에서는 `object` 의 프로토타입 체인을 AFunction 자체가 아니라 `AFunction.prototype` 에 대해 확인을 합니다.
 
 ## 구문
 
@@ -59,7 +59,7 @@ if (Fi.prototype.isPrototypeOf(fum)) {
 }
 ```
 
-이 메소드는 {{jsxref("Operators/instanceof", "instanceof")}} 연산자와 함께 특정 프로토타입으로부터 상속된 객체만 작동하게 하려는(예를 들어 특정 메소드나 속성이 객체에 있다는걸 보장하려는 때) 코드에서 특히 쓸모가 많다.
+이 메소드는 {{jsxref("instanceof")}} 연산자와 함께 특정 프로토타입으로부터 상속된 객체만 작동하게 하려는(예를 들어 특정 메소드나 속성이 객체에 있다는걸 보장하려는 때) 코드에서 특히 쓸모가 많다.
 
 ## 명세
 
@@ -71,7 +71,7 @@ if (Fi.prototype.isPrototypeOf(fum)) {
 
 ## 같이 보기
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

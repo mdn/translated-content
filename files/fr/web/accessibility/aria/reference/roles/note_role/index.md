@@ -6,11 +6,11 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-Le rôle `note` indique une section dont le contenu est parenthétique ou accessoire par rapport au contenu principal.
+Le rôle `note` indique une section dont le contenu est entre parenthèses ou accessoire par rapport au contenu principal.
 
 ## Description
 
-Le rôle `note` peut être ajouté à un contenu parenthétique ou accessoire si aucun autre élément natif ou rôle ne correspond à l'usage.
+Le rôle `note` peut être ajouté à un contenu entre parenthèses ou accessoire si aucun autre élément natif ou rôle ne correspond à l'usage.
 
 ### Propriétés, états et rôles WAI-ARIA associés
 
@@ -37,7 +37,7 @@ Le rôle `note` peut être ajouté à un contenu parenthétique ou accessoire si
 …
 ```
 
-Dans l'exemple ci-dessus, inspiré d'une page Wikipédia sur Madam C.J. Walker, la boîte «&nbsp;highlight-box&nbsp;» avec le rôle `note` aurait pu être un {{HTMLElement('blockquote')}} si elle contenait une citation, ou un {{HTMLElement('figcaption')}} dans un {{HTMLElement('figure')}} s'il y avait une image associée. Ici, comme aucune de ces options n'était pertinente, le rôle `note` a été utilisé pour ajouter une sémantique au contenu parenthétique.
+Dans l'exemple ci-dessus, inspiré d'une page Wikipédia sur Madam C.J. Walker, la boîte «&nbsp;highlight-box&nbsp;» avec le rôle `note` a pu être un {{HTMLElement("blockquote")}} si elle contenait une citation, ou un {{HTMLElement("figcaption")}} dans un {{HTMLElement("figure")}} s'il y avait une image associée. Ici, comme aucune de ces options n'était pertinente, le rôle `note` a été utilisé pour ajouter une sémantique au contenu entre parenthèses.
 
 ## Spécifications
 

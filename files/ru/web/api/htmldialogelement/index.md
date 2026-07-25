@@ -16,14 +16,14 @@ _Наследует свойства от своего родителя, {{domxr
 - {{domxref("HTMLDialogElement.open")}}
   - : {{domxref("Boolean")}} отражает HTML атрибут элемента [`open`](/ru/docs/Web/HTML/Reference/Elements/dialog#open), указывающий на то, доступно ли диалоговое окно для воздействия.
 - {{domxref("HTMLDialogElement.returnValue")}}
-  - : {{domxref("DOMString")}} устанавливает или возвращает передаваемое диалоговому окну значение.
+  - : {{jsxref("String")}} устанавливает или возвращает передаваемое диалоговому окну значение.
 
 ## Методы
 
 _Наследует методы своего родителя, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.close()")}}
-  - : Закрывает диалоговое окно. Опциональный {{domxref("DOMString")}} может быть передан как аргумент, обновляющий `returnValue` диалогового окна.
+  - : Закрывает диалоговое окно. Опциональный {{jsxref("String")}} может быть передан как аргумент, обновляющий `returnValue` диалогового окна.
 - {{domxref("HTMLDialogElement.show()")}}
   - : Показывает диалоговое окно modelessly, т.е. остаётся возможность взаимодействовать с контентом вне диалогового окна.
 - {{domxref("HTMLDialogElement.showModal()")}}

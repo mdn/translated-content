@@ -1,6 +1,9 @@
 ---
-title: PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
+title: "PublicKeyCredential: isUserVerifyingPlatformAuthenticatorAvailable() 静的メソッド"
+short-title: isUserVerifyingPlatformAuthenticatorAvailable()
 slug: Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_static
+l10n:
+  sourceCommit: 79f65d8322a4e55e9f3f4c91441c9188dbe670e0
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
@@ -19,7 +22,7 @@ slug: Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_
 ## 構文
 
 ```js-nolint
-isUserVerifyingPlatformAuthenticatorAvailable()
+PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 ```
 
 ### 引数
@@ -31,10 +34,14 @@ isUserVerifyingPlatformAuthenticatorAvailable()
 ユーザーを認証するプラットフォーム認証が利用できるかどうかを示す論理値に解決する {{jsxref("Promise")}} です。
 
 > [!NOTE]
-> このメソッドは静的メソッドであり、インスタンスではなく {{domxref("PublicKeyCredential")}} インターフェイス上で直接呼び出されます。
-
-> [!NOTE]
 > 以前の版の仕様では、論理値は、そのような認証装置が存在することを開示することに対するユーザーの同意も伝えていました。
+
+### 例外
+
+このプロミスには、以下の例外で拒否されます。
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : RP のドメインが有効ではありません。
 
 ## 例
 
@@ -42,15 +49,13 @@ isUserVerifyingPlatformAuthenticatorAvailable()
 PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
   .then((available) => {
     if (available) {
-      // We can proceed with the creation of a PublicKeyCredential
-      // with this authenticator
+      // この認証器で PublicKeyCredential の作成が可能
     } else {
-      // Use another kind of authenticator or a classical login/password
-      // workflow
+      // 別の種類の認証器を使用するか、従来のログイン／パスワードによる認証手順を使用する
     }
   })
   .catch((err) => {
-    // Something went wrong
+    // 何か問題が発生した
     console.error(err);
   });
 ```
@@ -65,5 +70,5 @@ PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 
 ## 関連情報
 
-- [Windows Hello](https://docs.microsoft.com/windows-hardware/design/device-experiences/windows-hello)
-- [Web Authentication and Windows Hello - MSDN Guide](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)、特に [special considerations mentioning `isUserVerifyingPlatformAuthenticator()`](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/#special-considerations-for-windows-hello)
+- [Windows Hello](https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello)
+- [Web Authentication and Windows Hello - MSDN Guide](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)、特に [special considerations mentioning `isUserVerifyingPlatformAuthenticator()`](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/#special-considerations-for-windows-hello)

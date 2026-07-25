@@ -26,7 +26,7 @@ _Наследует свойства от своего родителя, {{domxr
   <tbody>
     <tr>
       <td><code id="type_property">type</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         Представляет тип MIME сценария. Он отражает атрибут
         <a href="/ru/docs/Web/HTML/Reference/Elements/script#type"><code>type</code></a>.
@@ -34,7 +34,7 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code id="src_property">src</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         Получает и отдаёт URL внешнего скрипта. Он отражает атрибут
         <a href="/ru/docs/Web/HTML/Reference/Elements/script#src"><code>src</code></a>.
@@ -42,7 +42,7 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code id="event_property">event</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         Старый, способ регистрации обработчиков событий на элементы в
         HTML-документе.
@@ -50,7 +50,7 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code id="charset_property">charset</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         Представляет кодировку символов внешнего скрипта. Он отражает атрибут
         <a href="/ru/docs/Web/HTML/Reference/Elements/script#charset"><code>charset</code></a>.
@@ -142,9 +142,9 @@ _Наследует свойства от своего родителя, {{domxr
         <code id="crossOrigin_property">crossOrigin </code
         >{{experimental_inline}}
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
-        {{domxref("DOMString")}}, отражающий
+        {{jsxref("String")}}, отражающий
         <a href="/ru/docs/Web/HTML/Reference/Attributes/crossorigin"
           >настройку CORS </a
         >для элементов скрипта. Для скриптов из других
@@ -154,7 +154,7 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code id="text_property">text</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           IDL атрибут <code>text</code> объединяет и возвращает содержимое всех
@@ -193,9 +193,9 @@ _Наследует свойства от своего родителя, {{domxr
     </tr>
     <tr>
       <td><code>referrerPolicy</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
-        {{domxref("DOMString")}}, который отражает HTML атрибут
+        {{jsxref("String")}}, который отражает HTML атрибут
         <a href="/ru/docs/Web/HTML/Reference/Elements/script#referrerpolicy"><code>referrerpolicy</code></a>
         указывающий, какой реферер использовать при извлечении скриптов и
         выборках, выполненных сценариев.

@@ -20,9 +20,9 @@ _Этот интерфейс также наследует свойства от
 - {{domxref("SVGAElement.href")}}
   - : См. {{domxref("HTMLAnchorElement.href")}}.
 - {{domxref("SVGAElement.hreflang")}}
-  - : Является {{domxref("DOMString")}}, который отражает атрибут `hreflang`, указывающий язык связанного ресурса.
+  - : Является {{jsxref("String")}}, который отражает атрибут `hreflang`, указывающий язык связанного ресурса.
 - {{domxref("SVGAElement.ping")}}
-  - : Является {{domxref("DOMString")}}, отражая атрибут ping, содержащий список URL-адресов, разделённых пробелами, к которым, когда выполняется гиперссылка, {{HTTPMethod("POST")}} запрос с телом `PING` будет отправлен браузером (в фоновом режиме). Обычно используется для отслеживания.
+  - : Является {{jsxref("String")}}, отражая атрибут ping, содержащий список URL-адресов, разделённых пробелами, к которым, когда выполняется гиперссылка, {{HTTPMethod("POST")}} запрос с телом `PING` будет отправлен браузером (в фоновом режиме). Обычно используется для отслеживания.
 - {{domxref("SVGAElement.referrerPolicy")}}
   - : См. {{domxref("HTMLAnchorElement.referrerPolicy")}}.
 - {{domxref("SVGAElement.rel")}}
@@ -32,10 +32,10 @@ _Этот интерфейс также наследует свойства от
 - {{domxref("SVGAElement.target")}} {{readonlyInline}}
   - : соответствует атрибуту {{SVGAttr("target")}} данного элемента.
 - {{domxref("SVGAElement.text")}}
-  - : Является {{domxref("DOMString")}} синонимом свойства {{domxref("Node.textContent")}}.
+  - : Является {{jsxref("String")}} синонимом свойства {{domxref("Node.textContent")}}.
 - {{domxref("SVGAElement.type")}}
   - : Is a that reflects theattribute, indicating the MIME type of the linked resource.
-    Является {{domxref("DOMString")}}, который отражает атрибут `type` , указывающий тип MIME связанного ресурса.
+    Является {{jsxref("String")}}, который отражает атрибут `type` , указывающий тип MIME связанного ресурса.
 
 ## Методы
 

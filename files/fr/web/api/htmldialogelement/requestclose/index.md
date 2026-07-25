@@ -9,10 +9,10 @@ l10n:
 {{APIRef("HTML DOM")}}
 
 La méthode **`requestClose()`** de l'interface {{DOMxRef("HTMLDialogElement")}} demande la fermeture de l'élément HTML {{HTMLElement("dialog")}}.
-Une chaîne de caractères optionnelle peut être passée en argument, ce qui met à jour la propriété `returnValue` de la boîte de dialogue.
+Une chaîne de caractères optionnelle peut être passée en argument, ce qui met à jour la propriété {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} de la boîte de dialogue.
 
-Cette méthode diffère de {{DOMxRef("HTMLDialogElement.close()")}} car elle déclenche d'abord un événement {{DOMxRef("HTMLDialogElement.cancel_event", "cancel")}}, puis l'événement {{DOMxRef("HTMLDialogElement.close_event", "close")}}.
-Les auteur·ice·s peuvent appeler {{DOMxRef("Event.preventDefault()")}} dans le gestionnaire de l'événement `cancel` pour empêcher la fermeture de la boîte de dialogue.
+Cette méthode diffère de {{DOMxRef("HTMLDialogElement.close()", "close()")}}, car elle déclenche d'abord un évènement {{DOMxRef("HTMLDialogElement.cancel_event", "cancel")}}, puis l'évènement {{DOMxRef("HTMLDialogElement.close_event", "close")}}.
+Les auteur·ice·s peuvent appeler {{DOMxRef("Event.preventDefault()")}} dans le gestionnaire de l'évènement {{DOMxRef("HTMLDialogElement.cancel_event", "cancel")}} pour empêcher la fermeture de la boîte de dialogue.
 
 Cette méthode expose le même comportement que le mécanisme interne de surveillance de fermeture (<i lang="en">close watcher</i> en anglais) du dialogue.
 
@@ -34,82 +34,100 @@ Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
-### Utilisation de `requestClose()`
+### Utiliser `requestClose()`
 
-L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre un élément {{HTMLElement("dialog")}} contenant un formulaire via la méthode `showModal()`. Une fois ouvert, vous pouvez cliquer sur le bouton **X** pour demander la fermeture de la boîte de dialogue (via la méthode `HTMLDialogElement.requestClose()`), ou soumettre le formulaire avec le bouton **Valider**.
+L'exemple suivant montre un bouton qui, lorsqu'il est cliqué, ouvre un {{HTMLElement("dialog")}} en utilisant la méthode {{DOMxRef("HTMLDialogElement.showModal()", "showModal()")}}.
+Vous pouvez ensuite cliquer sur le bouton _Fermer_ pour appeler la méthode `requestClose()` et fermer la boîte de dialogue.
+
+Le bouton _Fermer_ ferme la boîte de dialogue sans {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}}, tandis que le bouton _Fermer avec valeur de retour_ ferme la boîte de dialogue avec une {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}}.
+
+L'empêchement de la fermeture de la boîte de dialogue est démontré avec une case à cocher.
 
 #### HTML
 
 ```html
-<!-- Boîte de dialogue simple contenant un formulaire -->
-<dialog id="favDialog">
-  <form method="dialog">
-    <button type="button" id="close" aria-label="fermer" formnovalidate>
-      X
-    </button>
-    <section>
-      <p>
-        <label for="favAnimal">Animal préféré&nbsp;:</label>
-        <select id="favAnimal" name="favAnimal">
-          <option></option>
-          <option>Crevette de saumure</option>
-          <option>Panda roux</option>
-          <option>Singe-araignée</option>
-        </select>
-      </p>
-    </section>
-    <menu>
-      <li>
-        <button type="reset">Réinitialiser</button>
-      </li>
-      <li>
-        <button type="submit">Valider</button>
-      </li>
-    </menu>
-  </form>
+<dialog id="dialogue">
+  <div>
+    <label
+      ><input type="checkbox" id="empecher-fermeture" /> Annuler la
+      fermeture</label
+    >
+  </div>
+  <button type="button" id="fermer">Fermer</button>
+  <button type="button" id="fermer-avec-valeur">
+    Fermer avec valeur de retour
+  </button>
 </dialog>
 
-<button id="updateDetails">Mettre à jour les informations</button>
+<button id="ouvrir">Ouvrir la boîte de dialogue</button>
 ```
 
-#### JavaScript
+```html hidden
+<pre id="journal"></pre>
+```
+
+```css hidden
+#journal {
+  height: 170px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const elementJournal = document.getElementById("journal");
+function journaliser(texte) {
+  elementJournal.innerText = `${elementJournal.innerText}${texte}\n`;
+  elementJournal.scrollTop = elementJournal.scrollHeight;
+}
+```
 
 ```js
-const updateButton = document.getElementById("updateDetails");
-const closeButton = document.getElementById("close");
-const dialog = document.getElementById("favDialog");
+const dialogue = document.getElementById("dialogue");
+const boutonOuvrir = document.getElementById("ouvrir");
+const boutonFermer = document.getElementById("fermer");
+const boutonFermerAvecValeur = document.getElementById("fermer-avec-valeur");
+const caseEmpecherFermeture = document.getElementById("empecher-fermeture");
 
-// Le bouton de mise à jour ouvre la boîte de dialogue modale
-updateButton.addEventListener("click", () => {
-  dialog.showModal();
+// Le bouton Ouvrir ouvre une boîte de dialogue modale
+boutonOuvrir.addEventListener("click", () => {
+  // Réinitialiser la valeur de retour
+  dialogue.returnValue = "";
+  // Afficher la boîte de dialogue
+  dialogue.showModal();
 });
 
-// Le bouton de fermeture du formulaire demande la fermeture de la boîte de dialogue
-closeButton.addEventListener("click", () => {
-  dialog.requestClose("animalNonChoisi");
+// Le bouton Fermer ferme la boîte de dialogue
+boutonFermer.addEventListener("click", () => {
+  dialogue.requestClose();
 });
 
-function dialogShouldNotClose() {
-  // Ajouter la logique pour décider si la boîte de dialogue doit se fermer.
-  // Fermeture empêchée par défaut
-  return true;
-}
+// Le bouton Fermer avec valeur de retour ferme la boîte de dialogue avec une valeur de retour
+boutonFermerAvecValeur.addEventListener("click", () => {
+  dialogue.requestClose("des valeurs de retour");
+});
 
-dialog.addEventListener("cancel", (event) => {
-  if (!event.cancelable) return;
-  if (dialogShouldNotClose()) {
-    console.log("Fermeture empêchée");
+// Déclenché lorsque requestClose() est appelé
+// Empêcher la fermeture de la boîte de dialogue en appelant event.preventDefault()
+dialogue.addEventListener("cancel", (event) => {
+  if (caseEmpecherFermeture.checked) {
+    journaliser("Fermeture de la boîte de dialogue annulée");
     event.preventDefault();
   }
 });
-```
 
-Si le bouton «&nbsp;X&nbsp;» avait été de `type="submit"`, la boîte de dialogue se serait fermée sans nécessiter de JavaScript.
-La soumission d'un formulaire ferme la balise `<dialog>` dans laquelle il est imbriqué si {{HTMLElement("form", "la méthode du formulaire est <code>dialog</code>", "method")}}, donc aucun bouton «&nbsp;close&nbsp;» n'est requis.
+// l'évènement "cancel" n'est pas empêché, la boîte de dialogue se ferme
+dialogue.addEventListener("close", () => {
+  journaliser(
+    `Boîte de dialogue fermée. Valeur de retour : "${dialogue.returnValue}"`,
+  );
+});
+```
 
 #### Résultat
 
-{{EmbedLiveSample('Exemples', '100%', 200)}}
+{{EmbedLiveSample("Utiliser `requestClose()`", "100%", 250)}}
 
 ## Spécifications
 
@@ -121,4 +139,5 @@ La soumission d'un formulaire ferme la balise `<dialog>` dans laquelle il est im
 
 ## Voir aussi
 
-- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("dialog")}}
+- L'élément HTML {{HTMLElement("dialog")}}
+- L'évènement {{DOMxRef("HTMLDialogElement.cancel_event", "cancel")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
-Le rôle `contentinfo` définit un pied de page, contenant des informations d'identification telles que des informations sur le droit d'auteur, des liens de navigation et des déclarations de confidentialité, que l'on trouve sur chaque document d'un site. Cette section est communément appelée pied de page.
+Le rôle `contentinfo` définit un pied de page, contenant des informations d'identification telles que des informations sur le droit d'auteur·ice, des liens de navigation et des déclarations de confidentialité, que l'on trouve sur chaque document d'un site. Cette section est communément appelée pied de page.
 
 ```html
 <div role="contentinfo">
@@ -15,7 +15,7 @@ Le rôle `contentinfo` définit un pied de page, contenant des informations d'id
 </div>
 ```
 
-Ceci est un pied de page de site web. L'utilisation de l'élément {{HTMLElement('footer')}} à la place est recommandée&nbsp;:
+Ceci est un pied de page de site web. L'utilisation de l'élément {{HTMLElement("footer")}} à la place est recommandée&nbsp;:
 
 ```html
 <footer>
@@ -28,10 +28,10 @@ Ceci est un pied de page de site web. L'utilisation de l'élément {{HTMLElement
 
 Le rôle `contentinfo` est [un repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôles_de_repères) utilisé pour identifier un pied de page. Les repères peuvent être utilisés par les technologies d'assistance pour identifier et naviguer rapidement vers de grandes sections du document. Les pages ne doivent inclure qu'un seul rôle de repère `contentinfo` de niveau supérieur par page.
 
-Chaque page ne doit inclure qu'un seul repère `contentinfo`, créé soit en utilisant l'élément {{HTMLElement('footer')}} soit en déclarant `role="contentinfo"`. Les repères `contentinfo` présents dans un contenu intégré avec {{HTMLElement('iframe')}} ne comptent pas dans cette limite.
+Chaque page ne doit inclure qu'un seul repère `contentinfo`, créé soit en utilisant l'élément {{HTMLElement("footer")}} soit en déclarant `role="contentinfo"`. Les repères `contentinfo` présents dans un contenu intégré avec {{HTMLElement("iframe")}} ne comptent pas dans cette limite.
 
 > [!NOTE]
-> L'utilisation de l'élément {{HTMLElement('footer')}} communiquera automatiquement qu'une section a un rôle de `contentinfo`. Les développeurs devraient toujours préférer utiliser le bon élément HTML sémantique plutôt que d'utiliser ARIA, en s'assurant de {{HTMLElement('footer#accessibility', 'test for known issues')}} dans VoiceOver.
+> L'utilisation de l'élément {{HTMLElement("footer")}} communique automatiquement qu'une section a un rôle de `contentinfo`. Les développeur·euse·s devraient toujours préférer utiliser le bon élément HTML sémantique plutôt que d'utiliser ARIA, en s'assurant de {{HTMLElement("footer#accessibilité", "tester les problèmes connus")}} dans VoiceOver.
 
 ## Exemples
 
@@ -65,17 +65,17 @@ Chaque page ne doit inclure qu'un seul repère `contentinfo`, créé soit en uti
 
 #### L'élément `<body>`
 
-Il ne devrait y avoir qu'un seul repère `contentinfo` par document, utilisé comme le descendant immédiat de l'élément {{HTMLElement('body')}}.
+Il ne doit y avoir qu'un seul repère `contentinfo` par document, utilisé comme le descendant immédiat de l'élément {{HTMLElement("body")}}.
 
 #### Les grands pieds de page
 
-Nichez pas d'autres éléments {{HTMLElement('footer')}} ou repères `contentinfo` supplémentaires à l'intérieur du pied de page du document. Utilisez plutôt d'autres [éléments de sectionnement de contenu](/fr/docs/Web/HTML/Reference/Elements#sectionnement_du_contenu).
+Nichez pas d'autres éléments {{HTMLElement("footer")}} ou repères `contentinfo` supplémentaires à l'intérieur du pied de page du document. Utilisez plutôt d'autres [éléments de sectionnement de contenu](/fr/docs/Web/HTML/Reference/Elements#sectionnement_du_contenu).
 
 ### Étiquetage des repères
 
 #### Repères multiples
 
-S'il y a plus d'un rôle de repère `contentinfo` ou élément {{HTMLElement('footer')}} dans un document, fournissez une étiquette avec l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) pour chaque repère. Cette étiquette permettra aux utilisateurs de technologies d'assistance de comprendre rapidement l'objectif de chaque repère.
+S'il y a plus d'un rôle de repère `contentinfo` ou élément {{HTMLElement("footer")}} dans un document, fournissez une étiquette avec l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) pour chaque repère. Cette étiquette permet aux utilisateur·ice·s de technologies d'assistance de comprendre rapidement l'objectif de chaque repère.
 
 ```html
 <body>
@@ -102,13 +102,13 @@ S'il y a plus d'un rôle de repère `contentinfo` ou élément {{HTMLElement('fo
 
 #### Descriptions redondantes
 
-Les lecteurs d'écran annonceront le type de rôle du repère. De ce fait, vous n'avez pas besoin de décrire ce qu'est le repère dans son étiquette. Par exemple, une déclaration de `role="contentinfo"` avec un `aria-label="Pied de page"` peut être annoncée de manière redondante comme, «&nbsp;pied de page contentinfo&nbsp;».
+Les lecteurs d'écran annoncent le type de rôle du repère. De ce fait, vous n'avez pas besoin de décrire ce qu'est le repère dans son étiquette. Par exemple, une déclaration de `role="contentinfo"` avec un `aria-label="Pied de page"` peut être annoncée de manière redondante comme, «&nbsp;pied de page contentinfo&nbsp;».
 
 ## Bonnes pratiques
 
 ### Préférer HTML
 
-Lorsqu'il est un descendant immédiat de l'élément {{HTMLElement('body')}}, l'utilisation de l'élément {{HTMLElement('footer')}} communiquera automatiquement qu'une section a un rôle de `contentinfo` (sauf pour {{HTMLElement('footer#accessibility', 'un problème connu')}} dans VoiceOver). Si possible, préférez utiliser `<footer>` à la place. Notez qu'un élément `footer` imbriqué dans un `article`, `aside`, `main`, `nav` ou `section` n'est pas considéré comme `contentinfo`.
+Lorsqu'il est un descendant immédiat de l'élément {{HTMLElement("body")}}, l'utilisation de l'élément {{HTMLElement("footer")}} communique automatiquement qu'une section a un rôle de `contentinfo` (sauf pour {{HTMLElement("footer#accessibilité", "un problème connu")}} dans VoiceOver). Si possible, préférez utiliser `<footer>` à la place. Notez qu'un élément `footer` imbriqué dans un `article`, `aside`, `main`, `nav` ou `section` n'est pas considéré comme `contentinfo`.
 
 ### Avantages supplémentaires
 
@@ -122,7 +122,7 @@ Certaines technologies, telles que les extensions de navigateur, peuvent génér
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('footer')}}
+- L'élément HTML {{HTMLElement("footer")}}
 - [Utiliser des sections HTML et des plans](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [Repères accessibles | scottohara.me <sup>(angl.)</sup>](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Mise à jour de l'élément Footer | HTML5 Doctor <sup>(angl.)</sup>](https://html5doctor.com/the-footer-element-update/)

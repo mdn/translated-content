@@ -103,8 +103,8 @@ parseFloat("900719925474099267n");
 
 ## 같이 보기
 
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
 - {{jsxref("Number.toFixed()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

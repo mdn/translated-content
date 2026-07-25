@@ -62,7 +62,7 @@ Les navigateurs n'indiquent plus visiblement le focus (comme en traçant un «&n
 
 La pseudo-classe `:focus` correspond toujours à l'élément actuellement en focus. La pseudo-classe `:focus-visible` correspond également à l'élément en focus, mais uniquement si l'utilisateur·ice doit être informé de l'emplacement actuel du focus. Parce que la pseudo-classe `:focus-visible` correspond à l'élément en focus lorsque cela est nécessaire, l'utilisation de `:focus-visible` (au lieu de la pseudo-classe `:focus`) permet aux auteur·ice·s de modifier l'apparence de l'indicateur de focus sans changer le moment où l'indicateur de focus apparaît.
 
-Lorsque la pseudo-classe {{CSSxRef(":focus")}} est utilisée, elle cible toujours l'élément actuellement en focus. Cela signifie que lorsque l'utilisateur·ice utilise un dispositif de pointage, un contour de focus visible apparaît autour de l'élément en focus, ce que certains considèrent comme intrusif. La pseudo-classe `:focus-visible` respecte le comportement d'indication de focus sélectif des agents utilisateur·ice·s tout en permettant la personnalisation de l'indicateur de focus.
+Lorsque la pseudo-classe {{CSSxRef(":focus")}} est utilisée, elle cible toujours l'élément actuellement en focus. Cela signifie que lorsque l'utilisateur·ice utilise un dispositif de pointage, un contour de focus visible apparaît autour de l'élément en focus, ce que certains considèrent comme intrusif. La pseudo-classe `:focus-visible` respecte le comportement d'indication de focus sélectif des agents utilisateurs tout en permettant la personnalisation de l'indicateur de focus.
 
 ## Accessibilité
 

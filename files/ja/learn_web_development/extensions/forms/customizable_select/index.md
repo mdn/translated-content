@@ -3,10 +3,10 @@ title: カスタマイズ可能な select 要素
 short-title: カスタマイズ可能な select
 slug: Learn_web_development/Extensions/Forms/Customizable_select
 l10n:
-  sourceCommit: 2530db14de9ac226cf06f84540fa0101e804ca9b
+  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Customizable_select_listboxes", "Learn_web_development/Extensions/Forms")}}
 
 この記事では、ブラウザーの実験的な機能を使用して、完全にカスタマイズした {{htmlelement("select")}} 要素を作成する方法を説明します。これには、選択ボタン、ドロップダウンピッカー、矢印アイコン、現在選択されているオプションのチェックマーク、各 {{htmlelement("option")}} 要素のスタイル設定を完全に制御します。
 
@@ -19,13 +19,18 @@ l10n:
 
 以前は、カスタム JavaScript ライブラリーを使う以外の最良の方法は、`<select>` 要素に {{cssxref("appearance")}} の値 `none` を設定して一部の OS レベルのスタイル設定を除去し、CSS でスタイル設定可能な部分をカスタマイズすることでした。この手法については[フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)で説明しています。
 
-カスタマイズ可能な `<select>` 要素は、これらの問題に対する解決策を提供します。これにより、HTML と CSS だけで以下のような例を作成でき、対応ブラウザーでは完全にカスタマイズ可能です。これには `<select>` やドロップダウンピッカーのレイアウト、カラースキーム、アイコン、フォント、トランジション、位置指定、選択アイコンのマーカーなどが含まれます。
+カスタマイズ可能な `<select>` 要素は、これらの問題に対する解決策を提供します。これにより、HTML と CSS だけで以下のような例を作成でき、[対応ブラウザー](#ブラウザーの互換性)では完全にカスタマイズ可能です。これには `<select>` やドロップダウンピッカーのレイアウト、カラースキーム、アイコン、フォント、トランジション、位置指定、選択アイコンのマーカーなどが含まれます。
 
 {{EmbedLiveSample("full-render", "100%", "410px")}}
 
 さらに、既存の機能の上にプログレッシブエンハンスメントを提供し、非対応ブラウザーでは「クラシック」な選択要素にフォールバックします。
 
 この例の作り方は、以下の節で説明します。
+
+> [!NOTE]
+> この記事では、カスタマイズ可能な選択ボックスの背景を網羅し、その機能を活用した「単一ドロップダウン」選択ボックスの作成方法について示します。つまり、一度に 1 つの選択肢のみを表示させ、1 つの選択肢のみを選択することができるドロップダウンメニューのことです。
+>
+> 「リストボックス」の選択ボックス（複数の選択肢を一度に表示させ、単一の選択肢または複数の選択肢を選択することができるメニュー）の作成方法については、[カスタマイズ可能な選択リストボックス](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes)を参照してください。
 
 ## カスタマイズ可能な select 要素を構成する機能
 
@@ -35,7 +40,7 @@ l10n:
 - `<select>` 要素内の最初の子として含まれる {{htmlelement("button")}} 要素。これは従来の「クラシック」な選択要素では許可されていませんでした。これを含めると、閉じている `<select>` 要素のデフォルトの「ボタン」のレンダリングが置き換えられます。これは一般的に **選択ボタン** と呼ばれます（ドロップダウンピッカーを開くために押すボタンです）。
   > [!NOTE]
   > 選択ボタンはデフォルトで [inert](/ja/docs/Web/HTML/Reference/Global_attributes/inert) です。例えば、リンクやボタンなどのインタラクティブな子要素が含まれていても、 1 つのボタンとして扱われ、子要素はフォーカスやクリックができません。
-- {{htmlelement("selectedcontent")}} 要素は、`<select>` 要素の最初の子 `<button>` 要素内にオプションで含めることができ、_閉じている_ `<select>` 要素内に現在選択されている値を表示します。
+- {{htmlelement("selectedcontent")}} 要素は、`<select>` 要素の最初の子 `<button>` 要素内にオプションで含めることができ、閉じている `<select>` 要素内に現在選択されている値を表示します。
   これは、現在選択されている `<option>` 要素の内容を（内部的に {{domxref("Node.cloneNode", "cloneNode()")}} を使って）複製したものを含みます。
 - {{cssxref("::picker()", "::picker(select)")}} 擬似要素は、ピッカー全体の内容をターゲットにします。これには、最初の子 `<button>` 以外の `<select>` 要素内のすべての要素が含まれます。
 - {{cssxref("appearance")}} プロパティ値 `base-select` は、`<select>` 要素と `::picker(select)` 擬似要素を、カスタマイズ可能な select 要素のブラウザー定義のデフォルトスタイルと動作に切り替えます。
@@ -44,10 +49,7 @@ l10n:
 - {{cssxref(":checked")}} 擬似クラスは、現在選択されている `<option>` 要素をターゲットにします。
 - {{cssxref("::checkmark")}} 擬似要素は、現在選択されている `<option>` 要素内に配置されるチェックマークをターゲットにし、どれが選択されているかを視覚的に示します。
 
-さらに、`<select>` 要素とそのドロップダウンピッカーには、以下の動作が自動的に割り当てられます。
-
-- [ポップオーバー API](/ja/docs/Web/API/Popover_API) で指定されているように、呼び出し元/ポップオーバーの関係を持ちます。これにより、{{cssxref(":popover-open")}} 擬似クラスを使ってピッカーが開いているときに選択できます。ポップオーバーの動作の詳細は [ポップオーバー API の使用](/ja/docs/Web/API/Popover_API/Using) を参照してください。
-- 暗黙的なアンカー参照を持ち、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning) を介してピッカーが自動的に `<select>` 要素に関連付けられます。ブラウザーのデフォルトスタイルは、ピッカーをボタン（アンカー）に対して位置指定し、[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor) で説明されているように、この位置をカスタマイズできます。また、ビューポートからはみ出しそうな場合にピッカーを再配置するポジション・トライ・フォールバックも定義されています。詳細は [オーバーフローの処理: トライ・フォールバックと条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) を参照してください。
+さらに、`<select>` 要素とそのドロップダウンピッカーには暗黙のアンカー参照があります。これは、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を通じて、ピッカーが自動的に `<select>` 要素に関連付けられることを意味します。ブラウザーのデフォルトスタイルは、ピッカーをボタン（アンカー）に対して位置指定し、[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#要素をアンカーに対して相対的に配置)で説明されているように、この位置をカスタマイズできます。また、ビューポートからはみ出しそうな場合にピッカーを再配置する位置指定の代替オプションも定義されています。詳細は [オーバーフローの処理: 代替オプションと条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) を参照してください。
 
 > [!NOTE]
 > カスタマイズ可能な `<select>` のブラウザー対応状況は、{{htmlelement("selectedcontent")}}、{{cssxref("::picker()", "::picker(select)")}}、{{cssxref("::checkmark")}} など関連機能のリファレンスページの互換性表で確認できます。
@@ -131,7 +133,7 @@ select,
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {
@@ -217,7 +219,10 @@ select:open::picker-icon {
 }
 ```
 
-次に、`<option>` 要素をスタイル設定します。[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) でレイアウトし、すべてをフレックスコンテナーの先頭に揃え、各要素の間に `20px` の {{cssxref("gap")}} を設けます。各 `<option>` には `<select>` と同じ {{cssxref("border")}}、{{cssxref("background")}}、{{cssxref("padding")}}、{{cssxref("transition")}} を設定し、統一感を持たせます。
+> [!NOTE]
+> `::picker()` 擬似要素に渡される引数は、ピッカーを対象とする要素の型を表します。この例では、`<select>` 要素です。すべての `<select>` 要素ではなく、特定の 1 つの `<select>` 要素のピッカーを選択したい場合は、`::picker()` 擬似要素を別のセレクターと組み合わせることができます。例えば、この例の `<select>` の ID は `pet-select` であるため、`#pet-select::picker(select) { ... }` を使用することで、そのピッカーのみを指定して対象にすることができます。
+
+次に、`<option>` 要素をスタイル設定します。[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)でレイアウトし、すべてをフレックスコンテナーの先頭に揃え、各要素の間に `20px` の {{cssxref("gap")}} を設けます。各 `<option>` には `<select>` と同じ {{cssxref("border")}}、{{cssxref("background")}}、{{cssxref("padding")}}、{{cssxref("transition")}} を設定し、統一感を持たせます。
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 option {
@@ -235,7 +240,7 @@ option {
 > [!NOTE]
 > カスタマイズ可能な `<select>` の `<option>` にはデフォルトで `display: flex` が設定されていますが、ここでは何が起きているか明確にするためスタイルシートにも記載しています。
 
-次に、{{cssxref(":first-of-type")}}、{{cssxref(":last-of-type")}}、{{cssxref(":not()")}} 擬似クラスを組み合わせて、ピッカーの上端・下端の角に適切な {{cssxref("border-radius")}} を設定し、最後以外のすべての `<option>` から {{cssxref("border-bottom")}} を削除して、境界線が二重にならないようにします。
+次に、{{cssxref(":first-of-type")}}、{{cssxref(":last-of-type")}}、{{cssxref(":not()")}} 擬似クラスを組み合わせて、ピッカーの上端・下端の `<option>` 要素に適切な {{cssxref("border-radius")}} を設定し、最後以外のすべての `<option>` から {{cssxref("border-bottom")}} を削除して、境界線が二重にならないようにします。同時に、ページ上で別の背景色を設定することになった場合でも、オプションの周囲に見苦しい四角い白いボックスが表示されないように、外側の `::picker(select)` コンテナーにも同じ `border-radius` を設定しています。
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 option:first-of-type {
@@ -244,6 +249,10 @@ option:first-of-type {
 
 option:last-of-type {
   border-radius: 0 0 8px 8px;
+}
+
+::picker(select) {
+  border-radius: 8px;
 }
 
 option:not(option:last-of-type) {
@@ -326,7 +335,7 @@ option::checkmark {
 
 ## ポップオーバー状態を使ったピッカーのアニメーション
 
-カスタマイズ可能な `<select>` の選択 `button` とドロップダウンピッカーは、自動的に [ポップオーバー API の使用](/ja/docs/Web/API/Popover_API/Using) で説明されているような呼び出し元/ポップオーバーの関係を持ちます。これにより多くの利点があります。例では、ポップオーバーの非表示・表示状態間のアニメーションにトランジションを利用しています。{{cssxref(":popover-open")}} 擬似クラスは表示状態のポップオーバーを表します。
+カスタマイズ可能な `<select>` の選択 `button` とドロップダウンピッカーは、自動的に [ポップオーバー API の使用](/ja/docs/Web/API/Popover_API/Using) で説明されているような呼び出し元/ポップオーバーの関係を持ちます。これにより多くの利点があります。例では、ポップオーバーの非表示・表示状態間のアニメーションにトランジションを利用しています。{{cssxref(":open")}} 擬似クラスは、開いている状態の select 要素を表します。
 
 このテクニックはここでは簡単に説明します。詳細は[ポップオーバーのアニメーション](/ja/docs/Web/API/Popover_API/Using#ポップオーバーのアニメーション)を参照してください。
 
@@ -349,10 +358,10 @@ option::checkmark {
 > [!NOTE]
 > [`allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) 値は離散プロパティのアニメーションを有効にするために必要です。
 
-次に、`::picker(select):popover-open` で表示状態のピッカーを選択し、`opacity` を `1` にします。これがトランジションの終了状態です。
+次に、`:open::picker(select)` で表示状態のピッカーを選択し、`opacity` を `1` にします。これがトランジションの終了状態です。
 
 ```css live-sample___full-render
-::picker(select):popover-open {
+:open::picker(select) {
   opacity: 1;
 }
 ```
@@ -361,7 +370,7 @@ option::checkmark {
 
 ```css live-sample___full-render
 @starting-style {
-  ::picker(select):popover-open {
+  :open::picker(select) {
     opacity: 0;
   }
 }
@@ -386,24 +395,138 @@ option::checkmark {
 
 これにより、ピッカーの上端が選択ボタンの下端から 1 ピクセル下に、左端が選択ボタンの左端から幅の `10%` の位置に配置されます。
 
+> [!NOTE]
+> ピッカーが `<select>` 要素にアンカー付けされるのを防ぐために、暗黙のアンカー参照を除去したい場合は、ピッカーの `position-anchor` プロパティを、`--not-an-anchor-name` など、現在の文書内には存在しないアンカー名に設定することで実現できます。[アンカーの関連付けの除去](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#アンカーの関連付けを解除)も参照してください。
+
 ## 最終結果
 
 最後の 2 節を反映した `<select>` の最終状態は次のようにレンダリングされます。
 
 {{EmbedLiveSample("full-render", "100%", "410px")}}
 
-## その他のクラシック選択機能のカスタマイズ
+## optgroup 要素のスタイル設定
 
-以上の節では、カスタマイズ可能な select 要素で利用できる新機能をすべて網羅し、従来の単一行選択要素や、ポップオーバーやアンカー位置指定といった関連する最新の機能に対してどのように作用するかを説明しました。上記で言及されていない `<select>` 要素の機能がいくつかあります。この節では、それらの機能が現在カスタマイズ可能な select 要素に対する作業状況を説明します。
+カスタマイズ可能な選択ボックス内の {{htmlelement("optgroup")}} 要素のデフォルトのスタイル設定は、従来の `<select>` 要素と同じです。つまり、太字で、内部のオプションよりもインデントが浅くなっています。ただし、カスタマイズ可能な選択では、オプショングループは他のブロックレベルコンテナーと同様に動作し、それに応じてスタイルを設定することができます。さらに、`<optgroup>` の子要素として {{htmlelement("legend")}} 要素を使用することができ、これにより、ターゲット設定やスタイル設定が容易なラベルを提供できます。これは、`<optgroup>` 要素の `label` 属性に設定されたテキストを置き換え、同じ意味づけを持ちます。
 
-- [`<select multiple>`](/ja/docs/Web/HTML/Reference/Attributes/multiple)
-  - : 現時点では、カスタマイズ可能な `<select>` で `multiple` 属性が指定された場合の対応はありませんが、将来対応予定です。
-- {{htmlelement("optgroup")}}
-  - : `<optgroup>` 要素の既定のスタイルは従来の `<select>` と同じで、太字であり、内部の選択肢よりインデントが浅くなります。 `<optgroup>`要素が全体のデザインに調和するようスタイル設定を行う必要があり、これらは従来のHTMLにおけるコンテナー要素と同様の挙動をすることを覚えておいてください。カスタマイズ可能な `<select>` 要素では、 {{htmlelement("legend")}} 要素が `<optgroup>` の子要素として許可されており、ターゲット設定やスタイル設定がしやすいラベルを提供することができます。これは `<optgroup>` の `label` 属性で設定したテキストを置き換えるもので、同じセマンティクスを持ちます。
+基本的な例を見ていきましょう。HTML は次のようになっています。
+
+```html live-sample___optgroup-example
+<label for="animal-select">動物を選択:</label><br />
+<select id="animal-select">
+  <optgroup>
+    <legend>室内</legend>
+    <option value="cat">猫</option>
+    <option value="dog">犬</option>
+    <option value="guinea">モルモット</option>
+  </optgroup>
+  <optgroup>
+    <legend>農場</legend>
+    <option value="chicken">ニワトリ</option>
+    <option value="cow">牛</option>
+    <option value="pig">豚</option>
+  </optgroup>
+</select>
+```
+
+CSS ではまず、`<optgroup>` 要素自体にスタイルを設定することから始めます。これらは主に、optgroup 要素が、その子要素である `<option>` 要素のコンテナーのように見えるようにするための基本的なスタイルです。それぞれの optgroup の間、および一番上の optgroup と選択ボタンの間に空間を設けるために、{{cssxref("margin-top")}} を指定しています。
+
+```css hidden live-sample___optgroup-example
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Arial", sans-serif;
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+  width: 200px;
+}
+
+select {
+  border: 2px solid #dddddd;
+  background: #eeeeee;
+  padding: 10px;
+}
+
+::picker(select) {
+  border: none;
+}
+```
+
+```css live-sample___optgroup-example
+optgroup {
+  border: 2px solid #dddddd;
+  border-radius: 8px;
+  background: #eeeeee;
+  padding: 10px 0 0 0;
+  margin-top: 5px;
+}
+```
+
+次に、`<legend>` 要素のスタイルを設定し、テキストを中央配置し、オプションと別個にするためにマージンを記載します。
+
+```css live-sample___optgroup-example
+optgroup legend {
+  text-align: center;
+  margin-bottom: 10px;
+}
+```
+
+最後に、`<option>` 要素のスタイル設定を行います。指定された {{cssxref("background")}} 色や {{cssxref("padding")}} を指定し、それぞれの場合の最後の `<option>` 要素の下部の {{cssxref("border-radius")}} を調整して、親要素である `<optgroup>` の角丸デザインに馴染むようにします。同時に、奇数番目の `<option>` 要素に異なる背景色を指定して縞模様効果を実装し、オプションのホバー状態とフォーカス状態を明確に区別できるようにします。
+
+```css live-sample___optgroup-example
+option {
+  background: #eeeeee;
+  padding: 10px;
+}
+
+option:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+
+option:nth-of-type(odd) {
+  background: white;
+}
+
+option:hover,
+option:focus {
+  background: plum;
+}
+```
+
+簡潔にするため、それ以外のスタイル設定は省略しています。
+
+この例はこのように表示されます。
+
+{{EmbedLiveSample("optgroup-example", "100%", "410px")}}
+
+```css hidden live-sample___plain-render live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render live-sample___optgroup-example
+@supports not (appearance: base-select) {
+  body::before {
+    content: "このブラウザーは `appearance: base-select` に対応していません。";
+    color: black;
+    background-color: wheat;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 1;
+  }
+}
+```
+
+## ブラウザーの互換性
+
+{{Compat}}
 
 ## 次の記事
 
-このモジュールの次の記事では、フォームのさまざまな状態をスタイル設定するために現代のブラウザーで利用できる [UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes) を探ります。
+このモジュールの次の記事では、[カスタマイズ可能な選択リストボックス](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes)のスタイル設定方法について紹介します。
 
 ## 関連情報
 
@@ -412,4 +535,4 @@ option::checkmark {
 - {{cssxref("::picker()", "::picker(select)")}}、{{cssxref("::picker-icon")}}、{{cssxref("::checkmark")}}
 - {{cssxref(":open")}}、{{cssxref(":checked")}}
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Customizable_select_listboxes", "Learn_web_development/Extensions/Forms")}}

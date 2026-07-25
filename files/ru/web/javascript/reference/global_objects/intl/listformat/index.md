@@ -40,7 +40,7 @@ new Intl.ListFormat([locales[, options]])
 ### Параметры
 
 - `locales`
-  - : Необязательный параметр. Строка с языковой меткой BCP 47 или массив таких строк. Описание общей формы и интерпретации аргумента `locales` смотрите на странице {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}}.
+  - : Необязательный параметр. Строка с языковой меткой BCP 47 или массив таких строк. Описание общей формы и интерпретации аргумента `locales` смотрите на странице {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}}.
 - `options`
   - : Необязательный параметр. Объект с некоторыми или всеми из следующих свойств:
     - `localeMatcher`
@@ -54,12 +54,12 @@ new Intl.ListFormat([locales[, options]])
 
 ### Свойства
 
-- {{jsxref("ListFormat.prototype", "Intl.ListFormat.prototype")}}
+- {{jsxref("Intl/ListFormat", "Intl.ListFormat.prototype")}}
   - : Позволяет добавлять свойства ко всем объектам `Intl.ListFormat`
 
 ### Методы
 
-- {{jsxref("ListFormat.supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
   - : Возвращает массив, содержащий те из переданных ему локалей, которые поддерживаются без необходимости использовать локаль по умолчанию.
 
 ## Примеры

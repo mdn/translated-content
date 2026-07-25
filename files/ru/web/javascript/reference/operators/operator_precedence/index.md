@@ -72,16 +72,16 @@ a = b = 5;
     </tr>
     <tr>
       <td rowspan="5">17</td>
-      <td>{{jsxref("Operators/Property_Accessors", "Доступ к свойствам", "#Dot_notation")}}</td>
+      <td>{{jsxref("Operators/Property_accessors", "Доступ к свойствам", "#Dot_notation")}}</td>
       <td rowspan="2">слева направо</td>
       <td><code>… . …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/Property_Accessors", "Доступ к свойствам с возможностью вычисления","#Bracket_notation")}}</td>
+      <td>{{jsxref("Operators/Property_accessors", "Доступ к свойствам с возможностью вычисления","#Bracket_notation")}}</td>
       <td><code>… [ … ]</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/new","new")}} (со списком аргументов)</td>
+      <td>{{jsxref("new")}} (со списком аргументов)</td>
       <td>не определено</td>
       <td><code>new … ( … )</code></td>
     </tr>
@@ -96,18 +96,18 @@ a = b = 5;
     </tr>
     <tr>
       <td>16</td>
-      <td>{{jsxref("Operators/new","new")}} (без списка аргументов)</td>
+      <td>{{jsxref("new")}} (без списка аргументов)</td>
       <td>справа налево</td>
       <td><code>new …</code></td>
     </tr>
     <tr>
       <td rowspan="2">15</td>
-      <td>{{jsxref("Operators/Arithmetic_Operators","Постфиксный инкремент","#Increment")}}</td>
+      <td>{{jsxref("Operators","Постфиксный инкремент","#Increment")}}</td>
       <td rowspan="2">не определено</td>
       <td><code>… ++</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/Arithmetic_Operators","Постфиксный декремент","#Decrement")}}</td>
+      <td>{{jsxref("Operators","Постфиксный декремент","#Decrement")}}</td>
       <td><code>… --</code></td>
     </tr>
     <tr>

@@ -71,8 +71,7 @@ input[type="submit"] {
 Viscous,
 Bright Ridge,
 CA
-</textarea
-      >
+</textarea>
     </div>
     <div>
       <label for="postal-code">郵便番号: </label>

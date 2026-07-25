@@ -49,7 +49,7 @@ PUT <request-target>["?"<query>] HTTP/1.1
 
 - `<request-target>`
   - : Identifie la ressource cible de la requête lorsqu'elle est combinée avec l'information fournie dans l'en-tête {{HTTPHeader("Host")}}.
-    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) dans les requêtes vers un serveur d'origine, et d'une URL absolue dans les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.exemple.fr/chemin/vers/fichier.html`).
+    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) dans les requêtes vers un serveur d'origine, et d'une URL absolue dans les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.example.com/chemin/vers/fichier.html`).
 - `<query>` {{Optional_Inline}}
   - : Un fragment de requête optionnel précédé d'un point d'interrogation `?`.
     Souvent utilisé pour transmettre des informations sous la forme de paires `clé=valeur`.
@@ -58,11 +58,11 @@ PUT <request-target>["?"<query>] HTTP/1.1
 
 ### Création réussie d'une ressource
 
-La requête `PUT` suivante demande la création d'une ressource à l'adresse `exemple.fr/nouveau.html` avec le contenu `<p>Nouveau fichier</p>`&nbsp;:
+La requête `PUT` suivante demande la création d'une ressource à l'adresse `example.com/nouveau.html` avec le contenu `<p>Nouveau fichier</p>`&nbsp;:
 
 ```http
 PUT /nouveau.html HTTP/1.1
-Host: exemple.fr
+Host: example.com
 Content-type: text/html
 Content-length: 16
 

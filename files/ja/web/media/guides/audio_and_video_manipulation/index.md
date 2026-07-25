@@ -163,8 +163,7 @@ myVideo.playbackRate = 2;
 </div>
 <textarea id="code" class="playable-code">
 var myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea
->
+myVideo.playbackRate = 2;</textarea>
 ```
 
 ```js hidden
@@ -258,8 +257,7 @@ filter.gain.value = 25;
 <textarea id="code" class="playable-code">
 filter.type = "lowshelf";
 filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea
->
+filter.gain.value = 25;</textarea>
 ```
 
 ```js hidden

@@ -121,7 +121,7 @@ var notANum = Number.NaN;
       <td>
         <p>
           문자열 인수를 파싱하고 부동 소수점 숫자를 반환합니다. 전역
-          {{jsxref("parseFloat", "parseFloat()")}} 함수와
+          {{jsxref("parseFloat()")}} 함수와
           동일합니다.
         </p>
       </td>
@@ -130,7 +130,7 @@ var notANum = Number.NaN;
       <td>{{jsxref("Number.parseInt()")}}</td>
       <td>
         문자열 라인 인수를 파싱해, 지정된 기수 또는 밑줄의 정수를 돌려줍니다.
-        전역 {{jsxref("parseInt", "parseInt()")}}함수와 동일합니다.
+        전역 {{jsxref("parseInt()")}}함수와 동일합니다.
       </td>
     </tr>
     <tr>
@@ -145,9 +145,9 @@ var notANum = Number.NaN;
       <td>{{jsxref("Number.isNaN()")}}</td>
       <td>
         이 전달된 값
-        {{jsxref("Global_Objects/NaN", "Not-a-Number")}}여부를
+        {{jsxref("NaN", "Not-a-Number")}}여부를
         확인합니다. 원본 글로벌
-        {{jsxref("Global_Objects/isNaN", "(isNaN)")}}의 더욱
+        {{jsxref("isNaN", "(isNaN)")}}의 더욱
         강력한 버전입니다.
       </td>
     </tr>

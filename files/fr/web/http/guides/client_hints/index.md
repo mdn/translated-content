@@ -139,7 +139,7 @@ En résumé, `Accept-CH` demande toutes les valeurs souhaitées pour la page, ta
 Les en-têtes d'indication du client sur l'agent utilisateur (UA) permettent à un serveur de faire varier les réponses en fonction de l'agent utilisateur (navigateur), du système d'exploitation et de l'appareil.
 Pour une liste des en-têtes `Sec-CH-UA-*`, voir [En-têtes d'indication du client sur l'agent utilisateur](/fr/docs/Web/HTTP/Reference/Headers#indications_client_pour_lagent_utilisateur).
 
-Les indications du client sont accessibles au JavaScript des pages web via l'[API User Agent Client Hints](/fr/docs/Web/API/User-Agent_Client_Hints_API).
+Les indications du client sont accessibles au JavaScript des pages web via [l'API User Agent Client Hints](/fr/docs/Web/API/User-Agent_Client_Hints_API).
 
 > [!NOTE]
 > Les serveurs obtiennent actuellement la plupart de ces informations en analysant l'en-tête {{HTTPHeader("User-Agent")}}.
@@ -148,11 +148,11 @@ Les indications du client sont accessibles au JavaScript des pages web via l'[AP
 > Elles devraient à terme remplacer cette ancienne approche.
 
 > [!NOTE]
-> Les indications du client sur l'agent utilisateur ne sont pas disponibles dans les [cadres protégés](/fr/docs/Web/API/Fenced_frame_API) car elles reposent sur la délégation de la [politique d'autorisations](/fr/docs/Web/HTTP/Guides/Permissions_Policy), qui pourrait être utilisée pour divulguer des données.
+> Les indications du client sur l'agent utilisateur ne sont pas disponibles dans les [cadres protégés](/fr/docs/Web/API/Fenced_frame_API), car elles reposent sur la délégation de la [politique d'autorisations](/fr/docs/Web/HTTP/Guides/Permissions_Policy), qui pourrait être utilisée pour divulguer des données.
 
-### Indications du client sur les préférences média utilisateur·ice
+### Indications du client sur les préférences média de l'utilisateur·ice
 
-Les indications du client sur les préférences média utilisateur·ice permettent à un serveur de faire varier les réponses en fonction des préférences de l'agent utilisateur·ice pour les [médias CSS](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) comme le schéma de couleurs ou la réduction des mouvements.
+Les indications du client sur les préférences média de l'utilisateur·ice permettent à un serveur de faire varier les réponses en fonction des préférences de l'agent utilisateur pour les [médias CSS](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) comme le schéma de couleurs ou la réduction des mouvements.
 En-têtes concernés&nbsp;: {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}.
 
 ### Indications du client sur l'appareil

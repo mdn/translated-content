@@ -121,7 +121,7 @@ Inclure un paramètre quelconque dans l'attribut `type`, comme `charset=utf-8`, 
 Notez que définir `type="text/javascript"` n'est plus nécessaire&nbsp;; c'est la valeur par défaut pour les éléments `<script>`, vous pouvez donc omettre complètement l'attribut `type` dans ce cas.
 En revanche, lors de l'utilisation de l'en-tête HTTP {{HTTPHeader("Content-Type")}}, vous pouvez éventuellement définir le paramètre `charset` comme d'habitude.
 
-Pour plus d'informations, voir&nbsp;: [registre IANA des types «&nbsp;text&nbsp;»](https://www.iana.org/assignments/media-types/media-types.xhtml#text) <sup>(angl.)</sup>, [RFC&nbsp;9239](https://www.rfc-editor.org/rfc/rfc9239.html) <sup>(angl.)</sup>, et la [spécification HTML](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript) <sup>(angl.)</sup>.
+Pour plus d'informations, voir&nbsp;: [registre IANA des types «&nbsp;text&nbsp;»](https://www.iana.org/assignments/media-types/media-types.xhtml#text) <sup>(angl.)</sup>, [RFC&nbsp;9239](https://www.rfc-editor.org/info/rfc9239.html) <sup>(angl.)</sup>, et la [spécification HTML](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript) <sup>(angl.)</sup>.
 
 #### Anciens types MIME pour JavaScript
 

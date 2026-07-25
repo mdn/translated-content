@@ -200,5 +200,5 @@ En particulier, lors du chargement d'un [dictionnaire séparé](#dictionnaire_s�
 - L'en-tête {{HTTPHeader("Available-Dictionary")}}
 - L'en-tête {{HTTPHeader("Dictionary-ID")}}
 - L'en-tête {{HTTPHeader("Use-As-Dictionary")}}
-- [RFC 9842&nbsp;: Transport de dictionnaire de compression <sup>(angl.)</sup>](https://www.rfc-editor.org/rfc/rfc9842)
+- [RFC 9842&nbsp;: Transport de dictionnaire de compression <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc9842)
 - [Ressources pour le transport de dictionnaire de compression <sup>(angl.)</sup>](https://use-as-dictionary.com/)

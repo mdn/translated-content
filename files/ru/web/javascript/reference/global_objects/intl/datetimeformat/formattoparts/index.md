@@ -144,8 +144,8 @@ console.log(dateString);
 
 ## Смотрите также
 
-- {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("DateTimeFormat.format", "Intl.DateTimeFormat.prototype.format")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}

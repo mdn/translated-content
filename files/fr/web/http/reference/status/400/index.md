@@ -20,22 +20,22 @@ Les clients qui reçoivent une réponse `400` doivent s'attendre à ce que rép�
 
 ### Syntaxe de requête mal formée
 
-Supposons qu'une API {{Glossary("REST")}} existe avec un point de terminaison pour gérer les utilisateur·ice·s à l'adresse `http://exemple.com/users` et qu'une requête `POST` avec le corps suivant tente de créer un·e utilisateur·ice, mais utilise du JSON invalide avec des sauts de ligne non échappés&nbsp;:
+Supposons qu'une API {{Glossary("REST")}} existe avec un point de terminaison pour gérer les utilisateur·ice·s à l'adresse `http://example.com/users` et qu'une requête `POST` avec le corps suivant tente de créer un·e utilisateur·ice, mais utilise du JSON invalide avec des sauts de ligne non échappés&nbsp;:
 
 ```http
 POST /users HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: application/json
 Content-Length: 38
 
 {
-  "email": "s@exemple.com
+  "email": "s@example.com
 ",
   "username": "s.smith"
 }
 ```
 
-Si le {{Glossary("HTTP Content", "contenu")}} est dans un format valide, on s'attendrait à recevoir une réponse {{HTTPStatus("201", "201 Created")}} ou un autre message de succès, mais le serveur répond à la place avec un code `400` et le corps de la réponse inclut un champ `message` avec du contexte pour que le client puisse réessayer l'action avec une requête correctement formée&nbsp;:
+Si le {{Glossary("HTTP Content", "contenu")}} est dans un format valide, on s'attend à recevoir une réponse {{HTTPStatus("201", "201 Created")}} ou un autre message de succès, mais le serveur répond à la place avec un code `400` et le corps de la réponse inclut un champ `message` avec du contexte pour que le client puisse réessayer l'action avec une requête correctement formée&nbsp;:
 
 ```http
 HTTP/1.1 400 Bad Request

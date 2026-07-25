@@ -74,8 +74,7 @@ Edit the code below and see your changes update live in the canvas:
 ctx.beginPath();
 ctx.moveTo(50,20);
 ctx.quadraticCurveTo(230, 30, 50, 100);
-ctx.stroke();</textarea
->
+ctx.stroke();</textarea>
 ```
 
 ```js hidden

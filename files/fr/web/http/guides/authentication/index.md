@@ -155,7 +155,7 @@ location /status {
 Historiquement, certains sites permettaient de se connecter en utilisant une URL encodée contenant le nom d'utilisateur·ice et le mot de passe comme suit&nbsp;:
 
 ```plain example-bad
-https://pseudo:motdepasse@www.exemple.com/
+https://pseudo:motdepasse@www.example.com/
 ```
 
 Cette syntaxe n'est plus autorisée dans les navigateurs modernes&nbsp;; le nom d'utilisateur·ice et le mot de passe sont supprimés de la requête avant qu'elle ne soit envoyée.

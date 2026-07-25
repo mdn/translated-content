@@ -181,7 +181,7 @@ new WeakSet(
 ).has(myObj); // true
 ```
 
-and {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promise.race", "Promise.race(iterable)")}}, {{jsxref("Array.from", "Array.from()")}}
+and {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promise.race", "Promise.race(iterable)")}}, {{jsxref("Array.from()")}}
 
 ## Синтаксис предполагающий итерируемость
 

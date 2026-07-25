@@ -10,7 +10,7 @@ Le rôle `term` peut être utilisé pour un mot ou une expression avec une [`def
 
 ## Description
 
-Le rôle `term` peut être utilisé pour un mot ou une expression avec une [`definition`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role) associée (optionnelle). Il est sémantiquement équivalent à l'élément HTML {{HTMLElement('dfn')}} et à l'élément terme de définition ({{HTMLElement('dt')}}) dans une liste de définitions ({{HTMLElement('dl')}}).
+Le rôle `term` peut être utilisé pour un mot ou une expression avec une [`definition`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role) associée (optionnelle). Il est sémantiquement équivalent à l'élément HTML {{HTMLElement("dfn")}} et à l'élément terme de définition ({{HTMLElement("dt")}}) dans une liste de définitions ({{HTMLElement("dl")}}).
 
 Le rôle `term` sert à identifier explicitement un mot ou une expression pour lequel une définition a été fournie par l'auteur·ice ou est attendue de l'utilisateur·ice. S'il existe une définition, ou un formulaire ou un contrôle de formulaire pour saisir une définition, il est recommandé d'utiliser [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) pour pointer vers l'élément associé.
 
@@ -45,7 +45,7 @@ Aucune.
 </p>
 ```
 
-Pour une meilleure sémantique, cela pourrait aussi s'écrire&nbsp;:
+Pour une meilleure sémantique, cela peut aussi s'écrire&nbsp;:
 
 ```html
 <p>
@@ -88,4 +88,4 @@ Laissez le terme lui-même définir le nom accessible. N'utilisez pas `aria-labe
 ## Voir aussi
 
 - [ARIA&nbsp;: rôle `definition`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role).
-- L'élément HTML {{HTMLElement('dfn')}}
+- L'élément HTML {{HTMLElement("dfn")}}

@@ -3,7 +3,7 @@ title: Propriété CSS `border-left-width`
 short-title: border-left-width
 slug: Web/CSS/Reference/Properties/border-left-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 0c62b082755017d0773ecaaee7e74efd5e066d0b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-left-width`** permet de définir l'épaisseur de la bordure gauche d'un élément.

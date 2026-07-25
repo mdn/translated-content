@@ -59,7 +59,7 @@ slug: Web/JavaScript/Reference/Statements
 - {{jsxref("Statements/for...in", "for...in")}}
   - : В случайном порядке проходит по перечислимым свойствам объекта. Выполняет инструкции для каждого уникального свойства.
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : Проходит по итерируемым объектам (включая {{jsxref("Global_Objects/Array", "массивы", "", 1)}}, массивоподобные объекты, [итераторы и генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators)), выполняя указанные инструкции для значения каждого отдельного свойства.
+  - : Проходит по итерируемым объектам (включая {{jsxref("Array", "массивы", "", 1)}}, массивоподобные объекты, [итераторы и генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators)), выполняя указанные инструкции для значения каждого отдельного свойства.
 - {{jsxref("Statements/for-await...of", "for await...of")}}
   - : Проходит по асинхронным итерируемым объектам, массивоподобным объектам, [итераторам и генераторам](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators), выполняя указанные инструкции для значения каждого отдельного свойства.
 - {{jsxref("Statements/while", "while")}}

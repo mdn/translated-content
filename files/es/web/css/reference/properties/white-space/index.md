@@ -77,8 +77,7 @@ white-space: unset;
 ☐☐&lt;p&gt;
 ☐☐☐☐Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ☐☐☐☐Nulla pellentesque metus eget massa feugiat lobortis.
-☐☐&lt;/p&gt;</pre
-      >
+☐☐&lt;/p&gt;</pre>
     </div>
   </div>
 </div>

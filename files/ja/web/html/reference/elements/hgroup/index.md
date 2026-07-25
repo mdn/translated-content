@@ -1,12 +1,10 @@
 ---
-title: "<hgroup>: 見出しグループ要素"
+title: HTML `<hgroup>` 見出しグループ要素
+short-title: <hgroup>
 slug: Web/HTML/Reference/Elements/hgroup
-original_slug: Web/HTML/Element/hgroup
 l10n:
-  sourceCommit: ca65963b93e69591b9362bb2bfde56f93128e2cb
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<hgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、見出しとそれに関連する内容を表します。これは 1 つの [`<h1>–<h6>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) 要素と、1 つ以上の [`<p>`](/ja/docs/Web/HTML/Reference/Elements/p) 要素をグループ化します。
 
@@ -14,14 +12,11 @@ l10n:
 
 ```html interactive-example
 <hgroup>
-  <h1>Frankenstein</h1>
-  <p>Or: The Modern Prometheus</p>
+  <h1>フランケンシュタイン</h1>
+  <p>または: 現代のプロメテウス</p>
 </hgroup>
 <p>
-  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
-  intelligent life. But when his creature first stirs, he realizes he has made a
-  monster. A monster which, abandoned by his master and shunned by everyone who
-  sees it, follows Dr Frankenstein to the very ends of the earth.
+  スイスの科学者ヴィクター・フランケンシュタインには、知性を持つ生命体を創造するという大きな野望があった。しかし、彼が作り出した存在が初めて動き出したとき、彼は自分が怪物を作り出してしまったことに気づく。その怪物は、主人に見捨てられ、目にする者すべてから敬遠されながらも、フランケンシュタイン博士を地の果てまで追いかけていく。
 </p>
 ```
 
@@ -144,4 +139,4 @@ hgroup p {
 ## 関連情報
 
 - 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [HTML5 文書のセクションとアウトライン](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
+- [HTML 文書のセクションとアウトライン](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)

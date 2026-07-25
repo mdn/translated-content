@@ -29,7 +29,7 @@ Un objet {{DOMxRef("Event")}} générique.
 ## Exemples
 
 ```html
-<video id="media" src="https://exemple.com/video.mp4"></video>
+<video id="media" src="https://example.com/video.mp4"></video>
 ```
 
 ```js

@@ -50,7 +50,7 @@ Object.defineProperties(obj, props);
   - : 이 속성에 설정할 값. 올바른 JavaScript 값(숫자, 객체, 함수 등)이면 무엇이든 설정할 수 있다.
     **기본값은 {{jsxref("undefined")}}이다.**
 - `writable`
-  - : `true`일 경우 이 속성에 설정된 값을 {{jsxref("Operators/Assignment_Operators", "할당 연산자", "", 1)}}로 수정할 수 있다.
+  - : `true`일 경우 이 속성에 설정된 값을 {{jsxref("Operators", "할당 연산자", "Assignment_operators", 1)}}로 수정할 수 있다.
     **기본값은 `false`이다.**
     접근자 서술자의 경우 다음 키를 추가로 포함할 수 있다.
 - `get`

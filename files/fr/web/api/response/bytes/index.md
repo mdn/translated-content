@@ -43,7 +43,7 @@ Une promesse qui est résolue avec un objet {{JSxRef("Uint8Array")}}.
 Le code ci-dessous montre comment récupérer un fichier texte, retourner le corps sous forme de {{JSxRef("Uint8Array")}}, puis le décoder en une chaîne de caractères.
 
 ```js
-const reponse = await fetch("https://www.exemple.com/textfile.txt");
+const reponse = await fetch("https://www.example.comtextfile.txt");
 const fichierTexte = await reponse.bytes();
 const chaineDeCaracteres = new TextDecoder().decode(fichierTexte);
 console.log(chaineDeCaracteres);

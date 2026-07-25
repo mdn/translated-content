@@ -338,7 +338,7 @@ if (!"".trim)
         return (
           this.remove(oldValue),
           oldValue === this.value && (this.add(val), true)
-        ) /*|| false*/;
+        ); /*|| false*/
       };
     if (
       !DOMTokenListProto.replace ||

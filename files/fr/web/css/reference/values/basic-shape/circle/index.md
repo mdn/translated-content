@@ -3,7 +3,7 @@ title: Fonction CSS `circle()`
 short-title: circle()
 slug: Web/CSS/Reference/Values/basic-shape/circle
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`circle()`** définit un cercle grâce à son rayon et à la position du centre.
@@ -54,6 +54,7 @@ clip-path: circle(farthest-side);
 ```css
 shape-outside: circle(50%);
 clip-path: circle(6rem at 12rem 8rem);
+border-shape: circle(60%);
 ```
 
 ### Valeurs
@@ -119,5 +120,5 @@ img {
 
 ## Voir aussi
 
-- Propriétés qui utilisent ce type de données&nbsp;: {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}}
+- Propriétés qui utilisent ce type de données&nbsp;: {{CSSxRef("border-shape")}}, {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}}
 - [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

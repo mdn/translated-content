@@ -220,7 +220,7 @@ Par exemple, cet exemple de données `text/uri-list` contient deux liens et un c
 ```plain
 https://www.mozilla.org
 #Un second lien
-http://www.exemple.com
+http://www.example.com
 ```
 
 Lors de la récupération d'un lien déposé, assurez-vous de gérer le cas où plusieurs liens sont glissés, y compris les commentaires.

@@ -64,8 +64,7 @@ Modifiez le code ci-dessous et voyez les changements en direct sur le canvas :
 <textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.arc(50, 50, 50, 0, 2 * Math.PI, false);
-ctx.stroke();</textarea
->
+ctx.stroke();</textarea>
 ```
 
 ```js

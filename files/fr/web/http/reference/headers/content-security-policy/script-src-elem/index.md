@@ -58,13 +58,13 @@ Content-Security-Policy: script-src-elem <source>;
 Étant donné cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: script-src-elem https://exemple.com/
+Content-Security-Policy: script-src-elem https://example.com/
 ```
 
 …le script suivant est bloqué et ne sera ni chargé ni exécuté&nbsp;:
 
 ```html
-<script src="https://hors-exemple.com/js/library.js"></script>
+<script src="https://hors-example.com/js/library.js"></script>
 ```
 
 ## Spécifications

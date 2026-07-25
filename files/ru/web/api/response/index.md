@@ -66,7 +66,7 @@ slug: Web/API/Response
 - {{domxref("Body.json()")}}
   - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as {{jsxref("JSON")}}, which is a JavaScript value of datatype object, string, etc.
 - {{domxref("Body.text()")}}
-  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("USVString")}} (text).
+  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{jsxref("String")}} (text).
 
 ## Примеры
 

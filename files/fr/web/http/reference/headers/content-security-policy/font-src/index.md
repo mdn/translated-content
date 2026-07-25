@@ -51,7 +51,7 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: font-src https://exemple.com/
+Content-Security-Policy: font-src https://example.com/
 ```
 
 Cette définition de police sera bloquée et ne se chargera pas&nbsp;:
@@ -60,7 +60,7 @@ Cette définition de police sera bloquée et ne se chargera pas&nbsp;:
 <style>
   @font-face {
     font-family: "MaPolice";
-    src: url("https://hors-exemple.com/font");
+    src: url("https://hors-example.com/font");
   }
   body {
     font-family: "MaPolice";

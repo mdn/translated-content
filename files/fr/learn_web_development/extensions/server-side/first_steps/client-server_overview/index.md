@@ -62,7 +62,7 @@ Les sites web dynamiques ou statiques (voir sections suivantes) utilisent les m�
 Vous faites une simple requête `GET` en cliquant sur un lien ou en faisant une recherche sur un site (sur une page de moteur de recherche par exemple). Une requête HTTP envoyée lorsque vous effectuez une recherche sur MDN pour les termes : "La relation Client-Serveur" ressemblera beaucoup à ce qui suit mais ne sera pas identique car des parties du message dépendent des paramètres de votre navigateur.
 
 > [!NOTE]
-> Le format des messsages HTTP est défini par un standard web ([RFC7230](https://www.rfc-editor.org/rfc/rfc7230.txt)). Vous n'avez pas besoin de connaître ce niveau de détails mais vous saurez au moins d'où vient tout ça !
+> Le format des messsages HTTP est défini par un standard web ([RFC7230](https://www.rfc-editor.org/info/rfc7230.txt)). Vous n'avez pas besoin de connaître ce niveau de détails mais vous saurez au moins d'où vient tout ça !
 
 #### La requête
 

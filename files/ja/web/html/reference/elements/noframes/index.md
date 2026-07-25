@@ -1,12 +1,12 @@
 ---
-title: "<noframes>: フレームフォールバック要素"
+title: HTML `<noframes>` フレームフォールバック要素
+short-title: <noframes>
 slug: Web/HTML/Reference/Elements/noframes
-original_slug: Web/HTML/Element/noframes
 l10n:
-  sourceCommit: 8536cae9363a37725f9a5dcca4e064addbcc9506
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<noframes>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("frame")}} 要素に対応していない（または対応を無効化した）ブラウザーのためのコンテンツを提供します。よく使われるほとんどのブラウザーがフレームに対応していますが、一部のモバイルブラウザーやテキストモードブラウザーなどの例外もあります。
 
@@ -25,19 +25,18 @@ l10n:
 
 この例には、 2 つのフレームを持つフレームセットがあります。加えて、 `<noframes>` を使用して{{Glossary("user agent","ユーザーエージェント")}}がフレームに対応していない場合には説明メッセージを表示します。
 
-```html
+```html-nolint
 <!doctype html>
-<html lang="en-US">
+<html lang="ja">
   <head>
-    <!-- Document metadata goes here -->
+    <!-- 文書メタデータをここに配置 -->
   </head>
   <frameset rows="45%, 55%">
     <frame src="https://developer.mozilla.org/en/HTML/Element/frameset" />
     <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
     <noframes>
       <p>
-        It seems your browser does not support frames or is configured to not
-        allow them.
+        このブラウザーはフレームに対応していないか、フレームを許可しないように設定されているようです。
       </p>
     </noframes>
   </frameset>

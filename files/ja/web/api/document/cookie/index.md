@@ -41,7 +41,7 @@ l10n:
 
   - `;max-age=max-age-in-seconds`: クッキーの秒単位の最大寿命です（例えば、1 年であれば `60*60*24*365` または 31536000）。
 
-  - `;partitioned`: クッキーが分離されたストレージを使用して格納されることを示します。詳細は [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) を参照してください。
+  - `;partitioned`: クッキーが分離されたストレージを使用して格納されることを示します。詳細は [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) を参照してください。
 
   - `;path=パス`: このクッキーの `Path` 属性の値です（詳しくは、[クッキーの送信先の定義](/ja/docs/Web/HTTP/Guides/Cookies#cookie_の送信先の定義)を参照してください）。
 

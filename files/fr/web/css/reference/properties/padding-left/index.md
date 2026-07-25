@@ -3,7 +3,7 @@ title: Propriété CSS `padding-left`
 short-title: padding-left
 slug: Web/CSS/Reference/Properties/padding-left
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 0c62b082755017d0773ecaaee7e74efd5e066d0b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`padding-left`** définit la largeur de la [zone de remplissage](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_remplissage) à gauche d'un élément.
@@ -82,9 +82,9 @@ La propriété `padding-left` est définie comme une seule valeur choisie dans l
 ### Valeurs
 
 - {{CSSxRef("&lt;length&gt;")}}
-  - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur ne peut être négative.
+  - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur doit être positive.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille du remplissage exprimée en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur ne peut être négative.
+  - : La taille du remplissage exprimée en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur doit être positive.
 
 ## Définition formelle
 
@@ -99,10 +99,10 @@ La propriété `padding-left` est définie comme une seule valeur choisie dans l
 ### Définir le remplissage à gauche en utilisant des pixels et des pourcentages
 
 ```css
-.content {
+.contenu {
   padding-left: 5%;
 }
-.side-box {
+.bord-boite {
   padding-left: 10px;
 }
 ```

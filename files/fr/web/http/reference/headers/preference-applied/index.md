@@ -45,7 +45,7 @@ La requête suivante indique que le client préfère que les évènements soient
 
 ```http
 GET /events HTTP/1.1
-Host: exemple.com
+Host: example.com
 Prefer: timezone=America/Los_Angeles
 ```
 

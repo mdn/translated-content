@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 
 ## Сводка
 
-Метод **`valueOf()`** возвращает примитивное значение объекта {{jsxref("Global_Objects/String", "String")}}.
+Метод **`valueOf()`** возвращает примитивное значение объекта {{jsxref("String")}}.
 
 ## Синтаксис
 
@@ -17,7 +17,7 @@ str.valueOf()
 
 ## Описание
 
-Метод `valueOf()` возвращает примитивное значение объекта {{jsxref("Global_Objects/String", "String")}} в виде строкового типа данных. Это значение эквивалентно значению вызова метода {{jsxref("String.prototype.toString()")}}.
+Метод `valueOf()` возвращает примитивное значение объекта {{jsxref("String")}} в виде строкового типа данных. Это значение эквивалентно значению вызова метода {{jsxref("String.prototype.toString()")}}.
 
 Этот метод обычно вызывается внутренними механизмами движка JavaScript, а не явно в коде.
 

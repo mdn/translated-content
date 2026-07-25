@@ -19,7 +19,7 @@ Lorsque vous affichez plusieurs portions de média, il peut être plus pratique 
 ## Syntaxe des fragments de dimension temporelle
 
 ```url
-https://exemple.com/video.mp4#t=[npt:][timeStart][,timeEnd]
+https://example.com/video.mp4#t=[npt:][timeStart][,timeEnd]
 ```
 
 Les éléments clés de la syntaxe sont&nbsp;:

@@ -267,7 +267,7 @@ p:last-of-type {
 
 #### JavaScript
 
-Nous incluons un gestionnaire d'événement qui met à jour la propriété `font-weight` du paragraphe et le texte affiché&nbsp;:
+Nous incluons un gestionnaire d'évènement qui met à jour la propriété `font-weight` du paragraphe et le texte affiché&nbsp;:
 
 ```js
 const texte = document.querySelector("#exemple");

@@ -234,7 +234,7 @@ if (gamepadAPI.axesStatus[0].x > 0.5) {
 ```ts
 enum GamepadMappingType {
   "",
-  "standard",
+  standard,
 }
 ```
 

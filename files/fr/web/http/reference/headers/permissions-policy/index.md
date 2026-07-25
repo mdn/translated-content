@@ -51,11 +51,11 @@ Les entrées pour chaque directive sont séparées par des virgules.
     - `()` (liste d'autorisations vide)
       - : La fonctionnalité est désactivée dans les contextes de navigation principaux et imbriqués. L'équivalent pour l'attribut `allow` d'un `<iframe>` est `'none'`.
     - `self`
-      - : La fonctionnalité est autorisée dans ce document, ainsi que dans tous les contextes de navigation imbriqués (`<iframe>`) de même origine uniquement. La fonctionnalité n'est pas autorisée dans les documents d'origine croisée dans les contextes imbriqués. `self` peut être considéré comme un raccourci pour `https://votre-site.exemple.com`. L'équivalent pour l'attribut `allow` d'un `<iframe>` est `self`.
+      - : La fonctionnalité est autorisée dans ce document, ainsi que dans tous les contextes de navigation imbriqués (`<iframe>`) de même origine uniquement. La fonctionnalité n'est pas autorisée dans les documents d'origine croisée dans les contextes imbriqués. `self` peut être considéré comme un raccourci pour `https://votre-site.example.com`. L'équivalent pour l'attribut `allow` d'un `<iframe>` est `self`.
     - `src`
       - : La fonctionnalité est autorisée dans ce `<iframe>`, tant que le document chargé provient de la même origine que l'URL de son attribut `{{HTMLElement('iframe','src','#attributs')}}`. Cette valeur n'est utilisée que dans l'attribut `allow` d'un `<iframe>`, et est la valeur _par défaut_ de `allowlist` dans les `<iframe>`.
     - `"<origin>"`
-      - : La fonctionnalité est autorisée pour des origines spécifiques (par exemple, `"https://a.exemple.com"`). Les origines doivent être séparées par des espaces. Notez que les origines dans les attributs `allow` de `<iframe>` ne sont pas entre guillemets.
+      - : La fonctionnalité est autorisée pour des origines spécifiques (par exemple, `"https://a.example.com"`). Les origines doivent être séparées par des espaces. Notez que les origines dans les attributs `allow` de `<iframe>` ne sont pas entre guillemets.
 
     Les valeurs `*` et `()` ne peuvent être utilisées qu'isolément, tandis que `self` et `src` peuvent être utilisées en combinaison avec une ou plusieurs origines.
 
@@ -76,17 +76,17 @@ Cela signifie qu'au lieu de devoir définir explicitement plusieurs sous-domaine
 Ainsi, au lieu de&nbsp;:
 
 ```http
-("https://exemple.com" "https://a.exemple.com" "https://b.exemple.com" "https://c.exemple.com")
+("https://example.com" "https://a.example.com" "https://b.example.com" "https://c.example.com")
 ```
 
 Vous pouvez définir&nbsp;:
 
 ```http
-("https://exemple.com" "https://*.exemple.com")
+("https://example.com" "https://*.example.com")
 ```
 
 > [!NOTE]
-> `"https://*.exemple.com"` ne correspond pas à `"https://exemple.com"`.
+> `"https://*.example.com"` ne correspond pas à `"https://example.com"`.
 
 ## Directives
 
@@ -247,7 +247,7 @@ Permissions-Policy: geolocation=*
 Pour autoriser l'accès à une partie des domaines&nbsp;:
 
 ```http
-Permissions-Policy: geolocation=(self "https://a.exemple.com" "https://b.exemple.com")
+Permissions-Policy: geolocation=(self "https://a.example.com" "https://b.example.com")
 ```
 
 Plusieurs fonctionnalités peuvent être contrôlées en même temps en envoyant l'en-tête avec une liste de politiques séparées par des virgules, ou en envoyant un en-tête distinct pour chaque politique.
@@ -255,10 +255,10 @@ Plusieurs fonctionnalités peuvent être contrôlées en même temps en envoyant
 Par exemple, les exemples suivants sont équivalents&nbsp;:
 
 ```http
-Permissions-Policy: picture-in-picture=(), geolocation=(self https://exemple.com/), camera=*
+Permissions-Policy: picture-in-picture=(), geolocation=(self https://example.com/), camera=*
 
 Permissions-Policy: picture-in-picture=()
-Permissions-Policy: geolocation=(self https://exemple.com/)
+Permissions-Policy: geolocation=(self https://example.com/)
 Permissions-Policy: camera=*
 ```
 
@@ -269,15 +269,15 @@ Pour qu'une fonctionnalité soit activée dans un `<iframe>`, son domaine autori
 Pour autoriser tous les domaines à accéder à la géolocalisation&nbsp;:
 
 ```html
-<iframe src="https://exemple.com" allow="geolocation *"></iframe>
+<iframe src="https://example.com" allow="geolocation *"></iframe>
 ```
 
 Pour appliquer une politique au domaine courant et à d'autres&nbsp;:
 
 ```html
 <iframe
-  src="https://exemple.com"
-  allow="geolocation 'self' https://a.exemple.com https://b.exemple.com"></iframe>
+  src="https://example.com"
+  allow="geolocation 'self' https://a.example.com https://b.example.com"></iframe>
 ```
 
 Important&nbsp;: Par défaut, si un `<iframe>` navigue vers un autre domaine, la politique n'est pas appliquée au domaine vers lequel l'`<iframe>` navigue. En listant le domaine cible dans l'attribut `allow`, la politique de permissions appliquée à l'`<iframe>` d'origine est appliquée au domaine cible.
@@ -286,15 +286,15 @@ Plusieurs fonctionnalités peuvent être contrôlées en même temps en incluant
 
 ```html
 <iframe
-  src="https://exemple.com"
-  allow="geolocation 'self' https://a.exemple.com https://b.exemple.com; fullscreen 'none'"></iframe>
+  src="https://example.com"
+  allow="geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'"></iframe>
 ```
 
 Il est utile de mentionner la valeur `src`. Comme indiqué plus haut, utiliser cette valeur dans la liste d'autorisation signifie que la fonctionnalité associée est autorisée dans cet `<iframe>`, tant que le document chargé provient du même domaine que l'URL dans son attribut `{{HTMLElement('iframe','src','#attributs')}}`. Cette valeur est le _valeur par défaut_ de la liste d'autorisation pour les fonctionnalités listées dans `allow`, donc les exemples suivants sont équivalents&nbsp;:
 
 ```html
-<iframe src="https://exemple.com" allow="geolocation 'src'"></iframe>
-<iframe src="https://exemple.com" allow="geolocation"></iframe>
+<iframe src="https://example.com" allow="geolocation 'src'"></iframe>
+<iframe src="https://example.com" allow="geolocation"></iframe>
 ```
 
 ### Refuser l'accès aux fonctionnalités puissantes
@@ -324,7 +324,7 @@ Dans vos `<iframe>` publicitaires, vous pouvez autoriser l'accès au domaine `ht
 Si un autre domaine est chargé dans l'`<iframe>`, il n'a pas accès à la géolocalisation&nbsp;:
 
 ```html
-<iframe src="https://rogue-origin-exemple.com" allow="geolocation"></iframe>
+<iframe src="https://rogue-origin-example.com" allow="geolocation"></iframe>
 ```
 
 ### Signaler les violations
@@ -335,7 +335,7 @@ Les en-têtes de réponse ci-dessous bloquent la géolocalisation et définissen
 L'en-tête de réponse HTTP {{HTTPHeader("Reporting-Endpoints")}} est utilisé pour définir l'URL de ce nom de point de terminaison.
 
 ```http
-Reporting-Endpoints: geo_endpoint="https://exemple.com/rapports"
+Reporting-Endpoints: geo_endpoint="https://example.com/rapports"
 Permissions-Policy: geolocation=();report-to=geo_endpoint
 ```
 
@@ -343,7 +343,7 @@ Permissions-Policy: geolocation=();report-to=geo_endpoint
 > Pour envoyer tous les rapports de violations au même point de terminaison, nous pouvons plutôt définir le [point de terminaison de signalement `"default"`](/fr/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#point_de_terminaison_de_signalement_par_défaut)&nbsp;:
 >
 > ```http
-> Reporting-Endpoints: default="https://exemple.com/rapports"
+> Reporting-Endpoints: default="https://example.com/rapports"
 > Permissions-Policy: geolocation=()
 > ```
 

@@ -2,7 +2,7 @@
 title: Modèle de page d'attribut HTML
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_attribute_page_template
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 Les attributs HTML se divisent en deux catégories&nbsp;: les **attributs spécifiques à un élément**, qui ne s'appliquent qu'à certains éléments (par exemple, l'attribut `accept` sur `<input type="file">`), et les **attributs universels**, qui peuvent être utilisés pour n'importe quel élément HTML (par exemple, `class`, `id`). Les premiers doivent être placés sous `HTML/Reference/Attributes`, tandis que les seconds doivent être placés sous `HTML/Reference/Global_attributes`.
@@ -61,7 +61,6 @@ Ajoutez un article uniquement si l'attribut a suffisamment de nuances pour méri
 >     L'outil utilise automatiquement la clé pour remplir les sections de compatibilité et de spécifications (en remplaçant les macros `\{{Compat}}` et `\{{Specifications}}` dans ces sections, respectivement).
 >     Notez que vous devez d'abord créer ou mettre à jour une entrée pour l'attribut dans notre [dépôt de données de compatibilité des navigateurs <sup>(angl.)</sup>](https://github.com/mdn/browser-compat-data), et l'entrée doit inclure des informations sur la spécification.
 >     Consultez notre [guide sur la façon de procéder](/fr/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
->
 > - **sidebar**
 >   - : Conservez `htmlsidebar` (toutes les pages sous `/web/html/` utilisent cette barre latérale).
 >     Voir [Structures de page&nbsp;: Barres latérales](/fr/docs/MDN/Writing_guidelines/Page_structures/Sidebars) pour plus de détails.

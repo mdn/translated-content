@@ -46,9 +46,9 @@ Además del constructor genérico `Error`, hay otros siete constructores de erro
   - : Mensaje de error.
 - {{jsxref("Error.prototype.name")}}
   - : Nombre del error.
-- {{jsxref("Error.prototype.description")}}
+- `Error.prototype.description`
   - : Una propiedad no estándar de Microsoft para la descripción del error. Similar a {{jsxref("Error.prototype.message", "message")}}.
-- {{jsxref("Error.prototype.number")}}
+- `Error.prototype.number`
   - : Una propiedad no estándar de Microsoft para un número de error.
 - {{jsxref("Error.prototype.fileName")}}
   - : Una propiedad no estándar de Mozilla para la ruta al archivo que generó este error.

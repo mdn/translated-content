@@ -1,12 +1,12 @@
 ---
-title: math-style
+title: CSS `math-style` プロパティ
+short-title: math-style
 slug: Web/CSS/Reference/Properties/math-style
-original_slug: Web/CSS/math-style
 l10n:
-  sourceCommit: 18a07f5d474f44cdc6b343a5439e8792c6ce8d62
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-`math-style` プロパティは、 MathML の数式を通常の高さで表示するか、コンパクトな高さで表示するかを指定します。
+`math-style` プロパティは、MathML の数式を通常の高さで表示するか、コンパクトな高さで表示するかを示します。
 
 ## 構文
 

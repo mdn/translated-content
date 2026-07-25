@@ -3,12 +3,14 @@ title: "HTMLDialogElement : méthode show()"
 short-title: show()
 slug: Web/API/HTMLDialogElement/show
 l10n:
-  sourceCommit: e1a895da256b94f28be74b6f92ed18b5c2bec366
+  sourceCommit: 661a04e7a61abe3d8c7245f04cdd1d0bc865fe69
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`show()`** de l'interface {{DOMxRef("HTMLDialogElement")}} affiche la boîte de dialogue de manière non modale, c'est-à-dire en permettant toujours l'interaction avec le contenu en dehors de la boîte de dialogue.
+La méthode **`show()`** de l'interface {{DOMxRef("HTMLDialogElement")}} affiche la boîte de dialogue de manière non bloquante.
+
+Une boîte de dialogue non bloquante est une boîte de dialogue où les utilisateur·ice·s peuvent interagir avec le contenu en dehors/derrière la boîte de dialogue ouverte.
 
 ## Syntaxe
 
@@ -27,67 +29,54 @@ Aucune ({{JSxRef("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{DOMxRef("DOMException")}}
-  - : Levée si la boîte de dialogue est déjà ouverte et modale (c'est-à-dire si elle a déjà été ouverte avec {{DOMxRef("HTMLDialogElement.showModal()")}}).
+  - : Levée si la boîte de dialogue est déjà ouverte et bloquante (c'est-à-dire si elle a déjà été ouverte avec {{DOMxRef("HTMLDialogElement.showModal()")}}).
 
 ## Exemples
 
-L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre un élément {{HTMLElement("dialog")}} contenant un formulaire via la méthode `show()`. Vous pouvez ensuite cliquer sur le bouton _Annuler_ pour fermer la boîte de dialogue (via la méthode {{DOMxRef("HTMLDialogElement.close()")}}), ou soumettre le formulaire avec le bouton de validation.
+### Utilisation simple
+
+L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre un élément {{HTMLElement("dialog")}} avec la méthode `show()`.
+
+Lorsque la boîte de dialogue est ouverte, vous pouvez toujours interagir avec le reste de la page, y compris cliquer sur le bouton _Cliquez-moi_ qui déclenche une alerte.
+
+Vous pouvez cliquer sur le bouton _Fermer la boîte de dialogue_ pour fermer la boîte de dialogue (avec la méthode {{DOMxRef("HTMLDialogElement.close()", "close()")}}).
 
 ```html
-<!-- Boîte de dialogue simple contenant un formulaire -->
-<dialog id="favDialog">
-  <form method="dialog">
-    <section>
-      <p>
-        <label for="favAnimal">Animal préféré&nbsp;:</label>
-        <select id="favAnimal" name="favAnimal">
-          <option></option>
-          <option>Crevette de saumure</option>
-          <option>Panda roux</option>
-          <option>Singe-araignée</option>
-        </select>
-      </p>
-    </section>
-    <menu>
-      <li>
-        <button type="reset">Réinitialiser</button>
-      </li>
-      <li>
-        <button type="submit">Valider</button>
-      </li>
-    </menu>
-  </form>
+<dialog id="dialogue">
+  <button type="button" id="fermer">Fermer la boîte de dialogue</button>
 </dialog>
 
-<button id="updateDetails">Mettre à jour les informations</button>
+<p><button id="ouvrir">Ouvrir la boîte de dialogue</button></p>
+<p><button id="alerte">Déclencher une alerte</button></p>
 ```
+
+#### JavaScript
 
 ```js
-const updateButton = document.getElementById("updateDetails");
-const cancelButton = document.getElementById("cancel");
-const dialog = document.getElementById("favDialog");
-dialog.returnValue = "favAnimal";
+const dialogue = document.getElementById("dialogue");
+const ouvrirButton = document.getElementById("ouvrir");
+const fermerButton = document.getElementById("fermer");
+const alerteButton = document.getElementById("alerte");
 
-function openCheck(dialog) {
-  if (dialog.open) {
-    console.log("Boîte de dialogue ouverte");
-  } else {
-    console.log("Boîte de dialogue fermée");
-  }
-}
-
-// Le bouton met à jour et ouvre la boîte de dialogue non modale
-updateButton.addEventListener("click", () => {
-  dialog.show();
-  openCheck(dialog);
+// Le bouton ouvrir ouvre une boîte de dialogue non bloquante
+ouvrirButton.addEventListener("click", () => {
+  dialogue.show();
 });
 
-// Le bouton d'annulation du formulaire ferme la boîte de dialogue
-cancelButton.addEventListener("click", () => {
-  dialog.close("animalNonChoisi");
-  openCheck(dialog);
+// Le bouton alerte déclenche une alerte
+alerteButton.addEventListener("click", () => {
+  alert("vous m'avez cliqué !");
+});
+
+// Le bouton fermer ferme la boîte de dialogue
+fermerButton.addEventListener("click", () => {
+  dialogue.close();
 });
 ```
+
+#### Résultat
+
+{{EmbedLiveSample("Utilisation simple", "100%", 250)}}
 
 ## Spécifications
 
@@ -99,4 +88,5 @@ cancelButton.addEventListener("click", () => {
 
 ## Voir aussi
 
-- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("dialog")}}
+- L'élément HTML {{HTMLElement("dialog")}}
+- La méthode {{DOMxRef("HTMLDialogElement.showModal()")}}

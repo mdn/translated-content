@@ -219,19 +219,20 @@ Si tiene que pasar datos complejos y tienes que llamar a muchas funciones difere
         if (fOnError) {
           oWorker.onerror = fOnError;
         }
-        this.sendQuery =
-          function (/* queryable function name, argument to pass 1, argument to pass 2, etc. etc */) {
-            if (arguments.length < 1) {
-              throw new TypeError(
-                "QueryableWorker.sendQuery - not enough arguments",
-              );
-              return;
-            }
-            oWorker.postMessage({
-              bk4e1h0: arguments[0],
-              ktp3fm1: Array.prototype.slice.call(arguments, 1),
-            });
-          };
+        this.sendQuery = function (
+          /* queryable function name, argument to pass 1, argument to pass 2, etc. etc */
+        ) {
+          if (arguments.length < 1) {
+            throw new TypeError(
+              "QueryableWorker.sendQuery - not enough arguments",
+            );
+            return;
+          }
+          oWorker.postMessage({
+            bk4e1h0: arguments[0],
+            ktp3fm1: Array.prototype.slice.call(arguments, 1),
+          });
+        };
         this.postMessage = function (vMsg) {
           //I just think there is no need to use call() method
           //how about just oWorker.postMessage(vMsg);
@@ -329,7 +330,9 @@ function defaultQuery(vMsg) {
   // do something
 }
 
-function reply(/* listener name, argument to pass 1, argument to pass 2, etc. etc */) {
+function reply(
+  /* listener name, argument to pass 1, argument to pass 2, etc. etc */
+) {
   if (arguments.length < 1) {
     throw new TypeError("reply - not enough arguments");
     return;

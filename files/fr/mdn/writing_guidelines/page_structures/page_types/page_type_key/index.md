@@ -2,7 +2,7 @@
 title: Modèle de page de garde
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 l10n:
-  sourceCommit: bd8f07e677d3bf6d5ebb0bccec3afb48f52921b5
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 > [!NOTE]
@@ -18,7 +18,7 @@ Comme pour toute autre clé de page de garde, la clé `page-type` est définie d
 title: 100 Continue
 slug: Web/HTTP/Reference/Status/100
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
+spec-urls: https://www.rfc-editor.org/info/rfc9110#status.100
 sidebar: http
 ---
 ```

@@ -99,7 +99,7 @@ Set-Cookie: id=a3fWa; Max-Age=0
 ```
 
 Vous pouvez également effacer tous les cookies associés à un domaine enregistrable en utilisant l'en-tête de réponse {{HTTPHeader("Clear-Site-Data")}}.
-Par exemple, l'en-tête suivant envoyé depuis `https://toto.exemple.com/` effacerait tous les cookies envoyés par `exemple.com` et tous ses sous-domaines, tels que `tout.tata.exemple.com`.
+Par exemple, l'en-tête suivant envoyé depuis `https://toto.example.com/` effacerait tous les cookies envoyés par `example.com` et tous ses sous-domaines, tels que `tout.tata.example.com`.
 
 ```http
 Clear-Site-Data: "cookies"

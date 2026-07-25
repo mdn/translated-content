@@ -63,7 +63,7 @@ Le message suivant demande une ressource avec l'en-tête `Save-Data` indiquant q
 
 ```http
 GET /image.jpg HTTP/1.1
-Host: exemple.com
+Host: example.com
 Save-Data: on
 ```
 
@@ -85,7 +85,7 @@ Dans ce cas, le client demande la même ressource sans l'en-tête `Save-Data`&nb
 
 ```http
 GET /image.jpg HTTP/1.1
-Host: exemple.com
+Host: example.com
 ```
 
 La réponse du serveur fournit la version complète du contenu.

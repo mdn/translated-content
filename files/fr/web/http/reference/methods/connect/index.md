@@ -64,7 +64,7 @@ CONNECT <host>:<port> HTTP/1.1
 ```
 
 - `<host>`
-  - : Un hôte qui peut être un nom d'hôte enregistré (par exemple, `exemple.fr`) ou une adresse IP (IPv4, IPv6).
+  - : Un hôte qui peut être un nom d'hôte enregistré (par exemple, `example.com`) ou une adresse IP (IPv4, IPv6).
 - `<port>`
   - : Un numéro de port en décimal (par exemple, `80`, `443`). Il n'y a pas de port par défaut, donc le client **doit** toujours en spécifier un.
 
@@ -74,8 +74,8 @@ Une requête pour les serveurs proxy qui nécessitent une autorisation pour cré
 Voir l'en-tête {{HTTPHeader("Proxy-Authorization")}} pour plus d'informations.
 
 ```http
-CONNECT serveur.exemple.fr:80 HTTP/1.1
-Host: serveur.exemple.fr:80
+CONNECT serveur.example.com:80 HTTP/1.1
+Host: serveur.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=
 ```
 

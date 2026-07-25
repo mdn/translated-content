@@ -1,8 +1,9 @@
 ---
-title: sin()
+title: CSS `sin()` 関数
+short-title: sin()
 slug: Web/CSS/Reference/Values/sin
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`sin()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、数値の正弦を返す三角関数です。値は `-1` から `1` までの範囲になります。この関数には単一の計算が含まれており、引数の結果をラジアンとして解釈して、{{cssxref("&lt;number&gt;")}} または {{cssxref("angle")}} のいずれかに解決する必要があります。つまり、`sin(45deg)`、`sin(0.125turn)`、`sin(3.14159 / 4)` はすべて、ほぼ `0.707` という同じ値を表します。

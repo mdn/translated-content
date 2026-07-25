@@ -1,41 +1,33 @@
 ---
-title: FormData.has()
+title: "FormData : méthode has()"
+short-title: has()
 slug: Web/API/FormData/has
+l10n:
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{AvailableInWorkers}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-{{APIRef("XMLHttpRequest API")}}
-
-La méthode **`has()`** de l'interface {{domxref("FormData")}} renvoie un booléen indiquant si un objet `FormData` contient une certaine clé.
-
-> [!NOTE]
-> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+La méthode **`has()`** de l'interface {{DOMxRef("FormData")}} retourne un booléen indiquant si un objet `FormData` contient une certaine clé.
 
 ## Syntaxe
 
-```js
-formData.has(name);
+```js-nolint
+has(name)
 ```
 
 ### Paramètres
 
 - `name`
-  - : Un {{jsxref("String")}} représentant le nom de la clé que vous voulez tester.
+  - : Une chaîne de caractères représentant le nom de la clé que vous voulez tester.
 
-### Retours
+### Valeur de retour
 
-Un {{domxref("Boolean")}}.
+`true` si une clé de l'objet `FormData` correspond au `name` défini. Sinon, `false`.
 
-## Exemple
+## Exemples
 
-La ligne suivante crée un objet `FormData` vide :
-
-```js
-var formData = new FormData();
-```
-
-L'extrait suivant montre les résultats des tests effectués pour vérifier l'existence d'un `username` dans l'objet FormData, avant et après avoir ajouté une valeur `username` avec {{domxref("FormData.append")}} :
+L'extrait suivant montre les résultats des tests effectués pour vérifier l'existence d'un `username` dans un objet `FormData`, avant et après avoir ajouté une valeur `username` avec {{DOMxRef("FormData.append", "append()")}}&nbsp;:
 
 ```js
 formData.has("username"); // Retourne false
@@ -53,7 +45,5 @@ formData.has("username"); // Retourne true
 
 ## Voir aussi
 
-- {{domxref("XMLHTTPRequest")}}
-- [Utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utilisation des objects FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [Utiliser des objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- L'élément HTML {{HTMLElement("form")}}

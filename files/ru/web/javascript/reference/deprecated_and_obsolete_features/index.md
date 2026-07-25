@@ -47,17 +47,17 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 ### Function properties
 
-- The {{jsxref("Global_Objects/Function/caller", "caller")}} and {{jsxref("Global_Objects/Function/arguments", "arguments")}} properties are deprecated, because they leak the function caller. Instead of the arguments property, you should use the {{jsxref("Functions/arguments", "arguments")}} object inside function closures.
+- The {{jsxref("Function.caller", "caller")}} and {{jsxref("Function.arguments", "arguments")}} properties are deprecated, because they leak the function caller. Instead of the arguments property, you should use the {{jsxref("Functions/arguments", "arguments")}} object inside function closures.
 
 ### Legacy generator
 
-- {{jsxref("Statements/Legacy_generator_function", "Legacy generator function statement")}} and {{jsxref("Operators/Legacy_generator_function", "Legacy generator function expression")}} are deprecated. Use {{jsxref("Statements/function*", "function* statement")}} and {{jsxref("Operators/function*", "function* expression")}} instead.
-- {{jsxref("Operators/Array_comprehensions", "JS1.7/JS1.8 Array comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} and {{jsxref("Operators/Generator_comprehensions", "JS1.7/JS1.8 Generator comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} are deprecated.
+- {{jsxref("Deprecated_and_obsolete_features", "Legacy generator function statement")}} and {{jsxref("Deprecated_and_obsolete_features", "Legacy generator function expression")}} are deprecated. Use {{jsxref("Statements/function*", "function* statement")}} and {{jsxref("Operators/function*", "function* expression")}} instead.
+- {{jsxref("Deprecated_and_obsolete_features", "JS1.7/JS1.8 Array comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} and {{jsxref("Deprecated_and_obsolete_features", "JS1.7/JS1.8 Generator comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} are deprecated.
 
 ### Iterator
 
-- {{jsxref("Global_Objects/StopIteration", "StopIteration")}} устарел.
-- {{jsxref("Global_Objects/Iterator", "Iterator")}} устарел.
+- {{jsxref("StopIteration")}} устарел.
+- {{jsxref("Iterator")}} устарел.
 
 ### Object methods
 
@@ -67,13 +67,13 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 ### Методы даты
 
-- {{jsxref("Global_Objects/Date/getYear", "getYear")}} и {{jsxref("Global_Objects/Date/setYear", "setYear")}} are affected by the Year-2000-Problem and have been subsumed by {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} и {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.
-- You should use {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} instead of the deprecated {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} method in new code.
-- {{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} is deprecated.
+- {{jsxref("Date.getYear", "getYear")}} и {{jsxref("Date.setYear", "setYear")}} are affected by the Year-2000-Problem and have been subsumed by {{jsxref("Date.getFullYear", "getFullYear")}} и {{jsxref("Date.setFullYear", "setFullYear")}}.
+- You should use {{jsxref("Date.toISOString", "toISOString")}} instead of the deprecated {{jsxref("Date.toUTCString", "toGMTString")}} method in new code.
+- {{jsxref("Date.toLocaleFormat", "toLocaleFormat")}} is deprecated.
 
 ### Functions
 
-- {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}} are deprecated. Use regular {{jsxref("Operators/function", "functions")}} or {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} instead.
+- {{jsxref("Deprecated_and_obsolete_features", "Expression closures", "", 1)}} are deprecated. Use regular {{jsxref("Operators/function", "functions")}} or {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} instead.
 
 ### Proxy
 
@@ -87,7 +87,7 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 ### Escape sequences
 
 - Octal escape sequences (\ followed by one, two, or three octal digits) are deprecated in string and regular expression literals.
-- The {{jsxref("Global_Objects/escape", "escape")}} and {{jsxref("Global_Objects/unescape", "unescape")}} functions are deprecated. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}}, {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}, {{jsxref("Global_Objects/decodeURI", "decodeURI")}} or {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} to encode and decode escape sequences for special characters.
+- The {{jsxref("escape")}} and {{jsxref("unescape")}} functions are deprecated. Use {{jsxref("encodeURI")}}, {{jsxref("encodeURIComponent")}}, {{jsxref("decodeURI")}} or {{jsxref("decodeURIComponent")}} to encode and decode escape sequences for special characters.
 
 ### Методы строк
 
@@ -102,20 +102,20 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 
 ### Объект
 
-| Свойство                                                            | Описание                                                                       |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| {{jsxref("Global_Objects/Object/count", "**count**")}}              | Returns the number of enumerable properties directly on a user-defined object. |
-| {{jsxref("Global_Objects/Object/Parent", "**parent**")}}            | Points to an object's context.                                                 |
-| {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | Evaluates a string of JavaScript code in the context of the specified object.  |
-| {{jsxref("Object.observe()")}}                                      | Asynchronously observing the changes to an object.                             |
-| {{jsxref("Object.unobserve()")}}                                    | Remove observers.                                                              |
-| {{jsxref("Object.getNotifier()")}}                                  | Creates an object that allows to synthetically trigger a change.               |
+| Свойство                                             | Описание                                                                       |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------ |
+| {{jsxref("Object.count", "**count**")}}              | Returns the number of enumerable properties directly on a user-defined object. |
+| {{jsxref("Object.Parent", "**parent**")}}            | Points to an object's context.                                                 |
+| {{jsxref("Object.eval", "Object.prototype.eval()")}} | Evaluates a string of JavaScript code in the context of the specified object.  |
+| {{jsxref("Object.observe()")}}                       | Asynchronously observing the changes to an object.                             |
+| {{jsxref("Object.unobserve()")}}                     | Remove observers.                                                              |
+| {{jsxref("Object.getNotifier()")}}                   | Creates an object that allows to synthetically trigger a change.               |
 
 ### Function
 
-| Свойство                                             | Описание                    |
-| ---------------------------------------------------- | --------------------------- |
-| {{jsxref("Global_Objects/Function/arity", "arity")}} | Number of formal arguments. |
+| Свойство                              | Описание                    |
+| ------------------------------------- | --------------------------- |
+| {{jsxref("Function.arity", "arity")}} | Number of formal arguments. |
 
 ### Массив
 

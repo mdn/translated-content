@@ -11,7 +11,7 @@ Les éléments {{HTMLElement("input")}} de type **`email`** permettent à l'util
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="email">Entrez votre email exemple.com&nbsp;:</label>
+<label for="email">Entrez votre email example.com&nbsp;:</label>
 
 <input type="email" id="email" pattern=".+@exemple\.com" size="30" required />
 ```
@@ -160,10 +160,10 @@ En revanche, les exemples suivants sont considérés invalides&nbsp;:
 
 Il est parfois utile de fournir une indication contextuelle sur la forme que doit prendre la donnée saisie. Cela peut être particulièrement important si la page ne propose pas d'étiquettes descriptives pour chaque {{HTMLElement("input")}}. C'est là qu'interviennent les **textes indicatifs** (<i lang="en">placeholder</i> en anglais). Un texte indicatif est une valeur qui montre la forme que doit prendre la `value` en présentant un exemple de valeur valide, affiché dans la zone d'édition lorsque la `value` de l'élément est `""`. Dès qu'une donnée est saisie dans la zone, le texte indicatif disparaît&nbsp;; si la zone est vidée, le texte indicatif réapparaît.
 
-Dans l'exemple qui suit, on utilise un élément `<input>` de type `email` avec le texte indicatif `sophie@exemple.com`. Vous pouvez manipuler l'exemple afin de voir comment ce texte disparaît/réapparaît lorsqu'on édite la valeur du champ.
+Dans l'exemple qui suit, on utilise un élément `<input>` de type `email` avec le texte indicatif `sophie@example.com`. Vous pouvez manipuler l'exemple afin de voir comment ce texte disparaît/réapparaît lorsqu'on édite la valeur du champ.
 
 ```html
-<input type="email" placeholder="sophie@exemple.com" />
+<input type="email" placeholder="sophie@example.com" />
 ```
 
 {{EmbedLiveSample('Textes indicatifs', 600, 40)}}
@@ -201,7 +201,7 @@ Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 32 caractèr
 Comme toujours, vous pouvez fournir une valeur par défaut pour une boîte de saisie `email` en définissant son attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)&nbsp;:
 
 ```html
-<input type="email" value="default@exemple.com" />
+<input type="email" value="default@example.com" />
 ```
 
 {{EmbedLiveSample("Fournir une seule option par défaut avec value", 600, 40)}}

@@ -89,4 +89,4 @@ Reflect.set(duck, "eyes", "black");
 ## Смотрите также
 
 - Глобальный объект {{jsxref("Proxy")}}.
-- Объект {{jsxref("Proxy.handler", "handler")}}.
+- Объект {{jsxref("Proxy/Proxy", "handler")}}.

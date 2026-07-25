@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
 ---
 
-Le rôle `gridcell` est utilisé pour créer une cellule dans une [grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) ou un [arbre de grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role). Il est destiné à imiter la fonctionnalité de l'élément HTML {{HTMLElement('td')}} pour le regroupement d'informations de style tableau.
+Le rôle `gridcell` est utilisé pour créer une cellule dans une [grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) ou un [arbre de grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role). Il est destiné à imiter la fonctionnalité de l'élément HTML {{HTMLElement("td")}} pour le regroupement d'informations de style tableau.
 
 ```html
 <div role="gridcell">Patate</div>
@@ -14,7 +14,7 @@ Le rôle `gridcell` est utilisé pour créer une cellule dans une [grille](/fr/d
 <div role="gridcell">Oignon</div>
 ```
 
-Elements that have `role="gridcell"` applied to them must be the child of an element with a role of [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role).
+Les éléments qui ont `role="gridcell"` appliqué doivent être les enfants d'un élément avec un rôle de [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role).
 
 ```html
 <div role="row">
@@ -25,7 +25,7 @@ Elements that have `role="gridcell"` applied to them must be the child of an ele
 </div>
 ```
 
-La première règle de l'ARIA est que si un élément ou un attribut HTML natif a la sémantique et le comportement dont vous avez besoin, utilisez-le au lieu de réutiliser un élément et d'ajouter ARIA. Utilisez plutôt l'élément HTML {{HTMLElement('td')}}&nbsp;:
+La première règle de l'ARIA est que si un élément ou un attribut HTML natif a la sémantique et le comportement dont vous avez besoin, utilisez-le au lieu de réutiliser un élément et d'ajouter ARIA. Utilisez plutôt l'élément HTML {{HTMLElement("td")}}&nbsp;:
 
 ```html
 <td>Patate</td>
@@ -69,7 +69,7 @@ Ce code d'exemple démontre un regroupement d'informations de style tableau où 
 
 Dans les situations où le regroupement de contenu de style tableau ne fournit pas d'informations sur les colonnes et les lignes, les cellules de grille doivent avoir leurs positions décrites de manière programmatique en utilisant [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby). Les [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id)s fournis pour `aria-describedby` doivent correspondre aux éléments parents destinés à être les lignes et les colonnes.
 
-En faisant référence aux éléments parents avec des rôles de [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) ou [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) appliqués à eux via `aria-describedby`, cela permet à la technologie d'assistance de comprendre la position et la relation de l'élément `gridcell` par rapport au reste du regroupement de contenu de style tableau.
+En faisant référence aux éléments parents avec des rôles de [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) ou [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) appliqués à eux avec `aria-describedby`, cela permet à la technologie d'assistance de comprendre la position et la relation de l'élément `gridcell` par rapport au reste du regroupement de contenu de style tableau.
 
 ### Grilles interactives et arbres
 
@@ -83,7 +83,7 @@ Les éléments `<td>` et les éléments auxquels un rôle de `gridcell` est appl
 <div role="gridcell" contenteditable="true">Coût de l'article</div>
 ```
 
-`contenteditable` rendra l'élément sur lequel il est appliqué focalisable via la touche <kbd>Tab</kbd>. Si une cellule de grille est conditionnellement basculée dans un état où l'édition est interdite, basculez [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) sur l'élément de cellule de grille.
+`contenteditable` rend l'élément sur lequel il est appliqué sélectionnable avec la touche <kbd>Tab</kbd>. Si une cellule de grille est conditionnellement basculée dans un état où l'édition est interdite, basculez [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) sur l'élément de cellule de grille.
 
 #### Cellules extensibles
 
@@ -96,11 +96,11 @@ Dans une [treegrid](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_rol
 - `row`
   - : Requis pour communiquer que la `gridcell` fait partie d'une ligne d'un regroupement d'informations de style tableau.
 - `columnheader`
-  - : Spécifie quel élément est l'en-tête de colonne associé.
+  - : Définit quel élément est l'en-tête de colonne associé.
 - [`aria-colindex`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)
   - : Identifie la position d'un élément par rapport aux autres colonnes du regroupement d'informations de style tableau.
 - `rowheader`
-  - : Spécifie quel élément est l'en-tête de ligne associé.
+  - : Définit quel élément est l'en-tête de ligne associé.
 - [`aria-rowindex`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex)
   - : Identifie la position d'un élément par rapport aux autres lignes du regroupement d'informations de style tableau.
 
@@ -159,7 +159,7 @@ La première règle de l'ARIA est la suivante&nbsp;: si un élément ou un attri
 - [ARIA&nbsp;: rôle `row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [ARIA&nbsp;: rôle `rowgroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
 - Les éléments HTML relatifs aux tableaux&nbsp;:
-  - {{HTMLElement('table')}}
-  - {{HTMLElement('tr')}}
-  - {{HTMLElement('th')}}
-  - {{HTMLElement('td')}}
+  - {{HTMLElement("table")}}
+  - {{HTMLElement("tr")}}
+  - {{HTMLElement("th")}}
+  - {{HTMLElement("td")}}

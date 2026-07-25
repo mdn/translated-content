@@ -372,8 +372,7 @@ article div:last-child {
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <div class="style-me">
-</div></textarea
-  >
+</div></textarea>
 
   <h2>CSS Input</h2>
   <textarea
@@ -389,8 +388,7 @@ article div:last-child {
   background-color: red;
   background: url(colorful-heart.png) no-repeat center 20px,
               linear-gradient(to bottom right, #f33, #a33);
-} </textarea
-  >
+} </textarea>
 
   <h2>Output</h2>
   <div

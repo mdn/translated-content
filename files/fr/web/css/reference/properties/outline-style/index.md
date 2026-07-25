@@ -3,7 +3,7 @@ title: Propriété CSS `outline-style`
 short-title: outline-style
 slug: Web/CSS/Reference/Properties/outline-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a06cf3dca37bb7da1d5e5ad98c5d15a10dde3e8c
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`outline-style`** définit le style du contour d'un élément. Un contour est une ligne tracée autour d'un élément, à l'extérieur de la {{CSSxRef("border")}}.
@@ -79,7 +79,7 @@ La propriété `outline-style` est définie avec une des valeurs listées ci-apr
 - `auto`
   - : Permet à l'agent utilisateur d'afficher un style de contour personnalisé.
 - `none`
-  - : Aucun contour n'est utilisé. La {{CSSxRef("outline-width")}} est `0`.
+  - : Aucun contour n'est utilisé.
 - `dotted`
   - : Le contour est une série de points.
 - `dashed`

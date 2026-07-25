@@ -41,7 +41,7 @@ const detailsEcran = await window.getScreenDetails();
 // Ouvrir une fenêtre en plein écran sur chaque écran disponible
 for (const ecran of detailsEcran.screens) {
   window.open(
-    "https://exemple.com",
+    "https://example.com,
     "_blank",
     `left=${ecran.availLeft},
     top=${ecran.availTop},

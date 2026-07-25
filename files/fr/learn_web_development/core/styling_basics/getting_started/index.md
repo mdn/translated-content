@@ -53,7 +53,7 @@ Notre point de départ est un document HTML. Vous pouvez copier le code ci-desso
     <p>
       Ceci est un paragraphe de texte. Dans le texte se trouve un
       <span>élément span</span> et aussi un
-      <a href="https://exemple.com">lien</a>.
+      <a href="https://example.com">lien</a>.
     </p>
 
     <p>
@@ -191,7 +191,7 @@ Essayez ceci dans l'exemple ci-dessous (cliquez sur «&nbsp;Exécuter&nbsp;») o
 <p>
   Ceci est un paragraphe de texte. Dans le texte se trouve un
   <span>élément span</span> et également un
-  <a href="https://exemple.com">lien</a>.
+  <a href="https://example.com">lien</a>.
 </p>
 
 <p>
@@ -279,7 +279,7 @@ L'exemple interactif ci-dessous inclut les deux règles ci-dessus. Essayez d'ajo
 
 <p>
   Ceci est un paragraphe de texte. Dans le texte se trouve un
-  <span>élément span</span> et aussi un <a href="https://exemple.com">lien</a>.
+  <span>élément span</span> et aussi un <a href="https://example.com">lien</a>.
 </p>
 
 <p>
@@ -337,7 +337,7 @@ Dans l'exemple ci-dessous, vous pouvez expérimenter avec différentes valeurs p
 
 <p>
   Ceci est un paragraphe de texte. Dans le texte se trouve un
-  <span>élément span</span> et aussi un <a href="https://exemple.com">lien</a>.
+  <span>élément span</span> et aussi un <a href="https://example.com">lien</a>.
 </p>
 
 <p>

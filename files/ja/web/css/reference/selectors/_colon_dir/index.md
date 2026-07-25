@@ -1,9 +1,9 @@
 ---
-title: :dir()
+title: CSS `:dir()` 擬似クラス
+short-title: :dir()
 slug: Web/CSS/Reference/Selectors/:dir
-original_slug: Web/CSS/:dir
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:dir()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、中に含まれる文字列の方向に基づいて要素を選択します。
@@ -25,8 +25,6 @@ l10n:
 
 ## 構文
 
-`:dir()` 擬似クラスは 1 つの引数を取り、対象としたい書字方向を指定します。
-
 ```css-nolint
 :dir([ltr | rtl]) {
   /* ... */
@@ -34,6 +32,8 @@ l10n:
 ```
 
 ### 引数
+
+`:dir()` 擬似クラスは 1 つの引数を必要とし、対象としたい書字方向を指定します。
 
 - `ltr`
   - : 書字方向が左書きの要素を対象とします。

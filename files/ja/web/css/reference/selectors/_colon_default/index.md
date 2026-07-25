@@ -1,9 +1,9 @@
 ---
-title: :default
+title: CSS `:default` 擬似クラス
+short-title: :default
 slug: Web/CSS/Reference/Selectors/:default
-original_slug: Web/CSS/:default
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:default`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、関連する要素のグループ内で既定となっているフォーム上の要素を選択します。

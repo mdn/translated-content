@@ -2,7 +2,7 @@
 title: 429 Too Many Requests
 slug: Web/HTTP/Reference/Status/429
 l10n:
-  sourceCommit: d45b7a7d45dac4a0012c138aba7afedc0f9e570c
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`429 Too Many Requests`** indique que le client a envoyé trop de requêtes dans un laps de temps donné.

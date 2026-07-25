@@ -14,11 +14,11 @@ AnimationEvent - это интерфейс представляющий собы
 _Также свойства наследуются от родителя {{domxref("Event")}}._
 
 - {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
-  - : Является {{domxref("DOMString")}} содержащей значения {{cssxref("animation-name")}} CSS-свойств связанных с **transition.**
+  - : Является {{jsxref("String")}} содержащей значения {{cssxref("animation-name")}} CSS-свойств связанных с **transition.**
 - {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
   - : Является числом с плавающей точкой, которое задаёт количество времени от начала анимации в секундах, когда это событие отклонено, несмотря на какое-либо время анимация была остановлена.Для события "animationstart" , elapsedTime равно `0.0` если не было заданно отрицательное значение для {{cssxref("animation-delay")}}, в этом случае событие будет срабатывать с elapsedTime содержащим `(-1 * delay)`.
 - {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
-  - : Является {{domxref("DOMString")}}, начинающийся с '::', содержащий имя [псевдо-элемента](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements),на котором работает анимация.Если анимация не работает на псевдо-элементе, но работает на элементе,значит указанна пустая строка ' '.
+  - : Является {{jsxref("String")}}, начинающийся с '::', содержащий имя [псевдо-элемента](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements),на котором работает анимация.Если анимация не работает на псевдо-элементе, но работает на элементе,значит указанна пустая строка ' '.
 
 ## Конструктор
 

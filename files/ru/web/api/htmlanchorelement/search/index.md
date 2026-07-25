@@ -5,7 +5,7 @@ slug: Web/API/HTMLAnchorElement/search
 
 {{ApiRef("URL API")}}
 
-Свойство **`HTMLHyperlinkElementUtils.search`** – это {{domxref("USVString")}}, содержащий `'?'` с последующими параметрами URL.
+Свойство **`HTMLHyperlinkElementUtils.search`** – это {{jsxref("String")}}, содержащий `'?'` с последующими параметрами URL.
 
 ## Синтаксис
 

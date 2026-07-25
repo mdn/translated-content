@@ -42,7 +42,7 @@ Parmi celles-ci&nbsp;:
     - Le nombre de secondes à attendre avant que la page soit rechargée si l'attribut `content` est un entier positif.
     - Le nombre de secondes à attendre avant que la page soit redirigée vers une autre URL si l'attribut `content` est un entier positif suivi de `;url=` et d'une URL valide.
 
-    Le compte à rebours commence lorsque la page est _complètement chargée_, c'est-à-dire après les événements {{DOMxRef("Window/load_event", "load")}} et {{DOMxRef("Window/pageshow_event", "pageshow")}}.
+    Le compte à rebours commence lorsque la page est _complètement chargée_, c'est-à-dire après les évènements {{DOMxRef("Window/load_event", "load")}} et {{DOMxRef("Window/pageshow_event", "pageshow")}}.
     Voir [Problèmes d'accessibilité](#problèmes_daccessibilité) pour plus d'informations.
 
 - `set-cookie` {{Deprecated_Inline}}

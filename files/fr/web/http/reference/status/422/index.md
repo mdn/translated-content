@@ -24,7 +24,7 @@ Le champ `content` est encodé en {{Glossary("Base64")}} et utilise des sauts de
 
 ```http
 PUT /repos/mdn/content/contents/README.md HTTP/1.1
-Host: api.exemple.com
+Host: api.example.com
 Accept: application/vnd.github+json
 Authorization: Bearer abcd123
 Content-Type: application/json
@@ -48,7 +48,7 @@ Content-Length: 187
 
 {
   "message": "content is not valid Base64",
-  "documentation_url": "https://docs.exemple.com/en/rest/repos/contents"
+  "documentation_url": "https://docs.example.com/en/rest/repos/contents"
 }
 ```
 

@@ -47,7 +47,6 @@ l10n:
 >
 >     Ten en cuenta que es posible que primero necesites crear/actualizar una entrada para el elemento en nuestro [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data), y la entrada debe incluir información de especificación.
 >     Consulta nuestra [guía sobre cómo hacer esto](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
->
 > - **sidebar**
 >   - : Es `svgref` para todas las páginas de guía y referencia de SVG.
 >     Consulta [Estructuras de página: Sidebars](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars) para más detalles.

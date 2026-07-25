@@ -65,4 +65,4 @@ Early-Data: 1
 ## Voir aussi
 
 - Le code de statut {{HTTPStatus("425", "425 Too Early")}}
-- [Attaques par rejeu sur le 0-RTT <sup>(angl.)</sup>](https://www.rfc-editor.org/rfc/rfc8446#appendix-E.5)
+- [Attaques par rejeu sur le 0-RTT <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc8446#appendix-E.5)

@@ -1,5 +1,5 @@
 ---
-title: "HTMLFormElement : événement formdata"
+title: "HTMLFormElement : évènement formdata"
 short-title: formdata
 slug: Web/API/HTMLFormElement/formdata_event
 l10n:

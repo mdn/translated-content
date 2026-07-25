@@ -3,7 +3,7 @@ title: Fonction CSS `attr()`
 short-title: attr()
 slug: Web/CSS/Reference/Values/attr
 l10n:
-  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
+  sourceCommit: 3e21789c23062f7cfffa6fd7e24bd9dfc2c38551
 ---
 
 > [!NOTE]
@@ -127,28 +127,31 @@ Si aucune valeur `<fallback-value>` n'est définie, la valeur de retour est par 
 
 ### Limitations et sécurité
 
-La fonction `attr()` peut référencer des attributs qui n'étaient jamais destinés à être utilisés pour le style et qui pourraient contenir des informations sensibles (par exemple, un jeton de sécurité utilisé par des scripts sur la page). En général, cela ne pose pas de problème, mais cela peut devenir une menace pour la sécurité lorsqu'il est utilisé dans des URL. Par conséquent, vous ne pouvez pas utiliser `attr()` pour construire dynamiquement des URL.
+La fonction `attr()` peut référencer des attributs qui n'étaient jamais destinés à être utilisés pour le style et qui pourraient contenir des informations sensibles (par exemple, un jeton de sécurité utilisé par des scripts sur la page). En général, cela ne pose pas de problème, mais cela peut devenir une menace pour la sécurité lorsqu'il est utilisé dans des URL.
 
-```html
+Par conséquent, vous ne pouvez pas utiliser `attr()` pour construire dynamiquement des URL&nbsp;:
+
+```html example-bad
 <!-- Ceci ne fonctionne pas ! -->
 <span data-icon="https://example.org/icons/question-mark.svg">aide</span>
 ```
 
-```css
+```css example-bad
 span[data-icon] {
   background-image: url(attr(data-icon));
 }
 ```
 
-Cependant, cette restriction ne s'applique qu'aux endroits qui nécessitent strictement un type `<url>`. Certaines fonctions — comme {{CSSxRef("image/image-set", "image-set()")}} — peuvent accepter une valeur `<string>` qui est ensuite interprétée comme une URL, permettant à `attr()` de fonctionner dans ces contextes, en fonction du support du navigateur&nbsp;:
+Cette restriction s'applique également à tout contexte qui peut potentiellement aboutir à une valeur `<url>`.
+Les valeurs qui utilisent `attr()` sont marquées comme _altérées par `attr()`_. L'utilisation d'une valeur altérée par `attr()` en tant que `<url>` rend la déclaration [«&nbsp;invalide au moment du calcul de la valeur&nbsp;» ou IACVT pour faire court <sup>(angl.)</sup>](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
-```css
+Par exemple, les fonctions comme {{CSSxRef("image/image-set","image-set()")}} qui prennent des valeurs qui se résolvent en `<url>` ne fonctionnent pas non plus&nbsp;:
+
+```css example-bad
 span[data-icon] {
   background: image-set(attr(data-icon));
 }
 ```
-
-Les valeurs qui utilisent `attr()` sont marquées comme _altérées par `attr()`_. L'utilisation d'une valeur altérée par `attr()` en tant que `<url>` rend la déclaration [«&nbsp;invalide au moment du calcul de la valeur&nbsp;» ou IACVT pour faire court <sup>(angl.)</sup>](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 ### Rétrocompatibilité
 

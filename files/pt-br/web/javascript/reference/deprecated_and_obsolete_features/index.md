@@ -56,12 +56,12 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 
 ### Iterador
 
-- {{jsxref("StopIteration")}} foi descontinuado.
+- `StopIteration` foi descontinuado.
 - {{jsxref("Iterator")}} foi descontinuado.
 
 ### Métodos de objeto
 
-- {{jsxref("Object.watch", "watch")}} e {{jsxref("Object.unwatch", "unwatch")}} foram descontinuados. No lugar deles, use {{jsxref("Proxy")}} .
+- `watch` e `unwatch` foram descontinuados. No lugar deles, use {{jsxref("Proxy")}} .
 - `__iterator__` foi descontinuado.
 - `Object.prototype.__noSuchMethod__` foi descontinuado. Use {{jsxref("Proxy")}} em seu lugar.
 
@@ -69,7 +69,7 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 
 - {{jsxref("Date.getYear", "getYear")}} e {{jsxref("Date.setYear", "setYear")}} foram afetados pelo Bug do Milênio e foram reagrupados em {{jsxref("Date.getFullYear", "getFullYear")}} e {{jsxref("Date.setFullYear", "setFullYear")}}.
 - Deve-se usar {{jsxref("Date.toISOString", "toISOString")}} ao invés do método descontinuado {{jsxref("Date.toUTCString", "toGMTString")}} em códigos novos.
-- {{jsxref("Date.toLocaleFormat", "toLocaleFormat")}} foi descontinuado.
+- `toLocaleFormat` foi descontinuado.
 
 ### Funções
 
@@ -96,7 +96,7 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 ### Métodos de _string_
 
 - [HTML wrapper methods](/pt-BR/docs/tag/HTML%20wrapper%20methods) como {{jsxref("String.prototype.fontsize")}} e {{jsxref("String.prototype.big")}}.
-- {{jsxref("String.prototype.quote")}} foi removido do Firefox 37.
+- `String.prototype.quote` foi removido do Firefox 37.
 - parâmetros flag não padrões em {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, e {{jsxref("String.prototype.replace")}} foram depreciados.
 
 ## _Features_ obsoletas
@@ -110,28 +110,28 @@ Estas _features_ obsoletas foram totamente removidas do JavaScript e não podem 
 
 ### Function
 
-| Property                              | Description                 |
-| ------------------------------------- | --------------------------- |
-| {{jsxref("Function.arity", "arity")}} | Number of formal arguments. |
+| Property | Description                 |
+| -------- | --------------------------- |
+| `arity`  | Number of formal arguments. |
 
 ### Array
 
-| Property                        | Description                                 |
-| ------------------------------- | ------------------------------------------- |
-| {{jsxref("Array.observe()")}}   | Asynchronously observing changes to Arrays. |
-| {{jsxref("Array.unobserve()")}} | Remove observers.                           |
+| Property            | Description                                 |
+| ------------------- | ------------------------------------------- |
+| `Array.observe()`   | Asynchronously observing changes to Arrays. |
+| `Array.unobserve()` | Remove observers.                           |
 
 ### Number
 
-- {{jsxref("Number.toInteger()")}}
+- `Number.toInteger()`
 
 ### ParallelArray
 
-- {{jsxref("ParallelArray")}}
+- `ParallelArray`
 
 ### Statements
 
-- {{jsxref("Statements/for_each...in", "for each...in")}} is deprecated. Use {{jsxref("Statements/for...of", "for...of")}} instead.
+- `for each...in` is deprecated. Use {{jsxref("Statements/for...of", "for...of")}} instead.
 - Destructuring {{jsxref("Statements/for...in", "for...in")}} is deprecated. Use {{jsxref("Statements/for...of", "for...of")}} instead.
 
 ### E4X

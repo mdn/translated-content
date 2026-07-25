@@ -1,9 +1,9 @@
 ---
-title: stroke-linecap
+title: CSS `stroke-linecap` プロパティ
+short-title: stroke-linecap
 slug: Web/CSS/Reference/Properties/stroke-linecap
-original_slug: Web/CSS/stroke-linecap
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`stroke-linecap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[SVG](/ja/docs/Web/SVG) 要素の閉じていないストロークの開いたサブパスの終端に使用される形状を定義します。指定された場合、要素の {{SVGAttr("stroke-linecap")}} 属性を上書きします。

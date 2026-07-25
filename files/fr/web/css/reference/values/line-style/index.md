@@ -3,7 +3,7 @@ title: Type CSS `<line-style>`
 short-title: <line-style>
 slug: Web/CSS/Reference/Values/line-style
 l10n:
-  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
+  sourceCommit: a06cf3dca37bb7da1d5e5ad98c5d15a10dde3e8c
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<line-style>`** représente des mots-clés qui définissent le style d'une ligne, ou l'absence de ligne. Les valeurs de mot-clé `<line-style>` sont utilisées dans les propriétés [border](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders) et [column](/fr/docs/Web/CSS/Guides/Multicol_layout), aussi bien en version longue qu'en version abrégée&nbsp;:
@@ -28,9 +28,9 @@ Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("
 Le type énuméré `<line-style>` accepte l'une des valeurs listées ci-dessous&nbsp;:
 
 - `none`
-  - : N'affiche aucune ligne. La valeur calculée de l'épaisseur de la ligne est `0` même si une valeur d'épaisseur est spécifiée. Dans le cas des cellules de tableau et de la fusion des bordures, la valeur `none` a la priorité la plus _faible_. Si une autre bordure conflictuelle est définie, elle sera affichée. La valeur `none` est similaire à `hidden`.
+  - : N'affiche aucune ligne. La [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de l'épaisseur de la ligne est `0` même si une valeur d'épaisseur est définie. Dans le cas des cellules de tableau et de la fusion des bordures, la valeur `none` a la priorité la plus _faible_. Si une autre bordure conflictuelle est définie, elle est affichée. La valeur `none` est similaire à `hidden`.
 - `hidden`
-  - : N'affiche aucune ligne. La valeur calculée de l'épaisseur de la ligne est `0` même si une valeur d'épaisseur est spécifiée. Dans le cas des cellules de tableau et de la fusion des bordures, la valeur `hidden` a la priorité la plus _élevée_. Si une autre bordure conflictuelle est définie, elle ne sera pas affichée. La valeur `hidden` est similaire à `none`, mais `hidden` n'est pas une valeur valide pour les styles de contour.
+  - : N'affiche aucune ligne. La [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de l'épaisseur de la ligne est `0` même si une valeur d'épaisseur est définie. Dans le cas des cellules de tableau et de la fusion des bordures, la valeur `hidden` a la priorité la plus _élevée_. Si une autre bordure conflictuelle est définie, elle n'est pas affichée. La valeur `hidden` est similaire à `none`, mais `hidden` n'est pas une valeur valide pour les styles de contour.
 - `dotted`
   - : Affiche une série de points ronds. Le rayon des points est égal à la moitié de la valeur calculée de l'épaisseur de la ligne. L'espacement des points n'est pas défini par la spécification et dépend de l'implémentation.
 - `dashed`
@@ -200,7 +200,7 @@ p + p {
 
 {{EmbedLiveSample("Définir les styles de ligne", 500, 800)}}
 
-Vous remarquerez que la bordure noire n'est pas toujours noire.
+Vous pouvez remarquer que la bordure noire n'est pas toujours noire.
 
 ### Définir les styles et couleurs de ligne
 
@@ -269,4 +269,4 @@ Remarquez que la couleur presque noire `#000001` peut être différente du noir 
 
 - Le module des [arrière-plans et bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - Le module de [l'interface utilisateur de base CSS](/fr/docs/Web/CSS/Guides/Basic_user_interface)
-- Le module de [disposition multicolonne CSS](/fr/docs/Web/CSS/Guides/Multicol_layout)
+- Le module de [disposition multi-colonne CSS](/fr/docs/Web/CSS/Guides/Multicol_layout)

@@ -19,7 +19,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/f
 Par exemple, l'URL suivante comporte un identifiant de fragment (indiqué par le signe _#_) qui marque l'élément avec l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de `section2` comme élément cible du document&nbsp;:
 
 ```
-https://exemple.fr/chemin/document.html#section2
+https://example.com/chemin/document.html#section2
 ```
 
 L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL précédente&nbsp;:

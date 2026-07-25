@@ -66,5 +66,5 @@ a * c + b * c; // 9
 ## 같이 보기
 
 - [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}

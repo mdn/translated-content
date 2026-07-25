@@ -6,11 +6,11 @@ l10n:
   sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
 ---
 
-Le rôle `grid` est destiné à un widget qui contient une ou plusieurs lignes de cellules. La position de chaque cellule est significative et peut être mise au point à l'aide de l'entrée au clavier.
+Le rôle `grid` est destiné à un composant qui contient une ou plusieurs lignes de cellules. La position de chaque cellule est significative et peut être mise au point à l'aide de l'entrée au clavier.
 
 ## Description
 
-Le rôle `grid` est un widget composite contenant une collection d'une ou plusieurs lignes avec une ou plusieurs cellules où certaines ou toutes les cellules de la grille sont accessibles par des méthodes de navigation bidimensionnelle, telles que les touches fléchées directionnelles.
+Le rôle `grid` est un composant composite contenant une collection d'une ou plusieurs lignes avec une ou plusieurs cellules où certaines ou toutes les cellules de la grille sont accessibles par des méthodes de navigation bidimensionnelle, telles que les touches fléchées directionnelles.
 
 ```html
 <table role="grid" aria-labelledby="id-select-your-seat">
@@ -47,11 +47,11 @@ Le rôle `grid` est un widget composite contenant une collection d'une ou plusie
 </table>
 ```
 
-Un widget de grille contient une ou plusieurs lignes avec une ou plusieurs cellules de contenu interactif thématiquement lié. Bien qu'il n'implique pas de présentation visuelle spécifique, il implique une relation entre les éléments. Les utilisations se répartissent en deux catégories&nbsp;: la présentation d'informations tabulaires (grilles de données) et le regroupement d'autres widgets (grilles de mise en page). Même si les grilles de données et les grilles de mise en page utilisent les mêmes rôles, états et propriétés ARIA, les différences dans leur contenu et leur objectif font ressortir des facteurs importants à prendre en compte dans la conception de l'interaction au clavier. Voir [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) pour plus de détails.
+Un composant de grille contient une ou plusieurs lignes avec une ou plusieurs cellules de contenu interactif thématiquement lié. Bien qu'il n'implique pas de présentation visuelle spécifique, il implique une relation entre les éléments. Les utilisations se répartissent en deux catégories&nbsp;: la présentation d'informations tabulaires (grilles de données) et le regroupement d'autres widgets (grilles de mise en page). Même si les grilles de données et les grilles de mise en page utilisent les mêmes rôles, états et propriétés ARIA, les différences dans leur contenu et leur objectif font ressortir des facteurs importants à prendre en compte dans la conception de l'interaction au clavier. Voir [ARIA Authoring Practices Guide <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) pour plus de détails.
 
 Les éléments de cellule ont le rôle [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), sauf s'ils sont un en-tête de ligne ou de colonne, auquel cas, les éléments sont [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) et [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), respectivement. Les éléments de cellule doivent être possédés par des éléments avec un rôle [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role). Les lignes peuvent être regroupées à l'aide du rôle [`rowgroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role).
 
-Si la grille est utilisée comme un widget interactif, des [interactions au clavier](#keyboard_interactions) doivent être mises en œuvre.
+Si la grille est utilisée comme un composant interactif, des [interactions au clavier](#interactions_au_clavier) doivent être mises en œuvre.
 
 ### Propriétés, états et rôles ARIA associés
 
@@ -74,24 +74,24 @@ Si la grille est utilisée comme un widget interactif, des [interactions au clav
   - : Si l'utilisateur·ice peut naviguer dans la grille mais ne peut pas modifier la valeur ou les valeurs de la grille, l'attribut [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) doit être défini sur `true`. La valeur par défaut est `false`.
 
 > [!NOTE]
-> Pour de nombreux cas d'utilisation, un élément HTML {{HTMLElement('table')}} est suffisant car il et les différents éléments de tableau incluent déjà de nombreux rôles ARIA.
+> Pour de nombreux cas d'utilisation, un élément HTML {{HTMLElement("table")}} est suffisant, car il et les différents éléments de tableau incluent déjà de nombreux rôles ARIA.
 
 ### Interactions au clavier
 
-Lorsqu'un·e utilisateur·ice de clavier rencontre une grille, il navigue dans les lignes et les colonnes à l'aide des touches <kbd>gauche</kbd>, <kbd>droite</kbd>, <kbd>haut</kbd> et <kbd>bas</kbd>. Pour activer le composant interactif, il utilisera les touches <kbd>entrée</kbd> et <kbd>espace</kbd>.
+Lorsqu'un·e utilisateur·ice de clavier rencontre une grille, il navigue dans les lignes et les colonnes à l'aide des touches <kbd>gauche</kbd>, <kbd>droite</kbd>, <kbd>haut</kbd> et <kbd>bas</kbd>. Pour activer le composant interactif, il utilise les touches <kbd>entrée</kbd> et <kbd>espace</kbd>.
 
-| Touche                             | Action                                                                                                                                                                                                                                                                                                                           |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <kbd>→</kbd>                       | Déplace la sélection d'une cellule vers la droite. En option (grilles de mise en page), si la sélection est sur la cellule la plus à droite de la ligne, la sélection peut passer à la première cellule de la ligne suivante. Si la sélection est sur la dernière cellule de la grille, la sélection ne bouge pas.               |
-| <kbd>←</kbd>                       | Déplace la sélection d'une cellule vers la gauche. En option (grilles de mise en page), si la sélection est sur la cellule la plus à gauche de la ligne, la sélection peut passer à la dernière cellule de la ligne précédente. Si la sélection est sur la première cellule de la grille, la sélection ne bouge pas.             |
-| <kbd>↓</kbd>                       | Déplace la sélection d'une cellule vers le bas. En option (grilles de mise en page), si la sélection est sur la cellule du bas de la colonne, la sélection peut passer à la cellule du haut de la colonne suivante. Si la sélection est sur la dernière cellule de la grille, la sélection ne bouge pas.                         |
-| <kbd>↑</kbd>                       | Déplace la sélection d'une cellule vers le haut. En option (grilles de mise en page), si la sélection est sur la cellule du haut de la colonne, la sélection peut passer à la cellule du bas de la colonne précédente. Si la sélection est sur la première cellule de la grille, la sélection ne bouge pas.                      |
-| <kbd>Page&nbsp;bas</kbd>           | Déplace la sélection vers le bas d'un nombre de lignes déterminé par l'auteur, faisant généralement défiler la grille pour que la dernière ligne de l'ensemble de lignes actuellement visibles devienne l'une des premières lignes visibles. Si la sélection est sur la dernière ligne de la grille, la sélection ne bouge pas.  |
-| <kbd>Page&nbsp;haut</kbd>          | Déplace la sélection vers le haut d'un nombre de lignes déterminé par l'auteur, faisant généralement défiler la grille pour que la première ligne de l'ensemble de lignes actuellement visibles devienne l'une des dernières lignes visibles. Si la sélection est sur la première ligne de la grille, la sélection ne bouge pas. |
-| <kbd>Début</kbd>                   | Déplace la sélection vers la première cellule de la ligne contenant la sélection.                                                                                                                                                                                                                                                |
-| <kbd>Fin</kbd>                     | Déplace la sélection vers la dernière cellule de la ligne contenant la sélection.                                                                                                                                                                                                                                                |
-| <kbd>Ctrl</kbd> + <kbd>Début</kbd> | Déplace la sélection vers la première cellule de la première ligne.                                                                                                                                                                                                                                                              |
-| <kbd>Ctrl</kbd> + <kbd>Fin</kbd>   | Déplace la sélection vers la dernière cellule de la dernière ligne.                                                                                                                                                                                                                                                              |
+| Touche                             | Action                                                                                                                                                                                                                                                                                                                          |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <kbd>→</kbd>                       | Déplace la sélection d'une cellule vers la droite. En option (grilles de mise en page), si la sélection est sur la cellule la plus à droite de la ligne, la sélection peut passer à la première cellule de la ligne suivante. Si la sélection est sur la dernière cellule de la grille, la sélection ne bouge pas.              |
+| <kbd>←</kbd>                       | Déplace la sélection d'une cellule vers la gauche. En option (grilles de mise en page), si la sélection est sur la cellule la plus à gauche de la ligne, la sélection peut passer à la dernière cellule de la ligne précédente. Si la sélection est sur la première cellule de la grille, la sélection ne bouge pas.            |
+| <kbd>↓</kbd>                       | Déplace la sélection d'une cellule vers le bas. En option (grilles de mise en page), si la sélection est sur la cellule du bas de la colonne, la sélection peut passer à la cellule du haut de la colonne suivante. Si la sélection est sur la dernière cellule de la grille, la sélection ne bouge pas.                        |
+| <kbd>↑</kbd>                       | Déplace la sélection d'une cellule vers le haut. En option (grilles de mise en page), si la sélection est sur la cellule du haut de la colonne, la sélection peut passer à la cellule du bas de la colonne précédente. Si la sélection est sur la première cellule de la grille, la sélection ne bouge pas.                     |
+| <kbd>Page&nbsp;bas</kbd>           | Déplace la sélection vers le bas d'un nombre de lignes déterminé par le site, faisant généralement défiler la grille pour que la dernière ligne de l'ensemble de lignes actuellement visibles devienne l'une des premières lignes visibles. Si la sélection est sur la dernière ligne de la grille, la sélection ne bouge pas.  |
+| <kbd>Page&nbsp;haut</kbd>          | Déplace la sélection vers le haut d'un nombre de lignes déterminé par le site, faisant généralement défiler la grille pour que la première ligne de l'ensemble de lignes actuellement visibles devienne l'une des dernières lignes visibles. Si la sélection est sur la première ligne de la grille, la sélection ne bouge pas. |
+| <kbd>Début</kbd>                   | Déplace la sélection vers la première cellule de la ligne contenant la sélection.                                                                                                                                                                                                                                               |
+| <kbd>Fin</kbd>                     | Déplace la sélection vers la dernière cellule de la ligne contenant la sélection.                                                                                                                                                                                                                                               |
+| <kbd>Ctrl</kbd> + <kbd>Début</kbd> | Déplace la sélection vers la première cellule de la première ligne.                                                                                                                                                                                                                                                             |
+| <kbd>Ctrl</kbd> + <kbd>Fin</kbd>   | Déplace la sélection vers la dernière cellule de la dernière ligne.                                                                                                                                                                                                                                                             |
 
 Si des cellules, des lignes ou des colonnes peuvent être sélectionnées, les combinaisons de touches suivantes sont couramment utilisées&nbsp;:
 
@@ -379,7 +379,7 @@ Même si l'utilisation du clavier est correctement implémentée, certain·e·s 
 - [ARIA&nbsp;: rôle `gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
 - [ARIA&nbsp;: rôle `rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
 - [ARIA&nbsp;: rôle `columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- L'élément HTML {{HTMLElement('table')}}
+- L'élément HTML {{HTMLElement("table")}}
 - L'attribut ARIA [`aria-level`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level)
 - L'attribut ARIA [`aria-multiselectable`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
 - L'attribut ARIA [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)

@@ -23,13 +23,13 @@ Cette réponse est de plus en plus utilisée depuis que certains navigateurs, co
 
 ## Exemples
 
-### Délai d'expiration dans la soumission d'un formulaire
+### Délai d'expiration dans l'envoi d'un formulaire
 
-L'exemple suivant montre ce qu'un client peut envoyer lorsqu'un élément [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file) utilise une image sur la soumission de formulaire avec `method="post"`&nbsp;:
+L'exemple suivant montre ce qu'un client peut envoyer lorsqu'un élément [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file) utilise une image sur l'envoi de formulaire avec `method="post"`&nbsp;:
 
 ```http
 POST /upload HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: multipart/form-data; boundary=----Boundary1234
 Content-Length: 4012345
 
@@ -42,7 +42,7 @@ Content-Type: image/jpeg
 ```
 
 Si les données ne sont pas reçues en totalité en raison de problèmes de réseau ou de latence, le serveur peut mettre fin à la connexion.
-Les clients peuvent répéter la demande et une nouvelle connexion sera utilisée&nbsp;:
+Les clients peuvent répéter la demande et une nouvelle connexion est utilisée&nbsp;:
 
 ```http
 HTTP/1.1 408 Request Timeout

@@ -51,17 +51,17 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: media-src https://exemple.com/
+Content-Security-Policy: media-src https://example.com/
 ```
 
 Ces éléments HTML {{HTMLElement("audio")}}, {{HTMLElement("video")}} et
 {{HTMLElement("track")}} seront bloqués et ne se chargeront pas&nbsp;:
 
 ```html
-<audio src="https://hors-exemple.com/audio"></audio>
+<audio src="https://hors-example.com/audio"></audio>
 
-<video src="https://hors-exemple.com/video">
-  <track kind="subtitles" src="https://hors-exemple.com/subtitles" />
+<video src="https://hors-example.com/video">
+  <track kind="subtitles" src="https://hors-example.com/subtitles" />
 </video>
 ```
 

@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 
 Константа `MIN_SAFE_INTEGER` имеет значение `-9007199254740991`. Смысл этого числа в том, что в JavaScript используется [формат чисел с плавающей запятой двойной точности](https://ru.wikipedia.org/wiki/Число_двойной_точности), как определено в стандарте [IEEE 754](https://ru.wikipedia.org/wiki/IEEE_754), а он может безопасно представлять числа только в диапазоне от `-(253 - 1)` до `253 - 1`.
 
-Поскольку `MIN_SAFE_INTEGER` является статическим свойством объекта {{jsxref("Global_Objects/Number", "Number")}}, вы всегда должны использовать его как `Number.MIN_SAFE_INTEGER`, а не как свойство созданного вами объекта {{jsxref("Global_Objects/Number", "Number")}}.
+Поскольку `MIN_SAFE_INTEGER` является статическим свойством объекта {{jsxref("Number")}}, вы всегда должны использовать его как `Number.MIN_SAFE_INTEGER`, а не как свойство созданного вами объекта {{jsxref("Number")}}.
 
 ## Примеры
 

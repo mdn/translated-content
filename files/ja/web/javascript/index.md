@@ -2,7 +2,7 @@
 title: JavaScript
 slug: Web/JavaScript
 l10n:
-  sourceCommit: 04158640487c17d515de8078c9307a2f906377d0
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 **JavaScript** (**JS**) は軽量でインタープリター型（あるいは{{Glossary("Just_In_Time_Compilation", "実行時コンパイルされる")}}）{{Glossary("First-class Function", "第一級関数")}}を備えたプログラミング言語です。ウェブページでよく使用されるスクリプト言語として知られ、[多くのブラウザー以外の環境](https://ja.wikipedia.org/wiki/JavaScript#その他の環境での利用)、例えば {{Glossary("Node.js")}} や [Apache CouchDB](https://couchdb.apache.org/) や [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/) などでも使用されています。 JavaScript は[プロトタイプベース](/ja/docs/Glossary/Prototype-based_programming)で、[ガベージコレクションのある](/ja/docs/Glossary/Garbage_collection)、[動的](/ja/docs/Glossary/Dynamic_typing)な言語であり、命令型、関数型、オブジェクト指向など、複数のパラダイムに対応しています。

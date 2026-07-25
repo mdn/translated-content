@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
-La valeur **`color-scheme`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément HTML {{HTMLElement("meta")}} indique un schéma de couleurs suggéré que les agents utilisateur·ice·s doivent utiliser pour une page.
+La valeur **`color-scheme`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément HTML {{HTMLElement("meta")}} indique un schéma de couleurs suggéré que les agents utilisateurs doivent utiliser pour une page.
 Si elle est définie, vous définissez le schéma de couleurs à l'aide d'un attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) dans l'élément `<meta>` avec une valeur CSS {{CSSxRef("color-scheme")}} valide.
 
 La couleur de thème fonctionne au _niveau du document_ de la même manière que la propriété CSS {{CSSxRef("color-scheme")}} spécifie les schémas de couleurs préférés et acceptés des _éléments individuels_.

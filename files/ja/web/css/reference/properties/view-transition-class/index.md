@@ -1,17 +1,19 @@
 ---
-title: view-transition-class
+title: CSS `view-transition-class` プロパティ
+short-title: view-transition-class
 slug: Web/CSS/Reference/Properties/view-transition-class
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 7447816a276e95c5b4c2ab2f6a1f80b081371de2
 ---
 
-**`view-transition-class`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択された要素に識別用のクラス（{{cssxref("custom-ident")}}）をつけて、それらの要素のビュー遷移のスタイル設定のための追加の方法を提供します。
+**`view-transition-class`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択された要素に 1 つ以上の識別用のクラス ({{cssxref("custom-ident")}}) をつけて、それらの要素のビュー遷移のスタイル設定のための追加の方法を提供します。
 
 ## 構文
 
 ```css
 /* <custom-ident> 値の例 */
 view-transition-class: card;
+view-transition-class: card fast-slide;
 
 /* キーワード値 */
 view-transition-class: none;
@@ -27,7 +29,7 @@ view-transition-class: unset;
 ### 値
 
 - {{cssxref("custom-ident")}}
-  - : 選択された要素が、ルートビューの遷移とは別個の[ビュー遷移](/ja/docs/Web/API/View_Transition_API)に参加するように指定する識別名です。この識別子は固有のものである必要があります。2 つのレンダリング済み要素に同時に同じ `view-transition-name` が設定されている場合、{{domxref("ViewTransition.ready")}} はこれを拒否し、遷移はスキップされます。
+  - : スタイル設定のためにビュー遷移の擬似要素を選択する際に使用される識別名です。`view-transition-name` とは異なり、クラス名は固有の名称である必要はなく、また、その要素が別個のビュー遷移グループに参加することにもなりません。
 - `none`
   - : この要素に対して生成される、名前付きビュー遷移擬似要素には、どのクラスも適用されません。
 
@@ -50,21 +52,76 @@ view-transition-class: unset;
 
 ## 例
 
+### 複数の要素にまたがる共有クラスのスタイル設定
+
+この例では、3 枚のカードそれぞれに固有の {{cssxref("view-transition-name")}} が割り当てられていますが（新旧の状態を対応付けるために要求される）、これらはすべて同じ `view-transition-class` を共有しています。これにより、それぞれの名前ごとにスタイルを個別に繰り返すのではなく、単一のルールでこれらの遷移すべてに一括してスタイルを設定することができます。`view-transition-name` とは異なり、`view-transition-class` には固有の値が必要ではありません。
+
+```html
+<div class="card" id="card1">カード 1</div>
+<div class="card" id="card2">カード 2</div>
+<div class="card" id="card3">カード 3</div>
+```
+
 ```css
-::view-transition-group(.fast-card-slide) {
-  animation-duration: 3s;
+/* それぞれの要素には、固有の view-transition-name を持つ必要がある */
+#card1 {
+  view-transition-name: card-1;
 }
 
-.product {
-  view-transition-class: fast-card-slide;
+#card2 {
+  view-transition-name: card-2;
 }
 
-.product#card1 {
-  view-transition-name: show-card;
+#card3 {
+  view-transition-name: card-3;
 }
 
-.product#card2 {
-  view-transition-name: hide-card;
+/* しかし、これらはすべて同じビュー遷移クラスを共有することができる */
+.card {
+  view-transition-class: card;
+}
+
+/* この単一のルールは、3 枚のカードすべての遷移に適用される */
+::view-transition-group(.card) {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+```
+
+### 1 つの要素に対して複数のクラスを使用
+
+`view-transition-class` の値は、空白で区切られた識別子のリストにすることができます。これにより、同じ要素に対して複数の「原子的な」スタイルを組み合わせ、ビュー遷移の擬似要素とは独立してそれぞれを別個に指定することが可能になります。この例では、両方のカードが同じ 2 つのクラス（アニメーションを制御する `slide` と、その再生時間を制御する `fast-transition`）を共有していますが、それぞれのカードにはなお固有の {{cssxref("view-transition-name")}} が割り当てられています。
+
+```html
+<div class="card" id="card1">カード 1</div>
+<div class="card" id="card2">カード 2</div>
+```
+
+```css
+.card {
+  view-transition-class: slide fast-transition;
+}
+
+#card1 {
+  view-transition-name: card-1;
+}
+
+#card2 {
+  view-transition-name: card-2;
+}
+
+/* `slide` クラスは、どのアニメーションを実行するかを決定する... */
+::view-transition-new(.slide) {
+  animation-name: slide-in;
+}
+
+::view-transition-old(.slide) {
+  animation-name: slide-out;
+}
+
+/* ...一方、`fast-transition` クラスは、その遷移を実行する時間を制御する */
+::view-transition-group(.fast-transition) {
+  animation-duration: 0.5s;
 }
 ```
 

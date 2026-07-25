@@ -49,7 +49,7 @@ Clear-Site-Data: "*"
     > Dans les navigateurs qui prennent en charge le type de données `"clientHints"`, les indications client sont également effacées lorsque les types `"cache"`, `"cookies"` ou `"*"` sont définis. `"clientHints"` n'est donc nécessaire que lorsque aucun de ces autres types n'est défini.
 
 - `"cookies"`
-  - : Le serveur signale que le client doit supprimer tous les cookies pour l'origine de l'URL de la réponse. Les identifiants d'authentification HTTP sont également effacés. Cela affecte l'ensemble du domaine enregistré, y compris les sous-domaines. Ainsi, `https://exemple.com` ainsi que `https://stage.exemple.com`, auront leurs cookies supprimés.
+  - : Le serveur signale que le client doit supprimer tous les cookies pour l'origine de l'URL de la réponse. Les identifiants d'authentification HTTP sont également effacés. Cela affecte l'ensemble du domaine enregistré, y compris les sous-domaines. Ainsi, `https://example.com` ainsi que `https://stage.example.com`, auront leurs cookies supprimés.
 
 - `"executionContexts"` {{Experimental_Inline}}
   - : Le serveur signale que le client doit recharger tous les contextes de navigation pour l'origine de l'URL de la réponse ({{DOMxRef("Location.reload")}}).
@@ -78,7 +78,7 @@ Clear-Site-Data: "*"
 ### Se déconnecter d'un site
 
 Si un·e utilisateur·ice se déconnecte de votre site ou service, vous pouvez souhaiter supprimer les données stockées localement, y compris tout contenu préchargé ou pré‑rendu pour des {{DOMxRef("Speculation Rules API", "navigations spéculées", "", "nocode")}}.
-Pour ce faire, ajoutez l'en-tête `Clear-Site-Data` à la page qui confirme que la déconnexion du site a été effectuée avec succès (`https://exemple.com/logout`, par exemple)&nbsp;:
+Pour ce faire, ajoutez l'en-tête `Clear-Site-Data` à la page qui confirme que la déconnexion du site a été effectuée avec succès (`https://example.com/logout`, par exemple)&nbsp;:
 
 ```http
 Clear-Site-Data: "cache", "cookies", "storage", "executionContexts", "prefetchCache", "prerenderCache"
@@ -86,7 +86,7 @@ Clear-Site-Data: "cache", "cookies", "storage", "executionContexts", "prefetchCa
 
 ### Suppression des cookies
 
-Si cet en-tête est renvoyé dans la réponse à `https://exemple.com/clear-cookies`, tous les cookies du même domaine `https://exemple.com` et de ses sous-domaines (par exemple `https://stage.exemple.com`) seront supprimés.
+Si cet en-tête est renvoyé dans la réponse à `https://example.com/clear-cookies`, tous les cookies du même domaine `https://example.com` et de ses sous-domaines (par exemple `https://stage.example.com`) seront supprimés.
 
 ```http
 Clear-Site-Data: "cookies"
@@ -94,7 +94,7 @@ Clear-Site-Data: "cookies"
 
 ### Suppression des spéculations
 
-Si cet en‑tête est renvoyé dans la réponse à `https://exemple.com/change-state.json`, tous les pré‑rendus des {{DOMxRef("Speculation Rules API", "navigations spéculées", "", "nocode")}} sur le même domaine `https://exemple.com` et ses sous‑domaines (par exemple `https://stage.exemple.com`) seront supprimés.
+Si cet en‑tête est renvoyé dans la réponse à `https://example.com/change-state.json`, tous les pré‑rendus des {{DOMxRef("Speculation Rules API", "navigations spéculées", "", "nocode")}} sur le même domaine `https://example.com` et ses sous‑domaines (par exemple `https://stage.example.com`) seront supprimés.
 
 ```http
 Clear-Site-Data: "prerenderCache"

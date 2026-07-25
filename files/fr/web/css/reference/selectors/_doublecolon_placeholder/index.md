@@ -73,7 +73,7 @@ Avec cette méthode, le contenu de l'indication est disponible même si des info
 
 ```html
 <label for="user-email">Votre adresse mail</label>
-<span id="user-email-hint" class="input-hint">Exemple : toto@exemple.fr</span>
+<span id="user-email-hint" class="input-hint">Exemple : toto@example.com</span>
 <input
   id="user-email"
   aria-describedby="user-email-hint"

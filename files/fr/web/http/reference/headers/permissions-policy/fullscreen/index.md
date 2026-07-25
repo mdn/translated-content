@@ -32,16 +32,16 @@ La liste d'autorisation par défaut pour `fullscreen` est `self`. Le contexte de
 
 ### Utilisation simple
 
-SecureCorp Inc. souhaite interdire `fullscreen` dans tous les cadres intégrés inter-origines, sauf ceux dont l'origine est `https://exemple.com`. Elle peut le faire en envoyant l'en-tête de réponse HTTP suivant pour définir une politique de permissions&nbsp;:
+SecureCorp Inc. souhaite interdire `fullscreen` dans tous les cadres intégrés inter-origines, sauf ceux dont l'origine est `https://example.com`. Elle peut le faire en envoyant l'en-tête de réponse HTTP suivant pour définir une politique de permissions&nbsp;:
 
 ```http
-Permissions-Policy: fullscreen=(self "https://exemple.com")
+Permissions-Policy: fullscreen=(self "https://example.com")
 ```
 
 SecureCorp Inc. doit également inclure un attribut {{HTMLElement("iframe", "allow", "#attributs")}} sur chaque élément `<iframe>` où `fullscreen` doit être autorisé&nbsp;:
 
 ```html
-<iframe src="https://exemple.com/presentation" allow="fullscreen"></iframe>
+<iframe src="https://example.com/presentation" allow="fullscreen"></iframe>
 ```
 
 > [!NOTE]

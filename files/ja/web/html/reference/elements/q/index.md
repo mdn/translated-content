@@ -1,12 +1,10 @@
 ---
-title: "<q>: インライン引用要素"
+title: HTML `<q>` インライン引用要素
+short-title: <q>
 slug: Web/HTML/Reference/Elements/q
-original_slug: Web/HTML/Element/q
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<q>`** は [HTML](/ja/docs/Web/HTML) の要素で、中に含まれるテキストが短いインラインの引用であることを示します。最近の多くのブラウザーでは、文字列を引用符で囲むように実装しています。この要素は、段落区切りをまたがない短い引用のためのものです。長文の引用には、 {{HTMLElement("blockquote")}} 要素を使用してください。
 
@@ -14,10 +12,10 @@ l10n:
 
 ```html interactive-example
 <p>
-  When Dave asks HAL to open the pod bay door, HAL answers:
+  Dave が HAL にポッドベイのドアを開けるよう頼むと、HAL はこう答える。
   <q
     cite="https://www.imdb.com/title/tt0062622/quotes/?item=qt0396921&ref_=ext_shr_lnk">
-    I'm sorry, Dave. I'm afraid I can't do that.
+    Dave、ごめんなさい。残念ながら、それはできません。
   </q>
 </p>
 ```
@@ -92,8 +90,10 @@ q {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

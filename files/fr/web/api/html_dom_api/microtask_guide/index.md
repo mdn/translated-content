@@ -142,7 +142,7 @@ customElement.prototype.getData = function (url) {
 };
 ```
 
-Cela équilibre les clauses en faisant en sorte que les deux situations gèrent la définition de `data` et le déclenchement de l'événement `load` dans une microtâche (en utilisant `queueMicrotask()` dans la clause `if` et en utilisant les promesses utilisées par {{DOMxRef("Window/fetch", "fetch()")}} dans la clause `else`).
+Cela équilibre les clauses en faisant en sorte que les deux situations gèrent la définition de `data` et le déclenchement de l'évènement `load` dans une microtâche (en utilisant `queueMicrotask()` dans la clause `if` et en utilisant les promesses utilisées par {{DOMxRef("Window/fetch", "fetch()")}} dans la clause `else`).
 
 #### Regroupement des opérations
 

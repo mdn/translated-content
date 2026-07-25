@@ -25,9 +25,9 @@ new Int8Array(buffer [, byteOffset [, length]]);
   - : Возвращает числовое значение размера элемента массива. `1` в случае с `Int8Array`.
 - Int8Array.length
   - : Статическая длина конструктора `Int8Array`, всегда равна `3` (т.к. конструктор принимает до 3 аргументов). Чтобы узнать длину созданного массива, see {{jsxref("TypedArray.prototype.length", "Int8Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Int8Array.name")}}
+- {{jsxref("Function.name", "Int8Array.name")}}
   - : Возвращает строчное значение имени конструктора. В случае с `Int8Array`: "Int8Array".
-- {{jsxref("TypedArray.prototype", "Int8Array.prototype")}}
+- {{jsxref("TypedArray", "Int8Array.prototype")}}
   - : Прототип для _TypedArray_ objects.
 
 ## Methods
@@ -39,7 +39,7 @@ new Int8Array(buffer [, byteOffset [, length]]);
 
 ## `Int8Array` prototype
 
-All `Int8Array` objects inherit from {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+All `Int8Array` objects inherit from {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Properties
 
@@ -106,7 +106,7 @@ All `Int8Array` objects inherit from {{jsxref("TypedArray.prototype", "%TypedArr
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Int8Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Int8Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Int8Array.prototype[@@iterator]()")}}
   - : Returns a new `Array Iterator` object that contains the values for each index in the array.
 
 ## Examples
@@ -152,7 +152,7 @@ var int8 = new Int8Array(iterable);
 
 ## Compatibility notes
 
-Starting with ECMAScript 2015, `Int8Array` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `Int8Array` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+Starting with ECMAScript 2015, `Int8Array` constructors require to be constructed with a {{jsxref("new")}} operator. Calling a `Int8Array` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
 var dv = Int8Array([1, 2, 3]);

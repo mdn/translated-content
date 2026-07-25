@@ -29,16 +29,16 @@ La liste d'autorisation par défaut pour `geolocation` est `self`. Le contexte d
 
 ### Utilisation simple
 
-SecureCorp Inc. souhaite désactiver `geolocation` dans tous les cadres intégrés inter-origines, sauf pour ceux dont l'origine est `https://exemple.com`. Elle peut le faire en envoyant l'en-tête de réponse HTTP suivant pour définir une politique de permissions&nbsp;:
+SecureCorp Inc. souhaite désactiver `geolocation` dans tous les cadres intégrés inter-origines, sauf pour ceux dont l'origine est `https://example.com`. Elle peut le faire en envoyant l'en-tête de réponse HTTP suivant pour définir une politique de permissions&nbsp;:
 
 ```http
-Permissions-Policy: geolocation=(self "https://exemple.com")
+Permissions-Policy: geolocation=(self "https://example.com")
 ```
 
 SecureCorp Inc. doit également inclure un attribut {{HTMLElement("iframe", "allow", "#attributs")}} sur chaque élément `<iframe>` où `geolocation` doit être autorisé&nbsp;:
 
 ```html
-<iframe src="https://exemple.com/map" allow="geolocation"></iframe>
+<iframe src="https://example.com/map" allow="geolocation"></iframe>
 ```
 
 > [!NOTE]

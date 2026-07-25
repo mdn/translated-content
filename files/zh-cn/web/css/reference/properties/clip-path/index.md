@@ -206,8 +206,7 @@ clip-path: unset;
       A 0.25,0.25,1,1,1,1,0.3
       C 1,0.7,0.5,1,0.5,1 Z" /&gt;
   &lt;/clipPath&gt;
-&lt;/svg&gt;</pre
-      >
+&lt;/svg&gt;</pre>
     </div>
     <div class="row">
       <div class="cell">

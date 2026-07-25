@@ -55,8 +55,7 @@ ctx.fill();
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea
->
+ctx.fill();</textarea>
 ```
 
 ```js hidden

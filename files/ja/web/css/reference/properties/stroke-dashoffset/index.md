@@ -1,9 +1,9 @@
 ---
-title: stroke-dashoffset
+title: CSS `stroke-dashoffset` プロパティ
+short-title: stroke-dashoffset
 slug: Web/CSS/Reference/Properties/stroke-dashoffset
-original_slug: Web/CSS/stroke-dashoffset
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`stroke-dashoffset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[SVG](/ja/docs/Web/SVG) 要素に関連付けられた[破線配列](/ja/docs/Web/CSS/Reference/Properties/stroke-dasharray)の描画開始点のオフセットを定義します。指定された場合、要素の {{SVGAttr("stroke-dashoffset")}} 属性を上書きします。

@@ -49,7 +49,7 @@ slug: Web/HTML/Reference/Elements/input/button
 > [!NOTE]
 > Хотя элементы `<input>` с типом `button` по-прежнему являются абсолютно корректными в HTML, новый элемент {{HTMLElement("button")}} теперь является предпочтительным способом создания кнопок. Учитывая, что текст элемента {{HTMLElement("button")}} вставлен между открывающим и закрывающим тегами, вы можете включить в тег HTML, даже изображения.
 
-| **[Значение](#значение)**         | {{domxref("DOMString")}} используется в качестве метки кнопки                                                           |
+| **[Значение](#значение)**         | {{jsxref("String")}} используется в качестве метки кнопки                                                               |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | **Событие**                       | [`click`](/ru/docs/Web/API/Element/click_event)                                                                         |
 | **Поддерживаемые общие атрибуты** | [`type`](/ru/docs/Web/HTML/Reference/Elements/input#type) и [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) |
@@ -58,7 +58,7 @@ slug: Web/HTML/Reference/Elements/input/button
 
 ## Значение
 
-Атрибут значения элементов `<input type="button">` elements' [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) содержит строку {{domxref("DOMString")}} , которая используется в качестве метки кнопки.
+Атрибут значения элементов `<input type="button">` elements' [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) содержит строку {{jsxref("String")}} , которая используется в качестве метки кнопки.
 
 ```html
 <input type="button" value="Нажми на меня" />

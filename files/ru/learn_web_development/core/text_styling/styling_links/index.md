@@ -196,8 +196,7 @@ a:active {
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <p>There are several browsers available, such as <a href="https://www.mozilla.org/en-US/firefox/">Mozilla
  Firefox</a>, <a href="https://www.google.com/chrome/index.html">Google Chrome</a>, and
-<a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a>.</p></textarea
-  >
+<a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a>.</p></textarea>
 
   <h2>CSS Input</h2>
   <textarea
@@ -226,8 +225,7 @@ a:hover {
 
 a:active {
 
-}</textarea
-  >
+}</textarea>
 
   <h2>Output</h2>
   <div

@@ -1,9 +1,9 @@
 ---
-title: Firefox 151 release notes for developers (Stable)
-short-title: Firefox 151 (Stable)
+title: Firefox 151 release notes for developers
+short-title: Firefox 151
 slug: Mozilla/Firefox/Releases/151
 l10n:
-  sourceCommit: 3673b96dceb4e6ac3739103e3c7646e14868a2b2
+  sourceCommit: 681ee4beb90b7e0d001f8938df41d5af0f602fe7
 ---
 
 このページでは、開発者に影響する Firefox 151 の変更点をまとめています。
@@ -36,7 +36,6 @@ Firefox 151 は、米国時間 [2026 年 5 月 19 日](https://whattrainisitnow.
   DOM キャンバスは関連づけられた {{htmlelement("canvas")}} 要素の `lang` 属性からこのコンテキストを継承しますが、これは `<canvas>` に関連づけられる前にレンダリングされる可能性があるオフスクリーンのキャンバスにコンテキストを設定する時に役立ちます ([Firefox bug 1943070](https://bugzil.la/1943070))。
 - [`options.keyboardLock`](/ja/docs/Web/API/Element/requestFullscreen#keyboardlock) プロパティを、{{domxref("Element.requestFullscreen()")}} のオプションとして渡すことが可能になりました。要素を全画面モードで表示しているときに、ウェブサイトからキーボードのロックを要求できます。
   これは <kbd>Esc</kbd> キーによる要素の全画面表示の解除を無効にする (代わりに長押しが必要です)、および以前から予約されていたいくつかのブラウザーのショートカットキーに介入してデフォルトのアクションを抑止することができます ([Firefox bug 2032302](https://bugzil.la/2032302))。
-- {{domxref("CanvasRenderingContext2D.lang")}} プロパティをサポートしました。オフスクリーンのキャンバスのレンダリング言語を明示的に指定する、およびレンダリングコンテキスト作成後に言語を変更することができます ([Firefox bug 1943070](https://bugzil.la/1943070))。
 - {{domxref("GPUSupportedLimits")}} の `maxStorageBuffersInFragmentStage`、`maxStorageBuffersInVertexStage`、`maxStorageTexturesInFragmentStage`、`maxStorageTexturesInVertexStage` プロパティを部分的にサポートしました。
   これらのプロパティは、`maxStorageBuffersPerShaderStage` および `maxStorageTexturesPerShaderStage` の制限値を報告します。
   デバイスを作成するときにステージ*単位*の制限値として要求した値は無視されます ([Firefox bug 2006720](https://bugzil.la/2006720))。

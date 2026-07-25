@@ -14,7 +14,7 @@ l10n:
 
 ## 설명
 
-`f` 함수가 최상위 코드에 의해 호출된 경우 `f.caller`의 값은 {{jsxref("Operators/null", "null")}}이고, 그렇지 않으면 `f`를 호출한 함수입니다. `f`를 호출한 함수가 엄격 모드 함수인 경우 `f.caller`의 값도 `null`입니다.
+`f` 함수가 최상위 코드에 의해 호출된 경우 `f.caller`의 값은 {{jsxref("null")}}이고, 그렇지 않으면 `f`를 호출한 함수입니다. `f`를 호출한 함수가 엄격 모드 함수인 경우 `f.caller`의 값도 `null`입니다.
 
 ECMAScript 사양에 지정된 유일한 동작은 `Function.prototype`에 모든 `get` 또는 `set` 요청("포이즌 필 접근자"(poison pill accessor)라고 함)에 대해 무조건 {{jsxref("TypeError")}}가 발생하는 초기 `caller` 접근자가 있다는 것과 구현체에서 이 의미를 변경할 수 없는 엄격하지 않은 일반 함수를 제외한 어떤 함수에도 엄격한 모드 함수 값이 없어야 한다는 점에 유의하시기 바랍니다. `caller` 속성의 실제 동작은 오류를 발생시키는 것 이외의 경우 구현체에 따라 정의됩니다. 예를 들어 Chrome은 자체 데이터 속성으로 정의하는 반면, Firefox와 Safari는 초기 포이즌 필 `Function.prototype.caller` 접근자를 확장하여 엄격한 함수가 아닌 `this` 값을 특별히 처리합니다.
 

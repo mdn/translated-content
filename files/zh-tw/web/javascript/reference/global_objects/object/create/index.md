@@ -163,13 +163,11 @@ o2 = Object.create(
 ```js
 if (typeof Object.create !== "function") {
   Object.create = function (proto, propertiesObject) {
-    if (
-      !(
-        proto === null ||
-        typeof proto === "object" ||
-        typeof proto === "function"
-      )
-    ) {
+    if (!(
+      proto === null ||
+      typeof proto === "object" ||
+      typeof proto === "function"
+    )) {
       throw TypeError("Argument must be an object, or null");
     }
     var temp = new Object();

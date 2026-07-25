@@ -1,20 +1,26 @@
 ---
-title: "<nobr>: 無改行テキスト要素"
+title: HTML `<nobr>` 無改行テキスト要素
+short-title: <nobr>
 slug: Web/HTML/Reference/Elements/nobr
-original_slug: Web/HTML/Element/nobr
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<nobr>`** は [HTML](/ja/docs/Web/HTML) の要素で、その内包する文字列の自動改行を無効化します。行内に収まらない文字列は、領域からはみ出てレンダリングされるか、スクロールバーを伴って表示されます。
 
 > [!WARNING]
-> この要素は広く対応されていますが、この要素は標準の要素であったことは**ない**ため、使用するべきではありません。代わりに、 CSS プロパティの {{CSSxRef("white-space")}} を次のように使用してください。
+> この要素は広く対応されていますが、この要素は標準の要素であったことは**ない**ため、使用するべきではありません。代わりに、CSS プロパティの {{CSSxRef("white-space")}} を次のように使用してください。
 
 ```html
-<span style="white-space: nowrap;">Long line with no breaks</span>
+<span class="nobr">Long line with no breaks</span>
+```
+
+```css
+.nobr {
+  white-space: nowrap;
+}
 ```
 
 ## 仕様書

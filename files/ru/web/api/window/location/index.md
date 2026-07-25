@@ -7,7 +7,7 @@ slug: Web/API/Window/location
 
 Свойство только для чтения **`Window.location`** возвращает объект {{domxref("Location")}} с информацией о текущем расположении документа.
 
-Хотя `Window.location` представляет собой объект _только для чтения_ `Location`, вы можете присвоить ему {{domxref("DOMString")}}. Это значит что в большинстве случаев вы можете работать с `location` как со строкой: `location = 'http://www.example.com'` это синоним для `location.href = 'http://www.example.com'`.
+Хотя `Window.location` представляет собой объект _только для чтения_ `Location`, вы можете присвоить ему {{jsxref("String")}}. Это значит что в большинстве случаев вы можете работать с `location` как со строкой: `location = 'http://www.example.com'` это синоним для `location.href = 'http://www.example.com'`.
 
 ## Синтаксис
 

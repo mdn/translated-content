@@ -24,7 +24,7 @@ Le client utilise un en-tête `Expect: 100-continue` et aucun corps de requête 
 
 ```http
 PUT /videos HTTP/1.1
-Host: uploads.exemple.com
+Host: uploads.example.com
 Content-Type: video/h264
 Content-Length: 1234567890987
 Expect: 100-continue
@@ -41,7 +41,7 @@ Le client répond en effectuant une requête sans attentes et avec le {{Glossary
 
 ```http
 PUT /videos HTTP/1.1
-Host: uploads.exemple.com
+Host: uploads.example.com
 Content-Type: video/h264
 Content-Length: 1234567890987
 

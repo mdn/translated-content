@@ -42,7 +42,7 @@ Le client effectue une première requête vers le serveur&nbsp;:
 
 ```http
 GET / HTTP/1.1
-Host: exemple.com
+Host: example.com
 ```
 
 Le serveur répond, en indiquant via {{HTTPHeader("Accept-CH")}} qu'il accepte {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}. Dans cet exemple, `Critical-CH` est aussi utilisé pour préciser que `Sec-CH-Prefers-Reduced-Motion` est considéré comme une indication critique.
@@ -63,7 +63,7 @@ Le client relance automatiquement la requête (du fait de la présence de `Criti
 
 ```http
 GET / HTTP/1.1
-Host: exemple.com
+Host: example.com
 Sec-CH-Prefers-Reduced-Motion: "reduce"
 ```
 

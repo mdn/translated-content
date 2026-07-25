@@ -3,7 +3,7 @@ title: Propriété CSS `column-rule`
 short-title: column-rule
 slug: Web/CSS/Reference/Properties/column-rule
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 53745a2089268ce62bf79695d7d347bcbd0abe57
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) `column-rule` définit la largeur, le style et la couleur de la ligne tracée entre les colonnes dans une mise en page multi-colonnes.
@@ -150,7 +150,6 @@ p.abc {
 
 ## Voir aussi
 
-- [Apprendre&nbsp;: Mise en page multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - La propriété {{CSSxRef("column-rule-style")}}
 - La propriété {{CSSxRef("column-rule-width")}}
 - La propriété {{CSSxRef("column-rule-color")}}

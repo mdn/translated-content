@@ -382,8 +382,8 @@ arc.getArchive(); // [{val: 11}, {val: 13}]
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Object.prototype.watch()")}}
-- {{jsxref("Object.prototype.unwatch()")}}
+- `Object.prototype.watch()`
+- `Object.prototype.unwatch()`
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.create()")}}

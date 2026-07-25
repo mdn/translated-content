@@ -1,12 +1,10 @@
 ---
-title: "<search>: 一般検索要素"
+title: HTML `<search>` 一般検索要素
+short-title: <search>
 slug: Web/HTML/Reference/Elements/search
-original_slug: Web/HTML/Element/search
 l10n:
-  sourceCommit: b03632b84049c5110d9ee466307f7e2d28959be5
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<search>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書やアプリケーションのうち、検索や絞り込み操作を行うことに関連する、フォームコントロールやその他のコンテンツの部分を表すコンテナーです。`<search>` 要素は意味的に、要素の内容の目的が検索や絞り込み機能であることを示します。検索や絞り込み機能は、ウェブサイトやアプリケーション、現在のウェブページや文書、あるいはインターネット全体やそのサブセクションを対象とする可能性があります。
 
@@ -18,11 +16,15 @@ l10n:
 
 `<search>` 要素は検索結果を表示するためのものではありません。むしろ、検索やフィルタリングの結果はそのウェブページのメインコンテンツの一部として存在するべきです。とはいえ、検索や 絞り込み機能の中の「クイック検索」機能の一部である提案やリンクは、検索機能なので `<search>` 要素のコンテンツの中で入れ子にするのが適切です。
 
+## アクセシビリティ
+
+`<search>` 要素は、[`search`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) ランドマークを定義します。これにより、`role=search` を {{HTMLElement('form')}} 要素に追加する必要がなくなります。
+
 ## 例
 
 ### ヘッダーの検索フォーム
 
-この例では、単純なサイト全体の検索を行うために、ウェブサイトヘッダー内の検索のコンテナーとして `<search>` を使用する例を示します。`<search>` は {{HTMLElement("form")}} の意味づけコンテナーであり、ユーザーが入力した検索クエリーをサーバーへ送信します。
+この例では、サイト全体の検索を行うために、ウェブサイトヘッダー内の検索のコンテナーとして `<search>` を使用する例を示します。`<search>` は {{HTMLElement("form")}} の意味づけコンテナーであり、ユーザーが入力した検索クエリーをサーバーへ送信します。
 
 #### HTML
 
@@ -88,17 +90,17 @@ l10n:
 ```html
 <body>
   <header>
-    <h1>Car rental agency</h1>
+    <h1>レンタカー代理店</h1>
     <search title="Website">...</search>
   </header>
   <main>
-    <h2>Cars available for rent</h2>
+    <h2>レンタル可能な車</h2>
     <search title="Cars">
-      <h3>Filter results</h3>
+      <h3>検索結果</h3>
       ...
     </search>
     <article>
-      <!-- search result content -->
+      <!-- 検索結果のコンテンツ -->
     </article>
   </main>
 </body>
@@ -114,16 +116,16 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories#flow_content">フローコンテンツ</a>, <a href="/ja/doHTML/Guides/Content_categoriesent_categories#palpable_content">知覚可能コンテンツ</a>.
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Guides/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>。
       </td>
     </tr>
     <tr>
       <th scope="row">許可されているコンテンツ</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories#flow_content">フローコンテンツ</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>
       </td>
     </tr>
     <tr>

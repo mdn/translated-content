@@ -39,7 +39,7 @@ Si plusieurs éléments `<base>` sont utilisés, seules les premières valeurs p
 
 Les liens pointant vers un fragment dans le document — par exemple, `<a href="#un-id">` — sont résolus avec le `<base>`, ce qui déclenche une requête HTTP vers l'URL de base avec le fragment ajouté.
 
-Par exemple, avec `<base href="https://exemple.fr/">` et ce lien&nbsp;: `<a href="#ancre">Vers l'ancre</a>`. Le lien pointe vers `https://exemple.fr/#ancre`.
+Par exemple, avec `<base href="https://example.com/">` et ce lien&nbsp;: `<a href="#ancre">Vers l'ancre</a>`. Le lien pointe vers `https://example.com/#ancre`.
 
 ### `target` ne doit pas contenir de saut de ligne ASCII, de tabulation ou de <
 
@@ -51,15 +51,15 @@ Ceci vise à empêcher les attaques d'injection de balisage flottant, une attaqu
 Les balises [Open Graph](https://ogp.me/) ne tiennent pas de compte de l'élément `<base>`, et doivent toujours avoir des URL absolues complètes. Par exemple&nbsp;:
 
 ```html
-<meta property="og:image" content="https://exemple.fr/thumbnail.jpg" />
+<meta property="og:image" content="https://example.com/thumbnail.jpg" />
 ```
 
 ## Exemples
 
 ```html
-<base href="https://www.exemple.fr/" />
+<base href="https://www.example.com/" />
 <base target="_blank" />
-<base target="_top" href="https://exemple.fr/" />
+<base target="_top" href="https://example.com/" />
 ```
 
 ## Résumé technique

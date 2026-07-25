@@ -53,7 +53,7 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: prefetch-src https://exemple.com/
+Content-Security-Policy: prefetch-src https://example.com/
 ```
 
 Les requêtes émises par ce code généreront des erreurs de réseau puisque les URL demandées ne correspondent pas à la liste de permissions de la directive `prefetch-src`&nbsp;:

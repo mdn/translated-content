@@ -2,7 +2,7 @@
 title: Modèle de page de sélecteur CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
 l10n:
-  sourceCommit: d2fb8cdc9422dd2b68ff23f616d70811729f1fbd
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 > [!NOTE]
@@ -45,7 +45,6 @@ l10n:
 >
 >     Notez que vous devez d'abord créer ou mettre à jour une entrée pour le sélecteur et sa spécification dans notre <a href="https://github.com/mdn/browser-compat-data">dépôt de données de compatibilité des navigateurs <sup>(angl.)</sup></a>.
 >     Consultez notre [guide sur la façon de procéder](/fr/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
->
 > - **sidebar** (pages anglaises uniquement)
 >   - : Ceci est `cssref` pour toutes les pages de guide et de référence CSS.
 >     Voir [Structures de page&nbsp;: Barres latérales](/fr/docs/MDN/Writing_guidelines/Page_structures/Sidebars) pour plus de détails.

@@ -14,7 +14,7 @@ slug: Web/API/Gamepad
 - {{domxref("Gamepad.displayId")}} {{readonlyInline}}
   - : _Возвращает {{domxref("VRDisplay.displayId")}} связанный с {{domxref("VRDisplay")}} (при необходимости) — `VRDisplay` отображаемая область которого управляется геймпадом._
 - {{domxref("Gamepad.id")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} содержит идентификационную информацию о контроллере.
+  - : {{jsxref("String")}} содержит идентификационную информацию о контроллере.
 - {{domxref("Gamepad.index")}} {{readonlyInline}}
   - : Целое автоинкрементируемое значение, уникальное для каждого устройства, подключённого в данный момент к системе.
 - {{domxref("Gamepad.mapping")}} {{readonlyInline}}

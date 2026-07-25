@@ -23,7 +23,7 @@ _Inherits properties from its parent, {{domxref("CharacterData")}}._
 - {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}
   - : Возвращает флаг {{domxref("Boolean")}}, сигнализирующий, содержит ли (или нет) text node только пробел(ы).
 - {{domxref("Text.wholeText")}} {{readonlyInline}}
-  - : Возвращает {{domxref("DOMString")}}, который содержит все `Text` nodes логически примыкающие к этому {{domxref("Node")}}, соединённые как в документе.
+  - : Возвращает {{jsxref("String")}}, который содержит все `Text` nodes логически примыкающие к этому {{domxref("Node")}}, соединённые как в документе.
 - {{domxref("Text.assignedSlot")}} {{readonlyinline}}
   - : Возвращает объект {{domxref("HTMLSlotElement")}}, связанный с этим элементом.
 

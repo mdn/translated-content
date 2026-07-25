@@ -3,26 +3,26 @@ title: "Attribut HTML : `form`"
 short-title: form
 slug: Web/HTML/Reference/Attributes/form
 l10n:
-  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 L'attribut **`form`** associe un élément lié à un formulaire à un élément HTML {{HTMLElement("form")}} du même document. Cet attribut s'applique aux éléments HTML {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
 
 ## Valeurs
 
-L'`id` de l'élément `<form>` auquel l'élément doit être associé.
+un `id` de l'élément `<form>` auquel l'élément doit être associé.
 
 ## Notes d'utilisation
 
 Par défaut, les contrôles de formulaire sont associés à leur ancêtre {{HTMLElement("form")}} le plus proche, tandis que les contrôles de formulaire qui ne sont pas imbriqués dans un `<form>` ne sont associés à aucun formulaire. L'attribut `form` permet de remplacer ces comportements par défaut.
 
-L'attribut `form` des éléments {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}} permet de spécifier explicitement le propriétaire du formulaire, ce qui permet d'associer des contrôles de formulaire situés n'importe où dans un document à n'importe quel élément `<form>` du même document.
+L'attribut `form` des éléments {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}} permet de définir explicitement le propriétaire du formulaire, ce qui permet d'associer des contrôles de formulaire situés n'importe où dans un document à n'importe quel élément `<form>` du même document.
 
-Lorsqu'un formulaire est soumis, les noms et valeurs des contrôles associés à l'élément `<form>` sont envoyés, qu'ils soient ou non physiquement imbriqués dans ce `<form>`, et même s'ils sont imbriqués dans un autre `<form>`.
+Lorsqu'un formulaire est envoyé, les noms et valeurs des contrôles associés à l'élément `<form>` sont envoyés, qu'ils soient ou non physiquement imbriqués dans ce `<form>`, et même s'ils sont imbriqués dans un autre `<form>`.
 
-L'attribut `form` d'un contrôle prend comme valeur l'`id` de l'élément `<form>` avec lequel vous souhaitez associer le contrôle. Toutes les autres valeurs définies pour l'attribut `form` sont ignorées.
+L'attribut `form` d'un contrôle prend comme valeur un `id` de l'élément `<form>` avec lequel vous souhaitez associer le contrôle. Toutes les autres valeurs définies pour l'attribut `form` sont ignorées.
 
-Bien qu'il ne soit pas nécessaire de définir la valeur de l'attribut sur l'`id` de l'ancêtre `<form>` le plus proche, définir explicitement l'association entre un contrôle de formulaire et son formulaire ancêtre le plus proche garantit que le contrôle ne sera pas dissocié de son formulaire si des scripts ou un HTML mal formé font que ce `<form>` n'est plus l'ancêtre le plus proche du contrôle.
+Bien qu'il ne soit pas nécessaire de définir la valeur de l'attribut sur un `id` de l'ancêtre `<form>` le plus proche, définir explicitement l'association entre un contrôle de formulaire et son formulaire ancêtre le plus proche garantit que le contrôle n'est pas dissocié de son formulaire si des scripts ou un HTML mal formé font que ce `<form>` n'est plus l'ancêtre le plus proche du contrôle.
 
 ### Associer à un formulaire non ancêtre
 
@@ -38,13 +38,13 @@ Dans cet exemple, le champ `<input>` du nom d'utilisateur·ice est imbriqué dan
 </form>
 ```
 
-Dans ce cas, le nom d'utilisateur·ice sera envoyé lors de la soumission de `externalForm`, tandis que `internalForm` n'aura aucun contrôle de formulaire associé.
+Dans ce cas, le nom d'utilisateur·ice est envoyé lors de l'envoi de `externalForm`, tandis que `internalForm` n'a aucun contrôle de formulaire associé.
 
 ### Non-héritage de l'attribut `form`
 
 L'attribut `form` n'associe que l'élément sur lequel il est défini. Ce comportement n'est pas hérité. Par exemple, lorsque l'attribut `form` est défini sur un élément `<fieldset>`, il n'associe que le `<fieldset>`&nbsp;; il **n'associe pas** automatiquement les contrôles de formulaire imbriqués dans ce `<fieldset>`.
 
-Dans cet exemple, le `<fieldset>` et le champ `<input>` du nom d'utilisateur·ice sont associés à `exampleForm` et inclus dans la {{DOMxRef("HTMLFormControlsCollection")}} de la propriété {{DOMxRef("HTMLFormElement.elements")}}, mais le champ `password` ne l'est pas. Seul le champ `username` sera inclus lors de la soumission de `exampleForm`&nbsp;:
+Dans cet exemple, le `<fieldset>` et le champ `<input>` du nom d'utilisateur·ice sont associés à `exampleForm` et inclus dans la {{DOMxRef("HTMLFormControlsCollection")}} de la propriété {{DOMxRef("HTMLFormElement.elements")}}, mais le champ `password` ne l'est pas. Seul le champ `username` est inclus lors de l'envoi de `exampleForm`&nbsp;:
 
 ```html
 <form id="exampleForm"></form>
@@ -59,13 +59,13 @@ Dans cet exemple, le `<fieldset>` et le champ `<input>` du nom d'utilisateur·ic
 </fieldset>
 ```
 
-Chaque élément imbriqué a besoin de son propre attribut `form` ou doit être imbriqué dans le formulaire. Vous pouvez vérifier quels éléments sont associés à un formulaire via JavaScript, en utilisant {{DOMxRef("HTMLFormElement.elements")}}.
+Chaque élément imbriqué a besoin de son propre attribut `form` ou doit être imbriqué dans le formulaire. Vous pouvez vérifier quels éléments sont associés à un formulaire avec JavaScript, en utilisant {{DOMxRef("HTMLFormElement.elements")}}.
 
-### Soumission du formulaire
+### Envoi du formulaire
 
-Inclure l'attribut `form` ne signifie pas que l'élément sera soumis avec le formulaire. Seuls les éléments pouvant être soumis, comme `<button>`, `<input>`, `<select>` et `<textarea>`, voient leur nom et leur valeur envoyés lors de la soumission du `<form>` associé.
+Inclure l'attribut `form` ne signifie pas que l'élément est envoyé avec le formulaire. Seuls les éléments pouvant être envoyés, comme `<button>`, `<input>`, `<select>` et `<textarea>`, voient leur nom et leur valeur envoyés lors de l'envoi du `<form>` associé.
 
-Dans ce cas, même si l'élément `<output>` est implicitement puis explicitement associé à `calcForm`, le résultat n'est pas soumis avec `a` et `b` lors de la soumission de `calcForm`. Il fait cependant partie de la `HTMLFormControlsCollection` du formulaire.
+Dans ce cas, même si l'élément `<output>` est implicitement puis explicitement associé à `calcForm`, le résultat n'est pas envoyé avec `a` et `b` lors de l'envoi de `calcForm`. Il fait cependant partie de la `HTMLFormControlsCollection` du formulaire.
 
 ```html
 <form id="calcForm">
@@ -82,7 +82,7 @@ Dans ce cas, même si l'élément `<output>` est implicitement puis explicitemen
 
 ### Exemple de base
 
-Cet exemple montre comment des éléments liés à un formulaire peuvent être associés à un élément `<form>` à l'aide de l'attribut `form`, même s'ils ne sont pas explicitement imbriqués à l'intérieur. Tous les éléments liés au formulaire dans cet exemple sont associés à `loginForm` soit implicitement (en étant directement imbriqués dans le formulaire), soit explicitement via l'attribut `form`. Lors de la soumission du formulaire, les noms et valeurs de chaque élément pouvant être soumis seront inclus.
+Cet exemple montre comment des éléments liés à un formulaire peuvent être associés à un élément `<form>` à l'aide de l'attribut `form`, même s'ils ne sont pas explicitement imbriqués à l'intérieur. Tous les éléments liés au formulaire dans cet exemple sont associés à `loginForm` soit implicitement (en étant directement imbriqués dans le formulaire), soit explicitement avec l'attribut `form`. Lors de l'envoi du formulaire, les noms et valeurs de chaque élément pouvant être envoyés sont inclus.
 
 ```html
 <form id="loginForm">
@@ -104,8 +104,7 @@ Cet exemple montre comment des éléments liés à un formulaire peuvent être a
 <label
   >Description&nbsp;:
   <textarea form="loginForm" rows="4" name="description">
-Bonjour le monde&nbsp;!</textarea
-  >
+Bonjour le monde&nbsp;!</textarea>
 </label>
 <button form="loginForm" type="submit" name="submitLogin" value="Login">
   Envoyer
@@ -114,7 +113,7 @@ Bonjour le monde&nbsp;!</textarea
 
 ### Élément associé à un autre formulaire
 
-Dans cet exemple, il y a deux éléments `<form>`&nbsp;: `parentForm` et `targetForm`. Le bouton `<button>` à l'intérieur de `parentForm` a son attribut `form` défini sur `targetForm`, ce qui le dissocie de son ancêtre le plus proche `parentForm` et l'associe à `targetForm`. Lorsque le bouton de soumission est activé, il soumet `targetForm` et non son ancêtre `parentForm`.
+Dans cet exemple, il y a deux éléments `<form>`&nbsp;: `parentForm` et `targetForm`. Le bouton `<button>` à l'intérieur de `parentForm` a son attribut `form` défini sur `targetForm`, ce qui le dissocie de son ancêtre le plus proche `parentForm` et l'associe à `targetForm`. Lorsque le bouton d'envoi est activé, il envoie `targetForm` et non son ancêtre `parentForm`.
 
 ```html
 <form id="targetForm">

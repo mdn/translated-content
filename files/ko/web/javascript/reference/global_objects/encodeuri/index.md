@@ -57,7 +57,7 @@ http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+ha
     A-Z a-z 0-9 ; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #
 ```
 
-`encodeURI()`와 {{jsxref("encodeURIComponent", "encodeURIComponent()")}}의 차이는 다음과 같습니다.
+`encodeURI()`와 {{jsxref("encodeURIComponent()")}}의 차이는 다음과 같습니다.
 
 ```js
 var set1 = ";,/?:@&=+$#"; // 예약 문자

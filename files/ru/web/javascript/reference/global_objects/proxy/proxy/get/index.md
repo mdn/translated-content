@@ -128,5 +128,5 @@ p.a; // TypeError is thrown
 ## Смотрите также
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Reflect.get()")}}

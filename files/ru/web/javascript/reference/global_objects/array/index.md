@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 Массивы являются спископодобными объектами, чьи прототипы содержат методы для операций обхода и изменения массива. Ни размер JavaScript-массива, ни типы его элементов не являются фиксированными. Поскольку размер массива может увеличиваться и уменьшаться в любое время, то нет гарантии, что массив окажется плотным. То есть, при работе с массивом может возникнуть ситуация, что элемент массива, к которому вы обратитесь, будет пустым и вернёт `undefined`. В целом, это удобная характеристика; но если эта особенность массива не желательна в вашем специфическом случае, вы можете рассмотреть возможность использования типизированных массивов.
 
-Некоторые полагают, что [вы не должны использовать массив в качестве ассоциативного массива](http://www.andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/). В любом случае, вместо него вы можете использовать простые {{jsxref("Global_Objects/Object", "объекты")}}, хотя у них есть и свои подводные камни. Смотрите пост [Легковесные JavaScript-словари с произвольными ключами](http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html)_(англ.)_ в качестве примера.
+Некоторые полагают, что [вы не должны использовать массив в качестве ассоциативного массива](http://www.andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/). В любом случае, вместо него вы можете использовать простые {{jsxref("Object", "объекты")}}, хотя у них есть и свои подводные камни. Смотрите пост [Легковесные JavaScript-словари с произвольными ключами](http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html)_(англ.)_ в качестве примера.
 
 ### Доступ к элементам массива
 
@@ -128,7 +128,7 @@ const myArray = myRe.exec("cdbBdbsbz");
 
 ## Статические свойства
 
-- {{jsxref("Array/@@species", "Array[@@species]")}}
+- {{jsxref("Array/Symbol.species", "Array[@@species]")}}
   - : Возвращает конструктор `Array`.
 
 ## Статические методы
@@ -148,7 +148,7 @@ const myArray = myRe.exec("cdbBdbsbz");
 
 - {{jsxref("Object/constructor", "Array.prototype.constructor")}}
   - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `Array` начальным значением является конструктор {{jsxref("Array/Array", "Array")}}.
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
   - : Содержит имена свойств, которые не включены в стандарт ECMAScript до версии ES2015 и которые игнорируются оператором [`with`](/ru/docs/Web/JavaScript/Reference/Statements/with).
 
 Собственные свойства каждого экземпляра `Array`:

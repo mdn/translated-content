@@ -1,9 +1,9 @@
 ---
-title: :has-slotted
+title: CSS `:has-slotted` 擬似クラス
+short-title: :has-slotted
 slug: Web/CSS/Reference/Selectors/:has-slotted
-original_slug: Web/CSS/:has-slotted
 l10n:
-  sourceCommit: e13b6ffe7c9cb05c6a89fcb3c8fcbc987eb05211
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:has-slotted`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、 {{HTMLElement("slot")}} 要素のコンテンツが空ではないか、または既定値を使用していない場合に一致します（詳細については、[テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)を参照してください）。

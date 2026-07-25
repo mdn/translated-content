@@ -200,7 +200,7 @@ const selecteur2 = document.querySelector("#selecteur-ancre-ancre2");
 // Obtenir des références à toutes les ancres dans un NodeList (semblable à un tableau)
 const ancres = document.querySelectorAll("#conteneur-ancres > div");
 
-// Définir le même gestionnaire d'événements de changement sur les deux menus select
+// Définir le même gestionnaire d'évènements de changement sur les deux menus select
 selecteur1.addEventListener("change", changerNomAncre);
 selecteur2.addEventListener("change", changerNomAncre);
 

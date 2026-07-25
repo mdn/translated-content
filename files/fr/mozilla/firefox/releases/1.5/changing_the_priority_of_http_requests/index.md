@@ -27,7 +27,7 @@ Pour modifier la priorité d'une requête HTTP, vous devez accéder au `nsIChann
 var ios = Components.classes["@mozilla.org/network/io-service;1"].getService(
   Components.interfaces.nsIIOService,
 );
-var ch = ios.newChannel("https://www.exemple.com/", null, null);
+var ch = ios.newChannel("https://www.example.com/", null, null);
 ```
 
 Une fois que vous disposez d'un `nsIChannel`, vous pouvez accéder à la priorité de la manière suivante&nbsp;:
@@ -46,7 +46,7 @@ Si vous programmez en [JavaScript](/fr/docs/Web/JavaScript), vous voulez probabl
 
 ```js
 var req = new XMLHttpRequest();
-req.open("GET", "https://www.exemple.com", false);
+req.open("GET", "https://www.example.com", false);
 if (req.channel instanceof Components.interfaces.nsISupportsPriority) {
   req.channel.priority =
     Components.interfaces.nsISupportsPriority.PRIORITY_LOWEST;

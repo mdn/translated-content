@@ -73,6 +73,6 @@ if (!String.prototype.endsWith) {
 ## Смотрите также
 
 - {{jsxref("String.prototype.startsWith()")}} {{experimental_inline}}
-- {{jsxref("String.prototype.contains()")}} {{experimental_inline}}
+- {{jsxref("String.prototype.includes()", "String.prototype.contains()")}} {{experimental_inline}}
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}

@@ -63,7 +63,7 @@ Les caractères de la seconde ligne sont ceux qui peuvent faire partie de la syn
 La fonction `encodeURI()` n'encode pas les caractères qui ont une signification spéciale (caractères réservés) pour un URI. L'exemple suivant montre toutes les parties qu'un URI peut contenir. Notez comment certains caractères servent à signifier une signification particulière&nbsp;:
 
 ```url
-http://preudo:motdepasse@www.exemple.com:80/chemin/du/fichier.php?toto=316&tata=ceci+est+un+espace#ancre
+http://preudo:motdepasse@www.example.com:80/chemin/du/fichier.php?toto=316&tata=ceci+est+un+espace#ancre
 ```
 
 `encodeURI`, comme son nom l'indique, sert à encoder une URL dans son ensemble, en supposant qu'elle est déjà bien formée. Si vous souhaitez assembler dynamiquement des valeurs de chaîne dans une URL, il est préférable d'utiliser {{JSxRef("encodeURIComponent()")}} sur chaque segment dynamique, afin d'éviter la présence de caractères de syntaxe d'URL à des endroits non souhaités.
@@ -72,14 +72,14 @@ http://preudo:motdepasse@www.exemple.com:80/chemin/du/fichier.php?toto=316&tata=
 const name = "Thomas & Jerry";
 
 // This is bad:
-const link = encodeURI(`https://exemple.com/?choice=${name}`); // "https://exemple.com/?choice=Thomas%20&%20Jerry"
+const link = encodeURI(`https://example.com/?choice=${name}`); // "https://example.com/?choice=Thomas%20&%20Jerry"
 console.log([...new URL(link).searchParams]); // [['choice', 'Thomas '], [" Jerry", '']
 
 // Instead:
 const link = encodeURI(
-  `https://exemple.com/?choice=${encodeURIComponent(name)}`,
+  `https://example.com/?choice=${encodeURIComponent(name)}`,
 );
-// "https://exemple.com/?choice=Thomas%2520&%2520Jerry"
+// "https://example.com/?choice=Thomas%2520&%2520Jerry"
 console.log([...new URL(link).searchParams]); // [['choice', "Thomas%20&%20Jerry"]]
 ```
 

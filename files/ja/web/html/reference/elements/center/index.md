@@ -1,12 +1,12 @@
 ---
-title: "<center>: 中央揃えテキスト要素"
+title: HTML `<center>` 中央揃えテキスト要素
+short-title: <center>
 slug: Web/HTML/Reference/Elements/center
-original_slug: Web/HTML/Element/center
 l10n:
-  sourceCommit: 6f886b9147b7f62bacfa1e740a3ea288168a58aa
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<center>`** は [HTML](/ja/docs/Web/HTML) の要素で、中に含まれるブロックレベルまたはインラインコンテンツを中央揃えして表示する[ブロックレベル要素](/ja/docs/Glossary/Block-level_content)です。コンテナーはふつう {{HTMLElement("body")}} ですが、必ずしもそうとは限りません。
 
@@ -20,8 +20,8 @@ l10n:
 
 ```html
 <center>
-  This text will be centered.
-  <p>So will this paragraph.</p>
+  このテキストは中央揃えになります。
+  <p>これは段落です。</p>
 </center>
 ```
 
@@ -32,10 +32,16 @@ l10n:
 ## 例 2 （CSS での方法）
 
 ```html
-<div style="text-align:center">
-  This text will be centered.
-  <p>So will this paragraph.</p>
+<div class="center">
+  このテキストは中央揃えになります。
+  <p>これは段落です。</p>
 </div>
+```
+
+```css
+.center {
+  text-align: center;
+}
 ```
 
 ### 結果
@@ -45,10 +51,16 @@ l10n:
 ## 例 3 （CSS での方法）
 
 ```html
-<p style="text-align:center">
+<p class="center">
   This line will be centered.<br />
   And so will this line.
 </p>
+```
+
+```css
+.center {
+  text-align: center;
+}
 ```
 
 ### 結果
@@ -56,7 +68,7 @@ l10n:
 {{EmbedLiveSample("Example 3 (CSS alternative)")}}
 
 > [!NOTE]
-> {{Cssxref("text-align")}}`:center` を {{HTMLElement("div")}} または {{HTMLElement("p")}} 要素に適用すると、その*コンテンツ*を中央揃えにしますが、コンテンツの寸法はどれも変更されません。
+> {{cssxref("text-align", "text-align: center")}} を {{HTMLElement("div")}} または {{HTMLElement("p")}} 要素に適用すると、そのコンテンツを中央揃えにしますが、コンテンツの寸法はどれも変更されません。
 
 <!-- ## Technical summary -->
 

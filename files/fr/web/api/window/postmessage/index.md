@@ -66,7 +66,7 @@ Les propriétés du message envoyé sont&nbsp;:
 - `data`
   - : L'objet passé depuis l'autre fenêtre.
 - `origin`
-  - : {{Glossary("Origin", "L'origine")}} de la fenêtre qui a envoyé le message au moment où `postMessage` a été appelée. Cette chaîne de caractères est la concaténation du protocole et de "://", du nom d'hôte s'il existe, et de ":" suivi d'un numéro de port si un port est présent et diffère du port par défaut pour le protocole donné. Des exemples d'origines typiques sont `https://exemple.org` (sous-entendu port `443`), `http://exemple.net` (sous-entendu port `80`), et `http://exemple.com:8080`. Notez que cette origine n'est _pas_ garantie d'être l'origine actuelle ou future de cette fenêtre, qui pourrait avoir été naviguée vers un emplacement différent depuis l'appel à `postMessage`.
+  - : {{Glossary("Origin", "L'origine")}} de la fenêtre qui a envoyé le message au moment où `postMessage` a été appelée. Cette chaîne de caractères est la concaténation du protocole et de "://", du nom d'hôte s'il existe, et de ":" suivi d'un numéro de port si un port est présent et diffère du port par défaut pour le protocole donné. Des exemples d'origines typiques sont `https://exemple.org` (sous-entendu port `443`), `http://exemple.net` (sous-entendu port `80`), et `http://example.com:8080`. Notez que cette origine n'est _pas_ garantie d'être l'origine actuelle ou future de cette fenêtre, qui pourrait avoir été naviguée vers un emplacement différent depuis l'appel à `postMessage`.
 - `source`
   - : Une référence à l'objet {{DOMxRef("window")}} qui a envoyé le message&nbsp;; vous pouvez utiliser ceci pour établir une communication dans les deux sens entre deux fenêtres ayant différentes origines.
 
@@ -74,7 +74,7 @@ Les propriétés du message envoyé sont&nbsp;:
 
 **Si vous ne prévoyez pas de recevoir de messages depuis d'autres sites, _n'ajoutez pas_ de gestionnaire d'évènement pour les évènements `message`.** C'est un moyen sûr d'éviter les problèmes de sécurité.
 
-Si vous prévoyez de recevoir des messages depuis d'autres sites, **vérifiez toujours l'identité de l'expéditeur·ice** à l'aide des propriétés `origin` et si possible `source`. Toute fenêtre (y compris, par exemple, `http://evil.exemple.com`) peut envoyer un message à toute autre fenêtre, et vous n'avez aucune garantie qu'un·e expéditeur·ice inconnu·e ne va pas envoyer de message malicieux. Cependant, même si vous vérifiez l'identité, vous devriez **toujours vérifier la syntaxe du message reçu**. Dans le cas contraire, une faille de sécurité dans le site auquel vous faites confiance peut ouvrir une vulnérabilité XSS dans votre propre site.
+Si vous prévoyez de recevoir des messages depuis d'autres sites, **vérifiez toujours l'identité de l'expéditeur·ice** à l'aide des propriétés `origin` et si possible `source`. Toute fenêtre (y compris, par exemple, `http://evil.example.com`) peut envoyer un message à toute autre fenêtre, et vous n'avez aucune garantie qu'un·e expéditeur·ice inconnu·e ne va pas envoyer de message malicieux. Cependant, même si vous vérifiez l'identité, vous devriez **toujours vérifier la syntaxe du message reçu**. Dans le cas contraire, une faille de sécurité dans le site auquel vous faites confiance peut ouvrir une vulnérabilité XSS dans votre propre site.
 
 **Définissez toujours explicitement une origine de destination, jamais `*`, quand vous utilisez `postMessage` pour envoyer des données à d'autres fenêtres.** Un site malicieux peut changer l'adresse de la fenêtre à votre insu, et ainsi intercepter les données envoyées à l'aide de `postMessage`.
 
@@ -108,7 +108,7 @@ if (crossOriginIsolated) {
 
 ```js
 /*
- * Dans les scripts de la fenêtre A, avec A sur <http://exemple.com:8080>:
+ * Dans les scripts de la fenêtre A, avec A sur <http://example.com:8080>:
  */
 
 const popup = window.open(/* détails de la fenêtre affichée par dessus */);
@@ -143,7 +143,7 @@ window.addEventListener("message", (event) => {
 // Appelée quelques instants après que postMessage a été appelée
 window.addEventListener("message", (event) => {
   // Faisons-nous confiance à l'expéditeur de ce message ?
-  if (event.origin !== "http://exemple.com:8080") return;
+  if (event.origin !== "http://example.com:8080") return;
 
   // event.source est window.opener
   // event.data est "bonjour là-bas !"

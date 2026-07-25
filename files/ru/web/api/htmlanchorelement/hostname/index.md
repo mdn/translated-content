@@ -5,7 +5,7 @@ slug: Web/API/HTMLAnchorElement/hostname
 
 {{APIRef("HTML DOM")}}
 
-Свойство **`HTMLHyperlinkElementUtils.hostname`** – это {{domxref("USVString")}}, содержащий домен.
+Свойство **`HTMLHyperlinkElementUtils.hostname`** – это {{jsxref("String")}}, содержащий домен.
 
 ## Синтаксис
 

@@ -1,23 +1,21 @@
 ---
-title: "<data>: データ要素"
+title: HTML `<data>` データ要素
+short-title: <data>
 slug: Web/HTML/Reference/Elements/data
-original_slug: Web/HTML/Element/data
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<data>`** は [HTML](/ja/docs/Web/HTML) の要素で、与えられたコンテンツの断片を機械可読な翻訳にリンクします。コンテンツが時刻または日付に関連するものであれば、{{HTMLElement("time")}} 要素を使用する必要があります。
 
 {{InteractiveExample("HTML デモ: &lt;data&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<p>New Products:</p>
+<p>新製品:</p>
 <ul>
-  <li><data value="398">Mini Ketchup</data></li>
-  <li><data value="399">Jumbo Ketchup</data></li>
-  <li><data value="400">Mega Jumbo Ketchup</data></li>
+  <li><data value="398">ミニケチャップ</data></li>
+  <li><data value="399">ジャンボケチャップ</data></li>
+  <li><data value="400">メガジャンボケチャップ</data></li>
 </ul>
 ```
 
@@ -27,6 +25,32 @@ data:hover::after {
   font-size: 0.7em;
 }
 ```
+
+## 属性
+
+この要素の属性には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+
+- `value`
+  - : この属性は、要素の内容の機械可読な翻訳を指定します。
+
+## 例
+
+以下の例は商品名を表示しますが、それぞれの商品名に商品番号も結びつけます。
+
+```html
+<p>新製品</p>
+<ul>
+  <li><data value="398">ミニケチャップ</data></li>
+  <li><data value="399">ジャンボケチャップ</data></li>
+  <li><data value="400">メガジャンボケチャップ</data></li>
+</ul>
+```
+
+### 結果
+
+{{EmbedLiveSample('Examples')}}
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
@@ -68,8 +92,10 @@ data:hover::after {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>
@@ -83,30 +109,6 @@ data:hover::after {
     </tr>
   </tbody>
 </table>
-
-## 属性
-
-この要素の属性には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
-
-- `value`
-  - : この属性は要素の内容を機械可読な形式で指定します。
-
-## 例
-
-以下の例は商品名を表示しますが、それぞれの商品名に商品番号も結びつけます。
-
-```html
-<p>新製品</p>
-<ul>
-  <li><data value="398">ミニケチャップ</data></li>
-  <li><data value="399">ジャンボケチャップ</data></li>
-  <li><data value="400">メガジャンボケチャップ</data></li>
-</ul>
-```
-
-### 結果
-
-{{EmbedLiveSample('Examples')}}
 
 ## 仕様書
 

@@ -2,7 +2,7 @@
 title: Bannières et avis
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 793bcbe2dd88fc553d2c4c918c4dec4899704022
 ---
 
 Bannières et avis sont affichés sur certaines pages, en particulier dans la référence des API, afin de mettre en avant des éléments importants qui influencent la façon dont le contenu décrit est utilisé.
@@ -72,4 +72,4 @@ Il est important de clarifier le statut de normalisation actuel de ces fonctionn
 - Ajouter une section «&nbsp;Positions des standards&nbsp;» sur la même page que la bannière ci-dessus, en tant que sous-section de la section standard «&nbsp;Spécifications&nbsp;».
 
 > [!NOTE]
-> Voir [Ensembles de sites web associés](/fr/docs/Web/API/Storage_Access_API/Related_website_sets) pour un exemple de section «&nbsp;Positions des standards&nbsp;» et de bannière sur la page d'accueil.
+> Voir [l'API Shared Storage](/fr/docs/Web/API/Shared_Storage_API) pour un exemple de section «&nbsp;Positions des standards&nbsp;» et de bannière sur la page d'accueil.

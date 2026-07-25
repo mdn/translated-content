@@ -2,13 +2,13 @@
 title: 404 Not Found
 slug: Web/HTTP/Reference/Status/404
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`404 Not Found`** indique que le serveur ne trouve pas la ressource demandée.
 Les liens qui mènent à une page 404 sont souvent appelés liens brisés ou morts et peuvent être sujets au [pourrissement des liens](https://fr.wikipedia.org/wiki/Lien_mort).
 
-Un code de statut 404 indique uniquement que la ressource est absente, sans préciser si cela est temporaire ou permanent.
+Un code de statut 404 indique uniquement que la ressource est absente, sans préciser si c'est temporaire ou permanent.
 Si une ressource est supprimée de façon permanente, les serveurs doivent envoyer le code de statut {{HTTPStatus("410", "410 Gone")}} à la place.
 
 Les erreurs 404 sur un site Web peuvent entraîner une mauvaise expérience pour vos visiteur·euse·s, il convient donc de minimiser le nombre de liens brisés (internes et externes) afin d'éviter la frustration des lecteur·ice·s.
@@ -29,7 +29,7 @@ La récupération d'une page inexistante peut ressembler à la requête suivante
 
 ```http
 GET /my-deleted-blog-post HTTP/1.1
-Host: exemple.com
+Host: example.com
 ```
 
 Le serveur retourne une réponse similaire à celle-ci&nbsp;:

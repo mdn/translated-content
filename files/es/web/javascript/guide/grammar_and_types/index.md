@@ -24,7 +24,7 @@ En JavaScript, las instrucciones se denominan {{Glossary("Statement", "declaraci
 No es necesario un punto y coma después de una declaración si está escrita en su propia línea. Pero si se deseas más de una declaración en una línea, entonces _debes_ separarlas con punto y coma.
 
 > [!NOTE]
-> ECMAScript también tiene reglas para la inserción automática del punto y coma —{{JSxRef("Gramatica_lexica", "IAPC", "#Insercion_automatica_de_punto_y_coma")}}— (_ASI_ en inglés, por sus siglas «_Automatic Semicolon Insertion_») al final de las declaraciones. (Para obtener más información, consulta la referencia detallada sobre la {{JSxRef("Gramatica_lexica", "gramática léxica")}} de JavaScript).
+> ECMAScript también tiene reglas para la inserción automática del punto y coma —{{JSxRef("Lexical_grammar", "IAPC", "#Insercion_automatica_de_punto_y_coma")}}— (_ASI_ en inglés, por sus siglas «_Automatic Semicolon Insertion_») al final de las declaraciones. (Para obtener más información, consulta la referencia detallada sobre la {{JSxRef("Lexical_grammar", "gramática léxica")}} de JavaScript).
 
 Sin embargo, se considera una buena práctica escribir siempre un punto y coma después de una declaración, incluso cuando no sea estrictamente necesario. Esta práctica reduce las posibilidades de que se introduzcan errores en el código.
 
@@ -47,7 +47,7 @@ La sintaxis de los **comentarios** es la misma que en C++ y en muchos otros leng
 Los comentarios se comportan como espacios en blanco y se descartan durante la ejecución del script.
 
 > [!NOTE]
-> También puedes ver un tercer tipo de sintaxis de comentario al comienzo de algunos archivos JavaScript, que se parece a esto: `#!/usr/bin/env node`.Esto se denomina sintaxis de **comentario hashbang** y es un comentario especial que se utiliza para especificar la ruta a un motor JavaScript en particular que debe ejecutar el script. Consulta {{JSxRef("Gramatica_lexica", "Comentarios Hashbang", "#Comentarios_hashbang")}} para obtener más detalles.
+> También puedes ver un tercer tipo de sintaxis de comentario al comienzo de algunos archivos JavaScript, que se parece a esto: `#!/usr/bin/env node`.Esto se denomina sintaxis de **comentario hashbang** y es un comentario especial que se utiliza para especificar la ruta a un motor JavaScript en particular que debe ejecutar el script. Consulta {{JSxRef("Lexical_grammar", "Comentarios Hashbang", "#Comentarios_hashbang")}} para obtener más detalles.
 
 ## Declaraciones
 
@@ -68,7 +68,7 @@ Un identificador de JavaScript debe comenzar con una letra, un guión bajo (`_`)
 
 Dado que JavaScript distingue entre mayúsculas y minúsculas, las letras incluyen los caracteres "`A`" a "`Z`" (mayúsculas), así como "`a`" a "z" (minúsculas).
 
-Puedes utilizar la mayoría de las letras ISO 8859-1 o Unicode como `å` y `ü` en los identificadores. (Para obtener más detalles, consulta [esta publicación del blog](https://mathiasbynens.be/notes/javascript-identifiers-es6)). También puedes usar {{JSxRef("Gramatica_lexica", "Secuencias de escape Unicode", "#Cadenas_literales")}} como caracteres en identificadores.
+Puedes utilizar la mayoría de las letras ISO 8859-1 o Unicode como `å` y `ü` en los identificadores. (Para obtener más detalles, consulta [esta publicación del blog](https://mathiasbynens.be/notes/javascript-identifiers-es6)). También puedes usar {{JSxRef("Lexical_grammar", "Secuencias de escape Unicode", "#Cadenas_literales")}} como caracteres en identificadores.
 
 Algunos ejemplos de nombres legales son `Number_hits`, `temp99`, `$credit` y `_name`.
 
@@ -464,7 +464,7 @@ Aquí tienes algunos ejemplos de literales numéricos:
 0b11, 0b0011, -0b11, 0b11101001010101010101n  (binario, base 2)
 ```
 
-Para obtener más información, consulta {{JSxRef("Gramatica_lexica", "Literales numéricos en la referencia gramatical léxica", "#Literales_numericos")}}.
+Para obtener más información, consulta {{JSxRef("Lexical_grammar", "Literales numéricos en la referencia gramatical léxica", "#Literales_numericos")}}.
 
 ### Literales de coma flotante
 
@@ -634,24 +634,24 @@ Adicionalmente a los caracteres normales, también puedes incluir caracteres esp
 
 La siguiente tabla enumera los caracteres especiales que se pueden usar en una cadena JavaScript.
 
-| Caracter    | Significado                                                                                                                                                                                                                                              |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `\0`        | Byte nulo                                                                                                                                                                                                                                                |
-| `\b`        | Retroceso                                                                                                                                                                                                                                                |
-| `\f`        | Avance de Página                                                                                                                                                                                                                                         |
-| `\n`        | Nueva Línea                                                                                                                                                                                                                                              |
-| `\r`        | Retorno de carro                                                                                                                                                                                                                                         |
-| `\t`        | Tabulación                                                                                                                                                                                                                                               |
-| `\v`        | Tabulación vertical                                                                                                                                                                                                                                      |
-| `\'`        | Apóstrofo o comilla simple                                                                                                                                                                                                                               |
-| `\"`        | Comilla doble                                                                                                                                                                                                                                            |
-| `\\`        | Caracter de barra invertida                                                                                                                                                                                                                              |
-| `\XXX`      | El caracter con la codificación Latin-1 especificada por hasta tres dígitos octales _XXX_ entre `0` y `377`. Por ejemplo, `\251` es la secuencia octal del símbolo de copyright.                                                                         |
-|             |                                                                                                                                                                                                                                                          |
-| `\xXX`      | El caracter con la codificación Latin-1 especificada por los dos dígitos hexadecimales _XX_ entre `00` y `FF`. Por ejemplo, `\xA9` es la secuencia hexadecimal del símbolo de copyright.                                                                 |
-|             |                                                                                                                                                                                                                                                          |
-| `\uXXXX`    | El caracter Unicode especificado por los cuatro dígitos hexadecimales _XXXX_. Por ejemplo, `\u00A9` es la secuencia Unicode para el símbolo de copyright. Consulta {{JSxRef("Gramatica_lexica", "Secuencias de escape Unicode", "#Cadenas_literales")}}. |
-| `\u{XXXXX}` | El punto de código escape Unicode. Por ejemplo, `\u{2F804}` es el mismo que el escape Unicode simple `\uD87E\uDC04`.                                                                                                                                     |
+| Caracter    | Significado                                                                                                                                                                                                                                             |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `\0`        | Byte nulo                                                                                                                                                                                                                                               |
+| `\b`        | Retroceso                                                                                                                                                                                                                                               |
+| `\f`        | Avance de Página                                                                                                                                                                                                                                        |
+| `\n`        | Nueva Línea                                                                                                                                                                                                                                             |
+| `\r`        | Retorno de carro                                                                                                                                                                                                                                        |
+| `\t`        | Tabulación                                                                                                                                                                                                                                              |
+| `\v`        | Tabulación vertical                                                                                                                                                                                                                                     |
+| `\'`        | Apóstrofo o comilla simple                                                                                                                                                                                                                              |
+| `\"`        | Comilla doble                                                                                                                                                                                                                                           |
+| `\\`        | Caracter de barra invertida                                                                                                                                                                                                                             |
+| `\XXX`      | El caracter con la codificación Latin-1 especificada por hasta tres dígitos octales _XXX_ entre `0` y `377`. Por ejemplo, `\251` es la secuencia octal del símbolo de copyright.                                                                        |
+|             |                                                                                                                                                                                                                                                         |
+| `\xXX`      | El caracter con la codificación Latin-1 especificada por los dos dígitos hexadecimales _XX_ entre `00` y `FF`. Por ejemplo, `\xA9` es la secuencia hexadecimal del símbolo de copyright.                                                                |
+|             |                                                                                                                                                                                                                                                         |
+| `\uXXXX`    | El caracter Unicode especificado por los cuatro dígitos hexadecimales _XXXX_. Por ejemplo, `\u00A9` es la secuencia Unicode para el símbolo de copyright. Consulta {{JSxRef("Lexical_grammar", "Secuencias de escape Unicode", "#Cadenas_literales")}}. |
+| `\u{XXXXX}` | El punto de código escape Unicode. Por ejemplo, `\u{2F804}` es el mismo que el escape Unicode simple `\uD87E\uDC04`.                                                                                                                                    |
 
 #### Escapar caracteres
 

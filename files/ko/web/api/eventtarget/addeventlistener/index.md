@@ -431,7 +431,7 @@ function nonePassiveHandler(event) {
 
 비슷한 요소 다수의 이벤트를 모두 처리할 수 있는 범용 수신기를 정의하는 경우, 부착된 요소의 참조를 가져와야 하는 상황이 종종 발생합니다.
 
-`addEventListener()`를 사용해 요소에 수신기를 부착하게 되면 수신기 내부의 {{jsxref("Operators/this", "this")}} 값은 대상 요소를 가리키게 되며, 이는 수신기가 매개변수로 받게 되는 이벤트 객체의 `currentTarget` 속성과 같습니다.
+`addEventListener()`를 사용해 요소에 수신기를 부착하게 되면 수신기 내부의 {{jsxref("this")}} 값은 대상 요소를 가리키게 되며, 이는 수신기가 매개변수로 받게 되는 이벤트 객체의 `currentTarget` 속성과 같습니다.
 
 ```js
 my_element.addEventListener("click", function (e) {
