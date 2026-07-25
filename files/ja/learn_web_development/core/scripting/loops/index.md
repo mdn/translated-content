@@ -249,7 +249,7 @@ for (初期化処理; 条件; 最後の式) {
 3. コードのブロックを格納する中括弧。このコードは、ループが反復処理されるたびに実行されます。
 
 > [!NOTE]
-> [Aside: Loops](https://scrimba.com/learn-javascript-c0v/~02a?via=mdn) - Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> による、有用な `for` ループ構文の対話的な掘り下げです。
+> [Aside: Loops](https://scrimba.com/learn-javascript-c0v/~02a?via=mdn) - Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> による、有用な `for` ループ構文の対話的な掘り下げです。
 
 ### 平方の計算
 

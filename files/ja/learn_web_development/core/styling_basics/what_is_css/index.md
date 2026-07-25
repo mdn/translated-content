@@ -159,7 +159,7 @@ CSS が HTML に適用されると、レンダリングされた出力は次の�
 3. CSS に新しいルールを追加して、`<h2>` 要素の色を変えてみましょう。`h1` ルールのコピーを作成し、セレクターを `h2` に変更し、例えば `color` の値を `red` から `purple` などに変更します。
 4. 冒険心がある場合、MDN の [CSS リファレンス](/ja/docs/Web/CSS/Reference)で新しい CSS プロパティや値を見ていき、ルールに追加してみてください。
 
-CSS の基本をさらに練習するには、Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> の[まず CSS を書いてみよう！](https://scrimba.com/learn-html-and-css-c0p/~0j?via=mdn)（英語）をご覧ください。このスクリムでは、基本的な CSS 構文の便利な概要が説明されており、CSS 宣言の記述をさらに練習できるインタラクティブな課題が提供されています。
+CSS の基本をさらに練習するには、Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> の[まず CSS を書いてみよう！](https://scrimba.com/learn-html-and-css-c0p/~0j?via=mdn)（英語）をご覧ください。このスクリムでは、基本的な CSS 構文の便利な概要が説明されており、CSS 宣言の記述をさらに練習できるインタラクティブな課題が提供されています。
 
 ## まとめ
 
