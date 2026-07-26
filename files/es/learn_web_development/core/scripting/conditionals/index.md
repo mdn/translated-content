@@ -43,7 +43,7 @@ Las sentencias condicionales nos permiten representar esa toma de decisiones en 
 
 ## Sentencias if...else
 
-Veamos por mucho el tipo de sentencia condicional más común que usarás en JavaScript — la humilde [sentencia `if...else`](/es/docs/Web/JavaScript/Reference/Statements/if...else).
+Veamos el tipo de sentencia condicional más común, por mucho, que usarás en JavaScript — la humilde [sentencia `if...else`](/es/docs/Web/JavaScript/Reference/Statements/if...else).
 
 ### Sintaxis básica de if...else
 
