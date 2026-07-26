@@ -173,7 +173,7 @@ p {
 
 前回の例と同じ HTML と CSS を使用し、`column-rule-color` の値として、カンマで区切られた 3 つの色を指定します。
 
-```html hidden
+```html-nolint hidden
 <p>
   これは 3 つの段に分割されたテキストです。 `column-rule-color` プロパティは、段の間に描画される罫線の色を変更するために使用されます。素晴らしいと思いませんか？
 </p>
