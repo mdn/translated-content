@@ -142,7 +142,7 @@ column-rule-color: blue, repeat(auto, yellow), red;
 
 ここに 1 段落分のテキストを記載します。
 
-```html-nolint
+```html
 <p>
   これは 3 つの段に分割されたテキストの束です。 `column-rule-color` プロパティは、段と段の間に引かれる罫線の色を変更するために使用されます。すばらしいと思いませんか？
 </p>
