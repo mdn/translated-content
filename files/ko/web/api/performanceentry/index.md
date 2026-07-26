@@ -1,66 +1,80 @@
 ---
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
+l10n:
+  sourceCommit: 0598721ab3f672c66a8357d9e6b27ec8644a2b21
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-**`PerformanceEntry`** 객체는 _performance timeline_ 상의 단일 성능 수치를 캡슐화 합니다. *performance entry*는 응용프로그램의 특정 지점에서 performance *{{domxref("PerformanceMark","mark")}}*나 *{{domxref("PerformanceMeasure","measure")}}*를 생성함으로써 (예를 들면 {{domxref("Performance.mark","mark()")}}를 호출하는 방법으로) 직접적으로 만들어질 수 있습니다. 또는 (이미지와 같은) 리소스를 로딩하는 등의 간접적인 방법으로 생성되기도 합니다.
+**`PerformanceEntry`** 객체는 브라우저의 성능 타임라인을 구성하는 하나의 성능 지표를 캡슐화합니다.
 
-`PerformanceEntry` 인스턴스는 항상 다음 서브타입들 중 하나를 따릅니다:
+Performance API는 `PerformanceEntry`를 특수화한 하위 클래스 형태로 내장 지표를 제공합니다. 여기에는 리소스 로딩, 이벤트 타이밍 등에 대한 항목이 포함됩니다.
 
+또한 애플리케이션의 특정 지점에서 {{domxref("Performance.mark()")}}나 {{domxref("Performance.measure()")}} 메서드를 호출하여 성능 항목을 직접 생성할 수도 있습니다. 이를 통해 여러분만의 지표를 성능 타임라인에 추가할 수 있습니다.
+
+`PerformanceEntry`는 항상 다음 하위 클래스 중 하나의 인스턴스입니다.
+
+- {{domxref("LargestContentfulPaint")}}
+- {{domxref("LayoutShift")}}
+- {{domxref("PerformanceEventTiming")}}
+- {{domxref("PerformanceLongAnimationFrameTiming")}}
+- {{domxref("PerformanceLongTaskTiming")}}
 - {{domxref("PerformanceMark")}}
 - {{domxref("PerformanceMeasure")}}
-- {{domxref("PerformanceFrameTiming")}}
 - {{domxref("PerformanceNavigationTiming")}}
-- {{domxref("PerformanceResourceTiming")}}
 - {{domxref("PerformancePaintTiming")}}
+- {{domxref("PerformanceResourceTiming")}}
+- {{domxref("PerformanceScriptTiming")}}
+- {{domxref("PerformanceServerTiming")}}
+- {{domxref("TaskAttributionTiming")}}
+- {{domxref("VisibilityStateEntry")}}
 
-{{AvailableInWorkers}}
+## 인스턴스 속성
 
-## Properties
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
+  - : 성능 항목의 이름을 나타내는 문자열입니다. 값은 하위 유형에 따라 다릅니다.
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
+  - : 성능 지표의 종류를 나타내는 문자열입니다. 예를 들어 {{domxref("PerformanceMark")}}인 경우 `"mark"`가 됩니다.
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
+  - : 성능 지표의 시작 시간을 나타내는 {{domxref("DOMHighResTimeStamp")}}입니다.
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
+  - : 성능 항목의 지속 시간을 나타내는 {{domxref("DOMHighResTimeStamp")}}입니다.
 
-- {{domxref("PerformanceEntry.name")}} {{readonlyInline}}
-  - : A value that further specifies the value returned by the {{domxref("PerformanceEntry.entryType")}} property. The value of both depends on the subtype. See property page for valid values.
-- {{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} representing the type of performance metric such as, for example, "`mark`". See property page for valid values.
-- {{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the starting time for the performance metric.
-- {{domxref("PerformanceEntry.duration")}} {{readonlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the time value of the duration of the performance event.
-
-## Methods
+## 인스턴스 메서드
 
 - {{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}
-  - : Returns a JSON representation of the `PerformanceEntry` object.
+  - : `PerformanceEntry` 객체의 JSON 표현을 반환합니다.
 
-## Example
+## 예제
 
-The following example checks all `PerformanceEntry` properties to see if the browser supports them and if so, write their values to the console.
+### 성능 항목 다루기
+
+다음 예제는 {{domxref("PerformanceMark")}}와 {{domxref("PerformanceMeasure")}} 유형의 `PerformanceEntry` 객체를 생성합니다.
+`PerformanceMark`와 `PerformanceMeasure` 하위 클래스는 `PerformanceEntry`로부터 `duration`, `entryType`, `name`, `startTime` 속성을 상속받아, 각 하위 클래스에 맞는 값으로 설정합니다.
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntries() to get a list of all performance entries
-  var p = performance.getEntries();
-  for (var i = 0; i < p.length; i++) {
-    console.log("PerformanceEntry[" + i + "]");
-    print_PerformanceEntry(p[i]);
-  }
-}
-function print_PerformanceEntry(perfEntry) {
-  var properties = ["name", "entryType", "startTime", "duration"];
+// 로그인이 시작되는 코드 위치에 배치
+performance.mark("login-started");
 
-  for (var i = 0; i < properties.length; i++) {
-    // Check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " is NOT supported");
+// 로그인이 완료되는 코드 위치에 배치
+performance.mark("login-finished");
+
+// 로그인 소요 시간 측정
+performance.measure("login-duration", "login-started", "login-finished");
+
+function perfObserver(list, observer) {
+  list.getEntries().forEach((entry) => {
+    if (entry.entryType === "mark") {
+      console.log(`${entry.name}'s startTime: ${entry.startTime}`);
     }
-  }
+    if (entry.entryType === "measure") {
+      console.log(`${entry.name}'s duration: ${entry.duration}`);
+    }
+  });
 }
+const observer = new PerformanceObserver(perfObserver);
+observer.observe({ entryTypes: ["measure", "mark"] });
 ```
 
 ## 명세서
