@@ -70,7 +70,7 @@ column-rule-color: unset;
 
 ### 値
 
-`column-rule-color` プロパティは、カンマ区切りの値のリストを指定できます。指定可能な値には、以下のものがあります。
+`column-rule-color` プロパティは、カンマ区切りの値のリストを指定できます。指定可能な値には、次のものがあります。
 
 - `<line-color>`
   - : {{cssxref("&lt;color&gt;")}} で、罫線の色を表します。
@@ -79,11 +79,11 @@ column-rule-color: unset;
   - : {{cssxref("repeat()")}} 関数に、第一引数で {{cssxref("&lt;integer&gt;")}} で `1` 以上の値を指定し、それ以降の引数で 1 つ以上の `<color>` 値を指定したものです。この `<integer>` は、一連の `<color>` 値を繰り返す回数です。
 
 - `<auto-repeat-line-color>`
-  - : {{cssxref("repeat()")}} 関数に、第一引数で `auto` を指定し、それ以降の引数で 1 つ以上の `<color>` 値を指定したものです。指定された `<color>` の値は、プロパティ値の他の要素によって明示的に指定されていない列・段間の罫線に対して値を埋めるために、必要な回数だけ繰り返して使用されます。
+  - : {{cssxref("repeat()")}} 関数に、第一引数で `auto` を指定し、それ以降の引数で 1 つ以上の `<color>` 値を指定したものです。指定された `<color>` の値は、プロパティ値の他の要素によって明示的に指定されていない罫線に対して値を埋めるために、必要な回数だけ繰り返して使用されます。
 
 ## 解説
 
-`column-rule-color` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーに複数の列・段がある場合に、列・段間の隙間に描画される線の色を定義します。
+`column-rule-color` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーに複数の列・段がある場合に、列・段間の隙間に描画される罫線の色を定義します。
 
 この値は、カンマ区切りの一連の成分からなり、`<line-color>`、`<repeat-line-color>`、`<auto-repeat-line-color>` といった型を含めることができます。
 
@@ -110,7 +110,7 @@ column-rule-color: blue, yellow, red, yellow, red;
 column-rule-color: blue, repeat(2, yellow, red);
 ```
 
-これにより、5 色の色リストが作成されます。`column-rule-color` の値に含まれる色リストの色数が、列間・段間の数を超えた場合、余分な色値は無視されます。コンテナーが 3 列の場合、1 番目の列間・段間に適用されるルールは青、2 番目の列間・段間に適用されるルールは黄色になります。
+これにより、5 色の色リストが作成されます。`column-rule-color` の値に含まれる色リストの色数が、列間・段間の数を超えた場合、余分な色値は無視されます。コンテナーが 3 列の場合、1 番目の列間・段間に適用される罫線は青、2 番目の列間・段間に適用される罫線は黄色になります。
 
 ### 自動反復される罫線の色
 
@@ -144,7 +144,7 @@ column-rule-color: blue, repeat(auto, yellow), red;
 
 ```html
 <p>
-  これは 3 つの段に分割されたテキストです。 `column-rule-color` プロパティは、段の間に描画される罫線の色を変更するために使用されます。素晴らしいと思いませんか？
+  これは 3 つの段に分割されたテキストの束です。 `column-rule-color` プロパティは、段と段の間に引かれる罫線の色を変更するために使用されます。すばらしいと思いませんか？
 </p>
 ```
 
