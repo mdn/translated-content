@@ -14,22 +14,22 @@ URI 在其他地方使用时（如 HTML `<a>` 链接的 [`href`](/zh-CN/docs/Web
 [URI 参考](/zh-CN/docs/Web/URI/Reference)详细介绍了构成 URI 的各个组成部分。
 
 - [方案](/zh-CN/docs/Web/URI/Reference/Schemes)
-  - ：URI 的第一部分，位于 `:` 字符之前，用于指定浏览器必须使用的协议以获取该资源。
+  - : URI 的第一部分，位于 `:` 字符之前，用于指定浏览器必须使用的协议以获取该资源。
 - [权威](/zh-CN/docs/Web/URI/Reference/Authority)
-  - ：位于方案之后、路径之前的段落。它最多可包含三个部分：`user` 信息、`host` 和 `port`。
+  - : 位于方案之后、路径之前的段落。它最多可包含三个部分：`user` 信息、`host` 和 `port`。
 - [路径](/zh-CN/docs/Web/URI/Reference/Path)
-  - ：位于权威部分之后的段落。包含数据（通常以分层形式组织），用于在 URI 的方案和命名权威范围内标识资源。
+  - : 位于权威部分之后的段落。包含数据（通常以分层形式组织），用于在 URI 的方案和命名权威范围内标识资源。
 - [查询](/zh-CN/docs/Web/URI/Reference/Query)
-  - ：位于路径之后的部分。包含非分层数据，用于结合路径组件中的数据，在 URI 的方案和命名权威范围内标识资源。
+  - : 位于路径之后的部分。包含非分层数据，用于结合路径组件中的数据，在 URI 的方案和命名权威范围内标识资源。
 - [片段](/zh-CN/docs/Web/URI/Reference/Fragment)
-  - ：URI 末尾以 `#` 字符开头的可选部分。用于标识资源的特定部分，例如文档中的某个章节或视频中的某个位置。
+  - : URI 末尾以 `#` 字符开头的可选部分。用于标识资源的特定部分，例如文档中的某个章节或视频中的某个位置。
 
 ## 指南
 
 [URI 指南](/zh-CN/docs/Web/URI/Guides) 可帮助你在 Web 上处理 URI。
 
 - [www 与非 www URL 的选择](/zh-CN/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs)
-  - ：关于网站在何种情况下应在 URL 中使用 `www.` 前缀的指导（`www.example.com` 与 `example.com` 的区别）。
+  - : 关于网站在何种情况下应在 URL 中使用 `www.` 前缀的指导（`www.example.com` 与 `example.com` 的区别）。
 
 ## 规范
 
