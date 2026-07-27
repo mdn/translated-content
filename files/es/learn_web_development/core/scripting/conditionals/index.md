@@ -90,7 +90,7 @@ Esta sintaxis es perfectamente válida, pero es mucho más fácil entender el c�
 
 ### Un ejemplo real
 
-Para entender mejor esta sintaxis, consideremos un ejemplo real. Imagina a una niña o un niño a quien su madre o padre le pide ayuda con una tarea del hogar. El padre podría decir: "¡Oye, cariño! Si me ayudas yendo a hacer las compras, te doy una mesada extra para que te alcance para ese juguete que querías." En JavaScript, podríamos representarlo así:
+Para entender mejor esta sintaxis, consideremos un ejemplo real. Imagina a una niña o un niño a quien su madre o padre le pide ayuda con una tarea del hogar, diciéndole: "¡Oye, cariño! Si me ayudas yendo a hacer las compras, te doy una mesada extra para que te alcance para ese juguete que querías." En JavaScript, podríamos representarlo así:
 
 ```js
 let shoppingDone = false;
@@ -103,7 +103,7 @@ if (shoppingDone === true) {
 }
 ```
 
-Este código, tal como está, siempre da como resultado que la variable `shoppingDone` devuelva `false`, lo que significa una decepción para nuestra pobre criatura. Dependería de nosotros proporcionar un mecanismo para que el padre establezca la variable `shoppingDone` en `true` si las compras se hicieron.
+Este código, tal como está, siempre da como resultado que la variable `shoppingDone` devuelva `false`, lo que significa una decepción para nuestra pobre criatura. Dependería de nosotros proporcionar un mecanismo para que la variable `shoppingDone` se establezca en `true` si las compras se hicieron.
 
 > [!NOTE]
 > Puedes ver una [versión más completa de este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/allowance-updater.html) (también puedes verla [funcionando en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
@@ -184,7 +184,7 @@ if (cheese) {
 }
 ```
 
-Y, volviendo a nuestro ejemplo anterior de la criatura que hace una tarea para su padre o madre, podrías escribirlo así:
+Y, volviendo a nuestro ejemplo anterior de la criatura que ayuda con las tareas del hogar, podrías escribirlo así:
 
 ```js
 let shoppingDone = false;
