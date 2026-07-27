@@ -13,7 +13,7 @@ Performance API는 `PerformanceEntry`를 특수화한 하위 클래스 형태로
 
 또한 애플리케이션의 특정 지점에서 {{domxref("Performance.mark()")}}나 {{domxref("Performance.measure()")}} 메서드를 호출하여 성능 항목을 직접 생성할 수도 있습니다. 이를 통해 여러분만의 지표를 성능 타임라인에 추가할 수 있습니다.
 
-`PerformanceEntry`는 항상 다음 하위 클래스 중 하나의 인스턴스입니다.
+`PerformanceEntry` 인스턴스는 항상 다음 하위 클래스 중 하나에 속합니다.
 
 - {{domxref("LargestContentfulPaint")}}
 - {{domxref("LayoutShift")}}
