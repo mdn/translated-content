@@ -1,6 +1,6 @@
 ---
 title: CSS 隙間
-short-title: Gaps
+short-title: 隙間
 slug: Web/CSS/Guides/Gaps
 l10n:
   sourceCommit: 34838ae7d32e78bfe01dbf2c266257ef0f8305c4
