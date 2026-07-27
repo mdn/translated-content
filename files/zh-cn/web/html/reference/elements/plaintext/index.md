@@ -1,13 +1,12 @@
 ---
-title: <plaintext>：纯文本元素（已弃用）
+title: "`<plaintext>` HTML 纯文本元素"
+short-title: <plaintext>
 slug: Web/HTML/Reference/Elements/plaintext
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{deprecated_header}}
-
-## 概述
 
 **`<plaintext>`** [HTML](/zh-CN/docs/Web/HTML) 元素将起始标签后面的任何东西渲染为纯文本，不会解释为 HTML。它没有闭合标签，因为起始标签之后的所有内容都被视为原始文本。
 
