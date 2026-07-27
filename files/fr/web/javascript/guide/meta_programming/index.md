@@ -292,13 +292,13 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Proxy/Proxy/enumerate", "handler.enumerate()")}}
+        <code>handler.enumerate()</code>
       </td>
       <td>
         <p>
           Lister les propriétés avec <code>for...in</code> :
           <code>for (var nom in proxy) {...}</code
-          ><br /><br />{{jsxref("Reflect.enumerate()")}}
+          ><br /><br /><code>Reflect.enumerate()</code>
         </p>
       </td>
       <td>La méthode <code>enumerate</code> doit renvoyer un objet.</td>

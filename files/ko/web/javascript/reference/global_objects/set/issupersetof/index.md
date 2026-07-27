@@ -37,7 +37,7 @@ isSupersetOf(other)
 > [!NOTE]
 > 초집합 관계는 완벽한 상위집합이 아닙니다. `isSupersetOf()`는 `this`과 `other`에 동일한 요소가 포함되어 있으면 `true`를 반환합니다.
 
-`isSupersetOf()`는 `other` 매개변수로 [유사 Set](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 받습니다. 어떠한 사용자 코드 호출없이 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 실제 {{jsxref("Operators/this", "this")}} 인스턴스여야 합니다. 그러면 그 동작은 `this`와 `other`의 크기에 따라 달라집니다.
+`isSupersetOf()`는 `other` 매개변수로 [유사 Set](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 받습니다. 어떠한 사용자 코드 호출없이 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 실제 {{jsxref("this")}} 인스턴스여야 합니다. 그러면 그 동작은 `this`와 `other`의 크기에 따라 달라집니다.
 
 - `this`의 요소가 `other.size`보다 적으면 `false`를 직접 반환합니다.
 - 그렇지 않으면 `keys()` 메서드를 호출하여 `other`를 순회합니다. 만약 `other`의 요소가 `this`에 없으면 `false`를 반환합니다. (그리고 `return()` 메서드를 호출하여 `keys()` 반복자를 닫습니다). 그렇지 않으면 `true`를 반환합니다.

@@ -3,7 +3,7 @@ title: Type CSS `<box-edge>`
 short-title: <box-edge>
 slug: Web/CSS/Reference/Values/box-edge
 l10n:
-  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
+  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<box-edge>`** représentent un mot-clé de [bord de boîte](/fr/docs/Web/CSS/Guides/Box_model/Introduction), comme [`content-box`](#content-box) et [`border-box`](#border-box). Les mots-clés de bord de boîte servent à définir différents aspects du modèle de boîte d'un element et la façon dont les elements sont positionnés et affichés à l'écran.
@@ -13,12 +13,8 @@ Les mots-clés de bord de boîte sont les composants, entre autres, des types de
 ## Syntaxe
 
 ```plain
-/* les trois valeurs <box> */
-<visual-box> = content-box | padding-box | border-box
-
-/* les valeurs <shape-box> */
-<layout-box> = <visual-box> | margin-box
-
+<visual-box> = content-box | padding-box | border-box /* les trois valeurs <box> */
+<layout-box> ou <shape-box> = <visual-box> | margin-box
 <paint-box> = <visual-box> | fill-box | stroke-box
 <coord-box> = <paint-box> | fill-box | stroke-box | view-box
 <geometry-box> = <shape-box> | fill-box | stroke-box | view-box
@@ -41,7 +37,7 @@ Une `<box-edge>` peut être de type `<visual-box>`, `<layout-box>`, `<paint-box>
   - : Désigne la boîte de coordonnées utilisée pour positionner et dimensionner un élément dans son conteneur parent. Elle sert à contrôler la façon dont le contenu se déplace autour des bords de la boîte. Elle exclut la marge. Ce type de valeur est utilisé pour la propriété {{CSSxRef("offset-path")}}.
 
 - `<geometry-box>`
-  - : Définit la boîte de référence pour une [forme de base](/fr/docs/Web/CSS/Reference/Values/basic-shape), ou, si elle est définie seule, fait que les bords de la boîte indiquée, y compris les coins arrondis (comme avec {{CSSxRef("border-radius")}}), servent de chemin de découpe (<i lang="en">clipping path</i> en anglais). Ce type de valeur est utilisé pour les propriétés {{CSSxRef("clip-path")}}, {{CSSxRef("mask-clip")}}, {{CSSxRef("mask-origin")}} et l'attribut SVG {{SVGAttr("clip-path")}}.
+  - : Définit la boîte de référence pour une [forme de base](/fr/docs/Web/CSS/Reference/Values/basic-shape), ou, si elle est définie seule, fait que les bords de la boîte indiquée, y compris les coins arrondis (comme avec {{CSSxRef("border-radius")}}), servent de chemin de découpe (<i lang="en">clipping path</i> en anglais). Ce type de valeur est utilisé pour les propriétés {{CSSxRef("clip-path")}}, {{CSSxRef("mask-clip")}}, {{CSSxRef("mask-origin")}} et l'attribut SVG {{SVGAttr("clip-path")}}&nbsp;; il est également utilisé dans le cadre des valeurs de la propriété {{CSSxRef("border-shape")}}.
 
 ### Mots-clés
 
@@ -55,6 +51,9 @@ Les mots-clés `<box-edge>` sont définis comme suit&nbsp;:
 
 - `border-box`
   - : Désigne le bord extérieur de la bordure de la boîte. S'il n'y a pas de bordure sur un côté, la valeur est identique à `padding-box`. En SVG, `border-box` est traité comme `stroke-box`. La zone de bordure entoure la zone de remplissage, à partir du bord extérieur de la boîte de remplissage.
+
+- `half-border-box`
+  - : Désigne une forme de boîte qui traverse le centre de la région de la bordure&nbsp;; la moitié intérieure de la région de la bordure se trouve à l'intérieur de la forme, et la moitié extérieure de la région de la bordure se trouve à l'extérieur de la forme.
 
 - `margin-box`
   - : Désigne le bord extérieur de la marge de la boîte. S'il n'y a pas de marge sur un côté, la valeur est identique à `border-box`. En SVG, `margin-box` est traité comme `stroke-box`.

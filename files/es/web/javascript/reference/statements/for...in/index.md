@@ -120,7 +120,7 @@ for (const prop in obj) {
 ## Ve también
 
 - {{JSxRef("Statements/for...of", "for...of")}} — una declaración similar que itera sobre la propiedad `values`
-- {{JSxRef("Statements/for_each...in", "for each...in")}} — una declaración similar pero obsoleta que itera sobre los valores de las propiedades de un objeto, en lugar de los nombres de las propiedades en sí
+- `for each...in` — una declaración similar pero obsoleta que itera sobre los valores de las propiedades de un objeto, en lugar de los nombres de las propiedades en sí
 - {{JSxRef("Statements/for", "for")}}
 - [Expresiones generadoras](/es/docs/Web/JavaScript/Guide/Iterators_and_generators) (usa la sintaxis `for...in`)
 - [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

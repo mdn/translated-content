@@ -3,14 +3,14 @@ title: Propriété CSS `transform`
 short-title: transform
 slug: Web/CSS/Reference/Properties/transform
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: b069bf45c0a5706f838f9e46d8494cd7babd605a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`transform`** permet de faire pivoter, redimensionner, incliner ou déplacer un élément.
 Elle modifie l'espace de coordonnées du [modèle de mise en forme visuelle](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model) en CSS.
 
-Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) sera créé.
-Dans ce cas, l'élément agira comme le [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) pour les éléments qu'il contient et qui ont `position: fixed;` ou `position: absolute;`.
+Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) est créé.
+Dans ce cas, l'élément agît comme le [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) pour les éléments qu'il contient et qui ont `position: fixed;` ou `position: absolute;`.
 
 Vous pouvez également utiliser les propriétés de transformation individuelles&nbsp;: {{CSSxRef("translate")}}, {{CSSxRef("rotate")}} et {{CSSxRef("scale")}}. Ces propriétés sont appliquées dans l'ordre suivant&nbsp;: `translate`, `rotate`, `scale` et enfin `transform`.
 
@@ -100,15 +100,16 @@ La propriété `transform` peut être définie avec une valeur ayant pour mot-cl
 ### Valeurs
 
 - {{CSSxRef("&lt;transform-function&gt;")}}
-  - : Une ou plusieurs [fonctions de transformation CSS](/fr/docs/Web/CSS/Reference/Values/transform-function) à appliquer. Les transformations sont composées entre elles de gauche à droite, ce qui signifie que les transformations composées sont en pratique [appliquées de droite à gauche](#ordre_des_transformations).
+  - : Une ou plusieurs [fonctions de transformation CSS](/fr/docs/Web/CSS/Reference/Values/transform-function) à appliquer.
+    Les fonctions de transformation sont combinées de gauche à droite — chaque fonction établit un nouvel espace de coordonnées pour la fonction suivante, et ainsi de suite — de sorte que le résultat visuel correspond à l'ordre écrit des fonctions. Alternativement, en gardant l'espace de coordonnées parent fixe, la même transformation peut être décrite comme l'application des fonctions dans l'ordre inverse (de droite à gauche).
 - `none`
-  - : Aucune transformation ne sera appliquée.
+  - : Aucune transformation n'est appliquée.
 
 ## Accessibilité
 
 Les animations de déplacement ou de zoom peuvent poser des problèmes d'accessibilité en déclenchant certaines migraines. Si vous devez inclure des animations sur votre site web, vous devez fournir aux utilisateur·ice·s une méthode qui leur permette de réduire voire de désactiver les animations sur l'ensemble du site.
 
-À cet égard, on pourra utiliser la caractéristique média {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}} qui permet d'utiliser une requête média pour désactiver les animations si l'utilisateur·ice a indiqué une telle préférence via son système / son navigateur.
+À cet égard, on peut utiliser la caractéristique média {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}} qui permet d'utiliser une requête média pour désactiver les animations si l'utilisateur·ice a indiqué une telle préférence avec son système / son navigateur.
 
 Pour en savoir plus&nbsp;:
 
@@ -148,16 +149,17 @@ div {
 
 {{EmbedLiveSample("Déplacer et pivoter un élément", 400, 170)}}
 
-### Ordre des transformations
+### Comparer l'ordre des fonctions de transformation
 
-L'ordre des fonctions de transformation est important. Dans cet exemple, deux boîtes sont pivotées et déplacées par les mêmes valeurs&nbsp;; seule l'ordre des fonctions de transformation est différent.
+L'ordre des fonctions de transformation est important.
+Dans cet exemple, deux boîtes sont pivotées et déplacées par les mêmes valeurs, mais les fonctions sont dans l'ordre inverse. Les lignes pointillées indiquent l'axe horizontal avant et après la rotation.
 
 #### HTML
 
 ```html
 <div class="original"></div>
-<div class="one">1</div>
-<div class="two">2</div>
+<div class="un">1</div>
+<div class="deux">2</div>
 ```
 
 #### CSS
@@ -189,32 +191,30 @@ div {
 .original::after {
   transform: rotate(135deg);
 }
-.one {
+.un {
   background-color: #cccccc;
 }
-.two {
+.deux {
   background-color: #d6bb72;
 }
 ```
 
 ```css
-.one {
+.un {
   transform: translateX(200px) rotate(135deg);
 }
-.two {
+.deux {
   transform: rotate(135deg) translateX(200px);
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Ordre des transformations", 400, 460)}}
+{{EmbedLiveSample("Comparer l'ordre des fonctions de transformation", 400, 460)}}
 
-Lorsque un élément est pivoté avant d'être déplacé, la direction de la translation se fait selon l'axe pivoté. L'axe est indiqué par les lignes pointillées.
-
-### Plus d'exemples
-
-Veuillez consulter [Utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using) et {{CSSxRef("&lt;transform-function&gt;")}} pour plus d'exemples.
+- La boîte 1 (premier `translateX()`, puis `rotate()`)&nbsp;: L'espace de coordonnées se déplace d'abord de `200px` le long de l'axe X, puis pivote de `135deg` dans cet espace décalé, de sorte que l'élément se retrouve à droite de sa position d'origine, pivoté.
+- La boîte 2 (premier `rotate()`, puis `translateX()`)&nbsp;: L'espace de coordonnées pivote d'abord de `135deg`, de sorte que l'élément se déplace ensuite de `200px` le long de l'axe pivoté, dans la direction indiquée par les lignes pointillées.
+- Veuillez consulter [Utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using) et {{CSSxRef("&lt;transform-function&gt;")}} pour plus d'exemples.
 
 ## Spécifications
 

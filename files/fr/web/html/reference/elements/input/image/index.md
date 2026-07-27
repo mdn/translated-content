@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="image">`
 short-title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 3a814443b0b97b9334811b7b1406cae3a009d487
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`image`** sont utilisés pour créer des boutons d'envoi de formulaire graphiques. Autrement dit, il s'agit de boutons d'envoi qui affichent une image plutôt qu'un texte.
@@ -193,7 +193,7 @@ Les éléments `<input type="image">`, comme [les boutons d'envoi classiques](/f
 
 Lors de l'envoi d'un formulaire avec un bouton graphique `<input type="image">`, deux données supplémentaires sont automatiquement envoyées au serveur par le navigateur — les coordonnées `x` et `y` de l'emplacement du clic sur l'image. Vous pouvez voir ceci à l'œuvre dans [l'exemple sur les coordonnées X Y <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/forms/image-type-example/xy-coordinates-example.html).
 
-Lorsqu'on clique sur l'image pour envoyer le formulaire, des données sont ajoutées aux paramètres de l'URL, comme `?x=52&y=55`. Attention, si le bouton utilise un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name), sa valeur est utilisée comme préfixe pour chaque attribut, par exemple si `name` vaut `position`, les coordonnées envoyées dans l'URL seraient transmises sous la forme `?position.x=52&position.y=55`. Cela vaut également pour les autres attributs.
+Lorsqu'on clique sur l'image pour envoyer le formulaire, des données sont ajoutées aux paramètres de l'URL, telles que `?x=52&y=55`. Attention, si le bouton utilise un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name), le nom défini est préfixé à chaque nom de coordonnée séparées par un point. Par exemple, si le `name` vaut `position`, les coordonnées retournées sont formatées dans l'URL comme `?position.x=52&position.y=55`.
 
 Il s'agit des coordonnées X et Y de l'image sur laquelle la souris a cliqué pour envoyer le formulaire, où (`0,0`) correspond au coin supérieur gauche de l'image et constitue la valeur par défaut si l'envoi a lieu sans clic sur l'image. Ces coordonnées peuvent être utilisées lorsque l'emplacement où l'on a cliqué sur l'image est important, par exemple si vous disposez d'une carte qui, lorsqu'on clique dessus, envoie les coordonnées de l'emplacement cliqué au serveur. Le code côté serveur détermine alors l'emplacement sur lequel l'utilisateur·ice a cliqué et retourne des informations sur les lieux à proximité.
 

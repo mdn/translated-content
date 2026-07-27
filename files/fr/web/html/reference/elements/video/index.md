@@ -3,7 +3,7 @@ title: "Élément HTML `<video>` : l'élément d'intégration vidéo"
 short-title: <video>
 slug: Web/HTML/Reference/Elements/video
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: d1aa0dbd7441564e6ce8f6706c2022a2e1912d8c
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<video>`** intègre un lecteur de média qui prend en charge la lecture vidéo dans le document. Vous pouvez également utiliser `<video>` pour le contenu audio, mais l'élément {{HTMLElement("audio")}} peut fournir une expérience utilisateur plus appropriée.
@@ -24,7 +24,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<video>`** intègre un lecteur de médi
 </video>
 ```
 
-L'exemple précédent illustre comment utiliser l'élément `<video>` simplement, à la façon d'un élément {{HTMLElement("img")}}. Le chemin vers le média à afficher est fourni avec l'attribut `src` et on peut inclure d'autres attributs afin de spécifier la largeur et la hauteur, la lecture automatique et/ou en boucle, les contrôles affichés, etc.
+L'exemple précédent illustre comment utiliser l'élément `<video>` simplement, à la façon d'un élément {{HTMLElement("img")}}. Le chemin vers le média à afficher est fourni avec l'attribut `src` et on peut inclure d'autres attributs afin de définir la largeur et la hauteur, la lecture automatique et/ou en boucle, les contrôles affichés, etc.
 
 Le contenu fourni entre les balises `<video></video>` est affiché comme contenu alternatif par les navigateurs qui ne prennent pas en charge l'élément.
 
@@ -38,28 +38,28 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > [!NOTE]
     > Les navigateurs modernes bloquent l'audio (ou les vidéos avec une piste audio non assurée) de la lecture automatique, car les sites qui jouent automatiquement l'audio peuvent être une expérience désagréable pour les utilisateur·ice·s. Consultez notre [Guide sur la lecture automatique](/fr/docs/Web/Media/Guides/Autoplay) pour plus d'informations sur la façon d'utiliser correctement cette dernière.
 
-    Pour désactiver la vidéo automatique, `autoplay="false"` ne fonctionnera pas&nbsp;; La vidéo sera automatiquement lue si l'attribut est présent dans le tag `<video>`. Pour supprimer la lecture automatique, l'attribut doit être complètement supprimé.
+    Pour désactiver la vidéo automatique, `autoplay="false"` ne fonctionne pas&nbsp;; La vidéo est automatiquement lue si l'attribut est présent dans le tag `<video>`. Pour supprimer la lecture automatique, l'attribut doit être complètement supprimé.
 
     > [!NOTE]
-    > Les vidéos avec l'attribut [`loading="lazy"`](#loading) défini ne commenceront pas à se télécharger et à se lire automatiquement tant que l'élément n'est pas proche ou dans la zone visible.
+    > Les vidéos avec l'attribut [`loading="lazy"`](#loading) défini ne commencent pas à se télécharger et à se lire automatiquement tant que l'élément n'est pas proche ou dans la zone visible.
 
 - `controls`
-  - : Si cet attribut est présent, le navigateur affichera des contrôles pour permettre à l'utilisateur·ice de contrôler la lecture de la vidéo, le volume et la mise sur pause.
+  - : Si cet attribut est présent, le navigateur affiche des contrôles pour permettre à l'utilisateur·ice de contrôler la lecture de la vidéo, le volume et la mise sur pause.
 - `controlslist`
   - : L'attribut [`controlslist` <sup>(angl.)</sup>](https://wicg.github.io/controls-list/explainer.html), lorsqu'il est indiqué, aide le navigateur à choisir les contrôles à afficher pour la manipulation du média lorsque l'attribut `controls` est utilisé.
 
     Les valeurs autorisées pour cet attribut sont `nodownload`, `nofullscreen` et `noremoteplayback`.
 
-    On utilisera l'attribut [`disablepictureinpicture`](#disablepictureinpicture) afin de désactiver ce mode et les contrôles associés.
+    On utilise l'attribut [`disablepictureinpicture`](#disablepictureinpicture) afin de désactiver ce mode et les contrôles associés.
 
 - [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : Cet attribut à [valeur contrainte](/fr/docs/Glossary/Enumerated) permet d'indiquer si le CORS doit être utilisé pour récupérer la vidéo. [Les ressources avec le CORS activé](/fr/docs/Web/HTML/How_to/CORS_enabled_image) peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) sans le _corrompre_. Les valeurs autorisées sont&nbsp;:
     - `anonymous`
-      - : Une requête _cross-origine_ est envoyée sans information d'authentification. Autrement dit, un en-tête HTTP `Origin:` est envoyé, sans cookie, certificat X.509 ou sans authentification HTTP simple. Si le serveur ne fournit pas d'informations d'authentification au site d'origine (c'est-à-dire en n'envoyant pas l'en-tête HTTP `Access-Control-Allow-Origin:`, la vidéo sera corrompue et son utilisation sera restreinte.
+      - : Une requête _cross-origine_ est envoyée sans information d'authentification. Autrement dit, un en-tête HTTP `Origin:` est envoyé, sans cookie, certificat X.509 ou sans authentification HTTP simple. Si le serveur ne fournit pas d'informations d'authentification au site d'origine (c'est-à-dire en n'envoyant pas l'en-tête HTTP `Access-Control-Allow-Origin:`, la vidéo est _corrompue_ et son utilisation est restreinte.
     - `use-credentials`
-      - : Une requête _cross-origine_ est envoyée avec une information d'authentification. Autrement dit, un en-tête HTTP `Origin:` est envoyé, avec un cookie, une certification ou une authentification HTTP simple. Si le serveur ne fournit pas d'informations d'authentification au site d'origine (c'est-à-dire en n'envoyant pas l'en-tête HTTP `Access-Control-Allow-Credentials:`, la vidéo sera _corrompue_ et son utilisation sera restreinte.
+      - : Une requête _cross-origine_ est envoyée avec une information d'authentification. Autrement dit, un en-tête HTTP `Origin:` est envoyé, avec un cookie, une certification ou une authentification HTTP simple. Si le serveur ne fournit pas d'informations d'authentification au site d'origine (c'est-à-dire en n'envoyant pas l'en-tête HTTP `Access-Control-Allow-Credentials:`, la vidéo est _corrompue_ et son utilisation est restreinte.
 
-    Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS (l'en-tête HTTP `Origin:` n'est pas envoyé) et elle ne peut pas être utilisée dans un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas). Si la valeur est invalide, elle sera gérée comme si le mot-clé `anonymous` était utilisé. Pour plus d'informations, consulter l'article sur [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin).
+    Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS (l'en-tête HTTP `Origin:` n'est pas envoyé) et elle ne peut pas être utilisée dans un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas). Si la valeur est invalide, elle est gérée comme si le mot-clé `anonymous` était utilisé. Pour plus d'informations, consulter l'article sur [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin).
 
 - `disablepictureinpicture`
   - : Empêche le navigateur de suggérer un menu contextuel pour la superposition d'une image/vidéo ("_Picture-in-picture_") ou de demander l'activation automatique pour la superposition du média.
@@ -78,13 +78,13 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `lazy`
       - : Diffère le chargement de la vidéo jusqu'à ce qu'elle atteigne une distance calculée de la zone d'affichage, telle que définie par le navigateur.
 
-        Le chargement différé évite la consommation de bande passante réseau et de stockage nécessaire pour gérer la vidéo tant qu'il n'est pas raisonnablement certain qu'elle sera nécessaire. Cela améliore les performances dans la plupart des cas d'utilisation typiques.
+        Le chargement différé évite la consommation de bande passante réseau et de stockage nécessaire pour gérer la vidéo tant qu'il n'est pas raisonnablement certain qu'elle est nécessaire. Cela améliore les performances dans la plupart des cas d'utilisation typiques.
 
-        Bien que les attributs [`width`](#width) et [`height`](#height) explicites soient recommandés pour toutes les vidéos afin d'éviter les décalages de mise en page, ils sont particulièrement importants pour celles chargées en différé. Les vidéos chargées en différé ne seront jamais chargées si elles n'intersectent pas une partie visible d'un élément, même si leur chargement modifierait cela, car les vidéos non chargées ont une `width` et une `height` de `0`. Cela crée une expérience utilisateur encore plus perturbante lorsque le contenu visible dans la zone d'affichage se réorganise en pleine lecture.
+        Bien que les attributs [`width`](#width) et [`height`](#height) explicites soient recommandés pour toutes les vidéos afin d'éviter les décalages de mise en page, ils sont particulièrement importants pour celles chargées en différé. Les vidéos chargées en différé ne sont jamais chargées si elles n'intersectent pas une partie visible d'un élément, même si leur chargement modifie cela, car les vidéos non chargées ont une `width` et une `height` de `0`. Cela crée une expérience utilisateur encore plus perturbante lorsque le contenu visible dans la zone d'affichage se réorganise en pleine lecture.
 
         Les vidéos chargées en différé situées dans la zone d'affichage visuelle peuvent ne pas encore être visibles lorsque l'évènement {{DOMxRef("Window.load_event", "load")}} de la fenêtre est déclenché. Cela s'explique par le fait que l'évènement est déclenché en fonction des vidéos chargées immédiatement — les vidéos chargées en différé ne sont pas prises en compte même si elles se trouvent dans la zone d'affichage visuelle lors du chargement initial de la page.
 
-        Le chargement n'est différé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-pistage, car si un agent utilisateur prenait en charge le chargement différé lorsque le script est désactivé, il serait toujours possible pour un site de suivre la position approximative de défilement d'un·e utilisateur·ice tout au long d'une session, en plaçant stratégiquement des vidéos dans le balisage d'une page de sorte qu'un serveur puisse suivre combien de vidéos sont demandées et quand.
+        Le chargement n'est différé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-pistage, car si un agent utilisateur prenait en charge le chargement différé lorsque le script est désactivé, il est toujours possible pour un site de suivre la position approximative de défilement d'un·e utilisateur·ice tout au long d'une session, en plaçant stratégiquement des vidéos dans le balisage d'une page de sorte qu'un serveur puisse suivre combien de vidéos sont demandées et quand.
 
         > [!NOTE]
         > L'attribut `loading="lazy"` a également un impact sur les attributs [`autoplay`](#autoplay), [`poster`](#poster) et [`preload`](#preload), comme décrit dans chacune de ces sections de la page.
@@ -93,19 +93,22 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Un attribut booléen, qui, lorsqu'il est présent, indique que la vidéo doit être jouée en boucle.
 
 - `muted`
-  - : Un attribut booléen qui indique s'il faut couper le son contenu dans la vidéo. Si cet attribut est utilisé, le son sera coupé au lancement de la vidéo. Sa valeur par défaut est `false`, ce qui signifie que l'audio sera lu lorsque la vidéo sera lue.
+  - : Un attribut booléen qui indique le réglage par défaut de la mise en sourdine de l'audio contenu dans la vidéo. S'il est défini, l'audio est initialement coupé. Sa valeur par défaut est `false`, ce qui signifie que l'audio est entendu lorsque la vidéo est lue.
+
+    > [!NOTE]
+    > Pour désactiver la sourdine, définir `muted="false"` ne fonctionne pas&nbsp;: l'audio est coupé si l'attribut est présent. Pour désactiver la sourdine, l'attribut doit être supprimé entièrement.
 
 - `playsinline`
-  - : Un attribut booléen qui indique que la vidéo doit être jouée en incise, c'est-à-dire au sein de la zone de lecture de l'élément. À noter&nbsp;: l'absence de cet attribut n'implique pas que la vidéo sera lancée en plein écran.
+  - : Un attribut booléen qui indique que la vidéo doit être jouée en incise, c'est-à-dire au sein de la zone de lecture de l'élément. À noter&nbsp;: l'absence de cet attribut n'implique pas que la vidéo est lancée en plein écran.
 
 - `poster`
   - : Une URL qui contient une vignette à afficher tant que la vidéo est en cours de téléchargement. Si cet attribut n'est pas utilisé, rien n'est affiché jusqu'à ce que la première image de la vidéo soit disponible, ensuite, c'est cette image qui est affichée comme vignette sur la vidéo.
 
     > [!NOTE]
-    > Les vidéos avec l'attribut [`loading="lazy"`](#loading) défini ne téléchargeront la ressource `poster` que lorsque la vidéo sera proche ou dans la zone d'affichage.
+    > Les vidéos avec l'attribut [`loading="lazy"`](#loading) défini ne téléchargent la ressource `poster` que lorsque la vidéo est proche ou dans la zone d'affichage.
 
 - `preload`
-  - : Cet attribut à [valeur contrainte](/fr/docs/Glossary/Enumerated) est une indication destinée au navigateur sur la meilleure façon de charger la vidéo (selon l'auteur de la page). Il peut prendre l'une des valeurs suivantes :
+  - : Cet attribut à [valeur contrainte](/fr/docs/Glossary/Enumerated) est une indication destinée au navigateur sur la meilleure façon de charger la vidéo (selon l'auteur·ice de la page). Il peut prendre l'une des valeurs suivantes&nbsp;:
     - `none`&nbsp;: la vidéo ne doit pas être préchargée.
     - `metadata`&nbsp;: seules les métadonnées de la vidéo (sa durée par exemple) sont récupérées.
     - `auto`&nbsp;: le fichier entier peut être téléchargé, même si l'utilisateur·ice ne s'en sert pas.
@@ -115,7 +118,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
     > [!NOTE]
     >
-    > Les vidéos avec l'attribut [`loading="lazy"`](#loading) défini n'appliqueront le comportement `preload` que lorsque la vidéo sera proche ou dans la zone d'affichage.
+    > Les vidéos avec l'attribut [`loading="lazy"`](#loading) défini n'appliquent le comportement `preload` que lorsque la vidéo est proche ou dans la zone d'affichage.
     >
     > - L'attribut `autoplay` a la priorité sur `preload`. Si `autoplay` est défini, le navigateur doit nécessairement télécharger la vidéo pour la lancer.
     > - Cet attribut est simplement une indication, la spécification ne force pas le navigateur à respecter la valeur de cet attribut.
@@ -130,7 +133,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - {{DOMxRef("ScriptProcessorNode.audioprocess_event","audioprocess")}} {{Deprecated_Inline}}
   - : La mémoire tampon en entrée d'un {{DOMxRef("ScriptProcessorNode")}} peut désormais être traité.
 - {{DOMxRef("HTMLMediaElement.canplay_event", 'canplay')}}
-  - : Le navigateur peut lire le média mais estime que trop peu de données ont été chargées pour lire le média jusqu'à sa fin (il faudra vraisemblablement un arrêt pour un chargement en mémoire tampon).
+  - : Le navigateur peut lire le média mais estime que trop peu de données ont été chargées pour lire le média jusqu'à sa fin (il faut vraisemblablement un arrêt pour un chargement en mémoire tampon).
 - {{DOMxRef("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
   - : Le navigateur estime qu'il peut lire le média jusqu'à sa fin, sans avoir à interrompre la lecture par du chargement en mémoire tampon.
 - {{DOMxRef("OfflineAudioContext.complete_event", "complete")}}
@@ -176,7 +179,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ## Notes d'utilisation
 
-Les navigateurs ne prennent pas en charge l'ensemble des formats vidéo&nbsp; vous pouvez fournir plusieurs sources grâce à des éléments {{HTMLElement("source")}}, le navigateur utilisera la première ressource dont il connaît le format&nbsp;:
+Les navigateurs ne prennent pas en charge l'ensemble des formats vidéo&nbsp; vous pouvez fournir plusieurs sources grâce à des éléments {{HTMLElement("source")}}, le navigateur utilise la première ressource dont il connaît le format&nbsp;:
 
 ```html
 <video controls>
@@ -195,7 +198,7 @@ Nous proposons un [Guide des types de fichiers médias substantiel et approfondi
 
 Quelques notes d'utilisation&nbsp;:
 
-- Si l'attribut `controls` n'est pas indiqué, la vidéo n'inclura pas les contrôles par défaut du navigateur et il est nécessaire de fournir ses propres contrôles en utilisant JavaScript et l'API [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement). Voir l'article [créer un lecteur vidéo multi-navigateurs](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) pour plus de détails.
+- Si l'attribut `controls` n'est pas indiqué, la vidéo n'inclut pas les contrôles par défaut du navigateur et il est nécessaire de fournir ses propres contrôles en utilisant JavaScript et l'API [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement). Voir l'article [créer un lecteur vidéo multi-navigateurs](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) pour plus de détails.
 - L'API `HTMLMediaElement` déclenche de nombreux [évènements](/fr/docs/Web/API/HTMLMediaElement#évènements) qui permettent d'avoir un contrôle précis sur l'audio et la vidéo.
 - La propriété {{CSSxRef("object-position")}} permet d'ajuster la position de la vidéo dans le cadre du lecteur et la propriété {{CSSxRef("object-fit")}} permet de contrôler l'ajustement de la taille de la vidéo dans le cadre.
 - Afin de fournir des sous-titres et légendes à la vidéo, on peut utiliser du code JavaScript ainsi que des éléments {{HTMLElement("track")}} au format [WebVTT](/fr/docs/Web/API/WebVTT_API). Voir l'article [Ajouter des sous-titres et légendes à une vidéo HTML5](/fr/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) pour plus d'informations.
@@ -215,7 +218,7 @@ Il n'y a pas de considérations particulières pour la mise en forme de `<video>
 Les pistes de texte synchronisées pour les sous-titres, les sous-titres codés, les titres de chapitres, etc. peuvent être ajoutées de manière déclarative en imbriquant l'élément {{HTMLElement("track")}}.
 Les pistes sont définies dans le [Format de fichier de pistes de texte pour vidéos Web (WebVTT)](/fr/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format) (fichier `.vtt`).
 
-Par exemple, le code HTML ci-dessous inclut le fichier «&nbsp;captions.vtt&nbsp;», qui sera utilisé pour superposer des sous-titres codés sur la vidéo si l'utilisateur·ice active cette fonctionnalité.
+Par exemple, le code HTML ci-dessous inclut le fichier «&nbsp;captions.vtt&nbsp;», qui est utilisé pour superposer des sous-titres codés sur la vidéo si l'utilisateur·ice active cette fonctionnalité.
 
 ```html
 <video controls src="video.webm">
@@ -240,7 +243,7 @@ Toutefois, ces évènements ne sont pas déclenchés à même l'élément `<vide
   - : Un objet {{DOMxRef("TextTrackList")}} qui contient l'ensemble des pistes textuelles associées au média (utilisées pour les sous-titres, les sous-titres codés, etc.).
     On peut ajouter un écouteur d'évènement `addtrack` à cet objet afin d'être alerté lorsque des pistes textuelles sont ajoutées à l'élément.
 
-Le fragment de code qui suit, par exemple, permettra d'appeler une fonction donnée lorsque des pistes audio sont ajoutées ou supprimées d'un élément `<video>`&nbsp;:
+Le fragment de code qui suit, par exemple, permet d'appeler une fonction donnée lorsque des pistes audio sont ajoutées ou supprimées d'un élément `<video>`&nbsp;:
 
 ```js
 const elem = document.querySelector("video");
@@ -442,7 +445,7 @@ Certains types de fichiers médias vous permettent de fournir des informations p
 
 ## Voir aussi
 
-- [Guide des types et formats de médias : contenu image, audio et vidéo](/fr/docs/Web/Media/Guides/Formats)
+- [Guide des types et formats de médias&nbsp;: contenu image, audio et vidéo](/fr/docs/Web/Media/Guides/Formats)
   - [Formats de conteneurs médias (types de fichiers)](/fr/docs/Web/Media/Guides/Formats/Containers)
   - [Guide des codecs vidéo du Web](/fr/docs/Web/Media/Guides/Formats/Video_codecs)
   - [Guide des codecs audio du Web](/fr/docs/Web/Media/Guides/Formats/Audio_codecs)

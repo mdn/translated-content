@@ -3,7 +3,7 @@ title: Propriété CSS `container-name`
 short-title: container-name
 slug: Web/CSS/Reference/Properties/container-name
 l10n:
-  sourceCommit: 2ce88199869b63f8da3bbeafd899400f7579cce9
+  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`container-name`** définit une liste de noms de conteneurs de requête utilisée par la règle {{CSSxRef("@container")}} dans une [requête de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries).
@@ -57,7 +57,7 @@ Sans nom défini, une requête de conteneur applique des styles aux éléments e
 
 Lorsqu'un contexte de compartimentation reçoit un nom, il peut être ciblé spécifiquement en définissant ce nom dans une règle {{CSSxRef("@container")}}.
 
-Il est possible de créer une requête de conteneur en attribuant un {{CSSxRef("container-name")}} à un élément, puis en interrogeant uniquement l'existence de ce nom dans la règle `@container` associée, sans expression de requête définie. Ces soi-disant [**requêtes de conteneur uniquement par un nom**](/fr/docs/Web/CSS/Guides/Containment/Container_queries#requêtes_de_conteneur_uniquement_par_un_nom) permettent d'appliquer sélectivement des styles aux éléments uniquement en fonction de la présence d'un ancêtre avec un `container-name` spécifique défini.
+Il est possible de créer une requête de conteneur en attribuant un `container-name` à un élément, puis en interrogeant uniquement l'existence de ce nom dans la règle `@container` associée, sans expression de requête définie. Ces soi-disant [**requêtes de conteneur uniquement par un nom**](/fr/docs/Web/CSS/Guides/Containment/Container_queries#requêtes_de_conteneur_uniquement_par_un_nom) permettent d'appliquer sélectivement des styles aux éléments uniquement en fonction de la présence d'un ancêtre avec un `container-name` spécifique défini.
 
 ## Exemples
 

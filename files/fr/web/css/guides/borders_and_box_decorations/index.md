@@ -3,7 +3,7 @@ title: Bordures et décorations de boîte CSS
 short-title: Bordures et décorations de boîte
 slug: Web/CSS/Guides/Borders_and_box_decorations
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
 ---
 
 Le module de **bordures et décorations de boîte CSS** fournit des propriétés permettant d'ajouter des bordures, des formes de coins,et des ombres de boîte aux éléments. Ce module étend les bordures et décorations de boîte introduites dans le module [Arrière-plans et bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders), en ajoutant les propriétés {{CSSxRef("corner-shape")}} et `border-shape`, les propriétés logiques {{CSSxRef("border-radius")}}, les propriétés longues pour la propriété {{CSSxRef("box-shadow")}} et des propriétés pour créer des bordures partielles.
@@ -173,6 +173,7 @@ definirFormeCooin();
 - {{CSSxRef("border-right-color")}}
 - {{CSSxRef("border-right-style")}}
 - {{CSSxRef("border-right-width")}}
+- {{CSSxRef("border-shape")}}
 - {{CSSxRef("border-start-end-radius")}}
 - {{CSSxRef("border-start-start-radius")}}
 - {{CSSxRef("border-top")}}
@@ -200,7 +201,7 @@ definirFormeCooin();
 - {{CSSxRef("corner-top-right-shape")}}
 - {{CSSxRef("corner-top-shape")}}
 
-Le module des bordures CSS et décorations de boîte niveau 4 introduit également les propriétés `border-shape`, `border-limit` et `border-clip`, ainsi que les propriétés longues `border-clip-bottom`, `border-clip-left`, `border-clip-right` et `border-clip-top`. Actuellement, aucun navigateur ne prend en charge ces fonctionnalités. Le module introduit également des propriétés composants pour les propriétés bien prises en charge {{CSSxRef("border-radius")}} et {{CSSxRef("box-shadow")}}, y compris `border-block-end-radius`, `border-block-start-radius`, `border-bottom-radius`, `border-inline-end-radius`, `border-inline-start-radius`, `border-right-radius`, `border-top-radius`, `box-shadow-blur`, `box-shadow-color`, `box-shadow-offset`, `box-shadow-position` et `box-shadow-spread`. Ces propriétés composants ne sont également pas encore prises en charge.
+Le module des bordures CSS et décorations de boîte niveau 4 introduit également les propriétés `border-limit` et `border-clip`, ainsi que les propriétés longues `border-clip-bottom`, `border-clip-left`, `border-clip-right` et `border-clip-top`. Actuellement, aucun navigateur ne prend en charge ces fonctionnalités. Le module introduit également des propriétés composants pour les propriétés bien prises en charge {{CSSxRef("border-radius")}} et {{CSSxRef("box-shadow")}}, y compris `border-block-end-radius`, `border-block-start-radius`, `border-bottom-radius`, `border-inline-end-radius`, `border-inline-start-radius`, `border-right-radius`, `border-top-radius`, `box-shadow-blur`, `box-shadow-color`, `box-shadow-offset`, `box-shadow-position` et `box-shadow-spread`. Ces propriétés composants ne sont également pas encore prises en charge.
 
 ### Types de donnée
 
@@ -214,6 +215,8 @@ Le module des bordures CSS et décorations de boîte niveau 4 introduit égaleme
 
 - [Apprendre CSS&nbsp;: le modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
   - : Apprenez comment les bordures et autres propriétés du modèle de boîte impactent le modèle de boîte CSS.
+- [Créer un menu de navigation irrégulier avec border-shape](/fr/docs/Web/CSS/Guides/Borders_and_box_decorations/Border_shape_nav_menu)
+  - : Apprenez comment utiliser la propriété {{CSSxRef("border-shape")}} pour créer un menu de navigation animé irrégulier.
 
 ## Concepts associés
 

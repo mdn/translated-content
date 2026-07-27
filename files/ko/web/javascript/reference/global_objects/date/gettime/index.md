@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 
 **getTime()** 메서드는 표준시에 따라 지정된 날짜의 시간에 해당하는 숫자 값을 반환합니다.
 
-이 메서드를 사용하면 다른 {{jsxref ( "Date")}} 객체에 날짜와 시간을 지정할 수 있습니다. 이 메소드는 기능적으로 {{jsxref("Date.valueof", "valueOf()")}} 메소드와 동일합니다.
+이 메서드를 사용하면 다른 {{jsxref ( "Date")}} 객체에 날짜와 시간을 지정할 수 있습니다. 이 메소드는 기능적으로 {{jsxref("Date.valueOf", "valueOf()")}} 메소드와 동일합니다.
 
 ## Syntax
 

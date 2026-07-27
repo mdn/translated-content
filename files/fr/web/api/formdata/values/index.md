@@ -1,44 +1,41 @@
 ---
-title: FormData.values()
+title: "FormData : méthode values()"
+short-title: values()
 slug: Web/API/FormData/values
+l10n:
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{AvailableInWorkers}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-{{APIRef("XMLHttpRequest API")}}
-
-La méthode **`FormData.values()`** renvoie une {{jsxref("Iteration_protocols", "itération")}} permettant de passer en revue toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{jsxref("String")}} ou {{domxref("Blob")}}.
-
-> [!NOTE]
-> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+La méthode **`FormData.values()`** retourne un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de passer en revue toutes les valeurs contenues dans le {{domxref("FormData")}}. Les valeurs sont des chaînes de caractères ou des objets {{domxref("Blob")}}.
 
 ## Syntaxe
 
-```js
-formData.values();
+```js-nolint
+values()
 ```
 
 ### Valeur de retour
 
-Retourne une {{jsxref("Iteration_protocols", "itération")}} .
+Un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) des valeurs du {{domxref("FormData")}}.
 
-## Exemple
+## Exemples
 
 ```js
-// Créer un objet FormData test
-var formData = new FormData();
+const formData = new FormData();
 formData.append("cle1", "valeur1");
 formData.append("cle2", "valeur2");
 
 // Affiche les valeurs
-for (var value of formData.values()) {
-  console.log(value);
+for (const valeur of formData.values()) {
+  console.log(valeur);
 }
 ```
 
-Le résultat est :
+Le résultat est&nbsp;:
 
-```
+```plain
 valeur1
 valeur2
 ```
@@ -53,7 +50,5 @@ valeur2
 
 ## Voir aussi
 
-- {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [Utiliser des objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- L'élément HTML {{HTMLElement("form")}}

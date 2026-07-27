@@ -353,8 +353,8 @@ y = 42 + " is the answer"; // "42 is the answer"
 
 숫자를 나타내는 값이 문자열로 메모리에 있는 경우, 변환을 위한 메서드가 있습니다.
 
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseInt()")}}
+- {{jsxref("parseFloat()")}}
 
 `parseInt`는 오직 정수만 반환하므로, 소수에서는 사용성이 떨어집니다.
 

@@ -2,7 +2,7 @@
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: dd88a6eb2176fa31f5b744d8964efecf3f1f425b
 ---
 
 **`Array`** オブジェクトは、他のプログラミング言語の配列と同様に、[複数のアイテムの集合を単一の変数名の下に格納](/ja/docs/Learn_web_development/Core/Scripting/Arrays)することができ、[共通の配列操作を行う](#例)ためのメンバーを持っています。
@@ -109,7 +109,7 @@ const iterator = colors.keys();
 for (const key of iterator) {
   console.log(`${key}: ${colors[key]}`);
 }
-// 出力t
+// 出力
 // 0: red
 // 1: yellow
 // 2: blue
@@ -301,7 +301,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.entries()")}}
   - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)オブジェクトを返します。このオブジェクトは、配列中のそれぞれの位置に対するキー/値の組を保持しています。
 - {{jsxref("Array.prototype.every()")}}
-  - : 指定したテスト関数を配列中のすべての要素が満たした場合に `true` を返します。
+  - : 配列内で、指定されたテスト関数の条件を満たさない要素を見つけた場合は `false` を返します。それ以外の場合は `true` を返します。
 - {{jsxref("Array.prototype.fill()")}}
   - : 配列内の指定した開始位置から終了位置までの要素を固定値で埋めます。
 - {{jsxref("Array.prototype.filter()")}}
@@ -347,7 +347,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.slice()")}}
   - : 配列の一部を取り出して新しい配列として返します。
 - {{jsxref("Array.prototype.some()")}}
-  - : 指定したテスト関数を配列中の少なくとも 1 個の要素が満たした場合に `true` を返します。
+  - : 指定されたテスト関数を満たす要素が配列内に見つかった場合、`true` を返します。そうでなければ、`false` を返します。
 - {{jsxref("Array.prototype.sort()")}}
   - : 配列内で要素を整列し、配列を返します。
 - {{jsxref("Array.prototype.splice()")}}

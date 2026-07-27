@@ -2,7 +2,7 @@
 title: 103 Early Hints
 slug: Web/HTTP/Reference/Status/103
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`103 Early Hints`** は[情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#情報レスポンス)ステータスコードで、サーバーが最終的なレスポンスがリンクする予定のサイトやリソースに関するヒントを記載したレスポンスを準備している間に送信される場合があります。
@@ -16,7 +16,7 @@ HTTP の **`103 Early Hints`** は[情報レスポンス](/ja/docs/Web/HTTP/Refe
 ブラウザーは最初の早期ヒントレスポンスのみを処理し、リクエストがオリジン間リダイレクトの結果である場合は、このレスポンスを破棄しなければなりません。
 
 > [!NOTE]
-> 互換性とセキュリティ上の理由から、クライアントが情報レスポンスを正しく処理することが分かっている場合を除き、 [HTTP/2 以降でのみ HTTP 103 Early Hints レスポンス](https://www.rfc-editor.org/rfc/rfc8297#section-3)を送信することが推奨されます。
+> 互換性とセキュリティ上の理由から、クライアントが情報レスポンスを正しく処理することが分かっている場合を除き、 [HTTP/2 以降でのみ HTTP `103 Early Hints` レスポンス](https://www.rfc-editor.org/info/rfc8297/#section-3)を送信することが推奨されます。
 >
 > ほとんどのブラウザーでは、この理由により、 HTTP/2 以降に対応するよう制限されています。下記の[ブラウザーの互換性](#ブラウザーの互換性)をご確認ください。
 > これにもかかわらず、下記では、通常の慣例に従って、 HTTP/1.1 スタイルの表記を使用しています。

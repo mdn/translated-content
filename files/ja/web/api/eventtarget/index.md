@@ -2,7 +2,7 @@
 title: EventTarget
 slug: Web/API/EventTarget
 l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -12,7 +12,7 @@ l10n:
 
 {{domxref("Element")}} とその子、{{domxref("Document")}}、{{domxref("Window")}} は、最も一般的なイベントターゲットですが、他のオブジェクト、例えば {{domxref("IDBRequest")}}、{{domxref("AudioNode")}}、{{domxref("AudioContext")}} などもイベントターゲットになります。
 
-多くのイベントターゲット (要素、文書、ウィンドウを含む) は、[イベントハンドラー](/ja/docs/Web/API/Document_Object_Model/Events)を設定するのに `onイベント名` プロパティや属性を使用することもできます。
+多くのイベントターゲット（要素、文書、ウィンドウなど）では、[イベントハンドラーを登録](/ja/docs/Web/API/Document_Object_Model/Events#イベントハンドラーの登録)するのに `onイベント名` プロパティや属性を使用することもできます。
 
 {{InheritanceDiagram}}
 
@@ -40,6 +40,6 @@ l10n:
 
 ## 関連情報
 
-- [イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events) - プラットフォームで利用可能なイベント。
-- [イベント開発者ガイド](/ja/docs/Learn_web_development/Core/Scripting/Events)
+- [イベント索引](/ja/docs/Web/API/Document_Object_Model/Events#イベント索引) - プラットフォームで利用可能なイベント。
+- [イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}} インターフェイス

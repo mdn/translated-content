@@ -3,7 +3,7 @@ title: "EventTarget: dispatchEvent() メソッド"
 short-title: dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 l10n:
-  sourceCommit: 8ac73df2fbe2c88d8649fcb006dcde098616c723
+  sourceCommit: c615fed2b0c23b4c107d854485ced0d4e1e1e092
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -15,7 +15,7 @@ l10n:
 > [!NOTE]
 > このメソッドを呼び出すとき、 {{domxref("Event.target")}} プロパティは現在の `EventTarget` に初期化されます。
 
-「ネイティブ」イベントがブラウザーによって発生し、[イベントループ](/ja/docs/Web/JavaScript/Reference/Execution_model)を介して非同期にイベントハンドラーを呼び出すのとは異なり、 `dispatchEvent()` はイベントハンドラーを*同期的に*呼び出します。適用可能なすべてのイベントハンドラーが呼び出され、 `dispatchEvent()` から戻る前に返されます。
+「ネイティブ」イベントが、ブラウザーが[イベントループ](/ja/docs/Web/JavaScript/Reference/Execution_model#job_queue_and_event_loop)にタスクをキューイングすることで発生するのとは異なり、`dispatchEvent()` は、戻る前に該当するすべてのイベントハンドラーを同期的に呼び出します。読み取り専用の [`isTrusted`](/ja/docs/Web/API/Event/isTrusted) プロパティは、ネイティブイベントの場合は `true`、`dispatchEvent()` で配信されたイベントの場合は `false` になります。
 
 ## 構文
 
@@ -42,7 +42,7 @@ dispatchEvent(event)
 
 ## 例
 
-[イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events) を参照してください。
+[イベントの作成と配信](/ja/docs/Web/API/Document_Object_Model/Events#イベントの作成と配信)を参照してください。
 
 ## 仕様書
 

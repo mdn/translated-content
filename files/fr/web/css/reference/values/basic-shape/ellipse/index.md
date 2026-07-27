@@ -3,7 +3,7 @@ title: Fonction CSS `ellipse()`
 short-title: ellipse()
 slug: Web/CSS/Reference/Values/basic-shape/ellipse
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`ellipse()`** fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}.
@@ -49,6 +49,7 @@ clip-path: ellipse(closest-side farthest-side);
 ```css
 shape-outside: ellipse(40% 50% at left);
 shape-outside: ellipse(closest-side farthest-side at 30%);
+border-shape: ellipse(50% 40%);
 ```
 
 Une ellipse est essentiellement un cercle aplati&nbsp;; la fonction `ellipse()` agit de manière très similaire à {{CSSxRef("basic-shape/circle","circle()")}}, sauf qu'il faut préciser deux rayons&nbsp;: x puis y.
@@ -154,5 +155,5 @@ body {
 
 ## Voir aussi
 
-- Propriétés qui utilisent ce type de données&nbsp;: {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}}
+- Propriétés qui utilisent ce type de données&nbsp;: {{CSSxRef("border-shape")}}, {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}}
 - [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

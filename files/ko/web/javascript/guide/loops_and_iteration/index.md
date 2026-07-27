@@ -313,11 +313,11 @@ car.model = Mustang;
 
 ### **배열**
 
-{{jsxref("배열")}} 요소를 반복하는 방법으로 이를 사용하도록 유도될 수 있지만, **for...in** 문은 숫자 인덱스에 추가하여 사용자 정의 속성의 이름을 반환합니다. 따라서 만약 여러분이 사용자 정의 속성 또는 메서드를 추가하는 등 Array 객체를 수정한다면, 배열 요소 이외에도 사용자 정의 속성을 통해 **for...in** 문을 반복하기 때문에, 배열을 통해 반복할 때 숫자 인덱스와 통상적인 [`for`](/ko/docs/Web/JavaScript/Reference/Statements/for) 루프를 사용하는 것이 좋습니다.
+{{jsxref("Array", "배열")}} 요소를 반복하는 방법으로 이를 사용하도록 유도될 수 있지만, **for...in** 문은 숫자 인덱스에 추가하여 사용자 정의 속성의 이름을 반환합니다. 따라서 만약 여러분이 사용자 정의 속성 또는 메서드를 추가하는 등 Array 객체를 수정한다면, 배열 요소 이외에도 사용자 정의 속성을 통해 **for...in** 문을 반복하기 때문에, 배열을 통해 반복할 때 숫자 인덱스와 통상적인 [`for`](/ko/docs/Web/JavaScript/Reference/Statements/for) 루프를 사용하는 것이 좋습니다.
 
 ## `for...of` 문
 
-[`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, [반복 가능한 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [인수](/ko/docs/Web/JavaScript/Reference/Functions/arguments) 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.
+[`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, [반복 가능한 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)({{jsxref("Array", "배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [인수](/ko/docs/Web/JavaScript/Reference/Functions/arguments) 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.
 
 ```
     for (variable of object) {

@@ -113,7 +113,7 @@ regex 속성(특히 [sticky](/ko/docs/Web/JavaScript/Reference/Global_Objects/Re
 ## 같이 보기
 
 - [`core-js`의 `String.prototype.replaceAll` 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
-- {{jsxref("String.prototype.match", "String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
+- {{jsxref("String.prototype.replace()")}}
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

@@ -276,7 +276,7 @@ Une fois l'itération effectuée sur un nœud, nous avons accès à toutes les [
 
 ### Évaluation d'un document XML appartenant à une extension
 
-L'exemple suivant utilise un document XML situé à l'adresse [`chrome://yourextension/content/peopleDB.xml`]().
+L'exemple suivant utilise un document XML situé à l'adresse [`chrome://yourextension/content/peopleDB.xml`](<>).
 
 ```xml
 <?xml version="1.0"?>

@@ -2,10 +2,8 @@
 title: 環境設定
 slug: Learn_web_development/Getting_started/Environment_setup
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started")}}
 
@@ -21,7 +19,7 @@ l10n:
 
 もし、このような基本事項を復習する必要がある場合は、使用するオペレーティングシステムに応じて、次のリソースをお勧めします。
 
-- [Windows のヘルプとラーニング](https://support.microsoft.com/windows) (Microsoft, 2024)
+- [Windows のヘルプとラーニング](https://support.microsoft.com/ja-jp/windows/) (Microsoft, 2024)
 - [Mac ユーザガイド](https://support.apple.com/guide/mac-help/welcome/mac) (Apple, 2024)
 - [Official Ubuntu documentation](https://help.ubuntu.com/) (ubuntu.com, 2024)
 
@@ -37,5 +35,3 @@ l10n:
   - : この記事では、ウェブサイトに適切なファイル構造を設定するには、ファイルシステムについて知っておくべきいくつかの課題について解説します。
 - [コマンドライン短期集中講座](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)
   - : この記事では、端末の紹介、端末に入力する必要のある必須コマンド、コマンドを連結する方法、自分自身でコマンドラインインターフェイス (CLI) ツールを追加する方法を提供します。
-
-## 関連情報

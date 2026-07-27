@@ -2,7 +2,7 @@
 title: 500 Internal Server Error
 slug: Web/HTTP/Reference/Status/500
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`500 Internal Server Error`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、サーバーが予期せぬ状況に遭遇し、リクエストの履行が妨害されたことを示します。

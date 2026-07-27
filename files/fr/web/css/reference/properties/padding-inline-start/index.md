@@ -3,7 +3,7 @@ title: Propriété CSS `padding-inline-start`
 short-title: padding-inline-start
 slug: Web/CSS/Reference/Properties/padding-inline-start
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 0c62b082755017d0773ecaaee7e74efd5e066d0b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`padding-inline-start`** définit le décalage avec le début de la zone de remplissage d'un élément selon le mode d'écriture, la direction et l'orientation du texte.
@@ -71,9 +71,9 @@ padding-inline-start: unset;
 ### Valeurs
 
 - {{CSSxRef("&lt;length&gt;")}}
-  - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur ne peut être négative.
+  - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur doit être positive.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille du remplissage exprimée en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur ne peut être négative.
+  - : La taille du remplissage exprimée en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur doit être positive.
 
 ## Description
 

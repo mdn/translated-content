@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
 
 ## 생성자
 
-- {{jsxref("Global_Objects/ReferenceError/ReferenceError", "ReferenceError()")}}
+- {{jsxref("ReferenceError.ReferenceError", "ReferenceError()")}}
   - : 새로운 `ReferenceError` 객체를 생성합니다.
 
 ## 인스턴스 속성

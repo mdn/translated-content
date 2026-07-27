@@ -107,7 +107,7 @@ class myDate extends Date {
 
 ### `null` 확장
 
-{{jsxref("null")}}에서 확장은 prototype 객체가 {{jsxref("Object.prototype")}}으로부터 상속받지 않은 것을 제외하면 보통 클래스처럼 동작합니다.
+{{jsxref("null")}}에서 확장은 prototype 객체가 {{jsxref("Object")}}으로부터 상속받지 않은 것을 제외하면 보통 클래스처럼 동작합니다.
 
 ```js
 class nullExtends extends null {

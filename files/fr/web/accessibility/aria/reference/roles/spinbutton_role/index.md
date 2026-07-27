@@ -3,7 +3,7 @@ title: "ARIA : rôle spinbutton"
 short-title: spinbutton
 slug: Web/Accessibility/ARIA/Reference/Roles/spinbutton_role
 l10n:
-  sourceCommit: f6e12d0cba939a2f203119f4514b56b5faff17e1
+  sourceCommit: e73d98a3d66c8c6c7dd60780f58136be04d9bfdf
 ---
 
 Le rôle `spinbutton` définit un type de plage où l'utilisateur·ice doit sélectionner une valeur parmi des choix discrets.
@@ -19,7 +19,7 @@ Les `spinbutton` comportent souvent trois composants&nbsp;: un champ texte affic
 En plus d'inclure l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) pour rendre le `spinbutton` sélectionnable, il faut prendre en charge la sélection au clavier et aux dispositifs de pointage. Les touches directionnelles telles que les flèches doivent être prises en charge pour les utilisateur·ice·s de clavier. Le changement de valeur lors du clic sur les boutons d'incrémentation et de décrémentation doit être pris en charge pour les dispositifs de pointage. Voir [interactions au clavier](#interactions_au_clavier) ci‑dessous.
 
 > [!NOTE]
-> Il est recommandé d'utiliser l'élément [`<input type="number">`](/fr/docs/Web/HTML/Reference/Elements/input/number), ou d'autres types de saisie pour les dates et heures qui possèdent aussi implicitement la sémantique `role="spinbutton"`, plutôt que le rôle `spinbutton`. Les agents utilisateurs fournissent un composant mis en forme pour ces éléments de saisie, avec incrémentation, décrémentation et limitation native de la plage. Si vous utilisez des éléments non sémantiques, toutes les fonctionnalités de l'élément sémantique natif doivent être recréées avec des attributs ARIA, du JavaScript et du CSS.
+> Il est recommandé d'utiliser l'élément [`<input type="number">`](/fr/docs/Web/HTML/Reference/Elements/input/number), ou d'autres types de saisie pour les dates et heures qui possèdent aussi implicitement la sémantique `role="spinbutton"`, plutôt que le rôle `spinbutton`. Les agents utilisateurs fournissent des composants mis en forme pour ces éléments de saisie, avec incrémentation, décrémentation et limitation native de la plage. Si vous utilisez des éléments non sémantiques, toutes les fonctionnalités de l'élément sémantique natif doivent être recréées avec des attributs ARIA, du JavaScript et du CSS.
 
 ### Options de composant de plage ARIA
 
@@ -31,7 +31,7 @@ Le rôle [`meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role), 
 
 Le rôle `slider`, similaire à l'élément HTML `input` de type `range` (`{{HTMLElement("input/range", "&lt;input type=\"range\"&gt;")}}`), est une plage de saisie en lecture et écriture. Les curseurs permettent à l'utilisateur·ice de sélectionner une valeur entre les valeurs minimale et maximale définies. La sélection s'effectue en déplaçant le curseur (<i lang="en">thumb</i> en anglais) le long d'un curseur horizontal ou vertical.
 
-Bien que ces trois plages partagent les mêmes états et propriétés ARIA, le rôle `spinbutton` est le seul à être en lecture et écriture&nbsp;: c'est le seul dont la valeur change par l'interaction de l'utilisateur·ice. Il doit donc pouvoir recevoir la sélection. De plus, la sélection au clavier, les clics de souris et l'interaction tactile doivent être pris en charge.
+Le rôle `spinbutton` est également en lecture et écriture&nbsp;: la plage de valeurs discrètes qu'il fournit est sélectionnée par l'interaction de l'utilisateur·ice. Comme les contrôles `slider`, les composants `spinbutton` doivent pouvoir recevoir la sélection et prendre en charge l'interaction au clavier, au pointeur et au toucher.
 
 > [!WARNING]
 > Pour modifier la valeur d'un `spinbutton`, les technologies d'assistance tactiles doivent répondre aux gestes utilisateur·ice pour augmenter ou diminuer la valeur en synthétisant des évènements clavier.

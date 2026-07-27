@@ -3,7 +3,7 @@ title: "Attribut HTML : `<meta name>`"
 short-title: <meta name>
 slug: Web/HTML/Reference/Elements/meta/name
 l10n:
-  sourceCommit: b884c869c8bdc8f6bd0ea8290934757d27d6845c
+  sourceCommit: 04c41175b160dc00b1a1b8e4e13b2183d89fdf1a
 ---
 
 L'attribut **`name`** de l'élément {{HTMLElement("meta")}} fournit des métadonnées sous forme de paires nom-valeur.
@@ -57,11 +57,12 @@ La spécification HTML définit l'ensemble suivant de noms de métadonnées stan
 
 ### Noms de méta définis dans d'autres spécifications
 
-- [`viewport`](/fr/docs/Web/HTML/Reference/Elements/meta/name/viewport)
-  - : Donne des indications sur la taille initiale de la {{Glossary("viewport", "zone d'affichage")}}.
-  - : Donne des indications sur la taille initiale de la {{Glossary("viewport", "zone d'affichage")}}. Défini dans le [module CSS viewport](/fr/docs/Web/CSS/Guides/Viewport).
+- [`responsive-embedded-sizing`](/fr/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) {{Experimental_Inline}}
+  - : Permet à un document intégré de partager ses informations de taille avec la page parente. Défini dans le [module de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_sizing).
 - [`text-scale`](/fr/docs/Web/HTML/Reference/Elements/meta/name/text-scale) {{Experimental_Inline}}
-  - : Permet d'opter pour que la taille de la police de l'élément racine {{HTMLElement("html")}} s'ajuste proportionnellement aux paramètres de mise à l'échelle du texte au niveau du système d'exploitation et du navigateur. Défini dans le [module CSS fonts](/fr/docs/Web/CSS/Guides/Fonts).
+  - : Permet d'opter pour que la taille de la police de l'élément racine {{HTMLElement("html")}} s'ajuste proportionnellement aux paramètres de mise à l'échelle du texte au niveau du système d'exploitation et du navigateur. Défini dans le [module de police CSS](/fr/docs/Web/CSS/Guides/Fonts).
+- [`viewport`](/fr/docs/Web/HTML/Reference/Elements/meta/name/viewport)
+  - : Donne des indications sur la taille initiale de la {{Glossary("viewport", "zone d'affichage")}}. Défini dans le [module de zone d'affichage CSS](/fr/docs/Web/CSS/Guides/Viewport).
 
 ### Noms de méta définis dans le wiki WHATWG MetaExtensions
 

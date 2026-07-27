@@ -3,7 +3,7 @@ title: Pseudo-classe CSS `:read-write`
 short-title: :read-write
 slug: Web/CSS/Reference/Selectors/:read-write
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:read-write`** représente un élément (tel que `input` ou `textarea`) qui peut être modifié par l'utilisateur·ice.
@@ -37,7 +37,7 @@ input[type="submit"] {
   <label for="pic">Votre photo&nbsp;:</label>
   <input id="pic" name="pic" type="file" />
 
-  <input type="submit" value="Soumettre le formulaire" />
+  <input type="submit" value="Envoyer le formulaire" />
 </form>
 ```
 
@@ -51,10 +51,10 @@ input[type="submit"] {
 
 ## Exemples
 
-### Confirmation des détails du formulaire à l'aide de contrôles en lecture seule
+### Confirmer les détails du formulaire à l'aide de contrôles en lecture seule
 
-Vous pouvez utiliser le contrôle de formulaire [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) lorsque vous souhaitez qu'un·e utilisateur·ice vérifie les informations qu'il a saisies précédemment, que vous souhaitez soumettre avec de nouvelles données dans des contrôles en lecture-écriture.
-Dans l'exemple ci-dessous, la pseudo-classe {{CSSxRef(":read-only")}} est utilisée pour faire en sorte que le {{HTMLElement("textarea")}} (l'adresse d'un utilisateur) ressemble à un paragraphe ordinaire. La pseudo-classe `:read-write` fournit un moyen de mettre en évidence le `<textarea>` modifiable (les instructions de livraison)&nbsp;:
+Vous pouvez utiliser le contrôle de formulaire [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) lorsque vous souhaitez qu'un·e utilisateur·ice vérifie les informations qu'il a saisies précédemment, que vous souhaitez envoyer avec de nouvelles données dans des contrôles en lecture-écriture.
+Dans l'exemple ci-dessous, la pseudo-classe {{CSSxRef(":read-only")}} est utilisée pour faire en sorte que le {{HTMLElement("textarea")}} (l'adresse d'un·e utilisateur·ice) ressemble à un paragraphe ordinaire. La pseudo-classe `:read-write` fournit un moyen de mettre en évidence le `<textarea>` modifiable (les instructions de livraison)&nbsp;:
 
 ```css hidden
 body {
@@ -131,11 +131,11 @@ France</textarea>
 </form>
 ```
 
-{{EmbedLiveSample("confirmation_des_détails_du_formulaire_à_laide_de_contrôles_en_lecture_seule", , "300")}}
+{{EmbedLiveSample("Confirmer les détails du formulaire à l'aide de contrôles en lecture seule", "", 300)}}
 
 ### Mise en forme des contrôles non-formulaires en lecture-écriture
 
-Ce sélecteur ne sélectionne pas seulement les éléments {{HTMLElement("input")}}/{{HTMLElement("textarea")}} — il sélectionnera _tout_ élément qui peut être modifié par l'utilisateur, comme un élément {{HTMLElement("p")}} avec l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) activé.
+Ce sélecteur ne sélectionne pas seulement les éléments {{HTMLElement("input")}}/{{HTMLElement("textarea")}} — il sélectionne _tout_ élément qui peut être modifié par l'utilisateur·ice, comme un élément HTML {{HTMLElement("p")}} avec l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) activé.
 
 #### HTML
 
@@ -172,7 +172,7 @@ p:read-write {
 
 #### Résultat
 
-{{EmbedLiveSample("mise_en_forme_des_contrôles_non-formulaires_en_lecture-écriture", '100%', 200)}}
+{{EmbedLiveSample("Mise en forme des contrôles non-formulaires en lecture-écriture", "100%", 200)}}
 
 ## Spécifications
 

@@ -3,10 +3,10 @@ title: Propriété CSS `padding-inline-end`
 short-title: padding-inline-end
 slug: Web/CSS/Reference/Properties/padding-inline-end
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 0c62b082755017d0773ecaaee7e74efd5e066d0b
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`padding-inline-end`** définit le remplissage logique en fin de ligne d'un élément, qui se traduit par un remplissage physique en fonction du mode d'écriture, de la directions et de l'orientation du texte de l'élément.
+La propriété [CSS](/fr/docs/Web/CSS) **`padding-inline-end`** définit le remplissage logique en fin de ligne d'un élément, qui se traduit par un remplissage physique en fonction du mode d'écriture, de la direction et de l'orientation du texte de l'élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: padding-inline-end")}}
 
@@ -71,9 +71,9 @@ padding-inline-end: unset;
 ### Valeurs
 
 - {{CSSxRef("&lt;length&gt;")}}
-  - : La taille de remplissage en tant que valeur fixe. Cette valeur ne peut pas être négative.
+  - : La taille de remplissage en tant que valeur fixe. Cette valeur doit être positive.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille de remplissage en pourcentage, relative à [la taille en ligne](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout) (_largeur_ dans une langue horizontale) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur ne peut pas être négative.
+  - : La taille de remplissage en pourcentage, relative à [la taille en ligne](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout) (_largeur_ dans une langue horizontale) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur doit être positive.
 
 ## Description
 

@@ -1,69 +1,100 @@
 ---
-title: FormData()
+title: "FormData : constructeur FormData()"
+short-title: FormData()
 slug: Web/API/FormData/FormData
+l10n:
+  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
 ---
 
-{{AvailableInWorkers}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
-{{APIRef("XMLHttpRequest API")}}
-
-Le constructeur **`FormData()`** crée un nouvel objet {{domxref("FormData")}}.
-
-> [!NOTE]
-> Cette fonctionnalité est disponible dans [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+Le constructeur **`FormData()`** crée un nouvel objet {{DOMxRef("FormData")}}.
 
 ## Syntaxe
 
-```js
-var formData = new FormData(form);
+```js-nolint
+new FormData()
+new FormData(form)
+new FormData(form, submitter)
 ```
 
 ### Paramètres
 
-- `form` {{optional_inline}}
-  - : Un element HTML {{HTMLElement("form")}} — quand il est spécifié, l'objet {{domxref("FormData")}} sera rempli avec les clés/valeurs du formulaire en utilisant les noms de propriétés de chaque élément pour clé et les valeurs soumises. Cela encodera aussi le contenu des fichiers.
+- `form` {{Optional_Inline}}
+  - : Un élément HTML {{HTMLElement("form")}} — quand il est défini, l'objet {{DOMxRef("FormData")}} est rempli avec les clés/valeurs actuelles du `form` en utilisant la propriété `name` de chaque élément pour les clés et leur valeur envoyée pour les valeurs. Il encode également le contenu des fichiers. Un évènement {{DOMxRef("HTMLFormElement/formdata_event", "formdata")}} est déclenché sur le formulaire lorsque l'objet `FormData` est créé, permettant au formulaire de modifier les données du formulaire si nécessaire.
+- `submitter` {{Optional_Inline}}
+  - : Avec {{Glossary("submit button", "bouton d'envoi")}} qui est un membre du `form`. Si le `submitter` a un attribut `name` ou est un `{{HTMLElement('input/image', '&lt;input type="image"&gt;')}}`, ses données [sont incluses](/fr/docs/Glossary/Submit_button#données_envoyées_par_le_formulaire) dans l'objet {{DOMxRef("FormData")}} (par exemple, `btnName=btnValue`).
 
 ## Exemples
 
-La ligne suivante crée un objet `FormData` vide:
+### Créer un `FormData` vide
+
+La ligne suivante crée un objet {{DOMxRef("FormData")}} vide&nbsp;:
 
 ```js
-var formData = new FormData(); // Formulaire vide à cet instant
+const formData = new FormData();
 ```
 
-Vous pouvez ajouter un couple clé/valeur en utilisant {{domxref("FormData.append")}} :
+Vous pouvez ajouter un couple clé/valeur en utilisant {{DOMxRef("FormData.append", "append()")}}&nbsp;:
 
 ```js
 formData.append("username", "Chris");
 ```
 
-Ou vous pouvez spécifier l'argument optionnel `form` à la création de l'objet `FormData` pour le pré-remplir avec les valeurs issues du formulaire spécifié :
+### Pré-remplir à partir d'un élément HTML `form`
 
-```html
-<form id="myForm" name="myForm">
-  <div>
-    <label for="username">Enter name:</label>
-    <input type="text" id="username" name="username" />
-  </div>
-  <div>
-    <label for="useracc">Enter account number:</label>
-    <input type="text" id="useracc" name="useracc" />
-  </div>
-  <div>
-    <label for="userfile">Upload file:</label>
-    <input type="file" id="userfile" name="userfile" />
-  </div>
-  <input type="submit" value="Submit!" />
-</form>
-```
+Vous pouvez définir les arguments optionnels `form` et `submitter` lors de la création de l'objet `FormData`, afin de le pré-remplir avec les valeurs provenant du formulaire défini.
 
 > [!NOTE]
-> Seuls les champs de formulaires valides sont inclus dans un objet FormData, c'est-à-dire ceux qui portent un nom (attribut `name`), qui ne sont pas désactivés et qui sont cochés (boutons radio et cases à cocher) ou sélectionnés (une ou plusieurs options dans une sélection).
+> Seuls les contrôles de formulaire réussis sont inclus dans un objet `FormData`, c'est-à-dire ceux qui ont un nom et qui ne sont pas dans un état désactivé.
+
+#### HTML
+
+```html
+<form id="form">
+  <input type="text" name="texte1" value="toto" />
+  <input type="text" name="texte2" value="tata" />
+  <input type="text" name="texte3" value="truc" />
+  <input type="checkbox" name="verification" checked disabled />
+  <button name="intention" value="sauvegarde">Sauvegarder</button>
+  <button name="intention" value="sauvegardeCommeCopie">
+    Sauvegarder comme copie
+  </button>
+</form>
+
+<output id="sortie"></output>
+```
+
+```css hidden
+form {
+  display: none;
+}
+
+output {
+  display: block;
+  white-space: pre-wrap;
+}
+```
+
+#### JavaScript
 
 ```js
-var myForm = document.getElementById("myForm");
-formData = new FormData(myForm);
+const form = document.getElementById("form");
+const btnEnvoi = document.querySelector("button[value=sauvegarde]");
+const formData = new FormData(form, btnEnvoi);
+
+const sortie = document.getElementById("sortie");
+
+for (const [cle, valeur] of formData) {
+  sortie.textContent += `${cle}: ${valeur}\n`;
+}
 ```
+
+#### Résultat
+
+Pour plus de concision, l'élément `<form>` est masqué.
+
+{{EmbedLiveSample("Pré-remplir à partir d'un élément HTML `form`", "", 150)}}
 
 ## Spécifications
 
@@ -75,7 +106,5 @@ formData = new FormData(myForm);
 
 ## Voir aussi
 
-- {{domxref("XMLHTTPRequest")}}
-- [Manipuler `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [Utiliser des objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- L'élément HTML {{HTMLElement("form")}}

@@ -3,7 +3,7 @@ title: Requêtes de conteneur CSS
 short-title: Requêtes de conteneur
 slug: Web/CSS/Guides/Containment/Container_queries
 l10n:
-  sourceCommit: 2ce88199869b63f8da3bbeafd899400f7579cce9
+  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
 ---
 
 Les requêtes de conteneur permettent d'appliquer des styles à un élément en fonction de certains attributs de son conteneur&nbsp;:

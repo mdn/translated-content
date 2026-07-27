@@ -3,10 +3,10 @@ title: Propriété CSS `padding-block-start`
 short-title: padding-block-start
 slug: Web/CSS/Reference/Properties/padding-block-start
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 0c62b082755017d0773ecaaee7e74efd5e066d0b
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`padding-block-start`** définit le début logique de la zone de remplissage d'un élément de bloc. Cette propriété logique est traduite en une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte.
+La propriété [CSS](/fr/docs/Web/CSS) **`padding-block-start`** définit le début logique de la zone de remplissage d'un élément de bloc. Cette propriété logique est traduite en une propriété physique selon le mode d'écriture, la direction et l'orientation du texte.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: padding-block-start")}}
 
@@ -75,9 +75,9 @@ padding-block-start: unset;
 ### Valeurs
 
 - {{CSSxRef("&lt;length&gt;")}}
-  - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur ne peut être négative.
+  - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur doit être positive.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille du remplissage exprimé en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur ne peut être négative.
+  - : La taille du remplissage exprimé en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur doit être positive.
 
 ## Description
 

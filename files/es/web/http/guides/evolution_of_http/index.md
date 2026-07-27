@@ -174,11 +174,11 @@ En la primera mitad de la década de 2010, Google demostró un proceso alternati
 El protocolo HTTP/2, tiene notables diferencias fundamentales respecto a la versión anterior HTTP/1.1
 
 - Es un protocolo binario, en contraposición a estar formado por cadenas de texto, tal y como estában basados sus protocolos anteriores. Así pues no se puede leer directamente, ni crear manualmente A pesar de este inconveniente, gracias a este cambio es posible utilizar en él técnicas de optimización.
-- Es un protocolo multiplexado. Peticiones paralelas pueden hacerse sobre la misma connexión, no está sujeto pues a mantener el orden de los mensajes, ni otras restricciónes que tenian los protocolos anteriores HTTP/1.x
+- Es un protocolo multiplexado. Peticiones paralelas pueden hacerse sobre la misma conexión, no está sujeto pues a mantener el orden de los mensajes, ni otras restricciónes que tenian los protocolos anteriores HTTP/1.x
 - Comprime las cabeceras, ya que estas, normalmente son similares en un grupo de peticiones. Esto elimina la duplicación y retardo en los datos a transmitir.
 - Esto permite al servidor almacenar datos en la caché del cliente, previamente a que estos sean pedidos, mediante un mecanismo denominado '_server push_'.
 
-Estandarizado de manera oficial en Mayo de 2015, HTTP/2 ha conseguido muchos éxitos. En Julio de 2016, un 8.7% de todos los sitios Web[[1\]](https://w3techs.com/technologies/details/ce-http2/all/all) estaban usandolo ya, representando más del 68% de todo su tráfico[[2\]](https://www.keycdn.com/blog/http2-statistics/). Los sitios Web con mucho tráfico, fueron aquellos que lo adoptaron más rápidamente, ahorrando considerablemente las sobrecargas en la transferencia de datos, ... y en sus presupuestos.
+Estandarizado de manera oficial en Mayo de 2015, HTTP/2 ha conseguido muchos éxitos. En Julio de 2016, un 8.7% de todos los sitios Web[[1\]](https://w3techs.com/technologies/details/ce-http2/all/all) estaban usandolo ya, representando más del 68% de todo su tráfico[[2\]](https://www.keycdn.com/blog/http2-statistics/). Los sitios Web con mucho tráfico, fueron aquellos que lo adoptaron más rápidamente, ahorrando considerablemente las sobrecargas en la transferencia de datos y en sus presupuestos.
 
 Esta rápida adopción era esperada, ya que el uso de HTTP/2, no requiere de una adaptación de los sitios Web y aplicaciones: el uso de HTTP/1.1 o HTTP/2 es transparente para ellos. El uso de un servidor actual, comunicandose con un navegador actualizado, es suficiente para permitir su uso: únicamente en casos partículares fue necesario impulsar su utilización; y según se actualizan servidores y navegadores antiguos, su utilización aumenta, sin que requiera un mayor esfuerzo de los desarrolladores Web.
 

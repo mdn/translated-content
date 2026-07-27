@@ -34,7 +34,7 @@ dateObj.setMinutes(minutesValue);
 
 ## Description
 
-secondsValue 및 msValue 매개 변수를 지정하지 않으면 {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}} 및 {{jsxref ("Date.prototype.getMilliseconds ","getMilliseconds() ")}} 메소드가 사용됩니다.
+secondsValue 및 msValue 매개 변수를 지정하지 않으면 {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}} 및 {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} 메소드가 사용됩니다.
 
 지정한 매개 변수가 예상 범위를 벗어나면 setMinutes ()는 그에 따라 {{jsxref("Date")}} 객체의 날짜 정보를 업데이트하려고 시도합니다. 예를 들어 secondsValue에 100을 사용하면 분은 1 (minutesValue + 1)만큼 증가하고 40은 초 단위로 사용됩니다.
 

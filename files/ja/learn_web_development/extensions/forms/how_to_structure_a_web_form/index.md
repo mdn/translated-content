@@ -2,10 +2,10 @@
 title: フォームの構築方法
 slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 423161782178b119c64cd0b41bff8df20dc84a56
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 基本を押さえた上で、フォームの各パーツに構造と意味を提供している要素について、より詳しく見ていきましょう。
 
@@ -37,7 +37,7 @@ l10n:
 > [!WARNING]
 > フォームの中にフォームを入れ子にすることは厳格に禁じられています。これは予期せぬ動作を発生するおそれがあるので、悪い考えです。
 
-{{HTMLElement("form")}} 要素の外部でもフォームウィジェットを使用できますが、そのフォームウィジェットは [`form`](/ja/docs/Web/HTML/Reference/Elements/input#form) 属性を用いて関連付けなければ、どのフォームに対しても何も行わないことに注意してください。これは、フォーム内に包含されていないコントロールを明示的にフォームへ紐付けられるように導入されました。
+{{HTMLElement("form")}} 要素の外部でもフォームウィジェットを使用できますが、そのフォームウィジェットは [`form`](/ja/docs/Web/HTML/Reference/Attributes/form) 属性を用いて関連付けなければ、どのフォームに対しても何も行わないことに注意してください。これは、フォーム内に包含されていないコントロールを明示的にフォームへ紐付けられるように導入されました。
 
 それでは、フォームに入れ子になっている構造要素に移動してみましょう。
 
@@ -45,7 +45,7 @@ l10n:
 
 {{HTMLElement("fieldset")}} 要素は、スタイルや意味付けのために、同じ目的を持つウィジェットのグループの作成に便利です。 {{HTMLElement("fieldset")}} 要素にラベルを付与するには、 {{HTMLElement("legend")}} 要素を {{HTMLElement("fieldset")}} の開始タグの直下に入れることで実現できます。{{HTMLElement("legend")}} 要素は、{{HTMLElement("fieldset")}} 要素の目的を正式に説明します。
 
-多くの支援技術は {{HTMLElement("legend")}} 要素を、対応する {{HTMLElement("fieldset")}} 要素内にある各ウィジェットのラベルの一部であるかのように扱うでしょう。例えば [Jaws](https://www.freedomscientific.com/products/software/jaws/) や [NVDA](https://www.nvaccess.org/) といったスクリーンリーダーは、各ウィジェットのラベルを読み上げる前に legend の内容を読み上げます。
+多くの支援技術は {{HTMLElement("legend")}} 要素を、対応する {{HTMLElement("fieldset")}} 要素内にある各ウィジェットのラベルの一部であるかのように扱うでしょう。例えば [Jaws](https://vispero.com/jaws-screen-reader-software/) や [NVDA](https://www.nvaccess.org/) といったスクリーンリーダーは、各ウィジェットのラベルを読み上げる前に legend の内容を読み上げます。
 
 以下に小さなサンプルを挙げます。
 
@@ -70,7 +70,7 @@ l10n:
 ```
 
 > [!NOTE]
-> この例は [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html))。
+> この例は [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html))。
 
 この例では、スクリーンリーダーは最初のウィジェットを "Fruit juice size small"、2 番目を "Fruit juice size medium"、3 番目を "Fruit juice size large" と読み上げるでしょう。
 
@@ -129,46 +129,34 @@ l10n:
 以下の例について考えてみましょう。
 
 ```html
-<p>Required fields are followed by <span aria-label="required">*</span>.</p>
+<p>必須のフィールド (*) はすべて埋めてください。</p>
 
 <!-- このようにします -->
-<!--div>
-  <label for="username">Name:</label>
-  <input id="username" type="text" name="username" required>
-  <label for="username"><span aria-label="required">*</label>
-</div-->
+<!--<div>
+  <label for="username">名前:</label>
+  <input id="username" type="text" name="username" required />
+  <label for="username">*</label>
+</div>-->
 
 <!-- より良い例です -->
-<!--div>
+<!--<div>
   <label for="username">
-    <span>Name:</span>
-    <input id="username" type="text" name="username" required>
-    <span aria-label="required">*</span>
+    <span>名前:</span>
+    <input id="username" type="text" name="username" required />
+    <span>*</span>
   </label>
-</div-->
+</div>-->
 
 <!-- これが最も良いでしょう -->
 <div>
-  <label for="username">Name: <span aria-label="required">*</span></label>
+  <label for="username">名前*:</label>
   <input id="username" type="text" name="username" required />
 </div>
 ```
 
 {{EmbedLiveSample("Multiple_labels", 120, 120)}}
 
-このサンプルでは、最初の段落で入力必須の要素の規則を定義しています。ユーザーが入力必須の要素を見つける前にスクリーンリーダーのような支援技術が注意事項を表示したり読み上げたりするためには、規則をはじめに置かなければなりません。これがユーザーにアスタリスクの意味を知らせても、それに依存することはできません。スクリーンリーダーはアスタリスクが出てくると "スター" と読み上げます。視力のあるユーザーがマウスを持ってくると、`title` 属性によって"必須"と表示されます。タイトルはスクリーンリーダーの設定により読み上げられるので、常にスクリーンリーダーに読み上げられる [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を入れておくのがより信頼性が高いでしょう。
-
-上記の違いをふまえると、以降を効率よく見ていけるでしょう。
-
-- 最初の例では、 label 要素すべての入力が読み上げられません — "edit text blank" だけです。その上に実際のラベルは別々に読まれます。複数の `<label>` 要素はスクリーンリーダーを混乱させます。
-- 2 つ目の例では、少し明確になります "name star name edit text required" というようにラベルが入力と一緒に読み上げられます。しかしラベルはまだ別々に読み上げられます。少し混乱しやすいですが、これは `<input>` と関連したラベルがあるためまだ良いでしょう。
-- 3 つ目の例が最も良いです — 実際のラベルがすべて一緒に読み上げられ、 "name required edit text" のようにラベルと入力が一緒に読み上げられます。
-
-> [!NOTE]
-> スクリーンリーダーによっては、少し異なる結果になる場合もあります。これは VoiceOver (と同様に動作する NVDA)でテストしています。あなたの体験を聞きたいです。
-
-> [!NOTE]
-> この例は GitHub の [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。2 や 3 のコメントを外したバージョンの例を実行しないでください — 複数の label と複数の同じ input ID があると、スクリーンリーダーは確実に混乱します!
+冒頭の段落には、必須要素に関するルールが記載されています。このルールは、視覚に障害のないユーザーやスクリーンリーダーなどの支援技術（AT）を利用するユーザーが、必須要素に接触する前にその意味を理解できるよう、その要素が使用される前に記載する必要があります。
 
 ## フォームで使用される一般的な HTML 構造
 
@@ -176,11 +164,11 @@ l10n:
 
 サンプルでわかるように、ラベルとそのウィジェットを {{HTMLElement("ul")}} や {{HTMLElement("ol")}} リストの中の {{HTMLElement("li")}} 要素で包み込むのが一般的な慣習です。HTML リストにあるように、{{HTMLElement("p")}} 要素と {{HTMLElement("div")}} 要素も良く使われます。リストは複数のチェックボックスやラジオボタンを構造化するのに最もよく使われます。
 
-{{HTMLElement("fieldset")}} 要素に加えて、複雑なフォームの構築に HTML の見出し (例えば {{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}) やセクション (例 {{htmlelement("section")}}) を使うことも一般的です。
+{{HTMLElement("fieldset")}} 要素に加えて、複雑なフォームの構築に HTML の見出し（例えば {{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}）やセクション（例えば {{htmlelement("section")}}）を使うことも一般的です。
 
 とりわけ、コーディングスタイルがどうあるのが心地よく、どれがアクセシブルで使いやすいフォームとなるのかを見つけるのはあなた次第です。別の機能セクションは別の {{htmlelement("section")}} 要素と、ラジオボタンを含む {{htmlelement("fieldset")}} にそれぞれ分けておくべきです。
 
-### アクティブラーニング: フォーム構造を構築する
+### フォーム構造を構築する
 
 これらのアイデアを実践し、もう少し複雑なフォーム構造、つまり支払いフォームを作成しましょう。このフォームはあなたがまだ理解していないかもしれないウィジェットタイプをいくつも含みますが、今はそのことを心配しないでください。次の記事 ([基本的なネイティブフォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)) でそれらがどのように機能するのかがわかります。今のところ、以下の説明に沿って説明を注意深く読み、フォームを構成するためにどのラッパー要素を使用しているか、そしてその理由を理解することから始めてください。
 
@@ -195,60 +183,48 @@ l10n:
 3. `<form>` タグ内に、必須フィールドにマークを付ける方法をユーザーに通知するための見出しと段落を追加します。
 
    ```html-nolint
-   <h1>Payment form</h1>
-   <p>
-     Required fields are followed by
-     <strong><span aria-label="required">*</span></strong>.
-   </p>
+   <h1>お支払いフォーム</h1>
+   <p>必須のフィールド (*) はすべて埋めてください。</p>
    ```
 
 4. 次に、前のエントリーの下に、より大きなコードセクションをフォームに追加します。ここでは、連絡先情報フィールドを個別の {{htmlelement("section")}} 要素内にラップしていることがわかります。さらに、2 つのラジオボタンのセットがあり、それぞれ独自のリスト ({{htmlelement("li")}}) 要素の中に入れています。最後に、2 つの標準テキスト {{htmlelement("input")}} とそれに関連する {{htmlelement("label")}} 要素があり、それぞれ {{htmlelement("p")}} の内側に含まれていて、パスワードを入力するためのパスワード入力があります。フォームにこのコードを追加してください。
 
    ```html
    <section>
-     <h2>Contact information</h2>
+     <h2>連絡先情報</h2>
      <fieldset>
-       <legend>Title</legend>
+       <legend>肩書</legend>
        <ul>
          <li>
            <label for="title_1">
              <input type="radio" id="title_1" name="title" value="A" />
-             Ace
+             エース
            </label>
          </li>
          <li>
            <label for="title_2">
              <input type="radio" id="title_2" name="title" value="K" />
-             King
+             キング
            </label>
          </li>
          <li>
            <label for="title_3">
              <input type="radio" id="title_3" name="title" value="Q" />
-             Queen
+             クイーン
            </label>
          </li>
        </ul>
      </fieldset>
      <p>
-       <label for="name">
-         <span>Name: </span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
+       <label for="name">名前*:</label>
        <input type="text" id="name" name="username" required />
      </p>
      <p>
-       <label for="mail">
-         <span>Email: </span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
+       <label for="mail">メールアドレス*:</label>
        <input type="email" id="mail" name="user-mail" required />
      </p>
      <p>
-       <label for="pwd">
-         <span>Password: </span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
+       <label for="pwd">パスワード*:</label>
        <input type="password" id="pwd" name="password" required />
      </p>
    </section>
@@ -265,10 +241,10 @@ l10n:
 
    ```html
    <section>
-     <h2>Payment information</h2>
+     <h2>支払情報</h2>
      <p>
        <label for="card">
-         <span>Card type:</span>
+         <span>カードの種類:</span>
        </label>
        <select id="card" name="user-card">
          <option value="visa">Visa</option>
@@ -277,17 +253,11 @@ l10n:
        </select>
      </p>
      <p>
-       <label for="number">
-         <span>Card number:</span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
+       <label for="number">カード番号*:</label>
        <input type="tel" id="number" name="card-number" required />
      </p>
      <p>
-       <label for="expiration">
-         <span>Expiration date:</span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
+       <label for="expiration">有効期限*:</label>
        <input
          type="text"
          id="expiration"
@@ -304,7 +274,7 @@ l10n:
    ```html
    <section>
      <p>
-       <button type="submit">Validate the payment</button>
+       <button type="submit">お支払いを検証</button>
      </p>
    </section>
    ```
@@ -330,7 +300,7 @@ l10n:
      margin: 0 auto;
      width: 400px;
      padding: 1em;
-     border: 1px solid #ccc;
+     border: 1px solid #cccccc;
      border-radius: 1em;
    }
 
@@ -348,7 +318,7 @@ l10n:
      font: 1em sans-serif;
      width: 250px;
      box-sizing: border-box;
-     border: 1px solid #999;
+     border: 1px solid #999999;
    }
 
    input[type="checkbox"],
@@ -359,7 +329,7 @@ l10n:
 
    input:focus,
    textarea:focus {
-     border-color: #000;
+     border-color: black;
    }
 
    textarea {
@@ -371,11 +341,11 @@ l10n:
    fieldset {
      width: 250px;
      box-sizing: border-box;
-     border: 1px solid #999;
+     border: 1px solid #999999;
    }
 
    button {
-     margin: 20px 0 0 0;
+     margin-top: 20px;
    }
 
    label {
@@ -389,11 +359,7 @@ l10n:
 
 下記では完了したフォームに追加 CSS を適用しました。フォームの外観を変更したい場合は、[例](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example)からスタイルをコピーするか、[ウェブフォームのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)を参照してください。
 
-{{EmbedLiveSample("active_learning_building_a_form_structure","100%",620)}}
-
-## 確認テスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト: フォームの構築](/ja/docs/Learn_web_development/Extensions/Forms)を参照してください。
+{{EmbedLiveSample("building_a_form_structure","100%",620)}}
 
 ## まとめ
 
@@ -404,8 +370,3 @@ l10n:
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://alistapart.com/article/sensibleforms/)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
-
-### 高度なトピック
-
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

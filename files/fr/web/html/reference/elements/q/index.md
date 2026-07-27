@@ -3,10 +3,10 @@ title: "Élément HTML `<q>` : l'élément de citation en incise"
 short-title: <q>
 slug: Web/HTML/Reference/Elements/q
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: b0a05c1384211e0eff34e9917c84086eedf9e909
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<q>`** indique que le texte qu'il contient est une citation en incise. La plupart des navigateurs modernes entoure le texte de cet élément avec des marques de citation. Cet élément est destiné aux citations courtes qui ne nécessitent pas de sauts de paragraphe. Pour les plus grandes citations, on utilisera l'élément {{HTMLElement("blockquote")}}.
+L'élément [HTML](/fr/docs/Web/HTML) **`<q>`** indique que le texte qu'il contient est une citation en incise. La plupart des navigateurs modernes entoure le texte de cet élément avec des marques de citation. Cet élément est destiné aux citations courtes qui ne nécessitent pas de sauts de paragraphe. Pour les plus grandes citations, on utilise l'élément {{HTMLElement("blockquote")}}.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;q&gt;", "tabbed-shorter")}}
 

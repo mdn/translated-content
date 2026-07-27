@@ -3,12 +3,12 @@ title: Utiliser la position par ancres CSS
 short-title: Utiliser la position par ancres
 slug: Web/CSS/Guides/Anchor_positioning/Using
 l10n:
-  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
+  sourceCommit: a0b748b391f3ed7e6ef38e8eda3ecaa9efced926
 ---
 
 Le module **position par ancres CSS** définit des fonctionnalités permettant d'attacher des éléments les uns aux autres. On peut définir des éléments comme **éléments d'ancre** et **éléments positionnés par ancre**. Les éléments positionnés par ancre peuvent être liés à des éléments d'ancre. Les éléments positionnés par ancre peuvent alors voir leur taille et leur position définies par rapport à la taille et à l'emplacement des éléments d'ancre auxquels ils sont liés.
 
-Le positionnement par ancres CSS fournit également des mécanismes uniquement en CSS pour définir plusieurs positions alternatives pour un élément positionné par ancre. Par exemple, si une info-bulle est ancrée à un champ de formulaire mais risquerait d'être affichée hors écran avec ses paramètres de position par défaut, le navigateur peut tenter de la rendre dans une autre position suggérée pour qu'elle soit visible à l'écran, ou, si vous le souhaitez, la masquer complètement.
+Le positionnement par ancres CSS fournit également des mécanismes uniquement en CSS pour définir plusieurs positions alternatives pour un élément positionné par ancre. Par exemple, si une info-bulle est ancrée à un champ de formulaire mais risque d'être affichée hors écran avec ses paramètres de position par défaut, le navigateur peut tenter de la rendre dans une autre position suggérée pour qu'elle soit visible à l'écran, ou, si vous le souhaitez, la masquer complètement.
 
 Cet article explique les concepts fondamentaux du positionnement par ancres et montre comment vous servir, à un niveau basique, des fonctionnalités d'association, de positionnement et de dimensionnement du module. Nous avons inclus des liens vers des pages de référence contenant des exemples supplémentaires et des détails de syntaxe pour chaque concept abordé ci-dessous. Pour des informations sur la définition de positions alternatives et le masquage des éléments positionnés par ancre, voir le guide [Options de repli et masquage conditionnel pour le débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
 
@@ -21,7 +21,7 @@ Il est très courant de vouloir attacher ou lier un élément à un autre. Par e
 - Les boîtes de dialogue de paramètres ou d'options qui permettent de configurer rapidement des éléments d'interface.
 - Les menus déroulants ou fenêtres contextuelles qui apparaissent à côté d'une barre de navigation ou d'un bouton associé.
 
-Les interfaces modernes demandent souvent à placer du contenu — souvent réutilisable et généré dynamiquement — par rapport à un élément d'ancre. Créer ce type de cas d'usage serait assez simple si l'élément auquel attacher (appelé **élément d'ancre**) était toujours au même endroit dans l'interface et si l'élément attaché (appelé **élément positionné par une ancre** ou simplement **élément positionné**) pouvait toujours être placé juste avant ou après dans l'ordre du code source. Cependant, ce n'est que rarement le cas.
+Les interfaces modernes demandent souvent à placer du contenu — souvent réutilisable et généré dynamiquement — par rapport à un élément d'ancre. Créer ce type de cas d'usage est assez simple si l'élément auquel attacher (appelé **élément d'ancre**) était toujours au même endroit dans l'interface et si l'élément attaché (appelé **élément positionné par une ancre** ou simplement **élément positionné**) pouvait toujours être placé juste avant ou après dans l'ordre du code source. Cependant, ce n'est que rarement le cas.
 
 La position des éléments positionnés par rapport à leur élément d'ancre doit être maintenue et ajustée lorsque l'élément d'ancre se déplace ou change de configuration (par exemple lors d'un défilement, d'un changement de taille de la fenêtre, d'un glisser-déposer, etc.). Par exemple, si un élément comme un champ de formulaire s'approche du bord de la fenêtre, son info-bulle peut se retrouver hors écran. En général, il faut lier l'info-bulle à son contrôle de formulaire et veiller à ce qu'elle reste entièrement visible tant que le champ de formulaire est affiché, en la déplaçant automatiquement si besoin. Vous avez peut-être remarqué ce comportement par défaut dans votre système d'exploitation lorsque vous ouvrez un menu contextuel (<kbd>Ctrl</kbd> + clic) sur votre ordinateur.
 
@@ -29,14 +29,14 @@ Historiquement, associer un élément à un autre et modifier dynamiquement la p
 
 ## Associer des éléments d'ancre et positionnés
 
-Pour associer un élément à une ancre, il faut d'abord déclarer quel élément est l'ancre, puis définir quel(s) élément(s) positionné(s) associer à cette ancre. Cela crée une référence d'ancre entre les deux. Cette association peut être créée explicitement via CSS ou implicitement.
+Pour associer un élément à une ancre, il faut d'abord déclarer quel élément est l'ancre, puis définir quel(s) élément(s) positionné(s) associer à cette ancre. Cela crée une référence d'ancre entre les deux. Cette association peut être créée explicitement avec le CSS ou implicitement.
 
 ### Associer explicitement une ancre en CSS
 
 Pour déclarer un élément comme ancre en CSS, il faut définir un nom d'ancre avec la propriété {{CSSxRef("anchor-name")}}. Le nom d'ancre doit être un {{CSSxRef("dashed-ident")}}. Dans cet exemple, nous définissons aussi la largeur ({{CSSxRef("width")}}) de l'ancre à `fit-content` pour obtenir une petite ancre carrée, ce qui montre mieux l'effet d'ancrage.
 
 ```css hidden
-.anchor {
+.ancre {
   font-size: 1.8rem;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -48,8 +48,8 @@ Pour déclarer un élément comme ancre en CSS, il faut définir un nom d'ancre 
 ```
 
 ```css
-.anchor {
-  anchor-name: --my-anchor;
+.ancre {
+  anchor-name: --mon-ancre;
   width: fit-content;
 }
 ```
@@ -57,7 +57,7 @@ Pour déclarer un élément comme ancre en CSS, il faut définir un nom d'ancre 
 La conversion d'un élément en élément positionné par ancre nécessite deux étapes&nbsp;: il doit être absolument ou fixement [positionné](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning) à l'aide de la propriété {{CSSxRef("position")}}. L'élément positionné a ensuite sa propriété {{CSSxRef("position-anchor")}} définie sur la valeur de la propriété `anchor-name` de l'élément d'ancre pour associer les deux&nbsp;:
 
 ```css hidden
-.infobox {
+.boite-info {
   color: darkblue;
   background-color: azure;
   border: 1px solid #dddddd;
@@ -68,36 +68,36 @@ La conversion d'un élément en élément positionné par ancre nécessite deux 
 ```
 
 ```css
-.infobox {
+.boite-info {
   position: fixed;
-  position-anchor: --my-anchor;
+  position-anchor: --mon-ancre;
 }
 ```
 
 Nous allons appliquer le CSS ci-dessus au code HTML suivant&nbsp;:
 
 ```html
-<div class="anchor">⚓︎</div>
+<div class="ancre">⚓︎</div>
 
-<div class="infobox">
+<div class="boite-info">
   <p>Ceci est une boîte d'information.</p>
 </div>
 ```
 
-Cela s'affichera ainsi&nbsp;:
+Cela s'affiche ainsi&nbsp;:
 
 {{EmbedLiveSample("Associer explicitement une ancre en CSS", "100%", 120)}}
 
-L'ancre et la boîte d'information sont maintenant associées, mais pour le moment vous devrez nous croire sur parole. Elles ne sont pas encore attachées l'une à l'autre — si vous déplaciez l'ancre et la mettiez ailleurs sur la page, elle bougerait seule, laissant la boîte d'information au même endroit. Vous verrez l'attachement réel en action lorsque nous verrons [le positionnement des éléments basé sur la position de l'ancre](#positionner_des_éléments_par_rapport_à_leur_ancre).
+L'ancre et la boîte d'information sont maintenant associées, mais pour le moment vous devez nous croire sur parole. Elles ne sont pas encore attachées l'une à l'autre — si vous déplaciez l'ancre et la mettiez ailleurs sur la page, elle bouge seule, laissant la boîte d'information au même endroit. Vous verrez l'attachement réel en action lorsque nous verrons [le positionnement des éléments basé sur la position de l'ancre](#positionner_des_éléments_par_rapport_à_leur_ancre).
 
 ### Associer implicitement une ancre
 
-Dans certains cas, une référence d'ancre implicite sera créée entre deux éléments, en raison de la nature sémantique de leur relation&nbsp;:
+Dans certains cas, une référence d'ancre implicite est créée entre deux éléments, en raison de la nature sémantique de leur relation&nbsp;:
 
 - Lors de l'utilisation de [l'API Popover](/fr/docs/Web/API/Popover_API) pour associer une fenêtre contextuelle à un contrôle, une référence d'ancre implicite est créée entre les deux. Cela peut se produire lorsque&nbsp;:
   - Vous associez déclarativement une fenêtre contextuelle à un contrôle à l'aide des attributs [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget) et [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) ou des attributs [`commandfor`](/fr/docs/Web/HTML/Reference/Elements/button#commandfor) et `id`.
   - Vous associez de façon programmatique une action de fenêtre contextuelle comme {{DOMxRef("HTMLElement.showPopover", "showPopover()")}} à un contrôle en utilisant l'option `source`.
-- Un élément {{HTMLElement("select")}} et son sélecteur déroulant utilisent la fonctionnalité de [sélecteur personnalisable](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select) via la propriété {{CSSxRef("appearance")}} avec la valeur `base-select`. Dans ce cas, une relation implicite d'invocateur de fenêtre contextuelle est créée entre les deux, ce qui signifie aussi qu'ils auront une référence d'ancre implicite.
+- Un élément {{HTMLElement("select")}} et son sélecteur déroulant utilisent la fonctionnalité de [sélecteur personnalisable](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select) avec la propriété {{CSSxRef("appearance")}} avec la valeur `base-select`. Dans ce cas, une relation implicite d'invocateur de fenêtre contextuelle est créée entre les deux, ce qui signifie aussi qu'ils ont une référence d'ancre implicite.
 
 > [!NOTE]
 > Les méthodes ci-dessus associent une ancre à un élément, mais ils ne sont pas encore attachés. Pour les attacher ensemble, l'élément positionné doit être positionné par rapport à son ancre, ce qui se fait avec CSS.
@@ -106,10 +106,10 @@ Dans certains cas, une référence d'ancre implicite sera créée entre deux él
 
 Si vous souhaitez supprimer une association à une ancre explicite précédemment créée entre un élément d'ancre et un élément positionné, vous pouvez faire l'une des choses suivantes&nbsp;:
 
-1. Définir la valeur de la propriété `anchor-name` de l'ancre sur `none`, ou sur un autre veleur `<dashed-ident>`, si vous souhaitez qu'un autre élément soit ancré à elle.
+1. Définir la valeur de la propriété `anchor-name` de l'ancre sur `none`, ou sur un autre valeur `<dashed-ident>`, si vous souhaitez qu'un autre élément soit ancré à elle.
 2. Définir la propriété `position-anchor` de l'élément positionné sur `none`, ou sur un nom d'ancre qui n'existe pas dans le document courant, comme `--not-an-anchor-name`.
 
-Dans le cas des associations d'ancre implicites, vous devrez utiliser la seconde méthode — la première ne fonctionne pas. Cela s'explique par le fait que l'association est contrôlée en interne et que vous ne pouvez pas supprimer le `anchor-name` via CSS.
+Dans le cas des associations d'ancre implicites, vous devez utiliser la seconde méthode — la première ne fonctionne pas. Cela s'explique par le fait que l'association est contrôlée en interne et que vous ne pouvez pas supprimer le `anchor-name` avec CSS.
 
 Par exemple, pour empêcher le sélecteur d'un élément `<select>` personnalisable d'être ancré à l'élément `<select>` lui-même, vous pouvez utiliser la règle suivante&nbsp;:
 
@@ -121,36 +121,36 @@ Par exemple, pour empêcher le sélecteur d'un élément `<select>` personnalisa
 
 ## Déterminer la portée des ancres
 
-Lorsque plusieurs éléments d'ancre reçoivent la même valeur {{CSSxRef("anchor-name")}} et qu'un élément positionné a cette valeur comme propriété {{CSSxRef("position-anchor")}}, l'élément positionné sera associé au dernier élément d'ancre dans l'ordre du code source avec cette valeur de `anchor-name`.
+Lorsque plusieurs éléments d'ancre reçoivent la même valeur {{CSSxRef("anchor-name")}} et qu'un élément positionné a cette valeur comme propriété {{CSSxRef("position-anchor")}}, l'élément positionné est associé au dernier élément d'ancre dans l'ordre du code source avec cette valeur de `anchor-name`.
 
-Par exemple, si un document contient plusieurs composants répétés, chacun avec un élément positionné attaché à une ancre, tous les éléments positionnés seront ancrés à la dernière ancre de la page, sauf si chaque composant utilise un nom d'ancre différent. Ce n'est probablement pas le comportement souhaité.
+Par exemple, si un document contient plusieurs composants répétés, chacun avec un élément positionné attaché à une ancre, tous les éléments positionnés sont ancrés à la dernière ancre de la page, sauf si chaque composant utilise un nom d'ancre différent. Ce n'est probablement pas le comportement souhaité.
 
 La propriété {{CSSxRef("anchor-scope")}} permet de corriger ce problème en limitant la visibilité, ou «&nbsp;portée&nbsp;», d'une valeur `anchor-name` à un sous-arbre spécifique. Le résultat est que chaque élément positionné ne peut être ancré qu'à un élément du même sous-arbre que l'élément ayant la portée définie.
 
 - `anchor-scope: all` définit la portée de sorte que _toute_ valeur de `anchor-name` définie dans le sous-arbre ne puisse être liée que par des éléments positionnés dans ce même sous-arbre.
-- `anchor-scope: --my-anchor, --my-anchor2` définit la portée de sorte que les valeurs de `anchor-name` indiquées, lorsqu'elles sont définies dans le sous-arbre, ne puissent être liées que par des éléments positionnés dans ce même sous-arbre.
+- `anchor-scope: --mon-ancre, --mon-ancre2` définit la portée de sorte que les valeurs de `anchor-name` indiquées, lorsqu'elles sont définies dans le sous-arbre, ne puissent être liées que par des éléments positionnés dans ce même sous-arbre.
 - `anchor-scope: none` est la valeur par défaut&nbsp;; cela signifie qu'aucune portée d'ancre n'est définie.
 
 Par exemple, supposons que vous ayez plusieurs ancres et des éléments HTML {{HTMLElement("div")}} positionnés par ancre à l'intérieur de conteneurs {{HTMLElement("section")}}&nbsp;:
 
 ```html live-sample___anchor-scope
-<section class="scoped">
-  <div class="anchor">⚓︎</div>
-  <div class="positioned">Positionné 1</div>
+<section class="portee">
+  <div class="ancre">⚓︎</div>
+  <div class="positionne">Positionné 1</div>
 </section>
 
-<section class="scoped">
-  <div class="anchor">⚓︎</div>
-  <div class="positioned">Positionné 2</div>
+<section class="portee">
+  <div class="ancre">⚓︎</div>
+  <div class="positionne">Positionné 2</div>
 </section>
 
-<section class="scoped">
-  <div class="anchor">⚓︎</div>
-  <div class="positioned">Positionné 3</div>
+<section class="portee">
+  <div class="ancre">⚓︎</div>
+  <div class="positionne">Positionné 3</div>
 </section>
 ```
 
-Nous transformons chaque `<div>` `anchor` en élément d'ancre en lui donnant un `anchor-name` `--my-anchor`. Nous positionnons ensuite chaque `<div>` `positioned` par rapport à un élément ayant le nom d'ancre `--my-anchor` en leur appliquant un positionnement absolu, une valeur de `position-anchor` à `--my-anchor` et une valeur {{CSSxRef("position-area")}} à `right`. Enfin, nous définissons la portée d'ancre de chaque conteneur `<section>` avec `anchor-scope: --my-anchor`&nbsp;:
+Nous transformons chaque `<div>` `ancre` en élément d'ancre en lui donnant un `anchor-name` `--mon-ancre`. Nous positionnons ensuite chaque `<div>` `positionne` par rapport à un élément ayant le nom d'ancre `--mon-ancre` en leur appliquant un positionnement absolu, une valeur de `position-anchor` à `--mon-ancre` et une valeur {{CSSxRef("position-area")}} à `right`. Enfin, nous définissons la portée d'ancre de chaque conteneur `<section>` avec `anchor-scope: --mon-ancre`&nbsp;:
 
 ```css hidden live-sample___anchor-scope
 html {
@@ -164,12 +164,12 @@ body {
   align-items: center;
 }
 
-.scoped {
+.portee {
   padding: 20px;
   background: #eeeeee;
 }
 
-.anchor {
+.ancre {
   font-size: 1.8rem;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -178,7 +178,7 @@ body {
   padding: 3px;
 }
 
-.positioned {
+.positionne {
   background: orange;
   width: fit-content;
   padding: 3px;
@@ -186,18 +186,18 @@ body {
 ```
 
 ```css live-sample___anchor-scope
-.anchor {
-  anchor-name: --my-anchor;
+.ancre {
+  anchor-name: --mon-ancre;
 }
 
-.positioned {
+.positionne {
   position: absolute;
-  position-anchor: --my-anchor;
+  position-anchor: --mon-ancre;
   position-area: right;
 }
 
-.scoped {
-  anchor-scope: --my-anchor;
+.portee {
+  anchor-scope: --mon-ancre;
 }
 ```
 
@@ -205,9 +205,9 @@ Cela donne le comportement de positionnement suivant&nbsp;:
 
 {{EmbedLiveSample("anchor-scope", "100%", 150)}}
 
-Chaque élément positionné est positionné par rapport à l'ancre à l'intérieur du même élément `<section>`. Cela s'explique par le fait que chaque élément `<section>` a une propriété `anchor-scope` définie à `--my-anchor`&nbsp;; les éléments positionnés à l'intérieur de chaque conteneur à portée ne peuvent donc être positionnés que par rapport aux ancres `my-anchor` à l'intérieur du même conteneur.
+Chaque élément positionné est positionné par rapport à l'ancre à l'intérieur du même élément `<section>`. Cela s'explique par le fait que chaque élément `<section>` a une propriété `anchor-scope` définie à `--mon-ancre`&nbsp;; les éléments positionnés à l'intérieur de chaque conteneur à portée ne peuvent donc être positionnés que par rapport aux ancres `mon-ancre` à l'intérieur du même conteneur.
 
-Si nous ne définissions pas `anchor-scope: --my-anchor` sur les conteneurs, tous les éléments positionnés seraient positionnés par rapport à la dernière ancre de la page.
+Si nous ne définissions pas `anchor-scope: --mon-ancre` sur les conteneurs, tous les éléments positionnés seraient positionnés par rapport à la dernière ancre de la page.
 
 ## Positionner des éléments par rapport à leur ancre
 
@@ -217,13 +217,13 @@ Comme nous l'avons vu précédemment, associer un élément positionné à une a
 > Le positionnement par ancres CSS fournit également des mécanismes pour définir des positions de repli si la position par défaut de l'élément positionné le fait déborder de la fenêtre d'affichage. Voir le guide [Options de repli et masquage conditionnel pour le débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) pour plus de détails.
 
 > [!NOTE]
-> L'élément d'ancre doit être un nœud DOM visible pour que l'association et le positionnement fonctionnent. S'il est masqué (par exemple via [`display: none`](/fr/docs/Web/CSS/Reference/Properties/display#none)), l'élément positionné sera positionné par rapport à son ancêtre positionné le plus proche. Nous expliquons comment masquer un élément positionné par ancre lorsque son ancre disparaît dans [Masquage conditionnel avec `position-visibility`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding#masquer_conditionnellement_des_éléments_positionnés_avec_une_ancre).
+> L'élément d'ancre doit être un nœud DOM visible pour que l'association et le positionnement fonctionnent. S'il est masqué (par exemple avec [`display: none`](/fr/docs/Web/CSS/Reference/Properties/display#none)), l'élément positionné l'est par rapport à son ancêtre positionné le plus proche. Nous expliquons comment masquer un élément positionné par ancre lorsque son ancre disparaît dans [Masquage conditionnel avec `position-visibility`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding#masquer_conditionnellement_des_éléments_positionnés_avec_une_ancre).
 
 ### Utiliser les propriétés d'encart avec des valeurs de fonction `anchor()`
 
-Les éléments positionnés de façon absolue ou fixe sont positionnés explicitement en définissant des valeurs de {{CSSxRef("length")}} ou de {{CSSxRef("percentage")}} sur les {{Glossary("inset properties", "propriétés d'inset")}}. Avec `position: absolute`, cette valeur d'encart correspond à une distance absolue par rapport aux bords de l'ancêtre positionné le plus proche. Avec `position: fixed`, la valeur d'encart correspond à une distance absolue par rapport à la fenêtre d'affichage.
+Les éléments positionnés de façon absolue ou fixe sont positionnés explicitement en définissant des valeurs de {{CSSxRef("&lt;length&gt;")}} ou de {{CSSxRef("&lt;percentage&gt;")}} sur les {{Glossary("inset properties", "propriétés d'inset")}}. Avec `position: absolute`, cette valeur d'encart correspond à une distance absolue par rapport aux bords de l'ancêtre positionné le plus proche. Avec `position: fixed`, la valeur d'encart correspond à une distance absolue par rapport à la fenêtre d'affichage.
 
-Le positionnement par ancres CSS change ce paradigme, permettant de placer les éléments positionnés par ancre par rapport aux bords de leur(s) ancre(s) associée(s). Le module définit la fonction [`anchor()`](/fr/docs/Web/CSS/Reference/Values/anchor), qui est une valeur valide pour chacune des propriétés d'encart. Lorsqu'elle est utilisée, la fonction définit la valeur d'encart comme une distance absolue par rapport à l'élément d'ancre, en définissant l'élément d'ancre, le côté de l'ancre auquel l'élément positionné est positionné, et la distance à partir de ce côté.
+Le positionnement par ancres CSS change ce paradigme, permettant de placer les éléments positionnés par ancre par rapport aux bords de leur(s) ancre(s) associée(s). Le module définit la fonction {{CSSxRef("anchor()")}}, qui est une valeur valide pour chacune des propriétés d'encart. Lorsqu'elle est utilisée, la fonction définit la valeur d'encart comme une distance absolue par rapport à l'élément d'ancre, en définissant l'élément d'ancre, le côté de l'ancre auquel l'élément positionné est positionné, et la distance à partir de ce côté.
 
 Les composants de la fonction sont les suivants&nbsp;:
 
@@ -232,7 +232,7 @@ anchor(<anchor-name> <anchor-side>, <fallback>)
 ```
 
 - `<anchor-name>`
-  - : La valeur de la propriété {{CSSxRef("anchor-name")}} de l'élément d'ancre par rapport auquel vous souhaitez positionner le côté de l'élément. Il s'agit d'une valeur `<dashed-ident>`. Si elle est omise, l'**ancre par défaut** de l'élément est utilisée. Il s'agit de l'ancre référencée dans sa propriété {{CSSxRef("position-anchor")}}, ou associée à l'élément via l'attribut HTML non standard [`anchor`](/fr/docs/Web/HTML/Reference/Global_attributes/anchor).
+  - : La valeur de la propriété {{CSSxRef("anchor-name")}} de l'élément d'ancre par rapport auquel vous souhaitez positionner le côté de l'élément. Il s'agit d'une valeur `<dashed-ident>`. Si elle est omise, **l'ancre par défaut** de l'élément est utilisée. Il s'agit de l'ancre référencée dans sa propriété {{CSSxRef("position-anchor")}}, ou associée à l'élément avec l'attribut HTML non standard [`anchor`](/fr/docs/Web/HTML/Reference/Global_attributes/anchor).
     > [!NOTE]
     > Définir un `<anchor-name>` positionne l'élément par rapport à cette ancre, mais n'associe pas l'élément à l'ancre. Vous pouvez positionner les côtés d'un élément par rapport à plusieurs ancres en définissant [différentes valeurs `<anchor-name>`](/fr/docs/Web/CSS/Reference/Values/anchor#positionner_un_élément_par_rapport_à_plusieurs_ancres) dans différentes fonctions `anchor()` sur le même élément, mais l'élément positionné n'est associé qu'à une seule ancre.
 
@@ -242,21 +242,21 @@ anchor(<anchor-name> <anchor-side>, <fallback>)
 - `<fallback>`
   - : Une valeur {{CSSxRef("length-percentage")}} qui définit la distance à utiliser comme valeur de repli si l'élément n'est pas positionné de façon absolue ou fixe, si la valeur `<anchor-side>` utilisée n'est pas compatible avec la propriété d'encart sur laquelle la fonction `anchor()` est appliquée, ou si l'élément d'ancre n'existe pas.
 
-La valeur retournée par la fonction `anchor()` est une longueur calculée en fonction de la position de l'ancre. Si vous définissez une longueur ou un pourcentage directement sur la propriété d'encart d'un élément positionné par ancre, il sera positionné comme s'il n'était pas lié à l'élément d'ancre. Ce comportement est identique si la valeur `<anchor-side>` n'est pas compatible avec la propriété d'encart sur laquelle elle est appliquée et que la valeur de repli est utilisée. Ces deux déclarations sont équivalentes&nbsp;:
+La valeur retournée par la fonction `anchor()` est une longueur calculée en fonction de la position de l'ancre. Si vous définissez une longueur ou un pourcentage directement sur la propriété d'encart d'un élément positionné par ancre, il est positionné comme s'il n'était pas lié à l'élément d'ancre. Ce comportement est identique si la valeur `<anchor-side>` n'est pas compatible avec la propriété d'encart sur laquelle elle est appliquée et que la valeur de repli est utilisée. Ces deux déclarations sont équivalentes&nbsp;:
 
 ```css example-bad
 bottom: anchor(right, 50px);
 bottom: 50px;
 ```
 
-Les deux placeront l'élément positionné à `50px` au-dessus du bas de l'ancêtre positionné le plus proche de l'élément (si présent) ou du bloc englobant initial.
+Les deux placent l'élément positionné à `50px` au-dessus du bas de l'ancêtre positionné le plus proche de l'élément (si présent) ou du bloc englobant initial.
 
-Les paramètres `anchor()` les plus courants que vous utiliserez concerneront un côté de l'ancre par défaut. Vous ajouterez aussi souvent une marge ({{CSSxRef("margin")}}) pour créer un espacement entre le bord de l'ancre et l'élément positionné, ou utiliserez `anchor()` dans une fonction `calc()` pour ajouter cet espacement.
+Les paramètres `anchor()` les plus courants que vous utilisez concernent un côté de l'ancre par défaut. Vous ajoutez aussi souvent une marge ({{CSSxRef("margin")}}) pour créer un espacement entre le bord de l'ancre et l'élément positionné, ou utilisez `anchor()` dans une fonction `calc()` pour ajouter cet espacement.
 
 Par exemple, cette règle positionne le bord gauche de l'élément positionné au ras du bord droit de l'élément d'ancre, puis ajoute un `margin-left` pour créer un espace entre les bords&nbsp;:
 
 ```css
-.positionedElement {
+.elementPositionne {
   left: anchor(right);
   margin-left: 10px;
 }
@@ -265,7 +265,7 @@ Par exemple, cette règle positionne le bord gauche de l'élément positionné a
 La valeur retournée par une fonction `anchor()` est une longueur. Cela signifie que vous pouvez l'utiliser dans une fonction {{CSSxRef("calc()")}}. Cette règle positionne le bord logique de fin de bloc de l'élément positionné à `10px` du bord logique de début de bloc de l'élément d'ancre, en ajoutant l'espacement avec la fonction `calc()` pour éviter d'ajouter une marge&nbsp;:
 
 ```css
-.positionedElement {
+.elementPositionne {
   inset-block-end: calc(anchor(start) + 10px);
 }
 ```
@@ -281,9 +281,9 @@ Voyons un exemple de `anchor()` en action. Nous avons utilisé le même HTML que
   elementum sagittis vitae et.
 </p>
 
-<div class="anchor">⚓︎</div>
+<div class="ancre">⚓︎</div>
 
-<div class="infobox">
+<div class="boite-info">
   <p>Ceci est une boîte d'information.</p>
 </div>
 
@@ -304,7 +304,7 @@ Voyons un exemple de `anchor()` en action. Nous avons utilisé le même HTML que
 ```
 
 ```css hidden
-.anchor {
+.ancre {
   font-size: 1.8rem;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -322,15 +322,15 @@ body {
 ```
 
 ```css
-.anchor {
-  anchor-name: --my-anchor;
+.ancre {
+  anchor-name: --mon-ancre;
 }
 ```
 
-La boîte d'information est associée à l'ancre via le nom d'ancre et reçoit un positionnement fixe. En incluant les propriétés {{CSSxRef("inset-block-start")}} et {{CSSxRef("inset-inline-start")}} (qui sont équivalentes à {{CSSxRef("top")}} et {{CSSxRef("left")}} dans les modes d'écriture horizontaux de gauche à droite), nous l'attachons à l'ancre. Nous ajoutons une `margin` à la boîte d'information pour créer un espace entre l'élément positionné et son ancre&nbsp;:
+La boîte d'information est associée à l'ancre avec le nom d'ancre et reçoit un positionnement fixe. En incluant les propriétés {{CSSxRef("inset-block-start")}} et {{CSSxRef("inset-inline-start")}} (qui sont équivalentes à {{CSSxRef("top")}} et {{CSSxRef("left")}} dans les modes d'écriture horizontaux de gauche à droite), nous l'attachons à l'ancre. Nous ajoutons une `margin` à la boîte d'information pour créer un espace entre l'élément positionné et son ancre&nbsp;:
 
 ```css hidden
-.infobox {
+.boite-info {
   color: darkblue;
   background-color: azure;
   border: 1px solid #dddddd;
@@ -341,8 +341,8 @@ La boîte d'information est associée à l'ancre via le nom d'ancre et reçoit u
 ```
 
 ```css
-.infobox {
-  position-anchor: --my-anchor;
+.boite-info {
+  position-anchor: --mon-ancre;
   position: fixed;
   inset-block-start: anchor(end);
   inset-inline-start: anchor(self-end);
@@ -407,9 +407,9 @@ Voyons quelques exemples de ces valeurs&nbsp;; cet exemple utilise le même HTML
   elementum sagittis vitae et.
 </p>
 
-<div class="anchor">⚓︎</div>
+<div class="ancre">⚓︎</div>
 
-<div class="infobox">
+<div class="boite-info">
   <p>Ceci est une boîte d'information.</p>
 </div>
 
@@ -429,8 +429,8 @@ Voyons quelques exemples de ces valeurs&nbsp;; cet exemple utilise le même HTML
 </p>
 
 <form>
-  <label for="position-area-select">Choisir une position-area&nbsp;:</label>
-  <select id="position-area-select" name="position-area-select">
+  <label for="selecteur-zone-position">Choisir une position-area&nbsp;:</label>
+  <select id="selecteur-zone-position" name="selecteur-zone-position">
     <option>top</option>
     <option>bottom</option>
     <option>left</option>
@@ -454,7 +454,7 @@ Voyons quelques exemples de ces valeurs&nbsp;; cet exemple utilise le même HTML
 ```
 
 ```css hidden
-.anchor {
+.ancre {
   font-size: 1.8rem;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -465,8 +465,8 @@ Voyons quelques exemples de ces valeurs&nbsp;; cet exemple utilise le même HTML
   padding: 3px;
 }
 
-.anchor {
-  anchor-name: --my-anchor;
+.ancre {
+  anchor-name: --mon-ancre;
 }
 
 body {
@@ -492,10 +492,10 @@ form {
 }
 ```
 
-La boîte d'information reçoit un positionnement fixe et est associée à l'ancre via le CSS. Lors du chargement, elle est attachée à l'ancre avec `position-area: top;`, ce qui la positionne en haut de la grille position-area. Cette valeur sera remplacée lorsque vous sélectionnerez une autre valeur dans le menu `<select>`.
+La boîte d'information reçoit un positionnement fixe et est associée à l'ancre avec le CSS. Lors du chargement, elle est attachée à l'ancre avec `position-area: top;`, ce qui la positionne en haut de la grille position-area. Cette valeur est remplacée lorsque vous sélectionnez une autre valeur dans le menu `<select>`.
 
 ```css hidden
-.infobox {
+.boite-info {
   color: darkblue;
   background-color: azure;
   border: 1px solid #dddddd;
@@ -506,9 +506,9 @@ La boîte d'information reçoit un positionnement fixe et est associée à l'anc
 ```
 
 ```css
-.infobox {
+.boite-info {
   position: fixed;
-  position-anchor: --my-anchor;
+  position-anchor: --mon-ancre;
   position-area: top;
 }
 ```
@@ -516,14 +516,14 @@ La boîte d'information reçoit un positionnement fixe et est associée à l'anc
 Nous incluons aussi un court script pour appliquer les nouvelles valeurs `position-area` choisies dans le menu `<select>` à la boîte d'information&nbsp;:
 
 ```js
-const infobox = document.querySelector(".infobox");
-const selectElem = document.querySelector("select");
+const boiteinfo = document.querySelector(".boite-info");
+const elemSelect = document.querySelector("select");
 
-selectElem.addEventListener("change", () => {
-  const area = selectElem.value;
+elemSelect.addEventListener("change", () => {
+  const zone = elemSelect.value;
 
   // Appliquer la valeur position-area choisie dans le menu select
-  infobox.style.positionArea = area;
+  boiteinfo.style.positionArea = zone;
 });
 ```
 
@@ -537,7 +537,7 @@ Dans l'exemple ci-dessus, nous n'avons pas défini explicitement la taille de l'
 
 Lorsqu'un élément positionné est placé dans les cellules de la grille `position-area` sans taille explicite, il s'aligne sur la zone de grille définie et se comporte comme si {{CSSxRef("width")}} était défini sur {{CSSxRef("max-content")}}. Il est dimensionné selon la taille de son [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block), c'est-à-dire la largeur de son contenu. Cette taille est imposée par la propriété `position: fixed`. Les éléments positionnés de façon absolue ou fixe sans taille explicite sont automatiquement dimensionnés, s'étirant autant que nécessaire pour contenir le texte, tout en étant contraints par le bord de la fenêtre d'affichage. Dans ce cas, lorsqu'il est placé sur le côté gauche de la grille avec une valeur `left` ou `inline-start`, le texte revient à la ligne. Si la taille `max-content` de l'élément ancré est plus étroite ou plus courte que celle de son ancre, ils ne s'étendent pas pour correspondre à la taille de l'ancre.
 
-Si l'élément positionné est centré verticalement, par exemple avec `position-area: bottom center`, il s'aligne sur la cellule de grille définie et la largeur sera identique à celle de l'élément d'ancre. Dans ce cas, sa hauteur minimale correspond à la taille du bloc englobant de l'ancre. Il ne débordera pas, car la propriété `min-width` est {{CSSxRef("min-content")}}, ce qui signifie qu'il sera au moins aussi large que son mot le plus long.
+Si l'élément positionné est centré verticalement, par exemple avec `position-area: bottom center`, il s'aligne sur la cellule de grille définie et la largeur est identique à celle de l'élément d'ancre. Dans ce cas, sa hauteur minimale correspond à la taille du bloc englobant de l'ancre. Il ne déborde pas, car la propriété `min-width` est {{CSSxRef("min-content")}}, ce qui signifie qu'il est au moins aussi large que son mot le plus long.
 
 ## Centrer sur l'ancre avec `anchor-center`
 
@@ -554,9 +554,9 @@ Cet exemple utilise le même HTML et le même CSS de base que l'exemple précéd
   elementum sagittis vitae et.
 </p>
 
-<div class="anchor">⚓︎</div>
+<div class="ancre">⚓︎</div>
 
-<div class="infobox">
+<div class="boite-info">
   <p>Ceci est une boîte d'information.</p>
 </div>
 
@@ -577,7 +577,7 @@ Cet exemple utilise le même HTML et le même CSS de base que l'exemple précéd
 ```
 
 ```css hidden
-.anchor {
+.ancre {
   font-size: 1.8rem;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -586,7 +586,7 @@ Cet exemple utilise le même HTML et le même CSS de base que l'exemple précéd
   border-radius: 10px;
   border: 1px solid black;
   padding: 3px;
-  anchor-name: --my-anchor;
+  anchor-name: --mon-ancre;
 }
 
 body {
@@ -594,7 +594,7 @@ body {
   margin: 0 auto;
 }
 
-.infobox {
+.boite-info {
   color: darkblue;
   background-color: azure;
   border: 1px solid #dddddd;
@@ -605,9 +605,9 @@ body {
 ```
 
 ```css
-.infobox {
+.boite-info {
   position: fixed;
-  position-anchor: --my-anchor;
+  position-anchor: --mon-ancre;
   top: calc(anchor(bottom) + 5px);
   justify-self: anchor-center;
 }
@@ -636,7 +636,7 @@ Les propriétés de dimensionnement qui peuvent accepter une valeur `anchor-size
 - {{CSSxRef("max-block-size")}}
 - {{CSSxRef("max-inline-size")}}
 
-Les fonctions `anchor-size()` produisent des valeurs de type {{CSSxRef("length")}}. Leur syntaxe est la suivante&nbsp;:
+Les fonctions `anchor-size()` produisent des valeurs de type {{CSSxRef("&lt;length&gt;")}}. Leur syntaxe est la suivante&nbsp;:
 
 ```plain
 anchor-size(<anchor-name> <anchor-size>, <length-percentage>)
@@ -645,11 +645,11 @@ anchor-size(<anchor-name> <anchor-size>, <length-percentage>)
 - `<anchor-name>`
   - : Le nom `<dashed-ident>` défini comme valeur de la propriété {{CSSxRef("anchor-name")}} de l'élément d'ancre par rapport auquel vous souhaitez dimensionner l'élément. Si omis, **l'ancre par défaut** de l'élément, c'est-à-dire l'ancre référencée dans la propriété {{CSSxRef("position-anchor")}}, est utilisée.
 - [`<anchor-size>`](/fr/docs/Web/CSS/Reference/Values/anchor-size#anchor-size)
-  - : Définit la dimension de l'élément d'ancre à laquelle l'élément positionné sera dimensionné. Cela peut être exprimé avec des valeurs physiques (`width` ou `height`) ou logiques (`inline`, `block`, `self-inline` ou `self-block`).
-- {{CSSxRef("length-percentage")}}
+  - : Définit la dimension de l'élément d'ancre à laquelle l'élément positionné est dimensionné. Cela peut être exprimé avec des valeurs physiques (`width` ou `height`) ou logiques (`inline`, `block`, `self-inline` ou `self-block`).
+- {{CSSxRef("&lt;length-percentage&gt;")}}
   - : Définit la taille à utiliser comme valeur de repli si l'élément n'est pas positionné de façon absolue ou fixe, ou si l'élément d'ancre n'existe pas.
 
-Les fonctions `anchor-size()` les plus courantes que vous utiliserez feront simplement référence à une dimension de l'ancre par défaut. Vous pouvez aussi les utiliser dans des fonctions {{CSSxRef("calc")}} pour modifier la taille appliquée à l'élément positionné.
+Les fonctions `anchor-size()` les plus courantes que vous utilisez font simplement référence à une dimension de l'ancre par défaut. Vous pouvez aussi les utiliser dans des fonctions {{CSSxRef("calc")}} pour modifier la taille appliquée à l'élément positionné.
 
 Par exemple, cette règle dimensionne la largeur de l'élément positionné pour qu'elle soit égale à celle de l'ancre par défaut&nbsp;:
 
@@ -676,9 +676,9 @@ Voyons un exemple. Le HTML et le CSS de base sont identiques à ceux des exemple
   elementum sagittis vitae et.
 </p>
 
-<div class="anchor" tabindex="0">⚓︎</div>
+<div class="ancre" tabindex="0">⚓︎</div>
 
-<div class="infobox">
+<div class="boite-info">
   <p>Ceci est une boîte d'information.</p>
 </div>
 
@@ -699,7 +699,7 @@ Voyons un exemple. Le HTML et le CSS de base sont identiques à ceux des exemple
 ```
 
 ```css hidden
-.anchor {
+.ancre {
   font-size: 1.8rem;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -710,8 +710,8 @@ Voyons un exemple. Le HTML et le CSS de base sont identiques à ceux des exemple
   padding: 3px;
 }
 
-.anchor {
-  anchor-name: --my-anchor;
+.ancre {
+  anchor-name: --mon-ancre;
 }
 
 body {
@@ -719,7 +719,7 @@ body {
   margin: 0 auto;
 }
 
-.infobox {
+.boite-info {
   color: darkblue;
   background-color: azure;
   border: 1px solid #dddddd;
@@ -730,9 +730,9 @@ body {
 ```
 
 ```css
-.infobox {
+.boite-info {
   position: fixed;
-  position-anchor: --my-anchor;
+  position-anchor: --mon-ancre;
   position-area: right;
   margin-left: 5px;
   width: calc(anchor-size(width) * 5);
@@ -742,14 +742,14 @@ body {
 De plus, nous augmentons la largeur ({{CSSxRef("width")}}) de l'élément d'ancre lors des états {{CSSxRef(":hover")}} et {{CSSxRef(":focus")}}, et nous lui appliquons une {{CSSxRef("transition")}} pour qu'il s'anime lors des changements d'état.
 
 ```css
-.anchor {
+.ancre {
   text-align: center;
   width: 30px;
   transition: 1s width;
 }
 
-.anchor:hover,
-.anchor:focus {
+.ancre:hover,
+.ancre:focus {
   width: 50px;
 }
 ```
@@ -768,10 +768,10 @@ Vous pouvez utiliser la fonction {{CSSxRef("anchor-size()")}} dans la valeur d'u
 
 ```css
 left: anchor-size(width);
-inset-inline-end: anchor-size(--my-anchor height, 100px);
+inset-inline-end: anchor-size(--mon-ancre height, 100px);
 ```
 
-Cela ne positionne pas un élément par rapport à la position de son ancre comme le font la fonction {{CSSxRef("anchor()")}} ou la propriété {{CSSxRef("position-area")}} (voir [Positionner des éléments par rapport à leur ancre](#positionner_des_éléments_par_rapport_à_leur_ancre) ci-dessus)&nbsp;; l'élément ne changera pas de position lorsque son ancre changera. À la place, l'élément sera positionné selon les règles normales du positionnement [`absolute`](/fr/docs/Web/CSS/Reference/Properties/position#absolute) ou [`fixed`](/fr/docs/Web/CSS/Reference/Properties/position#fixed).
+Cela ne positionne pas un élément par rapport à la position de son ancre comme le font la fonction {{CSSxRef("anchor()")}} ou la propriété {{CSSxRef("position-area")}} (voir [Positionner des éléments par rapport à leur ancre](#positionner_des_éléments_par_rapport_à_leur_ancre) ci-dessus)&nbsp;; l'élément ne change pas de position lorsque son ancre change. À la place, l'élément est positionné selon les règles normales du positionnement [`absolute`](/fr/docs/Web/CSS/Reference/Properties/position#absolute) ou [`fixed`](/fr/docs/Web/CSS/Reference/Properties/position#fixed).
 
 Cela peut être utile dans certaines situations. Par exemple, si votre élément d'ancre ne peut se déplacer que verticalement et reste toujours à côté du bord de son ancêtre positionné le plus proche horizontalement, vous pouvez utiliser `left: anchor-size(width)` pour que l'élément positionné par ancre soit toujours placé à droite de son ancre, même si la largeur de l'ancre change.
 
@@ -781,7 +781,7 @@ Vous pouvez utiliser la fonction {{CSSxRef("anchor-size()")}} dans la valeur d'u
 
 ```css
 margin-left: calc(anchor-size(width) / 4);
-margin-block-start: anchor-size(--my-anchor self-block, 20px);
+margin-block-start: anchor-size(--mon-ancre self-block, 20px);
 ```
 
 Cela peut être utile si vous souhaitez que la marge d'un élément positionné par ancre soit toujours égale au même pourcentage de la largeur de l'ancre, même lorsque cette largeur change.
@@ -790,7 +790,7 @@ Cela peut être utile si vous souhaitez que la marge d'un élément positionné 
 
 Voyons un exemple où nous définissons la marge et la position d'un élément positionné par ancre en fonction de la largeur de l'ancre.
 
-Dans le HTML, nous définissons deux éléments HTML {{HTMLElement("div")}}, un élément `anchor` et un élément `infobox` que nous positionnerons par rapport à l'ancre. L'élément d'ancre reçoit un attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) pour pouvoir être sélectionné au clavier. Nous ajoutons aussi du texte de remplissage pour que le {{HTMLElement("body")}} soit assez haut pour nécessiter un défilement, mais ce texte a été masqué pour plus de clarté.
+Dans le HTML, nous définissons deux éléments HTML {{HTMLElement("div")}}, un élément `ancre` et un élément `boite-info` que nous positionnons par rapport à l'ancre. L'élément d'ancre reçoit un attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) pour pouvoir être sélectionné au clavier. Nous ajoutons aussi du texte de remplissage pour que le {{HTMLElement("body")}} soit assez haut pour nécessiter un défilement, mais ce texte a été masqué pour plus de clarté.
 
 ```html hidden
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -802,9 +802,9 @@ Dans le HTML, nous définissons deux éléments HTML {{HTMLElement("div")}}, un 
 ```
 
 ```html
-<div class="anchor" tabindex="0">⚓︎</div>
+<div class="ancre" tabindex="0">⚓︎</div>
 
-<div class="infobox">
+<div class="boite-info">
   <p>Boîte d'information.</p>
 </div>
 ```
@@ -822,10 +822,10 @@ Dans le HTML, nous définissons deux éléments HTML {{HTMLElement("div")}}, un 
 </p>
 ```
 
-Dans le CSS, nous déclarons d'abord le `<div>` `anchor` comme élément d'ancre en lui donnant un {{CSSxRef("anchor-name")}}. L'élément positionné a sa propriété {{CSSxRef("position")}} définie sur `absolute` et est associé à l'ancre via la propriété {{CSSxRef("position-anchor")}}. Nous définissons aussi des dimensions absolues {{CSSxRef("height")}} et {{CSSxRef("width")}} sur l'ancre et la boîte d'information, et ajoutons une {{CSSxRef("transition")}} sur l'ancre pour que les changements de largeur soient animés en douceur lors d'un changement d'état&nbsp;:
+Dans le CSS, nous déclarons d'abord le `<div>` `ancre` comme élément d'ancre en lui donnant un {{CSSxRef("anchor-name")}}. L'élément positionné a sa propriété {{CSSxRef("position")}} définie sur `absolute` et est associé à l'ancre avec la propriété {{CSSxRef("position-anchor")}}. Nous définissons aussi des dimensions absolues {{CSSxRef("height")}} et {{CSSxRef("width")}} sur l'ancre et la boîte d'information, et ajoutons une {{CSSxRef("transition")}} sur l'ancre pour que les changements de largeur soient animés en douceur lors d'un changement d'état&nbsp;:
 
 ```css hidden
-.anchor {
+.ancre {
   font-size: 2rem;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -841,7 +841,7 @@ body {
   position: relative;
 }
 
-.infobox {
+.boite-info {
   align-content: center;
   color: darkblue;
   background-color: azure;
@@ -852,34 +852,34 @@ body {
 ```
 
 ```css
-.anchor {
-  anchor-name: --my-anchor;
+.ancre {
+  anchor-name: --mon-ancre;
   width: 100px;
   height: 100px;
   transition: 1s all;
 }
 
-.infobox {
-  position-anchor: --my-anchor;
+.boite-info {
+  position-anchor: --mon-ancre;
   position: absolute;
   height: 100px;
   width: 100px;
 }
 ```
 
-Passons maintenant à la partie la plus intéressante. Ici, nous définissons la `width` de l'ancre à `300px` lorsqu'elle est survolée ou sélectionnée. Nous définissons ensuite pour la boîte d'information&nbsp;:
+Passons maintenant à la partie la plus intéressante. Ici, nous définissons la largeur (`width`) de l'ancre à `300px` lorsqu'elle est survolée ou sélectionnée. Nous définissons ensuite pour la boîte d'information&nbsp;:
 
 - La valeur de `top` vaut `anchor(top)`. Cela fait en sorte que le haut de la boîte d'information reste toujours aligné avec le haut de l'ancre.
-- La valeur de `left` vaut `anchor-size(width)`. Cela fait en sorte que la gauche de la boîte d'information soit positionnée à la distance spécifiée du bord gauche de son ancêtre positionné le plus proche. Dans ce cas, la distance spécifiée est égale à la largeur de l'élément d'ancre et l'ancêtre positionné le plus proche est l'élément HTML `<body>`, donc la boîte d'information apparaît à droite de l'ancre.
+- La valeur de `left` vaut `anchor-size(width)`. Cela fait en sorte que la gauche de la boîte d'information soit positionnée à la distance définie du bord gauche de son ancêtre positionné le plus proche. Dans ce cas, la distance définie est égale à la largeur de l'élément d'ancre et l'ancêtre positionné le plus proche est l'élément HTML `<body>`, donc la boîte d'information apparaît à droite de l'ancre.
 - La valeur de `margin-left` vaut `calc(anchor-size(width)/4)`. Cela fait en sorte que la boîte d'information ait toujours une marge gauche la séparant de l'ancre, égale à un quart de la largeur de l'ancre.
 
 ```css
-.anchor:hover,
-.anchor:focus {
+.ancre:hover,
+.ancre:focus {
   width: 300px;
 }
 
-.infobox {
+.boite-info {
   top: anchor(top);
   left: anchor-size(width);
   margin-left: calc(anchor-size(width) / 4);
