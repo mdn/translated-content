@@ -2,7 +2,7 @@
 title: Publicar tu sitio web
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 l10n:
-  sourceCommit: 12c76ea107c3caacd28c39e33b9ab2dd879f0855
+  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
 ---
 
 {{LearnSidebar}}
@@ -48,12 +48,12 @@ Para tener más control sobre el contenido y la apariencia del sitio web, la may
 - El alojamiento web es el espacio de archivo alquilado en el [servidor web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) de una empresa de alojamiento. Colocas los archivos del sitio web en el servidor web. El servidor web proporciona el contenido del sitio web a los visitantes del sitio web.
 - Un [nombre de dominio](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) es la dirección web única donde la gente encuentra tu sitio web, como `https://www.mozilla.org` o `https://www.bbc.co.uk`. Puedes alquilar tu nombre de dominio por tantos años como quieras de un **registrador de dominios**.
 
-Si obtienes tu alojamiento web _y_ tu nombre de dominio de la misma empresa, tienden a estar configurados automáticamente para comunicarse entre sí. Sin embargo, si los obtienes de empresas separadas, o quieres cambiar tu alojamiento a una empresa diferente, necesitas hacer un poco de configuración para apuntar el nombre de dominio al servidor correcto. Esto es para que la gente vea tu sitio web cuando navegue a esa dirección web. Esto se hace normalmente accediendo al sitio web de tu registrador de dominios y configurando los [servidores de nombres](https://kinsta.com/knowledgebase/what-is-a-nameserver/) de tu dominio a los proporcionados por tu empresa de alojamiento.
+Si obtienes tu alojamiento web _y_ tu nombre de dominio de la misma empresa, tienden a estar configurados automáticamente para comunicarse entre sí. Sin embargo, si los obtienes de empresas separadas, o quieres cambiar tu alojamiento a una empresa diferente, necesitas hacer un poco de configuración para apuntar el nombre de dominio al servidor correcto. Esto es para que la gente vea tu sitio web cuando navegue a esa dirección web. Esto se hace normalmente accediendo al sitio web de tu registrador de dominios y configurando los [servidores de nombres](https://kinsta.com/blog/what-is-a-nameserver/) de tu dominio a los proporcionados por tu empresa de alojamiento.
 
 Las empresas utilizan varios mecanismos para transferir archivos a sus servidores web. Muchas tendrán más de una opción; las opciones típicas incluyen:
 
 - Una interfaz de arrastrar y soltar (verás un ejemplo de esto en [Publicar a través de GitHub](#publishing_via_github), más adelante).
-- Un programa de {{Glossary("FTP", "Protocolo de Transferencia de Archivos (FTP)")}}. Los programas FTP varían mucho, pero generalmente, tienes que conectarte a tu servidor web utilizando los detalles proporcionados por tu empresa de alojamiento (típicamente nombre de usuario, contraseña, nombre de dominio). Entonces el programa te muestra tus archivos locales y los archivos del servidor web en dos ventanas, y te proporciona una forma de transferir archivos de un lado a otro.
+- Un programa de {{Glossary("FTP", "Protocolo de Transferencia de Archivos (FTP)")}}. Los programas FTP varían mucho, pero generalmente, tienes que conectarte a tu servidor web utilizando los detalles proporcionados por tu empresa de alojamiento (típicamente nombre de usuario, contraseña, nombre de host). Entonces el programa te muestra tus archivos locales y los archivos del servidor web en dos ventanas, y te proporciona una forma de transferir archivos de un lado a otro.
 - Mantener el código fuente del sitio web en un repositorio de GitHub (véase más abajo) y conceder acceso a la empresa de alojamiento para que pueda obtener el código fuente, construirlo si es necesario y publicarlo.
 - Algunas empresas proporcionarán [herramientas de línea de comandos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) para que las uses para transferir tus archivos.
 
@@ -63,14 +63,15 @@ Las empresas utilizan varios mecanismos para transferir archivos a sus servidore
 - Tu {{Glossary("ISP", "proveedor de servicios de Internet")}} doméstico o de la oficina puede proporcionar algún alojamiento limitado para un sitio web pequeño. El conjunto de características disponibles será limitado, pero podría ser perfecto para tus primeros experimentos.
 - También hay servicios gratuitos disponibles como [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/) y [WordPress](https://wordpress.com/). Estos servicios pueden ser limitados en su alcance, pero son lo suficientemente buenos para los experimentos iniciales.
 
-### Usar una herramienta en línea como GitHub o Google App Engine
+### Usar una herramienta en línea
 
 Algunas herramientas te permiten publicar tu sitio web en línea:
 
 - [GitHub](https://github.com/) es un sitio de "codificación social". Te permite subir repositorios de código para su almacenamiento en el **sistema de control de versiones** [Git](https://git-scm.com/). Puedes entonces colaborar en proyectos de código, y el sistema es de código abierto por defecto, lo que significa que cualquiera en el mundo puede encontrar tu código de GitHub, usarlo, aprender de él y mejorarlo. GitHub tiene una característica muy útil llamada [GitHub Pages](https://pages.github.com/), que te permite exponer el código de tu sitio web en vivo en la web.
-- [Google App Engine](https://cloud.google.com/appengine/) es una potente plataforma que te permite construir y ejecutar aplicaciones en la infraestructura de Google, ya sea que necesites construir una aplicación web de múltiples niveles desde cero o alojar un sitio web estático. Véase [¿Cómo alojar tu sitio web en Google App Engine?](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) para más información.
+- [Netlify](https://www.netlify.com/) es una plataforma de alojamiento web que ofrece alojamiento para sitios web estáticos directamente desde tu repositorio de GitHub. También ofrece varias funciones adicionales, como vista previa de despliegue, funciones sin servidor y gestión de formularios.
+- [Fly.io](https://fly.io/) es una plataforma que te permite desplegar aplicaciones y bases de datos cerca de tus usuarios. Es más adecuada si tienes una aplicación web que requiere servicios de backend.
 
-Estas opciones son generalmente gratuitas, con un conjunto de características limitado.
+Estas opciones son generalmente gratuitas, con un conjunto de funciones limitado.
 
 ### Usar un IDE basado en la web como CodePen
 
@@ -78,9 +79,9 @@ Hay una serie de aplicaciones web que emulan un entorno de desarrollo de sitios 
 
 Intenta jugar con algunos de estos ejemplos para averiguar cuál funciona mejor para ti:
 
+- [Scrimba](https://scrimba.com/new?via=mdn) <sup>[_Colaborador de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
 - [JSFiddle](https://jsfiddle.net/)
-- [Glitch](https://glitch.com/)
-- [JS Bin](https://jsbin.com/)
+- [JSBin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
 ## Publicar a través de GitHub
