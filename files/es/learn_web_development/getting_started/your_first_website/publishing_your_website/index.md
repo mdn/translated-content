@@ -1,5 +1,6 @@
 ---
 title: Publicar tu sitio web
+short-title: Publicar
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 l10n:
   sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
@@ -52,7 +53,7 @@ Si obtienes tu alojamiento web _y_ tu nombre de dominio de la misma empresa, tie
 
 Las empresas utilizan varios mecanismos para transferir archivos a sus servidores web. Muchas tendrán más de una opción; las opciones típicas incluyen:
 
-- Una interfaz de arrastrar y soltar (verás un ejemplo de esto en [Publicar a través de GitHub](#publishing_via_github), más adelante).
+- Una interfaz de arrastrar y soltar (verás un ejemplo de esto en [Publicar a través de GitHub](#publicar_a_través_de_github), más adelante).
 - Un programa de {{Glossary("FTP", "Protocolo de Transferencia de Archivos (FTP)")}}. Los programas FTP varían mucho, pero generalmente, tienes que conectarte a tu servidor web utilizando los detalles proporcionados por tu empresa de alojamiento (típicamente nombre de usuario, contraseña, nombre de host). Entonces el programa te muestra tus archivos locales y los archivos del servidor web en dos ventanas, y te proporciona una forma de transferir archivos de un lado a otro.
 - Mantener el código fuente del sitio web en un repositorio de GitHub (véase más abajo) y conceder acceso a la empresa de alojamiento para que pueda obtener el código fuente, construirlo si es necesario y publicarlo.
 - Algunas empresas proporcionarán [herramientas de línea de comandos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) para que las uses para transferir tus archivos.
