@@ -68,7 +68,7 @@ signButton.addEventListener("click", () => {
 ```js
 // 打开空的提示窗口
 sign = prompt();
-// 打开空的提示窗口 
+// 打开空的提示窗口
 sign = window.prompt();
 // 打开显示提示文本为“你觉得很幸运吗？”的提示窗口
 sign = window.prompt("你觉得很幸运吗？");
