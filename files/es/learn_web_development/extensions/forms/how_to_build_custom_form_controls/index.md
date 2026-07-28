@@ -440,7 +440,7 @@ Aquí está el resultado con nuestros tres estados ([consulta el código fuente 
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -452,7 +452,6 @@ Aquí está el resultado con nuestros tres estados ([consulta el código fuente 
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -466,7 +465,7 @@ Aquí está el resultado con nuestros tres estados ([consulta el código fuente 
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
