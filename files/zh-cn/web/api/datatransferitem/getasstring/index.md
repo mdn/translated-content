@@ -1,77 +1,68 @@
 ---
-title: DataTransferItem.getAsString()
+title: DataTransferItem：getAsString() 方法
 slug: Web/API/DataTransferItem/getAsString
+l10n:
+  sourceCommit: b5437b737639d6952d18b95ebd1045ed73e4bfa7
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DataTransferItem.getAsString()`** 当 DataTransferItem 对象的 kind 属性是一个普通 Unicode 字符串时，该方法会用 DataTransferItem 对象的 kind 属性作为入参来执行传入的回调函数 (i.e. `kind` is `string`).
+如果拖拽数据项的 {{domxref("DataTransferItem.kind","kind")}} 是*纯 Unicode 字符串*（即 `kind` 为 `string`），**`DataTransferItem.getAsString()`** 方法会调用给定的回调函数，并将该拖拽数据项的字符串数据作为参数传入。
+
+## 语法
+
+```js-nolint
+getAsString(callbackFn)
+```
+
+### 参数
+
+- `callbackFn`
+  - : 一个回调函数，接收以下参数：
+    - `data`
+      - : {{domxref("DataTransferItem")}} 的字符串数据。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-```plain
-dataTransferItem.getAsString(callback);
-```
-
-### Parameters
-
-- `callback`
-  - : A callback function that has access to the {{domxref("DataTransferItem","data transfer item's")}} string data. See [Callback](#callback) below for details.
-
-### Return value
-
-{{jsxref("undefined")}}
-
-## Callback
-
-The callback parameter is a callback function which accepts one parameter:
-
-- {{jsxref("String")}}
-  - : The drag data item's string data.
-
-The callback return value is `undefined`.
-
-## Example
-
-This example shows the use of the `getAsString()` method as an _inline function_ in a [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) event handler.
+本示例展示了在 {{domxref("HTMLElement/drop_event", "drop")}} 事件处理器中将 `getAsString()` 方法用作*内联函数*的用法。
 
 ```js
-function drop_handler(ev) {
-  console.log("Drop");
+function dropHandler(ev) {
+  console.log("放置操作");
   ev.preventDefault();
-  var data = ev.dataTransfer.items;
-  for (var i = 0; i < data.length; i += 1) {
-    if (data[i].kind == "string" && data[i].type.match("^text/plain")) {
-      // This item is the target node
-      data[i].getAsString(function (s) {
+  for (const item of ev.dataTransfer.items) {
+    if (item.kind === "string" && item.type.match("^text/plain")) {
+      // 该项目是目标节点
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if (data[i].kind == "string" && data[i].type.match("^text/html")) {
-      // Drag data item is HTML
-      console.log("... Drop: HTML");
-    } else if (
-      data[i].kind == "string" &&
-      data[i].type.match("^text/uri-list")
-    ) {
-      // Drag data item is URI
-      console.log("... Drop: URI");
-    } else if (data[i].kind == "file" && data[i].type.match("^image/")) {
-      // Drag data item is an image file
-      var f = data[i].getAsFile();
-      console.log("... Drop: File ");
+    } else if (item.kind === "string" && item.type.match("^text/html")) {
+      // 拖拽数据项是 HTML
+      console.log("… 放置：HTML");
+    } else if (item.kind === "string" && item.type.match("^text/uri-list")) {
+      // 拖拽数据项是 URI
+      console.log("… 放置：URI");
+    } else if (item.kind === "file" && item.type.match("^image/")) {
+      // 拖拽数据项是图像文件
+      const f = item.getAsFile();
+      console.log("… 放置：文件");
     }
   }
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("DataTransfer.getData()")}}

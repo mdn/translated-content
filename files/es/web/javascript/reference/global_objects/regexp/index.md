@@ -45,7 +45,7 @@ let er = new RegExp("\\w+");
 
 ### Propiedades de expresiones regulares similares a Perl
 
-Ten en cuenta que varias de las propiedades de {{JSxRef("RegExp")}} tienen nombres largos y cortos (tipo Perl). Ambos nombres siempre se refieren al mismo valor. (Perl es el lenguaje de programación a partir del cual JavaScript modeló sus expresiones regulares). Consulta también las propiedades {{JSxRef("Características_Desaprobadas", "en desuso de RegExp", "#Propiedades_de_RegExp")}}
+Ten en cuenta que varias de las propiedades de {{JSxRef("RegExp")}} tienen nombres largos y cortos (tipo Perl). Ambos nombres siempre se refieren al mismo valor. (Perl es el lenguaje de programación a partir del cual JavaScript modeló sus expresiones regulares). Consulta también las propiedades {{JSxRef("Deprecated_and_obsolete_features", "en desuso de RegExp", "#Propiedades_de_RegExp")}}
 
 ## Constructor
 
