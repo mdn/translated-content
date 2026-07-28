@@ -1,6 +1,7 @@
 ---
 title: Publicar tu sitio web
 short-title: Publicar
+short-title: Publicar
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 l10n:
   sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
