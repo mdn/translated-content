@@ -164,8 +164,8 @@ Con el fin de crear contenido dinámico y aplicaciones Web, HTML soporta el uso 
 
 Estos elementos permiten proporcionar indicios de que determinadas partes del texto han sido alteradas.
 
-| Elemento               | Descripción                                                   |
-| ---------------------- | ------------------------------------------------------------- |
+| Elemento               | Descripción                                                                                                                                                                                                                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | {{HTMLElement("del")}} | Representa un rango de texto que ha sido borrado del documento. Puede ser usado cuando se renderiza "control de cambios" o información de diferencias de código fuente, por ejemplo. El elemento `<ins>` puede ser usado para el propósito opuesto: para indicar que el texto ha sido agregado al documento. |
 | {{HTMLElement("ins")}} | Representa un rango de texto que ha sido agregado al documento. Puede usar el elemento `<del>` similarmente para representar un rango de texto ue ha sido borrado del documento.                                                                                                                             |
 
