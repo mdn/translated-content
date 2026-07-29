@@ -1,76 +1,76 @@
 ---
 title: "Element : évènement click"
+short-title: click
 slug: Web/API/Element/click_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-L'évènement **`click`** est déclenché à partir d'un élément lorsqu'un bouton d'un dispositif de pointage (comme celui d'une souris par exemple) est pressé puis relaché lorsque le pointeur est sur l'élément.
+Un élément reçoit un évènement **`click`** lorsque l'une des situations suivantes se produit&nbsp;:
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Se propage/remonte dans le DOM</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("MouseEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Propriété pour la gestion d'évènement</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onclick", "onclick")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+- Un bouton d'un dispositif de pointage (comme le bouton principal d'une souris) est à la fois pressé et relâché alors que le pointeur se trouve à l'intérieur de l'élément.
+- Un geste tactile est effectué sur l'élément.
+- Toute interaction utilisateur·ice équivalente à un clic, comme appuyer sur la touche <kbd>Espace</kbd> ou <kbd>Entrer</kbd> lorsque l'élément est sélectionné. Notez que cela ne s'applique qu'aux éléments avec un gestionnaire d'évènements clavier par défaut, et exclut donc les autres éléments qui ont été rendus sélectionnables en définissant l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex).
 
-Si le bouton est pressé sur un élément et que le pointeur est déplacé sur un autre élément, l'évènement sera déclenché sur l'ancêtre le plus près qui contient les deux éléments.
+- Si le bouton est pressé sur un élément et que le pointeur est déplacé en dehors de l'élément avant que le bouton ne soit relâché, l'évènement est déclenché sur l'ancêtre le plus spécifique qui contenait les deux éléments.
 
-`click` est déclenché après que les évènements [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event) aient été déclenchés.
+`click` se déclenche après que les évènements {{DOMxRef("Element/mousedown_event", "mousedown")}} et {{DOMxRef("Element/mouseup_event", "mouseup")}} se soient produits, dans cet ordre.
+
+L'évènement est indépendant du dispositif — cela signifie qu'il peut être activé par le toucher, le clavier, la souris et tout autre mécanisme fourni par la technologie d'assistance.
+
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété gestionnaire d'évènements.
+
+```js-nolint
+addEventListener("click", (event) => { })
+
+onclick = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("PointerEvent")}}. Hérite de {{DOMxRef("MouseEvent")}}.
+
+{{InheritanceDiagram("PointerEvent")}}
+
+> [!NOTE]
+> Dans les versions antérieures de la spécification, le type d'évènement pour cet évènement était un {{DOMxRef("MouseEvent")}}. Consultez la [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus d'informations.
+
+## Propriétés de l'évènement
+
+_Cette interface hérite des propriétés de {{DOMxRef("MouseEvent")}} et {{DOMxRef("Event")}}._
+
+- {{DOMxRef("PointerEvent.altitudeAngle")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Représente l'angle entre l'axe d'un transducteur (un pointeur ou un stylet) et le plan X-Y de l'écran d'un dispositif.
+- {{DOMxRef("PointerEvent.azimuthAngle")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Représente l'angle entre le plan Y-Z et le plan contenant à la fois l'axe du transducteur (pointeur ou stylet) et l'axe Y.
+- {{DOMxRef("PointerEvent.pointerId")}} {{ReadOnlyInline}}
+  - : Identifiant unique du pointeur à l'origine de l'évènement.
+- {{DOMxRef("PointerEvent.width")}} {{ReadOnlyInline}}
+  - : La largeur (amplitude sur l'axe X), en pixels CSS, de la géométrie de contact du pointeur.
+- {{DOMxRef("PointerEvent.height")}} {{ReadOnlyInline}}
+  - : La hauteur (amplitude sur l'axe Y), en pixels CSS, de la géométrie de contact du pointeur.
+- {{DOMxRef("PointerEvent.pressure")}} {{ReadOnlyInline}}
+  - : La pression normalisée de l'entrée du pointeur comprise entre `0` et `1`, où `0` et `1` représentent respectivement la pression minimale et maximale que le matériel est capable de détecter.
+- {{DOMxRef("PointerEvent.tangentialPressure")}} {{ReadOnlyInline}}
+  - : La pression tangentielle normalisée de l'entrée du pointeur (également appelée «&nbsp;pression du canon&nbsp;» ou [contrainte cylindrique <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Cylinder_stress)) comprise entre `-1` et `1`, où `0` représente la position neutre du contrôle.
+- {{DOMxRef("PointerEvent.tiltX")}} {{ReadOnlyInline}}
+  - : L'angle plan (en degrés, compris entre `-90` et `90`) entre le plan Y-Z et le plan contenant à la fois l'axe du pointeur (par exemple, un stylet) et l'axe Y.
+- {{DOMxRef("PointerEvent.tiltY")}} {{ReadOnlyInline}}
+  - : L'angle plan (en degrés, compris entre `-90` et `90`) entre le plan X-Z et le plan contenant à la fois l'axe du pointeur (par exemple, un stylet) et l'axe X.
+- {{DOMxRef("PointerEvent.twist")}} {{ReadOnlyInline}}
+  - : La rotation dans le sens des aiguilles d'une montre du pointeur (par exemple, un stylet) autour de son axe principal en degrés, avec une valeur comprise entre `0` et `359`.
+- {{DOMxRef("PointerEvent.pointerType")}} {{ReadOnlyInline}}
+  - : Indique le type de dispositif à l'origine de l'évènement (souris, stylet, tactile, etc.).
+- {{DOMxRef("PointerEvent.isPrimary")}} {{ReadOnlyInline}}
+  - : Indique si le pointeur représente le pointeur principal de ce type de pointeur.
 
 ## Notes d'utilisation
 
-L'objet {{domxref("MouseEvent")}}, passé au gestionnaire d'évènement (lorsque l'évènement est `click`) possède une propriété {{domxref("Event.detail", "detail")}} qui indique le nombre de fois où la cible ({{domxref("Event.target", "target")}}) a été cliquée. Autrement dit, `detail` vaudra 2 pour un double-clic, 3 pour un triple-clic et ainsi de suite. Le compteur est remis à zéro après un court intervalle (dont la durée spécifique peut varier entre les navigateurs, les plateformes et les préférences de l'utilisateur dont notamment les options d'accessibilité).
-
-### Internet Explorer
-
-Internet Explorer 8 & 9 souffrent d'un bug où les éléments avec une {{cssxref("background-color")}} calculée qui vaut [`transparent`](/fr/docs/Web/CSS/Reference/Values/color_value#transparent_keyword) qui recouvrent d'autres éléments ne recevront pas d'évènements `click`. Les évènements `click` toucheront les éléments en dessous à la place.
-
-Quelques méthodes de contournement pour ce bug :
-
-- Pour IE9 :
-  - Utiliser {{cssxref("background-color")}}`: rgba(0,0,0,0)`
-  - Appliquer {{cssxref("opacity")}}`: 0` et une valeur explicite pour {{cssxref("background-color")}} qui ne soit pas [`transparent`](/fr/docs/Web/CSS/Reference/Values/color_value#transparent_keyword)
-
-- Pour IE8 et IE9 : appliquer `filter: alpha(opacity=0);` et une valeur explicite pour {{cssxref("background-color")}} qui ne soit pas [`transparent`](/fr/docs/Web/CSS/Reference/Values/color_value#transparent_keyword)
-
-### Safari Mobile
-
-Safari Mobile 7.0+ (et antérieures) [souffre d'un bug](https://bugs.webkit.org/show_bug.cgi?id=153887) indiquant que les évènements `click` ne sont pas déclenchés sur les éléments qui ne sont généralement pas interactifs (ex. {{HTMLElement("div")}}) et qui n'ont pas de gestionnaire d'évènement directement attaché (on utilise la délégation d'évènement). Voir [la documentation de Safari sur le fait de rendre les éléments cliquables](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6) et [la définition d'un élément cliquable](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7).
-
-Méthodes de contournement connues :
-
-- Ajouter {{cssxref("cursor")}}`: pointer;` sur l'élément ou l'un des ancêtres.
-- Ajouter un attribut `onclick="void(0)"` à l'élément ou à l'un des ancêtres (tant que ce n'est pas {{HTMLElement("body")}}).
-- Utiliser un élément interactif (ex. {{HTMLElement("a")}}) plutôt qu'un élément généralement non-interactif (ex. {{HTMLElement("div")}}).
-- Ne pas utiliser la délégation d'évènement pour `click`.
-
-Safari Mobile considère que les éléments suivants sont interactifs (et ne souffrent donc pas de ce bug) :
-
-- {{HTMLElement("a")}} (tant qu'il a un attribut `href`)
-- {{HTMLElement("area")}} (tant qu'il a un attribut `href`)
-- {{HTMLElement("button")}}
-- {{HTMLElement("img")}}
-- {{HTMLElement("input")}}
-- {{HTMLElement("label")}} (tant qu'il est associé à un formulaire)
-- {{HTMLElement("textarea")}}
-- _Liste à compléter._
+L'objet {{DOMxRef("PointerEvent")}} passé au gestionnaire d'évènements pour `click` a sa propriété {{DOMxRef("UIEvent/detail", "detail")}} définie sur le nombre de fois que la {{DOMxRef("Event.target", "target")}} a été cliqué. En d'autres termes, `detail` est 2 pour un double-clic, 3 pour un triple-clic, et ainsi de suite. Ce compteur se réinitialise après un court intervalle sans clics&nbsp;; la durée exacte de cet intervalle peut varier d'un navigateur à l'autre et selon les plateformes. L'intervalle est également susceptible d'être affecté par les préférences de l'utilisateur·ice&nbsp;; par exemple, les options d'accessibilité peuvent prolonger cet intervalle pour faciliter les clics multiples avec des interfaces adaptatives.
 
 ## Exemples
 
@@ -85,16 +85,16 @@ Dans cet exemple, on affiche le nombre de clics consécutifs sur un bouton HTML 
 ### JavaScript
 
 ```js
-const button = document.querySelector("button");
+const bouton = document.querySelector("button");
 
-button.addEventListener("click", (event) => {
-  button.innerHTML = `Nombre de clics : ${event.detail}`;
+bouton.addEventListener("click", (event) => {
+  bouton.innerHTML = `Nombre de clics : ${event.detail}`;
 });
 ```
 
 ### Résultat
 
-Essayez de cliquer rapidement sur le bouton pour augmenter le nombre de clic. Après une pause, le compteur sera remis à zéro.
+Essayez de cliquer rapidement sur le bouton pour augmenter le nombre de clic. Après une pause, le compteur est remis à zéro.
 
 {{EmbedLiveSample("Exemples")}}
 
@@ -108,14 +108,11 @@ Essayez de cliquer rapidement sur le bouton pour augmenter le nombre de clic. Ap
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
-- D'autres évènements connexes
-  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
-  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
-  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
-  - [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
-  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
-  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)
+- [Apprendre&nbsp;: Introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
+- L'évènement {{DOMxRef("Element/auxclick_event", "auxclick")}}
+- L'évènement {{DOMxRef("Element/contextmenu_event", "contextmenu")}}
+- L'évènement {{DOMxRef("Element/dblclick_event", "dblclick")}}
+- L'évènement {{DOMxRef("Element/mousedown_event", "mousedown")}}
+- L'évènement {{DOMxRef("Element/mouseup_event", "mouseup")}}
+- L'évènement {{DOMxRef("Element/pointerdown_event", "pointerdown")}}
+- L'évènement {{DOMxRef("Element/pointerup_event", "pointerup")}}
