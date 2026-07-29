@@ -1,62 +1,79 @@
 ---
-title: compositionstart
+title: "Element : évènement compositionstart"
+short-title: compositionstart
 slug: Web/API/Element/compositionstart_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-L'événement **`compositionstart`** est déclenché lorsqu'un système de composition de texte tel qu'une {{glossary("input method editor","méthode de saisie")}} démarre une nouvelle session de composition.
+L'évènement **`compositionstart`** est déclenché lorsqu'un système de composition de texte tel qu'une {{Glossary("input method editor", "méthode de saisie")}} démarre une nouvelle session de composition.
 
-Par exemple, cet événement pourrait être déclenché après qu'un utilisateur a commencé à saisir un caractère chinois en utilisant un [Pinyin](https://en.wikipedia.org/wiki/Pinyin) IME.
+Par exemple, cet évènement peut être déclenché lorsqu'un·e utilisateur·ice commence à saisir un caractère chinois en utilisant une {{Glossary("Input method editor", "méthode de saisie")}} [Pinyin](https://fr.wikipedia.org/wiki/Hanyu_pinyin).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Propagation</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("CompositionEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Propriété du gestionnaire d'événements</th>
-      <td>Aucune</td>
-    </tr>
-  </tbody>
-</table>
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("compositionstart", (event) => { })
+
+oncompositionstart = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("CompositionEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et de {{DOMxRef("Event")}}.
+
+{{InheritanceDiagram("CompositionEvent")}}
+
+## Propriétés de l'évènement
+
+_Cette interface hérite également des propriétés de son parent, {{DOMxRef("UIEvent")}}, et de son ancêtre — {{DOMxRef("Event")}}._
+
+- {{DOMxRef("CompositionEvent.data")}} {{ReadOnlyInline}}
+  - : Retourne les caractères générés par la méthode de saisie qui a déclenché l'évènement&nbsp;; cela varie en fonction du type d'évènement qui a généré l'objet `CompositionEvent`.
+- {{DOMxRef("CompositionEvent.locale")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : Retourne la locale de la méthode de saisie actuelle (par exemple, la locale de la disposition du clavier si la composition est associée à une {{Glossary("Input method editor", "méthode de saisie")}}).
 
 ## Exemples
 
 ```js
-const inputElement = document.querySelector('input[type="text"]');
+const elementSaisie = document.querySelector('input[type="text"]');
 
-inputElement.addEventListener("compositionstart", (event) => {
-  console.log(`generated characters were: ${event.data}`);
+elementSaisie.addEventListener("compositionend", (event) => {
+  console.log(`caractères générés : ${event.data}`);
 });
 ```
 
-### Exemple concret
+### Exemple interactif
 
 #### HTML
 
 ```html
-<div class="control">
-  <label for="name"
-    >Sur macOS, cliquez dans la zone de texte ci-dessous,<br />
-    puis tapez <kbd>option</kbd> + <kbd>`</kbd>, puis <kbd>a</kbd> :</label
-  >
-  <input type="text" id="example" name="example" />
+<div class="controle">
+  <p>
+    Premièrement, sélectionnez la zone de texte, puis ouvrez la méthode de
+    saisie&nbsp;:
+  </p>
+  <ul>
+    <li>sur macOS, appuyez sur <kbd>option</kbd> + <kbd>`</kbd></li>
+    <li>sur Windows, appuyez sur <kbd>windows</kbd> + <kbd>.</kbd></li>
+  </ul>
+  <label for="exemple">Exemple de saisie</label>
+  <input type="text" id="exemple" name="exemple" />
 </div>
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="25"></textarea>
-  <button class="clear-log">Clear</button>
+<div class="journal-event">
+  <label for="journalEvent">Journal évènement&nbsp;:</label>
+  <textarea
+    readonly
+    class="contenu-journal-event"
+    rows="8"
+    cols="25"
+    id="journalEvent"></textarea>
+  <button class="effacer-journal">Effacer</button>
 </div>
 ```
 
@@ -67,15 +84,15 @@ body {
   grid-template-areas: "control log";
 }
 
-.control {
+.controle {
   grid-area: control;
 }
 
-.event-log {
+.journal-event {
   grid-area: log;
 }
 
-.event-log-contents {
+.contenu-journal-event {
   resize: none;
 }
 
@@ -95,29 +112,29 @@ kbd {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
-const inputElement = document.querySelector('input[type="text"]');
-const log = document.querySelector(".event-log-contents");
-const clearLog = document.querySelector(".clear-log");
+const elementSaisie = document.querySelector('input[type="text"]');
+const journal = document.querySelector(".contenu-journal-event");
+const effacerJournal = document.querySelector(".effacer-journal");
 
-clearLog.addEventListener("click", () => {
-  log.textContent = "";
+effacerJournal.addEventListener("click", () => {
+  journal.textContent = "";
 });
 
-function handleEvent(event) {
-  log.textContent = log.textContent + `${event.type}: ${event.data}\n`;
+function gestionEvenement(event) {
+  journal.textContent += `${event.type}: ${event.data}\n`;
 }
 
-inputElement.addEventListener("compositionstart", handleEvent);
-inputElement.addEventListener("compositionupdate", handleEvent);
-inputElement.addEventListener("compositionend", handleEvent);
+elementSaisie.addEventListener("compositionstart", gestionEvenement);
+elementSaisie.addEventListener("compositionupdate", gestionEvenement);
+elementSaisie.addEventListener("compositionend", gestionEvenement);
 ```
 
 #### Résultat
 
-{{ EmbedLiveSample('Exemple_concret', '100%', '180px') }}
+{{EmbedLiveSample("Exemple interactif", "100%", 180)}}
 
 ## Spécifications
 
@@ -129,4 +146,4 @@ inputElement.addEventListener("compositionend", handleEvent);
 
 ## Voir aussi
 
-- Événements liés : {{domxref("Element/compositionend_event", "compositionend")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}.
+- Évènements associés&nbsp;: {{DOMxRef("Element/compositionend_event", "compositionend")}}, {{DOMxRef("Element/compositionupdate_event", "compositionupdate")}}.
