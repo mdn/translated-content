@@ -154,10 +154,10 @@ Puede incrustar contenido [SVG](/es/docs/Web/SVG) y [MathML](/es/docs/Web/MathML
 
 Con el fin de crear contenido dinámico y aplicaciones Web, HTML soporta el uso de lenguajes de scripting, el más prominente es JavaScript. Ciertos elementos soportan esta capacidad.
 
-| Elemento                    | Descripción                                                                                                                                                                                                                                                                                                                         |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{HTMLElement("canvas")}}   | Elemento contenedor que se usa ya sea con el [API de scripting de canvas](/es/docs/Web/API/Canvas_API) o con el [API WebGL](/es/docs/Web/API/WebGL_API) para dibujar gráficos y animaciones.                                                                                                                                        |
-| {{HTMLElement("noscript")}} | Define una sección de HTML que se insertara sí un tipo script en la página no es soportado o sí el navegador tiene la opción script inhabilitada.                                                                                                                                                                                   |
+| Elemento                    | Descripción                                                                                                                                                                                  |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{HTMLElement("canvas")}}   | Elemento contenedor que se usa ya sea con el [API de scripting de canvas](/es/docs/Web/API/Canvas_API) o con el [API WebGL](/es/docs/Web/API/WebGL_API) para dibujar gráficos y animaciones. |
+| {{HTMLElement("noscript")}} | Define una sección de HTML que se insertara sí un tipo script en la página no es soportado o sí el navegador tiene la opción script inhabilitada.                                            |
 
 ## Ediciones demarcadas
 
