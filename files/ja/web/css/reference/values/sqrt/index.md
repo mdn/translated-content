@@ -1,8 +1,9 @@
 ---
-title: sqrt()
+title: CSS `sqrt()` 関数
+short-title: sqrt()
 slug: Web/CSS/Reference/Values/sqrt
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`sqrt()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/Reference/Values/Functions) は指数関数で、数値の[平方根](https://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%A0%B9)を返します。

@@ -1,8 +1,9 @@
 ---
-title: sign()
+title: CSS `sign()` 関数
+short-title: sign()
 slug: Web/CSS/Reference/Values/sign
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`sign()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 1 つの計算式を指定し、引数の数値が負の場合は `-1`、 引数の数値が正の値の場合は `+1`、引数の数値が 0⁺ の場合は `0⁺`、引数の数値が 0⁻ の場合は `0⁻` を返します。

@@ -1,8 +1,9 @@
 ---
-title: cross-fade()
+title: CSS `cross-fade()` 関数
+short-title: cross-fade()
 slug: Web/CSS/Reference/Values/cross-fade
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`cross-fade()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、2 枚以上の画像を所定の透過度で合成するために使用することができます。

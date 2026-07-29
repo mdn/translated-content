@@ -1,12 +1,19 @@
 ---
-title: -webkit-mask-composite
+title: CSS `-webkit-mask-composite` プロパティ
+short-title: -webkit-mask-composite
 slug: Web/CSS/Reference/Properties/-webkit-mask-composite
-original_slug: Web/CSS/-webkit-mask-composite
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_header}}
 
-**`webkit-mask-composite`** プロパティは、同じ要素に適用された複数のマスク画像を互いに合成する方法を指定します。マスク画像は、{{CSSxRef("-webkit-mask-image")}} プロパティで宣言された順序とは逆に合成されます。
+**`webkit-mask-composite`** プロパティは、同じ要素に適用された複数のマスク画像を互いに合成する方法を指定します。マスク画像は、{{CSSxRef("mask-image", "-webkit-mask-image")}} プロパティで宣言された順序とは逆に合成されます。
+
+> [!NOTE]
+> この標準外のプロパティの一部を別のキーワードでカバーする、標準化された {{CSSxRef("mask-composite")}} プロパティがあります。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -25,13 +32,10 @@ original_slug: Web/CSS/-webkit-mask-composite
 /* グローバル値 */
 -webkit-mask-composite: inherit;
 -webkit-mask-composite: initial;
+-webkit-mask-composite: revert;
+-webkit-mask-composite: revert-layer;
 -webkit-mask-composite: unset;
 ```
-
-> [!NOTE]
-> この標準外のプロパティの一部を別のキーワードでカバーする、標準化された {{CSSxRef("mask-composite")}} プロパティがあります。
-
-## 構文
 
 ### 値
 
@@ -64,7 +68,7 @@ original_slug: Web/CSS/-webkit-mask-composite
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{CSSSyntaxRaw(`-webkit-mask-composite = <composite-style>#`)}}
 
 ## 例
 
@@ -72,7 +76,7 @@ original_slug: Web/CSS/-webkit-mask-composite
 
 ```css
 .example {
-  -webkit-mask-image: url(mask1.png), url("mask2.png");
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-composite: xor, source-over;
 }
 ```

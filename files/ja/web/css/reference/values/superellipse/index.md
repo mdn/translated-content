@@ -1,8 +1,9 @@
 ---
-title: superellipse()
+title: CSS `superellipse()` 関数
+short-title: superellipse()
 slug: Web/CSS/Reference/Values/superellipse
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{SeeCompatTable}}

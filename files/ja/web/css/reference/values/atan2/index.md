@@ -1,8 +1,9 @@
 ---
-title: atan2()
+title: CSS `atan2()` 関数
+short-title: atan2()
 slug: Web/CSS/Reference/Values/atan2
 l10n:
-  sourceCommit: 1a4df4e8a562f50c4109e683e3c3637799425621
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`atan2()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 `-infinity` から `infinity` までの 2 つの値の逆タンジェントを返す三角関数です。この関数は 2 つの引数を受け入れ、`-180deg` から `180deg` までの {{cssxref("angle")}} を返します。
@@ -112,3 +113,4 @@ div.box-5 {
 - {{CSSxRef("asin")}}
 - {{CSSxRef("acos")}}
 - {{CSSxRef("atan")}}
+- [CSS 型付き演算の使用](/ja/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic)
