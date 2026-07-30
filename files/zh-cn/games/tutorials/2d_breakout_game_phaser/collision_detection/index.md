@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}
 
-这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 10 步**。接下来要处理的是球和砖块之间的碰撞检测。幸运的是，我们可以使用物理引擎来检查单个对象之间（例如球和球拍）的碰撞，也可以检查一个对象与一组对象之间的碰撞。
+这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 10 步**。接下来要处理的是球和砖块之间的碰撞检测。幸运的是，我们可以使用物理引擎来检查单个对象之间（例如球和球板）的碰撞，也可以检查一个对象与一组对象之间的碰撞。
 
 ## 砖块与球的碰撞检测
 
