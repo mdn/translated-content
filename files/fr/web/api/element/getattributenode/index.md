@@ -1,15 +1,17 @@
 ---
 title: "Element : méthode getAttributeNode()"
+short-title: getAttributeNode()
 slug: Web/API/Element/getAttributeNode
 l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`getAttributeNode()`**, associée à l'interface [`Element`](/fr/docs/Web/API/Element), renvoie l'attribut correspondant de l'élément courant sous la forme d'un nœud [`Attr`](/fr/docs/Web/API/Attr).
+La méthode **`getAttributeNode()`** de l'interface {{DOMxRef("Element")}} retourne l'attribut défini de l'élément demandé sous la forme d'un nœud {{DOMxRef("Attr")}}.
 
-Cette méthode est utile pour obtenir les [propriétés d'instance](/fr/docs/Web/API/Attr#propriétés) de l'attribut. Si on souhaite seulement obtenir la valeur de l'attribut, on pourra plutôt utiliser la méthode [`getAttribute()`](/fr/docs/Web/API/Element/getAttribute).
+Cette méthode est utile si vous avez besoin des [propriétés d'instance](/fr/docs/Web/API/Attr#propriétés) de l'attribut.
+Si vous avez seulement besoin de la valeur de l'attribut, vous pouvez utiliser la méthode {{DOMxRef("Element.getAttribute()", "getAttribute()")}} à la place.
 
 ## Syntaxe
 
@@ -24,7 +26,7 @@ getAttributeNode(attrName)
 
 ### Valeur de retour
 
-Un nœud [`Attr`](/fr/docs/Web/API/Attr) pour l'attribut demandé.
+Un nœud `Attr` pour l'attribut demandé.
 
 ## Exemples
 
@@ -32,14 +34,14 @@ Un nœud [`Attr`](/fr/docs/Web/API/Attr) pour l'attribut demandé.
 // html: <div id="top" />
 let t = document.getElementById("top");
 let idAttr = t.getAttributeNode("id");
-console.log(idAttr.value === "top");
+alert(idAttr.value === "top");
 ```
 
 ## Notes
 
 Lorsque cette méthode est appelée sur un élément HTML dans un DOM marqué comme un document HTML, elle transforme son argument en minuscules avant de continuer.
 
-Les nœuds `Attr` héritent de `Node`, mais ne sont pas considérés comme faisant partie de l'arbre du document. Les attributs habituels des nœuds comme [`parentNode`](/fr/docs/Web/API/Node/parentNode), [`previousSibling`](/fr/docs/Web/API/Node/previousSibling), et [`nextSibling`](/fr/docs/Web/API/Node/nextSibling) sont `null` pour un nœud `Attr`. Vous pouvez cependant accéder à l'élément auquel cet attribut appartient grâce à la propriété `ownerElement`.
+Les nœuds `Attr` héritent de `Node`, mais ne sont pas considérés comme faisant partie de l'arbre du document. Les attributs habituels des nœuds comme {{DOMxRef("Node.parentNode", "parentNode")}}, {{DOMxRef("Node.previousSibling", "previousSibling")}} et {{DOMxRef("Node.nextSibling", "nextSibling")}} sont `null` pour un nœud `Attr`. Vous pouvez cependant accéder à l'élément auquel cet attribut appartient grâce à la propriété `ownerElement`.
 
 ## Spécifications
 
@@ -51,7 +53,6 @@ Les nœuds `Attr` héritent de `Node`, mais ne sont pas considérés comme faisa
 
 ## Voir aussi
 
-- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
-- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)
-- [`Element.removeAttributeNode()`](/fr/docs/Web/API/Element/removeAttributeNode)
-- [`Element.getAttributeNodeNS()`](/fr/docs/Web/API/Element/getAttributeNodeNS)
+- La méthode {{DOMxRef("Document.createAttribute()")}}
+- La méthode {{DOMxRef("Element.setAttributeNode()")}}
+- La méthode {{DOMxRef("Element.removeAttributeNode()")}}
