@@ -8,7 +8,7 @@ l10n:
 
 **`dir`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)是一个[枚举](/zh-CN/docs/Glossary/Enumerated)属性，用于指示元素文本的方向性。
 
-{{InteractiveExample("HTML Demo: dir", "tabbed-standard")}}
+{{InteractiveExample("HTML 演示：dir", "tabbed-standard")}}
 
 ```html interactive-example
 <p dir="rtl">这段文字错误地从右到左排列。</p>
