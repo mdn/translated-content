@@ -50,7 +50,7 @@ La función [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Strin
 
 Cuando la función termina (finaliza su ejecución), retorna un valor, que es una nueva cadena con el reemplazo realizado. En el código anterior, el resultado de este valor de retorno se guarda en la variable `newString`.
 
-Si observas la página de referencia de MDN de la función [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace), verás una sección llamada [valor de retorno](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace#return_value). Es muy útil saber y entender qué valores retornan las funciones, por lo que intentamos incluir esta información siempre que sea posible.
+Si observas la página de referencia de MDN de la función [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace), verás una sección llamada [valor de retorno](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace#valor_de_retorno). Es muy útil saber y entender qué valores retornan las funciones, por lo que intentamos incluir esta información siempre que sea posible.
 
 Algunas funciones no retornan ningún valor. (En estos casos, nuestras páginas de referencia indican el valor de retorno como [`void`](/es/docs/Web/JavaScript/Reference/Operators/void) o [`undefined`](/es/docs/Web/JavaScript/Reference/Global_Objects/undefined).) Por ejemplo, en la función [`displayMessage()`](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html#L50) que construimos en el artículo anterior, no se retorna ningún valor específico cuando se invoca la función. Simplemente hace que aparezca un cuadro en algún lugar de la pantalla, ¡eso es todo!
 
@@ -136,7 +136,7 @@ Intentemos escribir algunas funciones que incluyan valores de retorno.
    }
    ```
 
-   Las funciones `squared()` y `cubed()` son bastante evidentes: retornan el cuadrado o el cubo del número que se pasó como parámetro. La función `factorial()` retorna el [factorial](https://en.wikipedia.org/wiki/Factorial) del número dado.
+   Las funciones `squared()` y `cubed()` son bastante evidentes: retornan el cuadrado o el cubo del número que se pasó como parámetro. La función `factorial()` retorna el [factorial](https://es.wikipedia.org/wiki/Factorial) del número dado.
 
 3. Incluye una forma de imprimir información sobre el número ingresado en el campo de texto, agregando el siguiente controlador de eventos debajo de las funciones existentes:
 
