@@ -1,13 +1,14 @@
 ---
 title: ¿Qué es un nombre de dominio?
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
-l10n.sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisitos:</th>
+      <th scope="row">Prerrequisitos:</th>
       <td>
         Primero necesitas saber
         <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
@@ -32,7 +33,7 @@ l10n.sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 
 Los nombres de dominio son una parte clave de la infraestructura de Internet. Proporcionan una dirección legible para cualquier persona, para cualquier servidor web disponible en Internet.
 
-Cualquier computadora conectada a Internet puede ser localizada mediante una {{Glossary("IP Address")}} pública, ya sea una dirección IPv4 (por ejemplo, `192.0.2.172`) o una dirección IPv6 (por ejemplo, `2001:db8:8b73:0000:0000:8a2e:0370:1337`).
+Cualquier computadora conectada a Internet puede ser localizada mediante una {{Glossary("IP Address", "dirección IP")}} pública, ya sea una dirección IPv4 (por ejemplo, `192.0.2.172`) o una dirección IPv6 (por ejemplo, `2001:db8:8b73:0000:0000:8a2e:0370:1337`).
 
 Las computadoras pueden manejar este tipo de direcciones fácilmente, pero a las personas les resulta difícil averiguar quién administra el servidor o qué servicio ofrece el sitio web. Las direcciones IP son difíciles de recordar y pueden cambiar con el tiempo.
 
@@ -63,7 +64,7 @@ Cada una de esas partes proporciona información específica sobre el nombre de 
 
     La etiqueta ubicada justo antes del TLD también se llama _dominio de segundo nivel_ (SLD, por sus siglas en inglés).
 
-    Un nombre de dominio puede tener muchas etiquetas (o componentes). No es obligatorio ni necesario tener 3 etiquetas para formar un nombre de dominio. Por ejemplo, [informatics.ed.ac.uk](https://informatics.ed.ac.uk/) es un nombre de dominio válido. Para cualquier dominio que controles (por ejemplo, [mozilla.org](https://www.mozilla.org/en-US/)), puedes crear "subdominios" con contenido diferente ubicado en cada uno, como [developer.mozilla.org](/es/), [support.mozilla.org](https://support.mozilla.org/), o [bugzilla.mozilla.org](https://bugzilla.mozilla.org/).
+    Un nombre de dominio puede tener muchas etiquetas (o componentes). No es obligatorio ni necesario tener 3 etiquetas para formar un nombre de dominio. Por ejemplo, [informatics.ed.ac.uk](https://informatics.ed.ac.uk/) es un nombre de dominio válido. Para cualquier dominio que controles (por ejemplo, [mozilla.org](https://www.mozilla.org/es-US/)), puedes crear "subdominios" con contenido diferente ubicado en cada uno, como [developer.mozilla.org](/es/), [support.mozilla.org](https://support.mozilla.org/), o [bugzilla.mozilla.org](https://bugzilla.mozilla.org/).
 
 ### Comprar un nombre de dominio
 
@@ -85,13 +86,13 @@ Para saber si un nombre de dominio determinado está disponible,
 - Ve al sitio web de un registrador de nombres de dominio. La mayoría ofrece un servicio "whois" que te indica si un nombre de dominio está disponible.
 - Alternativamente, si usas un sistema con una shell integrada, escribe un comando `whois` en ella, como se muestra aquí para `mozilla.org`:
 
-```bash
+  ```bash
   whois mozilla.org
-```
+  ```
 
-Esto generará la siguiente salida:
+  Esto generará la siguiente salida:
 
-```plain
+  ```plain
   Domain Name:MOZILLA.ORG
   Domain ID: D1409563-LROR
   Creation Date: 1998-01-24T05:00:00Z
@@ -113,7 +114,7 @@ Esto generará la siguiente salida:
   Registrant Postal Code:94041
   Registrant Country:US
   Registrant Phone:+1.6509030800
-```
+  ```
 
 Como puedes ver, no puedo registrar `mozilla.org` porque la Fundación Mozilla ya lo ha registrado.
 
@@ -166,5 +167,5 @@ Bien, hablamos mucho sobre procesos y arquitectura. Es hora de continuar.
 
 - Si quieres poner manos a la obra, es un buen momento para empezar a explorar el diseño y descubrir [la anatomía de una página web](/es/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).
 - También vale la pena señalar que algunos aspectos de la creación de un sitio web tienen un costo. Consulta [cuánto cuesta crear un sitio web](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
-- O lee más sobre [nombres de dominio](https://en.wikipedia.org/wiki/Domain_name) en Wikipedia.
+- O lee más sobre [nombres de dominio](https://es.wikipedia.org/wiki/Domain_name) en Wikipedia.
 - El tutorial [Cómo funciona el DNS](https://howdns.works/) tiene una explicación divertida y colorida.
