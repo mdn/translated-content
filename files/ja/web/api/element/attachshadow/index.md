@@ -75,8 +75,7 @@ attachShadow(options)
 
 **`Element.attachShadow()`** メソッドは、指定された要素にシャドウ DOM ツリーを添付し、その {{domxref("ShadowRoot")}} への参照を返します。
 
-これは、`ShadowRoot` を生成するためのプログラム的な仕組みです。これは、ホスト要素に紐付けられた[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のルートノードです（{{htmlelement("template")}} 要素の [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 属性を使用して、宣言的に `ShadowRoot` 
-を生成することもできます）。
+これは、`ShadowRoot` を生成するためのプログラム的な仕組みです。これは、ホスト要素に紐付けられた[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のルートノードです（{{htmlelement("template")}} 要素の [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 属性を使用して、宣言的に `ShadowRoot` を生成することもできます）。
 これは[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を作成するために使用します。
 
 ## シャドウツリーを追加できる要素
