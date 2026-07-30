@@ -22,7 +22,7 @@ Aucun.
 
 ### Valeur de retour
 
-La valeur retournée est un objet {{DOMxRef("DOMRect")}} qui est le plus petit rectangle contenant l'ensemble de l'élément, y compris son padding et sa bordure. Les propriétés `left`, `top`, `right`, `bottom`, `x`, `y`, `width` et `height` décrivent la position et la taille du rectangle global en pixels. Les propriétés autres que `width` et `height` sont relatives au coin supérieur gauche de la zone d'affichage.
+La valeur retournée est un objet {{DOMxRef("DOMRect")}} qui est le plus petit rectangle contenant l'ensemble de l'élément, y compris son remplissage et sa bordure. Les propriétés `left`, `top`, `right`, `bottom`, `x`, `y`, `width` et `height` décrivent la position et la taille du rectangle global en pixels. Les propriétés autres que `width` et `height` sont relatives au coin supérieur gauche de la zone d'affichage.
 
 ![Un objet DOMRect qui est le plus petit rectangle contenant l'élément entièrement.](element-box-diagram.png)
 
