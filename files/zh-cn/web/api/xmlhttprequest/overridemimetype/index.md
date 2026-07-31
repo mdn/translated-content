@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-{{domxref("XMLHttpRequest")}} 方法 **`overrideMimeType()`** 指定在解释请求中传输的数据时，使用不同于服务器所提供的 MIME 类型。
+{{domxref("XMLHttpRequest")}} 的 **`overrideMimeType()`** 方法指定在解释请求中传输的数据时，使用不同于服务器所提供的 MIME 类型。
 
 例如，这可用于强制将流按 `"text/xml"` 处理并解析，即使服务器并未如此报告。此方法必须在调用 {{domxref("XMLHttpRequest.send", "send()")}} 之前调用。
 
