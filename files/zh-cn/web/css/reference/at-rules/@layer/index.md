@@ -61,7 +61,7 @@ slug: Web/CSS/Reference/At-rules/@layer
 
 如上图所示，**重要声明**，即带 `!important` 标志的声明，优先于**普通声明**，即无 `!important` 标志的常规声明。重要规则的优先顺序与正常规则相反。过渡具有最高的优先级。随后的优先级从高到低依次是重要{{glossary("用户代理")}}声明、重要用户声明和重要作者声明。用户可以通过浏览器偏好设置、操作系统偏好设置或浏览器扩展来指定样式。它们的重要声明优先于**作者**即**网页开发者**指定的重要声明。
 
-在作者样式中，CSS 层内所有重要声明优先于层外重要声明，而 CSS 层内的普通声明优先级低于层外声明。 声明顺序很重要。第一个声明的层优先级最低，最后声明的层优先级最高。但当使用 [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) 标志时，优先级会被反转。
+在作者样式中，CSS 层内所有重要声明优先于层外重要声明，而 CSS 层内的普通声明优先级低于层外声明。 声明顺序很重要。第一个声明的层优先级最低，最后声明的层优先级最高。但当使用 [`!important`](/zh-CN/docs/Web/CSS/Reference/Values/important) 标志时，优先级会被反转。
 
 `@layer` @规则可以通过三种方式其一来创建层叠层。
 
@@ -79,7 +79,7 @@ slug: Web/CSS/Reference/At-rules/@layer
 }
 ```
 
-第二种方式是使用 `@layer` 块级 @规则以创建带单个命名或用逗号分隔的多个命名的层叠层，但不指定任何样式。例如，单一的命名层：
+第二种方式是使用 `@layer` 语句 @规则以创建带单个命名或用逗号分隔的多个命名的层叠层，但不指定任何样式。例如，单一的命名层：
 
 ```css
 @layer utilities;
@@ -232,9 +232,9 @@ p {
 - {{cssxref("@import")}}
 - {{domxref("CSSLayerBlockRule")}}
 - {{domxref("CSSLayerStatementRule")}}
-- [`!important`](/en-US/docs/Web/CSS/Reference/Values/important)
+- [`!important`](/zh-CN/docs/Web/CSS/Reference/Values/important)
 - {{cssxref("revert-layer")}}
-- [Introducing the CSS cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction)
-- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-- [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
+- [CSS 层叠](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)
+- [学习：层叠、优先级与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [学习：层叠层](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (2021)
