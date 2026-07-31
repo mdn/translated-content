@@ -47,6 +47,6 @@
     "ora": "^9.4.1",
     "prettier": "^3.9.6",
     "unist-util-visit": "^5.1.0",
-    "yargs": "^18.0.0"
+    "yargs": "^18.1.0"
   }
 }
