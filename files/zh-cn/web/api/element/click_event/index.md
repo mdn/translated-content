@@ -12,7 +12,7 @@ l10n:
 
 - 定点设备按钮（例如鼠标的主按钮）在指针位于元素内时被按下并释放。
 - 在该元素上执行了触摸手势。
-- 任何等效于点击的用户交互，例如在元素获得焦点时按下 <kbd>Space</kbd> 键或 <kbd>Enter</kbd> 键。请注意，这仅适用于具有默认按键事件处理程序的元素，因此不包括通过设置 [`tabindex`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性而变得可聚焦的其他元素。
+- 任何等效于点击的用户交互，例如在元素获得焦点时按下 <kbd>Space</kbd> 键或 <kbd>Enter</kbd> 键。请注意，这仅适用于具有默认按键事件处理器的元素，因此不包括通过设置 [`tabindex`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性而变得可聚焦的其他元素。
 
 如果在某个元素上按下按钮，并在释放按钮之前将指针移出该元素，则事件会在同时包含这两个元素的最具体的祖先元素上触发。
 
@@ -41,7 +41,7 @@ onclick = (event) => { }
 
 ## 使用说明
 
-传入 `click` 事件处理程序的 {{domxref("PointerEvent")}} 对象，其 {{domxref("UIEvent/detail", "detail")}} 属性会被设置为 {{domxref("Event.target", "target")}} 被点击的次数。换言之，双击时 `detail` 为 2，三击时为 3，依此类推。该计数器会在一段短暂的无点击间隔后重置；该间隔具体多长可能因浏览器和平台而异。该间隔也很可能受用户偏好设置影响；例如，无障碍选项可能会延长该间隔，以便更容易通过自适应界面执行多次点击。
+传入 `click` 事件处理器的 {{domxref("PointerEvent")}} 对象，其 {{domxref("UIEvent/detail", "detail")}} 属性会被设置为 {{domxref("Event.target", "target")}} 被点击的次数。换言之，双击时 `detail` 为 2，三击时为 3，依此类推。该计数器会在一段短暂的无点击间隔后重置；该间隔具体多长可能因浏览器和平台而异。该间隔也很可能受用户偏好设置影响；例如，无障碍选项可能会延长该间隔，以便更容易通过自适应界面执行多次点击。
 
 ## 示例
 
