@@ -13,7 +13,7 @@ l10n:
 已定位祖先可能是：
 
 - 绝对定位元素的[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block#确定包含块)
-- 与当前元素有效 [zoom](/zh-CN/docs/Web/CSS/Reference/Properties/zoom) 值不同的元素（即其所有父元素缩放比例的乘积）
+- 与当前元素有效 [zoom](/zh-CN/docs/Web/CSS/Reference/Properties/zoom) 值（即其所有父元素缩放比例的乘积）不同的元素
 - 当元素本身为静态定位时的 `td`、`th`、`table`
 
 如果没有已定位的祖先元素，则返回 `body`。
