@@ -3,7 +3,7 @@ title: Element：click 事件
 short-title: click
 slug: Web/API/Element/click_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("UI Events")}}
@@ -38,35 +38,6 @@ onclick = (event) => { }
 
 > [!NOTE]
 > 在规范的早期版本中，该事件的事件类型是 {{domxref("MouseEvent")}}。更多信息请参见[浏览器兼容性](#浏览器兼容性)。
-
-## 事件属性
-
-_本接口从 {{domxref("MouseEvent")}} 和 {{domxref("Event")}} 中继承属性。_
-
-- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : 表示传感器（指针或触控笔）轴与设备屏幕 X-Y 平面之间的角度。
-- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : 表示 Y-Z 平面与包含传感器（指针或触控笔）轴和 Y 轴的平面之间的夹角。
-- {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
-  - : 引起事件的指针的唯一标识符。
-- {{domxref('PointerEvent.width')}} {{ReadOnlyInline}}
-  - : 指针接触几何图形的宽度（X 轴上的大小），单位为 CSS 像素。
-- {{domxref('PointerEvent.height')}} {{ReadOnlyInline}}
-  - : 指针接触几何图形的高度（Y 轴上的大小），单位为 CSS 像素。
-- {{domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
-  - : 指针输入在 `0` 至 `1` 范围内的归一化压力，其中 `0` 和 `1` 分别代表硬件能够检测到的最小和最大压力。
-- {{domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
-  - : 指针输入的归一化切向压力（也称为料筒压力或[料筒应力](https://en.wikipedia.org/wiki/Cylinder_stress)），范围为 `-1` 至 `1`，其中 `0` 为控制器的中间位置。
-- {{domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
-  - : Y-Z 平面与包含指针（如手写笔）轴和 Y 轴的平面之间的平面角度（度数，范围为 `-90` 至 `90`）。
-- {{domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
-  - : X-Z 平面与包含指针（如手写笔）轴和 X 轴的平面之间的平面角度（度数，范围为 `-90` 至 `90`）。
-- {{domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
-  - : 指针（如手写笔）绕其主轴的顺时针旋转角度，单位为度，数值范围为 `0` 至 `359`。
-- {{domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : 表示引起事件的设备类型（鼠标、笔、触摸等）。
-- {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
-  - : 指示指针是否代表该指针类型的主指针。
 
 ## 使用说明
 
