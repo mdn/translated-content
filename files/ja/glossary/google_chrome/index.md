@@ -1,29 +1,44 @@
 ---
 title: Google Chrome
 slug: Glossary/Google_Chrome
+l10n:
+  sourceCommit: 632359b60e58a4f5b2a69020dd79d0ecf38d4dbb
 ---
 
-{{GlossarySidebar}}
+Google Chrome は Google が開発した無償の{{glossary("browser", "ブラウザー")}}です。オープンソースプロジェクトである [Chromium](https://www.chromium.org/) がベースとなっています。重要な違いについては BrowserStack の [Chrome vs Chromium: Core Differences](https://www.browserstack.com/guide/difference-between-chrome-and-chromium) ガイドで説明されています。
 
-Google Chrome は Google が開発した無償の{{glossary("browser", "ブラウザー")}}です。オープンソースプロジェクトである [Chromium](https://www.chromium.org/) がベースとなっています。重要な違いについては [Chromium wiki](https://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome) で説明されています。 Chrome は独自のレイアウトエンジンである {{glossary("Blink")}} に対応しています。なお、 iOS 版の Chrome は Blink ではなくプラットフォームの WebView を使用しています。
+Chrome は Chromium と同様、{{glossary("Blink")}} というレンダリングエンジンを使用しています。ただし iOS では、プラットフォームの制約のため、Chrome は Blink ではなく Apple の WebKit ベースの WebView を使用しています。
 
-## Learn more
+## Chrome のダウンロード
 
-### General knowledge
+Chrome は複数のプラットフォームで利用できるほか、ユーザーのニーズに応じてさまざまなバージョンが用意されています。
 
-- Wikipedia 上の [Google Chrome](https://ja.wikipedia.org/wiki/Google_Chrome) 記事
+### ユーザー向け
 
-### Chrome の利用者へ
+普段 Chrome を使用する方は、お使いのプラットフォームや端末に応じて、以下のリンクのいずれかを使用してください。
 
-日常的に Chrome を利用している方は、いずれかを選んでください。
+- [Android](https://play.google.com/store/apps/details?id=com.android.chrome)
+- [iOS](https://apps.apple.com/us/app/google-chrome/id535886823)
+- [デスクトップ版](https://www.google.com/chrome/) (Windows, macOS, Linux)
 
-- [Android 版](https://play.google.com/store/apps/details?id=com.android.chrome)
-- [iOS 版](https://apps.apple.com/us/app/chrome-web-browser-by-google/id535886823)
-- [デスクトップ版](https://www.google.com/chrome/)
+### ウェブ開発者向け
 
-### Web 開発者へ
-
-もし Chrome の最新機能が必要な場合は安定版より先にリリースされるものをインストールしてください。 Google は頻繁にアップデートをし、安定版とは別に動作するよう設計しています。最新情報については [Chrome Release Blog](http://goo.gl/CCPRW) でご確認ください。
+もし Chrome の最新機能が必要な場合は安定版より先にリリースされるものをインストールしてください。 Google は頻繁にアップデートをし、安定版とは別に動作するよう設計しています。最新情報については [Chrome Release Blog](https://chromereleases.googleblog.com/) でご確認ください。
 
 - [Android 版 Chrome Dev](https://play.google.com/store/apps/details?id=com.chrome.dev)
-- [デスクトップ版 Chrome Canary](https://www.google.com/chrome/browser/canary.html)
+- [デスクトップ版 Chrome Canary](https://www.google.com/chrome/canary/)
+
+## 関連情報
+
+- [Google Chrome](https://ja.wikipedia.org/wiki/Google_Chrome) - ウィキペディア
+- [Chrome](https://www.google.com/chrome/) - google.com
+- [The Chromium Projects](https://www.chromium.org/)
+- [Chrome for Developers](https://developer.chrome.com/)
+- [Chrome Platform Status](https://chromestatus.com/)
+- [Report Chromium issues](https://issues.chromium.org/issues)
+- 関連用語:
+  - {{glossary("Browser", "ブラウザー")}}
+  - {{glossary("Blink")}}
+  - {{Glossary("Engine/Rendering", "レンダリングエンジン")}}
+  - {{glossary("WebKit")}}
+  - その他のブラウザー: {{glossary("Apple Safari")}}, {{glossary("Microsoft Edge")}}, {{glossary("Mozilla Firefox")}}, {{glossary("Opera Browser")}}
