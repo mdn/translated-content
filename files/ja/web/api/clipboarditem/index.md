@@ -67,7 +67,7 @@ copyBtn.addEventListener("click", copyToClipboard);
 ### クリップボードへの画像の書き込み
 
 ここでは、{{domxref("ClipboardItem.supports_static", "supports()")}} を使用して、`image/svg+xml` の MIME タイプが対応しているかどうかを調べます。
-対応している場合、[フェッチ API](/en-US/docs/Web/API/Fetch_API) を使用して SVG 画像を取得し、それを {{domxref("Blob")}} に読み込みます。これを使用して `ClipboardItem` を作成し、クリップボードに書き込みます。
+対応している場合、[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して SVG 画像を取得し、それを {{domxref("Blob")}} に読み込みます。これを使用して `ClipboardItem` を作成し、クリップボードに書き込みます。
 
 ```js
 async function writeClipImg() {
