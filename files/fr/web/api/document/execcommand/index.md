@@ -3,10 +3,10 @@ title: "Document : méthode execCommand()"
 short-title: execCommand()
 slug: Web/API/Document/execCommand
 l10n:
-  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > [!NOTE]
 > Bien que la méthode `execCommand()` soit obsolète, il existe encore quelques cas d'utilisation valides qui n'ont pas d'alternatives viables. Par exemple, contrairement à la manipulation directe du DOM, les modifications effectuées par `execCommand()` préservent le tampon d'annulation (historique des modifications). Pour ces cas d'utilisation, vous pouvez toujours utiliser cette méthode, mais vérifiez la compatibilité inter-navigateurs, par exemple en utilisant {{DOMxRef("document.queryCommandSupported()")}}.
@@ -18,7 +18,7 @@ Pour accéder au presse-papier, il est recommandé d'utiliser [l'API Clipboard](
 La plupart des commandes affectent la [sélection](/fr/docs/Web/API/Selection) du document. Par exemple, certaines commandes (gras, italique, etc.) mettent en forme le texte actuellement sélectionné, tandis que d'autres suppriment la sélection, insèrent de nouveaux éléments (remplaçant la sélection) ou affectent une ligne entière (indentation). Seul l'élément éditable actuellement actif peut être modifié, mais certaines commandes (par exemple, `copy`) peuvent fonctionner sans élément éditable.
 
 > [!NOTE]
-> Les modifications effectuées par `execCommand()` peuvent ou non déclencher les évènements {{DOMxRef("Element/beforeinput_event", "beforeinput")}} et {{DOMxRef("Element/input_event", "input")}}, selon le navigateur et la configuration. Si elles sont déclenchées, les gestionnaires d'évènements s'exécutent avant que `execCommand()` ne retourne. Les auteur·ice·s doivent être prudent·e·s avec ce type d'appels récursifs, en particulier s'ils appellent `execCommand()` en réponse à ces évènements. Depuis Firefox 82, les appels imbriqués à `execCommand()` échoueront toujours, voir [le bogue 1634262 <sup>(angl.)</sup>](https://bugzil.la/1634262).
+> Les modifications effectuées par `execCommand()` peuvent ou non déclencher les évènements {{DOMxRef("Element/beforeinput_event", "beforeinput")}} et {{DOMxRef("Element/input_event", "input")}}, selon le navigateur et la configuration. Si elles sont déclenchées, les gestionnaires d'évènements s'exécutent avant que `execCommand()` ne retourne. Les auteur·ice·s doivent être prudent·e·s avec ce type d'appels récursifs, en particulier s'ils appellent `execCommand()` en réponse à ces évènements. Depuis Firefox 82, les appels imbriqués à `execCommand()` échouent toujours, voir [le bogue 1634262 <sup>(angl.)</sup>](https://bugzil.la/1634262).
 
 ## Syntaxe
 
@@ -63,15 +63,15 @@ execCommand(commandName, showDefaultUI, valueArgument)
     - `formatBlock`
       - : Ajoute un élément HTML de niveau bloc autour de la ligne contenant la sélection actuelle, en remplaçant l'élément de bloc contenant la ligne si un existe (dans Firefox, {{HTMLElement("blockquote")}} est l'exception — il enveloppe tout élément de bloc englobant). Nécessite une chaîne de caractères de nom de balise comme argument de valeur. Pratiquement tous les éléments de niveau bloc peuvent être utilisés. (Edge hérité ne prend en charge que les balises de titre `H1` à `H6`, `ADDRESS`, and `PRE`, qui doivent être entourées de chevrons, comme `"<H1>"`.)
     - `forwardDelete`
-      - : Supprime le caractère devant la position du [curseur](https://en.wikipedia.org/wiki/Cursor_%28computers%29), identique à l'appui sur la touche Suppr d'un clavier Windows.
+      - : Supprime le caractère devant la position du [curseur](<https://fr.wikipedia.org/wiki/Curseur_(interface)>), identique à l'appui sur la touche <kbd>Suppr</kbd> d'un clavier Windows.
     - `heading`
       - : Ajoute un élément de titre autour d'une sélection ou d'une ligne au point d'insertion. Nécessite une chaîne de caractères de nom de balise comme argument de valeur (par exemple, `"H1"`, `"H6"`). (Non pris en charge par Safari.)
-    - `highlightColor`
+    - `hiliteColor`
       - : Modifie la couleur d'arrière-plan pour la sélection ou au point d'insertion. Nécessite une chaîne de caractères de valeur de couleur comme argument de valeur. `useCSS` doit être à `true` pour que cela fonctionne.
     - `increaseFontSize`
       - : Ajoute une balise {{HTMLElement("big")}} autour de la sélection ou au point d'insertion.
     - `indent`
-      - : Indente la ligne contenant la sélection ou le point d'insertion. Dans Firefox, si la sélection couvre plusieurs lignes à différents niveaux d'indentation, seules les lignes les moins indentées de la sélection seront indentées.
+      - : Indente la ligne contenant la sélection ou le point d'insertion. Dans Firefox, si la sélection couvre plusieurs lignes à différents niveaux d'indentation, seules les lignes les moins indentées de la sélection sont indentées.
     - `insertBrOnReturn`
       - : Contrôle si la touche Entrée insère un élément HTML {{HTMLElement("br")}}, ou divise l'élément de bloc actuel en deux.
     - `insertHorizontalRule`
@@ -82,13 +82,15 @@ execCommand(commandName, showDefaultUI, valueArgument)
 
         > [!WARNING]
         > L'entrée est analysée comme du HTML et écrite dans le DOM.
-        > Les API de ce type sont connues comme des [points d'injection](/fr/docs/Web/API/Trusted_Types_API#concepts_et_utilisation), et sont potentiellement une porte d'entrée pour des attaques de [cross-site scripting (XSS)](/fr/docs/Web/Security/Attacks/XSS), si l'entrée provient d'un·e attaquant·e.
+        > Les API de ce type sont connues comme des [points d'injection](/fr/docs/Web/API/Trusted_Types_API#concepts_et_utilisation), et sont potentiellement une porte d'entrée pour des attaques de [script inter-site (XSS)](/fr/docs/Web/Security/Attacks/XSS), si l'entrée provient d'un·e attaquant·e.
         >
         > Vous pouvez réduire ce risque en assignant toujours des objets {{DOMxRef("TrustedHTML")}} au lieu de chaînes de caractères et en [appliquant les types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_appliquer_les_types_de_confiance).
         > Voir [l'API Trusted Types](/fr/docs/Web/API/Trusted_Types_API) pour plus d'informations.
 
     - `insertImage`
       - : Insère une image au point d'insertion (supprime la sélection). Nécessite une chaîne de caractères d'URL pour le `src` de l'image comme argument de valeur. Les exigences pour cette chaîne de caractères sont les mêmes que pour `createLink`.
+    - `insertLineBreak`
+      - : Supprime la sélection et la remplace par un [élément de saut de ligne](/fr/docs/Web/HTML/Reference/Elements/br).
     - `insertOrderedList`
       - : Crée une [liste ordonnée numérotée](/fr/docs/Web/HTML/Reference/Elements/ol) pour la sélection ou au point d'insertion.
     - `insertUnorderedList`
@@ -112,7 +114,7 @@ execCommand(commandName, showDefaultUI, valueArgument)
     - `paste`
       - : Colle le contenu du presse-papier au point d'insertion (remplace la sélection actuelle).
 
-        Cette fonctionnalité est définie comme désactivée pour le _contenu web_, mais a été implémentée via [l'API Clipboard](/fr/docs/Web/API/Clipboard_API#considérations_de_sécurité) sur certains navigateurs.
+        Cette fonctionnalité est définie comme désactivée pour le _contenu web_, mais a été implémentée par [l'API Clipboard](/fr/docs/Web/API/Clipboard_API#considérations_de_sécurité) sur certains navigateurs.
         Sur ces navigateurs, la fonctionnalité nécessite {{Glossary("transient activation", "l'activation transitoire")}}, et la reconnaissance d'une interface contextuelle lors du collage de contenu inter-origine.
         Consultez [le tableau de compatibilité des navigateurs](#browser_compatibility) pour plus d'informations.
 
@@ -156,10 +158,9 @@ Une valeur booléenne qui est `false` si la commande n'est pas prise en charge o
 > [!NOTE]
 > `document.execCommand()` retourne uniquement `true` si elle est invoquée dans le cadre d'une interaction utilisateur·ice. Vous ne pouvez pas l'utiliser pour vérifier la prise en charge du navigateur avant d'appeler une commande.
 
-## Exemple
+## Exemples
 
-Un exemple d'utilisation est disponible
-[sur CodePen](https://codepen.io/chrisdavidmills/full/gzYjag/).
+Un exemple d'utilisation est disponible [sur CodePen <sup>(angl.)</sup>](https://codepen.io/chrisdavidmills/full/gzYjag/).
 
 ## Spécifications
 

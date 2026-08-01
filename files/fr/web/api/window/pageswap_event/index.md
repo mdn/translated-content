@@ -3,14 +3,14 @@ title: "Window : évènement pageswap"
 short-title: pageswap
 slug: Web/API/Window/pageswap_event
 l10n:
-  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("HTML DOM")}}
 
 L'évènement **`pageswap`** de l'interface {{DOMxRef("Window")}} est émis lorsque vous naviguez entre des documents, lorsque le document précédent est sur le point de se décharger.
 
-Cela est utile dans le cas des [transitions de vue](/fr/docs/Web/API/View_Transition_API) entre documents (<abbr title="Monopage Application" lang="en">MPA</abbr>) pour manipuler une transition active depuis la page sortante d'une navigation. Par exemple, vous pouvez souhaiter ignorer la transition ou personnaliser l'animation de la transition sortante via JavaScript.
+C'est utile dans le cas des [transitions de vue](/fr/docs/Web/API/View_Transition_API) entre documents (<abbr title="Monopage Application" lang="en">MPA</abbr>) pour manipuler une transition active depuis la page sortante d'une navigation. Par exemple, vous pouvez souhaiter ignorer la transition ou personnaliser l'animation de la transition sortante avec JavaScript.
 
 Il fournit également un accès au type de navigation et aux entrées d'historique des documents actuels et de destination.
 
@@ -29,13 +29,6 @@ onpageswap = (event) => { }
 Un objet {{DOMxRef("PageSwapEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("PageSwapEvent")}}
-
-## Propriétés de l'évènement
-
-- {{DOMxRef("PageSwapEvent.activation")}} {{ReadOnlyInline}}
-  - : Retourne un objet {{DOMxRef("NavigationActivation")}} contenant le type de navigation et les entrées d'historique des documents actuels et de destination pour une navigation de même origine. Si la navigation comporte une URL cross-origin dans la chaîne de redirection, elle retourne `null`.
-- {{DOMxRef("PageSwapEvent.viewTransition")}} {{ReadOnlyInline}}
-  - : Retourne l'objet {{DOMxRef("ViewTransition")}} représentant la transition de vue inter-documents entrante, si une transition est active lorsque l'évènement est déclenché. Sinon, elle retourne `null`.
 
 ## Exemples
 

@@ -33,7 +33,7 @@ createElement(localName, options)
         Le nouvel élément reçoit un attribut `is` dont la valeur est le nom de balise de l'élément personnalisé.
         Voir [Exemple de composant web](#exemple_de_composant_web) pour plus de détails.
     - `customElementRegistry` {{Optional_Inline}}
-      - : Un objet {{DOMxRef("CustomElementRegistry")}} qui définit le [registre d'éléments personnalisés à portée locale](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_déléments_personnalisés_avec_portée) d'un élément personnalisé.
+      - : Un objet {{DOMxRef("CustomElementRegistry")}} qui définit le [registre d'éléments personnalisés à portée locale](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_des_éléments_personnalisés_avec_portée) d'un élément personnalisé.
 
 ### Valeur de retour
 
