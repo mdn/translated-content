@@ -221,9 +221,7 @@ HTML ページ内の {{htmlelement("img")}} 要素のすぐ上、`<h1> ... </h1>
 4. この属性の値には、リンク先のウェブアドレスを記入します。
 
    ```html
-   <a href="https://www.mozilla.org/ja/about/manifesto/">
-     Mozilla Manifesto
-   </a>
+   <a href="https://www.mozilla.org/ja/about/manifesto/"> Mozilla Manifesto </a>
    ```
 
 アドレスの先頭にある `https://` や `http://` の部分（*プロトコル*と言います）を書き忘れると、予期せぬ結果となってしまうかもしれません。リンクを作ったら、ちゃんとそれが遷移したいところに行ってくれるかを確かめましょう。
