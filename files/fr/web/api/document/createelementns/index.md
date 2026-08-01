@@ -55,7 +55,7 @@ createElementNS(namespaceURI, qualifiedName, options)
       - : Une chaîne de caractères définissant le nom de balise d'un élément personnalisé précédemment défini à l'aide de {{DOMxRef("CustomElementRegistry/define", "customElements.define()")}}.
         Le nouvel élément reçoit un attribut `is` dont la valeur est le nom de la balise de l'élément personnalisé.
     - `customElementRegistry` {{Optional_Inline}}
-      - : Un {{DOMxRef("CustomElementRegistry")}} qui définit le [registre d'éléments personnalisés à portée locale](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_déléments_personnalisés_avec_portée) d'un élément personnalisé.
+      - : Un {{DOMxRef("CustomElementRegistry")}} qui définit le [registre d'éléments personnalisés à portée locale](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_des_éléments_personnalisés_avec_portée) d'un élément personnalisé.
 
     Pour la rétrocompatibilité, certains navigateurs permettent de passer une chaîne de caractères ici à la place d'un objet, où la valeur de la chaîne de caractères est le nom de la balise de l'élément personnalisé.
     Voir [Étendre les éléments HTML natifs <sup>(angl.)</sup>](https://web.dev/articles/web-components) pour plus d'informations sur l'utilisation de ce paramètre.
