@@ -35,7 +35,7 @@ createAttributeNS(namespaceURI, qualifiedName)
 
     Le format du nom qualifié est `prefix:localName` ou `localName`, où les parties sont définies comme suit&nbsp;:
     - `prefix` {{Optional_Inline}}
-      - : Un "alias court" pour l'espace de noms.
+      - : Un «&nbsp;alias court&nbsp;» pour l'espace de noms.
         Le préfixe est optionnel, mais s'il est défini, le paramètre `namespaceURI` doit également être défini.
         Si le préfixe est défini sur `xml` ou `xmlns`, le `namespaceURI` doit être défini sur `http://www.w3.org/XML/1998/namespace` ou `http://www.w3.org/2000/xmlns/`, respectivement.
 

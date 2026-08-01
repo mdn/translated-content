@@ -153,7 +153,7 @@ La fonction `repeat()` prend deux arguments&nbsp;: le premier argument définit 
   - : Un entier positif supérieur ou égal à `1` définissant le nombre de fois que la liste des fonctionnalités dans le deuxième paramètre est répétée.
 
 - `auto-fill`
-  - : Définit un répéteur automatique qui se répète pour remplir un espace. Se résout au plus grand nombre de répétitions qui ne provoque pas de débordement d'une boîte de contenu contrainte (ayant une taille maximale). Sinon, si la boîte de contenu a une taille minimale, le plus petit nombre de répétitions qui satisfait la taille minimale. S'il n'y a ni taille minimale ni maximale, se résout à `1`. Lorsqu'il est utilisé avec subgrid, le deuxième paramètre doit être une liste de noms de lignes.
+  - : Définit un répéteur automatique qui se répète pour remplir un espace. Se résout au plus grand nombre de répétitions qui ne provoque pas de débordement d'une boîte de contenu contrainte (ayant une taille maximale). Sinon, si la boîte de contenu a une taille minimale, le plus petit nombre de répétitions qui satisfait la taille minimale. S'il n'y a ni taille minimale ni maximale, se résout à `1`. Lorsqu'il est utilisé avec `subgrid`, le deuxième paramètre doit être une liste de noms de lignes.
 
 - `auto-fit`
   - : Se comporte comme `auto-fill`, sauf qu'après avoir placé les éléments de la grille, toutes les pistes répétées vides sont effondrées.

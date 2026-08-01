@@ -289,7 +289,7 @@ Aux États-Unis, une adresse s'écrit généralement comme suit&nbsp;:
 432 Anywhere St
 Exampleville CA 95555
 
-Dans ce cas, la portion la moins précise est le code "CA" (qui correspond au code postal pour l'état de Californie) et on a donc `address-level1` qui correspond à ce niveau (ici l'état et plus particulièrement&nbsp;: "CA").
+Dans ce cas, la portion la moins précise est le code «&nbsp;CA&nbsp;» (qui correspond au code postal pour l'état de Californie) et on a donc `address-level1` qui correspond à ce niveau (ici l'état et plus particulièrement&nbsp;: «&nbsp;CA&nbsp;»).
 
 La deuxième partie de l'adresse la moins précise est le nom de la ville et c'est donc cette information (ici «&nbsp;Exampleville&nbsp;») qui est utilisée pour `address-level2`.
 

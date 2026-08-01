@@ -166,7 +166,7 @@ body {
 Cet exemple permet de tester l'effet du déplacement du point central de l'ellipse lors de l'utilisation de chacun des quatre mots-clés `<shape-radius>` — choisis indépendamment pour le rayon x et le rayon y.
 
 Comme `closest-corner` et `farthest-corner` sont des ajouts plus récents à `ellipse()`, le script teste chaque mot-clé avec {{DOMxRef("CSS.supports_static", "CSS.supports()")}} avant de l'activer.
-Tout mot-clé que votre navigateur ne prend pas encore en charge est désactivé dans les deux menus déroulants (et étiqueté "non pris en charge").
+Tout mot-clé que votre navigateur ne prend pas encore en charge est désactivé dans les deux menus déroulants (et étiqueté «&nbsp;n'est pas pris en charge&nbsp;»).
 
 #### HTML
 
