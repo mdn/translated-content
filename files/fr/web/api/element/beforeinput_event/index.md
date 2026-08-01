@@ -3,7 +3,7 @@ title: "Element : évènement beforeinput"
 short-title: beforeinput
 slug: Web/API/Element/beforeinput_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("UI Events")}}
@@ -32,19 +32,6 @@ onbeforeinput = (event) => { }
 Un objet {{DOMxRef("InputEvent")}}. Hérite de {{DOMxRef("UIEvent")}}.
 
 {{InheritanceDiagram("InputEvent")}}
-
-## Propriétés de l'évènement
-
-_Cette interface hérite des propriétés de ses parents, {{DOMxRef("UIEvent")}} et {{DOMxRef("Event")}}._
-
-- {{DOMxRef("InputEvent.data")}} {{ReadOnlyInline}}
-  - : Retourne une chaînes de caractères contenant les caractères insérés. Il peut s'agir d'une chaîne de caractères vide si la modification n'insère pas de texte (par exemple, lors de la suppression de caractères).
-- {{DOMxRef("InputEvent.dataTransfer")}} {{ReadOnlyInline}}
-  - : Retourne un objet {{DOMxRef("DataTransfer")}} contenant des informations sur les données en texte enrichi ou en texte brut ajoutées ou supprimées du contenu modifiable.
-- {{DOMxRef("InputEvent.inputType")}} {{ReadOnlyInline}}
-  - : Retourne le type de modification apportée au contenu modifiable, comme par exemple l'insertion, la suppression ou la mise en forme de texte.
-- {{DOMxRef("InputEvent.isComposing")}} {{ReadOnlyInline}}
-  - : Retourne une valeur {{JSxRef("Boolean")}} indiquant si l'évènement est déclenché après {{DOMxRef("Element/compositionstart_event", "compositionstart")}} et avant {{DOMxRef("Element/compositionend_event", "compositionend")}}.
 
 ## Exemples
 

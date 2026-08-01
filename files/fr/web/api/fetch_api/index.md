@@ -9,7 +9,7 @@ l10n:
 
 L'API Fetch fournit une interface pour récupérer des ressources (y compris sur le réseau). Elle remplace {{DOMxRef("XMLHttpRequest")}} par une solution plus puissante et plus flexible.
 
-## Concepts et usage
+## Concepts et utilisation
 
 L'API Fetch utilise les objets {{DOMxRef("Request")}} et {{DOMxRef("Response")}} (ainsi que d'autres éléments liés aux requêtes réseau), ainsi que des concepts associés comme CORS et la sémantique de l'en-tête HTTP Origin.
 

@@ -3,16 +3,16 @@ title: "Document : propriété cookie"
 short-title: cookie
 slug: Web/API/Document/cookie
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 5ef5a171a41dbcb48c953cc3c98c1237566796e9
 ---
 
 {{APIRef("DOM")}}
 
-La proprité **`cookie`** de l'interface {{DOMxRef("Document")}} permet de lire et d'écrire des [cookies](/fr/docs/Web/HTTP/Guides/Cookies) associés au document.
+La propriété **`cookie`** de l'interface {{DOMxRef("Document")}} permet de lire et d'écrire des [cookies](/fr/docs/Web/HTTP/Guides/Cookies) associés au document.
 Elle sert d'accesseur et de mutateur pour les valeurs réelles des cookies.
 
 > [!NOTE]
-> Le `document.cookie` peut être une source de problèmes de performance car il s'agit d'une API synchrone qui bloque le processus principal lors de la lecture de cookies entre processus ou lors d'opérations d'Entrée/Sortie. Les développeur·euse·s devraient, si possible, utiliser [l'API de stockage des cookies](/fr/docs/Web/API/Cookie_Store_API) asynchrone pour gérer les cookies.
+> Le `document.cookie` peut être une source de problèmes de performance, car il s'agit d'une API synchrone qui bloque le processus principal lors de la lecture de cookies entre processus ou lors d'opérations d'Entrée/Sortie. Les développeur·euse·s doivent, si possible, utiliser [l'API de stockage des cookies](/fr/docs/Web/API/Cookie_Store_API) asynchrone pour gérer les cookies.
 
 ## Valeur
 
@@ -22,16 +22,16 @@ Notez que chaque _clé_ et _valeur_ peut être entourée d'espaces blancs (carac
 Vous pouvez également affecter à cette propriété une chaîne de caractères de la forme `"clé=valeur"`, définissant le cookie à créer ou mettre à jour. Notez que vous ne pouvez créer ou mettre à jour qu'un seul cookie à la fois avec cette méthode. Prenez également en compte&nbsp;:
 
 - N'importe laquelle des valeurs d'attribut de cookie suivantes peut éventuellement suivre la paire clé-valeur, chacune précédée d'un séparateur point-virgule&nbsp;:
-  - `;domain=domain` (par exemple, `example.com` ou `subdomain.example.com`)&nbsp;: L'hôte auquel le cookie sera envoyé.
+  - `;domain=domain` (par exemple, `example.com` ou `subdomain.example.com`)&nbsp;: L'hôte auquel le cookie est envoyé.
     Si ce n'est pas défini, cela correspond par défaut à la partie hôte de l'emplacement du document actuel et le cookie n'est pas disponible sur les sous-domaines.
     Si un domaine est défini, les sous-domaines sont toujours inclus.
     Contrairement aux spécifications antérieures, les points initiaux dans les noms de domaine sont ignorés, mais les navigateurs peuvent refuser de créer le cookie contenant de tels points.
 
     > [!NOTE]
     > Le domaine _doit_ correspondre au domaine de l'origine JavaScript.
-    > Définir des cookies sur des domaines étrangers sera ignoré silencieusement.
+    > Définir des cookies sur des domaines étrangers est ignoré silencieusement.
 
-  - `;expires=date-in-UTCString-format`&nbsp;: La date d'expiration du cookie. Si, ni `expires`, ni `max-age` n'est défini, le cookie expirera à la fin de la session.
+  - `;expires=date-in-UTCString-format`&nbsp;: La date d'expiration du cookie. Si, ni `expires`, ni `max-age` n'est défini, le cookie expire à la fin de la session.
 
     > [!WARNING]
     > Lorsque la vie privée de l'utilisateur·ice est en jeu, il est important que toute application web invalide les données du cookie après un certain délai plutôt que de compter sur le navigateur pour le faire.
@@ -41,17 +41,17 @@ Vous pouvez également affecter à cette propriété une chaîne de caractères 
 
   - `;max-age=max-age-in-seconds`&nbsp;: La durée maximale du cookie en secondes (par exemple, `60*60*24*365` ou 31536000 pour un an).
 
-  - `;partitioned`&nbsp;: Indique que le cookie doit être stocké en utilisant un stockage compartimenté. Voir [Cookies ayant un état compartimenté indépendant (CHIPS)](/fr/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) pour plus de détails.
+  - `;partitioned`&nbsp;: Indique que le cookie doit être stocké en utilisant un stockage compartimenté. Voir [Cookies ayant un état compartimenté indépendant (CHIPS)](/fr/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) pour plus de détails.
 
   - `;path=path`&nbsp;: La valeur de l'attribut `Path` du cookie (voir [Définir où les cookies sont envoyés](/fr/docs/Web/HTTP/Guides/Cookies#définir_où_les_cookies_sont_envoyés) pour plus d'informations).
 
-  - `;samesite`&nbsp;: L'attribut `SameSite` d'un en-tête HTTP {{HTTPHeader("Set-Cookie")}} peut être défini par un serveur pour indiquer quand le cookie sera envoyé. Les valeurs possibles sont `lax`, `strict` ou `none` (voir aussi [Contrôler les cookies tiers avec `SameSite`](/fr/docs/Web/HTTP/Guides/Cookies#contrôler_les_cookies_tiers_avec_samesite)).
-    - La valeur `lax` enverra le cookie pour toutes les requêtes du même site et les requêtes GET de navigation de niveau supérieur.
-      Cela suffit pour le suivi des utilisateur·ice·s, mais cela empêchera de nombreuses attaques de [falsification de requête intersites](/fr/docs/Glossary/CSRF) (CSRF).
+  - `;samesite`&nbsp;: L'attribut `SameSite` d'un en-tête HTTP {{HTTPHeader("Set-Cookie")}} peut être défini par un serveur pour indiquer quand le cookie est envoyé. Les valeurs possibles sont `lax`, `strict` ou `none` (voir aussi [Contrôler les cookies tiers avec `SameSite`](/fr/docs/Web/HTTP/Guides/Cookies#contrôler_les_cookies_tiers_avec_samesite)).
+    - La valeur `lax` envoie le cookie pour toutes les requêtes du même site et les requêtes GET de navigation de niveau supérieur.
+      Cela suffit pour le suivi des utilisateur·ice·s, mais cela empêche de nombreuses attaques de [falsification de requête inter-sites](/fr/docs/Glossary/CSRF) (CSRF).
       C'est la valeur par défaut dans les navigateurs modernes.
-    - La valeur `strict` empêchera le cookie d'être envoyé par le navigateur au site cible dans tous les contextes de navigation intersites, même lors du suivi d'un lien classique.
-    - La valeur `none` indique explicitement qu'aucune restriction ne sera appliquée.
-      Le cookie sera envoyé dans toutes les requêtes — intersites et même site.
+    - La valeur `strict` empêche le cookie d'être envoyé par le navigateur au site cible dans tous les contextes de navigation inter-sites, même lors du suivi d'un lien classique.
+    - La valeur `none` indique explicitement qu'aucune restriction ne est appliquée.
+      Le cookie est envoyé dans toutes les requêtes — inter-sites et même site.
 
   - `;secure`&nbsp;: Définit que le cookie ne doit être transmis que avec un protocole sécurisé.
 
@@ -60,7 +60,7 @@ Vous pouvez également affecter à cette propriété une chaîne de caractères 
   - **`__Secure-`**&nbsp;: Les cookies dont le nom commence par `__Secure-` doivent être définis avec l'attribut `Secure` par une page sécurisée (HTTPS).
   - **`__Host-`**&nbsp;: Les cookies dont le nom commence par `__Host-` doivent être définis avec l'attribut `Secure` par une page sécurisée (HTTPS). De plus, ils ne doivent pas avoir d'attribut `Domain` défini, et l'attribut `Path` doit être défini sur `/`. Cela garantit que ces cookies ne sont envoyés qu'à l'hôte qui les a définis, et non à un autre hôte du domaine. Cela garantit également qu'ils sont définis pour l'ensemble de l'hôte et ne peuvent pas être remplacés sur un chemin quelconque de cet hôte. Cette combinaison produit un cookie qui est aussi proche que possible de traiter l'origine comme une frontière de sécurité.
   - **`__Http-`**&nbsp;: Les cookies dont le nom commence par `__Http-` doivent être définis avec l'attribut `Secure` par une page sécurisée (HTTPS) et doivent en outre avoir l'attribut `HttpOnly` défini pour prouver qu'ils ont été définis avec l'en-tête `Set-Cookie` (ils ne peuvent pas être définis ou modifiés avec des fonctionnalités JavaScript telles que `Document.cookie` ou [l'API Cookie Store](/fr/docs/Web/API/Cookie_Store_API)).
-  - **`__Host-Http-`**&nbsp;: Les cookies dont le nom commence par `__Host-Http-` doivent être définis avec l'attribut `Secure` par une page sécurisée (HTTPS) et doivent avoir l'attribut `HttpOnly` défini pour prouver qu'ils ont été définis avec l'en-tête `Set-Cookie`. De plus, ils ont les mêmes restrictions que les cookies préfixés par `__Host-`. Cette combinaison produit un cookie qui est aussi proche que possible de traiter l'origine comme une frontière de sécurité tout en garantissant aux développeurs et aux opérateurs de serveur que sa portée est limitée aux requêtes HTTP.
+  - **`__Host-Http-`**&nbsp;: Les cookies dont le nom commence par `__Host-Http-` doivent être définis avec l'attribut `Secure` par une page sécurisée (HTTPS) et doivent avoir l'attribut `HttpOnly` défini pour prouver qu'ils ont été définis avec l'en-tête `Set-Cookie`. De plus, ils ont les mêmes restrictions que les cookies préfixés par `__Host-`. Cette combinaison produit un cookie qui est aussi proche que possible de traiter l'origine comme une frontière de sécurité tout en garantissant aux développeur·euse·s et aux opérateur·ice·s de serveur que sa portée est limitée aux requêtes HTTP.
 
   > [!NOTE]
   > Le tiret est considéré comme faisant partie du préfixe.
@@ -69,7 +69,7 @@ Vous pouvez également affecter à cette propriété une chaîne de caractères 
   > Ces indicateurs ne peuvent être définis qu'avec l'attribut `secure`.
 
 > [!NOTE]
-> La propriété `document.cookie` est une [propriété accesseur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) avec des fonctions _mutatrices_ et _récupératrices_, et a pour conséquence de _ne pas_ être une [propriété de données](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) avec une valeur&nbsp;: ce que vous écrivez n'est pas la même chose que ce que vous lisez, tout est toujours médié par l'interpréteur JavaScript.
+> La propriété `document.cookie` est une [propriété accesseur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) avec des fonctions _mutatrices_ et _récupératrices_, et a pour conséquence de _ne pas_ être une [propriété de données](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) avec une valeur&nbsp;: ce que vous écrivez n'est pas la même chose que ce que vous lisez, tout est toujours arbitré par l'interpréteur JavaScript.
 
 ## Exemples
 
@@ -88,7 +88,7 @@ const showBtn = document.getElementById("show");
 const clearBtn = document.getElementById("clear");
 const output = document.getElementById("cookie-value");
 
-// On notera que nous définissons `SameSite=None;` dans cet exemple car
+// Notez que nous définissons `SameSite=None;` dans cet exemple car
 // l'exemple doit fonctionner en inter-origines.
 // Il est plus courant de ne pas définir l'attribut `SameSite`, ce qui
 // entraîne la valeur par défaut, et plus sécurisée, de `SameSite=Lax;`
@@ -120,7 +120,7 @@ const showBtn = document.getElementById("show");
 const clearBtn = document.getElementById("clear");
 const output = document.getElementById("cookie-value");
 
-// On notera que nous définissons `SameSite=None;` dans cet exemple car
+// Notez que nous définissons `SameSite=None;` dans cet exemple car
 // l'exemple doit fonctionner en inter-origines.
 // Il est plus courant de ne pas définir l'attribut `SameSite`, ce qui
 // entraîne la valeur par défaut, et plus sécurisée, de `SameSite=Lax;`
@@ -164,7 +164,7 @@ doOnceBtn.addEventListener("click", () => {
       .split("; ")
       .find((row) => row.startsWith("doSomethingOnlyOnce"))
   ) {
-    // On notera que nous définissons `SameSite=None;` dans cet exemple
+    // Notez que nous définissons `SameSite=None;` dans cet exemple
     // car l'exemple doit fonctionner en inter-origines.
     // Il est plus courant de ne pas définir l'attribut `SameSite`, ce
     // qui entraîne la valeur par défaut, et plus sécurisée, de
@@ -200,7 +200,7 @@ const clearBtn = document.getElementById("clear");
 const output = document.getElementById("output");
 
 resetBtn.addEventListener("click", () => {
-  // On notera que nous définissons `SameSite=None;` dans cet exemple car
+  // Notez que nous définissons `SameSite=None;` dans cet exemple car
   // l'exemple doit fonctionner en inter-origines.
   // Il est plus courant de ne pas définir l'attribut `SameSite`, ce qui
   // entraîne la valeur par défaut, et plus sécurisée, de `SameSite=Lax;`
@@ -208,7 +208,7 @@ resetBtn.addEventListener("click", () => {
     "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
 
   const output = document.getElementById("reset-once");
-  output.textContent = "> Reset!";
+  output.textContent = "> Réinitialisé !";
 });
 clearBtn.addEventListener("click", () => {
   output.textContent = "";
@@ -302,11 +302,11 @@ En savoir plus sur [les cookies et la sécurité <sup>(angl.)</sup>](https://hum
 
 - À partir de Firefox 2, un meilleur mécanisme de stockage côté client est disponible — [WHATWG DOM Storage](/fr/docs/Web/API/Web_Storage_API).
 - Vous pouvez supprimer un cookie en mettant à zéro sa date d'expiration.
-- N'oubliez pas que plus vous avez de cookies, plus le volume de données transférées entre le serveur et le client sera important pour chaque requête.
-  Cela ralentira chaque requête.
+- N'oubliez pas que plus vous avez de cookies, plus le volume de données transférées entre le serveur et le client est important pour chaque requête.
+  Cela ralenti chaque requête.
   Il est fortement recommandé d'utiliser [WHATWG DOM Storage](/fr/docs/Web/API/Web_Storage_API) si vous souhaitez conserver des données «&nbsp;réservées au client&nbsp;».
-- Le [RFC 2965 <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/rfc2965) (Section 5.3, «&nbsp;Limites d'implémentation&nbsp;») définit qu'il ne devrait y avoir **aucune longueur maximale** pour la clé ou la valeur d'un cookie, et encourage les implémentations à prendre en charge **des cookies de taille arbitraire**.
-  La limite maximale de chaque navigateur sera nécessairement différente, veuillez donc consulter la documentation de chaque navigateur.
+- Le [RFC 2965 <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/rfc2965) (Section 5.3, «&nbsp;Limites d'implémentation&nbsp;») définit qu'il ne doit y avoir **aucune longueur maximale** pour la clé ou la valeur d'un cookie, et encourage les implémentations à prendre en charge **des cookies de taille arbitraire**.
+  La limite maximale de chaque navigateur est nécessairement différente, veuillez donc consulter la documentation de chaque navigateur.
 
 La raison de l'asymétrie entre la lecture et l'écriture de l'accesseur, `document.cookie` tient à la nature client-serveur des cookies, qui diffère des autres méthodes de stockage client-client (comme, par exemple, [localStorage](/fr/docs/Web/API/Web_Storage_API))&nbsp;:
 

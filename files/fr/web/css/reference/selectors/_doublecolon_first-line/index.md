@@ -3,7 +3,7 @@ title: Pseudo-élément CSS `::first-line`
 short-title: ::first-line
 slug: Web/CSS/Reference/Selectors/::first-line
 l10n:
-  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::first-line`** applique la décoration à la première ligne d'un élément. La quantité de texte sur la première ligne dépend de nombreux facteurs, comme la largeur des éléments ou du document, mais aussi de la taille du texte. Comme tous les pseudo-éléments, les sélecteurs contenant `::first-line` ne ciblent pas un élément HTML réel.
@@ -29,7 +29,7 @@ p::first-line {
 </p>
 ```
 
-Les effets de `::first-line` sont limités par la longueur et le contenu de la première ligne de texte dans l'élément. La longueur de la première ligne dépend de nombreux facteurs, notamment la largeur de l'élément, la largeur du document et la taille de la police du texte. `::first-line` n'a aucun effet lorsque le premier enfant de l'élément, qui serait la première partie de la première ligne, est un élément de bloc en ligne, tel qu'un tableau en ligne.
+Les effets de `::first-line` sont limités par la longueur et le contenu de la première ligne de texte dans l'élément. La longueur de la première ligne dépend de nombreux facteurs, notamment la largeur de l'élément, la largeur du document et la taille de la police du texte. `::first-line` n'a aucun effet lorsque le premier enfant de l'élément, qui est la première partie de la première ligne, est un élément de bloc en ligne, tel qu'un tableau en ligne.
 
 > [!NOTE]
 > Le standard [Sélecteurs de Niveau 3 <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-3/#first-line) a introduit la notation à double deux-points (`::`) pour distinguer les [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) des [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) à deux points simples (`:`). Les navigateurs acceptent à la fois `::first-line` et `:first-line`, qui a été introduit dans CSS2.
@@ -62,14 +62,13 @@ Seul un petit sous-ensemble de propriétés CSS peut être utilisé avec le pseu
 
 ```html
 <p>
-  Les styles ne seront appliqués qu'à la première ligne de ce paragraphe.
-  Ensuite, tout le texte sera formaté normalement. Vous voyez ce que je veux
-  dire&nbsp;?
+  Les styles ne sont appliqués qu'à la première ligne de ce paragraphe. Ensuite,
+  tout le texte est formaté normalement. Vous voyez ce que je veux dire&nbsp;?
 </p>
 
 <span>
-  La première ligne de ce texte ne bénéficiera pas d'un style particulier, car
-  il ne s'agit pas d'un élément de niveau bloc.
+  La première ligne de ce texte ne bénéficie pas d'un style particulier, car il
+  ne s'agit pas d'un élément de niveau bloc.
 </span>
 ```
 
