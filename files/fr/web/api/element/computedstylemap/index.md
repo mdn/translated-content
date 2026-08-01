@@ -3,7 +3,7 @@ title: "Element : méthode computedStyleMap()"
 short-title: computedStyleMap()
 slug: Web/API/Element/computedStyleMap
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: ebb9a6421c24c4aff2fef3913527571441361cf0
 ---
 
 {{APIRef("CSS Typed Object Model API")}}
@@ -24,7 +24,9 @@ Aucun.
 
 Un objet {{DOMxRef("StylePropertyMapReadOnly")}}.
 
-Contrairement à {{DOMxRef("Window.getComputedStyle")}}, la valeur de retour contient des [valeurs calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée), et non des [valeurs résolues](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_résolue). Pour la plupart des propriétés, elles sont identiques, sauf pour quelques propriétés liées à la mise en page, où la valeur résolue est la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) au lieu de la valeur calculée. Voir l'exemple de [comparaison avec `getComputedStyle()`](#comparer_avec_getcomputedstyle) pour plus de détails.
+Contrairement à {{DOMxRef("Window.getComputedStyle")}}, la valeur de retour contient des [valeurs calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée), et non des [valeurs résolues](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_résolue).
+Pour la plupart des propriétés, elles sont identiques, sauf pour quelques propriétés liées à la mise en page, où la valeur résolue est la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) au lieu de la valeur calculée.
+Voir l'exemple de [comparaison avec `getComputedStyle()`](#comparer_avec_getcomputedstyle) pour plus de détails.
 
 ## Exemples
 
@@ -84,11 +86,15 @@ Avez-vous réalisé combien de propriétés CSS par défaut un lien avait&nbsp;?
 
 ### Comparer avec `getComputedStyle()`
 
-{{DOMxRef("Window.getComputedStyle()")}} retourne [les valeurs résolues](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_résolue), tandis que `computedStyleMap()` retourne [les valeurs calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée). Celles-ci sont généralement les mêmes, mais pour certaines propriétés, la valeur résolue est la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) au lieu de la valeur calculée. Par exemple, les valeurs en pourcentage pour les largeurs sont résolues en pixels _après la mise en page_, donc les valeurs utilisées sont en pixels, tandis que les valeurs calculées sont toujours en pourcentage.
+{{DOMxRef("Window.getComputedStyle()")}} retourne [les valeurs résolues](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_résolue), tandis que `computedStyleMap()` retourne [les valeurs calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée).
+Celles-ci sont généralement les mêmes, mais pour certaines propriétés, la valeur résolue est la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) au lieu de la valeur calculée.
+Par exemple, les valeurs en pourcentage pour les largeurs sont résolues en pixels _après la mise en page_, donc les valeurs utilisées sont en pixels, tandis que les valeurs calculées sont toujours en pourcentage.
 
-Notez que la façon dont nous présentons cela fait paraître les deux API plus similaires qu'elles ne le sont réellement. `computedStyleMap()` contient des objets [CSSOM typés](/fr/docs/Web/API/CSS_Typed_OM_API), tandis que `getComputedStyle()` contient des chaînes de caractères. La première présente les mêmes informations de manière plus structurée et exploitable.
+Notez que la façon dont nous présentons cela fait paraître les deux API plus similaires qu'elles ne le sont réellement. `computedStyleMap()` contient des objets [CSSOM typés](/fr/docs/Web/API/CSS_Typed_OM_API), tandis que `getComputedStyle()` contient des chaînes de caractères.
+La première présente les mêmes informations de manière plus structurée et exploitable.
 
-Dans cet exemple, la propriété `width` est définie en pourcentage, donc la valeur calculée est exprimée en pourcentage, mais la valeur finale est exprimée en pixels. La propriété `height` est toujours exprimée en pixels. La propriété `background-color` correspond à une couleur nommée, mais elle est convertie en valeur <abbr title="Rouge Vert Bleu">RVB</abbr> lors du calcul.
+Dans cet exemple, la propriété `width` est définie en pourcentage, donc la valeur calculée est exprimée en pourcentage, mais la valeur finale est exprimée en pixels.
+La propriété `height` est toujours exprimée en pixels. La propriété `background-color` correspond à une couleur nommée, mais elle est convertie en valeur <abbr title="Rouge Vert Bleu">RVB</abbr> lors du calcul.
 
 ```html
 <div class="conteneur">
