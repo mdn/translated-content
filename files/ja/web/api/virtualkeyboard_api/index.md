@@ -29,7 +29,7 @@ VirtualKeyboard API は、以下の 3 つの部分で構成されています。
 
 - {{domxref("VirtualKeyboard")}} インターフェイス。これは {{domxref("navigator.virtualKeyboard")}} からアクセスでき、仮想キーボードの自動表示機能を無効にしたり、プログラムから仮想キーボードを表示・非表示にしたり、仮想キーボードの現在の位置やサイズを取得したりするために使用します。
 - CSS の `keyboard-inset-*` 環境変数は、仮想キーボードの位置やサイズに関する情報を提供します。
-[`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) 属性は、`contenteditable` 要素に仮想キーボードが現れるかどうかを指定します。
+- [`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) 属性は、`contenteditable` 要素に仮想キーボードが現れるかどうかを指定します。
 
 ### 仮想キーボードの自動動作を無効にする
 
