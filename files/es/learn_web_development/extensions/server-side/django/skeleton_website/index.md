@@ -13,7 +13,7 @@ Este segundo artículo de nuestro [Tutorial de Django](/es/docs/Learn_web_develo
 <table>
   <tbody>
     <tr>
-      <th scope="row">Requisitos previos:</th>
+      <th scope="row">Prerrequisitos:</th>
       <td>
         <a href="/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment">Configura un entorno de desarrollo de Django</a>.
         Repasa el <a href="/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website">Tutorial de Django</a>.
