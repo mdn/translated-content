@@ -521,7 +521,7 @@ WebGL 2.0の`texImage*` APIでは、それぞれのミップレベルを個別�
 
 ## ブロッキングされない async データ読み取りを使用する
 
-`readPixels` や `getBufferSubData` といった操作は通常、同期的な操作ですが、同じ API を使用することで、ブロッキングされず非同期のデータ読み出しを実現できます。WebGL 2 におけるこの手法は、OpenGL の手法  [Async downloads in blocking APIs](https://kdashg.github.io/misc/async-gpu-downloads.html) と類似しています。
+`readPixels` や `getBufferSubData` といった操作は通常、同期的な操作ですが、同じ API を使用することで、ブロッキングされず非同期のデータ読み出しを実現できます。WebGL 2 におけるこの手法は、OpenGL の手法 [Async downloads in blocking APIs](https://kdashg.github.io/misc/async-gpu-downloads.html) と類似しています。
 
 ```js
 function clientWaitAsync(gl, sync, flags, intervalMs) {
