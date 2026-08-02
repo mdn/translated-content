@@ -30,7 +30,7 @@ l10n:
 > - **title**
 >   - : タイトルの見出しで、ページの最上部に表示されます。書式は _NameOfTheHeader ヘッダー_ です。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーの _title_ は `Cache-Control ヘッダー` となります。
 > - **short-title**
->   - : パンくずリストやサイドバーで使用される短縮タイトルです。_NameOfTheHeader_ の書式で記述します。例えば、[Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーの _short-title_ は `Cache-Control` です。
+>   - : パンくずリストやサイドバーで使用される短縮タイトルです。_NameOfTheHeader_ の書式で記述します。例えば、[Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーの _short-title_ は `Cache-Control` です。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。これは `Web/HTTP/Reference/Headers/NameOfTheHeader` のような形式になります。例えば、[Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) の _slug_ は `Web/HTTP/Reference/Headers/Cache-Control` となります。
 > - **sourceCommit**
