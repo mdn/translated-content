@@ -1,19 +1,20 @@
 ---
-title: FileReader.readAsText()
+title: "FileReader: readAsText() メソッド"
+short-title: readAsText()
 slug: Web/API/FileReader/readAsText
 l10n:
-  sourceCommit: 4684330941ebcbf873c06b659691e3bf873350f0
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-**`readAsText()`** メソッドは、指定された {{domxref("Blob")}} または {{domxref("File")}} の内容を読み取るために使用します。読み取り操作が完了すると、 {{domxref("FileReader.readyState","readyState")}} が `DONE` に変わり、 {{domxref("FileReader/loadend_event", "loadend")}} イベントが発生し、 {{domxref("FileReader.result","result")}} プロパティにはファイルの内容が文字列として格納されます。
+**`readAsText()`** は {{domxref("FileReader")}} インターフェイスのメソッドで、指定された {{domxref("Blob")}} または {{domxref("File")}} の内容を読み取るために使用します。読み取り操作が完了すると、 {{domxref("FileReader.readyState","readyState")}} プロパティが `DONE` に変わり、 {{domxref("FileReader/loadend_event", "loadend")}} イベントが発生し、 {{domxref("FileReader.result","result")}} プロパティにはファイルの内容が文字列として格納されます。
 
 > [!NOTE]
 > {{domxref("Blob.text()")}} メソッドは、ファイルをテキストとして読み取るための新しいプロミスベースの API です。
 
 > [!NOTE]
-> このメソッドは、ファイルの内容全体をメモリーに読み込みますので、巨大なファイルには適していません。巨大なファイルには [`readAsArrayBuffer()`](/ja/docs/Web/API/FileReader/readAsArrayBuffer) の方が適しています。
+> このメソッドは、ファイルの内容全体をメモリーに読み込みますので、巨大なファイルには適していません。巨大なファイルには {{domxref("FileReader.readAsArrayBuffer", "readAsArrayBuffer()")}} の方が適しています。
 
 ## 構文
 
@@ -38,26 +39,26 @@ readAsText(blob, encoding)
 ### HTML
 
 ```html
-<input type="file" onchange="previewFile()" /><br />
+<input type="file" /><br />
 <p class="content"></p>
 ```
 
 ### JavaScript
 
 ```js
+const content = document.querySelector(".content");
+const fileInput = document.querySelector("input[type=file]");
+
+fileInput.addEventListener("change", previewFile);
+
 function previewFile() {
-  const content = document.querySelector(".content");
-  const [file] = document.querySelector("input[type=file]").files;
+  const file = fileInput.files[0];
   const reader = new FileReader();
 
-  reader.addEventListener(
-    "load",
-    () => {
-      // this will then display a text file
-      content.innerText = reader.result;
-    },
-    false,
-  );
+  reader.addEventListener("load", () => {
+    // これにより、テキストファイルが表示される
+    content.innerText = reader.result;
+  });
 
   if (file) {
     reader.readAsText(file);
