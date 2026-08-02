@@ -2,7 +2,7 @@
 title: Google Chrome
 slug: Glossary/Google_Chrome
 l10n:
-  sourceCommit: 632359b60e58a4f5b2a69020dd79d0ecf38d4dbb
+  sourceCommit: 74e7902b0875b6378d77df6d2d925a2d09d19f5d
 ---
 
 Google Chrome は Google が開発した無償の{{glossary("browser", "ブラウザー")}}です。オープンソースプロジェクトである [Chromium](https://www.chromium.org/) がベースとなっています。重要な違いについては BrowserStack の [Chrome vs Chromium: Core Differences](https://www.browserstack.com/guide/difference-between-chrome-and-chromium) ガイドで説明されています。
