@@ -115,13 +115,13 @@ El ejemplo anterior nos dio dos opciones, o resultados — pero ¿y si queremos 
 Hay una manera de encadenar opciones/resultados extra a tu `if...else` — usando `else if`. Cada opción extra requiere un bloque adicional entre `if () { }` y `else { }` — mira el siguiente ejemplo más elaborado, que podría ser parte de una aplicación sencilla de pronóstico del clima:
 
 ```html
-<label for="weather">Select the weather type today: </label>
+<label for="weather">Selecciona el clima de hoy: </label>
 <select id="weather">
-  <option value="">--Make a choice--</option>
-  <option value="sunny">Sunny</option>
-  <option value="rainy">Rainy</option>
-  <option value="snowing">Snowing</option>
-  <option value="overcast">Overcast</option>
+  <option value="">--Elige una opción--</option>
+  <option value="sunny">Soleado</option>
+  <option value="rainy">Lluvioso</option>
+  <option value="snowing">Nevando</option>
+  <option value="overcast">Nublado</option>
 </select>
 
 <p></p>
@@ -138,16 +138,16 @@ function setWeather() {
 
   if (choice === "sunny") {
     para.textContent =
-      "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+      "Hoy hace un día lindo y soleado. ¡Ponte pantalones cortos! Ve a la playa o al parque y cómprate un helado.";
   } else if (choice === "rainy") {
     para.textContent =
-      "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+      "Afuera llueve; llévate un impermeable y un paraguas, y no te quedes fuera mucho tiempo.";
   } else if (choice === "snowing") {
     para.textContent =
-      "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+      "Está cayendo la nieve — ¡hace un frío que congela! Lo mejor es quedarse en casa con una taza de chocolate caliente, o salir a hacer un muñeco de nieve.";
   } else if (choice === "overcast") {
     para.textContent =
-      "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+      "No llueve, pero el cielo está gris y sombrío; podría cambiar en cualquier momento, así que lleva un impermeable por si acaso.";
   } else {
     para.textContent = "";
   }
@@ -159,7 +159,7 @@ function setWeather() {
 1. Aquí tenemos un elemento HTML {{htmlelement("select")}} que nos permite elegir distintas opciones de clima, y un párrafo sencillo.
 2. En el JavaScript, guardamos una referencia tanto al elemento {{htmlelement("select")}} como al {{htmlelement("p")}}, y agregamos un detector de eventos al elemento `<select>` para que, cuando su valor cambie, se ejecute la función `setWeather()`.
 3. Cuando esta función se ejecuta, primero asignamos a una variable llamada `choice` el valor actualmente seleccionado en el elemento `<select>`. Luego usamos una sentencia condicional para mostrar distintos textos dentro del párrafo dependiendo del valor de `choice`. Fíjate cómo todas las condiciones se prueban en bloques `else if () { }`, excepto la primera, que se prueba en un bloque `if () { }`.
-4. La última opción, dentro del bloque `else { }`, es básicamente una opción de "último recurso" — el código dentro de ella se ejecutará si ninguna de las condiciones es `true`. En este caso, sirve para vaciar el texto del párrafo si no hay nada seleccionado, por ejemplo, si el usuario decide volver a seleccionar la opción de relleno "--Make a choice--" mostrada al principio.
+4. La última opción, dentro del bloque `else { }`, es básicamente una opción de "último recurso" — el código dentro de ella se ejecutará si ninguna de las condiciones es `true`. En este caso, sirve para vaciar el texto del párrafo si no hay nada seleccionado, por ejemplo, si el usuario decide volver a seleccionar la opción de relleno "--Elige una opción--" mostrada al principio.
 
 > [!NOTE]
 > También puedes [encontrar este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-else-if.html) (y [verlo funcionando en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) ahí también.)
@@ -178,9 +178,9 @@ Queremos hacer una mención especial sobre las pruebas de valores booleanos (`tr
 let cheese = "Cheddar";
 
 if (cheese) {
-  console.log("Yay! Cheese available for making cheese on toast.");
+  console.log("¡Sí! Hay queso para hacer pan tostado con queso.");
 } else {
-  console.log("No cheese on toast for you today.");
+  console.log("Hoy no hay pan tostado con queso para ti.");
 }
 ```
 
@@ -205,9 +205,9 @@ Es perfectamente válido poner una sentencia `if...else` dentro de otra — anid
 ```js
 if (choice === "sunny") {
   if (temperature < 86) {
-    para.textContent = `It is ${temperature} degrees outside — nice and sunny. Let's go out to the beach, or the park, and get an ice cream.`;
+    para.textContent = `Afuera hay ${temperature} grados — agradable y soleado. Vamos a la playa, o al parque, y comamos un helado.`;
   } else if (temperature >= 86) {
-    para.textContent = `It is ${temperature} degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.`;
+    para.textContent = `Afuera hay ${temperature} grados — ¡MUCHO CALOR! Si quieres salir, asegúrate de ponerte protector solar.`;
   }
 }
 ```
@@ -225,9 +225,9 @@ Para darte un ejemplo de AND, el fragmento del ejemplo anterior puede reescribir
 
 ```js
 if (choice === "sunny" && temperature < 86) {
-  para.textContent = `It is ${temperature} degrees outside — nice and sunny. Let's go out to the beach, or the park, and get an ice cream.`;
+  para.textContent = `Afuera hay ${temperature} grados — agradable y soleado. Vamos a la playa, o al parque, y comamos un helado.`;
 } else if (choice === "sunny" && temperature >= 86) {
-  para.textContent = `It is ${temperature} degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.`;
+  para.textContent = `Afuera hay ${temperature} grados — ¡MUCHO CALOR! Si quieres salir, asegúrate de ponerte protector solar.`;
 }
 ```
 
@@ -237,9 +237,9 @@ Veamos un ejemplo rápido de OR:
 
 ```js
 if (iceCreamVanOutside || houseStatus === "on fire") {
-  console.log("You should leave the house quickly.");
+  console.log("Deberías salir de la casa rápido.");
 } else {
-  console.log("Probably should just stay in then.");
+  console.log("Entonces mejor quédate en casa.");
 }
 ```
 
@@ -247,9 +247,9 @@ El último tipo de operador lógico, NOT, expresado por el operador `!`, puede u
 
 ```js
 if (!(iceCreamVanOutside || houseStatus === "on fire")) {
-  console.log("Probably should just stay in then.");
+  console.log("Entonces mejor quédate en casa.");
 } else {
-  console.log("You should leave the house quickly.");
+  console.log("Deberías salir de la casa rápido.");
 }
 ```
 
@@ -321,13 +321,13 @@ Aquí tenemos:
 Veamos un ejemplo real — reescribiremos nuestra aplicación de pronóstico del clima para usar una sentencia switch en su lugar:
 
 ```html
-<label for="weather">Select the weather type today: </label>
+<label for="weather">Selecciona el clima de hoy: </label>
 <select id="weather">
-  <option value="">--Make a choice--</option>
-  <option value="sunny">Sunny</option>
-  <option value="rainy">Rainy</option>
-  <option value="snowing">Snowing</option>
-  <option value="overcast">Overcast</option>
+  <option value="">--Elige una opción--</option>
+  <option value="sunny">Soleado</option>
+  <option value="rainy">Lluvioso</option>
+  <option value="snowing">Nevando</option>
+  <option value="overcast">Nublado</option>
 </select>
 
 <p></p>
@@ -345,19 +345,19 @@ function setWeather() {
   switch (choice) {
     case "sunny":
       para.textContent =
-        "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+        "Hoy hace un día lindo y soleado. ¡Ponte pantalones cortos! Ve a la playa o al parque y cómprate un helado.";
       break;
     case "rainy":
       para.textContent =
-        "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+        "Afuera llueve; llévate un impermeable y un paraguas, y no te quedes fuera mucho tiempo.";
       break;
     case "snowing":
       para.textContent =
-        "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+        "Está cayendo la nieve — ¡hace un frío que congela! Lo mejor es quedarse en casa con una taza de chocolate caliente, o salir a hacer un muñeco de nieve.";
       break;
     case "overcast":
       para.textContent =
-        "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+        "No llueve, pero el cielo está gris y sombrío; podría cambiar en cualquier momento, así que lleva un impermeable por si acaso.";
       break;
     default:
       para.textContent = "";
@@ -375,15 +375,15 @@ function setWeather() {
 Hay una última pieza de sintaxis que queremos presentarte antes de ponerte a jugar con algunos ejemplos. El [operador ternario o condicional](/es/docs/Web/JavaScript/Reference/Operators/Conditional_operator) es una pequeña pieza de sintaxis que prueba una condición y devuelve un valor/expresión si es `true`, y otro si es `false` — puede ser útil en algunas situaciones, y ocupa mucho menos código que un bloque `if...else` si tienes dos opciones entre las que se elige mediante una condición `true`/`false`. El pseudocódigo se ve así:
 
 ```js-nolint
-condición ? ejecuta este código : en su lugar, ejecuta este otro código
+condition ? ejecuta este código : en su lugar, ejecuta este otro código
 ```
 
 Así que veamos un ejemplo:
 
 ```js
 const greeting = isBirthday
-  ? "Happy birthday Mrs. Smith — we hope you have a great day!"
-  : "Good morning Mrs. Smith.";
+  ? "Feliz cumpleaños, Sra. Smith — ¡esperamos que tenga un gran día!"
+  : "Buenos días, Sra. Smith.";
 ```
 
 Aquí tenemos una variable llamada `isBirthday` — si es `true`, le damos a nuestra invitada un mensaje de feliz cumpleaños; si no, le damos el saludo diario habitual.
@@ -393,13 +393,13 @@ Aquí tenemos una variable llamada `isBirthday` — si es `true`, le damos a nue
 El operador ternario no sirve solo para asignar valores a variables; también puedes ejecutar funciones, o líneas de código — lo que quieras. El siguiente ejemplo en vivo muestra un selector de tema sencillo donde el estilo del sitio se aplica usando un operador ternario.
 
 ```html
-<label for="theme">Select theme: </label>
+<label for="theme">Selecciona un tema: </label>
 <select id="theme">
-  <option value="white">White</option>
-  <option value="black">Black</option>
+  <option value="white">Blanco</option>
+  <option value="black">Negro</option>
 </select>
 
-<h1>This is my website</h1>
+<h1>Este es mi sitio web</h1>
 ```
 
 ```js
@@ -451,20 +451,20 @@ Pistas:
 Si cometes un error, puedes limpiar tu trabajo con el botón _Reset_ del MDN Playground. Si te quedas realmente atascado, puedes ver la solución debajo de la salida en vivo.
 
 ```html hidden live-sample___conditionals-1
-<label for="month">Select month: </label>
+<label for="month">Selecciona un mes: </label>
 <select id="month">
-  <option value="January">January</option>
-  <option value="February">February</option>
-  <option value="March">March</option>
-  <option value="April">April</option>
-  <option value="May">May</option>
-  <option value="June">June</option>
-  <option value="July">July</option>
-  <option value="August">August</option>
-  <option value="September">September</option>
-  <option value="October">October</option>
-  <option value="November">November</option>
-  <option value="December">December</option>
+  <option value="January">Enero</option>
+  <option value="February">Febrero</option>
+  <option value="March">Marzo</option>
+  <option value="April">Abril</option>
+  <option value="May">Mayo</option>
+  <option value="June">Junio</option>
+  <option value="July">Julio</option>
+  <option value="August">Agosto</option>
+  <option value="September">Septiembre</option>
+  <option value="October">Octubre</option>
+  <option value="November">Noviembre</option>
+  <option value="December">Diciembre</option>
 </select>
 
 <h1></h1>
@@ -602,16 +602,16 @@ Para completar el ejemplo:
 Si cometes un error, puedes limpiar tu trabajo con el botón _Reset_ del MDN Playground. Si te quedas realmente atascado, puedes ver la solución debajo de la salida en vivo.
 
 ```html hidden live-sample___conditionals-2
-<label for="theme">Select theme: </label>
+<label for="theme">Selecciona un tema: </label>
 <select id="theme">
-  <option value="white">White</option>
-  <option value="black">Black</option>
-  <option value="purple">Purple</option>
-  <option value="yellow">Yellow</option>
-  <option value="psychedelic">Psychedelic</option>
+  <option value="white">Blanco</option>
+  <option value="black">Negro</option>
+  <option value="purple">Morado</option>
+  <option value="yellow">Amarillo</option>
+  <option value="psychedelic">Psicodélico</option>
 </select>
 
-<h1>This is my website</h1>
+<h1>Este es mi sitio web</h1>
 ```
 
 ```css hidden live-sample___conditionals-2
