@@ -102,7 +102,7 @@ l10n:
 
 预加载通过[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)获取的资源时（例如 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 或[字体](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face)），需要特别注意在 [`<link>`](/zh-CN/docs/Web/HTML/Reference/Elements/link) 元素上设置 [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性。即使获取并非跨源，该属性也需要设置为与资源的 CORS 和凭据模式匹配。
 
-如上所述，一个相关的典型场景是字体文件。由于多种原因，这些文件必须使用匿名模式 CORS 来获取（参见 [Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)）。
+如上所述，一个相关的典型场景是字体文件。由于多种原因，这些文件必须使用匿名模式 CORS 来获取（参见[字体获取要求](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)）。
 
 我们以这种情况为例。完整[示例源代码可在 GitHub 上查看](https://github.com/mdn/html-examples/tree/main/link-rel-preload/fonts)（[也可在线查看](https://mdn.github.io/html-examples/link-rel-preload/fonts/)）：
 
@@ -137,7 +137,7 @@ l10n:
 
 `<link>` 元素的一个实用特性是支持 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/link#media) 属性。该属性可接受[媒体类型](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#媒体类型)或完整的[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)，从而可实现响应式预加载！
 
-来看一个示例（可在 GitHub 上查看——[源代码](https://github.com/mdn/html-examples/tree/main/link-rel-preload/media)，[在线示例](https://mdn.github.io/html-examples/link-rel-preload/media/)）：
+来看一个示例（可在 GitHub 上查看——[源代码](https://github.com/mdn/html-examples/tree/main/link-rel-preload/media)、[在线示例](https://mdn.github.io/html-examples/link-rel-preload/media/)）：
 
 ```html
 <head>
@@ -175,7 +175,7 @@ l10n:
 </body>
 ```
 
-我们在 `<link>` 元素上包含 `media` 属性，这样当用户视口较窄时预加载窄图像，视口较宽时预加载宽图像。我们使用 {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} 来实现这一点（更多信息参见[使用编程方法测试媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Testing)）。
+我们在 `<link>` 元素上包含 `media` 属性，这样当用户视口较窄时预加载窄图像，视口较宽时预加载宽图像。我们使用 {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} 来实现这一点（更多信息参见[测试媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Testing)）。
 
 同样的技巧也适用于其他资源类型。例如，与字体一起使用时，预加载更有可能让字体在渲染时可用，降低无样式文本闪烁（FOUT）的几率。
 
