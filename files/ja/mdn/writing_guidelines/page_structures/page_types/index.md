@@ -2,7 +2,7 @@
 title: ページの種類
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 l10n:
-  sourceCommit: e0a2b683c4ddaeecdc4ddebf16e4a72c2dda17ac
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 MDN には繰り返し使用されるいくつかの種類のページがあります。
@@ -205,7 +205,7 @@ HTML 属性のページでは、その属性に存在するすべての値が掲
 
 - [CSS プロパティページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template)
 - [CSS セレクターページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template)
-- [CSS 機能ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template)
+- [CSS 関数ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template)
 
 ### HTTP ヘッダーリファレンスページ
 
