@@ -83,7 +83,7 @@ File オブジェクトは、`<input type="file">` 要素を使用してファ�
 
 #### JavaScript
 
-```js
+```js-nolint
 const fileInput = document.getElementById("file-input");
 const fileContentDisplay = document.getElementById("file-content");
 const messageDisplay = document.getElementById("message");
