@@ -1,5 +1,5 @@
 ---
-title: "`<title>`：文档标题元素"
+title: "`<title>` HTML 文档标题元素"
 short-title: <title>
 slug: Web/HTML/Reference/Elements/title
 l10n:
