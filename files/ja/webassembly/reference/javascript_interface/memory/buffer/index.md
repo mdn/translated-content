@@ -11,7 +11,7 @@ l10n:
 
 ### buffer の使用
 
-次の例 (GitHub 上の [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) および[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)も参照) では、 memory.wasm バイトコードを [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) メソッドを使用して読み込みんでインスタンス化し、その上の行で生成されたメモリーにインポートします。それから、メモリーにいくつかの値を格納し、関数をエクスポートして使用し、いくつかの値を合計します。
+次の例 (GitHub 上の [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) および[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)も参照) では、 memory.wasm バイトコードを [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) メソッドを使用して読み込みんでインスタンス化し、その上の行で生成されたメモリーにインポートします。それから、メモリーにいくつかの値を格納し、関数をエクスポートして使用し、それらの値を合計します。
 
 ```js
 const memory = new WebAssembly.Memory({
