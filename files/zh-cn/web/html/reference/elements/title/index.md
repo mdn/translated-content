@@ -52,7 +52,7 @@ l10n:
 > [!NOTE]
 > 目前，动态更新页面标题不会被屏幕阅读器自动朗读。如果你要通过更新页面标题来反映页面状态的重大变化，可能还需要使用 [ARIA 实时区域](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions)。
 
-- [MDN / 理解 WCAG，准则 2.4](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN 理解 WCAG，准则 2.4](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [理解成功标准 2.4.2 | W3C 理解 WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
 
 ## 示例
