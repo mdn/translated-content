@@ -130,7 +130,21 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 4. Cambia los enlaces internos de `/en-US/` a `/es/`.
 
    **¿Por qué `/es/` aunque la página no exista en español?**
-   Por consistencia de idioma, no por respaldo. **MDN no muestra la versión en inglés cuando falta la traducción**: si no existe `files/es/<ruta>/index.md`, la URL `/es/docs/<Ruta>` devuelve `404`. Tampoco hay respaldo por secciones: una página en español muestra únicamente los encabezados que su propio archivo contiene, y las secciones que aún no se han traducido simplemente no aparecen.
+   Por consistencia de idioma, no porque MDN rellene el hueco con el inglés.
+
+   Es una confusión muy común, y tiene una razón de ser. Lo que ocurre realmente cuando falta la traducción es esto:
+   1. Si no existe `files/es/<ruta>/index.md`, la URL `/es/docs/<Ruta>` devuelve **HTTP `404`** con la página «Page not found». El contenido en inglés **no** se renderiza en esa URL.
+   2. Acto seguido, ya en el navegador, MDN comprueba si la página existe en inglés y, si existe, muestra un aviso: _«**Good news!** The page you requested doesn't exist in **Spanish** but it exists in **English**»_ con un **enlace** a `/en-US/docs/<Ruta>`.
+
+   Es decir: hay un **enlace** de respaldo, no un renderizado de respaldo. La URL sigue siendo `/es/`, el estado sigue siendo `404` y hay que hacer clic para llegar al inglés. Puedes comprobarlo con cualquier página que exista en inglés y no en español:
+
+   ```bash
+   curl -s -o /dev/null -w '%{http_code}\n' \
+     "https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/Functions"
+   # 404
+   ```
+
+   Tampoco hay respaldo por secciones: una página en español muestra únicamente los encabezados que su propio archivo contiene, y las secciones que aún no se han traducido simplemente no aparecen (no se rellenan con el texto en inglés).
 
    Aun así, la regla es: **usa siempre `/es/` en los enlaces internos absolutos de MDN**, sin excepción. Los motivos son dos:
    - Un enlace en `/en-US/` saca al lector del contexto de su idioma preferido, incluso cuando la traducción sí existe.
@@ -150,6 +164,8 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
    | Enlace dentro de la misma página                                                | Usa el ID del encabezado tal como lo tradujiste (`## Cómo funciona` → `#cómo_funciona`) |
 
    **No conserves la ancla en inglés "para que funcione mientras tanto".** No va a resolverse sola: cuando la página destino se traduzca, ese encabezado también se traducirá, así que el ID pasará a ser, por ejemplo, `#índice_de_eventos` y nunca `#event_index`. Como una ancla inexistente equivale a no poner ancla, lo correcto es dejar sólo el enlace a la página y añadir el fragmento cuando el destino esté traducido.
+
+   Y si la página destino todavía no existe en español, el fragmento se pierde de todos modos: el enlace de respaldo que ofrece la página `404` apunta a la página en inglés **sin** conservar el `#fragmento`.
 
    **Ejemplo del problema frecuente:** el inglés tiene `/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated`. Al traducir se cambia la URL a `/es/`, y el fragmento se copia tal cual porque la página existe y el enlace "se ve bien". Pero los encabezados de esa página en español se renderizan como `experimental`, `obsoleto` y `en_desuso`: no hay ningún ID `deprecated`, así que el lector aterriza al inicio de la página.
 
