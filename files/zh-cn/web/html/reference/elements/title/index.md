@@ -103,7 +103,7 @@ l10n:
       <th scope="row">隐式 ARIA 角色</th>
       <td>
         <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
-          >没有相应的角色</a
+          >没有对应的角色</a
         >
       </td>
     </tr>
