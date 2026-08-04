@@ -1,5 +1,5 @@
 ---
-title: "Element：ariaDescribedByElements 属性"
+title: Element：ariaDescribedByElements 属性
 slug: Web/API/Element/ariaDescribedByElements
 l10n:
   sourceCommit: 6bed868c7b75c4c3ca3721fa8ed6c6ad2f41262b
