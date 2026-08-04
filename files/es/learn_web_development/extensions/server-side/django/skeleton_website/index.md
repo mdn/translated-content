@@ -60,27 +60,27 @@ Al final de este artículo, hablaremos de otras configuraciones a nivel de sitio
 
 Para crear el proyecto:
 
-1. Abre un shell de comandos (o una ventana de terminal), y asegúrate de estar en tu [entorno virtual](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#using_a_virtual_environment).
-2. Navega hasta la carpeta donde quieres crear tu aplicación de biblioteca local (más adelante la moveremos a la carpeta "django_local_library" que [creaste como un repositorio local de GitHub](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) al configurar el entorno de desarrollo).
+1. Abre un shell de comandos (o una ventana de terminal), y asegúrate de estar en tu [entorno virtual](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#uso_de_un_entorno_virtual).
+2. Navega hasta la carpeta donde quieres crear tu aplicación de biblioteca local (más adelante la moveremos a la carpeta "django_local_library" que [creaste como un repositorio local de GitHub](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment) al configurar el entorno de desarrollo).
 3. Crea el nuevo proyecto usando el comando `django-admin startproject` como se muestra, y luego navega a la carpeta del proyecto:
 
-```bash
-   django-admin startproject locallibrary
-   cd locallibrary
-```
+   ```bash
+      django-admin startproject locallibrary
+      cd locallibrary
+   ```
 
-La herramienta `django-admin` crea una estructura de carpetas/archivos como la siguiente:
+   La herramienta `django-admin` crea una estructura de carpetas/archivos como la siguiente:
 
-```bash
-   locallibrary/
-       manage.py
-       locallibrary/
-           __init__.py
-           settings.py
-           urls.py
-           wsgi.py
-           asgi.py
-```
+   ```bash
+      locallibrary/
+         manage.py
+         locallibrary/
+            __init__.py
+            settings.py
+            urls.py
+            wsgi.py
+            asgi.py
+   ```
 
 La subcarpeta del proyecto _locallibrary_ es el punto de entrada del sitio web:
 
@@ -174,7 +174,7 @@ DATABASES = {
 }
 ```
 
-Más adelante, en [Desplegar Django a producción](/es/docs/Learn_web_development/Extensions/Server-side/Django/Deployment#database_configuration), también te mostraremos cómo configurar una base de datos Postgres, que podría ser más adecuada para sitios más grandes.
+Más adelante, en [Desplegar Django a producción](/es/docs/Learn_web_development/Extensions/Server-side/Django/Deployment), también te mostraremos cómo configurar una base de datos Postgres, que podría ser más adecuada para sitios más grandes.
 
 ## Otras configuraciones del proyecto
 
@@ -253,7 +253,7 @@ urlpatterns += [
 
 Deja el primer parámetro de la función path vacío para implicar '/'. Si escribes el primer parámetro como '/', Django te mostrará la siguiente advertencia cuando inicies el servidor de desarrollo:
 
-```
+```python
 System check identified some issues:
 
 WARNINGS:
@@ -353,11 +353,11 @@ En este punto, ¡sabemos que Django está funcionando!
 
 Acabamos de hacer un trabajo importante, así que ahora es un buen momento para hacer una copia de seguridad del proyecto usando GitHub.
 
-Primero mueve el _contenido_ de la carpeta de nivel superior **locallibrary** a la carpeta **django_local_library** que [creaste como un repositorio local de GitHub](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) al configurar el entorno de desarrollo.
+Primero mueve el _contenido_ de la carpeta de nivel superior **locallibrary** a la carpeta **django_local_library** que [creaste como un repositorio local de GitHub](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment) al configurar el entorno de desarrollo.
 Esto incluirá **manage.py**, la subcarpeta **locallibrary**, la subcarpeta **catalog**, y cualquier otra cosa dentro de la carpeta de nivel superior.
 
 Luego añade y confirma (commit) los cambios en la carpeta **django_local_library** y súbelos a GitHub.
-Desde la raíz de esa carpeta, puedes usar un conjunto de comandos similar a los de la sección [Modificar y sincronizar cambios](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#modify_and_sync_changes) del tema _Entorno de desarrollo_:
+Desde la raíz de esa carpeta, puedes usar un conjunto de comandos similar a los de la sección [Modificar y sincronizar cambios](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment) del tema _Entorno de desarrollo_:
 
 ```bash
 # Obtén el código fuente actual de GitHub en la rama main
