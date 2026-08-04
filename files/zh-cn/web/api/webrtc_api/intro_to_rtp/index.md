@@ -9,7 +9,8 @@ l10n:
 
 **实时传输协议**（**RTP**，Real-time Transport Protocol），定义于 {{RFC(3550)}}，是一个 IETF 标准协议，是为需要实时优先级的数据交换提供实时连接。本文概述了什么是 RTP 以及它在 WebRTC 上下文中的工作原理。
 
-> **备注：** WebRTC 实际上使用的是 **SRTP**（安全实时传输协议，Secure Real-time Transport Protocol）来确保交换数据的安全性和身份验证。
+> [!NOTE]
+> WebRTC 实际上使用的是 **SRTP**（安全实时传输协议，Secure Real-time Transport Protocol）来确保交换数据的安全性和身份验证。
 
 对于 WebRTC 来说，将延迟降至最低尤为重要，因为面对面的通信需要尽可能低的 {{Glossary("latency", "延迟")}}。从一个用户说话到另一个用户听到之间的时间延迟越大，就越容易出现串音和其他形式的混乱。
 
@@ -56,7 +57,8 @@ RTP 本身并不提供所有功能，因此 WebRTC 也使用了其他协议。RT
 
 由于 `RTCPeerConnection` 的流是使用 RTP 和[上述](#rtcpeerconnection_与_rtp)接口实现的，因此你可以利用这种访问权限来调整流的内部机制。其中最简单的做法之一是实现"保持"功能，即通话中的参与者可以点击按钮关闭麦克风，开始向另一个对等端播放音乐，并停止接收传入的音频。
 
-> **备注：** 本示例使用了现代 JavaScript 特性，包括[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)和 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 表达式。这极大地简化并提高了处理 WebRTC 方法返回的 promise 的代码的可读性。
+> [!NOTE]
+> 本示例使用了现代 JavaScript 特性，包括[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)和 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 表达式。这极大地简化并提高了处理 WebRTC 方法返回的 promise 的代码的可读性。
 
 在下面的示例中，我们将开启和关闭"保持"模式的对等端称为本地对等端，而处于保持状态的用户称为远程对等端。
 
