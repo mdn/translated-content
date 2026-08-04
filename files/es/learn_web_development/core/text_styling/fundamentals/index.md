@@ -195,7 +195,7 @@ Los cinco nombres se definen de la siguiente manera:
         en los extremos de los trazos en algunos tipos de letra).
       </td>
       <td id="serif-example">
-        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: html hidden">Mi gran elefante rojo</pre>
         <pre class="brush: css hidden">
 body {
   font-family: serif;
