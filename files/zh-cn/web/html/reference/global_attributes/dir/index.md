@@ -51,10 +51,7 @@ l10n:
 
 此属性*不会*被 {{HTMLElement("bdi")}} 元素继承。若未设置，其值为 `auto`。
 
-浏览器可能允许用户更改 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}} 元素的方向性，以协助编写内容。
-Chrome 和 Safari 在输入字段的上下文菜单中提供方向性选项。
-Firefox 在 `<textarea>` 内使用 <kbd>Ctrl</kbd>（Windows）/<kbd>Cmd</kbd>（macOS）+ <kbd>Shift</kbd> + <kbd>X</kbd> 切换文本方向。
-这些功能会在 `ltr` 与 `rtl` 之间切换 `dir` 属性的值。
+浏览器可能允许用户更改 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}} 元素的方向性，以协助编写内容。Chrome 和 Safari 在输入字段的上下文菜单中提供方向性选项。Firefox 在 `<textarea>` 内使用 <kbd>Ctrl</kbd>（Windows）/<kbd>Cmd</kbd>（macOS）+ <kbd>Shift</kbd> + <kbd>X</kbd> 切换文本方向。这些功能会在 `ltr` 与 `rtl` 之间切换 `dir` 属性的值。
 
 ## 规范
 
