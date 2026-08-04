@@ -57,14 +57,15 @@ Sigamos directamente para ver las propiedades para dar estilo a las fuentes. En 
 ```html live-sample___0unstyled live-sample___1color live-sample___2fonts live-sample___3font-style live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 <h1>Tommy el gato</h1>
 
-<p>Well I remember it as though it were a meal ago…</p>
+<p>Bueno, lo recuerdo como si fuera una comida atrás…</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña
+  que pudiera haberse metido en su poderosa garganta. Más de una rata callejera
+  gorda había encontrado su muerte mientras miraba fijamente el cavernoso cañón
+  de esta impresionante máquina merodeadora Verdaderamente una maravilla de la
+  naturaleza, este depredador urbano: el gato Tommy tenía muchas historias que
+  contar. Pero era una rara ocasión como ésta en la que lo hacía.
 </p>
 ```
 
@@ -208,7 +209,7 @@ body {
       <td><code>sans-serif</code></td>
       <td>Fuentes que no tienen serifas.</td>
       <td id="sans-serif-example">
-        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: html hidden">Mi gran elefante rojo</pre>
         <pre class="brush: css hidden">
 body {
   font-family: sans-serif;
@@ -224,7 +225,7 @@ body {
         en listados de código.
       </td>
       <td id="monospace-example">
-        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: html hidden">Mi gran elefante rojo</pre>
         <pre class="brush: css hidden">
 body {
   font-family: monospace;
@@ -240,7 +241,7 @@ body {
         conectados.
       </td>
       <td id="cursive-example">
-        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: html hidden">Mi gran elefante rojo</pre>
         <pre class="brush: css hidden">
 body {
   font-family: cursive;
@@ -253,7 +254,7 @@ body {
       <td><code>fantasy</code></td>
       <td>Fuentes destinadas a ser decorativas.</td>
       <td id="fantasy-example">
-        <pre class="brush: html hidden">My big red elephant</pre>
+        <pre class="brush: html hidden">Mi gran elefante rojo</pre>
         <pre class="brush: css hidden">
 body {
   font-family: fantasy;
@@ -302,7 +303,7 @@ Esto nos da el siguiente resultado:
 
 ### Tamaño de fuente
 
-En el artículo [Valores y unidades de CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units) del módulo anterior, repasamos las unidades de longitud y tamaño. El tamaño de fuente (establecido con la propiedad {{cssxref("font-size")}}) puede tomar valores medidos en la mayoría de estas unidades (y otras, como los [porcentajes](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units##porcentajes)); sin embargo, las unidades más comunes que usarás para dimensionar el texto son:
+En el artículo [Valores y unidades de CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units) del módulo anterior, repasamos las unidades de longitud y tamaño. El tamaño de fuente (establecido con la propiedad {{cssxref("font-size")}}) puede tomar valores medidos en la mayoría de estas unidades (y otras, como los [porcentajes](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#porcentajes)); sin embargo, las unidades más comunes que usarás para dimensionar el texto son:
 
 - `px` (píxeles): la cantidad de píxeles de alto que quieres que tenga el texto. Esta es una unidad absoluta, es decir, produce el mismo valor computado final para la fuente en la página en prácticamente cualquier situación.
 - `em`: 1 `em` es igual al tamaño de fuente establecido en el elemento padre del elemento actual al que estamos dando estilo (más específicamente, el ancho de una letra M mayúscula contenida dentro del elemento padre). Esto puede volverse complicado de calcular si tienes muchos elementos anidados con diferentes tamaños de fuente establecidos, pero es posible, como verás más abajo. ¿Por qué molestarse? Resulta bastante natural una vez que te acostumbras, y puedes usar `em` para dimensionar todo, no solo el texto. Puedes tener un sitio web entero dimensionado usando `em`, lo cual facilita el mantenimiento.
@@ -391,7 +392,7 @@ Las cuatro propiedades son las siguientes:
 
 1. El desplazamiento horizontal de la sombra respecto al texto original: puede tomar la mayoría de las [unidades de longitud y tamaño](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#longitudes) de CSS disponibles, pero lo más común es que uses `px`; los valores positivos mueven la sombra hacia la derecha, y los negativos hacia la izquierda. Este valor debe incluirse.
 2. El desplazamiento vertical de la sombra respecto al texto original. Se comporta de forma similar al desplazamiento horizontal, excepto que mueve la sombra hacia arriba/abajo, no hacia la izquierda/derecha. Este valor debe incluirse.
-3. El radio de desenfoque: un valor más alto significa que la sombra se dispersa más ampliamente. Si este valor no se incluye, el valor predeterminado es 0, lo que significa sin desenfoque. Puede tomar la mayoría de las [unidades de longitud y tamaño](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths) de CSS disponibles.
+3. El radio de desenfoque: un valor más alto significa que la sombra se dispersa más ampliamente. Si este valor no se incluye, el valor predeterminado es 0, lo que significa sin desenfoque. Puede tomar la mayoría de las [unidades de longitud y tamaño](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#longitudes) de CSS disponibles.
 4. El color base de la sombra, que puede tomar cualquier [unidad de color CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). Si no se incluye, el valor predeterminado es [`currentColor`](/es/docs/Web/CSS/Reference/Values/color_value#palabra_clave_currentcolor), es decir, el color de la sombra se toma de la propiedad {{cssxref("color")}} del elemento.
 
 #### Múltiples sombras
@@ -438,7 +439,7 @@ h1 {
 
 ### Altura de línea
 
-La propiedad {{cssxref("line-height")}} establece la altura de cada línea de texto. Esta propiedad no solo puede tomar la mayoría de las [unidades de longitud y tamaño](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths), sino que también puede tomar un valor sin unidad, que actúa como un multiplicador y generalmente se considera la mejor opción. Con un valor sin unidad, el {{cssxref("font-size")}} se multiplica y da como resultado el `line-height`. El texto del cuerpo generalmente se ve mejor y es más fácil de leer cuando las líneas están espaciadas. La altura de línea recomendada es de alrededor de 1.5 a 2 (doble espacio). Para establecer nuestras líneas de texto a 1.6 veces la altura de la fuente, usaríamos:
+La propiedad {{cssxref("line-height")}} establece la altura de cada línea de texto. Esta propiedad no solo puede tomar la mayoría de las [unidades de longitud y tamaño](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#longitudes), sino que también puede tomar un valor sin unidad, que actúa como un multiplicador y generalmente se considera la mejor opción. Con un valor sin unidad, el {{cssxref("font-size")}} se multiplica y da como resultado el `line-height`. El texto del cuerpo generalmente se ve mejor y es más fácil de leer cuando las líneas están espaciadas. La altura de línea recomendada es de alrededor de 1.5 a 2 (doble espacio). Para establecer nuestras líneas de texto a 1.6 veces la altura de la fuente, usaríamos:
 
 ```css live-sample___6line-height live-sample___7letter-word-spacing
 p {
@@ -452,7 +453,7 @@ Aplicar esto a los elementos {{htmlelement("p")}} en nuestro ejemplo nos daría 
 
 ### Espaciado entre letras y palabras
 
-Las propiedades {{cssxref("letter-spacing")}} y {{cssxref("word-spacing")}} te permiten establecer el espaciado entre letras y palabras en tu texto. No las usarás muy a menudo, pero podrías encontrarles utilidad para lograr un aspecto específico, o para mejorar la legibilidad de una fuente particularmente densa. Pueden tomar la mayoría de las [unidades de longitud](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths).
+Las propiedades {{cssxref("letter-spacing")}} y {{cssxref("word-spacing")}} te permiten establecer el espaciado entre letras y palabras en tu texto. No las usarás muy a menudo, pero podrías encontrarles utilidad para lograr un aspecto específico, o para mejorar la legibilidad de una fuente particularmente densa. Pueden tomar la mayoría de las [unidades de longitud](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#longitudes).
 
 Para ilustrarlo, podríamos aplicar algo de espaciado entre palabras y letras a la primera línea de cada elemento {{htmlelement("p")}} en nuestra muestra de HTML con:
 
@@ -546,6 +547,6 @@ p {
 ## Véase también
 
 - [All about the CSS font-family property](https://explainers.dev/font-family/), explainers.dev
-- [Web-safe fonts](https://scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Web-safe fonts](https://scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup>
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
