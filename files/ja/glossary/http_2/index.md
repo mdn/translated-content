@@ -24,4 +24,3 @@ HTTP/2 は HTTP のアプリケーション的な意味を何も変更してい�
   - {{glossary("Latency", "レイテンシー")}}, {{glossary("head of line blocking", "先頭行ブロック")}}
 - {{RFC("7540", "Server Push", "8.2")}}
 - [HTTP/2](https://ja.wikipedia.org/wiki/HTTP/2) - ウィキペディア
-
