@@ -37,7 +37,7 @@ En este artículo comenzarás tu camino hacia el dominio del estilo de texto con
 
 ## ¿Qué implica dar estilo al texto en CSS?
 
-El texto dentro de un elemento se dispone dentro del [cuadro de contenido](/es/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) del elemento. Comienza en la parte superior izquierda del área de contenido (o en la parte superior derecha, en el caso de contenido en idiomas RTL), y fluye hacia el final de la línea. Una vez que llega al final, pasa a la siguiente línea y vuelve a fluir hasta el final. Este patrón se repite hasta que todo el contenido se ha colocado dentro del cuadro. El contenido de texto se comporta efectivamente como una serie de elementos en línea, disponiéndose en líneas adyacentes entre sí, y sin crear saltos de línea hasta que se alcanza el final de la línea, o a menos que fuerces un salto de línea manualmente usando el elemento {{htmlelement("br")}}.
+El texto dentro de un elemento se dispone dentro del [cuadro de contenido](/es/docs/Learn_web_development/Core/Styling_basics/Box_model#partes_de_una_caja) del elemento. Comienza en la parte superior izquierda del área de contenido (o en la parte superior derecha, en el caso de contenido en idiomas RTL), y fluye hacia el final de la línea. Una vez que llega al final, pasa a la siguiente línea y vuelve a fluir hasta el final. Este patrón se repite hasta que todo el contenido se ha colocado dentro del cuadro. El contenido de texto se comporta efectivamente como una serie de elementos en línea, disponiéndose en líneas adyacentes entre sí, y sin crear saltos de línea hasta que se alcanza el final de la línea, o a menos que fuerces un salto de línea manualmente usando el elemento {{htmlelement("br")}}.
 
 > [!NOTE]
 > Si el párrafo anterior te deja confundido, no importa: vuelve atrás y revisa nuestro artículo [Modelo de caja](/es/docs/Learn_web_development/Core/Styling_basics/Box_model) para repasar la teoría del modelo de caja antes de continuar.
@@ -55,7 +55,7 @@ Las propiedades CSS utilizadas para dar estilo al texto generalmente se dividen 
 Sigamos directamente para ver las propiedades para dar estilo a las fuentes. En este ejemplo, aplicaremos algunas propiedades CSS a la siguiente muestra de HTML:
 
 ```html live-sample___0unstyled live-sample___1color live-sample___2fonts live-sample___3font-style live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
-<h1>Tommy the cat</h1>
+<h1>Tommy el gato</h1>
 
 <p>Well I remember it as though it were a meal ago…</p>
 
@@ -97,7 +97,7 @@ p {
 Esto haría que todos los párrafos de una página adopten la fuente Arial, que se encuentra en cualquier computadora.
 
 > [!NOTE]
-> El scrim de Scrimba [Web-safe fonts](https://scrimba.com/learn-html-and-css-c0p/~01r?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> ofrece una guía interactiva sobre por qué son importantes las fuentes, las fuentes seguras para la web, y cómo especificar fuentes en CSS, junto con un desafío para poner a prueba tus conocimientos
+> El scrim de Scrimba [Web-safe fonts](https://scrimba.com/learn-html-and-css-c0p/~01r?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup> ofrece una guía interactiva sobre por qué son importantes las fuentes, las fuentes seguras para la web, y cómo especificar fuentes en CSS, junto con un desafío para poner a prueba tus conocimientos
 
 #### Fuentes seguras para la web
 
@@ -302,7 +302,7 @@ Esto nos da el siguiente resultado:
 
 ### Tamaño de fuente
 
-En el artículo [Valores y unidades de CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units) del módulo anterior, repasamos las unidades de longitud y tamaño. El tamaño de fuente (establecido con la propiedad {{cssxref("font-size")}}) puede tomar valores medidos en la mayoría de estas unidades (y otras, como los [porcentajes](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#percentages)); sin embargo, las unidades más comunes que usarás para dimensionar el texto son:
+En el artículo [Valores y unidades de CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units) del módulo anterior, repasamos las unidades de longitud y tamaño. El tamaño de fuente (establecido con la propiedad {{cssxref("font-size")}}) puede tomar valores medidos en la mayoría de estas unidades (y otras, como los [porcentajes](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units##porcentajes)); sin embargo, las unidades más comunes que usarás para dimensionar el texto son:
 
 - `px` (píxeles): la cantidad de píxeles de alto que quieres que tenga el texto. Esta es una unidad absoluta, es decir, produce el mismo valor computado final para la fuente en la página en prácticamente cualquier situación.
 - `em`: 1 `em` es igual al tamaño de fuente establecido en el elemento padre del elemento actual al que estamos dando estilo (más específicamente, el ancho de una letra M mayúscula contenida dentro del elemento padre). Esto puede volverse complicado de calcular si tienes muchos elementos anidados con diferentes tamaños de fuente establecidos, pero es posible, como verás más abajo. ¿Por qué molestarse? Resulta bastante natural una vez que te acostumbras, y puedes usar `em` para dimensionar todo, no solo el texto. Puedes tener un sitio web entero dimensionado usando `em`, lo cual facilita el mantenimiento.
@@ -313,11 +313,11 @@ El `font-size` de un elemento se hereda del elemento padre de ese elemento. Todo
 Las cosas se vuelven más complicadas cuando empiezas a alterar el tamaño de fuente de elementos anidados. Por ejemplo, si tuvieras un elemento {{htmlelement("article")}} en tu página, y establecieras su `font-size` en 1.5 `em` (lo cual se computaría a un tamaño final de 24 `px`), y luego quisieras que los párrafos dentro de los elementos `<article>` tuvieran un tamaño de fuente computado de 20 `px`, ¿qué valor de `em` usarías?
 
 ```html
-<!-- document base font-size is 16px -->
+<!-- El tamaño de letra base del documento es 16px -->
 <article>
-  <!-- If my font-size is 1.5em -->
-  <p>My paragraph</p>
-  <!-- How do I compute to 20px font-size? -->
+  <!-- Si mi tamaño de letra es 1.5em -->
+  <p>Mi párrafo</p>
+  <!-- ¿Cómo calculo el tamaño del tipo de letra para que dé 20px? -->
 </article>
 ```
 
@@ -389,10 +389,10 @@ text-shadow: 4px 4px 5px red;
 
 Las cuatro propiedades son las siguientes:
 
-1. El desplazamiento horizontal de la sombra respecto al texto original: puede tomar la mayoría de las [unidades de longitud y tamaño](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths) de CSS disponibles, pero lo más común es que uses `px`; los valores positivos mueven la sombra hacia la derecha, y los negativos hacia la izquierda. Este valor debe incluirse.
+1. El desplazamiento horizontal de la sombra respecto al texto original: puede tomar la mayoría de las [unidades de longitud y tamaño](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#longitudes) de CSS disponibles, pero lo más común es que uses `px`; los valores positivos mueven la sombra hacia la derecha, y los negativos hacia la izquierda. Este valor debe incluirse.
 2. El desplazamiento vertical de la sombra respecto al texto original. Se comporta de forma similar al desplazamiento horizontal, excepto que mueve la sombra hacia arriba/abajo, no hacia la izquierda/derecha. Este valor debe incluirse.
 3. El radio de desenfoque: un valor más alto significa que la sombra se dispersa más ampliamente. Si este valor no se incluye, el valor predeterminado es 0, lo que significa sin desenfoque. Puede tomar la mayoría de las [unidades de longitud y tamaño](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths) de CSS disponibles.
-4. El color base de la sombra, que puede tomar cualquier [unidad de color CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). Si no se incluye, el valor predeterminado es [`currentColor`](/es/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), es decir, el color de la sombra se toma de la propiedad {{cssxref("color")}} del elemento.
+4. El color base de la sombra, que puede tomar cualquier [unidad de color CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). Si no se incluye, el valor predeterminado es [`currentColor`](/es/docs/Web/CSS/Reference/Values/color_value#palabra_clave_currentcolor), es decir, el color de la sombra se toma de la propiedad {{cssxref("color")}} del elemento.
 
 #### Múltiples sombras
 
@@ -528,7 +528,7 @@ Bien, ahora te toca a ti. Para esta tarea, no tenemos ningún ejercicio específ
 Si cometes un error, puedes borrar tu trabajo usando el botón _Reset_ en el MDN Playground. Consulta las secciones anteriores del artículo para encontrar más información sobre los estilos de fuente y texto que puedes establecer.
 
 ```html live-sample___fonts_text
-<p>Some sample text for your delight</p>
+<p>Un texto de muestra para tu deleite</p>
 ```
 
 ```css-nolint live-sample___fonts_text
