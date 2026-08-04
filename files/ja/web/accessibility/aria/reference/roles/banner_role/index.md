@@ -1,10 +1,12 @@
 ---
 title: "ARIA: banner ロール"
+short-title: banner
 slug: Web/Accessibility/ARIA/Reference/Roles/banner_role
-original_slug: Web/Accessibility/ARIA/Roles/banner_role
+l10n:
+  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
 ---
 
-バナー (`banner`) ロールは、ページの先頭に頻繁に配置される一般的で有益なコンテンツを表します。 これには、通常、ロゴ、会社名、検索アイコン、ページに関連する写真、またはスローガンが含まれます。
+`banner` ロールは、グローバルサイトヘッダーを定義します。これには、通常、ロゴ、会社名、検索アイコン、ページに関連する写真、スローガンなどが含まれます。
 
 ```html
 <div role="banner">
@@ -14,73 +16,67 @@ original_slug: Web/Accessibility/ARIA/Roles/banner_role
 </div>
 ```
 
-HTML5 の {{htmlelement("header")}} 要素は、{{htmlelement("aside")}}、{{htmlelement("article")}}、{{htmlelement("main")}}、{{htmlelement("nav")}}、または {{htmlelement("section")}} の子孫でない限り、バナー (`banner`) ランドマークと同じ意味を持ちます。
+デフォルトで、HTML の {{htmlelement("header")}} 要素は、{{htmlelement("aside")}}、{{htmlelement("article")}}、{{htmlelement("main")}}、{{htmlelement("nav")}}、{{htmlelement("section")}} の子孫でない限り、バナー `banner` ランドマークと同じ意味を持ちます。子孫である場合は {{htmlelement("header")}} 要素は [`generic`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) ロールを公開し、サイト全体のバナーの相当品にはなりません。
 
-## 説明
+## 解説
 
-バナーランドマークロール (`banner` landmark role) は、それが適用されたコンテナー要素をヘッダーに変換します。 これは、一般的に全てのページの上部にあるサイト全体で共通のサイトヘッダーのコンテンツ用に予約されているべきです。
+`banner` ランドマークロールは、それが適用されたコンテナー要素をヘッダーに変換します。 これは、一般的に全てのページの上部にあるサイト全体で共通のサイトヘッダーのコンテンツ用に予約されているべきです。
 
-バナーには、通常ロゴやコーポレートアイデンティティ、おそらくサイト固有の検索ツールが含まれており、一般的にマーケティングチームがサイトのヘッダーやトップバナーと呼ぶものです。 {{htmlelement("header")}} 要素の手法がそのバナーで使用されていない場合は、支援技術に対してバナー (`banner`) ランドマークを定義するために、`role="banner"` の宣言を使用するべきです。
+バナーには、通常ロゴやコーポレートアイデンティティ、おそらくサイト固有の検索ツールが含まれており、一般的にマーケティングチームがサイトの「ヘッダー」や「トップバナー」と呼ぶものです。[`header` 要素](/ja/docs/Web/HTML/Reference/Elements/header)の手法がそのバナーで使用されていない場合は、`role="banner"` の宣言を使用して支援技術にバナーランドマークを定義してください。
 
-支援技術は、{{htmlelement("body")}} 要素の子孫であり、`<article>`、`<aside>`、`<main>`、`<nav>` または `<section>` サブセクション内にネストされていない場合、バナーとしてページのメイン `<header>` 要素を識別できます。
+支援技術は、ページの `header` 要素が [`body` 要素](/ja/docs/Web/HTML/Reference/Elements/body) の子要素であり、かつ `article`、`aside`、`main`、`nav`、`section` のサブセクション内に含まれていない場合、`banner` として識別することができます。
 
-各ページにバナー (`banner`) ランドマークを持っていてもかまいませんが、各ページはバナー (`banner`) ロールを持つ `<header>` を 1 つだけに限定するべきです。 ネストされた文書 (`document`) ロールおよび/またはアプリケーション (`application`) ロールを含むページの場合、ネストされたそれぞれの文書 (`document`) ロールやアプリケーション (`application`) ロールも 1 つのバナー (`banner`) ランドマークを持つことができます。 ページに複数のバナー (`banner`) ランドマークが含まれている場合は、それぞれに固有のラベルを付けるべきです。
+各ページに `banner` ランドマークを持っていてもかまいませんが、各ページでは `banner` ロールを持つ `<header>` を 1 つだけに限定するべきです。`document` ロールや `application` ロールを含むページの場合、中に含まれるそれぞれの `document` ロールやアプリケーション `application` ロールも 1 つの `banner` ランドマークを持つことができます。ページに複数の `banner` ランドマークが含まれている場合は、それぞれに固有のアクセシブル名を付けるべきです。
 
 ### 関連する ARIA のロール、ステート、プロパティ
 
-無し
+なし。
 
-### キーボードインタラクション
+### キーボード操作
 
-無し
+なし。
 
 ### 必要な JavaScript 機能
 
-無し
+なし。
 
 ## 例
 
-ここでは、ナビゲーションへ飛ぶリンク、ロゴ、タイトル、サブタイトルを含む簡単なバナーがあります。 これがサイトのメインヘッダーであるため、バナー (`banner`) ランドマークロールをコンテナー要素に追加しています。
+ここでは、ナビゲーションへ飛ぶリンク、ロゴ、タイトル、サブタイトルを含む簡単なバナーがあります。 これがサイトのメインヘッダーであるため、`banner` ランドマークロールをコンテナー要素に追加しています。
 
 ```html
 <div role="banner">
-  <a href="#nav" id="skipToMenu" class="skiptocontent"
-    >キーボードナビゲーションへ飛ぶ</a
-  >
+  <a href="#main" id="skipToMain" class="skiptocontent">メインコンテンツへスキップ</a>
   <img src="images/w3c.png" alt="W3C ロゴ" />
   <h1>ARIA ランドマーク</h1>
   <p>容易なナビゲーションのためのページのサブセクションの特定</p>
+  <nav>…</nav>
 </div>
 ```
 
-また、上記の HTML の `<header>` 要素で記述することもできます。
+また、上記の HTML の `header` 要素で記述することもできます。
 
 ```html
 <header>
-  <a href="#nav" id="skipToMenu" class="skiptocontent"
-    >キーボードナビゲーションへ飛ぶ</a
-  >
+  <a href="#main" id="skipToMain" class="skiptocontent">メインコンテンツへスキップ</a>
   <img src="images/w3c.png" alt="W3C ロゴ" />
   <h1>ARIA ランドマーク</h1>
   <p>容易なナビゲーションのためのページのサブセクションの特定</p>
+  <nav>…</nav>
 </header>
 ```
 
 ## ベストプラクティス
 
-`<header>` 要素を使用して、ページの任意のサブセクションの子孫でないことを保証するのが最善ですが、場合によっては基になる HTML にアクセスできないことがあります。 この場合、JavaScript を使用してページのメインヘッダーにバナー (`banner`) ロールを追加できます。 この方法でページのバナーを特定すると、サイトのアクセシビリティが向上します。
+{{HTMLElement('header')}} 要素を使用すると、その要素のロールが `banner` であることが自動的に伝えられます。可能であれば、`banner` ロールではなく、意味的要素である `<header>` 要素の使用を優先してください。
+
+`header` 要素を使用し、それがページ内のどのサブセクションの子要素にもならないよう保証するのが最善ですが、場合によっては、基盤となる HTML にアクセスできないこともあります。そのような場合は、JavaScript で `banner` として公開すべきページの要素に `banner` というロールを追加することができます。このようにしてページのバナーを特定することは、サイトのアクセシビリティ向上に役立ちます。
 
 ## 仕様書
 
 {{Specifications}}
 
-## スクリーンリーダーのサポート
-
-TBD
-
 ## 関連情報
 
-- HTML {{htmlelement("header")}} 要素
-- [WC3 Landmarks Example](https://w3c.github.io/aria-practices/examples/landmarks/banner.html)
-
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+- [HTML `header` 要素](/ja/docs/Web/HTML/Reference/Elements/header)
+- [WC3 Landmarks Example](https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/banner.html)
