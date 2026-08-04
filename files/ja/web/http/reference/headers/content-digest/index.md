@@ -46,7 +46,7 @@ Content-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-val
     安全でない（古い）登録済みダイジェストアルゴリズムは、`md5`、`sha` (SHA-1)、`unixsum`、`unixcksum`、`adler` (ADLER32)、`crc32c` です。
 - `<digest-value>`
   - : `<digest-algorithm>` を使用することで算出された、メッセージコンテンツのバイト単位のダイジェスト。
-    ダイジェストアルゴリズムの選択によって、使用するエンコード方式も決まります。`sha-512` や `sha-256` は {{Glossary(「base64」)}} エンコード方式を使用しますが、`unixsum` などの一部の古いダイジェストアルゴリズムは10進整数を使用します。
+    ダイジェストアルゴリズムの選択によって、使用するエンコード方式も決まります。`sha-512` や `sha-256` は {{Glossary("base64")}} エンコード方式を使用しますが、`unixsum` などの一部の古いダイジェストアルゴリズムは10進整数を使用します。
     仕様の以前の草案とは異なり、標準の Base64 エンコードされたダイジェストバイトは、[辞書構文](https://www.rfc-editor.org/info/rfc8941/#name-byte-sequences)の一部としてコロン (`:`, ASCII 0x3A) で囲まれています。
 
 ## 解説
