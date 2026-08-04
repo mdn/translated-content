@@ -19,7 +19,7 @@ l10n:
 
 该属性是使用 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) 属性的灵活替代方案。与 `aria-activedescendant` 不同，赋给此属性的元素不必具有 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性。
 
-定义了元素的 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) 属性时，该属性会反映它，但仅限引用的 `id` 值与有效作用域内元素匹配的情况。设置此属性会清除对应的属性。有关反射元素引用和作用域的更多信息，请参阅《反射属性》指南中的[反射元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)。
+定义了元素的 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) 属性时，该属性会反映它，但仅限引用的 `id` 值与有效作用域内元素匹配的情况。设置此属性会清除对应的属性。有关反射元素引用和作用域的更多信息，请参阅《反射属性》指南中的[反射元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射元素引用)。
 
 ## 示例
 
