@@ -11,7 +11,7 @@ slug: WebAssembly/Guides/C_to_Wasm
 
 ### 所需条件
 
-按此教程获取Emscripten SDK： <https://emscripten.org/docs/getting_started/downloads.html>
+按此教程获取 Emscripten SDK：<https://emscripten.org/docs/getting_started/downloads.html>
 
 ## 编译样例代码
 
@@ -142,14 +142,14 @@ slug: WebAssembly/Guides/C_to_Wasm
    ```
 
 4. 如果你在浏览器中在此加载实例，你将看到和之前相同的结果。
-5. 现在我们需要运行新的 `myFunction()` JavaScript 函数。首先，在文本编辑器中打开hello3.html文件。
-6. 按照以下实例添加一个 {{htmlelement("button")}} ，就在 `<script type='text/javascript'>` 开头标签之前。
+5. 现在我们需要运行新的 `myFunction()` JavaScript 函数。首先，在文本编辑器中打开 hello3.html 文件。
+6. 按照以下实例添加一个 {{htmlelement("button")}}，就在 `<script type='text/javascript'>` 开始标签之前。
 
    ```html
    <button class="mybutton">运行我的函数</button>
    ```
 
-7. 现在在最后一个 {{htmlelement("script")}} 元素（就在 `</script>` 关闭标签之前）中添加以下代码：
+7. 现在在第一个 {{htmlelement("script")}} 元素末尾添加以下代码：
 
    ```js
    document.querySelector(".mybutton").addEventListener("click", function () {
@@ -167,7 +167,7 @@ slug: WebAssembly/Guides/C_to_Wasm
 
 ## 参见
 
-- [emscripten.org](http://emscripten.org/) — 了解更多 Emscripten 以及它的多种设置
-- [Calling compiled C functions from JavaScript using ccall/cwrap](https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
-- [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
-- [将已有的 C 文件编译为 WebAssembly](/zh-CN/docs/WebAssembly/Guides/Existing_C_to_Wasm)
+- [emscripten.org](http://emscripten.org/)——了解更多 Emscripten 以及它的多种设置
+- [在 JavaScript 中使用 ccall/cwrap 调用已编译的 C 函数](https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
+- [为什么在将 C/C++ 源代码编译为 JavaScript 时，其中的函数会“消失”，或出现“No functions to process”的提示？](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
+- [将已有的 C 模块编译为 WebAssembly](/zh-CN/docs/WebAssembly/Guides/Existing_C_to_Wasm)
