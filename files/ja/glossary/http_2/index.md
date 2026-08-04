@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 30d3d33b476209c803c07316eaa580474addfff2
 ---
 
-**HTTP/2** は [HTTP ネットワークプロトコル](/ja/docs/Web/HTTP)の改訂版です。 
+**HTTP/2** は [HTTP ネットワークプロトコル](/ja/docs/Web/HTTP)の改訂版です。
 
 HTTP/2 の主な目的は、リクエストとレスポンスの完全な多重化およびリクエストの優先順位付けに対応することで、{{glossary("latency", "レイテンシー")}}と{{glossary("head of line blocking", "先頭行ブロック")}}を縮小すること、および HTTP ヘッダーフィールドの効率的な圧縮 (HPACK) を通じてプロトコルのオーバーヘッドを最小限に抑えることです。
 
