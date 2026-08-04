@@ -55,7 +55,7 @@ _此接口也从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继
 
 ## 规范
 
-_不属于任何规范。_Apple 在 [Mac 开发库](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html)中提供了说明。
+*不属于任何规范。*Apple 在 [Mac 开发库](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html)中提供了说明。
 
 ## 浏览器兼容性
 
