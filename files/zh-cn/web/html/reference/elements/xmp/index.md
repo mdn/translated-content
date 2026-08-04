@@ -27,8 +27,6 @@ l10n:
 
 该元素实现了 {{domxref('HTMLElement')}} 接口。
 
-<!-- ## Technical summary -->
-
 ## 规范
 
 {{Specifications}}
