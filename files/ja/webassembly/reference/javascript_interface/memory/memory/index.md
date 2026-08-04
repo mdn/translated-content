@@ -53,7 +53,7 @@ new WebAssembly.Memory(memoryDescriptor)
 
 `WebAssembly.Memory` オブジェクトを取得する方法は 2 つあります。 1 つ目は JavaScript から構築する方法と、WebAssembly モジュールからエクスポートする方法です。
 
-次の例（GitHubで [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) を参照、 [ライブ実行](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)）では、初期サイズ 10 ページ (640KiB)、最大サイズ 100 ページ (6.4MiB) の新しい WebAssembly メモリーインスタンスを作成しています。この例では、[`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 関数を使用して、読み込まれた memory.wasm バイトコードを取得・インスタンス化すると同時に、以上で生成されたメモリーをインポートします。その後、そのメモリーにいくつかの値を格納し、関数をエクスポートして、エクスポートされた関数を使用してそれらの値の合計を算出します。`Memory` オブジェクトの [`buffer`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) プロパティは、{{jsxref("ArrayBuffer")}} を返します。
+次の例（GitHubで [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) を参照、 [ライブ実行](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)）では、初期サイズ 10 ページ (640KiB)、最大サイズ 100 ページ (6.4MiB) の新しい WebAssembly メモリーインスタンスを作成しています。この例では、[`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 関数を使用して、読み込まれた memory.wasm バイトコードを取得・インスタンス化すると同時に、以上で生成されたメモリーをインポートします。その後、そのメモリーにいくつかの値を格納し、関数をエクスポートして、エクスポートされた関数を使用してそれらの値の合計を算出します。`Memory` オブジェクトの [`buffer`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) プロパティは、{{jsxref("ArrayBuffer")}} を返します。
 
 ```js
 const memory = new WebAssembly.Memory({
