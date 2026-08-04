@@ -64,7 +64,7 @@ Cada una de esas partes proporciona información específica sobre el nombre de 
 
     La etiqueta ubicada justo antes del TLD también se llama _dominio de segundo nivel_ (SLD, por sus siglas en inglés).
 
-    Un nombre de dominio puede tener muchas etiquetas (o componentes). No es obligatorio ni necesario tener 3 etiquetas para formar un nombre de dominio. Por ejemplo, [informatics.ed.ac.uk](https://informatics.ed.ac.uk/) es un nombre de dominio válido. Para cualquier dominio que controles (por ejemplo, [mozilla.org](https://www.mozilla.org/es-US/)), puedes crear "subdominios" con contenido diferente ubicado en cada uno, como [developer.mozilla.org](/es/), [support.mozilla.org](https://support.mozilla.org/), o [bugzilla.mozilla.org](https://bugzilla.mozilla.org/).
+    Un nombre de dominio puede tener muchas etiquetas (o componentes). No es obligatorio ni necesario tener 3 etiquetas para formar un nombre de dominio. Por ejemplo, [informatics.ed.ac.uk](https://informatics.ed.ac.uk/) es un nombre de dominio válido. Para cualquier dominio que controles (por ejemplo, [mozilla.org](https://www.mozilla.org/es-ES/)), puedes crear "subdominios" con contenido diferente ubicado en cada uno, como [developer.mozilla.org](/es/), [support.mozilla.org](https://support.mozilla.org/), o [bugzilla.mozilla.org](https://bugzilla.mozilla.org/).
 
 ### Comprar un nombre de dominio
 
@@ -167,5 +167,5 @@ Bien, hablamos mucho sobre procesos y arquitectura. Es hora de continuar.
 
 - Si quieres poner manos a la obra, es un buen momento para empezar a explorar el diseño y descubrir [la anatomía de una página web](/es/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).
 - También vale la pena señalar que algunos aspectos de la creación de un sitio web tienen un costo. Consulta [cuánto cuesta crear un sitio web](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
-- O lee más sobre [nombres de dominio](https://es.wikipedia.org/wiki/Domain_name) en Wikipedia.
+- O lee más sobre [nombres de dominio](https://es.wikipedia.org/wiki/Dominio_de_Internet) en Wikipedia.
 - El tutorial [Cómo funciona el DNS](https://howdns.works/) tiene una explicación divertida y colorida.
