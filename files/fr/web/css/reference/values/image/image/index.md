@@ -43,7 +43,7 @@ image(rgb(0 0 255 / 0.5)), url("bg-image.png");
 
 ### Gestion de la direction
 
-Le premier paramètre de la fonction `image()` est optionnel et indique la direction de l'image. Lorsque ce paramètre est utilisé et que l'image est utilisée au sein d'un élément ayant la direction opposée, l'image est renversée horizontalement pour les modes d'écriture horizontaux. Si ce paramètre n'est pas utilisé, l'image ne est pas renversée lorsque du changement de direction de la langue.
+Le premier paramètre de la fonction `image()` est optionnel et indique la direction de l'image. Lorsque ce paramètre est utilisé et que l'image est utilisée au sein d'un élément ayant la direction opposée, l'image est renversée horizontalement pour les modes d'écriture horizontaux. Si ce paramètre n'est pas utilisé, l'image n'est pas renversée lorsque du changement de direction de la langue.
 
 ### Fragments d'image
 

@@ -3,7 +3,7 @@ title: Propriété CSS `animation-fill-mode`
 short-title: animation-fill-mode
 slug: Web/CSS/Reference/Properties/animation-fill-mode
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-fill-mode`** définit la façon dont une animation CSS applique des styles à sa cible avant et après son exécution.
@@ -135,10 +135,12 @@ animation-fill-mode: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme une liste de mots-clés séparés par des virgules&nbsp;:
+
 - `none`
-  - : L'animation n'appliquera aucun style à la cible, avant et après l'exécution. Le style utilisé sera celui défini par les autres règles CSS.
+  - : L'animation n'applique aucun style à la cible, avant et après l'exécution. Le style utilisé est celui défini par les autres règles CSS.
 - `forwards`
-  - : La cible retiendra les valeurs calculées définies lors de la dernière image clé (<i lang="en">keyframe</i> en anglais). La dernière étape considérée dépend de la valeur de {{CSSxRef("animation-direction")}} et de {{CSSxRef("animation-iteration-count")}}&nbsp;:
+  - : La cible retient les valeurs calculées définies lors de la dernière image clé (<i lang="en">keyframe</i> en anglais). La dernière étape considérée dépend de la valeur de {{CSSxRef("animation-direction")}} et de {{CSSxRef("animation-iteration-count")}}&nbsp;:
 
     | `animation-direction` | `animation-iteration-count` | dernière étape |
     | --------------------- | --------------------------- | -------------- |
@@ -149,10 +151,10 @@ animation-fill-mode: unset;
     | `alternate-reverse`   | pair                        | `100%` ou `to` |
     | `alternate-reverse`   | impair                      | `0%` ou `from` |
 
-    Les propriétés animées se comportent comme si elles étaient incluses dans une valeur de propriété {{CSSxRef("will-change")}}. Si un nouveau contexte d'empilement a été créé pendant l'animation, l'élément cible conserve ce contexte d'empilement après la fin de l'animation.
+    Les propriétés animées se comportent comme si elles sont incluses dans une valeur de propriété {{CSSxRef("will-change")}}. Si un nouveau contexte d'empilement a été créé pendant l'animation, l'élément cible conserve ce contexte d'empilement après la fin de l'animation.
 
 - `backwards`
-  - : L'animation appliquera les valeur définies par la première image clé (<i lang="en">keyframe</i> en anglais) pertinente et les retiendra pendant la durée indiquée par {{CSSxRef("animation-delay")}}. La première étape pertinente dépend de la valeur de {{CSSxRef("animation-direction")}}&nbsp;:
+  - : L'animation applique les valeurs définies par la première image clé (<i lang="en">keyframe</i> en anglais) pertinente et les retient pendant la durée indiquée par {{CSSxRef("animation-delay")}}. La première étape pertinente dépend de la valeur de {{CSSxRef("animation-direction")}}&nbsp;:
 
     | `animation-direction`            | première étape |
     | -------------------------------- | -------------- |
@@ -160,13 +162,13 @@ animation-fill-mode: unset;
     | `reverse` ou `alternate-reverse` | `100%` ou `to` |
 
 - `both`
-  - : L'animation respectera les règles qui s'appliquent à `forwards` et `backwards`, entraînant ainsi l'extension des propriétés de l'animation dans les deux directions.
+  - : L'animation respecte les règles qui s'appliquent à `forwards` et `backwards`, entraînant ainsi l'extension des propriétés de l'animation dans les deux directions.
 
 > [!NOTE]
 > Lorsque vous indiquez plusieurs valeurs séparées par des virgules sur une propriété `animation-*`, elles sont appliquées aux animations dans l'ordre d'apparition des {{CSSxRef("animation-name")}}. Si le nombre d'animations et de valeurs de propriété `animation-*` ne correspond pas, voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
 
 > [!NOTE]
-> `animation-fill-mode` a le même effet lors de la création d'[animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations) que pour les animations classiques basées sur le temps.
+> `animation-fill-mode` a le même effet lors de la création [d'animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations) que pour les animations classiques basées sur le temps.
 
 ## Définition formelle
 
@@ -214,7 +216,7 @@ Vous pouvez voir l'effet de `animation-fill-mode` dans l'exemple suivant. Il mon
   animation-duration: 3s;
 }
 
-.demo:hover .grows-and-stays {
+.demo:hover .growsandstays {
   animation-name: grow;
   animation-duration: 3s;
   animation-fill-mode: forwards;
@@ -225,7 +227,7 @@ Vous pouvez voir l'effet de `animation-fill-mode` dans l'exemple suivant. Il mon
 
 {{EmbedLiveSample("Définir le mode de remplissage", 700, 300)}}
 
-Voir [Animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using) pour plus d'exemples.
+Voir [les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using) pour plus d'exemples.
 
 ## Spécifications
 

@@ -3,10 +3,10 @@ title: Propriété CSS `justify-content`
 short-title: justify-content
 slug: Web/CSS/Reference/Properties/justify-content
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`justify-content`** définit comment le navigateur répartit l'espace entre et autour des éléments de contenu le long de {{Glossary("main axis", "l'axe principal")}} d'un conteneur flexible et le long de [l'axe en ligne](/fr/docs/Glossary/Logical_properties#direction_en_ligne) des conteneurs grille et des conteneurs multicolonnes.
+La propriété [CSS](/fr/docs/Web/CSS) **`justify-content`** définit comment le navigateur répartit l'espace entre et autour des éléments de contenu le long de {{Glossary("main axis", "l'axe principal")}} d'un conteneur flexible et le long de [l'axe en ligne](/fr/docs/Glossary/Logical_properties#direction_en_ligne) des conteneurs grille et des conteneurs multi-colonnes.
 
 L'exemple interactif ci-dessous montre quelques valeurs de `justify-content` en utilisant une disposition en grille.
 
@@ -95,6 +95,8 @@ justify-content: unset;
 
 ### Valeurs
 
+La propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `start`
   - : Les éléments sont regroupés au début du conteneur selon l'axe principal. Le bord du premier élément est aligné avec le bord du conteneur.
 
@@ -117,7 +119,7 @@ justify-content: unset;
   - : Les éléments sont regroupés bord à bord vers le bord droit du conteneur d'alignement sur l'axe approprié. Si l'axe de la propriété n'est pas parallèle à l'axe en ligne (dans un conteneur grille) ou à l'axe principal (dans un conteneur flexible), cette valeur se comporte comme `start`.
 
 - `normal`
-  - : Se comporte comme `stretch`, sauf dans le cas des conteneurs multicolonnes avec une valeur de {{CSSxRef("column-width")}} différente de `auto`, auquel cas les colonnes prennent la largeur définie par `column-width` au lieu de s'étirer pour remplir le conteneur. Comme `stretch` se comporte comme `start` dans les conteneurs flexibles, `normal` se comporte aussi comme `start`.
+  - : Se comporte comme `stretch`, sauf dans le cas des conteneurs multi-colonnes avec une valeur de {{CSSxRef("column-width")}} différente de `auto`, auquel cas les colonnes prennent la largeur définie par `column-width` au lieu de s'étirer pour remplir le conteneur. Comme `stretch` se comporte comme `start` dans les conteneurs flexibles, `normal` se comporte aussi comme `start`.
 
 - `space-between`
   - : Les éléments ont espacés équitablement selon l'axe principal. L'espace utilisé entre chaque élément est le même. Le premier élément est aligné sur le bord du conteneur et le dernier élément est aussi aligné sur le bord de l'élément.
@@ -135,22 +137,22 @@ justify-content: unset;
     > Pour les [boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts), la valeur `stretch` se comporte comme `flex-start` ou `start`. En effet, dans les boîtes flexibles, l'étirement est contrôlé à l'aide de la propriété {{CSSxRef("flex-grow")}}.
 
 - `safe`
-  - : Si l'élément dépasse le conteneur d'alignement, alors l'élément est aligné comme si le mode d'alignement était `start`. L'alignement souhaité ne sera pas appliqué.
+  - : Si l'élément dépasse le conteneur d'alignement, alors l'élément est aligné comme si le mode d'alignement était `start`. L'alignement souhaité n'est pas appliqué.
 
 - `unsafe`
-  - : Même si l'élément dépasse le conteneur d'alignement, l'alignement souhaité sera appliqué. Contrairement à `safe`, qui ignorera l'alignement souhaité pour éviter le dépassement.
+  - : Même si l'élément dépasse le conteneur d'alignement, l'alignement souhaité est appliqué. Contrairement à `safe`, qui ignore l'alignement souhaité pour éviter le dépassement.
 
 ## Description
 
-Définie dans le module [d'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment), la propriété `justify-content` s'applique aux conteneurs multicolonnes, flexibles et grille. Cette propriété ne s'applique pas aux conteneurs de type bloc et n'a aucun effet sur eux.
+Définie dans le module [d'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment), la propriété `justify-content` s'applique aux conteneurs multi-colonnes, flexibles et grille. Cette propriété ne s'applique pas aux conteneurs de type bloc et n'a aucun effet sur eux.
 
 Cette propriété partage de nombreux mots-clés avec la propriété {{CSSxRef("align-content")}}, mais pas tous&nbsp;! `justify-content` n'intervient pas dans l'alignement sur la ligne de base et ne prend donc pas de valeurs de ligne de base.
 
-Dans les [dispositions flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout), la propriété définit comment l'espace libre positif est réparti entre ou autour des éléments flexibles le long de l'axe principal. Cette propriété affecte l'espace entre les éléments d'une ligne, et non l'espace entre les lignes. L'alignement est effectué après l'application des longueurs et des marges automatiques, ce qui signifie que lorsque un ou plusieurs éléments flexibles d'une ligne ont un facteur {{CSSxRef("flex-grow")}} supérieur à `0`, la propriété n'a aucun effet car il n'y a pas d'espace à répartir sur cette ligne. De plus, comme l'étirement sur l'axe principal est contrôlé par {{CSSxRef("flex")}}, la valeur `stretch` se comporte comme `flex-start`.
+Dans les [dispositions flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout), la propriété définit comment l'espace libre positif est réparti entre ou autour des éléments flexibles le long de l'axe principal. Cette propriété affecte l'espace entre les éléments d'une ligne, et non l'espace entre les lignes. L'alignement est effectué après l'application des longueurs et des marges automatiques, ce qui signifie que lorsque un ou plusieurs éléments flexibles d'une ligne ont un facteur {{CSSxRef("flex-grow")}} supérieur à `0`, la propriété n'a aucun effet, car il n'y a pas d'espace à répartir sur cette ligne. De plus, comme l'étirement sur l'axe principal est contrôlé par {{CSSxRef("flex")}}, la valeur `stretch` se comporte comme `flex-start`.
 
 Avec la [disposition en grille](/fr/docs/Web/CSS/Guides/Grid_layout), cette propriété répartit l'espace disponible entre ou autour des colonnes de la grille, et non des éléments de la grille. Si le conteneur de grille est plus grand que la grille elle-même, la propriété `justify-content` peut être utilisée pour justifier la grille le long de l'axe en ligne, en alignant les colonnes de la grille.
 
-Les tailles de pistes `auto` de la grille (et uniquement les tailles de pistes `auto`) peuvent être étirées par les propriétés `align-content` et `justify-content`. Par conséquent, par défaut, une piste dimensionnée en `auto` occupera tout espace restant dans le conteneur de grille. Comme la taille en ligne de la grille doit être inférieure à celle du conteneur de grille pour qu'il y ait de l'espace à répartir, la propriété n'a aucun effet dans ce cas.
+Les tailles de pistes `auto` de la grille (et uniquement les tailles de pistes `auto`) peuvent être étirées par les propriétés `align-content` et `justify-content`. Par conséquent, par défaut, une piste dimensionnée en `auto` occupe tout espace restant dans le conteneur de grille. Comme la taille en ligne de la grille doit être inférieure à celle du conteneur de grille pour qu'il y ait de l'espace à répartir, la propriété n'a aucun effet dans ce cas.
 
 ## Définition formelle
 
@@ -168,7 +170,7 @@ Dans cet exemple, il y a une grille plus étroite que son conteneur de grille, e
 
 #### HTML
 
-Le conteneur {{HTMLElement("section")}}, qui va devenir notre conteneur de grille, contient 16 {{HTMLElement("div")}} imbriqués qui deviendront des éléments de la grille.
+Le conteneur {{HTMLElement("section")}}, qui va devenir notre conteneur de grille, contient 16 {{HTMLElement("div")}} imbriqués qui deviennent des éléments de la grille.
 
 ```html
 <section class="container">
@@ -208,7 +210,7 @@ div {
 }
 ```
 
-Nous définissons la largeur du conteneur à `500px` et indiquons trois colonnes, chacune ayant une largeur de `80px`, ce qui signifie qu'il y a `260px` d'espace disponible à répartir entre ou autour d'elles. Nous appliquons ensuite `justify-content: space-evenly`, ce qui signifie qu'il y aura `65px` d'espace avant, entre et après chaque colonne.
+Nous définissons la largeur du conteneur à `500px` et indiquons trois colonnes, chacune ayant une largeur de `80px`, ce qui signifie qu'il y a `260px` d'espace disponible à répartir entre ou autour d'elles. Nous appliquons ensuite `justify-content: space-evenly`, ce qui signifie qu'il y a `65px` d'espace avant, entre et après chaque colonne.
 
 Nous définissons différentes largeurs (et couleurs de fond) pour montrer comment la justification est appliquée aux colonnes.
 
@@ -240,7 +242,7 @@ div:nth-last-of-type(3) {
 
 {{EmbedLiveSample("Exemple de grille de base", "100%", 220)}}
 
-Notez que `justify-contents` aligne les colonnes et n'a aucun effet sur les éléments ou l'alignement dans les zones de grille. Les éléments de la grille, même ceux qui débordent de leur cellule, n'affectent pas la justification des colonnes.
+Notez que `justify-content` aligne les colonnes et n'a aucun effet sur les éléments ou l'alignement dans les zones de grille. Les éléments de la grille, même ceux qui débordent de leur cellule, n'affectent pas la justification des colonnes.
 
 ### Le mot-clé `safe`
 
@@ -408,7 +410,7 @@ justifyContent.addEventListener("change", (evt) => {
 
 {{EmbedLiveSample("Visualiser la répartition des éléments flexibles", "100%", 180)}}
 
-Sélectionnez différents mots-clés dans le menu déroulant pour visualiser les différentes valeurs de mot-clé `justify-content`. Comme un élément de la première ligne peut croître, il n'y a pas d'espace disponible sur cette ligne pour que la propriété `justify-content` le répartisse. Avec la valeur `space-between`, le premier élément de chaque ligne est aligné avec le bord de début principal, et le dernier élément est aligné avec le bord de fin principal. Ainsi, si une ligne ne contient qu'un seul élément, il sera aligné avec le bord de début principal (comme on le voit sur la dernière ligne). Ce n'est pas le cas pour les autres valeurs `space-*`, telles que `space-evenly` et `space-around`, qui centrent les lignes flexibles à un seul élément.
+Sélectionnez différents mots-clés dans le menu déroulant pour visualiser les différentes valeurs de mot-clé `justify-content`. Comme un élément de la première ligne peut croître, il n'y a pas d'espace disponible sur cette ligne pour que la propriété `justify-content` le répartisse. Avec la valeur `space-between`, le premier élément de chaque ligne est aligné avec le bord de début principal, et le dernier élément est aligné avec le bord de fin principal. Ainsi, si une ligne ne contient qu'un seul élément, il est aligné avec le bord de début principal (comme on le voit sur la dernière ligne). Ce n'est pas le cas pour les autres valeurs `space-*`, telles que `space-evenly` et `space-around`, qui centrent les lignes flexibles à un seul élément.
 
 ## Spécifications
 
