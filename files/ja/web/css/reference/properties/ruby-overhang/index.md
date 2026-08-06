@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-**`ruby-overhang`** は [CSS](/ja/docs/Web/CSS) のプロアpティで、{{htmlelement("ruby")}} の注釈が周囲のテキストからはみ出すかどうかを指定します。
+**`ruby-overhang`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{htmlelement("ruby")}} の注釈が周囲のテキストからはみ出すかどうかを指定します。
 
 {{InteractiveExample("CSS Demo: ruby-overhang")}}
 
