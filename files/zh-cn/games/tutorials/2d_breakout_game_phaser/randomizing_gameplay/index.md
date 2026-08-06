@@ -2,7 +2,7 @@
 title: 随机化游戏玩法
 slug: Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay
 l10n:
-  sourceCommit: 9513dbd1d4c450e512223cf170e364bd7e7753f9
+  sourceCommit: ef78a9a3336c884fb3587e4ff833e64704296f01
 ---
 
 {{Previous("Games/Tutorials/2D_breakout_game_Phaser/Buttons")}}
