@@ -44,7 +44,7 @@ l10n:
 
 ここでは、ナビゲーションへ飛ぶリンク、ロゴ、タイトル、サブタイトルを含む簡単なバナーがあります。 これがサイトのメインヘッダーであるため、`banner` ランドマークロールをコンテナー要素に追加しています。
 
-```html
+```html-nolint
 <div role="banner">
   <a href="#main" id="skipToMain" class="skiptocontent">メインコンテンツへスキップ</a>
   <img src="images/w3c.png" alt="W3C ロゴ" />
@@ -56,7 +56,7 @@ l10n:
 
 また、上記の HTML の `header` 要素で記述することもできます。
 
-```html
+```html-nolint
 <header>
   <a href="#main" id="skipToMain" class="skiptocontent">メインコンテンツへスキップ</a>
   <img src="images/w3c.png" alt="W3C ロゴ" />
