@@ -54,9 +54,9 @@ RegExp(pattern[, flags])
     - `s` （点号匹配所有字符）
       - : 允许`.` 去匹配新的行
     - `u` （unicode）
-      - : Treat `pattern` as a sequence of Unicode code points. (See also [Binary strings](/zh-CN/docs/Web/API/Window/btoa)).
+      - : 将 `pattern` 视为由 Unicode 码点组成的序列。（另请参见[二进制字符串](/zh-CN/docs/Web/API/Window/btoa)。）
     - `y` （sticky，粘性匹配）
-      - : Matches only from the index indicated by the `lastIndex` property of this regular expression in the target string. Does not attempt to match from any later indexes.
+      - : 仅从目标字符串中该正则表达式 `lastIndex` 属性所指示的索引位置开始匹配。不会尝试从任何更靠后的索引位置开始匹配。
 
 ## 示例
 
