@@ -1,5 +1,5 @@
 ---
-title: "Propriété CSS `row-rule-width`"
+title: Propriété CSS `row-rule-width`
 short-title: row-rule-width
 slug: Web/CSS/Reference/Properties/row-rule-width
 l10n:
