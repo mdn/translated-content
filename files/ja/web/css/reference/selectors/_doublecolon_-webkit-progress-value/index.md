@@ -1,7 +1,9 @@
 ---
-title: ::-webkit-progress-value
+title: CSS `::-webkit-progress-value` 擬似要素
+short-title: ::-webkit-progress-value
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-value
-original_slug: Web/CSS/::-webkit-progress-value
+l10n:
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{Non-standard_header}}
@@ -9,12 +11,14 @@ original_slug: Web/CSS/::-webkit-progress-value
 **`::-webkit-progress-value`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、 {{HTMLElement("progress")}} 要素のバーの塗りつぶされた部分を表します。これは、 {{cssxref("::-webkit-progress-bar")}} 擬似要素の子要素です。
 
 > [!NOTE]
-> `::-webkit-progress-value` を有効にするには {{cssxref("-webkit-appearance")}} を `<progress>` 要素で `none` に設定する必要があります。
+> `::-webkit-progress-value` を有効にするには {{cssxref("appearance")}} を `<progress>` 要素で `none` に設定する必要があります。
 
 ## 構文
 
-```css-nolint
-::-webkit-progress-value {}
+```css
+::-webkit-progress-value {
+  /* ... */
+}
 ```
 
 ## 例
@@ -45,9 +49,9 @@ progress {
 
 ### 結果のスクリーンショット
 
-上記のスタイルを使用したプログレスバーは次のようになります:
+上記のスタイルを使用した進捗バーは次のようになります。
 
-![](progress-value.png)
+![オレンジとグレーの細長い箱。左側の 20% はオレンジ色で、右側の 80% はグレーです。](progress-value.png)
 
 ## 仕様書
 
@@ -64,4 +68,3 @@ progress {
   - {{ cssxref("::-webkit-progress-inner-element") }}
 
 - {{ cssxref("::-moz-progress-bar") }}
-- {{ cssxref("::-ms-fill") }}
