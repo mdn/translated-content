@@ -1,5 +1,5 @@
 ---
-title: "FocusEvent：FocusEvent() 构造函数"
+title: FocusEvent：FocusEvent() 构造函数
 slug: Web/API/FocusEvent/FocusEvent
 l10n:
   sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
