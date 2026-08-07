@@ -1,5 +1,5 @@
 ---
-title: "FocusEvent：relatedTarget 属性"
+title: FocusEvent：relatedTarget 属性
 slug: Web/API/FocusEvent/relatedTarget
 l10n:
   sourceCommit: c20c12fab32381b983b4148d712fda227d34e2bd
