@@ -1,5 +1,5 @@
 ---
-title: "Propriété CSS `path-length`"
+title: Propriété CSS `path-length`
 short-title: path-length
 slug: Web/CSS/Reference/Properties/path-length
 l10n:
