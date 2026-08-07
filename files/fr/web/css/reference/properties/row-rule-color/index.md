@@ -1,5 +1,5 @@
 ---
-title: "Propriété CSS `row-rule-color`"
+title: Propriété CSS `row-rule-color`
 short-title: row-rule-color
 slug: Web/CSS/Reference/Properties/row-rule-color
 l10n:
