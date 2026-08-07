@@ -273,7 +273,7 @@ Nous créons une liste de 75 éléments. La plupart du HTML est masqué pour plu
 
 Nous définissons la liste non ordonnée comme un conteneur à 10 colonnes, en créant les colonnes et les lignes avec la propriété {{CSSxRef("grid-template-columns")}}. Nous incluons un {{CSSxRef("gap")}} de `5px` pour fournir assez d'espace entre les colonnes et les lignes pour notre règle en pointillés de `3px`, et définissons {{CSSxRef("list-style-type")}} sur `none` pour supprimer les puces.
 
-Nous incluons un {{CSSxRef("gap")}} de `5px` pour fournir assez d'espace entre les éléments pour notre règle en pointillés moyenne. Nous définissons `rule-color` sur `#22BB22`, une valeur verte {{CSSxRef("hex-color")}}&nbsp;:
+Nous incluons un {{CSSxRef("gap")}} de `5px` pour fournir assez d'espace entre les éléments pour notre règle en pointillés moyens. Nous définissons `rule-color` sur `#22BB22`, une valeur verte {{CSSxRef("hex-color")}}&nbsp;:
 
 ```css live-sample___basic live-sample___multiple live-sample___repeat live-sample___func live-sample___auto
 ul {
