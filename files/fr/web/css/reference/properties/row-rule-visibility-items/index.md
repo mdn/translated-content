@@ -1,5 +1,5 @@
 ---
-title: "Propriété CSS `row-rule-visibility-items`"
+title: Propriété CSS `row-rule-visibility-items`
 short-title: row-rule-visibility-items
 slug: Web/CSS/Reference/Properties/row-rule-visibility-items
 l10n:
