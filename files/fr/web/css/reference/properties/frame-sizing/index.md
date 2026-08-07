@@ -1,5 +1,5 @@
 ---
-title: "Propriété CSS `frame-sizing`"
+title: Propriété CSS `frame-sizing`
 short-title: frame-sizing
 slug: Web/CSS/Reference/Properties/frame-sizing
 l10n:
