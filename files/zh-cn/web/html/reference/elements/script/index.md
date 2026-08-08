@@ -1,167 +1,174 @@
 ---
-title: <script>：脚本元素
+title: "`<script>` HTML 脚本元素"
+short-title: <script>
 slug: Web/HTML/Reference/Elements/script
+l10n:
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-[HTML](/zh-CN/docs/Web/HTML) **`<script>`** 元素用于嵌入可执行代码或数据，这通常用作嵌入或者引用 JavaScript 代码。`<script>` 元素也能在其他语言中使用，比如 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 的 GLSL 着色器语言和 [JSON](/zh-CN/docs/Glossary/JSON)。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a>
-      </th>
-      <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#元数据内容">元数据内容</a>、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
-      <td>动态脚本，如 <code>text/javascript</code>。</td>
-    </tr>
-    <tr>
-     <th scope="row">标签省略</th>
-     <td>不允许，开始标签和结束标签都不能省略。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
-      <td>任何可以接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#元数据内容">元数据内容</a>，或者<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>的元素。</td>
-    </tr>
-    <tr>
-      <th scope="row">隐含的 ARIA 角色</th>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">没有对应的角色</a></td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
-      <td>不允许任何 <code>role</code></td>
-     </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLScriptElement")}}</td>
-    </tr>
- </tbody>
-</table>
+[HTML](/zh-CN/docs/Web/HTML) **`<script>`** 元素用于嵌入可执行代码或数据；通常用来嵌入或引用 JavaScript 代码。`<script>` 元素也可用于其他语言，例如 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 的 GLSL 着色器编程语言和 [JSON](/zh-CN/docs/Glossary/JSON)。
 
 ## 属性
 
 该元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `async`
-  - : 对于普通脚本，如果存在 `async` 属性，那么普通脚本会被并行请求，并尽快解析和执行。
+  - : 对于经典脚本，若存在 `async` 属性，则会在解析过程中并行获取该经典脚本，并在可用后尽快对其求值。
 
-    对于[模块脚本](/zh-CN/docs/Web/JavaScript/Guide/Modules)，如果存在 `async` 属性，那么脚本及其所有依赖都会在延缓队列中执行，因此它们会被并行请求，并尽快解析和执行。
-
-    该属性能够消除**解析阻塞的 Javascript**。解析阻塞的 Javascript 会导致浏览器必须加载并且执行脚本，之后才能继续解析。`defer` 在这一点上也有类似的作用。
-
-    这是个布尔属性：布尔属性的存在意味着 true 值，布尔属性的缺失意味着 false 值。
-
-    关于浏览器支持，请参见[浏览器兼容性](#浏览器兼容性)章节。另可参见 [asm.js 的异步脚本](/zh-CN/docs/Games/Techniques/Async_scripts)文章。
-
-- `crossorigin`
-  - : 正常的 `script` 元素将最小的信息传递给 {{domxref('Window.error_event', 'window.onerror')}}，用于那些没有通过标准 {{Glossary("CORS")}} 检查的脚本。要允许对静态媒体使用独立域名的网站进行错误记录，请使用此属性。参见 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)，以获得对其有效参数的更多描述性解释。
-- `defer`
-  - : 这个布尔属性的设置是为了向浏览器表明，该脚本是要在文档被解析后，但在触发 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件之前执行的。
-
-    包含 `defer` 属性的脚本将阻塞 `DOMContentLoaded` 事件触发，直到脚本完成加载并执行。
+    对于[模块脚本](/zh-CN/docs/Web/JavaScript/Guide/Modules)，若存在 `async` 属性，则会在解析过程中并行获取脚本及其所有依赖项，并在它们可用后尽快对其求值。
 
     > [!WARNING]
-    > 本属性不应在缺少 `src` 属性的情况下使用（也就是内联脚本的情况下），这种情况下将不会生效。
-    >
-    > `defer` 属性对[模块脚本](/zh-CN/docs/Web/JavaScript/Guide/Modules)也不会生效——它们默认是 defer 的。
+    > 对于经典脚本，缺少 `src` 属性（即内联脚本）时不得使用此属性；在这种情况下它不起作用。
 
-    包含 `defer` 属性的脚本会按照它们出现在文档中的顺序执行。
+    此属性可消除**解析阻塞的 JavaScript**：浏览器本来必须先加载并对脚本求值，才能继续解析。`defer` 在此情形下有类似作用。
 
-    这个属性能够消除**阻塞解析的 JavaScript**，在这种情况下，浏览器必须在继续解析之前加载和执行脚本。`async` 在这种情况下也有类似的效果。
+    若同时指定此属性和 `defer` 属性，该元素的行为等同于只指定 `async` 属性。
 
-- `fetchpriority` {{Experimental_Inline}}
-  - : 提供一个指示，说明在获取外部脚本时要使用的相对优先级。允许的值：
-    - `high`
-      - : 获取该脚本的优先级比其他外部脚本的等级要高。
-    - `low`
-      - : 获取该脚本的优先级比其他外部脚本的等级要低。
-    - `auto`
-      - : 默认值：自动确定获取该脚本的相对优先级。
+    这是一个布尔属性：元素上存在布尔属性表示真值，不存在表示假值。
 
-- `integrity`
-  - : 包含用户代理可用于验证所获取到资源的完整性的内联元数据。参见[子资源完整性](/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity)。
-- `nomodule`
-  - : 这个布尔属性被设置来标明这个脚本不应该在支持 [ES 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)的浏览器中执行。实际上，这可用于在不支持模块化 JavaScript 的旧浏览器中提供回退脚本。
-- `nonce`
-  - : 在 [script-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) 中允许脚本的一个一次性加密随机数（nonce）。服务器每次传输策略时都必须生成一个唯一的 nonce 值。提供一个无法猜测的 nonce 是至关重要的，因为绕过一个资源的策略是微不足道的。
-- `referrerpolicy`
-  - : 表示在获取脚本或脚本获取资源时，要发送哪个 [referrer](/zh-CN/docs/Web/API/Document/referrer)：
-    - `no-referrer`：不会发送 {{HTTPHeader("Referer")}} 标头。
-    - `no-referrer-when-downgrade`（默认）：如果没有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）协议，{{HTTPHeader("Referer")}} 标头将不会被发送到{{Glossary("origin","源")}}上。
-    - `origin`：发送的 referrer 将被限制在 referrer 页面的源：其[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}}和{{Glossary("port","端口")}}。
-    - `origin-when-cross-origin`：将会限制发送至其他源的 referrer 的协议、主机和端口号。在同源的导航上仍然包括路径。
-    - `same-origin`：在{{Glossary("Same-origin policy", "同源")}}内将发送 referrer，但是跨源请求不包含 referrer 信息。
-    - `strict-origin`：只在协议安全等级相同时（如 HTTPS→HTTPS）发送文档的源作为 referrer，目标安全性降低（如 HTTPS→HTTP）时不发送。
-    - `strict-origin-when-cross-origin`：在执行同源请求时，发送完整的 URL，但只在协议安全级别保持不变（如 HTTPS→HTTPS）时发送源，而在目标安全性降低（如 HTTPS→HTTP）时不发送标头。
-    - `unsafe-url`：referrer 将包含源*和*路径（但不包含[片段](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)和[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为它将 TLS 保护的资源的源和路径泄露给不安全的源。
+    有关浏览器支持的说明，请参见[浏览器兼容性](#浏览器兼容性)。另请参阅 [asm.js 的异步脚本](/zh-CN/docs/Games/Techniques/Async_scripts)。
+
+- `attributionsrc` {{deprecated_inline}} {{non-standard_inline}}
+  - : 指定希望浏览器在脚本资源请求中一并发送 {{httpheader("Attribution-Reporting-Eligible")}} 标头。服务器端可据此在响应中发送 {{httpheader("Attribution-Reporting-Register-Source")}} 或 {{httpheader("Attribution-Reporting-Register-Trigger")}} 标头，以分别注册基于 JavaScript 的[归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)或[归因触发器](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)。应返回哪种响应标头取决于触发注册的 `Attribution-Reporting-Eligible` 标头的值。
+
+    > [!NOTE]
+    > 也可以通过发送包含 `attributionReporting` 选项的 {{domxref("Window/fetch", "fetch()")}} 请求（直接在 `fetch()` 调用中设置，或在传给 `fetch()` 调用的 {{domxref("Request")}} 对象中设置），或者发送一个在请求对象上调用 {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} 的 {{domxref("XMLHttpRequest")}}，注册基于 JavaScript 的归因来源或触发器。
+
+    此属性有两种可设置的形式：
+
+    - 布尔值，即仅使用 `attributionsrc` 名称。这表示希望将 {{httpheader("Attribution-Reporting-Eligible")}} 标头发送至 `src` 属性所指向的同一服务器。当在同一服务器上处理归因来源或触发器注册时，这种形式适用。注册归因触发器时，此属性为可选；若省略，则使用空字符串值。
+    - 包含一个或多个 URL 的值，例如：
+
+      ```html
+      <script
+        src="myscript.js"
+        attributionsrc="https://a.example/register-source https://b.example/register-source"></script>
+      ```
+
+      当所请求资源不在你控制的服务器上，或只想在另一台服务器上处理归因来源注册时，此形式很有用。可将一个或多个 URL 指定为 `attributionsrc` 的值。发生资源请求时，除资源源站外，{{httpheader("Attribution-Reporting-Eligible")}} 标头也会发送至 `attributionSrc` 中指定的 URL。这些 URL 随后可视情况以 {{httpheader("Attribution-Reporting-Register-Source")}} 或 {{httpheader("Attribution-Reporting-Register-Trigger")}} 标头响应，以完成注册。
+
       > [!NOTE]
-      > 空字符串（`""`）既是默认值，也是在不支持 `referrerpolicy` 的情况下的一个回退值。如果没有在 `<script>` 元素上明确指定 `referrerpolicy`，它将采用更高级别的 referrer 策略，即对整个文档或域设置的策略。如果没有更高级别的策略，空字符串将被视为等同于 `no-referrer-when-downgrade`。
+      > 指定多个 URL 意味着可在同一功能上注册多个归因来源。例如，你可能有多个要衡量成效的不同活动，它们需要基于不同数据生成不同报告。
+
+    更多信息请参见 [Attribution Reporting API](/zh-CN/docs/Web/API/Attribution_Reporting_API)。
+
+- `blocking`
+  - : 此属性明确指出，在脚本执行前应阻塞某些操作。要阻塞的操作必须是以空格分隔的阻塞令牌列表。目前仅有一个令牌：
+
+    - `render`：阻塞屏幕上内容的渲染。
+
+    > [!NOTE]
+    > 只有文档 `<head>` 中的 `script` 元素才可能阻塞渲染。脚本默认不阻塞渲染；若 `script` 元素不含 `type="module"`、`async` 或 `defer`，它阻塞的是*解析*而非*渲染*。若通过脚本动态添加这类 `script` 元素，必须设置 `blocking = "render"`，它才会阻塞渲染。
+
+- [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)
+  - : 对于未通过标准 {{Glossary("CORS")}} 检查的脚本，普通 `script` 元素仅向 {{domxref('Window.error_event', 'window.onerror')}} 传递最少的信息。若站点的静态媒体使用单独的域名，请使用此属性以允许记录错误。有关其有效参数的更详细说明，请参见 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)。
+- `defer`
+  - : 设置此布尔属性可向浏览器表明，脚本应在文档解析后、触发 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件前执行。
+
+    带有 `defer` 属性的脚本会阻止触发 `DOMContentLoaded` 事件，直至脚本加载完毕并完成求值。
+
+    > [!WARNING]
+    > 缺少 `src` 属性（即内联脚本）时不得使用此属性；在这种情况下它不起作用。
+    >
+    > `defer` 属性对[模块脚本](/zh-CN/docs/Web/JavaScript/Guide/Modules)无效——模块脚本默认延迟执行。
+
+    带有 `defer` 属性的脚本会按其在文档中出现的顺序执行。
+
+    此属性可消除**解析阻塞的 JavaScript**：浏览器本来必须先加载并对脚本求值，才能继续解析。`async` 在此情形下有类似作用。
+
+    若同时指定此属性和 `async` 属性，该元素的行为等同于只指定 `async` 属性。
+
+- [`fetchpriority`](/zh-CN/docs/Web/HTML/Reference/Attributes/fetchpriority)
+  - : 提供获取外部脚本时所用相对优先级的提示。允许的值为：
+
+    - `high`
+      - : 相较于其他外部脚本，以高优先级获取该外部脚本。
+    - `low`
+      - : 相较于其他外部脚本，以低优先级获取该外部脚本。
+    - `auto`
+      - : 不设置获取优先级偏好。这是默认值。未设置或设置无效值时使用。
+
+- [`integrity`](/zh-CN/docs/Web/HTML/Reference/Attributes/integrity)
+  - : 此属性包含脚本的一个或多个{{glossary("hash function", "散列值")}}。它用于确保脚本内容符合开发者预期，且未在[供应链攻击](/zh-CN/docs/Web/Security/Attacks/Supply_chain_attacks)中被恶意脚本替换。缺少 `src` 属性时不得指定此属性。另请参阅[子资源完整性](/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity)。
+- `nomodule`
+  - : 设置此布尔属性可表明脚本不应在支持 [ES 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)的浏览器中执行。实际上，可借此为不支持模块化 JavaScript 的旧浏览器提供回退脚本。
+- `nonce`
+  - : 用于允许 [script-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) 中脚本的加密{{Glossary("Nonce", "一次性随机数")}}（仅使用一次的数值）。服务器每次传输策略时都必须生成唯一的 nonce 值。提供无法猜测的 nonce 至关重要，否则绕过资源策略轻而易举。
+- `referrerpolicy`
+  - : 指定获取脚本或脚本所获取资源时要发送的 [referrer](/zh-CN/docs/Web/API/Document/referrer)：
+
+    - `no-referrer`：不发送 {{HTTPHeader("Referer")}} 标头。
+    - `no-referrer-when-downgrade`：不将 {{HTTPHeader("Referer")}} 标头发送至没有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的{{Glossary("origin", "源")}}。
+    - `origin`：发送的 referrer 限于引用页面的源：其[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
+    - `origin-when-cross-origin`：发送至其他源的 referrer 限于协议、主机和端口。同源导航仍会包含路径。
+    - `same-origin`：向{{Glossary("Same-origin policy", "同源")}}请求发送 referrer，但跨源请求不包含 referrer 信息。
+    - `strict-origin`：仅当协议安全级别相同（HTTPS→HTTPS）时，将文档源作为 referrer 发送；不发送至安全性较低的目标（HTTPS→HTTP）。
+    - `strict-origin-when-cross-origin`（默认值）：同源请求发送完整 URL；协议安全级别相同（HTTPS→HTTPS）时仅发送源；不向安全性较低的目标（HTTPS→HTTP）发送标头。
+    - `unsafe-url`：referrer 包含源*和*路径（但不包含[片段](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**此值不安全**，因为它会将受 TLS 保护资源的源和路径泄露给不安全的源。
+
+    > [!NOTE]
+    > 空字符串值（`""`）既是默认值，也是在不支持 `referrerpolicy` 时的回退值。若未在 `<script>` 元素上明确指定 `referrerpolicy`，它会采用更高层级的 referrer 策略，即为整个文档或域设置的策略。若没有更高层级的策略，空字符串等同于 `strict-origin-when-cross-origin`。
 
 - `src`
-  - : 这个属性定义引用外部脚本的 URI，这可以用来代替直接在文档中嵌入脚本。
-- [**`type`**](/zh-CN/docs/Web/HTML/Reference/Elements/script/type)
-  - : 该属性表示所代表的脚本类型。该属性的值可能为以下类型：
-    - **属性未设置（默认），一个空字符串，或一个 JavaScript MIME 类型**
-      - : 代表脚本为包含 JavaScript 代码的“传统的脚本”。如果脚本指的是 JavaScript 代码，我们鼓励作者省略这个属性，而不是指定一个 MIME 类型。所有的 JavaScript MIME 类型都列在 [IANA 的媒体类型规范](/zh-CN/docs/Web/HTTP/Guides/MIME_types#textjavascript)中。
-    - `module`
-      - : 此值导致代码被视为 JavaScript 模块。其中的代码内容会延后处理。`charset` 和 `defer` 属性不会生效。对于使用 `module` 的更多信息，请参见 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)指南。与传统代码不同的是，模块代码需要使用 CORS 协议来跨源获取。
-    - [`importmap`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/importmap)
-      - : 此值代表元素体内包含导入映射（importmap）表。导入映射表是一个 JSON 对象，开发者可以用它来控制浏览器在导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)时如何解析模块标识符。
-    - **任何其他值**
-      - : 所嵌入的内容被视为一个数据块，不会被浏览器处理。开发人员必须使用有效的 MIME 类型，但不是 JavaScript MIME 类型来表示数据块。所有其他属性，包括 `src` 均会被忽略。
+  - : 此属性指定外部脚本的 URI；可作为直接在文档中嵌入脚本的替代方式。
+- [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type)
+  - : 此属性表示脚本的类型。其值为下列之一：
 
-- `blocking` {{Experimental_Inline}}
-  - : 这个属性明确指出，在获取脚本的过程中，某些操作应该被阻断。要阻断的操作必须是一个以空格分隔的列表，下面列出了阻断属性。
-    - `render`：屏幕上渲染内容的操作应该被阻断。
+    - **属性未设置（默认值）、空字符串或 JavaScript MIME 类型**
+      - : 表示脚本是包含 JavaScript 代码的“经典脚本”。若脚本引用 JavaScript 代码，建议作者省略该属性，而非指定 MIME 类型。JavaScript MIME 类型列于 [IANA 媒体类型规范](/zh-CN/docs/Web/HTTP/Guides/MIME_types#textjavascript)。
+    - [`importmap`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/importmap)
+      - : 表示元素主体包含导入映射。导入映射是 JSON 对象，开发者可用它控制浏览器导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)时如何解析模块说明符。
+    - `module`
+      - : 使代码作为 JavaScript 模块处理。脚本内容的处理会延后。`charset` 和 `defer` 属性无效。关于使用 `module` 的信息，请参阅 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)指南。与经典脚本不同，模块脚本跨源获取时必须使用 CORS 协议。
+    - [`speculationrules`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/speculationrules) {{experimental_inline}}
+      - : 表示元素主体包含推测规则。推测规则采用 JSON 对象形式，用于确定浏览器应预获取或预渲染哪些资源。这是 {{domxref("Speculation Rules API", "", "", "nocode")}} 的一部分。
+    - **任何其他值**
+      - : 嵌入内容将作为数据块处理，浏览器不会处理它。开发者必须使用有效的非 JavaScript MIME 类型表示数据块。包括 `src` 属性在内的所有其他属性都会被忽略。
 
 ### 废弃的属性
 
 - `charset` {{Deprecated_inline}}
-  - : 如果存在，它的值必须是 ASCII 大小写不敏感的“`utf-8`”的匹配。没有必要指定 `charset` 属性，因为文档必须使用 UTF-8，而且 `script` 元素从文档继承其字符编码。
+  - : 若存在，其值必须与 `utf-8` 进行{{Glossary("ASCII")}}大小写不敏感匹配。无需指定 `charset` 属性，因为文档必须使用 UTF-8，`script` 元素会从文档继承字符编码。
 - `language` {{Deprecated_inline}} {{Non-standard_Inline}}
-  - : 和 `type` 属性类似，这个属性定义脚本使用的语言。但是与 `type` 不同的是，这个属性的可能值从未被标准化过。请用 `type` 属性代替这个属性。
+  - : 与 `type` 属性类似，此属性标识所用的脚本语言。但与 `type` 属性不同，它的可能值从未标准化。应改用 `type` 属性。
 
 ## 备注
 
-没有 [`async`](#async)、[`defer`](#defer) 或 `type="module"` 属性的脚本，以及没有 `type="module"` 属性的内联脚本，会在浏览器继续解析页面之前立即获取并执行。
+没有 [`async`](#async)、[`defer`](#defer) 或 `type="module"` 属性的脚本，以及没有 `type="module"` 属性的内联脚本，会在浏览器继续解析页面前立即获取并执行。
 
-脚本应该以 `text/javascript` 的 MIME 类型提供，但浏览器比较宽容，只有在脚本以图像类型（`image/*`）、视频类型（`video/*`）、音频类型（`audio/*`）或 `text/csv` 提供时才会阻止它们。如果脚本受阻，将向该元素发送 {{domxref("HTMLElement/error_event", "error")}} 事件；否则，将发送 {{domxref("HTMLElement/load_event", "load")}} 事件。
+脚本应以 `text/javascript` MIME 类型提供，但浏览器较宽容：只有脚本以图像类型（`image/*`）、视频类型（`video/*`）、音频类型（`audio/*`）或 `text/csv` 提供时才会阻止它。若脚本被阻止，将向元素发送 {{domxref("HTMLElement/error_event", "error")}} 事件；否则，发送 {{domxref("HTMLElement/load_event", "load")}} 事件。
 
 ## 示例
 
 ### 基本用法
 
-下面这些示例说明了如何使用 `<script>` 元素来导入（外部）脚本。
+此示例展示如何使用 `<script>` 元素导入（外部）脚本：
 
 ```html
 <script src="javascript.js"></script>
 ```
 
-以下示例展示了如何向 `<script>` 元素内放入（内联）脚本。
+以下示例展示如何在 `<script>` 元素内放置（内联）脚本：
 
 ```html
 <script>
-  alert("Hello World!");
+  alert("你好，世界！");
 </script>
 ```
 
-#### async 和 defer
+### async 和 defer
 
-使用了 `async` 属性加载的脚本不会在下载时阻塞页面。这意味着在脚本执行完成之前，将无法为用户处理和渲染网页上的其余内容。无法保证脚本的运行次序。当页面的脚本之间彼此独立，且不依赖于本页面的其他任何脚本时，`async` 是最理想的选择。
+使用 `async` 属性加载的脚本，在获取脚本时不会阻塞页面下载。然而下载完成后，脚本将执行，从而阻塞页面渲染。这意味着在脚本执行完毕前，网页其余内容无法被处理并显示给用户。无法保证脚本按任何特定顺序运行。当页面中的脚本彼此独立且不依赖页面中其他脚本时，最好使用 `async`。
 
-使用 `defer` 属性加载的脚本将按照它们在页面上出现的顺序加载。在页面内容全部加载完毕之前，脚本不会运行，如果脚本依赖于 DOM 的存在（例如，脚本修改了页面上的一个或多个元素），这一点非常有用。
+使用 `defer` 属性加载的脚本将按其在页面中出现的顺序加载。它们会等到页面内容全部加载后才运行；若脚本依赖 DOM 已就绪（例如修改页面中的一个或多个元素），这很有用。
 
-以下是不同脚本加载方法的可视化表示，以及这对页面意味着什么：
+下图直观展示不同脚本加载方式及其对页面的影响：
 
-![三种脚本加载方法的工作原理：默认情况下，在获取和执行 JavaScript 时，解析过程被阻塞。使用 async 时，解析暂停，仅执行。使用 defer 时，解析不会暂停，但在解析完所有其他内容后才开始执行](async-defer.jpg)
+![三种脚本加载方式的工作原理：默认方式会在获取和执行 JavaScript 时阻塞解析。使用 async 时，解析仅在执行期间暂停。使用 defer 时，解析不会暂停，但会在其他所有内容解析后才执行。](async-defer.jpg)
 
-_该图片来自 [HTML 规范](https://html.spec.whatwg.org/images/asyncdefer.svg)，经过了复制和裁剪，以 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 获得授权。_
+_此图来自 [HTML 规范](https://html.spec.whatwg.org/images/asyncdefer.svg)，在 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 许可条款下复制、裁剪为缩小版本。_
 
-比如，如果你的页面要加载以下三个脚本：
+例如，若有以下脚本元素：
 
 ```html
 <script async src="js/vendor/jquery.js"></script>
@@ -169,11 +176,11 @@ _该图片来自 [HTML 规范](https://html.spec.whatwg.org/images/asyncdefer.sv
 <script async src="js/script3.js"></script>
 ```
 
-你不能依赖脚本的加载顺序。`jquery.js` 可能在 `script2` 和 `script3` 之前或之后调用，如果这样，后两个脚本中依赖 `jquery` 的函数将产生错误，因为脚本运行时 `jquery` 尚未加载。
+不能依赖脚本的加载顺序。`jquery.js` 可能在 `script2.js` 和 `script3.js` 之前或之后加载；若出现这种情况，那些脚本中依赖 `jquery` 的函数将产生错误，因为脚本运行时 `jquery` 尚未定义。
 
-`async` 应该在有大量后台脚本需要加载，并且只想尽快加载到位的情况下使用。例如，你可能需要加载一些游戏数据文件，这在游戏真正开始时是需要的，但现在你只想显示游戏介绍、标题和大厅，而不想被脚本加载阻塞。
+当有一批后台脚本需要加载，并且只想让它们尽快到位时，应使用 `async`。例如，可能有一些游戏数据文件需在游戏真正开始时使用，但目前只想显示游戏介绍、标题和大厅，而不希望它们被脚本加载阻塞。
 
-解决这一问题可使用 `defer` 属性，在脚本和内容下载后，脚本将按照在页面中出现的顺序加载和运行：
+使用 `defer` 属性加载的脚本（见下文）将按其在页面中出现的顺序运行，并在脚本和内容下载完毕后执行：
 
 ```html
 <script defer src="js/vendor/jquery.js"></script>
@@ -181,19 +188,19 @@ _该图片来自 [HTML 规范](https://html.spec.whatwg.org/images/asyncdefer.sv
 <script defer src="js/script3.js"></script>
 ```
 
-在第二个示例中，我们可以确保 `jquery.js` 必定在 `script2.js` 和 `script3.js` 之前加载，同时 `script2.js` 必定在 `script3.js` 之前加载。在页面内容全部加载完成之前，它们不会运行，如果你的脚本依赖于 DOM（例如，它们修改了页面上的一个或多个元素），这将非常有用。
+在第二个示例中，可以确定 `jquery.js` 会在 `script2.js` 和 `script3.js` 前加载，且 `script2.js` 会在 `script3.js` 前加载。它们会等到页面内容全部加载后才运行；若脚本依赖 DOM 已就绪（例如修改页面中的一个或多个元素），这很有用。
 
-小结：
+总结：
 
-- `async` 和 `defer` 都指示浏览器在页面的其他部分（DOM 等）正在下载时，在一个单独的线程中下载脚本，因此在获取过程中页面加载不会被阻塞。
-- 带有 `async` 属性的脚本将在下载完成后立即执行。这将阻塞页面，并不保证任何特定的执行顺序。
-- 带有 `defer` 属性的脚本将按照它们的顺序加载，并且只有在所有脚本加载完毕后才会执行。
-- 如果脚本应该立刻运行且没有任何依赖，那么应使用 `async`。
-- 如果脚本需要等待页面解析，且依赖于其他脚本或 DOM，请使用 `defer` 加载脚本，并将关联的脚本按你想要浏览器加载它们的顺序置于相应 `<script>` 元素中。
+- `async` 和 `defer` 都会指示浏览器在下载页面其余部分（DOM 等）时，在单独线程中下载脚本，因此获取期间不会阻塞页面加载。
+- 带有 `async` 属性的脚本会在下载完成后立即执行。这会阻塞页面，且不保证任何特定执行顺序。
+- 带有 `defer` 属性的脚本按其在页面中的顺序加载，且仅在一切加载完毕后执行。
+- 如果脚本应立即运行且没有依赖项，请使用 `async`。
+- 如果脚本需等待解析并依赖其他脚本和/或 DOM 已就绪，请使用 `defer` 加载，并按希望浏览器执行它们的顺序放置对应的 `<script>` 元素。
 
-### 模块回落
+### 模块回退
 
-支持 `module` 作为 [`type`](#type) 属性的浏览器忽略任何具有 `nomodule` 属性的脚本。这种机制可以允许你在使用模块脚本时为不支持的浏览器提供 `nomodule` 标记的回落脚本。
+支持 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type) 属性 `module` 值的浏览器会忽略带有 `nomodule` 属性的脚本。因此，可以在使用模块脚本的同时，为不支持它的浏览器提供标有 `nomodule` 的回退脚本。
 
 ```html
 <script type="module" src="main.js"></script>
@@ -202,41 +209,41 @@ _该图片来自 [HTML 规范](https://html.spec.whatwg.org/images/asyncdefer.sv
 
 ### 使用导入映射导入模块
 
-在脚本中导入模块时，如果你不使用 [`type=importmap`](#importmap) 特性，那么每个模块都必须使用模块指定符来导入，该指定符可以是绝对的也可以是相对的 URL。在下面的例子中，第一个模块标识符（“./shapes/square.js”）是相对于文档的根 URL 解析的，而第二个是绝对 URL。
+在脚本中导入模块时，若不使用 [`type=importmap`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/importmap) 功能，则每个模块必须使用绝对或相对 URL 的模块说明符导入。下例中，第一个模块说明符是绝对 URL，第二个（`"./shapes/square.js"`）相对于文档的基 URL 解析。
 
 ```js
-import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
+import { name as squareName, draw } from "./shapes/square.js";
 ```
 
-导入映射允许你提供一个映射，当匹配的时候，可以替换模块标识符文本。下面的导入映射定义了“square”和“circle”键，可以作为上述模块指定的别名。
+导入映射允许提供一个映射；若匹配，则可替换模块说明符中的文本。下方导入映射定义 `circle` 和 `square` 键，可作为上方模块说明符的别名。
 
 ```html
 <script type="importmap">
   {
     "imports": {
-      "square": "./shapes/square.js",
-      "circle": "https://example.com/shapes/circle.js"
+      "circle": "https://example.com/shapes/circle.js",
+      "square": "./shapes/square.js"
     }
   }
 </script>
 ```
 
-这允许我们使用模块标识符中的名称导入模块（而不是绝对或相对的 URL）。
+这样便可使用模块说明符中的名称（而不是绝对或相对 URL）导入模块：
 
 ```js
-import { name as squareName, draw } from "square";
 import { name as circleName } from "circle";
+import { name as squareName, draw } from "square";
 ```
 
-关于使用导入映射的更多例子，请参见 JavaScript 模块指南中的[使用导入映射导入模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)章节。
+有关导入映射的更多示例，请参阅 JavaScript 模块指南中的[使用导入映射导入模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)章节。
 
 ### 在 HTML 中嵌入数据
 
-你也可以使用 `<script>` 元素来在 HTML 中嵌入服务端渲染的数据，在 `type` 属性中指定一个合法的非 JavaScript MIME 类型即可。
+还可通过在 `type` 属性中指定有效的非 JavaScript MIME 类型，使用 `<script>` 元素将服务端渲染的数据嵌入 HTML。
 
 ```html
-<!-- 由服务端生成 -->
+<!-- 由服务器生成 -->
 <script id="data" type="application/json">
   {
     "userId": 1234,
@@ -245,20 +252,55 @@ import { name as circleName } from "circle";
   }
 </script>
 
-<!-- 静态代码 -->
+<!-- 静态 -->
 <script>
   const userInfo = JSON.parse(document.getElementById("data").text);
-  console.log("User information: %o", userInfo);
+  console.log("用户信息：%o", userInfo);
 </script>
 ```
 
-### 在脚本被获取和执行之前阻止渲染
+### 在脚本获取并执行前阻止渲染
 
-你可以在 `blocking` 属性中包含 `render` 标记；页面的渲染将被阻止，直到脚本被获取和执行。在下面的例子中，我们封锁了一个异步脚本的渲染、这样，脚本不会阻塞解析，但保证在渲染开始前被执行。
+可在 `blocking` 属性中包含 `render` 令牌；页面渲染会被阻止，直至脚本被获取并执行。下例阻塞异步脚本的渲染，因此该脚本不会阻塞解析，但保证会在开始渲染前完成求值。
 
 ```html
 <script blocking="render" async src="async-script.js"></script>
 ```
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
+      <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#元数据内容">元数据内容</a>、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>动态脚本，例如 <code>text/javascript</code>。</td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许；开始和结束标签均为必需。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#元数据内容">元数据内容</a>或<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>的任何元素。</td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">没有对应的角色</a></td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>不允许任何 <code>role</code></td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLScriptElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -271,5 +313,5 @@ import { name as circleName } from "circle";
 ## 参见
 
 - {{domxref("document.currentScript")}}
-- [Flavio Copes 关于“高效加载 JavaScript”的文章，解释了 `async` 和 `defer` 之间的区别](https://flaviocopes.com/javascript-async-defer/)
+- [Flavio Copes 关于高效加载 JavaScript 并解释 `async` 与 `defer` 区别的文章](https://thevalleyofcode.com/javascript-async-defer/)
 - [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)指南
