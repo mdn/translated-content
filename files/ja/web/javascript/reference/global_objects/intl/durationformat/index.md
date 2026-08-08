@@ -50,7 +50,7 @@ const duration = {
 
 // スタイルを "long" に、ロケールを "ja-JP" に設定
 new Intl.DurationFormat("ja-JP", { style: "long" }).format(duration);
-// "1 時間 46 分 40 秒" 
+// "1 時間 46 分 40 秒"
 
 // スタイルを "short" に、ロケールを "en" に設定
 new Intl.DurationFormat("ja-JP", { style: "short" }).format(duration);
