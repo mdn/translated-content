@@ -130,29 +130,58 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 4. Cambia los enlaces internos de `/en-US/` a `/es/`.
 
    **¿Por qué `/es/` aunque la página no exista en español?**
-   MDN renderiza el contenido en inglés como respaldo (_fallback_) para las secciones o páginas que aún no han sido traducidas, pero siempre bajo la URL `/es/`. Un enlace como `/es/docs/Web/API/Fetch_API` funciona correctamente aunque la página no tenga traducción completa: el lector verá el contenido en inglés dentro del contexto de la interfaz en español.
+   Por consistencia de idioma, no porque MDN rellene el hueco con el inglés.
 
-   Por eso la regla general es: **usa siempre `/es/` en los enlaces internos absolutos de MDN**, sin excepción. Si la página de destino no existe en español, el sistema la muestra en inglés de forma transparente. No conserves `/en-US/` "para que funcione": un enlace en `/en-US/` saca al lector del contexto de su idioma preferido, incluso si la traducción sí existe.
+   Es una confusión muy común, y tiene una razón de ser. Lo que ocurre realmente cuando falta la traducción es esto:
+   1. Si no existe `files/es/<ruta>/index.md`, la URL `/es/docs/<Ruta>` devuelve **HTTP `404`** con la página «Page not found». El contenido en inglés **no** se renderiza en esa URL.
+   2. Acto seguido, ya en el navegador, MDN comprueba si la página existe en inglés y, si existe, muestra un aviso: _«**Good news!** The page you requested doesn't exist in **Spanish** but it exists in **English**»_ con un **enlace** a `/en-US/docs/<Ruta>`.
 
-   **Anclas (`#fragmento`): deben coincidir con el encabezado que se renderiza**
+   Es decir: hay un **enlace** de respaldo, no un renderizado de respaldo. La URL sigue siendo `/es/`, el estado sigue siendo `404` y hay que hacer clic para llegar al inglés. Puedes comprobarlo con cualquier página que exista en inglés y no en español:
 
-   Cuando un enlace incluye un fragmento (`#`), la ancla debe coincidir con el ID del encabezado **tal como se renderiza en la página destino**. No es simplemente "español si la URL es `/es/`": lo que importa es qué contenido sirve MDN en esa URL.
+   ```bash
+   curl -s -o /dev/null -w '%{http_code}\n' \
+     "https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/Functions"
+   # 404
+   ```
 
-   | Caso                    | URL de destino               | Página destino              | Ancla correcta                                      |
-   | ----------------------- | ---------------------------- | --------------------------- | --------------------------------------------------- |
-   | Página _sin_ traducción | `/es/docs/Web/API/Fetch_API` | MDN sirve inglés (fallback) | Ancla en inglés: `#browser_compatibility`           |
-   | Página _con_ traducción | `/es/docs/Web/API/Fetch_API` | MDN sirve español           | Ancla en español: `#compatibilidad_con_navegadores` |
-   | Misma página            | `#fragmento`                 | El archivo actual           | Ancla del encabezado traducido                      |
+   Tampoco hay respaldo por secciones: una página en español muestra únicamente los encabezados que su propio archivo contiene, y las secciones que aún no se han traducido simplemente no aparecen (no se rellenan con el texto en inglés).
 
-   **Ejemplo del problema frecuente:** el inglés tiene `/en-US/docs/Web/API/Fetch_API#browser_compatibility`. Al traducir la página que contiene ese enlace, es tentador cambiar ambas partes a la vez: `/es/docs/Web/API/Fetch_API#compatibilidad_con_navegadores`. Pero si esa página no tiene traducción española, MDN la sirve en inglés y el encabezado `#compatibilidad_con_navegadores` no existe: el lector llega a la página pero sin desplazarse a la sección correcta.
+   Aun así, la regla es: **usa siempre `/es/` en los enlaces internos absolutos de MDN**, sin excepción. Los motivos son dos:
+   - Un enlace en `/en-US/` saca al lector del contexto de su idioma preferido, incluso cuando la traducción sí existe.
+   - Un enlace en `/es/` hacia una página todavía sin traducir empieza a funcionar solo en cuanto alguien la traduzca, sin tener que volver a editar la página que lo contiene. Las propias macros de MDN (`{{PreviousMenuNext}}`, `{{domxref}}`, `{{Glossary}}`) generan enlaces `/es/` con ese mismo criterio.
 
-   La solución es verificar antes de cambiar la ancla:
-   - ¿Existe `files/es/…/Fetch_API/index.md` en el repositorio con ese encabezado ya traducido? → usa la ancla en español.
-   - ¿No existe o la sección puntual sigue en inglés? → cambia la URL a `/es/` pero **conserva la ancla en inglés**: `/es/docs/Web/API/Fetch_API#browser_compatibility`.
+   Es decir: un enlace `/es/` roto hoy es un enlace correcto que aún no tiene destino, y así lo tratamos.
 
-   Para los **enlaces dentro de la misma página** (`[ver más](#cómo_funciona)`), la ancla debe coincidir con el ID generado por el encabezado traducido. Si tradujiste `## How it works` como `## Cómo funciona`, el enlace debe ser `#cómo_funciona`.
+   **Anclas (`#fragmento`): deben coincidir con un encabezado que exista en la página en español**
 
-   **Cómo verificar el ID real de un encabezado:** la forma exacta en que un encabezado se convierte en ID (si conserva tildes, mayúsculas, guiones bajos, etc.) depende de la versión actual del motor de _build_ (Rari), así que no conviene deducirlo a mano. Para confirmarlo, levanta el sitio localmente:
+   Una ancla que no corresponde a ningún ID no da error: el navegador se queda al inicio de la página, igual que si no hubiera fragmento. Por eso las anclas mal traducidas pasan desapercibidas con facilidad.
+
+   | Caso                                                                            | Qué hacer                                                                               |
+   | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+   | La página destino está traducida y tiene ese encabezado                         | Usa la ancla en español: `#compatibilidad_con_navegadores`                              |
+   | La página destino está traducida pero le falta la sección (está desactualizada) | Quita el fragmento y deja sólo el enlace a la página                                    |
+   | La página destino todavía no existe en español                                  | Quita el fragmento y deja sólo el enlace a la página                                    |
+   | Enlace dentro de la misma página                                                | Usa el ID del encabezado tal como lo tradujiste (`## Cómo funciona` → `#cómo_funciona`) |
+
+   **No conserves la ancla en inglés "para que funcione mientras tanto".** No va a resolverse sola: cuando la página destino se traduzca, ese encabezado también se traducirá, así que el ID pasará a ser, por ejemplo, `#índice_de_eventos` y nunca `#event_index`. Como una ancla inexistente equivale a no poner ancla, lo correcto es dejar sólo el enlace a la página y añadir el fragmento cuando el destino esté traducido.
+
+   Y si la página destino todavía no existe en español, el fragmento se pierde de todos modos: el enlace de respaldo que ofrece la página `404` apunta a la página en inglés **sin** conservar el `#fragmento`.
+
+   **Ejemplo del problema frecuente:** el inglés tiene `/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated`. Al traducir se cambia la URL a `/es/`, y el fragmento se copia tal cual porque la página existe y el enlace "se ve bien". Pero los encabezados de esa página en español se renderizan como `experimental`, `obsoleto` y `en_desuso`: no hay ningún ID `deprecated`, así que el lector aterriza al inicio de la página.
+
+   **Cómo verificar los IDs reales de una página en español:** cualquier página publicada expone su HTML ya renderizado en `index.json`, que es la forma más rápida de leer los IDs sin levantar nada:
+
+   ```bash
+   curl -sL "https://developer.mozilla.org/es/docs/<Ruta>/index.json" | grep -oE '"id":"[^"]*"'
+   ```
+
+   Para las páginas que estás modificando en un PR, el bot publica una URL de previsualización; sirve igual:
+
+   ```bash
+   curl -s "https://prNNNNN.review.mdn.allizom.net/es/docs/<Ruta>" | grep -oiE '<h[2-6][^>]*id="[^"]*"'
+   ```
+
+   No deduzcas el ID a mano: la forma exacta en que un encabezado se convierte en ID (si conserva tildes, mayúsculas, signos de apertura `¿`, etc.) la decide el motor de _build_ (Rari). Como alternativa, también puedes levantar el sitio localmente:
 
    ```bash
    # Desde tu clon de mdn/content, con CONTENT_TRANSLATED_ROOT apuntando a translated-content
