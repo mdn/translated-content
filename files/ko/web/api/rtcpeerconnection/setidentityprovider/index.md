@@ -20,11 +20,11 @@ _이 메소드는 반환 값이 존재하지 않습니다._
 ### 매개변수
 
 - _domainname_
-  - : IdP가 존재하는 도메인 이름을 나타내는 {{domxref("DOMString")}}입니다.
+  - : IdP가 존재하는 도메인 이름을 나타내는 {{jsxref("String")}}입니다.
 - _protocol_ {{optional_Inline}}
-  - : IdP와 통신하기위해 사용된 프로토콜을 나타내는 {{domxref("DOMString")}}입니다. 디폴트 값은 `"default"`로 설정되어있고, IdP가 감청하게되는 URL를 결정하는데에 사용됩니다.
+  - : IdP와 통신하기위해 사용된 프로토콜을 나타내는 {{jsxref("String")}}입니다. 디폴트 값은 `"default"`로 설정되어있고, IdP가 감청하게되는 URL를 결정하는데에 사용됩니다.
 - _username_ {{optional_Inline}}
-  - : IdP와 연관된 유저 이름을 나타내는 {{domxref("DOMString")}}입니다.
+  - : IdP와 연관된 유저 이름을 나타내는 {{jsxref("String")}}입니다.
 
 ## 예시
 

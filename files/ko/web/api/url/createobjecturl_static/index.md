@@ -5,7 +5,7 @@ slug: Web/API/URL/createObjectURL_static
 
 {{APIRef("URL API")}}
 
-**`URL.createObjectURL()`** 정적 메서드는 주어진 객체를 가리키는 URL을 {{domxref("DOMString")}}으로 반환합니다. 해당 URL은 자신을 생성한 창의 {{domxref("document")}}가 사라지면 함께 무효화됩니다.
+**`URL.createObjectURL()`** 정적 메서드는 주어진 객체를 가리키는 URL을 {{jsxref("String")}}으로 반환합니다. 해당 URL은 자신을 생성한 창의 {{domxref("document")}}가 사라지면 함께 무효화됩니다.
 
 객체 URL을 해제하려면 {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}을 호출하세요.
 
@@ -27,7 +27,7 @@ const objectURL = URL.createObjectURL(object);
 
 ### 반환 값
 
-지정한 `object`의 참조 URL을 담은 {{domxref("DOMString")}}
+지정한 `object`의 참조 URL을 담은 {{jsxref("String")}}
 
 ## 예제
 
