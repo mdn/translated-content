@@ -3,7 +3,7 @@ title: "Serial: requestPort() メソッド"
 short-title: requestPort()
 slug: Web/API/Serial/requestPort
 l10n:
-  sourceCommit: de73dc7280b2b84ce58d2a93b241bd8a93e8096d
+  sourceCommit: 6fe7a18b80e55d9d25dcc16dfb010eec09460bb8
 ---
 
 {{APIRef("Web Serial API")}}{{SecureContext_Header}}
