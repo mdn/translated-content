@@ -2,7 +2,7 @@
 title: キーボードイベントの key の値
 slug: Web/API/UI_Events/Keyboard_event_key_values
 l10n:
-  sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
+  sourceCommit: b7c69f770fa6634129e8368570f60c37116d9069
 ---
 
 {{DefaultAPISidebar("UI Events")}}
@@ -189,22 +189,18 @@ l10n:
     <tr>
       <td><code>"Meta"</code> [1]</td>
       <td>
-        <kbd>Meta</kbd> キー。特別なコマンド入力を発行できます。これは <kbd>Windows</kbd> ロゴキー、または Mac キーボードの <kbd>Command</kbd> または <kbd>⌘</kbd> キーです。
+        <kbd>Meta</kbd> キー。特別なコマンド入力を発行できます。
+        これは <kbd>Windows</kbd> ロゴキー、または Mac キーボードの <kbd>Command</kbd> または <kbd>⌘</kbd> キーです。
       </td>
       <td><code>VK_LWIN</code> (0x5B)<br /><code>VK_RWIN</code> (0x5C)</td>
       <td>
-        <code>kVK_Command</code> (0x37)<br /><code>kVK_RightCommand</code>
-        (0x36)
+        <code>kVK_Command</code> (0x37)<br /><code>kVK_RightCommand</code> (0x36)
       </td>
       <td>
-        <code>GDK_KEY_Meta_L</code> (0xFFE7)<br /><code>GDK_KEY_Meta_R</code>
-        (0xFFE8)<br /><code>Qt::Key_Meta</code> (0x01000022)
+        <code>GDK_KEY_Meta_L</code> (0xFFE7)<br /><code>GDK_KEY_Meta_R</code> (0xFFE8)<br /><code>Qt::Key_Meta</code> (0x01000022)
       </td>
       <td>
-        <code>KEYCODE_META_LEFT</code> (117)<br /><code
-          >KEYCODE_META_RIGHT</code
-        >
-        (118)
+        <code>KEYCODE_META_LEFT</code> (117)<br /><code>KEYCODE_META_RIGHT</code> (118)
       </td>
     </tr>
     <tr>
@@ -293,11 +289,11 @@ l10n:
   </tbody>
 </table>
 
-\[1] Firefox では <kbd>Windows</kbd> キーが `"Meta"` ではなく `"OS"` として報告されます。これは [Firefox バグ 1232918](https://bugzil.la/1232918) により Firefox で変更される予定です。修正されるまでは、これらのキーは `"OS"` として返されます。 Windows では `VK_LWIN` (0x5B) と `VK_RWIN` (0x5C)、Linux では `GDK_KEY_Super_L` (0xFFEB)、`GDK_KEY_Super_R` (0xFFEC)、`GDK_KEY_Hyper_L` (0xFFED)、`GDK_KEY_Hyper_R` (0xFFEE) です。
+\[1] Firefox 118 以降では、<kbd>Windows</kbd> キーが `"Meta"` として正しく報告されます（以前のバージョンでは、このキーは `"OS"` として報告されていました）。
 
 \[2] Firefox は Firefox 37 まで <kbd>Symbol</kbd> キーに対応していませんでした。
 
-\[3] Firefox は <kbd>Super</kbd> と <kbd>Hyper</kbd> キーに対して、`"Super"` と `"Hyper"` の代わりに `"OS`" というキー値を生成します。
+\[3] Firefox は <kbd>Super</kbd> と <kbd>Hyper</kbd> キーに対して、`"Super"` と `"Hyper"` の代わりに `"OS"` というキー値を生成します。
 
 \[4] Chrome 67 と Firefox 63 では、<kbd>Alt</kbd> キーが <kbd>AltGr</kbd> に割り当てられたキーボード レイアウトの場合、正しい <kbd>Alt</kbd> キーが正しく解釈されるようになりました。詳細は Firefox のバグ [Firefox バグ 900750](https://bugzil.la/900750) と [Chrome バグ 25503](https://crbug.com/25503) を参照してください。
 
@@ -428,7 +424,7 @@ l10n:
     <tr>
       <td><code>"ArrowUp"</code> [1]</td>
       <td>右矢印キーです。</td>
-      <td><code>VK_UP</code><code> (0x26)</code></td>
+      <td><code>VK_UP</code> (0x26)</td>
       <td><code>kVK_UpArrow</code> (0x7E)</td>
       <td>
         <code>GDK_KEY_Up</code> (0xFF52)<br /><code>GDK_KEY_KP_Up</code>
@@ -464,7 +460,7 @@ l10n:
         <kbd>Page Down</kbd>（または <kbd>PgDn</kbd>）キーです。下が見えるようにスクロールするか、コンテンツの次のページを表示します。
       </td>
       <td><code>VK_NEXT</code> (0x22)</td>
-      <td><code>kVK_PageDown</code><code> (0x79)</code></td>
+      <td><code>kVK_PageDown</code> (0x79)</td>
       <td>
         <code>GDK_KEY_Page_Down</code> (0xFF56)<br /><code
           >GDK_KEY_KP_Page_Down</code
@@ -705,7 +701,7 @@ l10n:
         コンテキストメニューを表示させます。通常、キーボード右側の <kbd>Windows</kbd> （または <kbd>OS</kbd>） キーと <kbd>Control</kbd> キーの間にあります。
       </td>
       <td><code>VK_APPS</code> (0x5D)</td>
-      <td><code>kVK_PC_ContextMenu</code> (0x6E)</td>
+      <td><code>kVK_ContextualMenu</code> (0x6E)</td>
       <td>
         <code>GDK_KEY_Menu</code> (0xFF67)<br /><code>Qt::Key_Menu</code>
         (0x01000055)
@@ -1041,7 +1037,7 @@ l10n:
 
 ## IME および変換キー
 
-入力メソッドエディター (IME) で使用するキーです。単純なキー入力では入力しにくいテキストを入力するときに用い、キーボードの文字入力キーの数よりも多くの字句がある言語などのテキストを入力します。例えば、中国語、日本語、韓国語、ヒンディー語などが挙げられます。
+{{glossary("Input Method Editor", "インプットメソッドエディター")}} (IME) で使用するキーです。単純なキー入力では入力しにくいテキストを入力するときに用い、キーボードの文字入力キーの数よりも多くの字句がある言語などのテキストを入力します。例えば、中国語、日本語、韓国語、ヒンディー語などが挙げられます。
 
 複数の言語に共通するキーもあれば、固有の言語を対象とするキーボードにのみ存在するキーもあります。また、すべてのキーボードにこれらのキーがあるとは限りません。
 
@@ -1255,7 +1251,7 @@ l10n:
     <tr>
       <td><code>"Process"</code> [3]</td>
       <td>
-        The <kbd>Process</kbd> キー。 IME に変換を処理するよう指示します。
+        <kbd>Process</kbd> キー。 IME に変換を処理するよう指示します。
       </td>
       <td><code>VK_PROCESSKEY</code> (0xE5)</td>
       <td></td>
@@ -1265,7 +1261,7 @@ l10n:
     <tr>
       <td><code>"SingleCandidate"</code> [4]</td>
       <td>
-        単一の候補」キー。（複数候補モードに対して）単一候補モードにします。このモードでは、一度に表示される候補は 1 つだけです。
+        単一候補キー。（複数候補モードに対して）単一候補モードにします。このモードでは、一度に表示される候補は 1 つだけです。
       </td>
       <td></td>
       <td></td>
@@ -1282,7 +1278,9 @@ l10n:
 
 \[1] _X Window System_ では、 <kbd>Compose</kbd> キーは <kbd>Multi</kbd> キーと呼ばれます。
 
-\[2] Firefox バージョン 36 以前では、<kbd>NonConvert</kbd> キーが正しい `"NonConvert"` ではなく `"Nonconvert"` として報告されます。
+<!-- cSpell:ignore Nonconvert -->
+
+\[2] Firefox バージョン 36 以前では、<kbd>無変換</kbd> キーが正しい `"NonConvert"` ではなく `"Nonconvert"` として報告されます。
 
 \[3] <kbd>Process</kbd> キーは現在 Firefox では `"Unidentified"` を返します。 Google Chrome は IME が使用されていないかのようにキーの値を返します。
 
@@ -1493,7 +1491,7 @@ l10n:
       <td></td>
     </tr>
     <tr>
-      <td><code>"ZenkakuHanaku"</code> [6]</td>
+      <td><code>"ZenkakuHankaku"</code> [6]</td>
       <td>
         <kbd>全角/半角</kbd>トグルキーです。
       </td>
@@ -1512,7 +1510,7 @@ l10n:
   </tbody>
 </table>
 
-\[1] Firefox 37 より前のバージョンでは、<kbd>Eisu</kbd> キーが誤って `"RomanCharacters"` に割り当てられていました。
+\[1] Firefox 37 より前のバージョンでは、<kbd>英数</kbd> キーが誤って `"RomanCharacters"` に割り当てられていました。
 
 \[2] `VK_HANGUL` と `VK_KANA` は Windows 上では `VK_HANJA` と `VK_KANJI` と同様に同じ数値のキーです。
 
@@ -2051,7 +2049,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
       <td><code>VK_F14</code> (0x7D)</td>
       <td><code>kVK_F14</code> (0x6B)</td>
       <td>
-        <code>GDK_KEY_F14</code> (0xFFCB)<br /><code>Qt::Key_F1</code>4
+        <code>GDK_KEY_F14</code> (0xFFCB)<br /><code>Qt::Key_F14</code>
         (0x0100003D)
       </td>
       <td><code>KEYCODE_F14</code></td>
@@ -2062,7 +2060,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
       <td><code>VK_F15</code> (0x7E)</td>
       <td><code>kVK_F15</code> (0x71)</td>
       <td>
-        <code>GDK_KEY_F15</code> (0xFFCC)<br /><code>Qt::Key_F1</code>5
+        <code>GDK_KEY_F15</code> (0xFFCC)<br /><code>Qt::Key_F15</code>
         (0x0100003E)
       </td>
       <td><code>KEYCODE_F15</code></td>
@@ -2073,7 +2071,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
       <td><code>VK_F16</code> (0x7F)</td>
       <td><code>kVK_F16</code> (0x6A)</td>
       <td>
-        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F1</code>6
+        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F16</code>
         (0x0100003F)
       </td>
       <td><code>KEYCODE_F16</code></td>
@@ -2084,7 +2082,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
       <td><code>VK_F17</code> (0x80)</td>
       <td><code>kVK_F17</code> (0x40)</td>
       <td>
-        <code>GDK_KEY_F17</code> (0xFFCE)<br /><code>Qt::Key_F1</code>7
+        <code>GDK_KEY_F17</code> (0xFFCE)<br /><code>Qt::Key_F17</code>
         (0x01000040)
       </td>
       <td><code>KEYCODE_F17</code></td>
@@ -2095,7 +2093,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
       <td><code>VK_F18</code> (0x81)</td>
       <td><code>kVK_F18</code> (0x4F)</td>
       <td>
-        <code>GDK_KEY_F18</code> (0xFFCF)<br /><code>Qt::Key_F1</code>8
+        <code>GDK_KEY_F18</code> (0xFFCF)<br /><code>Qt::Key_F18</code>
         (0x01000041)
       </td>
       <td><code>KEYCODE_F18</code></td>
@@ -2106,7 +2104,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
       <td><code>VK_F19</code> (0x82)</td>
       <td><code>kVK_F19</code> (0x50)</td>
       <td>
-        <code>GDK_KEY_F19</code> (0xFFD0)<br /><code>Qt::Key_F1</code>9
+        <code>GDK_KEY_F19</code> (0xFFD0)<br /><code>Qt::Key_F19</code>
         (0x01000042)
       </td>
       <td><code>KEYCODE_F19</code></td>
@@ -2184,7 +2182,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_APP_SWITCH</code> (181)</td>
+      <td><code>KEYCODE_APP_SWITCH</code> (187)</td>
     </tr>
     <tr>
       <td><code>"Call"</code></td>
@@ -2306,7 +2304,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
   <tbody>
     <tr>
       <td><code>"ChannelDown"</code></td>
-      <td>前のチャンネルへの切り替え。</td>
+      <td>前のチャンネルへ切り替えます。</td>
       <td><code>APPCOMMAND_MEDIA_CHANNEL_DOWN</code></td>
       <td></td>
       <td><code>Qt::Key_ChannelDown</code> (0x01000119)</td>
@@ -2314,7 +2312,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
     </tr>
     <tr>
       <td><code>"ChannelUp"</code></td>
-      <td>Switches to the next channel.</td>
+      <td>次のチャンネルへ切り替えます。</td>
       <td><code>APPCOMMAND_MEDIA_CHANNEL_UP</code></td>
       <td></td>
       <td><code>Qt::Key_ChannelUp</code> (0x01000118)</td>
@@ -2327,10 +2325,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
       </td>
       <td><code>APPCOMMAND_MEDIA_FAST_FORWARD</code></td>
       <td></td>
-      <td>
-        <code>GDK_KEY_AudioForward (0x1008FF97)<br />Qt:Key_AudioForward</code>
-        (0x01000102)
-      </td>
+      <td><code>GDK_KEY_AudioForward</code> (0x1008FF97)<br/><code>Qt:Key_AudioForward</code> (0x01000102)</td>
       <td><code>KEYCODE_MEDIA_FAST_FORWARD</code> (90)</td>
     </tr>
     <tr>
@@ -2361,7 +2356,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
       <td><code>APPCOMMAND_MEDIA_PLAY</code></td>
       <td></td>
       <td><code>GDK_KEY_AudioPlay</code> (0x1008FF14)</td>
-      <td><code>KEYCODE_MEDIA_PLAY</code><code> (126)</code></td>
+      <td><code>KEYCODE_MEDIA_PLAY</code> (126)</td>
     </tr>
     <tr>
       <td><code>"MediaPlayPause"</code></td>
@@ -2386,7 +2381,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
         >
         (0x01000084)
       </td>
-      <td><code>KEYCODE_MEDIA_RECORD</code><code> (130)</code></td>
+      <td><code>KEYCODE_MEDIA_RECORD</code> (130)</td>
     </tr>
     <tr>
       <td><code>"MediaRewind"</code></td>
@@ -2399,7 +2394,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
         >
         (0x010000C5)
       </td>
-      <td><code>KEYCODE_MEDIA_REWIND</code><code> (89)</code></td>
+      <td><code>KEYCODE_MEDIA_REWIND</code> (89)</td>
     </tr>
     <tr>
       <td><code>"MediaStop"</code></td>
@@ -2955,11 +2950,11 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
 
 - [DTV Application Software Environment](https://www.atsc.org/atsc-documents/a100-dtv-application-software-environment-level-1-dase-1/) （[ATSC](https://en.wikipedia.org/wiki/ATSC) 仕様の一部）
 - [Open Cable Application Platform](https://en.wikipedia.org/wiki/OpenCable_Application_Platform)
-- [ANSI/CEA-2014-B](https://shop.cta.tech/products/web-based-protocol-and-framework-for-remote-user-interface-on-upnp-networks-and-the-internet): UPnP™ ネットワークとインターネット上のリモートユーザーインターフェイスのためのウェブベースのプロトコルとフレームワーク
+- [ANSI/CEA-2014-B](https://shop.cta.tech/products/cta-2014)): UPnP™ ネットワークとインターネット上のリモートユーザーインターフェイスのためのウェブベースのプロトコルとフレームワーク
 - [Android KeyEvent key code values](https://developer.android.com/reference/android/view/KeyEvent.html)
 
 > [!NOTE]
-> リモコンには通常、[マルチメディアキー](#マルチメディアキー)や[音声制御キー](#音声制御キー)のように、すでに他の場所で定義されている値を持つキーが記載されています。それらのキーの値は、それらの表内の文書化されたものと一致します。
+> リモコンには通常、[マルチメディアキー](#マルチメディアキー)や[音声制御キー](#音声制御キー)のように、すでに他の場所で定義されている値を持つキーが記載されています。それらのキーの値は、それらの表内で文書化されたものと一致します。
 
 <table class="no-markdown">
   <thead>
@@ -3567,7 +3562,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
       <td><code>VK_SPLIT_SCREEN_TOGGLE</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_SplitScreen (</code>0x1008FF7D)<br /><code
+        <code>GDK_KEY_SplitScreen</code> (0x1008FF7D)<br /><code
           >Qt::Key_SplitScreen</code
         >
         (0x010000ED)
@@ -3601,7 +3596,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
     <tr>
       <td><code>"Teletext"</code></td>
       <td>
-        利用できる場合は、[teletext](https://en.wikipedia.org/wiki/Teletext) の表示を切り替えます。
+        利用できる場合は、<a href="https://en.wikipedia.org/wiki/Teletext">teletext</a> の表示を切り替えます。
       </td>
       <td><code>VK_TELETEXT</code></td>
       <td></td>
@@ -3708,6 +3703,8 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
       <th scope="col">Linux</th>
       <th scope="col">Android</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><code>"Close"</code> [1]</td>
       <td>
@@ -3811,7 +3808,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
       </td>
       <td></td>
     </tr>
-  </thead>
+  </tbody>
 </table>
 
 \[1] Firefox 37 より前のバージョンでは、このキーはキー値 `"Unidentified"` を生成していました。
@@ -4233,7 +4230,7 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
 
 \[3] Google Chrome 57 以前は `"LaunchApplication2"` の代わりに `"LaunchCalculator"` を返していました。詳しくは [Chrome Bug 612743](https://crbug.com/612743) を参照してください。
 
-\[4] Firefox 37 より前の Firefox では、ウェブブラウザーのキーは "`LaunchWebBrowser"` ではなく `"LaunchApplication1"` というキーコードを返していました。
+\[4] Firefox 37 より前の Firefox では、ウェブブラウザーのキーは `"LaunchWebBrowser"` ではなく `"LaunchApplication1"` というキーコードを返していました。
 
 \[5] Firefox は Firefox 37 でこのキーに対応しました。それ以前は、このキーは `"Unidentified"` として報告されていました。
 
@@ -4386,7 +4383,8 @@ Linux で GTK を使ってアクセント記号やその他の特殊文字を生
 
 これらのキーはキーボードのテンキーにあります。しかし、すべてがすべてのキーボードに存在するわけではありません。一般的なテンキーには <kbd>0</kbd> から <kbd>9</kbd> までの数字キーがありますが（`"0"` から `"9"` までのエンコード方式）、マルチメディアキーボードの中には、それ以上の数字のために追加の数字キーがあるものもあります。
 
-> [!NOTE] > <kbd>10</kbd> キーが存在する場合、 `key` の値が `"0"` のイベントを生成します。
+> [!NOTE]
+> <kbd>10</kbd> キーが存在する場合、 `key` の値が `"0"` のイベントを生成します。
 
 <table class="no-markdown">
   <thead>
