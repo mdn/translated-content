@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
-La méthode **`scrollIntoViewIfNeeded()`** de l'interface {{DOMxRef("Element")}} fait défiler l'élément courant dans la zone visible de la fenêtre du navigateur si celui-ci n'est pas déjà dans la zone visible. Si l'élément est déjà dans la zone visible de la fenêtre du navigateur, aucun défilement n'a lieu. Cette méthode est une variation propriétaire de la méthode standard [`Element.scrollIntoView()`](/fr/docs/Web/API/Element/scrollIntoView) .
+La méthode **`scrollIntoViewIfNeeded()`** de l'interface {{DOMxRef("Element")}} fait défiler l'élément courant dans la zone visible de la fenêtre du navigateur si celui-ci n'est pas déjà dans la zone visible. Si l'élément est déjà dans la zone visible de la fenêtre du navigateur, aucun défilement n'a lieu. Cette méthode est une variation propriétaire de la méthode standard [`Element.scrollIntoView()`](/fr/docs/Web/API/Element/scrollIntoView).
 
 ## Syntaxe
 
