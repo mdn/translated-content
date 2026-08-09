@@ -114,7 +114,7 @@ select {
 }
 ```
 
-Ce que nous voulons faire, c'est transférer toutes les options sélectionnées dans la liste «&nbsp;non&nbsp;» vers la liste «&nbsp;oui&nbsp;» lorsque le bouton "oui" est pressé, et transférer toutes les options sélectionnées dans la liste «&nbsp;oui&nbsp;» vers la liste «&nbsp;non&nbsp;» lorsque le bouton "non" est pressé.
+Ce que nous voulons faire, c'est transférer toutes les options sélectionnées dans la liste «&nbsp;non&nbsp;» vers la liste «&nbsp;oui&nbsp;» lorsque le bouton "oui" est pressé, et transférer toutes les options sélectionnées dans la liste «&nbsp;oui&nbsp;» vers la liste «&nbsp;non&nbsp;» lorsque le bouton «&nbsp;non&nbsp;» est pressé.
 
 Pour ce faire, nous donnons à chacun des boutons un gestionnaire d'évènements clic, qui rassemble les options sélectionnées que vous souhaitez transférer dans une constante, et les options existantes dans la liste vers laquelle vous transférez dans une autre constante. Il appelle ensuite `replaceChildren()` sur la liste pour transférer les options, en utilisant l'opérateur de propagation pour passer toutes les options contenues dans les deux constantes.
 
