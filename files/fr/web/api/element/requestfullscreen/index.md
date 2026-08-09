@@ -122,7 +122,7 @@ Le verrouillage du clavier est désactivé lorsque le navigateur quitte le mode 
 Une [activation utilisateur transitoire](/fr/docs/Web/Security/Defenses/User_activation) est requise.
 L'utilisateur·ice doit interagir avec la page ou un élément de l'interface utilisateur pour que cette fonctionnalité fonctionne.
 
-Le mode plein écran est contrôlé par la directive [Politique d'autorisations](/fr/docs/Web/HTTP/Guides/Permissions_Policy) {{HTTPHeader("Permissions-Policy/fullscreen","fullscreen")}}.
+Le mode plein écran est contrôlé par la directive {{HTTPHeader("Permissions-Policy/fullscreen","fullscreen")}} [des politiques d'autorisations](/fr/docs/Web/HTTP/Guides/Permissions_Policy).
 
 La liste blanche par défaut pour `screen-wake-lock` est `self`.
 Ceci permet l'utilisation du mode plein écran dans des frames imbriquées de même origine mais l'empêche dans le contenu tiers.
