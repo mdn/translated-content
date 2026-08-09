@@ -124,13 +124,13 @@ Dans [la disposition en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout), la pro
 
 Les valeurs en pourcentage sont calculées par rapport à la [boîte de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_contenu) de l'élément conteneur. Les tailles en pourcentage cycliques se résolvent par rapport à zéro pour déterminer les contributions de {{Glossary("intrinsic size", "taille intrinsèque")}}, mais se résolvent par rapport à la boîte de contenu du conteneur de grille lors de la mise en page du contenu. Les deux exemples ci-dessous démontrent les valeurs de gap en pourcentage avec [taille de conteneur explicite](#percentage_gap_value_and_explicit_container_size) et [taille de conteneur implicite](#percentage_gap_value_and_implicit_container_size) dans la section des exemples.
 
-L'effet des valeurs positives de `gap` est comme si les lignes de la grille acquéraient de l'épaisseur&nbsp;: la piste de la grille entre deux lignes de la grille est l'espace entre les gouttières qui les représentent. Si un élément de la grille s'étend sur plusieurs lignes ou colonnes, pour le calcul de la taille des pistes, la gouttière est traitée comme une piste supplémentaire, vide, de taille fixe définie, ajoutée à la dimension dans la direction de l'étendue. Par exemple, si `gap: 10px` est défini sur une grille 3x3 de boîtes de 100px par 100px, si un élément de la grille s'étend sur deux colonnes verticales, sa largeur est de `210px`. S'il s'étend sur les trois, il a une largeur de `320px`.
+L'effet des valeurs positives de `gap` est comme si les lignes de la grille acquièrent de l'épaisseur&nbsp;: la piste de la grille entre deux lignes de la grille est l'espace entre les gouttières qui les représentent. Si un élément de la grille s'étend sur plusieurs lignes ou colonnes, pour le calcul de la taille des pistes, la gouttière est traitée comme une piste supplémentaire, vide, de taille fixe définie, ajoutée à la dimension dans la direction de l'étendue. Par exemple, si `gap: 10px` est défini sur une grille 3x3 de boîtes de 100px par 100px, si un élément de la grille s'étend sur deux colonnes verticales, sa largeur est de `210px`. S'il s'étend sur les trois, il a une largeur de `320px`.
 
 L'espace entre les lignes et les colonnes de la grille peut être supérieur à la valeur de la propriété `gap` en raison de l'espace ajouté entre les pistes par les propriétés {{CSSxRef("justify-content")}} et {{CSSxRef("align-content")}}.
 
 Les marges intérieures n'apparaissent qu'entre les pistes de la grille implicite. Si une grille est fragmentée entre plusieurs pistes, aucun espacement n'est ajouté entre ces pistes. Il n'y a pas de marge intérieure avant la première piste ni après la dernière piste, et si une piste est réduite, elle n'a pas de marge intérieure.
 
-Les premières versions de la spécification des Grilles CSS appelaient cette propriété `grid-gap`. Afin de maintenir la compatibilité avec les sites web hérités, les navigateurs acceptent `grid-gap` comme alias de `gap`.
+Les premières versions de la spécification des Grilles CSS appellent cette propriété `grid-gap`. Afin de maintenir la compatibilité avec les sites web hérités, les navigateurs acceptent `grid-gap` comme alias de `gap`.
 
 ### Dans les boîtes flexibles
 
@@ -307,7 +307,7 @@ body > div {
 
 {{EmbedLiveSample("Taille explicite du conteneur", "auto", 200)}}
 
-Inspectez maintenant les éléments grille et flex en utilisant [l'onglet Inspecteur dans les outils de développement Web <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html). Pour voir les espaces réels, survolez les balises `<div id="grid">` et `<div id="flex">` dans l'inspecteur. Vous remarquerez que l'espace est identique dans les deux cas, soit 25px.
+Inspectez maintenant les éléments grille et flexibles en utilisant [l'onglet Inspecteur dans les outils de développement Web <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html). Pour voir les espaces réels, survolez les balises `<div id="grid">` et `<div id="flex">` dans l'inspecteur. Vous pouvez remarquer que l'espace est identique dans les deux cas, soit 25px.
 
 ### Taille implicite du conteneur
 

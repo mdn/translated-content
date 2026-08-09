@@ -3,7 +3,7 @@ title: Propriété CSS `caption-side`
 short-title: caption-side
 slug: Web/CSS/Reference/Properties/caption-side
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`caption-side`** place le contenu de la {{HTMLElement("caption", "légende")}} d'un tableau sur le côté défini. Les valeurs sont relatives au mode d'écriture ({{CSSxRef("writing-mode")}}) du tableau.
@@ -89,9 +89,9 @@ caption-side: revert-layer;
 caption-side: unset;
 ```
 
-La propriété `caption-side` se paramètre à l'aide d'un des mots-clés suivants.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `top`
   - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au-dessus du tableau.

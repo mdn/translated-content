@@ -106,7 +106,7 @@ scroll-margin-inline: unset;
 
 ## Description
 
-Les valeurs de `scroll-margin` représentent des décalages définissant la zone d'accrochage au défilement utilisée pour accrocher cette boîte au [port d'accrochage](/fr/docs/Glossary/Scroll_snap#port_daccrochage). La zone d'accrochage au défilement est déterminée en prenant la boîte de bordure transformée, en trouvant sa boîte englobante rectangulaire (alignée sur les axes dans l'espace de coordonnées du conteneur de défilement), puis en ajoutant les décalages spécifiés.
+Les valeurs de `scroll-margin` représentent des décalages définissant la zone d'accrochage au défilement utilisée pour accrocher cette boîte au [port d'accrochage](/fr/docs/Glossary/Scroll_snap#port_daccrochage). La zone d'accrochage au défilement est déterminée en prenant la boîte de bordure transformée, en trouvant sa boîte englobante rectangulaire (alignée sur les axes dans l'espace de coordonnées du conteneur de défilement), puis en ajoutant les décalages définis.
 
 ## Définition formelle
 
@@ -154,7 +154,7 @@ Passons en revue le CSS. Le conteneur externe est mis en forme comme ceci&nbsp;:
 }
 ```
 
-Les parties principales pertinentes pour l'accrochage au défilement sont `overflow-x: scroll`, qui garantit que le contenu défilera et ne sera pas masqué, et `scroll-snap-type: x mandatory`, qui indique que l'accrochage au défilement doit se produire le long de l'axe horizontal, et que le défilement s'arrêtera toujours sur un point d'accrochage.
+Les parties principales pertinentes pour l'accrochage au défilement sont `overflow-x: scroll`, qui garantit que le contenu défile et n'est pas masqué, et `scroll-snap-type: x mandatory`, qui indique que l'accrochage au défilement doit se produire le long de l'axe horizontal, et que le défilement s'arrête toujours sur un point d'accrochage.
 
 Les éléments enfants sont mis en forme comme suit&nbsp;:
 
@@ -191,10 +191,10 @@ Enfin, nous définissons les valeurs de marge de défilement, une différente po
 }
 ```
 
-Cela signifie que lorsque vous faites défiler les éléments enfants du milieu, le défilement s'accrochera à `1rem` en dehors du bord de fin en ligne du deuxième `<div>`, et à `2rem` en dehors du bord de fin en ligne du troisième `<div>`.
+Cela signifie que lorsque vous faites défiler les éléments enfants du milieu, le défilement s'accroche à `1rem` en dehors du bord de fin en ligne du deuxième `<div>`, et à `2rem` en dehors du bord de fin en ligne du troisième `<div>`.
 
 > [!NOTE]
-> Ici, nous définissons `scroll-margin` sur le début _et_ la fin de l'axe en ligne (x dans notre cas), mais seul le bord de fin est vraiment pertinent. Il serait tout aussi efficace de ne définir une marge de défilement que sur ce bord, par exemple avec `scroll-margin-inline: 0 1rem`, ou `scroll-margin-inline-end: 1rem`.
+> Ici, nous définissons `scroll-margin` sur le début _et_ la fin de l'axe en ligne (x dans notre cas), mais seul le bord de fin est vraiment pertinent. Il est tout aussi efficace de ne définir une marge de défilement que sur ce bord, par exemple avec `scroll-margin-inline: 0 1rem`, ou `scroll-margin-inline-end: 1rem`.
 
 #### Résultat
 

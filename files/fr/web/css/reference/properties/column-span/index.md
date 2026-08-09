@@ -3,7 +3,7 @@ title: Propriété CSS `column-span`
 short-title: column-span
 slug: Web/CSS/Reference/Properties/column-span
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`column-span`** permet à un élément de s'étendre sur l'ensemble des colonnes lorsque sa valeur est `all`.
@@ -70,9 +70,9 @@ column-span: revert-layer;
 column-span: unset;
 ```
 
-La propriété `column-span` est définie par l'une des valeurs listées ci‑dessous.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `none`
   - : L'élément ne s'étend pas sur plusieurs colonnes.
