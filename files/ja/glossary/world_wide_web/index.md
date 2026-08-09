@@ -12,7 +12,7 @@ _World Wide Web_ は、一般に **WWW**, **W3**, もしくは **ウェブ** と
 今日、「ウェブ」として知られているシステムは、いくつかの構成要素から成り立っています。
 
 - **{{Glossary("HTTP")}}** プロトコルがサーバーとクライアント間のデータ転送を管理しています。
-- ウェブの構成要素へアクセスするため、クライアントは **{{Glossary("URL")}}** (uniform resource location) もしくは {{Glossary("URI")}} (uniform resource identifier、以前は Universal Document Identifier (UDI) と呼ばれていた) と呼ばれる固有の識別子を提供します。
+- ウェブの構成要素へアクセスするため、クライアントは **{{Glossary("URL")}}** (uniform resource locator) もしくは {{Glossary("URI")}} (uniform resource identifier、以前は Universal Document Identifier (UDI) と呼ばれていた) と呼ばれる固有の識別子を提供します。
 - **{{Glossary("HTML")}}** (hypertext markup language) は、文書を公開する最も一般的な形式です。
 
 リンクする、もしくは{{Glossary("Hyperlink","ハイパーリンク")}}を介してリソースを結びつけることは、関連するドキュメントをひとまとめに識別できるようにする、ウェブの特徴的な概念です。
