@@ -141,7 +141,7 @@ p.custom {
 }
 ```
 
-#### Result
+#### Résultat
 
 {{EmbedLiveSample("Définir une couleur de curseur personnalisée", 500, 200)}}
 

@@ -3,10 +3,10 @@ title: Propriété CSS `object-fit`
 short-title: object-fit
 slug: Web/CSS/Reference/Properties/object-fit
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`object-fit`** définit la façon dont le contenu d'un {{ Glossary("replaced elements", "élément remplacé")}}, tel qu'une {{HTMLElement("img")}} ou une {{HTMLElement("video")}}, doit être redimensionné pour s'adapter à son conteneur.
+La propriété [CSS](/fr/docs/Web/CSS) **`object-fit`** définit la façon dont le contenu d'un {{ Glossary("replaced elements", "élément remplacé")}}, tel qu'une image ({{HTMLElement("img")}}) ou une vidéo ({{HTMLElement("video")}}), doit être redimensionné pour s'adapter à son conteneur.
 
 > [!NOTE]
 > La propriété `object-fit` n'a aucun effet sur les éléments HTML {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} et {{HTMLElement("fencedframe")}}.
@@ -69,20 +69,20 @@ object-fit: revert-layer;
 object-fit: unset;
 ```
 
-La propriété `object-fit` peut être définie grâce à l'un des mots-clés suivants.
-
 ### Valeurs
 
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
 - `contain`
-  - : Le contenu remplacé est redimensionné pour maintenir son {{Glossary("aspect ratio", "rapport d'aspect")}} tout en s'adaptant à la boîte de contenu de l'élément. L'ensemble de l'objet est ajusté pour remplir la boîte, tout en préservant son ratio d'aspect, de sorte que l'objet sera [«&nbsp;au format de lettre&nbsp;»](https://fr.wikipedia.org/wiki/Letterbox) ou [«&nbsp;au format de pilier&nbsp;» <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Pillarbox) si son ratio d'aspect ne correspond pas à celui de la boîte.
+  - : Le contenu remplacé est redimensionné pour maintenir son {{Glossary("aspect ratio", "rapport d'aspect")}} tout en s'adaptant à la boîte de contenu de l'élément. L'ensemble de l'objet est ajusté pour remplir la boîte, tout en préservant son ratio d'aspect, de sorte que l'objet est [«&nbsp;au format de lettre&nbsp;»](https://fr.wikipedia.org/wiki/Letterbox) ou [«&nbsp;au format de pilier&nbsp;» <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Pillarbox) si son ratio d'aspect ne correspond pas à celui de la boîte.
 - `cover`
-  - : Le contenu remplacé est redimensionné pour maintenir son rapport d'aspect tout en remplissant entièrement la boîte de contenu de l'élément. Si le rapport d'aspect de l'objet ne correspond pas à celui de sa boîte, l'objet sera alors rogné pour s'adapter.
+  - : Le contenu remplacé est redimensionné pour maintenir son rapport d'aspect tout en remplissant entièrement la boîte de contenu de l'élément. Si le rapport d'aspect de l'objet ne correspond pas à celui de sa boîte, l'objet est alors rogné pour s'adapter.
 - `fill`
-  - : Le contenu remplacé est redimensionné pour remplir entièrement la boîte de contenu de l'élément de boîte. C'est la valeur de {{CSSxRef("initial")}}. L'ensemble de l'objet remplira complètement la boîte. Si le {{Glossary("aspect ratio", "rapport d'aspect")}} de l'objet ne correspond pas à celui de sa boîte, l'objet sera alors étiré pour s'adapter.
+  - : Le contenu remplacé est redimensionné pour remplir entièrement la boîte de contenu de l'élément de boîte. C'est la valeur de {{CSSxRef("initial")}}. L'ensemble de l'objet remplit complètement la boîte. Si le {{Glossary("aspect ratio", "rapport d'aspect")}} de l'objet ne correspond pas à celui de sa boîte, l'objet est alors étiré pour s'adapter.
 - `none`
   - : Le contenu remplacé n'est pas redimensionné.
 - `scale-down`
-  - : Le contenu est redimensionné comme si `none` ou `contain` était défini, selon ce qui donnerait la taille d'objet concrète la plus petite.
+  - : Le contenu est redimensionné comme si `none` ou `contain` était défini, selon ce qui donne la taille d'objet concrète la plus petite.
 
 ## Définition formelle
 

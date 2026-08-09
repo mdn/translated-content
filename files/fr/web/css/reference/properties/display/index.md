@@ -253,7 +253,7 @@ Cela peut être utilisé avec {{CSSxRef("list-style-type")}} et {{CSSxRef("list-
 Le [module d'affichage CSS](/fr/docs/Web/CSS/Guides/Display) décrit une syntaxe à mots-clés multiples pour les valeurs que vous pouvez utiliser avec la propriété `display` afin de définir explicitement l'affichage **extérieur** et **intérieur**.
 Les valeurs à mot-clé unique (valeurs précomposées `<display-legacy>`) sont prises en charge pour la rétrocompatibilité.
 
-Par exemple, en utilisant deux valeurs, vous pouvez définir un conteneur flex en ligne comme suit&nbsp;:
+Par exemple, en utilisant deux valeurs, vous pouvez définir un conteneur flexible en incise comme suit&nbsp;:
 
 ```css
 .container {

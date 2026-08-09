@@ -38,7 +38,7 @@ La propriété `reading-flow` prend l'un des mots-clés suivants comme valeur&nb
   - : La valeur par défaut. L'ordre de lecture suit l'ordre des éléments dans le DOM.
 
 - `flex-visual`
-  - : N'affecte que les {{Glossary("Flex Container", "conteneurs flexibles")}}. L'ordre de lecture suit l'ordre visuel des éléments `flex`, en tenant compte du {{CSSxRef("writing-mode")}}. Par conséquent, un document en français avec `flex-direction: row-reverse` et `reading-flow: flex-visual` défini aurait un ordre de lecture de gauche à droite.
+  - : N'affecte que les {{Glossary("Flex Container", "conteneurs flexibles")}}. L'ordre de lecture suit l'ordre visuel des éléments `flex`, en tenant compte du {{CSSxRef("writing-mode")}}. Par conséquent, un document en français avec `flex-direction: row-reverse` et `reading-flow: flex-visual` défini a un ordre de lecture de gauche à droite.
 
 - `flex-flow`
   - : N'affecte que les conteneurs flexibles. L'ordre de lecture suit la direction définie par {{CSSxRef("flex-flow")}}.
@@ -59,15 +59,15 @@ La propriété `reading-flow` prend l'un des mots-clés suivants comme valeur&nb
 
 La propriété `reading-flow` modifie {{Glossary("reading order", "l'ordre de lecture")}} des élément dans un conteneur de {{Glossary("Block/CSS", "bloc")}}, conteneur [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) ou conteneur [de grille](/fr/docs/Web/CSS/Guides/Grid_layout) lorsque sa valeur est différente de `normal`. Un tel conteneur est appelé [conteneur de flux de lecture](/fr/docs/Glossary/Reading_order#modifier_lordre_de_lecture_en_css).
 
-Par défaut, le contenu web est lu dans l'ordre source du DOM. En général, l'ordre source doit exprimer un ordre de lecture logique pour le contenu, et cela doit également se refléter dans l'ordre visuel de la mise en page du contenu. Cependant, parfois, l'ordre visuel ou l'ordre de tabulation diffère de l'ordre source. Par exemple, lors de l'application de plusieurs mises en page flexbox ou grille à un document avec des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour répondre à différents besoins de l'appareil ou de l'utilisateur, l'ordre du contenu peut différer en fonction de la largeur de la fenêtre d'affichage. Dans ce cas, la propriété `reading-flow` peut être utilisée pour garantir que l'ordre de lecture et de tabulation reflète l'ordre visuel.
+Par défaut, le contenu web est lu dans l'ordre source du DOM. En général, l'ordre source doit exprimer un ordre de lecture logique pour le contenu, et cela doit également se refléter dans l'ordre visuel de la mise en page du contenu. Cependant, parfois, l'ordre visuel ou l'ordre de tabulation diffère de l'ordre source. Par exemple, lors de l'application de plusieurs mises en page flexbox ou grille à un document avec des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour répondre à différents besoins de l'appareil ou de l'utilisateur·ice, l'ordre du contenu peut différer en fonction de la largeur de la fenêtre d'affichage. Dans ce cas, la propriété `reading-flow` peut être utilisée pour garantir que l'ordre de lecture et de tabulation reflète l'ordre visuel.
 
 Dans certains cas, vous pouvez souhaiter affiner davantage l'ordre de lecture au sein d'un conteneur de flux de lecture. Vous pouvez utiliser les valeurs de la propriété {{CSSxRef("reading-order")}} sur les enfants du conteneur, en les regroupant en groupes ordinaux qui sont ensuite lus dans l'ordre numérique.
 
 ### Interaction avec `tabindex`
 
-Si un ensemble d'éléments enfants d'un conteneur de flux de lecture qui ne sont normalement pas focalisables est rendu focalisable avec des attributs [`tabindex="0"`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex), leur ordre de lecture sera modifié comme prévu par les propriétés `reading-flow` et `reading-order`, de la même manière que pour les éléments interactifs tels que {{HTMLElement("a")}} ou {{HTMLElement("button")}}.
+Si un ensemble d'éléments enfants d'un conteneur de flux de lecture qui ne sont normalement pas sélectionnables est rendu sélectionnable avec des attributs [`tabindex="0"`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex), leur ordre de lecture est modifié comme prévu par les propriétés `reading-flow` et `reading-order`, de la même manière que pour les éléments interactifs tels que {{HTMLElement("a")}} ou {{HTMLElement("button")}}.
 
-Cependant, toute tentative de modifier l'ordre de tabulation du contenu d'un conteneur de flux de lecture en utilisant des valeurs `tabindex` positives sera ignorée — remplacée par les effets de `reading-flow` et `reading-order`. Vous ne devriez généralement pas les utiliser de toute façon&nbsp;; voir [Ne pas utiliser Tabindex supérieur à 0 <sup>(angl.)</sup>](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html). Les propriétés `reading-flow` et `reading-order` offrent un bien meilleur moyen de modifier l'ordre de tabulation si nécessaire.
+Cependant, toute tentative de modifier l'ordre de tabulation du contenu d'un conteneur de flux de lecture en utilisant des valeurs `tabindex` positives est ignorée — remplacée par les effets de `reading-flow` et `reading-order`. Vous ne devez généralement pas les utiliser de toute façon&nbsp;; voir [Ne pas utiliser Tabindex supérieur à 0 <sup>(angl.)</sup>](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html). Les propriétés `reading-flow` et `reading-order` offrent un bien meilleur moyen de modifier l'ordre de tabulation si nécessaire.
 
 ## Définition formelle
 
@@ -81,7 +81,7 @@ Cependant, toute tentative de modifier l'ordre de tabulation du contenu d'un con
 
 ### Comparer les valeurs flexibles
 
-Dans cet exemple, nous démontrons les effets des différentes valeurs de `reading-flow` sur un conteneur flexible avec des éléments flex inversés.
+Dans cet exemple, nous démontrons les effets des différentes valeurs de `reading-flow` sur un conteneur flexible avec des éléments flexibles inversés.
 
 #### HTML
 
@@ -178,7 +178,7 @@ Le balisage inclut un élément HTML {{HTMLElement("select")}} pour sélectionne
 
 Nous utilisons une valeur {{CSSxRef("display")}} qui faut `grid` pour transformer le `<div>` en conteneur de grille, et affichons les éléments de la grille en trois colonnes à l'aide de {{CSSxRef("grid-template-columns")}}. Nous définissons également {{CSSxRef("grid-template-areas")}} pour décrire différentes zones de placement dans ces colonnes, et plaçons les éléments `<a>` dans ces zones à l'aide de {{CSSxRef("grid-area")}}. Initialement, nous définissons un `reading-flow` de `normal` afin que les éléments soient lus ou parcourus par tabulation dans l'ordre source DOM par défaut.
 
-Enfin, nous définissons une valeur {{CSSxRef("order")}} de `1` sur le premier élément `<a>`&nbsp;; cela n'a aucun effet sur la mise en page car cela ne remplace pas le placement de la zone de la grille, mais cela a un effet lorsque certaines valeurs de `reading-flow` sont définies, comme vous le verrez plus tard.
+Enfin, nous définissons une valeur {{CSSxRef("order")}} de `1` sur le premier élément `<a>`&nbsp;; cela n'a aucun effet sur la mise en page, car cela ne remplace pas le placement de la zone de la grille, mais cela a un effet lorsque certaines valeurs de `reading-flow` sont définies, comme vous allez le voir plus tard.
 
 La lecture de gauche à droite, l'ordre d'affichage résultant des éléments de la grille est «&nbsp;Élément D&nbsp;», «&nbsp;Élément B&nbsp;», «&nbsp;Élément C&nbsp;», puis «&nbsp;Élément A&nbsp;».
 
@@ -256,7 +256,7 @@ Le balisage inclut un conteneur {{HTMLElement("div")}} contenant quatre élémen
 
 #### CSS
 
-Nous définissons un `reading-flow` de `source-order` afin que les éléments soient lus ou parcourus par tabulation dans l'ordre du DOM, mais des modifications sont autorisées pour l'ordre de lecture via {{CSSxRef("reading-order")}}. Nous définissons une valeur `reading-order` de `1` sur le premier élément `<a>`.
+Nous définissons un `reading-flow` de `source-order` afin que les éléments soient lus ou parcourus par tabulation dans l'ordre du DOM, mais des modifications sont autorisées pour l'ordre de lecture avec {{CSSxRef("reading-order")}}. Nous définissons une valeur `reading-order` de `1` sur le premier élément `<a>`.
 
 ```css
 .wrapper {

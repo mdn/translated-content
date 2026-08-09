@@ -8,7 +8,7 @@ l10n:
 
 La propriété [CSS](/fr/docs/Web/CSS) **`align-self`** permet d'écraser la valeur de {{CSSxRef("align-items")}} d'un élément de grille ou de flex. En grille, elle aligne l'élément à l'intérieur de la {{Glossary("Grid Areas", "zone de grille")}}. En flexbox, elle aligne l'élément sur {{Glossary("cross axis", "l'axe transversal")}}.
 
-Cette propriété ne s'applique pas aux boîtes de niveau bloc ni aux cellules de tableau. Si la marge sur l'axe transversal d'un élément flex est `auto`, alors `align-self` est ignorée.
+Cette propriété ne s'applique pas aux boîtes de niveau bloc ni aux cellules de tableau. Si la marge sur l'axe transversal d'un élément flexible est `auto`, alors `align-self` est ignorée.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: align-self")}}
 

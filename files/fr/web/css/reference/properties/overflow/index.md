@@ -3,7 +3,7 @@ title: Propriété CSS `overflow`
 short-title: overflow
 slug: Web/CSS/Reference/Properties/overflow
 l10n:
-  sourceCommit: bd1e1e4c5979dc7b79f75dfcc787e5bff9510aef
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`overflow`** définit le comportement souhaité lorsque le contenu ne tient pas dans la boîte de remplissage (<i lang="en">padding</i> en anglais) de l'élément (dépassements) dans la direction horizontale et/ou verticale.
@@ -79,9 +79,9 @@ overflow: revert-layer;
 overflow: unset;
 ```
 
-La propriété `overflow` est définie avec un ou deux mots-clés {{CSSxRef("overflow_value", "&lt;overflow&gt;")}}.
-
 ### Valeurs
+
+Cette propriété est définie par un ou deux mots-clés {{CSSxRef("overflow_value", "&lt;overflow&gt;")}} séparés par des espaces&nbsp;:
 
 - `visible`
   - : Le contenu débordant n'est pas coupé et peut être visible en dehors de la boîte de remplissage de l'élément. La boîte de l'élément n'est pas un {{Glossary("scroll container", "conteneur de défilement")}}. C'est la valeur par défaut.
@@ -380,7 +380,7 @@ body {
 
 ### Les éléments remplacés débordants
 
-Le fait de définir `overflow` sur les images et autres {{Glossary("replaced elements", "éléments remplacés")}} fonctionne comme prévu dans les navigateurs qui prennent en charge le module CSS Overflow Level 4&nbsp;; dans les versions précédentes de la spécification, les éléments remplacés étaient toujours découpés dans le conteneur englobant.
+Le fait de définir `overflow` sur les images et autres {{Glossary("replaced elements", "éléments remplacés")}} fonctionne comme prévu dans les navigateurs qui prennent en charge le module CSS Overflow Level 4&nbsp;; dans les versions précédentes de la spécification, les éléments remplacés sont toujours découpés dans le conteneur englobant.
 
 Voir le tableau de [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour les informations actuelles sur la prise en charge par les navigateurs.
 

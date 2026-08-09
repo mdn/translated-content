@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`row-rule-width`** définit la largeur des lignes tracées entre les lignes dans les grilles multi-lignes, les conteneurs flex et les mises en page multi-colonnes.
+La propriété [CSS](/fr/docs/Web/CSS) **`row-rule-width`** définit la largeur des lignes tracées entre les lignes dans les grilles multi-lignes, les conteneurs flexibles et les mises en page multi-colonnes.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: row-rule-width")}}
 

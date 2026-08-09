@@ -39,7 +39,7 @@ position-anchor: unset;
   - : L'élément positionné n'est pas associé à un élément d'ancrage.
 
 - {{CSSxRef("dashed-ident")}}
-  - : Le nom de l'élément d'ancrage auquel associer l'élément positionné, tel qu'indiqué dans la propriété {{CSSxRef("anchor-name")}} de l'élément d'ancrage. Cela est connu sous le nom de **spécificateur d'ancrage par défaut**.
+  - : Le nom de l'élément d'ancrage auquel associer l'élément positionné, tel qu'indiqué dans la propriété {{CSSxRef("anchor-name")}} de l'élément d'ancrage. C'est connu sous le nom de **spécificateur d'ancrage par défaut**.
 
 - `match-parent`
   - : Utilise le même élément d'ancrage par défaut que l'élément parent, ou l'élément d'origine si c'est un {{Glossary("Pseudo-element", "pseudo-élément")}}, à condition que ce soit un élément d'ancrage acceptable (c'est-à-dire [faisant partie de l'arbre](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements#les_pseudo-éléments_conformes_à_larborescence)). Sinon, il n'a pas d'élément d'ancrage par défaut.
@@ -157,7 +157,7 @@ body {
 }
 ```
 
-Each of the positioned elements is given a `position-anchor` property with a value matching one of the two anchor names. The positioned elements are then given anchor-relative positioning information using a combination of inset, alignment, and margin properties.
+Chacun des éléments positionnés se voit attribuer une propriété `position-anchor` avec une valeur correspondant à l'un des deux noms d'ancre. Les éléments positionnés reçoivent ensuite des informations de positionnement relatives à l'ancre en utilisant une combinaison de propriétés inset, alignment et margin.
 
 ```css hidden
 .boite-information {
@@ -326,5 +326,5 @@ La sortie est ancrée au curseur. Modifiez la valeur et la sortie reste au-dessu
 - La propriété {{CSSxRef("anchor-name")}}
 - La propriété {{CSSxRef("anchor-scope")}}
 - L'attribut HTML [`anchor`](/fr/docs/Web/HTML/Reference/Global_attributes/anchor)
-- Le module [de positionnement par ancre CSS anchor positioning](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le module [de positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
 - Le guide [d'utilisation du positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
