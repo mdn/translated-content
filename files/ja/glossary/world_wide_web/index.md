@@ -2,10 +2,8 @@
 title: World Wide Web
 slug: Glossary/World_Wide_Web
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 _World Wide Web_ は、一般に **WWW**, **W3**, もしくは **ウェブ** と呼ばれ、{{Glossary("Internet", "インターネット")}} を通じて公開されたウェブページが相互に接続されたシステムのことです。ウェブはインターネットと同義ではありません。ウェブは、インターネット上に構築された多くのアプリケーションの中の一つです。
 
@@ -23,6 +21,6 @@ _World Wide Web_ は、一般に **WWW**, **W3**, もしくは **ウェブ** と
 
 ## 関連情報
 
-- [Learn the Web](/ja/docs/Learn_web_development)
+- [ウェブ開発の学習](/ja/docs/Learn_web_development)
 - [World Wide Web](https://ja.wikipedia.org/wiki/World_Wide_Web)（ウィキペディア）
 - [W3C のウェブサイト](https://www.w3.org/)
