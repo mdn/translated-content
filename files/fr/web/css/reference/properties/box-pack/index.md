@@ -3,7 +3,7 @@ title: Propriété CSS `box-pack`
 short-title: box-pack
 slug: Web/CSS/Reference/Properties/box-pack
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 {{Non-standard_Header}}{{Deprecated_Header}}
@@ -30,9 +30,9 @@ box-pack: initial;
 box-pack: unset;
 ```
 
-La propriété `box-pack` est définie avec l'une des valeurs de mot-clé listées ci-dessous.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `start`
   - : La boîte regroupe son contenu au début. L'espace restant est donc laissé à la fin.
@@ -96,8 +96,8 @@ div.exemple {
   /* On rend la boîte plus grande que son
      contenu pour avoir de l'espace pour box-pack */
   height: 300px;
-  /* On rend la boîte suffisament large pour que
-     contenu soit centré horizontalemen */
+  /* On rend la boîte suffisamment large pour que
+     contenu soit centré horizontalement */
   width: 300px;
 
   /* On oriente les éléments fils verticalement */
@@ -122,8 +122,8 @@ div.exemple p {
 
 ```html
 <div class="exemple">
-  <p>Je serai 2nd en partant du bas de div.exemple, centré horizontalement.</p>
-  <p>Je serai tout en bas de div.exemple, centré horizontalement.</p>
+  <p>Je suis 2eme en partant du bas de div.exemple, centré horizontalement.</p>
+  <p>Je suis tout en bas de div.exemple, centré horizontalement.</p>
 </div>
 ```
 
