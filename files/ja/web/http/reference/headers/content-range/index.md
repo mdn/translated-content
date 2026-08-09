@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-HTTP の **`Content-Range`** {{Glossary("Response header", "レスポンスヘッダー")}}は、[範囲リクエスト](/en-US/docs/Web/HTTP/Guides/Range_requests)において、レスポンス本体のコンテンツがリソース全体の中でどの範囲に該当するかを示すために使用されます。
+HTTP の **`Content-Range`** {{Glossary("Response header", "レスポンスヘッダー")}}は、[範囲リクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)において、レスポンス本体のコンテンツがリソース全体の中でどの範囲に該当するかを示すために使用されます。
 
 これは、{{HTTPStatus("206", "206 Partial Content")}} または {{HTTPStatus("416", "416 Range Not Satisfiable")}} のレスポンスにのみ含める必要があります。
 
