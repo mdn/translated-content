@@ -3,7 +3,7 @@ title: Content-DPR ヘッダー
 short-title: Content-DPR
 slug: Web/HTTP/Reference/Headers/Content-DPR
 l10n:
-  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
+  sourceCommit: 013f3148c4e85038bd961c984e357da703d315e3
 ---
 
 {{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
