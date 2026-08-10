@@ -374,16 +374,16 @@ body {
 
 {{ EmbedLiveSample("Custom fallback options", "100%", "250") }}
 
-## Styling anchor-positioned elements based on active fallback
+## アクティブな代替に基づいて、アンカー位置指定要素のスタイルを設定
 
-One problem the above functionality doesn't solve is updating the styling of an anchor-positioned element to suit its different fallback options. For example, it is common to include a small arrow on a tooltip that points to the anchor element it is associated with, improving UX by making the visual association clearer. When the tooltip moves to a different position, you'll need to change the position and orientation of the arrow, otherwise it will look wrong.
+上記の機能では解決できない問題の一つに、アンカー位置指定された要素のスタイル設定を、さまざまな代替オプションに合わせて更新することが挙げられます。例えば、ツールチップに、関連付けられたアンカー要素を指し示す小さな矢印を記載することは一般的であり、視覚的な関連性を明確にすることで UX を向上させます。ツールチップが別の位置に移動した際には、矢印の位置や方向を変更する必要があります。そうしないと、見た目が不自然になってしまいます。
 
-To solve this problem, you can use anchored container queries. These extend the functionality of [CSS container queries](/ja/docs/Web/CSS/Guides/Containment/Container_queries) to enable you to detect when a specific fallback option is applied to an anchor-positioned element, and apply CSS to its descendants as a result. Specifically, anchored container queries rely on two features:
+この問題を解決するには、アンカー付きコンテナークエリーを使用することができます。これは、[CSS コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries) の機能を拡張したもので、アンカー位置指定要素に特定の代替オプションが適用されたことを検出し、その結果としてその子要素に CSS を適用できるようにするものです。具体的には、アンカー付きコンテナークエリーは次の 2 つの機能を利用しています。
 
-- The {{cssxref("container-type")}} property `anchored` value: Apply this to the anchor-positioned element to start detecting when different fallback options are applied to it.
-- The {{cssxref("@container")}} at-rule `anchored` keyword: This is followed by a set of parentheses inside which the `fallback` descriptor is included. The descriptor's value is a `position-try-fallbacks` value.
+- {{cssxref("container-type")}} プロパティの `anchored` 値: これをアンカー位置指定要素に適用すると、その要素にさまざまな代替オプションが適用されたことを検知できるようになります。
+- {{cssxref(「@container」)}} アットルールにおける `anchored` キーワード: このキーワードの後に括弧が続き、その中に `fallback` 記述子が含まれます。この記述子の値は、`position-try-fallbacks` の値となります。
 
-For example, let's say we have an anchor-positioned tooltip element that is positioned above its anchor by default via a {{cssxref("position-area")}} value of `top`, but has a {{cssxref("position-try-fallbacks")}} value of `flip-block` specified. This will cause the tooltip to flip in the block direction to the bottom of its anchor when it starts to overflow the top of the viewport. If we want to detect when the fallback is applied to the tooltip, we first need to set `container-type: anchored` on it to turn it into an anchored query container.
+例えば、アンカー位置指定されたツールチップ要素があり、{{cssxref("position-area")}} の値が `top` であるためデフォルトでアンカーの上方に配置されるが、{{cssxref("position-try-fallbacks")}} の値として `flip-block` が指定されている場合を考えてみましょう。これにより、ツールチップがビューポートの上端からあふれてきた際に、ブロック方向に沿ってアンカーの下端へと反転表示されます。ツールチップにこの代替表示が適用されたタイミングを検出したい場合は、まずツールチップに `container-type: anchored` を設定し、アンカー付きコンテナークエリーにする必要があります。
 
 ```css
 .tooltip {
@@ -395,17 +395,17 @@ For example, let's say we have an anchor-positioned tooltip element that is posi
 }
 ```
 
-With this in place, we can now write a container query like so:
+これで準備が整ったので、同様に次のようなコンテナークエリーを記述可能になりました。
 
 ```css
 @container anchored(fallback: flip-block) {
-  /* Descendant styles here */
+  /* ここで子要素のスタイル設定 */
 }
 ```
 
-The query test — `anchored(fallback: flip-block)` — will return true when the `flip-block` fallback option is applied to the tooltip, in which case the styles specified within the `@container` block will be applied. You might for example want to change the position and orientation of the arrow icon so that it continues to point towards the anchor, change the direction of a gradient, etc.
+クエリーテスト — `anchored(fallback: flip-block)` — は、ツールチップに `flip-block` 代替オプションが適用された場合に true を返します。この場合、`@container` ブロック内で指定されたスタイルが適用されます。例えば、矢印アイコンの位置や方向を変更してアンカーを指し続けるようにしたり、グラデーションの方向を変更したりといった処理を行うことができます。
 
-For more information on anchored container queries and some examples, see [Using anchored container queries](/ja/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries).
+アンカー付きコンテナークエリーの詳細や例については、[アンカー付きコンテナークエリーの使用方法](/ja/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)を参照してください。
 
 ## `position-try-order` の使用
 
