@@ -3,7 +3,7 @@ title: オーバーフロー時の代替オプションと条件付き非表示
 short-title: オーバーフロー時の処理
 slug: Web/CSS/Guides/Anchor_positioning/Try_options_hiding
 l10n:
-  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
+  sourceCommit: 879a1aece3a1d4eb28c0024f0baac6aa1b96638e
 ---
 
 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使用する際の重要な考慮点は、アンカーが配置されている場所に関わらず、可能な限りアンカー位置指定要素をユーザーが常に操作しやすい位置に表示させることです。例えば、ページをスクロールすると、アンカーとその関連付けられた位置指定要素はビューポートの端に向かって移動します。位置指定要素がビューポートからオーバーフローを始めた場合、その位置を変更して再び画面上に表示させる必要があります。例えば、アンカーの反対側に位置指定要素を配置し直すといった対応が考えられます。
@@ -373,6 +373,39 @@ body {
 ページをスクロールして、アンカーがビューポートの端に接近した際、これらの位置指定の代替オプションの効果を調べてください。
 
 {{ EmbedLiveSample("Custom fallback options", "100%", "250") }}
+
+## Styling anchor-positioned elements based on active fallback
+
+One problem the above functionality doesn't solve is updating the styling of an anchor-positioned element to suit its different fallback options. For example, it is common to include a small arrow on a tooltip that points to the anchor element it is associated with, improving UX by making the visual association clearer. When the tooltip moves to a different position, you'll need to change the position and orientation of the arrow, otherwise it will look wrong.
+
+To solve this problem, you can use anchored container queries. These extend the functionality of [CSS container queries](/ja/docs/Web/CSS/Guides/Containment/Container_queries) to enable you to detect when a specific fallback option is applied to an anchor-positioned element, and apply CSS to its descendants as a result. Specifically, anchored container queries rely on two features:
+
+- The {{cssxref("container-type")}} property `anchored` value: Apply this to the anchor-positioned element to start detecting when different fallback options are applied to it.
+- The {{cssxref("@container")}} at-rule `anchored` keyword: This is followed by a set of parentheses inside which the `fallback` descriptor is included. The descriptor's value is a `position-try-fallbacks` value.
+
+For example, let's say we have an anchor-positioned tooltip element that is positioned above its anchor by default via a {{cssxref("position-area")}} value of `top`, but has a {{cssxref("position-try-fallbacks")}} value of `flip-block` specified. This will cause the tooltip to flip in the block direction to the bottom of its anchor when it starts to overflow the top of the viewport. If we want to detect when the fallback is applied to the tooltip, we first need to set `container-type: anchored` on it to turn it into an anchored query container.
+
+```css
+.tooltip {
+  position: absolute;
+  position-anchor: --myAnchor;
+  position-area: top;
+  position-try-fallbacks: flip-block;
+  container-type: anchored;
+}
+```
+
+With this in place, we can now write a container query like so:
+
+```css
+@container anchored(fallback: flip-block) {
+  /* Descendant styles here */
+}
+```
+
+The query test — `anchored(fallback: flip-block)` — will return true when the `flip-block` fallback option is applied to the tooltip, in which case the styles specified within the `@container` block will be applied. You might for example want to change the position and orientation of the arrow icon so that it continues to point towards the anchor, change the direction of a gradient, etc.
+
+For more information on anchored container queries and some examples, see [Using anchored container queries](/ja/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries).
 
 ## `position-try-order` の使用
 
