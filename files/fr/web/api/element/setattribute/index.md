@@ -10,7 +10,7 @@ l10n:
 
 > [!WARNING]
 > Cette méthode peut prendre des valeurs d'attribut qui sont analysées comme du HTML, un script ou une URL de script, selon l'attribut.
-> Les API de ce type sont connues sous le nom de [points d'injection](/fr/docs/Web/API/Trusted_Types_API#concepts_and_usage) et peuvent potentiellement être un vecteur pour des attaques de [script inter-site (XSS)](/fr/docs/Web/Security/Attacks/XSS), si la valeur provient initialement d'un·e attaquant·e.
+> Les API de ce type sont connues sous le nom de [points d'injection](/fr/docs/Web/API/Trusted_Types_API#concepts_et_utilisation) et peuvent potentiellement être un vecteur pour des attaques de [script inter-site (XSS)](/fr/docs/Web/Security/Attacks/XSS), si la valeur provient initialement d'un·e attaquant·e.
 >
 > Vous pouvez atténuer ce risque en passant toujours l'objet de type de confiance approprié ({{DOMxRef("TrustedHTML")}}, {{DOMxRef("TrustedScript")}} ou {{DOMxRef("TrustedScriptURL")}}) au lieu de chaînes de caractères pour les attributs qui les nécessitent, et en [appliquant les types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_appliquer_les_types_de_confiance).
 > Voir [Considérations de sécurité](#considérations_de_sécurité) pour plus d'informations.
