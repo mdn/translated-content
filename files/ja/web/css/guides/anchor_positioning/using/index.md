@@ -3,12 +3,12 @@ title: CSS アンカー位置指定の使用
 short-title: アンカー位置指定の使用
 slug: Web/CSS/Guides/Anchor_positioning/Using
 l10n:
-  sourceCommit: f3bf315cc3f26a6c96cfa6fa4898e7def28ca78a
+  sourceCommit: a0b748b391f3ed7e6ef38e8eda3ecaa9efced926
 ---
 
 **CSS アンカー位置指定**モジュールは、要素を結びつけるための機能を定義します。要素は、**アンカー要素**と**アンカー位置指定要素**として定義できます。アンカー位置指定要素は、アンカー要素に束縛することができます。アンカー位置決めされた要素は、そのサイズと位置を、結合されたアンカー要素のサイズと位置に相対的に設定することができます。
 
-CSS のアンカー位置指定は、アンカー位置指定された要素の複数の代替位置を指定するための CSS だけの仕組みも提供します。例えば、ツールチップがフォームフィールドにアンカーされているが、既定の位置設定では画面外にレンダリングされる場合、ブラウザーは別の提案された位置でレンダリングし、画面上に配置することができます。
+CSS のアンカー位置指定は、アンカー位置指定された要素の複数の代替位置を指定するための CSS だけの仕組みも提供します。例えば、ツールチップがフォームフィールドにアンカーされているが、デフォルトの位置設定では画面外にレンダリングされる場合、ブラウザーは別の提案された位置でレンダリングし、画面上に配置することができます。
 
 この記事では、基本的なアンカー位置決めの概念と、モジュールの関連付け、位置決め、サイズ調整機能の基本的な使い方を説明します。以下で説明する各概念について、追加の例や構文の詳細が記載されている参照ページへのリンクが含まれています。代替位置の指定とアンカー位置の要素の非表示については、[オーバーフロー時の代替オプションと条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)ガイドを参照してください。
 
@@ -23,7 +23,7 @@ CSS のアンカー位置指定は、アンカー位置指定された要素の�
 
 現行のインターフェイスでは、再利用可能な動的に生成されたコンテンツをアンカー要素に関連して配置することがよく求められます。（**アンカー要素**と呼ばれる）結びつける要素が常に UI の同じ場所にあり、結びつけられる要素（**アンカー位置指定要素**、または単に**位置指定要素**と呼ばれる）がソース順で常にその直前にまたは直後に配置できるのであれば、このような使用事例を作成するのは比較的簡単です。しかし、実際にはそう単純なことはほとんどありません。
 
-アンカー要素が移動したり、その他の構成の変更（スクロール、ビューポートサイズの変更、ドラッグ＆ドロップなど）が行われたりした場合、位置指定要素のアンカー要素に対する位置を維持し、調整する必要があります。例えば、フォームフィールドなどの要素がビューポートの端に近づくと、そのツールチップが画面外に表示されてしまう可能性があります。一般的には、ツールチップをあるフォームコントロールに結びつけ、フォームフィールドが可視状態である限り、ツールチップが画面に完全に表示された状態を維持し、必要に応じて自動的に移動するようにしたいでしょう。これは、デスクトップやラップトップでコンテキストメニューを右クリック（<kbd>Ctrl</kbd> + クリック）した際に、オペレーティングシステムの既定の動作となっていることに気づいたかもしれません。
+アンカー要素が移動したり、その他の構成の変更（スクロール、ビューポートサイズの変更、ドラッグ＆ドロップなど）が行われたりした場合、位置指定要素のアンカー要素に対する位置を維持し、調整する必要があります。例えば、フォームフィールドなどの要素がビューポートの端に近づくと、そのツールチップが画面外に表示されてしまう可能性があります。一般的には、ツールチップをあるフォームコントロールに結びつけ、フォームフィールドが可視状態である限り、ツールチップが画面に完全に表示された状態を維持し、必要に応じて自動的に移動するようにしたいでしょう。これは、デスクトップやラップトップでコンテキストメニューを右クリック（<kbd>Ctrl</kbd> + クリック）した際に、オペレーティングシステムのデフォルトの動作となっていることに気づいたかもしれません。
 
 過去には、ある要素を別の要素に関連付け、アンカーの位置に基づいて位置指定要素の位置やサイズを動的に変更するには、JavaScript が必要でした。すると、複雑さが増し、パフォーマンスの問題も発生しました。また、すべての状況で動作する保証もありませんでした。[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールで定義された機能により、JavaScript ではなく CSS（と HTML）を使用して、このような使用事例をパフォーマンス良く、かつ宣言的に実装することが可能になりました。
 
@@ -108,24 +108,114 @@ CSS で要素をアンカーとして宣言するには、{{cssxref("anchor-name
 アンカー要素と位置指定された要素の間に以前設定された、明示的なアンカー関連付けを解除したい場合は、次のいずれかの方法を使用することができます。
 
 1. アンカーの `anchor-name` プロパティの値を `none` に設定するか、別の `<dashed-ident>` に設定する。これにより、別の要素をアンカーとして設定できます。
-2. 位置指定要素の `position-anchor` プロパティを、現在の文書に存在しないアンカー名（例: `--not-an-anchor-name`）に設定する。
+2. 位置指定要素の `position-anchor` プロパティを `none` に設定するか、現在の文書に存在しないアンカー名（例: `--not-an-anchor-name`）に設定する。
 
-ただし、暗黙のアンカー関連付けの場合、2 番目の方法を使用する必要があります。1 番目の方法は機能しません。これは関連付けが内部で制御されているためで、CSS で `anchor-name` を削除することはできないからです。
+暗黙のアンカー関連付けの場合、2 番目の方法を使用する必要があります。1 番目の方法は機能しません。これは関連付けが内部で制御されているためで、CSS で `anchor-name` を削除することはできないからです。
 
 たとえば、カスタマイズ可能な `<select>` 要素のピッカーが `<select>` 要素自体に固定されるのを防ぐには、次のルールを使うと実現できます。
 
 ```css
 ::picker(select) {
-  position-anchor: --not-an-anchor-name;
+  position-anchor: none;
 }
 ```
 
+## アンカーのスコープ
+
+複数のアンカー要素に同じ {{cssxref("anchor-name")}} 値が指定され、かつ位置指定要素の {{cssxref("position-anchor")}} プロパティの値がその名前である場合、その位置指定要素は、ソース順でその `anchor-name` 値を持つ最後のアンカー要素に関連付けられます。
+
+例えば、文書内にある複数の繰り返し要素のそれぞれに、アンカーに紐付けられた位置指定要素が含まれている場合、各要素で異なるアンカー名が使用されていない限り、すべての位置指定要素はページ上の最後のアンカーに紐付けられてしまいます。これはおそらく望ましい動作ではないでしょう。
+
+{{cssxref("anchor-scope")}} プロパティを使用すると、`anchor-name` の値の可視範囲（「スコープ」）を特定のサブツリーに限定することで、この問題を解決できます。その結果、それぞれの位置指定要素は、スコープが設定された要素と同じサブツリー内にある要素にのみアンカー設定できるようになります。
+
+- `anchor-scope: all` を指定すると、サブツリー内で設定された任意の `anchor-name` 値は、同じサブツリー内の位置指定要素によってのみバインドされるようにスコープが設定されます。
+- `anchor-scope: --my-anchor, --my-anchor2` を指定すると、サブツリー内で指定された `anchor-name` の値は、同じサブツリー内の位置指定要素からのみバインドされるようにスコープが設定されます。
+- `anchor-scope: none` はデフォルト値です。アンカーのスコープが設定されていないことを示します。
+
+例えば、{{htmlelement("section")}} コンテナーの中に、複数のアンカーやアンカー位置指定された {{htmlelement("div")}} 要素があるとします。
+
+```html live-sample___anchor-scope
+<section class="scoped">
+  <div class="anchor">⚓︎</div>
+  <div class="positioned">位置指定 1</div>
+</section>
+
+<section class="scoped">
+  <div class="anchor">⚓︎</div>
+  <div class="positioned">位置指定 2</div>
+</section>
+
+<section class="scoped">
+  <div class="anchor">⚓︎</div>
+  <div class="positioned">位置指定 3</div>
+</section>
+```
+
+それぞれの `anchor` `<div>` に `anchor-name` として `--my-anchor` を指定することで、これらをアンカー要素に変換します。次に、それぞれの `positioned` `<div>` に対して、絶対位置指定、`position-anchor` の値として `--my-anchor`、および {{cssxref("position-area")}} の値として `right` を指定することで、`--my-anchor` というアンカー名を持つ要素を基準として相対配置します。最後に、`anchor-scope: --my-anchor` を使用して、それぞれの `<section>` コンテナーのアンカースコープを設定します。
+
+```css hidden live-sample___anchor-scope
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.scoped {
+  padding: 20px;
+  background: #eeeeee;
+}
+
+.anchor {
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: blue;
+  width: fit-content;
+  padding: 3px;
+}
+
+.positioned {
+  background: orange;
+  width: fit-content;
+  padding: 3px;
+}
+```
+
+```css live-sample___anchor-scope
+.anchor {
+  anchor-name: --my-anchor;
+}
+
+.positioned {
+  position: absolute;
+  position-anchor: --my-anchor;
+  position-area: right;
+}
+
+.scoped {
+  anchor-scope: --my-anchor;
+}
+```
+
+その結果、次のような位置指定動作となります。
+
+{{ EmbedLiveSample("anchor-scope", "100%", "150") }}
+
+位置指定された各要素は、同じ `<section>` 要素内のアンカーを基準として位置指定されます。これは、各 `<section>` 要素に `anchor-scope` として `--my-anchor` が設定されているためです。したがって、各スコープ付きコンテナー内の位置指定要素は、同じコンテナー内の `my-anchor` アンカーを基準としてのみ位置指定されます。
+
+コンテナーに `anchor-scope: --my-anchor` を設定しなかった場合、位置指定要素はすべて、ページ上の最後のアンカーを基準として配置されてしまいます。
+
 ## 要素をアンカーに対して相対的に配置
 
-上で見たように、位置指定された要素をアンカーと関連付けるだけでは、実はあまり使用する場面がありません。私たちの目標は、位置指定された要素を、関連付けられたアンカー要素に対して相対的に配置することです。これを設定するには、[インセットプロパティ](/ja/docs/Glossary/Inset_properties)に [CSS の `anchor()` 関数](#インセットプロパティで_anchor_関数値を使用)の値を設定するか、[`position-area` を指定](#position-area_の設定)するか、または [`anchor-center` 配置値](#anchor-center_を使用してアンカーの中央に配置)で位置指定された要素を中央揃えします。
+以前見たように、位置指定された要素をアンカーと関連付けるだけでは、実はあまり使用する場面がありません。私たちの目標は、位置指定された要素を、関連付けられたアンカー要素に対して相対的に配置することです。これを設定するには、[インセットプロパティ](/ja/docs/Glossary/Inset_properties)に [CSS の `anchor()` 関数](#インセットプロパティで_anchor_関数値を使用)の値を設定するか、[`position-area` を指定](#position-area_の設定)するか、または [`anchor-center` 配置値](#anchor-center_を使用してアンカーの中央に配置)で位置指定された要素を中央揃えします。
 
 > [!NOTE]
-> CSS アンカー位置指定では、位置指定要素の既定の位置がビューポートをあふれる場合に備えた、代替位置を指定する仕組みも同時に提供しています。詳細は[代替オプションと条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)ガイドを参照してください。
+> CSS アンカー位置指定では、位置指定要素のデフォルトの位置がビューポートをあふれる場合に備えた、代替位置を指定する仕組みも同時に提供しています。詳細は[代替オプションと条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)ガイドを参照してください。
 
 > [!NOTE]
 > 関連付けと位置指定が動作するには、アンカー要素は可視の DOM ノードでなければなりません。 もし非表示（例えば [`display: none`](/ja/docs/Web/CSS/Reference/Properties/display#none)）になっている場合、位置指定された要素は、最も近い位置指定祖先要素を基準として位置指定されます。 アンカーが消えた際に、アンカーで位置指定された要素を非表示にする方法については、[`position-visibility` を使用した条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements)で説明しています。
@@ -143,7 +233,7 @@ anchor(<anchor-name> <anchor-side>, <fallback>)
 ```
 
 - `<anchor-name>`
-  - : 要素を相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/Reference/Properties/anchor-name) プロパティの値。これは `<dashed-ident>` 値です。省略した場合は、要素の**既定のアンカー**が使用されます。これは、[`position-anchor`](/ja/docs/Web/CSS/Reference/Properties/position-anchor) プロパティで参照されたアンカー、または、HTML の標準外の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を介してこの要素に関連付けられたアンカーです。
+  - : 要素を相対的に配置したいアンカー要素の {{cssxref("anchor-name")}} プロパティの値。これは `<dashed-ident>` 値です。省略した場合は、要素の**デフォルトアンカー**が使用されます。これは、{{cssxref("position-anchor")}} プロパティで参照されたアンカー、または、HTML の標準外の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を介してこの要素に関連付けられたアンカーです。
     > [!NOTE]
     > `<anchor-name>` を指定すると、そのアンカーに対する要素の位置が指定されますが、要素の関連付けは指定されません。同じ要素上の異なる `anchor()` 関数内に[異なる`<anchor-name>` 値](/ja/docs/Web/CSS/Reference/Values/anchor#複数のアンカーに相対的な要素の位置指定)を指定することで、複数のアンカーに対する要素の位置を指定できますが、位置指定された要素は単一のアンカーと関連付けられます。
 
@@ -162,13 +252,13 @@ bottom: 50px;
 
 どちらも、位置指定された要素を、最も近い位置指定された祖先要素（存在する場合）または最初の包含ブロックの最下端から `50px` 上の位置に配置します。
 
-最もよく使用される `anchor()` の引数は、既定のアンカーの端を参照します。また、アンカーの端と位置指定された要素の間に空間を作成するために {{cssxref("margin")}} を追加するか、またはその空間を追加するために `calc()` 関数内で `anchor()` を使用することが多いでしょう。
+最もよく使用される `anchor()` の引数は、デフォルトアンカーの端を参照します。また、アンカーの端と位置指定された要素の間に空間を作成するために {{cssxref("margin")}} を追加するか、またはその空間を追加するために `calc()` 関数内で `anchor()` を使用することが多いでしょう。
 
-例えば、このルールは位置指定された要素の正しい端をアンカー要素の左端に揃え、端と端の間に空間を作るために `margin-left` を追加します。
+例えば、このルールは位置指定された要素の左端をアンカー要素の右端に揃え、端と端の間に空間を作るために `margin-left` を追加します。
 
 ```css
 .positionedElement {
-  right: anchor(left);
+  left: anchor(right);
   margin-left: 10px;
 }
 ```
@@ -454,7 +544,7 @@ selectElem.addEventListener("change", () => {
 
 `position-area` の `center` 値を使用して、アンカーに配置された要素を中央揃えにすることができますが、インセットプロパティと `anchor()` 関数を結合すると、正確な位置をより詳細にコントロールすることができます。CSS のアンカー位置指定では、`position-area` ではなくインセットプロパティを使用してアンカーに結びつける場合、アンカーに配置された要素をアンカーに対して中央揃えにする方法が指定されています。
 
-{{cssxref("justify-self")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}}, {{cssxref("align-items")}} の各プロパティ（およびその一括指定である {{cssxref("place-items")}} および {{cssxref("place-self")}}）は、開発者がさまざまなレイアウトシステム内で要素をインラインまたはブロック方向に簡単に配置できるようにするために用意されています。例えば、フレックスチャイルドの場合、メインまたは交差軸に沿って配置することができます。CSS のアンカー位置指定では、これらのプロパティに追加の値として、`anchor-center` が提供されています。これは、位置指定された要素を既定のアンカーの中心に配置します。
+{{cssxref("justify-self")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}}, {{cssxref("align-items")}} の各プロパティ（およびその一括指定である {{cssxref("place-items")}} および {{cssxref("place-self")}}）は、開発者がさまざまなレイアウトシステム内で要素をインラインまたはブロック方向に簡単に配置できるようにするために用意されています。例えば、フレックスチャイルドの場合、メインまたは交差軸に沿って配置することができます。CSS のアンカー位置指定では、これらのプロパティに追加の値として、`anchor-center` が提供されています。これは、位置指定された要素をデフォルトアンカーの中心に配置します。
 
 例えば、前回と同じHTMLとベースCSSを使用します。情報ボックスには修正された位置指定が指定され、アンカーの下端に固定されています。 `justify-self: anchor-center` を使用して、アンカーの中心に水平に中央揃えされていることを確認します。
 
@@ -554,15 +644,15 @@ anchor-size(<anchor-name> <anchor-size>, <length-percentage>)
 ```
 
 - `<anchor-name>`
-  - : 相対指定するアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/Reference/Properties/anchor-name) プロパティの値として設定する `<dashed-ident>` の名前。省略した場合は、その要素の既定のアンカー（[`position-anchor`](/ja/docs/Web/CSS/Reference/Properties/position-anchor) プロパティで参照されているアンカー）が使用されます。
+  - : 相対指定するアンカー要素の {{cssxref("anchor-name")}} プロパティの値として設定する `<dashed-ident>` の名前。省略した場合は、その要素の**デフォルトアンカー**（{{cssxref("position-anchor")}} プロパティで参照されているアンカー）が使用されます。
 - [`<anchor-size>`](/ja/docs/Web/CSS/Reference/Values/anchor-size#anchor-size)
   - : 位置指定された要素のサイズが相対となるアンカー要素の寸法を指定します。 物理的な値（`width` または `height`）または論理的な値（`inline`, `block`, `self-inline`, `self-block`）を使用して表現することができます。
 - {{cssxref("length-percentage")}}
   - : 要素が絶対位置指定または修正された位置指定ではない場合、またはアンカー要素が存在しない場合に、代替値として使用するサイズを指定します。
 
-最もよく使用する `anchor-size()` 関数は、既定のアンカーの寸法を参照するだけです。また、{{cssxref("calc")}} 関数内でそれらを使用して、位置指定された要素に適用されるサイズを変更することができます。
+最もよく使用する `anchor-size()` 関数は、デフォルトアンカーの寸法を参照するだけです。また、{{cssxref("calc")}} 関数内でそれらを使用して、位置指定された要素に適用されるサイズを変更することができます。
 
-例えば、このルールでは、位置指定された要素の幅を既定のアンカー要素の幅と等しくします。
+例えば、このルールでは、位置指定された要素の幅をデフォルトアンカー要素の幅と等しくします。
 
 ```css
 .elem {
