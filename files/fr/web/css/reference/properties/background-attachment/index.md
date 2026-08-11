@@ -3,7 +3,7 @@ title: Propriété CSS `background-attachment`
 short-title: background-attachment
 slug: Web/CSS/Reference/Properties/background-attachment
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: d4dc9d899ebec0e9c22a5bb9229f39f33457d8df
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-attachment`** définit si la position d'une image d'arrière-plan est fixe par rapport à la {{Glossary("viewport", "zone d'affichage")}}, ou si elle défile avec son bloc englobant.
@@ -86,14 +86,14 @@ background-attachment: revert;
 background-attachment: unset;
 ```
 
-La propriété `background-attachment` est définie avec un ou plusieurs mots-clés de la liste suivante, séparés par des virgules.
-
 ### Valeurs
+
+Cette propriété est définie par un ou plusieurs mots-clés séparés par une virgule&nbsp;:
 
 - `fixed`
   - : Ce mot-clé indique que l'arrière-plan est fixe par rapport à la zone d'affichage (<i lang="en">viewport</i> en anglais). Même si un élément dispose d'un mécanisme de défilement, l'arrière-plan ne se déplace pas avec l'élément. Si cette valeur est définie, la propriété {{CSSxRef("background-origin")}} est ignorée.
 - `local`
-  - : Ce mot-clé indique que l'arrière-plan se déplace avec le contenu de l'élément associé. Ainsi, si l'élément défile, l'arrière-plan défilera avec. Les zones de positionnement et de dessin de l'arrière-plan sont relatives à la zone de l'élément plutôt qu'au cadre extérieur.
+  - : Ce mot-clé indique que l'arrière-plan se déplace avec le contenu de l'élément associé. Ainsi, si l'élément défile, l'arrière-plan défile avec. Les zones de positionnement et de dessin de l'arrière-plan sont relatives à la zone de l'élément plutôt qu'au cadre extérieur.
 - `scroll`
   - : Ce mot-clé indique que l'arrière-plan est fixé par rapport au contenu de l'élément (il ne défile pas avec) mais est rattaché à la bordure de l'élément.
 
@@ -199,7 +199,7 @@ Nous incluons tout le poème de Dr. Seuss.
 
 Nous incluons une {{CSSxRef("height")}}, une {{CSSxRef("width")}} et un {{CSSxRef("overflow")}} sur le parent {{HTMLElement("div")}} pour garantir que le contenu défile.
 
-Nous définissons deux images d'arrière-plan séparées par des virgules sur la liste, et réglons la propriété `background-attachment` sur `fixed, scroll`, ce qui signifie que la première image d'arrière-plan sera `fixed` et la seconde sera `scroll`. Nous réglons la propriété {{CSSxRef("background-repeat")}} pour que les deux images d'arrière-plan se répètent verticalement, en les séparant avec la propriété {{CSSxRef("background-position")}}.
+Nous définissons deux images d'arrière-plan séparées par des virgules sur la liste, et réglons la propriété `background-attachment` sur `fixed, scroll`, ce qui signifie que la première image d'arrière-plan est `fixed` et la seconde est `scroll`. Nous réglons la propriété {{CSSxRef("background-repeat")}} pour que les deux images d'arrière-plan se répètent verticalement, en les séparant avec la propriété {{CSSxRef("background-position")}}.
 
 ```css
 div {
