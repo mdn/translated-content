@@ -3,7 +3,7 @@ title: Propriété CSS `alignment-baseline`
 short-title: alignment-baseline
 slug: Web/CSS/Reference/Properties/alignment-baseline
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`alignment-baseline`** définit la [ligne de base](/fr/docs/Glossary/Baseline/Typography) spécifique utilisée pour aligner le texte de la boîte et ses contenus en ligne. **L'alignement sur la ligne de base** désigne la relation entre les lignes de base de plusieurs sujets d'alignement au sein d'un même contexte d'alignement. Lors d'un alignement sur la ligne de base, la valeur de la propriété `alignment-baseline` définit quelle ligne de base de la boîte est alignée sur la ligne de base correspondante de son contexte d'alignement.
@@ -47,6 +47,8 @@ alignment-baseline: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mot-clés suivants&nbsp;:
 
 - `baseline`
   - : Utilise la valeur {{CSSxRef("dominant-baseline")}} du parent.

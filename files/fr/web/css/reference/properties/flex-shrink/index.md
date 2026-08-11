@@ -9,7 +9,7 @@ l10n:
 La propriété [CSS](/fr/docs/Web/CSS) **`flex-shrink`** définit le facteur de rétrécissement d'un élément flexible. Si la taille de tous les éléments flexibles est supérieure à celle du conteneur flexible, [les éléments flexibles peuvent rétrécir](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#la_propriété_flex-shrink) pour s'adapter selon leur valeur `flex-shrink`. [L'espace négatif libre](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#espace_libre_positif_et_négatif) de chaque ligne flexible se répartit entre les éléments flexibles de la ligne ayant une valeur `flex-shrink` supérieure à `0`.
 
 > [!NOTE]
-> Il est recommandé d'utiliser le raccourci {{CSSxRef("flex")}} avec une valeur clé comme `auto` ou `initial` plutôt que de définir `flex-shrink` seul. Les [valeurs avec un mot-clé](/fr/docs/Web/CSS/Reference/Properties/flex#valeurs) correspondent à des combinaisons fiables de {{CSSxRef("flex-grow")}}, `flex-shrink` et {{CSSxRef("flex-basis")}}, ce qui aide à obtenir les comportements flex couramment recherchés.
+> Il est recommandé d'utiliser le raccourci {{CSSxRef("flex")}} avec une valeur clé comme `auto` ou `initial` plutôt que de définir `flex-shrink` seul. Les [valeurs avec un mot-clé](/fr/docs/Web/CSS/Reference/Properties/flex#valeurs) correspondent à des combinaisons fiables de {{CSSxRef("flex-grow")}}, `flex-shrink` et {{CSSxRef("flex-basis")}}, ce qui aide à obtenir les comportements flexibles couramment recherchés.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: flex-shrink")}}
 
@@ -111,7 +111,7 @@ Cet exemple montre comment l'espace négatif libre est réparti selon le facteur
 
 #### CSS
 
-Chaque élément flexible reçoit une largeur {{CSSxRef("width")}} de `200px`. Comme la propriété {{CSSxRef("flex-basis")}} a pour valeur par défaut `auto`, la base de flexibilité de chaque élément est `200px`. Cela donne aux éléments flexibles une largeur totale de `1000px`, soit le double de celle du conteneur. Tous les éléments flexibles sont rendus réductibles, avec des valeurs `flex-shrink` supérieures à `0`. Les deux derniers éléments ont des valeurs de `flex-shrink` plus élevées, ils rétréciront donc davantage.
+Chaque élément flexible reçoit une largeur {{CSSxRef("width")}} de `200px`. Comme la propriété {{CSSxRef("flex-basis")}} a pour valeur par défaut `auto`, la base de flexibilité de chaque élément est `200px`. Cela donne aux éléments flexibles une largeur totale de `1000px`, soit le double de celle du conteneur. Tous les éléments flexibles sont rendus réductibles, avec des valeurs `flex-shrink` supérieures à `0`. Les deux derniers éléments ont des valeurs de `flex-shrink` plus élevées, ils rétrécissent donc davantage.
 
 ```css
 #content {
@@ -169,7 +169,7 @@ div {
 
 {{EmbedLiveSample("Définir le facteur de rétrécissement d'un élément flexible", 500, 100)}}
 
-Les éléments flexibles ne débordent pas de leur conteneur car ils peuvent rétrécir&nbsp;: les `500px` d'espace négatif libre sont répartis entre les cinq éléments selon leurs valeurs `flex-shrink`. Les trois premiers éléments ont la valeur `flex-shrink: 1`. D a la valeur `flex-shrink: 1.5` et E a la valeur `flex-shrink: 2`. La largeur finale de D et E est inférieure à celle des autres, E étant plus petit que D.
+Les éléments flexibles ne débordent pas de leur conteneur, car ils peuvent rétrécir&nbsp;: les `500px` d'espace négatif libre sont répartis entre les cinq éléments selon leurs valeurs `flex-shrink`. Les trois premiers éléments ont la valeur `flex-shrink: 1`. D a la valeur `flex-shrink: 1.5` et E a la valeur `flex-shrink: 2`. La largeur finale de D et E est inférieure à celle des autres, E étant plus petit que D.
 
 ## Spécifications
 

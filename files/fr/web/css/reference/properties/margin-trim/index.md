@@ -3,7 +3,7 @@ title: Propriété CSS `margin-trim`
 short-title: margin-trim
 slug: Web/CSS/Reference/Properties/margin-trim
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
@@ -30,6 +30,8 @@ margin-trim: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `none` {{Experimental_Inline}}
   - : Les marges ne sont pas rognées par le conteneur.
@@ -64,9 +66,9 @@ margin-trim: unset;
 
 ### Utilisation simple
 
-Une fois la prise en charge de cette propriété implémentée, elle fonctionnera probablement ainsi&nbsp;:
+Une fois la prise en charge de cette propriété implémentée, elle fonctionne probablement ainsi&nbsp;:
 
-Lorsque vous avez un conteneur avec des enfants en ligne et que vous souhaitez mettre une marge entre chaque enfant sans que cela n'interfère avec l'espacement à la fin de la ligne, vous pourriez faire quelque chose comme ceci&nbsp;:
+Lorsque vous avez un conteneur avec des enfants en ligne et que vous souhaitez mettre une marge entre chaque enfant sans que cela n'interfère avec l'espacement à la fin de la ligne, vous pouvez faire quelque chose comme ceci&nbsp;:
 
 ```css
 article {
@@ -86,7 +88,7 @@ article > span {
 }
 ```
 
-Le problème ici est que vous vous retrouveriez avec 20px de trop à droite de la ligne, donc vous pourriez faire ceci pour corriger&nbsp;:
+Le problème ici est que vous vous retrouvez avec 20px de trop à droite de la ligne, donc vous pouvez faire ceci pour corriger&nbsp;:
 
 ```css
 span:last-child {
@@ -95,7 +97,7 @@ span:last-child {
 }
 ```
 
-C'est pénible d'avoir à écrire une autre règle pour obtenir ce résultat, et ce n'est pas très flexible. À la place, `margin-trim` pourrait corriger cela&nbsp;:
+C'est pénible d'avoir à écrire une autre règle pour obtenir ce résultat, et ce n'est pas très flexible. À la place, `margin-trim` peut corriger cela&nbsp;:
 
 ```css
 article {

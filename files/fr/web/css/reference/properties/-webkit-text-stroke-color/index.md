@@ -3,7 +3,7 @@ title: Propriété CSS `-webkit-text-stroke-color`
 short-title: -webkit-text-stroke-color
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke-color
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-text-stroke-color`** définit la [couleur](/fr/docs/Web/CSS/Reference/Values/color_value) du contour des caractères du texte. Si cette propriété n'est pas définie, la valeur de la propriété {{CSSxRef("color")}} est utilisée.
@@ -25,6 +25,8 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-text-stroke-color`** définit 
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme une seule valeur `<color>`&nbsp;:
 
 - {{CSSxRef("&lt;color&gt;")}}
   - : La couleur du contour.

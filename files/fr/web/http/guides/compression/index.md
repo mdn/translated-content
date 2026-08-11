@@ -31,7 +31,7 @@ Les algorithmes de compression avec pertes sont généralement plus performants 
 
 ## Compression de bout en bout
 
-La compression, de bout en bout constitue la compression permettant le plus de gain de performances pour le Web. La compression de bout en bout est définie par la compression du corps du message qui est effectuée par le serveur et ne est modifié qu'une fois arrivé à destination par le client. Les étapes lors du transport laissent la charge utile inchangée.
+La compression, de bout en bout constitue la compression permettant le plus de gain de performances pour le Web. La compression de bout en bout est définie par la compression du corps du message qui est effectuée par le serveur et n'est modifié qu'une fois arrivé à destination par le client. Les étapes lors du transport laissent la charge utile inchangée.
 
 ![Séquence du serveur au client mettant en œuvre la compression de bout en bout](httpenco1.svg)
 

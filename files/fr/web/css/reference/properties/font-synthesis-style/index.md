@@ -3,7 +3,7 @@ title: Propriété CSS `font-synthesis-style`
 short-title: font-synthesis-style
 slug: Web/CSS/Reference/Properties/font-synthesis-style
 l10n:
-  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-synthesis-style`** permet de définir si le navigateur peut synthétiser la variante oblique lorsqu'elle n'est pas définie dans la famille de polices.
@@ -27,6 +27,8 @@ font-synthesis-style: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : Indique que la variante oblique manquante peut être synthétisée par le navigateur si besoin.

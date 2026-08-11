@@ -3,7 +3,7 @@ title: "Window : propriété external"
 short-title: external
 slug: Web/API/Window/external
 l10n:
-  sourceCommit: c4c42a1573a65a808f085999a4d8d97199e142d1
+  sourceCommit: 8c4ef12832f3fae1ce42268b78aa0ee450e5f236
 ---
 
 {{APIRef}}{{Deprecated_Header}}
@@ -31,10 +31,6 @@ L'objet `External` possède les méthodes suivantes&nbsp;:
     <tr>
       <td><code>IsSearchProviderInstalled()</code></td>
       <td>Fonction factice&nbsp;; ne fait rien.</td>
-    </tr>
-    <tr>
-      <td><code>getHostEnvironmentValue(name)</code> {{Non-standard_Inline}}</td>
-      <td>L'API propriétaire de Microsoft Edge. Voir <a href="https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/mt795399(v=vs.85)">la documentation Microsoft <sup>(angl.)</sup></a> pour plus d'informations.</td>
     </tr>
   </tbody>
 </table>
