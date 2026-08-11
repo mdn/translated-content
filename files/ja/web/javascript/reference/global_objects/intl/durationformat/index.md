@@ -48,17 +48,17 @@ const duration = {
   seconds: 40,
 };
 
-// スタイルを "long" に、ロケールを "fr-FR" に設定
-new Intl.DurationFormat("fr-FR", { style: "long" }).format(duration);
-// "1 heure, 46 minutes et 40 secondes"
+// スタイルを "long" に、ロケールを "ja-JP" に設定
+new Intl.DurationFormat("ja-JP", { style: "long" }).format(duration);
+// "1 時間 46 分 40 秒"
 
 // スタイルを "short" に、ロケールを "en" に設定
-new Intl.DurationFormat("en", { style: "short" }).format(duration);
+new Intl.DurationFormat("ja-JP", { style: "short" }).format(duration);
 // "1 hr, 46 min and 40 sec"
 
-// スタイルを "narrow" に、ロケールを "pt" に設定
-new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
-// "1 h 46 min 40 s"
+// スタイルを "narrow" に、ロケールを "ja-JP" に設定
+new Intl.DurationFormat("ja-JP", { style: "narrow" }).format(duration);
+// "1h46m40s"
 ```
 
 ## 仕様書
