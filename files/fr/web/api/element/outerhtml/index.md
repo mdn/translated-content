@@ -129,15 +129,15 @@ Les types de confiance ne sont pas encore pris en charge par tous les navigateur
 Ceci agit comme un remplacement transparent pour l'API JavaScript Trusted Types&nbsp;:
 
 ```js
-if (typeof typesDeConfiance === "undefined")
-  typesDeConfiance = { createPolicy: (n, regles) => regles };
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, regles) => regles };
 ```
 
 Ensuite, nous créons une {{DOMxRef("TrustedTypePolicy")}} qui définit une {{DOMxRef("TrustedTypePolicy/createHTML", "createHTML()")}} pour transformer une chaîne de caractères d'entrée en instances de {{DOMxRef("TrustedHTML")}}.
 Les implémentations courantes de `createHTML()` utilisent une bibliothèque telle que [DOMPurify <sup>(angl.)</sup>](https://github.com/cure53/DOMPurify) pour assainir l'entrée comme indiqué ci-dessous&nbsp;:
 
 ```js
-const politique = typesDeConfiance.createPolicy("ma-politique", {
+const politique = trustedTypes.createPolicy("ma-politique", {
   createHTML: (input) => DOMPurify.sanitize(input),
 });
 ```

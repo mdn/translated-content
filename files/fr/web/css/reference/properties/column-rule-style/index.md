@@ -3,7 +3,7 @@ title: Propriété CSS `column-rule-style`
 short-title: column-rule-style
 slug: Web/CSS/Reference/Properties/column-rule-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`column-rule-style`** définit le style de la ligne tracée entre les colonnes dans une mise en page multi-colonnes.
@@ -55,7 +55,7 @@ column-rule-color: #8888ff;
 ## Syntaxe
 
 ```css
-/* Valeurs de type <'border-style'> */
+/* Valeurs avec un mot-clé */
 column-rule-style: none;
 column-rule-style: hidden;
 column-rule-style: dotted;
@@ -75,9 +75,9 @@ column-rule-style: revert-layer;
 column-rule-style: unset;
 ```
 
-La propriété `column-rule-style` avec une valeur unique de type `<'border-style'>`.
-
 ### Valeurs
+
+La propriété `column-rule-style` accepte une liste de valeurs séparées par des virgules, y compris&nbsp;:
 
 - `<'border-style'>`
   - : Un mot-clé défini comme pour {{CSSxRef("border-style")}} qui permet de définir le style appliqué au trait. Le rendu doit être interprété conformément au modèle d'affaissement des bordures.
