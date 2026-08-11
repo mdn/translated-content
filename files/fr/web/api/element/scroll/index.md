@@ -1,36 +1,34 @@
 ---
-title: "Element : méthode scrollTo()"
-short-title: scrollTo()
-slug: Web/API/Element/scrollTo
+title: "Element : méthode scroll()"
+short-title: scroll()
+slug: Web/API/Element/scroll
 l10n:
   sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
 ---
 
 {{APIRef("CSSOM view API")}}
 
-La méthode **`scrollTo()`** de l'interface {{DOMxRef("Element")}} permet de faire défiler le contenu d'un élément jusqu'à un jeu de coordonnées particulier.
-
-Cette méthode est un alias de {{DOMxRef("Element.scroll()")}}.
+La méthode **`scroll()`** de l'interface {{DOMxRef("Element")}} fait défiler vers un ensemble particulier de coordonnées à l'intérieur d'un élément donné.
 
 ## Syntaxe
 
 ```js-nolint
-scrollTo(xCoord, yCoord)
-scrollTo(options)
+scroll(xCoord, yCoord)
+scroll(options)
 ```
 
 ### Paramètres
 
 - `xCoord`
-  - : La coordonnée horizontale (`x`) du contenu défilable de l'élément vers laquelle vous voulez que le bord gauche de la zone de défilement de l'élément se déplace.
+  - : Le pixel le long de l'axe horizontal de l'élément que vous voulez afficher dans le coin supérieur gauche.
 - `yCoord`
-  - : La coordonnée verticale (`y`) du contenu défilable de l'élément vers laquelle vous voulez que le bord supérieur de la zone de défilement de l'élément se déplace.
+  - : Le pixel le long de l'axe vertical de l'élément que vous voulez afficher dans le coin supérieur gauche.
 - `options`
   - : Un objet contenant les propriétés suivantes&nbsp;:
     - `top` {{Optional_Inline}}
-      - : La coordonnée verticale du contenu défilable de l'élément vers laquelle vous voulez que le bord supérieur de la zone de défilement de l'élément se déplace. C'est la même chose que le paramètre `yCoord`.
+      - : Définit le nombre de pixels le long de l'axe Y pour faire défiler la fenêtre ou l'élément.
     - `left` {{Optional_Inline}}
-      - : La coordonnée horizontale du contenu défilable de l'élément vers laquelle vous voulez que le bord gauche de la zone de défilement de l'élément se déplace. C'est la même chose que le paramètre `xCoord`.
+      - : Définit le nombre de pixels le long de l'axe X pour faire défiler la fenêtre ou l'élément.
     - `behavior` {{Optional_Inline}}
       - : Détermine si le défilement est instantané ou s'il s'anime en douceur. Cette option est une chaîne de caractères qui doit prendre l'une des valeurs suivantes&nbsp;:
         - `smooth`&nbsp;: Le défilement s'anime en douceur.
@@ -44,33 +42,34 @@ scrollTo(options)
 Une promesse ({{JSxRef("Promise")}}) qui se résout avec un objet contenant la propriété suivante&nbsp;:
 
 - `interrupted`
-  - : Une valeur booléenne indiquant si l'opération de défilement a été interrompue (`true`) ou non (`false`). Une telle interruption se produit généralement lorsqu'un défilement programmatique est en cours et qu'un autre défilement programmatique est initié sur le même élément avant la fin du premier.
+  - : Une valeur booléenne indiquant si l'opération de défilement a été interrompue (`true`) ou non (`false`). Une telle interruption se produit généralement lorsqu'un défilement programmatique est en cours et qu'un autre défilement programmatique est initié sur le même élément avant que le premier ne se termine.
 
 ## Exemples
 
 ### Utilisation simple
 
 ```js
-element.scrollTo(0, 1000);
+// Place le 1000e pixel vertical en haut de l'élément
+element.scroll(0, 1000);
 ```
 
-Utilisation avec `options`&nbsp;:
+Utilisation de `options`&nbsp;:
 
 ```js
-element.scrollTo({
+element.scroll({
   top: 100,
   left: 100,
   behavior: "smooth",
 });
 ```
 
-### Réagir à la fin du défilement
+### Répondre à la fin du défilement
 
-Notre [démonstration des méthodes d'élément <sup>(angl.)</sup>](https://mdn.github.io/dom-examples/scroll-promises/element-methods/) ([voir le code source <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/scroll-promises/element-methods)) montre comment la valeur de retour de promesse de `scrollBy()` peut être utilisée pour réagir à la fin d'une opération de défilement. Cette technique est surtout utile dans les cas où le défilement se produit en douceur au fil du temps (obtenu en définissant l'option [`behavior`](#behavior) sur `smooth`, ou en définissant la propriété CSS {{CSSxRef("scroll-behavior")}} de l'élément défilant sur `smooth`).
+Notre [démonstration des méthodes d'élément <sup>(angl.)</sup>](https://mdn.github.io/dom-examples/scroll-promises/element-methods/) ([voir le code source <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/scroll-promises/element-methods)) montre comment la valeur de retour de promesse pour `scroll()` peut être utilisée afin de répondre à la fin d'une opération de défilement. Cette technique est surtout utile dans les cas où le défilement se produit en douceur au fil du temps (obtenu en définissant l'option [`behavior`](#behavior) sur `smooth`, ou en définissant la propriété CSS {{CSSxRef("scroll-behavior")}} de l'élément défilant sur `smooth`).
 
 #### HTML
 
-Notre HTML inclut un élément HTML {{HTMLElement("section")}} contenant plusieurs paragraphes de contenu et un élément HTML {{HTMLElement("div")}} barre d'outils contenant des éléments HTML {{HTMLElement("button")}} qui déclenchent diverses opérations de défilement sur le `<section>`.
+Notre HTML inclut un élément HTML {{HTMLElement("section")}} contenant plusieurs paragraphes de contenu et une barre d'outils {{HTMLElement("div")}} contenant des éléments HTML {{HTMLElement("button")}} qui déclenchent diverses opérations de défilement sur le `<section>`.
 
 ```html
 <div>
@@ -136,10 +135,10 @@ Le reste du CSS n'est pas montré, pour des raisons de concision.
 
 #### JavaScript
 
-Nous commençons par récupérer les références au `<button>` qui exécute l'opération `scrollBy()`, à la barre d'outils `<div>` et à la `<section>` défilante&nbsp;:
+Nous commençons par récupérer les références au `<button>` qui exécute l'opération `scroll()`, à la barre d'outils `<div>` et à la `<section>` défilante&nbsp;:
 
 ```js
-const btnDefilementPar = document.querySelector(".defilement-par");
+const btnDefilement = document.querySelector(".defilement");
 const barreOutils = document.querySelector("div");
 const section = document.querySelector("section");
 ```
@@ -155,18 +154,18 @@ function estInterrompu(interrompu) {
 }
 ```
 
-Lorsque le bouton est cliqué, nous appliquons immédiatement la classe `fade-out` à la barre d'outils, ce qui la fait disparaître en douceur. Nous exécutons ensuite `scrollBy(0, 200)` sur le `<section>` pour faire défiler son contenu de 200 pixels vers le bas, en attendant la résolution de sa promesse et en stockant le `resultat` dans une constante. Lorsque la promesse est résolue, nous appelons `estInterrompu()` pour indiquer que l'opération de défilement est terminée et si elle a été interrompue. Enfin, nous appliquons la classe `fade-in` à la barre d'outils, ce qui la fait réapparaître en douceur.
+Lorsque le bouton est cliqué, nous appliquons immédiatement la classe `fade-out` à la barre d'outils, ce qui la fait disparaître en douceur. Nous exécutons ensuite `scroll(0, 1000)` sur le `<section>` pour faire défiler son contenu de 1000 pixels vers le bas, en attendant la résolution de sa promesse et en stockant le `resultat` dans une constante. Lorsque la promesse est résolue, nous appelons `estInterrompu()` pour indiquer que l'opération de défilement est terminée et si elle a été interrompue. Enfin, nous appliquons la classe `fade-in` à la barre d'outils, ce qui la fait réapparaître en douceur.
 
 ```js
-btnDefilementPar.addEventListener("click", async () => {
+btnDefilement.addEventListener("click", async () => {
   barreOutils.className = "fade-out";
-  const resultat = await section.scrollBy(0, 200);
+  const resultat = await section.scroll(0, 1000);
   estInterrompu(resultat.interrupted);
   barreOutils.className = "fade-in";
 });
 ```
 
-Le code non pertinent à `scrollBy()` n'est pas montré, pour des raisons de concision.
+Le code non pertinent pour `scroll()` n'est pas montré, pour des raisons de concision.
 
 #### Résultat
 
@@ -174,7 +173,7 @@ Cliquez sur les boutons pour voir le comportement de défilement. Remarquez comm
 
 {{EmbedGHLiveSample("dom-examples/scroll-promises/element-methods/", "100%", 620)}}
 
-Vous pouvez également [charger la démo dans un onglet séparé <sup>(angl.)</sup>](https://mdn.github.io/dom-examples/scroll-promises/element-methods/) et consulter le [code source <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/scroll-promises/element-methods).
+Vous pouvez également [charger la démonstration dans un onglet séparé <sup>(angl.)</sup>](https://mdn.github.io/dom-examples/scroll-promises/element-methods/) et consulter le [code source <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/scroll-promises/element-methods).
 
 #### Aparté sur la détection des fonctionnalités
 
@@ -196,8 +195,3 @@ Consultez le [code source <sup>(angl.)</sup>](https://github.com/mdn/dom-example
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
-## Voir aussi
-
-- Les propriétés {{DOMxRef("Element.scrollTop")}}, {{DOMxRef("Element.scrollLeft")}}
-- La méthode {{DOMxRef("Window.scrollTo()")}}

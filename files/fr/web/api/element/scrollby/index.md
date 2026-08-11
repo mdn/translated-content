@@ -1,36 +1,34 @@
 ---
-title: "Element : méthode scrollTo()"
-short-title: scrollTo()
-slug: Web/API/Element/scrollTo
+title: "Element : méthode scrollBy()"
+short-title: scrollBy()
+slug: Web/API/Element/scrollBy
 l10n:
   sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
 ---
 
 {{APIRef("CSSOM view API")}}
 
-La méthode **`scrollTo()`** de l'interface {{DOMxRef("Element")}} permet de faire défiler le contenu d'un élément jusqu'à un jeu de coordonnées particulier.
-
-Cette méthode est un alias de {{DOMxRef("Element.scroll()")}}.
+La méthode **`scrollBy()`** de l'interface {{DOMxRef("Element")}} fait défiler un élément du montant défini.
 
 ## Syntaxe
 
 ```js-nolint
-scrollTo(xCoord, yCoord)
-scrollTo(options)
+scrollBy(xCoord, yCoord)
+scrollBy(options)
 ```
 
 ### Paramètres
 
 - `xCoord`
-  - : La coordonnée horizontale (`x`) du contenu défilable de l'élément vers laquelle vous voulez que le bord gauche de la zone de défilement de l'élément se déplace.
+  - : La valeur en pixels horizontale de la distance que vous souhaitez faire défiler.
 - `yCoord`
-  - : La coordonnée verticale (`y`) du contenu défilable de l'élément vers laquelle vous voulez que le bord supérieur de la zone de défilement de l'élément se déplace.
+  - : La valeur en pixels verticale de la distance que vous souhaitez faire défiler.
 - `options`
   - : Un objet contenant les propriétés suivantes&nbsp;:
     - `top` {{Optional_Inline}}
-      - : La coordonnée verticale du contenu défilable de l'élément vers laquelle vous voulez que le bord supérieur de la zone de défilement de l'élément se déplace. C'est la même chose que le paramètre `yCoord`.
+      - : Définit le nombre de pixels le long de l'axe Y pour faire défiler la fenêtre ou l'élément.
     - `left` {{Optional_Inline}}
-      - : La coordonnée horizontale du contenu défilable de l'élément vers laquelle vous voulez que le bord gauche de la zone de défilement de l'élément se déplace. C'est la même chose que le paramètre `xCoord`.
+      - : Définit le nombre de pixels le long de l'axe X pour faire défiler la fenêtre ou l'élément.
     - `behavior` {{Optional_Inline}}
       - : Détermine si le défilement est instantané ou s'il s'anime en douceur. Cette option est une chaîne de caractères qui doit prendre l'une des valeurs suivantes&nbsp;:
         - `smooth`&nbsp;: Le défilement s'anime en douceur.
@@ -44,20 +42,21 @@ scrollTo(options)
 Une promesse ({{JSxRef("Promise")}}) qui se résout avec un objet contenant la propriété suivante&nbsp;:
 
 - `interrupted`
-  - : Une valeur booléenne indiquant si l'opération de défilement a été interrompue (`true`) ou non (`false`). Une telle interruption se produit généralement lorsqu'un défilement programmatique est en cours et qu'un autre défilement programmatique est initié sur le même élément avant la fin du premier.
+  - : Une valeur booléenne indiquant si l'opération de défilement a été interrompue (`true`) ou non (`false`). Une telle interruption se produit généralement lorsqu'un défilement programmé est en cours et qu'un autre défilement programmé est initié sur le même élément avant que le premier ne se termine.
 
 ## Exemples
 
 ### Utilisation simple
 
 ```js
-element.scrollTo(0, 1000);
+// défiler un élément
+element.scrollBy(300, 300);
 ```
 
-Utilisation avec `options`&nbsp;:
+Utilisation de `options`&nbsp;:
 
 ```js
-element.scrollTo({
+element.scrollBy({
   top: 100,
   left: 100,
   behavior: "smooth",
@@ -196,8 +195,3 @@ Consultez le [code source <sup>(angl.)</sup>](https://github.com/mdn/dom-example
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
-## Voir aussi
-
-- Les propriétés {{DOMxRef("Element.scrollTop")}}, {{DOMxRef("Element.scrollLeft")}}
-- La méthode {{DOMxRef("Window.scrollTo()")}}
