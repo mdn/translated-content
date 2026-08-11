@@ -3,12 +3,12 @@ title: Element：transitionrun 事件
 short-title: transitionrun
 slug: Web/API/Element/transitionrun_event
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef}}
 
-**`transitionrun`** 事件会在[CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)首次创建时触发，也即在任何 {{cssxref("transition-delay")}} 开始之前。
+**`transitionrun`** 事件会在 [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)首次创建时触发，也即在任何 {{cssxref("transition-delay")}} 开始之前。
 
 此事件不可取消。
 
@@ -27,17 +27,6 @@ ontransitionrun = (event) => { }
 {{domxref("TransitionEvent")}}。继承自 {{domxref("Event")}}。
 
 {{InheritanceDiagram("TransitionEvent")}}
-
-## 事件属性
-
-_也从其父接口 {{domxref("Event")}} 继承属性。_
-
-- {{domxref("TransitionEvent.propertyName")}} {{ReadOnlyInline}}
-  - ：包含与该过渡关联的 CSS 属性名称的字符串。
-- {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
-  - ：一个 `float`，表示此事件触发时过渡已运行的时间（以秒为单位）。该值不受 {{cssxref("transition-delay")}} 属性影响。
-- {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - ：以 `::` 开头的字符串，包含过渡运行所在的[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)名称。若过渡不是在伪元素而是在元素上运行，则为空字符串：`''`。
 
 ## 示例
 
