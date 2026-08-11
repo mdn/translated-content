@@ -29,7 +29,7 @@ page-break-after: always;
   <button id="print-btn">显示打印预览</button>
   <div class="box-container">
     <div class="box">属性之前的内容</div>
-    <div class="box" id="example-element">带有 'page-break-after' 的内容</div>
+    <div class="box" id="example-element">带有“page-break-after”的内容</div>
     <div class="box">属性之后的内容</div>
   </div>
 </div>
