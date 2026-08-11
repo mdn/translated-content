@@ -54,7 +54,9 @@ regexp[Symbol.matchAll](str)
 const regexp = /[a-c]/g;
 regexp.lastIndex = 1;
 const str = "abc";
-console.log(Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`));
+console.log(
+  Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`),
+);
 // [ "1 b", "1 c" ]
 ```
 
