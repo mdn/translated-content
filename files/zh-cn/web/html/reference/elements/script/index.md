@@ -236,7 +236,7 @@ import { name as circleName } from "circle";
 import { name as squareName, draw } from "square";
 ```
 
-有关导入映射的更多示例，请参阅 JavaScript 模块指南中的[使用导入映射导入模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)章节。
+有关导入映射的更多示例，请参阅 JavaScript 模块指南中的[使用导入映射导入模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#使用导入映射导入模块)章节。
 
 ### 在 HTML 中嵌入数据
 
