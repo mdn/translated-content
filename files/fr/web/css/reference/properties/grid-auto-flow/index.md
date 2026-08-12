@@ -61,7 +61,7 @@ grid-auto-flow: row dense;
 ```
 
 > [!NOTE]
-> La propriété `masonry-auto-flow` a été retirée de la [disposition en maçonnerie](/fr/docs/Web/CSS/Guides/Grid_layout/Masonry_layout) CSS au profit de `grid-auto-flow`.
+> La propriété `masonry-auto-flow` a été retirée de la [disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) CSS au profit de `grid-auto-flow`.
 > Voir [csswg-drafts #10231 <sup>(angl.)</sup>](https://github.com/w3c/csswg-drafts/issues/10231) pour plus de détails.
 
 ## Syntaxe
@@ -90,13 +90,13 @@ Cette propriété peut prendre deux formes&nbsp;:
 ### Valeurs
 
 - `row`
-  - : Les éléments sont organisés en remplissant chacune des lignes au fur et à mesure, quitte à en ajouter si besoin. Si aucune valeur entre `row` ou `column` n'est fournie, `row` sera la valeur par défaut.
+  - : Les éléments sont organisés en remplissant chacune des lignes au fur et à mesure, quitte à en ajouter si besoin. Si aucune valeur entre `row` ou `column` n'est fournie, `row` est la valeur par défaut.
 - `column`
   - : Les éléments sont organisés en remplissant chacune des colonnes au fur et à mesure, quitte à en ajouter si besoin.
 - `dense`
   - : L'algorithme de compartimentation «&nbsp;dense&nbsp;» tente de remplir les trous plus tôt dans la grille, si des éléments plus petits arrivent ensuite. Cela peut amener des éléments à apparaître hors ordre, lorsque cela permet de remplir les trous laissés par des éléments plus grands.
 
-    Si cette valeur est omise, un algorithme «&nbsp;creux&nbsp;» est utilisé, où l'algorithme de placement ne se déplace que «&nbsp;vers l'avant&nbsp;» dans la grille lors du placement des éléments, sans jamais revenir en arrière pour remplir les trous. Cela garantit que tous les éléments placés automatiquement apparaissent «&nbsp;dans l'ordre&nbsp;», même si cela laisse des trous qui auraient pu être comblés par des éléments arrivant plus tard.
+    Si cette valeur est omise, un algorithme «&nbsp;creux&nbsp;» est utilisé, où l'algorithme de placement ne se déplace que «&nbsp;vers l'avant&nbsp;» dans la grille lors du placement des éléments, sans jamais revenir en arrière pour remplir les trous. Cela garantit que tous les éléments placés automatiquement apparaissent «&nbsp;dans l'ordre&nbsp;», même si cela laisse des trous qui ont pu être comblés par des éléments arrivant plus tard.
 
 ## Définition formelle
 
