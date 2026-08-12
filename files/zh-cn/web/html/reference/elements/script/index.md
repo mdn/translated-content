@@ -121,7 +121,7 @@ l10n:
     - `module`
       - : 使代码作为 JavaScript 模块处理。脚本内容的处理会延后。`charset` 和 `defer` 属性无效。关于使用 `module` 的信息，请参阅 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)指南。与经典脚本不同，模块脚本跨源获取时必须使用 CORS 协议。
     - [`speculationrules`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/speculationrules) {{experimental_inline}}
-      - : 表示元素主体包含推测规则。推测规则采用 JSON 对象形式，用于确定浏览器应预获取或预渲染哪些资源。这是 {{domxref("Speculation Rules API", "", "", "nocode")}} 的一部分。
+      - : 表示元素主体包含推测规则。推测规则采用 JSON 对象形式，用于确定浏览器应预获取或预渲染哪些资源。这是 {{domxref("Speculation Rules API", "推测规则 API", "", "nocode")}} 的一部分。
     - **任何其他值**
       - : 嵌入内容将作为数据块处理，浏览器不会处理它。开发者必须使用有效的非 JavaScript MIME 类型表示数据块。包括 `src` 属性在内的所有其他属性都会被忽略。
 
