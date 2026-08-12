@@ -4407,7 +4407,6 @@
 /ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines	/ja/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines
 /ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas	/ja/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas
 /ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes	/ja/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes
-/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout	/ja/docs/Web/CSS/Guides/Grid_layout/Masonry_layout
 /ja/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids	/ja/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts
 /ja/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods	/ja/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods
 /ja/docs/Web/CSS/CSS_grid_layout/Subgrid	/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid
@@ -4630,7 +4629,6 @@
 /ja/docs/Web/CSS/align-content	/ja/docs/Web/CSS/Reference/Properties/align-content
 /ja/docs/Web/CSS/align-items	/ja/docs/Web/CSS/Reference/Properties/align-items
 /ja/docs/Web/CSS/align-self	/ja/docs/Web/CSS/Reference/Properties/align-self
-/ja/docs/Web/CSS/align-tracks	/ja/docs/Web/CSS/Guides/Grid_layout/Masonry_layout
 /ja/docs/Web/CSS/alignment-baseline	/ja/docs/Web/CSS/Reference/Properties/alignment-baseline
 /ja/docs/Web/CSS/all	/ja/docs/Web/CSS/Reference/Properties/all
 /ja/docs/Web/CSS/alpha-value	/ja/docs/Web/CSS/Reference/Values/alpha-value
@@ -5012,7 +5010,6 @@
 /ja/docs/Web/CSS/justify-content	/ja/docs/Web/CSS/Reference/Properties/justify-content
 /ja/docs/Web/CSS/justify-items	/ja/docs/Web/CSS/Reference/Properties/justify-items
 /ja/docs/Web/CSS/justify-self	/ja/docs/Web/CSS/Reference/Properties/justify-self
-/ja/docs/Web/CSS/justify-tracks	/ja/docs/Web/CSS/Guides/Grid_layout/Masonry_layout
 /ja/docs/Web/CSS/left	/ja/docs/Web/CSS/Reference/Properties/left
 /ja/docs/Web/CSS/length	/ja/docs/Web/CSS/Reference/Values/length
 /ja/docs/Web/CSS/length-percentage	/ja/docs/Web/CSS/Reference/Values/length-percentage
