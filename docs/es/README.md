@@ -123,6 +123,9 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 
 3. Traduce manteniendo intacto lo siguiente:
    - Identificadores del código (APIs, propiedades, métodos, variables, funciones).
+     - Los nombres propios de APIs conservan su forma en inglés: no se traducen **ni se reordenan**.
+       Escribe `Canvas API`, `WebVR API`, `WebXR Device API`, no «API Canvas» ni «API WebXR Device».
+       El artículo en español va delante del nombre completo: «la Canvas API quedó obsoleta».
    - Macros de Kumascript como `{{domxref(...)}}`, `{{jsxref(...)}}`, `{{Glossary(...)}}`.
    - Bloques de código: sólo traduce comentarios y cadenas dirigidas al usuario final.
    - Enlaces externos (GitHub, web.dev, etc.).
@@ -130,25 +133,26 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 4. Cambia los enlaces internos de `/en-US/` a `/es/`.
 
    **¿Por qué `/es/` aunque la página no exista en español?**
-   MDN renderiza el contenido en inglés como respaldo (_fallback_) para las secciones o páginas que aún no han sido traducidas, pero siempre bajo la URL `/es/`. Un enlace como `/es/docs/Web/API/Fetch_API` funciona correctamente aunque la página no tenga traducción completa: el lector verá el contenido en inglés dentro del contexto de la interfaz en español.
+   Por coherencia de idioma, no por un respaldo automático: MDN **no** sirve el contenido en inglés cuando falta la traducción. Si `files/es/…/index.md` no existe, la URL `/es/docs/…` devuelve `404` hasta que alguien traduzca esa página. Aun así, el enlace se escribe en `/es/`: es la convención del proyecto y así el enlace queda correcto de forma automática en cuanto la página destino se traduce.
 
-   Por eso la regla general es: **usa siempre `/es/` en los enlaces internos absolutos de MDN**, sin excepción. Si la página de destino no existe en español, el sistema la muestra en inglés de forma transparente. No conserves `/en-US/` "para que funcione": un enlace en `/en-US/` saca al lector del contexto de su idioma preferido, incluso si la traducción sí existe.
+   Por eso la regla general es: **usa siempre `/es/` en los enlaces internos absolutos de MDN**, sin excepción. No conserves `/en-US/` "para que funcione": un enlace en `/en-US/` saca al lector del contexto de su idioma preferido, incluso si la traducción sí existe.
 
-   **Anclas (`#fragmento`): deben coincidir con el encabezado que se renderiza**
+   **Anclas (`#fragmento`): deben coincidir con un encabezado real de la página destino en español**
 
-   Cuando un enlace incluye un fragmento (`#`), la ancla debe coincidir con el ID del encabezado **tal como se renderiza en la página destino**. No es simplemente "español si la URL es `/es/`": lo que importa es qué contenido sirve MDN en esa URL.
+   Cuando un enlace incluye un fragmento (`#`), la ancla debe coincidir con el ID de un encabezado que exista **en la página en español**. Un fragmento que no coincide con nada no rompe el enlace, pero deja al lector al inicio de la página en lugar de la sección esperada.
 
-   | Caso                    | URL de destino               | Página destino              | Ancla correcta                                      |
-   | ----------------------- | ---------------------------- | --------------------------- | --------------------------------------------------- |
-   | Página _sin_ traducción | `/es/docs/Web/API/Fetch_API` | MDN sirve inglés (fallback) | Ancla en inglés: `#browser_compatibility`           |
-   | Página _con_ traducción | `/es/docs/Web/API/Fetch_API` | MDN sirve español           | Ancla en español: `#compatibilidad_con_navegadores` |
-   | Misma página            | `#fragmento`                 | El archivo actual           | Ancla del encabezado traducido                      |
+   | Caso                                | Qué hacer con la ancla                                                            |
+   | ----------------------------------- | --------------------------------------------------------------------------------- |
+   | La página destino está traducida    | Usa el ID del encabezado **traducido**: `#compatibilidad_con_navegadores`         |
+   | La página destino no está traducida | Quita el fragmento y deja solo el enlace a la página; agrégalo cuando se traduzca |
+   | Enlace dentro de la misma página    | Usa el ID del encabezado traducido de este archivo                                |
 
-   **Ejemplo del problema frecuente:** el inglés tiene `/en-US/docs/Web/API/Fetch_API#browser_compatibility`. Al traducir la página que contiene ese enlace, es tentador cambiar ambas partes a la vez: `/es/docs/Web/API/Fetch_API#compatibilidad_con_navegadores`. Pero si esa página no tiene traducción española, MDN la sirve en inglés y el encabezado `#compatibilidad_con_navegadores` no existe: el lector llega a la página pero sin desplazarse a la sección correcta.
+   **Ejemplo del problema frecuente:** el inglés tiene `/en-US/docs/Web/API/Fetch_API#browser_compatibility`. Al traducir, cambiar solo el prefijo (`/es/docs/Web/API/Fetch_API#browser_compatibility`) deja una ancla en inglés que no existe en la página en español, donde ese encabezado se renderiza como `#compatibilidad_con_navegadores`. Y al revés: copiar una ancla en español hacia una página que aún no está traducida tampoco sirve, porque esa página todavía no existe.
 
-   La solución es verificar antes de cambiar la ancla:
-   - ¿Existe `files/es/…/Fetch_API/index.md` en el repositorio con ese encabezado ya traducido? → usa la ancla en español.
-   - ¿No existe o la sección puntual sigue en inglés? → cambia la URL a `/es/` pero **conserva la ancla en inglés**: `/es/docs/Web/API/Fetch_API#browser_compatibility`.
+   La solución es verificar antes de escribir la ancla:
+   - ¿Existe `files/es/…/Fetch_API/index.md` con ese encabezado ya traducido? → usa la ancla en español.
+   - ¿No existe la página en español? → deja solo `/es/docs/Web/API/Fetch_API`, sin fragmento.
+   - ¿Existe la página pero esa sección puntual aún no está traducida? → usa el ID tal como se renderiza hoy en la página en español.
 
    Para los **enlaces dentro de la misma página** (`[ver más](#cómo_funciona)`), la ancla debe coincidir con el ID generado por el encabezado traducido. Si tradujiste `## How it works` como `## Cómo funciona`, el enlace debe ser `#cómo_funciona`.
 
