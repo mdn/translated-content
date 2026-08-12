@@ -3,7 +3,7 @@ title: Propriété CSS `overscroll-behavior-block`
 short-title: overscroll-behavior-block
 slug: Web/CSS/Reference/Properties/overscroll-behavior-block
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overscroll-behavior-block`** définit le comportement d'un navigateur lorsqu'il atteint la limite de défilement dans la direction du bloc (_verticale_).
@@ -26,14 +26,14 @@ overscroll-behavior-block: revert-layer;
 overscroll-behavior-block: unset;
 ```
 
-La propriété `overscroll-behavior-block` est définie avec un mot-clé choisi parmi la liste des valeurs ci-dessous.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : Le comportement de dépassement de défilement par défaut se produit normalement.
 - `contain`
-  - : Le comportement de dépassement de défilement par défaut (par exemple, les effets de «&nbsp;rebondissement&nbsp;») est observé à l'intérieur de l'élément où cette valeur est définie. Cependant, aucun enchaînement de défilement ne se produit sur les zones de défilement voisines&nbsp;; les éléments sous-jacents ne défileront pas. La valeur `contain` désactive la navigation native du navigateur, y compris le geste de «&nbsp;tirer pour actualiser&nbsp;» vertical et la navigation par balayage horizontal.
+  - : Le comportement de dépassement de défilement par défaut (par exemple, les effets de «&nbsp;rebondissement&nbsp;») est observé à l'intérieur de l'élément où cette valeur est définie. Cependant, aucun enchaînement de défilement ne se produit sur les zones de défilement voisines&nbsp;; les éléments sous-jacents ne défilent pas. La valeur `contain` désactive la navigation native du navigateur, y compris le geste de «&nbsp;tirer pour actualiser&nbsp;» vertical et la navigation par balayage horizontal.
 - `none`
   - : Aucun enchaînement de défilement ne se produit vers les zones de défilement voisines, et le comportement de dépassement de défilement par défaut est empêché.
 
@@ -51,7 +51,7 @@ La propriété `overscroll-behavior-block` est définie avec un mot-clé choisi 
 
 Dans cette démonstration, nous avons deux boîtes de niveau bloc, l'une à l'intérieur de l'autre. La boîte externe a une grande hauteur ({{CSSxRef("height")}}) définie dessus afin que la page puisse défiler verticalement. La boîte interne a une petite largeur ({{CSSxRef("width")}}) (et `height`) définie dessus afin qu'elle s'adapte confortablement à l'intérieur de la fenêtre d'affichage, mais son contenu a une grande `height` afin qu'il puisse également défiler verticalement.
 
-Par défaut, lorsque la boîte interne est défilée et qu'une limite de défilement est atteinte, toute la page commencera à défiler, ce qui n'est probablement pas ce que nous voulons. Pour éviter que cela ne se produise dans la direction du bloc, nous avons défini `overscroll-behavior-block: contain` sur la boîte interne.
+Par défaut, lorsque la boîte interne est défilée et qu'une limite de défilement est atteinte, toute la page commence à défiler, ce qui n'est probablement pas ce que nous voulons. Pour éviter que cela ne se produise dans la direction du bloc, nous avons défini `overscroll-behavior-block: contain` sur la boîte interne.
 
 #### HTML
 

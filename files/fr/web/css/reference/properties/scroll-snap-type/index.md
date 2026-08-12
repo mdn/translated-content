@@ -3,7 +3,7 @@ title: Propriété CSS `scroll-snap-type`
 short-title: scroll-snap-type
 slug: Web/CSS/Reference/Properties/scroll-snap-type
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scroll-snap-type`** est définie sur un {{Glossary("scroll container", "conteneur de défilement")}}, l'optant pour l'accrochage au défilement en définissant la direction et la rigueur de l'application des points d'accroche dans le [port d'accrochage](/fr/docs/Glossary/Scroll_snap#port_daccrochage).
@@ -72,9 +72,9 @@ scroll-snap-type: x proximity;
 }
 ```
 
-Si le contenu dans le port de défilement change — par exemple, si du contenu est ajouté, déplacé, supprimé ou redimensionné — le conteneur de défilement se repositionnera sur le contenu précédemment accroché si ce contenu est toujours présent.
+Si le contenu dans le port de défilement change — par exemple, si du contenu est ajouté, déplacé, supprimé ou redimensionné — le conteneur de défilement se repositionne sur le contenu précédemment accroché si ce contenu est toujours présent.
 
-Si la valeur d'une propriété liée à l'accrochage au défilement, telle que `scroll-snap-type` ou {{CSSxRef("scroll-margin")}}, est modifiée, le conteneur de défilement se repositionnera en fonction de la valeur actuelle de `scroll-snap-type`.
+Si la valeur d'une propriété liée à l'accrochage au défilement, telle que `scroll-snap-type` ou {{CSSxRef("scroll-margin")}}, est modifiée, le conteneur de défilement se repositionne en fonction de la valeur actuelle de `scroll-snap-type`.
 
 La spécification de toute animation ou physique précise utilisée pour appliquer ces points d'accroche n'est pas couverte par cette propriété, mais laissée à la discrétion de l'agent utilisateur.
 
@@ -106,6 +106,8 @@ scroll-snap-type: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `none`
   - : Lorsque la {{Glossary("viewport", "zone d'affichage")}} visuelle de ce conteneur de défilement est défilée, elle doit ignorer les points d'accrochage.

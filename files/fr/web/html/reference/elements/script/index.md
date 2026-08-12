@@ -133,7 +133,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
         Les règles de spéculation prennent la forme d'un objet JSON qui détermine quelles ressources doivent être préchargées ou pré-rendues par le navigateur.
         Cela fait partie de {{DOMxRef("Speculation Rules API", "l'API Speculation Rules", "", 1)}}.
     - **Toute autre valeur**
-      - : Le contenu embarqué est traité comme un bloc de données et ne est pas traité par le navigateur.
+      - : Le contenu embarqué est traité comme un bloc de données et n'est pas traité par le navigateur.
         Les développeur·euse·s doivent utiliser un type MIME valide qui n'est pas un type MIME JavaScript pour indiquer des blocs de données.
         Tous les autres attributs sont ignorés, y compris l'attribut `src`.
 

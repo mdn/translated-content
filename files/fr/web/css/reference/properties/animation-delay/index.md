@@ -3,7 +3,7 @@ title: Propriété CSS `animation-delay`
 short-title: animation-delay
 slug: Web/CSS/Reference/Properties/animation-delay
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-delay`** définit le temps à attendre entre l'application de l'animation sur un élément et le début de l'animation. L'animation peut démarrer plus tard, immédiatement depuis le début, ou immédiatement en étant déjà avancée.
@@ -128,12 +128,14 @@ animation-delay: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme une liste de valeurs `<time>` séparées par des virgules&nbsp;:
+
 - {{CSSxRef("&lt;time&gt;")}}
   - : Le décalage temporel, à partir du moment où l'animation est appliquée à l'élément, sur lequel l'animation doit commencer. Cette valeur peut être indiquée en secondes (`s`) ou en millisecondes (`ms`). L'unité est obligatoire.
 
     Une valeur positive indique que l'animation doit commencer après le temps indiqué. Une valeur de `0s`, qui est la valeur par défaut, indique que l'animation doit commencer dès qu'elle est appliquée.
 
-    Une valeur négative fait démarrer l'animation immédiatement, mais en cours de cycle. Par exemple, si vous définissez `-1s` comme délai d'animation, l'animation commencera immédiatement mais débutera à 1 seconde après le début de la séquence d'animation. Si vous indiquez une valeur négative pour le délai d'animation, mais que la valeur de départ est implicite, la valeur de départ est prise au moment où l'animation est appliquée à l'élément.
+    Une valeur négative fait démarrer l'animation immédiatement, mais en cours de cycle. Par exemple, si vous définissez `-1s` comme délai d'animation, l'animation commence immédiatement mais débute à 1 seconde après le début de la séquence d'animation. Si vous indiquez une valeur négative pour le délai d'animation, mais que la valeur de départ est implicite, la valeur de départ est prise au moment où l'animation est appliquée à l'élément.
 
 > [!NOTE]
 > Lorsque vous indiquez plusieurs valeurs séparées par des virgules sur une propriété `animation-*`, elles sont appliquées aux animations dans l'ordre d'apparition des {{CSSxRef("animation-name")}}. Si le nombre d'animations et de valeurs de propriété `animation-*` ne correspond pas, voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
@@ -158,20 +160,20 @@ Cette animation a un délai de 2 secondes.
 #### HTML
 
 ```html
-<div class="box"></div>
+<div class="boite"></div>
 ```
 
 #### CSS
 
 ```css
-.box {
+.boite {
   background-color: rebeccapurple;
   border-radius: 10px;
   width: 100px;
   height: 100px;
 }
 
-.box:hover {
+.boite:hover {
   animation-name: rotate;
   animation-duration: 0.7s;
   animation-delay: 2s;

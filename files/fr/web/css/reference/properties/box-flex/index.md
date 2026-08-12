@@ -41,15 +41,15 @@ La propriété `box-flex` est définie comme un nombre ({{CSSxRef("&lt;number&gt
 
 ## Notes
 
-La boîte englobante distribue l'espace supplémentaire en proportion de la valeur de flex de chacun des éléments de contenu.
+La boîte englobante distribue l'espace supplémentaire en proportion de la valeur de flexibilité de chacun des éléments de contenu.
 
-Les éléments de contenu qui ont une valeur de flex nulle ne grandissent pas.
+Les éléments de contenu qui ont une valeur de flexibilité nulle ne grandissent pas.
 
-Si un seul élément de contenu a une valeur de flex non nulle, il grandit pour occuper l'espace disponible.
+Si un seul élément de contenu a une valeur de flexibilité non nulle, il grandit pour occuper l'espace disponible.
 
-Les éléments de contenu qui ont la même valeur de flex grandissent de la même quantité absolue.
+Les éléments de contenu qui ont la même valeur de flexibilité grandissent de la même quantité absolue.
 
-Si la valeur de flex est définie via l'attribut `flex` de l'élément, le style est ignoré.
+Si la valeur de flexibilité est définie par l'attribut `flex` de l'élément, le style est ignoré.
 
 Pour que les éléments XUL d'une boîte englobante aient la même taille, définissez l'attribut `equalsize` de la boîte englobante à la valeur `always`. Cet attribut n'a pas de propriété CSS correspondante.
 

@@ -3,7 +3,7 @@ title: Propriété CSS `background-position-x`
 short-title: background-position-x
 slug: Web/CSS/Reference/Properties/background-position-x
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-position-x`** définit la position horizontale initiale de chaque image d'arrière-plan. La position est relative à la couche de position définie par {{CSSxRef("background-origin")}}.
@@ -78,9 +78,9 @@ background-position-x: revert-layer;
 background-position-x: unset;
 ```
 
-La propriété `background-position-x` se définit avec une ou plusieurs valeurs, séparées par des virgules.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `left`
   - : Le bord gauche de l'image d'arrière-plan est aligné avec le bord gauche de la zone dédiée à l'arrière-plan.
