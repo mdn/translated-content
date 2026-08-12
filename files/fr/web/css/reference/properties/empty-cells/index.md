@@ -3,7 +3,7 @@ title: Propriété CSS `empty-cells`
 short-title: empty-cells
 slug: Web/CSS/Reference/Properties/empty-cells
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`empty-cells`** permet de définir si les bordures et l'arrière-plan apparaissent autour des cellules {{HTMLElement("table")}} qui n'ont pas de contenu visible.
@@ -70,9 +70,9 @@ empty-cells: revert-layer;
 empty-cells: unset;
 ```
 
-La propriété `empty-cells` se définit avec l'un des mots-clés listés ci-dessous.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `show`
   - : Un mot-clé indiquant que les bordures et l'arrière-plan doivent être dessinés comme pour les cellules normales.

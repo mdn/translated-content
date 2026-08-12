@@ -3,7 +3,7 @@ title: Propriété CSS `backface-visibility`
 short-title: backface-visibility
 slug: Web/CSS/Reference/Properties/backface-visibility
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`backface-visibility`** définit si la face arrière d'un élément est visible lorsqu'elle est tournée vers l'utilisateur·ice.
@@ -93,9 +93,9 @@ backface-visibility: revert-layer;
 backface-visibility: unset;
 ```
 
-La propriété `backface-visibility` est définie avec l'un des mots-clés suivants.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `visible`
   - : Ce mot-clé indique que la face arrière est visible lorsqu'elle est tournée vers l'utilisateur·ice.

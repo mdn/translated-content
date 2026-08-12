@@ -3,7 +3,7 @@ title: Propriété CSS `border-inline-start`
 short-title: border-inline-start
 slug: Web/CSS/Reference/Properties/border-inline-start
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-inline-start`** permet de définir les valeurs individuelles des propriétés logiques de bordure en début de ligne à un seul endroit dans la feuille de style.
@@ -76,9 +76,9 @@ Les propriétés associées sont {{CSSxRef("border-block-start")}}, {{CSSxRef("b
 
 Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre&nbsp;:
 
-- `<'border-width'>`
+- {{CSSxRef("&lt;line-width&gt;")}}
   - : La largeur de la bordure. Voir {{CSSxRef("border-width")}}.
-- `<'border-style'>`
+- {{CSSxRef("&lt;line-style&gt;")}}
   - : Le style utilisé pour la ligne de la bordure sur ce côté. Voir {{CSSxRef("border-style")}}.
 - {{CSSxRef("&lt;color&gt;")}}
   - : La couleur de la bordure.

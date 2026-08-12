@@ -3,7 +3,7 @@ title: Propriétés CSS
 short-title: Propriétés
 slug: Web/CSS/Reference/Properties
 l10n:
-  sourceCommit: 26e03490d14803dc2ae8b85ec5c0c2b26d6b50d1
+  sourceCommit: 28f2781de2dbb8e81be94c87ff81fd0442cb4736
 ---
 
 Une **_propriété_** [CSS](/fr/docs/Web/CSS) est un paramètre utilisé dans une [déclaration CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations) qui vous permet de mettre en forme certains aspects des éléments sélectionnés. Par exemple, la propriété {{CSSxRef("opacity")}} est utilisée pour définir l'opacité d'un élément sélectionné, ce qui vous permet de contrôler si le contenu derrière cet élément est visible&nbsp;:
@@ -437,6 +437,7 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("page-break-inside")}}
 - {{CSSxRef("page")}}
 - {{CSSxRef("paint-order")}}
+- {{CSSxRef("path-length")}}
 - {{CSSxRef("perspective-origin")}}
 - {{CSSxRef("perspective")}}
 - {{CSSxRef("place-content")}} (version courte)

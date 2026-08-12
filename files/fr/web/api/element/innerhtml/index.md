@@ -1,201 +1,153 @@
 ---
-title: element.innerHTML
+title: "Element : propriété innerHTML"
+short-title: innerHTML
 slug: Web/API/Element/innerHTML
+l10n:
+  sourceCommit: 65cbd4ff030e6763d6868917137d728c3ec29288
 ---
 
 {{APIRef("DOM")}}
 
-La propriété **`Element.innerHTML`** de {{domxref("Element")}} récupère ou définit la syntaxe HTML décrivant les descendants de l'élément.
+> [!WARNING]
+> Cette propriété analyse son entrée comme du HTML, écrivant le résultat dans le DOM.
+> Les API de ce type sont connues sous le nom de [points d'injection](/fr/docs/Web/API/Trusted_Types_API#concepts_et_utilisation), et sont potentiellement un vecteur pour des attaques de [script inter-sites (XSS)](/fr/docs/Web/Security/Attacks/XSS), si l'entrée provient à l'origine d'un·e attaquant·e.
+>
+> Vous pouvez atténuer ce risque en assignant toujours des objets `TrustedHTML` au lieu de chaînes de caractères et en [appliquant les types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_imposer_les_types_de_confiance).
+> Consultez la section [Considérations de sécurité](#considérations_de_sécurité) pour plus d'informations.
 
-> [!NOTE]
-> Si un nœud {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} a un sous-nœud de type texte contenant les caractères `(&), (<),` ou `(>)`, `innerHTML` renverra à la place les chaînes suivantes : `"&amp;"`, `"&lt;"` et `"&gt;"` respectivement. Utilisez {{domxref("Node.textContent")}} pour obtenir une copie exacte du contenu de ces nœuds.
+La propriété **`innerHTML`** de l'interface {{DOMxRef("Element")}} obtient ou définit le balisage HTML ou XML contenu dans l'élément, en omettant toute {{Glossary("shadow tree", "racines d'ombre")}} dans les deux cas.
 
-Pour insérer le HTML dans le document, plutôt que de remplacer le contenu d'un élément, utilisez la méthode {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
-
-## Syntaxe
-
-```js
-const content = element.innerHTML;
-
-element.innerHTML = htmlString;
-```
+Pour insérer le HTML dans le document plutôt que de remplacer le contenu d'un élément, utilisez la méthode {{DOMxRef("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
 ### Valeur
 
-Une {{jsxref("String")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de `innerHTML` supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne `htmlString`.
+La lecture de la propriété retourne une chaîne de caractères contenant la sérialisation HTML des descendants de l'élément.
+
+La définition de la propriété accepte soit un objet {{DOMxRef("TrustedHTML")}}, soit une chaîne de caractères. Elle analyse cette valeur comme du HTML et remplace tous les descendants de l'élément par le résultat.
+Lorsqu'elle est définie sur la valeur `null`, cette valeur `null` est convertie en chaîne de caractères vide (`""`), donc `elt.innerHTML = null` est équivalent à `elt.innerHTML = ""`.
 
 ### Exceptions
 
-- `SyntaxError`
-  - : Une tentative a été faite de définir la valeur de `innerHTML` en utilisant une chaîne qui n'est pas correctement formée HTML.
-- `NoModificationAllowedError`
-  - : Une tentative a été faite d'insérer le code HTML dans un noeud dont le parent est un {{domxref("Document")}}.
+- `SyntaxError` {{DOMxRef("DOMException")}}
+  - : Levé si une tentative a été faite de définir la valeur de `innerHTML` en utilisant une chaîne de caractères qui n'est pas correctement formée HTML.
+- `TypeError`
+  - : Levé si la propriété est définie sur une chaîne de caractères lorsque les [types de confiance](/fr/docs/Web/API/Trusted_Types_API) sont [appliqués par une CSP](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_imposer_les_types_de_confiance) et qu'aucune politique par défaut n'est définie.
+- `NoModificationAllowedError` {{DOMxRef("DOMException")}}
+  - : Levé si une tentative a été faite d'insérer le code HTML dans un nœud dont le parent est un {{DOMxRef("Document")}}.
 
-## Notes d'utilisation
+## Description
 
-La propriété `innerHTML` peut être utilisée pour examiner la source HTML actuelle de la page, y compris tous les changements réalisés depuis son chargement initial.
+`innerHTML` obtient une sérialisation des éléments DOM enfants imbriqués dans l'élément, ou définit du HTML ou XML qui doit être analysé pour remplacer l'arbre DOM à l'intérieur de l'élément.
 
-### Lecture du contenu HTML d'un élément
+Notez que certains navigateurs sérialisent les caractères `<` et `>` en tant que `&lt;` et `&gt;` lorsqu'ils apparaissent dans les valeurs d'attribut (voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs)).
+Ceci est pour prévenir une vulnérabilité de sécurité potentielle ([mutation XSS <sup>(angl.)</sup>](https://www.securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) dans laquelle un·e attaquant·e peut créer une entrée qui contourne une [fonction d'assainissement](/fr/docs/Web/Security/Attacks/XSS#assainissement), permettant une attaque de type script inter-sites (XSS).
 
-La lecture de `innerHTML` amène l'agent utilisateur à sérialiser le fragment HTML ou XML composé des descendants de l'élément. La chaîne résultante est renvoyée.
+### Considérations sur le DOM d'ombre
 
-```js
-let contents = myElement.innerHTML;
-```
+La sérialisation de l'arbre DOM lu à partir de la propriété n'inclut pas les {{Glossary("shadow tree", "racines d'ombre")}} — si vous voulez obtenir une chaîne de caractères HTML qui inclut les racines d'ombre, vous devez utiliser à la place les méthodes {{DOMxRef("Element.getHTML()")}} ou {{DOMxRef("ShadowRoot.getHTML()")}}.
 
-Cela vous permet de regarder le balisage HTML des nœuds de contenu de l'élément.
-
-> [!NOTE]
-> Le fragment HTML ou XML renvoyé est généré en fonction du contenu actuel de l'élément. Il est donc probable que le balisage et la mise en forme du fragment renvoyé ne correspondent pas au balisage de la page d'origine.
-
-### Remplacement du contenu d'un élément
-
-Définir la valeur de `innerHTML` vous permet de remplacer aisément le contenu existant d'un élément par un nouveau contenu.
-
-Par exemple, vous pouvez effacer le contenu entier du document en effaçant le contenu de l'attribut {{domxref("Document.body", "body")}} du document.
-
-```js
-document.body.innerHTML = "";
-```
-
-Cet exemple récupère le balisage HTML actuel du document et remplace les caractères `"<"` par l'entité HTML `"& lt;"`, convertissant ainsi essentiellement le code HTML en texte brut. Ceci est ensuite inclus dans un élément {{HTMLElement ("pre")}}. Puis, la valeur de `innerHTML` est modifiée dans cette nouvelle chaîne. Par conséquent, le contenu du document est remplacé par un affichage du code source entier de la page.
-
-```js
-document.documentElement.innerHTML =
-  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
-```
-
-#### Détails opérationnels
-
-Qu'arrive-t-il exactement quand vous définissez la valeur de `innerHTML` ? Cela entraîne l'agent utilisateur à suivre ces étapes :
-
-1. La valeur spécifiée est analysée en HTML ou XML (en fonction du type de document), ce qui donne un objet {{domxref ("DocumentFragment")}} représentant le nouvel ensemble de nœuds DOM pour les nouveaux éléments.
-2. Si l'élément dont le contenu est remplacé est un élément {{HTMLElement ("template")}}, l'attribut {{domxref ("HTMLTemplateElement.content", "content")}} de l'élément `<template>` est remplacé par le nouveau `DocumentFragment` créé à l'étape 1.
-3. Pour tous les autres éléments, le contenu de l'élément est remplacé par les noeuds du nouveau `DocumentFragment`.
+De même, lorsque vous définissez le contenu d'un élément en utilisant `innerHTML`, la chaîne de caractères HTML est analysée en éléments DOM qui ne contiennent pas de racines d'ombre.
+Ainsi, par exemple, {{HTMLElement("template")}} est analysé en tant que {{DOMxRef("HTMLTemplateElement")}}, que l'attribut [`shadowrootmode`](/fr/docs/Web/HTML/Reference/Elements/template#shadowrootmode) soit défini ou non.
+Pour définir le contenu d'un élément à partir d'une chaîne de caractères HTML qui inclut des racines d'ombre déclaratives, vous devez utiliser à la place {{DOMxRef("Element.setHTMLUnsafe()")}} ou {{DOMxRef("ShadowRoot.setHTMLUnsafe()")}}.
 
 ### Considérations de sécurité
 
-Il n'est pas rare de voir `innerHTML` utilisé pour insérer du texte dans une page Web. Il est possible que ceci devienne un vecteur d'attaque sur un site, ce qui crée potentiellement un risque de sécurité.
+La propriété `innerHTML` est probablement le vecteur le plus courant pour les attaques de [script inter-sites (XSS)](/fr/docs/Web/Security/Attacks/XSS), où des chaînes de caractères potentiellement non sécurisées fournies par un·e utilisateur·ice sont injectées dans le DOM sans être d'abord assainies.
+Bien que la propriété empêche les éléments {{HTMLElement("script")}} de s'exécuter lorsqu'ils sont injectés, elle est vulnérable à de nombreuses autres façons dont les attaquant·e·s peuvent créer du HTML pour exécuter du JavaScript malveillant.
+Par exemple, l'exemple suivant exécute le code dans le gestionnaire d'évènements `error`, car la valeur `src` de {{HTMLElement("img")}} n'est pas une URL d'image valide&nbsp;:
 
 ```js
-const name = "John";
-// en supposant que 'el' est un élément de document HTML
-el.innerHTML = name; // inoffensif dans ce cas
-
-// ...
-
-name = "<script>alert('I am John in an annoying alert!')</script>";
-el.innerHTML = name; // inoffensif dans ce cas
+const nom = "<img src='x' onerror='alert(1)'>";
+el.innerHTML = nom; // affiche l'alerte
 ```
 
-Bien que cela puisse ressembler à une attaque [<i lang="en">cross-site scripting</i>](https://fr.wikipedia.org/wiki/Cross-site_scripting), le résultat est inoffensif. HTML5 spécifie qu'une balise {{HTMLElement ("script")}} insérée avec `innerHTML` [ne doit pas s'exécuter](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+Vous pouvez atténuer ces problèmes en assignant toujours des objets {{DOMxRef("TrustedHTML")}} au lieu de chaînes de caractères, et en [appliquant des types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_imposer_les_types_de_confiance) en utilisant la directive CSP {{CSP("require-trusted-types-for")}}.
+Ceci garantit que l'entrée est passée par une fonction de transformation, qui a la possibilité [d'assainir](/fr/docs/Web/Security/Attacks/XSS#assainissement) l'entrée pour supprimer les balises potentiellement dangereuses avant qu'elle ne soit injectée.
 
-Cependant, il existe des moyens d'exécuter JavaScript sans utiliser les éléments {{HTMLElement ("script")}}, donc il existe toujours un risque de sécurité chaque fois que vous utilisez `innerHTML` pour définir des chaînes sur lesquelles vous n'avez aucun contrôle. Par exemple :
+> [!NOTE]
+> {{DOMxRef("Node.textContent")}} doit être utilisé lorsque vous savez que le contenu fourni par l'utilisateur·ice doit être du texte brut.
+> Cela empêche qu'il soit analysé comme du HTML.
 
-```js
-const name = "<img src='x' onerror='alert(1)'>";
-el.innerHTML = name; // affiche l'alerte
-```
+## Exemples
 
-Pour cette raison, il est recommandé de ne pas utiliser `innerHTML` pour insérer du texte brut ; à la place, utilisez {{domxref("Node.textContent")}}. Cela n'analyse pas le contenu passé en HTML, mais l'insère à la place en tant que texte brut.
+### Lire le contenu HTML d'un élément
 
-> [!WARNING]
-> Si votre projet est soumis à une vérification de sécurité, l'utilisation de `innerHTML` entraînera probablement le rejet de votre code. Par exemple, si vous utilisez `innerHTML` dans une extension de navigateur et soumettez l'extension à addons.mozilla.org, elle ne passera pas le processus de révision automatique.
+La lecture de `innerHTML` amène l'agent utilisateur à sérialiser les descendants de l'élément.
 
-## Exemple
-
-Cet exemple utilise `innerHTML` pour créer un mécanisme pour consigner des messages dans une boîte sur une page Web.
-
-### JavaScript
-
-```js
-function log(msg) {
-  var logElem = document.querySelector(".log");
-
-  var time = new Date();
-  var timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += timeStr + ": " + msg + "<br/>";
-}
-
-log("Logging mouse events inside this container...");
-```
-
-La fonction `log()` crée la sortie du journal en récupérant l'heure actuelle à partir d'un objet {{jsxref ("Date")}} en utilisant {{jsxref ("Date.toLocaleTimeString", "toLocaleTimeString ()")}} et en créant une chaîne avec l'horodatage et le texte du message. Ensuite, le message est ajouté à la boîte avec la classe `"log"`.
-
-Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que [`mousedown`](/fr/docs/Web/API/Element/mousedown_event), [`click`](/fr/docs/Web/API/Element/click_event) et [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)) :
-
-```js
-function logEvent(event) {
-  var msg =
-    "Event <strong>" +
-    event.type +
-    "</strong> at <em>" +
-    event.clientX +
-    ", " +
-    event.clientY +
-    "</em>";
-  log(msg);
-}
-```
-
-Alors, nous utilisons ceci comme un gestionnaire d'évènements pour un certain nombre d'évènements de souris sur la boîte qui contient notre journal.
-
-```js
-var boxElem = document.querySelector(".box");
-
-boxElem.addEventListener("mousedown", logEvent);
-boxElem.addEventListener("mouseup", logEvent);
-boxElem.addEventListener("click", logEvent);
-boxElem.addEventListener("mouseenter", logEvent);
-boxElem.addEventListener("mouseleave", logEvent);
-```
-
-### HTML
-
-Le HTML est assez simple pour notre exemple.
+Étant donné le HTML suivant&nbsp;:
 
 ```html
-<div class="box">
-  <div><strong>Log:</strong></div>
-  <div class="log"></div>
+<div id="exemple">
+  <p>Mon nom est Joe</p>
 </div>
 ```
 
-Le {{HTMLElement ("div")}} avec la classe `"box"` est juste un conteneur pour la mise en page, présentant le contenu avec une boîte autour de lui. Le `<div>` dont la classe est `"log"` est le conteneur pour le texte du journal lui-même.
+Vous pouvez obtenir et enregistrer le balisage pour le contenu du {{HTMLElement("div")}} externe comme suit&nbsp;:
 
-### CSS
-
-Les styles CSS suivants pour notre exemple de contenu.
-
-```css
-.box {
-  width: 600px;
-  height: 300px;
-  border: 1px solid black;
-  padding: 2px 4px;
-  overflow-y: scroll;
-  overflow-x: auto;
-}
-
-.log {
-  margin-top: 8px;
-  font-family: monospace;
-}
+```js
+const monElement = document.querySelector("#exemple");
+const contenu = monElement.innerHTML;
+console.log(contenu); // "\n  <p>Mon nom est Joe</p>\n"
 ```
 
-### Résultat
+### Remplacer le contenu d'un élément
 
-Le contenu résultant ressemble à ceci. Vous pouvez voir la sortie dans le journal en déplaçant la souris dans et hors de la boîte, en cliquant dedans, et ainsi de suite.
+Dans cet exemple, nous allons remplacer le DOM d'un élément en assignant du HTML à la propriété `innerHTML` de l'élément.
+Pour atténuer le risque de XSS, nous allons d'abord créer un objet `TrustedHTML` à partir de la chaîne de caractères contenant le HTML, puis assigner cet objet à `innerHTML`.
 
-{{EmbedLiveSample("Exemple", 640, 350)}}
+Les types de confiance ne sont pas encore pris en charge par tous les navigateurs, nous définissons donc d'abord la [petite prothèse d'émulation des types de confiance](/fr/docs/Web/API/Trusted_Types_API#petite_prothèse_démulation_des_types_de_confiance).
+Ceci agit comme un remplacement transparent pour l'API JavaScript des types de confiance&nbsp;:
+
+```js
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, rules) => rules };
+```
+
+Ensuite, nous créons une {{DOMxRef("TrustedTypePolicy")}} qui définit une {{DOMxRef("TrustedTypePolicy/createHTML", "createHTML()")}} pour transformer une chaîne de caractères d'entrée en instances de {{DOMxRef("TrustedHTML")}}.
+Les implémentations courantes de `createHTML()` utilisent une bibliothèque telle que [DOMPurify <sup>(angl.)</sup>](https://github.com/cure53/DOMPurify) pour assainir l'entrée comme indiqué ci-dessous&nbsp;:
+
+```js
+const politique = trustedTypes.createPolicy("ma-politique", {
+  createHTML: (input) => DOMPurify.sanitize(input),
+});
+```
+
+Ensuite, nous utilisons cet objet `policy` pour créer un objet `TrustedHTML` à partir de la chaîne de caractères potentiellement non sécurisée, puis nous assignons le résultat à l'élément&nbsp;:
+
+```js
+// La chaîne de caractères potentiellement malveillante
+const chaineMalveillante =
+  "<p>Je pourrais être du XSS</p><img src='x' onerror='alert(1)'>";
+
+// Crée une instance TrustedHTML en utilisant la politique
+const HTMLDeConfiance = politique.createHTML(chaineMalveillante);
+
+// Injecte le TrustedHTML (qui contient une chaîne de caractères de confiance)
+const element = document.querySelector("#container");
+element.innerHTML = HTMLDeConfiance;
+```
+
+> [!WARNING]
+> Bien que vous puissiez assigner directement une chaîne de caractères à `innerHTML`, cela constitue un [risque de sécurité](#considérations_de_sécurité) si la chaîne de caractères à insérer peut contenir du contenu potentiellement malveillant.
+> Vous devez utiliser `TrustedHTML` pour vous assurer que le contenu est assaini avant d'être inséré, et vous devez définir un en-tête CSP pour [appliquer les types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_imposer_les_types_de_confiance).
 
 ## Spécifications
 
 {{Specifications}}
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 ## Voir aussi
 
-- {{domxref("Node.textContent")}} and {{domxref("Node.innerText")}}
-- {{domxref("Element.insertAdjacentHTML")}}
-- Analyse HTML dans une arborescence DOM : {{domxref("DOMParser")}}
-- Sérialisation XML ou HTML dans une arborescence DOM : {{domxref("XMLSerializer")}}
+- Les propriétés {{DOMxRef("Node.textContent")}} et {{DOMxRef("HTMLElement.innerText")}}
+- La méthode {{DOMxRef("Element.insertAdjacentHTML()")}}
+- La propriété {{DOMxRef("Element.outerHTML")}}
+- Analyse HTML ou XML dans une arborescence DOM&nbsp;: {{DOMxRef("DOMParser")}}
+- Sérialisation d'une arborescence DOM dans une chaîne de caractères XML&nbsp;: {{DOMxRef("XMLSerializer")}}
+- La méthode {{DOMxRef("Element.getHTML()")}}
+- La méthode {{DOMxRef("ShadowRoot.getHTML()")}}
+- La méthode {{DOMxRef("Element.setHTMLUnsafe()")}}
+- La méthode {{DOMxRef("ShadowRoot.setHTMLUnsafe()")}}
+- [L'API Trusted Types](/fr/docs/Web/API/Trusted_Types_API)

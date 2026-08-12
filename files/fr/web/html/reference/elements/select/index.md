@@ -3,7 +3,7 @@ title: "Élément HTML `<select>` : l'élément de liste déroulante"
 short-title: <select>
 slug: Web/HTML/Reference/Elements/select
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 9edb26a033a11bcc1e101814a466c30d13e09f43
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<select>`** représente un contrôle qui propose un menu d'options.
@@ -39,7 +39,7 @@ select {
 
 L'exemple ci-avant illustre une utilisation typique de `<select>`. Il reçoit un attribut `id` pour pouvoir être associé à un élément {{HTMLElement("label")}} à des fins d'accessibilité, ainsi qu'un attribut `name` pour représenter le nom de la donnée envoyée au serveur. Chaque option du menu est définie par un élément {{HTMLElement("option")}} imbriqué dans l'élément `<select>`.
 
-Chaque élément `<option>` doit avoir un attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/option#value) pour définir la valeur à envoyer au serveur lorsque cette option est sélectionnée. Si aucun attribut `value` n'est défini, la valeur par défaut sera le texte contenu dans l'élément. Vous pouvez définir un attribut [`selected`](/fr/docs/Web/HTML/Reference/Elements/option#selected) sur un élément `<option>` pour qu'il soit sélectionné par défaut au chargement de la page. Si aucun attribut `selected` n'est défini, le premier élément `<option>` sera sélectionné par défaut.
+Chaque élément `<option>` doit avoir un attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/option#value) pour définir la valeur à envoyer au serveur lorsque cette option est sélectionnée. Si aucun attribut `value` n'est défini, la valeur par défaut est le texte contenu dans l'élément. Vous pouvez définir un attribut [`selected`](/fr/docs/Web/HTML/Reference/Elements/option#selected) sur un élément `<option>` pour qu'il soit sélectionné par défaut au chargement de la page. Si aucun attribut `selected` n'est défini, le premier élément `<option>` est sélectionné par défaut.
 
 Un élément `<select>` est représenté en JavaScript par un objet {{DOMxRef("HTMLSelectElement")}}, et cet objet possède une propriété {{DOMxRef("HTMLSelectElement.value", "value")}} qui contient la valeur de l'option sélectionnée.
 
@@ -56,11 +56,11 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - [`autocomplete`](/fr/docs/Web/HTML/Reference/Attributes/autocomplete)
   - : Une chaîne de caractères qui fournit une indication à {{Glossary("user agent", "l'agent utilisateur")}} pour les fonctionnalités d'autocomplétion. Voir [la page sur l'attribut `autocomplete`](/fr/docs/Web/HTML/Reference/Attributes/autocomplete) pour une liste des valeurs utilisables et de leurs impacts sur l'autocomplétion.
 - `autofocus`
-  - : Cet attribut booléen permet d'indiquer si ce contrôle du formulaire devrait recevoir le focus au chargement de la page. Pour un même document, seul un élément de formulaire peut avoir l'attribut `autofocus` activé.
+  - : Cet attribut booléen permet d'indiquer si ce contrôle du formulaire doit recevoir la sélection au chargement de la page. Pour un même document, seul un élément de formulaire peut avoir l'attribut `autofocus` activé.
 - [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled)
-  - : Cet attribut booléen indique que l'utilisateur·ice ne peut pas intéragir avec le contrôle. Si cet attribut n'est pas utilisé, le contrôle héritera de l'état paramétré selon son conteneur (par exemple, via son élément parent {{HTMLElement("fieldset")}}. Si aucun élément parent n'a l'attribut `disabled` activé, le contrôle sera actif.
+  - : Cet attribut booléen indique que l'utilisateur·ice ne peut pas interagir avec le contrôle. Si cet attribut n'est pas utilisé, le contrôle hérite de l'état paramétré selon son conteneur (par exemple, par son élément parent {{HTMLElement("fieldset")}}). Si aucun élément parent n'a l'attribut `disabled` activé, le contrôle est actif.
     [`form`](/fr/docs/Web/HTML/Reference/Attributes/form)
-  - : L'élément {{HTMLElement("form")}} auquel associer le `<select>` (son _propriétaire de formulaire_). La valeur de cet attribut doit être l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'un `<form>` dans le même document. (Si cet attribut n'est pas défini, le `<select>` est associé à son élément `<form>` ancêtre, s'il existe.)
+  - : L'élément {{HTMLElement("form")}} auquel associer le `<select>` (son _propriétaire de formulaire_). La valeur de cet attribut doit être un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'un `<form>` dans le même document. (Si cet attribut n'est pas défini, le `<select>` est associé à son élément `<form>` ancêtre, s'il existe.)
 
     Cet attribut permet de définir l'association d'éléments `<select>` à des `<form>` n'importe où dans le document, pas seulement à l'intérieur d'un `<form>`. Il peut aussi définir une association différente de celle d'un ancêtre `<form>`.
 
@@ -78,28 +78,40 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ## Notes d'utilisation
 
+### Options dans des éléments conteneurs
+
+L'élément `<select>` construit sa liste d'options à partir de tous les descendants `<option>`, pas seulement de ses enfants directs.
+Cela signifie que les options peuvent être enveloppées dans d'autres éléments, tels que des éléments {{HTMLElement("div")}}, et qu'elles apparaissent toujours comme des options sélectionnables dans le menu déroulant et sont incluses dans l'envoi du formulaire.
+Les éléments d'encapsulation sont utiles pour le style dans les [éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select) mais n'ont aucun effet sur le comportement du sélecteur&nbsp;: ils ne créent pas de groupes, d'étiquettes ou de séparateurs.
+Pour regrouper des options sous un en-tête, utilisez un {{HTMLElement("optgroup")}}&nbsp;; une {{HTMLElement("option")}} compte comme faisant partie d'un `<optgroup>` si le groupe est un ancêtre, donc les éléments d'encapsulation peuvent également être utilisés à l'intérieur d'un groupe sans rompre l'association.
+
+> [!NOTE]
+> Les navigateurs avec un comportement d'analyse moderne conservent tous les éléments écrits à l'intérieur d'un `<select>` dans le DOM — y compris les éléments d'encapsulation, {{HTMLElement("button")}} et {{HTMLElement("selectedcontent")}}.
+> Les anciens navigateurs, en revanche, suppriment les éléments non autorisés lors de l'analyse, ne conservant que la structure `<option>`, `<optgroup>` et `<hr>`.
+> En conséquence, le style, le balisage ou le script qui dépendent des éléments supprimés ne fonctionnent pas sur les anciens navigateurs.
+
 ### Sélectionner plusieurs options
 
 Sur un ordinateur de bureau, il existe différentes façons de sélectionner plusieurs options pour un élément `<select>` utilisant un attribut `multiple`.
 
-Pour les personnes qui utilisent la souris, il est possible de maintenir les touches <kbd>Ctrl</kbd>, <kbd>Command</kbd> ou <kbd>Maj</kbd> (selon le système d'exploitation utilisé) et de cliquer sur les différentes options afin de les sélectionner/déselectionner.
+Pour les personnes qui utilisent la souris, il est possible de maintenir les touches <kbd>Ctrl</kbd>, <kbd>Command</kbd> ou <kbd>Maj</kbd> (selon le système d'exploitation utilisé) et de cliquer sur les différentes options afin de les sélectionner/désélectionner.
 
 > [!WARNING]
 > Les moyens décrits ci-après pour sélectionner des options qui ne sont pas contigües semblent ne fonctionner qu'avec Firefox.
 >
-> Sous macOS, les raccourcis <kbd>Ctrl</kbd> + <kbd>Flèche vers le haut</kbd> et <kbd>Ctrl</kbd> + <kbd>Flèche vers le bas</kbd> sont en conflit avec les raccourcis système par défaut pour _Mission Control_ et _Fenêtres d'application_, il faudra donc les désactiver pour que cela fonctionne.
+> Sous macOS, les raccourcis <kbd>Ctrl</kbd> + <kbd>Flèche vers le haut</kbd> et <kbd>Ctrl</kbd> + <kbd>Flèche vers le bas</kbd> sont en conflit avec les raccourcis système par défaut pour _Mission Control_ et _Fenêtres d'application_, il faut donc les désactiver pour que cela fonctionne.
 
-Les utilisateur·ice·s du clavier pourront sélectionner des options contigües de la façon suivante&nbsp;:
+Les utilisateur·ice·s du clavier peuvent sélectionner des options contigües de la façon suivante&nbsp;:
 
-- Placer le focus sur l'élément `<select>` (avec la touche <kbd>Tab</kbd> par exemple).
+- Placer la sélection sur l'élément `<select>` (avec la touche <kbd>Tab</kbd> par exemple).
 - Sélectionner une option en haut ou en bas de l'intervalle en se déplaçant avec les touches <kbd>Haut</kbd> et <kbd>Bas</kbd>.
 - Maintenir la touche <kbd>Shift</kbd> puis utiliser les touches <kbd>Haut</kbd> et <kbd>Bas</kbd> pour augmenter ou réduire le nombre d'options sélectionnées.
 
-Les utilisateur·ice·s du clavier pourront sélectionner des options non-contigües de la façon suivante&nbsp;:
+Les utilisateur·ice·s du clavier peuvent sélectionner des options non-contigües de la façon suivante&nbsp;:
 
-- Placer le focus sur l'élément `<select>` (avec la touche <kbd>Tab</kbd> par exemple).
-- Maintenir la touche <kbd>Ctrl</kbd> puis utiliser les touches <kbd>Haut</kbd> et <kbd>Bas</kbd> pour modifier le focus sur l'option qu'on souhaite choisir ou rejeter. L'option avec le focus sera entourée par un contour en pointillé.
-- Appuyer sur <kbd>Espace</kbd> pour sélectionner/déselectionner les options avec le focus et ainsi de suite pour les différentes options.
+- Placer la sélection sur l'élément `<select>` (avec la touche <kbd>Tab</kbd> par exemple).
+- Maintenir la touche <kbd>Ctrl</kbd> puis utiliser les touches <kbd>Haut</kbd> et <kbd>Bas</kbd> pour modifier la sélection sur l'option qu'on souhaite choisir ou rejeter. L'option avec la sélection est entourée par un contour en pointillé.
+- Appuyer sur <kbd>Espace</kbd> pour sélectionner/désélectionner les options avec la sélection et ainsi de suite pour les différentes options.
 
 ## Mise en forme avec CSS
 
@@ -316,4 +328,4 @@ L'exemple qui suit est légèrement plus complexe et illustre certaines fonction
 - L'élément {{HTMLElement("option")}}
 - L'élément {{HTMLElement("optgroup")}}
 - [Les éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select)
-- Événements déclenchés par `<select>`&nbsp;: {{DOMxRef("HTMLElement/change_event", "change")}}, {{DOMxRef("Element/input_event", "input")}}
+- Évènements déclenchés par `<select>`&nbsp;: {{DOMxRef("HTMLElement/change_event", "change")}}, {{DOMxRef("Element/input_event", "input")}}

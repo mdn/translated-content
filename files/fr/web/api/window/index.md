@@ -2,7 +2,7 @@
 title: Window
 slug: Web/API/Window
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: 9cf3002bd29376c15d49df6fab2e6a264285abf6
 ---
 
 {{APIRef("DOM")}}
@@ -238,6 +238,8 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
   - : Indique au navigateur qu'une animation est en cours et demande de planifier un rafraîchissement de la fenêtre pour la prochaine image d'animation.
 - {{DOMxRef("Window.requestIdleCallback()")}}
   - : Permet de planifier des tâches pendant les périodes d'inactivité du navigateur.
+- {{DOMxRef("Window.requestResize()")}} {{Experimental_Inline}}
+  - : Met à jour les informations de taille partagées par un document intégré avec son parent d'intégration, mais uniquement si le document intégré a choisi de partager ses informations de taille.
 - {{DOMxRef("Window.resizeBy()")}}
   - : Redimensionne la fenêtre courante d'une certaine valeur.
 - {{DOMxRef("Window.resizeTo()")}}
@@ -525,7 +527,7 @@ document.body.onresize = (e) => console.log(e.currentTarget);
 <body onresize="console.log(event.currentTarget)"></body>
 ```
 
-Dans les trois cas, vous verrez l'objet `Window` affiché comme `currentTarget`.
+Dans les trois cas, vous allez voir l'objet `Window` affiché comme `currentTarget`.
 
 ## Spécifications
 

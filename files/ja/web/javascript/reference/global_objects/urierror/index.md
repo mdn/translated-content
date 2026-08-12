@@ -1,11 +1,15 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
 **`URIError`** オブジェクトは、グローバル URI 処理関数が間違った方法で使用された場合のエラーを表します。
+
+`URIError` は{{Glossary("serializable object", "シリアライズ可能オブジェクト")}}であるため、{{DOMxRef("Window.structuredClone", "structuredClone()")}} で複製したり、[ワーカー](/ja/docs/Web/API/Worker)間で {{domxref("Worker/postMessage()", "postMessage()")}} を使用してコピーしたりすることができます。
+
+`URIError` は {{jsxref("Error")}} のサブクラスです。
 
 ## コンストラクター
 
@@ -14,22 +18,22 @@ slug: Web/JavaScript/Reference/Global_Objects/URIError
 
 ## インスタンスプロパティ
 
-- {{jsxref("Error.prototype.message", "URIError.prototype.message")}}
-  - : エラーメッセージです。 ECMA-262 において {{jsxref("URIError")}} は自身の `message` プロパティを提供するべきとされていますが、 [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) では {{jsxref("Error.prototype.message")}} を継承しています。
-- {{jsxref("Error.prototype.name", "URIError.prototype.name")}}
-  - : エラー名です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}}
-  - : このエラーが発生したファイルのパスです。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}}
-  - : このエラーが発生したファイル内の行番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}}
-  - : このエラーが発生した行内の桁番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.stack", "URIError.prototype.stack")}}
-  - : スタックトレースです。 {{jsxref("Error")}} から継承しています。
+_親である {{jsxref("Error")}} から継承したプロパティもあります。_
+
+これらのプロパティは `URIError.prototype` で定義されており、すべての `URIError` インスタンスで共有されます。
+
+- {{jsxref("Object/constructor", "URIError.prototype.constructor")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数です。`URIError` のインスタンスでは、初期値は {{jsxref("URIError/URIError", "URIError")}} コンストラクターです。
+- {{jsxref("Error/name", "URIError.prototype.name")}}
+  - : エラーの種類の名前を表します。`URIError.prototype.name` の場合、初期値は `"URIError"` です。
+
+## インスタンスメソッド
+
+_親である {{jsxref("Error")}} から継承したメソッドがあります_。
 
 ## 例
 
-### URIError のキャッチ
+### URIError の捕捉
 
 ```js
 try {
@@ -38,10 +42,7 @@ try {
   console.log(e instanceof URIError); // true
   console.log(e.message); // "malformed URI sequence"
   console.log(e.name); // "URIError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+  console.log(e.stack); // このエラーのスタック
 }
 ```
 
@@ -54,10 +55,7 @@ try {
   console.log(e instanceof URIError); // true
   console.log(e.message); // "Hello"
   console.log(e.name); // "URIError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  console.log(e.stack); // このエラーのスタック
 }
 ```
 

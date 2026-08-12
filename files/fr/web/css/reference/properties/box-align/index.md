@@ -3,7 +3,7 @@ title: Propriété CSS `box-align`
 short-title: box-align
 slug: Web/CSS/Reference/Properties/box-align
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 {{Non-standard_Header}}{{Deprecated_Header}}
@@ -11,7 +11,7 @@ l10n:
 > [!WARNING]
 > Cette propriété s'inscrivait dans une ancienne version du standard pour le module CSS sur les boîtes flexibles et a été remplacée dans une nouvelle version du standard.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`box-align`** définit comment un élément aligne son contenu par rapport à l'axe orthogonal à la disposition. L'effet obtenu ne sera visible que s'il y a de l'espace supplémentaire dans la boîte flexible.
+La propriété [CSS](/fr/docs/Web/CSS) **`box-align`** définit comment un élément aligne son contenu par rapport à l'axe orthogonal à la disposition. L'effet obtenu n'est visible que s'il y a de l'espace supplémentaire dans la boîte flexible.
 
 Voir la page [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) pour plus d'informations.
 
@@ -33,9 +33,9 @@ box-lines: initial;
 box-lines: unset;
 ```
 
-La propriété `box-align` est paramétrée grâce à l'un des mots-clés suivants.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `start`
   - : La boîte aligne son contenu au début (l'espace restant est alors situé à la fin).
@@ -44,7 +44,7 @@ La propriété `box-align` est paramétrée grâce à l'un des mots-clés suivan
 - `end`
   - : La boîte aligne son contenu au début (l'espace restant est alors situé au début).
 - `baseline`
-  - : La boîte aligne les lignes de base des contenus (le texte sera sur la même ligne). Cela ne s'applique que si l'orientation de la boîte est horizontale.
+  - : La boîte aligne les lignes de base des contenus (le texte est sur la même ligne). Cela ne s'applique que si l'orientation de la boîte est horizontale.
 - `stretch`
   - : Les boîtes s'étirent afin qu'il n'y ait plus d'espace restant dans la boîte.
 
@@ -75,8 +75,8 @@ Si l'alignement est défini grâce à l'attribut HTML `align`, le style est igno
 
 ```html
 <div class="exemple">
-  <p>Je serai deuxième en partant du bas, centré horizontalement.</p>
-  <p>Je serai en bas de div.exemple, centré horizontalement.</p>
+  <p>Je suis deuxième en partant du bas, centré horizontalement.</p>
+  <p>Je suis en bas de div.exemple, centré horizontalement.</p>
 </div>
 ```
 
@@ -98,7 +98,7 @@ div.exemple {
      un effet */
   width: 300px;
 
-  /* Les éléments fils seront orientés
+  /* Les éléments fils sont orientés
      verticalement */
   box-orient: vertical;
   -moz-box-orient: vertical; /* Mozilla */
