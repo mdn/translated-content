@@ -384,48 +384,6 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
   </tbody>
 </table>
 
-### 瀑布流布局
-
-新增对基于网格布局的[瀑布流布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)的支持，其中一个轴为 masonry 布局，另一个轴为普通网格布局。这样，开发人员就能像在 Pinterest 上一样轻松创建画廊风格的布局。更多详情，请参阅 [Firefox bug 1607954](https://bugzil.la/1607954)。
-
-<table>
-  <thead>
-    <tr>
-      <th>更新通道</th>
-      <th>添加的版本</th>
-      <th>默认启用？</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>77</td>
-      <td>是</td>
-    </tr>
-    <tr>
-      <th>开发者版</th>
-      <td>77</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>77</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>发行版</th>
-      <td>77</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>首选项名称</th>
-      <td colspan="2">
-        <code>layout.css.grid-template-masonry-value.enabled</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ### fit-content() 函数
 
 {{cssxref("fit-content_function", "fit-content()")}} 函数适用于 {{cssxref("width")}} 和其他大小属性。CSS 网格布局轨迹大小已经支持该函数。（详情请参见 [Firefox bug 1312588](https://bugzil.la/1312588)）
