@@ -14,13 +14,13 @@ l10n:
 
 ## 值
 
-如果元素没有活动的视图过渡，则返回 {{domxref("ViewTransition")}} 或 `null`。
+返回 {{domxref("ViewTransition")}}；如果元素没有进行中的视图过渡，则返回 `null`。
 
 ## 示例
 
 ### 基本用法
 
-此代码片段演示了如何使用 `activeViewTransition` 获取正在进行中的视图过渡的引用。
+此代码片段演示了如何使用 `activeViewTransition` 取得指向进行中视图过渡的引用。
 
 ```js
 const myElement = document.querySelector(".my-element");
