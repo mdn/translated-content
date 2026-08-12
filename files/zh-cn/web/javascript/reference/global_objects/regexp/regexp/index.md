@@ -92,6 +92,6 @@ new RegExp("ab+c", "i"); // 构造函数
 ## 参见
 
 - [`core-js` 中具有许多现代 `RegExp` 特性（`dotAll`、`sticky` 标志、具名捕获组，等等）的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [正则表达式](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)指南
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)指南
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}
