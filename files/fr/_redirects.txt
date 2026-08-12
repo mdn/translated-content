@@ -3323,6 +3323,7 @@
 /fr/docs/Web/CSS/CSS_colors/Color_format_converter	/fr/docs/Web/CSS/Guides/Colors/Color_format_converter
 /fr/docs/Web/CSS/CSS_colors/Color_mixer	/fr/docs/Web/CSS/Guides/Colors/Color_mixer
 /fr/docs/Web/CSS/CSS_shapes/Shape_generator	/fr/docs/Web/CSS/Guides/Shapes/Shape_generator
+/fr/docs/Web/CSS/Guides/Grid_layout/Masonry_layout	/fr/docs/orphaned/Web/CSS/Guides/Grid_layout/Masonry_layout
 /fr/docs/Web/CSS/Reference/background-blend-mode	/fr/docs/Web/CSS/Reference/Properties/background-blend-mode
 /fr/docs/Web/CSS/Reference/line-break	/fr/docs/Web/CSS/Reference/Properties/line-break
 /fr/docs/Web/CSS/Reference/mix-blend-mode	/fr/docs/Web/CSS/Reference/Properties/mix-blend-mode
@@ -3377,7 +3378,7 @@
 /fr/docs/Web/CSS/align-content	/fr/docs/Web/CSS/Reference/Properties/align-content
 /fr/docs/Web/CSS/align-items	/fr/docs/Web/CSS/Reference/Properties/align-items
 /fr/docs/Web/CSS/align-self	/fr/docs/Web/CSS/Reference/Properties/align-self
-/fr/docs/Web/CSS/align-tracks	/fr/docs/Web/CSS/Guides/Grid_layout/Masonry_layout
+/fr/docs/Web/CSS/align-tracks	/fr/docs/orphaned/Web/CSS/Guides/Grid_layout/Masonry_layout
 /fr/docs/Web/CSS/all	/fr/docs/Web/CSS/Reference/Properties/all
 /fr/docs/Web/CSS/alpha-value	/fr/docs/Web/CSS/Reference/Values/alpha-value
 /fr/docs/Web/CSS/angle	/fr/docs/Web/CSS/Reference/Values/angle

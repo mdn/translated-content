@@ -1,7 +1,7 @@
 ---
 title: Mise en page en maçonnerie (masonry)
-slug: Web/CSS/Guides/Grid_layout/Masonry_layout
-original_slug: Web/CSS/CSS_grid_layout/Masonry_layout
+slug: orphaned/Web/CSS/Guides/Grid_layout/Masonry_layout
+original_slug: Web/CSS/Guides/Grid_layout/Masonry_layout
 l10n:
   sourceCommit: 72a2f0fa7f25ba32ab8e07447a8d4bbc2f936b85
 ---
