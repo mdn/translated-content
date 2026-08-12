@@ -1,6 +1,7 @@
 ---
 title: 瀑布流布局
-slug: Web/CSS/Guides/Grid_layout/Masonry_layout
+slug: orphaned/Web/CSS/Guides/Grid_layout/Masonry_layout
+original_slug: Web/CSS/Guides/Grid_layout/Masonry_layout
 l10n:
   sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
