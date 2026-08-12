@@ -1,5 +1,5 @@
 ---
-title: "CSS @ 规则"
+title: CSS @ 规则
 short-title: "@ 规则"
 slug: Web/CSS/Reference/At-rules
 l10n:
