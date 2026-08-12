@@ -384,9 +384,9 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
   </tbody>
 </table>
 
-### Masonry grid 布局
+### 瀑布流布局
 
-新增对基于网格布局的 [masonry 风格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)的支持，其中一个轴为 masonry 布局，另一个轴为普通网格布局。这样，开发人员就能像在 Pinterest 上一样轻松创建画廊风格的布局。更多详情，请参阅 [Firefox bug 1607954](https://bugzil.la/1607954)。
+新增对基于网格布局的[瀑布流布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)的支持，其中一个轴为 masonry 布局，另一个轴为普通网格布局。这样，开发人员就能像在 Pinterest 上一样轻松创建画廊风格的布局。更多详情，请参阅 [Firefox bug 1607954](https://bugzil.la/1607954)。
 
 <table>
   <thead>

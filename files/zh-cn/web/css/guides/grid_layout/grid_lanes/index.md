@@ -1,7 +1,6 @@
 ---
 title: 瀑布流布局
-slug: orphaned/Web/CSS/Guides/Grid_layout/Masonry_layout
-original_slug: Web/CSS/Guides/Grid_layout/Masonry_layout
+slug: Web/CSS/Guides/Grid_layout/Grid_lanes
 l10n:
   sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
@@ -44,10 +43,9 @@ body {
 
 ```css live-sample___block-axis
 .grid {
-  display: grid;
+  display: grid-lanes;
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
 }
 ```
 
@@ -96,9 +94,8 @@ for (let i = 0; i < items.length; i++) {
 
 ```css live-sample___inline-axis
 .grid {
-  display: grid;
+  display: grid-lanes;
   gap: 10px;
-  grid-template-columns: masonry;
   grid-template-rows: repeat(3, 100px);
 }
 ```
@@ -130,10 +127,9 @@ for (let i = 0; i < items.length; i++) {
 
 ```css live-sample___spanners
 .grid {
-  display: grid;
+  display: grid-lanes;
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
 }
 
 .span-2 {
@@ -162,10 +158,9 @@ for (let i = 0; i < items.length; i++) {
 
 ```css live-sample___positioned
 .grid {
-  display: grid;
+  display: grid-lanes;
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
 }
 
 .positioned {
@@ -175,10 +170,6 @@ for (let i = 0; i < items.length; i++) {
 ```
 
 {{EmbedLiveSample("positioned", "", "290px")}}
-
-## 瀑布流布局的回退
-
-在[不支持瀑布流的浏览器](#browser_compatibility)中，将使用常规的网格自动布局进行替代。
 
 ## 规范
 
@@ -190,5 +181,4 @@ for (let i = 0; i < items.length; i++) {
 
 ## 参见
 
-- {{cssxref("grid-auto-flow")}} 用于控制网格自动排列的属性
-- [原生 CSS 瀑布流布局（基于 CSS 网格布局）](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)来自 Smashing Magazine（2020）
+- {{cssxref("grid-auto-flow")}} 用于控制网格自动排列
