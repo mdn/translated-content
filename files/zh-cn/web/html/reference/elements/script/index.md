@@ -29,7 +29,7 @@ l10n:
     有关浏览器支持的说明，请参见[浏览器兼容性](#浏览器兼容性)。另请参阅 [asm.js 的异步脚本](/zh-CN/docs/Games/Techniques/Async_scripts)。
 
 - `attributionsrc` {{deprecated_inline}} {{non-standard_inline}}
-  - : 指定希望浏览器在脚本资源请求中一并发送 {{httpheader("Attribution-Reporting-Eligible")}} 标头。服务器端可据此在响应中发送 {{httpheader("Attribution-Reporting-Register-Source")}} 或 {{httpheader("Attribution-Reporting-Register-Trigger")}} 标头，以分别注册基于 JavaScript 的[归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)或[归因触发器](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)。应返回哪种响应标头取决于触发注册的 `Attribution-Reporting-Eligible` 标头的值。
+  - : 指定希望浏览器在脚本资源请求中一并发送 {{httpheader("Attribution-Reporting-Eligible")}} 标头。服务器端可据此在响应中发送 {{httpheader("Attribution-Reporting-Register-Source")}} 或 {{httpheader("Attribution-Reporting-Register-Trigger")}} 标头，以分别注册基于 JavaScript 的[归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于_javascript_的事件来源)或[归因触发器](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_triggers#基于_javascript_的归因触发器)。应返回哪种响应标头取决于触发注册的 `Attribution-Reporting-Eligible` 标头的值。
 
     > [!NOTE]
     > 也可以通过发送包含 `attributionReporting` 选项的 {{domxref("Window/fetch", "fetch()")}} 请求（直接在 `fetch()` 调用中设置，或在传给 `fetch()` 调用的 {{domxref("Request")}} 对象中设置），或者发送一个在请求对象上调用 {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} 的 {{domxref("XMLHttpRequest")}}，注册基于 JavaScript 的归因来源或触发器。
