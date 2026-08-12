@@ -3,17 +3,14 @@ title: "Element : propriété scrollWidth"
 short-title: scrollWidth
 slug: Web/API/Element/scrollWidth
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 0916e1754652f3a7c663ef031faa26c98f492023
 ---
 
 {{APIRef("DOM")}}
 
-**`Element.scrollWidth`** est une propriété en lecture seule correspondant à la mesure de la largeur du contenu d'un élément, incluant le contenu qui ne serait pas visible à l'écran en raison d'un dépassement.
+**`Element.scrollWidth`** est une propriété en lecture seule correspondant à la mesure de la largeur du contenu d'un élément, incluant le contenu qui n'est pas visible à l'écran en raison d'un dépassement.
 
-La valeur `scrollWidth` est égale à la largeur minimale dont l'élément aurait besoin pour s'adapter à tout le contenu de la fenêtre sans utiliser de barre de défilement horizontale. La largeur est mesurée de la même manière que [`clientWidth`](/fr/docs/Web/API/Element/clientWidth)&nbsp;: elle inclut le remplissage (<i lang="en">padding</i>) de l'élément, mais pas sa bordure, sa marge ou sa barre de défilement verticale (si présente). Elle peut également inclure la largeur des pseudo-éléments tels que [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before) ou [`::after`](/fr/docs/Web/CSS/Reference/Selectors/::after). Pour un élément donné, si son contenu peut s'adapter sans avoir besoin d'une barre de défilement horizontale, `scrollWidth` sera égale à [`clientWidth`](/fr/docs/Web/API/Element/clientWidth).
-
-> [!NOTE]
-> Cette propriété arrondira la valeur à un nombre entier. Si vous avez besoin d'une valeur fractionnaire, utilisez [`element.getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect).
+La valeur `scrollWidth` est égale à la largeur minimale dont l'élément a besoin pour s'adapter à tout le contenu de la fenêtre sans utiliser de barre de défilement horizontale. La largeur est mesurée de la même manière que {{DOMxRef("Element.clientWidth", "clientWidth")}}&nbsp;: elle inclut le remplissage (<i lang="en">padding</i>) de l'élément, mais pas sa bordure, sa marge ou sa barre de défilement verticale (si présente). Elle peut également inclure la largeur des pseudo-éléments CSS tels que {{CSSxRef("::before")}} ou {{CSSxRef("::after")}}. Pour un élément donné, si son contenu peut s'adapter sans avoir besoin d'une barre de défilement horizontale, `scrollWidth` est égale à {{DOMxRef("Element.clientWidth", "clientWidth")}}.
 
 ## Valeur
 
@@ -21,77 +18,103 @@ Un nombre.
 
 ## Exemples
 
-### HTML
+### Détecter le débordement du contenu
+
+Dans cet exemple, nous utilisons la propriété `scrollWidth` pour vérifier si le contenu d'un élément déborde de ses limites. Nous avons deux éléments `div`, le premier avec une largeur de `100px`, et le second sans largeur fixe. Leur contenu est exactement le même, et nous affichons un message indiquant si chacun déborde de son conteneur.
+
+#### HTML
 
 ```html
-<div id="uneDiv">TotoTruc-TotoTruc-TotoTruc-TotoTruc</div>
-<button id="unBouton">Vérifier le débordement</button>
-
-<div id="uneAutreDiv">TotoTruc-TotoTruc-TotoTruc-TotoTruc</div>
-<button id="unAutreBouton">Vérifier le débordement</button>
+<div id="div1">TotoTruc-TotoTruc-TotoTruc-TotoTruc</div>
+<button id="button1">Vérifier le débordement</button>
+<pre id="journal1"></pre>
+<div id="div2">TotoTruc-TotoTruc-TotoTruc-TotoTruc</div>
+<button id="button2">Vérifier le débordement</button>
+<pre id="journal2"></pre>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
+  padding: 0.15em;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-#uneDiv {
+button {
+  margin: 0.15em 0 0.5em 0;
+}
+
+pre {
+  margin: 0.5em 0;
+}
+
+#div1 {
   width: 100px;
 }
 
-button {
+#journal1 {
   margin-bottom: 2em;
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
-const boutonUn = document.getElementById("unBouton");
-const boutonDeux = document.getElementById("unAutreBouton");
-const blocUn = document.getElementById("uneDiv");
-const blocDeux = document.getElementById("uneAutreDiv");
+const button1 = document.getElementById("button1");
+const button2 = document.getElementById("button2");
 
-// vérifie pour déterminer si un débordement se produit
-function isOverflowing(element) {
-  return element.scrollWidth > element.offsetWidth;
+const div1 = document.getElementById("div1");
+const div2 = document.getElementById("div2");
+
+const journal1 = document.getElementById("journal1");
+const journal2 = document.getElementById("journal2");
+
+// Vérifie si le scrollWidth est plus grand que le clientWidth ou non
+function deborde(element) {
+  return element.scrollWidth > element.clientWidth;
 }
 
-function alertOverflow(element) {
-  if (isOverflowing(element)) {
-    alert("Le contenu a débordé du cadre.");
+function verifierDebordement(element, log) {
+  if (deborde(element)) {
+    log.innerText = `Le contenu déborde, scrollWidth est de ${element.scrollWidth}px`;
   } else {
-    alert("Aucun débordement !");
+    log.innerText = `Pas de débordement, scrollWidth est de ${element.scrollWidth}px`;
   }
 }
 
-boutonUn.addEventListener("click", () => {
-  alertOverflow(blocUn);
+button1.addEventListener("click", () => {
+  verifierDebordement(div1, journal1);
 });
-boutonDeux.addEventListener("click", () => {
-  alertOverflow(blocDeux);
+
+button2.addEventListener("click", () => {
+  verifierDebordement(div2, journal2);
 });
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('')}}
+Cliquez sur les boutons pour vérifier si le contenu déborde des conteneurs.
+
+{{EmbedLiveSample("Détecter le débordement du contenu", "100%", 190)}}
 
 ## Spécifications
 
 {{Specifications}}
 
-## Compabilité des navigateurs
+## Compatibilité des navigateurs
 
 {{Compat}}
 
 ## Voir aussi
 
-- La propriété [`Element.clientWidth`](/fr/docs/Web/API/Element/clientWidth)
-- La propriété [`HTMLElement.offsetWidth`](/fr/docs/Web/API/HTMLElement/offsetWidth)
-- [Déterminer les dimensions des éléments](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [Déterminer la taille des éléments](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- La propriété {{DOMxRef("HTMLElement.offsetWidth")}}
+- La propriété {{DOMxRef("Element.clientWidth")}}
+- La propriété {{DOMxRef("Element.scrollHeight")}}
+- La propriété {{DOMxRef("Element.scrollLeft")}}
+- La propriété {{DOMxRef("Element.scrollTop")}}
+- La méthode {{DOMxRef("Element.getBoundingClientRect()")}}
+- La méthode {{DOMxRef("Element.scrollTo()")}}

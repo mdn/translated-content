@@ -155,7 +155,7 @@ div:nth-of-type(3n) {
 {{EmbedLiveSample("Disposition flexible", "auto", 120)}}
 
 > [!NOTE]
-> Bien qu'il y ait un espace horizontal entre les éléments flex adjacents sur chaque ligne, il n'existe pas d'espace entre les lignes. Pour définir un espace vertical entre les lignes flex, vous pouvez définir une valeur non nulle pour la propriété {{CSSxRef("row-gap")}}. La propriété raccourcie {{CSSxRef("gap")}} permet également de définir à la fois `row-gap` et `column-gap` dans une seule déclaration, dans cet ordre.
+> Bien qu'il y ait un espace horizontal entre les éléments flexibles adjacents sur chaque ligne, il n'existe pas d'espace entre les lignes. Pour définir un espace vertical entre les lignes flex, vous pouvez définir une valeur non nulle pour la propriété {{CSSxRef("row-gap")}}. La propriété raccourcie {{CSSxRef("gap")}} permet également de définir à la fois `row-gap` et `column-gap` dans une seule déclaration, dans cet ordre.
 
 ### Disposition en grille
 
