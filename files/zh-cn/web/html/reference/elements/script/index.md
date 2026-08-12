@@ -50,7 +50,7 @@ l10n:
       > [!NOTE]
       > 指定多个 URL 意味着可在同一功能上注册多个归因来源。例如，你可能有多个要衡量成效的不同活动，它们需要基于不同数据生成不同报告。
 
-    更多信息请参见 [Attribution Reporting API](/zh-CN/docs/Web/API/Attribution_Reporting_API)。
+    更多信息请参见[归因报告 API](/zh-CN/docs/Web/API/Attribution_Reporting_API)。
 
 - `blocking`
   - : 此属性明确指出，在脚本执行前应阻塞某些操作。要阻塞的操作必须是以空格分隔的阻塞令牌列表。目前仅有一个令牌：
