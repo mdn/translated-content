@@ -1,25 +1,27 @@
 ---
-title: 反弹的墙壁
+title: 从墙壁反弹
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
+l10n: 
+  sourceCommit: 1a0be468b9e7c88a09ea3438a81341c4f6a619a6
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
-本篇是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 节教程中的第三节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 看到源码。
+本篇是 [Gamedev Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 个步骤中的**第 3 步**。在你完成了本节教程之后，你可以在 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 看到源码。
 
-看到我们的球动起来很惊讶吧，但是它很快就从屏幕上消失了，当然我们是可以控制它的。我们会实现一些非常简单的碰撞检测 (详细后面解释),使球在画布的四周反弹回来。
+看到小球在移动确实很棒，但它很快就会从屏幕上消失，这限制了我们玩游戏的乐趣！为了解决这个问题，我们将实现一些碰撞检测功能（相关内容将在[后续步骤](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)进行更详细的讲解），让小球能够从画布的四个边缘弹回来。
 
-## 简单的碰撞
+## 简单的碰撞检测
 
-我们将检查球体是否与边缘接触，如果有接触我们将相应的改变它的运动方向。
+为了检测碰撞，我们将检查球是否接触（碰到）墙壁，如果接触，则相应地改变其运动方向。
 
-为了运算方便我们定义一个名为 ballRadius 的变量，来存储球的半径。向代码中添加一下内容：
+为了进行计算，让我们定义一个名为 `ballRadius` 的变量，用于存储绘制圆的半径并用于计算。请将以下内容添加到你的代码中，位置在现有变量声明的下方：
 
 ```js
-var ballRadius = 10;
+const ballRadius = 10;
 ```
 
-现在更新绘制球的 drawBall() 函数：
+现在更新绘制球的 `drawBall()` 函数如下：
 
 ```js
 ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
@@ -27,7 +29,7 @@ ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
 
 ### 从顶部和底部弹起
 
-有四面墙壁可以让它反弹回来，我们先来看上面的那面墙。我们需要判断球运动的每一帧，球体是否与画布的顶部边缘接触。如果有接触，我们将会改变球体的运动方向，使它向相反的方向移动，并保证它在画布的可见范围之内。记住坐标系统的左上角，让我们开始并加以下代码：
+有四面墙可以让球反弹——我们先关注顶部那面墙。我们需要在每一帧检查球是否触碰到画布的顶部边缘——如果是，我们就反转球的运动方向，使其开始向相反方向移动，并保持在可见边界内。考虑到坐标系以左上角为原点，我们可以编写如下代码：
 
 ```js
 if (y + dy < 0) {
@@ -35,9 +37,9 @@ if (y + dy < 0) {
 }
 ```
 
-如果球的纵坐标（y 轴）值小于零，我们将在球体原有的运动方向上逆转。如果球体向上移动的速度是 2 像素/帧，现在就是向上移动速度是 -2 像素。这相当于此时向下移动的速度是 2 像素/帧。
+如果球的位置的 `y` 值小于零，则通过将其设置为自身的负值来改变 `y` 轴上的运动方向。如果球原本以每帧 2 像素的速度向上移动，现在它将以 -2 像素的速度“向上”移动，这实际上相当于以每帧 2 像素的速度向下移动。
 
-上面的代码将处理球与画布顶部边缘的反射，现在让我们思考一下底部边缘如何处理：
+上面的代码处理了球从顶边弹回的情况，现在让我们来考虑底边的情况：
 
 ```js
 if (y + dy > canvas.height) {
@@ -45,9 +47,9 @@ if (y + dy > canvas.height) {
 }
 ```
 
-如果球的 y 位置大于`canvas`的高度（记住，我们从左上角计算 y 值，所以顶部边缘从 0 开始，底部边缘在 480 像素），然后通过像以前那样反转 y 轴运动而离开底部边缘。
+如果球的 `y` 坐标大于画布的高度（请记住，我们是从左上角开始计算 `y` 值的，因此顶边从 0 开始，底边位于 320 像素处，即画布的高度），则像之前那样反转 `y` 轴的移动方向，使球从底边反弹回来。
 
-我们可以将这两句冗长的代码合二为一：
+我们可以将这两条语句合并为一条，以简化代码：
 
 ```js
 if (y + dy > canvas.height || y + dy < 0) {
@@ -55,11 +57,11 @@ if (y + dy > canvas.height || y + dy < 0) {
 }
 ```
 
-如果其中一个判断为 `true`, 则反转球的运动。
+如果这两个条件中有任何一个为`true`，则反转球的运动方向。
 
 ### 从左边和右边反弹
 
-我们有顶部和底部的边缘，所以我们来考虑一下左边和右边的边缘。实际上非常相似，你所要做的就是颠倒`x`而不是`y`:
+上下两边的边界我们已经处理好了，接下来考虑左右两边。其实原理非常相似，你只需要将代码中的 `y` 替换为 `x` 并重复相关操作即可：
 
 ```js
 if (x + dx > canvas.width || x + dx < 0) {
@@ -71,15 +73,15 @@ if (y + dy > canvas.height || y + dy < 0) {
 }
 ```
 
-你应该把上面的代码块插入到 draw（）函数中，就在大括号之前。
+你应该把上面的代码块插入到 `draw()` 函数中，就在闭合的大括号之前。
 
 ### 球部分消失在墙上！
 
-测试你的代码，你会看到我们的球碰到任一边缘都会反弹！然而，我们还发现了一个问题，当球碰撞到边缘，反弹之前：
+此时测试一下你的代码，你会大吃一惊——现在我们已经实现了一个能从画布的四个边缘全部弹回的球！不过，我们还遇到另一个问题——当球撞到每面墙壁时，它会在改变方向之前稍微陷进去一点：
 
-![](ball-in-wall.png)
+![天蓝色的球消失在白色墙壁的顶部](ball-in-wall.png)
 
-这是因为我们正在计算墙和球的中心碰撞点，而我们应该围绕它的周长来做。如果碰到墙壁，球应该会弹起来，而不是陷入墙壁一半时，所以让我们来调整一下我们的判断条件。更新你之前添加的代码：
+这是因为我们计算的是墙壁与球体中心的碰撞点，而实际上应该计算的是球体周长与墙壁的碰撞点。球体应该在刚接触墙壁时就弹开，而不是等到已经有一半陷入墙壁时才弹开，因此让我们稍微调整一下代码，加入这一逻辑。请将你最后添加的代码更新为以下内容：
 
 ```js
 if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
@@ -90,19 +92,76 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 }
 ```
 
-当球的中心到墙的边缘之间的距离与球的半径完全相同时，它将改变运动的方向。
+当球心与墙壁边缘之间的距离正好等于球的半径时，球就会改变运动方向。从一侧边缘的宽度中减去半径，再将该数值加到另一侧边缘上，这样就能实现正确的碰撞检测——球会像预期那样从墙壁上弹开。
 
 ## 比较你的代码
 
-让我们再次检查这个部分的代码与你之间有何差异：
+让我们再次将这一部分的最终代码与你的代码进行对比，并试着运行一下：
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}
+```html hidden
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">开始游戏</button>
+```
+
+```css hidden
+canvas {
+  background: #eeeeee;
+}
+button {
+  display: block;
+}
+```
+
+```js
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+const ballRadius = 10;
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+let dx = 2;
+let dy = -2;
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+
+  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+    dx = -dx;
+  }
+  if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+    dy = -dy;
+  }
+
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  setInterval(draw, 10);
+}
+
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
+  startGame();
+  runButton.disabled = true;
+});
+```
+
+{{embedlivesample("比较你的代码", 600, 360)}}
 
 > [!NOTE]
 > 尝试修改你的代码，在每次碰到墙壁时都要把球的颜色改成随机的颜色。
 
 ## 下一步
 
-现在我们已经到了我们的球正在移动和留在游戏板上的阶段。在第四章中，我们将看看如何实现一个可控制的 paddle - 参见[paddle 和键盘控制](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)。
+现在，我们的球既能在游戏板上移动，又能停留在上面。在教程第四步中，我们将探讨如何实现可控制的球板——请参阅[球板和键盘控制](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)。
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
