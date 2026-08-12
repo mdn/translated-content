@@ -1,6 +1,6 @@
 ---
-title: CSS @ 规则
-short-title: @ 规则
+title: "CSS @ 规则"
+short-title: "@ 规则"
 slug: Web/CSS/Reference/At-rules
 l10n:
   sourceCommit: 3ee2355c3c90cf92c3119b82f8ebfa5d16c91c53
