@@ -50,12 +50,12 @@ La propriété `interest-delay` accepte une ou deux valeurs. La première valeur
 
 Un élément de contrôle tel que {{HTMLElement("a")}} ou {{HTMLElement("button")}} peut être défini comme un [invicateur d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) en lui attribuant l'attribut [`interestfor`](/fr/docs/Web/HTML/Reference/Elements/a#interestfor). Lorsque cette relation est établie, l'élément cible est affecté lorsque l'utilisateur·ice «&nbsp;montre de l'intérêt&nbsp;» pour l'invocateur (par exemple, en le survolant ou en le sélectionnant). Un cas d'utilisation courant est d'afficher une fenêtre contextuelle au survol ou à la sélection. Quand l'utilisateur·ice «&nbsp;cesse de montrer de l'intérêt&nbsp;», l'effet s'arrête.
 
-Quand l'utilisateur·ice montre ou perd de l'intérêt, l'effet associé ne commence ou ne s'arrête pas immédiatement — le navigateur ajoute un court délai (qui peut varier selon le navigateur). Cela empêche, par exemple, les [fenêtres contextuelles de prévisualisation](/fr/docs/Web/API/Popover_API/Using_interest_invokers#utiliser_les_invocateurs_dintérêt_pour_créer_des_fenêtres_contextuelles_daperçu) d'apparaître immédiatement quand l'utilisateur·ice survole un lien, ce qui pourrait être gênant et distrayant sur une page contenant de nombreux liens.
+Quand l'utilisateur·ice montre ou perd de l'intérêt, l'effet associé ne commence ou ne s'arrête pas immédiatement — le navigateur ajoute un court délai (qui peut varier selon le navigateur). Cela empêche, par exemple, les [fenêtres contextuelles de prévisualisation](/fr/docs/Web/API/Popover_API/Using_interest_invokers#utiliser_les_invocateurs_dintérêt_pour_créer_des_fenêtres_contextuelles_daperçu) d'apparaître immédiatement quand l'utilisateur·ice survole un lien, ce qui peut être gênant et distrayant sur une page contenant de nombreux liens.
 
 La propriété `interest-delay` permet de personnaliser ces délais. Vous pouvez utiliser `interest-delay` pour définir le délai avant que l'effet d'intérêt ne commence (défini par la propriété {{CSSxRef("interest-delay-start")}}) et le délai avant que l'effet d'intérêt ne se termine (défini par la propriété {{CSSxRef("interest-delay-end")}}) dans une seule déclaration.
 
 La propriété `interest-delay` peut prendre une ou deux valeurs. Ces valeurs peuvent être le mot-clé `normal`, qui définit le délai par défaut du navigateur, ou une valeur {{CSSxRef("&lt;time&gt;")}}, qui définit un délai personnalisé.
-Si une seule valeur est spécifiée, elle s'applique à la fois à {{CSSxRef("interest-delay-start")}} et à {{CSSxRef("interest-delay-end")}}. Si deux valeurs sont spécifiées, la première valeur définit {{CSSxRef("interest-delay-start")}}, et la seconde valeur définit {{CSSxRef("interest-delay-end")}}.
+Si une seule valeur est définie, elle s'applique à la fois à {{CSSxRef("interest-delay-start")}} et à {{CSSxRef("interest-delay-end")}}. Si deux valeurs sont définies, la première valeur définit {{CSSxRef("interest-delay-start")}}, et la seconde valeur définit {{CSSxRef("interest-delay-end")}}.
 
 ## Définition formelle
 
@@ -73,7 +73,7 @@ Dans cet exemple, nous montrons comment `interest-delay` affecte le comportement
 
 #### HTML
 
-Le balisage inclut un {{HTMLElement("button")}}, un {{HTMLElement("p")}} et un {{HTMLElement("input")}} de type `checkbox`. Nous définissons le `<button>` comme invocateur d'intérêt en lui donnant l'attribut `interestfor` dont la valeur correspond à l'`id` de l'élément `<p>`. Cela fait du paragraphe l'élément cible. Le paragraphe devient un popover grâce à l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover), qui le masque initialement.
+Le balisage inclut un {{HTMLElement("button")}}, un {{HTMLElement("p")}} et un {{HTMLElement("input")}} de type `checkbox`. Nous définissons le `<button>` comme invocateur d'intérêt en lui donnant l'attribut `interestfor` dont la valeur correspond à l'`id` de l'élément `<p>`. Cela fait du paragraphe l'élément cible. Le paragraphe devient une fenêtre contextuelle grâce à l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover), qui le masque initialement.
 
 ```html live-sample___interest-invoker-delay
 <button interestfor="mypopover">Bouton</button>
@@ -88,7 +88,7 @@ Le balisage inclut un {{HTMLElement("button")}}, un {{HTMLElement("p")}} et un {
 
 #### CSS
 
-Dans le CSS, nous définissons une règle `.delay` qui applique une valeur `interest-delay` de `1s 2s` à tout invocateur d'intérêt auquel la classe `delay` est appliquée. Nous appliquerons cette classe au `<button>` lorsque la case à cocher sera cochée, avec JavaScript.
+Dans le CSS, nous définissons une règle `.delay` qui applique une valeur `interest-delay` de `1s 2s` à tout invocateur d'intérêt auquel la classe `delay` est appliquée. Nous appliquons cette classe au `<button>` lorsque la case à cocher est cochée, avec JavaScript.
 
 ```css live-sample___interest-invoker-delay
 .delay {
@@ -116,7 +116,7 @@ Ceci s'affiche ainsi&nbsp;:
 
 Essayez de montrer de l'intérêt pour le bouton (par exemple, en le survolant ou en le sélectionnant), puis de cesser de montrer de l'intérêt pour observer l'affichage et la disparition de la fenêtre contextuelle. Par défaut, la fenêtre contextuelle s'affiche et disparaît après un très court délai.
 
-Cochez maintenant la case et refaites les mêmes actions. Cette fois, la fenêtre contextuelle devrait apparaître après un délai de `1s` lorsque l'intérêt est montré, et disparaître après un délai de `2s` lorsque l'intérêt est perdu.
+Cochez maintenant la case et refaites les mêmes actions. Cette fois, la fenêtre contextuelle doit apparaître après un délai de `1s` lorsque l'intérêt est montré, et disparaître après un délai de `2s` lorsque l'intérêt est perdu.
 
 ## Spécifications
 

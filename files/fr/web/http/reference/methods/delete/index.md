@@ -3,7 +3,7 @@ title: Méthode de requête DELETE
 short-title: DELETE
 slug: Web/HTTP/Reference/Methods/DELETE
 l10n:
-  sourceCommit: 531ab7d0f0572957de89f715de2adb981628d64e
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 La méthode HTTP **`DELETE`** demande au serveur de supprimer une ressource donnée.
@@ -116,7 +116,7 @@ Content-Length: 1234
 
 ## Voir aussi
 
-- Codes de statut HTTP&nbsp;: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}
+- Les codes de statut&nbsp;: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}
 - [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
 - [Codes de statut de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
 - [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)

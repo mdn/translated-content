@@ -3,7 +3,7 @@ title: Propriété CSS `user-modify`
 short-title: user-modify
 slug: Web/CSS/Reference/Properties/user-modify
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 {{Non-standard_Header}}{{Deprecated_Header}}
@@ -28,17 +28,17 @@ user-modify: revert;
 user-modify: unset;
 ```
 
-La propriété `-moz-user-modify` est définie grâce à un mot-clé parmi ceux de la liste ci-après.
-
 ### Valeurs
 
-- `read-only` {{Non-standard_Inline}}{{Deprecated_Inline}}
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
+- `read-only`
   - : La valeur par défaut. Le contenu est en lecture seule.
-- `read-write` {{Non-standard_Inline}}{{Deprecated_Inline}}
+- `read-write`
   - : L'utilisateur·ice peut lire et éditer le contenu.
-- `read-write-plaintext-only` {{Non-standard_Inline}}{{Deprecated_Inline}}
-  - : Identique à `read-write`, mais la mise en forme du texte sera perdue.
-- `write-only` {{Non-standard_Inline}}{{Deprecated_Inline}}
+- `read-write-plaintext-only`
+  - : Identique à `read-write`, mais la mise en forme du texte est perdue.
+- `write-only`
   - : L'utilisateur·ice peut éditer le contenu; mais ne peut pas le lire.
 
 ## Syntaxe formelle
@@ -50,13 +50,15 @@ La propriété `-moz-user-modify` est définie grâce à un mot-clé parmi ceux 
 ### HTML
 
 ```html
-<div class="readwrite">L'utilisateur·ice est capable d'éditer ce texte.</div>
+<div class="lecture-ecriture">
+  L'utilisateur·ice est capable de modifier ce texte.
+</div>
 ```
 
 ### CSS
 
 ```css
-.readwrite {
+.lecture-ecriture {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
 }
@@ -72,6 +74,6 @@ Ne fait pas partie d'un standard.
 
 ## Voir aussi
 
-- La propriété {{CSSxRef("-moz-user-focus")}} {{Non-standard_Inline}}{{Deprecated_Inline}}
-- La propriété {{CSSxRef("-moz-user-input")}} {{Non-standard_Inline}}{{Deprecated_Inline}}
+- La propriété {{CSSxRef("-moz-user-focus")}}
+- La propriété {{CSSxRef("-moz-user-input")}}
 - La propriété {{CSSxRef("user-select", "-moz-user-select")}}

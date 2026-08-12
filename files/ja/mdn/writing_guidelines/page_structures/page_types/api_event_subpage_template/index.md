@@ -2,7 +2,7 @@
 title: API イベントサブページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 1d08cee771feea858e4fdb594bac036b9cd210a6
 ---
 
 > [!NOTE]
@@ -105,15 +105,6 @@ _一般的な {{domxref("Event")}} です。_
 _{{domxref("XRSessionEvent")}} です。 {{domxref("Event")}} を継承しています。_
 
 {{InheritanceDiagram("XRSessionEvent")}}
-
-## イベントのプロパティ
-
-イベントが単なる一般的な {{domxref("Event")}} でない場合、そのイベントが持つ追加のプロパティを挙げてください。
-
-_以下の一覧のプロパティに加え、親インターフェイスである {{domxref("Event")}} のプロパティも使用可能です。_
-
-- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
-  - : このイベントが参照する {{domxref("XRSession")}} です。
 
 ## 解説
 

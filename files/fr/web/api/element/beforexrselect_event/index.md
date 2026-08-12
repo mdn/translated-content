@@ -3,7 +3,7 @@ title: "Element : évènement beforexrselect"
 short-title: beforexrselect
 slug: Web/API/Element/beforexrselect_event
 l10n:
-  sourceCommit: f18c76e518179f2facc688464c5d382bf5a9b536
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
@@ -27,11 +27,6 @@ onbeforexrselect = (event) => { }
 Un objet {{DOMxRef("XRSessionEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("XRSessionEvent")}}
-
-## Propriétés de l'évènement
-
-- {{DOMxRef("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
-  - : Le {{DOMxRef("XRSession")}} auquel l'évènement se réfère.
 
 ## Disponibilité de l'évènement
 

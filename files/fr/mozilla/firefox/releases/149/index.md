@@ -3,7 +3,7 @@ title: Firefox 149 note de version pour les développeurs
 short-title: Firefox 149
 slug: Mozilla/Firefox/Releases/149
 l10n:
-  sourceCommit: ce29b1c36065db92c2a59ba507a4941fbf0a5159
+  sourceCommit: 4c414e3e776ea5a6bd7b2fc9479d87b5b8e91a1d
 ---
 
 Cet article présente les informations concernant les changements de Firefox 149 qui concernent les développeur·euse·s.
@@ -13,7 +13,7 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
 
 ### HTML
 
-- L'attribut universel [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) prend désormais en charge la valeur [`hint`](/fr/docs/Web/HTML/Reference/Global_attributes/popover#hint). Les fenêtres contextuelles avec la valeur `hint` ne fermeront pas les fenêtres contextuelles `auto` lorsqu'elles sont affichées, mais fermeront les autres fenêtres contextuelles d'indice. ([bogue Firefox 1867743 <sup>(angl.)</sup>](https://bugzil.la/1867743)).
+- L'attribut universel [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) prend désormais en charge la valeur [`hint`](/fr/docs/Web/HTML/Reference/Global_attributes/popover#hint). Les fenêtres contextuelles avec la valeur `hint` ne ferment pas les fenêtres contextuelles `auto` lorsqu'elles sont affichées, mais ferment les autres fenêtres contextuelles d'indice. ([bogue Firefox 1867743 <sup>(angl.)</sup>](https://bugzil.la/1867743)).
 
 ### MathML
 
@@ -22,7 +22,7 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
 
 ### CSS
 
-- La propriété CSS {{CSSxRef("shape-outside")}} prend désormais en charge la fonction {{CSSxRef("basic-shape/xywh", "xywh()")}} et {{CSSxRef("basic-shape/rect", "rect()")}} comme valeurs. Ces fonctions étaient déjà implémentées pour les propriétés {{CSSxRef("clip-path")}} et {{CSSxRef("offset-path")}}, et sont maintenant également disponibles pour `shape-outside`. ([bogue Firefox 1983187 <sup>(angl.)</sup>](https://bugzil.la/1983187)).
+- La propriété CSS {{CSSxRef("shape-outside")}} prend désormais en charge la fonction {{CSSxRef("basic-shape/xywh", "xywh()")}} et {{CSSxRef("basic-shape/rect", "rect()")}} comme valeurs. Ces fonctions sont déjà implémentées pour les propriétés {{CSSxRef("clip-path")}} et {{CSSxRef("offset-path")}}, et sont maintenant également disponibles pour `shape-outside`. ([bogue Firefox 1983187 <sup>(angl.)</sup>](https://bugzil.la/1983187)).
 
 - La propriété CSS {{CSSxRef("vertical-align")}} est désormais une propriété raccourcie pour les propriétés {{CSSxRef("alignment-baseline")}}, {{CSSxRef("baseline-shift")}} et {{CSSxRef("baseline-source")}}. ([bogue Firefox 1830771 <sup>(angl.)</sup>](https://bugzil.la/1830771)).
 
@@ -33,7 +33,7 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
 ### JavaScript
 
 - Le [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge) `"islamic-umalqura"` est désormais pris en charge par {{JSxRef("Intl")}}.
-  Cette chaîne de caractères sera dans la liste des calendriers retournés par {{JSxRef("Intl.supportedValuesOf()")}}, et peut être définie comme paramètre [`options.calendar`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#calendar) dans le [constructeur `DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat).
+  Cette chaîne de caractères est dans la liste des calendriers retournés par {{JSxRef("Intl.supportedValuesOf()")}}, et peut être définie comme paramètre [`options.calendar`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#calendar) dans le [constructeur `DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat).
   ([bogue Firefox 2011505 <sup>(angl.)</sup>](https://bugzil.la/2011505)).
 
 ### APIs
@@ -59,7 +59,7 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
   ([bogue Firefox 1966073 <sup>(angl.)</sup>](https://bugzil.la/1966073)).
 
 - Les méthodes DOM permettent désormais une plus grande variété de caractères pour les noms d'éléments et d'attributs.
-  Auparavant, les méthodes DOM étaient beaucoup plus restrictives, mais elles permettent désormais le même ensemble de caractères que le parseur HTML.
+  Auparavant, les méthodes DOM sont beaucoup plus restrictives, mais elles permettent désormais le même ensemble de caractères que le parseur HTML.
   Les méthodes concernées sont&nbsp;: {{DOMxRef("Document/createAttribute","createAttribute()")}}, {{DOMxRef("Document/createAttributeNS","createAttributeNS()")}}, {{DOMxRef("Document/createElement","createElement()")}} et {{DOMxRef("Document/createElementNS","createElementNS()")}} de l'interface {{DOMxRef("Document")}}, {{DOMxRef("Element/toggleAttribute","toggleAttribute()")}}, {{DOMxRef("Element/setAttribute","setAttribute()")}}, {{DOMxRef("Element/setAttributeNS","setAttributeNS()")}} de l'interface {{DOMxRef("Element")}}, {{DOMxRef("DOMImplementation/createDocument","createDocument()")}} de l'interface {{DOMxRef("DOMImplementation")}}, et {{DOMxRef("CustomElementRegistry/define","define()")}} et {{DOMxRef("CustomElementRegistry/whenDefined","whenDefined()")}} de l'interface {{DOMxRef("CustomElementRegistry/whenDefined","whenDefined()")}}.
   ([bogue Firefox 1773312 <sup>(angl.)</sup>](https://bugzil.la/1773312)).
 
@@ -89,8 +89,8 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
 - Un geste de l'utilisateur·ice n'est plus requis pour {{WebExtAPIRef("action.openPopup")}} et {{WebExtAPIRef("browserAction.openPopup")}} pour ouvrir une fenêtre affichée par dessus le contenu (<i lang="en">popup</i> en anglais). Cette fonctionnalité était disponible derrière la préférence `extensions.openPopupWithoutUserGesture.enabled` depuis Firefox 108. Ce changement aligne le comportement de Firefox avec Chrome et Safari. ([bogue Firefox 1799344 <sup>(angl.)</sup>](https://bugzil.la/1799344))
 - Si `windowId` est passé dans {{WebExtAPIRef("action.openPopup")}} ou {{WebExtAPIRef("browserAction.openPopup")}}, la fenêtre doit être sélectionnée (active) pour que l'élément affiché par dessus le contenu s'ouvre. Pour ouvrir un élément par dessus le contenu dans une fenêtre qui n'est pas sélectionnée, {{WebExtAPIRef("windows.update","windows.update(windowId, { focused: true })")}} doit être appelé en premier. Ce changement aligne le comportement de Firefox avec Chrome. ([bogue Firefox 2011516 <sup>(angl.)</sup>](https://bugzil.la/2011516))
 - L'implémentation de {{DOMxRef("structuredClone")}} a été modifiée pour instancier des objets dans le domaine d'exécution de `this` au lieu du domaine d'exécution de l'appelant. Pour des raisons de compatibilité, la portée globale des scripts de contenu inclut désormais sa propre méthode `structuredClone` qui masque la méthode `window.structuredClone`. Pour plus d'informations, voir [`structuredClone` dans Partage d'objets avec les scripts de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone) ([bogue Firefox 2017797 <sup>(angl.)</sup>](https://bugzil.la/2017797)).
-- La capacité des extensions à exécuter dynamiquement du code dans leurs documents `moz-extension:` avec {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, et {{WebExtAPIRef("scripting.removeCSS")}} est désormais obsolète. ([bogue Firefox 2011234 <sup>(angl.)</sup>](https://bugzil.la/2011234)) La fonctionnalité n'est plus disponible dans Firefox Nightly, et les versions bêta et release de Firefox affichent un avertissement dans la console de l'onglet. Cette restriction s'appliquera à toutes les versions de Firefox 152 et ultérieures. ([bogue Firefox 2015559 <sup>(angl.)</sup>](https://bugzil.la/2015559)) En alternative, une extension peut exécuter du code dans ses documents de manière dynamique en enregistrant un écouteur {{WebExtAPIRef("runtime.onMessage")}} dans le script du document, puis en envoyant un message pour déclencher l'exécution du code requis.
-- Le filtre CSS implicite appliqué aux icônes SVG des [actions de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) sur les thèmes sombres est désactivé dans les versions Nightly ([bogue Firefox 2001318 <sup>(angl.)</sup>](https://bugzil.la/2001318)) et sera désactivé dans les autres éditions de Firefox à partir de la version 152 ([bogue Firefox 2016509 <sup>(angl.)</sup>](https://bugzil.la/2016509)). Vous pouvez tester les icônes SVG des actions de page avec le filtre CSS désactivé dans d'autres éditions de Firefox en créant une préférence booléenne `about:config` appelée `extensions.webextensions.pageActionIconDarkModeFilter.enabled` et en la définissant sur `false`.
+- La capacité des extensions à exécuter dynamiquement du code dans leurs documents `moz-extension:` avec {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, et {{WebExtAPIRef("scripting.removeCSS")}} est désormais obsolète. ([bogue Firefox 2011234 <sup>(angl.)</sup>](https://bugzil.la/2011234)) La fonctionnalité n'est plus disponible dans Firefox Nightly, et les versions bêta et release de Firefox affichent un avertissement dans la console de l'onglet. Cette restriction s'applique à toutes les versions de Firefox 152 et ultérieures. ([bogue Firefox 2015559 <sup>(angl.)</sup>](https://bugzil.la/2015559)) En alternative, une extension peut exécuter du code dans ses documents de manière dynamique en enregistrant un écouteur {{WebExtAPIRef("runtime.onMessage")}} dans le script du document, puis en envoyant un message pour déclencher l'exécution du code requis.
+- Le filtre CSS implicite appliqué aux icônes SVG des [actions de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) sur les thèmes sombres est désactivé dans les versions Nightly ([bogue Firefox 2001318 <sup>(angl.)</sup>](https://bugzil.la/2001318)) et est désactivé dans les autres éditions de Firefox à partir de la version 152 ([bogue Firefox 2016509 <sup>(angl.)</sup>](https://bugzil.la/2016509)). Vous pouvez tester les icônes SVG des actions de page avec le filtre CSS désactivé dans d'autres éditions de Firefox en créant une préférence booléenne `about:config` appelée `extensions.webextensions.pageActionIconDarkModeFilter.enabled` et en la définissant sur `false`.
 
 ### Conformité WebDriver (WebDriver BiDi, Marionette)
 

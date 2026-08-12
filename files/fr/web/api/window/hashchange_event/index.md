@@ -3,7 +3,7 @@ title: "Window : évènement hashchange"
 short-title: hashchange
 slug: Web/API/Window/hashchange_event
 l10n:
-  sourceCommit: 2ccbd062264d0a2a34f185a3386cb272f42c50f5
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef}}
@@ -27,13 +27,6 @@ onhashchange = (event) => { }
 Un objet {{DOMxRef("HashChangeEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("HashChangeEvent")}}
-
-## Propriétés de l'évènement
-
-- {{DOMxRef("HashChangeEvent.newURL")}} {{ReadOnlyInline}}
-  - : Une chaîne de caractères représentant la nouvelle URL vers laquelle la fenêtre navigue.
-- {{DOMxRef("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
-  - : Une chaîne de caractères représentant l'URL précédente à partir de laquelle la fenêtre a navigué.
 
 ## Alias des gestionnaires d'évènements
 

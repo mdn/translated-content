@@ -124,7 +124,7 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 - **Registres d'éléments personnalisés à portée limitée**&nbsp;: `dom.scoped-custom-element-registries.enabled`
 
   La propriété {{DOMxRef("CustomElementRegistry","customElementRegistry")}} est prise en charge sur {{DOMxRef("Document")}}, {{DOMxRef("Element")}} et {{DOMxRef("ShadowRoot")}}.
-  Cela permet la définition de [registres d'éléments personnalisés à portée limitée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_déléments_personnalisés_à_portée_limitée).
+  Cela permet la définition de [registres d'éléments personnalisés avec portée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_des_éléments_personnalisés_avec_portée).
   ([bogue Firefox 2018900 <sup>(angl.)</sup>](https://bugzil.la/2018900)).
 
 - **Tableaux associatifs d'importations multiples**&nbsp;: `dom.multiple_import_maps.enabled`

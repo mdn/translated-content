@@ -3,12 +3,10 @@ title: Propriété CSS `aspect-ratio`
 short-title: aspect-ratio
 slug: Web/CSS/Reference/Properties/aspect-ratio
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** permet de définir le rapport largeur/hauteur désiré pour la boîte d'un élément. Cela signifie que même si la taille du conteneur parent ou de la zone d'affichage change, le navigateur ajuste les dimensions de l'élément pour maintenir le rapport largeur/hauteur défini. Le {{Glossary("aspect ratio", "ratio d'aspect")}} défini est utilisé dans le calcul des tailles automatiques et d'autres fonctions de mise en page.
-
-Au moins une des dimensions de la boîte doit être automatique pour que `aspect-ratio` ait un effet. Si ni la largeur ni la hauteur n'est une taille automatique, alors le rapport d'aspect fourni n'a aucun effet sur les tailles préférentielles de la boîte.
+La propriété [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** permet de définir le rapport largeur/hauteur désiré pour la boîte d'un élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: aspect-ratio")}}
 
@@ -64,11 +62,11 @@ aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
-Cette propriété se définit avec le mot-clé `auto`, un `<ratio>`, ou les deux. Si les deux sont présents et que l'élément est un {{Glossary("replaced elements", "élément remplacé")}}, comme {{HTMLElement("img")}}, alors le rapport défini est utilisé jusqu'a ce que le contenu soit chargé. Une fois le contenu chargé, la valeur `auto` s'applique, donc le rapport d'aspect intrinsèque du contenu chargé est utilisé.
-
 Si l'élément n'est pas un élément remplacé, alors le `ratio` défini est utilisé.
 
 ### Valeurs
+
+Cette propriété se définit avec le mot-clé `auto`, un `<ratio>`, ou les deux.
 
 - `auto`
   - : Les {{Glossary("Replaced elements", "éléments remplacés")}} ayant un rapport d'aspect intrinsèque utilisent _ce_ rapport d'aspect, sinon la boîte n'a pas de rapport d'aspect préférentiel. Les calculs de taille impliquant un rapport d'aspect intrinsèque utilisent toujours les dimensions de la boîte de contenu.
@@ -78,6 +76,16 @@ Si l'élément n'est pas un élément remplacé, alors le `ratio` défini est ut
 
 - `auto && <ratio>`
   - : Lorsque `auto` et un `<ratio>` sont définis ensemble, `auto` est utilisé si l'élément est un élément remplacé avec un rapport d'aspect naturel, comme un élément `<img>`. Sinon, le rapport défini par `width` / `height` est utilisé comme rapport d'aspect préférentiel.
+
+## Description
+
+La propriété `aspect-ratio` définit un rapport largeur/hauteur désiré pour la boîte d'un élément. Cela signifie que même si la taille du conteneur parent ou de la fenêtre d'affichage change, le navigateur ajuste les dimensions de l'élément pour maintenir le rapport largeur/hauteur défini. Le {{Glossary("aspect ratio", "rapport d'aspect")}} défini est utilisé dans le calcul des tailles automatiques et dans certaines autres fonctions de mise en page.
+
+Au moins une des dimensions de la boîte doit être automatique pour que `aspect-ratio` ait un effet. Si ni la largeur ni la hauteur n'est une taille automatique, le rapport d'aspect fourni n'a aucun effet sur les tailles préférentielles de la boîte.
+
+Cette propriété se définit avec le mot-clé `auto`, un `<ratio>`, ou les deux. Si les deux sont définis, et que l'élément est un {{Glossary("replaced elements", "élément remplacé")}}, comme une {{HTMLElement("img")}}, alors le rapport donné est utilisé jusqu'à ce que le contenu soit chargé. Après le chargement du contenu, la valeur `auto` est appliquée, de sorte que le rapport d'aspect intrinsèque du contenu chargé est utilisé.
+
+Si l'élément n'est pas un élément remplacé, alors le `ratio` défini est utilisé.
 
 ## Définition formelle
 

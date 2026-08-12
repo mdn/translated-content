@@ -3,7 +3,7 @@ title: Propriété CSS `box-direction`
 short-title: box-direction
 slug: Web/CSS/Reference/Properties/box-direction
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 {{Non-standard_Header}}{{Deprecated_Header}}
@@ -28,9 +28,9 @@ box-direction: revert-layer;
 box-direction: unset;
 ```
 
-La propriété `box-direction` est paramétrée avec l'un des mots-clés suivants.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `normal`
   - : La boîte répartit son contenu à partir du début (le côté gauche si la boîte est orientée horizontalement ou le côté haut si la boîte est orientée verticalement).

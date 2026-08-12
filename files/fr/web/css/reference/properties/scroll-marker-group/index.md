@@ -3,7 +3,7 @@ title: Propriété CSS `scroll-marker-group`
 short-title: scroll-marker-group
 slug: Web/CSS/Reference/Properties/scroll-marker-group
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
@@ -31,6 +31,8 @@ scroll-marker-group: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `after`
   - : Un pseudo-élément {{CSSxRef("::scroll-marker-group")}} est généré en tant que voisin des éléments enfants du conteneur de défilement, les précédant immédiatement, ainsi que tout pseudo-élément {{CSSxRef("::scroll-button()")}} généré. Il apparaît à la fin de l'ordre de tabulation et de l'ordre des boîtes de mise en page du conteneur (mais pas dans la structure DOM).
 
@@ -38,7 +40,7 @@ scroll-marker-group: unset;
   - : Un pseudo-élément {{CSSxRef("::scroll-marker-group")}} est généré en tant que voisin des éléments enfants du conteneur de défilement, les précédant immédiatement, ainsi que tout pseudo-élément {{CSSxRef("::scroll-button()")}} généré. Le groupe de marqueurs de défilement apparaît au début de l'ordre de tabulation et de l'ordre des boîtes de mise en page du conteneur.
 
 - `none`
-  - : Aucun pseudo-élément {{CSSxRef("::scroll-marker-group")}} ne sera généré sur l'élément. C'est la valeur par défaut.
+  - : Aucun pseudo-élément {{CSSxRef("::scroll-marker-group")}} n'est généré sur l'élément. C'est la valeur par défaut.
 
 > [!NOTE]
 > En tant que bonne pratique en matière d'accessibilité, faites correspondre la position de rendu visuel du conteneur du groupe de marqueurs de défilement avec l'ordre de tabulation. Lors du positionnement du groupe de marqueurs au début du contenu avec des styles appliqués à {{CSSxRef("::scroll-marker-group")}}, placez-le au début de l'ordre de tabulation en utilisant `before`. Lors du positionnement du groupe à la fin du contenu, placez-le à la fin de l'ordre de tabulation en utilisant `after`.
@@ -87,7 +89,7 @@ Nous avons une liste HTML de base {{HTMLElement("ul")}} avec plusieurs élément
 
 #### CSS
 
-Nous transformons notre `<ul>` en un carrousel en définissant la propriété {{CSSxRef("display")}} sur `flex`, créant une seule ligne d'éléments `<li>` sans retour à la ligne. La propriété {{CSSxRef("overflow-x")}} est définie sur `auto`, ce qui signifie que si les éléments débordent de leur conteneur sur l'axe x, le contenu défilera horizontalement. Nous transformons ensuite le `<ul>` en un [conteneur de défilement avec accrochage](/fr/docs/Glossary/Scroll_snap#scroll_snap_container), garantissant que les éléments s'alignent toujours correctement lorsque le conteneur est défilé avec une valeur {{CSSxRef("scroll-snap-type")}} de `mandatory`.
+Nous transformons notre `<ul>` en un carrousel en définissant la propriété {{CSSxRef("display")}} sur `flex`, créant une seule ligne d'éléments `<li>` sans retour à la ligne. La propriété {{CSSxRef("overflow-x")}} est définie sur `auto`, ce qui signifie que si les éléments débordent de leur conteneur sur l'axe x, le contenu défile horizontalement. Nous transformons ensuite le `<ul>` en un [conteneur de défilement avec accrochage](/fr/docs/Glossary/Scroll_snap#scroll_snap_container), garantissant que les éléments s'alignent toujours correctement lorsque le conteneur est défilé avec une valeur {{CSSxRef("scroll-snap-type")}} de `mandatory`.
 
 Nous créons un conteneur de groupe de marqueurs de défilement avec la propriété `scroll-marker-group`, plaçant le groupe après tout le contenu.
 
