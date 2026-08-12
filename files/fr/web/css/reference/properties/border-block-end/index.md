@@ -3,7 +3,7 @@ title: Propriété CSS `border-block-end`
 short-title: border-block-end
 slug: Web/CSS/Reference/Properties/border-block-end
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-block-end`** permet de définir à un seul endroit dans la feuille de style les valeurs de la propriété logique de bordure de fin de bloc.
@@ -80,9 +80,9 @@ Les propriétés associées sont {{CSSxRef("border-block-start")}}, {{CSSxRef("b
 
 La propriété `border-block-end` peut être utilisée avec une ou plusieurs de ces valeurs, quel que soit l'ordre&nbsp;:
 
-- `<'border-width'>`
+- {{CSSxRef("&lt;line-width&gt;")}}
   - : La largeur de la bordure. Voir {{CSSxRef("border-width")}}.
-- `<'border-style'>`
+- {{CSSxRef("&lt;line-style&gt;")}}
   - : Le style utilisé pour la ligne de la bordure. Voir {{CSSxRef("border-style")}}.
 - {{CSSxRef("&lt;color&gt;")}}
   - : La couleur de la bordure.

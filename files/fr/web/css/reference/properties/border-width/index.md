@@ -3,7 +3,7 @@ title: Propriété CSS `border-width`
 short-title: border-width
 slug: Web/CSS/Reference/Properties/border-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-width`** permet de définir l'épaisseur de la bordure d'un élément.
@@ -79,21 +79,15 @@ border-width: unset;
 
 La propriété `border-width` peut être définie avec une, deux, trois ou quatre valeurs.
 
-- Lorsqu'**une** valeur est fournie, elle s'applique comme largeur à **tous les côtés**.
+- Lorsque **une** valeur est fournie, elle s'applique comme largeur à **tous les côtés**.
 - Lorsque **deux** valeurs sont fournies, la première largeur s'applique au **haut et au bas**, la seconde à la **gauche et à la droite**.
 - Lorsque **trois** valeurs sont fournies, la première largeur s'applique au **haut**, la deuxième à la **gauche et à la droite**, la troisième au **bas**.
 - Lorsque **quatre** valeurs sont fournies, les largeurs s'appliquent au **haut**, à la **droite**, au **bas** et à la **gauche** dans cet ordre (sens des aiguilles d'une montre).
 
 ### Valeurs
 
-- `<line-width>`
-  - : Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou un mot-clé indiquant l'épaisseur de la bordure. Le mot-clé doit être l'une des valeurs suivantes&nbsp;:
-    - `thin` (fin)
-      - Identique à `1px`.
-    - `medium` (intermédiaire)
-      - Identique à `3px`.
-    - `thick` (épais)
-      - Identique à `5px`.
+- {{CSSxRef("&lt;line-width&gt;")}}
+  - : Définit la largeur de la bordure, soit par une valeur explicite de type {{CSSxRef("&lt;length&gt;")}} positive, soit par un mot-clé. Les mots-clés possibles sont&nbsp;: `thin`, `medium` ou `thick`. La valeur par défaut est `medium`.
 
 ## Définition formelle
 
