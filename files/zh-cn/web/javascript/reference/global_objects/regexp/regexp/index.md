@@ -1,36 +1,38 @@
 ---
-title: RegExp() constructor
+title: RegExp() 构造函数
+short-title: RegExp()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 ---
 
 **`RegExp`** 用于创建正则表达式对象，该对象用于将文本与一个模式匹配
 
-阅读[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)一节以了解正则表达式。
+阅读 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)一节以了解正则表达式。
 
-{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+{{InteractiveExample("JavaScript 演示：RegExp() 构造函数")}}
 
 ```js interactive-example
 const regex1 = /\w+/;
 const regex2 = new RegExp("\\w+");
 
 console.log(regex1);
-// Expected output: /\w+/
+// 期望的输出：/\w+/
 
 console.log(regex2);
-// Expected output: /\w+/
+// 期望的输出：/\w+/
 
 console.log(regex1 === regex2);
-// Expected output: false
+// 期望的输出：false
 ```
 
 ## 语法
 
 可以使用字面量、构造函数和工厂方法来创建正则表达式
 
-```plain
-/pattern/flags
-new RegExp(pattern[, flags])
-RegExp(pattern[, flags])
+```js-nolint
+new RegExp(pattern)
+new RegExp(pattern, flags)
+RegExp(pattern)
+RegExp(pattern, flags)
 ```
 
 ### 参数
@@ -45,17 +47,17 @@ RegExp(pattern[, flags])
     如果没有指定`flags`并且提供了一个正则表达式对象，则该对象的 flags(和 lastIndex 值) 将被复制。
 
     `flags` 可包含下列任何字符的组合：
-    - `g` （全局匹配）
+    - `g`（全局匹配）
       - : 找到所有的匹配，而不是在第一个匹配之后停止。
-    - `i` （忽略大小写）
+    - `i`（忽略大小写）
       - : 如果`u`标志也被启用，使用 Unicode 大小写折叠。
-    - `m` （多行匹配）
-      - : 将开始和结束字符 (`^` and `$`) 视为在多行上工作。换句话说，匹配每一行的开头或结尾*each* line (由`\n`或者`\r` 分隔)，而不仅仅是整个输入字符串的开头或结尾。
-    - `s` （点号匹配所有字符）
-      - : 允许`.` 去匹配新的行
-    - `u` （unicode）
-      - : 将 `pattern` 视为由 Unicode 码点组成的序列。（另请参见[二进制字符串](/zh-CN/docs/Web/API/Window/btoa)。）
-    - `y` （sticky，粘性匹配）
+    - `m`（多行）
+      - : 将开始和结束字符（`^` 和 `$`）视为在多行上工作。换句话说，匹配*每一*行的开头或结尾*（由`\n`或者`\r` 分隔），而不仅仅是整个输入字符串的开头或结尾。
+    - `s`（点号匹配所有字符）
+      - : 允许 `.` 去匹配新的行
+    - `u`（unicode）
+      - : 将 `pattern` 视为由 Unicode 码位组成的序列。
+    - `y`（粘性匹配）
       - : 仅从目标字符串中该正则表达式 `lastIndex` 属性所指示的索引位置开始匹配。不会尝试从任何更靠后的索引位置开始匹配。
 
 ## 示例
@@ -89,7 +91,7 @@ new RegExp("ab+c", "i"); // 构造函数
 
 ## 参见
 
-- [JavaScript 指南中的](/zh-CN/docs/Web/JavaScript/Guide)
-- [正则表达式一节](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
+- [`core-js` 中具有许多现代 `RegExp` 特性（`dotAll`、`sticky` 标志、具名捕获组，等等）的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [正则表达式](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)指南
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}
