@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
-本篇是 [Gamedev Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 个步骤中的**第 3 步**。在你完成了本节教程之后，你可以在 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 看到源码。
+这是 [Gamedev Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 个步骤中的**第 3 步**。在你完成了本节教程之后，你可以在 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 看到源码。
 
 看到小球在移动确实很棒，但它很快就会从屏幕上消失，这限制了我们玩游戏的乐趣！为了解决这个问题，我们将实现一些碰撞检测功能（相关内容将在[后续步骤](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)进行更详细的讲解），让小球能够从画布的四个边缘弹回来。
 
