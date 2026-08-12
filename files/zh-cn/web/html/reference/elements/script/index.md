@@ -128,7 +128,7 @@ l10n:
 ### 已弃用的属性
 
 - `charset` {{Deprecated_inline}}
-  - : 若存在，其值必须与 `utf-8` 进行{{Glossary("ASCII")}}大小写不敏感匹配。无需指定 `charset` 属性，因为文档必须使用 UTF-8，`script` 元素会从文档继承字符编码。
+  - : 若存在，其值必须与 `utf-8` 进行 {{Glossary("ASCII")}} 大小写不敏感匹配。无需指定 `charset` 属性，因为文档必须使用 UTF-8，`script` 元素会从文档继承字符编码。
 - `language` {{Deprecated_inline}} {{Non-standard_Inline}}
   - : 与 `type` 属性类似，此属性标识所用的脚本语言。但与 `type` 属性不同，它的可能值从未标准化。应改用 `type` 属性。
 
