@@ -293,7 +293,7 @@ import { name as squareName, draw } from "square";
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
-      <td>不允许任何 <code>role</code></td>
+      <td>没有允许的 <code>role</code></td>
     </tr>
     <tr>
       <th scope="row">DOM 接口</th>
