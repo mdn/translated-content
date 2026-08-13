@@ -2,7 +2,7 @@
 title: Plantilla de página de atributo HTML
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_attribute_page_template
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 Los atributos HTML se dividen en dos categorías: **atributos específicos de elementos**, que se aplican solo a ciertos elementos (p. ej., el atributo `accept` en `<input type="file">`), y **atributos globales**, que pueden usarse en cualquier elemento HTML (p. ej., `class`, `id`). Los primeros deben ubicarse en `HTML/Reference/Attributes`, mientras que los segundos deben ir en `HTML/Reference/Global_attributes`.
