@@ -3,7 +3,7 @@ title: Propriété CSS `font-synthesis`
 short-title: font-synthesis
 slug: Web/CSS/Reference/Properties/font-synthesis
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`font-synthesis`** permet de définir si le navigateur peut synthétiser les variantes grasses, italiques, petites capitales, indices et exposants lorsqu'elles ne sont pas définies dans la famille de polices définie.
@@ -34,6 +34,8 @@ font-synthesis: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `none`
   - : Indique qu'aucune variante grasse, italique ou petite capitale ne doit être synthétisée par le navigateur.

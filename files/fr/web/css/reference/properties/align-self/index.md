@@ -3,12 +3,12 @@ title: Propriété CSS `align-self`
 short-title: align-self
 slug: Web/CSS/Reference/Properties/align-self
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`align-self`** permet d'écraser la valeur de {{CSSxRef("align-items")}} d'un élément de grille ou de flex. En grille, elle aligne l'élément à l'intérieur de la {{Glossary("Grid Areas", "zone de grille")}}. En flexbox, elle aligne l'élément sur {{Glossary("cross axis", "l'axe transversal")}}.
 
-Cette propriété ne s'applique pas aux boîtes de niveau bloc ni aux cellules de tableau. Si la marge sur l'axe transversal d'un élément flex est `auto`, alors `align-self` est ignorée.
+Cette propriété ne s'applique pas aux boîtes de niveau bloc ni aux cellules de tableau. Si la marge sur l'axe transversal d'un élément flexible est `auto`, alors `align-self` est ignorée.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: align-self")}}
 
@@ -92,10 +92,12 @@ align-self: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme un ou deux des mot-clés suivants&nbsp;:
+
 - `auto`
   - : La valeur est calculée par rapport à celle de {{CSSxRef("align-items")}}.
 - `normal`
-  - : L'effet de ce mot-clé dépend du mode de disposition utilisé :
+  - : L'effet de ce mot-clé dépend du mode de disposition utilisé&nbsp;:
     - Pour une disposition absolue, ce mot-clé est synonyme de `start` pour les boîtes remplacées positionnées de façon absolue, il est synonyme de _stretch_ pour les autres boîtes positionnées de façon absolue.
     - Pour une disposition absolue et des positions statiques, ce mot-clé est synonyme de `stretch`.
     - Pour les éléments flexibles, ce mot-clé est synonyme de `stretch`.
@@ -111,7 +113,7 @@ align-self: unset;
 - `flex-end`
   - : Le bord de l'élément flexible, à la fin de l'axe perpendiculaire à l'axe principal, est aligné avec le bord à la fin de l'axe perpendiculaire pour la ligne flexible.
 - `center`
-  - : La boîte définies par les marges est centrée sur la ligne de l'axe perpendiculaire à l'axe principal de la ligne. Si l'élément est plus grand que le conteneur dans ce sens, il dépassera également de chaque côté.
+  - : La boîte définies par les marges est centrée sur la ligne de l'axe perpendiculaire à l'axe principal de la ligne. Si l'élément est plus grand que le conteneur dans ce sens, il dépasse également de chaque côté.
 - `baseline first baseline`
   `last baseline`
   - : Indique l'alignement par rapport à la ligne de base.
@@ -121,9 +123,9 @@ align-self: unset;
 - `anchor-center`
   - : Dans le cas des éléments [positionnés par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne l'élément au centre de l'élément ancre associé dans la direction de bloc. Voir [Centrer sur l'ancre avec `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
 - `safe`
-  - : Si la taille d'un élément dépasse du conteneur avec l'alignement fourni par la valeur, l'élément sera en réalité aligné comme si la valeur `start` avait été utilisée.
+  - : Si la taille d'un élément dépasse du conteneur avec l'alignement fourni par la valeur, l'élément est en réalité aligné comme si la valeur `start` avait été utilisée.
 - `unsafe`
-  - : Quelle que soit les tailles relatives des objets par rapport au conteneur, la valeur indiquant l'alignement sera respectée.
+  - : Quelle que soit les tailles relatives des objets par rapport au conteneur, la valeur indiquant l'alignement est respectée.
 
 ## Définition formelle
 

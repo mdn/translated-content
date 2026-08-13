@@ -3,7 +3,7 @@ title: Propriété CSS `animation-composition`
 short-title: animation-composition
 slug: Web/CSS/Reference/Properties/animation-composition
 l10n:
-  sourceCommit: 68bff8f2a51944e80394307c8e5c2879c167b126
+  sourceCommit: d4dc9d899ebec0e9c22a5bb9229f39f33457d8df
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-composition`** définit une {{Glossary("Composite_operation", "opération composite")}} à utiliser lorsque plusieurs animations touchent simultanément la même propriété.
@@ -29,10 +29,9 @@ animation-composition: revert-layer;
 animation-composition: unset;
 ```
 
-> [!NOTE]
-> Lorsqu'on indique plusieurs valeurs, séparées par des virgules, à une propriété `animation-*`, celles-ci sont appliquées aux animations selon leur ordre d'apparition dans {{CSSxRef("animation-name")}}. Si le nombre d'animations et de compositions est différent, les valeurs de `animation-composition` sont réutilisées en bouclant depuis le début, jusqu'à ce que toutes les animations aient reçue une valeur `animation-composition`. Pour plus d'informations, voir [définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
-
 ### Valeurs
+
+Cette propriété est définie par un ou plusieurs mot-clés séparés par une virgule&nbsp;:
 
 - `replace`
   - : La valeur d'effet remplace la valeur sous-jacente de la propriété. Il s'agit de la valeur par défaut.
@@ -72,6 +71,10 @@ Prenons l'hypothèse d'autres valeurs que celle utilisée avant pour `animation-
 
 > [!NOTE]
 > Une opération composite peut également être indiquée dans une image-clé donnée. Dans ce cas, l'opération composite indiquée est utilisée pour chaque propriété, d'abord pour celles de l'image-clé courante, puis sur chaque propriété de l'image-clé suivante.
+
+### Plusieurs valeurs
+
+Lorsqu'on indique plusieurs valeurs, séparées par des virgules, à une propriété `animation-*`, celles-ci sont appliquées aux animations selon leur ordre d'apparition dans {{CSSxRef("animation-name")}}. Si le nombre d'animations et de compositions est différent, les valeurs de `animation-composition` sont réutilisées en bouclant depuis le début, jusqu'à ce que toutes les animations aient reçue une valeur `animation-composition`. Pour plus d'informations, voir [définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
 
 ## Définition formelle
 
@@ -170,7 +173,7 @@ La valeur sous-jacente de la propriété `transform` est, dans tous les cas, `tr
 
   Ainsi, la cible commence à `transform: translateX(30px) rotate(45deg)` et s'anime effectivement d'abord vers `transform: translateX(30px) rotate(45deg) translateY(30px)` (ce qui correspond à `30px` "vers le bas" sur l'axe Y tourné), puis vers `transform: translateX(30px) rotate(45deg) translateX(150px)`. Comme l'opération additive est relative au `transform` sous-jacent et non à l'image clé précédente, il n'y a pas de `translateY(30px)` à `100%`, plaçant l'élément à `150px` le long de l'axe X tourné par rapport à la position d'origine.
 
-- Avec `accumulate`, la valeur finale de l'effet est la combinaison du `transform` de l'image clé avec le `transform` sous-jacent. À `50%`, `translateY(30px)` se combine avec le `translateX(30px)` d'origine pour former une seule translation (`translate(30px, 30px)`). À `100%`, le `translateX(150px)` se combine avec le `translateX(30px)` d'origine pour créer `translateX(180px)`.
+- Avec `accumulate`, la valeur finale de l'effet est la combinaison du `transform` de l'image clé avec le `transform` sous-jacent. À `50%`, `translateY(30px)` se combine avec le `translateX(30px)` d'origine pour former un seule déplacement (`translate(30px, 30px)`). À `100%`, le `translateX(150px)` se combine avec le `translateX(30px)` d'origine pour créer `translateX(180px)`.
 
   Ainsi, la cible commence à `transform: translateX(30px) rotate(45deg)` et s'anime effectivement d'abord vers `transform: translate(30px, 30px) rotate(45deg)`, puis vers `transform: translateX(180px) rotate(45deg)`.
 

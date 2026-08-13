@@ -50,7 +50,7 @@ l10n:
 このコースの前半でも見かけた、ドキュメントオブジェクトモデル (DOM) について、簡単に復習しておきましょう。ブラウザーのそれぞれのタブに現在読み込まれている文書は、 DOM によって表されます。これは、ブラウザーが作成した「ツリー構造」の表現で、プログラミング言語から HTML の構造に簡単にアクセスできるようになっています。例えば、ブラウザー自身はこれを使用して、ページを表示するときに正しい要素にスタイルやその他の情報を適用し、開発者はページが表示された後に JavaScript で DOM を操作することができます。
 
 > [!NOTE]
-> Scrimba の [The Document Object Model](https://scrimba.com/learn-javascript-c0v/~0g?via=mdn) [_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> は、"DOM"という用語とその意味について、わかりやすい解説を提供しています。
+> Scrimba の [The Document Object Model](https://scrimba.com/learn-javascript-c0v/~0g?via=mdn) [_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> は、"DOM"という用語とその意味について、わかりやすい解説を提供しています。
 
 [dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) にちょっとした例を作成しました（[ライブ実行](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)もどうぞ）。ブラウザーから開いてみてください。これはとても簡素なページで、{{htmlelement("section")}} 要素の中に画像が一つと、一つのリンクを含む一つの段落があります。HTML のソースはこんな感じです。
 

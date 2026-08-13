@@ -1,15 +1,14 @@
 ---
-title: "JavaScript: 操作の追加"
+title: "JavaScript: 操作性の追加"
+short-title: 操作性の追加
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: b5a6d8bc5fd751032f70b88e7ec1ec61339937de
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
-JavaScript は、ウェブサイトに対話性を追加するプログラミング言語です。ゲーム、ボタンを押したときの反応、フォームへのデータ入力、動的なスタイル付け、アニメーションなどがこれにあたります。この記事は、 JavaScript を使い始め、何ができるのかについての理解を深めるのに役立ちます。
+JavaScript は、ウェブサイトに対話性を追加するプログラミング言語です。これを使用して、フォームデータの検証、ボタンの機能、ゲームロジック、動的なスタイル設定、アニメーションの更新など、何らかのものを制御することができます。この記事では、JavaScriptの基礎を学び、初めてのウェブサイトに楽しい機能を追加する過程を順を追って解説します。
 
 <table>
   <tbody>
@@ -24,7 +23,7 @@ JavaScript は、ウェブサイトに対話性を追加するプログラミン
       <td>
         <ul>
           <li>JavaScript の機能と目的。</li>
-          <li>JavaScript の基本的な機能（変数、演算子、条件分岐、関数、イベントなど）。</li>
+          <li>JavaScript の基本的な機能（変数、演算子、条件分岐、関数、イベントなど）を理解すること。</li>
         </ul>
       </td>
     </tr>
@@ -33,45 +32,83 @@ JavaScript は、ウェブサイトに対話性を追加するプログラミン
 
 ## JavaScript とは何か
 
-{{Glossary("JavaScript")}} は強力なプログラミング言語であり、ウェブサイトに対話操作を追加することができます。
-Brendan Eich によって考案されました。
+{{Glossary(「JavaScript」)}}は本格的なプログラミング言語であり、**変数**、**ループ**、**関数**など、他のプログラミング言語で見かける（あるいは少なくとも耳にしたことがある）ような、プログラミングの定番機能をすべて含んでいます。
 
-JavaScript は汎用性が高く、初心者にもやさしいものです。
-経験を積めば、ゲーム、 2D や 3D のアニメーション、包括的なデータベース駆動型のアプリなどが作れるようになります。
+JavaScript は、ウェブページで使用される場合（それ以外にも使用できますが）、一般的に次のように動作します。
 
-JavaScript は比較的コンパクトですが、一方でとても柔軟性があります。開発者は JavaScript 言語のコアをベースに多種多様なツールを作成し、最小限の労力で膨大な様々な機能を利用できるようにしました。例えば以下のようなものがあります。
+- 数値などの 1 つ以上の値、またはページ上の要素への参照を取得します。
+- それらの値を使って何かを行います。例えば、それらの数値を足し合わせるなどです。
+- 後で別の処理に使用できる結果を返します。例えば、それらの数値の合計をページ上に表示させたい場合などです。
 
-- ブラウザーのアプリケーションプログラミングインターフェイス ({{Glossary("API")}})。ウェブブラウザーに組み込まれた API により、動的な HTML の作成、 CSS スタイルの設定、ユーザーのウェブカメラからの動画ストリームの収集や操作、三次元グラフィックや音声サンプルの生成などの機能を提供します。
-- 開発者が他のコンテンツプロバイダーのサイト（Twitter や Facebook など）から機能を組み込むことを可能にする、サードパーティの API。
-- すばやくサイトやアプリケーションを構築することができ、 HTML に組み込み可能なサードパーティのフレームワークやライブラリー。
+例を見てみましょう。ここ数回の記事で取り上げたのと同じ基本的なリストを使用します：
 
-コアの JavaScript 言語が上記のツールとどのように違うのか、その詳細を紹介することは、 JavaScript の軽い入門者向けの書籍であるこの記事の範囲外です。詳細は[コアモジュール](/ja/docs/Learn_web_development/Core)や、 MDN の他の部分で詳しく学ぶことができます。
+```html live-sample___basic-js
+<p>生きるための方法:</p>
 
-以下では、コア言語のいくつかの側面について紹介します。またブラウザーの API 機能についてもいくつか説明します。楽しみましょう！
+<ul>
+  <li>食う</li>
+  <li>寝る</li>
+  <li>繰り返す</li>
+</ul>
+```
 
-## "Hello world!" の例
+CSS の `.done` というクラスも定義します。このクラスが適用された要素は、テキスト色が緑色になり、取り消し線が入るなど、完了したタスクのように表示されます。次の段階では、JavaScript でこのクラスを `<li>` 要素に適用します。
 
-JavaScript は、最も人気のある現代のウェブ技術のひとつです。 JavaScript のスキルが上がれば、ウェブサイトのパワーと創造性は新たな次元に入るでしょう。
+```css live-sample___basic-js
+.done {
+  color: darkseagreen;
+  text-decoration: line-through solid black 2px;
+}
+```
 
-しかし、 JavaScript を使いこなせるようになるのは HTML や CSS よりも少し難しいです。小さなものから始め、小さく確実な手順で作業を続ける必要があるかもしれません。始めるにあたって、_hello world!_ を表示する例（[基本的なプログラミング例の標準](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)）を作りながら、基本的な JavaScript をページに追加する方法を紹介しましょう。
+それでは、JavaScript に移りましょう。ここではまず、`<li>` 要素への参照を `listItems` という変数に格納します。次に、`toggleDone()` という関数を定義します。この関数は、リストアイテムに `done` クラスがまだ付与されていない場合はそれを追加し、すでに付与されている場合はそのクラスを削除します。最後に、リストアイテムをループ処理し（`forEach()` を使用）、それぞれのリストアイテムにイベントリスナーを追加します（`addEventListener()` を使用）。これにより、リストアイテムがクリックされた際に `done` クラスの状態が切り替わり、先に定義した CSS が適用されるようになります。
+
+```js live-sample___basic-js
+const listItems = document.querySelectorAll("li");
+
+function toggleDone(e) {
+  if (!e.target.className) {
+    e.target.className = "done";
+  } else {
+    e.target.className = "";
+  }
+}
+
+listItems.forEach((item) => {
+  item.addEventListener("click", toggleDone);
+});
+```
+
+今のところ、上記の JavaScript が理解できなくても心配しないでください。JavaScript に慣れるのは、HTML や CSS に慣れるよりも難しいですが、このコースの進捗に応じて徐々に理解できるようになります。
+この例は、ブラウザーで次のように表示されます。
+
+{{EmbedLiveSample("basic-js", "100%", "140px")}}
+
+リストアイテムをいくつかクリックしてみて、その結果、"done" のスタイルがオンとオフに切り替わる様子を確認してみてください。たった 11 行の JavaScript にしては、悪くないですね。
+
+## "Hello world!" の手順を追って説明
+
+JavaScript で記述を始めるにあたって、サンプルウェブサイトに _Hello world!_ の例を追加する手順を順を追って追ってみましょう。（[_Hello world!_](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) は、プログラミング入門の標準例です。）
 
 > [!WARNING]
-> これまでこのコースに沿って進めてきていない場合は、[このサンプルコードをダウンロードして](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages)作業を進めてください。
+> これまでこのコースに沿って進めてきていない場合は、[このサンプルコードをダウンロードして](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/main)作業を進めてください。
 
-1. 最初にテストサイトに行き、 `scripts` という名前の新しいフォルダーを作成してください。
+1. `first-website` フォルダー内、または先ほどダウンロードしたサンプルのフォルダー内に、`scripts` という名前付きの新しいフォルダーを作成してください。
 2. それから、この `scripts` フォルダーの中に `main.js` という新しいファイルを作成して保存してください。
-3. `index.html` ファイルの `</body>` 終了タグの直前に新しい行で、以下の新しい要素を追加してください。
+3. `index.html` ファイルの `</head>` 終了タグの直前に新しい行で、以下の新しい要素を追加してください。
 
    ```html
-   <script src="scripts/main.js"></script>
+   <script async src="scripts/main.js"></script>
    ```
 
    これは CSS の {{htmlelement("link")}} 要素の時の作業と基本的に同じです。これは JavaScript をページに適用するので、（CSS の時と同じく、ページ上の何に対しても） HTML に影響を与えることができます。
 
-4. `main.js` ファイルに次のコードを追加してください。
+4. `scripts/main.js` ファイルに次のコードを追加してください。
 
    ```js
+   // <h1> への参照を変数に格納
    const myHeading = document.querySelector("h1");
+   // <h1> のコンテンツテキストを更新
    myHeading.textContent = "Hello world!";
    ```
 
@@ -79,329 +116,62 @@ JavaScript は、最も人気のある現代のウェブ技術のひとつです
 
 !["hello world" の見出しが firefox のロゴの上にある](hello-world.png)
 
-> [!NOTE]
-> 上記の説明で {{htmlelement("script")}} 要素を HTML ファイルの末尾付近に置いたのは、**ブラウザーがファイルに現れる順番でコードを読み込むからです**。
->
-> JavaScript が先に読み込まれ、まだ読み込まれていない HTML に影響を与えることになると、問題が生じる可能性があります。 JavaScript を HTML ページの下部に配置することは、この依存関係に対応する一つの方法です。
+この例がどのように機能するのか、詳しく見ていきましょう。
 
-### 何が起きたのか
+JavaScript を使用して、見出しのテキストを `Hello world!` に変更しました。見出しへの参照を取得し、それを `myHeading` という変数（値を格納するコンテナー）に格納しました。これは、要素に CSS を適用する方法と似ています。まず CSS セレクターを使って対象の要素を選択し、次にそれらの要素に適用したいスタイルを定義します。どちらの場合も、要素に対して何か操作を行うには、まずその要素を選択する必要があります。
 
-JavaScript を使用して、見出しの文字列が _Hello world!_ に変更されました。最初に {{domxref("Document.querySelector", "querySelector()")}} と呼ばれる関数を使用して見出しの参照を取得し、 `myHeading` と呼ばれる変数に格納しています。これは CSS のセレクターを使用するのととてもよく似ています。要素に対して何かをしたくなったら、まずその要素を選択する必要があります。
+その後、 `myHeading` 変数の `textContent` プロパティ（`<h1>` 要素のテキストコンテンツを表す）の値を _Hello world!_ に設定します。
 
-その後、 `myHeading` 変数の {{domxref("Node.textContent", "textContent")}} プロパティ（見出しの内容を表す）の値を _Hello world!_ に設定します。
+`//` で始まる行は JavaScript のコメントです。HTML や CSS のコメントと同様に、ブラウザーはこれらを無視します。これにより、コードの動作を説明するためのメモを追加することができます。
 
-> [!NOTE]
-> 上の例で使用した機能はどちらも[ドキュメントオブジェクトモデル (DOM) API](/ja/docs/Web/API/Document_Object_Model) の一部であり、これを使って文書を操作することができます。
-
-## 言語の短期集中コース
-
-どのように動作するかをよりよく理解できるように、 JavaScript 言語の基本機能のいくつかを説明しましょう。これらの機能はすべてのプログラミング言語に共通しているので、これらの基本をマスターすれば、ほとんど何でもプログラムできるようになります！
+それでは、次のステップに進んで、サンプルサイトにいくつかの新しい機能を追加していきましょう。
 
 > [!WARNING]
-> この記事では、 JavaScript コンソールにサンプルコードを入力して、何が起こるのかを確認してみます。 JavaScript コンソールの詳細については、 [ブラウザー開発ツールを探る](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)を参照してください。
-
-### 変数
-
-{{Glossary("Variable", "変数")}}は、値を格納できる入れ物です。まず、 [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) というキーワードと、その後に任意の名前を指定することで、変数を宣言します。
-
-```js
-let myVariable;
-```
-
-行末のセミコロンは文が終わる場所を示します。単一の行で複数の文を区切る場合には絶対に必要です。しかし、個々の文の末尾に置くことが良い習慣だと信じている人もいます。使用する場面と使用しない場合については他のルールもあります。詳しくは [Your Guide to Semicolons in JavaScript](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/) を参照してください。
-
-変数にはほとんど何でも名前を付けることができますが、いくらかの制約があります([変数の命名規則についてはこの記事](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数)を参照してください)。自信がない場合は、有効かどうか[変数名を調べる](https://mothereff.in/js-variables)ことができます。
-
-JavaScript は大文字と小文字を区別します。 `myVariable` は `myvariable` とは異なる変数です。コードで問題が発生している場合は、大文字・小文字をチェックしてください。
-
-変数を宣言したら、以下のように値を割り当てることができます。
-
-```js
-myVariable = "Bob";
-```
-
-好みに応じて、両方の操作を同一の行で行うことができます。
-
-```js
-let myVariable = "Bob";
-```
-
-変数の値は、名前で呼び出すだけで取得することができます。
-
-```js
-myVariable;
-```
-
-変数に値を代入した後で、変更することもできます。
-
-```js
-let myVariable = "Bob";
-myVariable = "Steve";
-```
-
-なお、変数は様々な[データ型](/ja/docs/Web/JavaScript/Guide/Data_structures)の値を保持することもできます。
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="row">変数</th>
-      <th scope="col">説明</th>
-      <th scope="col">例</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">{{Glossary("String", "文字列")}}</th>
-      <td>
-        一連のテキストで、文字列と呼ばれます。値が文字列であることを示すには、単一引用符または二重引用符で囲む必要があります。
-      </td>
-      <td><code>let myVariable = 'Bob';</code> または <br/><code>let myVariable = "Bob";</code></td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Number", "数値")}}</th>
-      <td>数値です。数値は引用符で囲みません。</td>
-      <td><code>let myVariable = 10;</code></td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Boolean", "論理型")}}</th>
-      <td>
-        論理値です。これは真か偽かの値です。 <code>true</code> と <code>false</code> は特別なキーワードで、引用符は必要ありません。
-      </td>
-      <td><code>let myVariable = true;</code></td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Array", "配列")}}</th>
-      <td>
-        単一の参照で複数の値を格納できる構造です。
-      </td>
-      <td>
-        <code>let myVariable = [1,'Bob','Steve',10];</code><br />配列の各メンバーは次のように参照します。<br /><code>myVariable[0]</code>,
-        <code>myVariable[1]</code>, など。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Object", "オブジェクト")}}</th>
-      <td>
-         基本的には何でも格納できます。 JavaScript のすべてがオブジェクトであり、変数に格納することができます。学ぶ際にはこれを覚えておいてください。
-      </td>
-      <td>
-        <code>let myVariable = document.querySelector('h1');</code><br />上記のすべての例も同様です。
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-ではなぜ変数が必要なのでしょうか。何か面白いプログラミングをするには変数が必要です。値が変更できなければ、挨拶のメッセージをパーソナライズしたり、画像ギャラリーに表示されている画像を変更するなどの動的な操作ができないのです。
-
-### コメント
-
-コメントは、ブラウザーから無視される、コードの間に入れられた短いテキストスニペットです。CSS と同じように、JavaScript のコードではコメントを付けることができます。
-
-```js
-/*
-挟まれているすべてがコメントです。
-*/
-```
-
-コメントに改行が含まれていない場合、次のように 2 つのスラッシュの後ろに記載する方が簡単です。
-
-```js
-// これはコメントです
-```
-
-### 演算子
-
-{{Glossary("operator", "演算子")}}は、2 つの値 (または変数) に基づいて結果を生成する数学的な記号です。次の表では、JavaScript コンソールで試してみるいくつかの例とともに、最も単純な演算子をいくつか見ることができます。
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="row">演算子</th>
-      <th scope="col">解説</th>
-      <th scope="col">記号</th>
-      <th scope="col">例</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">加算</th>
-      <td>2 つの数値を足し合わせたり、 2 つの文字列を結合したりします。</td>
-      <td><code>+</code></td>
-      <td>
-        <code>6 + 9;<br />'Hello ' + 'world!';</code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">減算、乗算、除算</th>
-      <td>基本的な数学の計算を実施します。</td>
-      <td><code>-</code>, <code>*</code>, <code>/</code></td>
-      <td>
-        <code
->9 - 3;<br />8 * 2; // JS での乗算はアスタリスク<br />9 / 3;</code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">代入</th>
-      <td>すでに出てきました。変数に値を割り当てます。</td>
-      <td><code>=</code></td>
-      <td><code>let myVariable = 'Bob';</code></td>
-    </tr>
-    <tr>
-      <th scope="row">厳密等価</th>
-      <td>
-        これは、2 つの値が等しく、かつデータ型が同じであるかどうかを調べます。
-        <code>true</code>/<code>false</code> （論理値）の結果を返します。
-      </td>
-      <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality"><code>===</code></a></td>
-      <td>
-        <code>let myVariable = 3;<br />myVariable === 4;</code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">否定、非等価</th>
-      <td>
-        その後にあるものと論理的に反対の値を返します。たとえば <code>true</code> を <code>false</code> に換えます。等価演算子と一緒に使用されると、否定演算子は 2 つの値が等しくないかどうかを調べます。
-      </td>
-      <td><code>!</code>, <code>!==</code></td>
-      <td>
-        <p>
-          「否定」の場合は次の通りです。基本の式が <code>true</code> であれば、反転するので比較結果は <code>false</code> となります。
-        </p>
-        <p>
-          <code>let myVariable = 3;<br />!(myVariable === 3);</code>
-        </p>
-        <p>
-          「非等価」は異なる構文ですが、基本的に同じ結果になります。ここでは「<code>myVariable</code> が 3 と等しくない」ことを調べます。次の例では <code>false</code> を返します。 <code>myVariable</code> は 3 と等しいからです。
-        </p>
-        <p>
-          <code>let myVariable = 3;<br />myVariable !== 3;</code>
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-他にも演算子はもっとたくさんありますが、今のところはこれで十分です。全体の一覧については、[式と演算子](/ja/docs/Web/JavaScript/Reference/Operators)を参照してください。
-
-> [!NOTE]
-> データ型を混在させると、計算を実行するときに奇妙な結果になる可能性があるため、変数を正しく参照し、期待通りの結果を得るように注意してください。例えばコンソールに `'35' + '25'` と入力してみてください。期待通りの結果にならないのはなぜでしょうか。引用符は数字を文字列に変換するので、数字を加算するのではなく、文字列を連結する結果になったのです。 `35 + 25` を入力すれば、正しい結果が得られます。
-
-### 条件文
-
-条件文は、ある式が true を返すかどうかをテストし、その結果次第でそれぞれのコードを実行するコード構造です。条件文のよくある形は `if...else` 文です。例えば以下の通りです。
-
-```js
-let iceCream = "チョコレート";
-if (iceCream === "チョコレート") {
-  alert("やった！チョコレートアイス大好き！");
-} else {
-  alert("あれれ、でもチョコレートが好きなのに......");
-}
-```
-
-`if ()` の中の式が条件です。ここでは等価演算子を使用して、変数 `iceCream` と`チョコレート`という文字列を比較し、2 つが等しいかどうかを調べています。この比較が `true` を返した場合、コードの最初のブロックが実行されます。比較が真でない場合、最初のブロックはスキップされ、 `else` 文の後にある 2 番目のコードブロックが代わりに実行されます。
-
-### 関数
-
-{{Glossary("Function", "関数")}}は、再利用したい機能をパッケージ化する方法です。プロシージャが必要なときは、毎回コード全体を書くのではなく関数名を使って関数を呼び出すことができます。すでにいくつかの関数の仕様を見てきました。例えば次のようなものです。
-
-```js
-let myVariable = document.querySelector("h1");
-```
-
-```js
-alert("hello!");
-```
-
-これらの関数、 `document.querySelector` と `alert()` は、必要なときにいつでも使えるようブラウザーに組み込まれています。
-
-もし変数名に見えるものがあったとしても、その後に括弧 `()` が付いていれば、おそらくそれは関数です。関数は普通、仕事をするのに必要な小さなデータである{{Glossary("Argument", "引数")}}を取ります。引数は括弧の中に入れ、複数の引数がある場合はカンマで区切ります。
-
-例えば、 `alert()` 関数はブラウザーのウィンドウにポップアップボックスを表示しますが、ポップアップボックスに何を書き込むかを関数に指示するために、文字列を引数として渡す必要があります。
-
-嬉しいことに、自分で関数を定義することができます。次の例では、引数として 2 つの数値をとり、それらを乗算するという単純な関数を記載します。
-
-```js
-function multiply(num1, num2) {
-  let result = num1 * num2;
-  return result;
-}
-```
-
-上記の関数をコンソールで実行し、いくつかの引数を指定してテストしてみてください。例えば次のようなものです。
-
-```js
-multiply(4, 7);
-multiply(20, 20);
-multiply(0.5, 3);
-```
-
-> [!NOTE]
-> [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は `result` の値を関数内から関数の外に戻すことをブラウザーに指示し、それを利用できるようにします。これが必要な理由は、関数内で定義された変数が、その関数内でしか利用できないためです。これは変数の{{Glossary("Scope", "スコープ")}}と呼ばれています([変数のスコープのより詳しい説明](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数のスコープ)をお読みください)。
-
-### イベント
-
-ウェブサイトを本当にインタラクティブにするには、イベントが必要です。イベントは、ブラウザーの中で起きていることを検出し、その応答としてコードを実行するコード構造です。最も分かりやすい例は [click イベント](/ja/docs/Web/API/Element/click_event)で、マウスで何かをクリックするとブラウザーによって発行されるものです。これを実行するには、コンソールに以下のように入力してから、現在のウェブページ上をクリックしてください。
-
-```js
-document.querySelector("html").addEventListener("click", function () {
-  alert("痛っ! つつかないで!");
-});
-```
-
-要素にイベントハンドラーを取り付ける方法はいくつもあります。ここでは {{htmlelement("html")}} 要素を選択しています。そして、[`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) 関数を呼び出し、待ち受けるイベントの名前 (`'click'`) とイベントが発生したときに実行する関数を渡します。
-
-先ほど `addEventListener()` に渡した関数は、名前を持たないので**無名関数**と呼ばれます。無名関数の書き方として、**アロー関数**と呼ばれるものがあります。アロー関数は `() =>` を `function ()` の代わりに使用します。
-
-```js
-document.querySelector("html").addEventListener("click", () => {
-  alert("痛っ! つつかないで!");
-});
-```
-
-## ウェブサイトの例を膨らませる
-
-さて、 JavaScript の基本のおさらいが終わったところで、例題のサイトに新しい機能を追加してみましょう。
-
-先に進む前に、 `main.js` ファイルの現在の内容を削除して、空のファイルを保存してください。そうしないと、 "Hello world!" の例で使用した既存のコードが、これから追加する新しいコードと衝突してしまいます。
+> 先に進む前に、`main.js` ファイルから "Hello world!" のコードを削除してください。そうしないと、既存のコードとこれから追加する新しいコードが競合してしまいます。
 
 ### 画像の切り替えの追加
 
-このセクションでは、 DOM API 機能をもっと使用して、サイトに画像を追加しましょう。画像をクリックすると JavaScript を使用して 2 つの画像を切り替えることができます。
+この節で、JavaScript と [DOM API](/ja/docs/Web/API/HTML_DOM_API) の機能を使用し、2 つの画像の表示を切り替えます。この切り替えは、ユーザーが表示されている画像をクリックしたときに現れます。
 
-1. まずサイトに掲載したいと思う別な画像を見つけてください。最初の画像と同じサイズか、できるだけ近いものを使用してください。
+1. まずサイトに掲載したいと思う別な画像を見つけてください。できれば、画像は前回追加したものと同じサイズ、あるいはできるだけそれに近いサイズにしてください。
 2. この画像を `images` フォルダーに保存してください。
-3. この画像の名前を _firefox2.png_ に変更してください。
-4. `main.js` ファイルに次の JavaScript を入力してください。
+3. 以下の JavaScript コードを `main.js` ファイルに追加してください。その際、`firefox2.png` と `firefox-icon.png` が 2 回登場しますが、それぞれ 2 つ目と 1 つ目の画像名に置き換えるよう注意してください。
 
    ```js
    const myImage = document.querySelector("img");
 
-   myImage.onclick = () => {
+   myImage.addEventListener("click", () => {
      const mySrc = myImage.getAttribute("src");
      if (mySrc === "images/firefox-icon.png") {
        myImage.setAttribute("src", "images/firefox2.png");
      } else {
        myImage.setAttribute("src", "images/firefox-icon.png");
      }
-   };
+   });
    ```
 
-5. `index.html` をブラウザーに読み込みます。画像をクリックすると、もう一方の画像に変わるでしょう。
+4. `index.html` をブラウザーに読み込みます。画像をクリックすると、もう一方の画像に変わるでしょう。
 
-何が起こったのでしょうか。{{htmlelement("img")}} 要素への参照を変数 `myImage` に格納しました。次に、この変数の `onclick` イベントハンドラープロパティに、名前のない関数（「無名」関数）を代入しました。そうすれば、この要素がクリックされるたびに次の動きをします。
+このコードでは、{{htmlelement("img")}} 要素への参照を `myImage` 変数に格納しました。その後、その変数に `click` イベントハンドラー関数を代入しました。`<img>` がクリックされるたびに、この関数は以下の処理を実行します。
 
-1. 画像の `src` 属性の値を取得します。
-2. 条件文を使って、`src` の値が元の画像のパスと等しいかどうかをチェックします。
-   1. そうであれば、`src` の値を 2 番目の画像へのパスに変更し、もう一方の画像が強制的に {{htmlelement("img")}} 要素の中に読み込まれるようにします。
-   2. そうでない（すでに変更されている）場合、`src` の値を元の画像のパスに戻して、元の状態に戻ります。
+- 画像の `src` 属性の値を取得します。
+- 条件文（`if...else` 構文）を使用して、`src` の値が元画像のパスと一致するかどうかを調べます。
+  - そうであれば、`src` の値を 2 番目の画像へのパスに変更し、もう一方の画像が強制的に `<img>` 要素の中に読み込まれるようにします。
+  - そうでない場合（つまり、画像がすでに変更されている場合）、`src` の値は元画像パスに戻ります。
 
-### パーソナライズされた挨拶メッセージの追加
+> [!NOTE]
+> この節では、いくつかの重要な用語を紹介します。主な概念は以下の通りです。
+>
+> - [API](/ja/docs/Glossary/API): 開発者がプログラミング環境と対話することを可能にする一連の機能です。Web API（上記で使用した DOM API などの機能）は、JavaScript 言語を基盤として構築されており、ブラウザーやブラウザーが表示させるウェブページのさまざまな部分を操作することができるのです。
+> - [イベント](/ja/docs/Learn_web_development/Core/Scripting/Events): ブラウザー内で発生する事象です。これらは、ウェブサイトに対話性を持たせる上で重要な役割を果たします。**イベントハンドラー関数**を使用することで、イベントに応じてコードを実行できます。イベントハンドラー関数とは、イベントが発生した際に実行されるコードブロックのことです。最も一般的な例は[クリックイベント](/ja/docs/Web/API/Element/click_event)で、ユーザーが何かをクリックした際にブラウザーによって発生します。
+> - [関数](/ja/docs/Learn_web_development/Core/Scripting/Functions): 再利用したいコードをまとめる方法です。関数内にコードを一度定義しておけば、それを何度でも実行できるため、同じコードを何度も書き直す手間を避けることができます。この例では、ユーザーが画像をクリックするたびに実行される `click` イベントハンドラー関数を定義しました。
+> - [条件文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals): 式が `true` または `false` を返すかどうかを検査し、それぞれの結果に応じて異なるコードを実行するために使用される構文です。条件分岐の非常に一般的な形式として、`if...else` 文があります。
 
-次に、もう 1 つの小さなコードを追加し、ユーザーがサイトにアクセスしたときに、ページの表題をパーソナライズされた挨拶メッセージに変更してみましょう。この挨拶メッセージは、ユーザーがサイトを離れて後で戻った時にも保存されるようにします。[Web Storage API](/ja/docs/Web/API/Web_Storage_API) を使用して保存しましょう。したがって、必要な時にいつでもユーザーと挨拶メッセージを変更できるオプションも用意しましょう。
+## パーソナライズされた挨拶メッセージの追加
 
-1. `index.html` では、 {{htmlelement("script")}} 要素の直前に次の行を追加します。
+次に、ユーザーがまずサイトにアクセスした際に、パーソナライズされた挨拶メッセージを表示させるよう、ページの見出しを変更しましょう。この挨拶メッセージは、[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) を使用してブラウザーに保存されるため、ユーザーが一度サイトを離れても、後で戻ってきた際には、パーソナライズされたデータがそのままあります。また、ユーザーがメッセージを変更できる機能も実装します。
+
+1. `index.html` では、`</body>` 閉じタグの直前に次の行を追加します。
 
    ```html
    <button>ユーザーを変更</button>
@@ -420,40 +190,49 @@ document.querySelector("html").addEventListener("click", () => {
    function setUserName() {
      const myName = prompt("あなたの名前を入力してください。");
      localStorage.setItem("name", myName);
-     myHeading.textContent = `Mozilla はかっこいいよ、${myName} さん、Mozilla はかっこいいよ。`;
+     myHeading.textContent = `${myName} さん、Mozilla はかっこいいよ。`;
    }
    ```
 
-   `setUserName()` 関数では、[`prompt()`](/ja/docs/Web/API/Window/prompt) 関数を使用して、`alert()` のようにダイアログボックスを表示しています。しかし、`prompt()` は `alert()` とは異なり、ユーザーにデータを入力するよう求め、ユーザーが **OK** を押した後に変数にそのデータを格納します。この場合、ユーザーに名前を入力するよう求めます。次に、`localStorage` と呼ばれる API を呼び出すことで、ブラウザーにデータを格納して後で受け取ることができます。 localStorage の `setItem()` 関数を使って、`'name'` と呼ばれるデータを作成し、 `myName` に入っているユーザーから入力されたデータを格納します。最後に、見出しの `textContent` に文字列と新しく格納されたユーザーの名前を設定します。
+   `setUserName()` 関数には [`prompt()`](/ja/docs/Web/API/Window/prompt) 関数が含まれており、これはユーザーにデータの入力を依頼し、_OK_ をクリックした後にその値を変数に格納します。この例では、ユーザーに名前を入力してもらい、それを `myName` に格納しています。<br /><br />
 
-4. 以下のような条件ブロックを追加します。最初に読み込んだときにアプリを構造化するので、これを初期化コードと呼ぶこともできます。
+   次に、このコードでは[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) を使用しています。これにより、ブラウザにデータを格納し、後でそれを取得することができるようになります。{{domxref("Storage.setItem", "localStorage.setItem()")}} 関数を使用して、`"name"` というデータ項目を生成し、その値をユーザーが入力した内容を含む `myName` 変数に設定します。<br /><br />
+
+   最後に、見出しの `textContent` に文字列と新しく格納されたユーザーの名前を設定します。
+
+4. 関数の宣言の後に、以下の条件付きブロックを追加してください。これが初期化コードです。ページがまず読み込まれたときに実行され、プログラムが始まります。
 
    ```js
    if (!localStorage.getItem("name")) {
      setUserName();
    } else {
      const storedName = localStorage.getItem("name");
-     myHeading.textContent = `Mozilla はかっこいいよ、${storedName}`;
+     myHeading.textContent = `${myName} さん、Mozilla はかっこいいよ。`;
    }
    ```
 
-   このブロックでは、最初に `name` のデータが存在しているかどうかをチェックするために否定演算子（`!` で表される論理否定）を使用しています。存在しない場合は、作成するために `setUserName()` 関数が実行されます。存在する場合は（つまり、以前の訪問時にユーザーが設定した場合）、 `getItem()` を使用して格納された名前を受け取り、 `setUserName()` の中で行ったのと同様に、見出しの `textContent` に文字列とユーザーの名前を設定します。
+   このブロックの 1 行目では、否定演算子（`!` 文字で表される論理 NOT）を使用して、`name` データ項目が `localStorage` にまだ格納されていないかを確認しています。格納されていない場合、`setUserName()` 関数が実行され、そのデータ項目が生成されます。もし存在する場合（つまり、ユーザーが前回の訪問時にユーザー名を設定していた場合）、{{domxref("Storage.getItem", "localStorage.getItem()")}} を使用して保存された名前を取得し、見出しの `textContent` に文字列とユーザー名を組み合わせたものを設定します。これは、`setUserName()` 内で行った処理と同様に行います。
 
-5. 最後に、以下の `onclick` イベントハンドラーをボタンに設定します。クリックすると、`setUserName()` 関数が実行されます。これでユーザーがボタンを押すことで、好きな時に新しい名前を設定できるようになります。
+5. ボタンに `click` イベントハンドラー関数を追加します。クリックされると、`setUserName()` が実行されます。これにより、ユーザーは必要に応じて別の名前を格納することができるようになります。
 
    ```js
-   myButton.onclick = () => {
+   myButton.addEventListener("click", () => {
      setUserName();
-   };
+   });
    ```
+
+6. すべてのファイルを保存し、ブラウザーで `index.html` を読み込んでください。すぐに名前の入力が要求されるはずです。入力すると、その名前が `<h1>` 内に、個人設定された挨拶の一部として現れます。ページを再読み込みしても、この個人設定が維持されることに注目してください。「ユーザーを変更」ボタンをクリックすると、新しい名前を入力できます。
+
+> [!NOTE]
+> [演算子](/ja/docs/Learn_web_development/Core/Scripting/Math)という用語は、1 つまたは複数の値に対して操作を行う JavaScript 言語の記号を参照します。例えば、`+`（値を加算する）、`-`（ある値から別の値を差し引く）、`!`（値を反転させる — 先ほど見た通り）などがあります。
 
 ### ユーザー名か null か
 
-この例を実行してユーザー名を入力するダイアログボックスが出たとき、*キャンセル*ボタンを押してみてください。結果として "Mozilla is cool, null" というタイトルが表示されるでしょう。これはプロンプトをキャンセルしたときに、値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)、つまり値がないことを示す JavaScript の特殊な値に設定されるためです。
+この例を実行してユーザー名を入力するダイアログボックスが出たとき、*キャンセル*ボタンを押してみてください。結果として "null さん、Mozilla はかっこいいよ。" というタイトルが表示されるでしょう。これはプロンプトをキャンセルしたときに、値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に設定されるためです。JavaScriptでは、_null_ は値が存在しないことを表す特殊な値です。
 
-また何も入れずに **OK** を押してみてください。結果として "Mozilla is cool," というタイトルが表示され、これは理由が明白です。
+また、名前を入力せずに _OK_ を押してみてください。結果として " さん、Mozilla はかっこいいよ。" というタイトルが表示されます。これは `myName` を空文字列の設定したからです。
 
-この問題を避けるには、ユーザーが `null` や空白の名前を入力していないかチェックするよう、`setUserName()` 関数を書き換えます。
+これらの問題を避けるために、ユーザーが名前を空白で入力していないことを調べる条件分岐を追加します。`setUserName()` 関数を次のように更新してください。
 
 ```js
 function setUserName() {
@@ -477,11 +256,13 @@ function setUserName() {
 
 行き詰まったら、自分の作業を [GitHub 上の完成したサンプルコード](https://github.com/mdn/beginner-html-site-scripted/blob/main/scripts/main.js)と比べてみてください。
 
-私たちは JavaScript に少し触れただけです。[コア](/ja/docs/Learn_web_development/Core)モジュールと[応用](/ja/docs/Learn_web_development/Extensions)モジュール、[JavaScript での動的スクリプト](/ja/docs/Learn_web_development/Core/Scripting)からの部分には、さらに多くの JavaScript があります。
+この記事では、JavaScript に少し触れただけです。このコースの後半で学ぶコアモジュール [JavaScript による動的スクリプティング](/ja/docs/Learn_web_development/Core/Scripting)」は、さらに多くのことを学べるでしょう。
 
 ## 関連情報
 
+- [Scrimba: Learn JavaScript](https://scrimba.com/learn-javascript-c0v?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : [Scrimba](https://scrimba.com?via=mdn) の _Learn JavaScript_ コースでは、140 以上の対話的なコーディング課題に取り組み、ゲームやブラウザー拡張機能、さらにはモバイルアプリなどのプロジェクトを構築しながら、JavaScript を学べます。Scrimba では、知識豊富な講師陣による楽しい対話的なレッスンが提供されています。
 - [Learn JavaScript](https://learnjavascript.online/)
-  - : ウェブ開発者を目指す方に最適な教材です! インタラクティブな環境で、短いレッスンとインタラクティブなテスト、自動評価によるガイドで、 JavaScript を学ぶことができます。最初の 40 レッスンは無料です。全コースは少額の一括払いでご利用いただけます。
+  - : ウェブ開発者を目指す方に最適な教材です! 対話的な環境で、短いレッスンと対話的なテスト、自動評価によるガイドで、 JavaScript を学ぶことができます。最初の 40 レッスンは無料です。全コースは少額の一括払いでご利用いただけます。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}

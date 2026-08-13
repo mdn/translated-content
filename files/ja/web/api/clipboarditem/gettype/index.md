@@ -1,16 +1,19 @@
 ---
-title: ClipboardItem.getType()
+title: "ClipboardItem: getType() メソッド"
+short-title: getType()
 slug: Web/API/ClipboardItem/getType
+l10n:
+  sourceCommit: eaa5b39f80d5fac0e5bf182679dc658b7083d15b
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{APIRef("Clipboard API")}} {{securecontext_header}}
 
-**`getType()`** は {{domxref("ClipboardItem")}} インターフェイスのメソッドで、要求された {{Glossary("MIME type", "MIME タイプ")}} の {{domxref("Blob")}} で解決するプロミス ({{jsxref("Promise")}}) を返します。 MIME タイプが見つからない場合はエラーになります。
+**`getType()`** は {{domxref("ClipboardItem")}} インターフェイスのメソッドで、要求された {{Glossary("MIME type", "MIME タイプ")}} の {{domxref("Blob")}} で解決するプロミス ({{jsxref("Promise")}}) を返します。MIME タイプが見つからない場合はエラーになります。
 
 ## 構文
 
-```js
-getType(type);
+```js-nolint
+getType(type)
 ```
 
 ### 引数
@@ -27,8 +30,7 @@ getType(type);
 - `NotFoundError` {{domxref("DOMException")}}
   - : `type` が既知の {{Glossary("MIME type", "MIME タイプ")}}に一致しない。
 - {{jsxref("TypeError")}}
-  - : 引数が指定されなかった、または `type` が
-    {{domxref("ClipboardItem")}} のものではない。
+  - : 引数が指定されなかった、または `type` が {{domxref("ClipboardItem")}} のものではない。
 
 ## 例
 
@@ -42,7 +44,7 @@ async function getClipboardContents() {
     for (const clipboardItem of clipboardItems) {
       for (const type of clipboardItem.types) {
         const blob = await clipboardItem.getType(type);
-        // we can now use blob here
+        // ここで blob を使用することができます
       }
     }
   } catch (err) {
@@ -62,5 +64,4 @@ async function getClipboardContents() {
 ## 関連情報
 
 - [クリップボード API](/ja/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

@@ -1,17 +1,18 @@
 ---
-title: FileReader.error
+title: "FileReader: error プロパティ"
+short-title: error
 slug: Web/API/FileReader/error
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 497d322c61511b11e4877a77660f8d7b394a8277
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-{{domxref("FileReader")}} の **`error`** プロパティは、ファイルの読み取り中に発生したエラーを返します。
+**`error`** は {{domxref("FileReader")}} インターフェイスの読み取り専用プロパティで、ファイルの読み取り中に発生したエラーを返します。
 
 ## 値
 
-{{domxref("DOMError")}} に関連するエラーが含まれています。 Chrome 48 以降/Firefox 58 以降では、 `DOMError` が DOM 標準から削除されているため、このプロパティは {{domxref("DOMException")}} を返します。
+関連するエラーを含んだ {{domxref("DOMException")}} です。
 
 ## 仕様書
 

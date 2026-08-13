@@ -1,7 +1,9 @@
 ---
-title: -webkit-text-stroke-width
+title: CSS `-webkit-text-stroke-width` プロパティ
+short-title: -webkit-text-stroke-width
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke-width
-original_slug: Web/CSS/-webkit-text-stroke-width
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`-webkit-text-stroke-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの線の太さを指定します。
@@ -23,6 +25,8 @@ original_slug: Web/CSS/-webkit-text-stroke-width
 /* グローバル値 */
 -webkit-text-stroke-width: inherit;
 -webkit-text-stroke-width: initial;
+-webkit-text-stroke-width: revert;
+-webkit-text-stroke-width: revert-layer;
 -webkit-text-stroke-width: unset;
 ```
 
@@ -87,7 +91,7 @@ p {
 
 ## 関連情報
 
-- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [Introducing Text-Stroke](https://webkit.org/blog/85/introducing-text-stroke/) - webkit.org (2006)
 - [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
 - {{cssxref("-webkit-text-stroke-color")}}
 - {{cssxref("-webkit-text-stroke")}}

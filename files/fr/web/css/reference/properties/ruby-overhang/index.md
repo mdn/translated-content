@@ -3,7 +3,7 @@ title: Propriété CSS `ruby-overhang`
 short-title: ruby-overhang
 slug: Web/CSS/Reference/Properties/ruby-overhang
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`ruby-overhang`** définit si une annotation {{HTMLElement("ruby")}} peut dépasser le texte environnant.
@@ -50,6 +50,8 @@ ruby-overhang: unset;
 
 ### Values
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `auto`
   - : Lorsqu'un conteneur d'annotation ruby est plus long que son conteneur de base correspondant, l'annotation peut partiellement chevaucher le texte adjacent.
     La manière et l'étendue du chevauchement sont déterminées par l'agent utilisateur.
@@ -63,7 +65,7 @@ La propriété `ruby-overhang` contrôle si la boîte de texte d'annotation ruby
 Lorsque le texte d'annotation ruby n'est pas autorisé à dépasser — lorsque `ruby-overhang: none` est défini sur l'élément `<ruby>` — cet élément se comporte comme une boîte en ligne, comme si sa propriété {{CSSxRef("display")}} était définie sur `inline`, avec uniquement son propre contenu rendu à l'intérieur de ses limites et les éléments adjacents ne franchissant pas la boîte de délimitation.
 
 Par défaut, le contenu d'un élément `<rt>` est autorisé à dépasser, de sorte que le contenu peut chevaucher la boîte du conteneur `<ruby>`, se rendant partiellement au-dessus ou en dessous du contenu environnant de niveau en ligne.
-Avec `auto`, la valeur par défaut, le contenu peut dépasser, mais il ne dépassera pas si cela chevaucherait des éléments `<rt>` adjacents ou des éléments avec une valeur de `display` résolvant à `ruby-base` ou `ruby-text`.
+Avec `auto`, la valeur par défaut, le contenu peut dépasser, mais il ne dépasse pas si cela chevauche des éléments `<rt>` adjacents ou des éléments avec une valeur de `display` résolvant à `ruby-base` ou `ruby-text`.
 
 ## Définition formelle
 
@@ -122,7 +124,7 @@ rt {
 
 {{EmbedLiveSample("Ruby dépassant le texte de base", , 350)}}
 
-Lorsque `ruby-overhang` est défini sur `none`, le texte d'annotation n'est pas autorisé à chevaucher les boîtes adjacentes du texte de base ruby. Si vous regardez de près, vous remarquerez que dans le premier paragraphe, la boîte rouge entourant le texte ruby chevauche légèrement des parties du contenu `<ruby>` non associé, tandis que dans l'exemple `none` dans les navigateurs compatibles, il n'y a aucun chevauchement entre le contenu ruby et le texte ruby non associé.
+Lorsque `ruby-overhang` est défini sur `none`, le texte d'annotation n'est pas autorisé à chevaucher les boîtes adjacentes du texte de base ruby. Si vous regardez de près, vous remarquez que dans le premier paragraphe, la boîte rouge entourant le texte ruby chevauche légèrement des parties du contenu `<ruby>` non associé, tandis que dans l'exemple `none` dans les navigateurs compatibles, il n'y a aucun chevauchement entre le contenu ruby et le texte ruby non associé.
 
 ## Spécifications
 

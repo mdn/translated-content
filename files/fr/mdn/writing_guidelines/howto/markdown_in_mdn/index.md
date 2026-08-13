@@ -322,7 +322,7 @@ Les listes de définitions sont souvent utilisées sur MDN, mais ne sont pas sup
 
 Chacun de ces éléments GFM `<li>` de premier niveau est transformé en une paire de `<dt>`/`<dd>` comme suit&nbsp;:
 
-- L'élément GFM `<li>` de premier niveau est analysé comme un élément GFM `<li>` et son contenu comprend le contenu du `<dt>`, excepté pour le dernier `<ul>` imbriqué qui ne est pas inclus dans le `<dt>`.
+- L'élément GFM `<li>` de premier niveau est analysé comme un élément GFM `<li>` et son contenu comprend le contenu du `<dt>`, excepté pour le dernier `<ul>` imbriqué qui n'est pas inclus dans le `<dt>`.
 - L'élément `<li>` dans le dernier `<ul>` imbriqué est analysé comme un élément GFM `<li>` et son contenu est compris dans le contenu du `<dd>`, excepté le premier «&nbsp;:&nbsp;&nbsp;» qui est rejeté.
 
 Par exemple, voici un `<dl>`&nbsp;:

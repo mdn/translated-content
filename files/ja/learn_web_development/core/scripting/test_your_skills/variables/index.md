@@ -16,7 +16,7 @@ l10n:
 <!-- この部分を含めるとリンターでエラーになるため、当面コメントアウトします。
 ## Interactive challenge
 
-First of all, we are giving you a fun, interactive variables challenge created by our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds), [Scrimba](https://scrimba.com/home).
+First of all, we are giving you a fun, interactive variables challenge created by our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み), [Scrimba](https://scrimba.com/home).
 
 Watch the embedded scrim, and complete the task on the timeline (the little ghost icon) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up with yours.
 
@@ -167,6 +167,6 @@ section.appendChild(para2);
 
 ## 関連情報
 
-[Practice time - Part 3: let and const](https://scrimba.com/learn-javascript-c0v/~059?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> である Scrimba による、`let` および `const` に関する複数のテストを提供するインタラクティブなチャレンジです。
+[Practice time - Part 3: let and const](https://scrimba.com/learn-javascript-c0v/~059?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> である Scrimba による、`let` および `const` に関する複数のテストを提供するインタラクティブなチャレンジです。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}

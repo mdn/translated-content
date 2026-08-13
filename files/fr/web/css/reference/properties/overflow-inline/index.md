@@ -3,7 +3,7 @@ title: Propriété CSS `overflow-inline`
 short-title: overflow-inline
 slug: Web/CSS/Reference/Properties/overflow-inline
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overflow-inline`** définit ce qu'il faut afficher lorsque le contenu dépasse les bords en ligne d'une boîte. Cela peut être rien, une barre de défilement ou le contenu débordant.
@@ -29,9 +29,9 @@ overflow-inline: revert-layer;
 overflow-inline: unset;
 ```
 
-La propriété `overflow-inline` est définie avec une valeur de type {{CSSxRef("overflow_value", "&lt;overflow&gt;")}} (voir les valeurs ci-après).
-
 ### Valeurs
+
+Cette propriété est définie par l'une des valeurs de mot-clé {{CSSxRef("overflow_value", "&lt;overflow&gt;")}} suivantes&nbsp;:
 
 - `visible`
   - : Le contenu n'est pas rogné et peut être affiché en dehors des limites en ligne de la boîte.
@@ -42,7 +42,7 @@ La propriété `overflow-inline` est définie avec une valeur de type {{CSSxRef(
 - `scroll`
   - : Le contenu est rogné si nécessaire selon l'axe en ligne pour tenir dans la boîte (de remplissage). Les navigateurs affichent des barres de défilement que le contenu soit rogné ou non (on évite ainsi d'avoir des barres qui apparaissent/disparaissent lorsque le contenu change). Les imprimantes peuvent imprimer le contenu qui dépasse.
 - `auto`
-  - : Le comportement de cette valeur dépend de l'agent utilisateur. Si le contenu tient dans la boîte de remplissage, elle se comportera comme `visible` mais établira un nouveau contexte de formatage. Les navigateurs de bureau affichent des barres de défilement si le contenu dépasse.
+  - : Le comportement de cette valeur dépend de l'agent utilisateur. Si le contenu tient dans la boîte de remplissage, elle se comporte comme `visible` mais établit un nouveau contexte de formatage. Les navigateurs de bureau affichent des barres de défilement si le contenu dépasse.
 
 ## Définition formelle
 

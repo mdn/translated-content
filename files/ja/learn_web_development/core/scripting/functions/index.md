@@ -512,6 +512,6 @@ for (let i = 0; i <= 1; i++) {
 
 - [関数の詳細ガイド](/ja/docs/Web/JavaScript/Guide/Functions) — ここに含まれていないいくつかの高度な機能について説明します。
 - [関数](/ja/docs/Web/JavaScript/Reference/Functions)
-- [Using functions to write less code](https://scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> - 便利な関数の概要を紹介するインタラクティブなレッスンです。
+- [Using functions to write less code](https://scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> - 便利な関数の概要を紹介するインタラクティブなレッスンです。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

@@ -2,10 +2,10 @@
 title: HTML 属性ページテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_attribute_page_template
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
-HTML属性は、特定の要素にのみ適用される**要素固有の属性**（例：`<input type="file">` の `accept` 属性）と、どの HTML 要素にも使用できる**グローバル属性**（例：`class`、`id`）の 2 つのカテゴリーに分類されます。前者は `HTML/Reference/Attributes` に、後者は `HTML/Reference/Global_attributes` に配置すべきです。
+HTML 属性は、特定の要素にのみ適用される**要素固有の属性**（例：`<input type="file">` の `accept` 属性）と、どの HTML 要素にも使用できる**グローバル属性**（例：`class`、`id`）の 2 つのカテゴリーに分類されます。前者は `HTML/Reference/Attributes` に、後者は `HTML/Reference/Global_attributes` に配置すべきです。
 
 なお、要素固有の属性のほとんどは、その要素の参照に記載されている属性リストだけで動作を十分に記述できる場合、個別の記事を作成する必要はありません。
 その属性に独自の例を挙げるほど微妙なニュアンスがある場合、またはグローバル属性である場合にのみ、記事を作成してください。

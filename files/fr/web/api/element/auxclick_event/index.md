@@ -1,56 +1,113 @@
 ---
-title: GlobalEventHandlers.onauxclick
+title: "Element : évènement auxclick"
+short-title: auxclick
 slug: Web/API/Element/auxclick_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("UI Events")}}
 
-La propriété **`onauxclick`** du mixin {{domxref("GlobalEventHandlers")}} est un gestionnaire d'évènement pour le traitement des événements `auxclick`.
+L'évènement **`auxclick`** est déclenché sur un objet {{DOMxRef("Element")}} lorsqu'un bouton de dispositif de pointage non principal (tout bouton de souris autre que le principal — généralement le bouton le plus à gauche) a été enfoncé et relâché à l'intérieur du même élément.
 
-L'événement `auxclick` est déclenché lorsqu'un bouton non principal a été enfoncé sur un périphérique d'entrée (par exemple, la molette de la souris). Il se déclenche après les événements [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event), dans cet ordre.
-
-> [!NOTE]
-> Les fournisseurs de navigateurs implémentent cette propriété dans le cadre d'un plan visant à améliorer la compatibilité en ce qui concerne le comportement des boutons. Plus précisément, le comportement des événements est mis à jour afin que l'évènement [`click`](/fr/docs/Web/API/Element/click_event) ne se déclenche que pour les clics sur le bouton principal (par exemple, le bouton gauche de la souris), tandis que l'évènement `auxclick` se déclenche pour le bouton non principal. Historiquement, [`click`](/fr/docs/Web/API/Element/click_event) s'est généralement déclenché pour le clic de n'importe quel bouton d'entrée de périphérique, bien que le comportement du navigateur soit quelque peu incohérent.
+`auxclick` est déclenché après que les évènements {{DOMxRef("Element/mousedown_event", "mousedown")}} et {{DOMxRef("Element/mouseup_event", "mouseup")}} ont été déclenchés, dans cet ordre.
 
 ## Syntaxe
 
-```js
-target.onauxclick = functionRef;
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("auxclick", (event) => { })
+
+onauxclick = (event) => { }
 ```
 
-### Valeur
+## Type d'évènement
 
-`functionRef` est un nom de fonction ou une [function expression](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet {{domxref("MouseEvent")}} comme seul argument. Dans la fonction, [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) sera l'élément sur lequel l'événement a été déclenché.
+Un objet {{DOMxRef("PointerEvent")}}. Hérite de {{DOMxRef("MouseEvent")}}.
 
-Un seul gestionnaire `onauxclick` peut être affecté à un objet à la fois. Vous pouvez préférer utiliser la méthode {{domxref("EventTarget.addEventListener()")}} à la place, car elle est plus flexible.
-
-## Exemple
-
-Dans cet exemple, nous définissons des fonctions pour deux gestionnaires d'événements — {{domxref("GlobalEventHandlers.onclick", "onclick")}} et `onauxclick`. Le premier modifie la couleur de l'arrière-plan du bouton, tandis que le second modifie la couleur de premier plan (texte) du bouton. Vous pouvez voir les deux fonctions en action en essayant la démo avec une souris à plusieurs boutons ([voir en direct sur GitHub](https://mdn.github.io/dom-examples/auxclick/); également [voir le code source](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)).
-
-```js
-var button = document.querySelector("button");
-var html = document.querySelector("html");
-
-function random(number) {
-  return Math.floor(Math.random() * number);
-}
-
-button.onclick = function () {
-  var rndCol =
-    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
-  button.style.backgroundColor = rndCol;
-};
-
-button.onauxclick = function () {
-  var rndCol =
-    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
-  button.style.color = rndCol;
-};
-```
+{{InheritanceDiagram("PointerEvent")}}
 
 > [!NOTE]
-> Si vous utilisez une souris à trois boutons, vous remarquerez que le gestionnaire `onauxclick` est exécuté lorsque l'un des boutons non gauche de la souris est cliqué.
+> Dans les versions antérieures de la spécification, le type d'évènement pour cet évènement était un {{DOMxRef("MouseEvent")}}. Consultez la [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus d'informations.
+
+## Empêcher les actions par défaut
+
+Pour la grande majorité des navigateurs qui associent le clic central à l'ouverture d'un lien dans un nouvel onglet, y compris Firefox, il est possible d'annuler ce comportement en appelant {{DOMxRef("Event.preventDefault()", "preventDefault()")}} depuis un gestionnaire d'évènement `auxclick`.
+
+Lorsque vous écoutez les évènements `auxclick` provenant d'éléments qui ne prennent pas en charge la saisie ou la navigation, vous souhaitez souvent empêcher explicitement d'autres actions par défaut associées à l'action d'enfoncement du bouton central de la souris. Sous Windows, il s'agit généralement du défilement automatique, tandis que sous macOS et Linux, il s'agit généralement du collage depuis le presse-papiers. Pour ce faire, il suffit d'empêcher le comportement par défaut de l'évènement {{DOMxRef("Element/mousedown_event", "mousedown")}} ou {{DOMxRef("Element/pointerdown_event", "pointerdown")}}.
+
+De plus, vous devez peut-être éviter l'ouverture d'un menu contextuel système après un clic droit. En raison des différences de synchronisation entre les systèmes d'exploitation, il s'agit là aussi d'un comportement par défaut de `auxclick` qui ne peut être désactivé. À la place, cela peut être réalisé en désactivant le comportement par défaut de l'évènement {{DOMxRef("Element/contextmenu_event", "contextmenu")}}.
+
+## Exemples
+
+Dans cet exemple, nous définissons des fonctions pour deux gestionnaires d'évènements — {{DOMxRef("Element.click_event", "onclick")}} et `onauxclick`. La première modifie la couleur d'arrière-plan du bouton, tandis que la seconde modifie la couleur de premier plan (texte) du bouton. Vous pouvez également voir ces deux fonctions en action en testant la démonstration avec une souris à plusieurs boutons ([voir la démonstration en direct sur GitHub <sup>(angl.)</sup>](https://mdn.github.io/dom-examples/auxclick/)&nbsp;; voir également [le code source <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/blob/main/auxclick/index.html)).
+
+### JavaScript
+
+```js
+let bouton = document.querySelector("button");
+let html = document.querySelector("html");
+
+function aleatoire(nombre) {
+  return Math.floor(Math.random() * nombre);
+}
+
+function couleurAleatoire() {
+  return `rgb(${aleatoire(255)} ${aleatoire(255)} ${aleatoire(255)})`;
+}
+
+bouton.onclick = () => {
+  bouton.style.backgroundColor = couleurAleatoire();
+};
+
+bouton.onauxclick = (e) => {
+  e.preventDefault();
+  bouton.style.color = couleurAleatoire();
+};
+
+bouton.oncontextmenu = (e) => {
+  e.preventDefault();
+};
+```
+
+Remarquez qu'en plus de capturer l'évènement `auxclick` en utilisant `onauxclick`, l'évènement {{DOMxRef("Element.contextmenu_event", "contextmenu")}} est également capturé, et {{DOMxRef("Event.preventDefault", "preventDefault()")}} est appelé sur cet évènement, afin d'empêcher le menu contextuel de s'afficher après l'application du changement de couleur.
+
+### HTML
+
+```html
+<button>Cliquez-moi&nbsp;!</button>
+```
+
+```css hidden
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+button {
+  border: 0;
+  background-color: white;
+  font-size: 8vw;
+  display: block;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 0.5rem;
+}
+```
+
+{{EmbedLiveSample("Exemples", 640, 300)}}
+
+> [!NOTE]
+> Si vous utilisez une souris à trois boutons, vous remarquez que le gestionnaire `onauxclick` est exécuté lorsque l'un des boutons de souris non gauche est cliqué (incluant généralement les boutons «&nbsp;spéciaux&nbsp;» des souris de jeu).
 
 ## Spécifications
 
@@ -62,7 +119,11 @@ button.onauxclick = function () {
 
 ## Voir aussi
 
-- `auxclick` event
-- Related event handlers
-  - {{domxref("GlobalEventHandlers.onclick")}}
-  - {{domxref("GlobalEventHandlers.ondblclick")}}
+- [Apprendre&nbsp;: Introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
+- L'évènement {{DOMxRef("Element/click_event", "click")}}
+- L'évènement {{DOMxRef("Element/contextmenu_event", "contextmenu")}}
+- L'évènement {{DOMxRef("Element/dblclick_event", "dblclick")}}
+- L'évènement {{DOMxRef("Element/mousedown_event", "mousedown")}}
+- L'évènement {{DOMxRef("Element/mouseup_event", "mouseup")}}
+- L'évènement {{DOMxRef("Element/pointerdown_event", "pointerdown")}}
+- L'évènement {{DOMxRef("Element/pointerup_event", "pointerup")}}

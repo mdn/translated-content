@@ -2,10 +2,8 @@
 title: CSS プロパティページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 l10n:
-  sourceCommit: 90026d3d74fcc3b4dd81d9365b5c26752b76dd56
+  sourceCommit: d2fb8cdc9422dd2b68ff23f616d70811729f1fbd
 ---
-
-{{MDNSidebar}}
 
 > [!NOTE]
 > _この説明文全体を削除してから公開してください。_
@@ -21,19 +19,19 @@ l10n:
 >
 > ```md
 > ---
-> title: NameOfTheProperty
-> slug: Web/CSS/NameOfTheProperty
+> title: name-of-the-property
+> slug: Web/CSS/Reference/Properties/name-of-the-property
 > l10n:
 >   sourceCommit: 翻訳元コミットID
 > ---
 > ```
 >
 > - **title**
->   - : `title` の値はページの先頭に表示されます。タイトルの書式は _NameOfTheProperty_ です。
->     例えば、 [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color) プロパティのタイトルは _background-color_ です。
+>   - : `title` の値はページの先頭に表示されます。タイトルの書式は _name-of-the-property_ です。
+>     例えば、{{cssxref("background-color")}} プロパティのタイトルは _background-color_ です。
 > - **slug**
->   - : `slug` の値は`https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。 これは `Web/CSS/NameOfTheProperty` のような書式です。
->     例えば、 [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color) プロパティのスラッグは `Web/CSS/background-color` です。スラッグ内の `Getting_started` のような複数単語の成分の場合、スラッグは `/ja/docs/Learn/HTML/Getting_started` のようにアンダースコアを使用します。
+>   - : `slug` の値は`https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。 これは `Web/CSS/Reference/Properties/name-of-the-property` のような書式です。
+>     例えば、{{cssxref("background-color")}} プロパティのスラッグは `Web/CSS/background-color` です。スラッグ内の `Getting_started` のような複数単語の成分の場合、スラッグは `/ja/docs/Learn_web_development/Core/Structuring_content` のようにアンダースコアを使用します。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
@@ -48,11 +46,6 @@ l10n:
 >   実験的なもので、その技術が Firefox の設定で隠されている場合は、 [Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのためのエントリーを記入する必要があります。
 > - `\{{Deprecated_Header}}` — これは **非推奨** バナーを生成し、この技術の使用を[避けるべき](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
 > - `\{{Non-standard_Header}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
->
-> 下記のアドバイスに従って、以下のマクロを更新または削除してください。
->
-> - `\{{CSSRef}}`: このマクロはすべての CSS プロパティページに置く必要があります。ページに記載したタグに応じて、適切な CSS サイドバーを生成します。
-> - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
@@ -78,9 +71,9 @@ l10n:
 
 ## 試してみましょう
 
-_このタイトルは `\{{EmbedInteractiveExample}}` マクロで自動生成されます。_
-
-この節は `\{{EmbedInteractiveExample}}` マクロを使用して追加したインタラクティブサンプルのためのものです。この例は [mdn/interactive-examples リポジトリー](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md)に作成します。詳しくはガイドラインの[インタラクティブサンプル](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples#インタラクティブサンプル)の節を参照してください。
+この節は `InteractiveExample` マクロで生成されます。
+「試してみましょう」という節の見出しとコードエディターが現れます。
+詳しくはガイドラインの[インタラクティブサンプル](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples#インタラクティブサンプル)の節を参照してください。
 
 ## 構成要素のプロパティ
 
@@ -104,6 +97,9 @@ _このタイトルは `\{{EmbedInteractiveExample}}` マクロで自動生成�
 - `subvalue2`
   - : サブ値の説明、データ型、何を表すかを記載します。
 
+> [!WARNING]
+> CSS のページには、[インライン状態マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#定義リスト内の機能の状態アイコン)を追加しないでください。
+
 ## 解説
 
 これは、このプロパティについての解説と、これがどのように動作するのかを説明するオプションの節です。この節を使用して、関連の用語を説明したり、プロパティの用途を追加したりします。
@@ -119,6 +115,10 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 `\{{CSSSyntax}}`
 
 _このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+
+## アクセシビリティ
+
+この節はオプションです。このプロパティを使用する際に開発者が注意すべきアクセシビリティに関する警告があれば、ここに記載することができます。また、こうしたアクセシビリティの懸念の回避策があれば、それも含めることができます。
 
 ## 例
 
@@ -156,12 +156,8 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 > ```md
 > ## 例
 >
-> この API の例については、[fetch() のページ](https://example.org)を参照してください。
+> この API の例については、[fetch() のページ](https://example.org/)を参照してください。
 > ```
-
-## アクセシビリティの考慮
-
-この節はオプションです。このプロパティを使用する際に開発者が注意すべきアクセシビリティに関する警告があれば、ここに記載することができます。また、こうしたアクセシビリティの懸念の回避策があれば、それも含めることができます。
 
 ## 仕様書
 

@@ -102,9 +102,9 @@ Cette propriété peut être définie avec&nbsp;:
 ### Valeurs
 
 - `none`
-  - : Un mot-clé qui indique qu'il n'y a pas de grille explicite. N'importe quelle ligne sera générée implicitement et sa taille sera déterminée grâce à la propriété {{CSSxRef("grid-auto-rows")}}.
+  - : Un mot-clé qui indique qu'il n'y a pas de grille explicite. N'importe quelle ligne est générée implicitement et sa taille est déterminée grâce à la propriété {{CSSxRef("grid-auto-rows")}}.
 - `[line-name]`
-  - : Un identifiant ({{CSSxRef("custom-ident")}}) qui définit un nom pour la ligne à cet emplacement. L'identifiant peut être n'importe quelle chaîne valide sauf les mots réservés `span` et `auto`. Les lignes peuvent avoir plusieurs noms séparés par un espace à l'intérieur des crochets, par exemple `[ligne-a ligne-b]`.
+  - : Un identifiant ({{CSSxRef("custom-ident")}}) qui définit un nom pour la ligne à cet emplacement. L'identifiant peut être n'importe quelle chaîne de caractères valide sauf les mots réservés `span` et `auto`. Les lignes peuvent avoir plusieurs noms séparés par un espace à l'intérieur des crochets, par exemple `[ligne-a ligne-b]`.
 - {{CSSxRef("&lt;length&gt;")}}
   - : Un longueur positive.
 - {{CSSxRef("&lt;percentage&gt;")}}
@@ -125,16 +125,16 @@ Cette propriété peut être définie avec&nbsp;:
     Si utilisé en dehors de la notation {{CSSxRef("minmax()")}}, `auto` représente l'intervalle entre les valeurs minimale et maximale décrites ci-dessus. Dans la plupart des cas, cela se comporte comme `minmax(min-content,max-content)`.
 
     > [!NOTE]
-    > Les tailles de piste `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{CSSxRef("align-content")}} et {{CSSxRef("justify-content")}}. Par conséquent, par défaut, une piste dimensionnée en `auto` occupera tout l'espace restant dans le conteneur de grille.
+    > Les tailles de piste `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{CSSxRef("align-content")}} et {{CSSxRef("justify-content")}}. Par conséquent, par défaut, une piste dimensionnée en `auto` occupe tout l'espace restant dans le conteneur de grille.
 
 - {{CSSxRef("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
   - : Cette notation représente la formule `min(max-content, max(auto, argument))` qui est calculée comme pour `auto` (i.e. `minmax(auto, max-content)`) sauf que la taille de la piste est ramenée à _argument_ si elle est plus grande que le minimum fourni par `auto`.
 - {{CSSxRef("repeat()","repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ], &lt;track-list&gt; )")}}
   - : Représente un fragment répété d'une liste de pistes, cela permet de gérer des grilles avec de nombreuses lignes pour lesquelles on réutilise un motif.
-- [`masonry`](/fr/docs/Web/CSS/Guides/Grid_layout/Masonry_layout) {{Experimental_Inline}}
+- [`masonry`](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) {{Experimental_Inline}}
   - : La valeur `masonry` indique que cet axe doit être mis en page selon l'algorithme de compartimentation.
 - [`subgrid`](/fr/docs/Web/CSS/Guides/Grid_layout/Subgrid)
-  - : La valeur `subgrid` indique que la grille adoptera la portion englobante de la grille parente sur cet axe. Plutôt que d'être définies explicitement, les tailles des lignes/colonnes de la grille seront reprises de la définition de la grille parente.
+  - : La valeur `subgrid` indique que la grille adopte la portion englobante de la grille parente sur cet axe. Plutôt que d'être définies explicitement, les tailles des lignes/colonnes de la grille sont reprises de la définition de la grille parente.
 
 ## Définition formelle
 

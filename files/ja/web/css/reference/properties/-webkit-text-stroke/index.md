@@ -1,8 +1,9 @@
 ---
-title: -webkit-text-stroke
+title: CSS `-webkit-text-stroke` プロパティ
+short-title: -webkit-text-stroke
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`-webkit-text-stroke`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキスト文字の輪郭線の[幅](/ja/docs/Web/CSS/Reference/Values/length)と[色](/ja/docs/Web/CSS/Reference/Values/color_value)を指定します。これは個別指定プロパティ {{cssxref("-webkit-text-stroke-width")}} および {{cssxref("-webkit-text-stroke-color")}} の一括指定プロパティです。

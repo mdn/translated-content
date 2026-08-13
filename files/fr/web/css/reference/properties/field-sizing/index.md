@@ -3,7 +3,7 @@ title: Propriété CSS `field-sizing`
 short-title: field-sizing
 slug: Web/CSS/Reference/Properties/field-sizing
 l10n:
-  sourceCommit: cd0d465d5512de499b5da36abc5735c14897af7c
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`field-sizing`** permet de contrôler le comportement de dimensionnement des éléments qui reçoivent une taille préférée par défaut, comme les éléments de contrôle de formulaire. Cette propriété permet de remplacer le comportement de dimensionnement par défaut, afin que les contrôles de formulaire s'ajustent à la taille de leur contenu.
@@ -26,6 +26,8 @@ field-sizing: unset;
 ```
 
 ### Valeurs
+
+La propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `content`
   - : Permet à l'élément d'ajuster sa taille pour s'adapter à son contenu.

@@ -3,7 +3,7 @@ title: Propriété CSS `align-content`
 short-title: align-content
 slug: Web/CSS/Reference/Properties/align-content
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`align-content`** permet de définir la répartition de l'espace entre et autour des éléments de contenu le long de [l'axe transversal](/fr/docs/Glossary/Cross_Axis) d'un [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout), ou de l'axe de bloc d'un élément [grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou [de niveau bloc](/fr/docs/Glossary/Block-level_content).
@@ -97,6 +97,8 @@ align-content: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme un ou deux des mot-clés suivants&nbsp;:
+
 - `normal`
   - : Les éléments sont groupés sur leur position par défaut, comme si `align-content` n'avait pas été défini.
 - `start`
@@ -117,20 +119,20 @@ align-content: unset;
     L'alignement de secours pour `first baseline` est `start`, celui pour `last baseline` est `end`.
 
 - `space-between`
-  - : Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, le premier élément est aligné sur le bord au début du conteneur et le dernier élément est aligné sur le bord à la fin du conteneur.
+  - : Les éléments sont uniformément réparti le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, le premier élément est aligné sur le bord au début du conteneur et le dernier élément est aligné sur le bord à la fin du conteneur.
 - `space-around`
-  - : Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, la moitié de cet espace est utilisée entre le premier élément et le bord au début du conteneur et la moitié de cet espace est utilisée entre le dernier élément et le bord à la fin du conteneur
+  - : Les éléments sont uniformément réparti le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, la moitié de cet espace est utilisée entre le premier élément et le bord au début du conteneur et la moitié de cet espace est utilisée entre le dernier élément et le bord à la fin du conteneur
 - `space-evenly`
-  - : Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, entre le premier élément et le bord du conteneur et entre le dernier élément et le bord du conteneur.
+  - : Les éléments sont uniformément réparti le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, entre le premier élément et le bord du conteneur et entre le dernier élément et le bord du conteneur.
 - `stretch`
-  - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe en bloc, les éléments dimensionnés automatiquement seront élargis de la même longueur tout en respectant les contraintes imposées par {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.
+  - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe en bloc, les éléments dimensionnés automatiquement sont élargis de la même longueur tout en respectant les contraintes imposées par {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.
 - `safe`
-  - : Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Si l'élément dépasse du conteneur avec la valeur d'alignement indiquée, l'élément sera alors aligné avec la valeur `start`.
+  - : Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Si l'élément dépasse du conteneur avec la valeur d'alignement indiquée, l'élément est alors aligné avec la valeur `start`.
 - `unsafe`
   - : Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Quelle que soit la taille et le dépassement éventuellement occasionné, l'élément est aligné avec la valeur indiquée.
 
 > [!NOTE]
-> Les valeurs `<content-distribution>` (`space-between`, `space-around`, `space-evenly` et `stretch`) n'ont aucun effet dans la [mise en page de bloc](/fr/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables#align-content_et_justify-content) car tout le contenu de ce bloc est traité comme un seul {{Glossary("Alignment_Subject", "sujet d'alignement")}}.
+> Les valeurs `<content-distribution>` (`space-between`, `space-around`, `space-evenly` et `stretch`) n'ont aucun effet dans la [mise en page de bloc](/fr/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables#align-content_et_justify-content), car tout le contenu de ce bloc est traité comme un seul {{Glossary("Alignment_Subject", "sujet d'alignement")}}.
 
 ## Définition formelle
 

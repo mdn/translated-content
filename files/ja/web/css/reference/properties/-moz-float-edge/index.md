@@ -1,19 +1,21 @@
 ---
-title: -moz-float-edge
+title: CSS `-moz-float-edge` プロパティ
+short-title: -moz-float-edge
 slug: Web/CSS/Reference/Properties/-moz-float-edge
-original_slug: Web/CSS/-moz-float-edge
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{Non-standard_header}}
+{{Non-standard_header}}{{Deprecated_Header}}
 
-標準外の **`-moz-float-edge`** [CSS](/ja/docs/Web/CSS) プロパティは要素の高さと幅のプロパティが margin 、border 、padding の厚さを含んでいるのかを指定します。
+標準外の **`-moz-float-edge`** [CSS](/ja/docs/Web/CSS) プロパティは、要素の高さと幅のプロパティが margin 、border 、padding の太さを含んでいるかどうかを指定します。
+
+## 構文
 
 ```css
 /* キーワード値 */
--moz-float-edge: border-box;
 -moz-float-edge: content-box;
 -moz-float-edge: margin-box;
--moz-float-edge: padding-box;
 
 /* グローバル値 */
 -moz-float-edge: inherit;
@@ -21,18 +23,12 @@ original_slug: Web/CSS/-moz-float-edge
 -moz-float-edge: unset;
 ```
 
-## 構文
-
 ### 値
 
-- `border-box`
-  - : 高さと幅のプロパティがコンテンツ、padding および border を含むが、margin は含まない。
 - `content-box`
   - : 高さと幅のプロパティがコンテンツを含むが、padding 、border および margin は含まない。
 - `margin-box`
   - : 高さと幅のプロパティがコンテンツ、padding 、 border および margin を含む。
-- `padding-box`
-  - : 高さと幅のプロパティがコンテンツと padding を含むが、border および margin は含まない。
 
 ## 公式定義
 
@@ -40,12 +36,9 @@ original_slug: Web/CSS/-moz-float-edge
 
 ## 形式文法
 
-```plain
--moz-float-edge =
-  border-box | content-box | margin-box | padding-box
-```
+{{CSSSyntaxRaw(`-moz-float-edge = content-box | margin-box`)}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
@@ -61,7 +54,7 @@ original_slug: Web/CSS/-moz-float-edge
 .box {
   display: block;
   height: 5px;
-  margin: 0.5em auto 0.5em auto;
+  margin: 0.5em auto;
   color: gray;
   -moz-float-edge: margin-box;
   box-sizing: border-box;

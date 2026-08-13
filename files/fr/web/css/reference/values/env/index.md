@@ -3,10 +3,10 @@ title: Fonction CSS `env()`
 short-title: env()
 slug: Web/CSS/Reference/Values/env
 l10n:
-  sourceCommit: 4607393c465f5a8bdbb36047f2ec03c2fb058af5
+  sourceCommit: 35cd8b781219157e42b289364754cff862c2dd1a
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`env()`** peut être utilisée pour insérer la valeur d'une [variable d'environnement](/fr/docs/Web/CSS/Guides/Environment_variables/Using) définie par l'agent utilisateur dans votre CSS.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`env()`** peut être utilisée pour insérer la valeur d'une [variable d'environnement](/fr/docs/Web/CSS/Guides/Environment_variables/Using) définie par l'agent utilisateur dans votre CSS. Alternativement, `env()` peut être utilisée pour créer des valeurs dynamiques dans des fichiers SVG externes qui sont mises à jour à l'aide de la propriété CSS {{CSSxRef("link-parameters")}}.
 
 ## Syntaxe
 
@@ -22,9 +22,15 @@ env(titlebar-area-y, 40px);
 env(viewport-segment-width 0 0, 40%);
 ```
 
+```svg
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="env(--color, black)" d="..." />
+</svg>
+```
+
 ### Paramètres
 
-La fonction `env( <environment-variable>, <fallback> )` accepte les paramètres suivants&nbsp;:
+La fonction `env( <environment-variable> | <dashed-ident>, <fallback> | <declaration-value> )` accepte les paramètres suivants&nbsp;:
 
 - [`<environment-variable>`](/fr/docs/Web/CSS/Guides/Environment_variables/Using#variables_denvironnement_définies_par_le_navigateur)
   - : Un identifiant personnalisé ({{CSSxRef("&lt;custom-ident&gt;")}}) définissant le nom de la variable d'environnement à insérer. Si le nom fourni représente une variable d'environnement de type tableau, le nom est suivi d'une valeur entière ({{CSSxRef("&lt;integer&gt;")}}) identifiant l'instance spécifique à laquelle le nom fait référence. Le nom de la variable d'environnement est sensible à la casse et peut être l'un des suivants&nbsp;:
@@ -41,8 +47,14 @@ La fonction `env( <environment-variable>, <fallback> )` accepte les paramètres 
     - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
       - : Les dimensions et les positions de décalage de segments spécifiques de la zone d'affichage. Le mot-clé `viewport-segment-*` est suivi de deux valeurs entières ({{CSSxRef("&lt;integer&gt;")}}) séparées par un espace qui indiquent la position horizontale et verticale du segment, ou les indices. Les mots-clés `viewport-segment` ne sont définis que lorsque la zone d'affichage est composée de deux segments ou plus, comme avec les appareils pliables ou articulés.
 
+- {{CSSxRef("&lt;dashed-ident&gt;")}}
+  - Un identifiant avec tiret (`<dashed-ident>`) est une variable définie par l'utilisateur·ice qui peut être utilisée comme identifiant dans la fonction CSS {{CSSxRef("param")}} pour mettre à jour la valeur.
+
 - `<fallback>` {{Optional_Inline}}
   - : Une valeur de secours à insérer si la variable d'environnement référencée dans le premier argument n'existe pas. Tout ce qui suit la première virgule est considéré comme la valeur de secours. Cela peut être une seule valeur, une autre fonction `env()`, ou une liste de valeurs séparées par des virgules.
+
+- `<declaration-value>` {{Optional_Inline}}
+  - : Une `<declaration-value>` est la valeur par défaut de l'attribut SVG défini dynamiquement. Si la `<declaration-value>` est omise, elle représente une valeur vide.
 
 ## Description
 

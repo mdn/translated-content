@@ -3,16 +3,16 @@ title: Méthode de requête PATCH
 short-title: PATCH
 slug: Web/HTTP/Reference/Methods/PATCH
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 La méthode HTTP **`PATCH`** applique des modifications partielles à une ressource.
 
-`PATCH` est en quelque sorte analogue au concept de « mise à jour » que l'on trouve dans {{Glossary("CRUD")}} (en général, HTTP est différent de {{Glossary("CRUD")}}, et il ne faut pas les confondre).
+`PATCH` est en quelque sorte analogue au concept de «&nbsp;mise à jour&nbsp;» que l'on trouve dans {{Glossary("CRUD")}} (en général, HTTP est différent de {{Glossary("CRUD")}}, et il ne faut pas les confondre).
 
 Par rapport à {{HTTPMethod("PUT")}}, un `PATCH` sert d'instructions pour modifier une ressource, tandis que `PUT` représente un remplacement complet de la ressource.
 Une requête `PUT` est toujours {{Glossary("idempotent", "idempotente")}} (répéter la même requête plusieurs fois résulte en la ressource restant dans le même état), alors qu'une requête `PATCH` n'est pas toujours idempotente.
-Par exemple, si une ressource inclut un compteur auto-incrémenté, une requête `PUT` écrasera le compteur (puisqu'elle remplace toute la ressource), mais une requête `PATCH` peut ne pas le faire.
+Par exemple, si une ressource inclut un compteur auto-incrémenté, une requête `PUT` écrase le compteur (puisqu'elle remplace toute la ressource), mais une requête `PATCH` peut ne pas le faire.
 
 Comme {{HTTPMethod("POST")}}, une requête `PATCH` peut potentiellement avoir des effets secondaires sur d'autres ressources.
 
@@ -67,7 +67,7 @@ PATCH <request-target>["?"<query>] HTTP/1.1
 
 ### Modification réussie d'une ressource
 
-Supposons qu'il existe une ressource sur le serveur représentant un utilisateur avec un identifiant numérique `123` au format suivant&nbsp;:
+Supposons qu'il existe une ressource sur le serveur représentant un·e utilisateur·ice avec un identifiant numérique `123` au format suivant&nbsp;:
 
 ```json
 {
@@ -101,9 +101,9 @@ Authorization: Bearer ABC123
 }
 ```
 
-L'interpretation et l'authentification de la requête `PATCH` dépendent de l'implémentation.
+L'interprétation et l'authentification de la requête `PATCH` dépendent de l'implémentation.
 Le succès peut être indiqué par n'importe quel [code de réponse réussi](/fr/docs/Web/HTTP/Reference/Status#successful_responses).
-Dans cet exemple, un {{HTTPStatus("204", "204 No Content")}} est utilisé car il n'est pas nécessaire de transmettre un corps avec des informations supplémentaires sur l'opération.
+Dans cet exemple, un {{HTTPStatus("204", "204 No Content")}} est utilisé, car il n'est pas nécessaire de transmettre un corps avec des informations supplémentaires sur l'opération.
 Un en-tête {{HTTPHeader("ETag")}} est fourni pour que l'appelant puisse effectuer une [requête conditionnelle](/fr/docs/Web/HTTP/Guides/Conditional_requests) ultérieurement&nbsp;:
 
 ```http
@@ -118,15 +118,15 @@ ETag: "e0023aa4f"
 
 ## Compatibilité des navigateurs
 
-Le navigateur n'utilise pas la méthode `PATCH` pour les actions initiées par l'utilisateur·ice, donc la « compatibilité navigateur » ne s'applique pas.
-Les développeur·euse·s peuvent utiliser cette méthode via {{DOMxRef("Window.fetch", "fetch()")}}.
+Le navigateur n'utilise pas la méthode `PATCH` pour les actions initiées par l'utilisateur·ice, donc la «&nbsp;compatibilité navigateur&nbsp;» ne s'applique pas.
+Les développeur·euse·s peuvent utiliser cette méthode avec {{DOMxRef("Window.fetch", "fetch()")}}.
 
 ## Voir aussi
 
 - [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
 - [Codes de statut de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
 - [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
-- {{HTTPStatus("204")}}
+- Le code de statut {{HTTPStatus("204")}}
 - Les en-têtes {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}
-- {{HTTPHeader("Accept-Patch")}} - spécifie les formats de document patch acceptés par le serveur
+- {{HTTPHeader("Accept-Patch")}} - définit les formats de document patch acceptés par le serveur
 - [Générateur JSON Patch <sup>(angl.)</sup>](https://jsoning.com/jsonpatch/)

@@ -3,7 +3,7 @@ title: Propriété CSS `scroll-initial-target`
 short-title: scroll-initial-target
 slug: Web/CSS/Reference/Properties/scroll-initial-target
 l10n:
-  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
@@ -26,6 +26,8 @@ scroll-initial-target: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `none`
   - : L'élément n'est pas une cible de défilement initiale.

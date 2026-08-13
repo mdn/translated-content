@@ -3,7 +3,7 @@ title: Propriété CSS `accent-color`
 short-title: accent-color
 slug: Web/CSS/Reference/Properties/accent-color
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`accent-color`** définit {{Glossary("accent", "la couleur d'accentuation")}} pour les contrôles d'interface utilisateur générés par certains éléments.
@@ -74,8 +74,10 @@ accent-color: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme le mot-clé `auto` ou une seule valeur `<color>`&nbsp;:
+
 - `auto`
-  - : Représente une couleur déterminée par l'agent utilisateur, qui devrait correspondre à la couleur d'accentuation de la plateforme, s'il y en a une.
+  - : Représente une couleur déterminée par l'agent utilisateur, qui doit correspondre à la couleur d'accentuation de la plateforme, s'il y en a une.
 - {{CSSxRef("&lt;color&gt;")}}
   - : Définit la couleur à utiliser en tant que couleur d'accentuation.
 
@@ -88,7 +90,7 @@ Les navigateurs qui prennent en charge `accent-color` l'appliquent actuellement 
 - `{{HTMLElement("input/range", "&lt;input type=\"range\"&gt;")}}`
 - {{HTMLElement("progress")}}
 
-Chaque agent utilisateur possède une couleur d'accentuation, avec des variations pour garantir la lisibilité et le contraste. Cette couleur d'accentuation n'est pas utilisée par tous les contrôles d'interface utilisateur ni dans tous les états de ces contrôles. La propriété `accent-color` n'est appliquée qu'aux contrôles d'interface utilisateur qui utilisent une couleur d'accentuation dans les états où cela est pertinent.
+Chaque agent utilisateur possède une couleur d'accentuation, avec des variations pour garantir la lisibilité et le contraste. Cette couleur d'accentuation n'est pas utilisée par tous les contrôles d'interface utilisateur ni dans tous les états de ces contrôles. La propriété `accent-color` n'est appliquée qu'aux contrôles d'interface utilisateur qui utilisent une couleur d'accentuation dans les états où c'est pertinent.
 
 ## Définition formelle
 

@@ -46,7 +46,7 @@ scroll-timeline: unset;
 
 ## Description
 
-La propriété raccourcie `scroll-timeline` peut être appliquée à un élément conteneur pour définir à la fois les propriétés `scroll-timeline-name` et `scroll-timeline-axis`. Elle est définie sur le conteneur de défilement qui fournit la chronologie. Si le conteneur n'a pas de débordement à faire défiler ou si le débordement est masqué ou coupé, aucune chronologie ne est créée.
+La propriété raccourcie `scroll-timeline` peut être appliquée à un élément conteneur pour définir à la fois les propriétés `scroll-timeline-name` et `scroll-timeline-axis`. Elle est définie sur le conteneur de défilement qui fournit la chronologie. Si le conteneur n'a pas de débordement à faire défiler ou si le débordement est masqué ou coupé, aucune chronologie n'est créée.
 
 La valeur de la propriété {{CSSxRef("scroll-timeline-name")}}, si elle n'est pas définie sur `none`, doit être un {{CSSxRef("&lt;dashed-ident&gt;")}}, ce qui signifie qu'elle doit commencer par `--`. Cela permet d'éviter les conflits de noms avec les mots-clés CSS standard. Le nom peut ensuite être utilisé comme valeur de la propriété {{CSSxRef("animation-timeline")}} d'un élément pour définir l'élément conteneur de défilement qui définit sa [chronologie d'animation](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#progression_du_défilement_dune_chronologie_nommée), pilotant la progression de l'animation au fur et à mesure du défilement.
 
