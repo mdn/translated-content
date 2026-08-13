@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > WebRTC 实际上使用的是 **SRTP**（安全实时传输协议，Secure Real-time Transport Protocol）来确保交换数据的安全性和身份验证。
 
-对于 WebRTC 来说，将延迟降至最低尤为重要，因为面对面的通信需要尽可能低的 {{Glossary("latency", "延迟")}}。从一个用户说话到另一个用户听到之间的时间延迟越大，就越容易出现串音和其他形式的混乱。
+对于 WebRTC 来说，将延迟降至最低尤为重要，因为面对面的通信需要尽可能低的{{Glossary("latency", "延迟")}}。从一个用户说话到另一个用户听到之间的时间延迟越大，就越容易出现串音和其他形式的混乱。
 
 ## RTP 的主要特性
 
@@ -36,7 +36,7 @@ RTP 在 WebRTC 方面的主要优势包括：
 
 RTP 本身并不提供所有功能，因此 WebRTC 也使用了其他协议。RTP 缺少的一些重要功能包括：
 
-- RTP _不_ 保证 **[服务质量](https://zh.wikipedia.org/wiki/%E6%9C%8D%E5%8A%A1%E8%B4%A8%E9%87%8F)**（**QoS**）。
+- RTP *不*保证[**服务质量**](https://zh.wikipedia.org/wiki/服务质量)（**QoS**）。
 - 虽然 RTP 旨在用于延迟敏感的场景，但它本身并不提供任何确保 QoS 的功能。相反，它仅提供必要的信息，以便在协议栈的其他地方实现 QoS。
 - RTP 不处理可能需要的资源分配或预留。
 
@@ -53,9 +53,9 @@ RTP 本身并不提供所有功能，因此 WebRTC 也使用了其他协议。RT
 - {{domxref("RTCRtpTransceiver")}}
   - : `RTCRtpTransceiver` 是一对 RTP 发送器和 RTP 接收器，它们共享一个 SDP `mid` 属性，这意味着它们共享相同的 SDP 媒体 m 行（代表双向 SRTP 流）。这些由 {{domxref("RTCPeerConnection.getTransceivers()")}} 方法返回，每个 `mid` 和收发器一一对应，`mid` 对于每个 `RTCPeerConnection` 是唯一的。
 
-### 利用 RTP 实现"保持"功能
+### 利用 RTP 实现“保持”功能
 
-由于 `RTCPeerConnection` 的流是使用 RTP 和[上述](#rtcpeerconnection_与_rtp)接口实现的，因此你可以利用这种访问权限来调整流的内部机制。其中最简单的做法之一是实现"保持"功能，即通话中的参与者可以点击按钮关闭麦克风，开始向另一个对等端播放音乐，并停止接收传入的音频。
+由于 `RTCPeerConnection` 的流是使用 RTP 和[上述](#rtcpeerconnection_与_rtp)接口实现的，因此你可以利用这种访问权限来调整流的内部机制。其中最简单的做法之一是实现“保持”功能，即通话中的参与者可以点击按钮关闭麦克风，开始向另一个对等端播放音乐，并停止接收传入的音频。
 
 > [!NOTE]
 > 本示例使用了现代 JavaScript 特性，包括[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)和 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 表达式。这极大地简化并提高了处理 WebRTC 方法返回的 promise 的代码的可读性。
