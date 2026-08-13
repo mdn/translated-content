@@ -3,12 +3,12 @@ title: Element：mouseleave 事件
 short-title: mouseleave
 slug: Web/API/Element/mouseleave_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 {{APIRef("UI Events")}}
 
-当定点设备（通常是鼠标）的光标移出某个 {{domxref("Element")}} 时，会在该元素上触发 **`mouseleave`** 事件。
+**`mouseleave`** 事件在定点设备（通常是鼠标）的光标移出 {{domxref("Element")}} 时，会在该元素上触发。
 
 `mouseleave` 与 {{domxref("Element/mouseout_event", "mouseout")}} 相似，但区别在于 `mouseleave` 不会冒泡，而 `mouseout` 会冒泡。这意味着当指针已离开该元素*及其*所有后代时，会触发 `mouseleave`；而由于冒泡，当指针离开该元素*或*离开该元素的某个后代时（即使指针仍在该元素内），也会触发 `mouseout`。除此之外，在同一情形下，leave 与 out 事件会在适当时同时派发。
 
@@ -31,6 +31,20 @@ onmouseleave = (event) => { }
 {{domxref("MouseEvent")}}。继承自 {{domxref("UIEvent")}} 和 {{domxref("Event")}}。
 
 {{InheritanceDiagram("MouseEvent")}}
+
+## 描述
+
+### `mouseleave` 事件的行为
+
+![mouseleave 行为示意图](mouseleave.png)
+
+离开层次结构中的各个元素时，会向每个元素发送一个 `mouseleave` 事件。此处，当指针从文本移到图中最外层 div 之外的区域时，会向层次结构中的四个元素发送四个事件。
+
+### `mouseout` 事件的行为
+
+![mouseout 行为示意图](mouseout.png)
+
+单个 `mouseout` 事件会发送到 DOM 树中最深的元素，然后沿层次结构向上冒泡，直到被处理器取消或到达根元素。
 
 ## 示例
 
