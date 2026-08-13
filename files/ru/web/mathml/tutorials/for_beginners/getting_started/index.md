@@ -2,6 +2,8 @@
 title: Начало работы с MathML
 short-title: Начало работы
 slug: Web/MathML/Tutorials/For_beginners/Getting_started
+l10n:
+  sourceCommit: 88cbf0bee52ed202019e6bf0f59054269d351c05
 ---
 
 {{NextMenu("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners")}}
