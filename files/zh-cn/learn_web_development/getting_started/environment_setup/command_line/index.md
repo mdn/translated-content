@@ -392,7 +392,7 @@ Stdin is read if it is piped to Prettier and no files are given.
 
 > [!NOTE]
 > 如果你尚未在本地安装 Prettier，那么运行 `npx prettier` 将会一次性下载并运行 Prettier 的最新版本——_仅限该命令_。
-> 
+>
 > 虽然这听起来很不错，但 Prettier 的新版本可能会对输出结果进行微调。建议将其本地安装，这样在准备更换版本之前，用于格式化的 Prettier 版本将保持不变。
 
 ### 尝试 Prettier
