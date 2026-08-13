@@ -2,6 +2,8 @@
 title: Дроби и корни в MathML
 short-title: Дроби и корни
 slug: Web/MathML/Tutorials/For_beginners/Fractions_and_roots
+l10n:
+  sourceCommit: 118666e6ecf40f2ef4f152691c160023eab8a014
 ---
 
 {{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners")}}
