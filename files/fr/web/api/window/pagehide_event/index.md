@@ -3,7 +3,7 @@ title: "Window : évènement pagehide"
 short-title: pagehide
 slug: Web/API/Window/pagehide_event
 l10n:
-  sourceCommit: 2ccbd062264d0a2a34f185a3386cb272f42c50f5
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("HTML DOM")}}
@@ -28,11 +28,6 @@ Un objet {{DOMxRef("PageTransitionEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("PageTransitionEvent")}}
 
-## Propriétés de l'évènement
-
-- {{DOMxRef("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
-  - : Indique si le document est chargé depuis un cache.
-
 ## Alias des gestionnaires d'évènements
 
 En plus de l'interface `Window`, la propriété du gestionnaire d'évènement `onpagehide` est également disponible sur les cibles suivantes&nbsp;:
@@ -50,9 +45,9 @@ et {{DOMxRef("Window.beforeunload_event", "beforeunload")}}, cet évènement n'e
 2. L'utilisateur·ice passe ensuite à une autre application.
 3. Plus tard, l'utilisateur·ice ferme le navigateur depuis le gestionnaire d'applications.
 
-Cependant, contrairement aux évènements `unload` et `beforeunload`, cet évènement est compatible avec le [cache avant/arrière <sup>(angl.)</sup>](https://web.dev/articles/bfcache) (bfcache), donc ajouter un écouteur à cet évènement n'empêchera pas la page d'être incluse dans le bfcache.
+Cependant, contrairement aux évènements `unload` et `beforeunload`, cet évènement est compatible avec le [cache avant/arrière <sup>(angl.)</sup>](https://web.dev/articles/bfcache) (bfcache), donc ajouter un écouteur à cet évènement n'empêche pas la page d'être incluse dans le bfcache.
 
-Le meilleur évènement à utiliser pour signaler la fin de la session d'un utilisateur est l'évènement {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}. Dans les navigateurs qui ne prennent pas en charge `visibilitychange`, l'évènement `pagehide` est la meilleure alternative.
+Le meilleur évènement à utiliser pour signaler la fin de la session d'un·e utilisateur·ice est l'évènement {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}. Dans les navigateurs qui ne prennent pas en charge `visibilitychange`, l'évènement `pagehide` est la meilleure alternative.
 
 Si vous essayez spécifiquement de détecter les évènements de déchargement de page, l'évènement `pagehide` est la meilleure option.
 
@@ -93,4 +88,4 @@ window.onpagehide = (event) => {
 - L'évènement {{DOMxRef("Window.pageshow_event", "pageshow")}}
 - [L'API Page Lifecycle <sup>(angl.)</sup>](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state) fournit des recommandations sur les meilleures pratiques pour gérer le comportement du cycle de vie des pages dans vos applications web.
 - [PageLifecycle.js <sup>(angl.)</sup>](https://github.com/GoogleChromeLabs/page-lifecycle)&nbsp;: une bibliothèque JavaScript qui gère les incohérences entre navigateurs dans le comportement du cycle de vie des pages.
-- [Back/forward cache <sup>(angl.)</sup>](https://web.dev/articles/bfcache) explique ce qu'est le cache avant/arrière et ses implications pour divers événements du cycle de vie des pages.
+- [Back/forward cache <sup>(angl.)</sup>](https://web.dev/articles/bfcache) explique ce qu'est le cache avant/arrière et ses implications pour divers évènements du cycle de vie des pages.

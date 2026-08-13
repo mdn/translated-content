@@ -3,7 +3,7 @@ title: Propriété CSS `resize`
 short-title: resize
 slug: Web/CSS/Reference/Properties/resize
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`resize`** définit si un élément est redimensionnable, et si oui, dans quelles directions.
@@ -72,9 +72,9 @@ resize: revert-layer;
 resize: unset;
 ```
 
-La propriété `resize` peut être définie avec l'un des mots-clés suivants.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `none`
   - : L'élément n'offre aucune méthode à l'utilisateur·ice pour que celui-ci le redimensionne.
@@ -130,7 +130,7 @@ Vous pouvez utiliser la propriété `resize` pour rendre n'importe quel élémen
 ```html
 <div class="redimensionnable">
   <p class="redimensionnable">
-    Ce paragraphe peut être redimensionné car la propriété CSS `resize` vaut
+    Ce paragraphe peut être redimensionné, car la propriété CSS `resize` vaut
     `both` sur cet élément.
   </p>
 </div>

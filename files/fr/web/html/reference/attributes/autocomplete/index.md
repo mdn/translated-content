@@ -3,7 +3,7 @@ title: "Attribut HTML : `autocomplete`"
 short-title: autocomplete
 slug: Web/HTML/Reference/Attributes/autocomplete
 l10n:
-  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
+  sourceCommit: d4233d098f7c9c375716542aab8637122bb10edf
 ---
 
 L'attribut `autocomplete` permet aux développeur·euse·s web de définir si, et dans quelle mesure, {{Glossary("user agent", "l'agent utilisateur")}} est autorisé à fournir une aide automatisée pour remplir les champs d'un formulaire, ainsi que d'indiquer au navigateur le type d'information attendu dans le champ.
@@ -289,9 +289,9 @@ Aux États-Unis, une adresse s'écrit généralement comme suit&nbsp;:
 432 Anywhere St
 Exampleville CA 95555
 
-Dans ce cas, la portion la moins précise est le code "CA" (qui correspond au code postal pour l'état de Californie) et on a donc `address-level1` qui correspond à ce niveau (ici l'état et plus particulièrement&nbsp;: "CA").
+Dans ce cas, la portion la moins précise est le code «&nbsp;CA&nbsp;» (qui correspond au code postal pour l'état de Californie) et on a donc `address-level1` qui correspond à ce niveau (ici l'état et plus particulièrement&nbsp;: «&nbsp;CA&nbsp;»).
 
-La deuxième partie de l'adresse la moins précise est le nom de la ville et c'est donc cette information (ici "Exampleville") qui est utilisée pour `address-level2`.
+La deuxième partie de l'adresse la moins précise est le nom de la ville et c'est donc cette information (ici «&nbsp;Exampleville&nbsp;») qui est utilisée pour `address-level2`.
 
 Les niveaux 3 et 4 ne sont pas utilisés aux États-Unis.
 
@@ -306,11 +306,11 @@ TN99 8ZZ
 
 Les niveaux d'adresse sont les suivants&nbsp;:
 
-- `address-level1`&nbsp;: La ville postale — "Winchelsea" dans ce cas.
-- `address-line2`&nbsp;: La localité — "Upper-Wapping" dans ce cas.
-- `address-line1`&nbsp;: Les détails de la maison/rue — "103 Frogmarch Street"
+- `address-level1`&nbsp;: La ville postale — «&nbsp;Winchelsea&nbsp;» dans ce cas.
+- `address-line2`&nbsp;: La localité — «&nbsp;Upper-Wapping&nbsp;» dans ce cas.
+- `address-line1`&nbsp;: Les détails de la maison/rue — «&nbsp;103 Frogmarch Street&nbsp;»
 
-Le code postal est séparé. Notez que vous pouvez en fait utiliser uniquement le code postal et `address-line1` pour réussir à distribuer du courrier au Royaume-Uni, ils devraient donc être les seuls éléments obligatoires, mais les gens ont généralement tendance à fournir plus de détails.
+Le code postal est séparé. Notez que vous pouvez en fait utiliser uniquement le code postal et `address-line1` pour réussir à distribuer du courrier au Royaume-Uni, ils doivent donc être les seuls éléments obligatoires, mais les gens ont généralement tendance à fournir plus de détails.
 
 #### Chine
 

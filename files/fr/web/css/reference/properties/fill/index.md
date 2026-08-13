@@ -3,7 +3,7 @@ title: Propriété CSS `fill`
 short-title: fill
 slug: Web/CSS/Reference/Properties/fill
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`fill`** définit comment le contenu textuel SVG et l'intérieur des formes SVG sont remplis ou peints. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("fill")}} de l'élément.
@@ -45,6 +45,8 @@ fill: unset;
 
 ### Valeurs
 
+La propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `none`
   - : Aucun `fill` n'est appliqué&nbsp;; les zones à l'intérieur du contour, s'il y en a, sont transparentes.
 
@@ -58,7 +60,7 @@ fill: unset;
   - : La couleur du remplissage, comme toute valeur CSS {{CSSxRef("color_value", "&lt;color>")}} valide.
 
 - `<url>`
-  - : Une référence URL vers un élément serveur de peinture SVG, tel qu'un {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}} ou {{SVGElement("pattern")}}. La ressource référencée peut être suivie d'une valeur `<color>` ou `none`, qui sera utilisée en repli si le serveur de peinture référencé ne se résout pas.
+  - : Une référence URL vers un élément serveur de peinture SVG, tel qu'un {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}} ou {{SVGElement("pattern")}}. La ressource référencée peut être suivie d'une valeur `<color>` ou `none`, qui est utilisée en repli si le serveur de peinture référencé ne se résout pas.
 
 ## Definition formelle
 
@@ -183,7 +185,7 @@ circle {
 
 {{EmbedLiveSample("Utiliser les valeurs de mot-clé pour le remplissage", 300, 170)}}
 
-Remarquez que le premier chemin a un fond transparent car le `fill` est `none`, ce qui remplace la valeur par défaut `fill` de `black`. Les cercles sont remplis avec la couleur du contour. Si vous changez la valeur en `context-fill`, les cercles seront transparents, `lightgreen` et `lightblue` au lieu de `red`, `green` et `blue`.
+Remarquez que le premier chemin a un fond transparent, car le `fill` est `none`, ce qui remplace la valeur par défaut `fill` de `black`. Les cercles sont remplis avec la couleur du contour. Si vous changez la valeur en `context-fill`, les cercles sont transparents, `lightgreen` et `lightblue` au lieu de `red`, `green` et `blue`.
 
 ### Remplissages et valeurs de repli
 

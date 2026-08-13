@@ -1,13 +1,14 @@
 ---
-title: FileReader.abort()
+title: "FileReader: abort() メソッド"
+short-title: abort()
 slug: Web/API/FileReader/abort
 l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+  sourceCommit: e43bfd9b4a6c363a4ba7ef6ffa64c09b38fd111b
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-**`abort`** メソッドは、読み取り操作を中止します。戻る時に、 {{domxref("FileReader.readyState","readyState")}} が `DONE` になります。
+**`abort()`** は {{domxref("FileReader")}} インターフェイスのメソッドで、読み取り操作を中止します。戻る時に、 {{domxref("FileReader.readyState","readyState")}} が `DONE` になります。
 
 ## 構文
 
