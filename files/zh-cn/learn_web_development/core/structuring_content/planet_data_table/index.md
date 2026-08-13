@@ -147,6 +147,11 @@ l10n:
 
 {{embedlivesample("planet-data-table", "100%", 650)}}
 
+<details>
+<summary>点击这里查看答案</summary>
+
+最终完成的 HTML 代码应类似如下：
+
 ```html live-sample___planet-data-table
 <h1>行星数据表</h1>
 
