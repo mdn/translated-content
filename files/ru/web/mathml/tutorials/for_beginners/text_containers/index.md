@@ -2,6 +2,8 @@
 title: Текстовые контейнеры MathML
 short-title: Текстовые контейнеры
 slug: Web/MathML/Tutorials/For_beginners/Text_containers
+l10n:
+  sourceCommit: 0a50335c4ff7ea79b5270672679c57f1ef562537
 ---
 
 {{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Getting_started", "Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners")}}
