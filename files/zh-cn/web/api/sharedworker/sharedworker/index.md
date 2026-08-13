@@ -56,7 +56,7 @@ new SharedWorker(url, options)
             此选项在第一方和第三方上下文中均受支持，且为第三方上下文中的默认值。
 
 > [!WARNING]
-> 一旦具有特定 URL 和 `name` 的共享 worker 正在运行，`type`、`credentials` 和 `extendedLifetime` 选项即被固定。若对同一脚本和 `name` 再构造新的共享 worker，并指定这些选项的不同值，将会出错。若同一脚本需要不同选项，请使用不同的 `name` 值启动两个 worker。
+> 一旦具有特定 URL 和 `name` 的共享 worker 开始运行，`type`、`credentials` 和 `extendedLifetime` 选项即被固定。若对同一脚本和 `name` 再构造新的共享 worker，并指定这些选项的不同值，将会出错。若同一脚本需要不同选项，请使用不同的 `name` 值启动两个 worker。
 
 ### 异常
 
@@ -73,8 +73,7 @@ new SharedWorker(url, options)
 
 **`SharedWorker()`** 构造函数创建一个 {{domxref("SharedWorker")}} 对象，用于执行指定 URL 处的经典脚本或模块。
 
-该脚本必须与关联文档[同源](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)，但其自身可以导入跨源的脚本或模块（若 CORS 及其他限制允许）。
-若需要跨源 worker，用户必须通过中间的同源 worker 或 blob 加载它。
+该脚本必须与关联文档[同源](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)，但其自身可以导入跨源的脚本或模块（若 CORS 及其他限制允许）。若需要跨源 worker，用户必须通过中间的同源 worker 或 blob 加载它。
 
 更多信息请参见 `Worker()` 构造函数中的[描述](/zh-CN/docs/Web/API/Worker/Worker#描述)。
 
