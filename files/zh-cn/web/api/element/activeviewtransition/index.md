@@ -1,5 +1,5 @@
 ---
-title: "Element：activeViewTransition 属性"
+title: Element：activeViewTransition 属性
 short-title: activeViewTransition
 slug: Web/API/Element/activeViewTransition
 l10n:
