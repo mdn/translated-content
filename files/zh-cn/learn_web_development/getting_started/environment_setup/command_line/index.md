@@ -474,6 +474,6 @@ Stdin is read if it is piped to Prettier and no files are given.
 
 ## 总结
 
-至此，我们结束了对终端/命令行的入门介绍，也结束了“环境配置”模块的学习。接下来，我们将引导你开始构建你的第一个简单网站，让你对网页开发有一个初步的了解。
+至此，我们结束了对终端/命令行的入门介绍，也结束了“配置环境”模块的学习。接下来，我们将引导你开始构建你的第一个简单网站，让你对网页开发有一个初步的了解。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}
