@@ -29,7 +29,7 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
     - `gl.UNSIGNED_SHORT`：无符号 16 位整数，取值范围为 \[0, 65535]
     - `gl.FLOAT`：32 位 IEEE 浮点数
 
-    使用 {{domxref("WebGL2RenderingContext", "WebGL 2 上下文", "", 1)}} 时，还可使用以下值：
+    使用 {{domxref("WebGL2RenderingContext", "WebGL 2 上下文", "", 1)}}时，还可使用以下值：
     - `gl.HALF_FLOAT`：16 位 IEEE 浮点数
     - `gl.INT`：32 位有符号二进制整数
     - `gl.UNSIGNED_INT`：32 位无符号二进制整数
