@@ -44,7 +44,7 @@ regexp[Symbol.split](str, limit)
 
 ## 描述
 
-此方法用于在自定义 `RegExp` 子类中自定义 `split()` 的行为。当 `RegExp` 作为分隔符传入时，{{jsxref("String.prototype.split()")}} 会在内部调用此方法。例如，下面的两个示例返回相同的结果。
+此方法用于在 `RegExp` 子类中自定义 `split()` 的行为。当 `RegExp` 作为分隔符传入时，{{jsxref("String.prototype.split()")}} 会在内部调用此方法。例如，下面的两个示例返回相同的结果。
 
 ```js
 "a-b-c".split(/-/);
@@ -56,7 +56,7 @@ regexp[Symbol.split](str, limit)
 
 如果目标字符串是空字符串，且正则表达式可以匹配空字符串（例如 `/a?/`），则返回空数组。否则，如果正则表达式无法匹配空字符串，则返回 `[""]`。
 
-正则表达式的 [`exec()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) 方法会被重复调用，每次调用都会推进 `lastIndex`，直到到达字符串末尾。如果当前匹配为空字符串，或者正则表达式（由于启用了粘性）在当前位置无法匹配，那么 `lastIndex` 仍会被推进——如果正则是[支持 Unicode](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)的，则推进一个 Unicode 码位；否则，推进一个 UTF-16 码元。
+正则表达式的 [`exec()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) 方法会被重复调用，每次调用都会推进 `lastIndex`，直到到达字符串末尾。如果当前匹配为空字符串，或者正则表达式（由于启用了粘性）在当前位置无法匹配，那么 `lastIndex` 仍会被推进——如果正则是[支持 Unicode](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式) 的，则推进一个 Unicode 码位；否则，推进一个 UTF-16 码元。
 
 ```js
 console.log("😄".split(/(?:)/g)); // [ '\ud83d', '\ude04' ]

@@ -40,7 +40,7 @@ regexp[Symbol.matchAll](str)
 
 ## 描述
 
-本方法用于在 `RegExp` 子类中自定义 `matchAll()` 的行为。它在内部被{{jsxref("String.prototype.matchAll()")}}调用。例如，以下两个示例返回相同的结果。
+本方法用于在 `RegExp` 子类中自定义 `matchAll()` 的行为。它在内部被 {{jsxref("String.prototype.matchAll()")}} 调用。例如，以下两个示例返回相同的结果。
 
 ```js
 "abc".matchAll(/a/);
