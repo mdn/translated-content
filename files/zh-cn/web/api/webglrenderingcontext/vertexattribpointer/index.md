@@ -56,7 +56,7 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
 - 若 `stride` 或 `offset` 为负数，则抛出 `gl.INVALID_VALUE` 错误。
 - 若 `stride` 和 `offset` 不是数据类型大小的倍数，则抛出 `gl.INVALID_OPERATION` 错误。
 - 若没有 WebGLBuffer 绑定到 ARRAY_BUFFER 目标，则抛出 `gl.INVALID_OPERATION` 错误。
-- 使用 {{domxref("WebGL2RenderingContext", "WebGL 2 上下文", "", 1)}} 时，若此顶点属性在顶点着色器中被定义为整数（例如 `uvec4` 或 `ivec4`，而不是 `vec4`），则抛出 `gl.INVALID_OPERATION` 错误。
+- 使用 {{domxref("WebGL2RenderingContext", "WebGL 2 上下文", "", 1)}}时，若此顶点属性在顶点着色器中被定义为整数（例如 `uvec4` 或 `ivec4`，而不是 `vec4`），则抛出 `gl.INVALID_OPERATION` 错误。
 
 ## 描述
 
