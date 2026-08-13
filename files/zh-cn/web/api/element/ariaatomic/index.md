@@ -1,5 +1,5 @@
 ---
-title: "Element：ariaAtomic 属性"
+title: Element：ariaAtomic 属性
 short-title: ariaAtomic
 slug: Web/API/Element/ariaAtomic
 l10n:
