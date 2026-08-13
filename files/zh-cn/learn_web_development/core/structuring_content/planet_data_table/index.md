@@ -152,7 +152,10 @@ l10n:
 
 <table>
   <caption>
-   关于太阳系行星的数据（行星资料摘自<a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">美国宇航局行星数据表——公制</a>）。
+    关于太阳系行星的数据（行星资料摘自<a
+      href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+      >美国宇航局行星数据表——公制</a
+    >）。
   </caption>
   <colgroup>
     <col span="2" />
@@ -287,7 +290,10 @@ l10n:
       <td>-225</td>
       <td>5</td>
       <td>
-        2006 年被降级为矮行星，但<a href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">仍存在争议</a>。
+        2006 年被降级为矮行星，但<a
+          href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/"
+          >仍存在争议</a
+        >。
       </td>
     </tr>
   </tbody>
