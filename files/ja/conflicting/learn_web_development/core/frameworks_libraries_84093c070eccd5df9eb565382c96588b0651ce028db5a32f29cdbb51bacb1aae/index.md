@@ -1,6 +1,7 @@
 ---
 title: Vue resources
-slug: Learn_web_development/Core/Frameworks_libraries/Vue_resources
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_84093c070eccd5df9eb565382c96588b0651ce028db5a32f29cdbb51bacb1aae
+original_slug: Learn_web_development/Core/Frameworks_libraries/Vue_resources
 l10n:
   sourceCommit: 5340aace9b48dc6f885fca3a90d03e7637cd0cb0
 ---

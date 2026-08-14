@@ -1,6 +1,7 @@
 ---
 title: item コンポーネントの作成
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_item_component
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries
+original_slug: Learn_web_development/Core/Frameworks_libraries/Angular_item_component
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

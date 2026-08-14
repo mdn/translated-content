@@ -1,6 +1,7 @@
 ---
 title: Angular アプリのスタイル設定
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_styling
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_0f298bc9e733c23d958473605688f2dcc18e3bdbdf3e59ccf1899dc9a66ed6c1
+original_slug: Learn_web_development/Core/Frameworks_libraries/Angular_styling
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

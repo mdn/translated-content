@@ -1,6 +1,7 @@
 ---
 title: Angular を始める
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_cd26ea9cc456ff67b0b3acc6112f6bb614eb3c0350a56355169ce7a390a2ee95
+original_slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
 l10n:
   sourceCommit: c86c36ca478c7da904c22531e91fdcc2d2a6c690
 ---

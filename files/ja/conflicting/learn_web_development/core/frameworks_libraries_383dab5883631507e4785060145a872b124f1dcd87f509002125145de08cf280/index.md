@@ -1,6 +1,7 @@
 ---
 title: Angular アプリケーションのビルドとその他のリソース
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_383dab5883631507e4785060145a872b124f1dcd87f509002125145de08cf280
+original_slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
