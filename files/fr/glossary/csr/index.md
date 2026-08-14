@@ -34,7 +34,7 @@ Les avantages du RCC incluent&nbsp;:
 
 Le <abbr title="Rendu Côté Serveur">RCS</abbr> et le RCC ont chacun leurs compromis de performance, et il est possible de combiner les deux pour profiter des avantages de chaque technique. Par exemple, le serveur peut générer un squelette de page avec des espaces vides, et le client peut ensuite récupérer des données supplémentaires et mettre à jour la page selon les besoins.
 
-Notez que les {{Glossary("SPA", "applications monopage (APU)")}} ne nécessitent pas forcément le RCC. Les frameworks modernes comme [React](/fr/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started), [Vue](/fr/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started) et [Svelte](/fr/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started) permettent de créer des <abbr title="Applications à Page Unique">APU</abbr> avec des capacités RCS.
+Notez que les {{Glossary("SPA", "applications monopage (APU)")}} ne nécessitent pas forcément le RCC. Les frameworks modernes comme [React](/fr/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started), [Vue](/fr/docs/Learn_web_development/Core/Frameworks_libraries) et [Svelte](/fr/docs/Learn_web_development/Core/Frameworks_libraries) permettent de créer des <abbr title="Applications à Page Unique">APU</abbr> avec des capacités RCS.
 
 ## Voir aussi
 

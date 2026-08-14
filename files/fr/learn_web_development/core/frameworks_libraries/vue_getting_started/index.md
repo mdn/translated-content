@@ -3,7 +3,7 @@ title: Prise en main de Vue
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_resources","Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 > [!NOTE]
 > Cette section de MDN n'est plus maintenue et sera supprimée du site Web dans 2 mois (d'ici le 20 août 2026). Le contenu sera archivé dans le [MDN Museum <sup>(angl.)</sup>](https://github.com/mdn/museum). Voir [cette discussion <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions/827) pour plus d'informations.
@@ -276,4 +276,4 @@ With a basic introduction out of the way, we'll now go further and build up our 
 
 In the next article we'll build our first custom component, and look at some important concepts such as passing props into it and saving its data state.
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_resources","Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

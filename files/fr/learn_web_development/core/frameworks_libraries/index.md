@@ -72,17 +72,17 @@ Votre code n'en sera que de meilleure qualité et plus professionnel, et vous se
 >
 > Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version finale de l'exemple de code d'application Ember dans le Ember app code in the [ember-todomvc-tutorial repository <sup>(angl.)</sup>](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). Pour une version exécutable en direct, voir <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (cela inclut également quelques fonctionnalités supplémentaires non couvertes dans le tutoriel).
 
-- [Premiers pas avec Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+- [Premiers pas avec Ember](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Dans notre premier article sur Ember, nous verrons comment fonctionne Ember et ce à quoi il sert, installerons la chaîne d'outils d'Ember localement, créerons un exemple d'application, puis effectuerons une configuration initiale pour la préparer au développement.
-- [Structure et composant de l'application Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+- [Structure et composant de l'application Ember](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Dans cet article, nous commencerons à planifier la structure de notre application TodoMVC Ember, à ajouter du code HTML correspondant, puis nous diviserons cette structure HTML en composants.
-- [Interactivité Ember&nbsp;: évènements, classes et états](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+- [Interactivité Ember&nbsp;: évènements, classes et états](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : À ce stade, nous allons commencer à ajouter de l'interactivité à notre application, offrant la possibilité d'ajouter et d'afficher de nouveaux éléments à notre liste. En cours de route, nous examinerons l'utilisation d'évènements dans Ember, la création de classes de composants pour contenir du code JavaScript pour contrôler les fonctionnalités interactives et la configuration d'un service pour suivre l'état des données de notre application.
-- [Interactivité Ember&nbsp;: fonctionnalité du footer, rendu conditionné](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+- [Interactivité Ember&nbsp;: fonctionnalité du footer, rendu conditionné](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Il est maintenant temps de commencer à aborder la fonctionnalité de footer dans notre application. Ici, nous allons mettre à jour le compteur de tâches pour afficher le nombre correct de tâches à compléter et appliquer correctement le style aux tâches terminées (c'est-à-dire celles dont la case a été cochée). Nous allons également câbler notre bouton «&nbsp;Effacer terminé&nbsp;». En cours de route, nous découvrirons comment utiliser le rendu conditionné dans nos modèles.
-- [Routage dans Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+- [Routage dans Ember](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Dans cet article, nous apprendrons les bases du routage avec Ember. Nous l'utiliserons pour fournir une URL unique pour chacune des trois vues à faire&nbsp;: «&nbsp;Tous&nbsp;», «&nbsp;Actif&nbsp;», et «&nbsp;Terminé&nbsp;».
-- [Ressources sur Ember et dépannage](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+- [Ressources sur Ember et dépannage](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Notre dernier article sur Ember vous fournit une liste de ressources que vous pouvez utiliser pour aller plus loin dans votre apprentissage, ainsi que des dépannages utiles et d'autres informations.
 
 ### Tutoriels sur Vue
@@ -92,23 +92,23 @@ Votre code n'en sera que de meilleure qualité et plus professionnel, et vous se
 >
 > Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version finale de l'exemple de code d'application Vue dans notre [dépôt todo-vue <sup>(angl.)</sup>](https://github.com/mdn/todo-vue). Pour une version exécutable en direct, voir <https://mdn.github.io/todo-vue/>.
 
-- [Premiers pas avec Vue](/fr/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
+- [Premiers pas avec Vue](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Maintenant, introduisons Vue, le troisième de nos frameworks. Dans cet article, nous allons examiner un peu le contexte de Vue, apprendre à l'installer et créer un nouveau projet, étudier la structure de haut niveau de l'ensemble du projet et d'un composant individuel, voir comment exécuter le projet localement, et le préparer à commencer à construire notre exemple.
-- [Création de notre premier composant Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+- [Création de notre premier composant Vue](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Il est maintenant temps de plonger plus profondément dans Vue et de créer notre propre composant personnalisé (nous commencerons par créer un composant pour représenter chaque élément de la liste de tâches). En cours de route, nous découvrirons quelques concepts importants tels que l'appel de composants à l'intérieur d'autres composants, leur transmission de données via des accessoires et l'enregistrement de l'état des données.
-- [Rendu d'une liste de composants Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+- [Rendu d'une liste de composants Vue](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : À ce stade, nous avons un composant entièrement fonctionnel&nbsp;; nous sommes maintenant prêt·e·s à ajouter plusieurs composants `ToDoItem` à notre application. Dans cet article, nous examinerons l'ajout d'un ensemble de données d'élément todo à notre composant `App.vue` que nous allons ensuite parcourir et afficher à l'intérieur des composants `ToDoItem` à l'aide de la directive `v-for`.
-- [Ajout d'un nouveau formulaire todo&nbsp;: évènements, méthodes, et modèles Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+- [Ajout d'un nouveau formulaire todo&nbsp;: évènements, méthodes, et modèles Vue](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Nous avons maintenant des exemples de données en place et une boucle qui prend chaque bit de données et le rend dans un `ToDoItem` dans notre application. Ce dont nous avons vraiment besoin ensuite, c'est la possibilité de permettre à nos utilisateur·ice·s de saisir leurs propres éléments à faire dans l'application, et pour cela, nous aurons besoin d'un texte `<input>`, un évènement à déclencher lorsque les données sont soumises, une méthode de déclenchement lors de la soumission pour ajouter les données et relancer la liste, et un modèle pour contrôler les données. C'est ce que nous allons couvrir dans cet article.
-- [Styliser les composants Vue avec CSS](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+- [Styliser les composants Vue avec CSS](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Le moment est enfin venu de rendre notre application un peu plus jolie. Dans cet article, nous explorerons les différentes façons de styliser les composants Vue avec CSS.
-- [Utilisation des propriétés calculées de Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+- [Utilisation des propriétés calculées de Vue](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Dans cet article, nous allons ajouter un compteur qui affiche le nombre d'éléments à faire terminés, en utilisant une fonctionnalité de Vue appelée propriétés calculées. Celles-ci fonctionnent de la même manière que les méthodes, mais ne sont réexécutées que lorsque l'une de leurs dépendances change.
-- [Rendu conditionnel Vue&nbsp;: éditer les todos existants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+- [Rendu conditionnel Vue&nbsp;: éditer les todos existants](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Il est maintenant temps d'ajouter l'un des éléments majeurs de la fonctionnalité qui nous manque toujours&nbsp;: la possibilité de modifier les éléments todos existants. Pour ce faire, nous profiterons des capacités de rendu conditionnel de Vue — à savoir `v-if` et `v-else` — pour nous permettre de basculer entre la vue d'élément todo existante et une vue d'édition où vous pouvez mettre à jour les étiquettes d'élément todo. Nous examinerons également l'ajout de fonctionnalités pour supprimer les éléments todo.
-- [Gestion de la mise au point avec les références de Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+- [Gestion de la mise au point avec les références de Vue](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Nous en avons presque terminé avec Vue. La dernière fonctionnalité à implanter est la gestion de la mise au point, ou en d'autres termes, la façon dont nous pouvons améliorer l'accessibilité du clavier de notre application. Nous allons examiner l'utilisation des références de Vue pour gérer cela, une fonctionnalité avancée qui vous permet d'avoir un accès direct aux nœuds DOM sous-jacents sous le DOM virtuel, ou un accès direct d'un composant à la structure DOM interne d'un composant enfant.
-- [Ressources Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+- [Ressources Vue](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Nous allons maintenant terminer notre étude de Vue en vous donnant une liste de ressources que vous pouvez utiliser pour aller plus loin dans votre apprentissage, ainsi que d'autres conseils utiles.
 
 ### Tutoriels sur Svelte
@@ -118,21 +118,21 @@ Votre code n'en sera que de meilleure qualité et plus professionnel, et vous se
 >
 > Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version terminée de l'exemple eu code de l'application Svelte (tel qu'il est après chaque chapitre) dans le dépôt [mdn-svelte-tutorial <sup>(angl.)</sup>](https://github.com/opensas/mdn-svelte-tutorial). Pour une version exécutable en direct, voir <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 
-- [Premiers pas avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+- [Premiers pas avec Svelte](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Dans cet article, nous vous proposerons une brève introduction au framework Svelte. Nous verrons comment Svelte fonctionne et ce qui le rend si différent des autres frameworks et outils que nous avons vus jusqu'à présent. Ensuite, nous apprendrons à mettre en place notre environnement de développement, créerons une application démonstrative, appréhenderons la structure du projet et nous verrons comment la mettre en œuvre localement puis la compiler pour la mettre en production.
-- [Commencer notre application todolist avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+- [Commencer notre application todolist avec Svelte](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Maintenant que nous avons compris les bases du fonctionnement de Svelte, nous pouvons commencer à construire l'application démonstrative&nbsp;: une liste de tâches. Dans cet article, nous verrons d'abord les fonctionnalités attendues dans notre application, puis nous créerons un composant Todos.svelte et mettrons en place un HTML statique et du CSS, prêts pour commencer le développement des fonctionnalités de notre application de liste de tâches avec laquelle nous continuerons dans les articles suivants.
-- [Comportements dynamiques dans Svelte&nbsp;: travailler avec les variables et les propriétés](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+- [Comportements dynamiques dans Svelte&nbsp;: travailler avec les variables et les propriétés](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Maintenant que nous avons HTML et notre CSS, nous pouvons commencer le développement des fonctionnalités attendues pour notre application de liste de tâches Svelte. Dans cet article, nous utiliserons des variables et propriétés pour rendre notre application dynamique, nous permettant d'ajouter et de supprimer des tâches, de les marquer comme terminées et de les filtrer par état.
-- [Diviser notre application Svelte en composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+- [Diviser notre application Svelte en composants](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : L'objectif principal de cet article est de voir comment nous pouvons diviser notre application en composants gérables et partager l'information entre eux. Nous décomposerons notre application puis y ajouterons plus de fonctionnalités pour permettre aux utilisateur·ice·s de modifier des composants existants.
-- [Svelte avancé&nbsp;: réactivité, cycle de vie et accessibilité](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+- [Svelte avancé&nbsp;: réactivité, cycle de vie et accessibilité](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Dans cet article, nous ajouterons les dernières fonctionnalités de l'application et nous pousserons la décomposition de notre application encore plus loin. Nous apprendrons comment résoudre des problèmes de réactivité liés à la mise à jour d'objets et de tableaux. Pour éviter les erreurs communes, nous devrons explorer plus profondément le système de réactivité de Svelte. Nous verrons aussi comment résoudre certains problèmes de mise au point pour l'accessibilité et plus encore.
-- [Travailler avec le stockage de Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+- [Travailler avec le stockage de Svelte](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Dans cet article, nous vous montrerons une autre manière de gérer les états avec Svelte&nbsp;: les stockages Stores. Les Stores sont des répertoires de données globaux qui contiennent des valeurs. Les composants peuvent s'abonner aux stockages et recevoir des notifications lorsque leurs valeurs changent.
-- [Support de TypeScript avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+- [Support de TypeScript avec Svelte](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Nous allons maintenant apprendre à utiliser TypeScript dans nos applications Svelte. D'abord, nous apprendrons ce qu'est TypeScript et quels bénéfices il peut nous apporter, puis nous verrons ensemble comment configurer notre projet pour travailler avec des fichiers TypeScript. Enfin, nous parcourrons notre application pour voir ce que nous pouvons y changer pour tirer pleinement parti des fonctionnalités de TypeScript.
-- [Déploiement et étapes suivantes](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+- [Déploiement et étapes suivantes](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Dans ce dernier article, nous verrons comment déployer votre application et la mettre en ligne et nous vous partagerons quelques-unes des ressources auxquelles vous devriez jeter un œil pour poursuivre votre apprentissage de Svelte.
 
 ### Tutoriels sur Angular
@@ -140,17 +140,17 @@ Votre code n'en sera que de meilleure qualité et plus professionnel, et vous se
 > [!NOTE]
 > Les tutoriels sur Angular ont été essayés pour la dernière fois en avril 2021, avec Angular CLI (NG) 11.2.5.
 
-- [Premiers pas avec Angular](/fr/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)
+- [Premiers pas avec Angular](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Dans cet article, nous examinons ce que propose Angular, installons les prérequis et mettons en place une application d'exemple, puis nous regardons l'architecture de base d'Angular.
-- [Début de notre application todo list Angular](/fr/docs/Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning)
+- [Début de notre application todo list Angular](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : À ce stade, nous sommes prêt·e·s à commencer à créer notre application de liste de tâches avec Angular. L'application finale affichera une liste de tâches et inclura des fonctionnalités d'édition, de suppression et d'ajout. Dans cet article, vous découvrirez la structure de votre application et apprendrez à afficher une liste de tâches de base.
-- [Mettre en forme notre application Angular](/fr/docs/Learn_web_development/Core/Frameworks_libraries/Angular_styling)
+- [Mettre en forme notre application Angular](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Maintenant que nous avons mis en place la structure de base de notre application et commencé à afficher quelque chose d'utile, changeons de sujet et consacrons un article à la façon dont Angular gère la mise en forme des applications.
-- [Créer un composant d'élément](/fr/docs/Learn_web_development/Core/Frameworks_libraries/Angular_item_component)
+- [Créer un composant d'élément](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Les composants vous permettent d'organiser votre application. Cet article vous guide dans la création d'un composant pour gérer les éléments individuels de la liste, et l'ajout des fonctionnalités de coche, d'édition et de suppression. Le modèle d'évènements d'Angular est abordé ici.
-- [Filtrer nos éléments de liste de tâches](/fr/docs/Learn_web_development/Core/Frameworks_libraries/Angular_filtering)
+- [Filtrer nos éléments de liste de tâches](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Passons maintenant à l'ajout de fonctionnalités permettant aux utilisateur·ice·s de filtrer leurs éléments de liste de tâches, afin qu'ils·elles puissent voir les éléments actifs, terminés ou tous les éléments.
-- [Construire des applications Angular et ressources complémentaires](/fr/docs/Learn_web_development/Core/Frameworks_libraries/Angular_building)
+- [Construire des applications Angular et ressources complémentaires](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Ce dernier article sur Angular explique comment construire une application prête pour la production et fournit d'autres ressources pour poursuivre votre apprentissage.
 
 ## Quels frameworks avons-nous choisis ?
