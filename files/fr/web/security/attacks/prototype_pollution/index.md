@@ -208,7 +208,7 @@ if (!Object.hasOwn(utilisateur, "estAdmin") || !utilisateur.estAdmin) {
 }
 ```
 
-Lors d'un parcours, la boucle {{JSxRef("for...in")}} parcourt le prototype. Si possible, remplacez ces boucles par {{JSxRef("for...of")}} et {{JSxRef("Object.keys()")}} pour parcourir uniquement les clés propres.
+Lors d'un parcours, la boucle {{JSxRef("Statements/for...in", "for...in")}} parcourt le prototype. Si possible, remplacez ces boucles par {{JSxRef("Statements/for...of", "for...of")}} et {{JSxRef("Object.keys()")}} pour parcourir uniquement les clés propres.
 
 ```js
 // Recherche dans le prototype
@@ -300,7 +300,7 @@ Lors de l'acceptation de données saisies par l'utilisateur·ice, que ce soit da
 
 - Validez toujours les données saisies par l'utilisateur·ice avec un validateur de schéma. Rejetez les propriétés non reconnues et définissez des valeurs par défaut pour les propriétés manquantes.
 - Les fonctions qui reçoivent des objets comme paramètres doivent soit s'assurer que toutes les clés attendues sont définies sur l'objet lui-même (en définissant des valeurs par défaut), soit vérifier d'abord que la clé existe sur l'objet lui-même (par exemple avec {{JSxRef("Object.hasOwn()")}}) avant d'y accéder.
-- Préférez les boucles {{JSxRef("for...of")}} et {{JSxRef("Object.keys()")}} aux boucles {{JSxRef("for...in")}}.
+- Préférez les boucles {{JSxRef("Statements/for...of", "for...of")}} et {{JSxRef("Object.keys()")}} aux boucles {{JSxRef("Statements/for...in", "for...in")}}.
 
 Pour les objets natifs et tiers&nbsp;:
 
