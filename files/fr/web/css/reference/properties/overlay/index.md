@@ -3,7 +3,7 @@ title: Propriété CSS `overlay`
 short-title: overlay
 slug: Web/CSS/Reference/Properties/overlay
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
@@ -13,7 +13,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`overlay`** définit si un élément ap
 Il est important de noter que `overlay` ne peut être défini que par le navigateur — les styles de l'auteur·ice ne peuvent pas modifier la valeur `overlay` d'un élément. Vous pouvez, cependant, ajouter `overlay` à la [liste des propriétés de transition](/fr/docs/Web/CSS/Reference/Properties/transition-property) définie sur un élément. Cela retarde sa suppression de la couche supérieure afin qu'elle puisse être animée au lieu de disparaître immédiatement.
 
 > [!NOTE]
-> Lors de la transition de `overlay`, vous devez définir [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/Reference/Properties/transition-behavior) sur la transition afin qu'elle soit animée. Les animations `overlay` diffèrent des [animations discrètes](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties#discrète) normales en ce que l'état visible (c'est-à-dire `auto`) sera toujours affiché pendant toute la durée de la transition, que ce soit l'état de départ ou d'arrivée.
+> Lors de la transition de `overlay`, vous devez définir [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/Reference/Properties/transition-behavior) sur la transition afin qu'elle soit animée. Les animations `overlay` diffèrent des [animations discrètes](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties#discrète) normales en ce que l'état visible (c'est-à-dire `auto`) est toujours affiché pendant toute la durée de la transition, que ce soit l'état de départ ou d'arrivée.
 
 ## Syntaxe
 
@@ -31,6 +31,8 @@ overlay: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `auto` {{Experimental_Inline}}
   - : L'élément est rendu dans la couche supérieure s'il est promu dans la couche supérieure.
@@ -134,10 +136,10 @@ Comme l'élément animé est promu dans la [couche supérieure](/fr/docs/Glossar
 
 Les étapes suivantes sont également nécessaires pour que l'animation fonctionne dans les deux sens&nbsp;:
 
-- Un état de départ pour l'animation est défini à l'intérieur de la règle {{CSSxRef("@starting-style")}}. Cela est nécessaire pour éviter un comportement inattendu. Par défaut, les transitions ne sont pas déclenchées lors des premières mises à jour de style des éléments, ou lorsque le type de `display` passe de `none` à un autre type. `@starting-style` vous permet de remplacer ce comportement par défaut de manière contrôlée et spécifique. Sans cela, l'animation d'entrée ne se produirait pas et la fenêtre contextuelle apparaîtrait simplement.
-- `display` est également ajouté à la liste des éléments en transition afin que l'élément animé soit visible (défini sur `display: block`) pendant toute la durée de l'animation d'entrée et de sortie. Sans cela, l'animation de sortie ne serait pas visible&nbsp;; en effet, la fenêtre contextuelle disparaîtrait simplement. Là encore, `transition-behavior: allow-discrete` est requis dans ce cas pour que l'animation ait lieu.
+- Un état de départ pour l'animation est défini à l'intérieur de la règle {{CSSxRef("@starting-style")}}. C'est nécessaire pour éviter un comportement inattendu. Par défaut, les transitions ne sont pas déclenchées lors des premières mises à jour de style des éléments, ou lorsque le type de `display` passe de `none` à un autre type. `@starting-style` vous permet de remplacer ce comportement par défaut de manière contrôlée et spécifique. Sans cela, l'animation d'entrée ne se produit pas et la fenêtre contextuelle apparaît simplement.
+- `display` est également ajouté à la liste des éléments en transition afin que l'élément animé soit visible (défini sur `display: block`) pendant toute la durée de l'animation d'entrée et de sortie. Sans cela, l'animation de sortie n'est pas visible&nbsp;; en effet, la fenêtre contextuelle disparaît simplement. Là encore, `transition-behavior: allow-discrete` est requis dans ce cas pour que l'animation ait lieu.
 
-Vous remarquerez que nous avons également inclus une transition sur le {{CSSxRef("::backdrop")}} qui apparaît derrière la fenêtre contextuelle lorsqu'elle s'ouvre, afin de fournir une animation d'assombrissement agréable. `[popover]:popover-open::backdrop` est nécessaire pour sélectionner le fond lorsque la fenêtre contextuelle est ouverte.
+Vous remarquez que nous avons également inclus une transition sur le {{CSSxRef("::backdrop")}} qui apparaît derrière la fenêtre contextuelle lorsqu'elle s'ouvre, afin de fournir une animation d'assombrissement agréable. `[popover]:popover-open::backdrop` est nécessaire pour sélectionner le fond lorsque la fenêtre contextuelle est ouverte.
 
 #### Résultat
 

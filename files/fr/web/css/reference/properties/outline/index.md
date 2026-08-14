@@ -3,7 +3,7 @@ title: Propriété CSS `outline`
 short-title: outline
 slug: Web/CSS/Reference/Properties/outline
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`outline`** définit la plupart des propriétés de contour dans une seule déclaration.
@@ -78,15 +78,15 @@ outline: revert-layer;
 outline: unset;
 ```
 
-La propriété `outline` peut être définie avec une, deux ou trois valeurs parmi celles listées ci-après. L'ordre de ces valeurs n'a pas d'importance. Comme pour toutes les propriétés raccourcies, toutes les sous-valeurs omises seront définies avec [leur valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale).
+La propriété `outline` peut être définie avec une, deux ou trois valeurs parmi celles listées ci-après. L'ordre de ces valeurs n'a pas d'importance. Comme pour toutes les propriétés raccourcies, toutes les sous-valeurs omises sont définies avec [leur valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale).
 
 > [!NOTE]
-> Le contour sera invisible pour de nombreux éléments si son style n'est pas défini. En effet, le style par défaut est `none`. Une exception notable est les éléments `input`, qui reçoivent un style par défaut par les navigateurs.
+> Le contour est invisible pour de nombreux éléments si son style n'est pas défini. En effet, le style par défaut est `none`. Une exception notable est les éléments `input`, qui reçoivent un style par défaut par les navigateurs.
 
 ### Valeurs
 
 - `<'outline-width'>`
-  - : Définit l'épaisseur du contour. Par défaut, elle est `medium` si elle est absente. Voir {{CSSxRef("outline-width")}}.
+  - : Une valeur de type {{CSSxRef("&lt;line-width&gt;")}} définissant l'épaisseur du contour. Par défaut, elle est `medium` si elle est absente. Voir {{CSSxRef("outline-width")}}.
 - `<'outline-style'>`
   - : Définit le style du contour. Par défaut, il est `none` si absent. Voir {{CSSxRef("outline-style")}}.
 - `<'outline-color'>`
@@ -98,11 +98,11 @@ Le contour est une ligne à l'extérieur de la [bordure](/fr/docs/Web/CSS/Refere
 
 Il existe plusieurs propriétés qui affectent l'apparence d'un contour. Il est possible de changer le style, la couleur et l'épaisseur en utilisant la propriété `outline`, la distance par rapport à la bordure en utilisant la propriété {{CSSxRef("outline-offset")}}, et les angles des coins en utilisant la propriété {{CSSxRef("border-radius")}}.
 
-Un contour n'est pas obligé d'être rectangulaire&nbsp;: Lorsqu'on traite du texte multiligne, certains navigateurs dessineront un contour pour chaque boîte de ligne séparément, tandis que d'autres envelopperont tout le texte avec un seul contour.
+Un contour n'est pas obligé d'être rectangulaire&nbsp;: Lorsqu'on traite du texte multi-ligne, certains navigateurs dessinent un contour pour chaque boîte de ligne séparément, tandis que d'autres enveloppent tout le texte avec un seul contour.
 
 ## Accessibilité
 
-Attribuer à `outline` une valeur de `0` ou `none` supprimera le style de sélection par défaut du navigateur. Si un élément peut être interactif, il doit avoir un indicateur de sélection visible. Fournissez un style de sélection évident si le style de sélection par défaut est supprimé.
+Attribuer à `outline` une valeur de `0` ou `none` supprime le style de sélection par défaut du navigateur. Si un élément peut être interactif, il doit avoir un indicateur de sélection visible. Fournissez un style de sélection évident si le style de sélection par défaut est supprimé.
 
 - [Comment concevoir des indicateurs de sélection utiles et utilisables <sup>(angl.)</sup>](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 - WCAG 2.1&nbsp;: [Comprendre le critère de succès 2.4.7&nbsp;: Sélection visible <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)

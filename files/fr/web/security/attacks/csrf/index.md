@@ -1,23 +1,23 @@
 ---
-title: Falsification de requête intersites (CSRF)
+title: Falsification de requête inter-sites (CSRF)
 slug: Web/Security/Attacks/CSRF
 l10n:
-  sourceCommit: e142af8b967180298c5718a381cb8953434b175f
+  sourceCommit: 75016e5d37ecff3b11de4c2ef6665178f654797e
 ---
 
-Dans une attaque de falsification de requête intersites (<i lang="en">cross-site request forgery</i>, CSRF), un·e attaquant·e amène l'utilisateur·ice ou le navigateur à émettre une requête HTTP vers le site visé depuis un site malveillant. La requête inclut les informations d'identification de l'utilisateur·ice et amène le serveur à exécuter une action nuisible, pensant que l'utilisateur·ice l'a voulue.
+Dans une attaque de falsification de requête inter-sites (<i lang="en">cross-site request forgery</i>, CSRF), un·e attaquant·e amène l'utilisateur·ice ou le navigateur à émettre une requête HTTP vers le site visé depuis un site malveillant. La requête inclut les informations d'identification de l'utilisateur·ice et amène le serveur à exécuter une action nuisible, pensant que l'utilisateur·ice l'a voulue.
 
 ## Vue d'ensemble
 
-Un site web effectue généralement des actions particulières pour le compte d'un·e utilisateur·ice — acheter un produit ou prendre un rendez-vous, par exemple — en recevant une requête HTTP depuis le navigateur de l'utilisateur·ice, souvent avec des paramètres détaillant l'action à réaliser. Pour s'assurer que la requête provient bien de la personne visée, le serveur s'attend à ce qu'elle inclue des {{glossary("Credential", "credentials")}} pour l'utilisateur·ice&nbsp;: par exemple, un cookie contenant l'identifiant de session.
+Un site web effectue généralement des actions particulières pour le compte d'un·e utilisateur·ice — acheter un produit ou prendre un rendez-vous, par exemple — en recevant une requête HTTP depuis le navigateur de l'utilisateur·ice, souvent avec des paramètres détaillant l'action à réaliser. Pour s'assurer que la requête provient bien de la personne visée, le serveur s'attend à ce qu'elle inclue des {{Glossary("Credential", "credentials")}} pour l'utilisateur·ice&nbsp;: par exemple, un cookie contenant l'identifiant de session.
 
-Dans l'exemple ci‑dessous, l'utilisateur·ice s'est déjà connecté·e à sa banque et le navigateur a enregistré un cookie de session. La page contient un élément {{htmlelement("form")}}, qui permet de transférer des fonds à une autre personne. Lorsque l'utilisateur·ice soumet le formulaire, le navigateur envoie une requête {{httpmethod("POST")}} au serveur, incluant les données du formulaire. Si l'utilisateur·ice est connecté·e, la requête inclut le cookie de l'utilisateur·ice. Le serveur valide le cookie et réalise l'action particulière — ici, le virement&nbsp;:
+Dans l'exemple ci‑dessous, l'utilisateur·ice s'est déjà connecté·e à sa banque et le navigateur a enregistré un cookie de session. La page contient un élément {{HTMLElement("form")}}, qui permet de transférer des fonds à une autre personne. Lorsque l'utilisateur·ice envoie le formulaire, le navigateur envoie une requête {{HTTPMethod("POST")}} au serveur, incluant les données du formulaire. Si l'utilisateur·ice est connecté·e, la requête inclut le cookie de l'utilisateur·ice. Le serveur valide le cookie et réalise l'action particulière — ici, le virement&nbsp;:
 
-![Diagramme montrant un·e utilisateur·ice qui soumet un formulaire dans le navigateur, le navigateur effectuant ensuite une requête POST vers le serveur, et le serveur validant la requête.](form-post.svg)
+![Diagramme montrant un·e utilisateur·ice qui envoie un formulaire dans le navigateur, le navigateur effectuant ensuite une requête POST vers le serveur, et le serveur validant la requête.](form-post.svg)
 
-Dans ce guide, nous appellerons une telle requête, qui exécute une action particulière, une _requête modifiant l'état_.
+Dans ce guide, nous appelons une telle requête, qui exécute une action particulière, une _requête modifiant l'état_.
 
-Dans une attaque CSRF, l'attaquant·e crée un site contenant un formulaire. L'[`attribut action`](/fr/docs/Web/HTML/Reference/Elements/form#action) du formulaire pointe vers le site de la banque, et le formulaire contient des champs cachés imitant ceux de la banque&nbsp;:
+Dans une attaque CSRF, l'attaquant·e crée un site contenant un formulaire. Un [`attribut action`](/fr/docs/Web/HTML/Reference/Elements/form#action) du formulaire pointe vers le site de la banque, et le formulaire contient des champs cachés imitant ceux de la banque&nbsp;:
 
 ```html
 <form action="https://ma-banque.exemple.org/transfer" method="POST">
@@ -26,18 +26,18 @@ Dans une attaque CSRF, l'attaquant·e crée un site contenant un formulaire. L'[
 </form>
 ```
 
-La page contient aussi du JavaScript qui soumet le formulaire au chargement de la page&nbsp;:
+La page contient aussi du JavaScript qui envoie le formulaire au chargement de la page&nbsp;:
 
 ```js
 const form = document.querySelector("form");
 form.submit();
 ```
 
-Lorsque l'utilisateur·ice visite la page, le navigateur soumet le formulaire au site de la banque. Comme l'utilisateur·ice est connecté·e à sa banque, la requête peut inclure le vrai cookie de l'utilisateur·ice, si bien que le serveur de la banque valide la requête et transfère les fonds&nbsp;:
+Lorsque l'utilisateur·ice visite la page, le navigateur envoie le formulaire au site de la banque. Comme l'utilisateur·ice est connecté·e à sa banque, la requête peut inclure le vrai cookie de l'utilisateur·ice, si bien que le serveur de la banque valide la requête et transfère les fonds&nbsp;:
 
-![Diagramme montrant une attaque CSRF dans laquelle une page leurre soumet une requête POST au site bancaire de l'utilisateur·ice.](csrf-form-post.svg)
+![Diagramme montrant une attaque CSRF dans laquelle une page leurre envoie une requête POST au site bancaire de l'utilisateur·ice.](csrf-form-post.svg)
 
-Il existe d'autres moyens pour l'attaquant·e d'émettre une falsification de requête intersites. Par exemple, si le site utilise une requête {{httpmethod("GET")}} pour effectuer l'action, l'attaquant·e peut éviter d'utiliser un formulaire et exécuter l'attaque en envoyant à la personne visée un lien vers une page qui contient un balisage comme ceci&nbsp;:
+Il existe d'autres moyens pour l'attaquant·e d'émettre une falsification de requête inter-sites. Par exemple, si le site utilise une requête {{HTTPMethod("GET")}} pour effectuer l'action, l'attaquant·e peut éviter d'utiliser un formulaire et exécuter l'attaque en envoyant à la personne visée un lien vers une page qui contient un balisage comme ceci&nbsp;:
 
 ```html
 <img
@@ -58,17 +58,17 @@ Dans cette section, nous décrivons trois défenses alternatives contre CSRF et 
 
 - La première défense principale consiste à [utiliser des _jetons CSRF_](#jetons_csrf) intégrés à la page. C'est la méthode la plus courante si vous émettez des requêtes modifiant l'état depuis des formulaires, comme dans l'exemple ci‑dessus.
 
-- La deuxième consiste à [utiliser les _métadonnées Fetch_](#métadonnées_fetch) via des en‑têtes HTTP pour vérifier si la requête modifiant l'état est émise intersite ou non.
+- La deuxième consiste à [utiliser les _métadonnées Fetch_](#métadonnées_fetch) avec des en‑têtes HTTP pour vérifier si la requête modifiant l'état est émise inter-site ou non.
 
-- La troisième consiste à s'assurer que les requêtes modifiant l'état [ne sont pas des _requêtes simples_](#éviter_les_requêtes_simples), afin que les requêtes intersites soient bloquées par défaut. Cette méthode convient si vous émettez des requêtes modifiant l'état via des API JavaScript comme {{domxref("Window.fetch()", "fetch()")}}.
+- La troisième consiste à s'assurer que les requêtes modifiant l'état [ne sont pas des _requêtes simples_](#éviter_les_requêtes_simples), afin que les requêtes inter-sites soient bloquées par défaut. Cette méthode convient si vous émettez des requêtes modifiant l'état avec des API JavaScript comme {{DOMxRef("Window.fetch()", "fetch()")}}.
 
-Enfin, nous aborderons [l'attribut de cookie `SameSite`](#défense_en_profondeur_cookies_samesite), qui peut servir de défense en profondeur aux côtés de l'une des méthodes précédentes.
+Enfin, nous abordons [l'attribut de cookie `SameSite`](#défense_en_profondeur_cookies_samesite), qui peut servir de défense en profondeur aux côtés de l'une des méthodes précédentes.
 
 ### Jetons CSRF
 
 Dans cette défense, lorsque le serveur sert une page, il y intègre une valeur imprévisible appelée _jeton CSRF_. Ensuite, lorsque la page légitime envoie la requête modifiant l'état au serveur, elle inclut le jeton CSRF dans la requête HTTP. Le serveur peut alors vérifier la valeur du jeton et n'exécute la requête que si elle correspond. Comme un·e attaquant·e ne peut pas deviner la valeur du jeton, il·elle ne peut pas émettre une falsification réussie. Même si l'attaquant·e découvre un jeton après son utilisation, la requête ne peut pas être rejouée si le jeton change à chaque fois.
 
-Pour les soumissions de formulaire, le jeton CSRF est généralement inclus dans un champ caché, de sorte qu'il soit automatiquement renvoyé au serveur pour vérification lors de la soumission du formulaire.
+Pour les envois de formulaire, le jeton CSRF est généralement inclus dans un champ caché, de sorte qu'il soit automatiquement retourné au serveur pour vérification lors de l'envoi du formulaire.
 
 Pour une API JavaScript comme `fetch()`, le jeton peut être placé dans un cookie ou intégré à la page, puis JavaScript extrait la valeur et l'envoie dans un en‑tête supplémentaire.
 
@@ -80,7 +80,7 @@ Pour tirer parti de cette protection, vous devez comprendre tous les endroits de
 
 Les métadonnées Fetch sont un ensemble d'en‑têtes de requête HTTP, ajoutés par le navigateur, qui fournissent des informations supplémentaires sur le contexte d'une requête HTTP. Le serveur peut utiliser ces en‑têtes pour décider d'autoriser ou non une requête.
 
-Le plus pertinent pour CSRF est l'en‑tête {{httpheader("Sec-Fetch-Site")}}, qui indique au serveur si la requête est _same-origin_, _same-site_, _cross-site_ ou initiée directement par l'utilisateur·ice. Le serveur peut utiliser cette information pour autoriser les requêtes d'origine autorisée ou les bloquer comme des attaques CSRF potentielles.
+Le plus pertinent pour CSRF est l'en‑tête {{HTTPHeader("Sec-Fetch-Site")}}, qui indique au serveur si la requête est _same-origin_, _same-site_, _cross-site_ ou initiée directement par l'utilisateur·ice. Le serveur peut utiliser cette information pour autoriser les requêtes d'origine autorisée ou les bloquer comme des attaques CSRF potentielles.
 
 Par exemple, ce code [Express](/fr/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) n'autorise que les requêtes _same-site_ et _same-origin_&nbsp;:
 
@@ -97,19 +97,19 @@ app.post("/transfer", (req, res) => {
 });
 ```
 
-Voir {{glossary("Fetch metadata request header")}} pour la liste complète des en‑têtes de métadonnées Fetch, et [Protéger vos ressources contre les attaques web avec Fetch Metadata <sup>(angl.)</sup>](https://web.dev/articles/fetch-metadata) pour un guide d'utilisation.
+Voir {{Glossary("Fetch metadata request header", "l'en-tête de requête de métadonnées Fetch")}} pour la liste complète des en‑têtes de métadonnées <i lang="en">Fetch</i>, et [<i lang="en">Fetch Metadata</i>](/fr/docs/Web/HTTP/Guides/Fetch_metadata) pour un guide d'utilisation.
 
 ### Éviter les requêtes simples
 
 Les navigateurs distinguent deux types de requêtes HTTP&nbsp;: les [_requêtes simples_](/fr/docs/Web/HTTP/Guides/CORS#simple_requests) et les autres.
 
-Les requêtes simples, qui sont le type de requête émise par la soumission d'un élément `<form>`, peuvent être effectuées intersites sans être bloquées. Puisque les formulaires peuvent émettre des requêtes intersites depuis les débuts du web, il est important pour la compatibilité qu'ils puissent toujours le faire. C'est pourquoi nous devons implémenter d'autres stratégies pour protéger les formulaires contre CSRF, comme l'utilisation d'un jeton CSRF.
+Les requêtes simples, qui sont le type de requête émise par l'envoi d'un élément `<form>`, peuvent être effectuées inter-sites sans être bloquées. Puisque les formulaires peuvent émettre des requêtes inter-sites depuis les débuts du web, il est important pour la compatibilité qu'ils puissent toujours le faire. C'est pourquoi nous devons implémenter d'autres stratégies pour protéger les formulaires contre CSRF, comme l'utilisation d'un jeton CSRF.
 
-En revanche, d'autres parties de la plateforme web, en particulier des API JavaScript comme {{domxref("Window.fetch()", "fetch()")}}, peuvent émettre d'autres types de requêtes (par exemple, des requêtes qui définissent des en‑têtes personnalisés), et ces requêtes ne sont pas autorisées intersites par défaut, de sorte qu'une attaque CSRF ne réussirait pas.
+En revanche, d'autres parties de la plateforme web, en particulier des API JavaScript comme {{DOMxRef("Window.fetch()", "fetch()")}}, peuvent émettre d'autres types de requêtes (par exemple, des requêtes qui définissent des en‑têtes personnalisés), et ces requêtes ne sont pas autorisées inter-sites par défaut, de sorte qu'une attaque CSRF ne réussit pas.
 
 Ainsi, un site web qui utilise `fetch()` ou `XMLHttpRequest` peut se protéger contre CSRF en s'assurant que les requêtes modifiant l'état qu'il émet ne sont jamais des requêtes simples.
 
-Par exemple, définir l'{{httpheader("Content-Type")}} de la requête à `"application/json"` empêchera son traitement en tant que requête simple&nbsp;:
+Par exemple, définir un {{HTTPHeader("Content-Type")}} de la requête à `"application/json"` empêche son traitement en tant que requête simple&nbsp;:
 
 ```js
 fetch("https://ma-banque.exemple.org/transfer", {
@@ -121,7 +121,7 @@ fetch("https://ma-banque.exemple.org/transfer", {
 });
 ```
 
-De même, définir un en‑tête personnalisé sur la requête empêchera son traitement comme requête simple&nbsp;:
+De même, définir un en‑tête personnalisé sur la requête empêche son traitement comme requête simple&nbsp;:
 
 ```js
 fetch("https://ma-banque.exemple.org/transfer", {
@@ -139,41 +139,41 @@ Le serveur peut alors vérifier l'existence de l'en‑tête&nbsp;: s'il existe, 
 
 #### Requêtes non simples et CORS
 
-Nous avons dit que les requêtes non simples ne sont _par défaut_ pas envoyées intersites. Le problème est que le protocole [Partage des ressources entre origines (CORS)](/fr/docs/Web/HTTP/Guides/CORS) permet à un site d'assouplir cette restriction.
+Nous avons dit que les requêtes non simples ne sont _par défaut_ pas envoyées inter-sites. Le problème est que le protocole [Partage des ressources entre origines (CORS)](/fr/docs/Web/HTTP/Guides/CORS) permet à un site d'assouplir cette restriction.
 
-Plus précisément, votre site sera vulnérable à une attaque CSRF depuis une origine donnée si sa réponse à une requête modifiant l'état inclut&nbsp;:
+Plus précisément, votre site est vulnérable à une attaque CSRF depuis une origine donnée si sa réponse à une requête modifiant l'état inclut&nbsp;:
 
-- L'en‑tête {{httpheader("Access-Control-Allow-Origin")}} et que cet en‑tête liste l'origine émettrice&nbsp;;
-- L'en‑tête {{httpheader("Access-Control-Allow-Credentials")}}.
+- L'en‑tête {{HTTPHeader("Access-Control-Allow-Origin")}} et que cet en‑tête liste l'origine émettrice&nbsp;;
+- L'en‑tête {{HTTPHeader("Access-Control-Allow-Credentials")}}.
 
 ### Défense en profondeur&nbsp;: cookies SameSite
 
 L'attribut de cookie [`SameSite`](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) apporte une certaine protection contre les attaques CSRF. Ce n'est pas une défense complète, et il convient de la considérer comme un complément à l'une des autres défenses, pour fournir une certaine défense en profondeur.
 
-Cet attribut contrôle quand un navigateur est autorisé à inclure le cookie dans une requête intersite. Il a trois valeurs possibles&nbsp;: `None`, `Lax` et `Strict`.
+Cet attribut contrôle quand un navigateur est autorisé à inclure le cookie dans une requête inter-site. Il a trois valeurs possibles&nbsp;: `None`, `Lax` et `Strict`.
 
-La valeur `Strict` offre la protection la plus forte&nbsp;: si cet attribut est défini, le navigateur n'inclura le cookie dans aucune requête intersite. Cependant, cela crée un problème d'ergonomie&nbsp;: si l'utilisateur·ice est connecté·e à votre site et suit un lien vers votre site depuis un autre site, alors vos cookies ne seront pas inclus, et l'utilisateur·ice ne sera pas reconnu·e à l'arrivée sur votre site.
+La valeur `Strict` offre la protection la plus forte&nbsp;: si cet attribut est défini, le navigateur n'inclut le cookie dans aucune requête inter-site. Cependant, cela crée un problème d'ergonomie&nbsp;: si l'utilisateur·ice est connecté·e à votre site et suit un lien vers votre site depuis un autre site, alors vos cookies ne sont pas inclus, et l'utilisateur·ice n'est pas reconnu·e à l'arrivée sur votre site.
 
-La valeur `Lax` assouplit cette restriction&nbsp;: les cookies sont inclus dans les requêtes intersites si les deux conditions suivantes s'appliquent&nbsp;:
+La valeur `Lax` assouplit cette restriction&nbsp;: les cookies sont inclus dans les requêtes inter-sites si les deux conditions suivantes s'appliquent&nbsp;:
 
 - La requête est une navigation du contexte de navigation de niveau supérieur.
-- La requête a utilisé une méthode {{glossary("Safe/HTTP", "safe")}}&nbsp;: notablement, {{httpmethod("GET")}} est sûre, mais {{httpmethod("POST")}} ne l'est pas.
+- La requête a utilisé une méthode {{Glossary("Safe/HTTP", "safe")}}&nbsp;: notablement, {{HTTPMethod("GET")}} est sûre, mais {{HTTPMethod("POST")}} ne l'est pas.
 
 Cependant, `Lax` offre une protection nettement plus faible que `Strict`&nbsp;:
 
-- Un·e attaquant·e peut déclencher une navigation de premier niveau. Par exemple, au début de cet article, nous montrons une attaque CSRF où l'attaquant·e soumet un formulaire vers la cible&nbsp;: cela est considéré comme une navigation de premier niveau. Si le formulaire était soumis avec `GET`, alors la requête inclurait tout de même des cookies avec `SameSite=Lax`.
+- Un·e attaquant·e peut déclencher une navigation de premier niveau. Par exemple, au début de cet article, nous montrons une attaque CSRF où l'attaquant·e envoie un formulaire vers la cible&nbsp;: c'est considéré comme une navigation de premier niveau. Si le formulaire était envoyé avec `GET`, alors la requête inclut tout de même des cookies avec `SameSite=Lax`.
 - Même si le serveur vérifie que la requête n'a pas été envoyée avec `GET`, certains frameworks web prennent en charge la «&nbsp;surcharge de méthode&nbsp;» (<i lang="en">method override</i>)&nbsp;: cela permet à un·e attaquant·e d'envoyer une requête avec `GET` tout en la faisant apparaître côté serveur comme si elle utilisait `POST`.
 
-De façon générale, vous devriez essayer d'utiliser `Strict` pour certains cookies et `Lax` pour d'autres&nbsp;:
+De façon générale, vous devez essayer d'utiliser `Strict` pour certains cookies et `Lax` pour d'autres&nbsp;:
 
 - `Lax` pour les cookies que vous utilisez afin de décider si un·e utilisateur·ice connecté·e doit se voir afficher une page&nbsp;;
-- `Strict` pour les cookies utilisés pour des requêtes modifiant l'état que vous ne souhaitez pas autoriser intersites.
+- `Strict` pour les cookies utilisés pour des requêtes modifiant l'état que vous ne souhaitez pas autoriser inter-sites.
 
-Un autre problème avec l'attribut `SameSite` est qu'il protège des requêtes provenant d'un autre {{glossary("Site", "site")}}, et non d'une autre {{glossary("Origin", "origin")}}. C'est une protection plus laxiste, car (par exemple) `https://foo.example.org` et `https://bar.example.org` sont considérés comme le même site, bien qu'ils soient des origines différentes. En pratique, si vous comptez sur la protection _same‑site_, vous devez faire confiance à tous les sous‑domaines de votre site.
+Un autre problème avec l'attribut `SameSite` est qu'il protège des requêtes provenant d'un autre {{Glossary("Site", "site")}}, et non d'une autre {{Glossary("Origin", "origin")}}. C'est une protection plus laxiste, car (par exemple) `https://foo.example.org` et `https://bar.example.org` sont considérés comme le même site, bien qu'ils soient des origines différentes. En pratique, si vous comptez sur la protection _same‑site_, vous devez faire confiance à tous les sous‑domaines de votre site.
 
 Voir [Contournement des restrictions de cookies SameSite <sup>(angl.)</sup>](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions) pour plus de détails sur les limites de `SameSite`.
 
-### Liste de contrôle récapitulative de la défense
+## Liste de contrôle récapitulative de la défense
 
 Nous pouvons résumer les défenses ci‑dessus ainsi&nbsp;:
 
@@ -181,10 +181,11 @@ Nous pouvons résumer les défenses ci‑dessus ainsi&nbsp;:
 - Mettre en œuvre au moins une des défenses principales décrites dans ce document&nbsp;:
   - Si vous utilisez des éléments `<form>` pour émettre ces requêtes, assurez‑vous d'utiliser un framework qui prend en charge les jetons CSRF et utilisez‑le.
   - Si vous utilisez des API JavaScript comme `fetch()` ou `XMLHttpRequest` pour émettre des requêtes modifiant l'état, assurez‑vous qu'elles ne soient pas des requêtes simples.
-  - Quel que soit le mécanisme utilisé pour émettre les requêtes, envisagez d'utiliser les métadonnées Fetch pour interdire les requêtes intersites.
+  - Quel que soit le mécanisme utilisé pour émettre les requêtes, envisagez d'utiliser les métadonnées Fetch pour interdire les requêtes inter-sites.
 - Éviter d'utiliser la méthode `GET` pour émettre des requêtes modifiant l'état.
 - Définir l'attribut `SameSite` des cookies de session sur `Strict` si vous le pouvez, ou `Lax` si nécessaire.
 
 ## Voir aussi
 
-- [Aide‑mémoire de prévention des CSRF <sup>(angl.)</sup>](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) sur [owasp.org <sup>(angl.)</sup>](https://owasp.org/)
+- [Accès au réseau local](/fr/docs/Web/Security/Defenses/Local_network_access)
+- [Antisèche de prévention des CSRF <sup>(angl.)</sup>](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) sur [owasp.org <sup>(angl.)</sup>](https://owasp.org/)

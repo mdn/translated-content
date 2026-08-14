@@ -50,7 +50,7 @@ Vous pouvez également affecter à cette propriété une chaîne de caractères 
       Cela suffit pour le suivi des utilisateur·ice·s, mais cela empêche de nombreuses attaques de [falsification de requête inter-sites](/fr/docs/Glossary/CSRF) (CSRF).
       C'est la valeur par défaut dans les navigateurs modernes.
     - La valeur `strict` empêche le cookie d'être envoyé par le navigateur au site cible dans tous les contextes de navigation inter-sites, même lors du suivi d'un lien classique.
-    - La valeur `none` indique explicitement qu'aucune restriction ne est appliquée.
+    - La valeur `none` indique explicitement qu'aucune restriction n'est appliquée.
       Le cookie est envoyé dans toutes les requêtes — inter-sites et même site.
 
   - `;secure`&nbsp;: Définit que le cookie ne doit être transmis que avec un protocole sécurisé.

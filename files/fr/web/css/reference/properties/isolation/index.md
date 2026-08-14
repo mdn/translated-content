@@ -3,7 +3,7 @@ title: Propriété CSS `isolation`
 short-title: isolation
 slug: Web/CSS/Reference/Properties/isolation
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`isolation`** indique que l'élément crée un nouveau {{Glossary("stacking context", "contexte d'empilement")}}.
@@ -63,9 +63,9 @@ isolation: revert-layer;
 isolation: unset;
 ```
 
-La propriété `isolation` est définie avec l'un des mots-clés suivants.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : Un mot-clé qui indique qu'un nouveau contexte d'empilement doit être créé uniquement si une propriété appliquée à l'élément le rend nécessaire.

@@ -3,7 +3,7 @@ title: Propriété CSS `column-rule-width`
 short-title: column-rule-width
 slug: Web/CSS/Reference/Properties/column-rule-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`column-rule-width`** définit la largeur de la ligne tracée entre les colonnes dans une mise en page multi-colonnes.
@@ -55,7 +55,7 @@ column-rule-width: thin;
 column-rule-width: medium;
 column-rule-width: thick;
 
-/* Valeurs detype <length> */
+/* Valeurs de type <length> */
 column-rule-width: 1px;
 column-rule-width: 2.5em;
 
@@ -67,12 +67,14 @@ column-rule-width: revert-layer;
 column-rule-width: unset;
 ```
 
-La propriété `column-rule-width` est définie grâce à une valeur de type `<'border-width'>`.
-
 ### Valeurs
 
+La propriété `column-rule-width` accepte une liste de valeurs séparées par des virgules, y compris&nbsp;:
+
+- {{CSSxRef("&lt;line-width&gt;")}}
+  - : Définit la largeur de la ligne, soit comme une longueur ({{CSSxRef("&lt;length&gt;")}}) explicite non négative, soit avec les mots-clés&nbsp;: `thin`, `medium` ou `thick`. La valeur par défaut est `medium`.
 - `<'border-width'>`
-  - : Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou un mot-clé parmi `thin`, `medium` ou `thick` qui décrit l'épaisseur du trait séparant deux colonnes. C'est le type de valeur qui sera également utilisé pour la propriété {{CSSxRef("border-width")}}.
+  - : Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou un mot-clé parmi `thin`, `medium` ou `thick` qui décrit l'épaisseur du trait séparant deux colonnes. C'est le type de valeur qui est également utilisé pour la propriété {{CSSxRef("border-width")}}.
 
 ## Définition formelle
 
