@@ -68,17 +68,17 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 >
 > もし、コードとサンプルのバージョンとを確認する必要があれば、[ember-todomvc-tutorial リポジトリー](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) で最新版を見ることができます。実行中のライブバージョンについては <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> から確認ができます（ただしチュートリアルで取り扱っていない機能も含まれています）。
 
-- [Ember を始める](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Ember_getting_started)
+- [Ember を始める](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 最初の Ember 記事では、Ember がどのように作業し、何のために有益なのかを見、Ember ツールチェーンをローカルにインストールし、サンプルアプリを作成し、そして開発に必要な初期設定を行います。
-- [Ember アプリの構成とコンポーネント化](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Ember_structure_componentization)
+- [Ember アプリの構成とコンポーネント化](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この記事では、TodoMVC Ember アプリの構造を計画し、そのための HTML を追加し、その HTML 構造をコンポーネントに分割することに、すぐに取りかかりましょう。
-- [Ember の対話: イベント、クラス、状態](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Ember_interactivity_events_state)
+- [Ember の対話: イベント、クラス、状態](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この点では、アプリに対話機能を追加し、新しい ToDo アイテムを追加して表示する機能を提供することを始めます。その過程で、Ember のイベントの使用、インタラクティブ機能を制御する JavaScript コードを含むコンポーネント クラスの作成、アプリのデータ状態を追跡するサービスの設定を見ていきます。
-- [Ember の対話性: フッター機能、条件付きレンダリング](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Ember_conditional_footer)
+- [Ember の対話性: フッター機能、条件付きレンダリング](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : これで、このアプリのフッター機能に取り組み始める時刻になりました。ここでは、まだ完了していない ToDo の数を正しく表示するために ToDo カウンターを取得し、完了した ToDo (チェックボックスがチェックされているもの) に正しくスタイルを適用します。また、「完了をクリアする」ボタンの配線も行います。その過程で、テンプレートで条件付きレンダリングを使用する方法について学びます。
-- [Ember におけるルーティング](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Ember_routing)
+- [Ember におけるルーティング](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この記事では、ルーティングまたは URL ベースのフィルタリングについて学びます。これを使用して、 3 つの Todo ビュー（"All"、"Active"、"Completed"）それぞれに固有の URL を提供することにします。
-- [Ember のリソースとトラブルシューティング](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Ember_resources)
+- [Ember のリソースとトラブルシューティング](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 最後の Ember 記事では、学習をさらに進めるために使用できるリソースのリストと、有益なトラブルシューティングなどの情報を提供しています。
 
 ## Vue のチュートリアル
@@ -88,23 +88,23 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 >
 > もし、コードとサンプルのバージョンとを確認する必要があれば、 [todo-vue リポジトリー](https://github.com/mdn/todo-vue)で最新版を見ることができます。実行中のライブバージョンについては <https://mdn.github.io/todo-vue/> から確認ができます。
 
-- [Vue を始める](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
+- [Vue を始める](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : これで、フレームワークの 3 つ目である Vue を紹介することができます。この記事では、 Vue の背景を少し見て、インストールと新しいプロジェクトの作成方法を学び、プロジェクト全体と個々のコンポーネントのハイレベルな構造を勉強し、プロジェクトをローカルで実行する方法を確認し、例の構築を始めるために取得します。
-- [最初の Vue コンポーネントの作成](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Vue_first_component)
+- [最初の Vue コンポーネントの作成](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : これで、 Vue をより深く掘り下げ、自分自身でカスタムコンポーネントを作成する時が来ました。まず、 Todo リストの各項目を表すコンポーネントを作成するところから始めます。その過程で、他のコンポーネントの内部でコンポーネントを呼び出すこと、 props を介してデータを渡すこと、データの状態を保存することなど、いくつかの重要な概念について学びます。
-- [Vueコンポーネントの一覧の表示](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists)
+- [Vueコンポーネントの一覧の表示](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この点で、完全に動作するコンポーネントを保有することができました。これで、アプリに複数の `ToDoItem` コンポーネントを追加する準備が整いました。この記事では、 `App.vue` コンポーネントに Todo データの集合を追加し、それをループさせて `v-for` ディレクティブを使用して `ToDoItem` コンポーネント内に表示するところを見ていきます。
-- [新しい todo フォームの追加: Vue のイベント、メソッド、モデル](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models)
+- [新しい todo フォームの追加: Vue のイベント、メソッド、モデル](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : これでサンプルデータを所有し、各データを受け取ってアプリの `ToDoItem` 内にレンダリングするループができました。次に本当に必要なのは、ユーザーが自分自身でアプリに ToDo 項目を入力できるようにする機能です。そのためには、テキスト `<input>` と、データが送信されたときに発行されるイベント、送信時にデータを追加してリストを再レンダリングするメソッド、データを制御するモデルが必要になります。この記事で扱うのは、このようなものです。
-- [CSS による Vue コンポーネントのスタイル設定](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Vue_styling)
+- [CSS による Vue コンポーネントのスタイル設定](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : いよいよ、アプリの見栄えを少しばかり良くする時刻が到来しました。この記事では、 Vue のコンポーネントを CSS でスタイル設定するための異なる形を探ります。
-- [Vue の computed プロパティの使用](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties)
+- [Vue の computed プロパティの使用](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この記事では、 Vue の computed プロパティと呼ばれる機能を使用して、完了した Todo アイテムの数を表示するカウンターを追加します。この著作物はメソッドと似たような作業をしますが、依存関係の 1 つが動作したときだけ再実行されます。
-- [Vue の条件付きレンダリング: 既存の TODO の編集](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering)
+- [Vue の条件付きレンダリング: 既存の TODO の編集](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : これで、まだ欠けている機能の主要な部分の一つである、既存のTodoアイテムを編集する機能を追加する時が来ました。この機能を実現するために、 Vue の条件付きレンダリング機能である `v-if` と `v-else` を利用して、既存の Todo アイテムビューと、 Todo アイテムのラベルを更新できる編集ビューを切り替えられるようにします。また、 Todo アイテムを削除する機能の追加も見ていきます。
-- [Vue のフォーカス管理のための refs と lifecycle メソッド](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management)
+- [Vue のフォーカス管理のための refs と lifecycle メソッド](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Vue の使用はほぼ終了しました。最後に見るべき機能は、フォーカス管理です。別の言い方をすれば、アプリのキーボードアクセシビリティをどのように向上させるか、ということです。この処理に Vue refs を使用することを見ていきます。この機能は、仮想 DOM の下にある基礎 DOM ノードに直接アクセスしたり、あるコンポーネントから子コンポーネントの内部 DOM 構造に直接アクセスしたりすることができる先進的な機能です。
-- [Vue のリソース](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Vue_resources)
+- [Vue のリソース](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : これで、 Vue の学習の締めくくりとして、さらに学習を進めるために使用できるリソースのリストと、他にも有益なヒントを提供します。
 
 ## Svelte のチュートリアル
@@ -114,21 +114,21 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 >
 > もし、コードとサンプルのバージョンとを確認する必要があれば、 [mdn-svelte-tutorial](https://github.com/opensas/mdn-svelte-tutorial) リポジトリーで最新版を見ることができます。実行中のライブバージョンについては <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2> から確認ができます。
 
-- [Svelte を始める](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)
+- [Svelte を始める](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この記事では、 [Svelte フレームワーク](https://svelte.jp/)の簡単な紹介をします。 Svelte がどのように動作するのか、そしてこれまで見てきた他のフレームワークやツールと何が違うのかを見ていきます。その後、開発環境を構築し、サンプルアプリを作成し、プロジェクトの構造を理解し、ローカルで実行し、本番用にビルドする方法を学びます。
-- [Svelte Todo リストアプリを始める](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning)
+- [Svelte Todo リストアプリを始める](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : さて、 Svelte でこれらがどのように動作するのか基本的な理解ができたところで、例のアプリであるTodoリストの作成を始めてみましょう。この記事では、まずアプリに求められる機能を見ていきます。次に `Todos.svelte` コンポーネントを作成し、静的なマークアップとスタイルを所有し、 ToDo リストアプリの機能を開発し始めるための準備をすべて整えます（この後の記事で詳しく説明します）。
-- [Svelte の動的な動作: 変数とプロップを一緒に作業する](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props)
+- [Svelte の動的な動作: 変数とプロップを一緒に作業する](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : これでマークアップとスタイルが保有されたので、 Svelte の ToDo リストアプリに必要な機能の開発に取り掛かることができます。この記事では、変数と props を使用してアプリを動的にし、 ToDo を追加したり削除したり、完了マークをつけたり、ステータスでフィルタリングしたりできるようにします。
-- [Svelte アプリのコンポーネント化](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_components)
+- [Svelte アプリのコンポーネント化](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この記事の主な目的は、アプリを管理しやすいコンポーネントに分割し、それらのコンポーネント間で情報を共有する方法を見ることです。アプリをコンポーネント化し、さらにユーザーが既存のコンポーネントを更新できるように機能を追加していきます。
-- [高度な Svelte: リアクティブ、ライフサイクル、アクセシビリティ](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility)
+- [高度な Svelte: リアクティブ、ライフサイクル、アクセシビリティ](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この記事では、アプリの最終的な機能を追加し、さらにアプリをコンポーネント化します。オブジェクトや配列の更新に関連するリアクティビティの問題に対処する方法について学びます。よくある落とし穴を避けるために、 Svelte のリアクティブシステムを少し深く掘り下げる必要があります。また、アクセシビリティのフォーカスに関する問題の解決や、その他の問題にも目を向けていきます。
-- [Svelte のストアでの作業](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_stores)
+- [Svelte のストアでの作業](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この記事では、Svelteで状態管理を処理するもう一つの方法である[ストア](https://learn.svelte.dev/tutorial/writable-stores)を示します。ストアは、値を格納するグローバルなデータリポジトリーです。コンポーネントはストアに格納され、その値が変更されたときに通知を受け取ることができます。
-- [TypeScript support in Svelte](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript)
+- [TypeScript support in Svelte](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : これで、 Svelte アプリケーションで TypeScript を使用する方法を学ぶことができます。まず、 TypeScript とは何か、そして TypeScript が私たちにもたらす好ましいこととは何かを学びます。次に、 TypeScript ファイルを使用して作業するために、プロジェクトをどのように設定するかを見ていきます。最後に、 TypeScript の機能を十分に活かすためにはどのような修正が必要なのか、アプリを確認します。
-- [展開と次の手順](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next)
+- [展開と次の手順](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この最終記事では、アプリケーションを展開してオンラインにする方法と、 Svelte の学習を継続するために取得すべきリソースをいくつか紹介します。
 
 ### Angular のチュートリアル
@@ -136,17 +136,17 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 > [!NOTE]
 > この Angular のチュートリアルは 2021 年 4 月に、 Angular CLI (NG) 11.2.5 で動作確認を行いました。
 
-- [Angular を始める](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)
+- [Angular を始める](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この記事では、Angular が提供するものを確認し、前提条件をインストールしてサンプルアプリを設定し、Angular の基本的なアーキテクチャを確認します。
-- [Angular todo リストアプリの事始め](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning)
+- [Angular todo リストアプリの事始め](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この時点で、Angular を使用して todo リストアプリケーションの作成を開始する準備が整いました。 完成したアプリケーションには、やることのリストが表示され、機能の編集、削除、追加が含まれます。 この記事では、アプリケーションの構造を理解し、やることの基本的なリストを表示するようになります。
-- [Angular アプリのスタイリング](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Angular_styling)
+- [Angular アプリのスタイリング](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 基本的なアプリケーション構造がセットアップされ、アプリケーションが表示されるようになったので、次の段階へ移って、Angular がアプリケーションのスタイリングをどのように処理するかを見てみましょう。
-- [item コンポーネントの作成](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Angular_item_component)
+- [item コンポーネントの作成](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : コンポーネントは、アプリケーションを整理するための方法を提供されます。この記事では、リスト内の個々の項目を処理するコンポーネントを作成し、チェック、編集、削除の機能を追加する方法を説明します。 Angular のイベントモデルについて説明します。
-- [To Do アイテムのフィルタリング](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Angular_filtering)
+- [To Do アイテムのフィルタリング](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : これで、ユーザーが ToDo 項目をフィルタリングして、アクティブ、完了、すべての項目を表示できるようにする機能を追加することにしましょう。
-- [Angular アプリケーションのビルドとその他のリソース](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Angular_building)
+- [Angular アプリケーションのビルドとその他のリソース](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : この最後の Angular の記事は、プロダクションに適したアプリを構築する方法を取り上げ、学習の旅を続けるためのさらなるリソースを提供します。
 
 ## どのフレームワークを選ぶべきか？
