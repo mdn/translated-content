@@ -34,7 +34,7 @@ CSR のメリットは以下の通りです。
 
 SSR と CSR はどちらもパフォーマンス上のトレードオフがあり、SSR と CSR を組み合わせることで互いの技術のメリットを活かすことができます。例えば、サーバー側で空のプレースホルダーを含むページ骨組みを生成し、クライアント側で追加データを取って必要に応じてページを書き換えられます。
 
-{{glossary("SPA", "単一ページアプリケーション")}} は、サイトが CSR で無くても良いことに気をつけてください。[React](/ja/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started), [Vue](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started), や [Svelte](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started) のようなモダンなフレームワークでは、SSR 機能を備えた SPA を作るために使えます。
+{{glossary("SPA", "単一ページアプリケーション")}} は、サイトが CSR で無くても良いことに気をつけてください。[React](/ja/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started), [Vue](/ja/docs/Learn_web_development/Core/Frameworks_libraries), や [Svelte](/ja/docs/Learn_web_development/Core/Frameworks_libraries) のようなモダンなフレームワークでは、SSR 機能を備えた SPA を作るために使えます。
 
 ## 関連情報
 
