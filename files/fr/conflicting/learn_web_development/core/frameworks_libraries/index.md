@@ -1,6 +1,7 @@
 ---
 title: Prise en main de Vue
-slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries
+original_slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_resources","Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -3680,13 +3680,6 @@
       "tonybengue"
     ]
   },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_getting_started": {
-    "modified": "2020-10-03T00:57:04.281Z",
-    "contributors": [
-      "duduindo",
-      "Anonymous"
-    ]
-  },
   "Learn_web_development/Core/Scripting": {
     "modified": "2020-07-16T22:29:50.440Z",
     "contributors": [
@@ -38532,6 +38525,13 @@
     "modified": "2020-10-15T21:52:22.760Z",
     "contributors": [
       "SphinxKnight"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Frameworks_libraries": {
+    "modified": "2020-10-03T00:57:04.281Z",
+    "contributors": [
+      "duduindo",
+      "Anonymous"
     ]
   }
 }
