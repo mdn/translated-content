@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 この記事では、[Svelte フレームワーク](https://svelte.jp/)の簡単な紹介をします。Svelteの動作と、これまで見てきた他のフレームワークやツールとの違いについて見ていきます。その後は開発環境の構築、サンプルアプリの作成、プロジェクトの構造、ローカル環境での実行方法と本番環境でのビルド方法を学びます。
 
@@ -508,4 +508,4 @@ Svelte の基礎知識:
 - コンポーネントのトップレベルで宣言された変数が、状態の構成要素となります。
 - トップレベルの変数に新しい値を代入するだけでリアクティビティが発動します。
 
-{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

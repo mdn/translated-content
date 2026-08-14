@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 この Angular の最後の記事では、本番環境に対応したアプリをビルドする方法について説明し、学習の旅を続けるためその他のリソースを提供します。
 
@@ -83,4 +83,4 @@ HTTP サーバーを使用すると、ローカルネットワーク上の他の
 
 以上です。 Angular を楽しんでいただければ幸いです。
 
-{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

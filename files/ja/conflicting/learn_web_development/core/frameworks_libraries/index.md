@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 コンポーネントは、アプリケーションを構成する方法を提供します。 この記事では、リスト内の個々の item を処理するコンポーネントを作成し、チェック、編集、および削除機能を追加する方法について説明します。 ここでは、Angular イベントモデルについて説明します。
 
@@ -465,4 +465,4 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 これで、アイテムを追加、編集、および削除できるスタイル付きの Angular の ToDo リストアプリケーションができました。
 次のステップは、特定の条件を満たすアイテムを確認できるようにフィルタリングを追加することです。
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

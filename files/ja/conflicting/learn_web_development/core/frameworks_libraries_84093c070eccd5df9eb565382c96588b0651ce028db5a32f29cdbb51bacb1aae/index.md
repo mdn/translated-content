@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5340aace9b48dc6f885fca3a90d03e7637cd0cb0
 ---
 
-{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 ここで、学習をさらに進めるために使用できるリソースのリストと、その他の役立つヒントを示して、Vue の紹介をします。
 
@@ -70,4 +70,4 @@ Vue 2 は 2023 年 12 月 31 日にサポート終了し、全ての CLI ツー�
 
 Vue 2 からのアップグレードをする場合、[Vue 3 migration guide](https://v3-migration.vuejs.org/) を見ることをお勧めします。
 
-{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

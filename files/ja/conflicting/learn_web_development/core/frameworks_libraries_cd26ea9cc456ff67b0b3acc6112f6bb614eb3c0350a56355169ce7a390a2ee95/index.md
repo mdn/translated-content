@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 今度は、Google の Angular フレームワークを見てみましょう。これは、よく目にするもう 1 つの人気のあるオプションです。 この記事では、Angular が提供するものを確認し、前提条件をインストールしてサンプルアプリをセットアップし、Angular の基本的なアーキテクチャを確認します。
 
@@ -317,4 +317,4 @@ import { CommonModule } from '@angular/common';
 
 Angular の最初の紹介は以上です。 この時点で、Angular アプリをセットアップして構築する準備ができており、Angular がどのように機能するかについての基本的な理解が必要です。 次の記事では、その知識を深め、やることリストアプリケーションの構造を構築し始めます。
 
-{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
