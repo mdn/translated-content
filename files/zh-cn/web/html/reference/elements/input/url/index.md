@@ -74,7 +74,7 @@ label {
 
 ### pattern
 
-如果指定了 `pattern` 属性，为了使输入的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)，必须与该属性给定的正则表达式匹配。它必须是 {{jsxref("RegExp")}} 类型所用的有效 JavaScript 正则表达式，并已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中说明；编译该正则表达式时会指定 `'u'` 标志，因此模式被视为 Unicode 代码点序列，而不是 {{Glossary("ASCII")}}。模式文本周围无需指定正斜杠。
+如果指定了 `pattern` 属性，为了使输入的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)，必须与该属性给定的正则表达式匹配。它必须是 {{jsxref("RegExp")}} 类型所用的有效 JavaScript 正则表达式，并已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中说明；编译该正则表达式时会指定 `'u'` 标志，因此模式被视为 Unicode 码位序列，而不是 {{Glossary("ASCII")}}。模式文本周围无需指定正斜杠。
 
 如果未指定模式或模式无效，则不应用任何正则表达式，并完全忽略此属性。
 
