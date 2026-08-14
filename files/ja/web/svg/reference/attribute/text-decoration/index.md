@@ -30,7 +30,7 @@ svg {
 }
 ```
 
-```html
+```html-nolint
 <svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
   <text y="20" text-decoration="underline">下線を引いたテキスト</text>
   <text x="0" y="40" text-decoration="line-through">取り消し線を引いたテキスト</text>
