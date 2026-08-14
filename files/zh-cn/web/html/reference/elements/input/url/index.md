@@ -70,7 +70,7 @@ label {
 
 用户可以输入到 `url` 输入框中的最小字符串长度（以 {{glossary("UTF-16", "UTF-16 码元")}} 计量）。该值必须是小于等于 `maxlength` 指定值的非负整数。如果未指定 `minlength` 或指定了无效值，则 `url` 输入没有最小长度。
 
-如果字段中输入文本的长度少于 `minlength` 个 {{glossary("UTF-16", "UTF-16 代码单元")}}，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。约束验证仅在用户更改值时应用。
+如果字段中输入文本的长度少于 `minlength` 个 {{glossary("UTF-16", "UTF-16 码元")}}，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。约束验证仅在用户更改值时应用。
 
 ### pattern
 
