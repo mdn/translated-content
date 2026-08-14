@@ -110,7 +110,7 @@ label {
 [`spellcheck`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/spellcheck) 是一个全局属性，用于指示是否启用元素的拼写检查。它可以用于任何可编辑的内容，但这里我们考虑在 {{HTMLElement("input")}} 元素上使用 `spellcheck` 的细节。`spellcheck` 的允许值为：
 
 - `false`
-  - ：禁用此元素的拼写检查。
+  - ：对此元素禁用拼写检查。
 - `true`
   - ：对此元素启用拼写检查。
 - `""`（空字符串）或无值
