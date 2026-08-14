@@ -31,9 +31,9 @@ Votre code n'en est que de meilleure qualité et plus professionnel, et vous êt
 
 ## Guides d'introduction
 
-- [Introduction aux cadriciels côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_cadriciels/Introduction)
+- [Introduction aux cadriciels côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
   - : Nous commençons notre aperçu des cadriciels par un tour d'horizon général du domaine, notamment en regardant un bref historique de JavaScript et des cadriciels, la raison pour laquelle les cadriciels existent et ce qu'ils nous proposent, comment commencer à réfléchir au choix d'un cadriciel à apprendre et quelles alternatives il y a aux cadriciels côté client.
-- [Principales caractéristiques du Framework](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_cadriciels/Main_features)
+- [Principales caractéristiques du Framework](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
   - : Chaque cadriciel JavaScript majeur a une approche différente de la mise à jour du DOM, de la gestion des évènements du navigateur et de la manière dont rendre l'expérience de développement agréable. Cet article explore les principales caractéristiques des 4 grands cadriciels, en examinant comment les cadriciels ont tendance à fonctionner à un haut niveau et les différences entre eux.
 
 ## Tutoriels sur React
@@ -51,11 +51,11 @@ Votre code n'en est que de meilleure qualité et plus professionnel, et vous êt
   - : À ce stade, notre application est un monolithe. Avant de pouvoir lui faire faire des choses, nous devons le diviser en composants descriptifs gérables. React n'a pas de règles strictes pour ce qui est et n'est pas un composant&nbsp;: c'est à vous de décider&nbsp;! Dans cet article, nous allons vous montrer un moyen judicieux de diviser notre application en composants.
 - [Interactivité de React&nbsp;: évènements et états](/fr/docs/Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state)
   - : Une fois notre plan de composants élaboré, il est maintenant temps de commencer à faire évoluer notre application d'une interface utilisateur complètement statique vers une interface qui nous permet réellement d'interagir et de modifier des choses. Dans cet article, nous allons le faire, en explorant les évènements et les états en cours de route.
-- [Interactivité de React&nbsp;: modification, filtrage, rendu conditionné](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_cadriciels/React_interactivity_filtering_conditional_rendering)
+- [Interactivité de React&nbsp;: modification, filtrage, rendu conditionné](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
   - : Alors que nous approchons de la fin de notre voyage React (pour l'instant du moins), nous ajoutons la touche finale aux principaux domaines de fonctionnalités de notre application de liste de tâches. Cela comprend la possibilité de modifier les tâches existantes et de filtrer la liste des tâches entre toutes les tâches, terminées et incomplètes. Nous examinons le rendu conditionné de l'interface utilisateur en cours de route.
-- [Accessibilité dans React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_cadriciels/React_accessibility)
+- [Accessibilité dans React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
   - : Dans notre avant-dernier article du tutoriel, nous nous concentrons sur l'accessibilité, y compris la gestion de la mise au point dans React, ce qui peut améliorer la convivialité et réduire la confusion pour les utilisateur·ice·s de clavier uniquement et de lecteur d'écran.
-- [Ressources sur React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_cadriciels/React_resources)
+- [Ressources sur React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
   - : Notre dernier article vous fournit une liste de ressources sur React que vous pouvez utiliser pour aller plus loin dans votre apprentissage.
 
 ## Autres choix de cadriciels
