@@ -62,7 +62,7 @@ label {
 
 ### maxlength
 
-用户可以输入到 `url` 输入框中的最大字符串长度（以 {{glossary("UTF-16", "UTF-16 代码单元")}} 计量）。必须为大于等于 `0` 的整数。如果未指定 `maxlength` 或指定了无效值，则 `url` 输入框没有最大长度。该值也必须大于等于 `minlength` 的值。
+用户可以输入到 `url` 输入框中的最大字符串长度（以 {{glossary("UTF-16", "UTF-16 码元")}}计量）。必须为大于等于 `0` 的整数。如果未指定 `maxlength` 或指定了无效值，则 `url` 输入框没有最大长度。该值也必须大于等于 `minlength` 的值。
 
 如果字段文本值的长度大于 `maxlength` 个 {{glossary("UTF-16", "UTF-16 代码单元")}}，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。约束验证仅在用户更改值时应用。
 
