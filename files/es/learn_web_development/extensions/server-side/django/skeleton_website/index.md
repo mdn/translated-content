@@ -65,21 +65,21 @@ Para crear el proyecto:
 3. Crea el nuevo proyecto usando el comando `django-admin startproject` como se muestra, y luego navega a la carpeta del proyecto:
 
    ```bash
-      django-admin startproject locallibrary
-      cd locallibrary
+   django-admin startproject locallibrary
+   cd locallibrary
    ```
 
    La herramienta `django-admin` crea una estructura de carpetas/archivos como la siguiente:
 
    ```bash
-      locallibrary/
-         manage.py
-         locallibrary/
-            __init__.py
-            settings.py
-            urls.py
-            wsgi.py
-            asgi.py
+   locallibrary/
+       manage.py
+       locallibrary/
+           __init__.py
+           settings.py
+           urls.py
+           wsgi.py
+           asgi.py
    ```
 
 La subcarpeta del proyecto _locallibrary_ es el punto de entrada del sitio web:
