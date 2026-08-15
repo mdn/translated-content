@@ -2,6 +2,8 @@
 title: "HTMLOutputElement: labels プロパティ"
 short-title: labels
 slug: Web/API/HTMLOutputElement/labels
+l10n:
+  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
 ---
 
 {{APIRef("DOM")}}
@@ -18,24 +20,20 @@ slug: Web/API/HTMLOutputElement/labels
 
 ```html
 <label id="label1" for="test">ラベル 1</label>
-<output id="test">Output</output>
+<output id="test">出力</output>
 <label id="label2" for="test">ラベル 2</label>
 ```
 
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
   const output = document.getElementById("test");
   for (const label of output.labels) {
-    console.log(label.textContent); // "ラベル 1" and "ラベル 2"
+    console.log(label.textContent); // "ラベル 1" と "ラベル 2"
   }
-});
 ```
 
-### 結果
-
-{{EmbedLiveSample("Examples", "100%", 30)}}
+{{EmbedLiveSample("例", "100%", 30)}}
 
 ## 仕様書
 
