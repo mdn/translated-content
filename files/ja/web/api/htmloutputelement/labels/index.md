@@ -27,10 +27,10 @@ l10n:
 ### JavaScript
 
 ```js
-  const output = document.getElementById("test");
-  for (const label of output.labels) {
-    console.log(label.textContent); // "ラベル 1" と "ラベル 2"
-  }
+const output = document.getElementById("test");
+for (const label of output.labels) {
+  console.log(label.textContent); // "ラベル 1" と "ラベル 2"
+}
 ```
 
 {{EmbedLiveSample("例", "100%", 30)}}
