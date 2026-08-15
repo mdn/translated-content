@@ -111,20 +111,20 @@ for (const event of events) {
 
 それぞれのグローバルオブジェクトには、パフォーマンス項目用のバッファー制限が設けられています。これにより、ブラウザーがパフォーマンスデータを保持する際に、メモリーを無制限に消費してしまうことを実現します。特に、ウェブサイトやアプリケーションで多数のリソースを取得する場合（ポーリングを使用している場合など）、バッファーの制限について確認する必要があるかもしれません。
 
-| {{domxref("PerformanceEntry.entryType", "entryType")}} 識別子 | インターフェイス                                  | バッファーサイズの最大数 |
-| ----------------------------------------------------------------- | ------------------------------------------ | -------------------------------- |
-| `"mark"`                                                          | {{domxref("PerformanceMark")}}             | Infinite                         |
-| `"measure"`                                                       | {{domxref("PerformanceMeasure")}}          | Infinite                         |
-| `"navigation"`                                                    | {{domxref("PerformanceNavigationTiming")}} | Infinite                         |
-| `"resource"`                                                      | {{domxref("PerformanceResourceTiming")}}   | 250（調整可能、下記参照）      |
-| `"longtask"`                                                      | {{domxref("PerformanceLongTaskTiming")}}   | 200                              |
-| `"paint"`                                                         | {{domxref("PerformancePaintTiming")}}      | 2（それ以上にはならない）          |
-| `"element"`                                                       | {{domxref("PerformanceElementTiming")}}    | 150                              |
-| `"event"`                                                         | {{domxref("PerformanceEventTiming")}}      | 150                              |
-| `"first-input"`                                                   | {{domxref("PerformanceEventTiming")}}      | 1（それ以上にはならない）「          |
-| `"layout-shift"`                                                  | {{domxref("LayoutShift")}}                 | 150                              |
-| `"largest-contentful-paint"`                                      | {{domxref("LargestContentfulPaint")}}      | 150                              |
-| `"visibility-state"`                                              | {{domxref("VisibilityStateEntry")}}        | 50                               |
+| {{domxref("PerformanceEntry.entryType", "entryType")}} 識別子 | インターフェイス                           | バッファーサイズの最大数    |
+| ------------------------------------------------------------- | ------------------------------------------ | --------------------------- |
+| `"mark"`                                                      | {{domxref("PerformanceMark")}}             | Infinite                    |
+| `"measure"`                                                   | {{domxref("PerformanceMeasure")}}          | Infinite                    |
+| `"navigation"`                                                | {{domxref("PerformanceNavigationTiming")}} | Infinite                    |
+| `"resource"`                                                  | {{domxref("PerformanceResourceTiming")}}   | 250（調整可能、下記参照）   |
+| `"longtask"`                                                  | {{domxref("PerformanceLongTaskTiming")}}   | 200                         |
+| `"paint"`                                                     | {{domxref("PerformancePaintTiming")}}      | 2（それ以上にはならない）   |
+| `"element"`                                                   | {{domxref("PerformanceElementTiming")}}    | 150                         |
+| `"event"`                                                     | {{domxref("PerformanceEventTiming")}}      | 150                         |
+| `"first-input"`                                               | {{domxref("PerformanceEventTiming")}}      | 1（それ以上にはならない）「 |
+| `"layout-shift"`                                              | {{domxref("LayoutShift")}}                 | 150                         |
+| `"largest-contentful-paint"`                                  | {{domxref("LargestContentfulPaint")}}      | 150                         |
+| `"visibility-state"`                                          | {{domxref("VisibilityStateEntry")}}        | 50                          |
 
 表 1 バッファーサイズ（[情報源](https://w3c.github.io/timing-entrytypes-registry/#registry)）。
 
