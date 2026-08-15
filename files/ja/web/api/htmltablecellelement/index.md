@@ -2,7 +2,7 @@
 title: HTMLTableCellElement
 slug: Web/API/HTMLTableCellElement
 l10n:
-  sourceCommit: 0387e3e9f49863cc1f8bba5164e1697778cba593
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -18,25 +18,15 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLTableCellElement.abbr")}}
   - : 文字列で、 `<th>` 要素上（{{HTMLElement("td")}} 上ではない）で使用可能であり、見出しセルの代替ラベルを指定します。この代替ラベルは、データセルに適用される見出しを記述するときなど、他のコンテキストで使用することができます。これは、特にスクリーンリーダーが使用するための短い用語を提供するために使用され、貴重なアクセシビリティツールとなります。通常、 `abbr` の値は省略形や頭字語ですが、文脈に応じて適切なテキストを指定することができます。
 - {{domxref("HTMLTableCellElement.cellIndex")}} {{ReadOnlyInline}}
-  - : 長整数値で、セルが含まれる {{HTMLElement("tr")}} の {{domxref("HTMLTableRowElement.cells", "cells")}} コレクション内での位置を表します。セルが `<tr>` に属さない場合は、 `-1` を返します。
+  - : 数値で、セルが含まれる {{HTMLElement("tr")}} の {{domxref("HTMLTableRowElement.cells", "cells")}} コレクション内での位置を表します。セルが `<tr>` に属さない場合は、 `-1` を返します。
 - {{domxref("HTMLTableCellElement.colSpan")}}
-  - : 符号なし整数で、このセルがまたがらなければならない列の数を示します。これは [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性を反映したものです。
-- {{domxref("HTMLTableCellElement.headers")}} {{readonlyInline}}
+  - : 正の数値で、このセルがまたがなければならない列の数を示します。これにより、セルが表の複数の列を占めるようになります。これは [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性を反映したものです。
+- {{domxref("HTMLTableCellElement.headers")}} {{ReadOnlyInline}}
   - : {{domxref("DOMTokenList")}} で、セルに関連する見出しを表す {{HTMLElement("th")}} 要素の `id` のリストです。これは [`headers`](/ja/docs/Web/HTML/Reference/Elements/td#headers) 属性を反映したものです。
 - {{domxref("HTMLTableCellElement.rowSpan")}}
-  - : 符号なし整数で、このセルがまたがらなければならない行数を示します。これは [`rowspan`](/ja/docs/Web/HTML/Reference/Elements/td#rowspan) 属性を反映したものです。
+  - : 正の数値で、このセルがまたがなければならない行の数を示します。これにより、セルが表の複数の行を占めるようになります。これは [`rowspan`](/ja/docs/Web/HTML/Reference/Elements/td#rowspan) 属性を反映したものです。
 - {{domxref("HTMLTableCellElement.scope")}}
-  - : {{HTMLElement("th")}} セルのスコープを示す文字列です。見出しセルは `scope` プロパティを用いて、指定された行または列、あるいは現在の行グループ内のまだスコープされていないセル（つまり、同じ祖先の {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}} 要素）に適用するように設定することが可能です。もし `scope` に何も値が指定されなければ、見出しはこの方法で直接セルと関連付けられることはありません。 `scope` に指定可能な値は以下の通りです。
-    - `col`
-      - : 見出しセルは同じ列（`colspan`が使われている場合は列）の続くセルに適用され、列の終わりか列内の別の `<th>` が新しいスコープを確立するまで適用されます。
-    - `colgroup`
-      - : 見出しセルは、現在の列グループ内の、まだスコープが適用されていないすべてのセルに適用される。この値は、セルが列グループ内にある場合にのみ許可されます。
-    - `row`
-      - : 見出しセルは、同じ行（`rowspan`が使われている場合は行）の続くセルに適用され、行の終わりか同じ行の別の `<th>` が新しいスコープを確立するまで適用されます。
-    - `rowgroup`
-      - : 見出しセルは、現在の行グループ内の、まだスコープが適用されていない全てのセルに適用される。この値は、セルが行グループの中にある場合にのみ許可される。
-    - The empty string (`""`)
-      - : 見出しセルは事前に定義された範囲を持ちません。ユーザーエージェントは文脈の手がかりに基づいて範囲を確立します。
+  - : {{HTMLElement("th")}} セルのスコープを示す文字列です。`scope` に指定できる値は、`col`、`colgroup`、`row`、`rowgroup`、または空文字列 (`""`) です。
 
 ## インスタンスメソッド
 
@@ -45,10 +35,10 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
 ## 非推奨のプロパティ
 
 > [!WARNING]
-> これらのプロパティは{{Glossary("deprecated", "非推奨")}}になっており、もう使用するべきではありません。これらは主に古いコードベースを理解しやすくすることを目的に文書化されています。
+> これらのプロパティは非推奨になっており、もう使用するべきではありません。これらは主に古いコードベースを理解しやすくすることを目的に文書化されています。
 
 - {{domxref("HTMLTableCellElement.align")}} {{deprecated_inline}}
-  - : 文字列で、 [`align`](/ja/docs/Web/HTML/Reference/Elements/td#align) 属性を反映した列挙値です。これは、周囲のコンテキストに対する要素の内容の整列を示す。指定できる値は `"left"`, `"right"`, `"center"` です。
+  - : 文字列で、[`align`](/ja/docs/Web/HTML/Reference/Elements/td#align) 属性の値が（もしあれば）入ります。設定されていない場合は空文字列となります。これを使用することで、要素の内容の配置を、`"left"`、`"right"`、`"center"` のいずれかに設定することができます。代わりに、CSS の {{cssxref("text-align")}} プロパティを使用してください。
 - {{domxref("HTMLTableCellElement.axis")}} {{deprecated_inline}}
   - : 仮想的にセルをグループ化する名前を含む文字列。これは、廃止された [`axis`](/ja/docs/Web/HTML/Reference/Elements/td#axis) 属性を反映しています。
 - {{domxref("HTMLTableCellElement.bgColor")}} {{deprecated_inline}}
@@ -60,9 +50,9 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
 - {{domxref("HTMLTableCellElement.height")}} {{deprecated_inline}}
   - : 文字列で、セルのヒントとなる高さのピクセル数が入ります。これは、廃止された [`height`](/ja/docs/Web/HTML/Reference/Elements/td#height) 属性を反映します。
 - {{domxref("HTMLTableCellElement.noWrap")}} {{deprecated_inline}}
-  - : 論理値で、 [`nowrap`](/ja/docs/Web/HTML/Reference/Elements/td#nowrap) 属性を反映します。セルの内容が複数の行に分割できるかどうかを示します。
+  - : 論理値で、`nowrap` 属性を反映します。セルの内容が複数の行に分割できるかどうかを示します。
 - {{domxref("HTMLTableCellElement.vAlign")}} {{deprecated_inline}}
-  - : 文字列で、セルの内容がどのように垂直方向に配置されるかを示す列挙値です。これは [`valign`](/ja/docs/Web/HTML/Reference/Elements/td#valign) 属性を反映しており、 `"top"`, `"middle"`, `"bottom"`, `"baseline"` のいずれかになります。
+  - : 文字列で、セルの内容がどのように垂直方向に配置されるかを示す列挙値です。これは [`valign`](/ja/docs/Web/HTML/Reference/Elements/td#valign) 属性を反映しており、`"top"`, `"middle"`, `"bottom"`, `"baseline"` のいずれかになります。代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
 - {{domxref("HTMLTableCellElement.width")}} {{deprecated_inline}}
   - : 文字列で、可能であればセルが描画されるべきピクセル幅の数を指定します。このプロパティは、廃止された [`width`](/ja/docs/Web/HTML/Reference/Elements/td#width) 属性を反映します。代わりに CSS の {{cssxref("width")}} プロパティを使用してください。
 
