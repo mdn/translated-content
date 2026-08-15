@@ -10,7 +10,7 @@ l10n:
 
 **`targetLanguage`** は {{domxref("Translator")}} インターフェイスの読み取り専用プロパティで、入力テキストの翻訳先となる言語を返します。
 
-Translator` インスタンスの `targetLanguage` は {{domxref("Translator.create_static", "create()")}} でインスタンスが生成されるときに設定されます。
+`Translator` インスタンスの `targetLanguage` は {{domxref("Translator.create_static", "create()")}} でインスタンスが生成されるときに設定されます。
 
 ## 値
 
