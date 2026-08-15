@@ -1,8 +1,9 @@
 ---
 title: "ARIA: tablist ロール"
+short-title: tablist
 slug: Web/Accessibility/ARIA/Reference/Roles/tablist_role
 l10n:
-  sourceCommit: 50f209459d9e1db35bf0d973d7878ea4600acb8c
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 `tablist` ロールは、`tabs` のセットのコンテナーとして機能する要素を識別します。タブコンテンツは `tabpanel` 要素として参照されます。

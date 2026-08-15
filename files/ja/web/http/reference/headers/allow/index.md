@@ -1,54 +1,47 @@
 ---
-title: Allow
+title: Allow ヘッダー
+short-title: Allow
 slug: Web/HTTP/Reference/Headers/Allow
-original_slug: Web/HTTP/Headers/Allow
+l10n:
+  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-**`Allow`** ヘッダーは、あるリソースが対応しているメソッドの一覧を示します。
-
-このヘッダーは、サーバーが {{HTTPStatus("405")}} `Method Not Allowed` ステータスコードで返答する場合、使用することができるリクエストメソッドを示すために送信する必要があります。 `Allow` ヘッダーが空である場合、リソースが許可しているリクエストメソッドがないことを示し、例えば指定されたリソースにおいて一時的に発生する可能性があります。
+**`Allow`** {{Glossary("Response header", "レスポンスヘッダー")}}は、あるリソースが対応している[リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)の一覧を示します。
+このヘッダーは、サーバーが {{HTTPStatus("405", "405 Method Not Allowed")}} ステータスコードで返答した場合、使用することができるリクエストメソッドを示すために送信する必要があります。
+`Allow` の値が空である場合、そのリソースが許可しているリクエストメソッドがないことを示します。これは指定されたリソースにおいて一時的に発生する可能性があります。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">ヘッダー種別</th>
-      <td>
-        {{Glossary("Entity header", "エンティティヘッダー")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
-      </th>
-      <td>いいえ</td>
+      <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
     </tr>
   </tbody>
 </table>
 
 ## 構文
 
-```
+```http
 Allow: <http-methods>
 ```
 
 ## ディレクティブ
 
-- \<http-methods>
-  - : 許可されている [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)の一覧。
+- `<http-methods>`
+  - : カンマ区切りのリストで、許可されているリクエストメソッドの一覧です。
 
 ## 例
 
-```
+```http
 Allow: GET, POST, HEAD
 ```
 
 ## 仕様書
 
-| 仕様書                            | 状態                                                          |
-| --------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## 関連情報
 
-- {{HTTPStatus("405")}}
+- {{HTTPStatus("405", "405 Method Not Allowed")}} ステータスコード
 - {{HTTPHeader("Server")}}
+- {{HTTPMethod("OPTIONS")}}

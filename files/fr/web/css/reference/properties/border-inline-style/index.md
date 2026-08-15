@@ -3,7 +3,7 @@ title: Propriété CSS `border-inline-style`
 short-title: border-inline-style
 slug: Web/CSS/Reference/Properties/border-inline-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-style`** définit le style des bordures logiques en ligne d'un élément, qui correspond à un style de bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("border-top-style")}} et {{CSSxRef("border-bottom-style")}}, ou {{CSSxRef("border-left-style")}} et {{CSSxRef("border-right-style")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
@@ -51,7 +51,7 @@ direction: rtl;
 ## Syntaxe
 
 ```css
-/* Valeurs de type <'border-style'> */
+/* Valeurs avec un mot-clé */
 border-inline-style: dashed;
 border-inline-style: dotted;
 border-inline-style: groove;
@@ -66,7 +66,7 @@ border-inline-style: unset;
 
 ### Valeur
 
-- `<'border-style'>`
+- {{CSSxRef("&lt;line-style&gt;")}}
   - : Le style de la ligne pour la bordure. Voir {{CSSxRef("border-style")}}.
 
 ## Définition formelle

@@ -12,7 +12,7 @@ Cela peut être combiné avec ou utilisé à la place de {{CSSxRef("animation-ra
 Voir [Animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations) pour plus de détails.
 
 > [!NOTE]
-> Si l'élément défilant ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement ne est créée.
+> Si l'élément défilant ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement n'est créée.
 
 Les propriétés `view-timeline-inset`, {{CSSxRef("view-timeline-axis")}} et {{CSSxRef("view-timeline-name")}} peuvent également être définies en utilisant la propriété raccourcie {{CSSxRef("view-timeline")}}.
 

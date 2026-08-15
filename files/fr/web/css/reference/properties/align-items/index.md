@@ -3,7 +3,7 @@ title: Propriété CSS `align-items`
 short-title: align-items
 slug: Web/CSS/Reference/Properties/align-items
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`align-items`** permet de définir la valeur de {{CSSxRef("align-self")}} sur tous les enfants directs en groupe. En flexbox, elle contrôle l'alignement des éléments sur {{Glossary("cross axis", "l'axe transversal")}}. En mise en page grille, elle contrôle l'alignement des éléments sur l'axe de bloc à l'intérieur de leurs {{Glossary("grid areas", "zones de grille")}}.
@@ -92,6 +92,8 @@ align-items: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme un ou deux des mot-clés suivants&nbsp;:
+
 - `normal`
   - : L'effet obtenu avec ce mot-clé dépend du mode de disposition utilisé&nbsp;:
     - Pour les éléments positionnés de façon absolue, ce mot-clé est synonyme de `start` pour les éléments remplacés, pour les autres éléments positionnés de façon absolue, il est synonyme de `stretch`.
@@ -101,7 +103,7 @@ align-items: unset;
     - Cette propriété ne s'applique pas aux boîtes en bloc ou aux cellules de tableaux.
 
 - `center`
-  - : Les boîtes de marge des éléments flexibles sont centrées dans la ligne sur l'axe transversal. Si la taille transversale d'un élément est supérieure à celle du conteneur flexible, il débordera également dans les deux directions.
+  - : Les boîtes de marge des éléments flexibles sont centrées dans la ligne sur l'axe transversal. Si la taille transversale d'un élément est supérieure à celle du conteneur flexible, il déborde également dans les deux directions.
 
 - `start`
   - : Les éléments sont alignés sur le bord au début du conteneur selon l'axe de bloc.
@@ -125,12 +127,12 @@ align-items: unset;
   - : Dans le cas des éléments [positionnés par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne les éléments au centre de l'élément ancre associé dans la direction de bloc. Voir [Centrer sur l'ancre avec `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
 
 - `safe`
-  - : Ce mot-clé est utilisé avec un mot-clé d'alignement. Si la taille d'un des éléments dépasse du conteneur avec la valeur d'alignement indiquée, l'alignement sera réalisé avec la valeur `start` à la place.
+  - : Ce mot-clé est utilisé avec un mot-clé d'alignement. Si la taille d'un des éléments dépasse du conteneur avec la valeur d'alignement indiquée, l'alignement est réalisé avec la valeur `start` à la place.
 
 - `unsafe`
   - : Ce mot-clé est utilisé avec un mot-clé d'alignement. Quelle que soit la taille relative et l'éventuel dépassement de l'élément par rapport au conteneur, la valeur indiquée pour l'alignement est respectée.
 
-Il existe également deux valeurs qui ont été définies pour le flexbox, car elles sont basées sur les concepts d'[axes du modèle flex](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox#aparté_sur_le_modèle_flex), et fonctionnent aussi en mise en page grille&nbsp;:
+Il existe également deux valeurs qui ont été définies pour le flexbox, car elles sont basées sur les concepts [d'axes de la disposition flexible](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox#aparté_sur_le_modèle_flex), et fonctionnent aussi en mise en page grille&nbsp;:
 
 - `flex-start`
   - : Utilisé uniquement en disposition flexible, aligne les éléments flexibles contre le bord de début principal ou le bord de début transversal du conteneur flexible. Lorsqu'il est utilisé en dehors d'un contexte de formatage flexible, cette valeur se comporte comme `start`.
@@ -152,7 +154,7 @@ Dans cet exemple, il y a un conteneur avec six enfants. Un menu déroulant {{HTM
 
 ### CSS
 
-Nous appliquons un style au conteneur et aux éléments de façon à obtenir deux lignes ou rangées d'éléments. Nous avons défini les classes `.flex` et `.grid`, qui seront appliquées au conteneur avec JavaScript. Elles définissent la valeur de {{CSSxRef("display")}} du conteneur, et changent ses couleurs de fond et de bordure pour fournir un indicateur supplémentaire que la disposition a changé. Les six éléments flexibles ont chacun une couleur de fond différente, le 4<sup>e</sup> élément occupe deux lignes et le 6<sup>e</sup> élément a une police agrandie.
+Nous appliquons un style au conteneur et aux éléments de façon à obtenir deux lignes ou rangées d'éléments. Nous avons défini les classes `.flex` et `.grid`, qui sont appliquées au conteneur avec JavaScript. Elles définissent la valeur de {{CSSxRef("display")}} du conteneur, et changent ses couleurs de fond et de bordure pour fournir un indicateur supplémentaire que la disposition a changé. Les six éléments flexibles ont chacun une couleur de fond différente, le 4<sup>e</sup> élément occupe deux lignes et le 6<sup>e</sup> élément a une police agrandie.
 
 ```css
 .flex,

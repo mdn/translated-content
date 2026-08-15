@@ -3,7 +3,7 @@ title: Propriété CSS `place-self`
 short-title: place-self
 slug: Web/CSS/Reference/Properties/place-self
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-self`** permet d'aligner un élément individuel à la fois dans les directions bloc et en ligne (c'est-à-dire les propriétés {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}}). Cette propriété s'applique aux boîtes de niveau bloc, aux boîtes positionnées absolument et aux éléments de grille. Si la deuxième valeur n'est pas présente, la première valeur est également utilisée pour elle.
@@ -83,6 +83,8 @@ place-self: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `auto`
   - : Calcule la valeur en fonction de la propriété {{CSSxRef("align-items")}} du parent.
 - `normal`
@@ -102,7 +104,7 @@ place-self: unset;
 - `flex-end`
   - : Le bord de marge de fin transversal de l'élément flexible est aligné avec le bord de fin transversal de la ligne.
 - `center`
-  - : La boîte de marge de l'élément flexible est centrée dans la ligne sur l'axe transversal. Si la taille transversale de l'élément est plus grande que celle du conteneur flexible, elle débordera également dans les deux directions.
+  - : La boîte de marge de l'élément flexible est centrée dans la ligne sur l'axe transversal. Si la taille transversale de l'élément est plus grande que celle du conteneur flexible, elle déborde également dans les deux directions.
 - `baseline`, `first baseline`, `last baseline`
   - : Définit la participation à l'alignement sur la première ou la dernière ligne de base&nbsp;: aligne la ligne de base d'alignement du premier ou du dernier ensemble de lignes de base de la boîte avec la ligne de base correspondante dans l'ensemble partagé de première ou dernière ligne de base de toutes les boîtes de son groupe de partage de lignes de base.
     L'alignement de repli pour `first baseline` est `start`, celui pour `last baseline` est `end`.

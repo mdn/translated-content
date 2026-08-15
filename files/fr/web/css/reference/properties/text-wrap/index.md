@@ -3,7 +3,7 @@ title: Propriété CSS `text-wrap`
 short-title: text-wrap
 slug: Web/CSS/Reference/Properties/text-wrap
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-wrap`** contrôle la manière dont le texte à l'intérieur d'un élément est enveloppé. Les différentes valeurs offrent&nbsp;:
@@ -86,18 +86,18 @@ text-wrap: revert-layer;
 text-wrap: unset;
 ```
 
-La propriété `text-wrap` est définie comme un mot-clé unique choisi parmi la liste des valeurs ci-dessous.
-
 ### Valeurs
 
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
 - `wrap`
-  - : Le texte est renvoyé à la ligne aux caractères appropriés (par exemple les espaces, dans les langues comme l'anglais qui utilisent des séparateurs d'espaces) pour minimiser le débordement. C'est la valeur par défaut.
+  - : Le texte est retourné à la ligne aux caractères appropriés (par exemple les espaces, dans les langues comme l'anglais qui utilisent des séparateurs d'espaces) pour minimiser le débordement. C'est la valeur par défaut.
 - `nowrap`
-  - : Le texte ne se renvoie pas à la ligne. Il débordera de son élément conteneur plutôt que de passer à une nouvelle ligne.
+  - : Le texte ne retourne pas à la ligne. Il déborde de son élément conteneur plutôt que de passer à une nouvelle ligne.
 - `balance`
-  - : Le texte est renvoyé à la ligne de manière à équilibrer au mieux le nombre de caractères sur chaque ligne, améliorant ainsi la qualité de la mise en page et la lisibilité. Comme le comptage des caractères et leur équilibrage sur plusieurs lignes est coûteux en termes de calcul, cette valeur n'est prise en charge que pour les blocs de texte couvrant un nombre limité de lignes (six ou moins pour Chromium et dix ou moins pour Firefox).
+  - : Le texte est retourné à la ligne de manière à équilibrer au mieux le nombre de caractères sur chaque ligne, améliorant ainsi la qualité de la mise en page et la lisibilité. Comme le comptage des caractères et leur équilibrage sur plusieurs lignes est coûteux en termes de calcul, cette valeur n'est prise en charge que pour les blocs de texte couvrant un nombre limité de lignes (six ou moins pour Chromium et dix ou moins pour Firefox).
 - `pretty`
-  - : Produit le même comportement que `wrap`, sauf que l'agent utilisateur utilisera un algorithme plus lent qui privilégie une meilleure mise en page par rapport à la vitesse. Cela est destiné au corps du texte où une bonne typographie est privilégiée par rapport aux performances (par exemple, lorsque le nombre de [orphelins](/fr/docs/Web/CSS/Reference/Properties/orphans) doit être réduit au minimum).
+  - : Produit le même comportement que `wrap`, sauf que l'agent utilisateur utilise un algorithme plus lent qui privilégie une meilleure mise en page par rapport à la vitesse. C'est destiné au corps du texte où une bonne typographie est privilégiée par rapport aux performances (par exemple, lorsque le nombre de [orphelins](/fr/docs/Web/CSS/Reference/Properties/orphans) doit être réduit au minimum).
 - `stable`
   - : Produit le même comportement que `wrap`, sauf que lorsque l'utilisateur·ice modifie le contenu, les lignes qui précèdent celles qu'il modifie restent statiques plutôt que de réorganiser tout le bloc de texte.
 
@@ -107,7 +107,7 @@ Il existe deux façons pour le texte de s'écouler sur plusieurs lignes au sein 
 
 La valeur que vous choisissez pour `text-wrap` dépend du nombre de lignes de texte que vous prévoyez de mettre en forme, si le texte est `contenteditable`, et si vous devez privilégier l'apparence ou les performances.
 
-Lorsque le contenu à mettre en forme sera limité à un petit nombre de lignes, comme les titres, les légendes et les citations, `text-wrap: balance` peut être ajouté pour équilibrer le nombre de caractères sur chaque ligne, améliorant ainsi la qualité de la mise en page et la lisibilité. Comme les navigateurs limitent le nombre de lignes impactées par cette propriété, l'impact de cette valeur sur les performances est négligeable.
+Lorsque le contenu à mettre en forme est limité à un petit nombre de lignes, comme les titres, les légendes et les citations, `text-wrap: balance` peut être ajouté pour équilibrer le nombre de caractères sur chaque ligne, améliorant ainsi la qualité de la mise en page et la lisibilité. Comme les navigateurs limitent le nombre de lignes impactées par cette propriété, l'impact de cette valeur sur les performances est négligeable.
 
 Pour les sections de texte plus longues, `text-wrap: pretty` peut être utilisé. Notez que `pretty` a un effet négatif sur les performances, il ne doit donc être utilisé que pour les blocs de texte plus longs lorsque la mise en page est plus importante que la vitesse.
 
@@ -129,12 +129,12 @@ La valeur `stable` améliore l'expérience utilisateur lorsqu'elle est utilisée
 
 ```html
 <h2 class="wrap" contenteditable="true">
-  Le comportement par défaut&nbsp;; le texte dans le titre se renvoie
+  Le comportement par défaut&nbsp;; le texte dans le titre retourne
   «&nbsp;normalement&nbsp;» à la ligne
 </h2>
 
 <h2 class="nowrap" contenteditable="true">
-  Dans ce cas, le texte dans le titre ne se renvoie pas à la ligne et déborde du
+  Dans ce cas, le texte dans le titre ne retourne pas à la ligne et déborde du
   conteneur
 </h2>
 
