@@ -56,7 +56,8 @@ new HTMLOutputElement()
   <span id="output-container"></span>
 </form>
 <p id="warning" hidden>
-  ⚠️ このブラウザーは <code>HTMLOutputElement()</code> コンストラクターに対応していません。
+  ⚠️ このブラウザーは
+  <code>HTMLOutputElement()</code> コンストラクターに対応していません。
 </p>
 ```
 
