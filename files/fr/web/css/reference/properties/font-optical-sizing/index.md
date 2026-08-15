@@ -3,7 +3,7 @@ title: Propriété CSS `font-optical-sizing`
 short-title: font-optical-sizing
 slug: Web/CSS/Reference/Properties/font-optical-sizing
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-optical-sizing`** définit si le rendu du texte est optimisé pour l'affichage à différentes tailles.
@@ -71,10 +71,12 @@ font-optical-sizing: unset;
 
 ### Valeurs
 
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
 - `none`
-  - : Le navigateur ne modifiera pas la forme des glyphes pour une vue optimale.
+  - : Le navigateur ne modifie pas la forme des glyphes pour une vue optimale.
 - `auto`
-  - : Le navigateur modifiera la forme des glyphes pour une vue optimale.
+  - : Le navigateur modifie la forme des glyphes pour une vue optimale.
 
 ## Description
 
@@ -101,9 +103,8 @@ Lorsque le dimensionnement optique est utilisé, les petites tailles de texte so
 </p>
 
 <p class="no-optical-sizing">
-  Ce paragraphe n'est pas adapté pour une meilleure lecture. Vous devriez voir
-  une différence avec les navigateurs qui prennent en charge cette
-  fonctionnalité.
+  Ce paragraphe n'est pas adapté pour une meilleure lecture. Vous devez voir une
+  différence avec les navigateurs qui prennent en charge cette fonctionnalité.
 </p>
 ```
 

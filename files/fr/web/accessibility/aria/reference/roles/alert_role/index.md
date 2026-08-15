@@ -63,7 +63,7 @@ document
 
 ### Exemple 2 : Changer dynamiquement le contenu d'un élément doté du rôle `alert`
 
-À l'aide de JavaScript, on peut modifier dynamiquement le contenu _à l'intérieur_ de l'élément ayant `role="alert"`. Attention, si vous devez déclencher la même alerte à plusieurs reprises (autrement dit, si le contenu inséré dynamiquement est le même d'une fois à l'autre), cela ne est pas perçu comme un changement et ne déclenche _pas_ d'annonce. Pour éviter ce problème, mieux vaut réinitialiser le contenu du conteneur avant d'insérer le message d'alerte.
+À l'aide de JavaScript, on peut modifier dynamiquement le contenu _à l'intérieur_ de l'élément ayant `role="alert"`. Attention, si vous devez déclencher la même alerte à plusieurs reprises (autrement dit, si le contenu inséré dynamiquement est le même d'une fois à l'autre), cela n'est pas perçu comme un changement et ne déclenche _pas_ d'annonce. Pour éviter ce problème, mieux vaut réinitialiser le contenu du conteneur avant d'insérer le message d'alerte.
 
 ```html
 <div id="alertContainer" role="alert"></div>

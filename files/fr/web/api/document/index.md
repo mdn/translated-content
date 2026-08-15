@@ -2,7 +2,7 @@
 title: Document
 slug: Web/API/Document
 l10n:
-  sourceCommit: 9af64ef430ad722b9cc3f75ccabeb8989c23b988
+  sourceCommit: 9cf3002bd29376c15d49df6fab2e6a264285abf6
 ---
 
 {{APIRef("DOM")}}
@@ -13,7 +13,7 @@ L'arbre du DOM inclut les éléments tels que {{HTMLElement("body")}}, {{HTMLEle
 
 {{InheritanceDiagram}}
 
-L'interface `Document` décrit les propriétés et méthodes communes à toutes sortes de documents. Selon le type de document (par exemple [HTML](/fr/docs/Web/HTML), [XML](/fr/docs/Web/XML), SVG, …), une API plus grande pourra être disponible&nbsp;: les documents HTML, servis avec le type de contenu `"text/html"` implémenteront également l'interface {{DOMxRef("HTMLDocument")}} tandis que les documents XML et SVG implémenteront l'interface {{DOMxRef("XMLDocument")}}.
+L'interface `Document` décrit les propriétés et méthodes communes à toutes sortes de documents. Selon le type de document (par exemple [HTML](/fr/docs/Web/HTML), [XML](/fr/docs/Web/XML), SVG, …), une API plus grande peut être disponible&nbsp;: les documents HTML, servis avec le type de contenu `"text/html"` implémentent également l'interface {{DOMxRef("HTMLDocument")}} tandis que les documents XML et SVG implémentent l'interface {{DOMxRef("XMLDocument")}}.
 
 ## Constructeur
 
@@ -43,6 +43,8 @@ _Cette interface hérite également des interfaces {{DOMxRef("Node")}} et {{DOMx
   - : Retourne le type MIME du document courant.
 - {{DOMxRef("Document.currentScript")}} {{ReadOnlyInline}}
   - : Retourne l'élément {{HTMLElement("script")}} dont le script est actuellement en cours de traitement et [qui n'est pas un module JavaScript <sup>(angl.)</sup>](https://github.com/whatwg/html/issues/997).
+- {{DOMxRef("Document.customElementRegistry")}} {{ReadOnlyInline}}
+  - : L'objet {{DOMxRef("CustomElementRegistry")}} associé à ce document, ou `null` si aucun n'a été défini.
 - {{DOMxRef("Document.doctype")}} {{ReadOnlyInline}}
   - : Retourne la définition du type de document (<i lang="en">Document Type Definition</i> ou DTD) du document courant.
 - {{DOMxRef("Document.documentElement")}} {{ReadOnlyInline}}
@@ -50,8 +52,8 @@ _Cette interface hérite également des interfaces {{DOMxRef("Node")}} et {{DOMx
 - {{DOMxRef("Document.documentURI")}} {{ReadOnlyInline}}
   - : Retourne l'emplacement du document sous la forme d'une chaîne de caractères.
 - {{DOMxRef("Document.embeds")}} {{ReadOnlyInline}}
-  - : Retourne un objet {{DOMxRef("HTMLCollection")}} des éléments embarqués (via {{HTMLElement('embed')}}) dans le document.
-- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Retourne un objet {{DOMxRef("HTMLCollection")}} des éléments embarqués (avec {{HTMLElement("embed")}}) dans le document.
+- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Retourne l'interface {{DOMxRef("FeaturePolicy")}} avec les politiques de fonctionnalités appliquées au document.
 - {{DOMxRef("Document.firstElementChild")}} {{ReadOnlyInline}}
   - : Retourne le premier élément enfant du document courant.
@@ -84,7 +86,7 @@ _Cette interface hérite également des interfaces {{DOMxRef("Node")}} et {{DOMx
 - {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
   - : Retourne l'élément définit comme cible pour les évènements de souris pendant que le pointeur est verrouillé. Cette propriété vaut `null` si le verrouillage est en cours, si le pointeur est déverrouillé ou si la cible est située dans un autre document.
 - {{DOMxRef("Document.prerendering")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : : Retourne un booléen indiquant si le document est en cours de pré-rendu, lorsqu'un pré-rendu est initié via la [Speculation Rules API](/fr/docs/Web/API/Speculation_Rules_API).
+  - : Retourne un booléen indiquant si le document est en cours de pré-rendu, lorsqu'un pré-rendu est initié avec [l'API Speculation Rules](/fr/docs/Web/API/Speculation_Rules_API).
 - {{DOMxRef("Document.scripts")}} {{ReadOnlyInline}}
   - : Retourne un objet {{DOMxRef("HTMLCollection")}} contenant les éléments {{HTMLElement("script")}} du document.
 - {{DOMxRef("Document.scrollingElement")}} {{ReadOnlyInline}}
@@ -154,11 +156,11 @@ _L'interface `Document` pour les documents HTML hérite de l'interface {{DOMxRef
 - {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Alias de {{DOMxRef("Document.characterSet")}}. Utilisez cette propriété à la place.
 - {{DOMxRef("Document.lastStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Retourne le nom de l'ensemble de feuilles de style qui a été activé en dernier. Vaut `null` tant que l'ensemble n'a pas été changé via {{DOMxRef("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
+  - : Retourne le nom de l'ensemble de feuilles de style qui a été activé en dernier. Vaut `null` tant que l'ensemble n'a pas été changé avec {{DOMxRef("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
 - {{DOMxRef("Document.linkColor")}} {{Deprecated_Inline}}
   - : Obtient ou définit la couleur des hyperliens du document.
 - {{DOMxRef("Document.preferredStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Retourne l'ensemble de feuilles de style préféré tel que spécifié par l'auteur·ice de la page.
+  - : Retourne l'ensemble de feuilles de style préféré tel que défini par l'auteur·ice de la page.
 - {{DOMxRef("Document.rootElement")}} {{Deprecated_Inline}}
   - : Comme {{DOMxRef("Document.documentElement")}}, mais uniquement pour les éléments racines {{SVGElement("svg")}}. Utilisez cette propriété à la place.
 - {{DOMxRef("Document.selectedStyleSheetSet")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
@@ -170,9 +172,9 @@ _L'interface `Document` pour les documents HTML hérite de l'interface {{DOMxRef
 - {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
   - : Retourne l'encodage déterminé par la déclaration XML.
 - `Document.xmlStandalone` {{Deprecated_Inline}}
-  - : Retourne `true` si la déclaration XML spécifie que le document est autonome (_par exemple, une partie externe de la DTD affecte le contenu du document_), sinon `false`.
+  - : Retourne `true` si la déclaration XML définit que le document est autonome (_par exemple, une partie externe de la DTD affecte le contenu du document_), sinon `false`.
 - {{DOMxRef("Document.xmlVersion")}} {{Deprecated_Inline}}
-  - : Retourne le numéro de version tel que spécifié dans la déclaration XML ou `"1.0"` si la déclaration est absente.
+  - : Retourne le numéro de version tel que défini dans la déclaration XML ou `"1.0"` si la déclaration est absente.
 
 ## Méthodes d'instance
 
@@ -182,7 +184,7 @@ _Cette interface hérite également des interfaces {{DOMxRef("Node")}} et {{DOMx
   - : Adopte un nœud d'un document externe.
 - {{DOMxRef("Document.append()")}}
   - : Insère un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou d'objets [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) après le dernier enfant du document.
-- {{DOMxRef("Document.ariaNotify()")}} {{Experimental_Inline}}
+- {{DOMxRef("Document.ariaNotify()")}}
   - : Définit qu'une chaîne de caractères donnée doit être annoncée par un lecteur d'écran.
 - {{DOMxRef("Document.browsingTopics()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Retourne une promesse qui se résout avec un tableau d'objets représentant les sujets principaux pour l'utilisateur·ice, un pour chacune des trois dernières époques. Par défaut, la méthode fait aussi enregistrer par le navigateur la visite de la page courante telle qu'observée par l'appelant·e, afin que le nom d'hôte de la page puisse ensuite être utilisé dans le calcul des sujets. Voir la [Topics API](/fr/docs/Web/API/Topics_API) pour plus de détails.
@@ -193,19 +195,19 @@ _Cette interface hérite également des interfaces {{DOMxRef("Node")}} et {{DOMx
 - {{DOMxRef("Document.caretRangeFromPoint()")}} {{Non-standard_Inline}}
   - : Obtient un objet {{DOMxRef("Range")}}pour le fragment de document situé aux coordonnées indiquées.
 - {{DOMxRef("Document.createAttribute()")}}
-  - : Crée un nouvel objet {{DOMxRef("Attr")}} et le renvoie.
+  - : Crée un nouvel objet {{DOMxRef("Attr")}} et le retourne.
 - {{DOMxRef("Document.createAttributeNS()")}}
-  - : Crée un nouveau nœud d'attribut dans un espace de noms donné et le renvoie.
+  - : Crée un nouveau nœud d'attribut dans un espace de noms donné et le retourne.
 - {{DOMxRef("Document.createCDATASection()")}}
-  - : Crée un nouveau nœud CDATA et le renvoie.
+  - : Crée un nouveau nœud CDATA et le retourne.
 - {{DOMxRef("Document.createComment()")}}
-  - : Crée un nouveau nœud de commentaire et le renvoie.
+  - : Crée un nouveau nœud de commentaire et le retourne.
 - {{DOMxRef("Document.createDocumentFragment()")}}
   - : Crée un nouveau fragment de document.
 - {{DOMxRef("Document.createElement()")}}
   - : Crée un nouvel élément avec le nom de balise indiqué.
 - {{DOMxRef("Document.createElementNS()")}}
-  - : Crée un nouvel élément avec le nom de balise indiqué et l'espace de noms passé via un URI.
+  - : Crée un nouvel élément avec le nom de balise indiqué et l'espace de noms passé par un URI.
 - {{DOMxRef("Document.createEvent()")}} {{Deprecated_Inline}}
   - : Crée un objet d'évènement.
 - {{DOMxRef("Document.createNodeIterator()")}}
@@ -253,7 +255,7 @@ _Cette interface hérite également des interfaces {{DOMxRef("Node")}} et {{DOMx
 - {{DOMxRef("Document.moveBefore()")}}
   - : Déplace un nœud ({{DOMxRef("Node")}}) donné à l'intérieur du nœud DOM `Document` en tant qu'enfant direct, avant un nœud de référence donné, sans retirer puis réinsérer le nœud.
 - {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
-  - : Permet de changer l'élément utilisé comme image d'arrière-plan pour un identifiant d'élément spécifié.
+  - : Permet de changer l'élément utilisé comme image d'arrière-plan pour un identifiant d'élément défini.
 - {{DOMxRef("Document.prepend()")}}
   - : Insère un ensemble d'objet {{DOMxRef("Node")}} ou une chaîne de caractères avant le premier enfant du document.
 - {{DOMxRef("Document.querySelector()")}}
@@ -268,8 +270,8 @@ _Cette interface hérite également des interfaces {{DOMxRef("Node")}} et {{DOMx
   - : Remplace l'enfant existant du document avec un ensemble de nouveaux enfants indiqué.
 - {{DOMxRef("Document.requestStorageAccess()")}}
   - : Permet à un document chargé dans un contexte tiers (c'est-à-dire intégré dans un {{HTMLElement("iframe")}}) de demander l'accès aux cookies non partitionnés, dans les cas où les agents utilisateurs bloquent par défaut l'accès à ces cookies pour les sites chargés dans un contexte tiers afin d'améliorer la confidentialité.
-- {{DOMxRef("Document.requestStorageAccessFor()")}} {{Experimental_Inline}}
-  - : Permet aux sites de premier niveau de demander l'accès aux cookies tiers pour le compte d'un contenu intégré provenant d'un autre site du même [ensemble de sites liés](/fr/docs/Web/API/Storage_Access_API/Related_website_sets).
+- {{DOMxRef("Document.requestStorageAccessFor()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Permet aux sites de premier niveau de demander l'accès aux cookies tiers pour le compte d'un contenu intégré provenant d'un autre site du même [ensemble de sites liés <sup>(angl.)</sup>](https://privacysandbox.google.com/cookies/related-website-sets-integration).
 - {{DOMxRef("Document.startViewTransition()")}}
   - : Démarre une nouvelle {{DOMxRef("View Transition API", "transition de vue", "", "nocode")}} et retourne un objet {{DOMxRef("ViewTransition")}} pour la représenter.
 
@@ -290,7 +292,7 @@ Pour les documents HTML, l'interface `Document` hérite de l'interface {{DOMxRef
   - : Pour la majorité des navigateurs récents, y compris pour les versions récentes de Firefox et d'Internet Explorer, cette méthode ne fait rien.
 - {{DOMxRef("Document.close()")}}
   - : Ferme le flux d'écriture sur un document.
-- {{DOMxRef("Document.execCommand()")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.execCommand()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Pour un document éditable, exécute une commande de formatage.
 - {{DOMxRef("Document.getElementsByName()")}}
   - : Retourne une liste des éléments avec le nom indiqué.
@@ -300,13 +302,13 @@ Pour les documents HTML, l'interface `Document` hérite de l'interface {{DOMxRef
   - : Ouvre le flux d'écriture sur un document.
 - {{DOMxRef("Document.queryCommandEnabled()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Retourne `true` si la commande de formatage peut être exécutée sur l'intervalle indiqué.
-- `Document.queryCommandIndeterm()` {{Deprecated_Inline}}
+- `Document.queryCommandIndeterm()` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Retourne `true` si la commande de formatage est dans un état indéterminé pour l'intervalle courant.
 - {{DOMxRef("Document.queryCommandState()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Retourne `true` si la commande de formatage a été exécutée sur l'intervalle courant.
 - {{DOMxRef("Document.queryCommandSupported()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Retourne `true` si la commande de formatage est prise en charge sur l'intervalle courant.
-- `Document.queryCommandValue()` {{Deprecated_Inline}}
+- `Document.queryCommandValue()` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Retourne la valeur de l'intervalle courant pour une commande de formatage.
 - {{DOMxRef("Document.write()")}} {{Deprecated_Inline}}
   - : Écrit du texte dans un document.
@@ -318,9 +320,9 @@ Pour les documents HTML, l'interface `Document` hérite de l'interface {{DOMxRef
 _Cette interface hérite également des interfaces {{DOMxRef("Node")}} et {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("Document/parseHTML_static", "Document.parseHTML()")}}
-  - : Crée un nouvel objet `Document` à partir d'une chaîne HTML, de façon sécurisée contre les attaques XSS, avec une étape de sanitisation.
+  - : Crée un nouvel objet `Document` à partir d'une chaîne de caractères HTML, de façon sécurisée contre les attaques XSS, avec une étape d'assainissement.
 - {{DOMxRef("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
-  - : Crée un nouvel objet `Document` à partir d'une chaîne HTML sans effectuer de sanitisation.
+  - : Crée un nouvel objet `Document` à partir d'une chaîne de caractères HTML sans effectuer d'assainissement.
     La chaîne de caractères peut contenir des racines d'ombre déclaratives.
 
 ## Évènements
@@ -379,7 +381,7 @@ L'écoute de ces évènements peut être effectuée avec `addEventListener()` ou
 - {{DOMxRef("Document/scrollsnapchange_event", "scrollsnapchange")}} {{Experimental_Inline}}
   - : Déclenché sur le conteneur de défilement à la fin d'une opération de défilement lorsqu'une nouvelle cible d'accrochage a été sélectionnée.
 - {{DOMxRef("Document/scrollsnapchanging_event", "scrollsnapchanging")}} {{Experimental_Inline}}
-  - : Déclenché sur le conteneur de défilement lorsque le navigateur détermine qu'une nouvelle cible d'accrochage est en attente, c'est-à-dire qu'elle sera sélectionnée à la fin du geste de défilement en cours.
+  - : Déclenché sur le conteneur de défilement lorsque le navigateur détermine qu'une nouvelle cible d'accrochage est en attente, c'est-à-dire qu'elle est sélectionnée à la fin du geste de défilement en cours.
 
 ### Évènements de sélection
 

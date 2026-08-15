@@ -3,7 +3,7 @@ title: Propriété CSS `d`
 short-title: d
 slug: Web/CSS/Reference/Properties/d
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`d`** définit un tracé à dessiner par l'élément SVG {{SVGElement("path")}}. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("d")}} de l'élément.
@@ -32,7 +32,7 @@ d: unset;
 
 ### Valeurs
 
-La valeur est soit une fonction {{CSSxRef("basic-shape/path", "path()")}} avec un unique paramètre {{CSSxRef("&lt;string&gt;")}}, soit le mot-clé `none`.
+La valeur est soit une fonction {{CSSxRef("basic-shape/path", "path()")}} avec un unique paramètre {{CSSxRef("&lt;string&gt;")}}, soit le mot-clé `none`&nbsp;:
 
 - `none`
   - : Aucun tracé n'est dessiné.
@@ -89,7 +89,7 @@ path:last-of-type {
 
 {{EmbedLiveSample("Définir les données de tracé", 300, 180)}}
 
-Le second `<path>` est un cœur, tel que défini par la valeur de la fonction `path()` de la propriété CSS `d`. Le tracé du `<path>` non stylisé reste un carré, comme défini dans la valeur de son attribut SVG `d`.
+Le second `<path>` est un cœur, tel que défini par la valeur de la fonction `path()` de la propriété CSS `d`. Le tracé du `<path>` n'est pas mis en forme et reste un carré, comme défini dans la valeur de son attribut SVG `d`.
 
 ### Animer les tracés de données
 
@@ -107,7 +107,7 @@ Nous créons un `<svg>` contenant un unique élément `<path>`.
 
 #### CSS
 
-Nous utilisons l'attribut `d` pour définir un cœur traversé par une ligne. Nous utilisons CSS pour définir le {{CSSxRef("fill")}}, le {{CSSxRef("stroke")}} et le {{CSSxRef("stroke-width")}} de ce tracé, et ajoutons une {{CSSxRef("transition")}} de deux secondes. Nous ajoutons un style {{CSSxRef(":hover")}} qui contient une fonction {{CSSxRef("basic-shape/path", "path()")}} légèrement différente&nbsp;; le tracé possède le même nombre de points de données que l'état par défaut, ce qui rend le tracé animable.
+Nous utilisons l'attribut `d` pour définir un cœur traversé par une ligne. Nous utilisons CSS pour définir le {{CSSxRef("fill")}}, le {{CSSxRef("stroke")}} et le {{CSSxRef("stroke-width")}} de ce tracé, et ajoutons une {{CSSxRef("transition")}} de deux secondes. Nous ajoutons un style {{CSSxRef(":hover")}} qui contient une fonction {{CSSxRef("basic-shape/path", "path()")}} légèrement différente&nbsp;; le tracé possède le même nombre de points de données que l'état par défaut, ce qui rend le tracé comme pouvant être animé.
 
 ```css
 svg {

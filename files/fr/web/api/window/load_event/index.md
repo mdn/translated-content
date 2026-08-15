@@ -2,23 +2,23 @@
 title: "Window : évènement load"
 slug: Web/API/Window/load_event
 l10n:
-  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
+  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
 ---
 
 {{APIRef}}
 
-L'évènement **`load`** de l'interface {{DOMxRef("Window")}} est déclenché lorsque la page et toutes ses ressources dépendantes (telles que des feuilles de style, des scripts (y compris les scripts asynchrones, différés et les modules), des cadres intégrés et des images) sont complètement chargées, à l'exception de celles qui sont [chargées paresseusement](/fr/docs/Web/Performance/Guides/Lazy_loading#images_et_iframes).
+L'évènement **`load`** de l'interface {{DOMxRef("Window")}} est déclenché lorsque la page et toutes ses ressources dépendantes (telles que des feuilles de style, des scripts (y compris les scripts asynchrones, différés et les modules), des cadres intégrés et des images) sont complètement chargées, à l'exception de celles qui sont [chargées paresseusement](/fr/docs/Web/Performance/Guides/Lazy_loading#images_iframes_vidéos_et_audio).
 Cela contraste avec {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, qui est déclenché dès que le DOM de la page est chargé, sans attendre la fin du chargement des ressources.
 
-Cet événement n'est pas annulable et ne se propage pas.
+Cet évènement n'est pas annulable et ne se propage pas.
 
 > [!NOTE]
-> _Tous les évènements nommés `load` ne se propageront pas vers `Window`_, même si `bubbles` est initialisé à `true`. Pour intercepter les évènements `load` sur la `window`, cet évènement `load` doit être dispatché directement vers la `window`.
+> _Tous les évènements nommés `load` ne se propagent pas vers `Window`_, même si `bubbles` est initialisé à `true`. Pour intercepter les évènements `load` sur la `window`, cet évènement `load` doit être dispatché directement vers la `window`.
 
 > [!NOTE]
 > L'évènement `load` qui est dispatché lorsque le document principal est chargé _est_ dispatché sur la `window`, mais possède deux propriétés modifiées&nbsp;: `target` est `document`, et `path` est `undefined`. Ces deux propriétés sont modifiées pour des raisons de compatibilité avec les versions précédentes.
 
-Pour éviter d'exécuter un script avant que le DOM qu'il manipule soit entièrement construit, vous pouvez placer le script à la fin du corps du document, juste avant la balise de fermeture `</body>`, sans l'envelopper dans un écouteur d'événement. Vous ne devriez généralement utiliser l'événement `load` que pour attendre le chargement des ressources externes, telles que les images ou les scripts différés.
+Pour éviter d'exécuter un script avant que le DOM qu'il manipule soit entièrement construit, vous pouvez placer le script à la fin du corps du document, juste avant la balise de fermeture `</body>`, sans l'envelopper dans un écouteur d'évènement. Vous ne devez généralement utiliser l'évènement `load` que pour attendre le chargement des ressources externes, telles que les images ou les scripts différés.
 
 ## Syntaxe
 

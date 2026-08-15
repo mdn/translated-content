@@ -47,7 +47,7 @@ l10n:
 - クライアントは、一般的なウェブユーザーが使うインターネットに接続された端末 (例えば Wi-Fi に接続されているコンピューターや、モバイルネットワークに接続されているスマートフォン) と、これらの端末で利用できるウェブにアクセスするソフトウェア (ふつうは Firefox や Chrome などのウェブブラウザー) のことです。
 - サーバーとは、ウェブページ、ウェブサイト、またはアプリを格納するために使われるコンピューターのことです。クライアントがウェブページにアクセスしようとすると、そのウェブページのコードのコピーがサーバーからクライアントのマシンにダウンロードされ、そこでブラウザーによってレンダリングされてユーザーに表示されます。
 
-以下の Scrimba<sup>[_MDN ラーニングパートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>による埋め込みコンテンツでは、クイズやディスカッションを含め、クライアントとサーバーに関する詳細情報が提供されています。
+以下の Scrimba<sup>[_MDN ラーニングパートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>による埋め込みコンテンツでは、クイズやディスカッションを含め、クライアントとサーバーに関する詳細情報が提供されています。
 
 <mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~0lq" scrimtitle="Clients and servers"></scrim-inline>
 

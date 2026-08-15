@@ -3,12 +3,12 @@ title: Propriété CSS `text-anchor`
 short-title: text-anchor
 slug: Web/CSS/Reference/Properties/text-anchor
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-anchor`** aligne une boîte contenant une chaîne de caractères textuelle où la zone de retour à la ligne est déterminée à partir de la propriété {{CSSxRef("inline-size")}}, et le texte est ensuite placé par rapport au point d'ancrage de l'élément, qui est défini à l'aide des attributs {{SVGAttr('x')}} et {{SVGAttr('y')}} (ou {{SVGAttr('dx')}} et {{SVGAttr('dy')}}). Si présent, la valeur de la propriété CSS remplace toute valeur de l'attribut {{SVGAttr("text-anchor")}} de l'élément.
 
-Chaque fragment de texte individuel au sein d'un élément est aligné indépendamment&nbsp;; ainsi, un élément {{SVGElement("text")}} multi-lignes aura chaque ligne de texte alignée selon la valeur de `text-anchor`. Les valeurs de `text-anchor` n'ont d'effet que sur les éléments SVG {{SVGElement("text")}}, {{SVGElement("textPath")}} et {{SVGElement("tspan")}}. `text-anchor` ne s'applique pas au texte automatiquement retourné à la ligne&nbsp;; pour cela, voir {{CSSxRef('text-align')}}.
+Chaque fragment de texte individuel au sein d'un élément est aligné indépendamment&nbsp;; ainsi, un élément {{SVGElement("text")}} multi-lignes a chaque ligne de texte alignée selon la valeur de `text-anchor`. Les valeurs de `text-anchor` n'ont d'effet que sur les éléments SVG {{SVGElement("text")}}, {{SVGElement("textPath")}} et {{SVGElement("tspan")}}. `text-anchor` ne s'applique pas au texte automatiquement retourné à la ligne&nbsp;; pour cela, voir {{CSSxRef('text-align')}}.
 
 ## Syntaxe
 
@@ -27,14 +27,16 @@ text-anchor: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `start`
-  - : Aligne le texte de manière à ce que le début de la chaîne de caractère textuelle soit aligné sur le point d'ancrage. Cet alignement est relatif au sens d'écriture du texte&nbsp;; ainsi, par exemple, dans une écriture de droite à gauche et de haut en bas, le texte sera placé à gauche du point d'ancrage. Si le sens d'écriture du texte est vertical, comme c'est le cas pour de nombreuses langues asiatiques, le bord supérieur du texte est aligné sur le point d'ancrage.
+  - : Aligne le texte de manière à ce que le début de la chaîne de caractères textuelle soit aligné sur le point d'ancrage. Cet alignement est relatif au sens d'écriture du texte&nbsp;; ainsi, par exemple, dans une écriture de droite à gauche et de haut en bas, le texte est placé à gauche du point d'ancrage. Si le sens d'écriture du texte est vertical, comme c'est le cas pour de nombreuses langues asiatiques, le bord supérieur du texte est aligné sur le point d'ancrage.
 
 - `middle`
   - : Aligne le texte de manière à ce que le centre (milieu) de la boîte en ligne de la chaîne de caractères textuelle soit aligné avec le point d'ancrage.
 
 - `end`
-  - : Aligne le texte de manière à ce que la fin de la chaîne de caractères textuelle soit alignée sur le point d'ancrage. Cet alignement est relatif au sens d'écriture du texte&nbsp;; ainsi, par exemple, dans une écriture de droite à gauche et de haut en bas, le texte sera placé à droite du point d'ancrage. Si le sens d'écriture du texte est vertical, comme c'est le cas pour de nombreuses langues asiatiques, le bord inférieur du texte est aligné sur le point d'ancrage.
+  - : Aligne le texte de manière à ce que la fin de la chaîne de caractères textuelle soit alignée sur le point d'ancrage. Cet alignement est relatif au sens d'écriture du texte&nbsp;; ainsi, par exemple, dans une écriture de droite à gauche et de haut en bas, le texte est placé à droite du point d'ancrage. Si le sens d'écriture du texte est vertical, comme c'est le cas pour de nombreuses langues asiatiques, le bord inférieur du texte est aligné sur le point d'ancrage.
 
 ## Définition formelle
 

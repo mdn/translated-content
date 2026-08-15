@@ -3,7 +3,7 @@ title: Propriété CSS `box-decoration-break`
 short-title: box-decoration-break
 slug: Web/CSS/Reference/Properties/box-decoration-break
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`box-decoration-break`** définit comment les [fragments](/fr/docs/Web/CSS/Guides/Fragmentation) d'un élément doivent être affichés lorsqu'ils sont coupés sur plusieurs lignes, colonnes ou pages.
@@ -64,18 +64,18 @@ box-decoration-break: revert-layer;
 box-decoration-break: unset;
 ```
 
-La propriété `box-decoration-break` est définie avec l'un des mots-clés définis ci-après.
-
 ### Valeurs
 
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
 - `slice`
-  - : L'élément est initialement affiché comme si la boîte n'était pas fragmentée puis le rendu de cette boîte hypothétique est découpé en fragments pour chaque ligne/colonne/page. On notera que la boîte hypothétique peut être différente pour chaque fragment car elle utilise sa propre hauteur (si la rupture apparaît dans la direction de l'élément) ou sa propre largeur (si la rupture apparaît dans la direction orthogonale). C'est la valeur initiale de la propriété.
+  - : L'élément est initialement affiché comme si la boîte n'était pas fragmentée puis le rendu de cette boîte hypothétique est découpé en fragments pour chaque ligne/colonne/page. Notez que la boîte hypothétique peut être différente pour chaque fragment, car elle utilise sa propre hauteur (si la rupture apparaît dans la direction de l'élément) ou sa propre largeur (si la rupture apparaît dans la direction orthogonale). C'est la valeur initiale de la propriété.
 - `clone`
-  - : Le rendu de chaque fragment de boîte est obtenu indépendamment avec la bordure, le remplissage, la marge indiqués pour chacun des fragments. Les propriétés {{CSSxRef("border-radius")}}, {{CSSxRef("border-image")}} et {{CSSxRef("box-shadow")}} sont appliquées indépendamment à chaque fragment. L'arrière-plan est dessiné indépendamment pour chaque fragment (ainsi, une image d'arrière-plan avec {{CSSxRef("background-repeat", "background-repeat: no-repeat")}} pourra être présente à plusieurs reprises).
+  - : Le rendu de chaque fragment de boîte est obtenu indépendamment avec la bordure, le remplissage, la marge indiqués pour chacun des fragments. Les propriétés {{CSSxRef("border-radius")}}, {{CSSxRef("border-image")}} et {{CSSxRef("box-shadow")}} sont appliquées indépendamment à chaque fragment. L'arrière-plan est dessiné indépendamment pour chaque fragment (ainsi, une image d'arrière-plan avec {{CSSxRef("background-repeat", "background-repeat: no-repeat")}} peut être présente à plusieurs reprises).
 
 ## Description
 
-La valeur définie aura un impact sur l'apparence des propriétés suivantes&nbsp;:
+La valeur définie a un impact sur l'apparence des propriétés suivantes&nbsp;:
 
 - {{CSSxRef("background")}}
 - {{CSSxRef("border")}}
@@ -145,8 +145,8 @@ span {
 
 ### Fragments de boîte en bloc
 
-L'exemple suivant montre l'apparence des éléments de bloc avec une décoration de boîte lorsqu'ils contiennent des sauts de ligne dans une [mise en page multicolonne](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout).
-Remarquez que le résultat de `box-decoration-break: slice` serait équivalent au premier {{HTMLElement("div")}} si on les empilait verticalement.
+L'exemple suivant montre l'apparence des éléments de bloc avec une décoration de boîte lorsqu'ils contiennent des sauts de ligne dans une [mise en page multi-colonne](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout).
+Remarquez que le résultat de `box-decoration-break: slice` est équivalent au premier {{HTMLElement("div")}} si on les empilait verticalement.
 
 ```css hidden
 body {

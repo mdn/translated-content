@@ -2,12 +2,12 @@
 title: Compilation
 slug: Glossary/Compile
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 453a2a29e3e7a3ef64e65acc6121914f54334bc7
 ---
 
 La **compilation** est le processus qui consiste à transformer un programme informatique écrit dans un certain {{Glossary("computer programming", "langage")}} en un ensemble d'instructions dans un autre format ou langage. Un **compilateur** est un programme informatique qui réalise cette tâche.
 
-En général, un compilateur transforme du code écrit dans un langage de haut niveau comme [C++](https://fr.wikipedia.org/wiki/C%2B%2B), [Rust](<https://fr.wikipedia.org/wiki/Rust_(langage)>) ou [Java](<https://fr.wikipedia.org/wiki/Java_(langage)>) en code exécutable (pouvant être lancé) — appelé **code binaire** ou **code machine**. [WebAssembly](/fr/docs/WebAssembly), par exemple, est une forme de code binaire exécutable qui [peut être compilé à partir de code écrit en C++, Rust, C#, Go, Swift et plusieurs autres langages <sup>(angl.)</sup>](https://webassembly.org/getting-started/developers-guide/) et exécuté sur n'importe quelle page web, avec la plupart des fonctionnalités prises en charge dans les navigateurs modernes (voir le [tableau de compatibilité des navigateurs](/fr/docs/WebAssembly#compatibilité_des_navigateurs)).
+En général, un compilateur transforme du code écrit dans un langage de haut niveau comme [C++](https://fr.wikipedia.org/wiki/C%2B%2B), [Rust](<https://fr.wikipedia.org/wiki/Rust_(langage)>) ou [Java](<https://fr.wikipedia.org/wiki/Java_(langage)>) en code exécutable (pouvant être lancé) — appelé **code binaire** ou **code machine**. [WebAssembly](/fr/docs/WebAssembly), par exemple, est une forme de code binaire exécutable qui [peut être compilé à partir de code écrit en C++, Rust, C#, Go, Swift et plusieurs autres langages <sup>(angl.)</sup>](https://webassembly.org/getting-started/developers-guide/) et exécuté sur n'importe quelle page web, avec une bonne prise en charge dans les navigateurs modernes.
 
 La plupart des compilateurs effectuent soit une compilation anticipée (<i lang="en">ahead-of-time</i>, AOT), soit une compilation {{Glossary("Just In Time Compilation", "just-in-time (JIT)")}}.
 

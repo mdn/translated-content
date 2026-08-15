@@ -1,13 +1,13 @@
 ---
 title: Plugin (プラグイン)
 slug: Glossary/Plugin
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 ブラウザープラグインとは、ブラウザーがネイティブに対応できないコンテンツを扱うために、ユーザーがインストールすることができるソフトウェアコンポーネントのことです。ブラウザープラグインは通常、 [NPAPI](https://en.wikipedia.org/wiki/NPAPI) (Netscape Plugin Application Programming Interface) アーキテクチャを使用して記述されています。
 
-最も有名で広く使われていたプラグインは Adobe Flash Player で、これによりブラウザーで {{Glossary("Adobe Flash")}} コンテンツを実行できるようになりました。
+最も有名で広く使われていたプラグインは終了した Adobe Flash player で、これによりブラウザーで {{Glossary("Adobe Flash")}} コンテンツを実行できるようになりました。
 
 ブラウザーがより強力になるにつれて、プラグインはあまり有用ではなくなってきました。また、プラグインはウェブユーザーにセキュリティやパフォーマンスの問題を引き起こしてきた歴史があります。
 

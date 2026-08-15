@@ -127,8 +127,8 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 - {{jsxref("Generator")}} {{non-standard_inline}}
 - {{jsxref("Iterator")}} {{non-standard_inline}}
-- {{jsxref("ParallelArray")}} {{non-standard_inline}}
-- {{jsxref("StopIteration")}} {{non-standard_inline}}
+- `ParallelArray` {{non-standard_inline}}
+- `StopIteration` {{non-standard_inline}}
 
 ### Прочее
 

@@ -3,10 +3,10 @@ title: Propriété CSS `forced-color-adjust`
 short-title: forced-color-adjust
 slug: Web/CSS/Reference/Properties/forced-color-adjust
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`forced-color-adjust`** permet aux auteurs de ne pas activer les modes de couleurs forcées sur certains éléments. Cela restaure la possibilité de contrôler ces valeurs en CSS.
+La propriété [CSS](/fr/docs/Web/CSS) **`forced-color-adjust`** permet aux auteur·ice·s de ne pas activer les modes de couleurs forcées sur certains éléments. Cela restaure la possibilité de contrôler ces valeurs en CSS.
 
 ## Syntaxe
 
@@ -23,9 +23,9 @@ forced-color-adjust: revert-layer;
 forced-color-adjust: unset;
 ```
 
-La valeur de la propriété `forced-color-adjust` doit être l'un des mots-clés suivants.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : En mode de couleurs forcées, les couleurs de l'élément sont définies par {{Glossary("user agent", "l'agent utilisateur")}}. C'est la valeur par défaut.
@@ -36,7 +36,7 @@ La valeur de la propriété `forced-color-adjust` doit être l'un des mots-clés
 
 ## Notes d'utilisation
 
-Cette propriété ne devrait être utilisée que pour faire des modifications qui prendront en charge les pré-requis de couleurs et de contrastes. Par exemple, si vous savez que les optimisations de couleur faites par {{Glossary("user agent", "l'agent utilisateur")}} conduisent à une mauvaise expérience en mode contrasté ou en mode sombre. L'utilisation de cette propriété vous permettra alors de modifier le résultat dans ce mode pour proposer une meilleure expérience. **Elle ne devrait pas être utilisée dans le but d'empêcher les choix de l'utilisateur d'être respectés**.
+Cette propriété ne doit pas être utilisée que pour faire des modifications qui prennent en charge les pré-requis de couleurs et de contrastes. Par exemple, si vous savez que les optimisations de couleur faites par {{Glossary("user agent", "l'agent utilisateur")}} conduisent à une mauvaise expérience en mode contrasté ou en mode sombre. L'utilisation de cette propriété vous permet alors de modifier le résultat dans ce mode pour proposer une meilleure expérience. **Elle ne doit pas être utilisée dans le but d'empêcher les choix de l'utilisateur·ice d'être respectés**.
 
 ## Définition formelle
 
@@ -50,14 +50,14 @@ Cette propriété ne devrait être utilisée que pour faire des modifications qu
 
 ### Préserver les couleurs
 
-Dans l'exemple ci-dessous, la première boîte utilise le jeu de couleur définit par l'utilisateur·ice. Par exemple, dans le mode à forts contrastes sombre de Windows, cela donnera du texte blanc sur fond noir. La seconde boîte conservera quant à elle les couleurs du site définies par la classe `.box`.
+Dans l'exemple ci-dessous, la première boîte utilise le jeu de couleur définit par l'utilisateur·ice. Par exemple, dans le mode à forts contrastes sombre de Windows, cela donne du texte blanc sur fond noir. La seconde boîte conserve quant à elle les couleurs du site définies par la classe `.box`.
 
 En utilisant la fonctionnalité média {{CSSxRef("@media/forced-colors", "forced-colors")}}, vous pouvez ajouter n'importe qu'elle autre optimisation pour le mode de couleurs forcées aux côtés de la propriété `forced-color-adjust`.
 
 #### CSS
 
 ```css
-.box {
+.boite {
   border: 5px solid grey;
   background-color: #cccccc;
   width: 300px;
@@ -66,7 +66,7 @@ En utilisant la fonctionnalité média {{CSSxRef("@media/forced-colors", "forced
 }
 
 @media (forced-colors: active) {
-  .forced {
+  .forcee {
     forced-color-adjust: none;
   }
 }
@@ -75,12 +75,12 @@ En utilisant la fonctionnalité média {{CSSxRef("@media/forced-colors", "forced
 #### HTML
 
 ```html
-<div class="box">
-  <p>Voici une boîte qui utilisera vos préférences de couleurs.</p>
+<div class="boite">
+  <p>Voici une boîte qui utilise vos préférences de couleurs.</p>
 </div>
 
-<div class="box forced">
-  <p>Voici une boîte qui conservera les couleurs définies par le site.</p>
+<div class="boite forcee">
+  <p>Voici une boîte qui conserve les couleurs définies par le site.</p>
 </div>
 ```
 

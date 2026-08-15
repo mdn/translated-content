@@ -2,7 +2,7 @@
 title: Tipos de página
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 l10n:
-  sourceCommit: e0a2b683c4ddaeecdc4ddebf16e4a72c2dda17ac
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 MDN utiliza repetidamente varios tipos de páginas.

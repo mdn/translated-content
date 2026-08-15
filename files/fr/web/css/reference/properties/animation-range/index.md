@@ -3,10 +3,10 @@ title: Propriété CSS `animation-range`
 short-title: animation-range
 slug: Web/CSS/Reference/Properties/animation-range
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`animation-range`** est utilisée pour définir le début et la fin de la plage d'attachement d'une animation le long de sa chronologie, c'est-à-dire à quel endroit de la chronologie une animation commencera et se terminera.
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`animation-range`** est utilisée pour définir le début et la fin de la plage d'attachement d'une animation le long de sa chronologie, c'est-à-dire à quel endroit de la chronologie une animation commence et se termine.
 
 ## Propriétés constitutives
 
@@ -51,9 +51,9 @@ animation-range: revert-layer;
 animation-range: unset;
 ```
 
-La propriété raccourcie `animation-range` est définie comme une ou plusieurs plages d'animation simples, séparées par des virgules. Chaque plage d'animation est définie par une à quatre valeurs séparées par des espaces, composées de valeurs `<timeline-range-name>`, de valeurs `<length-percentage>`, et/ou du mot-clé `normal`.
-
 ### Values
+
+La propriété raccourcie `animation-range` est définie comme une ou plusieurs plages d'animation simples, séparées par des virgules. Chaque plage d'animation est définie par une à quatre valeurs séparées par des espaces, composées de valeurs `<timeline-range-name>`, de valeurs `<length-percentage>`, et/ou du mot-clé `normal`.
 
 - `<animation-range-start>`
   - : Le mot-clé `normal`, une valeur `<length-percentage>`, un {{CSSxRef("timeline-range-name")}}, ou une paire `<timeline-range-name> <length-percentage>`, représentant {{CSSxRef("animation-range-start")}}. Si un `<timeline-range-name>` est défini sans `<length-percentage>`, la valeur `<length-percentage>` par défaut est `0%`.
@@ -62,11 +62,11 @@ La propriété raccourcie `animation-range` est définie comme une ou plusieurs 
 
 ## Description
 
-La propriété raccourcie `animation-range` définit les valeurs de `animation-range-start` et `animation-range-end`, déterminant où, le long de la chronologie de l'animation, l'animation commencera et se terminera. Par défaut, les styles définis dans une animation par images-clés ne sont appliqués à un élément que lorsque cet élément est animé. Le moment où une animation par images-clés est appliquée à un élément dépend de la chronologie de cette animation. Par défaut, les animations ne sont appliquées qu'entre le début et la fin de la plage de la chronologie. Pour appliquer l'animation en dehors de cette plage, définissez {{CSSxRef("animation-fill-mode")}} sur `backwards`, `forwards` ou `both`. Ces trois valeurs de `animation-fill-mode` appliquent respectivement les styles de la première image-clé jusqu'au début de la plage, les styles de la dernière image-clé après la fin de l'animation, ou les deux avant et après.
+La propriété raccourcie `animation-range` définit les valeurs de `animation-range-start` et `animation-range-end`, déterminant où, le long de la chronologie de l'animation, l'animation commence et se termine. Par défaut, les styles définis dans une animation par images-clés ne sont appliqués à un élément que lorsque cet élément est animé. Le moment où une animation par images-clés est appliquée à un élément dépend de la chronologie de cette animation. Par défaut, les animations ne sont appliquées qu'entre le début et la fin de la plage de la chronologie. Pour appliquer l'animation en dehors de cette plage, définissez {{CSSxRef("animation-fill-mode")}} sur `backwards`, `forwards` ou `both`. Ces trois valeurs de `animation-fill-mode` appliquent respectivement les styles de la première image-clé jusqu'au début de la plage, les styles de la dernière image-clé après la fin de l'animation, ou les deux avant et après.
 
-La zone {{Glossary("Scroll container", "conteneur de défilement")}} appelée plage de visibilité de la progression de la vue est la zone à l'intérieur de laquelle l'élément sujet d'une animation [vue progression nommée](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#afficher_la_chronologie_de_progression) est considérée comme visible. Par défaut, il s'agit de toute la plage du scrollport, mais elle peut être ajustée à l'aide de la propriété {{CSSxRef("view-timeline-inset")}}.
+La zone {{Glossary("Scroll container", "conteneur de défilement")}} appelée plage de visibilité de la progression de la vue est la zone à l'intérieur de laquelle l'élément sujet d'une animation [vue progression nommée](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#afficher_la_chronologie_de_progression) est considérée comme visible. Par défaut, il s'agit de toute la plage du conteneur de défilement, mais elle peut être ajustée à l'aide de la propriété {{CSSxRef("view-timeline-inset")}}.
 
-Si deux valeurs sont définies comme composants de la propriété `<animation-range>`, elles seront interprétées dans l'ordre `<animation-range-start>` puis `<animation-range-end>`. La valeur de chaque composant est soit le mot-clé `normal`, une {{CSSxRef("length-percentage")}}, ou un {{CSSxRef("timeline-range-name")}} éventuellement suivi d'une `<length-percentage>`. Ces valeurs sont séparées par des espaces. `normal` équivaut à `0%` pour le début et à `100%` pour la fin. Définir `normal` avec une `<length-percentage>` pour le début ou la fin de la plage est invalide.
+Si deux valeurs sont définies comme composants de la propriété `<animation-range>`, elles sont interprétées dans l'ordre `<animation-range-start>` puis `<animation-range-end>`. La valeur de chaque composant est soit le mot-clé `normal`, une {{CSSxRef("length-percentage")}}, ou un {{CSSxRef("timeline-range-name")}} éventuellement suivi d'une `<length-percentage>`. Ces valeurs sont séparées par des espaces. `normal` équivaut à `0%` pour le début et à `100%` pour la fin. Définir `normal` avec une `<length-percentage>` pour le début ou la fin de la plage est invalide.
 
 ### Définir le début de plage et définir la fin par défaut
 
@@ -100,7 +100,7 @@ Si vous incluez deux valeurs et que la première valeur est le mot-clé `normal`
 
 ### Plusieurs animations
 
-Lorsque vous définissez des plages pour plusieurs animations, la propriété raccourcie `animation-range` est définie comme une ou plusieurs plages d'animation simples, séparées par des virgules. Chaque plage d'animation est appliquée aux animations dans l'ordre dans lequel les {{CSSxRef("animation-name")}} apparaissent. Dans les situations où le nombre d'animations et le nombre de valeurs de la propriété `animation-range` ne correspondent pas, si le nombre de valeurs `animation-range` est supérieur au nombre d'animations, les plages supplémentaires sont ignorées. Si le nombre d'animations est supérieur au nombre de plages, la liste des valeurs `animation-range` est répétée jusqu'à ce qu'il y ait une plage correspondante pour chaque animation. Par exemple, si l'on définit `animation-range: 25% 75%, normal;`, la plage d'animation de toutes les animations impaires sera `25% 75%` et celle de toutes les animations paires sera `0% 100%`.
+Lorsque vous définissez des plages pour plusieurs animations, la propriété raccourcie `animation-range` est définie comme une ou plusieurs plages d'animation simples, séparées par des virgules. Chaque plage d'animation est appliquée aux animations dans l'ordre dans lequel les {{CSSxRef("animation-name")}} apparaissent. Dans les situations où le nombre d'animations et le nombre de valeurs de la propriété `animation-range` ne correspondent pas, si le nombre de valeurs `animation-range` est supérieur au nombre d'animations, les plages supplémentaires sont ignorées. Si le nombre d'animations est supérieur au nombre de plages, la liste des valeurs `animation-range` est répétée jusqu'à ce qu'il y ait une plage correspondante pour chaque animation. Par exemple, si l'on définit `animation-range: 25% 75%, normal;`, la plage d'animation de toutes les animations impaires est `25% 75%` et celle de toutes les animations paires est `0% 100%`.
 
 ## Définition formelle
 
@@ -118,7 +118,7 @@ Dans cet exemple, nous réduisons la durée de l'animation de défilement de pro
 
 #### HTML
 
-Au milieu d'un bloc de texte, nous incluons un élément que nous allons animer. Nous ajoutons beaucoup de texte pour nous assurer que notre contenu déborde de son conteneur, mais cela est masqué pour plus de clarté.
+Au milieu d'un bloc de texte, nous incluons un élément que nous allons animer. Nous ajoutons beaucoup de texte pour nous assurer que notre contenu déborde de son conteneur, mais c'est masqué pour plus de clarté.
 Nous incluons également une case à cocher pour activer ou désactiver la propriété {{CSSxRef("animation-fill-mode")}}, afin de montrer son effet sur des chronologies d'animation raccourcies. Ceci est également masqué.
 
 ```html-nolint hidden
@@ -254,9 +254,9 @@ Faites défiler pour voir l'élément animé.
 
 Remarquez que les valeurs de propriété de `from`, ou `0%`, d'étape ne sont pas appliquées à l'élément animé tant que le bord supérieur du bloc n'est pas à `10%` au-delà du bord inférieur du conteneur&nbsp;; il est alors en taille réelle, totalement opaque et magenta. À ce moment-là, l'animation est appliquée et il est mis en forme avec les valeurs définies par le sélecteur de `0%` [sélecteur d'étape](/fr/docs/Web/CSS/Reference/Selectors/Keyframe_selectors). Lorsque `animation-range-end` est atteint, à 25% du haut du conteneur de défilement, il revient à son style d'origine.
 
-En général, il est conseillé de définir `animation-fill-mode: both` lors de la création d'[animations pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations). Le retour à l'état par défaut se produit car nous n'avons pas défini la propriété {{CSSxRef("animation-fill-mode")}} sur l'élément, qui peut être utilisée pour appliquer les styles d'une animation à un élément avant et après l'exécution de l'animation. Nous avons initialement omis la propriété dans cet exemple pour mieux visualiser les effets de `animation-range`.
+En général, il est conseillé de définir `animation-fill-mode: both` lors de la création [d'animations pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations). Le retour à l'état par défaut se produit, car nous n'avons pas défini la propriété {{CSSxRef("animation-fill-mode")}} sur l'élément, qui peut être utilisée pour appliquer les styles d'une animation à un élément avant et après l'exécution de l'animation. Nous avons initialement omis la propriété dans cet exemple pour mieux visualiser les effets de `animation-range`.
 
-Cochez la case pour appliquer la propriété `animation-fill-mode` à l'élément animé puis faites défiler à nouveau&nbsp;: les styles d'animation devraient maintenant être appliqués en continu.
+Cochez la case pour appliquer la propriété `animation-fill-mode` à l'élément animé puis faites défiler à nouveau&nbsp;: les styles d'animation doivent maintenant être appliqués en continu.
 
 ## Spécifications
 

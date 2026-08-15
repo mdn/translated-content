@@ -3,7 +3,7 @@ title: Propriété CSS `vector-effect`
 short-title: vector-effect
 slug: Web/CSS/Reference/Properties/vector-effect
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`vector-effect`** supprime certains [effets de transformation](/fr/docs/Web/SVG/Reference/Attribute/transform) dans SVG, permettant ainsi des effets comme une route sur une carte restant de la même largeur quel que soit le zoom de la carte, ou permettant à une légende de diagramme de conserver sa position et sa taille indépendamment des autres transformations. Elle ne peut être utilisée qu'avec des éléments SVG qui acceptent l'attribut {{SVGAttr("vector-effect")}}. Lorsqu'elle est utilisée, la valeur CSS remplace toute valeur de l'attribut `vector-effect` de l'élément.
@@ -25,10 +25,12 @@ vector-effect: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `none`
-  - : Aucun effet vectoriel n'est appliqué à l'élément, ce qui signifie qu'il sera entièrement affecté par les transformations comme d'habitude.
+  - : Aucun effet vectoriel n'est appliqué à l'élément, ce qui signifie qu'il est entièrement affecté par les transformations comme d'habitude.
 - `non-scaling-stroke`
-  - : La largeur du trait dessiné de l'élément sera physiquement égale à sa largeur de trait définie, même si l'élément a été agrandi ou réduit en taille en raison des transformations de lui-même ou de son système de coordonnées. C'est le cas que l'élément soit mis à l'échelle avec des transformations ou par le redimensionnement physique de l'image entière.
+  - : La largeur du trait dessiné de l'élément est physiquement égale à sa largeur de trait définie, même si l'élément a été agrandi ou réduit en taille en raison des transformations de lui-même ou de son système de coordonnées. C'est le cas que l'élément soit mis à l'échelle avec des transformations ou par le redimensionnement physique de l'image entière.
 
 > [!NOTE]
 > La spécification définit trois autres valeurs, `non-scaling-size`, `non-rotation` et `fixed-position`, mais elles n'ont aucune implémentation et sont considérées comme à risque.
