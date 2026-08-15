@@ -2,7 +2,7 @@
 title: SVG API
 slug: Web/API/SVG_API
 l10n:
-  sourceCommit: a7dc8593894e275bb9d522168f3ae9120ce5242e
+  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
 ---
 
 {{DefaultAPISidebar("SVG")}}
@@ -29,9 +29,9 @@ SVG API は以下の大分類に分類されるインターフェイスの集合
 - {{DOMxRef("SVGCircleElement")}}
 - {{DOMxRef("SVGClipPathElement")}}
 - {{DOMxRef("SVGComponentTransferFunctionElement")}}
-- {{DOMxRef("SVGCursorElement")}}
 - {{DOMxRef("SVGDefsElement")}}
 - {{DOMxRef("SVGDescElement")}}
+- {{DOMxRef("SVGDiscardElement")}}
 - {{DOMxRef("SVGElement")}}
 - {{DOMxRef("SVGEllipseElement")}}
 - {{DOMxRef("SVGFEBlendElement")}}
@@ -65,8 +65,6 @@ SVG API は以下の大分類に分類されるインターフェイスの集合
 - {{DOMxRef("SVGGeometryElement")}}
 - {{DOMxRef("SVGGradientElement")}}
 - {{DOMxRef("SVGGraphicsElement")}}
-- {{DOMxRef("SVGHatchElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGHatchpathElement")}} {{Experimental_Inline}}
 - {{DOMxRef("SVGImageElement")}}
 - {{DOMxRef("SVGLinearGradientElement")}}
 - {{DOMxRef("SVGLineElement")}}
@@ -103,14 +101,10 @@ SVG API は以下の大分類に分類されるインターフェイスの集合
 #### 静的型
 
 - {{DOMxRef("SVGAngle")}}
-- {{DOMxRef("SVGElementInstance")}}
-- {{DOMxRef("SVGElementInstanceList")}}
 - {{DOMxRef("SVGLength")}}
 - {{DOMxRef("SVGLengthList")}}
-- {{DOMxRef("SVGNameList")}}
 - {{DOMxRef("SVGNumber")}}
 - {{DOMxRef("SVGNumberList")}}
-- {{DOMxRef("SVGPaint")}}
 - {{DOMxRef("SVGPreserveAspectRatio")}}
 - {{DOMxRef("SVGStringList")}}
 - {{DOMxRef("SVGTransform")}}
@@ -133,14 +127,11 @@ SVG API は以下の大分類に分類されるインターフェイスの集合
 
 ### SMIL 関連インターフェイス
 
-- {{DOMxRef("ElementTimeControl")}}
 - {{DOMxRef("TimeEvent")}}
 
 ### その他の SVG インターフェイス
 
-- {{DOMxRef("GetSVGDocument")}}
 - {{DOMxRef("ShadowAnimation")}}
-- {{DOMxRef("SVGDocument")}}
 - {{DOMxRef("SVGUnitTypes")}}
 - {{DOMxRef("SVGUseElementShadowRoot")}}
 
