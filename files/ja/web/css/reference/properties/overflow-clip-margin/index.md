@@ -1,8 +1,9 @@
 ---
-title: overflow-clip-margin
+title: CSS `overflow-clip-margin` プロパティ
+short-title: overflow-clip-margin
 slug: Web/CSS/Reference/Properties/overflow-clip-margin
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 0c62b082755017d0773ecaaee7e74efd5e066d0b
 ---
 
 **`overflow-clip-margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [`overflow: clip`](/ja/docs/Web/CSS/Reference/Properties/overflow) を持つ要素がクリップされる前に、要素の辺からどれだけ外側に描画できるかを指定します。 このプロパティで定義される境界は、ボックスのオーバーフロークリップ枠と呼ばれます。
@@ -25,7 +26,7 @@ overflow-clip-margin: revert-layer;
 overflow-clip-margin: unset;
 ```
 
-`<visual-box>` 値（既定値は `padding-box`）は、オーバーフロークリップ枠の原点として使用するボックス枠を指定します。 `overflow-clip-margin` で指定する {{cssxref("&lt;length&gt;")}} の値は負の値であってはなりません。
+`<visual-box>` 値（デフォルト値は `padding-box`）は、オーバーフロークリップ枠の原点として使用するボックス枠を指定します。 `overflow-clip-margin` で指定する {{cssxref("&lt;length&gt;")}} の値は負の値であってはなりません。
 
 > [!NOTE]
 > `overflow: clip` を持たない要素では、このプロパティは無視されます。
