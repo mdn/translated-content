@@ -2782,49 +2782,6 @@
       "syj300"
     ]
   },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_first_component": {
-    "modified": "2020-12-04T03:44:08.883Z",
-    "contributors": [
-      "wang_liang"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_getting_started": {
-    "modified": "2020-12-11T06:35:44.409Z",
-    "contributors": [
-      "amai0w0",
-      "wang_liang",
-      "zisedelinghun",
-      "ZhangNing",
-      "MRzhangzhenhua",
-      "929721152",
-      "xyjk0917"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models": {
-    "modified": "2020-09-22T07:48:03.161Z",
-    "contributors": [
-      "helldealer"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists": {
-    "modified": "2020-09-22T04:42:41.746Z",
-    "contributors": [
-      "helldealer"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_resources": {
-    "modified": "2020-12-01T12:40:05.687Z",
-    "contributors": [
-      "zisedelinghun",
-      "Hzbmangguo"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_styling": {
-    "modified": "2020-10-15T23:41:44.939Z",
-    "contributors": [
-      "ygxwdls"
-    ]
-  },
   "Learn_web_development/Core/Scripting": {
     "modified": "2020-07-16T22:31:11.083Z",
     "contributors": [
@@ -42687,6 +42644,49 @@
     "modified": "2020-10-15T22:15:29.365Z",
     "contributors": [
       "Cyandev"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Frameworks_libraries_51e1d660a50928d0c43a68412e42d7904681eb2a80f752007dd30b9f21b68d9e": {
+    "modified": "2020-09-22T04:42:41.746Z",
+    "contributors": [
+      "helldealer"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Frameworks_libraries_59d50f48504380b7c376c9b05a3eba16e50eb9586080c11e99583588c6d97a05": {
+    "modified": "2020-09-22T07:48:03.161Z",
+    "contributors": [
+      "helldealer"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Frameworks_libraries_84093c070eccd5df9eb565382c96588b0651ce028db5a32f29cdbb51bacb1aae": {
+    "modified": "2020-12-01T12:40:05.687Z",
+    "contributors": [
+      "zisedelinghun",
+      "Hzbmangguo"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Frameworks_libraries_8631ca2d8ea013ae173f801b0b83c48b695b6a58594e12a50e12bbc5c4f893aa": {
+    "modified": "2020-12-11T06:35:44.409Z",
+    "contributors": [
+      "amai0w0",
+      "wang_liang",
+      "zisedelinghun",
+      "ZhangNing",
+      "MRzhangzhenhua",
+      "929721152",
+      "xyjk0917"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Frameworks_libraries_ee54089891b16dea26e839688f569a0267ca127f12510490be92cae94efdcf1f": {
+    "modified": "2020-12-04T03:44:08.883Z",
+    "contributors": [
+      "wang_liang"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Frameworks_libraries_f12cf72b86cc1709d0eaf8c61fae2cbd6b98f09f8eb493d2ba44f6141e7031af": {
+    "modified": "2020-10-15T23:41:44.939Z",
+    "contributors": [
+      "ygxwdls"
     ]
   }
 }
