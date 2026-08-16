@@ -3,7 +3,7 @@ title: HTML `<abbr>` 略語要素
 short-title: <abbr>
 slug: Web/HTML/Reference/Elements/abbr
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<abbr>`** は [HTML](/ja/docs/Web/HTML) の要素で、略語や頭字語を表します。
