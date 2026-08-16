@@ -104,10 +104,10 @@ Hay muchas maneras de crear una nueva aplicación React. Vamos a usar Vite para 
 Es posible [agregar React a un proyecto existente](https://react.dev/learn/add-react-to-an-existing-project) copiando algunos elementos [`<script>`](/es/docs/Web/HTML/Reference/Elements/script) en un archivo HTML, pero usar Vite te permitirá dedicar más tiempo a construir tu aplicación y menos a lidiar con la configuración.
 
 > [!NOTE]
-> Puedes comenzar a escribir código React sin hacer _ninguna_ configuración local trabajando con el scrim [First React Code](https://scrimba.com/learn-react-c0e/~03uo?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> de Scrimba.
+> Puedes comenzar a escribir código React sin hacer _ninguna_ configuración local trabajando con el scrim [First React Code](https://scrimba.com/learn-react-c0e/~03uo?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup> de Scrimba.
 > No dudes en probarlo antes de continuar.
 
-### Requerimientos
+### Requisitos
 
 Para usar Vite, necesitas tener instalado [Node.js](https://nodejs.org/en/). A partir de Vite 5.0, se requiere al menos la versión 18 de Node o posterior, y es buena idea ejecutar la última versión de soporte a largo plazo (LTS) cuando puedas. A partir del 24 de octubre de 2023, Node 20 es la última versión LTS. Node incluye npm (el administrador de paquetes de Node).
 
@@ -338,7 +338,7 @@ createRoot(document.getElementById("root")).render(
 );
 ```
 
-Al igual que con `App.jsx`, el archivo comienza importando todos los módulos JavaScript y otros activos que necesita para ejecutarse.
+Al igual que con `App.jsx`, el archivo comienza importando todos los módulos JavaScript y otros recursos que necesita para ejecutarse.
 
 Las dos primeras declaraciones importan `StrictMode` y `createRoot` de las bibliotecas `react` y `react-dom` porque se referencian más adelante en el archivo. No escribimos una ruta o extensión al importar estas bibliotecas porque no son archivos locales. De hecho, están listadas como dependencias en nuestro archivo `package.json`. ¡Ten cuidado con esta distinción mientras trabajas en esta lección!
 
@@ -509,7 +509,7 @@ En React:
 
 ## Véase también
 
-- [Learn React](https://scrimba.com/learn-react-c0e?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Learn React](https://scrimba.com/learn-react-c0e?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup>
   - : El curso _Learn React_ de [Scrimba](https://scrimba.com/?via=mdn) es el React 101 definitivo — el punto de partida perfecto para cualquier principiante de React. Aprende los conceptos básicos de React moderno resolviendo más de 140 desafíos de codificación interactivos y construyendo ocho proyectos divertidos.
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
