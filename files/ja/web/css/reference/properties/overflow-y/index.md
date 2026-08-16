@@ -1,8 +1,9 @@
 ---
-title: overflow-y
+title: CSS `overflow-y` プロパティ
+short-title: overflow-y
 slug: Web/CSS/Reference/Properties/overflow-y
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`overflow-y`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックレベル要素のコンテンツが上下の端からあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。このプロパティは、{{cssxref("overflow")}} 一括指定プロパティを使用して設定することもできます。
