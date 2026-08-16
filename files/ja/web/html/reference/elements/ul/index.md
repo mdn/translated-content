@@ -1,8 +1,9 @@
 ---
-title: "<ul>: 順序なしリスト要素"
+title: HTML `<ul>` 順序なしリスト要素
+short-title: <ul>
 slug: Web/HTML/Reference/Elements/ul
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<ul>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序なしリストを表します。一般的に、行頭記号を伴うリストとして描画されます。
@@ -36,7 +37,7 @@ li li {
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-- `compact` {{Deprecated_inline}} {{non-standard_inline}}
+- `compact` {{Deprecated_inline}}
   - : この論理属性は、リストをコンパクトなスタイルで表示することを指示します。この属性の解釈はブラウザーによって異なります。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、CSS の {{cssxref("line-height")}} プロパティに値 `80%` を指定します。
 - `type` {{Deprecated_inline}}
   - : リストの行頭記号の形状を指定するために用います。 HTML3.2 および HTML 4.0/4.01 tranditional で定義されていた値は以下の通りです。

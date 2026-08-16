@@ -1,8 +1,9 @@
 ---
-title: "<br>: 改行要素"
+title: HTML `<br>` 改行要素
+short-title: <br>
 slug: Web/HTML/Reference/Elements/br
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<br>`** は [HTML](/ja/docs/Web/HTML) の要素で、文中に改行（キャリッジリターン）を生成します。詩や住所など、行の分割が重要な場合に有用です。
@@ -11,7 +12,7 @@ l10n:
 
 ```html interactive-example
 <p>
-  O’er all the hilltops<br />
+  O'er all the hilltops<br />
   Is quiet now,<br />
   In all the treetops<br />
   Hearest thou<br />
