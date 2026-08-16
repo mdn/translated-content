@@ -2,10 +2,10 @@
 title: 手引
 slug: Web/HTML/How_to
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: f08eb478696946da474cf5c5ecdead4f5955f1b4
 ---
 
-このページでは、 HTML に関する手引を紹介します。
+このページでは、HTML に関する手引ガイドを一覧で掲載しています。ページへの JavaScript の追加、読み込みパフォーマンスの最適化、用語の意味的な定義、`data-*` 属性の扱いなど、さまざまな課題について解説しています。
 
-- [別オリジンの画像をオリジン間 `<img>` および `<canvas>` で使用する方法](/ja/docs/Web/HTML/How_to/CORS_enabled_image)
-  - : HTML は画像に対して `crossorigin` 属性を提供しており、適切な CORS ヘッダーと組み合わせることで、外部のオリジンから読み込まれた `<img>` 要素で定義された画像を、あたかも現在のオリジンから読み込まれたかのように `<canvas>` で使用することができます。
+
+{{SubpagesWithSummaries}}
