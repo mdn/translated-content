@@ -1,8 +1,9 @@
 ---
-title: "<marquee>: マーキー要素"
+title: HTML `<marquee>` マーキー要素
+short-title: <marquee>
 slug: Web/HTML/Reference/Elements/marquee
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 {{Deprecated_Header}}
@@ -19,21 +20,21 @@ HTML の `<marquee>` 要素は非推奨であり、使用は極力避けるべ�
   - : 背景色を、色名もしくは 16 進カラーコードで指定します。
 - `direction` {{Deprecated_Inline}}
   - : marquee 要素内でのテキストのスクロール方向を `left`、`right`、`up`、`down` の内の何れかのキーワードで指定します。初期値は `left` です。
-- `height` {{Deprecated_Inline}}
+- `height` {{Deprecated_Inline}} {{non-standard_inline}}
   - : スクロール範囲の高さを、ピクセル値かパーセント値で指定します。
-- `hspace` {{Deprecated_Inline}}
+- `hspace` {{Deprecated_Inline}} {{non-standard_inline}}
   - : 水平方向のマージンを指定します。
 - `loop` {{Deprecated_Inline}}
   - : テキストのスクロール回数を指定します。初期値は −1 であり、これはスクロール回数を制限せず、恒久的にスクロールを続ける指定です。
-- `scrollamount` {{Deprecated_Inline}}
+- `scrollamount` {{Deprecated_Inline}} {{non-standard_inline}}
   - : インターバル内での、テキストの移動ピクセル数を指定します。初期値は 6 です。
-- `scrolldelay` {{Deprecated_Inline}}
+- `scrolldelay` {{Deprecated_Inline}} {{non-standard_inline}}
   - : スクロール動作のインターバルをミリ秒で指定します。初期値は 85 です。`truespeed` 属性が指定されていない場合は 60 が最下限であり、これ以下の値は 60 として解釈されます。
 - `truespeed` {{Deprecated_Inline}}
   - : 既定では、`scrolldelay` で 60 を下回る値は無視します。`truespeed` を指定すると、それらの値が無視されません。
-- `vspace` {{Deprecated_Inline}}
+- `vspace` {{Deprecated_Inline}} {{non-standard_inline}}
   - : 垂直方向のマージンをピクセル値かパーセント値で指定します。
-- `width` {{Deprecated_Inline}}
+- `width` {{Deprecated_Inline}} {{non-standard_inline}}
   - : スクロール範囲の幅をピクセル値かパーセント値で指定します。
 
 ## 例
