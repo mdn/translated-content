@@ -1,6 +1,7 @@
 ---
 title: Svelte 入門
-slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_55929fef48d3a16d971374ad30a0fdfc4ca3ceb66be71d227faa78978cc54705
+original_slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
 ---
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -1,6 +1,7 @@
 ---
 title: 建構 Angular 應用程式與更多資源
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_383dab5883631507e4785060145a872b124f1dcd87f509002125145de08cf280
+original_slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
 l10n:
   sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---

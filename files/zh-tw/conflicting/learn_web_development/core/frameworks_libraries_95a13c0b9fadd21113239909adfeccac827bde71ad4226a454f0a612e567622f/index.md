@@ -1,6 +1,7 @@
 ---
 title: 開始開發我們的 Angular 待辦事項應用程式
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_95a13c0b9fadd21113239909adfeccac827bde71ad4226a454f0a612e567622f
+original_slug: Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_getting_started","Learn_web_development/Core/Frameworks_libraries/Angular_styling", "Learn_web_development/Core/Frameworks_libraries")}}

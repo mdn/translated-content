@@ -1,6 +1,7 @@
 ---
 title: 篩選我們的待辦事項
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_6a102638f568ad6a6a09a8e2c07946bb427a17a9b231205fd9b2cec5838d93e3
+original_slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
 l10n:
   sourceCommit: ffa6f5871f50856c60983a125cef7de267be7aeb
 ---

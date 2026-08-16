@@ -1,6 +1,7 @@
 ---
 title: 開始寫我們的 Svelte 待辦清單應用程式
-slug: Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_ebe196b0d819367b2a71ec1003a74c2d380a1f3f4a9f052de85d73d708fa686b
+original_slug: Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started","Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props", "Learn_web_development/Core/Frameworks_libraries")}}

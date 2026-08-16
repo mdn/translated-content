@@ -1,6 +1,7 @@
 ---
 title: Svelte 中的動態行為：變數及屬性
-slug: Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_4852c1093c3275ab929569a476b55350d967adfd0216bf131591fa68447db3f0
+original_slug: Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Svelte_components", "Learn_web_development/Core/Frameworks_libraries")}}

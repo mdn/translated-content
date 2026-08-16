@@ -1,6 +1,7 @@
 ---
 title: 建立第一個 Vue 元件
-slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_ee54089891b16dea26e839688f569a0267ca127f12510490be92cae94efdcf1f
+original_slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_getting_started","Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists", "Learn_web_development/Core/Frameworks_libraries")}}
