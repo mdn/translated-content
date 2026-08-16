@@ -3,7 +3,7 @@ title: "MessageChannel: MessageChannel() コンストラクター"
 short-title: MessageChannel()
 slug: Web/API/MessageChannel/MessageChannel
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: 2ccbd062264d0a2a34f185a3386cb272f42c50f5
 ---
 
 {{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
@@ -50,7 +50,7 @@ function handleMessage(e) {
 }
 ```
 
-完全に動作する例は、Github 上の [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) を参照してください ([実際のデモも実行できます](https://mdn.github.io/channel-messaging-basic-demo/))。
+完全に動作する例は、Github 上の [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) を参照してください ([実際のデモも実行できます](https://mdn.github.io/dom-examples/channel-messaging-basic/))。
 
 ## 仕様書
 
