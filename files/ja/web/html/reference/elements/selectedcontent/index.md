@@ -1,13 +1,12 @@
 ---
-title: "<selectedcontent>: 選択中選択肢表示要素"
+title: HTML `<selectedcontent>` 選択中選択肢表示要素
+short-title: <selectedcontent>
 slug: Web/HTML/Reference/Elements/selectedcontent
 l10n:
-  sourceCommit: 6eae35bc64a49865a469ca29bc40e6993b9cb8cc
+  sourceCommit: 513146a616213fee548fdcf72dc1359030eb3395
 ---
 
-{{SeeCompatTable}}
-
-**`<selectedcontent>`** [HTML](/ja/docs/Web/HTML) は、{{htmlelement("select")}} 要素内で使用され、現在選択されている {{htmlelement("option")}} のコンテンツを、その最初のまず子要素である {{htmlelement("button")}} 内に表示させます。これにより、 `<select>` 要素のすべての部分をスタイル設定することができるようになり、これを「[カスタマイズ可能な選択リスト](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)」と呼びます。
+**`<selectedcontent>`** [HTML](/ja/docs/Web/HTML) は、{{htmlelement("select")}} 要素内で使用され、現在選択されている {{htmlelement("option")}} のコンテンツを、その最初のまず子要素である {{htmlelement("button")}} 内に表示させます。これにより、 `<select>` 要素のすべての部分をスタイル設定することができるようになり、これを「[カスタマイズ可能な select](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)」と呼びます。
 
 ## 属性
 
@@ -37,7 +36,7 @@ l10n:
 ### `<selectedcontent>` の不活性
 
 既定では、 `<select>` 要素内の `<button>` はすべて[不活性](/ja/docs/Web/HTML/Reference/Global_attributes/inert)です。その結果、そのボタン内のすべてのコンテンツ（`<selectedcontent>` を含む）も不活性となります。
-これは、ユーザーが `<selectedcontent>` 内のコンテンツを操作したりフォーカスしたりできないということです。
+これは、ユーザーが `<selectedcontent>` 内のコンテンツを操作したりフォーカスを受け取ったりできないということです。
 
 ### 選択されたオプションのコンテンツを CSS でスタイル設定する
 
