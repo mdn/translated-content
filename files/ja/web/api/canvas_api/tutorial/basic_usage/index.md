@@ -2,7 +2,7 @@
 title: キャンバスの基本的な使い方
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
 l10n:
-  sourceCommit: c8b447485fd893d5511d88f592f5f3aec29a725b
+  sourceCommit: 6f1b699dd8891431bbfe0bc3bb803f929fa6032e
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
@@ -12,7 +12,7 @@ l10n:
 ## `<canvas>` 要素
 
 ```html
-<canvas id="tutorial" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 一見すると、 {{HTMLElement("canvas")}} は {{HTMLElement("img")}} 要素と似ていますが、 `src` 属性と `alt` 属性がない点が明確に異なります。一方、 `<canvas>` には [`width`](/ja/docs/Web/HTML/Reference/Elements/canvas#width) と [`height`](/ja/docs/Web/HTML/Reference/Elements/canvas#height) の 2 つの属性のみがあります。これらはどちらもオプションで、 {{Glossary("DOM")}} [プロパティ](/ja/docs/Web/API/HTMLCanvasElement)を用いて設定することもできます。を利用できます。 `width` 属性と `height` 属性が指定されていない場合、キャンバスは幅 **300 ピクセル**、高さ **150 ピクセル**で初期化されます。要素の大きさは {{Glossary("CSS")}} で変更できますが、画像を描画される際にはそのレイアウト上の大きさに合わせて拡縮されます。 CSS での大きさは初期のキャンバスの比率を考慮しないため、歪んで表示されることになります。
@@ -57,7 +57,7 @@ l10n:
 初期状態ではキャンバスは空です。何かを表示するには、まずスクリプトで描画コンテキストを取得する必要があります。 {{HTMLElement("canvas")}} 要素には {{domxref("HTMLCanvasElement.getContext", "getContext()")}} というメソッドがあり、描画コンテキストを取得したり描画機能を呼び出したりするのに使います。 `getContext()` には 1 つの引数があり、コンテキストの種類を指定します。このチュートリアルで扱っているような二次元のグラフィックでは、 `"2d"` を指定すると {{domxref("CanvasRenderingContext2D")}} を取得することができます。
 
 ```js
-const canvas = document.getElementById("tutorial");
+const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 ```
 
@@ -68,7 +68,7 @@ const ctx = canvas.getContext("2d");
 {{HTMLElement("canvas")}} 要素に対応していないブラウザーでは、代替コンテンツが表示されます。スクリプトからは、 `getContext()` メソッドの有無を調べることで、ブラウザーが対応しているかどうかを確認することができます。確認するためのコードは以下のようになります。
 
 ```js
-const canvas = document.getElementById("tutorial");
+const canvas = document.getElementById("canvas");
 
 if (canvas.getContext) {
   const ctx = canvas.getContext("2d");
@@ -83,7 +83,7 @@ if (canvas.getContext) {
 ここでは、この後の例で開始点として使用する、最小限のテンプレートを紹介します。
 
 > [!NOTE]
-> スクリプトを HTML に埋め込むのは、よいやり方ではありません。この例では分かりやすさのために、仕方なく埋め込んでいます。
+> スクリプトを HTML に埋め込むのは、よいやり方ではありません。この例では分かりやすさのために埋め込んでいます。
 
 ```html
 <!doctype html>
@@ -98,56 +98,48 @@ if (canvas.getContext) {
     </style>
   </head>
   <body>
-    <canvas id="tutorial" width="150" height="150"></canvas>
+    <canvas id="canvas" width="150" height="150"></canvas>
     <script>
       function draw() {
-        const canvas = document.getElementById("tutorial");
-        if (canvas.getContext) {
+        const canvas = document.getElementById("canvas");
           const ctx = canvas.getContext("2d");
         }
-      }
-      window.addEventListener("load", draw);
+      draw();
     </script>
   </body>
 </html>
 ```
 
-スクリプトには `draw()` という関数が含まれており、ページの読み込みが完了したときに一度実行されます。これは文書で {{domxref("Window/load_event", "load")}} イベントを待ち受けすることで実現できます。この関数、または同様の関数は、{{domxref("Window.setTimeout", "setTimeout()")}}、{{domxref("Window.setInterval", "setInterval()")}}、その他のイベントハンドラーを使用した場合でも、ページが最初に読み込まれたときに限り、呼び出すことができます。
+これは、スクリプトを本文コンテンツの後に配置することで実現します。この関数、あるいは同様に動作する関数は、{{domxref("Window.setTimeout", "setTimeout()")}}、 {{domxref("Window.setInterval", "setInterval()")}}、あるいは {{domxref("Window/load_event", "load")}} イベントハンドラーを使用して呼び出すことも可能です（ただし、ページが完全に読み込まれていることが条件です）。
 
-ここでは、テンプレートが実際にどのように見えるかを説明します。このように、最初は白紙の状態です。
-
-{{EmbedLiveSample("A_skeleton_template", "", "160")}}
+この時点で、この文書は白紙として表示されるはずです。
 
 ## 単純な描画
 
-まず始めに、交差する 2 つの矩形を描き、そのうちの 1 つにアルファ透過をさせる簡単な例を見てみましょう。これがどのように機能するかは、後の例でさらに詳しく見ていきましょう。
+まず始めに、交差する 2 つの矩形を描き、そのうちの 1 つにアルファ透過をさせる例を見てみましょう。これがどのように機能するかは、後の例でさらに詳しく見ていきましょう。`script` 要素の内容をこのように更新してください。
 
-```html
-<!doctype html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>キャンバスの実験</title>
-  </head>
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <script type="application/javascript">
-      function draw() {
-        const canvas = document.getElementById("canvas");
-        if (canvas.getContext) {
-          const ctx = canvas.getContext("2d");
+```html hidden
+<canvas id="my-canvas" width="150" height="150"></canvas>
+```
 
-          ctx.fillStyle = "rgb(200 0 0)";
-          ctx.fillRect(10, 10, 50, 50);
+```css hidden
+canvas {
+  border: 1px solid black;
+}
+```
 
-          ctx.fillStyle = "rgb(0 0 200 / 50%)";
-          ctx.fillRect(30, 30, 50, 50);
-        }
-      }
-      draw();
-    </script>
-  </body>
-</html>
+```js
+function draw() {
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
+
+  ctx.fillStyle = "rgb(200 0 0)";
+  ctx.fillRect(10, 10, 50, 50);
+
+  ctx.fillStyle = "rgb(0 0 200 / 50%)";
+  ctx.fillRect(30, 30, 50, 50);
+}
+draw();
 ```
 
 この例は次のように動作します。

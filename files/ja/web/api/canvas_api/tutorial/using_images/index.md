@@ -2,7 +2,7 @@
 title: 画像の使用
 slug: Web/API/Canvas_API/Tutorial/Using_images
 l10n:
-  sourceCommit: 1fc327ab47c4fc89eff6e1d05780babd720e4b13
+  sourceCommit: 6f1b699dd8891431bbfe0bc3bb803f929fa6032e
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
@@ -45,15 +45,24 @@ l10n:
 - {{domxref("document.getElementsByTagName()")}} メソッド
 - 使用したい特定の画像の ID がわかる場合は、特定の画像を取得するために {{domxref("document.getElementById()")}} を使用できます。
 
-### ほかのドメインにある画像の使用
+多数の画像を使用する場合や、[リソースの遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading)を行う場合は、通常、すべてのファイルが利用できるまで待ってから、キャンバスに描画する必要があります。
+下記の実例では、async 関数と [`Promise.all`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) を使用して複数の画像を処理し、すべての画像が読み込まれたのを待ってから `drawImage()` を呼び出しています。
 
-[`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/img#crossorigin) 属性を{{HTMLElement("img")}} 要素に使用すると（{{domxref("HTMLImageElement.crossOrigin")}} プロパティを反映）、`drawImage()` を呼び出してほかのドメインから画像を読み込む許可を求めることができます。ホスティングしているドメインが画像のドメイン間のアクセスを許可している場合は、キャンバスを汚染せずに画像を使用できます。そうでない場合は、画像を使用すると[キャンバスを汚染します](/ja/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)。
+```js
+async function draw() {
+  // すべての画像が読み込まれるまで待つ
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
 
-### ほかの canvas 要素の使用
-
-通常の画像と同様に、{{domxref("document.getElementsByTagName()")}} または {{domxref("document.getElementById()")}} メソッドを使用してほかの canvas 要素にアクセスできます。対象のキャンバスを使用する前に、そのキャンバスで描画を終えるようにしてください。
-
-より実用的な使い方としては、 2 つ目の canvas 要素を、他の大きなキャンバスのサムネイル表示として使用することでしょう。
+  const ctx = document.getElementById("canvas").getContext("2d");
+  // call drawImage() as usual
+}
+draw();
+```
 
 ### 最初から画像を作成
 
@@ -64,23 +73,25 @@ const img = new Image(); // 新たな img 要素を作成
 img.src = "myImage.png"; // ソースのパスを設定
 ```
 
-このスクリプトを実行すると、画像の読み込みが始まります。
-
-画像の読み込みが完了する前に `drawImage()` を呼び出しても、何も行いません（あるいは、古いブラウザーでは例外が発生するかもしれません）。よって画像を読み込む前に描画しないようにするために、load イベントを使用する必要があります。
+このスクリプトを実行すると、画像の読み込みが始まりますが、画像の読み込みが完了する前に `drawImage()` を呼び出してみても、何も行いません。
+古いブラウザーでは例外が発生するかもしれませんので、画像が利用できるようになる前にキャンバスに画像を描画しないようにするために、[load イベント](/ja/docs/Web/API/HTMLElement/load_event)を使用する必要があります。
 
 ```js
-const img = new Image(); // 新たな img 要素を作成
+const ctx = document.getElementById("canvas").getContext("2d");
+const img = new Image();
+
 img.addEventListener("load", () => {
-  // drawImage を実行する文をここに置く
+  ctx.drawImage(img, 0, 0);
 });
-img.src = "myImage.png"; // ソースのパスを設定
+
+img.src = "myImage.png";
 ```
 
-外部画像を 1 つだけ使用するのであれば、これは良い方法ですが、 2 つ以上を追跡する必要がある場合は、もっと賢い方法に頼る必要があります。画像の先読み方法については、このチュートリアルの範囲外ですが、覚えておくとよいでしょう。
+マークアップに `<img>` 要素を持つ場合や、JavaScript でプログラムで作成する場合でも、外部画像には [CORS](/ja/docs/Web/HTTP/Guides/CORS) の制限があることがあります。デフォルトで、外部から取得された画像は[キャンバスを汚染](/ja/docs/Web/HTML/How_to/CORS_enabled_image#セキュリティと汚染されたキャンバス)し、サイトがオリジンを越えてデータを読み取ることを妨げます。{{HTMLElement("img")}} 要素の [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/img#crossorigin) 属性（{{domxref("HTMLImageElement.crossOrigin")}} プロパティに反映されます）を使用すると、CORS を使用して別のドメインから画像を読み込む権限をリクエストできます。ホストドメインが画像へのドメイン間アクセスを許可している場合、キャンバスを汚染することなく、その画像を使用することができます。
 
 ### data: URL で画像を埋め込む
 
-画像を埋め込む別の方法が、[data: URL](/ja/docs/Web/URI/Reference/Schemes/data) です。 data URL によって、画像を Base64 でエンコードした文字列として、コード内で完全に定義できます。
+画像を埋め込む別の方法が、[data: URL](/ja/docs/Web/URI/Reference/Schemes/data) です。データ URL によって、画像を Base64 でエンコードした文字列として、コード内で完全に定義できます。
 
 ```js
 const img = new Image(); // 新たな img 要素を作成
@@ -92,22 +103,23 @@ data URL の利点のひとつが、別にサーバーとの通信を行うこ�
 
 この方法の欠点は画像がキャッシュされないことと、大きな画像をエンコードした URL がとても長くなることです。
 
+### ほかの canvas 要素の使用
+
+通常の画像と同様に、{{domxref("document.getElementsByTagName()")}} または {{domxref("document.getElementById()")}} メソッドを使用してほかの canvas 要素にアクセスできます。対象のキャンバスを使用する前に、そのキャンバスで描画を終えるようにしてください。
+
+より実用的な使い方としては、 2 つ目の canvas 要素を、他の大きなキャンバスのサムネイル表示として使用することでしょう。
+
 ### 動画のフレームの使用
 
-{{HTMLElement("video")}} 要素が提供する動画のフレームも（動画が非表示であっても）使用できます。例えば ID が "myvideo" である {{HTMLElement("video")}} 要素があるとき、以下のようなことができます。
+{{HTMLElement("video")}} 要素が提供する動画のフレームも（動画が非表示であっても）使用できます。例えば ID が "myVideo" である {{HTMLElement("video")}} 要素があるとき、以下のようなことができます。
 
 ```js
-function getMyVideo() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
-
-    return document.getElementById("myvideo");
-  }
-}
+const video = document.getElementById("myVideo");
+video.currentTime = 10; // 動画の 10 秒時点へシーク
+video.pause(); // フレームを凍結するために動画を一時停止
 ```
 
-これは、動画の {{domxref("HTMLVideoElement")}} オブジェクトを返すもので、前述のように、キャンバスの画像ソースとして使用することができます。
+これで、{{domxref("HTMLVideoElement")}} は 10 秒の時点に到達しており、現在のフレームがキャンバスに描画されます。`drawImage()` を呼び出す際にフレームが確実に利用できるようにするには、`drawImage()` を [`requestVideoFrameCallback()`](/ja/docs/Web/API/HTMLVideoElement/requestVideoFrameCallback#drawing_video_frames_on_a_canvas) 内で呼び出してください。
 
 ## 画像の描画
 
@@ -119,21 +131,17 @@ function getMyVideo() {
 > [!NOTE]
 > SVG 画像は、ルート \<svg> 要素で幅と高さを指定しなければなりません。
 
-### 例: シンプルな折れ線グラフ
+### 例: 小さな折れ線グラフ
 
 以下の例は、小さな折れ線グラフの背景として外部の画像を使用しています。背景画像を使用すると背景を生成するコードが不要になりますので、スクリプトをかなり小さくすることができます。この例では画像を 1 つしか使用しませんので、描画する文を実行するために画像オブジェクトの `load` イベントハンドラーを使用しています。`drawImage()` メソッドは背景画像を座標 (0, 0) に配置します。これはキャンバスの左上の隅です。
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="180" height="150"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="180" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   const img = new Image();
   img.onload = () => {
     ctx.drawImage(img, 0, 0);
@@ -146,13 +154,11 @@ function draw() {
   };
   img.src = "backdrop.png";
 }
-```
 
-```js
 draw();
 ```
 
-結果のグラフは以下のようになります。
+結果のグラフは。次のようになります。
 
 {{EmbedLiveSample("Example_A_simple_line_graph", "", "160")}}
 
@@ -171,16 +177,12 @@ draw();
 > 画像を拡大しすぎると不鮮明に、あるいは縮小しすぎると荒くなります。読みやすくしておかなければならない文字列が画像内にある場合は、サイズを変更しないほうがよいでしょう。
 
 ```html hidden
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-  </body>
-</html>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   const img = new Image();
   img.onload = () => {
     for (let i = 0; i < 4; i++) {
@@ -191,13 +193,11 @@ function draw() {
   };
   img.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 }
-```
 
-```js hidden
 draw();
 ```
 
-キャンバスの結果は以下のようになります。
+キャンバスの結果は次のようになります。
 
 {{EmbedLiveSample("Example_Tiling_an_image", "", "160")}}
 
@@ -222,7 +222,7 @@ draw();
 
 ```html
 <canvas id="canvas" width="150" height="150"></canvas>
-<div style="display: none;">
+<div class="hidden">
   <img
     id="source"
     src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
@@ -230,6 +230,12 @@ draw();
     height="227" />
   <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
 </div>
+```
+
+```css hidden
+.hidden {
+  display: none;
+}
 ```
 
 ```js
@@ -265,11 +271,14 @@ async function draw() {
 draw();
 ```
 
-この例では、画像の読み込みに別の方法を使用しています。新しい {{domxref("HTMLImageElement")}} オブジェクトを作成して画像を読み込む代わりに、画像を HTML ソース内の {{HTMLElement("img")}} タグとして直接含めておき、そこから画像を取り込んでいます。この画像は、CSS の {{cssxref("display")}} プロパティを none に設定して隠しています。
+この例では、画像の読み込みに別の方法を使用しています。新しい {{domxref("HTMLImageElement")}} オブジェクトを作成して画像を読み込む代わりに、画像を HTML ソース内の {{HTMLElement("img")}} タグとして含めておき、そこから画像を取り込んでいます。これらの画像については、CSS プロパティ {{cssxref("display")}} を `none` に設定することで、ページ上で非表示にしています。
 
-{{EmbedLiveSample("Example_Framing_an_image", "", "160")}}
+{{EmbedLiveSample("example_framing_an_image", "", "160")}}
 
-スクリプト自体はとてもシンプルです。それぞれの {{HTMLElement("img")}} に ID 属性を割り当てており、{{domxref("document.getElementById()")}} を使用して簡単に選択できます。最初の画像からサイを切り抜いて canvas 上でサイズを調整するため単純に `drawImage()` を使用して、その後に第 2 の `drawImage()` を呼び出して枠を描きます。
+それぞれの {{HTMLElement("img")}} には ID 属性が割り当てられているため、`source` 用と `frame` 用にそれぞれ 1 つずつあり、{{domxref("document.getElementById()")}} を使用して簡単に選択できます。
+[Promise.all](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) を使用して、すべての画像が読み込まれたのを待ってから `drawImage()` を呼び出しています。
+`drawImage()` は、まず最初の画像からサイを切り出し、それをキャンバス上に変倍して描画します。
+最後に、2  つ目の `drawImage()` の呼び出しを使用して、フレームを描画します。
 
 ## アートギャラリーの例
 
@@ -277,35 +286,34 @@ draw();
 
 この場合、すべてのイメージの幅と高さは固定で、その周りに描かれるフレームも固定です。このスクリプトを改良して、画像の幅と高さを利用して、額縁が画像の周りにぴったりと収まるようにすることができます。
 
-以下のコードは自明でしょう。{{domxref("document.images")}} コンテナーに対するループ処理を行って、適宜新たな canvas 要素を追加します。おそらく、 DOM についてあまり詳しくない場合に注意したほうがよいことは、{{domxref("Node.insertBefore")}} メソッドを使用していることです。`insertBefore()` は、ある要素 (image) の前に新たな要素 (canvas 要素) を挿入したいときに使用する、親ノード (テーブルのセル) のメソッドです。
+下記コードでは、[Promise.all](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) を使用して、すべての画像の読み込みが完了するのを待ってから、キャンバスに画像が描画されるのを待っています。
+{{domxref("document.images")}} コンテナーをループ処理し、それぞれの要素に対して新しいキャンバス要素を追加します。それ以外にも注目すべき点は、{{domxref("Node.insertBefore")}} メソッドの使用です。`insertBefore()` は、ある要素 (image) の前に新たな要素 (canvas 要素) を挿入したいときに使用する、親ノード (テーブルのセル) のメソッドです。
 
 ```html
-<html lang="en">
-  <body>
-    <table>
-      <tr>
-        <td><img src="gallery_1.jpg" /></td>
-        <td><img src="gallery_2.jpg" /></td>
-        <td><img src="gallery_3.jpg" /></td>
-        <td><img src="gallery_4.jpg" /></td>
-      </tr>
-      <tr>
-        <td><img src="gallery_5.jpg" /></td>
-        <td><img src="gallery_6.jpg" /></td>
-        <td><img src="gallery_7.jpg" /></td>
-        <td><img src="gallery_8.jpg" /></td>
-      </tr>
-    </table>
-    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
-  </body>
-</html>
+<table>
+  <tbody>
+    <tr>
+      <td><img src="gallery_1.jpg" /></td>
+      <td><img src="gallery_2.jpg" /></td>
+      <td><img src="gallery_3.jpg" /></td>
+      <td><img src="gallery_4.jpg" /></td>
+    </tr>
+    <tr>
+      <td><img src="gallery_5.jpg" /></td>
+      <td><img src="gallery_6.jpg" /></td>
+      <td><img src="gallery_7.jpg" /></td>
+      <td><img src="gallery_8.jpg" /></td>
+    </tr>
+  </tbody>
+</table>
+<img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
 ```
 
-こちらが、見栄えをよくするための CSS です:
+こちらが、見栄えをよくするための CSS です。
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
+  background: 0 -100px repeat-x url("bg_gallery.png") #4f191a;
   margin: 10px;
 }
 
@@ -325,7 +333,15 @@ td {
 額縁付き画像を描く JavaScript が、すべてを結びつけます。
 
 ```js
-function draw() {
+async function draw() {
+  // すべての画像が読み込まれるのを待つ。
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
+
   // すべての画像に対するループ処理
   for (const image of document.images) {
     // 額縁の画像用の canvas は追加しない
@@ -340,7 +356,7 @@ function draw() {
 
       ctx = canvas.getContext("2d");
 
-      // canvas に画像を描く
+      // キャンバスに画像を描く
       ctx.drawImage(image, 15, 20);
 
       // 額縁を追加
@@ -348,6 +364,7 @@ function draw() {
     }
   }
 }
+
 draw();
 ```
 
