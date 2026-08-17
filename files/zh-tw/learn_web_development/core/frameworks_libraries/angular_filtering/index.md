@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ffa6f5871f50856c60983a125cef7de267be7aeb
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在，讓我們繼續新增功能，讓使用者可以篩選他們的待辦事項，以便他們可以檢視進行中、已完成或所有的事項。
 
@@ -89,4 +89,4 @@ export class AppComponent {
 
 這很快吧！因為你已經在 `app.component.ts` 中有了 `filter` 的程式碼，所以你只需要編輯範本來提供篩選事項的控制項。我們的下一篇（也是最後一篇）文章將會探討如何建置你的 Angular 應用程式以準備好用於生產環境，並提供更多資源來繼續你的學習之旅。
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

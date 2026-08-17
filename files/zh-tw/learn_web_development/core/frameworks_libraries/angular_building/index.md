@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 這篇最後的 Angular 文章涵蓋了如何建構一個準備好用於生產環境的應用程式，並提供更多資源讓你繼續學習之旅。
 
@@ -71,4 +71,4 @@ npx http-server ./dist/todo/browser/ -o
 
 以上。我們希望你享受使用 Angular 的樂趣！
 
-{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在我們來看看 Google 的 Angular 框架，這是另一個你會經常遇到的熱門選擇。在本文中，我們將探討 Angular 提供了什麼、安裝先備條件並設定一個範例應用程式，並檢視 Angular 的基本架構。
 
@@ -280,4 +280,4 @@ export class AppComponent {
 
 以上就是你對 Angular 的初步介紹。至此，你應該已經設定好並準備好建構一個 Angular 應用程式，並且對 Angular 的運作方式有了基本的了解。在下一篇文章中，我們將深化這些知識，並開始建構我們的待辦事項清單應用程式的結構。
 
-{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

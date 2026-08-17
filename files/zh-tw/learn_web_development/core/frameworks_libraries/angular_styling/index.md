@@ -3,7 +3,7 @@ title: 使用樣式點綴我們的 Angular 應用程式
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_styling
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Angular_item_component", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在，我們已經建立了基本的應用程式結構，並加入了內容，接著我們就要來對應用程式進行樣式的調整，透過本篇文章來學習如何使用樣式點綴我們的 Angular 應用程式。
 
@@ -171,4 +171,4 @@ ul li {
 
 我們對 Angular 樣式的簡介也告一個段落了，接下來讓我們開始幫應用程式加上功能吧。在下一篇文章中，我們將建立一個適用於待辦事項的元件，並使其成為可以讓你標示完成、編輯以及刪除待辦事項。
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Angular_item_component", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
