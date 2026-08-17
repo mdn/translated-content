@@ -3,7 +3,7 @@ title: Vue 中的条件渲染：编辑现有的待办事项
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties","Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 是时候添加一个我们仍然缺少，但十分重要的功能了——编辑现有的待办事项。为此，我们将利用 Vue 的条件渲染（即 `v-if` 和 `v-else`）来让我们能在现有待办视图和用于更新待办的编辑视图之间切换。我们还将实现删除待办事项的功能。
 
@@ -316,7 +316,7 @@ editToDo(toDoId, newLabel) {
 
 注意你取消后复选框的状态——不仅应用程序忘记了复选框的状态，而且待办事项的完成状态现在也不正常了。如果你尝试再次勾选（或取消勾选）它，完成项的计数值将反向更改。这是因为在组件加载时，`data` 中的 `isDone` 只给出了值 `this.done`。
 
-幸运的是，修复这个问题很容易：我们可以通过将我们的 `isDone` 数据转换为[计算属性](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties)来做到这一点。计算属性的另一个优点是，它们保留了[响应性](https://cn.vuejs.org/guide/essentials/reactivity-fundamentals)，这意味着（在其他事情中）当模板发生变化时，它们的状态会被保存，就像我们现在做的那样。
+幸运的是，修复这个问题很容易：我们可以通过将我们的 `isDone` 数据转换为[计算属性](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)来做到这一点。计算属性的另一个优点是，它们保留了[响应性](https://cn.vuejs.org/guide/essentials/reactivity-fundamentals)，这意味着（在其他事情中）当模板发生变化时，它们的状态会被保存，就像我们现在做的那样。
 
 所以，让我们来修复一下 `ToDoItem.vue`：
 
@@ -379,4 +379,4 @@ editToDo(toDoId, newLabel) {
 
 这篇文章相当密集，我们在这里讨论了很多内容。现在我们的应用中有了编辑和删除功能，这非常令人兴奋。现在，我们的 Vue 系列已经接近尾声。最后一个要讨论的功能是焦点管理，或者换句话说：我们应如何提高应用程序的键盘无障碍。
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties","Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

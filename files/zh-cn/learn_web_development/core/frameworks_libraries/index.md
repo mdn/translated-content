@@ -62,17 +62,17 @@ JavaScript 框架是现代前端 web 开发的重要部分，开发者可以借�
 >
 > 如果需要确认你的代码与我们的版本的区别，你可以在 [ember-todomvc-tutorial 仓库](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc)找到示例 Ember 应用的完整代码。想要查看实时运行的版本，可访问 <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/>（该示例包含本教程未覆盖到的一些额外的特性）。
 
-- [开始使用 Ember](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Ember_getting_started)
+- [开始使用 Ember](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 首先我们将了解 Ember 的原理及用途，在本地安装 Ember 工具链，创建示例应用，进行初始配置，做好开发前的准备。
-- [Ember 应用结构和组件化](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Ember_structure_componentization)
+- [Ember 应用结构和组件化](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 在此章节，我们将着手规划 Ember 应用的结构，为其添加 HTML，并将其拆分成易于维护的组件。
-- [Ember 交互：事件、类和状态](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Ember_interactivity_events_state)
+- [Ember 交互：事件、类和状态](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 现在，我们将向应用添加一些交互功能，使其能够添加和显示新的待办事项。在此过程中，我们将研究如何在 Ember 中使用事件，创建包含了用于控制交互功能的 JavaScript 的组件类，并设置服务来跟踪应用的数据状态。
-- [Ember 交互：页脚功能和条件渲染](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Ember_conditional_footer)
+- [Ember 交互：页脚功能和条件渲染](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 本章中我们将完善页脚的功能，更新待办事项计数器以显示未完成事项数，并将样式正确地应用到已完成事项上（即对应复选框被选中的项）。我们还将实装“清除已完成事项”按钮，并学习如何在模板中使用条件渲染。
-- [Ember 路由](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Ember_routing)
+- [Ember 路由](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 在此章节我们将学习 Ember 路由，有时也称为基于 URL 的过滤。我们将使用它来为三个待办应用中的视图——“全部”“进行中”“已完成”，提供各自全局唯一的 URL。
-- [Ember 资源和疑难解答](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Ember_resources)
+- [Ember 资源和疑难解答](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 在最后一章，我们给你提供了一系列 Ember 学习资源，助你更进一步的探索。此外还有一些有用的排障指南和其他事项。
 
 ### Vue 教程
@@ -82,23 +82,23 @@ JavaScript 框架是现代前端 web 开发的重要部分，开发者可以借�
 >
 > 如果需要确认你的代码与我们的版本的区别，你可以在我们的 [todo-vue 仓库](https://github.com/mdn/todo-vue)找到示例 Vue 应用的完整代码。想要查看实时运行的版本，可访问 <https://mdn.github.io/todo-vue/>。
 
-- [开始使用 Vue](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
+- [开始使用 Vue](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 现在我们要介绍第三个框架——Vue。在此章节我们将简单了解 Vue 的背景，学习如何安装 Vue 并创建新项目，学习项目的整体的架构以及独立的组件，了解如何本地运行项目，并为示例应用的开发做好准备。
-- [创建第一个 Vue 组件](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_first_component)
+- [创建第一个 Vue 组件](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 现在我们将深入 Vue，创建自己的组件——我们将从创建用来展示待办事项列表中单个项目的组件开始。在这个过程中，我们将学习在组件中调用其它组件、使用 `props` 传递数据给其它组件、保存数据状态等重要概念。
-- [Vue 组件的列表渲染](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists)
+- [Vue 组件的列表渲染](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 组件至此已经完全可用，我们可开始添加多个 `ToDoItem` 组件到应用中了。在此章节我们将了解如何添加一组待办项数据到 `App.vue` 组件，并使用 `v-for` 指令将这组数据循环渲染到 `ToDoItem` 组件中。
-- [新增待办表：Vue 事件、方法和双向绑定](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models)
+- [新增待办表：Vue 事件、方法和双向绑定](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 现在我们的应用已经有了示例数据，和能将每条数据渲染到 `ToDoItem` 组件的循环。下一步我们要让用户能自己在应用中输入待办事项。为此，本章我们需要设置一个输入文本的 `<input>`，提交数据时触发的事件，用于接收数据、添加数据、渲染列表的方法和用于控制数据的双向绑定模型。
-- [使用 CSS 美化 Vue 组件](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_styling)
+- [使用 CSS 美化 Vue 组件](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 该装饰装饰我们的应用了！在此章节我们将探索用 CSS 美化 Vue 组件的不同方法。
-- [使用 Vue 计算属性](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties)
+- [使用 Vue 计算属性](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 本章节我们将利用 Vue 的计算属性，添加一个显示“已完成”事项数量的计数器。计算属性与方法相似，但它只在它的依赖内容变更时才会再次计算。
-- [Vue 条件渲染：编辑既有待办项](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering)
+- [Vue 条件渲染：编辑既有待办项](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 现在来开发一个仍未实现的主要功能吧——编辑既有待办项。为实现该功能，我们将利用 `v-if` 和 `v-else` 这两个条件渲染指令，让我们能在查看和编辑视图间切换。此外，我们还将添加删除待办项的功能。
-- [使用 Vue ref 进行焦点管理](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management)
+- [使用 Vue ref 进行焦点管理](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 对 Vue 的初步学习即将完成，我们最后要看看的功能是焦点管理，即怎么让键盘用户使用起来更方便。我们将利用使用 Vue 的 ref 完成该需求——这个高级功能让你既能直接操作虚拟 DOM 下的 DOM 节点，也可在组件中直接操作其子组件内部的 DOM 结构。
-- [Vue 资源](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_resources)
+- [Vue 资源](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 在最后一章，我们给你提供了一系列 Vue 学习资源，助你更进一步的探索。
 
 ## 我应该选择哪个框架？

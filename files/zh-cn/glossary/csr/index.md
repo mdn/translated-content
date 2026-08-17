@@ -34,7 +34,7 @@ CSR 的优点包括：
 
 SSR 和 CSR 各有性能权衡，可以结合使用以兼顾两者优势。例如，服务器可生成带有空白占位符的页面骨架，客户端再获取额外数据并按需更新页面。
 
-请注意，{{glossary("SPA", "单页应用")}}并不要求站点必须采用 CSR。现代框架（如 [React](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)、[Vue](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started) 和 [Svelte](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)）都可用于构建具备 SSR 能力的 SPA。
+请注意，{{glossary("SPA", "单页应用")}}并不要求站点必须采用 CSR。现代框架（如 [React](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)、[Vue](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries) 和 [Svelte](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)）都可用于构建具备 SSR 能力的 SPA。
 
 ## 参见
 

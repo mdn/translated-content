@@ -3,7 +3,7 @@ title: 使用 CSS 为 Vue 组件添加样式
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_styling
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models","Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 现在终于到了使我们的应用程序看起来更好的时候了。在本文中，我们将探讨使用 CSS 样式化 Vue 组件的不同方法。
 
@@ -477,4 +477,4 @@ import "./assets/reset.css";
 
 目前，我们已经做完了示例程序的样式设计。在下一篇文章中，我们将为我们的应用程序添加一些更多的功能，即使用一个计算属性来为我们的应用程序添加一个已完成的 todo 项目的计数。
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models","Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

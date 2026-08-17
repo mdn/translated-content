@@ -3,7 +3,7 @@ title: 使用 Vue event、method 和 model 添加一个新的 todo 表单
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists","Learn_web_development/Core/Frameworks_libraries/Vue_styling", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 我们现在已经有了样本数据，还有一个循环，它获取每一位数据并将其呈现在我们应用程序的 `ToDoItem` 中。接下来我们真正需要的是允许我们的用户在应用程序中输入他们自己的待办事项的能力，为此我们需要一个“text”类型的 `<input>`，当数据输入时触发的事件提交，一个在提交时触发以添加数据并重新呈现列表的方法，以及一个控制数据的模型。这就是我们将在本文中介绍的内容。
 
@@ -349,4 +349,4 @@ onSubmit() {
 
 非常好。我们现在可以将待办事项添加到我们的表单中！我们的应用程序现在开始感觉具有交互性，但一个问题是到目前为止我们完全忽略了它的外观和感觉。在下一篇文章中，我们将集中精力解决这个问题，看看 Vue 为组件样式提供的不同方式。
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists","Learn_web_development/Core/Frameworks_libraries/Vue_styling", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

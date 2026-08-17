@@ -3,7 +3,7 @@ title: 创建第一个 Vue 组件
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_getting_started","Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 现在是时候深入了解 Vue，并创建我们自己的自定义组件了--我们将从创建一个组件来表示待办事项列表中的每个项目开始。在这一过程中，我们将学习一些重要的概念，例如在其他组件中调用组件，通过道具向它们传递数据，以及保存数据状态。
 
@@ -326,4 +326,4 @@ export default {
 
 现在，我们已准备好将多个 `ToDoItem` 组件添加到我们的应用中。在下一篇文章中，我们将介绍如何将一组待办事项数据添加到 `App.vue` 组件中，然后使用 `v-for` 指令在 `ToDoItem` 组件中循环显示这些数据。
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_getting_started","Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

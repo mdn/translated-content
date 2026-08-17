@@ -319,9 +319,9 @@ it("Increments the count when clicked", () => {
 现在，你应该对你在使用框架创建应用程序时要使用的实际语言、功能和工具有了更多的了解。我相信你一定很想去做一些编码工作，这就是你接下来要做的事情！在这一点上，你可以选择你想先开始学习哪个框架：
 
 - [React](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
-- [Ember](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Ember_getting_started)
-- [Vue](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
-- [Svelte](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)
-- [Angular](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)
+- [Ember](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
+- [Vue](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
+- [Svelte](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
+- [Angular](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
