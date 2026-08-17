@@ -3,7 +3,7 @@ title: Propriété CSS `flex`
 short-title: flex
 slug: Web/CSS/Reference/Properties/flex
 l10n:
-  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
+  sourceCommit: 28839be2d5cdb1235fdd75b873c90cf491e93367
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`flex`** définit comment un {{Glossary("flex item", "élément flexible")}} va grandir ou rétrécir pour occuper l'espace disponible dans son conteneur flexible.
@@ -93,7 +93,7 @@ flex: unset;
 La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 
 - **Avec une valeur**, la syntaxe doit être&nbsp;:
-  - une valeur valide pour {{CSSxRef("flex-grow")}}&nbsp;: dans tous les navigateurs, la propriété raccourcie est alors étendue en `flex: <flex-grow> 1 0%`. Cependant, la spécification indique qu'elle doit être étendue en `flex: <flex-grow> 1 0`.
+  - une valeur valide pour {{CSSxRef("flex-grow")}}&nbsp;: la propriété raccourcie est alors étendue en `flex: <flex-grow> 1 0%`.
   - une valeur valide pour {{CSSxRef("flex-basis")}}&nbsp;: la propriété raccourcie est alors étendue en `flex: 1 1 <flex-basis>`.
   - le mot-clé `none` ou l'un des mots-clés globaux.
 
@@ -101,7 +101,7 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
   - La première valeur doit être une valeur valide pour {{CSSxRef("flex-grow")}}.
 
   - La seconde valeur doit être l'une des suivantes&nbsp;:
-    - une valeur valide pour {{CSSxRef("flex-shrink")}}&nbsp;: dans tous les navigateurs, la propriété raccourcie est alors étendue en `flex: <flex-grow> <flex-shrink> 0%`.
+    - une valeur valide pour {{CSSxRef("flex-shrink")}}&nbsp;: la propriété raccourcie est alors étendue en `flex: <flex-grow> <flex-shrink> 0%`.
     - une valeur valide pour {{CSSxRef("flex-basis")}}&nbsp;: la propriété raccourcie est alors étendue en `flex: <flex-grow> 1 <flex-basis>`.
 
 - **Avec trois valeurs**&nbsp;: les valeurs doivent être dans l'ordre suivant&nbsp;:
@@ -125,10 +125,7 @@ Les effets flexbox les plus courants peuvent être obtenus avec les valeurs `fle
 - `initial`&nbsp;: L'élément flexible ne grandit pas mais peut rétrécir. Cette valeur par défaut équivaut à `flex: 0 1 auto`. L'élément est dimensionné selon ses propriétés `width` ou `height`, selon la direction du `flex-direction`. S'il y a un espace négatif disponible, l'élément rétrécit à sa taille minimale pour s'adapter au conteneur, mais il ne grandit pas pour absorber l'espace positif disponible dans le conteneur flexible.
 - `auto`&nbsp;: L'élément flexible peut grandir et rétrécir. Cette valeur équivaut à `flex: 1 1 auto`. L'élément est dimensionné selon ses propriétés `width` ou `height`, selon la direction du `flex-direction`, mais il grandit pour absorber l'espace positif disponible dans le conteneur flexible ou rétrécit à sa taille minimale pour s'adapter au conteneur en cas d'espace négatif. L'élément flexible est totalement flexible.
 - `none`&nbsp;: L'élément flexible ne grandit ni ne rétrécit. Cette valeur équivaut à `flex: 0 0 auto`. L'élément est dimensionné selon ses propriétés `width` ou `height`, selon la direction du conteneur flexible. L'élément flexible est totalement inflexible.
-- `flex: <number [1,∞]>`&nbsp;: La taille principale de l'élément flexible est proportionnelle au nombre défini. Cette valeur équivaut à `flex: <number> 1 0`. Cela définit `flex-basis` à zéro et rend l'élément flexible. L'élément est au moins aussi large ou haut que sa taille minimale, l'espace positif disponible du conteneur étant réparti proportionnellement selon les facteurs de croissance de cet élément et de ses éléments voisins. Si tous les éléments flexibles utilisent ce modèle, ils sont tous dimensionnés en proportion de leur valeur numérique.
-
-  > [!WARNING]
-  > Les navigateurs utilisent la valeur `flex-basis` `0%` lorsque la propriété `flex-basis` n'est pas définie dans une valeur `flex`. Ce n'est pas la même chose que la valeur `flex-basis` `0` indiquée par la spécification. Cela peut affecter la mise en page flexible dans certains cas. Voyez cet effet démontré dans l'exemple [`flex-basis` `0` contre `0%`](/fr/docs/Web/CSS/Reference/Properties/flex-basis#flex-basis_0_contre_0).
+- `flex: <number [1,∞]>`&nbsp;: La taille principale de l'élément flexible est proportionnelle au nombre défini. Cette valeur équivaut à `flex: <number> 1 0%`. Cela définit `flex-basis` à `0%` et rend l'élément flexible. L'élément est au moins aussi large ou haut que sa taille minimale, l'espace positif disponible du conteneur étant réparti proportionnellement selon les facteurs de croissance de cet élément et de ses éléments voisins. Si tous les éléments flexibles utilisent ce modèle, ils sont tous dimensionnés en proportion de leur valeur numérique.
 
 ## Description
 
