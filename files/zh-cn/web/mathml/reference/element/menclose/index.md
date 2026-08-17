@@ -16,26 +16,40 @@ l10n:
 - `notation` {{Non-standard_Inline}}
   - : 以空格分隔的符号列表，用于应用于子元素。这些符号将分别绘制，好像其他符号不存在一样，因此可能会重叠。可能的值有：
 
-    | 值                   | 渲染示例                                                    | 在你的浏览器上的渲染效果                                                                                                                       | 描述                                                                                                       |
+    | 值                   | 渲染示例                                                    | 在浏览器上的渲染效果                                                                                                                       | 描述                                                                                                       |
     | -------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-    | `longdiv` (default)  | ![longdiv](default.png)                                     | <math><menclose notation="longdiv"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | 长除法符号                                                                                                 |
-    | `actuarial`          | ![actuarial](actuarial.png)                                 | <math><menclose notation="actuarial"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>          | [精算符号](https://zh.wikipedia.org/wiki/精算符號)                                                         |
-    | `box`                | ![box](box.png)                                             | <math><menclose notation="box"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>                | 方框                                                                                                       |
-    | `roundedbox`         | ![roundedbox](roundedbox.png)                               | <math><menclose notation="roundedbox"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>         | 圆角方框                                                                                                   |
-    | `circle`             | ![circle](circle.png)                                       | <math><menclose notation="circle"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>             | 圆圈                                                                                                       |
-    | `left`               | ![left](left.png)                                           | <math><menclose notation="left"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>               | 内容左边的线条                                                                                             |
-    | `right`              | ![right](right.png)                                         | <math><menclose notation="right"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>              | 内容右边的线条                                                                                             |
-    | `top`                | ![top](top.png)                                             | <math><menclose notation="top"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>                | 内容上方的线条                                                                                             |
-    | `bottom`             | ![bottom](bottom.png)                                       | <math><menclose notation="bottom"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>             | 内容下方的线条                                                                                             |
-    | `updiagonalstrike`   | ![updiagonalstrike](updiagonalstrike.png)                   | <math><menclose notation="updiagonalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>   | 从左下到右上贯穿内容的斜线                                                                                 |
-    | `downdiagonalstrike` | ![downdiagonalstrike](downdiagonalstrike.png)               | <math><menclose notation="downdiagonalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math> | 从左上到右下贯穿内容的斜线                                                                                 |
-    | `verticalstrike`     | ![verticalstrike](verticalstrike.png)                       | <math><menclose notation="verticalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>     | 贯穿内容的竖线                                                                                             |
-    | `horizontalstrike`   | ![horizontalstrike](horizontalstrike.png)                   | <math><menclose notation="horizontalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>   | 贯穿内容的横线                                                                                             |
-    | `madruwb`            | ![madruwb](madruwb.png)                                     | <math><menclose notation="madruwb"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | [阿拉伯阶乘符号](https://en.wikipedia.org/wiki/Modern_Arabic_mathematical_notation#Arithmetic_and_algebra) |
-    | `updiagonalarrow`    | ![Arrow pointing up and to the right.](updiagonalarrow.png) | <math><menclose notation="updiagonalarrow"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>    | 斜箭头                                                                                                     |
-    | `phasorangle`        | ![Screenshot of the phasorangle notation](phasorangle.png)  | <math><menclose notation="phasorangle"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>        | 相量角度符号                                                                                               |
+    | `longdiv`（默认）    | ![longdiv 渲染示例](longdiv.svg)                                     | <math><menclose notation="longdiv"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | 长除法符号                                                                                                 |
+    | `actuarial`          | ![actuarial 渲染示例](actuarial.svg)                                 | <math><menclose notation="actuarial"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>          | [精算符号](https://zh.wikipedia.org/wiki/精算符號)                                                         |
+    | `box`                | ![box 渲染示例](box.svg)                                             | <math><menclose notation="box"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>                | 方框                                                                                                       |
+    | `roundedbox`         | ![roundedbox 渲染示例](roundedbox.svg)                               | <math><menclose notation="roundedbox"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>         | 圆角方框                                                                                                   |
+    | `circle`             | ![circle 渲染示例](circle.svg)                                       | <math><menclose notation="circle"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>             | 圆圈                                                                                                       |
+    | `left`               | ![left 渲染示例](left.svg)                                           | <math><menclose notation="left"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>               | 内容左边的线条                                                                                             |
+    | `right`              | ![right 渲染示例](right.svg)                                         | <math><menclose notation="right"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>              | 内容右边的线条                                                                                             |
+    | `top`                | ![top 渲染示例](top.svg)                                             | <math><menclose notation="top"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>                | 内容上方的线条                                                                                             |
+    | `bottom`             | ![bottom 渲染示例](bottom.svg)                                       | <math><menclose notation="bottom"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>             | 内容下方的线条                                                                                             |
+    | `updiagonalstrike`   | ![updiagonalstrike 渲染示例](updiagonalstrike.svg)                   | <math><menclose notation="updiagonalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>   | 从左下到右上贯穿内容的斜线                                                                                 |
+    | `downdiagonalstrike` | ![downdiagonalstrike 渲染示例](downdiagonalstrike.svg)               | <math><menclose notation="downdiagonalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math> | 从左上到右下贯穿内容的斜线                                                                                 |
+    | `verticalstrike`     | ![verticalstrike 渲染示例](verticalstrike.svg)                       | <math><menclose notation="verticalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>     | 贯穿内容的竖线                                                                                             |
+    | `horizontalstrike`   | ![horizontalstrike 渲染示例](horizontalstrike.svg)                   | <math><menclose notation="horizontalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>   | 贯穿内容的横线                                                                                             |
+    | `madruwb`            | ![madruwb 渲染示例](madruwb.svg)                                     | <math><menclose notation="madruwb"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | [阿拉伯阶乘符号](https://en.wikipedia.org/wiki/Modern_Arabic_mathematical_notation#Arithmetic_and_algebra) |
+    | `updiagonalarrow`    | ![updiagonalarrow 渲染示例](updiagonalarrow.svg) | <math><menclose notation="updiagonalarrow"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>    | 斜箭头                                                                                                     |
+    | `phasorangle`        | ![phasorangle 渲染示例](phasorangle.svg)  | <math><menclose notation="phasorangle"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>        | 相量角度符号                                                                                               |
 
 ## 示例
+
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+```
 
 ```html
 <math display="block">
@@ -47,7 +61,24 @@ l10n:
 </math>
 ```
 
+示例渲染结果：
+
+![于 menclose 元素同时应用 circle 和 box 值](circle-box.svg)
+
 {{ EmbedLiveSample('menclose 示例', 700, 200, "", "") }}
+
+## 技术概要
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles">隐式 ARIA 角色</a>
+    </th>
+    <td>
+      无
+    </td>
+  </tr>
+</table>
 
 ## 规范
 
