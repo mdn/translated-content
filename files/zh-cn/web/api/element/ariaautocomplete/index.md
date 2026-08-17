@@ -1,5 +1,5 @@
 ---
-title: "Element：ariaAutoComplete 属性"
+title: Element：ariaAutoComplete 属性
 short-title: ariaAutoComplete
 slug: Web/API/Element/ariaAutoComplete
 l10n:
