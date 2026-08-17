@@ -56,7 +56,7 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 
 - **Valeurs en pourcentage pour `text-decoration-inset`**&nbsp;: `layout.css.text-decoration-inset-percentage.enabled`
 
-  La propriété CSS {{CSSxRef("text-decoration-inset")}} prend désormais en charge les pourcentages comme valeurs. La valeur en pourcentage spécifie la taille de l'indentation en pourcentage de la {{CSSxRef("font-size")}}. ([bogue Firefox 2044602 <sup>(angl.)</sup>](https://bugzil.la/2044602)).
+  La propriété CSS {{CSSxRef("text-decoration-inset")}} prend désormais en charge les pourcentages comme valeurs. La valeur en pourcentage définit la taille de l'indentation en pourcentage de la {{CSSxRef("font-size")}}. ([bogue Firefox 2044602 <sup>(angl.)</sup>](https://bugzil.la/2044602)).
 
 - **Calculer une valeur basée sur `progress()`**&nbsp;: `layout.css.progress-function.enabled`
 
