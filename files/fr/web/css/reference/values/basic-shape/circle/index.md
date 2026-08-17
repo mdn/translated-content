@@ -3,7 +3,7 @@ title: Fonction CSS `circle()`
 short-title: circle()
 slug: Web/CSS/Reference/Values/basic-shape/circle
 l10n:
-  sourceCommit: 1e7ba7f0645705dcd46dd7392f09284129cf87bf
+  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`circle()`** définit un cercle grâce à son rayon et à la position du centre.
@@ -186,7 +186,7 @@ C'est le dégradé que nous allons découper en utilisant `circle()` (nous le fa
   width: 640px;
   height: 480px;
   overflow: hidden;
-  border: 1px solid #888;
+  border: 1px solid #888888;
 }
 
 .refbox {
@@ -206,7 +206,7 @@ C'est le dégradé que nous allons découper en utilisant `circle()` (nous le fa
 ```
 
 Le CSS pour les contrôles et les autres éléments n'est pas montré, car il n'est pas nécessaire pour comprendre la méthode `circle()`.
-Les lecteurs intéressés peuvent le consulter dans l'exemple du terrain de jeu.
+Les lecteur·ice·s intéressé·e·s peuvent le consulter dans l'exemple du terrain de jeu.
 
 ```css live-sample___circle-keywords-interactive hidden
 body {

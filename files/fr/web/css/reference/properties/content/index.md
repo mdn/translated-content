@@ -3,7 +3,7 @@ title: Propriété CSS `content`
 short-title: content
 slug: Web/CSS/Reference/Properties/content
 l10n:
-  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`content`** remplace le contenu par une valeur générée. Elle peut être utilisée pour définir ce qui est affiché à l'intérieur d'un élément ou d'un pseudo-élément. Pour les éléments, la propriété `content` définit si l'élément s'affiche normalement (`normal` ou `none`) ou s'il est remplacé par une image (et le texte alternatif (`alt`) associé). Pour les pseudo-éléments et les marges, `content` définit le contenu comme des images, du texte, les deux ou aucun, ce qui détermine si l'élément est affiché ou non.
@@ -108,7 +108,7 @@ Les mots-clés et les types de données mentionnés ci-dessus sont décrits plus
   - : Pour les pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}, cette valeur est calculée comme `none`. Pour d'autres pseudo-éléments tels que {{CSSxRef("::marker")}}, {{CSSxRef("::placeholder")}} ou {{CSSxRef("::file-selector-button")}}, elle produit le contenu initial (ou normal) de l'élément. Pour les éléments réguliers ou les boîtes de marge de page, elle est calculée comme les descendants de l'élément. C'est la valeur par défaut.
 
 - {{CSSxRef("&lt;string&gt;")}}
-  - : A sequence of characters enclosed in matching single or double quotes. Multiple string values will be concatenated (there is no concatenation operator in CSS).
+  - : Une séquence de caractères placée entre des guillemets simples ou doubles appariés. Les chaînes de caractères multiples sont concaténées (il n'existe pas d'opérateur de concaténation en CSS).
 
 - {{CSSxRef("&lt;image&gt;")}}
   - : Une {{CSSxRef("&lt;image&gt;")}}, représentant une image à afficher. Cela peut être égal à une {{CSSxRef("url_value", "&lt;url&gt;")}}, {{CSSxRef("image/image-set", "image-set()")}}, ou {{CSSxRef("&lt;gradient&gt;")}} type de données, ou une partie de la page Web elle-même, définie par la {{CSSxRef("element()")}} fonction.
@@ -125,7 +125,7 @@ Les mots-clés et les types de données mentionnés ci-dessus sont décrits plus
     - `open-quote` et `close-quote`
       - : Ces valeurs sont remplacées par la chaîne de caractères appropriée de la {{CSSxRef("quotes")}} propriété.
     - `no-open-quote` et `no-close-quote`
-      - : N'introduit aucun contenu, mais incrémente (décrémente) le niveau de nesting pour les citations.
+      - : N'introduit aucun contenu, mais incrémente (décrémente) le niveau d'imbrication pour les citations.
 
 - `<target>`
   - : Le type de données `<target>` comprend trois fonctions cibles, `<target-counter()>`, `<target-counters()>`, et `<target-text()>` qui créent des références croisées obtenues à partir de l'extrémité cible d'un lien. Voir [Syntaxe formelle](#syntaxe_formelle).
@@ -134,7 +134,7 @@ Les mots-clés et les types de données mentionnés ci-dessus sont décrits plus
   - : Le type de données `<leader()>` comprend une fonction leader&nbsp;: `leader( <leader-type> )`. Cette fonction accepte les valeurs de mots-clés `dotted`, `solid`, ou `space` (égal à `leader(".")`, `leader("_")`, et `leader(" ")`, respectivement), ou une `<string>` comme paramètre. Lorsqu'il est pris en charge et utilisé comme valeur pour `content`, le type de leader fourni est inséré comme un motif répétitif, reliant visuellement le contenu à travers une ligne horizontale.
 
 - `attr(x)`
-  - : La fonction CSS `attr(x)` récupère la valeur d'un attribut de l'élément sélectionné, ou de l'élément d'origine du pseudo-élément. La valeur de l'attribut `x` de l'élément est une chaîne non analysée représentant le nom de l'attribut. S'il n'y a pas d'attribut `x`, une chaîne vide est renvoyée. La sensibilité à la casse du paramètre de nom d'attribut dépend de la langue du document.
+  - : La fonction CSS `attr(x)` récupère la valeur d'un attribut de l'élément sélectionné, ou de l'élément d'origine du pseudo-élément. La valeur de l'attribut `x` de l'élément est une chaîne de caractères non analysée représentant le nom de l'attribut. S'il n'y a pas d'attribut `x`, une chaîne de caractères vide est retournée. La sensibilité à la casse du paramètre de nom d'attribut dépend de la langue du document.
 
 - les textes alternatifs&nbsp;: `/ <string> | <counter> | attr()`
   - : Le texte alternatif peut être défini pour une image ou tout élément de `<content-list>`, en ajoutant une barre oblique suivie d'une combinaison de chaînes de caractères, de compteurs et de fonctions `attr()`. Le texte alternatif est destiné à la sortie vocale par les lecteurs d'écran, mais peut aussi être affiché dans certains navigateurs.
@@ -205,8 +205,8 @@ Cet exemple insère des guillemets de couleur différente autour des citations.
     I was lucky enough to invent the Web at the time when the Internet already
     existed - and had for a decade and a half.</q
   >
-  We must understand that there is nothing fundamentally wrong with building on
-  the contributions of others.
+  Il faut comprendre qu'il n'y a rien de fondamentalement répréhensible à
+  s'appuyer sur les contributions d'autrui.
 </p>
 <p lang="fr-fr">
   Mais c'est Magritte qui a dit,
@@ -241,7 +241,7 @@ q::after {
 
 {{EmbedLiveSample("Citations", "100%", 200)}}
 
-Notez que le [type de guillemets générés](/fr/docs/Web/CSS/Reference/Properties/quotes#auto_quotes) est basé sur la langue. Les navigateurs ajoutent des guillemets ouvrants et fermants avant et après les éléments {{HTMLElement("q")}} par défaut, de sorte que les guillemets dans cet exemple apparaîtraient sans qu'ils soient explicitement définis. Ils auraient pu être désactivés en définissant les valeurs de propriété `content` respectives sur `no-open-quote` et `no-close-quote`, ou en les définissant toutes deux sur `none`. Ils peuvent également être désactivés en définissant la propriété {{CSSxRef("quotes")}} sur `none` à la place.
+Notez que le [type de guillemets générés](/fr/docs/Web/CSS/Reference/Properties/quotes#auto_quotes) est basé sur la langue. Les navigateurs ajoutent des guillemets ouvrants et fermants avant et après les éléments {{HTMLElement("q")}} par défaut, de sorte que les guillemets dans cet exemple apparaissent sans qu'ils soient explicitement définis. Ils ont pu être désactivés en définissant les valeurs de propriété `content` respectives sur `no-open-quote` et `no-close-quote`, ou en les définissant toutes deux sur `none`. Ils peuvent également être désactivés en définissant la propriété {{CSSxRef("quotes")}} sur `none` à la place.
 
 ### Ajouter du texte aux compteurs d'éléments de liste
 
@@ -344,7 +344,7 @@ a::before {
 > [!NOTE]
 > La valeur du texte alternatif est exposée dans l'arbre d'accessibilité du navigateur. Consultez la section [Voir aussi](#voir_aussi) pour les panneaux d'accessibilité spécifiques au navigateur.
 
-Si vous utilisez un lecteur d'écran, il devrait prononcer le mot «&nbsp;MOZILLA&nbsp;» lorsqu'il atteint l'image. Vous pouvez sélectionner le pseudo-élément `::before` avec l'outil de sélection des outils de développement, et voir le {{Glossary("accessible name", "nom accessible")}} dans le panneau d'accessibilité.
+Si vous utilisez un lecteur d'écran, il doit prononcer le mot «&nbsp;MOZILLA&nbsp;» lorsqu'il atteint l'image. Vous pouvez sélectionner le pseudo-élément `::before` avec l'outil de sélection des outils de développement, et voir le {{Glossary("accessible name", "nom accessible")}} dans le panneau d'accessibilité.
 
 ### Ajouter des compteurs dans le texte alternatif
 
@@ -515,4 +515,4 @@ div {
 - L'entrée de glossaire {{Glossary("Replaced elements", "Éléments remplacés")}}
 - Le module [de contenu généré par CSS](/fr/docs/Web/CSS/Guides/Generated_content)
 - Le module [des listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
-- Panneaux d'accessibilité du navigateur&nbsp;: [Inspecteur d'accessibilité de Firefox <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/), [Panneau d'accessibilité de Chrome <sup>(angl.)</sup>](https://developer.chrome.com/docs/devtools/accessibility/reference#pane), [Arbre d'accessibilité de Safari <sup>(angl.)</sup>](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)
+- Panneaux d'accessibilité du navigateur&nbsp;: [Inspecteur d'accessibilité de Firefox <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/), [Panneau d'accessibilité de Chrome <sup>(angl.)</sup>](https://developer.chrome.com/docs/devtools/accessibility/reference#pane), [Arbre d'accessibilité de Safari <sup>(angl.)</sup>](https://university.webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)

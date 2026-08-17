@@ -9,7 +9,7 @@ Dans une attaque de falsification de requête inter-sites (<i lang="en">cross-si
 
 ## Vue d'ensemble
 
-Un site web effectue généralement des actions particulières pour le compte d'un·e utilisateur·ice — acheter un produit ou prendre un rendez-vous, par exemple — en recevant une requête HTTP depuis le navigateur de l'utilisateur·ice, souvent avec des paramètres détaillant l'action à réaliser. Pour s'assurer que la requête provient bien de la personne visée, le serveur s'attend à ce qu'elle inclue des {{Glossary("Credential", "credentials")}} pour l'utilisateur·ice&nbsp;: par exemple, un cookie contenant l'identifiant de session.
+Un site web effectue généralement des actions particulières pour le compte d'un·e utilisateur·ice — acheter un produit ou prendre un rendez-vous, par exemple — en recevant une requête HTTP depuis le navigateur de l'utilisateur·ice, souvent avec des paramètres détaillant l'action à réaliser. Pour s'assurer que la requête provient bien de la personne visée, le serveur s'attend à ce qu'elle inclue des {{Glossary("Credential", "identifiants")}} pour l'utilisateur·ice&nbsp;: par exemple, un cookie contenant l'identifiant de session.
 
 Dans l'exemple ci‑dessous, l'utilisateur·ice s'est déjà connecté·e à sa banque et le navigateur a enregistré un cookie de session. La page contient un élément {{HTMLElement("form")}}, qui permet de transférer des fonds à une autre personne. Lorsque l'utilisateur·ice envoie le formulaire, le navigateur envoie une requête {{HTTPMethod("POST")}} au serveur, incluant les données du formulaire. Si l'utilisateur·ice est connecté·e, la requête inclut le cookie de l'utilisateur·ice. Le serveur valide le cookie et réalise l'action particulière — ici, le virement&nbsp;:
 
@@ -157,7 +157,7 @@ La valeur `Strict` offre la protection la plus forte&nbsp;: si cet attribut est 
 La valeur `Lax` assouplit cette restriction&nbsp;: les cookies sont inclus dans les requêtes inter-sites si les deux conditions suivantes s'appliquent&nbsp;:
 
 - La requête est une navigation du contexte de navigation de niveau supérieur.
-- La requête a utilisé une méthode {{Glossary("Safe/HTTP", "safe")}}&nbsp;: notablement, {{HTTPMethod("GET")}} est sûre, mais {{HTTPMethod("POST")}} ne l'est pas.
+- La requête a utilisé une méthode {{Glossary("Safe/HTTP", "sûre")}}&nbsp;: notablement, {{HTTPMethod("GET")}} est sûre, mais {{HTTPMethod("POST")}} ne l'est pas.
 
 Cependant, `Lax` offre une protection nettement plus faible que `Strict`&nbsp;:
 
@@ -169,7 +169,7 @@ De façon générale, vous devez essayer d'utiliser `Strict` pour certains cooki
 - `Lax` pour les cookies que vous utilisez afin de décider si un·e utilisateur·ice connecté·e doit se voir afficher une page&nbsp;;
 - `Strict` pour les cookies utilisés pour des requêtes modifiant l'état que vous ne souhaitez pas autoriser inter-sites.
 
-Un autre problème avec l'attribut `SameSite` est qu'il protège des requêtes provenant d'un autre {{Glossary("Site", "site")}}, et non d'une autre {{Glossary("Origin", "origin")}}. C'est une protection plus laxiste, car (par exemple) `https://foo.example.org` et `https://bar.example.org` sont considérés comme le même site, bien qu'ils soient des origines différentes. En pratique, si vous comptez sur la protection _same‑site_, vous devez faire confiance à tous les sous‑domaines de votre site.
+Un autre problème avec l'attribut `SameSite` est qu'il protège des requêtes provenant d'un autre {{Glossary("Site", "site")}}, et non d'une autre {{Glossary("Origin", "origine")}}. C'est une protection plus laxiste, car (par exemple) `https://foo.example.org` et `https://bar.example.org` sont considérés comme le même site, bien qu'ils soient des origines différentes. En pratique, si vous comptez sur la protection _same‑site_, vous devez faire confiance à tous les sous‑domaines de votre site.
 
 Voir [Contournement des restrictions de cookies SameSite <sup>(angl.)</sup>](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions) pour plus de détails sur les limites de `SameSite`.
 
