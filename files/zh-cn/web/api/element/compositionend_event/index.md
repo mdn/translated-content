@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("UI Events")}}
 
-当诸如{{glossary("input method editor", "输入法编辑器")}}之类的文本组合系统完成或取消当前组合会话时，会触发 **`compositionend`** 事件。
+**`compositionend`** 事件在诸如{{glossary("input method editor", "输入法编辑器")}}之类的文本组合系统完成或取消当前组合会话时，会在该元素上触发。
 
 例如，用户使用[汉语拼音](https://zh.wikipedia.org/wiki/汉语拼音){{glossary("Input method editor", "输入法编辑器")}}完成输入一个汉字后，可能触发此事件。
 
