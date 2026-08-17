@@ -1,15 +1,19 @@
 ---
 title: Firefox 154 note de version pour les développeurs
-short-title: Firefox 154 (Beta)
+short-title: Firefox 154
 slug: Mozilla/Firefox/Releases/154
 l10n:
-  sourceCommit: 75c6ca4f693d165c0182403d9479c4c454b02dc8
+  sourceCommit: 2ad62b2e8cb4dbd6305f23fda33d800e218d8aef
 ---
 
 Cet article présente les informations concernant les changements de Firefox 154 qui concernent les développeur·euse·s.
 Firefox 154 est sorti le [18 août 2026 <sup>(angl.)</sup>](https://whattrainisitnow.com/release/?version=154).
 
 ## Changements pour les développeur·euse·s web
+
+### HTML
+
+Pas de changements notables.
 
 ### APIs
 
@@ -53,6 +57,10 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 - **Valeurs en pourcentage pour `text-decoration-inset`**&nbsp;: `layout.css.text-decoration-inset-percentage.enabled`
 
   La propriété CSS {{CSSxRef("text-decoration-inset")}} prend désormais en charge les pourcentages comme valeurs. La valeur en pourcentage spécifie la taille de l'indentation en pourcentage de la {{CSSxRef("font-size")}}. ([bogue Firefox 2044602 <sup>(angl.)</sup>](https://bugzil.la/2044602)).
+
+- **Calculer une valeur basée sur `progress()`**&nbsp;: `layout.css.progress-function.enabled`
+
+  La fonction CSS {{CSSxRef("progress()")}} est désormais prise en charge. Cela permet à l'utilisateur·ice de calculer un {{CSSxRef("&lt;number&gt;")}} basé sur une valeur (ou progression) comprise entre une valeur minimale et une valeur maximale. ([bogue Firefox 2047015 <sup>(angl.)</sup>](https://bugzil.la/2047015)).
 
 - **CSS Typed Object Model Level 1** (Nightly)&nbsp;: `layout.css.typed-om.enabled`
 
