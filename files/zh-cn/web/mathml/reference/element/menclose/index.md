@@ -37,7 +37,6 @@ l10n:
 
 ## 示例
 
-
 ```css hidden
 html,
 body {
