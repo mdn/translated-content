@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8e6760da4c8c8e3fbbabe9686ba16850c99092ba
 ---
 
-Dans une attaque du Manipulateur au milieu (<abbr lang="en">MITM</abbr>, <i lang="en">Manipulator in the middle</i> en anglais), l'attaquant·e s'insère entre deux entités qui tentent de communiquer entre elles.
+Dans une attaque du monstre du milieu (<abbr lang="en">MITM</abbr>, <i lang="en">Manipulator in the middle</i> en anglais), l'attaquant·e s'insère entre deux entités qui tentent de communiquer entre elles.
 
 Sur le web, une attaque MITM se produit généralement entre le navigateur de l'utilisateur·ice et le serveur, et permet à l'attaquant·e de voir et éventuellement de modifier toute donnée échangée par HTTP.
 

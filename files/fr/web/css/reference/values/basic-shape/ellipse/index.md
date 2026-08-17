@@ -3,7 +3,7 @@ title: Fonction CSS `ellipse()`
 short-title: ellipse()
 slug: Web/CSS/Reference/Values/basic-shape/ellipse
 l10n:
-  sourceCommit: 1e7ba7f0645705dcd46dd7392f09284129cf87bf
+  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`ellipse()`** fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}.
@@ -241,7 +241,7 @@ C'est ce dégradé que nous découpons en utilisant la fonction `ellipse()` (nou
   width: 640px;
   height: 480px;
   overflow: hidden;
-  border: 1px solid #888;
+  border: 1px solid #888888;
 }
 
 .refbox {
@@ -261,7 +261,7 @@ C'est ce dégradé que nous découpons en utilisant la fonction `ellipse()` (nou
 ```
 
 Le CSS pour les contrôles et les autres éléments n'est pas montré, car il n'est pas nécessaire pour comprendre la fonction `ellipse()`.
-Les lecteurs intéressés peuvent le consulter dans l'aire de jeu de l'exemple.
+Les lecteur·ice·s intéressé·e·s peuvent le consulter dans l'exemple du terrain de jeu.
 
 ```css live-sample___ellipse-keywords-interactive hidden
 body {
