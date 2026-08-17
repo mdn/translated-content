@@ -7,7 +7,6 @@ slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
 
 > [!NOTE]
 > 该策略仅对 [no-cors](https://fetch.spec.whatwg.org/#concept-request-mode) 请求生效，对于列入 CORS 安全名单的方法/标头，系统默认会发出这类请求。
-> 换句话说，CORP 仅针对通过 html 标签加载图片或脚本等跨源静态资源的场景生效，对于 fetch 或 xhr 跨源请求是不生效的，后者要通过 CORS 控制。
 
 由于该策略是通过响应标头来实施的，所以其并不会拦截实际的请求 —— 是浏览器在接收到该响应标头后，通过移除响应正文来防止结果泄露的。
 
