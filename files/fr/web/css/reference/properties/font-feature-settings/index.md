@@ -29,7 +29,7 @@ font-feature-settings: "smcp", "zero";
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <p>La difficulté des gauffres</p>
+    <p>La difficulté des gaufres</p>
     <table>
       <tr>
         <td><span class="tabular">0O</span></td>
