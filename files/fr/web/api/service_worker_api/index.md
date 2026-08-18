@@ -18,9 +18,9 @@ Un <i lang="en">service worker</i> est un [<i lang="en">worker</i>](/fr/docs/Web
 
 Un <i lang="en">service worker</i> s'exécute dans le contexte d'un <i lang="en">worker</i> et n'a donc pas accès au DOM. Il s'exécute dans un <i lang="en">thread</i> différent du <i lang="en">thread</i> JavaScript principal et n'est donc pas bloquant. Il est conçu pour fonctionner de façon complètement asynchrone. Aussi, les API synchrones comme [XHR](/fr/docs/Web/API/XMLHttpRequest) et [<i lang="en">Web Storage</i>](/fr/docs/Web/API/Web_Storage_API) ne peuvent pas être utilisées dans le code d'un <i lang="en">service worker</i>.
 
-Les <i lang="en">service workers</i> ne peuvent pas importer des modules JavaScript de manière dynamique, et [`import()`](/fr/docs/Web/JavaScript/Reference/Operators/import) générera une erreur si elle est appelée dans le contexte global d'un <i lang="en">service worker</i>. Les importations statiques utilisant l'instruction [`import`](/fr/docs/Web/JavaScript/Reference/Statements/import) sont autorisées.
+Les <i lang="en">service workers</i> ne peuvent pas importer des modules JavaScript de manière dynamique, et [`import()`](/fr/docs/Web/JavaScript/Reference/Operators/import) génère une erreur si elle est appelée dans le contexte global d'un <i lang="en">service worker</i>. Les importations statiques utilisant l'instruction [`import`](/fr/docs/Web/JavaScript/Reference/Statements/import) sont autorisées.
 
-Les <i lang="en">service workers</i> ne sont disponibles que dans des [contextes sécurisés](/fr/docs/Web/Security/Defenses/Secure_Contexts)&nbsp;: cela signifie que leur document est servi avec HTTPS, bien que les navigateurs considèrent également `http://localhost` comme un contexte sécurisé, pour faciliter le développement local. Les connexions HTTP sont susceptibles d'être victimes d'injection de code malveillant par des attaques {{Glossary("MitM", "de l'homme du milieu")}}, et de telles attaques pourraient être aggravées si elles avaient accès à ces API puissantes.
+Les <i lang="en">service workers</i> ne sont disponibles que dans des [contextes sécurisés](/fr/docs/Web/Security/Defenses/Secure_Contexts)&nbsp;: cela signifie que leur document est servi avec HTTPS, bien que les navigateurs considèrent également `http://localhost` comme un contexte sécurisé, pour faciliter le développement local. Les connexions HTTP sont susceptibles d'être victimes d'injection de code malveillant par des attaques {{Glossary("MitM", "du monstre du milieu")}}, et de telles attaques peuvent être aggravées si elles ont accès à ces API puissantes.
 
 > [!NOTE]
 > Sous Firefox, pour effectuer des tests, vous pouvez exécuter les <i lang="en">service workers</i> sur HTTP (de manière non sécurisée)&nbsp;; il suffit de cocher l'option **Activer les Service Workers sur HTTP (lorsque la boîte à outils est ouverte)** dans le menu des options/roue dentée des outils de développement de Firefox.
@@ -33,11 +33,11 @@ Les <i lang="en">service workers</i> ne sont disponibles que dans des [contextes
 
 ### Enregistrement
 
-On commence par enregistrer un <i lang="en">service worker</i> à l'aide de la méthode {{DOMxRef("ServiceWorkerContainer.register()")}}. Si cela fonctionne, le <i lang="en">service worker</i> sera téléchargé sur le client et tentera les étapes d'installation et d'activation (voir ci-après) pour les URL auxquelles la personne accède pour toute l'origine concernée ou le sous-ensemble qui a été indiqué.
+On commence par enregistrer un <i lang="en">service worker</i> à l'aide de la méthode {{DOMxRef("ServiceWorkerContainer.register()")}}. Si cela fonctionne, le <i lang="en">service worker</i> est téléchargé sur le client et tente les étapes d'installation et d'activation (voir ci-après) pour les URL auxquelles la personne accède pour toute l'origine concernée ou le sous-ensemble qui a été indiqué.
 
 ### Téléchargement, installation et activation
 
-À partir de ce point, le <i lang="en">service worker</i> suivra ce parcours&nbsp;:
+À partir de ce point, le <i lang="en">service worker</i> suit ce parcours&nbsp;:
 
 1. Téléchargement
 2. Installation
@@ -56,14 +56,14 @@ Si c'est la première fois qu'un <i lang="en">service worker</i> est disponible,
 
 S'il y a déjà un <i lang="en">service worker</i> existant disponible, la nouvelle version est installée en arrière-plan mais n'est pas activée immédiatement. À cet instant, le <i lang="en">service worker</i> est considéré comme _<i lang="en">worker</i> en attente_. L'activation a lieu dès qu'il n'y a plus de pages chargées qui utilisent encore l'ancien <i lang="en">service worker</i>. Dès qu'il n'y a plus de pages à charger, le nouveau <i lang="en">service worker</i> est activé (devient donc le _<i lang="en">worker</i> actif_). L'activation peut être déclenchée plus tôt en utilisant {{DOMxRef("ServiceWorkerGlobalScope.skipWaiting()")}} et les pages existantes peuvent alors être revendiquées par le <i lang="en">worker</i> actif avec {{DOMxRef("Clients.claim()")}}.
 
-Il est possible d'écouter l'évènement {{DOMxRef("ServiceWorkerGlobalScope.install_event", "install")}}&nbsp;; cela permet généralement de préparer le <i lang="en">service worker</i> à être utilisé lorsque cet évènement se déclenche (par exemple en créant un cache avec l'API de stockage et en y plaçant des données qui permettront l'exécution de l'application hors-ligne).
+Il est possible d'écouter l'évènement {{DOMxRef("ServiceWorkerGlobalScope.install_event", "install")}}&nbsp;; cela permet généralement de préparer le <i lang="en">service worker</i> à être utilisé lorsque cet évènement se déclenche (par exemple en créant un cache avec l'API de stockage et en y plaçant des données qui permettent l'exécution de l'application hors-ligne).
 
 Il existe également un évènement {{DOMxRef("ServiceWorkerGlobalScope.activate_event", "activate")}} qui est déclenché à l'activation. À ce moment, il est généralement utile de rafraîchir les vieux caches et autres éléments associés à l'ancienne version du <i lang="en">service worker</i>.
 
 Un <i lang="en">service worker</i> peut répondre aux requêtes en utilisant l'évènement {{DOMxRef("FetchEvent", "fetch")}}. Les réponses à ces requêtes peuvent être modifiées en utilisant la méthode {{DOMxRef("FetchEvent.respondWith()")}}.
 
 > [!NOTE]
-> Comme les évènements `install`/`activate` peuvent prendre un certain temps à finir, la spécification fournit une méthode {{DOMxRef("ExtendableEvent.waitUntil", "waitUntil()")}}. Lorsque celle-ci est appelée sur les évènements `install` ou `activate` avec une promesse, les évènements fonctionnels comme `fetch` et `push` attendront la résolution de la promesse.
+> Comme les évènements `install`/`activate` peuvent prendre un certain temps à finir, la spécification fournit une méthode {{DOMxRef("ExtendableEvent.waitUntil", "waitUntil()")}}. Lorsque celle-ci est appelée sur les évènements `install` ou `activate` avec une promesse, les évènements fonctionnels comme `fetch` et `push` attendent la résolution de la promesse.
 
 Pour un tutoriel complet illustrant comment construire un premier exemple simple fonctionnel, voir le guide [Utiliser les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 
@@ -83,10 +83,10 @@ Les <i lang="en">service workers</i> sont également conçus pour répondre à c
 - Compilation et gestion de dépendances côté client à des fins de développement (par exemple CoffeeScript, less, modules CJS/AMD).
 - Déclencheurs (<i lang="en">hooks</i>) pour des services d'arrière-plan.
 - Gestion de modèles personnalisés selon le motif des URL.
-- Améliorations des performances, par exemple, le préchargement de ressources dont l'utilisateur·ice aura probablement bientôt besoin, comme les prochaines images d'un album photo.
+- Améliorations des performances, par exemple, le préchargement de ressources dont l'utilisateur·ice a probablement bientôt besoin, comme les prochaines images d'un album photo.
 - Simulation d'API.
 
-À l'avenir, les <i lang="en">service workers</i> pourront réaliser d'autres tâches qui rapprocheront la plateforme web des applications natives. D'autres spécifications peuvent déjà exploiter les contextes des <i lang="en">service workers</i>, par exemple&nbsp;:
+À l'avenir, les <i lang="en">service workers</i> peuvent réaliser d'autres tâches qui rapprochent la plateforme web des applications natives. D'autres spécifications peuvent déjà exploiter les contextes des <i lang="en">service workers</i>, par exemple&nbsp;:
 
 - [Synchronisation en arrière-plan <sup>(angl.)</sup>](https://github.com/WICG/background-sync)&nbsp;: Démarrer un service worker même lorsqu'il n'y a personne sur le site, afin que les caches puissent être mis à jour, etc.
 - [Réaction aux messages push](/fr/docs/Web/API/Push_API)&nbsp;: Démarrer un service worker pour envoyer un message aux utilisateur·ice·s afin de leur indiquer qu'un nouveau contenu est disponible.

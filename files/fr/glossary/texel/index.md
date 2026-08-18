@@ -2,16 +2,14 @@
 title: Texel
 slug: Glossary/Texel
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 90f3b0ec3c27814f0571d062f69e4fdbe5546f93
 ---
 
-En graphisme 3D, un **texel** est un pixel unique à l'intérieur d'une texture. Les _textures_ sont des images affichées sur la surface d'un polygone dans une image 3D rendue. Une texture se caractérise par un ensemble de texels, tout comme une image se caractérise par un ensemble de pixels.
+En graphisme 3D, un **texel** (abréviation de «&nbsp;texture pixel&nbsp;») est un élément individuel d'une texture. Une texture se compose d'une grille de texels, tout comme une image matricielle se compose d'une grille de [pixels](/fr/docs/Glossary/Pixel). Les textures sont rendues sur des surfaces 3D pour transmettre des qualités telles que la couleur, la profondeur et la réflectivité. Plusieurs textures peuvent être superposées pour créer des effets de surface complexes.
 
-Un pixel dans un fichier d'image matricielle est une série de bits contenant des données de couleur, et parfois des données d'opacité, qui sont associées aux pixels d'affichage sur un périphérique de sortie comme un écran d'ordinateur. Lorsqu'un pixel appartient à une image utilisée comme ressource de texture, il est appelé «&nbsp;pixel de texture&nbsp;» ou abrégé en «&nbsp;texel&nbsp;». Au lieu d'être associé directement à des pixels d'écran, les données d'un texel sont associées à une position dans l'espace de coordonnées de l'objet 3D modélisé. Les textures servent à transmettre la couleur et d'autres propriétés de surface comme la profondeur et la réflectivité. Plusieurs textures peuvent être superposées pour créer des effets de surface complexes.
+**La cartographie de texture** associe les points sur la surface d'un modèle aux positions dans une texture, généralement par l'intermédiaire de coordonnées de texture (également appelées coordonnées UV) assignées aux sommets des polygones. Lors du rendu, ces coordonnées sont interpolées sur le polygone et servent à échantillonner la texture. L'emplacement d'échantillonnage d'un fragment peut se trouver entre les centres des texels, ou son empreinte dans l'espace de texture peut couvrir plusieurs texels. **Le filtrage de texture** détermine comment les valeurs des texels sont sélectionnées ou combinées lors de _l'agrandissement_ ou de la _réduction_ d'une texture.
 
-Le processus d'association des texels appropriés à leurs points correspondants sur un polygone s'appelle le **cartographie de texture**. La cartographie (<i lang="en">mapping</i> en anglais) de texture est une étape du processus de rendu d'une image 3D pour l'affichage. Lorsque la grille de texels source et la grille de pixels de destination ne coïncident pas, un **filtrage de texture** supplémentaire est appliqué pour lisser les pixels texturés obtenus (texture _d'agrandissement_ ou _de réduction_). Le résultat final du rendu est une projection 2D aplatie du modèle 3D, où la texture a été «&nbsp;enroulée&nbsp;» autour du modèle.
-
-Pendant le processus de rendu, la cartographie de texture est généralement effectuée avant l'éclairage de la scène&nbsp;; cependant, dans WebGL, l'éclairage est réalisé dans le cadre de la cartographie de texture.
+Dans les API graphiques programmables telles que [WebGL](/fr/docs/Glossary/WebGL), l'échantillonnage des textures et les calculs d'éclairage sont contrôlés par des programmes d'ombrage (<i lang="en">shader</i> en anglais) et peuvent être effectués ensemble dans le même programme d'ombrage.
 
 ## Voir aussi
 

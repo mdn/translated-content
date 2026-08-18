@@ -28,7 +28,7 @@ Les cookies sont principalement utilisés à trois fins&nbsp;:
 
 ### Stockage des données
 
-Aux débuts du web, lorsqu'il n'y avait pas d'autre option, les cookies étaient utilisés à des fins générales de stockage côté client. Les API de stockage modernes sont désormais recommandées, par exemple [l'API Web Storage](/fr/docs/Web/API/Web_Storage_API) (`localStorage` et `sessionStorage`) et [IndexedDB](/fr/docs/Web/API/IndexedDB_API).
+Aux débuts du web, lorsqu'il n'y avait pas d'autre option, les cookies sont utilisés à des fins générales de stockage côté client. Les API de stockage modernes sont désormais recommandées, par exemple [l'API Web Storage](/fr/docs/Web/API/Web_Storage_API) (`localStorage` et `sessionStorage`) et [IndexedDB](/fr/docs/Web/API/IndexedDB_API).
 
 Elles sont conçues pour le stockage, n'envoient jamais de données au serveur et n'ont pas les autres inconvénients liés à l'utilisation des cookies pour le stockage&nbsp;:
 
@@ -85,7 +85,7 @@ Vous pouvez définir une date d'expiration ou une période après laquelle le co
   ```
 
   > [!NOTE]
-  > `Expires` est disponible depuis plus longtemps que `Max-Age`, cependant `Max-Age` est moins sujet aux erreurs et prend le pas lorsque les deux sont définis. La raison en est que lorsque vous définissez une date et une heure pour `Expires`, elles sont relatives au client sur lequel le cookie est défini. Si le serveur est réglé sur une heure différente, cela pourrait provoquer des erreurs.
+  > `Expires` est disponible depuis plus longtemps que `Max-Age`, cependant `Max-Age` est moins sujet aux erreurs et prend le pas lorsque les deux sont définis. La raison en est que lorsque vous définissez une date et une heure pour `Expires`, elles sont relatives au client sur lequel le cookie est défini. Si le serveur est réglé sur une heure différente, cela peut provoquer des erreurs.
 
 - _Session_ cookies — cookies sans attribut `Max-Age` ou `Expires` — sont supprimés lorsque la session en cours se termine. Le navigateur définit quand la «&nbsp;session en cours&nbsp;» se termine, et certains navigateurs utilisent la _restauration de session_ lors du redémarrage. Cela peut entraîner la persistance indéfinie des cookies de session.
 
@@ -99,13 +99,13 @@ Set-Cookie: id=a3fWa; Max-Age=0
 ```
 
 Vous pouvez également effacer tous les cookies associés à un domaine enregistrable en utilisant l'en-tête de réponse {{HTTPHeader("Clear-Site-Data")}}.
-Par exemple, l'en-tête suivant envoyé depuis `https://toto.example.com/` effacerait tous les cookies envoyés par `example.com` et tous ses sous-domaines, tels que `tout.tata.example.com`.
+Par exemple, l'en-tête suivant envoyé depuis `https://toto.example.com/` efface tous les cookies envoyés par `example.com` et tous ses sous-domaines, tels que `tout.tata.example.com`.
 
 ```http
 Clear-Site-Data: "cookies"
 ```
 
-Il existe certaines techniques conçues pour recréer des cookies après leur suppression. Celles-ci sont connues sous le nom de «&nbsp;cookies zombies&nbsp;». Ces techniques violent les principes de [confidentialité](#pistage_et_vie_privée) et de contrôle des utilisateur·ice·s, peuvent enfreindre les [réglementations sur la protection des données](#régulations_relatives_aux_cookies) et pourraient exposer un site Web les utilisant à des responsabilités légales.
+Il existe certaines techniques conçues pour recréer des cookies après leur suppression. Celles-ci sont connues sous le nom de «&nbsp;cookies zombies&nbsp;». Ces techniques violent les principes de [confidentialité](#pistage_et_vie_privée) et de contrôle des utilisateur·ice·s, peuvent enfreindre les [réglementations sur la protection des données](#régulations_relatives_aux_cookies) et peuvent exposer un site Web les utilisant à des responsabilités légales.
 
 ### Mettre à jour les valeurs de cookies
 
@@ -115,7 +115,7 @@ Pour mettre à jour un cookie avec HTTP, le serveur peut envoyer un en-tête {{H
 Set-Cookie: id=nouvelle-valeur
 ```
 
-Il existe plusieurs raisons pour lesquelles vous pourriez vouloir faire cela, par exemple si un·e utilisateur·ice a mis à jour ses préférences et que l'application souhaite refléter les changements dans les données côté client (vous pourriez également le faire avec un mécanisme de stockage côté client tel que [le stockage web](/fr/docs/Web/API/Web_Storage_API)).
+Il existe plusieurs raisons pour lesquelles vous pouvez vouloir faire cela, par exemple si un·e utilisateur·ice a mis à jour ses préférences et que l'application souhaite refléter les changements dans les données côté client (vous pouvez également le faire avec un mécanisme de stockage côté client tel que [le stockage web](/fr/docs/Web/API/Web_Storage_API)).
 
 #### Mettre à jour les cookies avec JavaScript
 
@@ -140,11 +140,11 @@ console.log(document.cookie);
 
 Pour des raisons de sécurité, vous ne pouvez pas modifier les valeurs des cookies en envoyant directement un en-tête `Cookie` mis à jour lors de l'initiation d'une requête, par exemple avec {{DOMxRef("Window/fetch", "fetch()")}} ou {{DOMxRef("XMLHttpRequest")}}.
 
-Il existe de bonnes raisons pour lesquelles vous ne devriez pas permettre à JavaScript de modifier les cookies. Vous pouvez empêcher JavaScript d'accéder à un cookie en définissant l'attribut [`HttpOnly`](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) lors de sa création. Consultez la section [Sécurité](#sécurité) pour plus de détails.
+Il existe de bonnes raisons pour lesquelles vous ne devez pas permettre à JavaScript de modifier les cookies. Vous pouvez empêcher JavaScript d'accéder à un cookie en définissant l'attribut [`HttpOnly`](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) lors de sa création. Consultez la section [Sécurité](#sécurité) pour plus de détails.
 
 ## Sécurité
 
-Lorsque vous stockez des informations dans des cookies, par défaut toutes les valeurs des cookies sont visibles et peuvent être modifiées par l'utilisateur·ice final. Vous ne voulez vraiment pas que vos cookies soient mal utilisés — par exemple, accessibles/modifiés par des acteurs malveillants, ou envoyés à des domaines où ils ne devraient pas être envoyés. Les conséquences potentielles peuvent aller de l'ennuyeux — des applications qui ne fonctionnent pas ou qui présentent un comportement étrange — au catastrophique. Un·e criminel·le pourrait par exemple voler un identifiant de session et l'utiliser pour définir un cookie qui donne l'impression qu'il est connecté en tant qu'autre personne, prenant ainsi le contrôle de son compte bancaire ou de commerce électronique.
+Lorsque vous stockez des informations dans des cookies, par défaut toutes les valeurs des cookies sont visibles et peuvent être modifiées par l'utilisateur·ice final. Vous ne voulez vraiment pas que vos cookies soient mal utilisés — par exemple, accessibles/modifiés par des acteurs malveillants, ou envoyés à des domaines où ils ne doivent pas être envoyés. Les conséquences potentielles peuvent aller de l'ennuyeux — des applications qui ne fonctionnent pas ou qui présentent un comportement étrange — au catastrophique. Un·e criminel·le peut par exemple voler un identifiant de session et l'utiliser pour définir un cookie qui donne l'impression qu'il est connecté en tant qu'autre personne, prenant ainsi le contrôle de son compte bancaire ou de commerce électronique.
 
 Vous pouvez sécuriser vos cookies de différentes manières, qui sont examinées dans cette section.
 
@@ -156,9 +156,9 @@ Vous pouvez vous assurer que les cookies sont envoyés de manière sécurisée e
 Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 ```
 
-- Un cookie avec l'attribut `Secure` n'est envoyé au serveur qu'avec une requête chiffrée par le protocole HTTPS. Il n'est jamais envoyé avec HTTP non sécurisé (sauf sur localhost), ce qui signifie que les attaquant·e·s {{Glossary("MitM", "de la personne au milieu")}} ne peuvent pas y accéder facilement. Les sites non sécurisés (avec `http:` dans l'URL) ne peuvent pas définir de cookies avec l'attribut `Secure`. Cependant, ne supposez pas que `Secure` empêche tout accès aux informations sensibles dans les cookies. Par exemple, quelqu'un ayant accès au disque dur du client (ou à JavaScript si l'attribut `HttpOnly` n'est pas défini) peut lire et modifier les informations.
+- Un cookie avec l'attribut `Secure` n'est envoyé au serveur qu'avec une requête chiffrée par le protocole HTTPS. Il n'est jamais envoyé avec HTTP non sécurisé (sauf sur localhost), ce qui signifie que les attaques {{Glossary("MitM", "du monstre du milieu")}} ne peuvent pas y accéder facilement. Les sites non sécurisés (avec `http:` dans l'URL) ne peuvent pas définir de cookies avec l'attribut `Secure`. Cependant, ne supposez pas que `Secure` empêche tout accès aux informations sensibles dans les cookies. Par exemple, quelqu'un ayant accès au disque dur du client (ou à JavaScript si l'attribut `HttpOnly` n'est pas défini) peut lire et modifier les informations.
 
-- Un cookie avec l'attribut `HttpOnly` ne peut pas être accédé par JavaScript, par exemple en utilisant {{DOMxRef("Document.cookie")}}&nbsp;; il ne peut être accédé que lorsqu'il atteint le serveur. Les cookies qui persistent les sessions utilisateur·ice, par exemple, devraient avoir l'attribut `HttpOnly` défini — il serait vraiment dangereux de les rendre disponibles à JavaScript. Cette précaution aide à atténuer les attaques de type cross-site scripting ([XSS](/fr/docs/Web/Security/Attacks/XSS)).
+- Un cookie avec l'attribut `HttpOnly` ne peut pas être accédé par JavaScript, par exemple en utilisant {{DOMxRef("Document.cookie")}}&nbsp;; il ne peut être accédé que lorsqu'il atteint le serveur. Les cookies qui persistent les sessions utilisateur·ice, par exemple, doivent avoir l'attribut `HttpOnly` défini — il est vraiment dangereux de les rendre disponibles à JavaScript. Cette précaution aide à atténuer les attaques de type script inter-sites ([XSS](/fr/docs/Web/Security/Attacks/XSS)).
 
 > [!NOTE]
 > Selon l'application, vous pouvez vouloir utiliser un identifiant opaque que le serveur consulte plutôt que de stocker directement des informations sensibles dans les cookies, ou explorer des mécanismes d'authentification/confidentialité alternatifs tels que les [Jetons web JSON <sup>(angl.)</sup>](https://www.jwt.io/).
@@ -175,7 +175,7 @@ Les attributs `Domain` et `Path` définissent la _portée_ d'un cookie, c'est-à
 
   Si l'en-tête `Set-Cookie` ne définit pas d'attribut `Domain`, les cookies sont disponibles sur le serveur qui les définit _mais pas sur ses sous-domaines_. Par conséquent, définir l'attribut `Domain` est moins restrictif que de l'omettre.
   Notez qu'un serveur ne peut définir l'attribut `Domain` que sur son propre domaine ou un domaine parent, pas sur un sous-domaine ou un autre domaine.
-  Ainsi, par exemple, un serveur avec le domaine `foo.example.com` pourrait définir l'attribut sur `example.com` ou `foo.example.com`, mais pas sur `bar.foo.example.com` ou `elsewhere.com` (les cookies seraient néanmoins _envoyés_ aux sous-domaines tels que `bar.foo.example.com`).
+  Ainsi, par exemple, un serveur avec le domaine `foo.example.com` peut définir l'attribut sur `example.com` ou `foo.example.com`, mais pas sur `bar.foo.example.com` ou `elsewhere.com` (les cookies sont néanmoins _envoyés_ aux sous-domaines tels que `bar.foo.example.com`).
   Voir [Domaines invalides](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#domaines_invalides) pour plus de détails.
 
 - L'attribut `Path` indique un chemin URL qui doit exister dans l'URL demandée pour envoyer l'en-tête `Cookie`. Par exemple&nbsp;:
@@ -201,18 +201,18 @@ Les attributs `Domain` et `Path` définissent la _portée_ d'un cookie, c'est-à
 
 ### Contrôler les cookies tiers avec `SameSite`
 
-L'attribut [`SameSite`](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) permet aux serveurs de définir si et quand les cookies sont envoyés avec des requêtes inter-sites (depuis d'autres sites) — c'est-à-dire des [cookies tiers](/fr/docs/Web/Privacy/Guides/Third-party_cookies). Les requêtes inter-sites sont des requêtes où le {{Glossary("Site", "site")}} (le domaine enregistrable) et/ou le schéma (http ou https) ne correspondent pas au site que l'utilisateur·ice visite actuellement. Cela inclut les requêtes envoyées lorsque des liens sont cliqués sur d'autres sites pour naviguer vers votre site, ainsi que toute requête envoyée par du contenu tiers intégré.
+L'attribut [`SameSite`](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) permet aux serveurs de définir si et quand les cookies sont envoyés avec des requêtes inter-sites (depuis d'autres sites) — c'est-à-dire des [cookies tiers](/fr/docs/Web/Privacy/Guides/Third-party_cookies). Les requêtes inter-sites sont des requêtes où le {{Glossary("Site", "site")}} (le domaine enregistrable) et/ou le schéma (http ou https) ne correspondent pas au site que l'utilisateur·ice visite actuellement. Cela inclut les requêtes envoyées lorsque des liens sont cliqué sur d'autres sites pour naviguer vers votre site, ainsi que toute requête envoyée par du contenu tiers intégré.
 
-`SameSite` aide à prévenir la fuite d'informations, à préserver la [vie privée](#pistage_et_vie_privée) de l'utilisateur·ice et à fournir une certaine protection contre les attaques de type {{Glossary("CSRF", "cross-site request forgery")}}. Il prend trois valeurs possibles&nbsp;: `Strict`, `Lax` et `None`&nbsp;:
+`SameSite` aide à prévenir la fuite d'informations, à préserver la [vie privée](#pistage_et_vie_privée) de l'utilisateur·ice et à fournir une certaine protection contre les attaques de type {{Glossary("CSRF", "falsification de requête inter-sites")}}. Il prend trois valeurs possibles&nbsp;: `Strict`, `Lax` et `None`&nbsp;:
 
-- `Strict` oblige le navigateur à n'envoyer le cookie qu'en réponse à des requêtes provenant du site d'origine du cookie. Cela devrait être utilisé lorsque vous avez des cookies liés à des fonctionnalités qui sont toujours derrière une navigation initiale, comme l'authentification ou le stockage des informations du panier d'achat.
+- `Strict` oblige le navigateur à n'envoyer le cookie qu'en réponse à des requêtes provenant du site d'origine du cookie. Cela doit être utilisé lorsque vous avez des cookies liés à des fonctionnalités qui sont toujours derrière une navigation initiale, comme l'authentification ou le stockage des informations du panier d'achat.
 
   ```http
   Set-Cookie: cart=110045_77895_53420; SameSite=Strict
   ```
 
   > [!NOTE]
-  > Les cookies utilisés pour des informations sensibles devraient également avoir une [durée de vie](#suppression_définir_la_durée_de_vie_dun_cookie) courte.
+  > Les cookies utilisés pour des informations sensibles doivent également avoir une [durée de vie](#suppression_définir_la_durée_de_vie_dun_cookie) courte.
 
 - `Lax` est similaire, sauf que le navigateur envoie également le cookie lorsque l'utilisateur·ice _navigue_ vers le site d'origine du cookie (même si l'utilisateur·ice provient d'un site différent). Cela est utile pour les cookies affectant l'affichage d'un site — par exemple, vous pouvez avoir des informations sur les produits partenaires avec un lien d'affiliation sur votre site. Lorsque ce lien est suivi vers le site partenaire, ils peuvent vouloir définir un cookie indiquant que le lien d'affiliation a été suivi, ce qui affiche une bannière de récompense et offre une réduction si le produit est acheté.
 
@@ -259,7 +259,7 @@ Cependant, les cookies tiers peuvent également être utilisés pour créer des 
 Les fournisseurs de navigateurs savent que les utilisateur·ice·s n'aiment pas ce comportement et, par conséquent, ont tous commencé à bloquer les cookies tiers par défaut, ou du moins ont prévu de le faire. Les cookies tiers (ou simplement les cookies de suivi) peuvent également être bloqués par d'autres paramètres du navigateur ou extensions.
 
 > [!NOTE]
-> Le blocage des cookies peut empêcher certains composants tiers (comme les composants de médias sociaux) de fonctionner comme prévu. À mesure que les navigateurs imposent des restrictions supplémentaires sur les cookies tiers, les développeur·euse·s devraient commencer à chercher des moyens de réduire leur dépendance à ces cookies.
+> Le blocage des cookies peut empêcher certains composants tiers (comme les composants de médias sociaux) de fonctionner comme prévu. À mesure que les navigateurs imposent des restrictions supplémentaires sur les cookies tiers, les développeur·euse·s doivent commencer à chercher des moyens de réduire leur dépendance à ces cookies.
 
 Consultez notre article sur les [cookies tiers](/fr/docs/Web/Privacy/Guides/Third-party_cookies) pour des informations détaillées sur les cookies tiers, les problèmes qui y sont associés et les alternatives disponibles. Consultez notre page d'accueil sur la [vie privée](/fr/docs/Web/Privacy) pour plus d'informations sur la vie privée en général.
 
@@ -282,7 +282,7 @@ Ces régulations incluent des exigences telles que&nbsp;:
 Il peut y avoir d'autres régulations qui régissent l'utilisation des cookies dans votre localité. Il vous incombe de connaître et de respecter ces régulations. Il existe des entreprises qui proposent du code de «&nbsp;bannière de cookies&nbsp;» pour vous aider à vous conformer à ces régulations.
 
 > [!NOTE]
-> Les entreprises devraient divulguer les types de cookies qu'elles utilisent sur leurs sites à des fins de transparence et pour se conformer aux régulations. Par exemple, voir [l'avis de Google sur les types de cookies qu'il utilise](https://policies.google.com/technologies/cookies#types-of-cookies) et [l'avis de confidentialité sur les sites Web, les communications et les cookies de Mozilla](https://www.mozilla.org/fr/privacy/websites/#cookies).
+> Les entreprises doivent divulguer les types de cookies qu'elles utilisent sur leurs sites à des fins de transparence et pour se conformer aux régulations. Par exemple, voir [l'avis de Google sur les types de cookies qu'il utilise](https://policies.google.com/technologies/cookies#types-of-cookies) et [l'avis de confidentialité sur les sites Web, les communications et les cookies de Mozilla](https://www.mozilla.org/fr/privacy/websites/#cookies).
 
 ## Voir aussi
 

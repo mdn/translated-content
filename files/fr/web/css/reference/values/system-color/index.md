@@ -3,7 +3,7 @@ title: Type CSS `<system-color>`
 short-title: <system-color>
 slug: Web/CSS/Reference/Values/system-color
 l10n:
-  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
+  sourceCommit: 4d49c28381a2b736e205215b75388945e44a028c
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<system-color>`** reflète généralement les choix de couleurs par défaut utilisés pour les différentes parties d'une page web.
@@ -128,6 +128,9 @@ Selon vos paramètres, les couleurs d'exemple affichées dans le tableau peuvent
     </tr>
   </tbody>
 </table>
+
+> [!NOTE]
+> Pour réduire le risque {{Glossary("fingerprinting", "d'empreinte digitale")}}, certains navigateurs retournent une valeur fixe pour `AccentColor` et `AccentColorText` sauf si elles sont utilisées dans certaines circonstances restreintes. Voir la [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.
 
 ### Mots-clés de couleurs système obsolètes
 
