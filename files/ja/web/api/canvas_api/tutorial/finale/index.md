@@ -2,7 +2,7 @@
 title: おわりに
 slug: Web/API/Canvas_API/Tutorial/Finale
 l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+  sourceCommit: a52689c74c6c89f45c54447bb148e54ed320db62
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
@@ -15,8 +15,6 @@ l10n:
 
 - [Canvas Codepens](https://codepen.io/search/pens?q=canvas)
   - : ブラウザー上のフロントエンド開発者向けのプレイグラウンドとコードエディターです。
-- [Canvas Tutorials](https://www.html5canvastutorials.com/)
-  - : キャンバス API の例です。
 - [ゲーム開発](/ja/docs/Games)
   - : ゲームは最も人気な活動の一つです。標準に準拠したウェブブラウザーで実行できる、より良くより強力なゲームを開発するための新しい技術が定期的に登場しています。
 
@@ -25,7 +23,7 @@ l10n:
 これらの API は、キャンバスやグラフィックをさらに扱う際に役立つかもしれません。
 
 - [WebGL](/ja/docs/Web/API/WebGL_API)
-  - : 複雑なグラフィックや 3 次元を含んだレンダリングのための高度な API です。
+  - : 複雑なグラフィックや三次元を含んだレンダリングのための高度な API です。
 - [SVG](/ja/docs/Web/SVG)
   - : Scalable Vector Graphics は、画像をベクター（線）と図形の集合で表現することで、描画サイズに関わらず滑らかに拡大縮小できるようにしたものです。
 - [ウェブオーディオ](/ja/docs/Web/API/Web_Audio_API)
