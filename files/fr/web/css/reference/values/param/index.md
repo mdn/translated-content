@@ -1,5 +1,5 @@
 ---
-title: "Fonction CSS `param()`"
+title: Fonction CSS `param()`
 short-title: param()
 slug: Web/CSS/Reference/Values/param
 l10n:
