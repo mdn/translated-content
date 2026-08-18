@@ -1,5 +1,5 @@
 ---
-title: "Fonction CSS `alpha()`"
+title: Fonction CSS `alpha()`
 short-title: alpha()
 slug: Web/CSS/Reference/Values/color_value/alpha
 l10n:
