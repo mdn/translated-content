@@ -1,13 +1,14 @@
 ---
-title: StorageManager.getDirectory()
+title: "StorageManager: getDirectory() メソッド"
+short-title: getDirectory()
 slug: Web/API/StorageManager/getDirectory
 l10n:
-  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
+  sourceCommit: 7fad2348ff4e117859918bf1b7a16c10f041f3a5
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}
+{{securecontext_header}}{{APIRef("File System API")}} {{AvailableInWorkers}}
 
-{{domxref("StorageManager")}} インターフェイスの **`getDirectory()`** メソッドは、[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_API#origin_private_file_system) (OPFS) に保存されたディレクトリーとその中身へのアクセスを可能にする {{domxref("FileSystemDirectoryHandle")}} オブジェクトへの参照を取得するために使用されます。
+**`getDirectory()`** は {{domxref("StorageManager")}} インターフェイスのメソッドで、[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS) に保存されたディレクトリーとその中身へのアクセスを可能にする {{domxref("FileSystemDirectoryHandle")}} オブジェクトへの参照を取得するために使用されます。
 
 ## 構文
 
@@ -17,7 +18,7 @@ getDirectory()
 
 ### 引数
 
-なし
+なし。
 
 ### 返値
 
@@ -26,7 +27,9 @@ getDirectory()
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : ユーザーエージェントが要求されたディレクトリーをローカルの OPFS にマップできないとき投げられます。
+  - : ストレージやメモリーの制約などの理由で、ブラウザーがリクエストされたディレクトリーをローカル OPFS に対応づけできない場合に発生します。また、一部のブラウザーでは、プライベートブラウジングモードで `getDirectory()` が呼び出された場合にも発生します。
+- `UnknownError` {{domxref("DOMException")}}
+  - : プライベートブラウジングモードで `getDirectory()` が呼び出されると、一部のブラウザーでこのエラーが発生することがあります。
 
 ## 例
 
@@ -70,7 +73,7 @@ onmessage = async (e) => {
 ```
 
 > [!NOTE]
-> 仕様の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期メソッドとされていました。これは現在では[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
+> 仕様の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は、誤って非同期メソッドとして指定されており、一部のブラウザーの旧バージョンではこの方法で実装されています。しかし、これらのメソッドに対応している現在のすべてのブラウザーでは、同期メソッドとして実装されています。
 
 ## 仕様書
 
@@ -83,5 +86,6 @@ onmessage = async (e) => {
 ## 関連情報
 
 - {{domxref("StorageManager")}}
-- {{domxref("navigator.storage")}}
+- {{domxref("Navigator.storage")}}
+- {{domxref("WorkerNavigator.storage")}}
 - {{domxref("FileSystemDirectoryHandle")}}
