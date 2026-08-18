@@ -1,5 +1,5 @@
 ---
-title: "Type CSS `<line-width>`"
+title: Type CSS `<line-width>`
 short-title: <line-width>
 slug: Web/CSS/Reference/Values/line-width
 l10n:
