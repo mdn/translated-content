@@ -1,8 +1,8 @@
 ---
-title: Requêtes de tirage soumission et révisions
+title: Requêtes de tirage propositions et révisions
 slug: MDN/Community/Pull_requests
 l10n:
-  sourceCommit: f8ef875113a7d3e9952f41de68be1e3a3a1e6988
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 Ce document explique comment les contributeur·ice·s apportent des modifications à MDN Web Docs, comment ces changements sont relus et publiés sur le site.
@@ -14,16 +14,16 @@ Les modifications de contenu sur MDN Web Docs incluent&nbsp;:
   Ces problèmes sont souvent signalés par les lecteur·ice·s de MDN Web Docs.
 - **Corrections de bugs de contenu**, généralement effectuées par des bénévoles pour clore les [problèmes du dépôt anglais `mdn/content`](https://github.com/mdn/content/issues) et les [problèmes du dépôt de traduction `mdn/translated-content`](https://github.com/mdn/translated-content/issues).
 
-Quelle que soit la façon dont les modifications sont apportées, elles sont soumises sous forme de requêtes de tirage («&nbsp;<i lang="en">pull request</i>&nbsp;» en anglais) sur GitHub.
+Quelle que soit la façon dont les modifications sont apportées, elles sont envoyées sous forme de requêtes de tirage («&nbsp;<i lang="en">pull request</i>&nbsp;» en anglais) sur GitHub.
 Les changements suivent les étapes suivantes avant d'être publiés sur MDN Web Docs&nbsp;:
 
-1. **Soumission des modifications&nbsp;:** En tant qu'auteur·ice de la requête de tirage, vous soumettez vos changements en ouvrant une requête de tirage.
+1. **Proposition des modifications&nbsp;:** En tant qu'auteur·ice de la requête de tirage, vous soumettez vos changements en ouvrant une requête de tirage.
    Consultez les sections [Avant de commencer](#avant_de_commencer), [Ouvrir une requête de tirage](#ouvrir_une_requête_de_tirage) et [Après avoir ouvert une requête de tirage](#apres_avoir_ouvert_une_requête_de_tirage) pour en savoir plus sur nos processus.
 2. **Relecture des modifications&nbsp;:** Vos changements sont relus par des membres de MDN et des bénévoles.
    Voir la section [Processus de relecture des requêtes de tirage](#processus_de_relecture_des_requêtes_de_tirage) pour plus de détails.
 3. **Publication des modifications&nbsp;:** Le contenu mis à jour sur `mdn/content` ou `mdn/translated-content` est mis en ligne dans la journée suivant la fusion, lors d'une reconstruction du site (toutes les 24h).
 
-## Soumettre des modifications
+## Proposer des modifications
 
 ### Valeurs et participation
 
@@ -48,7 +48,7 @@ Lorsque vous souhaitez contribuer au projet MDN, vous pouvez vous trouver dans l
   **Les issues doivent recevoir une réponse des mainteneur·euse·s avant de commencer à travailler** afin de s'assurer que le problème traité par la pull request est valide et que votre contribution est acceptée.
   Plus d'informations sur les issues sont disponibles sur nos [pages Communauté pour les issues GitHub <sup>(angl.)</sup>](https://github.com/mdn/mdn/issues/new?labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here).
 
-- **Si vous souhaitez proposer un nouveau contenu ou une nouvelle fonctionnalité**, soumettez une proposition via le [modèle d'issue GitHub «&nbsp;New content or feature suggestion&nbsp;» <sup>(angl.)</sup>](https://github.com/mdn/mdn/issues/new/choose).
+- **Si vous souhaitez proposer un nouveau contenu ou une nouvelle fonctionnalité**, soumettez une proposition avec le [modèle d'issue GitHub «&nbsp;New content or feature suggestion&nbsp;» <sup>(angl.)</sup>](https://github.com/mdn/mdn/issues/new/choose).
 
 Si vous ne savez pas par où commencer, contactez-nous sur [le serveur Discord](/fr/docs/MDN/Community/Communication_channels) et demandez un retour.
 
@@ -57,7 +57,7 @@ Si vous ne savez pas par où commencer, contactez-nous sur [le serveur Discord](
 Lorsque vous êtes prêt·e à ouvrir une requête de tirage, suivez ces recommandations&nbsp;:
 
 - **Les requêtes de tirage doivent être courtes et centrées sur un seul problème&nbsp;:** Si possible, regroupez les modifications liées en plusieurs petites requêtes de tirage.
-  Si une requête devient trop volumineuse, le·la relecteur·ice peut la fermer et vous demander de soumettre des requêtes distinctes pour chaque ensemble logique de changements.
+  Si une requête devient trop volumineuse, le·la relecteur·ice peut la fermer et vous demander de proposer des requêtes distinctes pour chaque ensemble logique de changements.
 - **Ajoutez une description des modifications&nbsp;:** Fournissez autant de contexte et de justification que possible pour la requête de tirage.
 - **Ajoutez le lien vers le ticket que vous clôturez&nbsp;:** Dans la description de la requête, ajoutez «&nbsp;Fixes&nbsp;» si elle résout totalement le problème ou «&nbsp;Relates to&nbsp;» si c'est un problème connexe.
   Plus d'informations sur le lien entre requêtes et tickets sont disponibles dans la [documentation GitHub](https://docs.github.com/fr/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
@@ -76,7 +76,7 @@ Lorsque vous êtes prêt·e à ouvrir une requête de tirage, suivez ces recomma
   Si vous ne savez pas comment résoudre le problème, demandez de l'aide.
 - **Résolvez les conflits de fusion** avec la branche principale&nbsp;: c'est à vous de les corriger.
   Vous pouvez le faire en fusionnant la branche `mdn/main` dans votre branche.
-  Pour plus d'informations, consultez la [documentation GitHub sur la mise à jour de votre branche](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/keeping-your-pull-request-in-sync-with-the-base-branch#about-keeping-your-pull-request-in-sync).
+  Pour plus d'informations, consultez la [documentation GitHub sur la mise à jour de votre branche](https://docs.github.com/fr/pull-requests/proposing-changes-to-your-work-with-pull-requests/keeping-your-pull-request-in-sync-with-the-base-branch#about-keeping-your-pull-request-in-sync).
 - **Soyez réactif·ive aux retours.**
   Cela signifie être prêt·e à modifier la requête selon les retours de relecture.
   Si une relecture a lieu et que les changements ne sont pas faits, la requête peut être fermée.
@@ -87,7 +87,7 @@ Lorsque vous êtes prêt·e à ouvrir une requête de tirage, suivez ces recomma
 
 ## Processus de relecture des requêtes de tirage
 
-Les relecteur·ice·s sont automatiquement assigné·e·s lors de l'ouverture d'une requête de tirage grâce au fichier `CODEOWNERS`, mais si vous souhaitez demander une relecture à une personne précise, vous pouvez [demander une relecture](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review) manuellement.
+Les relecteur·ice·s sont automatiquement assigné·e·s lors de l'ouverture d'une requête de tirage grâce au fichier `CODEOWNERS`, mais si vous souhaitez demander une relecture à une personne précise, vous pouvez [demander une relecture](https://docs.github.com/fr/pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review) manuellement.
 Nous utilisons aussi l'étiquetage automatique pour faciliter le tri des requêtes.
 Les mainteneur·euse·s peuvent ajouter d'autres étiquettes comme `needs-info` ou `not-ready` selon le contexte.
 
@@ -124,7 +124,7 @@ Lors de la relecture d'une requête de tirage, vous devez&nbsp;:
   Ouvrez un ticket ou une nouvelle requête pour d'autres améliorations non couvertes par la requête en cours.
 - **Demander de l'aide** et ajouter l'étiquette `review-help-needed` si vous avez besoin d'une assistance technique pour la relecture.
 - **Fermer les requêtes contenant des changements non liés** si elles sont trop complexes ou comportent plusieurs modifications sans rapport.
-  Dans ce cas, demandez à l'auteur·ice de soumettre ses changements en plusieurs requêtes distinctes.
+  Dans ce cas, demandez à l'auteur·ice de proposer ses changements en plusieurs requêtes distinctes.
 - **Demander un équilibrage de charge** si vous êtes surchargé·e et n'avez pas le temps de relire.
   Mentionnez l'équipe `@core-yari-content` pour voir si quelqu'un peut prendre le relais.
 - **Ne fusionnez pas tant que les dépendances** (requêtes «&nbsp;depends on&nbsp;») ne sont pas fusionnées.
@@ -135,9 +135,9 @@ Lors de la relecture d'une requête de tirage, vous devez&nbsp;:
   Si vous ne savez pas comment corriger les tests, [demandez de l'aide](/fr/docs/MDN/Community/Communication_channels) ou assignez la requête à quelqu'un d'autre.
 
 Si une requête est correcte à l'exception de petites fautes ou détails mineurs, vous pouvez corriger directement le problème.
-Ceci est possible si la requête [autorise les modifications](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork).
+Ceci est possible si la requête [autorise les modifications](https://docs.github.com/fr/pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork).
 
-Il est recommandé d'utiliser les [commentaires avec suggestions](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request) pour corriger les détails mineurs, car ils peuvent être appliqués en une seule fois.
+Il est recommandé d'utiliser les [commentaires avec suggestions](https://docs.github.com/fr/pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request) pour corriger les détails mineurs, car ils peuvent être appliqués en une seule fois.
 
 Lorsque vous soumettez votre relecture, vous avez trois options&nbsp;: **approuver**, **commenter** ou **demander des modifications**.
 Les sections suivantes expliquent quand utiliser chaque option.
@@ -154,7 +154,7 @@ En résumé, vous faites confiance à l'auteur·ice et aux autres relecteur·ice
 #### Approuver
 
 Utilisez l'option «&nbsp;approuver&nbsp;» lorsque tout est correct et prêt à être fusionné selon vous.
-Après avoir soumis votre relecture, vous pouvez fusionner la requête si aucun·e autre relecteur·ice ou commentaire n'est en attente.
+Après avoir envoyé votre relecture, vous pouvez fusionner la requête si aucun·e autre relecteur·ice ou commentaire n'est en attente.
 
 #### Que faire si vous êtes bloqué·e ?
 
@@ -197,6 +197,6 @@ Une fois que la personne mentionnée a approuvé les modifications, elle demande
 
 Les relecteur·ice·s sont encouragé·e·s à lire les articles suivants pour s'aider dans les tâches courantes&nbsp;:
 
-- [The Art of Closing <sup>(angl.)</sup>](https://blog.jessfraz.com/post/the-art-of-closing/) explique comment fermer une requête inachevée ou refusée
-- [Code Review Guidelines for the Reviewer <sup>(angl.)</sup>](https://phauer.com/2018/code-review-guidelines/#code-reviews-guidelines-for-the-reviewer) fournit des exemples de bons et mauvais retours
-- [How to do a code review <sup>(angl.)</sup>](https://google.github.io/eng-practices/review/reviewer/) sur google.github.io/eng-practices
+- [L'art de fermer <sup>(angl.)</sup>](https://blog.jessfraz.com/post/the-art-of-closing/) explique comment fermer une requête inachevée ou refusée
+- [Lignes directrices pour la relecture de code <sup>(angl.)</sup>](https://phauer.com/2018/code-review-guidelines/#code-reviews-guidelines-for-the-reviewer) fournit des exemples de bons et mauvais retours
+- [Comment faire une relecture de code <sup>(angl.)</sup>](https://google.github.io/eng-practices/review/reviewer/) sur google.github.io/eng-practices

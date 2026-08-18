@@ -1,17 +1,17 @@
 ---
 title: runtime
 slug: Mozilla/Add-ons/WebExtensions/API/runtime
+l10n:
+  sourceCommit: 9791add3508e087982097f25fbd367c21bcb8305
 ---
-
-{{AddonSidebar}}
 
 Ce module fournit des informations sur votre extension et l'environnement dans lequel elle fonctionne.
 
-Il fournit également des API de messagerie vous permettant de:
+Il fournit également des API de messagerie vous permettant de&nbsp;:
 
-- Communiquer entre les différentes parties de votre extension.
+- Communiquer entre les différentes parties de votre extension. Pour des conseils sur le choix entre les options de messagerie, voir [Choisir entre les messages ponctuels et la messagerie basée sur les connexions](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging).
 - Communiquer avec d'autres extensions.
-- Communiquer avec les applications natives.
+- Communiquer avec des applications natives.
 
 ## Types
 
@@ -24,31 +24,45 @@ Il fournit également des API de messagerie vous permettant de:
 - {{WebExtAPIRef("runtime.PlatformArch")}}
   - : Identifie l'architecture du processeur du navigateur.
 - {{WebExtAPIRef("runtime.PlatformInfo")}}
-  - : Contient des informations sur la plate-forme utilisée par le navigateur.
+  - : Contient des informations sur la plateforme sur laquelle le navigateur s'exécute.
+- {{WebExtAPIRef("runtime.PlatformNaclArch")}} {{Deprecated_Inline}}
+  - : Valeur d'énumération obsolète représentant l'architecture Google Native Client. Envisagez de migrer vers `PlatformArch`, qui est pris en charge par Safari et Mozilla, représente l'architecture réelle du processeur et fournit des informations correctes sur le nombre de bits sur ARM.
 - {{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}
   - : Résultat d'un appel à {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
 - {{WebExtAPIRef("runtime.OnInstalledReason")}}
-  - : La raison pour laquelle l'événement {{WebExtAPIRef("runtime.onInstalled")}} est en cours d'envoi.
+  - : Raison pour laquelle l'évènement {{WebExtAPIRef("runtime.onInstalled")}} est déclenché.
+- {{WebExtAPIRef("runtime.OnPerformanceWarningCategory")}}
+  - : Catégorie de l'avertissement qui a déclenché l'évènement {{WebExtAPIRef("runtime.onPerformanceWarning")}}.
+- {{WebExtAPIRef("runtime.OnPerformanceWarningSeverity")}}
+  - : Gravité de l'avertissement qui a déclenché l'évènement {{WebExtAPIRef("runtime.onPerformanceWarning")}}.
 - {{WebExtAPIRef("runtime.OnRestartRequiredReason")}}
-  - : La raison pour laquelle l'événement {{WebExtAPIRef("runtime.onRestartRequired")}} est en cours d'expédition.
+  - : Raison pour laquelle l'évènement {{WebExtAPIRef("runtime.onRestartRequired")}} est déclenché.
 
 ## Propriétés
 
 - {{WebExtAPIRef("runtime.lastError")}}
-  - : Cette valeur est définie lorsqu'une fonction asynchrone a une condition d'erreur qu'elle doit signaler à son appelant
+  - : Cette valeur est définie lorsqu'une fonction asynchrone a une condition d'erreur qu'elle doit signaler à son appelant.
 - {{WebExtAPIRef("runtime.id")}}
-  - : L'ID de l'extension
+  - : L'ID de l'extension.
 
 ## Fonctions
 
 - {{WebExtAPIRef("runtime.getBackgroundPage()")}}
-  - : Récupère l'objet [Window](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours.
+  - : Récupère l'objet {{DOMxRef("Window")}} correspondant à la page d'arrière-plan s'exécutant au sein de l'extension actuelle.
+- {{WebExtAPIRef("runtime.getDocumentId()")}}
+  - : Retourne l'ID du document de n'importe quel élément global de la fenêtre ou de cadre.
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
-  - : Ouvre une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) de votre extension.
+  - : Ouvre la [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) de votre extension.
+- {{WebExtAPIRef("runtime.getContexts()")}}
+  - : Obtient des détails sur les contextes associés à l'extension.
+- {{WebExtAPIRef("runtime.getFrameId()")}}
+  - : Obtient l'identifiant de cadre de n'importe quel élément global de la fenêtre ou de cadre.
 - {{WebExtAPIRef("runtime.getManifest()")}}
-  - : Obtient le fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) complet, sérialisé en tant qu'objet.
+  - : Récupère une représentation sous forme d'objet du fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) complet.
 - {{WebExtAPIRef("runtime.getURL()")}}
-  - : Etant donné un chemin relatif de [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) à une ressource empaquetée avec l'extension, renvoie une URL entièrement qualifiée.
+  - : À partir d'un chemin relatif indiqué dans le fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) vers une ressource incluse dans l'extension, retourne une URL complète.
+- {{WebExtAPIRef("runtime.getVersion()")}}
+  - : Obtient la chaîne de caractères correspondant à la version de l'extension à partir de la clé [`version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) du fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). La version retournée peut différer de la chaîne de caractères présente dans le fichier, car le navigateur peut l'analyser et la sérialiser.
 - {{WebExtAPIRef("runtime.setUninstallURL()")}}
   - : Définit une URL à visiter lorsque l'extension est désinstallée.
 - {{WebExtAPIRef("runtime.reload()")}}
@@ -56,54 +70,59 @@ Il fournit également des API de messagerie vous permettant de:
 - {{WebExtAPIRef("runtime.requestUpdateCheck()")}}
   - : Vérifie les mises à jour de cette extension.
 - {{WebExtAPIRef("runtime.connect()")}}
-  - : Établit une connexion d'un script de contenu au processus d'extension principal ou d'une extension à une extension différente.
+  - : Établit une connexion d'un script de contenu vers le processus principal de l'extension, ou d'une extension vers une autre extension.
 - {{WebExtAPIRef("runtime.connectNative()")}}
-  - : Connecte l'extension à une application native sur l'ordinateur de l'utilisateur.
+  - : Connecte l'extension à une application native sur l'ordinateur de l'utilisateur·ice.
 - {{WebExtAPIRef("runtime.sendMessage()")}}
-  - : Envoie un seul message aux écouteurs d'événement dans votre extension ou une extension différente. Similaire à {{WebExtAPIRef('runtime.connect')}} mais n'envoie qu'un seul message, avec une réponse facultative.
+  - : Envoie un message aux écouteurs d'évènements au sein de votre extension ou d'une autre extension. Semblable à {{WebExtAPIRef('runtime.connect')}}, mais n'envoie qu'un seul message, avec une réponse optionnelle.
 - {{WebExtAPIRef("runtime.sendNativeMessage()")}}
-  - : Envoie un seul message d'une extension à une application native.
+  - : Envoie un message depuis une extension vers une application native.
 - {{WebExtAPIRef("runtime.getPlatformInfo()")}}
-  - : Renvoie des informations sur la plate-forme actuelle.
+  - : Retourne des informations sur la plateforme actuelle.
 - {{WebExtAPIRef("runtime.getBrowserInfo()")}}
-  - : Renvoie des informations sur le navigateur dans lequel cette extension est installée.
+  - : Retourne des informations sur le navigateur dans lequel cette extension est installée.
 - {{WebExtAPIRef("runtime.getPackageDirectoryEntry()")}}
-  - : Renvoie un DirectoryEntry pour le répertoire du package.
+  - : Retourne une instance `DirectoryEntry` correspondant au répertoire du paquet.
 
-## Evénements
+## Évènements
 
 - {{WebExtAPIRef("runtime.onStartup")}}
-  - : Lancé lorsqu'un premier profil a cette extension installée. Cet événement n'est pas déclenché lorsqu'un profil de navigation privée est démarré.
+  - : Déclenché lorsque le profil qui a cette extension installée démarre pour la première fois. Cet évènement n'est pas déclenché lorsque un profil de navigation privée est démarré.
 - {{WebExtAPIRef("runtime.onInstalled")}}
-  - : Lancé lorsque l'extension est installée pour la première fois, lorsque l'extension est mise à jour vers une nouvelle version et lorsque le navigateur est mis à jour vers une nouvelle version.
+  - : Déclenché lorsque l'extension est installée pour la première fois, lorsqu'elle est mise à jour vers une nouvelle version et lorsque le navigateur est mis à jour vers une nouvelle version.
 - {{WebExtAPIRef("runtime.onSuspend")}}
-  - : Envoyé sur la page de l'événement juste avant le déchargement de l'extension. Cela donne à l'extension l'opportunité de faire un peu de nettoyage.
+  - : Envoyé à la page d'évènements juste avant que l'extension ne soit déchargée. Cela donne à l'extension l'occasion de faire un peu de nettoyage.
 - {{WebExtAPIRef("runtime.onSuspendCanceled")}}
-  - : Envoyé après {{WebExtAPIRef("runtime.onSuspend")}} pour indiquer que l'extension ne sera pas déchargée après tout.
+  - : Envoyé après {{WebExtAPIRef("runtime.onSuspend")}} pour indiquer que l'extension n'est finalement pas déchargée.
 - {{WebExtAPIRef("runtime.onUpdateAvailable")}}
-  - : Lancé lorsqu'une mise à jour est disponible, mais n'est pas installé immédiatement car l'extension est en cours d'exécution.
-- {{WebExtAPIRef("runtime.onBrowserUpdateAvailable")}} {{deprecated_inline}}
-  - : Lancé lorsqu'une mise à jour pour le navigateur est disponible, mais n'est pas installée immédiatement car un redémarrage du navigateur est requis.
+  - : Déclenché lorsqu'une mise à jour est disponible, mais n'est pas installée immédiatement parce que l'extension est actuellement en cours d'exécution.
+- {{WebExtAPIRef("runtime.onBrowserUpdateAvailable")}} {{Deprecated_Inline}}
+  - : Déclenché lorsqu'une mise à jour du navigateur est disponible, mais n'est pas installée immédiatement parce qu'un redémarrage du navigateur est requis.
 - {{WebExtAPIRef("runtime.onConnect")}}
-  - : Lancé lorsqu'une connexion est établie avec un processus d'extension ou un script de contenu.
+  - : Déclenché lorsqu'une connexion est établie avec soit un processus d'extension, soit un script de contenu.
 - {{WebExtAPIRef("runtime.onConnectExternal")}}
-  - : Lancé lorsqu'une connexion est établie avec une autre extension.
+  - : Déclenché lorsqu'une connexion est établie avec une autre extension.
+- {{WebExtAPIRef("runtime.onUserScriptConnect")}}
+  - : Déclenché lorsqu'une connexion est établie avec un script utilisateur·ice enregistré par l'extension.
 - {{WebExtAPIRef("runtime.onMessage")}}
-  - : Lancé lorsqu'un message est envoyé par un processus d'extension ou un script de contenu.
+  - : Déclenché lorsqu'un message est envoyé depuis soit un processus d'extension, soit un script de contenu.
 - {{WebExtAPIRef("runtime.onMessageExternal")}}
-  - : Lancé lorsqu'un message est envoyé depuis un autre poste. Ne peut pas être utilisé dans un script de contenu.
+  - : Déclenché lorsqu'un message est envoyé depuis une autre extension. Ne peut pas être utilisé dans un script de contenu.
+- {{WebExtAPIRef("runtime.onUserScriptMessage")}}
+  - : Déclenché lorsqu'un message est envoyé depuis un script utilisateur·ice enregistré par l'extension.
+- {{WebExtAPIRef("runtime.onPerformanceWarning")}}
+  - : Déclenché lorsqu'un problème de performance d'exécution est détecté pour l'extension.
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
-  - : Lancé lorsque le périphérique doit être redémarré.
+  - : Déclenché lorsque l'appareil doit être redémarré.
+
+{{WebExtExamples("h2")}}
 
 ## Compatibilité des navigateurs
 
 {{Compat}}
 
-{{WebExtExamples("h2")}}
-
 > [!NOTE]
->
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime` <sup>(angl.)</sup>](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json` <sup>(angl.)</sup>](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
