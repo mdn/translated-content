@@ -21,8 +21,7 @@ new FocusEvent(type, options)
 _`FocusEvent()` 构造函数还会继承来自 {{domxref("UIEvent.UIEvent", "UIEvent()")}} 和 {{domxref("Event.Event", "Event()")}} 的参数。_
 
 - `type`
-  - : 表示事件名称的字符串。
-    它区分大小写，浏览器会将其设置为 `blur`、`focus`、`focusin` 或 `focusout`。
+  - : 表示事件名称的字符串。它区分大小写，浏览器会将其设置为 `blur`、`focus`、`focusin` 或 `focusout`。
 - `options` {{optional_inline}}
   - : 一个对象。除 {{domxref("UIEvent/UIEvent", "UIEvent()")}} 中定义的属性外，还可以具有以下属性：
     - `relatedTarget` {{optional_inline}}
