@@ -209,7 +209,7 @@ interface RTCStatsReport {
 
 Les objets de type `Map` sont soit en lecture seule, soit en lecture-écriture (voir le mot-clé `readonly` dans l'IDL ci‑dessus).
 
-- Les objets de type `Map` en lecture seule possèdent la propriété {{JSxRef("Map/size", "size")}}, et les méthodes&nbsp;: {{JSxRef("Map/entries", "entries()")}}, {{JSxRef("Map/forEach", "forEach()")}}, {{JSxRef("Map/get", "get()")}}, {{JSxRef("Map/has", "has()")}}, {{JSxRef("Map/keys", "keys()")}}, {{JSxRef("Map/values", "values()")}}, et [`[Symbol.iterator]()()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator).
+- Les objets de type `Map` en lecture seule possèdent la propriété {{JSxRef("Map/size", "size")}}, et les méthodes&nbsp;: {{JSxRef("Map/entries", "entries()")}}, {{JSxRef("Map/forEach", "forEach()")}}, {{JSxRef("Map/get", "get()")}}, {{JSxRef("Map/has", "has()")}}, {{JSxRef("Map/keys", "keys()")}}, {{JSxRef("Map/values", "values()")}}, et [`[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator).
 - Les objets de type `Map` modifiables possèdent en plus les méthodes&nbsp;: {{JSxRef("Map/clear", "clear()")}}, {{JSxRef("Map/delete", "delete()")}}, et {{JSxRef("Map/set", "set()")}}.
 
 Les méthodes et propriétés ont le même comportement que leurs équivalents dans `Map`, sauf pour la restriction sur les types des clés et des valeurs.
