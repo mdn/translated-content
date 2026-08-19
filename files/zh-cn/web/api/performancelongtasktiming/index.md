@@ -68,7 +68,7 @@ l10n:
 
 ### 获取长任务
 
-要获取长任务的计时信息，请创建一个 {{domxref("PerformanceObserver")}} 实例，然后调用其 [`observe()`](/zh-CN/docs/Web/API/PerformanceObserver/observe) 方法，并将 `"longtask"` 作为 [`type`](/en-US/docs/Web/API/PerformanceEntry/entryType) 选项的值。此外，还需要将 `buffered` 设置为 `true`，以便获取用户代理在构建文档时缓冲的长时间任务。随后，`PerformanceObserver` 对象的回调函数将被调用，并传入一个包含 `PerformanceLongTaskTiming` 对象的列表，你可以对这些对象进行分析。
+要获取长任务的计时信息，请创建一个 {{domxref("PerformanceObserver")}} 实例，然后调用其 [`observe()`](/zh-CN/docs/Web/API/PerformanceObserver/observe) 方法，并将 `"longtask"` 作为 [`type`](/zh-CN/docs/Web/API/PerformanceEntry/entryType) 选项的值。此外，还需要将 `buffered` 设置为 `true`，以便获取用户代理在构建文档时缓冲的长时间任务。随后，`PerformanceObserver` 对象的回调函数将被调用，并传入一个包含 `PerformanceLongTaskTiming` 对象的列表，你可以对这些对象进行分析。
 
 ```js
 const observer = new PerformanceObserver((list) => {
