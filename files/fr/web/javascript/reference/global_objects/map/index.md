@@ -2,7 +2,7 @@
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 l10n:
-  sourceCommit: c5a0ee66baf779b702ffae6d964d1f365381767c
+  sourceCommit: c808a24d4e4f7bda00e7117f315965ed39b780e5
 ---
 
 Un objet **`Map`** contient des paires de clé-valeur et mémorise l'ordre dans lequel les clés ont été insérées. N'importe quelle valeur (objet ou {{Glossary("Primitive", "valeur primitive")}}) peut être utilisée comme clé ou comme valeur.
@@ -79,7 +79,7 @@ Toutefois, il existe des différences importantes qui font que `Map` se démarqu
       </td>
       <td>
         <p>
-          Définir des paires clé-valeur fournies par l'utilisateur·ice sur un <code>Object</code> peut permettre à un attaquant de remplacer le prototype de l'objet, ce qui peut entraîner des <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">attaques par injection d'objet <sup>(angl.)</sup></a> ou des <a href="/fr/docs/Web/Security/Attacks/Prototype_pollution">attaques de pollution de prototype</a>. Comme pour le problème des clés accidentelles, cela peut également être atténué en utilisant un objet avec un prototype <code>null</code>.
+          Définir des paires clé-valeur fournies par l'utilisateur·ice sur un <code>Object</code> peut permettre à un·e attaquant·e de remplacer le prototype de l'objet, ce qui peut entraîner des <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">attaques par injection d'objet <sup>(angl.)</sup></a> ou des <a href="/fr/docs/Web/Security/Attacks/Prototype_pollution">attaques de pollution de prototype</a>. Comme pour le problème des clés accidentelles, cela peut également être atténué en utilisant un objet avec un prototype <code>null</code>.
         </p>
       </td>
     </tr>
@@ -151,7 +151,7 @@ Toutefois, il existe des différences importantes qui font que `Map` se démarqu
 
 Les structures `Map` sont également des objets et il est donc possible de leur rajouter des propriétés objets. Attention toutefois, car cela peut être source de confusion.
 
-Ainsi, on pourra faire&nbsp;:
+Ainsi, on peut faire&nbsp;:
 
 ```js example-bad
 const mauvaiseMap = new Map();
@@ -161,7 +161,7 @@ mauvaiseMap["bla2"] = "blaaa2";
 console.log(mauvaiseMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
-Mais ces instructions n'interagissent pas avec la structure `Map`, elles ne font qu'ajouter des propriétés objet. La valeur associée à la clé `"bla"` n'est pas stockée dans la `Map`. Ainsi, si on utilise les méthodes de `Map`, cela échouera&nbsp;:
+Mais ces instructions n'interagissent pas avec la structure `Map`, elles ne font qu'ajouter des propriétés objet. La valeur associée à la clé `"bla"` n'est pas stockée dans la `Map`. Ainsi, si on utilise les méthodes de `Map`, cela échoue&nbsp;:
 
 ```js example-bad
 mauvaiseMap.has("bla"); // false
@@ -169,7 +169,7 @@ mauvaiseMap.delete("bla"); // false
 console.log(mauvaiseMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
-Pour stocker des données dans une structure `Map`, on utilisera plutôt la méthode `set(cle, valeur)`.
+Pour stocker des données dans une structure `Map`, on utilise plutôt la méthode `set(cle, valeur)`.
 
 ```js example-good
 const contacts = new Map();
@@ -209,7 +209,7 @@ interface RTCStatsReport {
 
 Les objets de type `Map` sont soit en lecture seule, soit en lecture-écriture (voir le mot-clé `readonly` dans l'IDL ci‑dessus).
 
-- Les objets de type `Map` en lecture seule possèdent la propriété {{JSxRef("Map/size", "size")}}, et les méthodes&nbsp;: {{JSxRef("Map/entries", "entries()")}}, {{JSxRef("Map/forEach", "forEach()")}}, {{JSxRef("Map/get", "get()")}}, {{JSxRef("Map/has", "has()")}}, {{JSxRef("Map/keys", "keys()")}}, {{JSxRef("Map/values", "values()")}}, et [`Symbol.iterator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator).
+- Les objets de type `Map` en lecture seule possèdent la propriété {{JSxRef("Map/size", "size")}}, et les méthodes&nbsp;: {{JSxRef("Map/entries", "entries()")}}, {{JSxRef("Map/forEach", "forEach()")}}, {{JSxRef("Map/get", "get()")}}, {{JSxRef("Map/has", "has()")}}, {{JSxRef("Map/keys", "keys()")}}, {{JSxRef("Map/values", "values()")}}, et [`[Symbol.iterator]()()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator).
 - Les objets de type `Map` modifiables possèdent en plus les méthodes&nbsp;: {{JSxRef("Map/clear", "clear()")}}, {{JSxRef("Map/delete", "delete()")}}, et {{JSxRef("Map/set", "set()")}}.
 
 Les méthodes et propriétés ont le même comportement que leurs équivalents dans `Map`, sauf pour la restriction sur les types des clés et des valeurs.
@@ -255,11 +255,11 @@ Ces propriétés sont définies sur `Map.prototype` et sont partagées par toute
 - {{JSxRef("Map.prototype.clear()")}}
   - : Supprime toutes les paires de clé/valeur de l'objet `Map`.
 - {{JSxRef("Map.prototype.delete()")}}
-  - : Supprime l'entrée définie par la clé spécifiée de cet objet `Map`.
+  - : Supprime l'entrée définie par la clé définie de cet objet `Map`.
 - {{JSxRef("Map.prototype.entries()")}}
   - : Retourne un nouvel objet itérateur qui contient un tableau de `[key, value]` pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
 - {{JSxRef("Map.prototype.forEach()")}}
-  - : Appelle la fonction `callbackFn` une fois pour chaque paire clé/valeur contenue dans l'objet `Map`, dans leur ordre d'insertion. Si un paramètre `thisArg` est fourni à `forEach()`, sa valeur sera utilisée comme valeur pour `this` lors de chaque appel.
+  - : Appelle la fonction `callbackFn` une fois pour chaque paire clé/valeur contenue dans l'objet `Map`, dans leur ordre d'insertion. Si un paramètre `thisArg` est fourni à `forEach()`, sa valeur est utilisée comme valeur pour `this` lors de chaque appel.
 - {{JSxRef("Map.prototype.get()")}}
   - : Retourne la valeur associée à la clé passée en argument à la `Map`, ou `undefined` s'il n'y en a pas.
 - {{JSxRef("Map.prototype.getOrInsert()")}}
@@ -378,18 +378,18 @@ const paireCleValeur = [
 // en un objet Map
 const maMap = new Map(paireCleValeur);
 
-maMap.get("clé1"); // renvoie "valeur1"
+maMap.get("clé1"); // retourne "valeur1"
 
 // On utilise la fonction Array.from pour transformer
 // une map en un tableau de clés/valeurs
-console.log(Array.from(maMap)); // affichera la même chose que paireCleValeur
+console.log(Array.from(maMap)); // affiche la même chose que paireCleValeur
 
 // Avec une méthode plus concise grâce à la décomposition
 console.log([...maMap]);
 
 // On peut aussi l'utiliser pour n'extraire que les clés
 // ou les valeurs et créer le tableau associé
-console.log(Array.from(maMap.keys())); // affichera ["clé1", "clé2"]
+console.log(Array.from(maMap.keys())); // affiche ["clé1", "clé2"]
 ```
 
 ### Cloner et fusionner des objets `Map`

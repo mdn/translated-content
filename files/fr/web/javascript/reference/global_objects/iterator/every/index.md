@@ -3,7 +3,7 @@ title: "Iterator : méthode every()"
 short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/every
 l10n:
-  sourceCommit: dd88a6eb2176fa31f5b744d8964efecf3f1f425b
+  sourceCommit: 76972cdb4d87dd72e0a2a3146af07d82c7ef7d67
 ---
 
 La méthode **`every()`** des instances de {{JSxRef("Iterator")}} est similaire à {{JSxRef("Array.prototype.every()")}}&nbsp;: elle retourne `false` si elle trouve un élément qui ne satisfait pas la fonction de test fournie. Sinon, si l'itérateur est épuisé sans trouver un tel élément, elle retourne `true`.
@@ -33,6 +33,8 @@ every(callbackFn)
 
 L'avantage principal des aides d'itérateur par rapport aux méthodes de tableau est qu'elles sont paresseuses, c'est‑à‑dire qu'elles ne produisent la valeur suivante que lorsqu'elle est demandée. Cela évite des calculs inutiles et permet de les utiliser avec des itérateurs infinis. Avec des itérateurs infinis, `every()` retourne `false` dès que la première valeur équivalente à faux est trouvée. Si le `callbackFn` retourne toujours une valeur équivalente à vrai, la méthode ne retourne jamais.
 
+Appeler `every()` ferme toujours l'itérateur sous-jacent, même si la méthode est retournée prématurément. L'itérateur n'est jamais laissé dans un état intermédiaire.
+
 ## Exemples
 
 ### Utiliser la méthode `every()`
@@ -55,7 +57,7 @@ console.log(fibonacci().take(10).every(isPositive)); // true
 console.log(fibonacci().every(isPositive)); // Ne se termine jamais
 ```
 
-Appeler `every()` ferme toujours l'itérateur sous-jacent, même si la méthode est retournée prématurément. L'itérateur n'est jamais laissé dans un état intermédiaire.
+Cette méthode ferme l'itérateur après être retournée.
 
 ```js
 const seq = fibonacci();
