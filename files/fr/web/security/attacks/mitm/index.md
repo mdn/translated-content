@@ -1,5 +1,5 @@
 ---
-title: Manipulateur au milieu (MITM)
+title: Le monstre du milieu (MITM)
 slug: Web/Security/Attacks/MITM
 l10n:
   sourceCommit: 8e6760da4c8c8e3fbbabe9686ba16850c99092ba
