@@ -111,7 +111,7 @@ img {
 
 ### Passer `param()` dans le modificateur d'URL
 
-Dans cet exemple, les attributs SVG sont mis à jour en passant la fonction `param()` dans le fragment d'URL de l'attribut [`src`](/fr/docs/Web/HTML/Element/img#src) de l'élément HTML {{HTMLElement("img")}}.
+Dans cet exemple, les attributs SVG sont mis à jour en passant la fonction `param()` dans le fragment d'URL de l'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#src) de l'élément HTML {{HTMLElement("img")}}.
 
 ```html-nolint
 <img
