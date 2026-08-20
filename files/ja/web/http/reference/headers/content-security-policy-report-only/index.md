@@ -3,7 +3,7 @@ title: Content-Security-Policy-Report-Only ヘッダー
 short-title: Content-Security-Policy-Report-Only
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only
 l10n:
-  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
+  sourceCommit: 6720d579bd658f02c56363805e97e69f93dc79f1
 ---
 
 HTTP の **`Content-Security-Policy-Report-Only`** {{Glossary("response header", "レスポンスヘッダー")}}は、セキュリティポリシーを強制することなく、コンテンツセキュリティポリシー (CSP) 違反とその効果を監視するのに役立ちます。
@@ -11,7 +11,9 @@ HTTP の **`Content-Security-Policy-Report-Only`** {{Glossary("response header",
 
 レポートを送信するには、CSP {{CSP("report-to")}} ディレクティブを指定する必要があります。指定しない場合、操作は一切効果がありません。
 
-違反レポートは、[レポート API](/ja/docs/Web/API/Reporting_API) を使用して、HTTP の {{HTTPHeader("Reporting-Endpoints")}} レスポンスヘッダーで定義され、CSP の {{CSP("report-to")}} ディレクティブで選択されたエンドポイントに送信されます。
+ポリシーの違反レポートは、[レポート API](/ja/docs/Web/API/Reporting_API) を使用して報告することができます。
+レポートは、ポリシーが適用されているページにおいて、[`ReportingObserver`](/ja/docs/Web/API/ReportingObserver) を使用して確認でき、HTTP の {{HTTPHeader("Reporting-Endpoints")}} レスポンスヘッダーで定義され、CSP の {{CSP("report-to")}} ディレクティブで選択されたエンドポイントに送信されます。
+詳しくは {{domxref("CSPViolationReport")}} を参照してください。
 
 詳細については、[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP) のこの記事も参照してください。
 
@@ -81,4 +83,7 @@ Content-Security-Policy-Report-Only: default-src https:;
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP の {{CSP("report-to")}} ディレクティブ
+- {{httpheader("Reporting-Endpoints")}}
+- {{domxref("CSPViolationReport")}}
 - CSP の {{CSP("report-uri")}} ディレクティブ {{deprecated_inline}}
+- [レポート API](/ja/docs/Web/API/Reporting_API)

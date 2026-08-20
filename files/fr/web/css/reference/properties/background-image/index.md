@@ -3,7 +3,7 @@ title: Propriété CSS `background-image`
 short-title: background-image
 slug: Web/CSS/Reference/Properties/background-image
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-image`** permet de définir une ou plusieurs images comme arrière(s)-plan(s) pour un élément.
@@ -66,42 +66,42 @@ background-image: revert-layer;
 background-image: unset;
 ```
 
-Chaque image d'arrière-plan est définie soit par le mot-clé `none`, soit par une valeur {{CSSxRef("image")}}.
-
-Pour définir plusieurs images d'arrière-plan, indiquez plusieurs valeurs, séparées par une virgule.
-
 ### Valeurs
+
+Cette propriété est définie avec le mot-clé `none` ou avec une liste séparée par des virgules de valeurs de type {{CSSxRef("&lt;image&gt;")}}.
 
 - `none`
   - : Un mot-clé qui indique qu'aucune image ne doit être utilisée comme arrière-plan.
 - {{CSSxRef("&lt;image&gt;")}}
-  - : Une valeur qui indique l'image à afficher. On peut avoir plusieurs images en arrière-plan en séparant les valeurs par des virgules.
+  - : Une valeur de type {{CSSxRef("&lt;image&gt;")}} indiquant l'image à afficher.
 
 ## Description
 
-Les images d'arrière-plan sont dessinées sur des couches de contexte d'empilement les unes au-dessus des autres. La première couche indiquée est dessinée comme si elle était la plus proche de l'utilisateur·ice.
+La propriété `background-image` définit des images d'arrière-plan sur un élément.
+
+Vous pouvez définir [plusieurs arrière-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) sur un élément en indiquant une liste d'images séparées par des virgules. Les images d'arrière-plan sont dessinées sur des couches de contexte d'empilement les unes au-dessus des autres. La première couche indiquée est dessinée comme si elle était la plus proche de l'utilisateur·ice.
 
 Les [bordures](/fr/docs/Web/CSS/Reference/Properties/border) de l'élément sont ensuite dessinées au-dessus, et la {{CSSxRef("background-color")}} est dessinée en dessous. La façon dont les images sont dessinées par rapport à la boîte et à ses bordures est définie par les propriétés CSS {{CSSxRef("background-clip")}} et {{CSSxRef("background-origin")}}.
 
 Si une image indiquée ne peut pas être affichée (par exemple, si le fichier désigné par l'URI ne peut pas être chargé), les navigateurs la traitent comme une valeur `none`.
 
 > [!NOTE]
-> Même si les images sont opaques et que la couleur ne s'affichera pas dans des circonstances normales, il faut toujours définir une {{CSSxRef("background-color")}}. Si les images ne peuvent pas être chargées — par exemple, si le réseau est indisponible — la couleur d'arrière-plan sera utilisée comme solution de repli.
+> Même si les images sont opaques et que la couleur ne s'affiche pas dans des circonstances normales, il faut toujours définir une {{CSSxRef("background-color")}}. Si les images ne peuvent pas être chargées — par exemple, si le réseau est indisponible — la couleur d'arrière-plan est utilisée comme solution de repli.
 
 ## Accessibilité
 
-Les navigateurs ne fournissent aucune information particulière sur les images d'arrière-plan aux technologies d'assistance. Cela concerne principalement les lecteurs d'écran, car un lecteur d'écran n'annoncera pas leur présence et ne transmettra donc rien à l'utilisateur·ice. Si l'image contient des informations essentielles à la compréhension générale de la page, il vaut mieux décrire ces informations de façon sémantique dans le document.
+Les navigateurs ne fournissent aucune information particulière sur les images d'arrière-plan aux technologies d'assistance. Cela concerne principalement les lecteurs d'écran, car un lecteur d'écran n'annonce pas leur présence et ne transmet donc rien à l'utilisateur·ice. Si l'image contient des informations essentielles à la compréhension générale de la page, il vaut mieux décrire ces informations de façon sémantique dans le document.
 
-- [Comprendre les règles du WCAG 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.1_—_des_équivalents_textuels_doivent_être_fournis_pour_tout_contenu_non_textuel)
+- [Comprendre les WCAG sur le MDN, comprendre les règles du WCAG 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.1_—_des_équivalents_textuels_doivent_être_fournis_pour_tout_contenu_non_textuel)
 - [Comprendre le critère de succès 1.1.1 | Comprendre les règles du WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 Il est également important de vérifier que le contraste entre l'image d'arrière-plan et le texte au premier plan est suffisamment élevé pour que les personnes en situation de basse vision puissent lire le contenu de la page.
 
 Le ratio de contraste des couleurs est déterminé en comparant la luminance des valeurs de couleur du texte et de l'arrière-plan. Pour respecter les [Règles pour l'accessibilité des contenus Web (WCAG) <sup>(angl.)</sup>](https://www.w3.org/WAI/standards-guidelines/wcag/), un ratio de 4.5:1 est requis pour le texte courant et 3:1 pour les textes plus grands comme les titres. Un texte est considéré comme grand s'il mesure au moins 24px ou s'il est en gras et mesure au moins 18.66px.
 
-- [Vérificateur de contraste WebAIM <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/)
-- [Comprendre la règle WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
-- [Comprendre le critère de succès 1.4.3 | Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html), W3C (2023)
+- [WebAIM&nbsp;: Vérificateur de contraste <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/)
+- [Comprendre les WCAG, explications de la règle WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
+- [Comprendre le critère de succès 1.4.3 | Comprendre le WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html), W3C (2023)
 
 ## Définition formelle
 
@@ -180,8 +180,8 @@ div {
   - {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
   - {{CSSxRef("url_value", "&lt;url&gt;")}}
 - [Utiliser des dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
-- [Implémenter des sprites en CSS](/fr/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
-- Le module d'[images CSS](/fr/docs/Web/CSS/Guides/Images)
+- [Implémenter des gabarits en CSS](/fr/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
+- Le module [d'images CSS](/fr/docs/Web/CSS/Guides/Images)
 
 - Les propriétés CSS relatives aux arrière-plans&nbsp;:
   - {{CSSxRef("background-attachment")}}

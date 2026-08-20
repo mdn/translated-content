@@ -3,7 +3,7 @@ title: Pour commencer avec le MDN Web Docs
 short-title: Pour commencer
 slug: MDN/Community/Getting_started
 l10n:
-  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 Nous sommes une communauté ouverte de développeur·euse·s, rédacteur·ice·s techniques et apprenant·e·s qui construisent des ressources pour un Web meilleur, indépendamment de la marque, du navigateur ou de la plateforme.
@@ -41,7 +41,7 @@ Nous vous recommandons également de lire le matériel d'apprentissage suivant&n
 
 - [Étiquette de base pour les projets open source](/fr/docs/MDN/Community/Open_source_etiquette)&nbsp;: Si vous n'avez jamais contribué à un projet open source auparavant, nous vous encourageons à lire ce document.
 - [Apprendre le développement web](/fr/docs/Learn_web_development)&nbsp;: Si vous êtes nouveau en HTML, CSS, JavaScript, nous avons d'excellents contenus pour vous aider à démarrer.
-- [Collaboration à l'aide de demandes de tirage](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests)
+- [Collaboration à l'aide de demandes de tirage](https://docs.github.com/fr/pull-requests)
 
 Certaines opportunités de contribution spécifiques à l'écriture nécessitent une compréhension raisonnable de la langue anglaise.
 Cela dit, ne vous inquiétez pas si votre grammaire n'est pas parfaite&nbsp;: nous avons une équipe de personnes qui examine votre écriture et vous aide à l'améliorer.

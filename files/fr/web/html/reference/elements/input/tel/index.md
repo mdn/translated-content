@@ -327,7 +327,7 @@ input:valid + span::after {
 
 {{EmbedLiveSample("Motif de validation", 700, 130)}}
 
-Remarquez que la valeur saisie est considérée comme non valide si elle ne correspond pas au format `xx xx xx xx xx`&nbsp;; par exemple, 331 23 45 56 78 ne est pas accepté, idem pour AB 12 CD 34 EF. En revanche, 01 23 45 67 89 est accepté. Ce format particulier n'est évidemment utile que pour certaines zones géographiques — dans une application réelle, vous devez probablement adapter le format utilisé en fonction de la zone géographique de l'utilisateur·ice.
+Remarquez que la valeur saisie est considérée comme non valide si elle ne correspond pas au format `xx xx xx xx xx`&nbsp;; par exemple, 331 23 45 56 78 n'est pas accepté, idem pour AB 12 CD 34 EF. En revanche, 01 23 45 67 89 est accepté. Ce format particulier n'est évidemment utile que pour certaines zones géographiques — dans une application réelle, vous devez probablement adapter le format utilisé en fonction de la zone géographique de l'utilisateur·ice.
 
 ## Exemples
 

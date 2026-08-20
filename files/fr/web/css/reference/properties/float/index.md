@@ -3,10 +3,10 @@ title: Propriété CSS `float`
 short-title: float
 slug: Web/CSS/Reference/Properties/float
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`float`** indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (<i lang="en">inline</i> en anglais) entoureront alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au [positionnement absolu](/fr/docs/Web/CSS/Reference/Properties/position#positionnement_absolu)).
+La propriété [CSS](/fr/docs/Web/CSS) **`float`** indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (<i lang="en">inline</i> en anglais) entourent alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au [positionnement absolu](/fr/docs/Web/CSS/Reference/Properties/position#positionnement_absolu)).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: float")}}
 
@@ -82,7 +82,7 @@ Un _élément flottant_ est un élément pour lequel la valeur calculée de `flo
 | _autre_              | _inchangée_     |
 
 > [!NOTE]
-> Lorsqu'on accède à une propriété CSS en JavaScript via l'objet {{DOMxRef("HTMLElement.style")}}, les noms de propriétés d'un seul mot sont utilisés tels quels. Bien que `float` soit un mot réservé en JavaScript, la propriété CSS `float` est accessible sous le nom `float` dans les navigateurs modernes. Dans les anciens navigateurs, il faut utiliser `cssFloat` pour accéder à la propriété `float`. (C'est similaire à la façon dont l'attribut «&nbsp;class&nbsp;» est accessible sous le nom «&nbsp;className&nbsp;» et l'attribut «&nbsp;for&nbsp;» d'un élément `<label>` est accessible sous le nom «&nbsp;htmlFor&nbsp;».)
+> Lorsqu'on accède à une propriété CSS en JavaScript par l'objet {{DOMxRef("HTMLElement.style")}}, les noms de propriétés d'un seul mot sont utilisés tels quels. Bien que `float` soit un mot réservé en JavaScript, la propriété CSS `float` est accessible sous le nom `float` dans les navigateurs modernes. Dans les anciens navigateurs, il faut utiliser `cssFloat` pour accéder à la propriété `float`. (C'est similaire à la façon dont l'attribut «&nbsp;class&nbsp;» est accessible sous le nom «&nbsp;className&nbsp;» et l'attribut «&nbsp;for&nbsp;» d'un élément `<label>` est accessible sous le nom «&nbsp;htmlFor&nbsp;».)
 
 ## Syntaxe
 
@@ -102,9 +102,9 @@ float: revert-layer;
 float: unset;
 ```
 
-La propriété `float` est définie à l'aide d'un mot-clé, parmi la liste des valeurs détaillées après.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `left`
   - : Un mot-clé indiquant que l'élément doit flotter du côté gauche du bloc qui le contient.
@@ -131,7 +131,7 @@ La propriété `float` est définie à l'aide d'un mot-clé, parmi la liste des 
 
 Comme évoqué ci-avant, lorsqu'un élément flotte, il est retiré du flux normal du document (même s'il continue de faire partie du flux général) et il est décalé vers la droite ou vers la gauche jusqu'à ce qu'il touche le bord de son conteneur _ou un autre élément flottant_.
 
-Dans cet exemple, on voit trois carrés rouges. Deux flottent à gauche et un flotte à droite. On voit que le deuxième carré à gauche est placé à droite du premier. Si on ajoutait d'autres carrés, ils s'empileraient sur la gauche jusqu'à remplir le conteneur, ensuite, on passerait sur une autre ligne.
+Dans cet exemple, on voit trois carrés rouges. Deux flottent à gauche et un flotte à droite. On voit que le deuxième carré à gauche est placé à droite du premier. Si on ajoutait d'autres carrés, ils s'empilent sur la gauche jusqu'à remplir le conteneur, ensuite, on passe sur une autre ligne.
 
 Un élément flottant est au moins aussi grand que le plus grand de ses éléments enfants flottants. Nous avons dimensionné l'élément parent avec `width: 100%` et lui avons appliqué un flottement afin de s'assurer qu'il soit suffisamment grand pour contenir ses éléments enfants flottants et qu'il prenne toute la largeur de son parent afin de ne pas avoir à dégager les voisins adjacents.
 

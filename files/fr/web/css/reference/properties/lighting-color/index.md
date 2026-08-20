@@ -3,7 +3,7 @@ title: Propriété CSS `lighting-color`
 short-title: lighting-color
 slug: Web/CSS/Reference/Properties/lighting-color
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`lighting-color`** définit la couleur de la source lumineuse pour les primitives de filtre d'éclairage SVG {{SVGElement("feDiffuseLighting")}} et {{SVGElement("feSpecularLighting")}} à l'intérieur d'un filtre ({{SVGElement("filter")}}) SVG. Si elle est présente, elle remplace l'attribut {{SVGAttr("lighting-color")}} de l'élément.
@@ -29,8 +29,10 @@ lighting-color: unset;
 
 ### Valeurs
 
-- {{CSSxRef("color_value", "&lt;color&gt;")}}
-  - : La couleur de l'éclairage. Cela peut être n'importe quelle valeur CSS {{CSSxRef("color_value", "&lt;color&gt;")}} valide.
+Cette propriété est définie comme une seule valeur `<color>`&nbsp;:
+
+- {{CSSxRef("&lt;color&gt;")}}
+  - : La couleur de l'éclairage. Cela peut être n'importe quelle valeur CSS {{CSSxRef("&lt;color&gt;")}} valide.
 
 ## Définition formelle
 
@@ -48,7 +50,7 @@ Cet exemple montre le cas d'utilisation de base de `lighting-color`, et comment 
 
 #### HTML
 
-Nous avons un SVG avec deux éléments {{SVGElement("filter")}}, l'un avec un enfant `<feDiffuseLighting>` et l'autre avec un enfant `<feSpecularLighting>`. Chacun inclut l'attribut SVG `lighting-color` définissant la couleur de l'éclairage à `red`. Ces deux enfants possèdent un {{SVGElement("fePointLight")}}, l'enfant requis qui définit la source lumineuse. Nous avons inclus deux éléments {{SVGElement("rect")}} avec un attribut de filtre&nbsp;; c'est là que les filtres seront affichés.
+Nous avons un SVG avec deux éléments {{SVGElement("filter")}}, l'un avec un enfant `<feDiffuseLighting>` et l'autre avec un enfant `<feSpecularLighting>`. Chacun inclut l'attribut SVG `lighting-color` définissant la couleur de l'éclairage à `red`. Ces deux enfants possèdent un {{SVGElement("fePointLight")}}, l'enfant requis qui définit la source lumineuse. Nous avons inclus deux éléments {{SVGElement("rect")}} avec un attribut de filtre&nbsp;; c'est là que les filtres sont affichés.
 
 ```html
 <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg">

@@ -1,11 +1,12 @@
 ---
 title: Intl.ListFormat.prototype.formatToParts()
+short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Intl.ListFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮した値のリストの書式化で使用できる様々な部分を表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。
+**`formatToParts()`** は {{jsxref("Intl.ListFormat")}} インスタンスのメソッドで、{{jsxref("Intl/ListFormat/format", "format()")}} によって返される書式化済み文字列のそれぞれの部分を表すオブジェクトの配列を返します。これは、ロケール固有のトークンから独自の文字列を構築する際に役立ちます。
 
 {{InteractiveExample("JavaScript デモ: Intl.listformat.prototype.formatToParts()", "taller")}}
 
@@ -33,30 +34,27 @@ console.log(partValuesFr);
 
 ## 構文
 
-```js
-formatToParts(list);
+```js-nolint
+formatToParts(list)
 ```
 
 ### 引数
 
 - `list`
-  - : ロケールに従って書式化する反復可能オブジェクト、例えば配列 ({{jsxref("Array")}}) です。
+  - : 文字列の入った、Array などの反復可能オブジェクト。これを省略すると空の配列が書式化対象となってしまい、やや混乱を招く可能性があるため、常に明示的にリストを渡すことをお勧めします。
 
 ### 返値
 
-リストから書式された部品を含むコンポーネントの配列 ({{jsxref("Array")}}) です。
+書式化されたのリストを部分ごとに格納したオブジェクトの配列 ({{jsxref("Array")}}) です。各オブジェクトには `type` と `value` の 2 つのプロパティがあり、それぞれに文字列が格納されています。`value` を指定された順序で連結すると、{{jsxref("Intl/ListFormat/format", "format()")}} と同じ文字列になります。`type` は以下のどちらかになります。
 
-## 解説
-
-{{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}} が、（渡されたロケールとスタイルのオプションに応じて）リストの書式化された文字列を返すのに対し、 `formatToParts()` は、書式化されたされた文字列のさまざまなコンポーネントの配列を返します。
-
-結果として得られる配列の各要素には、 `type` と `value` の 2 つのプロパティがあります。 `type` プロパティはリストの値を指す "`element`" か、言語的な構成要素を指す "`literal`" かのどちらかです。 `value` プロパティはトークンの内容を文字列で指定します。
-
-書式化に使用されるロケールとスタイルのオプションは、 {{jsxref("Intl.ListFormat")}} インスタンスを構築する際に与えられたものです。
+- `literal`
+  - : 書式化パターンの一部である任意の文字列。例えば、`", "`、`", and"` など。
+- `element`
+  - : リストの要素で、指定されたとおりのものです。
 
 ## 例
 
-### formatToParts の使用
+### formatToParts() の使用
 
 ```js
 const fruits = ["Apple", "Orange", "Pineapple"];
@@ -70,7 +68,7 @@ console.table(myListFormat.formatToParts(fruits));
 //  { "type": "element", "value": "Apple" },
 //  { "type": "literal", "value": ", " },
 //  { "type": "element", "value": "Orange" },
-//  { "type": "literal", "value": ", and " },
+//  { "type": "literal", "value": " and " },
 //  { "type": "element", "value": "Pineapple" }
 // ]
 ```
@@ -87,6 +85,3 @@ console.table(myListFormat.formatToParts(fruits));
 
 - {{jsxref("Intl.ListFormat")}}
 - {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
-- {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
-- {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
-- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}

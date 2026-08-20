@@ -3,7 +3,7 @@ title: Propriété CSS `border-inline-end-width`
 short-title: border-inline-end-width
 slug: Web/CSS/Reference/Properties/border-inline-end-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-end-width`** définit la largeur de la bordure logique en ligne de fin d'un élément, qui correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond à la propriété {{CSSxRef("border-top-width")}}, {{CSSxRef("border-right-width")}}, {{CSSxRef("border-bottom-width")}}, ou {{CSSxRef("border-left-width")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
@@ -49,7 +49,7 @@ direction: rtl;
 ## Syntaxe
 
 ```css
-/* Valeurs de type <'border-width'> */
+/* Valeurs de type <'line-width'> */
 border-inline-end-width: 2px;
 border-inline-end-width: thick;
 
@@ -63,8 +63,8 @@ border-inline-end-width: unset;
 
 ### Valeurs
 
-- `<'border-width'>`
-  - : La largeur de la bordure, voir {{CSSxRef("border-width")}}.
+- {{CSSxRef("&lt;line-width&gt;")}}
+  - : Définit la largeur de la bordure, soit par une valeur explicite de type {{CSSxRef("&lt;length&gt;")}} positive, soit par un mot-clé. Les mots-clés possibles sont&nbsp;: `thin`, `medium` ou `thick`. La valeur par défaut est `medium`.
 
 ## Définition formelle
 

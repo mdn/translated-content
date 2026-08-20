@@ -3,10 +3,10 @@ title: Propriété CSS `line-height`
 short-title: line-height
 slug: Web/CSS/Reference/Properties/line-height
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`line-height`** définit la hauteur d'une boîte de ligne dans les [modes d'écriture](/fr/docs/Web/CSS/Reference/Properties/writing-mode#vertical-rl) horizontaux. Dans les modes d'écriture verticaux, elle définit la largeur d'une boîte de ligne. Elle est couramment utilisée pour définir la distance entre les lignes de texte. Sur les éléments de niveau bloc dans les modes d'écriture horizontaux, elle définit la hauteur préférée des boîtes de ligne dans l'élément, et sur les éléments en ligne non {{Glossary("Replaced_elements", "remplacés")}}, elle définit la hauteur utilisée pour calculer la hauteur de la boîte de ligne.
+La propriété [CSS](/fr/docs/Web/CSS) **`line-height`** définit la hauteur d'une boîte de ligne dans les [modes d'écriture](/fr/docs/Web/CSS/Reference/Properties/writing-mode#vertical-rl) horizontaux. Dans les modes d'écriture verticaux, elle définit la largeur d'une boîte de ligne. Elle est couramment utilisée pour définir la distance entre les lignes de texte. Sur les éléments de niveau bloc dans les modes d'écriture horizontaux, elle définit la hauteur préférée des boîtes de ligne dans l'élément, et sur les éléments en incise non {{Glossary("Replaced_elements", "remplacés")}}, elle définit la hauteur utilisée pour calculer la hauteur de la boîte de ligne.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: line-height")}}
 
@@ -69,14 +69,9 @@ line-height: revert-layer;
 line-height: unset;
 ```
 
-La propriété `line-height` peut être définie par l'une des valeurs suivantes&nbsp;:
-
-- un nombre (`<number>`)
-- une longueur (`<length>`)
-- un pourcentage (`<percentage>`)
-- le mot-clé `normal`.
-
 ### Valeurs
+
+Cette propriété est définie avec une seule valeur parmi la liste suivante&nbsp;:
 
 - `normal`
   - : Le comportement dépend de l'agent utilisateur. Pour les navigateurs de bureau, l'agent utilisateur prend généralement une valeur environ égale à 1.2 selon la valeur de `font-family`.
@@ -85,7 +80,7 @@ La propriété `line-height` peut être définie par l'une des valeurs suivantes
 - {{CSSxRef("&lt;length&gt;")}}
   - : La valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) est utilisée pour calculer la hauteur de la boîte de la ligne. Les différentes unités qui peuvent être utilisées sont décrites avec la page {{CSSxRef("&lt;length&gt;")}}. Les valeurs exprimées en `em` peuvent produire des résultats inattendus.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La valeur exprimée est relative à la taille de fonte utilisée pour l'élément. La valeur calculée sera le pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) indiqué, multiplié par la taille calculée de la police de l'élément. Voir la section Notes pour plus de précisions sur le comportement de ce type et des valeurs exprimées en `em`.
+  - : La valeur exprimée est relative à la taille de fonte utilisée pour l'élément. La valeur calculée est le pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) indiqué, multiplié par la taille calculée de la police de l'élément. Voir la section Notes pour plus de précisions sur le comportement de ce type et des valeurs exprimées en `em`.
 
 ## Accessibilité
 

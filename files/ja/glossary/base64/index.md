@@ -2,7 +2,7 @@
 title: Base64
 slug: Glossary/Base64
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 8e832fce3360267f296722dfd6dd87d1c547b1bf
 ---
 
 **Base64** とは、[バイナリーからテキストへの符号化](https://en.wikipedia.org/wiki/Binary-to-text_encoding)を行う手法のグループであり、バイナリーデータを 64 を基数とする表現に変換することで、{{glossary("ASCII")}} 文字列で表すことができます。_Base64_ という用語は、 [MIME の Content-Transfer-Encoding](https://ja.wikipedia.org/wiki/MIME#Content-Transfer-Encoding) における特定の符号化方式の名前に由来します。
@@ -56,7 +56,7 @@ Browsers also natively provide two JavaScript functions for decoding and encodin
 > [!NOTE]
 > Base64 はテキストエンコードではなくバイナリーエンコード方式ですが、`btoa` と `atob` はウェブプラットフォームがバイナリーデータ型に対応する前に追加されました。その結果、2 つの関数は文字列を使用してバイナリーデータを表しており、各文字の{{glossary("code point", "コードポイント")}}が各バイトの値を表します。このため、`btoa` は任意のテキストデータをエンコードするために使用することができます。例えば、テキストや HTML 文書の Base64 `data:` URL を作成する場合などです。
 >
-> しかし、バイトとコードポイントの対応が確実に成り立つのは `0x7f` までのコードポイントだけです。さらに、`0xff` を超えるコードポイントは、1 バイトの最大値を超えるために `btoa` でエラーが発生します。次の節では、任意の Unicode テキストをエンコードするときに、この制限を回避するためにどのように作業するかについて詳しく説明します。
+> しかし、バイトとコードポイントの対応が確実に成り立つのは `0x7f` までのコードポイントだけです。さらに、`0xff` を超えるコードポイントは、1 バイトの最大値を超えるために `btoa` でエラーが発生します。{{domxref("Window.btoa()")}} の「[Unicode 文字列](/ja/docs/Web/API/Window/btoa#unicode_文字列)」の節では、任意の Unicode テキストをエンコードするときに、この制限を回避するためにどのように作業するかについて詳しく説明します。
 
 ## 関連情報
 

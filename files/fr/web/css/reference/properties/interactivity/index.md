@@ -3,7 +3,7 @@ title: Propriété CSS `interactivity`
 short-title: interactivity
 slug: Web/CSS/Reference/Properties/interactivity
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
@@ -27,6 +27,8 @@ interactivity: unset;
 
 ### Valeurs
 
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
 - `auto` {{Experimental_Inline}}
   - : Les éléments sélectionnés sont dans leur état par défaut concernant l'inertie. Cela signifie généralement qu'ils sont interactifs, mais ce n'est [pas toujours le cas](#inertie_par_défaut). Il s'agit de la valeur par défaut.
 
@@ -45,30 +47,30 @@ interactivity: unset;
 
 La propriété `interactivity` permet de définir si un élément et ses descendants sont inertes. Consultez la page de référence de l'attribut HTML [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert) pour une description détaillée de l'état inerte.
 
-Un cas d'utilisation typique de `interactivity: inert` concerne le contenu paginé, comme les carrousels, lorsque vous souhaitez que seuls le contenu et les contrôles de la page actuellement visible soient interactifs. Dans ces cas, le fait de sélectionner par inadvertance un lien ou un bouton hors écran pourrait nuire à l'expérience.
+Un cas d'utilisation typique de `interactivity: inert` concerne le contenu paginé, comme les carrousels, lorsque vous souhaitez que seuls le contenu et les contrôles de la page actuellement visible soient interactifs. Dans ces cas, le fait de sélectionner par inadvertance un lien ou un bouton hors écran peut nuire à l'expérience.
 
-Si l'état inerte d'un élément est défini à la fois par HTML (l'attribut `inert` ou un réglage automatique du navigateur) et par CSS (la propriété `interactivity`) en même temps, le CSS n'aura aucun effet — il ne peut pas outrepasser l'inertie définie par HTML.
+Si l'état inerte d'un élément est défini à la fois par HTML (l'attribut `inert` ou un réglage automatique du navigateur) et par CSS (la propriété `interactivity`) en même temps, le CSS n'a aucun effet — il ne peut pas outrepasser l'inertie définie par HTML.
 
-Par exemple, l'élément HTML suivant sera inerte&nbsp;:
+Par exemple, l'élément HTML suivant est inerte&nbsp;:
 
 ```html
 <button inert>Vous ne pouvez pas cliquer sur moi</button>
 ```
 
-Définir `interactivity: auto` dessus n'aura aucun effet.
+Définir `interactivity: auto` dessus n'a aucun effet.
 
 ### Inertie par défaut
 
 La plupart des éléments sont interactifs par défaut, mais ce n'est pas toujours le cas&nbsp;:
 
-- Un ancêtre de l'élément peut être défini comme inerte, via la propriété `interactivity` ou l'attribut `inert`.
-- Lorsqu'une boîte de dialogue modale {{HTMLElement("dialog")}} est affichée, le reste de la page est automatiquement défini comme inerte.
+- Un ancêtre de l'élément peut être défini comme inerte, avec la propriété `interactivity` ou l'attribut `inert`.
+- Lorsqu'une boîte de dialogue bloquante {{HTMLElement("dialog")}} est affichée, le reste de la page est automatiquement défini comme inerte.
 
 ## Exemples
 
 ### Utilisation simple de `interactivity`
 
-Dans cet exemple, nous avons deux éléments HTML {{HTMLElement("input")}}. Le second a `interactivity: inert` appliqué via une classe, il n'est donc pas sélectionnable ni modifiable dans les navigateurs compatibles.
+Dans cet exemple, nous avons deux éléments HTML {{HTMLElement("input")}}. Le second a `interactivity: inert` appliqué avec une classe, il n'est donc pas sélectionnable ni modifiable dans les navigateurs compatibles.
 
 ```html live-sample___basic-interactivity
 <p>
@@ -112,7 +114,7 @@ Le balisage comporte deux éléments HTML {{HTMLElement("p")}}, chacun contenant
   <a
     href="https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Global_attributes/inert"
     >inerte</a
-  >. Vous devriez pouvoir sélectionner le contenu textuel, le rechercher avec les fonctions du navigateur, et sélectionner ou cliquer sur le lien. Un gestionnaire d'évènement <code>click</code> est défini sur le paragraphe et change la couleur de la bordure pendant une seconde lorsqu'il est cliqué n'importe où.
+  >. Vous devez pouvoir sélectionner le contenu textuel, le rechercher avec les fonctions du navigateur, et sélectionner ou cliquer sur le lien. Un gestionnaire d'évènement <code>click</code> est défini sur le paragraphe et change la couleur de la bordure pendant une seconde lorsqu'il est cliqué n'importe où.
   <span contenteditable>Cette phrase a l'attribut <code>contenteditable</code>, elle est donc modifiable</span>.
 </p>
 
@@ -121,16 +123,16 @@ Le balisage comporte deux éléments HTML {{HTMLElement("p")}}, chacun contenant
   <a
     href="https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Global_attributes/inert"
     >inerte</a
-  >. Vous ne pourrez pas sélectionner le contenu textuel, le rechercher avec les fonctions du navigateur, sélectionner ou cliquer sur le lien, ou déclencher des évènements <code>click</code> dessus (la couleur de la bordure ne changera pas lors d'un clic).
+  >. Vous ne pouvez pas sélectionner le contenu textuel, le rechercher avec les fonctions du navigateur, sélectionner ou cliquer sur le lien, ou déclencher des évènements <code>click</code> dessus (la couleur de la bordure ne change pas lors d'un clic).
   <span contenteditable
-    >Cette phrase a l'attribut <code>contenteditable</code>, mais elle n'est pas modifiable car le paragraphe est inerte</span
+    >Cette phrase a l'attribut <code>contenteditable</code>, mais elle n'est pas modifiable, car le paragraphe est inerte</span
   >.
 </p>
 ```
 
 #### CSS
 
-Nous appliquons la propriété `interactivity` avec la valeur `inert` sur le second paragraphe, ce qui le rend inerte. Vous pouvez donc modifier le texte `contenteditable` dans le premier paragraphe, mais pas dans le second, et vous ne pourrez pas non plus rechercher, sélectionner ou interagir avec le lien dans le second paragraphe.
+Nous appliquons la propriété `interactivity` avec la valeur `inert` sur le second paragraphe, ce qui le rend inerte. Vous pouvez donc modifier le texte `contenteditable` dans le premier paragraphe, mais pas dans le second, et vous ne pouvez pas non plus rechercher, sélectionner ou interagir avec le lien dans le second paragraphe.
 
 ```css live-sample___inertness-effects
 .inert {
@@ -225,7 +227,7 @@ Le HTML se compose d'un [titre](/fr/docs/Web/HTML/Reference/Elements/Heading_Ele
 
 #### CSS
 
-Une {{CSSxRef("width")}} de `100vw` est appliquée à la liste non ordonnée pour qu'elle soit aussi large que la zone d'affichage. Nous ajoutons une {{CSSxRef("height")}} fixe, un peu de {{CSSxRef("padding")}}, et une valeur {{CSSxRef("overflow-x")}} de `scroll` pour permettre le défilement du contenu débordant. Les éléments enfants de la liste sont disposés horizontalement avec {{CSSxRef("display", "display: flex")}}. Ce conteneur flex reçoit une valeur {{CSSxRef("scroll-snap-type")}} de `x mandatory` pour en faire un [contenueur de défilement avec accrochage](/fr/docs/Glossary/Scroll_snap#conteneur_de_défilement_avec_accrochage). Le mot-clé `x` fait que les [cibles d'accrochage](/fr/docs/Glossary/Scroll_snap#cible_daccrochage) du conteneur sont accrochées horizontalement. Le mot-clé `mandatory` signifie que le conteneur s'accrochera toujours à une cible d'accrochage à la fin d'une action de défilement.
+Une {{CSSxRef("width")}} de `100vw` est appliquée à la liste non ordonnée pour qu'elle soit aussi large que la zone d'affichage. Nous ajoutons une {{CSSxRef("height")}} fixe, un peu de {{CSSxRef("padding")}}, et une valeur {{CSSxRef("overflow-x")}} de `scroll` pour permettre le défilement du contenu débordant. Les éléments enfants de la liste sont disposés horizontalement avec {{CSSxRef("display", "display: flex")}}. Ce conteneur flexible reçoit une valeur {{CSSxRef("scroll-snap-type")}} de `x mandatory` pour en faire un [conteneur de défilement avec accrochage](/fr/docs/Glossary/Scroll_snap#conteneur_de_défilement_avec_accrochage). Le mot-clé `x` fait que les [cibles d'accrochage](/fr/docs/Glossary/Scroll_snap#cible_daccrochage) du conteneur sont accrochées horizontalement. Le mot-clé `mandatory` signifie que le conteneur s'accroche toujours à une cible d'accrochage à la fin d'une action de défilement.
 
 ```css hidden live-sample___offscreen-inert
 * {
@@ -264,8 +266,8 @@ Chaque élément de liste reçoit les styles suivants&nbsp;:
 - Une valeur {{CSSxRef("flex")}} de `0 0 98vw`, forçant chaque élément à être aussi grand que le contenant de défilement moins le {{CSSxRef("gap")}} défini sur la liste (voir la déclaration `gap` dans la règle `ul` plus haut). Cela a aussi pour effet de centrer chaque page dans le contenant de défilement.
 - Une valeur {{CSSxRef("scroll-snap-align")}} de `center`, pour que le contenant de défilement s'accroche au centre de chaque cible d'accrochage.
 - Une valeur {{CSSxRef("view-timeline")}} de `--inner-change inline`, pour déclarer l'élément comme sujet de la chronologie de progression de vue `--inner-change` et faire progresser cette chronologie dans la direction en ligne à travers son contenant de défilement ancêtre.
-- Une valeur {{CSSxRef("animation-timeline")}} identique à celle de {{CSSxRef("view-timeline-name")}}, comme défini dans l'abrégé `view-timeline`, ce qui signifie que la chronologie de progression de vue nommée sera utilisée pour contrôler la progression des animations appliquées à l'élément.
-- {{CSSxRef("animation-name")}} et {{CSSxRef("animation-fill-mode")}} définissant l'animation appliquée à cet élément et son mode de remplissage. La valeur `both` est requise car vous souhaitez que l'état initial de l'animation s'applique à l'élément avant le début de l'animation, et que l'état final s'applique après la fin de l'animation. Si l'animation n'est pas persistée, la déclaration `interactivity: inert` appliquée via l'animation ne s'appliquera pas aux éléments de liste lorsqu'ils sont en dehors du contenant de défilement.
+- Une valeur {{CSSxRef("animation-timeline")}} identique à celle de {{CSSxRef("view-timeline-name")}}, comme défini dans l'abrégé `view-timeline`, ce qui signifie que la chronologie de progression de vue nommée est utilisée pour contrôler la progression des animations appliquées à l'élément.
+- {{CSSxRef("animation-name")}} et {{CSSxRef("animation-fill-mode")}} définissant l'animation appliquée à cet élément et son mode de remplissage. La valeur `both` est requise, car vous souhaitez que l'état initial de l'animation s'applique à l'élément avant le début de l'animation, et que l'état final s'applique après la fin de l'animation. Si l'animation n'est pas mise en persistence, la déclaration `interactivity: inert` appliquée par l'animation ne s'applique pas aux éléments de liste lorsqu'ils sont en dehors du contenant de défilement.
 
 ```css live-sample___offscreen-inert
 li {
@@ -285,7 +287,7 @@ li {
 }
 ```
 
-Enfin, les animations {{CSSxRef("@keyframes")}} sont définies. `interactivity: inert` est appliqué aux positions `entry 0%` et `exit 100%` de la chronologie de vue. Combiné à la valeur `animation-fill-mode: both`, cela signifie que les éléments de liste seront inertes avant le début et après la fin de la chronologie de vue, c'est-à-dire lorsqu'ils sont en dehors du contenant de défilement. Entre les positions `entry 1%` et `exit 99%`, `interactivity: auto` est appliqué aux éléments de liste, ce qui signifie qu'ils sont interactifs lorsqu'ils sont à l'intérieur du contenant de défilement.
+Enfin, les animations {{CSSxRef("@keyframes")}} sont définies. `interactivity: inert` est appliqué aux positions `entry 0%` et `exit 100%` de la chronologie de vue. Combiné à la valeur `animation-fill-mode: both`, cela signifie que les éléments de liste sont inertes avant le début et après la fin de la chronologie de vue, c'est-à-dire lorsqu'ils sont en dehors du contenant de défilement. Entre les positions `entry 1%` et `exit 99%`, `interactivity: auto` est appliqué aux éléments de liste, ce qui signifie qu'ils sont interactifs lorsqu'ils sont à l'intérieur du contenant de défilement.
 
 ```css live-sample___offscreen-inert
 @keyframes inert-change {
@@ -305,7 +307,7 @@ Consultez la page de référence {{CSSxRef("animation-range")}} pour une explica
 
 #### Résultat
 
-Faites défiler la liste non ordonnée horizontalement pour voir l'effet de pagination — chaque page s'aligne dans la vue. Essayez de tabuler entre les liens et les boutons&nbsp;; vous constaterez que seuls ceux qui sont à l'écran sont interactifs et peuvent être tabulés.
+Faites défiler la liste non ordonnée horizontalement pour voir l'effet de pagination — chaque page s'aligne dans la vue. Essayez de tabuler entre les liens et les boutons&nbsp;; vous constatez que seuls ceux qui sont à l'écran sont interactifs et peuvent être tabulés.
 
 {{EmbedLiveSample("offscreen-inert", "100%", 320)}}
 
@@ -313,7 +315,7 @@ Faites défiler la liste non ordonnée horizontalement pour voir l'effet de pagi
 
 Prendre en compte l'accessibilité avec attention lorsque vous rendez des éléments inertes. Par défaut, il n'existe aucun moyen visuel d'indiquer si un élément ou son sous-arbre est inerte. En tant que développeur·euse web, il est de votre responsabilité d'indiquer clairement les parties du contenu qui sont actives et celles qui sont inertes.
 
-Lorsque vous fournissez des indices visuels et non visuels sur l'inertie du contenu, gardez aussi à l'esprit que la zone d'affichage visuelle peut ne contenir que des sections du contenu. Les utilisateur·ice·s peuvent avoir zoomé·e·s sur une petite section du contenu, ou ne pas pouvoir voir le contenu du tout. Le fait que les sections inertes ne soient pas évidemment inertes peut entraîner de la frustration et une mauvaise expérience utilisateur.
+Lorsque vous fournissez des indices visuels et non visuels sur l'inertie du contenu, gardez aussi à l'esprit que la zone d'affichage visuelle peut ne contenir que des sections du contenu. Les utilisateur·ice·s peuvent avoir zoomé·e·s sur une petite section du contenu, ou ne pas pouvoir voir le contenu du tout. Le fait que les sections inertes ne soient pas évidemment inertes peut entraîner de la frustration et une mauvaise expérience utilisateur·ice.
 
 ## Spécifications
 
@@ -325,5 +327,5 @@ Lorsque vous fournissez des indices visuels et non visuels sur l'inertie du cont
 
 ## Voir aussi
 
-- L'attribut HTML [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert)
+- L'attribut universel HTML [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert)
 - La propriété API {{DOMxRef("HTMLElement.inert")}}

@@ -2,10 +2,8 @@
 title: SVG 要素ページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
-
-{{MDNSidebar}}
 
 > [!NOTE]
 > _この説明文全体を削除してから公開してください。_
@@ -22,7 +20,7 @@ l10n:
 > ```md
 > ---
 > title: <NameOfTheElement>
-> slug: Web/SVG/Element/NameOfTheElement
+> slug: Web/SVG/Reference/Element/NameOfTheElement
 > l10n:
 >   sourceCommit: 翻訳元コミットID
 > ---
@@ -42,7 +40,7 @@ l10n:
 >
 > **ページ先頭のマクロ**
 >
-> コンテンツ部の上部（ページのフロントマターのすぐ下）には、いくつかのマクロ呼び出しが現れます。
+> コンテンツ部の上部、ページのフロントマターのすぐ下には、いくつかのマクロ呼び出しが現れます。
 > **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
 >
 > - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。
@@ -50,22 +48,13 @@ l10n:
 > - `\{{Deprecated_Header}}` — これは **非推奨** バナーを生成し、この技術の使用を[避けるべき](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
 > - `\{{Non-standard_Header}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
 >
-> 下記のアドバイスに従って、以下のマクロを更新または削除してください。
->
-> - `\{{SecureContext_Header}}` — これは **保護されたコンテキスト** バナーを生成し、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用できることを示します。
->   そうではない場合は、マクロ呼び出すを削除することができます。
->   そうである場合は、[保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
-> - `\{{SVGRef}}` — これは、要素のための左側のリファレンスサイドバーを生成します。
->   サイドバーのコンテンツはページメタデータのタグに依存します。
-> - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
->
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
-> **実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
+> **実験的**、**非推奨**、**標準外** の各バナーの例は、このメモブロックの直後に表示しています。
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{SVGRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 ページのコンテンツは導入段落から始めましょう。要素名から始め、それが何をするのかを買いてください。
 これはできれば 1 つか 2 つの短い文章にしてください。
@@ -82,9 +71,8 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 
 ### グローバル属性
 
-- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute#条件処理属性)
 - [コア属性](/ja/docs/Web/SVG/Reference/Attribute#コア属性)
-- [グラフィックイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グラフィックイベント属性)
+- [イベント属性](/ja/docs/Web/SVG/Reference/Attribute#イベント属性)
 - [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#プレゼンテーション属性)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}

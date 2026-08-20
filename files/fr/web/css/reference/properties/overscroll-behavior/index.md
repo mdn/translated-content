@@ -111,14 +111,14 @@ overscroll-behavior: unset;
 
 La propriété `overscroll-behavior` est définie avec un ou deux mots-clés parmi ceux de la liste ci-après.
 
-Deux mots-clés définissent la valeur de `overscroll-behavior` sur les axes `x` et `y` respectivement. Si une seule valeur est spécifiée, les axes x et y sont supposés avoir la même valeur.
+Deux mots-clés définissent la valeur de `overscroll-behavior` sur les axes `x` et `y` respectivement. Si une seule valeur est définie, les axes x et y sont supposés avoir la même valeur.
 
 ### Valeurs
 
 - `auto`
   - : Le comportement de dépassement de défilement par défaut se produit normalement.
 - `contain`
-  - : Le comportement de dépassement de défilement par défaut (par exemple, les effets de «&nbsp;rebondissement&nbsp;») est observé à l'intérieur de l'élément où cette valeur est définie. Cependant, aucun enchaînement de défilement ne se produit sur les zones de défilement voisines&nbsp;; les éléments sous-jacents ne défileront pas. La valeur `contain` désactive la navigation native du navigateur, y compris le geste de «&nbsp;tirer pour actualiser&nbsp;» vertical et la navigation par balayage horizontal.
+  - : Le comportement de dépassement de défilement par défaut (par exemple, les effets de «&nbsp;rebondissement&nbsp;») est observé à l'intérieur de l'élément où cette valeur est définie. Cependant, aucun enchaînement de défilement ne se produit sur les zones de défilement voisines&nbsp;; les éléments sous-jacents ne défilent pas. La valeur `contain` désactive la navigation native du navigateur, y compris le geste de «&nbsp;tirer pour actualiser&nbsp;» vertical et la navigation par balayage horizontal.
 - `none`
   - : Aucun enchaînement de défilement ne se produit vers les zones de défilement voisines, et le comportement de dépassement de défilement par défaut est empêché.
 
@@ -130,7 +130,7 @@ Dans certains cas, ces comportements ne sont pas souhaitables. Vous pouvez utili
 
 Notez que cette propriété s'applique uniquement aux {{Glossary("Scroll_container", "conteneurs de défilement")}}. En particulier, comme un {{HTMLElement("iframe")}} n'est pas un conteneur de défilement, définir cette propriété sur un cadre intégré n'a aucun effet. Pour contrôler l'enchaînement de défilement depuis un cadre intégré, définissez `overscroll-behavior` à la fois sur les éléments {{HTMLElement("html")}} et {{HTMLElement("body")}} du document du cadre intégré.
 
-Un {{Glossary("Scroll_container", "conteneur de défilement")}} qui n'a pas de débordement défilable, comme un élément avec `overflow: hidden`, est toujours considéré comme étant à sa {{Glossary("Scroll_boundary", "limite de défilement")}}. Ainsi, définir un `overscroll-behavior` différent de la valeur par défaut, tel que `contain` ou `none`, sur celui-ci empêchera l'enchaînement de défilement vers les conteneurs de défilement ancêtres. Cela peut être utilisé pour empêcher le défilement de l'arrière-plan lorsqu'une boîte de dialogue ou une superposition est ouverte.
+Un {{Glossary("Scroll_container", "conteneur de défilement")}} qui n'a pas de débordement défilable, comme un élément avec `overflow: hidden`, est toujours considéré comme étant à sa {{Glossary("Scroll_boundary", "limite de défilement")}}. Ainsi, définir un `overscroll-behavior` différent de la valeur par défaut, tel que `contain` ou `none`, sur celui-ci empêche l'enchaînement de défilement vers les conteneurs de défilement ancêtres. Cela peut être utilisé pour empêcher le défilement de l'arrière-plan lorsqu'une boîte de dialogue ou une superposition est ouverte.
 
 ## Définition formelle
 

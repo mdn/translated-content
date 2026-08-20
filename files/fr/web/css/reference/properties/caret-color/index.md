@@ -3,7 +3,7 @@ title: Propriété CSS `caret-color`
 short-title: caret-color
 slug: Web/CSS/Reference/Properties/caret-color
 l10n:
-  sourceCommit: 00da2fc19d0c8c7cd2e91c78cf55e204cd94cf2b
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`caret-color`** définit la couleur du **curseur d'insertion**, parfois appelé **curseur de saisie**. Il s'agit du marqueur visible qui apparaît au point d'insertion où le prochain caractère tapé est ajouté ou où le prochain caractère supprimé est retiré.
@@ -63,6 +63,8 @@ caret-color: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme une seule valeur `<color>` ou le mot-clé `auto`&nbsp;:
+
 - `auto`
   - : En général, il se rapporte à [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor), la couleur ({{CSSxRef("color")}}) du texte qui est modifié.
 
@@ -81,7 +83,7 @@ Le curseur d'insertion, et donc cette propriété, ne s'applique qu'au texte ou 
 
 Le curseur peut apparaître dans les éléments `<input>` de type `password`, `text`, `search`, `tel` et `email`. Aucun curseur n'apparaît avec les types d'entrée date, `color`, `hidden`, `radio` ou `checkbox`. Certains navigateurs affichent un curseur avec le type d'entrée `number`. Il est possible, dans certains navigateurs, de faire apparaître un curseur dans des éléments qui n'ont jamais de contenu texte — par exemple, en définissant [`appearance: none`](/fr/docs/Web/CSS/Reference/Properties/appearance) et en ajoutant l'attribut `contenteditable`. Cependant, cela n'est pas recommandé.
 
-Un curseur peut être affiché dans un élément éditable ou ses descendants, à condition que l'éditabilité ne soit pas désactivée, par exemple en définissant l'attribut `contentEditable` d'un descendant à `false`. Si un élément n'est pas éditable ou sélectionnable, par exemple si {{CSSxRef("user-select")}} est défini sur `none`, le curseur ne doit pas apparaître.
+Un curseur peut être affiché dans un élément éditable ou ses descendants, à condition que l'édition ne soit pas désactivée, par exemple en définissant l'attribut `contentEditable` d'un descendant à `false`. Si un élément n'est pas éditable ou sélectionnable, par exemple si {{CSSxRef("user-select")}} est défini sur `none`, le curseur ne doit pas apparaître.
 
 ### Différence entre curseur d'insertion et curseur de navigation
 
@@ -93,7 +95,7 @@ L'image du curseur de la souris affichée pour certaines valeurs de la propriét
 
 ### Animation depuis `auto`
 
-En général, lorsque la propriété `caret-color` est définie sur `auto` ou prend cette valeur par défaut, les agents utilisateurs utilisent `currentColor`, qui est animable. Cependant, `auto` n'est pas une valeur animable par défaut&nbsp;: lors de l'animation ou de la transition de `caret-color` de `auto` vers une autre valeur de couleur, aucune interpolation n'a lieu. L'animation est [discrète](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties#discrète)&nbsp;; la couleur bascule de ou vers la couleur `currentColor` au milieu de la {{CSSxRef("animation-duration")}} ou de la {{CSSxRef("transition-duration")}}.
+En général, lorsque la propriété `caret-color` est définie sur `auto` ou prend cette valeur par défaut, les agents utilisateurs utilisent `currentColor`, qui peut être animée. Cependant, `auto` n'est pas une valeur qui peut être animée par défaut&nbsp;: lors de l'animation ou de la transition de `caret-color` de `auto` vers une autre valeur de couleur, aucune interpolation n'a lieu. L'animation est [discrète](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties#discrète)&nbsp;; la couleur bascule de ou vers la couleur `currentColor` au milieu de la {{CSSxRef("animation-duration")}} ou de la {{CSSxRef("transition-duration")}}.
 
 ## Définition formelle
 
@@ -139,7 +141,7 @@ p.custom {
 }
 ```
 
-#### Result
+#### Résultat
 
 {{EmbedLiveSample("Définir une couleur de curseur personnalisée", 500, 200)}}
 

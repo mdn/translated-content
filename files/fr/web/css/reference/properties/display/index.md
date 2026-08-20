@@ -3,7 +3,7 @@ title: Propriété CSS `display`
 short-title: display
 slug: Web/CSS/Reference/Properties/display
 l10n:
-  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
+  sourceCommit: b02c4fe0f8c485fa3fd0af10005310aaecef64ca
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`display`** définit si un élément est traité comme une [boîte de bloc ou en ligne](/fr/docs/Web/CSS/Guides/Display/Flow_layout) et le mode de disposition utilisé pour ses enfants, comme la [mise en flux](/fr/docs/Web/CSS/Guides/Display/Flow_layout), la disposition [grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou la disposition [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
@@ -89,6 +89,8 @@ display: flex;
 display: inline-flex;
 display: grid;
 display: inline-grid;
+display: grid-lanes;
+display: inline-grid-lanes;
 display: table;
 display: inline-table;
 
@@ -163,6 +165,11 @@ Les valeurs de mots-clés peuvent être regroupées en six catégories de valeur
       - : L'élément se comporte comme un élément de niveau bloc et dispose son contenu selon le [modèle flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
     - `grid`
       - : L'élément se comporte comme un élément de niveau bloc et dispose son contenu selon le [modèle de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts).
+    - `grid-lanes`
+      - : L'élément se comporte comme un élément de niveau bloc et organise son contenu selon une disposition de type grilles en lignes. Les colonnes sont définies par {{CSSxRef("grid-template-columns")}} et se comportent comme une grille stricte, tandis que les éléments sont regroupés dans le sens des blocs afin de combler les espaces entre les éléments de tailles différentes. Voir [la disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) pour plus de détails.
+
+    - `inline-grid-lanes`
+      - : L'élément se comporte comme un élément de niveau en incise et organise son contenu selon une mise en page de grilles en lignes. Les lignes sont définies par {{CSSxRef("grid-template-rows")}} et se comportent comme une grille stricte, tandis que les éléments sont regroupés dans le sens en incise pour combler les espaces entre les éléments de tailles différentes. Voir [la disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) pour plus de détails.
     - `ruby`
       - : L'élément se comporte comme un élément de niveau en ligne et dispose son contenu selon le modèle de formatage ruby. Il se comporte comme les éléments HTML {{HTMLElement("ruby")}} correspondants.
 
@@ -253,7 +260,7 @@ Cela peut être utilisé avec {{CSSxRef("list-style-type")}} et {{CSSxRef("list-
 Le [module d'affichage CSS](/fr/docs/Web/CSS/Guides/Display) décrit une syntaxe à mots-clés multiples pour les valeurs que vous pouvez utiliser avec la propriété `display` afin de définir explicitement l'affichage **extérieur** et **intérieur**.
 Les valeurs à mot-clé unique (valeurs précomposées `<display-legacy>`) sont prises en charge pour la rétrocompatibilité.
 
-Par exemple, en utilisant deux valeurs, vous pouvez définir un conteneur flex en ligne comme suit&nbsp;:
+Par exemple, en utilisant deux valeurs, vous pouvez définir un conteneur flexible en incise comme suit&nbsp;:
 
 ```css
 .container {
@@ -309,6 +316,7 @@ Les pages individuelles pour les différents types de valeurs que la propriété
 - [Grilles, valeurs logiques et modes d'écriture](/fr/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
 - [Disposition de grille CSS et accessibilité](/fr/docs/Web/CSS/Guides/Grid_layout/Accessibility)
 - [Réaliser des dispositions courantes avec les grilles](/fr/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
+- [Disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)
 
 ### Animer l'affichage
 
@@ -506,3 +514,4 @@ Vous pouvez trouver plus d'exemples dans les pages pour chaque type d'affichage 
 - L'attribut SVG {{SVGAttr("display")}}
 - [Explications sur les contextes de formatage](/fr/docs/Web/CSS/Guides/Display/Formatting_contexts)
 - [Les dispositions de bloc et en ligne dans un flux normal](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
+- [Disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)

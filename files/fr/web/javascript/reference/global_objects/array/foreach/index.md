@@ -3,7 +3,7 @@ title: "Array : méthode forEach()"
 short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 La méthode **`forEach()`** des instances de {{JSxRef("Array")}} exécute une fonction fournie une fois pour chaque élément du tableau.
@@ -46,7 +46,7 @@ Aucune ({{JSxRef("undefined")}}).
 
 ## Description
 
-La méthode `forEach()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle appelle la fonction `callbackFn` fournie une fois pour chaque élément du tableau, dans l'ordre croissant des indices. Contrairement à {{JSxRef("Array/map", "map()")}}, `forEach()` renvoie toujours {{JSxRef("undefined")}} et n'est pas chaînable. L'usage typique est d'exécuter des effets de bord à la fin d'une chaîne. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
+La méthode `forEach()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle appelle la fonction `callbackFn` fournie une fois pour chaque élément du tableau, dans l'ordre croissant des indices. Contrairement à {{JSxRef("Array/map", "map()")}}, `forEach()` retourne toujours {{JSxRef("undefined")}} et ne peut pas être chaînée. L'usage typique est d'exécuter des effets de bord à la fin d'une chaîne de caractères. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
 
 La fonction `callbackFn` est appelée uniquement pour les indices du tableau qui ont une valeur attribuée. Elle n'est pas appelée pour les cases vides dans [un tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux).
 
@@ -148,10 +148,7 @@ Puisque le paramètre `thisArg` (`this`) est fourni à
 La fonction de rappel l'utilise comme valeur de `this`.
 
 > [!NOTE]
-> Si la fonction de rappel passée était une
-> [fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
-> le paramètre `thisArg` pourrait être omis,
-> car toutes les fonctions fléchées lient lexicalement la valeur de {{JSxRef("this")}}.
+> Si la fonction de rappel passée était une [fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), le paramètre `thisArg` peut être omis, car toutes les fonctions fléchées lient lexicalement la valeur de {{JSxRef("this")}}.
 
 ### Fonction de copie d'objet
 
@@ -246,7 +243,7 @@ const objetSimilaireTableau = {
   0: 2,
   1: 3,
   2: 4,
-  3: 5, // ignoré par forEach() car length vaut 3
+  3: 5, // ignoré par forEach(), car length vaut 3
 };
 Array.prototype.forEach.call(objetSimilaireTableau, (x) => console.log(x));
 // 2

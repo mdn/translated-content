@@ -3,10 +3,10 @@ title: "Array : méthode join()"
 short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 7c2fdcaace1ab622a1055b7cc710297c452ce9ee
 ---
 
-La méthode **`join()`** des instances de {{JSxRef("Array")}} crée et retourne une nouvelle chaîne de caractères en concaténant tous les éléments de ce tableau, séparés par des virgules ou par une chaîne de séparation définie. Si le tableau ne contient qu'un seul élément, cet élément est retourné sans utiliser le séparateur.
+La méthode **`join()`** des instances de {{JSxRef("Array")}} crée et retourne une nouvelle chaîne de caractères en concaténant tous les éléments de ce tableau, séparés par des virgules ou par une chaîne de caractères de séparation définie. Si le tableau ne contient qu'un seul élément, cet élément est retourné sans utiliser le séparateur.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.join()")}}
 
@@ -45,7 +45,7 @@ Les conversions en chaîne de caractères de tous les éléments du tableau sont
 
 La méthode `join` est utilisée en interne par [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) sans argument. Redéfinir `join` sur une instance de tableau redéfinit aussi son comportement `toString`.
 
-`Array.prototype.join` convertit récursivement chaque élément, y compris les tableaux imbriqués, en chaînes de caractères. Comme la chaîne retournée par `Array.prototype.toString` (équivalent à `join()`) ne contient pas de séparateurs, les tableaux imbriqués semblent aplatis. Vous ne pouvez contrôler que le séparateur du premier niveau, les niveaux plus profonds utilisent toujours la virgule par défaut.
+`Array.prototype.join` convertit récursivement chaque élément, y compris les tableaux imbriqués, en chaînes de caractères. Comme la chaîne de caractères retournée par `Array.prototype.toString` (équivalent à `join()`) ne contient pas de séparateurs, les tableaux imbriqués semblent aplatis. Vous ne pouvez contrôler que le séparateur du premier niveau, les niveaux plus profonds utilisent toujours la virgule par défaut.
 
 ```js
 const matrice = [
@@ -74,7 +74,7 @@ La méthode `join()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_
 
 ### Fusionner un tableau de quatre façons différentes
 
-L'exemple suivant crée un tableau, `a`, avec trois éléments, puis joint le tableau à trois reprises&nbsp;: en utilisant le séparateur par défaut, une virgule et un espace, puis un plus, puis avec la chaîne vide.
+L'exemple suivant crée un tableau, `a`, avec trois éléments, puis joint le tableau à trois reprises&nbsp;: en utilisant le séparateur par défaut, une virgule et un espace, puis un plus, puis avec la chaîne de caractères vide.
 
 ```js
 const a = new Array("Vent", "Pluie", "Feu");
@@ -103,7 +103,7 @@ const objetSimilaireTableau = {
   0: 2,
   1: 3,
   2: 4,
-  3: 5, // ignoré par join() car length vaut 3
+  3: 5, // ignoré par join(), car length vaut 3
 };
 console.log(Array.prototype.join.call(objetSimilaireTableau));
 // 2,3,4

@@ -3,10 +3,10 @@ title: "Intl.DateTimeFormat : méthode formatRangeToParts()"
 short-title: formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 0abb70602b0b3b11a2909c417a03e10eabd607a8
 ---
 
-La méthode **`formatRangeToParts()`** des instances de {{JSxRef("Intl.DateTimeFormat")}} retourne un tableau d'objets représentant chaque partie de la chaîne de caractères formatée qui serait retournée par {{JSxRef("Intl/DateTimeFormat/formatRange", "formatRange()")}}. Elle est utile pour construire des chaînes de caractères personnalisées à partir des jetons spécifiques à la locale.
+La méthode **`formatRangeToParts()`** des instances de {{JSxRef("Intl.DateTimeFormat")}} retourne un tableau d'objets représentant chaque partie de la chaîne de caractères formatée qui est retournée par {{JSxRef("Intl/DateTimeFormat/formatRange", "formatRange()")}}. Elle est utile pour construire des chaînes de caractères personnalisées à partir des jetons spécifiques à la locale.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.DateTimeFormat.prototype.formatRangeToParts()", "taller")}}
 
@@ -46,13 +46,13 @@ formatRangeToParts(startDate, endDate)
 - `startDate`
   - : Début de l'intervalle de dates. Peut être un objet {{JSxRef("Date")}} ou {{JSxRef("Temporal.PlainDateTime")}}. Il peut également s'agir d'un objet {{JSxRef("Temporal.PlainTime")}}, {{JSxRef("Temporal.PlainDate")}}, {{JSxRef("Temporal.PlainYearMonth")}} ou {{JSxRef("Temporal.PlainMonthDay")}} si l'objet `DateTimeFormat` a été configuré pour afficher au moins une partie pertinente de la date.
     > [!NOTE]
-    > Un objet {{JSxRef("Temporal.ZonedDateTime")}} provoquera toujours une exception `TypeError`&nbsp;; utilisez {{JSxRef("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}} ou convertissez-le en objet {{JSxRef("Temporal.PlainDateTime")}} à la place.
+    > Un objet {{JSxRef("Temporal.ZonedDateTime")}} provoque toujours une exception `TypeError`&nbsp;; utilisez {{JSxRef("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}} ou convertissez-le en objet {{JSxRef("Temporal.PlainDateTime")}} à la place.
 - `endDate`
   - : Fin de l'intervalle de dates. Doit être du même type que `startDate`.
 
 ### Valeur de retour
 
-Un {{JSxRef("Array")}} d'objets contenant l'intervalle de dates formaté en parties. Chaque objet possède trois propriétés, `type`, `value` et `source`, chacune contenant une chaîne de caractères. La concaténation des chaînes de caractères `value`, dans l'ordre fourni, donnera la même chaîne de caractères que {{JSxRef("Intl/DateTimeFormat/formatRange", "formatRange()")}}. La propriété `type` peut avoir les mêmes valeurs que {{JSxRef("Intl/DateTimeFormat/formatToParts", "formatToParts()")}}. La propriété `source` peut prendre l'une des valeurs suivantes&nbsp;:
+Un {{JSxRef("Array")}} d'objets contenant l'intervalle de dates formaté en parties. Chaque objet possède trois propriétés, `type`, `value` et `source`, chacune contenant une chaîne de caractères. La concaténation des chaînes de caractères `value`, dans l'ordre fourni, donne la même chaîne de caractères que {{JSxRef("Intl/DateTimeFormat/formatRange", "formatRange()")}}. La propriété `type` peut avoir les mêmes valeurs que {{JSxRef("Intl/DateTimeFormat/formatToParts", "formatToParts()")}}. La propriété `source` peut prendre l'une des valeurs suivantes&nbsp;:
 
 - `startRange`
   - : Le jeton fait partie de la date de début.

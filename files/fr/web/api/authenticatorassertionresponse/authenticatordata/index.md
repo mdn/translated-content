@@ -25,7 +25,7 @@ var authnrData = assertion.response.authnrData;
 
 Un objet {{jsxref("ArrayBuffer")}} dont la propriété {{jsxref("ArrayBuffer.byteLength")}} indique qu'il mesure au moins 37 octets et qui contient les champs suivants :
 
-- **`rpIdHash`** (32 octets) - Une empreinte SHA256 de l'identifiant de la partie fiable (i.e. - le domaine) tel que vu par le navigateur. Le serveur s'assurera ensuite que cette empreinte correspond à sa propre origine afin d'empêcher les tentatives de hameçonnage (_phishing_) ou d'autres attaques de l'homme du milieu (_man-in-the-middle_).
+- **`rpIdHash`** (32 octets) - Une empreinte SHA256 de l'identifiant de la partie fiable (i.e. - le domaine) tel que vu par le navigateur. Le serveur s'assurera ensuite que cette empreinte correspond à sa propre origine afin d'empêcher les tentatives de hameçonnage (_phishing_) ou d'autres attaques du monstre du milieu (_man-in-the-middle_).
 - **`flags`** (1 octet) - Une série de bits qui indique les différents attributs validés par l'authenticateur. Les bits sont décrits comme suit (où le bit 0 correspond au bit de poids faible) (tous les bits ne sont pas mentionnés car certains sont réservés pour une utilisation future) :
   - Bit 0 : Présence de l'utilisateur (_User Presence_ - UP) : si ce bit est actif, cela signifie que l'authenticateur a validé la présence de l'utilisateur par un test de présence (_Test of User Presence_ - TUP). Cela peut notamment correspondre à l'appui sur un bouton de l'authenticateur.
   - Bit 2 : Vérification de l'utilisateur (_User Verification_ - UV) : si ce bit est actif, cela signifie que l'authenticateur a vérifié l'utilisateur en question via une méthode d'authentification (biométrique, code PIN, autre).
