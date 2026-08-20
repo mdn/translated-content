@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} 接口的 **`ariaDescribedByElements`** 属性是一个数组，其中包含为应用该属性的元素提供无障碍描述的一个或多个元素。无障碍描述与无障碍名称类似（参见 {{domxref("Element/ariaLabelledByElements","ariaLabelledByElements")}}），但提供的信息更详尽。
+{{domxref("Element")}} 接口的 **`ariaDescribedByElements`** 属性是一个数组，其中包含为应用该属性的元素提供无障碍描述的元素。无障碍描述与无障碍名称类似（参见 {{domxref("Element/ariaLabelledByElements","ariaLabelledByElements")}}），但提供的信息更详尽。
 
 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 页面提供了关于如何使用该属性和对应特性的更多信息。
 
@@ -109,4 +109,4 @@ if ("ariaDescribedByElements" in Element.prototype) {
 
 - [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性
 - {{domxref("ElementInternals.ariaDescribedByElements")}}
-- [反射元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射元素引用)*属性反射*指南
+- *属性反射*指南中的[反射元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射元素引用)
