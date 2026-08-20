@@ -17,7 +17,7 @@ l10n:
 > [!NOTE]
 > 由于 [Chrome 的一个漏洞](https://crbug.com/1074261)，设置 Cross-Origin-Resource-Policy 可能会导致 PDF 渲染异常，使访问者无法阅读某些 PDF 文件的第一页之后的内容。在生产环境中使用此标头时请务必谨慎。
 
-Web 应用程序通过 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP 响应标头设置跨源资源策略，其接受一下三个值之一：
+Web 应用程序通过 {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP 响应标头设置跨源资源策略，其接受以下三个值之一：
 
 - `same-site`
   - : 只有来自同{{Glossary("Site", "站点")}}的请求才能读取资源。
