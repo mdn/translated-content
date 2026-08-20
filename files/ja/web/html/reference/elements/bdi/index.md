@@ -1,11 +1,10 @@
 ---
-title: "<bdi>: 書字方向分離要素"
+title: HTML `<bdi>` 書字方向分離要素
+short-title: <bdi>
 slug: Web/HTML/Reference/Elements/bdi
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<bdi>`** は [HTML](/ja/docs/Web/HTML) の要素で、ブラウザーの書字方向アルゴリズムに、このテキストが周囲のテキストから独立しているものと扱うよう指示します。これは特に、ウェブサイトがテキストを動的に挿入するとき、挿入されるテキストの書字方向が不明な場合に便利です。
 
