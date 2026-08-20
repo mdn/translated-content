@@ -278,7 +278,7 @@ draw();
 それぞれの {{HTMLElement("img")}} には ID 属性が割り当てられているため、`source` 用と `frame` 用にそれぞれ 1 つずつあり、{{domxref("document.getElementById()")}} を使用して簡単に選択できます。
 [Promise.all](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) を使用して、すべての画像が読み込まれたのを待ってから `drawImage()` を呼び出しています。
 `drawImage()` は、まず最初の画像からサイを切り出し、それをキャンバス上に変倍して描画します。
-最後に、2  つ目の `drawImage()` の呼び出しを使用して、フレームを描画します。
+最後に、2 つ目の `drawImage()` の呼び出しを使用して、フレームを描画します。
 
 ## アートギャラリーの例
 
