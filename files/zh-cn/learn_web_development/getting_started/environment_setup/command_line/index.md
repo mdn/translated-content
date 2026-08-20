@@ -8,7 +8,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}
 
-在你的开发过程中，你无疑需要在终端上（或者在“命令行”上——它们实际上是相同的）运行一些命令。本文介绍了终端、需要输入的基本命令、如何将命令串联起来，以及如何添加自己的命令行接口（CLI）工具。
+在你的开发过程中，你无疑需要在终端上（或者在“命令行”上——它们实际上是相同的）运行一些命令。本文介绍了终端、需要输入的基本命令、如何将命令串联起来，以及如何添加自己的命令行界面（CLI）工具。
 
 <table>
   <tbody>
