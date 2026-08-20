@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} 接口的 **`ariaValueNow`** 属性反映 [`aria-valuenow`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性的值，定义范围小部件的当前值。
+{{domxref("Element")}} 接口的 **`ariaValueNow`** 属性反映 [`aria-valuenow`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性的值，定义了范围微件的当前值。
 
 ## 值
 
