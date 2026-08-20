@@ -1,11 +1,12 @@
 ---
-title: <acronym>
+title: HTML `<acronym>` 頭字語または略語要素
+short-title: <acronym>
 slug: Web/HTML/Reference/Elements/acronym
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<acronym>`** は [HTML](/ja/docs/Web/HTML) の要素で、頭字語または略語の単語を構成する文字の並びを明示することができます。
 
