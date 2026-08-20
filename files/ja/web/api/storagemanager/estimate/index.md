@@ -53,7 +53,7 @@ estimate()
 
 ### HTML の内容
 
-```html
+```html-nolint
 現在、使用可能なストレージの容量 (<span id="quota"></span>) の約  <span id="percent"></span>% を使用しています。
 ```
 
