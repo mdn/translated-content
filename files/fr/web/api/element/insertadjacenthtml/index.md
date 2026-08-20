@@ -124,8 +124,8 @@ Les types de confiance ne sont pas pris en charge par tous les navigateurs, nous
 Celle-ci sert de remplacement transparent à l'API JavaScript des types de confiance&nbsp;:
 
 ```js
-if (typeof typesDeConfiance === "undefined")
-  typesDeConfiance = { createPolicy: (n, regles) => regles };
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, regles) => regles };
 ```
 
 Ensuite, nous définissons une politique nommée `contenu-de-la-politique` pour créer des objets {{DOMxRef("TrustedHTML")}} à partir de l'entrée (nous devons également appliquer la `contenu-de-la-politique` en utilisant CSP).

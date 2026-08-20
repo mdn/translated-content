@@ -3,7 +3,7 @@ title: "Element : évènement mouseleave"
 short-title: mouseleave
 slug: Web/API/Element/mouseleave_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 {{APIRef("UI Events")}}
@@ -31,6 +31,20 @@ onmouseleave = (event) => { }
 Un objet {{DOMxRef("MouseEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("MouseEvent")}}
+
+## Description
+
+### Comportement des évènements `mouseleave`
+
+![diagramme du comportement de mouseleave](mouseleave.png)
+
+Un évènement `mouseleave` est envoyé à chaque élément de la hiérarchie lorsque le pointeur les quitte. Ici, quatre évènements sont envoyés aux quatre éléments de la hiérarchie lorsque le pointeur se déplace du texte vers une zone située à l'extérieur du `<div>` le plus extérieur représenté ici.
+
+### Comportement des évènements `mouseout`
+
+![diagramme du comportement de mouseout](mouseout.png)
+
+Un seul évènement `mouseout` est envoyé à l'élément le plus profond de l'arbre DOM, puis sa propagation remonte la hiérarchie jusqu'à ce qu'elle soit annulée par un gestionnaire ou atteigne la racine.
 
 ## Exemples
 

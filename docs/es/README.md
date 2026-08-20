@@ -12,6 +12,7 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
   - [Opción A: Desde GitHub (sin instalar nada)](#opción-a-desde-github-sin-instalar-nada)
   - [Opción B: Desde tu computadora (recomendada para cambios grandes)](#opción-b-desde-tu-computadora-recomendada-para-cambios-grandes)
 - [Traducir un documento](#traducir-un-documento)
+- [Imágenes y otros archivos](#imágenes-y-otros-archivos)
 - [Mantener el `l10n.sourceCommit` al día](#mantener-el-l10nsourcecommit-al-día)
 - [Convención de traducciones](#convención-de-traducciones)
   - [Estilo de escritura](#estilo-de-escritura)
@@ -163,6 +164,63 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
    Abre la página en `http://localhost:5042/es/docs/...`, inspecciona el encabezado con las herramientas de desarrollo del navegador y copia el `id` real generado por el _build_. Ese es el único valor confiable; no lo derives manualmente del texto del encabezado.
 
 5. Revisa el _front-matter_ YAML (`title`, `slug`, `l10n.sourceCommit`) como se describe en la siguiente sección.
+
+---
+
+## Imágenes y otros archivos
+
+**Regla corta: no copies a `files/es/` las imágenes que ya existen en `mdn/content`.**
+
+Cuando una página en español referencia una imagen que sólo existe en la carpeta en inglés, el _build_ resuelve automáticamente el `src` hacia la ruta de `en-US`. Basta con conservar en el Markdown la misma referencia relativa que usa el original:
+
+```md
+![Descripción de la imagen traducida al español](default-vite.png)
+```
+
+Y el HTML publicado en la página en español queda así:
+
+```html
+<img
+  src="/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started/default-vite.png"
+  alt="Descripción de la imagen traducida al español" />
+```
+
+Es decir: **traduce el texto del `alt`, pero no subas el archivo binario.**
+
+### ¿Por qué no duplicarlas?
+
+- **Tamaño del repositorio.** Git no puede calcular diferencias (_diff_) sobre un `.png` o un `.jpg`: cada commit que toque el archivo suma su peso completo al historial, para siempre.
+- **Desincronización silenciosa.** Si la imagen en inglés se actualiza o se renombra, la copia en español queda obsoleta sin que nada falle en CI. Es un problema real: la versión anterior de [Primeros pasos en React][react-getting-started] seguía mostrando una captura de `create-react-app` mucho después de que el original en inglés cambiara a Vite.
+- **No aporta nada.** Una copia idéntica byte por byte se renderiza exactamente igual que la referencia al original.
+
+De hecho, en todo `files/es/` hay apenas un puñado de imágenes, y casi todas son capturas propias que no existen en inglés.
+
+### ¿Cuándo sí se agrega una imagen a `files/es/`?
+
+Sólo cuando el **contenido de la imagen** es específico del idioma, por ejemplo:
+
+- Una captura de pantalla de una interfaz en español (el navegador, un formulario, un panel de herramientas de desarrollo).
+- Un diagrama cuyas etiquetas están en inglés en el original y aportan al lector verlas en español.
+
+En ese caso, colócala en la misma carpeta del documento (`files/es/<ruta>/mi-imagen.png`), usa el mismo nombre de archivo que el original para que sea evidente qué está reemplazando, y comprímela antes de subirla:
+
+```bash
+# Desde tu clon de mdn/content
+npm run filecheck ../translated-content/files/es/<ruta>/mi-imagen.png --save-compression
+```
+
+### Cómo verificar cómo quedó resuelta una imagen
+
+Cualquier página de MDN expone su HTML ya renderizado en `index.json`, lo que permite comprobar el `src` final sin levantar el sitio:
+
+```bash
+curl -sL "https://developer.mozilla.org/es/docs/<Slug>/index.json" | grep -oE '<img[^>]{0,140}'
+```
+
+Si el resultado apunta a `/en-US/...`, el respaldo funcionó correctamente y no hace falta hacer nada más.
+
+> [!NOTE]
+> Antes de agregar una imagen nueva, revisa el repositorio [mdn/shared-assets](https://github.com/mdn/shared-assets): funciona como biblioteca de recursos compartidos y quizá ya exista algo que puedas reutilizar. Los detalles generales están en [Cómo agregar imágenes y medios][guia-imagenes].
 
 ---
 
@@ -349,3 +407,5 @@ Al ejecutar `npm start` en tu clon de `mdn/content` puedes previsualizar localme
 Más información en [la discusión general de la comunidad de español](https://github.com/mdn/translated-content/discussions/4029).
 
 [guia-contribucion]: https://developer.mozilla.org/es/docs/MDN/Contribute
+[guia-imagenes]: https://developer.mozilla.org/es/docs/MDN/Writing_guidelines/Howto/Images_media
+[react-getting-started]: https://developer.mozilla.org/es/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started

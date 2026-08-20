@@ -3,7 +3,7 @@ title: Fonctions de valeur CSS
 short-title: Fonctions
 slug: Web/CSS/Reference/Values/Functions
 l10n:
-  sourceCommit: d1745aaf15baa2b3d48f67a51eba881a9f4f2c33
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 Les **fonctions de valeur CSS** (<i lang="en">CSS value functions</i> en anglais) sont des instructions qui invoquent un traitement de données spécial ou des calculs pour retourner une [valeur](/fr/docs/Web/CSS/Guides/Values_and_units) [CSS](/fr/docs/Web/CSS) pour une propriété CSS. Les fonctions de valeur CSS représentent des [types de données](/fr/docs/Web/CSS/Reference/Values/Data_types) plus complexes et peuvent prendre certains arguments d'entrée pour calculer la valeur de retour.

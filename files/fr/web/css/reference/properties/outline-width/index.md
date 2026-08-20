@@ -67,16 +67,10 @@ outline-width: unset;
 
 ### Valeurs
 
-Cette propriété est définie par l'une des valeurs suivantes&nbsp;:
+Cette propriété est définie par une seule valeur `<line-width>`.
 
-- {{CSSxRef("&lt;length&gt;")}}
-  - : La largeur du contour définie en tant que `<length>`.
-- `thin`
-  - : Dépend de l'agent utilisateur. Généralement équivalent à `1px` dans les navigateurs de bureau (y compris Firefox).
-- `medium`
-  - : Dépend de l'agent utilisateur. Généralement équivalent à `3px` dans les navigateurs de bureau (y compris Firefox).
-- `thick`
-  - : Dépend de l'agent utilisateur. Généralement équivalent à `5px` dans les navigateurs de bureau (y compris Firefox).
+- {{CSSxRef("&lt;line-width&gt;")}}
+  - : Définit la largeur du contour, soit comme une longueur ({{CSSxRef("&lt;length&gt;")}}) explicite non négative, soit avec les mots-clés&nbsp;: `thin`, `medium` ou `thick`. La valeur par défaut est `medium`.
 
 ## Définition formelle
 

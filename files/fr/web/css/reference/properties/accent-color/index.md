@@ -3,7 +3,7 @@ title: Propriété CSS `accent-color`
 short-title: accent-color
 slug: Web/CSS/Reference/Properties/accent-color
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 4d49c28381a2b736e205215b75388945e44a028c
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`accent-color`** définit {{Glossary("accent", "la couleur d'accentuation")}} pour les contrôles d'interface utilisateur générés par certains éléments.
@@ -91,6 +91,9 @@ Les navigateurs qui prennent en charge `accent-color` l'appliquent actuellement 
 - {{HTMLElement("progress")}}
 
 Chaque agent utilisateur possède une couleur d'accentuation, avec des variations pour garantir la lisibilité et le contraste. Cette couleur d'accentuation n'est pas utilisée par tous les contrôles d'interface utilisateur ni dans tous les états de ces contrôles. La propriété `accent-color` n'est appliquée qu'aux contrôles d'interface utilisateur qui utilisent une couleur d'accentuation dans les états où c'est pertinent.
+
+> [!NOTE]
+> Pour réduire le risque {{Glossary("fingerprinting", "d'empreinte digitale")}}, certains navigateurs retournent une valeur fixe pour `AccentColor` et `AccentColorText` sauf si elles sont utilisées dans certaines circonstances restreintes. Voir la [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.
 
 ## Définition formelle
 
