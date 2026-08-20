@@ -21,7 +21,7 @@ l10n:
 
 该属性是使用 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性设置无障碍描述的灵活替代方案。与 `aria-describedby` 不同，赋给此属性的元素不必具有 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性。
 
-定义了元素的 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性时，该属性会反映它，但仅限列出的引用 `id` 值与有效作用域内元素匹配的情况。设置此属性会清除对应的属性。有关反射元素引用和作用域的更多信息，请参阅 _属性反射_ 指南中的[反射元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射元素引用)。
+定义了元素的 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性时，该属性会反映它，但仅限列出的引用 `id` 值与有效作用域内元素匹配的情况。设置此属性会清除对应的属性。有关反射元素引用和作用域的更多信息，请参阅*属性反射*指南中的[反射元素引用](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射元素引用)。
 
 ## 示例
 
@@ -34,10 +34,9 @@ l10n:
 HTML 定义了两个 {{htmlelement("span")}} 元素，并在 {{htmlelement("button")}} 的 `aria-describedby` 属性中引用它们的 ID。
 
 ```html
-<button aria-describedby="trash-desc1 trash-desc2">移至回收站</button>
-…
-<span id="trash-desc1">回收站内容将在 30 天后永久删除。</span>
-<span id="trash-desc2">否则后果自负！</span>
+<button aria-describedby="trash-desc1 trash-desc2">移至回收站</button>……
+<span id="trash-desc1">回收站内容将在 30 天后永久删除。</span
+><span id="trash-desc2">否则后果自负！</span>
 ```
 
 ```html hidden
@@ -78,11 +77,14 @@ function log(text) {
 ```js
 const buttonElement = document.querySelector("button");
 log(`aria-describedby: ${buttonElement.getAttribute("aria-describedby")}`);
-// 检测 ariaDescribedByElements 功能
+// ariaDescribedByElements 特性检测
 if ("ariaDescribedByElements" in Element.prototype) {
+  // 获取 ariaDescribedByElements
   const buttonElements = buttonElement.ariaDescribedByElements;
   log(`ariaDescribedByElements: ${buttonElements}`);
-  const text = buttonElements.map((e) => e.textContent.trim()).join(" ");
+
+  // 从元素中获取无障碍描述
+  const text = buttonElements.map((e) => e.textContent.trim()).join("");
   log(`无障碍描述：${text.trim()}`);
 } else {
   log("浏览器不支持 element.ariaDescribedByElements");
