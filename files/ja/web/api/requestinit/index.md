@@ -2,7 +2,7 @@
 title: RequestInit
 slug: Web/API/RequestInit
 l10n:
-  sourceCommit: 0ffc63a13598470ddb4a4d3281800eeb2bf6ae2b
+  sourceCommit: c807b72777506cd8aaa8d888b7a187dbc6079ca1
 ---
 
 {{APIRef("Fetch API")}}
@@ -15,7 +15,7 @@ l10n:
 
 ## インスタンスプロパティ
 
-- `attributionReporting` {{optional_inline}} {{experimental_inline}}
+- `attributionReporting` {{optional_inline}} {{deprecated_inline}}
   - : このリクエストのレスポンスに JavaScript ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録できるようにしたいことを示します。`attributionReporting` は以下のプロパティを格納するオブジェクトです。
     - `eventSourceEligible`
       - : 論理値。`true` に設定すると、このリクエストのレスポンスは帰属ソースの登録の対象となります。`false` に設定すると、対象になりません。
@@ -38,10 +38,8 @@ l10n:
 
     詳しくは[本体の設定](/ja/docs/Web/API/Fetch_API/Using_Fetch#本体の設定)を参照してください。
 
-- `browsingTopics` {{optional_inline}} {{experimental_inline}}
+- `browsingTopics` {{optional_inline}} {{deprecated_inline}}
   - : 論理値で、現在のユーザーのために選択されたトピックを、 リクエストに関連付けられた {{httpheader("Sec-Browsing-Topics")}} ヘッダーで送ることを指定します。
-
-    詳しくは [Using the Topics API](/ja/docs/Web/API/Topics_API/Using) を参照してください。
 
 - `cache` {{optional_inline}}
   - : リクエストに使用したい[キャッシュモード](/ja/docs/Web/API/Request/cache)を指定します。以下の値のいずれかを指定します。
@@ -85,12 +83,17 @@ l10n:
 
     詳しくは[資格情報を含める](/ja/docs/Web/API/Fetch_API/Using_Fetch#資格情報を含める)を参照してください。
 
-    既定値は `same-origin` です。
+    デフォルト値は `same-origin` です。
+
+- `duplex` {{optional_inline}} {{experimental_inline}}
+  - : リクエストの二重通信の挙動を制御します。この設定が存在する場合、値は `half` でなければなりません。これは、ブラウザーがレスポンスを処理する前に、リクエスト全体を送信しなければならないことを意味します。
+
+    このオプションは、[`body`](#body) が {{domxref("ReadableStream")}} であるときに必要です。
 
 - `headers` {{optional_inline}}
   - : リクエストに追加したいヘッダーで、 {{domxref("Headers")}} オブジェクト、またはキーがヘッダー名で値がヘッダー値であるオブジェクトリテラルが入ります。
 
-    多くのヘッダーはブラウザーによって自動的に設定され、スクリプトによって設定することはできません。これらは{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}と呼ばれています。
+    多くのヘッダーはブラウザーによって自動的に設定され、スクリプトによって設定することはできません。これらは{{glossary("Forbidden request header", "禁止リクエストヘッダー")}}と呼ばれています。
 
     `mode` オプションが `no-cors` に設定されている場合、{{glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}のみを設定することができます。
 
@@ -99,13 +102,13 @@ l10n:
 - `integrity` {{optional_inline}}
   - : このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)の値を保持します。
 
-    これは {{htmlelement("script")}} 要素に [`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性を設定したときと同じように、リソースをフェッチしたときに調べられます。ブラウザーはフェッチされたリソースの {{glossary("Cryptographic_hash_function", "hash")}} を指定されたアルゴリズムで計算し、その結果が指定された値と一致しない場合、ネットワークエラーでフェッチリクエストを拒否します。
+    これは {{htmlelement("script")}} 要素に [`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性を設定したときと同じように、リソースをフェッチしたときに調べられます。ブラウザーはフェッチされたリソースの{{glossary("Cryptographic_hash_function", "ハッシュ")}}を指定されたアルゴリズムで計算し、その結果が指定された値と一致しない場合、ネットワークエラーでフェッチリクエストを拒否します。
 
     このオプションは `<hash-algo>-<hash-source>` という書式です。
     - `<hash-algo>` は `sha256`、`sha384`、`sha512` のいずれかです。
     - `<hash-source>` は指定したハッシュアルゴリズムでリソースをハッシュした結果の {{glossary("base64", "Base64 エンコーディング")}}です。
 
-    既定値は空文字列です。
+    デフォルト値は空文字列です。
 
 - `keepalive` {{optional_inline}}
   - : 論理値。
@@ -118,12 +121,12 @@ l10n:
 
     `keepalive` リクエストの本体サイズは 64 キロバイトに制限されています。
 
-    既定値は `false` です。
+    デフォルト値は `false` です。
 
 - `method` {{optional_inline}}
   - : [リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)です。
 
-    既定値は {{httpmethod("GET")}} です。
+    デフォルト値は {{httpmethod("GET")}} です。
 
 - `mode` {{optional_inline}}
   - : オリジン間リクエストの動作を設定します。以下の値のいずれかです。
@@ -146,7 +149,7 @@ l10n:
 
     詳しくは、[オリジン間リクエストを行う](/ja/docs/Web/API/Fetch_API/Using_Fetch#オリジン間リクエストを行う)を参照してください。
 
-    既定値は `cors` です。
+    デフォルト値は `cors` です。
 
 - `priority` {{optional_inline}}
   - : 同じ種類の他のリクエストに対する、この読み込みリクエストの優先度を指定します。以下の文字列のいずれかでなければなりません。
@@ -158,7 +161,28 @@ l10n:
       - : フェッチの優先度をユーザーが設定しません。
         これは値を設定しない場合や無効な値が設定された場合に使用されます。
 
-    既定値は `auto` です。
+    デフォルト値は `auto` です。
+
+- `privateToken` {{optional_inline}}
+  - : [プライベートステートトークン](/ja/docs/Web/API/Private_State_Token_API/Using)操作を開始するためのオプションを含むオブジェクト。可能なプロパティには、次のようなものがあります。
+    - `issuers`
+      - : レコードを転送したい発行者の URL を含む文字列の配列。この設定は、`operation` が `send-redemption-record` に設定されていない限り無視されます。設定されてる場合は、`issuers` 配列を記載しなければなりません。
+    - `operation`
+      - : 実行したいトークン操作の種類を表す文字列。`privateToken` オプションを指定する場合、このプロパティは必須です。取り得る値は以下の通りです。
+        - `token-request`
+          - : [トークンリクエスト](/ja/docs/Web/API/Private_State_Token_API/Using#issuing_a_token_via_your_server)操作を開始します。
+        - `token-redemption`
+          - : [トークンの引き換え](/ja/docs/Web/API/Private_State_Token_API/Using#redeeming_a_token_via_your_server)操作を開始します。
+        - `send-redemption-record`
+          - : [償還レコードの送信](/ja/docs/Web/API/Private_State_Token_API/Using#redemption_record_usage_2)操作を開始します。
+    - `refreshPolicy`
+      - : 現在のユーザーおよびサイトに対して、有効期限が切れていない償還レコードが前回設定されていた場合の期待される動作を指定する列挙値です。この設定は、`operation` が `token-redemption` に設定されていない限り無視されます。取り得る値は次のとおりです。
+        - `none`
+          - : 以前に設定された償還記録を使用すべきであり、新しい記録を発行すべきではありません。これがデフォルト値です。
+        - `refresh`
+          - : 常に、新しい償還レコードが発行されます。
+    - `version`
+      - : トークンの生成時に使用する暗号プロトコルのバージョンを示す数値です。現在、これは常に `1` に設定されており、これが仕様で対応している唯一のバージョンです。`privateToken` オプションを指定する場合、このプロパティは必須となります。
 
 - `redirect` {{optional_inline}}
   - : サーバーが[リダイレクトステータス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)でレスポンスした場合のブラウザー動作を決定します。以下の値のいずれかです。
@@ -169,7 +193,7 @@ l10n:
     - `manual`
       - : ほとんどすべてのフィールドがフィルターされたレスポンスを返し、サービスワーカーがそのレスポンスを格納して、後で再生できるようにします。
 
-    既定値は `follow` です。
+    デフォルト値は `follow` です。
 
 - `referrer` {{optional_inline}}
   - : リクエストの {{httpheader("Referer")}} ヘッダーに使用する値を指定する文字列。以下のいずれかを指定します。
@@ -178,14 +202,25 @@ l10n:
     - 空文字列
       - : `Referer` ヘッダーを除外します。
     - `about:client`
-      - : ヘッダー `Referer` にはリクエストのコンテキスト（例えばリクエストを行ったページの URL）の既定値を設定します。
+      - : ヘッダー `Referer` にはリクエストのコンテキスト（例えばリクエストを行ったページの URL）のデフォルト値を設定します。
 
-    既定値は `about:client` です。
+    デフォルト値は `about:client` です。
 
 - `referrerPolicy` {{optional_inline}}
   - : 文字列で、{{httpheader("Referer")}} ヘッダーのポリシーを設定します。このオプションの構文と意味づけは {{httpheader("Referrer-Policy")}} ヘッダーの場合とまったく同じです。
 - `signal` {{optional_inline}}
   - : {{domxref("AbortSignal")}} です。このオプションを設定すると、対応する `AbortController` で {{domxref("AbortController.abort()", "abort()")}} を呼び出すことでリクエストを中止することができます。
+- `targetAddressSpace` {{optional_inline}}
+  - : リクエストがループバック、ローカル、パブリックのいずれであるかを指定する列挙型値。これにより、ユーザーエージェントが混在コンテンツをどのように処理するかが制御されます。
+    有効な値は次の通りです。
+    - `local`
+      - : このリクエストはローカルアドレス宛てのものであり、ローカルネットワーク上でのみアクセス可能です。その対象はネットワークによって異なります。例えば、`192.168.0.1` などです。
+    - `loopback`
+      - : このリクエストはループバックアドレス宛てであり、ローカル端末上でのみアクセス可能です。その対象は端末ごとに異なります。例えば、`127.0.0.1` などで、一般に `localhost` と呼ばれています。
+    - `public`
+      - : このリクエストは、インターネット上のどこからでも利用できるアドレス宛てのものであり、その対象は世界中のすべての端末で同じです。
+
+    詳細については、[ローカルネットワークへのアクセス](/ja/docs/Web/Security/Defenses/Local_network_access)をご覧ください。
 
 ## 例
 
