@@ -1,81 +1,83 @@
 ---
-title: Math.min()
+title: "Math : méthode statique min()"
+short-title: min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode statique **`Math.min()`** retourne le plus petit des nombres passés en paramètres, ou {{JSxRef("Infinity")}} s'il n'y a pas de paramètres.
 
-La fonction **`Math.min()`** renvoie le plus petit nombre d'une série de 0 ou plusieurs nombres ou bien {{jsxref("NaN")}} si au moins un des arguments fourni n'est pas un nombre ou ne peut pas être converti en nombre.
-
-{{InteractiveExample("JavaScript Demo: Math.min()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.min()")}}
 
 ```js interactive-example
 console.log(Math.min(2, 3, 1));
-// Expected output: 1
+// Sortie attendue : 1
 
 console.log(Math.min(-2, -3, -1));
-// Expected output: -3
+// Sortie attendue : -3
 
-const array1 = [2, 3, 1];
+const array = [2, 3, 1];
 
-console.log(Math.min(...array1));
-// Expected output: 1
+console.log(Math.min(...array));
+// Sortie attendue : 1
 ```
 
 ## Syntaxe
 
-```js
-Math.min([valeur1[,valeur2, ...]])
+```js-nolint
+Math.min()
+Math.min(value1)
+Math.min(value1, value2)
+Math.min(value1, value2, /* …, */ valueN)
 ```
 
 ### Paramètres
 
-- `valeur1, valeur2, ...`
-  - : Des nombres.
+- `value1`, …, `valueN`
+  - : Zéro ou plusieurs nombres parmi lesquels la plus petite valeur est sélectionnée et retournée.
 
 ### Valeur de retour
 
-Le plus petit des nombres passés en arguments. S'il existe un argument qui ne peut pas être converti en nombre, c'est {{jsxref("NaN")}} qui sera renvoyé. Le résultat sera {{jsxref("Infinity")}} si aucun paramètre n'est fourni.
+Le plus petit des nombres passés en arguments. Retourne {{JSxRef("NaN")}} si l'un des paramètres est ou est converti en `NaN`. Retourne {{JSxRef("Infinity")}} si aucun paramètre n'est fourni.
 
 ## Description
 
-`min()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.min()` et ne doit pas être utilisée comme la méthode d'un objet qui aurait été créé (`Math` n'est pas un constructeur).
+Puisque `min()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.min()`, elle ne doit pas être appelée comme la méthode d'un autre objet qui a été créé (`Math` n'est pas un constructeur).
 
-Si aucun argument n'est fourni, le résultat renvoyé par la fonction sera {{jsxref("Infinity")}}.
-
-Si au moins un des arguments ne peut pas être converti en un nombre, le résultat sera {{jsxref("NaN")}}.
+[`Math.min.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length) vaut 2, un signal faible indiquant qu'elle est conçue pour au moins deux paramètres.
 
 ## Exemples
 
 ### Utiliser `Math.min()`
 
-Dans cet exemple, on trouve le minimum de x et y et on affecte cette valeur à z :
+Dans cet exemple, on trouve le minimum de `x` et `y` et on affecte cette valeur à `z`&nbsp;:
 
 ```js
-var x = 10,
-  y = -20;
-var z = Math.min(x, y);
+const x = 10;
+const y = -20;
+const z = Math.min(x, y); // -20
 ```
 
-### Ramener une valeur dans un intervalle (_clipping_) avec `Math.min()`
+### Ramener une valeur dans un intervalle avec `Math.min()`
 
-`Math.min()` est souvent utilisée afin de ramener une certaine valeur dans un intervalle donné. Par exemple :
+`Math.min()` est souvent utilisée afin de ramener une certaine valeur dans un intervalle donné (<i lang="en">clipping</i> en anglais). Par exemple&nbsp;:
 
 ```js
-var x = f(toto);
+let x = f(toto);
 
 if (x > limite) {
   x = limite;
 }
 ```
 
-peut s'écrire
+peut s'écrire comme ceci
 
 ```js
-var x = Math.min(f(toto), limite);
+const x = Math.min(f(toto), limite);
 ```
 
-{{jsxref("Math.max()")}} peut être utilisée de façon semblable pour ramener une valeur vers un minimum d'un intervalle donné.
+{{JSxRef("Math.max()")}} peut être utilisée de façon semblable pour ramener une valeur vers un minimum d'un intervalle donné.
 
 ## Spécifications
 
@@ -87,4 +89,4 @@ var x = Math.min(f(toto), limite);
 
 ## Voir aussi
 
-- {{jsxref("Math.max()")}}
+- La méthode statique {{JSxRef("Math.max()")}}
