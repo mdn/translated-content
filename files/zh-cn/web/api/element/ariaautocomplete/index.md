@@ -19,7 +19,7 @@ l10n:
 - `"list"`
   - : 当用户输入时，可能会显示一个元素，其中包含一组可完成当前输入的候选值。
 - `"both"`
-  - : 同时提供上述两种模型。当用户输入时，可能会显示包含一组候选值的元素；如果显示，集合中的一个值会被自动选中，且完成该选中值所需的文本会显示在输入框的光标之后。
+  - : 当用户输入时，可能会显示包含一组可能用于补全当前输入内容的值的元素；如果显示了该元素，则该组的一个值会被自动选中，且用于补全该自动选中值的文本会显示在输入框的光标之后。
 - `"none"`
   - : 当用户输入时，不会显示任何试图预测用户打算如何完成输入的自动建议。
 
@@ -29,7 +29,7 @@ l10n:
 
 ```html
 <div class="animals-combobox">
-  <label for="animal">Animal</label>
+  <label for="animal">动物</label>
   <input
     id="animal"
     type="text"
@@ -38,9 +38,9 @@ l10n:
     aria-controls="animals-listbox"
     aria-expanded="false"
     aria-haspopup="listbox" />
-  <ul id="animals-listbox" role="listbox" aria-label="Animals">
-    <li id="animal-cat" role="option">Cat</li>
-    <li id="animal-dog" role="option">Dog</li>
+  <ul id="animals-listbox" role="listbox" aria-label="动物">
+    <li id="animal-cat" role="option">猫</li>
+    <li id="animal-dog" role="option">狗</li>
   </ul>
 </div>
 ```
