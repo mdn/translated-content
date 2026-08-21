@@ -1,13 +1,17 @@
 ---
-title: Math.random()
+title: "Math : méthode statique random()"
+short-title: random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Math.random()`** retourne un nombre flottant pseudo-aléatoire compris entre 0 (inclus) et 1 (exclus), selon une distribution approximativement uniforme sur cet intervalle — ce nombre peut ensuite être multiplié afin de couvrir un autre intervalle. L'implémentation choisit la graine initiale de l'algorithme de génération de nombres aléatoires&nbsp;; elle ne peut pas être choisie ou réinitialisée par l'utilisateur·ice.
 
-La fonction **`Math.random()`** renvoie un nombre flottant pseudo-aléatoire compris dans l'intervalle `[0, 1[` (ce qui signifie que 0 est compris dans l'intervalle mais que 1 en est exclu) selon une distribution approximativement uniforme sur cet intervalle. Ce nombre peut ensuite être multiplié afin de couvrir un autre intervalle. La graine (_seed_) du générateur est choisie par l'algorithme et ne peut pas être choisie ou réinitialisée par l'utilisateur.
+> [!NOTE]
+> `Math.random()` _ne_ fournit _pas_ de nombres aléatoires cryptographiques sécurisés. Ne les utilisez pas pour quoi que ce soit lié à la sécurité. Utilisez plutôt l'API Web Crypto, et plus précisément la méthode {{DOMxRef("Crypto.getRandomValues()")}}.
 
-{{InteractiveExample("JavaScript Demo: Math.random()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.random()")}}
 
 ```js interactive-example
 function getRandomInt(max) {
@@ -15,79 +19,79 @@ function getRandomInt(max) {
 }
 
 console.log(getRandomInt(3));
-// Expected output: 0, 1 or 2
+// Sortie attendue : 0, 1 ou 2
 
 console.log(getRandomInt(1));
-// Expected output: 0
+// Sortie attendue : 0
 
 console.log(Math.random());
-// Expected output: a number from 0 to <1
+// Sortie attendue : un nombre de 0 à <1
 ```
-
-> [!NOTE]
-> `Math.random()` **ne fournit pas** de nombres aléatoires propres à une cryptographie sécurisée. Les résultats de cette méthode ne doivent pas être utilisées dans des applications liées à la sécurité. À la place, on préfèrera utiliser l'API Web Crypto et plus précisément la méthode {{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}}.
 
 ## Syntaxe
 
-```js
-Math.random();
+```js-nolint
+Math.random()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Un nombre flottant pseudo-aléatoire, généré entre 0 (inclus) et 1 (exclu)
+Un nombre flottant pseudo-aléatoire, généré entre 0 (inclus) et 1 (exclus).
 
 ## Exemples
 
-En JavaScript, les nombres sont représentés comme des nombres flottants selon la norme IEEE 754 et les arrondis sont pris aux plus près. Aussi, les intervalles revendiqués par les fonctions ci-après (en dehors de `Math.random()`) ne sont pas théoriquement et précisément exacts. Si on utilise des bornes supérieures très grande (2^53 ou plus), il est alors possible, dans de très rares cas, d'obtenir la borne supérieure comme résultat alors que celle-ci devrait être exclue de l'intervalle.
+Notez que comme les nombres en JavaScript sont flottants selon la norme IEEE 754 avec un comportement d'arrondi au plus proche pair, les intervalles revendiqués pour les fonctions ci-dessous (à l'exception de celle pour `Math.random()` elle-même) ne sont pas exacts. En général, la borne supérieure revendiquée n'est pas atteignable, mais si `Math.random()` retourne un nombre très proche de 1, la petite différence peut ne pas être représentable à la valeur maximale demandée, ce qui entraîne l'atteinte de la borne supérieure.
 
-### Obtenir un nombre aléatoire entre 0 et 1
+### Obtenir un nombre aléatoire entre 0 (inclus) et 1 (exclus)
 
 ```js
-// On renvoie un nombre aléatoire entre 0 (inclus) et 1 (exclus)
 function getRandom() {
   return Math.random();
 }
 ```
 
-### Obtenir un nombre aléatoire dans un intervalle
+### Obtenir un nombre aléatoire entre deux valeurs
+
+Cet exemple retourne un nombre aléatoire compris entre les valeurs spécifiées. La valeur retournée n'est pas inférieure à `min` (et peut éventuellement être égale) et est inférieure à `max` (et non égale).
 
 ```js
-// On renvoie un nombre aléatoire entre une valeur min (incluse)
-// et une valeur max (exclue)
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 ```
 
-### Obtenir un entier aléatoire dans un intervalle ouvert à droite
+### Obtenir un entier aléatoire entre deux valeurs
+
+Cet exemple retourne un _entier_ aléatoire entre deux valeurs définies. La valeur n'est pas inférieure à `min` (ou au prochain entier supérieur à `min` si `min` n'est pas un entier), et est inférieure à (mais pas égale à) `max`.
 
 ```js
-// On renvoie un entier aléatoire entre une valeur min (incluse)
-// et une valeur max (exclue).
-// Attention : si on utilisait Math.round(), on aurait une distribution
-// non uniforme !
 function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
+  const plafondMinimum = Math.ceil(min);
+  const plancherMaximum = Math.floor(max);
+  return Math.floor(
+    Math.random() * (plancherMaximum - plafondMinimum) + plafondMinimum,
+  ); // Le maximum est exclusif et le minimum est inclusif
 }
 ```
 
-> [!WARNING]
-> Utiliser `Math.round()` entraînerait une distribution non-uniforme et réduirait le caractère aléatoire de la méthode.
+> [!NOTE]
+> Il peut être tentant d'utiliser {{JSxRef("Math.round()")}} pour y parvenir, mais cela fait que vos nombres aléatoires suivent une distribution non uniforme, ce qui peut ne pas être acceptable pour vos besoins.
 
-### Obtenir un entier aléatoire dans un intervalle fermé
+### Obtenir un entier aléatoire entre deux valeurs, inclusivement
+
+Alors que la fonction `getRandomInt()` ci-dessus est inclusive au minimum, elle est exclusive au maximum. Que faire si vous avez besoin que les résultats soient inclusifs à la fois au minimum et au maximum&nbsp;? La fonction `getRandomIntInclusive()` ci-dessous y parvient.
 
 ```js
-// On renvoie un entier aléatoire entre une valeur min (incluse)
-// et une valeur max (incluse).
-// Attention : si on utilisait Math.round(), on aurait une distribution
-// non uniforme !
 function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  const plafondMinimum = Math.ceil(min);
+  const plancherMaximum = Math.floor(max);
+  return Math.floor(
+    Math.random() * (plancherMaximum - plafondMinimum + 1) + plafondMinimum,
+  ); // Le maximum est inclusif et le minimum est inclusif
 }
 ```
 
@@ -98,3 +102,7 @@ function getRandomIntInclusive(min, max) {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La méthode API {{DOMxRef("Crypto.getRandomValues()")}}
