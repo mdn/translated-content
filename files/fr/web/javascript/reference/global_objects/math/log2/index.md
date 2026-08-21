@@ -1,62 +1,69 @@
 ---
-title: Math.log2()
+title: "Math : méthode statique log2()"
+short-title: log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Math.log2()`** retourne le logarithme en base 2 d'un nombre. Autrement dit
 
-La fonction **`Math.log2()`** renvoie le logarithme en base 2 d'un nombre :
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐𝟸</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>l'unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;tel que&nbsp;</mtext><msup><mn>2</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0,\;\mathtt{\operatorname{Math.log2}(x)} = \log_2(x) = \text{l'unique } y \text{ tel que } 2^y = x</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-<math><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log2</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>l'unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><msup><mn>2</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log2}(x)} = \log_2(x) = \text{the unique} \; y \; \text{such that} \; 2^y = x</annotation></semantics></math>
-
-{{InteractiveExample("JavaScript Demo: Math.log2()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.log2()")}}
 
 ```js interactive-example
 console.log(Math.log2(3));
-// Expected output: 1.584962500721156
+// Sortie attendue : 1.584962500721156
 
 console.log(Math.log2(2));
-// Expected output: 1
+// Sortie attendue : 1
 
 console.log(Math.log2(1));
-// Expected output: 0
+// Sortie attendue : 0
 
 console.log(Math.log2(0));
-// Expected output: -Infinity
+// Sortie attendue : -Infinity
 ```
 
 ## Syntaxe
 
-```js
-Math.log2(x);
+```js-nolint
+Math.log2(x)
 ```
 
 ### Paramètres
 
 - `x`
-  - : Un nombre.
+  - : Un nombre supérieur ou égal à 0.
 
 ### Valeur de retour
 
-Le logarithme en base 2 du nombre passé en argument. Si ce nombre est négatif, c'est {{jsxref("NaN")}} qui sera renvoyé.
+Le logarithme en base 2 de `x`. Si `x < 0`, retourne {{JSxRef("NaN")}}.
 
 ## Description
 
-Si `x` est strictement inférieur à 0, la valeur renvoyée sera {{jsxref("NaN")}}.
+Puisque `log2()` est une méthode statique de `Math`, vous l'utilisez toujours sous la forme `Math.log2()`, plutôt que comme une méthode d'un objet `Math` que vous avez créé (`Math` n'est pas un constructeur).
 
-`log2()` étant une méthode statique de `Math`, il faut utiliser `Math.log2()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Si on souhaite utiliser des constantes, on pourra employer {{jsxref("Math.LOG2E")}} ou {{jsxref("Math.LN2")}}.
+Cette fonction est l'équivalent de `Math.log(x) / Math.log(2)`. Pour `log2(e)`, utilisez la constante {{JSxRef("Math.LOG2E")}}, qui est 1 / {{JSxRef("Math.LN2")}}.
 
 ## Exemples
 
 ### Utiliser `Math.log2()`
 
 ```js
-Math.log2(3); // 1.584962500721156
-Math.log2(2); // 1
-Math.log2(1); // 0
-Math.log2(0); // -Infinity
 Math.log2(-2); // NaN
+Math.log2(-0); // -Infinity
+Math.log2(0); // -Infinity
+Math.log2(1); // 0
+Math.log2(2); // 1
+Math.log2(3); // 1.584962500721156
 Math.log2(1024); // 10
+Math.log2(Infinity); // Infinity
 ```
 
 ## Spécifications
@@ -69,8 +76,9 @@ Math.log2(1024); // 10
 
 ## Voir aussi
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.pow()")}}
+- [La prothèse d'émulation de `Math.log2` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
+- La méthode statique {{JSxRef("Math.exp()")}}
+- La méthode statique {{JSxRef("Math.log()")}}
+- La méthode statique {{JSxRef("Math.log10()")}}
+- La méthode statique {{JSxRef("Math.log1p()")}}
+- La méthode statique {{JSxRef("Math.pow()")}}
