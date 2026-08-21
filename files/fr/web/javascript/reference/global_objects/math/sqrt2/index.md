@@ -1,15 +1,14 @@
 ---
-title: Math.SQRT2
+title: "Math : propriété statique SQRT2"
+short-title: SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La propriété statique **`Math.SQRT2`** représente la racine carrée de 2, qui vaut environ 1,414.
 
-La propriété **`Math.SQRT2`** représente la racine carrée de 2 et vaut environ 1.414 :
-
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT2</mi></mstyle><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1.414</annotation></semantics></math>
-
-{{InteractiveExample("JavaScript Demo: Math.SQRT2")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.SQRT2", "shorter")}}
 
 ```js interactive-example
 function getRoot2() {
@@ -17,18 +16,30 @@ function getRoot2() {
 }
 
 console.log(getRoot2());
-// Expected output: 1.4142135623730951
+// Sortie attendue : 1.4142135623730951
 ```
 
-{{js_property_attributes(0,0,0)}}
+## Valeur
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝚂𝚀𝚁𝚃𝟸</mi><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{Math.SQRT2} = \sqrt{2} \approx 1.414</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-`SQRT2` est une propriété statique de `Math` et doit toujours être utilisée avec la syntaxe `Math.SQRT2`, elle ne doit pas être appelée comme propriété d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`Math.SQRT2` est une constante et un équivalent de {{JSxRef("Math/sqrt", "Math.sqrt(2)")}}, qui est plus performant.
+
+Puisque `SQRT2` est une propriété statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.SQRT2`. Elle ne doit pas être obtenue à partir d'un autre objet qui a été créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
-La fonction suivante renvoie la valeur de la racine carrée de 2 :
+### Utiliser `Math.SQRT2`
+
+La fonction suivante retourne la racine carrée de 2&nbsp;:
 
 ```js
 function getRoot2() {
@@ -48,5 +59,5 @@ getRoot2(); // 1.4142135623730951
 
 ## Voir aussi
 
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- La méthode statique {{JSxRef("Math.pow()")}}
+- La méthode statique {{JSxRef("Math.sqrt()")}}
