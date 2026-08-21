@@ -3,10 +3,10 @@ title: "Document : méthode browsingTopics()"
 short-title: browsingTopics()
 slug: Web/API/Document/browsingTopics
 l10n:
-  sourceCommit: c807b72777506cd8aaa8d888b7a187dbc6079ca1
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("Topics API")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("Topics API")}}{{Non-standard_Header}}
 
 > [!WARNING]
 > Cette fonctionnalité est actuellement opposée par deux fournisseurs de navigateurs. Voir la section [Positions sur les standards](/fr/docs/Web/API/Topics_API#positions_des_standards) ci-dessous pour plus de détails sur l'opposition.

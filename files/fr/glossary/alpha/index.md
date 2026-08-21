@@ -2,10 +2,10 @@
 title: Alpha (canal alpha)
 slug: Glossary/Alpha
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
-Le **canal alpha** spécifie le degré d'opacité d'une couleur ({{CSSxRef("&lt;color&gt;")}}). Les couleurs sont représentées sous forme numérique comme un ensemble de nombres, chacun représentant la force ou le niveau d'intensité d'un composant donné de la couleur. Chacun de ces composants est appelé un **canal**. Dans un fichier d'image typique, les canaux de couleur décrivent la quantité de rouge, de vert et de bleu utilisée pour composer la couleur finale. Pour représenter une couleur à travers laquelle le fond peut être vu dans une certaine mesure, un quatrième canal est ajouté à la couleur&nbsp;: le canal alpha.
+Le **canal alpha** définit le degré d'opacité d'une couleur ({{CSSxRef("&lt;color&gt;")}}). Les couleurs sont représentées sous forme numérique comme un ensemble de nombres, chacun représentant la force ou le niveau d'intensité d'un composant donné de la couleur. Chacun de ces composants est appelé un **canal**. Dans un fichier d'image typique, les canaux de couleur décrivent la quantité de rouge, de vert et de bleu utilisée pour composer la couleur finale. Pour représenter une couleur à travers laquelle le fond peut être vu dans une certaine mesure, un quatrième canal est ajouté à la couleur&nbsp;: le canal alpha.
 
 Par exemple, la couleur `#8921F2` (également décrite comme `rgb(137 33 242)` ou `hsl(270 89% 54)`) est une jolie nuance de violet. Ci-dessous, vous voyez une petite case de cette couleur dans le coin supérieur gauche et une case de la _même_ couleur mais avec un canal alpha défini à 0,5 (50% d'opacité), `#8921F280`, où `80` est l'équivalent hexadécimal de 50%. Cette couleur est également décrite comme `rgb(137 33 242 / 50%)` ou `hsl(270 89% 54 / 50%)`. Les deux cases sont dessinées au-dessus d'un paragraphe de texte.
 
@@ -20,4 +20,4 @@ Comme vous pouvez le voir, la couleur sans canal alpha bloque complètement le t
 - [Guide des types et formats des fichiers d'images](/fr/docs/Web/Media/Guides/Formats/Image_types)
 - [Alpha blending](https://fr.wikipedia.org/wiki/Alpha_blending) sur Wikipedia
 - [Modèle de couleur RVBA](https://fr.wikipedia.org/wiki/RVBA) sur Wikipedia
-- [Chaîne (image numérique) <sup>(angl.)</sup>](<https://en.wikipedia.org/wiki/Channel_(digital_image)>) sur Wikipedia
+- [Canal (image numérique) <sup>(angl.)</sup>](<https://en.wikipedia.org/wiki/Channel_(digital_image)>) sur Wikipedia

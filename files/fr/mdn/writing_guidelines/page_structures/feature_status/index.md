@@ -2,7 +2,7 @@
 title: Statut des fonctionnalités
 slug: MDN/Writing_guidelines/Page_structures/Feature_status
 l10n:
-  sourceCommit: 2e427c5c185433c5a6612c63bf877753a5fedc99
+  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
 Le statut d'une fonctionnalité indique globalement l'état d'implémentation entre les navigateurs et de standardisation d'une fonctionnalité de la plateforme web, comme une méthode d'API Web ou une propriété CSS.
@@ -22,7 +22,7 @@ Pour plus d'informations sur ces termes, voir la page [«&nbsp;Expérimental, d�
 
 Pour savoir comment le statut d'une fonctionnalité est déterminé, voir la section [choisir les propriétés de statut <sup>(angl.)</sup>](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#choosing-status-properties) dans le dépôt `@mdn/browser-compat-data` (BCD).
 
-## Comment les statuts sont-ils ajoutés ou mis à jour ?
+## Comment les statuts sont-ils ajoutés ou mis à jour
 
 Les statuts de toutes les fonctionnalités documentées sur MDN sont suivis dans le dépôt [@mdn/browser-compat-data <sup>(angl.)</sup>](https://github.com/mdn/browser-compat-data) (BCD). Une automatisation _met à jour automatiquement_ les statuts dans le dépôt `mdn/content` (et s'applique sur `mdn/translated-content` par héritage) à chaque [nouvelle version de BCD](https://github.com/mdn/browser-compat-data/releases).
 
@@ -31,7 +31,7 @@ L'automatisation utilise la clé [`browser-compat`](/fr/docs/MDN/Writing_guideli
 > [!NOTE]
 > Pour mettre à jour le statut d'une fonctionnalité dans le contenu MDN, vous devez [soumettre une requête de tirage <sup>(angl.)</sup>](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) dans le dépôt BCD. Après validation et fusion de vos modifications dans BCD, elles sont publiées lors d'une version hebdomadaire, puis une pull request automatisée met à jour les statuts dans le dépôt `mdn/content` à chaque publication.
 
-## Comment les statuts sont-ils spécifiés dans le contenu ?
+## Comment les statuts sont-ils définis dans le contenu ?
 
 Les sections suivantes documentent les mécanismes utilisés pour insérer et afficher les informations de statut dans les documents MDN. Comme indiqué, ces éléments sont en lecture seule, car leur ajout est automatisé.
 
@@ -56,7 +56,7 @@ Les macros suivantes servent à afficher les bannières de statut en haut des pa
 
 - `\{{Deprecated_Header}}`
   - : Pour le statut `deprecated`. Affiche une bannière **Statut déprécié**&nbsp;:
-    {{deprecated_header}}
+    {{Deprecated_Header}}
 
 - `\{{SeeCompatTable}}`
   - : Pour le statut `experimental`. Affiche une bannière **Statut expérimental**&nbsp;:
@@ -68,13 +68,13 @@ Les macros suivantes servent à afficher les bannières de statut en haut des pa
 
 ### Icônes de statut dans les listes de définitions
 
-Les macros suivantes servent à afficher les icônes de statut en ligne à côté des éléments de liste de définitions&nbsp;:
+Les macros suivantes servent à afficher les icônes de statut en incise à côté des éléments de liste de définitions&nbsp;:
 
 - [`\{{Experimental_Inline}}` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icône&nbsp;: {{Experimental_Inline}}
 - [`\{{Non-standard_Inline}}` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icône&nbsp;: {{Non-standard_Inline}}
 - [`\{{Deprecated_Inline}}` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icône&nbsp;: {{Deprecated_Inline}}
 
-Si une page de fonctionnalité web possède une bannière de statut, alors les macros en ligne du même statut sont utilisées explicitement pour chaque membre ou valeur de la fonctionnalité dans la liste de définitions.
+Si une page de fonctionnalité web possède une bannière de statut, alors les macros en incise du même statut sont utilisées explicitement pour chaque membre ou valeur de la fonctionnalité dans la liste de définitions.
 Par exemple, si une page est marquée expérimentale avec `\{{SeeCompatTable}}`, chaque membre ou valeur de la fonctionnalité est explicitement marqué expérimental avec la macro `\{{Experimental_Inline}}` dans la liste de définitions.
 
 ## Voir aussi

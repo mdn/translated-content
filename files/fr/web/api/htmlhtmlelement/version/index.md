@@ -3,10 +3,10 @@ title: "HTMLHtmlElement : propriété version"
 short-title: version
 slug: Web/API/HTMLHtmlElement/version
 l10n:
-  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{ APIRef("HTML DOM") }} {{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 > [!NOTE]
 > Cette propriété a été déclarée obsolète par la recommandation technique du W3C pour HTML 4.01 au profit de l'utilisation de la DTD pour obtenir les informations de version d'un document.
