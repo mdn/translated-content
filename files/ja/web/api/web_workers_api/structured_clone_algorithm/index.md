@@ -2,7 +2,7 @@
 title: 構造化複製アルゴリズム
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 l10n:
-  sourceCommit: 0be2158a250dc07932891157dad8341d90a44930
+  sourceCommit: 48184c65d7e6d59e867806d9e349661c737bdc4b
 ---
 
 {{DefaultAPISidebar("Web Workers API") }}
