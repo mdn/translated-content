@@ -11,9 +11,31 @@ Firefox 154 est sorti le [18 août 2026 <sup>(angl.)</sup>](https://whattrainisi
 
 ## Changements pour les développeur·euse·s web
 
+### Outils de développement
+
+- [L'observateur JSON <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) affiche désormais un fil d'Ariane en bas du panneau indiquant l'emplacement de l'entrée sélectionnée dans la structure JSON.
+  ([bogue Firefox 1850288 <sup>(angl.)</sup>](https://bugzil.la/1850288)).
+
 ### HTML
 
 Pas de changements notables.
+
+### CSS
+
+- Les fonctions {{CSSxRef("sibling-count()")}} et {{CSSxRef("sibling-index()")}} sont désormais prises en charge. La fonction `sibling-count()` retourne le nombre d'éléments voisins ainsi que l'élément lui-même. La fonction `sibling-index()` retourne le numéro d'index de l'élément par rapport à ses voisins. L'index commence à `1`, et non à `0`. ([bogue Firefox 2045706 <sup>(angl.)</sup>](https://bugzil.la/2045706)).
+- Les propriétés {{CSSxRef("text-box-edge")}} et {{CSSxRef("text-box-trim")}} ainsi que le raccourci {{CSSxRef("text-box")}} sont désormais pris en charge. Ces propriétés facilitent le contrôle de l'espacement du texte dans la direction du bloc, en particulier lorsqu'un bloc contient plusieurs polices. La propriété `text-box-edge` permet de définir la quantité d'espace à découper à partir du conteneur de bloc de l'élément texte. La propriété `text-box-trim` permet de définir quels bords découper&nbsp;: le bord supérieur, le bord inférieur, les deux ou aucun. Le raccourci `text-box` combine ces deux propriétés. ([bogue Firefox 2050141 <sup>(angl.)</sup>](https://bugzil.la/2050141)).
+
+### JavaScript
+
+- La méthode {{JSxRef("Iterator.prototype.includes()")}} est désormais prise en charge, permettant aux développeur·euse·s de vérifier si un itérateur contient une valeur donnée.
+  ([bogue Firefox 2034104 <sup>(angl.)</sup>](https://bugzil.la/2034104)).
+- La méthode {{JSxRef("Iterator.prototype.join()")}} est désormais prise en charge, retournant une chaîne de caractères qui est la concaténation de tous les éléments produits par l'itérateur, séparés par des virgules ou par une chaîne de caractères de séparation définie.
+  Cela est similaire à {{JSxRef("Array.prototype.join()")}}.
+  ([bogue Firefox 2047995 <sup>(angl.)</sup>](https://bugzil.la/2047995)).
+- Les méthodes {{JSxRef("Iterator.prototype.chunks()")}} et {{JSxRef("Iterator.prototype.windows()")}} sont désormais prises en charge.
+  Ces deux méthodes retournent un [objet d'aide à l'itérateur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator#objets_daide_à_litérateur) qui peut être itéré pour produire un certain nombre d'éléments de l'itérateur d'origine sous forme de tableau.
+  La différence entre les méthodes est que l'aide `chunks()` divise les éléments de l'itérateur d'origine en morceaux de tableau consécutifs, tandis que l'aide `windows()` retourne un tableau qui est une fenêtre glissante sur l'itérateur d'origine (chaque itération produit un tableau qui avance d'un élément&nbsp;: en supprimant le premier élément de l'itération précédente et en récupérant un nouvel élément de l'itérateur d'origine).
+  ([bogue Firefox 2047997 <sup>(angl.)</sup>](https://bugzil.la/2047997)).
 
 ### APIs
 
@@ -23,6 +45,11 @@ Pas de changements notables.
   ([bogue Firefox 2019332 <sup>(angl.)</sup>](https://bugzil.la/2019332)).
 - L'évènement {{DOMxRef("RTCDtlsTransport/error_event", "error")}} est désormais déclenché sur {{DOMxRef("RTCDtlsTransport")}} pour signaler les erreurs DTLS et de l'empreinte.
   ([bogue Firefox 1805447 <sup>(angl.)</sup>](https://bugzil.la/1805447)).
+- La propriété `rtcp` est désormais incluse dans l'objet retourné par {{DOMxRef("RTCRtpReceiver.getParameters()")}} et {{DOMxRef("RTCRtpSender.getParameters()")}}, et peut être définie dans l'objet passé à {{DOMxRef("RTCRtpSender.setParameters()")}}.
+  Cela fournit les paramètres de configuration {{Glossary("RTCP")}} pour la connexion.
+  ([bogue Firefox 1584318 <sup>(angl.)</sup>](https://bugzil.la/1584318)).
+- Firefox signale désormais toutes les statistiques `certificate` de WebRTC définies dans le dictionnaire {{DOMxRef("RTCCertificateStats")}}, ainsi que les statistiques `transport` supplémentaires de WebRTC définies dans le dictionnaire {{DOMxRef("RTCTransportStats")}}&nbsp;: {{DOMxRef("RTCTransportStats/remoteCertificateId", "remoteCertificateId")}}, {{DOMxRef("RTCTransportStats/localCertificateId", "localCertificateId")}}, {{DOMxRef("RTCTransportStats/packetsSent", "packetsSent")}}, {{DOMxRef("RTCTransportStats/packetsReceived", "packetsReceived")}}, {{DOMxRef("RTCTransportStats/bytesSent", "bytesSent")}} et {{DOMxRef("RTCTransportStats/bytesReceived", "bytesReceived")}}.
+  ([bogue Firefox 2019349 <sup>(angl.)</sup>](https://bugzil.la/2019349) et [bogue Firefox 2019333 <sup>(angl.)</sup>](https://bugzil.la/2019333)).
 
 ### Conformité WebDriver (WebDriver BiDi, Marionette)
 

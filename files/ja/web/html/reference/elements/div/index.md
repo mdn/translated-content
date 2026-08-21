@@ -1,8 +1,9 @@
 ---
-title: "<div>: コンテンツ区分要素"
+title: HTML `<div>` コンテンツ区分要素
+short-title: <div>
 slug: Web/HTML/Reference/Elements/div
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<div>`** は [HTML](/ja/docs/Web/HTML) の要素で、フローコンテンツの汎用コンテナーです。 {{glossary("CSS")}} を用いて何らかのスタイル付けがされる（例えば、スタイルが直接適用されたり、親要素に[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)などの何らかのレイアウトモデルが適用されるなど）までは、コンテンツやレイアウトには影響を与えません。
