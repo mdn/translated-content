@@ -1,82 +1,78 @@
 ---
-title: Number.isInteger()
+title: "Number : méthode statique isInteger()"
+short-title: isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Number.isInteger()`** détermine si la valeur passée est un entier.
 
-La méthode **`Number.isInteger()`** permet de déterminer si l'argument est un nombre entier.
-
-{{InteractiveExample("JavaScript Demo: Number.isInteger()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Number.isInteger()")}}
 
 ```js interactive-example
 function fits(x, y) {
   if (Number.isInteger(y / x)) {
-    return "Fits!";
+    return "Ça rentre !";
   }
-  return "Does NOT fit!";
+  return "Ça NE rentre PAS !";
 }
 
 console.log(fits(5, 10));
-// Expected output: "Fits!"
+// Sortie attendue : "Ça rentre !"
 
 console.log(fits(5, 11));
-// Expected output: "Does NOT fit!"
+// Sortie attendue : "Ça NE rentre PAS !"
 ```
 
 ## Syntaxe
 
-```js
-Number.isInteger(valeurÀTester);
+```js-nolint
+Number.isInteger(value)
 ```
 
 ### Paramètres
 
-- `valeurÀTester`
+- `value`
   - : La valeur dont on souhaite savoir si elle est entière ou non.
 
 ### Valeur de retour
 
-Un booléen qui indique si la valeur fournie en argument est un entier.
+La valeur booléenne `true` si la valeur donnée est un entier. Sinon `false`.
 
 ## Description
 
-Si la valeur à tester est un entier, cette méthode renvoie `true`, `false` sinon. Si la valeur est {{jsxref("NaN")}} ou l'infini ({{jsxref("Infinity")}}), la méthode renverra `false`. La méthode renverra également `true` pour les nombres flottants qui peuvent être représentés comme des entiers.
+Si la valeur cible est un entier, retourne `true`, sinon retourne `false`. Si la valeur est {{JSxRef("NaN")}} ou {{JSxRef("Infinity")}}, retourne `false`. La méthode retourne également `true` pour les nombres à virgule flottante pouvant être représentés sous forme d'entiers. Elle retourne toujours `false` si la valeur n'est pas un nombre.
+
+Notez que certains littéraux numériques, bien qu'ils ne semblent pas être des entiers, représentent en réalité des entiers — en raison de la limite de précision du codage des nombres à virgule flottante ECMAScript (IEEE-754). Par exemple, `5.0000000000000001` ne diffère de `5` que de `1e-16`, ce qui est trop petit pour être représenté. (À titre de référence, [`Number.EPSILON`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON) stocke la distance entre 1 et le prochain nombre à virgule flottante représentable supérieur à 1, soit environ `2,22e-16`.) Par conséquent, `5.0000000000000001` est représenté avec le même encodage que `5`, ce qui fait que `Number.isInteger(5.0000000000000001)` retourne `true`.
+
+De la même manière, les nombres de l'ordre de grandeur de [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) subi une perte de précision et font que `Number.isInteger` retourne `true` même lorsqu'il ne s'agit pas d'un entier. (Le seuil réel varie en fonction du nombre de bits nécessaires pour représenter le nombre décimal — par exemple, `Number.isInteger(4500000000000000.1)` est `true`, mais `Number.isInteger(4500000000000000.5)` est `false`.)
 
 ## Exemples
 
+### Utiliser `isInteger()`
+
 ```js
+Number.isInteger(0); // true
 Number.isInteger(1); // true
 Number.isInteger(-100000); // true
-Number.isInteger(0); // true
-Number.isInteger(1.0); // true
-// Number.isInteger(9…9999); // true, même si le nombre dépasse 32 bits
+Number.isInteger(99999999999999999999999); // true
 
 Number.isInteger(0.1); // false
 Number.isInteger(Math.PI); // false
 
-Number.isInteger(-Infinity); // false
-Number.isInteger(true); // false
 Number.isInteger(NaN); // false
+Number.isInteger(Infinity); // false
+Number.isInteger(-Infinity); // false
 Number.isInteger("10"); // false
+Number.isInteger(true); // false
+Number.isInteger(false); // false
+Number.isInteger([1]); // false
 
 Number.isInteger(5.0); // true
 Number.isInteger(5.000000000000001); // false
-Number.isInteger(5.0000000000000001); // true
-```
-
-## Prothèse d'émulation (_polyfill_)
-
-```js
-Number.isInteger =
-  Number.isInteger ||
-  function (value) {
-    return (
-      typeof value === "number" &&
-      isFinite(value) &&
-      Math.floor(value) === value
-    );
-  };
+Number.isInteger(5.0000000000000001); // true, à cause d'une perte de précision
+Number.isInteger(4500000000000000.1); // true, à cause d'une perte de précision
 ```
 
 ## Spécifications
@@ -89,4 +85,6 @@ Number.isInteger =
 
 ## Voir aussi
 
-- L'objet global {{jsxref("Number")}} auquel appartient cette méthode.
+- [La prothèse d'émulation de `Number.isInteger` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
+- [La prothèse d'émulation es-shims de `Number.isInteger` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isinteger)
+- L'objet {{JSxRef("Number")}}
