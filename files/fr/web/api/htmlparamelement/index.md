@@ -2,10 +2,10 @@
 title: HTMLParamElement
 slug: Web/API/HTMLParamElement
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 L'interface **`HTMLParamElement`** fournit des propriétés spécifiques (en plus de celles de l'interface {{DOMxRef("HTMLElement")}} héritées) pour manipuler les éléments HTML {{HTMLElement("param")}}, représentant une paire clé-valeur servant de paramètre à un élément HTML {{HTMLElement("object")}}.
 

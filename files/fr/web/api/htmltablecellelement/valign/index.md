@@ -3,10 +3,10 @@ title: "HTMLTableCellElement : propriété vAlign"
 short-title: vAlign
 slug: Web/API/HTMLTableCellElement/vAlign
 l10n:
-  sourceCommit: 9a6462fba2d1527b1d9e550cda954eafdccb5d58
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`vAlign`** de l'interface {{DOMxRef("HTMLTableCellElement")}} est une chaîne de caractères indiquant comment aligner verticalement le texte dans une cellule de tableau {{HTMLElement("th")}} ou {{HTMLElement("td")}}.
 

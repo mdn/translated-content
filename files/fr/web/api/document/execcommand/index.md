@@ -3,10 +3,10 @@ title: "Document : méthode execCommand()"
 short-title: execCommand()
 slug: Web/API/Document/execCommand
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 > [!NOTE]
 > Bien que la méthode `execCommand()` soit obsolète, il existe encore quelques cas d'utilisation valides qui n'ont pas d'alternatives viables. Par exemple, contrairement à la manipulation directe du DOM, les modifications effectuées par `execCommand()` préservent le tampon d'annulation (historique des modifications). Pour ces cas d'utilisation, vous pouvez toujours utiliser cette méthode, mais vérifiez la compatibilité inter-navigateurs, par exemple en utilisant {{DOMxRef("document.queryCommandSupported()")}}.

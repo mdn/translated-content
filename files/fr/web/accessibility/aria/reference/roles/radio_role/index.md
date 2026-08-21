@@ -3,7 +3,7 @@ title: "ARIA : rôle radio"
 short-title: radio
 slug: Web/Accessibility/ARIA/Reference/Roles/radio_role
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `radio` fait partie d'un groupe de boutons radio sélectionnables, dans un `radiogroup`, où un seul bouton radio peut être sélectionné à la fois.

@@ -3,10 +3,10 @@ title: "HTMLObjectElement: propriété useMap"
 short-title: useMap
 slug: Web/API/HTMLObjectElement/useMap
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`useMap`** de l'interface {{DOMxRef("HTMLObjectElement")}} retourne une chaîne de caractères reflétant l'attribut HTML [`usemap`](/fr/docs/Web/HTML/Reference/Elements/object#usemap), définissant un élément HTML {{HTMLElement("map")}} à utiliser.
 

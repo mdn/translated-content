@@ -3,10 +3,10 @@ title: "Document : propriété selectedStyleSheetSet"
 short-title: selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
 l10n:
-  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 La propriété **`selectedStyleSheetSet`** de l'interface {{DOMxRef("Document")}} indique le nom du jeu de feuilles de styles actuellement utilisé.
 

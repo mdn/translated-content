@@ -3,10 +3,10 @@ title: "Document : méthode queryCommandEnabled()"
 short-title: queryCommandEnabled()
 slug: Web/API/Document/queryCommandEnabled
 l10n:
-  sourceCommit: 22cf84fc5704222a2e2e5ac67b95b02dcfea08ff
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 > [!NOTE]
 > Bien que la méthode {{DOMxRef("Document/execCommand", "execCommand()")}} soit obsolète, si vous décidez de l'utiliser pour les raisons indiquées sur cette page, vous devriez vérifier la disponibilité de la commande avec `queryCommandEnabled()` pour garantir la compatibilité.

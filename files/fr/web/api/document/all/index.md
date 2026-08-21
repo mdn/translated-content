@@ -3,10 +3,10 @@ title: "Document : propriété all"
 short-title: all
 slug: Web/API/Document/all
 l10n:
-  sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 La propriété en lecture seule **`all`** de l'interface {{DOMxRef("Document")}} retourne une collection d'éléments ({{DOMxRef("HTMLAllCollection")}}) ancrée au nœud du document.
 
