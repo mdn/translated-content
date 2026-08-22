@@ -1,13 +1,14 @@
 ---
-title: Number.prototype.toPrecision()
+title: "Number : méthode toPrecision()"
+short-title: toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`toPrecision()`** de {{JSxRef("Number")}} retourne une chaîne de caractères représentant ce nombre avec le nombre de chiffres significatifs défini.
 
-La méthode **`toPrecision()`** renvoie une chaîne de caractères représentant un nombre avec la précision donnée.
-
-{{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Number.prototype.toPrecision()")}}
 
 ```js interactive-example
 function precise(x) {
@@ -15,55 +16,69 @@ function precise(x) {
 }
 
 console.log(precise(123.456));
-// Expected output: "123.5"
+// Sortie attendue : "123.5"
 
 console.log(precise(0.004));
-// Expected output: "0.004000"
+// Sortie attendue : "0.004000"
 
 console.log(precise(1.23e5));
-// Expected output: "1.230e+5"
+// Sortie attendue : "1.230e+5"
 ```
 
 ## Syntaxe
 
-```js
-numObj.toPrecision([précision]);
+```js-nolint
+toPrecision()
+toPrecision(precision)
 ```
 
 ### Paramètre
 
-- `précision`
-  - : Paramètre optionnel. Un entier spécifiant le nombre de chiffres significatifs.
+- `precision` {{Optional_Inline}}
+  - : Un entier définissant le nombre de chiffres significatifs.
 
 ### Valeur de retour
 
-Cette méthode renvoie une chaîne de caractères représentant l'objet {{jsxref("Number")}} en notation à point fixe ou en notation exponentielle, arrondi avec un nombre de chiffres significatifs égal à `précision`. Le principe utilisé pour les arrondis est celui décrit dans la page de la méthode {{jsxref("Number.prototype.toFixed()")}}.
-
-Si l'argument `précision` n'est pas utilisé, la méthode aura le même effet que {{jsxref("Number.prototype.toString()")}}. Si cet argument n'est pas un nombre entier, on prendra le nombre entier le plus proche.
+Une chaîne de caractères représentant le nombre donné, en utilisant le nombre de chiffres significatifs défini. La notation scientifique est utilisée si l'exposant est supérieur ou égal à `precision` ou inférieur à -6. A le même comportement que {{JSxRef("Number.prototype.toString()")}} si l'argument `precision` est omis.
 
 ### Exceptions
 
-- {{jsxref("RangeError")}}
-  - : Si `précison` n'est pas compris, au sens large, entre 1 et 100, on aura une exception `RangeError`. Les implémentations peuvent supporter des valeurs supérieures et/ou inférieures. Le standard ECMA-262 ne nécessite qu'une précision allant jusqu'à 21 chiffres significatifs.
+- {{JSxRef("RangeError")}}
+  - : Levée si `precision` n'est pas comprise entre `1` et `100` (inclus).
+- {{JSxRef("TypeError")}}
+  - : Levée si cette méthode est invoquée sur un objet qui n'est pas un {{JSxRef("Number")}}.
 
 ## Exemples
 
+### Utiliser `toPrecision()`
+
 ```js
-var objetNumber = 5.123456;
-console.log(objetNumber.toPrecision()); //affiche "5.123456"
-console.log(objetNumber.toPrecision(5)); //affiche "5.1235"
-console.log(objetNumber.toPrecision(2)); //affiche "5.1"
-console.log(objetNumber.toPrecision(1)); //affiche "5"
+// Ce nombre a un exposant de 0, il n'utilise donc jamais la notation exponentielle
+let num = 5.123456;
 
-numObj = 0.000123;
+console.log(num.toPrecision()); // '5.123456'
+console.log(num.toPrecision(5)); // '5.1235'
+console.log(num.toPrecision(2)); // '5.1'
+console.log(num.toPrecision(1)); // '5'
 
-console.log(numObj.toPrecision()); // affiche "0.000123"
-console.log(numObj.toPrecision(5)); // affiche "0.00012300"
-console.log(numObj.toPrecision(2)); // affiche "0.00012"
-console.log(numObj.toPrecision(1)); // affiche "0.0001"
+// Ce nombre a un exposant de -4, il n'utilise donc jamais la notation exponentielle
+num = 0.000123;
 
-// dans certaines circonstances, on peut avoir une notation exponentielle
-console.log((1234.5).toPrecision(2)); // "1.2e+3"
+console.log(num.toPrecision()); // '0.000123'
+console.log(num.toPrecision(5)); // '0.00012300'
+console.log(num.toPrecision(2)); // '0.00012'
+console.log(num.toPrecision(1)); // '0.0001'
+
+// Ce nombre a un exposant de 3, il utilise donc la notation exponentielle si `precision` est inférieure à 4
+num = 1234.5;
+console.log(num.toPrecision(1)); // '1e+3'
+console.log(num.toPrecision(2)); // '1.2e+3'
+console.log(num.toPrecision(6)); // '1234.50'
+
+// Ce nombre a un exposant de -7, il utilise donc toujours la notation exponentielle
+num = 0.00000012345;
+console.log(num.toPrecision(1)); // '1e-7'
+console.log(num.toPrecision(10)); // '1.234500000e-7'
 ```
 
 ## Spécifications
@@ -76,6 +91,6 @@ console.log((1234.5).toPrecision(2)); // "1.2e+3"
 
 ## Voir aussi
 
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toExponential()")}}
-- {{jsxref("Number.prototype.toString()")}}
+- La méthode {{JSxRef("Number.prototype.toFixed()")}}
+- La méthode {{JSxRef("Number.prototype.toExponential()")}}
+- La méthode {{JSxRef("Number.prototype.toString()")}}
