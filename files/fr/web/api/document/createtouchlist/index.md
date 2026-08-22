@@ -3,10 +3,10 @@ title: "Document : méthode createTouchList()"
 short-title: createTouchList()
 slug: Web/API/Document/createTouchList
 l10n:
-  sourceCommit: 754b68246f4e69e404309fee4a1699e047e43994
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 La méthode **`createTouchList()`** de l'interface {{DOMxRef("Document")}} crée et retourne un nouvel objet {{DOMxRef("TouchList")}}.
 
@@ -60,7 +60,7 @@ Cette fonctionnalité ne fait partie d'aucune spécification actuelle. Elle n'es
 
 ## Voir aussi
 
-- [Les événements Touch](/fr/docs/Web/API/Touch_events)
+- [Les évènements Touch](/fr/docs/Web/API/Touch_events)
 - L'interface {{DOMxRef("Touch")}}
 - L'interface {{DOMxRef("TouchEvent")}}
 - L'interface {{DOMxRef("TouchList")}}

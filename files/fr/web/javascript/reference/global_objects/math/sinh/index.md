@@ -1,34 +1,39 @@
 ---
-title: Math.sinh()
+title: "Math : méthode statique sinh()"
+short-title: sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Math.sinh()`** retourne le sinus hyperbolique d'un nombre. C'est-à-dire,
 
-La fonction **`Math.sinh()`** renvoie le sinus hyperbolique d'un nombre, dont la formule, utilisant la constante {{jsxref("Math.E","e")}}, est :
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚜𝚒𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>−</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh}(x)} = \sinh(x) = \frac{\mathrm{e}^x - \mathrm{e}^{-x}}{2}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-<math><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.sinh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh(x)}} = \frac{e^x - e^{-x}}{2}</annotation></semantics></math>
-
-{{InteractiveExample("JavaScript Demo: Math.sinh()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.sinh()")}}
 
 ```js interactive-example
 console.log(Math.sinh(0));
-// Expected output: 0
+// Sortie attendue : 0
 
 console.log(Math.sinh(1));
-// Expected output: 1.1752011936438014
+// Sortie attendue : 1.1752011936438014
 
 console.log(Math.sinh(-1));
-// Expected output: -1.1752011936438014
+// Sortie attendue : -1.1752011936438014
 
 console.log(Math.sinh(2));
-// Expected output: 3.626860407847019
+// Sortie attendue : 3.626860407847019
 ```
 
 ## Syntaxe
 
-```js
-Math.sinh(x);
+```js-nolint
+Math.sinh(x)
 ```
 
 ### Paramètres
@@ -38,40 +43,22 @@ Math.sinh(x);
 
 ### Valeur de retour
 
-Le sinus hyperbolique de la valeur passée en argument.
+Le sinus hyperbolique de `x`.
 
 ## Description
 
-`sinh()` est une méthode statique de `Math`, il faut utiliser la syntaxe `Math.sinh()`. Cette méthode ne doit pas être appelée depuis un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+Puisque `sinh()` est une méthode statique de `Math`, il faut toujours l'utiliser comme `Math.sinh()`, plutôt que comme une méthode d'un objet `Math` que vous avez créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
+### Utiliser `Math.sinh()`
+
 ```js
+Math.sinh(-Infinity); // -Infinity
+Math.sinh(-0); // -0
 Math.sinh(0); // 0
 Math.sinh(1); // 1.1752011936438014
-```
-
-## Prothèse d'émulation (_polyfill_)
-
-Si cette fonction n'est pas disponible, elle peut être émulée en utilisant la fonction {{jsxref("Math.exp()")}}&nbsp;:
-
-```js
-Math.sinh =
-  Math.sinh ||
-  function (x) {
-    return (Math.exp(x) - Math.exp(-x)) / 2;
-  };
-```
-
-ou encore, si on n'utilise qu'une fois {{jsxref("Math.exp()")}}, avec :
-
-```js
-Math.sinh =
-  Math.sinh ||
-  function (x) {
-    var y = Math.exp(x);
-    return (y - 1 / y) / 2;
-  };
+Math.sinh(Infinity); // Infinity
 ```
 
 ## Spécifications
@@ -84,8 +71,9 @@ Math.sinh =
 
 ## Voir aussi
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.tanh()")}}
+- [Prothèse d'émulation de `Math.sinh` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
+- La méthode statique {{jsxref("Math.acosh()")}}
+- La méthode statique {{jsxref("Math.asinh()")}}
+- La méthode statique {{jsxref("Math.atanh()")}}
+- La méthode statique {{jsxref("Math.cosh()")}}
+- La méthode statique {{jsxref("Math.tanh()")}}

@@ -3,10 +3,10 @@ title: "Document : méthode requestStorageAccessFor()"
 short-title: requestStorageAccessFor()
 slug: Web/API/Document/requestStorageAccessFor
 l10n:
-  sourceCommit: 793bcbe2dd88fc553d2c4c918c4dec4899704022
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("Storage Access API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Storage Access API")}}{{Non-standard_Header}}
 
 La méthode **`requestStorageAccessFor()`** de l'interface {{DOMxRef("Document")}} permet aux sites de niveau supérieur de demander l'accès aux cookies tiers au nom du contenu intégré provenant d'un autre site dans le même [ensemble de sites liés <sup>(angl.)</sup>](https://privacysandbox.google.com/cookies/related-website-sets-integration). Elle retourne une promesse ({{JSxRef("Promise")}}) qui se résout si l'accès est accordé et se rejette si l'accès est refusé.
 

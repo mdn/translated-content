@@ -3,12 +3,12 @@ title: "Temporal.ZonedDateTime : propriété offsetNanoseconds"
 short-title: offsetNanoseconds
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/offsetNanoseconds
 l10n:
-  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
+  sourceCommit: 6dd46d38ac550f9eeb3b0224b1b46857c9b0f580
 ---
 
-La propriété d'accesseur **`offsetNanoseconds`** des instances de {{JSxRef("Temporal.ZonedDateTime")}} retourne un entier représentant le [décalage](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#fuseaux_horaires_et_décalages) utilisé pour interpréter l'instant interne, en nombre de nanosecondes (positif ou négatif). La valeur est un entier sûr car elle est inférieure à une journée, soit 8,64e<sup>15</sup> nanosecondes.
+La propriété d'accesseur **`offsetNanoseconds`** des instances de {{JSxRef("Temporal.ZonedDateTime")}} retourne un entier représentant le [décalage](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#fuseaux_horaires_et_décalages) utilisé pour interpréter l'instant interne, en nombre de nanosecondes (positif ou négatif). La valeur est un entier sûr, car elle est inférieure à une journée, soit 8,64e<sup>15</sup> nanosecondes.
 
-Le mutateur d'accesseur de `offsetNanoseconds` est `undefined`. Vous ne pouvez pas modifier cette propriété directement. Modifiez {{JSxRef("Temporal/ZonedDateTime/offset", "offset")}} pour modifier également cette propriété.
+Le mutateur d'accesseur de `offsetNanoseconds` est `undefined`. Vous ne pouvez pas modifier cette propriété directement. Utilisez la méthode {{JSxRef("Temporal/ZonedDateTime/with", "with()")}} pour créer un nouvel objet `Temporal.ZonedDateTime` avec la nouvelle valeur souhaitée de {{JSxRef("Temporal/ZonedDateTime/offset", "offset")}} (ce qui modifie également cette propriété), ou utilisez la méthode {{JSxRef("Temporal/ZonedDateTime/withTimeZone", "withTimeZone()")}} pour créer un nouvel objet `Temporal.ZonedDateTime` dans un autre fuseau horaire.
 
 ## Exemples
 

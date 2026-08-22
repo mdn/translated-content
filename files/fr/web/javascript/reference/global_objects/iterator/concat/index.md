@@ -3,7 +3,7 @@ title: "Iterator : méthode statique concat()"
 short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/concat
 l10n:
-  sourceCommit: dc02b8a490ea0ff4ac1236546f32270ca0cc0aa5
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 La méthode statique **`Iterator.concat()`** crée un nouvel objet {{JSxRef("Iterator")}} à partir d'une liste d'objets itérables. Le nouvel itérateur produit les valeurs de chacun des objets itérables d'entrée, en séquence.
@@ -27,9 +27,9 @@ Un nouvel objet {{JSxRef("Iterator")}} qui produit les valeurs de chacun des obj
 
 ## Description
 
-La méthode `Iterator.concat()` est conceptuellement similaire à la méthode [`concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) de `Array`, mais elle fonctionne sur tout type d'objet itérable et retourne un itérateur au lieu d'un tableau. Cela signifie que les objets itérables peuvent être parcourus paresseusement, évitant ainsi des allocations ou des calculs inutiles. Cela signifie aussi que, techniquement, vous pouvez [concaténer des objets itérables infinis](#concaténer_des_objets_itérables_infinis), mais les résultats des objets itérables après le premier objet itérable infini ne seront jamais atteints.
+La méthode `Iterator.concat()` est conceptuellement similaire à la méthode [`concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) de `Array`, mais elle fonctionne sur tout type d'objet itérable et retourne un itérateur au lieu d'un tableau. Cela signifie que les objets itérables peuvent être parcourus paresseusement, évitant ainsi des allocations ou des calculs inutiles. Cela signifie aussi que, techniquement, vous pouvez [concaténer des objets itérables infinis](#concaténer_des_objets_itérables_infinis), mais les résultats des objets itérables après le premier objet itérable infini ne sont jamais atteints.
 
-Bien que chaque objet itérable puisse être infini, la liste des objets itérables doit être finie — et assez limitée en nombre car les moteurs imposent une limite très basse au nombre d'arguments de fonction. Si vous devez concaténer un grand nombre — voire un nombre infini — d'objets itérables, utilisez plutôt {{JSxRef("Iterator.prototype.flatMap()")}}.
+Bien que chaque objet itérable puisse être infini, la liste des objets itérables doit être finie — et assez limitée en nombre, car les moteurs imposent une limite très basse au nombre d'arguments de fonction. Si vous devez concaténer un grand nombre — voire un nombre infini — d'objets itérables, utilisez plutôt {{JSxRef("Iterator.prototype.flatMap()")}}.
 
 ```js
 function* infiniteIterables() {
@@ -44,7 +44,7 @@ function* infiniteIterables() {
 
 // BON :
 const it = infiniteIterables().flatMap((x) => x);
-// Séquence infinie de nombres : 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, ...
+// Séquence infinie de nombres : 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, …
 ```
 
 La méthode `Iterator.concat()` est similaire en fonctionnalité à la fonction suivante, qui utilise l'opérateur [`yield*`](/fr/docs/Web/JavaScript/Reference/Operators/yield*) pour produire les valeurs de chacun des objets itérables d'entrée, en séquence&nbsp;:
@@ -61,9 +61,9 @@ Comme `yield*`, `Iterator.concat()` ne prend pas en charge les arguments qui ne 
 
 ## Exemples
 
-### Combiner des maps
+### Combiner des tableaux associatifs
 
-Dans cet exemple, nous créons une nouvelle {{JSxRef("Map")}} qui est l'union de trois autres maps. Le constructeur {{JSxRef("Map/Map", "Map()")}} accepte un objet itérable de paires clé-valeur, tandis que [l'itérateur Map](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator) produit les paires clé-valeur de la map, donc utiliser simplement `Iterator.concat()` sur les maps suffit à créer la nouvelle map.
+Dans cet exemple, nous créons une nouvelle {{JSxRef("Map")}} qui est l'union de trois autres tableaux associatifs. Le constructeur {{JSxRef("Map/Map", "Map()")}} accepte un objet itérable de paires clé-valeur, tandis que [l'itérateur `Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator) produit les paires clé-valeur de tableau associatif, donc utiliser simplement `Iterator.concat()` sur les tableaux associatifs suffit à créer le nouveau tableau associatif.
 
 ```js
 const map1 = new Map([
@@ -84,11 +84,11 @@ console.log(map);
 // Map(5) {'a' => 5, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 6}
 ```
 
-Notez que la valeur de la clé `"a"` dans la map résultante est `5`. Cela s'explique par le fait que le constructeur `Map` utilise la dernière valeur pour chaque clé.
+Notez que la valeur de la clé `"a"` dans le tableau associatif résultante est `5`. Cela s'explique par le fait que le constructeur `Map` utilise la dernière valeur pour chaque clé.
 
 ### Concaténer des objets itérables infinis
 
-Lorsque l'un des objets itérables d'entrée est infini, l'itérateur résultant sera également infini. Ce n'est pas immédiatement un problème car les itérateurs peuvent être consommés paresseusement et fermés à tout moment, mais cela signifie que les objets itérables après le premier objet itérable infini ne seront jamais atteints.
+Lorsque l'un des objets itérables d'entrée est infini, l'itérateur résultant est également infini. Ce n'est pas immédiatement un problème, car les itérateurs peuvent être consommés paresseusement et fermés à tout moment, mais cela signifie que les objets itérables après le premier objet itérable infini ne sont jamais atteints.
 
 ```js
 function* it1() {
@@ -143,7 +143,7 @@ console.log([...it]); // [1, "deux", 3, true, {}]
 
 ### Concaténer des objets non itérables
 
-Les objets non itérables produisent une exception `TypeError` lorsqu'ils sont passés à `Iterator.concat()` car ils ne possèdent pas la méthode `[Symbol.iterator]()`.
+Les objets non itérables produisent une exception `TypeError` lorsqu'ils sont passés à `Iterator.concat()`, car ils ne possèdent pas la méthode `[Symbol.iterator]()`.
 
 ```js
 const nonIterable = {
