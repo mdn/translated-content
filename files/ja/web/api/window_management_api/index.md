@@ -25,7 +25,7 @@ const myWindow = window.open(
 
 ただし、上記の機能には制限があります。 `Window.screen` はプライマリ画面に関するデータのみを返し、デバイスで利用可能なセカンダリディスプレイの情報は含まれません。ウィンドウをセカンダリディスプレイに移動させるには {{domxref("Window.moveTo()")}} を使用できますが、プライマリディスプレイに対してそのディスプレイがどのような位置関係にあるかに基づいて、適切な座標を推測する必要があります。
 
-The Window Management API provides more robust, flexible window management. It allows you to query whether your display is extended with multiple screens and get information on each screen separately: windows can then be placed on each screen as desired. It also provides event handlers to allow you to respond to changes in the available screens, new fullscreen functionality to choose which screen to put into fullscreen mode (if any), and permissions functionality to control access to the API.
+ウィンドウ管理 APIは、より堅牢で柔軟なウィンドウ管理機能を提供します。この API を使用すると、ディスプレイが複数の画面に拡張されているかどうかを確認したり、各画面の情報を個別に取得したりできるため、ウィンドウを各画面上の任意の場所に配置することが可能です。さらに、利用可能な画面の変更に対応するためのイベントハンドラーや、どの画面をフルスクリーンモードにするか（あるいはフルスクリーンにしないか）を選択できる新しいフルスクリーン機能、そしてAPIへのアクセスを制御する権限管理機能も備えています。
 
 For details on how to use it, see [Using the Window Management API](/en-US/docs/Web/API/Window_Management_API/Using).
 
