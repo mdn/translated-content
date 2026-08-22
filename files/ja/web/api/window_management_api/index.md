@@ -67,7 +67,7 @@ const myWindow = window.open(
 - {{domxref("Screen.isExtended")}} {{securecontext_inline}}
   - : ユーザーのデバイスが複数の画面を持っている場合は `true`、持っていない場合は `false` を返す真偽値です。
 - {{domxref("Element.requestFullscreen()")}}, `screen` オプション
-  - : Specifies on which screen you want to put the element in fullscreen mode.
+  - : 要素を全画面モードで表示したい画面を指定します。
 - {{domxref("Window.getScreenDetails()")}} {{securecontext_inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("ScreenDetails")}} object instance.
 
