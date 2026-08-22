@@ -1,42 +1,49 @@
 ---
-title: Number.MIN_VALUE
+title: "Number : propriété statique MIN_VALUE"
+short-title: MIN_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La propriété statique **`Number.MIN_VALUE`** représente la plus petite valeur numérique positive qu'il est possible de représenter en JavaScript.
 
-La propriété **`Number.MIN_VALUE`** représente la plus petite valeur numérique positive qu'il est possible de représenter en JavaScript.
-
-{{InteractiveExample("JavaScript Demo: Number.MIN_VALUE")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Number.MIN_VALUE")}}
 
 ```js interactive-example
 function divide(x, y) {
   if (x / y < Number.MIN_VALUE) {
-    return "Process as 0";
+    return "Représenté comme 0";
   }
   return x / y;
 }
 
 console.log(divide(5e-324, 1));
-// Expected output: 5e-324
+// Sortie attendue : 5e-324
 
 console.log(divide(5e-324, 2));
-// Expected output: "Process as 0"
+// Sortie attendue : "Représenté comme 0"
 ```
 
-{{js_property_attributes(0,0,0)}}
+## Valeur
+
+2<sup>-1074</sup>, ou `5E-324`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-La propriété `MIN_VALUE` représente le nombre positif le plus proche de 0 et non pas le nombre négatif minimal qu'il est possible de représenter en JavaScript.
+`Number.MIN_VALUE` est le plus petit nombre positif (et non le nombre négatif le plus petit) qui peut être représenté avec une précision flottante — en d'autres termes, le nombre le plus proche de 0. La spécification ECMAScript ne définit pas de valeur précise que les implémentations doivent supporter — elle indique plutôt _«&nbsp;doit être la plus petite valeur positive non nulle qui peut réellement être représentée par l'implémentation&nbsp;»_. Cela est dû au fait que les petits nombres à virgule flottante IEEE-754 sont [dénormalisés <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Subnormal_number), mais les implémentations ne sont pas tenues de supporter cette représentation, auquel cas `Number.MIN_VALUE` peut être plus grand.
 
-`MIN_VALUE` vaut environ 5e-324. Les valeurs inférieures à `MIN_VALUE` sont converties en 0.
+En pratique, sa valeur précise dans les moteurs principaux comme V8 (utilisé par Chrome, Edge, Node.js), SpiderMonkey (utilisé par Firefox) et JavaScriptCore (utilisé par Safari) est 2<sup>-1074</sup>, ou `5E-324`.
 
-`MIN_VALUE` est une propriété statique de {{jsxref("Number")}} et doit donc être utilisée avec la syntaxe `Number.MIN_VALUE`, et non pas via la propriété d'un objet `Number` qui aurait été instancié.
+Puisque `MIN_VALUE` est une propriété statique de {{JSxRef("Number")}}, vous l'utilisez toujours comme `Number.MIN_VALUE`, plutôt que comme propriété d'une valeur numérique.
 
 ## Exemples
 
-Le code qui suit effectue la division de deux nombres. Si le résultat obtenu est supérieur ou égal à `MIN_VALUE`, la fonction `func1` sera appelée, sinon la fonction `func2` sera utilisée.
+### Utiliser `MIN_VALUE`
+
+Le code suivant divise deux valeurs numériques. Si le résultat est supérieur ou égal à `MIN_VALUE`, la fonction `func1` est appelée&nbsp;; sinon, la fonction `func2` est appelée.
 
 ```js
 if (num1 / num2 >= Number.MIN_VALUE) {
@@ -56,4 +63,4 @@ if (num1 / num2 >= Number.MIN_VALUE) {
 
 ## Voir aussi
 
-- {{jsxref("Number.MAX_VALUE")}}
+- La propriété statique {{JSxRef("Number.MAX_VALUE")}}
