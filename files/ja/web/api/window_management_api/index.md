@@ -75,7 +75,7 @@ const myWindow = window.open(
 
 完全な例はこちらでご覧いただけます
 
-- [Basic multi-window learning environment](https://mdn.github.io/dom-examples/window-management-api/) (see the [source code](https://github.com/mdn/dom-examples/tree/main/window-management-api)).
+- [基本的なマルチウィンドウ学習環境](https://mdn.github.io/dom-examples/window-management-api/) ([ソースコード](https://github.com/mdn/dom-examples/tree/main/window-management-api)参照)。
 - [Multi-window Platformer Game](https://googlechromelabs.github.io/multi-window-platformer-game/) (see the [source code](https://github.com/googlechromelabs/multi-window-platformer-game)).
 - [Window placement demo](https://michaelwasserman.github.io/window-placement-demo/) (see the [source code](https://github.com/michaelwasserman/window-placement-demo)).
 
