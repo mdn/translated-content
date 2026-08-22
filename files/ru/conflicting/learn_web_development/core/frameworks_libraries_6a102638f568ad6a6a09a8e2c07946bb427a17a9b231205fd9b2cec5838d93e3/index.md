@@ -1,11 +1,12 @@
 ---
-title: Сборка Angular приложений и другие ресурсы
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
+title: Фильтрация списка дел
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_6a102638f568ad6a6a09a8e2c07946bb427a17a9b231205fd9b2cec5838d93e3
+original_slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
 
-В финальной статье об Angular рассказывается, как создать полностью готовое приложение и предоставляются дополнительные ресурсы, которые помогут вам продолжить обучение
+Теперь перейдем к добавлению функционала позволяющего пользователям фильтровать свои задачи, чтобы они могли просматривать активные, завершенные или все элементы.
 
 <table>
   <tbody>
@@ -17,50 +18,75 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
     </tr>
     <tr>
       <th scope="row">Цель:</th>
-      <td>Изучить сборку Angular-приложения.</td>
+      <td>Добавить функционал фильтрации к вашему приложению.</td>
     </tr>
   </tbody>
 </table>
 
-## Сборка законченного приложения
+## Код фильтрации
 
-Теперь, когда вы закончили разработку своего приложения, вы можете запустить команду Angular CLI `build`.
-Когда вы запускаете команду `build` в директории `todo`, ваше приложение компилируется в директорию с названием `dist/`.
+Фильтрация элементов основана на свойстве `filter`, которое вы ранее добавили в `app.component.ts`:
 
-В директории `todo`, выполните следующие команды:
-
-```bash
-ng  build --prod
+```js
+filter: 'all' | 'active' | 'done' = 'all';
 ```
 
-CLI компилирует приложение и помещает результат в директорию `dist`.
-Флаг `--prod` команды `ng build` избавляется от всего, что вам не нужно в продакшене.
+Значение фильтра по умолчанию — `all`, но так же может быть `active` или `done`.
 
-## Развертывание вашего прилоежния
+## Добавление элементов управления фильтром
 
-Для развертывания вашего приложения вы можете скопировать содержимое папки `dist/my-project-name` на ваш веб-сервер.
-Поскольку это статичные файлы, вы можете разместить на любом веб-сервере способном обслуживать файлы, например:
+В `app.component.html`, добавьте следующий html перед кнопкой **Add** но над разделом, в котором перечислены элементы.
+В следующем снипете существующие секции в вашем HTML отмечены комментарии поэтому вы точно можете видеть где разместить кнопки.
 
-- Node.js
-- Java
-- .NET
+```html
+<!-- <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
+ -->
 
-Вы можете использовать любой бэкэнд, например [Firebase](https://firebase.google.com/docs/hosting), [Google Cloud](https://cloud.google.com/solutions/web-hosting), или [App Engine](https://cloud.google.com/appengine/docs/standard/python/getting-started/hosting-a-static-website).
+<!-- Кнопки, которые меняют отображение элементов на все, только активные или только выполненные -->
+<div class="btn-wrapper">
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'all'"
+    (click)="filter = 'all'">
+    All
+  </button>
 
-## Что дальше
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'active'"
+    (click)="filter = 'active'">
+    To Do
+  </button>
 
-На этом этапе вы создали базовое приложение, но ваше путешествие с Angular только начинается.
-Вы можете узнать больше изучив документацию Angular, например:
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'done'"
+    (click)="filter = 'done'">
+    Done
+  </button>
+</div>
 
-- [Tour of Heroes](https://angular.io/tutorial): подробное руководство, в котором рассматриваются функции Angular, такие как использование сервисов, навигация и получение данных с сервера.
-- Руководство по Angular-[компонентам](https://angular.io/guide/component-overview): серия статей по таким темам как жизненный цикл, взаимодействие компонентов и инкапсуляция представлений.
-- Руководство по [формам](https://angular.io/guide/forms-overview): статьи, которые проведут вас через создание реактивных форм в Angular, проверку ввода и построения динамических форм.
+<!-- <h2>\{{items.length}} item(s)</h2>
+        <ul>... -->
+```
+
+Нажатие на кнопки изменяет значение `filter`, что определяет отображаемые элементы `items`, а так же стили, применяемые к активной кнопке.
+
+- Если пользователь нажимает кнопку **All**, то отображаются все элементы.
+- Если пользователь нажимает кнопку **To do**, только элементы со значением свойства `done` равным `false` отображаются.
+- Если пользователь нажимает кнопку **Done**, только элементы со значением свойства `done` равным `true` отображаются.
+
+Привязка атрибута class, которая происходит с использованием квадратных скобок `[]`, управляет цветом текста кнопок.
+Привязка `[class.active]`, применяет класс `active` когда значение `filter` совпадает с выражением.
+Например, когда пользователь нажимает кнопку **Done**, которая устанавливает значение `filter` в `done`, выражение привязки класса `filter == 'done'` возвращает `true`.
+Когда значение `filter` равно `done`, Angular применяет класс `active` к кнопке **Done**, что делает цвет текста зеленым.
+Как только пользователь нажимает одну из других кнопок, значение `filter` больше не `done`, поэтому цвет текста больше не зеленый.
 
 ## Резюме
 
-На этом пока все. Надеемся, вам понравилось работать с Angular!
+Это было быстро! Поскольку у вас уже был частично реализован код фильтрации в `app.component.ts`, все что вам нужно было сделать — это отредактировать шаблон, чтобы добавить элементы управления для фильтрации. В следующей и последней статье рассматривается, как создать полностью готовое Angular-приложение и предоставляются дополнительные ресурсы для продолжения учебного пути.
 
-{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
 
 ## В это модуле
 
