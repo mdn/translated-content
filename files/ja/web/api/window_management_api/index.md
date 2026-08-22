@@ -42,7 +42,7 @@ const myWindow = window.open(
 
 ## 権限ポリシーの統合
 
-The {{httpheader("Permissions-Policy/window-management", "window-management")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) can be used to control permission to use the Window Management API. Specifically:
+{{httpheader("Permissions-Policy/window-management", "window-management")}} [Permissions-Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) を使用して、ウィンドウ管理 API を使用する権限を制御できます。具体的には：
 
 - Usage of the {{domxref("Window.getScreenDetails()")}} method. If blocked, its {{jsxref("Promise")}} will reject with a `NotAllowedError` exception.
 - Querying the {{domxref("Screen.isExtended", "Window.screen.isExtended")}} property. If blocked, it will always return `false`.
