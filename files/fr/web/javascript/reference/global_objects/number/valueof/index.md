@@ -1,50 +1,55 @@
 ---
-title: Number.prototype.valueOf()
+title: "Number : méthode valueOf()"
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`valueOf()`** de {{JSxRef("Number")}} retourne la valeur de ce nombre.
 
-La méthode **`valueOf()`** renvoie la valeur primitive correspondant à celle représentée par l'objet {{jsxref("Number")}}.
-
-{{InteractiveExample("JavaScript Demo: Number.valueOf()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Number.prototype.valueOf()")}}
 
 ```js interactive-example
 const numObj = new Number(42);
 console.log(typeof numObj);
-// Expected output: "object"
+// Sortie attendue : "object"
 
 const num = numObj.valueOf();
 console.log(num);
-// Expected output: 42
+// Sortie attendue : 42
 
 console.log(typeof num);
-// Expected output: "number"
+// Sortie attendue : "number"
 ```
 
 ## Syntaxe
 
-```js
-objetNumber.valueOf();
+```js-nolint
+valueOf()
 ```
+
+### Paramètre
+
+Aucun.
 
 ### Valeur de retour
 
-Un nombre qui représente la valeur primitive de l'objet {{jsxref("Number")}}.
+Un nombre représentant la valeur primitive de l'objet {{JSxRef("Number")}} défini.
 
 ## Description
 
-Cette méthode est généralement utilisée de façon interne au moteur JavaScript et n'est pas utilisée de façon explicite dans du code JavaScript.
+Cette méthode est généralement appelée en interne par JavaScript et non explicitement dans le code web.
 
 ## Exemples
 
-### Utiliser `valueOf`
+### Utiliser `valueOf()`
 
 ```js
-var numObj = new Number(10);
+const numObj = new Number(10);
 console.log(typeof numObj); // object
 
-var num = numObj.valueOf();
+const num = numObj.valueOf();
 console.log(num); // 10
 console.log(typeof num); // number
 ```
@@ -59,4 +64,4 @@ console.log(typeof num); // number
 
 ## Voir aussi
 
-- {{jsxref("Number.prototype.toString()", "Number.prototype.toSource()")}}
+- La méthode {{JSxRef("Object.prototype.valueOf()")}}
