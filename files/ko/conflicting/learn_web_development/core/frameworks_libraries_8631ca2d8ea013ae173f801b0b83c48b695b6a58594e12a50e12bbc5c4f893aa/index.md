@@ -1,7 +1,7 @@
 ---
 title: Vue 시작하기
-slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_8631ca2d8ea013ae173f801b0b83c48b695b6a58594e12a50e12bbc5c4f893aa
+original_slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_resources","Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
