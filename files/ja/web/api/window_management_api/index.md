@@ -62,7 +62,7 @@ const myWindow = window.open(
 
 ### 他のインターフェイスへの拡張
 
-- The `Screen` {{domxref("Screen.change_event", "change")}} event {{securecontext_inline}}
+- `Screen` {{domxref("Screen.change_event", "change")}} イベント {{securecontext_inline}}
   - : Fired on a specific screen when it changes in some way — for example available width or height, or orientation.
 - {{domxref("Screen.isExtended")}} {{securecontext_inline}}
   - : A boolean property that returns `true` if the user's device has multiple screens, and `false` if not.
