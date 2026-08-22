@@ -11,7 +11,7 @@ l10n:
 
 ## 概念と使用方法
 
-Historically, we have used {{domxref("Window.open()")}} to manage browser windows related to the current application — opening new windows, resizing and closing existing windows, etc. For example, to open a 400×300 window 50 pixels from the left and top of your screen:
+これまで、現在のアプリケーションに関連するブラウザーウィンドウ（新しいウィンドウを開く、既存のウィンドウのサイズ変更や閉じるなど）を管理するために、 {{domxref("Window.open()")}} が使用されてきました。例えば、画面の左端と上端から 50 ピクセルの位置に 400×300 のウィンドウを開く場合は、次のようになります。
 
 ```js
 const myWindow = window.open(
