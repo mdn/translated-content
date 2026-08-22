@@ -66,17 +66,17 @@ JavaScript 프레임워크는 최신 프론트엔드 웹 개발의 필수 부분
 >
 > 우리의 버전에 대해 여러분의 코드를 확인해야 하는 경우, 우리의 [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc)에서 샘플 Ember app 코드의 완성된 버전을 볼 수 있습니다. 라이브 버전을 실행하려면 <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> 을 참조하세요. (여기에는 튜토리얼에서 다루지 않은 몇 가지 기능도 포함됩니다.)
 
-- [1. Ember 시작하기](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+- [1. Ember 시작하기](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 첫 번째 Ember 글에서는 Ember 의 작동방식과 유용한 기능에 대해 살펴봅니다. 로컬에 Ember 툴체인을 설치하고, 샘플 앱을 만들어 개발 준비를 위한 초기 설정을 수행합니다.
-- [2. Ember app 구조와 컴포넌트화](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+- [2. Ember app 구조와 컴포넌트화](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이 글에서는 TodoMVC Ember app의 구조를 설계하는 방법에 대해 알아봅니다. HTML을 추가하고, HTML 구조를 컴포넌트로 나눕니다.
-- [3. Ember 상호작용(interactivity): Events, classes, state](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+- [3. Ember 상호작용(interactivity): Events, classes, state](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이제 앱에 상호작용하는 기능을 추가하여 새로운 할일(todo) 항목을 추가하고 표시할 수 있습니다. 그 과정에서 Ember 이벤트를 사용하는 방법을 살펴보겠습니다. 상호작용하는 기능을 제어하기 위해 JavaScript 코드를 포함하는 컴포넌트 클래스를 만들고, 앱의 데이터 상태(state)를 추적하는 서비스를 설정합니다.
-- [4. Ember 상호작용: 푸터 기능, 조건부 렌더링](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+- [4. Ember 상호작용: 푸터 기능, 조건부 렌더링](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이제 앱에서 푸터 기능을 시작할 차례입니다. 아직 완료하지 않은 할일(todo) 항목의 수를 카운트하고, 완료된 할일(체크표시한 체크박스)에 스타일을 올바르게 적용합니다. 또한 "Clear completed" 버튼을 연결합니다. 이 과정에서 템플릿에서 조건부 렌더링을 사용하는 방법을 배웁니다.
-- [5. Ember 라우팅](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+- [5. Ember 라우팅](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이 글에서는 라우팅 또는 URL기반 필터링에 대해 설명합니다. 이를 사용하여 todo의 세 가지 뷰("All", "Active", "Completed")를 고유한 URL로 제공합니다.
-- [6. Ember 리소스와 문제해결](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+- [6. Ember 리소스와 문제해결](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 마지막 Ember 글은 학습을 진행하는데 사용할 수 있는 리소스 목록, 유용한 문제 해결(troubleshooting)에 관한 내용, 그외 정보를 제공합니다.
 
 ## Vue tutorials
@@ -86,24 +86,24 @@ JavaScript 프레임워크는 최신 프론트엔드 웹 개발의 필수 부분
 >
 > 우리의 버전에 대해 여러분의 코드를 확인해야 하는 경우, 우리의 [todo-vue repository](https://github.com/mdn/todo-vue)에서 샘플 Vue app 코드의 완성된 버전을 볼 수 있습니다. 라이브 버전을 실행하려면 <https://mdn.github.io/todo-vue/dist/> 를 참조하세요.
 
-- [1. Vue 시작하기](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
+- [1. Vue 시작하기](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이제 세 번째 프레임워크 뷰를 소개합니다. 이 글에서는 Vue의 배경을 약간 살펴보고, 설치 방법과 새 프로젝트를 만드는 방법에 대해 알아봅니다. 전체 프로젝트의 HLS(high-level structure) 와 각각의 컴포넌트를 공부합니다. 또한, 프로젝트를 로컬에서 실행하는 방법과 예제 작성을 시작할 준비를 합니다.
-- [2. 첫 번째 Vue 컴포넌트 만들기](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+- [2. 첫 번째 Vue 컴포넌트 만들기](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이제 Vue에 대해 자세히 살펴보고 우리만의 커스텀 컴포넌트를 만들겠습니다. Todo list의 각 항목을 나타내는 컴포넌트를 만드는 것으로 시작합니다. 그 과정에서, 다른 컴포넌트 내에서 컴포넌트를 호출하고, props(properties)를 통해 데이터를 전달하고 데이터 상태를 저장하는 등 중요한 개념을 학습합니다.
-- [3. Vue 컴포넌트 리스트 렌더링](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+- [3. Vue 컴포넌트 리스트 렌더링](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이 시점에서 우리는 충분히 잘 작동하는 컴포넌트를 얻었습니다. 이제 앱에 여러 `ToDoItem` 컴포넌트를 추가할 준비가 되었습니다. 이 글에서는 `App.vue` 컴포넌트에 todo 항목 데이터 셋을 추가하는 방법을 살펴보고, `v-for` 지시문(directive)을 사용하여 `ToDoItem` 컴포넌트를 반복하여 출력합니다.
 
-- [4. 새로운 todo form추가: Vue events, methods, models](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+- [4. 새로운 todo form추가: Vue events, methods, models](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이제 샘플 데이터와 각 비트의 데이터를 가져와서 앱의 `ToDoItem` 내에 렌더링하는 루프가 준비되었습니다. 다음으로 필요한 것은 사용자가 todo 항목을 앱에 입력할 수 있게 하는 기능입니다. 이를 위해 text `<input>`, 데이터가 제출될 때 발생하는 이벤트, 데이터 제출 시 데이터를 추가하고 목록을 다시 렌더링하기 위한 방법, 데이터를 제어하는 모델이 필요합니다. 이것이 이 글에서 다룰 내용입니다.
-- [5. Styling Vue components with CSS](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+- [5. Styling Vue components with CSS](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 마침내 우리 앱이 좀 더 멋지게 보입니다. 이 글에서는 CSS를 사용하여 Vue 컴포넌트를 스타일링하는 다양한 방법을 살펴봅니다.
-- [6. Vue computed properties 사용하기](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+- [6. Vue computed properties 사용하기](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이 글에서는 computed properties 라고 불리는 Vue 기능을 사용하여 완료된 todo 항목 수를 표시하는 카운터를 추가합니다. 이들은 메서드와 유사하게 작동하지만 종속성 중 하나가 변경될 때만 다시 실행됩니다.
-- [7. Vue 조건부 렌더링: 이미 존재하는 todo 항목 편집](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+- [7. Vue 조건부 렌더링: 이미 존재하는 todo 항목 편집](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이제 우리가 아직 놓치고 있는 주요 기능 중 한 기능의 주요한 부분 중 하나를 추가 할 차례입니다. 이를 위해 Vue의 조건부 렌더링 기능 `v-if` 와 `v-else` 를 활용하여, 이미 존재하는 todo 항목 view 와 todo 항목 레이블을 업데이트 할 수 있는 편집 view 간에 전환할 수 있습니다. 또한 todo 항목들을 삭제하는 기능을 추가하는 방법도 살펴봅니다.
-- [8. Vue refs를 통한 포커스 관리](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+- [8. Vue refs를 통한 포커스 관리](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이제 거의 다 만들었습니다. 마지막으로 살펴볼 기능은 포커스 관리와 앱의 키보드 접근성을 향상시키는 방법입니다. Vue refs를 사용하여 이를 처리하는 방법을 살펴보겠습니다. ref는 가상 DOM 아래의 기본 DOM 노드에 직접 접근하거나 한 컴포넌트에서 하위 컴포넌트의 내부 DOM 구조로 직접 접근할 수 있는 고급 기능입니다.
-- [9. Vue resources](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+- [9. Vue resources](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이제 Vue에 대한 학습을 마무리 할 것입니다. 학습을 진행하는데 사용할 수 있는 리소스 목록과 유용한 팁이 있습니다.
 
 ## Svelte tutorials
@@ -113,21 +113,21 @@ JavaScript 프레임워크는 최신 프론트엔드 웹 개발의 필수 부분
 >
 > 코드를 우리 버전과 비교하여 확인해야 하는 경우, [mdn-svelte-tutorial](https://github.com/opensas/mdn-svelte-tutorial) repo에서 각각의 문서 뒤에 있어야 하는 샘플 Svelte 앱 코드의 완성된 버전을 볼 수 있습니다. 라이브 버전을 실행하려면 Svelte REPL 을 참조하세요 <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 
-- [1. Svelte 시작하기](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)
+- [1. Svelte 시작하기](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이 문서에서는 [Svelte framework](https://svelte.dev/)에 대한 간략한 소개를 제공합니다. Svelte의 작동 방식과 지금까지 살펴본 나머지 프레임워크 및 도구와 차별화되는 점을 살펴보겠습니다. 그 다음 개발 환경 구성하기, 샘플 앱 만들기, 프로젝트 구조 이해하기, 로컬에서 실행하기와 프로덕션 용으로 빌드하는 방법을 알아보겠습니다.
-- [2. Svelte Todo list app 시작하기](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning)
+- [2. Svelte Todo list app 시작하기](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이제 Svelte가 작동하는 방식에 대한 기본적인 이해를 마쳤으므로, 예제 앱(todo list) 빌드를 시작하겠습니다. 이 문서에서는 먼저 앱에서 구현해야할 기능을 살펴보고, 그 다음 `Todos.svelte` 컴포넌트를 만들어 정적 마크업과 스타일을 배치합니다. 그리고 To-Do list 앱 기능 개발을 시작할 준비를 합니다. 이 내용은 다음 문서에서 계속 설명하겠습니다.
-- [3. Svelte의 동적 동작: 변수와 props 작업](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props)
+- [3. Svelte의 동적 동작: 변수와 props 작업](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이제 마크업과 스타일이 준비되었으므로 Svelte To-Do list 앱에 필요한 기능 개발을 시작할 수 있습니다. 이 문서에서는 변수와 props를 사용하여 앱을 동적으로 만듭니다. 할일(todo)을 추가하거나 삭제하고, 완료로 표시하고, 상태별로 필터링 할 수 있습니다.
-- [4. Svelte app 컴포넌트화](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_components)
+- [4. Svelte app 컴포넌트화](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이 문서의 핵심 목표는 앱을 관리 가능한 컴포넌트로 나누고, 이들간에 정보를 공유하는 방법을 살펴 보는 것입니다. 앱을 컴포넌트화 하고 기능을 추가하여 기존 컴포넌트를 업데이트 할 수 있도록 합니다.
-- [5. 향상된 Svelte: 반응성, 생명주기, 접근성](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+- [5. 향상된 Svelte: 반응성, 생명주기, 접근성](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이 문서에서는 앱의 최종 기능을 추가하고 앱을 더욱 컴포넌트화 합니다. 객체와 배열의 업데이트와 관련된 반응성(reactivity) 이슈를 처리하는 방법을 배웁니다. 일반적인 함정을 피하기 위해 우리는 Svelte의 반응성 시스템을 좀 더 깊이 공부해야 합니다. 또한 접근성(accessibility ) 관련 이슈를 비롯해 좀 더 많은 내용을 해결하는 방법도 살펴보겠습니다.
-- [6. Svelte stores 사용하기](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+- [6. Svelte stores 사용하기](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이 문서에서는 Svelte에서 상태 관리를 처리하는 또 다른 방법을 보여줍니다. [스토어(Stores](https://svelte.dev/tutorial/writable-stores)). 스토어는 값을 갖고있는 글로벌 데이터 저장소입니다. 컴포넌트는 스토어를 구독하고 값이 변경되면 알림을 받을 수 있습니다.
-- [7. Svelte의 타입스크립트 지원](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+- [7. Svelte의 타입스크립트 지원](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이제 Svelte 애플리케이션에서 타입스크립트를 사용하는 방법을 배웁니다. 먼저 타입스크립트가 무엇이며 어떤 이점이 있는지 알아봅니다. 그 다음 타입스크립트 파일과 함께 작동하도록 프로젝트를 구성하는 방법을 살펴봅니다. 마지막으로 앱을 검토하여 타입스크립트 기능을 최대한 활용하기 위해 어떤 수정을 해야 하는지 살펴보겠습니다.
-- [8. 배포(Deployment)와 다음단계](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+- [8. 배포(Deployment)와 다음단계](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : 이 마지막 문서에서는 애플리케이션을 배포하고 온라인으로 가져오는 방법을 살펴봅니다. 또한 Svelte 학습 여정을 계속하기 위해 알아야 할 몇 가지 리소스를 공유합니다.
 
 ## Which frameworks did we choose?
