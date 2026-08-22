@@ -44,7 +44,7 @@ const myWindow = window.open(
 
 {{httpheader("Permissions-Policy/window-management", "window-management")}} [Permissions-Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) を使用して、ウィンドウ管理 API を使用する権限を制御できます。具体的には：
 
-- Usage of the {{domxref("Window.getScreenDetails()")}} method. If blocked, its {{jsxref("Promise")}} will reject with a `NotAllowedError` exception.
+- {{domxref("Window.getScreenDetails()")}} メソッドの使用がブロックされた場合、返される {{jsxref("Promise")}} は `NotAllowedError` 例外で拒否されます。
 - Querying the {{domxref("Screen.isExtended", "Window.screen.isExtended")}} property. If blocked, it will always return `false`.
 
 Developers can explicitly grant permission for an {{htmlelement("iframe")}} to use Window Management via the `allow` attribute:
