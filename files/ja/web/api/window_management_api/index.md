@@ -27,7 +27,7 @@ const myWindow = window.open(
 
 ウィンドウ管理 APIは、より堅牢で柔軟なウィンドウ管理機能を提供します。この API を使用すると、ディスプレイが複数の画面に拡張されているかどうかを確認したり、各画面の情報を個別に取得したりできるため、ウィンドウを各画面上の任意の場所に配置することが可能です。さらに、利用可能な画面の変更に対応するためのイベントハンドラーや、どの画面をフルスクリーンモードにするか（あるいはフルスクリーンにしないか）を選択できる新しいフルスクリーン機能、そしてAPIへのアクセスを制御する権限管理機能も備えています。
 
-For details on how to use it, see [Using the Window Management API](/en-US/docs/Web/API/Window_Management_API/Using).
+使用方法の詳細については、「[ウィンドウ管理 API の使用](/ja/docs/Web/API/Window_Management_API/Using)」を参照してください。
 
 > [!NOTE]
 > In modern browsers, a separate user gesture event is required for each `Window.open()` call, for security purposes. This prevents sites from spamming users with lots of windows. However, this poses an issue for multi-window applications. To work around this limitation, you can design your applications to open no more than one new window at once, reuse existing windows to display different pages, or advise users on how to update their browser settings to allow multiple windows.
