@@ -71,7 +71,7 @@ const myWindow = window.open(
 - {{domxref("Window.getScreenDetails()")}} {{securecontext_inline}}
   - : {{domxref("ScreenDetails")}} オブジェクトのインスタンスで解決される {{jsxref("Promise")}} を返します。
 
-## Examples
+## 例
 
 You can find full examples here:
 
