@@ -65,7 +65,7 @@ const myWindow = window.open(
 - `Screen` {{domxref("Screen.change_event", "change")}} イベント {{securecontext_inline}}
   - : 特定の画面で発生します。その画面の利用可能な幅や高さ、向きなどが変化したときです。
 - {{domxref("Screen.isExtended")}} {{securecontext_inline}}
-  - : A boolean property that returns `true` if the user's device has multiple screens, and `false` if not.
+  - : ユーザーのデバイスが複数の画面を持っている場合は `true`、持っていない場合は `false` を返す真偽値です。
 - {{domxref("Element.requestFullscreen()")}}, the `screen` option
   - : Specifies on which screen you want to put the element in fullscreen mode.
 - {{domxref("Window.getScreenDetails()")}} {{securecontext_inline}}
