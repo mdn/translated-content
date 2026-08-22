@@ -34,7 +34,7 @@ const myWindow = window.open(
 
 ### ユースケース
 
-The Window Management API is useful in cases such as:
+ウィンドウ管理 APIは、次のような場合に役立ちます。
 
 - Multi-window graphics editors and audio processors that may wish to arrange editing tools and panels across different screens.
 - Virtual trading desks that want to show market trends in multiple windows and put specific windows of interest in fullscreen mode.
