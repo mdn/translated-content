@@ -1,45 +1,44 @@
 ---
-title: Number.isFinite()
+title: "Number : méthode statique isFinite()"
+short-title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Number.isFinite()`** permet de déterminer si la valeur fournie est un nombre fini — c'est-à-dire qu'elle vérifie qu'une valeur donnée est un nombre, et que ce nombre n'est ni `Infinity` positif, ni `Infinity` négatif, ni `NaN`.
 
-La méthode **`Number.isFinite()`** permet de déterminer si la valeur fournie est un nombre fini.
-
-{{InteractiveExample("JavaScript Demo: Number.isFinite()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Number.isFinite()")}}
 
 ```js interactive-example
 console.log(Number.isFinite(1 / 0));
-// Expected output: false
+// Sortie attendue : false
 
 console.log(Number.isFinite(10 / 5));
-// Expected output: true
+// Sortie attendue : true
 
 console.log(Number.isFinite(0 / 0));
-// Expected output: false
+// Sortie attendue : false
 ```
 
 ## Syntaxe
 
-```js
-Number.isFinite(valeurÀTester);
+```js-nolint
+Number.isFinite(value)
 ```
 
 ### Paramètres
 
-- `valeurÀTester`
+- `value`
   - : La valeur dont on souhaite savoir si elle est finie.
 
 ### Valeur de retour
 
-Un booléen indiquant si la valeur passée en argument est un nombre fini.
-
-## Description
-
-Par rapport à la fonction de l'objet global {{jsxref("isFinite()")}} qui convertit l'argument donné en un nombre, la fonction `Number.isFinite` ne convertit pas l'argument et ne renvoie pas `true`.
+La valeur booléenne `true` si la valeur donnée est un nombre fini. Sinon `false`.
 
 ## Exemples
+
+### Utiliser `isFinite()`
 
 ```js
 Number.isFinite(Infinity); // false
@@ -48,42 +47,17 @@ Number.isFinite(-Infinity); // false
 
 Number.isFinite(0); // true
 Number.isFinite(2e64); // true
-
-Number.isFinite("0"); // false, ce qui aurait
-// renvoyé true avec isFinite("0")
-
-Number.isFinite(null); // false, ce qui aurait
-// renvoyé true avc isFinite(null)
 ```
 
-## Prothèse d'émulation (_polyfill_)
+### Différence entre `Number.isFinite()` et le `isFinite()` natif
+
+En comparaison avec la fonction native {{JSxRef("isFinite()")}} de l'objet global, cette méthode ne convertit pas d'abord le paramètre en nombre. Cela signifie que seules les valeurs de type nombre _et_ finies retournent `true`, et que les non-nombres retournent toujours `false`.
 
 ```js
-// Number.isFinite polyfill
-// http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isfinite
-if (typeof Number.isFinite !== "function") {
-  Number.isFinite = function isFinite(value) {
-    // 1. Si Type(number) n'est pas Number, on renvoie false.
-    if (typeof value !== "number") {
-      return false;
-    }
-    // 2. Si le nombre est NaN, +∞, ou −∞, on renvoie false.
-    if (value !== value || value === Infinity || value === -Infinity) {
-      return false;
-    }
-    // 3. Sinon on renvoie true.
-    return true;
-  };
-}
-```
-
-Deuxième version plus concise qui utilise la méthode globale `isFinite`
-
-```js
-if (Number.isFinite === undefined)
-  Number.isFinite = function (value) {
-    return typeof value === "number" && isFinite(value);
-  };
+isFinite("0"); // true ; converti en nombre 0
+Number.isFinite("0"); // false
+isFinite(null); // true ; converti en nombre 0
+Number.isFinite(null); // false
 ```
 
 ## Spécifications
@@ -96,5 +70,7 @@ if (Number.isFinite === undefined)
 
 ## Voir aussi
 
-- L'objet {{jsxref("Number")}} auquel appartient cette méthode
-- La méthode {{jsxref("isFinite()")}} de l'objet global
+- [La prothèse d'émulation de `Number.isFinite` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
+- [La prothèse d'émulation es-shims de `Number.isFinite` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isfinite)
+- L'objet {{JSxRef("Number")}}
+- La fonction native {{JSxRef("isFinite()")}}
