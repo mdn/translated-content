@@ -37,7 +37,7 @@ const myWindow = window.open(
 ウィンドウ管理 APIは、次のような場合に役立ちます。
 
 - マルチウィンドウのグラフィックエディターやオーディオプロセッサーで、編集ツールやパネルを複数の画面に配置したい場合。
-- Virtual trading desks that want to show market trends in multiple windows and put specific windows of interest in fullscreen mode.
+- 仮想トレーディングデスクで、複数のウィンドウに市場動向を表示し、注目している特定のウィンドウを全画面モードにしたい場合。
 - Slideshow apps that want to show speaker notes on the internal primary screen and the presentation on an external projector.
 
 ## Permissions policy integration
