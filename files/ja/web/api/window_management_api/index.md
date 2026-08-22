@@ -53,7 +53,7 @@ const myWindow = window.open(
 <iframe src="3rd-party.example" allow="window-management"></iframe>
 ```
 
-## Interfaces
+## インターフェイス
 
 - {{domxref("ScreenDetails")}} {{securecontext_inline}}
   - : Represents the details of all the screens available to the user's device.
