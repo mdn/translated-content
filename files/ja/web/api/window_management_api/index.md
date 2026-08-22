@@ -79,7 +79,7 @@ const myWindow = window.open(
 - [マルチウィンドウプラットフォーマーゲーム](https://googlechromelabs.github.io/multi-window-platformer-game/) ([ソースコード](https://github.com/googlechromelabs/multi-window-platformer-game)参照)。
 - [ウィンドウ配置デモ](https://michaelwasserman.github.io/window-placement-demo/) ([ソースコード](https://github.com/michaelwasserman/window-placement-demo)参照)。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
