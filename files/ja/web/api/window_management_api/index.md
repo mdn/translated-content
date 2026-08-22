@@ -40,7 +40,7 @@ const myWindow = window.open(
 - 仮想トレーディングデスクで、複数のウィンドウに市場動向を表示し、注目している特定のウィンドウを全画面モードにしたい場合。
 - スライドショーアプリで、内蔵のプライマリ画面に発表者ノートを表示し、外付けプロジェクターにプレゼンテーションを表示したい場合。
 
-## Permissions policy integration
+## 権限ポリシーの統合
 
 The {{httpheader("Permissions-Policy/window-management", "window-management")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) can be used to control permission to use the Window Management API. Specifically:
 
