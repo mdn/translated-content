@@ -60,7 +60,7 @@ const myWindow = window.open(
 - {{domxref("ScreenDetailed")}} {{securecontext_inline}}
   - : ユーザーのデバイスで使用可能な、特定の 1 つの画面の詳細を表します。
 
-### Extensions to other interfaces
+### 他のインターフェイスへの拡張
 
 - The `Screen` {{domxref("Screen.change_event", "change")}} event {{securecontext_inline}}
   - : Fired on a specific screen when it changes in some way — for example available width or height, or orientation.
