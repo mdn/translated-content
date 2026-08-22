@@ -38,7 +38,7 @@ const myWindow = window.open(
 
 - マルチウィンドウのグラフィックエディターやオーディオプロセッサーで、編集ツールやパネルを複数の画面に配置したい場合。
 - 仮想トレーディングデスクで、複数のウィンドウに市場動向を表示し、注目している特定のウィンドウを全画面モードにしたい場合。
-- Slideshow apps that want to show speaker notes on the internal primary screen and the presentation on an external projector.
+- スライドショーアプリで、内蔵のプライマリ画面に発表者ノートを表示し、外付けプロジェクターにプレゼンテーションを表示したい場合。
 
 ## Permissions policy integration
 
