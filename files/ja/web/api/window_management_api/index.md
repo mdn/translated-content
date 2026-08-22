@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Window Management API")}}
 
-The **Window Management API** allows you to get detailed information on the displays connected to your device and more easily place windows on specific screens, paving the way towards more effective multi-screen applications.
+**ウィンドウ管理 API** を使用すると、デバイスに接続されたディスプレイに関する詳細情報を取得したり、特定の画面にウィンドウをより容易に配置したりすることが可能になり、より効果的なマルチスクリーン・アプリケーションの実現につながります。
 
 ## Concepts and usage
 
