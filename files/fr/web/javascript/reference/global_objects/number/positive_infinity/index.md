@@ -1,61 +1,66 @@
 ---
-title: Number.POSITIVE_INFINITY
+title: "Number : propriété statique POSITIVE_INFINITY"
+short-title: POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La propriété statique **`Number.POSITIVE_INFINITY`** représente la valeur d'infini positif.
 
-La propriéte **`Number.POSITIVE_INFINITY`** représente l'infini (positif).
-
-{{InteractiveExample("JavaScript Demo: Number.POSITIVE_INFINITY")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Number.POSITIVE_INFINITY")}}
 
 ```js interactive-example
 function checkNumber(bigNumber) {
   if (bigNumber === Number.POSITIVE_INFINITY) {
-    return "Process number as Infinity";
+    return "Représente un nombre comme Infinity";
   }
   return bigNumber;
 }
 
 console.log(checkNumber(Number.MAX_VALUE));
-// Expected output: 1.7976931348623157e+308
+// Sortie attendue : 1.7976931348623157e+308
 
 console.log(checkNumber(Number.MAX_VALUE * 2));
-// Expected output: "Process number as Infinity"
+// Sortie attendue : "Représente un nombre comme Infinity"
 ```
 
-{{js_property_attributes(0,0,0)}}
+## Valeur
+
+La même que la valeur de la propriété native {{JSxRef("Infinity")}}.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-La valeur de `Number.POSITIVE_INFINITY` est identique à la valeur de la propriété de l'objet global {{jsxref("Infinity")}}.
+La valeur `Number.POSITIVE_INFINITY` se comporte légèrement différemment de l'infini au sens mathématique&nbsp;:
 
-Cette valeur possède un comportement légèrement différent de l'infini au sens mathématique :
+- Toute valeur positive, y compris `POSITIVE_INFINITY`, multipliée par `POSITIVE_INFINITY` est `POSITIVE_INFINITY`.
+- Toute valeur négative, y compris {{JSxRef("Number/NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, multipliée par `POSITIVE_INFINITY` est {{JSxRef("Number/NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.
+- Tout nombre positif divisé par `POSITIVE_INFINITY` est [zéro positif <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Signed_zero) (comme défini dans [IEEE 754 <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/IEEE_754)).
+- Tout nombre négatif divisé par `POSITIVE_INFINITY` est [zéro négatif <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Signed_zero) (comme défini dans [IEEE 754 <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/IEEE_754)).
+- Le zéro multiplié par `POSITIVE_INFINITY` est {{JSxRef("NaN")}}.
+- {{JSxRef("NaN")}} multiplié par `POSITIVE_INFINITY` est {{JSxRef("NaN")}}.
+- `POSITIVE_INFINITY`, divisé par toute valeur négative sauf {{JSxRef("Number/NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, est {{JSxRef("Number/NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.
+- `POSITIVE_INFINITY`, divisé par toute valeur positive sauf `POSITIVE_INFINITY`, est `POSITIVE_INFINITY`.
+- `POSITIVE_INFINITY`, divisé par {{JSxRef("Number/NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} ou `POSITIVE_INFINITY`, est {{JSxRef("NaN")}}.
+- `Number.POSITIVE_INFINITY > x` est vrai pour tout nombre _x_ qui n'est pas `POSITIVE_INFINITY`.
 
-- Tout valeur positive, y compris `POSITIVE_INFINITY,` multipliée par `POSITIVE_INFINITY` sera égale à `POSITIVE_INFINITY`.
-- Toute valeur négative, y compris {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, multipliée par `POSITIVE_INFINITY` sera égale à `NEGATIVE_INFINITY`.
-- Zéro multiplié par `POSITIVE_INFINITY` sera égal à {{jsxref("NaN")}}.
-- NaN multiplié par `POSITIVE_INFINITY` sera égal à NaN.
-- `POSITIVE_INFINITY`, divisé par n'importe quelle valeur négative, à l'exception de `NEGATIVE_INFINITY`, sera égal à `NEGATIVE_INFINITY`.
-- `POSITIVE_INFINITY`, divisé par n'importe quelle valeur positive, à l'exception de `POSITIVE_INFINITY`, sera égal à `POSITIVE_INFINITY`.
-- `POSITIVE_INFINITY`, divisé par `NEGATIVE_INFINITY` ou `POSITIVE_INFINITY`, sera égal NaN.
-- Tout nombre positif divisé par `POSITIVE_INFINITY` sera égal au zéro positif.
-- Tout nombre négatif divisé par `POSITIVE_INFINITY` sera égal au zéro négatif.
+Vous pouvez utiliser la propriété `Number.POSITIVE_INFINITY` pour indiquer une condition d'erreur qui retourne un nombre fini en cas de succès. Notez, cependant, que {{JSxRef("NaN")}} est plus approprié dans un tel cas.
 
-Il est possible d'utiliser la propriété `Number.POSITIVE_INFINITY` pour faire un test d'erreur sur une valeur qu'on attendait finie. Cependant, la méthode {{jsxref("isFinite")}} sera plus appropriée dans ce cas.
+Comme `POSITIVE_INFINITY` est une propriété statique de {{JSxRef("Number")}}, vous l'utilisez toujours comme `Number.POSITIVE_INFINITY`, plutôt que comme une propriété d'une valeur numérique.
 
-`Number.POSITIVE_INFINITY` est une propriété statique de {{jsxref("Number")}} et il n'est donc pas nécessaire de créer un objet {{jsxref("Number")}} afin d'utiliser cette propriété.
-
-## Exemple
+## Exemples
 
 ### Utiliser `POSITIVE_INFINITY`
 
-Dans l'exemple qui suit, on affecte une valeur plus grande que la valeur maximale à la variable `grosNombre`. Lors de l'exécution de l'instruction `if`, `grosNombre` aura la valeur `Infinity`, pour continuer, on met à jour `grosNombre` avec une valeur plus acceptable.
+Dans l'exemple qui suit, la variable `grandNombre` se voit affecter une valeur supérieure à la valeur maximale. Lorsque l'instruction {{JSxRef("Statements/if...else", "if")}} s'exécute, `grandNombre` a la valeur `Infinity`, donc `grandNombre` est défini sur une valeur plus gérable avant de continuer.
 
 ```js
-var grosNombre = Number.MAX_VALUE * 2;
-if (grosNombre == Number.POSITIVE_INFINITY) {
-  grosNombre = renvoyerUnNombreFini();
+let grandNombre = Number.MAX_VALUE * 2;
+
+if (grandNombre == Number.POSITIVE_INFINITY) {
+  grandNombre = retournerUnNombreFini();
 }
 ```
 
@@ -69,7 +74,7 @@ if (grosNombre == Number.POSITIVE_INFINITY) {
 
 ## Voir aussi
 
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Number.isFinite()")}}
-- {{jsxref("Infinity")}}
-- {{jsxref("isFinite")}}
+- La propriété statique {{JSxRef("Number.NEGATIVE_INFINITY")}}
+- La méthode statique {{JSxRef("Number.isFinite()")}}
+- La propriété native {{JSxRef("Infinity")}}
+- La fonction native {{JSxRef("isFinite()")}}
