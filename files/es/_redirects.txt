@@ -1392,11 +1392,12 @@
 /es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks	/es/docs/Learn_web_development/Core/Frameworks_libraries
 /es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components	/es/docs/Learn_web_development/Core/Frameworks_libraries/React_components
 /es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started	/es/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started
-/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started	/es/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
+/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started	/es/docs/conflicting/Learn_web_development/Core/Frameworks_libraries
 /es/docs/Learn/Tools_and_testing/Cross_browser_testing	/es/docs/Learn_web_development/Extensions/Testing
 /es/docs/Learn/Tools_and_testing/GitHub	/es/docs/Learn_web_development/Core/Version_control
 /es/docs/Learn/Tools_and_testing/Understanding_client-side_tools	/es/docs/Learn_web_development/Extensions/Client-side_tools
 /es/docs/Learn/Using_Github_pages	/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
+/es/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started	/es/docs/conflicting/Learn_web_development/Core/Frameworks_libraries
 /es/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Math	/es/docs/Learn_web_development/Core/Scripting/Test_your_skills/Math
 /es/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Strings	/es/docs/Learn_web_development/Core/Scripting/Test_your_skills/Strings
 /es/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/es/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
