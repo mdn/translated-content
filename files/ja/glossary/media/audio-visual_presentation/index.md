@@ -1,18 +1,18 @@
 ---
-title: Media (Audio-visual presentation)
+title: Media (メディア) (音声・映像)
 slug: Glossary/Media/Audio-visual_presentation
-page-type: glossary-definition
-sidebar: glossarysidebar
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-The term **media** (more accurately, **multimedia**) refers to audio, video, or combined audio-visual material such as music, recorded speech, movies, TV shows, or any other form of content that is presented over a period of time.
+**メディア**（より正確には **マルチメディア**）という用語は、音声、動画、または音声と映像を組み合わせた素材を指します。これには、音楽、録音された音声、映画、テレビ番組、その他一定の時間にわたって提示されるあらゆる形式のコンテンツなどがあります。
 
-More broadly, media may include still images such as photographs or other still images.
+より広い意味では、メディアには写真などの静止画も含まれることがあります。
 
-Media content can be recorded, played back, presented, and at times interacted with in various ways.
+メディアコンテンツは、さまざまな方法で記録、再生、提示でき、ときには操作することもできます。
 
-## See also
+## 関連情報
 
-- [Multimedia](https://en.wikipedia.org/wiki/Multimedia) on Wikipedia
-- [Web media technologies](/en-US/docs/Web/Media): a guide to all the ways media can be used in web content
-- {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements, used to present media in {{Glossary("HTML")}} documents
+- Wikipedia の[マルチメディア](https://ja.wikipedia.org/wiki/マルチメディア)
+- [ウェブメディア技術](/ja/docs/Web/Media): ウェブコンテンツでメディアを利用するさまざまな方法についてのガイド
+- {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素は、{{Glossary("HTML")}} 文書でメディアを提示するために使用します。
