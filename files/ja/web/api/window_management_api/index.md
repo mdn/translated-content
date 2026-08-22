@@ -69,7 +69,7 @@ const myWindow = window.open(
 - {{domxref("Element.requestFullscreen()")}}, `screen` オプション
   - : 要素を全画面モードで表示したい画面を指定します。
 - {{domxref("Window.getScreenDetails()")}} {{securecontext_inline}}
-  - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("ScreenDetails")}} object instance.
+  - : {{domxref("ScreenDetails")}} オブジェクトのインスタンスで解決される {{jsxref("Promise")}} を返します。
 
 ## Examples
 
