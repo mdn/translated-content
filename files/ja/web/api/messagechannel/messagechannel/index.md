@@ -27,8 +27,8 @@ new MessageChannel()
 ## 例
 
 次のコードブロックでは、`MessageChannel()` コンストラクターを使用して作成された新しいチャンネルを知ることができます。
-{{HTMLElement("iframe")}} が読み込まれると、{{domxref("MessagePort.postMessage")}} にメッセージを添えて {{domxref("MessageChannel.port2")}} を `<iframe>` へ渡します。
-すると、`handleMessage` ハンドラーが `<iframe>` から返送されたメッセージに ({{domxref("MessagePort.message_event")}} を使用して) 返答し、これを段落に挿入します。
+{{HTMLElement("iframe")}} が読み込まれると、{{domxref("MessagePort.postMessage")}} にメッセージを添えて {{domxref("MessageChannel.port2", "port2")}} を `<iframe>` へ渡します。
+すると、`handleMessage` ハンドラーが `<iframe>` から返送されたメッセージに ({{domxref("MessagePort.message_event", "onmessage")}} を使用して) 返答し、これを段落に挿入します。
 {{domxref("MessageChannel.port1", "port1")}} は、いつメッセージが到着しているかどうかをチェックするために待ち受けされます。
 
 ```js
@@ -38,7 +38,7 @@ const para = document.querySelector("p");
 const ifr = document.querySelector("iframe");
 const otherWindow = ifr.contentWindow;
 
-ifr.addEventListener("load", iframeLoaded, false);
+ifr.addEventListener("load", iframeLoaded);
 
 function iframeLoaded() {
   otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
