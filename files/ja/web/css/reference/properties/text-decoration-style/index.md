@@ -73,17 +73,17 @@ text-decoration-style: unset;
 
 ### 値
 
-- solid
+- `solid`
   - : 単独線を描画します。
-- double
+- `double`
   - : 二重線を描画します。
-- dotted
+- `dotted`
   - : 点線を描画します。
-- dashed
+- `dashed`
   - : 破線を描画します。
-- wavy
+- `wavy`
   - : 波線を描画します。
-- \-moz-none
+- `-moz-none`
   - : 線を描画しません。代わりに {{cssxref("text-decoration-line", "text-decoration-line: none")}} を使用してください。
 
 ## 公式定義
