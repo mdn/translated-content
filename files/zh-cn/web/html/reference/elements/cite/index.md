@@ -1,122 +1,144 @@
 ---
-title: <cite>
+title: "`<cite>` HTML 引用元素"
+short-title: <cite>
 slug: Web/HTML/Reference/Elements/cite
+l10n:
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-_HTML 引用（Citation）标签_ (**\<cite>**) 表示一个作品的引用，且必须包含作品的标题。这个引用可能是一个根据适当的上下文约定关联引用的元数据的缩写。
+**`<cite>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于标记创作作品的标题。该引用可根据与引用元数据相关的、适合上下文的惯例采用缩写形式。
 
-{{InteractiveExample("HTML Demo: &lt;cite&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML 演示：&lt;cite&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <figure>
   <blockquote>
-    <p>
-      It was a bright cold day in April, and the clocks were striking thirteen.
-    </p>
+    <p>那是四月里明媚而寒冷的一天，时钟正敲响十三下。</p>
   </blockquote>
   <figcaption>
-    First sentence in
-    <cite
-      ><a href="http://www.george-orwell.org/1984/0.html"
-        >Nineteen Eighty-Four</a
-      ></cite
-    >
-    by George Orwell (Part 1, Chapter 1).
+    乔治·奥威尔《
+    <cite><a href="http://www.george-orwell.org/1984/0.html">一九八四</a></cite>
+    》第一部第一章的首句。
   </figcaption>
 </figure>
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 cite {
+  /* 在此添加你的样式 */
 }
 ```
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row" style="vertical-align: middle;">内容类别</th>
-   <td>
-    <p><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">流内容（Flow Content）</a>，<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a>，可触及的内容（Palpable Content）。</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a></td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>不允许，开始标签和结束标签都不能省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父级元素</th>
-   <td>任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a>的元素。</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>这个元素在 Gecko 1.9.2 (Firefox 4) 及之前的版本中 实现为 HTMLElement, Firefox 实现为 HTMLSpanElement。</td>
-  </tr>
- </tbody>
-</table>
-
 ## 属性
 
-这个元素仅包含了 所有的[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes).
-
-> [!NOTE]
-> 适用场合可能包括一本书，一张纸，一篇散文，一首诗，一个分数，一首歌，一部电影，一个电视节目，一个游戏，一个雕塑，一幅画，戏剧制作，一个剧本，一个歌剧，一种音乐，一个展览，一个法律案件报告，一个计算机程序，一个网站，一个网页，博客或评论，论坛帖子或评论，鸣叫，或者书面或口头陈述，等等。
->
-> - W3C 规范，对创造性的工作可能包括作者的名字，而 WHATWG 宣布，它可能不包括在任何情况下，一个人的名字。
-> - 在 blockquote 元素或者 q 元素上使用 cite 或者 blockquote 属性来标明参考的在线资源。
-> - 为了避免在使用 cite 元素时默认字体为斜体，可以使用 css 的 font-style 属性重新进行设置。
+此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 
-在 `<cite>` 标签中，可能引用的内容类型如下：
+在 `<cite>` 元素的语境中，创作作品例如可以是以下之一：
 
-- A book
-- A research paper
-- An essay
-- A poem
-- A musical score
-- A song
-- A play or film script
-- A film
-- A television show
-- A game
-- A sculpture
-- A painting
-- A theatrical production
-- A play
-- An opera
-- A musical
-- An exhibition
-- A legal case report
-- A computer program
-- A web site
-- A web page
-- A blog post or comment
-- A forum post or comment
-- A tweet
-- A Facebook post
-- A written or oral statement
-- And so forth.
+- 一本书
+- 一篇研究论文
+- 一篇散文
+- 一首诗
+- 一份乐谱
+- 一首歌曲
+- 一部戏剧或电影剧本
+- 一部电影
+- 一档电视节目
+- 一款游戏
+- 一座雕塑
+- 一幅画
+- 一场戏剧演出
+- 一部戏剧
+- 一部歌剧
+- 一部音乐剧
+- 一场展览
+- 一份法律案件报告
+- 一个计算机程序
+- 一个网站
+- 一个网页
+- 一篇博客文章或评论
+- 一篇论坛帖子或评论
+- 一条推文
+- 一条 Facebook 帖子
+- 一份书面或口头陈述
+- 等等。
 
-值得注意的是，W3C 标准允许在 `<cite>` 元素中包含引用内容的作者信息。然而 WHATWG 规范不允许在 `<cite>` 元素中出现人名。
+若要标明包含在 {{HTMLElement("blockquote")}} 或 {{HTMLElement("q")}} 元素中的引文来源，请在该元素上使用 [`cite`](/zh-CN/docs/Web/HTML/Reference/Elements/blockquote#cite) 属性。
 
-要标明{{HTMLElement("blockquote")}} 或 {{HTMLElement("q")}}之中内容的引用来源，可以使用元素的[`cite`](/zh-CN/docs/Web/HTML/Reference/Elements/blockquote#cite)属性。
-
-通常，浏览器默认使用斜体来展示`<cite>`元素中的内容。可以通过指定`<cite>`元素的{{cssxref("font-style")}}样式来覆盖这种默认行为。
+通常，浏览器默认以斜体样式呈现 `<cite>` 元素的内容。若要避免这一点，请对 `<cite>` 元素应用 CSS {{cssxref("font-style")}} 属性。
 
 ## 示例
 
 ```html
-More information can be found in <cite>[ISO-0000]</cite>.
+<p>更多信息请参见 <cite>[ISO-0000]</cite>。</p>
 ```
 
-该段代码的输出如下：
+### 结果
 
-{{EmbedLiveSample("示例", 640, 60)}}
+{{EmbedLiveSample("示例", 640, 80)}}
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+          >流式内容</a
+        >、
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
+          >短语内容</a
+        >、可感知内容。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
+          >短语内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        任何接受
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
+          >短语内容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >没有对应的角色</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>任意</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>
+        {{domxref("HTMLElement")}}。在 Gecko 1.9.2（Firefox 4）及更早版本中，Firefox 对该元素实现的是 {{domxref("HTMLSpanElement")}} 接口。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -128,5 +150,5 @@ More information can be found in <cite>[ISO-0000]</cite>.
 
 ## 参见
 
-- 适用于长引用的 {{HTMLElement("blockquote")}} 元素。
-- 适用于行内引用的 {{HTMLElement("q")}} 元素。
+- 用于长引用的 {{HTMLElement("blockquote")}} 元素。
+- 用于行内引用的 {{HTMLElement("q")}} 元素，以及 [`cite`](/zh-CN/docs/Web/HTML/Reference/Elements/q#cite) 属性。
