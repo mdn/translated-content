@@ -114,7 +114,7 @@ const policy = trustedTypes.createPolicy("my-policy", {
 
 次に、この `policy` オブジェクトを使用して、安全性が保証されていない可能性のある入力文字列から `TrustedHTML` オブジェクトを作成し、その結果を要素に代入します。
 
-```js
+```js-nolint
 // 悪意のある可能性のある文字列
 const untrustedString = "<p>XSS の可能性あり</p><img src='x' onerror='alert(1)'>";
 
