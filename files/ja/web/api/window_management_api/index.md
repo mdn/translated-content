@@ -21,7 +21,7 @@ const myWindow = window.open(
 );
 ```
 
-You can retrieve information about your screen from the {{domxref("Window.screen")}} property, such as how much screen space you have available to place windows in.
+{{domxref("Window.screen")}} プロパティから、ウィンドウを配置できる利用可能な画面領域の大きさなど、画面に関する情報を取得できます。
 
 However, the above features are limited. `Window.screen` only returns data about the primary screen, and not secondary displays available to a device. To move a window to a secondary display, you could use {{domxref("Window.moveTo()")}}, but you'd have to guess what coordinates to use based on where it is placed in your setup relative to the primary display.
 
