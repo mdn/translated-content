@@ -9,7 +9,7 @@ l10n:
 
 **ウィンドウ管理 API** を使用すると、デバイスに接続されたディスプレイに関する詳細情報を取得したり、特定の画面にウィンドウをより容易に配置したりすることが可能になり、より効果的なマルチスクリーン・アプリケーションの実現につながります。
 
-## Concepts and usage
+## 概念と使用方法
 
 Historically, we have used {{domxref("Window.open()")}} to manage browser windows related to the current application — opening new windows, resizing and closing existing windows, etc. For example, to open a 400×300 window 50 pixels from the left and top of your screen:
 
