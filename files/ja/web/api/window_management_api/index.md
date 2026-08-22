@@ -83,6 +83,6 @@ const myWindow = window.open(
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
