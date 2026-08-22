@@ -62,17 +62,17 @@ Your code will be richer and more professional as a result, and you'll be able t
 >
 > If you need to check your code against our version, you can find a finished version of the sample Ember app code in the [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). For a running live version, see <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (this also includes a few additional features not covered in the tutorial).
 
-- [1. Getting started with Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+- [1. Getting started with Ember](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : In our first Ember article we will look at how Ember works and what it's useful for, install the Ember toolchain locally, create a sample app, and then do some initial setup to get it ready for development.
-- [2. Ember app structure and componentization](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+- [2. Ember app structure and componentization](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : In this article we'll get right on with planning out the structure of our TodoMVC Ember app, adding in the HTML for it, and then breaking that HTML structure into components.
-- [3. Ember interactivity: Events, classes and state](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+- [3. Ember interactivity: Events, classes and state](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : At this point we'll start adding some interactivity to our app, providing the ability to add and display new todo items. Along the way, we'll look at using events in Ember, creating component classes to contain JavaScript code to control interactive features, and setting up a service to keep track of the data state of our app.
-- [4. Ember Interactivity: Footer functionality, conditional rendering](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+- [4. Ember Interactivity: Footer functionality, conditional rendering](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Now it's time to start tackling the footer functionality in our app. Here we'll get the todo counter to update to show the correct number of todos still to complete, and correctly apply styling to completed todos (i.e. where the checkbox has been checked). We'll also wire up our "Clear completed" button. Along the way, we'll learn about using conditional rendering in our templates.
-- [5. Routing in Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+- [5. Routing in Ember](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : In this article we learn about routing, or URL-based filtering as it is sometimes referred to. We'll use it to provide a unique URL for each of the three todo views — "All", "Active", and "Completed".
-- [6. Ember resources and troubleshooting](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+- [6. Ember resources and troubleshooting](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Our final Ember article provides you with a list of resources that you can use to go further in your learning, plus some useful troubleshooting and other information.
 
 ## Vue tutorials
@@ -82,23 +82,23 @@ Your code will be richer and more professional as a result, and you'll be able t
 >
 > If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
 
-- [1. Getting started with Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+- [1. Getting started with Vue](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Now let's introduce Vue, the third of our frameworks. In this article we'll look at a little bit of Vue background, learn how to install it and create a new project, study the high-level structure of the whole project and an individual component, see how to run the project locally, and get it prepared to start building our example.
-- [2. Creating our first Vue component](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+- [2. Creating our first Vue component](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props, and saving data state.
-- [3. Rendering a list of Vue components](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+- [3. Rendering a list of Vue components](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : At this point we've got a fully working component; we're now ready to add multiple `ToDoItem` components to our App. In this artcle we'll look at adding a set of todo item data to our `App.vue` component, which we'll then loop through and display inside `ToDoItem` components using the `v-for` directive.
-- [4. Adding a new todo form: Vue events, methods, and models](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+- [4. Adding a new todo form: Vue events, methods, and models](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : We now have sample data in place, and a loop that takes each bit of data and renders it inside a `ToDoItem` in our app. What we really need next is the ability to allow our users to enter their own todo items into the app, and for that we'll need a text `<input>`, an event to fire when the data is submitted, a method to fire upon submission to add the data and rerender the list, and a model to control the data. This is what we'll cover in this article.
-- [5. Styling Vue components with CSS](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+- [5. Styling Vue components with CSS](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : The time has finally come to make our app look a bit nicer. In this article we'll explore the different ways of styling Vue components with CSS.
-- [6. Using Vue computed properties](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+- [6. Using Vue computed properties](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : In this article we'll add a counter that displays the number of completed todo items, using a feature of Vue called computed properties. These work similarly to methods, but only re-run when one of their dependencies changes.
-- [7. Vue conditional rendering: editing existing todos](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+- [7. Vue conditional rendering: editing existing todos](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Now it is time to add one of the major parts of functionality that we're still missing — the ability to edit existing todo items. To do this, we will take advantage of Vue's conditional rendering capabilities — namely `v-if` and `v-else` — to allow us to toggle between the existing todo item view, and an edit view where you can update todo item labels. We'll also look at adding functionality to delete todo items.
-- [8. Focus management with Vue refs](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+- [8. Focus management with Vue refs](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : We are nearly done with Vue. The last bit of functionality to look at is focus management, or put another way, how we can improve our app's keyboard accessibility. We'll look at using Vue refs to handle this — an advanced feature that allows you to have direct access to the underlying DOM nodes below the virtual DOM, or direct access from one component to the internal DOM structure of a child component.
-- [9. Vue resources](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+- [9. Vue resources](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Now we'll round off our study of Vue by giving you a list of resources that you can use to go further in your learning, plus some other useful tips.
 
 ## Which frameworks did we choose?
