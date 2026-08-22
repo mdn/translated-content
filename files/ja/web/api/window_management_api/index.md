@@ -47,7 +47,7 @@ const myWindow = window.open(
 - {{domxref("Window.getScreenDetails()")}} メソッドの使用がブロックされた場合、返される {{jsxref("Promise")}} は `NotAllowedError` 例外で拒否されます。
 - {{domxref("Screen.isExtended", "Window.screen.isExtended")}} プロパティは、ブロックされている場合は常に `false` を返します。
 
-Developers can explicitly grant permission for an {{htmlelement("iframe")}} to use Window Management via the `allow` attribute:
+開発者は、`allow` 属性を使用して、 {{htmlelement("iframe")}} が、ウィンドウ管理を使用することを明示的に許可できます。
 
 ```html
 <iframe src="3rd-party.example" allow="window-management"></iframe>
