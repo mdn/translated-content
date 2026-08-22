@@ -5,7 +5,7 @@ slug: Web/API/URL/search
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} 인터페이스의 **`search`** 속성은 맨 앞의 `'?'`와 함께 URL의 쿼리 문자열, 즉 검색 매개변수를 나타내는 {{domxref("USVString")}}입니다.
+{{domxref("URL")}} 인터페이스의 **`search`** 속성은 맨 앞의 `'?'`와 함께 URL의 쿼리 문자열, 즉 검색 매개변수를 나타내는 {{jsxref("String")}}입니다.
 
 신형 브라우저에서는 {{domxref("URL.searchParams")}} 속성을 통해 간편한 쿼리 문자열 분석을 지원합니다.
 
@@ -20,7 +20,7 @@ url.search = newSearchParams;
 
 ### 값
 
-{{domxref("USVString")}}.
+{{jsxref("String")}}.
 
 ## Examples
 
