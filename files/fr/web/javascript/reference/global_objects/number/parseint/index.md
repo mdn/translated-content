@@ -1,13 +1,14 @@
 ---
-title: Number.parseInt()
+title: "Number : méthode statique parseInt()"
+short-title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Number.parseInt()`** analyse un argument de type chaîne de caractères et retourne un entier dans la base définie.
 
-La méthode **`Number.parseInt()`** analyse et convertit une chaine de caractères, fournie en argument, en un entier dans la base souhaitée.
-
-{{InteractiveExample("JavaScript Demo: Number.parseInt()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Number.parseInt()", "taller")}}
 
 ```js interactive-example
 function roughScale(x, base) {
@@ -19,46 +20,45 @@ function roughScale(x, base) {
 }
 
 console.log(roughScale(" 0xF", 16));
-// Expected output: 1500
+// Sortie attendue : 1500
 
 console.log(roughScale("321", 2));
-// Expected output: 0
+// Sortie attendue : 0
 ```
 
 ## Syntaxe
 
-```js
-Number.parseInt(chaîne [, base])
+```js-nolint
+Number.parseInt(string)
+Number.parseInt(string, radix)
 ```
 
 ### Paramètres
 
-- `chaîne`
-  - : La valeur à convertir. Si `chaine` n'est pas une chaîne de caractères, elle sera convertie auparavant. Les blancs qui préfixent la chaîne sont ignorés.
-- `base` {{optional_inline}}
-  - : Paramètre optionnel. Un entier représentant la base dans laquelle est représentée la valeur de la chaîne. **Il faut toujours spécifier ce paramètre.** Cela permet que le code ne soit pas ambigü et permet de garantir un comportement prévisible. En effet les différentes implémentations peuvent fournir des résultats différents lorsque la base n'est pas spécifiée.
+- `string`
+  - : La valeur à analyser, [convertie en chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#convertion_en_chaîne_de_caractères). Les {{Glossary("whitespace", "espaces blancs")}} initiaux dans cet argument sont ignorés.
+- `radix` {{Optional_Inline}}
+  - : Un entier compris entre `2` et `36` qui représente la _base_ (la base dans les systèmes de numération mathématiques) de la chaîne de caractères (`string`).
+
+    Si la base (`radix`) est indéfinie ou `0`, il est supposé être `10`, sauf lorsque le nombre commence par les paires d'unités de code `0x` ou `0X`, auquel cas une base de `16` est supposée.
 
 ### Valeur de retour
 
-Un entier construit à partir de l'analyse de la chaîne de caractères passée en argument. Si le premier caractère ne permet pas de conversion numérique, c'est la valeur {{jsxref("NaN")}} qui sera renvoyée.
+Un entier analysé depuis la chaîne de caractères (`string`) fournie.
 
-## Description
+Si la base (`radix`) est inférieure à `2` ou supérieure à `36`, ou si le premier caractère non blanc ne peut pas être converti en nombre, {{JSxRef("NaN")}} est retourné.
 
-Voir la page {{jsxref("parseInt()")}} pour plus de détails et d'exemples. Cette méthode se comporte de façon identique à la fonction globale {{jsxref("parseInt()")}} et fait partie d'ECMAScript 2015 (dans le but de « modulariser » les méthodes globales) et on aura :
+## Exemples
+
+### `Number.parseInt()` et `parseInt()`
+
+Cette méthode possède les mêmes fonctionnalités que la fonction native {{JSxRef("parseInt()")}}&nbsp;:
 
 ```js
 Number.parseInt === parseInt; // true
 ```
 
-## Prothèse d'émulation (_polyfill_)
-
-Si on souhaite bénéficier de cette fonction dans un environnement qui n'en dispose pas, on pourra donc l'émuler de la façon suivante :
-
-```js
-if (Number.parseInt === undefined) {
-  Number.parseInt = parseInt;
-}
-```
+Son objectif est la modularisation des objets natifs. Voir {{JSxRef("parseInt()")}} pour plus de détails et d'exemples.
 
 ## Spécifications
 
@@ -70,5 +70,7 @@ if (Number.parseInt === undefined) {
 
 ## Voir aussi
 
-- L'objet {{jsxref("Number")}} auquel appartient cette fonction.
-- La méthode {{jsxref("parseInt()")}} de l'objet global.
+- [La prothèse d'émulation de `Number.parseInt` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
+- [La prothèse d'émulation es-shims de `Number.parseInt` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.parseInt)
+- L'objet {{JSxRef("Number")}}
+- La fonction native {{JSxRef("parseInt()")}}
