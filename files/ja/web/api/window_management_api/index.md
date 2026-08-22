@@ -58,7 +58,7 @@ const myWindow = window.open(
 - {{domxref("ScreenDetails")}} {{securecontext_inline}}
   - : ユーザーのデバイスで使用可能なすべての画面の詳細を表します。
 - {{domxref("ScreenDetailed")}} {{securecontext_inline}}
-  - : Represents detailed information about one specific screen available to the user's device.
+  - : ユーザーのデバイスで使用可能な、特定の 1 つの画面の詳細を表します。
 
 ### Extensions to other interfaces
 
