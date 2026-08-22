@@ -1,11 +1,8 @@
 ---
-title: Window Management API
+title: ウィンドウ管理 API
 slug: Web/API/Window_Management_API
-page-type: web-api-overview
-status:
-  - experimental
-browser-compat: api.Window.getScreenDetails
-spec-urls: https://w3c.github.io/window-management/
+l10n:
+  sourceCommit: 72d51eab0cf7140e7edcca663fe24fae1a4166f8
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Window Management API")}}
