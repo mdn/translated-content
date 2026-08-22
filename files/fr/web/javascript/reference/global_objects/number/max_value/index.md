@@ -1,40 +1,47 @@
 ---
-title: Number.MAX_VALUE
+title: "Number : propriété statique MAX_VALUE"
+short-title: MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
+l10n:
+  sourceCommit: c1c0f13171a9e266210f0b284243b2996fc3ec91
 ---
 
-{{JSRef}}
+La propriété statique **`Number.MAX_VALUE`** représente la valeur numérique maximale pouvant être représentée en JavaScript.
 
-La propriété **`Number.MAX_VALUE`** représente la valeur maximale qui peut être représentée par un nombre en JavaScript.
-
-{{InteractiveExample("JavaScript Demo: Number.MAX_VALUE")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Number.MAX_VALUE")}}
 
 ```js interactive-example
 function multiply(x, y) {
   if (x * y > Number.MAX_VALUE) {
-    return "Process as Infinity";
+    return "Représenté comme Infinity";
   }
   return x * y;
 }
 
 console.log(multiply(1.7976931348623157e308, 1));
-// Expected output: 1.7976931348623157e+308
+// Sortie attendue : 1.7976931348623157e+308
 
 console.log(multiply(1.7976931348623157e308, 2));
-// Expected output: "Process as Infinity"
+// Sortie attendue : "Représenté comme Infinity"
 ```
 
-{{js_property_attributes(0,0,0)}}
+## Valeur
+
+2<sup>1024</sup> - 2<sup>971</sup>, ou approximativement `1.7976931348623157E+308`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-La propriété statique `MAX_VALUE` vaut environ `1.79E+308` (soit 2^1024). Les valeurs supérieures à `MAX_VALUE` sont représentées par {{jsxref("Infinity")}} (pour l'infini).
+Les valeurs supérieures à `MAX_VALUE` sont représentées par {{JSxRef("Infinity")}} (pour l'infini) et perdent leur valeur réelle. Comme mentionné dans {{JSxRef("Number.EPSILON")}}, la précision des nombres dépend de leur magnitude. Les entiers ne peuvent être représentés avec précision que jusqu'à {{JSxRef("Number.MAX_SAFE_INTEGER")}}, qui est 2<sup>53</sup> - 1.
 
-`MAX_VALUE` est une propriété statique de {{jsxref("Number")}}, il faut donc l'utiliser avec `Number.MAX_VALUE`, plutôt qu'en faisant appel à la propriété d'un objet `Number` qui aurait été instancié (si on appelle cette propriété sur l'objet `Number` créé, on obtiendra {{jsxref("undefined")}}).
+Parce que `MAX_VALUE` est une propriété statique de {{JSxRef("Number")}}, vous l'utilisez toujours comme `Number.MAX_VALUE`, plutôt que comme une propriété d'une valeur numérique.
 
 ## Exemples
 
-Le code suivant teste si le produit de deux nombres est inférieur ou égal à `MAX_VALUE`, selon le résultat de ce test, soit on utilisera `func1`, soit on utilisera `func2`.
+### Utiliser `MAX_VALUE`
+
+Le code suivant multiplie deux valeurs numériques. Si le résultat est inférieur ou égal à `MAX_VALUE`, la fonction `func1` est appelée&nbsp;; sinon, la fonction `func2` est appelée.
 
 ```js
 if (num1 * num2 <= Number.MAX_VALUE) {
@@ -54,5 +61,6 @@ if (num1 * num2 <= Number.MAX_VALUE) {
 
 ## Voir aussi
 
-- {{jsxref("Number.MIN_VALUE")}}
-- {{jsxref("Number")}}
+- La propriété statique {{JSxRef("Number.MIN_VALUE")}}
+- La propriété statique {{JSxRef("Number.MAX_SAFE_INTEGER")}}
+- L'objet {{JSxRef("Number")}}
