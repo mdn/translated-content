@@ -1,6 +1,7 @@
 ---
 title: Начало работы с Angular
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries
+original_slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
 ---
 
 {{LearnSidebar}}
