@@ -3,7 +3,7 @@ title: "Animation: finish イベント"
 short-title: finish
 slug: Web/API/Animation/finish_event
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{ APIRef("Web Animations") }}
@@ -11,7 +11,7 @@ l10n:
 **`finish`** は {{domxref("Animation")}} インターフェイスのイベントで、アニメーションの再生が完了したとき、または {{domxref("Animation.finish()")}} メソッドが呼び出されてアニメーションが即座に終了させられたときに発生します。
 
 > [!NOTE]
-> `"paused"`の再生状態は`finished"`の再生状態に優先します。
+> `"paused"` の再生状態は `finished"` の再生状態に優先します。
 > アニメーションが一時停止と完了の両方の状態の場合、 `"paused"` の状態が報告されます。
 > {{domxref("Animation.startTime", "startTime")}}を `document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)` に設定するには、アニメーションを強制的に `"finished"` 状態にすることができます。
 
@@ -21,6 +21,7 @@ l10n:
 
 ```js-nolint
 addEventListener("finish", (event) => { })
+
 onfinish = (event) => { }
 ```
 
@@ -29,15 +30,6 @@ onfinish = (event) => { }
 {{domxref("AnimationPlaybackEvent")}} です。 {{domxref("Event")}} から継承しています。
 
 {{InheritanceDiagram("AnimationPlaybackEvent")}}
-
-## イベントプロパティ
-
-_以下に挙げたプロパティに加え、親インターフェイスである {{domxref("Event")}} から継承したプロパティが利用できます。_
-
-- {{domxref("AnimationPlaybackEvent.currentTime")}} {{ReadOnlyInline}}
-  - : イベントを生成したアニメーションの現在時刻。
-- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{ReadOnlyInline}}
-  - : イベントを生成したアニメーションのタイムラインの時刻値。
 
 ## 例
 
