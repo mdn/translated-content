@@ -3,10 +3,10 @@ title: "HTMLFontElement : propriété face"
 short-title: face
 slug: Web/API/HTMLFontElement/face
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété obsolète **`face`** de l'interface {{DOMxRef("HTMLFontElement")}} est une chaîne de caractères qui reflète l'attribut HTML [`face`](/fr/docs/Web/HTML/Reference/Elements/font#face), contenant une liste séparée par des virgules d'un ou plusieurs noms de police.
 

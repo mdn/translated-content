@@ -1,15 +1,14 @@
 ---
-title: Math.LOG2E
+title: "Math : propriété statique LOG2E"
+short-title: LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La propriété statique **`Math.LOG2E`** représente le logarithme en base 2 de {{JSxRef("Math/E","e")}}, environ 1,443.
 
-La propriété **`Math.LOG2E`** représente la valeur du logarithme en base 2 de e, environ 1.442 :
-
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG2E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>1.442</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG2E}} = \log_2(e) \approx 1.442</annotation></semantics></math>
-
-{{InteractiveExample("JavaScript Demo: Math.log2e()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.LOG2E", "shorter")}}
 
 ```js interactive-example
 function getLog2e() {
@@ -17,20 +16,28 @@ function getLog2e() {
 }
 
 console.log(getLog2e());
-// Expected output: 1.4426950408889634
+// Sortie attendue : 1.4426950408889634
 ```
 
-{{js_property_attributes(0,0,0)}}
+## Valeur
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙻𝙾𝙶𝟸𝙴</mi><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>1.443</mn></mrow><annotation encoding="TeX">\mathtt{Math.LOG2E} = \log_2(\mathrm{e}) \approx 1.443</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-`LOG2E` est une propriété statique de l'objet `Math` et doit toujours être utilisé avec la syntaxe `Math.LOG2E` plutôt que comme la propriété d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+Puisque `LOG2E` est une propriété statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.LOG2E` plutôt que comme la propriété d'un autre objet qui a été créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
 ### Utiliser `Math.LOG2E`
 
-La fonction suivante renvoie la valeur du logarithme en base 2 de e :
+La fonction suivante retourne la valeur du logarithme en base 2 de e&nbsp;:
 
 ```js
 function getLog2e() {
@@ -50,6 +57,6 @@ getLog2e(); // 1.4426950408889634
 
 ## Voir aussi
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log2()")}}
+- La méthode statique {{JSxRef("Math.exp()")}}
+- La méthode statique {{JSxRef("Math.log()")}}
+- La méthode statique {{JSxRef("Math.log2()")}}

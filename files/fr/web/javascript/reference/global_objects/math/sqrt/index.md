@@ -1,15 +1,20 @@
 ---
-title: Math.sqrt()
+title: "Math : méthode statique sqrt()"
+short-title: sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Math.sqrt()`** retourne la racine carrée d'un nombre. C'est-à-dire,
 
-La fonction **`Math.sqrt()`** renvoie la racine carrée d'un nombre. Cette fonction est définie par&nbsp;:
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚜𝚚𝚛𝚝</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msqrt><mi>x</mi></msqrt><mo>=</mo><mtext>l'unique&nbsp;</mtext><mi>y</mi><mo>≥</mo><mn>0</mn><mtext>&nbsp;tel que&nbsp;</mtext><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 0,\;\mathtt{\operatorname{Math.sqrt}(x)} = \sqrt{x} = \text{l'unique } y \geq 0 \text{ tel que } y^2 = x</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>s</mi><mi>q</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mi>x</mi></msqrt><mo>=</mo><mtext>l'unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 0, \mathtt{Math.sqrt(x)} = \sqrt{x} = \text{the unique} \; y \geq 0 \; \text{such that} \; y^2 = x</annotation></semantics></math>
-
-{{InteractiveExample("JavaScript Demo: Math.sqrt()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.sqrt()")}}
 
 ```js interactive-example
 function calcHypotenuse(a, b) {
@@ -17,46 +22,46 @@ function calcHypotenuse(a, b) {
 }
 
 console.log(calcHypotenuse(3, 4));
-// Expected output: 5
+// Sortie attendue : 5
 
 console.log(calcHypotenuse(5, 12));
-// Expected output: 13
+// Sortie attendue : 13
 
 console.log(calcHypotenuse(0, 0));
-// Expected output: 0
+// Sortie attendue : 0
 ```
 
 ## Syntaxe
 
-```js
-Math.sqrt(x);
+```js-nolint
+Math.sqrt(x)
 ```
 
 ### Paramètres
 
 - `x`
-  - : Un nombre.
+  - : Un nombre supérieur ou égal à 0.
 
 ### Valeur de retour
 
-La racine carrée du nombre passé en argument. Si le nombre fourni est négatif, c'est {{jsxref("NaN")}} qui sera renvoyé.
+La racine carrée de `x`, un nombre qui n'est pas négatif. Si `x < 0`, retourne {{JSxRef("NaN")}}.
 
 ## Description
 
-Si la valeur de `x` est négative, `sqrt` renverra {{jsxref("NaN")}}.
-
-`sqrt()` est une méthode statique de `Math`, elle doit être utilisée avec la syntaxe `Math.sqrt()`, elle ne doit pas être appelée comme méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+Puisque `sqrt()` est une méthode statique de `Math`, elle doit être utilisée avec la syntaxe `Math.sqrt()`, elle ne doit pas être appelée comme méthode d'un autre objet qui a été créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
-```js
-Math.sqrt(9); // 3
-Math.sqrt(2); // 1.414213562373095
+### Utiliser `Math.sqrt()`
 
-Math.sqrt(1); // 1
-Math.sqrt(0); // 0
+```js
 Math.sqrt(-1); // NaN
 Math.sqrt(-0); // -0
+Math.sqrt(0); // 0
+Math.sqrt(1); // 1
+Math.sqrt(2); // 1.414213562373095
+Math.sqrt(9); // 3
+Math.sqrt(Infinity); // Infinity
 ```
 
 ## Spécifications
@@ -69,7 +74,7 @@ Math.sqrt(-0); // -0
 
 ## Voir aussi
 
-- {{jsxref("Math.cbrt()")}}
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.pow()")}}
+- La méthode statique {{JSxRef("Math.cbrt()")}}
+- La méthode statique {{JSxRef("Math.exp()")}}
+- La méthode statique {{JSxRef("Math.log()")}}
+- La méthode statique {{JSxRef("Math.pow()")}}

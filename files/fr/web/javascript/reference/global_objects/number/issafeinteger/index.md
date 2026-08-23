@@ -1,64 +1,66 @@
 ---
-title: Number.isSafeInteger()
+title: "Number : méthode statique isSafeInteger()"
+short-title: isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Number.isSafeInteger()`** détermine si la valeur fournie est un nombre qui est un _entier sûr_.
 
-La méthode **`Number.isSafeInteger()`** permet de déterminer si la valeur, passée en argument, est un entier représentable correctement en JavaScript (c'est-à-dire un nombre compris entre -(2^53-1) et 2^53-1).
-
-{{InteractiveExample("JavaScript Demo: Number.isSafeInteger()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Number.isSafeInteger()")}}
 
 ```js interactive-example
 function warn(x) {
   if (Number.isSafeInteger(x)) {
-    return "Precision safe.";
+    return "Précision sûre.";
   }
-  return "Precision may be lost!";
+  return "La précision peut être perdue !";
 }
 
-console.log(warn(Math.pow(2, 53)));
-// Expected output: "Precision may be lost!"
+console.log(warn(2 ** 53));
+// Sortie attendue : "La précision peut être perdue !"
 
-console.log(warn(Math.pow(2, 53) - 1));
-// Expected output: "Precision safe."
+console.log(warn(2 ** 53 - 1));
+// Sortie attendue : "Précision sûre."
 ```
-
-> [!NOTE]
-> Pour représenter des entiers qui ne sont pas compris dans cet intervalle, on pourra utiliser le type {{jsxref("BigInt")}}.
 
 ## Syntaxe
 
-```js
-Number.isSafeInteger(valeurÀTester);
+```js-nolint
+Number.isSafeInteger(testValue)
 ```
 
 ### Paramètres
 
-- `valeurÀTester`
-  - : La valeur dont on souhaite savoir si elle représente un entier représentable correctement en une valeur non signée sur 32 bits. (JavaScript utilise [les nombres au format de virgule flottante à double précision](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) comme spécifié dans [IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754) et ne peut représenter avec certitude un entier qu'entre `-(2^53-1)` et `2^53-1` (c'est-à-dire ± `9007199254740991`).
+- `testValue`
+  - : La valeur à tester pour savoir si c'est un entier sûr.
 
 ### Valeur de retour
 
-Un booléen qui indique si la valeur fournie en argument est un entier représentable correctement en JavaScript.
+La valeur booléenne `true` si la valeur donnée est un nombre qui est un entier sûr. Sinon `false`.
 
 ## Description
 
-Un entier correctement représentable en JavaScript :
+Les entiers sûrs sont tous les entiers de -(2<sup>53</sup> - 1) à 2<sup>53</sup> - 1, inclus (±9 007 199 254 740 991). Un entier sûr est un entier qui&nbsp;:
 
-- peut exactement être représenté avec un nombre à précision double selon IEEE-754
-- la réprésentation IEEE-754 du nombre ne permet pas de l'arrondir à un autre entier pouvant être représenté avec le format décrit par IEEE-754.
+- peut exactement être représenté avec un nombre à précision double selon IEEE-754, et
+- dont la représentation IEEE-754 ne peut pas être le résultat de l'arrondi d'un autre entier pour s'adapter à la représentation IEEE-754.
 
-Ainsi, par exemple, `2^53 - 1` peut être représenté correctement, aucun autre entier ne peut être arrondi en cette valeur selon IEEE-754. En revanche, `2^53` ne peut pas être représenté correctement car `2^53 + 1` sera arrondi en `2^53` selon les règles IEEE-754 (arrondi à l'entier le plus proche).
+Par exemple, 2<sup>53</sup> - 1 est un entier sûr&nbsp;: il peut être représenté exactement, et aucun autre entier n'est arrondi à cette valeur selon les règles d'arrondi IEEE-754. En revanche, 2<sup>53</sup> n'est _pas_ un entier sûr&nbsp;: il peut être représenté exactement en IEEE-754, mais l'entier 2<sup>53</sup> + 1 ne peut pas être représenté directement en IEEE-754 et est arrondi à 2<sup>53</sup> selon les règles d'arrondi au plus proche et à zéro.
 
-L'intervalle des entiers qui peuvent être correctement représentés est `[-(2^53 - 1),2^53 - 1` ].
+La gestion des valeurs supérieures ou inférieures à \~9 quadrillions avec une précision totale nécessite l'utilisation d'une [bibliothèque d'arithmétique à précision arbitraire <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic). Voir [Ce que tout programmeur doit savoir sur l'arithmétique en virgule flottante <sup>(angl.)</sup>](https://floating-point-gui.de/) pour plus d'informations sur les représentations en virgule flottante des nombres.
+
+Pour les entiers plus grands, envisagez d'utiliser le type {{JSxRef("BigInt")}}.
 
 ## Exemples
 
+### Utiliser `isSafeInteger()`
+
 ```js
 Number.isSafeInteger(3); // true
-Number.isSafeInteger(Math.pow(2, 53)); // false
-Number.isSafeInteger(Math.pow(2, 53) - 1); // true
+Number.isSafeInteger(2 ** 53); // false
+Number.isSafeInteger(2 ** 53 - 1); // true
 Number.isSafeInteger(NaN); // false
 Number.isSafeInteger(Infinity); // false
 Number.isSafeInteger("3"); // false
@@ -76,7 +78,9 @@ Number.isSafeInteger(3.0); // true
 
 ## Voir aussi
 
-- L'objet {{jsxref("Number")}} auquel appartient cette méthode
-- {{jsxref("Number.MIN_SAFE_INTEGER")}}
-- {{jsxref("Number.MAX_SAFE_INTEGER")}}
-- {{jsxref("BigInt")}}
+- [La prothèse d'émulation de `Number.isSafeInteger` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
+- [La prothèse d'émulation es-shims de `Number.isSafeInteger` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.issafeinteger)
+- L'objet {{JSxRef("Number")}}
+- La propriété statique {{JSxRef("Number.MIN_SAFE_INTEGER")}}
+- La propriété statique {{JSxRef("Number.MAX_SAFE_INTEGER")}}
+- L'objet {{JSxRef("BigInt")}}

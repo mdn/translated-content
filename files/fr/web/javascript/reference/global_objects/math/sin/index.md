@@ -1,13 +1,14 @@
 ---
-title: Math.sin()
+title: "Math : méthode statique sin()"
+short-title: sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
+l10n:
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-{{JSRef}}
+La méthode statique **`Math.sin()`** retourne le sinus d'un nombre en radians.
 
-La fonction **`Math.sin()`** renvoie le sinus d'un nombre.
-
-{{InteractiveExample("JavaScript Demo: Math.sin()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.sin()")}}
 
 ```js interactive-example
 function getCircleY(radians, radius) {
@@ -15,43 +16,45 @@ function getCircleY(radians, radius) {
 }
 
 console.log(getCircleY(1, 10));
-// Expected output: 8.414709848078965
+// Sortie attendue : 8.414709848078965
 
 console.log(getCircleY(2, 10));
-// Expected output: 9.092974268256818
+// Sortie attendue : 9.092974268256818
 
 console.log(getCircleY(Math.PI, 10));
-// Expected output: 1.2246467991473533e-15
+// Sortie attendue : 1.2246467991473533e-15
 ```
 
 ## Syntaxe
 
-```js
-Math.sin(x);
+```js-nolint
+Math.sin(x)
 ```
 
 ### Paramètres
 
 - `x`
-  - : Un nombre (qui exprime un angle en radians).
+  - : Un nombre qui exprime un angle en radians.
 
 ### Valeur de retour
 
-Le sinus de la valeur passée en argument (qui correspond à un angle en radians).
+Le sinus de `x`, compris entre -1 et 1 inclus. Si `x` est {{JSxRef("Infinity")}}, `-Infinity` ou {{JSxRef("NaN")}}, retourne {{JSxRef("NaN")}}.
 
 ## Description
 
-La méthode `sin()` renvoie une valeur numérique comprise (au sens large) entre 1 et -1 et qui représente le sinus d'un angle donné en radians.
-
-`sin()` est une méthode statique de `Math`, elle doit être utilisée avec la syntaxe `Math.sin()`, elle ne doit pas être utilisée comme une méthode d'un objet qui aurait été créé (`Math` n'est pas un constructeur).
+Puisque `sin()` est une méthode statique de `Math`, elle doit être utilisée avec la syntaxe `Math.sin()`, elle ne doit pas être utilisée comme une méthode d'un objet qui a été créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
+### Utiliser `Math.sin()`
+
 ```js
+Math.sin(-Infinity); // NaN
+Math.sin(-0); // -0
 Math.sin(0); // 0
 Math.sin(1); // 0.8414709848078965
-
 Math.sin(Math.PI / 2); // 1
+Math.sin(Infinity); // NaN
 ```
 
 ## Spécifications
@@ -64,9 +67,10 @@ Math.sin(Math.PI / 2); // 1
 
 ## Voir aussi
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.tan()")}}
+- La méthode statique {{JSxRef("Math.acos()")}}
+- La méthode statique {{JSxRef("Math.asin()")}}
+- La méthode statique {{JSxRef("Math.atan()")}}
+- La méthode statique {{JSxRef("Math.atan2()")}}
+- La méthode statique {{JSxRef("Math.cos()")}}
+- La méthode statique {{JSxRef("Math.tan()")}}
+- La fonction CSS {{CSSxRef("sin()")}}

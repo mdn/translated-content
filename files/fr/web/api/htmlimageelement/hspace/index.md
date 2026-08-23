@@ -3,10 +3,10 @@ title: "HTMLImageElement : propriété hspace"
 short-title: hspace
 slug: Web/API/HTMLImageElement/hspace
 l10n:
-  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété _obsolète_ **`hspace`** de l'interface {{DOMxRef("HTMLImageElement")}} définit le nombre de pixels d'espace vide à laisser à gauche et à droite de l'élément HTML {{HTMLElement("img")}} lors de la mise en page. Elle reflète l'attribut de contenu [`hspace`](/fr/docs/Web/HTML/Reference/Elements/img#hspace) de l'élément `<img>`.
 

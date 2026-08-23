@@ -1,34 +1,39 @@
 ---
-title: Math.tanh()
+title: "Math : méthode statique tanh()"
+short-title: tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Math.tanh()`** retourne la tangente hyperbolique d'un nombre. Autrement dit,
 
-La fonction **`Math.tanh()`** renvoie la tangente hyperbolique d'un nombre définie par&nbsp;:
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚝𝚊𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>−</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>+</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow><mrow><msup><mi mathvariant="normal">e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.tanh}(x)} = \tanh(x) = \frac{\sinh(x)}{\cosh(x)} = \frac{\mathrm{e}^x - \mathrm{e}^{-x}}{\mathrm{e}^x + \mathrm{e}^{-x}} = \frac{\mathrm{e}^{2x} - 1}{\mathrm{e}^{2x}+1}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-<math><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math>
-
-{{InteractiveExample("JavaScript Demo: Math.tanh()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.tanh()")}}
 
 ```js interactive-example
 console.log(Math.tanh(-1));
-// Expected output: -0.7615941559557649
+// Sortie attendue : -0.7615941559557649
 
 console.log(Math.tanh(0));
-// Expected output: 0
+// Sortie attendue : 0
 
 console.log(Math.tanh(Infinity));
-// Expected output: 1
+// Sortie attendue : 1
 
 console.log(Math.tanh(1));
-// Expected output: 0.7615941559557649
+// Sortie attendue : 0.7615941559557649
 ```
 
 ## Syntaxe
 
-```js
-Math.tanh(x);
+```js-nolint
+Math.tanh(x)
 ```
 
 ### Paramètres
@@ -38,51 +43,22 @@ Math.tanh(x);
 
 ### Valeur de retour
 
-La tangente hyperbolique du nombre fourni en argument.
+La tangente hyperbolique de `x`.
 
 ## Description
 
-`tanh()` est une méthode statique de l'objet `Math`, elle doit toujours être utilisée avec la syntaxe `Math.tanh()`, elle ne doit pas être utilisée comme une méthode d'un objet `Math` qui aurait été instancié (`Math` n'est pas une constructeur).
+Puisque `tanh()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.tanh()`, elle ne doit pas être utilisée comme méthode d'un autre objet `Math` qui a été instancié (`Math` n'est pas un constructeur).
 
 ## Exemples
 
 ### Utiliser `Math.tanh()`
 
 ```js
+Math.tanh(-Infinity); // -1
+Math.tanh(-0); // -0
 Math.tanh(0); // 0
-Math.tanh(Infinity); // 1
 Math.tanh(1); // 0.7615941559557649
-```
-
-## Prothèse d'émulation (_polyfill_)
-
-Cette méthode peut être émulée grâce à la fonction {{jsxref("Math.exp()")}} :
-
-```js
-Math.tanh =
-  Math.tanh ||
-  function (x) {
-    var a = Math.exp(+x),
-      b = Math.exp(-x);
-    return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
-  };
-```
-
-et si on souhaite n'utiliser qu'un seul appel à {{jsxref("Math.exp()")}}&nbsp;:
-
-```js
-Math.tanhx =
-  Math.tanhx ||
-  function (x) {
-    if (x === Infinity) {
-      return 1;
-    } else if (x === -Infinity) {
-      return -1;
-    } else {
-      var y = Math.exp(2 * x);
-      return (y - 1) / (y + 1);
-    }
-  };
+Math.tanh(Infinity); // 1
 ```
 
 ## Spécifications
@@ -95,8 +71,9 @@ Math.tanhx =
 
 ## Voir aussi
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
+- [La prothèse d'émulation de `Math.tanh` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
+- La méthode statique {{JSxRef("Math.acosh()")}}
+- La méthode statique {{JSxRef("Math.asinh()")}}
+- La méthode statique {{JSxRef("Math.atanh()")}}
+- La méthode statique {{JSxRef("Math.cosh()")}}
+- La méthode statique {{JSxRef("Math.sinh()")}}
