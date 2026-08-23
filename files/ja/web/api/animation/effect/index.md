@@ -3,7 +3,7 @@ title: "Animation: effect プロパティ"
 short-title: effect
 slug: Web/API/Animation/effect
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 {{ APIRef("Web Animations") }}
