@@ -3,10 +3,8 @@ title: "Élément HTML `<param>` : l'élément paramètre d'un objet"
 short-title: <param>
 slug: Web/HTML/Reference/Elements/param
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<param>`** définit des paramètres pour un élément {{HTMLElement("object")}}.
 

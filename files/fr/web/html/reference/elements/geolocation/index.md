@@ -34,9 +34,9 @@ Le élément `<geolocation>` fournit un contrôle déclaratif défini par le nav
 
 Il permet également une gestion intuitive des autorisations de l'utilisateur·ice.
 Par exemple, dans Chrome, si l'utilisateur·ice a précédemment refusé l'autorisation d'accéder aux données de localisation, ou a fermé la boîte de dialogue d'autorisation sans faire de choix, il·elle peut appuyer de nouveau sur le bouton pour mettre à jour son choix.
-Dans les cas où l'utilisateur·ice a précédemment refusé l'autorisation, les dialogues ultérieurs l'informeront qu'il·elle n'avait pas autorisé le partage des données de localisation, et lui demanderont s'il·elle souhaite continuer à refuser ou à autoriser.
+Dans les cas où l'utilisateur·ice a précédemment refusé l'autorisation, les dialogues ultérieurs l'informent qu'il·elle n'avait pas autorisé le partage des données de localisation, et lui demandent s'il·elle souhaite continuer à refuser ou à autoriser.
 
-Un aspect clé de l'élément `<geolocation>` est qu'il reflète le choix conscient de l'utilisateur·ice, et empêche les usages qui pourraient tromper l'utilisateur·ice pour qu'il·elle fournisse involontairement ses données de localisation (voir [blocage de `<geolocation>`](#blocage_de_geolocation) pour plus d'informations).
+Un aspect clé de l'élément `<geolocation>` est qu'il reflète le choix conscient de l'utilisateur·ice, et empêche les usages qui peuvent tromper l'utilisateur·ice pour qu'il·elle fournisse involontairement ses données de localisation (voir [blocage de `<geolocation>`](#blocage_de_geolocation) pour plus d'informations).
 
 L'interface API DOM de l'élément, {{DOMxRef("HTMLGeolocationElement")}}, fournit des fonctionnalités pour accéder aux données de position retournées, au statut d'autorisation actuel et aux erreurs si la récupération des données a échoué, réduisant la quantité de logique JavaScript à écrire. Elle propose également des évènements permettant d'exécuter du code en réponse à la réception de données de localisation, aux changements du statut d'autorisation et aux interactions de l'utilisateur·ice avec la boîte de dialogue d'autorisation.
 
@@ -59,7 +59,7 @@ Si aucun attribut `lang` approprié n'est défini, les paramètres de langue pr�
 
 ### Inclure du contenu de repli
 
-Vous pouvez inclure du contenu de repli entre les balises d'ouverture et de fermeture de l'élément `<geolocation>` qui sera affiché s'il n'est pas pris en charge. Par exemple, vous pouvez inclure un message «&nbsp;Non pris en charge&nbsp;»&nbsp;:
+Vous pouvez inclure du contenu de repli entre les balises d'ouverture et de fermeture de l'élément `<geolocation>` qui est affiché s'il n'est pas pris en charge. Par exemple, vous pouvez inclure un message «&nbsp;Non pris en charge&nbsp;»&nbsp;:
 
 ```html
 <geolocation>
@@ -79,11 +79,11 @@ Cependant, une meilleure solution en pratique peut consister à inclure un élé
 
 Une idée clé de la conception de l'élément `<geolocation>` est qu'il doit refléter le choix conscient de l'utilisateur·ice d'exposer les informations de position, et empêcher les acteurs malveillants de tromper l'utilisateur·ice pour qu'il·elle active l'élément, par exemple par [détournement de clic](/fr/docs/Web/Security/Attacks/Clickjacking). Pour cette raison, le navigateur conserve un enregistrement des soi‑disant **raisons de blocage** pour chaque élément rendu.
 
-Lorsqu'un bloqueur est actif sur un élément `<geolocation>`, celui‑ci est empêché de fonctionner (bloqué), temporairement ou définitivement, selon la raison. Lorsqu'un élément `<geolocation>` est bloqué, on dit qu'il est invalide. Vous pouvez vérifier s'il est invalide en interrogeant la propriété {{DOMxRef("HTMLGeolocationElement.isValid")}}. Vous pouvez également obtenir la raison pour laquelle il est invalide via la propriété {{DOMxRef("HTMLGeolocationElement.invalidReason")}} — consultez cette page pour la liste complète des raisons possibles.
+Lorsqu'un bloqueur est actif sur un élément `<geolocation>`, celui‑ci est empêché de fonctionner (bloqué), temporairement ou définitivement, selon la raison. Lorsqu'un élément `<geolocation>` est bloqué, on dit qu'il est invalide. Vous pouvez vérifier s'il est invalide en interrogeant la propriété {{DOMxRef("HTMLGeolocationElement.isValid")}}. Vous pouvez également obtenir la raison pour laquelle il est invalide avec la propriété {{DOMxRef("HTMLGeolocationElement.invalidReason")}} — consultez cette page pour la liste complète des raisons possibles.
 
 ### Restreindre la mise en forme
 
-L'élément `<geolocation>` est soumis à plusieurs contraintes concernant les styles CSS qui peuvent lui être appliqués. Certaines de ces contraintes visent à faire respecter des règles d'accessibilité fondamentales et entraîneront la désactivation du bouton si elles ne sont pas respectées. D'autres imposent des valeurs spécifiques ou des plages de valeurs pour certaines propriétés.
+L'élément `<geolocation>` est soumis à plusieurs contraintes concernant les styles CSS qui peuvent lui être appliqués. Certaines de ces contraintes visent à faire respecter des règles d'accessibilité fondamentales et entraînent la désactivation du bouton si elles ne sont pas respectées. D'autres imposent des valeurs spécifiques ou des plages de valeurs pour certaines propriétés.
 
 Toutes les propriétés qui ne sont pas listées dans les sous‑sections suivantes, ou qui sont logiquement équivalentes à une propriété physique listée dans les sous‑sections suivantes, sont ignorées lorsqu'elles sont définies sur l'élément `<geolocation>`.
 
@@ -141,7 +141,7 @@ Les contraintes suivantes sont plus complexes que de simples contraintes de vale
 
 - Rembourrage en direction bloc
   - : Si la taille de bloc ({{CSSxRef("block-size")}}) est définie sur `auto`, les marges internes {{CSSxRef("padding-block-start")}} et {{CSSxRef("padding-block-end")}} (et les propriétés physiques équivalentes pour le [mode d'écriture](/fr/docs/Web/CSS/Reference/Properties/writing-mode) courant) sont limitées à `1em` au maximum et doivent être égales.
-- Rembourrage en direction en ligne
+- Rembourrage en direction en incise
   - : Si la {{CSSxRef("inline-size")}} est définie sur `auto`, les {{CSSxRef("padding-inline-start")}} et {{CSSxRef("padding-inline-end")}} (et les propriétés physiques équivalentes pour le [mode d'écriture](/fr/docs/Web/CSS/Reference/Properties/writing-mode) courant) sont limitées à `5em` au maximum et doivent être égales.
 
 #### Propriétés pouvant être définies normalement
@@ -213,7 +213,7 @@ Cet exemple utilise l'élément `<geolocation>` pour récupérer votre position 
 
 #### HTML
 
-Nous incluons un élément `<geolocation>` avec un bouton `<button>` de repli imbriqué à l'intérieur, qui sera affiché dans les navigateurs ne prenant pas en charge `<geolocation>`. Nous incluons également un élément `<p>` pour afficher les données de localisation et les erreurs.
+Nous incluons un élément `<geolocation>` avec un bouton `<button>` de repli imbriqué à l'intérieur, qui zqr affiché dans les navigateurs ne prenant pas en charge `<geolocation>`. Nous incluons également un élément `<p>` pour afficher les données de localisation et les erreurs.
 
 ```html
 <geolocation>
@@ -227,7 +227,7 @@ Nous incluons un élément `<geolocation>` avec un bouton `<button>` de repli im
 Dans notre script, nous commençons par récupérer une référence à l'élément `<p>` de sortie. Nous détectons ensuite si l'élément `<geolocation>` est pris en charge en testant `typeof HTMLGeolocationElement === "function"`&nbsp;:
 
 - Si l'élément est pris en charge, nous récupérons d'abord une référence à l'élément `<geolocation>` puis nous ajoutons un écouteur d'évènement {{DOMxRef("HTMLGeolocationElement.location_event", "location")}}.
-  Lorsque le bouton est pressé et que les données sont récupérées, l'écouteur affiche les coordonnées (latitude, longitude) dans l'élément `<p>` de sortie (récupérées via la propriété {{DOMxRef("HTMLGeolocationElement.position", "position")}}), ou un message d'erreur si la récupération des données a échoué (récupéré via la propriété {{DOMxRef("HTMLGeolocationElement.error", "error")}}).
+  Lorsque le bouton est pressé et que les données sont récupérées, l'écouteur affiche les coordonnées (latitude, longitude) dans l'élément `<p>` de sortie (récupérées avec la propriété {{DOMxRef("HTMLGeolocationElement.position", "position")}}), ou un message d'erreur si la récupération des données a échoué (récupéré avec la propriété {{DOMxRef("HTMLGeolocationElement.error", "error")}}).
 - Si l'élément n'est pas pris en charge, nous récupérons une référence au bouton `<button>` de repli et nous récupérons et affichons les mêmes données, sauf que cette fois nous utilisons un écouteur d'évènement `click` sur le bouton, et un appel à {{DOMxRef("Geolocation.getCurrentPosition()")}} pour récupérer les données.
 
 ```js

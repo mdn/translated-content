@@ -198,7 +198,7 @@ aside {
 
 {{EmbedLiveSample("text-scale-layout", "100%", 200)}}
 
-Testez ces exemples dans un navigateur mobile. Vous pouvez voir que, lorsque la taille de police du système d'exploitation est augmentée, la taille du point de rupture augmente proportionnellement. À des tailles de police plus grandes, le contenu principal et la barre latérale commencent à apparaître l'un au-dessus de l'autre alors qu'auparavant, ils apparaissaient côte à côte. Vous devez regarder en orientation paysage pour voir l'effet.
+Testez ces exemples dans un navigateur mobile. Vous pouvez voir que, lorsque la taille de police du système d'exploitation est augmentée, la taille du point de rupture augmente proportionnellement. À des tailles de police plus grandes, le contenu principal et la barre latérale commencent à apparaître l'un au-dessus de l'autre alors qu'auparavant, ils apparaissent côte à côte. Vous devez regarder en orientation paysage pour voir l'effet.
 
 Vous pouvez ouvrir la démonstration dans un onglet séparé en utilisant le lien ci-dessous pour faciliter les tests&nbsp;:
 

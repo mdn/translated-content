@@ -14,7 +14,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Notes d'utilisation
 
-L'élément `<search>` n'est pas destiné à présenter les résultats de recherche. Au contraire, les résultats de recherche ou filtrés doivent être présentés comme faisant partie du contenu principal de la page Web. Cela dit, les suggestions et les liens qui font partie de la fonctionnalité de «&nbsp;recherche rapide&nbsp;» dans le cadre de la recherche ou de la fonctionnalité de filtrage sont correctement imbriqués dans le contenu de l'élément `<search>` car ce sont des fonctionnalités de recherche.
+L'élément `<search>` n'est pas destiné à présenter les résultats de recherche. Au contraire, les résultats de recherche ou filtrés doivent être présentés comme faisant partie du contenu principal de la page Web. Cela dit, les suggestions et les liens qui font partie de la fonctionnalité de «&nbsp;recherche rapide&nbsp;» dans le cadre de la recherche ou de la fonctionnalité de filtrage sont correctement imbriqués dans le contenu de l'élément `<search>`, car ce sont des fonctionnalités de recherche.
 
 ## Accessibilité
 
@@ -24,7 +24,7 @@ L'élément `<search>` définit un repère [`search`](/fr/docs/Web/Accessibility
 
 ### Formulaire de recherche dans l'en-tête
 
-Cet exemple démontre l'utilisation de `<search>` comme conteneur pour une recherche dans l'en-tête d'un site Web afin d'effectuer une recherche sur l'ensemble du site. Le `<search>` est un conteneur sémantique pour le {{HTMLElement("form")}} qui soumet la requête de recherche saisie par l'utilisateur·ice à un serveur.
+Cet exemple démontre l'utilisation de `<search>` comme conteneur pour une recherche dans l'en-tête d'un site Web afin d'effectuer une recherche sur l'ensemble du site. Le `<search>` est un conteneur sémantique pour le {{HTMLElement("form")}} qui envoie la requête de recherche saisie par l'utilisateur·ice à un serveur.
 
 #### HTML
 
@@ -47,7 +47,7 @@ Cet exemple démontre l'utilisation de `<search>` comme conteneur pour une reche
 
 ### Application Web de recherche
 
-Cet exemple démontre le contenu potentiel du DOM lors de l'inclusion dynamique de la fonctionnalité de recherche JavaScript dans une application Web. Lorsque la fonctionnalité de recherche est entièrement implémentée avec JavaScript, si aucun formulaire n'est soumis, ni un élément {{HTMLElement("form")}} ni un {{HTMLElement("button")}} de soumission ne sont requis. Pour des raisons sémantiques, l'élément `<search>` est inclus pour contenir les capacités de recherche et de filtrage.
+Cet exemple démontre le contenu potentiel du DOM lors de l'inclusion dynamique de la fonctionnalité de recherche JavaScript dans une application Web. Lorsque la fonctionnalité de recherche est entièrement implémentée avec JavaScript, si aucun formulaire n'est envoyé, ni un élément {{HTMLElement("form")}} ni un {{HTMLElement("button")}} d'envoi ne sont requis. Pour des raisons sémantiques, l'élément `<search>` est inclus pour contenir les capacités de recherche et de filtrage.
 
 #### HTML
 

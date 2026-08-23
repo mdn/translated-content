@@ -38,7 +38,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ```html
 <p>
-  Chaque fois que Kenny est tué, Stan dira
+  Chaque fois que Kenny est tué, Stan dit
   <q cite="https://fr.wikipedia.org/wiki/Kenny_McCormick#Le_dialogue_rituel">
     Oh mon Dieu, ils ont tué Kenny !
   </q>

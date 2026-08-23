@@ -56,7 +56,7 @@ Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemp
 
 ### Sans prise en charge de ruby
 
-Avec un navigateur ne prenant pas en charge les annotations Ruby, on aurait&nbsp;:
+Avec un navigateur ne prenant pas en charge les annotations Ruby, on a&nbsp;:
 
 ```html hidden
 漢 (Kan) 字 (ji)

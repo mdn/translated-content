@@ -6,23 +6,23 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<output>`** est un élément conteneur dans lequel un site ou une application peut injecter les résultats d'un calcul ou le résultat d'une action utilisateur.
+L'élément [HTML](/fr/docs/Web/HTML) **`<output>`** est un élément conteneur dans lequel un site ou une application peut injecter les résultats d'un calcul ou le résultat d'une action utilisateur·ice.
 
 ## Attributs
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - [`for`](/fr/docs/Web/HTML/Reference/Attributes/for)
-  - : Une liste d'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'autres éléments, séparés par des espaces, qui ont joué un rôle dans le calcul (en tant que valeurs d'entrée ou autrement).
+  - : Une liste des [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'autres éléments, séparés par des espaces, qui ont joué un rôle dans le calcul (en tant que valeurs d'entrée ou autrement).
 - [`form`](/fr/docs/Web/HTML/Reference/Attributes/form)
-  - : L'élément {{HTMLElement("form")}} auquel associer la sortie (son propriétaire de formulaire). La valeur de cet attribut doit être l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'un `<form>` dans le même document. (Si cet attribut n'est pas défini, l'élément `<output>` est associé à son ancêtre `<form>`, s'il existe.)
+  - : L'élément {{HTMLElement("form")}} auquel associer la sortie (son propriétaire de formulaire). La valeur de cet attribut doit être un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'un `<form>` dans le même document. (Si cet attribut n'est pas défini, l'élément `<output>` est associé à son ancêtre `<form>`, s'il existe.)
 
-    Cet attribut permet d'associer des éléments `<output>` à des `<form>` n'importe où dans le document, pas seulement à l'intérieur d'un `<form>`. Il peut aussi remplacer un ancêtre `<form>`. Le nom et le contenu de l'élément `<output>` ne sont pas envoyés lors de la soumission du formulaire.
+    Cet attribut permet d'associer des éléments `<output>` à des `<form>` n'importe où dans le document, pas seulement à l'intérieur d'un `<form>`. Il peut aussi remplacer un ancêtre `<form>`. Le nom et le contenu de l'élément `<output>` ne sont pas envoyés lors de l'envoi du formulaire.
 
 - `name`
   - : Le nom de l'élément. Utilisé dans l'API {{DOMxRef("HTMLFormElement.elements", "form.elements")}}.
 
-La valeur, le nom et le contenu de l'élément `<output>` ne sont PAS envoyés lors de la soumission du formulaire.
+La valeur, le nom et le contenu de l'élément `<output>` ne sont PAS envoyés lors de l'envoie du formulaire.
 
 ## Accessibilité
 
