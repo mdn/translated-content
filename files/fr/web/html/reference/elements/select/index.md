@@ -3,7 +3,7 @@ title: "Élément HTML `<select>` : l'élément de liste déroulante"
 short-title: <select>
 slug: Web/HTML/Reference/Elements/select
 l10n:
-  sourceCommit: 9edb26a033a11bcc1e101814a466c30d13e09f43
+  sourceCommit: 221ca1f7a86235a442dc8312a56e4151a85fcf29
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<select>`** représente un contrôle qui propose un menu d'options.
@@ -37,18 +37,6 @@ select {
 }
 ```
 
-L'exemple ci-avant illustre une utilisation typique de `<select>`. Il reçoit un attribut `id` pour pouvoir être associé à un élément {{HTMLElement("label")}} à des fins d'accessibilité, ainsi qu'un attribut `name` pour représenter le nom de la donnée envoyée au serveur. Chaque option du menu est définie par un élément {{HTMLElement("option")}} imbriqué dans l'élément `<select>`.
-
-Chaque élément `<option>` doit avoir un attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/option#value) pour définir la valeur à envoyer au serveur lorsque cette option est sélectionnée. Si aucun attribut `value` n'est défini, la valeur par défaut est le texte contenu dans l'élément. Vous pouvez définir un attribut [`selected`](/fr/docs/Web/HTML/Reference/Elements/option#selected) sur un élément `<option>` pour qu'il soit sélectionné par défaut au chargement de la page. Si aucun attribut `selected` n'est défini, le premier élément `<option>` est sélectionné par défaut.
-
-Un élément `<select>` est représenté en JavaScript par un objet {{DOMxRef("HTMLSelectElement")}}, et cet objet possède une propriété {{DOMxRef("HTMLSelectElement.value", "value")}} qui contient la valeur de l'option sélectionnée.
-
-L'élément `<select>` possède des attributs spécifiques que vous pouvez utiliser pour le contrôler, comme `multiple` pour définir si plusieurs options peuvent être sélectionnées, et `size` pour définir combien d'options doivent être affichées en même temps. Il accepte aussi la plupart des attributs généraux des champs de formulaire comme `required`, `disabled`, `autofocus`, etc.
-
-Vous pouvez également imbriquer des éléments {{HTMLElement("option")}} à l'intérieur d'éléments {{HTMLElement("optgroup")}} pour créer des groupes distincts d'options dans la liste déroulante. Il est aussi possible d'inclure des éléments {{HTMLElement("hr")}} pour créer des séparateurs qui ajoutent des ruptures visuelles entre les options.
-
-Pour plus d'exemples, voir [les contrôles natifs pour les formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#contenu_déroulant).
-
 ## Attributs
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
@@ -65,18 +53,30 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Cet attribut permet de définir l'association d'éléments `<select>` à des `<form>` n'importe où dans le document, pas seulement à l'intérieur d'un `<form>`. Il peut aussi définir une association différente de celle d'un ancêtre `<form>`.
 
 - [`multiple`](/fr/docs/Web/HTML/Reference/Attributes/multiple)
-  - : Cet attribut booléen indique qu'on peut sélectionner plusieurs options parmi celles offertes dans le contrôle. Par défaut, si cet attribut n'est pas utilisé, seule une option peut être sélectionnée.
+  - : Cet attribut booléen indique que zéro ou plusieurs options peuvent être sélectionnées dans la liste. S'il n'est pas défini, une seule option peut être sélectionnée à la fois. Les options sélectionnées multiples sont envoyées en utilisant la convention de tableau {{DOMxRef("URLSearchParams")}}, c'est-à-dire `name=value1&name=value2`. Si `multiple` est défini, `size` par défaut est `4` au lieu de `1`.
 - `name`
   - : Le nom associé au contrôle.
 - [`required`](/fr/docs/Web/HTML/Reference/Attributes/required)
-  - : Un attribut booléen qui indique qu'une option dont la valeur est une chaîne de caractères non-vide doit être sélectionnée.
-- [`size`](/fr/docs/Web/HTML/Reference/Attributes/size)
-  - : Si le contrôle est affiché comme une liste déroulante à défilement (par exemple, lorsque `multiple` est défini), cet attribut permet de définir le nombre de lignes de la liste qui doivent être visibles en même temps. Les navigateurs ne sont pas obligés d'afficher un élément select sous forme de liste à défilement. La valeur par défaut est `0`.
+  - : Cet attribut booléen indique que l'utilisateur·ice doit sélectionner au moins une option avant de pouvoir envoyer le formulaire. Le `<select>` n'a aucune option sélectionnée s'il n'a pas d'options, si `multiple` est défini et que l'utilisateur·ice désélectionne toutes les options, si la valeur du `<select>` est définie par programme à `""`, ou si seule _l'option étiquette de remplacement_ est sélectionnée. Toute option autre que l'option étiquette de remplacement est considérée comme valide, même si sa valeur est également vide.
 
-    > [!NOTE]
-    > Selon la spécification HTML, la valeur par défaut de size doit être `1`&nbsp;; cependant, en pratique, cela a été constaté comme cassant certains sites web, et aucun autre navigateur ne fait cela actuellement, donc Mozilla a choisi de continuer à retourner `0` pour le moment avec Firefox.
+    L'option étiquette de remplacement est le texte affiché dans la boîte avant que l'utilisateur·ice ne fasse un choix, comme le «&nbsp;--Veuillez choisir une option--&nbsp;» dans la démo [Essayez-le](#try_it) ci-dessus. Sémantiquement, elle est considérée comme équivalente à l'attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Attributes/placeholder) et n'est pas considérée comme une option réelle. Elle est définie comme la première option de la liste des options qui est un enfant direct du `<select>` (pas à l'intérieur d'un `<optgroup>`) et dont la valeur est une chaîne de caractères vide. Elle n'est pertinente que lorsque `size` est `1` et que `multiple` n'est pas défini&nbsp;; dans tous les autres cas, un tel `<option>` est simplement une option normale en raison de la façon dont le `<select>` est rendu.
+
+- [`size`](/fr/docs/Web/HTML/Reference/Attributes/size)
+  - : Cet attribut représente le nombre d'options à afficher à la fois et doit être un entier positif. Si la valeur est `1`, les navigateurs affichent une liste déroulante. Si la valeur est supérieure à `1`, les navigateurs affichent une zone de liste défilante avec le nombre de lignes visibles défini. Si l'attribut n'est pas défini, la valeur par défaut est `1`. Si l'attribut `multiple` est défini, la valeur par défaut est `4`. Cependant, pour des raisons de compatibilité descendante, la propriété {{DOMxRef("HTMLSelectElement.size","size")}} retourne toujours `0` comme valeur par défaut.
 
 ## Notes d'utilisation
+
+Comme pour les autres contrôles de formulaire, un élément `<select>` est associé à un {{HTMLElement("label")}} à des fins d'accessibilité, ainsi qu'à un attribut `name` pour représenter le nom du point de données associé envoyé au serveur. Chaque option de menu est définie par un élément {{HTMLElement("option")}} imbriqué à l'intérieur du `<select>`.
+
+Chaque élément `<option>` doit avoir un attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/option#value) pour définir la valeur à envoyer au serveur lorsque cette option est sélectionnée. Si aucun attribut `value` n'est défini, la valeur par défaut est le texte contenu dans l'élément. Vous pouvez définir un attribut [`selected`](/fr/docs/Web/HTML/Reference/Elements/option#selected) sur un élément `<option>` pour qu'il soit sélectionné par défaut au chargement de la page. Si aucun attribut `selected` n'est défini, le premier élément `<option>` est sélectionné par défaut.
+
+Un élément `<select>` est représenté en JavaScript par un objet {{DOMxRef("HTMLSelectElement")}}, et cet objet possède une propriété {{DOMxRef("HTMLSelectElement.value", "value")}} qui contient la valeur de l'option sélectionnée.
+
+L'élément `<select>` possède des attributs spécifiques que vous pouvez utiliser pour le contrôler, comme `multiple` pour définir si plusieurs options peuvent être sélectionnées, et `size` pour définir combien d'options doivent être affichées en même temps. Il accepte aussi la plupart des attributs généraux des champs de formulaire comme `required`, `disabled`, `autofocus`, etc.
+
+Vous pouvez également imbriquer des éléments {{HTMLElement("option")}} à l'intérieur d'éléments {{HTMLElement("optgroup")}} pour créer des groupes distincts d'options dans la liste déroulante. Il est aussi possible d'inclure des éléments {{HTMLElement("hr")}} pour créer des séparateurs qui ajoutent des ruptures visuelles entre les options.
+
+Pour plus d'exemples, voir [les contrôles natifs pour les formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#contenu_déroulant).
 
 ### Options dans des éléments conteneurs
 
@@ -92,7 +92,7 @@ Pour regrouper des options sous un en-tête, utilisez un {{HTMLElement("optgroup
 
 ### Sélectionner plusieurs options
 
-Sur un ordinateur de bureau, il existe différentes façons de sélectionner plusieurs options pour un élément `<select>` utilisant un attribut `multiple`.
+Sur un ordinateur de bureau, il existe différentes façons de sélectionner plusieurs options pour un élément `<select>` utilisant un attribut `multiple` et un attribut `size` supérieur à `1`.
 
 Pour les personnes qui utilisent la souris, il est possible de maintenir les touches <kbd>Ctrl</kbd>, <kbd>Command</kbd> ou <kbd>Maj</kbd> (selon le système d'exploitation utilisé) et de cliquer sur les différentes options afin de les sélectionner/désélectionner.
 

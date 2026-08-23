@@ -30,10 +30,10 @@ label {
 }
 ```
 
-Pour lier l'élément `<datalist>` au contrôle, on lui donne un identifiant unique via l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), puis on ajoute l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#list) à l'élément HTML {{HTMLElement("input")}} avec le même identifiant en valeur.
+Pour lier l'élément `<datalist>` au contrôle, on lui donne un identifiant unique avec l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), puis on ajoute l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#list) à l'élément HTML {{HTMLElement("input")}} avec le même identifiant en valeur.
 Seuls certains types de {{HTMLElement("input")}} prennent en charge ce comportement, et cela peut aussi varier selon le navigateur.
 
-Chaque élément `<option>` doit avoir un attribut `value`, qui représente une suggestion à saisir dans le champ. Il peut aussi avoir un attribut `label`, ou, à défaut, un contenu textuel, qui pourra être affiché par le navigateur à la place de `value` (Firefox), ou en complément de `value` (Chrome et Safari, comme texte supplémentaire). Le contenu exact du menu déroulant dépend du navigateur, mais lors du clic, la valeur saisie dans le champ proviendra toujours de l'attribut `value`.
+Chaque élément `<option>` doit avoir un attribut `value`, qui représente une suggestion à saisir dans le champ. Il peut aussi avoir un attribut `label`, ou, à défaut, un contenu textuel, qui peut être affiché par le navigateur à la place de `value` (Firefox), ou en complément de `value` (Chrome et Safari, comme texte supplémentaire). Le contenu exact du menu déroulant dépend du navigateur, mais lors du clic, la valeur saisie dans le champ provient toujours de l'attribut `value`.
 
 > [!NOTE]
 > `<datalist>` n'est pas un remplacement de {{HTMLElement("select")}}. Un `<datalist>` ne représente pas un champ de saisie en soi&nbsp;; il s'agit d'une liste de valeurs suggérées pour un contrôle associé. Le contrôle peut toujours accepter toute valeur qui passe la validation, même si elle n'est pas dans cette liste de suggestions.
@@ -79,7 +79,7 @@ Les types {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "
 Des valeurs prédéfinies peuvent y être proposées, permettant à l'utilisateur·ice de remplir rapidement le champ.
 
 > [!NOTE]
-> Lorsque ces types ne sont pas pris en charge, un champ de type `text` classique sera affiché à la place. Ce champ reconnaîtra correctement les valeurs recommandées et les affichera dans un menu déroulant.
+> Lorsque ces types ne sont pas pris en charge, un champ de type `text` classique est affiché à la place. Ce champ reconnaît correctement les valeurs recommandées et les affiche dans un menu déroulant.
 
 ```html
 <input type="time" list="heuresPopulaires" />

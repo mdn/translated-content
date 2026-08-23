@@ -31,7 +31,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 - `shadowrootclonable`
   - : Définit la valeur de la propriété {{DOMxRef("ShadowRoot.clonable", "clonable")}} d'un objet {{DOMxRef("ShadowRoot")}} créé avec cet élément à `true`.
-    Si défini, un clone de l'hôte d'ombre (l'élément parent de ce `<template>`) créé avec {{DOMxRef("Node.cloneNode()")}} ou {{DOMxRef("Document.importNode()")}} inclura une racine d'ombre dans la copie.
+    Si défini, un clone de l'hôte d'ombre (l'élément parent de ce `<template>`) créé avec {{DOMxRef("Node.cloneNode()")}} ou {{DOMxRef("Document.importNode()")}} inclut une racine d'ombre dans la copie.
 
 - `shadowrootcustomelementregistry` {{Experimental_Inline}}
   - : Définit la propriété [`customElementRegistry`](/fr/docs/Web/API/ShadowRoot/customElementRegistry) d'une [`ShadowRoot`](/fr/docs/Web/API/ShadowRoot) créée avec cet élément à `null`, plutôt que celle du registre d'éléments personnalisés du document [registre d'éléments personnalisés](/fr/docs/Web/API/Document/customElementRegistry).
@@ -108,7 +108,7 @@ Nous commençons d'abord par la partie HTML de l'exemple.
     </tr>
   </thead>
   <tbody>
-    <!-- des données existantes pourraient éventuellement être incluses
+    <!-- des données existantes peuvent éventuellement être incluses
          ici -->
   </tbody>
 </table>
@@ -272,7 +272,7 @@ div:focus {
 
 Les résultats sont affichés ci-dessous.
 Lorsque le HTML est d'abord rendu, les éléments n'ont aucune mise en forme, comme le montre la première image.
-Pour la racine d'ombre qui n'a pas l'attribut `shadowrootdelegatesfocus` défini, vous pouvez cliquer n'importe où sauf sur l'élément `<input>` et la sélection ne change pas (si vous sélectionnez l'élément `<input>`, il ressemblera à la seconde image).
+Pour la racine d'ombre qui n'a pas l'attribut `shadowrootdelegatesfocus` défini, vous pouvez cliquer n'importe où sauf sur l'élément `<input>` et la sélection ne change pas (si vous sélectionnez l'élément `<input>`, il ressemble à la seconde image).
 
 ![Capture d'écran du code sans sélection](template_with_no_focus.png)
 

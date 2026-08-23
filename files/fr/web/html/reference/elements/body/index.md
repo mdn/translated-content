@@ -24,11 +24,11 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - {{DOMxRef("Window/beforeunload_event", "onbeforeunload")}}
   - : Fonction appelée lorsque le document est sur le point d'être déchargé.
 - {{DOMxRef("Window/blur_event", "onblur")}}
-  - : Fonction appelée lorsque le document perd le focus.
+  - : Fonction appelée lorsque le document perd la sélection (<i lang="en">blur</i> en anglais).
 - {{DOMxRef("Window/error_event", "onerror")}}
   - : Fonction appelée lorsque le document n'a pas pu se charger correctement.
 - {{DOMxRef("Window/focus_event", "onfocus")}}
-  - : Fonction appelée lorsque le document reçoit le focus.
+  - : Fonction appelée lorsque le document reçoit la sélection (<i lang="en">focus</i> en anglais).
 - {{DOMxRef("Window/hashchange_event", "onhashchange")}}
   - : Fonction appelée lorsque la partie identifiant de fragment (commençant par le caractère dièse (`'#'`)) de l'adresse courante du document a changé.
 - {{DOMxRef("Window/languagechange_event", "onlanguagechange")}}
@@ -172,7 +172,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
             L'élément <code>&#x3C;body></code> expose l'interface {{DOMxRef("HTMLBodyElement")}}.
           </li>
           <li>
-            Vous pouvez accéder à l'élément <code>&#x3C;body></code> via la propriété {{DOMxRef("document.body")}}.
+            Vous pouvez accéder à l'élément <code>&#x3C;body></code> avec la propriété {{DOMxRef("document.body")}}.
           </li>
         </ul>
       </td>

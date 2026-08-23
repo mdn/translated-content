@@ -42,7 +42,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Notes d'utilisation
 
-Voici des exemples d'œuvres auxquelles on pourrait faire référence grâce à un élément `<cite>`&nbsp;:
+Voici des exemples d'œuvres auxquelles on peut faire référence grâce à un élément `<cite>`&nbsp;:
 
 - Un livre
 - Un article de recherche
@@ -160,4 +160,4 @@ En général, les navigateurs appliquent un style italique au contenu d'un élé
 ## Voir aussi
 
 - L'élément {{HTMLElement("blockquote")}} pour les citations longues.
-- L'élément {{HTMLElement("q")}} pour les citations en ligne et l'attribut [`cite`](/fr/docs/Web/HTML/Reference/Elements/q#cite).
+- L'élément {{HTMLElement("q")}} pour les citations en incise et l'attribut [`cite`](/fr/docs/Web/HTML/Reference/Elements/q#cite).

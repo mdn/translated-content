@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-L'élément HTML **`<dl>`** représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt)) et leurs descriptions ou définitions (fournies par des éléments [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd)). On utilisera par exemple cet élément pour implémenter un glossaire.
+L'élément HTML **`<dl>`** représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt)) et leurs descriptions ou définitions (fournies par des éléments [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd)). On utilise par exemple cet élément pour implémenter un glossaire.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;dl&gt;", "tabbed-standard")}}
 
@@ -51,7 +51,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 ## Accessibilité
 
 Chaque lecteur d'écran expose le contenu de `<dl>` différemment, notamment le nombre total d'éléments, le contexte termes/définitions et les modes de navigation. Ces différences ne sont pas nécessairement des bogues.
-À partir d'iOS 14, VoiceOver annoncera que le contenu de `<dl>` est une liste lorsqu'on navigue avec le curseur virtuel (et non via la commande «&nbsp;lire tout&nbsp;»). VoiceOver ne prend pas en charge les commandes de navigation de liste avec `<dl>`. Faites attention à l'application des rôles ARIA `term` et `definition` aux constructions `<dl>`, car VoiceOver (macOS et iOS) ajustera la manière dont ils sont annoncés.
+À partir d'iOS 14, VoiceOver annonce que le contenu de `<dl>` est une liste lorsqu'on navigue avec le curseur virtuel (et non avec la commande «&nbsp;lire tout&nbsp;»). VoiceOver ne prend pas en charge les commandes de navigation de liste avec `<dl>`. Faites attention à l'application des rôles ARIA `term` et `definition` aux constructions `<dl>`, car VoiceOver (macOS et iOS) ajuste la manière dont ils sont annoncés.
 
 - [VoiceOver sur iOS 14 prend en charge les listes de descriptions <sup>(angl.)</sup>](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
 - [Brève note sur la prise en charge des listes de descriptions <sup>(angl.)</sup>](https://adrianroselli.com/2022/12/brief-note-on-description-list-support.html)
@@ -64,7 +64,7 @@ Chaque lecteur d'écran expose le contenu de `<dl>` différemment, notamment le 
 <dl>
   <dt>Firefox</dt>
   <dd>
-    Un navigateur Web libre, open-source, multi-plateforme dévelopé par la
+    Un navigateur Web libre, open-source, multi-plateforme développé par la
     Mozilla Corporation et des centaines de volontaires.
   </dd>
   <!-- D'autres termes et leurs descriptions -->
@@ -83,7 +83,7 @@ Chaque lecteur d'écran expose le contenu de `<dl>` différemment, notamment le 
   <dt>Mozilla Firefox</dt>
   <dt>Fx</dt>
   <dd>
-    Un navigateur Web libre, open-source, multi-plateforme dévelopé par la
+    Un navigateur Web libre, open-source, multi-plateforme développé par la
     Mozilla Corporation et des centaines de volontaires.
   </dd>
   <!-- D'autres termes et leurs définitions -->
@@ -100,7 +100,7 @@ Chaque lecteur d'écran expose le contenu de `<dl>` différemment, notamment le 
 <dl>
   <dt>Firefox</dt>
   <dd>
-    Un navigateur Web libre, open-source, multi-plateforme dévelopé par la
+    Un navigateur Web libre, open-source, multi-plateforme développé par la
     Mozilla Corporation et des centaines de volontaires.
   </dd>
   <dd>
@@ -147,7 +147,7 @@ dt::after {
 
 ### Intégration de groupes nom-valeur dans les éléments `<div>`
 
-Le HTML permet d'envelopper chaque groupe nom-valeur d'un élément `<dl>` dans un élément {{HTMLElement("div")}}. Cela peut être utile lors de l'utilisation de [microdonnées](/fr/docs/Web/HTML/Guides/Microdata), ou lorsque les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) s'appliquent à un groupe entier, ou encore à des fins de style.
+Le HTML permet d'envelopper chaque groupe nom-valeur d'un élément `<dl>` dans un élément {{HTMLElement("div")}}. Cela peut être utile lors de l'utilisation de [micro-données](/fr/docs/Web/HTML/Guides/Microdata), ou lorsque les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) s'appliquent à un groupe entier, ou encore à des fins de style.
 
 ```html
 <dl>

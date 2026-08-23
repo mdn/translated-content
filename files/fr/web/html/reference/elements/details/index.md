@@ -42,9 +42,9 @@ details[open] summary {
 }
 ```
 
-Un composant `<details>` peut être dans l'un des deux états. L'état par défaut _fermé_ affiche uniquement le triangle et l'étiquette à l'intérieur de `<summary>` (ou une chaîne par défaut définie par {{Glossary("user agent", "agent utilisateur")}} si aucun `<summary>` n'est présent).
+Un composant `<details>` peut être dans l'un des deux états. L'état par défaut _fermé_ affiche uniquement le triangle et l'étiquette à l'intérieur de `<summary>` (ou une chaîne de caractères par défaut définie par {{Glossary("user agent", "agent utilisateur")}} si aucun `<summary>` n'est présent).
 
-Lorsque l'utilisateur·ice clique sur le composant ou le sélectionne puis appuie sur la barre d'espace, il s'ouvre par «&nbsp;torsion&nbsp;», révélant son contenu. L'utilisation courante d'un triangle qui pivote ou se tord pour représenter l'ouverture ou la fermeture du composant explique pourquoi on les appelle parfois «&nbsp;twisty&nbsp;» en anglais.
+Lorsque l'utilisateur·ice clique sur le composant ou le sélectionne (<i lang="en">focus</i> en anglais) puis appuie sur la barre d'espace, il s'ouvre par «&nbsp;torsion&nbsp;», révélant son contenu. L'utilisation courante d'un triangle qui pivote ou se tord pour représenter l'ouverture ou la fermeture du composant explique pourquoi on les appelle parfois «&nbsp;twisty&nbsp;» en anglais.
 
 Vous pouvez utiliser du CSS pour mettre en forme le composant de divulgation, et vous pouvez l'ouvrir ou le fermer de façon programmatique en définissant ou en supprimant son attribut [`open`](#open). Malheureusement, il n'existe actuellement aucun moyen intégré d'animer la transition entre l'ouverture et la fermeture.
 
@@ -65,7 +65,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 - `name`
   - : Cet attribut permet de relier plusieurs éléments `<details>` pour qu'un seul soit ouvert à la fois. Cela permet aux développeur·euse·s de créer facilement des composants d'interface comme des accordéons sans script.
 
-    L'attribut `name` définit un nom de groupe — donnez la même valeur `name` à plusieurs éléments `<details>` pour les regrouper. Un seul des éléments `<details>` du groupe peut être ouvert à la fois — ouvrir l'un fermera l'autre. Si plusieurs éléments `<details>` du groupe ont l'attribut `open`, seul le premier dans l'ordre du code source sera affiché ouvert.
+    L'attribut `name` définit un nom de groupe — donnez la même valeur `name` à plusieurs éléments `<details>` pour les regrouper. Un seul des éléments `<details>` du groupe peut être ouvert à la fois — ouvrir l'un ferme l'autre. Si plusieurs éléments `<details>` du groupe ont l'attribut `open`, seul le premier dans l'ordre du code source est affiché ouvert.
 
     > [!NOTE]
     > Les éléments `<details>` n'ont pas besoin d'être adjacents dans le code source pour faire partie du même groupe.
@@ -164,7 +164,7 @@ Voici plusieurs boîtes `<details>`, toutes avec le même nom pour qu'une seule 
 
 {{EmbedLiveSample("Plusieurs boîtes de divulgation nommées", 650, 150)}}
 
-Essayez d'ouvrir tous les widgets de divulgation. Lorsque vous en ouvrez un, tous les autres se ferment automatiquement.
+Essayez d'ouvrir tous les composants de divulgation. Lorsque vous en ouvrez un, tous les autres se ferment automatiquement.
 
 ### Personnaliser l'apparence
 
@@ -225,7 +225,7 @@ Ce CSS crée une apparence similaire à une interface à onglets, où cliquer su
 
 {{EmbedLiveSample("Personnaliser l'apparence", 650, 150)}}
 
-Voir la page {{HTMLElement("summary")}} pour [un exemple de personnalisation du widget de divulgation](/fr/docs/Web/HTML/Reference/Elements/summary#changer_licône_du_résumé).
+Voir la page {{HTMLElement("summary")}} pour [un exemple de personnalisation du composant de divulgation](/fr/docs/Web/HTML/Reference/Elements/summary#changer_licône_du_résumé).
 
 ## Résumé technique
 
