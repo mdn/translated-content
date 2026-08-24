@@ -1,8 +1,9 @@
 ---
-title: "@media"
+title: CSS `@media` アットルール
+short-title: "@media"
 slug: Web/CSS/Reference/At-rules/@media
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 3869bc5647462538141417d68fc14362c7929ce9
 ---
 
 **`@media`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、1 つまたは複数の[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)の結果に基づいて、スタイルシートの一部を適用するために使用することができます。これによってメディアクエリーを指定し、そのメディアクエリーがコンテンツの使用される端末に一致する場合にのみ、文書に CSS のブロックを適用することができます。
