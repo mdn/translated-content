@@ -1,8 +1,9 @@
 ---
-title: color-gamut
+title: CSS `color-gamut` メディア特性
+short-title: color-gamut
 slug: Web/CSS/Reference/At-rules/@media/color-gamut
 l10n:
-  sourceCommit: 423161782178b119c64cd0b41bff8df20dc84a56
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 **`color-gamut`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}および出力機器が対応している{{glossary("gamut", "色域")}}のおおよその範囲に基づいて CSS スタイルを適用するために使用されます。

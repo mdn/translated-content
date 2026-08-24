@@ -1,8 +1,9 @@
 ---
-title: pointer
+title: CSS `pointer` メディア特性
+short-title: pointer
 slug: Web/CSS/Reference/At-rules/@media/pointer
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 **`pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ユーザーが（マウスなどの）ポインティングデバイスを持っているか、もしそうならば、*第一の*ポインティングデバイスにどれだけの正確性があるかを調べます。

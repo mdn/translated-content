@@ -1,8 +1,9 @@
 ---
-title: -webkit-device-pixel-ratio
+title: CSS `-webkit-device-pixel-ratio` メディア特性
+short-title: -webkit-device-pixel-ratio
 slug: Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 **`-webkit-device-pixel-ratio`** は [CSS](/ja/docs/Web/CSS) の標準外の論理[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、標準の [`resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) メディア特性の代替です。
