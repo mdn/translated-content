@@ -1,8 +1,9 @@
 ---
-title: "@layer"
+title: CSS `@layer` アットルール
+short-title: "@layer"
 slug: Web/CSS/Reference/At-rules/@layer
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 **`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、カスケードレイヤーを宣言するために使用し、また複数のカスケードレイヤーがある場合に、優先順位を定義するためにも使用することができます。
@@ -114,7 +115,7 @@ l10n:
 
 これは無名カスケードレイヤーを作成します。このレイヤーは名前付きレイヤーと同じように機能しますが、後でルールを割り当てることはできません。無名レイヤーの優先順位は、名前付きまたは無名のレイヤーが宣言された順番であり、レイヤーの外側で宣言されたスタイル設定よりも下になります。
 
-カスケードレイヤーを作成するもう一つの方法は、 {{cssxref("@import")}} を使用することです。この場合、ルールはインポートされたスタイルシートの中にあることになります。 `@import` アットルールは、 `@charset` ルールと `@layer` ルールを除く、他のすべての種類のルールに先立って入力しなければならないことを覚えておいてください。
+カスケードレイヤーを作成するもう一つの方法は、 {{cssxref("@import")}} を使用することです。この場合、ルールはインポートされたスタイルシートの中にあることになります。 `@import` アットルールは、 `@charset` ルールと `@layer` 文（`@layer` ブロックではなく）を除く、他のすべての種類のルールに先立って入力しなければならないことを覚えておいてください。
 
 ```css
 @import "theme.css" layer(utilities);
@@ -238,4 +239,4 @@ p {
 - [CSS カスケード入門](/ja/docs/Web/CSS/Guides/Cascade/Introduction)
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) (bram.us (2021))
+- [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) - bram.us (2021)
