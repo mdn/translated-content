@@ -1,8 +1,9 @@
 ---
-title: width
+title: CSS `width` メディア特性
+short-title: width
 slug: Web/CSS/Reference/At-rules/@media/width
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 **`width`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の幅（または[ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)のページボックスの幅）を検査するために使用することができます。

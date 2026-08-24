@@ -1,8 +1,9 @@
 ---
-title: -webkit-transform-3d
+title: CSS `-webkit-transform-3d` メディア特性
+short-title: -webkit-transform-3d
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transform-3d
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 **`-webkit-transform-3d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で [WebKit 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
@@ -56,7 +57,6 @@ l10n:
 - {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 - {{cssxref("transform")}} および [CSS 座標変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
 - {{cssxref("@media")}} および[メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@supports")}} および[機能クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)

@@ -1,8 +1,9 @@
 ---
-title: overflow-block
+title: CSS `overflow-block` メディア特性
+short-title: overflow-block
 slug: Web/CSS/Reference/At-rules/@media/overflow-block
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 **`overflow-block`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、初期[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)をブロック軸方向にあふれたコンテンツを機器がどのように扱うかを調べるために使用します。

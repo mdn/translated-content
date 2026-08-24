@@ -1,8 +1,9 @@
 ---
-title: color-index
+title: CSS `color-index` メディア特性
+short-title: color-index
 slug: Web/CSS/Reference/At-rules/@media/color-index
 l10n:
-  sourceCommit: 6ef7bc04d63cf8b512bdbea149a6cb875cc063e3
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 **`color-index`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力端末の色参照テーブルの項目数を調べるために使用します。
