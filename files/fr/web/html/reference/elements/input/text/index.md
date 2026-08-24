@@ -80,9 +80,9 @@ Voir [la section sur l'utilisation d'un motif de validation](#utiliser_un_motif_
 
 ### `placeholder`
 
-L'attribut `placeholder` est une chaîne de caractères fournissant une courte indication à l'utilisateur·ice quant à l'information attendue dans le champ. Cet attribut devrait être un mot ou une phrase courte qui illustre le type de donnée attendu plutôt qu'un message explicatif. Le texte ne doit pas contenir de saut à la ligne.
+L'attribut `placeholder` est une chaîne de caractères fournissant une courte indication à l'utilisateur·ice quant à l'information attendue dans le champ. Cet attribut doit être un mot ou une phrase courte qui illustre le type de donnée attendu plutôt qu'un message explicatif. Le texte ne doit pas contenir de saut à la ligne.
 
-Si le contenu du contrôle respecte une directionnalité donnée ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
+Si le contenu du contrôle respecte une direction donnée ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
 > [!NOTE]
 > On évite, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et qu'il peut causer certains problèmes avec le contenu. Voir [les problèmes d'accessibilité des `<input>`](/fr/docs/Web/HTML/Reference/Elements/input#acessibilité) pour plus d'informations.
@@ -102,7 +102,7 @@ Cet attribut _ne_ définit _pas_ la limite du nombre de caractères saisissables
 
 ### `spellcheck`
 
-L'attribut universl [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attributes/spellcheck) est utilisé afin d'indiquer si la vérification orthographique doit être utilisée pour un élément. Il peut être utilisé pour n'importe quel contenu éditable mais possède certaines spécificités pour les éléments {{HTMLElement("input")}}. Les valeurs autorisées pour cet attribut sont&nbsp;:
+L'attribut universel [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attributes/spellcheck) est utilisé afin d'indiquer si la vérification orthographique doit être utilisée pour un élément. Il peut être utilisé pour n'importe quel contenu éditable mais possède certaines spécificités pour les éléments {{HTMLElement("input")}}. Les valeurs autorisées pour cet attribut sont&nbsp;:
 
 - `false`
   - : La vérification orthographique est désactivée pour cet élément.
@@ -113,7 +113,7 @@ L'attribut universl [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attributes
 
 Un champ de saisie peut avoir la vérification orthographique activée s'il ne possède pas l'attribut [`readonly`](#readonly) et qu'il n'est pas désactivé.
 
-La valeur renvoyée par l'attribut `spellcheck` peut ne pas refléter l'état réel de la vérification orthographique si certaines préférences de {{Glossary("user agent", "l'agent utilisateur")}} surchargent le paramétrage par défaut.
+La valeur retournée par l'attribut `spellcheck` peut ne pas refléter l'état réel de la vérification orthographique si certaines préférences de {{Glossary("user agent", "l'agent utilisateur")}} surchargent le paramétrage par défaut.
 
 ## Utiliser les champs de texte
 
@@ -199,7 +199,7 @@ La taille physique du champ de saisie peut être adaptée grâce à l'attribut [
 Les éléments `<input>` de type `text` ne possèdent pas de mécanisme de validation automatique. En revanche, il est possible d'ajouter certaines contraintes qui sont vérifiées côté client et que nous allons voir ici.
 
 > [!NOTE]
-> La validation des données de formulaire HTML _ne doit pas_ remplacer des scripts de vérification côté serveur. En effet, il est très facile à modifier le code HTML du site pour outrepasser ou même désactiver les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur sans passer par le formulaire. Si votre serveur ne valide pas les données reçues, des données potentiellement mal formatées (ou trop abondantes, du mauvais type et ainsi de suite) pourraient causer des dommages à votre base de données.
+> La validation des données de formulaire HTML _ne doit pas_ remplacer des scripts de vérification côté serveur. En effet, il est très facile à modifier le code HTML du site pour outrepasser ou même désactiver les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur sans passer par le formulaire. Si votre serveur ne valide pas les données reçues, des données potentiellement mal formatées (ou trop abondantes, du mauvais type et ainsi de suite) peuvent causer des dommages à votre base de données.
 
 ### Un aparté sur la mise en forme
 

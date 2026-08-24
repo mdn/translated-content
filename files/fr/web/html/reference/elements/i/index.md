@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<i>`** représente une portion de texte mise à part du texte normal pour une raison donnée, comme du texte idiomatique, des termes techniques ou des désignations taxonomiques, entre autres. Historiquement, ces contenus étaient présentés en italique, ce qui explique la désignation `<i>` de cet élément.
+L'élément [HTML](/fr/docs/Web/HTML) **`<i>`** représente une portion de texte mise à part du texte normal pour une raison donnée, comme du texte idiomatique, des termes techniques ou des désignations taxonomiques, entre autres. Historiquement, ces contenus sont présentés en italique, ce qui explique la désignation `<i>` de cet élément.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;i&gt;", "tabbed-shorter")}}
 
@@ -42,10 +42,10 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
   - Expressions idiomatiques d'une autre langue (par exemple «&nbsp;_et cetera_&nbsp;»)&nbsp;; celles‑ci doivent inclure l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) pour identifier la langue
   - Termes techniques
   - Translittérations
-  - Pensées (par exemple «&nbsp;Elle se demandait, _De quoi parle cet auteur, au juste&nbsp;?_&nbsp;»)
-  - Noms de navires ou d'embarcations dans les systèmes d'écriture occidentaux (par exemple «&nbsp;Ils ont fouillé les quais pour trouver l'_Empress of the Galaxy_&nbsp;», le navire auquel ils étaient affectés.)
+  - Pensées (par exemple «&nbsp;Elle se demandait, _De quoi parle cet·te auteur·ice, au juste&nbsp;?_&nbsp;»)
+  - Noms de navires ou d'embarcations dans les systèmes d'écriture occidentaux (par exemple «&nbsp;Ils ont fouillé les quais pour trouver _L'Impératrice de la Galaxie_&nbsp;», le navire auquel ils sont affectés.)
 
-- Dans les versions antérieures de la spécification HTML, l'élément `<i>` n'était qu'un élément de présentation utilisé pour afficher le texte en italique, de la même façon que l'élément `<b>` était utilisé pour afficher le texte en gras. Ce n'est plus le cas, ces balises définissent désormais la sémantique plutôt que l'apparence typographique. Un navigateur affichera généralement toujours le contenu de l'élément `<i>` en italique, mais n'y est, par définition, plus obligé. Pour afficher du texte en italique, les auteur·ice·s doivent utiliser la propriété CSS {{CSSxRef("font-style")}}.
+- Dans les versions antérieures de la spécification HTML, l'élément `<i>` n'était qu'un élément de présentation utilisé pour afficher le texte en italique, de la même façon que l'élément `<b>` était utilisé pour afficher le texte en gras. Ce n'est plus le cas, ces balises définissent désormais la sémantique plutôt que l'apparence typographique. Un navigateur affiche généralement toujours le contenu de l'élément `<i>` en italique, mais n'y est, par définition, plus obligé. Pour afficher du texte en italique, les auteur·ice·s doivent utiliser la propriété CSS {{CSSxRef("font-style")}}.
 - Assurez‑vous que le texte en question n'est pas en réalité plus approprié à être balisé avec un autre élément.
   - Utilisez {{HTMLElement("em")}} pour indiquer l'emphase.
   - Utilisez {{HTMLElement("strong")}} pour indiquer l'importance, la gravité ou l'urgence.

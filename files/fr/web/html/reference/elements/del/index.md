@@ -45,11 +45,11 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `cite`
   - : Une URL pour une ressource expliquant le changement (cela peut être un procès verbal d'une réunion par exemple).
 - `datetime`
-  - : Cet attribut indique l'heure et la date du changement et doit être une chaîne de caractères représentant une date valide, avec une heure facultative. Si la valeur ne peut pas être analysée comme telle, l'élément n'aura pas d'information temporelle associée. Voir [l'article sur les formats](/fr/docs/Web/HTML/Guides/Date_and_time_formats) pour la représentation d'[une date seule](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates) ou d'[une date avec une heure](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates_et_heures_locales).
+  - : Cet attribut indique l'heure et la date du changement et doit être une chaîne de caractères représentant une date valide, avec une heure facultative. Si la valeur ne peut pas être analysée comme telle, l'élément n'a pas d'information temporelle associée. Voir [l'article sur les formats](/fr/docs/Web/HTML/Guides/Date_and_time_formats) pour la représentation [d'une date seule](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates) ou [d'une date avec une heure](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates_et_heures_locales).
 
 ## Accessibilité
 
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `del`. On peut le rendre annonçable via la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
+Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `del`. On peut le rendre accessible aux annonces avec la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
 
 ```css
 del::before,

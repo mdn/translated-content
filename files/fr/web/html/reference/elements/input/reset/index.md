@@ -78,7 +78,7 @@ Un élément `<input type="reset">` possède un attribut [`value`](/fr/docs/Web/
 
 ## Utiliser les boutons de réinitialisation
 
-Les boutons `<input type="reset">` sont utilisés pour réinitialiser les formulaires. Si vous souhaitez créer un bouton personnalisé et adapter son comportement grâce à JavaScript, il est préférable d'utiliser un élément [`<input type="button">`](/fr/docs/Web/HTML/Reference/Elements/input/button), ou mieux encore, un élément {{HTMLElement("button")}}.
+Les boutons `<input type="reset">` sont utilisés pour réinitialiser les formulaires. Si vous souhaitez créer un bouton personnalisé et adapter son comportement grâce à JavaScript, il est préférable d'utiliser un élément `{{HTMLElement("input/button", "&lt;input type=\"button\"&gt;")}}`, ou mieux encore, un élément {{HTMLElement("button")}}.
 
 ### Un bouton simple de réinitialisation
 
@@ -135,7 +135,7 @@ Pour désactiver un bouton de réinitialisation, il suffit d'appliquer l'attribu
 On peut activer/désactiver le bouton lors de la navigation sur la page avec JavaScript en modifiant la valeur de l'attribut `disabled` pour la passer de `true` à `false` et _vice versa_&nbsp;; en JavaScript, cela ressemble à `btn.disabled = true` ou `btn.disabled = false`.
 
 > [!NOTE]
-> Pour plus d'exemples concernant l'activation/la désactivation de bouton, vous pouvez consulter la page [`<input type="button">`](/fr/docs/Web/HTML/Reference/Elements/input/button#désactiver_et_activer_un_bouton).
+> Pour plus d'exemples concernant l'activation/la désactivation de bouton, vous pouvez consulter la page `{{HTMLElement("input/button#désactiver_et_activer_un_bouton", "&lt;input type=\"button\"&gt;")}}`.
 
 ## Validation
 

@@ -18,7 +18,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Pour les [modules de script](/fr/docs/Web/JavaScript/Guide/Modules), si l'attribut `async` est présent, alors les scripts et toutes leurs dépendances sont récupérés en parallèle de l'analyse et évalués dès qu'ils sont disponibles.
 
     > [!WARNING]
-    > Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts «&nbsp;en ligne&nbsp;») pour les scripts classiques, dans ce cas il n'aurait aucun effet.
+    > Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts «&nbsp;en incise&nbsp;») pour les scripts classiques, dans ce cas il n'a aucun effet.
 
     Cet attribut permet d'éviter que le **JavaScript bloque l'analyse du document**&nbsp;: le navigateur n'a plus à charger et évaluer les scripts avant de poursuivre l'analyse. L'attribut `defer` produit un effet similaire.
 
@@ -49,7 +49,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
       > [!NOTE]
       > Définir plusieurs URL permet d'enregistrer plusieurs sources d'attribution sur la même fonctionnalité. Par exemple, différentes campagnes peuvent être mesurées, ce qui implique de générer différents rapports sur différentes données.
 
-    Voir l'[API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
+    Voir [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
 - `blocking`
   - : Cet attribut indique explicitement que certaines opérations doivent être bloquées jusqu'à l'exécution du script. Les opérations à bloquer doivent être une liste d'identifiants séparés par des espaces. Actuellement, un seul identifiant existe&nbsp;:
@@ -66,13 +66,13 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Les scripts qui utilisent l'attribut `defer` empêche le déclenchement de l'évènement `DOMContentLoaded` tant que le script n'a pas été chargé et que son évaluation n'est pas terminée.
 
     > [!WARNING]
-    > Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts «&nbsp;en ligne&nbsp;»), dans ce cas il n'aurait aucun effet.
+    > Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts «&nbsp;en incise&nbsp;»), dans ce cas il n'a aucun effet.
     >
     > L'attribut `defer` n'a aucun effet sur les [modules de script](/fr/docs/Web/JavaScript/Guide/Modules)&nbsp;: ils sont différés par défaut.
 
     Les scripts qui utilisent l'attribut `defer` sont exécutés dans l'ordre dans lequel ils apparaissent dans le document.
 
-    Cet attribut permet d'éliminer le **JavaScript bloquant l'analyse** où le navigateur devrait charger et évaluer les scripts avant de poursuivre l'analyse. `async` a un effet similaire dans ce cas.
+    Cet attribut permet d'éliminer le **JavaScript bloquant l'analyse** où le navigateur doit charger et évaluer les scripts avant de poursuivre l'analyse. `async` a un effet similaire dans ce cas.
 
     Si l'attribut est défini avec l'attribut `async`, l'élément se comporte comme si seul l'attribut `async` est défini.
 
@@ -95,7 +95,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `nomodule`
   - : Cet attribut booléen indique que le script ne doit pas être exécuté dans les navigateurs qui prennent en charge les [modules EcmaScript](/fr/docs/Web/JavaScript/Guide/Modules). Il permet ainsi de fournir un script de repli aux anciens navigateurs qui ne gèrent pas le code JavaScript modulaire.
 - `nonce`
-  - : Un _nonce_ (pour <i lang="en">number used once</i> en anglais) cryptographique utilisé pour inscrire les scripts en ligne sur une liste blanche pour [la règle `script-src` Content-Security-Policy](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src). Le serveur doit générer un nonce unique chaque fois qu'il transmet une règle de sécurité. Ce nonce ne doit pas pouvoir être deviné, car sinon, il devient trivial d'outrepasser la règle de sécurité.
+  - : Un _nombre unique_ (<i lang="en">number used once</i> en anglais) cryptographique utilisé pour inscrire les scripts en incise sur une liste blanche pour [la règle `script-src` Content-Security-Policy](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src). Le serveur doit générer un nombre unique chaque fois qu'il transmet une règle de sécurité. Ce nombre unique ne doit pas pouvoir être deviné, car sinon, il devient trivial d'outrepasser la règle de sécurité.
 - `referrerpolicy`
   - : Une chaîne de caractères qui indique le [référent (<i lang="en">referrer</i> en anglais)](/fr/docs/Web/API/Document/referrer) à utiliser lors de la récupération du script&nbsp;:
     - `no-referrer`&nbsp;: signifie que l'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé.
@@ -108,7 +108,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `unsafe-url`&nbsp;: signifie que le référent inclut l'origine et le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom utilisateur·ice](/fr/docs/Web/API/HTMLAnchorElement/username)). **Cette valeur n'est pas sûre**, car elle peut entraîner des fuites d'origine ou de chemin provenant de ressources sécurisées avec TLS vers des origines insécures.
 
     > [!NOTE]
-    > Utiliser une chaîne vide (`""`) correspond à la valeur par défaut et à la valeur utilisée si `referrerpolicy` n'est pas pris en charge. Si cet attribut n'est pas explicitement défini sur l'élément `<script>`, ce dernier respecte la politique défine à un niveau supérieur (sur le document ou sur le domaine). Si une telle politique n'est pas disponible, la chaîne vide est considérée comme équivalente à `strict-origin-when-cross-origin`.
+    > Utiliser une chaîne de caractères vide (`""`) correspond à la valeur par défaut et à la valeur utilisée si `referrerpolicy` n'est pas pris en charge. Si cet attribut n'est pas explicitement défini sur l'élément `<script>`, ce dernier respecte la politique définie à un niveau supérieur (sur le document ou sur le domaine). Si une telle politique n'est pas disponible, la chaîne de caractères vide est considérée comme équivalente à `strict-origin-when-cross-origin`.
 
 - `src`
   - : Cet attribut définit l'URI d'un script externe. Cela peut être utilisé pour insérer des scripts autrement qu'en les insérant à même le document.
@@ -146,7 +146,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ## Notes
 
-Les scripts sans les attributs [`async`](#async), [`defer`](#defer) ou `type="module"`, ainsi que les scripts en ligne sans l'attribut `type="module"`, sont récupérés et exécutés immédiatement avant que le navigateur ne poursuive l'analyse de la page.
+Les scripts sans les attributs [`async`](#async), [`defer`](#defer) ou `type="module"`, ainsi que les scripts en incise sans l'attribut `type="module"`, sont récupérés et exécutés immédiatement avant que le navigateur ne poursuive l'analyse de la page.
 
 Le script doit être servi avec le type MIME `text/javascript`, mais les navigateurs sont tolérants et ne les bloquent que si le script est servi avec un type image (`image/*`), vidéo (`video/*`), audio (`audio/*`) ou `text/csv`.
 Si le script est bloqué, un évènement {{DOMxRef("HTMLElement/error_event", "error")}} est envoyé à l'élément&nbsp;; sinon, un évènement {{DOMxRef("HTMLElement/load_event", "load")}} est envoyé.
@@ -161,7 +161,7 @@ Cet exemple montre comment importer un script (externe) à l'aide de l'élément
 <script src="javascript.js"></script>
 ```
 
-L'exemple suivant montre comment placer un script (en ligne) à l'intérieur de l'élément `<script>`&nbsp;:
+L'exemple suivant montre comment placer un script (en incise) à l'intérieur de l'élément `<script>`&nbsp;:
 
 ```html
 <script>
@@ -259,7 +259,7 @@ import { name as circleName } from "circle";
 import { name as squareName, draw } from "square";
 ```
 
-Pour plus d'exemples sur ce que vous pouvez faire avec les import maps, voir la section [Importer des modules à l'aide des import maps](/fr/docs/Web/JavaScript/Guide/Modules#importer_des_modules_avec_des_cartes_dimport) du guide sur les modules JavaScript.
+Pour plus d'exemples sur ce que vous pouvez faire avec les `import maps`, voir la section [Importer des modules à l'aide des `import maps`](/fr/docs/Web/JavaScript/Guide/Modules#importer_des_modules_avec_des_cartes_dimport) du guide sur les modules JavaScript.
 
 ### Intégrer des données dans du HTML
 

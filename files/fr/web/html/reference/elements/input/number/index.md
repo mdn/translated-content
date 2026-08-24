@@ -191,7 +191,7 @@ Par exemple, pour ajuster la largeur du champ afin qu'il soit juste assez large 
   id="number" />
 ```
 
-Ensuite, nous ajoutons du CSS pour réduire la largeur de l'élément avec le sélecteur d'`id` `#number`&nbsp;:
+Ensuite, nous ajoutons du CSS pour réduire la largeur de l'élément avec le sélecteur d'un `id` `#number`&nbsp;:
 
 ```css
 #number {

@@ -43,7 +43,7 @@ label {
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled)
-  - : Si cet attribut booléen est défini et aucun élément du groupe d'options ne peut être sélectionné. Cet élément ne recevra pas les évènements de navigation (tels que les clics ou les changements de sélection). Les navigateurs affichent ces éléments en les grisant.
+  - : Si cet attribut booléen est défini et aucun élément du groupe d'options ne peut être sélectionné. Cet élément ne reçoit pas les évènements de navigation (tels que les clics ou les changements de sélection). Les navigateurs affichent ces éléments en les grisant.
 - `label`
   - : Le nom du groupe d'options, que le navigateur peut utiliser pour étiqueter les options dans l'interface utilisateur. Cet attribut est obligatoire si cet élément est utilisé.
 

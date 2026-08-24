@@ -67,7 +67,7 @@ Lorsque l'attribut booléen [`multiple`](/fr/docs/Web/HTML/Reference/Attributes/
 
 ## Attribut non-standard
 
-En complément des attributs précédents, les éléments `<input type="file">` peuvent utiliser les attributs spécifiques suivants. Ces attributs ne sont pas standard et ne devraient donc pas être utilisés.
+En complément des attributs précédents, les éléments `<input type="file">` peuvent utiliser les attributs spécifiques suivants. Ces attributs ne sont pas standard et ne doivent donc pas être utilisés.
 
 ### `webkitdirectory`
 
@@ -324,7 +324,7 @@ input.style.opacity = 0;
 ```
 
 > [!NOTE]
-> La propriété {{CSSxRef("opacity")}} est utilisée pour masquer l'élément `<input>` plutôt que {{CSSxRef("visibility", "visibility: hidden")}} ou {{CSSxRef("display", "display: none")}}. En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.
+> La propriété {{CSSxRef("opacity")}} est utilisée pour masquer l'élément `<input>` plutôt que {{CSSxRef("visibility", "visibility: hidden")}} ou {{CSSxRef("display", "display: none")}}. En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprennent que l'élément n'est pas interactif et ne peut pas être utilisé.
 
 Ensuite, on ajoute [un gestionnaire d'évènement](/fr/docs/Web/API/EventTarget/addEventListener) à l'élément `<input>` afin de réaliser certaines actions lorsque sa valeur (c'est-à-dire les fichiers sélectionnés) change. Ici, le gestionnaire d'évènement appelle la fonction `updateImageDisplay()` que nous décrivons juste après.
 

@@ -38,7 +38,7 @@ Voici d'autres éléments qui sont fréquemment utilisés dans les contextes où
 - {{HTMLElement("kbd")}}&nbsp;: l'élément de saisie au clavier
 - {{HTMLElement("samp")}}&nbsp;: l'élément de sortie d'exemple
 
-Si vous trouvez du code qui utilise `<var>` par erreur à des fins de mise en forme plutôt que pour des raisons sémantiques, vous devriez utiliser un {{HTMLElement("span")}} avec la CSS appropriée ou un élément sémantique approprié parmi les suivants&nbsp;:
+Si vous trouvez du code qui utilise `<var>` par erreur à des fins de mise en forme plutôt que pour des raisons sémantiques, vous devez utiliser un {{HTMLElement("span")}} avec la CSS appropriée ou un élément sémantique approprié parmi les suivants&nbsp;:
 
 - {{HTMLElement("em")}}
 - {{HTMLElement("i")}}
