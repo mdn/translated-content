@@ -19,10 +19,10 @@ function checkNumber(smallNumber) {
 }
 
 console.log(checkNumber(-Number.MAX_VALUE));
-// Sortie attendue : -1.7976931348623157e+308
+// Résultat attendu : -1.7976931348623157e+308
 
 console.log(checkNumber(-Number.MAX_VALUE * 2));
-// Sortie attendue : "Représente le nombre comme -Infinity"
+// Résultat attendu : "Représente le nombre comme -Infinity"
 ```
 
 ## Valeur

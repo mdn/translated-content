@@ -12,10 +12,10 @@ La méthode statique **`Array.from()`** crée une nouvelle instance d'`Array` (c
 
 ```js interactive-example
 console.log(Array.from("toto"));
-// Sortie attendue : Array ["t", "o", "t", "o"]
+// Résultat attendu : Array ["t", "o", "t", "o"]
 
 console.log(Array.from([1, 2, 3], (x) => x + x));
-// Sortie attendue : Array [2, 4, 6]
+// Résultat attendu : Array [2, 4, 6]
 ```
 
 ## Syntaxe

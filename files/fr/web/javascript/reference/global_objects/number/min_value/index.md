@@ -19,10 +19,10 @@ function divide(x, y) {
 }
 
 console.log(divide(5e-324, 1));
-// Sortie attendue : 5e-324
+// Résultat attendu : 5e-324
 
 console.log(divide(5e-324, 2));
-// Sortie attendue : "Représenté comme 0"
+// Résultat attendu : "Représenté comme 0"
 ```
 
 ## Valeur

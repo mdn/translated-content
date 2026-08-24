@@ -22,13 +22,13 @@ function calcHypotenuse(a, b) {
 }
 
 console.log(calcHypotenuse(3, 4));
-// Sortie attendue : 5
+// Résultat attendu : 5
 
 console.log(calcHypotenuse(5, 12));
-// Sortie attendue : 13
+// Résultat attendu : 13
 
 console.log(calcHypotenuse(0, 0));
-// Sortie attendue : 0
+// Résultat attendu : 0
 ```
 
 ## Syntaxe

@@ -19,10 +19,10 @@ function checkNumber(bigNumber) {
 }
 
 console.log(checkNumber(Number.MAX_VALUE));
-// Sortie attendue : 1.7976931348623157e+308
+// Résultat attendu : 1.7976931348623157e+308
 
 console.log(checkNumber(Number.MAX_VALUE * 2));
-// Sortie attendue : "Représente un nombre comme Infinity"
+// Résultat attendu : "Représente un nombre comme Infinity"
 ```
 
 ## Valeur

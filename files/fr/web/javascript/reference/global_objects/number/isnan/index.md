@@ -21,10 +21,10 @@ function typeOfNaN(x) {
 }
 
 console.log(typeOfNaN("100F"));
-// Sortie attendue : "NaN"
+// Résultat attendu : "NaN"
 
 console.log(typeOfNaN(NaN));
-// Sortie attendue : "Number NaN"
+// Résultat attendu : "Number NaN"
 ```
 
 ## Syntaxe

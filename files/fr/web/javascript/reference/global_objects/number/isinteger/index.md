@@ -19,10 +19,10 @@ function fits(x, y) {
 }
 
 console.log(fits(5, 10));
-// Sortie attendue : "Ça rentre !"
+// Résultat attendu : "Ça rentre !"
 
 console.log(fits(5, 11));
-// Sortie attendue : "Ça NE rentre PAS !"
+// Résultat attendu : "Ça NE rentre PAS !"
 ```
 
 ## Syntaxe

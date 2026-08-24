@@ -16,16 +16,16 @@ La méthode statique **`Math.cosh()`** retourne le cosinus hyperbolique d'un nom
 
 ```js interactive-example
 console.log(Math.cosh(0));
-// Sortie attendue : 1
+// Résultat attendu : 1
 
 console.log(Math.cosh(1));
-// Sortie attendue : 1.543080634815244 (approximativement)
+// Résultat attendu : 1.543080634815244 (approximativement)
 
 console.log(Math.cosh(-1));
-// Sortie attendue : 1.543080634815244 (approximativement)
+// Résultat attendu : 1.543080634815244 (approximativement)
 
 console.log(Math.cosh(2));
-// Sortie attendue : 3.7621956910836314
+// Résultat attendu : 3.7621956910836314
 ```
 
 ## Syntaxe

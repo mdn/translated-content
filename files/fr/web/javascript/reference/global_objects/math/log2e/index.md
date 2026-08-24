@@ -16,7 +16,7 @@ function getLog2e() {
 }
 
 console.log(getLog2e());
-// Sortie attendue : 1.4426950408889634
+// Résultat attendu : 1.4426950408889634
 ```
 
 ## Valeur

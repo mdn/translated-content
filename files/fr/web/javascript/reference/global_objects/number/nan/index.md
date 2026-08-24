@@ -22,7 +22,7 @@ function clean(x) {
 }
 
 console.log(clean(Number.NaN));
-// Sortie attendue : 0
+// Résultat attendu : 0
 ```
 
 ## Valeur

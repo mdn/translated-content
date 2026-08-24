@@ -16,10 +16,10 @@ const array = ["a", "b", "c"];
 const iterator = array.entries();
 
 console.log(iterator.next().value);
-// Sortie attendue : Array [0, "a"]
+// Résultat attendu : Array [0, "a"]
 
 console.log(iterator.next().value);
-// Sortie attendue : Array [1, "b"]
+// Résultat attendu : Array [1, "b"]
 ```
 
 ## Syntaxe

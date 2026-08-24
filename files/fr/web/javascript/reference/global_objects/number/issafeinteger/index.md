@@ -19,10 +19,10 @@ function warn(x) {
 }
 
 console.log(warn(2 ** 53));
-// Sortie attendue : "La précision peut être perdue !"
+// Résultat attendu : "La précision peut être perdue !"
 
 console.log(warn(2 ** 53 - 1));
-// Sortie attendue : "Précision sûre."
+// Résultat attendu : "Précision sûre."
 ```
 
 ## Syntaxe

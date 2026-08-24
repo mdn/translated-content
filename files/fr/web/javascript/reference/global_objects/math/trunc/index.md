@@ -12,16 +12,16 @@ La méthode statique **`Math.trunc()`** retourne la partie entière d'un nombre 
 
 ```js interactive-example
 console.log(Math.trunc(13.37));
-// Sortie attendue : 13
+// Résultat attendu : 13
 
 console.log(Math.trunc(42.84));
-// Sortie attendue : 42
+// Résultat attendu : 42
 
 console.log(Math.trunc(0.123));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(Math.trunc(-0.123));
-// Sortie attendue : -0
+// Résultat attendu : -0
 ```
 
 ## Syntaxe

@@ -16,7 +16,7 @@ function getRoot1Over2() {
 }
 
 console.log(getRoot1Over2());
-// Sortie attendue : 0.7071067811865476
+// Résultat attendu : 0.7071067811865476
 ```
 
 ## Valeur

@@ -18,10 +18,10 @@ function sanitize(x) {
 }
 
 console.log(sanitize("1"));
-// Sortie attendue : "1"
+// Résultat attendu : "1"
 
 console.log(sanitize("NotANumber"));
-// Sortie attendue : NaN
+// Résultat attendu : NaN
 ```
 
 ## Valeur

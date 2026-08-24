@@ -8,7 +8,7 @@ l10n:
 
 La méthode **`toJSON()`** des instances de {{JSxRef("Date")}} retourne une chaîne de caractères représentant cette date au même format ISO que {{JSxRef("Date/toISOString", "toISOString()")}}.
 
-{{InteractiveExample("JavaScript Demo: Date.prototype.toJSON()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.toJSON()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30 UTC");
@@ -16,10 +16,10 @@ const event = new Date("August 19, 1975 23:15:30 UTC");
 const jsonDate = event.toJSON();
 
 console.log(jsonDate);
-// Expected output: "1975-08-19T23:15:30.000Z"
+// Résultat attendu : "1975-08-19T23:15:30.000Z"
 
 console.log(new Date(jsonDate).toUTCString());
-// Expected output: "Tue, 19 Aug 1975 23:15:30 GMT"
+// Résultat attendu : "Tue, 19 Aug 1975 23:15:30 GMT"
 ```
 
 ## Syntaxe

@@ -13,15 +13,15 @@ La méthode statique **`Math.clz32()`** retourne le nombre de bits à zéro en t
 ```js interactive-example
 // 00000000000000000000000000000001
 console.log(Math.clz32(1));
-// Sortie attendue : 31
+// Résultat attendu : 31
 
 // 00000000000000000000000000000100
 console.log(Math.clz32(4));
-// Sortie attendue : 29
+// Résultat attendu : 29
 
 // 00000000000000000000001111101000
 console.log(Math.clz32(1000));
-// Sortie attendue : 22
+// Résultat attendu : 22
 ```
 
 ## Syntaxe

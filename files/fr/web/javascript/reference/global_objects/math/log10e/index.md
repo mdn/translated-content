@@ -16,7 +16,7 @@ function getLog10e() {
 }
 
 console.log(getLog10e());
-// Sortie attendue : 0.4342944819032518
+// Résultat attendu : 0.4342944819032518
 ```
 
 ## Valeur

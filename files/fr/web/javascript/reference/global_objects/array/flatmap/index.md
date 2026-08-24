@@ -16,7 +16,7 @@ const arr = [1, 2, 1];
 const result = arr.flatMap((num) => (num === 2 ? [2, 2] : 1));
 
 console.log(result);
-// sortie attendue : Array [1, 2, 2, 1]
+// Résultat attendu : Array [1, 2, 2, 1]
 ```
 
 ## Syntaxe

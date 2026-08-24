@@ -12,16 +12,16 @@ La méthode statique **`Math.fround()`** retourne la représentation en virgule 
 
 ```js interactive-example
 console.log(Math.fround(5.5));
-// Sortie attendue : 5.5
+// Résultat attendu : 5.5
 
 console.log(Math.fround(5.05));
-// Sortie attendue : 5.050000190734863
+// Résultat attendu : 5.050000190734863
 
 console.log(Math.fround(5));
-// Sortie attendue : 5
+// Résultat attendu : 5
 
 console.log(Math.fround(-5.05));
-// Sortie attendue : -5.050000190734863
+// Résultat attendu : -5.050000190734863
 ```
 
 ## Syntaxe

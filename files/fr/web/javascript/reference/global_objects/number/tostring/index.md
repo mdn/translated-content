@@ -19,10 +19,10 @@ function hexColor(c) {
 }
 
 console.log(hexColor(233));
-// Sortie attendue : "e9"
+// Résultat attendu : "e9"
 
 console.log(hexColor("11"));
-// Sortie attendue : "b"
+// Résultat attendu : "b"
 ```
 
 ## Syntaxe

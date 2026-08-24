@@ -18,16 +18,16 @@ La méthode statique **`Math.hypot()`** retourne la racine carrée de la somme d
 
 ```js interactive-example
 console.log(Math.hypot(3, 4));
-// Sortie attendue : 5
+// Résultat attendu : 5
 
 console.log(Math.hypot(5, 12));
-// Sortie attendue : 13
+// Résultat attendu : 13
 
 console.log(Math.hypot(3, 4, 5));
-// Sortie attendue : 7.0710678118654755
+// Résultat attendu : 7.0710678118654755
 
 console.log(Math.hypot(-5));
-// Sortie attendue : 5
+// Résultat attendu : 5
 ```
 
 ## Syntaxe

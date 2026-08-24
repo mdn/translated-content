@@ -20,23 +20,23 @@ bigint64[2] = 1898875537769492n;
 
 bigint64[0] = 6118793953620967n;
 console.log(bigint64);
-// Sortie attendue : BigInt64Array [6118793953620967n, 1881938909131133n, 1898875537769492n]
+// Résultat attendu : BigInt64Array [6118793953620967n, 1881938909131133n, 1898875537769492n]
 
 console.log(bigint64[2]);
-// Sortie attendue : 1898875537769492n
+// Résultat attendu : 1898875537769492n
 
 console.log("Longueur de Array :", bigint64.length);
-// Sortie attendue : Longueur de Array : 3
+// Résultat attendu : Longueur de Array : 3
 
 console.log("Longueur en octets de Array :", bigint64.byteLength);
 
-// Sortie attendue : Longueur en octets de Array : 24
+// Résultat attendu : Longueur en octets de Array : 24
 console.log("Décalage en octets de Array :", bigint64.byteOffset);
-// Sortie attendue : Décalage en octets de Array : 0
+// Résultat attendu : Décalage en octets de Array : 0
 
 bigint64.set([100n, 200n], 1);
 console.log(bigint64);
-// Sortie attendue : BigInt64Array [6118793953620967n, 100n, 200n]
+// Résultat attendu : BigInt64Array [6118793953620967n, 100n, 200n]
 ```
 
 ## Constructeur

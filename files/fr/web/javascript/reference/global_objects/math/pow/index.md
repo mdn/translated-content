@@ -18,17 +18,17 @@ La méthode statique **`Math.pow()`** retourne la valeur d'une base élevée à 
 
 ```js interactive-example
 console.log(Math.pow(7, 3));
-// Sortie attendue : 343
+// Résultat attendu : 343
 
 console.log(Math.pow(4, 0.5));
-// Sortie attendue : 2
+// Résultat attendu : 2
 
 console.log(Math.pow(7, -2));
-// Sortie attendue : 0.02040816326530612
+// Résultat attendu : 0.02040816326530612
 //                  (1/49)
 
 console.log(Math.pow(-7, 0.5));
-// Sortie attendue : NaN
+// Résultat attendu : NaN
 ```
 
 ## Syntaxe

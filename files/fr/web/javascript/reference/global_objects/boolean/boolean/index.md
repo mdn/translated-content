@@ -13,15 +13,15 @@ Le **constructeur `Boolean()`** permet de créer des objets [`Boolean`](/fr/docs
 ```js interactive-example
 const flag = new Boolean();
 console.log(typeof flag);
-// Sortie attendue : object
+// Résultat attendu : object
 console.log(flag === false);
-// Sortie attendue : false
+// Résultat attendu : false
 
 const flag2 = Boolean();
 console.log(typeof flag2);
-// Sortie attendue : boolean
+// Résultat attendu : boolean
 console.log(flag2 === false);
-// Sortie attendue : true
+// Résultat attendu : true
 ```
 
 ## Syntaxe

@@ -15,10 +15,10 @@ const map = new Map();
 map.set("toto", "truc");
 
 console.log(map.has("toto"));
-// Sortie attendue : true
+// Résultat attendu : true
 
 console.log(map.has("baz"));
-// Sortie attendue : false
+// Résultat attendu : false
 ```
 
 ## Syntaxe

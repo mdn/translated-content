@@ -15,14 +15,14 @@ const array = [1, 2, 3, 4];
 
 // Remplir avec 0 de la position 2 jusqu'à la position 4
 console.log(array.fill(0, 2, 4));
-// Sortie attendue : Array [1, 2, 0, 0]
+// Résultat attendu : Array [1, 2, 0, 0]
 
 // Remplir avec 5 à partir de la position 1
 console.log(array.fill(5, 1));
-// Sortie attendue : Array [1, 5, 5, 5]
+// Résultat attendu : Array [1, 5, 5, 5]
 
 console.log(array.fill(6));
-// Sortie attendue : Array [6, 6, 6, 6]
+// Résultat attendu : Array [6, 6, 6, 6]
 ```
 
 ## Syntaxe

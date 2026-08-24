@@ -16,13 +16,13 @@ function getTanFromDegrees(degrees) {
 }
 
 console.log(getTanFromDegrees(0));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(getTanFromDegrees(45));
-// Sortie attendue : 0.9999999999999999
+// Résultat attendu : 0.9999999999999999
 
 console.log(getTanFromDegrees(90));
-// Sortie attendue : 16331239353195370
+// Résultat attendu : 16331239353195370
 ```
 
 ## Syntaxe

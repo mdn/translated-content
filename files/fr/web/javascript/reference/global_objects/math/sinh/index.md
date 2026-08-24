@@ -18,16 +18,16 @@ La méthode statique **`Math.sinh()`** retourne le sinus hyperbolique d'un nombr
 
 ```js interactive-example
 console.log(Math.sinh(0));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(Math.sinh(1));
-// Sortie attendue : 1.1752011936438014
+// Résultat attendu : 1.1752011936438014
 
 console.log(Math.sinh(-1));
-// Sortie attendue : -1.1752011936438014
+// Résultat attendu : -1.1752011936438014
 
 console.log(Math.sinh(2));
-// Sortie attendue : 3.626860407847019
+// Résultat attendu : 3.626860407847019
 ```
 
 ## Syntaxe

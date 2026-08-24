@@ -17,13 +17,13 @@ const bigint = 123456789123456789n;
 
 // L'allemand utilise des points pour séparer les milliers
 console.log(bigint.toLocaleString("de-DE"));
-// Sortie attendue : "123.456.789.123.456.789"
+// Résultat attendu : "123.456.789.123.456.789"
 
 // Demander un format monétaire
 console.log(
   bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
 );
-// Sortie attendue : "123.456.789.123.456.789,00 €"
+// Résultat attendu : "123.456.789.123.456.789,00 €"
 ```
 
 ## Syntaxe

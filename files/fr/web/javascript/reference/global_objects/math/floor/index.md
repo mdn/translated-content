@@ -12,16 +12,16 @@ La méthode statique **`Math.floor()`** arrondit toujours à l'entier inférieur
 
 ```js interactive-example
 console.log(Math.floor(5.95));
-// Sortie attendue : 5
+// Résultat attendu : 5
 
 console.log(Math.floor(5.05));
-// Sortie attendue : 5
+// Résultat attendu : 5
 
 console.log(Math.floor(5));
-// Sortie attendue : 5
+// Résultat attendu : 5
 
 console.log(Math.floor(-5.05));
-// Sortie attendue : -6
+// Résultat attendu : -6
 ```
 
 ## Syntaxe

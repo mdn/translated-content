@@ -18,16 +18,16 @@ La méthode statique **`Math.expm1()`** retourne {{JSxRef("Math/E","e")}} élev�
 
 ```js interactive-example
 console.log(Math.expm1(0));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(Math.expm1(1));
-// Sortie attendue : 1.718281828459045
+// Résultat attendu : 1.718281828459045
 
 console.log(Math.expm1(-1));
-// Sortie attendue : -0.6321205588285577
+// Résultat attendu : -0.6321205588285577
 
 console.log(Math.expm1(2));
-// Sortie attendue : 6.38905609893065
+// Résultat attendu : 6.38905609893065
 ```
 
 ## Syntaxe
