@@ -1,11 +1,12 @@
 ---
-title: -webkit-animation
+title: CSS `-webkit-animation` メディア特性
+short-title: -webkit-animation
 slug: Web/CSS/Reference/At-rules/@media/-webkit-animation
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}
 
 > [!NOTE]
 > すべてのブラウザーが、ベンダー接頭辞なしの [`animation`](/ja/docs/Web/CSS/Reference/Properties/animation#ブラウザーの互換性) プロパティに対応しています。Chromium ベースのブラウザーではなく、 WebKit (Safari) だけが `-webkit-animation` メディア特性に対応しています。メディアクエリーとして接頭辞なしの `animation` に対応しているブラウザーはありません。代わりに、 [`@supports (animation)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) 機能クエリーを使用してください。
@@ -51,7 +52,6 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 - [`-webkit-transform-3d`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d)
 - [`-webkit-transform-2d`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-2d)
 - [`-webkit-transition`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transition)
-- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 - {{cssxref("animation")}} および [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - {{cssxref("@media")}} および[メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@supports")}} および[機能クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
