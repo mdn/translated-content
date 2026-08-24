@@ -1,8 +1,9 @@
 ---
-title: grid
+title: CSS `grid` メディア特性
+short-title: grid
 slug: Web/CSS/Reference/At-rules/@media/grid
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
 ---
 
 **`grid`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力機器がグリッドベースの画面を使用しているかどうかを調べるために使用します。
@@ -11,7 +12,7 @@ l10n:
 
 ## 構文
 
-`grid` 特性は {{cssxref("CSS_media_queries/Using_media_queries", "&lt;mq-boolean&gt;")}} 値 (`0` または `1`) として指定し、出力機器がグリッドベースであるかどうかを表します。
+`grid` 特性は、出力機器がグリッドベースであるかどうかを表す数値を示します。そうならば `1`、そうでなければ `0` です。
 
 ## 例
 
