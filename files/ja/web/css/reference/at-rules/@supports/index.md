@@ -1,8 +1,9 @@
 ---
-title: "@supports"
+title: CSS `@supports` アットルール
+short-title: "@supports"
 slug: Web/CSS/Reference/At-rules/@supports
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: 4179ddfb7690019d23f529cbd316c35d2381c75c
 ---
 
 **`@supports`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、ブラウザーがある CSS 機能に対応しているかによって、CSS 宣言を指定することができます。
@@ -76,10 +77,20 @@ supports の条件は、`<property>: <value>` 宣言構文または `<function()
 関数構文は、関数内の値または式がブラウザーに対応しているかどうかを調べます。
 関数構文で対応している関数は、次の節で記述されています。
 
+#### `at-rule()`
+
+この関数は、ブラウザーが指定された [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)に対応しているかどうかを確認します。
+次の例は、ブラウザーが {{cssxref("@keyframes")}} アットルールに対応している場合、true を返し、その中に含まれる CSS スタイルを適用します。
+
+```css
+@supports at-rule(@keyframes) {
+}
+```
+
 #### `selector()`
 
 ブラウザーがテストされたセレクターの構文に対応しているかどうかを検査します。
-以下の例は、ブラウザーが[子結合子](/ja/docs/Web/CSS/Reference/Selectors/Child_combinator)に対応していれば true を返します。
+以下の例は、ブラウザーが[子結合子](/ja/docs/Web/CSS/Reference/Selectors/Child_combinator)に対応していれば true を返し、その中に含まれる CSS スタイルを適用します。
 
 ```css
 @supports selector(h2 > p) {
@@ -89,7 +100,7 @@ supports の条件は、`<property>: <value>` 宣言構文または `<function()
 #### `font-tech()`
 
 この関数は、ブラウザーがレイアウトおよびレンダリングのために指定されたフォント技術に対応しているかどうかを調べます。
-次の例では、ブラウザーが `COLRv1` フォント技術に対応している場合、true を返し、CSS スタイルを適用します。
+次の例では、ブラウザーが `COLRv1` フォント技術に対応している場合、true を返し、その中に含まれる CSS スタイルを適用します。
 
 ```css
 @supports font-tech(color-COLRv1) {
@@ -120,7 +131,7 @@ supports の条件は、`<property>: <value>` 宣言構文または `<function()
 #### `font-format()`
 
 この関数は、ブラウザーがレイアウトおよびレンダリングのために指定されたフォント形式に対応しているかどうかを調べます。
-次の例は、ブラウザーが `opentype` フォント形式に対応している場合、 true を返し、 CSS スタイルを適用します。
+次の例は、ブラウザーが `opentype` フォント形式に対応している場合、 true を返し、その中に含まれる CSS スタイルを適用します。
 
 ```css
 @supports font-format(opentype) {
