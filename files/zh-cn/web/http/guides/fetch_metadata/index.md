@@ -176,5 +176,5 @@ app.get("/admin", (req, res) => {
 
 - [CSRF](/zh-CN/docs/Web/Security/Attacks/CSRF)
 - [跨站信息泄露](/zh-CN/docs/Web/Security/Attacks/XS-Leaks)
-- [使用 Fetch 元数据保护你的资源免受网络攻击](https://web.dev/articles/fetch-metadata)（web.dev）
+- [使用 Fetch 元数据保护你的资源免受网络攻击](https://web.developers.google.cn/articles/fetch-metadata)（web.dev）
 - [Fetch 元数据](https://xsleaks.dev/docs/defenses/opt-in/fetch-metadata/)（XS-Leaks Wiki）
