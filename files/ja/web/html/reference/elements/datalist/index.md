@@ -1,5 +1,6 @@
 ---
-title: "<datalist>: HTML データリスト要素"
+title: HTML `<datalist>` データリスト要素"
+short-title: <datalist>
 slug: Web/HTML/Reference/Elements/datalist
 l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
