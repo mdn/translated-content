@@ -3,10 +3,8 @@ title: HTML `<big>` 大きめのテキスト要素
 short-title: <big>
 slug: Web/HTML/Reference/Elements/big
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{deprecated_header}}
 
 **`<big>`** は [HTML](/ja/docs/Web/HTML) の非推奨の要素で、内包するテキストを周りの文字列よりも 1 段階大きいフォントの大きさで描画します（例えば `medium` が `large` になります）。大きさはブラウザーの最大フォントの大きさに制限されます。
 
