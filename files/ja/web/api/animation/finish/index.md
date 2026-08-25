@@ -35,7 +35,7 @@ finish()
 
 次の例では、 `finish()` メソッドを使用して `InvalidState` エラーを捕捉する方法を示します。
 
-```js
+```js-nolint
 interfaceElement.addEventListener("mousedown", () => {
   try {
     player.finish();
