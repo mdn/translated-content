@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
 ---
 
-{{JsSidebar}}
-
 **入力境界アサーション**は、文字列の減殺の位置が入力境界であるかどうかを検査します。入力境界は文字列の先頭または末尾です。`m` フラグが設定された場合は、行の先頭または末尾です。
 
 ## 構文
@@ -101,8 +99,8 @@ console.log(statements);
 
 ## 関連情報
 
-- [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [単語境界アサーション: `\b`, `\B`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
 - [先読みアサーション: `(?=...)`, `(?!...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
 - [後読みアサーション: `(?<=...)`, `(?<!...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
