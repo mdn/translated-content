@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e0d92259b485a219840367cf4e23a7069f192eec
 ---
 
-{{JsSidebar}}
-
 **Unicode 文字クラスエスケープ**は[文字クラスエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)の一種で、Unicode プロパティで指定された一連の文字に一致します。これは [Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode)でのみ対応しています。[`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) フラグが有効である場合、有限長の文字列と照合するために使用することもできます。
 
 {{InteractiveExample("JavaScript デモ: RegExp Unicode property escapes", "taller")}}
@@ -46,7 +44,7 @@ console.log(sentence.match(regexpCurrencyOrPunctuation));
     > [ICU](https://unicode-org.github.io/icu/userguide/strings/unicodeset.html#property-values) 構文では `Script` プロパティ名も同様に省略することができますが、JavaScript では `Script` よりも `Script_Extensions` の方が有益な場合が多いため、対応していません。
 
 - `property`
-  - : Unicode プロパティ名。ASCII 文字 (`A-Z`, `a-z`) とアンダースコア (`_`) で構成され、[バイナリー以外のプロパティ名](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties)のいずれかでなければなりません。
+  - : Unicode プロパティ名。{{Glossary("ASCII")}} 文字 (`A-Z`, `a-z`) とアンダースコア (`_`) で構成され、[バイナリー以外のプロパティ名](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties)のいずれかでなければなりません。
 - `value`
   - : Unicode プロパティ値。ASCII 文字 (`A-Z`, `a-z`) とアンダースコア (`_`) と数字 (`0 - 9`) で構成され、[`PropertyValueAliases.txt`](https://unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt) に挙げられている対応値のいずれかでなければなりません。
 
@@ -55,6 +53,8 @@ console.log(sentence.match(regexpCurrencyOrPunctuation));
 `\p` および `\P` は [Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode)でのみ対応しています。Unicode 非対応モードでは、これらは `p` または `P` の文字の [ID エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)です。
 
 すべての Unicode 文字には、それを記述する一連のプロパティがあります。例えば、[`a`](https://util.unicode.org/UnicodeJsps/character.jsp?a=0061) という文字では、`General_Category` プロパティが `Lowercase_Letter` の値であり、`Script` プロパティが `Latn` の値です。エスケープシーケンス `\p` および `\P` を使用すると、そのプロパティに基づいて文字を照合することができます。例えば、`a` は `\p{`Lowercase_Letter`}`（`General_Category` プロパティ名はオプション）と、`\p{Script=Latn}` によって一致させることができます。`\P` は、指定したプロパティを持たないコード ポイントからなる補集合クラスを生成します。
+
+[`i`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) フラグが設定されている場合、`\P` 文字クラスは `u` モードと `v` モードで処理が若干異なります。`u` モードでは、大文字小文字の変換は差分処理の後に現れますが、`v` モードでは、大文字小文字の変換は差分処理の前に現れます。より具体的に言うと、`u` モードでは、`\P{property}` は `caseFold(allCharacters - charactersWithProperty)` に一致します。つまり、`/\P{Lowercase_Letter}/iu` はやはり `"a"` に一致します。`A` は `Lowercase_Letter` ではないからです。`v` モードでは、`\P{property}` は `caseFold(allCharacters) - caseFold(charactersWithProperty)` に一致します。つまり、`/\P{Lowercase_Letter}/iv` は `"a"` に一致しません。`A` は大文字・小文字を区別しないすべての Unicode 文字の集合にさえ含まれていないためです。[補集合クラスと大文字小文字を区別しない照合](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#complement_classes_and_case-insensitive_matching)も参照してください。
 
 複数のプロパティを合成するには、`v` フラグで有効になる[文字セット交差集合](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class)構文を使用してください。[パターン差集合と交差集合](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#pattern_subtraction_and_intersection)を参照してください。
 
@@ -109,7 +109,7 @@ mixedCharacters.match(/\p{sc=Cyrillic}/u); // Л
 
 より詳細には、[Unicode 仕様書](https://unicode.org/reports/tr24/#Script)、[ECMAScript 仕様書の文字体系一覧表](https://tc39.es/ecma262/multipage/text-processing.html#table-unicode-script-values)、[ISO 15924 文字体系コードのリスト](https://unicode.org/iso15924/iso15924-codes.html)を参照してください。
 
-ある文字が限られた文字体系で使用されている場合、`Script` プロパティは「主要な」使用されている文字体系に対してのみ一致します。もし、「主要ではない」文字体系に基づいて文字を照合したい場合には、 `Script_Extensions` プロパティ（`Scx` と略します）を使用することができます。
+ある文字が限られた文字体系で使用されている場合、`Script` プロパティは「主要な」使用されている文字体系に対してのみ一致します。もし、「主要ではない」文字体系に基づいて文字を照合したい場合には、 `Script_Extensions` プロパティ（`scx` と略します）を使用することができます。
 
 ```js
 // ٢ は、アラビア・インド語表記の数字の 2 であり、
@@ -176,8 +176,8 @@ console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
 
 ただし、`\P` を「プロパティを持たない文字列」と照合するために使うことはできません。何文字を消費するかが不明だからです。
 
-```js
-/\P{RGI_Emoji_Flag_Sequence}/v; // Invalid regular expression: /\P{RGI_Emoji_Flag_Sequence}/v: Invalid property name
+```js-nolint example-bad
+/\P{RGI_Emoji_Flag_Sequence}/v; // SyntaxError: Invalid regular expression: Invalid property name
 ```
 
 ## 仕様書
@@ -190,14 +190,14 @@ console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
 
 ## 関連情報
 
-- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [文字クラス: `[...]`, `[^...]`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - [文字クラスエスケープ: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
 - [文字エスケープ: `\n`, `\u{...}`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
 - [論理和: `|`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
 - [Unicode character property](https://en.wikipedia.org/wiki/Unicode_character_property) (Wikipedia)
-- [ES2018: RegExp Unicode property escapes](https://2ality.com/2017/07/regexp-unicode-property-escapes.html) (Dr. Axel Rauschmayer, 2017)
-- [Unicode regular expressions § Properties](https://unicode.org/reports/tr18/#Categories) (unicode.org)
+- [ES2018: RegExp Unicode property escapes](https://2ality.com/2017/07/regexp-unicode-property-escapes.html) - Dr. Axel Rauschmayer (2017)
+- [Unicode regular expressions § Properties](https://unicode.org/reports/tr18/#Categories)
 - [Unicode Utilities: UnicodeSet](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp)
-- [RegExp v flag with set notation and properties of strings](https://v8.dev/features/regexp-v-flag) (v8.dev, 2022)
+- [RegExp v flag with set notation and properties of strings](https://v8.dev/features/regexp-v-flag) - v8.dev (2022)
