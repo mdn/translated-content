@@ -2,10 +2,8 @@
 title: "先読みアサーション: (?=...), (?!...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{JsSidebar}}
 
 **先読みアサーション**の「先読み」とは、それ以降の入力を指定されたパターンに照合しようとしますが、入力を消費することはありません。照合に成功した場合、入力の現在の位置はそのままです。
 
@@ -38,13 +36,12 @@ l10n:
 
 上記のパターンの照合は以下のように行われます。
 
-1. `(a+)` は `"baabac"` の最初の `"a"` の前に成功し、量化詞は貪欲なので `"aa"` が捕捉されます。
-2. `a*b` は `"baabac"` の `"aab"` に一致します。
+1. `(a+)` は `"baabac"` の最初の `"a"` の前に成功し、数量詞は貪欲なので `"aa"` が捕捉されます。
+2. `a*b` は `"baabac"` の中の `"aab"` に一致します。これは、先読みが一致した文字列を消費しないためです。
 3. `\1` は続く文字列に一致しません。これは 2 つの `"a"` が必要ですが、1 つしか利用できないからです。照合はバックトラックしますが、先読みには入らないので、キャプチャグループを 1 つの `"a"` に縮小することはできず、この点で照合は失敗します。
-4. `exec()` は次の位置、つまり 2 番目の `"a"` の前で照合を再試行します。今度は、先読みが `"a"` に一致し、 `a*b` が `"ab"` に一致します。後方参照 `1` はキャプチャされた `"a"` に一致し、照合は成功します。
+4. `exec()` は次の位置、つまり 2 番目の `"a"` の前で照合を再試行します。今度は、先読みが `"a"` に一致し、`a*b` が `"ab"` に一致します。後方参照 `1` はキャプチャされた `"a"` に一致し、照合は成功します。
 
-もし正規表現が先読みをバックトラックして、そこで行われた選択を修正することができれば、照合は手順 3 で `(a+)` が最初の `"a"` に一致し（最初の 2 つの `"a"` の代わりに）、`a*b` が `"aab"` に一致
-することで、次の入力位置を再試行することなく成功するでしょう。
+もし正規表現が先読みをバックトラックして、そこで行われた選択を修正することができれば、照合は手順 3 で `(a+)` が最初の `"a"` に一致し（最初の 2 つの `"a"` の代わりに）、`a*b` が `"aab"` に一致することで、次の入力位置を再試行することなく成功するでしょう。
 
 否定先読みにもキャプチャグループを入れることができますが、後方参照が意味を持つのは `pattern` 内だけです。照合を続けると、必然的に `pattern` は一致しなくなるからです（そうでなければアサーションは失敗します）。この意味は `pattern` の外では、否定先読みのキャプチャグループへの後方参照は常に成功するということです。例えば、次のようになります。
 
@@ -88,12 +85,11 @@ getFirstSubsentence("Thank you."); // "Thank you"
 
 先読みを用いることで、文字列を異なるパターンで複数回照合することができます。これにより、差集合（X であるが Y ではない）や交差集合（X と Y の両方である）といった複雑な関係を発生させることができます。
 
-以下の例は、[識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)であり、[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#予約語)でないものに一致します（ここでは簡潔にするために 3 つの予約語のみを示しています。この論理和には、さらに予約語を加えることができます。`[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*` という構文は、言語依存の識別子文字列の集合を正確に記述しています。詳しくは、識別子については[字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)を、`\p` エスケープについては [Unicode 文字クラスエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)を参照してください。
+以下の例は、[識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)であり、[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#予約語)でないものに一致します（ここでは簡潔にするために 3 つの予約語のみを示しています。この論理和には、さらに予約語を加えることができます。`[$_\p{ID_Start}][$\p{ID_Continue}]*` という構文は、言語依存の識別子文字列の集合を正確に記述しています。詳しくは、識別子については[字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)を、`\p` エスケープについては [Unicode 文字クラスエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)を参照してください。
 
 ```js
 function isValidIdentifierName(str) {
-  const re =
-    /^(?!(?:break|case|catch)$)[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*$/u;
+  const re = /^(?!(?:break|case|catch)$)[$_\p{ID_Start}][$\p{ID_Continue}]*$/u;
   return re.test(str);
 }
 
@@ -126,8 +122,8 @@ isASCIIIDPart(":"); // false
 
 ## 関連情報
 
-- [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [入力境界アサーション: `^`, `$`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
 - [単語境界アサーション: `\b`, `\B`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
 - [後読みアサーション: `(?<=...)`, `(?<!...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)

@@ -2,10 +2,8 @@
 title: "文字クラスエスケープ: \\d, \\D, \\w, \\W, \\s, \\S"
 slug: Web/JavaScript/Reference/Regular_expressions/Character_class_escape
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{JsSidebar}}
 
 **文字クラスエスケープ**は、文字の集合を表すエスケープシーケンスです。
 
@@ -18,7 +16,7 @@ l10n:
 ```
 
 > [!NOTE]
-> `,` is not part of the syntax.
+> `,` は構文の一部ではありません。
 
 ## 解説
 
@@ -63,8 +61,8 @@ Look  how they\tshine for you`);
 
 ## 関連情報
 
-- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [文字クラス: `[...]`, `[^...]`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - [Unicode 文字クラスエスケープ: `\p{...}`, `\P{...}`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
 - [文字エスケープ: `\n`, `\u{...}`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
