@@ -44,16 +44,16 @@ const regex2 = new RegExp("ab+c", "g");
 
 フラグは、正規表現が解釈される方法や入力テキストとやりとりする方法を変更できる特別な引数です。各フラグは `RegExp`` オブジェクトの 1 つのアクセサープロパティに対応します。
 
-| フラグ | 説明                                                                          | 対応するプロパティ                            |
-| ------ | ----------------------------------------------------------------------------- | ----------------------------------------------- |
-| `d`    | 部分文字列の照合結果のインデックスを生成します。                              | {{jsxref("RegExp/hasIndices", "hasIndices")}}   |
-| `g`    | グローバル検索です。                                                            | {{jsxref("RegExp/global", "global")}}           |
-| `i`    | 大文字小文字を区別しない検索です。                                            | {{jsxref("RegExp/ignoreCase", "ignoreCase")}}   |
-| `m`    | `^` と `$` を文字列全体ではなく、各行の先頭と末尾と照合するようにします。                                    | {{jsxref("RegExp/multiline", "multiline")}}     |
+| フラグ | 説明                                                                        | 対応するプロパティ                              |
+| ------ | --------------------------------------------------------------------------- | ----------------------------------------------- |
+| `d`    | 部分文字列の照合結果のインデックスを生成します。                            | {{jsxref("RegExp/hasIndices", "hasIndices")}}   |
+| `g`    | グローバル検索です。                                                        | {{jsxref("RegExp/global", "global")}}           |
+| `i`    | 大文字小文字を区別しない検索です。                                          | {{jsxref("RegExp/ignoreCase", "ignoreCase")}}   |
+| `m`    | `^` と `$` を文字列全体ではなく、各行の先頭と末尾と照合するようにします。   | {{jsxref("RegExp/multiline", "multiline")}}     |
 | `s`    | `.` を改行文字と照合します。                                                | {{jsxref("RegExp/dotAll", "dotAll")}}           |
-| `u`    | "Unicode" です。パターンを Unicode コードポイントの並びとして扱います。       | {{jsxref("RegExp/unicode", "unicode")}}         |
-| `v`    | `u` モードをアップグレードし、もっと多くの Unicode 機能を使用可能にします。   | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |
-| `y`    | 対象とする文字列の現在位置から照合する「粘着」(sticky) 検索を行います。 | {{jsxref("RegExp/sticky", "sticky")}}           |
+| `u`    | "Unicode" です。パターンを Unicode コードポイントの並びとして扱います。     | {{jsxref("RegExp/unicode", "unicode")}}         |
+| `v`    | `u` モードをアップグレードし、もっと多くの Unicode 機能を使用可能にします。 | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |
+| `y`    | 対象とする文字列の現在位置から照合する「粘着」(sticky) 検索を行います。     | {{jsxref("RegExp/sticky", "sticky")}}           |
 
 `i`、`m`、`s` フラグは、[修飾子](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) の構文を使用して、正規表現の特定の部分に対して有効または無効にすることができます。
 
