@@ -2,10 +2,10 @@
 title: Window
 slug: Web/API/Window
 l10n:
-  sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 **`Window`** インターフェイスは、 {{glossary("DOM")}} 文書を収めるウィンドウを表します。 `document` プロパティは、そのウィンドウに読み込まれた [DOM の document オブジェクト](/ja/docs/Web/API/Document) を指します。
 
@@ -33,6 +33,8 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : このプロパティは、現在のウィンドウが閉じているかどうかを示します。
 - {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 現在の文書コンテキストの {{domxref("CookieStore")}} オブジェクトへの参照を返します。
+- {{domxref("Window.crashReport")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{experimental_inline}}
+  - : 現在の最上位閲覧コンテキストについて、任意のデータを記録することができる {{domxref("CrashReportContext")}} オブジェクトを返します。このデータは、ブラウザーがクラッシュした際に {{domxref("CrashReport")}} に追加され、レポート送信先エンドポイントへ送信されます。
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 現在の文書が 無信頼の {{htmlelement("iframe")}} 内で読み込まれたかどうかを示す論理値を返します。詳しくは[無信頼の iframe](/ja/docs/Web/HTTP/Guides/IFrame_credentialless) を参照してください。
 - {{domxref("Window.crossOriginIsolated")}} {{ReadOnlyInline}}
@@ -45,7 +47,7 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : 現在のディスプレイの、物理ピクセルと端末非依存ピクセルの比率を返します。
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : 指定ウィンドウにある文書への参照を返します。
-- {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{experimental_inline}} {{SecureContext_Inline}}
+- {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 現在の文書コンテキストの[ピクチャインピクチャ](/ja/docs/Web/API/Document_Picture-in-Picture_API)ウィンドウへの参照を返します。
 - {{domxref("Window.fence")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : 現在の文書コンテキストの {{domxref("Fence")}} オブジェクトインスタンスを返します。{{htmlelement("fencedframe")}} 内に埋め込まれた文書でのみ利用できます。
@@ -83,7 +85,7 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : スクリーン座標系で、ウィンドウビューポートの左上隅の垂直 (Y) 座標を返します。この値は CSS ピクセルで表します。必要に応じて画面のピクセルに換算するための係数については `mozScreenPixelsPerCSSPixel` をご覧ください。
 - {{domxref("Window.name")}}
   - : ウィンドウ名を取得 / 設定します。
-- {{domxref("Window.navigation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Window.navigation")}} {{ReadOnlyInline}}
   - : 現在の `window` に関連付けられた {{domxref("Navigation")}} オブジェクトを返します。[ナビゲーション API](/ja/docs/Web/API/Navigation_API) のエントリーポイントです。
 - {{domxref("Window.navigator")}} {{ReadOnlyInline}}
   - : navigator オブジェクトへの参照を返します。
@@ -129,7 +131,7 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : window オブジェクト自身へのオブジェクト参照を返す
 - {{domxref("Window.sessionStorage")}}
   - : 生成元のオリジンからのみアクセスが可能なデータを保存するために使用する、セッションストレージへの参照を返します。
-- {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{experimental_inline}} {{SecureContext_Inline}}
+- {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{deprecated_inline}} {{non-standard_inline}}
   - : 現在のオリジンの {{domxref("WindowSharedStorage")}} オブジェクトを返します。これは[共有ストレージ API](/ja/docs/Web/API/Shared_Storage_API) を使用して共有ストレージにデータを書き込むためのメインエントリーポイントです。
 - {{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}
   - : {{domxref("SpeechSynthesis")}} オブジェクトを返します。これは、[ウェブ発声 API](/ja/docs/Web/API/Web_Speech_API) の音声合成機能を使用するためのエントリーポイントです。
@@ -141,12 +143,21 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : ウィンドウ階層における最上位のウィンドウへの参照を返します。このプロパティは読み取り専用です。
 - {{domxref("Window.trustedTypes")}} {{ReadOnlyInline}}
   - : グローバルオブジェクトに関連付けられた {{domxref("TrustedTypePolicyFactory")}} オブジェクトを返します。これは{{domxref("Trusted Types API", "信頼型 API", "", "nocode")}} を使用するためのエントリーポイントです。
+- {{domxref("Window.viewport")}} {{Experimental_inline}} {{ReadOnlyInline}}
+  - : {{domxref("Viewport")}} オブジェクトのインスタンスを返します。このインスタンスは、端末のビューポートの現在の状態に関する情報を提供します。
 - {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}
   - : 指定したウィンドウの視覚的なビューポートを表す {{domxref("VisualViewport")}} オブジェクトを返します。
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
   - : 現在のウィンドウへの参照を返します。
 - `window[0]`、`window[1]` など
   - : フレーム内の `window` オブジェクトへの参照を返します。詳しくは {{domxref("Window.frames")}} をご覧ください。
+- 名前付きプロパティ
+  - : 文書内のいくつかの要素は、window のプロパティとしても公開されます。
+    - {{HTMLElement("embed")}}, {{HTMLElement("form")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("object")}} のそれぞれの要素について、その `name`（空でない場合）が公開されます。
+      例えば、文書に `<form name="my_form">` が含まれている場合、`window["my_form"]`（およびそれと同等の `window.my_form`）は、その要素への参照を返します。
+    - それぞれの HTML 要素については、`id` が（空でない場合）公開されます。
+
+    プロパティが単一の要素に対応する場合、その要素が直接返されます。プロパティが複数の要素に対応する場合、それらすべてを含む {{domxref("HTMLCollection")}} が返されます。要素のいずれかがナビゲーション可能な `<iframe>` または `<object>` である場合、代わりにそのような iframe の最初のものの {{domxref("HTMLIFrameElement/contentWindow", "contentWindow")}} が返されます。
 
 ### 非推奨のプロパティ
 
@@ -227,6 +238,8 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : アニメーションが進行中であることをブラウザーに伝えて、次のアニメーションフレームのためにウィンドウの再描画を予定するよう要求します。
 - {{domxref("Window.requestIdleCallback()")}}
   - : ブラウザーがアイドル状態であるときに実行するタスクをスケジューリングします。
+- {{domxref("Window.requestResize()")}} {{experimental_inline}}
+  - : 埋め込み文書が埋め込み元の親要素と共有しているサイズ情報を更新します。ただし、これは埋め込み文書がサイズ情報の共有を有効にしている場合に限ります。
 - {{domxref("Window.resizeBy()")}}
   - : 現在のウィンドウを、指定した大きさの分だけ変更します。
 - {{domxref("Window.resizeTo()")}}
@@ -272,8 +285,6 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : ブラウザーで他の高負荷なタスクが完了した後に、関数を実行します。
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : ユーザーがウィンドウをリサイズできるかを切り替えます。
-- {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : モーダルダイアログを表示します。
 - {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : ノードの座標系からページの座標系へ {{domxref("WebKitPoint")}} を変換します。
 - {{domxref("Window.webkitConvertPointFromPageToNode()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -291,18 +302,6 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : ウィンドウのサイズが変更されたときに発行されます。
 - {{domxref("Window/storage_event", "storage")}}
   - : ストレージ領域 (`localStorage` または `sessionStorage`) が他の文書のコンテキストから変更されたときに発生します。
-
-### クリップボードイベント
-
-- {{domxref("Window/copy_event", "copy")}}
-  - : ブラウザーのユーザーインターフェイスからユーザーがコピー操作を行ったときに発生します。
-    {{domxref("HTMLElement/copy_event", "oncopy")}} プロパティからも利用できます。
-- {{domxref("Window/cut_event", "cut")}}
-  - : ブラウザーのユーザーインターフェイスからユーザーが切り取り操作を行ったときに発生します。
-    {{domxref("HTMLElement/cut_event", "oncut")}} プロパティからも利用できます。
-- {{domxref("Window/paste_event", "paste")}}
-  - : ブラウザーのユーザーインターフェイスからユーザーが貼り付け操作を行ったときに発生します。
-    {{domxref("HTMLElement/paste_event", "onpaste")}} プロパティからも利用できます。
 
 ### 接続イベント
 
@@ -324,10 +323,8 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 
 - {{domxref("Window/blur_event", "blur")}}
   - : 要素がフォーカスを失ったときに発生します。
-    {{domxref("Window/blur_event", "onblur")}} プロパティからも利用できます。
 - {{domxref("Window/focus_event", "focus")}}
   - : 要素がフォーカスを得たときに発生します。
-    {{domxref("Window/focus_event", "onfocus")}} プロパティからも利用できます。
 
 ### ゲームパッドイベント
 
