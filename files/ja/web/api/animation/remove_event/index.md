@@ -3,7 +3,7 @@ title: "Animation: remove イベント"
 short-title: remove
 slug: Web/API/Animation/remove_event
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{ APIRef("Web Animations") }}
@@ -15,8 +15,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js-nolint
-addEventListener("finish", (event) => { })
-onfinish = (event) => { }
+addEventListener("remove", (event) => { })
+
+onremove = (event) => { }
 ```
 
 ## イベント型
@@ -24,15 +25,6 @@ onfinish = (event) => { }
 {{domxref("AnimationPlaybackEvent")}} です。 {{domxref("Event")}} から継承しています。
 
 {{InheritanceDiagram("AnimationPlaybackEvent")}}
-
-## イベントプロパティ
-
-_以下に挙げたプロパティに加え、親インターフェイスである {{domxref("Event")}} から継承したプロパティが利用できます。_
-
-- {{domxref("AnimationPlaybackEvent.currentTime")}} {{ReadOnlyInline}}
-  - : イベントを生成したアニメーションの現在時刻。
-- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{ReadOnlyInline}}
-  - : イベントを生成したアニメーションのタイムラインの時刻値。
 
 ## 例
 
@@ -51,7 +43,7 @@ _以下に挙げたプロパティに加え、親インターフェイスであ�
 <br />
 <button id="reset">例をリセット</button>
 <p>
-  ボタンをクリックするとアニメーションが始まります（既定では、このようなアニメーションを体験すると偏頭痛に悩まされる人を保護するために無効になっています）。
+  ボタンをクリックするとアニメーションが始まります（デフォルトでは、このようなアニメーションを体験すると偏頭痛に悩まされる人を保護するために無効になっています）。
 </p>
 <p>Animations created: <span id="count-created">0</span></p>
 <p>Animations removed: <span id="count-removed">0</span></p>
