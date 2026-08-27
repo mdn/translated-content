@@ -3,7 +3,7 @@ title: Element：ariaBrailleLabel 属性
 short-title: ariaBrailleLabel
 slug: Web/API/Element/ariaBrailleLabel
 l10n:
-  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
+  sourceCommit: 913db38a206684e0e39db4b0443c62798be94e76
 ---
 
 {{APIRef("DOM")}}
