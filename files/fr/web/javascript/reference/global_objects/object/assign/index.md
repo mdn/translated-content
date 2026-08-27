@@ -1,13 +1,14 @@
 ---
-title: Object.assign()
+title: "Object : méthode statique assign()"
+short-title: assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Object.assign()`** copie toutes les {{JSxRef("Object/hasOwn", "propriétés propres", "", 1)}} et {{JSxRef("Object/propertyIsEnumerable", "énumérables", "", 1)}} d'un ou plusieurs _objets sources_ vers un _objet cible_. Elle retourne l'objet cible modifié.
 
-La méthode **`Object.assign()`** est utilisée afin de copier les valeurs de toutes les propriétés directes (non héritées) d'un objet qui sont énumérables sur un autre objet cible. Cette méthode renvoie l'objet cible.
-
-{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.assign()")}}
 
 ```js interactive-example
 const target = { a: 1, b: 2 };
@@ -16,60 +17,104 @@ const source = { b: 4, c: 5 };
 const returnedTarget = Object.assign(target, source);
 
 console.log(target);
-// Expected output: Object { a: 1, b: 4, c: 5 }
+// Résultat attendu : Object { a: 1, b: 4, c: 5 }
 
 console.log(returnedTarget === target);
-// Expected output: true
+// Résultat attendu : true
 ```
 
 ## Syntaxe
 
-```js
-Object.assign(cible, ...sources);
+```js-nolint
+Object.assign(target)
+Object.assign(target, source1)
+Object.assign(target, source1, source2)
+Object.assign(target, source1, source2, /* …, */ sourceN)
 ```
 
 ### Paramètres
 
-- `cible`
-  - : L'objet cible.
-- `sources`
-  - : Le(s) objet(s) source(s).
+- `target`
+  - : L'objet cible — sur lequel appliquer les propriétés des sources, qui est retourné après modification. Si une valeur primitive est fournie comme cible, elle est convertie en objet.
+- `source1`, …, `sourceN`
+  - : Le(s) objet(s) source(s) — objets contenant les propriétés que vous souhaitez appliquer.
 
 ### Valeur de retour
 
-L'objet cible, éventuellement modifié, est renvoyé.
+L'objet cible.
+
+### Exceptions
+
+- {{JSxRef("TypeError")}}
+  - : Levée dans l'un des cas suivants&nbsp;:
+    - Le paramètre `target` est {{JSxRef("null")}} ou {{JSxRef("undefined")}}.
+    - L'affectation d'une propriété à l'objet cible échoue&nbsp;; par exemple, parce que la propriété n'est pas accessible en écriture sur l'objet cible, ou parce que son accesseur génère une erreur.
 
 ## Description
 
-La méthode `Object.assign` permet de ne copier que les propriétés énumérables et propres (les propriétés qui ne sont pas héritées) depuis un objet source vers un objet cible. Elle utilise `[[Get]]` sur l'objet source et `[[Set]]` sur l'objet cible, ainsi, elle déclenchera les accesseurs/mutateurs. De cette façon, elle _affecte_ les propriétés plutôt que de juste les copier ou d'en définir de nouvelles. Aussi, il est déconseillé d'utiliser cette méthode si on souhaite uniquement fusionner de nouvelles propriétés dans un prototype si un des objets sources contient des accesseurs. Pour uniquement copier les définitions des propriétés (y compris leur énumérabilité) dans des prototypes, on utilisera plutôt {{jsxref("Object.getOwnPropertyDescriptor()")}} et {{jsxref("Object.defineProperty()")}}.
+Les propriétés de l'objet cible sont remplacées par celles des objets sources si elles ont la même {{JSxRef("Object/keys", "clé", "", 1)}}. Elles sont remplacées par les propriétés des objets sources les plus récents.
 
-Les propriétés {{jsxref("String")}} et {{jsxref("Symbol")}} sont copiées. Les propriétés de l'objet cible sont surchargées par celles de l'objet source si elles ont la même clé.
+La méthode `Object.assign()` ne copie que les propriétés _énumérables_ et _propres_ d'un objet source vers un objet cible. Elle utilise `[[Get]]` sur la source et `[[Set]]` sur la cible, donc elle invoque les [accesseurs](/fr/docs/Web/JavaScript/Reference/Functions/get) et les [mutateurs](/fr/docs/Web/JavaScript/Reference/Functions/set). Par conséquent, elle _assigne_ les propriétés, plutôt que de les copier ou de définir de nouvelles propriétés. Cela peut la rendre inappropriée pour fusionner de nouvelles propriétés dans un prototype si les sources de fusion contiennent des accesseurs.
 
-En cas d'erreur, si une propriété n'est pas accessible en écriture par exemple, une exception {{jsxref("TypeError")}} sera levée mais l'objet cible aura été modifié avec les propriétés ajoutées avant l'erreur.
+Pour copier les définitions de propriétés (y compris leur énumérabilité) dans des prototypes, utilisez {{JSxRef("Object.getOwnPropertyDescriptor()")}} et {{JSxRef("Object.defineProperty()")}} à la place.
 
-`Object.assign` ne donnera pas d'erreur si on fournit les valeurs {{jsxref("null")}} ou {{jsxref("undefined")}} pour la valeur source.
+Les propriétés {{JSxRef("String")}} et {{JSxRef("Symbol")}} sont copiées.
+
+En cas d'erreur, par exemple si une propriété n'est pas accessible en écriture, une {{JSxRef("TypeError")}} est levée, et l'objet `target` est modifié si des propriétés y ont été ajoutées avant que l'erreur ne soit levée.
+
+> [!NOTE]
+> `Object.assign()` ne génère pas d'exception pour des sources {{JSxRef("null")}} ou {{JSxRef("undefined")}}.
 
 ## Exemples
 
 ### Cloner un objet
 
 ```js
-var obj = { a: 1 };
-var copie = Object.assign({}, obj);
-console.log(copie); // {a: 1}
+const obj = { a: 1 };
+const copie = Object.assign({}, obj);
+console.log(copie); // { a: 1 }
 ```
 
-> [!NOTE]
-> Attention, pour un clone réel (_deep clone_), il faudra utiliser d'autres méthodes car `Object.assign()` ne copie que les valeurs des propriétés depuis l'objet source, il ne recopie pas intégralement une nouvelle propriété. Si la valeur est une référence à un objet, il copiera uniquement la référence.
+### Attention au clonage profond
+
+Pour le [clonage profond](/fr/docs/Glossary/Deep_copy), nous devons utiliser des alternatives telles {{DOMxRef("Window.structuredClone", "structuredClone()")}}, parce que `Object.assign()`
+copie les valeurs des propriétés.
+
+Si la valeur source est une référence à un objet, seule la valeur de la référence est copiée.
+
+```js
+const obj1 = { a: 0, b: { c: 0 } };
+const obj2 = Object.assign({}, obj1);
+console.log(obj2); // { a: 0, b: { c: 0 } }
+
+obj1.a = 1;
+console.log(obj1); // { a: 1, b: { c: 0 } }
+console.log(obj2); // { a: 0, b: { c: 0 } }
+
+obj2.a = 2;
+console.log(obj1); // { a: 1, b: { c: 0 } }
+console.log(obj2); // { a: 2, b: { c: 0 } }
+
+obj2.b.c = 3;
+console.log(obj1); // { a: 1, b: { c: 3 } }
+console.log(obj2); // { a: 2, b: { c: 3 } }
+
+// Copie profonde
+const obj3 = { a: 0, b: { c: 0 } };
+const obj4 = structuredClone(obj3);
+obj3.a = 4;
+obj3.b.c = 4;
+console.log(obj4); // { a: 0, b: { c: 0 } }
+```
 
 ### Fusionner des objets
 
 ```js
-var o1 = { a: 1 };
-var o2 = { b: 2 };
-var o3 = { c: 3 };
+const o1 = { a: 1 };
+const o2 = { b: 2 };
+const o3 = { c: 3 };
 
-var obj = Object.assign(o1, o2, o3);
+const obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
 console.log(o1); // { a: 1, b: 2, c: 3 }, l'objet cible est aussi modifié
 ```
@@ -77,125 +122,130 @@ console.log(o1); // { a: 1, b: 2, c: 3 }, l'objet cible est aussi modifié
 ### Fusionner des objets partageant des propriétés
 
 ```js
-var o1 = { a: 1, b: 1, c: 1 };
-var o2 = { b: 2, c: 2 };
-var o3 = { c: 3 };
+const o1 = { a: 1, b: 1, c: 1 };
+const o2 = { b: 2, c: 2 };
+const o3 = { c: 3 };
 
-var obj = Object.assign({}, o1, o2, o3);
+const obj = Object.assign({}, o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
 ```
 
-Les propriétés communes sont surchargées selon l'ordre des paramètres.
+Ces propriétés sont surchargées par d'autres objets présentant les mêmes propriétés et figurant plus loin dans l'ordre des paramètres.
 
 ### Copier des propriétés symboliques
 
 ```js
-var o1 = { a: 1 };
-var o2 = { [Symbol("toto")]: 2 };
+const o1 = { a: 1 };
+const o2 = { [Symbol("toto")]: 2 };
 
-var obj = Object.assign({}, o1, o2);
-console.log(obj); // { a: 1, [Symbol("toto")]: 2 }
-// Attention : dans Firefox le symbole n'est pas affiché
-// en raison du bug 1207182
-console.log(Object.getOwnPropertySymbols(obj)); // [Symbol(toto)]
+const obj = Object.assign({}, o1, o2);
+console.log(obj); // { a : 1, [Symbol("toto")]: 2 } (voir bogue 1207182 sur Firefox)
+Object.getOwnPropertySymbols(obj); // [Symbol(toto)]
 ```
 
 ### Les propriétés héritées et les propriétés non-énumérables ne peuvent être copiées
 
 ```js
-var obj = Object.create(
+const obj = Object.create(
+  // toto est dans la chaîne de prototypes de obj.
   { toto: 1 },
   {
-    // toto est héritée
     truc: {
-      value: 2, // truc est non-enumerable (par défaut)
+      value: 2, // truc est une propriété non-énumérable.
     },
-    bidule: {
+    tata: {
       value: 3,
-      enumerable: true, // bidule est une propriété propre et énumérable
+      enumerable: true, // tata est une propriété propre et énumérable.
     },
   },
 );
 
-var copie = Object.assign({}, obj);
-console.log(copie); // { bidule: 3 }
+const copy = Object.assign({}, obj);
+console.log(copy); // { tata: 3 }
 ```
 
-### Les types primitifs seront passés en objets
+### Les types primitifs sont passés en objets
 
 ```js
-var v1 = "abc";
-var v2 = true;
-var v3 = 10;
-var v4 = Symbol("toto");
+const v1 = "abc";
+const v2 = true;
+const v3 = 10;
+const v4 = Symbol("toto");
 
-var obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
-// Les valeurs primitives seront converties, null et undefined seront ignorés.
-// Note : seules les chaînes peuvent avoir des propriétés énumérables.
+const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
+// Les types primitifs sont encapsulés ; les valeurs null et undefined sont ignorées.
+// Notez que, seuls les objets encapsulant des chaînes de caractères peuvent posséder leurs propres propriétés énumérables.
 console.log(obj); // { "0": "a", "1": "b", "2": "c" }
+
+// Les types primitifs en tant qu'objet cible sont également encapsulés en objets
+const number = Object.assign(3, { a: 1 });
+console.log(number); // Number {3, a: 1}
+console.log(typeof number); // object
+console.log(number.a); // 1
+
+// null et undefined en tant qu'objet cible déclenchent TypeError
+try {
+  Object.assign(null, { a: 1 });
+} catch (e) {
+  console.log(e.message); // "Cannot convert undefined or null to object"
+}
 ```
 
 ### Les exceptions interrompent la copie
 
 ```js
-var target = Object.defineProperty({}, "toto", {
+const cible = Object.defineProperty({}, "toto", {
   value: 1,
   writable: false,
-}); // target.toto est en lecture seule
+}); // cible.toto est en lecture seule
 
-Object.assign(
-  target,
-  { truc: 2 },
-  { toto2: 3, toto: 3, toto3: 3 },
-  { bidule: 4 },
-);
+Object.assign(cible, { truc: 2 }, { toto2: 3, toto: 3, toto3: 3 }, { truc: 4 });
 // TypeError: "toto" est en lecture seule
-// L'exception est levée lorsqu'on affecte target.toto
+// L'exception est levée lorsqu'on affecte cible.toto
 
-console.log(target.truc); // 2, le premier objet source est bien copié
-console.log(target.toto2); // 3, la première propriété du deuxième objet source est bien copiée
-console.log(target.toto); // 1, on a une exception ici
-console.log(target.toto3); // undefined, assign est terminé toto3 ne sera pas copié
-console.log(target.bidule); // undefined, le troisième objet source ne sera pas copié non plus.
+console.log(cible.truc); // 2, le premier objet source est bien copié
+console.log(cible.toto2); // 3, la première propriété du deuxième objet source est bien copiée
+console.log(cible.toto); // 1, on a une exception ici
+console.log(cible.toto3); // undefined, assign est terminé toto3 n'est pas copié
+console.log(cible.bidule); // undefined, le troisième objet source n'est pas copié non plus.
 ```
 
 ### Copier des accesseurs
 
 ```js
-var obj = {
+const obj = {
   toto: 1,
   get truc() {
     return 2;
   },
 };
 
-var copie = Object.assign({}, obj);
+let copie = Object.assign({}, obj);
 console.log(copie);
-// { toto: 1, truc: 2 }, la valeur de copie.truc
-// est la valeur renvoyée par l'accesseur d'obj.truc.
+// { toto: 1, truc: 2 }
+// La valeur de copie.truc est la valeur retournée par l'accesseur de obj.truc.
 
-// Voici une fonction qui copie les descripteurs
-// dans leur intégralité
-function completeAssign(target, ...sources) {
+// Ceci est une fonction assign qui copie les descripteurs dans leur intégralité
+function completeAssign(cible, ...sources) {
   sources.forEach((source) => {
-    let descriptors = Object.keys(source).reduce((descriptors, key) => {
-      descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
-      return descriptors;
+    const descripteurs = Object.keys(source).reduce((descripteurs, key) => {
+      descripteurs[key] = Object.getOwnPropertyDescriptor(source, key);
+      return descripteurs;
     }, {});
-    // Par défaut, Object.assign copie également
-    // les symboles énumérables
+
+    // Par défaut, Object.assign copie également les symboles énumérables
     Object.getOwnPropertySymbols(source).forEach((sym) => {
-      let descriptor = Object.getOwnPropertyDescriptor(source, sym);
-      if (descriptor.enumerable) {
-        descriptors[sym] = descriptor;
+      const descripteur = Object.getOwnPropertyDescriptor(source, sym);
+      if (descripteur.enumerable) {
+        descripteurs[sym] = descripteur;
       }
     });
-    Object.defineProperties(target, descriptors);
+    Object.defineProperties(cible, descripteurs);
   });
-  return target;
+  return cible;
 }
 
-var copie = completeAssign({}, obj);
+copie = completeAssign({}, obj);
 console.log(copie);
 // { toto:1, get truc() { return 2 } }
 ```
@@ -210,6 +260,8 @@ console.log(copie);
 
 ## Voir aussi
 
-- {{jsxref("Object.defineProperties()")}}
-- [Le caractère énumérable des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- [La décomposition des littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax#utiliser_la_décomposition_avec_les_littéraux_objet)
+- [La prothèse d'émulation de `Object.assign` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [La prothèse d'émulation es-shims de `Object.assign` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.assign)
+- La méthode {{JSxRef("Object.defineProperties()")}}
+- [Énumérabilité et propriété des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Décomposition dans les littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax#décomposition_dans_les_littéraux_dobjets)
