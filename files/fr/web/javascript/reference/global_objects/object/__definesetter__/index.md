@@ -96,7 +96,7 @@ console.log(o.anotherValue); // 5
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Object.prototype.__defineSetter__` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [La prothèse d'émulation de `Object.prototype.__defineSetter__` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
 - La méthode [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - L'opérateur {{JSxRef("Functions/set", "set")}}
 - La méthode {{JSxRef("Object.defineProperty()")}}
