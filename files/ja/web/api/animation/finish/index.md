@@ -3,12 +3,12 @@ title: "Animation: finish() メソッド"
 short-title: finish()
 slug: Web/API/Animation/finish
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: 77d90a23ee0a3b5486a7963f68ad4e56efb06a7b
 ---
 
 {{APIRef("Web Animations")}}
 
-**`finish()`** くち [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) の {{domxref("Animation")}} インターフェイスのメソッドで、現在の再生時刻を現在の再生方向に対応するアニメーションの末尾に設定します。
+**`finish()`** は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) の {{domxref("Animation")}} インターフェイスのメソッドで、現在の再生時刻を現在の再生方向に対応するアニメーションの末尾に設定します。
 
 つまり、アニメーションが順方向に再生されている場合は、再生時刻をアニメーションシーケンスの長さに設定し、アニメーションが逆方向に再生されている（{{domxref("Animation.reverse", "reverse()")}} メソッドが呼び出されている）場合は、再生時刻を 0 に設定します。
 
@@ -35,15 +35,15 @@ finish()
 
 次の例では、 `finish()` メソッドを使用して `InvalidState` エラーを捕捉する方法を示します。
 
-```js
+```js-nolint
 interfaceElement.addEventListener("mousedown", () => {
   try {
     player.finish();
   } catch (e) {
     if (e instanceof InvalidState) {
-      console.log("finish() called on paused or finished animation.");
+      console.log("一時停止中または完了したアニメーションで finish() が呼び出されました。");
     } else {
-      logMyErrors(e); //pass exception object to error handler
+      logMyErrors(e); // 例外オブジェクトをエラーハンドラーに渡す
     }
   }
 });
