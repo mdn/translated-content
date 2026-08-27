@@ -1,48 +1,51 @@
 ---
-title: Object.getPrototypeOf()
+title: "Object : méthode statique getPrototypeOf()"
+short-title: getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode statique **`Object.getPrototypeOf()`** retourne le prototype (c'est-à-dire la valeur de la propriété interne `[[Prototype]]`) de l'objet défini.
 
-La méthode **`Object.getPrototypeOf()`** renvoie le prototype d'un objet donné (i.e. la valeur de la propriété `[[Prototype]]` interne).
-
-{{InteractiveExample("JavaScript Demo: Object.getPrototypeOf()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.getPrototypeOf()", "shorter")}}
 
 ```js interactive-example
-const prototype1 = {};
-const object1 = Object.create(prototype1);
+const prototype = {};
+const object = Object.create(prototype);
 
-console.log(Object.getPrototypeOf(object1) === prototype1);
-// Expected output: true
+console.log(Object.getPrototypeOf(object) === prototype);
+// Résultat attendu : true
 ```
 
 ## Syntaxe
 
-```js
-Object.getPrototypeOf(obj);
+```js-nolint
+Object.getPrototypeOf(obj)
 ```
 
 ### Paramètres
 
 - `obj`
-  - : L'objet dont on souhaite obtenir le prototype.
+  - : L'objet dont le prototype doit être retourné.
 
 ### Valeur de retour
 
-Le prototype de l'objet passé en argument. Si aucune propriété n'est héritée, c'est la valeur {{jsxref("null")}} qui est renvoyée.
+Le prototype de l'objet donné, qui peut être {{JSxRef("null")}}.
 
 ## Exemples
 
+### Utiliser `Object.getPrototypeOf()`
+
 ```js
-var proto = {};
-var obj = Object.create(proto);
+const proto = {};
+const obj = Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
 ```
 
-## Notes
+### Convertir les valeurs qui ne sont pas des objets
 
-Pour ES5, la méthode renvoie une exception {{jsxref("TypeError")}} si le paramètre `obj` n'est pas un objet. Pour ES2015, le paramètre sera converti en un objet avant l'application de la méthode.
+En ES5, une exception {{JSxRef("TypeError")}} est levée si le paramètre `obj` n'est pas un objet. En ES2015, le paramètre est converti en un {{JSxRef("Object")}}.
 
 ```js
 Object.getPrototypeOf("toto");
@@ -61,8 +64,10 @@ Object.getPrototypeOf("toto");
 
 ## Voir aussi
 
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Object.setPrototypeOf()")}}
-- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- Le billet de John Resig sur [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/) (en anglais)
-- {{jsxref("Reflect.getPrototypeOf()")}}
+- [La prothèse d'émulation de `Object.getPrototypeOf` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [La prothèse d'émulation es-shims de `Object.getPrototypeOf` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.getprototypeof)
+- La méthode statique {{JSxRef("Object.prototype.isPrototypeOf()")}}
+- La méthode statique {{JSxRef("Object.setPrototypeOf()")}}
+- La propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+- La méthode statique {{JSxRef("Reflect.getPrototypeOf()")}}
+- [Le billet de blog sur `Object.getPrototypeOf` <sup>(angl.)</sup>](https://johnresig.com/blog/objectgetprototypeof/) par John Resig (2008)
