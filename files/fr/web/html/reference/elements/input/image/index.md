@@ -183,7 +183,7 @@ Les éléments `<input type="image">`, comme [les boutons d'envoi classiques](/f
 - `formnovalidate`
   - : Un attribut booléen définissant que le formulaire ne doit pas être validé lorsqu'il est envoyé. Si cet attribut est défini, il remplace l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) du formulaire propriétaire de l'élément.
 - `formtarget`
-  - : Un nom ou un mot-clé indiquant où afficher la réponse reçue après l'envoi du formulaire. Il s'agit d'un nom ou d'un mot-clé pour un _contexte de navigation_ (par exemple, un onglet, une fenêtre ou un cadre en ligne). Si cet attribut est défini, il remplace l'attribut [`target`](/fr/docs/Web/HTML/Reference/Elements/form#target) du formulaire propriétaire de l'élément. Les mots-clés suivants ont des significations particulières&nbsp;:
+  - : Un nom ou un mot-clé indiquant où afficher la réponse reçue après l'envoi du formulaire. Il s'agit d'un nom ou d'un mot-clé pour un _contexte de navigation_ (par exemple, un onglet, une fenêtre ou un cadre en incise). Si cet attribut est défini, il remplace l'attribut [`target`](/fr/docs/Web/HTML/Reference/Elements/form#target) du formulaire propriétaire de l'élément. Les mots-clés suivants ont des significations particulières&nbsp;:
     - `_self`&nbsp;: Charger la réponse dans le même contexte de navigation que celui en cours. Cette valeur est la valeur par défaut si l'attribut n'est pas défini.
     - `_blank`&nbsp;: Charger la réponse dans un nouveau contexte de navigation sans nom.
     - `_parent`&nbsp;: Charger la réponse dans le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, cette option se comporte de la même manière que `_self`.

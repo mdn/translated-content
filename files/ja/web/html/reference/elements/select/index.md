@@ -3,7 +3,7 @@ title: HTML `<select>` 選択要素
 short-title: <select>
 slug: Web/HTML/Reference/Elements/select
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 221ca1f7a86235a442dc8312a56e4151a85fcf29
 ---
 
 **`<select>`** は [HTML](/ja/docs/Web/HTML) の要素で、選択式のメニューを提供するコントロールを表します。
@@ -37,18 +37,6 @@ select {
 }
 ```
 
-上の例は、典型的な `<select>` の利用方法を示しています。 `id` 属性を指定して、アクセシビリティのために {{htmlelement("label")}} と関連付けられるようにするとともに、 `name` 属性を指定して、サーバーに送信されるデータポイントと関連付ける名前を表します。それぞれのメニューの選択肢は、 `<select>` の中の {{htmlelement("option")}} 要素で定義されます。
-
-それぞれの `<option>` 要素には、選択肢が選択されたときにサーバーに送信するデータの値を持つ [`value`](/ja/docs/Web/HTML/Reference/Elements/option#value) 属性があります。 `value` 属性が含まれていない場合は、既定で要素の中に含まれるテキストの値が使用されます。 [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性を`<option>` 要素に付けることで、ページが最初に読み込まれたときに既定で選択状態にすることができます。 `selected` 属性が指定されていない場合、最初の `<option>` 要素が既定で選択されます。
-
-`<select>` 要素は JavaScript では {{domxref("HTMLSelectElement")}} オブジェクトで表され、このオブジェクトの {{domxref("HTMLSelectElement.value", "value")}} プロパティは、選択された `<option>` の値を持っています。
-
-`<select>` 要素は、複数の選択肢を選択することができるかどうかを定める `multiple`、同時にいくつの選択肢を表示することができるかを定める `size` など、制御のために利用することができる固有の属性がいくつかあります。 `required`、`disabled`、`autofocus` などのような一般のフォーム入力属性の多くも受け付けます。
-
-さらに、 {{HTMLElement("option")}} 要素を {{HTMLElement("optgroup")}} 要素の中に入れることで、ドロップダウンの中で選択肢をグループに分割することができます。また、{{HTMLElement("hr")}} 要素を含めることで、選択肢間に視覚的な区切りを追加することができます。
-
-その他の例は、[ネイティブフォームウィジェット: ドロップダウンコンテンツ](/ja/docs/Learn_web_development/Extensions/Forms/Other_form_controls#ドロップダウンコントロール)を参照してください。
-
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
@@ -62,32 +50,54 @@ select {
 - [`form`](/ja/docs/Web/HTML/Reference/Attributes/form)
   - : この `<select>` を関連付ける {{HTMLElement("form")}} 要素（_フォームオーナー_）です。この属性の値は、同じ文書内の `<form>` 要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) でなければなりません。（この属性が設定されていない場合は、 `<select>` はその祖先である `<form>` が存在すれば、それと関連付けられます。）
 
-    この属性によって、 `<select>` 要素は、 `<form>` 要素の子孫に限らず、文書内のどこの `<form>` と結び付けることもできます。これは祖先の `<form>` を上書きすることもできます。
+    この属性によって、 `<select>` 要素は、`<form>` 要素の内部になくても、文書内のどこの `<form>` と結び付けることもできます。これは祖先の `<form>` を上書きすることもできます。
 
 - [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple)
-  - : 論理属性で、リストの複数の選択肢を選択することができることを示します。指定されていない場合は、一度に選択することができる選択肢は一つだけです。 `multiple` が指定されている場合、多くのブラウザーは単一行のドロップダウンの代わりに、スクロールするリストボックスを表示します。複数選択された選択肢は、 {{domxref("URLSearchParams")}} の配列の規約、つまり `name=value1&name=value2` の形式を使用して送信されます。
+  - : 論理属性で、リストのゼロ個以上の選択肢を選択することができることを示します。指定されていない場合は、一度に選択することができる選択肢は一つだけです。複数選択された選択肢は、 {{domxref("URLSearchParams")}} の配列の規約、つまり `name=value1&name=value2` の形式を使用して送信されます。`multiple` が指定されている場合、`size` のデフォルト値は `1` ではなく `4` になります。
 - `name`
   - : この属性は、コントロールの名前を指定するために使用します。
 - [`required`](/ja/docs/Web/HTML/Reference/Attributes/required)
-  - : 論理属性で、空ではない文字列の値の選択肢を選択しなければならないことを示します。
-- [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)
-  - : コントロールがスクロールするリストボックスとして表示される場合（つまり、 `multiple` が指定されている場合）、この属性は一度に見えるべきリストの行数を表します。ブラウザーは、 select 要素をスクロールリストボックスとして提供する必要はありません。既定値は `0` です。
+  - : この論理属性は、フォームを送信する前に、ユーザーが少なくとも 1 つ選択肢を選択しなければならないことを示します。`<select>` には、選択肢が存在しない場合や、`multiple` が指定されておりユーザーがすべての選択肢の選択を解除した場合、この select の値がプログラムによって `""` に設定された場合、プレースホルダーラベルの選択肢のみが選択されている場合、選択された選択肢はありません。プレースホルダーラベルの選択肢以外の選択肢は、その値が空であっても有効とみなされます。
 
-    > [!NOTE]
-    > HTML 仕様書によると、 size 属性の初期値は `1` であるべきとされています。しかしながら、実際のところは、このことによっていくつかのウェブサイトを壊してしまうことがわかり、他のブラウザーでも現在そうしているものはなく、 Mozilla は当分の間、 Firefox でも `0` を返し続けることを選択しました。
+    プレースホルダーラベルの選択肢とは、ユーザーが選択を行う前にボックス内に表示されるテキストのことです。例えば、上記の[試してみましょう](#試してみましょう)のデモにある「--1 つ選択してください--」などがこれにあたります。意味的には、[`placeholder`](/ja/docs/Web/HTML/Reference/Attributes/placeholder) 属性と同等とみなされ、実際の選択肢とは見なされません。これは、`<select>` の直接の子要素（`<optgroup>` 内ではない）であり、値として空文字列を持つ、選択肢リストの最初の選択肢として定義されます。これは、`size` が `1` で `multiple` が指定されていない場合にのみ適用されます。それ以外の場合は、`<select>` のレンダリング方法により、そのような `<option>` は単なる通常の選択肢となります。
+
+- [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)
+  - : この属性は、一度に表示させる選択肢の数を表し、正の整数でなければなりません。値が `1` の場合、ブラウザーはドロップダウンリストを表示します。値が `1` より大きい場合、ブラウザーは指定された行数が表示されるスクロール可能なリストボックスを表示します。この属性が指定されていない場合、デフォルト値は `1` です。`multiple` 属性が指定されている場合、デフォルト値は `4` になります。ただし、下位互換性のため、{{domxref("HTMLSelectElement.size","size")}} プロパティは、デフォルト値として常に `0` を返します。
 
 ## 使用上の注意
 
+通常、他のフォームコントロールと同様、`<select>` 要素には、アクセシビリティ上の理由から {{htmlelement(「label」)}} が関連付けられるほか、サーバーに送信される関連データ項目の名前を表す `name` 属性も指定されます。それぞれのメニューの選択肢は、`<select>` 要素内に含まれる {{htmlelement("option")}} 要素によって定義されます。
+
+それぞれの `<option>` 要素には、選択肢が選択されたときにサーバーに送信するデータの値を持つ [`value`](/ja/docs/Web/HTML/Reference/Elements/option#value) 属性があります。 `value` 属性が含まれていない場合は、デフォルトで要素の中に含まれるテキストの値が使用されます。 [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性を`<option>` 要素に設定することで、ページが最初に読み込まれたときにデフォルトで選択状態にすることができます。 `selected` 属性が指定されていない場合、最初の `<option>` 要素がデフォルトで選択されます。
+
+`<select>` 要素は JavaScript では {{domxref("HTMLSelectElement")}} オブジェクトで表され、このオブジェクトの {{domxref("HTMLSelectElement.value", "value")}} プロパティは、選択された `<option>` の値を持っています。
+
+さらに、 {{HTMLElement("option")}} 要素を {{HTMLElement("optgroup")}} 要素の中に入れることで、ドロップダウンの中で選択肢をグループに分割することができます。また、{{HTMLElement("hr")}} 要素を含めることで、選択肢間に視覚的な区切りを追加することができます。
+
+その他の例は、[ネイティブフォームウィジェット: ドロップダウンコンテンツ](/ja/docs/Learn_web_development/Extensions/Forms/Other_form_controls#ドロップダウンコントロール)を参照してください。
+
+### ラッパー要素内の選択肢
+
+`<select>` 要素は、その直接の子要素だけでなく、すべての子孫要素である `<option>` 要素から選択肢のリストを構築します。
+つまり、選択肢が {{HTMLElement("div")}} 要素などの他の要素で囲まれていても、ドロップダウンでは選択可能な選択肢として表示され、フォームの送信時にも記載されます。
+ラッパー要素は、[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のスタイル設定に使用されますが、選択要素の動作には影響を与えません。つまり、グループやラベル、区切り文字を作成することはありません。
+見出しの下に選択肢をグループ化するには、{{HTMLElement("optgroup")}} を使用してください。グループが親要素である場合、{{HTMLElement("option")}} は `<optgroup>` の一部として扱われるため、グループ内でもラッパー要素を使用しても関連付けが壊れることはありません。
+
+> [!NOTE]
+> 現行の構文解析動作を持つブラウザーでは、`<select>` 内に記述されたすべての要素（ラッパー要素、{{HTMLElement("button")}}、{{HTMLElement("selectedcontent")}} を含む）が DOM 内に保持されます。
+> 一方、古いブラウザーでは、構文解析時に許可されていない要素が除去され、`<option>`、`<optgroup>`、`<hr>` の構造のみが残されます。
+> その結果、除去された要素に依存しているスタイル設定、マークアップ、またはスクリプトは、古いブラウザーでは動作しなくなります。
+
 ### 複数の選択肢の選択
 
-デスクトップコンピューターでは、 `<select>` 要素に `multiple` 属性がついている場合に、複数の選択肢を選択する方法がいくつもあります。
+デスクトップコンピューターでは、 `<select>` 要素に `multiple` 属性がついていて、`size` 属性の値が `1` より大きい場合に、複数の選択肢を選択する方法がいくつもあります。
 
-マウスを使用すると、 <kbd>Ctrl</kbd>、<kbd>Command</kbd>、<kbd>Shift</kbd> キー（オペレーティングシステムによって異なります）を押しながらクリックすることで、複数の選択肢を選択または解除することができます。
+マウスを使用すると、<kbd>Ctrl</kbd>、<kbd>Command</kbd>、<kbd>Shift</kbd> キー（オペレーティングシステムによって異なります）を押しながらクリックすることで、複数の選択肢を選択または解除することができます。
 
 > [!WARNING]
 > キーボードから連続していない複数の選択肢を選択する仕組みは、今のところ Firefox でしか動作しないようです。
 >
-> macOS では、 <kbd>Ctrl</kbd> + <kbd>↑</kbd> および <kbd>Ctrl</kbd> + <kbd>↓</kbd> のショートカットが、 OS 既定の _Mission Control_ および _Application windows_ のショートカットと競合するため、動作させるためにはこれらをオフにしなければならないでしょう。
+> macOS では、 <kbd>Ctrl</kbd> + <kbd>↑</kbd> および <kbd>Ctrl</kbd> + <kbd>↓</kbd> のショートカットが、 OS デフォルトの _Mission Control_ および _Application windows_ のショートカットと競合するため、動作させるためにはこれらをオフにしなければならないでしょう。
 
 キーボードを使用して、連続した複数の選択肢を選択するには以下のようにします。
 
@@ -111,7 +121,7 @@ select {
 
 ### 従来の select のスタイル設定
 
-最新のカスタマイズ機能に対応していないブラウザー（またはそれらを使用できない古いコードベース）では、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)や[表示されるフォント](/ja/docs/Web/CSS/Guides/Fonts)の操作に限定されています。 {{cssxref("appearance")}} プロパティを使用して、システムの既定の `appearance` を削除することもできます。
+最新のカスタマイズ機能に対応していないブラウザー（またはそれらを使用できない古いコードベース）では、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)や[表示されるフォント](/ja/docs/Web/CSS/Guides/Fonts)の操作に限定されています。 {{cssxref("appearance")}} プロパティを使用して、システムのデフォルトの `appearance` を削除することもできます。
 
 しかし、従来の `<select>` 要素では、ブラウザー間で一貫した結果を得ることは困難です。完全に制御したいのであれば、スタイル設定をするのに優れた機能を備えたライブラリーを使用するか、非意味的要素や JavaScript や [WAI-ARIA](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) を使用して独自のドロップダウンメニューを実装することを検討してください。
 

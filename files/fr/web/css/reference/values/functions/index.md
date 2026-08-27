@@ -3,7 +3,7 @@ title: Fonctions de valeur CSS
 short-title: Fonctions
 slug: Web/CSS/Reference/Values/Functions
 l10n:
-  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 Les **fonctions de valeur CSS** (<i lang="en">CSS value functions</i> en anglais) sont des instructions qui invoquent un traitement de données spécial ou des calculs pour retourner une [valeur](/fr/docs/Web/CSS/Guides/Values_and_units) [CSS](/fr/docs/Web/CSS) pour une propriété CSS. Les fonctions de valeur CSS représentent des [types de données](/fr/docs/Web/CSS/Reference/Values/Data_types) plus complexes et peuvent prendre certains arguments d'entrée pour calculer la valeur de retour.
@@ -206,6 +206,8 @@ Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) CSS {{CSSxRe
   - : Retourne une couleur avec un contraste maximal par rapport à une couleur donnée.
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}}
   - : Définit les couleurs CMJN de manière dépendante du périphérique.
+- {{CSSxRef("color_value/alpha", "alpha()")}}
+  - : Retourne une couleur avec un canal alpha (transparence) modifié.
 - {{CSSxRef("color_value/light-dark", "light-dark()")}}
   - : Retourne l'une des deux couleurs fournies en fonction du schéma de couleurs actuel.
 
@@ -368,6 +370,7 @@ Les fonctions suivantes retournent une valeur entière basée sur l'arbre DOM, p
 - {{CSSxRef("-moz-image-rect")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
 - {{CSSxRef("abs()")}}
 - {{CSSxRef("acos()")}}
+- {{CSSxRef("alpha()")}}
 - {{CSSxRef("anchor()")}}
 - {{CSSxRef("anchor-size()")}}
 - {{CSSxRef("asin()")}}
@@ -384,7 +387,7 @@ Les fonctions suivantes retournent une valeur entière basée sur l'arbre DOM, p
 - {{CSSxRef("color_value/color-mix", "color-mix()")}}
 - {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}
 - {{CSSxRef("filter-function/contrast", "contrast()")}}
-- {{CSSxRef("color_value/contrast-color", "contrast-color()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/contrast-color", "contrast-color()")}}
 - {{CSSxRef("cos()")}}
 - {{CSSxRef("counter()")}}
 - {{CSSxRef("counters()")}}
@@ -430,7 +433,7 @@ Les fonctions suivantes retournent une valeur entière basée sur l'arbre DOM, p
 - {{CSSxRef("transform-function/perspective", "perspective()")}}
 - {{CSSxRef("basic-shape/polygon", "polygon()")}}
 - {{CSSxRef("pow()")}}
-- {{CSSxRef("progress()")}} {{Experimental_Inline}}
+- {{CSSxRef("progress()")}}
 - {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}
 - {{CSSxRef("random()")}}
 - {{CSSxRef("ray()")}}
@@ -456,8 +459,8 @@ Les fonctions suivantes retournent une valeur entière basée sur l'arbre DOM, p
 - {{CSSxRef("animation-timeline/scroll", "scroll()")}}
 - {{CSSxRef("filter-function/sepia", "sepia()")}}
 - {{CSSxRef("basic-shape/shape", "shape()")}}
-- {{CSSxRef("sibling-count")}} {{Experimental_Inline}}
-- {{CSSxRef("sibling-index")}} {{Experimental_Inline}}
+- {{CSSxRef("sibling-count")}}
+- {{CSSxRef("sibling-index")}}
 - {{CSSxRef("sign()")}}
 - {{CSSxRef("sin()")}}
 - {{CSSxRef("transform-function/skew", "skew()")}}

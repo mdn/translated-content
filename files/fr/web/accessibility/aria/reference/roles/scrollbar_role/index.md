@@ -3,7 +3,7 @@ title: "ARIA : rôle scrollbar"
 short-title: scrollbar
 slug: Web/Accessibility/ARIA/Reference/Roles/scrollbar_role
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `scrollbar` est un objet graphique qui contrôle le défilement du contenu à l'intérieur d'une zone d'affichage.
@@ -30,7 +30,7 @@ Comme le style des barres natives a historiquement été limité, vous pouvez re
 
 Un élément avec le rôle `scrollbar` est un objet graphique qui contrôle le défilement du contenu dans une zone d'affichage&nbsp;; c'est le rôle ARIA qui indique qu'un élément est une barre de défilement. L'élément HTML le plus proche est le type `range` de {{HTMLElement("input")}}, c'est‑à‑dire [`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range).
 
-L'élément `scrollbar` a deux attributs requis&nbsp;: [`aria-controls`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) et [`aria-valuenow`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow). L'attribut `aria-controls` référence l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de la zone défilable qu'il contrôle. La propriété `aria-valuenow` définit la valeur courante de la barre de défilement.
+L'élément `scrollbar` a deux attributs requis&nbsp;: [`aria-controls`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) et [`aria-valuenow`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow). L'attribut `aria-controls` référence un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de la zone défilable qu'il contrôle. La propriété `aria-valuenow` définit la valeur courante de la barre de défilement.
 
 Alors que `aria-valuenow` est toujours requis, les propriétés [`aria-valuemin`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) et [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) n'ont besoin d'être définies pour le rôle `scrollbar` que lorsque la valeur minimale du `scrollbar` n'est pas 0 ou que la valeur maximale n'est pas 100. La valeur de `aria-valuenow` doit toujours être comprise entre les valeurs minimale et maximale incluses, ou entre `0` et `100` inclus si les valeurs minimale et maximale par défaut sont `0` et `100` respectivement. `aria-valuenow` indique la proximité de la zone d'affichage par rapport au bas du document. Pensez‑y comme à une barre de progression, où le début du document est la valeur minimale et la fin du document la valeur maximale.
 

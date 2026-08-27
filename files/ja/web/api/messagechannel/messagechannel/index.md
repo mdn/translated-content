@@ -3,7 +3,7 @@ title: "MessageChannel: MessageChannel() コンストラクター"
 short-title: MessageChannel()
 slug: Web/API/MessageChannel/MessageChannel
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: 2ccbd062264d0a2a34f185a3386cb272f42c50f5
 ---
 
 {{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
@@ -27,8 +27,8 @@ new MessageChannel()
 ## 例
 
 次のコードブロックでは、`MessageChannel()` コンストラクターを使用して作成された新しいチャンネルを知ることができます。
-{{HTMLElement("iframe")}} が読み込まれると、{{domxref("MessagePort.postMessage")}} にメッセージを添えて {{domxref("MessageChannel.port2")}} を `<iframe>` へ渡します。
-すると、`handleMessage` ハンドラーが `<iframe>` から返送されたメッセージに ({{domxref("MessagePort.message_event")}} を使用して) 返答し、これを段落に挿入します。
+{{HTMLElement("iframe")}} が読み込まれると、{{domxref("MessagePort.postMessage")}} にメッセージを添えて {{domxref("MessageChannel.port2", "port2")}} を `<iframe>` へ渡します。
+すると、`handleMessage` ハンドラーが `<iframe>` から返送されたメッセージに ({{domxref("MessagePort.message_event", "onmessage")}} を使用して) 返答し、これを段落に挿入します。
 {{domxref("MessageChannel.port1", "port1")}} は、いつメッセージが到着しているかどうかをチェックするために待ち受けされます。
 
 ```js
@@ -38,7 +38,7 @@ const para = document.querySelector("p");
 const ifr = document.querySelector("iframe");
 const otherWindow = ifr.contentWindow;
 
-ifr.addEventListener("load", iframeLoaded, false);
+ifr.addEventListener("load", iframeLoaded);
 
 function iframeLoaded() {
   otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
@@ -50,7 +50,7 @@ function handleMessage(e) {
 }
 ```
 
-完全に動作する例は、Github 上の [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) を参照してください ([実際のデモも実行できます](https://mdn.github.io/channel-messaging-basic-demo/))。
+完全に動作する例は、Github 上の [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) を参照してください ([実際のデモも実行できます](https://mdn.github.io/dom-examples/channel-messaging-basic/))。
 
 ## 仕様書
 

@@ -3,7 +3,7 @@ title: Propriété CSS `font-width`
 short-title: font-width
 slug: Web/CSS/Reference/Properties/font-width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 {{SeeCompatTable}}
@@ -93,9 +93,9 @@ font-width: revert-layer;
 font-width: unset;
 ```
 
-Cette propriété peut être définie en utilisant un seul mot-clé ou une valeur {{CSSxRef("&lt;percentage&gt;")}}.
-
 ### Values
+
+Cette propriété est définie comme une seule valeur parmi la liste suivante&nbsp;:
 
 - `normal`
   - : Définit une police normalement condensée.

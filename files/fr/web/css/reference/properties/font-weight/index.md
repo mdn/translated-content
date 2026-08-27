@@ -3,7 +3,7 @@ title: Propriété CSS `font-weight`
 short-title: font-weight
 slug: Web/CSS/Reference/Properties/font-weight
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-weight`** permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police {{CSSxRef("font-family")}}. Certaines fontes n'existent qu'avec les niveaux de graisses `normal` et `bold`.
@@ -83,9 +83,9 @@ font-weight: revert-layer;
 font-weight: unset;
 ```
 
-La propriété `font-weight` se définit soit avec une valeur `<font-weight-absolute>`, soit avec une valeur de graisse relative, comme listé ci-dessous.
-
 ### Valeurs
+
+Cette propriété se définit comme une seule valeur parmi la liste suivante&nbsp;:
 
 - `normal`
   - : Le niveau de graisse normal pour la fonte. Équivalent à la valeur `400`.
@@ -104,7 +104,7 @@ La propriété `font-weight` se définit soit avec une valeur `<font-weight-abso
 
 ### Conversion des valeurs
 
-Si une fonte avec la graisse demandée n'est pas disponible, le moteur suit la méthode suivante pour déterminer la fonte qui sera affichée&nbsp;:
+Si une fonte avec la graisse demandée n'est pas disponible, le moteur suit la méthode suivante pour déterminer la fonte qui est affichée&nbsp;:
 
 - Si la graisse indiquée est comprise entre `400` et `500` inclus&nbsp;:
   - Chercher les graisses disponibles entre la valeur indiquée et `500`, par ordre croissant.
@@ -122,7 +122,7 @@ Si une fonte avec la graisse demandée n'est pas disponible, le moteur suit la m
 
 Lorsqu'on utilise les valeurs `lighter` ou `bolder`, on peut utiliser le tableau suivant pour calculer le poids absolu de l'élément.
 
-On notera que lorsqu'on utilise des niveaux de graisse relatifs, seuls quatre niveaux sont considérés — fin (100), normal (400), gras (700) et épais (900). Si une police dispose de plus de niveaux de graisse, ceux-ci sont ignorés pour le calcul des niveaux relatifs.
+Notez que lorsqu'on utilise des niveaux de graisse relatifs, seuls quatre niveaux sont considérés — fin (100), normal (400), gras (700) et épais (900). Si une police dispose de plus de niveaux de graisse, ceux-ci sont ignorés pour le calcul des niveaux relatifs.
 
 <table class="standard-table">
   <thead>
@@ -183,7 +183,7 @@ On notera que lorsqu'on utilise des niveaux de graisse relatifs, seuls quatre ni
 
 ### Correspondance des noms courants des poids
 
-Les valeurs allant de 100 à 900 correspondent environ aux noms suivants, communément utilisés pour désigner les variantes de fonte, selon la graisse, d'une même police (_NdT&nbsp;: les noms sont laissés en anglais car généralement utilisés tels quels_) (voir [la spécification OpenType <sup>(angl.)</sup>](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#usweightclass))&nbsp;:
+Les valeurs allant de 100 à 900 correspondent environ aux noms suivants, communément utilisés pour désigner les variantes de fonte, selon la graisse, d'une même police (voir [la spécification OpenType <sup>(angl.)</sup>](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#usweightclass))&nbsp;:
 
 | Valeur | Nom communément utilisé                                                                                                                               |
 | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -208,7 +208,7 @@ Cette démonstration charge `font-weight: 500;`. Modifiez la valeur de la propri
 
 ```html live-sample___font-weight-example
 <p class="sample">
-  ...il ne serait pas étonnant de croiser un Mégalosaure, long d'une douzaine de
+  ...il n'est pas étonnant de croiser un Mégalosaure, long d'une douzaine de
   mètres, se dandinant comme un lézard éléphantesque sur Holborn Hill.
 </p>
 ```

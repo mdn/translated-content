@@ -1,17 +1,18 @@
 ---
 title: "Element : méthode setAttributeNodeNS()"
+short-title: setAttributeNodeNS()
 slug: Web/API/Element/setAttributeNodeNS
 l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`setAttributeNodeNS()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), ajoute un nouveau nœud [`Attr`](/fr/docs/Web/API/Attr) d'un espace de noms à l'élément courant.
+La méthode **`setAttributeNodeNS()`** de l'interface {{DOMxRef("Element")}} ajoute un nouveau nœud {{DOMxRef("Attr")}} d'un espace de noms à l'élément courant.
 
-S'il n'est pas nécessaire de travailler sur le nœud [`Attr`](/fr/docs/Web/API/Attr) avant de l'ajouter (par exemple en le clonant depuis un autre élément), on pourra utiliser la méthode [`setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS) à la place.
+Si vous n'avez pas besoin de travailler sur le nœud d'attribut (par exemple en le clonant depuis un autre élément) avant de l'ajouter, vous pouvez utiliser la méthode {{DOMxRef("Element.setAttributeNS()", "setAttributeNS()")}} à la place.
 
-Si vous manipulez des documents HTML et n'avez pas besoin d'utiliser d'espace de noms, vous pouvez utiliser la méthode [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute) à la place.
+Si vous manipulez des documents HTML et n'avez pas besoin d'utiliser d'espace de noms, vous pouvez utiliser la méthode {{DOMxRef("Element.setAttribute()", "setAttribute()")}} à la place.
 
 ## Syntaxe
 
@@ -22,30 +23,32 @@ setAttributeNodeNS(attributeNode)
 ### Paramètre
 
 - `attributeNode`
-  - : Un nœud [`Attr`](/fr/docs/Web/API/Attr) à associer à l'élément courant (en ajout ou remplacement).
+  - : Le nœud {{DOMxRef("Attr")}} à ajouter à l'élément.
 
 ### Valeur de retour
 
-L'éventuel nœud [`Attr`](/fr/docs/Web/API/Attr) remplacé.
+Le nœud d'attribut remplacé, le cas échéant, retourné par cette fonction.
 
 ## Exemples
 
 ```js
-// <div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
-//            myNS:special-align="utterleft">one</div>
-// <div id="two">two</div>
+// <div id="un" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
+//            myNS:special-align="utterleft">un</div>
+// <div id="deux">deux</div>
 
 const myns = "http://www.mozilla.org/ns/specialspace";
-const d1 = document.getElementById("one");
-const d2 = document.getElementById("two");
+const d1 = document.getElementById("un");
+const d2 = document.getElementById("deux");
 const a = d1.getAttributeNodeNS(myns, "special-align");
 d2.setAttributeNodeNS(a.cloneNode(true));
-console.log(d2.attributes[1].value); // returns: `utterleft'
+alert(d2.attributes[1].value); // returns: `utterleft'
 ```
 
 ## Notes
 
-Si l'attribut indiqué existe déjà sur l'élément, cet attribut est remplacé par le nouveau et l'ancien est renvoyé.
+Si l'attribut défini existe déjà sur l'élément, cet attribut est remplacé par le nouveau et l'ancien est retourné.
+
+Notez que si vous essayez de définir sans cloner le nœud, vous pouvez voir l'erreur `NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR` «&nbsp;L'attribut est déjà utilisé&nbsp;», car le DOM exige le clonage pour que l'objet {{DOMxRef("Attr")}} puisse être réutilisé (contrairement aux autres nœuds qui peuvent être déplacés).
 
 ## Spécifications
 
@@ -57,8 +60,6 @@ Si l'attribut indiqué existe déjà sur l'élément, cet attribut est remplacé
 
 ## Voir aussi
 
-- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
-- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)
-- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
-- [`Document.createAttributeNS()`](/fr/docs/Web/API/Document/createAttributeNS)
-- [`Element.getAttributeNodeNS()`](/fr/docs/Web/API/Element/getAttributeNodeNS)
+- La méthode {{DOMxRef("Document.createAttribute()")}}
+- La méthode {{DOMxRef("Document.createAttributeNS()")}}
+- La méthode {{DOMxRef("Element.getAttributeNodeNS()")}}

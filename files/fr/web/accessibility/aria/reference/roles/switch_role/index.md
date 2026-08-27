@@ -3,7 +3,7 @@ title: "ARIA : rôle switch"
 short-title: switch
 slug: Web/Accessibility/ARIA/Reference/Roles/switch_role
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle **`switch`** est fonctionnellement identique au rôle [checkbox](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role), sauf qu'au lieu de représenter les états «&nbsp;coché&nbsp;» et «&nbsp;non coché&nbsp;», qui sont assez génériques, le rôle `switch` représente les états «&nbsp;activé&nbsp;» et «&nbsp;désactivé&nbsp;».

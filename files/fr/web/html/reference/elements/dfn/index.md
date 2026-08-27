@@ -130,7 +130,7 @@ Dans certains cas, on souhaite utiliser l'abréviation d'un terme lorsqu'on le d
 </p>
 ```
 
-On notera que l'élément `<abbr>` est imbriqué dans l'élément `<dfn>`. L'élément `<abbr>` indique que le terme est une abréviation («&nbsp;HST&nbsp;») et indique le détail de cette abrévation («&nbsp;Hubble Space Telescope&nbsp;») grâce à son attribut `title`. L'élément `<dfn>` indique quant à lui que c'est bien ce terme abrégé qu'on est en train de définir.
+Notez que l'élément `<abbr>` est imbriqué dans l'élément `<dfn>`. L'élément `<abbr>` indique que le terme est une abréviation («&nbsp;HST&nbsp;») et indique le détail de cette abréviation («&nbsp;Hubble Space Telescope&nbsp;») grâce à son attribut `title`. L'élément `<dfn>` indique quant à lui que c'est bien ce terme abrégé qu'on est en train de définir.
 
 #### Résultat
 

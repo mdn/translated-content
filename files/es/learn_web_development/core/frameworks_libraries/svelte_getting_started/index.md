@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_resources","Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}
 
 En este artículo proporcionaremos una breve introducción al [framework Svelte](https://svelte.dev/). Veremos cómo funciona Svelte y qué es lo que lo hace diferente del resto de _frameworks_ y herramientas que hemos revisado hasta ahora. Después aprenderemos a configurar nuestro entorno de desarrollo, crear una aplicación de ejemplo, entender la estructura del proyecto, ver cómo ejecutarlo localmente y finalmente construir la versión para producción.
 
@@ -506,4 +506,4 @@ En Svelte:
 - Las variables del nivel principal de un componente conforman su estado.
 - La reactividad se activa al asignar un nuevo valor a una variable del nivel principal.
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_resources","Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Frameworks_libraries")}}

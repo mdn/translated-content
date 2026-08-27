@@ -23,7 +23,7 @@ Il peut représenter l'un des éléments suivants&nbsp;:
 </p>
 
 <p>
-  Le concert commence à <time datetime="20:00">20 h 00</time> et vous pourrez
+  Le concert commence à <time datetime="20:00">20 h 00</time> et vous pouvez
   profiter du groupe pendant au moins <time datetime="PT2H30M">2 h 30</time>.
 </p>
 ```

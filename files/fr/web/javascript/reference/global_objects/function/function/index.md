@@ -8,7 +8,7 @@ l10n:
 
 > [!WARNING]
 > Les arguments passés à ce constructeur sont analysés dynamiquement et exécutés comme du JavaScript.
-> Les API de ce type sont appelées [points d'injection](/fr/docs/Web/API/Trusted_Types_API#concepts_et_usage) et peuvent constituer un vecteur [d'attaques de type injection de scripts intersites (XSS)](/fr/docs/Web/Security/Attacks/XSS).
+> Les API de ce type sont appelées [points d'injection](/fr/docs/Web/API/Trusted_Types_API#concepts_et_utilisation) et peuvent constituer un vecteur [d'attaques de type injection de scripts inter-sites (XSS)](/fr/docs/Web/Security/Attacks/XSS).
 >
 > Vous pouvez atténuer ce risque en passant toujours des objets {{DOMxRef("TrustedScript")}} au lieu de chaînes de caractères et en [imposant des types de confiance](/fr/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 >
@@ -45,7 +45,7 @@ Function(arg1, arg2, /* …, */ argN, functionBody)
 ### Paramètres
 
 - `arg1`, …, `argN` {{Optional_Inline}}
-  - : Instances de {{DOMxRef("TrustedScript")}} ou chaînes de caractères définissant les noms à utiliser par la fonction comme noms formels d'arguments. La valeur doit correspondre à un paramètre JavaScript valide (soit un [identifiant](/fr/docs/Glossary/Identifier), un [paramètre du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), ou un paramètre [déstructuré](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring), éventuellement avec une [valeur par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters)), ou une liste de telles chaînes séparées par des virgules.
+  - : Instances de {{DOMxRef("TrustedScript")}} ou chaînes de caractères définissant les noms à utiliser par la fonction comme noms formels d'arguments. La valeur doit correspondre à un paramètre JavaScript valide (soit un [identifiant](/fr/docs/Glossary/Identifier), un [paramètre du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), ou un paramètre [déstructuré](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring), éventuellement avec une [valeur par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters)), ou une liste de telles chaînes de caractères séparées par des virgules.
 
     Comme les paramètres sont analysés de la même façon que les expressions de fonction, les espaces et les commentaires sont acceptés. Par exemple&nbsp;: `"x", "laValeur = 42", "[a, b] /* nombres */"` — ou `"x, laValeur = 42, [a, b] /* nombres */"`. (`"x, laValeur = 42", "[a, b]"` est aussi correct, mais très difficile à lire.)
 
@@ -63,7 +63,7 @@ Function(arg1, arg2, /* …, */ argN, functionBody)
 
 Ceci est observable en appelant la méthode [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString) de la fonction.
 
-Cependant, contrairement aux [expressions de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function) normales, le nom `anonymous` n'est pas ajouté à la portée de `functionBody`, car `functionBody` n'a accès qu'à la portée globale. Si `functionBody` n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) (le corps doit lui-même contenir la directive `"use strict"` car il n'hérite pas du mode strict du contexte), vous pouvez utiliser [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee) pour référencer la fonction elle-même. Sinon, vous pouvez définir la partie récursive comme une fonction interne&nbsp;:
+Cependant, contrairement aux [expressions de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function) normales, le nom `anonymous` n'est pas ajouté à la portée de `functionBody`, car `functionBody` n'a accès qu'à la portée globale. Si `functionBody` n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) (le corps doit lui-même contenir la directive `"use strict"`, car il n'hérite pas du mode strict du contexte), vous pouvez utiliser [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee) pour référencer la fonction elle-même. Sinon, vous pouvez définir la partie récursive comme une fonction interne&nbsp;:
 
 ```js
 const recursiveFn = new Function(
@@ -80,7 +80,7 @@ const recursiveFn = new Function(
 );
 ```
 
-Notez que les deux parties dynamiques de la source assemblée — la liste des paramètres `args.join(",")` et `functionBody` — seront d'abord analysées séparément pour s'assurer qu'elles sont chacune syntaxiquement valides. Cela empêche les tentatives d'injection.
+Notez que les deux parties dynamiques de la source assemblée — la liste des paramètres `args.join(",")` et `functionBody` — sont d'abord analysées séparément pour s'assurer qu'elles sont chacune syntaxiquement valides. Cela empêche les tentatives d'injection.
 
 ```js
 new Function("/*", "*/) {");
@@ -97,11 +97,11 @@ const untrustedCode = "alert('Code potentiellement malveillant !');";
 const adder = new Function("a", "b", untrustedCode);
 ```
 
-Les sites web avec une [politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP) qui définit [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) ou [`default-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) empêcheront par défaut l'exécution de ce type de code. Si vous devez autoriser l'exécution de scripts via `Function()`, vous pouvez atténuer ces problèmes en passant toujours des objets {{DOMxRef("TrustedScript")}} au lieu de chaînes de caractères, et en [imposant des types de confiance](/fr/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) à l'aide de la directive CSP {{CSP("require-trusted-types-for")}}. Cela garantit que l'entrée passe par une fonction de transformation.
+Les sites web avec une [politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP) qui définit [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) ou [`default-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) empêchent par défaut l'exécution de ce type de code. Si vous devez autoriser l'exécution de scripts avec `Function()`, vous pouvez atténuer ces problèmes en passant toujours des objets {{DOMxRef("TrustedScript")}} au lieu de chaînes de caractères, et en [imposant des types de confiance](/fr/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) à l'aide de la directive CSP {{CSP("require-trusted-types-for")}}. Cela garantit que l'entrée passe par une fonction de transformation.
 
-Pour autoriser l'exécution de `Function()`, vous devez également définir le mot-clé [`trusted-types-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) dans la directive `script-src` de votre CSP. Le mot-clé [`unsafe-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) autorise aussi `Function()`, mais il est beaucoup moins sûr que `trusted-types-eval` car il permettrait l'exécution même sur les navigateurs qui ne prennent pas en charge les types de confiance.
+Pour autoriser l'exécution de `Function()`, vous devez également définir le mot-clé [`trusted-types-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) dans la directive `script-src` de votre CSP. Le mot-clé [`unsafe-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) autorise aussi `Function()`, mais il est beaucoup moins sûr que `trusted-types-eval`, car il permet l'exécution même sur les navigateurs qui ne prennent pas en charge les types de confiance.
 
-Par exemple, la CSP requise pour votre site pourrait ressembler à ceci&nbsp;:
+Par exemple, la CSP requise pour votre site peut ressembler à ceci&nbsp;:
 
 ```http
 Content-Security-Policy: require-trusted-types-for 'script'; script-src '<votre_listeautorisante>' 'trusted-types-eval'

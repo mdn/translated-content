@@ -1,8 +1,9 @@
 ---
-title: Firefox 119 for developers
+title: Firefox 119 開発者向けリリースノート
+short-title: Firefox 119
 slug: Mozilla/Firefox/Releases/119
 l10n:
-  sourceCommit: 7c6b02283df15120126fd174f91519c9a76d81c9
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 このページでは、開発者に影響する Firefox 119 の変更点をまとめています。Firefox 119 は、2023 年 10 月 24 日にリリースされました。
@@ -26,7 +27,7 @@ l10n:
 
 ### SVG
 
-- すべての SVG 要素で、[`<length>`](/ja/docs/Web/SVG/Guides/Content_type#length) の値を受け入れる [SVG 属性](/ja/docs/Web/SVG/Reference/Attribute) が [level 3](https://www.w3.org/TR/css-values-3/#lengths) [length](/ja/docs/Web/CSS/Reference/Values/length) [CSS データ型](/ja/docs/Web/CSS/Reference/Values/Data_types) をサポートしました。これはフォントサイズ (`cap`、`rem` など) やビューポート (`vh`、`vw`、`vmin` など) に基づくサイズや、絶対的な長さ (`px`、`cm` など) で SVG 要素のサイズを決めることを可能にします。例: `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>` (詳しくは [Firefox bug 1287054](https://bugzil.la/1287054) をご覧ください)
+- すべての SVG 要素で、[`<length>`](/ja/docs/Web/SVG/Guides/Content_type#length) の値を受け入れる [SVG 属性](/ja/docs/Web/SVG/Reference/Attribute) が [level 3](https://drafts.csswg.org/css-values-3/#lengths) {{cssxref("length")}} [CSS データ型](/ja/docs/Web/CSS/Reference/Values/Data_types) をサポートしました。これはフォントサイズ (`cap`、`rem` など) やビューポート (`vh`、`vw`、`vmin` など) に基づくサイズや、絶対的な長さ (`px`、`cm` など) で SVG 要素のサイズを決めることを可能にします。例: `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>` (詳しくは [Firefox バグ 1287054](https://bugzil.la/1287054) をご覧ください)
 
 ### HTTP
 
@@ -37,13 +38,13 @@ l10n:
 - [`WebTransport.createBidirectionalStream()`](/ja/docs/Web/API/WebTransport/createBidirectionalStream) および [`WebTransport.createUnidirectionalStream()`](/ja/docs/Web/API/WebTransport/createUnidirectionalStream) に渡す options 引数に `sendOrder` プロパティを含めることで、送信ストリームの相対的な優先度を指定できるようになりました ([Firefox bug 1816925](https://bugzil.la/1816925))。
 - [`AuthenticatorAttestationResponse`](/ja/docs/Web/API/AuthenticatorAttestationResponse) インターフェイスの [`getAuthenticatorData()`](/ja/docs/Web/API/AuthenticatorAttestationResponse/getAuthenticatorData)、[`getPublicKeyAlgorithm()`](/ja/docs/Web/API/AuthenticatorAttestationResponse/getPublicKeyAlgorithm)、[`getPublicKey()`](/ja/docs/Web/API/AuthenticatorAttestationResponse/getPublicKey) メソッドをサポートしました ([Firefox bug 1816519](https://bugzil.la/1816519)、[Firefox bug 1816520](https://bugzil.la/1816520))。
 - [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) の [Credential Properties Extension (`credProps`)](/ja/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#credprops) をサポートしました。資格情報を生成または登録した後に検出可能かを、ユーザーが確認できます ([Firefox bug 1844437](https://bugzil.la/1844437))。
-- [`SubtleCrypto.deriveKey()`](/ja/docs/Web/API/SubtleCrypto/deriveKey) メソッドで、引数 [`derivedKeyAlgorithm`](/ja/docs/Web/API/SubtleCrypto/deriveKey#derivedkeyalgorithm) のオプションとして [HKDF](/ja/docs/Web/API/SubtleCrypto/deriveKey#hkdf) アルゴリズムをサポートしました ([Firefox bug 1851928](https://bugzil.la/1851928))。
+- [`SubtleCrypto.deriveKey()`](/ja/docs/Web/API/SubtleCrypto/deriveKey) メソッドで、引数 [`derivedKeyType`](/ja/docs/Web/API/SubtleCrypto/deriveKey#derivedkeytype) のオプションとして [HKDF](/ja/docs/Web/API/SubtleCrypto/deriveKey#hkdf) アルゴリズムをサポートしました ([Firefox bug 1851928](https://bugzil.la/1851928))。
 - {{domxref("PublicKeyCredential")}} インターフェイスの {{domxref("PublicKeyCredential.parseCreationOptionsFromJSON_static", "parseCreationOptionsFromJSON()")}}、{{domxref("PublicKeyCredential.parseRequestOptionsFromJSON_static", "parseRequestOptionsFromJSON()")}}、{{domxref("PublicKeyCredential.toJSON", "toJSON()")}} メソッドをサポートしました。
   これらは資格情報の生成や共有に使用するオブジェクトを、シリアライズやデシリアライズやサーバーとの共有に使用できる JSON 表現に変換するのに便利なメソッドです ([Firefox bug 1823782](https://bugzil.la/1823782))。
 
 #### DOM
 
-- ほかの要素を参照しない属性に対して、[ARIA](/ja/docs/Web/Accessibility/ARIA) reflection をデフォルトでサポートしました。IDREF 型でない属性だけが反映されます。`setAttribute` や `getAttribute` を使用せずに、JavaScript API を通して DOM 要素の ARIA 属性を直接設定および取得できるようになりました。たとえば、`buttonElement.setAttribute("aria-pressed", "true");` に加えて `buttonElement.ariaPressed = "true";` もサポートしました ([Firefox bug 1785412](https://bugzil.la/1785412))。
+- ほかの要素を参照しない属性に対して、[ARIA](/ja/docs/Web/Accessibility/ARIA) reflection をデフォルトでサポートしました。ID 参照型でない属性だけが反映されます。`setAttribute` や `getAttribute` を使用せずに、JavaScript API を通して DOM 要素の ARIA 属性を直接設定および取得できるようになりました。たとえば、`buttonElement.setAttribute("aria-pressed", "true");` に加えて `buttonElement.ariaPressed = "true";` もサポートしました ([Firefox bug 1785412](https://bugzil.la/1785412))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -70,7 +71,3 @@ l10n:
 #### Marionette
 
 - `Addon:Install` コマンドを使用して WebExtension のインスストールを試みたときに発生する可能性があるエラーコードのリストを、最新の Firefox のエラーコードに合うように更新しました ([Firefox bug 1852537](https://bugzil.la/1852537))。
-
-## 過去のバージョン
-
-{{Firefox_for_developers(118)}}

@@ -2,7 +2,7 @@
 title: キャンバスの最適化
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
@@ -51,28 +51,28 @@ ctx.drawImage(myImage, 0.3, 0.5);
   <canvas id="game-layer" width="480" height="320"></canvas>
   <canvas id="background-layer" width="480" height="320"></canvas>
 </div>
+```
 
-<style>
-  #stage {
-    width: 480px;
-    height: 320px;
-    position: relative;
-    border: 2px solid black;
-  }
+```css
+#stage {
+  width: 480px;
+  height: 320px;
+  position: relative;
+  border: 2px solid black;
+}
 
-  canvas {
-    position: absolute;
-  }
-  #ui-layer {
-    z-index: 3;
-  }
-  #game-layer {
-    z-index: 2;
-  }
-  #background-layer {
-    z-index: 1;
-  }
-</style>
+canvas {
+  position: absolute;
+}
+#ui-layer {
+  z-index: 3;
+}
+#game-layer {
+  z-index: 2;
+}
+#background-layer {
+  z-index: 1;
+}
 ```
 
 ### 大きな背景画像に CSS を使用する
@@ -131,11 +131,7 @@ canvas.style.height = `${rect.height}px`;
 - 可能な限り {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} プロパティを避けます。
 - 可能な限り[テキストレンダリング](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)を避けます。
 - キャンバスをクリアーする別の方法を試します ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} 対 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 対キャンバスのリサイズ)
-- アニメーションで {{domxref("setInterval")}} の代わりに {{domxref("window.requestAnimationFrame()")}} を使用します。
+- アニメーションで {{domxref("Window.setInterval", "setInterval()")}} の代わりに {{domxref("window.requestAnimationFrame()")}} を使用します。
 - 高負荷な物理演算ライブラリーに注意してください。
-
-## 関連情報
-
-- [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}

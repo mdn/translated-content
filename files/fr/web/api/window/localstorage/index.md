@@ -3,7 +3,7 @@ title: "Window : propriété localStorage"
 short-title: localStorage
 slug: Web/API/Window/localStorage
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: fbe455624f7a57d897260d947580428087a48c09
 ---
 
 {{APIRef("Web Storage API")}}
@@ -23,7 +23,7 @@ Un objet {{DOMxRef("Storage")}} qui peut être utilisé pour accéder à l'espac
     - L'origine n'est pas [un schéma/hôte/port valide](/fr/docs/Web/Security/Defenses/Same-origin_policy#définition_de_lorigine). Cela peut se produire si l'origine utilise les schémas `file:` ou `data:`, par exemple.
     - La requête viole une décision de politique. Par exemple, l'utilisateur·ice a configuré le navigateur pour empêcher la page de conserver des données.
 
-    Notez que si l'utilisateur·ice bloque les cookies, les navigateurs interpréteront probablement cela comme une instruction pour empêcher la page de conserver des données.
+    Notez que si l'utilisateur·ice bloque les cookies, les navigateurs interprètent probablement cela comme une instruction pour empêcher la page de conserver des données.
 
 ## Description
 
@@ -33,11 +33,11 @@ Les données de `localStorage` **sont spécifiques au protocole du document**. E
 
 Pour les documents chargés à partir d'URL `file:` (c'est-à-dire des fichiers ouverts dans le navigateur directement depuis le système de fichiers local de l'utilisateur·ice, plutôt que servis par un serveur web), les exigences pour le comportement de `localStorage` ne sont pas définies et peuvent varier selon les navigateurs.
 
-Dans tous les navigateurs actuels, `localStorage` semble retourner un objet différent pour chaque URL `file:`. En d'autres termes, chaque URL `file:` semble avoir sa propre zone de stockage local unique. Mais il n'y a aucune garantie à ce sujet, donc vous ne devriez pas vous y fier, car, comme mentionné ci-dessus, les exigences pour les URL `file:` restent indéfinies. Il est donc possible que les navigateurs modifient leur gestion des URL `file:` pour `localStorage` à tout moment. En fait, certains navigateurs _ont_ modifié leur gestion à ce sujet au fil du temps.
+Dans tous les navigateurs actuels, `localStorage` semble retourner un objet différent pour chaque URL `file:`. En d'autres termes, chaque URL `file:` semble avoir sa propre zone de stockage local unique. Mais il n'y a aucune garantie à ce sujet, donc vous ne devez pas vous y fier, car, comme mentionné ci-dessus, les exigences pour les URL `file:` restent indéfinies. Il est donc possible que les navigateurs modifient leur gestion des URL `file:` pour `localStorage` à tout moment. En fait, certains navigateurs _ont_ modifié leur gestion à ce sujet au fil du temps.
 
 ## Exemples
 
-L'extrait de code suivant accède à l'objet local {{DOMxRef("Storage")}} du domaine courant et lui ajoute une entrée en utilisant {{DOMxRef("Storage.setItem()")}}.
+L'extrait de code suivant accède à l'objet local {{DOMxRef("Storage")}} du domaine courant et lui ajoute une entrée en utilisant {{DOMxRef("Storage.setItem()")}}, ou met à jour l'élément si une entrée existe déjà pour cette clé.
 
 ```js
 localStorage.setItem("monChat", "Tom");

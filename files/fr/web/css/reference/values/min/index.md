@@ -3,7 +3,7 @@ title: Fonction CSS `min()`
 short-title: min()
 slug: Web/CSS/Reference/Values/min
 l10n:
-  sourceCommit: 1131815f48d54465a99c1c5fd0e63e0d1f549caf
+  sourceCommit: 11c522da37b7469cbce26bbe220936aec1d372d0
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`min()`** permet d'obtenir la plus petite valeurs parmi une liste d'expressions, séparées par des virgules afin d'utiliser ce minimum comme valeur d'une propriété CSS. La fonction `min()` peut être utilisée à tout endroit où une valeur de type {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}} ou {{CSSxRef("&lt;integer&gt;")}} est autorisée.
@@ -33,7 +33,7 @@ width: min(150vw, 100px);
 </section>
 ```
 
-Dans le premier exemple ci-dessus, la largeur est au maximum de 200px, mais est inférieure si la zone d'affichage mesure moins de 400px de large (auquel cas 1vw correspondrait à 4px, et 50vw à 200px). Cette technique utilise une unité absolue pour définir une valeur maximale fixe pour la propriété, et une unité relative pour permettre à la valeur de diminuer afin de s'adapter à des zones d'affichage plus petites.
+Dans le premier exemple ci-dessus, la largeur est au maximum de 200px, mais est inférieure si la zone d'affichage mesure moins de 400px de large (auquel cas 1vw correspond à 4px, et 50vw à 200px). Cette technique utilise une unité absolue pour définir une valeur maximale fixe pour la propriété, et une unité relative pour permettre à la valeur de diminuer afin de s'adapter à des zones d'affichage plus petites.
 
 ## Syntaxe
 
@@ -44,7 +44,7 @@ min(1px, 2px, 3px)
 
 ### Paramètres
 
-La fonction `min()` prend une ou plusieurs expressions séparées par des vigules comme paramètres, la valeur de l'expression la plus petite (la plus négative) étant utilisée comme valeur.
+La fonction `min()` prend une ou plusieurs expressions séparées par des virgules comme paramètres, la valeur de l'expression la plus petite (la plus négative) étant utilisée comme valeur.
 
 Les expressions peuvent être des expressions mathématiques (utilisant des opérateurs arithmétiques), des valeurs littérales ou d'autres expressions, telles que {{CSSxRef("attr()")}}, qui évaluent à un type d'argument valide (comme {{CSSxRef("&lt;length&gt;")}}).
 
@@ -54,7 +54,7 @@ Vous pouvez utiliser différentes unités pour chaque valeur de votre expression
 
 - Les expressions mathématiques impliquant des pourcentages pour les largeurs et hauteurs des colonnes de tableau, des groupes de colonnes de tableau, des lignes de tableau, des groupes de lignes de tableau et des cellules de tableau dans les tableaux à disposition automatique et fixe _peuvent_ être traitées comme si `auto` avait été défini.
 - Il est permis d'imbriquer les fonctions `max()` et `min()` comme valeurs d'expression. Les expressions sont des expressions mathématiques complètes, vous pouvez donc utiliser l'addition, la soustraction, la multiplication et la division directement sans utiliser la fonction `calc()` elle-même.
-- L'expression peut être des valeurs combinant les opérateurs d'addition ( + ), de soustraction ( - ), de multiplication ( \* ) et de division ( / ), en utilisant les règles de priorité des opérateurs standard. Assurez-vous de mettre un espace de chaque côté des opérandes + et -. Les opérandes de l'expression peuvent être n'importe quelle valeur de syntaxe \<length>.
+- L'expression peut être des valeurs combinant les opérateurs d'addition (`+`), de soustraction (`-`), de multiplication (`*`) et de division (`/`), en utilisant les règles de priorité des opérateurs standard. Assurez-vous de mettre un espace de chaque côté des opérandes `+` et `-`.
 - Vous pouvez (et devez souvent) combiner les valeurs `min()` et `max()`, ou utiliser `min()` dans une fonction `clamp()` ou `calc()`.
 - Vous pouvez fournir plus de deux arguments, si vous avez plusieurs contraintes à appliquer.
 

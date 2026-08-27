@@ -1,65 +1,75 @@
 ---
-title: Math.fround()
+title: "Math : méthode statique fround()"
+short-title: fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Math.fround()`** retourne la représentation en virgule flottante à [précision simple sur 32 bits <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) la plus proche d'un nombre.
 
-La fonction **`Math.fround()`** renvoie le nombre flottant à [précision simple](https://en.wikipedia.org/wiki/Single_precision) sur 32 bits qui est le plus proche du nombre fourni.
-
-{{InteractiveExample("JavaScript Demo: Math.fround()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.fround()")}}
 
 ```js interactive-example
 console.log(Math.fround(5.5));
-// Expected output: 5.5
+// Sortie attendue : 5.5
 
 console.log(Math.fround(5.05));
-// Expected output: 5.050000190734863
+// Sortie attendue : 5.050000190734863
 
 console.log(Math.fround(5));
-// Expected output: 5
+// Sortie attendue : 5
 
 console.log(Math.fround(-5.05));
-// Expected output: -5.050000190734863
+// Sortie attendue : -5.050000190734863
 ```
 
 ## Syntaxe
 
-```js
-Math.fround(x);
+```js-nolint
+Math.fround(doubleFloat)
 ```
 
 ### Paramètres
 
-- `x`
+- `doubleFloat`
   - : Un nombre.
 
 ### Valeur de retour
 
-Le nombre flottant à précision simple sur 32 bits qui est le plus proche de la valeur fournie en argument.
+La représentation en virgule flottante à [précision simple sur 32 bits <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) la plus proche de `doubleFloat`.
 
 ## Description
 
-Un moteur JavaScript utilise des nombres flottant à précision simple sur 64 bits. Cela permet d'obtenir une précision fine. Toutefois, lorsqu'on manipule des valeurs représentées sur 32 bits (par exemple des valeurs extraites d'un {{jsxref("Float32Array")}}) et qu'on souhaite comparer celles-ci avec des valeurs sur 32 bits, on peut obtenir des inégalités alors que les valeurs semblent identiques.
+JavaScript utilise des nombres flottants à précision double sur 64 bits en interne, ce qui offre une très grande précision. Cependant, il se peut que vous travailliez avec des nombres flottants sur 32 bits, par exemple si vous lisez des valeurs à partir d'un {{JSxRef("Float32Array")}}. Cela peut créer de la confusion&nbsp;: vérifier l'égalité entre un flottant sur 64 bits et un flottant sur 32 bits peut échouer même si les nombres semblent identiques.
 
-Pour résoudre ce problème, on peut utiliser `Math.fround()` afin de transformer un nombre représenté sur 64 bits en un nombre représenté sur 32 bits. Pour le moteur JavaScript, la valeur sera toujours représentée sur 64 bits mais elle aura été « arrondie » à partir du 23e bit de la mantisse. Si le nombre passé en argument se situe en dehors de l'intervalle représentable sur 32 bits, la méthode renverra {{jsxref("Infinity")}} ou `-Infinity`.
+Pour résoudre ce problème, `Math.fround()` peut être utilisé pour convertir le flottant sur 64 bits en flottant sur 32 bits. En interne, JavaScript continue de traiter le nombre comme un flottant sur 64 bits, il effectue simplement un «&nbsp;arrondi au pair&nbsp;» sur le 23e bit de la mantisse, et met tous les bits suivants de la mantisse à `0`. Si le nombre est en dehors de l'intervalle représentable sur 32 bits, {{JSxRef("Infinity")}} ou `-Infinity` est retourné.
 
-`fround` étant une méthode statique de `Math`, il faut utiliser `Math.fround()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+Puisque `fround()` est une méthode statique de `Math`, vous l'utilisez toujours sous la forme `Math.fround()`, plutôt que comme une méthode d'un objet `Math` que vous avez créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
 ### Utiliser `Math.fround()`
 
+Le nombre 1,5 peut être représenté avec précision en système binaire, et sa représentation est identique en 32 bits et en 64 bits&nbsp;:
+
 ```js
-Math.fround(0); // 0
-Math.fround(1); // 1
-
-// 1.337 ne peut pas être représenté correctement
-// sur 32 bits
-Math.fround(1.337); // 1.3370000123977661
-
 Math.fround(1.5); // 1.5
-Math.fround(NaN); // NaN
+Math.fround(1.5) === 1.5; // true
+```
+
+Cependant, le nombre 1,337 ne pouvant pas être représenté avec précision dans le système binaire, il diffère selon qu'il s'agit d'un format 32 bits ou 64 bits&nbsp;:
+
+```js
+Math.fround(1.337); // 1.3370000123977661
+Math.fround(1.337) === 1.337; // false
+```
+
+<math><semantics><msup><mn>2</mn><mn>150</mn></msup><annotation encoding="TeX">2^150</annotation></semantics></math> est trop grand pour un nombre à virgule flottante 32 bits, donc la valeur `Infinity` est retournée&nbsp;:
+
+```js
+2 ** 150; // 1.42724769270596e+45
+Math.fround(2 ** 150); // Infinity
 ```
 
 ## Spécifications
@@ -72,4 +82,6 @@ Math.fround(NaN); // NaN
 
 ## Voir aussi
 
-- {{jsxref("Math.round()")}}
+- [La prothèse d'émulation de `Math.fround` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
+- [La prothèse d'émulation es-shims pour `Math.fround` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.fround)
+- La méthode statique {{JSxRef("Math.round()")}}

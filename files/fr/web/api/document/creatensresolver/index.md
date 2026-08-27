@@ -3,10 +3,10 @@ title: "Document : méthode createNSResolver()"
 short-title: createNSResolver()
 slug: Web/API/Document/createNSResolver
 l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 La méthode **`createNSResolver()`** de l'interface {{DOMxRef("Document")}} était utilisée pour créer un objet `XPathNSResolver` personnalisé. Elle retourne maintenant l'entrée telle quelle et est conservée uniquement pour des raisons de compatibilité.
 

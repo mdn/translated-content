@@ -3,12 +3,12 @@ title: "Document : propriété alinkColor"
 short-title: alinkColor
 slug: Web/API/Document/alinkColor
 l10n:
-  sourceCommit: cac79d099b0a4e48456cb53eb2435f6acf03e188
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
-La propriété **`alinkColor`** de l'interface {{DOMxRef("Document")}} retourne ou définit la couleur d'un lien actif dans le corps du document. Un lien hypertexte est actif durant le temps entre les événements `mousedown` et `mouseup`.
+La propriété **`alinkColor`** de l'interface {{DOMxRef("Document")}} retourne ou définit la couleur d'un lien actif dans le corps du document. Un lien hypertexte est actif durant le temps entre les évènements `mousedown` et `mouseup`.
 
 ## Valeur
 

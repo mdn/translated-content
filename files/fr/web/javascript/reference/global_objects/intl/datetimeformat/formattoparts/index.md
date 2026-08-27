@@ -3,10 +3,10 @@ title: "Intl.DateTimeFormat : méthode formatToParts()"
 short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 0abb70602b0b3b11a2909c417a03e10eabd607a8
 ---
 
-La méthode **`formatToParts()`** des instances de {{JSxRef("Intl.DateTimeFormat")}} retourne un tableau d'objets représentant chaque partie de la chaîne de caractères formatée qui serait retournée par {{JSxRef("Intl/DateTimeFormat/format", "format()")}}. Elle est utile pour construire des chaînes de caractères personnalisées à partir des jetons spécifiques à la locale.
+La méthode **`formatToParts()`** des instances de {{JSxRef("Intl.DateTimeFormat")}} retourne un tableau d'objets représentant chaque partie de la chaîne de caractères formatée qui est retournée par {{JSxRef("Intl/DateTimeFormat/format", "format()")}}. Elle est utile pour construire des chaînes de caractères personnalisées à partir des jetons spécifiques à la locale.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.DateTimeFormat.prototype.formatToParts()", "taller")}}
 
@@ -39,13 +39,13 @@ formatToParts(date)
   - : La date à formater. Peut être un objet {{JSxRef("Date")}} ou {{JSxRef("Temporal.PlainDateTime")}}. Il peut également s'agir d'un objet {{JSxRef("Temporal.PlainTime")}}, {{JSxRef("Temporal.PlainDate")}}, {{JSxRef("Temporal.PlainYearMonth")}} ou {{JSxRef("Temporal.PlainMonthDay")}} si l'objet `DateTimeFormat` a été configuré pour afficher au moins une partie pertinente de la date.
 
     > [!NOTE]
-    > Un objet {{JSxRef("Temporal.ZonedDateTime")}} provoquera toujours une exception `TypeError`&nbsp;; utilisez {{JSxRef("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}} ou convertissez-le en objet {{JSxRef("Temporal.PlainDateTime")}} à la place.
+    > Un objet {{JSxRef("Temporal.ZonedDateTime")}} provoque toujours une exception `TypeError`&nbsp;; utilisez {{JSxRef("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}} ou convertissez-le en objet {{JSxRef("Temporal.PlainDateTime")}} à la place.
 
     Si ce paramètre est omis, la date courante (telle que retournée par {{JSxRef("Date.now()")}}) sera formatée, ce qui peut prêter à confusion, il est donc conseillé de toujours passer explicitement une date.
 
 ### Valeur de retour
 
-Un {{JSxRef("Array")}} d'objets contenant la date formatée en parties. Chaque objet possède deux propriétés, `type` et `value`, chacune contenant une chaîne de caractères. La concaténation des chaînes de caractères `value`, dans l'ordre fourni, donnera la même chaîne de caractères que {{JSxRef("Intl/DateTimeFormat/format", "format()")}}. La propriété `type` peut être l'un des [composants de date et d'heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options_des_composants_de_date_et_dheure)&nbsp;:
+Un {{JSxRef("Array")}} d'objets contenant la date formatée en parties. Chaque objet possède deux propriétés, `type` et `value`, chacune contenant une chaîne de caractères. La concaténation des chaînes de caractères `value`, dans l'ordre fourni, donne la même chaîne de caractères que {{JSxRef("Intl/DateTimeFormat/format", "format()")}}. La propriété `type` peut être l'un des [composants de date et d'heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options_des_composants_de_date_et_dheure)&nbsp;:
 
 - `weekday`
   - : Par exemple `"M"`, `"Monday"` ou `"Montag"`.
@@ -75,11 +75,11 @@ La propriété `type` peut aussi être l'une des suivantes&nbsp;:
 - `literal`
   - : Toute chaîne de caractères qui fait partie du modèle de format et qui n'est pas influencée par la `date`&nbsp;; par exemple `"/"`, `", "`, `"o'clock"`, `"de"`, `" "`, etc.
 - `relatedYear`
-  - : Une année grégorienne à 4 chiffres, dans le cas où la représentation du calendrier serait un `yearName` au lieu d'une année&nbsp;; par exemple `"2019"`. Voir [années nommées](#named_years) pour plus de détails.
+  - : Une année grégorienne à 4 chiffres, dans le cas où la représentation du calendrier est un `yearName` au lieu d'une année&nbsp;; par exemple `"2019"`. Voir [années nommées](#named_years) pour plus de détails.
 - `yearName`
   - : Le nom donné à l'année, généralement dans les calendriers sans le concept d'années continues&nbsp;; par exemple `"geng-zi"`.
 - `unknown`
-  - : Réservé à tout jeton qui n'est reconnu comme aucun des précédents&nbsp;; cela devrait être rarement rencontré.
+  - : Réservé à tout jeton qui n'est reconnu comme aucun des précédents&nbsp;; cela doit être rarement rencontré.
 
 ## Exemples
 
@@ -153,7 +153,7 @@ console.log(dateString);
 
 ### Années nommées
 
-Certains calendriers utilisent des années nommées&nbsp;; par exemple, les calendriers chinois et tibétains utilisent un [cycle sexagésimal](https://fr.wikipedia.org/wiki/Cycle_sexag%C3%A9simal_chinois) de 60 ans. Ces calendriers n'ont pas de moyen universel de numéroter de manière univoque chaque année, donc les années sont désambiguïsées par rapport aux années correspondantes du calendrier grégorien. Dans ce cas, lorsque le `DateTimeFormat` est configuré pour afficher le composant année, un jeton pour `relatedYear` est renvoyé au lieu de `year`.
+Certains calendriers utilisent des années nommées&nbsp;; par exemple, les calendriers chinois et tibétains utilisent un [cycle sexagésimal](https://fr.wikipedia.org/wiki/Cycle_sexag%C3%A9simal_chinois) de 60 ans. Ces calendriers n'ont pas de moyen universel de numéroter de manière univoque chaque année, donc les années sont désambiguïsées par rapport aux années correspondantes du calendrier grégorien. Dans ce cas, lorsque le `DateTimeFormat` est configuré pour afficher le composant année, un jeton pour `relatedYear` est retourné au lieu de `year`.
 
 ```js
 const df = new Intl.DateTimeFormat("zh-u-ca-chinese");
@@ -185,7 +185,7 @@ df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 ];
 ```
 
-Parce que `format()` concatène simplement toutes les chaînes `value`, vous verrez l'année grégorienne et le nom de l'année ensemble dans la sortie dans ce cas.
+Parce que `format()` concatène simplement toutes les chaînes de caractères `value`, vous pouvez voir l'année grégorienne et le nom de l'année ensemble dans la sortie dans ce cas.
 
 ## Spécifications
 

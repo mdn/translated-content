@@ -3,10 +3,8 @@ title: "Élément HTML `<marquee>` : l'élément de texte défilant"
 short-title: <marquee>
 slug: Web/HTML/Reference/Elements/marquee
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<marquee>`** permet d'insérer une zone de texte défilant. Vous pouvez contrôler le comportement du texte lorsqu'il atteint les bords de sa zone de contenu grâce à ses attributs.
 
@@ -15,7 +13,7 @@ L'élément HTML `<marquee>` est obsolète et son utilisation est fortement déc
 ## Attributs
 
 - `behavior` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Définit comment le texte defile à l'intérieur du `<marquee>`. Les valeurs possibles sont `scroll`, `slide` et `alternate`. Si aucune valeur n'est définie, la valeur par défaut est `scroll`.
+  - : Définit comment le texte défile à l'intérieur du `<marquee>`. Les valeurs possibles sont `scroll`, `slide` et `alternate`. Si aucune valeur n'est définie, la valeur par défaut est `scroll`.
 - `bgcolor` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la couleur de fond en utilisant le nom de la couleur ou son code hexadécimal.
 - `direction` {{Deprecated_Inline}} {{Non-standard_Inline}}

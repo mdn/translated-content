@@ -3,12 +3,12 @@ title: "Document : méthode requestStorageAccessFor()"
 short-title: requestStorageAccessFor()
 slug: Web/API/Document/requestStorageAccessFor
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("Storage Access API")}}{{SeeCompatTable}}
+{{APIRef("Storage Access API")}}{{Non-standard_Header}}
 
-La méthode **`requestStorageAccessFor()`** de l'interface {{DOMxRef("Document")}} permet aux sites de niveau supérieur de demander l'accès aux cookies tiers au nom du contenu intégré provenant d'un autre site dans le même [ensemble de sites liés](/fr/docs/Web/API/Storage_Access_API/Related_website_sets). Elle retourne une promesse ({{JSxRef("Promise")}}) qui se résout si l'accès est accordé et se rejette si l'accès est refusé.
+La méthode **`requestStorageAccessFor()`** de l'interface {{DOMxRef("Document")}} permet aux sites de niveau supérieur de demander l'accès aux cookies tiers au nom du contenu intégré provenant d'un autre site dans le même [ensemble de sites liés <sup>(angl.)</sup>](https://privacysandbox.google.com/cookies/related-website-sets-integration). Elle retourne une promesse ({{JSxRef("Promise")}}) qui se résout si l'accès est accordé et se rejette si l'accès est refusé.
 
 ## Syntaxe
 
@@ -40,8 +40,8 @@ Les requêtes à `requestStorageAccessFor()` sont automatiquement refusées sauf
     - Le document n'est pas le document de niveau supérieur.
     - Le document a une origine `null`.
     - L'origine fournie `requestedOrigin` est [opaque <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque).
-    - Les sites de niveau supérieur et intégrés ne sont pas dans le même [ensemble de sites liés](/fr/docs/Web/API/Storage_Access_API/Related_website_sets).
-    - Le {{HTMLElement("iframe")}} intégré est sandboxé, et le jeton `allow-storage-access-by-user-activation` n'est pas défini.
+    - Les sites de niveau supérieur et intégrés ne sont pas dans le même [ensemble de sites liés <sup>(angl.)</sup>](https://privacysandbox.google.com/cookies/related-website-sets-integration).
+    - Le {{HTMLElement("iframe")}} intégré est en bac à sable, et le jeton `allow-storage-access-by-user-activation` n'est pas défini.
     - L'utilisation est bloquée par une [politique d'autorisations](/fr/docs/Web/HTTP/Guides/Permissions_Policy) {{HTTPHeader("Permissions-Policy/storage-access", "storage-access")}}.
     - L'utilisation est refusée par la demande d'autorisation de l'agent utilisateur pour utiliser l'API.
 - `TypeError`
@@ -85,7 +85,7 @@ function rSAFor() {
 }
 ```
 
-Après un appel réussi à `requestStorageAccessFor()`, les requêtes inter-sites incluront les cookies si elles incluent [CORS](/fr/docs/Web/HTTP/Guides/CORS) / [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin), donc les sites peuvent vouloir attendre avant de déclencher une requête. Ces requêtes doivent utiliser l'option [`credentials: "include"`](/fr/docs/Web/API/RequestInit#credentials) et les ressources doivent inclure l'attribut `crossorigin="use-credentials"`.
+Après un appel réussi à `requestStorageAccessFor()`, les requêtes inter-sites incluent les cookies si elles incluent [CORS](/fr/docs/Web/HTTP/Guides/CORS) / [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin), donc les sites peuvent vouloir attendre avant de déclencher une requête. Ces requêtes doivent utiliser l'option [`credentials: "include"`](/fr/docs/Web/API/RequestInit#credentials) et les ressources doivent inclure l'attribut `crossorigin="use-credentials"`.
 
 Par exemple&nbsp;:
 

@@ -2,7 +2,7 @@
 title: 客户端渲染（CSR）
 slug: Glossary/CSR
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
 ---
 
 **客户端渲染**（CSR）指的是在浏览器中使用 JavaScript 生成 HTML 内容的做法。CSR 与{{glossary("SSR", "服务器端渲染")}}相对，后者由服务器生成 HTML 内容。这两种技术并不互斥，可以在同一个应用中结合使用。
@@ -34,7 +34,7 @@ CSR 的优点包括：
 
 SSR 和 CSR 各有性能权衡，可以结合使用以兼顾两者优势。例如，服务器可生成带有空白占位符的页面骨架，客户端再获取额外数据并按需更新页面。
 
-请注意，{{glossary("SPA", "单页应用")}}并不要求站点必须采用 CSR。现代框架（如 [React](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)、[Vue](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started) 和 [Svelte](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)）都可用于构建具备 SSR 能力的 SPA。
+请注意，{{glossary("SPA", "单页应用")}}并不要求站点必须采用 CSR。现代框架（如 [React](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)、[Vue](https://vuejs.org/) 和 [Svelte](https://svelte.dev/)）都可用于构建具备 SSR 能力的 SPA。
 
 ## 参见
 

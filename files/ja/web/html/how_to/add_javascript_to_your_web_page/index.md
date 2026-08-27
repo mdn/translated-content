@@ -3,10 +3,8 @@ title: ウェブページに JavaScript を追加する
 short-title: JavaScript の追加
 slug: Web/HTML/How_to/Add_JavaScript_to_your_web_page
 l10n:
-  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
+  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
 ---
-
-{{HTMLSidebar}}
 
 JavaScript を活用して、ウェブページを次のレベルに引き上げましょう。この記事では、 HTML 文書から JavaScript を正しく起動する方法を学びます。
 
@@ -54,9 +52,7 @@ JavaScript を活用して、ウェブページを次のレベルに引き上げ
 
 ```html
 <script>
-  window.addEventListener("load", () => {
-    console.log("この関数は、ページが完全に読み込まれた時点で実行されます。");
-  });
+  console.log("いくらかのコード");
 </script>
 ```
 
@@ -65,6 +61,9 @@ JavaScript を活用して、ウェブページを次のレベルに引き上げ
 - 作業に集中する
 - 自給自足の HTML を書く
 - 構造化した JavaScript アプリケーションを書く
+
+> [!NOTE]
+> インラインスクリプトおよび、[`defer`](/ja/docs/Web/HTML/Reference/Elements/script#defer) や [`async`](/ja/docs/Web/HTML/Reference/Elements/script#async) 属性を持たない外部スクリプトについては、ブラウザーが HTML を構文解析中に `<script>` 要素に遭遇すると、そのスクリプトは直ちに実行されます。つまり、スクリプトは文書内のそれ以降に現れる HTML 要素にはアクセスできません。そのような要素にアクセスするには、スクリプトを文書本体の末尾（終了タグ `</body>` の直前に）に移動するか、外部スクリプトでは `defer` 属性を使用することを検討してください。
 
 ## アクセシビリティに配慮したスクリプトの使用
 
@@ -89,5 +88,5 @@ JavaScript を活用して、ウェブページを次のレベルに引き上げ
 
 - {{htmlelement("script")}}
 - {{htmlelement("noscript")}}
-- [Writing JavaScript with Accessibility in Mind](https://www.sitepoint.com/writing-javascript-with-accessibility-in-mind/) (Manuel Matuzovic, 2017)
-- [Accessibility guidelines from W3C](https://www.w3.org/TR/WCAG20/)
+- [Writing JavaScript with Accessibility in Mind](https://www.sitepoint.com/writing-javascript-with-accessibility-in-mind/) - Manuel Matuzovic (2017)
+- [Accessibility guidelines from W3C](https://w3c.github.io/wcag/guidelines/22/)
