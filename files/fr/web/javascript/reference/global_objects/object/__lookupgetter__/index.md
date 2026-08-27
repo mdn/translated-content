@@ -96,7 +96,7 @@ console.log(trouverAccesseur(obj2, "toto")); // [Function: get toto]
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Object.prototype.__lookupGetter__` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [La prothèse d'émulation de `Object.prototype.__lookupGetter__` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
 - La méthode [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - L'opérateur {{JSxRef("Functions/get", "get")}}
 - La méthode {{JSxRef("Object.getOwnPropertyDescriptor()")}}
