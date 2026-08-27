@@ -96,7 +96,7 @@ console.log(trouverMutateur(obj2, "toto")); // [Function: set toto]
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Object.prototype.__lookupSetter__` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [La prothèse d'émulation de `Object.prototype.__lookupSetter__` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
 - La méthode [`Object.prototype.__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - L'opérateur {{JSxRef("Functions/set", "set")}}
 - La méthode {{JSxRef("Object.getOwnPropertyDescriptor()")}}
