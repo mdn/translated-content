@@ -88,7 +88,7 @@ console.log(o.gimmeFive); // 5
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Object.prototype.__defineGetter__` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [La prothèse d'émulation de `Object.prototype.__defineGetter__` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
 - La méthode [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - L'opérateur {{JSxRef("Functions/get", "get")}}
 - La méthode {{JSxRef("Object.defineProperty()")}}
