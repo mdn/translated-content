@@ -1,6 +1,8 @@
 ---
 title: 衝突検出
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
+l10n:
+  sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
@@ -55,7 +57,8 @@ function collisionDetection() {
 上記のコードは期待したとおり動作し、ボールの向きを変えるはずです。問題はブロックがそのままとどまっているということです。ボールに既に当たったブロックを取り除く方法を考え出さなければなりません。これはそれぞれのブロックを画面上に描画したいかどうかを示す新たなパラメーターを追加することで達成できます。ブロックを初期化している部分のコードで、それぞれのブロックオブジェクトに `status` プロパティを追加しましょう。次の部分のコードをハイライトした行で示したように更新してください。
 
 ```js
-const bricks = [];
+let bricks = [];
+
 for (let c = 0; c < brickColumnCount; c++) {
   bricks[c] = [];
   for (let r = 0; r < brickRowCount; r++) {
@@ -119,17 +122,176 @@ function collisionDetection() {
 collisionDetection();
 ```
 
-## コードを比べる
+## 自分のコードと比べよう
 
-これでボールの衝突検出がそれぞれのブロックに対してフレームごとに確認されるようになりました。ブロックを壊せるようになったのです。
+これでボールの衝突検出がそれぞれのブロックに対してフレームごとに確認されるようになりました。ブロックを壊せるようになったのです。 :-)
 
-{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/kaed3hbu/","","395")}}
+```html hidden
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">Start game</button>
+```
 
-> [!NOTE]
-> ボールの色をブロックに当たったときに変えましょう。
+```css hidden
+canvas {
+  background: #eeeeee;
+}
+button {
+  display: block;
+}
+```
+
+```js hidden
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+const ballRadius = 10;
+
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+let dx = 2;
+let dy = -2;
+
+const paddleHeight = 10;
+const paddleWidth = 75;
+
+let paddleX = (canvas.width - paddleWidth) / 2;
+let rightPressed = false;
+let leftPressed = false;
+
+let interval = 0;
+
+const brickRowCount = 3;
+const brickColumnCount = 5;
+const brickWidth = 75;
+const brickHeight = 20;
+const brickPadding = 10;
+const brickOffsetTop = 30;
+const brickOffsetLeft = 30;
+
+let bricks = [];
+for (let c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (let r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0, status: 1 };
+  }
+}
+
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
+
+function keyDownHandler(e) {
+  if (e.key === "Right" || e.key === "ArrowRight") {
+    rightPressed = true;
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
+    leftPressed = true;
+  }
+}
+
+function keyUpHandler(e) {
+  if (e.key === "Right" || e.key === "ArrowRight") {
+    rightPressed = false;
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
+    leftPressed = false;
+  }
+}
+function collisionDetection() {
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      let b = bricks[c][r];
+      if (b.status === 1) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;
+        }
+      }
+    }
+  }
+}
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+function drawPaddle() {
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+function drawBricks() {
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      if (bricks[c][r].status === 1) {
+        let brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+        let brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+      }
+    }
+  }
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBricks();
+  drawBall();
+  drawPaddle();
+  collisionDetection();
+
+  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+    dx = -dx;
+  }
+  if (y + dy < ballRadius) {
+    dy = -dy;
+  } else if (y + dy > canvas.height - ballRadius) {
+    if (x > paddleX && x < paddleX + paddleWidth) {
+      if ((y -= paddleHeight)) {
+        dy = -dy;
+      }
+    } else {
+      alert("GAME OVER");
+      document.location.reload();
+      clearInterval(interval); // Chrome でゲームを終わらせるのに必要
+    }
+  }
+
+  if (rightPressed && paddleX < canvas.width - paddleWidth) {
+    paddleX += 7;
+  } else if (leftPressed && paddleX > 0) {
+    paddleX -= 7;
+  }
+
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  interval = setInterval(draw, 10);
+}
+
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
+  startGame();
+  runButton.disabled = true;
+});
+```
+
+{{embedlivesample("compare_your_code", 600, 360)}}
 
 ## 次のステップ
 
-着実にゴールに近づいています。では、先に進みましょう。第 8 章ではどのように[スコアと勝ち負けを記録するか](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)を見てみます。
+着実にゴールに近づいています。では、先に進みましょう。第 8 章ではどのように[得点と勝ち負けを記録するか](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)を見てみます。
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
