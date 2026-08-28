@@ -17,20 +17,20 @@ map.set("b", 2);
 map.set("c", 3);
 
 console.log(map.get("a"));
-// Sortie attendue : 1
+// Résultat attendu : 1
 
 map.set("a", 97);
 
 console.log(map.get("a"));
-// Sortie attendue : 97
+// Résultat attendu : 97
 
 console.log(map.size);
-// Sortie attendue : 3
+// Résultat attendu : 3
 
 map.delete("b");
 
 console.log(map.size);
-// Sortie attendue : 2
+// Résultat attendu : 2
 ```
 
 ## Description

@@ -11,7 +11,7 @@ Si aucun élément ne satisfait la fonction de test, `-1` est retourné.
 
 Voir aussi la méthode {{JSxRef("Array/findLast", "findLast()")}}, qui retourne la valeur du dernier élément qui satisfait la fonction de test (plutôt que son indice).
 
-{{InteractiveExample("JavaScript Demo: Array.prototype.findLastIndex()", "shorter")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.findLastIndex()", "shorter")}}
 
 ```js interactive-example
 const array = [5, 12, 50, 130, 44];
@@ -19,8 +19,8 @@ const array = [5, 12, 50, 130, 44];
 const isLargeNumber = (element) => element > 45;
 
 console.log(array.findLastIndex(isLargeNumber));
-// Résultat attendu: 3
-// Indice de l'élément dont la valeur est: 130
+// Résultat attendu : 3
+// Indice de l'élément dont la valeur est : 130
 ```
 
 ## Syntaxe

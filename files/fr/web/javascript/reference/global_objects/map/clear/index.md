@@ -17,12 +17,12 @@ map.set("bar", "baz");
 map.set(1, "foo");
 
 console.log(map.size);
-// Sortie attendue : 2
+// Résultat attendu : 2
 
 map.clear();
 
 console.log(map.size);
-// Sortie attendue : 0
+// Résultat attendu : 0
 ```
 
 ## Syntaxe

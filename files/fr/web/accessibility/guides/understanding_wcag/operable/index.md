@@ -2,7 +2,7 @@
 title: Utilisable
 slug: Web/Accessibility/Guides/Understanding_WCAG/Operable
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 Cet article fournit des conseils pratiques pour rédiger votre contenu web afin qu'il respecte les critères de succès du principe **Utilisable** des Directives pour l'accessibilité du contenu Web (WCAG) 2.0 et 2.1. Le principe Utilisable stipule que les composants d'interface utilisateur et la navigation doivent pouvoir être utilisés.
@@ -74,7 +74,7 @@ Cette règle concerne la nécessité de rendre les fonctionnalités principales 
         2.1.4 Raccourcis clavier à une touche (A)
       </td>
       <td>
-        Si un raccourci clavier à une seule touche existe, alors au moins une des conditions suivantes doit être vraie&nbsp;: il peut être désactivé, reconfiguré, ou n'est actif que lorsque le composant d'interface concerné a le focus.
+        Si un raccourci clavier à une seule touche existe, alors au moins une des conditions suivantes doit être vraie&nbsp;: il peut être désactivé, reconfiguré, ou n'est actif que lorsque le composant d'interface concerné a la sélection.
       </td>
       <td>
         <a
@@ -109,7 +109,7 @@ Cette règle concerne les situations où une fonctionnalité a une limite de tem
           Pour une fonctionnalité avec une limite de temps (par exemple, finaliser une réservation d'hôtel ou d'avion dans un temps imparti), l'utilisateur·ice doit disposer de contrôles pour ajuster, prolonger ou désactiver la limite de temps.
         </p>
         <p>
-          Exceptions&nbsp;: activités avec une limite de temps supérieure à 20 heures, événements en temps réel (par exemple, jeux multijoueurs en ligne), ou toute activité nécessitant une limite de temps qui serait rendue invalide si elle était supprimée.
+          Exceptions&nbsp;: activités avec une limite de temps supérieure à 20 heures, évènements en temps réel (par exemple, jeux multijoueurs en ligne), ou toute activité nécessitant une limite de temps qui est rendue invalide si elle est supprimée.
         </p>
       </td>
       <td></td>
@@ -167,7 +167,7 @@ Cette règle concerne les situations où une fonctionnalité a une limite de tem
 
 ## Règle 2.3 — Crises et réactions physiques : ne concevez pas de contenu susceptible de provoquer des crises ou des réactions physiques
 
-Cela concerne le contenu qui, s'il n'est pas modifié, pourrait provoquer des crises chez des utilisateur·ice·s souffrant de pathologies comme l'épilepsie, OU des réactions physiques (comme des vertiges) chez des utilisateur·ice·s ayant des troubles vestibulaires.
+Cela concerne le contenu qui, s'il n'est pas modifié, peut provoquer des crises chez des utilisateur·ice·s souffrant de pathologies comme l'épilepsie, OU des réactions physiques (comme des vertiges) chez des utilisateur·ice·s ayant des troubles vestibulaires.
 
 <table>
   <thead>
@@ -216,10 +216,10 @@ Les critères de succès de cette règle concernent les moyens permettant aux ut
       <td>2.4.1 Contourner les blocs (A)</td>
       <td>
         <p>
-          Un mécanisme doit permettre à l'utilisateur·ice d'accéder directement au contenu principal ou à la fonctionnalité principale de la page, en passant les éléments répétés (comme le logo de l'entreprise ou la navigation). Cela se fait souvent via des «&nbsp;liens d'accès rapide&nbsp;» — des liens placés en haut du code source de la page, pointant vers le contenu principal et masqués avec CSS.
+          Un mécanisme doit permettre à l'utilisateur·ice d'accéder directement au contenu principal ou à la fonctionnalité principale de la page, en passant les éléments répétés (comme le logo de l'entreprise ou la navigation). Cela se fait souvent avec des «&nbsp;liens d'accès rapide&nbsp;» — des liens placés en haut du code source de la page, pointant vers le contenu principal et masqués avec CSS.
         </p>
         <p>
-          Si une structure correcte de titres et de conteneurs sémantiques est fournie pour la navigation (par exemple {{htmlelement("section")}}, {{htmlelement("aside")}}, etc.), un «&nbsp;lien d'accès rapide&nbsp;» supplémentaire n'est pas nécessaire.
+          Si une structure correcte de titres et de conteneurs sémantiques est fournie pour la navigation (par exemple {{HTMLElement("section")}}, {{HTMLElement("aside")}}, etc.), un «&nbsp;lien d'accès rapide&nbsp;» supplémentaire n'est pas nécessaire.
         </p>
       </td>
       <td><em>Section à ajouter sur les «&nbsp;liens d'accès rapide&nbsp;».</em></td>
@@ -227,7 +227,7 @@ Les critères de succès de cette règle concernent les moyens permettant aux ut
     <tr>
       <td>2.4.2 Inclure un titre de page (A)</td>
       <td>
-        Chaque page web doit inclure un élément de titre {{htmlelement("title")}} informatif, dont le contenu décrit le contenu ou l'objectif de la page.
+        Chaque page web doit inclure un élément de titre {{HTMLElement("title")}} informatif, dont le contenu décrit le contenu ou l'objectif de la page.
       </td>
       <td>
         Voir
@@ -258,7 +258,7 @@ Les critères de succès de cette règle concernent les moyens permettant aux ut
         Voir
         <a href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#utiliser_des_libellés_de_texte_significatifs"
           >Utiliser des libellés de texte significatifs</a
-        >. Il faut également éviter de multiplier les cas où plusieurs occurrences du même texte sont liées à des destinations différentes. Cela peut poser problème aux utilisateur·ice·s de lecteurs d'écran, qui affichent souvent une liste des liens hors contexte&nbsp;: plusieurs liens tous intitulés «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;» seraient source de confusion.
+        >. Il faut également éviter de multiplier les cas où plusieurs occurrences du même texte sont liées à des destinations différentes. Cela peut poser problème aux utilisateur·ice·s de lecteurs d'écran, qui affichent souvent une liste des liens hors contexte&nbsp;: plusieurs liens tous intitulés «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;» sont source de confusion.
       </td>
     </tr>
     <tr>
@@ -290,7 +290,7 @@ Les critères de succès de cette règle concernent les moyens permettant aux ut
     <tr>
       <td>2.4.6 Titres et libellés (AA)</td>
       <td>
-        Les éléments de titre (par exemple, {{htmlelement("Heading_Elements", "&lt;h2&gt;")}}) et {{htmlelement("label")}} décrivent clairement la finalité du contenu ou des champs de formulaire qu'ils désignent.
+        Les éléments de titre (par exemple, {{HTMLElement("Heading_Elements", "&lt;h2&gt;")}}) et {{HTMLElement("label")}} décrivent clairement la finalité du contenu ou des champs de formulaire qu'ils désignent.
       </td>
       <td>
         <p>
@@ -344,7 +344,7 @@ Les critères de succès de cette règle concernent les moyens permettant aux ut
         Voir
         <a href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#utiliser_des_libellés_de_texte_significatifs"
           >Utiliser des libellés de texte significatifs</a
-        >. Il faut également éviter de multiplier les cas où plusieurs occurrences du même texte sont liées à des destinations différentes. Cela peut poser problème aux utilisateur·ice·s de lecteurs d'écran, qui affichent souvent une liste des liens hors contexte&nbsp;: plusieurs liens tous intitulés «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;» seraient source de confusion.
+        >. Il faut également éviter de multiplier les cas où plusieurs occurrences du même texte sont liées à des destinations différentes. Cela peut poser problème aux utilisateur·ice·s de lecteurs d'écran, qui affichent souvent une liste des liens hors contexte&nbsp;: plusieurs liens tous intitulés «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;» sont source de confusion.
       </td>
     </tr>
     <tr>
@@ -412,7 +412,7 @@ Les critères de succès de cette règle concernent les moyens permettant aux ut
 > [!NOTE]
 > Voir aussi la description WCAG pour [Règle 2.4&nbsp;: Navigation&nbsp;: fournir des moyens d'aider les utilisateur·ice·s à naviguer, trouver du contenu et savoir leur position <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#navigable)
 
-## Règle 2.5 — Modalités de saisie : faciliter l'utilisation des fonctionnalités via différents modes d'entrée, au-delà du clavier
+## Règle 2.5 — Modalités de saisie : faciliter l'utilisation des fonctionnalités avec différents modes d'entrée, au-delà du clavier
 
 Les critères de succès de cette règle garantissent que les utilisateur·ice·s peuvent interagir avec la technologie numérique à l'aide de différents modes d'entrée, au-delà du clavier ou de la souris (y compris l'écran tactile, la voix, les mouvements de l'appareil ou des dispositifs alternatifs).
 
@@ -432,7 +432,7 @@ Les critères de succès de cette règle garantissent que les utilisateur·ice·
     </tr>
     <tr>
       <td>2.5.2 Annulation du pointeur (A)</td>
-      <td>Pour une fonctionnalité utilisable avec un seul pointeur, au moins une des conditions suivantes doit être vraie&nbsp;: aucun événement lors de l'appui, possibilité d'annuler/annuler, inversion lors du relâchement ou caractère essentiel.</td>
+      <td>Pour une fonctionnalité utilisable avec un seul pointeur, au moins une des conditions suivantes doit être vraie&nbsp;: aucun évènement lors de l'appui, possibilité d'annuler/annuler, inversion lors du relâchement ou caractère essentiel.</td>
       <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html">Comprendre l'annulation du pointeur <sup>(angl.)</sup></a></td>
     </tr>
     <tr>
@@ -462,7 +462,7 @@ Les critères de succès de cette règle garantissent que les utilisateur·ice·
         <ul>
           <li><strong>Espacement&nbsp;:</strong> Les cibles de moins de <code>24px x 24px</code> sont positionnées de sorte que si un cercle de <code>24px</code> de diamètre est centré sur chaque boîte englobante, les cercles ne se chevauchent pas avec une autre cible ou le cercle d'une autre cible sous-dimensionnée.</li>
           <li><strong>Équivalent&nbsp;:</strong> Un autre contrôle remplissant la même fonction et respectant ce critère est disponible sur la même page.</li>
-          <li><strong>En ligne&nbsp;:</strong> La cible se trouve dans une ligne de texte et sa taille est contrainte par la hauteur de ligne ou le texte environnant.</li>
+          <li><strong>En incise&nbsp;:</strong> La cible se trouve dans une ligne de texte et sa taille est contrainte par la hauteur de ligne ou le texte environnant.</li>
           <li><strong>Contrôle de l'agent utilisateur&nbsp;:</strong> La taille de la cible est déterminée par l'agent utilisateur et n'a pas été modifiée par l'auteur·ice.</li>
           <li><strong>Essentiel&nbsp;:</strong> Une présentation particulière de la cible est essentielle ou légalement requise pour l'information transmise.</li>
         </ul>
@@ -473,7 +473,7 @@ Les critères de succès de cette règle garantissent que les utilisateur·ice·
 </table>
 
 > [!NOTE]
-> Voir aussi la description WCAG pour [Règle 2.5&nbsp;: Modalités de saisie&nbsp;: faciliter l'utilisation des fonctionnalités via différents modes d'entrée, au-delà du clavier <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#input-modalities)
+> Voir aussi la description WCAG pour [Règle 2.5&nbsp;: Modalités de saisie&nbsp;: faciliter l'utilisation des fonctionnalités avec différents modes d'entrée, au-delà du clavier <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#input-modalities)
 
 ## Voir aussi
 

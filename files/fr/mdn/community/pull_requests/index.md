@@ -2,7 +2,7 @@
 title: Requêtes de tirage propositions et révisions
 slug: MDN/Community/Pull_requests
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: b3cd597b58940518a7712487ce94efc0881cb549
 ---
 
 Ce document explique comment les contributeur·ice·s apportent des modifications à MDN Web Docs, comment ces changements sont relus et publiés sur le site.
@@ -12,7 +12,7 @@ Les modifications de contenu sur MDN Web Docs incluent&nbsp;:
   Cela est généralement réalisé par l'équipe MDN Web Docs travaillant pour Mozilla, Google, Open Web Docs, Samsung, mais aussi par des bénévoles de la communauté.
 - **Corrections mineures** et petites mises à jour du site pour corriger des fautes de frappe, des problèmes grammaticaux ou des inexactitudes techniques.
   Ces problèmes sont souvent signalés par les lecteur·ice·s de MDN Web Docs.
-- **Corrections de bugs de contenu**, généralement effectuées par des bénévoles pour clore les [problèmes du dépôt anglais `mdn/content`](https://github.com/mdn/content/issues) et les [problèmes du dépôt de traduction `mdn/translated-content`](https://github.com/mdn/translated-content/issues).
+- **Corrections de bogues de contenu**, généralement effectuées par des bénévoles pour clore les [problèmes du dépôt anglais `mdn/content`](https://github.com/mdn/content/issues) et les [problèmes du dépôt de traduction `mdn/translated-content`](https://github.com/mdn/translated-content/issues).
 
 Quelle que soit la façon dont les modifications sont apportées, elles sont envoyées sous forme de requêtes de tirage («&nbsp;<i lang="en">pull request</i>&nbsp;» en anglais) sur GitHub.
 Les changements suivent les étapes suivantes avant d'être publiés sur MDN Web Docs&nbsp;:
@@ -40,7 +40,7 @@ Cette règle permet d'éviter que vous ne commenciez une tâche déjà prise en 
 Parcourez les problèmes et requêtes de tirage du [dépôt MDN](https://github.com/orgs/mdn/repositories) auquel vous souhaitez contribuer et vérifiez que le travail que vous voulez commencer n'est pas déjà en cours.
 Lorsque vous souhaitez contribuer au projet MDN, vous pouvez vous trouver dans l'une des situations suivantes&nbsp;:
 
-- **Si vous souhaitez contribuer au projet**, vous trouverez des tâches dans la section «&nbsp;Issues&nbsp;» de n'importe quel [dépôt GitHub MDN <sup>(angl.)</sup>](https://github.com/orgs/mdn/repositories) (par exemple, les [problèmes de `mdn/translated-content`](https://github.com/mdn/translated-content/issues)) et sur nos [tableaux de projet publics GitHub <sup>(angl.)</sup>](https://github.com/orgs/mdn/projects).
+- **Si vous souhaitez contribuer au projet**, vous trouvez des tâches dans la section «&nbsp;Issues&nbsp;» de n'importe quel [dépôt GitHub MDN <sup>(angl.)</sup>](https://github.com/orgs/mdn/repositories) (par exemple, les [problèmes de `mdn/translated-content`](https://github.com/mdn/translated-content/issues)) et sur nos [tableaux de projet publics GitHub <sup>(angl.)</sup>](https://github.com/orgs/mdn/projects).
   Assurez-vous que le ticket n'est pas déjà assigné et qu'aucune pull request n'a été ouverte pour cette tâche.
   Les issues étiquetées `good first issue` sont un bon point de départ.
 

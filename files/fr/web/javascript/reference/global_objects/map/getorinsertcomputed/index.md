@@ -17,10 +17,10 @@ const map = new Map([["toto", "truc"]]);
 const defaultCreator = (key) => `par défaut pour ${key}`;
 
 console.log(map.getOrInsertComputed("toto", defaultCreator));
-// Sortie attendue : "truc"
+// Résultat attendu : "truc"
 
 console.log(map.getOrInsertComputed("tata", defaultCreator));
-// Sortie attendue : "par défaut pour tata"
+// Résultat attendu : "par défaut pour tata"
 ```
 
 ## Syntaxe

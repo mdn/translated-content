@@ -15,10 +15,10 @@ const map = new Map();
 map.set("tata", "toto");
 
 console.log(map.get("tata"));
-// Sortie attendue : "toto"
+// Résultat attendu : "toto"
 
 console.log(map.get("truc"));
-// Sortie attendue : undefined
+// Résultat attendu : undefined
 ```
 
 ## Syntaxe

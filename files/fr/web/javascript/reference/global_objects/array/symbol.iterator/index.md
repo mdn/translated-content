@@ -10,7 +10,7 @@ La méthode **`[Symbol.iterator]()`** des instances de {{JSxRef("Array")}} impl�
 
 La valeur initiale de cette propriété est la même fonction que la valeur initiale de la propriété {{JSxRef("Array.prototype.values")}}.
 
-{{InteractiveExample("JavaScript Demo: Array.prototype[Symbol.iterator]()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
 const array = ["a", "b", "c"];

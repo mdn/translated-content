@@ -12,13 +12,13 @@ La méthode statique **`Number.isFinite()`** permet de déterminer si la valeur 
 
 ```js interactive-example
 console.log(Number.isFinite(1 / 0));
-// Sortie attendue : false
+// Résultat attendu : false
 
 console.log(Number.isFinite(10 / 5));
-// Sortie attendue : true
+// Résultat attendu : true
 
 console.log(Number.isFinite(0 / 0));
-// Sortie attendue : false
+// Résultat attendu : false
 ```
 
 ## Syntaxe

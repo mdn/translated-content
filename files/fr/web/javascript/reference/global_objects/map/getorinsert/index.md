@@ -15,10 +15,10 @@ Si le calcul de la valeur par défaut est coûteux, envisagez d'utiliser {{JSxRe
 ```js interactive-example
 const map = new Map([["toto", "truc"]]);
 console.log(map.getOrInsert("toto", "défaut"));
-// Sortie attendue : "truc"
+// Résultat attendu : "truc"
 
 console.log(map.getOrInsert("baz", "défaut"));
-// Sortie attendue : "défaut"
+// Résultat attendu : "défaut"
 ```
 
 ## Syntaxe

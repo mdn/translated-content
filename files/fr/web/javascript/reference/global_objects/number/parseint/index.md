@@ -20,10 +20,10 @@ function roughScale(x, base) {
 }
 
 console.log(roughScale(" 0xF", 16));
-// Sortie attendue : 1500
+// Résultat attendu : 1500
 
 console.log(roughScale("321", 2));
-// Sortie attendue : 0
+// Résultat attendu : 0
 ```
 
 ## Syntaxe

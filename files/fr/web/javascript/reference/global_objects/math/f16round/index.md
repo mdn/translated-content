@@ -12,16 +12,16 @@ La méthode statique **`Math.f16round()`** retourne la représentation en virgul
 
 ```js interactive-example
 console.log(Math.f16round(5.5));
-// Sortie attendue : 5.5
+// Résultat attendu : 5.5
 
 console.log(Math.f16round(5.05));
-// Sortie attendue : 5.05078125
+// Résultat attendu : 5.05078125
 
 console.log(Math.f16round(5));
-// Sortie attendue : 5
+// Résultat attendu : 5
 
 console.log(Math.f16round(-5.05));
-// Sortie attendue : -5.05078125
+// Résultat attendu : -5.05078125
 ```
 
 ## Syntaxe

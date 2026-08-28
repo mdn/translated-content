@@ -18,16 +18,16 @@ La méthode statique **`Math.exp()`** retourne {{JSxRef("Math/E","e")}} élevé 
 
 ```js interactive-example
 console.log(Math.exp(0));
-// Sortie attendue : 1
+// Résultat attendu : 1
 
 console.log(Math.exp(1));
-// Sortie attendue : 2.718281828459 (approximativement)
+// Résultat attendu : 2.718281828459 (approximativement)
 
 console.log(Math.exp(-1));
-// Sortie attendue : 0.36787944117144233
+// Résultat attendu : 0.36787944117144233
 
 console.log(Math.exp(2));
-// Sortie attendue : 7.38905609893065
+// Résultat attendu : 7.38905609893065
 ```
 
 ## Syntaxe

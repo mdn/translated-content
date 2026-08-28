@@ -14,10 +14,10 @@ La propriété statique **`Number.EPSILON`** représente la différence entre 1 
 const result = Math.abs(0.2 - 0.3 + 0.1);
 
 console.log(result);
-// Sortie attendue : 2.7755575615628914e-17
+// Résultat attendu : 2.7755575615628914e-17
 
 console.log(result < Number.EPSILON);
-// Sortie attendue : true
+// Résultat attendu : true
 ```
 
 ## Valeur
