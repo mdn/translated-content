@@ -2,7 +2,7 @@
 title: Depuración de HTML
 slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
 l10n:
-  sourceCommit: b5ee197a87ea18acbc4dd9544efa8c0e46253785
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
@@ -84,7 +84,7 @@ Entonces, ¿por qué esto es a la vez bueno y malo? Bueno, en este caso el naveg
 > [!NOTE]
 > El HTML se analiza de forma permisiva porque, cuando se creó la web por primera vez, se decidió que publicar contenido era más importante que garantizar que la sintaxis fuera absolutamente correcta. Probablemente la web no sería tan popular como lo es hoy si hubiera sido más estricta desde el principio.
 
-Entonces, ¿cómo encuentras errores de marcado? Más adelante te mostraremos cómo encontrar errores en HTML usando una herramienta llamada el [validador de HTML](#validacion_html), pero primero te mostraremos cómo inspeccionar tu HTML manualmente usando un **inspector del DOM**, y luego exploraremos qué tipos de errores de marcado podrías buscar, y cómo el navegador podría interpretarlos.
+Entonces, ¿cómo encuentras errores de marcado? Más adelante te mostraremos cómo encontrar errores en HTML usando una herramienta llamada el [validador de HTML](#validación_html), pero primero te mostraremos cómo inspeccionar tu HTML manualmente usando un **inspector del DOM**, y luego exploraremos qué tipos de errores de marcado podrías buscar, y cómo el navegador podría interpretarlos.
 
 ## Usar el inspector del DOM
 
@@ -109,20 +109,20 @@ En esta sección, estudiarás algo de código usando el inspector del DOM y ver�
    ```html-nolint
    <!doctype html>
    <html lang="en-US">
-    <head>
-      <meta charset="utf-8">
-      <title>HTML debugging examples</title>
-    </head>
+     <head>
+       <meta charset="utf-8">
+       <title>HTML debugging examples</title>
+     </head>
 
-    <body>
-      <h1>HTML debugging examples</h1>
-      <p>What causes errors in HTML?
-      <ul>
-        <li>Unclosed elements: If an element is <strong>not closed properly,then its effect can spread to areas you didn't intend
-        <li>Badly nested elements: Nesting elements properly is also very important for code behaving correctly. <strong>strong <em>strong emphasized?</strong> what is this?</em>
-        <li>Unclosed attributes: Another common source of HTML problems. Let's look at an example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a>
-      </ul>
-    </body>
+     <body>
+       <h1>HTML debugging examples</h1>
+       <p>What causes errors in HTML?
+       <ul>
+         <li>Unclosed elements: If an element is <strong>not closed properly,then its effect can spread to areas you didn't intend
+         <li>Badly nested elements: Nesting elements properly is also very important for code behaving correctly. <strong>strong <em>strong emphasized?</strong> what is this?</em>
+         <li>Unclosed attributes: Another common source of HTML problems. Let's look at an example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a>
+       </ul>
+     </body>
    </html>
    ```
 
@@ -160,24 +160,24 @@ En esta sección, estudiarás algo de código usando el inspector del DOM y ver�
    - No queda claro dónde debería cerrarse el primer elemento `<strong>`, así que el navegador envolvió cada bloque de texto por separado en su propio elemento `<strong>`, ¡hasta el final del documento!
    - El anidamiento incorrecto fue corregido por el navegador de la siguiente manera:
 
-   ```html
-   <strong>
-     strong
-     <em>strong emphasized?</em>
-   </strong>
-   <em> what is this?</em>
-   ```
+     ```html
+     <strong>
+       strong
+       <em>strong emphasized?</em>
+     </strong>
+     <em> what is this?</em>
+     ```
 
    - El enlace con la comilla doble faltante fue eliminado por completo. El último elemento de la lista se ve así:
 
-   ```html
-   <li>
-     <strong>
-       Unclosed attributes: Another common source of HTML problems. Let's look
-       at an example:
-     </strong>
-   </li>
-   ```
+     ```html
+     <li>
+       <strong>
+         Unclosed attributes: Another common source of HTML problems. Let's look
+         at an example:
+       </strong>
+     </li>
+     ```
 
 ## Validación HTML
 
@@ -191,11 +191,11 @@ Para especificar el HTML que se va a validar, puedes proporcionar una dirección
 
 ## Validando un documento HTML
 
-En esta tarea, te haremos probar el validador de HTML. Validarás nuestro [documento de ejemplo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html) y verás qué resultados devuelve. Este ejemplo contiene el mismo HTML que estudiaste con el inspector del DOM anteriormente.
+En esta tarea, te haremos probar el validador de HTML. Validarás el mismo HTML que estudiaste con el inspector del DOM anteriormente.
 
 1. Primero, carga el [Servicio de validación de marcado](https://validator.w3.org/) en una nueva pestaña del navegador, si aún no está abierto.
 2. Cambia a la pestaña [Validar mediante entrada directa](https://validator.w3.org/#validate_by_input).
-3. Copia todo el código del documento de ejemplo (no solo el `body`) y pégalo en el área de texto grande que se muestra en el Servicio de validación de marcado.
+3. Copia el [documento de ejemplo](#tu_turno_estudiando_html_con_el_inspector_del_dom) y pégalo en el área de texto grande que se muestra en el Servicio de validación de marcado. Pega la estructura completa del documento, no solo el contenido del `<body>`.
 4. Presiona el botón _Check_.
 
 Esto debería darte una lista de errores y otra información.
@@ -212,12 +212,12 @@ Los mensajes de error suelen ser útiles, pero a veces no son tan fáciles de en
 - "Se alcanzó el final del archivo dentro del valor de un atributo. Ignorando la etiqueta": este es bastante críptico; se refiere a que hay un valor de atributo mal formado en algún lugar, posiblemente cerca del final del archivo, ya que el final del archivo aparece dentro del valor del atributo. El hecho de que el navegador no renderice el enlace debería darnos una buena pista sobre qué elemento tiene el problema.
 - "Se alcanzó el final del archivo y había elementos abiertos": esto es un poco ambiguo, pero básicamente se refiere a que hay elementos abiertos que necesitan cerrarse correctamente. Los números de línea apuntan a las últimas líneas del archivo, y este mensaje de error viene con una línea de código que señala un ejemplo de un elemento abierto:
 
-```plain
+  ```plain
   example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a> ↩ </ul>↩ </body>↩</html>
-```
+  ```
 
-> [!NOTE]
-> A un atributo al que le falta una comilla de cierre puede provocar un elemento abierto, porque el resto del documento se interpreta como el contenido del atributo.
+  > [!NOTE]
+  > A un atributo al que le falta una comilla de cierre puede provocar un elemento abierto, porque el resto del documento se interpreta como el contenido del atributo.
 
 - "Elemento `ul` sin cerrar": esto no es muy útil, ya que el elemento {{htmlelement("ul")}} _sí_ está cerrado correctamente. Este error ocurre porque el elemento {{htmlelement("a")}} no está cerrado, debido a que falta la comilla de cierre.
 
