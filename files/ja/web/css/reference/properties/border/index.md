@@ -1,11 +1,12 @@
 ---
-title: border
+title: CSS `border` プロパティ
+short-title: border
 slug: Web/CSS/Reference/Properties/border
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-**`border`** は [一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
+**`border`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
 
 {{InteractiveExample("CSS デモ: border")}}
 
@@ -51,9 +52,9 @@ border: 4mm ridge rgb(211 220 50 / 0.6);
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-width`](/ja/docs/Web/CSS/Reference/Properties/border-width)
-- [`border-style`](/ja/docs/Web/CSS/Reference/Properties/border-style)
-- [`border-color`](/ja/docs/Web/CSS/Reference/Properties/border-color)
+- {{cssxref("border-width")}}
+- {{cssxref("border-style")}}
+- {{cssxref("border-color")}}
 
 ## 構文
 
@@ -78,7 +79,7 @@ border: revert-layer;
 border: unset;
 ```
 
-`border` プロパティは、以下に挙げる値の 1 ～ 3 つを使用して指定します。値の順序は関係ありません。
+`border` プロパティは、以下に挙げる値の 1 ～ 3 つを使用して指定します。値の順序は問いません。
 
 > [!NOTE]
 > style が指定されていない場合は境界線は表示されません。 style の既定値が `none` だからです。
