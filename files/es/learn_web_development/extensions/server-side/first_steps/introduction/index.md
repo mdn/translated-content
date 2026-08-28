@@ -3,7 +3,7 @@ title: Introducción al lado del servidor
 short-title: Introducción
 slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 710372d69095aaeadfba6c892f3e39ed63df4c54
 ---
 
 {{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}
@@ -50,7 +50,7 @@ El cuerpo de una respuesta exitosa a una solicitud contendría el recurso solici
 
 El siguiente diagrama muestra una arquitectura básica de servidor web para un _sitio estático_ (un sitio estático es aquel que devuelve el mismo contenido codificado de forma fija desde el servidor cada vez que se solicita un recurso en particular). Cuando un usuario quiere navegar a una página, el navegador envía una solicitud HTTP "GET" especificando su URL.
 
-El servidor recupera el documento solicitado de su sistema de archivos y devuelve una respuesta HTTP que contiene el documento y un [estado de éxito](/es/docs/Web/HTTP/Reference/Status#respuestas_satisfactorias) (generalmente 200 OK). Si el archivo no puede recuperarse por alguna razón, se devuelve un estado de error (consulta [respuestas de error del cliente](/es/docs/Web/HTTP/Reference/Statu#errores_de_cliente) y [respuestas de error del servidor](/es/docs/Web/HTTP/Reference/Status#errores_de_servidor)).
+El servidor recupera el documento solicitado de su sistema de archivos y devuelve una respuesta HTTP que contiene el documento y un [estado de éxito](/es/docs/Web/HTTP/Reference/Status#respuestas_satisfactorias) (generalmente 200 OK). Si el archivo no puede recuperarse por alguna razón, se devuelve un estado de error (consulta [respuestas de error del cliente](/es/docs/Web/HTTP/Reference/Status#errores_de_cliente) y [respuestas de error del servidor](/es/docs/Web/HTTP/Reference/Status#errores_de_servidor)).
 
 ![Diagrama simplificado de un servidor web estático.](basic_static_app_server.png)
 
@@ -84,7 +84,7 @@ El código del lado del cliente se escribe usando [HTML](/es/docs/Learn_web_deve
 
 Los desarrolladores web no pueden controlar qué navegador usará cada usuario para ver un sitio web — los navegadores ofrecen niveles inconsistentes de compatibilidad con las características del código del lado del cliente, y parte del desafío de la programación del lado del cliente es manejar con elegancia las diferencias en el soporte de los navegadores.
 
-El código del lado del servidor puede escribirse en cualquier cantidad de lenguajes de programación — ejemplos de lenguajes populares para el lado del servidor incluyen PHP, Python, Ruby, C# y JavaScript (NodeJS). El código del lado del servidor tiene acceso completo al sistema operativo del servidor, y el desarrollador puede elegir qué lenguaje de programación (y qué versión específica) desea usar.
+El código del lado del servidor puede escribirse en cualquier cantidad de lenguajes de programación — ejemplos de lenguajes populares para el lado del servidor incluyen PHP, Python, Ruby, C# y JavaScript (Node.js). El código del lado del servidor tiene acceso completo al sistema operativo del servidor, y el desarrollador puede elegir qué lenguaje de programación (y qué versión específica) desea usar.
 
 Los desarrolladores normalmente escriben su código usando **frameworks web**. Los frameworks web son colecciones de funciones, objetos, reglas y otras construcciones de código diseñadas para resolver problemas comunes, acelerar el desarrollo y simplificar los diferentes tipos de tareas que se enfrentan en un dominio particular.
 
