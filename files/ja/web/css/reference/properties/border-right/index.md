@@ -84,7 +84,7 @@ border-right: unset;
 
 ## 解説
 
-他の一括指定プロパティと同様に、 `border-right` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
+他の一括指定プロパティと同様に、 `border-right` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティはデフォルト値が設定されます。次のコードを考えてください。
 
 ```css
 border-right-style: dotted;
@@ -98,7 +98,7 @@ border-right-style: dotted;
 border-right: none thick green;
 ```
 
-`border-right` の前で設定された {{cssxref("border-right-style")}} の値は無視されます。 {{cssxref("border-right-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
+`border-right` の前で設定された {{cssxref("border-right-style")}} の値は無視されます。 {{cssxref("border-right-style")}} のデフォルト値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
 
 ## 公式定義
 
