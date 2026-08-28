@@ -43,10 +43,10 @@ Un modo de escritura en CSS se refiere a si el texto se desplaza de forma horizo
 En el siguiente ejemplo tenemos un encabezado mostrado usando `writing-mode: vertical-rl`. El texto ahora se desplaza verticalmente. El texto vertical es común en el diseño gráfico, y puede ser una forma de darle un aspecto más interesante a tu diseño web.
 
 ```html live-sample___simple-vertical
-<h1>Play with writing modes</h1>
+<h1>Experimenta con los modos de escritura</h1>
 ```
 
-`css live-sample___simple-vertical
+```css live-sample___simple-vertical
 body {
   font-family: sans-serif;
   height: 300px;
@@ -57,7 +57,7 @@ h1 {
   background-color: black;
   padding: 10px;
 }
-`
+```
 
 {{EmbedLiveSample("simple-vertical", "", "350px")}}
 
@@ -78,12 +78,12 @@ Si observamos un ejemplo, esto quedará más claro. En el siguiente ejemplo teng
 ```html live-sample___block-inline
 <div class="wrapper">
   <div class="box horizontal">
-    <h2>Heading</h2>
-    <p>A paragraph demonstrating writing modes in CSS.</p>
+    <h2>Encabezado</h2>
+    <p>Un párrafo que muestra los modos de escritura en CSS.</p>
   </div>
   <div class="box vertical">
-    <h2>Heading</h2>
-    <p>A paragraph demonstrating writing modes in CSS.</p>
+    <h2>Encabezado</h2>
+    <p>Un párrafo que muestra los modos de escritura en CSS.</p>
   </div>
 </div>
 ```
@@ -201,26 +201,26 @@ La propiedad mapeada a `width` cuando estamos en un modo de escritura horizontal
 </div>
 ```
 
-````css live-sample___inline-size
+```css live-sample___inline-size
 .wrapper {
-display: flex;
+  display: flex;
 }
 
 .box {
-border: 1px solid #cccccc;
-padding: 0.5em;
-margin: 10px;
-inline-size: 100px;
+  border: 1px solid #cccccc;
+  padding: 0.5em;
+  margin: 10px;
+  inline-size: 100px;
 }
 
 .horizontal {
-writing-mode: horizontal-tb;
+  writing-mode: horizontal-tb;
 }
 
 .vertical {
-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
 }
-​```
+```
 
 {{EmbedLiveSample("inline-size", "", "300px")}}
 
@@ -238,18 +238,18 @@ Si cambias el modo de escritura de las cajas cambiando la propiedad `writing-mod
 
 También puedes ver que el {{htmlelement("Heading_Elements", "h2")}} tiene un `border-bottom` negro. ¿Puedes descubrir cómo hacer que ese borde inferior siempre quede debajo del texto en ambos modos de escritura?
 
-​```html live-sample___logical-mbp
+```html live-sample___logical-mbp
 <div class="wrapper">
   <div class="box physical">
-    <h2>Physical Properties</h2>
-    <p>A paragraph demonstrating logical properties in CSS.</p>
+    <h2>Propiedades físicas</h2>
+    <p>Un párrafo que muestra las propiedades lógicas en CSS.</p>
   </div>
   <div class="box logical">
-    <h2>Logical Properties</h2>
-    <p>A paragraph demonstrating logical properties in CSS.</p>
+    <h2>Propiedades lógicas</h2>
+    <p>Un párrafo que muestra las propiedades lógicas en CSS.</p>
   </div>
 </div>
-````
+```
 
 ```css live-sample___logical-mbp
 .wrapper {
@@ -314,25 +314,25 @@ Cambia el modo de escritura de este ejemplo a `vertical-rl` para ver qué le suc
 </div>
 ```
 
-````css live-sample___float
+```css live-sample___float
 .wrapper {
-display: flex;
+  display: flex;
 }
 
 .box {
-margin: 10px;
-padding: 0.5em;
-border: 1px solid #cccccc;
-inline-size: 200px;
-writing-mode: horizontal-tb;
+  margin: 10px;
+  padding: 0.5em;
+  border: 1px solid #cccccc;
+  inline-size: 200px;
+  writing-mode: horizontal-tb;
 }
 
 img {
-float: inline-start;
-margin-inline-end: 10px;
-margin-block-end: 10px;
+  float: inline-start;
+  margin-inline-end: 10px;
+  margin-block-end: 10px;
 }
-​```
+```
 
 {{EmbedLiveSample("float", "", "200px")}}
 
@@ -345,4 +345,3 @@ Las propiedades y valores lógicos son más recientes que sus equivalentes físi
 ## Resumen
 
 Los conceptos explicados en esta lección son cada vez más importantes en CSS. Entender la dirección de bloque y en línea — y cómo el flujo del texto cambia al cambiar el modo de escritura — te será muy útil de aquí en adelante. Te ayudará a entender CSS incluso si nunca usas un modo de escritura distinto al horizontal.
-````
