@@ -42,13 +42,13 @@ select {
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled)
-  - : Si cet attribut booléen est défini, l'option ne peut pas être sélectionnée. Généralement, les navigateurs affichent l'option grisée et celle-ci ne reçoit pas les évènements de navigation (liés aux clics ou au focus par exemple). Si cet attribut n'est pas défini, l'élément peut tout de même être désactivé si un de ses ancêtres est un élément {{HTMLElement("optgroup")}} désactivé.
+  - : Si cet attribut booléen est défini, l'option ne peut pas être sélectionnée. Généralement, les navigateurs affichent l'option grisée et celle-ci ne reçoit pas les évènements de navigation (liés aux clics ou à la sélection par exemple). Si cet attribut n'est pas défini, l'élément peut tout de même être désactivé si un de ses ancêtres est un élément {{HTMLElement("optgroup")}} désactivé.
 - `label`
-  - : La valeur de cet attribut correspond au texte affiché pour expliquer l'option. Si cet attribut n'est pas défini, sa valeur correspondra à celle du texte contenu dans l'élément.
+  - : La valeur de cet attribut correspond au texte affiché pour expliquer l'option. Si cet attribut n'est pas défini, sa valeur correspond à celle du texte contenu dans l'élément.
 - `selected`
   - : S'il est présent, cet attribut booléen indique que l'option est sélectionnée à l'état initial. Si l'élément `<option>` est un élément descendant d'un élément {{HTMLElement("select")}} dont l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/select#multiple) n'est pas activé, seul une `<option>` de cet élément {{HTMLElement("select")}} peut être sélectionnée de cette façon.
 - `value`
-  - : Le contenu de cet attribut représente la valeur qu'on souhaite envoyer au formulaire lorsque l'option est sélectionnée. Si cet attribut n'est pas défini, la valeur sera le contenu texuel de l'élément `<option>`.
+  - : Le contenu de cet attribut représente la valeur qu'on souhaite envoyer au formulaire lorsque l'option est sélectionnée. Si cet attribut n'est pas défini, la valeur est le contenu textuel de l'élément `<option>`.
 
 ## Mise en forme avec CSS
 
@@ -58,7 +58,7 @@ La mise en forme des éléments `<option>` a historiquement été très limitée
 
 Dans les navigateurs qui ne prennent pas en charge les fonctionnalités de personnalisation modernes (ou dans les bases de code anciennes où elles ne peuvent pas être utilisées), la mise en forme disponible sur les éléments `<option>` dépend du navigateur et du système d'exploitation. Selon le système, la propriété {{CSSxRef("font-size")}} du `<select>` parent est respectée dans Firefox et Chromium. Chromium peut également permettre de définir {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("font-family")}}, {{CSSxRef("font-variant")}} et {{CSSxRef("text-align")}}.
 
-Vous trouverez plus de détails sur la mise en forme héritée des `<option>` dans [notre guide sur la mise en forme avancée des formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
+Vous trouvez plus de détails sur la mise en forme héritée des `<option>` dans [notre guide sur la mise en forme avancée des formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
 
 ## Exemples
 

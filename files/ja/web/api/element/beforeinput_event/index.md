@@ -1,5 +1,5 @@
 ---
-title: "HTMLElement: beforeinput イベント"
+title: "Element: beforeinput イベント"
 short-title: beforeinput
 slug: Web/API/Element/beforeinput_event
 l10n:

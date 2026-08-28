@@ -148,7 +148,7 @@ Cet exemple utilise des éléments `<td>` avec d'autres éléments liés aux tab
 Certaines lignes de tableau (éléments {{HTMLElement("tr")}}) contiennent à la fois des cellules d'en-tête (éléments {{HTMLElement("th")}}) et des cellules de données `<td>`. L'élément {{HTMLElement("th")}} qui est le premier enfant de chaque ligne forme la première colonne du tableau, chaque `<th>` fournissant l'en-tête de ligne pour les cellules de données de cette ligne. Chaque élément `<td>` correspondant contient des données alignées avec son en-tête de colonne et son en-tête de ligne.
 
 > [!NOTE]
-> Normalement, un groupe d'en-tête de tableau avec des en-têtes de colonnes est mis en place pour faciliter la compréhension des informations dans les colonnes. Les éléments {{HTMLElement("thead")}} et {{HTMLElement("tbody")}} seraient utilisés pour regrouper ces lignes d'en-tête et de données dans les sections respectives d'en-tête et de corps du tableau. Ce n'est pas mis en œuvre dans cet exemple afin de se concentrer sur les cellules de données et de réduire la complexité de l'exemple.
+> Normalement, un groupe d'en-tête de tableau avec des en-têtes de colonnes est mis en place pour faciliter la compréhension des informations dans les colonnes. Les éléments {{HTMLElement("thead")}} et {{HTMLElement("tbody")}} sont utilisés pour regrouper ces lignes d'en-tête et de données dans les sections respectives d'en-tête et de corps du tableau. Ce n'est pas mis en œuvre dans cet exemple afin de se concentrer sur les cellules de données et de réduire la complexité de l'exemple.
 
 ```html
 <table>
@@ -298,10 +298,10 @@ Pour des relations plus complexes entre les cellules de données (`<td>`) et les
 
 #### HTML
 
-Pour améliorer {{Glossary("accessibility", "l'accessibilité")}} du [précédent exemple](#extension_sur_colonnes_et_lignes) et permettre aux lecteurs d'écran, par exemple, d'énoncer les en-têtes associés à chaque cellule de données, l'attribut [`headers`](#headers) peut être introduit avec des attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Chaque cellule d'en-tête de ligne (élément {{HTMLElement("th")}}) associée à la cellule de données «&nbsp;ABC&nbsp;», c'est-à-dire les lettres «&nbsp;A&nbsp;», «&nbsp;B&nbsp;» et «&nbsp;C&nbsp;», reçoit un identifiant unique avec l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). La cellule de données «&nbsp;ABC&nbsp;» (`<td>`) utilise ensuite ces valeurs d'`id` dans une liste séparée par des espaces pour l'attribut [`headers`](#headers).
+Pour améliorer {{Glossary("accessibility", "l'accessibilité")}} du [précédent exemple](#extension_sur_colonnes_et_lignes) et permettre aux lecteurs d'écran, par exemple, d'énoncer les en-têtes associés à chaque cellule de données, l'attribut [`headers`](#headers) peut être introduit avec des attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Chaque cellule d'en-tête de ligne (élément {{HTMLElement("th")}}) associée à la cellule de données «&nbsp;ABC&nbsp;», c'est-à-dire les lettres «&nbsp;A&nbsp;», «&nbsp;B&nbsp;» et «&nbsp;C&nbsp;», reçoit un identifiant unique avec l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). La cellule de données «&nbsp;ABC&nbsp;» (`<td>`) utilise ensuite ces valeurs d'un `id` dans une liste séparée par des espaces pour l'attribut [`headers`](#headers).
 
 > [!NOTE]
-> Il est recommandé d'utiliser des valeurs plus descriptives et utiles pour l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Chaque `id` dans un document doit être unique. Dans cet exemple, les valeurs d'`id` sont des caractères uniques afin de mettre l'accent sur le concept de l'attribut [`headers`](#headers).
+> Il est recommandé d'utiliser des valeurs plus descriptives et utiles pour l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Chaque `id` dans un document doit être unique. Dans cet exemple, les valeurs d'un `id` sont des caractères uniques afin de mettre l'accent sur le concept de l'attribut [`headers`](#headers).
 
 ```html
 <table>

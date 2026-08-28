@@ -47,7 +47,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 ```html
 <address>
-  Vous pouvez contacter l'auteur à l'adresse
+  Vous pouvez contacter l'auteur·ice à l'adresse
   <a href="http://www.undomaine.com/contact">www.undomaine.com</a>.<br />
   Si vous relevez quelques bogues que ce soient, merci de contacter
   <a href="mailto:webmaster@somedomain.com">le webmaster</a>.<br />

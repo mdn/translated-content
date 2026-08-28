@@ -3,7 +3,7 @@ title: "Function : propriété caller"
 short-title: caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 {{Non-standard_Header}}{{Deprecated_Header}}
@@ -17,7 +17,7 @@ La propriété d'accesseur **`caller`** des instances de {{JSxRef("Function")}} 
 
 Si la fonction `f` a été invoquée par le code de plus haut niveau, la valeur de `f.caller` est {{JSxRef("null")}}&nbsp;; sinon, c'est la fonction qui a appelé `f`. Si la fonction qui a appelé `f` est en mode strict, la valeur de `f.caller` est aussi `null`.
 
-Notez que le seul comportement défini par la spécification ECMAScript est que `Function.prototype` possède un accesseur initial `caller` qui déclenche inconditionnellement une {{JSxRef("TypeError")}} pour toute requête `get` ou `set` (appelé «&nbsp;pillule d'accesseur poison&nbsp;»), et que les implémentations ne sont pas autorisées à changer cette sémantique pour toute fonction sauf les fonctions simples non strictes, auquel cas elle ne doit pas avoir la valeur d'une fonction en mode strict. Le comportement réel de la propriété `caller`, s'il diffère du déclenchement d'une erreur, dépend de l'implémentation. Par exemple, Chrome la définit comme une propriété de données propre, tandis que Firefox et Safari étendent l'accesseur poison initial `Function.prototype.caller` pour gérer spécialement les valeurs `this` qui sont des fonctions non strictes.
+Notez que le seul comportement défini par la spécification ECMAScript est que `Function.prototype` possède un accesseur initial `caller` qui déclenche inconditionnellement une {{JSxRef("TypeError")}} pour toute requête `get` ou `set` (appelé «&nbsp;pilule d'accesseur poison&nbsp;»), et que les implémentations ne sont pas autorisées à changer cette sémantique pour toute fonction sauf les fonctions simples non strictes, auquel cas elle ne doit pas avoir la valeur d'une fonction en mode strict. Le comportement réel de la propriété `caller`, s'il diffère du déclenchement d'une erreur, dépend de l'implémentation. Par exemple, Chrome la définit comme une propriété de données propre, tandis que Firefox et Safari étendent l'accesseur poison initial `Function.prototype.caller` pour gérer spécialement les valeurs `this` qui sont des fonctions non strictes.
 
 ```js
 (function f() {
@@ -84,7 +84,7 @@ function g(n) {
 f(2);
 ```
 
-Au moment où `stop()` est appelée, la pile d'appels sera&nbsp;:
+Au moment où `stop()` est appelée, la pile d'appels est&nbsp;:
 
 ```plain
 f(2) -> g(1) -> f(1) -> g(0) -> stop()
@@ -107,7 +107,7 @@ while (f) {
 }
 ```
 
-la boucle ne s'arrêterait jamais.
+la boucle ne s'arrête jamais.
 
 ### `caller` en mode strict
 

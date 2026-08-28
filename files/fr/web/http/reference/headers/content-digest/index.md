@@ -3,7 +3,7 @@ title: En-tête Content-Digest
 short-title: Content-Digest
 slug: Web/HTTP/Reference/Headers/Content-Digest
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
 ---
 
 L'en-tête HTTP **`Content-Digest`** {{Glossary("request header", "en-tête de requête")}} et {{Glossary("response header", "en-tête de réponse")}} fournit un {{Glossary("hash function", "digest")}} calculé à l'aide d'un algorithme de hachage appliqué au contenu du message.
@@ -12,8 +12,8 @@ Un·e destinataire peut utiliser `Content-Digest` pour valider le contenu du mes
 Le champ {{HTTPHeader("Want-Content-Digest")}} permet à un·e expéditeur·ice de demander `Content-Digest` en précisant ses préférences d'algorithme de hachage.
 Un condensé de contenu diffère selon {{HTTPHeader("Content-Encoding")}} et {{HTTPHeader("Content-Range")}}, mais pas selon {{HTTPHeader("Transfer-Encoding")}}.
 
-Dans certains cas, un {{HTTPHeader("Repr-Digest")}} peut être utilisé pour valider l'intégrité de messages partiels ou multiparties par rapport à la représentation complète.
-Par exemple, dans [les requêtes de plage](/fr/docs/Web/HTTP/Guides/Range_requests), `Repr-Digest` aura toujours la même valeur si seules les plages d'octets demandées diffèrent, tandis que le condensé de contenu sera différent pour chaque partie.
+Dans certains cas, un {{HTTPHeader("Repr-Digest")}} peut être utilisé pour valider l'intégrité de messages partiels ou multi-parties par rapport à la représentation complète.
+Par exemple, dans [les requêtes de plage](/fr/docs/Web/HTTP/Guides/Range_requests), `Repr-Digest` a toujours la même valeur si seules les plages d'octets demandées diffèrent, tandis que le condensé de contenu est différent pour chaque partie.
 Pour cette raison, `Content-Digest` est identique à {{HTTPHeader("Repr-Digest")}} lorsqu'une représentation est envoyée dans un seul message.
 
 <table class="properties">
@@ -42,6 +42,8 @@ Content-Digest: <digest-algorithm>=<digest-value>
 Content-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>, …
 ```
 
+`Content-Digest` est un _dictionnaire de champs structurés_ ({{RFC("9651", "Valeurs de champs structurés pour HTTP")}}), dont les clés sont `<digest-algorithm>` et les valeurs sont `<digest-value>`.
+
 ## Directives
 
 - `<digest-algorithm>`
@@ -49,21 +51,15 @@ Content-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-val
     Seuls deux algorithmes de condensé enregistrés sont considérés comme sûrs&nbsp;: `sha-512` et `sha-256`.
     Les algorithmes de condensé enregistrés non sûrs (anciens) sont&nbsp;: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) et `crc32c`.
 - `<digest-value>`
-  - : Le condensé en octets du contenu du message à l'aide de `<digest-algorithm>`.
-    Le choix de l'algorithme de condensé détermine également l'encodage à utiliser&nbsp;: `sha-512` et `sha-256` utilisent l'encodage {{Glossary("base64")}}, tandis que certains anciens algorithmes de condensé comme `unixsum` utilisent un entier décimal.
-    Contrairement aux premiers brouillons de la spécification, les octets du condensé encodés en base64 standard sont entourés de deux-points (`:`, ASCII 0x3A) dans le cadre de la [syntaxe de dictionnaire](https://www.rfc-editor.org/info/rfc8941#name-byte-sequences).
-
-## Description
-
-Un en-tête `Digest` était défini dans les spécifications précédentes, mais il s'est avéré problématique car la portée de ce à quoi le condensé s'appliquait n'était pas claire.
-Plus précisément, il était difficile de distinguer si un condensé s'appliquait à l'ensemble de la représentation de la ressource ou au contenu spécifique d'un message HTTP.
-Ainsi, deux en-têtes distincts ont été définis (`Content-Digest` et `Repr-Digest`) pour transmettre respectivement les condensés du contenu du message HTTP et de la représentation de la ressource.
+  - : Le condensé du contenu du message à l'aide de `<digest-algorithm>`, encodé en {{Glossary("base64")}} et entouré de deux-points (`:`, ASCII 0x3A). Cet encodage est appelé [séquence d'octets <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc9651/#name-byte-sequences) dans la spécification.
 
 ## Exemples
 
-### Requête d'un agent utilisateur pour un `Content-Digest` SHA-256
+Dans tous les exemples, les points de terminaison sont configurés pour envoyer des en-têtes de condensé non sollicités. Les champs {{HTTPHeader("Want-Content-Digest")}} et {{HTTPHeader("Want-Repr-Digest")}} peuvent éventuellement être utilisés par un expéditeur pour demander un `Content-Digest` ou `Repr-Digest` avec leurs préférences d'algorithme de hachage.
 
-Dans l'exemple suivant, un agent utilisateur demande un condensé du contenu du message avec une préférence pour SHA-256, suivi de SHA-1 avec une préférence inférieure&nbsp;:
+### Un `Content-Digest` SHA-256 dans une réponse
+
+Un agent utilisateur demande une ressource&nbsp;:
 
 ```http
 GET /items/123 HTTP/1.1
@@ -72,75 +68,128 @@ Want-Content-Digest: sha-256=10, sha=3
 ```
 
 Le serveur répond avec un `Content-Digest` du contenu du message utilisant l'algorithme SHA-256&nbsp;:
+Le condensé est calculé sur les octets exacts du corps du message, `{"hello": "mdn"}` (16 octets, sans inclure explicitement de saut de ligne final)&nbsp;:
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
+Content-Length: 16
+Content-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 
-{"bonjour": "le monde"}
+{"hello": "mdn"}
 ```
 
 ### Valeurs identiques de `Content-Digest` et `Repr-Digest`
 
-Un agent utilisateur demande une ressource sans champ `Want-Content-Digest`&nbsp;:
+Un agent utilisateur demande une ressource&nbsp;:
 
 ```http
 GET /items/123 HTTP/1.1
 Host: example.com
 ```
 
-Le serveur est configuré pour envoyer des en-têtes de condensé non sollicités dans les réponses.
-Les champs `Repr-Digest` et `Content-Digest` ont des valeurs identiques car ils utilisent le même algorithme, et dans ce cas, l'ensemble de la ressource est envoyé dans un seul message&nbsp;:
+Le serveur répond avec un `Content-Digest` et un `Repr-Digest` du contenu du message utilisant l'algorithme SHA-256&nbsp;:
+Les champs `Repr-Digest` et `Content-Digest` ont des valeurs identiques, car ils sont calculés en utilisant le même algorithme sur les mêmes octets, `{"hello": "mdn"}` (16 octets), et dans ce cas, l'ensemble de la représentation est envoyé dans un seul message&nbsp;:
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 19
-Content-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
-Repr-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
+Content-Length: 16
+Content-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 
-{"bonjour": "le monde"}
+{"hello": "mdn"}
 ```
 
 ### Valeurs différentes de `Content-Digest` et `Repr-Digest`
 
-Si la même requête est répétée comme dans l'exemple précédent, mais utilise la méthode {{HTTPMethod("HEAD")}} au lieu de {{HTTPMethod("GET")}}, les champs `Repr-Digest` et `Content-Digest` seront différents&nbsp;:
+Un agent utilisateur demande uniquement une partie d'une ressource en utilisant une [requête de plage](/fr/docs/Web/HTTP/Guides/Range_requests)&nbsp;:
 
 ```http
 GET /items/123 HTTP/1.1
 Host: example.com
+Range: bytes=0-7
 ```
 
-La valeur de `Repr-Digest` sera la même qu'avant, mais il n'y a pas de corps de message, donc un `Content-Digest` différent sera envoyé par le serveur&nbsp;:
+Le serveur répond avec un {{HTTPStatus("206", "206 Partial Content")}} contenant uniquement les octets demandés, `{"hello"` (8 octets), comme contenu du message.
+`Content-Digest` ne couvre que ces octets, tandis que `Repr-Digest` couvre toujours l'ensemble de la représentation, `{"hello": "mdn"}` (16 octets), donc les deux valeurs diffèrent&nbsp;:
+
+```http
+HTTP/1.1 206 Partial Content
+Content-Type: application/json
+Content-Range: bytes 0-7/16
+Content-Digest: sha-256=:pKQv0IAKChzGfyfxu5TNqcnvxIzaG4XICf6NQnB1YhY=:
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+```
+
+### Condensé d'une représentation gzip-encodée
+
+Dans cette requête, le client utilise l'en-tête {{HTTPHeader("Accept-Encoding")}} pour indiquer qu'il accepte la compression gzip&nbsp;:
+
+```http
+GET /items/123 HTTP/1.1
+Host: example.com
+Accept-Encoding: gzip
+```
+
+La réponse du serveur inclut l'en-tête {{HTTPHeader("Content-Encoding")}}, indiquant que les octets du message proviennent de la représentation gzip de la ressource.
+Le condensé est calculé sur les octets gzip-encodés au lieu du texte original non encodé.
+Ici, le corps JSON de 16 octets `{"hello": "mdn"}` est compressé en gzip pour obtenir une représentation de 36 octets, et `Content-Digest` et `Repr-Digest` sont calculés sur ces 36 octets (affichés ici en hexadécimal pour plus de lisibilité)&nbsp;:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Encoding: gzip
+Content-Length: 36
+Content-Digest: sha-256=:6Gx6u1ZhhahDLs06Zc6ZEqXxUy8RNjy18CaMucjKOFk=:
+Repr-Digest: sha-256=:6Gx6u1ZhhahDLs06Zc6ZEqXxUy8RNjy18CaMucjKOFk=:
+1F 8B 08 00 00 00 00 00 02 FF AB 56 CA 48 CD C9 C9 57 B2 52 50 CA 4D C9 53 AA 05 00 35 D8 1D 91 10 00 00 00
+```
+
+### Gestion de `Content-Digest` lorsqu'il n'y a pas de contenu
+
+Si la même ressource est demandée avec une méthode {{HTTPMethod("HEAD")}} au lieu de {{HTTPMethod("GET")}}, la réponse ne contient aucun contenu&nbsp;:
+
+```http
+HEAD /items/123 HTTP/1.1
+Host: example.com
+```
+
+La valeur de `Repr-Digest` est la même que précédemment, car elle s'applique toujours à l'ensemble de la représentation, `{"hello": "mdn"}`.
+Cependant, le serveur n'envoie aucun contenu dans la réponse et peut omettre l'en-tête `Content-Digest`&nbsp;:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+```
+
+Au lieu d'omettre `Content-Digest` lorsqu'il n'y a pas de contenu, un serveur peut le calculer explicitement sur une chaîne de caractères vide.
+Selon la [Section 6.3 de la RFC 9530 <sup>(angl.)</sup>](https://www.rfc-editor.org/rfc/rfc9530.html#section-6.3), cela permet à un destinataire, en particulier lorsque le condensé est couvert par une signature de message HTTP, de vérifier qu'aucun contenu n'a été ajouté ou supprimé, plutôt que de se contenter de constater que l'en-tête a été omis&nbsp;:
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Digest: sha-256=:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=:
-Repr-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 ```
 
-### Agent utilisateur envoyant un `Content-Digest` dans les requêtes
+### Agent utilisateur envoyant un condensé dans les requêtes
 
 Dans l'exemple suivant, un agent utilisateur envoie un condensé du contenu du message en utilisant SHA-512.
-Il envoie à la fois un `Content-Digest` et un `Repr-Digest`, qui diffèrent l'un de l'autre à cause de `Content-Encoding`&nbsp;:
+Le condensé est calculé sur les octets exacts du corps du message, `{"recipient":"Alex","amount":900000000}` (39 octets, sans inclure explicitement un retour à la ligne final).
+Comme l'ensemble de la représentation est envoyé dans cette seule requête, `Content-Digest` et `Repr-Digest` ont la même valeur&nbsp;:
 
 ```http
 POST /bank_transfer HTTP/1.1
 Host: example.com
-Content-Encoding: zstd
-Content-Digest: sha-512=:ABC…=:
-Repr-Digest: sha-512=:DEF…=:
+Content-Type: application/json
+Content-Length: 39
+Content-Digest: sha-512=:PlrIZYU3M76B30wGsL0h6O79BoxHTdAG+RnMPjOyECTSJCN/KnYdOrSCCWjxV3ckkyvdRmZ52//M3WbehCXcPw==:
+Repr-Digest: sha-512=:PlrIZYU3M76B30wGsL0h6O79BoxHTdAG+RnMPjOyECTSJCN/KnYdOrSCCWjxV3ckkyvdRmZ52//M3WbehCXcPw==:
 
-{
- "recipient": "Alex",
- "amount": 900000000
-}
+{"recipient":"Alex","amount":900000000}
 ```
-
-Le serveur peut calculer un condensé du contenu qu'il a reçu et comparer le résultat avec les en-têtes `Content-Digest` ou `Repr-Digest` pour valider l'intégrité du message.
-Dans des requêtes comme l'exemple ci-dessus, le `Repr-Digest` est plus utile au serveur car il est calculé sur la représentation décodée et sera plus cohérent dans différents scénarios.
 
 ## Spécifications
 

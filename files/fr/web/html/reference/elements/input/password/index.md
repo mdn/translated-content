@@ -83,13 +83,13 @@ Si le motif défini n'est pas présent ou est invalide, aucune expression ration
 > [!NOTE]
 > Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pour définir un texte que la plupart des navigateurs affichent comme info-bulle pour expliquer les exigences du motif. Vous devez aussi inclure un texte explicatif à proximité du champ.
 
-L'utilisation d'un motif est fortement recommandée pour les champs de mot de passe, afin d'aider à garantir que des mots de passe valides utilisant une grande variété de classes de caractères soient choisis et utilisés par les utilisateur·ices. Avec un motif, vous pouvez imposer des règles de casse, exiger l'utilisation d'un certain nombre de chiffres et/ou de caractères de ponctuation, etc. Voir la section [Validation](#validation) pour plus de détails et un exemple.
+L'utilisation d'un motif est fortement recommandée pour les champs de mot de passe, afin d'aider à garantir que des mots de passe valides utilisant une grande variété de classes de caractères soient choisis et utilisés par les utilisateur·ice·s. Avec un motif, vous pouvez imposer des règles de casse, exiger l'utilisation d'un certain nombre de chiffres et/ou de caractères de ponctuation, etc. Voir la section [Validation](#validation) pour plus de détails et un exemple.
 
 ### `placeholder`
 
 L'attribut `placeholder` est une chaîne de caractères qui fournit un indice bref à l'utilisateur·ice sur le type d'information attendu dans le champ. Il doit s'agir d'un mot ou d'une courte phrase qui illustre le type de donnée attendu, plutôt qu'un message explicatif. Le texte _ne doit pas_ inclure de retours chariot ou de sauts de ligne.
 
-Si le contenu du contrôle a une directionnalité ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) mais que le texte du placeholder doit être présenté dans la direction opposée, il est possible d'utiliser les caractères de formatage de l'algorithme bidirectionnel Unicode pour forcer la directionnalité à l'intérieur du placeholder&nbsp;; voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
+Si le contenu du contrôle a une direction ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) mais que le texte du placeholder doit être présenté dans la direction opposée, il est possible d'utiliser les caractères de formatage de l'algorithme bidirectionnel Unicode pour forcer la direction à l'intérieur du placeholder&nbsp;; voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
 > [!NOTE]
 > Évitez d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile sémantiquement que d'autres moyens d'expliquer votre formulaire, et peut provoquer des problèmes techniques inattendus avec votre contenu. Voir [libellés `<input>`](/fr/docs/Web/HTML/Reference/Elements/input#libellés) pour plus d'informations.

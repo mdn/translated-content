@@ -3,7 +3,7 @@ title: DOM イベント
 short-title: イベントの扱い
 slug: Web/API/Document_Object_Model/Events
 l10n:
-  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -779,13 +779,9 @@ l10n:
 const event = new Event("build");
 
 // イベントを待ち受けする
-elem.addEventListener(
-  "build",
-  (e) => {
-    /* … */
-  },
-  false,
-);
+elem.addEventListener("build", (e) => {
+  /* … */
+});
 
 // イベントを配信する
 elem.dispatchEvent(event);
@@ -995,6 +991,14 @@ btn.addEventListener(
 ```js
 controller.abort(); // このコントローラーに関連付けられたすべてのイベントハンドラーを削除
 ```
+
+### 複数のイベントハンドラーの操作
+
+IDL の `onevent` プロパティ（例えば `element.onclick = ...`）と、HTML のコンテンツ属性である `onevent`（例えば `<button onclick="...">`）は、いずれも同一の単一のハンドラースロットを対象としています。HTML は、JavaScript が同じ要素にアクセスできるようになる前に読み込まれるため、通常、JavaScript は HTML で指定された内容を上書きします。{{domxref("EventTarget.addEventListener", "addEventListener()")}} で追加されたハンドラーは独立しています。`onevent` を使用しても、`addEventListener()` で追加されたリスナーが除去されたり上書きされたりすることはなく、その逆も同様です。
+
+イベントが配信されると、リスナーはフェーズごとに呼び出されます。フェーズには、キャプチャフェーズとバブリングフェーズの 2 つがあります。キャプチャフェーズでは、イベントは最も上位の親要素から始まり、ターゲットに到達するまで DOM ツリーを下って移動します。バブリングフェーズでは、イベントは逆方向に移動します。イベントリスナーはデフォルトでバブリングフェーズで処理されますが、`capture: true` を `addEventListener()` で指定することで、キャプチャフェーズで処理するように設定できます。各フェーズ内では、リスナーは登録された順序で実行されます。`onevent` ハンドラーは、初めて null 以外の値になった時点で登録されます。後で再代入した場合、そのコールバックのみを変更し、実行順序は変更されません。
+
+{{domxref("Event.stopPropagation()")}} を呼び出すと、イベント伝播チェーンの先にある他の要素のリスナーが呼び出されなくなります。また、{{domxref("Event.stopImmediatePropagation()")}} を呼び出すと、同じ要素上の残りのリスナーも呼び出されなくなります。
 
 ## 仕様書
 

@@ -3,7 +3,7 @@ title: "Iterator : méthode some()"
 short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/some
 l10n:
-  sourceCommit: dd88a6eb2176fa31f5b744d8964efecf3f1f425b
+  sourceCommit: 76972cdb4d87dd72e0a2a3146af07d82c7ef7d67
 ---
 
 La méthode **`some()`** des instances de {{JSxRef("Iterator")}} est similaire à {{JSxRef("Array.prototype.some()")}}&nbsp;: elle retourne `true` si elle trouve un élément qui satisfait la fonction de test fournie. Sinon, si l'itérateur est épuisé sans trouver un tel élément, elle retourne `false`.
@@ -33,6 +33,8 @@ some(callbackFn)
 
 L'avantage principal des objets d'aide à l'itérateur par rapport aux méthodes de tableau est qu'ils sont paresseux, ce qui signifie qu'ils ne produisent la valeur suivante que lorsqu'elle est demandée. Cela évite les calculs inutiles et permet également de les utiliser avec des itérateurs infinis. Avec des itérateurs infinis, `some()` retourne `true` dès que la première valeur équivalente à vrai est trouvée. Si `callbackFn` retourne toujours une valeur équivalente à faux, la méthode ne se termine jamais.
 
+L'appel à `some()` ferme toujours l'itérateur sous-jacent, même si la méthode retourne tôt. L'itérateur ne reste jamais dans un état intermédiaire.
+
 ## Exemples
 
 ### Utiliser la méthode `some()`
@@ -55,7 +57,7 @@ console.log(fibonacci().take(10).some(estNegatif)); // false
 console.log(fibonacci().some(estNegatif)); // Ne se termine jamais
 ```
 
-L'appel à `some()` ferme toujours l'itérateur sous-jacent, même si la méthode retourne tôt. L'itérateur ne reste jamais dans un état intermédiaire.
+Cette méthode ferme l'itérateur après être retournée.
 
 ```js
 const seq = fibonacci();

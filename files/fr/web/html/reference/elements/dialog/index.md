@@ -114,11 +114,11 @@ Le pseudo-élément CSS {{CSSxRef("::backdrop")}} peut être utilisé pour crée
 
 - Les éléments {{HTMLElement("form")}} peuvent fermer un dialogue s'ils possèdent l'attribut `method="dialog"` ou si le bouton utilisé pour envoyer le formulaire a l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Reference/Elements/input#formmethod). Lorsqu'un tel formulaire est envoyé, le dialogue se ferme avec sa propriété [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) définie sur la `value` (valeur) du bouton qui a été utilisé pour envoyer le formulaire.
 - L'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) peut être ajouté à l'élément avec lequel la personne est censée interagir immédiatement après l'ouverture d'une boîte de dialogue bloquante. S'il n'y a pas d'élément impliquant une interaction immédiate, l'attribut `autofocus` peut être ajouté à l'élément `<dialog>` lui-même.
-- Ne pas ajouter l'attribut `tabindex` à l'élément `<dialog>`, car il n'est pas interactif et ne reçoit pas la sélection. Le contenu du dialogue, y compris le bouton de fermeture contenu dans le dialogue, peut recevoir la sélection et être interactif.
+- Ne pas ajouter l'attribut `tabindex` à l'élément `<dialog>`, car il n'est pas interactif et ne reçoit pas la sélection (<i lang="en">focus</i> en anglais). Le contenu du dialogue, y compris le bouton de fermeture contenu dans le dialogue, peut recevoir la sélection et être interactif.
 
 ## Accessibilité
 
-Lors de l'implémentation d'une fenêtre de dialogue, il est important de considérer l'endroit le plus approprié pour placer le point de sélection de la personne. Lorsque l'on utilise {{DOMxRef("HTMLDialogElement.showModal()")}} pour ouvrir un `<dialog>`, la sélection est placée sur le premier élément imbriqué pouvant recevoir la sélection. Indiquer explicitement l'emplacement initial de la sélection à l'aide de l'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) permet de s'assurer que la sélection initiale est placée sur l'élément considéré comme le meilleur emplacement initial pour un dialogue particulier. En cas de doute, comme il n'est pas toujours possible de savoir où la sélection initiale peut être placée dans un dialogue, en particulier dans les cas où le contenu d'un dialogue est rendu dynamiquement lorsqu'il est invoqué, l'élément `<dialog>` lui-même peut fournir le meilleur emplacement initial.
+Lors de l'implémentation d'une fenêtre de dialogue, il est important de considérer l'endroit le plus approprié pour placer le point de sélection (<i lang="en">focus</i> en anglais) de la personne. Lorsque l'on utilise {{DOMxRef("HTMLDialogElement.showModal()")}} pour ouvrir un `<dialog>`, la sélection est placée sur le premier élément imbriqué pouvant recevoir la sélection. Indiquer explicitement l'emplacement initial de la sélection à l'aide de l'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) permet de s'assurer que la sélection initiale est placée sur l'élément considéré comme le meilleur emplacement initial pour un dialogue particulier. En cas de doute, comme il n'est pas toujours possible de savoir où la sélection initiale peut être placée dans un dialogue, en particulier dans les cas où le contenu d'un dialogue est rendu dynamiquement lorsqu'il est invoqué, l'élément `<dialog>` lui-même peut fournir le meilleur emplacement initial.
 
 Veillez à ce qu'un mécanisme soit prévu pour permettre de fermer la boîte de dialogue. La meilleure façon de s'assurer que toutes les personnes peuvent fermer la boîte de dialogue est d'inclure un bouton explicite à cet effet, tel qu'un bouton de confirmation, d'annulation ou de fermeture.
 
@@ -126,7 +126,7 @@ Par défaut, une boîte de dialogue invoquée par la méthode `showModal()` peut
 
 Bien que les boîtes de dialogue puissent être créées à l'aide d'autres éléments, l'élément natif `<dialog>` offre des caractéristiques d'utilisation et d'accessibilité qui doivent être reproduites si vous utilisez d'autres éléments dans un but similaire. Si vous créez une implémentation de dialogue personnalisée, assurez-vous que tous les comportements par défaut attendus sont pris en charge et que les recommandations d'étiquetage appropriées sont suivies.
 
-L'élément `<dialog>` est exposé par les navigateurs d'une manière similaire aux dialogues personnalisés qui utilisent l'attribut ARIA [role="dialog"](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role). Les éléments `<dialog>` invoqués par la méthode `showModal()` ont implicitement [aria-modal="true"](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal), alors que les éléments `<dialog>` invoqués par la méthode `show()` ou affichés en utilisant l'attribut `open` ou en changeant la propriété CSS `display` par défaut d'un élément HTML `<dialog>` sont exposés en tant que `[aria-modal="false"]`. Lors de l'implémentation de dialogues modaux, tout ce qui n'est pas le `<dialog>` et son contenu doit être rendu inerte en utilisant l'attribut HTML universel [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert). Lorsque l'on utilise `<dialog>` avec la méthode `HTMLDialogElement.showModal()`, ce comportement est fourni par le navigateur.
+L'élément `<dialog>` est exposé par les navigateurs d'une manière similaire aux dialogues personnalisés qui utilisent l'attribut ARIA [role="dialog"](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role). Les éléments `<dialog>` invoqués par la méthode `showModal()` ont implicitement [aria-modal="true"](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal), alors que les éléments `<dialog>` invoqués par la méthode `show()` ou affichés en utilisant l'attribut `open` ou en changeant la propriété CSS `display` par défaut d'un élément HTML `<dialog>` sont exposés en tant que `[aria-modal="false"]`. Lors de l'implémentation de dialogues bloquant, tout ce qui n'est pas le `<dialog>` et son contenu doit être rendu inerte en utilisant l'attribut HTML universel [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert). Lorsque l'on utilise `<dialog>` avec la méthode `HTMLDialogElement.showModal()`, ce comportement est fourni par le navigateur.
 
 ## Exemples
 
@@ -134,7 +134,7 @@ L'élément `<dialog>` est exposé par les navigateurs d'une manière similaire 
 
 Cet exemple montre comment vous pouvez ouvrir et fermer une boîte de dialogue modale en utilisant les attributs HTML [`commandfor`](/fr/docs/Web/HTML/Reference/Elements/button#commandfor) et [`command`](/fr/docs/Web/HTML/Reference/Elements/button#command) de [l'API Invoker Commands](/fr/docs/Web/API/Invoker_Commands_API).
 
-Tout d'abord, nous déclarons un élément {{HTMLElement("button")}}, en définissant l'attribut `command` sur [`"show-modal"`](/fr/docs/Web/HTML/Reference/Elements/button#show-modal), et l'attribut `commandfor` sur l'`id` du dialogue à ouvrir (`mon-dialogue`).
+Tout d'abord, nous déclarons un élément {{HTMLElement("button")}}, en définissant l'attribut `command` sur [`"show-modal"`](/fr/docs/Web/HTML/Reference/Elements/button#show-modal), et l'attribut `commandfor` sur un `id` du dialogue à ouvrir (`mon-dialogue`).
 Ensuite, nous déclarons un élément `<dialog>` qui contient un `<button>` «&nbsp;Fermer&nbsp;». Ce bouton envoie la commande [`"close"`](/fr/docs/Web/HTML/Reference/Elements/button#close) au même `id` de dialogue.
 
 ```html
@@ -219,7 +219,7 @@ Il est possible de basculer l'affichage de la boîte de dialogue en ajoutant ou 
 
 Cet exemple montre une boîte de dialogue bloquante avec un [arrière-plan en dégradé](/fr/docs/Web/CSS/Reference/Values/gradient). La méthode `.showModal()` ouvre la boîte de dialogue bloquante lorsque le bouton «&nbsp;Afficher la fenêtre&nbsp;» est activé. La boîte de dialogue peut être fermée en appuyant sur la touche <kbd>Échap</kbd> ou avec la méthode `close()` lorsque le bouton «&nbsp;Fermer&nbsp;» de la boîte de dialogue est activé.
 
-Lorsqu'une boîte de dialogue s'ouvre, le navigateur donne, par défaut, la sélection au premier élément pouvant la recevoir dans la boîte de dialogue. Dans cet exemple, l'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) est appliqué au bouton «&nbsp;Fermer&nbsp;», lui donnant la sélection à l'ouverture de la boîte de dialogue, car c'est l'élément avec lequel nous nous attendons à ce que la personne interagisse immédiatement après l'ouverture.
+Lorsqu'une boîte de dialogue s'ouvre, le navigateur donne, par défaut, la sélection (<i lang="en">focus</i> en anglais) au premier élément pouvant la recevoir dans la boîte de dialogue. Dans cet exemple, l'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) est appliqué au bouton «&nbsp;Fermer&nbsp;», lui donnant la sélection à l'ouverture de la boîte de dialogue, car c'est l'élément avec lequel nous nous attendons à ce que la personne interagisse immédiatement après l'ouverture.
 
 #### HTML
 
@@ -337,7 +337,7 @@ favDialog.addEventListener("close", (e) => {
   outputBox.value =
     favDialog.returnValue === "default"
       ? "Pas de valeur retournée."
-      : `Valeur retournée : ${favDialog.returnValue}.`; // Vérifie la présence de "default" au lieu d'une chaîne vide
+      : `Valeur retournée : ${favDialog.returnValue}.`; // Vérifie la présence de "default" au lieu d'une chaîne de caractères vide
 });
 
 // Empêche le bouton "Confirmer" d'envoyer le formulaire par défaut et ferme la boîte de dialogue avec la méthode `close()`, ce qui déclenche l'évènement "close".

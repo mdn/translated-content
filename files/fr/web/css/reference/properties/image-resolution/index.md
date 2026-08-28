@@ -3,7 +3,7 @@ title: Propriété CSS `image-resolution`
 short-title: image-resolution
 slug: Web/CSS/Reference/Properties/image-resolution
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 {{SeeCompatTable}}
@@ -29,6 +29,8 @@ image-resolution: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie avec une ou plusieurs valeurs séparées par des espaces parmi la liste suivante&nbsp;:
 
 - {{CSSxRef("&lt;resolution&gt;")}}
   - : Définit explicitement la résolution intrinsèque.

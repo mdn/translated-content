@@ -3,7 +3,7 @@ title: "ARIA : rôle menuitemcheckbox"
 short-title: menuitemcheckbox
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `menuitemcheckbox` est un `menuitem` avec un état vérifiable dont les valeurs possibles sont `true`, `false` ou `mixed`.
@@ -12,7 +12,7 @@ Le rôle `menuitemcheckbox` est un `menuitem` avec un état vérifiable dont les
 
 Les éléments dans les menus et les barres de menus sont des éléments de menu. Il existe trois types d'éléments de menu&nbsp;: [`menuitem`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemradio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role) et `menuitemcheckbox`.
 
-Ces trois éléments ne peuvent être contenus que dans, ou possédés par, un élément avec le rôle [`menu`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) ou [`menubar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role), éventuellement imbriqués dans un élément de regroupement avec le rôle de [`group`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role). Être imbriqué ou autrement possédé (voir [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)) dans un `menu` ou `menubar` identifie les éléments de menu comme étant des widgets liés.
+Ces trois éléments ne peuvent être contenus que dans, ou possédés par, un élément avec le rôle [`menu`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) ou [`menubar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role), éventuellement imbriqués dans un élément de regroupement avec le rôle de [`group`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role). Être imbriqué ou autrement possédé (voir [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)) dans un `menu` ou `menubar` identifie les éléments de menu comme étant des composants liés.
 
 Les éléments de menu, y compris les éléments `menuitemcheckbox`, peuvent être regroupés au sein d'éléments `group` ou séparés par des éléments avec le rôle [`separator`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) ou d'autres rôles natifs équivalents tels que {{HTMLElement("fieldset")}} et {{HTMLElement("hr")}}.
 

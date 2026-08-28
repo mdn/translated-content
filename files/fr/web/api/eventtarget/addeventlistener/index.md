@@ -3,12 +3,12 @@ title: "EventTarget : méthode addEventListener()"
 short-title: addEventListener()
 slug: Web/API/EventTarget/addEventListener
 l10n:
-  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-La méthode **`addEventListener()`** de l'interface {{DOMxRef("EventTarget")}} permet de définir une fonction qui sera appelée chaque fois que l'évènement défini est envoyé à la cible.
+La méthode **`addEventListener()`** de l'interface {{DOMxRef("EventTarget")}} permet de définir une fonction qui est appelée chaque fois que l'évènement défini est envoyé à la cible.
 
 Les cibles courantes sont {{DOMxRef("Element")}}, ses enfants, {{DOMxRef("Document")}} et {{DOMxRef("Window")}}, mais la cible peut être tout objet prenant en charge les évènements (par exemple {{DOMxRef("IDBRequest")}}).
 
@@ -24,17 +24,15 @@ Les cibles courantes sont {{DOMxRef("Element")}}, ses enfants, {{DOMxRef("Docume
 La méthode `addEventListener()` fonctionne en ajoutant une fonction, ou un objet qui implémente une fonction `handleEvent()`, à la liste des écouteurs d'évènements pour le type d'évènement défini sur le {{DOMxRef("EventTarget")}} sur lequel elle est appelée. Si la fonction ou l'objet est déjà dans la liste des écouteurs pour cette cible, la fonction ou l'objet n'est pas ajoutée une seconde fois.
 
 > [!NOTE]
-> Si une fonction anonyme particulière figure déjà dans la liste des écouteurs d'évènements enregistrés pour une cible donnée, et qu'une fonction anonyme identique est ensuite transmise à `addEventListener`, la seconde fonction sera _aussi_ ajoutée à la liste des écouteurs pour cette cible.
+> Si une fonction anonyme particulière figure déjà dans la liste des écouteurs d'évènements enregistrés pour une cible donnée, et qu'une fonction anonyme identique est ensuite transmise à `addEventListener`, la seconde fonction est _aussi_ ajoutée à la liste des écouteurs pour cette cible.
 >
 > En effet, deux fonctions anonymes ne sont jamais identiques, même si elles sont définies à partir du _même_ code source inchangé, y compris dans une boucle.
 >
 > Redéfinir plusieurs fois la même fonction anonyme dans ce genre de cas peut poser problème. (Voir [Problèmes de mémoire](#problèmes_de_mémoire) ci-dessous.)
 
 Si un écouteur d'évènement est ajouté à un {{DOMxRef("EventTarget")}} depuis un autre écouteur —
-c'est-à-dire pendant le traitement de l'évènement —
-l'évènement en cours ne déclenchera pas le nouvel écouteur.
-Cependant, ce nouvel écouteur pourra être déclenché lors d'une phase ultérieure du cycle de l'évènement,
-par exemple lors de la phase de propagation (bubbling).
+c'est-à-dire pendant le traitement de l'évènement — l'évènement en cours ne déclenche pas le nouvel écouteur.
+Cependant, ce nouvel écouteur peut être déclenché lors d'une phase ultérieure du cycle de l'évènement, par exemple lors de la phase de propagation.
 
 ## Syntaxe
 
@@ -53,19 +51,19 @@ addEventListener(type, listener, useCapture)
 - `options` {{Optional_Inline}}
   - : Objet qui définit les caractéristiques de l'écouteur d'évènement. Les options disponibles sont&nbsp;:
     - `capture` {{Optional_Inline}}
-      - : Un booléen indiquant que les évènements de ce type seront transmis à l'écouteur enregistré avant d'être transmis à tout autre `EventTarget` situé en dessous dans l'arbre DOM. Par défaut, `false` si non défini.
+      - : Un booléen indiquant que les évènements de ce type sont transmis à l'écouteur enregistré avant d'être transmis à tout autre `EventTarget` situé en dessous dans l'arbre DOM. Par défaut, `false` si non défini.
     - `once` {{Optional_Inline}}
-      - : Un booléen indiquant que l'écouteur ne doit être invoqué qu'une seule fois après avoir été ajouté. Si `true`, l'écouteur sera automatiquement supprimé après son invocation. Par défaut, `false` si non défini.
+      - : Un booléen indiquant que l'écouteur ne doit être invoqué qu'une seule fois après avoir été ajouté. Si `true`, l'écouteur est automatiquement supprimé après son invocation. Par défaut, `false` si non défini.
     - `passive` {{Optional_Inline}}
-      - : Un booléen qui, si `true`, indique que la fonction définie par `listener` n'appellera jamais {{DOMxRef("Event.preventDefault", "preventDefault()")}}. Si un écouteur passif appelle `preventDefault()`, rien ne se passe et un avertissement peut apparaître dans la console.
+      - : Un booléen qui, si `true`, indique que la fonction définie par `listener` n'appelle jamais {{DOMxRef("Event.preventDefault", "preventDefault()")}}. Si un écouteur passif appelle `preventDefault()`, rien ne se passe et un avertissement peut apparaître dans la console.
 
         Si cette option n'est pas définie, elle vaut `false` — sauf dans les navigateurs autres que Safari, où elle vaut `true` pour les évènements {{DOMxRef("Element/wheel_event", "wheel")}}, {{DOMxRef("Element/mousewheel_event", "mousewheel")}}, {{DOMxRef("Element/touchstart_event", "touchstart")}} et {{DOMxRef("Element/touchmove_event", "touchmove")}}. Voir [Utiliser les écouteurs passifs](#utiliser_les_écouteurs_passifs) pour en savoir plus.
 
     - `signal` {{Optional_Inline}}
-      - : Un objet {{DOMxRef("AbortSignal")}}. L'écouteur sera supprimé lorsque la méthode {{DOMxRef("AbortController/abort()", "abort()")}} du {{DOMxRef("AbortController")}} propriétaire du signal sera appelée. Si non défini, aucun `AbortSignal` n'est associé à l'écouteur.
+      - : Un objet {{DOMxRef("AbortSignal")}}. L'écouteur est supprimé lorsque la méthode {{DOMxRef("AbortController/abort()", "abort()")}} du {{DOMxRef("AbortController")}} propriétaire du signal est appelée. Si non défini, aucun `AbortSignal` n'est associé à l'écouteur.
 
 - `useCapture` {{Optional_Inline}}
-  - : Un booléen indiquant si les évènements de ce type seront transmis à l'écouteur _avant_ d'être transmis à tout autre `EventTarget` situé en dessous dans l'arbre DOM. Les évènements qui remontent (propagation) dans l'arbre ne déclencheront pas un écouteur défini en mode capture. La propagation et la capture sont deux modes de propagation des évènements dans des éléments imbriqués ayant chacun un gestionnaire pour cet évènement. Le mode de propagation détermine l'ordre dans lequel les éléments reçoivent l'évènement. Voir [la spécification DOM <sup>(angl.)</sup>](https://dom.spec.whatwg.org/#introduction-to-dom-events) et [l'ordre des évènements JavaScript <sup>(angl.)</sup>](https://www.quirksmode.org/js/events_order.html#link4) pour plus d'explications. Par défaut, `useCapture` vaut `false` si non défini.
+  - : Un booléen indiquant si les évènements de ce type sont transmis à l'écouteur _avant_ d'être transmis à tout autre `EventTarget` situé en dessous dans l'arbre DOM. Les évènements qui remontent (propagation) dans l'arbre ne déclenchent pas un écouteur défini en mode capture. La propagation et la capture sont deux modes de propagation des évènements dans des éléments imbriqués ayant chacun un gestionnaire pour cet évènement. Le mode de propagation détermine l'ordre dans lequel les éléments reçoivent l'évènement. Voir [la spécification DOM <sup>(angl.)</sup>](https://dom.spec.whatwg.org/#introduction-to-dom-events) et [l'ordre des évènements JavaScript <sup>(angl.)</sup>](https://www.quirksmode.org/js/events_order.html#link4) pour plus d'explications. Par défaut, `useCapture` vaut `false` si non défini.
 
     > [!NOTE]
     > Pour les écouteurs attachés directement à la cible de l'évènement, l'évènement est dans la phase cible, et non dans les phases de capture ou de propagation.
@@ -86,7 +84,7 @@ L'écouteur d'évènement peut être défini soit comme une fonction de rappel, 
 
 La fonction de rappel elle-même accepte les mêmes paramètres et retourne la même chose que la méthode `handleEvent()`&nbsp;: elle prend en paramètre un objet basé sur {{DOMxRef("Event")}} décrivant l'évènement survenu, et ne retourne rien.
 
-Par exemple, une fonction de rappel pouvant servir à la fois pour {{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}} et {{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}} pourrait ressembler à&nbsp;:
+Par exemple, une fonction de rappel pouvant servir à la fois pour {{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}} et {{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}} peut ressembler à&nbsp;:
 
 ```js
 function handleEvent(event) {
@@ -98,13 +96,13 @@ function handleEvent(event) {
 }
 ```
 
-Par exemple, lorsque vous utilisez un gestionnaire générique pour un ensemble d'éléments similaires, la valeur de {{JSxRef("this")}} à l'intérieur du gestionnaire sera une référence à l'élément. Elle sera identique à la valeur de la propriété `currentTarget` de l'objet évènement passé au gestionnaire.
+Par exemple, lorsque vous utilisez un gestionnaire générique pour un ensemble d'éléments similaires, la valeur de {{JSxRef("this")}} à l'intérieur du gestionnaire est une référence à l'élément. Elle est identique à la valeur de la propriété `currentTarget` de l'objet évènement passé au gestionnaire.
 
 ### La valeur de `this` dans le gestionnaire
 
 Il est souvent utile de faire référence à l'élément sur lequel le gestionnaire d'évènement a été déclenché, par exemple lorsqu'on utilise un gestionnaire générique pour un ensemble d'éléments similaires.
 
-Lorsque vous attachez une fonction de gestion à un élément avec `addEventListener()`, la valeur de {{JSxRef("this")}} à l'intérieur du gestionnaire sera une référence à l'élément. Elle sera identique à la valeur de la propriété `currentTarget` de l'objet passé au gestionnaire d'évènement.
+Lorsque vous attachez une fonction de gestion à un élément avec `addEventListener()`, la valeur de {{JSxRef("this")}} à l'intérieur du gestionnaire est une référence à l'élément. Elle est identique à la valeur de la propriété `currentTarget` de l'objet passé au gestionnaire d'évènement.
 
 ```js
 monElement.addEventListener("click", function (e) {
@@ -140,7 +138,7 @@ Notez que la valeur de `this` à l'intérieur d'une fonction _appelée par_ le c
   }
 </script>
 <table id="mon-tableau" onclick="logID();">
-  <!-- lors de l'appel, `this` fera référence à l'objet global -->
+  <!-- lors de l'appel, `this` fait référence à l'objet global -->
   …
 </table>
 ```
@@ -246,7 +244,7 @@ monBouton.addEventListener("click", () => {
   uneChaine = "Donnée modifiée";
 });
 
-console.log(uneChaine); // Valeur attendue : « Donnée » (n'affichera jamais « Donnée modifiée »)
+console.log(uneChaine); // Valeur attendue : « Donnée » (n'affiche jamais « Donnée modifiée »)
 ```
 
 Voir [le guide sur les fonctions](/fr/docs/Web/JavaScript/Guide/Functions#fermetures_closures) pour plus d'informations sur la portée des fonctions.
@@ -273,7 +271,7 @@ for (const elem of elems) {
 }
 ```
 
-Dans le premier cas ci-dessus, une nouvelle fonction de gestion (anonyme) est créée à chaque itération de la boucle. Dans le second cas, la même fonction déclarée précédemment est utilisée comme gestionnaire d'évènement, ce qui réduit la consommation mémoire car une seule fonction gestionnaire est créée. De plus, dans le premier cas, il n'est pas possible d'appeler {{DOMxRef("EventTarget.removeEventListener", "removeEventListener()")}} car aucune référence à la fonction anonyme n'est conservée (ou ici, aucune référence à l'une des multiples fonctions anonymes créées par la boucle). Dans le second cas, il est possible d'utiliser `myElement.removeEventListener("click", traiterEvenement, false)` car `traiterEvenement` est la référence de la fonction.
+Dans le premier cas ci-dessus, une nouvelle fonction de gestion (anonyme) est créée à chaque itération de la boucle. Dans le second cas, la même fonction déclarée précédemment est utilisée comme gestionnaire d'évènement, ce qui réduit la consommation mémoire, car une seule fonction gestionnaire est créée. De plus, dans le premier cas, il n'est pas possible d'appeler {{DOMxRef("EventTarget.removeEventListener", "removeEventListener()")}}, car aucune référence à la fonction anonyme n'est conservée (ou ici, aucune référence à l'une des multiples fonctions anonymes créées par la boucle). Dans le second cas, il est possible d'utiliser `myElement.removeEventListener("click", traiterEvenement, false)`, car `traiterEvenement` est la référence de la fonction.
 
 En réalité, concernant la consommation mémoire, le problème n'est pas tant l'absence de référence à la fonction, mais plutôt l'absence de référence _statique_ à la fonction.
 
@@ -281,9 +279,9 @@ En réalité, concernant la consommation mémoire, le problème n'est pas tant l
 
 Si un évènement possède une action par défaut — par exemple, un évènement {{DOMxRef("Element/wheel_event", "wheel")}} qui fait défiler le conteneur — le navigateur ne peut généralement pas lancer l'action par défaut tant que l'écouteur d'évènement n'a pas terminé, car il ne sait pas à l'avance si l'écouteur va annuler l'action par défaut avec {{DOMxRef("Event.preventDefault()")}}. Si l'écouteur prend trop de temps à s'exécuter, cela peut provoquer un délai perceptible (appelé {{Glossary("jank")}}) avant que l'action par défaut ne soit exécutée.
 
-En définissant l'option `passive` à `true`, un écouteur d'évènement déclare qu'il n'annulera pas l'action par défaut, ce qui permet au navigateur de lancer immédiatement l'action par défaut sans attendre la fin de l'écouteur. Si l'écouteur appelle malgré tout {{DOMxRef("Event.preventDefault()")}}, cela n'aura aucun effet.
+En définissant l'option `passive` à `true`, un écouteur d'évènement déclare qu'il n'annule pas l'action par défaut, ce qui permet au navigateur de lancer immédiatement l'action par défaut sans attendre la fin de l'écouteur. Si l'écouteur appelle malgré tout {{DOMxRef("Event.preventDefault()")}}, cela n'aura aucun effet.
 
-La spécification de `addEventListener()` définit la valeur par défaut de l'option `passive` à `false`. Cependant, pour améliorer les performances de défilement dans du code existant, les navigateurs modernes ont changé la valeur par défaut de l'option `passive` à `true` pour les évènements {{DOMxRef("Element/wheel_event", "wheel")}}, {{DOMxRef("Element/mousewheel_event", "mousewheel")}}, {{DOMxRef("Element/touchstart_event", "touchstart")}} et {{DOMxRef("Element/touchmove_event", "touchmove")}} sur les nœuds de niveau document comme {{DOMxRef("Window")}}, {{DOMxRef("Document")}} et {{DOMxRef("Document.body")}}. Cela empêche l'écouteur d'évènement d'[annuler l'évènement](/fr/docs/Web/API/Event/preventDefault), et donc de bloquer l'affichage de la page pendant le défilement.
+La spécification de `addEventListener()` définit la valeur par défaut de l'option `passive` à `false`. Cependant, pour améliorer les performances de défilement dans du code existant, les navigateurs modernes ont changé la valeur par défaut de l'option `passive` à `true` pour les évènements {{DOMxRef("Element/wheel_event", "wheel")}}, {{DOMxRef("Element/mousewheel_event", "mousewheel")}}, {{DOMxRef("Element/touchstart_event", "touchstart")}} et {{DOMxRef("Element/touchmove_event", "touchmove")}} sur les nœuds de niveau document comme {{DOMxRef("Window")}}, {{DOMxRef("Document")}} et {{DOMxRef("Document.body")}}. Cela empêche l'écouteur d'évènement [d'annuler l'évènement](/fr/docs/Web/API/Event/preventDefault), et donc de bloquer l'affichage de la page pendant le défilement.
 
 Ainsi, si vous souhaitez annuler ce comportement et garantir que l'option `passive` est `false`, vous devez explicitement définir cette option à `false` (plutôt que de compter sur la valeur par défaut).
 
@@ -372,7 +370,7 @@ function modifyText() {
 }
 ```
 
-Dans l'exemple ci-dessus, on modifie le code de l'exemple précédent de sorte qu'après que le contenu de la deuxième ligne passe à « trois », on appelle `abort()` depuis le {{DOMxRef("AbortController")}} passé à `addEventListener()`. Ainsi, la valeur reste « trois » indéfiniment car il n'y a plus de code à l'écoute de l'évènement click.
+Dans l'exemple ci-dessus, on modifie le code de l'exemple précédent de sorte qu'après que le contenu de la deuxième ligne passe à «&nbsp;trois&nbsp;», on appelle `abort()` depuis le {{DOMxRef("AbortController")}} passé à `addEventListener()`. Ainsi, la valeur reste «&nbsp;trois&nbsp;» indéfiniment, car il n'y a plus de code à l'écoute de l'évènement click.
 
 #### Résultat
 
@@ -417,7 +415,7 @@ Remarquez que l'écouteur est une fonction anonyme qui encapsule du code permett
 
 #### Résultat
 
-{{EmbedLiveSample('écouteur_dévènement_avec_fonction_anonyme')}}
+{{EmbedLiveSample("Écouteur d'évènement avec fonction anonyme")}}
 
 ### Écouteur d'évènement avec fonction fléchée
 
@@ -456,7 +454,7 @@ el.addEventListener("click", () => {
 
 #### Résultat
 
-{{EmbedLiveSample('écouteur_dévènement_avec_fonction_fléchée')}}
+{{EmbedLiveSample("Écouteur d'évènement avec fonction fléchée")}}
 
 Notez que bien que les fonctions anonymes et les fonctions fléchées soient similaires, elles n'ont pas le même comportement pour `this`. Les fonctions anonymes (et toutes les fonctions traditionnelles JavaScript) créent leur propre liaison `this`, tandis que les fonctions fléchées héritent du `this` de la fonction englobante.
 
@@ -585,7 +583,7 @@ function noneCaptureHandler(event) {
   log("middle, aucune capture, par défaut");
 }
 function passiveHandler(event) {
-  // Unable to preventDefault inside passive event listener invocation.
+  // Impossible d'appeler preventDefault à l'intérieur de l'invocation d'un écouteur d'évènement passif.
   event.preventDefault();
   log("inner1, passif, ouvre un nouvelle page");
 }
@@ -598,16 +596,16 @@ function nonePassiveHandler(event) {
 
 #### Résultat
 
-Click the outer, middle, inner containers respectively to see how the options work.
+Cliquez sur les conteneurs `outer`, `middle` et `inner` respectivement pour voir comment les options fonctionnent.
 
-{{EmbedLiveSample('exemple_dutilisation_des_options', 600, 630)}}
+{{EmbedLiveSample("Exemple d'utilisation des options", 600, 630)}}
 
 ### Écouteur d'évènement avec plusieurs options
 
 Vous pouvez définir plusieurs options dans le paramètre `options`. Dans l'exemple suivant, nous en définissons deux&nbsp;:
 
-- `passive`, pour indiquer que le gestionnaire n'appellera pas {{DOMxRef("Event.preventDefault", "preventDefault()")}}
-- `once`, pour s'assurer que le gestionnaire d'évènement ne sera appelé qu'une seule fois.
+- `passive`, pour indiquer que le gestionnaire n'appelle pas {{DOMxRef("Event.preventDefault", "preventDefault()")}}
+- `once`, pour s'assurer que le gestionnaire d'évènement n'est appelé qu'une seule fois.
 
 #### HTML
 
@@ -656,7 +654,7 @@ addListener();
 
 #### Résultat
 
-{{EmbedLiveSample('écouteur_dévènement_avec_plusieurs_options')}}
+{{EmbedLiveSample("Écouteur d'évènement avec plusieurs options")}}
 
 ### Améliorer les performances de défilement avec les écouteurs passifs
 
@@ -749,7 +747,7 @@ L'effet est le suivant&nbsp;:
 - Au départ, l'écouteur est passif, donc le défilement du conteneur à la molette est immédiat.
 - Si vous décochez «&nbsp;passive&nbsp;» et essayez de faire défiler le conteneur avec la molette, il y a un délai notable avant le défilement, car le navigateur doit attendre la fin de l'écouteur long à s'exécuter.
 
-{{EmbedLiveSample("améliorer_les_performances_de_défilement_avec_les_écouteurs_passifs", 100, 300)}}
+{{EmbedLiveSample("Améliorer les performances de défilement avec les écouteurs passifs", 100, 300)}}
 
 ## Spécifications
 

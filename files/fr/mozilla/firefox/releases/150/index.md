@@ -3,7 +3,7 @@ title: Firefox 150 note de version pour les développeurs
 short-title: Firefox 150
 slug: Mozilla/Firefox/Releases/150
 l10n:
-  sourceCommit: 35be74828a1a06cdd0a1bf0a20c16d29b8adb11f
+  sourceCommit: e5cd1cab36e2fdcf5dfe28e10b0a7cb235354e62
 ---
 
 Cet article présente les informations concernant les changements de Firefox 150 qui concernent les développeur·euse·s.

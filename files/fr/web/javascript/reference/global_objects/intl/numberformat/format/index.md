@@ -3,7 +3,7 @@ title: "Intl.NumberFormat : méthode format()"
 short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: b5ee197a87ea18acbc4dd9544efa8c0e46253785
 ---
 
 La méthode **`format()`** des instances de {{JSxRef("Intl.NumberFormat")}} formate un nombre en fonction des [options de locale et de format](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#paramètres) de cet objet `Intl.NumberFormat`.
@@ -35,7 +35,7 @@ format(number)
 ### Paramètres
 
 - `number`
-  - : Un nombre ({{JSxRef("Number")}}), grand entier ({{JSxRef("BigInt")}}), ou chaîne de caractères, à formater. Les chaînes de caractères sont analysées de la même manière que dans la [conversion de nombre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre), sauf que `format()` utilisera la valeur exacte que représente la chaîne de caractères, évitant ainsi toute perte de précision lors de la conversion implicite en nombre.
+  - : Un nombre ({{JSxRef("Number")}}), grand entier ({{JSxRef("BigInt")}}), ou chaîne de caractères, à formater. Les chaînes de caractères sont analysées de la même manière que dans la [conversion de nombre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre), sauf que `format()` utilise la valeur exacte que représente la chaîne de caractères, évitant ainsi toute perte de précision lors de la conversion implicite en nombre.
 
 > [!NOTE]
 > Les anciennes versions de la spécification analysaient les chaînes de caractères comme des {{JSxRef("Number")}}.
@@ -51,14 +51,14 @@ Une chaîne de caractères représentant le `number` donné, formaté selon la l
 ## Description
 
 Les valeurs {{JSxRef("Number")}} en JavaScript souffrent d'une perte de précision si elles sont trop grandes ou trop petites, rendant la représentation textuelle inexacte.
-Si vous effectuez des calculs avec des entiers supérieurs à {{JSxRef("Number.MAX_SAFE_INTEGER")}}, vous devriez utiliser un {{JSxRef("BigInt")}} à la place, ce qui sera formaté correctement&nbsp;:
+Si vous effectuez des calculs avec des entiers supérieurs à {{JSxRef("Number.MAX_SAFE_INTEGER")}}, vous devez utiliser un {{JSxRef("BigInt")}} à la place, ce qui est formaté correctement&nbsp;:
 
 ```js
 new Intl.NumberFormat("en-US").format(1234567891234567891); // 1,234,567,891,234,568,000
 new Intl.NumberFormat("en-US").format(1234567891234567891n); // 1,234,567,891,234,567,891
 ```
 
-Vous pouvez également passer de très grandes chaînes de caractères pour les formater en tant que chaîne décimale à précision arbitraire (si vous effectuez des calculs sur les données, vous devrez toujours travailler avec `BigInt`)&nbsp;:
+Vous pouvez également passer de très grandes chaînes de caractères pour les formater en tant que chaîne de caractères décimale à précision arbitraire (si vous effectuez des calculs sur les données, vous devez toujours travailler avec `BigInt`)&nbsp;:
 
 ```js
 new Intl.NumberFormat("en-US").format("1234567891234567891"); // 1,234,567,891,234,567,891

@@ -3,7 +3,7 @@ title: Propriété CSS `font-variant`
 short-title: font-variant
 slug: Web/CSS/Reference/Properties/font-variant
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`font-variant`** permet de définir tous les paramètres typographiques pour une police de caractères.
@@ -31,7 +31,7 @@ font-variant: small-caps slashed-zero;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <p>La difficulté des gauffres</p>
+    <p>La difficulté des gaufres</p>
     <table>
       <tr>
         <td><span class="tabular">0O</span></td>
@@ -100,6 +100,8 @@ font-variant: unset;
 ```
 
 ### Valeurs
+
+Cette propriété se définit comme une liste de valeurs séparées par des espaces parmi les valeurs suivantes&nbsp;:
 
 - `normal`
   - : Définit une police normale. Chaque propriété individuelle a une valeur initiale de `normal`.

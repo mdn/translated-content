@@ -2,7 +2,7 @@
 title: Temporal.PlainDate
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate
 l10n:
-  sourceCommit: 9b86874b5762b52ce0055f58d561004d1a204ad5
+  sourceCommit: 88a6dfa8e29de9517b6f5d40b845ce8dc2dce218
 ---
 
 L'objet **`Temporal.PlainDate`** représente une date du calendrier (une date sans heure ni fuseau horaire)&nbsp;; par exemple, un évènement sur un calendrier qui se produit pendant toute la journée, quel que soit le fuseau horaire. Il est fondamentalement représenté comme une date du calendrier ISO 8601, avec des champs pour l'année, le mois et le jour, et un système de calendrier associé.
@@ -26,18 +26,18 @@ YYYY-MM-DD [u-ca=calendar_id]
 - `DD`
   - : Un nombre à deux chiffres de `01` à `31`. Les composants `YYYY`, `MM` et `DD` peuvent être séparés par `-` ou rien.
 - `[u-ca=calendar_id]` {{Optional_Inline}}
-  - : Remplacez `calendar_id` par le calendrier à utiliser. Voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge) pour une liste des types de calendriers couramment pris en charge. Par défaut, `[u-ca=iso8601]`. Peut avoir un _drapeau critique_ en préfixant la clé avec `!`&nbsp;: par exemple, `[!u-ca=iso8601]`. Ce drapeau indique généralement aux autres systèmes qu'il ne peut pas être ignoré s'ils ne le prennent pas en charge. L'analyseur `Temporal` générera une erreur si les annotations contiennent deux annotations de calendrier ou plus et que l'une d'elles est critique. Notez que le `YYYY-MM-DD` est toujours interprété comme une date du calendrier ISO 8601, puis converti en calendrier défini.
+  - : Remplacez `calendar_id` par le calendrier à utiliser. Voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge) pour une liste des types de calendriers couramment pris en charge. Par défaut, `[u-ca=iso8601]`. Peut avoir un _drapeau critique_ en préfixant la clé avec `!`&nbsp;: par exemple, `[!u-ca=iso8601]`. Ce drapeau indique généralement aux autres systèmes qu'il ne peut pas être ignoré s'ils ne le prennent pas en charge. L'analyseur `Temporal` génère une erreur si les annotations contiennent deux annotations de calendrier ou plus et que l'une d'elles est critique. Notez que le `YYYY-MM-DD` est toujours interprété comme une date du calendrier ISO 8601, puis converti en calendrier défini.
 
-Comme entrée, vous pouvez éventuellement inclure l'heure, le décalage et l'identifiant du fuseau horaire, dans le même format que [`PlainDateTime`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#format_rfc_9557), mais ils seront ignorés. Les autres annotations au format `[clé=valeur]` sont également ignorées et ne doivent pas avoir le drapeau critique.
+Comme entrée, vous pouvez éventuellement inclure l'heure, le décalage et l'identifiant du fuseau horaire, dans le même format que [`PlainDateTime`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#format_rfc_9557), mais ils sont ignorés. Les autres annotations au format `[clé=valeur]` sont également ignorées et ne doivent pas avoir le drapeau critique.
 
 Lors de la sérialisation, vous pouvez configurer l'affichage de l'identifiant du calendrier et l'ajout d'un drapeau critique pour celui-ci.
 
 ### Fixer les dates invalides
 
-Les méthodes {{JSxRef("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}, {{JSxRef("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}}, {{JSxRef("Temporal/PlainDate/add", "Temporal.PlainDate.prototype.add()")}}, {{JSxRef("Temporal/PlainDate/subtract", "Temporal.PlainDate.prototype.subtract()")}} et leurs homologues dans d'autres objets `Temporal`, permettent de construire des dates en utilisant des propriétés spécifiques au calendrier. Les composants de la date peuvent être hors de portée. Dans le calendrier ISO, il s'agit toujours d'un _dépassement_, comme le mois étant supérieur à 12 ou le jour étant supérieur au nombre de jours, et le corriger ne consisterait qu'à limiter la valeur à la valeur maximale autorisée. Dans d'autres calendriers, le cas invalide peut être plus complexe. Lors de l'utilisation de l'option `overflow: "constrain"`, les dates invalides sont corrigées pour devenir valides de la manière suivante&nbsp;:
+Les méthodes {{JSxRef("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}, {{JSxRef("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}}, {{JSxRef("Temporal/PlainDate/add", "Temporal.PlainDate.prototype.add()")}}, {{JSxRef("Temporal/PlainDate/subtract", "Temporal.PlainDate.prototype.subtract()")}} et leurs homologues dans d'autres objets `Temporal`, permettent de construire des dates en utilisant des propriétés spécifiques au calendrier. Les composants de la date peuvent être hors de portée. Dans le calendrier ISO, il s'agit toujours d'un _dépassement_, comme le mois étant supérieur à 12 ou le jour étant supérieur au nombre de jours, et le corriger ne consiste qu'à limiter la valeur à la valeur maximale autorisée. Dans d'autres calendriers, le cas invalide peut être plus complexe. Lors de l'utilisation de l'option `overflow: "constrain"`, les dates invalides sont corrigées pour devenir valides de la manière suivante&nbsp;:
 
 - Si le jour n'existe pas mais que le mois existe&nbsp;: choisissez le jour le plus proche dans le même mois. S'il y a deux dates également proches dans ce mois, choisissez la plus tardive.
-- Si le mois est un mois intercalaire qui n'existe pas dans l'année&nbsp;: choisissez une autre date selon les conventions culturelles des utilisateur·ice·s de ce calendrier. Cela se traduira généralement par le même jour dans le mois précédent ou suivant où ce mois tomberait normalement dans une année bissextile.
+- Si le mois est un mois intercalaire qui n'existe pas dans l'année&nbsp;: choisissez une autre date selon les conventions culturelles des utilisateur·ice·s de ce calendrier. Cela se traduit généralement par le même jour dans le mois précédent ou suivant où ce mois tombe normalement dans une année bissextile.
 - Si le mois n'existe pas dans l'année pour d'autres raisons&nbsp;: choisissez la date la plus proche qui est encore dans la même année. S'il y a deux dates également proches dans cette année, choisissez la plus tardive.
 - Si l'année entière n'existe pas&nbsp;: choisissez la date la plus proche dans une autre année. S'il y a deux dates également proches, choisissez la plus tardive.
 
@@ -51,7 +51,7 @@ Les méthodes {{JSxRef("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}
 - {{JSxRef("Temporal/PlainDate/compare", "Temporal.PlainDate.compare()")}}
   - : Retourne un nombre (-1, 0 ou 1) indiquant si la première date est antérieure, identique ou postérieure à la deuxième date. Équivaut à comparer les champs année, mois et jour des dates ISO 8601 sous-jacentes.
 - {{JSxRef("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}
-  - : Crée un nouvel objet `Temporal.PlainDate` à partir d'un autre objet `Temporal.PlainDate`, d'un objet avec des propriétés de date ou d'une chaîne au format [RFC 9557](#format_rfc_9557).
+  - : Crée un nouvel objet `Temporal.PlainDate` à partir d'un autre objet `Temporal.PlainDate`, d'un objet avec des propriétés de date ou d'une chaîne de caractères au format [RFC 9557](#format_rfc_9557).
 
 ## Propriétés d'instance
 
@@ -62,7 +62,7 @@ Ces propriétés sont définies sur `Temporal.PlainDate.prototype` et partagées
 - {{JSxRef("Object/constructor", "Temporal.PlainDate.prototype.constructor")}}
   - : La fonction constructeur qui a créé l'objet instance. Pour les instances de `Temporal.PlainDate`, la valeur initiale est le constructeur {{JSxRef("Temporal/PlainDate/PlainDate", "Temporal.PlainDate()")}}.
 - {{JSxRef("Temporal/PlainDate/day", "Temporal.PlainDate.prototype.day")}}
-  - : Retourne un entier positif représentant l'index du jour dans le mois de cette date, basé sur 1, ce qui correspond au numéro de jour que vous verriez sur un calendrier. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). Généralement commence à 1 et est continu, mais pas toujours.
+  - : Retourne un entier positif représentant l'index du jour dans le mois de cette date, basé sur 1, ce qui correspond au numéro de jour que vous voyez sur un calendrier. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). Généralement commence à 1 et est continu, mais pas toujours.
 - {{JSxRef("Temporal/PlainDate/dayOfWeek", "Temporal.PlainDate.prototype.dayOfWeek")}}
   - : Retourne un entier positif représentant l'index du jour dans la semaine de cette date, basé sur 1. Les jours de la semaine sont numérotés séquentiellement de `1` à {{JSxRef("Temporal/PlainDate/daysInWeek", "daysInWeek")}}, chaque numéro correspondant à son nom. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). 1 représente généralement le lundi dans le calendrier, même lorsque les locales utilisant le calendrier peuvent considérer un autre jour comme le premier jour de la semaine (voir {{JSxRef("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}}).
 - {{JSxRef("Temporal/PlainDate/dayOfYear", "Temporal.PlainDate.prototype.dayOfYear")}}
@@ -88,7 +88,7 @@ Ces propriétés sont définies sur `Temporal.PlainDate.prototype` et partagées
 - {{JSxRef("Temporal/PlainDate/weekOfYear", "Temporal.PlainDate.prototype.weekOfYear")}}
   - : Retourne un entier positif représentant l'index de la semaine dans l'année de cette date, basé sur 1, ou `undefined` si le calendrier n'a pas de système de semaine bien défini. La première semaine de l'année est `1`. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). Notez que pour ISO 8601, les premiers et derniers jours de l'année peuvent être attribués à la dernière semaine de l'année précédente ou à la première semaine de l'année suivante.
 - {{JSxRef("Temporal/PlainDate/year", "Temporal.PlainDate.prototype.year")}}
-  - : Retourne un entier représentant le nombre d'années de cette date par rapport au début d'une année d'époque spécifique au calendrier. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). Généralement, l'année 1 est soit la première année de la dernière ère, soit l'année ISO 8601 `0001`. Si l'époque est au milieu de l'année, cette année aura la même valeur avant et après la date de début de l'ère.
+  - : Retourne un entier représentant le nombre d'années de cette date par rapport au début d'une année d'époque spécifique au calendrier. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). Généralement, l'année 1 est soit la première année de la dernière ère, soit l'année ISO 8601 `0001`. Si l'époque est au milieu de l'année, cette année a la même valeur avant et après la date de début de l'ère.
 - {{JSxRef("Temporal/PlainDate/yearOfWeek", "Temporal.PlainDate.prototype.yearOfWeek")}}
   - : Retourne un entier représentant l'année à associer à l'index de la semaine de cette date, ou `undefined` si le calendrier n'a pas de système de semaine bien défini. Dépend du [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendriers). Généralement, c'est l'année de la date, mais pour ISO 8601, les premiers et derniers jours de l'année peuvent être attribués à la dernière semaine de l'année précédente ou à la première semaine de l'année suivante, ce qui fait que `yearOfWeek` peut différer de 1.
 - `Temporal.PlainDate.prototype[Symbol.toStringTag]`
@@ -111,15 +111,15 @@ Ces propriétés sont définies sur `Temporal.PlainDate.prototype` et partagées
 - {{JSxRef("Temporal/PlainDate/toPlainDateTime", "Temporal.PlainDate.prototype.toPlainDateTime()")}}
   - : Retourne un nouvel objet {{JSxRef("Temporal.PlainDateTime")}} représentant cette date et une heure fournie dans le même système de calendrier.
 - {{JSxRef("Temporal/PlainDate/toPlainMonthDay", "Temporal.PlainDate.prototype.toPlainMonthDay()")}}
-  - : Retourne un nouvel objet {{JSxRef("Temporal.PlainMonthDay")}} représentant le {{JSxRef("Temporal/PlainDate/monthCode", "monthCode")}} et le {{JSxRef("Temporal/PlainDate/day", "day")}} de cette date dans le même système de calendrier.
+  - : Retourne un nouvel objet {{JSxRef("Temporal.PlainMonthDay")}} représentant le code du mois ({{JSxRef("Temporal/PlainDate/monthCode", "monthCode")}}) et le jour ({{JSxRef("Temporal/PlainDate/day", "day")}}) de cette date dans le même système de calendrier.
 - {{JSxRef("Temporal/PlainDate/toPlainYearMonth", "Temporal.PlainDate.prototype.toPlainYearMonth()")}}
-  - : Retourne un nouvel objet {{JSxRef("Temporal.PlainYearMonth")}} représentant l'{{JSxRef("Temporal/PlainDate/year", "year")}} et le {{JSxRef("Temporal/PlainDate/month", "month")}} de cette date dans le même système de calendrier.
+  - : Retourne un nouvel objet {{JSxRef("Temporal.PlainYearMonth")}} représentant l'année ({{JSxRef("Temporal/PlainDate/year", "year")}}) et le mois ({{JSxRef("Temporal/PlainDate/month", "month")}}) de cette date dans le même système de calendrier.
 - {{JSxRef("Temporal/PlainDate/toString", "Temporal.PlainDate.prototype.toString()")}}
   - : Retourne une chaîne de caractères représentant cette date dans le [format RFC 9557](#format_rfc_9557).
 - {{JSxRef("Temporal/PlainDate/toZonedDateTime", "Temporal.PlainDate.prototype.toZonedDateTime()")}}
   - : Retourne un nouvel objet {{JSxRef("Temporal.ZonedDateTime")}} représentant cette date, une heure fournie et un fuseau horaire fourni, dans le même système de calendrier.
 - {{JSxRef("Temporal/PlainDate/until", "Temporal.PlainDate.prototype.until()")}}
-  - : Retourne un nouvel objet {{JSxRef("Temporal.Duration")}} représentant la durée entre cette date et une autre date (sous une forme convertible par {{JSxRef("Temporal/Instant/from", "Temporal.Instant.from()")}}). La durée est positive si l'autre date est après cette date, et négative si elle est avant.
+  - : Retourne un nouvel objet {{JSxRef("Temporal.Duration")}} représentant la durée entre cette date et une autre date (sous une forme convertible par {{JSxRef("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}). La durée est positive si l'autre date est après cette date, et négative si elle est avant.
 - {{JSxRef("Temporal/PlainDate/valueOf", "Temporal.PlainDate.prototype.valueOf()")}}
   - : Lève une {{JSxRef("TypeError")}}, ce qui empêche les instances de `Temporal.PlainDate` d'être [converties implicitement en primitives](/fr/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) lorsqu'elles sont utilisées dans des opérations arithmétiques ou de comparaison.
 - {{JSxRef("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}}

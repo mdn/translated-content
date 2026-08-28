@@ -2,7 +2,7 @@
 title: Quoi de neuf dans Deer Park Alpha
 slug: Mozilla/Firefox/Releases/1.5/What_s_new_in_1.5_alpha
 l10n:
-  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
+  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
 ---
 
 Cette page est basée en grande partie sur [https://www.squarefree.com/burningedg...eases/](https://www.squarefree.com/burningedge/releases/) (merci Jesse).
@@ -13,17 +13,17 @@ Cette page est basée en grande partie sur [https://www.squarefree.com/burninged
 
 - Les éléments avec `tabindex="-1"` doivent pouvoir recevoir la sélection
   - : Les éléments ayant un attribut tabIndex négatif peuvent désormais recevoir la sélection, même s'ils ne sont pas dans l'ordre de tabulation.
-- L'objet doit être soumis
-  - : Conformément à la spécification HTML4, les éléments `<object>` peuvent désormais être soumis dans un formulaire.
+- L'objet doit être envoyé
+  - : Conformément à la spécification HTML4, les éléments `<object>` peuvent désormais être envoyé dans un formulaire.
 
 ### CSS
 
 - Imbrication des guillemets CSS2
   - : À partir de cette version, la propriété CSS2 [`quotes`](/fr/docs/Web/CSS/Reference/Properties/quotes) est entièrement prise en charge, avec le bon guillemet (selon le niveau d'imbrication) utilisé pour `open-quote` et `close-quote`.
 - CSS3 {{CSSxRef(":only-child")}}
-  - : Ce sélecteur CSS3 permet de sélectionner un élément qui n'a pas d'autres éléments comme frères ou sœurs dans l'arbre DOM.
+  - : Ce sélecteur CSS3 permet de sélectionner un élément qui n'a pas d'autres éléments comme voisins dans l'arbre DOM.
 - Colonnes CSS3
-  - : Une implémentation expérimentale du projet de [mise en page multicolonne CSS3](https://drafts.csswg.org/css-multicol/) est proposée. Cela permet de réaliser facilement une présentation en colonnes de type journal.
+  - : Une implémentation expérimentale du projet de [mise en page multi-colonne CSS3](https://drafts.csswg.org/css-multicol/) est proposée. Cela permet de réaliser facilement une présentation en colonnes de type journal.
 - Propriétés CSS3 `overflow-x` et `overflow-y`
   - : Ces propriétés peuvent être utilisées pour contrôler le comportement de dépassement dans les directions horizontale et verticale de manière relativement indépendante. Par exemple, le dépassement horizontal peut être masqué tandis que le dépassement vertical peut être défilé.
 - Curseurs CSS3
@@ -69,7 +69,7 @@ Cette page est basée en grande partie sur [https://www.squarefree.com/burninged
 - Les URI sont toujours envoyées en UTF8
   - : Les URI sont désormais toujours envoyées au serveur en UTF8, quel que soit l'encodage de la page de liaison. Cela corrige les images et liens sur les sites avec des noms de fichiers non-ASCII.
 - Prise en charge de XForms
-  - : Le langage [XML Forms du W3C <sup>(angl.)</sup>](https://www.w3.org/MarkUp/Forms/) permet d'écrire des formulaires complexes en XML, et inclut des fonctionnalités que les formulaires HTML classiques n'ont pas, comme la validation côté client avec [XML Schema <sup>(angl.)</sup>](https://www.w3.org/XML/Schema) et la soumission/récupération XML. La prise en charge de XForms est disponible sous forme d'extension, voir [Page du projet Mozilla XForms <sup>(angl.)</sup>](https://www-archive.mozilla.org/projects/xforms/).
+  - : Le langage [XML Forms du W3C <sup>(angl.)</sup>](https://www.w3.org/MarkUp/Forms/) permet d'écrire des formulaires complexes en XML, et inclut des fonctionnalités que les formulaires HTML classiques n'ont pas, comme la validation côté client avec [XML Schema <sup>(angl.)</sup>](https://www.w3.org/XML/Schema) et l'envoi/la récupération XML. La prise en charge de XForms est disponible sous forme d'extension, voir [Page du projet Mozilla XForms <sup>(angl.)</sup>](https://www-archive.mozilla.org/projects/xforms/).
 
 ## Nouvelles fonctionnalités pour les développeur·euse·s d'extensions
 
@@ -94,8 +94,8 @@ Cette page est basée en grande partie sur [https://www.squarefree.com/burninged
 - Fenêtres translucides (Windows/Linux)
   - : Sous Windows et Linux, les fenêtres XUL avec un arrière-plan transparent sont désormais prises en charge. Cela permet de voir ce qui se trouve sous la fenêtre à travers l'arrière-plan de la fenêtre.
 
-- Ajout de jetons à la chaîne User-Agent
-  - : Il est désormais possible pour les applications, extensions et fournisseurs d'ajouter des jetons à la chaîne User-Agent (en utilisant les préférences par défaut) sans se remplacer mutuellement.
+- Ajout de jetons à la chaîne de caractères User-Agent
+  - : Il est désormais possible pour les applications, extensions et fournisseurs d'ajouter des jetons à la chaîne de caractères User-Agent (en utilisant les préférences par défaut) sans se remplacer mutuellement.
     Voir [documentation sur l'en-tête User-Agent](/fr/docs/Web/HTTP/Reference/Headers/User-Agent). [bogue Firefox 274928 <sup>(angl.)</sup>](https://bugzil.la/274928)
 
 - Registre chrome de l'ensemble d'outils
@@ -133,7 +133,7 @@ Cette page est basée en grande partie sur [https://www.squarefree.com/burninged
 - Paquet MSI de Firefox
   - : Le nouveau paquet d'installation MSI facilite l'installation distribuée et offre une plus grande flexibilité aux administrateur·ice·s réseau souhaitant déployer Firefox dans un environnement d'entreprise.
 - Prise en charge du répertoire «&nbsp;temp&nbsp;» du profil sur le système de fichiers local
-  - : Il est désormais possible de stocker le cache réseau (copies des pages web visitées) et le cache XUL de préchargement rapide (code d'interface utilisateur précompilé) sur un disque local, tout en conservant le reste des données du profil sur un lecteur réseau. Cela augmente les performances et réduit le trafic réseau pour les utilisateur·ice·s en environnement réseau.
+  - : Il est désormais possible de stocker le cache réseau (copies des pages web visitées) et le cache XUL de préchargement rapide (code d'interface utilisateur pré-compilé) sur un disque local, tout en conservant le reste des données du profil sur un lecteur réseau. Cela augmente les performances et réduit le trafic réseau pour les utilisateur·ice·s en environnement réseau.
 
 ### Autres
 

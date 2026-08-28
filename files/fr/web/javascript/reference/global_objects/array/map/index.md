@@ -3,7 +3,7 @@ title: "Array : méthode map()"
 short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 4df87a237b1ffa981254e5e3c97628f890ab1191
 ---
 
 La méthode **`map()`** des instances de {{JSxRef("Array")}} crée un nouveau tableau rempli avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.
@@ -98,7 +98,7 @@ Il est courant d'utiliser la fonction de rappel avec un seul argument (l'éléme
 ["1", "2", "3"].map(parseInt);
 ```
 
-On pourrait s'attendre à obtenir `[1, 2, 3]`, mais le résultat réel est `[1, NaN, NaN]`.
+On peut s'attendre à obtenir `[1, 2, 3]`, mais le résultat réel est `[1, NaN, NaN]`.
 
 {{JSxRef("parseInt")}} est souvent utilisée avec un argument, mais en accepte deux. Le premier est une expression et le second est la base. La fonction de rappel de `Array.prototype.map` reçoit 3 arguments&nbsp;: l'élément, l'indice et le tableau. Le troisième argument est ignoré par {{JSxRef("parseInt")}} — mais _pas_ le second&nbsp;! C'est la source de la confusion possible.
 
@@ -121,7 +121,7 @@ Vous pouvez aussi utiliser la fonction {{JSxRef("Number")}}, qui ne prend qu'un 
 ```js
 ["1", "2", "3"].map(Number); // [1, 2, 3]
 
-// Mais contrairement à parseInt(), Number() retournera aussi un flottant ou une notation exponentielle résolue :
+// Mais contrairement à parseInt(), Number() retourne aussi un flottant ou une notation exponentielle résolue :
 ["1.1", "2.2e2", "3e300"].map(Number); // [1.1, 220, 3e+300]
 
 // Pour comparaison, si on utilise parseInt() sur le tableau ci-dessus :
@@ -235,7 +235,7 @@ L'argument `array` n'est pas le tableau en cours de construction — il n'est pa
 
 ### Utiliser `map()` sur des tableaux creux
 
-Un tableau creux reste creux après `map()`. Les indices des cases vides restent vides dans le tableau retourné, et la fonction de rappel ne sera pas appelée pour elles.
+Un tableau creux reste creux après `map()`. Les indices des cases vides restent vides dans le tableau retourné, et la fonction de rappel n'est pas appelée pour elles.
 
 ```js
 console.log(
@@ -259,17 +259,17 @@ const objetSimilaireTableau = {
   0: 2,
   1: 3,
   2: 4,
-  3: 5, // ignoré par map() car length vaut 3
+  3: 5, // ignoré par map(), car length vaut 3
 };
 console.log(Array.prototype.map.call(objetSimilaireTableau, (x) => x ** 2));
 // [ 4, 9, 16 ]
 ```
 
-Cet exemple montre comment parcourir une collection d'objets collectés par `querySelectorAll`. Cela fonctionne car `querySelectorAll` retourne un `NodeList` (qui est une collection d'objets). Dans ce cas, on retourne toutes les valeurs des `option` sélectionnées à l'écran&nbsp;:
+Cet exemple montre comment parcourir une collection d'objets collectés par `querySelectorAll()`, en retournant un tableau contenant les valeurs de tous les éléments `option` sélectionnés. Comme `querySelectorAll()` retourne un `NodeList`, qui est un objet semblable à un tableau sans la méthode `map()`, nous utilisons `Array.prototype.map.call()`, en passant `elems` comme valeur de `this` et la fonction de rappel comme second argument.
 
 ```js
 const elems = document.querySelectorAll("select option:checked");
-const values = Array.prototype.map.call(elems, ({ value }) => value);
+const valeurs = Array.prototype.map.call(elems, ({ valeur }) => valeur);
 ```
 
 Vous pouvez aussi utiliser {{JSxRef("Array.from()")}} pour transformer `elems` en tableau, puis accéder à la méthode `map()`.

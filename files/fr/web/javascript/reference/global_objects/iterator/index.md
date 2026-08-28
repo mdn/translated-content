@@ -2,7 +2,7 @@
 title: Iterator
 slug: Web/JavaScript/Reference/Global_Objects/Iterator
 l10n:
-  sourceCommit: dd88a6eb2176fa31f5b744d8964efecf3f1f425b
+  sourceCommit: d43ba33e72afa135ce782e2c0ca19fe32a93bb13
 ---
 
 L'objet **`Iterator`** est un objet qui respecte le [protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_») en fournissant une méthode `next()` qui retourne un objet résultat d'itérateur. Tous les itérateurs intégrés héritent de la classe `Iterator`. La classe `Iterator` fournit une méthode [`[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) qui retourne l'objet itérateur lui-même, rendant l'itérateur également [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»). Elle propose aussi des méthodes utilitaires pour manipuler les itérateurs.
@@ -38,7 +38,7 @@ Tous ces objets prototype héritent de `Iterator.prototype`, qui fournit une mé
 > [!NOTE]
 > Ces méthodes sont des aides _d'itérateur_, et non des aides _d'itérable_, car la seule exigence pour qu'un objet soit itérable est la présence d'une méthode `[Symbol.iterator]()`. Il n'existe pas de prototype partagé sur lequel installer ces méthodes.
 
-La classe `Iterator` fournit elle-même certaines méthodes d'aide pour travailler avec les itérateurs. Par exemple, vous pourriez être tenté de faire ce qui suit&nbsp;:
+La classe `Iterator` fournit elle-même certaines méthodes d'aide pour travailler avec les itérateurs. Par exemple, vous pouvez être tenté de faire ce qui suit&nbsp;:
 
 ```js
 const nomDuDepot = new Map([
@@ -74,18 +74,20 @@ const troisPremiersChiffres = seq.find((n) => n >= 100);
 
 Vous ne pouvez pas convertir `seq` en tableau, car il est infini. À la place, vous pouvez utiliser la méthode `find()` de l'itérateur lui-même, qui itère `seq` uniquement jusqu'à ce qu'il trouve la première valeur qui satisfait la condition.
 
-Vous trouverez de nombreuses méthodes d'itérateur analogues aux méthodes de tableau, telles que&nbsp;:
+Vous trouvez de nombreuses méthodes d'itérateur analogues aux méthodes de tableau, telles que&nbsp;:
 
-| Méthode d'itérateur                        | Méthode de tableau                      |
-| ------------------------------------------ | --------------------------------------- |
-| {{JSxRef("Iterator.prototype.every()")}}   | {{JSxRef("Array.prototype.every()")}}   |
-| {{JSxRef("Iterator.prototype.filter()")}}  | {{JSxRef("Array.prototype.filter()")}}  |
-| {{JSxRef("Iterator.prototype.find()")}}    | {{JSxRef("Array.prototype.find()")}}    |
-| {{JSxRef("Iterator.prototype.flatMap()")}} | {{JSxRef("Array.prototype.flatMap()")}} |
-| {{JSxRef("Iterator.prototype.forEach()")}} | {{JSxRef("Array.prototype.forEach()")}} |
-| {{JSxRef("Iterator.prototype.map()")}}     | {{JSxRef("Array.prototype.map()")}}     |
-| {{JSxRef("Iterator.prototype.reduce()")}}  | {{JSxRef("Array.prototype.reduce()")}}  |
-| {{JSxRef("Iterator.prototype.some()")}}    | {{JSxRef("Array.prototype.some()")}}    |
+| Méthode d'itérateur                         | Méthode de tableau                       |
+| ------------------------------------------- | ---------------------------------------- |
+| {{JSxRef("Iterator.prototype.every()")}}    | {{JSxRef("Array.prototype.every()")}}    |
+| {{JSxRef("Iterator.prototype.filter()")}}   | {{JSxRef("Array.prototype.filter()")}}   |
+| {{JSxRef("Iterator.prototype.find()")}}     | {{JSxRef("Array.prototype.find()")}}     |
+| {{JSxRef("Iterator.prototype.flatMap()")}}  | {{JSxRef("Array.prototype.flatMap()")}}  |
+| {{JSxRef("Iterator.prototype.forEach()")}}  | {{JSxRef("Array.prototype.forEach()")}}  |
+| {{JSxRef("Iterator.prototype.includes()")}} | {{JSxRef("Array.prototype.includes()")}} |
+| {{JSxRef("Iterator.prototype.join()")}}     | {{JSxRef("Array.prototype.join()")}}     |
+| {{JSxRef("Iterator.prototype.map()")}}      | {{JSxRef("Array.prototype.map()")}}      |
+| {{JSxRef("Iterator.prototype.reduce()")}}   | {{JSxRef("Array.prototype.reduce()")}}   |
+| {{JSxRef("Iterator.prototype.some()")}}     | {{JSxRef("Array.prototype.some()")}}     |
 
 {{JSxRef("Iterator.prototype.drop()")}} et {{JSxRef("Iterator.prototype.take()")}} combinés sont quelque peu analogues à {{JSxRef("Array.prototype.slice()")}}.
 
@@ -94,10 +96,10 @@ Vous trouverez de nombreuses méthodes d'itérateur analogues aux méthodes de t
 > [!NOTE]
 > Les _objets d'aide à l'itérateur_ et les _méthodes d'aide à l'itérateur_ sont deux concepts différents. Un objet d'aide à l'itérateur est détectable lors de l'exécution, tandis qu'une «&nbsp;méthode d'aide à l'itérateur&nbsp;» est simplement le nom donné à un ensemble de méthodes de compréhension. Le terme _aide à l'itérateur_ peut désigner soit l'objet, soit la méthode, selon le contexte.
 
-Parmi les méthodes d'aide à l'itérateur, {{JSxRef("Iterator/filter", "filter()")}}, {{JSxRef("Iterator/flatMap", "flatMap()")}}, {{JSxRef("Iterator/map", "map()")}}, {{JSxRef("Iterator/drop", "drop()")}}, et {{JSxRef("Iterator/take", "take()")}} retournent un nouvel objet _Aide à l'itérateur_. L'aide à l'itérateur est également une instance de `Iterator`, ce qui rend ces méthodes d'aide chaînables. Tous les objets d'aide à l'itérateur héritent d'un objet prototype commun, qui implémente le protocole d'itérateur&nbsp;:
+Parmi les méthodes d'aide à l'itérateur, {{JSxRef("Iterator/filter", "filter()")}}, {{JSxRef("Iterator/flatMap", "flatMap()")}}, {{JSxRef("Iterator/map", "map()")}}, {{JSxRef("Iterator/drop", "drop()")}}, et {{JSxRef("Iterator/take", "take()")}} retournent un nouvel objet _Aide à l'itérateur_. L'aide à l'itérateur est également une instance de `Iterator`, ce qui rend ces méthodes d'aide qui peuvent être chaînées. Tous les objets d'aide à l'itérateur héritent d'un objet prototype commun, qui implémente le protocole d'itérateur&nbsp;:
 
 - `next()`
-  - : Appelle la méthode `next()` de l'itérateur sous-jacent, applique la méthode d'aide au résultat et renvoie le résultat.
+  - : Appelle la méthode `next()` de l'itérateur sous-jacent, applique la méthode d'aide au résultat et retourne le résultat.
 - `return()`
   - : Appelle la méthode `return()` de l'itérateur sous-jacent et retourne le résultat.
 
@@ -159,6 +161,8 @@ Ces propriétés sont définies sur `Iterator.prototype` et partagées par toute
 
 ## Méthodes d'instance
 
+- {{JSxRef("Iterator.prototype.chunks()")}} {{Experimental_Inline}}
+  - : Retourne un nouvel objet aide à l'itérateur qui divise les éléments de l'itérateur d'origine en morceaux de tableau consécutifs. Chaque fois que l'aide est itérée, elle obtient le nombre défini d'éléments de l'itérateur sous-jacent et les produit ensemble.
 - {{JSxRef("Iterator.prototype.drop()")}}
   - : Retourne un nouvel objet aide à l'itérateur qui ignore le nombre d'éléments donné au début de cet itérateur.
 - {{JSxRef("Iterator.prototype.every()")}}
@@ -171,6 +175,10 @@ Ces propriétés sont définies sur `Iterator.prototype` et partagées par toute
   - : Retourne un nouvel objet aide à l'itérateur qui prend chaque élément de l'itérateur d'origine, le passe dans une fonction de correspondance, et produit les éléments retournés par la fonction de correspondance (qui sont contenus dans un autre itérateur ou objet pouvant être parcouru).
 - {{JSxRef("Iterator.prototype.forEach()")}}
   - : Exécute une fonction fournie une fois pour chaque élément produit par l'itérateur.
+- {{JSxRef("Iterator.prototype.includes()")}} {{Experimental_Inline}}
+  - : Retourne `true` si un élément produit par l'itérateur est égal à la valeur donnée. Sinon, si l'itérateur est épuisé sans trouver un tel élément, il retourne `false`.
+- {{JSxRef("Iterator.prototype.join()")}} {{Experimental_Inline}}
+  - : Retourne une chaîne de caractères qui est la concaténation de tous les éléments produits par l'itérateur, séparés par des virgules ou une chaîne de caractères de séparateur définie.
 - {{JSxRef("Iterator.prototype.map()")}}
   - : Retourne un nouvel objet aide à l'itérateur qui produit les éléments de l'itérateur, chacun transformé par une fonction de correspondance.
 - {{JSxRef("Iterator.prototype.reduce()")}}
@@ -181,6 +189,8 @@ Ces propriétés sont définies sur `Iterator.prototype` et partagées par toute
   - : Retourne un nouvel objet aide à l'itérateur qui produit le nombre d'éléments donné dans cet itérateur puis se termine.
 - {{JSxRef("Iterator.prototype.toArray()")}}
   - : Crée une nouvelle instance de l'objet {{JSxRef("Array")}} remplie avec les éléments produits par l'itérateur.
+- {{JSxRef("Iterator.prototype.windows()")}} {{Experimental_Inline}}
+  - : Retourne un nouvel objet aide à l'itérateur qui produit une fenêtre glissante d'éléments. Chaque fois que l'aide est itérée, elle produit un tableau en supprimant le premier élément de l'itération précédente et en ajoutant le prochain élément de l'itérateur d'origine.
 - [`Iterator.prototype[Symbol.dispose]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.dispose)
   - : Appelle la méthode `return()` de `this`, si elle existe. Cela implémente le _protocole de libération_ et permet de le libérer lorsqu'il est utilisé avec {{JSxRef("Statements/using", "using")}} ou {{JSxRef("Statements/await_using", "await using")}}.
 - [`Iterator.prototype[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator)

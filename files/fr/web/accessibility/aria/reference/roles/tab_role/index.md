@@ -3,7 +3,7 @@ title: "ARIA : rôle tab"
 short-title: tab
 slug: Web/Accessibility/ARIA/Reference/Roles/tab_role
 l10n:
-  sourceCommit: 7ba6358a0ff684cc67c60b76d6d972722bbf0d18
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `tab` indique un élément interactif à l'intérieur d'un `tablist` qui, lorsqu'il est activé, affiche son `tabpanel` associé.
@@ -237,5 +237,5 @@ Quelles sont les propriétés associées, et dans quel ordre cet attribut ou cet
 ## Voir aussi
 
 - L'élément HTML {{HTMLElement("button")}}
-- La propriété [`KeyboardEvent.key`](/fr/docs/Web/API/KeyboardEvent/key)
+- La propriété API {{DOMxRef("KeyboardEvent.key")}}
 - [ARIA&nbsp;: rôle `tabpanel`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role)

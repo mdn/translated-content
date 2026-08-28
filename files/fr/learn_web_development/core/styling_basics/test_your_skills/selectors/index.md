@@ -3,7 +3,7 @@ title: "Testez vos compétences : Les sélecteurs"
 short-title: "Test : Les sélecteurs"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 l10n:
-  sourceCommit: a623d4459e2aa00d17dc0fd6b6bc44f56c589950
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}

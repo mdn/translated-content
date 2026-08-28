@@ -3,7 +3,7 @@ title: Propriété CSS `frame-sizing`
 short-title: frame-sizing
 slug: Web/CSS/Reference/Properties/frame-sizing
 l10n:
-  sourceCommit: 9cf3002bd29376c15d49df6fab2e6a264285abf6
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 {{SeeCompatTable}}
@@ -39,7 +39,7 @@ La valeur de la propriété `frame-sizing` est l'un des mots-clés suivants&nbsp
 - `content-height`
   - : La hauteur ({{CSSxRef("height")}}) de l'élément `<iframe>` est définie sur la hauteur de mise en page de son document intégré.
 - `content-inline-size`
-  - : La taille en ligne ({{CSSxRef("inline-size")}}) de l'élément `<iframe>` est définie sur la taille de mise en page de son document intégré dans la direction en ligne.
+  - : La taille en incise ({{CSSxRef("inline-size")}}) de l'élément `<iframe>` est définie sur la taille de mise en page de son document intégré dans la direction en incise.
 - `content-block-size`
   - : La taille de bloc ({{CSSxRef("block-size")}}) de l'élément `<iframe>` est définie sur la taille de mise en page de son document intégré dans la direction de bloc.
 
@@ -51,7 +51,7 @@ Pour permettre le redimensionnement réactif des éléments HTML {{HTMLElement("
 
 La propriété `frame-sizing` peut prendre les valeurs `content-width` ou `content-height` pour que la `width` ou la `height` de l'élément `<iframe>` adopte respectivement la largeur ou la hauteur de mise en page du document intégré.
 
-Il existe également des équivalents logiques — la propriété `frame-sizing` peut prendre les valeurs `content-inline-size` ou `content-block-size` pour que la `inline-size` ou la `block-size` de l'élément `<iframe>` adopte respectivement la taille en ligne ou la taille de bloc du document intégré. La direction de bloc ou en ligne est déterminée par le {{CSSxRef("writing-mode")}} de l'élément `<iframe>`, et non par celle du contenu du document intégré.
+Il existe également des équivalents logiques — la propriété `frame-sizing` peut prendre les valeurs `content-inline-size` ou `content-block-size` pour que la `inline-size` ou la `block-size` de l'élément `<iframe>` adopte respectivement la taille en incise ou la taille de bloc du document intégré. La direction de bloc ou en incise est déterminée par le {{CSSxRef("writing-mode")}} de l'élément `<iframe>`, et non par celle du contenu du document intégré.
 
 Pour redimensionner dynamiquement l'élément `<iframe>` lorsque le document intégré modifie sa taille de mise en page, vous pouvez appeler la méthode {{DOMxRef("Window.requestResize()")}} depuis le document intégré pour lui faire signaler une taille mise à jour.
 

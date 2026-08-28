@@ -3,10 +3,10 @@ title: "Document : méthode write()"
 short-title: write()
 slug: Web/API/Document/write
 l10n:
-  sourceCommit: 65cbd4ff030e6763d6868917137d728c3ec29288
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 > [!WARNING]
 > Utiliser la méthode `document.write()` est fortement déconseillé.
@@ -17,7 +17,7 @@ l10n:
 > > Cette méthode a un comportement très particulier.
 > > Dans certains cas, cette méthode peut affecter l'état de [l'analyseur HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/parsing.html#html-parser) pendant que l'analyseur fonctionne, ce qui entraîne un DOM qui ne correspond pas à la source du document (par exemple, si la chaîne de caractères écrite est la chaîne de caractères «&nbsp;`<plaintext>`&nbsp;» ou «&nbsp;`<!--`&nbsp;»).
 > > Dans d'autres cas, l'appel peut d'abord effacer la page actuelle, comme si {{DOMxRef("document.open()")}} avait été appelé.
-> > Dans d'autres cas encore, la méthode est simplement ignorée ou génère une exception. Les agents utilisateurs sont [expressément autorisés à éviter l'exécution des éléments `script` insérés via cette méthode <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/parsing.html#document-written-scripts-intervention).
+> > Dans d'autres cas encore, la méthode est simplement ignorée ou génère une exception. Les agents utilisateurs sont [expressément autorisés à éviter l'exécution des éléments `script` insérés avec cette méthode <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/parsing.html#document-written-scripts-intervention).
 > > Et pour aggraver les choses, le comportement exact de cette méthode peut dans certains cas dépendre de la latence du réseau, ce qui peut entraîner des échecs très difficiles à déboguer.
 > > Pour toutes ces raisons, l'utilisation de cette méthode est fortement déconseillée.
 
@@ -72,7 +72,7 @@ L'exception est que si l'appel `document.write()` est intégré dans une balise 
 C'est le cas si l'on ouvre un fichier local avec l'extension «&nbsp;.xhtml&nbsp;» ou pour tout document servi avec le type MIME `application/xhtml+xml`.
 Plus d'informations sont disponibles dans la [FAQ XHTML du W3C <sup>(angl.)</sup>](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
-L'utilisation de `document.write()` dans les scripts [différés](/fr/docs/Web/HTML/Reference/Elements/script#defer) ou [asynchrones](/fr/docs/Web/HTML/Reference/Elements/script#async) sera ignorée et vous obtiendrez dans la console d'erreurs un message du type «&nbsp;Un appel à `document.write()` depuis un script externe chargé de manière asynchrone a été ignoré&nbsp;».
+L'utilisation de `document.write()` dans les scripts [différés](/fr/docs/Web/HTML/Reference/Elements/script#defer) ou [asynchrones](/fr/docs/Web/HTML/Reference/Elements/script#async) est ignorée et vous obtiendrez dans la console d'erreurs un message du type «&nbsp;Un appel à `document.write()` depuis un script externe chargé de manière asynchrone a été ignoré&nbsp;».
 
 Dans Edge uniquement, appeler `document.write()` plus d'une fois dans un {{HTMLElement("iframe")}} provoque l'erreur «&nbsp;SCRIPT70: Permission denied&nbsp; ».
 

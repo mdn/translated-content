@@ -1,11 +1,10 @@
 ---
-title: device-aspect-ratio
+title: CSS `device-aspect-ratio` メディア特性
+short-title: device-aspect-ratio
 slug: Web/CSS/Reference/At-rules/@media/device-aspect-ratio
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{deprecated_header}}
 
 > [!NOTE]
 > ビューポートの{{glossary("aspect ratio", "アスペクト比")}}を問い合わせる場合は、代わりに [`aspect-ratio`](/ja/docs/Web/CSS/Reference/At-rules/@media/aspect-ratio) メディア特性を使用してください。

@@ -12,16 +12,16 @@ La méthode statique **`Math.ceil()`** arrondit toujours vers le haut et retourn
 
 ```js interactive-example
 console.log(Math.ceil(0.95));
-// Sortie attendue : 1
+// Résultat attendu : 1
 
 console.log(Math.ceil(4));
-// Sortie attendue : 4
+// Résultat attendu : 4
 
 console.log(Math.ceil(7.004));
-// Sortie attendue : 8
+// Résultat attendu : 8
 
 console.log(Math.ceil(-7.004));
-// Sortie attendue : -7
+// Résultat attendu : -7
 ```
 
 ## Syntaxe

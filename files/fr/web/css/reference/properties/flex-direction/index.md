@@ -3,7 +3,7 @@ title: Propriété CSS `flex-direction`
 short-title: flex-direction
 slug: Web/CSS/Reference/Properties/flex-direction
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c965bd5938085b2dab7d19734adbe3db0914ba5d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`flex-direction`** définit la façon dont les éléments flexibles sont placés dans le conteneur flexible, en définissant l'axe principal et la direction (normale ou inversée).
@@ -51,21 +51,13 @@ flex-direction: column-reverse;
 }
 ```
 
-On notera que les valeurs `row` et `row-reverse` sont impactées par la direction du conteneur. Si [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir) vaut `ltr`, `row` représente l'axe horizontal allant de la gauche vers la droite et `row-reverse` représente le même axe allant de la droite vers la gauche. Si `dir` vaut `rtl`, `row` correspondra à l'axe horizontal orienté de la droite vers la gauche et `row-reverse` de la gauche vers la droite.
-
 ## Syntaxe
 
 ```css
-/* La direction suit une ligne */
+/* Valeurs avec un mot-clé */
 flex-direction: row;
-
-/* Semblable à <row> mais dans la direction opposée */
 flex-direction: row-reverse;
-
-/* Les lignes de texte sont empilées */
 flex-direction: column;
-
-/* Semblable à <column> mais dans la direction opposée */
 flex-direction: column-reverse;
 
 /* Valeurs globales */
@@ -78,25 +70,40 @@ flex-direction: unset;
 
 ### Valeurs
 
-Les valeurs suivantes sont acceptées&nbsp;:
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `row`
-  - : L'axe principal du conteneur flexible suit la direction du texte. Les points **main-start** et **main-end** vont dans la même direction que le contenu.
+  - : Définit l'axe principal du conteneur flex pour qu'il soit le même que la direction du texte. C'est la valeur par défaut.
 - `row-reverse`
-  - : L'axe principal du conteneur flexible suit la direction du texte. Les points **main-start** et **main-end** vont dans la direction opposée au contenu.
+  - : Se comporte de la même manière que `row` mais définit que la direction du contenu est inversée, le premier élément étant placé au bord de fin en incise.
 - `column`
-  - : L'axe principal du conteneur flexible suit l'axe de bloc (perpendiculaire à la direction du texte). Les points **main-start** et **main-end** correspondent aux points **before** et **after** de {{CSSxRef("writing-mode")}}.
+  - : Définit l'axe principal du conteneur flexible comme étant identique à l'axe de bloc.
 - `column-reverse`
-  - : Se comporte comme `column` mais **main-start** et **main-end** sont échangés.
+  - : Se comporte de la même manière que `column`, mais définit un sens de contenu inversé, le premier élément étant placé au bord de fin de bloc.
+
+## Description
+
+La propriété `flex-direction` permet de définir la manière dont les éléments flexibles sont placés dans un conteneur flexible, en définissant l'axe principal du conteneur et la direction des éléments flexibles. Cette propriété s'applique uniquement aux éléments conteneurs dont la propriété {{CSSxRef("display")}} est définie sur `flex` ou `inline-flex`. La propriété `flex-direction`, associée à la propriété {{CSSxRef("flex-wrap")}}, doit être définie à l'aide de la forme raccourcie {{CSSxRef("flex-flow")}}.
+
+Lorsqu'elle est définie sur un conteneur flexible, la propriété `flex-direction` définit si les éléments flexibles sont disposés dans la même direction ou perpendiculairement à la direction du texte, et si les éléments sont disposés normalement ou inversés.
+
+La valeur par défaut est `row`. Par défaut, ou lorsque `row` est explicitement défini, l'axe principal du conteneur flexible est défini comme étant le même que la direction du texte. Le premier élément flexible dans l'ordre du DOM est placé aux bords de début en incise et de début de bloc. Les éléments supplémentaires sont placés au bord de fin en incise de l'élément précédent. Les lignes supplémentaires, si le conteneur est défini pour s'enrouler avec `flex-wrap: wrap`, sont ajoutées au bord de fin de bloc. Les points **main-start** et **main-end** sont les mêmes que la direction du contenu, main-start étant le bord de début en incise et main-end étant le bord de fin en incise, et cross-start et cross-end étant respectivement les bords de début et de fin de bloc.
+
+La valeur `row-reverse` est utilisée pour changer la direction en incise, se comportant comme `row`, mais inversée. Le premier élément est placé aux bords de fin en incise et de début de bloc, les éléments flexibles suivants étant placés au bord de début en incise de l'élément précédent, et les lignes supplémentaires ajoutées au bord de fin de bloc. Les points main-start et main-end sont les mêmes que les bords de fin en incise et de début en incise du mode d'écriture, respectivement, et cross-start et cross-end sont respectivement les bords de début et de fin de bloc.
+
+Lorsque `flex-direction` est défini sur `column`, l'axe principal est l'axe de bloc. Comme pour `row`, le premier élément est placé aux bords de début en incise et de début de bloc, mais les éléments supplémentaires sont placés au bord de fin de bloc de l'élément précédent plutôt qu'au bord en incise. Si le conteneur est défini pour s'enrouler, des colonnes supplémentaires sont ajoutées au bord de fin en incise. Les points **main-start** et **main-end** sont basés sur la direction de bloc du mode d'écriture, main-start étant le bord de début de bloc et main-end étant le bord de fin de bloc, et cross-start et cross-end étant respectivement les bords de début et de fin en incise.
+
+Avec `column-reverse`, l'axe principal est l'axe de bloc, mais en commençant au bord de fin de bloc. Le premier élément est placé aux bords de début en incise et de fin de bloc, les éléments suivants étant placés au bord de début de bloc de l'élément précédent. Si le conteneur est défini pour s'enrouler, des colonnes supplémentaires sont ajoutées au bord de fin en incise. Les points **main-start** et **main-end** sont basés sur la direction de bloc du mode d'écriture, main-start étant le bord de fin de bloc et main-end étant le bord de début de bloc, et cross-start et cross-end étant respectivement les bords de début et de fin en incise.
+
+Les valeurs `row` et `row-reverse` sont affectées par la direction du conteneur flexible. Si son attribut [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir) est `ltr`, `row` représente l'axe horizontal orienté de la gauche vers la droite, et `row-reverse` de la droite vers la gauche&nbsp;; si l'attribut `dir` est `rtl`, `row` représente l'axe orienté de la droite vers la gauche, et `row-reverse` de la gauche vers la droite.
 
 ## Accessibilité
 
-Lorsqu'on utilise `flex-direction` avec les valeurs `row-reverse` ou `column-reverse`, on crée une déconnexion entre la présentation visuelle du contenu et l'ordre du DOM. Cela aura un impact négatif pour les utilisateurs qui naviguent à l'aide d'outils d'assistance tels que les les lecteurs d'écran. Si l'ordre visuel est important, les utilisateurs de lecteurs d'écran n'auront pas accès à l'ordre correct pour la lecture.
+Lorsqu'on utilise `flex-direction` avec les valeurs `row-reverse` ou `column-reverse`, on crée une déconnexion entre la présentation visuelle du contenu et l'ordre du DOM. Cela a un impact négatif sur l'expérience des utilisateur·ice·s malvoyant·e·s qui naviguent sur la page à l'aide de technologies d'assistance telles qu'un lecteur d'écran. Si l'ordre visuel est important, les utilisateur·ice·s de lecteurs d'écran n'ont pas accès à l'ordre correct pour la lecture.
 
-- [Les boîtes flexibles et la déconnexion par rapport à la navigation au clavier, Tink <sup>(angl.)</sup>](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [L'importance de l'ordre de la source, Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [Comprendre les règles 1.3 du WCAG sur MDN](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.3_—_créer_du_contenu_pouvant_être_présenté_de_différentes_façons)
-- [Comprendre les critères de réussite 1.3.2 WCAG 2.0, W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
+- [L'importance de l'ordre de la source <sup>(angl.)</sup>](https://adrianroselli.com/2015/09/source-order-matters.html) par Adrian Roselli (2015)
+- [Les boîtes flexibles et la déconnexion par rapport à la navigation au clavier <sup>(angl.)</sup>](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/) par Léonie Watson (2016)
+- [Comprendre la norme SC 1.3.2&nbsp;: Séquence significative <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence) sur WCAG 2.2 (2023)
 
 ## Définition formelle
 
@@ -177,6 +184,9 @@ Lorsqu'on utilise `flex-direction` avec les valeurs `row-reverse` ou `column-rev
 
 ## Voir aussi
 
-- La propriété abrégée CSS {{CSSxRef("flex-flow")}} pour les propriétés CSS `flex-direction` et {{CSSxRef("flex-wrap")}}.
+- La propriété raccourcie {{CSSxRef("flex-flow")}}
+- La propriété {{CSSxRef("flex-wrap")}}
+- La propriété {{CSSxRef("gap")}}
 - [Les concepts de base des boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - [Ordonner les éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
+- Le module [de modèle de boîte flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)

@@ -2,7 +2,7 @@
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 l10n:
-  sourceCommit: 00c3b9fb6ead031e43863460add87321f262696c
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 Le type **`Object`** représente l'un des [types de données de JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures). Il est utilisé pour stocker diverses collections à clés et des entités plus complexes. Les objets peuvent être créés en utilisant le constructeur {{JSxRef("Object/Object", "Object()")}} ou la [syntaxe d'initialisation / littérale d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer).
@@ -11,13 +11,13 @@ Le type **`Object`** représente l'un des [types de données de JavaScript](/fr/
 
 Presque tous les [objets](/fr/docs/Web/JavaScript/Guide/Data_structures#objects) en JavaScript sont des instances de `Object`&nbsp;; un objet typique hérite de propriétés (y compris des méthodes) de `Object.prototype`, bien que ces propriétés puissent être masquées (c'est-à-dire remplacées). Les seuls objets qui n'héritent pas de `Object.prototype` sont ceux avec un [prototype `null`](#objets_avec_prototype_null), ou qui en descendent.
 
-Les modifications apportées à l'objet `Object.prototype` sont visibles par **tous** les objets via la chaîne de prototypes, sauf si les propriétés et méthodes soumises à ces modifications sont remplacées ailleurs dans la chaîne de prototypes. Cela fournit un mécanisme très puissant, bien que [potentiellement dangereux](/fr/docs/Web/Security/Attacks/Prototype_pollution), pour remplacer ou étendre le comportement des objets. Pour plus de sécurité, `Object.prototype` est le seul objet du langage JavaScript de base qui possède un [prototype immuable](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#description) — le prototype de `Object.prototype` est toujours `null` et ne peut pas être modifié.
+Les modifications apportées à l'objet `Object.prototype` sont visibles par **tous** les objets avec la chaîne de prototypes, sauf si les propriétés et méthodes envoyées à ces modifications sont remplacées ailleurs dans la chaîne de prototypes. Cela fournit un mécanisme très puissant, bien que [potentiellement dangereux](/fr/docs/Web/Security/Attacks/Prototype_pollution), pour remplacer ou étendre le comportement des objets. Pour plus de sécurité, `Object.prototype` est le seul objet du langage JavaScript de base qui possède un [prototype immuable](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#description) — le prototype de `Object.prototype` est toujours `null` et ne peut pas être modifié.
 
-### Propriétés de prototype d'`Object`
+### Propriétés de prototype de `Object`
 
-Vous devez éviter d'appeler directement les méthodes de `Object.prototype` à partir de l'instance, en particulier celles qui ne sont pas destinées à être polymorphes (c'est-à-dire que seul son comportement initial a du sens et aucun objet descendant ne pourrait le remplacer de manière significative). Tous les objets descendant de `Object.prototype` peuvent définir une propriété propre personnalisée qui porte le même nom, mais avec une sémantique entièrement différente de ce que vous attendez. De plus, ces propriétés ne sont pas héritées par les [objets avec prototype `null`](#objets_avec_prototype_null). Tous les utilitaires JavaScript modernes pour travailler avec des objets sont [statiques](#méthodes_statiques). Plus précisément&nbsp;:
+Vous devez éviter d'appeler directement les méthodes de `Object.prototype` à partir de l'instance, en particulier celles qui ne sont pas destinées à être polymorphes (c'est-à-dire que seul son comportement initial a du sens et aucun objet descendant ne peut le remplacer de manière significative). Tous les objets descendant de `Object.prototype` peuvent définir une propriété propre personnalisée qui porte le même nom, mais avec une sémantique entièrement différente de ce que vous attendez. De plus, ces propriétés ne sont pas héritées par les [objets avec prototype `null`](#objets_avec_prototype_null). Tous les utilitaires JavaScript modernes pour travailler avec des objets sont [statiques](#méthodes_statiques). Plus précisément&nbsp;:
 
-- [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString), et [`toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) existent pour être polymorphes et vous devez vous attendre à ce que l'objet définisse sa propre implémentation avec des comportements sensibles, de sorte que vous pouvez les appeler comme des méthodes d'instance. Cependant, `valueOf()` et `toString()` sont généralement appelées implicitement via [la conversion de type](/fr/docs/Web/JavaScript/Guide/Data_structures#coercion_de_type) et vous n'avez pas besoin de les appeler vous-même dans votre code.
+- [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString), et [`toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) existent pour être polymorphes et vous devez vous attendre à ce que l'objet définisse sa propre implémentation avec des comportements sensibles, de sorte que vous pouvez les appeler comme des méthodes d'instance. Cependant, `valueOf()` et `toString()` sont généralement appelées implicitement avec [la conversion de type](/fr/docs/Web/JavaScript/Guide/Data_structures#coercion_de_type) et vous n'avez pas besoin de les appeler vous-même dans votre code.
 - [`__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), et [`__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) sont dépréciées et ne doivent pas être utilisées. Utilisez plutôt les alternatives statiques {{JSxRef("Object.defineProperty()")}} et {{JSxRef("Object.getOwnPropertyDescriptor()")}}.
 - La propriété [`__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) est dépréciée et ne doit pas être utilisée. Les alternatives {{JSxRef("Object.getPrototypeOf()")}} et {{JSxRef("Object.setPrototypeOf()")}} sont des méthodes statiques.
 - Les méthodes [`propertyIsEnumerable()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) et [`hasOwnProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) peuvent être remplacées respectivement par les méthodes statiques {{JSxRef("Object.getOwnPropertyDescriptor()")}} et {{JSxRef("Object.hasOwn()")}}.
@@ -29,7 +29,7 @@ Au cas où une méthode statique sémantiquement équivalente n'existe pas, ou s
 const obj = {
   foo: 1,
   // Vous ne devez pas définir une telle méthode sur votre propre objet,
-  // mais vous pourriez ne pas être capable d'empêcher cela si
+  // mais vous pouvez ne pas être capable d'empêcher cela si
   // vous recevez l'objet d'une source externe
   propertyIsEnumerable() {
     return false;
@@ -68,7 +68,7 @@ alert(normalObj); // affiche [object Object]
 alert(nullProtoObj); // lève une erreur : Cannot convert object to primitive value
 ```
 
-D'autres méthodes échoueront également.
+D'autres méthodes échouent également.
 
 ```js
 normalObj.valueOf(); // affiche {}
@@ -94,7 +94,7 @@ Contrairement aux objets normaux, dans lesquels `toString()` se trouve sur le pr
 
 Vous pouvez aussi revenir à un objet ordinaire depuis un objet avec prototype null en utilisant [`Object.setPrototypeOf(nullProtoObj, Object.prototype)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf).
 
-En pratique, les objets avec prototype `null` sont généralement utilisés comme substitut bon marché pour les [cartes (<i lang="en">maps</i>)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map). La présence de propriétés `Object.prototype` causera quelques bogues&nbsp;:
+En pratique, les objets avec prototype `null` sont généralement utilisés comme substitut bon marché pour les [tableaux associatifs (<i lang="en">maps</i>)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map). La présence de propriétés `Object.prototype` cause quelques bogues&nbsp;:
 
 ```js
 const ages = { alice: 18, bob: 27 };
@@ -125,7 +125,7 @@ getAge("toString"); // undefined
 
 Dans un tel cas, l'ajout de toute méthode doit être fait prudemment, car elles peuvent être confondues avec les autres paires clé-valeur stockées en tant que données.
 
-Faire en sorte que votre objet n'hérite pas de `Object.prototype` prévient aussi les [attaques par pollution de prototype](/fr/docs/Web/Security/Attacks/Prototype_pollution). Si un script malveillant ajoute une propriété à `Object.prototype`, elle sera accessible sur chaque objet de votre programme, sauf sur les objets qui ont un prototype null.
+Faire en sorte que votre objet n'hérite pas de `Object.prototype` prévient aussi les [attaques par pollution de prototype](/fr/docs/Web/Security/Attacks/Prototype_pollution). Si un script malveillant ajoute une propriété à `Object.prototype`, elle est accessible sur chaque objet de votre programme, sauf sur les objets qui ont un prototype null.
 
 ```js
 const user = {};
@@ -143,7 +143,7 @@ JavaScript a aussi des API intégrées qui produisent des objets avec prototype 
 
 - La valeur de retour de {{JSxRef("Object.groupBy()")}}
 - Les propriétés `groups` et `indices.groups` du résultat de {{JSxRef("RegExp.prototype.exec()")}}
-- [`Array.prototype[Symbol.unscopables]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables) (tous les objets `[Symbol.unscopables]` devraient avoir un prototype `null`)
+- [`Array.prototype[Symbol.unscopables]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables) (tous les objets `[Symbol.unscopables]` doivent avoir un prototype `null`)
 - [`import.meta`](/fr/docs/Web/JavaScript/Reference/Operators/import.meta)
 - Les objets d'espace de noms de module, obtenus via [`import * as ns from "module";`](/fr/docs/Web/JavaScript/Reference/Statements/import#namespace_import) ou [`import()`](/fr/docs/Web/JavaScript/Reference/Operators/import)
 
@@ -168,7 +168,7 @@ Les endroits qui utilisent la coercition d'objet incluent&nbsp;:
 - La valeur `this` des méthodes {{JSxRef("Array")}}.
 - Les paramètres des méthodes `Object` telles que {{JSxRef("Object.keys()")}}.
 - L'encapsulation automatique quand on accède à une propriété sur une valeur primitive, puisque les primitives n'ont pas de propriétés.
-- La valeur [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) quand on appelle une fonction non-stricte. Les primitives sont encapsulées tandis que `null` et `undefined` sont remplacés par l'[objet global](/fr/docs/Glossary/Global_object).
+- La valeur [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) quand on appelle une fonction non-stricte. Les primitives sont encapsulées tandis que `null` et `undefined` sont remplacés par [l'objet natif](/fr/docs/Glossary/Global_object).
 
 Contrairement à la [conversion en primitives](/fr/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion), le processus de coercition d'objet lui-même n'est observable en aucune façon, puisqu'il n'invoque pas de code personnalisé comme les méthodes `toString` ou `valueOf`.
 
@@ -188,7 +188,7 @@ Contrairement à la [conversion en primitives](/fr/docs/Web/JavaScript/Guide/Dat
 - {{JSxRef("Object.defineProperty()")}}
   - : Ajoute à un objet la propriété nommée décrite par un descripteur donné.
 - {{JSxRef("Object.entries()")}}
-  - : Retourne un tableau contenant toutes les paires `[clé, valeur]` des propriétés de chaîne énumérables **propres** d'un objet donné.
+  - : Retourne un tableau contenant toutes les paires `[clé, valeur]` des propriétés de chaîne de caractères énumérables **propres** d'un objet donné.
 - {{JSxRef("Object.freeze()")}}
   - : Gèle un objet. Le code tiers ne peut pas supprimer ou modifier ses propriétés.
 - {{JSxRef("Object.fromEntries()")}}
@@ -204,7 +204,7 @@ Contrairement à la [conversion en primitives](/fr/docs/Web/JavaScript/Guide/Dat
 - {{JSxRef("Object.getPrototypeOf()")}}
   - : Retourne le prototype (la propriété interne `[[Prototype]]`) de l'objet défini.
 - {{JSxRef("Object.groupBy()")}}
-  - : Regroupe les éléments d'un itérable donné selon les valeurs de chaîne retournées par une fonction de rappel fournie. L'objet retourné a des propriétés séparées pour chaque groupe, contenant des tableaux avec les éléments du groupe.
+  - : Regroupe les éléments d'un itérable donné selon les valeurs de chaîne de caractères retournées par une fonction de rappel fournie. L'objet retourné a des propriétés séparées pour chaque groupe, contenant des tableaux avec les éléments du groupe.
 - {{JSxRef("Object.hasOwn()")}}
   - : Retourne `true` si l'objet défini possède la propriété indiquée comme sa propriété _propre_, ou `false` si la propriété est héritée ou n'existe pas.
 - {{JSxRef("Object.is()")}}
@@ -216,7 +216,7 @@ Contrairement à la [conversion en primitives](/fr/docs/Web/JavaScript/Guide/Dat
 - {{JSxRef("Object.isSealed()")}}
   - : Détermine si un objet est scellé.
 - {{JSxRef("Object.keys()")}}
-  - : Retourne un tableau contenant les noms de toutes les propriétés de chaîne énumérables **propres** de l'objet donné.
+  - : Retourne un tableau contenant les noms de toutes les propriétés de chaîne de caractères énumérables **propres** de l'objet donné.
 - {{JSxRef("Object.preventExtensions()")}}
   - : Empêche toute extension d'un objet.
 - {{JSxRef("Object.seal()")}}
@@ -224,16 +224,16 @@ Contrairement à la [conversion en primitives](/fr/docs/Web/JavaScript/Guide/Dat
 - {{JSxRef("Object.setPrototypeOf()")}}
   - : Définit le prototype de l'objet (sa propriété interne `[[Prototype]]`).
 - {{JSxRef("Object.values()")}}
-  - : Retourne un tableau contenant les valeurs qui correspondent à toutes les propriétés de chaîne énumérables **propres** d'un objet donné.
+  - : Retourne un tableau contenant les valeurs qui correspondent à toutes les propriétés de chaîne de caractères énumérables **propres** d'un objet donné.
 
 ## Propriétés d'instance
 
-Ces propriétés sont définies sur `Object.prototype` et partagées par tous les instances d'`Object`.
+Ces propriétés sont définies sur `Object.prototype` et partagées par toutes les instances d'un `Object`.
 
 - [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{Deprecated_Inline}}
   - : Pointe vers l'objet qui a été utilisé comme prototype quand l'objet a été instancié.
 - {{JSxRef("Object.prototype.constructor")}}
-  - : La fonction constructeur qui a créé l'objet instance. Pour les instances d'`Object` ordinaires, la valeur initiale est le constructeur {{JSxRef("Object/Object", "Object")}}. Les instances d'autres constructeurs héritent chacune de la propriété `constructor` de l'objet `Constructor.prototype` respectif.
+  - : La fonction constructeur qui a créé l'objet instance. Pour les instances d'un `Object` ordinaires, la valeur initiale est le constructeur {{JSxRef("Object/Object", "Object")}}. Les instances d'autres constructeurs héritent chacune de la propriété `constructor` de l'objet `Constructor.prototype` respectif.
 
 ## Méthodes d'instance
 
@@ -246,7 +246,7 @@ Ces propriétés sont définies sur `Object.prototype` et partagées par tous le
 - [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) {{Deprecated_Inline}}
   - : Retourne la fonction liée comme mutateur à la propriété définie.
 - {{JSxRef("Object.prototype.hasOwnProperty()")}}
-  - : Retourne un booléen indiquant si un objet contient la propriété définie comme propriété directe de cet objet et non héritée via la chaîne de prototypes.
+  - : Retourne un booléen indiquant si un objet contient la propriété définie comme propriété directe de cet objet et non héritée avec la chaîne de prototypes.
 - {{JSxRef("Object.prototype.isPrototypeOf()")}}
   - : Retourne un booléen indiquant si l'objet sur lequel cette méthode est appelée est dans la chaîne de prototypes de l'objet défini.
 - {{JSxRef("Object.prototype.propertyIsEnumerable()")}}
@@ -254,7 +254,7 @@ Ces propriétés sont définies sur `Object.prototype` et partagées par tous le
 - {{JSxRef("Object.prototype.toLocaleString()")}}
   - : Appelle {{JSxRef("Object/toString", "toString()")}}.
 - {{JSxRef("Object.prototype.toString()")}}
-  - : Returns a string representation of the object.
+  - : Retourne une représentation sous forme de chaîne de caractères de l'objet.
 - {{JSxRef("Object.prototype.valueOf()")}}
   - : Retourne la valeur primitive de l'objet défini.
 
@@ -287,7 +287,7 @@ const o2 = new Object(1n);
 
 ### Prototypes d'objets
 
-Quand on modifie le comportement de méthodes `Object.prototype` existantes, envisagez d'injecter du code en enveloppant votre extension avant ou après la logique existante. Par exemple, ce code (non testé) exécutera conditionnellement la logique personnalisée avant l'exécution de la logique intégrée ou de l'extension de quelqu'un d'autre.
+Quand on modifie le comportement de méthodes `Object.prototype` existantes, envisagez d'injecter du code en enveloppant votre extension avant ou après la logique existante. Par exemple, ce code (non testé) exécute conditionnellement la logique personnalisée avant l'exécution de la logique intégrée ou de l'extension de quelqu'un d'autre.
 
 Quand on modifie les prototypes avec des crochets, passer `this` et les arguments (l'état de l'appel) au comportement actuel en appelant `apply()` sur la fonction. Ce motif peut être utilisé pour tout prototype, tel que `Node.prototype`, `Function.prototype`, etc.
 

@@ -3,7 +3,7 @@ title: "AsyncDisposableStack : méthode move()"
 short-title: move()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/move
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 La méthode **`move()`** des instances de {{JSxRef("AsyncDisposableStack")}} crée une nouvelle instance d'`AsyncDisposableStack` contenant les mêmes libérateurs que cette pile, puis marque cette pile comme libérée sans appeler les libérateurs.
@@ -57,7 +57,7 @@ class HébergeurDePlugin {
   #socket;
 
   static async init() {
-    // Crée une AsyncDisposableStack qui sera libérée à la sortie de init.
+    // Crée une AsyncDisposableStack qui est libérée à la sortie de init.
     // Si la construction réussit, on déplace tout hors de `pile` vers
     // `#libérables` pour être libéré plus tard.
     await using pile = new AsyncDisposableStack();
@@ -70,8 +70,8 @@ class HébergeurDePlugin {
     // on peut déplacer les libérables hors de `pile`.
     return new HébergeurDePlugin(canal, socket, pile.move());
 
-    // Si la construction échoue, alors `pile` sera libérée avant d'atteindre
-    // la ligne ci-dessus, ce qui libérera `canal` et `socket` à leur tour.
+    // Si la construction échoue, alors `pile` est libérée avant d'atteindre
+    // la ligne ci-dessus, ce qui libéra `canal` et `socket` à leur tour.
   }
 
   constructor(canal, socket, libérables) {
@@ -89,10 +89,10 @@ class HébergeurDePlugin {
     // automatiquement libérée à la sortie de la fonction.
     await using libérables = this.#libérables;
 
-    // NOTE : on peut libérer `#socket` et `#canal` ici car ils seront
+    // NOTE : on peut libérer `#socket` et `#canal` ici, car ils sont
     // libérés par l'appel à `libérables[Symbol.asyncDispose]()`, ci-dessous.
     // Ce n'est pas strictement obligatoire pour chaque libérable, mais c'est
-    // une bonne pratique car ces objets ne seront plus utilisables.
+    // une bonne pratique, car ces objets ne sont plus utilisables.
     this.#socket = undefined;
     this.#canal = undefined;
     this.#libérables = undefined;

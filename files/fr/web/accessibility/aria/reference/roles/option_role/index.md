@@ -3,14 +3,14 @@ title: "ARIA : rôle option"
 short-title: option
 slug: Web/Accessibility/ARIA/Reference/Roles/option_role
 l10n:
-  sourceCommit: f6e12d0cba939a2f203119f4514b56b5faff17e1
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `option` est utilisé pour les éléments sélectionnables dans une `listbox`.
 
 ## Description
 
-Le rôle `option` sert à identifier les choix qu'un·e utilisateur·ice peut sélectionner dans une [`listbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role). Ces options sont similaires aux éléments {{HTMLElement("option")}} dans un élément {{HTMLElement("select")}}, mais elles peuvent contenir des images.
+Le rôle `option` sert à identifier les choix qu'un·e utilisateur·ice peut sélectionner dans une [`listbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role). Ces options sont similaires aux éléments HTML {{HTMLElement("option")}} dans un élément HTML {{HTMLElement("select")}}, mais elles peuvent contenir des images.
 
 Toutes les options sélectionnables doivent avoir [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) correspondant à leur état&nbsp;: `true` si sélectionnée, `false` sinon. Si une option n'est pas sélectionnable, `aria-selected` peut être omis. Une option désactivée peut avoir [`aria-disabled="true"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) et `aria-selected="false"` pour indiquer à l'utilisateur·ice que l'option est présente mais désactivée.
 
@@ -18,7 +18,7 @@ Le rôle `option` sert à identifier les choix sélectionnables d'un `listbox`. 
 
 Il est aussi possible de fournir explicitement un nom accessible en utilisant [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) sur l'élément ayant le rôle `option`. Si vous utilisez `aria-label` ou `aria-labelledby` et que l'option affiche aussi un label texte visible, veillez à respecter le [critère de succès WCAG 2.5.3 Label in Name <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html).
 
-Il est fortement recommandé d'utiliser un élément {{HTMLElement("select")}} ou un élément {{HTMLElement("input")}} de type `checkbox` ou `radio` lorsque c'est possible. Ces éléments HTML natifs gèrent automatiquement l'interactivité clavier et la gestion de la sélection pour tous les descendants.
+Il est fortement recommandé d'utiliser un élément HTML {{HTMLElement("select")}} ou un élément HTML {{HTMLElement("input")}} de type `checkbox` ou `radio` lorsque c'est possible. Ces éléments HTML natifs gèrent automatiquement l'interactivité clavier et la gestion de la sélection pour tous les descendants.
 
 ### Tous les descendants sont des éléments de présentation
 

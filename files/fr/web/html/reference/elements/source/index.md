@@ -39,12 +39,12 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - Un descripteur de largeur optionnel — un entier positif suivi directement de `"w"`, comme `300w`.
     - Un descripteur de densité de pixels optionnel — un nombre décimal positif suivi directement de `"x"`, comme `2x`.
 
-    Chaque chaînes de caractères de la liste doit comporter soit un descripteur de largeur, soit un descripteur de densité de pixels pour être valide. Ces deux descripteurs ne doivent pas être utilisés ensemble&nbsp;; un seul doit être utilisé de façon cohérente dans toute la liste. La valeur de chaque descripteur dans la liste doit être unique. Le navigateur choisit l'image la plus adéquate à afficher à un instant donné en fonction de ces descripteurs. Si les descripteurs ne sont pas définis, la valeur par défaut utilisée est `1x`. Si l'attribut `sizes` est également présent, chaque chaînes de caractères doit inclure un descripteur de largeur. Si le navigateur ne prend pas en charge `srcset`, alors `src` sera utilisé pour la source d'image par défaut.
+    Chaque chaînes de caractères de la liste doit comporter soit un descripteur de largeur, soit un descripteur de densité de pixels pour être valide. Ces deux descripteurs ne doivent pas être utilisés ensemble&nbsp;; un seul doit être utilisé de façon cohérente dans toute la liste. La valeur de chaque descripteur dans la liste doit être unique. Le navigateur choisit l'image la plus adéquate à afficher à un instant donné en fonction de ces descripteurs. Si les descripteurs ne sont pas définis, la valeur par défaut utilisée est `1x`. Si l'attribut `sizes` est également présent, chaque chaînes de caractères doit inclure un descripteur de largeur. Si le navigateur ne prend pas en charge `srcset`, alors `src` est utilisé pour la source d'image par défaut.
 
 - `sizes`
   - : Définit une liste de tailles de sources qui décrit la largeur finale affichée de l'image. Autorisé si le parent de `<source>` est {{HTMLElement("picture")}}. Interdit si le parent est {{HTMLElement("audio")}} ou {{HTMLElement("video")}}.
 
-    La liste se compose de tailles de sources séparées par des virgules. Chaque taille de source est une paire condition média et longueur. Avant de disposer la page, le navigateur utilise cette information pour déterminer quelle image définie dans [`srcset`](#srcset) afficher. Notez que `sizes` prendra effet uniquement si des descripteurs de largeur sont fournis avec `srcset`, et non des descripteurs de densité de pixels (par exemple, il faut utiliser `200w` au lieu de `2x`).
+    La liste se compose de tailles de sources séparées par des virgules. Chaque taille de source est une paire condition média et longueur. Avant de disposer la page, le navigateur utilise cette information pour déterminer quelle image définie dans [`srcset`](#srcset) afficher. Notez que `sizes` prend effet uniquement si des descripteurs de largeur sont fournis avec `srcset`, et non des descripteurs de densité de pixels (par exemple, il faut utiliser `200w` au lieu de `2x`).
 
 - `media`
   - : Définit la [requête média](/fr/docs/Web/CSS/Guides/Media_queries) pour le média visé par la ressource.
@@ -70,8 +70,8 @@ Le navigateur parcourt la liste des éléments `<source>` pour trouver un format
 
 Si aucun des éléments `<source>` ne fournit une source utilisable&nbsp;:
 
-- Dans le cas d'un élément `<picture>`, le navigateur utilisera l'image définie dans l'enfant {{HTMLElement("img")}} de l'élément `<picture>`.
-- Dans le cas d'un élément `<audio>` ou `<video>`, le navigateur affichera le contenu inclus entre les balises ouvrante et fermante de l'élément.
+- Dans le cas d'un élément `<picture>`, le navigateur utilise l'image définie dans l'enfant {{HTMLElement("img")}} de l'élément `<picture>`.
+- Dans le cas d'un élément `<audio>` ou `<video>`, le navigateur affiche le contenu inclus entre les balises ouvrante et fermante de l'élément.
 
 Pour des informations sur les formats d'image pris en charge par les navigateurs web et des conseils pour choisir les formats à utiliser, consultez notre [Guide des types et formats de fichiers image](/fr/docs/Web/Media/Guides/Formats/Image_types). Pour plus de détails sur les types de média vidéo et audio utilisables, consultez le [Guide des types et formats média](/fr/docs/Web/Media/Guides/Formats).
 
@@ -79,7 +79,7 @@ Pour des informations sur les formats d'image pris en charge par les navigateurs
 
 ### Utiliser l'attribut `type` avec `<video>`
 
-Cet exemple montre comment proposer une vidéo dans différents formats&nbsp;: WebM pour les navigateurs qui le prennent en charge, Ogg pour ceux qui prennent en charge Ogg, et QuickTime pour les navigateurs qui prennent en charge QuickTime. Si l'élément `<audio>` ou `<video>` n'est pas pris en charge par le navigateur, un message d'information s'affiche à la place. Si le navigateur prend en charge l'élément mais pas l'un des formats proposés, un évènement `error` est déclenché sur l'élément `<audio>` ou `<video>` et les contrôles média par défaut (s'ils sont activés) indiqueront une erreur. Pour plus de détails sur les formats de fichiers média à utiliser et leur prise en charge par les navigateurs, consultez le [Guide des types et formats média](/fr/docs/Web/Media/Guides/Formats).
+Cet exemple montre comment proposer une vidéo dans différents formats&nbsp;: WebM pour les navigateurs qui le prennent en charge, Ogg pour ceux qui prennent en charge Ogg, et QuickTime pour les navigateurs qui prennent en charge QuickTime. Si l'élément `<audio>` ou `<video>` n'est pas pris en charge par le navigateur, un message d'information s'affiche à la place. Si le navigateur prend en charge l'élément mais pas l'un des formats proposés, un évènement `error` est déclenché sur l'élément `<audio>` ou `<video>` et les contrôles média par défaut (s'ils sont activés) indiquent une erreur. Pour plus de détails sur les formats de fichiers média à utiliser et leur prise en charge par les navigateurs, consultez le [Guide des types et formats média](/fr/docs/Web/Media/Guides/Formats).
 
 ```html
 <video controls>
@@ -93,7 +93,7 @@ Cet exemple montre comment proposer une vidéo dans différents formats&nbsp;: W
 
 ### Utiliser l'attribut `media` avec `<video>`
 
-Cet exemple montre comment proposer un fichier source alternatif pour les fenêtres de visualisation dépassant une certaine largeur. Lorsque l'environnement de navigation d'un·e utilisateur·ice remplit la condition `media` définie, l'élément `<source>` associé est choisi. Le contenu de son attribut `src` est alors demandé et rendu. Si la condition `media` ne correspond pas, le navigateur passe à la `<source>` suivante dans la liste. La deuxième option `<source>` dans le code ci-dessous n'a pas de condition `media`, elle sera donc sélectionnée pour tous les autres contextes de navigation.
+Cet exemple montre comment proposer un fichier source alternatif pour les fenêtres de visualisation dépassant une certaine largeur. Lorsque l'environnement de navigation d'un·e utilisateur·ice remplit la condition `media` définie, l'élément `<source>` associé est choisi. Le contenu de son attribut `src` est alors demandé et rendu. Si la condition `media` ne correspond pas, le navigateur passe à la `<source>` suivante dans la liste. La deuxième option `<source>` dans le code ci-dessous n'a pas de condition `media`, elle est donc sélectionnée pour tous les autres contextes de navigation.
 
 ```html
 <video controls>
@@ -108,7 +108,7 @@ Pour plus d'exemples, l'article [Vidéo et audio HTML](/fr/docs/Learn_web_develo
 
 ### Utiliser l'attribut `media` avec `<picture>`
 
-Dans cet exemple, deux éléments `<source>` sont inclus dans {{HTMLElement("picture")}}, fournissant des versions d'une image à utiliser lorsque l'espace disponible dépasse certaines largeurs. Si la largeur disponible est inférieure à la plus petite de ces largeurs, le navigateur utilisera l'image définie dans l'élément {{HTMLElement("img")}}.
+Dans cet exemple, deux éléments `<source>` sont inclus dans {{HTMLElement("picture")}}, fournissant des versions d'une image à utiliser lorsque l'espace disponible dépasse certaines largeurs. Si la largeur disponible est inférieure à la plus petite de ces largeurs, le navigateur utilise l'image définie dans l'élément {{HTMLElement("img")}}.
 
 ```html
 <picture>

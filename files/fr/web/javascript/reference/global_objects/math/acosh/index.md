@@ -16,16 +16,16 @@ La méthode statique **`Math.acosh()`** retourne le cosinus hyperbolique inverse
 
 ```js interactive-example
 console.log(Math.acosh(0.999999999999));
-// Sortie attendue : NaN
+// Résultat attendu : NaN
 
 console.log(Math.acosh(1));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(Math.acosh(2));
-// Sortie attendue : 1.3169578969248166
+// Résultat attendu : 1.3169578969248166
 
 console.log(Math.acosh(2.5));
-// Sortie attendue : 1.566799236972411
+// Résultat attendu : 1.566799236972411
 ```
 
 ## Syntaxe

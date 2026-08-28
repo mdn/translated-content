@@ -3,7 +3,7 @@ title: Propriété CSS `flex-grow`
 short-title: flex-grow
 slug: Web/CSS/Reference/Properties/flex-grow
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`flex-grow`** définit le facteur de grossissement, qui indique quelle part de [**l'espace libre positif**](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios), s'il y en a, doit être attribuée à la [taille principale](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox#aparté_sur_le_modèle_flex) de l'élément flexible.

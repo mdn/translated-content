@@ -14,18 +14,18 @@ La méthode **`flat()`** des instances de {{JSxRef("Array")}} crée un nouveau t
 const arr1 = [0, 1, 2, [3, 4]];
 
 console.log(arr1.flat());
-// sortie attendue : Array [0, 1, 2, 3, 4]
+// Résultat attendu : Array [0, 1, 2, 3, 4]
 
 const arr2 = [0, 1, [2, [3, [4, 5]]]];
 
 console.log(arr2.flat());
-// sortie attendue : Array [0, 1, 2, Array [3, Array [4, 5]]]
+// Résultat attendu : Array [0, 1, 2, Array [3, Array [4, 5]]]
 
 console.log(arr2.flat(2));
-// sortie attendue : Array [0, 1, 2, 3, Array [4, 5]]
+// Résultat attendu : Array [0, 1, 2, 3, Array [4, 5]]
 
 console.log(arr2.flat(Infinity));
-// sortie attendue : Array [0, 1, 2, 3, 4, 5]
+// Résultat attendu : Array [0, 1, 2, 3, 4, 5]
 ```
 
 ## Syntaxe

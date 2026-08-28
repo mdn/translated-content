@@ -1,8 +1,9 @@
 ---
-title: prefers-reduced-transparency
+title: CSS `prefers-reduced-transparency` メディア特性
+short-title: prefers-reduced-transparency
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 {{SeeCompatTable}}
@@ -27,7 +28,7 @@ l10n:
 
 ## 例
 
-この例では、既定で半透明のボックスが表示されています。使用している端末のアクセシビリティ設定で透明度を下げる設定が有効になっている場合、半透明のボックスは不透明になります。
+この例では、デフォルトで半透明のボックスが表示されています。使用している端末のアクセシビリティ設定で透明度を下げる設定が有効になっている場合、半透明のボックスは不透明になります。
 
 ### HTML
 

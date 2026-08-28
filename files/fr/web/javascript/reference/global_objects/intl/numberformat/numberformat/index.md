@@ -3,7 +3,7 @@ title: Constructeur Intl.NumberFormat()
 short-title: Intl.NumberFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 l10n:
-  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le constructeur **`Intl.NumberFormat()`** permet de créer des objets {{JSxRef("Intl.NumberFormat")}}.
@@ -105,7 +105,7 @@ En fonction du `style` utilisé, certaines options peuvent être ignorées et d'
 - `unit`
   - : L'unité à utiliser dans le formatage des unités. Les valeurs possibles sont répertoriées dans [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#identifiants_dunités_pris_en_charge). Les paires d'unités simples peuvent être concaténées avec `"-per-"` pour créer une unité composée. Il n'y a pas de valeur par défaut&nbsp;; si le `style` est `"unit"`, la propriété `unit` doit être fournie.
 - `unitDisplay`
-  - : Le style de formatage des unités à utiliser dans le formatage des unités. Les valeurs possibles sont :
+  - : Le style de formatage des unités à utiliser dans le formatage des unités. Les valeurs possibles sont&nbsp;:
     - `"short"` (par défaut)
       - : Par exemple, `16 l`.
     - `"narrow"`
@@ -118,7 +118,7 @@ En fonction du `style` utilisé, certaines options peuvent être ignorées et d'
 Les propriétés suivantes sont également prises en charge par {{JSxRef("Intl.PluralRules")}}.
 
 - `minimumIntegerDigits`
-  - : Le nombre minimum de chiffres entiers à utiliser. Une valeur avec un nombre de chiffres entiers inférieur à ce nombre sera complétée à gauche avec des zéros (jusqu'à la longueur définie) lors du formatage. Les valeurs possibles vont de `1` à `21`&nbsp;; la valeur par défaut est `1`.
+  - : Le nombre minimum de chiffres entiers à utiliser. Une valeur avec un nombre de chiffres entiers inférieur à ce nombre est complétée à gauche avec des zéros (jusqu'à la longueur définie) lors du formatage. Les valeurs possibles vont de `1` à `21`&nbsp;; la valeur par défaut est `1`.
 - `minimumFractionDigits`
   - : Le nombre minimum de chiffres fractionnaires à utiliser. Les valeurs possibles vont de `0` à `100`&nbsp;; la valeur par défaut pour le formatage des nombres simples et des pourcentages est `0`&nbsp;; la valeur par défaut pour le formatage des devises est le nombre de chiffres de l'unité mineure fourni par la [liste des codes de devises ISO 4217 <sup>(angl.)</sup>](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml) (2 si la liste ne fournit pas cette information). Voir [Valeurs par défaut des chiffres significatifs/fractionnaires](#valeurs_par_défaut_des_significantdigitsfractiondigits) pour savoir quand cette valeur par défaut est appliquée.
 - `maximumFractionDigits`
@@ -128,7 +128,7 @@ Les propriétés suivantes sont également prises en charge par {{JSxRef("Intl.P
 - `maximumSignificantDigits`
   - : Le nombre maximum de chiffres significatifs à utiliser. Les valeurs possibles vont de `1` à `21`&nbsp;; la valeur par défaut est `21`. Voir [Valeurs par défaut des chiffres significatifs/fractionnaires](#valeurs_par_défaut_des_significantdigitsfractiondigits) pour savoir quand cette valeur par défaut est appliquée.
 - `roundingPriority`
-  - : Définit comment les conflits d'arrondi seront résolus si à la fois `"FractionDigits"` ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) et `"SignificantDigits"` ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) sont définis.
+  - : Définit comment les conflits d'arrondi sont résolus si à la fois `"FractionDigits"` ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) et `"SignificantDigits"` ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) sont définis.
     Valeurs possibles&nbsp;:
     - `"auto"` (par défaut)
       - : Le résultat de la propriété des chiffres significatifs est utilisé.
@@ -169,7 +169,7 @@ Les propriétés suivantes sont également prises en charge par {{JSxRef("Intl.P
     L'exemple des [modes d'arrondi](#modes_darrondi) ci-dessous montre comment chaque mode fonctionne.
 
 - `trailingZeroDisplay`
-  - : La stratégie pour afficher les zéros finaux sur les nombres entiers. Les valeurs possibles sont :
+  - : La stratégie pour afficher les zéros finaux sur les nombres entiers. Les valeurs possibles sont&nbsp;:
     - `"auto"` (par défaut)
       - : Conserver les zéros finaux selon `minimumFractionDigits` et `minimumSignificantDigits`.
     - `"stripIfInteger"`
@@ -233,7 +233,7 @@ Un nouvel objet `Intl.NumberFormat`.
 > [!NOTE]
 > Le texte ci-dessous décrit un comportement marqué par la spécification comme «&nbsp;optionnel&nbsp;". Il peut ne pas fonctionner dans tous les environnements. Consultez le [tableau de compatibilité des navigateurs](#compatibilité_des_navigateurs).
 
-Normalement, `Intl.NumberFormat()` peut être appelé avec ou sans {{JSxRef("new")}}, et une nouvelle instance de `Intl.NumberFormat` est renvoyée dans les deux cas. Cependant, si la valeur de {{JSxRef("this")}} est un objet qui est {{JSxRef("instanceof")}} `Intl.NumberFormat` (cela ne signifie pas nécessairement qu'il a été créé via `new Intl.NumberFormat`&nbsp;; cela signifie simplement qu'il a `Intl.NumberFormat.prototype` dans sa chaîne de caractères de prototypes), alors la valeur de `this` est renvoyée à la place, avec le nouvel objet `Intl.NumberFormat` caché dans une propriété `[Symbol(IntlLegacyConstructedSymbol)]` (un symbole unique réutilisé entre les instances).
+Normalement, `Intl.NumberFormat()` peut être appelé avec ou sans {{JSxRef("new")}}, et une nouvelle instance de `Intl.NumberFormat` est retournée dans les deux cas. Cependant, si la valeur de {{JSxRef("this")}} est un objet qui est {{JSxRef("instanceof")}} `Intl.NumberFormat` (cela ne signifie pas nécessairement qu'il a été créé par `new Intl.NumberFormat`&nbsp;; cela signifie simplement qu'il a `Intl.NumberFormat.prototype` dans sa chaîne de caractères de prototypes), alors la valeur de `this` est retournée à la place, avec le nouvel objet `Intl.NumberFormat` caché dans une propriété `[Symbol(IntlLegacyConstructedSymbol)]` (un symbole unique réutilisé entre les instances).
 
 ```js
 const formateur = Intl.NumberFormat.call(
@@ -252,7 +252,7 @@ console.log(Object.getOwnPropertyDescriptors(formateur));
 // }
 ```
 
-Notez qu'il n'y a qu'une seule instance réelle de `Intl.NumberFormat` ici&nbsp;: celle cachée dans `[Symbol(IntlLegacyConstructedSymbol)]`. L'appel des méthodes {{JSxRef("Intl/NumberFormat/format", "format()")}} et {{JSxRef("Intl/NumberFormat/resolvedOptions", "resolvedOptions()")}} sur `formateur` utiliserait correctement les options stockées dans cette instance, mais l'appel de toutes les autres méthodes (par exemple, {{JSxRef("Intl/NumberFormat/formatRange", "formatRange()")}}) échouerait avec «&nbsp;TypeError: formatRange method called on incompatible Object&nbsp;», car ces méthodes ne consultent pas les options de l'instance cachée.
+Notez qu'il n'y a qu'une seule instance réelle de `Intl.NumberFormat` ici&nbsp;: celle cachée dans `[Symbol(IntlLegacyConstructedSymbol)]`. L'appel des méthodes {{JSxRef("Intl/NumberFormat/format", "format()")}} et {{JSxRef("Intl/NumberFormat/resolvedOptions", "resolvedOptions()")}} sur `formateur` utilise correctement les options stockées dans cette instance, mais l'appel de toutes les autres méthodes (par exemple, {{JSxRef("Intl/NumberFormat/formatRange", "formatRange()")}}) échoue avec «&nbsp;TypeError: formatRange method called on incompatible Object&nbsp;», car ces méthodes ne consultent pas les options de l'instance cachée.
 
 Ce comportement, appelé `ChainNumberFormat`, ne se produit pas lorsque `Intl.NumberFormat()` est appelé sans `new` mais avec `this` défini sur autre chose qui n'est pas un `instanceof Intl.NumberFormat`. Si vous l'appelez directement comme `Intl.NumberFormat()`, la valeur de `this` est {{JSxRef("Intl")}}, et une nouvelle instance de `Intl.NumberFormat` est créée normalement.
 
@@ -415,8 +415,8 @@ Vous pouvez définir le nombre minimum ou maximum de chiffres fractionnaires, en
 #### Utiliser `FractionDigits` et `IntegerDigits`
 
 Les propriétés de chiffres entiers et fractionnaires indiquent le nombre de chiffres à afficher avant et après le point décimal, respectivement.
-Si la valeur à afficher a moins de chiffres entiers que défini, elle sera complétée à gauche avec des zéros pour atteindre le nombre attendu.
-Si elle a moins de chiffres fractionnaires, elle sera complétée à droite avec des zéros.
+Si la valeur à afficher a moins de chiffres entiers que défini, elle est complétée à gauche avec des zéros pour atteindre le nombre attendu.
+Si elle a moins de chiffres fractionnaires, elle est complétée à droite avec des zéros.
 Les deux cas sont illustrés ci-dessous&nbsp;:
 
 ```js
@@ -431,7 +431,7 @@ console.log(
 // "004.3300"
 ```
 
-Si une valeur a plus de chiffres fractionnaires que le nombre maximum défini, elle sera arrondie.
+Si une valeur a plus de chiffres fractionnaires que le nombre maximum défini, elle est arrondie.
 La _manière_ dont elle est arrondie dépend de la propriété [`roundingMode`](#roundingmode) (plus de détails sont fournis dans la section [modes d'arrondi](#modes_darrondi)).
 Ci-dessous, la valeur est arrondie de cinq chiffres fractionnaires (`4.33145`) à deux (`4.33`)&nbsp;:
 
@@ -543,7 +543,7 @@ console.log(
 
 > [!WARNING]
 > Faites attention aux valeurs par défaut, car elles peuvent affecter le formatage.
-> Si une seule propriété `SignificantDigits` est utilisée, alors sa contrepartie sera automatiquement appliquée avec la valeur par défaut.
+> Si une seule propriété `SignificantDigits` est utilisée, alors sa contrepartie est automatiquement appliquée avec la valeur par défaut.
 > Les valeurs maximales et minimales par défaut des chiffres significatifs sont respectivement 21 et 1.
 
 #### Définir les chiffres significatifs et fractionnaires en même temps
@@ -552,7 +552,7 @@ Les chiffres fractionnaires ([`minimumFractionDigits`](#minimumfractiondigits)/[
 Si les deux sont utilisés en même temps, il est possible qu'ils entrent en conflit.
 
 Ces conflits sont résolus en utilisant la propriété [`roundingPriority`](#roundingpriority).
-Par défaut, cette propriété a la valeur `"auto"`, ce qui signifie que si l'une des propriétés [`minimumSignificantDigits`](#minimumsignificantdigits) ou [`maximumSignificantDigits`](#maximumsignificantdigits) est définie, les propriétés de chiffres fractionnaires et entiers seront ignorées.
+Par défaut, cette propriété a la valeur `"auto"`, ce qui signifie que si l'une des propriétés [`minimumSignificantDigits`](#minimumsignificantdigits) ou [`maximumSignificantDigits`](#maximumsignificantdigits) est définie, les propriétés de chiffres fractionnaires et entiers sont ignorées.
 
 Par exemple, le code ci-dessous formate la valeur de `4.33145` avec `maximumFractionDigits: 3`, puis `maximumSignificantDigits: 2`, et enfin les deux.
 La valeur avec les deux propriétés est celle définie par `maximumSignificantDigits`.
@@ -654,7 +654,7 @@ console.log(`morePrecision - ${bothMore.format(1.23456)}`);
 
 Notez que l'algorithme peut se comporter de manière contre-intuitive si une valeur minimale est définie sans valeur maximale.
 L'exemple ci-dessous formate la valeur `1` en définissant `minimumFractionDigits: 2` (formatage en `1.00`) et `minimumSignificantDigits: 2` (formatage en `1.0`).
-Puisque `1.00` a plus de chiffres que `1.0`, cela devrait être le résultat lors de la priorité `morePrecision`, mais en fait, c'est le contraire qui se produit&nbsp;:
+Puisque `1.00` a plus de chiffres que `1.0`, cela doit être le résultat lors de la priorité `morePrecision`, mais en fait, c'est le contraire qui se produit&nbsp;:
 
 ```js
 const bothLess = new Intl.NumberFormat("en", {
@@ -677,19 +677,19 @@ console.log(`morePrecision - ${bothMore.format(1)}`);
 La raison en est que seules les valeurs de «&nbsp;précision maximale&nbsp;» sont utilisées pour le calcul, et la valeur par défaut de `maximumSignificantDigits` est beaucoup plus élevée que celle de `maximumFractionDigits`.
 
 > [!NOTE]
-> Le groupe de travail a proposé une modification de l'algorithme où le formateur devrait évaluer le résultat de l'utilisation des chiffres fractionnaires et significatifs définis de manière indépendante (en tenant compte des valeurs minimales et maximales).
-> Il sélectionnera ensuite l'option qui affiche plus de chiffres fractionnaires si `morePrecision` est défini, et moins si `lessPrecision` est défini.
-> Cela entraînera un comportement plus intuitif pour ce cas.
+> Le groupe de travail a proposé une modification de l'algorithme où le formateur doit évaluer le résultat de l'utilisation des chiffres fractionnaires et significatifs définis de manière indépendante (en tenant compte des valeurs minimales et maximales).
+> Il sélectionne ensuite l'option qui affiche plus de chiffres fractionnaires si `morePrecision` est défini, et moins si `lessPrecision` est défini.
+> Cela entraîne un comportement plus intuitif pour ce cas.
 
 ### Modes d'arrondi
 
-Si une valeur a plus de chiffres fractionnaires que ceux autorisés par les options du constructeur, la valeur formatée sera _arrondie_ au nombre défini de chiffres fractionnaires.
+Si une valeur a plus de chiffres fractionnaires que ceux autorisés par les options du constructeur, la valeur formatée est _arrondie_ au nombre défini de chiffres fractionnaires.
 La _manière_ dont la valeur est arrondie dépend de la propriété [`roundingMode`](#roundingmode).
 
-Les formateurs de nombres utilisent par défaut l'arrondi `halfExpand`, qui arrondit les valeurs «&nbsp;à l'écart de zéro&nbsp;" au demi-incrément (en d'autres termes, la _magnitude_ de la valeur est arrondie vers le haut).
+Les formateurs de nombres utilisent par défaut l'arrondi `halfExpand`, qui arrondit les valeurs «&nbsp;à l'écart de zéro&nbsp;» au demi-incrément (en d'autres termes, la _magnitude_ de la valeur est arrondie vers le haut).
 
-Pour un nombre positif, si les chiffres fractionnaires à supprimer sont plus proches de l'incrément suivant (ou au point médian), les chiffres fractionnaires restants seront arrondis vers le haut, sinon ils seront arrondis vers le bas.
-Cela est illustré ci-dessous&nbsp;: 2,23 arrondi à deux chiffres significatifs est tronqué à 2,2 car 2,23 est inférieur au demi-incrément 2,25, tandis que les valeurs de 2,25 et plus sont arrondies à 2,3&nbsp;:
+Pour un nombre positif, si les chiffres fractionnaires à supprimer sont plus proches de l'incrément suivant (ou au point médian), les chiffres fractionnaires restants sont arrondis vers le haut, sinon ils sont arrondis vers le bas.
+Cela est illustré ci-dessous&nbsp;: 2,23 arrondi à deux chiffres significatifs est tronqué à 2,2, car 2,23 est inférieur au demi-incrément 2,25, tandis que les valeurs de 2,25 et plus sont arrondies à 2,3&nbsp;:
 
 ```js
 // Valeur inférieure au demi-incrément : arrondir vers le bas.
@@ -755,7 +755,7 @@ Le tableau ci-dessous montre l'effet des différents modes d'arrondi pour les va
 | `halfTrunc`    | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
 | `halfEven`     | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
 
-Lorsque vous utilisez `halfEven`, son comportement dépend également de la parité (impair ou pair) du dernier chiffre du nombre arrondi. Par exemple, le comportement de `halfEven` dans le tableau ci-dessus est le même que celui de `halfTrunc`, car les magnitudes de tous les nombres se situent entre un plus petit nombre «&nbsp;pair&nbsp;» (2.2) et un plus grand nombre «&nbsp;impair&nbsp;» (2.3). Si les nombres se situent entre ±2.3 et ±2.4, `halfEven` se comportera plutôt comme `halfExpand`. Ce comportement évite de sous-estimer ou de surestimer systématiquement les demi-incréments dans un grand échantillon de données.
+Lorsque vous utilisez `halfEven`, son comportement dépend également de la parité (impair ou pair) du dernier chiffre du nombre arrondi. Par exemple, le comportement de `halfEven` dans le tableau ci-dessus est le même que celui de `halfTrunc`, car les magnitudes de tous les nombres se situent entre un plus petit nombre «&nbsp;pair&nbsp;» (2.2) et un plus grand nombre «&nbsp;impair&nbsp;» (2.3). Si les nombres se situent entre ±2.3 et ±2.4, `halfEven` se comporte plutôt comme `halfExpand`. Ce comportement évite de sous-estimer ou de surestimer systématiquement les demi-incréments dans un grand échantillon de données.
 
 ### Utiliser `roundingIncrement`
 

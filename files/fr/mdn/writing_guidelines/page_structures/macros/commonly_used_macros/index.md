@@ -2,7 +2,7 @@
 title: Macros couramment utilisées
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 l10n:
-  sourceCommit: 078deef4b52f337f2ef69e037ee80d1feae0d96a
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Cette page liste de nombreuses macros générales que le système de compilation de MDN, [rari <sup>(angl.)</sup>](https://github.com/mdn/rari), fournit pour être utilisées sur MDN.
@@ -163,12 +163,12 @@ Pour [`PreviousNext` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/c
 
 - [`EmbedLiveSample` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_live_sample.rs) permet d'intégrer le résultat d'un exemple de code sur une page, comme expliqué dans [Exemples interactifs](/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
 - [`LiveSampleLink` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/live_sample_link.rs) crée un lien vers une page contenant le résultat d'un exemple de code, comme expliqué dans [Exemples interactifs](/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
-- [`EmbedGHLiveSample` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_gh_live_sample.rs) permet d'intégrer des exemples interactifs depuis des pages GitHub.
+- [`EmbedGHLiveSample` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_gh_live_sample.rs) vous permet d'intégrer des exemples interactifs depuis des pages GitHub.
   Plus d'informations dans [Exemples interactifs GitHub](/fr/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_live_samples).
 
 ## Ajouter une mise en forme générale
 
-### Ajouter des indicateurs en ligne pour la documentation API
+### Ajouter des indicateurs en incise pour la documentation API
 
 [`Optional_Inline` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) et [`ReadOnlyInline` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) sont utilisés dans la documentation API, généralement pour décrire la liste des propriétés d'un objet ou les paramètres d'une fonction.
 
@@ -182,11 +182,11 @@ Exemple&nbsp;:
 
 ## Ajouter des indicateurs de statut et de compatibilité
 
-### Ajouter des indicateurs en ligne sans paramètre supplémentaire
+### Ajouter des indicateurs en incise sans paramètre supplémentaire
 
 #### Non standard
 
-[`Non-standard_Inline` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) insère une marque en ligne indiquant que l'API n'est pas standardisée et n'est pas en cours de normalisation.
+[`Non-standard_Inline` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) insère une marque en incise indiquant que l'API n'est pas standardisée et n'est pas en cours de normalisation.
 
 ##### Syntaxe
 
@@ -198,7 +198,7 @@ Exemple&nbsp;:
 
 #### Expérimental
 
-[`Experimental_Inline` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) insère une marque en ligne indiquant que l'API n'est pas largement implémentée et peut évoluer à l'avenir.
+[`Experimental_Inline` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) insère une marque en incise indiquant que l'API n'est pas largement implémentée et peut évoluer à l'avenir.
 Pour plus d'informations sur la définition **expérimental**, voir la documentation [Expérimental, déprécié et obsolète](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete).
 
 ##### Syntaxe
@@ -209,11 +209,11 @@ Pour plus d'informations sur la définition **expérimental**, voir la documenta
 
 - Icône&nbsp;: {{Experimental_Inline}}
 
-### Ajouter des indicateurs en ligne avec technologie précisée
+### Ajouter des indicateurs en incise avec technologie précisée
 
 #### Obsolète
 
-[`Deprecated_Inline` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) insère une marque en ligne de dépréciation ({{Deprecated_Inline}}) pour déconseiller l'utilisation d'une API officiellement dépréciée (ou supprimée).
+[`Deprecated_Inline` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) insère une marque en incise de dépréciation ({{Deprecated_Inline}}) pour déconseiller l'utilisation d'une API officiellement dépréciée (ou supprimée).
 Pour plus d'informations sur la définition **déprécié**, voir la documentation [Expérimental, déprécié et obsolète](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete).
 
 ##### Syntaxe
@@ -226,7 +226,7 @@ Pour plus d'informations sur la définition **déprécié**, voir la documentati
 
 ### Indicateurs d'en-tête de page ou de section
 
-Ces modèles ont la même signification que leurs équivalents en ligne ci-dessus.
+Ces modèles ont la même signification que leurs équivalents en incise ci-dessus.
 Ils doivent être placés juste sous le titre principal de la page (ou le fil d'Ariane si présent) dans une page de référence.
 Ils peuvent aussi servir à marquer une section d'une page.
 

@@ -225,7 +225,7 @@ Comme indiqué plus haut, le principal problème lié à l'utilisation des champ
 
 Les plateformes mobiles telles qu'Android et iOS exploitent pleinement ce type de champ, en proposant des contrôles d'interface adaptés au tactile qui facilitent grandement la sélection des valeurs. Par exemple, le sélecteur `week` sur Chrome pour Android ressemble à ceci&nbsp;:
 
-![Une fenêtre modale. L'en-tête indique « définir la semaine ». Il y a deux colonnes : la colonne de gauche affiche 36 au centre en pleine opacité, avec 35 au-dessus et 37 en dessous en semi-opacité. Sur la droite, 2017 est en pleine opacité. Il n'y a pas d'autres options. Trois liens texte ou boutons sont placés en bas : « effacer » à gauche, et « annuler » et « définir » à droite.](week-chrome-android.png)
+![Une fenêtre bloquante. L'en-tête indique « définir la semaine ». Il y a deux colonnes : la colonne de gauche affiche 36 au centre en pleine opacité, avec 35 au-dessus et 37 en dessous en semi-opacité. Sur la droite, 2017 est en pleine opacité. Il n'y a pas d'autres options. Trois liens texte ou boutons sont placés en bas : « effacer » à gauche, et « annuler » et « définir » à droite.](week-chrome-android.png)
 
 Les navigateurs qui ne prennent pas en charge ce contrôle basculent sur un champ texte, ce qui pose des problèmes tant pour la cohérence de l'interface (le contrôle affiché est différent) que pour le traitement des données.
 

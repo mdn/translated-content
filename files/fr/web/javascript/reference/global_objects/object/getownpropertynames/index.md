@@ -1,35 +1,36 @@
 ---
-title: Object.getOwnPropertyNames()
+title: "Object : méthode statique getOwnPropertyNames()"
+short-title: getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode statique **`Object.getOwnPropertyNames()`** retourne un tableau contenant toutes les propriétés (y compris les propriétés non-énumérables, sauf celles utilisant `Symbol`) trouvées directement dans un objet donné.
 
-La méthode **`Object.getOwnPropertyNames()`** renvoie un tableau de toutes les propriétés (qu'elles soient énumérables ou non, tant qu'elles ne sont pas désignées par un [symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)) propres à un objet (c'est-à-dire n'étant pas héritées via la chaîne de prototypes).
-
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.getOwnPropertyNames()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   a: 1,
   b: 2,
   c: 3,
 };
 
-console.log(Object.getOwnPropertyNames(object1));
-// Expected output: Array ["a", "b", "c"]
+console.log(Object.getOwnPropertyNames(object));
+// Résultat attendu : Array ["a", "b", "c"]
 ```
 
 ## Syntaxe
 
-```js
-Object.getOwnPropertyNames(obj);
+```js-nolint
+Object.getOwnPropertyNames(obj)
 ```
 
 ### Paramètres
 
 - `obj`
-  - : L'objet dont seront listées les propriétés propres énumérables _et non-énumérables_.
+  - : L'objet dont sont listées les propriétés propres énumérables _et non-énumérables_.
 
 ### Valeur de retour
 
@@ -37,105 +38,86 @@ Un tableau de chaînes de caractères qui sont les noms des propriétés propres
 
 ## Description
 
-`Object.getOwnPropertyNames` renvoie un tableau dont les éléments sont des chaînes de caractères correspondant aux noms des propriétés énumerables _et non-énumerables_ appartenant directement à l'objet `obj`. L'ordre des propriétés énumérables est cohérent avec l'ordre utilisé dans une boucle {{jsxref("Statements/for...in","for...in")}} (ou avec {{jsxref("Object.keys")}}) parmi les propriétés de l'objet. L'ordre des propriétés non-énumérables dans le tableau et parmi les propriétés énumérables n'est pas défini.
+`Object.getOwnPropertyNames` retourne un tableau dont les éléments sont des chaînes de caractères correspondant aux noms des propriétés énumérables _et non-énumérables_ appartenant directement à l'objet `obj`. L'ordre des propriétés énumérables est cohérent avec l'ordre utilisé dans une boucle {{JSxRef("Statements/for...in","for...in")}} (ou avec {{JSxRef("Object.keys")}}) parmi les propriétés de l'objet. Les clés entières non négatives de l'objet (à la fois énumérables et non-énumérables) sont ajoutées en premier dans le tableau par ordre croissant, suivies des clés de type chaîne de caractères dans l'ordre d'insertion.
+
+Dans ES5, si l'argument passé à cette méthode n'est pas un objet (un primitif), cela provoque une {{JSxRef("TypeError")}}. Dans ES2015, un argument non-objet est converti en objet.
+
+```js
+Object.getOwnPropertyNames("toto");
+// TypeError: "toto" n'est pas un objet (code ES5)
+
+Object.getOwnPropertyNames("foo");
+// ["0", "1", "2", "length"]  (code ES2015)
+```
 
 ## Exemples
 
 ### Utiliser `Object.getOwnPropertyNames()`
 
 ```js
-var arr = ["a", "b", "c"];
+const arr = ["a", "b", "c"];
 console.log(Object.getOwnPropertyNames(arr).sort());
 // ["0", "1", "2", "length"]
 
-// Objet semblable à un tableau (array-like)
-var obj = { 0: "a", 1: "b", 2: "c" };
+// Objet semblable à un tableau
+const obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.getOwnPropertyNames(obj).sort());
 // ["0", "1", "2"]
 
-// On affiche les noms et les valeurs
-// des propriétés avec Array.forEach
-Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
-  console.log(val + " -> " + obj[val]);
+Object.getOwnPropertyNames(obj).forEach((val, idx, array) => {
+  console.log(`${val} -> ${obj[val]}`);
 });
-// affiche
 // 0 -> a
 // 1 -> b
 // 2 -> c
 
 // propriété non-énumérable
-var mon_obj = Object.create(
+const monObj = Object.create(
   {},
   {
     getToto: {
-      value: function () {
+      value() {
         return this.toto;
       },
       enumerable: false,
     },
   },
 );
-mon_obj.toto = 1;
+monObj.toto = 1;
 
-console.log(Object.getOwnPropertyNames(mon_obj).sort());
-// ["toto", "getToto"]
+console.log(Object.getOwnPropertyNames(monObj).sort()); // ["toto", "getToto"]
 ```
 
-Si on souhaite n'avoir que les propriétés énumérables, on peut utiliser {{jsxref("Object.keys")}} ou bien une boucle {{jsxref("Statements/for...in","for...in")}} (cette méthode renverra également les propriétés héritées via la chaîne de prototypes si on ne filtre pas avec la méthode {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}).
+Si vous souhaitez n'obtenir que les propriétés énumérables, consultez {{JSxRef("Object.keys()")}} ou utilisez une boucle {{JSxRef("Statements/for...in", "for...in")}} (notez que ça retourne également les propriétés énumérables trouvées le long de la chaîne de prototypes pour l'objet à moins que cette dernière ne soit filtrée avec {{JSxRef("Object.hasOwn()")}}).
 
-Les propriétés héritées via la chaîne de prototype ne sont pas listées :
+Les éléments de la chaîne de prototypes ne sont pas listés&nbsp;:
 
 ```js
 function ClasseParente() {}
 ClasseParente.prototype.inheritedMethod = function () {};
 
-function ClasseFille() {
+function ClasseEnfant() {
   this.prop = 5;
   this.method = function () {};
 }
-ClasseFille.prototype = new ClasseParente();
-ClasseFille.prototype.prototypeMethod = function () {};
+ClasseEnfant.prototype = new ClasseParente();
+ClasseEnfant.prototype.prototypeMethod = function () {};
 
-console.log(
-  Object.getOwnPropertyNames(
-    new ClasseFille(), // ["prop", "method"]
-  ),
-);
+console.log(Object.getOwnPropertyNames(new ClasseEnfant()));
+// ["prop", "method"]
 ```
 
 ### Obtenir uniquement les propriétés non-énumérables
 
-On utilise ici la fonction {{jsxref("Array.prototype.filter()")}} pour retirer les clés énumérables (obtenus avec {{jsxref("Object.keys()")}}) de la liste de toutes les clés (obtenues avec `Object.getOwnPropertynames`) afin de n'avoir que les propriétés propres non-énumérables.
+On utilise ici la fonction {{JSxRef("Array.prototype.filter()")}} pour retirer les clés énumérables (obtenus avec {{JSxRef("Object.keys()")}}) de la liste de toutes les clés (obtenues avec `Object.getOwnPropertyNames()`) afin de n'avoir que les propriétés propres non-énumérables.
 
 ```js
-var target = myObject;
-var enum_et_nonenum = Object.getOwnPropertyNames(target);
-var enum_uniquement = Object.keys(target);
-var nonenum_uniquement = enum_et_nonenum.filter(function (key) {
-  var indexInEnum = enum_uniquement.indexOf(key);
-  if (indexInEnum == -1) {
-    // non trouvée dans enum_uniquement indique
-    // que la clé est non-énumérable, on la
-    // garde donc dans le filtre avec true
-    return true;
-  } else {
-    return false;
-  }
-});
+const cible = myObject;
+const enumEtNonEnum = Object.getOwnPropertyNames(cible);
+const enumSeulement = new Set(Object.keys(cible));
+const nonEnumSeulement = enumEtNonEnum.filter((key) => !enumSeulement.has(key));
 
-console.log(nonenum_uniquement);
-```
-
-## Notes
-
-Pour ES5, si l'argument passé à la méthode n'est pas un objet (mais une valeur d'un autre type primitif), une exception {{jsxref("TypeError")}} sera levée. Pour ES2015, un argument qui n'est pas un objet sera d'abord transformé en objet avant que la méthode soit appliquée.
-
-```js
-Object.getOwnPropertyNames('toto')
-TypeError: "toto" n'est pas un objet // code ES5
-
-Object.getOwnPropertyNames('toto')
-['length', '0', '1', '2']         // code ES2015
+console.log(nonEnumSeulement);
 ```
 
 ## Spécifications
@@ -148,9 +130,10 @@ Object.getOwnPropertyNames('toto')
 
 ## Voir aussi
 
+- [La prothèse d'émulation de `Object.getOwnPropertyNames` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
 - [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Array.forEach()")}}
+- La méthode statique {{JSxRef("Object.hasOwn()")}}
+- La méthode {{JSxRef("Object.prototype.propertyIsEnumerable()")}}
+- La méthode statique {{JSxRef("Object.create()")}}
+- La méthode statique {{JSxRef("Object.keys()")}}
+- La méthode {{JSxRef("Array.prototype.forEach()")}}

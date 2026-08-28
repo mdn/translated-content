@@ -3,7 +3,7 @@ title: "Élément HTML `<style>` : l'élément d'information de style"
 short-title: <style>
 slug: Web/HTML/Reference/Elements/style
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<style>`** contient des informations de mise en forme pour un document ou une partie d'un document. Il contient du CSS, qui est appliqué au contenu du document contenant l'élément `<style>`.
@@ -21,7 +21,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<style>`** contient des informations de
 </style>
 
 <p>
-  Ce texte sera vert. Les styles en ligne priment sur le CSS inclus de façon
+  Ce texte est vert. Les styles en incise priment sur le CSS inclus de façon
   externe.
 </p>
 
@@ -36,9 +36,9 @@ p {
 }
 ```
 
-L'élément `<style>` doit être inclus dans l'élément {{HTMLElement("head")}} du document. En général, il est préférable de placer vos styles dans des feuilles de style externes et de les appliquer à l'aide d'éléments {{HTMLElement("link")}}.
+L'élément `<style>` est généralement inclus dans l'élément {{htmlelement("head")}} du document. Il peut également être utilisé partout où le contenu des métadonnées est autorisé, par exemple à l'intérieur d'un élément {{htmlelement("template")}}.
 
-Si vous incluez plusieurs éléments `<style>` et `<link>` dans votre document, ils seront appliqués au DOM dans l'ordre dans lequel ils sont inclus dans le document — assurez-vous de les inclure dans le bon ordre, pour éviter des problèmes de cascade inattendus.
+Si vous incluez plusieurs éléments `<style>` et `<link>` dans votre document, ils sont appliqués au DOM dans l'ordre dans lequel ils sont inclus dans le document — assurez-vous de les inclure dans le bon ordre, pour éviter des problèmes de cascade inattendus.
 
 De la même manière que les éléments `<link>`, les éléments `<style>` peuvent inclure des attributs `media` qui contiennent des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries), ce qui vous permet d'appliquer sélectivement des feuilles de style internes à votre document selon des caractéristiques du média comme la largeur de la zone d'affichage (<i lang="en">viewport</i> en anglais).
 
@@ -51,12 +51,12 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `render`&nbsp;: Le rendu du contenu à l'écran est bloqué.
 
     > [!NOTE]
-    > Seuls les éléments `style` dans le `<head>` du document peuvent éventuellement bloquer le rendu. Par défaut, un élément `style` dans le `<head>` bloque le rendu lorsque le navigateur le découvre lors de l'analyse. Si un tel élément `style` est ajouté dynamiquement via un script, vous devez également définir `blocking = "render"` pour qu'il bloque le rendu.
+    > Seuls les éléments `style` dans le `<head>` du document peuvent éventuellement bloquer le rendu. Par défaut, un élément `style` dans le `<head>` bloque le rendu lorsque le navigateur le découvre lors de l'analyse. Si un tel élément `style` est ajouté dynamiquement avec un script, vous devez également définir `blocking = "render"` pour qu'il bloque le rendu.
 
 - `media`
   - : Cet attribut est [une requête média](/fr/docs/Web/CSS/Guides/Media_queries/Using) qui indique le média auquel la mise en forme doit s'appliquer. Cet attribut est optionnel, la valeur par défaut est `all`.
 - `nonce`
-  - : Un _nonce_ cryptographique utilisé pour inscrire les styles en ligne sur une liste blanche pour la règle [`style-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src) de la CSP (_Content Security Policy_). Le serveur doit générer un nonce unique chaque fois qu'il transmet une règle de sécurité. Ce nonce ne doit pas pouvoir être deviné car sinon, il devient trivial d'outrepasser la règle de sécurité.
+  - : Un _nombre unique_ (<i lang="en">nonce</i> en anglais) cryptographique utilisé pour inscrire les styles en incise sur une liste blanche pour la règle [`style-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src) de la CSP (_Content Security Policy_). Le serveur doit générer un nombre unique chaque fois qu'il transmet une règle de sécurité. Ce nombre unique ne doit pas pouvoir être deviné, car sinon, il devient trivial d'outrepasser la règle de sécurité.
 - `title`
   - : Cet attribut indique un ensemble [de feuilles de style alternatif](/fr/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
 
@@ -90,9 +90,27 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 {{EmbedLiveSample("Une feuille de style simple", "100%", 100)}}
 
+### Utiliser `<style>` à l'intérieur de `<template>`
+
+Un élément `<style>` peut également être placé à l'intérieur d'un élément {{HTMLElement("template")}}. Les styles restent inactifs jusqu'à ce que le contenu du template soit instancié et inséré dans le document.
+
+```html
+<template id="modele-carte">
+  <style>
+    .carte {
+      border: 1px solid #cccccc;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  </style>
+
+  <div class="carte">Contenu du modèle</div>
+</template>
+```
+
 ### Utiliser plusieurs éléments `<style>`
 
-Dans cet exemple, on utilise deux éléments `<style>`, on peut voir comment les déclarations en conflit sont gérées — c'est le deuxième élément qui a la priorité si les [spécificités](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#spécificité) sont égales car les feuilles sont appliquées dans l'ordre.
+Dans cet exemple, on utilise deux éléments `<style>`, on peut voir comment les déclarations en conflit sont gérées — c'est le deuxième élément qui a la priorité si les [spécificités](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#spécificité) sont égales, car les feuilles sont appliquées dans l'ordre.
 
 ```html
 <!doctype html>
