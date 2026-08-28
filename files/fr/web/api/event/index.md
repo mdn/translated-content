@@ -2,7 +2,7 @@
 title: Event
 slug: Web/API/Event
 l10n:
-  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
+  sourceCommit: a1b98defe244f3bd4aa5087a4a20eb862b0663d9
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -16,118 +16,119 @@ Il existe de nombreux types d'évènements, dont certains utilisent d'autres int
 De nombreux éléments du DOM peuvent être configurés pour accepter (ou «&nbsp;écouter&nbsp;») ces évènements et exécuter du code en réponse afin de les traiter («&nbsp;gérer&nbsp;»). Les gestionnaires d'évènements sont généralement attachés à divers [éléments HTML](/fr/docs/Web/HTML/Reference/Elements) (tels que `<button>`, `<div>`, `<span>`, etc.) à l'aide de [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ce qui remplace généralement l'utilisation des anciens [attributs de gestion d'évènement](/fr/docs/Web/HTML/Reference/Global_attributes) en HTML. De plus, lorsqu'ils sont ajoutés correctement, ces gestionnaires peuvent aussi être détachés si besoin grâce à [`removeEventListener()`](/fr/docs/Web/API/EventTarget/removeEventListener).
 
 > [!NOTE]
-> Il est tout à fait possible d'attacher plusieurs gestionnaires d'évènement à un seul élément, y compris pour la gestion d'un évènement particulier. Ainsi, des modules de code indépendant peuvent attacher leurs gestionnaires de façon indépendante (par exemple, sur une page web, un module de publicité et un autre module d'analyse pourront tout à fait attacher des gestionnaires pour étudier la consultation d'une vidéo).
+> Il est tout à fait possible d'attacher plusieurs gestionnaires d'évènement à un seul élément, y compris pour la gestion d'un évènement particulier. Ainsi, des modules de code indépendant peuvent attacher leurs gestionnaires de façon indépendante (par exemple, sur une page web, un module de publicité et un autre module d'analyse peuvent tout à fait attacher des gestionnaires pour étudier la consultation d'une vidéo).
 
-Lorsqu'il y a de nombreux éléments imbriqués, chacun ayant ses propres gestionnaires d'évènement, le traitement des évènements peut se révéler compliqué, notamment lorsqu'un élément parent reçoit le même évènement que ses éléments enfants (par exemple pour des évènements qui se déclenchent sur la surface visuelle de l'élément enfant). Dans ce cas, l'ordre du traitement de ces évènements dépend des paramètres [de bouillonnement (_bubbling_) et de capture](/fr/docs/Learn_web_development/Core/Scripting/Events#le_bouillonnement_et_la_capture) définis sur chaque gestionnaire ainsi déclenché.
+Lorsqu'il y a de nombreux éléments imbriqués, chacun ayant ses propres gestionnaires d'évènement, le traitement des évènements peut se révéler compliqué, notamment lorsqu'un élément parent reçoit le même évènement que ses éléments enfants (par exemple pour des évènements qui se déclenchent sur la surface visuelle de l'élément enfant). Dans ce cas, l'ordre du traitement de ces évènements dépend des paramètres [de propagation et de capture](/fr/docs/Learn_web_development/Core/Scripting/Events#la_propagation_et_la_capture) définis sur chaque gestionnaire ainsi déclenché.
 
 ## Interfaces basées sur Event
 
 Voici une liste des interfaces basées sur `Event` avec un lien vers leur documentation dans la référence MDN.
 
-On notera que l'ensemble des interfaces d'évènements ont un nom qui termine par _Event_ («&nbsp;évènement&nbsp;» en anglais).
+Notez que l'ensemble des interfaces d'évènements ont un nom qui termine par _Event_ («&nbsp;évènement&nbsp;» en anglais).
 
-- {{domxref("AnimationEvent")}}
-- {{domxref("AudioProcessingEvent")}} {{Deprecated_Inline}}
-- {{domxref("BeforeUnloadEvent")}}
-- {{domxref("BlobEvent")}}
-- {{domxref("ClipboardEvent")}}
-- {{domxref("CloseEvent")}}
-- {{domxref("CompositionEvent")}}
-- {{domxref("CustomEvent")}}
-- {{domxref("DeviceMotionEvent")}}
-- {{domxref("DeviceOrientationEvent")}}
-- {{domxref("DragEvent")}}
-- {{domxref("ErrorEvent")}}
-- {{domxref("FetchEvent")}}
-- {{domxref("FocusEvent")}}
-- {{domxref("FontFaceSetLoadEvent")}}
-- {{domxref("FormDataEvent")}}
-- {{domxref("GamepadEvent")}}
-- {{domxref("HashChangeEvent")}}
-- {{domxref("HIDInputReportEvent")}}
-- {{domxref("IDBVersionChangeEvent")}}
-- {{domxref("InputEvent")}}
-- {{domxref("KeyboardEvent")}}
-- {{domxref("MediaStreamEvent")}} {{Deprecated_Inline}}
-- {{domxref("MessageEvent")}}
-- {{domxref("MouseEvent")}}
-- {{domxref("MutationEvent")}} {{Deprecated_Inline}}
-- {{domxref("OfflineAudioCompletionEvent")}}
-- {{domxref("PageTransitionEvent")}}
-- {{domxref("PaymentRequestUpdateEvent")}}
-- {{domxref("PointerEvent")}}
-- {{domxref("PopStateEvent")}}
-- {{domxref("ProgressEvent")}}
-- {{domxref("RTCDataChannelEvent")}}
-- {{domxref("RTCPeerConnectionIceEvent")}}
-- {{domxref("StorageEvent")}}
-- {{domxref("SubmitEvent")}}
-- {{domxref("TimeEvent")}}
-- {{domxref("TouchEvent")}}
-- {{domxref("TrackEvent")}}
-- {{domxref("TransitionEvent")}}
-- {{domxref("UIEvent")}}
-- {{domxref("WebGLContextEvent")}}
-- {{domxref("WheelEvent")}}
+- {{DOMxRef("AnimationEvent")}}
+- {{DOMxRef("AudioProcessingEvent")}} {{Deprecated_Inline}}
+- {{DOMxRef("BeforeUnloadEvent")}}
+- {{DOMxRef("BlobEvent")}}
+- {{DOMxRef("ClipboardChangeEvent")}}
+- {{DOMxRef("ClipboardEvent")}}
+- {{DOMxRef("CloseEvent")}}
+- {{DOMxRef("CompositionEvent")}}
+- {{DOMxRef("CustomEvent")}}
+- {{DOMxRef("DeviceMotionEvent")}}
+- {{DOMxRef("DeviceOrientationEvent")}}
+- {{DOMxRef("DragEvent")}}
+- {{DOMxRef("ErrorEvent")}}
+- {{DOMxRef("FetchEvent")}}
+- {{DOMxRef("FocusEvent")}}
+- {{DOMxRef("FontFaceSetLoadEvent")}}
+- {{DOMxRef("FormDataEvent")}}
+- {{DOMxRef("GamepadEvent")}}
+- {{DOMxRef("HashChangeEvent")}}
+- {{DOMxRef("HIDInputReportEvent")}}
+- {{DOMxRef("IDBVersionChangeEvent")}}
+- {{DOMxRef("InputEvent")}}
+- {{DOMxRef("KeyboardEvent")}}
+- {{DOMxRef("MediaStreamEvent")}} {{Deprecated_Inline}}
+- {{DOMxRef("MessageEvent")}}
+- {{DOMxRef("MouseEvent")}}
+- {{DOMxRef("MutationEvent")}} {{Deprecated_Inline}}
+- {{DOMxRef("OfflineAudioCompletionEvent")}}
+- {{DOMxRef("PageTransitionEvent")}}
+- {{DOMxRef("PaymentRequestUpdateEvent")}}
+- {{DOMxRef("PointerEvent")}}
+- {{DOMxRef("PopStateEvent")}}
+- {{DOMxRef("ProgressEvent")}}
+- {{DOMxRef("RTCDataChannelEvent")}}
+- {{DOMxRef("RTCPeerConnectionIceEvent")}}
+- {{DOMxRef("StorageEvent")}}
+- {{DOMxRef("SubmitEvent")}}
+- {{DOMxRef("TimeEvent")}}
+- {{DOMxRef("TouchEvent")}}
+- {{DOMxRef("TrackEvent")}}
+- {{DOMxRef("TransitionEvent")}}
+- {{DOMxRef("UIEvent")}}
+- {{DOMxRef("WebGLContextEvent")}}
+- {{DOMxRef("WheelEvent")}}
 
 ## Constructeur
 
-- {{domxref("Event.Event", "Event()")}}
+- {{DOMxRef("Event.Event", "Event()")}}
   - : Crée un objet `Event` et le retourne à l'appelant.
 
 ## Propriétés d'instance
 
-- {{domxref("Event.bubbles")}} {{ReadOnlyInline}}
+- {{DOMxRef("Event.bubbles")}} {{ReadOnlyInline}}
   - : Un booléen indiquant si l'évènement se propage dans le DOM.
-- {{domxref("Event.cancelable")}} {{ReadOnlyInline}}
+- {{DOMxRef("Event.cancelable")}} {{ReadOnlyInline}}
   - : Un booléen indiquant si l'évènement est annulable.
-- {{domxref("Event.composed")}} {{ReadOnlyInline}}
+- {{DOMxRef("Event.composed")}} {{ReadOnlyInline}}
   - : Un booléen indiquant si l'évènement peut se propager à travers la frontière entre le DOM d'ombre (<i lang="en">shadow DOM</i>) et le DOM classique.
-- {{domxref("Event.currentTarget")}} {{ReadOnlyInline}}
-  - : Une référence vers la cible actuellement enregistrée pour l'évènement. Il s'agit de l'objet auquel l'évènement est actuellement destiné. Cette valeur peut être modifiée lors d'un _retargeting_.
-- {{domxref("Event.defaultPrevented")}} {{ReadOnlyInline}}
-  - : Indique si l'appel à {{domxref("event.preventDefault()")}} a annulé l'évènement.
-- {{domxref("Event.eventPhase")}} {{ReadOnlyInline}}
+- {{DOMxRef("Event.currentTarget")}} {{ReadOnlyInline}}
+  - : Une référence vers la cible actuellement enregistrée pour l'évènement. Il s'agit de l'objet auquel l'évènement est actuellement destiné. Cette valeur peut être modifiée lors d'un _re-ciblage_.
+- {{DOMxRef("Event.defaultPrevented")}} {{ReadOnlyInline}}
+  - : Indique si l'appel à {{DOMxRef("event.preventDefault()")}} a annulé l'évènement.
+- {{DOMxRef("Event.eventPhase")}} {{ReadOnlyInline}}
   - : Indique quelle phase du flux d'évènement est en cours de traitement. Il s'agit de l'un des nombres suivants&nbsp;: `NONE`, `CAPTURING_PHASE`, `AT_TARGET`, `BUBBLING_PHASE`.
-- {{domxref("Event.isTrusted")}} {{ReadOnlyInline}}
-  - : Indique si l'évènement a été initié par le navigateur (après un clic utilisateur, par exemple) ou par un script (via une méthode de création d'évènement, par exemple).
-- {{domxref("Event.srcElement")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Un alias pour la propriété {{domxref("Event.target")}}. Utilisez plutôt {{domxref("Event.target")}}.
-- {{domxref("Event.target")}} {{ReadOnlyInline}}
+- {{DOMxRef("Event.isTrusted")}} {{ReadOnlyInline}}
+  - : Indique si l'évènement a été initié par le navigateur (après un clic utilisateur·ice, par exemple) ou par un script (avec une méthode de création d'évènement, par exemple).
+- {{DOMxRef("Event.srcElement")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : Un alias pour la propriété {{DOMxRef("Event.target")}}. Utilisez plutôt {{DOMxRef("Event.target")}}.
+- {{DOMxRef("Event.target")}} {{ReadOnlyInline}}
   - : Une référence vers l'objet auquel l'évènement a été initialement envoyé.
-- {{domxref("Event.timeStamp")}} {{ReadOnlyInline}}
-  - : L'instant auquel l'évènement a été créé (en millisecondes). Selon la spécification, cette valeur correspond au temps écoulé depuis l'époque Unix, mais en pratique, la définition varie selon les navigateurs. De plus, il est prévu de remplacer ce type par {{domxref("DOMHighResTimeStamp")}}.
-- {{domxref("Event.type")}} {{ReadOnlyInline}}
+- {{DOMxRef("Event.timeStamp")}} {{ReadOnlyInline}}
+  - : L'instant auquel l'évènement a été créé (en millisecondes). Selon la spécification, cette valeur correspond au temps écoulé depuis l'époque Unix, mais en pratique, la définition varie selon les navigateurs. De plus, il est prévu de remplacer ce type par {{DOMxRef("DOMHighResTimeStamp")}}.
+- {{DOMxRef("Event.type")}} {{ReadOnlyInline}}
   - : Le nom identifiant le type de l'évènement.
 
 ### Propriétés héritées et non standard
 
-- {{domxref("Event.cancelBubble")}} {{deprecated_inline}}
-  - : Un alias historique de {{domxref("Event.stopPropagation()")}} qu'il convient d'utiliser à la place. Passer sa valeur à `true` avant de quitter un gestionnaire d'évènement empêche la propagation de l'évènement.
-- {{domxref("Event.explicitOriginalTarget")}} {{non-standard_inline}} {{ReadOnlyInline}}
+- {{DOMxRef("Event.cancelBubble")}} {{Deprecated_Inline}}
+  - : Un alias historique de {{DOMxRef("Event.stopPropagation()")}} qu'il convient d'utiliser à la place. Passer sa valeur à `true` avant de quitter un gestionnaire d'évènement empêche la propagation de l'évènement.
+- {{DOMxRef("Event.explicitOriginalTarget")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : La cible originale explicite de l'évènement.
-- {{domxref("Event.originalTarget")}} {{non-standard_inline}} {{ReadOnlyInline}}
+- {{DOMxRef("Event.originalTarget")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : La cible originale de l'évènement, avant tout retargeting.
-- {{domxref("Event.returnValue")}} {{deprecated_inline}}
-  - : Propriété historique encore supportée pour garantir la compatibilité des sites existants. Utilisez plutôt {{domxref("Event.preventDefault()")}} et {{domxref("Event.defaultPrevented")}}.
-- {{domxref("Event.composed", "Event.scoped")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : Un booléen indiquant si l'évènement va se propager à travers la racine d'ombre (<i lang="en">shadow root</i>) vers le DOM standard. Utilisez plutôt {{domxref("Event.composed", "composed")}}.
+- {{DOMxRef("Event.returnValue")}} {{Deprecated_Inline}}
+  - : Propriété historique encore supportée pour garantir la compatibilité des sites existants. Utilisez plutôt {{DOMxRef("Event.preventDefault()")}} et {{DOMxRef("Event.defaultPrevented")}}.
+- {{DOMxRef("Event.composed", "Event.scoped")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : Un booléen indiquant si l'évènement va se propager à travers la racine d'ombre (<i lang="en">shadow root</i>) vers le DOM standard. Utilisez plutôt {{DOMxRef("Event.composed", "composed")}}.
 
 ## Méthodes d'instance
 
-- {{domxref("Event.composedPath()")}}
-  - : Retourne le chemin de l'évènement (un tableau d'objets sur lesquels les écouteurs seront invoqués). Cela n'inclut pas les nœuds dans les arbres d'ombre (<i lang="en">shadow trees</i>) si la racine d'ombre (<i lang="en">shadow root</i>) a été créée avec son {{domxref("ShadowRoot.mode")}} fermé.
-- {{domxref("Event.preventDefault()")}}
+- {{DOMxRef("Event.composedPath()")}}
+  - : Retourne le chemin de l'évènement (un tableau d'objets sur lesquels les écouteurs sont invoqués). Cela n'inclut pas les nœuds dans les arbres d'ombre (<i lang="en">shadow trees</i>) si la racine d'ombre (<i lang="en">shadow root</i>) a été créée avec son {{DOMxRef("ShadowRoot.mode")}} fermé.
+- {{DOMxRef("Event.preventDefault()")}}
   - : Annule l'évènement (s'il est annulable).
-- {{domxref("Event.stopImmediatePropagation()")}}
-  - : Pour cet évènement particulier, empêche tous les autres écouteurs d'être appelés. Cela inclut les écouteurs attachés au même élément ainsi que ceux attachés à des éléments qui seront parcourus plus tard (par exemple lors de la phase de capture).
-- {{domxref("Event.stopPropagation()")}}
+- {{DOMxRef("Event.stopImmediatePropagation()")}}
+  - : Pour cet évènement particulier, empêche tous les autres écouteurs d'être appelés. Cela inclut les écouteurs attachés au même élément ainsi que ceux attachés à des éléments qui sont parcourus plus tard (par exemple lors de la phase de capture).
+- {{DOMxRef("Event.stopPropagation()")}}
   - : Stoppe la propagation de l'évènement plus loin dans le DOM.
 
 ### Méthodes dépréciées
 
-- {{domxref("Event.initEvent()")}} {{deprecated_inline}}
-  - : Initialise la valeur d'un objet `Event` créé. Si l'évènement a déjà été déclenché, cette méthode ne fait rien. Utilisez plutôt le constructeur ({{domxref("Event.Event", "Event()")}}).
+- {{DOMxRef("Event.initEvent()")}} {{Deprecated_Inline}}
+  - : Initialise la valeur d'un objet `Event` créé. Si l'évènement a déjà été déclenché, cette méthode ne fait rien. Utilisez plutôt le constructeur ({{DOMxRef("Event.Event", "Event()")}}).
 
 ## Spécifications
 
@@ -142,4 +143,4 @@ On notera que l'ensemble des interfaces d'évènements ont un nom qui termine pa
 - [Référence des évènements](/fr/docs/Web/API/Document_Object_Model/Events#event_index)
 - [Apprendre&nbsp;: Introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
 - [Apprendre&nbsp;: Propagation des évènements](/fr/docs/Learn_web_development/Core/Scripting/Event_bubbling)
-- [Créer et déclencher des évènements personnalisés](/fr/docs/Web/API/Document_Object_Model/Events#créer_et_déclencher_des_événements)
+- [Créer et déclencher des évènements personnalisés](/fr/docs/Web/API/Document_Object_Model/Events#créer_et_déclencher_des_évènements)

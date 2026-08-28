@@ -3,7 +3,7 @@ title: Firefox 6 note de version pour les développeurs
 short-title: Firefox 6
 slug: Mozilla/Firefox/Releases/6
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit des informations à propos des changements qui affectent les développeur·euse·s dans cette version.
@@ -18,8 +18,8 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 - Les champs {{HTMLElement("input")}} des éléments {{HTMLElement("form")}} ne sont plus supportés par la propriété XUL [`maxwidth` <sup>(angl.)</sup>](https://web.archive.org/web/20190117013205/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Property/maxWidth), cela n'a jamais été volontaire, et est contraire à la spécification HTML. Vous devez plutôt utiliser l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size) pour définir la largeur maximum de champs de saisie.
 - Les propriétés `fillStyle` et `strokeStyle` de {{DOMxRef("CanvasRenderingContext2d")}} ({{HTMLElement("canvas")}}) utilisées pour ignorer les déchets inclus après la définition d'une couleur valide, maintenant c'est traité comme une erreur. Par exemple, «&nbsp;rouge bleu&nbsp;» est une couleur utilisée pour être traitée comme du «&nbsp;rouge&nbsp;», alors qu'elle aurait dû être ignorée.
 - La largeur et la hauteur des éléments {{HTMLElement("canvas")}} peuvent être correctement mis à 0px&nbsp;; avant, lorsque vous essayez de le faire, elles se fixaient à 300px.
-- La prise en charge de l'attribut HTML [des données personnalisées](/fr/docs/Web/HTML/Reference/Global_attributes/data-*) (`data-*`) a été ajoutée. La propriété DOM {{DOMxRef("HTMLElement/dataset", "dataset")}} permet d'y accéder.
-- Quand un élément {{HTMLElement("textarea")}} reçoit le focus, le point d'insertion de texte est désormais placé, par défaut, au début du texte plutôt qu'à la fin. Le comportement de Firefox est ainsi conforme avec les autres navigateurs.
+- La prise en charge de l'attribut HTML [des données personnalisées](/fr/docs/Web/HTML/Reference/Global_attributes/data-*) (`data-*`) a été ajoutée. La propriété DOM {{DOMxRef("HTMLElement/dataset", "dataset")}} vous permet d'y accéder.
+- Quand un élément {{HTMLElement("textarea")}} reçoit la sélection, le point d'insertion de texte est désormais placé, par défaut, au début du texte plutôt qu'à la fin. Le comportement de Firefox est ainsi conforme avec les autres navigateurs.
 
 ### CSS
 
@@ -99,8 +99,6 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 
 - [WebSockets](/fr/docs/Web/API/WebSockets_API)
   - : Pour Firefox 6, WebSockets a été mis à jour à la version 07 du protocole. De plus, l'objet `WebSocket` a été renommé en `MozWebSocket` pour l'empêcher d'être utilisé de façon incorrecte pour détecter la disponibilité des WebSockets sans préfixe.
-
-<!---->
 
 - L'analyse de l'en-tête `Content-Disposition` a été fixée afin d'interpréter correctement les antislashs des caractères ASCII. Auparavant, il été remplacé par le caractère underscore («&nbsp;\_&nbsp;»).
 - La valeur du champ du chemin de l'en-tête `Set-Cookie` est désormais correctement interprétée lors de l'utilisation de guillemets, auparavant, ils étaient considérés comme faisant partie de la chaîne de caractères du chemin d'accès à la place d'être des délimiteurs. **Ce changement peut affecter la compatibilité avec certains sites web**, les auteur·ice·s doivent vérifier leur code.

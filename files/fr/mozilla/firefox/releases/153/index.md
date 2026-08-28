@@ -120,6 +120,10 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 
   Le décodeur d'images [JPEG XL <sup>(angl.)</sup>](https://jpeg.org/jpegxl/) basé sur Rust est désormais activé par défaut dans Nightly. ([bogue Firefox 2040074 <sup>(angl.)</sup>](https://bugzil.la/2040074)).
 
+- **Les attributs HTML `headingoffset` et `headingreset`**&nbsp;: `dom.headingoffset.enabled`
+
+  L'attribut universel [`headingoffset`](/fr/docs/Web/HTML/Reference/Global_attributes/headingoffset) augmente le niveau de titre calculé des [éléments de titre](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) à l'intérieur de l'élément sur lequel il est défini, de sorte qu'un composant puisse utiliser le même balisage de titre où qu'il apparaisse dans une page. L'attribut [`headingreset`](/fr/docs/Web/HTML/Reference/Global_attributes/headingreset) empêche les décalages des éléments ancêtres de s'appliquer aux titres à l'intérieur de l'élément sur lequel il est défini. ([bogue Firefox 1974383 <sup>(angl.)</sup>](https://bugzil.la/1974383)).
+
 - **Fonctions CSS de comptage d'arbres**&nbsp;: `layout.css.tree-counting-functions.enabled`
 
   Les fonctions {{CSSxRef("sibling-count")}} et {{CSSxRef("sibling-index")}} sont désormais prises en charge. La fonction `sibling-count()` retourne le nombre d'éléments voisins ainsi que l'élément lui-même. La fonction `sibling-index()` retourne l'index de l'élément par rapport à ses voisins, en commençant à `1` et non à `0`.
