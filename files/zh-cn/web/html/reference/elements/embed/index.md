@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-[HTML](/zh-CN/docs/Web/HTML) 元素 **`<embed>`** 会在文档的指定位置嵌入外部内容。该内容由外部应用程序或其他交互内容来源（例如浏览器插件）提供。
+**`<embed>`** [HTML](/zh-CN/docs/Web/HTML) 元素会在文档的指定位置嵌入外部内容。该内容由外部应用程序或其他交互内容来源（例如浏览器插件）提供。
 
 {{InteractiveExample("HTML 演示：&lt;embed&gt;", "tabbed-standard")}}
 
@@ -28,13 +28,13 @@ l10n:
 此元素的属性包括[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `height`
-  - ：资源的显示高度，以 [CSS 像素](https://drafts.csswg.org/css-values/#px)为单位。必须为绝对值；*不允许*使用百分比。
+  - : 资源的显示高度，以 [CSS 像素](https://drafts.csswg.org/css-values/#px)为单位。必须为绝对值；*不允许*使用百分比。
 - `src`
-  - ：所嵌入资源的 URL。
+  - : 所嵌入资源的 URL。
 - `type`
-  - ：用于选择要实例化的插件的 {{glossary("MIME type", "MIME 类型")}}。
+  - : 用于选择要实例化的插件的 {{glossary("MIME type", "MIME 类型")}}。
 - `width`
-  - ：资源的显示宽度，以 [CSS 像素](https://drafts.csswg.org/css-values/#px)为单位。必须为绝对值；*不允许*使用百分比。
+  - : 资源的显示宽度，以 [CSS 像素](https://drafts.csswg.org/css-values/#px)为单位。必须为绝对值；*不允许*使用百分比。
 
 ## 使用说明
 
