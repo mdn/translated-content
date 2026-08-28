@@ -1,5 +1,5 @@
 ---
-title: "Element：focusin 事件"
+title: Element：focusin 事件
 short-title: focusin
 slug: Web/API/Element/focusin_event
 l10n:
@@ -72,7 +72,7 @@ form.addEventListener("focusout", (event) => {
 {{Specifications}}
 
 > [!NOTE]
-> _UI Events_ 规范描述的[焦点事件的触发顺序](/en-US/docs/Web/API/FocusEvent#order_of_events)与当前浏览器的实际实现不同。
+> _UI Events_ 规范描述的[焦点事件的触发顺序](/zh-CN/docs/Web/API/FocusEvent#order_of_events)与当前浏览器的实际实现不同。
 
 ## 浏览器兼容性
 
