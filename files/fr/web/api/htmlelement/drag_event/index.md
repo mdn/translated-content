@@ -3,7 +3,7 @@ title: "HTMLElement : évènement drag"
 short-title: drag
 slug: Web/API/HTMLElement/drag_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -27,13 +27,6 @@ ondrag = (event) => { }
 Un objet {{DOMxRef("DragEvent")}}. Hérite de l'objet {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("DragEvent")}}
-
-## Propriétés d'évènement
-
-_En plus des propriétés listées ci‑dessous, les propriétés de l'interface parente, {{DOMxRef("Event")}}, sont disponibles._
-
-- {{DOMxRef('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
-  - : Les données transférées lors d'une interaction de glisser‑déposer.
 
 ## Exemples
 

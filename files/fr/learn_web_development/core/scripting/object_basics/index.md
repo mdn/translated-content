@@ -1,14 +1,13 @@
 ---
 title: Les bases de JavaScript, orienté objet
 slug: Learn_web_development/Core/Scripting/Object_basics
-original_slug: Learn/JavaScript/Objects/Basics
 l10n:
-  sourceCommit: 9d3d642daf9df9ece138fa39972edc5f7d6dcd6b
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Events","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics", "Learn_web_development/Core/Scripting")}}
 
-Dans cet article, nous examinerons la syntaxe fondamentale des objets JavaScript et revisiterons certaines fonctionnalités de JavaScript que nous avons déjà vu plus tôt dans le cours, réitérant le fait que bon nombre des fonctionnalités que vous avez déjà traitées sont des objets.
+Dans cet article, nous examinons la syntaxe fondamentale des objets JavaScript et revisitons certaines fonctionnalités de JavaScript que nous avons déjà vu plus tôt dans le cours, réitérant le fait que bon nombre des fonctionnalités que vous avez déjà traitées sont des objets.
 
 <table class="standard-table">
   <tbody>
@@ -37,15 +36,15 @@ Dans cet article, nous examinerons la syntaxe fondamentale des objets JavaScript
 
 Un objet est une collection de données et/ou de fonctionnalités connexes. Ceux-ci se composent généralement de plusieurs variables et fonctions (qui sont appelées propriétés et méthodes lorsqu'elles sont à l'intérieur des objets). Passons à un exemple pour comprendre à quoi ils ressemblent.
 
-Pour commencer, faites une copie locale de notre fichier [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Il contient peu de choses : un élément {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utiliserons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cet exemple, vous devriez avoir [la console JavaScript des outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#la_console_javascript) ouverte et prête, pour y saisir des commandes.
+Pour commencer, faites une copie locale de notre fichier [`oojs.html` <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Il contient peu de choses&nbsp;: un élément HTML {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utilisons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cet exemple, vous devez avoir [la console JavaScript des outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#la_console_javascript) ouverte et prête, pour y saisir des commandes.
 
-Comme pour beaucoup de choses dans JavaScript, la création d'un objet commence souvent par définir et initialiser une variable. Essayez de saisir la ligne suivante sous le code JavaScript qui est déjà dans votre fichier, puis enregistrer et refraîchissez la page&nbsp;:
+Comme pour beaucoup de choses dans JavaScript, la création d'un objet commence souvent par définir et initialiser une variable. Essayez de saisir la ligne suivante sous le code JavaScript qui est déjà dans votre fichier, puis enregistrer et rafraîchissez la page&nbsp;:
 
 ```js
 const personne = {};
 ```
 
-Ouvrez maintenant la [console JavaScript](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console) de votre navigateur, saisissez `person` et appuyez sur <kbd>Entrée</kbd>. Vous devriez obtenir un résultat similaire à l'une des lignes ci-dessous&nbsp;:
+Ouvrez maintenant la [console JavaScript](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console) de votre navigateur, saisissez `person` et appuyez sur <kbd>Entrée</kbd>. Vous devez obtenir un résultat similaire à l'une des lignes ci-dessous&nbsp;:
 
 ```plain
 [object Object]
@@ -53,7 +52,7 @@ Object { }
 { }
 ```
 
-Félicitations, vous avez créé votre premier objet ! Mais c'est un objet vide, on ne peut pas faire grand-chose avec. Modifions notre objet pour qu'il ressemble à ceci&nbsp;:
+Félicitations, vous avez créé votre premier objet&nbsp;! Mais c'est un objet vide, on ne peut pas faire grand-chose avec. Modifions notre objet pour qu'il ressemble à ceci&nbsp;:
 
 ```js
 const personne = {
@@ -68,7 +67,7 @@ const personne = {
 };
 ```
 
-Après avoir sauvegardé et rafraîchi la page, essayez d'entrer les lignes suivantes dans le champ de saisie `input` :
+Après avoir sauvegardé et rafraîchi la page, essayez d'entrer les lignes suivantes dans le champ de saisie `input`&nbsp;:
 
 ```js
 personne.nom;
@@ -109,9 +108,9 @@ const personne = {
 };
 ```
 
-À partir de maintenant, nous utiliserons cette syntaxe plus courte.
+À partir de maintenant, nous utilisons cette syntaxe plus courte.
 
-Un objet comme celui-ci est appelé **objet littéral** — nous avons littéralement écrit le contenu de l'objet car nous en sommes venus à le créer. Ceci est différent par rapport aux objets instanciés des classes, que nous examinerons plus tard.
+Un objet comme celui-ci est appelé **objet littéral** — nous avons littéralement écrit le contenu de l'objet, car nous en sommes venus à le créer. Ceci est différent par rapport aux objets instanciés des classes, que nous examinons plus tard.
 
 Il est très courant de créer un objet à l'aide d'un littéral d'objet lorsque vous souhaitez transférer une série d'éléments de données structurés et liés d'une certaine manière, par exemple en envoyant une requête au serveur pour qu'elle soit intégrée à une base de données. L'envoi d'un seul objet est beaucoup plus efficace que l'envoi de plusieurs éléments individuellement, et il est plus facile à utiliser qu'un tableau lorsque vous souhaitez identifier des éléments individuels par leur nom.
 
@@ -119,7 +118,7 @@ Il est très courant de créer un objet à l'aide d'un littéral d'objet lorsque
 
 Ci-dessus, on accède aux membres de l'objet en utilisant la **notation avec un point**.
 
-Le nom de l'objet (`personne`) agit comme un **espace de noms** (ou _namespace_ en anglais) — il doit être entré en premier pour accéder aux membres **encapsulés** dans l'objet. Ensuite, on écrit un point, puis le membre auquel on veut accéder — que ce soit le nom d'une propriété, un élément d'un tableau, ou un appel à une méthode de l'objet. Par exemple :
+Le nom de l'objet (`personne`) agit comme un **espace de noms** (ou _namespace_ en anglais) — il doit être entré en premier pour accéder aux membres **encapsulés** dans l'objet. Ensuite, on écrit un point, puis le membre auquel on veut accéder — que ce soit le nom d'une propriété, un élément d'un tableau, ou un appel à une méthode de l'objet. Par exemple&nbsp;:
 
 ```js
 personne.age;
@@ -155,7 +154,7 @@ personne.nom.prenom;
 personne.nom.nom;
 ```
 
-Si vous procédez ainsi, vous devrez également parcourir le code de votre méthode et modifier toutes les occurrences de
+Si vous procédez ainsi, vous devez également parcourir le code de votre méthode et modifier toutes les occurrences de
 
 ```js
 nom[0];
@@ -169,7 +168,7 @@ nom.prenom;
 nom.nom;
 ```
 
-Sinon, vos méthodes ne fonctionneront plus.
+Sinon, vos méthodes ne fonctionnent plus.
 
 ## Notation avec les crochets
 
@@ -211,7 +210,7 @@ logProperty("age");
 
 ## Définir les membres d'un objet
 
-Jusqu'à présent, nous avons uniquement abordé la récupération (ou l'**obtention**) des membres d'un objet — vous pouvez également **définir** (mettre à jour) la valeur des membres d'un objet en déclarant le membre que vous souhaitez définir (à l'aide de la notation par point ou par crochet), comme ceci&nbsp;:
+Jusqu'à présent, nous avons uniquement abordé la récupération (ou **l'obtention**) des membres d'un objet — vous pouvez également **définir** (mettre à jour) la valeur des membres d'un objet en déclarant le membre que vous souhaitez définir (à l'aide de la notation par point ou par crochet), comme ceci&nbsp;:
 
 ```js
 personne.age = 45;
@@ -242,7 +241,7 @@ personne["auRevoir"]();
 // "Au revoir tout le monde!"
 ```
 
-L'un des aspects utiles de la notation entre crochets est qu'elle peut être utilisée pour définir non seulement les valeurs des membres de manière dynamique, mais aussi leurs noms. Supposons que nous souhaitions permettre aux utilisateurs de stocker des types de valeurs personnalisés dans leurs données personnelles, en saisissant le nom du membre et la valeur dans deux champs de saisie de texte. Nous pourrions obtenir ces valeurs comme suit&nbsp;:
+L'un des aspects utiles de la notation entre crochets est qu'elle peut être utilisée pour définir non seulement les valeurs des membres de manière dynamique, mais aussi leurs noms. Supposons que nous souhaitions permettre aux utilisateur·ice·s de stocker des types de valeurs personnalisés dans leurs données personnelles, en saisissant le nom du membre et la valeur dans deux champs de saisie de texte. Nous pourrions obtenir ces valeurs comme suit&nbsp;:
 
 ```js
 const monNomDeDonnee = nomInput.value;
@@ -271,9 +270,9 @@ personne.taille;
 
 L'ajout d'une propriété à un objet à l'aide de la méthode ci-dessus n'est pas possible avec la notation par points, qui n'accepte que les noms de membres littéraux, et non les valeurs de variables pointant vers un nom.
 
-## Qu'est-ce que « `this` » ?
+## Qu'est-ce que `this` ?
 
-Vous avez peut-être remarqué quelque chose d'un peu étrange dans nos méthodes. Prenons l'exemple suivant :
+Vous avez peut-être remarqué quelque chose d'un peu étrange dans nos méthodes. Prenons l'exemple suivant&nbsp;:
 
 ```js
 const personne = {
@@ -304,9 +303,9 @@ const personne2 = {
 };
 ```
 
-Dans ce cas, `personne1.salutation()` affiche «&nbsp;Bonjour ! Je m'appelle Christophe.&nbsp;»&nbsp;; `personne2.salutation()` affiche «&nbsp;Bonjour ! Je m'appelle Bruno.&nbsp;». Cela s'explique par le fait que lorsque la méthode est appelée, `this` fait référence à l'objet sur lequel la méthode est appelée, ce qui permet à la même définition de méthode de fonctionner pour plusieurs objets.
+Dans ce cas, `personne1.salutation()` affiche «&nbsp;Bonjour&nbsp;! Je m'appelle Christophe.&nbsp;»&nbsp;; `personne2.salutation()` affiche «&nbsp;Bonjour&nbsp;! Je m'appelle Bruno.&nbsp;». Cela s'explique par le fait que lorsque la méthode est appelée, `this` fait référence à l'objet sur lequel la méthode est appelée, ce qui permet à la même définition de méthode de fonctionner pour plusieurs objets.
 
-Ce n'est pas très utile lorsque vous écrivez des littéraux d'objet à la main, car l'utilisation du nom de l'objet (`personne1` et `personne2`) donne exactement le même résultat, mais cela sera essentiel lorsque nous commencerons à utiliser des **constructeurs** pour créer plusieurs objets à partir d'une seule définition d'objet, ce qui sera le sujet de la section suivante.
+Ce n'est pas très utile lorsque vous écrivez des littéraux d'objet à la main, car l'utilisation du nom de l'objet (`personne1` et `personne2`) donne exactement le même résultat, mais cela est essentiel lorsque nous commençons à utiliser des **constructeurs** pour créer plusieurs objets à partir d'une seule définition d'objet, ce qui est le sujet de la section suivante.
 
 ## Présentation des constructeurs
 
@@ -327,12 +326,12 @@ function creerPersonne(nom) {
 }
 ```
 
-Cette fonction crée et renvoie un nouvel objet à chaque fois qu'on l'appelle. L'objet aura deux membres&nbsp;:
+Cette fonction crée et retourne un nouvel objet à chaque fois qu'on l'appelle. L'objet a deux membres&nbsp;:
 
 - une propriété `nom`
 - une méthode `salutation()`.
 
-Noter que `creerPersonne()` prend un paramètre `nom` pour définir la valeur de la propriété `nom`, mais la valeur de la méthode `salutation()` sera la même pour tous les objets créés à l'aide de cette fonction. Il s'agit d'un modèle très courant pour créer des objets.
+Noter que `creerPersonne()` prend un paramètre `nom` pour définir la valeur de la propriété `nom`, mais la valeur de la méthode `salutation()` est la même pour tous les objets créés à l'aide de cette fonction. Il s'agit d'un modèle très courant pour créer des objets.
 
 Nous pouvons désormais créer autant d'objets que nous le souhaitons, en réutilisant la définition&nbsp;:
 
@@ -346,12 +345,12 @@ frank.salutation();
 // "Salut ! Je suis Frank."
 ```
 
-Cela fonctionne bien, mais c'est un peu long&nbsp;: nous devons créer un objet vide, l'initialiser et le renvoyer. Une meilleure solution consiste à utiliser un **constructeur**. Un constructeur est simplement une fonction appelée à l'aide du mot-clé {{jsxref("new")}}. Lorsque vous appelez un constructeur, celui-ci&nbsp;:
+Cela fonctionne bien, mais c'est un peu long&nbsp;: nous devons créer un objet vide, l'initialiser et le retourner. Une meilleure solution consiste à utiliser un **constructeur**. Un constructeur est simplement une fonction appelée à l'aide du mot-clé {{JSxRef("new")}}. Lorsque vous appelez un constructeur, celui-ci&nbsp;:
 
 - Crée un nouvel objet
 - Lie `this` au nouvel objet, afin que vous puissiez vous référer à `this` dans votre code constructeur
 - Exécute le code dans le constructeur
-- Renvoie le nouvel objet.
+- Retourne le nouvel objet.
 
 Par convention, les constructeurs commencent par une majuscule et sont nommés d'après le type d'objet qu'ils créent. Nous pourrions donc réécrire notre exemple comme suit&nbsp;:
 
@@ -386,7 +385,7 @@ Ainsi, lorsque vous avez utilisé des méthodes de chaîne de caractères telles
 maChaine.split(",");
 ```
 
-Vous utilisiez une méthode disponible sur un objet [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String). Chaque fois que vous créez une chaîne dans votre code, cette chaîne est automatiquement créée en tant qu'instance de `String` et dispose donc de plusieurs méthodes et propriétés communes.
+Vous utilisiez une méthode disponible sur un objet {{JSxRef("String")}}. Chaque fois que vous créez une chaîne de caractères dans votre code, cette chaîne de caractères est automatiquement créée en tant qu'instance de `String` et dispose donc de plusieurs méthodes et propriétés communes.
 
 Lorsque vous avez accédé au modèle d'objet de document à l'aide de lignes telles que celles-ci&nbsp;:
 
@@ -395,11 +394,11 @@ const maDiv = document.createElement("div");
 const maVideo = document.querySelector("video");
 ```
 
-Vous utilisez une méthode disponible dans l'instance de la classe {{domxref("Document")}}. Pour chaque page web chargée, une instance de `Document` est créée, appelée `document` et qui représente la structure entière de la page, son contenu et d'autres caractéristiques telles que son URL. Encore une fois, cela signifie qu'elle possède plusieurs méthodes/propriétés communes.
+Vous utilisez une méthode disponible dans l'instance de la classe {{DOMxRef("Document")}}. Pour chaque page web chargée, une instance de `Document` est créée, appelée `document` et qui représente la structure entière de la page, son contenu et d'autres caractéristiques telles que son URL. Encore une fois, cela signifie qu'elle possède plusieurs méthodes/propriétés communes.
 
-C'est également vrai pour beaucoup d'autres objets/API natifs que vous avez utilisé — {{jsxref("Array")}}, {{jsxref("Math")}}, etc.
+C'est également vrai pour beaucoup d'autres objets/API natifs que vous avez utilisé — {{JSxRef("Array")}}, {{JSxRef("Math")}}, etc.
 
-On notera que les objets/API natifs ne créent pas toujours automatiquement des instances d'objet. Par exemple, [l'API Notifications](/fr/docs/Web/API/Notifications_API) — qui permet aux navigateurs modernes de déclencher leurs propres notifications — vous demande d'instancier vous-même une nouvelle instance d'objet en utilisant le constructeur pour chaque notification que vous souhaitez lancer. Essayez d'entrer le code ci-dessous dans la console JavaScript&nbsp;:
+Notez que les objets/API natifs ne créent pas toujours automatiquement des instances d'objet. Par exemple, [l'API Notifications](/fr/docs/Web/API/Notifications_API) — qui permet aux navigateurs modernes de déclencher leurs propres notifications — vous demande d'instancier vous-même une nouvelle instance d'objet en utilisant le constructeur pour chaque notification que vous souhaitez lancer. Essayez d'entrer le code ci-dessous dans la console JavaScript&nbsp;:
 
 ```js
 const maNotification = new Notification("Bonjour !");
@@ -407,8 +406,8 @@ const maNotification = new Notification("Bonjour !");
 
 ## Résumé
 
-Vous devriez maintenant avoir une bonne idée de la manière dont fonctionnent les objets en JavaScript — y compris la création de vos propres objets simples. Vous devriez également comprendre que les objets sont très utiles en tant que structures permettant de stocker des données et des fonctionnalités connexes — si vous essayiez de garder une trace de toutes les propriétés et méthodes de notre objet `personne` sous forme de variables et de fonctions distinctes, cela serait inefficace et frustrant, et nous courrions le risque d'entrer en conflit avec d'autres variables et fonctions portant les mêmes noms. Les objets nous permettent de conserver les informations en toute sécurité dans leur propre package, à l'abri de tout danger.
+Vous devez maintenant avoir une bonne idée de la manière dont fonctionnent les objets en JavaScript — y compris la création de vos propres objets simples. Vous devez également comprendre que les objets sont très utiles en tant que structures permettant de stocker des données et des fonctionnalités connexes — si vous essayiez de garder une trace de toutes les propriétés et méthodes de notre objet `personne` sous forme de variables et de fonctions distinctes, c'est inefficace et frustrant, et nous courrions le risque d'entrer en conflit avec d'autres variables et fonctions portant les mêmes noms. Les objets nous permettent de conserver les informations en toute sécurité dans leur propre package, à l'abri de tout danger.
 
-Dans le prochain article, nous vous proposerons quelques tests que vous pourrez utiliser pour vérifier si vous avez bien compris et retenu toutes ces informations.
+Dans le prochain article, nous vous proposons quelques tests que vous pouvez utiliser pour vérifier si vous avez bien compris et retenu toutes ces informations.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Events","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics", "Learn_web_development/Core/Scripting")}}

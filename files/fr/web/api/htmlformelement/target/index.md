@@ -3,7 +3,7 @@ title: "HTMLFormElement : propriété target"
 short-title: target
 slug: Web/API/HTMLFormElement/target
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 3c0f6a56128e1c645e45381f0edd3d876c7816cc
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,10 +14,10 @@ La propriété **`target`** de l'interface {{DOMxRef("HTMLFormElement")}} repré
 
 Une chaîne de caractères.
 
-## Exemple
+## Exemples
 
 ```js
-myForm.target = document.frames[1].name;
+myForm.target = frames[1].name;
 ```
 
 ## Spécifications

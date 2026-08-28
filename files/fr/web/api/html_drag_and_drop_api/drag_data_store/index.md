@@ -2,7 +2,7 @@
 title: Travailler avec le stockage de données de glissement
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_data_store
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: d2bc0bbc02baaa56541a13dffe1d049f73a661fb
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -20,7 +20,7 @@ De plus, l'élément est également identifié par un [type](/fr/docs/Web/API/Da
 
 Cette liste est accessible par la propriété {{DOMxRef("DataTransfer.items")}}.
 
-L'API HTML Glisser-déposer a traversé plusieurs itérations, ce qui a entraîné deux façons coexistantes de gérer le stockage des données. Avant les interfaces `DataTransferItemList` et `DataTransferItem`, «&nbsp;l'ancienne méthode&nbsp;» utilisait les propriétés suivantes sur `DataTransfer`&nbsp;:
+L'API HTML Glisser-déposer a traversé plusieurs itérations, ce qui a entraîné deux façons coexistantes de gérer le stockage des données. Avant les interfaces `DataTransferItemList` et `DataTransferItem`, «&nbsp;l'ancienne méthode&nbsp;» utilise les propriétés suivantes sur `DataTransfer`&nbsp;:
 
 - {{DOMxRef("DataTransfer.types", "types")}}&nbsp;: contient les propriétés `type` des _éléments de texte_ dans la liste, plus la valeur `"files"` s'il y a des _éléments de fichier_.
 - {{DOMxRef("DataTransfer.setData", "setData()")}}, {{DOMxRef("DataTransfer.getData", "getData()")}}, {{DOMxRef("DataTransfer.clearData", "clearData()")}}&nbsp;: fournissent un accès aux _éléments de texte_ dans la liste en utilisant le modèle de «&nbsp;cartographie type-vers-charge utile&nbsp;».
@@ -28,7 +28,7 @@ L'API HTML Glisser-déposer a traversé plusieurs itérations, ce qui a entraîn
 
 Vous pouvez constater que les types des _éléments de fichier_ ne sont pas directement exposés. Ils sont toujours accessibles, mais uniquement par la propriété {{DOMxRef("Blob.type", "type")}} de chaque objet {{DOMxRef("File")}} dans la liste `files`, donc si vous ne pouvez pas lire les fichiers, vous ne pouvez pas non plus connaître leurs types (voir [lecture du stockage des données de glissement](#lire_le_stockage_des_données_de_glissement) pour savoir quand le stockage est lisible).
 
-Pour obtenir les fichiers et leurs types, nous recommandons d'utiliser la propriété `items` car elle fournit une interface plus flexible et cohérente. Pour les éléments de texte, vous devriez également préférer l'utilisation de la propriété `items` pour la cohérence, bien que la méthode `getData()` soit plus pratique pour accéder ou supprimer un type spécifique.
+Pour obtenir les fichiers et leurs types, nous recommandons d'utiliser la propriété `items`, car elle fournit une interface plus flexible et cohérente. Pour les éléments de texte, vous devez également préférer l'utilisation de la propriété `items` pour la cohérence, bien que la méthode `getData()` soit plus pratique pour accéder ou supprimer un type spécifique.
 
 Une autre différence clé entre les interfaces {{DOMxRef("DataTransfer")}} et {{DOMxRef("DataTransferItem")}} est que la première utilise la méthode synchrone {{DOMxRef("DataTransfer.getData","getData()")}} pour accéder à la charge utile de texte, tandis que la seconde utilise la méthode asynchrone {{DOMxRef("DataTransferItem.getAsString","getAsString()")}}.
 
@@ -67,7 +67,7 @@ p1.addEventListener("dragstart", dragstartHandler);
 On notera que lorsque l'on ajoute des données de fichier, `add()` ignore le paramètre `type` et utilise la propriété {{DOMxRef("Blob.type", "type")}} de l'objet `File`.
 
 > [!NOTE]
-> La protection de lecture/écriture est effectuée sur une base [par tâche](/fr/docs/Web/JavaScript/Reference/Execution_model#queue_de_tâches_et_boucle_dévènement), ce qui signifie que seul le _code synchrone_ à l'intérieur du gestionnaire `dragstart` peut modifier le stockage des données. Si vous essayez d'accéder au stockage des données après une opération asynchrone, vous n'aurez plus les permissions d'écriture. Par exemple, ceci ne fonctionne pas&nbsp;:
+> La protection de lecture/écriture est effectuée sur une base [par tâche](/fr/docs/Web/JavaScript/Reference/Execution_model#queue_de_tâches_et_boucle_dévènement), ce qui signifie que seul le _code synchrone_ à l'intérieur du gestionnaire `dragstart` peut modifier le stockage des données. Si vous essayez d'accéder au stockage des données après une opération asynchrone, vous n'avez plus les permissions d'écriture. Par exemple, ceci ne fonctionne pas&nbsp;:
 >
 > ```js example-bad
 > function dragstartHandler(ev) {
@@ -133,7 +133,7 @@ En dehors des évènements `dragstart` et `drop`, le stockage des données est e
 - `DataTransferItem.getAsString()` ne fait jamais appel à la fonction de rappel.
 - `DataTransferItem.getAsFile()` retourne toujours `null`.
 
-Encore une fois, la protection en lecture/écriture est effectuée sur une base [par tâche](/fr/docs/Web/JavaScript/Reference/Execution_model#queue_de_tâches_et_boucle_dévènement), ce qui signifie que seul le _code synchrone_ à l'intérieur du gestionnaire `drop` peut lire le stockage des données. Si vous essayez d'accéder au stockage des données après une opération asynchrone, vous n'aurez plus les permissions d'écriture. Par exemple, cela ne fonctionne pas&nbsp;:
+Encore une fois, la protection en lecture/écriture est effectuée sur une base [par tâche](/fr/docs/Web/JavaScript/Reference/Execution_model#queue_de_tâches_et_boucle_dévènement), ce qui signifie que seul le _code synchrone_ à l'intérieur du gestionnaire `drop` peut lire le stockage des données. Si vous essayez d'accéder au stockage des données après une opération asynchrone, vous n'avez plus les permissions d'écriture. Par exemple, cela ne fonctionne pas&nbsp;:
 
 ```js example-bad
 function getDataPromise(item) {
@@ -176,7 +176,7 @@ async function dropHandler(ev) {
 
 La spécification ne définit le comportement que pour quelques types de données, mais les navigateurs prennent parfois en charge nativement d'autres types. En général, les types sont destinés à être un _protocole_ tout comme les types MIME, et vous pouvez utiliser n'importe quel type tant que le destinataire (une autre page web, une autre partie de la même page web, ou même quelque part en dehors du navigateur) le comprend. Cette section décrit certaines conventions courantes et les comportements par défaut des navigateurs.
 
-Notez que les scénarios ci-dessous se réfèrent à _l'intention_ et non au _comportement_. Par exemple, lorsque nous disons «&nbsp;faire glisser un lien&nbsp;», l'utilisateur·ice peut ne pas faire glisser un élément `<a>` réel&nbsp;; il peut faire glisser un conteneur contenant un ou plusieurs liens, mais l'intention est de transférer le(s) lien(s) en tant que données, donc le stockage des données que vous préparez peut être le même que si l'utilisateur·ice faisait glisser un lien réel.
+Notez que les scénarios ci-dessous se réfèrent à _l'intention_ et non au _comportement_. Par exemple, lorsque nous disons «&nbsp;faire glisser un lien&nbsp;», l'utilisateur·ice peut ne pas faire glisser un élément `<a>` réel&nbsp;; il peut faire glisser un conteneur contenant un ou plusieurs liens, mais l'intention est de transférer le(s) lien(s) en tant que données, donc le stockage des données que vous préparez peut être le même que si l'utilisateur·ice fait glisser un lien réel.
 
 ### Glisser du texte
 
@@ -193,9 +193,9 @@ Dans `getData()`, `setData()` et `clearData()`, le type `Text` (insensible à la
 Par défaut, lorsqu'une sélection est glissée, les éléments de données suivants sont créés&nbsp;:
 
 - `text/plain`&nbsp;: contient le texte sélectionné. Firefox et Safari trient cet élément après `text/html`, bien que la spécification exige qu'il soit en premier.
-- `text/html`&nbsp;: contient le code HTML complet des éléments sélectionnés (avec tous les styles en ligne).
+- `text/html`&nbsp;: contient le code HTML complet des éléments sélectionnés (avec tous les styles en incise).
 
-La spécification exige également un autre élément de type `application/microdata+json`, contenant les [microdonnées](/fr/docs/Web/HTML/Guides/Microdata) extraites des éléments de la sélection glissée. Aucun navigateur n'implémente cet élément.
+La spécification exige également un autre élément de type `application/microdata+json`, contenant les [micro-données](/fr/docs/Web/HTML/Guides/Microdata) extraites des éléments de la sélection glissée. Aucun navigateur n'implémente cet élément.
 
 Lorsqu'un élément est déposé dans un champ de texte éditable, tel qu'un {{HTMLElement("textarea")}} ou un `{{HTMLElement("input/text", "&lt;input type=\"text\"&gt;")}}`, l'élément `text/plain` est copié dans le champ par défaut (sans aucun traitement d'évènement).
 
@@ -233,7 +233,7 @@ Par défaut, lorsqu'un élément HTML {{HTMLElement("a")}} est glissé, les él�
 - `text/x-moz-url-data` (seulement Firefox)&nbsp;: contient uniquement l'attribut `href`.
 - `text/x-moz-url-desc` (seulement Firefox)&nbsp;: contient uniquement le texte du lien.
 - `text/uri-list`&nbsp;: contient l'attribut `href`.
-- `text/html` (seulement Chrome et Firefox)&nbsp;: contient le code HTML complet de l'élément `<a>` (avec tous les styles en ligne).
+- `text/html` (seulement Chrome et Firefox)&nbsp;: contient le code HTML complet de l'élément `<a>` (avec tous les styles en incise).
 - `text/plain`&nbsp;: contient également l'attribut `href`. Chrome trie cet élément avant `text/uri-list`.
 
 ### Glisser des images
@@ -253,7 +253,7 @@ Par défaut, lorsqu'un élément HTML {{HTMLElement("img")}} est glissé, les é
 - `text/x-moz-url-data` (seulement Firefox)&nbsp;: contient uniquement l'attribut `src`.
 - `text/x-moz-url-desc` (seulement Firefox)&nbsp;: contient uniquement le texte alternatif (ou le `src` si le texte alternatif est vide).
 - `text/uri-list`&nbsp;: contient l'attribut `src`.
-- `text/html`&nbsp;: contient le code HTML complet de l'élément `<img>` (avec tous les styles en ligne).
+- `text/html`&nbsp;: contient le code HTML complet de l'élément `<img>` (avec tous les styles en incise).
 - `text/plain` (seulement Firefox)&nbsp;: contient l'attribut `src`.
 
 Safari crée également un élément de fichier contenant les données de l'image, avec le type MIME approprié, tel que `image/png`.
@@ -262,13 +262,13 @@ Safari crée également un élément de fichier contenant les données de l'imag
 
 Lorsque l'élément glissé est un élément arbitraire avec `draggable="true"`, les données à définir dépendent de ce que vous souhaitez transférer.
 
-Une façon courante de transférer l'élément est d'utiliser le type `text/html` contenant le code source HTML sérialisé, que le destinataire peut ensuite analyser et insérer. Par exemple, il serait approprié de définir ses données sur la valeur de la propriété {{DOMxRef("Element/outerHTML", "outerHTML")}} d'un élément. `text/xml` peut également être utilisé, mais assurez-vous que les données sont bien formées en XML.
+Une façon courante de transférer l'élément est d'utiliser le type `text/html` contenant le code source HTML sérialisé, que le destinataire peut ensuite analyser et insérer. Par exemple, il est approprié de définir ses données sur la valeur de la propriété {{DOMxRef("Element/outerHTML", "outerHTML")}} d'un élément. `text/xml` peut également être utilisé, mais assurez-vous que les données sont bien formées en XML.
 
 Vous pouvez également inclure une représentation en texte brut des données HTML ou XML en utilisant le type `text/plain`. Les données doivent être uniquement le texte sans aucune des balises ou attributs source. Par exemple&nbsp;:
 
 ```js
-event.dataTransfer.items.add("text/html", element.outerHTML);
-event.dataTransfer.items.add("text/plain", element.innerText);
+event.dataTransfer.items.add(element.outerHTML, "text/html");
+event.dataTransfer.items.add(element.innerText, "text/plain");
 ```
 
 Vous pouvez également utiliser d'autres types que vous inventez à des fins personnalisées. Efforcez-vous d'inclure toujours une alternative `text/plain`, sauf si l'objet glissé est spécifique à un site ou une application particulière. Dans ce cas, le type personnalisé garantit que les données ne peuvent pas être déposées ailleurs.
@@ -287,8 +287,8 @@ Chrome prend en charge le type non standard `DownloadURL`. La charge utile doit 
 
 ```js
 event.dataTransfer.items.add(
-  "DownloadURL",
   "image/png:example.png:data:image/png;base64,iVBORw0K...",
+  "DownloadURL",
 );
 ```
 

@@ -3,7 +3,7 @@ title: "Element : évènement transitioncancel"
 short-title: transitioncancel
 slug: Web/API/Element/transitioncancel_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: 77ea71add6054857698eb7ac1bfec8c7afe9ad4f
 ---
 
 {{APIRef}}

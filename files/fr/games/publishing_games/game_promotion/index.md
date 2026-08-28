@@ -25,7 +25,7 @@ Bien que vous puissiez créer votre site web de zéro, il existe également des 
 
 Votre présence sur les médias en ligne est très importante. Le hashtag `#gamedev` peut aider à trouver des amis et vous permettre de vous engager avec la communauté et d'aider d'autres développeur·euse·s dans le besoin. L'honnêteté est essentielle, soyez authentiques&nbsp;; personne n'aime les communiqués de presse ennuyants ni la publicité insistante. Le moment venu, le bouche-à-oreille généré par votre communauté vous aide à faire connaître votre jeu.
 
-Gardez un œil sur les joueur·euse·s qui diffusent sur YouTube et Twitch, et soyez actif·ive sur des forums comme [HTML5GameDevs.com <sup>(angl.)</sup>](https://www.html5gamedevs.com/). Partagez vos actualités et répondez aux questions afin que les gens apprécient ce que vous faites et sachent que vous êtes digne de confiance. N'oubliez pas de ne pas être trop insistant·e quand il s'agit de parler de vos jeux à tout le monde — vous n'êtes pas une publicité ambulante.
+Gardez un œil sur les joueur·se·s qui diffusent sur YouTube et Twitch, et soyez actif·ive sur des forums comme [HTML5GameDevs.com <sup>(angl.)</sup>](https://www.html5gamedevs.com/). Partagez vos actualités et répondez aux questions afin que les gens apprécient ce que vous faites et sachent que vous êtes digne de confiance. N'oubliez pas de ne pas être trop insistant·e quand il s'agit de parler de vos jeux à tout le monde — vous n'êtes pas une publicité ambulante.
 
 Faites grandir votre groupe de fans en discutant avec eux, en partageant des astuces, en offrant des remises, en remettant des prix lors de compétitions et de challenges, ou plaignez-vous simplement de la météo ou du navigateur plein de bugs avec lequel vous essayez de vous dépatouiller. Soyez cool, généreux⋅se, soyez vous-mêmes et soyez là pour les autres, et vous serez traité⋅e avec respect.
 
@@ -65,7 +65,7 @@ Les foires, salons ou expos sont une autre possibilité en matière d'évènemen
 
 ## Codes promo
 
-Si vous vendez votre jeu, intégrez-y la possibilité d'appliquer des codes promotionnels pour jouer gratuitement à votre jeu (ou au moins à une démo ou à une version limitée dans le temps), puis envoyez ce code à des journalistes, YouTubeuses et YouTubeurs, partagez-les comme récompenses dans un tournoi, etc. Si vous touchez les bonnes personnes cela vous fait une publicité gratuite auprès de milliers de joueur·euse·s&nbsp;; si vous êtes chanceux vous pouvez même obtenir un gain d'intérêt pour votre jeu qui dépasse tout le reste.
+Si vous vendez votre jeu, intégrez-y la possibilité d'appliquer des codes promotionnels pour jouer gratuitement à votre jeu (ou au moins à une démo ou à une version limitée dans le temps), puis envoyez ce code à des journalistes, YouTubeuses et YouTubeurs, partagez-les comme récompenses dans un tournoi, etc. Si vous touchez les bonnes personnes cela vous fait une publicité gratuite auprès de milliers de joueur·se·s&nbsp;; si vous êtes chanceux vous pouvez même obtenir un gain d'intérêt pour votre jeu qui dépasse tout le reste.
 
 ## Développer votre communauté
 

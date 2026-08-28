@@ -18,7 +18,7 @@ _Cette interface hérite aussi des propriétés de son parent {{DOMxRef("HTMLEle
 - {{DOMxRef("HTMLFormElement.acceptCharset")}}
   - : Une chaîne de caractères reflétant la valeur de l'attribut HTML [`accept-charset`](/fr/docs/Web/HTML/Reference/Elements/form#accept-charset) de ce formulaire.
 - {{DOMxRef("HTMLFormElement.action")}}
-  - : Une chaîne de caractères reflétant la valeur de l'attribut HTML [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) de ce formulaire, contenant l'URI d'un programme qui traite les informations soumises par le formulaire.
+  - : Une chaîne de caractères reflétant la valeur de l'attribut HTML [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) de ce formulaire, contenant l'URI d'un programme qui traite les informations envoyées par le formulaire.
 - {{DOMxRef("HTMLFormElement.autocomplete")}}
   - : Une chaîne de caractères reflétant la valeur de l'attribut HTML [`autocomplete`](/fr/docs/Web/HTML/Reference/Attributes/autocomplete) de ce formulaire, indiquant si les contrôles de ce formulaire peuvent voir leurs valeurs renseignées automatiquement par le navigateur.
 - {{DOMxRef("HTMLFormElement.encoding")}} ou {{DOMxRef("HTMLFormElement.enctype")}}
@@ -32,7 +32,7 @@ _Cette interface hérite aussi des propriétés de son parent {{DOMxRef("HTMLEle
 - {{DOMxRef("HTMLFormElement.noValidate")}}
   - : Une valeur booléenne reflétant la valeur de l'attribut HTML [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) de ce formulaire, indiquant si le formulaire ne doit pas être validé.
 - {{DOMxRef("HTMLFormElement.method")}}
-  - : Une chaîne de caractères reflétant la valeur de l'attribut HTML [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method) du formulaire, indiquant la méthode HTTP utilisée pour soumettre le formulaire. Seules des valeurs définies peuvent être utilisées.
+  - : Une chaîne de caractères reflétant la valeur de l'attribut HTML [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method) du formulaire, indiquant la méthode HTTP utilisée pour envoyer le formulaire. Seules des valeurs définies peuvent être utilisées.
 - {{DOMxRef("HTMLFormElement.rel")}}
   - : Une chaîne de caractères reflétant la valeur de l'attribut HTML [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) du formulaire, indiquant les types de liens que le formulaire crée, sous forme d'une liste de valeurs séparées par des espaces.
 - {{DOMxRef("HTMLFormElement.relList")}} {{ReadOnlyInline}}
@@ -40,7 +40,7 @@ _Cette interface hérite aussi des propriétés de son parent {{DOMxRef("HTMLEle
 - {{DOMxRef("HTMLFormElement.target")}}
   - : Une chaîne de caractères reflétant la valeur de l'attribut HTML [`target`](/fr/docs/Web/HTML/Reference/Elements/form#target) du formulaire, indiquant où afficher les résultats reçus lors de l'envoi du formulaire.
 
-Les champs nommés sont ajoutés à leur instance de formulaire propriétaire en tant que propriétés et peuvent écraser les propriétés natives si elles portent le même nom (par exemple, un formulaire avec une entrée nommée `action` verra sa propriété `action` retourner cette entrée plutôt que la valeur de l'attribut HTML [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action)).
+Les champs nommés sont ajoutés à leur instance de formulaire propriétaire en tant que propriétés et peuvent écraser les propriétés natives si elles portent le même nom (par exemple, un formulaire avec une entrée nommée `action` voit sa propriété `action` retourner cette entrée plutôt que la valeur de l'attribut HTML [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action)).
 
 ## Méthodes d'instance
 
@@ -74,18 +74,18 @@ _Cette interface hérite aussi des méthodes de son parent {{DOMxRef("HTMLElemen
 
 Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/Guides/Selectors) avec {{DOMxRef("ParentNode.querySelector", "querySelector()")}} ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{DOMxRef("Document.forms", "forms")}}.
 
-{{DOMxRef("Document.forms")}} retourne un tableau des objets `HTMLFormElement` listant chacun des formulaires de la page. Vous pouvez utiliser alors l'une des syntaxes suivantes pour obtenir un formulaire individuel :
+{{DOMxRef("Document.forms")}} retourne un tableau des objets `HTMLFormElement` listant chacun des formulaires de la page. Vous pouvez utiliser alors l'une des syntaxes suivantes pour obtenir un formulaire individuel&nbsp;:
 
 - `document.forms[index]`
-  - : retourne le formulaire à l'`index` défini dans le tableau du formulaire.
+  - : retourne le formulaire à un `index` défini dans le tableau du formulaire.
 - `document.forms[id]`
-  - : retourne le formulaire dont l'ID (_identifiant_) est `id` .
+  - : retourne le formulaire dont l'ID (_identifiant_) est `id`.
 - `document.forms[name]`
   - : retourne le formulaire dont la valeur d'attribut de {{DOMxRef("Element.name", "name")}} est `name`.
 
 ### Accès aux éléments du formulaire
 
-Vous pouvez accéder à la liste des éléments contenant des données du formulaire en examinant la propriété {{DOMxRef("HTMLFormElement.elements", "elements")}} du formulaire. Celle-ci retourne un {{DOMxRef("HTMLFormControlsCollection")}} listant tous les éléments d'entrée de données utilisateur·ice du formulaire, aussi bien ceux qui sont des descendants du `<form>` que ceux qui sont déclarés membres du formulaire via leur attribut `form`.
+Vous pouvez accéder à la liste des éléments contenant des données du formulaire en examinant la propriété {{DOMxRef("HTMLFormElement.elements", "elements")}} du formulaire. Celle-ci retourne un {{DOMxRef("HTMLFormControlsCollection")}} listant tous les éléments d'entrée de données utilisateur·ice du formulaire, aussi bien ceux qui sont des descendants du `<form>` que ceux qui sont déclarés membres du formulaire avec leur attribut `form`.
 
 Vous pouvez aussi obtenir un élément du formulaire en utilisant son attribut `name` comme clé du `form`, mais utiliser `elements` est une meilleure approche — il contient _seulement_ les éléments du formulaire et ne peut pas être confondu avec d'autres attributs du `form`.
 
@@ -95,22 +95,22 @@ Certains noms peuvent interférer avec l'accès en JavaScript aux propriétés e
 
 Par exemple&nbsp;:
 
-- `<input name="id">` prendra le pas sur `<form id="…">`. Cela signifie que `form.id` ne fera pas référence à l'identifiant du formulaire, mais à l'élément dont le nom est `"id"`. Cela vaut pour toute autre propriété de formulaire, comme `<input name="action">` ou `<input name="post">`.
-- `<input name="elements">` rendra la collection `elements` du formulaire inaccessible. La référence `form.elements` renverra désormais à l'élément individuel.
+- `<input name="id">` prend le pas sur `<form id="…">`. Cela signifie que `form.id` ne fait pas référence à l'identifiant du formulaire, mais à l'élément dont le nom est `"id"`. Cela vaut pour toute autre propriété de formulaire, comme `<input name="action">` ou `<input name="post">`.
+- `<input name="elements">` rend la collection `elements` du formulaire inaccessible. La référence `form.elements` retourne désormais à l'élément individuel.
 
 Pour éviter de tels problèmes liés aux noms d'éléments&nbsp;:
 
 - _Utilisez toujours_ la collection `elements` pour éviter toute ambiguïté entre le nom d'un élément et une propriété du formulaire.
 - _Ne jamais_ utiliser `"elements"` comme nom d'élément.
 
-Si vous n'utilisez pas JavaScript, cela ne posera pas de problème.
+Si vous n'utilisez pas JavaScript, cela ne pose pas de problème.
 
 ### Éléments considérés comme des contrôles de formulaire
 
 Les éléments qui sont inclus par `HTMLFormElement.elements` et `HTMLFormElement.length` sont&nbsp;:
 
 - {{HTMLElement("button")}} (_bouton_)
-- {{HTMLElement("fieldset")}} (\_champ_s)
+- {{HTMLElement("fieldset")}} (_groupe de champs_)
 - {{HTMLElement("input")}} (_entrée_) (à l'exception de ceux dont [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) est `"image"` omis pour des raisons historiques)
 - {{HTMLElement("object")}} (_objet_)
 - {{HTMLElement("output")}} (_sortie_)
@@ -151,7 +151,7 @@ Extraire des informations d'un élément `<form>` et définir certains de ses at
 
 ```js
 document.getElementById("info").addEventListener("click", () => {
-  // Récupère une référence au formulaire via son nom
+  // Récupère une référence au formulaire avec son nom
   const f = document.forms["formA"];
   // Les propriétés du formulaire qui nous intéressent
   const properties = [
@@ -176,7 +176,7 @@ document.getElementById("info").addEventListener("click", () => {
 });
 
 document.getElementById("set-info").addEventListener("click", (e) => {
-  // Récupère une référence au formulaire via la cible de l'évènement
+  // Récupère une référence au formulaire avec la cible de l'évènement
   // e.target est le bouton, et .form est le formulaire auquel il appartient
   const f = e.target.form;
   // L'argument doit être une référence à un élément de formulaire.

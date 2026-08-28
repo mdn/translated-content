@@ -2,7 +2,7 @@
 title: API Fetch
 slug: Web/API/Fetch_API
 l10n:
-  sourceCommit: 8c1bc8d99fc8301fbbe874f6dcf8d41a9f4fe5fb
+  sourceCommit: 75016e5d37ecff3b11de4c2ef6665178f654797e
 ---
 
 {{DefaultAPISidebar("Fetch API")}}
@@ -13,7 +13,7 @@ L'API Fetch fournit une interface pour récupérer des ressources (y compris sur
 
 L'API Fetch utilise les objets {{DOMxRef("Request")}} et {{DOMxRef("Response")}} (ainsi que d'autres éléments liés aux requêtes réseau), ainsi que des concepts associés comme CORS et la sémantique de l'en-tête HTTP Origin.
 
-Pour effectuer une requête et récupérer une ressource, utilisez la méthode {{DOMxRef("Window/fetch", "fetch()")}}. Il s'agit d'une méthode globale dans les contextes {{DOMxRef("Window")}} et {{DOMxRef("WorkerGlobalScope", "Worker")}}. Cela la rend disponible dans pratiquement tous les contextes où vous pourriez vouloir récupérer des ressources.
+Pour effectuer une requête et récupérer une ressource, utilisez la méthode {{DOMxRef("Window/fetch", "fetch()")}}. Il s'agit d'une méthode globale dans les contextes {{DOMxRef("Window")}} et {{DOMxRef("WorkerGlobalScope", "Worker")}}. Cela la rend disponible dans pratiquement tous les contextes où vous pouvez vouloir récupérer des ressources.
 
 La méthode `fetch()` prend un argument obligatoire, le chemin vers la ressource à récupérer. Elle retourne une promesse ({{JSxRef("Promise")}}) qui résout la réponse ({{DOMxRef("Response")}}) de cette requête — dès que le serveur répond avec les en-têtes — **même si la réponse du serveur est un statut d'erreur HTTP**. Vous pouvez aussi lui passer en option un objet d'options `init` comme second argument (voir {{DOMxRef("Request")}}).
 
@@ -65,3 +65,4 @@ L'API {{DOMxRef("Window/fetchLater", "fetchLater()")}} permet à un·e développ
 - [L'API Service Worker](/fr/docs/Web/API/Service_Worker_API)
 - [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
 - La référence [HTTP](/fr/docs/Web/HTTP)
+- [Accès au réseau local](/fr/docs/Web/Security/Defenses/Local_network_access)
