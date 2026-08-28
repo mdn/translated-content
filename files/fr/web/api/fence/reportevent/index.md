@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Fenced Frame API")}}
 
-La méthode **`reportEvent()`** de l'interface {{DOMxRef("Fence")}} déclenche l'envoi de données de rapport via un [beacon](/fr/docs/Web/API/Beacon_API) vers une ou plusieurs URL spécifiques enregistrées via la méthode {{DOMxRef("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} de [l'API Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr), dans le but de collecter les résultats d'enchères publicitaires.
+La méthode **`reportEvent()`** de l'interface {{DOMxRef("Fence")}} déclenche l'envoi de données de rapport avec un [signal](/fr/docs/Web/API/Beacon_API) vers une ou plusieurs URL spécifiques enregistrées avec la méthode {{DOMxRef("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} de [l'API Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr), dans le but de collecter les résultats d'enchères publicitaires.
 
 > [!NOTE]
 > {{DOMxRef("Fence.setReportEventDataForAutomaticBeacons", "setReportEventDataForAutomaticBeacons()")}} permet un envoi similaire de données de rapport, sauf que dans ce cas l'envoi est déclenché par une navigation plutôt que par un appel explicite de méthode.
