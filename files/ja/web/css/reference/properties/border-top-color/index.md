@@ -1,8 +1,9 @@
 ---
-title: border-top-color
+title: CSS `border-top-color` プロパティ
+short-title: border-top-color
 slug: Web/CSS/Reference/Properties/border-top-color
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 **`border-top-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[境界線](/ja/docs/Web/CSS/Reference/Properties/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-top")}} でも設定することができます。
@@ -67,9 +68,9 @@ border-top-color: revert-layer;
 border-top-color: unset;
 ```
 
-`border-top-color` プロパティは 1 つの値で指定します。
-
 ### 値
+
+このプロパティは 1 つの `<color>` 値で指定します。
 
 - {{cssxref("&lt;color&gt;")}}
   - : 上の境界線の色を定義します。
@@ -127,4 +128,4 @@ border-top-color: unset;
 - 境界に関する CSS 一括指定プロパティ: {{cssxref("border")}}, {{cssxref("border-top")}}, {{cssxref("border-color")}}.
 - 他の境界線の色に関する CSS プロパティ: {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}
 - 同じ境界線に適用される他の境界関連の CSS プロパティ: {{cssxref("border-top-style")}}, {{cssxref("border-top-width")}}
-- 既定値の [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) カラー値
+- デフォルト値の [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) カラー値

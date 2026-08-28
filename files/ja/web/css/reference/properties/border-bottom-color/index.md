@@ -3,7 +3,7 @@ title: CSS `border-bottom-color` プロパティ
 short-title: border-bottom-color
 slug: Web/CSS/Reference/Properties/border-bottom-color
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 **`border-bottom-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の[境界線](/ja/docs/Web/CSS/Reference/Properties/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-bottom")}} でも設定することができます。
@@ -68,9 +68,9 @@ border-bottom-color: revert-layer;
 border-bottom-color: unset;
 ```
 
-`border-bottom-color` プロパティは 1 つの値で指定します。
-
 ### 値
+
+このプロパティは 1 つの値で指定します。
 
 - {{cssxref("&lt;color&gt;")}}
   - : 下の境界線の色を定義します。
@@ -128,4 +128,4 @@ border-bottom-color: unset;
 - 境界に関する CSS 一括指定プロパティ: {{cssxref("border")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}.
 - 他の境界線の色に関する CSS プロパティ: {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}}, {{cssxref("border-left-color")}}
 - 同じ境界線に適用される他の境界関連の CSS プロパティ: {{cssxref("border-bottom-style")}}, {{cssxref("border-bottom-width")}}
-- 既定値の [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) カラー値
+- デフォルト値の [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) カラー値
