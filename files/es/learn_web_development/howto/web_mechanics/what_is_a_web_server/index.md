@@ -64,7 +64,7 @@ Técnicamente, podrías alojar todos esos archivos en tu propia computadora, per
 - Un servidor web dedicado puede tener la misma dirección IP todo el tiempo. Esto se conoce como una _dirección IP dedicada_. (No todos los {{Glossary("ISP", "ISP")}} ofrecen una dirección IP fija para las líneas domésticas.)
 - Un servidor web dedicado suele ser mantenido por un tercero.
 
-Por todas estas razones, encontrar un buen proveedor de hospedaje es una parte clave para construir tu sitio web. Examina los distintos servicios que ofrecen las empresas. Elige uno que se ajuste a tus necesidades y presupuesto. (Los servicios van desde gratuitos hasta miles de dólares al mes.) Puedes encontrar más detalles [en este artículo](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#hosting).
+Por todas estas razones, encontrar un buen proveedor de hospedaje es una parte clave para construir tu sitio web. Examina los distintos servicios que ofrecen las empresas. Elige uno que se ajuste a tus necesidades y presupuesto. (Los servicios van desde gratuitos hasta miles de dólares al mes.) Puedes encontrar más detalles [en este artículo](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#alojamiento).
 
 Una vez que tengas un servicio de hospedaje web, debes [subir tus archivos a tu servidor web](/es/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).
 
