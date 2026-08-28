@@ -3,7 +3,7 @@ title: Images, média et éléments de formulaire
 short-title: Images, média, formulaires
 slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 l10n:
-  sourceCommit: b4f137d4d70f66de2b5b979f719a4dd4229fd6e6
+  sourceCommit: 3143a6094e7b87cf1a96b61f9551fb4d95049777
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics")}}
@@ -191,7 +191,7 @@ img {
 
 ## Les éléments remplacés dans la mise en page
 
-Lorsque vous utilisez diverses techniques de mise en page CSS sur des éléments remplacés, vous constaterez peut-être qu'ils se comportent légèrement différemment des autres éléments. Par exemple, dans une mise en page en grille, les éléments sont étirés par défaut pour remplir entièrement leurs {{Glossary("grid areas", "zones de grille")}}. Les images ne s'étirent pas&nbsp;; elles sont alignées au début de leurs zones de grille.
+Lorsque vous utilisez diverses techniques de mise en page CSS sur des éléments remplacés, vous constatez peut-être qu'ils se comportent légèrement différemment des autres éléments. Par exemple, dans une mise en page en grille, les éléments sont étirés par défaut pour remplir entièrement leurs {{Glossary("grid areas", "zones de grille")}}. Les images ne s'étirent pas&nbsp;; elles sont alignées au début de leurs zones de grille.
 
 Vous pouvez voir cela dans l'exemple ci-dessous où nous avons un conteneur de grille à deux colonnes et deux lignes, qui contient quatre éléments. Tous les éléments `<div>` ont une couleur de fond et s'étirent pour remplir la ligne et la colonne. L'image, cependant, ne s'étire pas.
 
@@ -222,7 +222,7 @@ Vous pouvez voir cela dans l'exemple ci-dessous où nous avons un conteneur de g
 
 {{EmbedLiveSample("layout", "", 220)}}
 
-Vous n'aborderez la mise en page que dans un module ultérieur. Pour l'instant, gardez simplement à l'esprit que les éléments remplacés, lorsqu'ils font partie d'un système de mise en page spécifique tel que les grilles ou les boîtes flexibles, ont des comportements par défaut différents, essentiellement pour éviter qu'ils ne soient étirés de manière étrange par la mise en page.
+Vous n'abordez la mise en page que dans un module ultérieur. Pour l'instant, gardez simplement à l'esprit que les éléments remplacés, lorsqu'ils font partie d'un système de mise en page spécifique tel que les grilles ou les boîtes flexibles, ont des comportements par défaut différents, essentiellement pour éviter qu'ils ne soient étirés de manière étrange par la mise en page.
 
 ## Éléments de formulaire
 
@@ -319,7 +319,7 @@ textarea {
 
 ### Éléments de formulaire et `box-sizing`
 
-Dans différents navigateurs, les éléments de formulaire utilisent des règles de dimensionnement de boîte différentes pour différents widgets. Vous avez appris la propriété `box-sizing` dans [notre leçon sur le modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et vous pouvez utiliser cette connaissance lors du style des formulaires pour garantir une expérience cohérente lors de la définition des largeurs et des hauteurs des éléments de formulaire.
+Dans différents navigateurs, les éléments de formulaire utilisent des règles de dimensionnement de boîte différentes pour différents composants. Vous avez appris la propriété `box-sizing` dans [notre leçon sur le modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et vous pouvez utiliser cette connaissance lors du style des formulaires pour garantir une expérience cohérente lors de la définition des largeurs et des hauteurs des éléments de formulaire.
 
 Pour plus de cohérence, il est conseillé de définir les marges et les remplissages à `0` sur tous les éléments, puis de les ré-ajouter lors du style des contrôles particuliers&nbsp;:
 
@@ -372,7 +372,7 @@ textarea {
 
 Cette leçon a mis en évidence certaines des différences que vous rencontrez lors du travail avec des images, des médias et d'autres éléments inhabituels en CSS.
 
-Dans le prochain article, nous vous proposerons quelques tests que vous pourrez utiliser pour vérifier dans quelle mesure vous avez compris et retenu les informations que nous avons fournies sur la gestion des images et des éléments de formulaire en CSS.
+Dans le prochain article, nous vous proposons quelques tests que vous pouvez utiliser pour vérifier dans quelle mesure vous avez compris et retenu les informations que nous avons fournies sur la gestion des images et des éléments de formulaire en CSS.
 
 ## Voir aussi
 

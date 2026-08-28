@@ -2,7 +2,7 @@
 title: Syntaxe de base du HTML
 slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 l10n:
-  sourceCommit: d63fef1845615e13132bbbebb8723785eace208d
+  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
 ---
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}

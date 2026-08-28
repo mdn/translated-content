@@ -2,7 +2,7 @@
 title: Baseline (compatibilité)
 slug: Glossary/Baseline/Compatibility
 l10n:
-  sourceCommit: a53d32241d95d687865c6eaaf71a066eb7208faf
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 **Baseline** identifie la disponibilité des fonctionnalités de la plateforme web dans les principaux navigateurs, y compris les API, les propriétés CSS et la syntaxe JavaScript. Baseline décrit les fonctionnalités web comme étant soit largement disponibles, soit nouvellement disponibles. Les fonctionnalités qui ne répondent pas aux critères Baseline sont considérées comme ayant une disponibilité limitée.

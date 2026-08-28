@@ -3,7 +3,7 @@ title: Guide pour rédiger des exemples de code CSS
 short-title: Exemples CSS
 slug: MDN/Writing_guidelines/Code_style_guide/CSS
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 77ea71add6054857698eb7ac1bfec8c7afe9ad4f
 ---
 
 Les consignes suivantes expliquent comment rédiger des exemples de code CSS pour MDN Web Docs.
@@ -46,7 +46,7 @@ Dans le même esprit que la directive précédente, n'écrivez pas de code d'exe
 
 ### N'utilisez pas de réinitialisation
 
-Pour un contrôle maximal des CSS sur toutes les plates-formes, beaucoup de gens avaient l'habitude d'utiliser les réinitialisations CSS pour supprimer tous les styles, avant de reconstruire les choses eux-mêmes. Cette méthode a ses mérites, mais surtout dans le monde moderne, les réinitialisations CSS peuvent être excessives et entraîner beaucoup de temps supplémentaire passé à réimplémenter des choses qui n'étaient pas complètement cassées au départ, comme les marges par défaut, les styles de liste, etc.
+Pour un contrôle maximal des CSS sur toutes les plates-formes, beaucoup de gens ont l'habitude d'utiliser les réinitialisations CSS pour supprimer tous les styles, avant de reconstruire les choses eux-mêmes. Cette méthode a ses mérites, mais surtout dans le monde moderne, les réinitialisations CSS peuvent être excessives et entraîner beaucoup de temps supplémentaire passé à réimplémenter des choses qui ne sont pas complètement cassées au départ, comme les marges par défaut, les styles de liste, etc.
 
 ### Syntaxe formelle et pseudo-code
 

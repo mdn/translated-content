@@ -2,7 +2,7 @@
 title: Arrière-plans et bordures
 slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 l10n:
-  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
+  sourceCommit: 1b7c3c1e03f14c3878e4d8518b0f1a89bedfdc9c
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing", "Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
@@ -145,7 +145,7 @@ Essayez ces valeurs dans l'exemple ci-dessous. Nous avons défini la valeur sur 
 
 ### Dimensionner l'image de fond
 
-L'image _balloons.jpg_ utilisée dans l'exemple initial d'image de fond est une grande image qui a été recadrée, car elle était plus grande que l'élément dont elle est l'arrière-plan. Dans ce cas, nous pouvons utiliser la propriété {{CSSxRef("background-size")}} pour ajuster la taille de l'image afin qu'elle s'adapte à l'intérieur de l'arrière-plan.
+L'image _balloons.jpg_ utilisée dans l'exemple initial d'image de fond est une grande image qui a été recadrée, car elle est plus grande que l'élément dont elle est l'arrière-plan. Dans ce cas, nous pouvons utiliser la propriété {{CSSxRef("background-size")}} pour ajuster la taille de l'image afin qu'elle s'adapte à l'intérieur de l'arrière-plan.
 
 `background-size` peut prendre deux valeurs de longueur ({{CSSxRef("&lt;length&gt;")}}) ou pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) pour définir la taille de l'image dans les directions horizontale et verticale, ou les mots-clés suivants&nbsp;:
 
@@ -380,10 +380,113 @@ Essayons. L'exemple ci-dessous inclut deux images de fond. Essayez de modifier l
 Une autre option pour les arrière-plans consiste à définir la façon dont ils défilent lorsque le contenu défile. Cela se contrôle avec la propriété {{CSSxRef("background-attachment")}}, qui peut prendre les valeurs suivantes&nbsp;:
 
 - `scroll`&nbsp;: provoque le défilement de l'arrière-plan de l'élément lorsque la page défile. Si le contenu de l'élément défile, l'arrière-plan ne bouge pas. En pratique, l'arrière-plan est fixé à la même position sur la page, il défile donc avec la page.
-- `fixed`&nbsp;: fixe l'arrière-plan de l'élément à la fenêtre d'affichage (viewport) afin qu'il ne défile pas lorsque la page ou le contenu de l'élément défile. Il reste toujours à la même position à l'écran.
+- `fixed`&nbsp;: fixe l'arrière-plan de l'élément à la zone d'affichage (<i lang="en">viewport</i> en anglais) afin qu'il ne défile pas lorsque la page ou le contenu de l'élément défile. Il reste toujours à la même position à l'écran.
 - `local`&nbsp;: attache l'arrière-plan à l'élément sur lequel il est défini, de sorte que lorsque vous faites défiler l'élément, l'arrière-plan défile avec lui.
 
-La propriété {{CSSxRef("background-attachment")}} n'a d'effet que lorsqu'il y a du contenu à faire défiler. Nous avons donc créé une démonstration pour montrer les différences entre ces trois valeurs — regardez [background-attachment.html <sup>(angl.)</sup>](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (voir aussi le [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/tree/main/css/styling-boxes/backgrounds)).
+La propriété {{CSSxRef("background-attachment")}} n'a d'effet que lorsqu'il y a du contenu à faire défiler. Nous avons donc créé une démonstration pour montrer les différences entre ces trois valeurs&nbsp;:
+
+```html hidden live-sample___background-atachment
+<section>
+  <article class="scroll">
+    <p>
+      <code>background-attachment: scroll</code> entraîne le défilement de
+      l'arrière-plan de l'élément lorsque la page défile. Si le contenu de
+      l'élément défile, l'arrière-plan ne bouge pas.
+    </p>
+
+    <pre></pre>
+  </article>
+
+  <article class="fixed">
+    <p>
+      <code>background-attachment: fixed</code> fixe l'arrière-plan de l'élément
+      à la zone d'affichage afin qu'il ne défile pas lorsque la page ou le
+      contenu de l'élément défile. Il reste toujours à la même position à
+      l'écran.
+    </p>
+
+    <pre></pre>
+  </article>
+
+  <article class="local">
+    <p>
+      <code>background-attachment: local</code> attache l'arrière-plan à
+      l'élément sur lequel il est défini, de sorte que lorsque vous faites
+      défiler l'élément, l'arrière-plan défile avec lui.
+    </p>
+
+    <pre></pre>
+  </article>
+</section>
+```
+
+```css hidden live-sample___background-atachment
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+body {
+  padding: 1em;
+}
+
+html {
+  background-color: yellow;
+  font-family: sans-serif;
+}
+
+body {
+  height: 2000px;
+}
+
+p {
+  padding: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+section {
+  display: flex;
+  gap: 10px;
+}
+
+article {
+  flex: 1;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/grapefruit-slice.jpg);
+  background-size: 400px 400px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 1%;
+  overflow: auto;
+}
+
+article pre {
+  height: 800px;
+}
+
+.fixed {
+  background-attachment: fixed;
+}
+
+.scroll {
+  background-attachment: scroll;
+}
+
+.local {
+  background-attachment: local;
+}
+```
+
+{{EmbedLiveSample("background-attachment", "100%", 350)}}
+
+Essayez de faire défiler l'ensemble de l'exemple intégré, puis les conteneurs individuels, et observez les différences de comportement des arrière-plans des conteneurs.
 
 ## Utiliser la propriété raccourcie `background`
 
@@ -553,6 +656,6 @@ Nous avons défini les quatre coins dans l'exemple ci-dessous, puis modifié les
 
 Comme vous pouvez le constater, l'ajout d'un arrière-plan ou d'une bordure à une boîte n'est pas une mince affaire. N'hésitez pas à explorer les différentes pages de propriétés si vous souhaitez en savoir plus sur l'une des fonctionnalités abordées ici. Presque toutes les pages de MDN proposent des exemples que vous pouvez tester pour approfondir vos connaissances.
 
-Dans le prochain article, nous vous proposerons quelques exercices qui vous permettent de vérifier si vous avez bien compris et assimilé les informations que nous vous avons fournies sur la mise en forme des arrière-plans et des bordures.
+Dans le prochain article, nous vous proposons quelques exercices qui vous permettent de vérifier si vous avez bien compris et assimilé les informations que nous vous avons fournies sur la mise en forme des arrière-plans et des bordures.
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing", "Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}

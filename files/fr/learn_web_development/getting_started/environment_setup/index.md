@@ -2,7 +2,7 @@
 title: Configuration de l'environnement
 slug: Learn_web_development/Getting_started/Environment_setup
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
 ---
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started")}}
@@ -19,8 +19,8 @@ Ce module ne suppose aucune connaissance technique préalable, au-delà de l'uti
 
 Si vous souhaitez revoir ces bases, nous vous recommandons les ressources suivantes selon votre système d'exploitation&nbsp;:
 
-- [Aide et apprentissage Windows](https://support.microsoft.com/fr-FR/windows), Microsoft (2024)
-- [Guide de l'utilisateur macOS](https://support.apple.com/fr-fr/guide/mac-help/welcome/mac), Apple (2024)
+- [Aide et apprentissage Windows](https://support.microsoft.com/fr-FR/windows/), Microsoft (2024)
+- [Guide de l'utilisateur·ice macOS](https://support.apple.com/fr-fr/guide/mac-help/welcome/mac), Apple (2024)
 - [Documentation officielle Ubuntu <sup>(angl.)</sup>](https://help.ubuntu.com/), ubuntu.com (2024)
 
 ## Tutoriels

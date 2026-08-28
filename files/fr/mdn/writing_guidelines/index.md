@@ -2,7 +2,7 @@
 title: Règles d'écriture
 slug: MDN/Writing_guidelines
 l10n:
-  sourceCommit: ca0b474bb2e153ce72718cb304306e540065a888
+  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
 MDN Web Docs est un projet open source. Les sections ci-dessous décrivent nos règles pour _ce que_ nous documentons et _comment_ nous le faisons sur MDN Web Docs. Pour en savoir plus sur _comment contribuer_, consultez nos [règles de contribution](/fr/docs/MDN/Community).

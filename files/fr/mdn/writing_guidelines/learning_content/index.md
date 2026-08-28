@@ -3,7 +3,7 @@ title: Règles de rédaction pour l'apprentissage du développement web
 short-title: Contenu d'apprentissage
 slug: MDN/Writing_guidelines/Learning_content
 l10n:
-  sourceCommit: a1ac64fa4da965d2a152f08221b1a9aed638fd16
+  sourceCommit: 3143a6094e7b87cf1a96b61f9551fb4d95049777
 ---
 
 La section [Apprendre le développement web](/fr/docs/Learn_web_development) de MDN s'adresse spécifiquement aux personnes qui apprennent les bases du développement web et, à ce titre, nécessite une approche différente du reste du contenu MDN. Cet article fournit des règles pour rédiger du contenu d'apprentissage.
@@ -24,7 +24,7 @@ En conséquence, nous visons à limiter strictement le périmètre de _Apprendre
 
 _Apprendre_ n'est pas destiné à accueillir sur MDN du contenu introductif sur _tous_ les sujets. Cela signifie que les sujets de niche comme MathML et les jeux web, ainsi que les sujets avancés ou spécialisés comme les expressions régulières, les tests de performance, WebRTC et WebGPU, n'ont pas leur place dans _Apprendre_.
 
-Si vous ne voyez pas un sujet traité dans _Apprendre_ et que vous pensez qu'il devrait l'être, ne l'ajoutez pas directement&nbsp;: discutez-en d'abord avec nous (voir [Suggérer du contenu](/fr/docs/MDN/Writing_guidelines/What_we_write#suggestion_de_contenus)).
+Si vous ne voyez pas un sujet traité dans _Apprendre_ et que vous pensez qu'il doit l'être, ne l'ajoutez pas directement&nbsp;: discutez-en d'abord avec nous (voir [Suggérer du contenu](/fr/docs/MDN/Writing_guidelines/What_we_write#suggestion_de_contenus)).
 
 ## Approche
 
@@ -43,8 +43,8 @@ Il existe cependant quelques différences&nbsp;:
   ```
 
 - **Défis**&nbsp;: Le contenu _Apprendre_ inclut régulièrement des défis pour vérifier que le·la lecteur·ice a bien compris les sujets abordés avant de passer à l'article suivant. Ils sont actuellement rédigés selon plusieurs styles, voir par exemple [Défi&nbsp;: Structurer une page de contenu](/fr/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content) et [Testez vos compétences&nbsp;: images HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images), mais nous comptons améliorer la cohérence et l'expérience de ces défis à l'avenir.
-- **Densité et exhaustivité**&nbsp;: Le contenu MDN est généralement reconnu pour son exhaustivité. Le contenu _Apprendre_ n'est volontairement pas aussi complet que le reste de MDN. Il est moins dense et plus accessible, pour permettre aux apprenant·e·s d'acquérir des compétences utiles et de progresser régulièrement sans se sentir submergé·e·s. Ils pourront approfondir plus tard. Le contenu _Apprendre_ peut omettre des détails pour offrir une expérience d'apprentissage plus confortable, à condition de ne rien enseigner de trompeur ou de mauvaise pratique.
-- **Objectifs d'apprentissage stables**&nbsp;: Les objectifs d'apprentissage en haut de chaque tutoriel résument ce que chaque tutoriel enseigne, et ensemble, ils forment un programme structuré pour le développement front-end. Il est essentiel que les objectifs d'apprentissage et le contenu enseigné restent stables et synchronisés, sinon le contenu ne peut pas servir de base fiable à un apprentissage formel (cours, certifications, etc.). Les changements d'objectifs doivent donc être rares et motivés. Si vous essayez d'ajouter du contenu qui n'est pas couvert par les objectifs associés (ou inversement), votre pull request sera fermée. [Faites une suggestion](/fr/docs/MDN/Writing_guidelines/What_we_write#suggestion_de_contenus) d'abord.
+- **Densité et exhaustivité**&nbsp;: Le contenu MDN est généralement reconnu pour son exhaustivité. Le contenu _Apprendre_ n'est volontairement pas aussi complet que le reste de MDN. Il est moins dense et plus accessible, pour permettre aux apprenant·e·s d'acquérir des compétences utiles et de progresser régulièrement sans se sentir submergé·e·s. Ils peuvent approfondir plus tard. Le contenu _Apprendre_ peut omettre des détails pour offrir une expérience d'apprentissage plus confortable, à condition de ne rien enseigner de trompeur ou de mauvaise pratique.
+- **Objectifs d'apprentissage stables**&nbsp;: Les objectifs d'apprentissage en haut de chaque tutoriel résument ce que chaque tutoriel enseigne, et ensemble, ils forment un programme structuré pour le développement front-end. Il est essentiel que les objectifs d'apprentissage et le contenu enseigné restent stables et synchronisés, sinon le contenu ne peut pas servir de base fiable à un apprentissage formel (cours, certifications, etc.). Les changements d'objectifs doivent donc être rares et motivés. Si vous essayez d'ajouter du contenu qui n'est pas couvert par les objectifs associés (ou inversement), votre pull request est fermée. [Faites une suggestion](/fr/docs/MDN/Writing_guidelines/What_we_write#suggestion_de_contenus) d'abord.
 
 > [!NOTE]
 > Nous tenons un [journal des modifications](/fr/docs/Learn_web_development/Changelog) qui détaille tout changement significatif apporté aux objectifs d'apprentissage, afin que les enseignant·e·s puissent maintenir à jour leurs ressources basées sur la section MDN _Apprendre_.
@@ -59,13 +59,13 @@ Les objectifs de ces liens partenaires sont&nbsp;:
 
 - Fournir un accès à du contenu complémentaire qui prolonge ce qui est enseigné sur nos pages.
 - Offrir des expériences d'apprentissage multimédia (vidéos, diaporamas, contenus interactifs) que l'équipe MDN n'a pas les moyens de produire. MDN est centré sur le texte, mais les utilisateur·ice·s apprécient parfois d'autres approches.
-- Générer des revenus via des liens affiliés vers du contenu payant, que nous pouvons réinvestir pour améliorer MDN.
+- Générer des revenus avec des liens affiliés vers du contenu payant, que nous pouvons réinvestir pour améliorer MDN.
 
 Cependant, nous&nbsp;:
 
-- N'ajouterons ces liens que s'ils sont réellement utiles et ne compromettent pas l'intégrité du contenu MDN.
-- Veillerons toujours à proposer une option gratuite à côté de tout contenu payant. Dans de nombreux cas, nous avons convaincu nos partenaires de rendre gratuit du contenu auparavant payant.
-- Marquerons clairement le contenu partenaire avec la mention «&nbsp;Partenaire d'apprentissage MDN&nbsp;», pour bien les distinguer des autres liens.
+- N'ajoutons ces liens que s'ils sont réellement utiles et ne compromettent pas l'intégrité du contenu MDN.
+- Veillons toujours à proposer une option gratuite à côté de tout contenu payant. Dans de nombreux cas, nous avons convaincu nos partenaires de rendre gratuit du contenu auparavant payant.
+- Marquons clairement le contenu partenaire avec la mention «&nbsp;Partenaire d'apprentissage MDN&nbsp;», pour bien les distinguer des autres liens.
 
 ### Ordre des liens «&nbsp;Voir aussi&nbsp;»
 

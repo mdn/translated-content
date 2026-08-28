@@ -2,15 +2,15 @@
 title: Trouver un emploi
 slug: Learn_web_development/Getting_started/Soft_skills/Finding_a_job
 l10n:
-  sourceCommit: 6b8cc29eba06c8f83bbd7b7db3acf78edfe308e8
+  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}
 
-Les entretiens d'embauche techniques peuvent être très exigeants, et certains ont des attentes très spécifiques. Trouver les bons emplois auxquels postuler peut déjà être un défi&nbsp;! Cet article propose quelques conseils et ressources pour vous aider dans le processus, de la recherche d'offres à la réussite des entretiens. Le processus décrit ci-dessous ne convient pas forcément à tout le monde tel quel&nbsp;: vous trouverez peut-être qu'une approche ou un ordre légèrement différent vous convient mieux — mais la plupart y trouvent des éléments utiles.
+Les entretiens d'embauche techniques peuvent être très exigeants, et certains ont des attentes très spécifiques. Trouver les bons emplois auxquels postuler peut déjà être un défi&nbsp;! Cet article propose quelques conseils et ressources pour vous aider dans le processus, de la recherche d'offres à la réussite des entretiens. Le processus décrit ci-dessous ne convient pas forcément à tout le monde tel quel&nbsp;: vous trouvez peut-être qu'une approche ou un ordre légèrement différent vous convient mieux — mais la plupart y trouvent des éléments utiles.
 
 > [!NOTE]
-> Vous n'avez peut-être même pas envie de réfléchir à l'emploi que vous souhaitez pour l'instant&nbsp;; vous voulez peut-être simplement vous concentrer sur l'apprentissage du code. C'est très bien&nbsp;: vous pouvez toujours revenir à cet article plus tard, quand le moment sera venu.
+> Vous n'avez peut-être même pas envie de réfléchir à l'emploi que vous souhaitez pour l'instant&nbsp;; vous voulez peut-être simplement vous concentrer sur l'apprentissage du code. C'est très bien&nbsp;: vous pouvez toujours revenir à cet article plus tard, quand le moment est venu.
 
 <table>
   <tbody>
@@ -173,17 +173,17 @@ Voyons maintenant le processus de candidature à un emploi.
 Il existe différentes façons d'aborder la recherche d'emploi, et une combinaison de plusieurs méthodes fonctionne souvent le mieux&nbsp;:
 
 - Inscrivez-vous sur des sites où les offres d'emploi sont publiées, comme LinkedIn (il existe aussi des sites spécifiques à votre région) et choisissez de recevoir régulièrement des listes d'offres disponibles.
-- Rendez-vous sur vos [réseaux communautaires](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#rejoindre_un_réseau_communautaire), cherchez des annonces d'emploi et demandez à vos contacts s'ils connaissent des offres qui pourraient vous intéresser.
+- Rendez-vous sur vos [réseaux communautaires](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#rejoindre_un_réseau_communautaire), cherchez des annonces d'emploi et demandez à vos contacts s'ils connaissent des offres qui peuvent vous intéresser.
 - Renseignez-vous sur les entreprises pour lesquelles vous aimeriez travailler, consultez leurs pages d'offres et voyez ce qui est proposé.
 - Participez à des évènements de réseautage et à des salons de l'emploi pour rencontrer des employeurs potentiels.
 
-Les critères que vous avez définis dans la section [«&nbsp;Déterminer le type d'emploi souhaité&nbsp;»](#déterminer_le_type_demploi_souhaité) devraient vous aider à cibler les entreprises et les postes qui vous correspondent le mieux.
+Les critères que vous avez définis dans la section [«&nbsp;Déterminer le type d'emploi souhaité&nbsp;»](#déterminer_le_type_demploi_souhaité) doivent vous aider à cibler les entreprises et les postes qui vous correspondent le mieux.
 
 ### Avant de postuler
 
 Avant de commencer à postuler, voici quelques étapes utiles pour vous préparer&nbsp;:
 
-- Vérifiez la description du poste pour vous assurer qu'il vous correspond. Par exemple, il zqr inutile de postuler à un poste qui exige de travailler à temps plein dans un bureau en Californie si vous vivez en France et ne souhaitez pas déménager. De même, vous n'avez pas l'expérience requise pour un poste de développeur·euse web senior si vous n'apprenez JavaScript que depuis 3 mois.
+- Vérifiez la description du poste pour vous assurer qu'il vous correspond. Par exemple, il est inutile de postuler à un poste qui exige de travailler à temps plein dans un bureau en Californie si vous vivez en France et ne souhaitez pas déménager. De même, vous n'avez pas l'expérience requise pour un poste de développeur·euse web senior si vous n'apprenez JavaScript que depuis 3 mois.
   > [!NOTE]
   > Si vous ne savez pas si vous devez postuler à un poste, ou si vous souhaitez savoir si l'entreprise propose d'autres postes plus adaptés, trouvez les coordonnées du·de la recruteur·euse et posez-lui la question. Cette personne peut vous être utile plus tard, même si ce n'est pas le cas maintenant.
 - Essayez de trouver des contacts qui travaillent déjà dans l'entreprise, par exemple avec votre réseau communautaire ou sur LinkedIn, et engagez la conversation avec eux. Demandez-leur comment c'est de travailler dans cette entreprise et s'il y a des éléments spécifiques à connaître pour le poste. Si vous n'êtes pas adapté·e à ce poste, demandez s'il y a d'autres postes plus adaptés à venir prochainement. Évitez de contacter trop de personnes dans la même entreprise&nbsp;: choisissez plutôt une ou deux personnes qui semblent les plus proches du poste visé.
@@ -203,7 +203,7 @@ Avant tout&nbsp;:
 
 Toutes les candidatures ne demandent pas les mêmes éléments&nbsp;; il vous faut probablement&nbsp;:
 
-- Remplir des informations dans un formulaire en ligne. Rédigez vos réponses localement (par exemple dans VSCode) ou dans un document en ligne (par exemple un fichier Google Docs) avant de les copier dans le formulaire, au cas où un problème (plantage du navigateur, etc.) vous ferait perdre votre travail. Cela peut vous faire gagner beaucoup de temps et facilite la relecture ou les retours si vous partagez le texte ailleurs.
+- Remplir des informations dans un formulaire en ligne. Rédigez vos réponses localement (par exemple dans VSCode) ou dans un document en ligne (par exemple un fichier Google Docs) avant de les copier dans le formulaire, au cas où un problème (plantage du navigateur, etc.) vous fait perdre votre travail. Cela peut vous faire gagner beaucoup de temps et facilite la relecture ou les retours si vous partagez le texte ailleurs.
 - Téléversez votre CV.
 - Rédiger et envoyer une lettre de motivation. Il existe de nombreux guides pour rédiger une lettre efficace, mais en général, elle doit expliquer pourquoi&nbsp;:
   - Vous souhaitez travailler pour l'entreprise.
@@ -255,7 +255,7 @@ Une fois que l'entreprise a étudié votre candidature et vous considère comme 
 
 À ce stade, soyez sympathique et ouvert·e. Mais ne parlez pas trop&nbsp;: restez naturel·le et laissez le·la recruteur·euse guider la conversation. Indiquez vos disponibilités pour les prochains entretiens, soyez aussi flexible que possible et prêt·e à adapter votre emploi du temps.
 
-Ne soyez pas trop confiant·e&nbsp;: vous ne savez pas à l'avance quelles questions vous seront posées à ce stade. Prenez ce premier entretien aussi au sérieux que les suivants.
+Ne soyez pas trop confiant·e&nbsp;: vous ne savez pas à l'avance quelles questions vous sont posées à ce stade. Prenez ce premier entretien aussi au sérieux que les suivants.
 
 ### L'entretien principal
 
@@ -263,7 +263,7 @@ En général, la majeure partie du processus consiste en un ou plusieurs entreti
 
 - Il peut n'y avoir qu'un seul entretien principal, mais il est plus courant d'en avoir plusieurs, chacun testant un aspect différent du poste (travail technique, travail en équipe, organisation, documentation/communication, gestion de conflit, etc.).
 - Les entretiens peuvent se faire avec une seule personne ou plusieurs (entretien en panel).
-- Certains entretiens sont plus exploratoires ou conceptuels («&nbsp;décrivez le processus que vous utiliseriez pour livrer x&nbsp;», «&nbsp;quels sont selon vous les principaux problèmes de cette solution&nbsp;»), d'autres sont plus techniques ou pratiques («&nbsp;écrivez un programme JavaScript qui résout ce problème&nbsp;»).
+- Certains entretiens sont plus exploratoires ou conceptuels («&nbsp;décrivez le processus que vous utilisez pour livrer x&nbsp;», «&nbsp;quels sont selon vous les principaux problèmes de cette solution&nbsp;»), d'autres sont plus techniques ou pratiques («&nbsp;écrivez un programme JavaScript qui résout ce problème&nbsp;»).
 
 #### Questions basées sur l'expérience
 

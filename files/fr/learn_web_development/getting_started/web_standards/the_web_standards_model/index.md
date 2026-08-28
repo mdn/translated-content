@@ -2,7 +2,7 @@
 title: Le modèle des normes web
 slug: Learn_web_development/Getting_started/Web_standards/The_web_standards_model
 l10n:
-  sourceCommit: fd2083c0166280bd96e1ab5f0a96fc8f90ceb3eb
+  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Web_standards")}}
@@ -34,13 +34,13 @@ Cet article fournit des informations utiles sur le Web et les normes du Web&nbsp
 
 ## Brève histoire du Web
 
-À la fin des années 1960, l'armée américaine a développé un réseau de communication appelé {{Glossary("ARPANET")}}. Celui-ci peut être considéré comme un précurseur de **l'internet**, car il fonctionnait sur le principe de la [commutation de paquets](https://fr.wikipedia.org/wiki/Commutation_de_paquets) et a vu la première mise en œuvre de la suite de protocoles [TCP/IP](https://fr.wikipedia.org/wiki/Suite_des_protocoles_Internet). Ces deux technologies constituent la base de l'infrastructure sur laquelle repose l'internet.
+À la fin des années 1960, l'armée américaine a développé un réseau de communication appelé {{Glossary("ARPANET")}}. Celui-ci peut être considéré comme un précurseur de **l'internet**, car il fonctionne sur le principe de la [commutation de paquets](https://fr.wikipedia.org/wiki/Commutation_de_paquets) et a vu la première mise en œuvre de la suite de protocoles [TCP/IP](https://fr.wikipedia.org/wiki/Suite_des_protocoles_Internet). Ces deux technologies constituent la base de l'infrastructure sur laquelle repose l'internet.
 
-En 1980, [Tim Berners-Lee](https://fr.wikipedia.org/wiki/Tim_Berners-Lee) (souvent appelé TimBL) a écrit un programme de prise de notes appelé ENQUIRE, qui introduisait le concept de liens entre différents nœuds. Cela vous rappelle quelque chose&nbsp;?
+En 1980, [Tim Berners-Lee](https://fr.wikipedia.org/wiki/Tim_Berners-Lee) (souvent appelé TimBL) a écrit un programme de prise de notes appelé ENQUIRE, qui introduise le concept de liens entre différents nœuds. Cela vous rappelle quelque chose&nbsp;?
 
 En 1989, TimBL a rédigé [Information Management&nbsp;: A Proposal <sup>(angl.)</sup>](https://www.w3.org/History/1989/proposal.html) et HyperText au CERN&nbsp;: ces deux publications ont posé les bases du fonctionnement du Web. Elles ont suscité un certain intérêt, suffisant pour convaincre les supérieurs de TimBL de le laisser créer un système hypertexte mondial.
 
-En 1990-91, TimBL avait créé tout ce qu'il fallait pour faire fonctionner la première version du **World Wide Web** (généralement appelé le **Web**) — [HTTP](/fr/docs/Web/HTTP), [HTML](/fr/docs/Web/HTML), le premier navigateur web, appelé [WorldWideWeb](<https://fr.wikipedia.org/wiki/WorldWideWeb_(navigateur)>), un serveur web et quelques pages web à consulter.
+En 1990-91, TimBL a créé tout ce qu'il faut pour faire fonctionner la première version du **World Wide Web** (généralement appelé le **Web**) — [HTTP](/fr/docs/Web/HTTP), [HTML](/fr/docs/Web/HTML), le premier navigateur web, appelé [WorldWideWeb](<https://fr.wikipedia.org/wiki/WorldWideWeb_(navigateur)>), un serveur web et quelques pages web à consulter.
 
 > [!NOTE]
 > On utilise parfois «&nbsp;le Web&nbsp;» et «&nbsp;internet&nbsp;» de façon interchangeable, mais ce sont deux choses différentes. Internet est l'infrastructure qui permet de transporter l'information dans le monde entier entre différents serveurs et clients, tandis que le Web est un système construit au-dessus d'internet. Le Web définit les types d'information (contenu et code) qui sont transportés par internet et les protocoles de communication qui gèrent ce transport.
@@ -102,7 +102,7 @@ Voyons chacun de ces points plus en détail.
 
 ### Normes « ouvertes »
 
-L'un des aspects clés des normes du Web, sur lequel TimBL et le W3C se sont mis d'accord dès le début, est que le Web (et les technologies du Web) doit être **ouvert**. Cela signifie qu'elles sont libres de contribuer et d'utiliser, et ne sont pas entravées par des brevets ou des licences. C'est important — si une technologie du Web dépend de technologies brevetées ou sous licence pour fonctionner, le·la propriétaire du brevet peut alors facturer aux éditeur·ice·s de navigateurs qui l'implémentent des montants potentiellement importants, et ces coûts seraient alors répercutés sur les utilisateur·ice·s des navigateurs.
+L'un des aspects clés des normes du Web, sur lequel TimBL et le W3C se sont mis d'accord dès le début, est que le Web (et les technologies du Web) doit être **ouvert**. Cela signifie qu'elles sont libres de contribuer et d'utiliser, et ne sont pas entravées par des brevets ou des licences. C'est important — si une technologie du Web dépend de technologies brevetées ou sous licence pour fonctionner, le·la propriétaire du brevet peut alors facturer aux éditeur·ice·s de navigateurs qui l'implémentent des montants potentiellement importants, et ces coûts sont alors répercutés sur les utilisateur·ice·s des navigateurs.
 
 De plus, parce que les technologies du Web sont créées ouvertement, en collaboration entre de nombreuses entreprises différentes, aucune entreprise ne peut les contrôler, ce qui est une très bonne chose. Vous ne voulez pas qu'une seule entreprise décide soudainement de mettre tout le Web derrière un mur de paiement (<i lang="en">paywall</i> en anglais), ou de sortir une nouvelle version de HTML que tout le monde doit acheter pour continuer à créer des sites, ou pire encore, décide de ne plus s'y intéresser et de tout arrêter.
 
@@ -116,15 +116,15 @@ Le Web et les navigateurs web sont fondamentalement conçus pour que le contenu 
 - Les personnes malvoyantes peuvent agrandir le contenu, ou utiliser un programme appelé **lecteur d'écran** pour lire le contenu à voix haute et décrire les contrôles de façon compréhensible.
 
 > [!NOTE]
-> Vous en apprendrez plus sur [l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility) plus loin dans le parcours d'apprentissage.
+> Vous en apprenez plus sur [l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility) plus loin dans le parcours d'apprentissage.
 
 De plus, les technologies du Web sont conçues pour être **interopérables**. Parce qu'elles sont implémentées selon des normes publiées, les navigateurs doivent fournir le même rendu pour une même entrée (par exemple, du code HTML, CSS ou JS)&nbsp;: autrement dit, un site web doit fonctionner de façon cohérente sur plusieurs navigateurs.
 
 ### Ne pas casser le web
 
-Une autre expression que vous entendrez à propos des normes ouvertes du Web est «&nbsp;ne pas casser le web&nbsp;». L'idée est que toute nouvelle technologie web doit être rétrocompatible avec ce qui existait auparavant, afin que les sites existants continuent de fonctionner comme avant.
+Une autre expression que vous entendez à propos des normes ouvertes du Web est «&nbsp;ne pas casser le web&nbsp;». L'idée est que toute nouvelle technologie web doit être rétrocompatible avec ce qui existe auparavant, afin que les sites existants continuent de fonctionner comme avant.
 
-Les éditeurs de navigateurs doivent pouvoir implémenter de nouvelles technologies web sans provoquer de différences de rendu ou de fonctionnement qui pousseraient les utilisateur·ice·s à penser qu'un site est cassé et à essayer un autre navigateur.
+Les éditeurs de navigateurs doivent pouvoir implémenter de nouvelles technologies web sans provoquer de différences de rendu ou de fonctionnement qui poussent les utilisateur·ice·s à penser qu'un site est cassé et à essayer un autre navigateur.
 
 ## Panorama des technologies web modernes
 
@@ -132,12 +132,12 @@ Il existe un certain nombre de technologies à apprendre si vous souhaitez deven
 
 ### HTML, CSS et JavaScript
 
-[HTML](/fr/docs/Web/HTML), [CSS](/fr/docs/Web/CSS) et [JavaScript](/fr/docs/Web/JavaScript) sont les trois principales technologies que vous utiliserez pour créer un site web. Vous les avez rencontrées dans le [module précédent](/fr/docs/Learn_web_development/Getting_started/Your_first_website), mais pour récapituler&nbsp;:
+[HTML](/fr/docs/Web/HTML), [CSS](/fr/docs/Web/CSS) et [JavaScript](/fr/docs/Web/JavaScript) sont les trois principales technologies que vous utilisez pour créer un site web. Vous les avez rencontrées dans le [module précédent](/fr/docs/Learn_web_development/Getting_started/Your_first_website), mais pour récapituler&nbsp;:
 
 - Le **HyperText Markup Language** (ou **HTML**) est un langage de balisage composé de différents éléments dans lesquels vous pouvez envelopper (baliser) du contenu pour lui donner du sens (sémantique) et de la structure. Si l'on adopte une analogie avec la construction d'une maison, HTML est comme les fondations et les murs de la maison, qui lui donnent sa structure et la maintiennent ensemble.
 - Les **Cascading Style Sheets** (**CSS**) sont un langage basé sur des règles utilisé pour appliquer des styles à votre HTML — par exemple, définir les couleurs du texte et de l'arrière-plan, ajouter des bordures, animer des éléments ou organiser une page d'une certaine manière. Dans l'analogie de la maison, CSS correspond à la peinture, au papier peint, aux tapis et aux tableaux que vous utilisez pour rendre la maison agréable à regarder.
 - **JavaScript** est le langage de programmation que nous utilisons pour ajouter de l'interactivité aux sites web, du changement de style dynamique à la récupération de mises à jour depuis le serveur, jusqu'à des graphismes 3D complexes.
-  - Vous entendrez aussi le terme **API** avec JavaScript, qui signifie **Interface de Programmation d'Application** (<i lang="en">Application Programming Interface</i> en anglais). Une API JavaScript est une fonctionnalité construite au-dessus de JavaScript qui vous permet de contrôler d'autres parties de code plus complexes ou d'autres fonctionnalités de votre ordinateur (comme des périphériques matériels tels que la webcam ou le microphone) de manière gérable.
+  - Vous entendez aussi le terme **API** avec JavaScript, qui signifie **Interface de Programmation d'Application** (<i lang="en">Application Programming Interface</i> en anglais). Une API JavaScript est une fonctionnalité construite au-dessus de JavaScript qui vous permet de contrôler d'autres parties de code plus complexes ou d'autres fonctionnalités de votre ordinateur (comme des périphériques matériels tels que la webcam ou le microphone) de manière gérable.
   - Dans l'analogie de la maison, JavaScript correspond à la cuisinière, la télévision, le micro-ondes ou le sèche-cheveux — les choses qui donnent à votre maison des fonctionnalités utiles.
 
 ### Autres technologies web
@@ -148,16 +148,16 @@ Il existe d'autres technologies utilisées sur le web, par exemple&nbsp;:
 - [SVG](/fr/docs/Web/SVG) pour créer et manipuler des graphiques vectoriels.
 - [MathML](/fr/docs/Web/MathML) pour décrire des formules mathématiques.
 
-Cependant, HTML, CSS et JavaScript sont de loin les technologies les plus importantes à apprendre, nous nous concentrerons donc principalement sur celles-ci dans notre parcours d'apprentissage.
+Cependant, HTML, CSS et JavaScript sont de loin les technologies les plus importantes à apprendre, nous nous concentrons donc principalement sur celles-ci dans notre parcours d'apprentissage.
 
 ## Outils
 
-Une fois que vous aurez appris les technologies standard et fondamentales utilisées pour créer des pages web (comme HTML, CSS et JavaScript), vous rencontrerez rapidement divers outils qui peuvent rendre votre travail plus facile ou plus efficace. Exemples&nbsp;:
+Une fois que vous avez appris les technologies standard et fondamentales utilisées pour créer des pages web (comme HTML, CSS et JavaScript), vous rencontrez rapidement divers outils qui peuvent rendre votre travail plus facile ou plus efficace. Exemples&nbsp;:
 
 - [Outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) intégrés dans les navigateurs modernes, qui peuvent être utilisés pour déboguer votre code.
 - [Outils de test](/fr/docs/Learn_web_development/Extensions/Testing) qui peuvent être utilisés pour exécuter des tests afin de vérifier si votre code se comporte comme prévu.
 - [Frameworks et bibliothèques](/fr/docs/Learn_web_development/Core/Frameworks_libraries) construits au-dessus de JavaScript, qui permettent de créer certains types de sites web beaucoup plus rapidement et efficacement.
-- Les **linters** et **formateurs** (ou **formatters**), qui appliquent un ensemble de règles de style de code, analysent votre code et le mettent à jour pour suivre ces règles. Prettier, que vous avez rencontré plus tôt dans le cours ([voir ici](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors#améliorer_votre_éditeur_avec_des_extensions)), est un exemple de formateur.
+- Les **éliminateurs de bourres** (ou <i lang="en">linters</i> en anglais) et **formateurs** (ou <i lang="en">formatters</i> en anglais), qui appliquent un ensemble de règles de style de code, analysent votre code et le mettent à jour pour suivre ces règles. Prettier, que vous avez rencontré plus tôt dans le cours ([voir ici](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors#améliorer_votre_éditeur_avec_des_extensions)), est un exemple de formateur.
 
 ## Langages et frameworks côté serveur
 
@@ -191,7 +191,7 @@ Lorsque vous développez pour le web, la principale source d'incertitude vient d
 
 Parce que vous ne savez pas exactement ce que vos utilisateur·ice·s utilisent, vous devez concevoir de manière défensive — rendez votre site aussi flexible que possible, afin que tou·te·s les utilisateur·ice·s ci-dessus puissent l'utiliser, même s'ils·elles n'ont pas tou·te·s la même expérience.
 
-Vous pouvez rencontrer les concepts ci-dessous à un moment donné dans votre apprentissage, qui représentent les bonnes pratiques auxquelles vos sites devraient idéalement adhérer. Ne vous inquiétez pas trop de cela pour l'instant. Tout au long du cours, nous essayons de vous enseigner ces pratiques implicitement, c'est-à-dire que lorsque nous vous enseignons HTML, CSS et JavaScript, nos exemples suivent les bonnes pratiques autant que possible. Plus tard dans votre parcours, vous explorerez probablement ces domaines de façon plus explicite.
+Vous pouvez rencontrer les concepts ci-dessous à un moment donné dans votre apprentissage, qui représentent les bonnes pratiques auxquelles vos sites doivent idéalement adhérer. Ne vous inquiétez pas trop de cela pour l'instant. Tout au long du cours, nous essayons de vous enseigner ces pratiques implicitement, c'est-à-dire que lorsque nous vous enseignons HTML, CSS et JavaScript, nos exemples suivent les bonnes pratiques autant que possible. Plus tard dans votre parcours, vous explorez probablement ces domaines de façon plus explicite.
 
 - **Amélioration progressive**
   - : Créer une expérience minimale qui fournit les fonctionnalités essentielles à tou·te·s les utilisateur·ice·s, puis ajouter une meilleure expérience et d'autres améliorations dans les navigateurs qui peuvent les prendre en charge. L'amélioration progressive est souvent considérée comme peu importante, car les navigateurs ont tendance à prendre en charge les nouvelles fonctionnalités de façon plus cohérente de nos jours, et les gens ont généralement des connexions internet plus rapides avec des limites de données plus élevées. Cependant, pensez à des exemples comme réduire la décoration pour rendre l'expérience mobile plus fluide et économiser des données, ou fournir une expérience plus légère et à faible bande passante pour les utilisateur·ice·s qui paient à l'octet ou ont des connexions limitées.

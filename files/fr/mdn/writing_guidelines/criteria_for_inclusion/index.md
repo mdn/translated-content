@@ -3,7 +3,7 @@ title: Critères d'inclusion sur MDN Web Docs
 short-title: Critères d'inclusion
 slug: MDN/Writing_guidelines/Criteria_for_inclusion
 l10n:
-  sourceCommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
+  sourceCommit: 77ea71add6054857698eb7ac1bfec8c7afe9ad4f
 ---
 
 Cet article décrit en détail les critères pour qu'un contenu soit inclus sur MDN Web Docs, le processus de candidature pour ajouter une nouvelle documentation, ainsi que les attentes et consignes pour les parties qui postulent.
@@ -12,7 +12,7 @@ Cette page concerne les projets d'envergure. Pour suggérer une nouvelle page ou
 
 ## Technologies standards du Web
 
-La mission de MDN Web Docs est de documenter les technologies standards du Web qui figurent dans une spécification publiée par un organisme de normalisation reconnu et qui sont prises en charge dans au moins un navigateur stable. Ces critères indiquent un intérêt suffisant, une stabilité et une «&nbsp;intention de mise en œuvre&nbsp;» de la part de l'industrie du Web. Nous pensons donc que ces technologies sont un choix sûr pour investir notre temps et nos efforts dans leur documentation. Avant ce stade, une technologie ou fonctionnalité Web risque d'être abandonnée faute d'intérêt ou d'être trop instable et de beaucoup évoluer, ce qui impliquerait de nombreuses réécritures (que nous essayons d'éviter autant que possible).
+La mission de MDN Web Docs est de documenter les technologies standards du Web qui figurent dans une spécification publiée par un organisme de normalisation reconnu et qui sont prises en charge dans au moins un navigateur stable. Ces critères indiquent un intérêt suffisant, une stabilité et une «&nbsp;intention de mise en œuvre&nbsp;» de la part de l'industrie du Web. Nous pensons donc que ces technologies sont un choix sûr pour investir notre temps et nos efforts dans leur documentation. Avant ce stade, une technologie ou fonctionnalité Web risque d'être abandonnée faute d'intérêt ou d'être trop instable et de beaucoup évoluer, ce qui implique de nombreuses réécritures (que nous essayons d'éviter autant que possible).
 
 ## Technologies qui ne sont pas des standards du Web
 
@@ -44,11 +44,11 @@ En lien avec le point précédent, nous ne voulons pas non plus passer du temps 
 
 ### Ne pas avoir de ressource documentaire établie ailleurs
 
-Il existe de nombreuses bibliothèques et frameworks qui ne sont pas des standards du Web mais qui sont construits sur des technologies du Web et sont très populaires dans l'industrie. Nous ne documentons aucune de celles-ci car, en général, elles disposent déjà de ressources documentaires officielles. Il serait insensé de concurrencer la ressource officielle d'un framework populaire&nbsp;: ce serait une perte de temps et cela risquerait de semer la confusion chez les développeur·euse·s qui cherchent à apprendre la technologie.
+Il existe de nombreuses bibliothèques et frameworks qui ne sont pas des standards du Web mais qui sont construits sur des technologies du Web et sont très populaires dans l'industrie. Nous ne documentons aucune de celles-ci car, en général, elles disposent déjà de ressources documentaires officielles. Il est insensé de concurrencer la ressource officielle d'un framework populaire&nbsp;: c'est une perte de temps et cela risque de semer la confusion chez les développeur·euse·s qui cherchent à apprendre la technologie.
 
 ### Avoir une communauté prête à écrire et à maintenir la documentation
 
-L'équipe MDN Web Docs se concentre sur la documentation de la plateforme Web ouverte. Si vous souhaitez qu'une technologie dans ce domaine soit considérée pour une documentation sur MDN Web Docs, vous devrez réunir une communauté prête à rédiger la documentation et à la maintenir après sa création. Notre équipe est heureuse de fournir des conseils dans ces cas, y compris des relectures et des retours, mais nous n'avons pas les ressources pour aller au-delà.
+L'équipe MDN Web Docs se concentre sur la documentation de la plateforme Web ouverte. Si vous souhaitez qu'une technologie dans ce domaine soit considérée pour une documentation sur MDN Web Docs, vous devez réunir une communauté prête à rédiger la documentation et à la maintenir après sa création. Notre équipe est heureuse de fournir des conseils dans ces cas, y compris des relectures et des retours, mais nous n'avons pas les ressources pour aller au-delà.
 
 > [!NOTE]
 > Le travail sur MDN Web Docs s'effectue sur GitHub et «&nbsp;en toute transparence&nbsp;». Votre équipe doit maîtriser git et GitHub et être à l'aise avec le travail en open source.
@@ -57,25 +57,25 @@ L'équipe MDN Web Docs se concentre sur la documentation de la plateforme Web ou
 
 Si une technologie semble être une bonne candidate pour être documentée sur MDN Web Docs, vous pouvez lancer une discussion sur les [discussions communautaires GitHub](/fr/docs/MDN/Community/Communication_channels#discussions_github) afin de proposer et discuter de l'inclusion de cette technologie. Cette section décrit ce que la proposition doit inclure.
 
-### Soumettre la proposition
+### Envoyer la proposition
 
-Les technologies seront examinées au cas par cas pour une inclusion sur MDN Web Docs. Pour être prise en compte, vous devrez soumettre une proposition intitulée «&nbsp;Proposition de documentation d'une nouvelle technologie sur MDN Web Docs&nbsp;». Nous aurons besoin des informations suivantes dans votre proposition&nbsp;:
+Les technologies sont examinées au cas par cas pour une inclusion sur MDN Web Docs. Pour être prise en compte, vous devez envoyer une proposition intitulée «&nbsp;Proposition de documentation d'une nouvelle technologie sur MDN Web Docs&nbsp;». Nous avons besoin des informations suivantes dans votre proposition&nbsp;:
 
 - La technologie, son objectif principal/cas d'usage, et le public cible de développeur·euse·s.
 - Quel est le niveau d'intérêt ou d'activité dans l'industrie ou la communauté autour de cette technologie&nbsp;?
   - Beaucoup de développeur·euse·s Web l'utilisent-ils·elles&nbsp;? Quelle est l'adoption dans l'industrie&nbsp;?
   - Beaucoup de développeur·euse·s Web souhaitent-ils·elles ou ont-ils·elles besoin de cette information&nbsp;?
-  - Quelle est la taille du public cible pour cette information&nbsp;? Des statistiques à l'appui seraient utiles si vous en avez.
+  - Quelle est la taille du public cible pour cette information&nbsp;? Des statistiques à l'appui sont utiles si vous en avez.
 - Comment la technologie est-elle liée aux technologies principales du Web et aux navigateurs Web&nbsp;? Détails utiles&nbsp;:
   - Utilise-t-elle HTML et CSS mais sans produire de sortie sur le Web&nbsp;?
-  - Est-elle prise en charge dans les navigateurs Web via un polyfill&nbsp;?
+  - Est-elle prise en charge dans les navigateurs Web avec une prothèse d'émulation&nbsp;?
 - Quelles ressources documentaires ou documentations existent déjà sur cette technologie&nbsp;?
-- Quelle quantité de documentation devrait être ajoutée à MDN Web Docs&nbsp;?
+- Quelle quantité de documentation doit être ajoutée à MDN Web Docs&nbsp;?
   - Indiquez le nombre attendu de guides, tutoriels, pages de référence pour les éléments/méthodes/attributs, etc.
   - Fournissez une table des matières de haut niveau.
   - Mentionnez le type de fonctionnalités «&nbsp;avancées&nbsp;» que vous pensez nécessaires pour cette ressource, au-delà des pages de documentation de base. Prévoyez-vous d'inclure des vidéos intégrées, des exemples de code interactifs, etc.&nbsp;?
-- Qui rédigera la documentation&nbsp;? Qui sont ces personnes et pourquoi sont-elles qualifiées&nbsp;?
-- Comment la documentation sera-t-elle maintenue&nbsp;?
+- Qui rédige la documentation&nbsp;? Qui sont ces personnes et pourquoi sont-elles qualifiées&nbsp;?
+- Comment la documentation est-t-elle maintenue&nbsp;?
 
 Vous n'avez pas besoin de nous fournir des centaines de pages de détails à ce stade (en fait, nous préférons que vous ne le fassiez pas). Quelques paragraphes sur chacun des points ci-dessus suffisent largement.
 
@@ -84,19 +84,19 @@ Vous n'avez pas besoin de nous fournir des centaines de pages de détails à ce 
 
 ### En attente d'une réponse
 
-Nous examinerons la technologie et les informations que vous soumettez dans la proposition et répondrons par l'une des réponses suivantes&nbsp;:
+Nous examinons la technologie et les informations que vous soumettez dans la proposition et répondons par l'une des réponses suivantes&nbsp;:
 
 - **Non**&nbsp;: Nous pensons que cela ne répond pas aux critères pour être documenté sur MDN Web Docs.
 - **Peut-être**&nbsp;: Nous ne sommes pas sûrs que cela convienne à une documentation sur MDN Web Docs et aimerions poser quelques questions supplémentaires.
 - **Oui**&nbsp;: Nous pensons qu'il est approprié de l'inclure sur MDN Web Docs.
 
-Si la technologie est une bonne candidate, l'équipe vous aidera à démarrer la documentation.
+Si la technologie est une bonne candidate, l'équipe vous aide à démarrer la documentation.
 
 ## Consignes pour documenter la nouvelle technologie
 
 Si la technologie que vous avez choisie est acceptée pour être documentée sur MDN Web Docs, l'étape suivante consiste à démarrer le projet.
 
-Pour garantir le succès de votre projet de documentation de la nouvelle technologie sur MDN Web Docs, vous devrez mettre en place les éléments suivants&nbsp;:
+Pour garantir le succès de votre projet de documentation de la nouvelle technologie sur MDN Web Docs, vous devez mettre en place les éléments suivants&nbsp;:
 
 - Une équipe dédiée
 - Un plan de projet et une feuille de route
@@ -106,26 +106,26 @@ Pour garantir le succès de votre projet de documentation de la nouvelle technol
 
 ### Équipe dédiée
 
-Assurez-vous de disposer d'une équipe dédiée qui sera présente à la fois pour rédiger la documentation initiale et pour la maintenir à jour par la suite.
+Assurez-vous de disposer d'une équipe dédiée qui est présente à la fois pour rédiger la documentation initiale et pour la maintenir à jour par la suite.
 
 Réfléchissez à la charge de travail et au nombre de personnes nécessaires.
 
 - Si le projet est important, il peut être utile d'avoir plusieurs rédacteur·ice·s, un·e relecteur·ice technique pour vérifier l'exactitude technique, un·e correcteur·ice pour améliorer la langue, une personne pour rédiger les exemples de code, etc.
 - Pour un projet plus petit, une ou deux personnes peuvent cumuler plusieurs rôles. La façon dont vous constituez l'équipe importe peu tant que cela fonctionne pour vous.
 
-Un·e membre de l'équipe MDN Web Docs sera affecté·e à votre projet pour vous guider sur les aspects MDN Web Docs.
+Un·e membre de l'équipe MDN Web Docs est affecté·e à votre projet pour vous guider sur les aspects MDN Web Docs.
 
-Vous devrez désigner un·e (ou deux) chef·fe·s d'équipe qui pourront faire le lien avec la personne référente MDN Web Docs.
+Vous devez désigner un·e (ou deux) chef·fe·s d'équipe qui peuvent faire le lien avec la personne référente MDN Web Docs.
 
-Le·la représentant·e MDN Web Docs vous aidera à obtenir les autorisations nécessaires pour que chaque membre de votre équipe puisse travailler dans l'[organisation MDN sur GitHub <sup>(angl.)</sup>](https://github.com/mdn).
+Le·la représentant·e MDN Web Docs vous aide à obtenir les autorisations nécessaires pour que chaque membre de votre équipe puisse travailler dans [l'organisation MDN sur GitHub <sup>(angl.)</sup>](https://github.com/mdn).
 
 ### Plan de projet et feuille de route
 
 Élaborez un plan pour le projet&nbsp;: tâches, estimation des dates d'achèvement et jalons à suivre pour garantir une progression régulière.
 
-Si le projet est important, envisagez de désigner un·e chef·fe de projet parmi votre équipe. Vous pouvez aussi rédiger un plan de sous-projet pour une première version qui couvre le minimum de documentation utile à publier (un _produit minimum viable_)&nbsp;; vous pourrez ensuite ajouter d'autres contenus.
+Si le projet est important, envisagez de désigner un·e chef·fe de projet parmi votre équipe. Vous pouvez aussi rédiger un plan de sous-projet pour une première version qui couvre le minimum de documentation utile à publier (un _produit minimum viable_)&nbsp;; vous pouvez ensuite ajouter d'autres contenus.
 
-Si le projet de documentation est petit, il faudra tout de même garder une trace de ce qui a été fait ou non, de l'état d'avancement de chaque partie (par exemple&nbsp;: non commencé, en cours, brouillon rédigé, relu, terminé), et de qui travaille sur quoi.
+Si le projet de documentation est petit, il faut tout de même garder une trace de ce qui a été fait ou non, de l'état d'avancement de chaque partie (par exemple&nbsp;: non commencé, en cours, brouillon rédigé, relu, terminé), et de qui travaille sur quoi.
 
 ### Consignes et standards de rédaction
 
@@ -133,28 +133,28 @@ Ces [consignes](/fr/docs/MDN/Writing_guidelines) précisent comment nous attendo
 
 Si vous avez des consignes supplémentaires pour les documents que vous rédigez, nous attendons que ce guide soit ajouté et tenu à jour.
 
-En termes de standards, il est attendu de maintenir un niveau raisonnable de qualité rédactionnelle pour que votre documentation reste sur MDN Web Docs. Votre référent·e MDN Web Docs travaillera avec vous pour clarifier les attentes.
+En termes de standards, il est attendu de maintenir un niveau raisonnable de qualité rédactionnelle pour que votre documentation reste sur MDN Web Docs. Votre référent·e MDN Web Docs travaille avec vous pour clarifier les attentes.
 
 ### Structure de documentation intuitive
 
-Si vous avez suivi le processus de soumission de proposition, vous devriez déjà avoir une ébauche de ce que vous allez écrire pour cette technologie. À ce stade, il faut affiner cela en un plan de structure du site&nbsp;: réfléchissez à la hiérarchie des documents et à la façon dont tout s'articulera et se reliera.
+Si vous avez suivi le processus d'envoi de proposition, vous devez déjà avoir une ébauche de ce que vous allez écrire pour cette technologie. À ce stade, il faut affiner cela en un plan de structure du site&nbsp;: réfléchissez à la hiérarchie des documents et à la façon dont tout s'articule et se relie.
 
 Chaque projet est différent, mais nous recommandons l'arborescence suivante&nbsp;:
 
 ```plain
 ├── Guides
-│   ├── guide_one
-│   ├── guide_two
+│   ├── guide_un
+│   ├── guide_deux
 │   └── index.md
 ├── index.md
-├── Reference
-│   ├── Elements
-│   ├── Methods
-│   ├── Others ?
+├── Référence
+│   ├── Éléments
+│   ├── Méthodes
+│   ├── Autres ?
 │   └── index.md
-└── Tutorials
-    ├── tutorial_one
-    ├── tutorial_two
+└── Tutoriels
+    ├── tutoriel_un
+    ├── tutoriel_deux
     └── index.md
 ```
 
@@ -164,9 +164,9 @@ Veuillez consulter notre section sur les [types de pages](/fr/docs/MDN/Writing_g
 
 ### Plan de maintenance
 
-La documentation de cette technologie devra être maintenue pour rester sur MDN Web Docs&nbsp;:
+La documentation de cette technologie doit être maintenue pour rester sur MDN Web Docs&nbsp;:
 
-- Le contenu et les fichiers de MDN Web Docs sont stockés sur GitHub. Lorsque d'autres personnes modifient la documentation de votre technologie, un·e membre de votre équipe doit relire ces modifications pour s'assurer que le contenu reste pertinent. Vous pouvez suivre les pull requests (PR) ouvertes via la fonctionnalité de notification de GitHub.
+- Le contenu et les fichiers de MDN Web Docs sont stockés sur GitHub. Lorsque d'autres personnes modifient la documentation de votre technologie, un·e membre de votre équipe doit relire ces modifications pour s'assurer que le contenu reste pertinent. Vous pouvez suivre les pull requests (PR) ouvertes avec la fonctionnalité de notification de GitHub.
 - Lorsque des changements interviennent sur la technologie nécessitant une mise à jour de la documentation, votre équipe doit effectuer les mises à jour appropriées, en maintenant les mêmes standards que la documentation d'origine.
 
 Si aucun progrès positif n'est constaté pendant une période de six mois et que la documentation semble dans l'un des états suivants&nbsp;:
@@ -176,6 +176,6 @@ Si aucun progrès positif n'est constaté pendant une période de six mois et qu
 - De faible qualité
 - Devenant obsolète
 
-Alors la documentation de cette technologie sera considérée comme abandonnée. Après discussion entre votre équipe et le·la référent·e MDN Web Docs, la documentation sera supprimée.
+Alors la documentation de cette technologie est considérée comme abandonnée. Après discussion entre votre équipe et le·la référent·e MDN Web Docs, la documentation est supprimée.
 
-Nous espérons que vous comprendrez la nécessité d'être strict·e sur ces points&nbsp;: nous ne pouvons pas laisser le site se remplir de documentation de mauvaise qualité, incomplète ou obsolète.
+Nous espérons que vous comprenez la nécessité d'être stricte sur ces points&nbsp;: nous ne pouvons pas laisser le site se remplir de documentation de mauvaise qualité, incomplète ou obsolète.

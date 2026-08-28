@@ -2,7 +2,7 @@
 title: Information contenue dans un fichier WebIDL
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 l10n:
-  sourceCommit: 0d155984425e8964c889efb63ec39593e11bbc14
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Lors de la rédaction de la documentation sur une API, les sources d'information sont nombreuses&nbsp;: les spécifications décrivent ce qui doit être implémenté ainsi que le modèle, et les implémentations décrivent ce qui a réellement été mis en place dans les navigateurs. Les fichiers WebIDL sont un moyen très condensé de fournir beaucoup, mais pas toutes, les informations sur l'API. Ce document fournit une référence pour aider à comprendre la syntaxe WebIDL.
@@ -13,8 +13,8 @@ IDL signifie **<i lang="en">Interface Definition Language</i>** (pour _Langage d
 
 Les fichiers WebIDL peuvent être trouvés à plusieurs endroits&nbsp;:
 
-- Chaque spécification contient du WebIDL dans le texte&nbsp;: c'est un moyen très pratique de fournir une définition précise. Bien que ce soit la référence canonique, il faut garder à l'esprit qu'ils peuvent différer de l'implémentation réelle. Sur MDN, nous voulons être pratiques et documenter ce qu'est réellement la plateforme Web, et non ce qu'elle doit idéalement être. Donc, vérifiez bien ce qui est présent dans les implémentations (et n'hésitez pas à signaler des bugs si vous découvrez des incohérences).
-- Trois moteurs de navigateur utilisent (modifié) WebIDL dans le cadre de leur chaîne d'outils&nbsp;: Gecko, Chromium/Blink et WebCore/WebKit. Les versions pré-Chromium d'Edge l'utilisaient en interne, mais elles ne sont malheureusement pas publiques.
+- Chaque spécification contient du WebIDL dans le texte&nbsp;: c'est un moyen très pratique de fournir une définition précise. Bien que ce soit la référence canonique, il faut garder à l'esprit qu'ils peuvent différer de l'implémentation réelle. Sur MDN, nous voulons être pratiques et documenter ce qu'est réellement la plateforme Web, et non ce qu'elle doit idéalement être. Donc, vérifiez bien ce qui est présent dans les implémentations (et n'hésitez pas à signaler des bogues si vous découvrez des incohérences).
+- Trois moteurs de navigateur utilisent (modifié) WebIDL dans le cadre de leur chaîne d'outils&nbsp;: Gecko, Chromium/Blink et WebCore/WebKit. Les versions pré-Chromium d'Edge l'utilisent en interne, mais elles ne sont malheureusement pas publiques.
   - Pour Gecko, tous les fichiers WebIDL sont regroupés dans un seul répertoire&nbsp;: <https://searchfox.org/firefox-main/source/dom/webidl/> <sup>(angl.)</sup>. Leur extension est `.webidl`. Il existe d'autres fichiers `*.idl` dans l'arborescence source de Gecko, mais ce ne sont pas des WebIDL, vous pouvez donc les ignorer. Les anciennes versions de Gecko ont certains de leurs WebIDL dispersés, et peuvent même utiliser l'IDL de Mozilla au lieu de WebIDL pour décrire certaines interfaces Web, mais cela ne pose pas de problème dans un code Gecko récent.
   - Pour Chromium, ils se trouvent à deux endroits, tous deux sous-arborescences du répertoire [`renderer/` <sup>(angl.)</sup>](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/) du code source&nbsp;: [`core/` <sup>(angl.)</sup>](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/) et [`modules/` <sup>(angl.)</sup>](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/modules/). Le code source de Chromium contient des fichiers IDL à d'autres endroits, mais ils font partie du système de test et ne sont pas pertinents pour les implémentations d'API.
   - Pour WebCore, ils sont dispersés dans le code source, donc vous devez creuser un peu plus&nbsp;: par exemple <https://github.com/WebKit/webkit/blob/main/Source/WebCore/html/DOMTokenList.idl> <sup>(angl.)</sup>
@@ -259,7 +259,7 @@ _Bien que la propriété `style` soit en lecture seule, en ce sens qu'il n'est p
             attribute DOMString src;
 ```
 
-Dans certains cas, comme lorsque certaines valeurs sont illégales, la définition d'une nouvelle valeur peut entraîner le déclenchement d'une exception. C"est indiqué à l'aide de l'annotation `[SetterThrows]`. Lorsque cela se produit, la section Syntaxe de la page de la propriété _doit_ comporter une sous-section Exceptions. La liste des exceptions et les conditions pour les déclencher sont indiquées, sous forme de texte, dans la spécification de cette API.
+Dans certains cas, comme lorsque certaines valeurs sont illégales, la définition d'une nouvelle valeur peut entraîner le déclenchement d'une exception. C'est indiqué à l'aide de l'annotation `[SetterThrows]`. Lorsque cela se produit, la section Syntaxe de la page de la propriété _doit_ comporter une sous-section Exceptions. La liste des exceptions et les conditions pour les déclencher sont indiquées, sous forme de texte, dans la spécification de cette API.
 
 Notez que certaines exceptions ne sont pas explicitement marquées mais sont définies par les liaisons JavaScript. [Essayer de définir une valeur énumérée illégale <sup>(angl.)</sup>](https://webidl.spec.whatwg.org/#es-enumeration) (mappée à un {{JSxRef('String')}} JavaScript) déclenche une exception {{JSxRef('TypeError')}}. Cela doit être documenté, mais n'est marqué que de manière implicite dans le document WebIDL.
 
@@ -327,7 +327,7 @@ par exemple&nbsp;:
 
 ### Disponibilité dans les workers
 
-La disponibilité des propriétés individuelles dans les workers se trouve également dans le WebIDL. Pour une propriété, la valeur par défaut est la même disponibilité que l'`interface` (c'est-à-dire disponible dans le contexte {{DOMxRef('Window')}} uniquement si rien de spécial n'est marqué) ou que l'`interface partielle` dans laquelle elle est définie.
+La disponibilité des propriétés individuelles dans les workers se trouve également dans le WebIDL. Pour une propriété, la valeur par défaut est la même disponibilité qu'une `interface` (c'est-à-dire disponible dans le contexte {{DOMxRef('Window')}} uniquement si rien de spécial n'est marqué) ou qu'une `partial interface` dans laquelle elle est définie.
 
 Pour la documentation, la sous-page doit contenir une phrase indiquant si elle est disponible ou non dans les Web workers, juste avant la section «&nbsp;Syntaxe&nbsp;».
 
@@ -468,7 +468,7 @@ L'itérateur parcourt les valeurs de type _valueType_. Les méthodes générées
 - `keys()`, qui retourne un [`iterator`](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) sur les clés, qui sont ses index (qui sont de type `unsigned long`). Dans le cas des itérateurs de valeurs, `keys()` et `entries()` sont identiques.
 - `forEach()`, qui exécute une fonction de rappel donnée une fois pour chaque entrée dans la liste.
 
-Un tel itérateur permet d'utiliser la syntaxe `for (const p in object)` comme un raccourci de `for (const p in object.entries())`. Nous ajoutons une phrase à ce sujet dans la description de l'interface.
+Un tel itérateur vous permet d'utiliser la syntaxe `for (const p in object)` comme un raccourci de `for (const p in object.entries())`. Nous ajoutons une phrase à ce sujet dans la description de l'interface.
 
 Les valeurs à itérer peuvent être définies de l'une des manières suivantes&nbsp;:
 
@@ -489,7 +489,7 @@ L'itérateur parcourt les valeurs de type _valueType_ avec des clés de type _ke
 - `keys()`, qui retourne un [`iterator`](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) sur les clés. Par exemple, voir {{DOMxRef("FormData.keys()")}}.
 - `forEach()`, qui exécute une fonction de rappel donnée une fois pour chaque entrée dans la liste. Par exemple, voir {{DOMxRef("Headers.forEach()")}}.
 
-Un tel itérateur permet d'utiliser la syntaxe `for (const p in object)` comme un raccourci de `for (const p in object.entries())`. Nous ajoutons une phrase à ce sujet dans la description de l'interface. Par exemple, voir {{DOMxRef("FormData")}}.
+Un tel itérateur vous permet d'utiliser la syntaxe `for (const p in object)` comme un raccourci de `for (const p in object.entries())`. Nous ajoutons une phrase à ce sujet dans la description de l'interface. Par exemple, voir {{DOMxRef("FormData")}}.
 
 Les paires de valeurs à itérer peuvent être définies de l'une des manières suivantes&nbsp;:
 
@@ -498,7 +498,7 @@ Les paires de valeurs à itérer peuvent être définies de l'une des manières 
 
 ### Méthodes de type Set
 
-Une interface peut être définie comme _de type set_, ce qui signifie qu'elle représente un _ensemble ordonné de valeurs_ et a les méthodes suivantes&nbsp;: `entries()`, `keys()`, `values()`, `forEach()`, et `has()` (elle possède également la propriété `size`). Elle prend également en charge l'utilisation de {{JSxRef("Statements/for...of", "for...of")}} sur un objet implémentant cette interface. Le type set peut être préfixé par `readonly` ou non. Si ce n'est pas en lecture seule, les méthodes pour modifier l'ensemble sont également implémentées&nbsp;: `add()`, `clear()`, et `delete()`.
+Une interface peut être définie comme _de type mutateur_, ce qui signifie qu'elle représente un _ensemble ordonné de valeurs_ et a les méthodes suivantes&nbsp;: `entries()`, `keys()`, `values()`, `forEach()`, et `has()` (elle possède également la propriété `size`). Elle prend également en charge l'utilisation de {{JSxRef("Statements/for...of", "for...of")}} sur un objet implémentant cette interface. Le type mutateur peut être préfixé par `readonly` ou non. Si ce n'est pas en lecture seule, les méthodes pour modifier l'ensemble sont également implémentées&nbsp;: `add()`, `clear()`, et `delete()`.
 
 ```webidl
 setlike<valueType>
@@ -511,13 +511,13 @@ Les propriétés générées sont&nbsp;:
 - `keys()`, qui retourne un [`iterator`](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) sur les clés. Par exemple, voir {{DOMxRef("NodeList.keys()")}}.
 - `forEach()`, qui exécute une fonction de rappel donnée une fois pour chaque entrée dans la liste. Par exemple, voir {{DOMxRef("NodeList.forEach()")}}.
 
-Dans le cas où la déclaration de type set n'est pas préfixée par `readonly`, les méthodes suivantes sont également générées&nbsp;:
+Dans le cas où la déclaration de type mutateur n'est pas préfixée par `readonly`, les méthodes suivantes sont également générées&nbsp;:
 
 - `add()` qui ajoute une entrée. Par exemple, la méthode `.add()` de {{DOMxRef("FontFaceSet")}}.
-- `clear()` qui vide la structure de type set. Par exemple, la méthode `.clear()` de {{DOMxRef("FontFaceSet")}}.
+- `clear()` qui vide la structure de type mutateur. Par exemple, la méthode `.clear()` de {{DOMxRef("FontFaceSet")}}.
 - `delete()` qui supprime une entrée. Par exemple, la méthode `.delete()` de {{DOMxRef("FontFaceSet")}}.
 
-Une telle interface de type set permet également d'utiliser la syntaxe `for (const p in object)` comme un raccourci de `for (const p in object.entries())`.
+Une telle interface de type mutateur vous permet également d'utiliser la syntaxe `for (const p in object)` comme un raccourci de `for (const p in object.entries())`.
 
 ## Comportements spéciaux
 
@@ -525,7 +525,7 @@ Certains membres IDL indiquent des comportements spéciaux qui doivent être not
 
 ### Convertisseurs en chaîne de caractères
 
-En plus d'ajouter la méthode `toString()` à une interface comme décrit dans [toString() et toJSON()](#tostring_and_tojson), les convertisseurs en chaîne de caractères indiquent également qu'une instance d'objet, lorsqu'elle est utilisée comme une chaîne de caractères, retourne une chaîne de caractères autre que celle par défaut. (La valeur par défaut est généralement une représentation JSON de l'objet). La manière exacte dépend de la façon dont elle est définie dans l'IDL. Quelle que soit la manière, le comportement non par défaut doit être décrit sur la page de l'interface.
+En plus d'ajouter la méthode `toString()` à une interface comme décrit dans [`toString()` et `toJSON()`](#tostring_and_tojson), les convertisseurs en chaîne de caractères indiquent également qu'une instance d'objet, lorsqu'elle est utilisée comme une chaîne de caractères, retourne une chaîne de caractères autre que celle par défaut. (La valeur par défaut est généralement une représentation JSON de l'objet). La manière exacte dépend de la façon dont elle est définie dans l'IDL. Quelle que soit la manière, le comportement non par défaut doit être décrit sur la page de l'interface.
 
 Lorsque le mot-clé `stringifier` accompagne un nom d'attribut, référencer le nom de l'objet a le même résultat que référencer le nom de l'attribut. Considérons l'IDL suivant&nbsp;:
 

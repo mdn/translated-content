@@ -2,7 +2,7 @@
 title: Mise en forme des tableaux
 slug: Learn_web_development/Core/Styling_basics/Tables
 l10n:
-  sourceCommit: 56ccb15b023cb11234cd044a68d6d3a93e752326
+  sourceCommit: 1b7c3c1e03f14c3878e4d8518b0f1a89bedfdc9c
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Styling_basics")}}
@@ -244,7 +244,7 @@ Chargez votre HTML dans un navigateur pour voir à quoi il ressemble par défaut
 
 ## Mettre à jour la police
 
-Ceci est un point mineur et n'est pas strictement lié à la mise en forme des tableaux, mais nous avons trouvé que la police par défaut semblait un peu trop formelle pour un tableau sur les groupes punk. Commencez votre CSS en ajoutant la règle suivante&nbsp;:
+Commencez votre CSS en ajoutant la règle suivante&nbsp;:
 
 ```css
 html {
@@ -356,7 +356,7 @@ Nous voulions consacrer une section distincte pour vous montrer comment impléme
 
 ```css
 tbody tr:nth-child(odd) {
-  background-color: #eeeeee;
+  background-color: #dddddd;
 }
 ```
 
@@ -428,7 +428,7 @@ tfoot {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #eeeeee;
+  background-color: #dddddd;
 }
 
 caption {
@@ -454,6 +454,6 @@ Avant de passer à autre chose, nous avons pensé vous fournir une liste rapide 
 
 ## Résumé
 
-Avec le style des tableaux maintenant derrière nous, nous avons besoin de quelque chose d'autre pour occuper notre temps. L'article suivant explore le débogage CSS — comment résoudre des problèmes tels que des mises en page qui ne ressemblent pas à ce qu'elles devraient, ou des propriétés qui ne s'appliquent pas lorsque vous pensez qu'elles devraient. Cela inclut des informations sur l'utilisation des outils de développement du navigateur pour trouver des solutions à vos problèmes.
+Avec le style des tableaux maintenant derrière nous, nous avons besoin de quelque chose d'autre pour occuper notre temps. L'article suivant explore le débogage CSS — comment résoudre des problèmes tels que des mises en page qui ne ressemblent pas à ce qu'elles doivent, ou des propriétés qui ne s'appliquent pas lorsque vous pensez qu'elles doivent. Cela inclut des informations sur l'utilisation des outils de développement du navigateur pour trouver des solutions à vos problèmes.
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Styling_basics")}}
