@@ -109,7 +109,7 @@ Cette règle concerne les situations où une fonctionnalité a une limite de tem
           Pour une fonctionnalité avec une limite de temps (par exemple, finaliser une réservation d'hôtel ou d'avion dans un temps imparti), l'utilisateur·ice doit disposer de contrôles pour ajuster, prolonger ou désactiver la limite de temps.
         </p>
         <p>
-          Exceptions&nbsp;: activités avec une limite de temps supérieure à 20 heures, évènements en temps réel (par exemple, jeux multijoueurs en ligne), ou toute activité nécessitant une limite de temps qui zqr rendue invalide si elle zqr supprimée.
+          Exceptions&nbsp;: activités avec une limite de temps supérieure à 20 heures, évènements en temps réel (par exemple, jeux multijoueurs en ligne), ou toute activité nécessitant une limite de temps qui est rendue invalide si elle est supprimée.
         </p>
       </td>
       <td></td>
