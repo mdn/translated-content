@@ -1,11 +1,12 @@
 ---
-title: border-right
+title: CSS `border-right` プロパティ
+short-title: border-right
 slug: Web/CSS/Reference/Properties/border-right
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-**`border-right`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
+**`border-right`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、要素の右側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
 
 {{InteractiveExample("CSS デモ: border-right")}}
 
@@ -47,22 +48,6 @@ border-right: 4mm ridge rgb(211 220 50 / 0.6);
 }
 ```
 
-他の一括指定プロパティと同様に、 `border-right` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
-
-```css
-border-right-style: dotted;
-border-right: thick green;
-```
-
-これは、実際には以下と同じです。
-
-```css
-border-right-style: dotted;
-border-right: none thick green;
-```
-
-`border-right` の前で設定された {{cssxref("border-right-style")}} の値は無視されます。 {{cssxref("border-right-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
-
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
@@ -96,6 +81,24 @@ border-right: unset;
   - : {{cssxref("border-right-style")}} を参照してください。
 - {{cssxref("&lt;color&gt;")}}
   - : {{cssxref("border-right-color")}} を参照してください。
+
+## 解説
+
+他の一括指定プロパティと同様に、 `border-right` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
+
+```css
+border-right-style: dotted;
+border-right: thick green;
+```
+
+これは、実際には以下と同じです。
+
+```css
+border-right-style: dotted;
+border-right: none thick green;
+```
+
+`border-right` の前で設定された {{cssxref("border-right-style")}} の値は無視されます。 {{cssxref("border-right-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
 
 ## 公式定義
 
