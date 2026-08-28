@@ -3,12 +3,12 @@ title: "HTMLFormElement : évènement formdata"
 short-title: formdata
 slug: Web/API/HTMLFormElement/formdata_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'évènement **`formdata`** de l'interface {{DOMxRef("HTMLFormElement")}} se déclenche après que la liste des entrées représentant les données du formulaire a été construite. Cela se produit lors de la soumission du formulaire, mais peut aussi être déclenché par l'appel du constructeur {{DOMxRef("FormData.FormData", "FormData()")}}.
+L'évènement **`formdata`** de l'interface {{DOMxRef("HTMLFormElement")}} se déclenche après que la liste des entrées représentant les données du formulaire a été construite. Cela se produit lors de l'envoi du formulaire, mais peut aussi être déclenché par l'appel du constructeur {{DOMxRef("FormData.FormData", "FormData()")}}.
 
 Cet évènement n'est pas annulable et ne se propage pas.
 
@@ -28,22 +28,15 @@ Un objet {{DOMxRef("FormDataEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("FormDataEvent")}}
 
-## Propriétés de l'évènement
-
-_Hérite des propriétés de son interface parente, {{DOMxRef("Event")}}._
-
-- {{DOMxRef("FormDataEvent.formData")}}
-  - : Contient l'objet {{DOMxRef("FormData")}} représentant les données présentes dans le formulaire au moment du déclenchement de l'évènement.
-
 ## Exemples
 
 ```js
 // récupérer la référence du formulaire
 const formElem = document.querySelector("form");
 
-// gestionnaire de soumission
+// gestionnaire d'envoi
 formElem.addEventListener("submit", (e) => {
-  // lors de la soumission du formulaire, empêcher l'action par défaut
+  // lors de l'envoi du formulaire, empêcher l'action par défaut
   e.preventDefault();
 
   console.log(formElem.querySelector('input[name="field1"]')); // TOTO

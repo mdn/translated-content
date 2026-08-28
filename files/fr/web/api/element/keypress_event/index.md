@@ -3,10 +3,10 @@ title: "Element : évènement keypress"
 short-title: keypress
 slug: Web/API/Element/keypress_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 L'évènement **`keypress`** est déclenché lorsqu'une touche correspondant à une [lettre, un chiffre, une ponctuation ou un symbole <sup>(angl.)</sup>](https://w3c.github.io/uievents/#unicode-character-categories) est enfoncée, ou lorsque la touche <kbd>Entrée</kbd> est enfoncée — y compris lorsque la touche <kbd>Entrée</kbd> est enfoncée en combinaison avec la touche <kbd>Maj</kbd> ou <kbd>Ctrl</kbd>. En revanche, lorsqu'une touche de modification telle que <kbd>Alt</kbd>, <kbd>Maj</kbd>, <kbd>Ctrl</kbd>, <kbd>Meta</kbd>, <kbd>Échap</kbd> ou <kbd>Option</kbd> est enfoncée seule, l'évènement `keypress` n'est _pas_ déclenché.
 

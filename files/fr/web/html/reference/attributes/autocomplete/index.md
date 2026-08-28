@@ -58,7 +58,7 @@ Certaines valeurs d'autocomplétion peuvent devoir être réutilisées plusieurs
 
 Si vous ajoutez l'attribut `autocomplete` sur un champ {{HTMLElement("input/hidden", "hidden")}} (`<input type="hidden">`), sa valeur doit être une liste ordonnée de jetons séparés par des espaces&nbsp;; les mots-clés `on` et `off` ne sont pas autorisés.
 
-La source des valeurs suggérées dépend généralement du navigateur&nbsp;: il s'agit en général des valeurs précédemment saisies par l'utilisateur·rice, mais elles peuvent aussi provenir de valeurs préconfigurées. Par exemple, un navigateur peut permettre à l'utilisateur·rice d'enregistrer son nom, son adresse, son numéro de téléphone et ses adresses e-mail pour l'autocomplétion. Il peut aussi proposer d'enregistrer des informations de carte bancaire chiffrées, pour un remplissage automatique après authentification.
+La source des valeurs suggérées dépend généralement du navigateur&nbsp;: il s'agit en général des valeurs précédemment saisies par l'utilisateur·ice, mais elles peuvent aussi provenir de valeurs préconfigurées. Par exemple, un navigateur peut permettre à l'utilisateur·ice d'enregistrer son nom, son adresse, son numéro de téléphone et ses adresses e-mail pour l'autocomplétion. Il peut aussi proposer d'enregistrer des informations de carte bancaire chiffrées, pour un remplissage automatique après authentification.
 
 > [!NOTE]
 > L'attribut `autocomplete` contrôle aussi, dans Firefox (contrairement aux autres navigateurs), [la persistance de l'état désactivé ou coché d'un champ `<input>`, `<textarea>` ou d'un `<form>` entier lors d'un rechargement de page <sup>(angl.)</sup>](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). Cette fonctionnalité est activée par défaut. Définir `autocomplete="off"` la désactive, même si l'attribut ne doit normalement pas s'appliquer selon le type de champ. Voir le [bogue 654072 de Firefox <sup>(angl.)</sup>](https://bugzil.la/654072).
@@ -71,7 +71,7 @@ La valeur de l'attribut est soit le mot-clé `off` ou `on`, soit une `<token-lis
   - : Le navigateur n'est pas autorisé à saisir automatiquement des valeurs pour ce champ. Cette valeur peut être utilisée lorsque le document ou l'application fournit son propre mécanisme d'autocomplétion ou lorsque des raisons de sécurité imposent de ne pas pouvoir saisir la valeur automatiquement.
 
     > [!NOTE]
-    > Dans la plupart des navigateurs modernes, définir `autocomplete` à `"off"` n'empêche pas un gestionnaire de mots de passe de demander à l'utilisateur·rice s'il·elle souhaite enregistrer le nom d'utilisateur·ice et le mot de passe, ou de remplir automatiquement ces informations dans un formulaire de connexion. Voir la section [Gérer le remplissage automatique des champs de connexion](/fr/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#gérer_le_remplissage_automatique_des_champs_de_connexion).
+    > Dans la plupart des navigateurs modernes, définir `autocomplete` à `"off"` n'empêche pas un gestionnaire de mots de passe de demander à l'utilisateur·ice s'il·elle souhaite enregistrer le nom d'utilisateur·ice et le mot de passe, ou de remplir automatiquement ces informations dans un formulaire de connexion. Voir la section [Gérer le remplissage automatique des champs de connexion](/fr/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#gérer_le_remplissage_automatique_des_champs_de_connexion).
 
 - `on`
   - : Le navigateur est autorisé à compléter automatiquement le champ. Aucune indication supplémentaire n'est fournie quant au type de donnée attendu et c'est donc au navigateur d'utiliser une heuristique pour proposer des valeurs pertinentes.
@@ -171,9 +171,9 @@ Lorsque le champ de formulaire n'est pas un numéro de téléphone, une adresse 
 - `new-password`
   - : Un nouveau mot de passe. Lors de la création d'un compte ou d'un changement de mot de passe, cela doit être utilisé pour un champ «&nbsp;Saisissez votre nouveau mot de passe&nbsp;» ou «&nbsp;Confirmez le nouveau mot de passe&nbsp;», par opposition à un champ général «&nbsp;Saisissez votre mot de passe actuel&nbsp;». Cela peut être utilisé par le navigateur pour éviter de remplir accidentellement un mot de passe existant et pour proposer une aide à la création d'un mot de passe sécurisé.
 - `current-password`
-  - : Le mot de passe actuel de l'utilisateur·rice.
+  - : Le mot de passe actuel de l'utilisateur·ice.
 - `one-time-code`
-  - : Un mot de passe à usage unique (OTP) pour vérifier l'identité de l'utilisateur·rice, utilisé comme facteur supplémentaire lors d'une connexion. Il s'agit le plus souvent d'un code reçu par un canal externe, comme un SMS, un e-mail ou une application d'authentification.
+  - : Un mot de passe à usage unique (OTP) pour vérifier l'identité de l'utilisateur·ice, utilisé comme facteur supplémentaire lors d'une connexion. Il s'agit le plus souvent d'un code reçu par un canal externe, comme un SMS, un e-mail ou une application d'authentification.
 - `organization-title`
   - : Un intitulé de poste ou le titre d'une personne au sein d'une organisation, par exemple «&nbsp;Directeur technique&nbsp;», «&nbsp;Président·e&nbsp;», «&nbsp;Responsable d'équipe&nbsp;», etc.
 - `organization`
@@ -240,7 +240,7 @@ Lorsque le champ de formulaire n'est pas un numéro de téléphone, une adresse 
 
 #### Jeton d'autorisation web
 
-Avec {{HTMLElement("input")}} et {{HTMLElement("textarea")}}, le jeton `webauthn` peut être inclus en dernier pour indiquer à l'agent utilisateur d'afficher les identifiants à clé publique lorsque l'utilisateur·rice interagit avec le contrôle.
+Avec {{HTMLElement("input")}} et {{HTMLElement("textarea")}}, le jeton `webauthn` peut être inclus en dernier pour indiquer à l'agent utilisateur d'afficher les identifiants à clé publique lorsque l'utilisateur·ice interagit avec le contrôle.
 
 - `webauthn`
   - : Les clés d'accès générées par [l'API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), comme demandé par un appel conditionnel à {{DOMxRef("CredentialsContainer.get()", "navigator.credentials.get()")}} (c'est-à-dire un appel incluant `mediation: 'conditional'`). Si ce jeton est inclus, il doit être le dernier de la liste de jetons séparés par des espaces. Voir [Se connecter avec une clé d'accès avec l'auto-remplissage de formulaire <sup>(angl.)</sup>](https://web.dev/articles/passkey-form-autofill) pour plus de détails.

@@ -2,7 +2,7 @@
 title: Opérations de glissement
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 l10n:
-  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -21,7 +21,7 @@ Au cœur de l'API Glisser-déposer se trouvent les différents [évènements de 
 
 Le glissement commence sur un [élément déplaçable](/fr/docs/Web/API/HTML_Drag_and_Drop_API#éléments_déplaçables), qui peut être une sélection, un élément déplaçable (y compris des liens, des images et tout élément avec `draggable="true"`), un fichier provenant de l'explorateur de fichiers du système d'exploitation, etc. Tout d'abord, l'évènement {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}} est déclenché sur le _nœud source_, qui est l'élément déplaçable ou, pour les sélections, le nœud de texte sur lequel le glissement a commencé. Si cet évènement est annulé, l'opération de glissement est interrompue. Sinon, l'évènement {{DOMxRef("Element/pointercancel_event", "pointercancel")}} est également déclenché sur le nœud source.
 
-L'évènement `dragstart` est le seul moment où vous pouvez modifier le {{DOMxRef("DragEvent.dataTransfer", "dataTransfer")}}. Pour un élément déplaçable personnalisé, vous voudrez presque toujours modifier les données de glissement, ce qui est couvert en détail dans [Modifier le stockage des données de glissement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifier_le_stockage_des_données_de_glissement). Il y a deux autres choses que vous pouvez changer&nbsp;: [l'image de réaction](#définir_limage_de_réaction_au_glissement) et les [effets de dépôt autorisés](#effets_de_dépôt).
+L'évènement `dragstart` est le seul moment où vous pouvez modifier le {{DOMxRef("DragEvent.dataTransfer", "dataTransfer")}}. Pour un élément déplaçable personnalisé, vous voulez presque toujours modifier les données de glissement, ce qui est couvert en détail dans [Modifier le stockage des données de glissement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifier_le_stockage_des_données_de_glissement). Il y a deux autres choses que vous pouvez changer&nbsp;: [l'image de réaction](#définir_limage_de_réaction_au_glissement) et les [effets de dépôt autorisés](#effets_de_dépôt).
 
 Dans cet exemple, nous ajoutons un écouteur pour l'évènement {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}} en utilisant la méthode `addEventListener()`.
 
@@ -56,7 +56,7 @@ elementDeplacable.addEventListener("dragstart", (event) => {
 });
 ```
 
-Trois arguments sont nécessaires. Le premier est une référence à une image. Cette référence sera généralement un élément `<img>`, mais elle peut également être un `<canvas>` ou tout autre élément. L'image de réaction sera générée à partir de l'apparence de l'image à l'écran, bien que pour les images, elles seront dessinées à leur taille originale. Les deuxième et troisième arguments de la méthode {{DOMxRef("DataTransfer.setDragImage", "setDragImage()")}} sont des décalages où l'image doit apparaître par rapport au pointeur de la souris.
+Trois arguments sont nécessaires. Le premier est une référence à une image. Cette référence est généralement un élément `<img>`, mais elle peut également être un `<canvas>` ou tout autre élément. L'image de réaction est générée à partir de l'apparence de l'image à l'écran, bien que pour les images, elles sont dessinées à leur taille originale. Les deuxième et troisième arguments de la méthode {{DOMxRef("DataTransfer.setDragImage", "setDragImage()")}} sont des décalages où l'image doit apparaître par rapport au pointeur de la souris.
 
 Vous pouvez également utiliser des images et des canevas qui ne sont pas dans un document. Cette technique est utile lors de la création d'images de glissement personnalisées à l'aide de l'élément canvas, comme dans l'exemple suivant&nbsp;:
 
@@ -103,7 +103,7 @@ elementDepot.addEventListener("dragover", (event) => {
 ```
 
 > [!NOTE]
-> La spécification exige que l'évènement `dragenter` soit également annulé pour une cible de dépôt, sinon les évènements `dragover` ou `dragleave` ne commenceront même pas à se déclencher sur cet élément&nbsp;; en pratique, aucun navigateur n'implémente cela, et «&nbsp;l'élément actuel&nbsp;» change chaque fois qu'un nouvel élément est atteint.
+> La spécification exige que l'évènement `dragenter` soit également annulé pour une cible de dépôt, sinon les évènements `dragover` ou `dragleave` ne commencent même pas à se déclencher sur cet élément&nbsp;; en pratique, aucun navigateur n'implémente cela, et «&nbsp;l'élément actuel&nbsp;» change chaque fois qu'un nouvel élément est atteint.
 
 > [!NOTE]
 > La spécification exige que l'annulation de l'évènement `drag` [interrompe](#un_dépôt_échoué) le glissement&nbsp;; en pratique, aucun navigateur n'implémente cela. Voir l'exemple ci-dessous&nbsp;:
@@ -146,26 +146,26 @@ elementDepot.addEventListener("dragover", (event) => {
 });
 ```
 
-Dans cet exemple, nous utilisons la méthode `includes` pour vérifier si le type [`text/uri-list`](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#glisser_des_liens) est présent dans la liste des types. Si c'est le cas, nous annulerons l'évènement afin qu'un dépôt puisse être autorisé. Si les données déplacées ne contiennent pas de lien, l'évènement ne sera pas annulé et un dépôt ne pourra pas se produire à cet endroit.
+Dans cet exemple, nous utilisons la méthode `includes` pour vérifier si le type [`text/uri-list`](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#glisser_des_liens) est présent dans la liste des types. Si c'est le cas, nous annulons l'évènement afin qu'un dépôt puisse être autorisé. Si les données déplacées ne contiennent pas de lien, l'évènement n'est pas annulé et un dépôt ne peut pas se produire à cet endroit.
 
 ## Réaction au dépôt
 
-L'utilisateur·ice est en train de faire glisser un élément vers une zone de dépôt valide. Il existe plusieurs façons d'indiquer à l'utilisateur·ice qu'un dépôt est autorisé à cet endroit, et ce qui pourrait se passer si le dépôt a lieu. En général, le pointeur de la souris s'adapte en fonction de la valeur de la propriété {{DOMxRef("DataTransfer.dropEffect", "dropEffect")}}. Bien que l'apparence exacte dépende de la plateforme de l'utilisateur·ice, généralement une icône de signe plus apparaîtra pour un `copy`, par exemple, et une icône «&nbsp;ne peut pas déposer ici&nbsp;» apparaîtra lorsqu'un dépôt n'est pas autorisé. Ce retour visuel du pointeur de la souris est suffisant dans de nombreux cas.
+L'utilisateur·ice est en train de faire glisser un élément vers une zone de dépôt valide. Il existe plusieurs façons d'indiquer à l'utilisateur·ice qu'un dépôt est autorisé à cet endroit, et ce qui peut se passer si le dépôt a lieu. En général, le pointeur de la souris s'adapte en fonction de la valeur de la propriété {{DOMxRef("DataTransfer.dropEffect", "dropEffect")}}. Bien que l'apparence exacte dépende de la plateforme de l'utilisateur·ice, généralement une icône de signe plus apparaît pour un `copy`, par exemple, et une icône «&nbsp;ne peut pas déposer ici&nbsp;» apparaît lorsqu'un dépôt n'est pas autorisé. Ce retour visuel du pointeur de la souris est suffisant dans de nombreux cas.
 
 ### Effets de dépôt
 
 Lors du dépôt, plusieurs opérations peuvent être effectuées&nbsp;:
 
 - `copy`
-  - : Les données seront simultanément présentes à l'emplacement source et à l'emplacement cible après le dépôt.
+  - : Les données sont simultanément présentes à l'emplacement source et à l'emplacement cible après le dépôt.
 - `move`
-  - : Les données ne seront présentes qu'à l'emplacement cible et seront supprimées de l'emplacement source.
+  - : Les données ne sont présentes qu'à l'emplacement cible et sont supprimées de l'emplacement source.
 - `link`
-  - : Une forme de lien sera créée entre les emplacements source et de dépôt&nbsp;; il n'y a qu'une seule instance des données à l'emplacement source.
+  - : Une forme de lien est créée entre les emplacements source et de dépôt&nbsp;; il n'y a qu'une seule instance des données à l'emplacement source.
 - `none`
-  - : Rien ne se passe&nbsp;; le dépôt a échoué.
+  - : Rien ne se passe&nbsp;; le dépôt échoue.
 
-Avec les évènements {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}} et {{DOMxRef("HTMLElement/dragover_event", "dragover")}}, la propriété {{DOMxRef("DataTransfer.dropEffect", "dropEffect")}} est initialisée à l'effet demandé par l'utilisateur·ice. L'utilisateur·ice peut modifier l'effet souhaité en appuyant sur des touches de modification. Bien que les touches exactes varient selon la plateforme, généralement les touches <kbd>Maj</kbd> et <kbd>Ctrl</kbd> sont utilisées pour passer entre la copie, le glissement et le lien. Le pointeur de la souris changera pour indiquer quelle opération est souhaitée. Par exemple, pour un `copy`, le curseur peut apparaître avec un signe plus à côté.
+Avec les évènements {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}} et {{DOMxRef("HTMLElement/dragover_event", "dragover")}}, la propriété {{DOMxRef("DataTransfer.dropEffect", "dropEffect")}} est initialisée à l'effet demandé par l'utilisateur·ice. L'utilisateur·ice peut modifier l'effet souhaité en appuyant sur des touches de modification. Bien que les touches exactes varient selon la plateforme, généralement les touches <kbd>Maj</kbd> et <kbd>Ctrl</kbd> sont utilisées pour passer entre la copie, le glissement et le lien. Le pointeur de la souris change pour indiquer quelle opération est souhaitée. Par exemple, pour un `copy`, le curseur peut apparaître avec un signe plus à côté.
 
 Vous pouvez modifier la propriété {{DOMxRef("DataTransfer.dropEffect","dropEffect")}} lors des évènements {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}} ou {{DOMxRef("HTMLElement/dragover_event", "dragover")}}, par exemple si une zone de dépôt particulière ne prend en charge que certaines opérations. Vous pouvez modifier la propriété {{DOMxRef("DataTransfer.dropEffect", "dropEffect")}} pour remplacer l'effet de l'utilisateur·ice et imposer qu'une opération de dépôt spécifique se produise.
 
@@ -177,7 +177,7 @@ cible.addEventListener("dragover", (event) => {
 
 Dans cet exemple, le glissement est l'effet qui est effectué.
 
-Vous pouvez utiliser la valeur `none` pour indiquer qu'aucun dépôt n'est autorisé à cet emplacement. Vous devriez généralement faire cela si l'élément n'accepte temporairement pas les dépôts&nbsp;; s'il n'est pas destiné à être une cible de dépôt, vous ne devriez tout simplement pas annuler l'évènement.
+Vous pouvez utiliser la valeur `none` pour indiquer qu'aucun dépôt n'est autorisé à cet emplacement. Vous devez généralement faire cela si l'élément n'accepte temporairement pas les dépôts&nbsp;; s'il n'est pas destiné à être une cible de dépôt, vous ne devez tout simplement pas annuler l'évènement.
 
 Notez que la définition de `dropEffect` n'indique que l'effet souhaité _à cet instant précis_&nbsp;; un envoi ultérieur de `dragover` peut le modifier. Pour persister le choix, vous devez le définir dans chaque évènement `dragover`. De plus, cet effet est uniquement _informatif_, et les effets réellement mis en œuvre dépendent à la fois des nœuds source et cible (par exemple, si le nœud source ne peut pas être modifié, alors même si un effet `"move"` est demandé, il peut ne pas être possible).
 
@@ -292,15 +292,15 @@ for (const effetDepot of ["none", "copy", "move", "link"]) {
 }
 ```
 
-{{EmbedLiveSample("drop_effects", "", 500)}}
+{{EmbedLiveSample("Effets de dépôt", "", 500)}}
 
 ### Réaction personnalisée au dépôt
 
-Pour des effets visuels plus avancés, vous pouvez effectuer d'autres opérations pendant l'évènement {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}, par exemple en insérant un élément à l'endroit où le dépôt aura lieu. Il peut s'agir d'un marqueur d'insertion ou d'un élément représentant l'élément déplacé dans sa nouvelle position. Pour ce faire, vous pouvez créer un élément HTML {{HTMLElement("img")}} et l'insérer dans le document pendant l'évènement {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}.
+Pour des effets visuels plus avancés, vous pouvez effectuer d'autres opérations pendant l'évènement {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}, par exemple en insérant un élément à l'endroit où le dépôt a lieu. Il peut s'agir d'un marqueur d'insertion ou d'un élément représentant l'élément déplacé dans sa nouvelle position. Pour ce faire, vous pouvez créer un élément HTML {{HTMLElement("img")}} et l'insérer dans le document pendant l'évènement {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}.
 
-L'évènement {{DOMxRef("HTMLElement/dragover_event", "dragover")}} se déclenche sur l'élément que la souris pointe. Naturellement, vous devrez peut-être déplacer le marqueur d'insertion à l'intérieur du gestionnaire d'évènements {{DOMxRef("HTMLElement/dragover_event", "dragover")}} également. Vous pouvez utiliser les propriétés {{DOMxRef("MouseEvent.clientX", "clientX")}} et {{DOMxRef("MouseEvent.clientY", "clientY")}} de l'évènement, comme pour les autres évènements de souris, pour déterminer la position du pointeur de la souris.
+L'évènement {{DOMxRef("HTMLElement/dragover_event", "dragover")}} se déclenche sur l'élément que la souris pointe. Naturellement, vous devez peut-être déplacer le marqueur d'insertion à l'intérieur du gestionnaire d'évènements {{DOMxRef("HTMLElement/dragover_event", "dragover")}} également. Vous pouvez utiliser les propriétés {{DOMxRef("MouseEvent.clientX", "clientX")}} et {{DOMxRef("MouseEvent.clientY", "clientY")}} de l'évènement, comme pour les autres évènements de souris, pour déterminer la position du pointeur de la souris.
 
-Enfin, l'évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} se déclenche sur un élément lorsque le glissement quitte l'élément. C'est le moment où vous devez supprimer tout marqueur d'insertion ou surlignage. Vous n'avez pas besoin d'annuler cet évènement. L'évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} se déclenchera toujours, même si le glissement est annulé, vous pouvez donc toujours vous assurer que tout nettoyage du point d'insertion peut être effectué pendant cet évènement.
+Enfin, l'évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} se déclenche sur un élément lorsque le glissement quitte l'élément. C'est le moment où vous devez supprimer tout marqueur d'insertion ou surlignage. Vous n'avez pas besoin d'annuler cet évènement. L'évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} se déclenche toujours, même si le glissement est annulé, vous pouvez donc toujours vous assurer que tout nettoyage du point d'insertion peut être effectué pendant cet évènement.
 
 Pour un exemple pratique de l'utilisation de ces évènements, consultez notre [exemple de tableau Kanban](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board#insérer_à_un_emplacement_particulier).
 
@@ -312,7 +312,7 @@ Pour qu'un dépôt soit _potentiellement réussi_, il doit se produire sur une [
 
 Si le dépôt est potentiellement réussi, un évènement {{DOMxRef("HTMLElement/drop_event", "drop")}} est déclenché sur la cible de dépôt. Vous devez annuler cet évènement en utilisant `preventDefault()` afin que le dépôt soit considéré comme réellement réussi. Sinon, le dépôt est également considéré comme réussi si le dépôt consistait à déposer du texte (les données contiennent un élément `text/plain`) dans un champ de texte éditable. Dans ce cas, le texte est inséré dans le champ (soit à la position du curseur, soit à la fin, selon les conventions de la plateforme) et, si le `dropEffect` est `move` alors que la source est une sélection dans une zone éditable, la source est supprimée. Sinon, pour toutes les autres données de glissement et cibles de dépôt, le dépôt est considéré comme échoué.
 
-Lors de l'évènement {{DOMxRef("HTMLElement/drop_event", "drop")}}, vous devez récupérer les données souhaitées dans le stockage de données de glisser-déposer à l'aide de {{DOMxRef("DataTransfer.getData()")}}, et les insérer à l'endroit du dépôt. Vous pouvez utiliser la propriété {{DOMxRef("DataTransfer.dropEffect", "dropEffect")}} pour déterminer quelle opération de glissement était souhaitée. L'évènement `drop` est le seul moment où vous pouvez lire le stockage de données de glissement, en dehors de `dragstart`.
+Lors de l'évènement {{DOMxRef("HTMLElement/drop_event", "drop")}}, vous devez récupérer les données souhaitées dans le stockage de données de glisser-déposer à l'aide de {{DOMxRef("DataTransfer.getData()")}}, et les insérer à l'endroit du dépôt. Vous pouvez utiliser la propriété {{DOMxRef("DataTransfer.dropEffect", "dropEffect")}} pour déterminer quelle opération de glissement est souhaitée. L'évènement `drop` est le seul moment où vous pouvez lire le stockage de données de glissement, en dehors de `dragstart`.
 
 ```js
 cible.addEventListener("drop", (event) => {
@@ -324,7 +324,7 @@ cible.addEventListener("drop", (event) => {
 
 Dans l'exemple ci-dessus, une fois les données récupérées, nous insérons la chaîne de caractères en tant que contenu textuel de la cible. Cela a pour effet d'insérer le texte déplacé à l'endroit où il a été déposé, en supposant que la cible de dépôt est une zone de texte telle qu'un élément `p` ou `div`.
 
-La méthode `getData()` retourne une chaîne de caractères vide si le stockage de données ne contient pas de données du type défini. Si vous avez implémenté des [cibles de dépôt conditionnelles](#cibles_de_dépôt_conditionnelles), cette situation ne devrait pas se produire, car la cible de dépôt ne devrait accepter les dépôts que lorsque les données souhaitées sont présentes.
+La méthode `getData()` retourne une chaîne de caractères vide si le stockage de données ne contient pas de données du type défini. Si vous avez implémenté des [cibles de dépôt conditionnelles](#cibles_de_dépôt_conditionnelles), cette situation ne doit pas se produire, car la cible de dépôt ne doit accepter les dépôts que lorsque les données souhaitées sont présentes.
 
 Vous pouvez également récupérer d'autres types de données. Si les données sont un lien, elles doivent avoir le type [`text/uri-list`](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#glisser_des_liens). Vous pouvez alors insérer un lien dans le contenu.
 
@@ -354,19 +354,19 @@ L'opération de glisser-déposer est considérée comme échouée si l'une des c
 1. L'utilisateur·ice a appuyé sur la touche <kbd>Échap</kbd>
 2. Le dépôt a eu lieu en dehors d'une [cible de dépôt](#déplacer_des_éléments_et_définir_des_cibles_de_dépôt) valide
 3. L'effet de dépôt vaut `none` au moment du relâchement de la souris
-4. L'évènement `drop` n'a pas été annulé et le dépôt ne consistait pas à déposer du texte (contenant des données `text/plain`) dans un champ de texte éditable (voir [effectuer un dépôt](#effectuer_le_dépôt))
+4. L'évènement `drop` n'a pas été annulé et le dépôt ne consiste pas à déposer du texte (contenant des données `text/plain`) dans un champ de texte éditable (voir [effectuer un dépôt](#effectuer_le_dépôt))
 
-Dans les cas 1 et 3, si l'annulation survient alors que le curseur survole une cible de dépôt valide, celle-ci reçoit un évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}}, comme si le dépôt n'avait finalement pas lieu sur elle, afin qu'elle puisse effacer toute [réaction au dépôt](#réaction_personnalisée_au_dépôt). Dans tous les cas, la propriété `dropEffect` est définie sur `none` pour les évènements suivants.
+Dans les cas 1 et 3, si l'annulation survient alors que le curseur survole une cible de dépôt valide, celle-ci reçoit un évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}}, comme si le dépôt n'a finalement pas lieu sur elle, afin qu'elle puisse effacer toute [réaction au dépôt](#réaction_personnalisée_au_dépôt). Dans tous les cas, la propriété `dropEffect` est définie sur `none` pour les évènements suivants.
 
 Ensuite, un évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}} est déclenché à la source. Le navigateur peut afficher une animation de la sélection déplacée revenant à la source de l'opération de glisser-déposer.
 
 ## Terminer le glissement
 
-Une fois le glissement terminé, un évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}} est déclenché à la source du glissement (le même élément qui a reçu l'évènement {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}}). Cet évènement sera déclenché indépendamment du succès du glissement.
+Une fois le glissement terminé, un évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}} est déclenché à la source du glissement (le même élément qui a reçu l'évènement {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}}). Cet évènement est déclenché indépendamment du succès du glissement.
 
 Si la propriété {{DOMxRef("DataTransfer.dropEffect","dropEffect")}} a la valeur `none` pendant un évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}}, alors le glissement a été annulé. Sinon, l'effet définit quelle opération a été effectuée. La source peut utiliser cette information après une opération de `move` pour supprimer l'élément déplacé de son ancien emplacement.
 
-Un dépôt peut se produire à l'intérieur de la même fenêtre ou sur une autre application. L'évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}} sera toujours déclenché. Les propriétés {{DOMxRef("MouseEvent.screenX", "screenX")}} et {{DOMxRef("MouseEvent.screenY", "screenY")}} de l'évènement seront définies aux coordonnées de l'écran où le dépôt a eu lieu.
+Un dépôt peut se produire à l'intérieur de la même fenêtre ou sur une autre application. L'évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}} est toujours déclenché. Les propriétés {{DOMxRef("MouseEvent.screenX", "screenX")}} et {{DOMxRef("MouseEvent.screenY", "screenY")}} de l'évènement sont définies aux coordonnées de l'écran où le dépôt a eu lieu.
 
 Après la propagation de l'évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}}, l'opération de glisser-déposer est terminée.
 

@@ -17,7 +17,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<td>`** définit une cellule d'un table
   </caption>
   <thead>
     <tr>
-      <th scope="col">Joueur·euse</th>
+      <th scope="col">joueur·se</th>
       <th scope="col">Gloobles</th>
       <th scope="col">Za'taak</th>
     </tr>

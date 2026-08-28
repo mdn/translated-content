@@ -16,7 +16,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<th>`** définit une cellule comme l'en
     Stars du football extraterrestre
   </caption>
   <tr>
-    <th scope="col">Joueur·euse</th>
+    <th scope="col">joueur·se</th>
     <th scope="col">Gloobles</th>
     <th scope="col">Za'taak</th>
   </tr>
