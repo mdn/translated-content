@@ -33,7 +33,7 @@ border-top-color: transparent;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -73,7 +73,7 @@ border-top-color: unset;
 このプロパティは 1 つの `<color>` 値で指定します。
 
 - {{cssxref("&lt;color&gt;")}}
-  - : 上の境界線の色を定義します。
+  - : 上側の境界線の色を定義します。
 
 ## 公式定義
 
@@ -125,7 +125,7 @@ border-top-color: unset;
 
 ## 関連情報
 
-- 境界に関する CSS 一括指定プロパティ: {{cssxref("border")}}, {{cssxref("border-top")}}, {{cssxref("border-color")}}.
-- 他の境界線の色に関する CSS プロパティ: {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}
-- 同じ境界線に適用される他の境界関連の CSS プロパティ: {{cssxref("border-top-style")}}, {{cssxref("border-top-width")}}
+- 境界に関する CSS 一括指定プロパティ: {{cssxref("border")}}、{{cssxref("border-top")}}、{{cssxref("border-color")}}.
+- 他の境界線の色に関する CSS プロパティ: {{cssxref("border-right-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-left-color")}}
+- 同じ境界線に適用される他の境界関連の CSS プロパティ: {{cssxref("border-top-style")}}、{{cssxref("border-top-width")}}
 - デフォルト値の [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) カラー値

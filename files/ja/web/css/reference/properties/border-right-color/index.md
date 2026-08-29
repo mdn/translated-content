@@ -73,7 +73,7 @@ border-right-color: unset;
 このプロパティは 1 つの値で指定します。
 
 - {{cssxref("&lt;color&gt;")}}
-  - : 右の境界線の色を定義します。
+  - : 右側の境界線の色を定義します。
 
 ## 公式定義
 
@@ -125,7 +125,7 @@ border-right-color: unset;
 
 ## 関連情報
 
-- 境界に関する CSS 一括指定プロパティ: {{cssxref("border")}}, {{cssxref("border-right")}}, {{cssxref("border-color")}}
-- 他の境界線の色に関する CSS プロパティ: {{cssxref("border-left-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-top-color")}}
-- 同じ境界に適用される他の境界関連の CSS プロパティ: {{cssxref("border-right-style")}}, {{cssxref("border-right-width")}}
+- 境界に関する CSS 一括指定プロパティ: {{cssxref("border")}}、{{cssxref("border-right")}}、{{cssxref("border-color")}}
+- 他の境界線の色に関する CSS プロパティ: {{cssxref("border-left-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-top-color")}}
+- 同じ境界に適用される他の境界関連の CSS プロパティ: {{cssxref("border-right-style")}}、{{cssxref("border-right-width")}}
 - デフォルト値の [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) カラー値
