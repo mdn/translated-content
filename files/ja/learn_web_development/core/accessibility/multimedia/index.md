@@ -2,10 +2,10 @@
 title: アクセシブルなマルチメディア
 slug: Learn_web_development/Core/Accessibility/Multimedia
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: ef78a9a3336c884fb3587e4ff833e64704296f01
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
 
 アクセシビリティの問題を引き起こす他のカテゴリーは、マルチメディアです。映像、音声、画像といったコンテンツは、支援技術 (assistive technologies) とそのユーザーが理解可能となる適切な代替テキストを必要とします。この記事ではその方法を説明します。
 
@@ -318,21 +318,17 @@ HTML のメディア再生と共に表示させるためには、次のことを
 </video>
 ```
 
-これは、字幕が表示された映像となり、次のようになります。
-
-![再生、停止、音量、キャプションの単発のオン・オフなど標準制御する動画プレーヤー。再生されている動画は、槍のような武器を持った男性のシーンを示し、キャプションには "Esta hoja tiene pasado oscuro. "と書かれています。](video-player-with-captions.png)
-
-詳細は [HTML の動画へのキャプションと字幕の追加](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)を読んでください。あなたは、GitHub で GIan Devlin によって作られた[例](http://iandevlin.github.io/mdn/video-player-with-captions/)をこの記事と併せて見ることができます。([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/main/mdn/video-player-with-captions) も見てください) この例では JavaScript を使用して、ユーザーが異なる言語の字幕を選択できるようになっています。字幕を表示するためには、"CC" ボタンをクリックして英語、ドイツ語、スペイン後のオプションを選択する必要があります。
+これにより、字幕が表示される動画が完成します。本格的なアプリケーションとそのソースコードについては、[HTML 動画へのキャプションと字幕の追加](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)を参照してください。この例では JavaScript を使用して、ユーザーが異なる言語の字幕を選択できるようになっています。字幕を表示するためには、"CC" ボタンをクリックして英語、ドイツ語、スペイン後のオプションを選択する必要があります。
 
 > [!NOTE]
 > テキストトラックは {{glossary("SEO")}} でも役に立ちます。検索エンジンはテキストによって更新されるためです。検索エンジンは、テキストトラックによって映像の途中に直接リンクすることさえできます。
 
 ## まとめ
 
-このチャプターでは、マルチメディアにおけるアクセシビリティの関心ごとの要約をいくつかの実践的なソリューションと共に提供しました。
+この章では、マルチメディアにおけるアクセシビリティの関心ごとの要約をいくつかの実践的なソリューションと共に提供しました。
 
-マルチメディアをアクセシビリティのあるものにするのは常に簡単というわけではありません。例えば、没入感のある 3D ゲームやバーチャルリアリティアプリを扱っている場合、そのような使い勝手のためにテキストの代替を提供することは非常に難しく、視覚的な障害を持つユーザーはこのようなアプリの対象とするユーザー層には実のところ入っていないと言えるかもしれません。
+マルチメディアをアクセシビリティのあるものにするのは常に簡単というわけではありません。例えば、没入感のある三次元ゲームや仮想現実アプリを扱っている場合、そのような使い勝手のためにテキストの代替を提供することは非常に難しく、視覚障碍を持つユーザーはこのようなアプリの対象とするユーザー層には実のところ入っていないと言えるかもしれません。
 
-しかし、そのようなアプリは、弱視や色覚異常の人が知覚できるように、十分な色のコントラストと明確な表示をしていることを確認し、キーボードでアクセスできるようにすることはできます。アクセシビリティとは、 100% のアクセシビリティを常に目指すことではなく、できる限りのことをすることであり、それは多くの場合不可能であることを忘れないでください。
+しかし、そのようなアプリは、弱視や色覚異常の人が知覚できるように、十分な色のコントラストと明確な表示をしていることを確認し、キーボードでアクセスできるようにすることはできます。アクセシビリティとは、100% のアクセシビリティを常に目指すことではなく、できる限りのことをすることであり、それは多くの場合不可能であることを忘れないでください。
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
