@@ -141,14 +141,14 @@ Volvamos a ver nuestras dos cajas — una con un modo de escritura `horizontal-t
 ```html live-sample___width
 <div class="wrapper">
   <div class="box horizontal">
-    <h2>Heading</h2>
-    <p>A paragraph demonstrating writing modes in CSS.</p>
-    <p>These boxes have a width.</p>
+    <h2>Encabezado</h2>
+    <p>Un párrafo que muestra los modos de escritura en CSS.</p>
+    <p>Estas cajas tienen un ancho definido.</p>
   </div>
   <div class="box vertical">
-    <h2>Heading</h2>
-    <p>A paragraph demonstrating writing modes in CSS.</p>
-    <p>These boxes have a width.</p>
+    <h2>Encabezado</h2>
+    <p>Un párrafo que muestra los modos de escritura en CSS.</p>
+    <p>Estas cajas tienen un ancho definido.</p>
   </div>
 </div>
 ```
@@ -189,14 +189,14 @@ La propiedad mapeada a `width` cuando estamos en un modo de escritura horizontal
 ```html live-sample___inline-size
 <div class="wrapper">
   <div class="box horizontal">
-    <h2>Heading</h2>
-    <p>A paragraph demonstrating writing modes in CSS.</p>
-    <p>These boxes have inline-size.</p>
+    <h2>Encabezado</h2>
+    <p>Un párrafo que muestra los modos de escritura en CSS.</p>
+    <p>Estas cajas tienen <code>inline-size</code>.</p>
   </div>
   <div class="box vertical">
-    <h2>Heading</h2>
-    <p>A paragraph demonstrating writing modes in CSS.</p>
-    <p>These boxes have inline-size.</p>
+    <h2>Encabezado</h2>
+    <p>Un párrafo que muestra los modos de escritura en CSS.</p>
+    <p>Estas cajas tienen <code>inline-size</code>.</p>
   </div>
 </div>
 ```
@@ -304,11 +304,12 @@ Cambia el modo de escritura de este ejemplo a `vertical-rl` para ver qué le suc
 <div class="wrapper">
   <div class="box logical">
     <img
-      alt="star"
+      alt="estrella"
       src="https://mdn.github.io/shared-assets/images/examples/big-star.png" />
     <p>
-      This box uses logical properties. The star image has been floated
-      inline-start, it also has a margin on the inline-end and block-end.
+      Esta caja usa propiedades lógicas. La imagen de la estrella se ha flotado
+      con <code>inline-start</code>, y además tiene un margen en
+      <code>inline-end</code> y <code>block-end</code>.
     </p>
   </div>
 </div>
