@@ -15,13 +15,13 @@ La méthode statique **`Date.now()`** retourne le nombre de millisecondes écoul
 const start = Date.now();
 
 console.log("démarrage du minuteur...");
-// Sortie attendue : "démarrage du minuteur..."
+// Résultat attendu : "démarrage du minuteur..."
 
 setTimeout(() => {
   const millis = Date.now() - start;
 
   console.log(`secondes écoulées = ${Math.floor(millis / 1000)}`);
-  // Sortie attendue : "secondes écoulées = 2"
+  // Résultat attendu : "secondes écoulées = 2"
 }, 2000);
 ```
 

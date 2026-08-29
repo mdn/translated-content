@@ -3,7 +3,7 @@ title: "HTMLFormElement : méthode checkValidity()"
 short-title: checkValidity()
 slug: Web/API/HTMLFormElement/checkValidity
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b2c48c8b7c097aeab4bc15a388c913f466f40e25
 ---
 
 {{APIRef("HTML DOM")}}
@@ -29,7 +29,7 @@ Retourne `true` si les valeurs des contrôles associés ne présentent aucun pro
 
 ## Exemples
 
-Dans l'exemple suivant, l'appel à `checkValidity()` renverra `true` ou `false` selon la validité des contrôles.
+Dans l'exemple suivant, l'appel à `checkValidity()` retourne `true` ou `false` selon la validité des contrôles.
 
 ```js
 const element = document.getElementById("myForm");

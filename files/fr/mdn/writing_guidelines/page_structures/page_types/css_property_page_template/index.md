@@ -2,7 +2,7 @@
 title: Modèle de page de propriété CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 l10n:
-  sourceCommit: e99e4f05057841b04c00142900d6aae1b61d77ba
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 > [!NOTE]
@@ -90,6 +90,16 @@ Voir la section [Exemples interactifs](/fr/docs/MDN/Writing_guidelines/Page_stru
 ## Propriétés constitutives
 
 Ajoutez cette section uniquement pour les propriétés abrégées, telles que [animation](/fr/docs/Web/CSS/Reference/Properties/animation), afin de lister toutes les propriétés longues associées.
+
+Introduisez les valeurs avec l'une des phrases suivantes, selon le cas&nbsp;:
+
+```md
+Cette propriété est un raccourci pour les propriétés CSS suivantes&nbsp;:
+
+Cette propriété est un raccourci pour les propriétés logiques suivantes&nbsp;:
+
+Cette propriété est un raccourci pour les propriétés physiques suivantes&nbsp;:
+```
 
 ## Syntaxe
 

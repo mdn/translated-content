@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
-L'attribut booléen **`disabled`**, lorsqu'il est présent, rend l'élément non modifiable, non sélectionnable, ou même non soumis avec le formulaire. L'utilisateur·rice ne peut ni modifier ni sélectionner le contrôle, ni les descendants du contrôle de formulaire. Si l'attribut `disabled` est défini sur un contrôle de formulaire, l'élément et ses descendants de contrôle de formulaire ne participent pas à la validation des contraintes. Souvent, les navigateurs grisent ces contrôles et ils ne reçoivent aucun évènement de navigation, comme les clics de souris ou les évènements liés à la sélection.
+L'attribut booléen **`disabled`**, lorsqu'il est présent, rend l'élément non modifiable, non sélectionnable, ou même non soumis avec le formulaire. L'utilisateur·ice ne peut ni modifier ni sélectionner le contrôle, ni les descendants du contrôle de formulaire. Si l'attribut `disabled` est défini sur un contrôle de formulaire, l'élément et ses descendants de contrôle de formulaire ne participent pas à la validation des contraintes. Souvent, les navigateurs grisent ces contrôles et ils ne reçoivent aucun évènement de navigation, comme les clics de souris ou les évènements liés à la sélection.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: disabled", "tabbed-standard")}}
 
@@ -46,14 +46,14 @@ label {
 
 L'attribut `disabled` est utilisé par {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} et {{HTMLElement("input")}}.
 
-Cet attribut booléen indique que l'utilisateur·rice ne peut pas interagir avec le contrôle ou ses contrôles descendants. Si cet attribut n'est pas défini, le contrôle hérite ce paramètre de l'élément contenant, par exemple {{HTMLElement("fieldset")}}&nbsp;; s'il n'y a pas d'élément contenant avec l'attribut `disabled` défini, et que le contrôle lui-même ne possède pas cet attribut, alors le contrôle est activé. S'il est déclaré sur un {{HTMLElement("optgroup")}}, le sélecteur reste interactif (sauf s'il est désactivé autrement), mais aucun des éléments du groupe d'options n'est sélectionnable.
+Cet attribut booléen indique que l'utilisateur·ice ne peut pas interagir avec le contrôle ou ses contrôles descendants. Si cet attribut n'est pas défini, le contrôle hérite ce paramètre de l'élément contenant, par exemple {{HTMLElement("fieldset")}}&nbsp;; s'il n'y a pas d'élément contenant avec l'attribut `disabled` défini, et que le contrôle lui-même ne possède pas cet attribut, alors le contrôle est activé. S'il est déclaré sur un {{HTMLElement("optgroup")}}, le sélecteur reste interactif (sauf s'il est désactivé autrement), mais aucun des éléments du groupe d'options n'est sélectionnable.
 
 > [!NOTE]
 > Si un {{HTMLElement("fieldset")}} est désactivé, les contrôles de formulaire descendants sont tous désactivés, à l'exception des contrôles de formulaire dans la légende ({{HTMLElement("legend")}}).
 
 Lorsqu'un élément supporte l'attribut `disabled` et que celui-ci est appliqué, la pseudo-classe {{CSSxRef(":disabled")}} s'y applique également. Inversement, les éléments qui prennent en charge l'attribut `disabled` mais qui n'ont pas l'attribut défini correspondent à la pseudo-classe {{CSSxRef(":enabled")}}.
 
-Cet attribut booléen empêche l'utilisateur·rice d'interagir avec le bouton. Si cet attribut n'est pas défini, le bouton peut toujours être désactivé à partir d'un élément contenant, par exemple {{HTMLElement("fieldset")}}&nbsp;; s'il n'y a pas d'élément contenant avec l'attribut `disabled` défini, alors le bouton est activé.
+Cet attribut booléen empêche l'utilisateur·ice d'interagir avec le bouton. Si cet attribut n'est pas défini, le bouton peut toujours être désactivé à partir d'un élément contenant, par exemple {{HTMLElement("fieldset")}}&nbsp;; s'il n'y a pas d'élément contenant avec l'attribut `disabled` défini, alors le bouton est activé.
 
 Firefox, contrairement aux autres navigateurs, va faire persister l'état désactivé dynamique d'un {{HTMLElement("button")}} lors des rechargements de page. Utilisez l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Attributes/autocomplete) pour contrôler cette fonctionnalité.
 
@@ -74,7 +74,7 @@ S'il est présent sur un élément supporté, la pseudo-classe {{CSSxRef(":disab
 
 ### Validation des contraintes
 
-Si l'élément est `disabled`, alors la valeur de l'élément ne peut pas recevoir de sélection et ne peut pas être mise à jour par l'utilisateur·rice, et ne participe pas à la validation des contraintes.
+Si l'élément est `disabled`, alors la valeur de l'élément ne peut pas recevoir de sélection et ne peut pas être mise à jour par l'utilisateur·ice, et ne participe pas à la validation des contraintes.
 
 ## Exemples
 

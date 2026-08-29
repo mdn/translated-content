@@ -54,7 +54,7 @@ Si vous acceptez un fichier média, vous pouvez vouloir inclure tous les formats
 <input type="file" id="imageFile" accept="image/*" />
 ```
 
-L'attribut `accept` ne valide pas les types des fichiers sélectionnés&nbsp;: il fournit des indications aux navigateurs pour guider l'utilisateur·rice vers le bon type de fichier. Il reste possible (dans la plupart des cas) pour l'utilisateur·rice de modifier une option du sélecteur de fichiers afin de pouvoir choisir n'importe quel fichier, même d'un type incorrect.
+L'attribut `accept` ne valide pas les types des fichiers sélectionnés&nbsp;: il fournit des indications aux navigateurs pour guider l'utilisateur·ice vers le bon type de fichier. Il reste possible (dans la plupart des cas) pour l'utilisateur·ice de modifier une option du sélecteur de fichiers afin de pouvoir choisir n'importe quel fichier, même d'un type incorrect.
 
 Pour cette raison, vous devez toujours valider la contrainte attendue côté serveur.
 

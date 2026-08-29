@@ -3,10 +3,10 @@ title: "Element : évènement mousewheel"
 short-title: mousewheel
 slug: Web/API/Element/mousewheel_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("UI Events")}}{{Non-standard_Header}}
 
 L'évènement _obsolète_ et _non standard_ **`mousewheel`** est déclenché de manière asynchrone sur un objet {{DOMxRef("Element")}} pour fournir des mises à jour lorsqu'une molette de souris ou un dispositif similaire est utilisé. L'évènement `mousewheel` n'a jamais fait partie d'une norme, et bien qu'il ait été implémenté par plusieurs navigateurs, il n'a jamais été implémenté par Firefox.
 

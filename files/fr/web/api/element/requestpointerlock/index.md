@@ -55,7 +55,7 @@ canvas.addEventListener("click", async () => {
 });
 ```
 
-Les systèmes d'exploitation activent par défaut l'accélération de la souris, ce qui est utile lorsque vous souhaitez parfois des mouvements lents et précis (par exemple lorsque vous utilisez un logiciel de graphisme), mais que vous souhaitez également parcourir de grandes distances avec un mouvement de souris plus rapide (par exemple pour faire défiler et sélectionner plusieurs fichiers). Cependant, pour certains jeux en perspective à la première personne, les données brutes de la souris sont préférées pour contrôler la rotation de la caméra — où le même mouvement de distance, rapide ou lent, entraîne la même rotation. Cela se traduit par une meilleure expérience de jeu et une plus grande précision, selon les joueur·euse·s professionnel·le·s.
+Les systèmes d'exploitation activent par défaut l'accélération de la souris, ce qui est utile lorsque vous souhaitez parfois des mouvements lents et précis (par exemple lorsque vous utilisez un logiciel de graphisme), mais que vous souhaitez également parcourir de grandes distances avec un mouvement de souris plus rapide (par exemple pour faire défiler et sélectionner plusieurs fichiers). Cependant, pour certains jeux en perspective à la première personne, les données brutes de la souris sont préférées pour contrôler la rotation de la caméra — où le même mouvement de distance, rapide ou lent, entraîne la même rotation. Cela se traduit par une meilleure expérience de jeu et une plus grande précision, selon les joueur·se·s professionnel·le·s.
 
 Pour désactiver l'accélération de la souris au niveau du système d'exploitation et accéder aux données brutes de la souris, vous pouvez définir `unadjustedMovement` sur `true`&nbsp;:
 

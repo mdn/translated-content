@@ -3,12 +3,12 @@ title: "AbortSignal : méthode statique any()"
 short-title: any()
 slug: Web/API/AbortSignal/any_static
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-La méthode statique **`any()`** de l'interface {{DOMxRef("AbortSignal")}} prend un itérable de signaux d'annulation et retourne un objet `AbortSignal`. Le signal d'annulation retourné est annulé dès qu'un des signaux d'entrée de l'itérable est annulé. La {{DOMxRef("AbortSignal.reason", "raison d'annulation", "", 1)}} sera définie sur la raison du premier signal annulé. Si l'un des signaux donnés est déjà annulé, le {{DOMxRef("AbortSignal")}} retourné le sera aussi.
+La méthode statique **`any()`** de l'interface {{DOMxRef("AbortSignal")}} prend un itérable de signaux d'annulation et retourne un objet `AbortSignal`. Le signal d'annulation retourné est annulé dès qu'un des signaux d'entrée de l'itérable est annulé. La {{DOMxRef("AbortSignal.reason", "raison d'annulation", "", 1)}} est définie sur la raison du premier signal annulé. Si l'un des signaux donnés est déjà annulé, le {{DOMxRef("AbortSignal")}} retourné l'est aussi.
 
 ## Syntaxe
 
@@ -25,8 +25,8 @@ AbortSignal.any(iterable)
 
 Un objet {{DOMxRef("AbortSignal")}} qui est&nbsp;:
 
-- **Déjà annulé**, si l'un des signaux donnés est déjà annulé. La raison du {{DOMxRef("AbortSignal")}} retourné sera déjà définie sur la {{DOMxRef("AbortSignal.reason", "reason")}} du premier signal déjà annulé.
-- **Annulé de façon asynchrone**, quand un signal d'annulation de l'`iterable` est annulé. La {{DOMxRef("AbortSignal.reason", "reason")}} sera définie sur la raison du premier signal annulé.
+- **Déjà annulé**, si l'un des signaux donnés est déjà annulé. La raison du {{DOMxRef("AbortSignal")}} retourné est déjà définie sur la {{DOMxRef("AbortSignal.reason", "reason")}} du premier signal déjà annulé.
+- **Annulé de façon asynchrone**, quand un signal d'annulation d'un `iterable` est annulé. La {{DOMxRef("AbortSignal.reason", "reason")}} est définie sur la raison du premier signal annulé.
 
 ## Exemples
 
@@ -46,7 +46,7 @@ cancelDownloadButton.addEventListener("click", () => {
 // Délai d'attente après 5 minutes
 const timeoutSignal = AbortSignal.timeout(1_000 * 60 * 5);
 
-// Ce signal sera annulé soit lorsque l'utilisateur·ice clique sur le bouton d'annulation, soit après 5 minutes
+// Ce signal est annulé soit lorsque l'utilisateur·ice clique sur le bouton d'annulation, soit après 5 minutes
 // selon ce qui arrive en premier
 const combinedSignal = AbortSignal.any([
   userCancelController.signal,

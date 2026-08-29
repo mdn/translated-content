@@ -18,9 +18,9 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 > Chacun des noms d'attributs d'évènement ci-dessous est lié à son évènement équivalent de l'interface {{DOMxRef("Window")}}. Vous pouvez écouter ces évènements en utilisant {{DOMxRef("EventTarget/addEventListener", "addEventListener()")}} au lieu d'ajouter l'attribut `oneventname` à l'élément `<body>`.
 
 - {{DOMxRef("Window/afterprint_event", "onafterprint")}}
-  - : Fonction appelée après que l'utilisateur·rice a imprimé le document.
+  - : Fonction appelée après que l'utilisateur·ice a imprimé le document.
 - {{DOMxRef("Window/beforeprint_event", "onbeforeprint")}}
-  - : Fonction appelée lorsque l'utilisateur·rice demande l'impression du document.
+  - : Fonction appelée lorsque l'utilisateur·ice demande l'impression du document.
 - {{DOMxRef("Window/beforeunload_event", "onbeforeunload")}}
   - : Fonction appelée lorsque le document est sur le point d'être déchargé.
 - {{DOMxRef("Window/blur_event", "onblur")}}
@@ -52,7 +52,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - {{DOMxRef("Window/pageshow_event", "onpageshow")}}
   - : Fonction appelée lorsque le navigateur affiche le document de la fenêtre suite à une navigation.
 - {{DOMxRef("Window/popstate_event", "onpopstate")}}
-  - : Fonction appelée lorsque l'utilisateur·rice a navigué dans l'historique de session.
+  - : Fonction appelée lorsque l'utilisateur·ice a navigué dans l'historique de session.
 - {{DOMxRef("Window/resize_event", "onresize")}}
   - : Fonction appelée lorsque le document a été redimensionné.
 - {{DOMxRef("Window/rejectionhandled_event", "onrejectionhandled")}}

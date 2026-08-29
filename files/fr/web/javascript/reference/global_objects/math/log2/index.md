@@ -18,16 +18,16 @@ La méthode statique **`Math.log2()`** retourne le logarithme en base 2 d'un nom
 
 ```js interactive-example
 console.log(Math.log2(3));
-// Sortie attendue : 1.584962500721156
+// Résultat attendu : 1.584962500721156
 
 console.log(Math.log2(2));
-// Sortie attendue : 1
+// Résultat attendu : 1
 
 console.log(Math.log2(1));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(Math.log2(0));
-// Sortie attendue : -Infinity
+// Résultat attendu : -Infinity
 ```
 
 ## Syntaxe

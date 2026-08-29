@@ -8,7 +8,7 @@ l10n:
 
 La propriété d'accesseur **`byteLength`** des instances de {{JSxRef("ArrayBuffer")}} retourne la longueur (en octets) de ce tableau de mémoire tampon.
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.prototype.byteLength")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: ArrayBuffer.prototype.byteLength")}}
 
 ```js interactive-example
 // Crée un objet ArrayBuffer avec une taille en octets

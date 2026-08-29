@@ -3,10 +3,10 @@ title: "Element : méthode setCapture()"
 short-title: setCapture()
 slug: Web/API/Element/setCapture
 l10n:
-  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 La méthode **`setCapture()`** de l'interface {{DOMxRef("Element")}} permet de gérer un évènement `mousedown` afin de rediriger tous les évènements de la souris vers cet élément jusqu'à ce que le bouton de la souris soit relâché ou que {{DOMxRef("Document.releaseCapture()")}} soit appelée.
 

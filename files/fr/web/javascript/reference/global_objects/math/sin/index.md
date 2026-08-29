@@ -16,13 +16,13 @@ function getCircleY(radians, radius) {
 }
 
 console.log(getCircleY(1, 10));
-// Sortie attendue : 8.414709848078965
+// Résultat attendu : 8.414709848078965
 
 console.log(getCircleY(2, 10));
-// Sortie attendue : 9.092974268256818
+// Résultat attendu : 9.092974268256818
 
 console.log(getCircleY(Math.PI, 10));
-// Sortie attendue : 1.2246467991473533e-15
+// Résultat attendu : 1.2246467991473533e-15
 ```
 
 ## Syntaxe

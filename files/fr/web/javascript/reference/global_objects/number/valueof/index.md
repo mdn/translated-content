@@ -13,14 +13,14 @@ La méthode **`valueOf()`** de {{JSxRef("Number")}} retourne la valeur de ce nom
 ```js interactive-example
 const numObj = new Number(42);
 console.log(typeof numObj);
-// Sortie attendue : "object"
+// Résultat attendu : "object"
 
 const num = numObj.valueOf();
 console.log(num);
-// Sortie attendue : 42
+// Résultat attendu : 42
 
 console.log(typeof num);
-// Sortie attendue : "number"
+// Résultat attendu : "number"
 ```
 
 ## Syntaxe

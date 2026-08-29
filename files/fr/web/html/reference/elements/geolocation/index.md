@@ -213,7 +213,7 @@ Cet exemple utilise l'élément `<geolocation>` pour récupérer votre position 
 
 #### HTML
 
-Nous incluons un élément `<geolocation>` avec un bouton `<button>` de repli imbriqué à l'intérieur, qui zqr affiché dans les navigateurs ne prenant pas en charge `<geolocation>`. Nous incluons également un élément `<p>` pour afficher les données de localisation et les erreurs.
+Nous incluons un élément `<geolocation>` avec un bouton `<button>` de repli imbriqué à l'intérieur, qui est affiché dans les navigateurs ne prenant pas en charge `<geolocation>`. Nous incluons également un élément `<p>` pour afficher les données de localisation et les erreurs.
 
 ```html
 <geolocation>

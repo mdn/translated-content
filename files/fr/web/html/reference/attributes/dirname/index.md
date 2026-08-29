@@ -7,7 +7,7 @@ l10n:
 ---
 
 L'attribut **`dirname`** peut être utilisé sur l'élément HTML {{HTMLElement("textarea")}} et sur plusieurs types d'éléments HTML {{HTMLElement("input")}}. Il permet d'indiquer la direction du texte saisi dans l'élément lors de la soumission du formulaire.
-Le navigateur utilise la valeur de cet attribut pour déterminer si le texte saisi par l'utilisateur·rice est orienté de gauche à droite ou de droite à gauche.
+Le navigateur utilise la valeur de cet attribut pour déterminer si le texte saisi par l'utilisateur·ice est orienté de gauche à droite ou de droite à gauche.
 Lorsque cet attribut est utilisé, la direction du texte de l'élément est incluse dans les données envoyées lors de la soumission du formulaire, avec la valeur de l'attribut `dirname` comme nom de champ.
 
 ## Notes d'utilisation
@@ -15,13 +15,13 @@ Lorsque cet attribut est utilisé, la direction du texte de l'élément est incl
 L'attribut `dirname` peut être utilisé sur tout élément HTML {{HTMLElement("textarea")}}, ou sur tout élément HTML {{HTMLElement("input")}} de type `{{HTMLElement("input/hidden", "hidden")}}`, `{{HTMLElement("input/text", "text")}}`, `{{HTMLElement("input/search", "search")}}`, `{{HTMLElement("input/tel", "tel")}}`, `{{HTMLElement("input/url", "url")}}`, `{{HTMLElement("input/email", "email")}}`, `{{HTMLElement("input/password", "password")}}`, `{{HTMLElement("input/submit", "submit")}}`, `{{HTMLElement("input/reset", "reset")}}` ou `{{HTMLElement("input/button", "button")}}`.
 
 Le format des données soumises est `{valeur_dirname}={direction}` où `{valeur_dirname}` est la valeur de l'attribut `dirname` et `{direction}` est la direction du texte.
-Par exemple, si l'utilisateur·rice saisit «&nbsp;Hello&nbsp;» dans un élément avec les attributs `name="comment"` et `dirname="comment-direction"`, les données soumises encodées dans l'URL pour une requête `GET` seront `comment=Hello&comment-direction=ltr`.
+Par exemple, si l'utilisateur·ice saisit «&nbsp;Hello&nbsp;» dans un élément avec les attributs `name="comment"` et `dirname="comment-direction"`, les données soumises encodées dans l'URL pour une requête `GET` seront `comment=Hello&comment-direction=ltr`.
 La direction du texte peut être&nbsp;:
 
 - `rtl`
-  - : Le texte saisi par l'utilisateur·rice est en écriture de droite à gauche.
+  - : Le texte saisi par l'utilisateur·ice est en écriture de droite à gauche.
 - `ltr`
-  - : Le texte saisi par l'utilisateur·rice est en écriture de gauche à droite.
+  - : Le texte saisi par l'utilisateur·ice est en écriture de gauche à droite.
 
 Si aucune direction n'est définie, l'agent utilisateur utilisera la direction du parent contenant le formulaire, et si elle n'est pas définie, la direction par défaut de l'agent utilisateur.
 
@@ -29,7 +29,7 @@ Si aucune direction n'est définie, l'agent utilisateur utilisera la direction d
 
 ### Direction du texte dans un élément textarea
 
-Dans cet exemple, l'attribut `dir="auto"` sur l'élément textarea permet de déterminer automatiquement la direction du texte en fonction de ce que l'utilisateur·rice saisit&nbsp;:
+Dans cet exemple, l'attribut `dir="auto"` sur l'élément textarea permet de déterminer automatiquement la direction du texte en fonction de ce que l'utilisateur·ice saisit&nbsp;:
 
 ```html
 <form method="get" action="https://www.example.com/submit">
@@ -38,7 +38,7 @@ Dans cet exemple, l'attribut `dir="auto"` sur l'élément textarea permet de dé
 </form>
 ```
 
-Lorsque l'utilisateur·rice soumet le formulaire, l'agent utilisateur inclut deux champs, un appelé `comment` avec la valeur «&nbsp;سيب&nbsp;», et un appelé `comment-direction` avec la valeur «&nbsp;rtl&nbsp;».
+Lorsque l'utilisateur·ice soumet le formulaire, l'agent utilisateur inclut deux champs, un appelé `comment` avec la valeur «&nbsp;سيب&nbsp;», et un appelé `comment-direction` avec la valeur «&nbsp;rtl&nbsp;».
 Le corps de la soumission encodé dans l'URL ressemble à&nbsp;:
 
 ```url
@@ -47,7 +47,7 @@ https://www.example.com/submit?comment=%D8%B3%D9%8A%D8%A8&comment-direction=rtl
 
 ### Direction du texte dans un élément input
 
-Dans cet exemple, l'attribut `dir="auto"` sur l'élément input permet de déterminer automatiquement la direction du texte en fonction de ce que l'utilisateur·rice saisit&nbsp;:
+Dans cet exemple, l'attribut `dir="auto"` sur l'élément input permet de déterminer automatiquement la direction du texte en fonction de ce que l'utilisateur·ice saisit&nbsp;:
 
 ```html
 <form method="get" action="https://www.example.com/submit">
@@ -61,7 +61,7 @@ Dans cet exemple, l'attribut `dir="auto"` sur l'élément input permet de déter
 </form>
 ```
 
-Lorsque l'utilisateur·rice soumet le formulaire, l'agent utilisateur inclut deux champs, un appelé `comment-input` avec la valeur «&nbsp;Hello&nbsp;», et un appelé `comment-direction` avec la valeur «&nbsp;ltr&nbsp; »&nbsp;:
+Lorsque l'utilisateur·ice soumet le formulaire, l'agent utilisateur inclut deux champs, un appelé `comment-input` avec la valeur «&nbsp;Hello&nbsp;», et un appelé `comment-direction` avec la valeur «&nbsp;ltr&nbsp; »&nbsp;:
 
 ```url
 https://www.example.com/submit?comment-input=Hello&comment-direction=ltr

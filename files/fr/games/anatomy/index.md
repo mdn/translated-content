@@ -13,7 +13,7 @@ Le but de chaque jeu vidéo est de **présenter** à (aux) utilisateur·ice(s) u
 
 Ces spécificités dépendent du jeu.
 
-Certains jeux maintiennent ce cycle par les entrées du·de la joueur·euse. Imaginez que vous développez un jeu du type _«&nbsp;trouvez les différences entre ces deux images&nbsp;»_. Ces jeux **présentent** deux images à l'utilisateur·ice; ils **acceptent** leurs clics (ou touchés); ils **interprètent** l'entrée comme un succès, une erreur, une pause, une interaction de menu, etc.; finalement, ils **calculent** une scène mise à jour résultant de l'entrée de donnée. La boucle du jeu évolue par l'entrée de l'utilisateur·ice et s'arrête jusqu'à ce qu'il en soumette une nouvelle. C'est plus une approche au coup par coup qui ne demande pas une mise à jour continuelle de chaque image, mais juste quand le·la joueur·euse réagit.
+Certains jeux maintiennent ce cycle par les entrées du·de la joueur·se. Imaginez que vous développez un jeu du type _«&nbsp;trouvez les différences entre ces deux images&nbsp;»_. Ces jeux **présentent** deux images à l'utilisateur·ice; ils **acceptent** leurs clics (ou touchés); ils **interprètent** l'entrée comme un succès, une erreur, une pause, une interaction de menu, etc.; finalement, ils **calculent** une scène mise à jour résultant de l'entrée de donnée. La boucle du jeu évolue par l'entrée de l'utilisateur·ice et s'arrête jusqu'à ce qu'il en soumette une nouvelle. C'est plus une approche au coup par coup qui ne demande pas une mise à jour continuelle de chaque image, mais juste quand le·la joueur·se réagit.
 
 D'autres jeux demandent un contrôle précis à chaque fraction de seconde. Les principes sont les mêmes avec une légère différence: chaque animation fait progresser le cycle et tout changement d'entrée d'un·e utilisateur·ice est capturé dès que possible. Ce modèle au coup par image est implémenté dans ce que l'on appelle la **boucle principale**. Si vos boucles de jeu sont basées sur le temps alors ce est là-dessus que sont basées vos simulations.
 
@@ -301,7 +301,7 @@ Cela peut aussi s'appliquer à vos propres tâches. Elles sont de bonnes candida
 
 En clair, rien de ce qu'il y a ci-dessus, ou rien de cela, n'est ce qu'il y a de mieux pour votre jeu. La décision correcte dépend entièrement des compromis que vous êtes prêts (ou pas) à faire. La préoccupation est principalement de permuter vers une autre option. Heureusement, je n'en ai pas l'expérience mais j'ai entendu dire que c'est un jeu de cache-cache exténuant.
 
-Une chose importante à retenir pour les plateformes gérées, telles que le web, est que votre boucle peut arrêter son exécution pour une période de temps significative. Cela peut arriver quand l'utilisateur·ice désélectionne votre onglet et que le navigateur tombe en veille (ou ralenti) son interval de retour `requestAnimationFrame`. Vous avez plusieurs façons de gérer cela et cela peut dépendre de votre jeu, s'il est pour un·e seul·e joueur·euse ou multijoueurs. Certains des choix sont:
+Une chose importante à retenir pour les plateformes gérées, telles que le web, est que votre boucle peut arrêter son exécution pour une période de temps significative. Cela peut arriver quand l'utilisateur·ice désélectionne votre onglet et que le navigateur tombe en veille (ou ralenti) son interval de retour `requestAnimationFrame`. Vous avez plusieurs façons de gérer cela et cela peut dépendre de votre jeu, s'il est pour un·e seul·e joueur·se ou multijoueurs. Certains des choix sont:
 
 - Considérer l'écart comme «&nbsp;une pause&nbsp;» et ne pas prendre en compte le temps.
   - Vous pouvez probablement voir comment cela peut être problématique pour la plupart des jeux multijoueurs.
@@ -310,6 +310,6 @@ Une chose importante à retenir pour les plateformes gérées, telles que le web
   - Cela peut être un problème pour de longues pauses et/ou des mises à jour complexes.
 
 - Vous pouvez récupérer l'état du jeu à partir d'un pair sur le serveur.
-  - Ceci n'est pas efficace si votre pair ou le serveur sont périmés eux-aussi, ou s'ils n'existent pas, car le jeu en mode un·e seul·e joueur·euse n'existe pas et n'a pas de serveur.
+  - Ceci n'est pas efficace si votre pair ou le serveur sont périmés eux-aussi, ou s'ils n'existent pas, car le jeu en mode un·e seul·e joueur·se n'existe pas et n'a pas de serveur.
 
 Une fois que votre boucle principale a été développée et que vous avez pris vos décisions sur un lot d'hypothèses et de compromis qui conviennent à votre jeu, cela devient juste une question d'utilisation de vos décisions pour calculer n'importe quelle physique applicable, intelligence artificielle, sons, synchronisation réseau, et quoique votre jeu a besoin.

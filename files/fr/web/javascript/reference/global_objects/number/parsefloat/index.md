@@ -19,10 +19,10 @@ function circumference(r) {
 }
 
 console.log(circumference("4.567abcdefgh"));
-// Sortie attendue : 28.695307297889173
+// Résultat attendu : 28.695307297889173
 
 console.log(circumference("abcdefgh"));
-// Sortie attendue : 0
+// Résultat attendu : 0
 ```
 
 ## Syntaxe

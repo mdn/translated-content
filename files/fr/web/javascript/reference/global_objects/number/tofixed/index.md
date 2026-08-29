@@ -16,13 +16,13 @@ function financial(x) {
 }
 
 console.log(financial(123.456));
-// Sortie attendue : "123.46"
+// Résultat attendu : "123.46"
 
 console.log(financial(0.004));
-// Sortie attendue : "0.00"
+// Résultat attendu : "0.00"
 
 console.log(financial("1.23e+5"));
-// Sortie attendue : "123000.00"
+// Résultat attendu : "123000.00"
 ```
 
 ## Syntaxe
