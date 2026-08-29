@@ -131,7 +131,7 @@ console.log(nonEnumSeulement);
 ## Voir aussi
 
 - [La prothèse d'émulation de `Object.getOwnPropertyNames` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - La méthode statique {{JSxRef("Object.hasOwn()")}}
 - La méthode {{JSxRef("Object.prototype.propertyIsEnumerable()")}}
 - La méthode statique {{JSxRef("Object.create()")}}

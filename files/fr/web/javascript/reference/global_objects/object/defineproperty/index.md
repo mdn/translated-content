@@ -195,7 +195,7 @@ console.log(o.a); // 37 ; l'affectation n'a pas fonctionné.
 
 #### Attribut `enumerable`
 
-L'attribut de propriété `enumerable` définit si la propriété est prise en compte par {{JSxRef("Object.assign()")}} ou par l'opérateur [de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax). Pour les propriétés autres que {{JSxRef("Symbol")}}, il définit également si elles apparaissent ou non dans une boucle {{JSxRef("Statements/for...in","for...in")}} et dans {{JSxRef("Object.keys()")}}. Pour plus d'informations, consultez [Rattachement et caractère énumérable des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties).
+L'attribut de propriété `enumerable` définit si la propriété est prise en compte par {{JSxRef("Object.assign()")}} ou par l'opérateur [de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax). Pour les propriétés autres que {{JSxRef("Symbol")}}, il définit également si elles apparaissent ou non dans une boucle {{JSxRef("Statements/for...in","for...in")}} et dans {{JSxRef("Object.keys()")}}. Pour plus d'informations, consultez [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties).
 
 ```js
 const o = {};
@@ -493,7 +493,7 @@ console.log(MaClasse.prototype.y); // 1
 
 ## Voir aussi
 
-- [Énumérabilité et maîtrise des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - La méthode statique {{JSxRef("Object.defineProperties()")}}
 - La méthode {{JSxRef("Object.prototype.propertyIsEnumerable()")}}
 - La méthode statique {{JSxRef("Object.getOwnPropertyDescriptor()")}}

@@ -124,7 +124,7 @@ Object.entries(obj).forEach(([key, value]) => {
 
 ## Voir aussi
 
-- [Énumérabilité et appartenance des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - La méthode statique {{JSxRef("Object.keys()")}}
 - La méthode statique {{JSxRef("Object.values()")}}
 - La méthode {{JSxRef("Object.prototype.propertyIsEnumerable()")}}
