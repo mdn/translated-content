@@ -3,10 +3,10 @@ title: "HTML: アクセシビリティの良き基本"
 short-title: アクセシブルな HTML
 slug: Learn_web_development/Core/Accessibility/HTML
 l10n:
-  sourceCommit: b2c8dcdae36907a87d1d1b9393ca4a35ebc765d6
+  sourceCommit: 1b7c3c1e03f14c3878e4d8518b0f1a89bedfdc9c
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/Test_your_skills/HTML", "Learn_web_development/Core/Accessibility")}}
 
 正しい HTML 言語の要素を常に正しい目的のために使用するようにするだけで、多くのウェブコンテンツをアクセシビリティに対応させることができます。この記事では、アクセシビリティを確実にするために HTML を使用する方法について詳しく見ていきます。
 
@@ -21,7 +21,7 @@ l10n:
       <td>
         <ul>
           <li>「正しい要素を正しい役割に」という意味で、意味づけされた HTML を使用すること。ブラウザーにはアクセシビリティ用の多くの組み込みフックが指定されているため。</li>
-          <li>代替テキスト、適切なリンク、フォームラベル、表の見出しと行と列の数、スコープ指定など、アクセシビリティに優れた最善の手法。</li>
+          <li>代替テキスト、適切なリンクテキスト、フォームラベル、表の見出しと行と列の数、スコープ指定など、アクセシビリティに優れた最善の手法。</li>
           <li>可能な限り俗語や略語を避け、単純な平易な言葉を使用し、定義が必要な場合はそれを提供します。</li>
           <li>キーボードアクセシビリティの概念と実践。</li>
           <li>ソース順の重要性。</li>
@@ -47,7 +47,7 @@ HTML について学習を進めるにつれて — 資料をたくさん読ん�
 <button>動画を再生する</button>
 ```
 
-HTML の `<button>` は、ある種の適切なスタイルが（おそらくそのスタイルを上書きしたいと思うでしょうが）既定で適用されているだけでなく、組み込みのキーボードアクセシビリティも備えています。つまり、ボタン同士の間を <kbd>Tab</kbd> で移動できますし、<kbd>スペース</kbd>、<kbd>リターン</kbd>、<kbd>Enter</kbd> を使ってボタンをアクティブにできます。
+HTML の `<button>` は、ある種の適切なスタイルが（おそらくそのスタイルを上書きしたいと思うでしょうが）デフォルトで適用されているだけでなく、組み込みのキーボードアクセシビリティも備えています。つまり、ボタン同士の間を <kbd>Tab</kbd> で移動できますし、<kbd>スペース</kbd>、<kbd>リターン</kbd>、<kbd>Enter</kbd> を使ってボタンをアクティブにできます。
 
 もしプロジェクトの最初から首尾一貫して意味的な HTML を書くならば、意味的な HTML を書く方が非意味的な（駄目な）マークアップを書くよりも長くなったりはしません。それに、意味的な HTML には、アクセシビリティ以外の他の利点もあります。
 
@@ -186,7 +186,7 @@ HTML の `<button>` は、ある種の適切なスタイルが（おそらくそ
 
 UI コントロールとは、ウェブ文書内のユーザーが対話する主要な部分を意味します。最も一般的なのは、ボタン、リンク、およびフォームコントロールです。この節では、このようなコントロールを作成する際に注意すべき基本的なアクセシビリティの懸念について見ていきます。WAI-ARIAとマルチメディアに関するこの後の記事では、UIアクセシビリティの他の側面について見ていきます。
 
-UI コントロールのアクセシビリティに対する一つの重要な側面は、ブラウザーが既定では 、UI コントロールをキーボードで操作できるようにしているということです。このことは、[native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) の例 ([ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) を参照) を用いて試せます。これを新規タブで開いて、タブキーを押してみてください。2、3 回押してみた後には、フォーカス可能な異なる要素の間をタブ・フォーカスが動き回り始めたのだと分かるはずです。どの要素にフォーカスが当たっているのかが分かるように、どのブラウザーでも、フォーカスの当たっている要素には、ハイライトされた既定のスタイルが付与されます (そのスタイルは、異なるブラウザー間では少し差があります)。
+UI コントロールのアクセシビリティに対する一つの重要な側面は、ブラウザーがデフォルトでは 、UI コントロールをキーボードで操作できるようにしているということです。このことは、[native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) の例 ([ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) を参照) を用いて試せます。これを新規タブで開いて、タブキーを押してみてください。2、3 回押してみた後には、フォーカス可能な異なる要素の間をタブ・フォーカスが動き回り始めたのだと分かるはずです。どの要素にフォーカスが当たっているのかが分かるように、どのブラウザーでも、フォーカスの当たっている要素には、ハイライトされたデフォルトのスタイルが付与されます (そのスタイルは、異なるブラウザー間では少し差があります)。
 
 ![3 つのボタンの中にそれぞれ "Click me!" "Click me too!" "And me!" というテキストが表示されています。3 つ目のボタンには、現在のタブのフォーカスを示す青い輪郭線があります。](button-focused-unfocused.png)
 
@@ -247,7 +247,7 @@ UI コントロールのアクセシビリティに対する一つの重要な�
 <div data-message="This is from the third button">こちらも！</div>
 ```
 
-しかし、このようなコードを使用することはお勧めできません。{{htmlelement("button")}} 要素を使用した場合に得られるはずだった、ネイティブのキーボードアクセシビリティを直ちに失い、さらにボタンが取得する既定の CSS スタイル設定も得られません。ボタン以外の要素をボタンに使用する必要がある場合は、[`button` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)を使用し、キーボードとマウスボタンの対応を含む、すべての既定のボタン動作を実装してください。
+しかし、このようなコードを使用することはお勧めできません。{{htmlelement("button")}} 要素を使用した場合に得られるはずだった、ネイティブのキーボードアクセシビリティを直ちに失い、さらにボタンが取得するデフォルトの CSS スタイル設定も得られません。ボタン以外の要素をボタンに使用する必要がある場合は、[`button` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)を使用し、キーボードとマウスボタンの対応を含む、すべてのデフォルトのボタン動作を実装してください。
 
 #### キーボードアクセシビリティを呼び戻すように盛り込む
 
@@ -265,7 +265,7 @@ UI コントロールのアクセシビリティに対する一つの重要な�
 </div>
 ```
 
-基本的に、[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性は、タブ移動可能な要素に、単に既定のソース順でタブ処理されるのではなく、独自のタブ順序（正の値の順序で指定されます）を持たせるためのものです。これは大きな混乱を発生させる可能性があるため、常に悪い考えです。本当に必要な場合にのみ使用してください。例えば、レイアウトがソースコードとはまったく異なる形で視覚的に物を示していて、より論理的に作業させたい場合などです。`tabindex` のオプションは、他にも 2 種類あります。
+基本的に、[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性は、タブ移動可能な要素に、単にデフォルトのソース順でタブ処理されるのではなく、独自のタブ順序（正の値の順序で指定されます）を持たせるためのものです。これは大きな混乱を発生させる可能性があるため、常に悪い考えです。本当に必要な場合にのみ使用してください。例えば、レイアウトがソースコードとはまったく異なる形で視覚的に物を示していて、より論理的に作業させたい場合などです。`tabindex` のオプションは、他にも 2 種類あります。
 
 - `tabindex="0"` — 上記のとおり、この値によって、普通ならタブキーでの移動が可能ではない要素が、タブキーでの移動が可能となります。これは、`tabindex` の一番有益な値です。
 - `tabindex="-1"` — これによって、普通ならタブキーでの移動が可能ではない要素が、（たとえば JavaScript を介して）プログラム的にフォーカスを得たり、あるいはリンクのターゲットとしてフォーカスを得たりすることが可能となります。
@@ -356,18 +356,18 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
     <td>Pronouns</td>
   </tr>
   <tr>
-    <td>Gabriel</td>
-    <td>13</td>
+    <td>Xavier</td>
+    <td>23</td>
     <td>he/him</td>
   </tr>
   <tr>
-    <td>Elva</td>
+    <td>Tina</td>
     <td>8</td>
     <td>she/her</td>
   </tr>
   <tr>
-    <td>Freida</td>
-    <td>5</td>
+    <td>Sam</td>
+    <td>17</td>
     <td>she/her</td>
   </tr>
 </table>
@@ -445,7 +445,7 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
 この場合、`alt` 属性をまったく使っていません。その代わり、画像についての説明を通常のテキスト段落として提示し、その段落に `id` を与え、そして、その `id` を参照するための `aria-labelledby` 属性を用いました。こうすると、スクリーンリーダーに、その段落をその画像についての代替テキスト / ラベルとして使わせることになります。これは、複数の画像に対して同じテキストをラベルとして使いたい場合に、とりわけ有用です（これは、`alt` ではできません）。
 
 > [!NOTE]
-> [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) は [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 仕様の一部です。これのおかげで開発者は、必要な箇所においてスクリーンリーダーのアクセシビリティを高めるために、自分のマークアップに追加的な意味（セマンティクス）を足すことができます。
+> [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) は [WAI-ARIA](https://w3c.github.io/aria/) 仕様の一部です。これのおかげで開発者は、必要な箇所においてスクリーンリーダーのアクセシビリティを高めるために、自分のマークアップに追加的な意味（セマンティクス）を足すことができます。
 
 ### figure と figcaption
 
@@ -483,13 +483,13 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 
 ## リンクについての追加事項
 
-リンク（[`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) 要素と `href` 属性）は、その使用方法によってアクセシビリティを向上させたり、害したりする可能性があります。既定では、リンクは外観上アクセシビリティが確保されています。リンクにより、ユーザーが文書内の様々なセクションにすばやく移動できるようにすることで、アクセシビリティが向上します。また、アクセシブルなスタイル設定が削除されたり、JavaScript で予期しない動作をさせられたりすると、アクセシビリティに害を与えることもあります。
+リンク（[`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) 要素と `href` 属性）は、その使用方法によってアクセシビリティを向上させたり、害したりする可能性があります。デフォルトでは、リンクは外観上アクセシビリティが確保されています。リンクにより、ユーザーが文書内の様々なセクションにすばやく移動できるようにすることで、アクセシビリティが向上します。また、アクセシブルなスタイル設定が削除されたり、JavaScript で予期しない動作をさせられたりすると、アクセシビリティに害を与えることもあります。
 
-### リンクのスタイル付け
+### リンクのスタイル設定
 
-既定では、リンクは色と [text-decoration](/ja/docs/Web/CSS/Reference/Properties/text-decoration) の両方で他のテキストと視覚的に異なります。既定ではリンクは青で下線、閲覧済みでは紫で下線、キーボードフォーカスを受けると [focus-ring](/ja/docs/Web/CSS/Reference/Selectors/:focus) が付きます。
+デフォルトでは、リンクは色と [text-decoration](/ja/docs/Web/CSS/Reference/Properties/text-decoration) の両方で他のテキストと視覚的に異なります。デフォルトではリンクは青で下線、閲覧済みでは紫で下線、キーボードフォーカスを受けると [focus-ring](/ja/docs/Web/CSS/Reference/Selectors/:focus) が付きます。
 
-色は、リンクとそうでないコンテンツを判別する唯一の方法として使用すべきではありません。リンクテキストの色は、すべてのテキストと同様に、背景色と大きく異なっていなければなりません（[a 4.5:1 contrast](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)）。さらにリンクは、リンクしていないテキストと視覚的に大きく異なる必要があり、リンクテキストと周囲のテキスト、既定値、訪問済み、フォーカス/アクティブの各状態間のコントラストは最低 3:1、それらすべての状態と背景色のコントラストは 4.5:1 が要求されています。
+色は、リンクとそうでないコンテンツを判別する唯一の方法として使用すべきではありません。リンクテキストの色は、すべてのテキストと同様に、背景色と大きく異なっていなければなりません（[a 4.5:1 contrast](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)）。さらにリンクは、リンクしていないテキストと視覚的に大きく異なる必要があり、リンクテキストと周囲のテキスト、デフォルト値、訪問済み、フォーカス/アクティブの各状態間のコントラストは最低 3:1、それらすべての状態と背景色のコントラストは 4.5:1 が要求されています。
 
 ### `onclick` イベント
 
@@ -545,12 +545,8 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 
 - [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
 
-## 確認テスト
-
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[確認テスト: HTML アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/HTML) を参照して、この情報を覚えているかどうかを確認しましょう。
-
 ## 要約
 
-これで、ほとんどの場合にアクセシブルな HTML を書くことについて、よく分かったでしょう。WAI-ARIA の基本の記事も、この知識の抜けを埋めてくれるでしょうが、本記事でもその基本には気を配ってきました。次は、CSS と JavaScript をよく使うか悪く使うかで、アクセシビリティがどのような影響を受けるのかを検討しましょう。
+これで、ほとんどの場面でアクセシビリティに配慮した HTML を書くための知識は十分に身についたはずです。次の記事では、これまでの情報をどれだけ理解し、定着させることができたかを確認するためのテストをいくつかご紹介します。
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/Test_your_skills/HTML", "Learn_web_development/Core/Accessibility")}}
