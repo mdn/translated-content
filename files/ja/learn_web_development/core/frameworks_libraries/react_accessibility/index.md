@@ -3,7 +3,7 @@ title: React でのアクセシビリティ
 short-title: React のアクセシビリティ
 slug: Learn_web_development/Core/Frameworks_libraries/React_accessibility
 l10n:
-  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
+  sourceCommit: 77ea71add6054857698eb7ac1bfec8c7afe9ad4f
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering","Learn_web_development/Core/Frameworks_libraries/React_resources", "Learn_web_development/Core/Frameworks_libraries")}}
