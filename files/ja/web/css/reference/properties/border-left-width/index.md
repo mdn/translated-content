@@ -1,8 +1,9 @@
 ---
-title: border-left-width
+title: CSS `border-left-width` プロパティ
+short-title: border-left-width
 slug: Web/CSS/Reference/Properties/border-left-width
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 **`border-left-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の境界の幅を設定します。
@@ -71,14 +72,8 @@ border-left-width: unset;
 
 ### 値
 
-- `<line-width>`
-  - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
-    - `thin`
-    - `medium`
-    - `thick`
-
-> [!NOTE]
-> 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+- {{cssxref("&lt;line-width&gt;")}}
+  - : 境界線の幅を、非負の {{cssxref("&lt;length&gt;")}} を明示的に指定するか、キーワード `thin`、`medium`、`thick` のいずれかで定義します。デフォルトは `medium` です。
 
 ## 公式定義
 
@@ -90,18 +85,18 @@ border-left-width: unset;
 
 ## 例
 
-### 境界線の太さの比較
+### 境界線の幅の比較
 
 #### HTML
 
-```html live-sample___comparing_border_widths
-<div>Element 1</div>
-<div>Element 2</div>
+```html
+<div>要素 1</div>
+<div>要素 2</div>
 ```
 
 #### CSS
 
-```css live-sample___comparing_border_widths
+```css
 div {
   border: 1px solid red;
   margin: 1em 0;
@@ -117,7 +112,7 @@ div:nth-child(2) {
 
 #### 結果
 
-{{EmbedLiveSample('Comparing_border_widths', '100%')}}
+{{EmbedLiveSample('境界線の幅の比較', '100%')}}
 
 ## 仕様書
 
@@ -129,5 +124,5 @@ div:nth-child(2) {
 
 ## 関連情報
 
-- 境界の太さに関する他の CSS プロパティ: {{Cssxref("border-top-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, {{Cssxref("border-width")}}
-- 左の境界に関する他の CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-left")}}, {{Cssxref("border-left-style")}}, {{Cssxref("border-left-color")}}
+- 境界の幅に関する他の CSS プロパティ: {{Cssxref("border-top-width")}}、{{Cssxref("border-right-width")}}、{{Cssxref("border-bottom-width")}}、{{Cssxref("border-width")}}
+- 左の境界に関する他の CSS プロパティ: {{Cssxref("border")}}、{{Cssxref("border-left")}}、{{Cssxref("border-left-style")}}、{{Cssxref("border-left-color")}}
