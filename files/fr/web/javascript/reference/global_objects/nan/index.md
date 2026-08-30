@@ -98,7 +98,7 @@ arr.includes(NaN); // true
 arr.findIndex((n) => Number.isNaN(n)); // 2
 ```
 
-Pour plus d'informations sur `NaN` et sa comparaison, voir [Comparaison d'égalité et identité](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness).
+Pour plus d'informations sur `NaN` et sa comparaison, voir [Comparaisons d'égalité et de similitude](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness).
 
 ### Valeurs `NaN` distinctes observables
 

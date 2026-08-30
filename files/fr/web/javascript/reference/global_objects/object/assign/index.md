@@ -263,5 +263,5 @@ console.log(copie);
 - [La prothèse d'émulation de `Object.assign` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
 - [La prothèse d'émulation es-shims de `Object.assign` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.assign)
 - La méthode {{JSxRef("Object.defineProperties()")}}
-- [Énumérabilité et propriété des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [Décomposition dans les littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax#décomposition_dans_les_littéraux_dobjets)

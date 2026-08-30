@@ -149,7 +149,7 @@ JavaScript a aussi des API intégrées qui produisent des objets avec prototype 
 
 Le terme «&nbsp;objet avec prototype `null`&nbsp;» inclut souvent aussi tout objet sans `Object.prototype` dans sa chaîne de prototypes. De tels objets peuvent être créés avec [`extends null`](/fr/docs/Web/JavaScript/Reference/Classes/extends#étendre_null) quand on utilise des classes.
 
-### Coercition d'objet
+### Conversion en objet
 
 Beaucoup d'opérations intégrées qui attendent des objets convertissent d'abord leurs arguments en objets. [L'opération <sup>(angl.)</sup>](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toobject) peut être résumée comme suit&nbsp;:
 

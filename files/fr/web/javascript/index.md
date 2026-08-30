@@ -52,9 +52,9 @@ Nos [modules principaux pour apprendre le développement web](/fr/docs/Learn_web
   - : Un aperçu de la syntaxe et de la sémantique de base de JavaScript pour celles et ceux venant d'autres langages.
 - [Structures de données JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)
   - : Présentation des structures de données disponibles en JavaScript.
-- [Comparaisons d'égalité et identité](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
+- [Comparaisons d'égalité et de similitude](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
   - : JavaScript propose trois opérations de comparaison de valeurs&nbsp;: l'égalité stricte avec `===`, l'égalité souple avec `==` et la méthode {{jsxref("Object.is()")}}.
-- [Énumérabilité et propriété des attributs](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
   - : Comment les différentes méthodes qui parcourent les propriétés d'un objet gèrent l'énumérabilité et la propriété de ces attributs.
 - [Closures](/fr/docs/Web/JavaScript/Guide/Closures)
   - : Une closure est la combinaison d'une fonction et de l'environnement lexical dans lequel elle a été déclarée.

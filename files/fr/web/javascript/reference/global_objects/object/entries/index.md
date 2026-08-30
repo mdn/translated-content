@@ -77,7 +77,7 @@ console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
 
 ### Utiliser `Object.entries()` sur des valeurs primitives
 
-Les arguments qui ne sont pas des objets sont [convertis en objets](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#coercition_dobjet). [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ne peuvent pas être convertis en objets et lèvent immédiatement une {{JSxRef("TypeError")}}. Seules les chaînes de caractères peuvent avoir des propriétés propres énumérables, tandis que toutes les autres primitives retournent un tableau vide.
+Les arguments qui ne sont pas des objets sont [convertis en objets](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#conversion_en_objet). [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ne peuvent pas être convertis en objets et lèvent immédiatement une {{JSxRef("TypeError")}}. Seules les chaînes de caractères peuvent avoir des propriétés propres énumérables, tandis que toutes les autres primitives retournent un tableau vide.
 
 ```js
 // Les chaînes de caractères possèdent des indices sous forme de propriétés propres énumérables
@@ -124,7 +124,7 @@ Object.entries(obj).forEach(([key, value]) => {
 
 ## Voir aussi
 
-- [Énumérabilité et appartenance des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - La méthode statique {{JSxRef("Object.keys()")}}
 - La méthode statique {{JSxRef("Object.values()")}}
 - La méthode {{JSxRef("Object.prototype.propertyIsEnumerable()")}}

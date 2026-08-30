@@ -101,4 +101,4 @@ Object.defineProperties(obj, {
 - [La prothèse d'émulation es-shims de `Object.defineProperties` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.defineproperties)
 - La méthode statique {{JSxRef("Object.defineProperty()")}}
 - La méthode statique {{JSxRef("Object.keys()")}}
-- [Détention et énumération des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
