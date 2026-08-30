@@ -28,7 +28,7 @@ HTML 要素の場合、要素にアクセシブル説明がないときは、そ
    - {{htmlelement("input")}} ボタン（type 属性が `button`、`submit`、`reset` のもの）は、その `value` 属性の値によって説明されます。
    - SVG では、{{svgelement("desc")}} 要素が存在する場合はそのコンテンツ、存在しない場合は、子孫のテキストコンテナー要素（つまり {{svgelement("text")}}）に含まれているテキストが記述対象となります（ただし、それらがすでに{{glossary("accessible name", "アクセシブル名")}}の定義に使用されていない場合に限ります）。
 
-4.  上記のそれからも説明が得られない場合は、[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性が使用されます（その `title` がその要素の{{glossary("accessible name", "アクセシブル名")}}でない場合）。
+4. 上記のそれからも説明が得られない場合は、[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性が使用されます（その `title` がその要素の{{glossary("accessible name", "アクセシブル名")}}でない場合）。
 
 5. 以上の中でアクセシブル説明が定義されていない場合、アクセシブル説明は空となります。
 
