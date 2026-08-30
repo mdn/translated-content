@@ -696,7 +696,7 @@ section {
 }
 ```
 
-```js live-sample___aria-no-live live-sample___aria-live
+```js-nolint live-sample___aria-no-live live-sample___aria-live
 let quotes = [
   {
     quote:
