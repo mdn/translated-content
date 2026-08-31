@@ -82,7 +82,7 @@ rtc {
       <td>
         <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
-        >{{HTMLElement("rt")}} 元素。
+        >或 {{HTMLElement("rt")}} 元素。
       </td>
     </tr>
     <tr>
