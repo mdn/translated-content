@@ -2,15 +2,16 @@
 title: SubtleCrypto の暗号以外の使用法
 slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto
 l10n:
-  sourceCommit: e259c14eb7c72abb6007478aadd52aa25c7976d8
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
-{{APIRef("Web Crypto API")}}
-この記事では、[SubtleCrypto インターフェイス](/ja/docs/Web/API/SubtleCrypto)の [`digest`](/ja/docs/Web/API/SubtleCrypto/digest) メソッドの使い道に焦点を当てます。[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) に含まれる他の多くのメソッドの用途は暗号関係のかなり限られたものですが、データのハッシュを求めること (これが `digest` メソッドが行うことです) には多くの便利な利用法があります。
+{{DefaultAPISidebar("Web Crypto API")}}
+
+この記事では、[SubtleCrypto インターフェイス](/ja/docs/Web/API/SubtleCrypto)の [`digest`](/ja/docs/Web/API/SubtleCrypto/digest) メソッドの使い道に焦点を当てます。[ウェブ暗号化 API](/ja/docs/Web/API/Web_Crypto_API) に含まれる他の多くのメソッドの用途は暗号関係のかなり限られたものですが、データのハッシュを求めること (これが `digest` メソッドが行うことです) には多くの便利な利用法があります。
 
 この記事では、[SubtleCrypto インターフェイス](/ja/docs/Web/API/SubtleCrypto)の暗号関係の使い道は扱いません。この記事から学ぶべき重要なことは、強力で低レベルなので、製品での暗号関係の目的には **この API を使ってはいけない** ということです。正しく使うためには、暗号関係のタスクを正しく成し遂げるために多くの状況依存の手順を踏まなければならないでしょう。もしこれらの手順のうち 1 個でも間違って行われると、よくてあなたのコードは動かず、より悪い場合にはそれは _動き_ 、知らないうちに安全でない製品でユーザーを危険に晒すことになるでしょう。
 
-[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) を使う必要はまったくないかもしれません。暗号を使いたくなるであろう目的の多くは、既に解決され、ウェブプラットフォームの一部になっています。例えば、クライアントとサーバーの間で情報を読んでいる Wi-Fi ホットスポットのような中間者攻撃が心配なのであれば、[HTTPS](/ja/docs/Glossary/HTTPS) を確実に正しく使うことで解決できます。ユーザー間で情報を安全に送信したいですか？それなら、標準の一部として暗号化することになっている [WebRTC Data Channels](/ja/docs/Web/API/WebRTC_API/Using_data_channels) を用いてユーザー間のデータ接続を構築できます。
+[ウェブ暗号化 API](/ja/docs/Web/API/Web_Crypto_API) を使う必要はまったくないかもしれません。暗号を使いたくなるであろう目的の多くは、既に解決され、ウェブプラットフォームの一部になっています。例えば、クライアントとサーバーの間で情報を読んでいる Wi-Fi ホットスポットのような[中間者攻撃 (MITM)](/ja/docs/Web/Security/Attacks/MITM) が心配なのであれば、[HTTPS](/ja/docs/Glossary/HTTPS) を確実に正しく使うことで解決できます。ユーザー間で情報を安全に送信したいですか？それなら、標準の一部として暗号化することになっている [WebRTC データチャンネル](/ja/docs/Web/API/WebRTC_API/Using_data_channels)を用いてユーザー間のデータ接続を構築できます。
 
 [SubtleCrypto インターフェイス](/ja/docs/Web/API/SubtleCrypto)は暗号を扱うための低レベルのプリミティブを提供しますが、それらの道具を用いてシステムを実装することは複雑なタスクです。間違いに気付くのは難しく、結果としてユーザーのデータがあなたが考えるより安全でなくなる可能性があります。このことにより、ユーザーがセンシティブなデータや重要なデータを共有している場合、悲惨な結果が生じる可能性があります。
 
@@ -18,9 +19,9 @@ l10n:
 
 ## ファイルのハッシュ化
 
-これは、[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) を用いてできる最も単純で役立つものです。鍵や証明書の生成は不要で、1 個だけの手順でできます。
+これは、[ウェブ暗号化 API](/ja/docs/Web/API/Web_Crypto_API) を用いてできる最も単純で役立つものです。鍵や証明書の生成は不要で、1 個だけの手順でできます。
 
-[ハッシュ化](/ja/docs/Glossary/Hash_function)は、大きなバイト列を小さい文字列に変換し、この長い列の中の小さな変更が小さい文字列の大きな変化を生む技術です。この技術は、それぞれのファイルの全バイトをチェックせずに 2 個の同一のファイルを特定するのに便利です。これは、比較対象として単純な文字列が手に入るので、非常に便利です。明確にしておくと、ハッシュ化は **一方向の** 操作です。ハッシュからもとのバイト列を生成することはできません。
+{{glossary("Hash function", "ハッシュ化")}}は、大きなバイト列を小さい文字列に変換し、この長い列の中の小さな変更が小さい文字列の大きな変化を生む技術です。この技術は、それぞれのファイルの全バイトをチェックせずに 2 個の同一のファイルを特定するのに便利です。これは、比較対象として単純な文字列が手に入るので、非常に便利です。明確にしておくと、ハッシュ化は **一方向の** 操作です。ハッシュからもとのバイト列を生成することはできません。
 
 生成された 2 個のハッシュが同じだが、それらを生成するのに用いたファイルが違う場合は、_ハッシュ衝突_ として知られます。これは偶然起こる可能性は非常に小さく、SHA256 のような安全なハッシュ関数では、人工的に起こすこともほぼ不可能です。そのため、2 個の文字列が同じ場合は、2 個のもとのファイルも同一であると合理的に確信することができます。
 
@@ -43,15 +44,22 @@ SubtleCrypto の [`digest()`](/ja/docs/Web/API/SubtleCrypto/digest) メソッド
 <h3>ファイルを SHA256 でハッシュ化するデモ</h3>
 
 <label
-  >ハッシュ化するファイルを選択 (複数可)
+  >ハッシュ化するファイルを選択 (複数可) 
   <input type="file" id="file" name="file" multiple
 /></label>
-<output style="display:block;font-family:monospace;"></output>
+<output></output>
+```
+
+```css hidden
+output {
+  display: block;
+  font-family: monospace;
+}
 ```
 
 次に、SubtleCrypto インターフェイスを用いて処理します。以下のように動作します。
 
-- [FileReader](/ja/docs/Web/API/FileReader) を用い、ファイルを [ArrayBuffer](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) に読み込みます。
+- ファイルを {{jsxref("ArrayBuffer")}} に、{{domxref("File")}} オブジェクトの {{domxref("Blob.arrayBuffer()", "arrayBuffer()")}} メソッドを用いて読み込みます。
 - `crypto.subtle.digest('SHA-256', arrayBuffer)` を用いて `ArrayBuffer` のダイジェストを求めます。
 - 結果のハッシュ (別の `ArrayBuffer`) を表示できるように文字列に変換します。
 
@@ -62,20 +70,27 @@ const file = document.getElementById("file");
 // ユーザーが 1 個以上のファイルを選択した時、ハッシュ化関数を実行する
 file.addEventListener("change", hashTheseFiles);
 
-// digest 関数は非同期であり、Promise を返す
+// digest 関数は非同期であり、プロミスを返す
 // コードを単純にするため、async/await 構文を用いる
 async function fileHash(file) {
   const arrayBuffer = await file.arrayBuffer();
 
-  // subtle crypto API を用い、ファイルが入った ArrayBuffer の SHA256 を求める
-  // 結果のハッシュは ArrayBuffer に格納される
+  // subtle crypto API を用い、ファイルが入った ArrayBuffer の
+  // SHA256 を求める。結果のハッシュは ArrayBuffer に格納される
   const hashAsArrayBuffer = await crypto.subtle.digest("SHA-256", arrayBuffer);
 
-  // 文字列として表示するため、ArrayBuffer の各バイトの十六進表現を求める
-  // まず、ArrayBuffer の各バイトそれぞれを要素とする配列を作成する
+  // これを文字列として表示させるには、配列バッファーのそれぞれの
+  // バイトの 16 進値を取得する。これにより、配列バッファーの
+  // それぞれのバイトが配列の 1 つのアイテムとなる配列が得られる。
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
-  // 次に、各要素を十六進文字列に変換するため、通常の配列に変換する
-  // 0-9 または a-f の各文字が 0 と 16 の間の数値を表し、4 ビットの情報を保持するので、2 文字で 8 ビット (1 バイト) を表す
+  if (uint8ViewOfHash.toHex) {
+    // 下記ロジックは、2025 年に導入された toHex() メソッドと同等
+    return uint8ViewOfHash.toHex();
+  }
+  // 次に、各要素を十六進文字列に変換するため、
+  // 通常の配列に変換する 0-9 または a-f の各文字が
+  //  0 と 15 の間の数値を表し、4 ビットの情報を保持するので、
+  // 2 文字で 8 ビット (1 バイト) を表す
   const hashAsString = Array.from(uint8ViewOfHash)
     .map((b) => b.toString(16).padStart(2, "0"))
     .join("");
@@ -87,9 +102,9 @@ async function hashTheseFiles(e) {
   // ファイル選択欄の各ファイルについて処理を行う
   for (const file of this.files) {
     // ハッシュを求め、出力要素に並べる
-    outHTML += `${file.name}    ${await fileHash(file)}`;
+    outHTML += `${file.name}    ${await fileHash(file)}\n`;
   }
-  output.innerHTML = outHTML;
+  output.innerText = outHTML;
 }
 ```
 
@@ -100,7 +115,7 @@ async function hashTheseFiles(e) {
 この時点で、「_これを自分のウェブサイトで使って、ユーザーがファイルをダウンロードするとき、ハッシュが一致することを保証し、ユーザーに自分のダウンロードが安全であると安心させることができる_」と自分で考えているかもしれません。残念ながら、ここにはすぐに頭に浮かぶ 2 個の懸念点があります。
 
 - 実行可能ファイルのダウンロードは **常に** HTTPS で行われるべきです。これにより中間者は攻撃できなくなるため、冗長かもしれません。
-- 攻撃者がもとのサーバー上のダウンロードファイルを置き換えることができる場合、SubtleCrypto インターフェイスを呼び出すコードも単に置き換え、バイパスし、全部大丈夫ですとだけ表示するようにすることもできるでしょう。自分のコードで見つけるのは難しいような[厳密な等価性比較](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#_による厳密な等価性)の置き換えなど、こっそりと行われる可能性が高いです。
+- 攻撃者がもとのサーバー上のダウンロードファイルを置き換えることができる場合、SubtleCrypto インターフェイスを呼び出すコードも単に置き換え、バイパスし、全部大丈夫ですとだけ表示するようにすることもできるでしょう。自分のコードで見つけるのは難しいような[厳密な等価性比較](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#による厳密な等価性)の置き換えなど、こっそりと行われる可能性が高いです。
 
   ```diff
   --- if (checksum === correctCheckSum) return true;
@@ -132,7 +147,7 @@ SHA1 ハッシュのあり得る種類は非常に多いです。そのため、
 
 Git は、SHA1 ハッシュを 2 通りの興味深い使い方をする、素晴らしい例です。ファイルが Git に保存されるときは、SHA1 ハッシュによって参照されます。これにより、Git がデータを素早く探し、ファイルを取り出せるようになります。
 
-ただし、単にファイルの内容をハッシュに使っているわけではなく、UTF8 の文字列 `"blob "`、十進数で現したバイト単位のファイルサイズ、ナル文字 (JavaScript では `"\0"` と書ける) をこの順で前につけます。JavaScript の文字列は UTF16 なので、[Encoding API](/ja/docs/Web/API/Encoding_API) の [TextEncoder インターフェイス](/ja/docs/Web/API/TextEncoder) を用いて UTF8 の文字列をエンコードできます。
+ただし、単にファイルの内容をハッシュに使っているわけではなく、UTF8 の文字列 `"blob "`、十進数で現したバイト単位のファイルサイズ、ヌル文字 (JavaScript では `"\0"` と書ける) をこの順で前につけます。JavaScript の文字列は UTF16 なので、[Encoding API](/ja/docs/Web/API/Encoding_API) の [TextEncoder インターフェイス](/ja/docs/Web/API/TextEncoder) を用いて UTF8 の文字列をエンコードできます。
 
 以下のコードは、SHA256 の例と同様に、ファイルからこれらのハッシュを求めるのに用いることができます。ファイルをアップロードするための HTML は同じですが、Git が行うのと同様のサイズ情報を前につける処理を追加しています。
 
@@ -144,7 +159,14 @@ Git は、SHA1 ハッシュを 2 通りの興味深い使い方をする、素�
   <input type="file" id="file" name="file" multiple
 /></label>
 
-<output style="display:block;font-family:monospace;"></output>
+<output></output>
+```
+
+```css hidden
+output {
+  display: block;
+  font-family: monospace;
+}
 ```
 
 ```js
@@ -155,7 +177,7 @@ file.addEventListener("change", hashTheseFiles);
 async function fileHash(file) {
   const arrayBuffer = await file.arrayBuffer();
 
-  // Git はナル終端の文字列 'blob 1234' (1234 はファイルサイズを表す)
+  // Git はヌル終端の文字列 'blob 1234' (1234 はファイルサイズを表す)
   // をハッシュ化前に前置するので、これを再現する
 
   // まず、ファイルのバイト単位のサイズを求める
@@ -163,9 +185,10 @@ async function fileHash(file) {
   const length = uint8View.length;
 
   // git は端末では文字列に UTF8 を用いるが、ウェブでは UTF16 を用いる
-  // メッセージ中の文字のバイナリ表現が違うとハッシュも変わるので、エンコーダーを使う必要がある
+  // メッセージ中の文字のバイナリー表現が違うとハッシュも変わるので、
+  // エンコーダーを使う必要がある
   const encoder = new TextEncoder();
-  // ナル終端とは、文字列がナル文字 (JavaScript では '\0') で終わるということ
+  // ヌル終端とは、文字列がヌル文字 (JavaScript では '\0') で終わるということ
   const view = encoder.encode(`blob ${length}\0`);
 
   // そして、2 個の ArrayBuffer を合体して 1 個の ArrayBuffer にする
@@ -190,9 +213,9 @@ function hashToString(arrayBuffer) {
 async function hashTheseFiles(e) {
   let outHTML = "";
   for (const file of this.files) {
-    outHTML += `${file.name}    ${await fileHash(file)}`;
+    outHTML += `${file.name}    ${await fileHash(file)}\n`;
   }
-  output.innerHTML = outHTML;
+  output.innerText = outHTML;
 }
 ```
 
@@ -208,9 +231,9 @@ async function hashTheseFiles(e) {
 
 出典: [How is git commit sha1 formed](https://gist.github.com/masak/2415865)
 
-本質的には、以下の UTF8 文字列です。(ナル文字は `\0` で表現されています)
+本質的には、以下の UTF8 文字列です。(ヌル文字は `\0` で表現されています)
 
-```
+```plain
 commit [size in bytes as decimal of this info]\0tree [tree hash]
 parent [parent commit hash]
 author [author info] [timestamp]
