@@ -124,7 +124,7 @@ Pas de changements notables.
 
 #### Général
 
-- Désactivé le panneau de téléchargement pour empêcher le document actuel de perdre la sélection lorsqu'un téléchargement commence. ([bogue Firefox 2035439 <sup>(angl.)</sup>](https://bugzil.la/2035439)).
+- Désactivation du panneau de téléchargement pour empêcher le document actuel de perdre la sélection lorsqu'un téléchargement commence. ([bogue Firefox 2035439 <sup>(angl.)</sup>](https://bugzil.la/2035439)).
 - Correction de l'API Actions afin que l'évènement `dblclick` soit déclenché lors d'un double-clic tout en maintenant la touche `Ctrl` enfoncée sur les plateformes non macOS. ([bogue Firefox 2058556 <sup>(angl.)</sup>](https://bugzil.la/2058556)).
 
 #### WebDriver BiDi
