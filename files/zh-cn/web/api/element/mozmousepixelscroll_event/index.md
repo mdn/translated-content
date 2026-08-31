@@ -3,15 +3,15 @@ title: Element：MozMousePixelScroll 事件
 short-title: MozMousePixelScroll
 slug: Web/API/Element/MozMousePixelScroll_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("UI Events")}}{{deprecated_header}}{{Non-standard_header}}
+{{APIRef("UI Events")}}{{Non-standard_header}}
 
-**`MozMousePixelScroll`** 事件是仅 Firefox 支持的、*非标准*且*已废弃*的事件，会在操作鼠标滚轮或类似设备时于 {{domxref("Element")}} 上异步触发。它由 {{domxref("MouseScrollEvent")}} 接口表示。
+**`MozMousePixelScroll`** 事件是仅 Firefox 支持、*非标准*且*已过时*的事件，会在操作鼠标滚轮或类似设备时于 {{domxref("Element")}} 上异步触发。它由 {{domxref("MouseScrollEvent")}} 接口表示。
 
 > [!NOTE]
-> 请勿使用该非标准且已废弃的事件。应始终使用标准 {{domxref("Element.wheel_event", "wheel")}} 事件。
+> 请勿使用该非标准且已过时的事件。应始终使用标准 {{domxref("Element.wheel_event", "wheel")}} 事件。
 
 ## 语法
 
@@ -25,7 +25,7 @@ onMozMousePixelScroll = (event) => { }
 
 ## 事件类型
 
-{{domxref("WheelEvent")}}，继承自 {{domxref("MouseEvent")}}、{{domxref("UIEvent")}} 和 {{domxref("Event")}}。
+{{domxref("WheelEvent")}}。继承自 {{domxref("MouseEvent")}}、{{domxref("UIEvent")}} 和 {{domxref("Event")}}。
 
 {{InheritanceDiagram("WheelEvent")}}
 
