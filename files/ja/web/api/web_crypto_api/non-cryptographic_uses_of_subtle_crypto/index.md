@@ -44,7 +44,7 @@ SubtleCrypto の [`digest()`](/ja/docs/Web/API/SubtleCrypto/digest) メソッド
 <h3>ファイルを SHA256 でハッシュ化するデモ</h3>
 
 <label
-  >ハッシュ化するファイルを選択 (複数可) 
+  >ハッシュ化するファイルを選択 (複数可)
   <input type="file" id="file" name="file" multiple
 /></label>
 <output></output>
