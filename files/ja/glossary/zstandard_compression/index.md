@@ -23,5 +23,5 @@ Zstandard (略称: `zstd`) は、zlib レベル以上の圧縮率でのリアル
 - [Zstandard RFC](https://datatracker.ietf.org/doc/html/rfc8878)
 - [Zstandard ホームページ](https://facebook.github.io/zstd/)
 - [Zstandard GitHub リポジトリー](https://github.com/facebook/zstd)
-- [ウィキペディアの Zstandard](https://en.wikipedia.org/wiki/Zstandard)
+- [ウィキペディアの Zstandard](https://ja.wikipedia.org/wiki/Zstandard)
 - [Can I use の Zstandard](https://caniuse.com/#feat=zstandard)
