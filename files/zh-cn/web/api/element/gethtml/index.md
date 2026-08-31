@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("Element")}} 接口的 **`getHTML()`** 方法将元素的 DOM 序列化为 HTML 字符串。
 
-该方法提供选项参数，可序列化作为影子根的子节点。选项可包含已设为 {{domxref("ShadowRoot/serializable","serializable")}} 的嵌套 shadow root，和/或指定的 {{domxref("ShadowRoot")}} 对象数组（可以是开放或关闭的）。
+该方法提供选项参数，可序列化作为影子根的子节点。选项可包含已设为 {{domxref("ShadowRoot/serializable","serializable")}} 的嵌套影子根，和/或指定的 {{domxref("ShadowRoot")}} 对象数组（可以是公开的或不公开的）。
 
 不带参数时，不会序列化作为影子根的子节点，行为与读取 {{domxref("Element.innerHTML")}} 的值相同。
 
@@ -29,7 +29,7 @@ getHTML(options)
     - `serializableShadowRoots`
       - : 指定是否包含 {{domxref("ShadowRoot/serializable","serializable")}}影子根的布尔值，默认值为 `false`。
     - `shadowRoots`
-      - : 要序列化的 {{domxref("ShadowRoot")}} 对象数组。无论是否标记为 `serializable`，以及是开放还是关闭，都会包含它们。默认值为空数组。
+      - : 要序列化的 {{domxref("ShadowRoot")}} 对象数组。无论是否标记为 `serializable`，以及是公开还是不公开，都会包含它们。默认值为空数组。
 
 ### 返回值
 
