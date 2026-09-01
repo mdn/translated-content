@@ -111,7 +111,7 @@ CSP 可用于控制文档允许加载的资源。这主要用于防御跨站脚�
 
 - 定义 JavaScript 文件和其他资源的允许来源，从而有效阻止从 `https://evil.example.com` 加载
 - 禁用内联脚本标签
-- 只允许设置了正确 {{Glossary("Nonce", "一次性随机数")}} 或散列的脚本标签
+- 只允许设置了正确{{Glossary("Nonce", "一次性随机数")}}或散列的脚本标签
 - 禁用内联事件处理器
 - 禁用 `javascript:` URL
 - 禁用 `eval()` 等危险 API
@@ -350,7 +350,7 @@ Content-Security-Policy: default-src 'self' 'unsafe-inline'
 
 ### 严格 CSP
 
-为控制脚本加载以缓解 XSS，推荐的做法是使用基于 [一次性随机数](#一次性随机数) 或[散列](#散列)的 Fetch 指令。这称为*严格 CSP*。这类 CSP 相比基于位置的 CSP（通常称为*允许列表 CSP*）有两个主要优势：
+为控制脚本加载以缓解 XSS，推荐的做法是使用基于[一次性随机数](#一次性随机数)或[散列](#散列)的 Fetch 指令。这称为*严格 CSP*。这类 CSP 相比基于位置的 CSP（通常称为*允许列表 CSP*）有两个主要优势：
 
 - 允许列表 CSP 很难做对，策略常常会无意中将不安全的域名列入允许列表，因而无法有效防御 XSS（参见 [CSP 已死，CSP 万岁！论允许列表的不安全性与内容安全策略的未来](https://dl.acm.org/doi/pdf/10.1145/2976749.2978363)）。
 - 允许列表 CSP 可能非常庞大且难以维护，尤其是在使用不受你控制的脚本时。根据[我如何学会停止焦虑并爱上内容安全策略](https://www.netlify.com/blog/general-availability-content-security-policy-csp-nonce-integration/)，仅仅为了集成 Google Analytics，开发者就被要求将 187 个 Google 域名加入允许列表。
