@@ -2,7 +2,7 @@
 title: PerformanceLongTaskTiming
 slug: Web/API/PerformanceLongTaskTiming
 l10n:
-  sourceCommit: 04301fa08caba25ce0fc17ea80e35383aa3361c0
+  sourceCommit: c9b973e5cf1f5d5b282eb4eb49cddcc044ce7e2b
 ---
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
@@ -24,7 +24,7 @@ l10n:
 - 耗时的布局重排和其他重渲染操作。
 - 浏览器在事件循环的不同轮次之间执行的、耗时超过 50 毫秒的操作。
 
-长任务所指的“肇事浏览上下文容器”（简称“容器”），即任务发生所在的顶级页面、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("object")}}。
+长任务所指的“引发问题的浏览上下文容器”（简称“容器”），即任务发生所在的顶级页面、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("object")}}。
 
 对于未发生在顶级页面内的任务，以及为了确定哪个容器导致了该长时间任务，{{domxref("TaskAttributionTiming")}} 接口提供了 `containerId`、`containerName` 和 `containerSrc` 属性，这些属性可能提供有关任务来源的更多信息。
 
@@ -62,7 +62,7 @@ l10n:
 ## 实例方法
 
 - {{domxref("PerformanceLongTaskTiming.toJSON()")}} {{Experimental_Inline}}
-  - : 返回 `PerformanceLongTaskTiming` 对象的 JSON 表示。
+  - : 重写 {{domxref("PerformanceEntry.toJSON()")}} 方法，以返回 `PerformanceLongTaskTiming` 对象的 JSON 表示。
 
 ## 示例
 
