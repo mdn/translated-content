@@ -39,9 +39,9 @@ l10n:
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回一个 {{domxref("DOMHighResTimeStamp")}}，表示任务开始到结束之间的经过时间，精度为 1 毫秒。
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - ：始终返回 `"longtask"`
+  - : 始终返回 `"longtask"`
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - ：返回以下字符串之一，指代可归因于该长任务的浏览上下文或框架：
+  - : 返回以下字符串之一，指代可归因于该长任务的浏览上下文或框架：
     - `"cross-origin-ancestor"`
     - `"cross-origin-descendant"`
     - `"cross-origin-unreachable"`
