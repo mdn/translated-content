@@ -39,12 +39,12 @@ onfocusin = (event) => { }
 ```html
 <form id="form">
   <label>
-    Some text:
-    <input type="text" placeholder="text input" />
+    一些文本：
+    <input type="text" placeholder="文本输入" />
   </label>
   <label>
-    Password:
-    <input type="password" placeholder="password" />
+    密码：
+    <input type="password" placeholder="密码" />
   </label>
 </form>
 ```
@@ -72,7 +72,7 @@ form.addEventListener("focusout", (event) => {
 {{Specifications}}
 
 > [!NOTE]
-> _UI Events_ 规范描述的[焦点事件的触发顺序](/zh-CN/docs/Web/API/FocusEvent#order_of_events)与当前浏览器的实际实现不同。
+> *用户界面事件*规范描述的[焦点事件的触发顺序](/zh-CN/docs/Web/API/FocusEvent#order_of_events)与当前浏览器的实际实现不同。
 
 ## 浏览器兼容性
 
