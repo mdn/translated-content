@@ -134,7 +134,7 @@ Promise.try = function (func) {
 };
 ```
 
-En raison de la manière dont `Promise.try()` est implémentée (c'est-à-dire avec `try...catch`), vous pouvez appeler `Promise.try()` avec sa valeur `this` définie sur n'importe quel constructeur personnalisé, et elle ne lèvera jamais d'erreur de manière synchrone.
+En raison de la manière dont `Promise.try()` est implémentée (c'est-à-dire avec `try...catch`), vous pouvez appeler `Promise.try()` avec sa valeur `this` définie sur n'importe quel constructeur personnalisé, et elle ne lève jamais d'erreur de manière synchrone.
 
 ```js
 class PasUnePromesse {
