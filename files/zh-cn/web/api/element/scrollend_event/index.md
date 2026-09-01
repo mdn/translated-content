@@ -1,5 +1,5 @@
 ---
-title: "Element：scrollend 事件"
+title: Element：scrollend 事件
 short-title: scrollend
 slug: Web/API/Element/scrollend_event
 l10n:
@@ -152,5 +152,5 @@ element.onscrollend = (event) => {
 ## 参见
 
 - [Element `scroll` 事件](/zh-CN/docs/Web/API/Element/scroll_event)
-- [Document `scrollend` 事件](/en-US/docs/Web/API/Document/scrollend_event)
+- [Document `scrollend` 事件](/zh-CN/docs/Web/API/Document/scrollend_event)
 - [Document `scroll` 事件](/zh-CN/docs/Web/API/Document/scroll_event)
