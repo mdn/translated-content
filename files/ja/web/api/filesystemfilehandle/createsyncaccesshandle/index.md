@@ -85,7 +85,7 @@ onmessage = async (e) => {
 
 2 つの {{htmlelement("button")}} 要素とテキストの {{htmlelement("input")}} フィールドが次のようにあります。
 
-```html
+```html-nolint
 <ol>
   <li>
     <label for="file-text">ファイルに書き込むテキストを入力してください:</label>
