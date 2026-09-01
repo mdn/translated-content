@@ -829,6 +829,6 @@ Si vous devez changer le nombre de chiffres, rappelez-vous que `minimumFractionD
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.NumberFormat")}}
+- L'objet natif {{JSxRef("Intl.NumberFormat")}}
 - La méthode {{JSxRef("Intl.supportedValuesOf()")}}
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}

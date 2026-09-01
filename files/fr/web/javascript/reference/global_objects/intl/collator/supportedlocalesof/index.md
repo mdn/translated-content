@@ -62,4 +62,4 @@ console.log(Intl.Collator.supportedLocalesOf(locales, options));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Collator")}}
+- L'objet natif {{JSxRef("Intl.Collator")}}

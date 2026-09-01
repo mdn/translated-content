@@ -120,6 +120,6 @@ fetch(maRequete)
 
 - [La prothèse d'émulation de `Promise.prototype.finally` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-promise)
 - [La prothèse d'émulation es-shims de `Promise.prototype.finally` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.prototype.finally)
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}
 - La méthode {{JSxRef("Promise.prototype.then()")}}
 - La méthode {{JSxRef("Promise.prototype.catch()")}}

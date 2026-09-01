@@ -49,5 +49,5 @@ console.log(date1.equals(date4)); // false
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
 - La méthode {{JSxRef("Temporal/PlainDate/compare", "Temporal.PlainDate.compare()")}}

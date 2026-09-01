@@ -62,6 +62,6 @@ console.log(dataview.getUint8(1)); // 1
 ## Voir aussi
 
 - Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- L'objet {{JSxRef("DataView")}}
-- L'objet {{JSxRef("ArrayBuffer")}}
-- L'objet {{JSxRef("Uint8Array")}}
+- L'objet natif {{JSxRef("DataView")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("Uint8Array")}}

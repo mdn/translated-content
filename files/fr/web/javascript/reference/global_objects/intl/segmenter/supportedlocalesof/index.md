@@ -62,4 +62,4 @@ console.log(Intl.Segmenter.supportedLocalesOf(locales, options));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Segmenter")}}
+- L'objet natif {{JSxRef("Intl.Segmenter")}}

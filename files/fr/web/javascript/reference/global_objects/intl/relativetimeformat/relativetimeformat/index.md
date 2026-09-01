@@ -107,6 +107,6 @@ rtf.format(0, "minute"); // "cette minute"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.RelativeTimeFormat")}}
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl.RelativeTimeFormat")}}
+- L'objet natif {{JSxRef("Intl")}}
 - [`Intl.RelativeTimeFormat` <sup>(angl.)</sup>](https://v8.dev/features/intl-relativetimeformat) sur v8.dev (2018)

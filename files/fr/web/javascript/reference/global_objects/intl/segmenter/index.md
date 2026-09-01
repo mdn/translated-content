@@ -83,4 +83,4 @@ console.table(Array.from(segments));
 ## Voir aussi
 
 - [Prothèse d'émulation de `Intl.Segmenter` dans FormatJS <sup>(angl.)</sup>](https://formatjs.github.io/docs/polyfills/intl-segmenter/)
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}

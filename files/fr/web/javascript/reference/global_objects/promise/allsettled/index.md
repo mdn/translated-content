@@ -106,7 +106,7 @@ Si vous déstructurez le résultat, vous devez conserver les variables de résul
 - [La prothèse d'émulation es-shims de `Promise.allSettled` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.allsettled)
 - Le guide [d'utilisation des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
 - [Programmation asynchrone à l'aide des promesses](/fr/docs/Learn_web_development/Extensions/Async_JS/Promises)
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}
 - La méthode statique {{JSxRef("Promise.all()")}}
 - La méthode statique {{JSxRef("Promise.allSettledKeyed()")}}
 - La méthode statique {{JSxRef("Promise.any()")}}

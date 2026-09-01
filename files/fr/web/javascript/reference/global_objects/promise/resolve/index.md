@@ -227,4 +227,4 @@ Promise.resolve.call(PasUnePromesse, semiPromesse); // Journalise "Résolu { the
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}

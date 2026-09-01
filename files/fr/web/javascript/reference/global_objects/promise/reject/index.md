@@ -104,4 +104,4 @@ Promise.reject.call(NestPasUnePromesse, "toto"); // Affiche "Rompue toto"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}

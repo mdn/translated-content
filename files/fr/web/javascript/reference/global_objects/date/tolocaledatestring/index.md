@@ -173,7 +173,7 @@ console.log(date.toLocaleDateString("en-US", options));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}
 - La méthode {{JSxRef("Date.prototype.toLocaleString()")}}
 - La méthode {{JSxRef("Date.prototype.toLocaleTimeString()")}}
 - La méthode {{JSxRef("Date.prototype.toString()")}}

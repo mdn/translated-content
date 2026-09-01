@@ -48,4 +48,4 @@ console.log(maMap.size); // 3
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Map")}}
+- L'objet natif {{JSxRef("Map")}}

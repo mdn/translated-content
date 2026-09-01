@@ -124,7 +124,7 @@ logIterable(123);
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.keys()")}}
 - La méthode {{JSxRef("Array.prototype.entries()")}}
 - La méthode {{JSxRef("Array.prototype.values()")}}

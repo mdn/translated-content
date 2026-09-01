@@ -130,6 +130,6 @@ Notez que les doubles barres obliques dans `rawJSON` représentent en réalité 
 ## Voir aussi
 
 - [Prothèse d'émulation de `JSON.rawJSON` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#jsonparse-source-text-access)
-- L'objet {{JSxRef("JSON")}}
+- L'objet natif {{JSxRef("JSON")}}
 - La méthode {{JSxRef("JSON.isRawJSON()")}}
 - La méthode {{JSxRef("JSON.stringify()")}}

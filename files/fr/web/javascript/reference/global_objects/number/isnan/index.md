@@ -105,5 +105,5 @@ isNaN(" "); // false, c'est converti en 0
 
 - [La prothèse d'émulation de `Number.isNaN` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
 - [La prothèse d'émulation es-shims de `Number.isNaN` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isnan)
-- L'objet {{JSxRef("Number")}}
+- L'objet natif {{JSxRef("Number")}}
 - La fonction native {{JSxRef("isNaN()")}}

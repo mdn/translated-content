@@ -75,4 +75,4 @@ console.log((({ a, b }, [c, d]) => {}).length);
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Function")}}
+- L'objet natif {{JSxRef("Function")}}

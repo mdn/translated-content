@@ -12,12 +12,19 @@ L'évènement **`pointerrawupdate`** est déclenché lorsqu'un pointeur modifie 
 Voir {{DOMxRef("Element/pointermove_event", "pointermove")}} pour une liste de ces propriétés.
 
 L'évènement `pointerrawupdate` peut avoir des évènements fusionnés s'il existe déjà un autre évènement `pointerrawupdate` avec le même ID de pointeur qui n'a pas été distribué dans la boucle d'évènements.
+Si les évènements sont fusionnés, la cible (`target`) de l'évènement distribué est la même que celle du dernier évènement fusionné.
 Pour des informations sur les évènements fusionnés, voir la documentation de {{DOMxRef("PointerEvent.getCoalescedEvents()")}}.
 
-`pointerrawupdate` est destiné aux applications qui nécessitent une gestion des entrées à haute précision et qui ne peuvent pas obtenir une interaction fluide en utilisant uniquement les évènements fusionnés [`pointermove`](/fr/docs/Web/API/Element/pointermove_event).
+La différence entre `pointerrawupdate` et {{DOMxRef("Element/pointermove_event", "pointermove")}} réside dans leur fréquence de déclenchement.
+Un navigateur peut retarder les évènements `pointermove` pour améliorer les performances, tandis que les évènements `pointerrawupdate` sont distribués aussi rapidement et aussi fréquemment que le navigateur peut les produire.
+Les deux types d'évènements peuvent être fusionnés, mais `pointerrawupdate` l'est moins, donc ses écouteurs s'exécutent plus souvent.
+Un seul évènement transporte les mêmes valeurs de propriétés dans les deux cas, donc `pointerrawupdate` n'est pas plus précis dans l'espace ou le temps que l'évènement `pointermove` couvrant le même mouvement.
+
+`pointerrawupdate` est donc destiné aux applications qui nécessitent une gestion des entrées à plus faible latence que ce que `pointermove` offre, comme le dessin ou le glissement qui, autrement, sont visiblement en retard par rapport au pointeur.
+Comme les évènements arrivent plus souvent, une application qui suit leur rythme peut également sembler plus fluide.
 Cependant, comme l'écoute des évènements `pointerrawupdate` peut affecter les performances, vous ne devez ajouter ces écouteurs que si votre JavaScript a besoin d'évènements à haute fréquence et peut les traiter aussi rapidement qu'ils sont distribués.
 Pour la plupart des cas d'utilisation, les autres types d'évènements de pointeur doivent suffire.
-
+Une application qui ne peut pas suivre le rythme semble moins réactive plutôt que plus, donc une optimisation importante à l'intérieur du gestionnaire d'évènements est nécessaire.
 Cet évènement [se propage](/fr/docs/Learn_web_development/Core/Scripting/Event_bubbling) et est [composé](/fr/docs/Web/API/Event/composed), mais n'est pas [annulable](/fr/docs/Web/API/Event/cancelable) et n'a pas d'action par défaut.
 
 ## Syntaxe
@@ -39,10 +46,11 @@ Un objet {{DOMxRef("PointerEvent")}}. Hérite de {{DOMxRef("Event")}}.
 ## Exemples
 
 ```js
-addEventListener("pointerrawupdate", (event) => {
-  if (event.getCoalescedEvents && event.getCoalescedEvents().length > 1) {
-    console.log("Évènements fusionnés :", event.getCoalescedEvents().length);
-    for (let coalescedEvent of event.getCoalescedEvents()) {
+canvas.addEventListener("pointerrawupdate", (event) => {
+  const events = event.getCoalescedEvents();
+  if (events.length > 1) {
+    console.log("Évènements fusionnés :", events.length);
+    for (const coalescedEvent of events) {
       // Faire quelque chose avec les évènements fusionnés.
     }
   } else {

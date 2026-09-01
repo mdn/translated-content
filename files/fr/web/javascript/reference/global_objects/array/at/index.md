@@ -130,7 +130,7 @@ console.log(Array.prototype.at.call(objetSimilaireTableau, 2)); // undefined
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.findIndex()")}}
 - La méthode {{JSxRef("Array.prototype.indexOf()")}}
 - La méthode {{JSxRef("Array.prototype.with()")}}

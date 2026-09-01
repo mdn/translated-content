@@ -99,5 +99,5 @@ console.log(MaPromesse.resolve(1).then(() => {}).uneValeur); // undefined
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}
 - La propriété statique {{JSxRef("Symbol.species")}}

@@ -137,7 +137,7 @@ console.log(
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections) guide
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}
 - La méthode {{JSxRef("Array.prototype.findIndex()")}}
 - La méthode {{JSxRef("Array.prototype.findLast()")}}

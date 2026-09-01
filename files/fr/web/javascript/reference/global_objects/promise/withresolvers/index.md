@@ -106,5 +106,5 @@ resolve("bonjour");
 - [La prothèse d'émulation de `Promise.withResolvers` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#promisewithresolvers)
 - [La prothèse d'émulation es-shims de `Promise.withResolvers` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.withresolvers)
 - Le guide [d'utilisation des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}
 - Le constructeur {{JSxRef("Promise/Promise", "Promise()")}}

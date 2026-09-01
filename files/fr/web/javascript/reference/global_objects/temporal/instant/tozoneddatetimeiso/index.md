@@ -53,6 +53,6 @@ console.log(localDateTime.toString()); // Cet instant dans votre fuseau horaire
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Instant")}}
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/toInstant", "Temporal.ZonedDateTime.prototype.toInstant()")}}

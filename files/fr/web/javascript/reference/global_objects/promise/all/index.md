@@ -331,7 +331,7 @@ Promise.all([p1.catch((error) => error), p2.catch((error) => error)]).then(
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}
 - La méthode statique {{JSxRef("Promise.allKeyed()")}}
 - La méthode statique {{JSxRef("Promise.allSettled()")}}
 - La méthode statique {{JSxRef("Promise.any()")}}

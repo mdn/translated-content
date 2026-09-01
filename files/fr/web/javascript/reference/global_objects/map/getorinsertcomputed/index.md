@@ -76,7 +76,7 @@ map.getOrInsertComputed("toto", createurParDefaut); // N'affiche rien
 
 - [Prothèse d'émulation de `Map.prototype.getOrInsertComputed` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#map-upsert)
 - [Prothèse d'émulation es-shims de `Map.prototype.getOrInsertComputed` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.prototype.getorinsertcomputed)
-- L'objet {{JSxRef("Map")}}
+- L'objet natif {{JSxRef("Map")}}
 - La méthode {{JSxRef("Map.prototype.get()")}}
 - La méthode {{JSxRef("Map.prototype.set()")}}
 - La méthode {{JSxRef("Map.prototype.has()")}}

@@ -333,5 +333,5 @@ setTimeout(() => {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}
 - La méthode {{JSxRef("Promise.prototype.catch()")}}

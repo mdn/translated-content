@@ -72,5 +72,5 @@ Number.isFinite(null); // false
 
 - [La prothèse d'émulation de `Number.isFinite` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
 - [La prothèse d'émulation es-shims de `Number.isFinite` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isfinite)
-- L'objet {{JSxRef("Number")}}
+- L'objet natif {{JSxRef("Number")}}
 - La fonction native {{JSxRef("isFinite()")}}

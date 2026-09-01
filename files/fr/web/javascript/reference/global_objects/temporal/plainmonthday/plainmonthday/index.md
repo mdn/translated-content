@@ -88,5 +88,5 @@ console.log(md2.toString()); // 1972-07-02[u-ca=chinese]
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainMonthDay")}}
+- L'objet natif {{JSxRef("Temporal.PlainMonthDay")}}
 - La méthode statique {{JSxRef("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}

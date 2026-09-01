@@ -172,4 +172,4 @@ console.log(new Date(["2020-06-19", "17:13"]));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Date")}}
+- L'objet natif {{JSxRef("Date")}}

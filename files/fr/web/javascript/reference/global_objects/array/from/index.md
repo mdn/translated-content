@@ -198,7 +198,7 @@ console.log(Array.from.call({}, { length: 1, 0: "toto" })); // [ 'toto' ]
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array/Array", "Array()")}}
 - La méthode {{JSxRef("Array.of()")}}
 - La méthode {{JSxRef("Array.fromAsync()")}}

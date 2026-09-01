@@ -175,6 +175,6 @@ console.log(d3.toString()); // "2021-07-01"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
 - Le constructeur {{JSxRef("Temporal/PlainDate/PlainDate", "Temporal.PlainDate()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}}

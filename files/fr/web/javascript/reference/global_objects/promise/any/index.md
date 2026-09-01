@@ -135,7 +135,7 @@ Promise.any([cafe, the])
 
 - [La prothèse d'émulation de `Promise.any` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-promise)
 - [La prothèse d'émulation es-shims de `Promise.any` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.any)
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}
 - La méthode statique {{JSxRef("Promise.all()")}}
 - La méthode statique {{JSxRef("Promise.allSettled()")}}
 - La méthode statique {{JSxRef("Promise.race()")}}
