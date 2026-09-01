@@ -620,4 +620,4 @@ Content-Security-Policy: default-src 'self'; report-to csp-endpoint
 - web.dev 上的[使用严格内容安全策略缓解跨站脚本攻击](https://web.developers.google.cn/articles/strict-csp)（2024）
 - [内容安全策略：加固与缓解之间的成功乱局](https://infocondb.org/con/locomocosec/locomocosec-2019/content-security-policy-a-successful-mess-between-hardening-and-mitigation)
 - owasp.org 上的[内容安全策略速查表](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)
-- [CSP 评估器](https://csp-evaluat](https://web.developers.google.cn/)
+- [CSP 评估器](https://csp-evaluator.withgoogle.com/)
