@@ -74,7 +74,7 @@ svg {
 
 裁剪路径在概念上等同于引用元素的自定义视口。因此，它会影响元素的*渲染*，但不会影响元素的*固有几何*。被裁剪元素（即通过 {{SVGAttr("clip-path")}} 属性引用 `<clipPath>` 元素的元素，或引用元素的子元素）的边界框必须与未裁剪时相同。
 
-默认情况下，被裁剪区域不会派发 {{cssxref("pointer-events")}} 事件。例如，一个半径为 `10` 的圆被裁剪为半径为 `5` 的圆时，在较小半径之外不会接收 "click" 事件。
+默认情况下，被裁剪区域不会派发 {{cssxref("pointer-events")}} 事件。例如，一个半径为 `10` 的圆被裁剪为半径为 `5` 的圆时，在较小半径之外不会接收“click”事件。
 
 ## 规范
 
@@ -89,4 +89,4 @@ svg {
 - {{SVGElement("mask")}}
 - CSS {{cssxref("clip-path")}} 属性
 - [CSS 裁剪简介](/zh-CN/docs/Web/CSS/Guides/Masking/Clipping)
-- [CSS 遮罩](/zh-CN/docs/Web/CSS/Guides/Masking/Clipping) 模块
+- [CSS 遮罩](/zh-CN/docs/Web/CSS/Guides/Masking/Clipping)模块
