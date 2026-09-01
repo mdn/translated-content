@@ -133,6 +133,6 @@ console.log(Array.prototype.fill.call(objetSimilaireTableau, 1));
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("TypedArray.prototype.fill()")}}
 - [Prothèse d'émulation de `Array.prototype.fill` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)

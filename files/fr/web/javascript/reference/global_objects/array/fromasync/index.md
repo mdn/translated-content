@@ -249,7 +249,7 @@ Si vous devez fermer l'itérateur, vous devez utiliser une boucle {{JSxRef("Stat
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array/Array", "Array()")}}
 - La méthode {{JSxRef("Array.of()")}}
 - La méthode {{JSxRef("Array.from()")}}

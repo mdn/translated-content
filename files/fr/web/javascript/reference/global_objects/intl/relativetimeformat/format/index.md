@@ -93,4 +93,4 @@ rtf.format(1, "day"); // "tomorrow"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.RelativeTimeFormat")}}
+- L'objet natif {{JSxRef("Intl.RelativeTimeFormat")}}

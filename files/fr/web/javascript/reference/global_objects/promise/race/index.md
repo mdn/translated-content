@@ -310,7 +310,7 @@ Promise.any([promise1, promise2])
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}
 - La méthode statique {{JSxRef("Promise.all()")}}
 - La méthode statique {{JSxRef("Promise.allSettled()")}}
 - La méthode statique {{JSxRef("Promise.any()")}}

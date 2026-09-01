@@ -173,5 +173,5 @@ Contrairement à `Promise()`, ce constructeur `PasUnePromesse()` _ne_ gère _pas
 - [La prothèse d'émulation de `Promise.try` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#promisetry)
 - [La prothèse d'émulation es-shims de `Promise.try` <sup>(angl.)</sup>](https://www.npmjs.com/package/promise.try)
 - Le guide [d'utilisation des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}
 - Le constructeur {{JSxRef("Promise/Promise", "Promise()")}}

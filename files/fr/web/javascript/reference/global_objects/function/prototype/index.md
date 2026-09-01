@@ -124,5 +124,5 @@ console.log(new Chien("Jack").espece); // "chien"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Function")}}
+- L'objet natif {{JSxRef("Function")}}
 - [Héritage et chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#constructeurs)

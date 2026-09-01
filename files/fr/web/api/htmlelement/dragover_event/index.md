@@ -3,12 +3,14 @@ title: "HTMLElement : évènement dragover"
 short-title: dragover
 slug: Web/API/HTMLElement/dragover_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: 3385bda58637833eedc9b8dc41a2804e653208a7
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-L'évènement `dragover` de l'interface {{DOMxRef("HTMLElement")}} est déclenché lorsqu'un élément ou une sélection de texte est déplacé au‑dessus d'une cible de dépôt valide (toutes les quelques centaines de millisecondes).
+L'évènement `dragover` de l'interface {{DOMxRef("HTMLElement")}} est déclenché de manière répétée lorsqu'un élément ou une sélection de texte est en train d'être déplacé au‑dessus d'une cible de dépôt potentielle.
+
+La fréquence de déclenchement dépend du navigateur, du système d'exploitation et du mouvement du pointeur&nbsp;; ne vous fiez pas à un intervalle fixe. L'évènement `dragover` peut continuer à se déclencher lorsque le pointeur est immobile, et peut se déclencher plus fréquemment lorsqu'il est en mouvement. La [spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/dnd.html#drag-and-drop-processing-model) utilise une fréquence de déclenchement d'environ 350ms (±200ms). En pratique, les navigateurs utilisent des mises à jour de glisser-déposer natives et des minuteries spécifiques à la plateforme pour dispatcher ces évènements, donc cet intervalle ne décrit pas tout le comportement des navigateurs.
 
 Cet évènement est annulable et peut se propager jusqu'aux objets {{DOMxRef("Document")}} et {{DOMxRef("Window")}}.
 

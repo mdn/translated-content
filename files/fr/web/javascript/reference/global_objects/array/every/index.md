@@ -136,7 +136,7 @@ console.log(
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.forEach()")}}
 - La méthode {{JSxRef("Array.prototype.some()")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}

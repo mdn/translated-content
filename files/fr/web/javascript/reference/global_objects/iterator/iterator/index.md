@@ -142,5 +142,5 @@ Le modèle de sous-classement est utile si vous souhaitez créer de nombreux it�
 
 - [Prothèse d'émulation de `Iterator` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
 - [Prothèse d'émulation es-shims de `Iterator` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Iterator.from()")}}

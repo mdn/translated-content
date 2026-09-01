@@ -81,5 +81,5 @@ Ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Error")}}
+- L'objet natif {{JSxRef("Error")}}
 - [`InternalError: too much recursion`](/fr/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)

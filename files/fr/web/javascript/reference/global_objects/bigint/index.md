@@ -306,5 +306,5 @@ nthPrime(20n);
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Number")}}
+- L'objet natif {{JSxRef("Number")}}
 - La propriété statique {{JSxRef("Number.MAX_SAFE_INTEGER")}}

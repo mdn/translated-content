@@ -63,4 +63,4 @@ Number.MIN_SAFE_INTEGER; // -9007199254740991
 - [La prothèse d'émulation es-shims de `Number.MIN_SAFE_INTEGER` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-constants)
 - La propriété statique {{JSxRef("Number.MAX_SAFE_INTEGER")}}
 - La méthode statique {{JSxRef("Number.isSafeInteger()")}}
-- L'objet {{JSxRef("BigInt")}}
+- L'objet natif {{JSxRef("BigInt")}}

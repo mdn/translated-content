@@ -110,7 +110,7 @@ La plupart des cas d'utilisation de `Iterator.zipKeyed()` sont identiques à ceu
 
 - [Prothèse d'émulation de `Iterator.zipKeyed` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/proposals/joint-iteration)
 - [Prothèse d'émulation es-shims de `Iterator.zipKeyed` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Iterator.zip()")}}
 - La méthode statique {{JSxRef("Iterator.from()")}}
 - La méthode statique {{JSxRef("Iterator.concat()")}}

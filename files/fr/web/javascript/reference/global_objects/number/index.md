@@ -243,5 +243,5 @@ Number("-Infinity"); // -Infinity
 - [Une prothèse d'émulation du comportement moderne de `Number` (dont la prise en charge des littéraux binaires et octaux) dans la bibliothèque `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
 - La propriété native {{JSxRef("NaN")}}
 - [Les opérateurs arithmétiques](/fr/docs/Web/JavaScript/Reference/Operators#opérateurs_arithmétiques)
-- L'objet {{JSxRef("Math")}}
-- L'objet {{JSxRef("BigInt")}}
+- L'objet natif {{JSxRef("Math")}}
+- L'objet natif {{JSxRef("BigInt")}}

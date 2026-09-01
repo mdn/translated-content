@@ -167,5 +167,5 @@ const { ctrz, ctron } = compterBitsFinMethodes;
 
 - [Prothèse d'émulation de `Math.clz32` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
 - [Prothèse d'émulation es-shims de `Math.clz32` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.clz32)
-- L'objet {{JSxRef("Math")}}
+- L'objet natif {{JSxRef("Math")}}
 - La méthode statique {{JSxRef("Math.imul()")}}

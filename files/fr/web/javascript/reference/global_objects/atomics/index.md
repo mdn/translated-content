@@ -133,7 +133,7 @@ Atomics.notify(int32, 0, 1);
 
 ## Voir aussi
 
-- L'objet {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
 - Guide [des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Web Workers](/fr/docs/Web/API/Web_Workers_API)
 - [La mémoire partagée — un rapide tutoriel <sup>(angl.)</sup>](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md) dans la proposition TC39 ecmascript-sharedmem

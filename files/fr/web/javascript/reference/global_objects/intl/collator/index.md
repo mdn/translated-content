@@ -102,5 +102,5 @@ console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"))
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}
 - La méthode {{JSxRef("String.prototype.localeCompare()")}}

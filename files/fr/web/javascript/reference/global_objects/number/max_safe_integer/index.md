@@ -71,4 +71,4 @@ Number.MAX_SAFE_INTEGER * Number.EPSILON; // 1.9999999999999998
 - La propriété statique {{JSxRef("Number.MIN_SAFE_INTEGER")}}
 - La propriété statique {{JSxRef("Number.MAX_VALUE")}}
 - La méthode statique {{JSxRef("Number.isSafeInteger()")}}
-- L'objet {{JSxRef("BigInt")}}
+- L'objet natif {{JSxRef("BigInt")}}
