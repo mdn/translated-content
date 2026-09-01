@@ -38,12 +38,8 @@ onfocusin = (event) => { }
 
 ```html
 <form id="form">
-  <label>
-    一些文本：<input type="text" placeholder="文本输入" />
-  </label>
-  <label>
-    密码：<input type="password" placeholder="密码" />
-  </label>
+  <label>一些文本：<input type="text" placeholder="文本输入" /></label>
+  <label>密码：<input type="password" placeholder="密码" /></label>
 </form>
 ```
 
