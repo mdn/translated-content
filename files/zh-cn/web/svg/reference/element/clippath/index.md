@@ -16,7 +16,7 @@ l10n:
 ## 属性
 
 - {{SVGAttr("clipPathUnits")}}
-  - ：定义 `<clipPath>` 元素内容的坐标系。_值类型_：`userSpaceOnUse` | `objectBoundingBox`；_默认值_：`userSpaceOnUse`；_动画性_：**是**
+  - : 定义 `<clipPath>` 元素内容的坐标系。_值类型_：`userSpaceOnUse` | `objectBoundingBox`；_默认值_：`userSpaceOnUse`；_动画性_：**是**
 
 ## DOM 接口
 
