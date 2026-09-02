@@ -8,18 +8,15 @@ l10n:
 
 {{APIRef("CSSOM View API")}}
 
-**`scrollend`** 事件在元素滚动完成时触发。
-当滚动位置不再有挂起的更新、且用户已完成其手势操作时，即视为滚动完成。
+**`scrollend`** 事件在元素滚动完成时触发。当滚动位置不再有挂起的更新且用户已完成其手势操作时，即视为滚动完成。
 
-滚动位置的更新包括平滑或即时的鼠标滚轮滚动、键盘滚动、scroll-snap 事件，或其他会导致滚动位置更新的 API 和手势。
-触摸平移或触控板滚动等用户手势，在指针或按键释放之前不会被视为完成。
-如果滚动位置没有发生变化，则不会触发 scrollend 事件。
+滚动位置的更新包括平滑或即时的鼠标滚轮滚动、键盘滚动、scroll-snap 事件，或其他会导致滚动位置更新的 API 和手势。触摸平移或触控板滚动等用户手势，在指针或按键释放之前不会被视为完成。如果滚动位置没有发生变化，则不会触发 scrollend 事件。
 
 如需检测 Document 内部的滚动何时完成，请参见 `Document` 的 {{domxref("Document/scrollend_event", "scrollend")}} 事件。
 
 ## 语法
 
-在 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+在类似 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js-nolint
 addEventListener("scrollend", (event) => { })
@@ -66,10 +63,10 @@ onscrollend = (event) => { }
 
 ```html
 <div id="scroll-box">
-  <p id="scroll-box-title">Scroll me!</p>
+  <p id="scroll-box-title">滚动我！</p>
   <p id="large-element"></p>
 </div>
-<p id="output">Waiting on scroll events...</p>
+<p id="output">等待 scroll 事件……</p>
 ```
 
 ```js
@@ -77,11 +74,11 @@ const element = document.querySelector("div#scroll-box");
 const output = document.querySelector("p#output");
 
 element.addEventListener("scroll", (event) => {
-  output.textContent = "scroll event fired, waiting for scrollend...";
+  output.textContent = "触发 scroll 事件，等待 scrollend……";
 });
 
 element.addEventListener("scrollend", (event) => {
-  output.textContent = "scrollend event fired!";
+  output.textContent = "触发 scrollend 事件！";
 });
 ```
 
@@ -120,10 +117,10 @@ element.addEventListener("scrollend", (event) => {
 
 ```html
 <div id="scroll-box">
-  <p id="scroll-box-title">Scroll me!</p>
+  <p id="scroll-box-title">滚动我！</p>
   <p id="large-element"></p>
 </div>
-<p id="output">Waiting on scroll events...</p>
+<p id="output">等待 scroll 事件……p>
 ```
 
 ```js
@@ -131,11 +128,11 @@ const element = document.querySelector("div#scroll-box");
 const output = document.querySelector("p#output");
 
 element.onscroll = (event) => {
-  output.textContent = "Element scroll event fired, waiting for scrollend...";
+  output.textContent = "元素触发 scroll 事件，等待 scrollend……";
 };
 
 element.onscrollend = (event) => {
-  output.textContent = "Element scrollend event fired!";
+  output.textContent = "元素触发 scrollend 事件！";
 };
 ```
 
