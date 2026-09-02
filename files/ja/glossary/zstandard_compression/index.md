@@ -1,11 +1,9 @@
 ---
-title: Zstandard 圧縮
+title: Zstandard compression (Zstandard 圧縮)
 slug: Glossary/Zstandard_compression
 l10n:
   sourceCommit: 84673e170bd930bb92a0a271855e3d68b605e000
 ---
-
-{{GlossarySidebar}}
 
 **Zstandard** は、汎用の可逆圧縮アルゴリズムです。
 
