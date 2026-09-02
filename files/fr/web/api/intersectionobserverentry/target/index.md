@@ -1,7 +1,6 @@
 ---
 title: "IntersectionObserverEntry : propriété target"
 short-title: target
-sourceCommit: fe47429d64ffaacb24f5130523442aeaabf26ac6
 l10n:
   sourceCommit: fe47429d64ffaacb24f5130523442aeaabf26ac6
 ---
