@@ -248,7 +248,7 @@ Nous avons masqué le reste du CSS par souci de concision.
 
 #### Résultats
 
-{{ EmbedLiveSample("flex-line-count", "100%", 700) }}
+{{EmbedLiveSample("flex-line-count", "100%", 700)}}
 
 Notez les points suivants&nbsp;:
 
