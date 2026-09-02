@@ -1,6 +1,7 @@
 ---
 title: "IntersectionObserverEntry : propriété target"
 short-title: target
+slug: Web/API/IntersectionObserverEntry/target
 l10n:
   sourceCommit: fe47429d64ffaacb24f5130523442aeaabf26ac6
 ---
