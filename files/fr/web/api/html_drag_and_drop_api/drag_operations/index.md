@@ -2,7 +2,7 @@
 title: Opérations de glissement
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 l10n:
-  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
+  sourceCommit: 3385bda58637833eedc9b8dc41a2804e653208a7
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -12,7 +12,7 @@ Au cœur de l'API Glisser-déposer se trouvent les différents [évènements de 
 À un niveau élevé, voici les étapes possibles dans une opération de glisser-déposer&nbsp;:
 
 - L'utilisateur·ice [commence le glissement](#commencer_le_glissement) sur le nœud source&nbsp;; l'évènement {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}} est déclenché sur le nœud source. Dans cet évènement, le nœud source prépare le contexte pour l'opération de glissement, y compris les données de glissement, l'image de réaction et les effets de dépôt autorisés.
-- L'utilisateur·ice [déplace l'élément](#déplacer_des_éléments_et_définir_des_cibles_de_dépôt)&nbsp;: chaque fois qu'un nouvel élément est atteint, l'évènement {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}} est déclenché sur cet élément, et l'évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} est déclenché sur l'élément précédent. Toutes les quelques centaines de millisecondes, un évènement {{DOMxRef("HTMLElement/dragover_event", "dragover")}} est déclenché sur l'élément dans lequel le glissement se trouve actuellement, et l'évènement {{DOMxRef("HTMLElement/drag_event", "drag")}} est déclenché sur le nœud source.
+- L'utilisateur·ice [déplace l'élément](#déplacer_des_éléments_et_définir_des_cibles_de_dépôt)&nbsp;: chaque fois qu'un nouvel élément est atteint, l'évènement {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}} est déclenché sur cet élément, et l'évènement {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} est déclenché sur l'élément précédent. L'évènement {{DOMxRef("HTMLElement/dragover_event", "dragover")}} est déclenché de manière répétée sur l'élément dans lequel le glissement se trouve actuellement, et l'évènement {{DOMxRef("HTMLElement/drag_event", "drag")}} est déclenché de manière répétée sur le nœud source.
 - Le glissement entre dans une cible de dépôt valide&nbsp;: la cible de dépôt annule son évènement `dragover` pour indiquer qu'elle est une cible de dépôt valide. Une forme de [réaction au dépôt](#réaction_personnalisée_au_dépôt) indique à l'utilisateur·ice l'effet de dépôt attendu.
 - L'utilisateur·ice [effectue le dépôt](#effectuer_le_dépôt)&nbsp;: l'évènement {{DOMxRef("HTMLElement/drop_event", "drop")}} est déclenché sur la cible de dépôt. Dans cet évènement, le nœud cible lit les données de glissement.
 - [L'opération de glissement se termine](#terminer_le_glissement)&nbsp;: l'évènement {{DOMxRef("HTMLElement/dragend_event", "dragend")}} est déclenché sur le nœud source. Cet évènement est déclenché que le dépôt ait réussi ou non.
@@ -86,7 +86,7 @@ Pendant toute la durée de l'opération de glissement, tous les évènements d'e
 > [!NOTE]
 > `dragleave` se déclenche toujours _après_ `dragenter`, donc conceptuellement, entre ces deux évènements, la cible est entrée dans un nouvel élément mais n'a pas encore quitté le précédent.
 
-Toutes les quelques centaines de millisecondes, deux évènements se déclenchent&nbsp;: un évènement {{DOMxRef("HTMLElement/drag_event", "drag")}} sur le nœud source, et un évènement {{DOMxRef("HTMLElement/dragover_event", "dragover")}} sur l'élément dans lequel le glissement se trouve actuellement. La plupart des zones d'une page web ou d'une application ne sont pas des endroits valides pour déposer des données, donc les éléments ignorent par défaut tout dépôt qui s'y produit. L'élément peut se déclarer comme une cible de dépôt valide en annulant l'évènement `dragover`. Si l'élément est un champ de texte éditable, comme un {{HTMLElement("textarea")}} ou `{{HTMLElement("input/text", "&lt;input type=\"text\"&gt;")}}`, et que le magasin de données contient un élément `text/plain`, alors l'élément est une cible de dépôt valide par défaut sans annuler `dragover`.
+Pendant le glissement, l'évènement {{DOMxRef("HTMLElement/drag_event", "drag")}} se déclenche de manière répétée sur le nœud source, et l'évènement {{DOMxRef("HTMLElement/dragover_event", "dragover")}} se déclenche de manière répétée sur l'élément dans lequel le glissement se trouve actuellement. La plupart des zones d'une page web ou d'une application ne sont pas des endroits valides pour déposer des données, donc les éléments ignorent par défaut tout dépôt qui s'y produit. L'élément peut se déclarer comme une cible de dépôt valide en annulant l'évènement `dragover`. Si l'élément est un champ de texte éditable, comme un {{HTMLElement("textarea")}} ou `{{HTMLElement("input/text", "&lt;input type=\"text\"&gt;")}}`, et que le magasin de données contient un élément `text/plain`, alors l'élément est une cible de dépôt valide par défaut sans annuler `dragover`.
 
 ```html
 <div id="cible-depot">

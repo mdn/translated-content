@@ -44,6 +44,6 @@ console.log(d2.negated().toString()); // "PT1H30M"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/Duration/abs", "Temporal.Duration.prototype.abs()")}}
 - La propriété {{JSxRef("Temporal/Duration/sign", "Temporal.Duration.prototype.sign")}}

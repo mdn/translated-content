@@ -67,7 +67,7 @@ console.log(d2.seconds); // 100 ; reste non équilibré
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode statique {{JSxRef("Temporal/Duration/from", "Temporal.Duration.from()")}}
 - La méthode {{JSxRef("Temporal/Duration/add", "Temporal.Duration.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/Duration/subtract", "Temporal.Duration.prototype.subtract()")}}

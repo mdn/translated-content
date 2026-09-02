@@ -91,6 +91,6 @@ class MyArray extends Array {
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La propriété {{JSxRef("Symbol.species")}}
 - [Prothèse d'émulation de `Array[Symbol.species]` et prise en charge de `[Symbol.species]` dans toutes les méthodes concernées de `Array` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)

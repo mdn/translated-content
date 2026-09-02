@@ -90,5 +90,5 @@ console.log("a retourné : " + g.arguments);
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Functions/arguments", "arguments")}}
+- L'objet natif {{JSxRef("Functions/arguments", "arguments")}}
 - [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)

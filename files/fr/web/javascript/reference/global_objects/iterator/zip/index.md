@@ -206,7 +206,7 @@ for (const [char1, char2] of it) {
 
 - [Prothèse d'émulation de `Iterator.zip` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/proposals/joint-iteration)
 - [Prothèse d'émulation es-shims de `Iterator.zip` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Iterator.zipKeyed()")}}
 - La méthode statique {{JSxRef("Iterator.from()")}}
 - La méthode statique {{JSxRef("Iterator.concat()")}}

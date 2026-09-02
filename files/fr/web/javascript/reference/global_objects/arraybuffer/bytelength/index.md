@@ -42,4 +42,4 @@ buffer.byteLength; // 8
 
 ## Voir aussi
 
-- L'objet global {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}

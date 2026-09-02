@@ -78,6 +78,6 @@ Atomics.notify(int32, 0, 1);
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Atomics")}}
+- L'objet natif {{JSxRef("Atomics")}}
 - La méthode {{JSxRef("Atomics.wait()")}}
 - La méthode {{JSxRef("Atomics.waitAsync()")}}

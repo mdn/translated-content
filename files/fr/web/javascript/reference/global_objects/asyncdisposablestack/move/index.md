@@ -111,5 +111,5 @@ class HébergeurDePlugin {
 ## Voir aussi
 
 - [Gestion des ressources en JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
-- L'objet global {{JSxRef("AsyncDisposableStack")}}
+- L'objet natif {{JSxRef("AsyncDisposableStack")}}
 - La méthode {{JSxRef("AsyncDisposableStack.prototype.disposeAsync()")}}

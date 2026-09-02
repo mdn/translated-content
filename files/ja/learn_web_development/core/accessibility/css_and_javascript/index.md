@@ -3,10 +3,10 @@ title: CSS と JavaScript のアクセシビリティのベストプラクティ
 short-title: アクセシブルな CSS と JS
 slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: 0c62b082755017d0773ecaaee7e74efd5e066d0b
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/HTML","Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 CSS と JavaScript も、適切に使えばアクセシブルなウェブ体験を可能にしてくれる可能性がありますが、誤用すると、大幅にアクセシビリティを悪化させることがあります。本記事では、複雑なコンテンツでもできる限りアクセシブルにすることを保証するために考慮すべき、CSS と JavaScript のベストプラクティスのいくつかを概観します。
 
@@ -141,7 +141,7 @@ abbr {
 
 ```css
 a {
-  color: #ff0000;
+  color: red;
 }
 
 a:hover,
@@ -152,7 +152,7 @@ a:focus {
 }
 
 a:active {
-  color: #000000;
+  color: black;
   background-color: #a60000;
 }
 ```
@@ -251,7 +251,7 @@ JavaScript に頼りすぎると、しばしば問題が起きます。ときど
 ひかえめな JavaScript の適切な使用例には、次のものが含まれます。
 
 - クライアント側のフォーム検査を提供すること。これは、サーバーがデータを調べるのを待つ必要なしに、フォーム入力にともなう問題をユーザーに対して素早く警告してくれます。もしクライアント側のフォーム検査が利用できなくても、フォームは依然として動作するでしょうが、検査は遅くなるかもしれません。
-- キーボードのみのユーザーにとって操作可能な 、HTML の `<video>` 用のカスタムコントロールを提供すること。それとともに、JavaScript が利用できない場合にその動画にアクセスするのに使える、動画への直接リンクも提供すること（ほとんどのブラウザーでは、既定の `<video>` ブラウザーコントロールは、キーボードで操作可能ではありません）。
+- キーボードのみのユーザーにとって操作可能な 、HTML の `<video>` 用のカスタムコントロールを提供すること。それとともに、JavaScript が利用できない場合にその動画にアクセスするのに使える、動画への直接リンクも提供すること（ほとんどのブラウザーでは、デフォルトの `<video>` ブラウザーコントロールは、キーボードで操作可能ではありません）。
 
 一例として、やっつけ仕事のクライアント側のフォーム検査の例を書きました。[form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html) を参照してください（[ライブデモ](https://mdn.github.io/learning-area/accessibility/css/form-validation.html)も参照してください）。ここでは、単純なフォームが見えます。一方または双方のフィールドを空にしたままフォームを送信しようとすると、送信が失敗し、エラーメッセージボックスが現れて、何が間違っているのかを教えてくれます。
 
@@ -274,8 +274,7 @@ form.onsubmit = validate;
 
 function validate(e) {
   errorList.textContent = "";
-  for (let i = 0; i < formItems.length; i++) {
-    const testItem = formItems[i];
+  for (const testItem of formItems) {
     if (testItem.input.value === "") {
       errorField.style.left = "360px";
       createLink(testItem);
@@ -354,16 +353,12 @@ imgThumb.onblur = hideImg;
 
 最初の 2 行は、それぞれ、マウスポインターがサムネイル上にホバーしたときと、マウスポインターがサムネイル上にホバーするのをやめたときに、関数を動作させます。しかしこれだと、ズームしたビューにキーボードを通じてアクセスすることはできません。それをできるようにするために、後ろの方の 2 行を含めました。この 2 行は、画像にフォーカスが当たったときと、画像からフォーカスが外れた (フォーカスが停止した) ときに、関数を動作させます。こうしたことは、タブキーで画像上に移動することでできることです。なぜなら、画像に `tabindex="0"` を含めておいたからです。
 
-[click](/ja/docs/Web/API/Element/click_event) クリックイベントは興味深いものです。マウス依存のように聞こえる名前ですが、ほとんどのブラウザーは、フォーカスの当たっているリンクまたはフォーム要素上でエンター/リターンが押された後に、あるいは、そうした要素がタッチ画面装置上でタップされたときに、 [onclick](/ja/docs/Web/API/Element/click_event) イベントハンドラーを起動します。しかしこれは、 tabindex を用いて、既定ではフォーカス可能ではないイベントがフォーカスを持つようにしていると、既定のままではうまく機能しません。そうした場合では、まさにそのキーが具体的にはいつ押されたのかを検出する必要があります ([キーボードアクセシビリティを呼び戻すように盛り込む](/ja/docs/Learn_web_development/Core/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む) を参照)。
-
-## 確認テスト
-
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[確認テスト: CSS と JavaScript のアクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript) を参照して、この情報を覚えているかどうかを確認しましょう。
+[click](/ja/docs/Web/API/Element/click_event) クリックイベントは興味深いものです。マウス依存のように聞こえる名前ですが、ほとんどのブラウザーは、フォーカスの当たっているリンクまたはフォーム要素上でエンター/リターンが押された後に、あるいは、そうした要素がタッチ画面装置上でタップされたときに、 [onclick](/ja/docs/Web/API/Element/click_event) イベントハンドラーを起動します。しかしこれは、 tabindex を用いて、デフォルトではフォーカス可能ではないイベントがフォーカスを持つようにしていると、デフォルトのままではうまく機能しません。そうした場合では、まさにそのキーが具体的にはいつ押されたのかを検出する必要があります ([キーボードアクセシビリティを呼び戻すように盛り込む](/ja/docs/Learn_web_development/Core/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む)を参照)。
 
 ## まとめ
 
 ウェブページ上での CSS と JavaScript の使用にまつわるアクセシビリティの問題について、このページが適切な量の細部と理解をもたらしたのであれば幸いです。
 
-次は WAI-ARIA の番です!
+次の記事では、これらの情報をどれだけ理解し、習得できたかを調べるためのテストをいくつか紹介します。
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/HTML","Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

@@ -2,10 +2,8 @@
 title: Fragmentainer (断片化コンテナー)
 slug: Glossary/Fragmentainer
 l10n:
-  sourceCommit: 84673e170bd930bb92a0a271855e3d68b605e000
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{GlossarySidebar}}
 
 **断片化コンテナー** (fragmentainer) は、[CSS 断片化](https://drafts.csswg.org/css-break/) 仕様で次のように定義されています。
 

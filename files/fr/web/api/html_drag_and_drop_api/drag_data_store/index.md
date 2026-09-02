@@ -2,7 +2,7 @@
 title: Travailler avec le stockage de données de glissement
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_data_store
 l10n:
-  sourceCommit: d2bc0bbc02baaa56541a13dffe1d049f73a661fb
+  sourceCommit: 565501caace6d4fbcb9c9b3d8cbf7b03145abbf5
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -127,7 +127,7 @@ p1.addEventListener("drop", dropHandler);
 
 En dehors des évènements `dragstart` et `drop`, le stockage des données est en _mode protégé_, empêchant le code d'accéder à toute charge utile. Notamment&nbsp;:
 
-- Toutes les tentatives de [modification](#modifier_le_stockage_des_données_de_glissement) ne font rien silencieusement ou lèvent une `DOMException` (uniquement pour `items.add()` et `items.remove()`).
+- Toutes les tentatives de [modification](#modifier_le_stockage_des_données_de_glissement) ne font rien silencieusement ou lèvent une `DOMException` (uniquement pour `items.remove()`).
 - `DataTransfer.getData()` retourne toujours une chaîne de caractères vide.
 - `DataTransfer.files` retourne toujours une liste vide.
 - `DataTransferItem.getAsString()` ne fait jamais appel à la fonction de rappel.

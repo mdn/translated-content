@@ -466,6 +466,6 @@ console.log(fusion.get(3)); // trois
 
 - [Prothèse d'émulation pour `Map` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#map)
 - [Prothèse d'émulation pour `Map` dans es-shims <sup>(angl.)</sup>](https://www.npmjs.com/package/es-map)
-- L'objet {{JSxRef("Set")}}
-- L'objet {{JSxRef("WeakMap")}}
-- L'objet {{JSxRef("WeakSet")}}
+- L'objet natif {{JSxRef("Set")}}
+- L'objet natif {{JSxRef("WeakMap")}}
+- L'objet natif {{JSxRef("WeakSet")}}

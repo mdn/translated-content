@@ -3,7 +3,7 @@ title: "ARIA : rôle tree"
 short-title: tree
 slug: Web/Accessibility/ARIA/Reference/Roles/tree_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 30e0adab23668217555b7ed37df7e6e61b002bf3
 ---
 
 Un `tree` («&nbsp;arbre&nbsp;») est un composant qui permet à l'utilisateur·ice de sélectionner un ou plusieurs éléments dans une collection organisée hiérarchiquement.
@@ -39,7 +39,7 @@ Chaque élément servant de nœud d'arbre porte le rôle `treeitem`, sauf la rac
 
 Les nœuds `treeitem` peuvent être des enfants directs de la racine, imbriqués dans un autre `treeitem`, ou, optionnellement, dans un élément [`group`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), qui, dans un arbre, est une collection extensible d'éléments treeitem.
 
-Ne mettez pas `aria-expanded` sur les nœuds terminaux — ceux sans enfants treeitem — car cela décrit à tort le nœud comme parent pour les technologies d'assistance.
+Ne mettez pas `aria-expanded` sur les nœuds terminaux — ceux sans enfants `treeitem` — car cela décrit à tort le nœud comme parent pour les technologies d'assistance.
 
 ### Placement et présence dans le DOM
 

@@ -92,5 +92,5 @@ console.log(months.map((d) => d.toString()));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainYearMonth")}}
+- L'objet natif {{JSxRef("Temporal.PlainYearMonth")}}
 - La méthode {{JSxRef("Temporal/PlainYearMonth/equals", "Temporal.PlainYearMonth.prototype.equals()")}}

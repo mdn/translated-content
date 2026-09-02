@@ -83,5 +83,5 @@ console.table(maListeFormattee.formatToParts(fruits));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.ListFormat")}}
+- L'objet natif {{JSxRef("Intl.ListFormat")}}
 - La méthode {{JSxRef("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}

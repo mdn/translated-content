@@ -107,7 +107,7 @@ Si `fromIndex` est supérieur ou égal au nombre d'éléments disponibles, `fals
 ## Voir aussi
 
 - [La prothèse d'émulation es-shims de `Iterator.prototype.includes` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.every()")}}
 - La méthode {{JSxRef("Iterator.prototype.find()")}}
 - La méthode {{JSxRef("Iterator.prototype.some()")}}
