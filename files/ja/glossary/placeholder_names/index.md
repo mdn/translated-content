@@ -1,5 +1,5 @@
 ---
-title: プレースホルダー名
+title: Placeholder names (プレースホルダー名)
 slug: Glossary/Placeholder_names
 l10n:
   sourceCommit: 84673e170bd930bb92a0a271855e3d68b605e000
