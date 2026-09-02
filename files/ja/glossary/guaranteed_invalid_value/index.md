@@ -1,8 +1,8 @@
 ---
-title: 保証された無効な値
+title: Guaranteed-invalid value (保証された無効な値)
 slug: Glossary/guaranteed_invalid_value
 l10n:
-  sourceCommit: 84673e170bd930bb92a0a271855e3d68b605e000
+  sourceCommit: 55326f330a6ae829494c7606b1bd47b2c0f9d888
 ---
 
 CSS における保証された無効な値は {{CSSXref("initial")}} です。
