@@ -2,7 +2,7 @@
 title: Placeholder names (プレースホルダー名)
 slug: Glossary/Placeholder_names
 l10n:
-  sourceCommit: 84673e170bd930bb92a0a271855e3d68b605e000
+  sourceCommit: 972c6cc542e271e4c00def9465d7a0cc81011378
 ---
 
 暗号学では、会話の参加者を示すために**プレースホルダー名**がよく使用されます。これにより、「当事者 A」「盗聴者」「悪意のある攻撃者」などの用語を使わずに参加者を表せます。
