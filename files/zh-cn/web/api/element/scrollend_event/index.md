@@ -120,7 +120,7 @@ element.addEventListener("scrollend", (event) => {
   <p id="scroll-box-title">滚动我！</p>
   <p id="large-element"></p>
 </div>
-<p id="output">等待 scroll 事件……p>
+<p id="output">等待 scroll 事件……</p>
 ```
 
 ```js
