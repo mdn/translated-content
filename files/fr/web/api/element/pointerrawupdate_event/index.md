@@ -3,7 +3,7 @@ title: "Element : évènement pointerrawupdate"
 short-title: pointerrawupdate
 slug: Web/API/Element/pointerrawupdate_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: a0d27fbd56b5327923e072af498c3e8e3252afce
 ---
 
 {{APIRef("Pointer Events")}}{{SecureContext_Header}}

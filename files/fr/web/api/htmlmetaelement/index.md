@@ -2,12 +2,12 @@
 title: HTMLMetaElement
 slug: Web/API/HTMLMetaElement
 l10n:
-  sourceCommit: b5a6d8bc5fd751032f70b88e7ec1ec61339937de
+  sourceCommit: ad01ed9218be15d7aeaa0666ec0bc2a2d17f3574
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'interface **`HTMLMetaElement`** contient les métadonnées descriptives d'un document fournies en HTML via les éléments {{HTMLElement("meta")}}.
+L'interface **`HTMLMetaElement`** contient les métadonnées descriptives d'un document fournies en HTML avec les éléments {{HTMLElement("meta")}}.
 Cette interface hérite de toutes les propriétés et méthodes décrites dans l'interface {{DOMxRef("HTMLElement")}}.
 
 {{InheritanceDiagram}}

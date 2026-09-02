@@ -3,7 +3,7 @@ title: "HTMLOutputElement : propriété htmlFor"
 short-title: htmlFor
 slug: Web/API/HTMLOutputElement/htmlFor
 l10n:
-  sourceCommit: c053b4b3bb0f34736e9f4402d4254830670af723
+  sourceCommit: 752996f4695156431af4e19feb0542a4d372ce1e
 ---
 
 {{APIRef("HTML DOM")}}
@@ -20,7 +20,7 @@ Bien que la propriété `htmlFor` soit en lecture seule dans le sens où vous ne
 
 ```js
 const outputElem = document.getElementById("result");
-for (const id of outputElem.htmlFor.split(" ")) {
+for (const id of outputElem.htmlFor) {
   const elem = document.getElementById(id);
   elem.style.outline = "2px solid red";
 }
