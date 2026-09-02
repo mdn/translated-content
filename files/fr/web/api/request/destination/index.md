@@ -3,14 +3,14 @@ title: "Request : propriété destination"
 short-title: destination
 slug: Web/API/Request/destination
 l10n:
-  sourceCommit: 11e09e7c584658fbfbecd2f00ae66e546cd54cc0
+  sourceCommit: 8330e7c1afd31d53ae12c3271e96d681bba9e223
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 La propriété en lecture seule **`destination`** de l'interface {{DOMxRef("Request")}} retourne une chaîne de caractères décrivant le type de contenu demandé.
 
-La chaîne doit être soit `audio`, `audioworklet`, `document`, `embed`, `fencedframe`, `font`, `frame`, `iframe`, `image`, `json`, `manifest`, `object`, `paintworklet`, `report`, `script`, `sharedworker`, `speculationrules`, `style`, `track`, `video`, `worker` ou `xslt`, ou la chaîne vide, qui est la valeur par défaut.
+La chaîne de caractères doit être soit `audio`, `audioworklet`, `document`, `embed`, `fencedframe`, `font`, `frame`, `iframe`, `image`, `json`, `manifest`, `object`, `paintworklet`, `report`, `script`, `sharedworker`, `speculationrules`, `style`, `text`, `track`, `video`, `worker` ou `xslt`, ou la chaîne de caractères vide, qui est la valeur par défaut.
 
 La propriété `destination` est utilisée par {{Glossary("user agent", "l'agent utilisateur")}} pour, par exemple, aider à déterminer quel ensemble de règles suivre pour le CORS, ou comment naviguer dans les chemins de code complexes qui affectent la gestion de certains types de requêtes.
 
@@ -24,7 +24,7 @@ Une chaîne de caractères qui indique le type de contenu demandé par la requê
 Les valeurs possibles sont&nbsp;:
 
 - `""`
-  - : La chaîne vide est la valeur par défaut, et est utilisée pour les destinations qui n'ont pas leur propre valeur. C'est la valeur lorsque les requêtes sont effectuées avec les API suivantes (entre autres)&nbsp;:
+  - : La chaîne de caractères vide est la valeur par défaut, et est utilisée pour les destinations qui n'ont pas leur propre valeur. C'est la valeur lorsque les requêtes sont effectuées avec les API suivantes (entre autres)&nbsp;:
     - [`<a ping>`](/fr/docs/Web/HTML/Reference/Element/a#ping)
     - [`<area ping>`](/fr/docs/Web/HTML/Reference/Element/area#ping)
     - {{DOMxRef("Cache")}}
@@ -68,6 +68,8 @@ Les valeurs possibles sont&nbsp;:
   - : La cible est un document JSON de [règles de spéculation](/fr/docs/Web/API/Speculation_Rules_API).
 - `"style"`
   - : La cible est une feuille de style.
+- `"text"` {{Experimental_Inline}}
+  - : La cible est un fichier texte.
 - `"track"`
   - : La cible est un élément HTML {{HTMLElement("track")}}.
 - `"video"`
@@ -83,7 +85,7 @@ Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du 
 
 ```js
 const maRequete = new Request("fleurs.jpg");
-const maDestination = maRequete.destination; // retourne la chaîne vide par défaut
+const maDestination = maRequete.destination; // retourne la chaîne de caractères vide par défaut
 ```
 
 ## Spécifications

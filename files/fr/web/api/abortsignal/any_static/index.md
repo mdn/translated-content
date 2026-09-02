@@ -3,7 +3,7 @@ title: "AbortSignal : méthode statique any()"
 short-title: any()
 slug: Web/API/AbortSignal/any_static
 l10n:
-  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
+  sourceCommit: 9bda33365e40b6c609fa5190a0af9b5dc6438cf0
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -27,6 +27,14 @@ Un objet {{DOMxRef("AbortSignal")}} qui est&nbsp;:
 
 - **Déjà annulé**, si l'un des signaux donnés est déjà annulé. La raison du {{DOMxRef("AbortSignal")}} retourné est déjà définie sur la {{DOMxRef("AbortSignal.reason", "reason")}} du premier signal déjà annulé.
 - **Annulé de façon asynchrone**, quand un signal d'annulation d'un `iterable` est annulé. La {{DOMxRef("AbortSignal.reason", "reason")}} est définie sur la raison du premier signal annulé.
+
+## Description
+
+`AbortSignal.any()` ne fournit pas de méthode pour désabonner le signal retourné de ses signaux d'entrée. L'annulation du signal retourné n'annule pas les autres signaux d'entrée et ne supprime pas leurs délais d'attente.
+
+En interne, le signal combiné et ses signaux sources sont liés par des références faibles. Les signaux combinés ne sont pas intrinsèquement bloqués pour la collecte des ordures tant que les signaux d'entrée restent actifs. Cependant, un signal combiné non annulé est maintenu en vie tant qu'il a encore des signaux sources et soit des écouteurs d'évènements `abort` enregistrés, soit des étapes d'annulation internes enregistrées par une API.
+
+Si votre code ajoute des écouteurs `abort` au signal combiné, [supprimez-les lorsque l'opération se termine](/fr/docs/Web/API/AbortSignal#supprimer_lécouteur_dévènement_abort), tout comme vous le faites pour tout autre `AbortSignal`.
 
 ## Exemples
 

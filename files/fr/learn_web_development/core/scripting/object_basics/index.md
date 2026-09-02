@@ -2,7 +2,7 @@
 title: Les bases de JavaScript, orienté objet
 slug: Learn_web_development/Core/Scripting/Object_basics
 l10n:
-  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
+  sourceCommit: ce12c10364f35c64184dec44be85537b7e10d91f
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Events","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics", "Learn_web_development/Core/Scripting")}}

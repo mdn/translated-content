@@ -2,7 +2,7 @@
 title: AbortSignal
 slug: Web/API/AbortSignal
 l10n:
-  sourceCommit: 9187ced76026d7784a8600296c4e04b0e6f72382
+  sourceCommit: 9bda33365e40b6c609fa5190a0af9b5dc6438cf0
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -25,11 +25,11 @@ _Hérite également des propriétés de son interface parente, {{DOMxRef("EventT
 _Hérite également des méthodes de son interface parente, {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("AbortSignal/abort_static", "AbortSignal.abort()")}}
-  - : Retourne une instance d'`AbortSignal` déjà à l'état annulé.
+  - : Retourne une instance de `AbortSignal` déjà à l'état annulé.
 - {{DOMxRef("AbortSignal/any_static", "AbortSignal.any()")}}
   - : Retourne un `AbortSignal` qui s'annule dès qu'un des signaux donnés est annulé.
 - {{DOMxRef("AbortSignal/timeout_static", "AbortSignal.timeout()")}}
-  - : Retourne une instance d'`AbortSignal` qui s'annule automatiquement après un temps défini.
+  - : Retourne une instance de `AbortSignal` qui s'annule automatiquement après un temps défini.
 
 ## Méthodes d'instance
 
@@ -63,7 +63,7 @@ Avant chaque [requête fetch](/fr/docs/Web/API/Window/fetch), on crée un nouvea
 
 Lorsque la [requête fetch](/fr/docs/Web/API/Window/fetch) est lancée, on passe le `AbortSignal` en option dans l'objet d'options de la requête (voir `{ signal }` ci-dessous). Cela associe le signal et le contrôleur à la requête fetch et permet de l'annuler en appelant {{DOMxRef("AbortController.abort()")}}, comme illustré dans le second gestionnaire d'évènement.
 
-Quand `abort()` est appelé, la promesse `fetch()` est rejetée avec un `DOMException` nommé `AbortError`.
+Quand `abort()` est appelé, la promesse `fetch()` est rompue avec un `DOMException` nommé `AbortError`.
 
 ```js
 let controller;
@@ -120,7 +120,7 @@ Si vous devez annuler l'opération après un délai, vous pouvez utiliser la mé
 Cela retourne un `AbortSignal` qui s'annule automatiquement après un certain nombre de millisecondes.
 
 L'extrait ci-dessous montre comment réussir à télécharger un fichier ou gérer une erreur de délai d'attente après 5 secondes.
-Notez qu'en cas de délai, la promesse `fetch()` est rejetée avec un `DOMException` de type `TimeoutError`.
+Notez qu'en cas de délai, la promesse `fetch()` est rompue avec un `DOMException` de type `TimeoutError`.
 Cela permet de différencier les délais (pour lesquels une notification utilisateur·ice est probablement requise) des annulations utilisateur·ice.
 
 ```js
@@ -174,14 +174,60 @@ try {
 > [!NOTE]
 > Contrairement à l'utilisation de {{DOMxRef("AbortSignal/timeout_static", "AbortSignal.timeout()")}}, il n'est pas possible de savoir si l'annulation finale a été causée par un délai d'expiration.
 
+## Supprimer l'écouteur d'évènement `abort`
+
+Signaux créés par des {{DOMxRef("AbortController")}} peuvent être collectés par le ramasse-miettes dès que le signal et son contrôleur propriétaire deviennent inaccessibles, même avec des écouteurs d'évènements `abort`, car il est garanti que l'évènement ne se déclenche pas. Cependant, les signaux dont l'annulation est gérée par autre chose qu'un contrôleur sont maintenus en vie par l'existence d'un écouteur d'évènement `abort`&nbsp;:
+
+- Un signal qui n'est pas annulé et qui est retourné par {{DOMxRef("AbortSignal/any_static", "AbortSignal.any()")}} est maintenu en vie tant qu'il a encore des signaux sources et soit des écouteurs `abort` attachés, soit des étapes d'annulation internes enregistrées par une API.
+- Un signal retourné par {{DOMxRef("AbortSignal/timeout_static", "AbortSignal.timeout()")}} est maintenu en vie tant que son délai d'attente est en cours et qu'il a des écouteurs `abort` attachés.
+
+La fonction suivante combine l'annulation à l'échelle de l'application avec un signal fourni par l'appelant pour une opération individuelle. Elle ajoute un écouteur pour enregistrer l'annulation, mais s'appuie sur `{ once: true }` pour le supprimer&nbsp;:
+
+```js example-bad
+const globalController = new AbortController();
+
+async function doOperation(url, localSignal) {
+  const signal = AbortSignal.any([globalController.signal, localSignal]);
+  signal.addEventListener("abort", () => console.log(`Annulé : ${url}`), {
+    once: true,
+  });
+
+  const response = await fetch(url, { signal });
+  return response.text();
+}
+```
+
+`{ once: true }` supprime uniquement l'écouteur lorsque l'évènement se déclenche. Si aucun des signaux d'entrée n'est annulé, l'écouteur reste même après que le corps de la réponse a été lu. Des appels répétés peuvent donc conserver les signaux combinés et leurs écouteurs tant que le signal global reste accessible et que les signaux combinés restent non annulés. Le fait de jeter le signal combiné ne supprime pas l'écouteur, et `fetch()` ne nettoie pas les écouteurs ajoutés par votre code.
+
+Au lieu de cela, supprimez l'écouteur lorsque l'opération se termine, qu'elle réussisse ou échoue. Utilisez un écouteur nommé afin de pouvoir le supprimer dans un bloc {{JSxRef("Statements/try...catch", "finally")}}&nbsp;:
+
+```js
+async function doOperation(url, localSignal) {
+  const signal = AbortSignal.any([globalController.signal, localSignal]);
+  const onAbort = () => console.log(`Aborted: ${url}`);
+  signal.addEventListener("abort", onAbort, { once: true });
+
+  try {
+    const response = await fetch(url, { signal });
+    return await response.text();
+  } finally {
+    signal.removeEventListener("abort", onAbort);
+  }
+}
+```
+
+Un `await` sur `response.text()` garantit que l'écouteur reste enregistré jusqu'à ce que le corps de la réponse ait été lu. Ce nettoyage concerne l'écouteur ajouté par l'exemple, et non la gestion interne de l'annulation par `fetch()`. Si une opération ne nécessite qu'une annulation à l'échelle de l'application, passez directement `globalController.signal` au lieu de créer un signal combiné.
+
 ### Implémenter une API annulable
 
 Une API qui doit prendre en charge l'annulation peut accepter un objet `AbortSignal` et utiliser son état pour déclencher la gestion de l'annulation lorsque nécessaire.
 
-Une API basée sur {{JSxRef("Promise")}} doit répondre au signal d'annulation en rejetant toute promesse non résolue avec la {{DOMxRef("AbortSignal.reason", "reason")}} d'annulation d'`AbortSignal`.
+Une API basée sur {{JSxRef("Promise")}} doit répondre au signal d'annulation en rompant toute promesse qui n'est pas acquittée avec la raison ({{DOMxRef("AbortSignal.reason", "reason")}}) d'annulation de `AbortSignal`.
 Par exemple, considérez la fonction `myCoolPromiseAPI` ci-dessous, qui prend un signal et retourne une promesse.
-La promesse est rejetée immédiatement si le signal est déjà annulé ou si l'évènement d'annulation est détecté.
-Sinon, elle s'exécute normalement et se résout ensuite.
+La promesse est rompue immédiatement si le signal est déjà annulé ou si l'évènement d'annulation est détecté.
+Sinon elle se complète normalement après un délais et résout la promesse.
+
+Supprimez l'écouteur `abort` lorsque l'opération s'achève normalement, afin qu'un signal de longue durée ne conserve pas l'écouteur et les valeurs auxquelles il fait référence. Là encore, `{ once: true }` ne supprime l'écouteur que si le signal provoque effectivement un abandon.
 
 ```js
 function myCoolPromiseAPI(/* …, */ { signal }) {
@@ -189,25 +235,24 @@ function myCoolPromiseAPI(/* …, */ { signal }) {
     // Si le signal est déjà annulé, lancez immédiatement une exception pour rejeter la promesse.
     signal.throwIfAborted();
 
-    // Effectue le but principal de l'API
-    // Appel resolve(result) une fois terminé.
+    // Simule l'achèvement de l'opération principale après un délai.
+    const timeoutId = setTimeout(() => {
+      signal.removeEventListener("abort", onAbort);
+      resolve("Operation completed");
+    }, 1000);
 
-    // Observe les signaux 'abort'
-    // Le passage de `once: true` garantit que la promesse peut être collectée par le ramasse-miettes après l'appel à abort
-    signal.addEventListener(
-      "abort",
-      () => {
-        // Arrête l'opération principale
-        // Rejette la promesse avec la raison de l'annulation.
-        reject(signal.reason);
-      },
-      { once: true },
-    );
+    function onAbort() {
+      // Arrête l'opération principale et rompt avec la raison de l'annulation.
+      clearTimeout(timeoutId);
+      reject(signal.reason);
+    }
+
+    signal.addEventListener("abort", onAbort, { once: true });
   });
 }
 ```
 
-L'API pourrait alors être utilisée comme suit.
+L'API peut alors être utilisée comme suit.
 Notez que {{DOMxRef("AbortController.abort()")}} est appelé pour annuler l'opération.
 
 ```js
@@ -241,4 +286,4 @@ Dans certains cas, il peut être pertinent d'absorber le signal.
 ## Voir aussi
 
 - [L'API Fetch](/fr/docs/Web/API/Fetch_API)
-- [Récupération abortable](https://developer.chrome.com/blog/abortable-fetch?hl=fr) par Jake Archibald
+- [Récupération annulable](https://developer.chrome.com/blog/abortable-fetch?hl=fr) par Jake Archibald

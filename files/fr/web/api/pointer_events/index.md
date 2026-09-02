@@ -91,23 +91,36 @@ L'interface {{DOMxRef("PointerEvent")}} étend l'interface {{DOMxRef("MouseEvent
 
 ### Types d'évènements et gestionnaires d'évènements globaux
 
-Les évènements de pointeur possèdent dix types d'évènements, dont sept ont une sémantique similaire à celle de leurs équivalents pour la souris (`down`, `up`, `move`, `over`, `out`, `enter` et `leave`).
+Les types d'évènements suivants utilisent l'interface {{domxref("PointerEvent")}}&nbsp;:
 
-Voici une brève description de chaque type d'évènement.
-
-| Évènement                                                                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{DOMxRef("Element/pointerover_event", "pointerover")}}                                   | Déclenché lorsqu'un pointeur est déplacé dans les limites du [teste de cible](#teste_de_cible) d'un élément.                                                                                                                                                                                                                                                                                                                                       |
-| {{DOMxRef("Element/pointerenter_event", "pointerenter")}}                                 | Déclenché lorsqu'un pointeur est déplacé dans les limites du [teste de cible](#teste_de_cible) d'un élément ou de l'un de ses descendants, notamment à la suite d'un évènement `pointerdown` provenant d'un appareil qui ne prend pas en charge le survol (voir `pointerdown`).                                                                                                                                                                    |
-| {{DOMxRef("Element/pointerdown_event", "pointerdown")}}                                   | Déclenché lorsqu'un pointeur passe à _l'état des boutons actifs_.                                                                                                                                                                                                                                                                                                                                                                                  |
-| {{DOMxRef("Element/pointermove_event", "pointermove")}}                                   | Déclenché lorsqu'un pointeur change de coordonnées. Cet évènement est également utilisé si le changement d'état du pointeur ne peut pas être signalé par d'autres évènements.                                                                                                                                                                                                                                                                      |
-| {{DOMxRef("Element/pointerup_event", "pointerup")}}                                       | Déclenché lorsqu'un pointeur n'est plus dans _l'état des boutons actifs_.                                                                                                                                                                                                                                                                                                                                                                          |
-| {{DOMxRef("Element/pointercancel_event", "pointercancel")}}                               | Un navigateur déclenche cet évènement s'il conclut que le pointeur ne peut plus produire d'évènements (par exemple, si l'appareil associé est désactivé ou si le navigateur décide d'interpréter l'interaction comme un panoramique/zoom). Pour savoir comment contrôler ce comportement, consultez [la section sur la propriété CSS `touch-action`](#propriété_css_touch-action) ci-dessous.                                                      |
-| {{DOMxRef("Element/pointerout_event", "pointerout")}}                                     | Déclenché pour plusieurs raisons notamment&nbsp;: le pointeur est déplacé hors des limites du [teste de cible](#teste_de_cible) d'un élément&nbsp;; l'évènement `pointerup` est déclenché pour un appareil qui ne prend pas en charge le survol (voir `pointerup`)&nbsp;; après le déclenchement de l'évènement `pointercancel` (voir `pointercancel`)&nbsp;; lorsqu'un stylo ou un stylet quitte la plage de survol détectable par le numériseur. |
-| {{DOMxRef("Element/pointerleave_event", "pointerleave")}}                                 | Déclenché lorsqu'un pointeur est déplacé hors des limites du [teste de cible](#teste_de_cible) d'un élément. Pour les appareils utilisant un stylo, cet évènement est déclenché lorsque le stylet quitte la plage de survol détectable par le numériseur.                                                                                                                                                                                          |
-| {{DOMxRef("Element/pointerrawupdate_event", "pointerrawupdate")}} {{Experimental_Inline}} | Déclenché lorsqu'un pointeur modifie des propriétés qui ne déclenchent pas les évènements `pointerdown` ou `pointerup`.                                                                                                                                                                                                                                                                                                                            |
-| {{DOMxRef("Element/gotpointercapture_event", "gotpointercapture")}}                       | Déclenché lorsqu'un élément reçoit la capture du pointeur.                                                                                                                                                                                                                                                                                                                                                                                         |
-| {{DOMxRef("Element/lostpointercapture_event", "lostpointercapture")}}                     | Déclenché après la libération de la capture du pointeur pour un pointeur.                                                                                                                                                                                                                                                                                                                                                                          |
+- {{DOMxRef("Element/pointerover_event", "pointerover")}}
+  - : Déclenché lorsqu'un pointeur est déplacé dans les limites du [teste de cible](#teste_de_cible) d'un élément.
+- {{DOMxRef("Element/pointerenter_event", "pointerenter")}}
+  - : Déclenché lorsqu'un pointeur est déplacé dans les limites du [teste de cible](#teste_de_cible) d'un élément ou de l'un de ses descendants, notamment à la suite d'un évènement `pointerdown` provenant d'un appareil qui ne prend pas en charge le survol (voir `pointerdown.
+- {{DOMxRef("Element/pointerdown_event", "pointerdown")}}
+  - : Déclenché lorsqu'un pointeur passe à _l'état des boutons actifs_.
+- {{DOMxRef("Element/pointermove_event", "pointermove")}}
+  - : Déclenché lorsqu'un pointeur change de coordonnées. Cet évènement est également utilisé si le changement d'état du pointeur ne peut pas être signalé par d'autres évènements.
+- {{DOMxRef("Element/pointerup_event", "pointerup")}}
+  - : Déclenché lorsqu'un pointeur n'est plus dans _l'état des boutons actifs_.
+- {{DOMxRef("Element/pointercancel_event", "pointercancel")}}
+  - : Un navigateur déclenche cet évènement s'il conclut que le pointeur ne peut plus produire d'évènements (par exemple, si l'appareil associé est désactivé ou si le navigateur décide d'interpréter l'interaction comme un panoramique/zoom). Pour savoir comment contrôler ce comportement, consultez [la section sur la propriété CSS `touch-action`](#propriété_css_touch-action) ci-dessous.
+- {{DOMxRef("Element/pointerout_event", "pointerout")}}
+  - : Déclenché pour plusieurs raisons notamment&nbsp;: le pointeur est déplacé hors des limites du [teste de cible](#teste_de_cible) d'un élément&nbsp;; l'évènement `pointerup` est déclenché pour un appareil qui ne prend pas en charge le survol (voir `pointerup`)&nbsp;; après le déclenchement de l'évènement `pointercancel` (voir `pointercancel`)&nbsp;; lorsqu'un stylo ou un stylet quitte la plage de survol détectable par le numériseur.
+- {{DOMxRef("Element/pointerleave_event", "pointerleave")}}
+  - : Déclenché lorsqu'un pointeur est déplacé hors des limites du [teste de cible](#teste_de_cible) d'un élément. Pour les appareils utilisant un stylo, cet évènement est déclenché lorsque le stylet quitte la plage de survol détectable par le numériseur.
+- {{DOMxRef("Element/pointerrawupdate_event", "pointerrawupdate")}} {{Experimental_Inline}}
+  - : Déclenché lorsqu'un pointeur modifie des propriétés qui ne déclenchent pas les évènements `pointerdown` ou `pointerup.
+- {{DOMxRef("Element/gotpointercapture_event", "gotpointercapture")}}
+  - : Déclenché lorsqu'un élément reçoit la capture du pointeur.
+- {{DOMxRef("Element/lostpointercapture_event", "lostpointercapture")}}
+  - : Déclenché après la libération de la capture du pointeur pour un pointeur.
+- {{DOMxRef("Element/click_event", "click")}}
+  - : Déclenché lorsqu'un élément est activé, par exemple en appuyant et en relâchant le bouton principal du pointeur ou en utilisant le clavier.
+- {{DOMxRef("Element/auxclick_event", "auxclick")}}
+  - : Déclenché lorsqu'un bouton de pointeur non principal est enfoncé et relâché sur un élément.
+- {{DOMxRef("Element/contextmenu_event", "contextmenu")}}
+  - : Déclenché lorsque l'utilisateur·ice tente d'ouvrir un menu contextuel, par exemple en cliquant avec le bouton droit de la souris ou en appuyant sur la touche du menu contextuel.
 
 ### Extensions de `Element`
 
@@ -148,6 +161,9 @@ function leaveHandler(event) {}
 function rawUpdateHandler(event) {}
 function gotCaptureHandler(event) {}
 function lostCaptureHandler(event) {}
+function clickHandler(event) {}
+function auxClickHandler(event) {}
+function contextMenuHandler(event) {}
 
 const el = document.getElementById("cible");
 // Enregistre les gestionnaires d'évènements de pointeur
@@ -162,6 +178,9 @@ el.onpointerleave = leaveHandler;
 el.onpointerrawupdate = rawUpdateHandler;
 el.ongotpointercapture = gotCaptureHandler;
 el.onlostpointercapture = lostCaptureHandler;
+el.onclick = clickHandler;
+el.onauxclick = auxClickHandler;
+el.oncontextmenu = contextMenuHandler;
 ```
 
 ### Propriétés des évènements

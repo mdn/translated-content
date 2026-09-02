@@ -3,7 +3,7 @@ title: "HTMLSlotElement : évènement slotchange"
 short-title: slotchange
 slug: Web/API/HTMLSlotElement/slotchange_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 {{APIRef("Web Components")}}

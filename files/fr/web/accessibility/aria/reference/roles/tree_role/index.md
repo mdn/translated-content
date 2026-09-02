@@ -3,7 +3,7 @@ title: "ARIA : rôle tree"
 short-title: tree
 slug: Web/Accessibility/ARIA/Reference/Roles/tree_role
 l10n:
-  sourceCommit: 30e0adab23668217555b7ed37df7e6e61b002bf3
+  sourceCommit: d1fd21c87a4917e56dab84fc0b1d321ebb22874e
 ---
 
 Un `tree` («&nbsp;arbre&nbsp;») est un composant qui permet à l'utilisateur·ice de sélectionner un ou plusieurs éléments dans une collection organisée hiérarchiquement.
