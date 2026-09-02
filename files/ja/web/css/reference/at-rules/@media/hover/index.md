@@ -1,33 +1,34 @@
 ---
-title: hover
+title: CSS `hover` メディア特性
+short-title: hover
 slug: Web/CSS/Reference/At-rules/@media/hover
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
-**`hover`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、*第一の*入力機構で要素の上でホバーする（かざす）ことができるかどうかを検査するために使用することができます。
+**`hover`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、第一の入力機構で要素にかざす（ホバー）操作ができるかどうかを検査するために使用することができます。
 
 ## 構文
 
 `hover` 特性は、以下の一覧のうち一つのキーワード値で指定します。
 
 - `none`
-  - : 第一の入力機構が全くホバーができないか、差支えなくホバーをすることができない（例えば、多くのモバイル機器は便利ではないものの、ロングタップのユーザー操作で擬似的にホバーを実現する）、または第一の入力機構がない。
+  - : 第一の入力機構が全くかざす操作ができないか、かざす操作を簡単に行うことができない（例えば、多くのモバイル機器は便利ではないものの、ロングタップのユーザー操作で擬似的にホバーを実現する）、または第一の入力機構がない。
 - `hover`
-  - : 第一の入力機構が、要素の上で差支えなくホバーすることができる。
+  - : 第一の入力機構が、要素の上でかざす操作を簡単に行うことができる。
 
 ## 例
 
 ### HTML
 
 ```html
-<a href="#">Try hovering over me!</a>
+<a href="#">この上でかざしてみてください！</a>
 ```
 
 ### CSS
 
 ```css
-/* 既定のホバー効果 */
+/* デフォルトのホバー効果 */
 a:hover {
   color: black;
   background: yellow;

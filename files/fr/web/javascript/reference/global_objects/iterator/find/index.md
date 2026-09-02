@@ -77,7 +77,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 
 - [Prothèse d'émulation de `Iterator.prototype.find` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
 - [Prothèse d'émulation es-shims de `Iterator.prototype.find` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.every()")}}
 - La méthode {{JSxRef("Iterator.prototype.some()")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}

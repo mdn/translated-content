@@ -16,13 +16,13 @@ function precise(x) {
 }
 
 console.log(precise(123.456));
-// Sortie attendue : "123.5"
+// Résultat attendu : "123.5"
 
 console.log(precise(0.004));
-// Sortie attendue : "0.004000"
+// Résultat attendu : "0.004000"
 
 console.log(precise(1.23e5));
-// Sortie attendue : "1.230e+5"
+// Résultat attendu : "1.230e+5"
 ```
 
 ## Syntaxe

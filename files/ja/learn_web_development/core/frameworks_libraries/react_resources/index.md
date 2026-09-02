@@ -2,10 +2,8 @@
 title: React のリソース
 slug: Learn_web_development/Core/Frameworks_libraries/React_resources
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 7f138099644a02640a903b2abc39e685ca8ca7cd
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_accessibility","Learn_web_development/Core/Accessibility", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -96,5 +94,11 @@ React はコンポーネントツリーの下にプロップを渡さずに、�
 
 > [!NOTE]
 > クライアントサイドのルーティングでは、フォーカス管理が不可欠です。これがないと、キーボードユーザーはフォーカスの問題に陥り、スクリーンリーダーを使用するユーザーは新しいページに移動したことに気づかない可能性があります。これについて詳しくは、 Marcy Sutton の記事 ["The Implications of Client-Side Routing"](https://testingaccessibility.com/implications-of-client-side-routing) を参照してください。
+
+## まとめ
+
+JavaScript フレームワークについての解説は以上です。このモジュールを通じて、フレームワークが存在する理由やその使用方法について、よい考えをしっかりと理解していただけたことを期待しています。
+
+次のモジュールでは、[ウェブアクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility)に焦点を当てます。
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_accessibility","Learn_web_development/Core/Accessibility", "Learn_web_development/Core/Frameworks_libraries")}}

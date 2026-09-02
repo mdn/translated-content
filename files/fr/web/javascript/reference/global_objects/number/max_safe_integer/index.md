@@ -17,13 +17,13 @@ const x = Number.MAX_SAFE_INTEGER + 1;
 const y = Number.MAX_SAFE_INTEGER + 2;
 
 console.log(Number.MAX_SAFE_INTEGER);
-// Sortie attendue : 9007199254740991
+// Résultat attendu : 9007199254740991
 
 console.log(x);
-// Sortie attendue : 9007199254740992
+// Résultat attendu : 9007199254740992
 
 console.log(x === y);
-// Sortie attendue : true
+// Résultat attendu : true
 ```
 
 ## Valeur
@@ -71,4 +71,4 @@ Number.MAX_SAFE_INTEGER * Number.EPSILON; // 1.9999999999999998
 - La propriété statique {{JSxRef("Number.MIN_SAFE_INTEGER")}}
 - La propriété statique {{JSxRef("Number.MAX_VALUE")}}
 - La méthode statique {{JSxRef("Number.isSafeInteger()")}}
-- L'objet {{JSxRef("BigInt")}}
+- L'objet natif {{JSxRef("BigInt")}}

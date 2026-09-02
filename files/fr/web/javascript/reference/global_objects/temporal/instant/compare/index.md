@@ -65,5 +65,5 @@ console.log(instants.map((instant) => instant.toString()));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}
 - La méthode {{JSxRef("Temporal/Instant/equals", "Temporal.Instant.prototype.equals()")}}

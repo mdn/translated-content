@@ -3,12 +3,12 @@ title: "Animation: cancel() メソッド"
 short-title: cancel()
 slug: Web/API/Animation/cancel
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: ee20ce74eefdb7612f16c575667ad6a3b17b7d9e
 ---
 
 {{ APIRef("Web Animations") }}
 
-ウェブアニメーション API の **`cancel()`** は {{domxref("Animation")}} インターフェイスのメソッドで、このアニメーションによって引き起こされたすべての {{domxref("KeyframeEffect")}}を初期化し、再生を中止します。
+[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) の **`cancel()`** は {{domxref("Animation")}} インターフェイスのメソッドで、このアニメーションによって引き起こされたすべての {{domxref("KeyframeEffect")}}を初期化し、再生を中止します。
 
 > [!NOTE]
 > アニメ―ションをキャンセルした時、{{domxref("Animation.startTime", "startTime")}} と {{domxref("Animation.currentTime", "currentTime")}} は、 `null` に設定されます。

@@ -18,16 +18,16 @@ La méthode statique **`Math.tanh()`** retourne la tangente hyperbolique d'un no
 
 ```js interactive-example
 console.log(Math.tanh(-1));
-// Sortie attendue : -0.7615941559557649
+// Résultat attendu : -0.7615941559557649
 
 console.log(Math.tanh(0));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(Math.tanh(Infinity));
-// Sortie attendue : 1
+// Résultat attendu : 1
 
 console.log(Math.tanh(1));
-// Sortie attendue : 0.7615941559557649
+// Résultat attendu : 0.7615941559557649
 ```
 
 ## Syntaxe

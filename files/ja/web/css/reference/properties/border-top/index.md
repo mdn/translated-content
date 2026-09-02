@@ -1,11 +1,12 @@
 ---
-title: border-top
+title: CSS `border-top` プロパティ
+short-title: border-top
 slug: Web/CSS/Reference/Properties/border-top
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-**`border-top`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の上側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
+**`border-top`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、要素の上側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
 
 {{InteractiveExample("CSS デモ: border-top")}}
 
@@ -47,29 +48,13 @@ border-top: 4mm ridge rgb(211 220 50 / 0.6);
 }
 ```
 
-他の一括指定プロパティと同様に、 `border-top` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
-
-```css
-border-top-style: dotted;
-border-top: thick green;
-```
-
-これは、実際には以下と同じです。
-
-```css
-border-top-style: dotted;
-border-top: none thick green;
-```
-
-`border-top` の前で設定された {{cssxref("border-top-style")}} の値は無視されます。 {{cssxref("border-top-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
-
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-top-color`](/ja/docs/Web/CSS/Reference/Properties/border-top-color)
-- [`border-top-style`](/ja/docs/Web/CSS/Reference/Properties/border-top-style)
-- [`border-top-width`](/ja/docs/Web/CSS/Reference/Properties/border-top-width)
+- {{cssxref("border-top-color")}}
+- {{cssxref("border-top-style")}}
+- {{cssxref("border-top-width")}}
 
 ## 構文
 
@@ -96,6 +81,24 @@ border-top: unset;
   - : {{cssxref("border-top-style")}} を参照してください。
 - {{cssxref("&lt;color&gt;")}}
   - : {{cssxref("border-top-color")}} を参照してください。
+
+## 解説
+
+他の一括指定プロパティと同様に、 `border-top` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティはデフォルト値が設定されます。次のコードを考えてください。
+
+```css
+border-top-style: dotted;
+border-top: thick green;
+```
+
+これは、実際には以下と同じです。
+
+```css
+border-top-style: dotted;
+border-top: none thick green;
+```
+
+`border-top` の前で設定された {{cssxref("border-top-style")}} の値は無視されます。 {{cssxref("border-top-style")}} のデフォルト値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
 
 ## 公式定義
 

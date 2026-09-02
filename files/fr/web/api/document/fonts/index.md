@@ -3,7 +3,7 @@ title: "Document : propriété fonts"
 short-title: fonts
 slug: Web/API/Document/fonts
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: e1e7e2ac2cb1e40293c32c24bc0667905e9a7a04
 ---
 
 {{APIRef("DOM")}}
@@ -34,7 +34,7 @@ document.fonts.ready.then((fontFaceSet) => {
 });
 ```
 
-La promesse se résout lorsque les opérations de chargement et de mise en page de toutes les polices utilisées sont terminées. L'ensemble des polices utilisées peut être différent de l'ensemble des polices _déclarées_, par exemple, si des polices optionnelles (c'est-à-dire des polices déclarées via `font-display: optional`) n'ont pas pu être chargées à temps.
+La promesse se résout lorsque les opérations de chargement et de mise en page de toutes les polices utilisées sont terminées. L'ensemble des polices utilisées peut être différent de l'ensemble des polices _déclarées_, par exemple, si des polices optionnelles (c'est-à-dire des polices déclarées avec `font-display: optional`) n'ont pas pu être chargées à temps.
 
 ## Spécifications
 

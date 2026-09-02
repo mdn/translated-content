@@ -100,8 +100,8 @@ Pour plus d'exemples sur l'utilisation de `since()`, en particulier avec l'arron
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/add", "Temporal.ZonedDateTime.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/subtract", "Temporal.ZonedDateTime.prototype.subtract()")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/until", "Temporal.ZonedDateTime.prototype.until()")}}

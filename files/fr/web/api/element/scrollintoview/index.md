@@ -3,7 +3,7 @@ title: "Element : méthode scrollIntoView()"
 short-title: scrollIntoView()
 slug: Web/API/Element/scrollIntoView
 l10n:
-  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
+  sourceCommit: 59c6bfba7a60d20b06a7e9c3dc55eb8c8a020afe
 ---
 
 {{APIRef("DOM")}}
@@ -40,7 +40,7 @@ scrollIntoView(options)
         - `start`&nbsp;: Aligne le bord supérieur de l'élément avec le haut du conteneur défilable, faisant apparaître l'élément au début de la zone visible verticalement.
         - `center`&nbsp;: Aligne l'élément verticalement au centre du conteneur défilable, le positionnant au milieu de la zone visible.
         - `end`&nbsp;: Aligne le bord inférieur de l'élément avec le bas du conteneur défilable, plaçant l'élément à la fin de la zone visible verticalement.
-        - `nearest`&nbsp;: Fait défiler l'élément jusqu'au bord le plus proche dans la direction verticale. Si l'élément est plus proche du bord supérieur du conteneur défilable, il s'aligne en haut&nbsp;; s'il est plus proche du bord inférieur, il s'aligne en bas. Cela minimise la distance de défilement.
+        - `nearest`&nbsp;: Fait défiler le moins possible pour amener l'élément dans la zone visible. Si l'élément est plus proche du bord supérieur du conteneur défilable, il s'aligne en haut&nbsp;; s'il est plus proche du bord inférieur, il s'aligne en bas. Si l'élément est déjà visible, aucun défilement n'est effectué.
 
         La valeur par défaut est `start`.
 
@@ -56,7 +56,7 @@ scrollIntoView(options)
         - `start`&nbsp;: Aligne le bord gauche de l'élément avec le bord gauche du conteneur défilable, faisant apparaître l'élément au début de la zone visible horizontalement.
         - `center`&nbsp;: Aligne l'élément horizontalement au centre du conteneur défilable, le positionnant au milieu de la zone visible.
         - `end`&nbsp;: Aligne le bord droit de l'élément avec le bord droit du conteneur défilable, plaçant l'élément à la fin de la zone visible horizontalement.
-        - `nearest`&nbsp;: Fait défiler l'élément jusqu'au bord le plus proche dans la direction horizontale. Si l'élément est plus proche du bord gauche du conteneur défilable, il s'aligne à gauche&nbsp;; s'il est plus proche du bord droit, il s'aligne à droite. Cela minimise la distance de défilement.
+        - `nearest`&nbsp;: Fait défiler le moins possible pour amener l'élément dans la zone visible. Si l'élément est plus proche du bord gauche du conteneur défilable, il s'aligne à gauche&nbsp;; s'il est plus proche du bord droit, il s'aligne à droite. Si l'élément est déjà visible, aucun défilement n'est effectué.
 
         La valeur par défaut est `nearest`.
 

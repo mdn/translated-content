@@ -3,7 +3,7 @@ title: "Element : évènement auxclick"
 short-title: auxclick
 slug: Web/API/Element/auxclick_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: 620c181285150bdb00b1abc2974251d18560efd1
 ---
 
 {{APIRef("UI Events")}}
@@ -35,7 +35,7 @@ Un objet {{DOMxRef("PointerEvent")}}. Hérite de {{DOMxRef("MouseEvent")}}.
 
 Pour la grande majorité des navigateurs qui associent le clic central à l'ouverture d'un lien dans un nouvel onglet, y compris Firefox, il est possible d'annuler ce comportement en appelant {{DOMxRef("Event.preventDefault()", "preventDefault()")}} depuis un gestionnaire d'évènement `auxclick`.
 
-Lorsque vous écoutez les évènements `auxclick` provenant d'éléments qui ne prennent pas en charge la saisie ou la navigation, vous souhaitez souvent empêcher explicitement d'autres actions par défaut associées à l'action d'enfoncement du bouton central de la souris. Sous Windows, il s'agit généralement du défilement automatique, tandis que sous macOS et Linux, il s'agit généralement du collage depuis le presse-papiers. Pour ce faire, il suffit d'empêcher le comportement par défaut de l'évènement {{DOMxRef("Element/mousedown_event", "mousedown")}} ou {{DOMxRef("Element/pointerdown_event", "pointerdown")}}.
+Lorsque vous écoutez les évènements `auxclick` provenant d'éléments qui ne prennent pas en charge la saisie ou la navigation, vous souhaitez souvent empêcher explicitement d'autres actions par défaut associées à l'action d'enfoncement du bouton central de la souris. Sous Windows, il s'agit généralement du défilement automatique, et sur Linux il s'agit généralement du collage depuis le presse-papiers. Pour ce faire, il suffit d'empêcher le comportement par défaut de l'évènement {{DOMxRef("Element/mousedown_event", "mousedown")}} ou {{DOMxRef("Element/pointerdown_event", "pointerdown")}}.
 
 De plus, vous devez peut-être éviter l'ouverture d'un menu contextuel système après un clic droit. En raison des différences de synchronisation entre les systèmes d'exploitation, il s'agit là aussi d'un comportement par défaut de `auxclick` qui ne peut être désactivé. À la place, cela peut être réalisé en désactivant le comportement par défaut de l'évènement {{DOMxRef("Element/contextmenu_event", "contextmenu")}}.
 

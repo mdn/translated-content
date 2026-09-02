@@ -20,10 +20,10 @@ function roughScale(x, base) {
 }
 
 console.log(roughScale(" 0xF", 16));
-// Sortie attendue : 1500
+// Résultat attendu : 1500
 
 console.log(roughScale("321", 2));
-// Sortie attendue : 0
+// Résultat attendu : 0
 ```
 
 ## Syntaxe
@@ -72,5 +72,5 @@ Son objectif est la modularisation des objets natifs. Voir {{JSxRef("parseInt()"
 
 - [La prothèse d'émulation de `Number.parseInt` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
 - [La prothèse d'émulation es-shims de `Number.parseInt` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.parseInt)
-- L'objet {{JSxRef("Number")}}
+- L'objet natif {{JSxRef("Number")}}
 - La fonction native {{JSxRef("parseInt()")}}

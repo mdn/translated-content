@@ -17,13 +17,13 @@ const x = Number.MIN_SAFE_INTEGER - 1;
 const y = Number.MIN_SAFE_INTEGER - 2;
 
 console.log(Number.MIN_SAFE_INTEGER);
-// Sortie attendue : -9007199254740991
+// Résultat attendu : -9007199254740991
 
 console.log(x);
-// Sortie attendue : -9007199254740992
+// Résultat attendu : -9007199254740992
 
 console.log(x === y);
-// Sortie attendue : true
+// Résultat attendu : true
 ```
 
 ## Valeur
@@ -63,4 +63,4 @@ Number.MIN_SAFE_INTEGER; // -9007199254740991
 - [La prothèse d'émulation es-shims de `Number.MIN_SAFE_INTEGER` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-constants)
 - La propriété statique {{JSxRef("Number.MAX_SAFE_INTEGER")}}
 - La méthode statique {{JSxRef("Number.isSafeInteger()")}}
-- L'objet {{JSxRef("BigInt")}}
+- L'objet natif {{JSxRef("BigInt")}}

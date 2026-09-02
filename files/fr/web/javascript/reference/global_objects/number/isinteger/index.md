@@ -19,10 +19,10 @@ function fits(x, y) {
 }
 
 console.log(fits(5, 10));
-// Sortie attendue : "Ça rentre !"
+// Résultat attendu : "Ça rentre !"
 
 console.log(fits(5, 11));
-// Sortie attendue : "Ça NE rentre PAS !"
+// Résultat attendu : "Ça NE rentre PAS !"
 ```
 
 ## Syntaxe
@@ -87,4 +87,4 @@ Number.isInteger(4500000000000000.1); // true, à cause d'une perte de précisio
 
 - [La prothèse d'émulation de `Number.isInteger` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
 - [La prothèse d'émulation es-shims de `Number.isInteger` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isinteger)
-- L'objet {{JSxRef("Number")}}
+- L'objet natif {{JSxRef("Number")}}

@@ -14,10 +14,10 @@ La propriété statique **`Number.EPSILON`** représente la différence entre 1 
 const result = Math.abs(0.2 - 0.3 + 0.1);
 
 console.log(result);
-// Sortie attendue : 2.7755575615628914e-17
+// Résultat attendu : 2.7755575615628914e-17
 
 console.log(result < Number.EPSILON);
-// Sortie attendue : true
+// Résultat attendu : true
 ```
 
 ## Valeur
@@ -102,4 +102,4 @@ En plus de la magnitude, il est important de considérer la _précision_ de vos 
 
 - [La prothèse d'émulation de `Number.EPSILON` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
 - [La prothèse d'émulation es-shims de `Number.EPSILON` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-constants)
-- L'objet {{JSxRef("Number")}}
+- L'objet natif {{JSxRef("Number")}}

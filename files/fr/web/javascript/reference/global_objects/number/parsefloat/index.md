@@ -19,10 +19,10 @@ function circumference(r) {
 }
 
 console.log(circumference("4.567abcdefgh"));
-// Sortie attendue : 28.695307297889173
+// Résultat attendu : 28.695307297889173
 
 console.log(circumference("abcdefgh"));
-// Sortie attendue : 0
+// Résultat attendu : 0
 ```
 
 ## Syntaxe
@@ -68,5 +68,5 @@ Voir {{JSxRef("parseFloat()")}} pour plus de détails et d'exemples.
 
 - [La prothèse d'émulation de `Number.parseFloat` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
 - [La prothèse d'émulation es-shims de `Number.parseFloat` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.parsefloat)
-- L'objet {{JSxRef("Number")}}
+- L'objet natif {{JSxRef("Number")}}
 - La fonction native {{JSxRef("parseFloat()")}}

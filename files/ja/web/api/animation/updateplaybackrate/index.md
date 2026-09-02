@@ -3,7 +3,7 @@ title: "Animation: updatePlaybackRate() メソッド"
 short-title: updatePlaybackRate()
 slug: Web/API/Animation/updatePlaybackRate
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
 {{APIRef("Web Animations")}}
@@ -12,7 +12,8 @@ l10n:
 
 場合によっては、アニメーションが別個のスレッドやプロセスで実行され、長時間実行される JavaScript がメインスレッドを遅延させている間も更新を続けることがあります。このような場合、アニメーションに {{domxref("Animation.playbackRate", "playbackRate")}} を直接設定すると、メインスレッドでの再生位置が現在動作している再生位置からずれることがあるため、アニメーションの再生位置がジャンプすることが発生する可能性があります。
 
-`updatePlaybackRate()` は非同期メソッドで、アニメーションの現在の再生位置と同期した後に速度を設定します。 `updatePlaybackRate()` を呼び出した後、アニメーションの {{domxref("Animation.playbackRate", "playbackRate")}} はすぐには更新されません。アニメーションの {{domxref("Animation.ready", "ready")}} プロミスが解決された時点で更新されます。
+`updatePlaybackRate()` は非同期メソッドで、アニメーションの現在の再生位置と同期した後に速度を設定します。 `updatePlaybackRate()` を呼び出した後、アニメーションの {{domxref("Animation.playbackRate", "playbackRate")}} はすぐには更新されません。
+アニメーションの {{domxref("Animation.ready", "ready")}} プロミスが解決された時点で更新されます。
 
 ## 構文
 
@@ -37,7 +38,7 @@ updatePlaybackRate(playbackRate)
 speedSelector.addEventListener("input", (evt) => {
   cartoon.updatePlaybackRate(parseFloat(evt.target.value));
   cartoon.ready.then(() => {
-    console.log(`Playback rate set to ${cartoon.playbackRate}`);
+    console.log(`再生レートは ${cartoon.playbackRate} に設定されました`);
   });
 });
 ```

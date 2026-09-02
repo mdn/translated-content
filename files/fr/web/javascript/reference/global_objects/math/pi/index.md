@@ -16,10 +16,10 @@ function calculateCircumference(radius) {
 }
 
 console.log(Math.PI);
-// Sortie attendue : 3.141592653589793
+// Résultat attendu : 3.141592653589793
 
 console.log(calculateCircumference(10));
-// Sortie attendue : 62.83185307179586
+// Résultat attendu : 62.83185307179586
 ```
 
 ## Valeur
@@ -60,4 +60,4 @@ calculPérimètre(1); // 6.283185307179586
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Math")}}
+- L'objet natif {{JSxRef("Math")}}

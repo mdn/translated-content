@@ -16,7 +16,7 @@ function getRoot2() {
 }
 
 console.log(getRoot2());
-// Sortie attendue : 1.4142135623730951
+// Résultat attendu : 1.4142135623730951
 ```
 
 ## Valeur

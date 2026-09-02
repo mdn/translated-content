@@ -64,6 +64,6 @@ console.log(jaJP.getHourCycles()); // ["h23"]
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - La propriété {{JSxRef("Intl.Locale.prototype.hourCycle")}}
 - [Unicode pour la clé d'extension HourCycle <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier) dans la spécification Unicode locale data markup language

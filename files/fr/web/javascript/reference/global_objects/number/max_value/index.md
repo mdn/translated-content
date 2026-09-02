@@ -19,10 +19,10 @@ function multiply(x, y) {
 }
 
 console.log(multiply(1.7976931348623157e308, 1));
-// Sortie attendue : 1.7976931348623157e+308
+// Résultat attendu : 1.7976931348623157e+308
 
 console.log(multiply(1.7976931348623157e308, 2));
-// Sortie attendue : "Représenté comme Infinity"
+// Résultat attendu : "Représenté comme Infinity"
 ```
 
 ## Valeur
@@ -63,4 +63,4 @@ if (num1 * num2 <= Number.MAX_VALUE) {
 
 - La propriété statique {{JSxRef("Number.MIN_VALUE")}}
 - La propriété statique {{JSxRef("Number.MAX_SAFE_INTEGER")}}
-- L'objet {{JSxRef("Number")}}
+- L'objet natif {{JSxRef("Number")}}

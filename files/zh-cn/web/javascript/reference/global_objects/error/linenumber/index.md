@@ -1,44 +1,54 @@
 ---
-title: Error.prototype.lineNumber
+title: "Error: lineNumber"
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{non-standard_header}}
+{{Non-standard_Header}}
 
-**`lineNumber`** 属性的值为抛出错误的代码在其源文件中所在的行号。
+{{jsxref("Error")}} 实例的 **`lineNumber`** 数据属性包含引发此错误的文件中的行号。
+
+## 值
+
+正整数。
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## 示例
 
-### 使用 `lineNumber`
+### 使用 lineNumber
 
 ```js
-var e = new Error("Could not parse input");
-throw e;
-console.log(e.lineNumber); // 2
+try {
+  throw new Error("无法解析输入");
+} catch (err) {
+  console.log(err.lineNumber); // 2
+}
 ```
 
-### 监听 `error` 事件的示例
+### 使用 error 事件的替代示例
 
 ```js
-window.addEventListener("error", function (e) {
+window.addEventListener("error", (e) => {
   console.log(e.lineNumber); // 5
 });
-var e = new Error("Could not parse input");
+const e = new Error("无法解析输入");
 throw e;
 ```
 
-这不是一个标准化的属性，缺乏广泛的支持。参见下面的浏览器兼容性表格。
+这不是标准特性，且缺乏广泛支持。参见下方的浏览器兼容性表。
 
 ## 规范
 
-非标准化属性。不属于任何规范。
+不属于任何规范。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+- {{jsxref("Error.prototype.stack")}}
+- {{jsxref("Error.prototype.columnNumber")}}
+- {{jsxref("Error.prototype.fileName")}}

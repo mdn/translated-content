@@ -16,16 +16,16 @@ La méthode statique **`Math.cbrt()`** retourne la racine cubique d'un nombre. C
 
 ```js interactive-example
 console.log(Math.cbrt(-1));
-// Sortie attendue : -1
+// Résultat attendu : -1
 
 console.log(Math.cbrt(1));
-// Sortie attendue : 1
+// Résultat attendu : 1
 
 console.log(Math.cbrt(Infinity));
-// Sortie attendue : Infinity
+// Résultat attendu : Infinity
 
 console.log(Math.cbrt(64));
-// Sortie attendue : 4
+// Résultat attendu : 4
 ```
 
 ## Syntaxe

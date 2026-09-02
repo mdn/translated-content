@@ -86,5 +86,5 @@ console.log(generator.next().value); // 2
 
 - La déclaration {{JSxRef("Statements/function*", "function*")}}
 - [L'expression `function*`](/fr/docs/Web/JavaScript/Reference/Operators/function*)
-- L'objet {{JSxRef("GeneratorFunction")}}
+- L'objet natif {{JSxRef("GeneratorFunction")}}
 - [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)

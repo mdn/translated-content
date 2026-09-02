@@ -60,5 +60,5 @@ console.log(times);
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}
 - La méthode {{JSxRef("Temporal/PlainTime/equals", "Temporal.PlainTime.prototype.equals()")}}

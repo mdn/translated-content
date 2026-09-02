@@ -3,7 +3,7 @@ title: "Element : évènement cut"
 short-title: cut
 slug: Web/API/Element/cut_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: 77ea71add6054857698eb7ac1bfec8c7afe9ad4f
 ---
 
 {{APIRef("Clipboard API")}}

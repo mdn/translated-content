@@ -12,16 +12,16 @@ La méthode statique **`Math.sign()`** retourne 1 ou -1, indiquant le signe du n
 
 ```js interactive-example
 console.log(Math.sign(3));
-// Sortie attendue : 1
+// Résultat attendu : 1
 
 console.log(Math.sign(-3));
-// Sortie attendue : -1
+// Résultat attendu : -1
 
 console.log(Math.sign(0));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(Math.sign("-3"));
-// Sortie attendue : -1
+// Résultat attendu : -1
 ```
 
 ## Syntaxe

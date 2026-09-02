@@ -16,13 +16,13 @@ function expo(x, f) {
 }
 
 console.log(expo(123456, 2));
-// Sortie attendue : "1.23e+5"
+// Résultat attendu : "1.23e+5"
 
 console.log(expo("123456"));
-// Sortie attendue : "1.23456e+5"
+// Résultat attendu : "1.23456e+5"
 
 console.log(expo("oink"));
-// Sortie attendue : "NaN"
+// Résultat attendu : "NaN"
 ```
 
 ## Syntaxe

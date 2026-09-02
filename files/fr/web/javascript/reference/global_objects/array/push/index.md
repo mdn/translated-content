@@ -139,7 +139,7 @@ Notez que même si `obj` n'est pas un tableau, la méthode `push` a bien incrém
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.pop()")}}
 - La méthode {{JSxRef("Array.prototype.shift()")}}
 - La méthode {{JSxRef("Array.prototype.unshift()")}}

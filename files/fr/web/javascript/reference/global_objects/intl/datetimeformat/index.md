@@ -204,7 +204,7 @@ console.log(usedOptions.timeZone);
 ## Voir aussi
 
 - [Prothèse d'émulation pour `Intl.DateTimeFormat` avec la bibliothèque FormatJS <sup>(angl.)</sup>](https://formatjs.github.io/docs/polyfills/intl-datetimeformat/)
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}
 - La méthode {{JSxRef("Date.prototype.toLocaleString()")}}
 - La méthode {{JSxRef("Date.prototype.toLocaleDateString()")}}
 - La méthode {{JSxRef("Date.prototype.toLocaleTimeString()")}}

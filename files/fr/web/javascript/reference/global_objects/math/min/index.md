@@ -12,15 +12,15 @@ La méthode statique **`Math.min()`** retourne le plus petit des nombres passés
 
 ```js interactive-example
 console.log(Math.min(2, 3, 1));
-// Sortie attendue : 1
+// Résultat attendu : 1
 
 console.log(Math.min(-2, -3, -1));
-// Sortie attendue : -3
+// Résultat attendu : -3
 
 const array = [2, 3, 1];
 
 console.log(Math.min(...array));
-// Sortie attendue : 1
+// Résultat attendu : 1
 ```
 
 ## Syntaxe

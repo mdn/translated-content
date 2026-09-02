@@ -16,7 +16,7 @@ Voici tous les itérateurs JavaScript intégrés&nbsp;:
 - _L'itérateur de Map_ retourné par {{JSxRef("Map.prototype.values()")}}, {{JSxRef("Map.prototype.keys()")}}, {{JSxRef("Map.prototype.entries()")}} et [`Map.prototype[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator).
 - _L'itérateur de Set_ retourné par {{JSxRef("Set.prototype.values()")}}, {{JSxRef("Set.prototype.keys()")}}, {{JSxRef("Set.prototype.entries()")}} et [`Set.prototype[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator).
 - _L'itérateur de chaîne de caractères RegExp_ retourné par [`RegExp.prototype[Symbol.matchAll]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) et {{JSxRef("String.prototype.matchAll()")}}.
-- L'objet {{JSxRef("Generator")}} retourné par les [fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/function*).
+- L'objet natif {{JSxRef("Generator")}} retourné par les [fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/function*).
 - _L'itérateur de segments_ retourné par la méthode [`[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator) de l'objet [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) retourné par [`Intl.Segmenter.prototype.segment()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment).
 - _L'itérateur d'aide_ retourné par les méthodes d'aide d'itérateur telles que {{JSxRef("Iterator.prototype.filter()")}} et {{JSxRef("Iterator.prototype.map()")}}.
 

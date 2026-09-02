@@ -285,10 +285,10 @@ Vous pouvez aussi utiliser {{JSxRef("Array.from()")}} pour transformer `elems` e
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.forEach()")}}
 - La méthode {{JSxRef("Array.from()")}}
 - La méthode {{JSxRef("TypedArray.prototype.map()")}}
-- L'objet global {{JSxRef("Map")}}
+- L'objet natif {{JSxRef("Map")}}
 - [Prothèse d'émulation de `Array.prototype.map` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
 - [Prothèse d'émulation es-shims de `Array.prototype.map` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.map)

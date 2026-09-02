@@ -2,35 +2,35 @@
 title: API File System
 slug: Web/API/File_System_API
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
-{{securecontext_header}} {{DefaultAPISidebar("File System API")}} {{AvailableInWorkers}}
+{{DefaultAPISidebar("File System API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-L'**API du système de fichiers** — avec des extensions fournies via l'[**API d'accès au système de fichiers**](https://wicg.github.io/file-system-access/) pour accéder aux fichiers sur le système de fichiers d'un périphérique — permet de lire, d'écrire et de gérer des fichiers.
+L'API **du système de fichiers** — avec des extensions fournies avec [**l'API d'accès au système de fichiers** <sup>(angl.)</sup>](https://wicg.github.io/file-system-access/) pour accéder aux fichiers sur le système de fichiers d'un périphérique — permet de lire, d'écrire et de gérer des fichiers.
 
-Voir [la relation avec d'autres API liées aux fichiers](/fr/docs/Web/API/File_API#relation_avec_d_autres_api_liées_aux_fichiers) pour une comparaison entre cette API, l'[API des entrées de fichiers et de répertoires](/fr/docs/Web/API/File_and_Directory_Entries_API) et l'[API de fichier](/fr/docs/Web/API/File_API).
+Voir [la relation avec d'autres API liées aux fichiers](/fr/docs/Web/API/File_API#relation_avec_d_autres_api_liées_aux_fichiers) pour une comparaison entre cette API, [l'API des entrées de fichiers et de répertoires](/fr/docs/Web/API/File_and_Directory_Entries_API) et [l'API de fichier](/fr/docs/Web/API/File_API).
 
 ## Concepts et utilisation
 
 Cette API permet d'interagir avec les fichiers présents sur le périphérique local d'un·e utilisateur·ice ou sur un système de fichiers réseau accessible à ces derniers. Les fonctionnalités de base incluent la lecture, l'écriture ou la sauvegarde de fichiers, ainsi que l'accès à la structure des répertoires.
 
-La plupart des interactions avec les fichiers et les répertoires se font via des «&nbsp;<i lang="en">handles</i>&nbsp;». La classe parente {{domxref('FileSystemHandle')}} permet de définir deux classes enfants&nbsp;: {{domxref('FileSystemFileHandle')}} et {{domxref('FileSystemDirectoryHandle')}}, pour les fichiers et les répertoires respectivement.
+La plupart des interactions avec les fichiers et les répertoires se font par des gestionnaires. La classe parente {{DOMxRef("FileSystemHandle")}} permet de définir deux classes enfants&nbsp;: {{DOMxRef("FileSystemFileHandle")}} et {{DOMxRef("FileSystemDirectoryHandle")}}, pour les fichiers et les répertoires respectivement.
 
-Les <i lang="en">handles</i> représentent un fichier ou un répertoire sur le système de l'utilisateur·ice. Vous pouvez y accéder en affichant un sélecteur de fichier ou de répertoire à l'aide de méthodes telles que {{domxref('window.showOpenFilePicker()')}} et {{domxref('window.showDirectoryPicker()')}}. Une fois ces méthodes appelées, le sélecteur s'affiche et l'utilisateur·ice choisit un fichier ou un répertoire. Si la sélection est réussie, un <i lang="en">handle</i> est retourné.
+Les <i lang="en">handles</i> représentent un fichier ou un répertoire sur le système de l'utilisateur·ice. Vous pouvez y accéder en affichant un sélecteur de fichier ou de répertoire à l'aide de méthodes telles que {{DOMxRef("window.showOpenFilePicker()")}} et {{DOMxRef("window.showDirectoryPicker()")}}. Une fois ces méthodes appelées, le sélecteur s'affiche et l'utilisateur·ice choisit un fichier ou un répertoire. Si la sélection est réussie, un <i lang="en">handle</i> est retourné.
 
-Vous pouvez également accéder aux <i lang="en">handles</i> de fichiers via&nbsp;:
+Vous pouvez également accéder aux <i lang="en">handles</i> de fichiers avec&nbsp;:
 
-- La méthode {{domxref('DataTransferItem.getAsFileSystemHandle()')}} de l'{{domxref('HTML Drag and Drop API', '', '', 'nocode')}}.
-- L'[API de gestion de fichiers <sup>(angl.)</sup>](https://developer.chrome.com/docs/capabilities/web-apis/file-handling).
+- La méthode {{DOMxRef("DataTransferItem.getAsFileSystemHandle()")}} de {{DOMxRef("HTML Drag and Drop API", "L'API Glisser-Déposer HTML", "", "nocode")}}.
+- [L'API de gestion de fichiers <sup>(angl.)</sup>](https://developer.chrome.com/docs/capabilities/web-apis/file-handling).
 
-Chaque <i lang="en">handle</i> offre ses propres fonctionnalités et il existe quelques différences selon celui que vous utilisez (voir la section [Interfaces](#interfaces) pour plus de détails). Vous pouvez ensuite accéder aux données des fichiers ou aux informations (y compris les enfants) du répertoire sélectionné. Cette API apporte des fonctionnalités qui faisaient défaut au Web. Cependant, la sécurité a été la principale préoccupation lors de la conception de l'API, et l'accès aux fichiers ou répertoires est interdit sauf si l'utilisateur·ice l'autorise explicitement (ce qui n'est pas le cas avec le [système de fichiers d'origine privé](#système_de_fichiers_d_origine_privé), qui n'est pas visible pour l'utilisateur·ice).
+Chaque <i lang="en">handle</i> offre ses propres fonctionnalités et il existe quelques différences selon celui que vous utilisez (voir la section [Interfaces](#interfaces) pour plus de détails). Vous pouvez ensuite accéder aux données des fichiers ou aux informations (y compris les enfants) du répertoire sélectionné. Cette API apporte des fonctionnalités qui font défaut au Web. Cependant, la sécurité a été la principale préoccupation lors de la conception de l'API, et l'accès aux fichiers ou répertoires est interdit sauf si l'utilisateur·ice l'autorise explicitement (ce qui n'est pas le cas avec le [système de fichiers d'origine privé](#système_de_fichiers_d_origine_privé), qui n'est pas visible pour l'utilisateur·ice).
 
 > [!NOTE]
 > Les différentes exceptions pouvant être levées lors de l'utilisation des fonctionnalités de cette API sont répertoriées sur des pages pertinentes, comme défini dans la spécification. Cependant, la situation est rendue plus complexe par l'interaction entre l'API et le système d'exploitation sous-jacent. Une proposition a été faite pour [énumérer les mappages d'erreurs dans la spécification <sup>(angl.)</sup>](https://github.com/whatwg/fs/issues/57), qui inclut des informations utiles à ce sujet.
 
 > [!NOTE]
-> Les objets basés sur {{domxref("FileSystemHandle")}} peuvent également être sérialisés dans une base de données {{domxref("IndexedDB API", "IndexedDB", "", "nocode")}}, ou transférés via {{domxref("window.postMessage", "postMessage()")}}.
+> Les objets basés sur {{DOMxRef("FileSystemHandle")}} peuvent également être sérialisés dans une base de données {{DOMxRef("IndexedDB API", "IndexedDB", "", "nocode")}}, ou transférés via {{DOMxRef("window.postMessage", "postMessage()")}}.
 
 ### Système de fichiers d'origine privé
 
@@ -61,38 +61,38 @@ Lisez notre page sur le [système de fichiers d'origine privé](/fr/docs/Web/API
 
 ### Enregistrement de fichiers
 
-- Pour les <i lang="en">handles</i> asynchrones, utilisez {{domxref('FileSystemWritableFileStream')}}. Une fois que les données à enregistrer sont dans un format d'objet {{domxref('Blob')}}, {{jsxref("String")}}, chaîne littérale ou {{jsxref('ArrayBuffer', 'buffer')}}, vous pouvez ouvrir un flux et enregistrer les données dans un fichier existant ou un nouveau fichier.
-- Pour {{domxref('FileSystemSyncAccessHandle')}} (accès synchrone), vous écrivez les modifications dans un fichier en utilisant la méthode {{domxref('FileSystemSyncAccessHandle.write', 'write()')}}. Vous pouvez également appeler {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} si vous avez besoin que les modifications soient enregistrées sur le disque à un moment précis (sinon, vous pouvez laisser le système d'exploitation sous-jacent gérer cela, ce qui convient dans la plupart des cas).
+- Pour les <i lang="en">handles</i> asynchrones, utilisez {{DOMxRef("FileSystemWritableFileStream")}}. Une fois que les données à enregistrer sont dans un format d'objet {{DOMxRef("Blob")}}, {{JSxRef("String")}}, chaîne de caractère littérale ou {{JSxRef("ArrayBuffer", "buffer")}}, vous pouvez ouvrir un flux et enregistrer les données dans un fichier existant ou un nouveau fichier.
+- Pour {{DOMxRef("FileSystemSyncAccessHandle")}} (accès synchrone), vous écrivez les modifications dans un fichier en utilisant la méthode {{DOMxRef("FileSystemSyncAccessHandle.write", "write()")}}. Vous pouvez également appeler {{DOMxRef("FileSystemSyncAccessHandle.flush", "flush()")}} si vous avez besoin que les modifications soient enregistrées sur le disque à un moment précis (sinon, vous pouvez laisser le système d'exploitation sous-jacent gérer cela, ce qui convient dans la plupart des cas).
 
 ## Interfaces
 
-- {{domxref("FileSystemChangeRecord")}} {{experimental_inline}}
-  - : Contient des détails d'un seul changement observé par un {{domxref("FileSystemObserver")}}.
-- {{domxref("FileSystemHandle")}}
-  - : Un objet qui représente un fichier ou une entrée de répertoire. Plusieurs <i lang="en">handles</i> peuvent représenter la même entrée. La plupart du temps, vous ne travaillez pas directement avec `FileSystemHandle`, mais plutôt avec ses interfaces enfants {{domxref('FileSystemFileHandle')}} et {{domxref('FileSystemDirectoryHandle')}}.
-- {{domxref("FileSystemFileHandle")}}
-  - : Fournit un <i lang="en">handle</i> à une entrée du système de fichiers.
-- {{domxref("FileSystemDirectoryHandle")}}
-  - : Fournit un <i lang="en">handle</i> à un répertoire du système de fichiers.
-- {{domxref("FileSystemObserver")}} {{experimental_inline}}
+- {{DOMxRef("FileSystemChangeRecord")}} {{Experimental_Inline}}
+  - : Contient des détails d'un seul changement observé par un {{DOMxRef("FileSystemObserver")}}.
+- {{DOMxRef("FileSystemHandle")}}
+  - : Un objet qui représente un fichier ou une entrée de répertoire. Plusieurs gestionnaires peuvent représenter la même entrée. La plupart du temps, vous ne travaillez pas directement avec `FileSystemHandle`, mais plutôt avec ses interfaces enfants {{DOMxRef('FileSystemFileHandle')}} et {{DOMxRef('FileSystemDirectoryHandle')}}.
+- {{DOMxRef("FileSystemFileHandle")}}
+  - : Fournit un gestionnaire à une entrée du système de fichiers.
+- {{DOMxRef("FileSystemDirectoryHandle")}}
+  - : Fournit un gestionnaire à un répertoire du système de fichiers.
+- {{DOMxRef("FileSystemObserver")}} {{Experimental_Inline}}
   - : Fournit un mécanisme pour observer les modifications des fichiers ou répertoires sélectionnés.
-- {{domxref("FileSystemSyncAccessHandle")}}
-  - : Fournit un <i lang="en">handle</i> synchrone à une entrée du système de fichiers, qui fonctionne sur un seul fichier du disque. La nature synchrone des lectures et écritures de fichiers permet d'obtenir de meilleures performances pour les méthodes critiques dans les contextes où les opérations asynchrones entraînent une charge importante, par exemple&nbsp;: [WebAssembly](/fr/docs/WebAssembly). Cette classe n'est accessible qu'à l'intérieur des [Web Workers](/fr/docs/Web/API/Web_Workers_API) dédiés pour les fichiers dans le [système de fichiers d'origine privé](#système_de_fichiers_d_origine_privé).
-- {{domxref("FileSystemWritableFileStream")}}
-  - : Un objet {{domxref('WritableStream')}} avec des méthodes supplémentaires pratiques, qui fonctionnent sur un seul fichier sur le disque.
+- {{DOMxRef("FileSystemSyncAccessHandle")}}
+  - : Fournit un gestionnaire synchrone à une entrée du système de fichiers, qui fonctionne sur un seul fichier du disque. La nature synchrone des lectures et écritures de fichiers permet d'obtenir de meilleures performances pour les méthodes critiques dans les contextes où les opérations asynchrones entraînent une charge importante, par exemple&nbsp;: [WebAssembly](/fr/docs/WebAssembly). Cette classe n'est accessible qu'à l'intérieur des [Web Workers](/fr/docs/Web/API/Web_Workers_API) dédiés pour les fichiers dans le [système de fichiers d'origine privé](#système_de_fichiers_dorigine_privé).
+- {{DOMxRef("FileSystemWritableFileStream")}}
+  - : Un objet {{DOMxRef('WritableStream')}} avec des méthodes supplémentaires pratiques, qui fonctionnent sur un seul fichier sur le disque.
 
 ### Extensions vers d'autres interfaces
 
-- {{domxref("Window.showDirectoryPicker()")}}
+- {{DOMxRef("Window.showDirectoryPicker()")}}
   - : Affiche un sélecteur de répertoire qui permet à l'utilisateur·ice de sélectionner un répertoire.
-- {{domxref("Window.showOpenFilePicker()")}}
+- {{DOMxRef("Window.showOpenFilePicker()")}}
   - : Affiche un sélecteur de fichiers qui permet à un·e utilisateur·ice de sélectionner un fichier ou plusieurs fichiers.
-- {{domxref("Window.showSaveFilePicker()")}}
+- {{DOMxRef("Window.showSaveFilePicker()")}}
   - : Affiche un sélecteur de fichiers qui permet à un·e utilisateur·ice d'enregistrer un fichier.
-- {{domxref("DataTransferItem.getAsFileSystemHandle()")}}
-  - : Renvoie une {{jsxref('Promise')}} (promesse) qui se réalise avec un {{domxref('FileSystemFileHandle')}} si l'élément déplacé est un fichier ou s'accompagne avec un {{domxref('FileSystemDirectoryHandle')}} si l'élément déplacé est un répertoire.
-- {{domxref("StorageManager.getDirectory()")}}
-  - : Utilisé pour obtenir une référence à un objet {{domxref("FileSystemDirectoryHandle")}} permettant l'accès à un répertoire et son contenu, stocké dans le [Système de fichiers privé d'origine](/fr/docs/Web/API/File_System_API/Origin_private_file_system). Renvoie une promesse {{jsxref('Promise')}} qui se complète avec un objet {{domxref("FileSystemDirectoryHandle")}}.
+- {{DOMxRef("DataTransferItem.getAsFileSystemHandle()")}}
+  - : Retourne une {{JSxRef('Promise')}} (promesse) qui se réalise avec un {{DOMxRef('FileSystemFileHandle')}} si l'élément déplacé est un fichier ou s'accompagne avec un {{DOMxRef('FileSystemDirectoryHandle')}} si l'élément déplacé est un répertoire.
+- {{DOMxRef("StorageManager.getDirectory()")}}
+  - : Utilisé pour obtenir une référence à un objet {{DOMxRef("FileSystemDirectoryHandle")}} permettant l'accès à un répertoire et son contenu, stocké dans le [Système de fichiers privé d'origine](/fr/docs/Web/API/File_System_API/Origin_private_file_system). Retourne une promesse {{JSxRef('Promise')}} qui se complète avec un objet {{DOMxRef("FileSystemDirectoryHandle")}}.
 
 ## Exemples
 
@@ -136,23 +136,25 @@ async function getTheFile() {
 
 ### Accéder aux répertoires
 
-L'exemple suivant renvoie un répertoire avec le nom spécifié. Si le répertoire n'existe pas, il est créé.
+L'exemple suivant retourne un répertoire avec le nom défini. Si le répertoire n'existe pas, il est créé.
 
 ```js
 const dirName = "directoryToGetName";
 
 // il est supposé que nous avons un handle de répertoire : 'currentDirHandle'
-const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
+const subDir = await currentDirHandle.getDirectoryHandle(dirName, {
+  create: true,
+});
 ```
 
-La fonction asynchrone suivante utilise `resolve()` Pour trouver le chemin d'accès à un fichier choisi, par rapport à un <i lang="en">handle</i> de répertoire spécifié.
+La fonction asynchrone suivante utilise `resolve()` Pour trouver le chemin d'accès à un fichier choisi, par rapport à un gestionnaire de répertoire défini.
 
 ```js
 async function returnPathDirectories(directoryHandle) {
   // Ouvre un sélecteur de fichiers et destructure le résultat pour obtenir le premier élément
   const [handle] = await self.showOpenFilePicker();
   if (!handle) {
-    // L'utilisateur a annulé, ou a échoué à ouvrir un fichier.
+    // L'utilisateur·ice a annulé, ou a échoué à ouvrir un fichier.
     return;
   }
 
@@ -174,9 +176,9 @@ async function returnPathDirectories(directoryHandle) {
 
 ### Écriture dans les fichiers
 
-La fonction asynchrone suivante ouvre le sélecteur de fichiers de sauvegarde, qui renvoie un {{domxref('FileSystemFileHandle')}} une fois un fichier sélectionné. Un flux accessible en écriture est ensuite créé à l'aide de la méthode {{domxref('FileSystemFileHandle.createWritable()')}}.
+La fonction asynchrone suivante ouvre le sélecteur de fichiers de sauvegarde, qui retourne un {{DOMxRef("FileSystemFileHandle")}} une fois un fichier sélectionné. Un flux accessible en écriture est ensuite créé à l'aide de la méthode {{DOMxRef("FileSystemFileHandle.createWritable()")}}.
 
-Un {{domxref('Blob')}} défini par l'utilisateur·ice est ensuite écrit dans le flux qui est ensuite fermé.
+Un {{DOMxRef("Blob")}} défini par l'utilisateur·ice est ensuite écrit dans le flux qui est ensuite fermé.
 
 ```js
 async function saveFile() {
@@ -217,7 +219,7 @@ Cet exemple lit et écrit de manière synchrone un fichier au [Système de fichi
 La fonction de gestionnaire d'événements asynchrones suivante est contenue dans un Web Worker. En recevant un message du thread principal, elle&nbsp;:
 
 - Crée une trappe d'accès aux fichiers synchrones.
-- Obtient la taille du fichier et crée un {{jsxref("ArrayBuffer")}} pour le contenir.
+- Obtient la taille du fichier et crée un {{JSxRef("ArrayBuffer")}} pour le contenir.
 - Lit le contenu du fichier dans le tampon.
 - Encode le message et l'écrit à la fin du fichier.
 - Persiste les modifications du disque et ferme la trappe d'accès.
@@ -253,7 +255,7 @@ onmessage = async (e) => {
 ```
 
 > [!NOTE]
-> Dans les versions antérieures de la spécification, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} et {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} ont été spécifiés de manière non ergonomique comme méthodes asynchrones. Cela a maintenant été [modifié <sup>(angl.)</sup>](https://github.com/whatwg/fs/issues/7), mais certains navigateurs soutiennent toujours les versions asynchrones.
+> Dans les versions antérieures de la spécification, {{DOMxRef("FileSystemSyncAccessHandle.close()", "close()")}}, {{DOMxRef("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{DOMxRef("FileSystemSyncAccessHandle.getSize()", "getSize()")}} et {{DOMxRef("FileSystemSyncAccessHandle.truncate()", "truncate()")}} ont été spécifiés de manière non ergonomique comme méthodes asynchrones. Cela a maintenant été [modifié <sup>(angl.)</sup>](https://github.com/whatwg/fs/issues/7), mais certains navigateurs soutiennent toujours les versions asynchrones.
 
 ## Caractéristiques
 

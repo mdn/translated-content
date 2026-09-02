@@ -18,13 +18,13 @@ function eArabic(x) {
 }
 
 console.log(eArabic(123456.789));
-// Sortie attendue : "١٢٣٬٤٥٦٫٧٨٩"
+// Résultat attendu : "١٢٣٬٤٥٦٫٧٨٩"
 
 console.log(eArabic("123456.789"));
-// Sortie attendue : "123456.789"
+// Résultat attendu : "123456.789"
 
 console.log(eArabic(NaN));
-// Sortie attendue : "ليس رقم"
+// Résultat attendu : "ليس رقم"
 ```
 
 ## Syntaxe
@@ -166,5 +166,5 @@ console.log(
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.NumberFormat")}}
+- L'objet natif {{JSxRef("Intl.NumberFormat")}}
 - La méthode {{JSxRef("Number.prototype.toString()")}}
