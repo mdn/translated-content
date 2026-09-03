@@ -2,7 +2,7 @@
 title: Request
 slug: Web/API/Request
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 513146a616213fee548fdcf72dc1359030eb3395
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -36,8 +36,10 @@ Vous pouvez créer un nouvel objet `Request` à l'aide du constructeur {{DOMxRef
   - : Contient la valeur [d'intégrité de la sous-ressource](/fr/docs/Web/Security/Defenses/Subresource_Integrity) de la requête (par exemple&nbsp;: `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 - {{DOMxRef("Request.isHistoryNavigation")}} {{ReadOnlyInline}}
   - : Un booléen indiquant si la requête est une navigation dans l'historique.
+- {{DOMxRef("Request.isReloadNavigation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Un booléen indiquant si la requête est un rechargement déclenché par l'utilisateur·ice.
 - {{DOMxRef("Request.keepalive")}} {{ReadOnlyInline}}
-  - : Contient le paramètre `keepalive` de la requête (`true` ou `false`), qui indique si le navigateur gardera la requête associée active si la page qui l'a initiée est déchargée avant la fin de la requête.
+  - : Contient le paramètre `keepalive` de la requête (`true` ou `false`), qui indique si le navigateur garde la requête associée active si la page qui l'a initiée est déchargée avant la fin de la requête.
 - {{DOMxRef("Request.method")}} {{ReadOnlyInline}}
   - : Contient la méthode de la requête (`GET`, `POST`, etc.).
 - {{DOMxRef("Request.mode")}} {{ReadOnlyInline}}
@@ -49,7 +51,9 @@ Vous pouvez créer un nouvel objet `Request` à l'aide du constructeur {{DOMxRef
 - {{DOMxRef("Request.referrerPolicy")}} {{ReadOnlyInline}}
   - : Contient la politique de référent de la requête (par exemple&nbsp;: `no-referrer`).
 - {{DOMxRef("Request.signal")}} {{ReadOnlyInline}}
-  - : Retourne le signal {{DOMxRef("AbortSignal")}} associé à la requête.
+  - : Retourne l'objet {{DOMxRef("AbortSignal")}} associé à la requête.
+- {{DOMxRef("Request.targetAddressSpace")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Retourne l'espace d'adressage cible de la requête, qui indique s'il s'agit d'une requête de boucle locale, locale ou publique.
 - {{DOMxRef("Request.url")}} {{ReadOnlyInline}}
   - : Contient l'URL de la requête.
 
@@ -71,7 +75,7 @@ Vous pouvez créer un nouvel objet `Request` à l'aide du constructeur {{DOMxRef
   - : Retourne une promesse qui se résout avec une représentation texte du corps de la requête.
 
 > [!NOTE]
-> Les fonctions du corps de la requête ne peuvent être exécutées qu'une seule fois&nbsp;; les appels suivants seront rejetés avec un TypeError indiquant que le flux du corps a déjà été utilisé.
+> Les fonctions du corps de la requête ne peuvent être exécutées qu'une seule fois&nbsp;; les appels suivants sont rejetés avec un TypeError indiquant que le flux du corps a déjà été utilisé.
 
 ## Exemples
 

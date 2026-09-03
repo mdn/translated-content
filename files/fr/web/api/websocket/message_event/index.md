@@ -3,12 +3,12 @@ title: "WebSocket : évènement message"
 short-title: message
 slug: Web/API/WebSocket/message_event
 l10n:
-  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
-L'évènement `message` de l'interface {{DOMxRef("WebSocket")}} est déclenché lorsque des données sont reçues via une `WebSocket`.
+L'évènement `message` de l'interface {{DOMxRef("WebSocket")}} est déclenché lorsque des données sont reçues avec une `WebSocket`.
 
 ## Syntaxe
 
@@ -25,25 +25,6 @@ onmessage = (event) => { }
 Un objet {{DOMxRef("MessageEvent")}}. Hérite de l'objet {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("MessageEvent")}}
-
-## Propriétés de l'évènement
-
-_En plus des propriétés listées ci-dessous, les propriétés de l'interface parente, {{DOMxRef("Event")}}, sont disponibles._
-
-- {{DOMxRef("MessageEvent.data", "data")}} {{ReadOnlyInline}}
-  - : Les données envoyées par l'émetteur du message. Le type de cette propriété dépend du type du message WebSocket et de la valeur de {{DOMxRef("WebSocket.binaryType")}}.
-    - Si le type du message est `"text"`, alors ce champ est une chaîne de caractères.
-    - Si le type du message est `"binary"`, alors le type de cette propriété peut être déduit du `binaryType` de ce socket :
-      - {{JSxRef("ArrayBuffer")}} si `binaryType` vaut `"arraybuffer"`,
-      - {{DOMxRef("Blob")}} si `binaryType` vaut `"blob"`. Cela n'a pas de type média associé ({{DOMxRef("Blob.type")}} vaut `""`).
-- {{DOMxRef("MessageEvent.origin", "origin")}} {{ReadOnlyInline}}
-  - : Une chaîne de caractères représentant l'origine de l'émetteur du message.
-
-Les autres propriétés de l'interface {{DOMxRef("MessageEvent")}} sont présentes, mais ne concernent pas l'API WebSocket et restent à leurs valeurs par défaut&nbsp;:
-
-- {{DOMxRef("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
-- {{DOMxRef("MessageEvent.source", "source")}} {{ReadOnlyInline}}
-- {{DOMxRef("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
 
 ## Exemples
 
