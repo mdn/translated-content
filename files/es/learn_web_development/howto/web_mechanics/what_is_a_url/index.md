@@ -150,7 +150,7 @@ Cuando se incluyen, el nombre de usuario y la contraseña se colocan entre los c
 
 Se puede incluir un nombre de usuario y una contraseña en la URL al acceder a sitios web que usan el mecanismo de seguridad de [autenticación HTTP](/es/docs/Web/HTTP/Guides/Authentication), para iniciar sesión de inmediato en un sitio web y saltarse el cuadro de diálogo de usuario/contraseña que de otro modo aparecería para ingresar tus credenciales.
 
-Aunque todavía puedes ver este mecanismo usado en la práctica, está obsoleto por razones de seguridad, y los sitios web modernos suelen usar otros mecanismos de autenticación. Consulta [Acceder usando credenciales en la URL](/es/docs/Web/HTTP/Guides/Authentication#access_using_credentials_in_the_url) para más detalles.
+Aunque todavía puedes ver este mecanismo usado en la práctica, está obsoleto por razones de seguridad, y los sitios web modernos suelen usar otros mecanismos de autenticación. Consulta [Acceder usando credenciales en la URL](/es/docs/Web/HTTP/Guides/Authentication#acceso_usando_credenciales_en_la_url) para más detalles.
 
 ## URL semánticas
 
