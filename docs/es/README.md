@@ -133,13 +133,13 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 4. Cambia los enlaces internos de `/en-US/` a `/es/`.
 
    **¿Por qué `/es/` aunque la página no exista en español?**
-   Por coherencia de idioma, no por un respaldo automático: MDN **no** sirve el contenido en inglés cuando falta la traducción. Si `files/es/…/index.md` no existe, la URL `/es/docs/…` devuelve `404` hasta que alguien traduzca esa página. Aun así, el enlace se escribe en `/es/`: es la convención del proyecto y así el enlace queda correcto de forma automática en cuanto la página destino se traduce.
+   Por coherencia de idioma del proyecto, no por un respaldo automático: si `files/es/…/index.md` no existe, la URL `/es/docs/…` devuelve `404`. MDN no sirve el artículo completo en inglés como sustituto de una página en español inexistente, y tampoco rellena con inglés las secciones que falten dentro de una página ya traducida: el texto en inglés que se ve en una traducción parcial está escrito en el propio archivo de `files/es/`. Aun así, el enlace **debe** escribirse en `/es/`: es la convención del proyecto, y así queda correcto automáticamente en cuanto la página destino se traduzca.
 
    Por eso la regla general es: **usa siempre `/es/` en los enlaces internos absolutos de MDN**, sin excepción. No conserves `/en-US/` "para que funcione": un enlace en `/en-US/` saca al lector del contexto de su idioma preferido, incluso si la traducción sí existe.
 
    **Anclas (`#fragmento`): deben coincidir con un encabezado real de la página destino en español**
 
-   Cuando un enlace incluye un fragmento (`#`), la ancla debe coincidir con el ID de un encabezado que exista **en la página en español**. Un fragmento que no coincide con nada no rompe el enlace, pero deja al lector al inicio de la página en lugar de la sección esperada.
+   Cuando un enlace incluye un fragmento (`#`), la ancla debe coincidir con el ID de un encabezado que exista **en la página en español** (asumiendo que la página ya está traducida; si no lo está, aplica la regla anterior del error 404). Un fragmento que no coincide con ningún ID no rompe el enlace (el navegador simplemente lo ignora y carga la página desde el inicio), pero deja al lector en la parte superior en lugar de la sección esperada.
 
    | Caso                                | Qué hacer con la ancla                                                            |
    | ----------------------------------- | --------------------------------------------------------------------------------- |
@@ -147,12 +147,12 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
    | La página destino no está traducida | Quita el fragmento y deja solo el enlace a la página; agrégalo cuando se traduzca |
    | Enlace dentro de la misma página    | Usa el ID del encabezado traducido de este archivo                                |
 
-   **Ejemplo del problema frecuente:** el inglés tiene `/en-US/docs/Web/API/Fetch_API#browser_compatibility`. Al traducir, cambiar solo el prefijo (`/es/docs/Web/API/Fetch_API#browser_compatibility`) deja una ancla en inglés que no existe en la página en español, donde ese encabezado se renderiza como `#compatibilidad_con_navegadores`. Y al revés: copiar una ancla en español hacia una página que aún no está traducida tampoco sirve, porque esa página todavía no existe.
+   **Ejemplo del problema frecuente:** dado el enlace en inglés `/en-US/docs/Web/API/Fetch_API#browser_compatibility`, al traducir, cambiar solo el prefijo (`/es/docs/Web/API/Fetch_API#browser_compatibility`) deja una ancla en inglés que no existe en la página en español, donde ese encabezado se renderiza como `#compatibilidad_con_navegadores`. En sentido contrario, copiar una ancla ya traducida hacia una página que aún no tiene traducción al español tampoco funciona.
 
    La solución es verificar antes de escribir la ancla:
    - ¿Existe `files/es/…/Fetch_API/index.md` con ese encabezado ya traducido? → usa la ancla en español.
    - ¿No existe la página en español? → deja solo `/es/docs/Web/API/Fetch_API`, sin fragmento.
-   - ¿Existe la página pero esa sección puntual aún no está traducida? → usa el ID tal como se renderiza hoy en la página en español.
+   - ¿Existe la página pero esa sección puntual aún no está traducida? → usa el ID tal como aparece renderizado actualmente en la página en español (puede seguir en inglés).
 
    Para los **enlaces dentro de la misma página** (`[ver más](#cómo_funciona)`), la ancla debe coincidir con el ID generado por el encabezado traducido. Si tradujiste `## How it works` como `## Cómo funciona`, el enlace debe ser `#cómo_funciona`.
 
