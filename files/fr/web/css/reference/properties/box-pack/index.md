@@ -3,10 +3,10 @@ title: Propriété CSS `box-pack`
 short-title: box-pack
 slug: Web/CSS/Reference/Properties/box-pack
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i> en anglais) et sera remplacée dans une prochaine version.

@@ -169,7 +169,7 @@ div {
 
 {{EmbedLiveSample("Définir le facteur de rétrécissement d'un élément flexible", 500, 100)}}
 
-Les éléments flexibles ne débordent pas de leur conteneur, car ils peuvent rétrécir&nbsp;: les `500px` d'espace négatif libre sont répartis entre les cinq éléments selon leurs valeurs `flex-shrink`. Les trois premiers éléments ont la valeur `flex-shrink: 1`. D a la valeur `flex-shrink: 1.5` et E a la valeur `flex-shrink: 2`. La largeur finale de D et E est inférieure à celle des autres, E étant plus petit que D.
+Les éléments flexibles ne débordent pas de leur conteneur, car ils peuvent rétrécir&nbsp;: les `500px` d'espace négatif libre sont répartis entre les cinq éléments selon leurs valeurs `flex-shrink`. La somme de toutes les valeurs de rétrécissement pour les cinq éléments est `1 + 1 + 1 + 1.5 + 2` = `6.5`. En conséquence, la largeur des éléments avec `flex-shrink: 1` est réduite de `1/6.5 * 500px` = `76.92px`, la largeur des éléments avec `flex-shrink: 1.5` est réduite de `1.5/6.5 * 500px` = `115.38px`, et la largeur des éléments avec `flex-shrink: 2` est réduite de `2/6.5 * 500px` = `153.85px`.
 
 ## Spécifications
 

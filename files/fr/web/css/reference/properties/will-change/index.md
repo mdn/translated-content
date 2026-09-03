@@ -108,7 +108,7 @@ Nous utilisons CSS pour appliquer la propriété `will-change` à `#element`, fo
 
 ### Par un script
 
-Cet exemple montre comment appliquer la propriété `will-change` lorsque cela est nécessaire et supprimer les optimisations une fois terminé en utilisant JavaScript, ce qui est généralement la manière dont `will-change` doit être appliquée.
+Cet exemple montre comment appliquer la propriété `will-change` lorsque c'est nécessaire et supprimer les optimisations une fois terminé en utilisant JavaScript, ce qui est généralement la manière dont `will-change` doit être appliquée.
 
 #### JavaScript
 

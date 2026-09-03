@@ -3,7 +3,7 @@ title: Propriété CSS `row-rule-color`
 short-title: row-rule-color
 slug: Web/CSS/Reference/Properties/row-rule-color
 l10n:
-  sourceCommit: 9cf3002bd29376c15d49df6fab2e6a264285abf6
+  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
 ---
 
 {{SeeCompatTable}}
@@ -239,11 +239,11 @@ Le conteneur flexible a six lignes, donc cinq interstices. La fonction `repeat()
 
 Cet exemple montre comment utiliser `auto`, au lieu d'un entier, dans la fonction `repeat()`.
 
-En utilisant `repeat(auto, <color>)`, nous définissons toutes les lignes comme étant presque transparentes en noir (`#0003`), sauf la première et la dernière, que nous définissons en `black` solide.
+En utilisant `repeat(auto, <color>)`, nous définissons toutes les lignes comme étant presque transparentes en noir (`#00000033`), sauf la première et la dernière, que nous définissons en `black` solide.
 
 ```css live-sample___auto
 ul {
-  row-rule-color: black, repeat(auto, #0003), black;
+  row-rule-color: black, repeat(auto, #00000033), black;
 }
 ```
 

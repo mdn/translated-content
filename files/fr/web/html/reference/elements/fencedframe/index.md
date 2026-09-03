@@ -3,10 +3,8 @@ title: "Élément HTML `<fencedframe>` : l'élément de cadre protégé"
 short-title: <fencedframe>
 slug: Web/HTML/Reference/Elements/fencedframe
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: e316526e520d8163e9151dca8973eb777b5285e0
 ---
-
-{{SeeCompatTable}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<fencedframe>`** (ou «&nbsp;cadre protégé&nbsp;») représente un {{Glossary("browsing context", "contexte de navigation")}} imbriqué, intégrant une autre page HTML dans la page courante. Les `<fencedframe>` sont très similaires aux éléments {{HTMLElement("iframe")}} dans leur forme et leur fonction, à ceci près&nbsp;:
 
@@ -21,13 +19,13 @@ L'élément `<fencedframe>` est un type d'élément `<iframe>` doté de fonction
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `allow` {{Experimental_Inline}}
+- `allow` {{Deprecated_Inline}}
   - : Définit une [politique d'autorisations](/fr/docs/Web/HTTP/Guides/Permissions_Policy) pour l'élément `<fencedframe>`, qui précise quelles fonctionnalités sont disponibles pour le `<fencedframe>` selon l'origine de la requête. Voir [Politiques d'autorisations disponibles pour les cadres protégés](#politiques_dautorisations_disponibles_pour_les_cadres_proteges) pour plus de détails sur les fonctionnalités contrôlables avec une politique appliquée à un cadre protégé.
 
-- `height` {{Experimental_Inline}}
+- `height` {{Deprecated_Inline}}
   - : Un entier sans unité représentant la hauteur du cadre protégé en pixels CSS. La valeur par défaut est `150`.
 
-- `width` {{Experimental_Inline}}
+- `width` {{Deprecated_Inline}}
   - : Un entier sans unité représentant la largeur du cadre protégé en pixels CSS. La valeur par défaut est `300`.
 
 ## Politiques d'autorisations disponibles pour les cadres protégés

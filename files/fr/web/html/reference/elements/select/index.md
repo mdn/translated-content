@@ -3,7 +3,7 @@ title: "Élément HTML `<select>` : l'élément de liste déroulante"
 short-title: <select>
 slug: Web/HTML/Reference/Elements/select
 l10n:
-  sourceCommit: 221ca1f7a86235a442dc8312a56e4151a85fcf29
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<select>`** représente un contrôle qui propose un menu d'options.

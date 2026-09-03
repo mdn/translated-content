@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`line-height`** définit la hauteur d'une boîte de ligne dans les [modes d'écriture](/fr/docs/Web/CSS/Reference/Properties/writing-mode#vertical-rl) horizontaux. Dans les modes d'écriture verticaux, elle définit la largeur d'une boîte de ligne. Elle est couramment utilisée pour définir la distance entre les lignes de texte. Sur les éléments de niveau bloc dans les modes d'écriture horizontaux, elle définit la hauteur préférée des boîtes de ligne dans l'élément, et sur les éléments en incise non {{Glossary("Replaced_elements", "remplacés")}}, elle définit la hauteur utilisée pour calculer la hauteur de la boîte de ligne.
+La propriété [CSS](/fr/docs/Web/CSS) **`line-height`** définit la hauteur d'une boîte de ligne dans les [modes d'écriture](/fr/docs/Web/CSS/Reference/Properties/writing-mode#vertical-rl) horizontaux. Dans les modes d'écriture verticaux, elle définit la largeur d'une boîte de ligne. Elle est couramment utilisée pour définir la distance entre les lignes de texte. Sur les éléments de niveau bloc dans les modes d'écriture horizontaux, elle définit la hauteur préférée des boîtes de ligne dans l'élément, et sur les éléments en incise (<i lang="en">inline</i> en anglais) qui n'est pas {{Glossary("Replaced_elements", "remplacés")}}, elle définit la hauteur utilisée pour calculer la hauteur de la boîte de ligne.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: line-height")}}
 

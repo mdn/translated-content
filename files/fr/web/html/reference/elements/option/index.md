@@ -3,7 +3,7 @@ title: "Élément HTML `<option>` : l'élément d'option"
 short-title: <option>
 slug: Web/HTML/Reference/Elements/option
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<option>`** est utilisé pour définir un élément contenu dans un élément {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} ou {{HTMLElement("datalist")}}. Ainsi, `<option>` peut représenter des éléments de menu dans des fenêtres contextuelles et d'autres listes d'éléments dans un document HTML.

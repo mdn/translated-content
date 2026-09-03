@@ -138,5 +138,5 @@ Pour un exemple interactif complet de `text-box-edge`, voir la [page `text-box-t
 
 - Les propriétés {{CSSxRef("text-box")}}, {{CSSxRef("text-box-trim")}}
 - Le type de donnée {{CSSxRef("&lt;text-edge&gt;")}}
-- Le module [de disposition en ligne CSS](/fr/docs/Web/CSS/Guides/Inline_layout)
+- Le module [de disposition en incise CSS](/fr/docs/Web/CSS/Guides/Inline_layout)
 - [La propriété CSS text-box-edge <sup>(angl.)</sup>](https://developer.chrome.com/blog/css-text-box-trim) sur developer.chrome.com (2025)

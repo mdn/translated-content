@@ -223,7 +223,7 @@ Notre chronologie de progression de défilement, définie à l'aide des proprié
 }
 ```
 
-Le CSS ci-dessous définit un carré qui tourne dans des directions alternées selon la chronologie fournie par la propriété `animation-timeline`, qui est définie sur la chronologie `--square-timeline` nommée ci-dessus. L'animation est configurée pour se produire deux fois, dans des directions alternées, lorsqu'elle traverse la fenêtre d'affichage. Nous avons ajouté des [coins crantés](/fr/docs/Web/CSS/Reference/Properties/corner-shape) pour rendre l'effet d'animation plus visible.
+Le CSS ci-dessous définit un carré qui tourne dans des directions alternées selon la chronologie fournie par la propriété `animation-timeline`, qui est définie sur la chronologie `--square-timeline` nommée ci-dessus. L'animation est configurée pour se produire deux fois, dans des directions alternées, lorsqu'elle traverse la zone d'affichage. Nous avons ajouté des [coins crantés](/fr/docs/Web/CSS/Reference/Properties/corner-shape) pour rendre l'effet d'animation plus visible.
 
 ```css live-sample___named_scroll live-sample___anonymous_scroll
 #shape {
@@ -273,7 +273,7 @@ Cet exemple étend le précédent, en appliquant une chronologie de progression 
 
 #### CSS
 
-Nous incluons tout le CSS de l'exemple précédent, en ne définissant que la propriété `animation-timeline` pour remplacer la valeur de l'exemple précédent. La chronologie est fournie par la valeur `scroll(inline nearest)`, qui sélectionne la barre de défilement dans la direction en ligne de l'ancêtre le plus proche qui possède des barres de défilement. Il s'agit de la barre de défilement verticale de l'élément `#container`, car les éléments `.stretcher` n'ont pas de contenu débordant et ne sont donc pas des conteneurs de défilement.
+Nous incluons tout le CSS de l'exemple précédent, en ne définissant que la propriété `animation-timeline` pour remplacer la valeur de l'exemple précédent. La chronologie est fournie par la valeur `scroll(inline nearest)`, qui sélectionne la barre de défilement dans la direction en incise de l'ancêtre le plus proche qui possède des barres de défilement. Il s'agit de la barre de défilement verticale de l'élément `#container`, car les éléments `.stretcher` n'ont pas de contenu débordant et ne sont donc pas des conteneurs de défilement.
 
 ```css live-sample___anonymous_scroll
 #shape {

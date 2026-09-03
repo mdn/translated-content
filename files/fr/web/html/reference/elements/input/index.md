@@ -3,7 +3,7 @@ title: "Élément HTML `<input>` : l'élément de saisie dans un formulaire"
 short-title: <input>
 slug: Web/HTML/Reference/Elements/input
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<input>`** permet de créer des contrôles interactifs pour les formulaires web afin d'accepter des données de la part de l'utilisateur·ice&nbsp;; une grande variété de types de données d'entrée et de composants de contrôle est disponible, selon l'appareil et {{Glossary("user agent", "agent utilisateur")}}. L'élément `<input>` est l'un des éléments HTML les plus puissants et les plus complexes en raison du grand nombre de combinaisons possibles de types d'entrée et d'attributs.
@@ -567,7 +567,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     > Cet attribut est encore expérimental et bénéficie d'un support limité dans les navigateurs. L'attribut est ignoré sur les navigateurs non pris en charge.
 
 - `tabindex`
-  - : Un attribut universel, valide pour tous les éléments, y compris tous les types de `<input>`. Sa valeur est un entier qui indique si l'élément peut prendre la sélection (<i lang="en">focus</i> en anglais) et s'il doit participer à la navigation séquentielle au clavier. Comme tous les types d'élément `<input>`, sauf ceux masqués, peuvent prendre la sélection, cet attribut ne doit pas être utilisé sur les contrôles de formulaire, car cela nécessite de gérer l'ordre de la sélection pour tous les éléments du document, au risque de dégradé l'utilisabilité et l'accessibilité si cela était fait de façon incorrecte.
+  - : Un attribut universel, valide pour tous les éléments, y compris tous les types de `<input>`. Sa valeur est un entier qui indique si l'élément peut prendre la sélection (<i lang="en">focus</i> en anglais) et s'il doit participer à la navigation séquentielle au clavier. Comme tous les types d'élément `<input>`, sauf ceux masqués, peuvent prendre la sélection, cet attribut ne doit pas être utilisé sur les contrôles de formulaire, car cela nécessite de gérer l'ordre de la sélection pour tous les éléments du document, au risque de dégradé l'utilisabilité et l'accessibilité si c'est fait de façon incorrecte.
 
 - `title`
   - : Un attribut universel, valide pour tous les éléments, y compris tous les types de `<input>`. Sa valeur est un texte fournissant des informations à propos de l'élément auquel il appartient. Une telle information est généralement (mais pas nécessairement) affichée sous la forme d'une bulle d'information. `title` ne doit pas être utilisé comme méthode principale pour expliquer le rôle d'un contrôle de formulaire. Il faut plutôt utiliser l'élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) avec un attribut `for` dont la valeur correspond à la valeur de l'attribut [`id`](#id) du champ de formulaire. Voir [la section sur les libellés](#libellés) ci-après.
@@ -810,7 +810,7 @@ Une propriété spécifique aux éléments permettant la saisie de texte est la 
 #### HTML
 
 ```html
-<label for="textInput">Vous noterez le curseur rouge&nbsp;:</label>
+<label for="textInput">Notez le curseur rouge&nbsp;:</label>
 <input id="textInput" class="custom" size="32" />
 ```
 
@@ -1058,7 +1058,7 @@ En résumé&nbsp;:
 - On vérifie l'état de validité du champ chaque fois que sa valeur est modifiée en exécutant la méthode `checkValidity()` lors de l'évènement `input` avec le gestionnaire d'évènement.
 - Si la valeur est invalide, un évènement `invalid` est déclenché et la fonction indiquée sur le gestionnaire d'évènement pour `invalid` est exécutée. Au sein de cette fonction, on détermine si la valeur est invalide parce qu'elle est vide ou parce qu'elle ne correspond pas au motif imposé en distinguant le cas avec un bloc `if()` et en adaptant le message d'erreur selon le cas de figure.
 - Ainsi, si la valeur du champ est invalide lorsqu'on clique sur le bouton d'envoi, un des messages spécifiques est affiché.
-- Si la valeur est valide, le formulaire est envoyé sans problème. Pour cela, il faut annuler la vérification de validité spécifique en appelant `setCustomValidity()` avec une chaîne de caractères vide. C'est ce qu'on fait à chaque fois qu'un évènement `input` est déclenché. Sans ça, si une validité spécifique avait précédemment été définie, le champ estit toujours considéré comme invalide, même si la valeur courante était valide lors de l'envoi.
+- Si la valeur est valide, le formulaire est envoyé sans problème. Pour cela, il faut annuler la vérification de validité spécifique en appelant `setCustomValidity()` avec une chaîne de caractères vide. C'est ce qu'on fait à chaque fois qu'un évènement `input` est déclenché. Sans ça, si une validité spécifique a précédemment été définie, le champ est toujours considéré comme invalide, même si la valeur courante est valide lors de l'envoi.
 
 > [!NOTE]
 > On veille à toujours valider les contraintes côté client et côté serveur. La validation des contraintes du navigateur ne se substitue pas à la vérification côté serveur. En effet, des valeurs invalides peuvent toujours être envoyées par des navigateurs obsolètes ou par des acteurs malveillants.

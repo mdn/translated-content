@@ -3,12 +3,12 @@ title: Propriété CSS `rule-style`
 short-title: rule-style
 slug: Web/CSS/Reference/Properties/rule-style
 l10n:
-  sourceCommit: 343ab51426f9279175b8f71fff911621d0a7da20
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`rule-style`** définit le style des lignes tracées entre les colonnes et les lignes dans les mises en page multi-colonnes, grille, flexibles et multi-colonnes, en définissant le style des règles de colonnes et de lignes à la même valeur.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`rule-style`** définit le style des lignes tracées entre les colonnes et les lignes dans les mises en page multi-colonnes, grille, flexibles et multi-colonnes, en définissant le style des règles de colonnes et de lignes à la même valeur.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: rule-style")}}
 
@@ -407,8 +407,7 @@ Même s'il y a plus de règles de colonnes que de règles de lignes, le `<auto-r
 
 - La propriété {{CSSxRef("rule-color")}}
 - La propriété {{CSSxRef("rule-width")}}
+- La propriété {{CSSxRef("column-rule-style")}}
 - La propriété {{CSSxRef("row-rule-style")}}
-- La propriété raccourcie {{CSSxRef("rule")}}
-- La propriété raccourcie {{CSSxRef("rule-style")}}
 - La propriété raccourcie {{CSSxRef("rule")}}
 - Le module [des espaces CSS](/fr/docs/Web/CSS/Guides/Gaps)

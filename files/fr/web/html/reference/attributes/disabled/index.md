@@ -3,10 +3,10 @@ title: "Attribut HTML : `disabled`"
 short-title: disabled
 slug: Web/HTML/Reference/Attributes/disabled
 l10n:
-  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
+  sourceCommit: d19dec85109590176f946fcceef48c787d578b1e
 ---
 
-L'attribut booléen **`disabled`**, lorsqu'il est présent, rend l'élément non modifiable, non sélectionnable, ou même non soumis avec le formulaire. L'utilisateur·ice ne peut ni modifier ni sélectionner le contrôle, ni les descendants du contrôle de formulaire. Si l'attribut `disabled` est défini sur un contrôle de formulaire, l'élément et ses descendants de contrôle de formulaire ne participent pas à la validation des contraintes. Souvent, les navigateurs grisent ces contrôles et ils ne reçoivent aucun évènement de navigation, comme les clics de souris ou les évènements liés à la sélection.
+L'attribut booléen **`disabled`**, lorsqu'il est présent, rend l'élément pas modifiable, pas sélectionnable, ou même pas envoyé avec le formulaire. L'utilisateur·ice ne peut ni modifier ni sélectionner le contrôle, ni les descendants du contrôle de formulaire. Si l'attribut `disabled` est défini sur un contrôle de formulaire, l'élément et ses descendants de contrôle de formulaire ne participent pas à la validation des contraintes. Souvent, les navigateurs grisent ces contrôles et ils ne reçoivent aucun évènement de navigation, comme les clics de souris ou les évènements liés à la sélection.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: disabled", "tabbed-standard")}}
 
@@ -59,7 +59,7 @@ Firefox, contrairement aux autres navigateurs, va faire persister l'état désac
 
 ### Interactions entre attributs
 
-La différence entre `disabled` et [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) est que les contrôles en lecture seule peuvent toujours fonctionner et sont toujours sélectionnables, alors que les contrôles désactivés ne peuvent pas recevoir de sélection, ne sont pas soumis avec le formulaire et ne fonctionnent généralement pas comme contrôles tant qu'ils ne sont pas activés.
+La différence entre `disabled` et [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) est que les contrôles en lecture seule peuvent toujours fonctionner et sont toujours sélectionnables, alors que les contrôles désactivés ne peuvent pas recevoir de sélection, ne sont pas envoyés avec le formulaire et ne fonctionnent généralement pas comme contrôles tant qu'ils ne sont pas activés.
 
 Étant donné qu'un champ désactivé ne peut pas voir sa valeur modifiée, [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) n'a aucun effet sur les entrées dont l'attribut `disabled` est également défini. De plus, puisque les éléments deviennent immuables, la plupart des autres attributs, tels que [`pattern`](/fr/docs/Web/HTML/Reference/Attributes/pattern), n'ont aucun effet, tant que le contrôle n'est pas activé.
 
@@ -68,9 +68,9 @@ La différence entre `disabled` et [`readonly`](/fr/docs/Web/HTML/Reference/Attr
 
 ### Utilisation
 
-Les navigateurs affichent les contrôles de formulaire désactivés en grisé, car ces contrôles sont immuables, ne reçoivent pas de sélection ou d'évènements de navigation, comme les clics de souris ou les évènements liés à la sélection, et ne sont pas soumis avec le formulaire.
+Les navigateurs affichent les contrôles de formulaire désactivés en grisé, car ces contrôles sont immuables, ne reçoivent pas de sélection ou d'évènements de navigation, comme les clics de souris ou les évènements liés à la sélection, et ne sont pas envoyés avec le formulaire.
 
-S'il est présent sur un élément supporté, la pseudo-classe {{CSSxRef(":disabled")}} correspondra. Si l'attribut n'est pas inclus, la pseudo-classe {{CSSxRef(":enabled")}} correspondra. Si l'élément ne prend pas en charge l'attribut `disabled`, celui-ci n'aura aucun effet, y compris sur les pseudo-classes `:disabled` et `:enabled`.
+S'il est présent sur un élément supporté, la pseudo-classe {{CSSxRef(":disabled")}} correspond. Si l'attribut n'est pas inclus, la pseudo-classe {{CSSxRef(":enabled")}} correspond. Si l'élément ne prend pas en charge l'attribut `disabled`, celui-ci n'a aucun effet, y compris sur les pseudo-classes `:disabled` et `:enabled`.
 
 ### Validation des contraintes
 
@@ -78,7 +78,7 @@ Si l'élément est `disabled`, alors la valeur de l'élément ne peut pas recevo
 
 ## Exemples
 
-Lorsque des contrôles de formulaire sont désactivés, de nombreux navigateurs les affichent par défaut dans une couleur plus claire, grisée. Voici des exemples de case à cocher, bouton radio, {{HTMLElement("option")}} et {{HTMLElement("optgroup")}} désactivés, ainsi que des contrôles de formulaire désactivés via l'attribut `disabled` appliqué à l'élément ancêtre {{HTMLElement("fieldset")}}. Les {{HTMLElement("option")}} sont désactivés, mais le {{HTMLElement("select")}} ne l'est pas. On aurait pu désactiver tout le {{HTMLElement("select")}} en ajoutant l'attribut à cet élément plutôt qu'à ses descendants.
+Lorsque des contrôles de formulaire sont désactivés, de nombreux navigateurs les affichent par défaut dans une couleur plus claire, grisée. Voici des exemples de case à cocher, bouton radio, {{HTMLElement("option")}} et {{HTMLElement("optgroup")}} désactivés, ainsi que des contrôles de formulaire désactivés par l'attribut `disabled` appliqué à l'élément ancêtre {{HTMLElement("fieldset")}}. Les {{HTMLElement("option")}} sont désactivés, mais le {{HTMLElement("select")}} ne l'est pas. On aurait pu désactiver tout le {{HTMLElement("select")}} en ajoutant l'attribut à cet élément plutôt qu'à ses descendants.
 
 ```html
 <fieldset>

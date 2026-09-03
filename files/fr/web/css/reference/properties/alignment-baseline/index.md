@@ -6,12 +6,12 @@ l10n:
   sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`alignment-baseline`** définit la [ligne de base](/fr/docs/Glossary/Baseline/Typography) spécifique utilisée pour aligner le texte de la boîte et ses contenus en ligne. **L'alignement sur la ligne de base** désigne la relation entre les lignes de base de plusieurs sujets d'alignement au sein d'un même contexte d'alignement. Lors d'un alignement sur la ligne de base, la valeur de la propriété `alignment-baseline` définit quelle ligne de base de la boîte est alignée sur la ligne de base correspondante de son contexte d'alignement.
+La propriété [CSS](/fr/docs/Web/CSS) **`alignment-baseline`** définit la [ligne de base](/fr/docs/Glossary/Baseline/Typography) spécifique utilisée pour aligner le texte de la boîte et ses contenus en incise (<i lang="en">inline</i> en anglais). **L'alignement sur la ligne de base** désigne la relation entre les lignes de base de plusieurs sujets d'alignement au sein d'un même contexte d'alignement. Lors d'un alignement sur la ligne de base, la valeur de la propriété `alignment-baseline` définit quelle ligne de base de la boîte est alignée sur la ligne de base correspondante de son contexte d'alignement.
 
 > [!NOTE]
-> La propriété `alignment-baseline` n'a d'effet que sur les boîtes en ligne, les éléments flex, les éléments de grille, les cellules de tableau, ainsi que sur les éléments SVG {{SVGElement("text")}}, {{SVGElement("textPath")}} et {{SVGElement("tspan")}}. Si elle est présente, elle remplace l'attribut {{SVGAttr("alignment-baseline")}} de la forme.
+> La propriété `alignment-baseline` n'a d'effet que sur les boîtes en incise, les éléments flex, les éléments de grille, les cellules de tableau, ainsi que sur les éléments SVG {{SVGElement("text")}}, {{SVGElement("textPath")}} et {{SVGElement("tspan")}}. Si elle est présente, elle remplace l'attribut {{SVGAttr("alignment-baseline")}} de la forme.
 
-Dans un contexte de formatage en ligne, les fragments de boîte en ligne et les glyphes partagent un contexte d'alignement établi par leur fragment de boîte en ligne parent le long de son axe en ligne. Dans la mise en page de texte SVG, ces valeurs définissent plutôt la ligne de base qui est alignée sur la position de texte courante du SVG.
+Dans un contexte de formatage en incise, les fragments de boîte en incise et les glyphes partagent un contexte d'alignement établi par leur fragment de boîte en incise parent le long de son axe en incise. Dans la mise en page de texte SVG, ces valeurs définissent plutôt la ligne de base qui est alignée sur la position de texte courante du SVG.
 
 ## Syntaxe
 
@@ -69,10 +69,10 @@ Cette propriété est définie comme l'un des mot-clés suivants&nbsp;:
   - : Aligne le point médian vertical de la boîte sur la ligne de base de la boîte parente plus la moitié de la hauteur en x de celle-ci. Utilise les lignes de base centrée en x&nbsp;; sauf sous [`text-orientation: upright;`](/fr/docs/Web/CSS/Reference/Properties/text-orientation) (où les lignes de base alphabétique et de hauteur en x sont essentiellement dépourvues de sens), auquel cas elle utilise la ligne de base `central`.
 
 - `text-bottom`
-  - : Met en correspondance le bas de la boîte avec le haut de la zone de contenu du parent, en utilisant le bord inférieur de la boîte de contenu d'un élément en ligne.
+  - : Met en correspondance le bas de la boîte avec le haut de la zone de contenu du parent, en utilisant le bord inférieur de la boîte de contenu d'un élément en incise.
 
 - `text-top`
-  - : Met en correspondance le haut de la boîte avec le haut de la zone de contenu du parent, en utilisant le bord supérieur de la boîte de contenu d'un élément en ligne.
+  - : Met en correspondance le haut de la boîte avec le haut de la zone de contenu du parent, en utilisant le bord supérieur de la boîte de contenu d'un élément en incise.
 
 > [!NOTE]
 > Dans SVG2, les mots-clés `auto`, `before-edge`, et `after-edge` ont été dépréciés et `text-before-edge` est un alias de `text-top`, et `text-after-edge` est un alias de `text-bottom`. Ces mots-clés ne doivent pas être utilisés dans le cadre de la propriété de raccourci {{CSSxRef("vertical-align")}}. Les navigateurs supportent `auto` comme synonyme de `baseline` et `hanging`, dans lesquels le point d'alignement de l'objet aligné est aligné avec la ligne de base «&nbsp;suspendue&nbsp;» de l'élément de contenu textuel parent, mais aucun de ces deux mots-clés ne fait partie de la spécification.
@@ -155,5 +155,5 @@ text:nth-of-type(8) {
 
 - La propriété {{CSSxRef("dominant-baseline")}}
 - L'attribut SVG {{SVGAttr("alignment-baseline")}}
-- Le module [de mise en page en ligne CSS](/fr/docs/Web/CSS/Guides/Inline_layout)
+- Le module [de mise en page en incise CSS](/fr/docs/Web/CSS/Guides/Inline_layout)
 - Le module [d'alignement de boîte CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
