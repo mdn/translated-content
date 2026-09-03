@@ -99,7 +99,7 @@ Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
   - : Un mot-clé qui indique que la boîte de la légende doit être positionnée en dessous du tableau.
 
 > [!NOTE]
-> Le module [des propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) définit deux valeurs logiques, `inline-start` et `inline-end`, pour placer la boîte de légende respectivement au début et à la fin de l'axe en ligne du tableau. Ces valeurs ne sont prises en charge par aucun navigateur.
+> Le module [des propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) définit deux valeurs logiques, `inline-start` et `inline-end`, pour placer la boîte de légende respectivement au début et à la fin de l'axe de ligne du tableau. Ces valeurs ne sont prises en charge par aucun navigateur.
 
 ## Définition formelle
 

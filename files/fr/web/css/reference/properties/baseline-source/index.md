@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`baseline-source`** définit la [ligne de base](/fr/docs/Web/CSS/Reference/Values/baseline-position) à utiliser lorsque les boîtes de niveau en ligne ont plusieurs lignes de base possibles, comme les [blocs en ligne](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout) multi-lignes ou les [conteneurs flexibles en ligne](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts#le_conteneur_flexible).
+La propriété [CSS](/fr/docs/Web/CSS) **`baseline-source`** définit la [ligne de base](/fr/docs/Web/CSS/Reference/Values/baseline-position) à utiliser lorsque les boîtes de niveau en incise (<i lang="en">inline</i> en anglais) ont plusieurs lignes de base possibles, comme les [blocs en incise](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout) multi-lignes ou les [conteneurs flexibles en incise](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts#le_conteneur_flexible).
 Les valeurs permettent de choisir entre l'alignement sur la première ligne de base, la dernière ligne de base de la boîte, ou de laisser le navigateur décider automatiquement selon le type de boîte.
 
 ## Syntaxe
@@ -28,7 +28,7 @@ baseline-source: unset;
 ### Valeurs
 
 - `auto`
-  - : Définit l'alignement sur [`last baseline`](/fr/docs/Web/CSS/Reference/Values/baseline-position#last_baseline) pour les blocs en ligne, et sur [`first baseline`](/fr/docs/Web/CSS/Reference/Values/baseline-position#first_baseline) pour tout le reste.
+  - : Définit l'alignement sur [`last baseline`](/fr/docs/Web/CSS/Reference/Values/baseline-position#last_baseline) pour les blocs en incise, et sur [`first baseline`](/fr/docs/Web/CSS/Reference/Values/baseline-position#first_baseline) pour tout le reste.
 - `first`
   - : Définit l'alignement sur `first baseline`.
 - `last`
@@ -44,13 +44,13 @@ baseline-source: unset;
 
 ## Exemples
 
-### Sélection de la ligne de base dans les conteneurs flexibles en ligne
+### Sélection de la ligne de base dans les conteneurs flexibles en incise
 
-Cet exemple montre comment utiliser la propriété `baseline-source` pour contrôler l'alignement sur la ligne de base des conteneurs flexibles en ligne.
+Cet exemple montre comment utiliser la propriété `baseline-source` pour contrôler l'alignement sur la ligne de base des conteneurs flexibles en incise.
 
 #### HTML
 
-Notre HTML comprend plusieurs éléments HTML {{HTMLElement("span")}}, qui sont des conteneurs en ligne génériques pour le contenu phrastique.
+Notre HTML comprend plusieurs éléments HTML {{HTMLElement("span")}}, qui sont des conteneurs en incise génériques pour le contenu phrastique.
 Trois des éléments `<span>` contiennent des enfants `<span>` imbriqués.
 
 ```html
@@ -95,8 +95,8 @@ span {
 }
 ```
 
-Nous définissons toutes les boîtes comme des conteneurs flexibles en ligne.
-Nous configurons la boîte `.first` pour utiliser la première ligne de base, la boîte `.auto` utilise la ligne de base par défaut (qui est `first` pour les conteneurs flexibles en ligne), et la boîte `.last` utilise la dernière ligne de base.
+Nous définissons toutes les boîtes comme des conteneurs flexibles en incise.
+Nous configurons la boîte `.first` pour utiliser la première ligne de base, la boîte `.auto` utilise la ligne de base par défaut (qui est `first` pour les conteneurs flexibles en incise), et la boîte `.last` utilise la dernière ligne de base.
 
 ```css
 .box {
@@ -119,7 +119,7 @@ Nous configurons la boîte `.first` pour utiliser la première ligne de base, la
 
 #### Résultat
 
-{{EmbedLiveSample("Sélection de la ligne de base dans les conteneurs flexibles en ligne", "100%", 260)}}
+{{EmbedLiveSample("Sélection de la ligne de base dans les conteneurs flexibles en incise", "100%", 260)}}
 
 ## Spécifications
 

@@ -3,12 +3,12 @@ title: Propriété CSS `caret`
 short-title: caret
 slug: Web/CSS/Reference/Properties/caret
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`caret`** définit l'apparence et le comportement du **curseur d'insertion** en une seule déclaration.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`caret`** définit l'apparence et le comportement du **curseur d'insertion** en une seule déclaration.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: caret")}}
 

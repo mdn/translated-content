@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`word-break`** est utilisée pour définir la façon dont la césure s'applique pour les endroits où le texte dépasserait de sa boîte de contenu.
+La propriété [CSS](/fr/docs/Web/CSS) **`word-break`** est utilisée pour définir la façon dont la césure s'applique pour les endroits où le texte dépasse de sa boîte de contenu.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: word-break")}}
 
@@ -76,12 +76,12 @@ La propriété `word-break` est définie avec un mot-clé parmi ceux décrits ci
 - `auto-phrase` {{Experimental_Inline}}
   - : A le même effet que `word-break: normal`, sauf qu'une analyse spécifique à la langue est effectuée pour améliorer les césures en évitant de les placer au milieu des phrases naturelles.
 - `break-word` {{Deprecated_Inline}}
-  - : Aura le même effet que `word-break: normal` et que `overflow-wrap: anywhere` quelle que soit la valeur de la propriété [`overflow-wrap`](/fr/docs/Web/CSS/Reference/Properties/overflow-wrap).
+  - : A le même effet que `word-break: normal` et que `overflow-wrap: anywhere` quelle que soit la valeur de la propriété [`overflow-wrap`](/fr/docs/Web/CSS/Reference/Properties/overflow-wrap).
 
 > [!NOTE]
-> Contrairement à `word-break: break-word` et à `overflow-wrap: break-word` (cf. [`overflow-wrap`](/fr/docs/Web/CSS/Reference/Properties/overflow-wrap)), `word-break: break-all` créera une césure à l'endroit exact où le mot aurait dépassé du conteneur (même si placer le mot entier sur sa propre ligne aurait pu éviter la césure).
+> Contrairement à `word-break: break-word` et à `overflow-wrap: break-word` (cf. [`overflow-wrap`](/fr/docs/Web/CSS/Reference/Properties/overflow-wrap)), `word-break: break-all` crée une césure à l'endroit exact où le mot a dépassé du conteneur (même si placer le mot entier sur sa propre ligne a pu éviter la césure).
 
-La spécification répertorie également une valeur supplémentaire, `manual`, qui n'est actuellement prise en charge par aucun navigateur. Lorsqu'elle sera implémentée, `manual` aura le même effet que `word-break: normal`, sauf que les césures ne seront pas automatiquement insérées dans les langues d'Asie du Sud-Est. Cela est nécessaire car, dans ces langues, les agents utilisateurs placent fréquemment des césures à des positions sous-optimales. `manual` permettra d'insérer manuellement des césures aux positions optimales.
+La spécification répertorie également une valeur supplémentaire, `manual`, qui n'est actuellement prise en charge par aucun navigateur. Lorsqu'elle est implémentée, `manual` a le même effet que `word-break: normal`, sauf que les césures ne sont pas automatiquement insérées dans les langues d'Asie du Sud-Est. C'est nécessaire car, dans ces langues, les agents utilisateurs placent fréquemment des césures à des positions sous-optimales. `manual` permet d'insérer manuellement des césures aux positions optimales.
 
 ## Définition formelle
 

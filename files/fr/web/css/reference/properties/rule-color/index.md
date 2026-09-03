@@ -3,12 +3,12 @@ title: Propriété CSS `rule-color`
 short-title: rule-color
 slug: Web/CSS/Reference/Properties/rule-color
 l10n:
-  sourceCommit: 343ab51426f9279175b8f71fff911621d0a7da20
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`rule-color`** définit les couleurs des lignes tracées entre les colonnes et les lignes dans les mises en page multi-colonnes, flexibles et en multi-colonnes, en réglant les couleurs des règles de colonne et de ligne sur la même valeur.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`rule-color`** définit les couleurs des lignes tracées entre les colonnes et les lignes dans les mises en page multi-colonnes, flexibles et en multi-colonnes, en réglant les couleurs des règles de colonne et de ligne sur la même valeur.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: rule-color")}}
 
@@ -386,11 +386,11 @@ La grille comporte 10 colonnes et 7 lignes, créant 9 gouttières de colonnes et
 
 Cet exemple montre l'utilisation de `auto`, au lieu d'un entier, dans la fonction `repeat()`.
 
-Nous utilisons le même HTML et CSS que dans les exemples précédents, mais remplaçons la valeur de `rule-color`. Ici, nous utilisons `repeat(auto, <color>)` pour définir toutes les lignes en noir presque transparent (`#0003`), sauf la première et la dernière, que nous définissons en `black`.
+Nous utilisons le même HTML et CSS que dans les exemples précédents, mais remplaçons la valeur de `rule-color`. Ici, nous utilisons `repeat(auto, <color>)` pour définir toutes les lignes en noir presque transparent (`#00000033`), sauf la première et la dernière, que nous définissons en `black`.
 
 ```css live-sample___auto
 ul {
-  rule-color: black, repeat(auto, #0003), black;
+  rule-color: black, repeat(auto, #00000033), black;
 }
 ```
 

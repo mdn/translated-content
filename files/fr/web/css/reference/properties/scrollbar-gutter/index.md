@@ -8,7 +8,7 @@ l10n:
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scrollbar-gutter`** permet aux auteur·ice·s de réserver de l'espace pour la barre de défilement, évitant ainsi les changements de mise en page indésirables lorsque le contenu augmente, tout en évitant les éléments visuels inutiles lorsque le défilement n'est pas nécessaire.
 
-_L'espace de la barre de défilement_ d'un élément est l'espace entre le bord intérieur de la bordure et le bord extérieur du padding, où le navigateur peut afficher une barre de défilement. Si aucune barre de défilement n'est présente, l'espace réservé sera peint comme une extension du padding.
+_L'espace de la barre de défilement_ d'un élément est l'espace entre le bord intérieur de la bordure et le bord extérieur du padding, où le navigateur peut afficher une barre de défilement. Si aucune barre de défilement n'est présente, l'espace réservé est peint comme une extension du padding.
 
 Le navigateur détermine si des barres de défilement _classiques_ ou _superposées_ sont utilisées&nbsp;:
 
@@ -38,9 +38,9 @@ scrollbar-gutter: unset;
 - `auto`
   - : La valeur initiale. Les barres de défilement classiques créent un espace réservé lorsque `overflow` est `scroll`, ou lorsque `overflow` est `auto` et que la boîte déborde. Les barres de défilement superposées ne consomment pas d'espace.
 - `stable`
-  - : Lors de l'utilisation de barres de défilement classiques, l'espace réservé sera présent si `overflow` est `auto`, `scroll` ou `hidden`, même si la boîte ne déborde pas. Lors de l'utilisation de barres de défilement superposées, l'espace réservé ne sera pas présent.
+  - : Lors de l'utilisation de barres de défilement classiques, l'espace réservé est présent si `overflow` est `auto`, `scroll` ou `hidden`, même si la boîte ne déborde pas. Lors de l'utilisation de barres de défilement superposées, l'espace réservé n'est pas présent.
 - `both-edges`
-  - : Si un espace réservé serait présent sur l'un des bords de début/fin en ligne de la boîte, un autre sera également présent sur le bord opposé.
+  - : Si un espace réservé est présent sur l'un des bords de début/fin en incise de la boîte, un autre est également présent sur le bord opposé.
 
 ## Définition formelle
 

@@ -30,17 +30,17 @@ unicode-bidi: unset;
 ### Valeurs
 
 - `normal`
-  - : L'élément n'offre pas de niveau d'intégration supplémentaire par rapport à l'algorithme bidirectionnel. Pour les éléments en ligne, le réordonnancement implicite fonctionne à travers les limites des éléments.
+  - : L'élément n'offre pas de niveau d'intégration supplémentaire par rapport à l'algorithme bidirectionnel. Pour les éléments en incise, la remise en ordre implicite fonctionne à travers les limites des éléments.
 - `embed`
-  - : Si l'élément est en ligne, cette valeur ouvre un niveau d'intégration supplémentaire par rapport à l'algorithme bidirectionnel. La direction de ce niveau d'intégration est donnée par la propriété {{CSSxRef("direction")}}.
+  - : Si l'élément est en incise, cette valeur ouvre un niveau d'intégration supplémentaire par rapport à l'algorithme bidirectionnel. La direction de ce niveau d'intégration est donnée par la propriété {{CSSxRef("direction")}}.
 - `bidi-override`
-  - : Pour les éléments en ligne, cela crée une substitution. Pour les éléments conteneurs de bloc, cela crée une substitution pour les descendants de niveau en ligne qui ne sont pas dans un autre élément conteneur de bloc. Cela signifie qu'à l'intérieur de l'élément, le réordonnancement se fait strictement selon la séquence définie par la propriété {{CSSxRef("direction")}}&nbsp;; la partie implicite de l'algorithme bidirectionnel est ignorée.
+  - : Pour les éléments en incise, cela crée une substitution. Pour les éléments conteneurs de bloc, cela crée une substitution pour les descendants de niveau en incise qui ne sont pas dans un autre élément conteneur de bloc. Cela signifie qu'à l'intérieur de l'élément, la remise en ordre se fait strictement selon la séquence définie par la propriété {{CSSxRef("direction")}}&nbsp;; la partie implicite de l'algorithme bidirectionnel est ignorée.
 - `isolate`
-  - : Ce mot-clé indique que la directionnalité du conteneur de l'élément doit être calculée sans tenir compte du contenu de cet élément. L'élément est donc _isolé_ de ses voisins. Lors de l'application de son algorithme de résolution bidirectionnelle, son élément conteneur le traite comme un ou plusieurs `U+FFFC Object Replacement Character`, c'est-à-dire comme une image.
+  - : Ce mot-clé indique que la direction du conteneur de l'élément doit être calculée sans tenir compte du contenu de cet élément. L'élément est donc _isolé_ de ses voisins. Lors de l'application de son algorithme de résolution bidirectionnelle, son élément conteneur le traite comme un ou plusieurs `U+FFFC Object Replacement Character`, c'est-à-dire comme une image.
 - `isolate-override`
   - : Ce mot-clé applique le comportement d'isolation du mot-clé `isolate` au contenu environnant et le comportement de substitution du mot-clé `bidi-override` au contenu interne.
 - `plaintext`
-  - : Ce mot-clé fait en sorte que la directionnalité des éléments soit calculée sans tenir compte de l'état bidirectionnel parent ou de la valeur de la propriété {{CSSxRef("direction")}}. La directionnalité est calculée en utilisant les règles P2 et P3 de l'algorithme bidirectionnel Unicode.
+  - : Ce mot-clé fait en sorte que la direction des éléments soit calculée sans tenir compte de l'état bidirectionnel parent ou de la valeur de la propriété {{CSSxRef("direction")}}. La direction est calculée en utilisant les règles P2 et P3 de l'algorithme bidirectionnel Unicode.
     Cette valeur permet l'affichage de données déjà formatées à l'aide d'un outil suivant l'algorithme bidirectionnel Unicode.
 
 ## Définition formelle

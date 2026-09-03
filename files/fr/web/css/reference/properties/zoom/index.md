@@ -12,7 +12,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`zoom`** peut être utilisée pour cont
 La propriété CSS `zoom` met à l'échelle l'élément ciblé, ce qui peut affecter la mise en page.
 Lors de la mise à l'échelle, l'élément zoomé est mis à l'échelle à partir du `haut` et du `centre` lorsqu'on utilise le {{CSSxRef("writing-mode")}} par défaut.
 
-En revanche, un élément mis à l'échelle à l'aide de {{CSSxRef("transform-function/scale", "scale()")}} ne provoque pas de recalcul de la mise en page ni ne déplace les autres éléments de la page.
+En revanche, un élément mis à l'échelle à l'aide de {{CSSxRef("transform-function/scale", "scale()")}} ne provoque pas de recalcule de la mise en page ni ne déplace les autres éléments de la page.
 Si l'utilisation de `scale()` rend le contenu plus grand que l'élément contenant, alors {{CSSxRef("overflow")}} entre en jeu.
 De plus, les éléments ajustés à l'aide de `scale()` sont transformés à partir du `centre` par défaut&nbsp;; cela peut être modifié avec la propriété CSS {{CSSxRef("transform-origin")}}.
 
@@ -128,13 +128,13 @@ Dans ce premier bloc HTML, un champ `select` est défini avec les différentes v
 </section>
 ```
 
-Dans ce deuxième bloc, un message **non pris en charge** est ajouté et sera masqué si le navigateur prend en charge `zoom`.
+Dans ce deuxième bloc, un message **non pris en charge** est ajouté et est masqué si le navigateur prend en charge `zoom`.
 
 ```html
 <p class="zoom-notice">Le zoom CSS n'est pas pris en charge</p>
 ```
 
-Le dernier bloc définit simplement le contenu qui sera zoomé.
+Le dernier bloc définit simplement le contenu qui est zoomé.
 
 ```html
 <section class="contenu">
@@ -180,7 +180,7 @@ html {
 }
 ```
 
-In this final CSS block we are checking to see if the browser supports `zoom` and if so setting the **not supported** message to `display: none;`.
+Dans ce dernier bloc CSS, nous vérifions si le navigateur prend en charge la propriété `zoom` et, si c'est le cas, nous définissons le message **n'est pas pris en charge** à `display: none;`.
 
 ```css
 @supports (zoom: 1) {

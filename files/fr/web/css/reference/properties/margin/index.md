@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`margin`** définit la [zone de marge](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_marge) sur les quatre côtés d'un élément.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`margin`** définit la [zone de marge](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_marge) sur les quatre côtés d'un élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: margin")}}
 
@@ -119,7 +119,7 @@ La propriété `margin` peut être définie avec une, deux, trois ou quatre vale
     - Pour les éléments positionnés par ancre, la fonction {{CSSxRef("anchor-size()")}} donne une longueur ({{CSSxRef("&lt;length&gt;")}}) relative à la largeur ou la hauteur de l'élément ancre associé (voir [Définir la marge d'un élément selon la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre)).
 
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille de la marge en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
+  - : La taille de la marge en pourcentage, relative à la taille en incise (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
 - `auto`
   - : Le navigateur choisit une marge adaptée. Par exemple, dans certains cas, cette valeur peut être utilisée pour centrer un élément.
 
@@ -127,7 +127,7 @@ La propriété `margin` peut être définie avec une, deux, trois ou quatre vale
 
 Cette propriété permet de définir une marge sur les quatre côtés d'un élément. Les marges créent un espace supplémentaire _autour_ d'un élément, contrairement à {{CSSxRef("padding")}}, qui crée un espace supplémentaire _à l'intérieur_ de l'élément.
 
-Les marges haute et basse n'ont aucun effet sur les éléments en ligne _non [remplacés](/fr/docs/Glossary/Replaced_elements)_, comme {{HTMLElement("span")}} ou {{HTMLElement("code")}}.
+Les marges haute et basse n'ont aucun effet sur les éléments en incise (<i lang="en">inline</i> en anglais) _qui n'est pas [remplacés](/fr/docs/Glossary/Replaced_elements)_, comme {{HTMLElement("span")}} ou {{HTMLElement("code")}}.
 
 ### Centrage horizontal
 

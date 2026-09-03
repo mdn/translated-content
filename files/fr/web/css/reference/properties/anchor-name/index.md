@@ -3,7 +3,7 @@ title: Propriété CSS `anchor-name`
 short-title: anchor-name
 slug: Web/CSS/Reference/Properties/anchor-name
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`anchor-name`** permet de définir un élément comme **élément d'ancre** en lui attribuant un ou plusieurs **noms d'ancre**. Chaque nom peut ensuite être utilisé comme valeur de la propriété {{CSSxRef("position-anchor")}} d'un élément positionné pour l'associer à l'ancre.
@@ -28,10 +28,10 @@ anchor-name: unset;
 
 ### Valeurs
 
-Cette propriété est définie comme un `<dashed-ident>` ou le mot-clé `none`&nbsp;:
+Cette propriété est définie comme une valeur unique de la liste suivante&nbsp;:
 
 - `none`
-  - : Valeur par défaut. Définir `anchor-name: none` sur un élément signifie qu'il n'est pas défini comme élément d'ancre. Si l'élément était précédemment défini comme ancre et associé à un élément positionné, définir `anchor-name: none` dissocie les deux.
+  - : Valeur par défaut. Définir `anchor-name: none` sur un élément signifie qu'il n'est pas défini comme élément d'ancre. Si l'élément est précédemment défini comme ancre et associé à un élément positionné, définir `anchor-name: none` dissocie les deux.
 
 - {{CSSxRef("&lt;dashed-ident&gt;")}}
   - : Un ou plusieurs identifiants personnalisés séparés par des virgules, définissant le ou les noms de l'ancre, qui peuvent ensuite être référencés dans une propriété {{CSSxRef("position-anchor")}}.
@@ -233,7 +233,7 @@ body {
 }
 ```
 
-Chacun des deux éléments positionnés est associé à l'élément d'ancre en définissant son nom d'ancre comme valeur de la propriété {{CSSxRef("position-anchor")}} de l'élément positionné. Les deux éléments reçoivent également la position `fixed`, ce qui en fait des **éléments positionnés par ancre**. Les éléments positionnés sont ensuite placés à différents endroits autour de l'ancre à l'aide d'une combinaison de propriétés d'encart comme ci-dessus et des propriétés {{CSSxRef("align-self")}} / {{CSSxRef("justify-self")}} avec la valeur `anchor-center`, alignant la boîte d'information au centre de l'ancre dans les directions en ligne et en bloc respectivement.
+Chacun des deux éléments positionnés est associé à l'élément d'ancre en définissant son nom d'ancre comme valeur de la propriété {{CSSxRef("position-anchor")}} de l'élément positionné. Les deux éléments reçoivent également la position `fixed`, ce qui en fait des **éléments positionnés par ancre**. Les éléments positionnés sont ensuite placés à différents endroits autour de l'ancre à l'aide d'une combinaison de propriétés d'encart comme ci-dessus et des propriétés {{CSSxRef("align-self")}} / {{CSSxRef("justify-self")}} avec la valeur `anchor-center`, alignant la boîte d'information au centre de l'ancre dans les directions en incise et en bloc respectivement.
 
 ```css hidden
 .boite-info {

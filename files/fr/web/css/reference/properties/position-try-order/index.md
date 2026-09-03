@@ -34,17 +34,17 @@ position-try-order: unset;
 La propriété `position-try-order` peut être définie soit avec la valeur clé `normal`, soit avec une `<try-size>`.
 
 - `normal`
-  - : La valeur par défaut. Aucune option de repli de position ne sera essayée lorsque l'élément est affiché pour la première fois.
+  - : La valeur par défaut. Aucune option de repli de position n'est essayée lorsque l'élément est affiché pour la première fois.
 - `<try-size>`
   - : Définit les différentes options de repli de taille, qui définissent les critères déterminant quelle option de repli doit être appliquée à l'élément positionné par ancre lorsqu'il est affiché pour la première fois. Les valeurs disponibles sont&nbsp;:
     - `most-height`
-      - : L'option de repli de position sera appliquée pour donner à l'élément contenant le plus de hauteur.
+      - : L'option de repli de position est appliquée pour donner à l'élément contenant le plus de hauteur.
     - `most-width`
-      - : L'option de repli de position sera appliquée pour donner à l'élément contenant le plus de largeur.
+      - : L'option de repli de position est appliquée pour donner à l'élément contenant le plus de largeur.
     - `most-block-size`
-      - : L'option de repli de position sera appliquée pour donner à l'élément contenant la plus grande taille dans la direction de bloc.
+      - : L'option de repli de position est appliquée pour donner à l'élément contenant la plus grande taille dans la direction de bloc.
     - `most-inline-size`
-      - : L'option de repli de position sera appliquée pour donner à l'élément contenant la plus grande taille dans la direction en ligne.
+      - : L'option de repli de position est appliquée pour donner à l'élément contenant la plus grande taille dans la direction en incise.
 
 ## Description
 
@@ -52,7 +52,7 @@ La propriété `position-try-order` a un objectif légèrement différent des au
 
 Le navigateur testera les options de repli de position disponibles pour déterminer laquelle offre le plus d'espace à l'élément positionné par ancre dans la dimension définie. Il appliquera ensuite cette option, remplaçant le style initial de l'élément.
 
-Si aucune option de repli de position n'est disponible offrant plus de largeur/hauteur que la position initiale assignée à l'élément, aucune option de repli de position ne sera appliquée. En effet, le comportement est comme si `position-try-order` était défini sur `normal`.
+Si aucune option de repli de position n'est disponible offrant plus de largeur/hauteur que la position initiale assignée à l'élément, aucune option de repli de position n'est appliquée. En effet, le comportement est comme si `position-try-order` était défini sur `normal`.
 
 Pour des informations détaillées sur les fonctionnalités d'ancrage et l'utilisation des options de repli de position, consultez le module [de positionnement des ancres CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [des options de repli et masquage conditionnel pour le débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
 
@@ -107,7 +107,7 @@ Le HTML inclut deux éléments HTML {{HTMLElement("div")}} qui deviendront une a
 
 #### CSS
 
-Dans le CSS, l'ancre reçoit un {{CSSxRef("anchor-name")}} et a une grande marge ({{CSSxRef("margin")}}) pour la positionner vers le centre supérieur de la fenêtre d'affichage&nbsp;:
+Dans le CSS, l'ancre reçoit un {{CSSxRef("anchor-name")}} et a une grande marge ({{CSSxRef("margin")}}) pour la positionner vers le centre supérieur de la zone d'affichage&nbsp;:
 
 ```css hidden
 .ancre {
