@@ -1,270 +1,246 @@
 ---
 title: Prototipos de objetos
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
-original_slug: Learn/JavaScript/Objects/Object_prototypes
+l10n:
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
-Los prototipos son un mecanismo mediante el cual los objetos en JavaScript heredan características entre sí. En este artículo, explicaremos como funcionan los prototipos y también cómo se pueden usar las propiedades de estos para añadir métodos a los contructores existentes.
+Los prototipos son el mecanismo mediante el cual los objetos de JavaScript heredan características entre sí. En este artículo, explicamos qué es un prototipo, cómo funcionan las cadenas de prototipos y cómo se puede establecer el prototipo de un objeto.
 
-| Prerrequisitios: | Conocer las funciones en Javascript, conocimientos básicos de Javascript (ver [Primeros Pasos](/es/docs/conflicting/Learn_web_development/Core/Scripting) y [Building blocks](/es/docs/Learn_web_development/Core/Scripting)) y Javascript orientado a Objetos (ver [Introducción a Objetos](/es/docs/Learn_web_development/Core/Scripting/Object_basics)). |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivo:        | Comprender los prototipos de objectos de Javascript, cómo funciona la cadena de prototype, y cómo añadir nuevos métodos a la propiedad prototype.                                                                                                                                                                                                           |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prerrequisitos:</th>
+      <td>
+        Estar familiarizado con los conceptos básicos de JavaScript
+        (especialmente
+        <a href="/es/docs/Learn_web_development/Core/Scripting/Object_basics">Fundamentos de objetos</a>).
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Resultados de aprendizaje:</th>
+      <td>
+        <ul>
+          <li>La cadena de prototipos de JavaScript.</li>
+          <li>El concepto de propiedades sombreadas (shadowing).</li>
+          <li>Establecer prototipos.</li>
+          <li>Los conceptos de prototipos y herencia.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## ¿Un lenguaje basado en prototipos?
+## La cadena de prototipos
 
-JavaScript es a menudo descrito como un **lenguaje basado en prototipos -** para proporcionar mecanismos de herencia, los objetos pueden tener un **objeto prototipo**, el cual actúa como un objeto plantilla que hereda métodos y propiedades.
-
-Un objeto prototipo del objeto puede tener a su vez otro objeto prototipo, el cual hereda métodos y propiedades, y así sucesivamente. Esto es conocido con frecuencia como la **cadena de prototipos**, y explica por qué objetos diferentes pueden tener disponibles propiedades y métodos definidos en otros objetos.
-
-Bien, para ser exactos, los métodos y propiedades son definidos en la propiedad `prototype`, que reside en la función constructora del objeto, no en la instancia misma del objeto.
-
-En JavaScript, se establece un enlace entre la instancia del objeto y su prototipo (su propiedad `__proto__`, la cual es derivada de la propiedad `prototype` sobre el constructor), y las propiedades y metodos son encontrados recorriendo la cadena de prototipos.
-
-**Nota:** Es importante entender que, tanto el prototipo de la instancia de un objeto (al cual se accede mediante [`Object.getPrototypeOf(obj)`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), o a través de la propiedad [`__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)) como el prototipo que contiene el constructor (que se encuentra en la propiedad `prototype` del constructor) hacen referencia al mismo objeto.
-
-Vamos a echar un vistazo a algunos ejemplos para intentar aclarar estos conceptos.
-
-## Entendiendo objectos prototipos
-
-Volvamos al ejemplo anterior en el que acabamos definiendo nuestro constructor `Person()` — cargue el ejemplo en su navegador. Si aún no lo tienes luego de haber trabajado el último artículo, usa nuestro ejemplo oojs-class-further-exercises.html (vea también el [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)).
-
-En este ejemplo, hemos definido una función constructor, así:
-
-```js
-function Persona(nombre, apellido, edad, genero, intereses) {
-  // definiendo de propiedades y métodos
-  this.first = first;
-  this.last = last;
-  //...
-}
-```
-
-Entonces hemos creado una instancia de un objeto como este:
+En la consola del navegador, intenta crear un objeto literal:
 
 ```js
-var person1 = new Persona("Bob", "Smith", 32, "hombre", ["music", "skiing"]);
+const myObject = {
+  city: "Madrid",
+  greet() {
+    console.log(`Saludos desde ${this.city}`);
+  },
+};
+
+myObject.greet(); // Saludos desde Madrid
 ```
 
-Si escribe "person1." en su consola JavaScript, debería ver que el navegador intenta completarlo automáticamente con los nombres de miembro disponibles en este objeto:
+Este es un objeto con una propiedad de datos, `city`, y un método, `greet()`. Si escribes el nombre del objeto _seguido de un punto_ en la consola, como `myObject.`, la consola mostrará una lista de todas las propiedades disponibles para este objeto. Verás que, además de `city` y `greet`, ¡hay muchas otras propiedades!
 
-![](object-available-members.png)
+```plain
+__defineGetter__
+__defineSetter__
+__lookupGetter__
+__lookupSetter__
+__proto__
+city
+constructor
+greet
+hasOwnProperty
+isPrototypeOf
+propertyIsEnumerable
+toLocaleString
+toString
+valueOf
+```
 
-En esta lista, podra ver los miembros definidos en el objeto prototipo de person1, que es la Persona() (Persona() es el constructor) - nombre, edad, género, intereses, biografía y saludos. Sin embargo, también verá algunos otros miembros - watch, valueOf, etc - que están definidos en el objeto prototipo de Persona() 's, que es un Objeto (Object). Esto demuestra que el prototipo cadena funciona.
-
-![](mdn-graphics-person-person-object-2.png)
-
-Entonces, ¿qué sucede si llama a un método en `person1`, que está definido en `Object`? Por ejemplo:
+Prueba acceder a una de ellas:
 
 ```js
-person1.valueOf();
+myObject.toString(); // "[object Object]"
 ```
 
-Este método [valueOf()](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) simplemente retornará el valor del objeto sobre el que se llama - ¡pruébalo y verás! En este caso, lo que pasa es que:
+Funciona (aunque no sea obvio qué hace `toString()`).
 
-- El navegador comprueba inicialmente si el objeto person1 tiene un método valueOf() disponible en él.
-- Si no lo hace, entonces el navegador comprueba si el objeto prototipo del objeto person1 (el prototipo del constructor de Persona()) tiene un método valueOf() disponible en él.
-- Si tampoco lo hace, entonces el navegador comprueba si el objeto prototipo del objeto prototipo del constructor Persona() (Objeto() prototipo del objeto prototipo del constructor) tiene un método valueOf() disponible en él. Lo hace, así que es llamado, y todo funciona!
+¿Qué son estas propiedades adicionales y de dónde vienen?
+
+Todo objeto en JavaScript tiene una propiedad incorporada, llamada su **prototipo**. El prototipo es en sí mismo un objeto, por lo que el prototipo tendrá su propio prototipo, formando lo que se conoce como una **cadena de prototipos**. La cadena termina cuando llegamos a un prototipo que tiene `null` como su propio prototipo.
 
 > [!NOTE]
-> Queremos reiterar que los métodos y propiedades no se copian de un objeto a otro en la cadena del prototipo. Ellos son accedidos subiendo por la cadena como se ha descrito anteriormente.
+> La propiedad de un objeto que apunta a su prototipo **no** se llama `prototype`. Su nombre no está estandarizado, pero en la práctica todos los navegadores usan [`__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto). La forma estándar de acceder al prototipo de un objeto es el método {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}}.
 
-> [!NOTE]
-> No existe oficialmente una forma de acceder directamente al objeto prototipo de un objeto - los "enlaces" entre los elementos de la cadena están definidos en una propiedad interna, denominada \[\[prototipo]] en la especificación del lenguaje JavaScript (ver {{glossary("ECMAScript")}}).
->
-> La mayoría de los navegadores modernos, sin embargo, ofrecen una propiedad disponible llamada \_\_proto\_\_ (es decir, 2 subrayados en cada lado), que contiene el objeto prototipo del constructor del objeto. Por ejemplo, pruebe person1.\_\_proto\_\_ y person1.\_\_proto\_\_.\_\_proto\_\_ para ver cómo se ve la cadena en código!
->
-> Desde ECMAScript 2015 se puede acceder indirectamente al objeto prototipo de un objeto mediante Object.getPrototypeOf(obj).
+Cuando intentas acceder a una propiedad de un objeto: si la propiedad no se encuentra en el objeto mismo, se busca en el prototipo. Si aún no se encuentra, se busca en el prototipo del prototipo, y así sucesivamente hasta que se encuentre la propiedad o se llegue al final de la cadena, en cuyo caso se devuelve `undefined`.
 
-## La propiedad prototype: Donde se definen los miembros hereditarios
+Entonces, cuando llamamos a `myObject.toString()`, el navegador:
 
-Entonces, ¿dónde se definen las propiedades y métodos heredados? Si miras la página de referencia de `Object`, verás en la parte izquierda un gran número de propiedades y métodos - muchos más que el número de miembros heredados que vimos disponibles en el objeto `person1`. Algunos son heredados y otros no, ¿por qué?
+- busca `toString` en `myObject`
+- no lo encuentra ahí, así que busca `toString` en el objeto prototipo de `myObject`
+- lo encuentra ahí, y lo llama.
 
-La respuesta es que los heredados son los que están definidos en la propiedad `prototype` (podría llamarse subespacio de nombres), es decir, los que empiezan con `Object.prototype`, y no los que empiezan sólo con `Object`. El valor de la propiedad del prototipo es un objeto, que es básicamente un repositorio(bucket) para almacenar propiedades y métodos que queremos que sean heredados por los objetos más abajo en la cadena del prototipo.
-
-Así que `Object.prototype.watch()`, `Object.prototype.valueOf()`, etc., están disponibles para cualquier tipo de objeto que herede de `Object.prototype`, incluyendo nuevas instancias de objeto creadas desde el constructor.
-
-[`Object.is()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is), [`Object.keys()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), y otros miembros no definidos dentro del prototipo del repositorio(bucket) no son heredados por instancias de objeto o tipos de objeto que heredan de Object.prototype. Sino que son métodos/propiedades disponibles sólo en el propio constructor Object().
-
-> [!NOTE]
-> Esto parece extraño - ¿cómo se puede tener un método definido en un constructor, que en sí mismo es una función? Bueno, una función es también un tipo de objeto - vea la referencia del constructor de Function() si no nos cree.
-
-1. Puede comprobar las propiedades de los prototipos existentes - vuelva a nuestro ejemplo anterior e intente introducir lo siguiente en la consola JavaScript:
-
-   ```js
-   Person.prototype;
-   ```
-
-2. El resultado no le mostrará mucho - después de todo, no hemos definido nada en el prototipo de nuestro constructor personalizado! Por defecto, el prototipo de un constructor siempre comienza vacío. Ahora intente lo siguiente:
-
-   ```js
-   Object.prototype;
-   ```
-
-Verá un gran número de métodos definidos en la propiedad Prototype de Object, que están disponibles en los objetos que heredan de Object, como se ha mostrado anteriormente.
-
-Verá otros ejemplos de herencia de cadena de prototipos en todo JavaScript - intente buscar los métodos y propiedades definidas en el prototipo de los objetos globales String, Date, Number y Array, por ejemplo. Todos ellos tienen un número de miembros definidos en su prototipo, por lo que, por ejemplo, cuando se crea una cadena, como ésta:
+¿Cuál es el prototipo de `myObject`? Para averiguarlo, podemos usar la función `Object.getPrototypeOf()`:
 
 ```js
-var myString = "Esto es mi String.";
+Object.getPrototypeOf(myObject); // Object { }
 ```
 
-`myString` inmediatamente tiene una serie de métodos útiles disponibles en él, como [`split()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
+Este es un objeto llamado `Object.prototype`, y es el prototipo más básico, que todos los objetos tienen por defecto. El prototipo de `Object.prototype` es `null`, por lo que se encuentra al final de la cadena de prototipos:
 
-> [!WARNING]
-> **Importante**: La propiedad `prototype` es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this` apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype` es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
+![Cadena de prototipos para myObject](myobject-prototype-chain.svg)
 
-## Revisando create()
-
-Anteriormente mostramos cómo [`Object.create()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/create) crea una nueva instancia de objeto.
-
-1. Por ejemplo, pruebe esto en la consola JavaScript de su ejemplo anterior:
-
-   ```js
-   var person2 = Object.create(person1);
-   ```
-
-2. Lo que hace create() es crear un nuevo objeto a partir de un objeto prototipo específico. Aquí, la person2 se crea utilizando la person1 como objeto prototipo. Puede comprobarlo introduciendo lo siguiente en la consola:
-
-   ```js
-   person2.__proto__;
-   ```
-
-Esto devolverá el objeto Persona.
-
-## La propiedad constructor
-
-Cada función de constructor tiene una propiedad `prototype` cuyo valor es un objeto que contiene una propiedad `constructor`. Esta propiedad `constructor` apunta a la función constructor original.
-
-Como verá en la siguiente sección, las propiedades definidas en la propiedad Person.prototype (o en general en la propiedad `prototype` de una función de constructor, que es un objeto, como se mencionó en la sección anterior) se hacen disponibles a todas las instancias de objetos creadas utilizando el constructor `Person()`. Por lo tanto, la propiedad del constructor también está disponible tanto para los objetos `person1` como para los objetos `person2`.
-
-1. Por ejemplo, pruebe estos comandos en la consola:
-
-   ```js
-   person1.constructor;
-   person2.constructor;
-   ```
-
-   Ambos deberían devolver el constructor `Person()`, ya que contienen la definición original de esas instancias.
-
-   Un truco interesante es que se puede añadir paréntesis al final de la propiedad `constructor` (añadiendo todos los parámetros requeridos) para crear otra instancia desde ese constructor. Después de todo, el constructor es una función, por lo que puede ser invocada usando paréntesis; solamente se necesita incluir la palabra clave `new` para especificar que se quiere usar la función como un constructor.
-
-2. Inténtese esto en la consola:
-
-   ```js
-   let person3 = new person1.constructor("Karen", "Stephenson", 26, "female", [
-     "playing drums",
-     "mountain climbing",
-   ]);
-   ```
-
-3. Ahora intente acceder a las características del nuevo objeto, como:
-
-   ```js
-   person3.name.first;
-   person3.age;
-   person3.bio();
-   ```
-
-Esto funciona. No se necesita usarlo con frecuencia, pero puede ser realmente útil cuando se quiera crear una instancia nueva y por alguna razón no se tenga disponible fácilmente una referencia al constructor original.
-
-La propiedad [`constructor`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) tiene otros usos. Por ejemplo, si se tiene una instancia y se quiere devolver el nombre del que el constructor es una instancia, se puede usar lo siguiente:
+El prototipo de un objeto no siempre es `Object.prototype`. Prueba esto:
 
 ```js
-instanceName.constructor.name;
+const myDate = new Date();
+let object = myDate;
+
+do {
+  object = Object.getPrototypeOf(object);
+  console.log(object);
+} while (object);
+
+// Date.prototype
+// Object { }
+// null
 ```
 
-Intente esto, por ejemplo:
+Este código crea un objeto `Date`, y luego recorre la cadena de prototipos, mostrando cada uno en la consola. Esto nos muestra que el prototipo de `myDate` es un objeto `Date.prototype`, y el prototipo de _ese_ es `Object.prototype`.
+
+![Cadena de prototipos para myDate](mydate-prototype-chain.svg)
+
+De hecho, cuando llamas a métodos conocidos, como `myDate2.getTime()`,
+estás llamando a un método que está definido en `Date.prototype`.
+
+## Propiedades sombreadas (shadowing)
+
+¿Qué sucede si defines una propiedad en un objeto, cuando ya existe una propiedad con el mismo nombre en el prototipo del objeto? Veamos:
 
 ```js
-person1.constructor.name;
+const myDate = new Date(1995, 11, 17);
+
+console.log(myDate.getTime()); // 819129600000
+
+myDate.getTime = function () {
+  console.log("¡algo distinto!");
+};
+
+myDate.getTime(); // '¡algo distinto!'
 ```
 
-> [!NOTE]
-> El valor de `constructor.name` puede cambiar (debido a herencia de prototipos, binding, preprocesores, transpiladores, etc.), por lo que para ejemplos más complejos es preferible usar el operador [`instanceof`](/es/docs/Web/JavaScript/Reference/Operators/instanceof) en su lugar.
+Esto debería ser predecible, dada la descripción de la cadena de prototipos. Cuando llamamos a `getTime()`, el navegador primero busca en `myDate` una propiedad con ese nombre, y solo revisa el prototipo si `myDate` no la define. Entonces, al agregar `getTime()` a `myDate`, se llama a la versión definida en `myDate`.
 
-## Modificando prototipos
+A esto se le llama "sombrear" (shadowing) la propiedad.
 
-Vamos a echar un vistazo a un ejemplo para modificar la propiedad `prototype` de una función constructor (los métodos añadidos a la propiedad prototipo están disponibles en todas las instancias de los objetos creados a partir del constructor).
+## Establecer un prototipo
 
-1. Regresemos a nuestro ejemplo [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) y creemos una copia local del [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Debajo del código JavaScript existente, agrega el siguiente código, el cuál añade un nuevo método a la propiedad `prototype` del constructor:
+Existen varias formas de establecer el prototipo de un objeto en JavaScript, y aquí describiremos dos: `Object.create()` y los constructores.
 
-   ```js
-   Person.prototype.farewell = function () {
-     alert(this.name.first + " ha dejado el edificio. ¡Adiós por ahora!");
-   };
-   ```
+### Usando Object.create
 
-2. Guarda el código y abre la página en el navegador, e ingresa lo siguiente en la entrada de texto.
+El método `Object.create()` crea un nuevo objeto y te permite especificar un objeto que se usará como el prototipo del nuevo objeto.
 
-   ```js
-   person1.farewell();
-   ```
-
-Deberías obtener un mensaje de alerta mostrando el nombre de la persona como se define dentro del constructor. Esto es realmente útil, pero lo que es más útil es que toda la cadena de herencia se ha actualizado dinámicamente; automáticamente hace que este nuevo método esté disponible en todas las instancias del objeto creadas desde el constructor
-
-Piensa sobre esto por un momento. En nuestro código definimos el constructor, luego creamos una insancia del objeto desde el constructor, después agregamos un nuevo método a el prototipo del constructor.
+Aquí hay un ejemplo:
 
 ```js
-function Person(first, last, age, gender, interests) {
+const personPrototype = {
+  greet() {
+    console.log("hello!");
+  },
+};
 
-  // definiciones de propiedades y métodos
+const carl = Object.create(personPrototype);
+carl.greet(); // hello!
+```
 
+Aquí creamos un objeto `personPrototype`, que tiene un método `greet()`. Luego usamos `Object.create()` para crear un nuevo objeto con `personPrototype` como su prototipo. Ahora podemos llamar a `greet()` en el nuevo objeto, y el prototipo proporciona su implementación.
+
+### Usando un constructor
+
+En JavaScript, todas las funciones tienen una propiedad llamada `prototype`. Cuando llamas a una función como constructor, esta propiedad se establece como el prototipo del objeto recién creado (por convención, en la propiedad llamada `__proto__`).
+
+Entonces, si establecemos el `prototype` de un constructor, podemos asegurarnos de que todos los objetos creados con ese constructor reciban ese prototipo:
+
+```js
+const personPrototype = {
+  greet() {
+    console.log(`hello, my name is ${this.name}!`);
+  },
+};
+
+function Person(name) {
+  this.name = name;
 }
 
-var person1 = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'kickboxing']);
-
-Person.prototype.farewell = function() {
-  alert(this.name.first + ' ha dejado el edificio. ¡Adiós por ahora!');
-};.
+Object.assign(Person.prototype, personPrototype);
+// or
+// Person.prototype.greet = personPrototype.greet;
 ```
 
-Pero el método `farewell()` aún se encuentra disponible en la instancia `person1`, su funcionalidad disponible ha sido automáticamente actualizada incluído en método recién definido `farewell()`.
+Aquí creamos:
+
+- un objeto `personPrototype`, que tiene un método `greet()`
+- una función constructora `Person()` que inicializa el nombre de la persona que se va a crear.
+
+Luego colocamos los métodos definidos en `personPrototype` en la propiedad `prototype` de la función `Person` usando [`Object.assign`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign).
+
+Después de este código, los objetos creados usando `Person()` tendrán `Person.prototype` como su prototipo, el cual contiene automáticamente el método `greet`.
+
+```js
+const reuben = new Person("Reuben");
+reuben.greet(); // hello, my name is Reuben!
+```
+
+Esto también explica por qué dijimos antes que el prototipo de `myDate` se llama `Date.prototype`: es la propiedad `prototype` del constructor `Date`.
+
+### Propiedades propias
+
+Los objetos que creamos usando el constructor `Person` de arriba tienen dos propiedades:
+
+- una propiedad `name`, que se establece en el constructor, por lo que aparece directamente en los objetos `Person`
+- un método `greet()`, que se establece en el prototipo.
+
+Es común ver este patrón, en el que los métodos se definen en el prototipo, pero las propiedades de datos se definen en el constructor. Esto se debe a que los métodos suelen ser los mismos para cada objeto que creamos, mientras que normalmente queremos que cada objeto tenga su propio valor para sus propiedades de datos (tal como aquí, donde cada persona tiene un nombre diferente).
+
+Las propiedades que se definen directamente en el objeto, como `name` aquí, se llaman **propiedades propias**, y puedes verificar si una propiedad es una propiedad propia usando el método estático {{jsxref("Object/hasOwn", "Object.hasOwn()")}}:
+
+```js
+const irma = new Person("Irma");
+
+console.log(Object.hasOwn(irma, "name")); // true
+console.log(Object.hasOwn(irma, "greet")); // false
+```
 
 > [!NOTE]
-> Si estás teniendo problemas haciendo funcionar este ejemplo, echa un vistazo en nuestro ejemplo [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) ([míralo ejecutarse en tiempo real](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)).
+> También puedes usar el método no estático {{jsxref("Object/hasOwnProperty", "Object.hasOwnProperty()")}} aquí, pero te recomendamos usar `Object.hasOwn()` si puedes.
 
-Raramente verás propiedades definidas en la propiedad `prototype`, ya no son muy flexibles cuando son definidas de esta forma. Por ejemplo, puedes añadir una propiedad como esta:
+## Prototipos y herencia
 
-```js
-Person.prototype.fullName = "Bob Smith";
-```
+Los prototipos son una característica poderosa y muy flexible de JavaScript, que hace posible reutilizar código y combinar objetos.
 
-Esto no es muy flexible, ya que la persona podría no llamarse así. Sería mucho mejor construir `fullname` desde `name.first` y `name.last`.
+En particular, permiten una forma de **herencia**. La herencia es una característica de los lenguajes de programación orientados a objetos que permite a los programadores expresar la idea de que algunos objetos en un sistema son versiones más especializadas de otros objetos.
 
-```js
-Person.prototype.fullName = this.name.first + " " + this.name.last;
-```
+Por ejemplo, si estamos modelando una escuela, podríamos tener _profesores_ y _estudiantes_: ambos son _personas_, por lo que tienen algunas características en común (por ejemplo, ambos tienen nombres), pero cada uno podría agregar características adicionales (por ejemplo, los profesores tienen una materia que enseñan), o podría implementar la misma característica de forma diferente. En un sistema OOP podríamos decir que tanto los profesores como los estudiantes **heredan de** personas.
 
-Sin embargo esto no funciona, ya que `this` estará referenciando al scope global en este caso, no al scope de la función. Llamar esta propiedad retornaría `undefined undefined`. Esto funcionó bien en el método que declaramos anteriormente dentro del prototipo, porque se encuentra dentro del scope de la función, que se transferirá con éxito al scope de la instancia del objeto.Así que deberías definir propiedades constantes en el prototipo (p.e. una que nunca necesite cambiar), pero generalmente funciona mejor definir propiedades dentro del constructor.
+Puedes ver cómo en JavaScript, si los objetos `Professor` y `Student` pueden tener prototipos `Person`, entonces pueden heredar las propiedades comunes, mientras agregan y redefinen aquellas propiedades que necesitan ser diferentes.
 
-De hecho, un patrón bastante común para la mayoría de definiciones de objetos es declarar las propiedades dentro del constructor, y los métodos en el prototipo. Esto hace el código más fácil de leer, ya que el constructor sólo contiene las definiciones de propiedades, y los métodos están en bloques separados. Por ejemplo:
-
-```js
-// Constructor con definiciones de propiedades
-
-function Test(a, b, c, d) {
-  // definiciones de propiedad
-}
-
-// Definición del primer método
-
-Test.prototype.x = function() { ... };
-
-// Definición del segundo método
-
-Test.prototype.y = function() { ... };
-
-// etc.
-```
-
-Este patrón puede verse en acción en el ejemplo de la [aplicación de planificador escolar](https://github.com/zalun/school-plan-app/blob/master/stage9/js/index.js) de Piotr Zalewa.
+En el próximo artículo hablaremos sobre la herencia junto con las otras características principales de los lenguajes de programación orientados a objetos, y veremos cómo JavaScript las soporta.
 
 ## Resumen
 
-Este articulo ha cubierto prototipos de objeto JavaScript, incluyendo como las cadenas de objeto prototipo permiten a los objetos heredar caracteristicas de una a otra, la propiedad prototipo y como puede ser usado para agregar metodos a los constructores, y otros temas relacionados.
+Este artículo ha cubierto los prototipos de objetos en JavaScript, incluyendo cómo las cadenas de objetos prototipo permiten que los objetos hereden características entre sí, la propiedad `prototype` y cómo se puede usar para agregar métodos a los constructores, y otros temas relacionados.
 
-En el proximos articulo vamos a ver como puedes implementar la herencia de funcionalidades entre dos de tus propios objetos personalizados.
+En el próximo artículo veremos los conceptos que sustentan la programación orientada a objetos.
 
-{{PreviousMenuNext("conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
