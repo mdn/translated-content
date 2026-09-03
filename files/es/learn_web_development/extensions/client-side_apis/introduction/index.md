@@ -115,10 +115,12 @@ Entonces, ¿cómo interactúan estos objetos? Si observas nuestro [ejemplo senci
 ```html
 <audio src="outfoxing.mp3"></audio>
 
-<button class="paused">Play</button>
+<button class="paused">Reproducir</button>
 <br />
 <input type="range" min="0" max="1" step="0.01" value="1" class="volume" />
 ```
+
+Primero que todo, incluimos un elemento `<audio>` con el que incrustamos un MP3 en la página. No incluimos ningún control predeterminado del navegador. Después incluimos un {{htmlelement("button")}} que usaremos para reproducir y detener la música, y un elemento {{htmlelement("input")}} de tipo range, que usaremos para ajustar el volumen de la pista mientras se reproduce.
 
 A continuación, veamos el JavaScript de este ejemplo.
 
@@ -152,19 +154,19 @@ playBtn.addEventListener("click", () => {
   if (playBtn.getAttribute("class") === "paused") {
     audioElement.play();
     playBtn.setAttribute("class", "playing");
-    playBtn.textContent = "Pause";
+    playBtn.textContent = "Pausar";
     // si la pista se está reproduciendo, detenerla
   } else if (playBtn.getAttribute("class") === "playing") {
     audioElement.pause();
     playBtn.setAttribute("class", "paused");
-    playBtn.textContent = "Play";
+    playBtn.textContent = "Reproducir";
   }
 });
 
 // si la pista termina
 audioElement.addEventListener("ended", () => {
   playBtn.setAttribute("class", "paused");
-  playBtn.textContent = "Play";
+  playBtn.textContent = "Reproducir";
 });
 ```
 
@@ -244,19 +246,19 @@ playBtn.addEventListener("click", () => {
   if (playBtn.getAttribute("class") === "paused") {
     audioElement.play();
     playBtn.setAttribute("class", "playing");
-    playBtn.textContent = "Pause";
+    playBtn.textContent = "Pausar";
     // si la pista se está reproduciendo, detenerla
   } else if (playBtn.getAttribute("class") === "playing") {
     audioElement.pause();
     playBtn.setAttribute("class", "paused");
-    playBtn.textContent = "Play";
+    playBtn.textContent = "Reproducir";
   }
 });
 
 // si la pista termina
 audioElement.addEventListener("ended", () => {
   playBtn.setAttribute("class", "paused");
-  playBtn.textContent = "Play";
+  playBtn.textContent = "Reproducir";
 });
 ```
 
