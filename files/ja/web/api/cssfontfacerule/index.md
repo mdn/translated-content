@@ -2,7 +2,7 @@
 title: CSSFontFaceRule
 slug: Web/API/CSSFontFaceRule
 l10n:
-  sourceCommit: 1f45194268a7faa26018599925e95cfa19986f19
+  sourceCommit: 4fb9722796c7e24041ec7f4060d5da19d4e8c404
 ---
 
 {{APIRef("CSSOM")}}
