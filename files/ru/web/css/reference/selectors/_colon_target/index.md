@@ -77,7 +77,7 @@ p:target::before {
   margin-right: 0.25em;
 }
 
-/* Стиль italic-элементов без target-элемента */
+/* Стилизация курсивных элементов внутри целевого элемента */
 p:target i {
   color: red;
 }
