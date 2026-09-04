@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Window")}}{{Non-standard_Header}}
 
 **`vrdisplayactivate`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のイベントで、 VR ディスプレイが表示可能になったときに発生します。例えば、 HMD がスタンバイ状態から移行した場合、あるいは装着されて起動した場合など、表示することが可能な状態になったときです。
 

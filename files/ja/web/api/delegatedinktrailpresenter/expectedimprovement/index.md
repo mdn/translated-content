@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
 
-{{APIRef("Ink API")}}{{Deprecated_header}}{{Non-Standard_Header}}
+{{APIRef("Ink API")}}{{Non-Standard_Header}}
 
 **`expectedImprovement`** は {{domxref("DelegatedInkTrailPresenter")}} インターフェイスの読み取り専用プロパティで、このプレゼンターを使用することで期待できる遅延の改善をミリ秒単位で返します。
 

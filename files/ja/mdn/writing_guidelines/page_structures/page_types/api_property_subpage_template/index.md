@@ -73,7 +73,7 @@ l10n:
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 **`NameOfTheProperty`** は \{{domxref("NameOfTheParentInterface")}} インターフェイスの[読み取り専用]プロパティで、 _\<その動作の簡潔な概要を提供します\>_。
 

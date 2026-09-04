@@ -6,7 +6,7 @@ l10n:
   sourceCommit: dd193edd475b51b9f4622a4e849459692115553b
 ---
 
-{{ APIRef("Web Audio API") }} {{deprecated_header}}
+{{ APIRef("Web Audio API") }}
 
 `setPosition()` は {{ domxref("AudioListener") }} インターフェイスのメソッドで、聞き手の位置を定義します。
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 21d3e89589aaf9e5cfa667de679134513ab833f3
 ---
 
-{{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Service Workers API")}}{{Non-standard_Header}}
 
 {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} ハンドラーに引数として渡される `InstallEvent` インターフェイスは、{{domxref("ServiceWorkerGlobalScope")}} の {{domxref("ServiceWorker")}} で配信されるインストールアクションを表します。{{domxref("ExtendableEvent")}} の子として、{{domxref("FetchEvent")}} のような機能イベントがインストール中に配信されないようにします。
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 **`PaymentAddress`** は[決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) のインターフェイスで、配送先または支払い先住所情報を保存するために使用されます。
 

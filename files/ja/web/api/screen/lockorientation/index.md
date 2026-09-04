@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
-{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
+{{APIRef("Screen Orientation API")}}
 
 **`lockOrientation()`** は {{DOMxRef("Screen")}} インターフェイスのメソッドで、画面を特定の方向にロックします。
 

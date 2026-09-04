@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}
+{{APIRef("CSSOM")}}
 
 **`removeListener()`** は {{DOMxRef("MediaQueryList")}} インターフェイスのメソッドで、 `MediaQueryListener` からリスナーを除去します。
 

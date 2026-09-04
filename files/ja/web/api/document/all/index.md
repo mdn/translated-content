@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 {{DOMxRef("Document")}} インターフェイスの **`all`** プロパティは読み取り専用で、この文書ノードをルートとした {{DOMxRef("HTMLAllCollection")}} を返します。
 

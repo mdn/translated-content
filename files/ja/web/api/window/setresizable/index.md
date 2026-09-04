@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ffff697fbd3004c3da50323ef4d868b3ad47e4d0
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}} {{non-standard_header}}
 
 このメソッドは何も実行しません。単なる非実行分です。Netscape 4.x との互換性を維持するためだけに存在しています。
 

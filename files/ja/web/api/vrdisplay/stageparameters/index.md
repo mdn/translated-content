@@ -3,7 +3,7 @@ title: VRDisplay.stageParameters
 slug: Web/API/VRDisplay/stageParameters
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`stageParameters`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` がルームスケール体験をサポートしている場合に、ルームスケールパラメーターを持つ {{domxref("VRStageParameters")}} オブジェクトを返します．
 

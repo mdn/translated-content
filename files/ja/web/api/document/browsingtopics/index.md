@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0c906f7f464d8ff632baf8d25fa63eed3f03b632
 ---
 
-{{APIRef("Topics API")}}{{non-standard_header}}{{deprecated_header}}
+{{APIRef("Topics API")}}{{non-standard_header}}
 
 > [!WARNING]
 > この機能は現在2つのブラウザーベンダーによって反対されています。反対の詳細については下記の[標準の位置づけ](/ja/docs/Web/API/Topics_API#standards_positions)の節を参照してください。

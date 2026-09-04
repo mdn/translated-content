@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
+{{non-standard_header}}{{ APIRef("DOM") }}
 
 mousedown イベントの処理中にこのメソッドを呼び出すと、マウスボタンが離されるか {{domxref("document.releaseCapture()")}} が呼び出されるまで、この要素にすべてのマウスイベントを捕捉します。
 

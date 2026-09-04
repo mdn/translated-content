@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("WebVR API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 **`activeVRDisplays`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、すべての {{domxref("VRDisplay")}} オブジェクトのうち、現在表示中 ({{domxref("VRDisplay.ispresenting")}} が `true`) のものを含んだ配列を返します。
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 816cc4d4a5a318a23222946b6981bb92b499aebb
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 **`longDesc`** は {{domxref("HTMLImageElement")}} インターフェイスの*非推奨の*プロパティで、この画像の長い説明のテキストまたは HTML ファイルの URL を指定します。これは、[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性で提供される短い説明の他に、オプションで追加された詳細を提供するために使用することができます。
 

@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}
-
 **`small()`** は {{jsxref("String")}} 値のメソッドで、この文字列を {{HTMLElement("small")}} 要素に埋め込んだ文字列 (`<small>str</small>`) を生成し、この文字列が小さなフォントで表示されるようにします。
 
 > [!NOTE]

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Window")}}{{Non-standard_Header}}
 
 **`vrdisplaydeactivate`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のイベントで、 HMD が一定時間使用されないためにスタンバイまたはスリープモードになった場合など、VR ディスプレイを表示することができなくなったときに発行されます。
 

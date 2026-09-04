@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{APIRef("Payment Request API")}}{{Non-standard_header}}
 
 **`shippingType`** は {{domxref("PaymentRequest")}} インターフェイスの読み取り専用プロパティで、`"shipping"`、`"delivery"`、`"pickup"` の何れか、またはコンストラクターで提供されていなかった場合は `null` を返します。
 

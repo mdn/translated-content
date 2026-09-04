@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}
+{{APIRef("CSSOM")}}
 
 **`addListener()`** は {{DOMxRef("MediaQueryList")}} インターフェイスの非推奨のメソッドで、メディアクエリー状態の変化に応答して独自のコールバック関数を実行するリスナーを `MediaQueryListener` に追加します。
 
