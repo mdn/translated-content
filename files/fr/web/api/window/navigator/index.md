@@ -3,10 +3,10 @@ title: "Window : propriété navigator"
 short-title: navigator
 slug: Web/API/Window/navigator
 l10n:
-  sourceCommit: f2dc3d5367203c860cf1a71ce0e972f018523849
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 La propriété en lecture seule **`navigator`** de l'interface {{DOMxRef("Window")}} retourne une référence à l'objet {{DOMxRef("Navigator")}}, qui possède des méthodes et des propriétés concernant l'application exécutant le script.
 

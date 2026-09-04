@@ -2,7 +2,7 @@
 title: Évènements de pointeur
 slug: Web/API/Pointer_events
 l10n:
-  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
+  sourceCommit: a69f7c732da7be334fc2c679c5cb9484baf79ba9
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
