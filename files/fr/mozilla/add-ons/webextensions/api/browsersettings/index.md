@@ -3,7 +3,7 @@ title: browserSettings
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings
 ---
 
-{{AddonSidebar}}Permet à une extension de modifier certaines paramètres globaux du navigateur. Chaque propriété de cette API est un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}}, fournissant la possibilité de modifier un paramètre particulier.Parce que ce sont les paramètres globaux, il est possible d'étendre les conflits des extensions. voir la documentation de [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) pour plus détails sur la façon dont les conflits sont traités.
+Permet à une extension de modifier certaines paramètres globaux du navigateur. Chaque propriété de cette API est un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}}, fournissant la possibilité de modifier un paramètre particulier.Parce que ce sont les paramètres globaux, il est possible d'étendre les conflits des extensions. voir la documentation de [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) pour plus détails sur la façon dont les conflits sont traités.
 
 Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "browserSettings".
 

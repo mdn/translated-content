@@ -3,7 +3,7 @@ title: runtime.onBrowserUpdateAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onBrowserUpdateAvailable
 ---
 
-{{AddonSidebar}}{{Deprecated_header}}
+{{Deprecated_header}}
 
 Lancé lorsqu'une mise à jour pour le navigateur est disponible, mais qu'elle n'est pas installée immédiatement car un redémarrage du navigateur est requi.
 

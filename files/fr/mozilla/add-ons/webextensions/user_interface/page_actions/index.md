@@ -3,8 +3,6 @@ title: Bouton de la barre d'adresse
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
 
-{{AddonSidebar}}
-
 Généralement appelée [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction), cette option d'interface utilisateur est un bouton ajouté à la barre d'adresse du navigateur. Les utilisateurs cliquent sur le bouton pour interagir avec votre extension.
 
 ![](address_bar_button.png)

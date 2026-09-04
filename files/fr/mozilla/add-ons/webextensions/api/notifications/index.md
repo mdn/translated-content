@@ -3,8 +3,6 @@ title: notifications
 slug: Mozilla/Add-ons/WebExtensions/API/notifications
 ---
 
-{{AddonSidebar}}
-
 Afficher les notifications à l'utilisateur, en utilisant le mécanisme de notification du système d'exploitation sous-jacent. Étant donné que cette API utilise le mécanisme de notification du système d'exploitation, les détails de l'apparence et du comportement des notifications peuvent varier en fonction du système d'exploitation et des paramètres de l'utilisateur.
 
 Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "notifications".

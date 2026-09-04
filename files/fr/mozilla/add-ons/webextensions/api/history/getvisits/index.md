@@ -3,8 +3,6 @@ title: history.getVisits()
 slug: Mozilla/Add-ons/WebExtensions/API/history/getVisits
 ---
 
-{{AddonSidebar}}
-
 Récupère des informations sur toutes les visites de l'URL donnée.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

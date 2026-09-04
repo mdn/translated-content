@@ -3,8 +3,6 @@ title: pkcs11.uninstallModule()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/uninstallModule
 ---
 
-{{AddonSidebar}}
-
 Désinstalle le module PKCS #11 nommé de Firefox.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

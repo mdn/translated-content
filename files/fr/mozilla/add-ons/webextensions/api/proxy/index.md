@@ -3,8 +3,6 @@ title: proxy
 slug: Mozilla/Add-ons/WebExtensions/API/proxy
 ---
 
-{{AddonSidebar}}
-
 Utilisez l'API proxy pour les requêtes Web proxy. Vous pouvez utiliser l'écouteur d'événement {{WebExtAPIRef("proxy.onRequest")}} pour intercepter les requêtes web, et retourner un objet qui décrit si et comment les proxyer.
 
 L'avantage de l'approche `proxy.onRequest` est que le code qui implémente votre stratégie de proxy s'exécute dans le script d'arrière-plan de votre extension pour accéder aux API WebExtension disponibles pour votre extension (y compris, par exemple, l'accès au [`stockage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage) et au réseau de votre extension APIs comme [`dns`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/dns)).

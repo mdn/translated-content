@@ -3,8 +3,6 @@ title: menus.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/remove
 ---
 
-{{AddonSidebar}}
-
 Supprime un élément de menu.
 
 Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.

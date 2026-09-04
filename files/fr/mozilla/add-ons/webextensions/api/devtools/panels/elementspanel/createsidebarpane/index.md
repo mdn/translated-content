@@ -3,8 +3,6 @@ title: devtools.panels.ElementsPanel.createSidebarPane()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
 ---
 
-{{AddonSidebar}}
-
 Ajoute un nouveau volet à la barre latérale dans l'inspecteur HTML / CSS.
 
 L'inspecteur HTML / CSS, appelé l'[inspecteur de page](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) dans Firefox et le [panneau éléments](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/) dans Chrome, affiche la page DOM dans la partie principale de sa fenêtre et possède une barre latérale qui affiche divers autres aspects de la page HTML / CSS dans une interface à onglets. Par exemple, dans Firefox, la barre latérale peut afficher les règles CSS pour l'élément sélectionné, ou ses polices, ou son modèle de boîte.
