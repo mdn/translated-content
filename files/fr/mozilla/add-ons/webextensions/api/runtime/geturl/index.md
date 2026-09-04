@@ -3,7 +3,7 @@ title: runtime.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getURL
 ---
 
-{{AddonSidebar}}Etant donné un chemin relatif de [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) à une ressource empaquetée avec l'extension, renvoyez une URL complète.Cette fonction ne vérifie pas que la ressource existe réellement à cette URL.
+{{AddonSidebar}}Reçoit en argument un chemin relatif à [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) et renvoie l'URL complète correspondante. Il s'agit du chemin d'une ressource empaquetée dans l'extension. La fonction ne vérifie pas l'existance de la ressource.
 
 ## Syntaxe
 
