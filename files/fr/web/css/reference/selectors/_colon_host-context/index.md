@@ -6,8 +6,6 @@ l10n:
   sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-{{Deprecated_Header}}
-
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host-context()`** sélectionne l'hôte d'ombre (<i lang="en">shadow host</i> en anglais) du [DOM d'ombre (<i lang="en">shadow DOM</i> en anglais)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS dans lequel il est utilisé (afin de pouvoir sélectionner un élément personnalisé depuis l'intérieur de son DOM d'ombre), uniquement si le sélecteur fourni comme paramètre de la fonction correspond à un ancêtre de l'hôte d'ombre à l'emplacement qu'il occupe dans la hiérarchie du DOM.
 
 Normalement, les éléments d'un DOM d'ombre sont isolés du DOM extérieur. La fonction `:host-context()` vous permet de «&nbsp;jeter un œil à l'extérieur&nbsp;» de ce DOM d'ombre et de vérifier si l'un des éléments ancêtres correspond à un sélecteur CSS donné. Par exemple, appliquer une couleur de texte différente aux éléments d'une racine d'ombre (<i lang="en">shadow root</i> en anglais) lorsqu'une classe `.dark-theme` est appliquée à `<body>`.

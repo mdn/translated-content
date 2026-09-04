@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 > [!NOTE]
 > Tous les navigateurs prennent en charge la propriété [`transition`](/fr/docs/Web/CSS/Reference/Properties/transition#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-transition`. Aucun navigateur ne prend en charge `transition` sans préfixe comme requête média (certains navigateurs prennent en charge {{CSSxRef("@media/-webkit-transform-3d", "-webkit-transform-3d")}}). Utilisez plutôt la requête de fonctionnalité [`@supports (transition)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).

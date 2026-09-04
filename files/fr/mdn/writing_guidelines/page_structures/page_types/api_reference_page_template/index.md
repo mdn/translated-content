@@ -69,7 +69,7 @@ l10n:
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Le paragraphe de résumé — commencez par nommer l'interface, en indiquant à quelle API elle appartient et ce qu'elle fait. Idéalement, cela doit être une ou deux phrases courtes. Vous pouvez copier la plupart de ces informations à partir du résumé de l'interface sur la page de destination correspondante de l'API.
 

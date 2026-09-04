@@ -81,7 +81,7 @@ l10n:
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Commencez le contenu de la page par un paragraphe introductif — commencez par nommer la méthode, en indiquant à quelle interface elle appartient et ce qu'elle fait.
 Cela doit idéalement être une ou deux phrases courtes. Vous pouvez copier la plupart de ces informations à partir du résumé de la méthode sur la page de référence API correspondante.

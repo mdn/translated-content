@@ -79,7 +79,7 @@ l10n:
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Commencez le contenu de la page par un paragraphe introductif — commencez par nommer le constructeur et expliquer ce qu'il fait.
 Cela doit idéalement être une ou deux phrases courtes.

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 L'interface **`HTMLAllCollection`** représente une collection de _tous_ les éléments du document, accessibles par index (comme un tableau) et par un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'élément. Elle est retournée par la propriété {{DOMxRef("document.all")}}.
 

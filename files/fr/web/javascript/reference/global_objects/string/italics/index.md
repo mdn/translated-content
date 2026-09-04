@@ -3,7 +3,7 @@ title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{JSRef}}
 
 La méthode **`italics()`** permet de créer un élément HTML {{HTMLElement("i")}} qui permet de représenter la chaîne courante en italique.
 

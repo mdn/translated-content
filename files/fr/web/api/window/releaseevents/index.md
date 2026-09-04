@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef}}
 
 La méthode **`releaseEvents()`** de l'interface {{DOMxRef("Window")}} libère la fenêtre de la capture des évènements d'un type spécifique.
 

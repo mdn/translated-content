@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef}}
 
 La propriété **`orientation`** de l'interface {{DOMxRef("Window")}} retourne l'orientation en degrés (par incréments de 90 degrés) de la fenêtre par rapport à l'orientation naturelle de l'appareil.
 

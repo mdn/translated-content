@@ -76,7 +76,7 @@ l10n:
 >
 > _Supprimez cette note explicative avant de publier._
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Commencez le contenu de la page par un paragraphe introductif, qui nomme la propriété et explique ce qu'elle fait.
 Cela doit idéalement être une ou deux phrases courtes. Toutes les autres explications, le cas échéant, doivent être incluses dans la section «&nbsp;Description&nbsp;».

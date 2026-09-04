@@ -3,7 +3,7 @@ title: String.prototype.sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{JSRef}}
 
 La méthode **`sub()`** crée un élément HTML {{HTMLElement("sub")}} qui entraîne l'affichage de la chaîne en indice.
 

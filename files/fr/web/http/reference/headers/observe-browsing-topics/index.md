@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > Cette fonctionnalité est actuellement contestée par deux éditeurs de navigateurs. Voir la section [Positions des standards](/fr/docs/Web/API/Topics_API#standards_positions) pour les détails de l'opposition.

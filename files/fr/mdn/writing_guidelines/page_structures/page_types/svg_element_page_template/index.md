@@ -68,7 +68,7 @@ l10n:
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier._
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Commencez le contenu de la page par un paragraphe introductif — commencez par nommer l'élément et dire ce qu'il fait.
 Cela doit idéalement être une ou deux phrases courtes.

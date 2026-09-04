@@ -73,7 +73,7 @@ l10n:
 >
 > _Supprimez cette note explicative avant de publier._
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Commencez le contenu de la page par un paragraphe introductif, qui nomme la fonction et explique ce qu'elle fait.
 Cela doit idéalement être une ou deux phrases courtes.

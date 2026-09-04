@@ -3,7 +3,7 @@ title: extension.sendRequest()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
 ---
 
-{{AddonSidebar}}{{Deprecated_Header}}
+{{AddonSidebar}}
 
 > [!WARNING]
 > Cette méthode est dépréciée. utilisez {{WebExtAPIRef("runtime.sendMessage")}} à la place.

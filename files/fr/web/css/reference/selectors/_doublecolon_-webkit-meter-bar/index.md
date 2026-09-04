@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-bar`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de mettre en forme l'arrière-plan d'un élément {{HTMLElement("meter")}}. Elle est utilisée pour sélectionner et appliquer des styles au conteneur d'un indicateur de mesure.
 

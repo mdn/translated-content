@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 La propriété en lecture seule {{DOMxRef("Window")}} **`event`** retourne un objet {{DOMxRef("Event")}} qui est actuellement traité par le code du site. En dehors du contexte d'un gestionnaire d'évènement, la valeur est toujours `undefined`.
 

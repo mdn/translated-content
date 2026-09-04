@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`-moz-device-pixel-ratio`** (spécifique à Gecko) permet d'appliquer des styles en fonction du nombre de pixels physiques par pixel CSS.
 

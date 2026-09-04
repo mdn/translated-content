@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 {{Glossary("request header", "L'en-tête de requête")}} HTTP **`Attribution-Reporting-Eligible`** indique que la réponse correspondante est éligible à l'enregistrement d'une source ou d'un déclencheur d'attribution.
 

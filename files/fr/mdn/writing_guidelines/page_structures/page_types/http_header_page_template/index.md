@@ -71,7 +71,7 @@ l10n:
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier._
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 La première phrase de la page doit suivre ce format&nbsp;:
 

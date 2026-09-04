@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{Deprecated_Header}}{{SecureContext_Header}}
+{{SecureContext_Header}}
 
 > [!NOTE]
 > C'est en cours de remplacement par l'en-tête {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.

@@ -77,7 +77,7 @@ l10n:
 >
 > _Supprimez cette note explicative avant de publier_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Le paragraphe de résumé — commencez par nommer le sélecteur et expliquer ce qu'il fait. Idéalement, cela doit être une ou deux phrases courtes.
 

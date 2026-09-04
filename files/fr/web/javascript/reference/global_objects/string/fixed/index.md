@@ -3,7 +3,7 @@ title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{JSRef}}
 
 La méthode **`fixed()`** permet de créer un élément HTML {{HTMLElement("tt")}}, ce qui permet d'afficher le texte de la chaîne de caractère dans une fonte à chasse fixe.
 

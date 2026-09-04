@@ -83,7 +83,7 @@ Ajoutez un article uniquement si l'attribut a suffisamment de nuances pour méri
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier_
 >
-> {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+> {{SeeCompatTable}}{{Non-standard_Header}}
 >
 > Commencez par présenter l'attribut au lecteur·ice et son utilisation.
 > Par exemple&nbsp;: [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`nom-de-lattribut`** décrit ou manipule [insérer la description de l'utilisation].

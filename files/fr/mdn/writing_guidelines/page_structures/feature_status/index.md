@@ -56,7 +56,6 @@ Les macros suivantes servent à afficher les bannières de statut en haut des pa
 
 - `\{{Deprecated_Header}}`
   - : Pour le statut `deprecated`. Affiche une bannière **Statut déprécié**&nbsp;:
-    {{Deprecated_Header}}
 
 - `\{{SeeCompatTable}}`
   - : Pour le statut `experimental`. Affiche une bannière **Statut expérimental**&nbsp;:

@@ -233,7 +233,7 @@ Ils peuvent aussi servir à marquer une section d'une page.
 - [`Non-standard_Header` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)&nbsp;: `\{{Non-standard_Header}}` {{Non-standard_Header}}
 - [`SeeCompatTable` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) utilisé sur les pages documentant des [fonctionnalités expérimentales](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#expérimental).
   Exemple&nbsp;: `\{{SeeCompatTable}}` {{SeeCompatTable}}
-- [`Deprecated_Header` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)&nbsp;: `\{{Deprecated_Header}}` {{Deprecated_Header}}
+- [`Deprecated_Header` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)&nbsp;: `\{{Deprecated_Header}}`
 - [`SecureContext_Header` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs).
   À utiliser sur les pages principales comme les pages d'interface, d'API ou d'entrée d'API (ex.&nbsp;: `navigator.xyz`), mais généralement pas sur les sous-pages de méthodes ou propriétés.
   Exemple&nbsp;: `\{{SecureContext_Header}}` {{SecureContext_Header}}

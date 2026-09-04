@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{Deprecated_Header}}
-
 > [!WARNING]
 > Cette directive est marquée comme obsolète dans la spécification.
 > Cette directive était auparavant utilisée pour empêcher le contenu mixte «&nbsp;optionnellement bloquable&nbsp;» d'être récupéré de manière non sécurisée et affiché.

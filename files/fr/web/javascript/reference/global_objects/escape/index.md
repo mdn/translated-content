@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{Deprecated_Header}}
-
 > [!NOTE]
 > `escape()` est une fonction non standard implémentée par les navigateurs et n'a été standardisée que pour la compatibilité inter-moteurs. Elle n'est pas requise dans tous les moteurs JavaScript et peut ne pas fonctionner partout. Utilisez {{JSxRef("encodeURIComponent()")}} ou {{JSxRef("encodeURI()")}} si possible.
 

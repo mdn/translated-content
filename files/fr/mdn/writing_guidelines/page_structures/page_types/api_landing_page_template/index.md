@@ -94,7 +94,7 @@ l10n:
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Commencez le contenu de la page par un paragraphe introductif — commencez par nommer l'API et dire ce qu'elle fait. Cela doit idéalement être une ou deux phrases courtes.
 

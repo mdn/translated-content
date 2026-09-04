@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 La valeur [CSS](/fr/docs/Web/CSS) **`-moz-image-rect`** pour {{CSSxRef("background-image")}} permet d'utiliser une portion d'une image plus grande comme arrière-plan.
 

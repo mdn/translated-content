@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
-{{Deprecated_Header}}
-
 > [!NOTE]
 > Pour interroger la hauteur de la zone d'affichage, il faut utiliser la caractéristique média {{CSSxRef("@media/height", "height")}}.
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef}}
 
 L'évènement `orientationchange` de l'interface {{DOMxRef("Window")}} est déclenché lorsque l'orientation de l'appareil a changé.
 

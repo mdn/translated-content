@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-focus-inner`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente le contour interne pour le focus sur l'élément HTML {{HTMLElement("button")}} ainsi que les boutons {{HTMLElement("input/button","button")}}, {{HTMLElement("input/submit","submit")}}, {{HTMLElement("input/reset","reset")}} et {{HTMLElement("input/color","color")}} de l'élément {{HTMLElement("input")}}.
 

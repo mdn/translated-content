@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8c4ef12832f3fae1ce42268b78aa0ee450e5f236
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef}}
 
 La propriété `external` de l'interface {{DOMxRef("Window")}} retourne une instance de l'interface `External`, qui était destinée à contenir des fonctions liées à l'ajout de fournisseurs de recherche externes au navigateur. Cependant, ceci est désormais obsolète, et les méthodes qu'elle contient sont maintenant des fonctions factices qui ne font rien conformément à la spécification.
 

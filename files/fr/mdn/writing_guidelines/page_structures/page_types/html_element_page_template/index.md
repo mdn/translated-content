@@ -68,7 +68,7 @@ l10n:
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier._
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<insert_the_element_name>`** fait _(insérer un paragraphe résumant le nom de l'élément et ce qu'il fait, idéalement une ou deux phrases courtes)_.
 

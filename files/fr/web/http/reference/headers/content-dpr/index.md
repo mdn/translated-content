@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 013f3148c4e85038bd961c984e357da703d315e3
 ---
 
-{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{Non-standard_Header}}
 
 L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Content-DPR`** est utilisé pour confirmer le rapport de pixels de l'appareil pour une _image_ (DPR) dans les requêtes où l'indication client {{HTTPHeader("DPR")}} de l'écran a été utilisée pour sélectionner une ressource image.
 

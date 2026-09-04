@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > Cet en-tête a été remplacé par l'en-tête HTTP {{HTTPHeader("Reporting-Endpoints")}}.

@@ -4,7 +4,7 @@ slug: Web/API/History/back
 original_slug: Web/API/Window/back
 ---
 
-{{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}
+{{APIRef}}{{ Non-standard_header() }}
 
 La méthode obsolète et non standard `back()` sur l'objet {{domxref("window")}} renvoie la fenêtre à l'élément précédent de l'historique. Il s'agissait d'une méthode spécifique à Firefox et a été supprimée dans Firefox 31.
 

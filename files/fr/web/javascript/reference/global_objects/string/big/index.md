@@ -3,7 +3,7 @@ title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{JSRef}}
 
 La méthode **`big()`** crée un élément HTML {{HTMLElement("big")}} qui affichera la chaine de caractères avec une taille de police importante.
 
