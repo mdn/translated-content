@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Your_first_form
 original_slug: Learn/Forms/Your_first_form
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
+{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
 
 Le premier article de notre série vous offre une toute première expérience de création de formulaire en HTML, y compris sa conception, sa mise en œuvre en utilisant les bons éléments HTML, l'ajout de quelques très simples décorations avec les CSS et la façon dont les données sont envoyées à un serveur.
 
