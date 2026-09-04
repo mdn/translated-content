@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/fePointLight
 original_slug: Web/SVG/Element/fePointLight
 ---
 
-{{SVGRef}}
-
 La primitive de filtre **`<fePointLight>`** définit une source de lumière qui permet de créer un point lumineux. On la place dans une primitive de filtre d'éclairage: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
 
 ## Contexte d'utilisation

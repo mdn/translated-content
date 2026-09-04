@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/tspan
 original_slug: Web/SVG/Element/tspan
 ---
 
-{{SVGRef}}
-
 A l'intérieur d'un élément {{SVGElement("text")}}, les propriétés du texte et des polices, ainsi que la position actuelle du texte, peuvent être ajustées de façon absolue ou relative à partir des coodonnées précisées dans un élément `tspan`.
 
 ## Contexte d'utilisation

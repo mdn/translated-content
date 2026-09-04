@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/stroke-width
 original_slug: Web/SVG/Attribute/stroke-width
 ---
 
-{{SVGRef}}
-
 L'attribut **`stroke-width`** définit l'épaisseur du contour à appliquer à une forme SVG.
 
 > [!NOTE]
