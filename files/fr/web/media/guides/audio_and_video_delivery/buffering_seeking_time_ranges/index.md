@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges
 original_slug: Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
-
 Il est parfois utile de savoir combien d'{{htmlelement("audio") }} ou {{htmlelement("video") }} a été téléchargé ou peut être joué sans délai — par exemple pour afficher la barre de progression du tampon dans un lecteur audio ou vidéo. Cet article explique comment construire une barre de progrès de mise en mémoire tampon en utilisant [TimeRanges](/fr/docs/Web/API/TimeRanges), et d'autres fonctionnalités de l'API Media.
 
 ## Buffered
