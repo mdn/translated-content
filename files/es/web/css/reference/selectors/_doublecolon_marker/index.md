@@ -29,7 +29,11 @@ Sólo ciertas propiedades CSS puedes utilizarse en una regla con `::marker` como
 
 ## Sintaxis
 
-{{CSSSyntax}}
+```css
+::marker {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

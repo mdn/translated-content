@@ -17,7 +17,11 @@ Las propiedades son aplicadas al cojunto completo de anotaciones como si fuesen 
 
 ## Sintaxis
 
-{{CSSSyntax}}
+```css-nolint
+::cue | ::cue(<selector>) {
+  /* ... */
+}
+```
 
 ## Propiedades permitidas
 

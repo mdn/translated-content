@@ -19,7 +19,11 @@ La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:first` 
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:first {
+  /* ... */
+}
+```
 
 ## Ejemplo
 
