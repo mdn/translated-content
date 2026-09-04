@@ -5,6 +5,9 @@ slug: Web/API/WebVR_API/Concepts
 
 {{APIRef("WebVR API")}}
 
+> [!NOTE]
+> WebVR API 已被 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API) 取代。WebVR 从未被批准为标准，仅有极少数浏览器实现并默认启用，且支持的设备数量很少。
+
 这篇文章探讨了一些关于虚拟现实（VR）的概念及其背后的理论基础。如果你是一个进入这个领域的新手，在你深入学习相关代码知识前，非常有必要对于以下的话题做一定的了解。
 
 ## 关于 VR 的历史
