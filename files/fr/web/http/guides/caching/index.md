@@ -2,7 +2,7 @@
 title: Mise en cache HTTP
 slug: Web/HTTP/Guides/Caching
 l10n:
-  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
+  sourceCommit: b13e73fdf1fedcb837aebdd842f1a9a6adc76e10
 ---
 
 Le cache HTTP stocke une réponse associée à une requête et réutilise la réponse stockée pour les requêtes ultérieures.
@@ -21,7 +21,7 @@ Dans la spécification [Cache HTTP <sup>(angl.)</sup>](https://httpwg.org/specs/
 
 Un cache privé est un cache lié à un client spécifique — typiquement un cache de navigateur. Comme la réponse stockée n'est pas partagée avec d'autres clients, un cache privé peut stocker une réponse personnalisée pour cet·te utilisateur·ice.
 
-En revanche, si des contenus personnalisés sont stockés dans un cache autre qu'un cache privé, d'autres utilisateur·ice·s pourraient être en mesure de récupérer ces contenus — ce qui pourrait entraîner une fuite d'informations involontaire.
+En revanche, si des contenus personnalisés sont stockés dans un cache autre qu'un cache privé, d'autres utilisateur·ice·s peuvent être en mesure de récupérer ces contenus — ce qui peut entraîner une fuite d'informations involontaire.
 
 Si une réponse contient des contenus personnalisés et que vous souhaitez stocker la réponse uniquement dans le cache privé, vous devez définir une directive `private`.
 
@@ -47,13 +47,13 @@ Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 
 Cependant, ces dernières années, avec la généralisation de HTTPS et le chiffrement des communications client/serveur, les caches mandataires situés sur le chemin ne peuvent, dans de nombreux cas, que faire transiter une réponse sans pouvoir agir comme un cache. Ainsi, dans ce scénario, il n'est pas nécessaire de se préoccuper des implémentations de cache mandataires obsolètes qui ne peuvent même pas voir la réponse.
 
-En revanche, si un mandataire passerelle {{Glossary("TLS")}} déchiffre toutes les communications en agissant comme une personne au milieu, en installant un certificat provenant d'une {{Glossary("Certificate_authority", "autorité de certification (CA)")}} gérée par l'organisation sur le PC, et effectue un contrôle d'accès, etc. — il est alors possible de voir le contenu de la réponse et de le mettre en cache. Cependant, depuis que la [transparence des certificats (CT)](/fr/docs/Web/Security/Defenses/Certificate_Transparency) s'est généralisée ces dernières années, et que certains navigateurs n'acceptent que les certificats émis avec un SCT (signed certificate timestamp), cette méthode nécessite l'application d'une politique d'entreprise. Dans un tel environnement contrôlé, il n'est pas nécessaire de se préoccuper d'un cache mandataire «&nbsp;obsolète et non mis à jour&nbsp;».
+En revanche, si un mandataire passerelle {{Glossary("TLS")}} déchiffre toutes les communications en agissant comme une personne au milieu, en installant un certificat provenant d'une {{Glossary("Certificate_authority", "autorité de certification (CA)")}} gérée par l'organisation sur le PC, et effectue un contrôle d'accès, etc. — il est alors possible de voir le contenu de la réponse et de le mettre en cache. Cependant, depuis que la [transparence des certificats (CT)](/fr/docs/Web/Security/Defenses/Certificate_Transparency) s'est généralisée ces dernières années, et que certains navigateurs n'acceptent que les certificats émis avec un SCT (certificat horodaté signé), cette méthode nécessite l'application d'une politique d'entreprise. Dans un tel environnement contrôlé, il n'est pas nécessaire de se préoccuper d'un cache mandataire «&nbsp;obsolète et non mis à jour&nbsp;».
 
 #### Caches gérés
 
 Les caches gérés sont explicitement déployés par les développeur·euse·s de service pour décharger le serveur d'origine et fournir le contenu efficacement. Parmi les exemples, on trouve les mandataires inverses, les CDN et les service workers associés à l'API Cache.
 
-Les caractéristiques des caches gérés varient selon le produit déployé. Dans la plupart des cas, vous pouvez contrôler le comportement du cache à l'aide de l'en-tête `Cache-Control` et de vos propres fichiers de configuration ou tableaux de bord.
+Les caractéristiques des caches gérés varient selon le produit déployé. Dans la plupart des cas, vous pouvez contrôler le comportement du cache à l'aide de l'en-tête {{HTTPHeader("Cache-Control")}} et de vos propres fichiers de configuration ou tableaux de bord.
 
 Par exemple, la spécification de la mise en cache HTTP ne définit pas réellement de méthode pour supprimer explicitement un cache — mais avec un cache géré, la réponse stockée peut être supprimée à tout moment par des opérations sur le tableau de bord, des appels d'API, des redémarrages, etc. Cela permet d'adopter une stratégie de mise en cache plus proactive.
 
@@ -65,7 +65,7 @@ Cache-Control: no-store
 
 Par exemple, Varnish Cache utilise une logique VCL (Varnish Configuration Language, un type de {{Glossary("DSL/Domain_specific_language", "DSL")}}) pour gérer le stockage du cache, tandis que les service workers associés à l'API Cache permettent de créer cette logique en JavaScript.
 
-Cela signifie que si un cache géré ignore intentionnellement une directive `no-store`, il n'est pas nécessaire de le considérer comme «&nbsp;non conforme&nbsp;» à la norme. Ce qu'il faut faire, c'est éviter d'utiliser des en-têtes fourre-tout, mais lire attentivement la documentation du mécanisme de cache géré que vous utilisez, et vous assurer de contrôler correctement le cache selon les moyens fournis par le mécanisme choisi.
+Cela signifie que si un cache géré ignore intentionnellement une directive [`no-store`](/fr/docs/Web/HTTP/Reference/Headers/Cache-Control#no-store), il n'est pas nécessaire de le considérer comme «&nbsp;non conforme&nbsp;» à la norme. Ce qu'il faut faire, c'est éviter d'utiliser des en-têtes fourre-tout, mais lire attentivement la documentation du mécanisme de cache géré que vous utilisez, et vous assurer de contrôler correctement le cache selon les moyens fournis par le mécanisme choisi.
 
 Notez que certains CDN fournissent leurs propres en-têtes qui ne sont efficaces que pour ce CDN (par exemple, `Surrogate-Control`). Actuellement, des travaux sont en cours pour définir un en-tête [`CDN-Cache-Control` <sup>(angl.)</sup>](https://httpwg.org/specs/rfc9213.html) afin de standardiser ces derniers.
 
@@ -90,7 +90,7 @@ Last-Modified: Tue, 22 Feb 2021 22:22:22 GMT
 
 Il est connu de manière heuristique que le contenu qui n'a pas été mis à jour pendant une année complète n'est pas mis à jour pendant un certain temps après cela. Par conséquent, le client stocke cette réponse (malgré l'absence de `max-age`) et la réutilise pendant un certain temps. La durée de réutilisation dépend de l'implémentation, mais la spécification recommande environ 10 % (dans ce cas 0,1 an) du temps après le stockage.
 
-La mise en cache heuristique est une solution de contournement qui est apparue avant que le support de `Cache-Control` ne soit largement adopté, et en pratique, toutes les réponses devraient définir explicitement un en-tête `Cache-Control`.
+La mise en cache heuristique est une solution de contournement qui est apparue avant que le support de `Cache-Control` ne soit largement adopté, et en pratique, toutes les réponses doivent définir explicitement un en-tête `Cache-Control`.
 
 ## Fraîcheur et obsolescence basées sur l'âge
 
@@ -120,7 +120,7 @@ Pour la réponse exemple, la signification de `max-age` est la suivante&nbsp;:
 
 Tant que la réponse stockée reste fraîche, elle est utilisée pour satisfaire les requêtes des clients.
 
-Lorsqu'une réponse est stockée dans un cache partagé, il est possible d'indiquer au client l'âge de la réponse. En continuant avec l'exemple, si le cache partagé a stocké la réponse pendant un jour, le cache partagé enverrait la réponse suivante aux requêtes ultérieures des clients.
+Lorsqu'une réponse est stockée dans un cache partagé, il est possible d'indiquer au client l'âge de la réponse. En continuant avec l'exemple, si le cache partagé a stocké la réponse pendant un jour, le cache partagé envoie la réponse suivante aux requêtes ultérieures des clients.
 
 ```http
 HTTP/1.1 200 OK
@@ -148,7 +148,7 @@ Expires: Tue, 28 Feb 2022 22:22:22 GMT
 
 Cependant, le format de l'heure est difficile à analyser, de nombreux bogues d'implémentation ont été trouvés, et il est possible d'induire des problèmes en décalant intentionnellement l'horloge système&nbsp;; par conséquent, `max-age` — pour définir un temps écoulé — a été adopté pour `Cache-Control` en HTTP/1.1.
 
-Si les en-têtes `Expires` et `Cache-Control: max-age` sont tous deux disponibles, `max-age` est défini comme prioritaire. Il n'est donc pas nécessaire de fournir `Expires` maintenant que HTTP/1.1 est largement utilisé.
+Si les en-têtes {{HTTPHeader("Expires")}} et [`Cache-Control: max-age`](/fr/docs/Web/HTTP/Reference/Headers/Cache-Control#max-age) sont tous deux disponibles, `max-age` est défini comme prioritaire. Il n'est donc pas nécessaire de fournir `Expires` maintenant que HTTP/1.1 est largement utilisé.
 
 ## En-tête `Vary`
 
@@ -162,7 +162,7 @@ La manière dont les réponses sont distinguées les unes des autres repose esse
 
 Cependant, le contenu des réponses n'est pas toujours le même, même si elles ont la même URL. Surtout lorsque la négociation de contenu est effectuée, la réponse du serveur peut dépendre des valeurs des en-têtes de requête `Accept`, `Accept-Language` et `Accept-Encoding`.
 
-Par exemple, pour le contenu en anglais retourné avec un en-tête `Accept-Language: en` et mis en cache, il est indésirable de réutiliser cette réponse mise en cache pour des requêtes ayant un en-tête `Accept-Language: ja`. Dans ce cas, vous pouvez faire en sorte que les réponses soient mises en cache séparément — en fonction de la langue — en ajoutant `Accept-Language` à la valeur de l'en-tête `Vary`.
+Par exemple, pour le contenu en anglais retourné avec un en-tête [`Accept-Language: en`](/fr/docs/Web/HTTP/Reference/Headers/Accept-Language) et mis en cache, il est indésirable de réutiliser cette réponse mise en cache pour des requêtes ayant un en-tête `Accept-Language: ja`. Dans ce cas, vous pouvez faire en sorte que les réponses soient mises en cache séparément — en fonction de la langue — en ajoutant `Accept-Language` à la valeur de l'en-tête {{HTTPHeader("Vary")}}.
 
 ```http
 Vary: Accept-Language
@@ -177,15 +177,15 @@ Cela fait en sorte que le cache soit indexé en fonction d'une combinaison de l'
 | `https://example.com/style.css`  | `ja-JP`           | `body { ...`             |
 | `https://example.com/script.js`  | `ja-JP`           | `function main () { ...` |
 
-Cependant, si vous fournissez une optimisation du contenu (par exemple, pour un design réactif) basée sur l'agent utilisateur, vous pourriez être tenté d'inclure `User-Agent` dans la valeur de l'en-tête `Vary`. Cependant, l'en-tête de requête `User-Agent` a généralement un très grand nombre de variations, ce qui réduit considérablement les chances que le cache soit réutilisé. Donc, si possible, envisagez plutôt une manière de varier le comportement en fonction de la détection des fonctionnalités plutôt qu'en fonction de l'en-tête de requête `User-Agent`.
+Cependant, si vous fournissez une optimisation du contenu (par exemple, pour un design réactif) basée sur l'agent utilisateur, vous pouvez être tenté d'inclure `User-Agent` dans la valeur de l'en-tête `Vary`. Cependant, l'en-tête de requête `User-Agent` a généralement un très grand nombre de variations, ce qui réduit considérablement les chances que le cache soit réutilisé. Donc, si possible, envisagez plutôt une manière de varier le comportement en fonction de la détection des fonctionnalités plutôt qu'en fonction de l'en-tête de requête `User-Agent`.
 
-Pour les applications qui utilisent des cookies pour empêcher les autres de réutiliser du contenu personnalisé mis en cache, vous devez définir `Cache-Control: private` au lieu de définir un cookie pour `Vary`.
+Pour les applications qui utilisent des cookies pour empêcher les autres de réutiliser du contenu personnalisé mis en cache, vous devez définir [`Cache-Control: private`](/fr/docs/Web/HTTP/Reference/Headers/Cache-Control#private) au lieu de définir un cookie pour `Vary`.
 
 ## Validation
 
 Les réponses périmées ne sont pas immédiatement supprimées. HTTP dispose d'un mécanisme permettant de transformer une réponse périmée en une réponse fraîche en interrogeant le serveur d'origine. Cela s'appelle **validation**, ou parfois, **revalidation**.
 
-La validation est effectuée en utilisant une **requête conditionnelle** qui inclut un en-tête de requête `If-Modified-Since` ou `If-None-Match`.
+La validation est effectuée en utilisant une **requête conditionnelle** qui inclut un en-tête de requête {{HTTPHeader("If-Modified-Since")}} ou {{HTTPHeader("If-None-Match")}}.
 
 ### `If-Modified-Since`
 
@@ -228,7 +228,7 @@ Cache-Control: max-age=3600
 
 Le serveur peut obtenir l'heure de modification à partir du système de fichiers du système d'exploitation, ce qui est relativement facile à faire dans le cas de la diffusion de fichiers statiques. Cependant, il existe certains problèmes&nbsp;; par exemple, le format de l'heure est complexe et difficile à analyser, et les serveurs distribués ont du mal à synchroniser les heures de mise à jour des fichiers.
 
-Pour résoudre ces problèmes, l'en-tête de réponse `ETag` a été standardisé comme alternative.
+Pour résoudre ces problèmes, l'en-tête de réponse {{HTTPHeader("ETag")}} a été standardisé comme alternative.
 
 ### `ETag`/`If-None-Match`
 
@@ -264,7 +264,7 @@ Mais si le serveur détermine que la ressource demandée doit maintenant avoir u
 > [!NOTE]
 > RFC9110 préfère que les serveurs envoient à la fois `ETag` et `Last-Modified` pour une réponse `200` si possible.
 > Lors de la revalidation du cache, si `If-Modified-Since` et `If-None-Match` sont présents, alors `If-None-Match` prend la priorité pour le validateur.
-> Si vous ne considérez que la mise en cache, vous pourriez penser que `Last-Modified` est inutile.
+> Si vous ne considérez que la mise en cache, vous pouvez penser que `Last-Modified` est inutile.
 > Cependant, `Last-Modified` n'est pas seulement utile pour la mise en cache&nbsp;; c'est un en-tête HTTP standard qui est également utilisé par les systèmes de gestion de contenu (CMS) pour afficher l'heure de la dernière modification, par les robots d'indexation pour ajuster la fréquence de l'exploration, et pour d'autres usages variés.
 > Donc, en considérant l'ensemble de l'écosystème HTTP, il est préférable de fournir à la fois `ETag` et `Last-Modified`.
 
@@ -272,7 +272,7 @@ Mais si le serveur détermine que la ressource demandée doit maintenant avoir u
 
 Si vous ne voulez pas qu'une réponse soit réutilisée, mais que vous souhaitez toujours récupérer le contenu le plus récent du serveur, vous pouvez utiliser la directive `no-cache` pour forcer la validation.
 
-En ajoutant `Cache-Control: no-cache` à la réponse avec `Last-Modified` et `ETag` — comme indiqué ci-dessous — le client reçoit une réponse `200 OK` si la ressource demandée a été mise à jour, ou reçoit sinon une réponse `304 Not Modified` si la ressource demandée n'a pas été mise à jour.
+En ajoutant [`Cache-Control: no-cache`](/fr/docs/Web/HTTP/Reference/Headers/Cache-Control#no-cache) à la réponse avec {{HTTPHeader("Last-Modified")}} et `ETag` — comme indiqué ci-dessous — le client reçoit une réponse `200 OK` si la ressource demandée a été mise à jour, ou reçoit sinon une réponse `304 Not Modified` si la ressource demandée n'a pas été mise à jour.
 
 ```http
 HTTP/1.1 200 OK
@@ -287,6 +287,12 @@ Cache-Control: no-cache
 …
 ```
 
+> [!NOTE]
+> La directive `no-cache` (ou équivalente, telle que `max-age=0, must-revalidate`) ne garantit pas la revalidation pour les navigations dans l'historique — comme celles effectuées en utilisant le bouton <kbd>Retour</kbd>.
+> Si le cache arrière/avant ({{Glossary('bfcache')}}) est utilisé, le navigateur restaure un instantané de la page sans revalidation.
+> Même lorsque le bfcache n'est pas utilisé, le navigateur peut toujours servir la réponse mise en cache sans revalidation.
+> Cela est [autorisé par la spécification <sup>(angl.)</sup>](https://httpwg.org/specs/rfc7234.html#history.lists), car les navigations dans l'historique sont généralement considérées comme la restauration d'un instantané d'une session historique et non comme une nouvelle requête pour une page précédemment visitée.
+
 Il est souvent dit que la combinaison de `max-age=0` et `must-revalidate` a la même signification que `no-cache`.
 
 ```http
@@ -297,7 +303,7 @@ Cache-Control: max-age=0, must-revalidate
 
 Cependant, cette utilisation de `max-age=0` est un vestige du fait que de nombreuses implémentations antérieures à HTTP/1.1 étaient incapables de gérer la directive `no-cache` — et donc, pour pallier cette limitation, `max-age=0` était utilisé comme solution de contournement.
 
-Mais maintenant que les serveurs conformes à HTTP/1.1 sont largement déployés, il n'y a aucune raison d'utiliser cette combinaison `max-age=0` et `must-revalidate` — vous devriez plutôt utiliser simplement `no-cache`.
+Mais maintenant que les serveurs conformes à HTTP/1.1 sont largement déployés, il n'y a aucune raison d'utiliser cette combinaison `max-age=0` et `must-revalidate` — vous devez plutôt utiliser simplement `no-cache`.
 
 ## Ne pas mettre en cache
 
@@ -313,7 +319,7 @@ Cependant, en général, une exigence de «&nbsp;ne pas mettre en cache&nbsp;» 
 
 - Ne pas vouloir que la réponse soit stockée par quiconque autre que le client spécifique, pour des raisons de confidentialité.
 - Vouloir fournir des informations toujours à jour.
-- Ne pas savoir ce qui pourrait se passer dans des implémentations obsolètes.
+- Ne pas savoir ce qui peut se passer dans des implémentations obsolètes.
 
 Dans ce contexte, `no-store` n'est pas toujours la directive la plus appropriée.
 
@@ -328,8 +334,6 @@ Dans ce cas, l'utilisation de la directive `private` fait en sorte que la répon
 ```http
 Cache-Control: private
 ```
-
-Dans ce cas, même si `no-store` est donné, `private` doit également être donné.
 
 ### Fournir du contenu à jour à chaque fois
 
@@ -428,7 +432,7 @@ fetch("/", { cache: "reload" });
 
 ### Éviter la revalidation
 
-Le contenu qui ne change jamais doit se voir attribuer un `max-age` long en utilisant le cache busting — c'est-à-dire en incluant un numéro de version, une valeur de hachage, etc., dans l'URL de la requête.
+Le contenu qui ne change jamais doit se voir attribuer un `max-age` long en utilisant le contournement du cache — c'est-à-dire en incluant un numéro de version, une valeur de hachage, etc., dans l'URL de la requête.
 
 Cependant, lorsque l'utilisateur·ice recharge, une requête de revalidation est envoyée même si le serveur sait que le contenu est immuable.
 
@@ -465,7 +469,7 @@ L'une des méthodes mentionnées dans la spécification consiste à envoyer une 
 L'en-tête [`Clear-Site-Data: cache`](/fr/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) et la valeur de directive peuvent être utilisés pour effacer les caches du navigateur — mais n'ont aucun effet sur les caches intermédiaires.
 Sinon, les réponses restent dans le cache du navigateur jusqu'à l'expiration de `max-age`, sauf si l'utilisateur·ice effectue manuellement un rechargement, un rechargement forcé ou une action de suppression de l'historique.
 
-La mise en cache réduit l'accès au serveur, ce qui signifie que le serveur perd le contrôle de cette URL. Si le serveur ne veut pas perdre le contrôle d'une URL — par exemple, dans le cas où une ressource est fréquemment mise à jour — vous devriez ajouter `no-cache` afin que le serveur reçoive toujours les requêtes et envoie les réponses prévues.
+La mise en cache réduit l'accès au serveur, ce qui signifie que le serveur perd le contrôle de cette URL. Si le serveur ne veut pas perdre le contrôle d'une URL — par exemple, dans le cas où une ressource est fréquemment mise à jour — vous devez ajouter `no-cache` afin que le serveur reçoive toujours les requêtes et envoie les réponses prévues.
 
 ## Effondrement des requêtes
 
@@ -475,7 +479,7 @@ Ainsi, si plusieurs requêtes identiques arrivent simultanément à un cache par
 
 L'effondrement des requêtes se produit lorsque les requêtes arrivent en même temps, donc même si `max-age=0` ou `no-cache` est donné dans la réponse, elle est réutilisée.
 
-Si la réponse est personnalisée pour un·e utilisateur·ice particulier·e et que vous ne voulez pas qu'elle soit partagée dans l'effondrement, vous devriez ajouter la directive `private`&nbsp;:
+Si la réponse est personnalisée pour un·e utilisateur·ice particulier·e et que vous ne voulez pas qu'elle soit partagée dans l'effondrement, vous devez ajouter la directive `private`&nbsp;:
 
 ![Effondrement des requêtes montré comme plusieurs clients envoyant des requêtes GET et un cache les consolidant en une seule GET vers l'origine. Le serveur d'origine répond avec un 200 OK que le cache partage ensuite à tous les clients.](https://mdn.github.io/shared-assets/images/diagrams/http/cache/request-collapse.svg)
 
@@ -639,9 +643,9 @@ Si le HTML suivant lui-même est stocké, la dernière version ne peut pas être
 </body>
 ```
 
-Pour ce cas, `no-cache` serait approprié — plutôt que `no-store` — puisque nous ne voulons pas stocker le HTML, mais simplement qu'il soit toujours à jour.
+Pour ce cas, `no-cache` est approprié — plutôt que `no-store` — puisque nous ne voulons pas stocker le HTML, mais simplement qu'il soit toujours à jour.
 
-De plus, l'ajout des en-têtes `Last-Modified` et `ETag` permet aux clients d'envoyer des requêtes conditionnelles, et un `304 Not Modified` peut être renvoyé s'il n'y a pas eu de mises à jour du HTML&nbsp;:
+De plus, l'ajout des en-têtes `Last-Modified` et `ETag` permet aux clients d'envoyer des requêtes conditionnelles, et un `304 Not Modified` peut être retourné s'il n'y a pas eu de mises à jour du HTML&nbsp;:
 
 ```http
 HTTP/1.1 200 OK
@@ -676,13 +680,14 @@ La mise en cache des ressources principales est difficile car, en utilisant uniq
 
 Cependant, c'est possible en déployant un cache géré tel qu'un CDN ou un service worker.
 
-Par exemple, un CDN qui permet la purge du cache avec une API ou une opération de tableau de bord permettrait une stratégie de mise en cache plus agressive en stockant la ressource principale et en purgeant explicitement le cache pertinent uniquement lorsqu'une mise à jour se produit sur le serveur.
+Par exemple, un CDN qui permet la purge du cache avec une API ou une opération de tableau de bord permet une stratégie de mise en cache plus agressive en stockant la ressource principale et en purgeant explicitement le cache pertinent uniquement lorsqu'une mise à jour se produit sur le serveur.
 
-Un service worker pourrait faire de même s'il pouvait supprimer le contenu dans l'API Cache lorsqu'une mise à jour se produit sur le serveur.
+Un service worker peut faire de même s'il peut supprimer le contenu dans l'API Cache lorsqu'une mise à jour se produit sur le serveur.
 
 Pour plus d'informations, consultez la documentation de votre CDN et consultez la [documentation sur les service workers](/fr/docs/Web/API/Service_Worker_API).
 
 ## Voir aussi
 
+- L'en-tête HTTP {{HTTPHeader("Cache-Control")}}
 - [RFC 9111&nbsp;: Hypertext Transfer Protocol (HTTP/1.1)&nbsp;: Mise en cache <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/RFC9111)
 - [Tutoriel sur la mise en cache - Mark Nottingham <sup>(angl.)</sup>](https://mnot.net/cache_docs/)

@@ -3,7 +3,7 @@ title: En-tête Attribution-Reporting-Eligible
 short-title: Attribution-Reporting-Eligible
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 {{Non-standard_Header}}

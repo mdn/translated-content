@@ -3,7 +3,7 @@ title: Constructeur BigInt()
 short-title: BigInt()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 l10n:
-  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
+  sourceCommit: 690498c3dbaebcf8b9a21220fbb23d192a30a225
 ---
 
 Le constructeur **`BigInt()`** retourne des valeurs primitives de type `BigInt`.
