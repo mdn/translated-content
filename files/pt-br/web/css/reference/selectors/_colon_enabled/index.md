@@ -17,7 +17,11 @@ input:enabled {
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+:enabled {
+  /* ... */
+}
+```
 
 ## Exemplo
 

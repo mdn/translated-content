@@ -30,7 +30,11 @@ Somente um pequeno subconjunto de propriedades CSS pode ser usado com o`::first-
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+::first-line {
+  /* ... */
+}
+```
 
 ## Exemplos
 
