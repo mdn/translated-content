@@ -3,10 +3,8 @@ title: Pseudo-classe CSS `:host-context()`
 short-title: :host-context()
 slug: Web/CSS/Reference/Selectors/:host-context
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host-context()`** sélectionne l'hôte d'ombre (<i lang="en">shadow host</i> en anglais) du [DOM d'ombre (<i lang="en">shadow DOM</i> en anglais)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS dans lequel il est utilisé (afin de pouvoir sélectionner un élément personnalisé depuis l'intérieur de son DOM d'ombre), uniquement si le sélecteur fourni comme paramètre de la fonction correspond à un ancêtre de l'hôte d'ombre à l'emplacement qu'il occupe dans la hiérarchie du DOM.
 
@@ -14,7 +12,7 @@ Normalement, les éléments d'un DOM d'ombre sont isolés du DOM extérieur. La 
 
 Imaginez que vous ayez un élément personnalisé `<greenhouse>`, dans lequel vit un `<chameleon>`. Ici, le `<greenhouse>` est l'hôte du Shadow DOM et l'élément `<chameleon>` se trouve dans le Shadow DOM. La fonction `:host-context()` permet au `<chameleon>` de changer d'apparence en fonction de l'environnement du `<greenhouse>`. Si le `<greenhouse>` se trouve dans un endroit ensoleillé (il a une classe «&nbsp;sunny-theme&nbsp;»), le `<chameleon>` devient jaune. Si le `<greenhouse>` se trouve dans un endroit ombragé (une classe «&nbsp;shady-theme&nbsp;» est appliquée à la place), le `<chameleon>` devient bleu.
 
-Ce sélecteur traverse toutes les limites d'ombre. Il recherchera le thème ensoleillé ou ombragé appliqué directement à la `<greenhouse>` ou à l'un des ancêtres de l'hôte et aux DOM ancêtres jusqu'à atteindre la racine du document.
+Ce sélecteur traverse toutes les limites d'ombre. Il recherche le thème ensoleillé ou ombragé appliqué directement à la `<greenhouse>` ou à l'un des ancêtres de l'hôte et aux DOM ancêtres jusqu'à atteindre la racine du document.
 
 Pour limiter le sélecteur uniquement à l'hôte `<greenhouse>` directement ou limiter la sélection au DOM de l'hôte, utilisez plutôt la pseudo-classe {{CSSxRef(":host")}} ou {{CSSxRef(":host_function", ":host()")}}.
 
@@ -130,7 +128,7 @@ style.textContent =
   ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
 
-Les règles `:host-context(h1) { font-style: italic; }` et `:host-context(h1):after { content: " - pas de lien dans les titres !" }` mettent en forme les instances de l'élément `<context-span>` (ici l'hôte d'ombre) contenus dans des éléments `<h1>`. Dans notre exemple, nous avons utilisé ces règles pour afficher clairement que cet élément personnalisé ne devrait pas apparaître dans un élément `<h1>`.
+Les règles `:host-context(h1) { font-style: italic; }` et `:host-context(h1):after { content: " - pas de lien dans les titres !" }` mettent en forme les instances de l'élément `<context-span>` (ici l'hôte d'ombre) contenus dans des éléments `<h1>`. Dans notre exemple, nous avons utilisé ces règles pour afficher clairement que cet élément personnalisé ne doit pas apparaître dans un élément `<h1>`.
 
 ## Spécifications
 
