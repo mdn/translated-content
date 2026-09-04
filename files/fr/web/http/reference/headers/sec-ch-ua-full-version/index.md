@@ -3,7 +3,7 @@ title: En-tête Sec-CH-UA-Full-Version
 short-title: Sec-CH-UA-Full-Version
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Full-Version
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 {{SecureContext_Header}}
@@ -52,7 +52,7 @@ Accept-CH: Sec-CH-UA-Full-Version
 ```
 
 Le client peut choisir de fournir l'indication et d'ajouter l'en-tête `Sec-CH-UA-Full-Version` aux requêtes suivantes.
-Par exemple, le client pourrait ajouter l'en-tête comme suit&nbsp;:
+Par exemple, le client peut ajouter l'en-tête comme suit&nbsp;:
 
 ```http
 GET /ma/page HTTP/1.1

@@ -3,7 +3,7 @@ title: "Array : méthode findIndex()"
 short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
 ---
 
 La méthode **`findIndex()`** des instances de {{JSxRef("Array")}} retourne l'indice du premier élément d'un tableau qui satisfait la fonction de test fournie.
@@ -81,7 +81,7 @@ console.log([4, 6, 7, 9, 12].findIndex(estPremier)); // 2 (array[2] vaut 7)
 ```
 
 > [!NOTE]
-> L'implémentation de `estPremier()` est uniquement destinée à la démonstration. Pour une utilisation réelle, il est préférable d'utiliser un algorithme fortement mémoïsé, comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne), afin d'éviter des calculs répétés.
+> L'implémentation de `estPremier()` est uniquement destinée à la démonstration. Pour une utilisation réelle, il est préférable d'utiliser un algorithme fortement {{Glossary("Memoization", "mémoïsé")}}, comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne), afin d'éviter des calculs répétés.
 
 ### Utiliser le troisième argument de `callbackFn`
 
@@ -116,7 +116,7 @@ La méthode `findIndex()` lit la propriété `length` de `this` puis accède à 
 ```js
 const objetSimilaireTableauemblantTableau = {
   length: 3,
-  "-1": 0.1, // ignoré par findIndex() car -1 < 0
+  "-1": 0.1, // ignoré par findIndex(), car -1 < 0
   0: 2,
   1: 7.3,
   2: 4,

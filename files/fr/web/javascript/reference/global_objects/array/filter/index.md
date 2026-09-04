@@ -3,7 +3,7 @@ title: "Array : méthode filter()"
 short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 l10n:
-  sourceCommit: 96f1c1c8891dbd4566485e564c0eb578a65a4d9d
+  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
 ---
 
 La méthode **`filter()`** des instances de {{JSxRef("Array")}} crée une [copie superficielle](/fr/docs/Glossary/Shallow_copy) d'une portion d'un tableau donné, filtrée pour ne contenir que les éléments du tableau d'origine qui passent le test implémenté par la fonction fournie.
@@ -41,7 +41,7 @@ filter(callbackFn, thisArg)
 
 ### Valeur de retour
 
-Une [copie superficielle](/fr/docs/Glossary/Shallow_copy) du tableau donné contenant uniquement les éléments qui passent le test. Si aucun élément ne passe le test, un tableau vide est renvoyé.
+Une [copie superficielle](/fr/docs/Glossary/Shallow_copy) du tableau donné contenant uniquement les éléments qui passent le test. Si aucun élément ne passe le test, un tableau vide est retourné.
 
 ## Description
 
@@ -92,7 +92,7 @@ console.log(tableau.filter(estPremier)); // [2, 3, 5, 7, 11, 13]
 ```
 
 > [!NOTE]
-> L'implémentation de `estPremier()` est uniquement à des fins de démonstration. Pour une application réelle, il serait préférable d'utiliser un algorithme fortement mémoïsé comme le [Crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) pour éviter les calculs répétés.
+> L'implémentation de `estPremier()` est uniquement à des fins de démonstration. Pour une application réelle, il est préférable d'utiliser un algorithme fortement {{Glossary("Memoization", "mémoïsé")}} comme le [Crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) pour éviter les calculs répétés.
 
 ### Filtrer les objets invalides d'un tableau d'objets
 
@@ -214,5 +214,5 @@ console.log(
 - La méthode {{JSxRef("Array.prototype.some()")}}
 - La méthode {{JSxRef("Array.prototype.reduce()")}}
 - La méthode {{JSxRef("TypedArray.prototype.filter()")}}
-- [Prothèse d'émulation de `Array.prototype.filter` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.filter` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.filter)
+- [La prothèse d'émulation de `Array.prototype.filter` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [La prothèse d'émulation es-shims de `Array.prototype.filter` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.filter)

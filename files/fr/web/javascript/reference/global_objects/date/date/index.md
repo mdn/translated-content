@@ -3,7 +3,7 @@ title: Constructeur Date()
 short-title: Date()
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 91b5a448a517239876a4bc92640bbbf29e30b106
 ---
 
 Le constructeur **`Date()`** crée des objets {{JSxRef("Date")}}. Lorsqu'il est appelé en tant que fonction, il retourne une chaîne de caractères représentant l'heure courante.
@@ -68,15 +68,15 @@ Lorsqu'aucun paramètre n'est fourni, le nouvel objet `Date` ainsi créé repré
 - `dateObject`
   - : Un objet `Date` existant. Cela crée effectivement une copie de l'objet `Date` existant avec la même date et la même heure. Cela équivaut à `new Date(dateObject.valueOf())`, sauf que la méthode `valueOf()` n'est pas appelée.
 
-Lorsqu'un paramètre est passé au constructeur `Date()`, les instances de `Date` sont traitées de manière spécifique. Toutes les autres valeurs sont [converties en primitives](/fr/docs/Web/JavaScript/Guide/Data_structures#contraintes_des_primitives). Si le résultat est une chaîne de caractères, elle sera analysée comme une chaîne de caractères de date. Sinon, la primitive résultante est convertie en nombre et traitée comme un timestamp.
+Lorsqu'un paramètre est passé au constructeur `Date()`, les instances de `Date` sont traitées de manière spécifique. Toutes les autres valeurs sont [converties en primitives](/fr/docs/Web/JavaScript/Guide/Data_structures#contraintes_des_primitives). Si le résultat est une chaîne de caractères, elle est analysée comme une chaîne de caractères de date. Sinon, la primitive résultante est convertie en nombre et traitée comme un timestamp.
 
 #### Valeurs pour les composantes individuelles de la date et de l'heure
 
-Soient au moins une année et un mois, cette forme de `Date()` renvoie un objet `Date` dont les valeurs des composantes (année, mois, jour, heure, minute, seconde, et milliseconde) proviennent des paramètres suivants. Chaque champ manquant prendra la valeur la plus basse possible (soit `1` pour le paramètre `day` et `0` pour les autres). Les valeurs des paramètres sont évaluées selon le fuseau horaire local et pas UTC. {{JSxRef("Date.UTC()")}} accepte des paramètres similaires mais interprète les composantes comme UTC et retourne un timestamp.
+Soient au moins une année et un mois, cette forme de `Date()` retournée un objet `Date` dont les valeurs des composantes (année, mois, jour, heure, minute, seconde, et milliseconde) proviennent des paramètres suivants. Chaque champ manquant prendra la valeur la plus basse possible (soit `1` pour le paramètre `day` et `0` pour les autres). Les valeurs des paramètres sont évaluées selon le fuseau horaire local et pas UTC. {{JSxRef("Date.UTC()")}} accepte des paramètres similaires mais interprète les composantes comme UTC et retourne un timestamp.
 
-Si un paramètre dépasse ses bornes définies, il est «&nbsp;reporté&nbsp;». Par exemple, si un `monthIndex` supérieur à `11` est passé, ces mois supplémentaires feront augmenter l'année&nbsp;; si un `minutes` supérieur à `59` est passé, les `hours` augmenteront en conséquence, etc. Ainsi, `new Date(1990, 12, 1)` retournera le 1er janvier 1991&nbsp;; `new Date(2020, 5, 19, 25, 65)` retournera 2:05 le 20 juin 2020.
+Si un paramètre dépasse ses bornes définies, il est «&nbsp;reporté&nbsp;». Par exemple, si un `monthIndex` supérieur à `11` est passé, ces mois supplémentaires font augmenter l'année&nbsp;; si un `minutes` supérieur à `59` est passé, les `hours` augmentent en conséquence, etc. Ainsi, `new Date(1990, 12, 1)` retourne le 1er janvier 1991&nbsp;; `new Date(2020, 5, 19, 25, 65)` retourne 2:05 le 20 juin 2020.
 
-De même, si un paramètre est inférieur à sa borne minimale, il «&nbsp;emprunte&nbsp;» à la position supérieure. Par exemple, `new Date(2020, 5, 0)` retournera le 31 mai 2020.
+De même, si un paramètre est inférieur à sa borne minimale, il «&nbsp;emprunte&nbsp;» à la position supérieure. Par exemple, `new Date(2020, 5, 0)` retourne le 31 mai 2020.
 
 - `year`
   - : Une valeur entière représentant l'année. Les valeurs de `0` à `99` correspondent aux années `1900` à `1999`. Les autres valeurs correspondent à l'année indiquée. Voir [l'exemple](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#interprétation_des_années_sur_deux_chiffres).
@@ -97,33 +97,17 @@ De même, si un paramètre est inférieur à sa borne minimale, il «&nbsp;empru
 
 Appeler `new Date()` (le constructeur `Date()`) retourne un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date). Si on l'appelle avec une chaîne de caractères invalide pour une date, ou si la date à construire a un timestamp inférieur à `-8,640,000,000,000,000` ou supérieur à `8,640,000,000,000,000` millisecondes, il retourne une [date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) (un objet `Date` dont la méthode {{JSxRef("Date/toString", "toString()")}} retourne `"Invalid Date"` et la méthode {{JSxRef("Date/valueOf", "valueOf()")}} retourne `NaN`).
 
-Appeler la fonction `Date()` (sans le mot-clé `new`) retourne une représentation en chaîne de caractères de la date et de l'heure courante, exactement comme le fait `new Date().toString()`. Tout argument passé à un appel de fonction `Date()` (sans le mot-clé `new`) est ignoré&nbsp;; que ce soit une chaîne de caractères invalide pour une date — ou même n'importe quel objet ou autre primitive comme argument — cela retournera toujours une représentation en chaîne de caractères de la date et de l'heure courante.
+Appeler la fonction `Date()` (sans le mot-clé `new`) retourne une représentation en chaîne de caractères de la date et de l'heure courante, exactement comme le fait `new Date().toString()`. Tout argument passé à un appel de fonction `Date()` (sans le mot-clé `new`) est ignoré&nbsp;; que ce soit une chaîne de caractères invalide pour une date — ou même n'importe quel objet ou autre primitive comme argument — cela retourne toujours une représentation en chaîne de caractères de la date et de l'heure courante.
 
 ## Description
 
 ### Précision temporelle réduite
 
-Pour offrir une protection contre les attaques par mesure de temps et le {{Glossary("Fingerprinting", "profilage d'empreinte")}}, la précision de `new Date()` peut être arrondie selon les paramètres du navigateur. Dans Firefox, la préférence `privacy.reduceTimerPrecision` est activée par défaut et la valeur par défaut est 2 ms. Vous pouvez aussi activer `privacy.resistFingerprinting`, auquel cas la précision sera de 100 ms ou la valeur de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, selon la plus grande des deux.
+Pour offrir une protection contre les attaques par mesure de temps et le {{Glossary("Fingerprinting", "profilage d'empreinte")}}, la précision de `new Date()` peut être réduite selon les réglages du navigateur.
 
-Par exemple, avec une précision temporelle réduite, le résultat de `new Date().getTime()` sera toujours un multiple de 2, ou un multiple de 100 (ou de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) si `privacy.resistFingerprinting` est activé.
+Lorsqu'un horodatage, une chaîne de caractères de date, un objet date ou des valeurs de composantes de date sont fournis au constructeur, le navigateur n'applique pas d'arrondi du minuteur à l'heure fournie.
 
-```js
-// précision temporelle réduite (2 ms) dans Firefox 60
-new Date().getTime();
-// Peut être :
-// 1519211809934
-// 1519211810362
-// 1519211811670
-// …
-
-// précision temporelle réduite avec `privacy.resistFingerprinting` activé
-new Date().getTime();
-// Peut être :
-// 1519129853500
-// 1519129858900
-// 1519129864400
-// …
-```
+Lorsqu'il est appelé sans arguments, le constructeur obtient l'heure courante de la même manière que {{JSxRef("Date.now()")}}. Il hérite de la précision de cette lecture de l'horloge sans introduire d'imprécision supplémentaire.
 
 ## Exemples
 
@@ -134,7 +118,7 @@ Les exemples qui suivent illustrent différentes façons de créer des dates Jav
 ```js
 const aujourdhui = new Date();
 const anniversaire = new Date("September 22, 2018 15:00:00"); // DÉCONSEILLÉ : peut ne pas fonctionner dans tous les environnements
-const anniversaire2 = new Date("2018-09-22T15:00:00"); // Ceci est standardisé et fonctionnera de manière fiable
+const anniversaire2 = new Date("2018-09-22T15:00:00"); // Ceci est standardisé et fonctionne de manière fiable
 const anniversaire3 = new Date(2018, 8, 22); // le mois est indexé à partir de 0
 const anniversaire4 = new Date(2018, 8, 22, 15, 0, 0);
 const anniversaire5 = new Date(628021800000); // en utilisant un timestamp epoch
@@ -142,19 +126,19 @@ const anniversaire5 = new Date(628021800000); // en utilisant un timestamp epoch
 
 ### Passage d'une valeur qui n'est ni une Date, ni une chaîne de caractères, ni un nombre
 
-Si le constructeur `Date()` est appelé avec un paramètre qui n'est pas une instance de `Date`, il sera converti en primitive puis vérifié pour savoir s'il s'agit d'une chaîne de caractères. Par exemple, `new Date(undefined)` est différent de `new Date()`&nbsp;:
+Si le constructeur `Date()` est appelé avec un paramètre qui n'est pas une instance de `Date`, il est converti en primitive puis vérifié pour savoir s'il s'agit d'une chaîne de caractères. Par exemple, `new Date(undefined)` est différent de `new Date()`&nbsp;:
 
 ```js
 console.log(new Date(undefined)); // Invalid Date
 ```
 
-Cela s'explique par le fait que `undefined` est déjà une primitive mais pas une chaîne de caractères, il sera donc converti en nombre, ce qui donne [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) et donc pas un timestamp valide. À l'inverse, `null` sera converti en `0`.
+Cela s'explique par le fait que `undefined` est déjà une primitive mais pas une chaîne de caractères, il est donc converti en nombre, ce qui donne {{JSxRef("NaN")}} et donc pas un horodatage valide. À l'inverse, `null` est converti en `0`.
 
 ```js
 console.log(new Date(null)); // 1970-01-01T00:00:00.000Z
 ```
 
-[Arrays](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) would be coerced to a string via [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString), which joins the elements with commas. However, the resulting string for any array with more than one element is not a valid ISO 8601 date string, so its parsing behavior would be implementation-defined. **Do not pass arrays to the `Date()` constructor.**
+Les [tableaux](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) sont convertis en chaîne de caractères avec [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString), ce qui joint les éléments avec des virgules. Cependant, la chaîne de caractères résultante pour tout tableau contenant plus d'un élément n'est pas une chaîne de caractères de date ISO 8601 valide, donc son comportement d'analyse est défini par l'implémentation. **Ne passez pas de tableaux au constructeur `Date()`.**
 
 ```js
 console.log(new Date(["2020-06-19", "17:13"]));

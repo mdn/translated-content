@@ -3,7 +3,7 @@ title: "Permissions-Policy : directive attribution-reporting"
 short-title: attribution-reporting
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/attribution-reporting
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 {{Non-standard_Header}}

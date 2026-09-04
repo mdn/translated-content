@@ -3,7 +3,7 @@ title: En-tête Attribution-Reporting-Register-Source
 short-title: Attribution-Reporting-Register-Source
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 {{Non-standard_Header}}
@@ -14,7 +14,7 @@ Cet en-tête est inclus dans la réponse à une requête contenant l'en-tête {{
 Voir [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
 > [!NOTE]
-> Si le site appelant n'a pas inclus l'API Attribution Reporting dans un [processus d'inscription Privacy Sandbox](/fr/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment) réussi, l'en-tête `Attribution-Reporting-Register-Source` est ignoré et les sources d'attribution ne sont pas enregistrées.
+> Si le site appelant n'a pas inclus l'API Attribution Reporting dans un [processus d'inscription Privacy Sandbox](/fr/docs/Web/Privacy/Guides/Privacy_sandbox#inscription) réussi, l'en-tête `Attribution-Reporting-Register-Source` est ignoré et les sources d'attribution ne sont pas enregistrées.
 
 <table class="properties">
   <tbody>
