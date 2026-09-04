@@ -182,7 +182,7 @@ Implementemos un ejemplo. Actualiza tu HTML para añadir un atributo [`pattern`]
 ```html
 <form>
   <label for="choose">¿Prefieres un plátano o una cereza?</label>
-  <input id="choose" name="i_like" required pattern="[Pp]látano|[Cc]ereza " />
+  <input id="choose" name="i_like" required pattern="[Pp]látano|[Cc]ereza" />
   <button>Enviar</button>
 </form>
 ```
