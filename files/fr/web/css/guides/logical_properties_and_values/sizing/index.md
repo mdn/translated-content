@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Logical_properties_and_values/Sizing
 original_slug: Web/CSS/CSS_logical_properties_and_values/Sizing
 ---
 
-{{CSSRef}}
-
 Dans ce guide, nous verrons les correspondances entre les propriétés physiques et les propriétés logiques qui peuvent être utilisées afin de dimensionner des éléments au sein d'un document.
 
 Lorsqu'on définit la taille d'un objet, [la spécification sur les propriétés et les valeurs logiques](https://drafts.csswg.org/css-logical/) permet de définir le dimensionnement en fonction du flux du texte (le mode d'écriture et son orientation) plutôt que relativement aux dimensions physiques du support (haut / bas / gauche / droite). Bien que ce premier fonctionnement, utilisant des propriétés et des valeurs _logiques_, puisse devenir la méthode par défaut à l'avenir, on peut tout à fait avoir besoin d'utiliser des propriétés et des valeurs _physiques_ en combinaison avec ces propriétés et ces valeurs logiques.

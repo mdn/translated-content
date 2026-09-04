@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Grid_layout/Box_alignment
 original_slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 ---
 
-{{CSSRef}}
-
 {{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Auto-placement", "Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes","Web/CSS/Guides/Grid_layout")}}
 
 Si vous connaissez [les boîtes flexibles (flexbox)](/fr/docs/Web/CSS/Guides/Flexible_box_layout) vous savez déjà comment aligner les éléments flexibles à l'intérieur d'un conteneur flexible. Ces propriétés d'alignement, initialement spécifiée dans la spécification des boîtes flexibles, sont désormais spécifiées dans une nouvelle spécification [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Cette spécification détaille le fonctionnement de l'alignement pour les différentes méthodes de disposition.
