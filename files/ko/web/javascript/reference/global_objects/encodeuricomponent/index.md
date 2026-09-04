@@ -43,7 +43,7 @@ Not Escaped:
     A-Z a-z 0-9 - _ . ! ~ * ' ( )
 ```
 
-`encodeURIComponent()`와 {{jsxref("encodeURI", "encodeURI()")}}의 차이는 다음과 같습니다.
+`encodeURIComponent()`와 {{jsxref("encodeURI()")}}의 차이는 다음과 같습니다.
 
 ```js
 var set1 = ";,/?:@&=+$"; // Reserved Characters

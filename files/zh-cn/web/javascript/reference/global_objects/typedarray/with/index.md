@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a815a95e4ab4adf391d8a7bc66a3abbce1a686d8
 ---
 
-{{JSRef}}
-
 {{jsxref("TypedArray")}} 实例的 **`with()`** 方法是使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)修改指定索引值的[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)版本。它会返回一个新的类型化数组，其指定索引处的元素值会被新值替换。该方法的算法与 {{jsxref("Array.prototype.with()")}} 相同。
 
 ## 语法

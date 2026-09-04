@@ -1,15 +1,16 @@
 ---
 title: "Element : méthode hasAttributeNS()"
+short-title: hasAttributeNS()
 slug: Web/API/Element/hasAttributeNS
 l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`hasAttributeNS()`**, associée à l'interface [`Element`](/fr/docs/Web/API/Element), renvoie une **valeur booléenne** indiquant si l'élément courant possède l'attribut spécifié ou non pour l'espace de noms indiqué.
+La méthode **`hasAttributeNS()`** de l'interface {{DOMxRef("Element")}} retourne une valeur booléenne indiquant si l'élément courant possède l'attribut défini avec l'espace de noms défini.
 
-Si vous manipulez des documents HTML et n'avez pas besoin de restreindre à un espace de noms donné, vous pouvez utiliser la méthode [`hasAttribute()`](/fr/docs/Web/API/Element/hasAttribute) à la place.
+Si vous travaillez avec des documents HTML et que vous n'avez pas besoin de définir l'attribut demandé comme faisant partie d'un espace de noms spécifique, utilisez plutôt la méthode {{DOMxRef("Element.hasAttribute()", "hasAttribute()")}}.
 
 ## Syntaxe
 
@@ -20,18 +21,18 @@ hasAttributeNS(namespace,localName)
 ### Paramètres
 
 - `namespace`
-  - : Une chaîne de caractères spécifiant l'espace de noms de l'attribut.
+  - : Une chaîne de caractères définissant l'espace de noms de l'attribut.
 - `localName`
   - : Le nom de l'attribut.
 
 ### Valeur de retour
 
-Un booléen indiquant la présence de l'attribut.
+Un booléen.
 
-## Exemple
+## Exemples
 
 ```js
-// Check that the attribute exists before you set a value
+// Vérifie que l'attribut existe avant de lui assigner une valeur
 const d = document.getElementById("div1");
 if (
   d.hasAttributeNS("http://www.mozilla.org/ns/specialspace/", "special-align")
@@ -50,7 +51,6 @@ if (
 
 ## Voir aussi
 
-- [`Element.hasAttribute()`](/fr/docs/Web/API/Element/hasAttribute)
-- [`Element.getAttributeNS()`](/fr/docs/Web/API/Element/getAttributeNS)
-- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)
-- [`Element.removeAttributeNS()`](/fr/docs/Web/API/Element/removeAttributeNS)
+- La méthode {{DOMxRef("Element.getAttributeNS()")}}
+- La méthode {{DOMxRef("Element.setAttributeNS()")}}
+- La méthode {{DOMxRef("Element.removeAttributeNS()")}}

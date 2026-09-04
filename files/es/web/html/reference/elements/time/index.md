@@ -38,15 +38,15 @@ time {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Contenido de flujo</a
         >,
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >, contenido palpable.
       </td>
@@ -54,7 +54,7 @@ time {
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >Contenido de fraseo</a
         >.
       </td>
@@ -69,7 +69,7 @@ time {
       <th scope="row">Padres permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >.
       </td>

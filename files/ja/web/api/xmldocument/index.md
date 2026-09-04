@@ -31,6 +31,6 @@ _また、 {{DOMxRef("Document")}} からメソッドを継承します。_
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [The DOM interfaces index.](/ja/docs/Web/API/Document_Object_Model)

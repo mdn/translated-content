@@ -1,30 +1,35 @@
 ---
-title: BaseAudioContext.createConstantSource()
+title: BaseAudioContext：createConstantSource() 方法
 slug: Web/API/BaseAudioContext/createConstantSource
+l10n:
+  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
 {{APIRef("Web Audio API")}}
 
-**`createConstantSource()`** 是 {{domxref("BaseAudioContext")}} 接口的一个方法，用于生成一个 {{domxref("ConstantSourceNode")}} 对象，该对象是一个输出单信道（one-channel）音频信号的音频源，这些音频信号都拥有一个恒定的样本值。
+{{domxref("BaseAudioContext")}} 接口的 **`createConstantSource()`** 方法创建一个 {{domxref("ConstantSourceNode")}} 对象，它是一个持续输出单声道（单通道）声音信号的音频源，其所有采样值都相同。
 
-## Syntax
+> [!NOTE]
+> 推荐使用 {{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}} 构造函数来创建 {{domxref("ConstantSourceNode")}}；请参见[创建 AudioNode](/zh-CN/docs/Web/API/AudioNode#创建_audionode)。
 
-```plain
-var constantSourceNode = AudioContext.createConstantSource()
+## 语法
+
+```js-nolint
+createConstantSource()
 ```
 
-### Parameters
+### 参数
 
-None.
+无。
 
-### Returns
+### 返回值
 
-A {{domxref('ConstantSourceNode')}} instance.
+一个 {{domxref("ConstantSourceNode")}} 实例。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser Compatibility
+## 浏览器兼容性
 
 {{Compat}}

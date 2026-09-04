@@ -1,12 +1,12 @@
 ---
-title: "Types de liens : noreferrer"
+title: Valeur d'attribut HTML `rel="noreferrer"`
+short-title: noreferrer
 slug: Web/HTML/Reference/Attributes/rel/noreferrer
-original_slug: Web/HTML/Attributes/rel/noreferrer
+l10n:
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
-{{HTMLSidebar}}
-
-Le mot-clé **`noreferrer`** de l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}} indique au navigateur, lorsque celui-ci ouvre la ressource cible, d'omettre l'en-tête {{HTTPHeader("Referer")}} et de ne divulguer aucune information de <i lang="en">referrer</i>. Lorsque `noreferrer` est indiqué, le navigateur se comporte également comme si le mot-clé `noopener` avait été spécifié (il n'est donc pas utile d'indiquer les deux).
+Le mot-clé **`noreferrer`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}} indique au navigateur, lors de la navigation vers la ressource cible, de ne pas envoyer l'en-tête {{HTTPHeader("Referer")}} et de ne divulguer aucune information de provenance. Il impose également le même comportement que le mot-clé [`noopener`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener).
 
 ## Spécifications
 

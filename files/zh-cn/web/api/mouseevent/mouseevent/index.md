@@ -17,7 +17,7 @@ new MouseEvent(type, options)
 ### 参数
 
 - _typeArg_
-  - : {{domxref("DOMString")}} 格式的事件名称。
+  - : {{jsxref("String")}} 格式的事件名称。
 - _mouseEventInit_ {{optional_inline}}
   - : 初始化 `MouseEvent` 的字典，有下列属性字段：
     - `"screenX"`，`long` 型可选，默认为 `0`，设置鼠标事件发生时相对于用户屏幕的水平坐标位置；该操作并不会改变真实鼠标的位置。
@@ -66,7 +66,7 @@ new MouseEvent(type, options)
       | `4`                       | 辅助按键被按下 (通常为中键) |
 
     - `"relatedTarget"`，{{domxref("EventTarget")}} 型可选，默认为 `null`，若事件为 [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event) 或 [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event)，则表示刚离开的元素；若事件为 [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event) 或 [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event)，则表示刚进入的元素。
-    - `"region"`，{{domxref("DOMString")}} 型可选，默认为`null`，标明点击事件影响的区域 DOM 的 id。不影响任何区域的话，请传`null`值。
+    - `"region"`，{{jsxref("String")}} 型可选，默认为`null`，标明点击事件影响的区域 DOM 的 id。不影响任何区域的话，请传`null`值。
 
     在一些实现中，为屏幕和客户端字段传递数值以外的任何东西都会抛出 {{jsxref("TypeError")}}。
 

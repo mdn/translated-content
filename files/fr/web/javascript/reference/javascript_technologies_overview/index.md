@@ -23,11 +23,11 @@ Ce langage est aussi utilisé dans des environnements différents des navigateur
 Entre autres choses, ECMAScript définit :
 
 - [La syntaxe du langage](/fr/docs/Web/JavaScript/Reference/Lexical_grammar) (règles d'interprétation (parsing), mots-clés, flux d'instructions, initialisation littérale d'objets...)
-- Le mécanisme de traitement d'erreurs ({{jsxref("Instructions/throw","throw")}}, {{jsxref("Instructions/try...catch","try...catch")}} capacité qu'a l'utilisateur de créer des types d'erreurs personnalisés)
+- Le mécanisme de traitement d'erreurs ({{jsxref("Statements/throw","throw")}}, {{jsxref("Statements/try...catch","try...catch")}} capacité qu'a l'utilisateur de créer des types d'erreurs personnalisés)
 - Les types de variables (booléen, nombre, chaîne de caractères, fonction, objet...)
-- L'objet global. Dans l'environnement d'un navigateur, cet objet global est l'objet {{domxref("Window","window")}}. ECMAScript ne définit ici que les API accessibles depuis l'objet global (peu importe l'environnement qui peut être différent d'un navigateur) (par exemple {{jsxref("parseInt","parseInt()")}}, {{jsxref("parseFloat","parseFloat()")}}, {{jsxref("decodeURI","decodeURI()")}}, {{jsxref("encodeURI","encodeURI()")}}...)
+- L'objet global. Dans l'environnement d'un navigateur, cet objet global est l'objet {{domxref("Window","window")}}. ECMAScript ne définit ici que les API accessibles depuis l'objet global (peu importe l'environnement qui peut être différent d'un navigateur) (par exemple {{jsxref("parseInt()")}}, {{jsxref("parseFloat()")}}, {{jsxref("decodeURI()")}}, {{jsxref("encodeURI()")}}...)
 - [Le mécanisme d'héritage](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) basé sur le concept de prototype
-- Les objets et fonctions natifs ({{jsxref("JSON")}}, {{jsxref("Math")}}, méthodes de {{jsxref("Array.prototype")}}, méthodes d'introspection d'`Object`...)
+- Les objets et fonctions natifs ({{jsxref("JSON")}}, {{jsxref("Math")}}, méthodes de {{jsxref("Array")}}, méthodes d'introspection d'`Object`...)
 - [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
 ### Support des navigateurs

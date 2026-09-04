@@ -15,7 +15,7 @@ Errodesintaxe: Token inesperado ( [Chrome]
 
 ## Tipo de erro
 
-{{jsxref("Errodesintaxe")}}
+{{jsxref("SyntaxError", "Errodesintaxe")}}
 
 ## O que estava errado?
 

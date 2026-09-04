@@ -47,7 +47,7 @@ document.close();
 
 ### コンテンツのセキュリティ
 
-このメソッドは他のプロパティと同じ[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に従います。このメソッドによって文書のオリジンが変更される場合は動作しません。
+このメソッドは他のプロパティと同じ[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)に従います。このメソッドによって文書のオリジンが変更される場合は動作しません。
 
 ## 引数 3 つの document.open()
 

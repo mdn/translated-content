@@ -7,7 +7,7 @@ slug: Web/API/WebVR_API
 
 WebVR fournit un support pour les dispositifs de réalité virtuelle - par exemple pour les casques de réalité virtuelle comme l'Oculus Rift - aux applications Web, permettant aux développeurs de traduire les informations de position et de mouvement de l'appareil en mouvements autour d'une scène 3D. Cela a de nombreuses applications très intéressantes, des visites de produits virtuels aux applications de formation interactive en passant par des jeux en première personne dans un environnement immersif.
 
-## Concepts et usage
+## Concepts et utilisation
 
 ![Croquis d'une personne assise sur une chaise et portant des lunettes portant la mention « Head mounted display (HMD) » faisant face à un moniteur avec une webcam portant la mention « Position sensor ».](hw-setup.png)
 

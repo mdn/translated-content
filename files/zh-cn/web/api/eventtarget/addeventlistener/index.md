@@ -467,9 +467,9 @@ addListener();
 
 ### 处理过程中 `this` 的值的问题
 
-通常来说 {{jsxref("Operators/this","this")}} 的值是触发事件的元素的引用，这种特性在多个相似的元素使用同一个通用事件监听器时非常让人满意。
+通常来说 {{jsxref("this")}} 的值是触发事件的元素的引用，这种特性在多个相似的元素使用同一个通用事件监听器时非常让人满意。
 
-当使用 `addEventListener()` 为一个元素注册事件的时候，事件处理器里的 {{jsxref("Operators/this","this")}} 值是该元素的引用。其与传递给句柄的 event 参数的 `currentTarget` 属性的值一样。
+当使用 `addEventListener()` 为一个元素注册事件的时候，事件处理器里的 {{jsxref("this")}} 值是该元素的引用。其与传递给句柄的 event 参数的 `currentTarget` 属性的值一样。
 
 ```js
 my_element.addEventListener("click", function (e) {

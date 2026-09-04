@@ -48,7 +48,8 @@ second.onchange = function () {
 
 Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
-> **Примечание:** `postMessage()` может отправить только один объект за раз. Если нужно передать несколько значений, то можно отправить массив, как показано выше.
+> [!NOTE]
+> `postMessage()` может отправить только один объект за раз. Если нужно передать несколько значений, то можно отправить массив, как показано выше.
 
 ### Пример с Transfer
 

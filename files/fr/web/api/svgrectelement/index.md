@@ -7,7 +7,7 @@ slug: Web/API/SVGRectElement
 
 L'interface `SVGRectElement` fournit un accès aux propriétés et aux méthodes de l'élément {{SVGElement("rect")}}.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Propriétés
 

@@ -42,7 +42,7 @@ class ChildClass extends ParentClass { ... }
 
 `extends` 關鍵字可用於建立一個自訂類別或內建類別的子類別。
 
-其繼承之原型 `.prototype` 必須是 {{jsxref("Object")}} 或 {{jsxref("null")}}。
+其繼承之原型 `.prototype` 必須是 {{jsxref("Object")}} 或 {{jsxref("Operators/null", "null")}}。
 
 ## 範例
 
@@ -101,7 +101,7 @@ class myDate extends Date {
 
 ### 擴展 `null`
 
-像擴展普通類別一樣擴展 {{jsxref("null")}}，但新對象的原型不會繼承 {{jsxref("Object.prototype")}}。
+像擴展普通類別一樣擴展 {{jsxref("Operators/null", "null")}}，但新對象的原型不會繼承 {{jsxref("Object")}}。
 
 ```js
 class nullExtends extends null {

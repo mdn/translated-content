@@ -43,9 +43,9 @@ Chrome:
 
 Директива `"use strict"` была использована в верхней части функции, которая имеет один из следующих параметров:
 
-- {{jsxref("функции/Default_parameters", "параметры по умолчанию", "", 1)}}
-- {{jsxref("функции/rest_parameters", "остальные параметры", "", 1)}}
-- {{jsxref("операторы/Destructuring_assignment", "деконструкция параметров", "", 1)}}
+- {{jsxref("Functions/Default_parameters", "параметры по умолчанию", "", 1)}}
+- {{jsxref("Functions/rest_parameters", "остальные параметры", "", 1)}}
+- {{jsxref("Operators/Destructuring", "деконструкция параметров", "", 1)}}
 
 Директива "use strict" не допускается в верхней части таких функций согласно спецификации ECMAScript.
 
@@ -121,8 +121,8 @@ var callback = (() => {
 ## Смотрите также
 
 - {{jsxref("Strict_mode", "строгий режим", "", 1)}}
-- {{jsxref("Ведомости/функция", "оператор function", "", 1)}}
-- {{jsxref("операторы/функции", "свободное выражение функции", "", 1)}}
-- {{jsxref("функции/Default_parameters", "параметры по умолчанию", "", 1)}}
-- {{jsxref("функции/rest_parameters", "остальные параметры", "", 1)}}
-- {{jsxref("операторы/Destructuring_assignment", "деконструкция параметры", "", 1)}}
+- {{jsxref("Statements/function", "оператор function", "", 1)}}
+- {{jsxref("Operators/function", "свободное выражение функции", "", 1)}}
+- {{jsxref("Functions/Default_parameters", "параметры по умолчанию", "", 1)}}
+- {{jsxref("Functions/rest_parameters", "остальные параметры", "", 1)}}
+- {{jsxref("Operators/Destructuring", "деконструкция параметры", "", 1)}}

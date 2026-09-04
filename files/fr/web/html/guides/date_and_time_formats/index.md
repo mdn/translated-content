@@ -1,17 +1,18 @@
 ---
-title: Formats de date et d'heure utilisés en HTML
+title: Utiliser les formats de date et d'heure en HTML
+short-title: Formats de date et d'heure
 slug: Web/HTML/Guides/Date_and_time_formats
-original_slug: Web/HTML/Date_and_time_formats
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+Certains éléments HTML manipulent des valeurs temporelles pour des dates ou des heures. Les formats utilisés pour les chaînes de caractères qui définissent ces valeurs sont décrits dans cet article.
 
-Certains éléments HTML manipulent des valeurs temporelles pour des dates ou des heures. Les formats utilisés pour les chaînes de caractères qui définissent ces valeurs sont décrits dans cet article. Les éléments qui utilisent ces données sont notamment les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) qui permettent de choisir une date, une heure ou les deux, les éléments [`<ins>`](/fr/docs/Web/HTML/Reference/Elements/ins) et [`<del>`](/fr/docs/Web/HTML/Reference/Elements/del) dont l'attribut [`ins`](/fr/docs/Web/HTML/Reference/Elements/ins#attr-datetime) indique la date (ou la date et l'heure) à laquelle l'ajout ou la suppression de contenu a eu lieu.
+Les éléments qui utilisent ces données sont notamment les éléments {{HTMLElement("input")}} qui permettent de choisir une date, une heure ou les deux, les éléments {{HTMLElement("ins")}} et {{HTMLElement("del")}} dont l'attribut [`datetime`](/fr/docs/Web/HTML/Reference/Elements/ins#datetime) définit la date ou la date et l'heure à laquelle l'ajout ou la suppression de contenu a eu lieu.
 
-Pour les éléments `<input>`, voici les différents type (cf. [`input`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type)) pour lesquels l'attribut [`value`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-value) contient une chaîne de caractères représentant une date ou une heure :
+Pour les éléments `<input>`, voici les différents type (cf. [`input`](/fr/docs/Web/HTML/Reference/Elements/input#type)) pour lesquels l'attribut [`value`](/fr/docs/Web/HTML/Reference/Global_attributes#value) contient une chaîne de caractères représentant une date ou une heure&nbsp;:
 
 - [`date`](/fr/docs/Web/HTML/Reference/Elements/input/date)
-- [`datetime`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local) {{deprecated_inline}}
 - [`datetime-local`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local)
 - [`month`](/fr/docs/Web/HTML/Reference/Elements/input/month)
 - [`time`](/fr/docs/Web/HTML/Reference/Elements/input/time)
@@ -23,13 +24,13 @@ Avant de détailler plus, voyons quelques exemples de chaînes de caractères ut
 
 <table class="standard-table">
   <caption>
-    Exemple de chaînes de caractères utilisées en HTML pour représenter des
+    Exemple de chaînes de caractères HTML pour représenter des
     dates et des heures
   </caption>
   <thead>
     <tr>
       <th scope="col">Chaîne de caractères</th>
-      <th colspan="2" scope="col">Date/heure</th>
+      <th colspan="2" scope="col">Date et/ou date et heure</th>
     </tr>
   </thead>
   <tbody>
@@ -37,7 +38,7 @@ Avant de détailler plus, voyons quelques exemples de chaînes de caractères ut
       <td><code>2005-06-07</code></td>
       <td>7 juin 2005</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Date_and_time_formats#date_strings"
+        <a href="#représentation_des_dates"
           >[détails]</a
         >
       </td>
@@ -46,7 +47,7 @@ Avant de détailler plus, voyons quelques exemples de chaînes de caractères ut
       <td><code>08:45</code></td>
       <td>08h45m (le matin)</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Date_and_time_formats#time_strings"
+        <a href="#représentation_des_heures"
           >[détails]</a
         >
       </td>
@@ -55,7 +56,7 @@ Avant de détailler plus, voyons quelques exemples de chaînes de caractères ut
       <td><code>08:45:25</code></td>
       <td>08h45m25s</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Date_and_time_formats#time_strings"
+        <a href="#représentation_des_heures"
           >[détails]</a
         >
       </td>
@@ -65,7 +66,7 @@ Avant de détailler plus, voyons quelques exemples de chaînes de caractères ut
       <td>03h40 (du matin), le 04 août 33</td>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings"
+          href="#représentation_des_dates_et_heures_locales"
           >[détails]</a
         >
       </td>
@@ -75,7 +76,7 @@ Avant de détailler plus, voyons quelques exemples de chaînes de caractères ut
       <td>30 secondes après 14h00, le premier avril 1977</td>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings"
+          href="#représentation_des_dates_et_heures_locales"
           >[détails]</a
         >
       </td>
@@ -85,7 +86,7 @@ Avant de détailler plus, voyons quelques exemples de chaînes de caractères ut
       <td>Minuit, UTC, le 1er janvier 1901</td>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Date_and_time_formats#global_date_and_time_strings"
+          href="#représentation_des_dates_et_heures_universelles"
           >[détails]</a
         >
       </td>
@@ -98,7 +99,7 @@ Avant de détailler plus, voyons quelques exemples de chaînes de caractères ut
       </td>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Date_and_time_formats#global_date_and_time_strings"
+          href="#représentation_des_dates_et_heures_universelles"
           >[détails]</a
         >
       </td>
@@ -108,38 +109,33 @@ Avant de détailler plus, voyons quelques exemples de chaînes de caractères ut
 
 ## Notions essentielles
 
-Avant de s'intéresser aux différents formats pour la représentation textuelle des valeurs temporelles en HTML, commençons par décrire comment ces valeurs sont définies formellement. HTML utilise une variation du standard [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601) pour les chaînes de caractères représentant les dates et les heures. Il est toujours utile de vérifier que le format utilisé est compatible avec HTML, car la spécification HTML utilise des algorithmes pour analyser ces chaînes qui sont plus précis que le standard ISO 8601 (il peut donc y avoir quelques fines différences).
+Avant d'examiner les différents formats de chaînes de caractères de date et d'heure utilisés par les éléments HTML, il est utile de comprendre quelques faits fondamentaux sur la façon dont ils sont définis. HTML utilise une variante de la norme [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601) pour ses chaînes de date et d'heure. Il est recommandé de relire les descriptions des formats que vous utilisez afin de vous assurer que vos chaînes sont bien compatibles avec HTML, car la spécification HTML inclut des algorithmes d'analyse de ces chaînes qui sont en réalité plus précis que ISO 8601, ce qui peut entraîner des différences subtiles dans la façon dont les chaînes de date et d'heure doivent être écrites.
 
 ### Jeu de caractères
 
-En HTML, les chaînes qui représentent des dates et des heures manipulent uniquement des caractères [ASCII](https://fr.wikipedia.org/wiki/ASCII).
+En HTML, les chaînes qui représentent des dates et des heures manipulent uniquement des caractères {{Glossary("ASCII")}}.
 
 ### Numérotation des années
 
-La spécification HTML indique que les années doivent être exprimées selon le [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_grégorien). Bien que les interfaces utilisateur permettent éventuellement de saisir des dates grâce à d'autres calendriers, la valeur sous-jacente est toujours représentée à l'aide du calendrier grégorien.
+Afin de simplifier le format de base utilisé pour les chaînes de caractères de date en HTML, la spécification exige que toutes les années soient indiquées selon le calendrier grégorien moderne (ou **proleptique**) [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_gr%C3%A9gorien). Bien que les interfaces utilisateur puissent permettre la saisie de dates selon d'autres calendriers, la valeur sous-jacente utilise toujours le calendrier grégorien.
 
-Bien que le calendrier grégorien ait été créé en 1582 afin de remplacer le calendrier julien, la notation grégorienne est « étendue » en HTML jusqu'à 1 après J.C. Aussi, si vous manipulez des dates antérieures à 1582, assurez-vous qu'elles soient bien exprimées selon le calendrier grégorien.
+Bien que le calendrier grégorien n'ait été créé qu'en 1582 (remplaçant le calendrier julien similaire), pour les besoins de HTML, le calendrier grégorien est étendu jusqu'à l'an 1 de notre ère. Veillez à ce que les dates plus anciennes en tiennent compte.
 
-En HTML, les années sont toujours écrites avec au moins 4 chiffres. Aussi, les années antérieures à l'an 1000 sont complétées avec des zéros : l'an 72 est donc écrit `0072`. Les années antérieures à l'an 1 ne sont pas prises en charge par HTML.
+Pour les dates en HTML, les années comportent toujours au moins quatre chiffres&nbsp;; les années antérieures à l'an 1000 sont complétées par des zéros initiaux (`0`), ainsi l'année 72 s'écrit `0072`. Les années antérieures à l'an 1 de notre ère ne sont pas prises en charge, donc HTML ne prend pas en charge les années 1 avant notre ère (1 av. J.-C.) ou antérieures.
 
-Une année est normalement constituée de 365 jours, sauf pendant les **[années bissextiles](#leap_years)**.
+Une année compte normalement 365 jours, sauf pendant les **[années bissextiles](#années_bissextiles)**.
 
 #### Années bissextiles
 
-Une année bissextile est une année dont le numéro est :
+Une **année bissextile** est toute année divisible par 400 _ou_ divisible par 4 mais pas par 100. Bien que l'année calendaire compte normalement 365 jours, il faut en réalité environ 365,2422 jours à la planète Terre pour effectuer une orbite complète autour du soleil. Les années bissextiles permettent d'ajuster le calendrier afin de le maintenir synchronisé avec la position réelle de la planète sur son orbite. Ajouter un jour à l'année tous les quatre ans rend la durée moyenne d'une année égale à 365,25 jours, ce qui est proche de la réalité.
 
-- Divisible par 400 ou,
-- Divisible par 4 mais pas par 100
+Les ajustements apportés à l'algorithme (prendre une année bissextile lorsque l'année est divisible par 400, et ignorer les années bissextiles lorsque l'année est divisible par 100) permettent d'approcher encore plus la valeur correcte (365,2425 jours). Les scientifiques ajoutent parfois des secondes intercalaires au calendrier (vraiment) pour gérer les trois dix-millièmes de jour restants et compenser le ralentissement naturel et progressif de la rotation de la Terre.
 
-Bien qu'une année calendaire s'étende sur 365 jours, la Terre met environ 365,2422 jours avant d'effectuer une orbite complète autour du soleil. Les années bissextiles permettent d'ajuster le calendrier et de le synchroniser avec la position de la planète le long de l'orbite. Ajouter un jour tous les 4 ans (environ) permet d'avoir une année moyenne longue de 365,25 jours, ce qui est relativement correct.
-
-En ajustant l'algorithme avec les contraintes ci-avant (divisible par 400 ou divisible par 4 mais pas par 100), on s'approche plus précisément du nombre correct de jours (365,2425). Des secondes intercalaires sont parfois ajoutées au calendrier afin de compenser les trois millièmes restant et le ralentissement naturel de la rotation de la Terre.
-
-Le deuxième mois de l'année (février) possède 28 jours pendant les années non-bissextiles et 29 jours pendant les années bissextiles.
+Le mois `02`, février, compte normalement 28 jours, mais il en compte 29 lors des années bissextiles.
 
 ### Mois de l'année
 
-Une année comporte 12 mois, numérotés de 1 à 12. Les valeurs des mois sont toujours représentées par une chaîne de caractères se composant de deux chiffres : des valeurs entre `01` et `12`. Voir le tableau ci-après pour les numéros des mois et le nombre de jours correspondant.
+Une année comporte 12 mois, numérotés de 1 à 12. Ils sont toujours représentés par une chaîne de caractères ASCII sur deux chiffres dont la valeur varie de `01` à `12`. Voir le tableau dans la section [Jours du mois](#jours_du_mois) pour les numéros des mois et leurs noms correspondants (et leurs durées en jours).
 
 ### Jours du mois
 
@@ -193,7 +189,7 @@ Les mois numérotés 1, 3, 5, 7, 8, 10 et 12 possèdent 31 jours. Les mois 4, 6,
       <td>31</td>
     </tr>
     <tr>
-      <th scope="row">o8</th>
+      <th scope="row">08</th>
       <td>Août</td>
       <td>31</td>
     </tr>
@@ -226,10 +222,10 @@ Une chaîne de caractères représentant une semaine correspondra à une semaine
 
 Le numéro de la semaine est une chaîne de caractères, avec deux chiffres, entre `01` et `53`. Chaque semaine commence un lundi et se termine un dimanche. Il est ainsi possible que les premiers jours de janvier fassent partie de la dernière semaine de l'année précédente et que les derniers jours fassent partie de la première semaine de l'année suivante. La première semaine de l'année est celle qui contient _le premier jeudi de l'année_. Ainsi, le premier jeudi de 1953 était le 1er janvier et la semaine contenant ce jour est donc considérée la première semaine de l'année. Ainsi, le 30 décembre 1952 appartient à la semaine `1953-W01`.
 
-Une année aura 53 semaines si :
+Une année aura 53 semaines si&nbsp;:
 
 - Le premier jour de l'année calendaire (le premier janvier) est un jeudi **ou**
-- Le premier jour de l'année calendaire (le premier janvier) est un mercredi et que l'année est une [année bissextile](#leap_years).
+- Le premier jour de l'année calendaire (le premier janvier) est un mercredi et que l'année est une [année bissextile](#années_bissextiles).
 
 Les autres années contiennent 52 semaines.
 
@@ -246,9 +242,9 @@ On notera que les deux composantes pour l'année et pour la semaine sont complé
 
 ## Représentation des mois
 
-Une chaîne de caractères pour un mois représente un mois d'une année donnée (plutôt qu'un mois «&nbsp;générique&nbsp;»). Aussi, on ne représentera pas simplement le mois de janvier mais le mois de janvier de l'année 1972.
+Une chaîne de caractères représentant un mois correspondant à un mois d'une année donnée. Autrement dit, plutôt que de représenter «&nbsp;Janvier,&nbsp;» seule, une chaîne de caractères de mois représente un mois et une année associés, comme «&nbsp;Janvier 1972.&nbsp;»
 
-Une chaîne de caractères représentant un mois est valide si elle commence par un numéro d'année valide (une chaîne de caractères composée de quatre chiffres), suivie d'un tiret ("`-`", ou U+002D), suivi d'un nombre sur deux chiffres où `01` représente janvier et où `12` représente décembre.
+Une **chaîne de caractères de mois valide** consiste en un [numéro d'année](#numérotation_des_années) valide (une chaîne de caractères composée d'au moins quatre chiffres), suivi d'un caractère tiret (`-`, ou U+002D), suivi d'un [numéro de mois](#mois_de_lannée) sur deux chiffres, où `01` représente janvier et `12` représente décembre.
 
 | Chaîne de caractères | Le mois et l'année                    |
 | -------------------- | ------------------------------------- |
@@ -262,7 +258,7 @@ On notera que les années sont exprimées sur au moins 4 chiffres et que les ann
 
 ## Représentation des dates
 
-Une chaîne de caractères représentant une date est valide si elle contient : une année (cf. ci-avant) suivie d'un tiret, suivi d'un mois, suivi d'un tiret ("`-`" ou U+002D) suivi du numéro du jour dans le mois sur deux chiffres.
+Une chaîne de caractères de date valide consiste en une [chaîne de caractères de mois](#représentation_des_mois), suivie d'un caractère tiret (`-`, ou U+002D), suivi d'un [numéro de jour dans le mois](#jours_du_mois) sur deux chiffres.
 
 | Chaîne de caractères | Date complète     |
 | -------------------- | ----------------- |
@@ -273,16 +269,16 @@ Une chaîne de caractères représentant une date est valide si elle contient : 
 
 ## Représentation des heures
 
-Une chaîne de caractères représentant une heure peut décrire différentes précisions : minute, seconde ou milliseconde. Il n'est pas possible d'indiquer uniquement l'heure ou les minutes. Une chaîne valide se compose _a minima_ d'une valeur sur deux chiffres représentant une heure, suivi de deux-points ("`:`", U+003A) puis d'une valeur sur deux chiffres exprimant les minutes. La valeur des minutes peut ensuite être suivie d'un autre deux-points puis d'une valeur sur deux chiffres pour les secondes. Il est possible d'indiquer les millisecondes en ajoutant un point ("`.`", U+002E) après les secondes, suivi d'une valeur sur un, deux ou trois chiffres.
+Une chaîne de caractères d'heure peut définir une heure avec une précision à la minute, à la seconde ou à la milliseconde. Il n'est pas permis d'indiquer uniquement l'heure ou les minutes. Une **chaîne de caractères d'heure valide** consiste au minimum en une heure sur deux chiffres suivie d'un deux-points (`:`, U+003A), puis de deux chiffres pour les minutes. Les minutes peuvent éventuellement être suivies d'un autre deux-points et de deux chiffres pour les secondes. Les millisecondes peuvent être indiquées, en option, en ajoutant un point décimal (`.`, U+002E) suivi d'un, deux ou trois chiffres.
 
-Voici quelques règles supplémentaires :
+Voici quelques règles supplémentaires&nbsp;:
 
-- L'heure est toujours exprimée selon une horloge sur 24 heures où `00` correspond à minuit et où `23` correspond à onze heures du soir. Aucune valeur en dehors de l'intervalle `00` - `23` n'est autorisée.
+- L'heure est toujours définie selon une horloge sur 24 heures où `00` correspond à minuit et où `23` correspond à onze heures du soir. Aucune valeur en dehors de l'intervalle `00` - `23` n'est autorisée.
 - La valeur représentant les minutes doit être composée de deux chiffres et être située entre `00` et `59`. Les valeurs en dehors de cet intervalle ne sont pas autorisées.
-- Si les secondes ne sont pas exprimées, il ne faut pas que la valeur se termine par un deux-points (après les minutes).
-- Si les secondes sont exprimées, leur nombre doit être entre `00` et `59`. Il n'est pas possible d'indiquer des secondes intercalaires à l'aide de valeurs telles que `60` ou `61`.
-- Si le nombre de secondes est indiqué et que c'est un entier, il ne doit pas être suivi d'un point.
-- Si les millisecondes sont indiquées, la valeur correspondante peut être composée d'un à trois chiffres.
+- Si les secondes ne sont pas définies (pour définir une heure précise à la minute près), il ne doit pas y avoir de deux-points après les minutes.
+- Si les secondes sont définies, leur nombre entier doit être compris entre `00` et `59`. Vous _ne pouvez pas_ définir des secondes intercalaires à l'aide de valeurs telles que `60` ou `61`.
+- Si le nombre de secondes est défini et que c'est un entier, il ne doit pas être suivi d'un point décimal.
+- Si une fraction de seconde est incluse, elle peut comporter un à trois chiffres, indiquant le nombre de millisecondes. Elle suit le point décimal placé après la composante des secondes dans la chaîne de caractères d'heure.
 
 | Chaîne de caractères | Heure                                            |
 | -------------------- | ------------------------------------------------ |
@@ -292,50 +288,141 @@ Voici quelques règles supplémentaires :
 
 ## Représentation des dates et heures locales
 
-Une chaîne de caractères valide pour un élément de saisie [`datetime-local`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local) se compose d'une chaîne de caractères représentant une date, suivie de la lettre "`T`" ou d'une espace puis d'une chaîne de caractères représentant une heure. La représentation ne contient aucune information quant au fuseau horaire dont il est question et on présume que la valeur temporelle indiquée est relative au fuseau horaire de l'utilisateur.
+Une chaîne de caractères valide pour un élément de saisie [`datetime-local`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local) se compose d'une chaîne de caractères représentant une date, suivie de la lettre `T` ou d'une espace puis d'une chaîne de caractères représentant une heure. La représentation ne contient aucune information quant au fuseau horaire dont il est question et on présume que la valeur temporelle indiquée est relative au fuseau horaire de l'utilisateur·ice.
 
-Lorsqu'on définit la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value) d'un champ `<input>` de type `datetime-local`, la chaîne de caractères est normalisée. Les formes normalisées utilisent toujours la lettre T comme séparateur entre la date et l'heure. De plus, les formes normalisées utilisent toujours la forme la plus courte pour exprimer l'heure (les secondes sont omises si leur valeur est `:00`).
+Lorsqu'on définit la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) d'un champ `<input>` de type `datetime-local`, la chaîne de caractères est **normalisée**. Les formes normalisées utilisent toujours la lettre `T` comme séparateur entre la date et l'heure. De plus, les formes normalisées utilisent toujours la forme la plus courte. Cela se fait en omettant la composante des secondes si sa valeur est `:00`.
 
-| Chaîne de caractères      | Version normalisée       | Date et heure correspondantes                                         |
-| ------------------------- | ------------------------ | --------------------------------------------------------------------- |
-| `1986-01-28T11:38:00.01`  | `1986-01-28T11:38:00.01` | 28 janvier 1986 à 11 heures et 38 minutes passées de 10 millisecondes |
-| `1986-01-28 11:38:00.010` | `1986-01-28T11:38:00.01` | 28 janvier 1986 à 11 heures et 38 minutes passées de 10 millisecondes |
-| `0170-07-31T22:00:00`     | `0170-07-31T22:00`       | 31 juillet 170 à 22 heures                                            |
-
-1. On notera qu'après la normalisation, on obtient la même chaîne que sur l'exemple précédent : l'espace séparateur a été remplacé par un `"T"` et le zéro de terminaison a été supprimé pour raccourcir la chaîne de l'heure.
-2. On notera que la forme normalisée de cette date ne contient pas l'expression des secondes.
+<table class="standard-table">
+  <caption>
+    Exemples de chaînes de caractères valides pour <code>datetime-local</code>
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Chaîne de caractères date/heure</th>
+      <th scope="col">Chaîne de caractères date/heure normalisée</th>
+      <th scope="col">Date et heure réelles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>1986-01-28T11:38:00.01</code></td>
+      <td><code>1986-01-28T11:38:00.01</code></td>
+      <td>28 janvier 1986 à 11:38:00.01</td>
+    </tr>
+    <tr>
+      <td><code>1986-01-28 11:38:00.010</code></td>
+      <td>
+        <p><code>1986-01-28T11:38:00.01</code></p>
+        <p>
+          Notez qu'après normalisation, il s'agit de la même chaîne de caractères que la précédente pour <code>datetime-local</code>. L'espace a été remplacé par le caractère <code>T</code> et le zéro final de la fraction de seconde a été supprimé pour rendre la chaîne de caractères aussi courte que possible.
+        </p>
+      </td>
+      <td>28 janvier 1986 à 11:38:00.01</td>
+    </tr>
+    <tr>
+      <td><code>0170-07-31T22:00:00</code></td>
+      <td>
+        <p><code>0170-07-31T22:00</code></p>
+        <p>
+          Notez que la forme normalisée de cette date supprime le <code>:00</code> indiquant que le nombre de secondes est zéro, car les secondes sont optionnelles lorsqu'elles valent zéro, et la chaîne de caractères normalisée minimise la longueur de la chaîne de caractères.
+        </p>
+      </td>
+      <td>31 juillet 170 à 22:00</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Représentation des dates et heures universelles
 
-Une valeur de date/heure universelle exprime la date et l'heure mais aussi le fuseau horaire de l'instant. Une chaîne de caractères représentant une telle valeur commence de la même façon qu'une chaîne de caractère représentant une date/heure locale, suivie d'une chaîne de caractères indiquant le décalage horaire.
+Une chaîne de caractères exprimant une date et une heure universelles spécifie une date et une heure ainsi que le fuseau horaire dans lequel elles se produisent. Une **chaîne de caractères valide représentant une date et une heure universelles** est au même format qu'une [chaîne de caractères représentant une date et une heure locales](#représentation_des_dates_et_heures_locales), sauf qu'elle a une chaîne de caractères de fuseau horaire ajoutée à la fin, après l'heure.
 
-### Chaîne de caractères exprimant le décalage horaire
+### Chaîne de caractères exprimant un décalage de fuseau horaire
 
-La chaîne de caractères qui décrit le décalage horaire contient un décalage positif d'heures et de minutes, relativement à un fuseau de base. Il existe deux points de référence qui sont très proches sans être identiques :
+Une chaîne de caractères représentant le décalage horaire indique le décalage en heures et minutes, positif ou négatif, par rapport à l'heure de référence standard. Il existe deux heures de référence standard, qui sont très proches l'une de l'autre, mais pas identiques&nbsp;:
 
-- Pour les dates situées après la création du temps coordonné universel (UTC, [Coordinated Universal Time](https://fr.wikipedia.org/wiki/Coordinated_Universal_Time)) au début des années 60, le point de référence est indiqué avec `Z` et le décalage indique le décalage d'un fuseau horaire par rapport au méridien situé à la longitude 0° (méridien de Greenwich).
-- Pour les dates antérieures à UTC, le point de référence est exprimé en [UT1](https://fr.wikipedia.org/wiki/UT1), qui correspond au temps solaire au méridien de longitude 0°.
+- Pour les dates postérieures à la création du [Temps universel coordonné <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) (UTC) au début des années 1960, la base de temps est `Z` et le décalage indique l'écart d'un fuseau horaire par rapport à l'heure au méridien de référence situé à la longitude 0º (qui passe par l'Observatoire royal de Greenwich, en Angleterre).
+- Pour les dates antérieures à UTC, la base de temps est exprimée en termes de [UT1 <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/UT1), qui correspond au temps solaire contemporain au méridien de référence.
 
-La chaîne de caractères indiquant le décalage est directement ajoutée après la valeur pour la date et l'heure. Si la date et l'heure sont déjà exprimées relativement à UTC, on pourra simplement suffixer `"Z"`, sinon, on construira le complément de la façon suivante :
+La chaîne de caractères de fuseau horaire est ajoutée immédiatement après l'heure dans la chaîne de caractères de date et d'heure. Vous pouvez spécifier `Z` comme chaîne de caractères de décalage de fuseau horaire pour indiquer que l'heure est spécifiée en UTC. Sinon, la chaîne de caractères de fuseau horaire est construite comme suit&nbsp;:
 
-1. Un caractère indiquant le signe du décalage : le plus ("`+`" ou U+002B) pour les fuseaux situés à l'est du méridien ou le moins ("`-`" ou U+002D) pour les fuseaux situés à l'ouest.
-2. Deux chiffres indiquant le nombre d'heures de décalage par rapport au méridien. Cette valeur doit être comprise entre `00` et `23`.
-3. Deux-points ("`:`") (nécessaires uniquement si le décalage contient des minutes)
-4. Deux chiffres indiquant les minutes de décalage. Cette valeur doit être comprise entre `00` et `59`.
+1. Un caractère indiquant le signe du décalage&nbsp;: le caractère plus (`+`, ou U+002B) pour les fuseaux situés à l'est du méridien de référence ou le caractère moins (`-`, ou U+002D) pour les fuseaux situés à l'ouest.
+2. Un nombre sur deux chiffres d'heures indiquant le décalage du fuseau horaire par rapport au méridien de référence. Cette valeur doit être comprise entre `00` et `23`.
+3. Un caractère deux-points (`:`) optionnel.
+4. Un nombre sur deux chiffres indiquant les minutes de décalage&nbsp;; cette valeur doit être comprise entre `00` et `59`.
 
-Bien que ces règles permettent d'exprimer des fuseaux horaires entre -23:59 et +23:59, l'intervalle actuel des décalages horaires est -12:00 à +14:00 et il n'y a pas de fuseau horaire pour lequel le décalage en minutes est différent de `00`, `30` ou `45`. Cela peut en théorie évoluer à tout moment car les pays sont libres de modifier leur fuseau horaire quand ils le souhaitent.
+Bien que ce format permette d'exprimer des fuseaux horaires entre -23:59 et +23:59, l'intervalle actuel des décalages horaires est -12:00 à +14:00, et aucun fuseau horaire n'est actuellement décalé de l'heure par autre chose que `00`, `30` ou `45` minutes. Cela peut changer à tout moment, puisque les pays sont libres de modifier leurs fuseaux horaires quand ils le souhaitent.
 
-| Chaîne de caractères          | Date/heure universelle                                                                                                    | Date/heure sur le méridien solaire                              |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| `2005-06-07T00:00Z`           | 7 juin 2005 à minuit UTC                                                                                                  | 7 juin 2005 à minuit                                            |
-| `1789-08-22T12:30:00.1-04:00` | 22 août 1789 à midi trente (passé d'un dixième de seconde) selon l'heure avancée de l'Est (_Eastern Daylight Time_ (EDT)) | 22 août 1789 à 16 heures trente passées d'un dixième de seconde |
-| `3755-01-01 00:00+10:00`      | 1er janvier 3755 à minuit pour le fuseau AEST (_Australian Eastern Standard Time_)                                        | 31 décembre 3754 à 14h                                          |
+<table class="no-markdown">
+  <caption>
+    Exemples de chaînes de caractères valides pour une date et une heure universelles
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Chaîne de caractères date/heure universelle</th>
+      <th scope="col">Date et heure universelles réelles</th>
+      <th scope="col">Date et heure au méridien de référence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2005-06-07T00:00Z</code></td>
+      <td>7 juin 2005 à minuit UTC</td>
+      <td>7 juin 2005 à minuit</td>
+    </tr>
+    <tr>
+      <td><code>1789-08-22T12:30:00.1-04:00</code></td>
+      <td>
+        22 août 1789 à un dixième de seconde après 12:30 (heure avancée de l'Est, EDT)
+      </td>
+      <td>22 août 1789 à un dixième de seconde après 16:30</td>
+    </tr>
+    <tr>
+      <td><code>3755-01-01 00:00+10:00</code></td>
+      <td>
+        1er janvier 3755 à minuit (heure normale de l'Est australien, AEST)
+      </td>
+      <td>31 décembre 3754 à 14:00</td>
+    </tr>
+  </tbody>
+</table>
+
+## Problèmes liés aux dates
+
+En raison de problèmes de stockage des données et de précision, il peut être utile de connaître certains problèmes côté client et côté serveur.
+
+### Le problème de l'an 2038 (souvent côté serveur)
+
+JavaScript utilise des nombres à virgule flottante en double précision pour stocker les dates, comme pour tous les nombres, ce qui signifie que le code JavaScript ne subira pas le problème de l'an 2038 sauf si des contraintes sur les entiers ou des manipulations de bits sont utilisées, car tous les opérateurs de bits JavaScript utilisent des entiers signés sur 32 bits en complément à deux.
+
+Le problème concerne le côté serveur&nbsp;: le stockage de dates supérieures à 2^31 - 1. Pour résoudre ce problème, il faut stocker toutes les dates en utilisant soit des entiers non signés sur 32 bits, des entiers signés sur 64 bits, ou des nombres à virgule flottante en double précision sur le serveur. Si votre serveur est écrit en PHP, la correction peut nécessiter la mise à jour de PHP vers une version plus récente, ainsi que la mise à jour du matériel vers x86_64 ou IA64. Si vous êtes bloqué·e avec un autre matériel, vous pouvez essayer d'émuler du matériel 64 bits dans une machine virtuelle 32 bits, mais la plupart des machines virtuelles ne prennent pas en charge ce type de virtualisation, car la stabilité peut en pâtir et les performances seront fortement dégradées.
+
+### Le problème de l'an 10000 (souvent côté client)
+
+Sur de nombreux serveurs, les dates sont stockées sous forme de nombres plutôt que de chaînes de caractères — des nombres de taille fixe et indépendants du format (à l'exception de l'endianness). Après l'an 10 000, ces nombres seront simplement un peu plus grands qu'avant, donc de nombreux serveurs ne rencontreront pas de problèmes avec les formulaires soumis après l'an 10 000.
+
+Le problème concerne le côté client&nbsp;: l'analyse des dates comportant plus de 4 chiffres pour l'année.
+
+```html
+<!-- minuit du 1er janvier 10000 : moment exact du bug de l'an 10000 -->
+<input type="datetime-local" value="+010000-01-01T05:00" />
+```
+
+Il faut préparer le code à gérer n'importe quel nombre de chiffres — pas seulement 5. La fonction JavaScript suivante définit la valeur de manière programmatique&nbsp;:
+
+```js
+function setValue(element, date) {
+  const isoString = date.toISOString();
+  element.value = isoString.substring(0, isoString.indexOf("T") + 6);
+}
+```
+
+Pourquoi se soucier du problème de l'an 10000 s'il ne surviendra que plusieurs siècles après votre mort&nbsp;? Justement parce que vous serez déjà mort·e, donc les entreprises utilisant votre logiciel seront coincées avec sans personne connaissant suffisamment bien le système pour venir le corriger.
 
 ## Voir aussi
 
-- [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
-- Les éléments [`<ins>`](/fr/docs/Web/HTML/Reference/Elements/ins) et [`<del>`](/fr/docs/Web/HTML/Reference/Elements/del) qui possèdent l'attribut `datetime` qui permet de définir une date ou une date et une heure locales pour indiquer le moment où le contenu a été inséré ou supprimé
-- [La spécification ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)
-- [Le chapitre sur les nombres et les dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings) dans le [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
-- L'objet JavaScript [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date)
-- L'objet [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) qui permet de formater des dates et des heures pour une locale donnée
+- L'élément {{HTMLElement("input")}}
+- {{HTMLElement("ins")}} et {{HTMLElement("del")}}&nbsp;: voir l'attribut `datetime`, qui spécifie soit une date, soit une date et une heure locales auxquelles le contenu a été inséré ou supprimé
+- [La spécification ISO 8601 <sup>(angl.)</sup>](https://www.iso.org/iso-8601-date-and-time-format.html)
+- [Représentation des dates et heures](/fr/docs/Web/JavaScript/Guide/Representing_dates_times) dans le [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
+- L'objet JavaScript {{JSxRef("Date")}}
+- L'objet {{JSxRef("Intl.DateTimeFormat")}} pour formater les dates et heures pour une locale donnée

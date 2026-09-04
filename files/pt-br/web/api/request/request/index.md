@@ -17,7 +17,7 @@ var myRequest = new Request(input[, init]);
 
 - _input_
   - : Define o recurso que você deseja buscar. Isso pode ser:
-    - Um {{domxref("USVString")}} contendo o URL direto do recurso que você deseja buscar.
+    - Um {{jsxref("String")}} contendo o URL direto do recurso que você deseja buscar.
     - Um objeto {{domxref("Request")}}, criando efetivamente uma cópia. Observe as seguintes atualizações comportamentais para reter a segurança e, ao mesmo tempo, tornar o construtor menos propenso a gerar exceções:
       - Se esse objeto existir em outra origem para a chamada do construtor, o {{domxref("Request.referrer")}} será removido.
       - Se esse objeto tiver um {{domxref("Request.mode")}} de navegação, o valor do modo será convertido para a mesma origem.
@@ -26,12 +26,12 @@ var myRequest = new Request(input[, init]);
   - : Um objeto de opções contendo quaisquer configurações personalizadas que você deseja aplicar à solicitação. As opções possíveis são:
     - `method`: O método de request, ex: `GET`, `POST`.
     - `headers`: Quaisquer cabeçalhos que você deseja adicionar à sua solicitação, contidos em um objeto {{domxref("Headers")}} ou em um objeto literal com valores de {{domxref("ByteString")}}.
-    - `body`: Qualquer corpo que você deseja adicionar à sua solicitação: isso pode ser um {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, ou objeto {{domxref("ReadableStream")}}. Observe que uma solicitação usando o método GET ou HEAD não pode ter um corpo.
+    - `body`: Qualquer corpo que você deseja adicionar à sua solicitação: isso pode ser um {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{jsxref("String")}}, ou objeto {{domxref("ReadableStream")}}. Observe que uma solicitação usando o método GET ou HEAD não pode ter um corpo.
     - `mode`: O modo que você deseja usar para a solicitação, por exemplo: `cors`, `no-cors`, `same-origin`, or `navigate`. O padrão é `cors`. No Chrome o padrão é `no-cors` antes do Chrome 47 e `same-origin` do Chrome 47 em diante.
     - `credentials`: As credenciais de solicitação que você deseja usar para a solicitação: `omit`, `same-origin`, ou `include`. O padrão é `omit`. No Chrome o padrão é `same-origin` antes do Chrome 47 e `include` do Chrome 47 em diante.
     - `cache`: O [cache mode](/pt-BR/docs/Web/API/Request/cache) que você deseja usar para a solicitação.
     - `redirect`: O modo de redirecionamento para usar: `follow`, `error`, or `manual`. No Chrome o padrão é `follow` (antes do Chrome 47 foi padronizado `manual`).
-    - `referrer`: Um {{domxref("USVString")}} especificando `no-referrer`, `client`, ou uma URL. O padrão é `client`.
+    - `referrer`: Um {{jsxref("String")}} especificando `no-referrer`, `client`, ou uma URL. O padrão é `client`.
     - `integrity`: Contém o [valor de integridade do sub-recurso](/pt-BR/docs/Web/Security/Subresource_Integrity) da solicitação (exemplo: `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 
 ## Erros

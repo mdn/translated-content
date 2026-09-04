@@ -8,7 +8,7 @@ original_slug: Web/CSS/::-moz-scrolled-page-sequence
 
 ## Resumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS `::-moz-scrolled-page-sequence` CSS representa el fondo de la previsualización para impresión.
+El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) CSS `::-moz-scrolled-page-sequence` CSS representa el fondo de la previsualización para impresión.
 
 ## Especificaciones
 

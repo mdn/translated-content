@@ -10,7 +10,7 @@ La interfaz **`EventSource`** se utiliza para recibir eventos server-side. Se re
 ## Constructor
 
 - {{domxref("EventSource.EventSource", "EventSource()")}}
-  - : Crea un nuevo `EventSource` a partiendo de un valor {{domxref("USVString")}}.
+  - : Crea un nuevo `EventSource` a partiendo de un valor {{jsxref("String")}}.
 
 ## Propiedades
 
@@ -19,7 +19,7 @@ _Esta interfaz también heredará propiedades de su antecesor, {{domxref("EventT
 - {{domxref("EventSource.readyState")}} {{readonlyinline}}
   - : Un número representando el estado de la conexión. Los valores posibles son CONECTANDO (`0`), ABIERTO (`1`), o CERRADO (`2`).
 - {{domxref("EventSource.url")}} {{readonlyinline}}
-  - : Un valor {{domxref("DOMString")}} representando la URL de la fuente.
+  - : Un valor {{jsxref("String")}} representando la URL de la fuente.
 - {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
   - : Un valor {{domxref("Boolean")}} indicando si el objecto `EventSource` ha sido instanciado con credeciales CORS disponibles (true) o no (false, valor por defecto).
 

@@ -3,7 +3,7 @@ title: Expressions et opérateurs
 slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 Dans ce chapitre, nous décrirons les expressions et opérateurs en JavaScript, qui permettent notamment l'affectation, la comparaison, les opérations arithmétiques, binaires, logiques, la manipulation de chaîne de caractères, etc.
 
@@ -310,7 +310,7 @@ const var2 = 4;
         <a href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality">Égalité stricte</a> (<code>===</code>)
       </td>
       <td>
-        Renvoie <code>true</code> si les opérandes sont égaux et du même type. Voir également <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is()</code></a> et <a href="/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness">l'égalité en JavaScript</a>.
+        Renvoie <code>true</code> si les opérandes sont égaux et du même type. Voir également <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is()</code></a> et <a href="/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness">l'égalité en JavaScript</a>.
       </td>
       <td><code>3 === var1</code></td>
     </tr>
@@ -991,4 +991,4 @@ super([arguments]); // On appelle le constructeur parent.
 super.fonctionSurLeParent([arguments]);
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}

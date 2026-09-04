@@ -12,9 +12,9 @@ slug: Web/API/ErrorEvent
 _此介面繼承了其父 {{domxref("Event")}} 的 properties 。_
 
 - {{domxref("ErrorEvent.message")}} {{readonlyInline}}
-  - : 一 {{domxref("DOMString")}} 提供具可讀性的關於問題的錯誤訊息。
+  - : 一 {{jsxref("String")}} 提供具可讀性的關於問題的錯誤訊息。
 - {{domxref("ErrorEvent.filename")}} {{readonlyInline}}
-  - : 一 {{domxref("DOMString")}} ，為發生錯誤的程式碼檔案的檔名。
+  - : 一 {{jsxref("String")}} ，為發生錯誤的程式碼檔案的檔名。
 - {{domxref("ErrorEvent.lineno")}} {{readonlyInline}}
   - : 一 `整數` ，為發生問題的程式的行數。
 - {{domxref("ErrorEvent.colno")}} {{readonlyInline}}

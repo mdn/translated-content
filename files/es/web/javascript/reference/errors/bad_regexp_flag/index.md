@@ -84,5 +84,5 @@ Consulta la tabla anterior para ver las seis marcas de expresiones regulares vá
 
 ## Ve también
 
-- {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}}
+- [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions)
 - [Indicadores de RegEx](https://xregexp.com/flags/) – biblioteca de expresiones regulares que proporciona cuatro nuevos indicadores (`n`, `s`, `x`, `A`)

@@ -1,11 +1,11 @@
 ---
 title: Encodage-pourcent
 slug: Glossary/Percent-encoding
+l10n:
+  sourceCommit: 757b8ff0ceaea2113344ad39ab3f5e123fa24ede
 ---
 
-{{GlossarySidebar}}
-
-**Encodage-pourcent (_Percent-encoding_)** est un mécanisme d'encodage des caractères de 8 bits qui ont une signification spécifique dans le contexte des {{Glossary("URL")}}. Il est parfois appelé encodage d'URL. Il consiste en une substitution de : un caractère '%' suivi d'un code hexadecimal correspondant à la valeur ASCII du caractère à remplacer.
+**Encodage-pourcent (_Percent-encoding_)** est un mécanisme d'encodage des caractères de 8 bits qui ont une signification spécifique dans le contexte des {{Glossary("URL")}}. Il est parfois appelé encodage d'URL. Il consiste en une substitution de&nbsp;: un caractère '%' suivi d'un code hexadecimal correspondant à la valeur ASCII du caractère à remplacer.
 
 Les caractères spéciaux nécessitant cet encodage sont : `':'`, `'/'`, `'?'`, `'#'`, `'['`, `']'`, `'@'`, `'!'`, `'$'`, `'&'`, `"'"`, `'('`, `')'`, `'*'`, `'+'`, `','`, `';'`, `'='`, et `'%'` lui-même. Les autres caractères n'ont pas besoin d'être encodés, bien qu'ils puissent l'être.
 
@@ -36,10 +36,6 @@ En fonction du contexte, le caractère `' '` est traduit par un `'+'` (comme dan
 
 ## Voir aussi
 
-### Culture générale
-
 - [Codage des caractères](https://fr.wikipedia.org/wiki/Codage_des_caractères) sur Wikipédia.
-
-### Savoir technique
-
 - {{RFC(3986)}}, section 2.1, où ce codage est défini.
+- [`encodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) et [`encodeURIComponent()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) — fonctions pour encoder en pourcentage les URL

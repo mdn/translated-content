@@ -3,8 +3,6 @@ title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
 
-{{JSRef}}
-
 **`Math.max()`** 函数返回作为输入参数的最大数字，如果没有参数，则返回 -{{jsxref("Infinity")}}。
 
 {{InteractiveExample("JavaScript Demo: Math.max()")}}

@@ -1,55 +1,65 @@
 ---
-title: Date.prototype.toDateString()
+title: "Date : méthode toDateString()"
+short-title: toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`toDateString()`** des instances de {{JSxRef("Date")}} retourne une chaîne de caractères représentant la partie date de cette date, interprétée selon le fuseau horaire local.
 
-La méthode **`toDateString()`** renvoie la date contenue dans un objet {{jsxref("Date")}} sous la forme d'une chaîne de caractères lisible par un humain, en anglais américain et au format suivant :
-
-1. Les trois premières lettre indiquent le jour
-2. Les trois lettres suivantes indiquent le mois
-3. Les deux chiffres suivants indiquent le jour du mois (et sont complétés avec un 0 devant si besoin)
-4. Les quatre chiffres restants indiquent l'année (si besoin complétées avec des 0 comme préfixe)
-
-{{InteractiveExample("JavaScript Demo: Date.toDateString()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.toDateString()")}}
 
 ```js interactive-example
 const event = new Date(1993, 6, 28, 14, 39, 7);
 
 console.log(event.toString());
-// Expected output: "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
-// Note: your timezone may vary
+// Résultat attendu : "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
+// Remarque : votre fuseau horaire peut varier
 
 console.log(event.toDateString());
-// Expected output: "Wed Jul 28 1993"
+// Résultat attendu : "Wed Jul 28 1993"
 ```
 
 ## Syntaxe
 
-```js
-dateObj.toDateString();
+```js-nolint
+toDateString()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Une chaîne de caractères qui représente la date indiquée, dans un format anglais américain.
+Une chaîne de caractères représentant la partie date de la date donnée (voir la description pour le format). Retourne `"Invalid Date"` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
 
 ## Description
 
-Les instances de {{jsxref("Date")}} représentent un point précis dans le temps. Appeler {{jsxref("Date.prototype.toString", "toString")}} retournera la date formatée sous une forme lisible par un humain, en anglais américain. Pour le moteur JavaScript [SpiderMonkey](/fr/docs/SpiderMonkey), ceci consiste en : la partie « date » (jour, mois et année) suivie de la partie « heure » (heures, minutes, secondes et fuseau horaire). Il est parfois préférable d'obtenir uniquement la partie « date » ; ceci est possible grâce à la méthode `toDateString()`.
+Les instances de {{JSxRef("Date")}} représentent un point précis dans le temps. `toDateString()` interprète la date selon le fuseau horaire local et formate la partie _date_ en anglais. Elle utilise toujours le format suivant, séparé par des espaces&nbsp;:
 
-La méthode `toDateString()` est particulièrement utile car, pour les moteurs implémentant fidèlement [ECMA-262](/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview), il peut y avoir certaines différences dans la chaîne de caractères produite par `toString()` sur les objets `Date`. Le format dépend de l'implémentation et les techniques simples de découpage de texte peuvent ne pas produire un résultat cohérent à travers les différents moteurs.
+1. Les trois premières lettres du nom du jour de la semaine
+2. Les trois premières lettres du nom du mois
+3. Le jour du mois sur deux chiffres, complété à gauche par un zéro si nécessaire
+4. L'année sur au moins quatre chiffres, complétée à gauche par des zéros si nécessaire. Peut avoir un signe négatif
+
+Par exemple&nbsp;: «&nbsp;Thu Jan 01 1970&nbsp;».
+
+- Si vous souhaitez obtenir uniquement la partie _heure_, utilisez la méthode {{JSxRef("Date/toTimeString", "toTimeString()")}}.
+- Si vous souhaitez obtenir la date et l'heure, utilisez la méthode {{JSxRef("Date/toString", "toString()")}}.
+- Si vous souhaitez que la date soit interprétée en UTC au lieu du fuseau horaire local, utilisez la méthode {{JSxRef("Date/toUTCString", "toUTCString()")}}.
+- Si vous souhaitez formater la date dans un format plus adapté à l'utilisateur·ice (par exemple, localisé), utilisez la méthode {{JSxRef("Date/toLocaleDateString", "toLocaleDateString()")}}.
 
 ## Exemples
 
-### Utiliser simplement `toDateString()`
+### Utiliser la méthode `toDateString()`
 
 ```js
-var d = new Date(1993, 6, 28, 14, 39, 7);
+const d = new Date(0);
 
-console.log(d.toString()); // écrit Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
-console.log(d.toDateString()); // écrit Wed Jul 28 1993
+console.log(d.toString()); // "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)"
+console.log(d.toDateString()); // "Thu Jan 01 1970"
 ```
 
 ## Spécifications
@@ -62,6 +72,6 @@ console.log(d.toDateString()); // écrit Wed Jul 28 1993
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toString()")}}
+- La méthode {{JSxRef("Date.prototype.toLocaleDateString()")}}
+- La méthode {{JSxRef("Date.prototype.toTimeString()")}}
+- La méthode {{JSxRef("Date.prototype.toString()")}}

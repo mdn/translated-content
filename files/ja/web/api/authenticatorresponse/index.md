@@ -29,9 +29,7 @@ slug: Web/API/AuthenticatorResponse
 
 ```js
 var options = {
-  challenge: new Uint8Array([
-    /* bytes sent from the server */
-  ]),
+  challenge: new Uint8Array([/* bytes sent from the server */]),
 };
 
 navigator.credentials

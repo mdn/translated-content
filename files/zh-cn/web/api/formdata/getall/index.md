@@ -16,7 +16,7 @@ formData.getAll(name);
 ### 参数
 
 - `name`
-  - : 一个 {{domxref("USVString")}} 表示要检索的 key 名称。
+  - : 一个 {{jsxref("String")}} 表示要检索的 key 名称。
 
 ### 返回
 

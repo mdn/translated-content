@@ -94,7 +94,7 @@ l10n:
 
 ## 関連情報
 
-- [学習とヘルプを得る](/ja/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help)
+- [学習とヘルプを得る](/ja/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning)
   - : この記事では、ウェブ開発者としてより多くのことを習得するのに役立つヒントやコツを提供しています。また、必要に応じて各サブトピックの詳細情報を探すことができるよう、追加の参考文献も提供しています。
 
 {{NextMenu("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills")}}

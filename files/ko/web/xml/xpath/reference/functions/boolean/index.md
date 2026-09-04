@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/boolean
 original_slug: Web/XPath/Functions/boolean
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `boolean` 함수는 식을 평가하고 참이나 거짓을 반환합니다.
 

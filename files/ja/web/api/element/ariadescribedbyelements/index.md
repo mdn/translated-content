@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`ariaDescribedByElements`** は{{domxref(「Element」)}} インターフェイスのプロパティで、適用先の要素にアクセシブル説明を提供する要素（または要素群）を含みます。
+**`ariaDescribedByElements`** は{{domxref("Element")}} インターフェイスのプロパティで、適用先の要素にアクセシブル説明を提供する要素（または要素群）を含みます。
 アクセシブル説明は、アクセシブルなラベル（{{domxref("Element/ariaLabelledByElements","ariaLabelledByElements")}} 参照）に似ていますが、より詳しい情報を提供します。
 
 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) のトピックには、この属性とプロパティの使用方法に関する追加情報があります。

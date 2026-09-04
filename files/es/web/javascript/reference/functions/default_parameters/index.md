@@ -223,7 +223,7 @@ f(2); // [2, undefined]
 
 ### Parámetro desestructurado con asignación de valor predeterminado
 
-Puedes usar la asignación de valor predeterminado con la notación {{jsxref("Operators/Destructuring_assignment", "la desestructuración", "", 1)}}:
+Puedes usar la asignación de valor predeterminado con la notación {{jsxref("Operators/Destructuring", "la desestructuración", "", 1)}}:
 
 ```js
 function f([x, y] = [1, 2], { z: z } = { z: 3 }) {

@@ -40,21 +40,21 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 
 - [CSS 参考](/zh-CN/docs/Web/CSS/Reference)：针对资深 Web 开发者的详细参考手册，其中描述了 CSS 的各个属性和概念。
 - CSS 关键概念：
-  - [语言语法和形式](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)、[继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)和[级联](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)和[外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - [包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)
-  - [堆叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)和[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
-  - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)、[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)、[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)和[实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
-  - [CSS 简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
-  - [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)
-  - [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)
-  - [动画](/zh-CN/docs/Web/CSS/animation)
+  - [语言语法和形式](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)、[继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)和[级联](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)
+  - [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)和[外边距合并](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+  - [包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)
+  - [堆叠上下文](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)和[区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)
+  - [初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)、[计算值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值)、[应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)和[实际值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#实际值)
+  - [CSS 简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)
+  - [CSS 网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)
+  - [媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries)
+  - [动画](/zh-CN/docs/Web/CSS/Reference/Properties/animation)
 
 ## 技术手册
 
-[CSS 布局技术手册](/zh-CN/docs/Web/CSS/Layout_cookbook)的目的是将一些也许你将要在自己的网站中实现的、常用的布局模式的方法汇集在一起，并且还提供了代码使你可以在项目中作为基础来使用。这些方法突出表现了同一布局规范的不同使用方式，作为开发者你可以自由选择自己想要的方式来实现。
+[CSS 布局技术手册](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook)的目的是将一些也许你将要在自己的网站中实现的、常用的布局模式的方法汇集在一起，并且还提供了代码使你可以在项目中作为基础来使用。这些方法突出表现了同一布局规范的不同使用方式，作为开发者你可以自由选择自己想要的方式来实现。
 
 ## CSS 开发工具
 

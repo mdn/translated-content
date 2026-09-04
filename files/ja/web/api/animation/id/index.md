@@ -3,7 +3,7 @@ title: "Animation: id プロパティ"
 short-title: id
 slug: Web/API/Animation/id
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: 291a8c75ed553e807895225d51dff7ac24ad1f05
 ---
 
 {{ APIRef("Web Animations") }}
@@ -16,10 +16,10 @@ l10n:
 
 ## 例
 
-[以下の White Rabbit の例](https://codepen.io/rachelnabors/pen/eJyWzm?editors=0010)では、 `rabbitDownAnimation` の `id` に割り当てています。
+[「赤の女王のレースゲーム」の例](/ja/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#other_useful_methods)では、次のように `redQueenAlice` に`id` を代入することができます。
 
 ```js
-rabbitDownAnimation.id = "rabbitGo";
+redQueenAlice.id = "redQueenAlice";
 ```
 
 ## 仕様書

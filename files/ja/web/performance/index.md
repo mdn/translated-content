@@ -148,7 +148,7 @@ MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn_web_develo
 
 ### CSS
 
-- [will-change](/ja/docs/Web/CSS/will-change)
+- [will-change](/ja/docs/Web/CSS/Reference/Properties/will-change)
 
 ### JavaScript
 

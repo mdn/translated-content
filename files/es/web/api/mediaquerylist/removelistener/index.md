@@ -57,7 +57,7 @@ mql.removeListener(screenTest);
 
 ## Ver también
 
-- [Media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Media queries](/es/docs/Web/CSS/Guides/Media_queries/Using)
 - [Using media queries from code](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("window.matchMedia()")}}
 - {{domxref("MediaQueryList")}}

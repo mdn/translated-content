@@ -1,13 +1,12 @@
 ---
 title: TypedArray.of()
+short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`TypedArray.of()`** メソッドは、引数の変数番号から新しい[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)を生成します。このメソッドは {{jsxref("Array.of()")}} とほぼ同じです。
+**`TypedArray.of()`** メソッドは、可変長の引数から新しい[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)を生成します。このメソッドは {{jsxref("Array.of()")}} とほぼ同じです。
 
 {{InteractiveExample("JavaScript デモ: TypedArray.of()", "shorter")}}
 
@@ -15,7 +14,7 @@ l10n:
 const int16array = Int16Array.of("10", "20", "30", "40", "50");
 
 console.log(int16array);
-// Expected output: Int16Array [10, 20, 30, 40, 50]
+// 予想される結果: Int16Array [10, 20, 30, 40, 50]
 ```
 
 ## 構文
@@ -36,6 +35,7 @@ TypedArray.of(element1, element2, /* …, */ elementN)
 - {{jsxref("Uint16Array")}}
 - {{jsxref("Int32Array")}}
 - {{jsxref("Uint32Array")}}
+- {{jsxref("Float16Array")}}
 - {{jsxref("Float32Array")}}
 - {{jsxref("Float64Array")}}
 - {{jsxref("BigInt64Array")}}
@@ -55,7 +55,7 @@ TypedArray.of(element1, element2, /* …, */ elementN)
 詳細については、 {{jsxref("Array.of()")}} をご覧ください。 {{jsxref("Array.of()")}} と `TypedArray.of()` との間にはいくつか微妙な違いがあります。
 
 - `TypedArray.of()` に渡された `this` の値がコンストラクターではなかった場合、 `TypedArray.of()` では {{jsxref("TypeError")}} が発生します。一方、 `Array.of()` は既定で新しい {{jsxref("Array")}} を生成します。
-- `TypedArray.of()` は `[[Set]]` を使用するのに対し、 `Array.of()` は `[[DefineProperty]]` を使用します。従って {{jsxref("Proxy")}} オブジェクトを使っている場合は、新しい要素を追加するときに [`handler.set()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) が [`handler.defineProperty()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) の代わりに呼び出されます。
+- `TypedArray.of()` は `[[Set]]` を使用するのに対し、 `Array.of()` は `[[DefineOwnProperty]]` を使用します。従って {{jsxref("Proxy")}} オブジェクトを使っている場合は、新しい要素を追加するときに [`handler.set()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) が [`handler.defineProperty()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) の代わりに呼び出されます。
 
 ## 例
 

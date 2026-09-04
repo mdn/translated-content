@@ -26,7 +26,7 @@ La plupart du temps, les fichiers sources des scripts JavaScript sont fusionnés
 Voici une correspondance de source déclarée via un commentaire dans le fichier :
 
 ```js example-good
-//# sourceMappingURL=http://exemple.com/chemin/vers/la/sourcemap.map
+//# sourceMappingURL=http://example.com/chemin/vers/la/sourcemap.map
 ```
 
 Une autre méthode consiste à indiquer la source originale dans l'en-tête du fichier JavaScript :

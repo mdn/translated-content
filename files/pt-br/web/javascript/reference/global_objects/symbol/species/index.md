@@ -62,5 +62,5 @@ console.log(mapped instanceof Array); // true
 
 ## Veja também
 
-- {{jsxref("Map.@@species", "Map[@@species]")}}
-- {{jsxref("Set.@@species", "Set[@@species]")}}
+- {{jsxref("Map/Symbol.species", "Map[@@species]")}}
+- {{jsxref("Set/Symbol.species", "Set[@@species]")}}

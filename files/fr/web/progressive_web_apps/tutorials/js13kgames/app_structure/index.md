@@ -80,7 +80,7 @@ Le seul travail de l'application est de lister toutes les entrées _A-Frame_ de 
 
 ### Le CSS
 
-Le CSS est également aussi simple que possible&nbsp;: il utilise la règle [`@font-face`](/fr/docs/Web/CSS/@font-face) pour charger et utiliser une police de caractères personnalisée et il applique quelques mises en forme simples des éléments HTML. L'approche globale est d'avoir une conception qui soit belle à la fois sur mobile (avec une approche de conception adaptative) et sur ordinateur.
+Le CSS est également aussi simple que possible&nbsp;: il utilise la règle [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) pour charger et utiliser une police de caractères personnalisée et il applique quelques mises en forme simples des éléments HTML. L'approche globale est d'avoir une conception qui soit belle à la fois sur mobile (avec une approche de conception adaptative) et sur ordinateur.
 
 ### Le fichier JavaScript principal
 

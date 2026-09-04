@@ -1,8 +1,13 @@
 ---
-title: Firefox 各版本技術文件
+title: 與開發者相關的 Firefox 版本資訊
+short-title: 與開發者相關的版本資訊
 slug: Mozilla/Firefox/Releases
+l10n:
+  sourceCommit: 1d3d0c10ebf5c8c55f75b9adce74d1e5001866c6
 ---
 
-這個頁面整合了 Firefox 每次釋出時的技術文件。這些文件讓你能夠清楚知道各個 Firefox 版本釋出時新增了哪些新功能及修正了哪些錯誤。
+下方你會找到每個 Firefox 版本的開發者版本資訊連結。這些精心製作的說明文件詳細介紹了每個 Firefox 版本中新增與改善的功能和 API，以及修復的錯誤。撰寫這些內容是為了提供像你這樣的開發者最需要的資訊。不客氣。
 
-{{ListSubpages("",1,0,1)}}
+{{ListSubpages("",1,1,1)}}
+
+呼！真的是非常多 Firefoxen！

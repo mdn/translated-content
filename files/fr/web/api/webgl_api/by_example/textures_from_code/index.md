@@ -3,7 +3,7 @@ title: Générer des textures avec du code
 slug: Web/API/WebGL_API/By_example/Textures_from_code
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex","Apprendre/WebGL/Par_exemple/Les_textures_vidéos")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Hello_vertex_attributes","Web/API/WebGL_API/By_example/Video_textures")}}
 
 Dans cet article, on illustre simplement comment générer des textures procédurales avec des fragments de _shaders_.
 
@@ -155,4 +155,4 @@ function getRenderingContext() {
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/textures-from-code).
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex","Apprendre/WebGL/Par_exemple/Les_textures_vidéos")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Hello_vertex_attributes","Web/API/WebGL_API/By_example/Video_textures")}}

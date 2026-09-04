@@ -64,7 +64,7 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 - `Promise.length`
   - : 長度屬性，值固定為 `1`。(建構式參數數目).
-- {{jsxref("Promise.prototype")}}
+- {{jsxref("Promise")}}
   - : `Promise` 建構式的原型（prototype）.
 
 ## 方法

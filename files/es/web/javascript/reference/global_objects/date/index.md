@@ -125,7 +125,7 @@ Sumado a los métodos para leer y manipular los componentes individuales de la f
   - : Convierte una fecha a una cadena siguiendo el ISO 8601 de Formato Extendido.
 - {{jsxref("Date.prototype.toJSON()")}}
   - : Retorna una cadena representando el objeto {{jsxref("Date")}} usando {{jsxref("Date.prototype.toISOString()", "toISOString()")}}. Destinado a ser usado por {{jsxref("JSON.stringify()")}}.
-- {{jsxref("Date.prototype.toGMTString()")}}
+- {{jsxref("Date.prototype.toUTCString()", "Date.prototype.toGMTString()")}}
   - : Retona una cadena representando el objeto {{jsxref("Date")}} basado en la zona horaria GMT (UTC). Usa {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}} en su lugar.
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - : Retorna una cadena con una representación sensible a la localización de la fecha basada en la configuración del sistema.

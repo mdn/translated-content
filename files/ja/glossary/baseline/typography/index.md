@@ -15,6 +15,6 @@ l10n:
 
 ## 関連情報
 
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment#配置の種類)
-- [CSS インラインレイアウト](/ja/docs/Web/CSS/CSS_inline_layout) モジュール
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/Overview#配置の種類)
+- [CSS インラインレイアウト](/ja/docs/Web/CSS/Guides/Inline_layout) モジュール
 - [ベースライン](https://ja.wikipedia.org/wiki/書体#欧文書体における並び線の種類)（ウィキペディア）

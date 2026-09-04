@@ -67,7 +67,7 @@ for (var item of list) {
 
 Los navegadores recientes también son compatibles con los métodos de iteración, {{domxref("NodeList.forEach()", "forEach()")}}, así como {{domxref("NodeList.entries()", "entries()")}}, {{domxref("NodeList.values()", "values()")}}, y {{domxref("NodeList.keys()", "keys()")}}
 
-También hay una forma compatible con Internet Explorer de usar {{jsxref ("Array.forEach ()", "Array.prototype.forEach")}} para la iteración.
+También hay una forma compatible con Internet Explorer de usar {{jsxref("Array.prototype.forEach()", "Array.prototype.forEach")}} para la iteración.
 
 ```js
 var list = document.querySelectorAll("input[type=checkbox]");

@@ -15,7 +15,7 @@ Notification.title;
 
 ### Valeur
 
-Une {{domxref("DOMString")}}.
+Une {{jsxref("String")}}.
 
 ## Spécifications
 

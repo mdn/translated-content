@@ -2,7 +2,7 @@
 title: 205 Reset Content
 slug: Web/HTTP/Reference/Status/205
 l10n:
-  sourceCommit: 74ab26a101ef2e4d5e5f25962033bc1042102677
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`205 Reset Content`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示請求已成功處理，且用戶端應重置文件視圖。

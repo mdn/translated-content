@@ -30,7 +30,7 @@ setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
 ### 매개변수
 
 - `func`
-  - : `delay`(밀리초)마다 실행되는 {{jsxref("function")}}입니다. 첫 번째 실행은 `delay`(밀리초) 후에 발생합니다.
+  - : `delay`(밀리초)마다 실행되는 {{jsxref("Operators/function", "function")}}입니다. 첫 번째 실행은 `delay`(밀리초) 후에 발생합니다.
 - `code`
   - : 선택적 구문을 사용하면 함수 대신 문자열을 포함할 수 있습니다. 모든 `delay`(밀리초)마다 컴파일되고 실행됩니다.
     이 구문은 {{jsxref("Global_Objects/eval", "eval()")}}을 사용하는 것과 같은 이유로 보안상 위험하므로 "권장하지 않습니다".

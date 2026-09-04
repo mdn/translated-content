@@ -1,25 +1,20 @@
 ---
-title: FileReader.error
+title: FileReader：error 屬性
+short-title: error
 slug: Web/API/FileReader/error
+l10n:
+  sourceCommit: 497d322c61511b11e4877a77660f8d7b394a8277
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-## 總覽
+{{domxref("FileReader")}} 介面的 **`error`** 唯讀屬性會回傳在讀取檔案時所發生的錯誤。
 
-回傳讀取檔案時發生的錯誤。
+## 值
 
-## 語法
+一個包含相關錯誤的 {{domxref("DOMException")}}。
 
-```plain
-var error = instanceOfFileReader.error
-```
-
-## Value
-
-A {{domxref("DOMError")}}
-
-## 規格
+## 規範
 
 {{Specifications}}
 
@@ -27,6 +22,6 @@ A {{domxref("DOMError")}}
 
 {{Compat}}
 
-## 閱讀更多
+## 參見
 
 - {{domxref("FileReader")}}

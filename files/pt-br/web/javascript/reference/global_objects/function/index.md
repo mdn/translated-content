@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function
 
 ## Resumo
 
-O **`construtor Function`** cria um novo objeto `Function`. Chamar o construtor diretamente pode criar funções dinamicamente, mas sofre com problemas de segurança e desempenho semelhante (mas muito menos significativo) a {{jsxref("eval")}}. No entanto, diferentemente de eval, a Função construtora cria funções que executam somente no escopo global.
+O **`construtor Function`** cria um novo objeto `Function`. Chamar o construtor diretamente pode criar funções dinamicamente, mas sofre com problemas de segurança e desempenho semelhante (mas muito menos significativo) a {{jsxref("Global_Objects/eval", "eval")}}. No entanto, diferentemente de eval, a Função construtora cria funções que executam somente no escopo global.
 
 ## Sintaxe
 
@@ -35,7 +35,7 @@ Invocar o construtor `Function` como uma função (sem usar o operador `new`) te
 
 ## Propriedades e Métodos da `Function`
 
-O objeto global `Function` não tem métodos ou propriedades próprias, no entanto, como ela é uma função, ela herda alguns métodos e propriedades através do prototype chain do {{jsxref("Function.prototype")}}.
+O objeto global `Function` não tem métodos ou propriedades próprias, no entanto, como ela é uma função, ela herda alguns métodos e propriedades através do prototype chain do {{jsxref("Function")}}.
 
 ## `Function` prototype object
 
@@ -49,7 +49,7 @@ O objeto global `Function` não tem métodos ou propriedades próprias, no entan
 
 ## `Function` instances
 
-`Function` instances inherit methods and properties from {{jsxref("Function.prototype")}}. As with all constructors, you can change the constructor's prototype object to make changes to all `Function` instances.
+`Function` instances inherit methods and properties from {{jsxref("Function")}}. As with all constructors, you can change the constructor's prototype object to make changes to all `Function` instances.
 
 ## Exemplos
 
@@ -174,4 +174,4 @@ Creating functions with the `Function` constructor is one of the ways to dynamic
 
 - {{jsxref("Operators/function", "function Expression", "", 1)}}
 - {{jsxref("Statements/function", "function Statement", "", 1)}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+- {{jsxref("Functions", "Functions and function scope", "", 1)}}

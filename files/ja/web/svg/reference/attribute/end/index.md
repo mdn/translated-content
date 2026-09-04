@@ -2,7 +2,7 @@
 title: end
 slug: Web/SVG/Reference/Attribute/end
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: a9063bb88f28dc2a9b32e39f060ab6930663da52
 ---
 
 **`end`** 属性は、アクティブな期間を制限できるアニメーションの終了値を定義します。
@@ -19,7 +19,7 @@ l10n:
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -187,7 +187,7 @@ l10n:
   <!-- trigger -->
   <rect
     id="endButton"
-    style="cursor:pointer;"
+    cursor="pointer"
     x="19.5"
     y="62.5"
     rx="5"
@@ -197,7 +197,7 @@ l10n:
     stroke="black"
     stroke-width="1" />
 
-  <text x="60" y="80" text-anchor="middle" style="pointer-events:none;">
+  <text x="60" y="80" text-anchor="middle" pointer-events="none">
     Click me.
   </text>
 
@@ -245,7 +245,7 @@ l10n:
   </rect>
 
   <!-- trigger -->
-  <text x="60" y="80" text-anchor="middle" style="pointer-events:none;">
+  <text x="60" y="80" text-anchor="middle" pointer-events="none">
     Hit the "s" key
   </text>
 

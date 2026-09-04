@@ -3,7 +3,7 @@ title: Expressões e operadores
 slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 Este artigo descreve expressões e operadores de JavaScript, incluindo operadores de atribuição, comparação, aritméticos, bit a bit, lógicos, de strings e especiais.
 
@@ -597,7 +597,7 @@ a * c + b * c; // 9
 
 Comprehensions são uma característica experimental de JavaScript, marcada para ser inclusa em uma versão futura do ECMAScript. Existem duas versões de Comprehensions:
 
-{{experimental_inline}}**[`[for (x of y) x]`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Array_comprehensions)**
+{{experimental_inline}}**[`[for (x of y) x]`](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)**
 Comprehensions de array.
 
 {{experimental_inline}}**[`(for (x of y) y)`](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
@@ -654,4 +654,4 @@ var args = [0, 1, 2];
 f(...args);
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}

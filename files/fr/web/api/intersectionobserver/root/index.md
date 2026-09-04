@@ -21,7 +21,7 @@ Si `root` vaut `null`, ce sera le document parent qui sera considéré comme rac
 
 ## Exemple
 
-Cet exemple définit la propriété [`border`](/fr/docs/Web/CSS/border) de l'élément racine de l'observateur d'intersection comme une ligne verte moyenne de 2 pixels grâce aux propriétés exposées par CSSOM.
+Cet exemple définit la propriété [`border`](/fr/docs/Web/CSS/Reference/Properties/border) de l'élément racine de l'observateur d'intersection comme une ligne verte moyenne de 2 pixels grâce aux propriétés exposées par CSSOM.
 
 ```js
 observer.root.style.border = "2px solid #44aa44";

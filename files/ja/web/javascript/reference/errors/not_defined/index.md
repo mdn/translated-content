@@ -1,28 +1,29 @@
 ---
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-JavaScript の例外 "_variable_ is not defined" は、どこかで参照している変数が存在しない場合に発生します。
+JavaScript の例外 "_変数名_ is not defined" は、どこかで参照している変数が存在しない場合に発生します。
 
 ## エラーメッセージ
 
-```js
-ReferenceError: "x" is not defined
+```plain
+ReferenceError: "x" is not defined (V8 ベース & Firefox)
+ReferenceError: Can't find variable: x (Safari)
 ```
 
 ## エラーの種類
 
-{{jsxref("ReferenceError")}}.
+{{jsxref("ReferenceError")}}
 
 ## エラーの原因
 
 どこかで存在しない変数を参照しています。この変数を宣言しておくか、現在のスクリプトまたは[スコープ](/ja/docs/Glossary/Scope)で利用可能であることを確認する必要があります。
 
 > [!NOTE]
-> ライブラリ (jQuery など) を読み込むとき、ライブラリの変数、例えば "$" にアクセスする前に読み込みが行われるかを確認してください。ライブラリを読み込む {{HTMLElement("script")}} 要素は、それを使用するコードよりも前に置いてください。
+> ライブラリー (jQuery など) を読み込むとき、ライブラリーの変数、例えば "$" にアクセスする前に読み込みが行われるかを確認してください。ライブラリーを読み込む {{HTMLElement("script")}} 要素は、それを使用するコードよりも前に置いてください。
 
 ## 例
 
@@ -35,7 +36,7 @@ foo.substring(1); // ReferenceError: foo is not defined
 "foo" と言う変数はどこにも宣言されていません。これは文字列である必要があり、それならば {{jsxref("String.prototype.substring()")}} メソッドが動作します。
 
 ```js example-good
-var foo = "bar";
+const foo = "bar";
 foo.substring(1); // "ar"
 ```
 
@@ -45,8 +46,8 @@ foo.substring(1); // "ar"
 
 ```js example-bad
 function numbers() {
-  var num1 = 2,
-    num2 = 3;
+  const num1 = 2;
+  const num2 = 3;
   return num1 + num2;
 }
 
@@ -56,8 +57,8 @@ console.log(num1); // ReferenceError num1 is not defined.
 しかし、関数はそれが定義されたスコープ内で定義されたすべての変数と関数にアクセスすることができます。言い換えれば、グローバルスコープで定義された関数は、グローバルスコープ内で定義されたすべての変数にアクセスすることができます。/p>
 
 ```js example-good
-var num1 = 2,
-  num2 = 3;
+const num1 = 2;
+const num2 = 3;
 
 function numbers() {
   return num1 + num2;

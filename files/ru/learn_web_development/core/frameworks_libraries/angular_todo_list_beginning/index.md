@@ -5,13 +5,13 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginnin
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_getting_started","Learn_web_development/Core/Frameworks_libraries/Angular_styling", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Сейчас мы готовы приступить к созданию приложения списка дел с использованием Angular. Готовое приложение будет отображать список дел, позволять редактировать, удалять и добавлять элементы. В этой статье вы познакомитесь со структурой приложения и поработаете над базовым отображением списка дел.
 
-| Необходимые условия: | Понимание основ [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn/CSS), и [JavaScript](/ru/docs/Learn/JavaScript), знание [терминала/командной строки](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line). |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:                | Создать базовую структуру приложения, сделать так, чтобы оно отображало список дел, и понять фундаментальные концепции Angular: структуру компонентов, совместное использование данных между компонентами и использование циклов вывода данных.                            |
+| Необходимые условия: | Понимание основ [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn_web_development/Core/Styling_basics), и [JavaScript](/ru/docs/Learn_web_development/Core/Scripting), знание [терминала/командной строки](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line). |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Цель:                | Создать базовую структуру приложения, сделать так, чтобы оно отображало список дел, и понять фундаментальные концепции Angular: структуру компонентов, совместное использование данных между компонентами и использование циклов вывода данных.                                                                                |
 
 ## Структура приложения списка дел
 
@@ -191,7 +191,7 @@ addItem(description: string) {
 
 Сейчас у вас должен быть список дел, отображаемый в вашем браузере. Это большой прогресс! Конечно, нам предстоит еще многое сделать. В следующей статье мы рассмотрим добавление стилей в наше приложение.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_getting_started","Learn_web_development/Core/Frameworks_libraries/Angular_styling", "Learn_web_development/Core/Frameworks_libraries")}}
 
 ## В это модуле
 

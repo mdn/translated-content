@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "conflicting/Web/JavaScript/Guide/Numbers_and_strings")}}
 
 이 장에서는 JavaScript에서 숫자와 날짜를 사용하기 위한 개념과 객체, 함수에 대해 소개합니다. 그리고 숫자를 10진법, 2진법, 16진법 등의 다양한 형태로 표현하는 방법과 더불어 {{jsxref("Math")}} 객체를 사용해 다양한 수학 연산을 수행하는 방법을 알 수 있습니다.
 
@@ -121,7 +121,7 @@ var notANum = Number.NaN;
       <td>
         <p>
           문자열 인수를 파싱하고 부동 소수점 숫자를 반환합니다. 전역
-          {{jsxref("parseFloat", "parseFloat()")}} 함수와
+          {{jsxref("parseFloat()")}} 함수와
           동일합니다.
         </p>
       </td>
@@ -130,7 +130,7 @@ var notANum = Number.NaN;
       <td>{{jsxref("Number.parseInt()")}}</td>
       <td>
         문자열 라인 인수를 파싱해, 지정된 기수 또는 밑줄의 정수를 돌려줍니다.
-        전역 {{jsxref("parseInt", "parseInt()")}}함수와 동일합니다.
+        전역 {{jsxref("parseInt()")}}함수와 동일합니다.
       </td>
     </tr>
     <tr>
@@ -145,9 +145,9 @@ var notANum = Number.NaN;
       <td>{{jsxref("Number.isNaN()")}}</td>
       <td>
         이 전달된 값
-        {{jsxref("Global_Objects/NaN", "Not-a-Number")}}여부를
+        {{jsxref("NaN", "Not-a-Number")}}여부를
         확인합니다. 원본 글로벌
-        {{jsxref("Global_Objects/isNaN", "(isNaN)")}}의 더욱
+        {{jsxref("isNaN", "(isNaN)")}}의 더욱
         강력한 버전입니다.
       </td>
     </tr>
@@ -400,4 +400,4 @@ function JSClock() {
 
 마지막으로 조건부 표현식에 "P.M."이 추가됩니다. 시간(`hour`)이 12 시간 이상이면 임시(`temp`)로; 그렇지 않으면 "A.M."을 `temp`에 추가합니다.
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "conflicting/Web/JavaScript/Guide/Numbers_and_strings")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Structuring_documents
 original_slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Además de definir partes individuales de tu página (como un párrafo o una imagen), {{Glossary("HTML")}} también dispone de elementos de bloque que se pueden utilizar para estructurar las distintas áreas de tu sito web (tal como el encabezado, el menú de navegación o la parte del contenido principal. En este artículo veras cómo planificar una estructura básica de página web y escribirás el HTML que representa esa estructura.
 
@@ -328,4 +328,4 @@ En este punto, deberías tener una mejor idea sobre cómo estructurar una págin
 
 - [Uso de secciones y esquemas HTML](/es/docs/Web/HTML/Reference/Elements/Heading_Elements): Guía avanzada de elementos semánticos HTML5 y el algoritmo de esquema HTML5.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "conflicting/Learn_web_development/Core/Structuring_content")}}

@@ -20,7 +20,7 @@ element = documentfragment.querySelector(selectors);
 ### 参数
 
 - _selectors_
-  - : 为一个 {{domxref("DOMString")}}，其包含一个或多个 CSS 选择器，多个选择器用逗号隔开。
+  - : 为一个 {{jsxref("String")}}，其包含一个或多个 CSS 选择器，多个选择器用逗号隔开。
 
 ## 例子
 

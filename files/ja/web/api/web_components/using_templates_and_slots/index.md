@@ -297,7 +297,7 @@ customElements.define(
 
 ### 最後に多少のスタイルを追加
 
-最後に若干の CSS スタイルを、文書中の {{HTMLElement("dl")}}、{{HTMLElement("dt")}}、{{HTMLElement("dd")}} の各要素に追加ししす。
+最後に若干の CSS スタイルを、文書中の {{HTMLElement("dl")}}、{{HTMLElement("dt")}}、{{HTMLElement("dd")}} の各要素に追加します。
 
 ```css
 dl {

@@ -16,7 +16,7 @@ _Cette interface hérite également des propriétés de [`DocumentAndElementEven
 - [`SVGElement.attributeStyleMap`](/fr/docs/Web/API/SVGElement/attributeStyleMap) {{ReadOnlyInline}}
   - : Un objet [`StylePropertyMap`](/fr/docs/Web/API/StylePropertyMap) qui représente les déclarations de l'attribut [`style`](/fr/docs/Web/SVG/Reference/Attribute/style) de l'élément.
 - [`SVGElement.dataset`](/fr/docs/Web/API/SVGElement/dataset) {{ReadOnlyInline}}
-  - : Un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) qui fournit une liste de paires de clé/valeur des attributs de données nommés correspondant aux [attributs de données spécifiques](/fr/docs/Web/HTML/How_to/Use_data_attributes) attachés à l'élément. Ils peuvent également être définis en SVG avec des attributs de la forme [`data-*`](/fr/docs/Web/SVG/Attribute/data-*), où `*` représente le nom de la clé. Cette propriété et cet attribut fonctionnent de façon analogue aux équivalents HTML (propriété du DOM [`HTMLElement.dataset`](/fr/docs/Web/API/HTMLElement/dataset) et attribut HTML global [`data-*`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-data-*)).
+  - : Un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) qui fournit une liste de paires de clé/valeur des attributs de données nommés correspondant aux [attributs de données spécifiques](/fr/docs/Web/HTML/How_to/Use_data_attributes) attachés à l'élément. Ils peuvent également être définis en SVG avec des attributs de la forme [`data-*`](/fr/docs/Web/SVG/Attribute/data-*), où `*` représente le nom de la clé. Cette propriété et cet attribut fonctionnent de façon analogue aux équivalents HTML (propriété du DOM [`HTMLElement.dataset`](/fr/docs/Web/API/HTMLElement/dataset) et attribut HTML global [`data-*`](/fr/docs/Web/HTML/Reference/Global_attributes/data-*)).
 - [`SVGElement.className`](/fr/docs/Web/API/SVGElement/className) {{Deprecated_Inline}}{{ReadOnlyInline}}
   - : Une chaîne de caractères [`SVGAnimatedString`](/fr/docs/Web/API/SVGAnimatedString) qui reflète la valeur de l'attribut [`class`](/fr/docs/Web/SVG/Attribute/class) de l'élément courant, ou la chaîne vide s'il n'a pas de classe. Cet attribut est déprécié et pourrait être retiré des prochaines versions de la spécification. Il est conseillé d'utiliser [`Element.classList`](/fr/docs/Web/API/Element/classList) à la place.
 - [`SVGElement.nonce`](/fr/docs/Web/API/SVGElement/nonce)
@@ -61,6 +61,6 @@ On pourra intercepter les évènements suivants en utilisant [`addEventListener(
 
 ## Voir aussi
 
-- Les attributs de données HTML [`data-*`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-data-*)
+- Les attributs de données HTML [`data-*`](/fr/docs/Web/HTML/Reference/Global_attributes/data-*)
 - Les attributs de données SVG [`data-*`](/fr/docs/Web/SVG/Attribute/data-*)
 - [Utiliser les attributs de données spécifiques en HTML](/fr/docs/Web/HTML/How_to/Use_data_attributes)

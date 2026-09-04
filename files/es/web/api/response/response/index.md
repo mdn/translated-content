@@ -22,7 +22,7 @@ var miRespuesta = new Response(cuerpo,opciones);
     - {{domxref("FormData")}}
     - {{domxref("ReadableStream")}}
     - {{domxref("URLSearchParams")}}
-    - {{domxref("USVString")}}
+    - {{jsxref("String")}}
 
 - _opciones_ {{optional_inline}}
   - : Un objeto que contiene las opciones de personalización para la respuesta HTTP. Las opciones posibles son:

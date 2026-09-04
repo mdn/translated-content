@@ -33,7 +33,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
     Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set.
 
 - `hpkp` {{optional_inline}}
-  - : `Boolean`. `true` si l'hôte utilise [Public Key Pinning](/fr/docs/Web/Security/Certificate_Transparency), sinon `false`.
+  - : `Boolean`. `true` si l'hôte utilise [Public Key Pinning](/fr/docs/Web/Security/Defenses/Certificate_Transparency), sinon `false`.
 - `hsts` {{optional_inline}}
   - : `Boolean`. `true` si l'hôte utilise [Strict Transport Security](/fr/docs/Glossary/HSTS), sinon `false`.
 - `isDomainMismatch` {{optional_inline}}

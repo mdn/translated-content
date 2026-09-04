@@ -3,7 +3,7 @@ title: Content-Type ヘッダー
 short-title: Content-Type
 slug: Web/HTTP/Reference/Headers/Content-Type
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: b4e920ce0a34d9e609080ccb937a1a30c3cd558a
 ---
 
 HTTP の **`Content-Type`** は{{Glossary("representation header","表現ヘッダー")}}で、コンテンツへのエンコードが適用される前の、リソースの元の{{Glossary("MIME type","メディア種別")}}を示すために使用します。
@@ -152,9 +152,9 @@ Content-Type: text/plain
 POST /submit HTTP/1.1
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 15
+Content-Length: 16
 
-comment=Hello!
+comment=Hello%21
 ```
 
 ### REST API で JSON を使用した場合の `Content-Type`

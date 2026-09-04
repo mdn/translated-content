@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 
 **`Symbol.replace`** — известный символ, задающий метод для замены подстрок в строке. Эта функция вызывается методом {{jsxref("String.prototype.replace()")}}.
 
-Смотрите также {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} и {{jsxref("String.prototype.replace()")}} для получения дополнительных сведений.
+Смотрите также {{jsxref("RegExp/Symbol.replace", "RegExp.prototype[@@replace]()")}} и {{jsxref("String.prototype.replace()")}} для получения дополнительных сведений.
 
 {{js_property_attributes(0,0,0)}}
 
@@ -24,4 +24,4 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp/Symbol.replace", "RegExp.prototype[@@replace]()")}}

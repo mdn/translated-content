@@ -1,48 +1,49 @@
 ---
-title: Content-Language
+title: En-tête Content-Language
+short-title: Content-Language
 slug: Web/HTTP/Reference/Headers/Content-Language
-original_slug: Web/HTTP/Headers/Content-Language
+l10n:
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-L'en-tête **`Content-Language`** est utilisé pour décrire quels langages sont destinés au public, de sorte que cela permette à l'utilisateur de se différencier en fonction de la langue préférée des utilisateurs.
+L'{{Glossary("representation header", "en-tête de représentation")}} HTTP **`Content-Language`** est utilisé pour décrire la ou les langues destinées au public, afin que les utilisateur·ice·s puissent la différencier selon leur propre langue préférée.
 
-Par exemple, si "`Content-Language: de-DE`" est mis en place, cela signifie que la page est destinée à un public parlant l'allemand (par contre, cela n'indique pas que la page est écrite en allemand. Par exemple, elle pourrait être écrite en anglais dans le cadre d'un cours de langue destiné aux allemands).
+Par exemple, `Content-Language: de-DE` indique que le document est destiné aux personnes germanophones. Le document peut être rédigé en anglais, et non en allemand, dans le cadre d'un cours de langue pour germanophones. Pour indiquer la langue dans laquelle le document est **rédigé**, utilisez plutôt l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang).
 
-Si l'en-tête `Content-Language` n'est pas spécifié, par défaut, cela signifie que la page est destinée à tout public de langue. Plusieurs tags de langue sont également possibles, ainsi que la mise en place de l'en-tête `Content-Language` pour dfférents types de médias, et pas seulement pour les documents texte.
+Si aucun `Content-Language` n'est défini, la valeur par défaut est que le contenu est destiné à tous les publics linguistiques. Plusieurs tags de langue sont également possibles, ainsi qu'une application de l'en-tête `Content-Language` à divers types de médias et pas seulement aux documents textuels.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("Entity header")}}</td>
+      <td>{{Glossary("Representation header", "En-tête de représentation")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>
       <td>Non</td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+        {{Glossary("CORS-safelisted response header", "En-tête de réponse autorisé CORS")}}
       </th>
       <td>Oui</td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Simple header", "CORS-safelisted request-header")}}
+        {{Glossary("CORS-safelisted request header", "En-tête de requête autorisé CORS")}}
       </th>
       <td>
-        Oui, avec comme restriction supplémentaire que les valeurs ne peuvent
-        contenir que les
-        caractères <code>0-9</code>, <code>A-Z</code>, <code>a-z</code>,
-        l'espace ou <code>*,-.;=</code>.
+        Oui*
       </td>
     </tr>
   </tbody>
 </table>
 
+\* Les valeurs ne peuvent contenir que les caractères `0-9`, `A-Z`, `a-z`, un espace ou les caractères `*,-.;=`.
+
 ## Syntaxe
 
-```
+```http
 Content-Language: de-DE
 Content-Language: en-US
 Content-Language: de-DE, en-CA
@@ -51,33 +52,34 @@ Content-Language: de-DE, en-CA
 ## Directives
 
 - `language-tag`
-  - : Plusieurs tags de langue sont séparés par paragraphe. Chaque tag de langue est une séquence d'un ou plusieurs sous-tags insensibles à la casse, chacun séparé par un tiret ("`-`", `%x2D`). Dans la plupart des cas, un tag de langue se compose d'un sous-tag de langue principal qui identifie une large famille de langues connexes (par exemple, «en» = anglais), suivi éventuellement d'une série de sous-tags qui affinent ou réduisent la variété de langue. (par exemple, "en-CA" = la variété d'anglais telle que communiquée au Canada).
+  - : Plusieurs tags de langue sont séparés par une virgule. Chaque tag de langue est une séquence d'un ou plusieurs sous-tags insensibles à la casse, chacun séparé par un tiret (`-`). Dans la plupart des cas, un tag de langue se compose d'un sous-tag principal qui identifie une large famille de langues connexes (par exemple, `en` = anglais), suivi éventuellement d'une série de sous-tags qui affinent ou réduisent la variété de langue (par exemple, `en-CA` = la variété d'anglais telle que communiquée au Canada).
 
 > [!NOTE]
-> Les tags de langues sont formellement définis dans la RFC 5646, qui repose sur la norme ISO 639 (très souvent la liste de codes ISO 639-1) pour les codes de langue à utiliser.
+> Les tags de langue sont formellement définis selon {{Glossary("BCP 47 language tag", "les balises de langue BCP 47")}}, qui reposent sur la norme [ISO 639](https://fr.wikipedia.org/wiki/ISO_639) (très souvent la [liste des codes ISO 639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1)) pour les [codes de langue](https://fr.wikipedia.org/wiki/Code_de_langue) à utiliser.
 
 ## Exemples
 
 ### Indiquer la langue dans laquelle un document est écrit
 
-L'attribut global [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) est utilisé sur des éléments HTML pour indiquer la langue d'une page HTML entière ou une partie de celle-ci.
+L'attribut global [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) est utilisé sur des éléments HTML pour indiquer la langue d'une page [HTML](/fr/docs/Web/HTML) entière ou une partie de celle-ci.
 
 ```html
-<html lang="de"></html>
+<html lang="de">
+  …
+</html>
 ```
 
-**N'utilisez pas** le meta tag comme ceci pour déclarer la langue d'un document:
+**N'utilisez pas** le l'élément HTML meta comme ceci pour déclarer la langue d'un document&nbsp;:
 
 ```html example-bad
-<!-- /!\ C'est une mauvaise pratique -->
 <meta http-equiv="content-language" content="de" />
 ```
 
 ### Indiquer un public cible pour une ressource
 
-L'en-tête `Content-Language` est utilisé pour spécifier le public destiné à la page, et peut indiquer si cela est plus qu'une seule langue.
+L'en-tête `Content-Language` est utilisé pour définir le **public cible de la page** et peut indiquer qu'il s'agit de plusieurs langues.
 
-```
+```http
 Content-Language: de, en
 ```
 
@@ -91,6 +93,6 @@ Content-Language: de, en
 
 ## Voir aussi
 
-- {{HTTPHeader("Accept-Language")}}
-- [HTTP headers, meta elements and language information](https://www.w3.org/International/questions/qa-http-and-lang.en)
-- [HTML `lang` attribute](/fr/docs/Web/HTML/Reference/Global_attributes/lang)
+- L'en-tête {{HTTPHeader("Accept-Language")}}
+- [En-têtes HTTP, éléments meta et informations de langue <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-http-and-lang.en)
+- [L'attribut HTML `lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang)

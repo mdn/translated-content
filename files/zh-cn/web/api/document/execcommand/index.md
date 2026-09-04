@@ -25,7 +25,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ### 参数
 
 - `aCommandName`
-  - : 一个 {{domxref("DOMString")}} ，命令的名称。可用命令列表请参阅 [命令](#命令) 。
+  - : 一个 {{jsxref("String")}} ，命令的名称。可用命令列表请参阅 [命令](#命令) 。
 - `aShowDefaultUI`
   - : 一个 {{jsxref("Boolean")}}，是否展示用户界面，一般为 false。Mozilla 没有实现。
 - `aValueArgument`

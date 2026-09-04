@@ -1,55 +1,72 @@
 ---
-title: "<center> : l'élément de texte centré"
+title: "Élément HTML `<center>` : l'élément de texte centré"
+short-title: <center>
 slug: Web/HTML/Reference/Elements/center
-original_slug: Web/HTML/Element/center
+l10n:
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<center>`** est un [élément de type bloc](/fr/docs/Glossary/Block-level_content) qui affiche son contenu de type bloc ou en incise centré horizontalement dans son élément conteneur. Le conteneur est généralement, mais pas obligatoirement, {{HTMLElement("body")}}.
 
-> [!WARNING]
-> Cette fonctionnalité est obsolète. Bien qu'encore supportée par des navigateurs, son utilisation est découragée pour tout nouveau projet. Évitez de l'utiliser.
-
-L'élément **`<center>`** est un [élément de bloc](/fr/docs/Glossary/Block-level_content) qui contient des paragraphes et d'autres éléments de type bloc ou en ligne. Le contenu entier de cet élément est centré horizontalement au sein de son conteneur parent (généralement l'élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body)).
-
-Cet élément a été déprécié en HTML4 (et XHTML 1) au profit de la propriété [CSS](/fr/docs/Web/CSS) [`text-align`](/fr/docs/Web/CSS/text-align) qui peut être appliqué à l'élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) ou à un élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p). Pour centrer des blocs, on utilisera d'autres propriétés ([`margin-left`](/fr/docs/Web/CSS/margin-left) et [`margin-right`](/fr/docs/Web/CSS/margin-right) (ou définissez [`margin`](/fr/docs/Web/CSS/margin) à `0 auto`).
+Cette balise a été dépréciée dans HTML 4 (et XHTML 1) au profit de la propriété [CSS](/fr/docs/Web/CSS) {{CSSxRef("text-align")}}, qui peut être appliquée à l'élément {{HTMLElement("div")}} ou à un {{HTMLElement("p")}} individuel. Pour centrer des blocs, utilisez d'autres propriétés CSS comme {{CSSxRef("margin-left")}} et {{CSSxRef("margin-right")}} et définissez-les sur `auto` (ou définissez {{CSSxRef("margin")}} à `0 auto`).
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
-
-> [!NOTE]
-> Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
+Cet élément implémente l'interface {{DOMxRef("HTMLElement")}}.
 
 ## Exemple 1
 
 ```html
 <center>
-  Ce texte sera centré.
+  Ce texte est centré.
   <p>Ainsi que ce paragraphe.</p>
 </center>
 ```
 
+### Résultat
+
+{{EmbedLiveSample("Exemple 1")}}
+
 ## Exemple 2 (alternative CSS)
 
 ```html
-<div style="text-align:center">
-  Ce texte sera centré.
+<div class="center">
+  Ce texte est centré.
   <p>Ainsi que ce paragraphe.</p>
 </div>
 ```
 
+```css
+.center {
+  text-align: center;
+}
+```
+
+### Résultat
+
+{{EmbedLiveSample("Exemple 2 (alternative CSS)")}}
+
 ## Exemple 3 (alternative CSS)
 
 ```html
-<p style="text-align:center">
-  Cette ligne sera centrée.<br />
+<p class="center">
+  Cette ligne est centrée.<br />
   Ainsi que cette ligne.
 </p>
 ```
 
-## Notes
+```css
+.center {
+  text-align: center;
+}
+```
 
-Appliquer [`text-align`](/fr/docs/Web/CSS/text-align)`: center` sur un élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) ou [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) centre _le contenu_ de ces éléments, tout en laissant leurs dimensions générales inchangées.
+### Résultat
+
+{{EmbedLiveSample("Exemple 3 (alternative CSS)")}}
+
+> [!NOTE]
+> Appliquer {{CSSxRef("text-align", "text-align: center")}} à un élément {{HTMLElement("div")}} ou {{HTMLElement("p")}} centre _le contenu_ de ces éléments tout en laissant leurs dimensions générales inchangées.
 
 ## Spécifications
 
@@ -61,5 +78,5 @@ Appliquer [`text-align`](/fr/docs/Web/CSS/text-align)`: center` sur un élément
 
 ## Voir aussi
 
-- La propriété [`text-align`](/fr/docs/Web/CSS/text-align)
-- La propriété [`display`](/fr/docs/Web/CSS/display)
+- La propriété CSS {{CSSxRef("text-align")}}
+- La propriété CSS {{CSSxRef("display")}}

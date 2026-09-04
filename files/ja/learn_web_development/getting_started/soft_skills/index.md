@@ -28,7 +28,7 @@ l10n:
 
 ## 関連情報
 
-- [学習とヘルプを得る](/ja/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help)
+- [学習とヘルプを得る](/ja/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning)
   - : この記事では、ウェブ開発者としてより多くを習得し、役立つヒントやコツを提供しています。また、必要に応じて各サブトピックの詳細情報を探すことができるよう、さらに詳しい情報も提供しています。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started")}}

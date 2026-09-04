@@ -48,7 +48,7 @@ _Без изменений._
 
 #### Удалено
 
-- Из документов, отличных от XUL, удалены все [XUL-значения `display`](/ru/docs/Web/CSS/display#xul_values) за исключением `-moz-box` и `-moz-inline-box` ([Firefox bug 1288572](https://bugzil.la/1288572)).
+- Из документов, отличных от XUL, удалены все [XUL-значения `display`](/ru/docs/Web/CSS/Reference/Properties/display#xul_values) за исключением `-moz-box` и `-moz-inline-box` ([Firefox bug 1288572](https://bugzil.la/1288572)).
 
 ### SVG
 
@@ -56,7 +56,7 @@ _Без изменений._
 
 ### JavaScript
 
-- Реализована поддержка конструктора {{jsxref("WebAssembly.Global()")}} и глобальных переменных в WebAssembly ([Firefox bug 1464656](https://bugzil.la/1464656)).
+- Реализована поддержка конструктора [`WebAssembly.Global()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Global) и глобальных переменных в WebAssembly ([Firefox bug 1464656](https://bugzil.la/1464656)).
 - Включена по умолчанию поддержка методов {{jsxref("Array.prototype.flat()")}} и {{jsxref("Array.prototype.flatMap()")}} ([Firefox bug 1435813](https://bugzil.la/1435813)).
 - Реализовано свойство [`import.meta`](/ru/docs/Web/JavaScript/Reference/Operators/import.meta), отображающее контекстно-специфичных метаданные для модуля JavaScript ([Firefox bug 1427610](https://bugzil.la/1427610)).
 - [Строковые литералы](</ru/docs/Web/JavaScript/Reference/Lexical_grammar#Литерал_String_(Строка)>) могут напрямую содержать символы U+2028 LINE SEPARATOR и U+2029 PARAGRAPH SEPARATOR. Как следствие, синтаксис {{jsxref("JSON")}} отныне является подмножеством литерального синтаксиса JavaScript (см. [Firefox bug 1435828](https://bugzil.la/1435828) и предложенный TC39 [json-superset](https://github.com/tc39/proposal-json-superset)).

@@ -3,7 +3,7 @@ title: document.anchors
 slug: Web/API/Document/anchors
 ---
 
-{{APIRef("DOM")}} {{deprecated_header()}}
+{{APIRef("DOM")}} {{deprecated_header}}
 
 {{domxref("Document")}} 인터페이스의 **`anchors`** 읽기 전용 속성은 문서 내의 모든 앵커 목록을 반환합니다.
 

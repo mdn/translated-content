@@ -1,8 +1,9 @@
 ---
-title: PublicKeyCredential.rawId
+title: "PublicKeyCredential: rawId プロパティ"
+short-title: rawId
 slug: Web/API/PublicKeyCredential/rawId
 l10n:
-  sourceCommit: b7cd76af245c330c6a1a9f489602015fa0714044
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
@@ -22,13 +23,13 @@ l10n:
 
 ```js
 const options = {
-  challenge: new Uint8Array(26) /* from the server */,
+  challenge: new Uint8Array(26) /* サーバーから */,
   rp: {
     name: "Example CORP",
     id: "login.example.com",
   },
   user: {
-    id: new Uint8Array(26) /* To be changed for each user */,
+    id: new Uint8Array(26) /* ユーザーごとに変更される */,
     name: "canand@example.com",
     displayName: "Carina Anand",
   },
@@ -44,10 +45,10 @@ navigator.credentials
   .create({ publicKey: options })
   .then((pubKeyCredential) => {
     const rawId = pubKeyCredential.rawId;
-    // Do something with rawId
+    // rawId で何かを行う
   })
   .catch((err) => {
-    // Deal with any error
+    // エラーを処理する
   });
 ```
 

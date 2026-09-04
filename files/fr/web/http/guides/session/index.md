@@ -60,7 +60,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 HTTP définit un ensemble de [méthodes de requête](/fr/docs/Web/HTTP/Reference/Methods) indiquant l'action souhaitée à effectuer sur une ressource. Bien qu'ils puissent également être des noms, ces méthodes de requêtes sont parfois appelées verbes HTTP. Les requêtes les plus courantes sont `GET` et `POST` :
 
 - La méthode {{HTTPMethod ("GET")}} demande une représentation de données de la ressource spécifiée. Les requêtes utilisant `GET` ne doivent que récupérer les données.
-- La méthode {{HTTPMethod ("POST")}} envoie des données à un serveur afin qu'il puisse changer son état. C'est la méthode souvent utilisée pour les [formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\).
+- La méthode {{HTTPMethod ("POST")}} envoie des données à un serveur afin qu'il puisse changer son état. C'est la méthode souvent utilisée pour les [formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms).
 
 ## Structure d'une réponse du serveur
 

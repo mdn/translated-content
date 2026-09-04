@@ -1,13 +1,12 @@
 ---
-title: "<body>: 文書本体要素"
+title: HTML `<body>` 文書本体要素
+short-title: <body>
 slug: Web/HTML/Reference/Elements/body
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
-
-**`<body>`** は [HTML](/ja/docs/Web/HTML) の要素で、 HTML 文書のコンテンツを示す要素です。 `<body>` 要素は文書中に一つだけ配置できます。
+**`<body>`** は [HTML](/ja/docs/Web/HTML) の要素で、HTML 文書のコンテンツを表します。`<body>` 要素は文書中に一つだけ配置できます。
 
 ## 属性
 
@@ -62,7 +61,7 @@ l10n:
   - : ストレージ領域が変化した際に呼び出す関数です。
 - [`onunhandledrejection`](/ja/docs/Web/API/Window/unhandledrejection_event)
   - : JavaScript の拒否ハンドラーを持たないプロミス ({{jsxref("Promise")}}) が拒否されたときに発生します。
-- [`onunload`](/ja/docs/Web/API/Window/unload_event)
+- [`onunload`](/ja/docs/Web/API/Window/unload_event) {{deprecated_inline}}
   - : 文書からの離脱時に呼び出す関数です。
 
 ### 非推奨の属性
@@ -80,39 +79,35 @@ l10n:
   - : 文書の背景色です。
     代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
 - `bottommargin` {{deprecated_inline}}
-  - : body の下マージンです。
-    代わりに CSS の {{cssxref("margin-bottom")}} プロパティ（または論理的プロパティの {{cssxref("margin-block-end")}}）を使用してください。
+  - : 無視されます。
 - `leftmargin` {{deprecated_inline}}
-  - : body の左マージンです。
-    代わりに CSS の {{cssxref("margin-left")}} プロパティ（または論理的プロパティの {{cssxref("margin-inline-start")}}）を使用してください。
+  - : この body の左右のマージンです。
+    代わりに CSS の {{cssxref("margin-left")}} および {{cssxref("margin-right")}} プロパティ（または論理的プロパティの {{cssxref("margin-inline")}}）を使用してください。
 - `link` {{deprecated_inline}}
   - : 未訪問のハイパーリンクの文字色です。
     代わりに CSS の {{cssxref("color")}} プロパティを {{cssxref(":link")}} 擬似クラスで使用してください。
 - `rightmargin` {{deprecated_inline}}
-  - : body の右マージンです。
-    代わりに CSS の {{cssxref("margin-right")}} プロパティを使用してください。
+  - : 無視されます。
 - `text` {{deprecated_inline}}
   - : 基本文字色です。
     代わりに CSS の {{cssxref("color")}} プロパティを使用してください。
 - `topmargin` {{deprecated_inline}}
-  - : body の上マージンです。
-    代わりに CSS の {{cssxref("margin-top")}} プロパティを使用してください。
+  - : この body の上下のマージンです。
+    代わりに CSS の {{cssxref("margin-top")}} および {{cssxref("margin-bottom")}} プロパティ（または論理的プロパティの {{cssxref("margin-block")}}）を使用してください。
 - `vlink` {{deprecated_inline}}
   - : 訪問済みのハイパーリンクの文字色です。
     代わりに CSS の {{cssxref("color")}} プロパティを {{cssxref(":visited")}} 擬似クラスで使用してください。
 
 ## 例
 
-```html
-<html lang="en">
+```html-nolint
+<html lang="ja">
   <head>
-    <title>Document title</title>
+    <title>文書タイトル</title>
   </head>
   <body>
     <p>
-      The <code>&lt;body&gt;</code> HTML element represents the content of an
-      HTML document. There can be only one <code>&lt;body&gt;</code> element in
-      a document.
+      <code>&lt;body&gt;</code> は HTML の要素で、HTML 文書のコンテンツを表します。<code>&lt;body&gt;</code> は文書中に一つだけ配置できます。
     </p>
   </body>
 </html>
@@ -199,4 +194,4 @@ l10n:
 
 - {{HTMLElement("html")}}
 - {{HTMLElement("head")}}
-- [イベント処理の概要](/ja/docs/Web/API/Document_Object_Model/Events)
+- [イベント処理の概要](/ja/docs/Web/API/Document_Object_Model/Events#イベントハンドラーの登録)

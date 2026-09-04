@@ -239,7 +239,7 @@ Cache-Control: public, max-age=604800, immutable
 Cache-Control: max-age=604800, stale-while-revalidate=86400
 ```
 
-上記の例では、レスポンスがは[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なのは 7 日間（604800 秒間）です。
+上記の例では、レスポンスが[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なのは 7 日間（604800 秒間）です。
 7 日後、レスポンスは[古く](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なりますが、キャッシュは翌日（86400 秒後）のリクエストに再利用できます。ただし、バックグラウンドでレスポンスを再検証することが条件です。
 
 再検証により、キャッシュは再び[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)になるため、クライアントはその期間中は常に[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)であったかのように見えます。これにより再検証の遅延ペナルティを効果的にクライアントから隠蔽できます。

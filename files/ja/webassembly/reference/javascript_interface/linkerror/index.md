@@ -30,7 +30,7 @@ original_slug: WebAssembly/JavaScript_interface/LinkError
 
 ## インスタンスメソッド
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.LinkError.prototype.toSource()")}}
+- {{jsxref("Error.prototype.toString", "WebAssembly.LinkError.prototype.toSource()")}}
   - : 同じエラーを評価できるコードを返します。 {{jsxref("Error")}} から継承しています。
 - {{jsxref("Error.prototype.toString", "WebAssembly.LinkError.prototype.toString()")}}
   - : 指定された `Error` オブジェクトを表す文字列を返します。{{jsxref("Error")}} から継承しています。

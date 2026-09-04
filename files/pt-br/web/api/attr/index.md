@@ -17,11 +17,11 @@ Este tipo representa um atributo de elemento DOM como um objeto. Na maioria dos 
   - : O nome do Atributo.
 
 - {{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}
-  - : Uma {{domxref("DOMString")}} representando o namespace URI do atributo, ou `null` se não há namespace
+  - : Uma {{jsxref("String")}} representando o namespace URI do atributo, ou `null` se não há namespace
 - {{domxref("Attr.localName", "localName")}} {{readOnlyInline}}
-  - : Uma {{domxref("DOMString")}} representando a parte local do nome qualificado do atributo.
+  - : Uma {{jsxref("String")}} representando a parte local do nome qualificado do atributo.
 - {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
-  - : Uma {{domxref("DOMString")}} representando o prefixo do namespace do atributo ou `null` se nenhum prefixo foi especificado.
+  - : Uma {{jsxref("String")}} representando o prefixo do namespace do atributo ou `null` se nenhum prefixo foi especificado.
 - {{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}
   - : O elemento que possui o atributo.
 

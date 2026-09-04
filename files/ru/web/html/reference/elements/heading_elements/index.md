@@ -54,16 +54,16 @@ h4 {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ru/docs/Web/HTML/Content_categories">Категории содержимого</a>
+        <a href="/ru/docs/Web/HTML/Guides/Content_categories">Категории содержимого</a>
       </th>
       <td>
-        <a href="/ru/docs/Web/HTML/Content_categories#основной_поток">Основной поток</a>, содержимое заголовков, явное содержимое.
+        <a href="/ru/docs/Web/HTML/Guides/Content_categories#основной_поток">Основной поток</a>, содержимое заголовков, явное содержимое.
       </td>
     </tr>
     <tr>
       <th scope="row">Допустимое содержимое</th>
       <td>
-        <a href="/ru/docs/Web/HTML/Content_categories#фразовый_контент">Фразовое содержимое</a>.
+        <a href="/ru/docs/Web/HTML/Guides/Content_categories#фразовый_контент">Фразовое содержимое</a>.
       </td>
     </tr>
     <tr>
@@ -73,7 +73,7 @@ h4 {
     <tr>
       <th scope="row">Допустимые родители</th>
       <td>
-        Любой элемент, разрешающий <a href="/ru/docs/Web/HTML/Content_categories#основной_поток">основной поток</a>.
+        Любой элемент, разрешающий <a href="/ru/docs/Web/HTML/Guides/Content_categories#основной_поток">основной поток</a>.
       </td>
     </tr>
     <tr>

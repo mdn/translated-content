@@ -17,7 +17,7 @@ slug: Web/API/Node/baseURI
 var baseURI = node.baseURI;
 ```
 
-- `baseURI` 是一个 {{ domxref("DOMString") }} 代表当前 {{domxref("Node", "节点")}} 所在文档的基 URI。如果无法获取则可能返回 `null` 。
+- `baseURI` 是一个 {{ jsxref("String") }} 代表当前 {{domxref("Node", "节点")}} 所在文档的基 URI。如果无法获取则可能返回 `null` 。
 - `node.baseURI` 是只读的。
 - `node.baseURI` 可能会随时间发生变化。
 

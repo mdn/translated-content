@@ -75,7 +75,7 @@ Il y a deux façons de spécifier une action de page : avec ou sans [popup](/fr/
   browser.pageAction.onClicked.addListener(handleClick);
   ```
 
-- **Avec un popup:** L'événement `click` n'est pas envoyé. Au lieu de cela, le popup apparaît lorsque l'utilisateur clique sur le bouton. L'utilisateur interagit alors avec le popup. Lorsque l'utilisateur clique à l'extérieur de la fenêtre contextuelle, celle-ci se ferme automatiquement. Voir l'article [Popup](/fr/docs/Mozilla/Add-ons/WebExtensions/Popups) pour plus de détails sur la création et la gestion des popups.
+- **Avec un popup:** L'événement `click` n'est pas envoyé. Au lieu de cela, le popup apparaît lorsque l'utilisateur clique sur le bouton. L'utilisateur interagit alors avec le popup. Lorsque l'utilisateur clique à l'extérieur de la fenêtre contextuelle, celle-ci se ferme automatiquement. Voir l'article [Popup](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) pour plus de détails sur la création et la gestion des popups.
 
 Notez que votre extension ne peut avoir qu'une seule page action.
 

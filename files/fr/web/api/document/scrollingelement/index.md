@@ -1,24 +1,25 @@
 ---
-title: Document.scrollingElement
+title: "Document : propriété scrollingElement"
+short-title: scrollingElement
 slug: Web/API/Document/scrollingElement
+l10n:
+  sourceCommit: b404c3f8442ae2f9095d106219b5b74d6ae91446
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`scrollingElement`** de l'interface [`Document`](/fr/docs/Web/API/Document) renvoie une référence à l'[élément](/fr/docs/Web/API/Element) qui fait défiler le document. En mode standard, il s'agit de l'élément racine du document, [`document.documentElement`](/fr/docs/Web/API/Document/documentElement).
+La propriété en lecture seule **`scrollingElement`** de l'interface {{DOMxRef("Document")}} retourne une référence à l'élément ({{DOMxRef("Element")}}) qui fait défiler le document. En mode standard, il s'agit de l'élément racine du document, {{DOMxRef("document.documentElement")}}.
 
-En mode quirks, l'attribut `scrollingElement` renvoie l'élément HTML `body` s'il existe et est [potentiellement défilable](https://drafts.csswg.org/cssom-view/#potentially-scrollable), sinon il renvoie `null`.
+En mode «&nbsp;quirks&nbsp;», la propriété `scrollingElement` retourne l'élément HTML `body` s'il existe et n'est pas [potentiellement défilable <sup>(angl.)</sup>](https://drafts.csswg.org/cssom-view/#potentially-scrollable), sinon elle retourne `null`. Cela peut sembler surprenant, mais c'est vrai selon la spécification et les navigateurs.
 
-## Syntaxe
+## Valeur
 
-```js
-var element = document.scrollingElement;
-```
+L'élément ({{DOMxRef("Element")}}) qui fait défiler le document, généralement l'élément racine (sauf en mode non standard).
 
-## Exemple
+## Exemples
 
 ```js
-var scrollElm = document.scrollingElement;
+const scrollElm = document.scrollingElement;
 scrollElm.scrollTop = 0;
 ```
 

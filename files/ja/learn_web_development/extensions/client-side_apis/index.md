@@ -2,10 +2,8 @@
 title: クライアントサイド Web API
 slug: Learn_web_development/Extensions/Client-side_APIs
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 73a73bc44e12181c778910f3b7d73962e0dd9a29
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions")}}
 
@@ -18,7 +16,7 @@ l10n:
 [HTML](/ja/docs/Learn_web_development/Core/Structuring_content) や [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) に関する基礎知識も役に立つでしょう。
 
 > [!NOTE]
-> もし自分のファイルを作成できないような端末上で作業しているなら、（大半の）コード例を [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) のようなオンラインプログラム作成・実行環境で試してみることもできます。
+> ファイルを作成できないパソコン、タブレット、その他の端末で作業している場合は、[CodePen](https://codepen.io/) や [JSFiddle](https://jsfiddle.net/) などのオンラインエディタでコードを実行してみてください。
 
 ## ガイド
 

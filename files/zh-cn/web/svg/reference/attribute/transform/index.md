@@ -76,7 +76,7 @@ svg {
 `transform` 属性的 `<transform-list>` 可以使用以下所有的变换函数
 
 > [!WARNING]
-> 根据规范，你还应该能够使用 CSS [变换函数](/zh-CN/docs/Web/CSS/transform-function)。但是，这不能保证兼容性。
+> 根据规范，你还应该能够使用 CSS [变换函数](/zh-CN/docs/Web/CSS/Reference/Values/transform-function)。但是，这不能保证兼容性。
 
 ### 矩阵
 

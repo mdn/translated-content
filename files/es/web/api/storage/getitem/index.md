@@ -16,11 +16,11 @@ var aValue = storage.getItem(keyName);
 ### Parámetros
 
 - _`keyName`_
-  - : Una {{domxref("DOMString")}} que contiene el nombre de la clave cuyo valor se quiere obtener.
+  - : Una {{jsxref("String")}} que contiene el nombre de la clave cuyo valor se quiere obtener.
 
 ### Devuelve
 
-Una {{domxref("DOMString")}} que contiene el valor de la clave. Si la clave no existe, devuelve `null`.
+Una {{jsxref("String")}} que contiene el valor de la clave. Si la clave no existe, devuelve `null`.
 
 ## Ejemplo
 

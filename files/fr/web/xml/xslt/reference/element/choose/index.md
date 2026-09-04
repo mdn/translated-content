@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/choose
 original_slug: Web/XSLT/Element/choose
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 L'élément `<xsl:choose>` définit un choix parmi un certain nombre d'alternatives. Il se comporte comme l'instruction switch d'un langage procédural.
 

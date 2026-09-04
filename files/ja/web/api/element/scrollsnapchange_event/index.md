@@ -73,6 +73,6 @@ scrollingElem.addEventListener("scrollsnapchange", (event) => {
 - {{DOMxRef("Document/scrollend_event", "scrollend")}} イベント
 - {{domxref("SnapEvent")}}
 - CSS の {{cssxref("scroll-snap-type")}} プロパティ
-- [CSS スクロールスナップモジュール](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [スクロールスナップイベントの使用](/ja/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
+- [CSS スクロールスナップモジュール](/ja/docs/Web/CSS/Guides/Scroll_snap)
+- [スクロールスナップイベントの使用](/ja/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) on developer.chrome.com (2024)

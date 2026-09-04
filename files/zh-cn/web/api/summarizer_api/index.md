@@ -42,7 +42,7 @@ Summarizer API 提供了一个异步（基于 {{jsxref("Promise")}}）机制，�
 
 ## 安全考虑
 
-当创建 `Summarizer` 示例时，规范要求用户最近与页面有过交互（需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)）。
+当创建 `Summarizer` 示例时，规范要求用户最近与页面有过交互（需要[瞬态用户激活](/zh-CN/docs/Web/Security/Defenses/User_activation)）。
 
 此外，规范还通过 {{httpheader('Permissions-Policy/summarizer','summarizer')}} {{httpheader("Permissions-Policy")}} 指令控制对 API 的访问。
 

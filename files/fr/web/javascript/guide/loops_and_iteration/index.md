@@ -3,7 +3,7 @@ title: Boucles et itérations
 slug: Web/JavaScript/Guide/Loops_and_iteration
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs", "Web/JavaScript/Guide/Fonctions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 Les boucles permettent de répéter des actions simplement et rapidement. Ce chapitre du [guide JavaScript](/fr/docs/Web/JavaScript/Guide) présente les différentes instructions qu'il est possible d'utiliser en JavaScript pour effectuer des itérations.
 
@@ -33,7 +33,7 @@ Voici les différentes boucles fournies par JavaScript :
 
 ## L'instruction for
 
-Une boucle {{jsxref("statements/for", "for")}} répète des instructions jusqu'à ce qu'une condition donnée ne soit plus vérifiée. La boucle `for` JavaScript ressemble beaucoup à celle utilisée en C ou en Java. Une boucle `for` s'utilise de la façon suivante :
+Une boucle {{jsxref("Statements/for", "for")}} répète des instructions jusqu'à ce qu'une condition donnée ne soit plus vérifiée. La boucle `for` JavaScript ressemble beaucoup à celle utilisée en C ou en Java. Une boucle `for` s'utilise de la façon suivante :
 
 ```
 for ([expressionInitiale]; [condition]; [expressionIncrément])
@@ -93,7 +93,7 @@ La fonction suivante contient une instruction `for` qui compte le nombre d'optio
 
 ## L'instruction `do...while`
 
-L'instruction {{jsxref("statements/do...while", "do...while")}} permet de répéter un ensemble d'instructions jusqu'à ce qu'une condition donnée ne soit plus vérifiée. (_NdT_ : littéralement « do...while » signifie « faire... tant que »). Une instruction `do...while` s'utilise de la façon suivante :
+L'instruction {{jsxref("Statements/do...while", "do...while")}} permet de répéter un ensemble d'instructions jusqu'à ce qu'une condition donnée ne soit plus vérifiée. (_NdT_ : littéralement « do...while » signifie « faire... tant que »). Une instruction `do...while` s'utilise de la façon suivante :
 
 ```
 do
@@ -117,7 +117,7 @@ do {
 
 ## L'instruction `while`
 
-Une instruction {{jsxref("statements/while", "while")}} permet d'exécuter une instruction tant qu'une condition donnée est vérifiée. Cette instruction `while` s'utilise de la façon suivante :
+Une instruction {{jsxref("Statements/while", "while")}} permet d'exécuter une instruction tant qu'une condition donnée est vérifiée. Cette instruction `while` s'utilise de la façon suivante :
 
 ```
 while (condition)
@@ -163,7 +163,7 @@ while (true) {
 
 ## L'instruction `label`
 
-Un {{jsxref("statements/label","label")}} (ou étiquette) permet de fournir un identifiant pour une instruction afin d'y faire référence depuis un autre endroit dans le programme. On peut ainsi identifier une boucle grâce à un label puis utiliser les instructions `break` ou `continue` pour indiquer si le programme doit interrompre ou poursuivre l'exécution de cette boucle.
+Un {{jsxref("Statements/label","label")}} (ou étiquette) permet de fournir un identifiant pour une instruction afin d'y faire référence depuis un autre endroit dans le programme. On peut ainsi identifier une boucle grâce à un label puis utiliser les instructions `break` ou `continue` pour indiquer si le programme doit interrompre ou poursuivre l'exécution de cette boucle.
 
 On utilise un label de la façon suivante :
 
@@ -189,7 +189,7 @@ memoBoucle: while (memo == true) {
 
 ## L'instruction `break`
 
-L'instruction {{jsxref("statements/break","break")}} est utilisée pour finir l'exécution d'une boucle, d'une instruction `switch`, ou avec un label.
+L'instruction {{jsxref("Statements/break","break")}} est utilisée pour finir l'exécution d'une boucle, d'une instruction `switch`, ou avec un label.
 
 - Lorsque `break` est utilisé sans label, il provoque la fin de l'instruction `while`, `do-while`, `for`, ou `switch` dans laquelle il est inscrit (on finit l'instruction la plus imbriquée), le contrôle est ensuite passé à l'instruction suivante.
 - Lorsque `break` est utilisé avec un label, il provoque la fin de l'instruction correspondante.
@@ -238,7 +238,7 @@ labelAnnuleBoucle: while (true) {
 
 ## L'instruction `continue`
 
-L'instruction {{jsxref("statements/continue","continue")}} permet de reprendre une boucle `while`, `do-while`, `for`, ou une instruction `label`.
+L'instruction {{jsxref("Statements/continue","continue")}} permet de reprendre une boucle `while`, `do-while`, `for`, ou une instruction `label`.
 
 - Lorsque `continue` est utilisé sans label, l'itération courante de la boucle (celle la plus imbriquée) est terminée et la boucle passe à l'exécution de la prochaine itération. À la différence de l'instruction `break`, `continue` ne stoppe pas entièrement l'exécution de la boucle. Si elle est utilisée dans une boucle `while`, l'itération reprend au niveau de la condition d'arrêt. Dans une boucle `for`, l'itération reprend au niveau de l'expression d'incrément pour la boucle.
 - Lorsque `continue` est utilisé avec un label, il est appliqué à l'instruction de boucle correspondante.
@@ -295,7 +295,7 @@ vérifIetJ: while (i < 4) {
 
 ## L'instruction `for...in`
 
-L'instruction {{jsxref("statements/for...in","for...in")}} permet d'itérer sur l'ensemble des propriétés énumérables d'un objet. Pour chaque propriété, JavaScript exécutera l'instruction indiquée. Cette instruction s'utilise de la façon suivante :
+L'instruction {{jsxref("Statements/for...in","for...in")}} permet d'itérer sur l'ensemble des propriétés énumérables d'un objet. Pour chaque propriété, JavaScript exécutera l'instruction indiquée. Cette instruction s'utilise de la façon suivante :
 
 ```
 for (variable in objet) {
@@ -331,7 +331,7 @@ Bien qu'il soit tentant d'utiliser cette instruction pour parcourir les élémen
 
 ## L'instruction `for...of`
 
-L'instruction {{jsxref("statements/for...of","for...of")}} crée une boucle qui fonctionne avec [les objets itérables](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) (qui incluent {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, l'objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments), etc.). La boucle appelle un mécanisme d'itération propre à l'objet utilisé et elle parcourt l'objet et les valeurs de ses différentes propriétés.
+L'instruction {{jsxref("Statements/for...of","for...of")}} crée une boucle qui fonctionne avec [les objets itérables](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) (qui incluent {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, l'objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments), etc.). La boucle appelle un mécanisme d'itération propre à l'objet utilisé et elle parcourt l'objet et les valeurs de ses différentes propriétés.
 
 ```
 for (variable of objet) {
@@ -354,4 +354,4 @@ for (let i of arr) {
 }
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs", "Web/JavaScript/Guide/Fonctions")}}
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}

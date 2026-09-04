@@ -27,16 +27,16 @@ l10n:
 ### Свойства функции
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
-- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
-- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
-- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
-- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-- {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
-- {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
+- {{JSxRef("isFinite()")}}
+- {{JSxRef("isNaN()")}}
+- {{JSxRef("parseFloat()")}}
+- {{JSxRef("parseInt()")}}
+- {{JSxRef("decodeURI()")}}
+- {{JSxRef("decodeURIComponent()")}}
+- {{JSxRef("encodeURI()")}}
+- {{JSxRef("encodeURIComponent()")}}
+- {{JSxRef("escape()")}} {{Deprecated_Inline}}
+- {{JSxRef("unescape()")}} {{Deprecated_Inline}}
 
 ### Фундаментальные объекты
 
@@ -121,15 +121,15 @@ l10n:
 ### Интернационализация
 
 - {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
-- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
-- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}
+- {{JSxRef("Intl.Collator")}}
+- {{JSxRef("Intl.DateTimeFormat")}}
+- {{JSxRef("Intl.DisplayNames")}}
+- {{JSxRef("Intl.ListFormat")}}
+- {{JSxRef("Intl.Locale")}}
+- {{JSxRef("Intl.NumberFormat")}}
+- {{JSxRef("Intl.PluralRules")}}
+- {{JSxRef("Intl.RelativeTimeFormat")}}
+- {{JSxRef("Intl.Segmenter")}}
 
 ## Инструкции
 
@@ -185,16 +185,16 @@ l10n:
 
 ### Основные выражения
 
-- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("this")}}
 - [Литералы](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
-- {{JSxRef("Global_Objects/Array", "[]")}}
+- {{JSxRef("Array", "[]")}}
 - {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("Operators/function", "function")}}
 - {{JSxRef("Operators/class", "class")}}
 - {{JSxRef("Operators/function*", "function*")}}
 - {{JSxRef("Operators/async_function", "async function")}}
 - {{JSxRef("Operators/async_function*", "async function*")}}
-- {{JSxRef("Global_Objects/RegExp", "/abc/i")}}
+- {{JSxRef("RegExp", "/abc/i")}}
 - {{JSxRef("Template_literals", "`string`")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
 
@@ -202,9 +202,9 @@ l10n:
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
 - {{JSxRef("Operators/Optional_chaining", "?.")}}
-- {{JSxRef("Operators/new", "new")}}
-- {{JSxRef("Operators/new%2Etarget", "new.target")}}
-- {{JSxRef("Operators/import%2Emeta", "import.meta")}}
+- {{JSxRef("new")}}
+- {{JSxRef("Operators/new.target", "new.target")}}
+- {{JSxRef("Operators/import.meta", "import.meta")}}
 - {{JSxRef("Operators/super", "super")}}
 - {{JSxRef("Operators/import", "import()")}}
 
@@ -217,7 +217,7 @@ l10n:
 
 ### Унарные оператоты
 
-- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("delete")}}
 - {{JSxRef("Operators/void", "void")}}
 - {{JSxRef("Operators/typeof", "typeof")}}
 - {{JSxRef("Operators/Unary_plus", "+")}}
@@ -241,7 +241,7 @@ l10n:
 - {{JSxRef("Operators/Greater_than", "&gt;")}} (Больше чем)
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
 - {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("instanceof")}}
 - {{JSxRef("Operators/in", "in")}}
 
 ### Оператоы сравнения
@@ -271,7 +271,7 @@ l10n:
 
 ### Условный (тернарный) оператор
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
 ### Операторы присваивания
 
@@ -304,7 +304,7 @@ l10n:
 
 ### Оператор запятой
 
-- {{JSxRef("Operators/Comma_Operator", ",")}}
+- {{JSxRef("Operators/Comma_operator", ",")}}
 
 ## Функции
 
@@ -322,7 +322,7 @@ l10n:
 
 [JavaScript классы.](/ru/docs/Web/JavaScript/Reference/Classes)
 
-- {{JSxRef("Classes/Constructor", "constructor")}}
+- {{JSxRef("Classes/constructor", "constructor")}}
 - {{JSxRef("Classes/extends", "extends")}}
 - [Особенности приватных классов](/ru/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [Поля открытого класса](/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields)

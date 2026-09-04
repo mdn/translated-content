@@ -1,19 +1,16 @@
 ---
-title: CSSVariableReferenceValue.fallback
+title: "CSSVariableReferenceValue: fallback プロパティ"
+short-title: fallback
 slug: Web/API/CSSVariableReferenceValue/fallback
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
-**`fallback`** は {{domxref("CSSVariableReferenceValue")}} インターフェイスの読み取り専用プロパティで、組み込み CSS 値のカスタム名を返します。
+**`fallback`** は {{domxref("CSSVariableReferenceValue")}} インターフェイスの読み取り専用プロパティで、この {{domxref("CSSVariableReferenceValue")}} の[カスタムプロパティ代替値](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties#カスタムプロパティ代替値)を返します。
 
-## 構文
-
-```
-var variable = CSSVariableReferenceValue.variable;
-```
-
-### 値
+## 値
 
 {{domxref('CSSUnparsedValue')}} です。
 
@@ -21,6 +18,6 @@ var variable = CSSVariableReferenceValue.variable;
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}

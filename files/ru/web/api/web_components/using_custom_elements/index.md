@@ -16,7 +16,7 @@ slug: Web/API/Web_components/Using_custom_elements
 
 Чтобы зарегистрировать пользовательский элемент на странице, используйте метод {{domxref("CustomElementRegistry.define()")}} method. Он принимает аргументы:
 
-- {{domxref("DOMString")}} - имя элемента. Обратите внимание, что в именах пользовательских элементах [должен содержаться дефис](https://stackoverflow.com/questions/22545621/do-custom-elements-require-a-dash-in-their-name); они не могут состоять только из одного слова.
+- {{jsxref("String")}} - имя элемента. Обратите внимание, что в именах пользовательских элементах [должен содержаться дефис](https://stackoverflow.com/questions/22545621/do-custom-elements-require-a-dash-in-their-name); они не могут состоять только из одного слова.
 - Объект типа [class](/ru/docs/Web/JavaScript/Reference/Classes), определяющий поведение элемента.
 - Опционально объект options, имеющий свойство `extends`, соответствующее встроенному элементу, от которого наследует объект.
 

@@ -46,7 +46,7 @@ Les paramètres suivants sont passés à la méthode `apply`. Ici, `this` est li
 - `cible`
   - : L'objet cible.
 - `thisArg`
-  - : L'argument {{jsxref("Opérateurs/L_opérateur_this","this")}} pour cet appel.
+  - : L'argument {{jsxref("this")}} pour cet appel.
 - `listeArguments`
   - : La liste d'arguments pour l'appel.
 
@@ -99,7 +99,7 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Function.prototype.apply")}}
 - {{jsxref("Function.prototype.call")}}
 - {{jsxref("Reflect.apply()")}}

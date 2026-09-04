@@ -20,7 +20,7 @@ l10n:
 ## インスタンスプロパティ
 
 - {{domxref("IDBIndex.isAutoLocale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }} {{Experimental_Inline}}
-  - : インデックスの作成時に `locale` の値が `auto` に設定されたかを表す {{jsxref("boolean")}} 値を返します。([`createIndex()`](/ja/docs/Web/API/IDBObjectStore/createIndex) の引数 [`options`](/ja/docs/Web/API/IDBObjectStore/createIndex#options) を参照してください)
+  - : インデックスの作成時に `locale` の値が `auto` に設定されたかを表す {{jsxref("Boolean")}} 値を返します。([`createIndex()`](/ja/docs/Web/API/IDBObjectStore/createIndex) の引数 [`options`](/ja/docs/Web/API/IDBObjectStore/createIndex#options) を参照してください)
 - {{domxref("IDBIndex.locale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }} {{Experimental_Inline}}
   - : 作成時に `locale` の値が指定されていれば、インデックスのロケール (たとえば `en-US` や `pl`) を返します。([`createIndex()`](/ja/docs/Web/API/IDBObjectStore/createIndex) の引数 [`options`](/ja/docs/Web/API/IDBObjectStore/createIndex#options) を参照してください)
 - {{domxref("IDBIndex.name")}}

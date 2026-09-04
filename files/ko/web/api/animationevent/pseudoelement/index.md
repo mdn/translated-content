@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("Web Animations")}}
 
-**`AnimationEvent.pseudoElement`** 읽기 전용 속성은 애니메이션이 재생 중인 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)의 이름을 담은, `'::'`으로 시작하는 문자열입니다. 애니메이션이 일반 요소에서 재생 중이라면 빈 문자열(`''`)을 반환합니다.
+**`AnimationEvent.pseudoElement`** 읽기 전용 속성은 애니메이션이 재생 중인 [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)의 이름을 담은, `'::'`으로 시작하는 문자열입니다. 애니메이션이 일반 요소에서 재생 중이라면 빈 문자열(`''`)을 반환합니다.
 
 ## 값
 
-애니메이션이 재생 중인 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)의 이름을 담은, `'::'`으로 시작하는 문자열입니다. 애니메이션이 일반 요소에서 재생 중이라면 빈 문자열(`''`)을 반환합니다.
+애니메이션이 재생 중인 [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)의 이름을 담은, `'::'`으로 시작하는 문자열입니다. 애니메이션이 일반 요소에서 재생 중이라면 빈 문자열(`''`)을 반환합니다.
 
 ## 명세서
 
@@ -24,7 +24,7 @@ l10n:
 
 ## 같이 보기
 
-- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/Guides/Animations/Using)
 - 애니메이션 관련 CSS 속성과 @규칙: {{cssxref("animation")}},
   {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
   {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},

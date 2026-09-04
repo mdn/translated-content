@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/break
 
 {{jsSidebar("Statements")}}
 
-L'instruction **`break`** permet de terminer la boucle en cours ou l'instruction {{jsxref("Instructions/switch", "switch")}} ou {{jsxref("Instructions/label", "label")}} en cours et de passer le contrôle du programme à l'instruction suivant l'instruction terminée.
+L'instruction **`break`** permet de terminer la boucle en cours ou l'instruction {{jsxref("Statements/switch", "switch")}} ou {{jsxref("Statements/label", "label")}} en cours et de passer le contrôle du programme à l'instruction suivant l'instruction terminée.
 
 {{InteractiveExample("JavaScript Demo: Statement - Break")}}
 
@@ -30,19 +30,19 @@ break [label];
 ```
 
 - `label` {{optional_inline}}
-  - : Un identifiant optionnel associé avec l'étiquette (_label_) de l'instruction. Si l'instruction à terminer n'est pas une boucle ou une instruction {{jsxref("Instructions/switch", "switch")}}, ce paramètre est nécessaire.
+  - : Un identifiant optionnel associé avec l'étiquette (_label_) de l'instruction. Si l'instruction à terminer n'est pas une boucle ou une instruction {{jsxref("Statements/switch", "switch")}}, ce paramètre est nécessaire.
 
 ## Description
 
-L'instruction `break` peut être utilisée avec une étiquette (_label_) optionnelle qui permet d'interrompre une instruction étiquetée. L'instruction `break` doit être imbriquée au sein de l'instruction référencée. L'instruction étiquetée peut correspondre à n'importe quel instruction de {{jsxref("Instructions/bloc", "bloc","",1)}} ; il n'est pas nécessaire qu'elle soit précédée par une instruction de boucle.
+L'instruction `break` peut être utilisée avec une étiquette (_label_) optionnelle qui permet d'interrompre une instruction étiquetée. L'instruction `break` doit être imbriquée au sein de l'instruction référencée. L'instruction étiquetée peut correspondre à n'importe quel instruction de {{jsxref("Statements/block", "bloc","",1)}} ; il n'est pas nécessaire qu'elle soit précédée par une instruction de boucle.
 
-Une instruction `break`, suivie ou non d'une étiquette, ne peut pas être utilisée dans le corps d'une fonction appartenant elle-même à une boucle, à une instruction {{jsxref("Instructions/switch")}} ou à une instruction `label`.
+Une instruction `break`, suivie ou non d'une étiquette, ne peut pas être utilisée dans le corps d'une fonction appartenant elle-même à une boucle, à une instruction {{jsxref("Statements/switch")}} ou à une instruction `label`.
 
 ## Exemples
 
 ### Exemple simple utilisant `break`
 
-La fonction qui suit utilise une instruction `break` qui interrompt la boucle {{jsxref("Instructions/while", "while")}} lorsque `i` vaut 3, grâce à l'instruction qui suit, la fonction renvoie 3 \* `x`.
+La fonction qui suit utilise une instruction `break` qui interrompt la boucle {{jsxref("Statements/while", "while")}} lorsque `i` vaut 3, grâce à l'instruction qui suit, la fonction renvoie 3 \* `x`.
 
 ```js
 function testBreak(x) {
@@ -129,6 +129,6 @@ bloc_1: {
 
 ## Voir aussi
 
-- {{jsxref("Instructions/continue", "continue")}}
-- {{jsxref("Instructions/label", "label")}}
-- {{jsxref("Instructions/switch", "switch")}}
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/label", "label")}}
+- {{jsxref("Statements/switch", "switch")}}

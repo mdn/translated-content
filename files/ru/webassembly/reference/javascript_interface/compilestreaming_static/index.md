@@ -5,7 +5,7 @@ slug: WebAssembly/Reference/JavaScript_interface/compileStreaming_static
 
 {{WebAssemblySidebar}}
 
-Функция **`WebAssembly.compileStreaming()`** компилирует {{jsxref("WebAssembly.Module")}} непосредственно из потокового исходника. Эта функция полезна, если необходимо скомпилировать модуль до того, как его можно создать (в противном случае следует использовать функцию {{jsxref("WebAssembly.instantiateStreaming()")}}.
+Функция **`WebAssembly.compileStreaming()`** компилирует [`WebAssembly.Module`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Module) непосредственно из потокового исходника. Эта функция полезна, если необходимо скомпилировать модуль до того, как его можно создать (в противном случае следует использовать функцию [`WebAssembly.instantiateStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming).
 
 ## Синтаксис
 
@@ -20,16 +20,16 @@ Promise<WebAssembly.Module> WebAssembly.compileStreaming(source);
 
 ### Возвращаемое значение
 
-Промис (`Promise`), который разрешает объект {{jsxref("WebAssembly.Module")}}, представляющий скомпилированный модуль.
+Промис (`Promise`), который разрешает объект [`WebAssembly.Module`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Module), представляющий скомпилированный модуль.
 
 ### Исключения
 
 - Если `bufferSource` не является [typed array](/ru/docs/Web/JavaScript/Guide/Typed_arrays), генерируется {{jsxref("TypeError")}}.
-- Если компиляция не удалась, промис отклоняется с помощью {{jsxref("WebAssembly.CompileError")}}.
+- Если компиляция не удалась, промис отклоняется с помощью [`WebAssembly.CompileError`](/ru/docs/WebAssembly/Reference/JavaScript_interface/CompileError).
 
 ## Примеры
 
-Следующий пример (см. Нашу демонстрацию [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html) на GitHub и [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)) напрямую передаёт модуль .wasm из исходника, затем компилирует его в объект {{jsxref("WebAssembly.Module")}}.
+Следующий пример (см. Нашу демонстрацию [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html) на GitHub и [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)) напрямую передаёт модуль .wasm из исходника, затем компилирует его в объект [`WebAssembly.Module`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Module).
 Поскольку функция `compileStreaming()` принимает промис для объекта {{domxref("Response")}}, вы можете напрямую передать ему вызов {{domxref("fetch()")}}, и он передаст ответ в выполняемую функцию.
 
 ```js
@@ -40,7 +40,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm"))
   .then((instance) => instance.exports.exported_func());
 ```
 
-Затем создаётся полученный экземпляр модуля с помощью {{jsxref("WebAssembly.instantiate()")}} и вызывается экспортированная функция.
+Затем создаётся полученный экземпляр модуля с помощью [`WebAssembly.instantiate()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate) и вызывается экспортированная функция.
 
 ## Характеристики
 

@@ -1,21 +1,26 @@
 ---
 title: WeakSet() コンストラクター
+short-title: WeakSet()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`WeakSet`** コンストラクターで、 `WeakSet` オブジェクトを生成し、これに弱い参照で*オブジェクト*をコレクションで保持することができます。
+**`WeakSet()`** コンストラクターは {{jsxref("WeakSet")}} オブジェクトを作成します。
 
 ## 構文
 
+```js-nolint
+new WeakSet()
+new WeakSet(iterable)
 ```
-new WeakSet([iterable]);
-```
+
+> [!NOTE]
+> `WeakSet()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きでのみ構築できます。`new` なしで呼び出そうとすると、 {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
-- _iterable_
+- `iterable` {{optional_inline}}
   - : [反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Statements/for...of)が渡された場合、すべての要素が新しい `WeakSet` に追加されます。 null は undefined として扱われます。
 
 ## 例
@@ -23,9 +28,9 @@ new WeakSet([iterable]);
 ### WeakSet オブジェクトの使用
 
 ```js
-var ws = new WeakSet();
-var foo = {};
-var bar = {};
+const ws = new WeakSet();
+const foo = {};
+const bar = {};
 
 ws.add(foo);
 ws.add(bar);
@@ -50,4 +55,5 @@ ws.has(bar); // true, bar は残っている
 
 ## 関連情報
 
+- [`WeakSet` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#weakset)
 - {{jsxref("WeakSet")}}

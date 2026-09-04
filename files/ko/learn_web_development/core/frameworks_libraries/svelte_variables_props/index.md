@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Svelte_components", "Learn_web_development/Core/Frameworks_libraries")}}
 
 이제 마크업과 스타일이 준비되었으므로 Svelte 할 일 목록 앱에 필요한 기능 개발을 시작할 수 있습니다. 이 문서에서는 변수와 props를 사용한 동적인 앱을 만들어 할 일을 추가 및 삭제하고, 완료로 표시하거나 상태별로 필터링할 수 있습니다.
 
@@ -18,9 +18,9 @@ l10n:
       <td>
         <p>
           적어도
-          <a href="/ko/docs/Learn/HTML">HTML</a>,
-          <a href="/ko/docs/Learn/CSS">CSS</a>, and
-          <a href="/ko/docs/Learn/JavaScript">JavaScript</a>
+          <a href="/ko/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>, and
+          <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a>
           언어의 사용에 익숙하기를 권장합니다. 그리고
           <a
             href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
@@ -495,4 +495,4 @@ REPL에서 코드의 현재 상태를 보려면 다음에 방문하십시오.
 
 우리는 사용자가 할 일을 편집할 수 있는 기능을 더 추가할 것입니다.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Svelte_components", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -3,7 +3,7 @@ title: "Animation: ready プロパティ"
 short-title: ready
 slug: Web/API/Animation/ready
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: ec1006afdf68a5808a48ab6301f9ccff3cd7ecc2
 ---
 
 {{ APIRef("Web Animations") }}

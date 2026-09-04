@@ -1,15 +1,14 @@
 ---
-title: BroadcastChannel.name
+title: "BroadcastChannel: name プロパティ"
+short-title: name
 slug: Web/API/BroadcastChannel/name
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: 50a45d52fd9f45f1ca30b546af5920d0ccda82dc
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{APIRef("BroadCastChannel API")}} {{AvailableInWorkers}}
 
-**`BroadcastChannel.name`** は読み取り専用のプロパティで、指定されたチャンネルをその名前で一意に識別する文字列を返します。 この名前は作成時に {{domxref("BroadcastChannel.BroadCastChannel", "BroadcastChannel()")}} コンストラクターに渡されるため、読み取り専用です。
-
-{{AvailableInWorkers}}
+**`name`** は {{domxref("BroadcastChannel")}} インターフェイスの読み取り専用のプロパティで、指定されたチャンネルをその名前で一意に識別する文字列を返します。 この名前は作成時に {{domxref("BroadcastChannel.BroadCastChannel", "BroadcastChannel()")}} コンストラクターに渡されるため、読み取り専用です。
 
 ## 値
 

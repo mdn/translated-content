@@ -15,7 +15,7 @@ Este cabeçalho é obrigatório se a requisição tem um cabeçalho {{HTTPHeader
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

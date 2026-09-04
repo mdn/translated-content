@@ -149,7 +149,7 @@ updatePixelRatio();
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS の `resolution` メディア特性](/ja/docs/Web/CSS/@media/resolution)
+- [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
+- [CSS の `resolution` メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution)
 - {{cssxref("image-resolution")}} プロパティ

@@ -20,7 +20,7 @@ slug: Web/API/Node
 从其父类型 _{{DOMxRef("EventTarget")}}_\[1] 继承属性。
 
 - {{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}
-  - : 返回一个表示 base URL 的{{DOMxRef("DOMString")}}。不同语言中的 base URL 的概念都不一样。在 HTML 中，base URL 表示协议和域名，以及一直到最后一个'/'之前的文件目录。
+  - : 返回一个表示 base URL 的{{jsxref("String")}}。不同语言中的 base URL 的概念都不一样。在 HTML 中，base URL 表示协议和域名，以及一直到最后一个'/'之前的文件目录。
 - {{DOMxRef("Node.baseURIObject")}} {{Non-standard_inline}}
   - : (不适用于网页内容) 只读的 `nsIURI` 对象表示元素的 base URI.
 - {{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}
@@ -34,7 +34,7 @@ slug: Web/API/Node
 - {{DOMxRef("Node.nextSibling")}} {{ReadonlyInline}}
   - : 返回与该节点同级的下一个节点 {{DOMxRef("Node")}}，如果没有返回`null`。
 - {{DOMxRef("Node.nodeName")}} {{ReadonlyInline}}
-  - : 返回一个包含该节点名字的{{DOMxRef("DOMString")}}。节点的名字的结构和节点类型不同。比如{{DOMxRef("HTMLElement")}}的名字跟它所关联的标签对应，就比如{{DOMxRef("HTMLAudioElement")}}的就是 `'audio'` ，{{DOMxRef("Text")}}节点对应的是 `'#text'` 还有{{DOMxRef("Document")}}节点对应的是 `'#document'`。
+  - : 返回一个包含该节点名字的{{jsxref("String")}}。节点的名字的结构和节点类型不同。比如{{DOMxRef("HTMLElement")}}的名字跟它所关联的标签对应，就比如{{DOMxRef("HTMLAudioElement")}}的就是 `'audio'` ，{{DOMxRef("Text")}}节点对应的是 `'#text'` 还有{{DOMxRef("Document")}}节点对应的是 `'#document'`。
 - {{DOMxRef("Node.nodeType")}}{{ReadonlyInline}}
   - : 返回一个与该节点类型对应的`无符号短整型`的值，可能的值如下：
 
@@ -69,7 +69,7 @@ slug: Web/API/Node
 ### 废弃的属性
 
 - {{DOMxRef("Node.localName")}} {{Deprecated_Inline}}{{readonlyInline}}
-  - : 返回一个表示元素名称的本土化表示方法的 {{DOMxRef("DOMString")}} 。
+  - : 返回一个表示元素名称的本土化表示方法的 {{jsxref("String")}} 。
 
     > [!NOTE]
     > 在 Firefox 3.5 以及更早的版本中，HTML 元素的 localName 属性的返回值都是大写的（XHTML 例外）。在后续版本中，这种情况就不存在了。无论是 HTML 还是 XHTML 中，均返回小写的 localName。
@@ -83,7 +83,7 @@ slug: Web/API/Node
 - {{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Deprecated_Inline}}
   - : 返回节点优先级 `nsIPrincipal` 。
 - {{DOMxRef("Node.prefix")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
-  - : 返回一个节点命名空间的前缀 {{DOMxRef("DOMString")}} , 当前缀不存在时返回 `null` 。
+  - : 返回一个节点命名空间的前缀 {{jsxref("String")}} , 当前缀不存在时返回 `null` 。
 - {{DOMxRef("Node.rootNode")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
   - : 返回一个 DOM 树中顶层节点的 {{DOMxRef("Node")}} 对象，如果顶层节点不 DOM 树中，则返回当前节点。该属性已被 {{DOMxRef("Node.getRootNode()")}} 方法所代替。
 
@@ -113,7 +113,7 @@ slug: Web/API/Node
 - {{DOMxRef("Node.isSameNode()")}}
   - : 返回一个 {{jsxref("Boolean")}} 类型值。返回这两个节点的引用比较结果。
 - {{DOMxRef("Node.lookupPrefix()")}}
-  - : 返回包含参数 URI 所对应的命名空间前缀的 {{DOMxRef("DOMString")}}，若不存在则返回 null。如果存在多个可匹配的前缀，则返回结果和浏览器具体实现有关。
+  - : 返回包含参数 URI 所对应的命名空间前缀的 {{jsxref("String")}}，若不存在则返回 null。如果存在多个可匹配的前缀，则返回结果和浏览器具体实现有关。
 - {{DOMxRef("Node.lookupNamespaceURI()")}}
   - : 接受一个前缀，并返回前缀所对应节点命名空间 URI。如果 URI 不存在则返回 null。传入 null 作为 prefix 参数将返回默认命名空间。
 - {{DOMxRef("Node.normalize()")}}

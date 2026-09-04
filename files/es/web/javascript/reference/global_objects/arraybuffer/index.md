@@ -18,7 +18,7 @@ El constructor [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/
 
 ## Propiedades estáticas
 
-- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
+- {{jsxref("ArrayBuffer/Symbol.species", "get ArrayBuffer[@@species]")}}
   - : La función constructora que se usa para crear objetos derivados.
 
 ## Métodos estáticos

@@ -22,7 +22,7 @@ _Herda propriedades de seus parentes {{domxref("Node")}}, e seu próprio parente
 - {{ domxref("Element.classList") }} {{readOnlyInline}}
   - : Retorna um {{ domxref("DOMTokenList") }} contendo a lista de atributos de classe.
 - {{ domxref("Element.className") }}
-  - : É um {{domxref("DOMString")}} representando a classe do elemento.
+  - : É um {{jsxref("String")}} representando a classe do elemento.
 - {{ domxref("Element.clientHeight") }} {{experimental_inline}} {{readOnlyInline}}
   - : Retorna um {{jsxref("Number")}} representando a altura interna do elemento.
 - {{ domxref("Element.clientLeft") }} {{experimental_inline}} {{readOnlyInline}}
@@ -34,15 +34,15 @@ _Herda propriedades de seus parentes {{domxref("Node")}}, e seu próprio parente
 - {{ domxref("ParentNode.firstElementChild") }}
   - : É um {{ domxref("Element") }}, o primeiro elemento filho direto de um elemento, ou `null` se o elemento não tem elementos filho.
 - {{ domxref("Element.id") }}
-  - : É um {{domxref("DOMString")}} representando o id do elemento.
+  - : É um {{jsxref("String")}} representando o id do elemento.
 - {{ domxref("Element.innerHTML") }} {{experimental_inline}}
-  - : É um {{domxref("DOMString")}} representando a marcação do conteúdo do elemento.
+  - : É um {{jsxref("String")}} representando a marcação do conteúdo do elemento.
 - {{ domxref("ParentNode.lastElementChild") }}
   - : É um {{ domxref("Element") }}, o último elemento filho direto de um elemento, ou `null` se o elemento não tem elementos filho.
 - {{ domxref("NonDocumentTypeChildNode.nextElementSibling") }}
   - : É um {{ domxref("Element") }}, o elemento seguido imediatamente do dito na árvore, ou `null` se não há nó irmão.
 - {{ domxref("Element.outerHTML") }} {{experimental_inline}}
-  - : É um {{domxref("DOMString")}} representando a marcação do elemento incluindo seu conteúdo. Quando usado como um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set), substitui o elemento com nós analisados a partir de uma determinada [string](/pt-BR/docs/Glossary/String).
+  - : É um {{jsxref("String")}} representando a marcação do elemento incluindo seu conteúdo. Quando usado como um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set), substitui o elemento com nós analisados a partir de uma determinada [string](/pt-BR/docs/Glossary/String).
 - {{ domxref("NonDocumentTypeChildNode.previousElementSibling") }}
   - : É um {{ domxref("Element") }}, o elemento precedido imediatamente do dito na árvore, ou `nulo` se não há elemento irmão.
 - {{ domxref("Element.scrollHeight") }} {{experimental_inline}} {{readOnlyInline}}

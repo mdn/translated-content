@@ -1,12 +1,9 @@
 ---
 title: <mn>
 slug: Web/MathML/Reference/Element/mn
-original_slug: Web/MathML/Element/mn
 l10n:
-  sourceCommit: 0fb5d5d5579d459f58ab52d0e6e94fc4634a9fe0
+  sourceCommit: c263f06fa14ed56153e345006bb459c9df014b98
 ---
-
-{{MathMLRef}}
 
 **`<mn>`** は [MathML](/ja/docs/Web/MathML) の要素で、通常は区切り記号（ピリオドかカンマ）をもつ可能性がある数字列である、**数値**リテラルを表します。ただし、 "eleven" のように、実際には数値である任意のテキストを保持することも可能です。
 
@@ -39,6 +36,19 @@ l10n:
 ```
 
 {{ EmbedLiveSample('mi_example', 700, 200, "", "") }}
+
+## 技術的概要
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles">暗黙の ARIA ロール</a>
+    </th>
+    <td>
+      なし
+    </td>
+  </tr>
+</table>
 
 ## 仕様書
 

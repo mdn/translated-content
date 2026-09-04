@@ -1,13 +1,14 @@
 ---
-title: FileSystemFileHandle.getFile()
+title: "FileSystemFileHandle: getFile() メソッド"
+short-title: getFile()
 slug: Web/API/FileSystemFileHandle/getFile
 l10n:
-  sourceCommit: c88a329069328522a5c20c054f9dbced9967dbd4
+  sourceCommit: e97f7ef524c21300c65b5089139de89a42bd79e2
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-{{domxref("FileSystemFileHandle")}} インターフェイスの **`getFile()`** メソッドは、ハンドルが表すエントリーのディスク上の状態を表す {{domxref('File')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
+**`getFile()`** は {{domxref("FileSystemFileHandle")}} インターフェイスのメソッドで、ハンドルが表す項目のディスク上の状態を表す {{domxref('File')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
 
 このメソッドが呼び出されたあと、ディスク上のファイルが変更されたり削除されたりすると、返された {{domxref('File')}} オブジェクトはおそらく読み込めなくなるでしょう。
 
@@ -19,16 +20,18 @@ getFile()
 
 ### 引数
 
-なし
+なし。
 
 ### 返値
 
 {{domxref('File')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
 
-### 例
+### 例外
 
-- NotAllowedError
-  - : 読み込みモードの {{domxref('PermissionStatus.state')}} が `granted` でないとき投げられます。
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : `read` モードの {{domxref('PermissionStatus.state')}} が `granted` でないとき発生します。
+- `NotFoundError` {{domxref("DOMException")}}
+  - : ファイルが見つからない場合に発生します。
 
 ## 例
 
@@ -37,7 +40,7 @@ getFile()
 ```js
 async function getTheFile() {
   // ファイルピッカーを開く
-  [fileHandle] = await window.showOpenFilePicker(pickerOpts);
+  const [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
   // ファイルの中身を取得する
   const fileData = await fileHandle.getFile();
@@ -54,5 +57,5 @@ async function getTheFile() {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

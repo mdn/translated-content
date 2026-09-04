@@ -241,7 +241,7 @@ console.log(contacts.size); // 1
 
 ## propriedades estáticas
 
-- {{jsxref("Map.@@species", "get Map[@@species]")}}
+- {{jsxref("Map/Symbol.species", "get Map[@@species]")}}
   - : A função do construtor que é usada para criar apartir de objetos.
 
 ## propriedades da instância
@@ -265,7 +265,7 @@ console.log(contacts.size); // 1
 
 ### Métodos iterativos
 
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Map/Symbol.iterator", "Map.prototype[@@iterator]()")}}
   - : Retorna um novo objeto iterador que contèm **um array de `[chave, valor]`** para cada elemento do objeto `Map` na ordem em que foram inseridos.
 - {{jsxref("Map.prototype.keys()")}}
   - : Retorna um novo objeto iterador que contèm as **chaves** de cada elemento do objeto `Map` na ordem em que foram inseridos.

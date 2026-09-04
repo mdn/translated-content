@@ -17,15 +17,15 @@ obj.toLocaleString();
 
 ## Описание
 
-Метод `toLocaleString` объекта {{jsxref("Global_Objects/Object", "Object")}} возвращает результат вызова метода {{jsxref("Object.toString", "toString()")}}.
+Метод `toLocaleString` объекта {{jsxref("Object")}} возвращает результат вызова метода {{jsxref("Object.toString", "toString()")}}.
 
 Эта функция обеспечивает объектам обобщённый метод `toLocaleString`, хотя и не все объекты могут её использовать. Смотрите ниже список таких объектов.
 
 ### Объекты, переопределяющие `toLocaleString`
 
-- {{jsxref("Global_Objects/Array", "Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}
-- {{jsxref("Global_Objects/Number", "Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Global_Objects/Date", "Date")}}: {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}
+- {{jsxref("Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}
+- {{jsxref("Date")}}: {{jsxref("Date.prototype.toLocaleString()")}}
 
 ## Спецификации
 

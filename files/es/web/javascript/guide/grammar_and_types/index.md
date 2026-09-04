@@ -24,7 +24,7 @@ En JavaScript, las instrucciones se denominan {{Glossary("Statement", "declaraci
 No es necesario un punto y coma después de una declaración si está escrita en su propia línea. Pero si se deseas más de una declaración en una línea, entonces _debes_ separarlas con punto y coma.
 
 > [!NOTE]
-> ECMAScript también tiene reglas para la inserción automática del punto y coma —{{JSxRef("Gramatica_lexica", "IAPC", "#Insercion_automatica_de_punto_y_coma")}}— (_ASI_ en inglés, por sus siglas «_Automatic Semicolon Insertion_») al final de las declaraciones. (Para obtener más información, consulta la referencia detallada sobre la {{JSxRef("Gramatica_lexica", "gramática léxica")}} de JavaScript).
+> ECMAScript también tiene reglas para la inserción automática del punto y coma —{{JSxRef("Lexical_grammar", "IAPC", "#Insercion_automatica_de_punto_y_coma")}}— (_ASI_ en inglés, por sus siglas «_Automatic Semicolon Insertion_») al final de las declaraciones. (Para obtener más información, consulta la referencia detallada sobre la {{JSxRef("Lexical_grammar", "gramática léxica")}} de JavaScript).
 
 Sin embargo, se considera una buena práctica escribir siempre un punto y coma después de una declaración, incluso cuando no sea estrictamente necesario. Esta práctica reduce las posibilidades de que se introduzcan errores en el código.
 
@@ -47,17 +47,17 @@ La sintaxis de los **comentarios** es la misma que en C++ y en muchos otros leng
 Los comentarios se comportan como espacios en blanco y se descartan durante la ejecución del script.
 
 > [!NOTE]
-> También puedes ver un tercer tipo de sintaxis de comentario al comienzo de algunos archivos JavaScript, que se parece a esto: `#!/usr/bin/env node`.Esto se denomina sintaxis de **comentario hashbang** y es un comentario especial que se utiliza para especificar la ruta a un motor JavaScript en particular que debe ejecutar el script. Consulta {{JSxRef("Gramatica_lexica", "Comentarios Hashbang", "#Comentarios_hashbang")}} para obtener más detalles.
+> También puedes ver un tercer tipo de sintaxis de comentario al comienzo de algunos archivos JavaScript, que se parece a esto: `#!/usr/bin/env node`.Esto se denomina sintaxis de **comentario hashbang** y es un comentario especial que se utiliza para especificar la ruta a un motor JavaScript en particular que debe ejecutar el script. Consulta {{JSxRef("Lexical_grammar", "Comentarios Hashbang", "#Comentarios_hashbang")}} para obtener más detalles.
 
 ## Declaraciones
 
 JavaScript tiene tres tipos de declaraciones de variables.
 
-- {{JSxRef("Sentencias/var", "var")}}
+- {{JSxRef("Statements/var", "var")}}
   - : Declara una variable, opcionalmente la inicia a un valor.
-- {{JSxRef("Sentencias/let", "let")}}
+- {{JSxRef("Statements/let", "let")}}
   - : Declara una variable local con ámbito de bloque, opcionalmente la inicia a un valor.
-- {{JSxRef("Sentencias/const", "const")}}
+- {{JSxRef("Statements/const", "const")}}
   - : Declara un nombre de constante de solo lectura y ámbito de bloque.
 
 ### Variables
@@ -68,7 +68,7 @@ Un identificador de JavaScript debe comenzar con una letra, un guión bajo (`_`)
 
 Dado que JavaScript distingue entre mayúsculas y minúsculas, las letras incluyen los caracteres "`A`" a "`Z`" (mayúsculas), así como "`a`" a "z" (minúsculas).
 
-Puedes utilizar la mayoría de las letras ISO 8859-1 o Unicode como `å` y `ü` en los identificadores. (Para obtener más detalles, consulta [esta publicación del blog](https://mathiasbynens.be/notes/javascript-identifiers-es6)). También puedes usar {{JSxRef("Gramatica_lexica", "Secuencias de escape Unicode", "#Cadenas_literales")}} como caracteres en identificadores.
+Puedes utilizar la mayoría de las letras ISO 8859-1 o Unicode como `å` y `ü` en los identificadores. (Para obtener más detalles, consulta [esta publicación del blog](https://mathiasbynens.be/notes/javascript-identifiers-es6)). También puedes usar {{JSxRef("Lexical_grammar", "Secuencias de escape Unicode", "#Cadenas_literales")}} como caracteres en identificadores.
 
 Algunos ejemplos de nombres legales son `Number_hits`, `temp99`, `$credit` y `_name`.
 
@@ -76,10 +76,10 @@ Algunos ejemplos de nombres legales son `Number_hits`, `temp99`, `$credit` y `_n
 
 Puedes declarar una variable de dos formas:
 
-- Con la palabra clave {{JSxRef("Sentencias/var", "var")}}. Por ejemplo, `var x = 42`. Esta sintaxis se puede utilizar para declarar variables **locales** y **globales**, dependiendo del _contexto de ejecución_.
-- Con la palabra clave {{JSxRef("Sentencias/const", "const")}} o {{JSxRef("Sentencias/let", "let")}}. Por ejemplo, `let y = 13`. Esta sintaxis se puede utilizar para declarar una variable local con ámbito de bloque. (Ve el [Ámbito de variables](#ambito_de_variables) abajo.)
+- Con la palabra clave {{JSxRef("Statements/var", "var")}}. Por ejemplo, `var x = 42`. Esta sintaxis se puede utilizar para declarar variables **locales** y **globales**, dependiendo del _contexto de ejecución_.
+- Con la palabra clave {{JSxRef("Statements/const", "const")}} o {{JSxRef("Statements/let", "let")}}. Por ejemplo, `let y = 13`. Esta sintaxis se puede utilizar para declarar una variable local con ámbito de bloque. (Ve el [Ámbito de variables](#ambito_de_variables) abajo.)
 
-También puedes simplemente asignar un valor a una variable. Por ejemplo, `x = 42`. Este formulario crea una variable {{JSxRef("Sentencias/var", "global no declarada", "#Descripción")}}. También genera una advertencia estricta de JavaScript. Las variables globales no declaradas a menudo pueden provocar un comportamiento inesperado. Por lo tanto, se desaconseja utilizar variables globales no declaradas.
+También puedes simplemente asignar un valor a una variable. Por ejemplo, `x = 42`. Este formulario crea una variable {{JSxRef("Statements/var", "global no declarada", "#Descripción")}}. También genera una advertencia estricta de JavaScript. Las variables globales no declaradas a menudo pueden provocar un comportamiento inesperado. Por lo tanto, se desaconseja utilizar variables globales no declaradas.
 
 ### Evaluar variables
 
@@ -104,7 +104,7 @@ console.log("El valor de y es " + y); // Error de referencia no detectada: y no 
 let y;
 ```
 
-Puedes usar `undefined` para determinar si una variable tiene un valor. En el siguiente código, a la variable `input` no se le asigna un valor y la declaración {{JSxRef("Sentencias/if...else", "if")}} evalúa a `true`.
+Puedes usar `undefined` para determinar si una variable tiene un valor. En el siguiente código, a la variable `input` no se le asigna un valor y la declaración {{JSxRef("Statements/if...else", "if")}} evalúa a `true`.
 
 ```js
 var input;
@@ -140,7 +140,7 @@ console.log(n * 32); // Registrará 0 en la consola
 
 Cuando declaras una variable fuera de cualquier función, se denomina variable _global_, porque está disponible para cualquier otro código en el documento actual. Cuando declaras una variable dentro de una función, se llama variable _local_, porque solo está disponible dentro de esa función.
 
-JavaScript anterior a ECMAScript 2015 no tiene el ámbito de la {{jsxref("Guide/Control_de_flujo_y_manejo_de_errores", "declaración de bloque", "#Block_statement", 1)}}. Más bien, una variable declarada dentro de un bloque es local a la _función (o ámbito global)_ en el que reside el bloque.
+JavaScript anterior a ECMAScript 2015 no tiene el ámbito de la [declaración de bloque](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement). Más bien, una variable declarada dentro de un bloque es local a la _función (o ámbito global)_ en el que reside el bloque.
 
 Por ejemplo, el siguiente código registrará `5`, porque el ámbito de `x` es el contexto global (o el contexto de la función si el código es parte de una función). El ámbito de `x` no se limita al bloque de instrucciones `if` inmediato.
 
@@ -248,7 +248,7 @@ En consecuencia, puedes acceder a las variables globales declaradas en una «ven
 
 ### Constantes
 
-Puedes crear una constante de solo lectura con nombre con la palabra clave {{JSxRef("Sentencias/const", "const")}}.
+Puedes crear una constante de solo lectura con nombre con la palabra clave {{JSxRef("Statements/const", "const")}}.
 
 La sintaxis de un identificador de constante es la misma que la de cualquier identificador de variable: debe comenzar con una letra, un subrayado o un signo de dólar (`$`) y puede contener caracteres alfabéticos, numéricos o de subrayado.
 
@@ -348,8 +348,8 @@ Con todos los demás operadores, JavaScript _no_ convierte valores numéricos en
 
 En el caso que un valor representando un número está en memoria como texto, hay métodos para la conversión.
 
-- {{JSxRef("parseInt", "parseInt()")}}
-- {{JSxRef("parseFloat", "parseFloat()")}}
+- {{JSxRef("parseInt()")}}
+- {{JSxRef("parseFloat()")}}
 
 `parseInt` solo devuelve números enteros, por lo que su uso se reduce para decimales.
 
@@ -391,12 +391,12 @@ let coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
 > [!NOTE]
-> Un arreglo literal es un tipo de _iniciador de objeto_. Consulta {{JSxRef("Guide/Trabajando_con_objectos", "Uso de iniciadores de objetos", "#Uso_de_iniciadores_de_objeto")}}.
+> Un arreglo literal es un tipo de _iniciador de objeto_. Consulta [Uso de iniciadores de objetos](/es/docs/Web/JavaScript/Guide/Working_with_objects#Uso_de_iniciadores_de_objeto).
 
 Si creas un arreglo utilizando un literal en un script de nivel superior, JavaScript interpreta el arreglo cada vez que evalúa la expresión que contiene el arreglo literal. Además, cada vez que llamas a una función se crea un literal usado en ella.
 
 > [!NOTE]
-> Los arreglos literales también son objetos `Array`. Consulta {{JSxRef("Array")}} y {{JSxRef("Guide/colecciones_indexadas", "Colecciones indexadas")}} para obtener detalles sobre los objetos `Array`.
+> Los arreglos literales también son objetos `Array`. Consulta {{JSxRef("Array")}} y [Colecciones indexadas](/es/docs/Web/JavaScript/Guide/Indexed_collections) para obtener detalles sobre los objetos `Array`.
 
 #### Comas adicionales en arreglos literales
 
@@ -464,7 +464,7 @@ Aquí tienes algunos ejemplos de literales numéricos:
 0b11, 0b0011, -0b11, 0b11101001010101010101n  (binario, base 2)
 ```
 
-Para obtener más información, consulta {{JSxRef("Gramatica_lexica", "Literales numéricos en la referencia gramatical léxica", "#Literales_numericos")}}.
+Para obtener más información, consulta {{JSxRef("Lexical_grammar", "Literales numéricos en la referencia gramatical léxica", "#Literales_numericos")}}.
 
 ### Literales de coma flotante
 
@@ -567,7 +567,7 @@ var obj = {
 
 ### Expresiones regulares («RegExp») literales
 
-Un expresión regular literal (que se define en detalle {{JSxRef("Guide/Regular_Expressions", "más adelante")}}) es un patrón incluido entre barras. El siguiente es un ejemplo de una expresión regular literal.
+Un expresión regular literal (que se define en detalle [más adelante](/es/docs/Web/JavaScript/Guide/Regular_expressions)) es un patrón incluido entre barras. El siguiente es un ejemplo de una expresión regular literal.
 
 ```js
 var re = /ab+c/;
@@ -634,24 +634,24 @@ Adicionalmente a los caracteres normales, también puedes incluir caracteres esp
 
 La siguiente tabla enumera los caracteres especiales que se pueden usar en una cadena JavaScript.
 
-| Caracter    | Significado                                                                                                                                                                                                                                              |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `\0`        | Byte nulo                                                                                                                                                                                                                                                |
-| `\b`        | Retroceso                                                                                                                                                                                                                                                |
-| `\f`        | Avance de Página                                                                                                                                                                                                                                         |
-| `\n`        | Nueva Línea                                                                                                                                                                                                                                              |
-| `\r`        | Retorno de carro                                                                                                                                                                                                                                         |
-| `\t`        | Tabulación                                                                                                                                                                                                                                               |
-| `\v`        | Tabulación vertical                                                                                                                                                                                                                                      |
-| `\'`        | Apóstrofo o comilla simple                                                                                                                                                                                                                               |
-| `\"`        | Comilla doble                                                                                                                                                                                                                                            |
-| `\\`        | Caracter de barra invertida                                                                                                                                                                                                                              |
-| `\XXX`      | El caracter con la codificación Latin-1 especificada por hasta tres dígitos octales _XXX_ entre `0` y `377`. Por ejemplo, `\251` es la secuencia octal del símbolo de copyright.                                                                         |
-|             |                                                                                                                                                                                                                                                          |
-| `\xXX`      | El caracter con la codificación Latin-1 especificada por los dos dígitos hexadecimales _XX_ entre `00` y `FF`. Por ejemplo, `\xA9` es la secuencia hexadecimal del símbolo de copyright.                                                                 |
-|             |                                                                                                                                                                                                                                                          |
-| `\uXXXX`    | El caracter Unicode especificado por los cuatro dígitos hexadecimales _XXXX_. Por ejemplo, `\u00A9` es la secuencia Unicode para el símbolo de copyright. Consulta {{JSxRef("Gramatica_lexica", "Secuencias de escape Unicode", "#Cadenas_literales")}}. |
-| `\u{XXXXX}` | El punto de código escape Unicode. Por ejemplo, `\u{2F804}` es el mismo que el escape Unicode simple `\uD87E\uDC04`.                                                                                                                                     |
+| Caracter    | Significado                                                                                                                                                                                                                                             |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `\0`        | Byte nulo                                                                                                                                                                                                                                               |
+| `\b`        | Retroceso                                                                                                                                                                                                                                               |
+| `\f`        | Avance de Página                                                                                                                                                                                                                                        |
+| `\n`        | Nueva Línea                                                                                                                                                                                                                                             |
+| `\r`        | Retorno de carro                                                                                                                                                                                                                                        |
+| `\t`        | Tabulación                                                                                                                                                                                                                                              |
+| `\v`        | Tabulación vertical                                                                                                                                                                                                                                     |
+| `\'`        | Apóstrofo o comilla simple                                                                                                                                                                                                                              |
+| `\"`        | Comilla doble                                                                                                                                                                                                                                           |
+| `\\`        | Caracter de barra invertida                                                                                                                                                                                                                             |
+| `\XXX`      | El caracter con la codificación Latin-1 especificada por hasta tres dígitos octales _XXX_ entre `0` y `377`. Por ejemplo, `\251` es la secuencia octal del símbolo de copyright.                                                                        |
+|             |                                                                                                                                                                                                                                                         |
+| `\xXX`      | El caracter con la codificación Latin-1 especificada por los dos dígitos hexadecimales _XX_ entre `00` y `FF`. Por ejemplo, `\xA9` es la secuencia hexadecimal del símbolo de copyright.                                                                |
+|             |                                                                                                                                                                                                                                                         |
+| `\uXXXX`    | El caracter Unicode especificado por los cuatro dígitos hexadecimales _XXXX_. Por ejemplo, `\u00A9` es la secuencia Unicode para el símbolo de copyright. Consulta {{JSxRef("Lexical_grammar", "Secuencias de escape Unicode", "#Cadenas_literales")}}. |
+| `\u{XXXXX}` | El punto de código escape Unicode. Por ejemplo, `\u{2F804}` es el mismo que el escape Unicode simple `\uD87E\uDC04`.                                                                                                                                    |
 
 #### Escapar caracteres
 
@@ -697,7 +697,7 @@ El azúcar es dulce,\n\
 y foo también.";
 ```
 
-ECMAScript 2015 introduce un nuevo tipo de literal, a saber, {{JSxRef("template_strings", "plantillas literales")}}. Esto permite muchas nuevas funciones, ¡incluidas cadenas multilínea!
+ECMAScript 2015 introduce un nuevo tipo de literal, a saber, {{JSxRef("Template_literals", "plantillas literales")}}. Esto permite muchas nuevas funciones, ¡incluidas cadenas multilínea!
 
 ```js
 var poem = `Las rosas son rojas,
@@ -710,10 +710,10 @@ y foo también.`;
 
 Este capítulo se enfoca en la sintaxis básica para los tipos y las declaraciones. Para aprender mas acerca de las construcciones en el lenguaje JavaScript, ve también los siguientes capítulos en esta guía:
 
-- {{JSxRef("Guide/Control_de_flujo_y_manejo_de_errores", "Control de flujo y manejo de errores")}}
-- {{JSxRef("Guide/Bucles_e_iteracion", "Bucles e iteración")}}
-- {{JSxRef("Guide/Funciones", "Funciones")}}
-- {{JSxRef("Guide/Expressions_and_Operators", "Expresiones y operadores")}}
+- [Control de flujo y manejo de errores](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [Bucles e iteración](/es/docs/Web/JavaScript/Guide/Bucles_e_iteracion)
+- [Funciones](/es/docs/Web/JavaScript/Guide/Functions)
+- [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 En el próximo capítulo, veremos las construcciones de control de flujo y el manejo de errores.
 

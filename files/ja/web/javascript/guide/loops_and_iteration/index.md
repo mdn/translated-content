@@ -2,10 +2,9 @@
 title: ループと反復処理
 slug: Web/JavaScript/Guide/Loops_and_iteration
 l10n:
-  sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
-{{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 ループは、何かを繰り返して行う手軽で簡単な方法を提供します。 [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)の本章では、 JavaScript で利用可能な反復処理を行う数々の反復文を紹介します。
@@ -66,7 +65,7 @@ for (初期化式; 条件式; 加算式)
     >好きな音楽のジャンルをいくつか選び、下のボタンをクリックしてください。</label
   >
   <select id="musicTypes" name="musicTypes" multiple>
-    <option selected>R&B</option>
+    <option selected>R&amp;B</option>
     <option>Jazz</option>
     <option>Blues</option>
     <option>New Age</option>
@@ -102,7 +101,7 @@ btn.addEventListener("click", () => {
 
 ## do...while 文
 
-{{jsxref("statements/do...while", "do...while")}} 文は指定された条件が偽になるまで繰り返します。
+{{jsxref("Statements/do...while", "do...while")}} 文は指定された条件が偽になるまで繰り返します。
 
 `do...while` 文は以下のような形です。
 
@@ -289,7 +288,7 @@ checkIandJ: while (i < 4) {
     console.log(j);
     j -= 1;
     if (j % 2 === 0) {
-      continue checkJ;
+      continue;
     }
     console.log(j, "is odd.");
   }
@@ -337,7 +336,7 @@ car.model = Mustang
 
 ## for...of 文
 
-{{jsxref("Statements/for...of","for...of")}} 文は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)（{{jsxref("Array")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("functions/arguments","arguments")}} オブジェクトなどを含む）を反復処理するループを生成し、それぞれのプロパティの値に対して実行したい文をともなって作られた反復処理フックを呼び出します。
+{{jsxref("Statements/for...of","for...of")}} 文は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)（{{jsxref("Array")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("Functions/arguments","arguments")}} オブジェクトなどを含む）を反復処理するループを生成し、それぞれのプロパティの値に対して実行したい文をともなって作られた反復処理フックを呼び出します。
 
 ```js-nolint
 for (変数 of オブジェクト)

@@ -3,8 +3,6 @@ title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 ---
 
-{{JSRef}}
-
 {{jsxref("Map")}} 实例的 **`clear()`** 方法会移除该 map 中的所有元素。
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.clear()")}}

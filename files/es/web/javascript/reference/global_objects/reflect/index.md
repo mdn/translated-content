@@ -53,4 +53,4 @@ El objeto `Reflect` proporciona las siguientes funciones estáticas con los mism
 ## También ver
 
 - The {{jsxref("Proxy")}} global object.
-- The {{jsxref("Proxy.handler", "handler")}} object.
+- The {{jsxref("Proxy/Proxy", "handler")}} object.

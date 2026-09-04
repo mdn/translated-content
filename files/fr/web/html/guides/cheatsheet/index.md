@@ -2,9 +2,8 @@
 title: Fiche de synthèse HTML pour la syntaxe et les tâches courantes
 short-title: Fiche de synthèse
 slug: Web/HTML/Guides/Cheatsheet
-original_slug: Learn/HTML/Cheatsheet
 l10n:
-  sourceCommit: b9d130d2fcfcc37d57ec3b039ff7c3e7939d2e15
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
 Lorsqu'on utilise {{Glossary("HTML")}}, une antisèche, une page rapide et récapitulative (_cheatsheet_) peut s'avérer plutôt pratique pour se souvenir rapidement de quelle balise HTML utiliser dans quel cas. MDN possède également une [documentation HTML exhaustive](/fr/docs/Web/HTML/Reference/Elements) ainsi que différents [tutoriels HTML détaillés](/fr/docs/Learn_web_development/Core/Structuring_content). Toutefois, dans la plupart des cas, il suffit juste d'une rapide vérification afin de pouvoir continuer. Cet article, sous la forme d'une antisèche synthétique, est là pour fournir des exemples de codes concis pour les usages les plus fréquents des éléments les plus utilisés.
@@ -173,7 +172,7 @@ voir &#x3C;cite>Le monstrueux livre des monstres&#x3C;/cite>.</pre
       <td>Un saut de ligne</td>
       <td>{{HTMLElement("br")}}</td>
       <td id="br-example">
-        <pre class="brush: html">Ligne 1&#x3C;br>Ligne 2</pre>
+        <pre class="brush: html">Ligne 1&#x3C;br />Ligne 2</pre>
         {{EmbedLiveSample("br-example", 100, 80)}}
       </td>
     </tr>
@@ -183,7 +182,7 @@ voir &#x3C;cite>Le monstrueux livre des monstres&#x3C;/cite>.</pre
       <td id="wbr-example">
         <pre class="brush: html">
 &#x3C;div style="width: 200px">
-  Llanfair&#x3C;wbr>pwllgwyngyllgogerychwyrngogogoch.
+  Llanfair&#x3C;wbr />pwllgwyngyll&#x3C;wbr />gogerychwyrngogogoch.
 &#x3C;/div></pre
         >
         {{EmbedLiveSample("wbr-example", 100, 80)}}
@@ -218,7 +217,7 @@ mais &#x3C;code>celui-ci représente du code&#x3C;/code>.</pre
       <td id="audio-example">
         <pre class="brush: html">
 &#x3C;audio controls="controls">
-  &#x3C;source="t-rex-roar.mp3" type="audio/mpeg">
+  &#x3C;source="t-rex-roar.mp3" type="audio/mpeg" />
   Votre navigateur ne prend pas en charge audio.
 &#x3C;/audio></pre
         >
@@ -332,7 +331,7 @@ Ils sont alors dit :
       <td>Un séparateur horizontal</td>
       <td>{{HTMLElement("hr")}}</td>
       <td id="hr-example">
-        <pre class="brush: html">avant&#x3C;hr>après</pre>
+        <pre class="brush: html">avant&#x3C;hr />après</pre>
         {{EmbedLiveSample("hr-example", 100, 100)}}
       </td>
     </tr>

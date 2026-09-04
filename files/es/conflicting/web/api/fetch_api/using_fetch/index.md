@@ -66,6 +66,6 @@ Cuando un nuevo objeto {{domxref("Headers")}} es creado usando el {{domxref("Hea
 
 Un guarda (guard) de encabezado afecta los métodos {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, y {{domxref("Headers.append","append()")}} que cambían los contenidos del encabezado. Un `TypeError` es arrojado si se trata modificar un objeto {{domxref("Headers")}} cuyo guarda (guard) es `immutable`. Sin embargo, la operación funcionará si
 
-- guard es `request` y el nombre del encabezado no es un {{Glossary("forbidden header name")}} .
+- guard es `request` y el nombre del encabezado no es un {{Glossary("Forbidden request header")}} .
 - guard es `request-no-cors` y el encabezado _nombre/valor_ es un {{Glossary("simple header")}} .
 - guard es `response` y el nombre del encabezado no es {{Glossary("forbidden response header name")}}.

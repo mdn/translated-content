@@ -3,7 +3,7 @@ title: Using promises
 slug: Web/JavaScript/Guide/Using_promises
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
 {{jsxref("Promise")}}는 비동기 작업의 최종 완료 또는 실패를 나타내는 객체입니다. 대부분 여러분은 이미 만들어진 promise를 사용했었기 때문에 이 가이드에서는 어떻게 promise를 만드는지 설명하기에 앞서 promise의 사용법에 대해 설명합니다.
 
@@ -261,7 +261,7 @@ wait(10000)
 
 ## Composition
 
-{{jsxref ( "Promise.resolve ()")}}와 {{jsxref ( "Promise.reject ()")}}는 각각 이미 resolve되거나 reject 된 promise를 여러분이 직접 생성하기위한 바로 가기입니다. 가끔 유용하게 사용됩니다.
+{{jsxref("Promise.resolve()")}}와 {{jsxref("Promise.reject()")}}는 각각 이미 resolve되거나 reject 된 promise를 여러분이 직접 생성하기위한 바로 가기입니다. 가끔 유용하게 사용됩니다.
 
 {{jsxref("Promise.all()")}}와 {{jsxref("Promise.race()")}}는 비동기 작업을 병렬로 실행하기위한 두 가지 구성 도구입니다.
 
@@ -410,4 +410,4 @@ doSomething()
 - [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
 - [Nolan Lawson: We have a problem with promises — Common mistakes with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
-{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Iterators_and_generators")}}

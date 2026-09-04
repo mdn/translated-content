@@ -2,7 +2,7 @@
 title: Plantilla de subpágina del constructor de API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
 l10n:
-  sourceCommit: dad6b0e057cd37b4408cdede8b9f568c56df9a82
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 {{MDNSidebar}}
@@ -19,12 +19,12 @@ l10n:
 >
 > ```md
 > ---
-> title: NombreDelConstructor()
-> slug: Web/API/NombreDeLaInterfazPadre/NombreDeLaInterfazPadre
-> page-type: constructor-web-api
+> title: NombreDeLaInterfazPadre: NombreDelConstructor() constructor
+> slug: Web/API/NombreDeLaInterfazPadre/NombreDelConstructor
+> page-type: web-api-constructor
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: ruta.hacia.caracteristica.NombreDelConstructor
 > ---
@@ -32,16 +32,16 @@ l10n:
 >
 > - **title**
 >   - : Título que se muestra en la parte superior de la página.
->     Formato como _NombreDeLaInterfazPadre_**()**.
->     Por ejemplo, el constructor [Request()](/es/docs/Web/API/Request/Request) tiene un _título_ de `Request()`.
+>     Formato como `NombreDeLaInterfazPadre: NombreDelConstructor() constructor`.
+>     Por ejemplo, el constructor [Request()](/es/docs/Web/API/Request/Request) tiene un _título_ de `Request: Request() constructor`.
 > - **slug**
 >   - : El final de la ruta de URL después de `https://developer.mozilla.org/es/docs/`.
->     Esto se formateará como `Web/API/NombreDeLaInterfazPadre/NombreDeLaInterfazPadre`.
->     Tenga en cuenta que el nombre de la función del constructor en el slug omite los paréntesis (termina en `NombreDeLaInterfazPadre` no `NombreDeLaInterfazPadre()`).
+>     Esto se formateará como `Web/API/NombreDeLaInterfazPadre/NombreDelConstructor`.
+>     Tenga en cuenta que el nombre de la función del constructor en el slug omite los paréntesis (termina en `NombreDelConstructor` no `NombreDelConstructor()`).
 > - **page-type**
->   - : La clave `page-type` para los constructores Web/API es siempre `constructor-web-api`.
+>   - : La clave `page-type` para los constructores Web/API es siempre `web-api-constructor`.
 > - **status**
->   - : Incluir claves de estado de tecnología apropiadas: [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (si no está en una pista de estándar).
+>   - : Indicadores que describen el estado de esta característica. Un arreglo que puede contener uno o más de los siguientes: `experimental`, `deprecated`, `non-standard`. Esta clave no debe establecerse manualmente: se asigna automáticamente según los valores en los datos de compatibilidad del navegador. Vea ["Cómo se agregan o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
 >   - : Reemplace el valor de marcador de posición `ruta.hacia.caracteristica.NombreDelConstructor` con la cadena de consulta para el constructor en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
 >     La cadena se utiliza automáticamente para rellenar las secciones de compatibilidad y especificaciones (reemplazando los macros `\{{Compat}}` y `\{{Specifications}}`).
@@ -61,6 +61,10 @@ l10n:
 >   Si es experimental, y la tecnología está oculta detrás de una preferencia en Firefox, también debería completar una entrada para ella en la página [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
 > - `\{{Deprecated_Header}}` — esto genera un banner **Desaprobado** que indica que se desaconseja el uso de la tecnología [desaprobada](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   Si no lo es, entonces puede eliminar la llamada al macro.
+> - `\{{Non-standard_Header}}` — esto genera un banner **No estándar** que indica que la característica no forma parte de ninguna especificación.
+> - `\{{AvailableInWorkers}}` — esto genera una nota **Disponible en workers** que indica que la tecnología está disponible en un [contexto de worker](/es/docs/Web/API/Web_Workers_API).
+>   Si solo está disponible en el contexto de ventana, entonces puede eliminar la llamada al macro.
+>   Si también está disponible o solo está disponible en el contexto de worker, es posible que también deba pasarle un parámetro debido a su disponibilidad (consulte el código fuente de la macro `\{{AvailableInWorkers}}` para ver todos los valores disponibles), y también puede que deba completar una entrada para ella en la página [APIs web disponibles en workers](/es/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#web_apis_available_in_workers).
 > - `\{{SecureContext_Header}}` — esto genera un banner **Contexto seguro** que indica que la tecnología solo está disponible en un [contexto seguro](/es/docs/Web/Security/Secure_Contexts).
 >   Si no lo es, entonces puede eliminar la llamada al macro.
 >   Si lo es, entonces también debería completar una entrada para ella en la página [Funciones restringidas a contextos seguros](/es/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts).
@@ -69,11 +73,13 @@ l10n:
 >   Para generar el menú lateral correcto para su API, debe agregar una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de la entrada dentro de la llamada a la macro en lugar de _GroupDataName_.
 >   Vea nuestra [guía de menús laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar el macro `\{{MDNSidebar}}` cuando copie esta página.
 >
-> Se muestran ejemplos de los banners **Experimental**, **Contexto seguro** y **Desaprobado** justo después de este bloque de notas.
+> No proporcione las macros de encabezado de estado manualmente. Consulte la sección [Cómo se agregan o actualizan los estados de las características](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para agregar estos estados a la página.
+>
+> Se muestran ejemplos de los banners **Contexto seguro**, **Disponible en workers**, **Experimental**, **Desaprobado** y **No estándar** justo después de este bloque de notas.
 >
 > _Recuerde eliminar toda esta nota explicativa antes de publicar._
 
-{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Comience el contenido en la página con un párrafo introductorio — comience nombrando el constructor y diciendo qué hace.
 Idealmente, esto debería ser una o dos frases cortas.

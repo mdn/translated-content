@@ -27,7 +27,7 @@ slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
 
 - {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
 - {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}
+- {{jsxref("Operators/Destructuring", "Destructuring parameters", "", 1)}}
 
 `"use strict"` 지시문은 ECMAScript 동작에 따라 이러한 함수의 맨 위에 허용되지 않습니다.
 
@@ -107,4 +107,4 @@ var callback = (() => {
 - {{jsxref("Operators/function", "function expression", "", 1)}}
 - {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
 - {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}
+- {{jsxref("Operators/Destructuring", "Destructuring parameters", "", 1)}}

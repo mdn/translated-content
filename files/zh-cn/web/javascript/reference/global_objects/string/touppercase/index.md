@@ -3,8 +3,6 @@ title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`toUpperCase()`** 方法将该字符串转换为大写形式。
 
 {{InteractiveExample("JavaScript Demo: String.toUpperCase()", "shorter")}}

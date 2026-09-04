@@ -3,12 +3,12 @@ title: "Window: localStorage プロパティ"
 short-title: localStorage
 slug: Web/API/Window/localStorage
 l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+  sourceCommit: fbe455624f7a57d897260d947580428087a48c09
 ---
 
 {{APIRef("Web Storage API")}}
 
-**`localStorage`** は {{domxref("window")}} プロパティの読み取り専用プロパティで、この {{DOMxRef("Document")}} の {{glossary("origin")}} における {{DOMxRef("Storage")}} オブジェクトにアクセスできます。格納されたデータは、ブラウザーのセッションを跨いで保存されます。
+**`localStorage`** は {{domxref("window")}} インターフェイスの読み取り専用プロパティで、この {{DOMxRef("Document")}} の {{glossary("origin")}} における {{DOMxRef("Storage")}} オブジェクトにアクセスできます。格納されたデータは、ブラウザーのセッションを跨いで保存されます。
 
 `localStorage` は {{DOMxRef("Window.sessionStorage", "sessionStorage")}} によく似ていますが、 `localStorage` のデータには期限がないのに対し、 `sessionStorage` のデータはページセッションが終了したとき、すなわちページが閉じられたときにクリアされます。（「プライベートブラウジング」や「プライバシーモード」のセッションに読み込まれた文書の `localStorage` のデータは、最後の「プライベート」タブが閉じられたときにクリアされます。）
 
@@ -20,14 +20,14 @@ l10n:
 
 - `SecurityError`
   - : 以下のいずれかの場合に発生します。
-    - オリジンが[妥当なスキーム/ホスト名/ポート番号の組み合わせ](/ja/docs/Web/Security/Same-origin_policy#definition_of_an_origin)でない。これは例えば、オリジンが `file:` や `data:` スキームを使うときに起こります。
+    - オリジンが[妥当なスキーム/ホスト名/ポート番号の組み合わせ](/ja/docs/Web/Security/Defenses/Same-origin_policy#オリジンの定義)でない。これは例えば、オリジンが `file:` や `data:` スキームを使うときに起こります。
     - リクエストがポリシーの決定に反している。例えば、ユーザーがブラウザーで特定のオリジンにおいてデータの永続化を拒否している場合です。
 
     なお、ユーザーが Cookie をブロックしている場合、ブラウザーはこれをデータの永続化の拒否と解釈する可能性が高いです。
 
 ## 解説
 
-`localStorage` に保存されるキーと値は*常に* UTF-16 文字列であり、 1 文字あたり 2 バイトを使用します。オブジェクトと同様に、整数のキーは自動的に文字列に変換されます。
+`localStorage` に保存されるキーと値は*常に* {{glossary("UTF-16")}} 文字列形式です。オブジェクトと同様に、整数のキーは自動的に文字列に変換されます。
 
 `localStorage` のデータは**その文書のプロトコルに依存する**ことに注意する必要があります。特に、 `http://example.com` のような HTTP で読み込まれているページにおける `localStorage` は、`https://example.com` のような対応する HTTPS で読み込まれているページにおける `localStorage` とは異なるオブジェクトを返します。
 
@@ -37,7 +37,7 @@ l10n:
 
 ## 例
 
-以下のスニペットでは現在のドメインのローカル {{DOMxRef("Storage")}} オブジェクトにアクセスし、{{DOMxRef("Storage.setItem()")}} を利用してデータを追加しています。
+以下のスニペットでは現在のドメインのローカル {{DOMxRef("Storage")}} オブジェクトにアクセスし、{{DOMxRef("Storage.setItem()")}} を利用してデータを追加したり、すでにそのキーがある場合はアイテムを更新したりします。
 
 ```js
 localStorage.setItem("myCat", "Tom");

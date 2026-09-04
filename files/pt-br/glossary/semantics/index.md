@@ -49,7 +49,7 @@ Ao abordar qual marcação usar, pergunte a si mesmo: "Quais elementos melhor de
 
 ## Elementos semânticos
 
-Estes são alguns dos aproximadamente 100 [elementos](/pt-BR/docs/Web/HTML/Element) semânticos disponíveis:
+Estes são alguns dos aproximadamente 100 [elementos](/pt-BR/docs/Web/HTML/Reference/Elements) semânticos disponíveis:
 
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
@@ -67,8 +67,8 @@ Estes são alguns dos aproximadamente 100 [elementos](/pt-BR/docs/Web/HTML/Eleme
 
 ## Saiba mais
 
-- [HTML element reference](/pt-BR/docs/Web/HTML/Element#inline_text_semantics) on MDN
-- [Using HTML sections and outlines](/pt-BR/docs/Web/HTML/Element/Heading_Elements#problems_solved_by_html5) on MDN
+- [HTML element reference](/pt-BR/docs/Web/HTML/Reference/Elements#inline_text_semantics) on MDN
+- [Using HTML sections and outlines](/pt-BR/docs/Web/HTML/Reference/Elements/Heading_Elements#problems_solved_by_html5) on MDN
 - [The meaning of semantics in computer science](https://pt.wikipedia.org/wiki/Semantics) on Wikipedia
 - [MDN Web Docs Glossary](/pt-BR/docs/Glossary)
   - {{Glossary("SEO")}}

@@ -77,5 +77,5 @@ with (obj) {
 
 ## Voir aussi
 
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
 - [L'instruction `with`](/fr/docs/Web/JavaScript/Reference/Statements/with) (qui n'est pas disponible [en mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode))

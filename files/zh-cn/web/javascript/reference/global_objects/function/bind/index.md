@@ -3,8 +3,6 @@ title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
 
-{{JSRef}}
-
 {{jsxref("Function")}} 实例的 **`bind()`** 方法创建一个新函数，当调用该新函数时，它会调用原始函数并将其 `this` 关键字设置为给定的值，同时，还可以传入一系列指定的参数，这些参数会插入到调用新函数时传入的参数的前面。
 
 {{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
@@ -38,7 +36,7 @@ bind(thisArg, arg1, arg2, /* …, */ argN)
 ### 参数
 
 - `thisArg`
-  - : 在调用绑定函数时，作为 `this` 参数传入目标函数 `func` 的值。如果函数不在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，[`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 会被替换为全局对象，并且原始值会被转换为对象。如果使用 {{jsxref("Operators/new", "new")}} 运算符构造绑定函数，则忽略该值。
+  - : 在调用绑定函数时，作为 `this` 参数传入目标函数 `func` 的值。如果函数不在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，[`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 会被替换为全局对象，并且原始值会被转换为对象。如果使用 {{jsxref("new")}} 运算符构造绑定函数，则忽略该值。
 - `arg1, …, argN` {{optional_inline}}
   - : 在调用 `func` 时，插入到传入绑定函数的参数前的参数。
 
@@ -211,7 +209,7 @@ class LateBloomer {
 
 ### 作为构造函数使用的绑定函数
 
-绑定函数自动适用于与 {{jsxref("Operators/new", "new")}} 运算符一起使用，以用于构造目标函数创建的新实例。当使用绑定函数是用来构造一个值时，提供的 `this` 会被忽略。然而，提供的参数仍会被插入到构造函数调用时的参数列表之前。
+绑定函数自动适用于与 {{jsxref("new")}} 运算符一起使用，以用于构造目标函数创建的新实例。当使用绑定函数是用来构造一个值时，提供的 `this` 会被忽略。然而，提供的参数仍会被插入到构造函数调用时的参数列表之前。
 
 ```js
 function Point(x, y) {
@@ -238,9 +236,9 @@ axisPoint instanceof YAxisPoint; // true
 new YAxisPoint(17, 42) instanceof Point; // true
 ```
 
-请注意，你无需采取任何特殊措施来创建一个绑定函数，以便与 {{jsxref("Operators/new", "new")}} 运算符一起使用。[`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target)、[`instanceof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)、[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 等都如预期工作，就好像构造函数从未被绑定一样。唯一的区别是它不能再用于 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。
+请注意，你无需采取任何特殊措施来创建一个绑定函数，以便与 {{jsxref("new")}} 运算符一起使用。[`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target)、[`instanceof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)、[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 等都如预期工作，就好像构造函数从未被绑定一样。唯一的区别是它不能再用于 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。
 
-相应地，你无需采取任何特殊措施来创建一个绑定函数，使其只能以普通方式调用，即使你更希望要求只能使用 {{jsxref("Operators/new", "new")}} 来调用绑定函数。如果你在没有使用 `new` 的情况下调用它，绑定的 `this` 将不再被忽略。
+相应地，你无需采取任何特殊措施来创建一个绑定函数，使其只能以普通方式调用，即使你更希望要求只能使用 {{jsxref("new")}} 来调用绑定函数。如果你在没有使用 `new` 的情况下调用它，绑定的 `this` 将不再被忽略。
 
 ```js
 const emptyObj = {};
@@ -254,7 +252,7 @@ YAxisPoint(13);
 console.log(emptyObj); // { x: 0, y: 13 }
 ```
 
-如果你希望限制绑定函数只能使用 {{jsxref("Operators/new", "new")}} 调用，或者只能在没有使用 `new` 的情况下调用，目标函数必须强制执行该限制，例如通过检查 `new.target !== undefined` 或使用 [class](/zh-CN/docs/Web/JavaScript/Reference/Classes)。
+如果你希望限制绑定函数只能使用 {{jsxref("new")}} 调用，或者只能在没有使用 `new` 的情况下调用，目标函数必须强制执行该限制，例如通过检查 `new.target !== undefined` 或使用 [class](/zh-CN/docs/Web/JavaScript/Reference/Classes)。
 
 ### 绑定类
 

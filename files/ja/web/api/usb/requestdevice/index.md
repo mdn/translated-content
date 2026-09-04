@@ -32,7 +32,7 @@ requestDevice(filters)
 
 ## セキュリティ
 
-[ユーザーによる一時的な有効化](/ja/docs/Web/Security/User_activation)が必要です。この機能が動作するためには、ユーザーがページまたは UI 要素を操作する必要があります。
+[ユーザーによる一時的な有効化](/ja/docs/Web/Security/Defenses/User_activation)が必要です。この機能が動作するためには、ユーザーがページまたは UI 要素を操作する必要があります。
 
 ## 例
 

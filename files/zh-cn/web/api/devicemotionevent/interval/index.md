@@ -29,4 +29,4 @@ var interval = instanceOfDeviceMotionEvent.interval;
 - [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
 - {{ domxref("DeviceOrientationEvent") }}
 - [Detecting device orientation](/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained)
+- [Orientation and motion data explained](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

@@ -2,7 +2,7 @@
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Reference/Status/506
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`506 Variant Also Negotiates`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、コンテンツの選択プロセスに再帰ループがある場合、コンテンツネゴシエーション中に返されます。

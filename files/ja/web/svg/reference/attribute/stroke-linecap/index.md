@@ -31,13 +31,13 @@ svg {
 
 ```html
 <svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-  <!-- （既定値である） "butt" の値の効果 -->
+  <!-- （デフォルト値である） "butt" の値の効果 -->
   <line x1="1" y1="1" x2="5" y2="1" stroke="black" stroke-linecap="butt" />
 
-  <!-- Effect of the "round" value -->
+  <!-- "round" の値の効果 -->
   <line x1="1" y1="3" x2="5" y2="3" stroke="black" stroke-linecap="round" />
 
-  <!-- Effect of the "square" value -->
+  <!-- "square" の値の効果 -->
   <line x1="1" y1="5" x2="5" y2="5" stroke="black" stroke-linecap="square" />
 
   <!--
@@ -58,7 +58,7 @@ svg {
       <td><code>butt</code> | <code>round</code> | <code>square</code></td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>butt</code></td>
     </tr>
     <tr>
@@ -84,10 +84,10 @@ svg {
 
 ```html
 <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "butt" value -->
+  <!-- "butt" の値の効果 -->
   <path d="M1,1 h4" stroke="black" stroke-linecap="butt" />
 
-  <!-- Effect of the "butt" value on a zero length path -->
+  <!-- 長さゼロのパスにおける "butt" の値の効果 -->
   <path d="M3,3 h0" stroke="black" stroke-linecap="butt" />
 
   <!--
@@ -118,10 +118,10 @@ svg {
 
 ```html
 <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "round" value -->
+  <!-- "round" 値の効果 -->
   <path d="M1,1 h4" stroke="black" stroke-linecap="round" />
 
-  <!-- Effect of the "round" value on a zero length path -->
+  <!-- 長さゼロのパスにおける "round" 値の効果 -->
   <path d="M3,3 h0" stroke="black" stroke-linecap="round" />
 
   <!--
@@ -152,10 +152,10 @@ svg {
 
 ```html
 <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "square" value -->
+  <!-- "square" 値の効果 -->
   <path d="M1,1 h4" stroke="black" stroke-linecap="square" />
 
-  <!-- Effect of the "square" value on a zero length path -->
+  <!-- 長さゼロのパスにおける "square" 値の効果 -->
   <path d="M3,3 h0" stroke="black" stroke-linecap="square" />
 
   <!--

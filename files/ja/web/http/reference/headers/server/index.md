@@ -1,55 +1,53 @@
 ---
-title: Server
+title: Server ヘッダー
+short-title: Server
 slug: Web/HTTP/Reference/Headers/Server
-original_slug: Web/HTTP/Headers/Server
+l10n:
+  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-**`Server`** ヘッダーは、リクエストを処理したオリジンサーバー、すなわち、レスポンスを生成したサーバーで使用されたソフトウェアを説明します。
+HTTP の **`Server`** {{Glossary("response header", "レスポンスヘッダー")}}は、リクエストを処理し、レスポンスを生成したオリジンサーバーで使用されているソフトウェアを表します。
+
+このヘッダーを介してサーバーの種類やバージョンを通知することの利点は、分析に役立ち、特定の相互運用性の問題がどれほど広範囲に及んでいるかを特定するのに役立つことです。
+従来、クライアントはサーバーのバージョン情報を利用して、特定のソフトウェアバージョンにおける [range リクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)の対応が不統一であるといった既知の制限を回避してきました。
 
 > [!WARNING]
-> `Server` の値は、攻撃者が既知のセキュリティホールを悪用するのを (少し) 容易にする情報を暴露する可能性があるので、過度に詳細にすることは避けてください。
+> レスポンスにこのヘッダーが含まれていると、特にサーバーソフトウェアに関する詳細な実装情報が含まれている場合、既知の脆弱性を検出しやすくなる可能性があります。
+
+レスポンスの遅延や前述のセキュリティ上の理由から、`Server` ヘッダーに詳細な情報を記載しすぎることは推奨されません。
+このヘッダーの情報を隠蔽することに大きなメリットがあるかどうかは議論の余地があります。というのも、他の手段を通じてサーバーソフトウェアのフィンガープリントを特定することは可能だからです。
+一般的に、サーバーのセキュリティをより強固にするためには、既知の脆弱性に対してソフトウェアを定期的に更新またはパッチ適用することが、より確実なアプローチと言えます。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">ヘッダー種別</th>
-      <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
-      </th>
-      <td>いいえ</td>
+      <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
     </tr>
   </tbody>
 </table>
 
 ## 構文
 
-```
+```http
 Server: <product>
 ```
 
 ## ディレクティブ
 
 - `<product>`
-  - : リクエストを処理したソフトウェアまたは製品の名前です。通常は {{HTTPHeader('User-Agent')}} と似た形式です。
-
-どのくらいの詳細を含めるかのバランスを取るのは興味深いことです。 OS のバージョンを公開することは、先ほどの過度に詳細な値についての警告で述べたように、おそらく悪い考えです。しかし、 Apache のバージョンを公開すると、あるバージョンが持つ {{HTTPHeader('Content-Encoding')}} と {{HTTPHeader('Range')}} を組み合わせたバグをブラウザーが回避するのに役立ちます。
+  - : リクエストを処理したソフトウェアまたは製品の名前です。
+    通常は {{HTTPHeader('User-Agent')}} と似た形式です。
 
 ## 例
 
-```
+```http
 Server: Apache/2.4.1 (Unix)
 ```
 
 ## 仕様書
 
-| 仕様書                             | 題名                                                          |
-| ---------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Server", "7.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -58,3 +56,5 @@ Server: Apache/2.4.1 (Unix)
 ## 関連情報
 
 - {{HTTPHeader("Allow")}}
+- [HTTP Observatory](/ja/observatory)
+- [Prevent information disclosure via HTTP headers](https://owasp.org/www-project-secure-headers/index.html#prevent-information-disclosure-via-http-headers) - OWASP Secure Headers Project

@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/false
 original_slug: Web/XPath/Functions/false
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `false` 함수는 boolean false를 반환합니다.
 

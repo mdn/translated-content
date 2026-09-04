@@ -1,25 +1,25 @@
 ---
-title: FileReader.readyState
+title: "FileReader: readyState プロパティ"
+short-title: readyState
 slug: Web/API/FileReader/readyState
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: e932acf254c5dd06e26798b9d8fe01ce8dab1fb7
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-{{domxref("FileReader")}} の **`readyState`** プロパティは、 `FileReader` がいる読み取り操作の現在の状態を提供します。 `FileReader` は以下のいずれかの状態にあります。
+**`readyState`** は {{domxref("FileReader")}} の読み取り専用プロパティで、読み取り操作の現在の状態を提供します。
+これは `EMPTY`, `LOADING`, `DONE` のいずれかの状態です。
 
-| 値  | 状態      | 説明                                                                |
-| --- | --------- | ------------------------------------------------------------------- |
-| `0` | `EMPTY`   | Reader が作成されました。まだ読み込まれているメソッドはありません。 |
-| `1` | `LOADING` | read メソッドが呼び出されました。                                   |
-| `2` | `DONE`    | 操作が完了しています。                                              |
+## 値
 
-- `EMPTY`
-  - : `FileReader` は作成されましたが、 readAs メソッドはまだ呼び出されていません。
-- `LOADING`
-  - : readAs メソッドが呼び出されました。 {{domxref("File")}} または {{domxref("Blob")}} が読み取り中であり、まだエラーは発生していません。
-- `DONE`
+{{domxref("FileReader")}} インターフェイスで定義されている 3 つの状態定数のうちの 1 つである数値です。
+
+- `FileReader.EMPTY` (0)
+  - : リーダーは作成されましたが、読み取りメソッドは呼び出されていません。
+- `FileReader.LOADING` (1)
+  - : 読み取りメソッドが呼び出されました。{{domxref("File")}} または {{domxref("Blob")}} が読み取り中であり、まだエラーは発生していません。
+- `FileReader.DONE` (2)
   - : 読み取り操作が完了しています。これは、 {{domxref("File")}} または {{domxref("Blob")}} の全体がメモリーに読み込まれたか、ファイル読み取りエラーが発生したか、 {{domxref("FileReader.abort()", "abort()")}} が呼び出され、読み取りがキャンセルされたか、いずれかを意味します。
 
 ## 例
@@ -35,10 +35,6 @@ reader.onloadend = () => {
   console.log("DONE", reader.readyState); // readyState は 2 になります。
 };
 ```
-
-## 値
-
-{{domxref("FileReader")}} API のために定義されている、状態を表す 3 つの定数のうちの 1 つです。
 
 ## 仕様書
 

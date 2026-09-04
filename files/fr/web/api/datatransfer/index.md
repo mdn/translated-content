@@ -104,7 +104,7 @@ Cet objet est disponible depuis la propriété `dataTransfer` de tous les évén
     <tr>
       <td>
         <code
-          >void <a href="#addElement.28.29">addElement</a>(in
+          >void <a href="#addElement()">addElement</a>(in
           <a href="/en/XPCOM_Interface_Reference/nsIDOMElement">Element</a>
           image)</code
         >
@@ -113,7 +113,7 @@ Cet objet est disponible depuis la propriété `dataTransfer` de tous les évén
     <tr>
       <td>
         <code
-          >void <a href="#clearData.28.29">clearData</a>([in
+          >void <a href="#clearData()">clearData</a>([in
           <a href="/en/String">String</a> type])</code
         >
       </td>
@@ -122,7 +122,7 @@ Cet objet est disponible depuis la propriété `dataTransfer` de tous les évén
       <td>
         <code
           ><a href="/en/String">String</a>
-          <a href="#getData.28.29">getData</a>(in
+          <a href="#getData()">getData</a>(in
           <a href="/en/String">String</a> type)</code
         >
       </td>
@@ -130,7 +130,7 @@ Cet objet est disponible depuis la propriété `dataTransfer` de tous les évén
     <tr>
       <td>
         <code
-          >void <a href="#setData.28.29">setData</a>(in
+          >void <a href="#setData()">setData</a>(in
           <a href="/en/String">String</a> type, in
           <a href="/en/String">String</a> data)</code
         >
@@ -139,7 +139,7 @@ Cet objet est disponible depuis la propriété `dataTransfer` de tous les évén
     <tr>
       <td>
         <code
-          >void <a href="#setDragImage.28.29">setDragImage</a>(in
+          >void <a href="#setDragImage()">setDragImage</a>(in
           <a href="/en/XPCOM_Interface_Reference/nsIDOMElement"
             >nsIDOMElement</a
           >
@@ -150,7 +150,7 @@ Cet objet est disponible depuis la propriété `dataTransfer` de tous les évén
     <tr>
       <td>
         <code
-          >void <a href="#mozClearDataAt.28.29">mozClearDataAt</a>([in
+          >void <a href="#mozClearDataAt()">mozClearDataAt</a>([in
           <a href="/en/String">String</a> type, in unsigned long index])</code
         >
       </td>
@@ -159,7 +159,7 @@ Cet objet est disponible depuis la propriété `dataTransfer` de tous les évén
       <td>
         <code
           ><a href="/en/XPCOM_Interface_Reference/NsIVariant">nsIVariant</a>
-          <a href="#mozGetDataAt.28.29">mozGetDataAt</a>(in
+          <a href="#mozGetDataAt()">mozGetDataAt</a>(in
           <a href="/en/String">String</a> type, in unsigned long index)</code
         >
       </td>
@@ -167,7 +167,7 @@ Cet objet est disponible depuis la propriété `dataTransfer` de tous les évén
     <tr>
       <td>
         <code
-          >void <a href="#mozSetDataAt.28.29">mozSetDataAt</a>(in
+          >void <a href="#mozSetDataAt()">mozSetDataAt</a>(in
           <a href="/en/String">String</a> type, in
           <a href="/en/XPCOM_Interface_Reference/NsIVariant">nsIVariant</a>
           data, in unsigned long index)</code
@@ -178,7 +178,7 @@ Cet objet est disponible depuis la propriété `dataTransfer` de tous les évén
       <td>
         <code
           ><a href="/en/StringList">StringList</a>
-          <a href="#mozTypesAt.28.29">mozTypesAt</a>([in unsigned long
+          <a href="#mozTypesAt()">mozTypesAt</a>([in unsigned long
           index])</code
         >
       </td>

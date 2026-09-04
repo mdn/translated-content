@@ -31,7 +31,7 @@ caches.match(request, { options }).then(function (response) {
     - `ignoreSearch`: Un {{domxref("Boolean")}} qui détermine si le preocessus de rapprochement doit ignorer la chaîne de requête dans l'url. Défini à `true`, la partie `?value=bar` de `http://foo.com/?value=bar` sera ignoré lors d'un rapporchement. La valeur par défaut est `false`.
     - `ignoreMethod`: Un {{domxref("Boolean")}} qui, quand défini à `true`, empêche l'opération de rapprochement de valider le verbe http de la {{domxref("Request", "Requête")}} `http` (normalement, seulement `GET` et `HEAD` sont authorisés) La valeur par défaut est `false`.
     - `ignoreVary`: Un {{domxref("Boolean")}} qui, quand défini à `true`, dit à l'opération de rapprochement de ne pas faire le rapprochement avec le header `VARY`. En d'autres termes, si une URL est sélectionnée elle sera conservée indépemment de la présence du header `VARY`. La valeur par défaut est `false`.
-    - `cacheName`: Un {{domxref("DOMString")}} qui représente le cache dans lequel on recherche.
+    - `cacheName`: Un {{jsxref("String")}} qui représente le cache dans lequel on recherche.
 
 ### Valeur retournée
 

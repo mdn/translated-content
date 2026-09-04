@@ -36,7 +36,7 @@ String.raw`templateString`
 - `sub1`, …, `subN`
   - : 置換される値が入ります。
 - `templateString`
-  - : [テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)です。オプションでで置換文字列 (`${...}`) を含みます。
+  - : [テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)です。オプションで置換文字列 (`${...}`) を含みます。
 
 ### 返値
 

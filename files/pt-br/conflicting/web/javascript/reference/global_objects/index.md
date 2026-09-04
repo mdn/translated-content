@@ -55,4 +55,4 @@ Not part of any specifications.
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("JSON.stringify")}}
 - {{jsxref("JSON.parse")}}
-- {{jsxref("Object.toSource")}}
+- {{jsxref("Object.prototype.toString", "Object.toSource")}}

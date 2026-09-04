@@ -1,11 +1,12 @@
 ---
-title: EventSource.url
+title: "EventSource: url プロパティ"
+short-title: url
 slug: Web/API/EventSource/url
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: a166ba48ceb8bccb37c67a0a8856b0e5b12e0135
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 **`url`** は {{domxref("EventSource")}} インターフェイスの読み取り専用プロパティで、ソースの URL を表す文字列を返します。
 

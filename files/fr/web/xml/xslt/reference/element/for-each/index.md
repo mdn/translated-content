@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/for-each
 original_slug: Web/XSLT/Element/for-each
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 L'élément `<xsl:for-each>` sélectionne un ensemble de nœuds et traite chacun d'eux de la même façon. Il est souvent utilisé pour des itérations sur un ensemble de nœuds ou pour changer le nœud courant. Si un ou plusieurs éléments `<xsl:sort>` apparaissent comme enfants de cet élément, le tri est effectué avant le traitement. Autrement, les nœuds sont traités dans l'ordre d'apparition dans le document.
 

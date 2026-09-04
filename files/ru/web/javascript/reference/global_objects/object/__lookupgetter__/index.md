@@ -55,7 +55,7 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
 ## Смотрите также
 
 - [`Object.prototype.__lookupSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- оператор {{jsxref("Operators/get", "get")}}
+- оператор {{jsxref("Functions/get", "get")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} и {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
 original_slug: Learn/Server-side/First_steps/Web_frameworks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 이전 기사에서는 웹 클라이언트와 서버 간의 통신 모습, HTTP 요청 및 응답의 성격, 서버 측 웹 애플리케이션이 웹 브라우저의 요청에 응답하기 위해 수행해야하는 작업에 대해 설명했습니다. 이러한 지식을 바탕으로, 지금 시간에는 웹 프레임 워크가 어떻게 그러한 작업을 간단히 만드는지 탐색하고, 당신의 첫 서버측 애플리케이션을 위한 프레임 워크를 어떻게 선택하는지 의견을 드리겠습니다.
 
@@ -15,7 +15,7 @@ original_slug: Learn/Server-side/First_steps/Web_frameworks
       <td>
         기본적인 컴퓨터 활용법. HTTP 요청을 서버측 코드가 어떻게 다루고
         응답하는지에 대한 높은 수준의 이해 (<a
-          href="https://developer.mozilla.org/ko/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/ko/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >Client-Server overview</a
         >를 참고 하십시오).
       </td>
@@ -184,7 +184,7 @@ def youngest(request):
 
 - **프레임워크/프로그래밍 언어의 성능:** 종종 "속도"는 선택의 중요한 한 요소가 되지 않습니다. 왜냐하면 Python과 같은 비교적 느린 런타임도 중간정도의 하드웨어에서 실행되는 중간 크기의 사이트에서 사용 하기에 "충분" 이상으로 좋기 때문입니다. 속도에 강점이 있는 언어들(예: C++ 또는 JavaScript)은 교육 비용이나 유지 비용에 의해 상쇄 될 수 있습니다.
 - **캐싱 지원:** 웹 사이트가 더욱 성공적이 되면 당신은 웹 사이트에 액세스 할 때 수신하는 요청 수에 더 이상 대처할 수 없다는 것을 알게 될 것입니다. 이 시점에 캐싱 지원을 추가하는 것을 고려 할 수 있습니다. 캐싱은 웹 요청의 전체 또는 일부를 저장하여 후속 요청에서 다시 계산할 필요가 없도록하는 최적화 방법 입니다. 캐시된 요청에 대한 응답은 처음에 요청을 계산하는 것보다 훨씬 빠릅니다. 캐싱은 당신의 코드에 구현 하거나 서버에 구현 할 수 있습니다([reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy)를 참조하세요). 웹 프레임 워크는 캐시 할 수있는 컨텐츠를 정의하기 위해 서로 다른 레벨의 지원을 제공합니다.
-- **확장성:** 웹 사이트가 환상적인 성공을하면 캐싱의 이점을 모두 활용하고 *수직 확장(*웹 애플리케이션을 보다 강력한 하드웨어에서 실행*)*의 한계에 도달 할 수 있습니다. 이 시점에서 일부 고객은 서버와 멀리 떨어져 있기 때문에 _수평 확장_(여러 웹 서버와 데이터베이스에 사이트를 분산 시켜서 부하를 공유)하거나 "지리적으로" 확장해야 할 수도 있습니다. 선택한 웹 프레임워크는 사이트 확장을 쉽게 하는지에 대해 큰 차이를 만들 수 있습니다.
+- **확장성:** 웹 사이트가 환상적인 성공을하면 캐싱의 이점을 모두 활용하고 *수직 확장(_웹 애플리케이션을 보다 강력한 하드웨어에서 실행_)*의 한계에 도달 할 수 있습니다. 이 시점에서 일부 고객은 서버와 멀리 떨어져 있기 때문에 _수평 확장_(여러 웹 서버와 데이터베이스에 사이트를 분산 시켜서 부하를 공유)하거나 "지리적으로" 확장해야 할 수도 있습니다. 선택한 웹 프레임워크는 사이트 확장을 쉽게 하는지에 대해 큰 차이를 만들 수 있습니다.
 - **웹 보안:** 어떤 웹 프레임워크는 일반적인 웹 공격 처리에 대한 더 나은 지원을 제공 합니다. 장고을 예를 들자면 사용자 입력에 들어간 모든 HTML 템플릿을 삭제하여 사용자가 작성한 JavaScript를 실행하지 못하게 합니다. 다른 프레임 워크도 유사한 보호 기능을 제공하지만 기본적으로 항상 활성화되어있는 것은 아닙니다.
 
 라이센싱, 프레임워크가 활발하게 개발 중인지 여부 등 여러 가지 가능한 요소가 있습니다.
@@ -293,4 +293,4 @@ This article has shown that web frameworks can make it easier to develop and mai
 
 For the next article in this module we'll change direction slightly and consider web security.
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}

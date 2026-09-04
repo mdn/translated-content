@@ -47,7 +47,7 @@ condition ? exprIfTrue : exprIfFalse
 
 ## 例
 
-### キホンテキナ例
+### 基本的な例
 
 ```js
 const age = 26;

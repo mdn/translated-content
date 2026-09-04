@@ -164,7 +164,7 @@ Tim Berners-Lee는 원래 HTTP를 읽기 전용 도구로 생각하지 않았습
 
 ### 웹의 보안 모델 완화
 
-HTTP는 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)으로 알려진 웹 보안 모델과는 독립되어 있습니다. 사실, 현재의 웹 보안 모델은 HTTP이 만들어진 이후에 개발되었습니다! 몇 년에 걸쳐, 특정 제약 조건을 두고, 이 정책의 일부 제한 사항을 해제하는 것이 유용한 것으로 입증되었습니다. 서버는 새로운 HTTP 헤더 세트를 사용하여 이러한 제한을 언제, 얼마나 해제해야 하는지 클라이언트에 전송했습니다. [교차 출처 리소스 공유](/ko/docs/Glossary/CORS) (CORS) 및 [컨텐츠 보안 정책](/ko/docs/Web/HTTP/Guides/CSP) (CSP)과 같은 명세 안에 정의되었습니다.
+HTTP는 [동일 출처 정책](/ko/docs/Web/Security/Defenses/Same-origin_policy)으로 알려진 웹 보안 모델과는 독립되어 있습니다. 사실, 현재의 웹 보안 모델은 HTTP이 만들어진 이후에 개발되었습니다! 몇 년에 걸쳐, 특정 제약 조건을 두고, 이 정책의 일부 제한 사항을 해제하는 것이 유용한 것으로 입증되었습니다. 서버는 새로운 HTTP 헤더 세트를 사용하여 이러한 제한을 언제, 얼마나 해제해야 하는지 클라이언트에 전송했습니다. [교차 출처 리소스 공유](/ko/docs/Glossary/CORS) (CORS) 및 [컨텐츠 보안 정책](/ko/docs/Web/HTTP/Guides/CSP) (CSP)과 같은 명세 안에 정의되었습니다.
 
 큰 확장 외에, 다른 많은 헤더들이, 때로는 실험적으로만, 추가되었습니다. 주목할 만한 헤더는 프라이버시를 제어하기 위한 Do Not Track ({{HTTPHeader("DNT")}}) 헤더, {{HTTPHeader("X-Frame-Options")}}, 혹은 {{HTTPHeader('Upgrade-Insecure-Requests')}}이 있지만, 더 많은 헤더들이 존재합니다.
 

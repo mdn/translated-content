@@ -1,58 +1,124 @@
 ---
-title: readystatechange
+title: "Document : évènement readystatechange"
+short-title: readystatechange
 slug: Web/API/Document/readystatechange_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{ApiRef}}
+{{APIRef("DOM")}}
 
-L'évènement **`readystatechange`** est déclenché lorsque l'attribut [`readyState`](/fr/docs/Web/API/Document/readyState) d'un document a changé.
+L'évènement **`readystatechange`** de l'interface {{DOMxRef("Document")}} est déclenché lorsque l'attribut {{DOMxRef("Document.readyState", "readyState")}} d'un document a changé.
 
-## Information générale
+Cet événement n'est pas annulable et ne se propage pas.
 
-- Specification
-  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness)
-- Interface
-  - : Event
-- Bubbles
-  - : No
-- Cancelable
-  - : No
-- Target
-  - : Document
-- Default Action
-  - : None.
+## Syntaxe
 
-## Propriétés
+Utilisez le nom de l'événement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'événements.
 
-| Property                        | Type                       | Description                                            |
-| ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+```js-nolint
+addEventListener("readystatechange", (event) => { })
 
-## Exemple
-
-```js
-document.readyState === "complete";
-// true
-
-//alternative à DOMContentLoaded
-document.onreadystatechange = function () {
-  if (document.readyState == "interactive") {
-    initApplication();
-  }
-};
+onreadystatechange = (event) => { }
 ```
 
-## Navigateur compatible
+## Type d'évènement
 
-Cet événement a longtemps été soutenue par Internet Explorer et peut être utilisé comme une alternative à l'evenement [`DOMContentLoaded`](/fr/docs/Web) (voir la note \[2] de la section [Navigateurs compatibles](/fr/docs/Web/API/Document/DOMContentLoaded_event#navigateurs_compatibles)).
+Un objet {{DOMxRef("Event")}} générique.
 
-## Les événements liés
+## Exemples
 
-- [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-- [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
-- [`load`](/fr_docs/Web/API/Window/load_event)
-- [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event)
-- [`unload`](/fr/docs/Web/API/Window/unload_event)
+### Exemple interactif
+
+#### HTML
+
+```html
+<div class="controls">
+  <button id="reload" type="button">Recharger</button>
+</div>
+
+<div class="event-log">
+  <label for="eventLog">Journal des évènements&nbsp;:</label>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="eventLog"></textarea>
+</div>
+```
+
+#### CSS
+
+```css hidden
+body {
+  display: grid;
+  grid-template-areas: "control log";
+}
+
+.controls {
+  grid-area: control;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-log {
+  grid-area: log;
+}
+
+.event-log-contents {
+  resize: none;
+}
+
+label,
+button {
+  display: block;
+}
+
+#reload {
+  height: 2rem;
+}
+```
+
+#### JavaScript
+
+```js
+const log = document.querySelector(".event-log-contents");
+const reload = document.querySelector("#reload");
+
+reload.addEventListener("click", () => {
+  log.textContent = "";
+  setTimeout(() => {
+    window.location.reload(true);
+  }, 200);
+});
+
+window.addEventListener("load", (event) => {
+  log.textContent = `${log.textContent}load\n`;
+});
+
+document.addEventListener("readystatechange", (event) => {
+  log.textContent = `${log.textContent}readystate: ${document.readyState}\n`;
+});
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  log.textContent = `${log.textContent}DOMContentLoaded\n`;
+});
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Exemple interactif", "100%", 160)}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- Les évènements associés&nbsp;: {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, {{DOMxRef("Window/load_event", "load")}}, {{DOMxRef("Window/beforeunload_event", "beforeunload")}}, {{DOMxRef("Window/unload_event", "unload")}}

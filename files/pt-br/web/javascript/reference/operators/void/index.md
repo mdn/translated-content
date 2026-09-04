@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/void
 
 {{jsSidebar("Operators")}}
 
-O **`operador void`** avalia a expressão dada e, em seguida, retorna {{jsxref("Global_Objects/undefined", "undefined")}}.
+O **`operador void`** avalia a expressão dada e, em seguida, retorna {{jsxref("undefined")}}.
 
 ## Sintaxe
 
@@ -15,9 +15,9 @@ void expressão
 
 ## Descrição
 
-Este operador permite a inserção de expressões que produzem efeitos secundários em lugares onde uma expressão que avalia a ação {{jsxref("Global_Objects/undefined", "undefined")}} é desejada.
+Este operador permite a inserção de expressões que produzem efeitos secundários em lugares onde uma expressão que avalia a ação {{jsxref("undefined")}} é desejada.
 
-O operador `void` é muitas vezes utilizado apenas para obter o valor primitivo `undefined`, geralmente usando "`void(0)`" (o que equivale a "`void 0`"). Nestes casos, a variável global {{jsxref("Global_Objects/undefined", "undefined")}} pode ser utilizado em vez (supondo que ele não tenha sido atribuído a um valor não-padrão).
+O operador `void` é muitas vezes utilizado apenas para obter o valor primitivo `undefined`, geralmente usando "`void(0)`" (o que equivale a "`void 0`"). Nestes casos, a variável global {{jsxref("undefined")}} pode ser utilizado em vez (supondo que ele não tenha sido atribuído a um valor não-padrão).
 
 ## Chamada imediata das expressões da função
 
@@ -40,7 +40,7 @@ void (function iife() {
 
 ## JavaScript URIs
 
-Quando o navegador segue uma URI `javascript`, ele avalia o código na URI e então troca o conteúdo da página pelo valor retornado por este, a não ser que o valor retornado seja {{jsxref("Global_Objects/undefined", "undefined")}}. O operador `void` pode ser usado para retornar {{jsxref("Global_Objects/undefined", "undefined")}}. Por exemplo:
+Quando o navegador segue uma URI `javascript`, ele avalia o código na URI e então troca o conteúdo da página pelo valor retornado por este, a não ser que o valor retornado seja {{jsxref("undefined")}}. O operador `void` pode ser usado para retornar {{jsxref("undefined")}}. Por exemplo:
 
 ```html
 <a href="javascript:void(0);">Clique aqui para não fazer nada</a>

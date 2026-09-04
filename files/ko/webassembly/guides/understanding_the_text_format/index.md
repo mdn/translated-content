@@ -181,7 +181,7 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 ```
 
 > [!NOTE]
-> 이 예제는 GitHub에서 [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html)로 찾을 수 있습니다 ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). 인스턴스 함수에 대한 자세한 내용은 {{jsxref ( "WebAssembly.instantiate ()")}}를 참조하십시오.
+> 이 예제는 GitHub에서 [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html)로 찾을 수 있습니다 ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). 인스턴스 함수에 대한 자세한 내용은 [`WebAssembly.instantiate ()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiate)를 참조하십시오.
 
 ## 기본 사항 둘러보기
 
@@ -239,7 +239,7 @@ WebAssembly에는 2 단계 네임 스페이스가 있으므로 여기서 import 
 
 가져온 함수는 일반적인 함수와 같습니다. WebAssembly 유효성 검사에서 정적으로 서명하는 시그니처가 있으며, 인덱스가 주어지며 이름을 지정하고 호출 할 수 있습니다.
 
-JavaScript 함수에는 서명 개념이 없으므로 임포트의 선언 된 서명에 관계없이 모든 JavaScript 함수를 전달할 수 있습니다. 모듈이 가져 오기를 선언하면 {{jsxref("WebAssembly.instantiate()")}}의 호출자는 해당 속성이있는 가져 오기 객체를 전달해야합니다.
+JavaScript 함수에는 서명 개념이 없으므로 임포트의 선언 된 서명에 관계없이 모든 JavaScript 함수를 전달할 수 있습니다. 모듈이 가져 오기를 선언하면 [`WebAssembly.instantiate()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiate)의 호출자는 해당 속성이있는 가져 오기 객체를 전달해야합니다.
 
 위의 경우 `importObject.console.log`가 JavaScript 함수 인 객체 (`importObject`라고 부름)가 필요합니다.
 
@@ -266,7 +266,7 @@ WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
 
 ### Declaring globals in WebAssembly
 
-WebAssembly는 하나 이상의 {{jsxref("WebAssembly.Module")}} 인스턴스 전체에서 JavaScript 및 가져오기 / 내보내기가 가능한 전역 변수 인스턴스를 생성 할 수 있습니다. 이는 여러 모듈을 동적으로 연결할 수 있으므로 매우 유용합니다.
+WebAssembly는 하나 이상의 [`WebAssembly.Module`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Module) 인스턴스 전체에서 JavaScript 및 가져오기 / 내보내기가 가능한 전역 변수 인스턴스를 생성 할 수 있습니다. 이는 여러 모듈을 동적으로 연결할 수 있으므로 매우 유용합니다.
 
 WebAssembly 텍스트 형식에서는 다음과 비슷합니다 (GitHub의 [global.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.wat) 참조, 라이브 JavaScript 예제는 [global.html](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) 참조).
 
@@ -283,7 +283,7 @@ WebAssembly 텍스트 형식에서는 다음과 비슷합니다 (GitHub의 [glob
 
 이것은 `global` 키워드를 사용하여 전역 값을 지정한다는 점을 제외하고는 이전에 보았던 것과 비슷하게 보이며 변수 mutable을 원하면 값의 데이터 유형과 함께 `mut` 키워드를 지정합니다.
 
-JavaScript를 사용하여 동일한 값을 만들려면 {{jsxref("WebAssembly.Global()")}} 생성자를 사용합니다.
+JavaScript를 사용하여 동일한 값을 만들려면 [`WebAssembly.Global()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Global) 생성자를 사용합니다.
 
 ```js
 const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
@@ -297,7 +297,7 @@ JavaScript의 관점에서 볼 때 크기가 조정 가능한 큰 {{domxref("Arr
 
 따라서 문자열은 이 선형 메모리 내부의 있는 sequence of bytes라고 할 수 있습니다. 우리가 적절한 바이트 문자열을 메모리에 썼다고 가정 해 보고 어떻게 그 문자열을 JavaScript로 전달하는지 보겠습니다.
 
-핵심은 자바 스크립트가 {{jsxref("WebAssembly.Memory()")}} 인터페이스를 통해 WebAssembly 선형 메모리 인스턴스를 생성하고 연관된 인스턴스를 사용하여 기존 메모리 인스턴스에 액세스 할 수 있다는 것입니다 (현재 모듈 인스턴스 당 하나만 가질 수 있음). 메모리 인스턴스에는 [`buffer`](/ko/docs/WebAssembly/JavaScript_interface/Memory/buffer) getter가 있습니다.이 buffer getter는 전체 선형 메모리를 가리키는 `ArrayBuffer`를 반환합니다.
+핵심은 자바 스크립트가 [`WebAssembly.Memory()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory) 인터페이스를 통해 WebAssembly 선형 메모리 인스턴스를 생성하고 연관된 인스턴스를 사용하여 기존 메모리 인스턴스에 액세스 할 수 있다는 것입니다 (현재 모듈 인스턴스 당 하나만 가질 수 있음). 메모리 인스턴스에는 [`buffer`](/ko/docs/WebAssembly/JavaScript_interface/Memory/buffer) getter가 있습니다.이 buffer getter는 전체 선형 메모리를 가리키는 `ArrayBuffer`를 반환합니다.
 
 예를 들어 JavaScript의 [`Memory.grow()`](/ko/docs/WebAssembly/JavaScript_interface/Memory/grow) 메소드를 통해 메모리 인스턴스를 늘릴 수도 있습니다. grow가 발생하면 `ArrayBuffer`s는 크기를 변경할 수 없기 때문에 현재의 `ArrayBuffer`가 분리되고 더 큰 새 메모리를 가리 키도록 새 `ArrayBuffer`가 만들어집니다. 즉, JavaScript에 문자열을 전달하기 위해 수행해야하는 모든 작업은 길이를 나타내는 방법과 함께 선형 메모리에있는 문자열의 오프셋을 전달하는 것입니다.
 
@@ -443,7 +443,7 @@ WebAssembly는 `anyfunc` 유형을 추가 할 수 있습니다 (유형이 모든
 
 자바 스크립트와 같이 더 높은 수준의 표현력있는 언어에서는 함수가 포함 된 배열 (또는 더 많은 가능성이있는 객체)을 사용하여 동일한 작업을 수행한다고 상상할 수 있습니다. 의사 코드는 `tbl[i]()`와 유사합니다.
 
-다시 typechecking을 보면 WebAssembly가 typechecked되고 `anyfunc`가 "모든 함수 서명"을 의미하기 때문에 callee에서 호출 수신자의 추정 서명을 제공해야하므로 `$return_i32` 유형이 포함되어 `i32`를 반환하는 함수가 예상됩니다. 호출 수신자와 일치하는 서명이 없으면 (대신 `f32`가 반환 됨) {{jsxref("WebAssembly.RuntimeError")}}가 발생합니다.
+다시 typechecking을 보면 WebAssembly가 typechecked되고 `anyfunc`가 "모든 함수 서명"을 의미하기 때문에 callee에서 호출 수신자의 추정 서명을 제공해야하므로 `$return_i32` 유형이 포함되어 `i32`를 반환하는 함수가 예상됩니다. 호출 수신자와 일치하는 서명이 없으면 (대신 `f32`가 반환 됨) [`WebAssembly.RuntimeError`](/ko/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)가 발생합니다.
 
 `call_indirect`와 호출하는 테이블을 연결하는 것은 무엇입니까? 대답은 모듈 인스턴스 당 하나의 테이블 만 허용된다는 것입니다. `call_indirect`가 암시 적으로 호출하는 것입니다. 향후, 여러 테이블이 허용 될 때, 우리는 또한 어떤 종류의 테이블 식별자를 지정할 필요가있습니다
 

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("CSSImportRule")}} 接口的只读属性 **`supportsText`** 返回由 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)指定的支持条件。
+{{domxref("CSSImportRule")}} 接口的只读属性 **`supportsText`** 返回由 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)指定的支持条件。
 
 ## 值
 
@@ -42,5 +42,5 @@ console.log(myRules[2].supportsText); // 返回 `null`
 
 ## 参见
 
-- [使用特性查询](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [使用特性查询](/zh-CN/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - {{cssxref("@import")}} 和 {{cssxref("@supports")}}

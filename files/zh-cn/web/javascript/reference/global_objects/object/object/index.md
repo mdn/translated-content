@@ -3,8 +3,6 @@ title: Object() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 ---
 
-{{JSRef}}
-
 **`Object()`** 构造函数将输入转换为一个对象。它的行为取决于输入的类型。
 
 ## 语法

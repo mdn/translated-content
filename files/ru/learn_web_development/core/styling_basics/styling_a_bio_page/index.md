@@ -3,7 +3,7 @@ title: Использование ваших новых знаний
 slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 С учётом того что вы узнали за последние несколько уроков, вы должны обнаружить, что вы можете форматировать простые текстовые документы с использованием CSS, чтобы добавить к ним свой собственный стиль. Эта статья даёт вам возможность сделать это.
 
@@ -64,4 +64,4 @@ slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 
 Поздравляем вас с завершением первого модуля! Теперь вы неплохо разбираетесь в CSS и можете разобраться в таблицах стилей. В следующем модуле, [Как устроен CSS](/ru/docs/Learn_web_development/Core/Styling_basics), мы глубже разберёмся в некоторых аспектах языка.
 
-{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}

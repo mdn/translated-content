@@ -101,7 +101,7 @@ td {
     > Если таблица использует атрибут [`colspan`](/ru/docs/Web/HTML/Reference/Elements/td#colspan), эффект может быть достигнут путем объединения соответствующих селекторов атрибутов CSS, таких как `[colspan=n]`, хотя это и не тривиально.
 
 - `bgcolor` {{Deprecated_inline}}
-  - : Задний фон таблицы. Это [6-значный шестнадцатеричный RGB-код](/ru/docs/Web/CSS/hex-color) с префиксом "#`. Также можно использовать одно из предопределенных [цветовых ключевых слов](/ru/docs/Web/CSS/color_value#named_colors).
+  - : Задний фон таблицы. Это [6-значный шестнадцатеричный RGB-код](/ru/docs/Web/CSS/hex-color) с префиксом "#`. Также можно использовать одно из предопределенных [цветовых ключевых слов](/ru/docs/Web/CSS/Reference/Values/color_value#named_colors).
 
   Чтобы добиться аналогичного эффекта, используйте свойство CSS {{cssxref("background-color")}}.
 
@@ -136,7 +136,7 @@ Please see the {{HTMLElement("table")}} page for examples on `<col>`.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ru/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ru/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>

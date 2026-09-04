@@ -2,7 +2,7 @@
 title: ページの種類
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 l10n:
-  sourceCommit: 6a489877196f27cadd5b51545b68b9e31884a86f
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 MDN には繰り返し使用されるいくつかの種類のページがあります。
@@ -16,7 +16,13 @@ MDN には大きく分けて 3 種類のページがありますが、いくつ�
 
 ## 新しいページの作成
 
-MDN に新しいページを作成するには、 GitHub を使用する必要があります。詳しくは [content リポジトリー](https://github.com/mdn/content)の[新しい文書を追加する](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#adding-a-new-document)の節を見てください。
+新しい文書を追加するのは比較的簡単です。特に、類似のトピックから `index.md` ファイルをコピーして始めることが可能であれば、なおさらです。
+いくつか留意すべきことがあります。
+
+- ドキュメントは、`index.md` ファイルにマークダウン形式で記述します。
+- 例えば、`foo` という名前の HTTP ヘッダーに関する新しいドキュメントを作成する場合は、`files/ja/web/http/reference/headers/foo` に新しいフォルダーを生成し、そのフォルダー内にマークダウンファイルを配置してください（`files/ja/web/http/reference/headers/foo/index.md`）。
+- ドキュメントの `index.md` ファイルは、`title`、`slug`、そして多くの場合 `page-type` を定義するフロントマターで始まる必要があります。
+  類似するドキュメントの `index.md` 内のフロントマターを参照すると、役立つかもしれません。
 
 ## テンプレートの使い方
 
@@ -57,14 +63,16 @@ MDN ページの種類を明確に識別するために、フロントマター�
 - [API ランディングページ](#api_ランディングページ)
 - [API リファレンスページ](#api_リファレンスページ)
 - [API リファレンスサブページ](#api_リファレンスサブページ)
+- [HTML 要素リファレンスページ](#html_要素リファレンスページ)
+- [HTML 属性リファレンスページ](#html_属性リファレンスページ)
+- [SVG 要素リファレンスページ](#svg_要素リファレンスページ)
+- [CSS モジュールページ](#css_モジュールページ)
+- [CSS 機能リファレンスページ](#css_機能リファレンスページ)
+- [HTTP ヘッダーリファレンスページ](#http_ヘッダーリファレンスページ)
+- [ARIA リファレンスページ](#aria_リファレンスページ)
 - [概念ページ](#概念ページ)
-- [CSS 機能リファレンス](#css_機能リファレンスページ)
-- [CSS モジュールランディングページ](#css_モジュールランディングページ)
 - [用語集の項目](#用語集ページ)
-- [HTML 要素](#html_要素リファレンスページ)
-- [HTTP ヘッダー](#http_ヘッダーリファレンスページ)
 - [ランディングページ](#ランディングページ)
-- [SVG 要素](#svg_要素リファレンスページ)
 - [ウェブ開発の学習ページ](#ウェブ開発の学習ページ)
 
 それぞれの節には、そのページ種類のライブサンプルページへのリンクが記載されています。
@@ -76,7 +84,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 このページは主に*ナビゲーション*ページですが、 API の一目でわかる*リファレンス*ページとしても機能します。
 
 複数の API が存在し、それぞれ独自の仕様で定義されていますが、それらは密接に関連しているため、 1 つの API ランディングページでカバーすることが理にかなっている場合があります。
-例えば、 [Generic Sensor API](https://www.w3.org/TR/generic-sensor/) は一般的なセンサーに関する事項をカバーしていますが、より具体的な事項は [Ambient Light Sensor](https://www.w3.org/TR/ambient-light/) や [Motion Sensor](https://www.w3.org/TR/motion-sensors/) など、他の API でカバーされています。
+例えば、 [Generic Sensor API](https://w3c.github.io/sensors/) は一般的なセンサーに関する事項をカバーしていますが、より具体的な事項は [Ambient Light Sensor](https://w3c.github.io/ambient-light/) や [Motion Sensor](https://w3c.github.io/motion-sensors/) など、他の API でカバーされています。
 このような場合、高レベルの概念の多くが同じであるため、複数のランディングページにわたってそれらを繰り返すことは意味がありません。
 そのような場合は、 1 つの「ウェブセンサー」ランディングページですべてをカバーする方が、繰り返しの意味でも見つけやすさの意味でも理にかなっています。
 
@@ -136,6 +144,21 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 - [HTML 要素ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template)
 
+### HTML 属性リファレンスページ
+
+HTML 属性のページでは、その属性に存在するすべての値が掲載されており、属性の目的や使用例が解説されているほか、具体例、ブラウザーの互換性情報、その他の重要なデータが提供されています。
+
+> [!NOTE]
+> 要素依存の属性（例：`<input>` の `placeholder` 属性）については、親要素のリファレンスページ内で十分に網羅可能であれば、別個のページが必須ではありません（例：`placeholder` 属性については、独立したページとしてではなく、`<input>` 要素のページ内で扱うべきです）。
+
+#### 例
+
+- [`class` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/class)
+
+#### テンプレート
+
+- [HTML 属性ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_attribute_page_template)
+
 ### SVG 要素リファレンスページ
 
 **SVG リファレンスページ**は、 SVG 要素で利用可能なすべての属性の一覧、要素の目的および使用法の説明、例、ブラウザーの互換性情報、その他の重要なデータを提供するものです。
@@ -148,25 +171,25 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 - [SVG 要素ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template)
 
-### CSS モジュールランディングページ
+### CSS モジュールページ
 
-それぞれの **[CSS](/ja/docs/Web/CSS) モジュール**は、CSS の特定の機能や実装に対応する CSS 仕様書を表します。例えば、 [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュールは、CSS のボックスの中や周りに空間を作成するための margin および padding プロパティを記述する[仕様書](/ja/docs/Web/CSS/CSS_box_model#仕様書)を表します。
+それぞれの **[CSS](/ja/docs/Web/CSS) モジュール**は、CSS の特定の機能や実装に対応する CSS 仕様書を表します。例えば、 [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュールは、CSS のボックスの中や周りに空間を作成するための margin および padding プロパティを記述する[仕様書](/ja/docs/Web/CSS/Guides/Box_model#仕様書)を表します。
 
-**CSS モジュールランディングページ**は、モジュールが提供する機能の概要を提供し、モジュールが提供するすべてのプロパティ、データ型、CSS 関数などを一覧表示します。可能な場合、 CSS モジュールのランディングページでは、モジュールのプロパティを使用することで、どのようなことが実現できるかを対話式の例で簡単に示すことができます。モジュールランディングページは主にナビゲーションページとして機能しますが、モジュールの一目でわかるリファレンスページとしても機能します。
+**CSS モジュールページ**は、モジュールが提供する機能の概要を提供し、モジュールが提供するすべてのプロパティ、データ型、CSS 関数などを一覧表示します。可能な場合、 CSS モジュールのランディングページでは、モジュールのプロパティを使用することで、どのようなことが実現できるかを対話式の例で簡単に示すことができます。モジュールページは主にナビゲーションページとして機能しますが、モジュールの一目でわかるリファレンスページとしても機能します。
 
 他のモジュール内のプロパティや機能であっても、文書化するモジュールが提供する機能と密接に関連しているものについては、「関連概念」の節で扱うことができます。
-例えば、 `<easing-function>` データ型と `prefers-reduced-motion` メディアクエリーは CSS アニメーションモジュールでは扱われていませんが、CSS アニメーションと密接に関連しているため、CSS アニメーションモジュールのランディングページの[関連概念](/ja/docs/Web/CSS/CSS_animations#関連概念)の節で強調するとよいでしょう。
+例えば、 `<easing-function>` データ型と `prefers-reduced-motion` メディアクエリーは CSS アニメーションモジュールでは扱われていませんが、CSS アニメーションと密接に関連しているため、CSS アニメーションモジュールのランディングページの[関連概念](/ja/docs/Web/CSS/Guides/Animations#関連概念)の節で強調するとよいでしょう。
 
 #### 例
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS 基本ユーザーインターフェイス](/ja/docs/Web/CSS/CSS_basic_user_interface)
-- [CSS フィルター効果](/ja/docs/Web/CSS/CSS_filter_effects)
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
+- [CSS 基本ユーザーインターフェイス](/ja/docs/Web/CSS/Guides/Basic_user_interface)
+- [CSS フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)
 
 #### テンプレート
 
-- [CSS モジュールランディングページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template)
+- [CSS モジュールページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template)
 
 ### CSS 機能リファレンスページ
 
@@ -174,15 +197,15 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 #### 例
 
-- [`background-color` プロパティ](/ja/docs/Web/CSS/background-color)
-- [`:hover` 擬似クラス](/ja/docs/Web/CSS/:hover)
-- [`@media` アットルール](/ja/docs/Web/CSS/@media)
+- {{cssxref("background-color")}} プロパティ
+- {{cssxref(":hover")}} 擬似クラス
+- {{cssxref("@media")}} アットルール
 
 #### テンプレート
 
 - [CSS プロパティページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template)
 - [CSS セレクターページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template)
-- [CSS 機能ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template)
+- [CSS 関数ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template)
 
 ### HTTP ヘッダーリファレンスページ
 
@@ -196,6 +219,19 @@ MDN ページの種類を明確に識別するために、フロントマター�
 #### テンプレート
 
 - [HTTP ヘッダーページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template)
+
+### ARIA リファレンスページ
+
+**ARIA リファレンスページ**では、障碍のある人がウェブコンテンツやウェブアプリケーションをより利用しやすくするための方法を定義する[ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)や[属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)について説明しています。
+
+#### 例
+
+- [`aria-busy` 属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
+- [`application` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+
+#### テンプレート
+
+- [ARIA ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template)
 
 ### 概念ページ
 
@@ -259,4 +295,4 @@ MDNの「[ウェブ開発の学習](/ja/docs/Learn_web_development)」の章は�
 ## 関連情報
 
 - [ページのコンポーネント](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#ページの構成要素)
-- [Markdown でのコードサンプルの作成](/ja/docs/MDN/Writing_guidelines/Code_style_guide)
+- [マークダウンでのコードサンプルの作成](/ja/docs/MDN/Writing_guidelines/Code_style_guide)

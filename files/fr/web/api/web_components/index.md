@@ -56,14 +56,14 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
 
 - Des pseudo-classes CSS&nbsp;:
   - : Quelques pseudo-classes CSS sont spécifiquement liées aux éléments personnalisés&nbsp;:
-    - [`:defined`](/fr/docs/Web/CSS/:defined) cible tout élément défini, c'est-à-dire les éléments natifs et les éléments personnalisés définis avec `CustomElementRegistry.define()`.
-    - [`:host`](/fr/docs/Web/CSS/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé depuis l'intérieur du DOM sombre.
-    - [`:host()`](/fr/docs/Web/CSS/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser en fonction d'un sélecteur passé en paramètre.
+    - [`:defined`](/fr/docs/Web/CSS/Reference/Selectors/:defined) cible tout élément défini, c'est-à-dire les éléments natifs et les éléments personnalisés définis avec `CustomElementRegistry.define()`.
+    - [`:host`](/fr/docs/Web/CSS/Reference/Selectors/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé depuis l'intérieur du DOM sombre.
+    - [`:host()`](/fr/docs/Web/CSS/Reference/Selectors/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser en fonction d'un sélecteur passé en paramètre.
     - [`:host-context()`](</fr/docs/Web/CSS/:host-context()>) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser (afin de pouvoir sélectionner un élément personnalisé depuis son DOM sombre), uniquement si le sélecteur passé en argument à la fonction correspond à un ancêtre de l'élément dans la hiérarchie du DOM.
 
 - Des pseudo-éléments CSS&nbsp;:
   - : Un pseudo-élément CSS est spécifiquement lié aux éléments personnalisés&nbsp;:
-    - [`::part`](/fr/docs/Web/CSS/::part) représente tout élément au sein [d'un arbre sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui possède un attribut [`part`](/fr/docs/Web/HTML/Reference/Global_attributes/part) correspondant.
+    - [`::part`](/fr/docs/Web/CSS/Reference/Selectors/::part) représente tout élément au sein [d'un arbre sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui possède un attribut [`part`](/fr/docs/Web/HTML/Reference/Global_attributes/part) correspondant.
 
 ### Le DOM sombre (<i lang="en">Shadow DOM</i>)
 
@@ -102,7 +102,7 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
 
 - Les pseudo-éléments CSS
   - : Voici les pseudo-éléments relatifs aux emplacements pour le shadow DOM&nbsp;:
-    - [`::slotted`](/fr/docs/Web/CSS/::slotted) qui cible le contenu inséré dans un emplacement.
+    - [`::slotted`](/fr/docs/Web/CSS/Reference/Selectors/::slotted) qui cible le contenu inséré dans un emplacement.
 
 - L'évènement [`slotchange`](/fr/docs/Web/API/HTMLSlotElement/slotchange_event)
   - : Celui-ci est déclenché sur une instance de [`HTMLSlotElement`](/fr/docs/Web/API/HTMLSlotElement) (qui représente un élément [`<slot>`](/fr/docs/Web/HTML/Reference/Elements/slot)) lorsque les nœuds contenus dans cet emplacement changent.

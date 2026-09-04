@@ -16,7 +16,7 @@ event = new Event(typeArg, eventInit);
 ### Valeurs
 
 - _typeArg_
-  - : C'est une {{domxref("DOMString")}} (_chaîne de caractères_) représentant le nom de l'évènement.
+  - : C'est une {{jsxref("String")}} (_chaîne de caractères_) représentant le nom de l'évènement.
 - _eventInit_{{optional_inline}}
   - : C'est un dictionnaire `EventInit` ayant les champs suivants :
     - `bubbles`: (facultatif) un {{jsxref("Boolean")}} indiquant si les événements sont propagés . Par défaut est `false` (_faux_).

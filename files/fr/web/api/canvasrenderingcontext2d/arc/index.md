@@ -26,7 +26,7 @@ void ctx.arc(x, y, rayon, angleDépart, angleFin, sensAntiHoraire);
 - `endAngle` _(angle fin)_
   - : La valeur de l'angle avec laquelle se finit l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.
 - `anticlockwise` _(sens anti-horaire)_ {{optional_inline}}
-  - : Un {{jsxref("Booléen")}} facultatif qui, si à `true`_(vrai),_ indique que l'arc sera dessiné dans le sens inverse des aiguilles d'une montre entre les deux angles. Par défaut, la valeur est le sens des aiguilles d'une montre.
+  - : Un {{jsxref("Boolean", "Booléen")}} facultatif qui, si à `true`_(vrai),_ indique que l'arc sera dessiné dans le sens inverse des aiguilles d'une montre entre les deux angles. Par défaut, la valeur est le sens des aiguilles d'une montre.
 
 ## Exemples
 
@@ -64,8 +64,7 @@ Modifiez le code ci-dessous et voyez les changements en direct sur le canvas :
 <textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.arc(50, 50, 50, 0, 2 * Math.PI, false);
-ctx.stroke();</textarea
->
+ctx.stroke();</textarea>
 ```
 
 ```js

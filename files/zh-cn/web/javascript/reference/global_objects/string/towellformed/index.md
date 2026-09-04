@@ -3,8 +3,6 @@ title: String.prototype.toWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/toWellFormed
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`toWellFormed()`** 方法返回一个字符串，其中该字符串的所有[单独代理项](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)都被替换为 Unicode 替换字符 U+FFFD。
 
 ## 语法

@@ -20,7 +20,7 @@ object.replace(url);
 ### 参数
 
 - _url_
-  - : {{domxref("DOMString")}} 类型，指定所导航到的页面的 URL 地址。
+  - : {{jsxref("String")}} 类型，指定所导航到的页面的 URL 地址。
 
 ## 示例
 

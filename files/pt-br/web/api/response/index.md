@@ -60,7 +60,7 @@ Você pode criar um novo objeto `Response` usando o construtor {{domxref("Respon
 - {{domxref("Body.json()")}}
   - : Recebe um "stream" {{domxref("Response")}} e lê até a conclusão. Retorna uma "promise" que resolve com o resultado do parseamento do texto do corpo como {{jsxref("JSON")}}.
 - {{domxref("Body.text()")}}
-  - : Recebe um "stream" {{domxref("Response")}} e lê até a conclusão. Retorna uma "promise" que resolve com um {{domxref("USVString")}} (texto).
+  - : Recebe um "stream" {{domxref("Response")}} e lê até a conclusão. Retorna uma "promise" que resolve com um {{jsxref("String")}} (texto).
 
 ## Exemplos
 

@@ -28,7 +28,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 ### 引数
 
 - `func`
-  - : `delay` ミリ秒が経過するたびに実行する{{jsxref("function", "関数")}}です。最初の実行は `delay` ミリ秒後に行われます。
+  - : `delay` ミリ秒が経過するたびに実行する{{jsxref("Operators/function", "関数")}}です。最初の実行は `delay` ミリ秒後に行われます。
 - `code`
   - : 関数の代わりに文字列を含める構文も許容されており、 `delay` ミリ秒が経過するたびに文字列をコンパイルして実行します。
     この構文は**推奨しません**。{{jsxref("Global_Objects/eval", "eval()")}} の使用にセキュリティ上のリスクがあるのと同じ理由です。

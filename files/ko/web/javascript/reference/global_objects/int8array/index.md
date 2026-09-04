@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Int8Array
 
 ## 생성자
 
-- {{jsxref("Global_Objects/Int8Array/Int8Array", "Int8Array()")}}
+- {{jsxref("Int8Array.Int8Array", "Int8Array()")}}
   - : 새로운 `Int8Array` 객체를 생성합니다.
 
 ## 정적 속성
@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Int8Array
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int8Array.BYTES_PER_ELEMENT")}}
   - : 요소 크기를 숫자로 반환합니다. `Int8Array`의 경우 `1`입니다..
-- {{jsxref("TypedArray.name", "Int8Array.name")}}
+- {{jsxref("Function.name", "Int8Array.name")}}
   - : 생성자 이름을 문자열로 반환합니다. `Int8Array`의 경우 `"Int8Array"` 입니다..
 
 ## 정적 메서드

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb442649a7e91a177a582a3e9c6e1a95a9e8dda5
 ---
 
-{{JSRef}}
-
 **`TypedArray.from()`** 静态方法从类数组对象或可迭代对象创建一个新的[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)。此方法与 {{jsxref("Array.from()")}} 几乎相同。
 
 {{InteractiveExample("JavaScript Demo: TypedArray.from()", "shorter")}}

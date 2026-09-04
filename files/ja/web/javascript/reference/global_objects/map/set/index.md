@@ -3,10 +3,10 @@ title: Map.prototype.set()
 short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-**`set()`** は {{jsxref("Map")}} インスタンスのメソッドで、指定されたキーと値を持つ要素をこの `Map` オブジェクトに追加したり、更新したりします。
+**`set()`** は {{jsxref("Map")}} インスタンスのメソッドで、指定されたキーと値を持つ新しい項目をこの対応表 (`Map`) に追加し、キーがすでに存在する場合は既存の項目を更新します。
 
 {{InteractiveExample("JavaScript デモ: Map.prototype.set()")}}
 
@@ -30,9 +30,9 @@ set(key, value)
 ### 引数
 
 - `key`
-  - : `Map` オブジェクトに追加する要素のキーです。キーはいずれかの [JavaScript 型](/ja/docs/Web/JavaScript/Guide/Data_structures) （いずれかの[プリミティブ値](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ値)または任意の型の [JavaScript オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)）です。
+  - : この `Map` オブジェクト内で追加または変更する項目のキーです。どのような値でも指定できます。オブジェクトのキーは、値ではなく [参照](/ja/docs/Glossary/Object_reference) によって比較されます。
 - `value`
-  - : `Map` オブジェクトに追加する要素の値です。値はいずれかの [JavaScript 型](/ja/docs/Web/JavaScript/Guide/Data_structures) （いずれかの[プリミティブ値](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ値)または任意の型の [JavaScript オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)）です。
+  - : この `Map` オブジェクト内で追加または変更する項目の値です。どのような値でも指定できます。
 
 ### 返値
 
@@ -45,11 +45,11 @@ set(key, value)
 ```js
 const myMap = new Map();
 
-// マップに新しい要素を追加する
+// 対応表に新しい要素を追加する
 myMap.set("bar", "foo");
 myMap.set(1, "foobar");
 
-// マップにある要素を更新する
+// 対応表にある要素を更新する
 myMap.set("bar", "baz");
 ```
 
@@ -58,7 +58,7 @@ myMap.set("bar", "baz");
 `set()` メソッドは `Map` オブジェクトを返すため、以下のようにメソッドチェーンを作ることができます。
 
 ```js
-// チェーンを使用してマップに新しい要素を追加する
+// チェーンを使用して対応表に新しい要素を追加する
 myMap.set("bar", "foo").set(1, "foobar").set(2, "baz");
 ```
 
@@ -73,5 +73,6 @@ myMap.set("bar", "foo").set(1, "foobar").set(2, "baz");
 ## 関連情報
 
 - {{jsxref("Map")}}
+- {{jsxref("Map.prototype.delete()")}}
 - {{jsxref("Map.prototype.get()")}}
 - {{jsxref("Map.prototype.has()")}}

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 73b724ad82b94d2a4c314924218367cea2740e97
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Raining_rectangles","Web/API/WebGL_API/By_example/Hello_vertex_attributes")}}
 
 매우 간단한 색이 있는 단단한 사각형을 그려주는 쉐이더 프로그램
 
@@ -157,4 +157,4 @@ function getRenderingContext() {
 
 이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl)에서도 확인 가능합니다.
 
-{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Raining_rectangles","Web/API/WebGL_API/By_example/Hello_vertex_attributes")}}

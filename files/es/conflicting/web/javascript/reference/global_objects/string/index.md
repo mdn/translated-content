@@ -17,7 +17,7 @@ Pasarle [`null`](/es/docs/Web/JavaScript/Reference/Operators/null) a un método 
 ## Ver también
 
 - [String](/es/docs/Web/JavaScript/Reference/Global_Objects/String)
-- {{domxref("USVString")}}
+- {{jsxref("String")}}
 - {{domxref("CSSOMString")}}
 - [`StringView` – una representación en C de los strings basados en arrays tipados](/es/docs/Web/JavaScript/Typed_arrays/String_view)
 - [Strings binarios](/es/docs/Web/API/Window/btoa)

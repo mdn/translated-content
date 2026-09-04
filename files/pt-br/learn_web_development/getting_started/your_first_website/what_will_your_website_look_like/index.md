@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_we
 original_slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website")}}
 
 _Como será o seu site?_ discute o trabalho de planejamento e design que você precisa fazer para o seu site antes de escrever o código, incluindo "Quais informações meu site oferece?", "Quais fontes e cores eu quero?" e "O que meu site faz?"
 
@@ -42,7 +42,7 @@ Você deve ter seu título e parágrafos desde antes. Mantenha eles por perto.
 
 ### Cor do tema
 
-Para escolher a cor, vá ao [Seletor de Cores](/pt-BR/docs/Web/CSS/CSS_colors/Color_picker_tool) e escolha a cor que preferir. Quando escolher a cor, você verá uma sequência de seis caracteres, como `#660066`. Isso é chamado um _código hex(adecimal)_, e representa sua cor. Copie esse código em algum lugar seguro por enquanto.
+Para escolher a cor, vá ao [Seletor de Cores](/pt-BR/docs/Web/CSS/Guides/Colors/Color_format_converter) e escolha a cor que preferir. Quando escolher a cor, você verá uma sequência de seis caracteres, como `#660066`. Isso é chamado um _código hex(adecimal)_, e representa sua cor. Copie esse código em algum lugar seguro por enquanto.
 
 ![](screenshot_from_2014-11-03_17-40-49.png)
 
@@ -72,4 +72,4 @@ Para escolher uma fonte:
 
 ![](font2.png)
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website")}}

@@ -19,7 +19,7 @@ O cabeçalho genérico HTTP/1.0 **`Pragma`** é um cabeçalho de implementação
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
     <tr>

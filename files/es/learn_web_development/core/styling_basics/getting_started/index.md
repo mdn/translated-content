@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Getting_started
 original_slug: Learn/CSS/First_steps/Getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 En este artículo aplicaremos CSS a un documento HTML sencillo para aprender algunos elementos prácticos sobre este lenguaje.
 
@@ -15,15 +15,15 @@ En este artículo aplicaremos CSS a un documento HTML sencillo para aprender alg
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conocimientos básicos de
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajo con archivos</a
         >
         y conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >).
       </td>
@@ -134,7 +134,7 @@ li {
 
 Ahora, intenta añadir esto a tu CSS.
 
-Es muy conveniente consultar en MDN la propiedad `list-style-type` para ver qué valores admite. Echa un vistazo a la página de [`list-style-type`](/es/docs/Web/CSS/list-style-type) y encontrarás un ejemplo interactivo en la parte superior para probar diferentes valores (todos los permitidos se detallan más abajo en esa misma página).
+Es muy conveniente consultar en MDN la propiedad `list-style-type` para ver qué valores admite. Echa un vistazo a la página de [`list-style-type`](/es/docs/Web/CSS/Reference/Properties/list-style-type) y encontrarás un ejemplo interactivo en la parte superior para probar diferentes valores (todos los permitidos se detallan más abajo en esa misma página).
 
 Al mirar esa página, descubrirás que, además de eliminar las viñetas de la lista, también puedes cambiarlas. Intenta cambiarlas por unas cuadradas utilizando el valor `square`.
 
@@ -286,4 +286,4 @@ En este tutorial, hemos visto varias formas con las que se puede diseñar un doc
 
 En el próximo artículo, veremos cómo se estructura el CSS.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "conflicting/Learn_web_development/Core/Styling_basics")}}

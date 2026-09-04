@@ -1,27 +1,20 @@
 ---
-title: Window.outerWidth
+title: "Window : propriété outerWidth"
+short-title: outerWidth
 slug: Web/API/Window/outerWidth
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef}}
 
-`Window.outerWidth` récupère la largeur de l'extérieur de la fenêtre du navigateur. Elle représente la largeur de toute la fenêtre du navigateur, y compris la barre latérale (si elle est agrandie), la fenêtre chrome et le redimensionnement de la fenêtre.
-
-Cette propriété est en lecture seule ; elle n'a pas de valeur par défaut.
-
-## Syntaxe
-
-```js
-largeurExterieureFenetre = window.outerWidth;
-```
-
-Lors du retour, `largeurExterieureFenetre` vaut la largeur de l'extérieur de la fenêtre.
+La propriété en lecture seule **`outerWidth`** de l'interface {{DOMxRef("Window")}} retourne la largeur de l'extérieur de la fenêtre du navigateur. Elle représente la largeur de toute la fenêtre du navigateur, y compris la barre latérale (si elle est agrandie), le chrome de la fenêtre et les bordures/poignées de redimensionnement de la fenêtre.
 
 ## Notes
 
-Pour changer la taille d'une fenêtre, voir {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo ()")}}.
+Pour changer la taille d'une fenêtre, voir {{DOMxRef("window.resizeBy()")}} et {{DOMxRef("window.resizeTo()")}}.
 
-Pour récupérer la largeur interne d'une fenêtre, c'est-à-dire la largeur de la page affichée, voir {{domxref ("window.innerWidth")}}.
+Pour récupérer la largeur interne d'une fenêtre, c'est-à-dire la largeur de la page affichée, voir {{DOMxRef("window.innerWidth")}}.
 
 ## Spécifications
 
@@ -33,5 +26,8 @@ Pour récupérer la largeur interne d'une fenêtre, c'est-à-dire la largeur de 
 
 ## Voir aussi
 
-- {{domxref("window.outerHeight")}}, {{domxref("window.innerHeight")}}, {{domxref("window.innerWidth")}}
-- {{domxref("window.resizeBy()")}}, {{domxref("window.resizeTo()")}}
+- La propriété {{DOMxRef("window.outerHeight")}}
+- La propriété {{DOMxRef("window.innerHeight")}}
+- La propriété {{DOMxRef("window.innerWidth")}}
+- La méthode {{DOMxRef("window.resizeBy()")}}
+- La méthode {{DOMxRef("window.resizeTo()")}}

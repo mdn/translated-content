@@ -24,7 +24,7 @@ URL.revokeObjectURL(objectURL);
 ### Parâmetros
 
 - `objectURL`
-  - : Uma {{domxref("DOMString")}} representando o objeto URL que anteriormente foi criado com {{domxref("URL.createObjectURL", "createObjectURL()") }}.
+  - : Uma {{jsxref("String")}} representando o objeto URL que anteriormente foi criado com {{domxref("URL.createObjectURL", "createObjectURL()") }}.
 
 ## Exemplos
 

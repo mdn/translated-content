@@ -24,7 +24,7 @@ O cabeçalho geral HTTP **`Date`** contém a data e a hora que a mensagem foi ge
       <td>{{Glossary("General header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>sim</td>
     </tr>
   </tbody>

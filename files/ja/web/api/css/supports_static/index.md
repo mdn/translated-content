@@ -1,8 +1,9 @@
 ---
 title: "CSS: supports() 静的メソッド"
+short-title: supports()
 slug: Web/API/CSS/supports_static
 l10n:
-  sourceCommit: f29d8a648ef7ada05a00c358bfb9e9f67f3bc90d
+  sourceCommit: 4ab235391977478a8a5e56405138392c531e1ad7
 ---
 
 {{APIRef("CSSOM")}}
@@ -36,17 +37,19 @@ CSS.supports(supportCondition)
 
 ## 例
 
+次の例では、`result` はブラウザーが指定された CSS 機能に対応しているかどうかを示す論理値です。
+
 ```js
 result = CSS.supports("text-decoration-style", "blink");
 result = CSS.supports("display: flex");
 result = CSS.supports("(--foo: red)");
-
+result = CSS.supports("selector(:has(a))");
 result = CSS.supports(
   "(transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve)",
 );
-
-// 結果は true または false
 ```
+
+その他の例や構文機能については、{{cssxref("@supports")}} アットルールを参照してください。
 
 ## 仕様書
 

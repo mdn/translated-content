@@ -27,7 +27,7 @@ Le handler **blocked** est exécuté lorsque l'ouverture d'une connexion à une 
 | Property                        | Type                       | Description                                |
 | ------------------------------- | -------------------------- | ------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The request concerned by this event.       |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                         |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | The type of event.                         |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not. |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.   |
 | `newVersion` {{readonlyInline}} | unsigned long (int)        | The new version of the database.           |

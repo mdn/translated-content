@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/Mobile
 original_slug: Learn/Accessibility/Mobile
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
 Dado que el acceso a la web en dispositivos móviles es tan popular, y las plataformas populares como iOS y Android tienen herramientas de accesibilidad completas, es importante considerar la accesibilidad de su contenido web en estas plataformas. Este artículo analiza las consideraciones de accesibilidad específicas para dispositivos móviles.
 
@@ -15,7 +15,7 @@ Dado que el acceso a la web en dispositivos móviles es tan popular, y las plata
       <td>
         Conocimientos básicos de computación, una comprensión básica de HTML,
         CSS y JavaScript, y una comprensión de los
-        <a href="/es/docs/Learn/Accessibility">artículos previos del curso</a>.
+        <a href="/es/docs/Learn_web_development/Core/Accessibility">artículos previos del curso</a>.
       </td>
     </tr>
     <tr>
@@ -218,7 +218,7 @@ Hemos proporcionado un ejemplo sencillo que muestra cómo usar el mouse y los ev
 
 En particular, los problemas más comunes que deben abordarse para dispositivos móviles son:
 
-- Adecuación de diseños para dispositivos móviles. Un diseño de varias columnas no funcionará tan bien en una pantalla estrecha, por ejemplo, y es posible que deba aumentar el tamaño del texto para que sea legible. Dichos problemas se pueden resolver creando un diseño sensible utilizando tecnologías tales como [consultas de medios](/es/docs/Web/CSS/CSS_media_queries), [vista](/es/docs/Mozilla/Mobile/Viewport_meta_tag) y [flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox). .
+- Adecuación de diseños para dispositivos móviles. Un diseño de varias columnas no funcionará tan bien en una pantalla estrecha, por ejemplo, y es posible que deba aumentar el tamaño del texto para que sea legible. Dichos problemas se pueden resolver creando un diseño sensible utilizando tecnologías tales como [consultas de medios](/es/docs/Web/CSS/Guides/Media_queries), [vista](/es/docs/Mozilla/Mobile/Viewport_meta_tag) y [flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox). .
 - Conservando tamaños de imagen descargados. En general, los dispositivos de pantalla pequeña no necesitarán imágenes tan grandes como sus contrapartes de escritorio, y es más probable que estén en conexiones de red lentas. Por lo tanto, es aconsejable servir imágenes más pequeñas para dispositivos de pantalla estrecha, según corresponda. Puede manejar esto [técnicas de imagenes de respuesta](/es/docs/Web/HTML/Guides/Responsive_images).
 - Pensando en altas resoluciones. Muchos dispositivos móviles tienen pantallas de alta resolución y, por lo tanto, necesitan imágenes de mayor resolución para que la pantalla pueda seguir luciendo nítida y nítida. Nuevamente, puede servir imágenes según corresponda utilizando técnicas de imágenes sensibles. Además, muchos requisitos de imagen se pueden cumplir con el formato de imágenes vectoriales SVG, que es compatible con todos los navegadores actuales. SVG tiene un tamaño de archivo pequeño y se mantendrá nítido independientemente del tamaño que se muestre (consulte [Agregar gráficos vectoriales a la web](/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) para obtener más detalles).
 
@@ -269,4 +269,4 @@ En este artículo, le proporcionamos algunos detalles sobre problemas comunes co
 - [Directrices para desarrollo web en móviles](https://www.smashingmagazine.com/guidelines-for-mobile-web-development/) — Una lista de artículos en Smashing Magazine que cubren diferentes técnicas para el diseño web móvil.
 - [Haz funcionar tu web en dispositivos táctiles](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Artículo útil sobre el uso de eventos táctiles para que las interacciones funcionen en dispositivos móviles.
 
-{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}

@@ -18,11 +18,11 @@ var result = crypto.subtle.deriveKey(algorithm, masterKey, derivedKeyAlgorithm, 
 - `algorithm` é um objeto definindo o algoritmo de derivação a se usar. Os valores suportados são:
   - `{"name": "ECDH", "public": publicKey}`
   - `{"name": "DH", "public": publicKey}`
-  - `{"name": "PBKDF2", salt, iterations, hash}` where _`salt`_ is an {{jsxref("ArrayBuffer")}} ou um {{jsxref("ArrayBufferView")}}, _`iterations`_ é o número de interações e _`hash`_ é um {{domxref("DOMString")}} identificando o algoritmo hashing para uso.
+  - `{"name": "PBKDF2", salt, iterations, hash}` where _`salt`_ is an {{jsxref("ArrayBuffer")}} ou um {{domxref("ArrayBufferView")}}, _`iterations`_ é o número de interações e _`hash`_ é um {{domxref("String")}} identificando o algoritmo hashing para uso.
   - `{"name": "HKDF-CTR", hash, label, context}`
 
 - _`masterKey`_ é uma {{domxref("CryptoKey")}} representando a master key para ser utilizada por um algoritmo de derivação de key.
-- `derivedKeyAlgorithm` é um objeto que define o algoritmo, a key derivada será utilizada para {{domxref("DOMString")}} como um atalho para `{"name": derivedKeyAlgo}`. Para AES uma propriedade `length` também é requerida, e os valores possíveis são 128, 192 ou 256 bits.
+- `derivedKeyAlgorithm` é um objeto que define o algoritmo, a key derivada será utilizada para {{jsxref("String")}} como um atalho para `{"name": derivedKeyAlgo}`. Para AES uma propriedade `length` também é requerida, e os valores possíveis são 128, 192 ou 256 bits.
 - `extractable` é um {{jsxref("Boolean")}} indicando se a key pode ser extraída de um objeto {{domxref("CryptoKey")}} em um estágio mais tardio.
 - `keyUsages` é um {{jsxref("Array")}} indicando o que pode ser feito com a chave derivada. Os valores possíveis do array são:
   - `"encrypt"`, permitindo que a key seja utilizada para {{glossary("encryption", "encrypting")}} mensagens.

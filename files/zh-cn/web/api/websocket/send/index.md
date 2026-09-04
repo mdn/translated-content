@@ -17,7 +17,7 @@ WebSocket.send("Hello server!");
 
 - `data`
   - : 用于传输至服务器的数据。它必须是以下类型之一：
-    - {{domxref("USVString")}}
+    - {{jsxref("String")}}
       - : 文本字符串。字符串将以 UTF-8 格式添加到缓冲区，并且 `bufferedAmount` 将加上该字符串以 UTF-8 格式编码时的字节数的值。
     - {{domxref("ArrayBuffer")}}
       - : 你可以使用类型化数组对象发送底层二进制数据；其二进制数据内存将被缓存于缓冲区，`bufferedAmount` 将加上所需字节数的值。

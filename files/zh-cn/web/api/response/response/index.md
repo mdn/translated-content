@@ -22,7 +22,7 @@ let myResponse = new Response(body, init);
     - {{domxref("FormData")}}
     - {{domxref("ReadableStream")}}
     - {{domxref("URLSearchParams")}}
-    - {{domxref("USVString")}}
+    - {{jsxref("String")}}
 
 - _init_ {{optional_inline}}
   - : 一个参数 (options) 对象，包含要应用到 response 上的任何自定义设置。可能参数 (options) 是：

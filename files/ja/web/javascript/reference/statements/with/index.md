@@ -2,10 +2,10 @@
 title: with
 slug: Web/JavaScript/Reference/Statements/with
 l10n:
-  sourceCommit: 66a7e9459b1658e5be827f929d59f1894bea0f84
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{jsSidebar("Statements")}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > `with` 文の使用は推奨されません。混乱を招くバグや互換性問題の原因となる可能性があり、最適化ができなくなり、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では禁止されているからです。推奨される代替案は、プロパティをアクセスしたいオブジェクトを一時変数に割り当てることです。
@@ -58,7 +58,7 @@ with ([1, 2, 3]) {
 }
 ```
 
-オブジェクトは [`@@unscopables`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) プロパティを持つことができますが、これはスコープチェーンに（後方互換性のために）追加してはならないプロパティのリストを定義するものです。詳細は [`Symbol.unscopables`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) のドキュメントを参照してください。
+オブジェクトは [`[Symbol.unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) プロパティを持つことができますが、これはスコープチェーンに（後方互換性のために）追加してはならないプロパティのリストを定義するものです。詳細は [`Symbol.unscopables`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) のドキュメントを参照してください。
 
 `with` 文を使用する理由は、一時変数を 1 つ節約するためと、長いオブジェクト参照を繰り返すことを避けるためにファイルサイズを縮小するためです。しかし、`with` 文が好ましくない理由はもっとたくさんあります。
 
@@ -93,7 +93,7 @@ with ([1, 2, 3]) {
 
 ### with の使用
 
-次の `with` 文は、{{jsxref("Math")}} オブジェクトが既定のオブジェクトであると指定しています。`with` 文内の複数の文は、オブジェクトを指定することなく、 {{jsxref("Math.PI", "PI")}} プロパティ、 {{jsxref("Math.cos", "cos")}} メソッド、および {{jsxref("Math.sin", "sin")}} メソッドを参照しています。JavaScript は、これらの参照に対して `Math` オブジェクトを仮定します。
+次の `with` 文は、{{jsxref("Math")}} オブジェクトが既定のオブジェクトであると指定しています。`with` 文内の複数の文は、オブジェクトを指定することなく、 {{jsxref("Math/PI", "PI")}} プロパティ、 {{jsxref("Math/cos", "cos")}} メソッド、および {{jsxref("Math/sin", "sin")}} メソッドを参照しています。JavaScript は、これらの参照に対して `Math` オブジェクトを仮定します。
 
 ```js
 let a, x, y;
@@ -174,4 +174,4 @@ with (namespace) {
 - {{jsxref("Statements/block", "block", "", 1)}}
 - [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array.@@unscopables", "Array.prototype[Symbol.unscopables]")}}
+- [`Array.prototype[Symbol.unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)

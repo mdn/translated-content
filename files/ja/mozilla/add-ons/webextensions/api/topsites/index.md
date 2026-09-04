@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/topSites
 
 {{AddonSidebar}}
 
-topSites API を使うと、ユーザーがよく訪れるページをを含む配列を取得できます。
+topSites API を使うと、ユーザーがよく訪れるページを含む配列を取得できます。
 
 ブラウザーはユーザーがこれらの場所に簡単に戻れるようにこれを維持します。Firefox では既定で「新しいタブ」ページには最もよく訪れるページのリストが提供されます。
 

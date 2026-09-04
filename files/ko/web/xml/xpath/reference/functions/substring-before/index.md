@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/substring-before
 original_slug: Web/XPath/Functions/substring-before
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `substring-before` 함수는 첫 번째 인수에서 두 번째 인수가 나타난 앞의 나머지를 반환합니다.
 

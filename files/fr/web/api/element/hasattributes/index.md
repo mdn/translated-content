@@ -1,42 +1,36 @@
 ---
-title: element.hasAttributes
+title: "Element : méthode hasAttributes()"
+short-title: hasAttributes()
 slug: Web/API/Element/hasAttributes
+l10n:
+  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
-La méthode **`hasAttributes()`**, rattachée à l'interface {{domxref("Element")}}, renvoie une valeur booléenne indiquant si le nœud courant a au moins un attribut ou non.
+La méthode **`hasAttributes()`** de l'interface {{DOMxRef("Element")}} retourne une valeur booléenne indiquant si l'élément courant possède des attributs ou non.
 
 ## Syntaxe
 
-```js
-var result = element.hasAttributes();
+```js-nolint
+hasAttributes()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-- `result`
-  - : contient la valeur de retour `true` ou `false`.
+Un booléen.
 
-## Exemple
+## Exemples
 
 ```js
-var foo = document.getElementById("foo");
-if (foo.hasAttributes()) {
-  // faire quelque chose avec 'foo.attributes'
+let toto = document.getElementById("toto");
+if (toto.hasAttributes()) {
+  // Faire quelque chose avec 'toto.attributes'
 }
-```
-
-## Polyfill
-
-```js
-(function (prototype) {
-  prototype.hasAttributes =
-    prototype.hasAttributes ||
-    function () {
-      return this.attributes.length > 0;
-    };
-})(Element.prototype);
 ```
 
 ## Spécifications
@@ -49,5 +43,9 @@ if (foo.hasAttributes()) {
 
 ## Voir aussi
 
-- {{domxref("Element.attributes")}}
-- {{domxref("Element.hasAttribute()")}}
+- La propriété {{DOMxRef("Element.attributes")}}
+- La méthode {{DOMxRef("Element.hasAttribute()")}}
+- La méthode {{DOMxRef("Element.getAttribute()")}}
+- La méthode {{DOMxRef("Element.setAttribute()")}}
+- La méthode {{DOMxRef("Element.removeAttribute()")}}
+- La méthode {{DOMxRef("Element.toggleAttribute()")}}

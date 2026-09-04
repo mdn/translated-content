@@ -31,7 +31,7 @@ l10n:
   - : 関数によって期待される引数の数を指定します。
 - {{jsxref("Function/name", "name")}}
   - : 関数の名前です。
-- {{jsxref("Function/prototype", "prototype")}}
+- {{jsxref("Function", "prototype")}}
   - : [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子付きでコンストラクターとして関数を使用する場合に使用されます。新しいオブジェクトのプロトタイプとなります。
 
 ## インスタンスメソッド

@@ -20,7 +20,7 @@ element = documentfragment.querySelector(selectors);
 ### Paramètres
 
 - _selectors_
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) contenant un ou plusieurs sélecteurs CSS séparés par des virgules.
+  - : est une {{jsxref("String")}} (_chaîne de caractères_) contenant un ou plusieurs sélecteurs CSS séparés par des virgules.
 
 ## Exemples
 

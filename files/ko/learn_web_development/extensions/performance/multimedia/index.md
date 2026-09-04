@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
 
 미디어 파일(이미지 + 비디오)은 평균적으로 웹사이트에서 다운로드되는 용량의 약 70% 이상을 차지합니다. 다운로드 성능 측면에서 미디어를 없애거나 파일 크기를 줄이는 것은 어렵지 않습니다. 이 글에서는 웹 성능을 개선하기 위해 이미지와 비디오를 최적화하는 방법을 살펴봅니다.
 
@@ -17,7 +17,7 @@ l10n:
       <td>
         컴퓨터에 대한 기본적인 이해도,
         <a href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software">기본적인 소프트웨어 설치</a>,
-        <a href="/ko/docs/Learn/Getting_started_with_the_web">클라이언트 사이드 웹 기술</a>에 대한 기초 지식
+        <a href="/ko/docs/Learn_web_development/Getting_started/Your_first_website">클라이언트 사이드 웹 기술</a>에 대한 기초 지식
       </td>
     </tr>
     <tr>
@@ -42,7 +42,7 @@ l10n:
 
 ## 이미지 전송 최적화
 
-이미지는 데이터 전송량 중 가장 큰 부분을 차지하지만, 이미지 다운로드가 [사용자가 인지하는 성능](/ko/docs/Learn/Performance/Perceived_performance)에 영향을 끼치는 정도는 많은 사람들의 생각보다 훨씬 적습니다. 가장 큰 이유는 페이지 내 텍스트가 즉시 다운로드되어 표시되고 사용자들이 이미지가 도착하면서 렌더링되는 것을 볼 수 있기 때문입니다. 하지만 좋은 사용자 경험을 위해선 방문자들이 이미지를 가능한 한 빨리 볼 수 있어야 합니다.
+이미지는 데이터 전송량 중 가장 큰 부분을 차지하지만, 이미지 다운로드가 [사용자가 인지하는 성능](/ko/docs/Learn_web_development/Extensions/Performance/Perceived_performance)에 영향을 끼치는 정도는 많은 사람들의 생각보다 훨씬 적습니다. 가장 큰 이유는 페이지 내 텍스트가 즉시 다운로드되어 표시되고 사용자들이 이미지가 도착하면서 렌더링되는 것을 볼 수 있기 때문입니다. 하지만 좋은 사용자 경험을 위해선 방문자들이 이미지를 가능한 한 빨리 볼 수 있어야 합니다.
 
 ### 로딩 전략
 
@@ -151,4 +151,4 @@ img {
 
 이 섹션에선 이미지 최적화에 대해 살펴보았습니다. 이제 평균 웹사이트 데이터 전송량의 절반에 달하는 부분을 최적화하는 방법에 대해 전체적으로 이해했을 것입니다. 이미지는 사용자들의 데이터 전송량을 소모하고 페이지 로딩을 느리게 하는 단 하나의 미디어 유형일 뿐입니다. 다음에는 데이터 전송량의 소모의 20%를 차지하는 비디오를 최적화하는 방법에 대해서 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}

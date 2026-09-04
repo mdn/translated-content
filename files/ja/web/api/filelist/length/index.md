@@ -1,13 +1,14 @@
 ---
-title: FileList.length
+title: "FileList: length プロパティ"
+short-title: length
 slug: Web/API/FileList/length
 l10n:
-  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
+  sourceCommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-{{domxref("FileList")}} の読み取り専用プロパティ **`length`** は、`FileList` に含まれるファイルの数を返します。
+**`length`** は {{domxref("FileList")}} インターフェイスの読み取り専用プロパティで、`FileList` に含まれるファイルの数を返します。
 
 ## 値
 

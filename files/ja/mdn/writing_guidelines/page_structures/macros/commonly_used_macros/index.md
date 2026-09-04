@@ -70,7 +70,7 @@ MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）の
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/htmlxref.rs">HTMLElement</a>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element">HTML 要素リファレンス</a> (/Web/HTML/Element)
+        <a href="/ja/docs/Web/HTML/Reference/Elements">HTML 要素リファレンス</a> (/Web/HTML/Element)
       </td>
       <td>
         <code>\{{HTMLElement("select")}}</code> は {{HTMLElement("select")}} になります。

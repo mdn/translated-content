@@ -1,43 +1,32 @@
 ---
-title: group ロールの使用
+title: "ARIA: group ロール"
+short-title: group
 slug: Web/Accessibility/ARIA/Reference/Roles/group_role
-original_slug: Web/Accessibility/ARIA/Roles/group_role
+l10n:
+  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
 ---
 
-{{AccessibilitySidebar}}
+`group` ロールは、支援技術によってページの概要や目次に含まれないことを意図している、一連のユーザーインターフェイスオブジェクトを識別するものです。
 
-### 説明
+## 解説
 
-このテクニックは、[`group`](https://www.w3.org/TR/wai-aria/#group) ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。
+HTML の {{HTMLElement("fieldset")}} 要素と最も密接に関連する `group` 文書構造ロールは、一連のユーザーインターフェースオブジェクトを識別するために使用されます。これは、[`region`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/region_role) と比較して、ページの概要や目次には記載しないことを意図していないものです。
 
-`group` ロールは、[`region`](https://www.w3.org/TR/wai-aria/#region) とは対照的に、目次やページの要約に含まれないように意図された一連のユーザーインターフェイスオブジェクトを識別するために使用されます（スクリプトや支援技術によって動的に作成される構造のような）。 グループ（group）はページ上で主要な知覚可能なセクションと見なされるべきではありません。 このロールが要素に追加されると、ブラウザーは、アクセス可能なグループイベントを支援技術製品に送り、支援技術製品はそれをユーザーに通知することができます。
+`group` ロールを使用しましょう。アイテムの関連する機能を形成するために使用します。[`tree`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role) ウィジェット内の子要素が階層内で兄弟要素の集合を形成する場合や、[`directory`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role) 内の同じコンテナーを持つアイテムの集合などです。
 
-グループは、階層内の兄弟の集合を形成するツリーウィジェット内の子供や、ディレクトリー内に同じコンテナーを持つ項目の集合のような、関連する機能を持つ項目の論理的集合を形成するために使用されるべきです。 ただし、グループがリストのコンテキストで使用される場合、作者はその子を [`listitem`](https://www.w3.org/TR/wai-aria/#listitem) 要素に制限する必要があります。 グループ要素はネストすることができます。
+[`list`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role) のコンテキストで `group` を使用する場合は、`group` の子要素を [`listitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role) 要素に制限してください。この場合、ネストされた {{HTMLElement("li")}} 子要素を持つ、複数の順序付きリストまたは順序なしリスト（{{HTMLElement("ol")}} または {{HTMLElement("ul")}}）を使用することを推奨します。
 
-支援技術によるグループの適切な取り扱いは、それが提供されるコンテキストによって決まります。
+[`listbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) のコンテキストで使用する場合、許可される子要素は {{HTMLElement("option")}} 要素のみです。この場合、代わりに {{HTMLElement("select")}}、{{HTMLElement("option")}}、{{HTMLElement("optgroup")}} を使用することを推奨します。
 
-作者がページの目次に含まれることを保証するためにセクションが重要であると考える場合は、そのセクションに [`region`](https://www.w3.org/TR/wai-aria/#region) ロールまたは[標準的なランドマークロール](https://www.w3.org/TR/wai-aria/#landmark_roles)を割り当てるべきです。
+`group` の要素は入れ子にすることができます。
 
-### ユーザーエージェントと支援技術への影響
+`group` ロールは、ページ内の主要な識別可能なセクションには使用しないでください。そのセクションが、ページの目次に記載するほど重要なものである場合は、`region` ロール、または標準の[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles)を使用してください。
 
-`group` ロールが要素に追加されるか、またはそのような要素が可視になると、ユーザーエージェントは以下を行うべきです。
-
-- オペレーティングシステムのアクセシビリティ API で `group` ロールを持つものとして要素を公開します。
-- オペレーティングシステムのアクセシビリティ API をサポートしている場合は、アクセス可能なグループイベントを発生させます。
-
-支援技術製品は、そのようなイベントをリスンし、それに応じてユーザーに以下を通知するべきです。
-
-- スクリーンリーダーは、フォーカスが最初にその中のコントロールに着くとグループをアナウンスし、もし [`aria-describedby`](https://www.w3.org/TR/wai-aria/#aria-describedby) が設定されていれば、その説明が読み上げられます。 これに続いて、フォーカスされたコントロールをアナウンスすることができます。
-- スクリーン拡大鏡でグループが拡大されることがあります。
-
-> [!NOTE]
-> 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
+要素にロールが追加されると、ブラウザーは支援技術製品に対してアクセシビリティ・グループ・イベントを送信し、支援技術製品はそれに基づいてユーザーに通知を行うことが可能です。
 
 ### 例
 
-#### 例 1: HTML ツリービューでの group ロールの使用
-
-以下のスニペットは、HTML ソースコードに group ロールを直接追加する方法を示しています。
+下記 HTML サンプルコードでは、`tree` ビューで `group` ロールを使用しています。
 
 ```html
 <div id="tree1" role="tree" tabindex="-1">
@@ -47,7 +36,11 @@ original_slug: Web/Accessibility/ARIA/Roles/group_role
     role="presentation"
     aria-owns="animalGroup"
     aria-expanded="true">
-    <img role="presentation" tabindex="-1" src="images/treeExpanded.gif" />
+    <img
+      role="presentation"
+      tabindex="-1"
+      src="images/treeExpanded.gif"
+      alt="" />
     <span role="treeitem" tabindex="0">動物</span>
   </div>
   <div id="animalGroup" role="group">
@@ -60,7 +53,11 @@ original_slug: Web/Accessibility/ARIA/Roles/group_role
       role="presentation"
       aria-owns="catGroup"
       aria-expanded="false">
-      <img role="presentation" tabindex="-1" src="images/treeContracted.gif" />
+      <img
+        role="presentation"
+        tabindex="-1"
+        src="images/treeContracted.gif"
+        alt="" />
       <span role="treeitem" tabindex="0">猫</span>
     </div>
     <div id="catGroup" role="group">
@@ -75,9 +72,7 @@ original_slug: Web/Accessibility/ARIA/Roles/group_role
 </div>
 ```
 
-#### 例 2: HTML ドロップダウンメニューでの group ロールの使用
-
-以下のスニペットは、HTML ソースコードに group ロールを直接追加する方法を示しています。
+次の例では、`group` ロールを使用し、[`menu`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) のドロップダウンメニューに [`menuitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role) が含まれています。
 
 ```html
 <div role="menu">
@@ -97,26 +92,16 @@ original_slug: Web/Accessibility/ARIA/Roles/group_role
 </div>
 ```
 
-#### 動作する例
+このメニューは、{{HTMLElement('select')}} および {{HTMLElement('option')}} 要素を使用して作成できます。この場合、`group` ロールは {{HTMLElement('optgroup')}} 要素に最も近いものとなります。
 
-- Unknown Title (`http://test.cita.illinois.edu/aria/tree/tree2.php`) **\[broken link]**
+## 仕様書
 
-### 注
+{{Specifications}}
 
-- グループの DOM サブツリーの外側にあるグループメンバーは、そのグループに参加するために明示的な関係を割り当てられている必要があります。
+## 関連情報
 
-### 使用された ARIA 属性
-
-- [group](https://www.w3.org/TR/wai-aria/#group)
-
-### 関連する ARIA 技術
-
-- [region](https://www.w3.org/TR/wai-aria/#region) ロール
-
-### 互換性
-
-TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
-
-### その他のリソース
-
-- ARIA Best Practices – Directories, Groups and Regions: <http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading> （該当項目は削除されています。）
+- {{HTMLElement('fieldset')}} 要素
+- [ARIA: `section` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/section_role)
+- [ARIA: `row` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+- [ARIA: `select` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/select_role)
+- [ARIA: `toolbar` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role)

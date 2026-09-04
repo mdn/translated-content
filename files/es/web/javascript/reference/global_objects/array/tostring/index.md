@@ -43,4 +43,4 @@ JavaScript llama al método `toString` automáticamente cuando un array va a ser
 ## Vea también
 
 - {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

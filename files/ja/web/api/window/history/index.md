@@ -1,6 +1,9 @@
 ---
-title: Window.history
+title: "Window: history プロパティ"
+short-title: history
 slug: Web/API/Window/history
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
@@ -9,6 +12,10 @@ slug: Web/API/Window/history
 
 詳細や使用例については、[ブラウザーの履歴の操作](/ja/docs/Web/API/History_API)をご覧ください。特に、このページでは {{domxref("History.pushState", "pushState()")}} メソッドと {{domxref("History.replaceState", "replaceState()")}} メソッドについて、使用する前に気を付けなければならないセキュリティ上の特性を説明しています。
 
+## 値
+
+{{domxref("History")}} オブジェクトへの参照。
+
 ## 例
 
 ```js
@@ -16,7 +23,7 @@ history.back(); // 戻るボタンを押すのと同等
 history.go(-1); // history.back(); と同等
 ```
 
-## 注
+## メモ
 
 最上位ページにおいて `History` オブジェクトを通してアクセスできるセッション履歴のページリストは、ブラウザーの「戻る」や「次へ」ボタンの隣にあるドロップダウンで確認することができます。
 

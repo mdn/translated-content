@@ -20,7 +20,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypeError
 
 ## 생성자
 
-- {{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}
+- {{jsxref("TypeError.TypeError", "TypeError()")}}
   - : 새로운 `TypeError` 객체를 생성합니다.
 
 ## 인스턴스 속성

@@ -9,7 +9,7 @@ l10n:
 
 `AnimationEffect` は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) のインターフェイスで、アニメーション効果を表すインターフェイスです。
 
-`AnimationEffect` は抽象インターフェイスなので、直接インスタンス化することはできません。しかし、 {{domxref("KeyframeEffect")}} のような具体的なインターフェイスはこれを継承しており、これらのインターフェイスのインスタンスは {{domxref("Animation")}} オブジェクトに渡して再生することができますし、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)や[トランジション](/ja/docs/Web/CSS/CSS_transitions)でも使うことができます。
+`AnimationEffect` は抽象インターフェイスなので、直接インスタンス化することはできません。しかし、 {{domxref("KeyframeEffect")}} のような具体的なインターフェイスはこれを継承しており、これらのインターフェイスのインスタンスは {{domxref("Animation")}} オブジェクトに渡して再生することができますし、 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)や[トランジション](/ja/docs/Web/CSS/Guides/Transitions)でも使うことができます。
 
 ## インスタンスメソッド
 

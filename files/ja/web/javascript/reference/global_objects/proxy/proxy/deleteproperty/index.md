@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-**`handler.deleteProperty()`** メソッドは、オブジェクトの `[[Delete]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxref("Operators/delete", "delete")}} などの操作で使用されます。
+**`handler.deleteProperty()`** メソッドは、オブジェクトの `[[Delete]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxref("delete")}} などの操作で使用されます。
 
 {{InteractiveExample("JavaScript デモ: handler.deleteProperty()", "taller")}}
 
@@ -79,7 +79,7 @@ new Proxy(target, {
 
 ### プロパティ値の取得のトラップ
 
-次のコードは {{jsxref("Operators/delete", "delete")}} 操作をトラップします。
+次のコードは {{jsxref("delete")}} 操作をトラップします。
 
 ```js
 const p = new Proxy(
@@ -120,5 +120,5 @@ console.log(result2); // false
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/delete", "delete")}} 演算子
+- {{jsxref("delete")}} 演算子
 - {{jsxref("Reflect.deleteProperty()")}}

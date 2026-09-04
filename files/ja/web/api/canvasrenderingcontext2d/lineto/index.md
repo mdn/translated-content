@@ -1,9 +1,12 @@
 ---
-title: CanvasRenderingContext2D.lineTo()
+title: "CanvasRenderingContext2D: lineTo() メソッド"
+short-title: lineTo()
 slug: Web/API/CanvasRenderingContext2D/lineTo
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 {{domxref("CanvasRenderingContext2D")}} の **`lineTo()`** はキャンバス 2D API のメソッドで、現在のサブパスに対して、その終点から指定された `(x, y)` 座標に向けて直線を追加します。
 
@@ -11,8 +14,8 @@ slug: Web/API/CanvasRenderingContext2D/lineTo
 
 ## 構文
 
-```js
-ctx.lineTo(x, y);
+```js-nolint
+lineTo(x, y)
 ```
 
 ### 引数
@@ -24,7 +27,7 @@ ctx.lineTo(x, y);
 
 ### 返値
 
-{{jsxref("undefined")}}.
+なし ({{jsxref("undefined")}})。
 
 ## 例
 

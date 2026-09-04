@@ -60,5 +60,5 @@ HTML 元素通過「標籤」與文件中的其他文本區分開來，標籤由
 
 ## 相關主題
 
-- [使用 CSS 為 HTML 元素應用顏色](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color)
+- [使用 CSS 為 HTML 元素應用顏色](/zh-TW/docs/Web/CSS/Guides/Colors/Applying_color)
   - : 這篇文章涵蓋了使用 CSS 為 HTML 內容添加顏色的的大部分方法，列出了 HTML 文件的哪些部分可以著色以及在進行著色時應使用哪些 CSS 屬性。

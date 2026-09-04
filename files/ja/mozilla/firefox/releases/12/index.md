@@ -31,7 +31,7 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 - DOM 4 仕様で定義されている {{ domxref("DOMError") }} が実装されました。
 - {{ domxref("Document.createNodeIterator()") }} メソッドが DOM 4 仕様に適合するように更新されました。これにより、`whatToShow` および `filter` 引数がオプションになり、非標準の 4 番目の引数である `entityReferenceExpansion` が削除されます。
 - {{ domxref("Blob") }} インターフェイスの `slice()` メソッドは符号付き 64 ビット整数の範囲外の `start` の値と `end` の値を正しく受け取れないバグによる影響を受けていましたが、この問題は修正されました。`
-- {{ domxref("element.getBoundingClientRect()") }} メソッドが要素の矩形の境界を算出するときに [CSS transforms](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) の効果を考慮するようになりました。
+- {{ domxref("element.getBoundingClientRect()") }} メソッドが要素の矩形の境界を算出するときに [CSS transforms](/ja/docs/Web/CSS/Guides/Transforms/Using) の効果を考慮するようになりました。
 
 #### 新しい WebAPI
 

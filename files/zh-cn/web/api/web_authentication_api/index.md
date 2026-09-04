@@ -16,7 +16,8 @@ Web Authentication API（也称作 WebAuthn）使用[asymmetric (public-key) cry
 - [navigator.credentials.create()](/zh-CN/docs/Web/API/CredentialsContainer/create) - 当使用 publicKey 选项时，创建一个新的凭据，无论是用于注册新账号还是将新的非对称密钥凭据与已有的账号关联。
 - [navigator.credentials.get()](/zh-CN/docs/Web/API/CredentialsContainer/get) - 当使用 publicKey 选项时，使用一组现有的凭据进行身份验证服务，无论是用于用户登录还是双因素验证中的一步。
 
-**请注意：** create() 和 get() 都需要在 [Secure Context](/zh-CN/docs/Web/Security/Secure_Contexts)（安全上下文）中执行（例如 - 使用 https 连接，或是使用 localhost），当浏览器不是在安全环境下时它们将不可用。
+> [!NOTE]
+> create() 和 get() 都需要在[安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)中执行（例如，使用 https 连接，或是使用 localhost），当浏览器不是在安全环境下时它们将不可用。
 
 在基础实现中，create() 和 get() 会从服务器接收一个大随机数，称为挑战。挑战将由私钥签名并返回给服务器。这可以服务器证明用户拥有身份验证所需要的私钥，与此同时没有任何密码在网络上被传输。
 

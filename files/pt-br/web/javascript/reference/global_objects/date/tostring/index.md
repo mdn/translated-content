@@ -29,7 +29,7 @@ Uma _string_ representando a data.
 
 ## Descrição
 
-Instâncias de {{jsxref("Date")}} herdam o método `toString()` de {{jsxref("Date.prototype")}}, não {{jsxref("Object.prototype")}}. `Date.prototype.toString()` retorna uma _string_ com a representação de Date no formato especificado na ECMA-262 que pode ser resumida como:
+Instâncias de {{jsxref("Date")}} herdam o método `toString()` de {{jsxref("Date")}}, não {{jsxref("Object")}}. `Date.prototype.toString()` retorna uma _string_ com a representação de Date no formato especificado na ECMA-262 que pode ser resumida como:
 
 - Dia da semana: 3 letras do nome do dia da semana em Inglês, e.g. "Sat"
 - espaço

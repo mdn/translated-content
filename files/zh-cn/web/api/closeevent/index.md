@@ -44,7 +44,7 @@ _该接口也继承了其父类 {{domxref("Event")}} 的属性。_
     | `4000`–`4999` |                        | 可以由应用使用。                                                                                                                             |
 
 - {{domxref("CloseEvent.reason")}} {{readOnlyInline}}
-  - : 返回一个 {{domxref("DOMString")}} 用以表示服务器关闭连接的原因。这是由服务器和子协议决定的。
+  - : 返回一个 {{jsxref("String")}} 用以表示服务器关闭连接的原因。这是由服务器和子协议决定的。
 - {{domxref("CloseEvent.wasClean")}} {{readOnlyInline}}
   - : 返回一个 {{jsxref("Boolean")}} 用以表示连接是否完全关闭。
 

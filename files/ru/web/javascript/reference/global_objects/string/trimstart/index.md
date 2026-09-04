@@ -46,4 +46,4 @@ console.log(str); // 'foo  '
 ## Смотрите также
 
 - {{jsxref("String.prototype.trim()")}}
-- {{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}
+- {{jsxref("String.prototype.trimEnd()", "String.prototype.trimRight()")}} {{non-standard_inline}}

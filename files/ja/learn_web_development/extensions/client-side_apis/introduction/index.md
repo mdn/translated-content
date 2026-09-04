@@ -1,11 +1,10 @@
 ---
 title: Web API の紹介
+short-title: 紹介
 slug: Learn_web_development/Extensions/Client-side_APIs/Introduction
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
@@ -78,7 +77,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 - **グラフィックの描画や操作のための API** は、ブラウザーが広く対応しています。最も普及しているのは[キャンバス](/ja/docs/Web/API/Canvas_API)と [WebGL](/ja/docs/Web/API/WebGL_API) で、HTML の {{htmlelement("canvas")}} 要素に含まれるピクセルデータをプログラムで更新して 2D や 3D の場面を作成することが可能です。例えば、矩形や円などの図形を描いたり、画像をキャンバス上に取り込んで、キャンバス API を使用してセピアやグレースケールなどのフィルターを適用したり、WebGL を使用して照明やテクスチャを含む複雑な 3D シーンを作成したりすることができます。こうした API は、アニメやゲームのように常に更新される場面を作るために、アニメーションのループを作成する API（{{domxref("window.requestAnimationFrame()")}} など）とよく組み合わせて使用されます。
 - **[動画と音声の API](/ja/docs/Web/Media/Guides/Audio_and_video_delivery)** 、例えば {{domxref("HTMLMediaElement")}}、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)、[WebRTC](/ja/docs/Web/API/WebRTC_API) などを使用すると、音声や動画を再生するためのカスタム UI コントロールを作成したり、動画と一緒にキャプションや字幕などのテキストトラックを表示したり、ウェブカメラから動画を取得してキャンバス（上記参照）を介して操作したり、ウェブ会議で他の人のコンピューターに表示したり、音声にエフェクト（ゲイン、歪曲、パンニングなど）を追加したりと、マルチメディアを使って実に興味深いことを行うことができます。
 - **端末 API** は、端末のハードウェアと対話することができます。例えば、[位置情報 API](/ja/docs/Web/API/Geolocation_API) を使用すると、端末の GPS にアクセスしてユーザーの位置を特定することが可能です。
-- **クライアント側でのデータ保持 API** は今多くのブラウザーに普及しつつあります。— クライアント側にデータを保存できると、ページを移動しても状態を保存したり、たとえデバイスがオフラインでも動作するようなアプリを作成したいような場合、とても役に立ちます。いくつもの選択肢があり、例えば[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) を使ったキーバリューストアや、 [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) を使ったもっと複雑なテーブル型データ保存などです。
+- **クライアント側ストレージ API** は今多くのブラウザーに普及しつつあります。— クライアント側にデータを保存できると、ページを移動しても状態を保存したり、端末がオフラインでも動作するようなアプリを作成したいような場合、とても役に立ちます。利用できる選択肢は複数あります。例えば[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) を使った、単純なキーと値のストレージや、[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) を使ったもっと複雑なデータベースストレージです。
 
 ### 一般的なサードパーティ API
 
@@ -144,19 +143,19 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 次に、ボタンが押されたら再生と停止を切り替えるイベントハンドラーと、曲が再生し終わったら最初に戻るイベントハンドラーを記述します。
 
 ```js
-// play/pause audio
+// オーディオを再生／停止
 playBtn.addEventListener("click", () => {
-  // check if context is in suspended state (autoplay policy)
+  // コンテキストが一時停止状態にあるかどうかを確認する（自動再生ポリシー）
   if (audioCtx.state === "suspended") {
     audioCtx.resume();
   }
 
-  // if track is stopped, play it
+  // トラックが停止している場合は、再生
   if (playBtn.getAttribute("class") === "paused") {
     audioElement.play();
     playBtn.setAttribute("class", "playing");
     playBtn.textContent = "Pause";
-    // if track is playing, stop it
+    // トラックが再生中の場合は、再生を停止
   } else if (playBtn.getAttribute("class") === "playing") {
     audioElement.pause();
     playBtn.setAttribute("class", "paused");
@@ -164,7 +163,7 @@ playBtn.addEventListener("click", () => {
   }
 });
 
-// if track ends
+// トラックが終了した場合
 audioElement.addEventListener("ended", () => {
   playBtn.setAttribute("class", "paused");
   playBtn.textContent = "Play";
@@ -177,7 +176,7 @@ audioElement.addEventListener("ended", () => {
 次に {{domxref("GainNode")}} を、 {{domxref("BaseAudioContext/createGain", "AudioContext.createGain()")}} を使用して作成します。このオブジェクトを使用して音声全体の音量を調整し、スライダーの値が変更される度にオーディオグラフのゲイン（音量）の値を変更する別のイベントハンドラーを作成します。
 
 ```js
-// volume
+// 音量
 const gainNode = audioCtx.createGain();
 
 volumeSlider.addEventListener("input", () => {
@@ -185,7 +184,7 @@ volumeSlider.addEventListener("input", () => {
 });
 ```
 
-これを機能させるために最後に行うことは、オーディオグラフ内のさまざまなノードを接続することです。これは、すべてのノードタイプで使用可能な {{domxref("AudioNode.connect()")}} メソッドを使用して行われます。
+これを機能させるために最後に行うことは、オーディオグラフ内のさまざまなノードを接続することです。これは、すべてのノード型で使用可能な {{domxref("AudioNode.connect()")}} メソッドを使用して行われます。
 
 ```js
 audioSource.connect(gainNode).connect(audioCtx.destination);
@@ -236,19 +235,19 @@ Ball.prototype.draw = function () {
 上記のウェブオーディオ API の例では、すでに多くのイベントハンドラーが使用されているのを確認しました。
 
 ```js
-// play/pause audio
+// オーディオを再生／停止
 playBtn.addEventListener("click", () => {
-  // check if context is in suspended state (autoplay policy)
+  // コンテキストが一時停止状態にあるかどうかを確認する（自動再生ポリシー）
   if (audioCtx.state === "suspended") {
     audioCtx.resume();
   }
 
-  // if track is stopped, play it
+  // トラックが停止している場合は、再生
   if (playBtn.getAttribute("class") === "paused") {
     audioElement.play();
     playBtn.setAttribute("class", "playing");
     playBtn.textContent = "Pause";
-    // if track is playing, stop it
+    // トラックが再生中の場合は、再生を停止
   } else if (playBtn.getAttribute("class") === "playing") {
     audioElement.pause();
     playBtn.setAttribute("class", "paused");
@@ -256,7 +255,7 @@ playBtn.addEventListener("click", () => {
   }
 });
 
-// if track ends
+// トラックが終了した場合
 audioElement.addEventListener("ended", () => {
   playBtn.setAttribute("class", "paused");
   playBtn.textContent = "Play";
@@ -265,7 +264,7 @@ audioElement.addEventListener("ended", () => {
 
 ### 必要に応じて追加のセキュリティ機構がある
 
-WebAPI 機能は、 JavaScript や他のウェブ技術（例えば [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)）と同等のセキュリティ上の配慮が必要ですが、追加のセキュリティ機構が必要な場合もあります。例として、現代の WebAPI の中には HTTPS で配信されるページ上でしか動かないものがあります。これは機密とすべきデータをやりとりする可能性があるためです（[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)や[プッシュ通知](/ja/docs/Web/API/Push_API)など）。
+WebAPI 機能は、 JavaScript や他のウェブ技術（例えば [同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)）と同等のセキュリティ上の配慮が必要ですが、追加のセキュリティ機構が必要な場合もあります。例として、現代の WebAPI の中には HTTPS で配信されるページ上でしか動かないものがあります。これは機密とすべきデータをやりとりする可能性があるためです（[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)や[プッシュ通知](/ja/docs/Web/API/Push_API)など）。
 
 また、WebAPI の中には、コード内で呼び出された時点で、ユーザーから有効化するための許可を求めるものがあります。例として、[通知 API](/ja/docs/Web/API/Notifications_API) は、ポップアップダイアログボックスを使用して許可を求めます。
 

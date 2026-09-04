@@ -3,8 +3,6 @@ title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
 
-{{JSRef}}
-
 **`toLocaleString()`** 方法返回一个字符串，表示数组中的所有元素。每个元素通过调用它们自己的 `toLocaleString` 方法转换为字符串，并且使用特定于语言环境的字符串（例如逗号“,”）分隔开。
 
 {{InteractiveExample("JavaScript Demo: Array.toLocaleString()", "shorter")}}

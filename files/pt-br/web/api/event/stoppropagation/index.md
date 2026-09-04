@@ -25,7 +25,7 @@ Nenhum
 
 ## Exemplo
 
-Veja o exemplo 5: [Event Propagation](/pt-BR/docs/Web/API/Document_Object_Model/Examples#example_5:_event_propagation) no capítulo Eventos para um exemplo mais detalhado desse método e propagação de evento no DOM.
+Veja o exemplo 5: [Event Propagation](/pt-BR/docs/conflicting/Web/API/Document_Object_Model#example_5:_event_propagation) no capítulo Eventos para um exemplo mais detalhado desse método e propagação de evento no DOM.
 
 ## Notas
 

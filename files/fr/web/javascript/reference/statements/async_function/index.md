@@ -53,7 +53,7 @@ Une promesse ({{jsxref("Promise")}}) qui sera résolue avec la valeur renvoyée 
 
 ## Description
 
-Une fonction `async` peut contenir une expression {{jsxref("Opérateurs/await", "await")}} qui interrompt l'exécution de la fonction asynchrone et attend la résolution de la promesse passée `Promise`. La fonction asynchrone reprend ensuite puis renvoie la valeur de résolution.
+Une fonction `async` peut contenir une expression {{jsxref("Operators/await", "await")}} qui interrompt l'exécution de la fonction asynchrone et attend la résolution de la promesse passée `Promise`. La fonction asynchrone reprend ensuite puis renvoie la valeur de résolution.
 
 Le mot-clé `await` est uniquement valide au sein des fonctions asynchrones. Si ce mot-clé est utilisé en dehors du corps d'une fonction asynchrone, cela provoquera une exception {{jsxref("SyntaxError")}}.
 

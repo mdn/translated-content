@@ -56,7 +56,7 @@ input {
 
 對於 `<fieldset>`，有一些特殊的樣式考慮因素。
 
-它的 {{cssxref("display")}} 默認值為 `block`，並建立了一個[塊格式化上下文](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)。如果 `<fieldset>` 以內聯級別的 `display` 值進行樣式設置，則其行為將像 `inline-block` 一樣，否則將像 `block` 一樣。默認情況下，周圍有一個 `2px` 的 `groove` 邊框圍繞內容，並有一小部分默認填充。元素默認具有 {{cssxref("min-inline-size", "min-inline-size: min-content")}}。
+它的 {{cssxref("display")}} 默認值為 `block`，並建立了一個[塊格式化上下文](/zh-TW/docs/Web/CSS/Guides/Display/Block_formatting_context)。如果 `<fieldset>` 以內聯級別的 `display` 值進行樣式設置，則其行為將像 `inline-block` 一樣，否則將像 `block` 一樣。默認情況下，周圍有一個 `2px` 的 `groove` 邊框圍繞內容，並有一小部分默認填充。元素默認具有 {{cssxref("min-inline-size", "min-inline-size: min-content")}}。
 
 如果存在 {{htmlelement("legend")}}，則其位於 `block-start` 邊框之上。`<legend>` 將會縮小包裹，並且也會建立一個格式化上下文。`display` 值被轉換為塊級別。（例如，`display: inline` 行為與 `block` 一樣。）
 

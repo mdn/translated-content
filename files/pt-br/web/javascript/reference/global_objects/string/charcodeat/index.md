@@ -20,7 +20,7 @@ str.charCodeAt(index)
 
 ### Valor retornado
 
-Um número representando o valor de unidade de código UTF-16 do caractere no índice fornecido. O valor {{jsxref("Global_Objects/NaN", "NaN")}} é retornado se o índice estiver fora do intervalo aceitável.
+Um número representando o valor de unidade de código UTF-16 do caractere no índice fornecido. O valor {{jsxref("NaN")}} é retornado se o índice estiver fora do intervalo aceitável.
 
 ## Descrição
 

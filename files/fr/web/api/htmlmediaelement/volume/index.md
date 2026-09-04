@@ -1,26 +1,23 @@
 ---
-title: HTMLMediaElement.volume
+title: "HTMLMediaElement : propriété volume"
+short-title: volume
 slug: Web/API/HTMLMediaElement/volume
+l10n:
+  sourceCommit: 7b6cb443731d0329299f15b0c35be7cc0f645679
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`HTMLMediaElement.volume`** définit le volume auquel le média doit être lu.
+La propriété **`volume`** de l'interface {{DOMxRef("HTMLMediaElement")}} définit le volume auquel le média doit être lu.
 
-## Syntaxe
+## Valeur
 
-```js
-var volume = video.volume; //1
-```
+Un nombre entre 0 et 1, si elle vaut 0 le son est coupé et elle vaut 1 le son est le plus élevé possible.
 
-### Valeur
-
-Une valeur de type double (nombre à virgule) inclut entre 0 et 1, si elle vaut 0 le son est coupé et elle vaut 1 le son est le plus élevé possible.
-
-## Exemple
+## Exemples
 
 ```js
-var obj = document.createElement("audio");
+const obj = document.createElement("audio");
 console.log(obj.volume); // 1
 obj.volume = 0.75;
 ```
@@ -35,5 +32,5 @@ obj.volume = 0.75;
 
 ## Voir aussi
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
-- {{domxref("HTMLMediaElement.muted")}}
+- L'interface {{DOMxRef("HTMLMediaElement")}}&nbsp;: utilisée pour définir la propriété `HTMLMediaElement.volume`
+- La propriété {{DOMxRef("HTMLMediaElement.muted")}}

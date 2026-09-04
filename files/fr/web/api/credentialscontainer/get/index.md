@@ -26,8 +26,8 @@ var promise = CredentialsContainer.get([options]);
   - : Un objet de type {{domxref("CredentialRequestOptions")}} qui contient les critères de la requête. et les options d'interaction avec l'utilisateur. Cet objet peut contenir les propriétés suivantes :
     - `password` : un booléen ({{jsxref("Boolean")}}) qui indique que l'instance {{domxref("Credential")}} renvoyée devrait contenir les informations sur l'utilisateur (contrairement aux informations d'authentification fédérées).
     - `federated` : un objet {{domxref("FederatedCredentialRequestOptions")}} qui contient les critères que doivent respecter les informations d'authentification fédérées. Les options disponibles sont :
-      - `providers` : un tableau de chaînes de caractères {{domxref("DOMString")}} listant les fournisseurs d'identité potentiels
-      - `protocols` : un tableau de chaînes de caractères {{domxref("DOMString")}} listant les protocoles de fédération à rechercher.
+      - `providers` : un tableau de chaînes de caractères {{jsxref("String")}} listant les fournisseurs d'identité potentiels
+      - `protocols` : un tableau de chaînes de caractères {{jsxref("String")}} listant les protocoles de fédération à rechercher.
 
     - `publicKey` : un objet {{domxref("PublicKeyCredentialRequestOptions")}} contenant les conditions que doivent respecter les informations d'authentification [WebAuthn](/fr/docs/Web/API/Web_Authentication_API) qui seront renvoyées.
     - `mediation` : une chaîne de caractères {{jsxref("String")}} qui indique si l'utilisateur devra se reconnecter à chaque visite sur le site. Les valeurs valides sont `"silent"`, `"optional"` ou `"required"`.

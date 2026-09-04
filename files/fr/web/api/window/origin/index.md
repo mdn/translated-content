@@ -2,12 +2,12 @@
 title: "Window : propriété origin"
 slug: Web/API/Window/origin
 l10n:
-  sourceCommit: 5d19ba908628a2713c4ea9f30422dbd9563e1cf4
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`origin`** de l'interface [`Window`](/fr/docs/Web/API/Window) renvoie l'origine de la portée globale, sérialisée sous la forme d'une chaîne de caractères.
+La propriété en lecture seule **`origin`** de l'interface {{DOMxRef("Window")}} retourne l'origine de la portée globale, sérialisée sous la forme d'une chaîne de caractères.
 
 ## Valeur
 
@@ -18,7 +18,7 @@ Une chaîne de caractères.
 Exécuter le fragment de code suivant depuis la portée d'une fenêtre permettra d'afficher l'origine de la portée globale du document dans la console.
 
 ```js
-console.log(window.origin);
+console.log(window.origin); // Sur cette page, retourne 'https://developer.mozilla.org'
 ```
 
 Si l'origine n'est pas une combinaison schéma/hôte/port (par exemple avec une exécution locale via une URL `file://`), `origin` renverra la chaîne de caractères `"null"`.
@@ -30,3 +30,8 @@ Si l'origine n'est pas une combinaison schéma/hôte/port (par exemple avec une 
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{DOMxRef("WorkerGlobalScope.origin")}}
+- Le terme de glossaire {{Glossary("origin", "origine")}}

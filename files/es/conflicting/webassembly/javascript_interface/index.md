@@ -14,43 +14,43 @@ A diferencia de otros objetos globales, `WebAssembly` no tiene un constructor (n
 
 Los usos primarios para el objeto `WebAssembly` son:
 
-- Cargar código WebAssembly, utilizando la función {{jsxref("WebAssembly.instantiate()")}}.
-- Crear nuevas instancias de memoria y de tablas mediante los constructores {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}}.
-- Facilitar el manejo de errores que ocurren dentro de un WebAssembly mediante los constructores:{{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}}.
+- Cargar código WebAssembly, utilizando la función [`WebAssembly.instantiate()`](/es/docs/WebAssembly/Reference/JavaScript_interface/instantiate).
+- Crear nuevas instancias de memoria y de tablas mediante los constructores [`WebAssembly.Memory()`](/es/docs/WebAssembly/Reference/JavaScript_interface/Memory)/[`WebAssembly.Table()`](/es/docs/WebAssembly/Reference/JavaScript_interface/Table).
+- Facilitar el manejo de errores que ocurren dentro de un WebAssembly mediante los constructores:[`WebAssembly.CompileError()`](/es/docs/WebAssembly/Reference/JavaScript_interface/CompileError)/[`WebAssembly.LinkError()`](/es/docs/WebAssembly/Reference/JavaScript_interface/LinkError)/[`WebAssembly.RuntimeError()`](/es/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError).
 
 ## Métodos
 
-- {{jsxref("WebAssembly.instantiate()")}}
+- [`WebAssembly.instantiate()`](/es/docs/WebAssembly/Reference/JavaScript_interface/instantiate)
   - : El API primaria para compilar e instanciar código WebAssembly, ambos regresan un `Module` y el primero `Instance`.
-- {{jsxref("WebAssembly.instantiateStreaming()")}}
+- [`WebAssembly.instantiateStreaming()`](/es/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming)
   - : Compila e instancia un módulo WebAssembly directamente desde un flujo de origen subyacente, ambos regresan un `Module` y el primero `Instance`.
-- {{jsxref("WebAssembly.compile()")}}
-  - : Compila un {{jsxref("WebAssembly.Module")}} desde el código binario de un WebAssembly, manteniendo la creación de la instancia como un objeto separado.
-- {{jsxref("WebAssembly.compileStreaming()")}}
-  - : compila un {{jsxref("WebAssembly.Module")}} directamente desde un flujo de origen subyacente, manteniendo la creación de la instancia como un objeto sepraado.
-- {{jsxref("WebAssembly.validate()")}}
+- [`WebAssembly.compile()`](/es/docs/WebAssembly/Reference/JavaScript_interface/compile)
+  - : Compila un [`WebAssembly.Module`](/es/docs/WebAssembly/Reference/JavaScript_interface/Module) desde el código binario de un WebAssembly, manteniendo la creación de la instancia como un objeto separado.
+- [`WebAssembly.compileStreaming()`](/es/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming)
+  - : compila un [`WebAssembly.Module`](/es/docs/WebAssembly/Reference/JavaScript_interface/Module) directamente desde un flujo de origen subyacente, manteniendo la creación de la instancia como un objeto sepraado.
+- [`WebAssembly.validate()`](/es/docs/WebAssembly/Reference/JavaScript_interface/validate)
   - : Valida un arreglo con tipo de código binario de un WebAssembly, regresando si los bytes son código válido WebAssembly (`true`) o de lo contrario (`false`).
 
 ## Constructores
 
-- {{jsxref("WebAssembly.Module()")}}
+- [`WebAssembly.Module()`](/es/docs/WebAssembly/Reference/JavaScript_interface/Module)
   - : Crea un nuevo objeto WebAssembly `Module`.
-- {{jsxref("WebAssembly.Instance()")}}
+- [`WebAssembly.Instance()`](/es/docs/WebAssembly/Reference/JavaScript_interface/Instance)
   - : Crear un nuevo objeto WebAssembly `Instance`.
-- {{jsxref("WebAssembly.Memory()")}}
+- [`WebAssembly.Memory()`](/es/docs/WebAssembly/Reference/JavaScript_interface/Memory)
   - : Crear un nuevo objeto WebAssembly `Memory`.
-- {{jsxref("WebAssembly.Table()")}}
+- [`WebAssembly.Table()`](/es/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : Crear un nuevo objeto WebAssembly `Table`.
-- {{jsxref("WebAssembly.CompileError()")}}
+- [`WebAssembly.CompileError()`](/es/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
   - : Crear un nuevo objeto WebAssembly `CompileError`.
-- {{jsxref("WebAssembly.LinkError()")}}
+- [`WebAssembly.LinkError()`](/es/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
   - : Crear un nuevo objeto WebAssembly `LinkError`.
-- {{jsxref("WebAssembly.RuntimeError()")}}
+- [`WebAssembly.RuntimeError()`](/es/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
   - : Crear un nuevo objeto WebAssembly `RuntimeError`.
 
 ## Ejemplos
 
-Después de obtener algún bytecode de WebAssembly usando la sentencia fetch, nosotros compilamos e instanciamos el módulo usando la función {{jsxref("WebAssembly.instantiate()")}} , importando una función de JavaScript en el WebAssembly Module en el proceso. Esta premisa resuelve a un objeto (`result`) que contenga un objeto [`Module`](/es/docs/WebAssembly/JavaScript_interface/Module) compilado y un objeto [`Instance`](/es/docs/WebAssembly/JavaScript_interface/Instance) . Entonces tenemos una llamada a [Exported WebAssembly function](/es/docs/WebAssembly/Exported_functions) que es exportada por `Instance`.
+Después de obtener algún bytecode de WebAssembly usando la sentencia fetch, nosotros compilamos e instanciamos el módulo usando la función [`WebAssembly.instantiate()`](/es/docs/WebAssembly/Reference/JavaScript_interface/instantiate) , importando una función de JavaScript en el WebAssembly Module en el proceso. Esta premisa resuelve a un objeto (`result`) que contenga un objeto [`Module`](/es/docs/WebAssembly/JavaScript_interface/Module) compilado y un objeto [`Instance`](/es/docs/WebAssembly/JavaScript_interface/Instance) . Entonces tenemos una llamada a [Exported WebAssembly function](/es/docs/WebAssembly/Exported_functions) que es exportada por `Instance`.
 
 ```js
 var importObject = {

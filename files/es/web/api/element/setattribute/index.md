@@ -18,9 +18,9 @@ Element.setAttribute(name, value);
 ### Parámetros
 
 - `name`
-  - : Un {{domxref("DOMString")}} indicando el nombre del atributo cuyo valor se va a cambiar. El nombre del atributo se convierte automáticamente en minúsculas cuando `setAttribute()` se llama sobre un elemento HTML en un documento HTML.
+  - : Un {{jsxref("String")}} indicando el nombre del atributo cuyo valor se va a cambiar. El nombre del atributo se convierte automáticamente en minúsculas cuando `setAttribute()` se llama sobre un elemento HTML en un documento HTML.
 - `value`
-  - : Un {{domxref("DOMString")}} que contenga el valor que asignar al atributo. Cualquier valor indicado que no sea una cadena de texto se convierte automáticamente en una cadena de texto.
+  - : Un {{jsxref("String")}} que contenga el valor que asignar al atributo. Cualquier valor indicado que no sea una cadena de texto se convierte automáticamente en una cadena de texto.
 
 Los atributos booleanos se consideran `true` si al menos están presentes en el elemento, independientemente de su `value` actual; como regla, se debería especificar una cadena de texto vacía (`""`) en `value` (algunas personas utilizan el nombre del atributo; esto funciona pero no es un standard). Vea un [ejemplo](#ejemplo) posterior para una demostración práctica.
 

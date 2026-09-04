@@ -43,7 +43,7 @@ Pour un élément {{SVGElement('circle')}}, `cx` définit la coordonnée x de so
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
+      <td><a href="/fr/docs/Web/CSS/Reference/Values/length-percentage">
         <code>&lt;length-percentage&gt;</code>
       </a></td>
     </tr>
@@ -69,7 +69,7 @@ Pour un élément {{SVGElement('ellipse')}}, `cx` définit la coordonnées x de 
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
+      <td><a href="/fr/docs/Web/CSS/Reference/Values/length-percentage">
         <code>&lt;length-percentage&gt;</code>
       </a></td>
     </tr>
@@ -95,7 +95,7 @@ Pour un élément {{SVGElement('radialGradient')}}, `cx` définit la coordonnée
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
+      <td><a href="/fr/docs/Web/CSS/Reference/Values/length-percentage">
         <code>&lt;length-percentage&gt;</code>
       </a></td>
     </tr>

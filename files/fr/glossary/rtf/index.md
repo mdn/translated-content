@@ -1,9 +1,9 @@
 ---
 title: RTF
 slug: Glossary/RTF
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 RTF (Rich Text Format) est un format de fichier en texte brut avec prise en charge d'instructions de formatage (comme gras ou italique).
 
@@ -12,4 +12,3 @@ Trois développeurs de l'équipe Microsoft Word ont créé le format RTF dans le
 ## Voir aussi
 
 - [<i lang="en">Rich Text Format</i>](https://fr.wikipedia.org/wiki/Rich_Text_Format) sur Wikipédia
-- [spécification finale de Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=10725)

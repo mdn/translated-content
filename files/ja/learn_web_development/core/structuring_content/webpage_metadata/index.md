@@ -1,11 +1,10 @@
 ---
 title: ヘッド部には何が入る? ウェブページのメタデータ
+short-title: ウェブページのメタデータ
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 0d59135676db5a372b4dd692f0686e6bdfc13b51
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
 
@@ -72,9 +71,9 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 - {{htmlelement("Heading_Elements", "h1")}} 要素は、ブラウザーで読み込まれるとページに現れます。一般的に、これは 1 ページに 1 回使用し、ページ内容のタイトル（記事のタイトル、またはニュースの見出しなど、使用に適したもの）をマークアップするために使用すべきです。
 - {{htmlelement("title")}} 要素は（文書のコンテンツではなく） HTML 文書全体のタイトルを表すメタデータです。
 
-### アクティブラーニング: 単純な例を検討する
+### 単純な例を検討する
 
-1. このアクティブラーニングを始めるのに、我々の GitHub リポジトリーに移動して [title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html) のコピーをダウンロードしてください。これは次のいずれかでできます。
+1. この演習では、まず私たちの GitHub リポジトリーにアクセスして [title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html) のコピーをダウンロードしてください。これは次のいずれかでできます。
    1. ページのコードをコピー＆ペーストして、コードエディターの新規ファイルに入れて、ふさわしい場所に保存します
    2. ページの "Raw" を押すと、新しいタブに生のコードが出ます。次に、ブラウザーの \[名前を付けて保存...] メニューを選択して、ファイルの保存場所を選んでください。
 
@@ -115,7 +114,7 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 > [!NOTE]
 > ブラウザーによっては（例えば Chrome では）自動的に正しくないエンコーディングを修正しますので、お使いのブラウザーによっては、この問題が見られないこともあります。それでもなお、その他のブラウザーでの問題を避けるため、とにかくページに `utf-8` エンコーディングを設定すべきです。
 
-### アクティブラーニング: 文字エンコーディングで実験する
+### 文字エンコーディングでの実験
 
 これを試すには、`<title>` についての前の節で得たシンプルな HTML テンプレート ([title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html)) をもう一度見てみて、 meta charset の値を `ISO-8859-1` に変えて、日本語を追加してみます。私たちの使ったコードは次のものです。
 
@@ -145,7 +144,7 @@ started with developing websites and applications." />
 
 ページの内容に関連したキーワードを含む説明 (description) を指定すると、検索エンジンで行われる関連検索で、ページをより上位にできる可能性があるため役立ちます（この行為に対する用語は [Search Engine Optimization](/ja/docs/Glossary/SEO) （検索エンジン最適化）または {{glossary("SEO")}}といいます）。
 
-### アクティブラーニング:検索エンジンにおける description の扱い
+### 検索エンジンで説明文をどのように使用するのかを探る
 
 description は検索エンジンの結果ページにも使われます。練習でこれを見ていきましょう。
 
@@ -202,18 +201,25 @@ and HTML Apps." />
 
 ページにファビコンを追加するには次のようにします。
 
-1. サイトのインデックスページと同じディレクトリーに、 `.ico` 形式で保存します（多くのブラウザーは `.gif` や `.png` のような、より一般的な形式のファビコンにも対応しています）。
-2. HTML の {{HTMLElement("head")}} ブロックに次の行を入れて参照します。
+1. 対応している形式（`.ico`、`.gif`、`.png` など）で保存し、ウェブサイトのフォルダー内どこかに配置してください。
+2. HTML の {{HTMLElement("head")}} ブロック内に、ファビコンファイルのパスを参照する {{htmlelement("link")}} 要素を追加します。
 
    ```html
-   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
    ```
+
+> [!NOTE]
+> この例では、ファビコンファイルへのパスは `/` で始まります。これは「サイトの最上位（またはルート）ディレクトリーでファイルを探せ」ということです。サイトの作成に使用しているシステムによって、ソースコード内のこのファイルの場所は異なる場合があります。ウェブフレームワークでは通常、`static` や `public` といった特別なフォルダー内をサイトルート内のファイル用に確保しています。
+>
+> ファイルパスの細かい仕組みについては、今はあまり気にしなくて大丈夫です。後で詳しく学びます（気になる場合は [URL とパスの基礎知識](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#url_とパスに関する簡単な入門)を調べてください）。
+>
+> 最近のほとんどのブラウザーやソフトウェアアプリケーションは、サイトルートにある `favicon.ico` ファイルを自動的にファビコンとして使用するため、多くのサイトでは `<link>` 要素を記載することすら省略されています。ただし、ファビコンファイルを別の場所に配置したい場合には、明示的な要素が有益です。
 
 ブックマークパネルでファビコンが表示されている例です。
 
 ![Firefox のブックマークパネル、ブックマークされた例の隣にファビコンが表示されている。](bookmark-favicon.png)
 
-最近では考慮するべきアイコンの種類がほかにもたくさんあります。例えば、 MDN Web Docs ホームページのソースコードには以下の行があります。
+異なるコンテキストに応じて異なるアイコンを含めることも検討してください。例を示します。
 
 ```html
 <link rel="icon" href="/favicon-48x48.[some hex hash].png" />
@@ -244,12 +250,9 @@ and HTML Apps." />
 <link rel="icon" href="/favicon.ico" />
 ```
 
-コメントはそれぞれのアイコンの用途を説明しています。 — この要素は、ウェブサイトが iPad のホーム画面に保存された時のすばらしい高解像度なアイコンの提供といったことをカバーしています。
+コメントはそれぞれのアイコンの用途を説明しています。 — この要素は、ウェブサイトが iPad のホーム画面に保存された時の高解像度のアイコンの提供といったことをカバーしています。
 
 これらすべてのアイコンを正しい方法で実装することについて、今はあまり心配する必要はありません。これはかなり高度な機能であり、このコースの進行にこの知識を持っている必要はありません。ここで重要なのは、他にもウェブサイトのソースコードを閲覧している際に、このようなことがあり得るということを知っておくことです。これらの値すべてについて、また、その選び方を学びたい場合は、 {{HTMLElement("link")}} 要素のリファレンスページをご覧ください。
-
-> [!NOTE]
-> もし、サイトがセキュリティを向上させるために Content Security Policy (CSP) を使用している場合、ポリシーがファビコンに適用されます。ファビコンが読み込まれないという問題に遭遇したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src)がアクセスを妨害していないかを確認してください。
 
 ## HTML に CSS と JavaScript を追加する
 
@@ -261,7 +264,7 @@ and HTML Apps." />
   <link rel="stylesheet" href="my-css-file.css" />
   ```
 
-- {{htmlelement("script")}} 要素もヘッド部に入れるべきであり、読み込みたいJavaScriptのパスを含む `src` 属性と、基本的にページが HTML の解析を完了した後にJavaScriptを読み込むようにブラウザーに指示する `defer` を記載する必要があります。これは、JavaScriptを実行する前に HTML がすべて読み込まれていることを確認し、 JavaScript がまだページ上に存在しない HTML 要素にアクセスしようとした結果、エラーが発生しないようにするために有用なものです。ページでの JavaScript の読み込みを処理する方法は実際にはいくつかありますが、現代のブラウザーではこれが最も信頼できる方法です（他にも、[スクリプトの読み込み方針](/ja/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88%e3%81%ae%e8%aa%ad%e3%81%bf%e8%be%bc%e3%81%bf%e6%96%b9%e9%87%9d)を参照してください）。
+- {{htmlelement("script")}} 要素もヘッド部に入れるべきであり、読み込みたい JavaScript のパスを含む `src` 属性と、基本的にページが HTML の構文解析を完了した後に JavaScript を読み込むようにブラウザーに指示する `defer` （[論理属性](/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#論理属性)）を記載する必要があります。`defer` 属性は、JavaScript を実行する前に HTML がすべて読み込まれていることを確認し、 JavaScript がまだページ上に存在しない HTML 要素にアクセスしようとした結果、エラーが発生しないようにするために有用なものです。ページでの JavaScript の読み込みを処理する方法は実際には[いくつかあります](/ja/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#スクリプトの読み込み方針)が、現代のブラウザーではこれが最も信頼できる方法です。
 
   ```html
   <script src="my-js-file.js" defer></script>
@@ -270,9 +273,9 @@ and HTML Apps." />
   > [!NOTE]
   > `<script>` 要素は{{glossary("void element", "空要素")}}のように見えるかもしれませんが、そうではありませんので、終了タグが必要です。また、外部のスクリプトファイルを読み込むのではなく、 `<script>` 要素の中にスクリプトを置くこともできます。
 
-### アクティブラーニング: ページに CSS と JavaScript を追加する
+### あなたの番: ページに CSS と JavaScript を追加
 
-1. アクティブラーニングを始めるにあたって、 [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html)、[script.js](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/script.js)、[style.css](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/style.css) をコピーして、ローカルの同じフォルダーに保存してください。ファイル名と拡張子が変わっていないことを確認してください。
+1. 演習を始めるにあたって、 [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html)、[script.js](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/script.js)、[style.css](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/style.css) をコピーして、ローカルの同じフォルダーに保存してください。ファイル名と拡張子が変わっていないことを確認してください。
 2. HTML ファイルをブラウザーとテキストエディターで開いてください。
 3. 先に述べた情報に従って、 {{htmlelement("link")}} 要素と {{htmlelement("script")}} 要素を HTML に書き加えてください。すると CSS と JavaScript が HTML に適用されます。
 

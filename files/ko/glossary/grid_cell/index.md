@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-[CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)에서, **그리드 셀 (Grid Cell)**은 CSS 그리드에 사용할 수 있는 가장 작은 단위입니다. 이는 교차하는 4개의 {{glossary("grid lines", "격자선")}} 사이의 공간이며 개념적으로는 표 셀과 매우 유사합니다.
+[CSS 그리드 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout)에서, **그리드 셀 (Grid Cell)**은 CSS 그리드에 사용할 수 있는 가장 작은 단위입니다. 이는 교차하는 4개의 {{glossary("grid lines", "격자선")}} 사이의 공간이며 개념적으로는 표 셀과 매우 유사합니다.
 
 ![그리디의 개별 셀을 보여주는 다이어그램](1_grid_cell.png)
 
@@ -68,5 +68,5 @@ l10n:
 
 ### 더 읽어보기
 
-- CSS 그리드 레이아웃 안내서: [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- CSS 그리드 레이아웃 안내서: [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - [CSS 그리드 레이아웃 명세서의 그리드 셀 정의](https://drafts.csswg.org/css-grid/#grid-track-concept)

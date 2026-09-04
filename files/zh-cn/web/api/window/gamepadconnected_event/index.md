@@ -26,7 +26,7 @@ slug: Web/API/Window/gamepadconnected_event
 
 | Property          | Type                       | Description                                               |
 | ----------------- | -------------------------- | --------------------------------------------------------- |
-| `target` 只读     | {{domxref("DOMString")}}   | 事件目标（DOM 树中的顶层，即 document.documentElement）。 |
+| `target` 只读     | {{jsxref("String")}}       | 事件目标（DOM 树中的顶层，即 document.documentElement）。 |
 | `type` 只读       | {{domxref("EventTarget")}} | 事件的类型。                                              |
 | `bubbles` 只读    | {{jsxref("Boolean")}}      | 事件是否正常冒泡。                                        |
 | `cancelable` 只读 | {{jsxref("Boolean")}}      | 事件是否可以取消。                                        |

@@ -49,5 +49,5 @@ alpha.toSource();
 
 ## Ver también
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}
 - {{jsxref("Array.prototype.toString()")}}

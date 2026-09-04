@@ -13,7 +13,7 @@ Em {{Glossary("JavaScript")}}, o null é um dos {{Glossary("Primitivo", "tipos p
 
 ### Referência técnica
 
-- {{jsxref("null", "Null na linguagem JavaScript")}}
+- {{jsxref("Operators/null", "Null na linguagem JavaScript")}}
 
 ### Referências externas
 

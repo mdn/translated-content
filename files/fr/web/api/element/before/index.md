@@ -1,29 +1,31 @@
 ---
-title: Element.before()
+title: "Element : méthode before()"
+short-title: before()
 slug: Web/API/Element/before
+l10n:
+  sourceCommit: 8374946642c18a9cc4bf510de767011124e832a2
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`Element.before()`** permet d'insérer un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères dans la liste des enfants du parent de l'objet `Element` courant, juste avant ce dernier.
-Les objets qui sont des chaînes de caractères sont insérés comme des nœuds [`Text`](/fr/docs/Web/API/Text).
+La méthode **`before()`** de l'interface {{DOMxRef("Element")}} permet d'insérer un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères dans la liste des enfants du parent de cet `Element`, juste avant celui-ci. Les chaînes de caractères sont insérées comme des nœuds {{DOMxRef("Text")}} équivalents.
 
 ## Syntaxe
 
-```js
-before(param1);
-before(param1, param2);
-before(param1, param2, /* ... ,*/ paramN);
+```js-nolint
+before(param1)
+before(param1, param2)
+before(param1, param2, /* …, */ paramN)
 ```
 
 ### Paramètres
 
 - `param1`, …, `paramN`
-  - : Un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères à insérer.
+  - : Un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères à insérer.
 
 ### Exceptions
 
-- [`DOMException`](/fr/docs/Web/API/DOMException) `HierarchyRequestError`
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
   - : Levée lorsque le nœud ne peut pas être inséré à l'emplacement indiqué dans la hiérarchie.
 
 ## Exemples
@@ -79,9 +81,11 @@ console.log(container.outerHTML);
 
 ## Voir aussi
 
-- [`Element.after()`](/fr/docs/Web/API/Element/after)
-- [`Element.append()`](/fr/docs/Web/API/Element/append)
-- [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)
-- [`Node.insertBefore()`](/fr/docs/Web/API/Node/insertBefore)
-- [`Element.insertAdjacentElement()`](/fr/docs/Web/API/Element/insertAdjacentElement)
-- [`NodeList`](/fr/docs/Web/API/NodeList)
+- La méthode {{DOMxRef("Element.after()")}}
+- La méthode {{DOMxRef("Element.append()")}}
+- La méthode {{DOMxRef("Element.insertAdjacentElement()")}}
+- La méthode {{DOMxRef("CharacterData.before()")}}
+- La méthode {{DOMxRef("DocumentType.before()")}}
+- La méthode {{DOMxRef("Node.appendChild()")}}
+- La méthode {{DOMxRef("Node.insertBefore()")}}
+- L'interface {{DOMxRef("NodeList")}}

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 
 {{JSRef}}
 
-La méthode **`handler.has()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.
+La méthode **`handler.has()`** est une trappe pour l'opérateur {{jsxref("Operators/in", "in")}}.
 
 {{InteractiveExample("JavaScript Demo: handler.has()", "taller")}}
 
@@ -58,7 +58,7 @@ La méthode `has` doit renvoyer une valeur booléenne.
 
 ## Description
 
-La méthode **`handler.has`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.
+La méthode **`handler.has`** est une trappe pour l'opérateur {{jsxref("Operators/in", "in")}}.
 
 ### Interceptions
 
@@ -78,7 +78,7 @@ Si les invariants suivants ne sont pas respectés, le proxy lèvera une exceptio
 
 ## Exemples
 
-Dans l'exemple qui suit, on intercepte l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}} :
+Dans l'exemple qui suit, on intercepte l'opérateur {{jsxref("Operators/in", "in")}} :
 
 ```js
 var p = new Proxy(
@@ -120,6 +120,6 @@ var p = new Proxy(obj, {
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- L'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
+- L'opérateur {{jsxref("Operators/in", "in")}}
 - {{jsxref("Reflect.has()")}}

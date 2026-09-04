@@ -46,7 +46,7 @@ Il existe de nombreux formats de fichiers d'images dans le monde. Toutefois, ceu
         meilleure compression que PNG et JPEG et une meilleure profondeur de
         couleur. Il est préférable d'utiliser des formats alternatifs via
         l'élément
-        <a href="/fr/docs/Web/HTML/Element/picture"
+        <a href="/fr/docs/Web/HTML/Reference/Elements/picture"
           ><code>&#x3C;picture></code></a
         >
         pour s'adapter aux différentes prises en charge des navigateurs.
@@ -1092,7 +1092,7 @@ Les fichiers SVG sont des fichiers texte contenant le code source qui, une fois 
 Le SVG peut être utilisé dans le contenu du web de deux façons :
 
 1. Vous pouvez directement écrire l'élément [`<svg>`](/fr/docs/Web/HTML/Element/svg) dans le HTML, contenant des [éléments SVG](/fr/docs/Web/SVG/Reference/Element) pour dessiner l'image.
-2. Vous pouvez afficher une image SVG partout où vous pouvez utiliser les autres types d'images, y compris avec les éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) et [`<image>`](/fr/docs/Web/HTML/Reference/Elements/img), les propriétés [`background-image`](/fr/docs/Web/CSS/background-image) du CSS, etc.
+2. Vous pouvez afficher une image SVG partout où vous pouvez utiliser les autres types d'images, y compris avec les éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) et [`<image>`](/fr/docs/Web/HTML/Reference/Elements/img), les propriétés [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image) du CSS, etc.
 
 Le SVG est un choix idéal pour les images qui peuvent être représentées à l'aide d'une série de commandes de dessin, en particulier si la taille à laquelle l'image sera rendue est inconnue ou peut varier, puisque le SVG s'adaptera en douceur à la taille souhaitée. Il n'est généralement pas utile pour les images strictement bitmap ou photographiques, bien qu'il soit possible d'inclure des images bitmap dans un SVG.
 
@@ -1137,7 +1137,7 @@ Le SVG est un choix idéal pour les images qui peuvent être représentées à l
             </tr>
             <tr>
               <th scope="row">
-                SVG comme image (<a href="/fr/docs/Web/HTML/Element/Img"
+                SVG comme image (<a href="/fr/docs/Web/HTML/Reference/Elements/img"
                   ><code>&#x3C;img></code></a
                 >
                 etc)
@@ -1161,7 +1161,7 @@ Le SVG est un choix idéal pour les images qui peuvent être représentées à l
       <th scope="row">Modes de couleur pris en charge</th>
       <td>
         Les couleurs en SVG sont spécifiées à l'aide de
-        <a href="/fr/docs/Web/CSS/color_value">syntaxe de couleur CSS</a>.
+        <a href="/fr/docs/Web/CSS/Reference/Values/color_value">syntaxe de couleur CSS</a>.
       </td>
     </tr>
     <tr>
@@ -1169,7 +1169,7 @@ Le SVG est un choix idéal pour les images qui peuvent être représentées à l
       <td>
         La source SVG peut être compressée pendant le transit en utilisant les
         techniques de
-        <a href="/fr/docs/Web/HTTP/Compression">compression HTTP</a>, ou sur
+        <a href="/fr/docs/Web/HTTP/Guides/Compression">compression HTTP</a>, ou sur
         disque en tant que fichier <code>.svgz</code>.
       </td>
     </tr>
@@ -1591,7 +1591,7 @@ Pour toute image pouvant être représentée par des graphiques vectoriels, le S
 
 ## Fournir des solutions de repli en matière d'image
 
-Alors que l'élément HTML standard [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ne supporte pas les retours de compatibilité pour les images, l'élément [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture) le fait. `<picture>` est utilisé comme enveloppe pour un certain nombre d'éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source), chacun spécifiant une version de l'image dans un format différent ou sous des [conditions @media](/fr/docs/Web/CSS/@media), ainsi qu'un élément `<img>` qui définit où afficher l'image et le retour à la version par défaut ou "la plus compatible".
+Alors que l'élément HTML standard [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ne supporte pas les retours de compatibilité pour les images, l'élément [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture) le fait. `<picture>` est utilisé comme enveloppe pour un certain nombre d'éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source), chacun spécifiant une version de l'image dans un format différent ou sous des [conditions @media](/fr/docs/Web/CSS/Reference/At-rules/@media), ainsi qu'un élément `<img>` qui définit où afficher l'image et le retour à la version par défaut ou "la plus compatible".
 
 Par exemple, si vous affichez un diagramme mieux affiché avec SVG, mais que vous souhaitez offrir une solution de rechange à un PNG ou GIF du diagramme, vous feriez quelque chose comme ceci :
 
@@ -1615,5 +1615,5 @@ Vous pouvez spécifier autant de `<source>`s que vous le souhaitez, bien qu'il v
 - [Technologies media Web](/fr/docs/Web/Media)
 - [Guide des codecs vidéo du Web](/fr/docs/Web/Media/Formats/Video_codecs)
 - Les éléments [HTML](/fr/docs/Glossary/HTML) [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) et [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture)
-- La propriété CSS [`background-image`](/fr/docs/Web/CSS/background-image)
+- La propriété CSS [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)
 - Le constructeur [`Image()`](/fr/docs/Web/API/HTMLImageElement/Image) et l'interface [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement)

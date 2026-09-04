@@ -8,7 +8,7 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">内容类别</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类别</a></th>
    <td>无。</td>
   </tr>
   <tr>

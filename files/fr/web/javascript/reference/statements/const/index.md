@@ -121,6 +121,6 @@ mon_tableau = ["B"]; // lève une exception
 
 ## Voir aussi
 
-- {{jsxref("Instructions/var","var")}}
-- {{jsxref("Instructions/let","let")}}
+- {{jsxref("Statements/var","var")}}
+- {{jsxref("Statements/let","let")}}
 - [Les constantes dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#constantes)

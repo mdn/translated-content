@@ -9,7 +9,7 @@ Cet événement est déclenché avant l'envoi de données HTTP, mais après que 
 
 Pour que les en-têtes de requête soient passés dans l'écouteur avec le reste des données de requête, passez `"requestHeaders"` dans un tableau `extraInfoSpec`.
 
-Pour modifier les en-têtes de façon synchrone : passez `"blocking"` dans `extraInfoSpec`, puis dans votre événement écouté, retournez un [`BlockingResponse`](/fr/Add-ons/WebExtensions/API/webRequest/BlockingResponse 'An object of this type is returned by event listeners that have set "blocking" in their extraInfoSpec argument.') avec une propriété nommée `requestHeaders`, dont la valeur est l'ensemble des en-têtes de requête à envoyer.
+Pour modifier les en-têtes de façon synchrone : passez `"blocking"` dans `extraInfoSpec`, puis dans votre événement écouté, retournez un [`BlockingResponse`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse 'An object of this type is returned by event listeners that have set "blocking" in their extraInfoSpec argument.') avec une propriété nommée `requestHeaders`, dont la valeur est l'ensemble des en-têtes de requête à envoyer.
 
 Pour modifier les en-têtes de façon asynchrone : passez `"blocking"` dans `extraInfoSpec`, puis dans votre event listener, retournez une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec une `BlockingResponse`.
 

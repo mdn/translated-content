@@ -3,7 +3,7 @@ title: Function.prototype.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
 
-{{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
 > [!NOTE]
 > {{jsxref("Function")}} 对象的 `arguments` 属性已被弃用。访问 `arguments` 对象的推荐方式是在函数内部引用可用的 {{jsxref("Functions/arguments", "arguments")}} 变量。
@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 
 在递归的情况下，即如果函数 `f` 在调用栈上出现多次，`f.arguments` 的值表示最近一次调用该函数时的参数。
 
-如果函数没有正在进行的、未完成的调用（即函数已被调用但尚未返回），`arguments` 属性的值通常为 {{jsxref("Operators/null", "null")}}。
+如果函数没有正在进行的、未完成的调用（即函数已被调用但尚未返回），`arguments` 属性的值通常为 {{jsxref("null")}}。
 
 请注意，ECMAScript 规范只规定了 `Function.prototype` 具有一个初始的 `arguments` 访问器，对于任何 `get` 或 `set` 请求都无条件地抛出 {{jsxref("TypeError")}}（称为“毒丸访问器”），而且引擎实现不允许改变此语义，除非是非严格的普通函数。（对于非严格的普通函数）`arguments` 属性的实际行为如果不是抛出错误，则该行为由实现定义。例如，Chrome 将其定义为自有的数据属性，而 Firefox 和 Safari 扩展了初始的毒丸访问器 `Function.prototype.arguments`，以特殊处理非严格函数的 `this` 值。
 

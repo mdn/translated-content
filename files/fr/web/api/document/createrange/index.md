@@ -1,24 +1,33 @@
 ---
-title: Document.createRange
+title: "Document : méthode createRange()"
+short-title: createRange()
 slug: Web/API/Document/createRange
+l10n:
+  sourceCommit: 1abe075be40cd938aa9131a42b4e03b21b78627c
 ---
 
 {{APIRef("DOM")}}
 
-Retourne un objet {{domxref("Range")}}.
+La méthode **`createRange()`** de l'interface {{DOMxRef("Document")}} retourne un nouvel objet {{DOMxRef("Range")}} dont le début et la fin sont au décalage 0 de l'objet {{DOMxRef("Document")}} sur lequel elle a été appelée.
 
 ## Syntaxe
 
-```js
-range = document.createRange();
+```js-nolint
+createRange()
 ```
 
-`range` devient un objet {{domxref("Range")}}.
+### Paramètres
 
-## Exemple
+Aucun.
+
+### Valeur de retour
+
+L'objet {{DOMxRef("Range")}} nouvellement créé.
+
+## Exemples
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
@@ -26,8 +35,12 @@ range.setEnd(endNode, endOffset);
 
 ## Notes
 
-Une fois un objet `Range` créé, il est nécessaire de spécifier les limites de départ et de fin avant de pouvoir utiliser la plupart des méthodes.
+Une fois un objet `Range` créé, il est nécessaire de définir les limites de départ et de fin avant de pouvoir utiliser la plupart des méthodes.
 
-## Spécification
+## Spécifications
 
-- [DOM Level 2 Range: DocumentRange.createRange](https://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113/ranges.html#Level-2-DocumentRange-idl)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

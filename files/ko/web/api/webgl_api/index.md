@@ -84,7 +84,7 @@ WebGL 2는 {{domxref("WebGL2RenderingContext")}} 인터페이스를 통해 제�
 - [WebGL Fundamentals](https://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/) A basic tutorial with fundamentals of WebGL.
 - [WebGL playground](http://webglplayground.net/) An online tool for creating and sharing WebGL projects. Good for quick prototyping and experimenting.
 - [WebGL Academy](http://www.webglacademy.com/) An HTML/JavaScript editor with tutorials to learn basics of webgl programming.
-- [WebGL Stats](http://webglstats.com/) A site with statistics about WebGL capabilities in browsers on different platforms.
+- [WebGL Stats](https://webglreport.com/) A site with statistics about WebGL capabilities in browsers on different platforms.
 
 ### Libraries
 

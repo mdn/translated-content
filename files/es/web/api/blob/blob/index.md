@@ -16,7 +16,7 @@ var aBlob = new Blob( array, options );
 ### Parámetros
 
 - `array`
-  - : Es un {{jsxref("Array")}} de {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, objetos {{domxref("USVString")}}, o una mezcla de cualquiera de éstos objetos, que será puesto dentro de {{domxref("Blob")}}. Los objetos `USVString` estan codificados como UTF-8.
+  - : Es un {{jsxref("Array")}} de {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, objetos {{jsxref("String")}}, o una mezcla de cualquiera de éstos objetos, que será puesto dentro de {{domxref("Blob")}}. Los objetos `USVString` estan codificados como UTF-8.
 - `options` {{optional_inline}}
   - : Un objeto opcional de tipo {{domxref("BlobPropertyBag")}} que puede especificar las siguientes propiedades:
     - `type` {{optional_inline}}

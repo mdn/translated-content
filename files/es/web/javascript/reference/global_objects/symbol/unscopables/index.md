@@ -38,7 +38,7 @@ Establecer una propiedad a `true` en un objeto `unscopable` la hará _unscopable
 
 ### Scoping con sentencias
 
-El siguiente código funciona bien en ES5 y posteriores. Sin embargo, en ECMAScript 2015 y posteriores, se introdujo el método {{jsxref("Array.prototype.keys()")}}. Eso significa que dentro del entorno `with` "keys" sería ahora el método y no la variable. Fue entonces cuando se introdujo el símbolo `unscopable`. Un ajuste incorporado de `unscopables` se implementa como {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} para evitar que algunos de los métodos de Array se encuentren dentro de la declaración `with`.
+El siguiente código funciona bien en ES5 y posteriores. Sin embargo, en ECMAScript 2015 y posteriores, se introdujo el método {{jsxref("Array.prototype.keys()")}}. Eso significa que dentro del entorno `with` "keys" sería ahora el método y no la variable. Fue entonces cuando se introdujo el símbolo `unscopable`. Un ajuste incorporado de `unscopables` se implementa como {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}} para evitar que algunos de los métodos de Array se encuentren dentro de la declaración `with`.
 
 ```js
 const keys = [];
@@ -83,5 +83,5 @@ with (obj) {
 
 ## Véase también
 
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
 - Sentencia [`with`](/es/docs/Web/JavaScript/Reference/Statements/with) (no disponible en [Strict mode](/es/docs/Web/JavaScript/Reference/Strict_mode))

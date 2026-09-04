@@ -5,7 +5,7 @@ slug: Web/API/URL/toJSON
 
 {{APIRef("URL API")}}
 
-La méthode **`toJSON()`** de l'interface {{domxref("URL")}} retourne un {{domxref("USVString")}} contenant une version sérialisé de l'URL, même si dans la pratique, il semble avoir le même effet que {{domxref("URL.toString()")}}.
+La méthode **`toJSON()`** de l'interface {{domxref("URL")}} retourne un {{jsxref("String")}} contenant une version sérialisé de l'URL, même si dans la pratique, il semble avoir le même effet que {{domxref("URL.toString()")}}.
 
 {{AvailableInWorkers}}
 
@@ -21,7 +21,7 @@ Aucun.
 
 ### Valeur retournée
 
-A {{domxref("USVString")}}.
+A {{jsxref("String")}}.
 
 ## Exemples
 

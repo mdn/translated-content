@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Typed Object Model API")}}
 
-**`parseAll()`** は {{domxref("CSSStyleValue")}} インターフェイスのメソッドで、特定の CSS プロパティが出現したものすべてに指定された値に設定し、それぞれが指定された値のいずれかを含む {{domxref('CSSStyleValue')}} オブジェクトの配列を返します。
+**`parseAll()`** は {{domxref("CSSStyleValue")}} インターフェイスの静的メソッドで、特定の CSS プロパティが出現したものすべてに指定された値に設定し、それぞれが指定された値のいずれかを含む {{domxref('CSSStyleValue')}} オブジェクトの配列を返します。
 
 ## 構文
 

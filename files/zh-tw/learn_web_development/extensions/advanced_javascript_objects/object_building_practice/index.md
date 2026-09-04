@@ -242,14 +242,12 @@ Ball.prototype.update = function () {
    ```js
    Ball.prototype.collisionDetect = function () {
      for (j = 0; j < balls.length; j++) {
-       if (
-         !(
-           this.x === balls[j].x &&
-           this.y === balls[j].y &&
-           this.velX === balls[j].velX &&
-           this.velY === balls[j].velY
-         )
-       ) {
+       if (!(
+         this.x === balls[j].x &&
+         this.y === balls[j].y &&
+         this.velX === balls[j].velX &&
+         this.velY === balls[j].velY
+       )) {
          var dx = this.x - balls[j].x;
          var dy = this.y - balls[j].y;
          var distance = Math.sqrt(dx * dx + dy * dy);

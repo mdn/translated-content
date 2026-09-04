@@ -1,15 +1,17 @@
 ---
-title: "スキルテスト: イベント"
-short-title: イベント
+title: "確認テスト: イベント"
+short-title: "テスト: イベント"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Events
 l10n:
-  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
+  sourceCommit: b36d59a0df933597c7d3b55e363f7a59e30d3ba3
 ---
 
-このスキルテストの目的は、あなたが[イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)の記事を理解したかどうかを判定することです。
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}
+
+この確認テストの目的は、あなたが[イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)の記事を理解したかどうかを判定することです。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## DOM 操作: 有益なもの
 
@@ -23,7 +25,13 @@ l10n:
 
 イベント関連の最初の課題では、ボタン (`btn`) がクリックされたときにボタン内のテキストを変化させ、再度クリックされたときに元に戻す単純なイベントハンドラーを作成する必要があります。
 
-```css hidden live-sample___events-1
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample("events-1", "100%", 80) }}
+
+この出発点の基盤となるコードは次の通りです。
+
+```css hidden live-sample___events-1 live-sample___events-1-finish
 p {
   color: purple;
   margin: 0.5em 0;
@@ -43,7 +51,7 @@ canvas {
 }
 ```
 
-```html hidden live-sample___events-1
+```html hidden live-sample___events-1 live-sample___events-1-finish
 <button class="off">マシンはオフです</button>
 ```
 
@@ -53,14 +61,16 @@ const btn = document.querySelector("button");
 // ここにコードを追加
 ```
 
-{{ EmbedLiveSample("events-1", "100%", 80) }}
+更新後の出力の初期状態は、次のようになるはずです（ボタンを押してみてください）。
+
+{{ EmbedLiveSample("events-1-finish", "100%", 80) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完成した JavaScript は、次のようになるでしょう。
 
-```js
+```js live-sample___events-1-finish
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
@@ -89,11 +99,17 @@ btn.addEventListener("click", () => {
 > [!WARNING]
 > コードをテストするときは、キーボードコマンドを試す前にキャンバスにフォーカスを合わせておく必要があります（例えば、キャンバスをクリックするか、キーボードの Tab キーでキャンバスに移動してください）。そうしないと、コマンドは動作しません。
 
-```html hidden live-sample___events-2
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample("events-2", "100%", 350) }}
+
+この出発点の基盤となるコードは次の通りです。
+
+```html hidden live-sample___events-2 live-sample___events-2-finish
 <canvas width="480" height="320" tabindex="0"> </canvas>
 ```
 
-```css hidden live-sample___events-2
+```css hidden live-sample___events-2 live-sample___events-2-finish
 * {
   box-sizing: border-box;
 }
@@ -127,7 +143,9 @@ drawCircle(x, y, size);
 // ここにコードを追加
 ```
 
-{{ EmbedLiveSample("events-2", "100%", 350) }}
+更新後の出力の初期状態は、次のようになるはずです（クリックしてキーボードで操作してみてください）。
+
+{{ EmbedLiveSample("events-2-finish", "100%", 350) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
@@ -158,6 +176,46 @@ window.addEventListener("keydown", (e) => {
 });
 ```
 
+```js hidden live-sample___events-2-finish
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+function drawCircle(x, y, size) {
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.beginPath();
+  ctx.fillStyle = "black";
+  ctx.arc(x, y, size, 0, 2 * Math.PI);
+  ctx.fill();
+}
+
+let x = 50;
+let y = 50;
+const size = 30;
+
+drawCircle(x, y, size);
+
+window.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "a":
+      x -= 5;
+      break;
+    case "d":
+      x += 5;
+      break;
+    case "w":
+      y -= 5;
+      break;
+    case "s":
+      y += 5;
+      break;
+  }
+
+  drawCircle(x, y, size);
+});
+```
+
 </details>
 
 ## イベント 3
@@ -166,7 +224,13 @@ window.addEventListener("keydown", (e) => {
 
 すべてのボタンをループして、それぞれのボタンに自分自身でイベントリスナーを与えることなく、この問題を解決してください。
 
-```html hidden live-sample___events-3
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample("events-3", "100%", 80) }}
+
+この出発点の基盤となるコードは次の通りです。
+
+```html hidden live-sample___events-3 live-sample___events-3-finish
 <div class="button-bar">
   <button data-color="red">Red</button>
   <button data-color="yellow">Yellow</button>
@@ -175,7 +239,7 @@ window.addEventListener("keydown", (e) => {
 </div>
 ```
 
-```css hidden live-sample___events-3
+```css hidden live-sample___events-3 live-sample___events-3-finish
 * {
   box-sizing: border-box;
 }
@@ -203,14 +267,16 @@ const buttonBar = document.querySelector(".button-bar");
 // ここにコードを追加
 ```
 
-{{ EmbedLiveSample("events-3", "100%", 80) }}
+更新後の出力の初期状態は、次のようになるはずです（ボタンを押してみてください）。
+
+{{ EmbedLiveSample("events-3-finish", "100%", 80) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完成した JavaScript は、次のようになるでしょう。
 
-```js
+```js live-sample___events-3-finish
 const buttonBar = document.querySelector(".button-bar");
 
 function setColor(e) {
@@ -221,3 +287,5 @@ buttonBar.addEventListener("click", setColor);
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}

@@ -26,7 +26,7 @@ onresize = (event) => {};
 
 ## 例
 
-使用例のデモについては、[視覚的ビューポート API](/ja/docs/Web/API/Visual_Viewport_API#例) のランディングページをご覧ください。
+使用例のデモについては、[視覚的ビューポート API](/ja/docs/Web/API/VisualViewport#例) のランディングページをご覧ください。
 
 ## 仕様書
 

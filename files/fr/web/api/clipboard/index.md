@@ -28,7 +28,7 @@ _`Clipboard` est basé sur l'interface {{domxref("EventTarget")}}, et inclut les
 - {{domxref("Clipboard.read()","read()")}}
   - : Demande des données arbitraires (telles que des images) depuis le presse-papiers, et renvoie une {{jsxref("Promise")}}. Quand les données ont été obtenues, la promesse est résolue avec un objet {{domxref("DataTransfer")}} qui fournit les données.
 - {{domxref("Clipboard.readText()","readText()")}}
-  - : Demande du texte depuis le presse-papiers du système&nbsp;; renvoie une `Promise` qui est résolue avec une {{domxref("DOMString")}} contenant le texte du presse-papiers une fois disponible.
+  - : Demande du texte depuis le presse-papiers du système&nbsp;; renvoie une `Promise` qui est résolue avec une {{jsxref("String")}} contenant le texte du presse-papiers une fois disponible.
 - {{domxref("Clipboard.write()","write()")}}
   - : Écrit des données arbitraires dans le presse-papiers du système. Cette opération asynchrone signale quand elle a terminé en résolvant la `Promise` renvoyée.
 - {{domxref("Clipboard.writeText()","writeText()")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
-
 {{jsxref("RegExp")}} 实例的 **`flags`** 访问器属性返回当前正则表达式的[标志](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索)。
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.flags")}}

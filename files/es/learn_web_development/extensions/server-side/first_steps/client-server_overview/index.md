@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Client-Server_ove
 original_slug: Learn/Server-side/First_steps/Client-Server_overview
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 Ahora que conoces el propósito y los beneficios potenciales de la programación de lado-servidor vamos a examinar en detalle lo que ocurre cuando un servidor recibe una "petición dinámica" desde un explorador web. Ya que el código de lado servidor de la mayoría de los sitios web gestiona peticiones y respuestas de formas similares, este artículo te ayudará a entender lo que necesitas hacer para escribir la mayor parte de tu propio código.
 
@@ -316,4 +316,4 @@ En este punto deberías tener una buena visión general de las operaciones que e
 
 En el módulo siguiente te ayudaremos a elegir el mejor Framework Web para tu primer sitio.
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}

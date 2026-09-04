@@ -2,14 +2,17 @@
 title: Document：execCommand() 方法
 slug: Web/API/Document/execCommand
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: e593d32ad2a2fde33cfd4d4d71b152efdc371f8e
 ---
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
+> [!NOTE]
+> 雖然 `execCommand()` 方法已被棄用，但仍有一些有效的用例尚未有可行的替代方案。例如，與直接操作 DOM 不同，由 `execCommand()` 執行的修改會保留撤銷緩衝區（編輯歷史）。對於這些用例，你仍然可以使用此方法，但請進行測試以確保跨瀏覽器相容性，例如使用 {{domxref("document.queryCommandSupported()")}}。
+
 **`execCommand`** 方法實現了多種不同的命令。其中一些提供對剪貼簿的存取，而其他則用於編輯[表單輸入](/zh-TW/docs/Web/HTML/Reference/Elements/input)、[`contenteditable`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/contenteditable) 元素或整個文件（當切換到[設計模式](/zh-TW/docs/Web/API/Document/designMode)時）。
 
-若要存取剪貼簿，建議使用較新的 [Clipboard API](/zh-TW/docs/Web/API/Clipboard_API) 來取代 `execCommand()`。然而，對於編輯命令則沒有替代方案：與直接操作 DOM 不同，`execCommand()` 所執行的修改會保留撤銷緩衝區（編輯歷史）。
+若要存取剪貼簿，建議使用較新的 [Clipboard API](/zh-TW/docs/Web/API/Clipboard_API) 來取代 `execCommand()`。
 
 大多數命令會影響文件的[選取範圍](/zh-TW/docs/Web/API/Selection)。例如，一些命令（粗體、斜體等）會格式化當前選取的文字，而其他命令則刪除選取範圍、插入新元素（取代選取範圍）或影響整行（縮排）。只有當前處於活動狀態的可編輯元素可以被修改，但某些命令（例如 `copy`）可以在沒有可編輯元素的情況下運作。
 
@@ -19,12 +22,12 @@ l10n:
 ## 語法
 
 ```js-nolint
-execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+execCommand(commandName, showDefaultUI, valueArgument)
 ```
 
 ### 參數
 
-- `aCommandName`
+- `commandName`
   - : 指定要執行的命令名稱的字串。以下命令被指定：
     - `backColor`
       - : 更改文件背景顏色。在 `styleWithCss` 模式下，它會改變包含區塊的背景顏色。這需要傳遞一個 {{cssxref("&lt;color&gt;")}} 值字串作為引數值。
@@ -73,7 +76,13 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `insertHorizontalRule`
       - : 在插入點插入一個 {{HTMLElement("hr")}} 元素，或用它取代選取範圍。
     - `insertHTML`
-      - : 在插入點插入一個 HTML 字串（刪除選取範圍）。需要一個有效的 HTML 字串作為引數值。
+      - : 在插入點插入一個 {{domxref("TrustedHTML")}} 實例或 HTML 標記字串（刪除選取範圍）。這需要有效的 HTML 標記。
+
+        > [!WARNING]
+        > 輸入會被解析為 HTML 並寫入 DOM 中。像這樣的 API 被稱為[注入匯點](/zh-TW/docs/Web/API/Trusted_Types_API#concepts_and_usage)，如果輸入最初來自攻擊者，可能會成為[跨站腳本（XSS）](/zh-TW/docs/Web/Security/Attacks/XSS)攻擊的載體。
+        >
+        > 你可以透過始終指派 {{domxref("TrustedHTML")}} 物件而非字串，並[強制執行可信任類型](/zh-TW/docs/Web/API/Trusted_Types_API#使用_csp_強制執行可信任類型)來減輕此風險。更多資訊請參見 [Trusted Types API](/zh-TW/docs/Web/API/Trusted_Types_API)。
+
     - `insertImage`
       - : 在插入點插入一個圖像（刪除選取範圍）。需要一個圖像 `src` 的 URL 字串作為引數值。此字串的要求與 `createLink` 相同。
     - `insertOrderedList`
@@ -125,9 +134,9 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `AutoUrlDetect`
       - : 更改瀏覽器的自動連結行為。
 
-- `aShowDefaultUI`
+- `showDefaultUI`
   - : 一個布林值，指示是否應顯示預設的使用者介面。Mozilla 中未實作此功能。
-- `aValueArgument`
+- `valueArgument`
   - : 對於需要輸入引數的命令，是一個提供該資訊的字串。例如，`insertImage` 需要插入圖像的 URL。若不需要引數，請指定 `null`。
 
 ### 回傳值
@@ -138,8 +147,6 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 > 只有在作為使用者互動的一部分被呼叫時，`document.execCommand()` 才會回傳 `true`。你不能用它來在呼叫指令之前驗證瀏覽器是否支援該指令。
 
 ## 範例
-
-[如何使用 execCommand 與 contentEditable 元素的範例](https://codepen.io/chrisdavidmills/full/gzYjag/)（CodePen）。
 
 ### 使用 insertText
 
@@ -214,7 +221,7 @@ function insertText(newText, selector) {
 
 ## 規範
 
-{{Specifications}}
+此功能不屬於任何當前的規範。它已不再計畫成為標準。存在一份非官方的 [W3C execCommand 規範草案](https://w3c.github.io/editing/docs/execCommand/)。
 
 ## 瀏覽器相容性
 
@@ -223,5 +230,9 @@ function insertText(newText, selector) {
 ## 參見
 
 - [Clipboard API](/zh-TW/docs/Web/API/Clipboard_API)
+- MDN 範例：[你的瀏覽器支援的 execCommand](https://mdn.github.io/dom-examples/execcommand/)
 - {{domxref("HTMLElement.contentEditable")}}
 - {{domxref("document.designMode")}}
+- {{domxref("document.queryCommandEnabled()")}}
+- {{domxref("document.queryCommandState()")}}
+- {{domxref("document.queryCommandSupported()")}}

@@ -1,12 +1,10 @@
 ---
-title: "<dd>: 詳細説明要素"
+title: HTML `<dd>` 詳細説明要素
+short-title: <dd>
 slug: Web/HTML/Reference/Elements/dd
-original_slug: Web/HTML/Element/dd
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<dd>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明リスト要素 ({{HTMLElement("dl")}}) 内で、その前の用語 ({{HTMLElement("dt")}}) の説明、定義、値などを示します。
 
@@ -45,10 +43,7 @@ dd {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
-
-- `nowrap` {{Non-standard_inline}}
-  - : この属性の値が `yes` とされた場合、定義部分のテキストは改行されません。既定値は `no` です。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 ## 例
 
@@ -60,7 +55,7 @@ dd {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -69,7 +64,7 @@ dd {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -88,7 +83,11 @@ dd {
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role"><code>definition</code></a></td>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+        </td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

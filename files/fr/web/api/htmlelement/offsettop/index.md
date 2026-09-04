@@ -1,11 +1,14 @@
 ---
-title: HTMLElement.offsetTop
+title: "HTMLElement : propriété offsetTop"
+short-title: offsetTop
 slug: Web/API/HTMLElement/offsetTop
+l10n:
+  sourceCommit: 0916e1754652f3a7c663ef031faa26c98f492023
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété en lecture seule **`HTMLElement.offsetTop`** renvoie la distance entre la bordure extérieure de l'élément courant et la bordure intérieure haute de l'élément [`offsetParent`](/fr/docs/Web/API/HTMLElement/offsetParent) (le plus proche ancêtre positionné).
+La propriété en lecture seule **`offsetTop`** de l'interface {{DOMxRef("HTMLElement")}} retourne la distance entre la bordure extérieure de l'élément courant (y compris sa marge) et le bord supérieur du remplissage de l'{{DOMxRef("HTMLElement.offsetParent", "offsetParent")}}, c'est-à-dire l'élément ancêtre positionné le plus proche.
 
 ## Valeur
 
@@ -14,8 +17,8 @@ Un nombre.
 ## Exemples
 
 ```js
-let d = document.getElementById("div1");
-let topPos = d.offsetTop;
+const d = document.getElementById("div1");
+const topPos = d.offsetTop;
 
 if (topPos > 10) {
   // si le décalage est supérieur
@@ -31,6 +34,12 @@ if (topPos > 10) {
 
 {{Compat}}
 
-Pour respecter la spécification, cette propriété renverra `null` sur WebKit si l'élément est masqué (autrement dit si `style.display` vaut `none` pour cet élément ou l'un de ses ancêtres) ou si `style.position` vaut `"fixed"` pour l'élément courant.
+## Voir aussi
 
-Cette propriété renverra `null` sur Internet Explorer (9) si `style.position` vaut `"fixed"` pour l'élément courant (`display:none` n'a pas d'impact pour ce navigateur).
+- [Déterminer les dimensions des éléments](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- La propriété {{DOMxRef("Element.clientTop")}}
+- La propriété {{DOMxRef("Element.scrollTop")}}
+- La propriété {{DOMxRef("HTMLElement.offsetHeight")}}
+- La propriété {{DOMxRef("HTMLElement.offsetWidth")}}
+- La propriété {{DOMxRef("HTMLElement.offsetLeft")}}
+- La méthode {{DOMxRef("Element.getBoundingClientRect()")}}

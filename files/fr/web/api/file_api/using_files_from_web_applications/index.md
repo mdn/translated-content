@@ -177,7 +177,7 @@ input.visually-hidden:is(:focus, :focus-within) + label {
 }
 ```
 
-Il n'est ici pas nécessaire d'ajouter de code JavaScript pour invoquer `fileElem.click()`. On peut ici mettre en forme l'élément `<label>` comme bon nous semble. Il faudra fournir une indication visuelle pour l'état du focus sur le champ masqué sur le libellé, que ce soit un contour comme ci-avant (avec [`outline`](/fr/docs/Web/CSS/outline) ou une couleur d'arrière-plan ([`background-color`](/fr/docs/Web/CSS/background-color)), ou une ombre portée ([`box-shadow`](/fr/docs/Web/CSS/box-shadow)).
+Il n'est ici pas nécessaire d'ajouter de code JavaScript pour invoquer `fileElem.click()`. On peut ici mettre en forme l'élément `<label>` comme bon nous semble. Il faudra fournir une indication visuelle pour l'état du focus sur le champ masqué sur le libellé, que ce soit un contour comme ci-avant (avec [`outline`](/fr/docs/Web/CSS/Reference/Properties/outline) ou une couleur d'arrière-plan ([`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)), ou une ombre portée ([`box-shadow`](/fr/docs/Web/CSS/Reference/Properties/box-shadow)).
 
 ## Sélectionner des fichiers avec un glisser-déposer
 

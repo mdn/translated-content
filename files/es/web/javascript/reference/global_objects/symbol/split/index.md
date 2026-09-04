@@ -9,7 +9,7 @@ l10n:
 
 El símbolo conocido como **`Symbol.split`** especifica el método que divide una cadena en los índices que coinciden con una expresión regular. Esta función es llamada por el método {{jsxref("String.prototype.split()")}}.
 
-Para más información, véase {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} y {{jsxref("String.prototype.split()")}}.
+Para más información, véase {{jsxref("RegExp/Symbol.split", "RegExp.prototype[@@split]()")}} y {{jsxref("String.prototype.split()")}}.
 
 {{InteractiveExample("JavaScript Demo: Symbol.split")}}
 
@@ -62,4 +62,4 @@ console.log("Another one bites the dust".split(new ReverseSplit()));
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
-- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}
+- {{jsxref("RegExp/Symbol.split", "RegExp.prototype[@@split]()")}}

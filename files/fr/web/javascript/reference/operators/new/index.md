@@ -166,4 +166,4 @@ voiture2.propriétaire.nom;
 
 - {{jsxref("Function")}}
 - {{jsxref("Reflect.construct()")}}
-- {{jsxref("Object.prototype")}}
+- {{jsxref("Object")}}

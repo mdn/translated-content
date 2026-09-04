@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/async_function
 
 {{jsSidebar("Statements")}}
 
-A declaração **`async function`** define uma _função assíncrona_, que retorna um objeto {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.
+A declaração **`async function`** define uma _função assíncrona_, que retorna um objeto {{jsxref("AsyncFunction")}}.
 
 Você também pode definir funções assíncronas usando uma {{jsxref("Operators/async_function", "expressão async function")}}.
 

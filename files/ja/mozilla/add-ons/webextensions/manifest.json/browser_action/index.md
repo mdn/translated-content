@@ -175,10 +175,10 @@ The `browser_action` key is an object that may have any of the following propert
         </p>
         <p>
           The HTML file may include CSS and JavaScript files using
-          <code><a href="/ja/docs/Web/HTML/Element/link">&#x3C;link></a></code>
+          <code><a href="/ja/docs/Web/HTML/Reference/Elements/link">&#x3C;link></a></code>
           and
           <code
-            ><a href="/ja/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a href="/ja/docs/Web/HTML/Reference/Elements/script">&#x3C;script></a></code
           >
           elements, just like a normal web page.
         </p>

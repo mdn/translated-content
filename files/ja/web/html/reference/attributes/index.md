@@ -3,10 +3,8 @@ title: HTML 属性リファレンス
 short-title: 属性
 slug: Web/HTML/Reference/Attributes
 l10n:
-  sourceCommit: b2c8dcdae36907a87d1d1b9393ca4a35ebc765d6
+  sourceCommit: b8ffa5128ed5afe5f76b8936723f91d86b8fc7df
 ---
-
-{{HTMLSidebar("Attributes")}}
 
 HTML 要素には**属性**が存在します。これは、ユーザーが求める基準を満たすために、要素を構成したり、さまざまな方法で動作を調整したりするための追加の値です。
 
@@ -79,6 +77,13 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/input/color#alpha">alpha</a></code>
+      </td>
+      <td>{{ HTMLElement("input") }}</td>
+      <td><code>type="color"</code> 入力フィールドで、ユーザーが色の不透過度を選択することができるようにします。</td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/ja/docs/Web/HTML/Reference/Attributes/alt">alt</a></code>
       </td>
       <td>
@@ -86,6 +91,17 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
         {{ HTMLElement("img") }}, {{ HTMLElement("input") }}
       </td>
       <td>画像が表示できない場合の代替テキストです。</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Attributes">aria-*</a></code>
+      </td>
+      <td>
+        All elements
+      </td>
+      <td>
+        要素のアクセシビリティツリーにおけるステートやプロパティを変更します。適用可能性は具体的な <a href="/ja/docs/Web/Accessibility/ARIA">ARIA</a> 属性によって異なります。
+      </td>
     </tr>
     <tr>
       <td>
@@ -252,6 +268,13 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/input/color#colorspace">colorspace</a></code>
+      </td>
+      <td>{{ HTMLElement("input") }}</td>
+      <td><code>type="color"</code> 入力要素で使用される<a href="/ja/docs/Glossary/Color_space">色空間</a>を定義します。</td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/ja/docs/Web/HTML/Reference/Elements/textarea#cols">cols</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
@@ -270,7 +293,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Reference/Elements/meta#content">content</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/content">content</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>
@@ -413,7 +436,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
-      <td>閲覧者によるによるコントロールの操作を無効にするかどうかを示します。</td>
+      <td>閲覧者によるコントロールの操作を無効にするかどうかを示します。</td>
     </tr>
     <tr>
       <td>
@@ -456,6 +479,28 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/elementtiming">elementtiming</a></code>
+      </td>
+      <td>
+        {{htmlelement("img")}}、{{SVGElement("image")}} のうち {{SVGElement("svg")}} の中にあるもの、{{htmlelement("video")}} 要素のポスター画像、{{cssxref("background-image")}} を持つ要素、{{htmlelement("p")}} のようにテキストノードを持つ要素
+      </td>
+      <td>
+        この要素は、{{domxref("PerformanceObserver")}} オブジェクトで <code>"element"</code> 型を使用して、追跡対象としてマークされていることを示します。詳細については、{{domxref("PerformanceElementTiming")}} インターフェイスを参照してください。
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/fetchpriority">fetchpriority</a></code>
+      </td>
+      <td>
+        {{ HTMLElement("img") }},
+        {{ HTMLElement("link") }},
+        {{ HTMLElement("script") }}
+      </td>
+      <td>読み込みプロセスの初期段階で特定の画像を取得することが、ユーザー体験に与える影響の程度について、ブラウザーが内部的な優先順位を割り当てる際に合理的に推測できる範囲を超える情報を示すものです。</td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/ja/docs/Web/HTML/Reference/Attributes/for">for</a></code>
       </td>
       <td>
@@ -472,11 +517,8 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("label") }},
-        {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
-        {{ HTMLElement("progress") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
@@ -613,7 +655,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Reference/Elements/meta#http-equiv">http-equiv</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/meta/http-equiv">http-equiv</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>プラグマディレクティブを定義します。</td>
@@ -631,25 +673,16 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/Security/Subresource_Integrity">integrity</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/integrity">integrity</a></code>
       </td>
       <td>
         {{ HTMLElement("link") }}, {{ HTMLElement("script") }}
       </td>
       <td>
-      <p>
-        ブラウザーが読み込むものを検証できるようにするための<a href="/ja/docs/Web/Security/Subresource_Integrity">サブリソース完全性</a>の値を指定します。
-      </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/ja/docs/Web/HTML/Reference/Elements/img#intrinsicsize"><code>intrinsicsize</code></a>
-        {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("img") }}</td>
-      <td>
-        この属性はブラウザーに、画像に固有の実際の寸法を無視して、属性で指定された寸法を割り当てるように指示します。
+        <p>
+          この属性には、リソースの 1 つ以上の <a href="/ja/docs/Glossary/Hash_function">ハッシュ</a> が含まれており、リソースのコンテンツが開発者が想定した通りであり、<a href="/ja/docs/Web/Security/Attacks/Supply_chain_attacks">サプライチェーン攻撃</a> によって悪意のあるコピーに置き換えられていないことを保証するために使用されます。</p>
+          <p><a href="/ja/docs/Web/Security/Defenses/Subresource_Integrity">サブリソースの完全性</a>を参照してください。
+        </p>
       </td>
     </tr>
     <tr>
@@ -1040,14 +1073,6 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Reference/Elements/style#scoped">scoped</a></code>
-        {{non-standard_inline}} {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("style") }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/ja/docs/Web/HTML/Reference/Elements/option#selected">selected</a></code>
       </td>
       <td>{{ HTMLElement("option") }}</td>
@@ -1334,6 +1359,26 @@ HTML では、論理属性に許されている値の制約を定義していま
 
 > [!WARNING]
 > イベントハンドラーコンテンツ属性を使用することは推奨されません。HTML と JavaScript が混在すると保守性の低いコードになることが多く、またイベントハンドラー属性の実行はコンテンツセキュリティポリシーによってブロックされることがあります。
+
+> [!WARNING]
+> ハンドラーに対して `Function.prototype.toString()` メソッドを呼び出しても確認できませんが、イベントハンドラーの属性はコードを 2 つの `with` ステートメントで暗黙的に囲むことになり、予期しない結果を引き起こす可能性があります。例を示します。
+>
+> ```html
+> <div onclick="console.log(new URL(location))">悪い例</div>
+> ```
+>
+> 本質的に次のようになります。
+>
+> ```js example-bad
+> function onclick(event) {
+>   with (this.ownerDocument) {
+>     with (this) {
+>       console.log(new URL(location)); // 'URL' は、window.URL ではなく document.URL を指すようになった
+>       // TypeError: URL is not a constructor
+>     }
+>   }
+> }
+> ```
 
 上の表に掲載されている属性の他に、グローバル[イベントハンドラー](/ja/docs/Web/API/Document_Object_Model/Events#onevent_プロパティの使用)（[`onclick`](/ja/docs/Web/API/Element/click_event) など）も、すべての要素の[コンテンツ属性](#コンテンツ属性と_idl_属性)として指定することができます。
 

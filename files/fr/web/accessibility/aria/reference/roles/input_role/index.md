@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-Le rôle abstrait `input` est un type générique de widget qui permet la saisie de l'utilisateur·ice.
+Le rôle abstrait `input` est un type générique de composant qui permet la saisie de l'utilisateur·ice.
 
 > [!WARNING]
 > Le rôle `input` est un [rôle abstrait](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#6._rôles_abstraits). Il est inclus ici pour compléter la documentation. Il ne doit pas être utilisé par les développeur·euse·s web.
@@ -29,4 +29,4 @@ Le rôle `input` est un rôle abstrait. Il ne doit pas être utilisé par les d�
 - [ARIA&nbsp;: rôle `slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - [ARIA&nbsp;: rôle `spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
 - [ARIA&nbsp;: rôle `textbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
-- L'élément HTML {{HTMLElement('input')}}
+- L'élément HTML {{HTMLElement("input")}}

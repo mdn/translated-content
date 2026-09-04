@@ -3,8 +3,6 @@ title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
 
-{{JSRef}}
-
 **`toLocaleString()`** 方法返回该日期对象的字符串，该字符串格式因不同语言而不同。在支持 [`Intl.DateTimeFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 的实现中，该方法仅是调用了 `Intl.DateTimeFormat` 方法。
 
 {{InteractiveExample("JavaScript Demo: Date.toLocaleString()")}}

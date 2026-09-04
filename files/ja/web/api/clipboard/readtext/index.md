@@ -1,18 +1,23 @@
 ---
-title: Clipboard.readText()
+title: "Clipboard: readText() メソッド"
+short-title: readText()
 slug: Web/API/Clipboard/readText
+l10n:
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{APIRef("Clipboard API")}}
+{{APIRef("Clipboard API")}} {{securecontext_header}}
 
-**{{domxref("Clipboard")}}** インターフェイスの **`readText()`** メソッドは、システムクリップボードのテキストの内容のコピーに解決されるプロミス ({{jsxref("Promise")}}) を返します。
+**`readText()`** は {{domxref("Clipboard")}} インターフェイスのメソッドで、システムクリップボードのテキストの内容のコピーに解決されるプロミス ({{jsxref("Promise")}}) を返します。
 
-クリップボードからデータを読み込むには、[権限 API](/ja/docs/Web/API/Permissions_API) の `"clipboard-read"` 権限を得る必要があります。
+> [!NOTE]
+> クリップボードからテキスト以外のコンテンツを読み取る場合は、代わりに {{domxref("Clipboard.read", "read()")}} メソッドを使用してください。
+> {{domxref("Clipboard.writeText", "writeText()")}} をすると、クリップボードにテキストを書き込むことができます。
 
 ## 構文
 
-```js
-readText();
+```js-nolint
+readText()
 ```
 
 ### 引数
@@ -21,18 +26,34 @@ readText();
 
 ### 返値
 
-クリップボードのテキストの内容を持つ文字列に解決される、プロミス ({{jsxref("Promise")}}) オブジェクト。クリップボードが空であったり、テキストがないか、クリップボードの内容を表す {{domxref("DataTransfer")}} オブジェクトがテキストの表現を持たない場合は、空文字列を返します。
+クリップボードのテキストの内容を持つ文字列に解決される、プロミス ({{jsxref("Promise")}}) です。
 
-テキストでない内容をクリップボードから読むためには、代わりに {{domxref("Clipboard.read", "read()")}} メソッドを使ってください。クリップボードへのテキストの書き込みには、{{domxref("Clipboard.writeText", "writeText()")}} を使ってください。
+クリップボードが空の場合、テキストが含まれていない場合、またはクリップボードの内容を表すオブジェクトの中にテキスト表現が含まれていない場合は、空文字列を返します。
+
+### 例外
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : クリップボードからの読み取りをすることができない場合に発生します。
+- `NotFoundError` {{domxref("DOMException")}}
+  - : クリップボードがテキストとして表すことができるデータが含まれていることを示しているにもかかわらず、テキスト形式での表現を提供できない場合に発生します。
+
+## セキュリティの注意事項
+
+クリップボードからの読み取りは、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ行うことができます。
+
+その他のセキュリティ要件は、API の概要トピックにある[セキュリティの注意事項](/ja/docs/Web/API/Clipboard_API#セキュリティの考慮)の節で網羅されています。
 
 ## 例
 
 この使用例は、クリップボードからテキストの内容を取得し、ある要素の内容にその取得されたテキストを設定します。
 
 ```js
-navigator.clipboard
-  .readText()
-  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
+const destination = document.getElementById("outbox");
+destinationImage.addEventListener("click", () => {
+  navigator.clipboard
+    .readText()
+    .then((clipText) => (destination.innerText = clipText));
+});
 ```
 
 ## 仕様書
@@ -46,7 +67,7 @@ navigator.clipboard
 ## 関連情報
 
 - [クリップボード API](/ja/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
+- {{domxref("Clipboard.read()")}}
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("Clipboard.write()")}}

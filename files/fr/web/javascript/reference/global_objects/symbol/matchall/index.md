@@ -20,7 +20,7 @@ console.log(Array.from(result, (x) => x[0]));
 
 ## Description
 
-Ce symbole est utilisé par {{jsxref("String.prototype.matchAll()")}} et plus particulièrement par {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. Les deux lignes qui suivent renverront le même résultat :
+Ce symbole est utilisé par {{jsxref("String.prototype.matchAll()")}} et plus particulièrement par {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}. Les deux lignes qui suivent renverront le même résultat :
 
 ```js
 "abc".matchAll(/a/);
@@ -34,7 +34,7 @@ Cette méthode existe afin de personnaliser le comportement des correspondances 
 
 ## Exemples
 
-Voir les pages {{jsxref("String.prototype.matchAll()")}} et {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} pour plus d'exemples.
+Voir les pages {{jsxref("String.prototype.matchAll()")}} et {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}} pour plus d'exemples.
 
 ## Spécifications
 
@@ -47,4 +47,4 @@ Voir les pages {{jsxref("String.prototype.matchAll()")}} et {{jsxref("RegExp.@@m
 ## Voir aussi
 
 - {{jsxref("String.prototype.matchAll()")}}
-- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}
+- {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}

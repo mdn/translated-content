@@ -1,22 +1,28 @@
 ---
 title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{APIRef("HTML DOM")}}L'interface **`HTMLBaseElement`** contient l'URI de base pour un document. Cet objet hérite de toutes les propriétés et des méthodes telles quelles sont décrites dans l'interface {{domxref("HTMLElement")}}.
+{{APIRef("HTML DOM")}}
 
-## Propriétés
+L'interface **`HTMLBaseElement`** contient l'URI de base d'un document. Cet objet hérite de toutes les propriétés et méthodes décrites dans l'interface {{DOMxRef("HTMLElement")}}.
 
-_Hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
+{{InheritanceDiagram}}
 
-- {{domxref("HTMLBaseElement.href")}}
-  - : est un {{domxref("DOMString")}} qui reflète l'attribut HTML [`href`](/fr/docs/Web/HTML/Reference/Elements/base#href), contenant l'URL de base pour les URLs relatives dans le document.
-- {{domxref("HTMLBaseElement.target")}}
-  - : est un {{domxref("DOMString")}} qui reflète l'attribut HTML [`target`](/fr/docs/Web/HTML/Reference/Elements/base#target), contenant un contexte de navigation cible par défaut ou une frame pour les éléments qui n'ont pas de cibe spécifiée.
+## Propriétés d'instance
 
-## Methodes
+_Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-_Pas de méthodes spécifiques; Hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
+- {{DOMxRef("HTMLBaseElement.href")}}
+  - : Une chaîne de caractères qui reflète l'attribut HTML [`href`](/fr/docs/Web/HTML/Reference/Elements/base#href), contenant une URL de base pour les URL relatives dans le document.
+- {{DOMxRef("HTMLBaseElement.target")}}
+  - : Une chaîne de caractères qui reflète l'attribut HTML [`target`](/fr/docs/Web/HTML/Reference/Elements/base#target), contenant un contexte de navigation ou un cadre cible par défaut pour les éléments qui n'ont pas de référence de cible spécifiée.
+
+## Méthodes d'instance
+
+_Aucune méthode spécifique&nbsp;; hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 
 ## Spécifications
 
@@ -28,4 +34,4 @@ _Pas de méthodes spécifiques; Hérite des propriétés de son parent, {{domxre
 
 ## Voir aussi
 
-- L'élément HTML implémentant l'interface {{ HTMLElement("base") }}
+- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("base")}}

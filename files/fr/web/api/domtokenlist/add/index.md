@@ -16,7 +16,7 @@ tokenList.add(token1[, token2[, ...]]);
 ### Paramètres
 
 - token
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la marque (_token_) que vous souhaitez ajouter à la liste.
+  - : Une {{jsxref("String")}} (_chaîne de caractères_) représentant la marque (_token_) que vous souhaitez ajouter à la liste.
 
 ### Valeur renvoyée
 

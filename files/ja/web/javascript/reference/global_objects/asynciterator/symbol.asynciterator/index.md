@@ -22,8 +22,8 @@ const iterator1 = map1[Symbol.iterator]();
 for (const item of iterator1) {
   console.log(item);
 }
-// Expected output: Array ["0", "foo"]
-// Expected output: Array [1, "bar"]
+// 予想される結果: Array ["0", "foo"]
+// 予想される結果: Array [1, "bar"]
 ```
 
 ## 構文

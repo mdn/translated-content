@@ -3,7 +3,7 @@ title: "File: lastModified プロパティ"
 short-title: lastModified
 slug: Web/API/File/lastModified
 l10n:
-  sourceCommit: 3b5a1c0dfd59257c0a51052a9efa7b0108f8ecca
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
@@ -21,7 +21,7 @@ UNIX 元期からのミリ秒数を表す数値です。
 ### HTML
 
 ```html
-<input type="file" id="filepicker" name="fileList" multiple />
+<input type="file" id="file-picker" name="fileList" multiple />
 <output id="output"></output>
 ```
 
@@ -36,16 +36,16 @@ output {
 
 ```js
 const output = document.getElementById("output");
-const filepicker = document.getElementById("filepicker");
+const filePicker = document.getElementById("file-picker");
 
-filepicker.addEventListener("change", (event) => {
+filePicker.addEventListener("change", (event) => {
   const files = event.target.files;
   const now = new Date();
   output.textContent = "";
 
   for (const file of files) {
     const date = new Date(file.lastModified);
-    // ファイルが 1 年以上変更されていなければtrue
+    // ファイルが 1 年以上変更されていなければ true
     const stale = now.getTime() - file.lastModified > 31_536_000_000;
     output.textContent += `${file.name} is ${
       stale ? "stale" : "fresh"

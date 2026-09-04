@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 {{jsSidebar("Operadores")}}
 
-La palabra clave `yield` se usa para pausar y reanudar una función generadora ({{jsxref("Statements/function*", "function*")}} o {{jsxref("Statements/Legacy_generator_function", "función generadora heredada")}}).
+La palabra clave `yield` se usa para pausar y reanudar una función generadora ({{jsxref("Statements/function*", "function*")}} o {{jsxref("Deprecated_and_obsolete_features", "función generadora heredada")}}).
 
 {{InteractiveExample("JavaScript Demo: Expressions - yield", "taller")}}
 

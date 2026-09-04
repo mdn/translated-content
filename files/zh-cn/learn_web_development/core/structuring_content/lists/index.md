@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content")}}
 
 现在，让我们把目光转向列表。列表在生活中无处不在——从你的购物清单，到你每天回家时下意识遵循的方向列表，再到你在这些教程中遵循的说明列表！HTML 有一套方便的元素，可以让我们定义不同类型的列表，这一点你可能不会感到惊讶。在 Web 中，我们有三种类型的列表：无序列表、有序列表和描述列表。本课将向你展示如何使用不同类型的列表。
 
@@ -406,8 +406,7 @@ textarea.onkeyup = () => {
 如果你在北方，可加入黄瓜丁、胡萝卜丁和花生米，翻炒后起锅。
 
 大千鸡
-张大千居加拿大期间，曾按自己喜好改变宫保鸡丁的做法，并传授当地厨师，厨师将之命名为“大千鸡”，以兹纪念。大千鸡与宫保鸡丁不同之处，是使用经细工去皮、出骨、剔膜的鸡腿肉，以干辣椒、豆瓣酱为味，而且不用花生。</textarea
->
+张大千居加拿大期间，曾按自己喜好改变宫保鸡丁的做法，并传授当地厨师，厨师将之命名为“大千鸡”，以兹纪念。大千鸡与宫保鸡丁不同之处，是使用经细工去皮、出骨、剔膜的鸡腿肉，以干辣椒、豆瓣酱为味，而且不用花生。</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="重置" />

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
-
 {{jsxref("Error")}} 实例的 **`toString()`** 方法返回一个表示此错误的字符串。
 
 ## 语法

@@ -20,7 +20,7 @@ Elle reflète l'attribut `ping` de l'élément HTML {{HTMLElement("a")}}.
 ```html
 <a
   id="lienExemple"
-  href="https://exemple.fr"
+  href="https://example.com"
   ping="https://exemple-tracking.fr https://exemple-analytics.fr"
   >Lien d'exemple</a
 >

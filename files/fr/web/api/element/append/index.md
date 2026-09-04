@@ -1,34 +1,41 @@
 ---
-title: Element.append()
+title: "Element : méthode append()"
+short-title: append()
 slug: Web/API/Element/append
+l10n:
+  sourceCommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`Element.append()`** ajoute un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères après le dernier enfant d'`Element`. Les chaînes de caractères sont insérées comme des nœuds [`Text`](/fr/docs/Web/API/Text).
+La méthode **`append()`** de l'interface {{DOMxRef("Element")}} insère un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères après le dernier enfant de l'élément. Les chaînes de caractères sont insérées comme des nœuds équivalents {{DOMxRef("Text")}}.
 
-Voici les différences entre `Element.append()` et [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)&nbsp;:
+Différences avec {{DOMxRef("Node.appendChild()")}}&nbsp;:
 
-- `Element.append()` permet d'ajouter des chaînes de caractères tandis que `Node.appendChild()` accepte uniquement les objets [`Node`](/fr/docs/Web/API/Node).
-- `Element.append()` n'a pas de valeur de retour alors que `Node.appendChild()` renvoie l'objet [`Node`](/fr/docs/Web/API/Node) ajouté.
+- `Element.append()` permet d'ajouter des chaînes de caractères tandis que `Node.appendChild()` accepte uniquement les objets {{DOMxRef("Node")}}.
+- `Element.append()` n'a pas de valeur de retour alors que `Node.appendChild()` retourne l'objet {{DOMxRef("Node")}} ajouté.
 - `Element.append()` permet d'ajouter plusieurs nœuds et chaînes de caractères tandis que `Node.appendChild()` ne permet d'ajouter qu'un seul nœud.
 
 ## Syntaxe
 
-```js
-append(param1);
-append(param1, param2);
-append(param1, param2, /* ... ,*/ paramN);
+```js-nolint
+append(param1)
+append(param1, param2)
+append(param1, param2, /* …, */ paramN)
 ```
 
 ### Paramètres
 
 - `param1`, …, `paramN`
-  - : Un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères à insérer.
+  - : Un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères à insérer.
+
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
 
 ### Exceptions
 
-- [`DOMException`](/fr/docs/Web/API/DOMException) `HierarchyRequestError`
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
   - : Levée lorsque le nœud ne peut être inséré à l'emplacement indiqué dans la hiérarchie.
 
 ## Exemples
@@ -64,7 +71,7 @@ console.log(div.childNodes); // NodeList [ #text "Du texte", <p> ]
 
 ### `append()` est hors de la portée créée par `with`
 
-La méthode `append()` n'est pas disponible dans la portée créée par une instruction `with`. Voir [`Symbol.unscopables`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) pour plus d'informations.
+La méthode `append()` n'est pas disponible dans la portée créée par une instruction `with`. Voir {{JSxRef("Symbol.unscopables")}} pour plus d'informations.
 
 ```js
 let div = document.createElement("div");
@@ -85,8 +92,8 @@ with (div) {
 
 ## Voir aussi
 
-- [`Element.prepend()`](/fr/docs/Web/API/Element/prepend)
-- [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)
-- [`Element.after()`](/fr/docs/Web/API/Element/after)
-- [`Element.insertAdjacentElement()`](/fr/docs/Web/API/Element/insertAdjacentElement)
-- [`NodeList`](/fr/docs/Web/API/NodeList)
+- La méthode {{DOMxRef("Element.prepend()")}}
+- La méthode {{DOMxRef("Node.appendChild()")}}
+- La méthode {{DOMxRef("Element.after()")}}
+- La méthode {{DOMxRef("Element.insertAdjacentElement()")}}
+- L'interface {{DOMxRef("NodeList")}}

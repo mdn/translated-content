@@ -28,7 +28,7 @@ new AnimationEvent(type, options)
     - `elapsedTime` {{optional_inline}}
       - : 이 이벤트가 발생한 시점까지 애니메이션이 재생된 총 시간을 나타내는 `float` 값입니다. 초 단위며, 애니메이션이 일시중지됐던 시간은 제외합니다. `animationstart` 이벤트의 `elapsedTime`은 {{cssxref("animation-delay")}}의 값이 음수인 경우에만 `(-1 * delay)`가 되고, 그 외에는 `0.0`입니다.
     - `pseudoElement` {{optional_inline}}
-      - : 애니메이션이 재생 중인 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)의 이름을 담은, `'::'`으로 시작하는 문자열입니다. 애니메이션이 일반 요소에서 재생 중이라면 빈 문자열(`''`)을 반환합니다.
+      - : 애니메이션이 재생 중인 [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)의 이름을 담은, `'::'`으로 시작하는 문자열입니다. 애니메이션이 일반 요소에서 재생 중이라면 빈 문자열(`''`)을 반환합니다.
 
 ## 명세서
 
@@ -40,7 +40,7 @@ new AnimationEvent(type, options)
 
 ## 같이 보기
 
-- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/Guides/Animations/Using)
 - 애니메이션 관련 CSS 속성과 @규칙: {{cssxref("animation")}},
   {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
   {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},

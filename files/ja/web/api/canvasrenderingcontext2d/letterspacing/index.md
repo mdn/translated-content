@@ -10,7 +10,7 @@ l10n:
 
 **`CanvasRenderingContext2D.letterSpacing`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) のプロパティで、テキストを描画する際の字間を指定します。
 
-これは CSS の [`letter-spacing`](/ja/docs/Web/CSS/letter-spacing) プロパティに相当します。
+これは CSS の [`letter-spacing`](/ja/docs/Web/CSS/Reference/Properties/letter-spacing) プロパティに相当します。
 
 ## 値
 

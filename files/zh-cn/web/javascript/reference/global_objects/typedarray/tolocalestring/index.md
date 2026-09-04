@@ -3,8 +3,6 @@ title: TypedArray.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
 ---
 
-{{JSRef}}
-
 **`toLocaleString()`** 方法返回一个字符串，表示该类型化数组的元素。这些元素被转化为字符串并由一个区域设置指定的分隔符（例如逗号“,”）分隔。这个方法与 {{jsxref("Array.prototype.toLocaleString()")}} 拥有相同的算法。同时，由于类型化数组的元素都是数字，将每个元素转化为字符串的算法与 {{jsxref("Number.prototype.toLocaleString()")}} 是相同的。*类型化数组*需要是[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)中的一种类型。
 
 ## 语法

@@ -25,7 +25,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 ### 參數
 
 - `func`
-  - : 一個 {{jsxref("function")}}，每隔 `delay` 毫秒執行一次。第一次執行會在 `delay` 毫秒後觸發。
+  - : 一個 {{jsxref("Operators/function", "function")}}，每隔 `delay` 毫秒執行一次。第一次執行會在 `delay` 毫秒後觸發。
 - `code`
   - : 一種可選語法，允許使用字串代替函式，該字串會被編譯並在每個 `delay` 毫秒執行一次。由於與使用 {{jsxref("Global_Objects/eval", "eval()")}} 帶來的安全風險相同，*不建議*使用此語法。
 - `delay` {{optional_inline}}

@@ -1,57 +1,60 @@
 ---
-title: "Element : évènement error"
+title: "HTMLElement : évènement error"
+short-title: error
 slug: Web/API/HTMLElement/error_event
+l10n:
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-L'évènement `error` est déclenché sur un objet [`Element`](/fr/docs/Web/API/Element) lorsque le chargement d'une ressource a échoué ou qu'elle ne peut pas être utilisée. Cela peut, par exemple, se produire lors d'une erreur d'exécution d'un script ou lorsqu'une image ne peut être trouvée ou si elle est invalide.
+L'évènement `error` de l'interface {{DOMxRef("HTMLElement")}} est déclenché sur un élément lorsqu'une ressource n'a pas pu être chargée ou ne peut pas être utilisée. Par exemple, si un script rencontre une erreur d'exécution ou si une image est introuvable ou invalide.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bouillonnement</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td><a href="/fr/docs/Web/API/Event"><code>Event</code></a> ou <a href="/fr/docs/Web/API/UIEvent"><code>UIEvent</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété pour la gestion d'évènement</th>
-      <td>
-        <a href="/fr/docs/Web/API/GlobalEventHandlers/onerror"><code>onerror</code></a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+Cet évènement n'est pas annulable et ne se propage pas.
 
-L'objet évènement obtenu est une instance [`UIEvent`](/fr/docs/Web/API/UIEvent) s'il a été généré depuis un élément de l'interface utilisateur ou une instance [`Event`](/fr/docs/Web/API/Event) sinon.
+## Syntaxe
+
+On utilisera le nom de l'évènement dans des méthodes telles que {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou on définira une propriété gestionnaire d'évènements.
+
+```js-nolint
+addEventListener("error", (event) => { })
+
+onerror = (event) => { }
+```
+
+## Type d'évènement
+
+L'objet évènement est une instance de l'objet {{DOMxRef("UIEvent")}} s'il a été généré à partir d'un élément d'interface utilisateur, ou une instance de l'objet {{DOMxRef("Event")}} à la place.
+
+{{InheritanceDiagram("UIEvent")}}
 
 ## Exemples
 
-### HTML
+### Exemple interactif
+
+#### HTML
 
 ```html
 <div class="controls">
   <button id="img-error" type="button">Générer une erreur d'image</button>
-  <img class="bad-img" />
+  <img src="bad-image.jpg" class="bad-img" alt="Je n'existe pas" />
 </div>
 
 <div class="event-log">
   <label>Journal d'évènements :</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="eventLog"></textarea>
 </div>
 ```
 
 ```css hidden
 body {
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .controls {
@@ -85,7 +88,7 @@ img {
 }
 ```
 
-### JS
+#### JavaScript
 
 ```js
 const log = document.querySelector(".event-log-contents");
@@ -102,9 +105,9 @@ imgError.addEventListener("click", () => {
 });
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('', '100%', '250px')}}
+{{EmbedLiveSample('Exemple interactif', '100%', 150)}}
 
 ## Spécifications
 
@@ -116,4 +119,6 @@ imgError.addEventListener("click", () => {
 
 ## Voir aussi
 
-- L'évènement correspondant pour les cibles `Window`&nbsp;: [`error`](/fr/docs/Web/API/Window/error_event)
+- Évènements associés&nbsp;:
+  - L'évènement {{DOMxRef("Window/error_event", "error")}} de Window
+  - L'évènement {{DOMxRef("HTMLElement/load_event", "load")}} de HTMLElement

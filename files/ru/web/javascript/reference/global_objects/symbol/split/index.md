@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 **`Symbol.split`** общеизвестный символ определяет метод, который делит строки в индексах, соответствующих регулярному выражению. Эта функция вызывается методом {{jsxref("String.prototype.split()")}}.
 
-Для подробной информации, смотрите {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} и {{jsxref("String.prototype.split()")}}.
+Для подробной информации, смотрите {{jsxref("RegExp/Symbol.split", "RegExp.prototype[@@split]()")}} и {{jsxref("String.prototype.split()")}}.
 
 {{InteractiveExample("JavaScript Demo: Symbol.split")}}
 
@@ -43,4 +43,4 @@ console.log("foobar".split(new Split1("foo")));
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
-- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}
+- {{jsxref("RegExp/Symbol.split", "RegExp.prototype[@@split]()")}}

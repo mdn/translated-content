@@ -3,16 +3,16 @@ title: "Document: browsingTopics() メソッド"
 short-title: browsingTopics()
 slug: Web/API/Document/browsingTopics
 l10n:
-  sourceCommit: 1df8a667bed3eb0318d69e39884dc4d63f62be48
+  sourceCommit: 0c906f7f464d8ff632baf8d25fa63eed3f03b632
 ---
 
-{{APIRef("Topics API")}}{{SeeCompatTable}}{{non-standard_header}}
+{{APIRef("Topics API")}}{{non-standard_header}}{{deprecated_header}}
 
 > [!WARNING]
 > この機能は現在2つのブラウザーベンダーによって反対されています。反対の詳細については下記の[標準の位置づけ](/ja/docs/Web/API/Topics_API#standards_positions)の節を参照してください。
 
 > [!NOTE]
-> アプリケーションでこの機能を使用するには、[登録プロセス](/ja/docs/Web/Privacy/Privacy_sandbox/Enrollment)が要求されます。
+> アプリケーションでこの機能を使用するには、[登録プロセス](/ja/docs/Web/Privacy/Guides/Privacy_sandbox#登録)が要求されます。
 
 `browsingTopics()` は {{domxref("Document")}} インターフェイスのメソッドで、ユーザーのトップトピックを表すオブジェクトの配列で履行されるプロミスを返します。これらのトピックは、その後のフェッチリクエストで広告技術プラットフォームに返すことができます。既定では、このメソッドは呼び出し側が監視する現在のページ訪問をブラウザーに記録するので、ページのホスト名を後でトピックの計算に使用することができます。
 
@@ -52,13 +52,13 @@ browsingTopics(options)
 
 正確なプロパティ値は、ブラウザー実装によって異なる場合があります。Chrome のオブジェクト例は以下のようになります：
 
-```js
+```json
 {
-  configVersion: "chrome.1",
-  modelVersion: "1",
-  taxonomyVersion: "1",
-  topic: 43,
-  version: "chrome.1:1:1"
+  "configVersion": "chrome.1",
+  "modelVersion": "1",
+  "taxonomyVersion": "1",
+  "topic": 43,
+  "version": "chrome.1:1:1"
 }
 ```
 
@@ -67,7 +67,7 @@ browsingTopics(options)
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 以下の場合に発生します。
     - [トピック API](/ja/docs/Web/API/Topics_API)の使用が {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって不許可になっていた場合。
-    - 呼び出されたウェブサイトに、成功した[プライバシーサンドボックスの登録プロセス](/ja/docs/Web/Privacy/Privacy_sandbox/Enrollment)にに含まれるトピック API がない場合。
+    - 呼び出されたウェブサイトに、成功した[プライバシーサンドボックスの登録プロセス](/ja/docs/Web/Privacy/Guides/Privacy_sandbox#登録)に含まれるトピック API がない場合。
 
 ## 例
 

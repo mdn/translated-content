@@ -3,7 +3,7 @@ title: Object.groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 > [!NOTE]
 > 在某些浏览器的某些版本中，此方法被实现为 `Array.prototype.group()` 方法。由于 web 兼容性问题，它现在以静态方法实现。参见[浏览器兼容性表格](#浏览器兼容性)以获取更多信息。

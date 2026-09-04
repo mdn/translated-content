@@ -41,20 +41,21 @@ undefined
 
 Переменная, не имеющая присвоенного значения, обладает типом `undefined`. Также `undefined` возвращают метод или инструкция, если переменная, участвующая в вычислениях, не имеет присвоенного значения. Функция возвращает `undefined`, если она не {{jsxref("Statements/return", "возвращает", "", 1)}} какого-либо значения.
 
-Поскольку `undefined` не является {{jsxref("Reserved_Words", "зарезервированным словом", "", 1)}}, он может использоваться в качестве [идентификатора](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#variables) (имени переменной) в любой области видимости, за исключением глобальной.
-
-```js
-// печатает 'foo string'
-(function () {
-  var undefined = "foo";
-  console.log(undefined, typeof undefined);
-})();
-
-// печатает 'foo string'
-(function (undefined) {
-  console.log(undefined, typeof undefined);
-})("foo");
-```
+> [!NOTE]
+> Несмотря на то, что `undefined` можно использовать в качестве {{Glossary("identifier", "идентификатора")}} (имени переменной) в любой области видимости, кроме глобальной (поскольку `undefined` не является [зарезервированным словом](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#зарезервированные_ключевые_слова_в_ecmascript_2015)), это очень плохая идея, которая затруднит поддержку и отладку кода.
+>
+> ```js example-bad
+> // НЕ ДЕЛАЙТЕ ЭТОГО
+>
+> (() => {
+>   const undefined = "foo";
+>   console.log(undefined, typeof undefined); // строка foo
+> })();
+>
+> ((undefined) => {
+>   console.log(undefined, typeof undefined); // строка foo
+> })("foo");
+> ```
 
 ## Примеры
 
@@ -72,7 +73,7 @@ if (x === undefined) {
 ```
 
 > [!NOTE]
-> Здесь используется оператор строгого равенства (идентичности) вместо простого оператора равенства, поскольку `x == undefined` также проверяет, является ли `x` равным `null`, в то время как оператор идентичности этого не делает. {{jsxref("Global_Objects/null", "null")}} не эквивалентен `undefined`. Для более подробной информации смотрите {{jsxref("Operators/Comparison_Operators", "операторы сравнения", "", 1)}}.
+> Здесь используется оператор строгого равенства (идентичности) вместо простого оператора равенства, поскольку `x == undefined` также проверяет, является ли `x` равным `null`, в то время как оператор идентичности этого не делает. {{jsxref("null")}} не эквивалентен `undefined`. Для более подробной информации смотрите {{jsxref("Operators", "операторы сравнения", "", 1)}}.
 
 ### Пример: оператор `typeof` и `undefined`
 
@@ -127,5 +128,5 @@ if (y === void 0) {
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/NaN", "NaN")}}
-- {{jsxref("Global_Objects/null", "null")}}
+- {{jsxref("NaN")}}
+- {{jsxref("null")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Testing
 original_slug: Learn/Server-side/Django/Testing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 A medida que crecen los sitios web se vuelven más difíciles de probar a mano — no sólo hay más para probar, sino que además, a medida que las interacciones entre los componentes se vuelven más complejas, un pequeño cambio en un área puede suponer muchas pruebas adicionales para verificar su impacto en otras áreas. Una forma de mitigar estos problemas es escribir tests automatizados, que pueden ser ejecutados de manera fácil y fiable cada vez que hagas un cambio. Este tutorial muestra cómo automatizar la unidad de pruebas de tu sitio web usando el framework de pruebas de Django.
 
@@ -14,7 +14,7 @@ A medida que crecen los sitios web se vuelven más difíciles de probar a mano �
       <th scope="row">Prerrequisitos</th>
       <td>
         Completa todos los tópicos anteriores, incluyendo
-        <a href="/es/docs/Learn/Server-side/Django/Forms"
+        <a href="/es/docs/Learn_web_development/Extensions/Server-side/Django/Forms"
           >Tutorial Django Parte 9: Trabajando con formularios</a
         >.
       </td>
@@ -909,4 +909,4 @@ El siguiente y último tutorial muestra cómo puede implementar su maravilloso (
 - [Taller: Desarrollo web basado en pruebas con Django](http://test-driven-django-development.readthedocs.io/en/latest/index.html) (San Diego Python, 2014)
 - [Pruebas en Django (Parte 1) - Mejores prácticas y ejemplos](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}

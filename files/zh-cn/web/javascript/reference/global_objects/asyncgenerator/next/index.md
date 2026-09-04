@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 {{jsxref("AsyncGenerator")}} 实例的 **`next()`** 方法返回序列中的下一个值。
 
 ## 语法

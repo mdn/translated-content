@@ -106,7 +106,7 @@ slug: Web/API/Element/keypress_event
           printed representation, this attribute's value is the same as the
           <code>char</code> property. Otherwise, it's one of the key value
           strings specified in
-          <a href="/ru/docs/Web/API/KeyboardEvent/key/Key_Values"
+          <a href="/ru/docs/Web/API/UI_Events/Keyboard_event_key_values"
             >Key values</a
           >. If the key can't be identified, its value is the string
           "Unidentified". See
@@ -132,7 +132,7 @@ slug: Web/API/Element/keypress_event
       <td>
         The Unicode reference number of the key; this attribute is used only by
         the
-        <a href="/ru/docs/Mozilla_event_reference/keypress"
+        <a href="/ru/docs/Web/API/Element/keypress_event"
           ><code>keypress</code></a
         >
         event. For keys whose <code>char</code> attribute contains multiple

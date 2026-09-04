@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-**`[Symbol.iterator]()`** は {{jsxref("Map")}} インスタンスのメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装します。これにより、 `Map` オブジェクトが反復可能プロトコルを受け入れるほとんどの構文、たとえば[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループなどで使用できるようになります。マップのキーと値のペアを挿入順に返す[イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+**`[Symbol.iterator]()`** は {{jsxref("Map")}} インスタンスのメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装し、対応表 (`Map`) オブジェクトを、反復可能プロトコルを受け入れるほとんどの構文、たとえば[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループなどで使用できるようにします。この対応表のキーと値のペアを挿入順に返す[対応表イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
 初期値は、 {{jsxref("Map.prototype.entries")}} メソッドの初期値と同じ関数オブジェクトです。
 
@@ -39,7 +39,7 @@ map[Symbol.iterator]()
 
 ### 返値
 
-返値は {{jsxref("Map.prototype.entries()")}} と同じ、マップのキーと値のペアを生成する新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+返値は {{jsxref("Map.prototype.entries()")}} と同じです。この対応表のキーと値のペアを生成する新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
 ## 例
 

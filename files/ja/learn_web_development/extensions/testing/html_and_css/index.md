@@ -1,15 +1,14 @@
 ---
 title: 一般的な HTML と CSS の問題の処理
+short-title: 一般的な HTML と CSS の問題
 slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing")}}
 
-ここでは、HTML と CSS のコードで発生する可能性のある一般的なブラウザー間の問題、および問題の発生を防ぐため、または発生する問題を修正するために使用できるツールについて具体的に説明します。これには、コードのリンティング、CSS プレフィックスの処理、問題を追跡するためのブラウザーの開発者ツールの使用、ブラウザーにサポートを追加するためのポリフィルの使用、レスポンシブデザイン問題への取り組みなどが含まれます。
+ここでは、HTML と CSS のコードで発生する可能性のある一般的なブラウザー間の問題、および問題の発生を防ぐため、または発生する問題を修正するために使用できるツールについて具体的に説明します。これには、コードのリンティング、CSS 接頭辞の処理、問題を追跡するためのブラウザーの開発者ツールの使用、ブラウザーにサポートを追加するためのポリフィルの使用、レスポンシブデザイン問題への取り組みなどが含まれます。
 
 <table>
   <tbody>
@@ -92,7 +91,7 @@ CSS にも同様の話があります — プロパティ名が正しくつづ�
 
 ### 現行機能に対応していないブラウザー
 
-これは、特に古いブラウザーの対応が必要な場合や、一部のブラウザーでは実装されているものの、まだすべてに実装されていない機能を使用している場合によくある問題です。一般に、ほとんどの主要な HTML と CSS の機能（基本的な HTML 要素、CSS の基本色、テキストのスタイル設定など）は、対応したいすべてのブラウザーでうまく動作します。新しい HTML、CSS、API を使用し始めたときには、さらに多くの問題が発覚します。 MDN では、文書化されている各機能について、ブラウザー互換性データを表示しています。例えば、[`:has()` 擬似クラスのブラウザーの互換性表](/ja/docs/Web/CSS/:has#ブラウザーの互換性)を参照してください。
+これは、特に古いブラウザーの対応が必要な場合や、一部のブラウザーでは実装されているものの、まだすべてに実装されていない機能を使用している場合によくある問題です。一般に、ほとんどの主要な HTML と CSS の機能（基本的な HTML 要素、CSS の基本色、テキストのスタイル設定など）は、対応したいすべてのブラウザーでうまく動作します。新しい HTML、CSS、API を使用し始めたときには、さらに多くの問題が発覚します。 MDN では、文書化されている各機能について、ブラウザー互換性データを表示しています。例えば、[`:has()` 擬似クラスのブラウザーの互換性表](/ja/docs/Web/CSS/Reference/Selectors/:has#ブラウザーの互換性)を参照してください。
 
 使用する技術のうち、広く対応していないもののリストが載っていた場合は、それらがどのブラウザーのどのような技術に対応しているのか、また、関連する技術にはどのような有益なものがあるのかを調べておくのはよい考えです。下記の[ヘルプを探す](#ヘルプを探す)を参照してください。
 
@@ -100,7 +99,7 @@ CSS にも同様の話があります — プロパティ名が正しくつづ�
 
 問題によっては、 HTML/CSS が自然に動作する方法を利用するだけで解決できることもあります。
 
-認識されない HTML 要素は、ブラウザーに無名インライン要素（意味づけのないインライン要素、{{htmlelement("span")}}要素に似ています）として扱われます。例えば、それらを名前付きで参照し、CSS でスタイル設定することはできます。望むようにそれらが動作していることを確認する必要があるだけです。必要に応じて `display` プロパティを `inline` 以外に設定するなど、他の要素と同じようにスタイル設定してください。
+認識されない HTML 要素は、ブラウザーに無名インライン要素（意味づけのないインライン要素、{{htmlelement("span")}}要素に似ています）として扱われます。例えば、それらを名前付きで参照し、CSS でスタイル設定することはできます。望むようにそれらが動作することを確認する必要があるだけです。必要に応じて `display` プロパティを `inline` 以外に設定するなど、他の要素と同じようにスタイル設定してください。
 
 HTML の [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video), [`<audio>`](/ja/docs/Web/HTML/Reference/Elements/audio), [`<picture>`](/ja/docs/Web/HTML/Reference/Elements/picture), [`<object>`](/ja/docs/Web/HTML/Reference/Elements/object), [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) など（他にもあります）のようなより複雑な要素は、リンクされているリソースに対応していない場合に代替手段を追加するための自然なメカニズムを持っています。開始タグと閉じられたタグの間に代替コンテンツを追加することができ、対応していないブラウザーでは、効果的に外側の要素を無視して内側のコンテンツを実行します。
 
@@ -127,7 +126,7 @@ HTML の [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video), [`<audio>`](/j
 
 次の例は日付と時刻の入力の例です。
 
-```html
+```html live-sample___form-test
 <form>
   <div>
     <label for="date">日付を入力:</label>
@@ -140,12 +139,35 @@ HTML の [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video), [`<audio>`](/j
 </form>
 ```
 
+```css hidden live-sample___form-test
+div {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+input {
+  flex: 2;
+}
+
+label {
+  flex: 1;
+  text-align: right;
+}
+
+body {
+  width: 400px;
+  margin: 0 auto;
+}
+```
+
 このコードの出力は以下の通りです。
 
-{{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
+{{EmbedLiveSample("form-test", '100%', 100)}}
 
-> [!NOTE]
-> GitHub で [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) として実行することもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)も参照してください）。
+**Play** ボタンを押すと、この例を MDN Playground で開いてソースコードを編集することができます。
 
 例を表示すると、データを入力しようとして、 UI 機能が動作しているのがわかります。動的キーボードを備えた端末では、型専用のキーパッドが表示されます。対応していないブラウザーでは、入力は通常のテキスト入力に既定され、ユーザーは正しい情報を入力することができます。
 
@@ -155,10 +177,56 @@ CSS は間違いなく HTML よりも代替性に優れています。ブラウ�
 
 例えば、 CSS でスタイル設定された単純なボックスを見てみましょう。このボックスには、様々な CSS 機能によって指定されたスタイル設定があります。
 
-![角丸、インセットシャドウ、ドロップシャドウの赤い錠剤型ボタン](blingy-button.png)
+```html hidden live-sample___blingy-button
+<button>押してね</button>
+```
 
-> [!NOTE]
-> GitHub で [button-with-fallback.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) として実行することもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)も参照してください）。
+```css hidden live-sample___blingy-button
+html {
+  font-family: sans-serif;
+  height: 100%;
+}
+
+button {
+  width: 150px;
+  margin: auto;
+  line-height: 2;
+  font-size: 1.1rem;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 20px / 15px;
+  border: none;
+  cursor: pointer;
+
+  background-color: red;
+  background-color: rgb(255 0 0 / 90%);
+  box-shadow:
+    inset 3px 3px 3px rgb(255 255 255 / 40%),
+    inset -3px -3px 3px rgb(0 0 0 / 40%);
+}
+
+button:hover,
+button:focus {
+  background-color: rgb(255 0 0 / 50%);
+}
+
+button:active {
+  box-shadow:
+    inset 3px 3px 3px rgb(0 0 0 / 40%),
+    inset -3px -3px 3px rgb(255 255 255 / 40%);
+}
+
+body {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+```
+
+{{EmbedLiveSample("blingy-button", "100%", 60)}}
+
+**Play** ボタンを押すと、この例を MDN Playground で開いてソースコードを編集することができます。
 
 ボタンにはスタイル設定をする宣言がいくつもありますが、最も興味深いのは以下の 2 つです。
 
@@ -166,38 +234,39 @@ CSS は間違いなく HTML よりも代替性に優れています。ブラウ�
 button {
   /* … */
 
-  background-color: #ff0000;
-  background-color: rgb(255 0 0 / 100%);
+  background-color: red;
+  background-color: rgb(255 0 0 / 90%);
   box-shadow:
-    inset 1px 1px 3px rgb(255 255 255 / 40%),
-    inset -1px -1px 3px rgb(0 0 0 / 40%);
+    inset 3px 3px 3px rgb(255 255 255 / 40%),
+    inset -3px -3px 3px rgb(0 0 0 / 40%);
 }
 
-button:hover {
+button:hover,
+button:focus {
   background-color: rgb(255 0 0 / 50%);
 }
 
 button:active {
   box-shadow:
-    inset 1px 1px 3px rgb(0 0 0 / 40%),
-    inset -1px -1px 3px rgb(255 255 255 / 40%);
+    inset 3px 3px 3px rgb(0 0 0 / 40%),
+    inset -3px -3px 3px rgb(255 255 255 / 40%);
 }
 ```
 
-ここでは、 [RGB](/ja/docs/Web/CSS/color_value/rgb) で {{cssxref("background-color")}} を提供し、ボタンが操作可能であることをユーザーに示唆するために、ホバー時に不透明度を変更し、半透明の影 {{cssxref("box-shadow")}} でボタンに質感と奥行きを与えています。これで完全に対応しているとはいえ、 RGB 色とボックスシャドウはずっと存在していたわけではありません。 IE9 から始まったものです。 RGB 色に対応していないブラウザーは宣言を無視します。つまり、古いブラウザーでは背景がまったく表示されないので、テキストが読めなくなり、まったく意味がありません！
+ここでは、 [RGB](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) で {{cssxref("background-color")}} を提供し、ボタンが操作可能であることをユーザーに示唆するために、ホバー時に不透明度を変更し、半透明の影 {{cssxref("box-shadow")}} でボタンに質感と奥行きを与えています。これで完全に対応しているとはいえ、 RGB 色とボックスシャドウはずっと存在していたわけではありません。 IE9 から始まったものです。 RGB 色に対応していないブラウザーは宣言を無視します。つまり、古いブラウザーでは背景がまったく表示されないので、テキストが読めなくなり、まったく意味がありません。
 
 ![ほぼ白い背景に白い文字の見づらい錠剤型ボタン](unreadable-button.png)
 
-これを解決するために、 2 つ目の `background-color` 宣言を追加しました。これは 16 進数の色を指定します。これは実に古いブラウザーに対応しており、現行の輝かしい機能が動作しない場合の予備として機能します。このページを訪れたブラウザーは、まず最初の `background-color` 値を適用します。 2 つ目の `background-color` 宣言まで取得すると、 RGB カラーに対応している場合は、最初の値をこの値で上書きします。そうでない場合は、宣言全体を無視して移動します。
+これを解決するために、 2 つ目の `background-color` 宣言を追加しました。これは `red` の色キーワードで指定します。これは実に古いブラウザーに対応しており、現行の輝かしい機能が動作しない場合の予備として機能します。このページを訪れたブラウザーは、まず最初の `background-color` 値を適用します。 2 つ目の `background-color` 宣言まで取得すると、 RGB カラーに対応している場合は、最初の値をこの値で上書きします。そうでない場合は、宣言全体を無視して移動します。
 
 > [!NOTE]
-> [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/ja/docs/Web/CSS/@font-face)、[`@supports`](/ja/docs/Web/CSS/@supports) ブロックのような他の CSS 機能についても同様で、対応していない場合、ブラウザーはそれらを無視します。
+> [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)、{{cssxref("@font-face")}}、{{cssxref("@supports")}} ブロックのような他の CSS 機能についても同様で、対応していない場合、ブラウザーはそれらを無視します。
 
 ### セレクターの対応
 
 もちろん、正しい[セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)を使用してスタイル設定したい要素を選択しなければ、 CSS の特性はまったく適用されません。
 
-カンマ区切りのセレクターリストでは、セレクターの書き方を間違えただけで、どの要素にも一致しなくなることがあります。しかし、セレクターが不正な場合は、スタイルブロック全体とともに、セレクターの**リスト全体**が無視されます。このため、 `:-moz-` 接頭辞のついた擬似クラスや擬似要素は、[寛容なセレクターリスト](/ja/docs/Web/CSS/Selector_list#forgiving_selector_list) の中で、 `:where(::-moz-thumb)` のようにのみ記載してください。 Firefox 以外のすべてのウェブブラウザーはブロック全体を無視するので、 [`:is()`](/ja/docs/Web/CSS/:is) または [`:where()`](/ja/docs/Web/CSS/:where) の寛容なセレクターリストの外側のカンマ区切りのセレクターグループ内に、接頭辞 `:-moz-` が付いた擬似クラスまたは擬似要素を記載しないでください。 `is()` と `:where()` は、他にも [`:has()`](/ja/docs/Web/CSS/:has) や [`:not()`](/ja/docs/Web/CSS/:not) などのセレクターリストの引数として渡すことができることに注意してください。
+カンマ区切りのセレクターリストでは、セレクターの書き方を間違えただけで、どの要素にも一致しなくなることがあります。しかし、セレクターが不正な場合は、スタイルブロック全体とともに、セレクターの**リスト全体**が無視されます。このため、 `:-moz-` 接頭辞のついた擬似クラスや擬似要素は、[寛容なセレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容なセレクターリスト)の中で、 `:where(::-moz-thumb)` のようにのみ記載してください。 Firefox 以外のすべてのウェブブラウザーはブロック全体を無視するので、 {{cssxref(":is()")}} または {{cssxref(":where()")}} の寛容なセレクターリストの外側のカンマ区切りのセレクターグループ内に、接頭辞 `:-moz-` が付いた擬似クラスまたは擬似要素を記載しないでください。 `is()` と `:where()` は、他にも {{cssxref(":has()")}} や {{cssxref(":not()")}} などのセレクターリストの引数として渡すことができることに注意してください。
 
 ブラウザー開発ツールを使用してスタイルを設定しようとしている要素を検査し、 DOM インスペクターが提供する傾向がある DOM ツリーのパンくずトレイルを見て、あなたのセレクターがそれと比較して意味があるかどうかを確認することが有益であることがわかります。
 
@@ -208,7 +277,9 @@ button:active {
 例えばこのセレクターを使用しようとした場合、思い通りに入力要素を選択できないことがわかるでしょう。
 
 ```css
-form > #date
+form > #date {
+  /* … */
+}
 ```
 
 （`date` フォーム入力は `<form>` の直接の子ではありません。子セレクターではなく、一般的な子孫セレクターを使用した方がよいでしょう。）
@@ -225,8 +296,8 @@ form > #date
 
 ```css
 .masked {
-  -webkit-mask-image: url(MDN.svg);
-  mask-image: url(MDN.svg);
+  -webkit-mask-image: url("MDN.svg");
+  mask-image: url("MDN.svg");
   -webkit-mask-size: 50%;
   mask-size: 50%;
 }
@@ -251,11 +322,11 @@ form > #date
 
 2 つ目のドットの後にプロパティ名の表現を入力し始めると（JavaScript では、 CSS のプロパティ名は{{Glossary("kebab_case", "ケバブケース")}}ではなく、{{Glossary("camel_case", "小文字のキャメルケース")}}で記述されることに注意してください）、 JavaScript コンソールは、ブラウザーに存在し、これまでに書いたものと一致するプロパティの名前を自動補完し始めるはずです。これは、そのブラウザーで実装されているプロパティを探すのに有益です。
 
-現行の機能を含める必要がある場合は、 [`@supports`](/ja/docs/Web/CSS/@supports) を使用して機能対応テストをしてください。これによりネイティブの機能検出テストを実装することができ、接頭辞や新しい機能を `@supports` ブロックの中に入れることができます。
+現行の機能を含める必要がある場合は、{{cssxref("@supports")}} を使用して機能対応テストをしてください。これによりネイティブの機能検出テストを実装することができ、接頭辞や新しい機能を `@supports` ブロックの中に入れることができます。
 
 ### レスポンシブデザインの問題
 
-レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/Web/HTML/Guides/Viewport_meta_element)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
+レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
 
 解像度も大きな課題です。例えば、モバイル端末は大きな重い画像を必要とする可能性がデスクトップコンピューターよりも低く、インターネット接続が遅く、場合によっては帯域幅の無駄が問題になるような高価なデータプランを利用している可能性もあります。さらに、端末によって解像度の範囲があるため、小さな画像がピクセル化して現れる意味もあります。このような問題を作業するためのテクニックは、[メディアクエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#メディアクエリー)からより複雑な[レスポンシブ画像テクニック](/ja/docs/Web/HTML/Guides/Responsive_images#解像度の切り替え_様々な寸法)、 {{HTMLElement('picture')}} および {{HTMLElement('img')}} 要素の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) や [`sizes`](/ja/docs/Web/HTML/Reference/Elements/img#sizes) 属性を含め、たくさんあります。
 
@@ -269,7 +340,7 @@ Mozilla Developer Network (MDN) を使用するために、ほとんどの人は
 
 - クライアント側ウェブ技術のブラウザーの対応情報を参照する素材、例えば [\<video> リファレンスページ](/ja/docs/Web/HTML/Reference/Elements/video)など。
 - その他の補助的なリファレンス素材、例えば[ウェブ上のメディア型と形式のガイド](/ja/docs/Web/Media/Guides/Formats)など。
-- 特定の問題を解決する有益なチュートリアル、例えば[ブラウザー横断の動画プレーヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)。
+- 特定の問題を解決する有益なチュートリアル、例えば[ブラウザーに依存しない動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)。
 
 [caniuse.com](https://caniuse.com/) は、いくつかの有益な外部リソースリンクとともに、対応する情報を提供しています。例えば、 <https://caniuse.com/#search=video> をご覧ください）テキストボックスに検索したい機能を入力してください）。
 

@@ -1,264 +1,314 @@
 ---
-title: Détection du navigateur à l'aide de User-Agent
+title: Détection du navigateur à l'aide de la chaîne de caractères d'agent utilisateur (analyseur d'AU)
+short-title: Détection du navigateur avec la chaîne de caractères d'AU
 slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
-original_slug: Web/HTTP/Browser_detection_using_the_user_agent
+l10n:
+  sourceCommit: 6ad108adad746bd7ed79b5b32d8d3e05e5ec685a
 ---
 
-Afficher des pages web ou des services en fonction du navigateur est généralement une mauvaise idée. Le Web se doit d'être accessible à tout le monde, sans prendre en compte le navigateur ou l'appareil utilisé. Il existe différentes façons de développer votre site web afin de l'améliorer progressivement en se basant sur des fonctionnalités standard plutôt qu'en traitant chaque navigateur de manière spécifique.
+Avec chaque requête envoyée à un serveur, les navigateurs incluent un en-tête {{HTTPHeader("User-Agent")}} {{Glossary("HTTP")}} avec une valeur appelée chaîne de caractères {{Glossary("user agent", "d'agent utilisateur")}} (AU). Cette chaîne de caractères est destinée à identifier le navigateur, son numéro de version et son système d'exploitation hôte.
 
-Les navigateurs et les standards ne sont cependant pas parfaits, il reste certains cas limites pour lesquels connaître le navigateur utilisé peut s'avérer utile. Utiliser la chaîne de caractères fournie par l'en-tête HTTP [`User-Agent`](/fr/docs/Web/HTTP/Headers/User-Agent) et disponible en JavaScript via la propriété [`navigator.userAgent`](/fr/docs/Web/API/Navigator/userAgent) dans ce but paraît simple, mais le faire de manière fiable est en réalité très difficile. Ce document va vous guider pour le faire aussi correctement que possible.
+```http
+User-Agent: <product> / <product-version> <comment>
+```
 
-> [!NOTE]
-> Il est important de rappeler qu'utiliser le contenu de l'en-tête `User-Agent` est rarement une bonne idée. Il est presque toujours possible de trouver une solution plus générique et compatible avec un plus grand nombre de navigateurs et d'appareils&nbsp;!
-
-## Considérations à prendre en compte avant d'identifier le navigateur
-
-Lorsque vous cherchez à analyser le contenu de la chaîne de caractères de l'en-tête `User-Agent` pour détecter le navigateur utilisé, la première étape consiste à éviter cette méthode autant que possible. Commencez par identifier **pourquoi** vous souhaitez le faire.
-
-- Êtes-vous en train d'essayer de corriger un bogue pour une version spécifique d'un navigateur&nbsp;?
-  - : Recherchez ou demandez sur les forums spécialisés&nbsp;: vous n'êtes certainement pas la première ou le premier à rencontrer le problème. Des expertes, experts ou d'autres personnes avec un point de vue différent peuvent vous donner des idées pour contourner le problème. Si le bogue n'est pas fréquent, il peut être utile de vérifier s'il a déjà été signalé à l'éditeur du navigateur dans son système de suivi des bogues ([Mozilla](https://bugzilla.mozilla.org/), [WebKit](https://bugs.webkit.org/), [Opera](https://bugs.opera.com)). Les éditeurs sont attentifs aux bogues signalés, leur analyse du problème peut apporter un éclairage nouveau permettant de le contourner.
-- Cherchez-vous à vérifier l'existence d'une fonctionnalité particulière&nbsp;?
-  - : Votre site a besoin d'une fonctionnalité qui n'est pas encore prise en charge par certains navigateurs et vous souhaitez servir à leurs utilisateurs une version plus ancienne du site, avec moins de fonctionnalités mais pour lesquelles vous avez la certitude de leur fonctionnement. Il s'agit de la pire raison pour utiliser l'en-tête `User-Agent`, car il y a de grandes chances que ces navigateurs finissent par rattraper leur retard, qu'il n'est pas pratique de tester tous les navigateurs qui existent. Dans ce cas, le mieux est d'éviter d'utiliser l'en-tête `User-Agent` et de détecter les fonctionnalités disponibles.
-
-- Voulez-vous servir un code HTML différent selon le navigateur utilisé&nbsp;?
-  - : Il s'agit généralement d'une mauvaise pratique, mais qui peut être nécessaire dans certains cas. Vous devez alors analyser la situation pour vous assurer que c'est absolument nécessaire. Pouvez-vous l'éviter en ajoutant des éléments non sémantiques tels que [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) ou [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span)&nbsp;? La difficulté et les risque à utiliser l'en-tête `User-Agent` justifie des exceptions à la pureté du code HTML. Vous pouvez aussi repenser le design&nbsp;: pouvez-vous plutôt utiliser l'amélioration progressive ou utiliser une disposition flexible pour éviter d'y avoir recours&nbsp;?
-
-## Éviter de détecter l'agent utilisateur
-
-Il existe des options possibles à considérer pour éviter d'avoir à détecter l'agent utilisateur.
-
-- Détection de fonctionnalités
-  - : La détection de fonctionnalités consiste à ne pas détecter quel navigateur affiche la page mais plutôt à vérifier qu'une fonctionnalité est disponible. Dans le cas contraire vous pouvez utiliser une solution de contournement. Dans les rares cas où les comportements des fonctionnalités varient entre les navigateurs, on évitera d'analyser l'en-tête `User-Agent` et on implémentera plutôt un test permettant de détecter la façon dont le navigateur implémente l'API afin de déterminer comment l'utiliser dans son programme. En 2017, Chrome [a retiré la préférence masquant la prise en charge expérimentale des références arrières dans les expressions rationnelles](https://chromestatus.com/feature/5668726032564224) alors qu'aucun autre navigateur n'implémentait cette fonctionnalité. On aurait pu être tenté⋅e d'écrire ceci&nbsp;:
+Vous pouvez également accéder à cette chaîne de caractères avec la propriété {{DOMxRef("navigator.userAgent")}} en JavaScript&nbsp;:
 
 ```js
-if (navigator.userAgent.indexOf("Chrome") !== -1) {
-  // On pense que les références arrières sont prises en charge
-  // Attention à ne pas utiliser la notation littérale /(?<=[A-Z])/,
-  // car cela entraînerait une erreur de syntaxe pour les navigateurs
-  // qui n'implémentent pas cette fonctionnalité. En effet, les
-  // navigateurs analysent le script en entier, y compris les
-  // branches du code qui ne sont jamais utilisées.
-  var camelCaseExpression = new RegExp("(?<=[A-Z])");
-  var splitUpString = function (str) {
-    return ("" + str).split(camelCaseExpression);
-  };
+console.log(window.navigator.userAgent);
+// Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0
+```
+
+Il peut être tentant d'analyser la chaîne de caractères AU (parfois appelée «&nbsp;analyseur d'agent utilisateur&nbsp;») et de modifier le comportement de votre site en fonction des valeurs de cette chaîne de caractères, mais cela est très difficile à faire de manière fiable et est souvent une source de bogues.
+
+Ce document décrit les pièges courants de l'utilisation de la chaîne de caractères AU pour la détection du navigateur et les alternatives recommandées.
+À la fin, nous fournissons quelques conseils pour la détection de l'AU en utilisant la chaîne de caractères, mais vous ne devriez le faire que si c'est absolument nécessaire&nbsp;!
+
+## Pourquoi la détection des fonctionnalités est préférable à la détection du navigateur
+
+Pour illustrer pourquoi essayer d'adapter les fonctionnalités du site en fonction du navigateur introduit de la complexité et des bogues possibles, considérons l'exemple suivant.
+Une application souhaite utiliser une fonction `splitUpString()` en JavaScript utilisant [assertion de précédence](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion) (`?<=…`):
+
+```js example-bad
+let splitUpString;
+
+if (navigator.userAgent.includes("Chrome")) {
+  const camelCaseExpression = new RegExp("(?<=[A-Z])");
+  splitUpString = (str) => String(str).split(camelCaseExpression);
 } else {
-  /* Ce code alternatif est bien moins performant mais fonctionne */
-  var splitUpString = function (str) {
-    return str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
-  };
+  // Ce repli est inefficace, mais il fonctionne
+  splitUpString = (str) =>
+    String(str)
+      .split(/(.*?[A-Z])/)
+      .filter(Boolean);
 }
-console.log(splitUpString("totoTruc")); // ["totoT", "ruc"]
+console.log(splitUpString("fooBar")); // ["fooB", "ar"]
 console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
 ```
 
-Le code qui précède se base sur plusieurs hypothèses incorrectes. Tout d'abord que, parce que la chaîne de caractères `userAgent` contient `"Chrome"`, le navigateur est Chrome. Ce n'est pas le cas, les chaînes `userAgent` contiennent de nombreuses sources de confusion.
+Ce code fait plusieurs hypothèses qui peuvent être incorrectes et qui cassent le code s'il est exécuté sur le mauvais navigateur ou la mauvaise version du navigateur&nbsp;:
 
-On a ensuite l'hypothèse que la fonctionnalité en question est toujours disponible si le navigateur est Chrome. Or, il peut s'agir d'une version antérieure où la fonctionnalité n'était pas encore disponible voire, plus tard, d'une version ultérieure où la fonctionnalité a fini par être retirée.
+1. Toutes les chaînes de caractères d'agent utilisateur qui incluent la sous-chaîne de caractères `Chrome` indiquent un navigateur Chrome.
 
-Enfin, ce code part du principe qu'aucun autre navigateur ne prendra jamais en charge cette fonctionnalité. Si un autre navigateur implémentait cette fonctionnalité, l'utilisation de script forcerait à ignorer cette possibilité.
+   L'un des plus grands problèmes de la détection des navigateurs basée sur les chaînes d'agent utilisateur est que les navigateurs et les agents utilisateurs prétendent régulièrement être un autre navigateur, ou incluent des informations basées sur plusieurs navigateurs.
 
-Pour éviter ce type de problèmes, on pourra tester la présence même de la fonctionnalité&nbsp;:
+2. La fonctionnalité de précédence est toujours disponible si le navigateur est Chrome.
+   En réalité, le navigateur pourrait être une ancienne version de Chrome avant que la prise en charge ne soit ajoutée, ou il pourrait s'agir d'une version ultérieure de Chrome qui la supprime.
+3. Plus important encore, cela suppose qu'aucun autre navigateur ne prend en charge la fonctionnalité, alors qu'elle pourrait être ajoutée à n'importe quel autre navigateur à tout moment.
+   Tous les navigateurs non correspondants sont bloqués en utilisant un repli inefficace.
+
+Il est important de noter que ces problèmes existent quel que soit le méthode de détection du navigateur&nbsp;; l'analyse de l'AU, les indices du client, la présence, l'absence ou le contenu d'autres en-têtes HTTP, et ainsi de suite.
+Savoir quel navigateur est utilisé est sans importance, ce que nous recherchons réellement dans ce cas est la détection des fonctionnalités, qui est décrite plus en détail ci-dessous.
+
+## Alternatives à l'analyse de l'agent utilisateur
+
+Les sections suivantes décrivent des alternatives à la détection des navigateurs qui sont plus robustes et applicables dans de nombreux scénarios par rapport à l'analyse de l'agent utilisateur.
+
+### Détection des fonctionnalités
+
+La détection des fonctionnalités consiste à vérifier si une fonctionnalité spécifique est disponible pour le client au lieu de déterminer quel navigateur rend votre page.
+Dans les cas où une fonctionnalité n'est pas prise en charge, vous utilisez un repli à la place.
+L'exemple de détection des fonctionnalités suivant vérifie si le client prend en charge {{DOMxRef("Geolocation_API", "l'API Geolocation", "", 1)}}.
+Vous pouvez le faire en vérifiant la présence d'une propriété `geolocation` disponible sur l'objet global {{DOMxRef("Navigator")}}.
 
 ```js
-let isLookBehindSupported = false;
-
-try {
-  new RegExp("(?<=)");
-  isLookBehindSupported = true;
-} catch (err) {
-  // Si l'agent utilisateur ne prend pas en charge cette
-  // fonctionnalité, la tentative de création ci-avant
-  // échouera et déclenchera une erreur et
-  // isLookBehindSupported restera à false.
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition((position) => {
+    // afficher la position sur une carte, comme l'API Google Maps
+  });
+} else {
+  // Afficher une carte statique à la place
 }
-
-const splitUpString = isLookBehindSupported
-  ? function (str) {
-      return ("" + str).split(new RegExp("(?<=[A-Z])"));
-    }
-  : function (str) {
-      return str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
-    };
 ```
 
-Comme le code précédent le montre, il y a **toujours** un moyen de tester la prise en charge d'un navigateur sans chercher à analyser la chaîne `userAgent`. Ce n'est **jamais** une bonne raison pour utiliser cette information.
-
-Enfin, le code précédent illustre un problème critique avec le développement pour les différents navigateurs qui doit toujours être pris en compte. Il ne faut pas utiliser, de façon non-intentionnelle, les API qu'on teste dans les navigateurs incompatibles. Cela peut sembler simple, mais ce n'est pas toujours le cas. Dans l'exemple qui précède, l'utilisation d'une expression rationnelle littérale (par exemple `/reg/igm`) et qui utilise des références arrières provoquera une erreur d'analyse du code dans les navigateurs qui ne les prennent pas en charge. Aussi, il faut utiliser la forme `new RegExp("(?<=truc_arrière)");` plutôt que `/(?<=look_behind_stuff)/`, même dans la section du code qui traite des navigateurs compatibles.
-
-- Amélioration progressive
-  - : Cette technique de conception signifie séparer la page web en couches, en utilisant une approche ascendante, en commençant par une couche simple (avec peu ou pas de fonctionnalités) puis en améliorant les capacités par couches successives, chacune comportant plus de fonctionnalités.
-- Dégradation élégante
-  - : Il s'agit d'une approche descendante, avec laquelle on construit le site avec toutes les fonctionnalités souhaitées, pour ensuite le faire fonctionner sur des navigateurs plus anciens. Cette technique est plus difficile et moins efficace que l'amélioration progressive mais s'avère utile dans certains cas.
-- Détection des appareils mobiles
-  - : Un des cas les plus fréquents de mauvaise utilisation de la chaîne `userAgent` porte sur le caractère mobile ou non de l'appareil. La plupart du temps, cette méthode rapide occulte l'information réellement recherchée. L'analyse de la chaîne `userAgent` est utilisée pour déterminer si l'appareil peut être tactile et s'il a un petit écran, afin d'adapter le site web. Bien que cette méthode puisse détecter ces caractéristiques dans certains cas, tous les appareils ne se ressemblent pas&nbsp;: certains appareils mobiles ont des grands écrans, certains ordinateurs de bureau ont un petit écran tactile, d'autres encore sont des télévisions et les gens peuvent changer les dimensions de leur écran en tournant leur tablette sur le côté Heureusement, il existe de bien meilleures alternatives. On pourra utiliser [`Navigator.maxTouchPoints`](/fr/docs/Web/API/Navigator/maxTouchPoints) afin de déterminer si l'appareil possède un écran tactile et ensuite seulement se rabattre sur la vérification de la chaîne `userAgent` dans un bloc _if (!("maxTouchPoints" in navigator)) { /\*Code here\*/}_. En utilisant cette information sur la présence d'un écran tactile, il n'est pas nécessaire de changer toute la disposition du site pour ces appareils&nbsp;: cela ne fera qu'augmenter la charge de maintenance. À la place, vous pouvez ajouter de quoi rendre la navigation tactile plus accessible avec des boutons plus facilement cliquables par exemple (en utilisant CSS pour augmenter la taille de la police). Voici un exemple de code qui augmente le remplissage de #boutonExemple jusqu'à `1em` sur les appareils mobiles.
+Vous pouvez faire cela pour de nombreuses fonctionnalités.
+Par exemple, vous pouvez déterminer si les fichiers PDF peuvent être affichés en ligne, ou si {{DOMxRef("VirtualKeyboard_API", "l'API VirtualKeyboard", "", 1)}} est prise en charge, et ainsi de suite&nbsp;:
 
 ```js
-var hasTouchScreen = false;
-if ("maxTouchPoints" in navigator) {
-  hasTouchScreen = navigator.maxTouchPoints > 0;
-} else if ("msMaxTouchPoints" in navigator) {
-  hasTouchScreen = navigator.msMaxTouchPoints > 0;
-} else {
-  var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
-  if (mQ && mQ.media === "(pointer:coarse)") {
-    hasTouchScreen = !!mQ.matches;
-  } else if ("orientation" in window) {
-    hasTouchScreen = true; // dépréciée mais utile au cas où
-  } else {
-    // en dernier recours, on regarde userAgent
-    var UA = navigator.userAgent;
-    hasTouchScreen =
-      /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
-      /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA);
+if ("application/pdf" in navigator.mimeTypes) {
+  // le navigateur prend en charge l'affichage en ligne des fichiers PDF
+}
+if ("virtualKeyboard" in navigator) {
+  // le navigateur prend en charge l'API Virtual Keyboard
+}
+```
+
+Pour la mise en forme, vous pouvez également effectuer la détection des fonctionnalités en CSS en utilisant la règle {{CSSxRef("@supports")}}, combinée avec le mot-clé `not` si vous souhaitez vérifier l'absence d'une fonctionnalité.
+Voir [Utiliser les requêtes de fonctionnalités](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries) pour des informations sur l'utilisation de cela en CSS.
+
+```css
+@supports (display: grid) {
+  .box {
+    display: grid;
+    gap: 2rem;
   }
 }
-if (hasTouchScreen)
-  document.getElementById("boutonExemple").style.padding = "1em";
+
+@supports not (property: value) {
+  /* Règles CSS pour le repli */
+}
 ```
 
-En ce qui concerne la taille de l'écran, on utilisera `window.innerWidth` et `window.addEventListener("resize", function(){ /\*refresh screen size dependent things\*/ })`. Sur ce sujet, on ne veut pas que des informations soient masquées sur les plus petits écrans. Cela sera source de frustration et forcera à utiliser la version pour ordinateur. On essaiera plutôt d'avoir moins de colonnes d'informations sur une page plus longue pour les écrans plus étroits et une page avec plus de colonnes mais plus courte sur les écrans plus larges. On peut obtenir cet effet en CSS avec [les boîtes flexibles](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox), voire avec [le flottement](/fr/docs/Learn_web_development/Core/CSS_layout/Floats) comme méthode alternative de recours.
+Dans de rares cas où le comportement diffère entre les navigateurs pour une fonctionnalité, vous devez tester comment les navigateurs implémentent l'API et déterminer comment l'utiliser en conséquence.
+Pour en savoir plus, consultez la documentation [Mettre en œuvre la détection des fonctionnalités](/fr/docs/Learn_web_development/Extensions/Testing/Feature_detection).
 
-Pour plus de détails, voir [l'article sur le <i lang="en">responsive design</i>](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+#### Détection des appareils mobiles
 
-## Tirer le meilleur parti de l'analyse de la chaîne `userAgent`
+Une utilisation courante et incorrecte de l'analyse de l'agent utilisateur (et des [indications client](#indications_client)) est de détecter si le client est un appareil mobile.
+En général, les gens cherchent en réalité à savoir si l'appareil de l'utilisateur·ice est **adapté au toucher** et dispose d'un petit écran afin d'optimiser leur site en ajoutant, par exemple, un espacement supplémentaire aux boutons.
 
-Après avoir vu les alternatives précédentes, il existe quelques cas où l'analyse de `userAgent` est appropriée et justifiée.
-
-Un de ces cas est l'utilisation en méthode de dernier recours pour détecter si l'appareil dispose d'un écran tactile. Voir la section précédente pour plus d'informations.
-
-Un autre cas porte sur la correction de bogues dans les navigateurs qui ne sont pas automatiquement mis à jour. Internet Explorer (sur Windows) et Webkit (sur iOS) sont deux bons exemples ici. Avant sa version 9, Internet Explorer avait de nombreux problèmes, mais il était simple de l'identifier en raison des fonctionnalités spécifiques disponibles. Webkit est utilisé dans tous les navigateurs sur iOS et on ne peut donc pas accéder à un navigateur mis à jour sur un appareil plus ancien. Certains bogues peuvent être détectés mais pas tous avec la même facilité. Dans de tels cas, il peut être bénéfique que d'utiliser l'analyse de `userAgent` pour économiser des performances. Par exemple, Webkit 6 a un bogue où, lorsque l'orientation de l'appareil change, le navigateur peut ne pas déclencher [`MediaQueryList`](/fr/docs/Web/API/MediaQueryList) alors qu'il devrait. Pour contourner ce bogue, voyez le code qui suit.
+Au lieu de cela, vous devriez détecter les fonctionnalités en utilisant des API modernes.
+Par exemple, pour vérifier la prise en charge du toucher, essayez la propriété [`maxTouchPoints`](/fr/docs/Web/API/Navigator/maxTouchPoints) dans l'interface {{DOMxRef("Navigator")}}&nbsp;:
 
 ```js
-var UA = navigator.userAgent,
-  isWebkit =
-    /\b(iPad|iPhone|iPod)\b/.test(UA) &&
-    /WebKit/.test(UA) &&
-    !/Edge/.test(UA) &&
-    !window.MSStream;
-
-var mediaQueryUpdated = true,
-  mqL = [];
-function whenMediaChanges() {
-  mediaQueryUpdated = true;
+if (navigator.maxTouchPoints > 1) {
+  // le navigateur prend en charge le multi-touch
 }
-
-var listenToMediaQuery = isWebkit
-  ? function (mQ, f) {
-      if (/height|width/.test(mQ.media)) mqL.push([mQ, f]);
-      (mQ.addListener(f), mQ.addListener(whenMediaChanges));
-    }
-  : function () {};
-var destroyMediaQuery = isWebkit
-  ? function (mQ) {
-      for (var i = 0, len = mqL.length | 0; i < len; i = (i + 1) | 0)
-        if (mqL[i][0] === mQ) mqL.splice(i, 1);
-      mQ.removeListener(whenMediaChanges);
-    }
-  : listenToMediaQuery;
-
-var orientationChanged = false;
-addEventListener(
-  "orientationchange",
-  function () {
-    orientationChanged = true;
-  },
-  PASSIVE_LISTENER_OPTION,
-);
-
-addEventListener(
-  "resize",
-  setTimeout.bind(
-    0,
-    function () {
-      if (orientationChanged && !mediaQueryUpdated)
-        for (var i = 0, len = mqL.length | 0; i < len; i = (i + 1) | 0)
-          mqL[i][1](mqL[i][0]);
-      mediaQueryUpdated = orientationChanged = false;
-    },
-    0,
-  ),
-);
 ```
 
-## Où se trouve l'information recherchée dans le User-Agent
+Pour d'autres préoccupations, comme la mise en page, utilisez du CSS moderne comme [les boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [les grilles](/fr/docs/Web/CSS/Guides/Grid_layout) pour des mises en page flexibles.
+Au lieu de masquer le contenu sur les écrans plus petits, ajustez la mise en page de manière dynamique.
+Les [requêtes de médias](/fr/docs/Web/CSS/Guides/Media_queries) devraient gérer la plupart des changements de mise en page, réduisant ainsi le besoin d'ajustements basés sur JavaScript.
 
-C'est la partie difficile, puisque les différentes sections de la chaîne `User-Agent` ne sont pas standardisées.
+Si vous souhaitez garantir des transitions fluides lorsque les utilisateur·ice·s font pivoter leurs appareils ou passent entre différents modes d'écran, vous pouvez consulter [Détecter l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
+Pour les appareils pliables, il existe des API plus récentes telles que [l'API Device Posture](/fr/docs/Web/API/Device_Posture_API), bien que vous deviez vérifier les données de compatibilité, car le support varie considérablement.
 
-### Nom du navigateur
+### Indications client
 
-Souvent ceux qui disent vouloir détecter le navigateur veulent en fait détecter le moteur de rendu. Souhaitez-vous détecter Firefox et non Seamonkey, ou Chrome et non Chromium&nbsp;? Ou seulement savoir si le navigateur utilise le moteur de rendu Gecko ou Webkit&nbsp;? Dans ce dernier cas, voyez plus bas dans cette page.
+Pour les navigateurs basés sur Blink (Chromium, Edge, Brave, Vivaldi, etc.), une alternative est [les indications client de l'agent utilisateur](/fr/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints).
+Dans les indications client, le serveur demande de manière proactive des informations sur l'appareil à un client avec des en-têtes HTTP ou avec [l'API JavaScript](/fr/docs/Web/API/User-Agent_Client_Hints_API).
 
-La plupart des navigateurs notent leur nom et version suivant le format _NomDuNavigateur/NuméroDeVersion_, à l'exception notable d'Internet Explorer. Le nom n'est cependant pas la seule information du User-Agent qui respecte ce format, il n'est donc pas possible d'y trouver directement le nom du navigateur, seulement de vérifier si le nom recherché est présent ou non. Attention certains navigateurs mentent&nbsp;: par exemple, Chrome mentionne à la fois Chrome et Safari dans `User-Agent`. Pour détecter Safari il faut donc vérifier que la chaîne "Safari" est présente et que "Chrome" est absent. De la même façon, Chromium se présente souvent comme Chrome et Seamonkey comme Firefox.
+Les indications client sont meilleures que l'analyse de l'agent utilisateur pour détecter les navigateurs basés sur Blink, car elles ne sont pas aussi couramment falsifiées et elles fournissent des informations plus petites et plus fiables, plus faciles à analyser.
+Modifier la fonctionnalité du site en fonction des indications client reste une mauvaise idée&nbsp;!
+Dans la mesure du possible, vous devriez plutôt utiliser la détection des fonctionnalités et l'amélioration progressive [comme décrit ci-dessus](#pourquoi_la_détection_des_fonctionnalités_est_préférable_à_la_détection_du_navigateur).
 
-Faites aussi attention à ne pas utiliser une expression rationnelle trop simple sur le nom du navigateur, car `User-Agent` contient d'autres chaînes de caractères ne respectant pas le format clé/valeur. Par exemple, `User-Agent` pour Safari et Chrome contient une chaîne "like Gecko".
+Par exemple, dans le mécanisme HTTP, le serveur inclut un en-tête {{HTTPHeader("Accept-CH")}} avec une liste d'en-têtes qui devraient être inclus par le client dans les requêtes suivantes.
+Supposons que le serveur envoie cette réponse au client&nbsp;:
 
-| Moteur                | Doit contenir           | Ne doit pas contenir           |
-| --------------------- | ----------------------- | ------------------------------ |
-| Firefox               | `Firefox/xyz`           | `Seamonkey/xyz`                |
-| Seamonkey             | `Seamonkey/xyz`         |                                |
-| Chrome                | `Chrome/xyz`            | `Chromium/xyz`                 |
-| Chromium              | `Chromium/xyz`          |                                |
-| Safari                | `Safari/xyz`            | `Chrome/xyz` ou `Chromium/xyz` |
-| Opera 15+ (Blink)     | `OPR/xyz`               |                                |
-| Opera 12- (Presto)    | `Opera/xyz`             |                                |
-| Internet Explorer 10- | `; MSIE xyz;`           |                                |
-| Internet Explorer 11  | `Trident/7.0; .*rv:xyz` |                                |
+```http
+Accept-CH: Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-CH-UA
+```
 
-\[1] Safari fournit deux numéros de version&nbsp;: un numéro technique avec le fragment `Safari/xyz` token, et un numéro grand public avec le fragment `Version/xyz`.
+Cela demande les en-têtes suivants au client dans les requêtes suivantes&nbsp;:
 
-Il n'y a évidemment aucune garantie qu'aucun autre navigateur ne va utiliser ces notations (comme Chrome qui mentionne "Safari" dans son User-Agent). C'est pourquoi la détection du navigateur par ce moyen n'est pas fiable et ne doit être fait qu'en vérifiant aussi le numéro de version (il est peu probable qu'un navigateur mentionne dans son User-Agent le nom d'un autre navigateur dans une version plus ancienne).
+- {{HTTPHeader("Sec-CH-UA-Mobile")}}&nbsp;: un booléen pour indiquer si le client est un appareil mobile.
+- {{HTTPHeader("Sec-CH-UA-Platform")}}&nbsp;: la plateforme sur laquelle le client fonctionne («&nbsp;Windows&nbsp;», «&nbsp;Android&nbsp;», etc.).
+- {{HTTPHeader("Sec-CH-UA")}}&nbsp;: les informations de marque et de version significative de l'agent utilisateur.
 
-### Version du navigateur
+Supposons que le client prenne en charge les indications client, les indications client de l'agent utilisateur peuvent apparaître dans les requêtes suivantes&nbsp;:
 
-La version du navigateur est souvent, mais pas toujours, écrite dans la valeur d'un ensemble clé/valeur _NomDuNavigateur/NuméroDeVersion_ dans la chaîne de caractères `User-Agent`. Ce n'est pas le cas d'Internet Explorer (qui écrit son numéro de version juste après la chaîne "MSIE"), et d'Opera après la version 10, qui ajoute une section _Version/NuméroDeVersion_.
+```http
+GET /ma/page HTTP/1.1
+Host: exemple.site
 
-Encore une fois, assurez vous de regarder au bon endroit selon le navigateur visé car il n'y a aucune garantie de trouver un numéro de version valide dans le reste de la chaîne.
+Sec-CH-UA: " Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"
+Sec-CH-UA-Mobile: ?1
+Sec-CH-UA-Platform: "Android"
+```
+
+Pour en savoir plus sur les indications client, consultez [les indications client HTTP](/fr/docs/Web/HTTP/Guides/Client_hints).
+Assurez-vous de vérifier les détails de [Compatibilité des navigateurs](/fr/docs/Web/HTTP/Reference/Headers/Accept-CH#compatibilité_des_navigateurs) pour plus d'informations avant d'utiliser cette fonctionnalité.
+
+### Autres techniques et principes
+
+- {{Glossary("Progressive enhancement", "Amélioration progressive")}}
+  - : Cette technique de conception consiste à développer votre site Web en «&nbsp;couches&nbsp;», en utilisant une approche ascendante, en commençant par une couche plus simple et en améliorant les capacités du site dans des couches successives, chacune utilisant plus de fonctionnalités.
+- {{Glossary("Graceful degradation", "Dégradation progressive")}}
+  - : Il s'agit d'une approche descendante dans laquelle vous construisez le meilleur site possible en utilisant toutes les fonctionnalités que vous souhaitez, puis vous l'ajustez pour qu'il fonctionne sur des navigateurs plus anciens. Cela peut être plus difficile à faire et moins efficace que l'amélioration progressive, mais peut être utile dans certains cas.
+
+## Raisons invalides d'utiliser la détection du navigateur
+
+Si vous envisagez encore la détection du navigateur au lieu de la détection des fonctionnalités et de l'amélioration progressive, vérifiez si vous êtes motivé par les raisons (invalides) suivantes&nbsp;:
+
+- **Vous essayez de contourner un bug spécifique dans une certaine version du navigateur**
+  - : Il est peu probable que vous soyez la première personne à le rencontrer.
+    Des experts ou des personnes ayant un autre point de vue peuvent vous donner des indices pour mieux éviter ou contourner le bug.
+    Si le problème est rare, il vaut la peine de vérifier si ce bug a été signalé au fournisseur du navigateur avec des systèmes de suivi des bogues ([Mozilla <sup>(angl.)</sup>](https://bugzilla.mozilla.org/); [WebKit <sup>(angl.)</sup>](https://bugs.webkit.org/); [Blink <sup>(angl.)</sup>](https://www.chromium.org/issue-tracking/); [Opera <sup>(angl.)</sup>](https://bugs.opera.com/)).
+    Les fabricants de navigateurs prêtent attention aux rapports de bugs, et le vôtre peut aider à corriger ou à fournir des solutions de contournement plus fiables pour un problème.
+- **Servir un HTML différent en fonction du navigateur du/de la visiteur·euse**
+  - : C'est généralement une mauvaise idée, mais il existe de rares cas où cela est nécessaire.
+    Pouvez-vous l'éviter en ajoutant des éléments non sémantiques {{HTMLElement("div")}} ou {{HTMLElement("span")}}&nbsp;?
+    Considérez s'il y a réellement un problème avec votre conception&nbsp;: pouvez-vous utiliser l'amélioration progressive ou des mises en page fluides pour aider à supprimer votre besoin de le faire&nbsp;?
+    L'effort nécessaire pour appliquer une détection précise de l'agent utilisateur par rapport à la refonte de votre HTML devrait être un facteur décisif.
+- **Essayer de savoir si le navigateur d'un·e visiteur·euse possède une fonctionnalité spécifique**
+  - : Votre site doit utiliser une fonctionnalité spécifique que certains navigateurs ne prennent pas encore en charge, et vous souhaitez que les utilisateur·ice·s avec des navigateurs incompatibles voient un site plus ancien avec moins de fonctionnalités que vous savez fonctionner.
+    C'est la pire raison d'utiliser la détection de l'agent utilisateur, car tous les navigateurs finissent par rattraper leur retard.
+    De plus, il n'est pas pratique de tester chaque navigateur pour différentes fonctionnalités de cette manière.
+
+## Extraire les parties pertinentes de la chaîne de caractères de l'agent utilisateur
+
+Si vous avez exploré toutes les options ci-dessus et que vous devez encore analyser la chaîne de caractères de l'agent utilisateur en dernier recours, cette section fournit quelques conseils utiles.
+Malheureusement, il n'existe pas d'uniformité dans les différentes parties de la chaîne de caractères de l'agent utilisateur, ce qui rend cette tâche délicate.
 
 ### Moteur de rendu
 
-Comme indiqué plus haut, chercher le nom du moteur de rendu est la plupart du temps la meilleure solution. Cela permet de ne pas exclure des navigateurs peu connus basés sur le même moteur de rendu qu'un autre plus connu. Les navigateurs qui utilisent le même moteur de rendu affichent les pages de la même façon&nbsp;: on peut partir du principe que ce qui va fonctionner avec l'un fonctionnera avec l'autre.
+Les navigateurs partageant un {{Glossary("engine/rendering", "moteur de rendu")}} commun affichant une page de la même manière&nbsp;: il est souvent raisonnable de supposer que ce qui fonctionne dans un navigateur fonctionne dans l'autre.
+Il existe trois principaux moteurs de rendu actifs&nbsp;: {{Glossary("Blink")}}, {{Glossary("Gecko")}} et {{Glossary("WebKit")}}.
 
-Il y a cinq principaux moteurs de rendu&nbsp;: Trident, Gecko, Presto, Blink et Webkit. Puisque détecter le nom du moteur de rendu est courant, d'autres noms sont ajoutés dans beaucoup d'autres chaînes `User-Agent`. Il est donc important de faire attention aux faux positifs lorsqu'on cherche à détecter le moteur de rendu.
+Le moteur de rendu est la chaîne de caractères `Gecko/20100101` dans l'exemple suivant, indiquant que le moteur de rendu est `Gecko`, et le «&nbsp;gecko-Trail&nbsp;» est la chaîne fixe `20100101`, ce qui signifie «&nbsp;bureau&nbsp;»&nbsp;:
 
-| Moteur   | Doit contenir     | Commentaire                                                                                                                                                                                                                                |
-| -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Gecko    | `Gecko/xyz`       |                                                                                                                                                                                                                                            |
-| WebKit   | `AppleWebKit/xyz` | Attention, les navigateurs WebKit ajoutent une chaîne 'like Gecko' qui peut produire des faux positifs.                                                                                                                                    |
-| Presto   | `Opera/xyz`       | **Note :** Presto n'est plus utilisé pour les versions d'Opera >= 15 (voir 'Blink')                                                                                                                                                        |
-| Trident  | `Trident/xyz`     | Internet Explorer place ce fragment dans la partie _commentaires_ de la chaîne `User-Agent`                                                                                                                                                |
-| EdgeHTML | `Edge/xyz`        | La version de Edge non-basée sur Chromium indique la version du moteur après le fragment `Edge/`, mais pas la version de l'application. **Note :** EdgeHTML n'est plus utilisé pour le navigateur Edge après la version 79 (voir 'Blink'). |
-| Blink    | `Chrome/xyz`      |                                                                                                                                                                                                                                            |
+```http
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0
+```
 
-## Version du moteur de rendu
+Détecter les noms des moteurs de rendu est courant sur les sites web, et de nombreux agents utilisateurs ont historiquement ajouté d'autres noms de rendu pour éviter que les sites web ne les excluent uniquement en fonction du nom du moteur de rendu.
+Il est donc important de faire attention à ne pas déclencher de faux positifs lors de la détection du moteur de rendu, car cette méthode est particulièrement peu fiable.
+Considérez la chaîne UA suivante envoyée par Chrome 134 sur macOS&nbsp;:
 
-La plupart des moteurs de rendu placent leur numéro de version dans la section _MoteurDeRendu/NuméroDeVersion_, à l'exception notable de Gecko. Gecko place le numéro de version dans la partie commentaire après la chaîne `rv:`. Depuis la version 14 pour mobile et 17 pour les ordinateurs, il place aussi cette valeur dans la section `Gecko/version` (les versions précédentes y plaçaient la date de compilation, puis une date fixe appelée «&nbsp;Gecko Trail&nbsp;»).
+```http
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+```
 
-## Système d'exploitation
+| Moteur   | Doit contenir     | Détails                                                                                                                                                             |
+| -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Blink    | `Chrome/xyz`      |                                                                                                                                                                     |
+| Gecko    | `Gecko/xyz`       |                                                                                                                                                                     |
+| WebKit   | `AppleWebKit/xyz` | Les navigateurs WebKit ajoutent une chaîne de caractères `like Gecko` qui peut déclencher un faux positif pour Gecko si la détection n'est pas appliquée avec soin. |
+| Presto   | `Opera/xyz`       | Obsolète&nbsp;; Presto n'est plus utilisé dans les versions d'Opera >= 15 (voir «&nbsp;Blink&nbsp;»)                                                                |
+| EdgeHTML | `Edge/xyz`        | Obsolète&nbsp;; EdgeHTML n'est plus utilisé dans les versions d'Edge >= 79 (voir «&nbsp;Blink&nbsp;»).                                                              |
 
-Le système d'exploitation est dans la plupart des cas donné dans le User-Agent mais sous un format très variable. C'est une chaîne encadrée par des points-virgules, dans la partie commentaire de la chaîne `User-Agent`. Cette chaîne est spécifique à chaque navigateur. Elle indique le nom du système d'exploitation et souvent sa version et des informations sur l'architecture (32 ou 64 bits, ou Intel/PPC pour Mac).
+### Version du moteur de rendu
 
-Comme pour le reste, ces chaînes peuvent changer dans le futur, elles doivent seulement être utilisées en conjonction avec la détection de navigateurs existants. Une veille technologique doit s'effectuer pour adapter le script de détection lorsque de nouvelles versions des navigateurs sortent.
+La plupart des moteurs de rendu mettent le numéro de version dans le jeton `RenderingEngine/VersionNumber`, à l'exception notable de Gecko.
+C'est la chaîne de caractères `rv:138.0` dans l'exemple suivant, ce qui signifie que le numéro de version du moteur de rendu est `138.0`, ce qui est le même que la version de Firefox&nbsp;:
 
-### Mobile, tablette ou ordinateur
+```http
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0
+```
 
-La raison la plus courante de détecter le User-Agent et de déterminer sur quel type d'appareil fonctionne le navigateur. Le but est de servir un code HTML différent selon le type d'appareil.
+### Nom et version du navigateur
 
-- Ne partez jamais du principe qu'un navigateur ne fonctionne que sur un seul type d'appareil. En particulier, ne pas définir de paramètre par défaut selon le navigateur.
-- N'utilisez jamais la chaîne dédiée au système d'exploitation pour déterminer si le navigateur est sur un mobile, une tablette ou un ordinateur. Le même système d'exploitation peut fonctionner sur plusieurs types d'appareil (par exemple, Android fonctionne aussi bien sur des tablettes que sur des téléphones).
+Lorsque les gens disent qu'ils veulent une «&nbsp;détection de navigateur&nbsp;», ils veulent en réalité souvent une «&nbsp;détection du moteur de rendu&nbsp;».
+Cela signifie généralement détecter «&nbsp;Gecko&nbsp;» ou «&nbsp;WebKit&nbsp;» plutôt que «&nbsp;Firefox&nbsp;» ou «&nbsp;Safari&nbsp;».
 
-Le tableau suivant résume de quelle façon les principaux navigateurs indiquent qu'ils fonctionnent sur un appareil mobile&nbsp;:
+La plupart des navigateurs définissent le nom et la version dans le format `BrowserName/VersionNumber`.
+Mais comme le nom n'est pas la seule information dans une chaîne de caractères d'agent utilisateur dans ce format, vous ne pouvez pas découvrir le nom du navigateur, vous pouvez seulement vérifier si le nom que vous recherchez est présent.
+Le nom du navigateur est la chaîne de caractères `Firefox/138.0` dans l'exemple suivant, indiquant que le nom du navigateur est `Firefox`, et que la version du logiciel est `138.0`&nbsp;:
 
-| Navigateur                                                             | Rule                                                                                                                                                                                                                                                         | Exemple                                                                                                                                                          |
-| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mozilla (Gecko, Firefox)                                               | `Mobile` ou `Tablet` dans le commentaire.                                                                                                                                                                                                                    | `Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0`                                                                                                 |
-| Basé sur WebKit (Android, Safari)                                      | Fragment `Mobile Safari` [en dehors du commentaire](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3). | `Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30`               |
-| Basé sur Blink (Chromium, Google Chrome, Opera 15+, Edge pour Android) | Fragment `Mobile Safari` [en dehors du commentaire](https://developer.chrome.com/docs/multidevice/user-agent/).                                                                                                                                              | `Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047` |
-| Presto-based (Opera 12-)                                               | Fragment `Opera Mobi/xyz` [dans le commentaire](https://developers.whatismybrowser.com/useragents/explore/layout_engine_name/presto/).                                                                                                                       | `Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50`                                                            |
-| Internet Explorer                                                      | Fragment `IEMobile/xyz` dans le commentaire.                                                                                                                                                                                                                 | `Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)`                                                                            |
-| Edge sur Windows 10 Mobile                                             | Fragments `Mobile/xyz` et `Edge/` en dehors du commentaire.                                                                                                                                                                                                  | `Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299` |
+```http
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0
+```
 
-En résumé, nous recommandons de chercher la chaîne `Mobi` dans la chaîne `User-Agent` pour détecter un appareil mobile.
+Certains navigateurs envoient des informations contradictoires&nbsp;: Chrome, par exemple, rapporte à la fois Chrome et Safari.
+Donc, pour détecter Safari, vous devez vérifier la présence de la chaîne de caractères Safari et l'absence de la chaîne de caractères Chrome, Chromium se rapporte souvent à lui-même comme Chrome et SeaMonkey se rapporte à lui-même comme Firefox.
 
-> [!NOTE]
-> Si l'appareil est suffisamment grand pour ne pas être indiqué `Mobi`, il est préférable de servir la version du site pour ordinateur. De toute manière, supporter les interactions tactiles pour un site «&nbsp;pour ordinateur&nbsp;» est une bonne pratique. En effet, de plus en plus d'ordinateurs sont équipés d'écrans tactiles.
+Faites attention lorsque vous utilisez des expressions régulières sur la partie `BrowserName`, car les agents utilisateurs contiennent également des chaînes de caractères autour de la syntaxe Keyword/Value.
+Safari et Chrome contiennent la chaîne de caractères `like Gecko`, par exemple.
+
+| Nom du navigateur                  | Doit contenir   | Ne doit pas contenir           |
+| ---------------------------------- | --------------- | ------------------------------ |
+| Firefox                            | `Firefox/xyz`   | `Seamonkey/xyz`                |
+| Seamonkey                          | `Seamonkey/xyz` |                                |
+| Chrome                             | `Chrome/xyz`    | `Chromium/xyz` ou `Edg.*/xyz`  |
+| Chromium                           | `Chromium/xyz`  |                                |
+| Safari                             | `Safari/xyz` \* | `Chrome/xyz` ou `Chromium/xyz` |
+| Opera 15+ (Moteur basé sur Blink)  | `OPR/xyz`       |                                |
+| Opera 12- (Moteur basé sur Presto) | `Opera/xyz`     |                                |
+
+\* Safari donne deux numéros de version&nbsp;: un technique dans le jeton `Safari/xyz`, et un convivial dans un jeton `Version/xyz`.
+
+Bien sûr, il n'y a absolument aucune garantie qu'un autre navigateur ne falsifie pas ces informations dans certains cas.
+C'est pourquoi la détection de navigateur en utilisant la chaîne de caractères d'agent utilisateur est peu fiable et ne doit être effectuée qu'avec la vérification du numéro de version (la falsification des versions passées est moins probable).
+
+### Détection du système d'exploitation
+
+Le système d'exploitation est envoyé dans la plupart des chaînes de caractères d'agent utilisateur (bien que pas sur les plateformes non axées sur le web), mais le format varie.
+C'est une chaîne de caractères fixe entre deux points-virgules, dans la partie commentaire de l'agent utilisateur, et ces chaînes de caractères sont spécifiques à chaque navigateur.
+
+Elles indiquent le système d'exploitation, et souvent sa version ainsi que des informations sur le matériel utilisé (32 ou 64 bits, Intel/PPC pour Mac, ou architecture CPU x86/ARM pour les PC Windows).
+C'est la chaîne de caractères `Intel Mac OS X 10.15` dans l'exemple suivant&nbsp;:
+
+```http
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0
+```
+
+Dans tous les cas, ces chaînes de caractères peuvent changer, il est donc recommandé de les utiliser uniquement en conjonction avec la détection de navigateurs déjà publiés afin que les modèles soient connus à l'avance.
+Envisagez une enquête sur les visiteur·euse·s ou les chaînes de caractères d'agent utilisateur pour adapter votre code lorsque de nouvelles versions de navigateurs sont publiées.
+
+### Mobile, Tablette ou Bureau
+
+La raison la plus courante de l'utilisation de la détection de l'agent utilisateur est de déterminer le type d'appareil sur lequel le navigateur s'exécute.
+
+- Ne supposez jamais qu'un navigateur ou un moteur de rendu ne fonctionne que sur un seul type d'appareil.
+  En particulier, ne vous fiez pas à des paramètres par défaut différents pour différents navigateurs ou moteurs de rendu.
+- N'utilisez jamais le jeton du système d'exploitation pour définir si un navigateur est sur mobile, tablette ou bureau.
+  Le système d'exploitation peut fonctionner sur plusieurs types d'appareils (par exemple, Android fonctionne sur les tablettes ainsi que sur les téléphones).
+
+Le tableau suivant résume la manière dont les fournisseurs de navigateurs courants indiquent que leurs navigateurs s'exécutent sur un appareil mobile&nbsp;:
+
+| Navigateur                                                           | Règle                                                        | Exemple                                                                                                                                                          |
+| -------------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mozilla (Gecko, Firefox)                                             | `Mobile` ou `Tablet` à l'intérieur du commentaire.           | `Mozilla/5.0 (Android 15; Mobile; rv:136.0) Gecko/136.0 Firefox/136.0`                                                                                           |
+| Basé sur WebKit (Android, Safari)                                    | Jeton `Mobile Safari` à l'extérieur du commentaire.          | `Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30`               |
+| Basé sur Blink (Chromium, Google Chrome, Opera 15+, Edge on Android) | Jeton `Mobile Safari` à l'extérieur du commentaire.          | `Mozilla/5.0 (Linux; Android 4.4.2; Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047`  |
+| Edge sur Windows 10 Mobile                                           | Jetons `Mobile/xyz` et `Edge/` à l'extérieur du commentaire. | `Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299` |
+
+En bref, vous pouvez rechercher la chaîne de caractères `Mobi` n'importe où dans la chaîne de caractères de l'agent utilisateur.
+Si l'appareil est suffisamment grand pour ne pas être identifié par `Mobi`, vous devriez lui proposer votre site pour ordinateur de bureau (qui, conformément aux bonnes pratiques, devrait de toute façon prendre en charge la saisie tactile, car les appareils de bureau peuvent être équipés d'écrans tactiles).
+
+## Voir aussi
+
+- [Requêtes de média CSS](/fr/docs/Web/CSS/Guides/Media_queries)
+- [Indications de client HTTP](/fr/docs/Web/HTTP/Guides/Client_hints)
+- [Mise en œuvre de la détection de fonctionnalités](/fr/docs/Learn_web_development/Extensions/Testing/Feature_detection)
+- [Migration vers les indications client de l'agent utilisateur <sup>(angl.)</sup>](https://web.dev/articles/migrate-to-ua-ch#strategy_legacy_support) sur web.dev (2021)

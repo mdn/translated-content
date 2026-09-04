@@ -1,37 +1,35 @@
 ---
-title: "<hr>: 主題区切り（水平線）要素"
+title: HTML `<hr>` 主題区切り（水平線）要素
+short-title: <hr>
 slug: Web/HTML/Reference/Elements/hr
-original_slug: Web/HTML/Element/hr
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<hr>`** は [HTML](/ja/docs/Web/HTML) の要素で、段落レベルの要素間において、テーマの意味的な区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。
 
 {{InteractiveExample("HTML デモ: &lt;hr&gt;", "tabbed-shorter")}}
 
-```html interactive-example
-<p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+```html-nolint interactive-example
+<p>§1: ファイトクラブの第一のルール：ファイトクラブについて話してはならない。</p>
 
 <hr />
 
-<p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+<p>§2: ファイトクラブの第二のルール：カップケーキを必ず持参すること。</p>
 ```
 
 ```css interactive-example
 hr {
   border: none;
-  border-top: 3px double #333;
-  color: #333;
+  border-top: 3px double #333333;
+  color: #333333;
   overflow: visible;
   text-align: center;
   height: 5px;
 }
 
 hr::after {
-  background: #fff;
+  background: white;
   content: "§";
   padding: 0 4px;
   position: relative;
@@ -39,7 +37,9 @@ hr::after {
 }
 ```
 
-以前はこれは水平の区切り線として定義されていました。現在でもブラウザーでは水平線として表示されますが、この要素は表示論的な用語ではなく意味論的な用語で定義されましたので、水平線を引きたいのであれば、適切な CSS を使用して行うようにしてください。
+過去には、`<hr>`要素は常に水平線として表示されてきました。視覚的なブラウザーでは現在も水平線として表示される場合がありますが、この要素は現在、表現上の観点ではなく、意味づけの観点から定義されています。したがって、水平線を描画したい場合は、CSSを使用して既存の要素に境界線を追加することで実現する必要があります。
+
+`border-*` プロパティ（例えば、{{cssxref("border-style")}} や {{cssxref("border-color")}} など）を使用すると、`<hr>` 要素をカスタマイズする場合でも、別の要素に描画された境界線をカスタマイズする場合でも、線の外観を大幅にカスタマイズすることができます。
 
 ## 属性
 
@@ -84,12 +84,12 @@ hr::after {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -105,9 +105,10 @@ hr::after {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >を受け入れるすべての要素
+        <ul>
+          <li><a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素</li>
+          <li><a href="/ja/docs/Web/HTML/Reference/Elements/select"><code>&lt;select></code></a> 要素</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -138,3 +139,4 @@ hr::after {
 ## 関連情報
 
 - {{HTMLElement('p')}}
+- [`<select>` の中の `<hr>`](/ja/docs/Web/HTML/Reference/Elements/select#グループ化された選択肢のある_select)

@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
 original_slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/es/docs/Learn/Common_questions")}}
 
 En este artículo se explican cuales componentes de software necesita para editar, cargar, o visualizar un sitio web.
 
@@ -14,7 +14,7 @@ En este artículo se explican cuales componentes de software necesita para edita
       <th scope="row">Prerrequisitos:</th>
       <td>
         Deberías conocer acerca de
-        <a href="/es/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        <a href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >la diferencia entre páginas web, sitios web, servidores web, y
           moteres de búsqueda.</a
         >

@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 73a73bc44e12181c778910f3b7d73962e0dd9a29
 ---
 
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+
 本技能测试用于评估你是否理解[如何使用较少为人知的 HTML 元素来标记高级语义特性](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)。
 
 > [!NOTE]

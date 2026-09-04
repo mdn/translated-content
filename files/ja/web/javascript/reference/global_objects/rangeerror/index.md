@@ -1,9 +1,9 @@
 ---
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`RangeError`** オブジェクトは、値が配列内に存在しない、または値が許容範囲にない場合のエラーを表します。
 
@@ -17,6 +17,10 @@ slug: Web/JavaScript/Reference/Global_Objects/RangeError
 - {{jsxref("Array")}} コンストラクターで不正な長さの配列を作ろうとした場合
 - 数値に関するメソッド {{jsxref("Number.prototype.toExponential()")}}, {{jsxref("Number.prototype.toFixed()")}}, {{jsxref("Number.prototype.toPrecision()")}} に不適切な値を渡した場合
 
+`RangeError` は{{Glossary("serializable object", "シリアライズ可能オブジェクト")}}であるため、{{DOMxRef("Window.structuredClone", "structuredClone()")}} で複製したり、[ワーカー](/ja/docs/Web/API/Worker)間で {{domxref("Worker/postMessage()", "postMessage()")}} を使用してコピーしたりすることができます。
+
+`RangeError` は {{jsxref("Error")}} のサブクラスです。
+
 ## コンストラクター
 
 - {{jsxref("RangeError/RangeError", "RangeError()")}}
@@ -24,18 +28,18 @@ slug: Web/JavaScript/Reference/Global_Objects/RangeError
 
 ## インスタンスプロパティ
 
-- {{jsxref("Error.prototype.message", "RangeError.prototype.message")}}
-  - : エラーメッセージ。 ECMA-262 は {{jsxref("RangeError")}} 自身が `message` プロパティを提供するべきであると規定しているにもかかわらず、 [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) では {{jsxref("Error.prototype.message")}} が継承される。
-- {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
-  - : エラー名。 {{jsxref("Error")}} から継承。
-- {{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}}
-  - : エラーが発生したファイルへのパス。 {{jsxref("Error")}} から継承。
-- {{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}}
-  - : エラーが発生したファイルの行番号。 {{jsxref("Error")}} から継承。
-- {{jsxref("Error.prototype.columnNumber", "RangeError.prototype.columnNumber")}}
-  - : エラーが発生したファイルの列番号。 {{jsxref("Error")}} から継承。
-- {{jsxref("Error.prototype.stack", "RangeError.prototype.stack")}}
-  - : スタックトレース。{{jsxref("Error")}}から継承。
+_親である {{jsxref("Error")}} から継承したプロパティもあります。_
+
+これらのプロパティは `RangeError.prototype` で定義されており、すべての `RangeError` インスタンスで共有されます。
+
+- {{jsxref("Object/constructor", "RangeError.prototype.constructor")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数です。`RangeError` のインスタンスでは、初期値は {{jsxref("RangeError/RangeError", "RangeError")}} コンストラクターです。
+- {{jsxref("Error/name", "RangeError.prototype.name")}}
+  - : エラーの種類の名前を表します。`RangeError.prototype.name` の場合、初期値は `"RangeError"` です。
+
+## インスタンスメソッド
+
+_親である {{jsxref("Error")}} から継承したメソッドがあります_。
 
 ## 例
 
@@ -44,7 +48,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RangeError
 ```js
 function check(n) {
   if (!(n >= -500 && n <= 500)) {
-    throw new RangeError("The argument must be between -500 and 500.");
+    throw new RangeError("引数は -500 以上 500 以下でなければなりません。");
   }
 }
 
@@ -52,7 +56,7 @@ try {
   check(2000);
 } catch (error) {
   if (error instanceof RangeError) {
-    // Handle the error
+    // エラーを処理する
   }
 }
 ```
@@ -61,9 +65,9 @@ try {
 
 ```js
 function check(value) {
-  if (["apple", "banana", "carrot"].includes(value) === false) {
+  if (!["apple", "banana", "carrot"].includes(value)) {
     throw new RangeError(
-      'The argument must be an "apple", "banana", or "carrot".',
+      '引数は "apple", "banana", "carrot" のいずれかでなければなりません。',
     );
   }
 }
@@ -72,7 +76,7 @@ try {
   check("cabbage");
 } catch (error) {
   if (error instanceof RangeError) {
-    // Handle the error
+    // エラーを処理する
   }
 }
 ```
@@ -89,7 +93,7 @@ try {
 
 - {{jsxref("Error")}}
 - {{jsxref("Array")}}
-- {{jsxref("Number.toExponential()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("Number.toPrecision()")}}
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("String.prototype.normalize()")}}

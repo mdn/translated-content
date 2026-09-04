@@ -24,7 +24,7 @@ O usuário pode fazer a seleção da esquerda para a direita (na orientação do
 - {{DOMxRef("Selection.rangeCount")}}{{ReadOnlyInline}}
   - : Retorna no número de intervalos da seleção.
 - {{DOMxRef("Selection.type")}}{{ReadOnlyInline}}
-  - : Retorna um {{DOMxRef("DOMString")}} descrevento o tipo da seleção atual.
+  - : Retorna um {{jsxref("String")}} descrevento o tipo da seleção atual.
 
 ## Métodos
 
@@ -133,7 +133,7 @@ Outras palavras chaves usadas nesta seção.
 - anchor
   - : O anchor de uma seleção é o ponto inicial da seleção. Quando a seleção é feita com um mouse, é onde o botão do mouse é inicialmente pressionado. Quando o usuário altera a seleção usando o mouse ou teclado, o anchor não move.
 - Elemento editável
-  - : Um elemento editável — i.e. um elemento HTML com o atributo [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable) definido, ou o HTML filho de um documento estiver com o {{DOMxRef("Document.designMode", "designMode")}} habilitado.
+  - : Um elemento editável — i.e. um elemento HTML com o atributo [`contenteditable`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#contenteditable) definido, ou o HTML filho de um documento estiver com o {{DOMxRef("Document.designMode", "designMode")}} habilitado.
 - foco de uma seleção
   - : O foco da seleção é o ponto final da seleção. Quando feita a seleção com um mouse, o focus é onde o botão do mouse foi solto. Quando o usuário muda a seleção usando o mouse ou teclado, o focus é o final da seleção que move. **Nota:** Não é o mesmo que o elemento selecionado do documento, como retornado em {{DOMxRef("document.activeElement")}}.
 - intervalo

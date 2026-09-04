@@ -5,7 +5,7 @@ slug: Web/API/WebSocket/WebSocket
 
 {{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
-**`WebSocket()`**构造函器会返回一个 {{domxref("WebSocket")}} 对象。
+**`WebSocket()`** 构造函数会返回一个 {{domxref("WebSocket")}} 对象。
 
 ## 语法
 

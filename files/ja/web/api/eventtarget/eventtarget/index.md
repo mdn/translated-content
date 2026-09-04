@@ -3,7 +3,7 @@ title: "EventTarget: EventTarget() コンストラクター"
 short-title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
 l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}

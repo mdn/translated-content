@@ -7,9 +7,9 @@ slug: Web/HTTP/Reference/Headers/Warning
 
 一般来说，Warning 首部可以应用于任何类型的报文。然而一部分警告码（warn-code）是为缓存代理服务器定制的，并且只可以应用在响应报文中。
 
-| Header type                           | {{Glossary("General header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | no                             |
+| Header type                              | {{Glossary("General header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | no                             |
 
 ## 语法
 

@@ -1,35 +1,48 @@
 ---
-title: document.createComment
+title: "Document : méthode createComment()"
+short-title: createComment()
 slug: Web/API/Document/createComment
+l10n:
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{APIRef("DOM")}}
 
-`createComment()` crée et retourne un nouveau noeud de type commentaire.
+La méthode **`createComment()`** de l'interface {{DOMxRef("Document")}} crée un nouveau nœud de type commentaire et le retourne.
 
 ## Syntaxe
 
-```js
-CommentNode = document.createComment(data);
+```js-nolint
+createComment(data)
 ```
 
 ### Paramètres
 
 - `data`
-  - : Une chaîne de caractères représentant le contenu du commentaire.
+  - : Une chaîne de caractères contenant les données à ajouter au commentaire.
 
-## Exemple
+### Valeur de retour
+
+Un nouvel objet {{DOMxRef("Comment")}}.
+
+## Exemples
 
 ```js
-var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
-var comment = docu.createComment("Voici un commentaire pas très bien caché");
+const doc = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+const comment = doc.createComment(
+  "Mon commentaire super secret, pas si bien caché",
+);
 
-docu.getElementsByTagName("xml")[0].appendChild(comment);
+doc.querySelector("xml").appendChild(comment);
 
-alert(new XMLSerializer().serializeToString(docu));
-// Affiche: <xml><!--Voici un commentaire pas très bien caché--></xml>
+console.log(new XMLSerializer().serializeToString(doc));
+// Affiche : <xml><!--Mon commentaire super secret, pas si bien caché--></xml>
 ```
 
-## Spécification
+## Spécifications
 
-- [createComment](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

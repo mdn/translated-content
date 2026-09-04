@@ -1,27 +1,31 @@
 ---
 title: Selection
 slug: Web/API/Selection
+l10n:
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
-{{ ApiRef("Selection API") }}
+{{ApiRef("Selection API")}}
 
-**`Selection`** オブジェクトは、ユーザーが選択したテキストの範囲、またはキャレットの現在の位置を表します。検査や操作のために `Selection` オブジェクトを取得するには、 {{DOMxRef("window.getSelection()")}} を呼び出してください。
+**`Selection`** オブジェクトは、ユーザーが選択したテキストの範囲、またはキャレットの現在の位置を表します。各文書 ({{domxref("document")}}) には一意の選択オブジェクトが関連付けられており、これを {{DOMxRef("document.getSelection()")}} または {{domxref("window.getSelection()")}} によって取得してから、確認や変更を行うことができます。
 
 ユーザーは、左から右（文書順）または右から左（文書と逆順）に選択することができます。アンカー (**_anchor_**) はユーザーが選択を開始した場所、フォーカス (**_focus_**) はユーザーが選択を終了した場所である。デスクトップマウスで選択する場合、アンカーはマウスボタンを押した場所に置かれ、フォーカスはマウスボタンを離した場所に置かれます。
 
 > [!NOTE]
 > アンカーとフォーカスは、選択範囲の開始位置と終了位置と混同しないようにしましょう。アンカーはフォーカスの前に置かれることもあればその逆もあり、 選択の方向によって異なります。
 
-## プロパティ
+## インスタンスプロパティ
 
 - {{DOMxRef("Selection.anchorNode")}} {{ReadOnlyInline}}
   - : 選択範囲を開始する {{DOMxRef("Node")}} を返します。選択範囲が文書内に存在しない場合（例：クリックされなかった iframe）には `null` を返すことがあります。
 - {{DOMxRef("Selection.anchorOffset")}} {{ReadOnlyInline}}
   - : 選択部分のアンカーの `anchorNode` 内でのオフセットを表す値を返します。 `anchorNode` がテキストノードであった場合、これはアンカーに先行する anchorNode 内の文字数です。 `anchorNode` が要素であった場合、これはアンカーに先行する `anchorNode` の子ノードの数です。
+- {{DOMxRef("Selection.direction")}} {{ReadOnlyInline}}
+  - : 現在の選択範囲の方向を表す文字列。
 - {{DOMxRef("Selection.focusNode")}} {{ReadOnlyInline}}
-  - : 選択範囲が終了する {{DOMxRef("Node")}} を返します。選択範囲が文書内に存在しない場合（例えば、クリックされなかった `iframe` 内の場合）には `null` を返すことがあります。
+  - : 選択範囲が終了する {{DOMxRef("Node")}} を返します。選択範囲が文書内に存在しない場合（例えば、クリックされなかった iframe 内の場合）には `null` を返すことがあります。
 - {{DOMxRef("Selection.focusOffset")}} {{ReadOnlyInline}}
-  - : 選択部分のアンカーの `focusNode` 内でのオフセットを表す値を返します。 `focusNode` がテキストであった場合、これは `focusNode` 内でフォーカスに先行する文字数です。 `focusNode` が要素であった場合、フォーカスの前にある `focusNode` の子ノードの数を表します。
+  - : 選択部分のフォーカスの `focusNode` 内でのオフセットを表す値を返します。 `focusNode` がテキストであった場合、これは `focusNode` 内でフォーカスに先行する文字数です。 `focusNode` が要素であった場合、フォーカスの前にある `focusNode` の子ノードの数を表します。
 - {{DOMxRef("Selection.isCollapsed")}} {{ReadOnlyInline}}
   - : 選択範囲の始点と終点が同じ位置にあるかどうかを示す論理値を返します。
 - {{DOMxRef("Selection.rangeCount")}} {{ReadOnlyInline}}
@@ -29,7 +33,7 @@ slug: Web/API/Selection
 - {{DOMxRef("Selection.type")}} {{ReadOnlyInline}}
   - : 現在の選択部分の型を記述した文字列を返します。
 
-## メソッド
+## インスタンスメソッド
 
 - {{DOMxRef("Selection.addRange()")}}
   - : {{DOMxRef("Range")}} オブジェクトを選択範囲に追加します。
@@ -43,11 +47,15 @@ slug: Web/API/Selection
   - : あるノードが選択範囲に含まれるかどうかを示します。
 - {{DOMxRef("Selection.deleteFromDocument()")}}
   - : 選択部分の内容を文書から削除します。
+- {{DOMxRef("Selection.empty()")}}
+  - : 選択範囲をすべて削除し、{{domxref("Selection.anchorNode", "anchorNode")}} および {{domxref("Selection.focusNode","focusNode")}} プロパティの値を `null` に設定し、何も選択されていない状態にします。
 - {{DOMxRef("Selection.extend()")}}
   - : 選択範囲のフォーカスをこの点に移動させる。
+- {{DOMxRef("Selection.getComposedRanges()")}}
+  - : {{DOMxRef("StaticRange")}} オブジェクトの配列を返します。各オブジェクトは、シャドウ DOM の境界を越える可能性のある選択範囲を表します。
 - {{DOMxRef("Selection.getRangeAt()")}}
   - : 現在選択されている範囲のうちの一つを表す {{DOMxRef("Range")}} オブジェクトを返します。
-- {{DOMxRef("Selection.modify()")}} {{Non-standard_Inline}}
+- {{DOMxRef("Selection.modify()")}}
   - : 現在の選択範囲を変更します。
 - {{DOMxRef("Selection.removeRange()")}}
   - : 選択範囲から範囲を削除します。
@@ -57,6 +65,8 @@ slug: Web/API/Selection
   - : 指定されたノードのすべての子ノードを選択範囲に追加します。
 - {{DOMxRef("Selection.setBaseAndExtent()")}}
   - : 指定した 2 つの DOM ノードのすべてまたは一部、およびそれらの間にあるコンテンツを含む範囲を選択範囲に設定します。
+- {{DOMxRef("Selection.setPosition()")}}
+  - : 現在の選択範囲を 1 点に集約します。
 - {{DOMxRef("Selection.toString()")}}
   - : 選択オブジェクトが現在表現している文字列、すなわち現在選択されている文字列を返します。
 
@@ -85,7 +95,7 @@ const range = selObj.getRangeAt(0);
 - `selObj` は Selection オブジェクト
 - `range` は {{DOMxRef("Range")}} オブジェクト
 
-[選択 API 仕様書のメモ](https://www.w3.org/TR/selection-api/#h_note_15)にあるように、選択 API は当初 Netscape 社によって作成され、複数の範囲を許容していました（例えば {{HTMLElement("table")}} から列を選択できるようにする）。しかし、 Gecko 以外のブラウザーは複数の範囲を実装しておらず、仕様でも選択範囲は常に一つであることが要求されています。
+[選択 API 仕様書のメモ](https://w3c.github.io/selection-api/#h-note-13)にあるように、選択 API は当初 Netscape 社によって作成され、複数の範囲を許容していました（例えば {{HTMLElement("table")}} から列を選択できるようにする）。しかし、Gecko 以外のブラウザーは複数の範囲を実装しておらず、この仕様書でも選択範囲は常に一つであることが要求されています。
 
 ### 選択と入力のフォーカス
 
@@ -132,17 +142,17 @@ Safari と Chrome は（Firefox と異なり）現在、プログラムで選択
 
 この分野で使用されるその他の重要な用語です。
 
-- **アンカー**
+- アンカー
   - : 選択範囲のアンカーは、選択範囲の始点です。マウスで選択する場合、アンカーは文書内で最初にマウスボタンが押された位置となります。ユーザーがマウスやキーボードを使用して選択範囲を変更しても、アンカーは移動しません。
-- **編集ホスト**
+- 編集ホスト
   - : 編集可能な要素（例えば、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)が設定された HTML 要素、または {{DOMxRef("Document.designMode", "designMode")}} が有効になっている文書の HTML 子要素など）。
-- **選択フォーカス**
-  - : 選択範囲の _フォーカス_ は、選択範囲の終点です。マウスで選択する場合、フォーカスは文書内でマウスボタンが離された位置にあります。ユーザーがマウスやキーボードを使用して選択範囲を変更すると、フォーカスは移動した選択範囲の終点になります。
+- 選択フォーカス
+  - : 選択範囲のフォーカスは、選択範囲の終点です。マウスで選択する場合、フォーカスは文書内でマウスボタンが離された位置にあります。ユーザーがマウスやキーボードを使用して選択範囲を変更すると、フォーカスは移動した選択範囲の終点になります。
 
     > [!NOTE]
-    > これは、{{DOMxRef("document.activeElement")}}が返すような、文書のフォーカスされた要素と同じものではありません。
+    > これは、{{DOMxRef("document.activeElement")}} が返すような、文書のフォーカスされた要素と同じものではありません。
 
-- **範囲**
+- 範囲
   - : 範囲とは、文書内の連続した部分のことです。範囲には、ノード全体やノードの一部（テキストノードの一部など）を含めることができます。通常、ユーザーは一度に一つの範囲しか選択しませんが、ユーザーが複数の範囲を選択することも可能です (例: <kbd>Control</kbd> キーを使用するなど)。範囲は {{DOMxRef("range")}} オブジェクトとして選択範囲から取得することができます。範囲オブジェクトは DOM 経由で作成することもでき、プログラムによって選択範囲に追加したり削除したりすることができます。
 
 ## 仕様書
@@ -156,6 +166,6 @@ Safari と Chrome は（Firefox と異なり）現在、プログラムで選択
 ## 関連情報
 
 - {{DOMxRef("Window.getSelection")}}, {{DOMxRef("Document.getSelection")}}, {{DOMxRef("Range")}}
-- 選択関連イベント: {{domxref("Document/selectionchange_event", "selectionchange")}} および {{domxref("Document/selectstart_event", "selectstart")}}
+- 選択関連イベント: {{domxref("Document/selectionchange_event", "selectionchange")}} および {{domxref("Node/selectstart_event", "selectstart")}}
 - HTML の input は、選択範囲を操作するための、よりシンプルなヘルパー API を提供しています。（{{DOMxRef("HTMLInputElement.setSelectionRange()")}} を参照）
 - {{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus")}}, {{DOMxRef("HTMLElement.blur")}}

@@ -1,11 +1,10 @@
 ---
-title: "<object>: 外部オブジェクト要素"
+title: HTML `<object>` 外部オブジェクト要素
+short-title: <object>
 slug: Web/HTML/Reference/Elements/object
 l10n:
-  sourceCommit: e68530dbce2b661c8860e9c6a1c70b1caca5a199
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<object>`** は [HTML](/ja/docs/Web/HTML) の要素で、画像、内部の閲覧コンテキスト、プラグインによって扱われるリソースなどのように扱われる外部リソースを表します。
 
@@ -37,17 +36,17 @@ l10n:
   - : リソースのアドレスを有効な URL で指定。**data** 属性と **type** 属性のうち、少なくとも 1 つは定義しておく必要があります。
 - `declare` {{deprecated_inline}}
   - : この論理属性は属性名を指定するだけで有効になります。オブジェクトは、後続する `<object>` 要素でインスタンス化しなければなりません。リソースを再利用するごとに、完全な形の `<object>` 要素を繰り返し配置します。
-- `form`
+- [`form`](/ja/docs/Web/HTML/Reference/Attributes/form)
   - : このオブジェクト要素がフォームに関連付けられていれば、そのフォーム要素（_フォームオーナー_）。属性値は、同一文書内の {{HTMLElement("form")}} 要素の ID でなければなりません。
 - `height`
   - : 表示されるリソースの高さを、 {{cssxref("&lt;integer&gt;")}} （{{glossary("CSS pixel", "CSS ピクセル")}}単位）で指定します。
 - `name`
-  - : 有効な閲覧コンテキストの名前 (HTML5) またはコントロールの名前 (HTML 4)。
+  - : 有効な閲覧コンテキストの名前 (HTML5) またはコントロールの名前 (HTML 4)。この名前は、{{domxref("Window")}} および {{domxref("Document")}} オブジェクトのプロパティとなり、埋め込まれたウィンドウまたは要素自体への参照を含みます。
 - `standby` {{deprecated_inline}}
   - : オブジェクトの実装とデータの読み込み中にブラウザーに表示することができるメッセージ。
 - `type`
   - : **data** 属性によって指定されたリソースの[コンテンツ型](/ja/docs/Glossary/MIME_type)。**data** 属性と **type** 属性のうち、少なくとも 1 つは定義しておく必要があります。
-- `usemap`
+- `usemap` {{deprecated_inline}}
   - : {{HTMLElement("map")}} 要素を参照するハッシュ名。 '#' の後に map 要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/map#name) 属性を繋げた文字列を属性値として記述します。
 - `width`
   - : 表示されるリソースの幅を {{cssxref("&lt;integer&gt;")}} （{{glossary("CSS pixel", "CSS ピクセル")}}単位）で指定します。
@@ -64,7 +63,9 @@ l10n:
   data="/shared-assets/videos/flower.webm"
   width="600"
   height="140">
-  <img src="path/image.jpg" alt="有益な画像の説明" />
+  <img
+    src="/shared-assets/images/examples/flowers.jpg"
+    alt="いくつかの美しい花" />
 </object>
 ```
 
@@ -109,11 +110,13 @@ l10n:
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a></td>
+      <td>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>
+      </td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

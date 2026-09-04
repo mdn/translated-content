@@ -1,27 +1,20 @@
 ---
-title: Constantes
+title: Extension (Plugin)
 slug: Glossary/Plugin
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Un extension de navigateur est un composant logiciel que les utilisateur·ice·s peuvent installer pour gérer du contenu que le navigateur ne prend pas en charge nativement. Les extensions de navigateur sont généralement écrits en utilisant l'architecture [NPAPI <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/NPAPI) (Netscape Plugin Application Programming Interface).
 
-Cette section est une référence au définitions utilisées par l'API Plug-in. Toutes les définitions proviennent de npapi.h.
+Le extension le plus connu et le plus utilisé était l'ancien lecteur Adobe Flash, aujourd'hui obsolète, qui permettait aux navigateurs d'exécuter du contenu {{Glossary("Adobe Flash")}}.
 
-### Codes Erreur
+À mesure que les navigateurs sont devenus plus puissants, les extensions sont devenus moins utiles. Les extensions ont également un historique de problèmes de sécurité et de performance pour les utilisateur·ice·s du web.
 
-| Code                                 | Valeur | Description                                                          |
-| ------------------------------------ | ------ | -------------------------------------------------------------------- |
-| **NPERR_NO_ERROR**                   | 0      | Aucune erreur n'est survenue                                         |
-| **NPERR_GENERIC_ERROR**              | 1      | Une erreur sans code attribué est survenue                           |
-| **NPERR_INVALID_INSTANCE_ERROR**     | 2      | L'instance transmise au plugin est invalide                          |
-| **NPERR_INVALID_FUNCTABLE_ERROR**    | 3      | Table de fonctions invalide                                          |
-| **NPERR_MODULE_LOAD_FAILED_ERROR**   | 4      | Le chargement du plugin a échoué                                     |
-| **NPERR_OUT_OF_MEMORY_ERROR**        | 5      | L'allocation de mémoire a échoué                                     |
-| **NPERR_INVALID_PLUGIN_ERROR**       | 6      | Plugin manquant ou invalide                                          |
-| **NPERR_INVALID_PLUGIN_DIR_ERROR**   | 7      | Répertoire du plugin manquant ou invalide                            |
-| **NPERR_INCOMPATIBLE_VERSION_ERROR** | 8      | les versions du plugin et de Communicator ne correspondent pas       |
-| **NPERR_INVALID_PARAM**              | 9      | Paramètre manquant ou invalide                                       |
-| **NPERR_INVALID_URL**                | 10     | URL manquante ou invalide                                            |
-| **NPERR_FILE_NOT_FOUND**             | 11     | Fichier manquant ou invalide                                         |
-| **NPERR_NO_DATA**                    | 12     | Le flux ne contient pas de données                                   |
-| **NPERR_STREAM_NOT_SEEKABLE**        | 13     | Flux trouvable attendu. (trad à vérifier : Seekable stream expected) |
+Entre 2016 et 2021, les éditeurs de navigateurs ont travaillé sur une feuille de route de dépréciation des extensions, en particulier pour Adobe Flash, et aujourd'hui, les extensions ne sont plus pris en charge par aucun navigateur majeur.
+
+Les extensions ne doivent pas être confondus avec les extensions de navigateur, qui contrairement aux extensions sont distribuées sous forme de code source plutôt que de binaires, et qui sont toujours prises en charge par les navigateurs, notamment via le système {{Glossary("WebExtensions")}}.
+
+## Voir aussi
+
+- [Annonce de fin de vie d'Adobe Flash <sup>(angl.)</sup>](https://blog.adobe.com/en/publish/2017/07/25/adobe-flash-update#gs.g8mmgf)

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`formatToParts()`** は {{jsxref("Intl.DateTimeFormat")}} インスタンスのメソッドで、 {{jsxref("Intl/DatetimeFormat/format", "format()")}} が返す書式化済み文字列の各部分を表すオブジェクトの配列を返します。これは、ロケール固有のトークンからカスタム文字列を構築するのに便利です。
+**`formatToParts()`** は {{jsxref("Intl.DateTimeFormat")}} インスタンスのメソッドで、 {{jsxref("Intl/DateTimeFormat/format", "format()")}} が返す書式化済み文字列の各部分を表すオブジェクトの配列を返します。これは、ロケール固有のトークンからカスタム文字列を構築するのに便利です。
 
 {{InteractiveExample("JavaScript デモ: Intl.DateTimeFormat.prototype.formatToParts()", "taller")}}
 

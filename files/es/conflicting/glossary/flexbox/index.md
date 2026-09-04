@@ -48,7 +48,7 @@ Si desea incluir navegadores muy antiguos con soporte de flexbox, puede incluir 
 
 ## Técnicas de respaldo útiles
 
-Dado que el uso de flexbox se inicia con el valor de la propiedad de [`display`](/es/docs/Web/CSS/display) , cuando se necesita admitir navegadores muy antiguos que no admiten flexbox en absoluto, se pueden crear fallos sobrescribiendo un método de diseño con otro. La especificación define lo que sucede si usa otros métodos de diseño en un elemento que luego se convierte en un elemento flexible.
+Dado que el uso de flexbox se inicia con el valor de la propiedad de [`display`](/es/docs/Web/CSS/Reference/Properties/display) , cuando se necesita admitir navegadores muy antiguos que no admiten flexbox en absoluto, se pueden crear fallos sobrescribiendo un método de diseño con otro. La especificación define lo que sucede si usa otros métodos de diseño en un elemento que luego se convierte en un elemento flexible.
 
 ### Floated items
 
@@ -83,7 +83,7 @@ Si luego declara `display: flex` en el elemento principal, estos cuadros anónim
 
 ### The vertical-align property
 
-El siguiente ejemplo en vivo demuestra el uso de la propiedad de [`vertical-align`](/es/docs/Web/CSS/vertical-align) junto con `display: inline-block` . Tanto `display: table-cell` como `display: inline-block` permiten el uso de esta propiedad. El uso de `vertical-align` vertical permite la alineación vertical antes de flexbox. Flexbox ignora la propiedad, por lo que puede usarla junto con `display: table-cell` o `display: inline-block` como respaldo y luego usar de forma segura las propiedades de alineación de caja en flexbox.
+El siguiente ejemplo en vivo demuestra el uso de la propiedad de [`vertical-align`](/es/docs/Web/CSS/Reference/Properties/vertical-align) junto con `display: inline-block` . Tanto `display: table-cell` como `display: inline-block` permiten el uso de esta propiedad. El uso de `vertical-align` vertical permite la alineación vertical antes de flexbox. Flexbox ignora la propiedad, por lo que puede usarla junto con `display: table-cell` o `display: inline-block` como respaldo y luego usar de forma segura las propiedades de alineación de caja en flexbox.
 
 {{EmbedGHLiveSample("css-examples/flexbox/browsers/vertical-align.html", '100%', 550)}}
 

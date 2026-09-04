@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Introduction
 original_slug: Learn/CSS/CSS_layout/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Apprendre/CSS/CSS_layout/Normal_Flow", "Apprendre/CSS/CSS_layout")}}
+{{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
 
 Cet article récapitule quelques fonctionnalités de mise en page CSS que l'on a déjà côtoyées dans les modules précédents — telles que les différentes valeurs de {{cssxref("display")}} — et en introduit de nouveaux que nous aborderons dans ce module.
 
@@ -13,12 +13,11 @@ Cet article récapitule quelques fonctionnalités de mise en page CSS que l'on a
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Les fondamentaux du HTML (étudiez
-        <a href="/fr/Apprendre/HTML/Introduction_à_HTML"
-          >Introduction au HTML</a
-        >) et avoir une idée de la manière dont la CSS fonctionne (étudiez
-        <a href="/fr/Apprendre/CSS/Introduction_à_CSS">Introduction aux CSS</a
-        >).
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
+          >Structurer le contenu avec HTML</a
+        >,
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics">Mises en forme CSS de base</a>,
+        <a href="/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals">Mise en forme de base du texte et de la police</a>.
       </td>
     </tr>
     <tr>
@@ -79,7 +78,7 @@ Les méthodes des CSS pouvant changer le placement des éléments sont les suiva
 - **Flotteurs** — appliquer à {{cssxref("float")}} une valeur comme `left` peut créer une juxtaposition d'un élément bloc à côté d'un autre, tout comme les images «&nbsp;baignent&nbsp;» dans le texte dans les mises en page de magazines.
 - **La propriété {{cssxref("position")}}** — vous permet de contrôler avec précision le placement de boîtes dans d'autres boîtes. `static` est le placement par défaut dans le cours, mais vous pouvez manipuler les éléments pour qu'ils se comportent différemment à l'aide d'autres valeurs, par exemple en les fixant en haut à gauche de la fenêtre d'affichage du navigateur.
 - **Mise en page de tableaux** — les fonctions conçues pour styliser les parties d'un tableau HTML peuvent être utilisées sur des éléments non tableau en utilisant `display: table` et les propriétés associées.
-- **Mise en page sur plusieurs colonnes** — Les propriétés [Multi-column](/fr/docs/Web/CSS/CSS_multicol_layout) peuvent faire qu'un contenu bloc soit disposé en colonnes, comme dans un journal.
+- **Mise en page sur plusieurs colonnes** — Les propriétés [Multi-column](/fr/docs/Web/CSS/Guides/Multicol_layout) peuvent faire qu'un contenu bloc soit disposé en colonnes, comme dans un journal.
 
 ## La propriété «&nbsp;display »
 
@@ -91,7 +90,7 @@ En plus de pouvoir changer la présentation par défaut en faisant passer un él
 
 ## Flexbox
 
-Flexbox est l'abréviation pour [Flexible Box Layout](/fr/docs/Web/CSS/CSS_flexible_box_layout) Module (Mise en page de boîtes modulaires), conçu pour faciliter une disposition alignée sur une dimension — soit en ligne, soit en colonne. Pour utiliser `flexbox`, appliquez `display: flex` à l'élément parent des éléments à placer&nbsp;; tous ses enfants directs deviennent alors des éléments `flex`. Voyons cela avec un simple exemple.
+Flexbox est l'abréviation pour [Flexible Box Layout](/fr/docs/Web/CSS/Guides/Flexible_box_layout) Module (Mise en page de boîtes modulaires), conçu pour faciliter une disposition alignée sur une dimension — soit en ligne, soit en colonne. Pour utiliser `flexbox`, appliquez `display: flex` à l'élément parent des éléments à placer&nbsp;; tous ses enfants directs deviennent alors des éléments `flex`. Voyons cela avec un simple exemple.
 
 Le balisage HTML ci-dessous crée un élément conteneur de la classe `wrapper`, dans lequel nous plaçons 3 éléments {{htmlelement("div")}}. Par défaut ces éléments s'afficheront en tant qu'éléments blocs, les uns sous les autres, dans ce document en langue française.
 
@@ -776,4 +775,4 @@ body {
 
 Cet article donne un bref résumé de toutes les techniques de mise en page à connaître. Poursuivez la lecture pour en savoir plus à propos de chaque technique !
 
-{{NextMenu("Apprendre/CSS/CSS_layout/Floats", "Apprendre/CSS/CSS_layout")}}
+{{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}

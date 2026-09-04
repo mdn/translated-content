@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/lang
 original_slug: Web/XPath/Functions/lang
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 La fonction `lang` détermine si le nœud de contexte correspond à la langue indiquée et retourne le booléen `true` ou `false`.
 

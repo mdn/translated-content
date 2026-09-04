@@ -342,7 +342,7 @@ El HTML para este ejemplo es muy simple, con un elemento primario que será la c
 
 ### CSS
 
-El CSS del ejemplo no es muy importante para el propósito de este ejemplo: pinta el elemento y establece que los atributos {{cssxref("background-color")}} y {{cssxref("border")}} puedan participar en las [CSS transitions](/es/docs/Web/CSS/CSS_transitions), los cuáles usaremos para afectar los cambios al elemento conforme este es más o menos visible.
+El CSS del ejemplo no es muy importante para el propósito de este ejemplo: pinta el elemento y establece que los atributos {{cssxref("background-color")}} y {{cssxref("border")}} puedan participar en las [CSS transitions](/es/docs/Web/CSS/Guides/Transitions), los cuáles usaremos para afectar los cambios al elemento conforme este es más o menos visible.
 
 ```css
 #box {

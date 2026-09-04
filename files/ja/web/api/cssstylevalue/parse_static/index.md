@@ -3,7 +3,7 @@ title: "CSSStyleValue: parse() 静的メソッド"
 short-title: parse()
 slug: Web/API/CSSStyleValue/parse_static
 l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+  sourceCommit: 5a195171d06aee3d9c1c78d71c7f0c3a060f5263
 ---
 
 {{APIRef("CSS Typed Object Model API")}}
@@ -39,7 +39,7 @@ const css = CSSStyleValue.parse(
 );
 ```
 
-```css
+```plain
 CSSTransformValue {0: CSSTranslate, 1: CSSScale, length: 2, is2D: false}
 ```
 

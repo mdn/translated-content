@@ -13,7 +13,7 @@ var clientUrl = Client.url;
 
 ### Valeur de retour
 
-Valeur de type {{domxref("USVString")}}.
+Valeur de type {{jsxref("String")}}.
 
 ## Exemple
 

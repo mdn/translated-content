@@ -3,7 +3,7 @@ title: Funções
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 Funções são blocos de construção fundamentais em JavaScript. Uma função é um procedimento de JavaScript - um conjunto de instruções que executa uma tarefa ou calcula um valor. Para usar uma função, você deve defini-la em algum lugar no escopo do qual você quiser chamá-la.
 
@@ -108,7 +108,7 @@ if (num == 0) {
 }
 ```
 
-Além de definir funções, você também pode usar o construtor {{jsxref("Function")}} para criar funções a partir de uma string em tempo real, como no método {{jsxref("eval()")}}.
+Além de definir funções, você também pode usar o construtor {{jsxref("Function")}} para criar funções a partir de uma string em tempo real, como no método {{jsxref("Global_Objects/eval", "eval()")}}.
 
 Um **método** é uma função invocada por um objeto. Leia mais sobre objetos e métodos em [Trabalhando com Objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects).
 
@@ -631,27 +631,27 @@ JavaScript tem várias funções pré-definidas:
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
   - : O método **`eval()`** avalia código JavaScript representado como uma _string_.
-- {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
+- {{jsxref("Deprecated_and_obsolete_features", "uneval()")}} {{non-standard_inline}}
   - : O método **`uneval()`** cria uma representação de _string_ do código-fonte de um {{jsxref("Object")}}.
-- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
+- {{jsxref("isFinite()")}}
   - : A função global **`isFinite()`** determina se o valor passado é um número finito. Se necessário, o parâmetro é primeiro convertido para um número.
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : A função **`isNaN()`** determina se um valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não. Nota: coerção dentro da função `isNaN` tem [regras interessantes](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description); você pode, alternativamente, querer usar {{jsxref("Number.isNaN()")}}, como definido no ECMAScript 6, ou você pode usar `typeof` para determinar se o valor não é um número.
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+- {{jsxref("isNaN()")}}
+  - : A função **`isNaN()`** determina se um valor é {{jsxref("NaN")}} ou não. Nota: coerção dentro da função `isNaN` tem [regras interessantes](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description); você pode, alternativamente, querer usar {{jsxref("Number.isNaN()")}}, como definido no ECMAScript 6, ou você pode usar `typeof` para determinar se o valor não é um número.
+- {{jsxref("parseFloat()")}}
   - : A função **`parseFloat()`** analisa um argumento do tipo _string_ e retorna um número de ponto flutuante.
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
   - : A função **`parseInt()`** analisa um argumento do tipo _string_ e retorna um inteiro da base especificada (base do sistema numérico).
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-  - : A função **`decodeURI()`** decodifica uma _Uniform Resource Identifier_ (URI) criada anteriormente por {{jsxref("Global_Objects/encodeURI", "encodeURI")}} ou por uma rotina similar.
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-  - : O método **`decodeURIComponent()`** decodifica um componente _Uniform Resource Identifier_ (URI) criado anteriormente por {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} ou por uma rotina similar.
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+- {{jsxref("decodeURI()")}}
+  - : A função **`decodeURI()`** decodifica uma _Uniform Resource Identifier_ (URI) criada anteriormente por {{jsxref("encodeURI")}} ou por uma rotina similar.
+- {{jsxref("decodeURIComponent()")}}
+  - : O método **`decodeURIComponent()`** decodifica um componente _Uniform Resource Identifier_ (URI) criado anteriormente por {{jsxref("encodeURIComponent")}} ou por uma rotina similar.
+- {{jsxref("encodeURI()")}}
   - : O método **`encodeURI()`** codifica um Uniform Resource Identifier (URI), substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro sequências de escape que representa a codificação UTF-8 do caractere (só serão quatro sequências de escape para caracteres compostos de dois caracteres "substitutos").
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("encodeURIComponent()")}}
   - : O método **`encodeURIComponent()`** codifica um componente _Uniform Resource Identifier_ (URI), substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro sequências de escape que representa a codificação UTF-8 do caractere (só serão quatro sequências de escape para caracteres compostos de dois caracteres "substitutos").
-- {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
-  - : O método obsoleto **`escape()`** calcula uma nova _string_ na qual certos caracteres foram substituídos por uma sequência de escape hexadecimal. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}} ou {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} em vez disso.
-- {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}
-  - : O método obsoleto **`unescape()`** calcula uma nova _string_ na qual sequências de escape hexadecimais são substituídas pelo caractere que ela representa. As sequências de escape podem ser introduzidas por uma função como {{jsxref("Global_Objects/escape", "escape")}}. Por `unescape()` estar obsoleto, use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} ou {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} ao invés dele.
+- {{jsxref("escape()")}} {{deprecated_inline}}
+  - : O método obsoleto **`escape()`** calcula uma nova _string_ na qual certos caracteres foram substituídos por uma sequência de escape hexadecimal. Use {{jsxref("encodeURI")}} ou {{jsxref("encodeURIComponent")}} em vez disso.
+- {{jsxref("unescape()")}} {{deprecated_inline}}
+  - : O método obsoleto **`unescape()`** calcula uma nova _string_ na qual sequências de escape hexadecimais são substituídas pelo caractere que ela representa. As sequências de escape podem ser introduzidas por uma função como {{jsxref("escape")}}. Por `unescape()` estar obsoleto, use {{jsxref("decodeURI()")}} ou {{jsxref("decodeURIComponent")}} ao invés dele.
 
-{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

@@ -15,7 +15,7 @@ Um tipo retornado por algumas APIs, que contém uma lista de [DOMString](/en-US/
 ## Métodos
 
 - {{domxref("DOMStringList.item()")}}
-  - : Retorna uma {{domxref("DOMString")}}.
+  - : Retorna uma {{jsxref("String")}}.
 - {{domxref("DOMStringList.contains()")}}
   - : Retorna {{jsxref("Boolean")}} indicando se a string em questão está na lista
 

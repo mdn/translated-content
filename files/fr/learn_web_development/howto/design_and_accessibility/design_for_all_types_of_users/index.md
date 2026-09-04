@@ -11,7 +11,7 @@ Cet article aborde les concepts de bases pour vous aider à construire des sites
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Avoir lu <a href="/fr/docs/Learn/Common_questions/What_is_accessibility">Qu'est-ce que l'accessibilité&nbsp;?</a> (l'accessibilité n'est pas approfondie en détails ici).
+        Avoir lu <a href="/fr/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility">Qu'est-ce que l'accessibilité&nbsp;?</a> (l'accessibilité n'est pas approfondie en détails ici).
       </td>
     </tr>
     <tr>

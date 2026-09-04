@@ -13,7 +13,7 @@ Un rango puede ser creado usando el método [`createRange`](/es/docs/Web/API/Doc
 
 ### Propiedades
 
-- [collapsed](/es/docs/Web/API/Range/collapsed)
+- [collapsed](/es/docs/Web/API/AbstractRange/collapsed)
   - : Devuelve un valor booleano indicando si los puntos de inicio y fin están en la misma posición.
 - [commonAncestorContainer](/es/docs/Web/API/Range/commonAncestorContainer)
   - : Devuelve el nodo más profundo que contiene los nodos **startContainer** y **endContainer**.

@@ -8,9 +8,9 @@ La cabecera **`Content-Location`** indica una ubicación alternativa para los da
 
 Las cabeceras {{HTTPHeader("Location")}} y `Content-Location` son diferentes. `Location` indica la URL de una redirección, mientras que `Content-Location` indica la URL directa a ser utilizada para acceder al recurso, sin necesidad de realizar [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation) en el futuro. Mientras que `Location` es una cabecera asociada con la respuesta, `Content-Location` está asociada con los datos devueltos. Esta distinción puede parecer abstracta sin ver algunos [ejemplos](#examples).
 
-| Header type                           | {{Glossary("Entity header")}} |
-| ------------------------------------- | ----------------------------- |
-| {{Glossary("Forbidden header name")}} | no                            |
+| Header type                              | {{Glossary("Entity header")}} |
+| ---------------------------------------- | ----------------------------- |
+| {{Glossary("Forbidden request header")}} | no                            |
 
 ## Sintaxis
 

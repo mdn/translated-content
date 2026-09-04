@@ -49,7 +49,7 @@ label {
 
 ![Datepicker UI in firefox](firefox_datepicker.png)
 
-| [Value](#value)             | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку\*\*                                                                                                                                                                       |
+| [Value](#value)             | Возвращает {{jsxref("String")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку\*\*                                                                                                                                                                           |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **События**                 | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event)                                                                                                                                                                |
 | **Поддерживаемые атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Reference/Elements/input#autocomplete), [`list`](/ru/docs/Web/HTML/Reference/Elements/input#list), [`readonly`](/ru/docs/Web/HTML/Reference/Elements/input#readonly), and [`step`](/ru/docs/Web/HTML/Reference/Elements/input#step) |
@@ -58,7 +58,7 @@ label {
 
 ## Значение
 
-Возвращает {{domxref("DOMString")}}, представляющий значение даты введённой в input. Вы можете установить значение по умолчанию для элемента с помощью добавления атрибута в [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value), например:
+Возвращает {{jsxref("String")}}, представляющий значение даты введённой в input. Вы можете установить значение по умолчанию для элемента с помощью добавления атрибута в [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value), например:
 
 ```html
 <input id="date" type="date" value="2017-06-01" />
@@ -233,7 +233,8 @@ input:valid + span:after {
 }
 ```
 
-> **Предупреждение:** **Important**: HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
+> [!WARNING]
+> HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
 
 ## Handling browser support
 

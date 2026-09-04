@@ -9,7 +9,7 @@ l10n:
 
 ## 説明
 
-`scrollbar` は、ビューポートのコンテンツのどの部分が現在ビューポートのフレーム内で見えるかを制御する領域です。ビューポートがブラウザーの完全なサイズ、iframe、または任意の要素の [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) であるかに関係ありません。
+`scrollbar` は、ビューポートのコンテンツのどの部分が現在ビューポートのフレーム内で見えるかを制御する領域です。ビューポートがブラウザーの完全なサイズ、iframe、または任意の要素の [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context) であるかに関係ありません。
 
 ### スクロールバーとは
 
@@ -23,7 +23,7 @@ l10n:
 
 ### ARIA `scrollbar`
 
-ネイティブスクロールバーを使用するのが常に最適です。CSS {{CSSXref('overflow')}} プロパティを使用してネイティブスクロールバーの外観を保証できます。[CSS scrollbar 仕様](https://drafts.csswg.org/css-scrollbars/) が開発中です。一部のブラウザーでは、[接頭辞付き擬似要素によるスクロールバーのスタイリング](/ja/docs/Web/CSS/::-webkit-scrollbar) が可能です。
+ネイティブスクロールバーを使用するのが常に最適です。CSS {{CSSXref('overflow')}} プロパティを使用してネイティブスクロールバーの外観を保証できます。[CSS scrollbar 仕様](https://drafts.csswg.org/css-scrollbars/) が開発中です。一部のブラウザーでは、[接頭辞付き擬似要素によるスクロールバーのスタイリング](/ja/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar) が可能です。
 
 ネイティブスクロールバーのスタイリングが歴史的に制限されてきたため、JavaScript で実装されたスクロールバーに遭遇することがあります。これをサポートし、完全にアクセシブルにする必要があります。これのために、`scrollbar` ロールを使用して、UI コントロールが対話型スクロールバーであることを支援技術に知らせることができます。
 

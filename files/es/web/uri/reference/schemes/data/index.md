@@ -93,5 +93,5 @@ Esta sección describe los problemas que comunmente ocurren cuando se crean o se
 - [Base64 codificación y decodificación](/es/docs/Glossary/Base64)
 - {{domxref("WindowBase64.atob","atob()")}}
 - {{domxref("WindowBase64.btoa","btoa()")}}
-- [CSS `url()`](/es/docs/Web/CSS/url_value)
+- [CSS `url()`](/es/docs/Web/CSS/Reference/Values/url_value)
 - [URI](/es/docs/Glossary/URI)

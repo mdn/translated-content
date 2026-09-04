@@ -1,15 +1,20 @@
 ---
-title: HTMLElement.dataset
+title: "HTMLElement : propriété dataset"
+short-title: dataset
 slug: Web/API/HTMLElement/dataset
+l10n:
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété en lecture seule **`dataset`**, rattachée à l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement), fournit un accès en lecture/écriture aux [attributs de données (`data-*`)](/fr/docs/Web/HTML/Reference/Global_attributes/data-*) de l'élément. Elle expose un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) avec un élément pour chaque attribut `data-*`.
+La propriété en lecture seule **`dataset`** de l'interface {{DOMxRef("HTMLElement")}} fournit un accès en lecture/écriture aux [attributs de données (`data-*`)](/fr/docs/Web/HTML/Reference/Global_attributes/data-*) de l'élément. Elle expose une carte de chaînes de caractères ({{DOMxRef("DOMStringMap")}}) avec une entrée pour chaque attribut `data-*`.
 
 > [!NOTE]
 > La propriété `dataset` elle-même peut être lue mais pas modifiée directement.
 > Pour appliquer des modifications, il faudra les appliquer sur chaque propriété contenue dans `dataset`, qui représente chacune un attribut de données.
+
+## Valeur
 
 Un attribut HTML `data-*` et la propriété du DOM
 `dataset.propriete` ont des différences de nom selon le contexte où on les manipule&nbsp;:
@@ -23,14 +28,14 @@ En plus des informations présentées ci-après, vous pourrez trouver un guide s
 
 ### Conversion des noms
 
-- Conversion du format HTML avec les tirets au format JavaScript `camelCase`
+- Conversion du `dash-style` au `camelCase`
   - : Le nom d'un attribut de données est transformé en clé d'un élément [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) en suivant l'algorithme suivant&nbsp;:
     1. Toutes les lettres ASCII majuscules (`A` à `Z`) sont converties en minuscules&nbsp;;
     2. Le préfixe `data-` est retiré (tiret complet)&nbsp;;
     3. Pour tout tiret (`U+002D`) suivi d'une lettre ASCII minuscule (`a` à `z`), on retire le tiret et on convertit la lettre en majuscule&nbsp;;
     4. Les autres caractères (y compris les autres tirets) sont laissés inchangés.
 
-- Conversion du format JavaScript `camelCase` au format HTML avec les tirets
+- Conversion du `camelCase` au `dash-style`
   - : La transformation symétrique, permettant de passer d'une clé de propriété à un nom d'attribut, se fait avec l'algorithme suivant&nbsp;:
     1. **Vérification :** Avant toute transformation, un tiret _ne doit pas_ être immédiatement suivi d'une lettre ASCII en minuscule (`a` à `z`)&nbsp;;
     2. Le préfixe `data-` est ajouté&nbsp;;
@@ -55,15 +60,11 @@ Ainsi, l'attribut HTML `data-abc-def` correspondra à la propriété JavaScript 
 
 - Pour retirer un attribut, on utilisera l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete)&nbsp;: `delete element.dataset.nomCle`
 
-## Valeur
-
-Un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap).
-
 ## Exemples
 
 ```html
-<div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>
-  John Doe
+<div id="user" data-id="1234567890" data-user="sandrasmith" data-date-of-birth>
+  Sandra Smith
 </div>
 ```
 
@@ -72,22 +73,22 @@ const el = document.querySelector("#user");
 
 // el.id === 'user'
 // el.dataset.id === '1234567890'
-// el.dataset.user === 'johndoe'
+// el.dataset.user === 'sandrasmith'
 // el.dataset.dateOfBirth === ''
 
 // on définit un attribut de données
 el.dataset.dateOfBirth = "1960-10-03";
 // Résultat en JavaScript : el.dataset.dateOfBirth === '1960-10-03'
-// Résultat en HTML : <div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth="1960-10-03">John Doe</div>
+// Résultat en HTML : <div id="user" data-id="1234567890" data-user="sandrasmith" data-date-of-birth="1960-10-03">Sandra Smith</div>
 
 delete el.dataset.dateOfBirth;
 // Résultat en JavaScript : el.dataset.dateOfBirth === undefined
-// Résultat en HTML : <div id="user" data-id="1234567890" data-user="johndoe">John Doe</div>
+// Résultat en HTML : <div id="user" data-id="1234567890" data-user="sandrasmith">Sandra Smith</div>
 
 if ("unAttrDonnee" in el.dataset === false) {
   el.dataset.unAttrDonnee = "mesdonnees";
   // Résultat en JS : 'unAttrDonnee' in el.dataset === true
-  // Résultat en HTML : <div id="user" data-id="1234567890" data-user="johndoe" data-un-attr-donnee = "mesdonnees">John Doe</div>
+  // Résultat en HTML : <div id="user" data-id="1234567890" data-user="sandrasmith" data-un-attr-donnee = "mesdonnees">Sandra Smith</div>
 }
 ```
 
@@ -101,6 +102,6 @@ if ("unAttrDonnee" in el.dataset === false) {
 
 ## Voir aussi
 
-- L'ensemble d'attributs globaux HTML [`data-*`](/fr/docs/Web/HTML/Reference/Global_attributes/data-*).
+- L'ensemble d'attributs HTML universels [`data-*`](/fr/docs/Web/HTML/Reference/Global_attributes/data-*).
 - [Utiliser les attributs de données](/fr/docs/Web/HTML/How_to/Use_data_attributes)
-- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute) et [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
+- Les méthodes {{DOMxRef("Element.getAttribute()")}} et {{DOMxRef("Element.setAttribute()")}}

@@ -228,7 +228,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 此示例包括使用 `<iframe>` 所需的基本要素：
 
-- [`border: none`](/zh-CN/docs/Web/CSS/border)
+- [`border: none`](/zh-CN/docs/Web/CSS/Reference/Properties/border)
   - : 如果使用此属性，`<iframe>` 将不会显示周围的边框。否则，默认情况下，浏览器会显示 `<iframe>` 的边框（通常我们不希望显示边框）。
 - [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : 如果设置，则可以通过[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 将 `<iframe>` 置于全屏模式（稍微超出本文的范围）。

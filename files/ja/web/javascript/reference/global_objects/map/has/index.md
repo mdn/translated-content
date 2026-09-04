@@ -3,10 +3,10 @@ title: Map.prototype.has()
 short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 0574ac1985889d2ccce1b61e42db98d74ac1bbcb
 ---
 
-**`has()`** は {{jsxref("Map")}} インスタンスのメソッドで、指定されたキーに対する要素が存在するかどうかを示す論理値を返します。
+**`has()`** は {{jsxref("Map")}} インスタンスのメソッドで、この対応表 (`Map`) に指定されたキーに対する項目が存在するかどうかを示す論理値を返します。
 
 {{InteractiveExample("JavaScript デモ: Map.prototype.has()")}}
 
@@ -30,11 +30,11 @@ has(key)
 ### 引数
 
 - `key`
-  - : `Map` オブジェクト内に存在するかテストする要素のキーです。
+  - : この `Map` オブジェクト内で存在を確認する項目のキーです。オブジェクトのキーは、値ではなく[参照](/ja/docs/Glossary/Object_reference)によって比較されます。
 
 ### 返値
 
-特定のキーに対する要素が `Map` オブジェクト内に存在していたら、`true` を返します。さもなければ、`false` を返します。
+特定のキーに対する項目がこの `Map` オブジェクト内に存在していたら、`true` を返します。さもなければ、`false` を返します。
 
 ## 例
 
@@ -59,5 +59,6 @@ console.log(myMap.has("baz")); // false
 ## 関連情報
 
 - {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
+- {{jsxref("Map.prototype.delete()")}}
 - {{jsxref("Map.prototype.get()")}}
+- {{jsxref("Map.prototype.set()")}}

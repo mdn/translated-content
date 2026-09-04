@@ -4,24 +4,18 @@ slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
 original_slug: Learn/Accessibility/CSS_and_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/HTML","Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 CSS et JavaScript, lorsqu'ils sont utilisés correctement, peuvent également permettre des expériences web accessibles... ou peuvent nuire considérablement à l'accessibilité s'ils sont mal utilisés. Cet article décrit certaines des meilleures pratiques CSS et JavaScript à prendre en compte pour garantir que même un contenu complexe soit aussi accessible que possible.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
-      <td>
-        Connaissances informatiques de base, compréhension de base de HTML, CSS
-        et JavaScript, et compréhension de
-        <a href="/fr/docs/Apprendre/a11y/What_is_accessibility"
-          >Qu'est ce que l'accessibilité ?</a
-        >
-      </td>
+      <th scope="row">Prérequis&nbsp;:</th>
+      <td>Connaissance de base de <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a> et une <a href="/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">compréhension des concepts fondamentaux de l'accessibilité</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif d'apprentissage&nbsp;:</th>
       <td>
         Familiarisez-vous avec l'utilisation appropriée de CSS et de JavaScript
         dans vos documents Web afin d'optimiser l'accessibilité et de ne pas la
@@ -107,7 +101,7 @@ em {
 }
 ```
 
-Cependant, vous aurez rarement besoin de styliser des éléments d'emphase de manière significative. Les conventions standard de texte en gras () et en italique (emphase) sont très reconnaissables, et le changement de style peut être source de confusion. Pour mettre des contenus en avant de manière efficace, voir [Fondamentaux du texte HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#emphasis_and_importance).
+Cependant, vous aurez rarement besoin de styliser des éléments d'emphase de manière significative. Les conventions standard de texte en gras () et en italique (emphase) sont très reconnaissables, et le changement de style peut être source de confusion. Pour mettre des contenus en avant de manière efficace, voir [Fondamentaux du texte HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance).
 
 #### Les abréviations
 
@@ -128,7 +122,7 @@ abbr {
 }
 ```
 
-Par convention, on souligne en pointillés les abréviations et il n'est pas judicieux de s'écarter significativement cette règle reconnue. Pour plus d'informations sur les abréviations, voir [Abréviations](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations).
+Par convention, on souligne en pointillés les abréviations et il n'est pas judicieux de s'écarter significativement cette règle reconnue. Pour plus d'informations sur les abréviations, voir [Abréviations](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abréviations).
 
 #### Liens
 
@@ -162,9 +156,9 @@ a:active {
 
 Les conventions de style sur les liens sont le soulignement et une couleur différente (par défaut : bleu) dans leur état normal (non visité) de celle utilisée lorsque le lien a déjà été visité (par défaut : violet) et de celle utilisée lorsque le lien est activé (par défaut : rouge). De plus, le pointeur de la souris se change en icône de pointeur lorsque les liens sont déplacés, et le lien reçoit une surbrillance lorsqu'il est ciblé (par exemple, via une tabulation) ou activé. L'image suivante montre la surbrillance dans Firefox (contour en pointillé) et Chrome (contour bleu) :
 
-![](focus-highlight-firefox.png)
+![Capture d'écran d'une liste de liens dans le navigateur Firefox. La liste contient 4 éléments. Le deuxième élément de la liste est mis en évidence à l'aide d'un contour bleu en pointillés lorsqu'il est sélectionné via la tabulation.](focus-highlight-firefox.png)
 
-![](focus-highlight-chrome.png)
+![Capture d'écran d'une liste de liens dans le navigateur Chrome. La liste contient 4 éléments. Le troisième élément de la liste est mis en évidence à l'aide d'un contour bleu lorsqu'il est sélectionné via la tabulation.](focus-highlight-chrome.png)
 
 Vous pouvez faire preuve de créativité avec les styles de lien, tant que vous continuez à donner aux utilisateurs des informations visuelles en retour lorsqu'ils interagissent avec les liens. Quelque chose doit effectivement se produire pour signaler les changements d'états d'un lien, et vous ne devriez pas vous débarrasser du curseur de pointeur ou du contour — ces deux outils sont des aides très importantes pour l'accessibilité pour ceux qui utilisent les contrôles du clavier.
 
@@ -179,7 +173,7 @@ Vous pouvez faire preuve de créativité avec les styles de lien, tant que vous 
 </div>
 ```
 
-Vous pouvez voir de bons exemples de CSS dans notre exemple [form-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-css.html) et ([en direct](https://mdn.github.io/learning-area/accessibility/css/form-css.html)).
+Vous pouvez voir de bons exemples de CSS dans notre exemple [form-css.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-css.html) et ([en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/css/form-css.html)).
 
 La plupart du CSS que vous rédigerez pour les formulaires servira à dimensionner les éléments, à aligner les étiquettes et les entrées, et à leur donner une apparence nette et ordonnée.
 
@@ -189,7 +183,7 @@ Toutefois, vous ne devriez pas trop vous écarter des indications visuelles clas
 
 Tableaux pour la présentation des données tabulées.
 
-Vous pouvez voir un bon exemple simple de [table-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/table-css.html) et ([en direct](https://mdn.github.io/learning-area/accessibility/css/table-css.html)).
+Vous pouvez voir un bon exemple simple de [table-css.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/accessibility/css/table-css.html) et ([en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/css/table-css.html)).
 
 En appliquant les propriétés du module CSS des tableaux, vous pourrez adapter les tables HTML à votre design avec une apparence pas trop affreuse. Il est judicieux de vous assurer que les en-têtes de table se démarquent (normalement en gras), et de zébrer les lignes via le pseudo-sélecteur `:nth-child(n)` pour faciliter la lecture.
 
@@ -197,7 +191,7 @@ En appliquant les propriétés du module CSS des tableaux, vous pourrez adapter 
 
 Lorsque vous choisissez un jeu de couleurs pour votre site web, assurez-vous que la couleur du texte contraste bien avec la couleur de fond. Votre design peut sembler agréable, mais cela n'est pas bon si les personnes malvoyantes, par exemple atteintes de daltonisme, ne peuvent pas lire votre contenu.
 
-Il existe un moyen simple de vérifier si votre contraste est suffisamment important pour ne pas causer de problèmes. Il existe un certain nombre d'outils de vérification du contraste en ligne dans lesquels vous pouvez entrer vos couleurs de premier plan et d'arrière-plan afin de les vérifier. Par exemple, le [vérificateur de contraste de couleur](https://webaim.org/resources/contrastchecker/) du WebAIM est simple à utiliser et explique ce dont vous avez besoin pour vous conformer aux critères WCAG relatifs au contraste des couleurs.
+Il existe un moyen simple de vérifier si votre contraste est suffisamment important pour ne pas causer de problèmes. Il existe un certain nombre d'outils de vérification du contraste en ligne dans lesquels vous pouvez entrer vos couleurs de premier plan et d'arrière-plan afin de les vérifier. Par exemple, le [vérificateur de contraste de couleur <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/) du WebAIM est simple à utiliser et explique ce dont vous avez besoin pour vous conformer aux critères WCAG relatifs au contraste des couleurs.
 
 > [!NOTE]
 > Un taux de contraste élevé permettra également à toute personne utilisant un smartphone ou une tablette avec un écran brillant de mieux lire les pages dans un environnement lumineux, tel qu'exposé à la lumière du soleil.
@@ -206,16 +200,16 @@ Un autre conseil est de ne pas compter uniquement sur la couleur pour les pannea
 
 ### Cacher des choses
 
-Dans de nombreux cas, une conception visuelle nécessitera de ne pas afficher tout le contenu en même temps. Par exemple, dans notre [Exemple de boîte d'information à onglets](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (voir notre [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)), nous avons trois panneaux d'informations, mais nous les [positionnons](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning) les uns sur les autres et fournissons des onglets sur lesquels on peut cliquer pour les afficher à tour de rôle (c'est aussi accessible au clavier – vous pouvez également utiliser <kbd>Tab</kbd> et <kbd>Entrée</kbd> pour les sélectionner).
+Dans de nombreux cas, une conception visuelle nécessitera de ne pas afficher tout le contenu en même temps. Par exemple, dans notre [Exemple de boîte d'information à onglets <sup>(angl.)</sup>](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/tabbed-info-box.html) (voir notre [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/tabbed-info-box.html)), nous avons trois panneaux d'informations, mais nous les [positionnons](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning) les uns sur les autres et fournissons des onglets sur lesquels on peut cliquer pour les afficher à tour de rôle (c'est aussi accessible au clavier — vous pouvez également utiliser <kbd>Tab</kbd> et <kbd>Entrée</kbd> pour les sélectionner).
 
-![](tabbed-info-box.png)
+![Interface à trois onglets avec l'onglet 1 sélectionné et seuls ses contenus sont affichés. Le contenu des autres onglets est masqué. Si un onglet est sélectionné, la couleur de son texte passe du noir au blanc et la couleur de fond passe de orange-rouge à brun selle.](tabbed-info-box.png)
 
 Les utilisateurs de lecteur d'écran ne s'inquiètent de rien. Ils sont satisfaits du contenu tant que l'ordre des sources est logique et ils peuvent tout comprendre. Le positionnement absolu (tel qu'utilisé dans cet exemple) est généralement considéré comme l'un des meilleurs mécanismes permettant de masquer un contenu pour obtenir un effet visuel, car il n'empêche pas les lecteurs d'écran d'y accéder.
 
 Par contre, vous ne devriez pas utiliser {{cssxref("visibility")}}`:hidden` ou {{cssxref("display")}}`:none`, car ils masquent le contenu des lecteurs d'écran sauf si vous souhaitez que ce contenu leur soit masqué.
 
 > [!NOTE]
-> [Contenu invisible juste pour les utilisateurs de lecteur d'écran](https://webaim.org/techniques/css/invisiblecontent/) contient beaucoup plus de détails utiles concernant ce sujet.
+> [Contenu invisible juste pour les utilisateurs de lecteur d'écran <sup>(angl.)</sup>](https://webaim.org/techniques/css/invisiblecontent/) contient beaucoup plus de détails utiles concernant ce sujet.
 
 ### Accepter que les utilisateurs puissent remplacer les styles
 
@@ -234,18 +228,18 @@ JavaScript peut également compromettre l'accessibilité, selon son utilisation.
 
 Le JavaScript moderne est un langage puissant, et nous pouvons faire beaucoup de choses avec cela de nos jours, du contenu simple et des mises à jour d'interface utilisateur aux jeux 2D et 3D à part entière. Aucune règle ne stipule que tout le contenu doit être accessible à 100% à toutes les personnes. Vous devez simplement faire ce que vous pouvez et rendre vos applications aussi accessibles que possible.
 
-Le contenu et les fonctionnalités simples sont facilement accessibles – texte, images, tableaux, formulaires et bouton-poussoir activant des fonctions. Comme nous l'avons vu dans notre article [HTML : une bonne base pour l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/HTML), les principales considérations sont les suivantes :
+Le contenu et les fonctionnalités simples sont facilement accessibles — texte, images, tableaux, formulaires et bouton-poussoir activant des fonctions. Comme nous l'avons vu dans notre article [HTML : une bonne base pour l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/HTML), les principales considérations sont les suivantes :
 
 - Bonne sémantique : Utiliser le bon élément pour le bon travail. Par exemple, assurez-vous que vous utilisez les en-têtes et les paragraphes, et les éléments {{htmlelement("button")}} et {{htmlelement("a")}}.
 - S'assurer que le contenu est disponible sous forme de texte, soit directement sous forme de contenu textuel, soit par un libellé pour des éléments `<form>` soit par [textes par défaut](/fr/docs/Learn_web_development/Core/Accessibility/HTML#alternatives_textuelles) pour les images.
 
-Nous avons également examiné un exemple d'utilisation de JavaScript pour intégrer des fonctionnalités là où il manque – voir [Remettre l'accessibilité au clavier](/fr/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in). Ce n'est pas l'idéal – vous devez utiliser le bon élément pour le bon travail – mais cela montre que c'est possible dans des situations où, pour une raison quelconque, vous ne pouvez pas contrôler le balisage utilisé. Un autre moyen d'améliorer l'accessibilité pour les widgets non sémantiques reposant sur JavaScript consiste à utiliser WAI-ARIA pour fournir une sémantique supplémentaire aux utilisateurs de lecteurs d'écran. Le prochain article couvrira également cela en détail.
+Nous avons également examiné un exemple d'utilisation de JavaScript pour intégrer des fonctionnalités là où il manque — voir [Remettre l'accessibilité au clavier](/fr/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in). Ce n'est pas l'idéal — vous devez utiliser le bon élément pour le bon travail — mais cela montre que c'est possible dans des situations où, pour une raison quelconque, vous ne pouvez pas contrôler le balisage utilisé. Un autre moyen d'améliorer l'accessibilité pour les widgets non sémantiques reposant sur JavaScript consiste à utiliser WAI-ARIA pour fournir une sémantique supplémentaire aux utilisateurs de lecteurs d'écran. Le prochain article couvrira également cela en détail.
 
-Les fonctionnalités complexes telles que les jeux 3D ne sont pas si faciles à rendre accessibles – un jeu 3D complexe créé à l'aide de [L'API WebGL : graphismes 2D et 3D pour le web](/fr/docs/Web/API/WebGL_API) sera rendu sur un élément {{htmlelement("canvas")}}, qui n'a pour l'instant aucune possibilité de fournir textes alternatifs ou autres informations à utiliser par les utilisateurs malvoyants. On peut soutenir qu'un tel jeu ne compte pas vraiment ce groupe de personnes dans son public cible principal, et il serait déraisonnable de s'attendre à ce que vous le rendiez accessible à 100% aux aveugles, quelle que soit l'implantation des [contrôles clavier](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) faite pour qu'il soit utilisable par les utilisateurs sans souris. De plus, rendez le jeu de couleurs suffisamment contrasté pour pouvoir rendre le jeu vidéo utilisable par ceux qui ont des déficiences de la perception des couleurs.
+Les fonctionnalités complexes telles que les jeux 3D ne sont pas si faciles à rendre accessibles — un jeu 3D complexe créé à l'aide de l'API [WebGL](/fr/docs/Web/API/WebGL_API) : graphismes 2D et 3D pour le web sera rendu sur un élément {{htmlelement("canvas")}}, qui n'a pour l'instant aucune possibilité de fournir textes alternatifs ou autres informations à utiliser par les utilisateurs malvoyants. On peut soutenir qu'un tel jeu ne compte pas vraiment ce groupe de personnes dans son public cible principal, et il serait déraisonnable de s'attendre à ce que vous le rendiez accessible à 100% aux aveugles, quelle que soit l'implantation des [contrôles clavier](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) faite pour qu'il soit utilisable par les utilisateurs sans souris. De plus, rendez le jeu de couleurs suffisamment contrasté pour pouvoir rendre le jeu vidéo utilisable par ceux qui ont des déficiences de la perception des couleurs.
 
 ### Le problème avec trop de JavaScript
 
-Le problème survient souvent lorsque les utilisateurs se fient trop à JavaScript. Parfois, vous voyez un site Web où tout a été fait avec JavaScript – le code HTML a été généré par JavaScript, le CSS a été généré par JavaScript, etc. Ceci présente toutes sortes de problèmes d'accessibilité et d'autres choses qui y sont associées, donc ce n'est pas conseillé.
+Le problème survient souvent lorsque les utilisateurs se fient trop à JavaScript. Parfois, vous voyez un site Web où tout a été fait avec JavaScript — le code HTML a été généré par JavaScript, le CSS a été généré par JavaScript, etc. Ceci présente toutes sortes de problèmes d'accessibilité et d'autres choses qui y sont associées, donc ce n'est pas conseillé.
 
 En plus d'utiliser le bon élément pour le bon travail, vous devez également vous assurer que vous utilisez la bonne technologie pour le bon travail ! Réfléchissez bien pour savoir si vous avez besoin de cette boîte d'informations 3D brillante reposant sur JavaScript, ou si un texte ordinaire avec du CSS conviendrait. Réfléchissez bien pour savoir si vous avez besoin d'un widget de formulaire non standard complexe ou d'une saisie de texte. Et ne générez pas tout votre contenu HTML en utilisant JavaScript si possible.
 
@@ -375,4 +369,4 @@ Nous espérons que cet article vous a fourni beaucoup de détails et de compréh
 
 Ensuite, WAI-ARIA !
 
-{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/HTML","Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

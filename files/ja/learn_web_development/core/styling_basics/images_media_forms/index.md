@@ -1,13 +1,12 @@
 ---
 title: 画像、メディア、フォーム要素
+short-title: 画像、メディア、フォーム
 slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 001a6992ec60f0dccd073a3db223c320835188ad
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics")}}
 
 このレッスンでは、特定の要素が CSS でどのように扱われるかを見ていきます。画像・メディア・フォーム要素では、CSS でスタイルを設定するにあたって通常のボックスとは少し異なる動作をします。何が可能で何が不可能かを理解することで、フラストレーションを軽減することができます。このレッスンでは、知っておくべきことのをいくつかを取り上げます。
 
@@ -41,7 +40,7 @@ l10n:
 
 ## 置換要素
 
-画像と動画は、 **[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)** と呼ばれています。これは、 CSS がこれらの要素の内部レイアウトに影響を与えることはできず、他の要素の中でのページ上の位置のみに影響を与えることを意味します。ただし、これから見ていくように、CSSで画像に対してできることはいろいろあります。
+画像と動画は、**{{ glossary("replaced elements", "置換要素")}}** と呼ばれています。これは、 CSS がこれらの要素の内部レイアウトに影響を与えることはできず、他の要素の中でのページ上の位置のみに影響を与えることを意味します。ただし、これから見ていくように、CSS で画像に対してできることはいろいろあります。
 
 画像や動画などの特定の置換要素は、 **{{glossary("aspect ratio","アスペクト比")}}** を持つものとしても記述されています。これは、水平方向 (x) と垂直方向 (y) の両方の寸法を持ち、既定ではファイルの内在サイズを使って表示されることを意味します。
 
@@ -90,11 +89,13 @@ img {
 
 {{EmbedLiveSample("size", "", "250px")}}
 
-では、オーバーフローの問題について何ができるでしょうか？
+オーバーフローの問題について何ができるでしょうか？
 
-[CSS におけるアイテムへのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)で学んだように、一般的な手法は、画像の {{cssxref("max-width")}} を 100% にすることです。これにより、画像のサイズはボックスよりも小さくなりますが、大きくはなりません。この手法は、[`<video>`](/ja/docs/Web/HTML/Reference/Elements/video)や [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) などの他の置換要素でも機能します。
+[CSS におけるアイテムへのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)で学んだように、一般的な手法は、画像の {{cssxref("max-width")}} を 100% に設定することです。これにより、画像のサイズはボックスよりも小さくなりますが、大きくはなりません。この手法は、[`<video>`](/ja/docs/Web/HTML/Reference/Elements/video)や [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) などの他の置換要素でも機能します。
 
 上記の例 `max-width: 100%` の `<img>` 要素に追加してみてください。小さい画像は変更されないままですが、大きい画像はボックスに収まるように小さくなります。
+
+### `object-fit` による画像のオーバーフローの制御
 
 コンテナー内の画像について他の選択を行うことができます。例えば、ボックスを完全に覆うように画像のサイズを変更したい場合があります。
 
@@ -200,7 +201,9 @@ HTML には、ウェブ開発者が必須フィールド、さらには入力す
 
 `<input type="text">`、`<input type="email">`、`<textarea>` 要素などのテキスト入力を可能にする要素は、スタイルを整えるのが非常に簡単で、ページ上の他のボックスと同じように振る舞う傾向があります。しかし、これらの要素の既定のスタイルは、ユーザーがサイトを訪問する際に使用するオペレーティングシステムやブラウザーによって異なります。
 
-以下の例では、 CSS を使用していくつかのテキスト入力にスタイルを設定しています。境界線、マージン、パディングなどがすべて期待どおりに適用されていることがわかります。属性セレクターを使用して、さまざまな入力型をターゲットにしています。境界線を調整し、フィールドに背景色を追加し、フォントとパディングを変更して、このフォームの外観を変更してみてください。
+以下の例では、 CSS を使用していくつかのテキスト入力にスタイルを設定しています。境界線、マージン、パディングなどがすべて期待どおりに適用されていることがわかります。属性セレクターを使用して、さまざまな入力型をターゲットにしています。
+
+境界線を調整し、フィールドに背景色を追加し、フォントとパディングを変更して、このフォームの外観を変更してみてください。
 
 ```html-nolint live-sample___form
 <form>
@@ -231,24 +234,24 @@ label {
 ```css live-sample___form
 input[type="text"],
 input[type="email"] {
-  border: 2px solid #000;
-  margin: 0 0 1em 0;
+  border: 2px solid black;
+  margin-bottom: 1em;
   padding: 10px;
   width: 80%;
 }
 
 input[type="submit"] {
-  border: 3px solid #333;
-  background-color: #999;
+  border: 3px solid #333333;
+  background-color: #999999;
   border-radius: 5px;
   padding: 10px 2em;
   font-weight: bold;
-  color: #fff;
+  color: white;
 }
 
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: #333;
+  background-color: #333333;
 }
 ```
 
@@ -328,19 +331,15 @@ textarea {
 > [!NOTE]
 > 正規化スタイルシートは、すべてのプロジェクトで使用する一連のベースラインスタイルを作成するために、多くの開発者によって使用されています。通常、これらは上記で説明したものと同様のことを行います。 CSS で独自の作業を行う前に、ブラウザー間で異なるものがすべて一貫した既定に設定されていることを確認してください。ブラウザーは通常、以前より一貫性があるため、以前ほど重要ではありません。ただし、1 つの例を見てみたい場合は、 [Normalize.css](https://necolas.github.io/normalize.css/) をチェックしてください。これは、多くのプロジェクトでベースとして使用されている非常に人気のあるスタイルシートです。
 
-## スキルテスト
-
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 画像とフォーム要素](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images)を見てください。
-
 ## まとめ
 
 このレッスンでは、 CSS で画像やメディア、他の特殊な要素を扱う際に遭遇する可能性のあるいくつかの違いについて取り上げました。
 
-次の記事では、 HTML の表のスタイル設定方法を学びます。
+次の記事では、CSS における画像やフォーム要素の処理について提供した情報を、どれだけ理解し記憶できているかを確認するためのテストをいくつかご紹介します。
 
 ## 関連情報
 
 - [ウェブフォームのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - [フォームの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics")}}

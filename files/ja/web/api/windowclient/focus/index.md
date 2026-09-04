@@ -27,11 +27,11 @@ focus()
 ### 例外
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : アプリのオリジンのウィンドウに[一時的な有効化](/ja/docs/Web/Security/User_activation)が行われていない場合、この例外でプロミスが拒否されます。
+  - : アプリのオリジンのウィンドウに[一時的な有効化](/ja/docs/Web/Security/Defenses/User_activation)が行われていない場合、この例外でプロミスが拒否されます。
 
 ## セキュリティ要件
 
-- アプリのオリジンの中で少なくとも 1 つのウィンドウで[一時的な有効化](/ja/docs/Web/Security/User_activation)が行われている必要があります。
+- アプリのオリジンの中で少なくとも 1 つのウィンドウで[一時的な有効化](/ja/docs/Web/Security/Defenses/User_activation)が行われている必要があります。
 
 ## 例
 

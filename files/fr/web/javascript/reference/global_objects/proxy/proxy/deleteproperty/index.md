@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 
 {{JSRef}}
 
-La méthode **`handler.deleteProperty()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
+La méthode **`handler.deleteProperty()`** est une trappe pour l'opérateur {{jsxref("delete")}}.
 
 {{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}
 
@@ -57,7 +57,7 @@ La méthode `deleteProperty()` doit renvoyer un booléen qui indique si oui ou n
 
 ## Description
 
-La méthode **`handler.deleteProperty()`** est une trappe permettant d'intercepter les opérations de l'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
+La méthode **`handler.deleteProperty()`** est une trappe permettant d'intercepter les opérations de l'opérateur {{jsxref("delete")}}.
 
 ### Interceptions
 
@@ -74,7 +74,7 @@ Si les invarians suivants ne sont pas respectés, le proxy renverra une exceptio
 
 ## Exemples
 
-Dans l'exemple qui suit, on intercepte les opérations de {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
+Dans l'exemple qui suit, on intercepte les opérations de {{jsxref("delete")}}.
 
 ```js
 var p = new Proxy(
@@ -101,6 +101,6 @@ delete p.a; // "appelée sur : a"
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- L'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
+- L'opérateur {{jsxref("delete")}}
 - {{jsxref("Reflect.deleteProperty()")}}

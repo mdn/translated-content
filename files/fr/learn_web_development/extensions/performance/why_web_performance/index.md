@@ -4,27 +4,26 @@ slug: Learn_web_development/Extensions/Performance/why_web_performance
 original_slug: Learn/Performance/why_web_performance
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}
 
 La performance Web consiste à rendre les sites Web rapides, y compris à rendre les processus lents rapides. Cet article explique pourquoi les performances Web sont importantes pour les visiteurs du site et pour vos objectifs commerciaux.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis:</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Connaissances de base en informatique,
         <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
-          >installation des outils de base</a
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
+          >Logiciels de base installés</a
         >, et connaissances de base des
-        <a href="/fr/docs/Apprendre/Commencer_avec_le_web"
-          >technologies Web côté client</a
+        <a href="/fr/docs/Learn_web_development/Getting_started/Your_first_website"
+          >technologies web côté client</a
         >.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
         Connaître les raisons pour lesquelles les performances Web sont
         importantes pour une bonne expérience utilisateur.
@@ -74,4 +73,4 @@ Le suivi des performances est important. Plusieurs facteurs, notamment la vitess
 
 Les performances Web sont importantes pour l'accessibilité et également pour d'autres mesures de site Web qui servent les objectifs d'une organisation ou d'une entreprise. Les bonnes ou mauvaises performances du site Web sont fortement corrélées à l'expérience utilisateur, ainsi qu'à l'efficacité globale de la plupart des sites. C'est pourquoi vous devez vous soucier des performances Web.
 
-{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}

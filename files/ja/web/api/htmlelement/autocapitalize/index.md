@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`autocapitalize`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、ユーザー入力に対する要素の大文字化動作を表します。すべての HTML 要素で利用可能ですが、すべての要素に影響するわけでははなく、次の要素でに影響します。
+**`autocapitalize`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、ユーザー入力に対する要素の大文字化動作を表します。すべての HTML 要素で利用可能ですが、すべての要素に影響するわけではなく、次の要素でに影響します。
 
 - {{htmlelement("input")}} および {{htmlelement("textarea")}} 要素。
 - [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) が設定された任意の要素。

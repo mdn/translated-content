@@ -1,17 +1,18 @@
 ---
-title: Element.scrollLeftMax
+title: "Element : propriété scrollLeftMax"
+short-title: scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
-La propriété non modifiable **`Element.scrollLeftMax`** renvoie un {{jsxref("Number")}} représentant la distance restante de défilement vers la gauche de l'élément.
+La propriété en lecture seule **`scrollLeftMax`** de l'interface {{DOMxRef("Element")}} retourne un nombre représentant la distance maximale de défilement vers la gauche possible pour l'élément.
 
-## Syntaxe
+## Valeur
 
-```js
-var pxl = elt.scrollLeftMax;
-```
+Un nombre.
 
 ## Spécifications
 
@@ -23,4 +24,4 @@ _Cette propriété ne fait partie d'aucune spécification._
 
 ## Voir aussi
 
-- {{domxref("Element.scrollTopMax")}} renvoie la distance restante de défilement vers le haut de l'élément.
+- La propriété {{DOMxRef("Element.scrollTopMax")}} donnant la même information pour l'autre axe.

@@ -17,7 +17,7 @@ l10n:
 
 - 已更新 {{CSSXRef("text-wrap")}} 属性，添加了对 `balance` 和 `stable` 值的支持。`balance` 值用于短的内容块（例如标题），它将确保内容在多行上分布时平衡且易于阅读。`stable` 值确保可编辑的内容在用户编辑时不会被重排（[Firefox bug 1731541](https://bugzil.la/1731541)）。
 - 现已支持 {{cssxref(":has", ":has()")}} 选择器（通常被称为*父选择器*）。它允许开发者根据相关联的元素为某个元素应用样式，例如，`li:has(ul)` 将匹配包含子列表的列表，`h1:has(+ p)` 将匹配后面紧跟段落的标题。
-- 现已支持 [`text-indent`](/zh-CN/docs/Web/CSS/text-indent) CSS 属性的 [`each-line`](/zh-CN/docs/Web/CSS/text-indent#each-line) 和 [`hanging`](/zh-CN/docs/Web/CSS/text-indent#hanging) 属性值（[Firefox bug 784648](https://bugzil.la/784648)），以允许开发者更轻松地指定某些文本缩进样式。此外，开发者现在可以结合多个 `text-indent` 属性值以产生更多创意，例如 `text-indent: 3em hanging each-line`。
+- 现已支持 [`text-indent`](/zh-CN/docs/Web/CSS/Reference/Properties/text-indent) CSS 属性的 [`each-line`](/zh-CN/docs/Web/CSS/Reference/Properties/text-indent#each-line) 和 [`hanging`](/zh-CN/docs/Web/CSS/Reference/Properties/text-indent#hanging) 属性值（[Firefox bug 784648](https://bugzil.la/784648)），以允许开发者更轻松地指定某些文本缩进样式。此外，开发者现在可以结合多个 `text-indent` 属性值以产生更多创意，例如 `text-indent: 3em hanging each-line`。
 
 ### JavaScript
 

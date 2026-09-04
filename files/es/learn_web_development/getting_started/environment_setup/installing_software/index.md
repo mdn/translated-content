@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Environment_setup/Installing_softwar
 original_slug: Learn/Getting_started_with_the_web/Installing_basic_software
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website")}}
 
 La _Instalación de software básico_, te muestra las herramientas que necesitas para hacer el desarrollo web simple, y la forma de instalarlas correctamente.
 
@@ -47,4 +47,4 @@ Antes de continuar, deberías instalar al menos dos de estos navegadores y tener
 
 Algunos ejemplos necesitarás ejecutarlos a través de un servidor web para que funcionen exitosamente. Puedes encontrar cómo hacer esto en [¿Cómo se configura un servidor de prueba local?](/es/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)
 
-{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website")}}

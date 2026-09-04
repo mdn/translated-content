@@ -80,7 +80,7 @@ const arrayLike = {
   unrelated: "foo",
   0: 5,
   2: 4,
-  3: 3, // length が 3 なので toSorted() からは無視される
+  3: 3, // length が 3 なので with() からは無視される
 };
 console.log(Array.prototype.with.call(arrayLike, 0, 1));
 // [ 1, undefined, 4 ]

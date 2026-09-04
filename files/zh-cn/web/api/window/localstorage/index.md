@@ -24,7 +24,7 @@ myStorage = localStorage;
 ### 异常
 
 - `SecurityError`
-  - : 请求违反了一个策略声明，或者源（origin）不是 [一个有效的 scheme/host/port tuple](/zh-CN/docs/Web/Security/Same-origin_policy#definition_of_an_origin) （例如如果 origin 使用 `file:` 或者 `data:` 形式将可能发生）。比如，用户可以有禁用允许对指定的 origin 存留数据的浏览器配置。
+  - : 请求违反了一个策略声明，或者源（origin）不是 [一个有效的方案/主机/端口元组](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy#源的定义)（例如如果 origin 使用 `file:` 或者 `data:` 形式将可能发生）。比如，用户可以有禁用允许对指定的 origin 存留数据的浏览器配置。
 
 ## 示例
 

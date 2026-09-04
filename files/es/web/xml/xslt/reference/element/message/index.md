@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/message
 original_slug: Web/XSLT/Reference/Element/message
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{XsltSidebar}}
 
 El elemento `<xsl:message>` muestra un mensaje (en la consola JavaScript en NS) y opcionalmente termina la ejecución de la hoja de estilos. Puede ser util para depuración.
 

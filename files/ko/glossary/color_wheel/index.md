@@ -22,4 +22,4 @@ l10n:
 - [색상 이론과 색상환](https://www.canva.com/colors/color-wheel/)
 - Better Homes & Gardens의 [색상환을 사용하여 완벽한 색상 팔레트를 선택하는 방법](https://www.bhg.com/decorating/color/basics/color-wheel-color-chart/)
 - 위키백과의 [색상환](https://en.wikipedia.org/wiki/Color_wheel)
-- [`<color>`](/ko/docs/Web/CSS/color_value) (CSS 색상 유형)
+- [`<color>`](/ko/docs/Web/CSS/Reference/Values/color_value) (CSS 색상 유형)

@@ -16,7 +16,7 @@ El controlador de los elementos personalizados en un documento web es el objeto 
 
 Para registrar un elemento personalizado en la página, debes usar el método {{domxref("CustomElementRegistry.define()")}} . Éste toma los siguientes argumentos:
 
-- Un {{domxref("DOMString")}} que representa el nombre que estás dando al elemento. Nótese que los nombres de los elementos personalizados [deben contener un guión](https://stackoverflow.com/questions/22545621/do-custom-elements-require-a-dash-in-their-name) (kebab-case); Los nombres no pueden ser palabras simples.
+- Un {{jsxref("String")}} que representa el nombre que estás dando al elemento. Nótese que los nombres de los elementos personalizados [deben contener un guión](https://stackoverflow.com/questions/22545621/do-custom-elements-require-a-dash-in-their-name) (kebab-case); Los nombres no pueden ser palabras simples.
 - Un objeto [class](/es/docs/Web/JavaScript/Reference/Classes) que define el comportamiento del ejemplo.
 - Opcionalmente, un objeto de opciones que contiene la propiedad `extends` , que especifica el elemento preconstruido del que hereda (solo es relevante para elementos personalizados preconstruidos; ver la definición más abajo).
 

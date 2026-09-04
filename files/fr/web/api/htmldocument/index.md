@@ -1,14 +1,18 @@
 ---
 title: HTMLDocument
 slug: Web/API/HTMLDocument
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-**`HTMLDocument`** est une interface abstraite de [DOM](/fr/docs/Web/API/Document_Object_Model) qui fournit un accès aux propriétés spéciales et aux méthodes non présentes par défaut dans un document ordinaire (XML).
+Pour des raisons historiques, les objets {{DOMxRef("Window")}} ont une propriété `window.HTMLDocument` dont la valeur est l'interface {{DOMxRef("Document")}}. Vous pouvez donc considérer `HTMLDocument` comme un alias pour {{DOMxRef("Document")}}, et vous pouvez trouver la documentation des membres de `HTMLDocument` dans la documentation de l'interface {{DOMxRef("Document")}}.
 
-Ses méthodes et propriétés sont incluses dans la page {{domxref("document")}} et listées séparément dans leur propre section DOM référencées ci-dessus.
+## Spécifications
 
-## Spécification
+{{Specifications}}
 
-- [http://www.w3.org/TR/DOM-Level-2-HTM...ml#ID-26809268](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)
+## Compatibilité des navigateurs
+
+{{Compat}}

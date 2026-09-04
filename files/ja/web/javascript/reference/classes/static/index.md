@@ -172,7 +172,7 @@ StaticMethodCall.anotherStaticMethod();
 
 ### クラスのコンストラクターや他のメソッドからの静的メソッドの呼び出し
 
-静的メソッドは静的ではないメソッドの {{JSxRef("Operators/this", "this")}} キーワードを使用して直接アクセスすることができません。呼び出すにはクラス名を使用して `クラス名.静的メソッド名()` / `クラス名.静的プロパティ名` のようにするか、 `constructor` プロパティのメソッドとして `this.constructor.静的メソッド名()` / `this.constructor.静的プロパティ名` のようにしてください。
+静的メソッドは静的ではないメソッドの {{JSxRef("this")}} キーワードを使用して直接アクセスすることができません。呼び出すにはクラス名を使用して `クラス名.静的メソッド名()` / `クラス名.静的プロパティ名` のようにするか、 `constructor` プロパティのメソッドとして `this.constructor.静的メソッド名()` / `this.constructor.静的プロパティ名` のようにしてください。
 
 ```js
 class StaticMethodCall {

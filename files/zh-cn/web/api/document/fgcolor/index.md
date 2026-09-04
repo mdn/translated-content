@@ -7,7 +7,7 @@ slug: Web/API/Document/fgColor
 
 ### 概述
 
-{{ Deprecated_header() }} `fgColor` 属性用来获取或设置当前文档的前景色或者文本颜色。
+{{ Deprecated_header }} `fgColor` 属性用来获取或设置当前文档的前景色或者文本颜色。
 
 ### 语法
 

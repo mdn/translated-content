@@ -45,7 +45,7 @@ dd {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
@@ -55,7 +55,7 @@ dd {
       <th scope="row">Contenido permitido</th>
       <td>
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_dinámico"
           >Contenido de flujo</a
         >
       </td>

@@ -5,7 +5,7 @@ slug: Web/API/URL/password
 
 {{ApiRef("URL API")}}
 
-A propriedade **`password`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} que contém a senha especificada antes do nome do domínio.
+A propriedade **`password`** da interface {{domxref("URL")}} é uma {{jsxref("String")}} que contém a senha especificada antes do nome do domínio.
 
 Se for definido primeiramente sem a propriedade {{domxref("URL.username", "username")}}, ele irá falhar silenciosamente.
 
@@ -13,7 +13,7 @@ Se for definido primeiramente sem a propriedade {{domxref("URL.username", "usern
 
 ## Valor
 
-Uma {{domxref("USVString")}}.
+Uma {{jsxref("String")}}.
 
 ## Exemplos
 

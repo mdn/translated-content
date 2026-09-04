@@ -260,9 +260,9 @@ console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 ## Véase también
 
 - [Polyfill de `String.prototype.replace` en `core-js` con arreglos e implementación de un comportamiento moderno como el soporte para `Symbol.replace`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.replaceAll", "String.prototype.replaceAll()")}}
-- {{jsxref("String.prototype.match", "String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
+- {{jsxref("String.prototype.replaceAll()")}}
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}
 - [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace)
 - [`RegExp.prototype[@@replace]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)

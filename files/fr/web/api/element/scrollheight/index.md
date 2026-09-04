@@ -1,163 +1,195 @@
 ---
-title: Element.scrollHeight
+title: "Element : propriété scrollHeight"
+short-title: scrollHeight
 slug: Web/API/Element/scrollHeight
+l10n:
+  sourceCommit: 0916e1754652f3a7c663ef031faa26c98f492023
 ---
 
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
-L'attribut en lecture seule **`element.scrollHeight`** est une mesure de la hauteur du contenu d'un élément qui inclut le contenu débordant et non visible à l'écran. La valeur `scrollHeight` est égale à la hauteur minimum dont l'élément aurait besoin pour que le contenu rentre dans le viewpoint sans utiliser de barre de défilement. Cela inclut les marges internes mais pas les marges externes.
+La propriété en lecture seule **`scrollHeight`** de l'interface {{DOMxRef("Element")}} est une mesure de la hauteur du contenu d'un élément, y compris le contenu non visible à l'écran en raison du débordement.
 
-> [!NOTE]
-> Cette propriété arrondit la valeur à l'entier le plus proche. Si vous avez besoin d'une valeur précise, utilisez [element.getBoundingClientRect()](/fr/docs/Web/API/Element/getBoundingClientRect).
+![La fenêtre d'affichage de l'utilisateur·ice est un élément avec quatre zones étiquetées padding-top, border-top, border-bottom, padding-bottom. La hauteur de défilement va du padding top du conteneur jusqu'à la fin du padding bottom, bien au-delà du haut et du bas de la fenêtre d'affichage.](scrollheight.png)
 
-## Syntaxe
+La valeur de `scrollHeight` est égale à la hauteur minimale que l'élément nécessite pour que tout le contenu tienne dans la fenêtre d'affichage sans utiliser de barre de défilement verticale. La hauteur est mesurée de la même manière que {{DOMxRef("Element.clientHeight", "clientHeight")}}&nbsp;: elle inclut le remplissage de l'élément, mais pas sa bordure, sa marge ou sa barre de défilement horizontale (si présente). Elle peut également inclure la hauteur des pseudo-éléments CSS tels que {{CSSxRef("::before")}} ou {{CSSxRef("::after")}}. Si le contenu de l'élément peut tenir sans avoir besoin d'une barre de défilement verticale, son `scrollHeight` est égal à {{DOMxRef("Element.clientHeight", "clientHeight")}}.
 
-```js
-var intElemScrollHeight =
-  document.getElementById(id_attribute_value).scrollHeight;
-```
+## Valeur
 
-`intElemScrollHeight` est une variable contenant un entier correspondant à la valeur en pixels de la hauteur défilable de l'élément. `scrollHeight` est une propriété en lecture seule.
-
-## Exemple
-
-Avec l'évènement {{domxref("GlobalEventHandlers/onscroll", "onscroll")}}, cette équivalence peut s'avérer utile afin de déterminer si un utilisateur a lu du texte ou non (voir aussi les propriétés {{domxref("element.scrollTop")}} et {{domxref("element.clientHeight")}}).
-
-La case à cocher de la démo est désactivée et ne peut être cochée tant que l'ensemble du contenu n'a pas défilé.
-
-### HTML
-
-```html
-<form name="registration">
-  <p>
-    <textarea id="rules">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
-Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
-neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
-velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
-ut quam lacus, sed ultricies diam. Vestibulum convallis rutrum dolor, sit amet egestas velit scelerisque id.
-Proin non dignissim nisl. Sed mi odio, ullamcorper eget mattis id, malesuada vitae libero. Integer dolor lorem,
-mattis sed dapibus a, faucibus id metus. Duis iaculis dictum pulvinar. In nisi nibh, dapibus ac blandit at, porta
-at arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent
-dictum ipsum aliquet erat eleifend sit amet sollicitudin felis tempus. Aliquam congue cursus venenatis. Maecenas
-luctus pellentesque placerat. Mauris nisl odio, condimentum sed fringilla a, consectetur id ligula. Praesent sem
-sem, aliquet non faucibus vitae, iaculis nec elit. Nullam volutpat, lectus et blandit bibendum, nulla lorem congue
-turpis, ac pretium tortor sem ut nibh. Donec vel mi in ligula hendrerit sagittis. Donec faucibus viverra fermentum.
-Fusce in arcu arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in
-ligula. Vivamus vitae urna mauris, eget euismod nunc. Aenean semper gravida enim non feugiat. In hac habitasse
-platea dictumst. Cras eleifend nisl volutpat ante condimentum convallis. Donec varius dolor malesuada erat
-consequat congue. Donec eu lacus ut sapien venenatis tincidunt. Quisque sit amet tellus et enim bibendum varius et
-a orci. Donec aliquet volutpat scelerisque. Proin et tortor dolor. Ut aliquet, dolor a mattis sodales, odio diam
-pulvinar sem, egestas pretium magna eros vitae felis. Nam vitae magna lectus, et ornare elit. Morbi feugiat, ipsum
-ac mattis congue, quam neque mollis tortor, nec mollis nisl dolor a tortor. Maecenas varius est sit amet elit
-interdum quis placerat metus posuere. Duis malesuada justo a diam vestibulum vel aliquam nisi ornare. Integer
-laoreet nisi a odio ornare non congue turpis eleifend. Cum sociis natoque penatibus et magnis dis parturient montes,
-nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci fermentum.
-    </textarea>
-  </p>
-  <p>
-    <input type="checkbox" id="agree" name="accept" />
-    <label for="agree">I agree</label>
-    <input type="submit" id="nextstep" value="Next" />
-  </p>
-</form>
-```
-
-### CSS
-
-```css
-#notice {
-  display: inline-block;
-  margin-bottom: 12px;
-  border-radius: 5px;
-  width: 600px;
-  padding: 5px;
-  border: 2px #7fdf55 solid;
-}
-
-#rules {
-  width: 600px;
-  height: 130px;
-  padding: 5px;
-  border: #2a9f00 solid 2px;
-  border-radius: 5px;
-}
-```
-
-### JavaScript
-
-```js
-function checkReading() {
-  if (checkReading.read) {
-    return;
-  }
-  checkReading.read =
-    this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById(
-    "nextstep",
-  ).disabled = !checkReading.read;
-  checkReading.noticeBox.textContent = checkReading.read
-    ? "Thank you."
-    : "Please, scroll and read the following text.";
-}
-
-onload = function () {
-  var oToBeRead = document.getElementById("rules");
-  checkReading.noticeBox = document.createElement("span");
-  document.registration.accept.checked = false;
-  checkReading.noticeBox.id = "notice";
-  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
-  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
-  oToBeRead.onscroll = checkReading;
-  checkReading.call(oToBeRead);
-};
-```
-
-### Résultat
-
-{{EmbedLiveSample('Exemple', '640', '400')}}
+Un entier.
 
 ## Problèmes et solutions
 
 ### Déterminer si un élément a complètement été défilé
 
-L'expression suivante renvoie `true` si l'élément est à la fin du défilement, `false` si ça ne l'est pas.
+`scrollTop` est un nombre qui n'est pas arrondi, tandis que `scrollHeight` et `clientHeight` sont arrondis — donc la seule façon de déterminer si la zone de défilement est en bas est de voir si la quantité de défilement est suffisamment proche d'un certain seuil (dans cet exemple `1`)&nbsp;:
 
 ```js
-element.scrollHeight - element.scrollTop === element.clientHeight;
+Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) <= 1;
 ```
 
-Associée à l'événement [element.onscroll](/fr/docs/Web/API/Element/scroll_event), l'expression peut être utile pour déterminer si un utilisateur a lu un texte ou non (voir aussi les propriétés [element.scrollTop](/fr/docs/Web/API/Element/scrollTop) et [element.clientHeight](/fr/docs/Web/API/Element/clientHeight). Par exemple :
+Ce qui suit _ne_ fonctionne _pas_ tout le temps parce que `scrollTop` peut contenir des décimales&nbsp;:
+
+```js
+element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight;
+```
+
+### Déterminer si le contenu d'un élément déborde
+
+Cette fonction retourne une valeur booléenne indiquant si le contenu d'un élément déborde de ses limites&nbsp;:
+
+```js
+function aDeborde(element) {
+  return element.scrollHeight > element.clientHeight;
+}
+```
+
+Ensuite, vous pouvez vérifier si l'élément est défilable dans ce cas&nbsp;:
+
+```js
+function peutDefiler(element) {
+  return (
+    aDeborde(element) &&
+    ["scroll", "auto"].includes(window.getComputedStyle(element).overflowY)
+  );
+}
+```
+
+## Exemples
+
+### Vérifier que l'utilisatrice ou l'utilisateur a lu un texte
+
+Associé à l'évènement {{DOMxRef("Element.scroll_event", "scroll")}}, cette équivalence peut s'avérer utile pour déterminer si un·e utilisateur·ice a lu un texte ou non (voir aussi les propriétés {{DOMxRef("element.scrollTop")}} et {{DOMxRef("element.clientHeight")}}).
+
+La case à cocher de la démo ci-dessous est désactivée et ne peut être cochée pour montrer l'accord que lorsque le contenu du paragraphe a été entièrement défilé. Une fois cochée, le bouton "Suivant" peut être cliqué pour continuer.
+
+#### HTML
 
 ```html
-<!doctype html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDN Example</title>
-<script type="text/javascript">
-function checkReading () {
-  if (checkReading.read) { return; }
-  checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.innerHTML = checkReading.read ?
-    "Merci." :
-    "Veuillez faire défiler la page et lire le texte qui suit.";
+<form id="form" name="inscription">
+  <p id="info">Lire tout le texte pour accepter</p>
+  <div id="lecture-tres-importante">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Feugiat sed lectus
+      vestibulum mattis. Id consectetur purus ut faucibus pulvinar elementum
+      integer enim neque. Metus vulputate eu scelerisque felis imperdiet. Massa
+      massa ultricies mi quis hendrerit dolor magna eget est. Rhoncus aenean vel
+      elit scelerisque mauris pellentesque. Volutpat est velit egestas dui id
+      ornare arcu. Id cursus metus aliquam eleifend mi in. Condimentum lacinia
+      quis vel eros donec ac. Feugiat pretium nibh ipsum consequat nisl vel
+      pretium lectus.
+    </p>
+    <p>
+      Sit amet volutpat consequat mauris nunc congue nisi vitae. Viverra
+      accumsan in nisl nisi scelerisque. Enim ut tellus elementum sagittis
+      vitae. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Nisi
+      scelerisque eu ultrices vitae. Sem fringilla ut morbi tincidunt augue
+      interdum velit. Senectus et netus et malesuada fames ac turpis egestas.
+      Nunc non blandit massa enim nec. At augue eget arcu dictum varius duis at.
+      Dictumst quisque sagittis purus sit amet. Ut eu sem integer vitae justo.
+      Mollis aliquam ut porttitor leo a diam sollicitudin. Mollis nunc sed id
+      semper risus in. Eu volutpat odio facilisis mauris sit. Augue interdum
+      velit euismod in pellentesque massa placerat duis. Aliquam faucibus purus
+      in massa tempor nec feugiat. Nisl rhoncus mattis rhoncus urna neque
+      viverra justo. Leo duis ut diam quam nulla. Ultrices dui sapien eget mi
+      proin sed libero enim.
+    </p>
+    <p>
+      Cras adipiscing enim eu turpis egestas. Est ultricies integer quis auctor
+      elit. Tempor id eu nisl nunc mi ipsum. Non nisi est sit amet facilisis.
+      Nisl suscipit adipiscing bibendum est ultricies integer quis. Habitant
+      morbi tristique senectus et netus et malesuada. Etiam erat velit
+      scelerisque in dictum non consectetur a erat. Diam sollicitudin tempor id
+      eu nisl. Aenean vel elit scelerisque mauris pellentesque pulvinar
+      pellentesque habitant. A pellentesque sit amet porttitor. Viverra aliquet
+      eget sit amet tellus cras. Eu ultrices vitae auctor eu.
+    </p>
+    <p>
+      Fames ac turpis egestas sed tempus. Id donec ultrices tincidunt arcu non
+      sodales. Congue mauris rhoncus aenean vel elit scelerisque mauris
+      pellentesque. Velit scelerisque in dictum non consectetur a erat nam.
+      Auctor elit sed vulputate mi sit amet mauris commodo. Mauris ultrices eros
+      in cursus turpis massa tincidunt. Dui sapien eget mi proin sed libero enim
+      sed faucibus. Ipsum dolor sit amet consectetur adipiscing elit
+      pellentesque habitant. Amet massa vitae tortor condimentum. Feugiat nisl
+      pretium fusce id velit. Malesuada proin libero nunc consequat interdum
+      varius sit. Quam nulla porttitor massa id neque aliquam vestibulum morbi
+      blandit. Gravida arcu ac tortor dignissim convallis aenean et tortor at.
+      Dapibus ultrices in iaculis nunc sed. Fermentum et sollicitudin ac orci
+      phasellus egestas tellus. Proin libero nunc consequat interdum varius sit
+      amet mattis. Sed viverra ipsum nunc aliquet bibendum.
+    </p>
+  </div>
+  <p>
+    <input type="checkbox" id="accepter" name="accept" disabled />
+    <label for="accepter">J'accepte</label>
+    <input type="submit" id="etape-suivante" value="Suivant" disabled />
+  </p>
+</form>
+```
+
+#### CSS
+
+```css
+#info {
+  margin: 5px;
+  display: inline-block;
+  font-style: italic;
 }
 
-onload = function () {
-  var oToBeRead = document.getElementById("rules");
-  checkReading.noticeBox = document.createElement("span");
-  document.registration.accept.checked = false;
-  checkReading.noticeBox.id = "notice";
-  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
-  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
-  oToBeRead.onscroll = checkReading;
-  checkReading.call(oToBeRead);
+#lecture-tres-importante {
+  height: 130px;
+  padding: 5px;
+  border: 2px solid #00b4c5;
+  border-radius: 5px;
+  overflow: scroll;
 }
 ```
 
-[Voir l'exemple en action](/files/4589/readme-example.html)
+#### JavaScript
+
+```js
+const info = document.getElementById("info");
+const aAccepter = document.getElementById("accepter");
+const versEtapeSuivante = document.getElementById("etape-suivante");
+const lectureTresImportante = document.getElementById(
+  "lecture-tres-importante",
+);
+
+// Vérifie si l'utilisateur·ice a fait défiler l'élément jusqu'en bas
+function estLu(element) {
+  return (
+    Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) <=
+    1
+  );
+}
+
+function verifierDefilementEnBas(element) {
+  if (estLu(element)) {
+    info.innerText = "Vous avez lu tout le texte. Cochez pour continuer.";
+    aAccepter.disabled = false;
+  }
+}
+
+aAccepter.addEventListener("change", (e) => {
+  versEtapeSuivante.disabled = !e.target.checked;
+});
+
+lectureTresImportante.addEventListener("scroll", () => {
+  verifierDefilementEnBas(lectureTresImportante);
+});
+
+versEtapeSuivante.addEventListener("click", () => {
+  if (aAccepter.checked) {
+    versEtapeSuivante.value = "Fait !";
+  }
+});
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Vérifier que l'utilisatrice ou l'utilisateur a lu un texte", 640, 250)}}
 
 ## Spécifications
 
@@ -169,6 +201,11 @@ onload = function () {
 
 ## Voir aussi
 
-- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
-- [element.clientHeight](/fr/docs/Web/API/Element/clientHeight)
-- [element.offsetHeight](/fr/docs/Web/API/HTMLElement/offsetHeight)
+- [Déterminer la taille des éléments](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- La propriété {{DOMxRef("HTMLElement.offsetHeight")}}
+- La propriété {{DOMxRef("Element.clientHeight")}}
+- La propriété {{DOMxRef("Element.scrollWidth")}}
+- La propriété {{DOMxRef("Element.scrollLeft")}}
+- La propriété {{DOMxRef("Element.scrollTop")}}
+- La méthode {{DOMxRef("Element.getBoundingClientRect()")}}
+- La méthode {{DOMxRef("Element.scrollTo()")}}

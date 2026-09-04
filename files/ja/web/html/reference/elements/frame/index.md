@@ -1,12 +1,12 @@
 ---
-title: <frame>
+title: HTML `<frame>` フレーム要素
+short-title: <frame>
 slug: Web/HTML/Reference/Elements/frame
-original_slug: Web/HTML/Element/frame
 l10n:
-  sourceCommit: 8536cae9363a37725f9a5dcca4e064addbcc9506
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`<frame>`** は [HTML](/ja/docs/Web/HTML) の要素で、別の HTML 文書を表示できる特定の領域を定義します。 frame 要素は {{HTMLElement("frameset")}} の内部で使用してください。
 
@@ -16,20 +16,20 @@ l10n:
 
 他のすべての HTML 要素と同様に、この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-- `src` {{Deprecated_Inline}}
+- `src` {{Deprecated_Inline}} {{non-standard_inline}}
   - : この属性は、フレームに表示する文書を指定します。
-- `name` {{Deprecated_Inline}}
+- `name` {{Deprecated_Inline}} {{non-standard_inline}}
   - : この属性は、フレームに名前をつけます。名前がなければ、すべてのリンクは自身が存在するフレーム – 直近の親フレームで開きます。詳しくは [`target`](/ja/docs/Web/HTML/Reference/Elements/a#target) 属性を参照してください。
-- `noresize` {{Deprecated_Inline}}
+- `noresize` {{Deprecated_Inline}} {{non-standard_inline}}
   - : この属性は、ユーザによるフレームのリサイズを抑止します。
-- `scrolling` {{Deprecated_Inline}}
+- `scrolling` {{Deprecated_Inline}} {{non-standard_inline}}
   - : この属性は、スクロールバーの存在の有無を定義します。この属性を指定しない場合、ブラウザーは必要なときにスクロールバーを表示します。設定できる値は 2 つです。 "yes" は不要なときでもスクロールバーを表示します。"no" は必要なとき*でも*スクロールバーを表示しません。
-- `marginheight` {{Deprecated_Inline}}
+- `marginheight` {{Deprecated_Inline}} {{non-standard_inline}}
   - : この属性は、フレーム間のマージンの高さを定義します。
-- `marginwidth` {{Deprecated_Inline}}
+- `marginwidth` {{Deprecated_Inline}} {{non-standard_inline}}
   - : この属性は、フレーム間のマージンの幅を定義します。
-- `frameborder` {{Deprecated_Inline}}
-  - : この属性で、フレームにボーダーを設定できます。
+- `frameborder` {{Deprecated_Inline}} {{non-standard_inline}}
+  - : この属性で、フレームに境界線を設定できます。
 
 ## 例
 
@@ -39,9 +39,9 @@ l10n:
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="ja">
   <head>
-    <!-- Document metadata goes here -->
+    <!-- 文書メタデータをここに配置 -->
   </head>
   <frameset cols="400, 500">
     <frame src="https://developer.mozilla.org/en/HTML/Element/iframe" />

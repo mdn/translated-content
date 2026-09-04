@@ -154,7 +154,7 @@ new WeakSet(
 ).has(myObj); // true
 ```
 
-De igual manera {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promise.race", "Promise.race(iterable)")}}, y {{jsxref("Array.from", "Array.from()")}}.
+De igual manera {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promise.race", "Promise.race(iterable)")}}, y {{jsxref("Array.from()")}}.
 
 ### Sintaxis que espera un iterable
 

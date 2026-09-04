@@ -32,7 +32,7 @@ XMLHttpRequest.responseType = type;
 - `"json"`
   - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是通过将接收到的数据内容解析为 {{Glossary("JSON")}} 而创建的 JavaScript 对象。
 - `"text"`
-  - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是 {{DOMxRef("DOMString")}} 对象中的文本。
+  - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是 {{jsxref("String")}} 对象中的文本。
 - `"ms-stream"` {{non-standard_inline}}
   - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是流式下载的一部分；此响应类型仅允许用于下载请求，并且仅受 Internet Explorer 支持。
 

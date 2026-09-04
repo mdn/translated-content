@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/General_embedding_technolog
 original_slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
 
 Ahora ya deberías estar acostumbrado a integrar cosas en tus páginas web, incluyendo imágenes, video y audio. En este punto nos gustaría que des algo así como un paso al costado, prestando atención a elementos que te permiten integrar una amplia variedad de tipos de contenido en tus páginas web: los elementos {{htmlelement("iframe")}}, {{htmlelement("embed")}} y {{htmlelement("object")}}. Los `<iframe>`s son para incrustar otras páginas web, y los otros dos te permiten incrustar PDFs, SVG e incluso Flash — una tecnología que está en su camino de despedida, pero la cual seguirás viendo semi-regularmente.
 
@@ -15,14 +15,14 @@ Ahora ya deberías estar acostumbrado a integrar cosas en tus páginas web, incl
       <td>
         Conocimientos básicos de informática,
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conocimientos básicos de
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >manejo de archivos</a
         >, familiaridad con los fundamentos de HTML (visto en
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML/iniciar"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Iniciando en HTML</a
         >) y los artículos previos en este modulo.
       </td>
@@ -223,7 +223,7 @@ Este ejemplo incluye los elementos básicos necesarios para usar un `<iframe>`:
 - [`allowfullscreen`](/es/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : Si está configurado, el `<iframe>` se puede colocar en modo pantalla completa usando el [Full Screen API](/es/docs/Web/API/Fullscreen_API) (El uso del API está fuera del alcance de este artículo.)
 - [`frameborder`](/es/docs/Web/HTML/Reference/Elements/iframe#frameborder)
-  - : Si se establece en 1, esto le indica al navegador que dibuje un borde entre este marco y otros marcos, que es el comportamiento predeterminado. 0 elimina el borde. Usar esto ya no es realmente recomendable, ya que el mismo efecto se puede lograr mejor usando[`border`](/es/docs/Web/CSS/border)`: none;` en tu {{Glossary('CSS')}}.
+  - : Si se establece en 1, esto le indica al navegador que dibuje un borde entre este marco y otros marcos, que es el comportamiento predeterminado. 0 elimina el borde. Usar esto ya no es realmente recomendable, ya que el mismo efecto se puede lograr mejor usando[`border`](/es/docs/Web/CSS/Reference/Properties/border)`: none;` en tu {{Glossary('CSS')}}.
 - [`src`](/es/docs/Web/HTML/Reference/Elements/iframe#src)
   - : Este atributo, como con {{htmlelement("video")}}/{{htmlelement("img")}},contiene una ruta que apunta a la URL del documento que se va a incrustar.
 - [`width`](/es/docs/Web/HTML/Reference/Elements/iframe#width) and [`height`](/es/docs/Web/HTML/Reference/Elements/iframe#height)
@@ -360,4 +360,4 @@ The topic of embedding other content in web documents can quickly become very co
 
 There are many other technologies that involve embedding external content besides the ones we discussed here. We saw some in earlier articles, such as {{htmlelement("video")}}, {{htmlelement("audio")}}, and {{htmlelement("img")}}, but there are others to discover, such as {{htmlelement("canvas")}} for JavaScript-generated 2D and 3D graphics, and {{htmlelement("svg")}} for embedding vector graphics. We'll look at [SVG](/es/docs/Web/SVG) in the next article of the module.
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}

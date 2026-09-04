@@ -38,7 +38,7 @@ showPicker()
 
 ## 安全性
 
-[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)是需要的。用户必须与页面或者 UI 元素交互，才能使这个功能按顺序工作。
+[瞬态用户激活](/zh-CN/docs/Web/Security/Defenses/User_activation)是需要的。用户必须与页面或者 UI 元素交互，才能使这个功能按顺序工作。
 
 ## 示例
 

@@ -3,7 +3,7 @@ title: Appliquer des couleurs
 slug: Web/API/WebGL_API/By_example/Clearing_with_colors
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Détecter_WebGL","Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Detect_WebGL","Web/API/WebGL_API/By_example/Clearing_by_clicking")}}
 
 Dans cet article, on voit comment appliquer une couleur unie dans le contexte de rendu.
 
@@ -94,4 +94,4 @@ window.addEventListener(
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-with-colors).
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Détecter_WebGL","Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Detect_WebGL","Web/API/WebGL_API/By_example/Clearing_by_clicking")}}

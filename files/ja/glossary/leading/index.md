@@ -19,6 +19,6 @@ CSS では、組版における行送りは、コンテンツの高さと行の�
 
 - {{cssxref("line-height")}}
 - {{cssxref("text-box")}}
-- [CSS インラインレイアウト](/ja/docs/Web/CSS/CSS_inline_layout)モジュール
+- [CSS インラインレイアウト](/ja/docs/Web/CSS/Guides/Inline_layout)モジュール
 - [鉛](https://ja.wikipedia.org/wiki/鉛) （ウィキペディア）
 - [The Thing With Lead­ing in CSS](https://matthiasott.com/notes/the-thing-with-leading-in-css) (matthiasott.com, 2022)

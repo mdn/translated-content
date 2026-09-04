@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 {{LearnSidebar}}
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Os navegadores modernos oferecem suporte a várias maneiras de os sites armazenarem dados no computador do usuário - com a permissão do usuário - e depois recuperá-los quando necessário. Isso permite que você mantenha dados para armazenamento de longo prazo, salve sites ou documentos para uso offline, retenha configurações específicas do usuário para seu site e muito mais. Este artigo explica os princípios básicos de como eles funcionam.
 
@@ -16,15 +16,15 @@ Os navegadores modernos oferecem suporte a várias maneiras de os sites armazena
       <th scope="row">Pré-requisitos:</th>
       <td>
         Noções básicas de JavaScript (consulte as
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">primeiras etapas </a
-        ><a href="/pt-BR/docs/Learn/JavaScript/First_steps"></a>,
-        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">primeiras etapas </a
+        ><a href="/pt-BR/docs/Learn_web_development/Core/Scripting"></a>,
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
           >blocos de construção</a
         >
         ,
-        <a href="/pt-BR/docs/Learn/JavaScript/Objects">objetos JavaScript</a> ),
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">objetos JavaScript</a> ),
         as
-        <a href="/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction"
           >noções básicas de APIs do lado do cliente</a
         >
       </td>
@@ -781,4 +781,4 @@ That's it for now. We hope you've found our rundown of client-side storage techn
 - [Cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies)
 - [Service worker API](/pt-BR/docs/Web/API/Service_Worker_API)
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

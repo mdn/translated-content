@@ -1,27 +1,24 @@
 ---
-title: HTMLMediaElement.audioTracks
+title: "HTMLMediaElement : propriété audioTracks"
+short-title: audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
+l10n:
+  sourceCommit: b5437b737639d6952d18b95ebd1045ed73e4bfa7
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`audioTracks`** est une propriété en lecture seule rattachée à l'interface [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) qui renvoie un objet [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList) répertoriant tous les objets [`AudioTrack`](/fr/docs/Web/API/AudioTrack) représentant les pistes audio de l'élément multimédia.
+La propriété en lecture seule **`audioTracks`** de l'interface {{DOMxRef("HTMLMediaElement")}} retourne un objet {{DOMxRef("AudioTrackList")}} répertoriant tous les objets {{DOMxRef("AudioTrack")}} représentant les pistes audio de l'élément multimédia.
 
-L'élément multimédia peut être soit un élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) ou un élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video).
+L'élément multimédia peut être soit un élément HTML {{HTMLElement("audio")}} ou un élément {{HTMLElement("video")}}.
 
-La liste renvoyée est dynamique&nbsp;; c'est-à-dire que lorsque des pistes sont ajoutées et supprimées de l'élément multimédia, le contenu de la liste change dynamiquement. Une fois que vous avez une référence à la liste, vous pouvez surveiller les modifications pour détecter l'ajout de nouvelles pistes audio ou la suppression de pistes existantes. Vous pouvez consulter les [gestionnaires d'évènements](/fr/docs/Web/API/AudioTrackList#évènements) associés à [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList) pour en savoir plus sur les modifications apportées à la liste des pistes d'un élément multimédia.
+La liste renvoyée est _dynamique_&nbsp;; c'est-à-dire que lorsque des pistes sont ajoutées et supprimées de l'élément multimédia, le contenu de la liste change dynamiquement. Une fois que vous avez une référence à la liste, vous pouvez surveiller les modifications pour détecter l'ajout de nouvelles pistes audio ou la suppression de pistes existantes. Vous pouvez consulter les [gestionnaires d'évènements](/fr/docs/Web/API/AudioTrackList#évènements) associés à {{DOMxRef("AudioTrackList")}} pour en savoir plus sur les modifications apportées à la liste des pistes d'un élément multimédia.
 
-## Syntaxe
+## Valeur
 
-```js
-let audioTracks = mediaElement.audioTracks;
-```
+Un objet {{DOMxRef("AudioTrackList")}} représente la liste des pistes audio incluses dans l'élément multimédia. La liste des pistes est accessible en notation matricielle ou en utilisant la méthode {{DOMxRef("AudioTrackList.getTrackById", "getTrackById()")}} de l'objet.
 
-### Valeur
-
-Un objet [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList) représente la liste des pistes audio incluses dans l'élément multimédia. La liste des pistes est accessible en notation matricielle ou en utilisant la méthode [`getTrackById()`](/fr/docs/Web/API/AudioTrackList/getTrackById) de l'objet.
-
-Chaque piste est représentée par un objet [`AudioTrack`](/fr/docs/Web/API/AudioTrack) qui fournit des informations sur la piste.
+Chaque piste est représentée par un objet {{DOMxRef("AudioTrack")}} qui fournit des informations sur la piste.
 
 ## Exemples
 
@@ -40,10 +37,10 @@ Le fragment HTML contient l'élément média en question.
 Le code JavaScript gère la mise en sourdine des pistes audio de l'élément vidéo.
 
 ```js
-let video = document.getElementById("video");
+const video = document.getElementById("video");
 
-for (let i = 0; i < video.audioTracks.length; i += 1) {
-  video.audioTracks[i].enabled = false;
+for (const track of video.audioTracks) {
+  track.enabled = false;
 }
 ```
 
@@ -57,6 +54,6 @@ for (let i = 0; i < video.audioTracks.length; i += 1) {
 
 ## Voir aussi
 
-- L'interface qui porte cette propriété, [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement).
-- [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) et [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video)
-- [`AudioTrack`](/fr/docs/Web/API/AudioTrack) et [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList)
+- L'interface {{DOMxRef("HTMLMediaElement")}}&nbsp;: utilisée pour définir la propriété `HTMLMediaElement.audioTracks`
+- Les éléments HTML {{HTMLElement("audio")}}, {{HTMLElement("video")}}
+- Les interfaces {{DOMxRef("AudioTrack")}}, {{DOMxRef("AudioTrackList")}}

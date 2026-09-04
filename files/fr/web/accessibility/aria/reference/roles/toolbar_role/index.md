@@ -3,7 +3,7 @@ title: "ARIA : rôle toolbar"
 short-title: toolbar
 slug: Web/Accessibility/ARIA/Reference/Roles/toolbar_role
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: c833741444aba4d524992813eda1cd8d64563aed
 ---
 
 Le rôle `toolbar` définit l'élément conteneur comme un ensemble de boutons ou de contrôles fréquemment utilisés, regroupés sous une forme visuelle compacte.
@@ -16,7 +16,7 @@ La barre d'outils regroupe généralement un sous-ensemble de fonctions présent
 
 Lors de la création d'une barre d'outils, il faut gérer la sélection et les interactions clavier à l'intérieur de la barre, en tenant compte du fait que les mêmes interactions clavier peuvent être utilisées à la fois dans la barre d'outils et dans les contrôles natifs inclus. Les touches <kbd>Flèche vers la gauche</kbd> et <kbd>Flèche vers la droite</kbd> servent à naviguer entre les contrôles d'une barre d'outils horizontale. Les touches <kbd>Flèche vers le haut</kbd> et <kbd>Flèche vers le bas</kbd> sont utilisées si la barre d'outils est verticale — dans ce cas, ajoutez aussi `aria-orientation="vertical"` — ou, dans une barre horizontale, peuvent être réservées à l'opération de contrôles comme les boutons de sélection qui nécessitent les flèches verticales.
 
-Évitez d'inclure des contrôles dont l'utilisation nécessite les touches fléchées utilisées pour la navigation dans la barre d'outils. Si cela est nécessaire, placez ce contrôle en dernier dans la barre. Par exemple, dans une barre d'outils horizontale, une zone de saisie peut être placée en dernier.
+Évitez d'inclure des contrôles dont l'utilisation nécessite les touches fléchées utilisées pour la navigation dans la barre d'outils. Si c'est nécessaire, placez ce contrôle en dernier dans la barre. Par exemple, dans une barre d'outils horizontale, une zone de saisie peut être placée en dernier.
 
 Si certains éléments interactifs de la barre d'outils sont temporairement désactivés, il peut être utile de les laisser sélectionnables afin que les utilisateur·ice·s de lecteurs d'écran soient informé·e·s de leur présence.
 
@@ -47,10 +47,10 @@ Gérez la sélection pour que la séquence de tabulation inclue un seul arrêt p
 
 Les éléments avec le rôle toolbar ont une valeur implicite `aria-orientation` à horizontal. Si la barre d'outils est bien horizontale, les interactions clavier suivantes doivent être mises en œuvre&nbsp;:
 
-- <kbd>Flèche vers la gauche</kbd> (pour une barre horizontale, valeur par défaut)
+- <kbd>Flèche vers la gauche</kbd>
   - : Déplace la sélection vers le contrôle précédent. Optionnellement, le déplacement peut boucler du premier élément vers le dernier.
 
-- <kbd>Flèche vers la droite</kbd> (pour une barre horizontale, valeur par défaut)
+- <kbd>Flèche vers la droite</kbd>
   - : Déplace la sélection vers le contrôle suivant. Optionnellement, le déplacement peut boucler du dernier élément vers le premier.
 
 Dans les barres d'outils à plusieurs rangées de contrôles, autorisez les flèches gauche et droite à boucler d'une rangée à l'autre, en laissant la possibilité de réserver les flèches verticales à l'opération de contrôles, comme la navigation entre boutons radio ou l'incrémentation/décrémentation d'un sélecteur numérique.
@@ -59,11 +59,11 @@ Dans les barres d'outils à plusieurs rangées de contrôles, autorisez les flè
 
 Si la barre d'outils est verticale, assurez-vous que `aria-orientation="vertical"` est défini, et mettez en œuvre les interactions clavier suivantes&nbsp;:
 
-- <kbd>Flèche vers le bas</kbd>
-  - : Déplace la sélection vers le contrôle suivant. Optionnellement, le déplacement peut boucler du dernier élément vers le premier.
-
 - <kbd>Flèche vers le haut</kbd>
   - : Déplace la sélection vers le contrôle précédent. Optionnellement, le déplacement peut boucler du premier élément vers le dernier.
+
+- <kbd>Flèche vers le bas</kbd>
+  - : Déplace la sélection vers le contrôle suivant. Optionnellement, le déplacement peut boucler du dernier élément vers le premier.
 
 ### Fonctionnalités JavaScript requises
 
@@ -81,7 +81,7 @@ Quand la barre d'outils contient la sélection, fournissez des indices visuels. 
 
 ## Problèmes d'accessibilité
 
-Évitez d'inclure des contrôles dont l'utilisation nécessite les touches fléchées utilisées pour la navigation dans la barre d'outils (flèches droite et gauche, ou haut et bas pour les barres verticales). Si cela est nécessaire, placez ce contrôle en dernier dans la barre. Par exemple, dans une barre d'outils horizontale, une zone de saisie peut être placée en dernier.
+Évitez d'inclure des contrôles dont l'utilisation nécessite les touches fléchées utilisées pour la navigation dans la barre d'outils (flèches droite et gauche, ou haut et bas pour les barres verticales). Si c'est nécessaire, placez ce contrôle en dernier dans la barre. Par exemple, dans une barre d'outils horizontale, une zone de saisie peut être placée en dernier.
 
 Si certains éléments interactifs de la barre d'outils sont désactivés, il peut être utile de les laisser sélectionnables afin que les utilisateur·ice·s de lecteurs d'écran soient informé·e·s de leur présence.
 
@@ -91,5 +91,5 @@ Si certains éléments interactifs de la barre d'outils sont désactivés, il pe
 
 ## Voir aussi
 
-- [La pseudo-classe CSS `:focus`](/fr/docs/Web/CSS/:focus)
-- [La pseudo-classe CSS `:focus-within`](/fr/docs/Web/CSS/:focus-within)
+- [La pseudo-classe CSS `:focus`](/fr/docs/Web/CSS/Reference/Selectors/:focus)
+- [La pseudo-classe CSS `:focus-within`](/fr/docs/Web/CSS/Reference/Selectors/:focus-within)

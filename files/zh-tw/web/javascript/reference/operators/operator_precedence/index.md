@@ -60,20 +60,20 @@ a = b = 5;
     <tr>
       <td rowspan="5">18</td>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Member Access", "#dot_notation", 1)}}
+        {{jsxref("Operators/Property_accessors", "Member Access", "#dot_notation", 1)}}
       </td>
       <td>從左至右</td>
       <td><code>… . …</code></td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Computed Member Access", "#bracket_notation", 1)}}
+        {{jsxref("Operators/Property_accessors", "Computed Member Access", "#bracket_notation", 1)}}
       </td>
       <td>從左至右</td>
       <td><code>… [ … ]</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/new","new")}} (with argument list)</td>
+      <td>{{jsxref("new")}} (with argument list)</td>
       <td>無</td>
       <td><code>new … ( … )</code></td>
     </tr>
@@ -97,7 +97,7 @@ a = b = 5;
     <tr>
       <td>17</td>
       <td>
-        {{jsxref("Operators/new","new")}} (without argument list)
+        {{jsxref("new")}} (without argument list)
       </td>
       <td>從右至左</td>
       <td><code>new …</code></td>
@@ -171,7 +171,7 @@ a = b = 5;
       <td><code>void …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/delete", "delete")}}</td>
+      <td>{{jsxref("delete")}}</td>
       <td><code>delete …</code></td>
     </tr>
     <tr>
@@ -402,7 +402,7 @@ a = b = 5;
       <td>3</td>
       <td>
         <a
-          href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
+          href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_operator"
           >條件運算</a
         >
       </td>

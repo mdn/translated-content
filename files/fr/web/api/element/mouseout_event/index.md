@@ -1,42 +1,46 @@
 ---
 title: "Element : évènement mouseout"
+short-title: mouseout
 slug: Web/API/Element/mouseout_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-L'évènement **`mouseout`** est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (ex. une souris) déplace le curseur en dehors de l'élément ou de l'un de ses fils. `mouseout` est également apporté à un élément si le curseur se déplace dans un élément fils car l'élément fils peut masquer la zone visible de l'élément.
+L'évènement **`mouseout`** est déclenché à partir d'un {{DOMxRef("Element")}} lorsqu'un dispositif de pointage (généralement une souris) déplace le curseur en dehors de l'élément ou de l'un de ses fils.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Se propage/remonte dans le DOM</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MouseEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété pour la gestion d'évènements</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onmouseout", "onmouseout")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+`mouseout` est également apporté à un élément si le curseur se déplace dans un élément fils, car l'élément fils peut masquer la zone visible de l'élément.
+
+Si l'élément cible a des éléments fils, les évènements `mouseout` et `mouseover` sont déclenchés lorsque la souris passe sur les limites de ces éléments également, et pas seulement sur l'élément cible lui-même. En général, le comportement des évènements {{DOMxRef("Element/mouseenter_event", "mouseenter")}} et {{DOMxRef("Element/mouseleave_event", "mouseleave")}} est plus logique, car ils ne sont pas affectés par le déplacement dans les éléments fils.
+
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("mouseout", (event) => { })
+
+onmouseout = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("MouseEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et de {{DOMxRef("Event")}}.
+
+{{InheritanceDiagram("MouseEvent")}}
 
 ## Exemples
 
-Dans l'exemple suivant, on illustre la différence entre `mouseout` et [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event). Ce dernier est ajouté à {{HTMLElement("ul")}} pour colorer la liste en violet lorsque la souris quitte `<ul>`. `mouseout` est ajouté à la liste pour colorer l'élément ciblé en orange lorsque la souris le quitte.
+Les exemples suivants montrent l'utilisation de l'évènement `mouseout`.
 
-En essayant cet exemple, vous pourrez voir que `mouseout` est envoyé aux éléments individuels de la liste tandis que `mouseleave` est géré sur la liste entière. Cela provient de la hiérarchie des éléments et du fait que les éléments de la liste "masquent" la liste sous-jacente.
+### `mouseout` et `mouseleave`
 
-### HTML
+Dans l'exemple suivant, on illustre la différence entre les évènements `mouseout` et {{DOMxRef("Element/mouseleave_event", "mouseleave")}}. Ce dernier est ajouté à {{HTMLElement("ul")}} pour colorer la liste en violet lorsque la souris quitte `<ul>`. `mouseout` est ajouté à la liste pour colorer l'élément ciblé en orange lorsque la souris le quitte.
+
+Lorsqu'on essaie cet exemple, on constate que `mouseout` est envoyé aux éléments individuels de la liste, tandis que `mouseleave` est géré sur la liste entière, en raison de la hiérarchie des éléments et du fait que les éléments de la liste masquent la liste sous-jacente.
+
+#### HTML
 
 ```html
 <ul id="test">
@@ -46,13 +50,12 @@ En essayant cet exemple, vous pourrez voir que `mouseout` est envoyé aux élém
 </ul>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
-let test = document.getElementById("test");
+const test = document.getElementById("test");
 
-// On affiche la liste en violet lorsque le curseur quitte
-// l'élément <ul>
+// On affiche la liste en violet lorsque le curseur quitte l'élément <ul>
 test.addEventListener(
   "mouseleave",
   function (event) {
@@ -67,8 +70,7 @@ test.addEventListener(
   false,
 );
 
-// On affiche les éléments <li> en orange lorsque la souris
-// les quitte
+// On affiche les éléments <li> en orange lorsque la souris les quitte
 test.addEventListener(
   "mouseout",
   function (event) {
@@ -86,7 +88,7 @@ test.addEventListener(
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples", 640, 200)}}
+{{EmbedLiveSample("`mouseout` et `mouseleave`", 640, 200)}}
 
 ## Spécifications
 
@@ -98,14 +100,14 @@ test.addEventListener(
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
-- D'autres évènements connexes
-  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
-  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
-  - [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
-  - [`click`](/fr/docs/Web/API/Element/click_event)
-  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
-  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)
+- [Apprendre&nbsp;: Introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
+- L'évènement {{DOMxRef("Element/mousedown_event", "mousedown")}}
+- L'évènement {{DOMxRef("Element/mouseup_event", "mouseup")}}
+- L'évènement {{DOMxRef("Element/mousemove_event", "mousemove")}}
+- L'évènement {{DOMxRef("Element/click_event", "click")}}
+- L'évènement {{DOMxRef("Element/dblclick_event", "dblclick")}}
+- L'évènement {{DOMxRef("Element/mouseover_event", "mouseover")}}
+- L'évènement {{DOMxRef("Element/mouseenter_event", "mouseenter")}}
+- L'évènement {{DOMxRef("Element/mouseleave_event", "mouseleave")}}
+- L'évènement {{DOMxRef("Element/contextmenu_event", "contextmenu")}}
+- L'évènement {{DOMxRef("Element/pointerout_event", "pointerout")}}

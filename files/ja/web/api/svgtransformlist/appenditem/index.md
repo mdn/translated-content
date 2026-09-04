@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("SVG")}}
 
-`appendItem()` は {{domxref("SVGTransformList")}} インターフェイスのメソッドで、リストの末尾に新しいアイテムをを追加します。
+`appendItem()` は {{domxref("SVGTransformList")}} インターフェイスのメソッドで、リストの末尾に新しいアイテムを追加します。
 
 挿入されるアイテムはアイテムそのものであり、コピーではありません。
 

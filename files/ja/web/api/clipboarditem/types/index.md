@@ -1,11 +1,14 @@
 ---
-title: ClipboardItem.types
+title: "ClipboardItem: types プロパティ"
+short-title: types
 slug: Web/API/ClipboardItem/types
+l10n:
+  sourceCommit: eaa5b39f80d5fac0e5bf182679dc658b7083d15b
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{APIRef("Clipboard API")}} {{securecontext_header}}
 
-**`types`** は {{domxref("ClipboardItem")}} インターフェイスの読み取り専用プロパティで、この {{domxref("ClipboardItem")}} の内容で利用できる{{Glossary("MIME type", 'MIME タイプ')}}の配列 ({{jsxref("Array")}}) を返します。
+**`types`** は {{domxref("ClipboardItem")}} インターフェイスの読み取り専用プロパティで、この {{domxref("ClipboardItem")}} 内で利用できる{{Glossary("MIME type", 'MIME タイプ')}}の配列 ({{jsxref("Array")}}) を返します。
 
 ## 値
 
@@ -13,7 +16,7 @@ slug: Web/API/ClipboardItem/types
 
 ## 例
 
-以下の例では、 {{domxref("clipboard.read()")}} メソッドによってクリップボード上のすべての項目を返しています。次に、 `types` プロパティで利用可能な型を確認し、 {{domxref("ClipboardItem.getType()")}} メソッドを使用して {{domxref("Blob")}} オブジェクトを返しています。指定されたタイプに対応するクリップボードのコンテンツが見つからない場合は、エラーが返されます。
+以下の例では、 {{domxref("Clipboard.read()")}} メソッドによってクリップボード上のすべてのアイテムを返しています。次に、 `types` プロパティで利用可能な型を確認し、 {{domxref("ClipboardItem.getType()")}} メソッドを使用して {{domxref("Blob")}} オブジェクトを返しています。指定されたタイプに対応するクリップボードのコンテンツが見つからない場合は、エラーが返されます。
 
 ```js
 async function getClipboardContents() {
@@ -43,5 +46,4 @@ async function getClipboardContents() {
 ## 関連情報
 
 - [クリップボード API](/ja/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

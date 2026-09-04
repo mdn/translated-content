@@ -132,7 +132,7 @@ li {
 
 現在試著把這個加到你的 CSS 中。
 
-在 MDN 上可以查到 `list-style-type` 個好好屬性能夠設定哪些值。看一看 [`list-style-type`](/zh-TW/docs/Web/CSS/list-style-type) 頁面，你將能在開頭處看到一個互動式範例，可以嘗試選擇不同的值看到其呈現結果，可用值的詳細描述放在頁面後面一點的位置。
+在 MDN 上可以查到 `list-style-type` 個好好屬性能夠設定哪些值。看一看 [`list-style-type`](/zh-TW/docs/Web/CSS/Reference/Properties/list-style-type) 頁面，你將能在開頭處看到一個互動式範例，可以嘗試選擇不同的值看到其呈現結果，可用值的詳細描述放在頁面後面一點的位置。
 
 經由查讀頁面的內容，你將會發現除了移除項目符號之外，也可以改變項目符號的樣式。試試看使用值 `square` 把項目符號改為方形。
 

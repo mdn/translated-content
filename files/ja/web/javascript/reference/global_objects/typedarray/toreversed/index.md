@@ -1,11 +1,10 @@
 ---
 title: TypedArray.prototype.toReversed()
+short-title: toReversed()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toReversed
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toReversed()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、 {{jsxref("TypedArray/reverse", "reverse()")}} メソッドに対応する[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)です。このメソッドは、要素を逆順にした新しい型付き配列を返します。このメソッドは {{jsxref("Array.prototype.toReversed()")}} と同じアルゴリズムです。
 

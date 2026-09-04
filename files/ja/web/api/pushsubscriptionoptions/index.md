@@ -14,7 +14,7 @@ l10n:
 ## インスタンスプロパティ
 
 - {{domxref("PushSubscriptionOptions.userVisibleOnly")}} {{ReadOnlyInline}}
-  - : プッシュサブスクリプションがユーザーに見える効果を持つメッセージのみに使われるかどうかを表す {{jsxref("boolean")}} 値です｡
+  - : プッシュサブスクリプションがユーザーに見える効果を持つメッセージのみに使われるかどうかを表す {{jsxref("Boolean")}} 値です｡
 - {{domxref("PushSubscriptionOptions.applicationServerKey")}} {{ReadOnlyInline}}
   - : プッシュサーバーがプッシュサーバーを通じてクライアントアプリケーションにメッセージを送信するのに用いる公開鍵です。
 

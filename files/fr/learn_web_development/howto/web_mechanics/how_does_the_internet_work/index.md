@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 original_slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Dans cet article, nous expliquons ce qu'est l'Internet et comment il fonctionne.
 
 <table class="standard-table">
@@ -14,7 +12,7 @@ Dans cet article, nous expliquons ce qu'est l'Internet et comment il fonctionne.
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Aucun, mais nous vous encourageons à lire l'article
-        <a href="/fr/Apprendre/Commencez_votre_projet_web"
+        <a href="/fr/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding"
           >Commencez votre projet Web</a
         >
         avant celui-ci.

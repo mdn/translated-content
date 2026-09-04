@@ -16,9 +16,9 @@ tokenList.replace(oldToken, newToken);
 ### Paramètres
 
 - oldToken
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la marque que vous voulez remplacer.
+  - : Une {{jsxref("String")}} (_chaîne de caractères_) représentant la marque que vous voulez remplacer.
 - newToken
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la marque avec laquelle vous voulez remplacer l'ancienne.
+  - : Une {{jsxref("String")}} (_chaîne de caractères_) représentant la marque avec laquelle vous voulez remplacer l'ancienne.
 
 ### Valeur retournée
 

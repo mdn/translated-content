@@ -37,4 +37,4 @@ Este método usualmente es llamado internamente por JavaScript y no explícitame
 
 ## Véase también
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

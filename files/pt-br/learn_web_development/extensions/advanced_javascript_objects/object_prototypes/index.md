@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_protot
 original_slug: Learn/JavaScript/Objects/Object_prototypes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Protótipos são o mecanismo pelo qual objetos JavaScript herdam recursos uns dos outros. Neste artigo, explicamos como as cadeias de protótipos funcionam e observamos como a propriedade prototype pode ser usada para adicionar métodos aos construtores existentes.
 
@@ -15,12 +15,12 @@ Protótipos são o mecanismo pelo qual objetos JavaScript herdam recursos uns do
       <td>
         Entender como funções em JavaScript funcionam, familiaridade com o
         básico de JavaScript (veja
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros Passos</a>
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">Primeiros Passos</a>
         e
-        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
           >Elementos Construtivos</a
         >), e o básico de Orientação a Objetos em JavaScript (veja
-        <a href="/pt-BR/docs/Aprender/JavaScript/Objetos"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects"
           >Introdução a Objetos</a
         >).
       </td>
@@ -290,4 +290,4 @@ Este artigo abrangeu protótipos de objetos JavaScript, incluindo como cadeias d
 
 No próximo artigo, veremos como você pode implementar a herança de funcionalidade entre dois dos seus próprios objetos personalizados.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

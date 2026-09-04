@@ -132,7 +132,7 @@ const binQuery = searchParams.get("bin"); // 'E AXQB A', '+' são substituídos 
 console.log(atob(binQuery) === rawData); // false
 ```
 
-Você pode evitar isso codificando os dados com o {{jsxref("encodeURIComponent", "encodeURIComponent()")}}.
+Você pode evitar isso codificando os dados com o {{jsxref("encodeURIComponent()")}}.
 
 ```js
 const rawData = "\x13à\x17@\x1F\x80";

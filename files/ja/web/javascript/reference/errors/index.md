@@ -1,9 +1,9 @@
 ---
 title: JavaScript エラーリファレンス
 slug: Web/JavaScript/Reference/Errors
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Errors")}}
 
 以下に、 JavaScript で発生するエラーのリストがあります。これらのエラーはデバッグを大いに助けてくれますが、報告される問題がいつも直ちに明快とは限りません。以下のページでは、これらのエラーについて詳しく説明します。どのエラーも {{jsxref("Error")}} オブジェクトを基礎としたオブジェクトであり、`name` と `message` を有しています。
 

@@ -3,8 +3,6 @@ title: Set[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.species
 ---
 
-{{JSRef}}
-
 **`Set[Symbol.species]`** 静态访问器属性是一个未使用的访问器属性，指定了如何复制 `Set` 对象。
 
 ## 语法

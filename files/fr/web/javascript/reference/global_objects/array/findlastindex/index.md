@@ -1,89 +1,59 @@
 ---
-title: Array.prototype.findLastIndex()
+title: "Array : méthode findLastIndex()"
+short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 l10n:
-  sourceCommit: 50e0b640bbd975e1f21f16fa2ec7bd545b57081c
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`findLastIndex()`** des instances de {{JSxRef("Array")}} parcourt le tableau dans l'ordre inverse et retourne l'indice du premier élément qui satisfait la fonction de test fournie.
+Si aucun élément ne satisfait la fonction de test, `-1` est retourné.
 
-La méthode **`findLastIndex()`** parcourt le tableau en sens inverse et renvoie l'indice du premier élément qui correspond au critère fourni par une fonction de test. Si aucun élément ne correspond à ce critère, c'est `-1` qui est renvoyé.
+Voir aussi la méthode {{JSxRef("Array/findLast", "findLast()")}}, qui retourne la valeur du dernier élément qui satisfait la fonction de test (plutôt que son indice).
 
-{{InteractiveExample("JavaScript Demo: Array.findLastIndex()", "shorter")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.findLastIndex()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 50, 130, 44];
+const array = [5, 12, 50, 130, 44];
 
 const isLargeNumber = (element) => element > 45;
 
-console.log(array1.findLastIndex(isLargeNumber));
-// Expected output: 3
-// Index of element with value: 130
+console.log(array.findLastIndex(isLargeNumber));
+// Résultat attendu : 3
+// Indice de l'élément dont la valeur est : 130
 ```
-
-Voir aussi la méthode [`findLast()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast) qui renvoie la valeur du dernier élément qui satisfait au critère de la fonction de test (plutôt que son indice).
 
 ## Syntaxe
 
 ```js-nolint
-// Fonction fléchée
-findLastIndex((element) => { /* … */ } )
-findLastIndex((element, index) => { /* … */ } )
-findLastIndex((element, index, array) => { /* … */ } )
-
-// Fonction de rappel
-findLastIndex(fnRappel)
-findLastIndex(fnRappel, thisArg)
-
-// Fonction de rappel en incise
-findLastIndex(function(element) { /* … */ })
-findLastIndex(function(element, index) { /* … */ })
-findLastIndex(function(element, index, array) { /* … */ })
-findLastIndex(function(element, index, array) { /* … */ }, thisArg)
+findLastIndex(callbackFn)
+findLastIndex(callbackFn, thisArg)
 ```
 
 ### Paramètres
 
-- `fnRappel`
-  - : Une fonction utilisée pour tester les éléments du tableau.
-
-    La fonction est appelée avec les arguments suivants&nbsp;:
+- `callbackFn`
+  - : Une fonction à exécuter pour chaque élément du tableau. Elle doit retourner un [équivalent à vrai](/fr/docs/Glossary/Truthy) pour indiquer qu'un élément correspondant a été trouvé, et un [équivalent à faux](/fr/docs/Glossary/Falsy) sinon. La fonction est appelée avec les arguments suivants&nbsp;:
     - `element`
-      - : L'élément du tableau en cours de traitement.
+      - : L'élément courant en cours de traitement dans le tableau.
     - `index`
-      - : L'indice de l'élément courant dans le tableau.
+      - : L'indice de l'élément courant en cours de traitement dans le tableau.
     - `array`
-      - : Le tableau sur lequel `findLastIndex()` a été appelée.
-
-    La fonction de rappel doit renvoyer une valeur [équivalente à `true`](/fr/docs/Glossary/Truthy) pour indiquer qu'un élément approprié a été trouvé. Ce sera l'indice de l'élément qui sera renvoyé par `findLastIndex()`.
-
-- `thisArg` {{optional_inline}}
-  - : L'objet à utiliser comme valeur pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) lors de l'appel à `fnRappel`.
+      - : Le tableau sur lequel `findLastIndex()` a été appelé.
+- `thisArg` {{Optional_Inline}}
+  - : Une valeur à utiliser comme `this` lors de l'exécution de `callbackFn`. Voir [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives).
 
 ### Valeur de retour
 
-L'indice du dernier (celui avec l'indice le plus élevé) élément du tableau qui passe le test. Si aucun élément ne correspond, c'est `-1` qui est renvoyé.
+Retourne l'indice du dernier élément (ayant l'indice le plus élevé) du tableau qui satisfait le test fourni. Sinon, retourne `-1` si aucun élément correspondant n'est trouvé.
 
 ## Description
 
-La méthode `findLastIndex()` exécute la fonction `fnRappel` une fois pour chaque élément du tableau, dans l'ordre décroissant des indices, jusqu'à ce que `fnRappel` renvoie une valeur [équivalente à `true`](/fr/docs/Glossary/Truthy). `findLastIndex()` renvoie alors l'indice de l'élément correspondant et arrête le parcours du tableau. Si `fnRappel` ne renvoie jamais de valeur équivalente à `true`, `findLastIndex()` renvoie `-1`.
+La méthode `findLastIndex()` est une méthode itérative. Elle appelle la fonction fournie `callbackFn` une fois pour chaque élément du tableau, dans l'ordre décroissant des indices, jusqu'à ce que `callbackFn` retourne un [équivalent à vrai](/fr/docs/Glossary/Truthy). `findLastIndex()` retourne alors l'indice de cet élément et cesse d'itérer sur le tableau. Si `callbackFn` ne retourne jamais un [équivalent à vrai](/fr/docs/Glossary/Truthy), `findLastIndex()` retourne `-1`. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
 
-`fnRappel` est appelée pour _chaque_ indice du tableau et pas uniquement pour ceux pour lesquels une valeur a été affectée. Les emplacements vides des [tableaux creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux) se comportent comme avec `undefined`.
+`callbackFn` est invoquée pour _chaque_ indice du tableau, pas seulement pour ceux qui ont une valeur assignée. Les emplacements vides dans les [tableaux creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux) se comportent comme `undefined`.
 
-Si un paramètre `thisArg` est fourni à `findLastIndex()`, il sera utilisé comme valeur pour `this` à chaque appel de `fnRappel`. S'il n'est pas fourni, [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) sera utilisé pour `this`.
-
-La méthode `findLastIndex()` ne modifie pas le tableau sur lequel elle est appelée, mais la fonction fournie pour `fnRappel` peut le modifier. Les éléments traités par `findLastIndex()` sont fixés _avant_ le premier appel à `fnRappel`. Ainsi&nbsp;:
-
-- `fnRappel` ne parcourra pas les éléments ajoutés après le début de l'appel à `findLastIndex()`.
-- Les éléments qui sont affectés à des indices ayant déjà été visités ne seront pas revus par `fnRappel`.
-- Les éléments qui sont affectés à des indices en dehors de l'intervalle du tableau ne seront pas parcourus par `fnRappel`.
-- Si un élément existant du tableau et qui n'a pas encore été traité mais est modifié par `fnRappel`, la valeur qui sera passée à `fnRappel` sera la valeur au moment où `findLastIndex()` visite l'indice de l'élément.
-- Les éléments qui sont [supprimés avec `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete) sont tout de même parcourus.
-
-> [!WARNING]
-> Les modifications concurrentes comme celles qui sont décrites dans le paragraphe précédent mènent souvent à du code difficilement compréhensible et devraient généralement être évitées.
-
-La méthode `findLastIndex()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques). Elle s'attend uniquement à ce que la valeur `this` ait une propriété `length` et des propriétés dont les clés sont des entiers.
+La méthode `findLastIndex()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur `this` possède une propriété `length` et des propriétés indexées par des clés entières.
 
 ## Exemples
 
@@ -108,6 +78,27 @@ console.log([4, 6, 8, 12].findLastIndex(estPremier)); // -1, aucun nombre trouv�
 console.log([4, 5, 7, 8, 9, 11, 12].findLastIndex(estPremier)); // 5
 ```
 
+> [!NOTE]
+> L'implémentation de `estPremier()` est fournie à titre d'exemple seulement. Pour une application réelle, préférez un algorithme fortement mémoïsé tel que le [Crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) afin d'éviter des calculs répétés.
+
+### Utiliser le troisième argument de `callbackFn`
+
+L'argument `array` est utile si vous voulez accéder à un autre élément du tableau, en particulier lorsque vous ne disposez pas d'une variable qui référence déjà ce tableau. L'exemple suivant utilise d'abord `filter()` pour extraire les valeurs positives, puis `findLastIndex()` pour trouver le dernier élément qui est inférieur à ses voisins.
+
+```js
+const nombres = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const dernierCreux = nombres
+  .filter((num) => num > 0)
+  .findLastIndex((num, idx, arr) => {
+    // Sans l'argument arr, il est impossible d'accéder facilement au
+    // tableau intermédiaire sans le sauvegarder dans une variable.
+    if (idx > 0 && num >= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && num >= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(dernierCreux); // 6
+```
+
 ### Utiliser `findLastIndex()` sur des tableaux creux
 
 En cherchant `undefined` dans un tableau creux, on peut obtenir l'indice d'un emplacement vide.
@@ -126,6 +117,7 @@ const semblableTableau = {
   0: 2,
   1: 7.3,
   2: 4,
+  3: 3, // ignored by findLastIndex() since length is 3
 };
 console.log(
   Array.prototype.findLastIndex.call(semblableTableau, (x) =>
@@ -144,7 +136,13 @@ console.log(
 
 ## Voir aussi
 
-- [Une prothèse d'émulation pour `Array.prototype.findLastIndex()` dans la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [`Array.prototype.findLast()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast)
-- [`Array.prototype.find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
-- [`Array.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- L'objet natif {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.find()")}}
+- La méthode {{JSxRef("Array.prototype.findIndex()")}}
+- La méthode {{JSxRef("Array.prototype.findLast()")}}
+- La méthode {{JSxRef("Array.prototype.indexOf()")}}
+- La méthode {{JSxRef("Array.prototype.lastIndexOf()")}}
+- La méthode {{JSxRef("TypedArray.prototype.findLastIndex()")}}
+- [Prothèse d'émulation de `Array.prototype.findLastIndex` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#array-find-from-last)
+- [Prothèse d'émulation es-shims de `Array.prototype.findLastIndex` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.findlastindex)

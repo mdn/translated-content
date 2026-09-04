@@ -2,10 +2,10 @@
 title: WebGPU API
 slug: Web/API/WebGPU_API
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 19b8981ede1bc5dad6e0eb7f5f7c2a0ee0c296f1
 ---
 
-{{DefaultAPISidebar("WebGPU API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{DefaultAPISidebar("WebGPU API")}}{{securecontext_header}}
 
 **WebGPU API** は、ウェブ開発者が下層のシステムの GPU (Graphics Processing Unit) を使用し、高効率の計算をしたり、ブラウザーでレンダーできる複雑な画像を描画したりすることを可能にします。
 
@@ -15,7 +15,7 @@ WebGPU は {{domxref("WebGL_API", "WebGL", "", "nocode")}} の後継で、最近
 
 2011 年頃に最初に登場した後、{{domxref("WebGL_API", "WebGL", "", "nocode")}} がグラフィックの能力の面でウェブに革命を起こしたといえます。WebGL は [OpenGL ES 2.0](https://registry.khronos.org/OpenGL-Refpages/es2.0/) グラフィックライブラリーの JavaScript への移植であり、ウェブページがレンダリング計算をデバイスの GPU に直接渡し、超高速で処理させ、結果を {{htmlelement("canvas")}} 要素内に描画することを可能にします。
 
-WebGL と WebGL シェーダーのコードを書くのに用いられる [GLSL](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>) 言語は複雑なので、WebGL アプリケーションをより簡単に書けるようにするためにいくつかの WebGL ライブラリーが作られました。有名な例としては [Three.js](https://threejs.org/)、[Babylon.js](https://www.babylonjs.com/)、[PlayCanvas](https://playcanvas.com/) などがあります。開発者はこれらのツールを用い、没入感のあるウェブベースの 3D ゲーム、ミュージックビデオ、訓練やモデリングのツール、VR や AR の体験、などを作ってきました。
+WebGL と WebGL シェーダーのコードを書くのに用いられる [GLSL](<https://wikis.khronos.org/opengl/Core_Language_(GLSL)>) 言語は複雑なので、WebGL アプリケーションをより簡単に書けるようにするためにいくつかの WebGL ライブラリーが作られました。有名な例としては [Three.js](https://threejs.org/)、[Babylon.js](https://www.babylonjs.com/)、[PlayCanvas](https://playcanvas.com/) などがあります。開発者はこれらのツールを用い、没入感のあるウェブベースの 3D ゲーム、ミュージックビデオ、訓練やモデリングのツール、VR や AR の体験、などを作ってきました。
 
 しかし、WebGL には修正が必要な根本的な問題点がいくつかあります。
 
@@ -34,7 +34,7 @@ WebGPU は、最近の GPU API と互換性があり、より「webby」な感�
 - GPU がある物理デバイス。ほとんどのデバイスには GPU が 1 個だけありますが、複数あるデバイスもあります。以下の異なる GPU の種類が利用可能です。
   - 統合 GPU: CPU と同じ基板にあり、メモリーを共有します。
   - 個別 GPU: 独自の基板にあり、CPU からは分離されています。
-  - ソフトウェア「GPU」: CPU 上で実装されています。
+  - ソフトウェア "GPU": CPU 上に実装されています。
 
   > [!NOTE]
   > 上記の図では、GPU が 1 個だけあるデバイスを仮定しています。
@@ -48,7 +48,7 @@ WebGPU は、最近の GPU API と互換性があり、より「webby」な感�
 論理デバイスは、{{domxref("GPUDevice")}} オブジェクトインスタンスで表され、ウェブアプリケーションが WebGPU のすべての機能にアクセスする基礎となります。デバイスへのアクセスは、以下の手順で行われます。
 
 1. {{domxref("Navigator.gpu")}} プロパティ (もしくは、ワーカーから WebGPU の機能を用いる場合は {{domxref("WorkerNavigator.gpu")}}) が現在のコンテキスト用の {{domxref("GPU")}} オブジェクトを返します。
-2. {{domxref("GPU.requestAdapter", "GPU.requestAdapter()")}} メソッドを通じてアダプターにアクセスします。このメソッドは省略可能な設定オブジェクトを受け取り、たとえば高パフォーマンスのアダプターや低消費電力のアダプターを要求することができます。これが無い場合は、デバイスはデフォルトのアダプターへのアクセスを提供し、これはほとんどの目的に十分適するでしょう。
+2. {{domxref("GPU.requestAdapter", "GPU.requestAdapter()")}} メソッドを通じてアダプターにアクセスします。このメソッドは省略可能な設定オブジェクトを受け取り、たとえば[互換モード](#webgpu_互換モード)高パフォーマンスのアダプターや低消費電力のアダプターを要求することができます。これが無い場合は、デバイスはデフォルトのアダプターへのアクセスを提供し、これはほとんどの目的に十分適するでしょう。
 3. {{domxref("GPUAdapter.requestDevice()")}} によりデバイスを要求できます。このメソッドは、(ディスクリプターと呼ばれる) オプションオブジェクトも受け取り、これにより論理デバイスに期待する詳細な機能や制限を指定できます。これが無い場合は、返されるデバイスは合理的な汎用のスペックを持ち、これはほとんどの用途に適します。
 
 これらにいくつかの機能検出チェックを加えると、上記の手順は以下のようにして実現できます。
@@ -59,29 +59,57 @@ async function init() {
     throw Error("WebGPU に対応していません。");
   }
 
-  const adapter = await navigator.gpu.requestAdapter();
+  let adapter;
+  try {
+    adapter = await navigator.gpu.requestAdapter();
+  } catch (error) {
+    console.error(error);
+  }
   if (!adapter) {
     throw Error("WebGPU アダプターの要求に失敗しました。");
   }
 
   const device = await adapter.requestDevice();
 
-  //...
+  // …
 }
 ```
+
+### WebGPU 互換モード
+
+デフォルトで、`GPUAdapter` は WebGPU のすべてのコア機能と制限に対応しており、これによりアプリケーションは最新のプラットフォーム用のグラフィック API を備えた端末に対応することができます。これは「コア」WebGPU と呼ばれます。
+
+WebGPU を「互換モード」に設定できます。これにより、`GPUAdapter `は、OpenGL ES 3.1 や Direct3D 11 などの古いグラフィック API でも実行可能な、WebGPU API の制限されたサブセットのみに対応するようになります。これは [`featureLevel`](/ja/docs/Web/API/GPU/requestAdapter#featurelevel) の値を `compatibility` に指定して {{domxref("GPU.requestAdapter()")}} を呼び出すことで実現できます。
+
+```js
+const adapter = await navigator.gpu.requestAdapter({
+  featureLevel: "compatibility",
+});
+```
+
+互換モードの具体的な制限事項については、[WebGPU 互換モード](https://webgpufundamentals.org/webgpu/lessons/webgpu-compatibility-mode.html)に詳述されています。
+制限対象のアプリケーションは、コア WebGPU のサブセットに対応しているため、引き続き有効な WebGPU コアアプリケーションとみなされます。したがって、たとえ互換モードに明示的に対応していなくても、コア WebGPU を対応しているすべてのブラウザーで動作します。
+
+コア WebGPU に対応する `GPUAdapter` または `GPUDevice` では、`core-features-and-limits` 機能が利用できます（{{domxref("GPUSupportedFeatures")}} を参照）。WebGPU アプリがコアモードか互換モードかを検査するには、`core-features-and-limits`機能が対応しているかどうかを調べます。例えば、次のようにします。
+
+```js
+const isCore = device.features.has("core-features-and-limits");
+```
+
+[必要な時のみ互換モードを使用](/ja/docs/Web/API/GPU/requestAdapter#using_compatibility_mode_only_if_necessary)も参照してください。
 
 ## パイプラインとシェーダー: WebGPU アプリケーションの構造
 
 パイプラインは、プログラムの処理を実現するために実行するプログラマブルなステージが入る論理的な構造です。現在、WebGPU では以下の 2 種類のパイプラインを扱うことができます。
 
 - レンダーパイプラインはグラフィックをレンダリングします。{{htmlelement("canvas")}} 要素に描画することが多いですが、オフスクリーンでグラフィックをレンダリングすることもできます。これには以下の 2 個のメインステージがあります。
-  - バーテックスステージ: バーテックスシェーダーが GPU に渡された位置データを受け取り、回転、変換、射影などの指定の効果を適用することで 3D 空間内の頂点群の位置を決定します。そして、頂点は三角形 (レンダリングされるグラフィックの基礎となる部品) などのプリミティブに組み立てられ、GPU によって描画を行うキャンバスのどのピクセルをカバーするかを特定するためにラスタライズされます。
+  - 頂点ステージ: 頂点シェーダーが GPU に渡された位置データを受け取り、回転、変換、射影などの指定の効果を適用することで 3D 空間内の頂点群の位置を決定します。そして、頂点は三角形 (レンダリングされるグラフィックの基礎となる部品) などのプリミティブに組み立てられ、GPU によって描画を行うキャンバスのどのピクセルをカバーするかを特定するためにラスタライズされます。
 
-  - : フラグメントステージ: バーテックスシェーダーによって生成されたプリミティブでカバーされた各ピクセルの色をフラグメントシェーダーが計算します。これらの計算には、表面の詳細を提供する (テクスチャ形式の) 画像や、仮想光源の位置や色などの入力がよく用いられます。
+  - : フラグメントステージ: 頂点シェーダーによって生成されたプリミティブでカバーされた各ピクセルの色をフラグメントシェーダーが計算します。これらの計算には、表面の詳細を提供する (テクスチャ形式の) 画像や、仮想光源の位置や色などの入力がよく用いられます。
 
 - コンピュートパイプラインは一般の計算用です。コンピュートパイプラインは 1 個の計算ステージからなります。このステージでは、コンピュートシェーダーが一般のデータを受け取り、指定の数のワークグループで並列計算を行い、結果を 1 個以上のバッファーで返します。バッファーには任意の種類のデータを置けます。
 
-上記で言及されたシェーダーは、GPU で処理される命令の集合です。WebGPU のシェーダーは [WebGPU Shader Language](https://gpuweb.github.io/gpuweb/wgsl/) (WGSL) と呼ばれる Rust 風の低レベルの言語で書かれます。
+上記で言及されたシェーダーは、GPU で処理される命令の集合です。WebGPU のシェーダーは [WebGPU Shading Language](https://gpuweb.github.io/gpuweb/wgsl/) (WGSL) と呼ばれる Rust 風の低レベルの言語で書かれます。
 
 WebGPU アプリケーションを構築するにはいくつかの異なる方法がありますが、このプロセスはおそらく以下の手順を含むでしょう。
 
@@ -104,7 +132,7 @@ WebGPU アプリケーションを構築するにはいくつかの異なる方�
 
 ### シェーダーモジュールの生成
 
-ここでは以下のシェーダーコードを用います。バーテックスシェーダーステージ (`@vertex` ブロック) は、位置と色が格納されたデータのチャンクを受け取り、位置に基づいて頂点を配置し、色を補間し、これらのデータをフラグメントシェーダーステージに渡します。フラグメントシェーダーステージ (`@fragment` ブロック) は、バーテックスシェーダーステージからデータを受け取り、指定の色に基づいて頂点の色を決定します。
+ここでは以下のシェーダーコードを用います。頂点シェーダーステージ (`@vertex` ブロック) は、位置と色が格納されたデータのチャンクを受け取り、位置に基づいて頂点を配置し、色を補間し、これらのデータをフラグメントシェーダーステージに渡します。フラグメントシェーダーステージ (`@fragment` ブロック) は、頂点シェーダーステージからデータを受け取り、指定の色に基づいて頂点の色を決定します。
 
 ```js
 const shaders = `
@@ -153,7 +181,7 @@ const canvas = document.querySelector("#gpuCanvas");
 const context = canvas.getContext("webgpu");
 
 context.configure({
-  device: device,
+  device,
   format: navigator.gpu.getPreferredCanvasFormat(),
   alphaMode: "premultiplied",
 });
@@ -194,7 +222,7 @@ device.queue.writeBuffer(vertexBuffer, 0, vertices, 0, vertices.length);
 
 これでデータをバッファーに配置できました。準備の次のパートは、レンダリングに用いることができるパイプラインを実際に生成することです。
 
-まず最初に、頂点データで必要なレイアウトを記述するオブジェクトを生成します。これは以前に配列 `vertices` およびバーテックスシェーダーステージで見たものを完全に記述します。すなわち、各頂点が位置と色のデータを持ちます。どちらも (WGSL の `vec4<f32>` 型に対応する) `float32x4` 形式でフォーマットされ、色データは各頂点で 16 バイトのオフセットから始まります。`arrayStride` はストライド、すなわち各頂点を構成するバイト数を指定し、`stepMode` はデータを頂点ごとに読み取るべきであることを指定します。
+まず最初に、頂点データで必要なレイアウトを記述するオブジェクトを生成します。これは以前に配列 `vertices` および頂点シェーダーステージで見たものを完全に記述します。すなわち、各頂点が位置と色のデータを持ちます。どちらも (WGSL の `vec4<f32>` 型に対応する) `float32x4` 形式でフォーマットされ、色データは各頂点で 16 バイトのオフセットから始まります。`arrayStride` はストライド、すなわち各頂点を構成するバイト数を指定し、`stepMode` はデータを頂点ごとに読み取るべきであることを指定します。
 
 ```js
 const vertexBuffers = [
@@ -219,9 +247,9 @@ const vertexBuffers = [
 
 次に、レンダーパイプラインステージの構成を指定するディスクリプターオブジェクトを生成します。両方のシェーダーステージで関係するコードがある {{domxref("GPUShaderModule")}} (`shaderModule`)、および各ステージのエントリーポイントとなる関数の名前を指定します。
 
-さらに、バーテックスシェーダーステージでは頂点データに求める状態を提供する `vertexBuffers` オブジェクトを提供し、フラグメントシェーダーステージでは (以前キャンバスコンテキストの設定で指定した形式と一致する) 指定のレンダリング形式を表す色ターゲットの状態の配列を提供します。
+さらに、頂点シェーダーステージでは頂点データに求める状態を提供する `vertexBuffers` オブジェクトを提供し、フラグメントシェーダーステージでは (以前キャンバスコンテキストの設定で指定した形式と一致する) 指定のレンダリング形式を表す色ターゲットの状態の配列を提供します。
 
-さらに、`primitive` 状態も指定します。これは今回は単に描画するプリミティブの種類を表します。さらに、`layout` を `auto` に設定します。`layout` プロパティはパイプラインの実行中に用いるすべての GPU リソース (バッファーやテクスチャーなど) のレイアウト (構造、用途、種類) を定義します。より複雑なアプリケーションでは、これは {{domxref("GPUPipelineLayout")}} オブジェクトの形式になるでしょう。これは {{domxref("GPUDevice.createPipelineLayout()")}} を用いて生成でき ([コンピュートパイプラインの基本](#コンピュートパイプラインの基本)で例を見ることができます)、GPU がどうすればパイプラインを最も効率よく実行できるかを事前に決定できるようにします。しかし、ここでは値 `auto` を指定し、パイプラインにシェーダーコードで定義されたバインディングに基づいて暗黙のバインドグループレイアウトを生成させます。
+さらに、`primitive` オブジェクトも指定します。これは今回は単に描画するプリミティブの種類を表します。さらに、`layout` を `auto` に設定します。`layout` プロパティはパイプラインの実行中に用いるすべての GPU リソース (バッファーやテクスチャーなど) のレイアウト (構造、用途、種類) を定義します。より複雑なアプリケーションでは、これは {{domxref("GPUPipelineLayout")}} オブジェクトの形式になるでしょう。これは {{domxref("GPUDevice.createPipelineLayout()")}} を用いて生成でき ([コンピュートパイプラインの基本](#コンピュートパイプラインの基本)で例を見ることができます)、GPU がどうすればパイプラインを最も効率よく実行できるかを事前に決定できるようにします。しかし、値 `auto` を指定し、パイプラインにシェーダーコードで定義されたバインディングに基づいて暗黙のバインドグループレイアウトを生成させます。
 
 ```js
 const pipelineDescriptor = {
@@ -317,7 +345,8 @@ device.queue.submit([commandEncoder.finish()]);
 
 ```js
 // グローバルのバッファサイズを定義する
-const BUFFER_SIZE = 1000;
+const NUM_ELEMENTS = 1000;
+const BUFFER_SIZE = NUM_ELEMENTS * 4; // バイト単位のバッファーサイズ
 
 const shader = `
 @group(0) @binding(0)
@@ -332,7 +361,7 @@ fn main(
   local_id : vec3u,
 ) {
   // バッファーの範囲外にアクセスしないようにする
-  if (global_id.x >= ${BUFFER_SIZE}) {
+  if (global_id.x >= ${NUM_ELEMENTS}) {
     return;
   }
 
@@ -427,7 +456,7 @@ const computePipeline = device.createComputePipeline({
 ```js
 passEncoder.setPipeline(computePipeline);
 passEncoder.setBindGroup(0, bindGroup);
-passEncoder.dispatchWorkgroups(Math.ceil(BUFFER_SIZE / 64));
+passEncoder.dispatchWorkgroups(Math.ceil(NUM_ELEMENTS / 64));
 
 passEncoder.end();
 ```
@@ -443,7 +472,7 @@ commandEncoder.copyBufferToBuffer(
   0, // コピー元のオフセット
   stagingBuffer,
   0, // コピー先のオフセット
-  BUFFER_SIZE,
+  BUFFER_SIZE, // 長さ（バイト単位）
 );
 
 // コマンドバッファーの配列を実行用のコマンドキューに渡し、フレームを終える
@@ -457,7 +486,7 @@ device.queue.submit([commandEncoder.finish()]);
 await stagingBuffer.mapAsync(
   GPUMapMode.READ,
   0, // オフセット
-  BUFFER_SIZE, // サイズ
+  BUFFER_SIZE, // 長さ（バイト単位）
 );
 
 const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE);
@@ -539,7 +568,7 @@ explainer で、WebGPU のエラー処理についての詳細情報を得るこ
 - {{domxref("GPUPipelineLayout")}}
   - : パイプラインで用いる {{domxref("GPUBindGroupLayout")}} を定義します。コマンドのエンコード時にパイプラインとともに用いる {{domxref("GPUBindGroup")}} は、互換性がある {{domxref("GPUBindGroupLayout")}} を持っている必要があります。
 - {{domxref("GPURenderPipeline")}}
-  - : バーテックスシェーダーステージとフラグメントシェーダーステージを制御し、{{domxref("GPURenderPassEncoder")}} や {{domxref("GPURenderBundleEncoder")}} で使用できます。
+  - : 頂点シェーダーステージとフラグメントシェーダーステージを制御し、{{domxref("GPURenderPassEncoder")}} や {{domxref("GPURenderBundleEncoder")}} で使用できます。
 
 ### コマンドのエンコードと GPU への送信
 
@@ -556,7 +585,7 @@ explainer で、WebGPU のエラー処理についての詳細情報を得るこ
 - {{domxref("GPURenderBundleEncoder")}}
   - : コマンド群のバンドルを事前に記録するのに使用します。これらは、必要に応じて何度でも、{{domxref("GPURenderPassEncoder.executeBundles", "executeBundles()")}} メソッドにより {{domxref("GPURenderPassEncoder")}} で再利用できます。
 - {{domxref("GPURenderPassEncoder")}}
-  - : {{domxref("GPURenderPipeline")}} が発行し、バーテックスシェーダーステージとフラグメントシェーダーステージの制御に関するコマンドをエンコードします。{{domxref("GPUCommandEncoder")}} による全体のエンコード処理の一部です。
+  - : {{domxref("GPURenderPipeline")}} が発行し、頂点シェーダーステージとフラグメントシェーダーステージの制御に関するコマンドをエンコードします。{{domxref("GPUCommandEncoder")}} による全体のエンコード処理の一部です。
 
 ### レンダリングパスにおけるクエリーの実行
 
@@ -586,7 +615,7 @@ explainer で、WebGPU のエラー処理についての詳細情報を得るこ
 
 ## セキュリティの要件
 
-この API 全体は[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用可能です。
+この API 全体は[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用可能です。
 
 ## 例
 
@@ -605,5 +634,5 @@ explainer で、WebGPU のエラー処理についての詳細情報を得るこ
 ## 関連情報
 
 - [WebGPU best practices](https://toji.dev/webgpu-best-practices/)
-- [WebGPU explainer](https://gpuweb.github.io/gpuweb/explainer)
+- [WebGPU explainer](https://gpuweb.github.io/gpuweb/explainer/)
 - [WebGPU — All of the cores, none of the canvas](https://surma.dev/things/webgpu/)

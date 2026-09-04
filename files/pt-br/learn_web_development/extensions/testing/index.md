@@ -25,5 +25,5 @@ Você realmente precisa de uma base forte de conhecimento nessas tecnologias ant
 
 - Ferramentas de Desenvolvimento Web do Mundo Real (TBD)
   - : Neste módulo, exploramos os diferentes tipos de ferramentas de desenvolvimento web disponíveis. Isso inclui revisar os tipos de tarefas mais comuns que será pedido a você para resolver, como elas se complementam no trabalho, e as melhores ferramentas disponíveis atualmente para endereçar essas tarefas.
-- [Testes de navegadores](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing)
+- [Testes de navegadores](/pt-BR/docs/Learn_web_development/Extensions/Testing)
   - : Este módulo olha especificamente para a área de testes de projetos web sobre diferentes navegadores web. Neste módulo, procuramos identificar seu público alvo (por exemplo, quais usuários, navegadores e dispositivos você mais precisa se preocupar?), como elaborar os testes, os principais problemas que você vai enfrentar com tipos de código diferentes e como consertar ou mitigá-los, e como usar a automação para acelerar os testes.

@@ -602,13 +602,13 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/Security/Subresource_Integrity">integrity</a></code>
+        <code><a href="/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity">integrity</a></code>
       </td>
       <td>
         {{ HTMLElement("link") }}、{{ HTMLElement("script") }}
       </td>
       <td>
-        指定<a href="/zh-CN/docs/Web/Security/Subresource_Integrity"
+        指定<a href="/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity"
           >子资源完整性</a>值，允许浏览器验证它们获取的内容。
       </td>
     </tr>

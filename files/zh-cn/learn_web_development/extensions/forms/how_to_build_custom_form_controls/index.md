@@ -1664,7 +1664,7 @@ window.addEventListener("load", () => {
 ```
 
 > [!NOTE]
-> 不需要同时包含 `role` 属性和 `class` 属性。你可以在 CSS 中使用 `[role="option"]` [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)来代替 `.option` 类。
+> 不需要同时包含 `role` 属性和 `class` 属性。你可以在 CSS 中使用 `[role="option"]` [属性选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Attribute_selectors)来代替 `.option` 类。
 
 ### `aria-selected` 属性
 

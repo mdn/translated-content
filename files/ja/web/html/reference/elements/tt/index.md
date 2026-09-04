@@ -1,14 +1,14 @@
 ---
-title: "<tt>: テレタイプテキスト要素"
+title: HTML `<tt>` テレタイプテキスト要素
+short-title: <tt>
 slug: Web/HTML/Reference/Elements/tt
-original_slug: Web/HTML/Element/tt
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
-**`<tt>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントで表示される行内文字列を生成します。この要素は、テレタイプ、テキスト専用画面、ラインプリンターのような等幅の表示装置で表示されるテキストとしてスタイルを設定しようとするものです。
+**`<tt>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("user agent", "ユーザーエージェント")}}のデフォルトの等幅フォントで表示される行内文字列を生成します。この要素は、テレタイプ、テキスト専用画面、ラインプリンターのような等幅の表示装置で表示されるテキストとしてスタイルを設定しようとするものです。
 
 **等幅フォント** や **モノスペースフォント** は交換可能で同じ意味を持っています。これらは文字の幅がすべて同じピクセル数のフォントを説明する言葉です。
 
@@ -29,10 +29,10 @@ l10n:
 
 ```html
 <p>
-  Enter the following at the telnet command prompt:
+  telnet コマンドプロンプトで次のコマンドを入力してください。
   <code>set localecho</code><br />
 
-  The telnet client should display: <tt>Local Echo is on</tt>
+  telnet クライアントは <tt>Local Echo is on</tt> と表示します。
 </p>
 ```
 
@@ -40,15 +40,15 @@ l10n:
 
 {{EmbedLiveSample("Basic_example", 650, 80)}}
 
-### 既定のフォントの上書き
+### デフォルトのフォントの上書き
 
-行う必要はありませんが、ブラウザーが許可していれば、ブラウザーの既定のフォントを上書きすることができます。 CSS を使用します。
+行う必要はありませんが、ブラウザーが許可していれば、ブラウザーのデフォルトのフォントを上書きすることができます。 CSS を使用します。
 
 #### CSS
 
 ```css
 tt {
-  font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
+  font-family: "Lucida Console", "Menlo", "Monaco", "Courier New", monospace;
 }
 ```
 
@@ -56,10 +56,10 @@ tt {
 
 ```html
 <p>
-  Enter the following at the telnet command prompt:
+  telnet コマンドプロンプトで次のコマンドを入力してください。
   <code>set localecho</code><br />
 
-  The telnet client should display: <tt>Local Echo is on</tt>
+  telnet クライアントは <tt>Local Echo is on</tt> と表示します。
 </p>
 ```
 
@@ -69,10 +69,10 @@ tt {
 
 ## 使用上のメモ
 
-既定では `<tt>` 要素はブラウザーの既定の等幅フォントを使って表示されます。前述の[既定のフォントの上書き](#既定のフォントの上書き)にある通り、 CSS で `tt セレクターを使用した規則を作成することで、これを上書きすることができます。
+デフォルトでは `<tt>` 要素はブラウザーのデフォルトの等幅フォントを使って表示されます。前述の[デフォルトのフォントの上書き](#デフォルトのフォントの上書き)にある通り、 CSS で `tt セレクターを使用した規則を作成することで、これを上書きすることができます。
 
 > [!NOTE]
-> 既定の等幅フォントの設定を変更するユーザー設定が CSS よりも優先することがあります。
+> デフォルトの等幅フォントの設定を変更するユーザー設定が CSS よりも優先することがあります。
 
 この要素は HTML 4.01 では公式には非推奨にされませんでしたが、使用は避けて意味的要素や CSS を使用するとされていました。 `<tt>` 要素は HTML 5 で廃止されました。
 
@@ -82,16 +82,25 @@ tt {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >, 知覚可能コンテンツ
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
       </td>
     </tr>
     <tr>
@@ -101,7 +110,9 @@ tt {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
       </td>
     </tr>
     <tr>

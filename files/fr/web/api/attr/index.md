@@ -15,11 +15,11 @@ Ce type représente un attribut d'un élément DOM comme un objet. Dans la plupa
 - {{domxref("Attr.name", "name")}} {{readOnlyInline}}
   - : Le nom de l'attribut.
 - {{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}
-  - : Une {{domxref("DOMString","Chaîne de caractères")}} représentant l'URI de l'espace nom de l'attribut ou `null` s'il n'y a pas d'espace nom.
+  - : Une {{jsxref("String","Chaîne de caractères")}} représentant l'URI de l'espace nom de l'attribut ou `null` s'il n'y a pas d'espace nom.
 - {{domxref("Attr.localName", "localName")}} {{readOnlyInline}}
-  - : Une {{domxref("DOMString","Chaîne de caractères")}} représentant la partie locale du nom qualifié de l'attribut.
+  - : Une {{jsxref("String","Chaîne de caractères")}} représentant la partie locale du nom qualifié de l'attribut.
 - {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
-  - : Une {{domxref("DOMString","Chaîne de caractères")}} représentant le préfixe de l'espace nom de l'attribut, ou `null` si aucun préfixe n'est spécifié.
+  - : Une {{jsxref("String","Chaîne de caractères")}} représentant le préfixe de l'espace nom de l'attribut, ou `null` si aucun préfixe n'est spécifié.
 - {{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}
   - : L'élément contenant l'attribut.
 

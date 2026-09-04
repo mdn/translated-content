@@ -7,9 +7,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 
 ## Сводка
 
-Свойство **`Number.NaN`** представляет «не число». Эквивалентно глобальному объекту {{jsxref("Global_Objects/NaN", "NaN")}}.
+Свойство **`Number.NaN`** представляет «не число». Эквивалентно глобальному объекту {{jsxref("NaN")}}.
 
-Вам не нужно создавать объект {{jsxref("Global_Objects/Number", "Number")}} для доступа к этому статическому свойству (используйте `Number.NaN`).
+Вам не нужно создавать объект {{jsxref("Number")}} для доступа к этому статическому свойству (используйте `Number.NaN`).
 
 {{js_property_attributes(0, 0, 0)}}
 
@@ -23,5 +23,5 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 
 ## Смотрите также
 
-- Глобальный объект {{jsxref("Global_Objects/NaN", "NaN")}}.
-- Объект {{jsxref("Global_Objects/Number", "Number")}}, которому принадлежит это свойство.
+- Глобальный объект {{jsxref("NaN")}}.
+- Объект {{jsxref("Number")}}, которому принадлежит это свойство.

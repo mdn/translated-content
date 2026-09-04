@@ -1,61 +1,81 @@
 ---
-title: IndexedDB
+title: IndexedDB API
 slug: Web/API/IndexedDB_API
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{DefaultAPISidebar("IndexedDB")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("IndexedDB")}} {{AvailableInWorkers}}
 
-IndexedDB 為用戶端的儲存用 API，可用於大量的結構化資料，並透過索引功能而高效率搜尋資料。[DOM Storage](/zh-TW/docs/Web/API/Web_Storage_API) 適合儲存較少量的資料；IndexedDB 則適合大量結構化資料的儲存方案。
+IndexedDB 是一種底層 API，用於在用戶端儲存大量結構化資料（包括檔案／Blob）。該 API 使用索引來實現對資料的高效能搜尋。雖然 [Web Storage](/zh-TW/docs/Web/API/Web_Storage_API) 對於儲存較少量的資料很有用，但對於儲存大量的結構化資料則較不適用。IndexedDB 提供了解決方案。這是 MDN IndexedDB 內容的主要登陸頁面——我們在此提供完整的 API 參考文件、使用指南、瀏覽器相容性細節，以及一些關鍵概念的說明。
 
-本篇文章僅為 API 物件的入門技術說明。若需進一步了解，則請參閱 [IndexedDB 基本概念](/zh-TW/docs/Web/API/IndexedDB_API/Basic_Terminology)。更多細節則可參閱[使用 IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB)。
+## 關鍵概念與用法
 
-IndexedDB 提供不同 APIs 用於同步與非同步的存取作業。同步 API 僅能用於[Web Workers](/zh-TW/docs/Web/API/Worker) 之中，但尚未有瀏覽器支援同步 API。非同步 API 則用於 Web Workers 內外均可，但 Firefox 目前尚未建構。
+IndexedDB 是一個交易式資料庫系統，就像 SQL 基礎的關聯式資料庫管理系統（RDBMS）。然而，不同於 SQL 基礎的 RDBMS 使用固定欄位的表格，IndexedDB 是一個 JavaScript 基礎的物件導向資料庫。IndexedDB 讓你儲存和檢索以**鍵**索引的物件；任何[結構化複製演算法](/zh-TW/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)支援的物件都能被儲存。你需要指定資料庫綱要，開啟與資料庫的連線，然後在**交易**序列中檢索和更新資料。
 
-## 非同步 API
-
-非同步 API 不會阻塞呼叫它的執行緒。若要非同步存取資料庫，可於 [window](/zh-TW/docs/Web/API/Window) 物件的 [indexedDB](/zh-TW/docs/IndexedDB/IDBEnvironment#attr_indexedDB) 屬性上呼叫 [open](/zh-TW/docs/Web/API/IDBFactory#open)()。此函式將回傳 IDBRequest 物件 (IDBOpenDBRequest)，開始非同步存取資料庫；呼叫端程式利用 IDBRequest 物件上的事件來進行非同步溝通。
+- 閱讀更多關於 [IndexedDB 關鍵特性和基本術語](/zh-TW/docs/Web/API/IndexedDB_API/Basic_Terminology)。
+- 透過我們的[使用 IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB) 指南，從基本原理開始學習非同步地使用 IndexedDB。
+- 參見[檢查截止日期是否已到](/zh-TW/docs/Web/API/IndexedDB_API/Checking_when_a_deadline_is_due)指南中的完整逐步範例。
 
 > [!NOTE]
-> 在舊版瀏覽器 (Gecko 16 版之前的 indexedDB 屬性；Chrome 中的 webkitIndexedDB；IE 10 中的 msIndexedDB) 中的 indexedDB 物件，均具備前綴屬性。
+> 就像大多數的 web 儲存解決方案，IndexedDB 遵循[同源政策](https://www.w3.org/Security/wiki/Same_Origin_Policy)。因此雖然你可以存取同一個網域內的儲存資料，但你無法跨網域存取資料。
 
-- [`IDBFactory`](/zh-TW/docs/Web/API/IDBFactory) 可存取資料庫。此介面是透過全域物件 `indexedDB` 所建構，因此成為 API 的切入點。
-- [`IDBCursor`](/zh-TW/docs/Web/API/IDBCursor) 將依序存取物件與索引。
-- [`IDBCursorWithValue`](/zh-TW/docs/Web/API/IDBCursorWithValue) 將依序存取物件與索引，並回傳指標 (Cursor) 的目前數值。
-- [`IDBDatabase`](/zh-TW/docs/Web/API/IDBDatabase) 代表到資料庫的連線。這也是能與資料庫互動的唯一方式。
-- [`IDBEnvironment`](/zh-TW/docs/IndexedDB/IDBEnvironment) 可存取用戶端的資料庫。此介面是透過 [window](/zh-TW/docs/Web/API/Window) 物件所建構。
-- [`IDBIndex`](/zh-TW/docs/Web/API/IDBIndex) 可存取索引的 Metadata。
-- [`IDBKeyRange`](/zh-TW/docs/Web/API/IDBKeyRange) 定義資料鍵範疇。
-- [`IDBObjectStore`](/zh-TW/docs/Web/API/IDBObjectStore) 代表物件存檔。
-- [`IDBOpenDBRequest`](/zh-TW/docs/Web/API/IDBOpenDBRequest) 代表「開啟資料庫」的請求。
-- [`IDBRequest`](/zh-TW/docs/Web/API/IDBRequest) 代表向非同步資料庫和資料庫物件發出之請求，也就是呼叫非同步方法後回傳值。
-- [`IDBTransaction`](/zh-TW/docs/Web/API/IDBTransaction) 代表一個交易。我們可以和資料庫進行交易，例如要求存取某一個物件存檔，以及決定要執行讀或寫的存取作業。
-- [`IDBVersionChangeEvent`](/zh-TW/docs/Web/API/IDBVersionChangeEvent) `則代表資料庫所變更的版本。`
+### 同步與非同步
 
-以下 API 在早期規範中有定義，但現已移除。這邊列出僅供參考:
+使用 IndexedDB 執行的操作是非同步完成的，以免阻塞應用程式。
 
-- [IDBVersionChangeRequest](/zh-TW/docs/IndexedDB/IDBVersionChangeRequest) 代表「更改資料庫版本」的請求。更改資料庫版本的方法已有不同 (呼叫 [IDBFactory.open()](/zh-TW/docs/Web/API/IDBFactory#open) 而不需同時呼叫 [IDBDatabase.setVersion()](/zh-TW/docs/IndexedDB/IDBDatabase#setVersion%28%29))；而且[IDBOpenDBRequest](/zh-TW/docs/Web/API/IDBOpenDBRequest)已經整合了從 IDBVersionChangeRequest 中所移除之功能。
-- [IDBDatabaseException](/zh-TW/docs/IndexedDB/IDBDatabaseException) {{Deprecated_Inline}} 在執行資料庫作業時，代表可能遭遇的例外狀況。
+### 儲存限制與驅逐標準
 
-除了非同步 API，也有應用在[WebWorkers](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers)內的同步 API，但請注意目前還沒有瀏覽器支援同步 API。這裡也提供 [API 的同步版本](/zh-TW/docs/Web/API/IndexedDB_API)。
+有許多 web 技術在用戶端（亦即在你的本機磁碟上）儲存各種類型的資料。IndexedDB 是最常被討論的。瀏覽器計算要分配多少空間給 web 資料儲存，以及當達到限制時要刪除什麼內容的過程並不簡單，且不同瀏覽器之間有所差異。[瀏覽器儲存配額與驅逐標準](/zh-TW/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)試圖解釋其運作方式，至少在 Firefox 的情況下是如此。
 
-## 儲存限制
+## 介面
 
-單一資料庫項目的容量/大小並沒有任何限制，但是各個 IndexedDB 資料庫的容量就有限制。此限制，還有使用者介面的斷言 (Assert) 方式，又將因瀏覽器而有所不同：
+要存取資料庫，請呼叫 [window](/zh-TW/docs/Web/API/Window) 物件 [`indexedDB`](/zh-TW/docs/Web/API/Window/indexedDB) 屬性上的 [`open()`](/zh-TW/docs/Web/API/IDBFactory/open)。此方法回傳一個 {{domxref("IDBRequest")}} 物件；非同步操作透過在 {{domxref("IDBRequest")}} 物件上觸發事件來與呼叫的應用程式通訊。
 
-- Firefox：對 IndexedDB 資料庫的容量並無限制。但若要儲存的 Blobs 超過 50 MB，使用者介面將會要求權限。若要修改此容量，則可透過 dom.indexedDB.warningQuota (可至 <http://mxr.mozilla.org/mozilla-central/source/modules/libpref/src/init/all.js> 中設定) 設定自己所需的限制。
-- Google Chrome：請參閱 [https://developers.google.com/chrome...rage#temporary](https://developer.chrome.com/docs/apps/offline_storage#temporary)
+### 連線到資料庫
+
+- {{domxref("IDBFactory")}}
+  - : 提供對資料庫的存取。此類型的物件是全域 {{domxref("Window.indexedDB")}} 和 {{domxref("WorkerGlobalScope.indexedDB")}} 屬性的值。因此它是 API 的進入點。
+- {{domxref("IDBOpenDBRequest")}}
+  - : 代表開啟資料庫的請求。
+- {{domxref("IDBDatabase")}}
+  - : 代表與資料庫的連線。這是獲取資料庫交易的唯一途徑。
+
+### 檢索和修改資料
+
+- {{domxref("IDBTransaction")}}
+  - : 代表一個交易。你在資料庫上建立一個交易，指定範圍（例如你想要存取哪個物件儲存區），並決定你想要的存取類型（唯讀或讀寫）。
+- {{domxref("IDBRequest")}}
+  - : 處理資料庫請求並提供結果存取的通用介面。
+- {{domxref("IDBObjectStore")}}
+  - : 代表一個物件儲存區，允許存取 IndexedDB 資料庫中的一組資料，透過主鍵尋找。
+- {{domxref("IDBIndex")}}
+  - : 也允許存取 IndexedDB 資料庫中的資料子集，但使用索引來檢索紀錄而不是主鍵。這有時比使用 {{domxref("IDBObjectStore")}} 更快。
+- {{domxref("IDBCursor")}}
+  - : 迭代物件儲存區和索引。
+- {{domxref("IDBCursorWithValue")}}
+  - : 迭代物件儲存區和索引並回傳游標目前的值。
+- {{domxref("IDBKeyRange")}}
+  - : 定義一個鍵範圍，可用於從資料庫中檢索特定範圍內的資料。
+
+### 自訂事件介面
+
+此規範使用以下自訂介面觸發事件：
+
+- {{domxref("IDBVersionChangeEvent")}}
+  - : `IDBVersionChangeEvent` 介面表示資料庫的版本已經改變，這是 {{domxref("IDBOpenDBRequest.upgradeneeded_event", "IDBOpenDBRequest.onupgradeneeded")}} 事件處理函式的結果。
 
 ## 範例
 
-Web 上的 IndexedDB 使用範例，是由 Marco Castelluccio 所提供。Marco 是 IndexedDB Mozilla DevDerby 的優勝者，而該得獎 Demo 為 [eLibri](/zh-TW/docs/Web/Demos_of_open_web_technologies)，屬於函式庫與 eBook 閱讀器的 App。
+- [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（[檢視即時範例](https://mdn.github.io/dom-examples/to-do-notifications/)）：參考文件中範例的參考應用程式。
 
-## 另可參閱
+## 規範
 
-- [IndexedDB 基本概念](/zh-TW/docs/Web/API/IndexedDB_API/Basic_Terminology)
-- [使用 IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [在 IndexedDB 中儲存影像與檔案](https://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
-- [Indexed Database API 規格](https://www.w3.org/TR/IndexedDB/)
-- [IndexedDB — 儲存於自己的瀏覽器中](<https://learn.microsoft.com/zh-tw/previous-versions/msdn10/gg679063(v=msdn.10)>)
-- [IndexedDB 範例](http://nparashuram.com/IndexedDB/trialtool/index.html)
-- 僅支援 WebSQL 的瀏覽器 (例如行動 WebKit)，可適用 [IndexedDB Polyfill](https://github.com/indexeddbshim/IndexedDBShim)
-- [JQuery IndexedDB 外掛程式](http://nparashuram.com/IndexedDBShim/)
+{{Specifications}}
+
+## 參見
+
+- [Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API)
+- [Window：localStorage 屬性](/zh-TW/docs/Web/API/Window/localStorage)
+- [Window：sessionStorage 屬性](/zh-TW/docs/Web/API/Window/sessionStorage)
+- [StorageEvent](/zh-TW/docs/Web/API/StorageEvent)

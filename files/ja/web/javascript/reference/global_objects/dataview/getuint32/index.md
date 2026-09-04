@@ -1,59 +1,57 @@
 ---
 title: DataView.prototype.getUint32()
+short-title: getUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`getUint32()`** は {{jsxref("DataView")}} インスタンスのメソッドで、この `DataView` の指定されたバイトオフセットから 4 バイトを読み取り、符号なし 32 ビット整数として解釈します。アラインメント制約はありません。境界内の任意のオフセットからマルチバイト値を取得できます。
 
-**`getUint32()`** メソッドは、符号なし 32 ビット整数 (unsigned long) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
-
-{{InteractiveExample("JavaScript デモ: DataView.getUint32()")}}
+{{InteractiveExample("JavaScript デモ: DataView.prototype.getUint32()")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// ArrayBuffer をバイト単位のサイズで作成
 const buffer = new ArrayBuffer(16);
 
 const view = new DataView(buffer);
-view.setUint32(1, 4294967295); // Max unsigned 32-bit integer
+view.setUint32(1, 4294967295); // 符号なし 32 ビット整数の最大値
 
 console.log(view.getUint32(1));
-// Expected output: 4294967295
+// 予想される結果: 4294967295
 ```
 
 ## 構文
 
 ```
-dataview.getUint32(byteOffset [, littleEndian])
+getUint32(byteOffset)
+getUint32(byteOffset, littleEndian)
 ```
 
 ### 引数
 
 - `byteOffset`
   - : ビューの先頭からのバイト単位のオフセットで、データを読み取る位置です。
-- `littleEndian`
-  - : {{optional_inline}} 32 ビット整数が{{Glossary("Endianness", "リトルエンディアンとビッグエンディアン")}}のどちらの形式で格納されているかを表します。 `false` または `undefined` の場合、ビッグエンディアン値を読み取ります。
+- `littleEndian` {{optional_inline}}
+  - : データが[リトルエンディアンとビッグエンディアン](/ja/docs/Glossary/Endianness)のどちらの形式で格納されているかを示します。`false` または `undefined` の場合、ビッグエンディアンの値が読み取られます。
 
 ### 返値
 
-符号なし 32 ビット整数。
+整数で、0 以上 4294967295 以下です。
 
-### 発生するエラー
+### 例外
 
 - {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて読み取るように設定されている場合に発生します。
-
-## 解説
-
-アライメントの強制はありません。複数バイトの値はどのオフセットからも読み取ることができます。
+  - : `byteOffset` がビューの末尾を越えて読み取るように設定されている場合に発生します。
 
 ## 例
 
-### getUint32 メソッドの使用
+### getUint32() の使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getUint32(1); // 0
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const dataview = new DataView(buffer);
+console.log(dataview.getUint32(1)); // 16909060
 ```
 
 ## 仕様書
@@ -66,5 +64,7 @@ dataview.getUint32(1); // 0
 
 ## 関連情報
 
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("Uint32Array")}}

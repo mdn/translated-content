@@ -67,7 +67,7 @@ A primeira vez que o callback é chamado, o `acumulador` e o `valorAtual` podem 
 > [!NOTE]
 > Se o `valorInicial` não tiver sido passado como argumento, então reduce() executará o callback da função começando a partir do índice 1 (index 1), pulando o primeiro índice (`index 0`). Se o `valorInicial` for passado como argumento, a função irá começar no index 0.
 
-Se a array estiver vazia e o `valorInicial` não tiver sido informado, uma exceção do tipo {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançada.
+Se a array estiver vazia e o `valorInicial` não tiver sido informado, uma exceção do tipo {{jsxref("TypeError")}} será lançada.
 
 Se a array possuir somente um elemento (independente da posição) e o `valorInicial` não tiver sido fornecido, ou se `valorInicial` for fornecido, mas a array estiver vazia, o valor será retornado sem que a função de `callback` seja chamada.
 

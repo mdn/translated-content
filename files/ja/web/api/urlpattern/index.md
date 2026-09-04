@@ -2,10 +2,10 @@
 title: URLPattern
 slug: Web/API/URLPattern
 l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+  sourceCommit: aafad07220c63481570e43cc66a5d9fb7b985ffc
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{APIRef("URL Pattern API")}} {{AvailableInWorkers}}
 
 **`URLPattern`** は {{domxref("URL Pattern API", "URL パターン API", "", "nocode")}} のインターフェイスで、URL または URL の一部をパターンと照合します。パターンには、照合された URL の一部を抽出するキャプチャグループを含めることができます。
 
@@ -13,33 +13,35 @@ l10n:
 
 ## コンストラクター
 
-- {{domxref("URLPattern.URLPattern", "URLPattern()")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.URLPattern", "URLPattern()")}}
   - : 指定されたパターンとベース URL に基づいて、新しい `URLPattern` オブジェクトを返します。
 
 ## インスタンスプロパティ
 
-- {{domxref("URLPattern.hash", "hash")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.hash", "hash")}} {{ReadOnlyInline}}
   - : URL のハッシュ部分と照合するパターンが含まれている文字列。
-- {{domxref("URLPattern.hostname", "hostname")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.hasRegExpGroups", "hasRegExpGroups")}} {{ReadOnlyInline}}
+  - : 論理値で、この `URLPattern` の成分のいずれかが[正規表現キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)を含んでいるかどうかを示します。
+- {{domxref("URLPattern.hostname", "hostname")}} {{ReadOnlyInline}}
   - : URL のホスト名部分と照合するパターンが含まれている文字列。
-- {{domxref("URLPattern.password", "password")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.password", "password")}} {{ReadOnlyInline}}
   - : URL のパスワード部分と照合するパターンが含まれている文字列。
-- {{domxref("URLPattern.pathname", "pathname")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.pathname", "pathname")}} {{ReadOnlyInline}}
   - : URL のパス名部分と照合するパターンが含まれている文字列。
-- {{domxref("URLPattern.port", "port")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.port", "port")}} {{ReadOnlyInline}}
   - : URL のポート番号部分と照合するパターンが含まれている文字列。
-- {{domxref("URLPattern.protocol", "protocol")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.protocol", "protocol")}} {{ReadOnlyInline}}
   - : URL のプロトコル部分と照合するパターンが含まれている文字列。
-- {{domxref("URLPattern.search", "search")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.search", "search")}} {{ReadOnlyInline}}
   - : URL の検索部分と照合するパターンが含まれている文字列。
-- {{domxref("URLPattern.username","username")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("URLPattern.username","username")}} {{ReadOnlyInline}}
   - : URL のユーザー名部分と照合するパターンが含まれている文字列。
 
 ## インスタンスメソッド
 
-- {{domxref("URLPattern.exec", "exec()")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.exec", "exec()")}}
   - : URL と一致する部分を持つオブジェクトを返します。URL が一致しない場合は `null` を返します。
-- {{domxref("URLPattern.test", "test()")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.test", "test()")}}
   - : URL が指定されたパターンと一致する場合は `true`、それ以外の場合は `false` を返します。
 
 ## 仕様書

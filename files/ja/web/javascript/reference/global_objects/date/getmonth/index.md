@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`getMinutes()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日付の「月」を表す 0 を基点とした値（すなわち 0 が年の最初の月を示す）を返します。
+**`getMonth()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日付の「月」を表す 0 を基点とした値（すなわち 0 が年の最初の月を示す）を返します。
 
 {{InteractiveExample("JavaScript デモ: Date.prototype.getMonth()", "shorter")}}
 

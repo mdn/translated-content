@@ -23,7 +23,7 @@ Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 - [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect)
 - [`<text>`](/fr/docs/Web/SVG/Reference/Element/text)
 - [`<textPath>`](/fr/docs/Web/SVG/Element/textPath)
-- [`<tref>`](/fr/docs/Web/SVG/Element/tref)
+- [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face)
 - [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan)
 
 ## Exemple
@@ -92,7 +92,7 @@ svg {
 </table>
 
 - `<dasharray>`
-  - : Une liste de valeurs [`<length>`](/fr/docs/Web/SVG/Content_type#length) et [`<percentage>`](/fr/docs/Web/SVG/Content_type#percentage), séparées par des espaces ou des virgules, qui indiquent les longueurs alternées des traits et des espaces.
+  - : Une liste de valeurs [`<length>`](/fr/docs/Web/SVG/Guides/Content_type#length) et [`<percentage>`](/fr/docs/Web/SVG/Guides/Content_type#percentage), séparées par des espaces ou des virgules, qui indiquent les longueurs alternées des traits et des espaces.
 
     Si un nombre impair de valeurs est fourni, la liste est répétée afin d'obtenir un nombre pair de valeur. Ainsi, `5,3,2` sera équivalent à `5,3,2,5,3,2`.
 

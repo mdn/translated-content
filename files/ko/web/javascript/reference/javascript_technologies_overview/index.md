@@ -28,7 +28,7 @@ JavaScript의 핵심 언어는 ECMA TC39 위원회가 [ECMAScript](/ko/docs/Web/
 - 오류 처리 원리 ({{jsxref("Statements/throw", "throw")}}, {{jsxref("Statements/try...catch", "try...catch")}}, 사용자 정의 {{jsxref("Error")}} 타입 등)
 - 자료형 (불리언, 숫자, 문자열, 함수, 객체, ...)
 - 프로토타입 기반 상속 원리
-- 내장 객체 및 함수 ({{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Array.prototype", "Array.prototype", "메서드")}} 메서드, {{jsxref("Object")}} 내성검사 메서드 등)
+- 내장 객체 및 함수 ({{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Array", "Array.prototype", "메서드")}} 메서드, {{jsxref("Object")}} 내성검사 메서드 등)
 - [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)
 - [모듈 시스템](/ko/docs/Web/JavaScript/Guide/Modules)
 - 기본 메모리 모델

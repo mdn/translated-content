@@ -85,4 +85,4 @@ console.log(e5.toString()); // 'hello'
 
 ## 같이 보기
 
-- {{jsxref("Error.prototype.toSource()")}}
+- {{jsxref("Error.prototype.toString()", "Error.prototype.toSource()")}}

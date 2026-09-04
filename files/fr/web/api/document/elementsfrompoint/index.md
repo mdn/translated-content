@@ -1,28 +1,34 @@
 ---
-title: DocumentOrShadowRoot.elementsFromPoint()
+title: "Document : méthode elementsFromPoint()"
+short-title: elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
+l10n:
+  sourceCommit: b21df53ffbb066cfb9347d7f0e5aebb792ed73e5
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
-La propriété **`elementsFromPoint()`** de l'interface {{domxref("DocumentOrShadowRoot")}} renvoie un tableau (_array_) de tous les éléments présents sous le point fourni en paramètre (relatif au _viewport_).
+La méthode **`elementsFromPoint()`** de l'interface {{DOMxRef("Document")}} retourne un tableau de tous les éléments aux coordonnées définies (relativement à la zone d'affichage).
+Les éléments sont ordonnés du plus haut au plus bas dans la zone d'affichage.
+
+Elle fonctionne de manière similaire à la méthode {{DOMxRef("Document.elementFromPoint", "elementFromPoint()")}}.
 
 ## Syntaxe
 
-```js
-var elements = document.elementsFromPoint(x, y);
+```js-nolint
+elementsFromPoint(x, y)
 ```
 
 ### Paramètres
 
-- x
-  - : L'abscisse du point (coordonnée horizontale).
-- y
-  - : L'ordonnée du point (coordonnée verticale).
+- `x`
+  - : La coordonnée horizontale d'un point.
+- `y`
+  - : La coordonnée verticale d'un point.
 
 ### Valeur de retour
 
-Un tableau (_array_) d'objets {{domxref('element')}} représentants les éléments du DOM concernés.
+Un tableau d'objets {{DOMxRef('Element')}} représentant les éléments situés aux coordonnées définies, ordonnés du plus haut au plus bas dans la zone d'affichage.
 
 ## Exemples
 
@@ -32,33 +38,34 @@ Un tableau (_array_) d'objets {{domxref('element')}} représentants les élémen
 <div>
   <p>Du texte</p>
 </div>
-<p>Éléments au point 30, 20:</p>
+<p>Éléments au point 30, 20&nbsp;:</p>
 <div id="output"></div>
 ```
 
 ### JavaScript
 
 ```js
-var output = document.getElementById("output");
+let output = document.getElementById("output");
 if (document.elementsFromPoint) {
-  var elements = document.elementsFromPoint(30, 20);
-  for (var i = 0; i < elements.length; i++) {
-    output.textContent += elements[i].localName;
+  let elements = document.elementsFromPoint(30, 20);
+  elements.forEach((elt, i) => {
+    output.textContent += elt.localName;
     if (i < elements.length - 1) {
       output.textContent += " < ";
     }
-  }
+  });
 } else {
-  output.innerHTML =
-    '<span style="color: red;">' +
-    "Votre navigateur ne prend pas en charge <code>document.elementsFromPoint()</code>" +
-    "</span>";
+  output.innerHTML = `<span style="color: red">
+  Votre navigateur ne prend pas en charge
+  <code>document.elementsFromPoint()</code>
+</span>
+`;
 }
 ```
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples', '420', '120')}}
+{{EmbedLiveSample("Exemples", 420, 160)}}
 
 ## Spécifications
 
@@ -70,5 +77,4 @@ if (document.elementsFromPoint) {
 
 ## Voir aussi
 
-- {{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}
-- {{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}
+- La méthode {{DOMxRef("Document.elementFromPoint()")}}

@@ -1,27 +1,29 @@
 ---
-title: HTMLFormElement.target
+title: "HTMLFormElement : propriété target"
+short-title: target
 slug: Web/API/HTMLFormElement/target
+l10n:
+  sourceCommit: 3c0f6a56128e1c645e45381f0edd3d876c7816cc
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`HTMLFormElement.target`** représente la cible de l'action (i.e., le cadre de destination dans lequel produire le résultat).
+La propriété **`target`** de l'interface {{DOMxRef("HTMLFormElement")}} représente la cible de l'action du formulaire (c'est‑à‑dire le cadre dans lequel afficher sa sortie).
 
-## Syntaxe
+## Valeur
 
-```js
-string = form.target;
-form.target = string;
-```
+Une chaîne de caractères.
 
-## Exemple
+## Exemples
 
 ```js
-myForm.target = document.frames[1].name;
+myForm.target = frames[1].name;
 ```
 
-## Spécification
+## Spécifications
 
-[HTML 5, Section 4.10.19.6, Form submission](https://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
+{{Specifications}}
 
-[DOM Level 2 HTML: target](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6512890)
+## Compatibilité des navigateurs
+
+{{Compat}}

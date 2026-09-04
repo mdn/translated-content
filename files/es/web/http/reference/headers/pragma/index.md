@@ -20,7 +20,7 @@ El **`Pragma`** encabezado general HTTP / 1.0 es un encabezado específico de la
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
     <tr>

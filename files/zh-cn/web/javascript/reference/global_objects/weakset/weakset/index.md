@@ -3,8 +3,6 @@ title: WeakSet() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 ---
 
-{{JSRef}}
-
 **`WeakSet()`** 构造函数创建 {{jsxref("WeakSet")}} 对象。
 
 ## 语法

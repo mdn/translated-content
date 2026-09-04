@@ -9,7 +9,7 @@ l10n:
 
 Canvas API 的 **`CanvasRenderingContext2D.letterSpacing`** 属性用于指定绘制文本时字母之间的间距。
 
-这对应于 CSS 中的 [`letter-spacing`](/zh-CN/docs/Web/CSS/letter-spacing) 属性。
+这对应于 CSS 中的 [`letter-spacing`](/zh-CN/docs/Web/CSS/Reference/Properties/letter-spacing) 属性。
 
 ## 值
 

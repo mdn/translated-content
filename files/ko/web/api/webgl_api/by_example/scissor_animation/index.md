@@ -3,7 +3,7 @@ title: 애니메이션 잘라내기
 slug: Web/API/WebGL_API/By_example/Scissor_animation
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Boilerplate_1","Web/API/WebGL_API/By_example/Raining_rectangles")}}
 
 활동을 청소하고 잘라내는 어떤 애니메이션 장난
 
@@ -153,4 +153,4 @@ function getRenderingContext() {
 
 이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation)에서도 확인 가능합니다.
 
-{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Boilerplate_1","Web/API/WebGL_API/By_example/Raining_rectangles")}}

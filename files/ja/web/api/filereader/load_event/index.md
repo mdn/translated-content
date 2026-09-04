@@ -1,13 +1,14 @@
 ---
 title: "FileReader: load イベント"
+short-title: load
 slug: Web/API/FileReader/load_event
 l10n:
-  sourceCommit: 03c5110696fb433c13f3ccf63266d8affe446d8a
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{APIRef}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-`load` イベントは、ファイルが正常に読み込めたときに発生します。
+**`load`** は {{domxref("FileReader")}} インターフェイスのイベントで、ファイルが正常に読み込めたときに発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -15,10 +16,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("load", (event) => {});
+```js-nolint
+addEventListener("load", (event) => { })
 
-onload = (event) => {};
+onload = (event) => { }
 ```
 
 ## イベント型
@@ -26,17 +27,6 @@ onload = (event) => {};
 {{domxref("ProgressEvent")}} です。 {{domxref("Event")}} から継承しています。
 
 {{InheritanceDiagram("ProgressEvent")}}
-
-## イベントプロパティ
-
-_親である {{domxref("Event")}} からプロパティを継承しています。_
-
-- {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
-  - : 論理値で、このプロセスで行われる作業の合計と、すでに行われた作業の量が計算可能かどうかを示す。言い換えれば、進捗が計測可能かどうかを示します。
-- {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
-  - : 64 ビット符号なし整数値で、このプロセスで既に作業を行った量を示します。作業した比率は、`total` をこのプロパティの値で割ることで算出できます。 HTTP を使用してリソースをダウンロードする場合、これは HTTP メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
-- {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
-  - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表します。 HTTP を使用してリソースをダウンロードする場合、これは `Content-Length` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
 
 ## 例
 

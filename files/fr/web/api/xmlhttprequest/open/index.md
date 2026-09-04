@@ -24,12 +24,12 @@ XMLHttpRequest.open(method, url, async, user, password);
 - `method`
   - : La méthode [de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods) à utiliser telles que `GET`, `POST`, `PUT`, `DELETE`, etc. Ignorée pour les URL non-HTTP(S).
 - `url`
-  - : Une {{domxref("DOMString")}} représentant l'URL à laquelle envoyer la requête.
+  - : Une {{jsxref("String")}} représentant l'URL à laquelle envoyer la requête.
 - `async` {{optional_inline}}
   - : Un booléen optionnel par défaut à `true`, indiquant s'il faut, ou pas, traiter la requête en asynchrone. Si la valeur est à `false`, la méthode `send()` ne retourne rien tant qu'elle n'a pas reçu la réponse. Si la valeur est à `true`, une notification de transaction complétée est fournie en utilisant un gestionnaire d'évènements. Le paramètre doit être sur "true" si l'attribut `multipart` est sur "true" aussi ou une exception sera levée.
 
     > [!NOTE]
-    > Les requêtes asynchrones sur le "thread" principal peuvent facilement dérouter l'utilisateur et devraient être évitées; En fait, de nombreux navigateurs ont un support XHR obsolète sur la totalité du "thread" principal. Les requêtes synchrones sont acceptées dans {{domxref("Worker")}}.
+    > Les requêtes synchrones sur le "thread" principal peuvent facilement dérouter l'utilisateur et devraient être évitées; En fait, de nombreux navigateurs ont un support XHR obsolète sur la totalité du "thread" principal. Les requêtes synchrones sont acceptées dans {{domxref("Worker")}}.
 
 - `user` {{optional_inline}}
   - : Le nom de l'utilisateur, optionnel, à utiliser dans un but d'authentification. Sa valeur par défaut est `null`.

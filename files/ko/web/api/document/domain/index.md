@@ -5,7 +5,7 @@ slug: Web/API/Document/domain
 
 {{ApiRef}}
 
-{{domxref("Document")}} 인터페이스의 **`domain`** 속성은 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)에서 사용하는 현재 문서의 {{glossary("origin", "출처")}}에서 도메인 부분을 설정하거나 가져옵니다.
+{{domxref("Document")}} 인터페이스의 **`domain`** 속성은 [동일 출처 정책](/ko/docs/Web/Security/Defenses/Same-origin_policy)에서 사용하는 현재 문서의 {{glossary("origin", "출처")}}에서 도메인 부분을 설정하거나 가져옵니다.
 
 `domain` 속성을 성공적으로 설정하면 출처의 포트를 {{jsxref("null")}}로 설정합니다.
 
@@ -62,4 +62,4 @@ if (document.domain == badDomain) {
 
 ## 같이 보기
 
-- [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)
+- [동일 출처 정책](/ko/docs/Web/Security/Defenses/Same-origin_policy)

@@ -106,7 +106,7 @@ arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 
 ## Veja também
 
-- {{jsxref("Array.prototype.flatten()")}}
+- {{jsxref("Array.prototype.flat()", "Array.prototype.flatten()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Array.prototype.concat()")}}

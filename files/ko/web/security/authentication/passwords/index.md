@@ -1,0 +1,25 @@
+---
+title: 안전하지 않은 비밀번호
+slug: Web/Security/Authentication/Passwords
+original_slug: Web/Security/Insecure_passwords
+l10n:
+  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
+---
+
+{{QuickLinksWithSubpages("/ko/docs/Web/Security")}}
+
+HTTP를 통한 로그인 양식은 특히 사용자의 비밀번호를 추출하는데 사용할 수 있는 다양한 종류의 공격으로 인해 위험합니다. 네트워크 도청자는 네트워크를 스니핑하거나 전송되는 페이지를 수정하여 사용자의 비밀번호를 훔칠 수 있습니다.
+
+[HTTPS](/ko/docs/Glossary/HTTPS) 프로토콜은 네트워크에서 도청(기밀성)과 수정(무결성)으로부터 사용자 데이터를 보호하도록 설계되었습니다. 사용자 데이터를 처리하는 웹사이트는 HTTPS를 사용하여 공격자로부터 사용자를 보호해야 합니다. 웹사이트에서 HTTPS 대신 HTTP를 사용하는 경우 사용자 정보(예: 로그인 자격 증명)를 도용하는 것은 간단합니다. 이것은 [Firesheep](https://codebutler.github.io/firesheep/)에 의해 유명하게 입증되었습니다.
+
+이 문제를 해결하려면 서버에 SSL/[TLS](/ko/docs/Glossary/TLS) 인증서를 설치하고 구성하세요. 무료 및 유료 인증서를 제공하는 다양한 공급 업체가 있습니다. 클라우드 플랫폼을 사용하는 경우 HTTPS를 사용하는 고유한 방법이 있을 수 있습니다.
+
+## 비밀번호 재사용에 대한 참고 사항
+
+가끔 웹사이트는 사용자 이름과 암호를 요구하지만 실제로는 매우 민감한 데이터를 저장하지 않습니다. 예를 들어 뉴스 사이트는 사용자가 다시 읽고 싶은 뉴스 기사가 무엇인지 저장할 수 있겠지만, 사용자에 대한 다른 데이터는 저장하지 않을 수 있습니다. 뉴스 사이트의 웹 개발자는 사이트와 사용자 자격 증명을 보호하려는 의욕이 덜할 수 있습니다.
+
+불행하게도 [비밀번호 재사용은 큰 문제입니다](https://www.lightbluetouchpaper.org/2011/02/09/measuring-password-re-use-empirically/). 사용자는 여러 사이트(뉴스 웹사이트, 소셜 네트워크, 이메일 제공업체, 은행)에서 같은 비밀번호를 사용합니다. 따라서 사이트가 사용자의 이름과 암호에 대해 접근하는 것이 큰 위험으로 보이지 않지만, 같은 이름과 암호를 사용하여 은행 계좌에 로그인한 사용자에게는 큰 위험이 됩니다. 공격자는 점점 더 똑똑해지고 있습니다. 한 사이트에서 사용자 이름/암호 쌍을 도용한 다음 더 수익성이 좋은 사이트에서 재사용하려고 합니다.
+
+## 같이 보기
+
+- [No More Passwords over HTTP, Please!](https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/) — 더 많은 정보가 포함된 자세한 블로그 게시물, 그리고 FAQ.

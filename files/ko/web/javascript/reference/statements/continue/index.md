@@ -34,10 +34,10 @@ console.log(text);
 
 ## 설명
 
-{{jsxref ( "Statements / break", "break")}} 문과 달리 `continue`는 루프의 실행을 완전히 종료하지 않고 `for`, `while`문에서 다음과 같이 동작합니다.
+{{jsxref("Statements/break", "break")}} 문과 달리 `continue`는 루프의 실행을 완전히 종료하지 않고 `for`, `while`문에서 다음과 같이 동작합니다.
 
-- {{jsxref ( "Statements / while", "while")}} 루프에서는 다시 조건으로 점프합니다.
-- {{jsxref ( "Statements / for", "for")}} 루프에서는 업데이트 표현식으로 점프합니다.
+- {{jsxref("Statements/while", "while")}} 루프에서는 다시 조건으로 점프합니다.
+- {{jsxref("Statements/for", "for")}} 루프에서는 업데이트 표현식으로 점프합니다.
 
 `continue` 문에는 현재 루프 대신 레이블이 지정된 루프 문의 다음 반복으로 건너 뛰도록하는 선택적 레이블이 포함될 수 있습니다. 이 경우, `continue` 문은 이 레이블 된 명령문 내에 중첩되어야합니다.
 

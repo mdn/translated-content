@@ -31,7 +31,7 @@ Une chaîne de caractères créée à partir de la séquence de codets indiquée
 
 ### Exceptions
 
-- Une exception {{jsxref("Erreurs/Not_a_codepoint","RangeError")}} est renvoyée si un codet (Unicode) invalide est utilisé (par exemple, on pourra avoir "RangeError: NaN is not a valid code point").
+- Une exception {{jsxref("Errors/Not_a_valid_code_point","RangeError")}} est renvoyée si un codet (Unicode) invalide est utilisé (par exemple, on pourra avoir "RangeError: NaN is not a valid code point").
 
 ## Description
 

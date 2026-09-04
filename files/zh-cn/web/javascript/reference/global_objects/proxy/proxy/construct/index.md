@@ -3,9 +3,7 @@ title: handler.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 ---
 
-{{JSRef}}
-
-**`handler.construct()`** 方法用于拦截 {{jsxref("Operators/new", "new")}} 操作符。为了使 new 操作符在生成的 Proxy 对象上生效，用于初始化代理的目标对象自身必须具有 \[\[Construct]] 内部方法（即 `new target` 必须是有效的）。
+**`handler.construct()`** 方法用于拦截 {{jsxref("new")}} 操作符。为了使 new 操作符在生成的 Proxy 对象上生效，用于初始化代理的目标对象自身必须具有 \[\[Construct]] 内部方法（即 `new target` 必须是有效的）。
 
 {{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
 
@@ -54,7 +52,7 @@ var p = new Proxy(target, {
 
 ## 描述
 
-**`handler.construct()`** 方法用于拦截 {{jsxref("Operators/new", "new")}}操作符。
+**`handler.construct()`** 方法用于拦截 {{jsxref("new")}}操作符。
 
 ### 拦截
 
@@ -71,7 +69,7 @@ var p = new Proxy(target, {
 
 ## 示例
 
-下面代码演示如何拦截 {{jsxref("Operators/new", "new")}} 操作。
+下面代码演示如何拦截 {{jsxref("new")}} 操作。
 
 ```js
 var p = new Proxy(function () {}, {
@@ -122,6 +120,6 @@ new p(); // TypeError is thrown, "p" is not a constructor
 ## 相关主题
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Operators/new", "new")}} operator.
+- {{jsxref("Proxy/Proxy", "handler")}}
+- {{jsxref("new")}} operator.
 - {{jsxref("Reflect.construct()")}}

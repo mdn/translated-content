@@ -7,15 +7,15 @@ slug: Web/JavaScript/Reference/Functions
 
 De manière générale, une fonction est un « sous-programme » qui peut être appelé par du code extérieur à la fonction (ou du code interne dans le cas d'une récursion). Comme le programme, une fonction est composée d'une suite d'instructions qui forment le _corps de la fonction_. Il est parfois possible de _passer_ des valeurs à une fonction et une fonction peut éventuellement _retourner_ (ou _renvoyer_) une valeur.
 
-En JavaScript, les fonctions sont des objets de première classe. Cela signifie qu'elles peuvent être manipulées et échangées, qu'elles peuvent avoir des propriétés et des méthodes, comme tous les autres objets JavaScript. Les fonctions sont des objets {{jsxref("Objets_globaux/Function","Function")}}.
+En JavaScript, les fonctions sont des objets de première classe. Cela signifie qu'elles peuvent être manipulées et échangées, qu'elles peuvent avoir des propriétés et des méthodes, comme tous les autres objets JavaScript. Les fonctions sont des objets {{jsxref("Function")}}.
 
 Pour plus d'informations et d'exemples, on pourra également consulter le [chapitre du Guide JavaScript sur les fonctions.](/fr/docs/Web/JavaScript/Guide/Functions)
 
 ## Description
 
-Toute fonction JavaScript est en fait un objet `Function`. Voir la page {{jsxref("Objets_globaux/Function","Function")}} pour des informations sur les propriétés et les méthodes de ces objets.
+Toute fonction JavaScript est en fait un objet `Function`. Voir la page {{jsxref("Function")}} pour des informations sur les propriétés et les méthodes de ces objets.
 
-Afin de renvoyer une valeur, la fonction doit comporter une instruction {{jsxref("Instructions/return","return")}} qui définit la valeur à renvoyer (sauf dans le cas d'un [constructeur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) qui a été appelé avec le mot-clé {{jsxref("Opérateurs/L_opérateur_new")}}). Une fonction qui ne renvoie pas de valeur retourne {{jsxref("undefined")}}.
+Afin de renvoyer une valeur, la fonction doit comporter une instruction {{jsxref("Statements/return","return")}} qui définit la valeur à renvoyer (sauf dans le cas d'un [constructeur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) qui a été appelé avec le mot-clé {{jsxref("Operators/new")}}). Une fonction qui ne renvoie pas de valeur retourne {{jsxref("undefined")}}.
 
 Les paramètres donnés lors de l'appel d'une fonction sont appelés les _arguments_ de la fonction. Les arguments sont passés _par valeur_ (_by value_ en anglais). Si la fonction modifie la valeur d'un argument, ce changement ne se répercute pas en dehors de la fonction. Il existe cependant les _références_ d'objets qui sont aussi des valeurs mais qui possèdent la particularité suivante : si la fonction modifie les propriété de l'objet de la référence, ce(s) changement(s) seront perceptibles en dehors de la fonction. Prenons l'exemple suivant :
 
@@ -57,7 +57,7 @@ Il y a plusieurs façons de définir des fonctions
 
 ### Déclarer une fonction (l'instruction `function`)
 
-Il existe une syntaxe spécifique pour la déclaration des fonctions (vous pouvez consulter la page de l'instruction {{jsxref("Instructions/function","function")}} pour plus de détails) :
+Il existe une syntaxe spécifique pour la déclaration des fonctions (vous pouvez consulter la page de l'instruction {{jsxref("Statements/function","function")}} pour plus de détails) :
 
 ```
 function nom([param[, param[, ... param]]]) {
@@ -74,7 +74,7 @@ function nom([param[, param[, ... param]]]) {
 
 ### Utiliser une expression de fonction (l'expression `function`)
 
-L'expression d'une fonction se fait d'une façon similaire à la déclaration (veuillez consulter la page de l'expression {{jsxref("Opérateurs/L_opérateur_function","function")}} pour plus d'informations) :
+L'expression d'une fonction se fait d'une façon similaire à la déclaration (veuillez consulter la page de l'expression {{jsxref("Operators/function","function")}} pour plus d'informations) :
 
 ```
 function [nom]([param] [, param] [..., param]) {
@@ -121,7 +121,7 @@ Les _IIFE_ sont des expressions de fonction appelées dès que la fonction est d
 
 ### Utiliser une déclaration de fonction génératrice (l'instruction function\*)
 
-Il existe une syntaxe spéciale pour déclarer des générateurs (voir la page sur l'instruction {{jsxref('Instructions/function*', 'function*')}} pour plus de détails) :
+Il existe une syntaxe spéciale pour déclarer des générateurs (voir la page sur l'instruction {{jsxref('Statements/function*', 'function*')}} pour plus de détails) :
 
 ```
 function* nom([param[, param[, ... param]]]) {
@@ -138,7 +138,7 @@ function* nom([param[, param[, ... param]]]) {
 
 ### Utiliser une expression de générateur (l'expression function\*)
 
-Une expression de générateur est similaire à une déclaration de fonction génératrice et possède presque la même syntaxe (pour plus de détails, consulter la page sur l'expression {{jsxref('Opérateurs/function*', 'function*')}}) :
+Une expression de générateur est similaire à une déclaration de fonction génératrice et possède presque la même syntaxe (pour plus de détails, consulter la page sur l'expression {{jsxref('Operators/function*', 'function*')}}) :
 
 ```
 function* [nom]([param[, param[, ... param]]]) {
@@ -795,17 +795,17 @@ Il est à noter que, dans le test `if`, on utilise une référence à `noFunc` -
 
 ## Voir aussi
 
-- L'instruction {{jsxref("Instructions/function", "function")}}
-- L'expression {{jsxref("Opérateurs/L_opérateur_function", "function")}}
-- L'instruction {{jsxref("Instructions/function*", "function*")}}
-- L'expression {{jsxref("Opérateurs/function*", "function*")}}
+- L'instruction {{jsxref("Statements/function", "function")}}
+- L'expression {{jsxref("Operators/function", "function")}}
+- L'instruction {{jsxref("Statements/function*", "function*")}}
+- L'expression {{jsxref("Operators/function*", "function*")}}
 - {{jsxref("Function")}}
 - {{jsxref("GeneratorFunction")}}
-- {{jsxref("Fonctions/Fonctions_fléchées", "Les fonctions fléchées")}}
-- {{jsxref("Fonctions/Valeurs_par_défaut_des_arguments", "Les paramètres par défaut","",1)}}
-- {{jsxref("Fonctions/paramètres_du_reste", "Les paramètres du reste","",1)}}
-- L'objet {{jsxref("Fonctions/arguments", "arguments")}}
-- {{jsxref("Fonctions/get", "getter")}}
-- {{jsxref("Fonctions/set", "setter")}}
-- {{jsxref("Fonctions/Définition_de_méthode", "Les définitions de méthodes","",1)}}
+- {{jsxref("Functions/Arrow_functions", "Les fonctions fléchées")}}
+- {{jsxref("Functions/Default_parameters", "Les paramètres par défaut","",1)}}
+- {{jsxref("Functions/rest_parameters", "Les paramètres du reste","",1)}}
+- L'objet {{jsxref("Functions/arguments", "arguments")}}
+- {{jsxref("Functions/get", "getter")}}
+- {{jsxref("Functions/set", "setter")}}
+- {{jsxref("Functions/Method_definitions", "Les définitions de méthodes","",1)}}
 - [Fonctions et portée des fonctions](/fr/docs/Web/JavaScript/Reference/Functions)

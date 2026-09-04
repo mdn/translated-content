@@ -35,7 +35,7 @@ getTime()
 
 ## 解説
 
-`Date` オブジェクトは基本的に[タイムスタンプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)で表されますが、このメソッドを使用すると、そのタイムスタンプを取得することができます。このメソッドを使用すると、日付と時刻を別の {{jsxref("Date")}} オブジェクトに代入するのに便利です。このメソッドは、機能的には {{jsxref("Date/valueof", "valueOf()")}} メソッドと同じです。
+`Date` オブジェクトは基本的に[タイムスタンプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)で表されますが、このメソッドを使用すると、そのタイムスタンプを取得することができます。このメソッドを使用すると、日付と時刻を別の {{jsxref("Date")}} オブジェクトに代入するのに便利です。このメソッドは、機能的には {{jsxref("Date/valueOf", "valueOf()")}} メソッドと同じです。
 
 ## 例
 

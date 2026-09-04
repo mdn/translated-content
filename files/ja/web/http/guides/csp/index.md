@@ -2,7 +2,7 @@
 title: コンテンツセキュリティポリシー (CSP)
 slug: Web/HTTP/Guides/CSP
 l10n:
-  sourceCommit: 2d9fd5822658f1943d1749aeb741bf989f7b6a20
+  sourceCommit: 6720d579bd658f02c56363805e97e69f93dc79f1
 ---
 
 **コンテンツセキュリティポリシー** (CSP) は、特定の種類のセキュリティ脅威のリスクを防止または最小限に抑えるのに役立つ機能です。これは、ウェブサイトからブラウザーへの一連の指示で構成されており、サイトを構成するコードが実行できることを制限するようにブラウザーに指示します。
@@ -13,7 +13,14 @@ CSP には他にも、[クリックジャッキング](/ja/docs/Web/Security/Att
 
 このガイドでは、 CSP がブラウザーに配信される仕組みと、その概要を見ていくことから始めます。
 
-次に、XSS から保護するために[読み込むリソースを制御](#リソース読み込みの制御)するために使用する方法、そして[クリックジャッキングからの保護](#クリックジャッキングからの保護)や[保護されていないリクエストのアップグレード](#保護されていないリクエストのアップグレード)など、それ以外の使用例について記述します。異なる使用例間に依存関係はないことに注意してください。クリックジャッキングからの保護を追加したいが、 XSS の緩和は追加したくない場合は、その使用例に対応するディレクティブを追加するだけで済みます。
+それから、以下の用途で使用する方法を説明します。
+
+1. XSS から保護するために[読み込むリソースを制御](#リソース読み込みの制御)するために使用する。
+2. クリックジャックから保護するために[埋め込みを制限する](#クリックジャッキングからの保護)。
+3. [保護されていないリクエストのアップグレード](#保護されていないリクエストのアップグレード)を行い、すべてのリソースが HTTP で提供されることを保証しやすくする。
+4. [信頼型の使用を必須にする](#信頼型の要求)ことで、クライアントサイド XSS への防御を強化する。
+
+異なる使用例間に依存関係はないことに注意してください。クリックジャッキングからの保護を追加したいが、 XSS の緩和は追加したくない場合は、その使用例に対応するディレクティブを追加するだけで済みます。
 
 最後に、 [CSP を展開するための戦略](#ポリシーのテスト)と、このプロセスを容易にするツールについて説明します。
 
@@ -21,7 +28,7 @@ CSP には他にも、[クリックジャッキング](/ja/docs/Web/Security/Att
 
 CSP は、 {{httpheader("Content-Security-Policy")}} レスポンスヘッダーでブラウザーに配信する必要があります。これは、メイン文書だけでなく、すべてのリクエストに対するすべてのレスポンスに設定する必要があります。
 
-また、文書の {{htmlelement("meta")}} 要素の [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta#http-equiv) 属性を使用して指定することもできます。これは、静的リソースのみを持つクライアント側でレンダリングされる{{glossary("SPA", "単一ページアプリ")}}など、サーバーインフラストラクチャに依存することを避けたい場合などに便利なオプションです。ただし、このオプションは CSP のすべての機能に対応しているわけではありません。
+また、文書の {{htmlelement("meta")}} 要素の [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta/http-equiv) 属性を使用して指定することもできます。これは、静的リソースのみを持つクライアント側でレンダリングされる{{glossary("SPA", "単一ページアプリ")}}など、サーバーインフラストラクチャに依存することを避けたい場合などに便利なオプションです。ただし、このオプションは CSP のすべての機能に対応しているわけではありません。
 
 ポリシーは、セミコロンで区切られた一連の「ディレクティブ」として指定します。各ディレクティブは、セキュリティポリシーの異なる側面を制御します。各ディレクティブには、名前、その後に空白、その後に値が続きます。ディレクティブによって構文が異なる場合があります。
 
@@ -58,9 +65,19 @@ CSP を使用して、文書が読み込むことを許可されるリソース�
 
 XSS 攻撃は、攻撃者が作成した可能性のある入力 （URL 引数やブログ投稿のコメントなど） をウェブサイトが受け入れて、それをサニタイジングせずにページに記載した場合、つまり JavaScript として実行されないことを確実にしない場合に実現可能です。
 
-ウェブサイトは、このページに含める前にこの入力をサニタイジングすることで、 XSS から自身を保護する必要があります。 CSP は、サニタイジングが失敗した場合でもウェブサイトを保護できる、補完的な保護機能を提供します。
+ウェブサイトは、このページに含める前にこの入力をサニタイジングすることで、 XSS から自身を保護する必要があります。
+
+CSP は、サニタイジングが失敗した場合でもウェブサイトを保護できる、補完的な保護機能を提供します。
 
 サニタイジングが失敗した場合、様々な形の悪意のあるコードが文書に注入される可能性があります。
+
+> [!NOTE]
+> CSP は、実際には 2 つの異なる方法で XSS からの保護に役立ちます。
+>
+> - クライアントで使用する前に、入力が適切に処理されることを保証するのを助けます。これについては、後述の[信頼型の要求](#信頼型の要求)で詳しく解説します。
+> - リソースの読み込みを制御することで、CSP は XSS に対する多層防御を提供し、無害化が失敗した場合でもウェブサイトを保護することができます。この章では、この XSS 防御について解説します。
+
+無害化に失敗した場合、文書内に注入された悪意のあるコードは、以下のようなさまざまな形態をとる可能性があります。
 
 - 悪意のあるリソースへリンクする {{htmlelement("script")}} タグ
 
@@ -79,7 +96,10 @@ XSS 攻撃は、攻撃者が作成した可能性のある入力 （URL 引数�
 - インラインイベントハンドラー
 
   ```html
-  <img onmouseover="console.log(`ハックされました！`)" />
+  <img
+    onmouseover="console.log(`ハックされました！`)"
+    src="thumbnail.jpg"
+    alt="" />
   ```
 
 - `javascript:` URL
@@ -88,13 +108,13 @@ XSS 攻撃は、攻撃者が作成した可能性のある入力 （URL 引数�
   <iframe src="javascript:console.log(`ハックされました！`)"></iframe>
   ```
 
-- A string argument to an unsafe API like [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval):
+- 安全ではない API、たとえば [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) などの文字列引数
 
   ```js
   eval("console.log(`ハックされました！`)");
   ```
 
-CSP は、これらすべてに対する保護を提供できます。CSP を使用すると、次のことが可能になります。
+リソースの読み込みを制御することで、CSP はこれらすべてに対する保護を提供できます。CSP を使用すると、以下のことが可能になります。
 
 - JavaScript ファイルおよびその他のリソースの許可ソースを定義し、`https://evil.example.com` からの読み込みを効果的にブロックします。
 - インラインの script タグを無効にします。
@@ -106,7 +126,7 @@ CSP は、これらすべてに対する保護を提供できます。CSP を使
 次の節では、これらのことを行うために CSP が提供するツールについて説明します。
 
 > [!NOTE]
-> CSP を設定することは、入力のサニタイズに代わるものではありません。ウェブサイトは、入力をサニタイズし、CSP を設定して、XSS に対する多層防御を提供する必要があります。
+> CSP を設定することは、入力の無害化に代わるものではありません。ウェブサイトは、入力を無害化し、CSP を設定して、XSS に対する多層防御を提供する必要があります。
 
 ### フェッチディレクティブ
 
@@ -290,8 +310,8 @@ CSP に `default-src` または `script-src` ディレクティブが含まれ�
 
 - `javascript:` URL 内の JavaScript
 
-  ```html
-  <a href="javascript:console.log('javascript: URL からこんにちは')"></a>
+  ```html-nolint
+  <a href="javascript:console.log('javascript: URL からこんにちは')">ここをクリック</a>
   ```
 
 `unsafe-inline` キーワードを使用すると、この制限を上書きすることができます。例えば、次のディレクティブは、すべてのリソースが同じオリジンであることを要求しますが、インライン JavaScript は許可します。
@@ -329,9 +349,13 @@ Content-Security-Policy: default-src 'self' 'unsafe-inline'
   setTimeout("console.log('setTimeout からこんにちは')", 1);
   ```
 
-`unsafe-eval` キーワードを使用してこの動作を上書きすることができます。 `unsafe-inline` と同様、その理由も同様です。**開発者は `unsafe-eval` を使用することは避けるべきです。** `eval()` の使用をすべて除去することが困難な場合もあります。このような状況では、 [Trusted Types API](/ja/docs/Web/API/Trusted_Types_API) を使用することで、入力が定義されたポリシーに確実に適合するようにして、安全性を高めることができます。
+`unsafe-eval` キーワードを使用してこの動作を上書きすることができます。 `unsafe-inline` と同様、その理由も同様です。**開発者は `unsafe-eval` を使用することは避けるべきです。**
 
-unsafe-inline` とは異なり、`unsafe-eval` キーワードは、ノンス式またはハッシュ式が含まれているディレクティブ内でも動作します。
+`eval()` やその他のメソッドの使用をすべて除去することが困難な場合もあります。このような状況では、 [信頼型 API](/ja/docs/Web/API/Trusted_Types_API) を使用することで、入力が定義されたポリシーに確実に適合するようにして、安全性を高めることができます。
+この場合、`trusted-types-eval`キーワードを使用して動作を上書きしましょう。
+`unsafe-inline`とは異なり、信頼型が対応しており有効になっているブラウザーでのみ動作を上書きします。これにより、信頼型に対応していないブラウザーではメソッドがブロックされたままになります。
+
+`unsafe-inline` とは異なり、`unsafe-eval` キーワードは、ノンス式またはハッシュ式が含まれているディレクティブ内でも動作します。
 
 ### 厳格な CSP
 
@@ -375,14 +399,14 @@ Content-Security-Policy:
 例えば、次のような文書を考えてみましょう。
 
 ```html
-<html>
+<html lang="ja">
   <head>
     <script
       src="./main.js"
       integrity="sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk="></script>
   </head>
   <body>
-    <h1>Example page!</h1>
+    <h1>ページの例</h1>
   </body>
 </html>
 ```
@@ -412,7 +436,7 @@ CSP に `'strict-dynamic'` を追加すると、 "main.js" は "main2.js" を読
 ```http
 Content-Security-Policy:
   script-src 'sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk='
-  strict-dynamic
+  'strict-dynamic'
 ```
 
 キーワード `'strict-dynamic'` を使用すると、特にウェブサイトがサードパーティのスクリプトを使用している場合に、ノンスまたはハッシュベースの CSP を簡単に作成および維持することができます。ただし、このキーワードを使用すると、CSP のセキュリティが低下します。なぜなら、記載したスクリプトが XSS の潜在的なソースに基づいて `<script>` 要素を作成した場合、CSP はそれらを保護しないからです。
@@ -422,7 +446,7 @@ Content-Security-Policy:
 上記で、CSP ではインライン JavaScript が既定で禁止されていることを説明しました。ノンスまたはハッシュを使用すると、開発者はインライン `<script>` タグを使用することができますが、インラインイベントハンドラー、`javascript:` URL、`eval()` の使用など、その他の禁止されているパターンを除去するためにコードをリファクタリングする必要があります。例えば、インラインイベントハンドラーは普通、 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} の呼び出しに置き換えるべきです。
 
 ```html-nolint example-bad
-<p onclick="console.log('インラインイベントハンドラーからこんにちは')">クリックしてね</p>
+<p onclick="console.log('インラインイベントハンドラーからこんにちは')">ここをクリック</p>
 ```
 
 ```html
@@ -460,7 +484,7 @@ Content-Security-Policy: frame-ancestors 'none'
 <script src="http://example.org/my-cat.js"></script>
 ```
 
-これは混在コンテンツと呼ばれ、安全でないリソースが存在すると、HTTPS による保護が大幅に弱まります。ブラウザーが実装する[混在コンテンツアルゴリズム](/ja/docs/Web/Security/Mixed_content)では、文書が HTTPS 経由で提供されている場合、安全でないリソースは「アップグレード可能なコンテンツ」と「ブロック可能なコンテンツ」に分類されます。アップグレード可能なコンテンツは HTTPS にアップグレードされ、ブロック可能なコンテンツはブロックされ、ページが破損する可能性があります。
+これは混在コンテンツと呼ばれ、安全でないリソースが存在すると、HTTPS による保護が大幅に弱まります。ブラウザーが実装する[混在コンテンツアルゴリズム](/ja/docs/Web/Security/Defenses/Mixed_content)では、文書が HTTPS 経由で提供されている場合、安全でないリソースは「アップグレード可能なコンテンツ」と「ブロック可能なコンテンツ」に分類されます。アップグレード可能なコンテンツは HTTPS にアップグレードされ、ブロック可能なコンテンツはブロックされ、ページが破損する可能性があります。
 
 混在コンテンツの究極の解決策は、開発者がすべてのリソースを HTTPS 経由で読み込むことです。しかし、サイトが実際にすべてのコンテンツを HTTPS 経由で提供できる場合でも、開発者がサイトで使用されているリソースを読み込むすべての URL を書き換えることは、非常に困難である（アーカイブされたコンテンツに関しては事実上不可能である）場合があります。
 
@@ -499,9 +523,40 @@ Content-Security-Policy: upgrade-insecure-requests
 
 このディレクティブは、サイトへの外部リンクをアップグレードしないため、 {{httpheader("Strict-Transport-Security")}} ヘッダー （HSTS とも呼ばれる） の代わりにはなりません。サイトには、このディレクティブと `Strict-Transport-Security` ヘッダーを含める必要があります。
 
+## 信頼型の要求
+
+[`require-trusted-types-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) および [`trusted-types`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) ディレクティブを使用すると、クライアントサイドの[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS)攻撃から防御することができます。これは、入力データがコードとして実行される可能性のあるウェブプラットフォーム API に渡される前に、安全性を保証します。
+[`require-trusted-types-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) および [`trusted-types`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) ディレクティブを使用することで、[信頼型 API](/ja/docs/Web/API/Trusted_Types_API) を強制的に適用することができます。
+これにより、すべての入力を変換関数に通すことを義務付け、入力データがウェブプラットフォーム API に送信される前に安全性を確保することで、そのデータがコードとして実行されてしまう可能性を未然に防ぐことができ、クライアントサイドの[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃に対する防御をすることができます。
+
+### インジェクションシンクと無害化
+
+ウェブプラットフォームの API の中には、インジェクションシンクと呼ばれるものがあります。これらは、通常は文字列の形をした入力を受け取り、その入力をコードとして解釈できる API です。このガイドではすでに `eval()` について触れましたが、他にも {{domxref("Element.innerHTML")}} や {{domxref("Document.write()")}} など、多くのインジェクションシンクが存在します。
+
+攻撃者がウェブサイトに特別に細工された入力を送り込み、そのウェブサイトがそれをこれらのインジェクションシンクのいずれかに渡すと、攻撃者は悪意のあるコードを実行することが可能になります。
+
+`eval()` のような一部のインジェクション脆弱性のある関数は、安全に使用するのが非常に困難であり、CSP では通常、これらを [完全にブロックする](#eval_および同様の_api)ことが一般的です。一方、入力から安全でない要素を除去するように処理を行えば、より安全に利用できるものもあります。この手法は[無害化](/ja/docs/Web/Security/Attacks/XSS#無害化)と呼ばれます。
+
+### 信頼型 API
+
+[信頼型 API](/ja/docs/Web/API/Trusted_Types_API) を使用すると、文字列の代わりに 信頼型オブジェクトをインジェクションシンクに渡すことができます。信頼型オブジェクトとは、潜在的に危険な入力を変換関数に通した結果として得られるオブジェクトのことです。この変換では通常、入力を無害化し、実行可能にする可能性のある要素（{{htmlelement("script")}} タグなど）を除去します。
+
+デフォルトで、コードはインジェクションシンクに対して、信頼型または無害化されていない文字列のいずれかを渡すことができます。ただし、CSP に [`require-trusted-types-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) ディレクティブを記載し、その値を `"script"` に設定すると、ブラウザーはサイトがインジェクションシンクに渡せるものを信頼型に限定します。例えば、次のコードは例外が発生します。
+
+```js example-bad
+const possiblyXSS = "<p>I might be XSS</p>";
+const target = document.querySelector("#target");
+
+target.innerHTML = possiblyXSS;
+// `require-trusted-types-for` が設定されている場合、例外が発生
+```
+
+信頼型オブジェクトは、ユーザー定義のポリシーオブジェクトを使用して作成されます。コードでは、変換関数が入力を実際に無害化せず、したがって保護機能を持たないものを含め、あらゆる種類のポリシーオブジェクトを生成することができます。このリスクを最小限に抑えるために、[`trusted-types`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) ディレクティブを含めることができます。これにより、受け入れられるポリシーの名前が掲載されており、ブラウザーは掲載されたポリシーのみの使用を許可します。
+
 ## ポリシーのテスト
 
-本番環境への適用をスムーズに行うため、CSP は report-only モードで動作させることが可能です。このモードの場合、ポリシーによるブロックは行われず、指定した URI へポリシー違反の内容が報告されます。また、新しいポリシーを本番環境に適用する前に試験運用する際にも report-only モードは利用できます。
+本番環境への適用をスムーズに行うため、CSP は report-only モードで動作させることが可能です。
+このモードの場合、ポリシーによるブロックは行われず、指定した URI へポリシー違反の内容が報告されます。また、新しいポリシーを本番環境に適用する前に試験運用する際にも report-only モードは利用できます。
 
 ポリシーを report-only モードで動作させるには、以下のようにポリシーを {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP ヘッダーに指定します。
 
@@ -546,8 +601,8 @@ Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 Content-Security-Policy: default-src 'self'; report-to csp-endpoint
 ```
 
-CSP 違反が発生すると、ブラウザーはレポートを JSON オブジェクトとして、HTTP の `POST` 操作で、 {{HTTPHeader("Content-Type")}} を `application/reports+json` として送信します。
-レポートは、シリアライズされた {{domxref("Report")}} オブジェクトの形であり、その中の `type` プロパティの値が `"csp-violation"` で、`body` の値は {{domxref("CSPViolationReportBody")}} オブジェクトがシリアライズされた形です。
+CSP 違反が発生すると、ブラウザーはレポートを JSON オブジェクトとして、HTTP の {{httpmethod("POST")}} 操作で、 {{HTTPHeader("Content-Type")}} を `application/reports+json` として送信します。
+レポートは、シリアライズされた {{domxref("CSPViolationReport")}} オブジェクトの形であり、その中の `type` プロパティが `"csp-violation"` の値になります。
 
 よくあるオブジェクトは、次のように見えます。
 

@@ -5,7 +5,7 @@ slug: conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56
 
 {{ APIRef("Web Components") }}
 
-A propriedade **`HTMLContentElement.select`** reflete o atributo selecionado. É um {{domxref("DOMString")}} contendo uma lista de spaço-separado de seletores CSS que seleciona o conteúdo para inserir em lugar do elemento \<content>.
+A propriedade **`HTMLContentElement.select`** reflete o atributo selecionado. É um {{jsxref("String")}} contendo uma lista de spaço-separado de seletores CSS que seleciona o conteúdo para inserir em lugar do elemento \<content>.
 
 ## Sintaxe
 

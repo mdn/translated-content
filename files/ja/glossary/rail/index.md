@@ -18,4 +18,4 @@ slug: Glossary/RAIL
 
 ## 関連情報
 
-- [Recommended Web Performance Timings: How long is too long](/ja/docs/Web/Performance/How_long_is_too_long)
+- [Recommended Web Performance Timings: How long is too long](/ja/docs/Web/Performance/Guides/How_long_is_too_long)

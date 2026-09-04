@@ -114,14 +114,14 @@ slug: Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 
 ## 扩展阅读
 
-[扩展阅读](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading)
+[扩展阅读](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
 
-- [图书](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#图书)
-- [数字内容](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#数字内容)
-  - [网站](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#网站)
-  - [文章](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#文章)
-  - [教程/示例](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#教程示例)
-  - [其他](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#其他)
+- [图书](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#图书)
+- [数字内容](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#数字内容)
+  - [网站](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#网站)
+  - [文章](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#文章)
+  - [教程/示例](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#教程示例)
+  - [其他](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#其他)
 
 ## 原始文档信息
 

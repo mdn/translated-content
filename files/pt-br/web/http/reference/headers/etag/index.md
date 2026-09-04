@@ -15,7 +15,7 @@ Se o recurso numa URL sofre mudança, a `Etag` assume um novo valor que deve ser
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>

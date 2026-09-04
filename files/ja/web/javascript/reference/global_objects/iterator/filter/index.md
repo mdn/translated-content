@@ -1,11 +1,10 @@
 ---
 title: Iterator.prototype.filter()
+short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/filter
 l10n:
-  sourceCommit: 7df171ff1d6da6a5e3911b7aedd56f6312bf0cca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`filter()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、新しい[イテレーターヘルパーオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator#イテレーターヘルパーオブジェクト)を返します。このオブジェクトは、提供されたコールバック関数が `true` を返すイテレーターの要素のみを返します。
 
@@ -97,6 +96,7 @@ for (const n of fibonacci()) {
 ## 関連情報
 
 - [`Iterator.prototype.filter` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims による `Iterator.prototype.filter` のポリフィル](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.forEach()")}}
 - {{jsxref("Iterator.prototype.every()")}}

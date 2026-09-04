@@ -386,7 +386,7 @@ console.log(docCookies.my_cookie1);
 - [ECMAScript Harmony Proxy proposal page](http://wiki.ecmascript.org/doku.php?id=harmony:proxies) e [ECMAScript página de semântica de proxy Harmony](http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics)
 - [Tutorial em proxies](http://soft.vub.ac.be/~tvcutsem/proxies/)
 - [SpiderMonkey specific Old Proxy API](/pt-BR/docs/JavaScript/Old_Proxy_API)
-- {{jsxref("Object.watch()")}} É um recurso não padrão, mas foi suportado no Gecko há muito tempo.
+- `Object.watch()` É um recurso não padrão, mas foi suportado no Gecko há muito tempo.
 
 ## `Nota de licença`
 

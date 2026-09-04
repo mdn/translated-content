@@ -58,4 +58,4 @@ console.log(array1.toString());
 ## 參見
 
 - {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

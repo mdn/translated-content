@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/bold
 
 {{JSRef}} {{deprecated_header}}
 
-O método **`bold()`** cria um elemento HTML [\<b>](/pt-BR/docs/Web/HTML/Element/b) que faz com que uma string seja exibida em negrito.
+O método **`bold()`** cria um elemento HTML [\<b>](/pt-BR/docs/Web/HTML/Reference/Elements/b) que faz com que uma string seja exibida em negrito.
 
 ## Sintaxe
 
@@ -15,7 +15,7 @@ str.bold()
 
 ### Valor retornado
 
-Uma string contendo um elemento HTML [\<b>](/pt-BR/docs/Web/HTML/Element/b) .
+Uma string contendo um elemento HTML [\<b>](/pt-BR/docs/Web/HTML/Reference/Elements/b) .
 
 ## Descrição
 

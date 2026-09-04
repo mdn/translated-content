@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 {{jsxref("Iterator")}} 实例的 `toArray()` 方法创建一个新的 {{jsxref("Array")}} 实例，并将迭代器生成的元素填充到该实例中。
 

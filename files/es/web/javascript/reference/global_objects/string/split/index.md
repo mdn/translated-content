@@ -16,7 +16,7 @@ cadena.split([separador][,limite])
 ### Parámetros
 
 - `separador`
-  - : Especifica el carácter a usar para la separación de la cadena. El `separador` es tratado como una cadena o como una [](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp){{jsxref("Objetos_globales/RegExp", "expresión regular", "", 1)}}. Si se omite el `separador`, el array devuelto contendrá un sólo elemento con la cadena completa.
+  - : Especifica el carácter a usar para la separación de la cadena. El `separador` es tratado como una cadena o como una [](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp){{jsxref("RegExp", "expresión regular", "", 1)}}. Si se omite el `separador`, el array devuelto contendrá un sólo elemento con la cadena completa.
 
 <!---->
 
@@ -142,7 +142,7 @@ var strReverse = str.split("").reverse().join(""); // 'lkjhgfdsa'
 // split() retorna un array en el cual reverse() y join() pueden ser aplicados
 ```
 
-**Extra:** usar el operador [===](</es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity_.2F_strict_equality_(.3D.3D.3D)>) para verificar si la cadena anterior era un palíndromo.
+**Extra:** usar el operador [===](</es/docs/Web/JavaScript/Reference/Operators#Identity_.2F_strict_equality_(.3D.3D.3D)>) para verificar si la cadena anterior era un palíndromo.
 
 ## Especificaciones
 

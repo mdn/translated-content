@@ -9,7 +9,7 @@ slug: Web/API/InstallEvent
 
 该接口继承自 {{domxref("ExtendableEvent")}} 接口。
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 ## 构造函数
 

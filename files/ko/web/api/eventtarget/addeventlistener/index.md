@@ -40,7 +40,7 @@ addEventListener(type, listener, useCapture);
 ### 매개변수
 
 - `type`
-  - : 수신할 [이벤트 유형](/ko/docs/Web/Events)을 나타내는 대소문자 구분 문자열입니다.
+  - : 수신할 [이벤트 유형](/ko/docs/Web/API/Document_Object_Model/Events)을 나타내는 대소문자 구분 문자열입니다.
 - `listener`
   - : 지정한 이벤트({{domxref("Event")}} 인터페이스를 구현한 객체)를 수신할 객체입니다. `handleEvent()` 메서드를 포함하는 객체 또는 JavaScript [함수](/ko/docs/Web/JavaScript/Guide/Functions)여야 합니다. [이벤트 수신기 콜백](#이벤트_수신기_콜백)에서 콜백 자체에 대한 정보를 더 알아보세요.
 - `options` {{optional_inline}}
@@ -172,7 +172,7 @@ const el = document.getElementById("outside");
 el.addEventListener("click", modifyText, false);
 ```
 
-위 코드의 `modifyText()`가 `addEventListener()`로 추가하는 `click` 이벤트의 수신기입니다. 표 요소의 어디를 클릭하든, 클릭 이벤트는 버를링을 통해 전파되다가 `modifyText()`를 발동하게 됩니다.
+위 코드의 `modifyText()`가 `addEventListener()`로 추가하는 `click` 이벤트의 수신기입니다. 표 요소의 어디를 클릭하든, 클릭 이벤트는 버블링을 통해 전파되다가 `modifyText()`를 발동하게 됩니다.
 
 #### 결과
 
@@ -431,7 +431,7 @@ function nonePassiveHandler(event) {
 
 비슷한 요소 다수의 이벤트를 모두 처리할 수 있는 범용 수신기를 정의하는 경우, 부착된 요소의 참조를 가져와야 하는 상황이 종종 발생합니다.
 
-`addEventListener()`를 사용해 요소에 수신기를 부착하게 되면 수신기 내부의 {{jsxref("Operators/this", "this")}} 값은 대상 요소를 가리키게 되며, 이는 수신기가 매개변수로 받게 되는 이벤트 객체의 `currentTarget` 속성과 같습니다.
+`addEventListener()`를 사용해 요소에 수신기를 부착하게 되면 수신기 내부의 {{jsxref("this")}} 값은 대상 요소를 가리키게 되며, 이는 수신기가 매개변수로 받게 되는 이벤트 객체의 `currentTarget` 속성과 같습니다.
 
 ```js
 my_element.addEventListener("click", function (e) {

@@ -58,7 +58,7 @@ X-Cache-Info: cached
    3. {{Glossary("Request header")}}
    4. {{Glossary("Response header")}}
    5. {{Glossary("Entity header")}}
-   6. {{Glossary("Forbidden header name")}}
+   6. {{Glossary("Forbidden request header")}}
    7. {{Glossary("Forbidden response header name")}}
    8. {{Glossary("CORS-safelisted request header")}}
    9. {{Glossary("CORS-safelisted response header")}}

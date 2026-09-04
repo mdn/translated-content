@@ -1,24 +1,28 @@
 ---
-title: HTMLElement.contentEditable
+title: "HTMLElement : propriété contentEditable"
+short-title: contentEditable
 slug: Web/API/HTMLElement/contentEditable
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`HTMLElement.contentEditable`** est utilisée pour indiquer si un élément HTML est ou non éditable. Cet attribut peut avoir 3 valeurs&nbsp;:
+La propriété **`contentEditable`** de l'interface {{DOMxRef("HTMLElement")}} indique si l'élément est éditable ou non.
 
-- `"true"` _(vrai)_ indique que l'élément est éditable.
-- `"false"` _(faux)_ indique que l'élément ne sera pas éditable.
-- `"inherit"` _(hérité)_ indique que l'élément héritera de l'état editable de son parent.
+Cet attribut énuméré peut prendre les valeurs suivantes&nbsp;:
 
-Vous pouvez utiliser la propriété {{domxref("HTMLElement.isContentEditable")}} pour tester la valeur de la propriété {{domxref("Boolean")}}.
+- `"true"` indique que l'élément est `contenteditable`.
+- `"false"` indique que l'élément ne peut pas être édité.
+- `"plaintext-only"` indique que le texte brut de l'élément est éditable, mais la mise en forme riche est désactivée.
 
-## Syntaxe
+Vous pouvez utiliser la propriété {{DOMxRef("HTMLElement.isContentEditable")}} pour tester la valeur booléenne calculée de cette propriété.
 
-```js
-editable = element.contentEditable;
-element.contentEditable = "true";
-```
+Si l'attribut est absent ou si sa valeur est invalide, il hérite de la valeur de son élément parent&nbsp;: l'élément sera donc éditable (ou non) selon le parent.
+
+## Valeur
+
+Une chaîne de caractères.
 
 ## Spécifications
 
@@ -30,6 +34,5 @@ element.contentEditable = "true";
 
 ## Voir aussi
 
-- [Contenu editable](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)
-- {{domxref("HTMLElement.isContentEditable")}}
-- L'attribut global [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) .
+- La propriété {{DOMxRef("HTMLElement.isContentEditable")}}
+- L'attribut HTML universel [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)

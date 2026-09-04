@@ -1,50 +1,52 @@
 ---
-title: "Window: languagechange event"
+title: "Window : évènement languagechange"
+short-title: languagechange
 slug: Web/API/Window/languagechange_event
+l10n:
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
 {{APIRef}}
 
-L'événement **`languagechange`** est déclenché sur l'objet d'étendue globale lorsque la langue préférée de l'utilisateur change.
+L'évènement **`languagechange`** de l'interface {{DOMxRef("Window")}} est déclenché sur l'objet d'étendue globale lorsque la langue préférée de l'utilisateur change.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
-      <td>
-        {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènements.
+
+```js-nolint
+addEventListener("languagechange", (event) => { })
+
+onlanguagechange = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("Event")}} générique.
+
+## Alias des gestionnaires d'évènements
+
+En plus de l'interface `Window`, la propriété du gestionnaire d'évènements `onlanguagechange` est également disponible sur les cibles suivantes&nbsp;:
+
+- {{DOMxRef("HTMLBodyElement")}}
+- {{DOMxRef("HTMLFrameSetElement")}}
+- {{DOMxRef("SVGSVGElement")}}
 
 ## Exemples
 
-Vous pouvez utiliser l'événement `languagechange` dans une méthode {{domxref("EventTarget/addEventListener", "addEventListener")}} :
+Vous pouvez utiliser l'événement `languagechange` dans une méthode {{DOMxRef("EventTarget/addEventListener", "addEventListener")}}&nbsp;:
 
 ```js
 window.addEventListener("languagechange", function () {
-  console.log("languagechange event detected!");
+  console.log("Évènement languagechange détecté !");
 });
 ```
 
-Ou utilisez la propriété du gestionnaire d'événements [`onlanguagechange`](/fr/docs/Web/API/Window/languagechange_event) :
+Ou utilisez la propriété du gestionnaire d'évènements `onlanguagechange`&nbsp;:
 
 ```js
 window.onlanguagechange = function (event) {
-  console.log("languagechange event detected!");
+  console.log("Évènement languagechange détecté !");
 };
 ```
 
@@ -58,7 +60,6 @@ window.onlanguagechange = function (event) {
 
 ## Voir aussi
 
-- {{domxref("NavigatorLanguage.language", "navigator.language")}}
-- {{domxref("NavigatorLanguage.languages", "navigator.languages")}}
-- {{domxref("Navigator")}}
-- {{domxref("Window.onlanguagechange")}}
+- La propriété {{DOMxRef("Navigator.language")}}
+- La propriété {{DOMxRef("Navigator.languages")}}
+- L'interface {{DOMxRef("Navigator")}}

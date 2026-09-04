@@ -15,7 +15,7 @@ HTTP **`Cross-Origin-Embedder-Policy`** (COEP) 응답 헤더는 문서에 교차
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>

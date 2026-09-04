@@ -3,7 +3,7 @@ title: Управление документами
 slug: Learn_web_development/Core/Scripting/DOM_scripting
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 При написании веб-страниц и приложений вам придётся часто каким-либо образом управлять структурой документа. Обычно это делается с помощью Document Object Model (DOM), набора API для управления разметкой HTML и стилями, которая сильно использует объект {{domxref ("Document")}}. В этой статье мы подробно рассмотрим, как использовать DOM и некоторые другие интересные API, которые могут изменить вашу среду интересными способами.
 
@@ -316,7 +316,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 (Полный список веб-индексов API, задокументированных MDN: [Web API index](/ru/docs/Web/API))
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 ## В этот модуль входит
 

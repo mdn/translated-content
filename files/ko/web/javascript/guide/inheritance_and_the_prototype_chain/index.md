@@ -616,7 +616,7 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
     <tr>
       <th scope="row">장점</th>
       <td>
-        모든 최신 엔진에서 지원됩니다. 매우 높은 가독성과 유지 보수성. <a href="/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields">비공개 속성</a>은 프로토타입 상속에서 자잘한 대체가 없는 기능입니다.
+        모든 최신 엔진에서 지원됩니다. 매우 높은 가독성과 유지 보수성. <a href="/ko/docs/Web/JavaScript/Reference/Classes/Private_elements">비공개 속성</a>은 프로토타입 상속에서 자잘한 대체가 없는 기능입니다.
       </td>
     </tr>
     <tr>

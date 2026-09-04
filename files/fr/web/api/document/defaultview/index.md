@@ -1,26 +1,25 @@
 ---
-title: document.defaultView
+title: "Document : propriété defaultView"
+short-title: defaultView
 slug: Web/API/Document/defaultView
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{ApiRef}}
+{{APIRef("DOM")}}
 
-Dans les navigateurs, cette propriété renvoie l'objet [window](/fr/docs/Web/API/Window) associé au document ou `null` si non disponible.
-
-## Syntaxe
-
-```js
-var win = document.defaultView;
-```
+La propriété **`defaultView`** de l'interface {{DOMxRef("Document")}} dans les navigateurs, retourne l'objet {{DOMxRef("Window", "window")}} associé à {{Glossary("Browsing_context", "un document")}}, ou `null` si aucun n'est disponible.
 
 Cette propriété est en lecture seule.
 
-## Notes
+## Valeur
 
-D'après [quirksmode](https://www.quirksmode.org/dom/w3c_html.html), `defaultView` n'est pas supporté dans les versions d'IE inférieures à 9.
+L'objet {{DOMxRef("Window", "window")}}.
 
-## Spécification
+## Spécifications
 
-- [HTML5: defaultView](/fr/docs/Glossary/HTML5)
-- [DOM Level 2 Views: defaultView](https://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView)
-- [DOM Level 3 Views](https://www.w3.org/TR/DOM-Level-3-Views/) (Seulement développé en Working Group Note mais pas implémenté)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

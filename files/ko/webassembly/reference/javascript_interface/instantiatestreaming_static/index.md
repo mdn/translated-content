@@ -19,19 +19,19 @@ WebAssembly.instantiateStreaming(source, importObject);
 - _source_
   - : 스트리밍, 컴파일 및 인스턴스화하려는 .wasm 모듈의 기본 소스를 나타내는 {{domxref ( "Response")}} 객체 또는 promise.
 - _importObject_ {{optional_inline}}
-  - : 함수 또는 {{jsxref("WebAssembly.Memory")}} 객체와 같이 새로 생성 된 `Instance`로 가져올 값을 포함하는 객체입니다. 컴파일 된 모듈의 각 선언 된 가져 오기에 대해 하나의 일치하는 속성이 있어야합니다. 그렇지 않으면 [WebAssembly.LinkError](/ko/docs/WebAssembly/Reference/JavaScript_interface/LinkError)가 발생합니다.
+  - : 함수 또는 [`WebAssembly.Memory`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory) 객체와 같이 새로 생성 된 `Instance`로 가져올 값을 포함하는 객체입니다. 컴파일 된 모듈의 각 선언 된 가져 오기에 대해 하나의 일치하는 속성이 있어야합니다. 그렇지 않으면 [WebAssembly.LinkError](/ko/docs/WebAssembly/Reference/JavaScript_interface/LinkError)가 발생합니다.
 
 ### Return value
 
 두 개의 필드를 포함하는 `ResultObject`로 해석되는 `Promise` :
 
-- `module`: 컴파일 된 WebAssembly 모듈을 나타내는 {{jsxref ( "WebAssembly.Module")}} 객체입니다. 이 `Module`은 다시 인스턴스화되거나 [postMessage()](/ko/docs/Web/API/Worker/postMessage)를 통해 공유 될 수 있습니다.
-- `instance`: [Exported WebAssembly functions](/ko/docs/WebAssembly/Guides/Exported_functions)를 포함하는 {{jsxref ( "WebAssembly.Instance")}} 객체입니다.
+- `module`: 컴파일 된 WebAssembly 모듈을 나타내는 [`WebAssembly.Module`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Module) 객체입니다. 이 `Module`은 다시 인스턴스화되거나 [postMessage()](/ko/docs/Web/API/Worker/postMessage)를 통해 공유 될 수 있습니다.
+- `instance`: [Exported WebAssembly functions](/ko/docs/WebAssembly/Guides/Exported_functions)를 포함하는 [`WebAssembly.Instance`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Instance) 객체입니다.
 
 ### Exceptions
 
 - 매개 변수 중 하나가 올바른 유형 또는 구조가 아니면 {{jsxref ( "TypeError")}}가 발생합니다.
-- 작업작업이 실패하면 promise는 실패 원인에 따라 {{jsxref ( "WebAssembly.CompileError")}}, {{jsxref ( "WebAssembly.LinkError")}} 또는 {{jsxref ( "WebAssembly.RuntimeError")}}로 거부됩니다.
+- 작업작업이 실패하면 promise는 실패 원인에 따라 [`WebAssembly.CompileError`](/ko/docs/WebAssembly/Reference/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/ko/docs/WebAssembly/Reference/JavaScript_interface/LinkError) 또는 [`WebAssembly.RuntimeError`](/ko/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)로 거부됩니다.
 
 ## Examples
 

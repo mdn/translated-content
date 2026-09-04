@@ -30,7 +30,7 @@ PR 생성 시 `Create pull request` 버튼 옆에 있는 `Allow edits by maintai
 
 ### Prettier, Husky 설정
 
-`yarn install`명령어를 실행하여 git commit 실행 전에 Prettier와 Husky 활성화해 주세요.
+`npm install`명령어를 실행하여 git commit 실행 전에 Prettier와 Husky 활성화해 주세요.
 
 ### PR 파일 개수
 
@@ -57,7 +57,7 @@ PR 생성시에 한국 리뷰어들은 라운드 로빈 방식으로 배정이 �
 yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크](https://github.com/mdn/yari?tab=readme-ov-file#quickstart)를 참고해주세요.
 
 1. [content](https://github.com/mdn/content)와 (Fork된 본인 레포의) [translated-content](https://github.com/mdn/translated-content)를 클론합니다.
-2. content 폴더에 들어가서 `yarn install`을 통해 yari 등 필요한 패키지를 다운받습니다.
+2. content 폴더에 들어가서 `npm install`을 통해 yari 등 필요한 패키지를 다운받습니다.
 3. content 폴더 root에 .env 파일을 추가합니다. (translated-content/files 경로 추가, vscode editor의 경우 `EDITOR=code` 추가)
 
    ```
@@ -65,7 +65,7 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
    EDITOR=code
    ```
 
-4. `yarn start`
+4. `npm start`
 
 다음과 같이 진행하면 아래와 같이 실시간으로 반영사항을 확인할 수 있습니다.
 ![image](https://github.com/mdn/translated-content/assets/23524849/c0247523-a8d2-4279-b17e-1156c15d08ce)

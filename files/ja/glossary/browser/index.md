@@ -1,27 +1,29 @@
 ---
 title: Browser (ブラウザー)
 slug: Glossary/Browser
+l10n:
+  sourceCommit: 74e7902b0875b6378d77df6d2d925a2d09d19f5d
 ---
 
-{{GlossarySidebar}}
+**ウェブブラウザー**または**ブラウザー**は、{{Glossary("World Wide Web","ウェブ")}}からページを取得して表示するプログラムで、ユーザーが{{Glossary("hyperlink","ハイパーリンク")}}を通して更に他のページへアクセスできます。ブラウザーは{{Glossary("user agent","ユーザーエージェント")}}の最もなじみ深い形です。これは{{Glossary("Engine/Rendering", "レンダリングエンジン")}}を使用して、ウェブページを表示します。
 
-**ウェブブラウザー**または**ブラウザー**は、{{Glossary("World Wide Web","ウェブ")}}からページを取得して表示するプログラムで、ユーザーが{{Glossary("hyperlink","ハイパーリンク")}}を通して更に他のページへアクセスできます。ブラウザーは{{Glossary("user agent","ユーザーエージェント")}}の最もなじみ深い形です。
+有名なブラウザーには次のものがあります。
 
-## 詳細情報
+- {{Glossary("Apple Safari")}}
+- {{Glossary("Google Chrome")}}
+- {{Glossary("Microsoft Edge")}} （{{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} を置き換えた）
+- {{Glossary("Mozilla Firefox")}}
+- {{Glossary("Opera Browser")}}
 
-### ブラウザーをダウンロードする
+## 関連情報
 
-- [Mozilla Firefox](https://www.mozilla.org/ja/firefox/)
-- [Google Chrome](https://www.google.com/chrome/)
-- [Microsoft Edge](https://www.microsoft.com/ja-JP/edge)
-- [Opera ブラウザー](https://www.opera.com/)
-
-1. 関連用語:
-   1. {{Glossary("user agent", "ユーザーエージェント")}}
-
-2. 一般知識
-   1. Wikipedia 上の記事: [ウェブブラウザー](https://ja.wikipedia.org/wiki/ウェブブラウザー)
-   2. [ウェブの進化](http://www.evolutionoftheweb.com/)
-
-3. HTTP ヘッダー
-   1. {{HTTPHeader("User-agent")}}
+- [ウェブブラウザ](https://ja.wikipedia.org/wiki/ウェブブラウザ) - ウィキペディア- HTTP の {{HTTPHeader("User-agent")}} リクエストヘッダー
+- ブラウザーのダウンロードリンク
+  - [Apple Safari](https://www.apple.com/safari/) （Safari はダウンロード可能なブラウザーではない）
+  - [Google Chrome](https://www.google.com/chrome/)
+  - [Microsoft Edge](https://www.microsoft.com/ja-jp/edge)
+  - [Mozilla Firefox](https://www.firefox.com/ja/)
+  - [Opera Browser](https://www.opera.com/)
+- 関連用語
+  - {{Glossary("Engine/Rendering", "レンダリングエンジン")}}
+  - {{Glossary("User agent", "ユーザーエージェント")}}

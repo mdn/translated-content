@@ -1,8 +1,9 @@
 ---
-title: <wbr>：换行机会元素
+title: "`<wbr>` HTML 换行机会元素"
+short-title: <wbr>
 slug: Web/HTML/Reference/Elements/wbr
 l10n:
-  sourceCommit: 0af6781c93ffe3d011a060b4e517187cf780e93a
+  sourceCommit: b7de5fa065848c0d703b6763df7a15d1eb908c91
 ---
 
 **`<wbr>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示一个单词换行机会——文本中的一个位置，浏览器可以选择在此处换行，即使其换行规则不会在此处换行。
@@ -23,7 +24,7 @@ l10n:
   overflow: hidden;
   resize: horizontal;
   width: 9rem;
-  border: 2px dashed #999;
+  border: 2px dashed #999999;
 }
 ```
 
@@ -33,7 +34,7 @@ l10n:
 
 ## 说明
 
-在 UTF-8 编码的页面中，`<wbr>` 元素表现得如同 `U+200B ZERO-WIDTH SPACE`（零宽度空格）码位。具体来说，它就像一个 Unicode 双向文本（bidi）BN 码位，这意味着它对{{Glossary("bidi", "双向文本")}}的顺序没有影响：`<div dir=rtl>123、<wbr>456</div>` 不换行时会显示为 `123、456`，而不是 `456、123`。
+`<wbr>` 元素表现得如同 `U+200B ZERO-WIDTH SPACE`（零宽度空格）码位。具体来说，它就像一个 Unicode 双向文本（bidi）BN 码位，这意味着它对{{Glossary("bidi", "双向文本")}}的顺序没有影响：`<div dir=rtl>123、<wbr>456</div>` 不换行时会显示为 `123、456`，而不是 `456、123`。
 
 出于同样的原因，`<wbr>` 元素不会在换行处插入连字符。若要使连字符仅出现在行尾，请改用软连字符实体（`&shy;`）。
 
@@ -75,7 +76,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">标签省略</th>
-      <td>不允许，开始标签和结束标签都不能省略。</td>
+      <td>必须有开始标签，且不得有结束标签。</td>
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>
@@ -88,7 +89,7 @@ l10n:
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >没有对应的角色</a
         >
       </td>

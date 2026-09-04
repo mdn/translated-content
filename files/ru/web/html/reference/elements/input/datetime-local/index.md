@@ -51,7 +51,7 @@ label {
 
 ![](datetime-local-picker-edge2.png)
 
-| **[Value](#value)**             | A {{domxref("DOMString")}} representing a date and time, or empty.                                                                                                                                                                                                      |
+| **[Value](#value)**             | A {{jsxref("String")}} representing a date and time, or empty.                                                                                                                                                                                                          |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **события**                     | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event).                                                                                                                                                                |
 | **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Reference/Elements/input#autocomplete), [`list`](/ru/docs/Web/HTML/Reference/Elements/input#list), [`readonly`](/ru/docs/Web/HTML/Reference/Elements/input#readonly), and [`step`](/ru/docs/Web/HTML/Reference/Elements/input#step). |
@@ -60,7 +60,7 @@ label {
 
 ## Значение
 
-{{domxref("DOMString")}} представление значения даты, введённой во входные данные. Вы можете установить значение по умолчанию для ввода, включая дату внутри [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) атрибута, как:
+{{jsxref("String")}} представление значения даты, введённой во входные данные. Вы можете установить значение по умолчанию для ввода, включая дату внутри [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) атрибута, как:
 
 ```html
 <label for="party">Enter a date and time for your party booking:</label>
@@ -227,7 +227,8 @@ input:valid + span:after {
 }
 ```
 
-> **Предупреждение:** **Important**: HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
+> [!WARNING]
+> HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
 
 ## Handling browser support
 

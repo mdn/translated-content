@@ -2,10 +2,10 @@
 title: プロミスの使用
 slug: Web/JavaScript/Guide/Using_promises
 l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+  sourceCommit: d8a5165fd3c3b35ea9d07a914459e8d468f62276
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}
 
 プロミス ({{jsxref("Promise")}}) は、非同期処理の最終的な完了もしくは失敗を表すオブジェクトです。多くの人々は既存の用意されたプロミスを使うことになるため、このガイドでは、プロミスの作成方法の前に、関数が返すプロミスの使い方から説明します。
 
@@ -35,7 +35,7 @@ createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 
 ## 連鎖
 
-よくあるニーズは、 2 つ以上の非同期処理を連続して実行することで、前回の処理が成功したときに、その結果をもとに後続の処理を始めることです。昔は、複数の非同期処理を連続して実行すると、古典的な[コールバック地獄](http://callbackhell.com/)に陥っていました。
+よくあるニーズは、 2 つ以上の非同期処理を連続して実行することで、前回の処理が成功したときに、その結果をもとに後続の処理を始めることです。昔は、複数の非同期処理を連続して実行すると、古典的な[コールバック地獄](https://medium.com/@raihan_tazdid/callback-hell-in-javascript-all-you-need-to-know-296f7f5d3c1)に陥っていました。
 
 ```js-nolint
 doSomething(function (result) {
@@ -199,7 +199,7 @@ async function logIngredients() {
 }
 ```
 
-コードはプロミスの前に `await` キーワードがあることを除いて、同期的なコードとまったく同じに見えることに注目してください。トレードオフの1つは、[`await`](/ja/docs/Web/JavaScript/Reference/Statements/async_function) キーワードを簡単に忘れてしまう可能性があることです。これは、型不一致（例えば、プロミスを値として使用しようとするなど）がある場合にのみ修正することができます。
+コードはプロミスの前に `await` キーワードがあることを除いて、同期的なコードとまったく同じに見えることに注目してください。トレードオフの 1 つは、[`await`](/ja/docs/Web/JavaScript/Reference/Statements/async_function) キーワードを簡単に忘れてしまう可能性があることです。これは、型不一致（例えば、プロミスを値として使用しようとするなど）がある場合にのみ修正することができます。
 
 `async`/`await` はプロミスを基に構築されています。例えば、`doSomething()` は以前と同じ関数であるため、プロミスから `async`/`await` に変更するために必要なリファクタリングは最小限で済みます。 `async`/`await` の構文については、[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)および [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) のリファレンスで詳しく説明されています。
 
@@ -313,13 +313,12 @@ doSomething()
 これは下記のテキストを出力します。
 
 ```plain
-Initial
 あれを実行
 以前に何が起こったとしても、これを行う
 ```
 
 > [!NOTE]
-> 「これを実行」のテキストは「何か失敗した」エラーが拒否をを引き起こしたため、出力されないことに注意してください。
+> 「これを実行」のテキストは「何か失敗した」エラーが拒否を引き起こしたため、出力されないことに注意してください。
 
 `async`/`await` では、このコードは次のようになります。
 
@@ -373,7 +372,7 @@ Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
 });
 ```
 
-注意すべきは、配列の中の 1 つのプロミスが拒否されると、 `Promise.all()` がそのエラーを発生させ、他の処理を中断することです。これにより、予期せぬ状態や振る舞いが発生する可能性があります。 {{jsxref("Promise.allSettled()")}} は、解決する前にすべての操作が完了することを保証する別の合成ツールです。
+配列内のプロミスのいずれかが拒否された場合、`Promise.all()` は返されたプロミスを直ちに拒否します。他の操作は引き続き実行されますが、その結果は `Promise.all()` の返値からは利用できません。これにより、予期せぬ状態や振る舞いが発生する可能性があります。 {{jsxref("Promise.allSettled()")}} は、解決する前にすべての操作が完了することを保証する別の合成ツールです。
 
 これらのメソッドはすべてプロミスを並列処理します。一連のプロミスは同時に開始され、他にも待つことはありません。いくつかの賢い JavaScript を使用することで、逐次合成が可能です。
 

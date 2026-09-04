@@ -37,7 +37,7 @@ original_slug: Web/Guide
 - [O Web Open Font Format (WOFF)](/pt-BR/docs/Web/CSS/CSS_fonts/WOFF)
   - : **WOFF** (**Web Open Font Format**) é um formato de arquivo para fontes que é livre para qualquer um usar.
 - [Usando Objetos FormData](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-  - : O objeto [`FormData`](/pt-BR/docs/DOM/XMLHttpRequest/FormData) permite compilar um conjunto de pares de chave / valor para enviar usando XMLHttpRequest. É destinado principalmente para o envio de dados do formulário, mas pode ser utilizado de forma independente destes a fim de transmitir dados. A transmissão é realizada no mesmo formato que o método do formulário `submit()` iria usar para enviar os dados se o tipo de forma de codificação fosse definido como "multipart / form-data".
+  - : O objeto [`FormData`](/pt-BR/docs/Web/API/FormData) permite compilar um conjunto de pares de chave / valor para enviar usando XMLHttpRequest. É destinado principalmente para o envio de dados do formulário, mas pode ser utilizado de forma independente destes a fim de transmitir dados. A transmissão é realizada no mesmo formato que o método do formulário `submit()` iria usar para enviar os dados se o tipo de forma de codificação fosse definido como "multipart / form-data".
 - [Glossário](/pt-BR/docs/Glossary)
   - : Define vários termos técnicos relacionados à Web e Internet.
 

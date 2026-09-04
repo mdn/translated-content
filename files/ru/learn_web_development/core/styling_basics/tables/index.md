@@ -3,7 +3,7 @@ title: Стилизация таблиц
 slug: Learn_web_development/Core/Styling_basics/Tables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Borders", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Styling_boxes")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
 
 Стилизация HTML таблиц это не самая гламурная работа в мире, но иногда нам нужно это делать. Эта статья руководство как сделать, чтобы ваши HTML таблицы выглядели хорошо, с некоторыми свойствами подробно рассмотренными в предыдущих статьях.
 
@@ -132,7 +132,7 @@ td {
 
 Теперь мы ещё кое-что изменим.
 
-Во-первых, мы пойдём и найдём на [Google Fonts](https://www.google.com/fonts) шрифт который подходит в нашей ситуации с таблицей о панк группах. Вы можете можете выбрать для себя другой шрифт если захотят, тогда вам понадобится заменить представленный {{htmlelement("link")}} элемент и изменить объявление {{cssxref("font-family")}} на выбранный вами Google Fonts шрифт.
+Во-первых, мы пойдём и найдём на [Google Fonts](https://fonts.google.com) шрифт который подходит в нашей ситуации с таблицей о панк группах. Вы можете можете выбрать для себя другой шрифт если захотят, тогда вам понадобится заменить представленный {{htmlelement("link")}} элемент и изменить объявление {{cssxref("font-family")}} на выбранный вами Google Fonts шрифт.
 
 Добавьте элемент {{htmlelement("link")}} в блок head вашего HTML, на строчку выше существующего элемента `<link>`:
 
@@ -213,7 +213,7 @@ tfoot td {
 
 Мы добавили {{cssxref("background-image")}} в {{htmlelement("thead")}}, {{htmlelement("tfoot")}} и изменили {{cssxref("color")}} для всего текста внутри header и footer на белый (и ещё {{cssxref("text-shadow")}}) для лучшей читаемости. Вы должны всегда быть уверены что ваш текст хорошо контрастирует с фоном, для обеспечения читаемости.
 
-Также мы добавили линейный градиент для {{htmlelement("th")}} и {{htmlelement("td")}} элементов внутри header и footer для придания лёгкой приятной текстуры, а также установили этим элементам яркие пурпурные границы. Полезно иметь несколько вложенных элементов, это позволяет накладывать несколько стилей друг на друга. Да, мы могли бы установить и фоновое изображение, и линейный градиент на {{htmlelement("thead")}} и {{htmlelement("tfoot")}} элементы используя множественные фоновые изображения, но мы решили сделать это отдельно для старых браузеров, которые не поддерживают [несколько фоновых изображений](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) и [линейные градиенты](</ru/docs/Web/CSS/gradient/linear-gradient()>).
+Также мы добавили линейный градиент для {{htmlelement("th")}} и {{htmlelement("td")}} элементов внутри header и footer для придания лёгкой приятной текстуры, а также установили этим элементам яркие пурпурные границы. Полезно иметь несколько вложенных элементов, это позволяет накладывать несколько стилей друг на друга. Да, мы могли бы установить и фоновое изображение, и линейный градиент на {{htmlelement("thead")}} и {{htmlelement("tfoot")}} элементы используя множественные фоновые изображения, но мы решили сделать это отдельно для старых браузеров, которые не поддерживают [несколько фоновых изображений](/ru/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) и [линейные градиенты](</ru/docs/Web/CSS/gradient/linear-gradient()>).
 
 #### Полосатая зебра
 
@@ -290,7 +290,7 @@ caption {
 
 Несмотря на головокружительные успехи достигнутые в стилизации таблиц, у нас есть ещё кое-что чем мы можем занять наше время. В следующей главе мы рассмотрим некоторые продвинутые эффекты, уже устоявшиеся (например, тени box shadows) и те которые только недавно появились в браузерах, такие как режимы наложения blend-mode и фильтры.
 
-{{PreviousMenuNext("Learn/CSS/Styling_boxes/Borders", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Styling_boxes")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
 
 ## В этом блоке
 
@@ -299,5 +299,5 @@ caption {
 - [Borders](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
 - [Стилизация таблиц](/ru/docs/Learn_web_development/Core/Styling_basics/Tables)
 - [Advanced box effects](/ru/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects)
-- [Creating fancy letterheaded paper](/ru/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-- [A cool looking box](/ru/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
+- [Creating fancy letterheaded paper](/ru/docs/Learn_web_development/Core/Styling_basics)
+- [A cool looking box](/ru/docs/Learn_web_development/Core/Styling_basics)

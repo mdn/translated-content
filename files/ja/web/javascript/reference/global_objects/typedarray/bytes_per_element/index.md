@@ -1,11 +1,10 @@
 ---
 title: TypedArray.BYTES_PER_ELEMENT
+short-title: BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`TypedArray.BYTES_PER_ELEMENT`** プロパティは、型付き配列内の各要素の大きさをバイト単位で表します。
 
@@ -13,10 +12,10 @@ l10n:
 
 ```js interactive-example
 console.log(Float64Array.BYTES_PER_ELEMENT);
-// Expected output: 8
+// 予想される結果: 8
 
 console.log(Int8Array.BYTES_PER_ELEMENT);
-// Expected output: 1
+// 予想される結果: 1
 ```
 
 ## 値
@@ -49,6 +48,7 @@ Uint8Array.BYTES_PER_ELEMENT; // 1
 Uint8ClampedArray.BYTES_PER_ELEMENT; // 1
 Int16Array.BYTES_PER_ELEMENT; // 2
 Uint16Array.BYTES_PER_ELEMENT; // 2
+Float16Array.BYTES_PER_ELEMENT; // 2
 Int32Array.BYTES_PER_ELEMENT; // 4
 Uint32Array.BYTES_PER_ELEMENT; // 4
 Float32Array.BYTES_PER_ELEMENT; // 4
@@ -65,6 +65,7 @@ new Uint8Array([]).BYTES_PER_ELEMENT; // 1
 new Uint8ClampedArray([]).BYTES_PER_ELEMENT; // 1
 new Int16Array([]).BYTES_PER_ELEMENT; // 2
 new Uint16Array([]).BYTES_PER_ELEMENT; // 2
+new Float16Array([]).BYTES_PER_ELEMENT; // 2
 new Int32Array([]).BYTES_PER_ELEMENT; // 4
 new Uint32Array([]).BYTES_PER_ELEMENT; // 4
 new Float32Array([]).BYTES_PER_ELEMENT; // 4
@@ -83,5 +84,5 @@ new BigUint64Array([]).BYTES_PER_ELEMENT; // 8
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}

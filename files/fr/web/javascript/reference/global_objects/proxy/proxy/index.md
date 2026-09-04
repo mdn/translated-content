@@ -11,32 +11,32 @@ L'objet gestionnaire d'un proxy est un objet qui contient les trappes de capture
 
 Toutes ces trappes sont optionnelles. Si une trappe n'a pas été définie, le comportement par défaut sera de transmettre l'opération à la cible.
 
-- {{jsxref("Objets_globaux/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}
+- {{jsxref("Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
   - : Une trappe pour {{jsxref("Object.getPrototypeOf")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}
+- {{jsxref("Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
   - : Une trappe pour {{jsxref("Object.setPrototypeOf")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/isExtensible", "handler.isExtensible()")}}
+- {{jsxref("Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
   - : Une trappe pour {{jsxref("Object.isExtensible")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}
+- {{jsxref("Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
   - : Une trappe pour {{jsxref("Object.preventExtensions")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+- {{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
   - : Une trappe pour {{jsxref("Object.getOwnPropertyDescriptor")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/defineProperty", "handler.defineProperty()")}}
+- {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
   - : Une trappe pour {{jsxref("Object.defineProperty")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/has", "handler.has()")}}
-  - : Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/get", "handler.get()")}}
+- {{jsxref("Proxy/Proxy/has", "handler.has()")}}
+  - : Une trappe pour l'opérateur {{jsxref("Operators/in", "in")}}.
+- {{jsxref("Proxy/Proxy/get", "handler.get()")}}
   - : Une trappe pour l'accès aux valeurs des propriétés.
-- {{jsxref("Objets_globaux/Proxy/handler/set", "handler.set()")}}
+- {{jsxref("Proxy/Proxy/set", "handler.set()")}}
   - : Une trappe pour la définition des valeurs des propriétés.
-- {{jsxref("Objets_globaux/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}
-  - : Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/ownKeys", "handler.ownKeys()")}}
+- {{jsxref("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
+  - : Une trappe pour l'opérateur {{jsxref("delete")}}.
+- {{jsxref("Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
   - : Une trappe pour {{jsxref("Object.getOwnPropertyNames")}} et {{jsxref("Object.getOwnPropertySymbols")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/apply", "handler.apply()")}}
+- {{jsxref("Proxy/Proxy/apply", "handler.apply()")}}
   - : Une trappe pour l'appel d'une fonction.
-- {{jsxref("Objets_globaux/Proxy/handler/construct", "handler.construct()")}}
-  - : Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
+- {{jsxref("Proxy/Proxy/construct", "handler.construct()")}}
+  - : Une trappe pour l'opérateur {{jsxref("new")}}.
 
 Certaines trappes non standards sont désormais [obsolètes et ont été supprimées](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#proxy).
 

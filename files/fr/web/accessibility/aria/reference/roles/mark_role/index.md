@@ -10,9 +10,9 @@ Le rôle `mark` désigne le contenu qui est marqué ou mis en évidence à des f
 
 ## Description
 
-Le rôle `mark` désigne sémantiquement les éléments HTML contenant du texte qui est marqué/mis en évidence à des fins de référence. Cela est sémantiquement équivalent à l'élément HTML {{HTMLElement("mark")}}. Si possible, vous devriez utiliser cet élément à la place.
+Le rôle `mark` désigne sémantiquement les éléments HTML contenant du texte qui est marqué/mis en évidence à des fins de référence. C'est sémantiquement équivalent à l'élément HTML {{HTMLElement("mark")}}. Si possible, vous devez utiliser cet élément à la place.
 
-Les exemples d'utilisation de `mark` sont exactement les mêmes que ceux de l'élément `<mark>`. Ils incluent la mise en évidence de texte dans une citation qui est d'un intérêt particulier mais qui n'est pas marqué dans le matériel source original, comparable à l'utilisation d'un surligneur pour marquer des passages d'un article imprimé et indiquer des portions du contenu qui sont pertinentes pour l'activité actuelle de l'utilisateur, comme la mise en évidence des correspondances de texte trouvées par une fonction de recherche.
+Les exemples d'utilisation de `mark` sont exactement les mêmes que ceux de l'élément `<mark>`. Ils incluent la mise en évidence de texte dans une citation qui est d'un intérêt particulier mais qui n'est pas marqué dans le matériel source original, comparable à l'utilisation d'un surligneur pour marquer des passages d'un article imprimé et indiquer des portions du contenu qui sont pertinentes pour l'activité actuelle de l'utilisateur·ice, comme la mise en évidence des correspondances de texte trouvées par une fonction de recherche.
 
 N'utilisez pas `mark` pour un style purement décoratif tel que la mise en surbrillance de la syntaxe.
 
@@ -32,7 +32,7 @@ Dans l'exemple suivant, nous avons une section de document qui a été commenté
 <div role="comment" id="thread-1" data-author="chris">
   <h3>Chris à dit</h3>
   <p class="comment-text">
-    Je pense vraiment que ce moment pourrait bénéficier de plus de cowbell.
+    Je pense vraiment que ce moment peut bénéficier de plus de cloche à vache.
   </p>
   <p><time datetime="2022-03-30T19:29">30 mars 2022, 19:29</time></p>
 </div>
@@ -46,7 +46,7 @@ Pour associer le commentaire au texte commenté, nous devons envelopper le texte
 
 ### Préférer HTML
 
-L'utilisation de l'élément {{HTMLElement("mark")}} communiquera automatiquement qu'une section a un rôle de `mark`. Si possible, préférez l'utiliser à la place.
+L'utilisation de l'élément {{HTMLElement("mark")}} communique automatiquement qu'une section a un rôle de `mark`. Si possible, préférez l'utiliser à la place.
 
 ## Spécifications
 

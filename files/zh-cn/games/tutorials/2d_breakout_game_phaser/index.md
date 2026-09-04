@@ -3,7 +3,7 @@ title: 使用 Phaser 开发 2D breakout game
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
 
-{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
+{{Next("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework")}}
 
 在这个手把手的教程中，我们将使用 Phaser 框架制作一个使用 JavaScript 构建简单的 MDN 消除游戏。
 
@@ -45,4 +45,4 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 好了，那我们就开始吧！前往系列第一部分 — [初始化框架](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework).
 
-{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
+{{Next("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework")}}

@@ -17,7 +17,7 @@ var trackID = VideoTrack.id;
 
 Valeur
 
-Une {{domxref("DOMString")}} qui identifie la piste, utilisable par la suite pour l'appel de {{domxref("VideoTrackList.getTrackById", "getTrackById()")}} sur une {{domxref("VideoTrackList")}} tel que spécifié par la propriété {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} d'un élément media.
+Une {{jsxref("String")}} qui identifie la piste, utilisable par la suite pour l'appel de {{domxref("VideoTrackList.getTrackById", "getTrackById()")}} sur une {{domxref("VideoTrackList")}} tel que spécifié par la propriété {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} d'un élément media.
 
 ## Spécifications
 

@@ -27,13 +27,13 @@ label {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >, 레이블 가능, 뚜렷한 콘텐츠.
       </td>
@@ -41,7 +41,7 @@ label {
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         ><a
           href="/ko/docs/Web/Guide/HTML/%EC%BB%A8%ED%85%90%ED%8A%B8_%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC#%EA%B5%AC%EB%AC%B8_%EC%BD%98%ED%85%90%EC%B8%A0"
@@ -57,7 +57,7 @@ label {
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>
@@ -86,7 +86,7 @@ label {
 > {{htmlelement("meter")}} 요소와 달리, 최솟값은 항상 0이며 `min` 특성을 지정할 수 없습니다.
 
 > [!NOTE]
-> CSS {{cssxref(":indeterminate")}} [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)를 사용하면 미결정 상태의 진행 표시줄을 선택할 수 있습니다. 값을 지정한 진행 표시줄을 미결정 상태로 바꾸려면 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}를 사용해 `value` 특성을 제거해야 합니다.
+> CSS {{cssxref(":indeterminate")}} [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)를 사용하면 미결정 상태의 진행 표시줄을 선택할 수 있습니다. 값을 지정한 진행 표시줄을 미결정 상태로 바꾸려면 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}를 사용해 `value` 특성을 제거해야 합니다.
 
 ## 예제
 

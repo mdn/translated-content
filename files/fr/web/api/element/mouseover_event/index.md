@@ -1,38 +1,36 @@
 ---
 title: "Element : évènement mouseover"
+short-title: mouseover
 slug: Web/API/Element/mouseover_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-L'évènement **`mouseover`** est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (une souris par exemple) déplace le curseur sur l'élément ou sur l'un de ses éléments fils.
+L'évènement **`mouseover`** est déclenché à partir d'un objet {{DOMxRef("Element")}} lorsqu'un dispositif de pointage (comme une souris ou un trackpad) déplace le curseur sur l'élément ou sur l'un de ses éléments fils.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Se propage/remonte dans le DOM</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MouseEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété pour la gestion d'évènement</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onmouseover", "onmouseover")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+Si l'élément cible a des éléments fils, les évènements `mouseout` et `mouseover` sont déclenchés lorsque la souris passe sur les limites de ces éléments également, et pas seulement sur l'élément cible lui-même. En général, le comportement des évènements {{DOMxRef("Element/mouseenter_event", "mouseenter")}} et {{DOMxRef("Element/mouseleave_event", "mouseleave")}} est plus logique, car ils ne sont pas affectés par le déplacement dans les éléments fils.
+
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("mouseover", (event) => { })
+
+onmouseover = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("MouseEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et de {{DOMxRef("Event")}}.
+
+{{InheritanceDiagram("MouseEvent")}}
 
 ## Exemples
 
-L'exemple suivant illustre la différence entre les évènements `mouseover` et [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event).
+L'exemple suivant illustre la différence entre les évènements `mouseover` et {{DOMxRef("Element/mouseenter_event", "mouseenter")}}.
 
 ### HTML
 
@@ -47,10 +45,10 @@ L'exemple suivant illustre la différence entre les évènements `mouseover` et 
 ### JavaScript
 
 ```js
-let test = document.getElementById("test");
+const test = document.getElementById("test");
 
-// Ce gestionnaire ne sera exécuté qu'une fois
-// lorsque le curseur se déplace sur la liste
+// Ce gestionnaire n'est exécuté qu'une fois lorsque le curseur se
+// déplace sur la liste
 test.addEventListener(
   "mouseenter",
   function (event) {
@@ -65,8 +63,8 @@ test.addEventListener(
   false,
 );
 
-// Ce gestionnaire sera exécuté à chaque fois que le curseur
-// se déplacera sur un autre élément de la liste
+// Ce gestionnaire est exécuté à chaque fois que le curseur se déplace
+// sur un autre élément de la liste
 test.addEventListener(
   "mouseover",
   function (event) {
@@ -84,7 +82,7 @@ test.addEventListener(
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -96,14 +94,14 @@ test.addEventListener(
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
-- D'autres évènements connexes
-  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
-  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
-  - [`click`](/fr/docs/Web/API/Element/click_event)
-  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
-  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
-  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)
+- [Apprendre&nbsp;: Introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
+- L'évènement {{DOMxRef("Element/mousedown_event", "mousedown")}}
+- L'évènement {{DOMxRef("Element/mouseup_event", "mouseup")}}
+- L'évènement {{DOMxRef("Element/mousemove_event", "mousemove")}}
+- L'évènement {{DOMxRef("Element/click_event", "click")}}
+- L'évènement {{DOMxRef("Element/dblclick_event", "dblclick")}}
+- L'évènement {{DOMxRef("Element/mouseout_event", "mouseout")}}
+- L'évènement {{DOMxRef("Element/mouseenter_event", "mouseenter")}}
+- L'évènement {{DOMxRef("Element/mouseleave_event", "mouseleave")}}
+- L'évènement {{DOMxRef("Element/contextmenu_event", "contextmenu")}}
+- L'évènement {{DOMxRef("Element/pointerover_event", "pointerover")}}

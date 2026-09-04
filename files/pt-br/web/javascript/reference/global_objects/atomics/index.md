@@ -40,7 +40,7 @@ Os métodos `wait()` e `wake()` são modelados no Linux futexes ("fast user-spac
 
 - {{jsxref("Atomics.wait()")}}
   - : Verifica se a posição informada no array ainda contém a valor recebido e dorme à espera ou até o tempo limite. Retorna `"ok"`, `"not-equal"`, ou `"timed-out"`. Se a espera não for permitida no agente de chamada ele irá lançar uma exceção de erro (muitos navegadores não permitem `wait()` na thread main do navegador).
-- {{jsxref("Atomics.wake()")}}
+- {{jsxref("Atomics.notify()", "Atomics.wake()")}}
   - : "Acorda" alguns agentes que estavam "dormindo" na lista de espera na posição recebida do array. Retorna o número de agentes que estão sendo "acordados".
 - {{jsxref("Atomics.isLockFree()", "Atomics.isLockFree(size)")}}
   - : Uma otimização primitiva que pode ser usada para determinar se deve ser usado lock ou operações atômicas. Retorna `true`, se uma operação atômica em matrizes de um dado tamanho do elemento vai ser implementado utilizando uma operação atômica de hardware (como oposição a lock). Só para experientes.
@@ -58,9 +58,9 @@ Os métodos `wait()` e `wake()` são modelados no Linux futexes ("fast user-spac
 \[3] A especificação de compartilhamento de memória está sendo estabilizada. Anterior ao SpiderMonkey 48, a última API e semântica não foram implementadas ainda. As alterações entre as versões 46 e 48 do Firefox são:
 
 - Os métodos `Atomics.futexWakeOrRequeue()` e `Atomics.fence()` foram totalmente removidos ([Erro do Firefox 1259544](https://bugzil.la/1259544) e [Erro do Firefox 1225028](https://bugzil.la/1225028)).
-- O método {{jsxref("Atomics.wait()")}} e {{jsxref("Atomics.wake()")}} foram nomeados como `Atomics.futexWait()` e `Atomics.futexWake()` ([Erro do Firefox 1260910](https://bugzil.la/1260910)). Os nomes antigos foram mantidos como alias, e serão removidos na versão 49 ([Erro do Firefox 1262062](https://bugzil.la/1262062)).
+- O método {{jsxref("Atomics.wait()")}} e {{jsxref("Atomics.notify()", "Atomics.wake()")}} foram nomeados como `Atomics.futexWait()` e `Atomics.futexWake()` ([Erro do Firefox 1260910](https://bugzil.la/1260910)). Os nomes antigos foram mantidos como alias, e serão removidos na versão 49 ([Erro do Firefox 1262062](https://bugzil.la/1262062)).
 - As propriedades `Atomics.OK`, `Atomics.TIMEDOUT`, `Atomics.NOTEQUAL` foram removidas. O método {{jsxref("Atomics.wait()")}} agora retorna "ok", "timed-out" e "not-equal" ([Erro do Firefox 1260835](https://bugzil.la/1260835)).
-- O parâmetro `count` do método {{jsxref("Atomics.wake()")}} foi alterado: este agora possui o valor padrão `+Infinity`, e não `0` ([Erro do Firefox 1253350](https://bugzil.la/1253350)).
+- O parâmetro `count` do método {{jsxref("Atomics.notify()", "Atomics.wake()")}} foi alterado: este agora possui o valor padrão `+Infinity`, e não `0` ([Erro do Firefox 1253350](https://bugzil.la/1253350)).
 
 ## Veja Também
 

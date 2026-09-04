@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 Le symbole connu **`Symbol.split`** définit la méthode qui est utilisée pour découper une chaîne de caractères à l'emplacement où une correspondance a été trouvée grâce à une expression rationnelle. Cette fonction est appelée par la méthode {{jsxref("String.prototype.split()")}}.
 
-Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} et {{jsxref("String.prototype.split()")}}.
+Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp/Symbol.split", "RegExp.prototype[@@split]()")}} et {{jsxref("String.prototype.split()")}}.
 
 {{InteractiveExample("JavaScript Demo: Symbol.split")}}
 
@@ -43,4 +43,4 @@ console.log("foobar".split(new Split1("foo")));
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
-- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}
+- {{jsxref("RegExp/Symbol.split", "RegExp.prototype[@@split]()")}}

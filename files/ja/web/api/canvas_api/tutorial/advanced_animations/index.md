@@ -112,7 +112,13 @@ if (
 #### HTML
 
 ```html
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+<canvas id="canvas" width="600" height="300"></canvas>
+```
+
+```css hidden
+#canvas {
+  border: 1px solid black;
+}
 ```
 
 #### JavaScript
@@ -193,7 +199,13 @@ ball.vy += 0.25;
 #### HTML
 
 ```html
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+<canvas id="canvas" width="600" height="300"></canvas>
+```
+
+```css hidden
+#canvas {
+  border: 1px solid black;
+}
 ```
 
 #### JavaScript
@@ -272,7 +284,13 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 #### HTML
 
 ```html
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+<canvas id="canvas" width="600" height="300"></canvas>
+```
+
+```css hidden
+#canvas {
+  border: 1px solid black;
+}
 ```
 
 #### JavaScript
@@ -347,7 +365,13 @@ ball.draw();
 #### HTML
 
 ```html
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+<canvas id="canvas" width="600" height="300"></canvas>
+```
+
+```css hidden
+#canvas {
+  border: 1px solid black;
+}
 ```
 
 #### JavaScript

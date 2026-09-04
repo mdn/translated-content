@@ -2,14 +2,12 @@
 title: while
 slug: Web/JavaScript/Reference/Statements/while
 l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Statements")}}
 
 **`while`** 文は、テスト条件が真と評価されている間、指定された文を実行するループを作成します。条件はその文を実行する前に評価されます。
 
-{{InteractiveExample("JavaScript デモ: Statement - While")}}
+{{InteractiveExample("JavaScript デモ: while 文")}}
 
 ```js interactive-example
 let n = 0;
@@ -19,7 +17,7 @@ while (n < 3) {
 }
 
 console.log(n);
-// Expected output: 3
+// 予想される結果: 3
 ```
 
 ## 構文
@@ -32,9 +30,14 @@ while (condition)
 - `condition`
   - : ループを通過するごとに、その前に評価される式。この条件が[真と評価された](/ja/docs/Glossary/Truthy)場合は、 `statement` が実行されます。条件が[偽と評価された](/ja/docs/Glossary/Falsy)場合は、実行は `while` ループの後の文に続きます。
 - `statement`
-  - : 条件が真と評価されている間に実行される文。ループ内で複数の文を実行する場合は、{{jsxref("Statements/block", "ブロック", "", 1)}}文 (`{ /* ... */ }`) を使用してそれらの文をグループ化してください。
+  - : 条件が真と評価される限り実行される文。複数の文を実行するには、[ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)を使用することができます。
 
-    メモ: {{jsxref("Statements/break", "break")}} 文を使用すると、条件が真と評価される前にループを停止することができます。
+## 解説
+
+他のループ文と同様に、`statement` の中で[フロー制御文](/ja/docs/Web/JavaScript/Reference/Statements#control_flow)を使用することができます。
+
+- {{jsxref("Statements/break", "break")}} により、`statement` の実行を停止し、ループの後の最初の文へ移動します。
+- {{jsxref("Statements/continue", "continue")}} により、`statement` の実行を停止し、`condition` を再評価します。
 
 ## 例
 

@@ -3,8 +3,6 @@ title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
 ---
 
-{{JSRef}}
-
 **`Uint32Array`** 表示一个由基于平台字节序的 32 位无符号字节组成的数组。如果需要对字节顺序进行控制 (译者注：即 littleEndian 或 bigEndian)，请使用 {{jsxref("DataView")}} 代替。数组中每个元素的初始值都是`0`。一旦创建，你可以用对象的方法引用数组里的元素，或者使用标准的数组索引语法（即，使用中括号）。
 
 ## 语法
@@ -25,7 +23,7 @@ new Uint32Array(buffer [, byteOffset [, length]]);
   - : 返回一个数值，代表`Uint32Array`中单个元素的字节大小。`Uint32Array` 返回 `4`。
 - Uint32Array.length
   - : 固定值 (static) 属性，值为 3。使用 {{jsxref("TypedArray.prototype.length", "Uint32Array.prototype.length")}} 获得数组的真实长度（元素个数）。
-- {{jsxref("TypedArray.prototype", "Uint32Array.prototype")}}
+- {{jsxref("TypedArray", "Uint32Array.prototype")}}
   - : _TypedArray_ 对象的原型链。
 
 ## 静态方法

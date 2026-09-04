@@ -5,7 +5,7 @@ slug: Web/HTML/Reference/Elements/input/submit
 
 {{HTMLElement("input")}} 元素的 **`"submit"`** 類型會被視為提交按鈕（submit button）——點選的話就能把表單提交到伺服器。
 
-| **[值](#值)**      | 用作按鈕 label 的 {{domxref("DOMString")}}                                                                                     |
+| **[值](#值)**      | 用作按鈕 label 的 {{jsxref("String")}}                                                                                         |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | **事件**           | [`click`](/zh-TW/docs/Web/API/Element/click_event)                                                                             |
 | **常見的支援屬性** | [`type`](/zh-TW/docs/Web/HTML/Reference/Elements/input#type) 與 [`value`](/zh-TW/docs/Web/HTML/Reference/Elements/input#value) |
@@ -14,7 +14,7 @@ slug: Web/HTML/Reference/Elements/input/submit
 
 ## 值
 
-`<input type="submit">` 元素的 [`value`](/zh-TW/docs/Web/HTML/Reference/Elements/input#value) 屬性會包含用作按鈕 label 的 {{domxref("DOMString")}}。
+`<input type="submit">` 元素的 [`value`](/zh-TW/docs/Web/HTML/Reference/Elements/input#value) 屬性會包含用作按鈕 label 的 {{jsxref("String")}}。
 
 ```html hidden
 <input type="submit" value="Submit to me" />

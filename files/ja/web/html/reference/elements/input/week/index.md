@@ -1,18 +1,17 @@
 ---
-title: <input type="week">
+title: HTML `<input type="week">` 属性値
+short-title: <input type="week">
 slug: Web/HTML/Reference/Elements/input/week
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`week`** 型は、年と、その年の [ISO 8601 週番号](https://ja.wikipedia.org/wiki/ISO_8601#%E5%B9%B4%E3%81%A8%E9%80%B1%E3%81%A8%E6%9B%9C%E6%97%A5) (つまり、第 1 週から第 [52 または 53](https://ja.wikipedia.org/wiki/ISO_8601#%E5%B9%B4%E3%81%A8%E9%80%B1%E3%81%A8%E6%9B%9C%E6%97%A5) 週) を簡単に入力することができる入力欄を生成します。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="camp-week">5月か6月の週を選んでください:</label>
+<label for="camp-week">5 月か 6 月の週を選んでください:</label>
 
 <input
   type="week"
@@ -45,7 +44,7 @@ label {
 
 文字列で、入力欄に入力された年と週を表します。この入力型で使われる日時値の形式は、[週文字列](/ja/docs/Web/HTML/Guides/Date_and_time_formats#週文字列)で説明しています。
 
-次のように [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性に値を入れることで、既定値を設定することができます。
+次のように [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性に値を入れることで、デフォルト値を設定することができます。
 
 ```html
 <label for="week">どの週に始めたいですか。</label>
@@ -65,11 +64,11 @@ weekControl.value = "2017-W45";
 
 ## 追加の属性
 
-すべての {{HTMLElement("input")}} 型で共通する属性に加え、 `week` 型の入力欄は次の属性にも対応しています。
+すべての {{HTMLElement("input")}} 要素で共通する属性に加え、 `week` 型の入力欄は次の属性にも対応しています。
 
 ### max
 
-受け付ける（時間的に）最も遅い年と週番号で、上記の[値](#値)の節で説明した文字列書式です。要素に入力された [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。 `max` 属性の値が妥当な週の文字列ではない場合、要素は最大値を持ちません。
+受け付ける（時間的に）最も遅い年と週番号で、上記の[値](#値)の節で説明した文字列書式です。要素に入力された [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。`max` 属性の値が妥当な週の文字列ではない場合、要素は最大値を持ちません。
 
 この値は `min` 属性で指定されたものより後か、同じ年と週を指定する必要があります。
 
@@ -84,20 +83,18 @@ weekControl.value = "2017-W45";
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
 
 > [!NOTE]
-> 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
+> 読み取り専用のフィールドは値を持つことができないので、 `required` は `readonly` 属性が指定された入力には何の効果もありません。
 
 ### step
 
-`step` 属性は、値が遵守しなければならない粒度を指定する数値、または下記で記述する特別な値 `any` です。ステップの基準となる値（[`min`](#min) を指定した場合は [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、それ以外の場合は適切な既定値）と同じ値のみが有効となります。
+`step` 属性は値が準拠する粒度を指定する数値、または後述する特殊な値 `any` です。段階の基準値から整数倍の値のみが有効です。段階の基準値は（指定されていれば）[`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、どちらも提供されていなければ −259,200,000 （週 `1970-W01` の先頭）です。
 
-文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
+`week` 入力の場合、`step` の値は週単位で指定され、`step` の値の 604,800,000 倍に相当するミリ秒数として扱われます（内部の数値はミリ秒単位です）。デフォルト値は 1 で、これは 1 週間を示します。
+
+文字列値の `any` は段階がないことを意味し、（[`min`](#min) や [`max`](#max) のようなほかの制約を除けば）どの値でも許可されます。実質的に、`week` 入力の場合、このピッカー UI では週単位でしか選択できないため、`1 と同じ効果になります。
 
 > [!NOTE]
-> ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("User agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
-
-`week` 入力欄では、 `step` の値は週数で指定され、 604,800,000 が乗じられます（ミリ秒単位の数値であるため)。 `step` の既定値は 1 であり、 1 週を表します。既定の刻みの既定値は -259,200,000 で、これは 1970 年の最初の週 (`1970-W01`) です。
-
-_現時点で、 `week` 入力欄で `step` に `any` の値が何を意味するかが不明確です。これは情報が決定次第、更新されるでしょう。_
+> ユーザーが入力したデータが段階の設定に従っていない場合、{{Glossary("user agent", "ユーザーエージェント")}}は直近の有効な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸めます。
 
 ## week 入力欄の使用
 
@@ -118,9 +115,9 @@ week 入力欄は一見すると便利に見えます。簡単に週を選択す
 
 {{EmbedLiveSample('Basic_uses_of_week', 600, 40)}}
 
-### 入力欄の寸法の制御
+### 入力欄のサイズの制御
 
-`<input type="week">` は [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) のような寸法に関する属性には対応していません。寸法を変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
+`<input type="week">` は、時刻が常にほぼ同じ文字数であるため、[`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) などのフォームのサイズ指定属性に対応していません。サイズ調整が必要な場合は、[CSS](/ja/docs/Web/CSS) を利用する必要があります。
 
 ### step 属性の使用
 
@@ -128,7 +125,7 @@ week 入力欄は一見すると便利に見えます。簡単に週を選択す
 
 ## 検証
 
-既定で、 `<input type="week">` は入力された値の検証を行いません。ユーザーインターフェイスの実装は一般的に、妥当な年と週でないものの入力をさせず、これは便利ですが、それでも入力欄を空のままにすることができ、また選択できる週の範囲を制限したくなるかもしれません。
+デフォルトで、 `<input type="week">` は入力された値の検証を行いません。ユーザーインターフェイスの実装は一般的に、妥当な年と週でないものの入力をさせず、これは便利ですが、それでも入力欄を空のままにすることができ、また選択できる週の範囲を制限したくなるかもしれません。
 
 ### 週の最大値と最小値の設定
 
@@ -396,7 +393,7 @@ function populateWeeks() {
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
+      <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>

@@ -26,9 +26,7 @@ l10n:
 ### リクエストの全二重モードをチェック
 
 ```js
-const stream = new ReadableStream({
-  /* ... */
-});
+const stream = new ReadableStream({/* ... */});
 const request = new Request("/upload", {
   method: "POST",
   body: stream,

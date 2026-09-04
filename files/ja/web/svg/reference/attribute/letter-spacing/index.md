@@ -52,7 +52,7 @@ l10n:
   </tbody>
 </table>
 
-値の説明は、 [CSS の `letter-spacing`](/ja/docs/Web/CSS/letter-spacing#値) プロパティを参照してください。
+値の説明は、 [CSS の `letter-spacing`](/ja/docs/Web/CSS/Reference/Properties/letter-spacing#値) プロパティを参照してください。
 
 ## 仕様書
 

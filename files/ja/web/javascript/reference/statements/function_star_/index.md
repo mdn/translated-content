@@ -2,14 +2,12 @@
 title: function* 宣言
 slug: Web/JavaScript/Reference/Statements/function*
 l10n:
-  sourceCommit: 77176b1f35f73f319bb5b959e5c90db8b5a0f9ea
+  sourceCommit: 042b7d8ab67ddb6416da7772a789fd452441b6f6
 ---
 
-{{jsSidebar("Statements")}}
+**`function*`** 宣言は、新しいジェネレーター関数を指定された名前への{{Glossary("binding", "バインド")}}として作成します。ジェネレーター関数は、脱出した後でそのコンテキスト（変数の{{Glossary("binding", "バインド")}}）を保存したまま再入することが可能です。
 
-**`function*`** 宣言（`function` キーワードにアスタリスクが付いたもの）は、 {{jsxref("Global_Objects/Generator","Generator")}} オブジェクトを返すジェネレーター関数を定義します。
-
-ジェネレーター関数は {{jsxref("GeneratorFunction")}} コンストラクターや、関数式の構文を使用して定義することもできます。
+ジェネレーター関数は [`function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/function*)を使って定義することもできます。
 
 {{InteractiveExample("JavaScript デモ: Statement - Function*")}}
 
@@ -22,10 +20,10 @@ function* generator(i) {
 const gen = generator(10);
 
 console.log(gen.next().value);
-// Expected output: 10
+// 予想される結果: 10
 
 console.log(gen.next().value);
-// Expected output: 20
+// 予想される結果: 20
 ```
 
 ## 構文
@@ -37,7 +35,7 @@ function* name(param0) {
 function* name(param0, param1) {
   statements
 }
-function* name(param0, param1, /* … ,*/ paramN) {
+function* name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
@@ -45,31 +43,40 @@ function* name(param0, param1, /* … ,*/ paramN) {
 > [!NOTE]
 > ジェネレーター関数には、対応するアロー関数はありません。
 
+> [!NOTE]
+> `function` と `*` は別々なトークンなので、[ホワイトスペースまたは改行](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ホワイトスペース)で区切ることが可能です。
+
 ### 引数
 
 - `name`
   - : 関数名。
 - `param` {{optional_inline}}
-  - : 関数の形式上の引数の名前。
-- `statements`
+  - : 関数の形式上の引数の名前。引数の構文については、[関数リファレンス](/ja/docs/Web/JavaScript/Guide/Functions#関数の引数)を参照してください。
+- `statements` {{optional_inline}}
   - : 関数の本体を構成する文。
 
 ## 解説
 
-ジェネレーターは処理を抜け出したり、後から復帰したりすることができる関数です。ジェネレーターのコンテキスト（変数の値）は復帰しても保存されます。
+`function*` 宣言は {{jsxref("GeneratorFunction")}} オブジェクトを生成します。ジェネレーター関数が呼び出されるたびに、新しい {{jsxref("Generator")}} オブジェクトが返され、これは[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)に準拠します。ジェネレーター関数の実行は、ある場所で中断されます。初期状態では関数本体の先頭で中断されます。ジェネレーター関数は複数回呼び出して複数のジェネレーターを同時に生成できます。各ジェネレーターは、ジェネレーター関数の[実行コンテキスト](/ja/docs/Web/JavaScript/Reference/Execution_model#stack_and_execution_contexts)を独自に保持し、独立してステップ実行できます。
 
-JavaScript のジェネレーターは、特にプロミスと組み合わせることで、非同期プログラミングのための非常に強力なツールとなり、[コールバック地獄](http://callbackhell.com/)や[制御の逆転](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/)などのようなコールバックの問題を、完全に解決できるわけではないものの、軽減することができます。しかし、これらの問題は{{jsxref("Statements/async_function", "非同期関数", "", 1)}}を使用すると、さらにシンプルに解決することができます。
+ジェネレーターは双方向の制御フローをすることができます。制御フローはジェネレーター関数（呼び出し先）とその呼び出し側の間で、双方が望む回数だけ移行できます。制御フローは呼び出し側から呼び出し先へ、ジェネレーターのメソッド、[`next()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator/next)、[`throw()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator/throw)、[`return()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator/return) を呼んで移行します。制御フローは、`return` や `throw` を使用して通常通り関数を終了させたり、すべての文を実行したり、`yield` および `yield*` 式を使用したりすることで、呼び出し側から呼び出し先へ進むことができます。
 
-ジェネレーター関数を呼び出しても関数はすぐには実行されません。代わりにその関数の[ジェネレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator)オブジェクトが返されます。イテレーターの `next()` メソッドが呼び出されると、ジェネレーター関数の処理は、イテレーターから返された値を特定する最初の {{jsxref("Operators/yield", "yield")}} 演算子か、ほかのジェネレーター関数に委任する {{jsxref("Operators/yield*", "yield*")}} に達するまで実行されます。`next()` メソッドは産出された値を含む `value` プロパティと、ジェネレーターが最後の値を持つかを真偽値で示す `done` プロパティを持つオブジェクトを返します。引数つきで`next()` を呼び出すと、ジェネレーター関数の実行が再開され、処理が停止していた `yield` 式を `next()` の引数で置き換えます。
+ジェネレーターの [`next()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator/next) メソッドが呼び出されると、ジェネレーター関数の本体は次のいずれかになるまで実行されます。
 
-ジェネレーターで `return` 文が実行されると、ジェネレーターが終了します（つまり、それによって返されたオブジェクトの `done` プロパティが `true` に設定されます）。値が返された場合、それはジェネレーターによって返されたオブジェクトの `value` プロパティとして設定されます。 `return` 文とよく似ていますが、ジェネレーターの内部でエラーが発生した場合は、ジェネレーターの本体の中でキャッチしない限り、ジェネレーターは終了します。
-ジェネレーターが終了すると、それ以降の `next()` の呼び出しでは、そのジェネレーターのコードは実行されず、 `{value: undefined, done: true}` の形のオブジェクトが返されるだけです。
+- {{jsxref("Operators/yield", "yield")}} 式。この場合、`next()` メソッドは、yield で返された値を含む `value` プロパティと、常に `false` である `done` プロパティを持つオブジェクトを返します。次に `next()` が呼び出されると、`yield` 式は `next()` に渡された値に評価されます。
+- 別のイテレーターに委譲する {{jsxref("Operators/yield*", "yield*")}} 演算子。この場合、ジェネレーターに対するこの呼び出しおよび以降の `next()` 呼び出しは、委譲先のイテレーターが完了するまで、委譲先のイテレーターに対する `next()` 呼び出しと同等となります。
+- {{jsxref("Statements/return", "return")}} 文（{{jsxref("Statements/try...catch", "try...catch...finally")}} で介入されないもの）、または制御フローの終わり（暗黙的に `return undefined` を意味します）。この場合、ジェネレーターは完了し、`next()` メソッドは返値を含む `value` プロパティと常に `true` となる `done` プロパティを持つオブジェクトを返します。以降の `next()` 呼び出しは効果を持たず、常に `{ value: undefined, done: true }` を返します。
+- 関数内で発生したエラー（{{jsxref("Statements/throw", "throw")}} 文または未処理の例外による）。`next()`メソッドがこのエラーを発生させ、ジェネレータは完了する。以降の`next()`呼び出しは効果なく、常に`{ value: undefined, done: true }`を返す。
 
-`function*` 宣言はスコープの先頭に[巻き上げられ](/ja/docs/Glossary/Hoisting)、そのスコープのどこからでも呼び出すことができます。
+ジェネレーターの [`throw()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator/throw) メソッドが呼び出されると、現在の中断位置でジェネレーターの本体に `throw` 文が挿入されたかのように動作します。同様に、ジェネレーターの [`return()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator/return) メソッドが呼び出されると、現在の中断位置に `return` 文が挿入されたかのように動作します。どちらのメソッドも、ジェネレーター関数が {{jsxref("Statements/try...catch", "try...catch...finally")}} によって完了をキャッチしない限り、通常はジェネレーターを完了させます。
+
+ジェネレーターはかつて非同期プログラミングのパラダイムであり、[コールバック地獄](https://medium.com/@raihan_tazdid/callback-hell-in-javascript-all-you-need-to-know-296f7f5d3c1)を[制御の反転](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/)によって避けることができました。現在では、この場合の解決はよりシンプルな [async 関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)モデルと {{jsxref("Promise")}} オブジェクトで解決されています。しかし、ジェネレーターは依然として他の多くのタスク、例えば[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を直感的に定義するといった用途で有用です。
+
+`function*` 宣言は {{jsxref("Statements/function", "function")}} 宣言と同様の挙動を示します。これらはスコープの先頭に[巻き上げられ](/ja/docs/Glossary/Hoisting)、そのスコープ内のどこでも呼び出せます。また、特定のコンテキストでのみ再宣言が可能です。
 
 ## 例
 
-### 単純な例
+### 基本的な例
 
 ```js
 function* idMaker() {
@@ -212,30 +219,18 @@ function* f() {}
 const obj = new f(); // throws "TypeError: f is not a constructor
 ```
 
-### 式で定義されたジェネレーター
-
-```js
-const foo = function* () {
-  yield 10;
-  yield 20;
-};
-
-const bar = foo();
-console.log(bar.next()); // {value: 10, done: false}
-```
-
 ### ジェネレーターの例
 
 ```js
 function* powers(n) {
-  //endless loop to generate
+  // 生成の無限ループ
   for (let current = n; ; current *= n) {
     yield current;
   }
 }
 
 for (const power of powers(2)) {
-  // controlling generator
+  // ジェネレーターを制御
   if (power > 32) {
     break;
   }
@@ -258,17 +253,19 @@ for (const power of powers(2)) {
 
 ## 関連情報
 
-- {{jsxref("Operators/function*", "function* 式")}}
-- {{jsxref("GeneratorFunction")}} オブジェクト
+- [関数](/ja/docs/Web/JavaScript/Guide/Functions)ガイド
+- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)ガイド
+- [関数](/ja/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("GeneratorFunction")}}
+- [`function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/function*)
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Statements/async_function*", "async function*")}}
 - [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} オブジェクト
-- {{jsxref("Statements/function", "function")}} 宣言
-- {{jsxref("Operators/function", "function")}} 式
-- {{jsxref("Functions", "関数と関数スコープ", "", 1)}}
-- その他のウェブリソース:
-  - [Regenerator](https://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
-  - [Task.js](https://github.com/mozilla/task.js)
-  - [Iterating generators asynchronously](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)
+- {{jsxref("Generator")}}
+- [Regenerator](https://github.com/facebook/regenerator) - GitHub
+- [Promises and Generators: control flow utopia](https://youtu.be/qbKWsbJ76-s) presentation by Forbes Lindesay at JSConf (2013)
+- [Task.js](https://github.com/mozilla/task.js) on GitHub
+- [You Don't Know JS: Async & Performance, Ch.4: Generators](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md) by Kyle Simpson

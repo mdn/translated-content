@@ -1,6 +1,9 @@
 ---
-title: DataTransfer.effectAllowed
+title: "DataTransfer: effectAllowed プロパティ"
+short-title: effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
+l10n:
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -35,8 +38,6 @@ slug: Web/API/DataTransfer/effectAllowed
   - : 効果が設定されていない場合の既定値で、 all と同等です。
 
 `effectAllowed` に他の値を代入しても効果はなく、古い値が保持されます。
-
-Internet Explorer では、値を小文字に変更します。従って、 `linkMove` は `linkmove` になります。
 
 ## 例
 
@@ -125,7 +126,7 @@ reset.addEventListener("click", () => document.location.reload());
 
 #### 結果
 
-{{EmbedLiveSample("Setting and getting effectAllowed", 0, 400)}}
+{{EmbedLiveSample("Setting effectAllowed", 0, 400)}}
 
 ## 仕様書
 
@@ -139,6 +140,4 @@ reset.addEventListener("click", () => document.location.reload());
 
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [ドラッグデータストアでの作業](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

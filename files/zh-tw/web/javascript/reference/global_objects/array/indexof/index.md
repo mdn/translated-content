@@ -97,7 +97,7 @@ updateVegetablesCollection(veggies, "spinach");
 
 ## Polyfill
 
-`indexOf()` was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all browsers. You can work around this by utilizing the following code at the beginning of your scripts. This will allow you to use `indexOf()` when there is still no native support. This algorithm matches the one specified in ECMA-262, 5th edition, assuming {{jsxref("Global_Objects/TypeError", "TypeError")}} and {{jsxref("Math.abs()")}} have their original values.
+`indexOf()` was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all browsers. You can work around this by utilizing the following code at the beginning of your scripts. This will allow you to use `indexOf()` when there is still no native support. This algorithm matches the one specified in ECMA-262, 5th edition, assuming {{jsxref("TypeError")}} and {{jsxref("Math.abs()")}} have their original values.
 
 ```js
 if (!Array.prototype.indexOf) {

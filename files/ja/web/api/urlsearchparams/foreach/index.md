@@ -64,6 +64,6 @@ value2 key2
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("URL")}} インターフェイス。

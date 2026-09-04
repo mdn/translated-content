@@ -18,7 +18,7 @@ name = attribute.localName;
 
 ### Valeur renvoyée
 
-Une {{domxref("DOMString")}} _(chaîne de caractères)_ qui représente la partie locale du nom qualifié de l'élément.
+Une {{jsxref("String")}} _(chaîne de caractères)_ qui représente la partie locale du nom qualifié de l'élément.
 
 ## Exemple
 

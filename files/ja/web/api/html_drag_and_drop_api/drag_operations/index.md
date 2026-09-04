@@ -2,52 +2,28 @@
 title: ドラッグ操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 l10n:
-  sourceCommit: 6718ec2ba92f3f29757ab0e71cb9ce279e1866ad
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-以下は、ドラッグ & ドロップ操作が行われる時の各段階についての解説です。
+ドラッグ＆ドロップ API の中核となるのは様々な[ドラッグイベント](/ja/docs/Web/API/HTML_Drag_and_Drop_API#ドラッグイベント)であり、これは特定の順序で発生し、特定の方法で処理されることが期待されます。本ドキュメントでは、ドラッグ＆ドロップ操作中に発生する手順と、ハンドラー内でアプリケーションが実行すべき処理について説明します。
 
-> [!NOTE]
-> この文書で記述されているドラッグ操作は {{domxref("DataTransfer")}} インターフェイスを使用します。この文書では {{domxref("DataTransferItem")}} インターフェイスや {{domxref("DataTransferItemList")}} インターフェイスは説明*しません*。
+大まかに言うと、ドラッグ＆ドロップ操作における可能性のある手順は以下の通りです。
 
-## draggable 属性
+- ユーザーがソースノード上で[ドラッグを開始](#ドラッグの開始)します。 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントがソースノード上で発生します。このイベントにおいて、ソースノードはドラッグ操作のコンテキストを準備します。これにはドラッグデータ、フィードバック画像、および許可されたドロップ効果が含まれます。
+- ユーザーは[アイテムをドラッグして移動させます](#要素上のドラッグとドロップターゲットの特定)。新しい要素に移動するたびに、その要素上で {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントが発生し、前の要素上で {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベントが発生します。数百ミリ秒ごとに、ドラッグが現在行われている要素に対して {{domxref("HTMLElement/dragover_event", "dragover")}} イベントが発生し、ソースノードに対して {{domxref("HTMLElement/drag_event", "drag")}} イベントが発生します。
+- ドラッグが有効なドロップターゲットに入ります。ドロップターゲットは、有効なドロップターゲットであることを示すため、`dragover` イベントをキャンセルします。何らかの形の[ドロップフィードバック](#ドロップのフィードバック)により、ユーザーに期待されるドロップ効果が示されます。
+- ユーザーが[ドロップを実行します](#ドロップの実行)。ドロップターゲット上で {{domxref("HTMLElement/drop_event", "drop")}} イベントが発生します。このイベント内で、ターゲットノードはドラッグデータを読み取ります。
+- [ドラッグ操作が終了します](#ドラッグの終了)。ソースノード上で {{domxref("HTMLElement/dragend_event", "dragend")}} イベントが発生します。このイベントは、ドロップが成功したかどうかにかかわらず発生します。
 
-ウェブページにおいては、既定のドラッグ & ドロップの挙動が使われる場合がいくつかあります。文字列の選択範囲、画像、リンクなどのドラッグなどがこれにあたります。画像かリンクがドラッグされた時は、画像もしくはリンク先の URL がドラッグデータとして設定され、ドラッグ操作が始まります。その他の要素は、既定のドラッグ操作が行われるためには選択範囲に含まれていなければなりません。実際の様子を確認するには、ウェブページの一部を選択して、その上でマウスのボタンを押下し、そのまま選択範囲をドラッグしてください。ドラッグ中、選択範囲の内容を半透明で描画した物がマウスポインターに伴って表示されるでしょう。ただしこの挙動は、ドラッグされたデータを加工するイベントリスナーが存在しない場合の、既定のドラッグの挙動によるものです。
+## ドラッグの開始
 
-HTML では、画像、リンク、選択範囲の上での既定の動作を除くと、既定でドラッグ可能な他の要素はありません。
+ドラッグ操作は、[ドラッグ可能なアイテム](/ja/docs/Web/API/HTML_Drag_and_Drop_API#ドラッグ可能なアイテム)から開始されます。これには、選択範囲、ドラッグ可能な要素（リンク、画像、`draggable="true"` を設定した要素など）、オペレーティングシステムのファイルエクスプローラーからのファイルなどが含まれます。まず、{{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントが、ソースノード（ドラッグ可能な要素、または選択範囲の場合はドラッグが開始されたテキストノード）で発生します。このイベントがキャンセルされると、ドラッグ操作は中止されます。そうでない場合、{{domxref("Element/pointercancel_event", "pointercancel")}} イベントもソースノード上で発生します。
 
-上記以外の他の HTML 要素をドラッグできるようにするには、以下の 3 つのことをしなくてはなりません。
+`dragstart` イベントは、{{domxref("DragEvent.dataTransfer", "dataTransfer")}} を変更できる唯一のタイミングです。カスタムのドラッグ可能要素では、ほとんどの場合、ドラッグデータを変更したいと考えられます。これについては、[ドラッグデータストアの変更](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store)で詳しく説明されています。変更可能な要素は他に 2 つあります。[フィードバック画像](#ドラッグのフィードバック画像の設定)と[許可されたドロップ効果](#ドロップの効果)です。
 
-1. ドラッグできるようにしたい要素の [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性の値を `"true"` に設定する。
-2. {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントにリスナーを設定し、そのリスナーの中でドラッグデータを設定する。
-3. 上記で定義されたリスナーの中で[ドラッグデータを設定する](/ja/docs/Web/API/DataTransfer/setData)。
-
-以下は、コンテンツの一部がドラッグできるようにする例です。
-
-```html
-<p draggable="true">このテキストはドラッグが<strong>できます</strong>。</p>
-```
-
-```js
-const draggableElement = document.querySelector('p[draggable="true"]');
-
-draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます"),
-);
-```
-
-[`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性を `"true"` に設定すると、その要素はドラッグできるようになります。この属性が設定されていない、あるいは `"false"` に設定されている場合、その要素をドラッグする事はできず、代わりにテキストが選択されるでしょう。
-
-[`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性は画像やリンクを含めてあらゆる要素に設定できます。ただし、画像とリンクについてだけは既定値が `true`となっていますので、実際にこれらの要素で使う場合は、要素をドラッグできないようにするために [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性に `false` を設定するという場合がほとんどでしょう。
-
-> [!NOTE]
-> 要素がドラッグ可能になった場合、文字列やその要素に含まれている他の要素が、マウスによるクリックやドラッグなどの通常の操作では選択する事ができなくなることに注意してください。ユーザーが文字列を選択するには、通常の操作の代わりに、 <kbd>Alt</kbd> キーを押しながらマウスで選択するか、キーボードで操作を行う必要があります。
-
-## ドラッグ操作の開始
-
-この例では、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントのリスナーを `addEventListener()` メソッドで追加します。
+この例では、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントの操作ナーを `addEventListener()` メソッドで追加します。
 
 ```html
 <p draggable="true">このテキストはドラッグが<strong>できます</strong>。</p>
@@ -55,76 +31,37 @@ draggableElement.addEventListener("dragstart", (event) =>
 
 ```js
 const draggableElement = document.querySelector('p[draggable="true"]');
-draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます"),
-);
+draggableElement.addEventListener("dragstart", (event) => {
+  event.dataTransfer.setData("text/plain", "このテキストはドラッグできます"),
+});
 ```
 
-ユーザーがドラッグを開始しようとした時、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントが発行されます。
-
-この例では {{domxref("HTMLElement/dragstart_event", "dragstart")}} のリスナーは、ドラッグされる要素自身に追加されていますが、他の多くのイベントがそうであるようにドラッグイベントもバブリングしますので、より上位の祖先要素でイベントを監視することもできます。
-
-{{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントでは、以下で解説している**ドラッグデータ**、**フィードバック画像**、**ドラッグの効果**を設定することができます。ドラッグデータの指定は必須ですが、多くの状況では、フィードバック画像とドラッグの種類は既定のもので問題ありません。
-
-## ドラッグデータ
-
-すべての{{domxref("DragEvent","ドラッグイベント", "", 1)}}は、ドラッグデータを保持するための {{domxref("DragEvent.dataTransfer","dataTransfer")}} と呼ばれるプロパティを持っています (`dataTransfer` は {{domxref("DataTransfer")}} オブジェクトの一つです)。
-
-ドラッグが行われた際には、何をドラッグするのかを識別するためのデータをドラッグに関連付ける必要があります。例えば、テキストボックス内で選択されたテキストがドラッグされた場合、ドラッグデータアイテムに関連付けられたデータはテキストそのものです。同様に、ウェブページ上のリンクがドラッグされた場合、ドラッグデータにはリンクの URL が含まれます。
-
-{{domxref("DataTransfer","ドラッグデータ")}}には、データの型 (または形式) とデータの値の 2 つの情報が含まれています。形式は型の文字列 (テキストデータの場合は [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) など) で、値はテキストの文字列です。ドラッグの開始時に、型とデータを指定してデータを追加します。ドラッグ中、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} および {{domxref("HTMLElement/dragover_event", "dragover")}} イベントのイベントリスナーでは、ドラッグされるデータのデータ型を使って、ドロップが許可されているかどうかをチェックします。たとえば、リンクを受け付けるドロップターゲットでは、 [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#link) というデータ型がチェックされます。ドロップイベントが発生すると、リスナーはドラッグされたデータを取得し、ドロップ位置に挿入します。
-
-{{domxref("DataTransfer","ドラッグデータ", "", 1)}}の {{domxref("DataTransfer.types","types")}} プロパティは、 [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) や [`image/jpeg`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#image) のような MIME タイプの文字列のリストを返します。独自の型を作成することもできます。よく使用される型は、[推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)の記事に記載されています。
-
-一つのドラッグ操作で、複数の異なる形式のデータを提供できます。この仕組みにより、独自の形式や、その形式のデータを受け取れない要素向けのフォールバック用の形式など、データをより適切な形式で引き渡すことができます。通常、最後のフォールバック先として使われる形式は、 [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) 型として表される普通のテキストデータです。このデータは元のテキストの単純な文字列となるでしょう。
-
-データを {{domxref("DragEvent.dataTransfer","dataTransfer")}} に設定するには、 {{domxref("DataTransfer.setData","setData()")}} メソッドを使います。このメソッドは、次の例のようにデータの型とデータの値の 2 つの引数を取ります。
+ドラッグイベントは他の多くのイベントと同様にバブリングするため、上位の祖先要素を監視しても構いません。このため、イベントの対象要素も確認することが一般的です。これにより、この要素内に含まれる選択範囲をドラッグしても `setData` が起動しないようにします（要素内のテキスト選択は困難ではありますが、不可能ではありません）。
 
 ```js
-event.dataTransfer.setData("text/plain", "ドラッグされたテキスト");
+draggableElement.addEventListener("dragstart", (event) => {
+  if (event.target === draggableElement) {
+    event.dataTransfer.setData("text/plain", "このテキストはドラッグできます");
+  }
+});
 ```
 
-この例では、データの値は「ドラッグされたテキスト」で、形式は [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) です。
+### ドラッグのフィードバック画像の設定
 
-データは複数の形式で提供できます。これを実現するには、異なる形式を指定して {{domxref("DataTransfer.setData","setData()")}} メソッドを複数回呼び出します。最も具体的な形式から、具体的でない形式に向けて呼び出します。
-
-```js
-const dt = event.dataTransfer;
-dt.setData("application/x.bookmark", bookmarkString);
-dt.setData("text/uri-list", "https://www.mozilla.org");
-dt.setData("text/plain", "https://www.mozilla.org");
-```
-
-これは、 3 つの異なる型のデータを追加する例です。最初の型の `application/x.bookmark` は独自の型です。他のアプリケーションはこの型に対応していないでしょうが、同じウェブサイトやアプリケーションの中の領域同士でのドラッグでは、このような独自の形式を利用できます。
-
-また、他の型でもデータを提供することで、このような独自形式に対応していない他のアプリケーション向けにも、代替の形式でドラッグできるようになります。 `application/x.bookmark` 型はそのアプリケーションの中ではより使いやすく詳細な情報を提供できますが、他の型で渡されるデータは、単純な 1 つの URL もしくは文字列となります。
-
-なお、この例では [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#link) と [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) も同じデータを含んでいます。このようにすることが多いのですが、こうしなければならない訳ではありません。
-
-同じ形式で 2 回データを登録すると、古いデータは新しいデータによって置き換えられますが、データの形式の登録の順番自体は古いデータを登録した時のままになります。
-
-登録したデータは {{domxref("DataTransfer.clearData","clearData()")}} メソッドによって削除できます。このメソッドは、削除するデータの形式を引数として求めます。
+ドラッグ操作が行われると、ソースノードから半透明の画像が生成され、ドラッグ中にユーザーのマウスカーソルに追従します。この画像は自動的に作成されますので、自分で作成する必要はありません。しかし、 {{domxref("DataTransfer.setDragImage","setDragImage()")}} によって、ドラッグ中の独自のフィードバック画像を指定することができます。
 
 ```js
-event.dataTransfer.clearData("text/uri-list");
-```
-
-{{domxref("DataTransfer.clearData","clearData()")}} メソッドの引数によるデータ形式の指定は省略可能です。データの形式が指定されなかった時は、すべての型のデータが削除されます。ドラッグ開始時にデータが 1 つも登録されなかった場合、もしくは後の処理で全てのデータが削除された場合、ドラッグ操作は発生しません。
-
-## ドラッグのフィードバック画像の設定
-
-ドラッグが行われた時、ドラッグ元 ({{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントが発行された要素) を元にして OS によって画像が生成され (例えば Windows では半透明の画像になります)、ドラッグしている間マウスポインターと一緒に表示されます。この画像は自動的に生成されるため、あなたが用意する必要はありません。しかし、 {{domxref("DataTransfer.setDragImage","setDragImage()")}} によって、独自のドラッグ中のフィードバック画像を指定することができます。
-
-```js
-event.dataTransfer.setDragImage(image, xOffset, yOffset);
+draggableElement.addEventListener("dragstart", (event) => {
+  event.dataTransfer.setDragImage(image, xOffset, yOffset);
+});
 ```
 
 3 つの引数が必要です。一つ目は、画像への参照です。この参照は、通常は `<img>` 要素ですが、 `<canvas>` やその他の要素でもよいでしょう。フィードバック画像は、画像が画面上でどのように見えるかを考慮して生成されますが、画像の場合は、元のサイズで描画されます。 {{domxref("DataTransfer.setDragImage","setDragImage()")}} メソッドの第 2、第 3 引数には、マウスポインターに対する相対的な画像の表示位置を指定します。
 
-文書中に存在しないものをフィードバック画像として使うために、以下の例のようにして、画像や canvas を利用することもできます。
+文書中に存在しないものをフィードバック画像として使うために、以下の例のようにして、画像やキャンバスを利用することもできます。
 
 ```js
-function dragWithCustomImage(event) {
+draggableElement.addEventListener("dragstart", (event) => {
   const canvas = document.createElement("canvas");
   canvas.width = canvas.height = 50;
 
@@ -136,202 +73,305 @@ function dragWithCustomImage(event) {
   ctx.lineTo(50, 0);
   ctx.stroke();
 
-  const dt = event.dataTransfer;
-  dt.setData("text/plain", "ドラッグされるデータ");
-  dt.setDragImage(canvas, 25, 25);
-}
-```
-
-この例では、 canvas の大きさは `50`×`50` ピクセルで、オフセット値はそれぞれの半分の値 (`25`) となっており、画像はマウスポインターの中央に表示されます (マウスポインターが画像の中央に表示されます)。
-
-## ドラッグの効果
-
-ドラッグを行う時の操作には、いくつかの種類があります。 `copy` (コピー) はドラッグされているデータが現在の場所からドロップ先の場所にコピーされることを示します。 `move` (移動) はドラッグされているデータがドロップ先に移動されることを示し、 `link` (リンク) はドラッグ元とドロップ先の場所との間に何らかの形での関連付けや繋がりが作られることを示します。
-
-{{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントのリスナーにおいて、 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} プロパティに値を設定することで、 ドラッグ元について上記の 3 つの操作のうちどれが許可されているのかを示すことができます。
-
-```js
-event.dataTransfer.effectAllowed = "copy";
-```
-
-この例では、コピー (**copy**) のみが許可されています。
-
-複数の種類の操作を組み合わせることもできます。
-
-- `none`
-  - : どの操作も許可されていない（ドロップを禁止）。
-- `copy`
-  - : コピーのみが許可されている。
-- `move`
-  - : 移動のみが許可されている。
-- `link`
-  - : リンクのみが許可されている。
-- `copyMove`
-  - : コピーまたは移動のみが許可されている。
-- `copyLink`
-  - : コピーまたはリンクのみが許可されている。
-- `linkMove`
-  - : リンクまたは移動のみが許可されている。
-- `all`
-  - : コピー、移行、リンクの全ての操作が許可されている。
-- 初期化されていない場合
-  - : 既定値は `all` です。
-
-上に列挙されている値のいずれかと全く等しい値だけが利用可能であることに注意してください。 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} プロパティを `copyMove` に設定すると、コピーや移動の操作を許可しますが、ユーザーがリンク操作を行うことを防ぐことができます。 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} プロパティを変更しない場合、 '`all`' が指定された時と同様に、すべての操作が許可されます。ですので、特定の種類の操作を除外したい場合を除いて、プロパティの値を手動で設定する必要はありません。
-
-ドラッグ操作の間、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} または {{domxref("HTMLElement/dragover_event", "dragover")}} イベントのリスナーは、操作が許可されているかどうかを確かめるために {{domxref("DataTransfer.effectAllowed","effectAllowed")}} プロパティを参照できます。これらのイベ`ント`において、関連するプロパティである {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティへ、実際に行われる操作の種類 1 つだけが指定されるべきです。 {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティの値として妥当なものは、`none`、`copy`、`move`、または `link` のみです。このプロパティへは、複数の操作を組み合わせた値は指定できません。
-
-{{domxref("HTMLElement/dragenter_event", "dragenter")}} および {{domxref("HTMLElement/dragover_event", "dragover")}} イベントにおいて、 {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティはユーザーが要求している操作に初期化されます。ユーザーは操作の種類を修飾キーを押すことにより変更することができます。実際に使用されるキーはプラットフォームごとに異なりますが、大抵の場合は <kbd>Shift</kbd> キーと <kbd>Control</kbd> キーが、コピー・移動・リンクの各操作の切り替えに使われるでしょう。マウスポインターはどの操作が望まれているのかを示すために、例えば `copy` ならカーソルの横に「＋」記号が表示される、といった風に変化するでしょう。
-
-{{domxref("HTMLElement/dragenter_event", "dragenter")}} または {{domxref("HTMLElement/dragover_event", "dragover")}} イベントの間に {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティの値を変更すると、ユーザーが選択した操作の種類を上書きし、特定のドロップ操作を強制することができます。この時に指定できる操作の種類は、 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} プロパティの値として列挙されている操作に含まれていなくてはならないことに注意してください。それ以外の値を設定した場合は、許可されている操作の中から代わりの値が設定されます。
-
-```js
-event.dataTransfer.dropEffect = "copy";
-```
-
-この例では、「コピー」が行なわれる効果です。
-
-その場所へのドロップが禁止されていることを示すために、値として `none` を設定することもできます。
-
-{{domxref("HTMLElement/drop_event", "drop")}} および {{domxref("HTMLElement/dragend_event", "dragend")}} イベントの中では、 {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティをチェックすることで最終的に選択されている効果を特定できます。選択された効果が "`move`" であれば、 {{domxref("HTMLElement/dragend_event", "dragend")}} イベントの中でドラッグ元から元のデータを削除するべきです。
-
-## ドロップ先の指定
-
-{{domxref("HTMLElement/dragenter_event", "dragenter")}} および {{domxref("HTMLElement/dragover_event", "dragover")}} イベントのリスナーは、ドラッグされている項目がどの場所にドロップされようとしているのかを正確に示す働きをすることが多いです。ウェブページやアプリケーションのほとんどの領域は、ドロップデータを受け取る場所としては不適切です。従って、これらのイベントに対する既定の動作はドロップを禁止する働きをします。
-
-ドロップを許可したい場合は、 `dragenter` および `dragover` イベントの両方をキャンセルして、既定の処理を防ぐ必要があります。これを行うには、イベントの {{domxref("Event.preventDefault","preventDefault()")}} メソッドを呼び出してください。
-
-```js
-const draggableElement = document.querySelector('p[draggable="true"]');
-
-draggableElement.addEventListener("dragenter", (event) => {
-  event.preventDefault();
+  event.dataTransfer.setDragImage(canvas, 25, 25);
 });
+```
 
-draggableElement.addEventListener("dragover", (event) => {
+この例では、キャンバスの大きさは `50`×`50` ピクセルで、オフセット値はそれぞれの半分の値 (`25`) となっており、画像はマウスポインターの中央に表示されます (マウスポインターが画像の中央に表示されます)。
+
+## 要素上のドラッグとドロップターゲットの特定
+
+ドラッグ操作の全過程において、すべての機器入力イベント（マウスやキーボードなど）は抑制されます。ドラッグされたデータは、文書内の様々な要素上、あるいは他の文書内の要素上にも移動することが可能です。新しい要素に入ると、その要素上で {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントが発生し、前の要素では {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベントが発生します。
+
+> [!NOTE] > `dragleave` イベントは、常に `dragenter` イベントの後に発生します。したがって、概念的には、この 2 つのイベントの間では、ターゲットは新しい要素に入ったものの、まだ前の要素から出ていない状態となります。
+
+数百ミリ秒ごとに、2 つのイベントが発生します。ソースノードでの {{domxref("HTMLElement/drag_event", "drag")}} イベントと、ドラッグが現在行われている要素での {{domxref("HTMLElement/dragover_event", "dragover")}} イベントです。ウェブページやアプリケーションの大部分の領域は、データをドロップする有効な場所ではありません。そのため、要素はデフォルトで、その上で発生したドロップをすべて無視します。要素は、`dragover` イベントをキャンセルすることで、自らを有効なドロップターゲットに指定することができます。要素が {{HTMLElement("textarea")}} や [`<input type="text">`](/ja/docs/Web/HTML/Reference/Elements/input/text) などの編集可能なテキストフィールドであり、かつデータストアに `text/plain` のアイテムが 1 つ含まれている場合、その要素は `dragover` をキャンセルすることなく、デフォルトで有効なドロップターゲットとなります。
+
+```html
+<div id="drop-target">
+  ドラッグ可能なアイテムをここにドラッグしてドロップすることができます
+</div>
+```
+
+```js
+const dropElement = document.getElementById("drop-target");
+
+dropElement.addEventListener("dragover", (event) => {
   event.preventDefault();
 });
 ```
 
-{{domxref("Event.preventDefault","preventDefault()")}} メソッドを呼び出すと、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} および {{domxref("HTMLElement/dragover_event", "dragover")}} イベントのどちらにおいても、その場所がドロップ可能な場所であるということを示します。多くの場合は、例えばリンクがドラッグされている時だけなど、特定の状況でのみ {{domxref("Event.preventDefault","preventDefault()")}} メソッドを呼び出したいと思うでしょう。
+> [!NOTE]
+> 仕様書では、ドロップターゲットに対しては `dragenter` イベントもキャンセルすることが要求されています。これを満たさない場合、当該要素では `dragover` や `dragleave` イベントがまったく発生しなくなります。実際にはどのブラウザーもこの仕様を実装しておらず、新しい要素が追加されるたびに「現在の要素」が変更されます。
 
-これを実現するには、条件を確かめて、条件が満たされている時だけイベントをキャンセルするような関数を使って下さい。条件が満たされていない時はイベントをキャンセルしないでおけば、ユーザーがマウスのボタンを放してもその場所へのドロップは行われません。
+> [!NOTE]
+> 仕様書では、`drag` イベントをキャンセルするとドラッグを中止することが求められていますが、実際にはどのブラウザーもこれを実装していません。下記の例を参照してください。
+>
+> {{EmbedLiveSample("cancel_drag", "", 100)}}
 
-ドロップを受け付けるか拒絶するかを決める最も一般的な方法は、データ転送の仕組みに含まれているドラッグデータの型を判別するものです。例えば、画像やリンク、もしくはその両方のみを受け付けるといった事ができます。これを実現するには、イベントの {{domxref("DragEvent.dataTransfer","dataTransfer")}} (プロパティ) の {{domxref("DataTransfer.types","types")}} プロパティを確認します。 types プロパティはドラッグが開始された時に登録されたタイプ文字列のリストで、最も適切なものから最も適切でないものの順で並んでいます。
+```html hidden live-sample___cancel_drag
+<p draggable="true" id="draggable">1 秒間ドラッグしてください。</p>
+<p id="output"></p>
+```
+
+```js hidden live-sample___cancel_drag
+const draggableElement = document.getElementById("draggable");
+const output = document.getElementById("output");
+let time = null;
+draggableElement.addEventListener("dragstart", (event) => {
+  time = Date.now();
+  output.textContent = "";
+});
+draggableElement.addEventListener("drag", (event) => {
+  if (time !== null && Date.now() - time > 1000) {
+    event.preventDefault();
+    output.textContent =
+      "ドラッグ操作はキャンセルされました。このノードのドラッグが続いている場合は、このブラウザーではプログラムによるドラッグ操作のキャンセルに対応していません。";
+    time = null;
+  }
+});
+```
+
+### 条件付きドロップターゲット
+
+通常、ドロップターゲットが特定の状況でのみドロップを受け付けるように設定したい場合（例えば、リンクがドラッグされている場合のみなど）があります。これを行うには、条件をチェックし、その条件が満たされた場合にのみイベントをキャンセルします。例えば次のようにすると、ドラッグされたデータにリンクが含まれているかどうかを確認することができます。
 
 ```js
-function doDragOver(event) {
+dropElement.addEventListener("dragover", (event) => {
   const isLink = event.dataTransfer.types.includes("text/uri-list");
   if (isLink) {
     event.preventDefault();
   }
-}
+});
 ```
 
-この例では、型のリストの中に [text/uri-list](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#link) 型があるかどうかを確認するために `contains` メソッドを使用しています。もし条件が真であれば、イベントはキャンセルされて、ドロップが許可されるでしょう。もしドラッグデータがリンクを含んでいなければ、イベントはキャンセルされず、その場所でのドロップも行われません。
-
-実際に行われる処理の種類をより適切に示すために、 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} や {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティのいずれか、あるいはその両方に値を指定したいと思う事もあるでしょう。当然ですが、イベントをキャンセルするのを忘れると、これらのプロパティの値を変えても何も起こりません。
+この例では、`includes` メソッドを使用して、 [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#dragging_links) タイプのデータがタイプのリストに含まれているかどうかを確認します。含まれていた場合、イベントをキャンセルし、その位置へのドロップを許可します。ドラッグデータにリンクが含まれていなかった場合、イベントはキャンセルされず、その位置でのドロップは発生しません。
 
 ## ドロップのフィードバック
 
-その場所へのドロップが許可されていることをユーザーに示す方法はいくつかあります。マウスポインターは {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティの値に応じて適切なものに変化します。
+ユーザーが有効なドロップターゲットへドラッグしているとします。その位置でのドロップが許可されていること、およびドロップが行われた場合に何が起こるかをユーザーに示す方法はいくつかあります。通常、マウスポインターは {{domxref("DataTransfer.dropEffect", "dropEffect")}} プロパティの値に応じて必要に応じて更新されます。正確な表示はユーザーのプラットフォームに依存しますが、例えば `copy` の場合にはプラス記号のアイコンが表示され、ドロップが許可されていない場合には「ここにドロップできません」というアイコンが表示されるのが一般的です。多くの場合、このマウスポインターのフィードバックで十分です。
 
-実際の正確な表示のされ方はユーザーのプラットフォームに依存しますが、通常は例えば「コピー」に対しては「＋」記号が表示され、また、ドロップが許可されていない時は「ここにはドロップできません」という意味のアイコンが表示されるでしょう。多くの場合において、このポインターによるフィードバックは十分に役立ちます。
+### ドロップの効果
 
-より凝った視覚効果のために、例えばドロップが行われる位置に要素を挿入するなど、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントの間に他の操作をすることもできます。この例なら、挿入される要素は、挿入箇所を示すマーカーあるいはドラッグされている要素が新しい位置に挿入された時の状態のプレビューなどとして利用できるでしょう。このような効果は、例えば [`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素を生成して、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントの処理中にドキュメント中に単に挿入するだけで実現できます。
+ドロップ時に、行われる可能性のある操作は複数あります。
 
-{{domxref("HTMLElement/dragover_event", "dragover")}} イベントは、マウスポインターが現在指している要素において発行されます。挿入点のマーカーを {{domxref("HTMLElement/dragover_event", "dragover")}} イベントの発行に応じて移動させたいと思うのは自然な欲求でしょう。そのような場合には、他のマウスイベントでマウスポインターの位置を取得するために使われるのと同じ要領で、イベントの {{domxref("MouseEvent.clientX","clientX")}} と {{domxref("MouseEvent.clientY","clientY")}} プロパティを利用できます。
+- `copy`
+  - : データをドロップした後、データはソースとターゲットの両方の場所に同時に存在するようになります。
+- `move`
+  - : データはターゲットとなる場所にのみ存在するようになり、元の場所からは削除されます。
+- `link`
+  - : ソースとドロップターゲットの間には何らかの形のリンクが作成されます。ソースの場所にはデータのインスタンスが 1 つしか存在しません。
+- `none`
+  - : 何も起こりません。ドロップは失敗します。
 
-最後に、ドラッグ中にマウスポインターが要素の上を離れる時、 {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベントが発行されます。これは挿入点のマーカーやハイライト表示を消すのにちょうどいいタイミングです。このイベントをキャンセルする必要はありません。 {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベントは、ドラッグがキャンセルされた時でも常に発行されますので、このイベントによって、挿入点の消去などを確実に行うことができます。
+{{domxref("HTMLElement/dragenter_event", "dragenter")}} および {{domxref("HTMLElement/dragover_event", "dragover")}} イベントにおいて、 {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティはユーザーが要求している操作に初期化されます。ユーザーは操作の種類を修飾キーを押すことにより変更することができます。実際に使用されるキーはプラットフォームごとに異なりますが、大抵の場合は <kbd>Shift</kbd> キーと <kbd>Control</kbd> キーが、コピー・移動・リンクの各操作の切り替えに使われるでしょう。マウスポインターはどの操作が望まれているのかを示すために、例えば `copy` ならカーソルの横に「＋」記号が表示される、といった風に変化するでしょう。
 
-## ドロップの実行
-
-ユーザーがマウスのボタンを離した時、ドラッグ & ドロップの操作は終了します。
-
-有効なドロップ対象となっている要素の上でマウスのボタンが離された場合、最後の {{domxref("HTMLElement/dragenter_event", "dragenter")}} と {{domxref("HTMLElement/dragover_event", "dragover")}} イベントはキャンセルされて、ドロップが成功し、 {{domxref("HTMLElement/drop_event", "drop")}} イベントがそのドロップ対象において発行されます。それ以外の場所でボタンが放された場合は、ドラッグ操作はキャンセルされ、 {{domxref("HTMLElement/drop_event", "drop")}} イベントは発行されません。
-
-{{domxref("HTMLElement/drop_event", "drop")}} イベントの間、あなたはドロップされたデータをイベントから取得して、ドロップ位置に挿入することになります。どのドラッグ & ドロップ操作が望まれていたのかは、 {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティで判別することができます。
-
-すべてのドラッグ & ドロップ関連のイベントにおいて、イベントの {{domxref("DataTransfer","dataTransfer")}} プロパティはドラッグされた対象に関するデータを保持しています。データの取得には {{domxref("DataTransfer.getData","getData()")}} メソッドを利用することになるでしょう。
+例えば、特定のドロップターゲットが特定の操作のみに対応している場合など、 {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティの値を {{domxref("HTMLElement/dragenter_event", "dragenter")}} または {{domxref("HTMLElement/dragover_event", "dragover")}} イベントの間に変更することができます。 {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティを変更すると、ユーザーの操作を上書きし、特定のドロップ操作を強制することができます。
 
 ```js
-function onDrop(event) {
-  const data = event.dataTransfer.getData("text/plain");
-  event.target.textContent = data;
-  event.preventDefault();
+target.addEventListener("dragover", (event) => {
+  event.dataTransfer.dropEffect = "move";
+});
+```
+
+この例では move が行われる操作になります。
+
+値 `none` を使用することで、この位置でのドロップを許可しないことを示すことができます。通常、要素が一時的にドロップを受け付けない場合のみこの設定を行ってください。ドロップ対象として意図されていない場合は、単にイベントをキャンセルしないようにすべきです。
+
+`dropEffect` の設定は、この特定の瞬間において希望する効果を示すのみであり、後続の `dragover` の配信によって変更される可能性がある点にご留意ください。選択を永続化するには、すべての `dragover` イベントで設定を行う必要があります。また、この効果はあくまで情報提供用であり、実際に実装される効果はソースノードとターゲットノードの両方に依存します（例えば、ソースノードが変更不可の場合、"move" 効果が要求されても実行できない可能性があります）。
+
+ユーザーによるジェスチャー操作およびプログラムによる `dropEffect` の設定のいずれにおいても、デフォルトでは 3 種類のドロップ効果がすべて利用可能です。{{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントのリスナーにおいて、 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} プロパティに値を設定することで、特定の効果のみを許可するように制限することが可能です。
+
+```js
+draggableElement.addEventListener("dragstart", (event) => {
+  event.dataTransfer.effectAllowed = "copyLink";
+});
+```
+
+この例では、コピーまたはリンク操作のみが許可されており、移動操作はスクリプト経由でもユーザー操作でも選択することができません。
+
+`effectAllowed` の値は、`dropEffect` の組み合わせとなります。
+
+| 値              | 説明                                                                                                                                      |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `none`          | どの操作も許可されていない                                                                                                                |
+| `copy`          | `copy` のみ                                                                                                                               |
+| `move`          | `move` のみ                                                                                                                               |
+| `link`          | `link` のみ                                                                                                                               |
+| `copyMove`      | `copy` または `move` のみ                                                                                                                 |
+| `copyLink`      | `copy` または `link` のみ                                                                                                                 |
+| `linkMove`      | `link` または `move` のみ                                                                                                                 |
+| `all`           | `copy`, `move`, `link`                                                                                                                    |
+| `uninitialized` | 効果が設定されていない場合のデフォルト値です。一般的に `all` と同等ですが、デフォルトの `dropEffect` が常に `copy` であるとは限りません。 |
+
+デフォルトでは、`dropEffect` は `effectAllowed` に基づいて初期化され、`copy`、`link`、`move` の順序で、許可されている最初のものが選択されます。選択されていないが許可されている効果も、適切な場合にはデフォルトとして選択されることがあります。例えば、Windows では、<kbd>Alt</kbd> キーを押したままにすると、`link` が優先的に使用されます。`effectAllowed` が `uninitialized` であり、ドラッグされた要素が `<a>` リンクの場合、デフォルトの `dropEffect` は `link` となります。`effectAllowed` が `uninitialized` であり、ドラッグされた要素が編集可能なテキストフィールドからの選択範囲の場合、デフォルトの `dropEffect` は `move` となります。
+
+```html hidden live-sample___drop_effects
+<div class="sources-container">
+  さまざまな <code>allowedEffect</code> を持つソースです。
+  <div id="sources"></div>
+</div>
+<div class="targets-container">
+  さまざまな <code>dropEffect</code> を持つターゲットです。
+  <div id="targets"></div>
+</div>
+```
+
+```css hidden live-sample___drop_effects
+.sources-container,
+.targets-container {
+  width: calc(100% - 2rem);
+  border: 2px dashed gray;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+#sources,
+#targets {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+#sources {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#targets {
+  grid-template-columns: 1fr 1fr;
+}
+
+#sources div,
+#targets div {
+  border: 2px solid black;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sources div {
+  height: 50px;
+}
+
+#targets div {
+  height: 75px;
 }
 ```
 
-{{domxref("DataTransfer.getData","getData()")}} メソッドは、取得したいデータの型を引数として取ります。実行すると、ドラッグ操作の開始時に {{domxref("DataTransfer.setData","setData()")}} メソッドによって登録された値が文字列として返されます。その型に対するデータが存在しない場合は、空文字が返されます。当然ながら、直前の {{domxref("HTMLElement/dragover_event", "dragover")}} イベントでの処理においてチェックした時と同様に、あなたはデータの正しい形式が利用可能かどうかを知りたいと思うでしょう。
+```js hidden live-sample___drop_effects
+for (const allowedEffect of [
+  "none",
+  "copy",
+  "move",
+  "link",
+  "copyMove",
+  "copyLink",
+  "linkMove",
+  "all",
+  "uninitialized",
+]) {
+  const div = document.createElement("div");
+  div.textContent = allowedEffect;
+  div.draggable = true;
+  div.addEventListener("dragstart", (event) => {
+    event.dataTransfer.effectAllowed = allowedEffect;
+  });
+  document.getElementById("sources").appendChild(div);
+}
 
-上記の例では、まずデータを取得し、ドロップ対象の内容テキストとしてそれを挿入しています。これは `p` 要素や `div` 要素がドロップ対象の領域として使われる事を想定しており、ドラッグされたテキストをドロップ位置に挿入するという効果をもたらします。
+for (const dropEffect of ["none", "copy", "move", "link"]) {
+  const div = document.createElement("div");
+  div.textContent = dropEffect;
+  div.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = dropEffect;
+  });
+  document.getElementById("targets").appendChild(div);
+}
+```
 
-ウェブページにおいては、ドロップを受け付けた場合、イベントの {{domxref("Event.preventDefault","preventDefault()")}} メソッドを呼び出すべきです。これによって、ブラウザー内でのドロップ時の既定の挙動がキャンセルされます。例えば、リンクがウェブページにドロップされた場合、 Firefox はそのリンク先を読み込もうとします。イベントをキャンセルすることで、この動作は抑止されます。
+{{EmbedLiveSample("drop_effects", "", 500)}}
 
-他の形式でデータを取得することもできます。データがリンクであった場合、そのデータは [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#link) 型でも提供されているでしょう。その場合、リンクを内容に挿入することができます。
+### 独自のドロップフィードバック
+
+{{domxref("HTMLElement/dragenter_event", "dragenter")}} イベント中に他の操作を実行することで、より複雑な視覚効果を実現することができます。例えば、ドロップが行われる位置に要素を挿入する方法が挙げられます。これは挿入マーカー、あるいは新しい位置にドラッグされた要素を表す要素である可能性があります。これを行うには、[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素を作成し、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベント中に文書に挿入することができます。
+
+{{domxref("HTMLElement/dragover_event", "dragover")}} イベントは、マウスが指している要素で発生します。当然ながら、 {{domxref("HTMLElement/dragover_event", "dragover")}} イベントハンドラー内でも挿入マーカーを移動させる必要があるかもしれません。他のマウスイベントと同様に、イベントの {{domxref("MouseEvent.clientX","clientX")}} および {{domxref("MouseEvent.clientY","clientY")}} プロパティを使用して、マウスポインターの位置を特定することができます。
+
+最後に、ドラッグ操作が要素から離れた際に、その要素で {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベントが発生します。このタイミングで、挿入マーカーやハイライト表示を解除されることをお勧めいたします。このイベントをキャンセルする必要はありません。 {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベントは、ドラッグがキャンセルされた場合でも常に発生します。したがって、挿入ポイントのクリーンアップは、このイベント中に確実に実行できます。
+
+これらのイベントの使用例については、[カンバンボードの例](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board#inserting_at_a_particular_location)を参照してください。
+
+## ドロップの実行
+
+ユーザーがマウスのボタンを離した時、ドラッグ＆ドロップの操作は終了します。
+
+ドロップ操作が成功するためには、ドロップが有効な[ドロップターゲット](#要素上のドラッグとドロップターゲットの特定)上で行われ、かつマウスボタンを離した時点で `dropEffect` が `none` でないことが必要です。そうでない場合、ドロップ操作は[失敗した](#ドロップの失敗)と見なされます。
+
+ドロップ操作が成功する可能性がある場合、ドロップターゲット上で {{domxref("HTMLElement/drop_event", "drop")}} イベントが発生します。ドロップを実際に成功と見なすためには、`preventDefault()` を使用してこのイベントをキャンセルする必要があります。ただし、テキスト（データに `text/plain` のアイテムを含む）を編集可能なテキストフィールドにドロップする場合、この処理を行わなくてもドロップは成功と見なされます。この場合、テキストはフィールドに挿入されます（カーソル位置か末尾かはプラットフォームの慣習によります）。また、`dropEffect` が `move` で、かつソースが編集可能領域内の選択範囲である場合、ソースは削除されます。それ以外のすべてのドラッグデータおよびドロップターゲットについては、ドロップは失敗と見なされます。
+
+{{domxref("HTMLElement/drop_event", "drop")}} イベントの間、ドロップされたデータをイベントから取得して、ドロップ位置に挿入することになります。どのドラッグ＆ドロップ操作が望まれていたのかは、 {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティで判別することができます。`drop` イベントは、`dragstart` イベント以外に、ドラッグデータストアを読み取ることができる唯一の機会です。
 
 ```js
-function doDrop(event) {
-  const lines = event.dataTransfer.getData("text/uri-list").split("\n");
+target.addEventListener("drop", (event) => {
+  event.preventDefault();
+  const data = event.dataTransfer.getData("text/plain");
+  target.textContent = data;
+});
+```
+
+上記の例では、まずデータを取得し、ドロップ対象のテキストコンテンツとしてそれを挿入しています。これは `p` 要素や `div` 要素がドロップ対象の領域として使われる事を想定しており、ドラッグされたテキストをドロップ位置に挿入するという効果をもたらします。
+
+`getData()` メソッドは、データストアに指定されたタイプのデータが含まれていない場合、空の文字列を返します。[条件付きドロップターゲット](#条件付きドロップターゲット)が実装されている場合、この状況は発生しないはずです。なぜなら、ドロップターゲットは、必要なデータが存在する場合にのみドロップを受け入れるべきだからです。
+
+他の形式でデータを取得することもできます。データがリンクであった場合、そのデータは [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#dragging_links) 型でも提供されているでしょう。その場合、リンクを内容に挿入することができます。
+
+```js
+target.addEventListener("drop", (event) => {
+  event.preventDefault();
+  const lines = event.dataTransfer.getData("text/uri-list").split("\r\n");
   lines
     .filter((line) => !line.startsWith("#"))
     .forEach((line) => {
       const link = document.createElement("a");
       link.href = line;
       link.textContent = line;
-      event.target.appendChild(link);
+      target.appendChild(link);
     });
-  event.preventDefault();
-}
+});
 ```
 
-この例は、ドラッグされたデータからリンクを挿入します。名前から想像できる通り、 [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#link) 型は実際に複数の URL の改行区切りのリストを含んでいる場合があります。このコードでは、 [`split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) を使って文字列を行ごとに分割し、各行に繰り返し処理を行って、それぞれをリンクとして文書中に挿入しています。ナンバー記号 (`#`) で始まるものはコメントとして除外していることに注意してください。
+ドラッグデータの読み取り方法の詳細については、[ドラッグデータストアの操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#reading_the_drag_data_store)を参照してください。
 
-単純な使い方として、リストの中の最初の有効な URL を取得するために、特別な型 `URL` も利用できます。
+ソース要素とターゲット要素は、`dropEffect` を実装するために連携する責任も負います。具体的には、ソース要素が `dragend` イベントを監視し、ターゲット要素が `drop` イベントを監視します。例えば、`dropEffect` が `move` の場合、いずれかの要素がドラッグされた項目を元の位置から削除する必要があります（通常はソース要素自体です。ターゲット要素は必ずしもソース要素を認識したり制御したりできるとは限らないためです）。
 
-```js
-const link = event.dataTransfer.getData("URL");
-```
+<!-- TODO: default action of dropping files/links into browsers -->
 
-これによって、コメントの除外などの処理は一切不要になります。しかし、これはリストの中の最初の URL だけしか取得できないという制限があります。
+## ドロップの失敗
 
-`URL` 型は特別な省略表記用の型で、 {{domxref("DataTransfer.types","types")}} プロパティで取得できる型のリストには列挙されません。
+以下のいずれかが当てはまる場合、ドラッグ＆ドロップ操作は失敗と見なされます。
 
-時には、複数の形式をサポートして、そのうち最も適切な形式で提供されたデータを取得したいと思う事もあるでしょう。以下の例では、3 つの形式がドロップ対象によってサポートされています。
+1. ユーザーが <kbd>Escape</kbd> キーを押した
+2. ドロップが有効な[ドロップターゲット](#要素上のドラッグとドロップターゲットの特定)の外で行われた
+3. マウスボタンを離した時点でのドロップ効果が `none` だった
+4. `drop` イベントがキャンセルされず、`text/plain` データを含むテキストが編集可能なテキストフィールドにドロップされなかった（[ドロップの実行](#ドロップの実行)を参照）
 
-以下の例は、提供されたデータの中で最も適切なデータを返す例です。
+ケース 1 と 3 において、有効なドロップターゲット上にカーソルを置いた状態で操作がキャンセルされた場合、ドロップターゲットは {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベントを受信します。これはあたかもドロップ操作が当該ターゲット上で発生しなくなったかのように扱われ、これにより[ドロップフィードバック](#独自のドロップフィードバック)のクリーンアップが可能となります。いずれの場合においても、後続のイベントに対して `dropEffect` は `none` に設定されます。
 
-```js
-function doDrop(event) {
-  const supportedTypes = [
-    "application/x-moz-file",
-    "text/uri-list",
-    "text/plain",
-  ];
-  const types = event.dataTransfer.types.filter((type) =>
-    supportedTypes.includes(type),
-  );
-  if (types.length) {
-    const data = event.dataTransfer.getData(types[0]);
-    // Use this type of data…
-  }
-  event.preventDefault();
-}
-```
+その後、ソースノードで {{domxref("HTMLElement/dragend_event", "dragend")}} イベントが発生します。ブラウザーは、ドラッグされた選択範囲がドラッグ＆ドロップ操作の起点に戻るアニメーションを表示する場合があります。
 
 ## ドラッグの終了
 
-ドラッグ操作が終了すると、 {{domxref("HTMLElement/dragend_event", "dragend")}} イベントがドラッグ元 ({{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントが発行されるのと同じ要素) において発行されます。このイベントは、ドラッグ操作が成功したかキャンセルされたかに関わらず発行されます。どの操作が行われたのかは、 {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティを参照して知ることができます。
+ドラッグ操作が終了すると、 {{domxref("HTMLElement/dragend_event", "dragend")}} イベントがドラッグ元 ({{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントが発行されるのと同じ要素) において発行されます。このイベントは、ドラッグ操作が成功したかキャンセルされたかに関わらず発行されます。
 
-{{domxref("HTMLElement/dragend_event", "dragend")}} イベントにおいて {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティの値が`none`である場合、ドラッグ操作がキャンセルされたことを意味します。それ以外の場合は、プロパティの値は実際に行われた操作の種類を示します。ドラッグ元はこの情報に基づいて、ドラッグされた項目を「移動」の操作の後に元の場所から削除することができます。 {{domxref("DataTransfer.mozUserCancelled","mozUserCancelled")}} プロパティの値は、ユーザーが（Escape キーを押すなどして）ドラッグ操作をキャンセルした場合は true となり、不正なドロップ先だった場合などの他の理由でドラッグ操作がキャンセルされた場合や、ドロップに成功した場合は false となります。
+{{domxref("HTMLElement/dragend_event", "dragend")}} イベントにおいて {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティの値が `none` である場合、ドラッグ操作がキャンセルされます。それ以外の場合は、実際に行われた操作の種類を示します。ドラッグ元はこの情報に基づいて、ドラッグされた項目を "move" の操作の後に元の場所から削除することができます。
 
 ドロップ操作は同じウィンドウの中または他のアプリケーションの上で行われ得ます。いずれの場合も常に {{domxref("HTMLElement/dragend_event", "dragend")}} イベントは発行されます。このイベントの {{domxref("MouseEvent.screenX","screenX")}} および {{domxref("MouseEvent.screenY","screenY")}} プロパティの値には、ドロップが行われたときの画面上での座標が設定されます。
 
-{{domxref("HTMLElement/dragend_event", "dragend")}} イベントの伝搬が終了した後、ドラッグ & ドロップの操作は完了します。
+{{domxref("HTMLElement/dragend_event", "dragend")}} イベントの伝搬が終了した後、ドラッグ＆ドロップの操作は完了します。
 
 ## 関連情報
 
-- [HTML ドラッグ & ドロップ API (概要)](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
-- [複数の項目のドラッグ & ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [HTML ドラッグ＆ドロップ API (概要)](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
+- [ドラッグデータストアでの作業](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

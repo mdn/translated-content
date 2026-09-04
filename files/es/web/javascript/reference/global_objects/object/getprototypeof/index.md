@@ -34,7 +34,7 @@ Object.getPrototypeOf(obj) === proto; // true
 
 ## Notas
 
-En ES5, lanzará una excepción {{jsxref("Global_Objects/TypeError", "TypeError")}} si el parámetro `obj` no es un objeto. en ES6, El parámetro será forzado a un {{jsxref("Global_Objects/Object", "Object")}}.
+En ES5, lanzará una excepción {{jsxref("TypeError")}} si el parámetro `obj` no es un objeto. en ES6, El parámetro será forzado a un {{jsxref("Object")}}.
 
 ```js
 > Object.getPrototypeOf('foo')

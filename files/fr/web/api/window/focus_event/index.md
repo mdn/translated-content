@@ -3,20 +3,20 @@ title: "Window : évènement focus"
 short-title: focus
 slug: Web/API/Window/focus_event
 l10n:
-  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef}}
 
 L'évènement **`focus`** est déclenché lorsqu'un élément reçoit la sélection.
 
-L'opposé de `focus` est {{domxref("Window/blur_event", "blur")}}.
+L'opposé de `focus` est {{DOMxRef("Window/blur_event", "blur")}}.
 
 Cet évènement n'est pas annulable et ne se propage pas.
 
 ## Syntaxe
 
-Utiliser le nom de l'évènement dans des méthodes comme {{domxref("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété gestionnaire d'évènement.
+Utiliser le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété gestionnaire d'évènement.
 
 ```js-nolint
 addEventListener("focus", (event) => { })
@@ -26,22 +26,15 @@ onfocus = (event) => { }
 
 ## Type d'évènement
 
-Un {{domxref("FocusEvent")}}. Hérite de {{domxref("UIEvent")}} et {{domxref("Event")}}.
+Un {{DOMxRef("FocusEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
-
-## Propriétés de l'évènement
-
-_Cette interface hérite aussi des propriétés de son parent {{domxref("UIEvent")}}, et indirectement de {{domxref("Event")}}._
-
-- {{domxref("FocusEvent.relatedTarget")}}
-  - : Un {{domxref("EventTarget")}} représentant une cible secondaire pour cet évènement. Dans certains cas (comme lors d'un passage par tabulation dans ou hors d'une page), cette propriété peut être définie sur `null` pour des raisons de sécurité.
 
 ## Exemples
 
 ### Exemple interactif
 
-Cet exemple modifie l'apparence d'un document lorsqu'il perd la sélection. Il utilise {{domxref("EventTarget.addEventListener()", "addEventListener()")}} pour surveiller les évènements `focus` et {{domxref("Window/blur_event", "blur")}}.
+Cet exemple modifie l'apparence d'un document lorsqu'il perd la sélection. Il utilise {{DOMxRef("EventTarget.addEventListener()", "addEventListener()")}} pour surveiller les évènements `focus` et {{DOMxRef("Window/blur_event", "blur")}}.
 
 #### HTML
 
@@ -92,5 +85,5 @@ window.addEventListener("focus", play);
 
 ## Voir aussi
 
-- Évènement associé&nbsp;: {{domxref("Window/blur_event", "blur")}}
-- Cet évènement sur les cibles `Element`&nbsp;: évènement {{domxref("Element/focus_event", "focus")}}
+- Évènement associé&nbsp;: {{DOMxRef("Window/blur_event", "blur")}}
+- Cet évènement sur les cibles `Element`&nbsp;: évènement {{DOMxRef("Element/focus_event", "focus")}}

@@ -18,7 +18,7 @@ El valor de `arguments` es un objeto similar a un arreglo correspondiente a los 
 
 En el caso de recursividad, es decir, si la función `f` aparece varias veces en la pila de llamadas, el valor de `f.arguments` representa los argumentos correspondientes a la invocación más reciente de la función.
 
-El valor de la propiedad `arguments` normalmente es {{jsxref("Operators/null", "null")}} si no hay una invocación pendiente de la función en progreso (es decir, la función ha sido llamada pero aún no ha devuelto).
+El valor de la propiedad `arguments` normalmente es {{jsxref("null")}} si no hay una invocación pendiente de la función en progreso (es decir, la función ha sido llamada pero aún no ha devuelto).
 
 Tenga en cuenta que el único comportamiento especificado por la especificación ECMAScript es que `Function.prototype` tiene un descriptor de acceso inicial `arguments` que arroja incondicionalmente un {{jsxref("TypeError")}} para cualquier solicitud `get` o `set` (conocida como _"poison pill accessor"_ -accesor de píldora envenenada-), y que las implementaciones no pueden cambiar esta semántica para ninguna función, excepto funciones simples no estrictas. El comportamiento real de la propiedad `arguments`, si es algo más que arrojar un error, es definido en la implementación Por ejemplo, Chrome lo define como una propiedad de datos propia, mientras que Firefox y Safari extienden el descriptor de acceso inicial `Function.prototype.arguments` de la píldora venenosa para manejar especialmente los valores `this` que son funciones no estrictas.
 

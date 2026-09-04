@@ -63,7 +63,7 @@ new Promise(function(resolve, reject) { ... });
 
 - `Promise.length`
   - : Значение свойства всегда равно 1 (количество аргументов конструктора).
-- {{jsxref("Promise.prototype")}}
+- {{jsxref("Promise")}}
   - : Представляет прототип для конструктора `Promise`.
 
 ## Методы

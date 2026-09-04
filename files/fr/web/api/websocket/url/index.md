@@ -1,21 +1,18 @@
 ---
-title: WebSocket.url
+title: "WebSocket : propriété url"
+short-title: url
 slug: Web/API/WebSocket/url
+l10n:
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
-La propriété en lecture seule **`WebSocket.url`** renvoie l'URL absolue de la [`WebSocket`](/fr/docs/Web/API/WebSocket) telle que résolue par le constructeur.
-
-## Syntaxe
-
-```js
-var url = aWebSocket.url;
-```
+La propriété en lecture seule **`url`** de l'interface {{DOMxRef("WebSocket")}} retourne l'URL absolue de la {{DOMxRef("WebSocket")}} telle que résolue par le constructeur.
 
 ## Valeur
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
+Une chaîne de caractères.
 
 ## Spécifications
 

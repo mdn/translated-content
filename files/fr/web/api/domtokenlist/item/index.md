@@ -16,11 +16,11 @@ tokenList.item(index);
 ### Paramètres
 
 - index
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant l'index de l'élément dont on veut le retour.
+  - : Une {{jsxref("String")}} (_chaîne de caractères_) représentant l'index de l'élément dont on veut le retour.
 
 ### Valeur retournée
 
-Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant l'élément renvoyé. Le retour est `undefined` (_indéfini_) si le nombre est plus grand que ou égal à la longueur de la liste.
+Une {{jsxref("String")}} (_chaîne de caractères_) représentant l'élément renvoyé. Le retour est `undefined` (_indéfini_) si le nombre est plus grand que ou égal à la longueur de la liste.
 
 ## Exemples
 

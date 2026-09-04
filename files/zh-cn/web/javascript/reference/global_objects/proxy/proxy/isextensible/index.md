@@ -3,7 +3,6 @@ title: handler.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 ---
 
-{{JSRef}}
 **handler.isExtensible()** 方法用于拦截对对象的 Object.isExtensible()。
 
 {{InteractiveExample("JavaScript Demo: handler.isExtensible()", "taller")}}
@@ -120,6 +119,6 @@ Object.isExtensible(p); // TypeError is thrown
 ## 参见
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.isExtensible()")}}
 - {{jsxref("Reflect.isExtensible()")}}

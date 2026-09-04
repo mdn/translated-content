@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}
-
 **`Promise.resolve()`** 静态方法以给定值“解决（resolve）”一个 {{jsxref("Promise")}}。如果该值本身就是一个 Promise，那么该 Promise 将被返回；如果该值是一个 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 对象，`Promise.resolve()` 将调用其 `then()` 方法及其两个回调函数；否则，返回的 Promise 将会以该值兑现。
 
 该函数将嵌套的类 Promise 对象（例如，一个将被兑现为另一个 Promise 对象的 Promise 对象）展平，转化为单个 Promise 对象，其兑现值为一个非 thenable 值。

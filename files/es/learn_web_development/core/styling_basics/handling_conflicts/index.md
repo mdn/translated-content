@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
 original_slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 El objetivo de este artículo es desarrollar la comprensión de algunos de los conceptos fundamentales de CSS (cascada, especificidad y herencia) que controlan cómo se aplica el CSS al HTML y cómo se resuelven los conflictos.
 
@@ -17,18 +17,18 @@ A medida que avances en este apartado verás que puede resultar menos relevante 
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conocimientos básicos de
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, HTML básico (véase
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML"
+          href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción a HTML</a
         >) y una idea de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con CSS</a>).
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos con CSS</a>).
       </td>
     </tr>
     <tr>
@@ -45,7 +45,7 @@ A medida que avances en este apartado verás que puede resultar menos relevante 
 
 CSS significa **hojas de estilo en cascada** (cascading style sheets), y es muy importante entender la palabra _cascada_. La forma en que se comporta la cascada es la clave para comprender el CSS.
 
-En algún momento trabajarás en un proyecto y encontrarás que el CSS que pensabas que debería aplicarse a un elemento no funciona. Por lo general, el problema suele ser que has creado dos normas que podrían aplicarse al mismo elemento. La **cascada**, y el concepto estrechamente relacionado de **especificidad** son mecanismos que controlan qué regla se aplica cuando aparecen tales conflictos. Es posible que la regla que se apliuca finalmente a tu elemento no sea la que esperas, por lo que debes comprender cómo funcionan estos mecanismos.
+En algún momento trabajarás en un proyecto y encontrarás que el CSS que pensabas que debería aplicarse a un elemento no funciona. Por lo general, el problema suele ser que has creado dos normas que podrían aplicarse al mismo elemento. La **cascada**, y el concepto estrechamente relacionado de **especificidad** son mecanismos que controlan qué regla se aplica cuando aparecen tales conflictos. Es posible que la regla que se aplica finalmente a tu elemento no sea la que esperas, por lo que debes comprender cómo funcionan estos mecanismos.
 
 También es significativo el concepto de **herencia**, que significa que algunas propiedades CSS heredan por defecto los valores establecidos en el elemento padre, pero otras no. Esto también puede causar una respuesta diferente a la que esperas.
 
@@ -83,7 +83,7 @@ Por ejemplo, si para un elemento se establece el color (`color`) y el tipo de le
 Algunas propiedades no se heredan. Por ejemplo, si para un elemento se establece un ancho {{cssxref("width")}} del 50%, sus descendientes no tendrán un 50% de ancho con respecto al de sus padres. Si este fuera el caso, ¡sería muy frustrante usar CSS!
 
 > [!NOTE]
-> En las páginas de referencia de las propiedades CSS de MDN encontrarás un cuadro con información técnica (por lo general, en la parte inferior de la sección de especificaciones) que enumera una serie de puntos sobre cada propiedad, incluyendo cuáles se heredan y cuáles no. Véase, por ejemplo, la [sección de especificaciones de la propiedad color](/es/docs/Web/CSS/color#especificaciones).
+> En las páginas de referencia de las propiedades CSS de MDN encontrarás un cuadro con información técnica (por lo general, en la parte inferior de la sección de especificaciones) que enumera una serie de puntos sobre cada propiedad, incluyendo cuáles se heredan y cuáles no. Véase, por ejemplo, la [sección de especificaciones de la propiedad color](/es/docs/Web/CSS/Reference/Properties/color#especificaciones).
 
 ## Comprender cómo trabajan juntos estos conceptos
 
@@ -178,7 +178,7 @@ La cantidad de especificidad de un selector se mide usando cuatro valores difere
 > [!NOTE]
 > El selector universal (`*`), los operadores de combinación (`+`, `>`, `~`, ' ') y la pseudo-clase de negación (`:not`) no tienen ningún efecto sobre la especificidad.
 
-La tabla siguiente muestra algunos ejemplos concretos para ayudarte a entenderlo mejor. Analízalos y trata de entender por qué tienen la especificidad que les hemos dado. Aun no hemos explicado los selectores de forma detallada, pero puedes encontrar detalles de cada selector en los [selectores de referencia](/es/docs/Web/CSS/CSS_selectors) de MDN.
+La tabla siguiente muestra algunos ejemplos concretos para ayudarte a entenderlo mejor. Analízalos y trata de entender por qué tienen la especificidad que les hemos dado. Aun no hemos explicado los selectores de forma detallada, pero puedes encontrar detalles de cada selector en los [selectores de referencia](/es/docs/Web/CSS/Guides/Selectors) de MDN.
 
 | Selector                                                                                                                 | Millares: | Centenas: | Decenas: | Unidades: | Especificidad total |
 | ------------------------------------------------------------------------------------------------------------------------ | --------- | --------- | -------- | --------- | ------------------- |
@@ -253,4 +253,4 @@ Si todavía no tienes una comprensión completa de los conceptos de cascada, esp
 
 Regresa a esta página si empiezas a toparte con problemas extraños o con que los estilos no se aplican de la forma que esperas. Podría ser un problema de especificidad.
 
-{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{NextMenu("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}

@@ -2,10 +2,8 @@
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 l10n:
-  sourceCommit: 673746e15e5052c4fe39944f3d93d2e2d3227b3f
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
-
-{{JSRef}}
 
 **`SharedArrayBuffer`** オブジェクトは、一般的な、生のバイナリーデータバッファーを表すために使用されます。{{jsxref("ArrayBuffer")}} オブジェクトと似ていますが、こちらは共有メモリー上にビューを生成するために使用されます。`SharedArrayBuffer` は[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)ではありません。この点では `ArrayBuffer` が移譲可能であるのとは異なります。
 
@@ -28,12 +26,12 @@ worker.postMessage(sab);
 - [`WebGLRenderingContext.bufferSubData()`](/ja/docs/Web/API/WebGLRenderingContext/bufferSubData)
 - [`WebGL2RenderingContext.getBufferSubData()`](/ja/docs/Web/API/WebGL2RenderingContext/getBufferSubData)
 
-### セキュリティの要件
+### セキュリティ要件
 
 共有メモリーと高解像度タイマーは、[Spectre](https://ja.wikipedia.org/wiki/Spectre) の対策として 2018 年の初めに事実上[無効化されました](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/)。
 2020 年には、共有メモリーを再び有効にするために、新しい安全なアプローチが標準化されました。
 
-共有メモリーを使用するには、文書が[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)内にあり、{{domxref("Window.crossOriginIsolated","オリジン同士が分離されている","","nocode")}}必要があります。
+共有メモリーを使用するには、文書が[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)内にあり、{{domxref("Window.crossOriginIsolated","オリジン同士が分離されている","","nocode")}}必要があります。
 {{domxref("Window.crossOriginIsolated")}} と {{domxref("WorkerGlobalScope.crossOriginIsolated")}} のプロパティを使用して、文書のオリジン同士が分離されているかどうかを調べることができます。
 
 ```js
@@ -106,6 +104,8 @@ WebAssembly Threads の提案では、新しい[不可分](https://github.com/We
 
 ## 例
 
+これらの例は、コンソールや任意のウェブページから直接実行することはできません。`SharedArrayBuffer` は、その[セキュリティ要件](#セキュリティ要件)が満たされない限り定義されないからです。
+
 ### 新しい SharedArrayBuffer の生成
 
 ```js
@@ -143,7 +143,7 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 
 - {{jsxref("Atomics")}}
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)
 - [共有メモリー – 簡潔なチュートリアル](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md) (TC39 ecmascript-sharedmem の提案)
 - [A Taste of JavaScript's New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) (hacks.mozilla.org, 2016)

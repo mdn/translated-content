@@ -34,10 +34,10 @@ svg {
 
 - {{SVGAttr('points')}}
   - : Cette attribut défini une liste de point (paire de coordonnées absolue x et y ) nécessaire pour dessiner le polygone.
-    _Type de valeur_: [**\<number>**](/fr/docs/Web/SVG/Content_type#Number)+ ; _Valeur par défaut_: `""`; _Peut être animé_: **oui**
+    _Type de valeur_: [**\<number>**](/fr/docs/Web/SVG/Guides/Content_type#Number)+ ; _Valeur par défaut_: `""`; _Peut être animé_: **oui**
 - {{SVGAttr("pathLength")}}
   - : Cet attribut spécifie la taille totale pour le chemin dans l'unité de l'utilisateur.
-    _Type de valeur_: [**\<number>**](/fr/docs/Web/SVG/Content_type#Number); _Valeur par défaut_: _aucune_; _Peut être animé_: **oui**
+    _Type de valeur_: [**\<number>**](/fr/docs/Web/SVG/Guides/Content_type#Number); _Valeur par défaut_: _aucune_; _Peut être animé_: **oui**
 
 ### Attributs Globaux
 

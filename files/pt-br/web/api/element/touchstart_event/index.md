@@ -40,7 +40,7 @@ slug: Web/API/Element/touchstart_event
 
 ## Exemplos
 
-Os códigos de exemplos para este evento estão disponíveis nesta página dedicada: [Touch events](/pt-BR/docs/DOM/Touch_events).
+Os códigos de exemplos para este evento estão disponíveis nesta página dedicada: [Touch events](/pt-BR/docs/Web/API/Touch_events).
 
 ## Especificações
 

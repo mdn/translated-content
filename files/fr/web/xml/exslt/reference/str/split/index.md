@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/str/split
 original_slug: Web/EXSLT/str/split
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
 `str:split()` divise une chaîne en utilisation un motif pour déterminer où doivent être fait les séparations, en retournant un ensemble de nœuds contenant les chaînes résultantes.
 

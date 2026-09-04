@@ -27,7 +27,7 @@ Não é usual a utilização do `NaN`. Ele é retornado quando uma operação ma
 
 ### Testando um valor `NaN`
 
-Os operadores de igualdade (`==` e `===`) não podem ser usados para testar um valor NaN. Ao invés disso, utilize {{jsxref("Number.isNaN()")}} ou {{jsxref("Global_Objects/isNaN", "isNaN()")}}.
+Os operadores de igualdade (`==` e `===`) não podem ser usados para testar um valor NaN. Ao invés disso, utilize {{jsxref("Number.isNaN()")}} ou {{jsxref("isNaN()")}}.
 
 ```js
 NaN === NaN; // falso
@@ -48,4 +48,4 @@ isNaN(Number.NaN); // verdadeiro
 
 - {{jsxref("Number.NaN")}}
 - {{jsxref("Number.isNaN()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

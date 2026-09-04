@@ -19,7 +19,7 @@ performance.clearMeasures(name);
 ### Argumentos
 
 - nombre {{optional_inline}}
-  - : Un {{domxref("DOMString")}} representando el nombre de la marca de tiempo. Si el argumento se omite, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`measure`" serán eliminados.
+  - : Un {{jsxref("String")}} representando el nombre de la marca de tiempo. Si el argumento se omite, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`measure`" serán eliminados.
 
 ### Valor de retorno
 

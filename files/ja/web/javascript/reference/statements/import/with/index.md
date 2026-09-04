@@ -88,7 +88,9 @@ import styles from "https://example.com/styles.css" with { type: "css" };
 - 解決: この属性はモジュール指定子（`from` 句の文字列）の一部です。そのため、同じ文字列パスが指定された場合でも、異なる属性によってまったく異なるモジュールが読み込まれる可能性があります。例えば、[TypeScript は resolution-mode 属性に対応しています](https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/#stable-support-resolution-mode-in-import-types)。
 
   ```ts
-  import type { TypeFromRequire } from "pkg" with { "resolution-mode": "require" };
+  import type { TypeFromRequire } from "pkg" with {
+    "resolution-mode": "require",
+  };
   ```
 
 - 取得: 例えば、CSS モジュールは [`destination`](/ja/docs/Web/API/Request/destination) を `"style"`に設定して取得し、JSON モジュールは `destination: "json"` に設定して取得します。これは、同じ出力先 URL が指定された場合でも、サーバーは異なるコンテンツを返す可能性があるということを意味します。

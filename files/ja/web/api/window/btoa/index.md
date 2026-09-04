@@ -83,7 +83,7 @@ new TextDecoder().decode(base64ToBytes("YSDEgCDwkICAIOaWhyDwn6aE")); // "a Ā �
 
 前回の節で説明した `bytesToBase64` および `base64ToBytes` 関数を使用すると、Base64 文字列と [`Uint8Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) を直接変換することができます。
 
-パフォーマンスを向上させるため、 base64 データ URL 間の非同期変換は [`FileReader`](/ja/docs/Web/API/FileReader) および [`fetch`](/ja/docs/Web/API/Fetch_API) API を使用して、ウェブプラットフォーム内でネイティブに行うことができます。
+パフォーマンスを向上させるため、 base64 の data URL 間の非同期変換は [`FileReader`](/ja/docs/Web/API/FileReader) および [`fetch`](/ja/docs/Web/API/Fetch_API) API を使用して、ウェブプラットフォーム内でネイティブに行うことができます。
 
 ```js
 async function bytesToBase64DataUrl(bytes, type = "application/octet-stream") {

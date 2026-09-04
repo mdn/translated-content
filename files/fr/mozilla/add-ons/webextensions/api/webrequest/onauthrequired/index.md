@@ -120,7 +120,7 @@ Les événements ont trois fonctions :
     - `proxyDNS`
       - : `boolean`. Vrai si le proxy exécutera une résolution de nom de domaine basée sur le nom d'hôte fourni, ce qui signifie que le client ne doit pas faire sa propre recherche DNS.
     - `failoverTimeout`
-      - : `integer`. Délai d'attente de basculement en secondes. Si la connexion ne parvient pas à connecter le serveur proxy après ce nombre de secondes, le serveur proxy suivant dans le tableau renvoyé par [FindProxyForURL()](</fr/docs/Add-ons/WebExtensions/API/proxy#FindProxyForURL()_return_value>) sera utilisé.
+      - : `integer`. Délai d'attente de basculement en secondes. Si la connexion ne parvient pas à connecter le serveur proxy après ce nombre de secondes, le serveur proxy suivant dans le tableau renvoyé par [FindProxyForURL()](</fr/docs/Mozilla/Add-ons/WebExtensions/API/proxy#FindProxyForURL()_return_value>) sera utilisé.
 
 - `realm`{{optional_inline}}
   - : `string`. La zone d'authentification [realm](https://tools.ietf.org/html/rfc1945#section-11) fournie par le serveur, s'il y en a un.

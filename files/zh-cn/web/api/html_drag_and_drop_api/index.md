@@ -83,7 +83,7 @@ Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。请查看
 
 ### 定义拖拽数据
 
-应用程序可以在拖拽操作中包含任意数量的数据项。每个数据项都是一个 {{domxref("DOMString","string")}} 类型，典型的 MIME 类型，如：`text/html`。
+应用程序可以在拖拽操作中包含任意数量的数据项。每个数据项都是一个 {{jsxref("String","string")}} 类型，典型的 MIME 类型，如：`text/html`。
 
 每个 {{domxref("DragEvent","drag event")}} 都有一个{{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性，其中保存着事件的数据。这个属性（{{domxref("DataTransfer")}} 对象）也有管理拖拽数据的方法。{{domxref("DataTransfer.setData","setData()")}} 方法为拖拽数据添加一个项，如下面的示例代码所示：
 

@@ -54,7 +54,7 @@ La siguiente es una lista de todos los temas que cubrimos en el área de aprendi
   - : La accesibilidad es la práctica de hacer que el contenido web esté disponible para la mayor cantidad de personas posible, independientemente de la discapacidad, el dispositivo, el lugar u otros factores diferenciadores. Este tema te brinda todo lo que necesitas saber.
 - [Rendimiento web: Hacer que los sitios web sean rápidos y responsivos](/es/docs/Learn_web_development/Extensions/Performance)
   - : El rendimiento web es el arte de garantizar que las aplicaciones web se descarguen rápidamente y respondan a la interacción del usuario, independientemente del ancho de banda, el tamaño de la pantalla, la red o las capacidades del dispositivo del usuario.
-- [MathML](/es/docs/Learn/MathML)
+- [MathML](/es/docs/Web/MathML)
   - : MathML es el lenguaje que podemos usar para escribir fórmulas matemáticas en páginas web usando fracciones, scripts, radicales, matrices, integrales, series, etc. Este tema cubre MathML.
 - [Herramientas y pruebas](/es/docs/conflicting/Learn_web_development/Extensions/Testing)
   - : Este tema cubre las herramientas que usan los desarrolladores para facilitar su trabajo, como herramientas de prueba entre navegadores, _linters_, formateadores, herramientas de transformación, sistemas de control de versiones, herramientas de implementación y _frameworks_ JavaScript del lado del cliente.

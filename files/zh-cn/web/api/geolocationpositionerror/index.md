@@ -21,7 +21,7 @@ _`PositionError` 接口没有继承任何属性。_
     | `3` | `TIMEOUT`              | 获取地理位置超时，通过定义{{domxref("PositionOptions.timeout")}} 来设置获取地理位置的超时时长。 |
 
 - {{domxref("PositionError.message")}} {{readonlyInline}}
-  - : 返回一个开发者可以理解的 {{domxref("DOMString")}} 来描述错误的详细信息。
+  - : 返回一个开发者可以理解的 {{jsxref("String")}} 来描述错误的详细信息。
 
 ## 方法
 

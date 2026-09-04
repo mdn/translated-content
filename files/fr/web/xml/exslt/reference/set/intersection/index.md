@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/set/intersection
 original_slug: Web/EXSLT/set/intersection
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
 `set:intersection()` retourne l'intersection de deux ensembles de nœuds. En d'autres termes, cette fonction retourne un ensemble de nœuds contenant tous les nœuds appartenant aux deux ensembles de nœuds.
 

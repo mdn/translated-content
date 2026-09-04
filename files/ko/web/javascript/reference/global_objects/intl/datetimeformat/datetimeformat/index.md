@@ -274,4 +274,4 @@ for (const zoneName of timezoneNames) {
 ## 같이 보기
 
 - {{jsxref("Intl.DateTimeFormat")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

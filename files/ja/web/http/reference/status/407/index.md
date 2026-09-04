@@ -2,7 +2,7 @@
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Reference/Status/407
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`407 Proxy Authentication Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、ブラウザーとリクエストされたリソースにアクセスできるサーバーとの間にある{{Glossary("proxy server", "プロキシーサーバー")}}に有効な認証情報が不足しているため、リクエストが成功されていないことを示します。

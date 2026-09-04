@@ -1,15 +1,14 @@
 ---
 title: Symbol() コンストラクター
+short-title: Symbol()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 l10n:
-  sourceCommit: 6a557b06944a0a6eaa1e9e352fc58b973b2e03a1
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Symbol()`** 関数は、シンボル型のプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript デモ: Symbol - Constructor", "taller")}}
+{{InteractiveExample("JavaScript デモ: Symbol() コンストラクター", "taller")}}
 
 ```js interactive-example
 const symbol1 = Symbol();
@@ -17,16 +16,16 @@ const symbol2 = Symbol(42);
 const symbol3 = Symbol("foo");
 
 console.log(typeof symbol1);
-// Expected output: "symbol"
+// 予想される結果: "symbol"
 
 console.log(symbol2 === 42);
-// Expected output: false
+// 予想される結果: false
 
 console.log(symbol3.toString());
-// Expected output: "Symbol(foo)"
+// 予想される結果: "Symbol(foo)"
 
 console.log(Symbol("foo") === Symbol("foo"));
-// Expected output: false
+// 予想される結果: false
 ```
 
 ## 構文
@@ -64,7 +63,7 @@ Symbol("foo") === Symbol("foo"); // false
 
 ### new Symbol()
 
-以下のように {{jsxref("Operators/new", "new")}} 演算子を伴う構文では、 {{jsxref("TypeError")}} が発生します。
+以下のように {{jsxref("new")}} 演算子を伴う構文では、 {{jsxref("TypeError")}} が発生します。
 
 ```js example-bad
 const sym = new Symbol(); // TypeError

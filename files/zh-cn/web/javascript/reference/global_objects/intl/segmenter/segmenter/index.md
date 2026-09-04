@@ -1,25 +1,26 @@
 ---
-title: Intl.Segmenter()
+title: Intl.Segmenter() 构造函数
+short-title: Intl.Segmenter()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
+l10n:
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-{{JSRef}}
+**`Intl.Segmenter()`** 构造函数创建 {{jsxref("Intl.Segmenter")}} 对象。
 
-**`Intl.Segmenter()`** 构造函数会创建一个 [`Intl.Segmenter`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) 对象，该对象支持语言敏感的文本分割。
-
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+{{InteractiveExample("JavaScript 演示：Intl.Segmenter() 构造函数")}}
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+const string = "Que ma joie demeure";
 
-const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+const iterator = segmenterFr.segment(string)[Symbol.iterator]();
 
-console.log(iterator1.next().value.segment);
-// Expected output: 'Que'
+console.log(iterator.next().value.segment);
+// 期望输出："Que"
 
-console.log(iterator1.next().value.segment);
-// Expected output: ' '
+console.log(iterator.next().value.segment);
+// 期望输出：" "
 ```
 
 ## 语法
@@ -31,38 +32,39 @@ new Intl.Segmenter(locales, options)
 ```
 
 > [!NOTE]
-> `Intl.Segmenter()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符来构建。如果尝试不使用 `new` 操作符来构建，将会抛出一个 {{jsxref("TypeError")}} 错误。
+> `Intl.Segmenter()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 来构造。尝试在没有 `new` 的情况下调用会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 
 - `locales` {{optional_inline}}
-  - : 带有 BCP 47 语言区域标记的一个字符串，或者一个这样的字符串数组。对于 `locales` 参数的一般形式和解释，参见[语言区域识别和判定](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#语言区域识别和判定)。
+  - : 带有 {{glossary("BCP 47 language tag", "BCP 47 语言标记")}}的字符串，或 {{jsxref("Intl.Locale")}} 实例，或这些类型的区域设置标识符组成的数组。当传入 `undefined` 或所有指定的区域设置标识符均不被支持时，将使用运行时的默认区域设置。关于 `locales` 参数的一般形式和解释，参见 [`Intl` 主页上的参数描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_参数)。
 - `options` {{optional_inline}}
-  - : 带有部分或全部以下属性的一个对象：
-    - `granularity` {{optional_inline}}
-      - : 字符串。可选值如下：
+  - : 包含以下属性的对象，按获取顺序排列（所有属性都是可选的）：
+    - `localeMatcher`
+      - : 要使用的区域设置匹配算法。可选的值为 `"lookup"` 和 `"best fit"`；默认值为 `"best fit"`。关于此选项的更多信息，参见[语言区域识别和判定](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#语言区域识别和判定)。
+    - `granularity`
+      - : 输入应该按多细的粒度进行分割。可选的值为：
         - `"grapheme"`（默认）
-          - : 根据语言区域，将输入值按字（用户可以感知的字符）划分边界。
+          - : 根据区域设置，按字素簇（用户感知的字符）边界分割输入。
         - `"word"`
-          - : 根据语言区域，将输入值按词划分边界。
+          - : 根据区域设置，按词边界分割输入。
         - `"sentence"`
-          - : 根据语言区域，将输入值按句划分边界。
-    - `localeMatcher` {{optional_inline}}
-      - : 将要使用的语言区域匹配算法。可选值如下：
-        - `"best fit"`（默认）
-          - : 运行时可能会选择一个可能比查找算法的结果更加合适的语言区域。
-        - `"lookup"`
-          - : 使用 [BCP 47 查找算法](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4)来从 `locales` 参数中选择语言区域。对于 `locales` 参数中的每一个语言区域，会返回第一个运行时支持的语言区域（有可能会移除用于限制区域的子标记，来找到一个支持的语言区域。换句话说，如果运行时支持 `"de"` 但不支持 `"de-CH"`，用户传入的 `"de-CH"` 可能就会以 `"de"` 为结果进行使用）。
+          - : 根据区域设置，按句子边界分割输入。
 
 ### 返回值
 
-一个新的 [`Intl.Segmenter`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) 实例。
+一个新的 {{jsxref("Intl.Segmenter")}} 实例。
+
+### 异常
+
+- {{jsxref("RangeError")}}
+  - : 如果 `locales` 或 `options` 包含无效的值，则抛出此异常。
 
 ## 示例
 
 ### 基础用法
 
-下面的例子展示了如何计算在一个日语字符串中使用了多少个词汇（使用 `String` 提供的分割方法将得到错误的结果）。
+下面的例子展示了如何计算一个日语字符串中的词汇数量（使用 `String` 方法分割将得到错误的结果）。
 
 ```js
 const text = "吾輩は猫である。名前はたぬき。";

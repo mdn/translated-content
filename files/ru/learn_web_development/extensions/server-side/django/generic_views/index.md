@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Generic_views
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Данная часть расширяет наш сайт [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), добавляя в него списки и страницы, путём предоставления подробной информации о книгах и авторах. В текущей части мы подробно изучим обобщённые базовые классы отображения и покажем как они могут существенно сократить количество кода, который вы должны были бы написать в обычной ситуации. Кроме того, мы более подробно рассмотрим управление и настройки URL-адресов, показывая как выполнить простое сопоставление какой-либо строки паттерну регулярного выражения.
 
@@ -216,7 +216,8 @@ urlpatterns = [
 > [!NOTE]
 > Как было отмечено ранее, наш преобразуемый URL-адрес в реальности выглядит вот так `catalog/book/<digits>` (потому что мы находимся в приложении **catalog**, то подразумевается каталог `/catalog/`).
 
-> **Предупреждение:** **Важно**: Обобщённый класс отображения подробной информации ожидает получить параметр с именем pk. Если вы пишете свою собственную функцию отображения, то тогда вы можете использовать параметр с любым именем, который пожелаете, или вообще передавать информацию в безымянном аргументе.
+> [!WARNING]
+> Обобщённый класс отображения подробной информации ожидает получить параметр с именем `pk`. Если вы пишете свою собственную функцию отображения, то тогда вы можете использовать параметр с любым именем, который пожелаете, или вообще передавать информацию в безымянном аргументе.
 
 #### Отдельный пример с регулярными выражениями
 
@@ -522,4 +523,4 @@ class BookListView(generic.ListView):
 - [Встроенные теги шаблона и фильтры](https://docs.djangoproject.com/en/1.10/ref/templates/builtins) (Django docs).
 - [Постраничный вывод (Pagination)](https://docs.djangoproject.com/en/1.10/topics/pagination/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}

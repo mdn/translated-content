@@ -30,7 +30,7 @@ original_slug: WebAssembly/JavaScript_interface/RuntimeError
 
 ## インスタンスメソッド
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.RuntimeError.prototype.toSource()")}}
+- {{jsxref("Error.prototype.toString", "WebAssembly.RuntimeError.prototype.toSource()")}}
   - : 同じエラーを評価できるコードを返します。 {{jsxref("Error")}} から継承しています。
 - {{jsxref("Error.prototype.toString", "WebAssembly.RuntimeError.prototype.toString()")}}
   - : 指定された `Error` オブジェクトを表す文字列を返します。{{jsxref("Error")}} から継承しています。

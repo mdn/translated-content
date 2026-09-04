@@ -24,17 +24,17 @@ var promise = CredentialsContainer.create([options]);
 - `options`
   - : Un objet de type {{domxref("CredentialCreationOptions")}} qui contient des options pour le nouvel objet `Credentials` demandé. Cet objet doit posséder au moins une des propriétés parmi `"password"`, `"federated"` ou `"publicKey"`. Les options sont :
     - password: {{optional_inline}} un objet {{domxref("HTMLFormElement")}} ou un objet {{domxref("PasswordCredentialData")}}
-      - `id`: (obligatoire) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.
-      - `name`: {{optional_inline}} {{domxref("USVString")}}
-      - `iconURL`: {{optional_inline}} {{domxref("USVString")}}
-      - `password`: (required) {{domxref("USVString")}}
+      - `id`: (obligatoire) {{jsxref("String")}} hérité de {{domxref("CredentialData")}}.
+      - `name`: {{optional_inline}} {{jsxref("String")}}
+      - `iconURL`: {{optional_inline}} {{jsxref("String")}}
+      - `password`: (required) {{jsxref("String")}}
 
     - federated : {{optional_inline}} un objet {{domxref("FederatedCredentialInit")}}. Cet objet contient le nécessaire pour créer/obtenir des informations d'authentification fédérées. Les propriétés disponibles sont :
-      - `id`: (required) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.
-      - `name`: {{optional_inline}} {{domxref("USVString")}}
-      - `iconURL`: {{optional_inline}} {{domxref("USVString")}}
-      - `provider`: (required) {{domxref("USVString")}}
-      - `protocol`: {{optional_inline}} {{domxref("USVString")}}
+      - `id`: (required) {{jsxref("String")}} hérité de {{domxref("CredentialData")}}.
+      - `name`: {{optional_inline}} {{jsxref("String")}}
+      - `iconURL`: {{optional_inline}} {{jsxref("String")}}
+      - `provider`: (required) {{jsxref("String")}}
+      - `protocol`: {{optional_inline}} {{jsxref("String")}}
 
     - `publicKey` : {{optional_inline}} un objet {{domxref("PublicKeyCredentialCreationOptions")}} qui décrit les options pour créer une information d'authentification [WebAuthn](/fr/docs/Web/API/Web_Authentication_API).
 

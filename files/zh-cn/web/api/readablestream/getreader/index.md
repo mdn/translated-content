@@ -17,7 +17,7 @@ getReader(mode)
 ### 参数
 
 - `mode` {{optional_inline}}
-  - : 具有 `mode` 参数的对象，值为 {{domxref("DOMString")}} 类型，用来指定要创建的 reader 的类型。其值可以是：
+  - : 具有 `mode` 参数的对象，值为 {{jsxref("String")}} 类型，用来指定要创建的 reader 的类型。其值可以是：
     - `"byob"`，结果为 {{domxref("ReadableStreamBYOBReader")}} 类型，可读取可读字节流。
     - `undefined`（或不指定——缺省值），返回 {{domxref("ReadableStreamDefaultReader")}}，可以从流中返回单个分块。
 

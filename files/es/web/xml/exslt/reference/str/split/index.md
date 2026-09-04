@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/str/split
 original_slug: Web/EXSLT/str/split
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 
 `str:split()` divide una cadena usando una cadena patrón que determina donde deberían ocurrir las divisiones y devuelve un conjunto de nodos que contiene las cadenas resultantes.
 

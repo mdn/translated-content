@@ -98,7 +98,7 @@ try {
 
 ### 特定のエラーを処理する
 
-{{jsxref("Operators/instanceof", "instanceof")}} でエラー型をテストすることにより、特定のエラー型だけを選んで処理できます。
+{{jsxref("instanceof")}} でエラー型をテストすることにより、特定のエラー型だけを選んで処理できます。
 
 ```js
 try {

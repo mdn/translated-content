@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 O método `fontcolor()` cria um elemento HTML [\<font>](/pt-BR/docs/Web/HTML/Element/font) que faz com que uma string seja exibida na cor especificada.
 
 > [!NOTE]
-> O elemento `<font>` foi removido do [HTML5](/pt-BR/docs/Web/HTML/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/color_value).
+> O elemento `<font>` foi removido do [HTML5](/pt-BR/docs/Web/HTML/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/Reference/Values/color_value).
 
 ## Sintaxe
 
@@ -19,7 +19,7 @@ str.fontcolor(color)
 ### Parâmetros
 
 - `color`
-  - : Deve ser um string que expresse uma cor em formato hexadecimal ou o nome, em Inglês, de uma cor. Os nomes das cores estão listados na referência de [cores CSS](/pt-BR/docs/Web/CSS/color_value#palavras-chave_de_cores).
+  - : Deve ser um string que expresse uma cor em formato hexadecimal ou o nome, em Inglês, de uma cor. Os nomes das cores estão listados na referência de [cores CSS](/pt-BR/docs/Web/CSS/Reference/Values/color_value#palavras-chave_de_cores).
 
 ### Valor retornado
 

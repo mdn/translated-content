@@ -27,7 +27,7 @@ O evento `readystatechange` é ativado quando o atributo [`readyState`](/pt-BR/d
 | Property                        | Type                       | Description                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | The type of event.                                     |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
@@ -44,7 +44,7 @@ document.onreadystatechange = function () {
 
 ## Compatibilidade com navegadores
 
-Este evento tem sido suportado pelo Internet Explorer há várias versões, e pode ser usada como uma alternativa para o evento [`DOMContentLoaded`](</pt-BR/docs/Mozilla_event_reference/DOMContentLoaded_(event)>) (veja a seção [cross-browser fallback](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event#cross-browser_fallback)).
+Este evento tem sido suportado pelo Internet Explorer há várias versões, e pode ser usada como uma alternativa para o evento [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event) (veja a seção [cross-browser fallback](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event#cross-browser_fallback)).
 
 ## Eventos Relacionados
 

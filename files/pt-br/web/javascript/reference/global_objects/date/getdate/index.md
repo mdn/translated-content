@@ -27,7 +27,7 @@ O valor retornado por `getDate()` é um inteiro entre 1 e 31.
 
 ### Exemplo: Usando `getDate()`
 
-O segundo statement abaixo atribui o valor 25 à variável day, baseado no valor do objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`.
+O segundo statement abaixo atribui o valor 25 à variável day, baseado no valor do objeto {{jsxref("Date")}} `Xmas95`.
 
 ```js
 var Xmas95 = new Date("December 25, 1995 23:15:30");

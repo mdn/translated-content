@@ -19,7 +19,7 @@ str.fontcolor(couleur);
 ### Paramètres
 
 - `couleur`
-  - : Une chaîne de caractères représentant la couleur en une valeur hexadécimale RGB ou comme un littéral. Les différents littéraux utilisables pour les noms de couleurs sont listés dans la [référence des couleurs CSS](/fr/docs/Web/CSS/color_value#valeurs).
+  - : Une chaîne de caractères représentant la couleur en une valeur hexadécimale RGB ou comme un littéral. Les différents littéraux utilisables pour les noms de couleurs sont listés dans la [référence des couleurs CSS](/fr/docs/Web/CSS/Reference/Values/color_value#valeurs).
 
 ### Valeur de retour
 

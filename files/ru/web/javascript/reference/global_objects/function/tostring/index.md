@@ -22,9 +22,9 @@ function.toString(indentation)
 
 ## Описание
 
-Объект {{jsxref("Global_Objects/Function", "Function")}} переопределяет метод {{jsxref("Object.prototype.toString", "toString")}}, унаследованный из объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString")}}. Для объектов {{jsxref("Global_Objects/Function", "Function")}} метод `toString` возвращает строку, представляющую объект в форме объявления функции. То есть, метод `toString` декомпилирует функцию и возвращает строку, включающую ключевое слово `function`, список аргументов, фигурные скобки и исходный код тела функции.
+Объект {{jsxref("Function")}} переопределяет метод {{jsxref("Object.prototype.toString", "toString")}}, унаследованный из объекта {{jsxref("Object")}}; он не наследует метод {{jsxref("Object.prototype.toString")}}. Для объектов {{jsxref("Function")}} метод `toString` возвращает строку, представляющую объект в форме объявления функции. То есть, метод `toString` декомпилирует функцию и возвращает строку, включающую ключевое слово `function`, список аргументов, фигурные скобки и исходный код тела функции.
 
-JavaScript вызывает метод `toString` автоматически в случае, когда объект {{jsxref("Global_Objects/Function", "Function")}} представляется в качестве текстового значения, то есть, когда функция соединяется со строкой.
+JavaScript вызывает метод `toString` автоматически в случае, когда объект {{jsxref("Function")}} представляется в качестве текстового значения, то есть, когда функция соединяется со строкой.
 
 ## Спецификации
 

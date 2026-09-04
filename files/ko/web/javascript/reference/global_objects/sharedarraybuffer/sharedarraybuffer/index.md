@@ -50,7 +50,7 @@ new SharedArrayBuffer(length, options)
 
 ### SharedArrayBuffer를 생성하기 위해 언제나 new 연산자를 사용하세요
 
-`SharedArrayBuffer` 생성자는 {{jsxref("Operators/new", "new")}} 연산자와 함께 생성해야 합니다.
+`SharedArrayBuffer` 생성자는 {{jsxref("new")}} 연산자와 함께 생성해야 합니다.
 `SharedArrayBuffer` 생성자를 `new` 없이 호출하면
 {{jsxref("TypeError")}}가 발생합니다.
 

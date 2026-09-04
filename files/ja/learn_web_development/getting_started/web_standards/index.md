@@ -2,10 +2,8 @@
 title: ウェブ標準
 slug: Learn_web_development/Getting_started/Web_standards
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started")}}
 
@@ -22,10 +20,10 @@ l10n:
 ## チュートリアル
 
 - [ウェブのしくみ](/ja/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
-  - : この記事では、コンピューターまたはスマートフォン上のウェブブラウザーでウェブページを表示した際に現れる内容を簡略化して提供しています。
+  - : この記事では、ウェブブラウザーを介してウェブページにアクセスした際に何が起こるかを大まかに説明し、ブラウザーが閲覧可能な形式に組み立てるために、関連するコードをコンピューターに配信する裏側で起きている仕組みについて解説します。
 - [ウェブ標準モデル](/ja/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model)
   - : この記事では、ウェブとウェブ標準に関するいくつかの有用な背景知識を提供しています。ウェブ標準技術とは何か、それがどのようにして生まれたのか、そして、それらがどのように連携して動作するのかについてです。
 - [ブラウザーがどのようにウェブサイトを読み込むか](/ja/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites)
-  - : この記事では、ウェブサイトのレンダリングプロセスについて説明します。ブラウザーがウェブサイトを構成するファイルや資産を保有している場合、それらをどのように用意して、ユーザーが目にする使い勝手のよい完成品を作成するのでしょうか。
+  - : この記事では、ウェブサイトのレンダリングプロセスについて解説します。ブラウザーがウェブサイトを構成するファイルや資産を保有していた場合、それらはどのように用意されて、ユーザーが操作する最終的な体験を生成しているのでしょうか。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started")}}

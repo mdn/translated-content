@@ -23,9 +23,9 @@ formData.set(name, value, filename);
 - `name`
   - : 字段名称。
 - `value`
-  - : 字段的值，该值可以是一个 {{domxref("USVString")}} 或 {{domxref("Blob")}}（包括其子类，例如 {{domxref("File")}}），如果不是这两个指定的类型，其将被转成一个字符串。
+  - : 字段的值，该值可以是一个 {{jsxref("String")}} 或 {{domxref("Blob")}}（包括其子类，例如 {{domxref("File")}}），如果不是这两个指定的类型，其将被转成一个字符串。
 - `filename` {{optional_inline}}
-  - : 当第二个参数传递的是一个 blob 对象（{{domxref("Blob")}}）或者 file 对象（{{domxref("File")}}），filename 参数就代表传给服务端的文件名（一个 {{domxref("USVString")}}）。
+  - : 当第二个参数传递的是一个 blob 对象（{{domxref("Blob")}}）或者 file 对象（{{domxref("File")}}），filename 参数就代表传给服务端的文件名（一个 {{jsxref("String")}}）。
     {{domxref("Blob")}} 对象的默认文件名是 "blob"，{{domxref("File")}} 对象的默认文件名则为其“name”属性
 
 > [!NOTE]

@@ -3,8 +3,6 @@ title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 ---
 
-{{JSRef}}
-
 **`shift()`** 方法从数组中删除**第一个**元素，并返回该元素的值。此方法更改数组的长度。
 
 {{InteractiveExample("JavaScript Demo: Array.shift()")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: f3b6afa6ec60508dceeec4fd299ec4ba3995c0c2
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "conflicting/Learn_web_development/Core/Scripting")}}
 
 다음으로, 프로그래밍에서 어떤 텍스트가 호출되는지 문자열에 대해 알아볼까요? 이 게시물에서는 문자열 작성, 문자열의 따옴표 이스케이프 및 문자열 결합과 같이 JavaScript를 배울 때 문자열에 대해 알아야 할 모든 일반적인 사항을 살펴보겠습니다.
 
@@ -254,4 +254,4 @@ console.log(`${name}${number}`); // "Front 242"
 
 지금까지 JavaScript에서 다루는 문자열의 기본에 대해 알아봤습니다. 다음 글에서는 이를 바탕으로 JavaScript에서 문자열에 사용할 수 있는 몇 가지 기본 제공 메서드와 이를 사용하여 문자열을 원하는 형태로 조작하는 방법을 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "conflicting/Learn_web_development/Core/Scripting")}}

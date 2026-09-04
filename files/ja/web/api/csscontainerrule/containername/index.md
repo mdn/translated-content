@@ -22,13 +22,13 @@ l10n:
 
 ## 値
 
-この {{domxref("CSSContainerRule")}} に関連付けられた {{cssxref("@container")}} の [`container-name`](/ja/docs/Web/CSS/container-name) を格納した文字列。
+この {{domxref("CSSContainerRule")}} に関連付けられた {{cssxref("@container")}} の [`container-name`](/ja/docs/Web/CSS/Reference/Properties/container-name) を格納した文字列。
 もし `@container` が[名前付き](/ja/docs/Web/API/CSSContainerRule#unnamed_container_rule)でない場合、この関数は空文字列 (`""`) を返します。
 
 ## 例
 
 下記の例では、名前付き {{cssxref("@container")}} ルールを定義し、関連する {{domxref("CSSContainerRule")}} のプロパティを表示しています。
-CSS は `@container` の例、[名前付きコンテナーコンテキストの作成](/ja/docs/Web/CSS/@container#名前付きコンテナーコンテキストの作成)にあるものととてもよく似ています。
+CSS は `@container` の例、[名前付きコンテナーコンテキストの作成](/ja/docs/Web/CSS/Reference/At-rules/@container#名前付きコンテナーコンテキストの作成)にあるものととてもよく似ています。
 
 ```html hidden
 <div id="log">
@@ -112,6 +112,6 @@ log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);
 ## 関連情報
 
 - CSS の {{cssxref("container")}} 一括指定プロパティ
-- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
-- [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/Guides/Containment)
+- [コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)

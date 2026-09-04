@@ -1,24 +1,33 @@
 ---
-title: Window.resizeBy()
+title: "Window : méthode resizeBy()"
+short-title: resizeBy()
 slug: Web/API/Window/resizeBy
+l10n:
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{APIRef}}
 
-La méthode **`Window.resizeBy()`** redimensionne la fenêtre actuelle d'une taille spécifié.
+La méthode **`resizeBy()`** de l'interface {{DOMxRef("Window")}} redimensionne la fenêtre actuelle à une taille définie.
 
 ## Syntaxe
 
-```js
-window.resizeBy(xDelta, yDelta);
+```js-nolint
+resizeBy(xDelta, yDelta)
 ```
 
 ### Paramètres
 
-- `xDelta` est le nombre de pixels pour agrandir la fenêtre horizontalement.
-- `yDelta` est le nombre de pixels pour agrandir la fenêtre verticalement.
+- `xDelta`
+  - : Le nombre de pixels pour agrandir la fenêtre horizontalement.
+- `yDelta`
+  - : Le nombre de pixels pour agrandir la fenêtre verticalement.
 
-## Exemple
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
+
+## Exemples
 
 ```js
 // Réduit la fenêtre
@@ -27,7 +36,7 @@ window.resizeBy(-200, -200);
 
 ## Notes
 
-Cette méthode redimensionne la fenêtre par rapport à sa taille actuelle. Pour redimensionner la fenêtre en termes absolus, utilisez {{domxref ("window.resizeTo ()")}}.
+Cette méthode redimensionne la fenêtre par rapport à sa taille actuelle. Pour redimensionner la fenêtre en termes absolus, utilisez {{DOMxRef("window.resizeTo()")}}.
 
 ### Créer et redimensionner une fenêtre externe
 
@@ -59,3 +68,7 @@ La fenêtre que vous créez doit respecter la politique de même origine. Si la 
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+> [!NOTE]
+> Cette fonction pourrait ne pas redimensionner la fenêtre de manière synchrone.
+> Dans certains environnements (comme les mobiles), elle pourrait ne pas redimensionner la fenêtre du tout. Vous pouvez écouter l'évènement {{DOMxRef("Window/resize_event", "resize")}} pour voir si/quand la fenêtre a été redimensionnée.

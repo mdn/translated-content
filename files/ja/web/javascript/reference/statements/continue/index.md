@@ -2,14 +2,12 @@
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
 l10n:
-  sourceCommit: 57ae0014c67f339b9af6252a451ddd40735ed243
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Statements")}}
+**`continue`** 文は、現在のループまたはラベル付きループの現在反復処理中の文の実行を終了し、ループの実行を次の反復処理で続けます。
 
-**`continue`** 文は、現在のループまたはラベル付きループの現在反復処理中の文の実行を終了し、次の反復処理としてループの実行を続けます。
-
-{{InteractiveExample("JavaScript デモ: Statement - Continue")}}
+{{InteractiveExample("JavaScript デモ: continue 文")}}
 
 ```js interactive-example
 let text = "";
@@ -22,7 +20,7 @@ for (let i = 0; i < 10; i++) {
 }
 
 console.log(text);
-// Expected output: "012456789"
+// 予想される結果: "012456789"
 ```
 
 ## 構文
@@ -86,7 +84,7 @@ checkIAndJ: while (i < 4) {
     console.log(`j: ${j}`);
     j -= 1;
 
-    if (j % 2 === 0) continue checkJ;
+    if (j % 2 === 0) continue;
     console.log(`${j} is odd.`);
   }
   console.log(`i = ${i}`);
@@ -96,17 +94,17 @@ checkIAndJ: while (i < 4) {
 
 結果:
 
-```
+```plain
 i: 0
 
-// start checkj
+// start checkJ
 j: 8
 7 is odd.
 j: 7
 j: 6
 5 is odd.
 j: 5
-// end checkj
+// end checkJ
 
 i = 1
 j = 4
@@ -128,7 +126,7 @@ j = 4
 
 `continue` は関数の境界をまたがるループ内で使用することはできません。
 
-```js
+```js-nolint example-bad
 for (let i = 0; i < 10; i++) {
   (() => {
     continue; // SyntaxError: Illegal continue statement: no surrounding iteration statement
@@ -138,7 +136,7 @@ for (let i = 0; i < 10; i++) {
 
 ラベルを参照する場合は、ラベル付きの文がその `continue` 文を含んでいなければなりません。
 
-```js
+```js-nolint example-bad
 label: for (let i = 0; i < 10; i++) {
   console.log(i);
 }
@@ -150,7 +148,7 @@ for (let i = 0; i < 10; i++) {
 
 ラベル付きの文はループでなければなりません。
 
-```js
+```js-nolint example-bad
 label: {
   for (let i = 0; i < 10; i++) {
     continue label; // SyntaxError: Illegal continue statement: 'label' does not denote an iteration statement

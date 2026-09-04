@@ -32,7 +32,7 @@ Object.assign(target, ...sources)
 
 若發生錯誤，例如: 當一個屬性不可被寫入時，將會引發 {{jsxref("TypeError")}} 的錯誤，且目標物件剩餘的屬性將不會改變。
 
-注意: `Object.assign()` 不會在來源物件屬性的值為{{jsxref("null")}} 或 {{jsxref("undefined")}} 的時候拋出錯誤。
+注意: `Object.assign()` 不會在來源物件屬性的值為{{jsxref("Operators/null", "null")}} 或 {{jsxref("undefined")}} 的時候拋出錯誤。
 
 ## 範例
 

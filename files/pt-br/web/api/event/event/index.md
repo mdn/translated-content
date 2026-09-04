@@ -16,7 +16,7 @@ O **`Event()`** cria uma nova {{domxref("Event")}}.
 ### Valores
 
 - _typeArg_
-  - : É uma {{domxref("DOMString")}} representa o nome do evento.
+  - : É uma {{jsxref("String")}} representa o nome do evento.
 - _eventInit_{{optional_inline}}
   - : É um dicionário `EventInit`, tendo os seguintes campos:
     - `"bubbles"`, opcional e false por default, do tipo {{jsxref("Boolean")}}, indica se o evento é bubbles ou não.

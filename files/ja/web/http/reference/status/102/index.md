@@ -2,7 +2,7 @@
 title: 102 Processing
 slug: Web/HTTP/Reference/Status/102
 l10n:
-  sourceCommit: 67a409e7944352612272e095a26bf325ecfae822
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 {{deprecated_header}}
@@ -32,4 +32,4 @@ HTTP の **`102 Processing`** は[情報レスポンス](/ja/docs/Web/HTTP/Refer
 
 - [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("100")}}
-- [rfc4918 '102 Processing' removal notes](https://www.rfc-editor.org/rfc/rfc4918#section-21.4)
+- [rfc4918 '102 Processing' removal notes](https://www.rfc-editor.org/info/rfc4918/#section-21.4)

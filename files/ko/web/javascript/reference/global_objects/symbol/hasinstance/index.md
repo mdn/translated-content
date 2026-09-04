@@ -8,7 +8,7 @@ l10n:
 {{JSRef}}
 
 **`Symbol.hasInstance`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#잘_알려진_심볼) `@@hasInstance`를 나타냅니다.
-{{jsxref("Operators/instanceof", "instanceof")}} 연산자는 생성자 객체가 객체를 인스턴스로 인식하는지 여부를 확인하기 위해
+{{jsxref("instanceof")}} 연산자는 생성자 객체가 객체를 인스턴스로 인식하는지 여부를 확인하기 위해
 사용하는 메서드의 오른쪽 피연산자에서 이 심볼을 찾습니다.
 
 {{InteractiveExample("JavaScript Demo: Symbol.hasInstance")}}
@@ -93,5 +93,5 @@ console.log(Animal[Symbol.hasInstance](cat)); // true
 
 ## 같이 보기
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - [`Function.prototype[@@hasInstance]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)

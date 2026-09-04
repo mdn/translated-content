@@ -85,11 +85,11 @@ new Int8Array(32).foo; // "bar"
   - : Возвращает размер элемента для разных типизированных массивов.
 - _TypedArray_.length
   - : Свойство "Длина", значение которого 0.
-- {{jsxref("TypedArray.name")}}
+- {{jsxref("Function.name", "TypedArray.name")}}
   - : Возвращает строковое имя конструктора. Например, "Int8Array".
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+- {{jsxref("TypedArray/Symbol.species", "get TypedArray[@@species]")}}
   - : Конструктор. Используется для создания производных объектов.
-- {{jsxref("TypedArray.prototype")}}
+- {{jsxref("TypedArray")}}
   - : Прототип для _TypedArray_-объектов.
 
 ## Методы
@@ -101,7 +101,7 @@ new Int8Array(32).foo; // "bar"
 
 ## Прототип TypedArray
 
-Все TypedArrays-массивы наследуют от {{jsxref("TypedArray.prototype")}}.
+Все TypedArrays-массивы наследуют от {{jsxref("TypedArray")}}.
 
 ### Полифилы (дополнители) методов
 

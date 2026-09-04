@@ -31,7 +31,7 @@ O **método de requisição HTTP DELETE** remove o recurso especificado.
     <tr>
       <th scope="row">
         Aceito nos
-        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a>
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Forms">formulários HTML</a>
       </th>
       <td>Não</td>
     </tr>

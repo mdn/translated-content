@@ -1,26 +1,20 @@
 ---
-title: HTMLMediaElement.buffered
+title: "HTMLMediaElement : propriété buffered"
+short-title: buffered
 slug: Web/API/HTMLMediaElement/buffered
+l10n:
+  sourceCommit: 2b554506d84d016d3ddf612c593bd8315833c64d
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`buffered`** est une propriété en lecture seule rattachée à l'interface [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) et qui renvoie un nouvel [objet `TimeRanges` normalisé](/fr/docs/Web/API/TimeRanges#objets_timeranges_normalisés) statique représentant les plages de la ressource média, s'il y en a, que l'agent utilisateur a mises en mémoire tampon au moment de l'accès à la propriété `buffered`.
+La propriété en lecture seule **`buffered`** de l'interface {{DOMxRef("HTMLMediaElement")}} retourne un nouvel [objet `TimeRanges` normalisé](/fr/docs/Web/API/TimeRanges#objets_timeranges_normalisés) statique représentant les plages de la ressource média, s'il y en a, que l'agent utilisateur a mises en mémoire tampon au moment de l'accès à la propriété `buffered`.
 
-> [!NOTE]
-> Cette fonctionnalité n'est pas disponible au niveau des [Web Workers](/fr/docs/Web/API/Web_Workers_API).
-
-## Syntaxe
-
-```js
-let timeRange = audioObject.buffered;
-```
-
-### Valeur
+## Valeur
 
 Un nouvel [objet `TimeRanges` normalisé](/fr/docs/Web/API/TimeRanges#objets_timeranges_normalisés) statique qui représente les plages de la ressource média, s'il y en a, que l'agent utilisateur a mises en mémoire tampon au moment de l'accès à la propriété `buffered`.
 
-## Exemple
+## Exemples
 
 ```js
 let obj = document.createElement("video");
@@ -37,4 +31,4 @@ console.log(obj.buffered); // TimeRanges { length: 0 }
 
 ## Voir aussi
 
-- L'interface qui porte cette propriété, [HTMLMediaElement](/fr/docs/Web/API/HTMLMediaElement).
+- L'interface {{DOMxRef("HTMLMediaElement")}}&nbsp;: utilisée pour définir la propriété `HTMLMediaElement.buffered`

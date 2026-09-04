@@ -32,5 +32,5 @@ Este módulo contiene los siguientes artículos, los cuales le enseñarán todos
 
 Las siguientes evaluaciones pondrán a prueba su comprensión de las técnicas del diseño de texto cubiertas en las guías anteriores.
 
-- [Escribiendo una página de inicio para la comunidad de la escuela](/es/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Escribiendo una página de inicio para la comunidad de la escuela](/es/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage)
   - : En esta evaluación, pondremos a prueba su comprensión del estilo del texto haciendo que redacte el texto de la página principal de la escuela comunitaria.

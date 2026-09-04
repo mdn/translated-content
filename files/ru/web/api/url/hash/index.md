@@ -5,7 +5,7 @@ slug: Web/API/URL/hash
 
 {{ APIRef("URL API") }}
 
-Свойство **`hash`** интерфейса {{domxref("URL")}} — это строка типа {{domxref("USVString")}},
+Свойство **`hash`** интерфейса {{domxref("URL")}} — это строка типа {{jsxref("String")}},
 содержащая символ `'#'`, после которого идет идентификатор фрагмента URL-адреса.
 
 Фрагмент не [кодируется](/ru/docs/Glossary/Percent-encoding). Если URL-адрес не имеет
@@ -22,7 +22,7 @@ url.hash = newHash;
 
 ### Значение
 
-Строка типа {{domxref("USVString")}}.
+Строка типа {{jsxref("String")}}.
 
 ## Примеры
 

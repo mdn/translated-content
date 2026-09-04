@@ -44,7 +44,7 @@ _Esta interface tambien hereda propiedades de su padre, {{domxref("Event")}}._
     | `4000`–`4999` |                            | Disponible para uso de aplicaciones.                                                                                                                                                                            |
 
 - {{domxref("CloseEvent.reason")}} {{readOnlyInline}}
-  - : Retorna un {{domxref("DOMString")}} indicando la razon por que el servidor cerro la conexión. Esto es especifico para el servidor y sub-protocolo en particular.
+  - : Retorna un {{jsxref("String")}} indicando la razon por que el servidor cerro la conexión. Esto es especifico para el servidor y sub-protocolo en particular.
 - {{domxref("CloseEvent.wasClean")}} {{readOnlyInline}}
   - : Retorna un {{jsxref("Boolean")}} que indica si o no la conexion fue cerrada limpiamente.
 

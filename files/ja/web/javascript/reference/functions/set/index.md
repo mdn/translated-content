@@ -111,7 +111,7 @@ console.log(instance.msg); // "hello cake"
 
 ### `delete` 演算子によるセッターの削除
 
-セッターを削除したい場合は、 {{jsxref("Operators/delete", "delete")}} で削除するだけです。
+セッターを削除したい場合は、 {{jsxref("delete")}} で削除するだけです。
 
 ```js
 delete language.current;

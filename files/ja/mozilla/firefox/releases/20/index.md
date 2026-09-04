@@ -21,7 +21,7 @@ Gecko 20 を搭載した Firefox 20 は米国時間 2013 年 4 月 2 日にリ�
 
 ### CSS
 
-- [CSS Flexbox](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) がデフォルトで、プレリリースビルドのみ (Beta を除く) で利用可能になりました。Release ビルドでは、about:config で設定を変更することで利用できます。
+- [CSS Flexbox](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) がデフォルトで、プレリリースビルドのみ (Beta を除く) で利用可能になりました。Release ビルドでは、about:config で設定を変更することで利用できます。
 - [CSS Masking specification](https://dvcs.w3.org/hg/FXTF/raw-file/tip/masking/index.html) より、`mask-type` プロパティをサポートしました ([Firefox バグ 793617](https://bugzil.la/793617))。
 
 ### DOM

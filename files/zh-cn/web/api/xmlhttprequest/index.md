@@ -7,7 +7,7 @@ slug: Web/API/XMLHttpRequest
 
 `XMLHttpRequest`（XHR）对象用于与服务器交互。通过 XMLHttpRequest 可以在不刷新页面的情况下请求特定 URL，获取数据。这允许网页在不影响用户操作的情况下，更新页面的局部内容。`XMLHttpRequest` 在 {{Glossary("AJAX")}} 编程中被大量使用。
 
-{{InheritanceDiagram(650, 150)}}
+{{InheritanceDiagram}}
 
 尽管名称如此，`XMLHttpRequest` 可以用于获取任何类型的数据，而不仅仅是 XML。它甚至支持 [HTTP](/zh-CN/docs/Web/HTTP) 以外的协议（包括 file:// 和 FTP），尽管可能受到更多出于安全等原因的限制。
 
@@ -27,9 +27,9 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}
   - : 返回 一个无符号短整型（`unsigned short`）数字，代表请求的状态码。
 - {{domxref("XMLHttpRequest.response")}} {{readonlyinline}}
-  - : 返回一个 {{domxref("ArrayBuffer")}}、{{domxref("Blob")}}、{{domxref("Document")}}，或 {{domxref("DOMString")}}，具体是哪种类型取决于 {{domxref("XMLHttpRequest.responseType")}} 的值。其中包含整个响应实体（response entity body）。
+  - : 返回一个 {{domxref("ArrayBuffer")}}、{{domxref("Blob")}}、{{domxref("Document")}}，或 {{jsxref("String")}}，具体是哪种类型取决于 {{domxref("XMLHttpRequest.responseType")}} 的值。其中包含整个响应实体（response entity body）。
 - {{domxref("XMLHttpRequest.responseText")}} {{readonlyinline}}
-  - : 返回一个 {{domxref("DOMString")}}，该 {{domxref("DOMString")}} 包含对请求的响应，如果请求未成功或尚未发送，则返回 `null`。
+  - : 返回一个 {{jsxref("String")}}，该 {{jsxref("String")}} 包含对请求的响应，如果请求未成功或尚未发送，则返回 `null`。
 - {{domxref("XMLHttpRequest.responseType")}}
   - : 一个用于定义响应类型的枚举值（enumerated value）。
 - {{domxref("XMLHttpRequest.responseURL")}} {{readonlyinline}}
@@ -39,7 +39,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLHttpRequest.status")}} {{readonlyinline}}
   - : 返回一个无符号短整型（`unsigned short`）数字，代表请求的响应状态。
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
-  - : 返回一个 {{domxref("DOMString")}}，其中包含 HTTP 服务器返回的响应状态。与 {{domxref("XMLHTTPRequest.status")}} 不同的是，它包含完整的响应状态文本（例如，"`200 OK`"）。
+  - : 返回一个 {{jsxref("String")}}，其中包含 HTTP 服务器返回的响应状态。与 {{domxref("XMLHTTPRequest.status")}} 不同的是，它包含完整的响应状态文本（例如，"`200 OK`"）。
 
     > [!NOTE]
     > 根据 HTTP/2 规范（[8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)，响应伪标头字段），HTTP/2 没有定义任何用于携带 HTTP/1.1 状态行中包含的版本（version）或者原因短语（reason phrase）的方法。

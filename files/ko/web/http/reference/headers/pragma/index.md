@@ -19,7 +19,7 @@ HTTP/1.0 의 **`Pragma`** 헤더는 요청-응답 체인에 다양한 영향을 
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>아님</td>
     </tr>
     <tr>

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Workers API")}}
 
-**`SharedWorker()`** コンストラクターは、指定された URL でスクリプトを実行する {{domxref("SharedWorker")}} オブジェクトを作成します。このスクリプトは[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に従わなければなりません。
+**`SharedWorker()`** コンストラクターは、指定された URL でスクリプトを実行する {{domxref("SharedWorker")}} オブジェクトを作成します。このスクリプトは[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)に従わなければなりません。
 
 > [!NOTE]
 > ブラウザーメーカー間で、 data URL が同じ元であるかどうかについての見解の相違があります。 Firefox 10.0 以降では data URL を受け入れることができますが、他のすべてのブラウザーではその限りではありません。

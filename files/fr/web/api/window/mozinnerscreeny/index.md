@@ -1,29 +1,23 @@
 ---
-title: Window.mozInnerScreenY
+title: "Window : propriété mozInnerScreenY"
+short-title: mozInnerScreenY
 slug: Web/API/Window/mozInnerScreenY
+l10n:
+  sourceCommit: e561fa67af347b9770b359ba93e8579d2a540682
 ---
 
 {{APIRef}}
 
-## Résumé
-
-Obtient la coordonnée Y du coin supérieur gauche de la fenêtre de la fenêtre, en coordonnées d'écran.
+La propriété **`mozInnerScreenY`** de l'interface {{DOMxRef("Window")}} retourne la coordonnée Y du coin supérieur gauche de la fenêtre de la fenêtre, en coordonnées d'écran.
 
 > [!NOTE]
-> Cette coordonnée est indiquée en pixels CSS et non en pixels matériels. Cela signifie qu'il peut être affecté par le niveau de zoom&nbsp;; pour calculer le nombre réel de pixels d'écran physiques, vous devez utiliser la propriété [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/fr/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils).
+> Cette coordonnée est indiquée en pixels CSS, et non en pixels matériels. Cela signifie qu'elle peut être affectée par le niveau de zoom&nbsp;; pour calculer le nombre réel de pixels physiques de l'écran, vous devez utiliser la propriété `nsIDOMWindowUtils.screenPixelsPerCSSPixel`.
 
-## Syntaxe
+## Valeur
 
-```js
-screenY = window.mozInnerScreenY;
-```
+La propriété `window.mozInnerScreenY` est une valeur en lecture seule à virgule flottante&nbsp;; elle n'a pas de valeur par défaut.
 
-### Valeur
-
-- _screenY_ stocke la valeur de la propriété `window.mozInnerScreenY`.
-- La propriété `window.mozInnerScreenY` est une valeur en lecture seule à virgule flottante; il n'a pas de valeur par défaut.
-
-## Spécification
+## Spécifications
 
 Ne fait partie d'aucune spécification ou recommandation technique du W3C.
 
@@ -33,5 +27,5 @@ Ne fait partie d'aucune spécification ou recommandation technique du W3C.
 
 ## Voir aussi
 
-- {{domxref("window.mozInnerScreenX")}}
-- [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/fr/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)
+- La propriété {{DOMxRef("window.mozInnerScreenX")}}
+- La propriété `nsIDOMWindowUtils.screenPixelsPerCSSPixel`

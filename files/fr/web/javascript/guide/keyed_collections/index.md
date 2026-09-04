@@ -3,7 +3,7 @@ title: Collections avec clés
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Collections_indexées", "Web/JavaScript/Guide/Utiliser_les_objets")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 Ce chapitre présente les collections de données qui sont ordonnées avec une clé. Les objets `Map` et `Set` contiennent des éléments sur lesquels on peut itérer dans leur ordre d'insertion.
 
@@ -13,7 +13,7 @@ Ce chapitre présente les collections de données qui sont ordonnées avec une c
 
 ECMAScript 2015 introduit une nouvelle structure de données pour faire correspondre des données entre elle. Un objet {{jsxref("Map")}} représente une collection de données qui sont des correspondances entre des clés ou valeurs et pour lequel on peut itérer dans l'ordre d'insertion pour lister les différentes clés / valeurs.
 
-Le code suivant illustre certaines opérations basiques avec `Map`. Pour plus d'informations sur cet objet, voir également la page de référence {{jsxref("Map")}}. Il est possible d'utiliser une boucle {{jsxref("Instructions/for...of","for...of")}} pour renvoyer un tableau `[clé, valeur]` à chaque itération.
+Le code suivant illustre certaines opérations basiques avec `Map`. Pour plus d'informations sur cet objet, voir également la page de référence {{jsxref("Map")}}. Il est possible d'utiliser une boucle {{jsxref("Statements/for...of","for...of")}} pour renvoyer un tableau `[clé, valeur]` à chaque itération.
 
 ```js
 var sayings = new Map();
@@ -137,4 +137,4 @@ L'égalité utilisée pour les clés des objets `Map` et celle utilisée pour le
 - `-0` et `+0` sont considérés égaux.
 - {{jsxref("NaN")}} est considéré égal à lui-même (contrairement à ce qu'on obtient avec `===`).
 
-{{PreviousNext("Web/JavaScript/Guide/Collections_indexées", "Web/JavaScript/Guide/Utiliser_les_objets")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}

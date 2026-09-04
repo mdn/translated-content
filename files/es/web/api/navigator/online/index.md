@@ -5,13 +5,13 @@ slug: Web/API/Navigator/onLine
 
 {{ApiRef("HTML DOM")}}
 
-Retorna el estado en línea del navegador. La propiedad retorna un valor booleano, `true` significa **en línea** y `false` significa **desconectado**. La propiedad envía actualizaciones siempre que el navegador tenga la capacidad de conectarse a los cambios de red. La actualización se produce cuando un usuario sigue un enlace o cuando un script pide una pagina remota. Por ejemplo, la propiedad debe retornar `false` cuando los usuarios hacen clic en un enlace poco después de perder la conexión a internet.
+Devuelve el estado en línea del navegador. La propiedad retorna un valor booleano; `true` significa **en línea** y `false` significa **desconectado**. La propiedad envía actualizaciones siempre que el navegador tenga la capacidad de conectarse a los cambios de red. La actualización se produce cuando un usuario sigue un enlace o cuando se pide una página externa. Por ejemplo, la propiedad debe retornar `false` cuando los usuarios hacen clic en un enlace poco después de perder la conexión a internet.
 
 Los navegadores implementan esta propiedad de forma diferente.
 
-En Chrome y Safari, si el navegador no puede conectarse a la red de area local (LAN) o al router, está `desconectado`; todas las otras condiciones retornan `true`. Así que puedes suponer que el navegador esta desconectado cuando retorna un valor `false`, no puedes suponer que un valor `true` signifique que el navegador puede acceder a internet. Podrías estar recibiendo falsos positivos, como en los casos en el que el ordenador este ejecutando un software de virtualización que tiene los adaptadores ethernet virtuales siempre "conectados". Por lo tanto, si tu quieres determinar el estado en linea de el navegador, tu debes desarrollar medios adicionales para comprobarlo. Para más información, consulte el artículo HTML5 Rocks article, [Working Off the Grid](https://www.html5rocks.com/en/mobile/workingoffthegrid.html).
+En Chrome y Safari, si el navegador no puede conectarse a la red de área local (LAN) o al router, está `desconectado`; todas las otras condiciones retornan `true`. Así que, aunque puedes suponer que el navegador está desconectado cuando devuelve `false`, no puedes suponer que un valor `true` signifique que el navegador puede acceder a internet. Podrías estar recibiendo falsos positivos, como cuando el ordenador está ejecutando un software de virtualización que tiene los adaptadores Ethernet virtuales siempre "conectados" o cuando la señal es demasiado débil como para hacer nada. Por lo tanto, si quieres determinar el estado en línea del navegador, debes desarrollar medios adicionales, como por ejemplo usar [response.ok](/es/docs/Web/API/Response/ok). Para más información, consulte el artículo HTML5 Rocks article, [Working Off the Grid](https://www.html5rocks.com/en/mobile/workingoffthegrid.html).
 
-En Firefox e Internet Explorer, cambiando el navegador al modo desconectado envía un valor `false`. Hasta Firefox 41, todas las demás condiciones retornaban un valor `true`; desde Firefox 41, en OS X y Windows, el valor sigue la actual conectividad de red.
+En Firefox e Internet Explorer, cambiar el navegador al modo desconectado devuelve `false`. Hasta Firefox 41, todas las demás condiciones retornaban un valor `true`; desde Firefox 41, en OS X y Windows, el valor sigue la actual conectividad de red.
 
 Puedes ver los cambios en el estado de red escuchando los eventos `window.ononline` y `window.onoffline`.
 
@@ -23,25 +23,21 @@ online = window.navigator.onLine;
 
 ### Valor
 
-`online` es booleano `true` o `false`.
+`online` devuelve un booleano.
 
 ## Ejemplo
 
-Ver [ejemplo en linea](http://html5-demos.appspot.com/static/navigator.onLine.html).
+Ver [ejemplo de navigator.onLine](http://html5-demos.appspot.com/static/navigator.onLine.html).
 
-Para comprobar que estas es linea, consulte `window.navigator.onLine`, como en el siguiente ejemplo:
+Para comprobar una conexión a una red, usa `window.navigator.onLine`, de la siguiente manera:
 
 ```js
-if (navigator.onLine) {
-  console.log("online");
-} else {
-  console.log("offline");
-}
+console.log(navigator.onLine ? "online" : "offline");
 ```
 
-Si el navegador no soporta `navigator.onLine` el ejemplo anterior siempre devolvera `false`/`undefined`.
+Si el navegador no tiene soporte para `navigator.onLine`, el ejemplo anterior siempre devolverá `false`/`undefined`.
 
-Para ver los cambios en el estado de la red, use [`addEventListener`](/es/docs/Web/API/EventTarget/addEventListener) para escuchar los eventos `window.ononline` y `window.onoffline`, como en el siguiente ejemplo:
+Para ver los cambios en el estado de la red, usa [`addEventListener`](/es/docs/Web/API/EventTarget/addEventListener) para escuchar los eventos `window.ononline` y `window.onoffline`, como en el siguiente ejemplo:
 
 ```js
 window.addEventListener("offline", function (e) {

@@ -1,43 +1,37 @@
 ---
 title: CSSConditionRule
 slug: Web/API/CSSConditionRule
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{ APIRef("CSSOM") }}
+{{APIRef("CSSOM")}}
 
-**CSSConditionRule** 对象表示单个条件 CSS 规则，由条件和语句块组成。继承至 {{domxref("CSSGroupingRule")}}.
+**`CSSConditionRule`** 接口表示一条条件 CSS [At 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)，由一个条件和一个语句块组成。
 
-从它派生的两个对象 : {{domxref("CSSMediaRule")}} and {{domxref("CSSSupportsRule")}}.
+以下三个对象派生自 `CSSConditionRule`：{{domxref("CSSMediaRule")}}、{{domxref("CSSContainerRule")}} 和 {{domxref("CSSSupportsRule")}}。
 
-## Syntax
+{{InheritanceDiagram}}
 
-The syntax is described using the [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/) format.
+## 实例属性
 
-```plain
-interface CSSConditionRule : CSSGroupingRule {
-    attribute DOMString conditionText;
-}
-```
+_继承其祖先 {{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的属性。_
 
-## Properties
+- {{domxref("CSSConditionRule.conditionText")}} {{ReadOnlyInline}}
+  - : 表示该规则条件部分的文本。
 
-The `CSSConditionRule` derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupingRule")}} and inherits all properties of these classes. It has one specific property:
+## 实例方法
 
-- {{domxref("CSSConditionRule.conditionText")}}
-  - : Represents the text of the condition of the rule.
+_继承其祖先 {{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的方法。_
 
-## Methods
-
-The `CSSConditionRule` derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupingRule")}} and inherits all methods of these classes. It has no specific property of its own.
-
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using dynamic styling information](/zh-CN/docs/DOM/Using_dynamic_styling_information)
+- [关于使用动态样式的信息](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

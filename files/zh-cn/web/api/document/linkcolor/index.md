@@ -7,7 +7,7 @@ slug: Web/API/Document/linkColor
 
 ### 概述
 
-{{ Deprecated_header() }} `linkColor` 用来获取和设置文档内链接元素 (\<a>) 的颜色。
+{{ Deprecated_header }} `linkColor` 用来获取和设置文档内链接元素 (\<a>) 的颜色。
 
 ### 语法
 

@@ -1,13 +1,12 @@
 ---
-title: Comment documenter les erreurs JavaScript
+title: Comment documenter les erreurs web
+short-title: Documenter les erreurs web
 slug: MDN/Writing_guidelines/Howto/Document_web_errors
 l10n:
-  sourceCommit: 03ff2a5384ebcb8d7ae36eab7b481d8f738b71c7
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{MDNSidebar}}
-
-La [référence des erreurs JavaScript](/fr/docs/Web/JavaScript/Reference/Errors) sur MDN Web Docs est un projet visant à aider les développeuses et développeurs web à résoudre les erreurs survenant dans la [console web des outils de développement](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). Pour ce projet, nous avons besoin d'écrire plus de documentation sur les erreurs sur MDN Web Docs afin que les outils où les messages sont générés puissent renvoyer vers ces pages. Cet article explique comment documenter les erreurs JavaScript.
+La [référence des erreurs JavaScript](/fr/docs/Web/JavaScript/Reference/Errors) sur MDN Web Docs est un projet visant à aider les développeuses et développeurs web à résoudre les erreurs survenant dans la [console web des outils de développement <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). Pour ce projet, nous avons besoin d'écrire plus de documentation sur les erreurs sur MDN Web Docs afin que les outils où les messages sont générés puissent renvoyer vers ces pages. Cet article explique comment documenter les erreurs JavaScript.
 
 Les erreurs JavaScript contiennent un lien «&nbsp;En savoir plus&nbsp;» qui renvoie à la référence de l'erreur JavaScript contenant des conseils supplémentaires pour résoudre les problèmes. Pour pouvoir documenter ces erreurs, vous devez connaître ou être capable de vous plonger dans le [JavaScript](/fr/docs/Web/JavaScript).
 
@@ -42,4 +41,4 @@ Les erreurs JavaScript contiennent un lien «&nbsp;En savoir plus&nbsp;» qui re
 
 ## Étape 5 - Révision du contenu
 
-Après avoir créé la page d'erreur, soumettez-la en tant que [<i lang="en">pull request</i>](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) sur le dépôt [`mdn/content`](https://github.com/mdn/content). Un membre de notre équipe de révision sera automatiquement désigné pour réviser votre page.
+Après avoir créé la page d'erreur, soumettez-la en tant que <i lang="en">pull request</i> sur le dépôt [`mdn/content`](https://github.com/mdn/content). Un membre de notre équipe de révision sera automatiquement désigné pour réviser votre page.

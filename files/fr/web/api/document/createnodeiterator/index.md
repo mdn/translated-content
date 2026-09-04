@@ -1,172 +1,106 @@
 ---
-title: Document.createNodeIterator()
+title: "Document : méthode createNodeIterator()"
+short-title: createNodeIterator()
 slug: Web/API/Document/createNodeIterator
+l10n:
+  sourceCommit: 30ae43a0c98ab92f750fd571d7a3a8ee8b15b4c0
 ---
 
 {{APIRef("DOM")}}
 
-Renvoie un nouvel objet [`NodeIterator`](/fr/docs/Web/API/NodeIterator).
+La méthode **`createNodeIterator()`** de l'interface {{DOMxRef("Document")}} retourne un nouvel objet {{DOMxRef("NodeIterator")}}.
 
 ## Syntaxe
 
-```js
-var nodeIterator = document.createNodeIterator(root, whatToShow, filter);
+```js-nolint
+createNodeIterator(root)
+createNodeIterator(root, whatToShow)
+createNodeIterator(root, whatToShow, filter)
 ```
 
-### Valeurs
+### Paramètres
 
 - `root`
-  - : Le noeud racine à partir duquel commencer la traversée de {{domxref("NodeIterator")}}.
-- `whatToShow` {{ optional_inline() }}
-  - : Est un `unsigned long` (_long non signé_) facultatif représentant un masque de bits créé par la combinaison des constantes de la propriété [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). C'est un moyen pratique de filtrage pour certains types de noeuds. Il est par défaut `0xFFFFFFFF` représentant la constante `SHOW_ALL`.
+  - : Le nœud racine à partir duquel commencer le parcours du {{DOMxRef("NodeIterator")}}.
 
-    <table class="standard-table">
-      <tbody>
-        <tr>
-          <td class="header">Constante</td>
-          <td class="header">Valeur numérique</td>
-          <td class="header">Description</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ALL</code></td>
-          <td>
-            <code>-1</code> (c'est la valeur numérique maximale du
-            <code>unsigned long</code> (<em>non signé long</em>))
-          </td>
-          <td>Affiche tous les noeuds.</td>
-        </tr>
-        <tr>
-          <td>
-            <code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}
-          </td>
-          <td><code>2</code></td>
-          <td>
-            Affiche l'attribut {{domxref("Attr")}} des noeuds. Cela n'a de sens
-            que lors de la création d'un {{domxref("TreeWalker")}} avec un
-            noeud {{domxref("Attr")}} comme racine ; dans ce cas, cela signifie
-            que le nœud d'attribut apparaîtra dans la première position de
-            l'itération ou de la traversée. Comme les attributs ne sont jamais des
-            enfants d'autres nœuds, ils n'apparaissent pas lors de la traversée de
-            l'arbre du document.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}
-          </td>
-          <td><code>8</code></td>
-          <td>Affiche les noeuds {{domxref("CDATASection")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_COMMENT</code></td>
-          <td><code>128</code></td>
-          <td>Affiche les noeuds {{domxref("Comment")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_DOCUMENT</code></td>
-          <td><code>256</code></td>
-          <td>Affiche les noeuds {{domxref("Document")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_DOCUMENT_FRAGMENT</code></td>
-          <td><code>1024</code></td>
-          <td>Affiche les noeuds {{domxref("DocumentFragment")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_DOCUMENT_TYPE</code></td>
-          <td><code>512</code></td>
-          <td>Affiche les noeuds {{domxref("DocumentType")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ELEMENT</code></td>
-          <td><code>1</code></td>
-          <td>Affiche les noeuds {{domxref("Element")}}.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
-          <td><code>32</code></td>
-          <td>
-            Affiche les noeuds {{domxref("Entity")}}. Cela n'a de sens que
-            lors de la création d'un {{domxref("TreeWalker")}} avec un noeud
-            {{ domxref("Entity") }} comme racine ; dans ce cas, il signifie
-            que le noeud d'entité {{domxref("Entity") }} apparaîtra à la
-            première position de la traversée. Étant donné que les entités ne font
-            pas partie de l'arborescence du document, elles n'apparaissent pas lors
-            de la traversée de l'arborescence du document.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>NodeFilter.SHOW_ENTITY_REFERENCE</code>
-            {{deprecated_inline}}
-          </td>
-          <td><code>16</code></td>
-          <td>Affiche les noeuds {{domxref("EntityReference")}}.</td>
-        </tr>
-        <tr>
-          <td>
-            <code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}
-          </td>
-          <td><code>2048</code></td>
-          <td>
-            Affiche les noeuds {{domxref("Notation")}}. Cela n'a de sens
-            que lors de la création d'un {{domxref("TreeWalker")}} avec un
-            noeud {{domxref("Notation")}} comme racine ; dans ce cas, il
-            signifie que le noeud {{domxref("Notation")}} apparaîtra à la
-            première position de la traversée. Étant donné que les entités ne font
-            pas partie de l'arborescence du document, elles n'apparaissent pas lors
-            de la traversée de l'arborescence du document.
-          </td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
-          <td><code>64</code></td>
-          <td>
-            Affiche les noeuds {{domxref("ProcessingInstruction")}}.
-          </td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_TEXT</code></td>
-          <td><code>4</code></td>
-          <td>Affiche les noeuds {{domxref("Text")}}.</td>
-        </tr>
-      </tbody>
-    </table>
+- `whatToShow` {{Optional_Inline}}
+  - : Un `unsigned long` optionnel représentant un masque de bits créé en combinant les propriétés constantes de `NodeFilter`.
+    C'est un moyen pratique de filtrer certains types de nœuds. Par défaut, il est défini sur
+    `0xFFFFFFFF` représentant la constante `SHOW_ALL`.
 
-- `filter` {{ optional_inline() }}
-  - : Un objet implémentant l'interface {{ domxref("NodeFilter") }} ; sa méthode `acceptNode()` sera appelée pour chaque nœud du sous-arbre basé à la racine qui est accepté comme inclus par l'indicateur whatToShow pour déterminer s'il faut ou non l'inclure dans la liste des nœuds iterables (une simple fonction de rappel peut également être utilisée à la place). La méthode devrait retourner l'un des `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT` ou `NodeFilter.FILTER_SKIP`. Voir l'[exemple](#exemple).
+    | Constante                                                | Valeur numérique | Description                                             |
+    | -------------------------------------------------------- | ---------------- | ------------------------------------------------------- |
+    | `NodeFilter.SHOW_ALL`                                    | `0xFFFFFFFF`     | Affiche tous les nœuds.                                 |
+    | `NodeFilter.SHOW_ATTRIBUTE`                              | `0x2`            | Affiche les nœuds {{DOMxRef("Attr")}}.                  |
+    | `NodeFilter.SHOW_CDATA_SECTION`                          | `0x8`            | Affiche les nœuds {{DOMxRef("CDATASection")}}.          |
+    | `NodeFilter.SHOW_COMMENT`                                | `0x80`           | Affiche les nœuds {{DOMxRef("Comment")}}.               |
+    | `NodeFilter.SHOW_DOCUMENT`                               | `0x100`          | Affiche les nœuds {{DOMxRef("Document")}}.              |
+    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `0x400`          | Affiche les nœuds {{DOMxRef("DocumentFragment")}}.      |
+    | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `0x200`          | Affiche les nœuds {{DOMxRef("DocumentType")}}.          |
+    | `NodeFilter.SHOW_ELEMENT`                                | `0x1`            | Affiche les nœuds {{DOMxRef("Element")}}.               |
+    | `NodeFilter.SHOW_ENTITY` {{Deprecated_Inline}}           | `0x20`           | Héritage, plus efficace.                                |
+    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{Deprecated_Inline}} | `0x10`           | Héritage, plus efficace.                                |
+    | `NodeFilter.SHOW_NOTATION` {{Deprecated_Inline}}         | `0x800`          | Héritage, plus efficace.                                |
+    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `0x40`           | Affiche les nœuds {{DOMxRef("ProcessingInstruction")}}. |
+    | `NodeFilter.SHOW_TEXT`                                   | `0x4`            | Affiche les nœuds {{DOMxRef("Text")}}.                  |
 
-> [!NOTE]
-> Avant Gecko 12.0, cette méthode acceptait un quatrième paramètre facultatif (`entityReferenceExpansion`). Cela ne faisait pas partie de la spécification DOM4 et a donc été supprimé. Ce paramètre indiquait si les enfants des nœuds de référence d'entité étaient visibles ou non par l'itérateur. Puisque de tels noeuds n'ont jamais été créés dans les navigateurs, ce paramètre n'a eu aucun effet.
+    > [!NOTE]
+    > La constante `NodeFilter.SHOW_ATTRIBUTE` n'est efficace que lorsque la racine est un nœud attribut. Comme le parent de tout nœud `Attr` est toujours `null`, {{DOMxRef("TreeWalker.nextNode()")}} et {{DOMxRef("TreeWalker.previousNode()")}} ne retourneront jamais un nœud `Attr`. Pour parcourir les nœuds `Attr`, utilisez {{DOMxRef("Element.attributes")}} à la place.
 
-## Exemple
+- `filter` {{Optional_Inline}}
+  - : Une fonction de rappel ou un objet avec une méthode `acceptNode()`. La fonction ou la méthode sera appelée pour chaque nœud dans le sous-arbre basé sur la racine qui est accepté comme inclus par le drapeau `whatToShow` pour déterminer s'il faut l'inclure ou non dans la liste des nœuds itérables. La méthode doit renvoyer l'une des valeurs `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT` ou `NodeFilter.FILTER_SKIP`. Voir [l'exemple](#exemples).
+
+    Pour `createNodeIterator`, les valeurs `NodeFilter.FILTER_REJECT` et `NodeFilter.FILTER_SKIP` sont équivalentes. Ce nœud ne sera pas inclus dans la liste des nœuds itérables, mais ses enfants continueront à être parcourus.
+
+### Valeur de retour
+
+Un nouvel objet {{DOMxRef("NodeIterator")}}.
+
+## Exemples
 
 ```js
-var nodeIterator = document.createNodeIterator(
+const nodeIterator = document.createNodeIterator(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  function (node) {
-    return node.nodeName.toLowerCase() === "p"
+  (node) =>
+    node.nodeName.toLowerCase() === "p"
       ? NodeFilter.FILTER_ACCEPT
-      : NodeFilter.FILTER_REJECT;
-  },
+      : NodeFilter.FILTER_REJECT,
 );
-var pars = [];
-var currentNode;
+const pars = [];
+let currentNode;
 
 while ((currentNode = nodeIterator.nextNode())) {
   pars.push(currentNode);
 }
 ```
 
-### Compatibilité des navigateurs
+Le même exemple, mais en utilisant un objet avec une méthode `acceptNode()`&nbsp;:
 
-Pris en charge dans FF 3.5+, Chrome 1+, Opera 9+, Safari 3+, IE9+, Edge
+```js
+const nodeIterator = document.createNodeIterator(
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return node.nodeName.toLowerCase() === "p"
+        ? NodeFilter.FILTER_ACCEPT
+        : NodeFilter.FILTER_REJECT;
+    },
+  },
+);
+const pars = [];
+let currentNode;
 
-## Voir aussi
-
-- [createNodeIterator sur MDN](/fr/docs/Web/API/Document/createNodeIterator)
+while ((currentNode = nodeIterator.nextNode())) {
+  pars.push(currentNode);
+}
+```
 
 ## Spécifications
 
-[DOM Level 2 Traversal : NodeIterator](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

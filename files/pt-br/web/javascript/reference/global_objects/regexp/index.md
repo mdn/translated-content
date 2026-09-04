@@ -667,7 +667,7 @@ var re = new RegExp("\\w+");
 
 ## Propriedades
 
-- {{jsxref("RegExp.prototype")}}
+- {{jsxref("RegExp")}}
   - : Permite a adição de propriedades a todos os objetos.
 - `RegExp.length`
   - : O valor of `RegExp.length` é 2.
@@ -690,7 +690,7 @@ O objeto global `RegExp não possui métodos próprios, no entanto, herda alguns
 
 ### Exemplo: Usando uma expressão regular para mudar o fomato dos dados
 
-O seguinte script usa o método {{jsxref("String.prototype.replace()", "replace()")}} da instância de {{jsxref("Global_Objects/String", "String")}} para casar o nome no format _nome sobrenome_ e produzir no formato _sobrenome, nome_. No texto substituto, o script usa `$1` e `$2` para indicar os respectivos parênteses de casamento no padrão da expressão regular.
+O seguinte script usa o método {{jsxref("String.prototype.replace()", "replace()")}} da instância de {{jsxref("String")}} para casar o nome no format _nome sobrenome_ e produzir no formato _sobrenome, nome_. No texto substituto, o script usa `$1` e `$2` para indicar os respectivos parênteses de casamento no padrão da expressão regular.
 
 ```js
 var re = /(\w+)\s(\w+)/;

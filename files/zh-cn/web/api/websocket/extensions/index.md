@@ -1,23 +1,18 @@
 ---
-title: WebSocket.extensions
+title: WebSocket：extensions 属性
+short-title: extensions
 slug: Web/API/WebSocket/extensions
+l10n:
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("Web Sockets API")}}{{AvailableInWorkers}}
 
-**`WebSocket.extensions`**是只读属性，返回服务器已选择的扩展值。目前，链接可以协定的扩展值只有空字符串或者一个扩展列表。
+**`WebSocket.extensions`** 只读属性返回服务器已选择的扩展。目前，该属性的值仅为空字符串或连接协商确定的扩展列表。
 
-The **`WebSocket.extensions`** read-only property returns the extensions selected by the server. This is currently only the empty string or a list of extensions as negotiated by the connection.
+## 值
 
-## 语法
-
-```plain
-var extensions = aWebSocket.extensions;
-```
-
-## 返回值
-
-A {{domxref("DOMString")}}.
+一个字符串。
 
 ## 规范
 

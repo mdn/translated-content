@@ -5,7 +5,7 @@ original_slug: Learn/Accessibility/Accessibility_troubleshooting
 ---
 
 {{LearnSidebar}}
-{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{PreviousMenu("Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
 
 Dans l'évaluation de ce module, nous vous présentons un site simple, qui présente un certain nombre de problèmes d'accessibilité que vous devez diagnostiquer et résoudre.
 
@@ -16,7 +16,7 @@ Dans l'évaluation de ce module, nous vous présentons un site simple, qui prés
       <td>
         Connaissances informatiques de base, une compréhension de base de HTML,
         CSS et JavaScript, une compréhension de la <a
-          href="/fr/docs/Learn/Accessibility"
+          href="/fr/docs/Learn_web_development/Core/Accessibility"
           >previous articles in the course</a
         >.
       </td>
@@ -88,4 +88,4 @@ Pouvez-vous énumérer deux autres idées d'amélioration qui rendraient le site
 
 Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir donner votre travail à votre enseignant / mentor pour qu'il la corrige. Si vous vous auto-apprenez, vous pouvez obtenir le guide de notation assez facilement en le demandant sur la [discussion thread for this exercise](https://discourse.mozilla.org/t/accessibility-troubleshooting-assessment/24691), ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez d'abord l'exercice - il n'y a rien à gagner à tricher!
 
-{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{PreviousMenu("Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}

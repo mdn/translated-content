@@ -1,108 +1,86 @@
 ---
 title: ブラウザー拡張機能
 slug: Mozilla/Add-ons/WebExtensions
+l10n:
+  sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
 
-{{AddonSidebar}}
+拡張機能（アドオン）は、ブラウザーの機能を変更したり、強化したりすることができます。Firefox の拡張機能は、WebExtensions API というブラウザー横断型技術を使用して作成されています。
 
-拡張機能はブラウザーの能力を拡張・修正するものです。Firefox の拡張機能は WebExtensions API を使ってビルドされ、この API は拡張機能をクロスブラウザーで開発するシステムです。このシステムの大半は Google Chrome と Opera と [W3C Draft Community Group](https://browserext.github.io/browserext/) でサポートされている [extension API](https://developer.chrome.com/docs/extensions) と互換性があります。
+Firefox の拡張機能に関する技術は、Chromium ベースのブラウザー（Google Chrome、Microsoft Edge、Opera、Vivaldi など）で対応している[拡張機能 API](https://developer.chrome.com/docs/extensions/reference/) と、大部分において互換性があります。ほとんどの場合、Chromium ベースのブラウザー向けに作成された拡張機能は、[いくつか変更を加えるだけで](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/) Firefox でも実行できます。
 
-これらのブラウザー用に書かれた拡張機能は大抵の場合、[ほんの少し変更を加えるだけで](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/) Firefox や [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) でも動かすことができます。この API は [マルチプロセス Firefox](/ja/docs/Mozilla/Firefox/Multiprocess_Firefox) にも完全互換です。
+## 主なリソース
 
-お持ちのアイデアや質問があったり、レガシーアドオンを WebExtensions API を使うように移行するのに助けが要る場合、[dev-addons のメーリングリスト](https://mail.mozilla.org/listinfo/dev-addons) (英語) や [Add-ons room](https://chat.mozilla.org/#/room/#addons:mozilla.org) (英語) や [Matrix](irc://irc.mozilla.org/webextensions) (英語) にてご連絡ください。
+- ガイド
+  - : 初心者の方でも、より高度なアドバイスを探している方でも、豊富な[チュートリアルやガイド](/ja/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)を通じて、拡張機能の仕組みや WebExtensions API の使用方法について学ぶことができます
+- リファレンス
+  - : [WebExtensions API](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) のメソッド、プロパティ、型、イベントに関する詳細情報や、[マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)に関する詳細情報を得ましょう。
+- Firefox ワークフロー
+  - : Firefox 用拡張機能の作成と公開方法をご紹介します。開発者ツール、公開と配布、および移植に関する詳細については、[Extension Workshop](https://extensionworkshop.com/) で得てください。
 
-日本語情報としては [Mozilla Japan コミュニティの Slack](https://bit.ly/mozilla-jp-slack) の #extdev チャンネルで情報交換が行われています。
+> [!NOTE]
+> アイディアや質問があったり、助けが必要であったりした場合は、[コミュニティフォーラム](https://discourse.mozilla.org/c/add-ons/35)<sup>（英語）</sup>または [Matrix](https://wiki.mozilla.org/Matrix) の [Add-ons Room](https://matrix.to/#/#addons:mozilla.org)<sup>（英語）</sup> 内でご連絡ください。
+>
+> 日本語情報としては [Mozilla Japan コミュニティの Slack](https://mozillajp.slack.com/) の #extdev チャンネルで情報交換が行われています。
 
 ## 始めましょう
 
-- [拡張機能とは何か?](/ja/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
-- [初めての拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)
-- [2 つめの拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
-- [拡張機能の中身](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [拡張機能の例](/ja/docs/Mozilla/Add-ons/WebExtensions/Examples)
+[拡張機能で何ができるか](/ja/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)を確認してから、[初めての拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)を作成し、[2 つ目の拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)を作成する前に。[拡張機能の構造](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)について学び、[Firefox スタイルの拡張機能開発および公開ワークフロー](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/)の概要を取得しましょう。Firefox 上で直接実行可能な[拡張機能のサンプル](/ja/docs/Mozilla/Add-ons/WebExtensions/Examples)の充実した選択を、さらに詳しく探ってみましょう。学習を続けるには、[参考になるリソースの一覧](/ja/docs/Mozilla/Add-ons/WebExtensions/What_next)をご覧ください。
 
 ## 概念
 
+拡張機能の基礎となる概念について、詳細な情報を得ましょう。
+
+- [JavaScript API の概要](/ja/docs/Mozilla/Add-ons/WebExtensions/API)
 - [コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+- [バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)
 - [マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 - [ファイルの操作](/ja/docs/Mozilla/Add-ons/WebExtensions/Working_with_files)
-- [国際化拡張](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
-- [セキュリティのベストプラクティス](https://extensionworkshop.com/documentation/develop/build-a-secure-extension/)
-- [Content Security Policy](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Native messaging](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
-- [devtools APIs を使用する](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
+- [国際化](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
+- [コンテンツセキュリティポリシー](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
+- [ネイティブメッセージング](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
 - [ネイティブマニフェスト](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)
-- [manifests ファイル](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)
+- [ユーザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/User_actions)
+- [API 実装間の違い](/ja/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations)
+- [Chrome との非互換性](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 
 ## ユーザーインターフェイス
 
-- [導入](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface)
-- [ブラウザーツールバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)
-- [ポップアップ付きブラウザーツールバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
-- [アドレスバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
-- [ポップアップ付きアドレスバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
-- [コンテキストメニューの項目](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items)
-- [サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
-- [オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
-- [Extension pages](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)
-- [通知](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications)
-- [アドレスバーの入力候補](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox)
-- [開発ツールパネル](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels)
-- [ブラウザースタイル](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
+拡張機能で使用できるすべての[ユーザーインターフェース](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface)要素を、サンプルコードやヒントとともにご紹介します。
 
-## 逆引きリファレンス
+## 手引き
+
+拡張機能の開発における特定の側面について、基礎から学べる範囲のチュートリアルです。
 
 - [HTTP リクエストへの介入](/ja/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests)
 - [ウェブページの変更](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)
+- [外部コンテンツの挿入](/ja/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page)
+- [Share objects with page scripts](/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
 - [ツールバーボタンの追加](/ja/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
 - [設定画面の実装](/ja/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
-- [クリップボードとのやりとり](/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)
 - [Tabs API を使用する](/ja/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API)
 - [Bookmarks API を使用する](/ja/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API)
 - [Cookies API を使用する](/ja/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API)
 - [Contextual Identity を使用する](/ja/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)
-- [userScripts を使用する](/ja/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts)
-- [外部コンテンツの挿入](/ja/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page)
-
-## 移行
-
-- [Google Chrome extension からの移行](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)
-- [古い Firefox アドオンの移行](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/)
-- [Android 向け Firefox 拡張機能の開発](https://extensionworkshop.com/documentation/develop/developing-extensions-for-firefox-for-android/)
-- [Thunderbird における WebExtensions によるアドイン開発](</ja/docs/Mozilla/Add-ons/WebExtensions/Thunderbird における WebExtensions によるアドイン開発>)
-- [Add-on SDK との比較](https://extensionworkshop.com/documentation/develop/comparison-with-the-add-on-sdk/)
-- [XUL/XPCOM 拡張との比較](https://extensionworkshop.com/documentation/develop/comparison-with-xul-xpcom-extensions/)
-- [Chrome との非互換性](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
-- [デスクトップ版と Android 版の拡張機能の違い](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/)
+- [クリップボードとのやりとり](/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)
+- [開発者ツールの拡張](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
+- [クロスブラウザー拡張機能の構築](/ja/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension)
 
 ## Firefox でのワークフロー
 
-- [ユーザー体験の成功事例](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)
-- [Firefox への一時的なインストール](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
-- [デバッグ](https://extensionworkshop.com/documentation/develop/debugging/)
-- [テストの持続と再起動機能](https://extensionworkshop.com/documentation/develop/testing-persistent-and-restart-features/)
-- [はじめての web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
-- [web-ext コマンドリファレンス](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/)
-- [Extensions と Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/)
-- [配布方法の選択肢](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/)
-- [正しいパーミッションを要求する](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/)
-- [オブジェクトをウェブページのスクリプトと共有する](/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
-- [拡張機能を引退させる](https://extensionworkshop.com/documentation/manage/retiring-your-extension/)
-- [Tips and Tricks](/ja/docs/Mozilla/Add-ons/WebExtensions)
-- [ブラウザー拡張機能の開発ツール](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/)
+Firefox 用の拡張機能を作成したり、Chrome の拡張機能を移植したりする準備が整ったら、[Extension Workshop](https://extensionworkshop.com/) にアクセスしてください。ここでは、以下の詳細が掲載されています。（訳注：リンク先はすべて英語です。）
+
+- Firefoxのワークフロー、例えば[開発中の拡張機能の一時的なインストール](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)、[デバッグ](https://extensionworkshop.com/documentation/develop/debugging/)、[適切な権限のリクエスト](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/)など。
+- [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) 開発者ツール。
+- [Google Chrome 拡張機能の移植](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)、[デスクトップ版と Android 版の違い](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/)など。
+- [公開と配布の概要](https://extensionworkshop.com/documentation/publish/)、[拡張機能の周知](https://extensionworkshop.com/documentation/publish/promoting-your-extension/)、[拡張機能のライフサイクルに関する最善の手法](https://extensionworkshop.com/documentation/manage/)など。
 
 ## リファレンス
 
 ### JavaScript API 群
 
-- [JavaScript API の概要](/ja/docs/Mozilla/Add-ons/WebExtensions/API)
-- [JavaScript API 群のブラウザー互換性表](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
+すべての [JavaScript API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) に関するメソッド、プロパティ、タイプ、イベントの包括的な詳細を確認できます。また、それぞれのAPIと主要なブラウザーとの互換性に関する詳細情報も記載されています。ほとんどのAPIリファレンスページには、サンプルコードや、そのAPIを使用している拡張機能のサンプルリンクも記載されています。
 
-{{ ListSubpages ("/ja/docs/Mozilla/Add-ons/WebExtensions/API") }}
+### マニフェストキー
 
-### Manifest keys
-
-- [manifest.json の概要](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
-- [manifest.json のブラウザー互換性](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
-
-{{ ListSubpages ("/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json") }}
+[マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)に関するすべての詳細、およびそのプロパティや設定について参照することができます。

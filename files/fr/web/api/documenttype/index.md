@@ -21,13 +21,13 @@ _Cette interface hérite de propriétés de la part de son parent, {{domxref("No
 - {{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{deprecated_inline}}
   - : Un {{domxref ("DOMString")}} du sous-ensemble interne, ou null s'il n'y en a pas. Par exemple "\<! ELEMENT foo (bar)">
 - {{domxref("DocumentType.name")}} {{readonlyInline}}
-  - : une {{domxref("DOMString")}}, par exemple, `"html"` pour `<!DOCTYPE HTML>`.
+  - : une {{jsxref("String")}}, par exemple, `"html"` pour `<!DOCTYPE HTML>`.
 - {{domxref("DocumentType.notations")}} {{readonlyInline}} {{deprecated_inline}}
   - : une {{domxref ("NamedNodeMap")}} avec les notations déclarées dans la DTD. Chaque nœud de cette carte implémente l'interface {{domxref ("Notation")}}.
 - {{domxref("DocumentType.publicId")}} {{readonlyInline}}
-  - : une {{domxref("DOMString")}}, par exemple `"-//W3C//DTD HTML 4.01//EN"`, chaîne vide pour HTML5.
+  - : une {{jsxref("String")}}, par exemple `"-//W3C//DTD HTML 4.01//EN"`, chaîne vide pour HTML5.
 - {{domxref("DocumentType.systemId")}} {{readonlyInline}}
-  - : une {{domxref("DOMString")}}, par exemple, `"http://www.w3.org/TR/html4/strict.dtd"`, chaîne vide pour HTML5.
+  - : une {{jsxref("String")}}, par exemple, `"http://www.w3.org/TR/html4/strict.dtd"`, chaîne vide pour HTML5.
 
 ## Méthodes
 

@@ -1,9 +1,9 @@
 ---
-title: <meta> name 属性
-short-title: <meta> name
+title: HTML `<meta name>` 属性
+short-title: <meta name>
 slug: Web/HTML/Reference/Elements/meta/name
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 4607393c465f5a8bdbb36047f2ec03c2fb058af5
 ---
 
 **`name`** 属性は {{htmlelement("meta")}} 要素で、メタデータを名前と値の組み合わせで提供します。
@@ -57,10 +57,10 @@ HTML 仕様書では、次の一連の標準メタデータ名を定義してい
 
 ### 他の仕様書で定義されている meta name
 
-CSS 端末適応仕様書では、以下のメタデータ名を定義しています。
-
 - [`viewport`](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)
-  - : {{glossary("viewport", "ビューポート")}}の初期サイズに関するヒントを与えます。
+  - : {{glossary("viewport", "ビューポート")}}の初期サイズに関するヒントを提供します。
+- [`text-scale`](/ja/docs/Web/HTML/Reference/Elements/meta/name/text-scale)
+  - : ページが、{{htmlelement("html")}} のルート要素の {{cssxref("font-size")}} を、OS およびブラウザーレベルのテキスト倍率設定に応じて、比例的に変倍するように設定します。[CSS フォントモジュール](/ja/docs/Web/CSS/Guides/Fonts)で定義されています。
 
 ### WHATWG MetaExtensions wiki で定義されているメタデータ名
 
@@ -87,5 +87,4 @@ CSS 端末適応仕様書では、以下のメタデータ名を定義してい�
 
 ## 関連情報
 
-- [ビューポートの `<meta>` タグ](/ja/docs/Web/HTML/Guides/Viewport_meta_element)
 - [メタデータ: `<meta>` 要素](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#メタデータ_meta_要素)

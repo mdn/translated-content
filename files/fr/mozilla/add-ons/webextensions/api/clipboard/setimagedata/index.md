@@ -29,7 +29,7 @@ browser.clipboard.setImageData(imageData, imageType);
 - `imageData`
   - : [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). Les données de l'image codées.
 - `imageType`
-  - : Un {{domxref("DOMString")}} indiquant le type d'image contenue dans le fichier `imageData`: `"png"` ou `"jpeg"`.
+  - : Un {{jsxref("String")}} indiquant le type d'image contenue dans le fichier `imageData`: `"png"` ou `"jpeg"`.
 
 ### Valeur de retour
 

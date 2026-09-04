@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
 
 Широко известный символ **`Symbol.search`** указывает метод, который вернёт индекс внутри строки, соответствующей регулярному выражению. Эта функция вызывается методом {{jsxref("String.prototype.search()")}}.
 
-Для получения дополнительной информации см. {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} и {{jsxref("String.prototype.search()")}}.
+Для получения дополнительной информации см. {{jsxref("RegExp/Symbol.search", "RegExp.prototype[@@search]()")}} и {{jsxref("String.prototype.search()")}}.
 
 {{js_property_attributes(0,0,0)}}
 
@@ -24,4 +24,4 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp/Symbol.search", "RegExp.prototype[@@search]()")}}

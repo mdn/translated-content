@@ -15,7 +15,7 @@ Para obtener una lista alfabética, consulta la barra lateral de la izquierda.
 
 Palabras clave básicas y expresiones generales en JavaScript.
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
   - : La palabra clave `this` se refiere a una propiedad especial de un contexto de ejecución.
 - {{jsxref("Operators/function", "function")}}
   - : La palabra clave `function` define una expresión de función.
@@ -31,11 +31,11 @@ Palabras clave básicas y expresiones generales en JavaScript.
   - : La `async function` define una expresión de función asíncrona.
 - {{jsxref("Operators/await", "await")}}
   - : Pausa y reanuda una función asíncrona y espera la resolución/rechazo de la promesa.
-- {{jsxref("Global_Objects/Array", "[]")}}
+- {{jsxref("Array", "[]")}}
   - : Iniciador de arreglo/sintaxis literal.
 - {{jsxref("Operators/Object_initializer", "{}")}}
   - : Iniciador de objeto/sintaxis literal.
-- {{jsxref("Global_Objects/RegExp", "/ab+c/i")}}
+- {{jsxref("RegExp", "/ab+c/i")}}
   - : Sintaxis de expresión regular literal.
 - {{jsxref("Operators/Grouping", "( )")}}
   - : Operador de agrupación.
@@ -47,10 +47,10 @@ Los valores de la izquierda son el destino de una asignación.
 - {{jsxref("Operators/Property_accessors", "Propiedad accessors", "", 1)}}
   - : Los operadores miembro proporcionan acceso a una propiedad o método de un objeto
     (`object.property` y `object["property"]`).
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
   - : El operador `new` crea una instancia auxiliado por un constructor.
-- {{jsxref("Operators/new%2Etarget", "new.target")}}
-  - : En los constructores, `new.target` se refiere al constructor que fue invocado por {{jsxref("Operators/new", "new")}}.
+- {{jsxref("Operators/new.target", "new.target")}}
+  - : En los constructores, `new.target` se refiere al constructor que fue invocado por {{jsxref("new")}}.
 - {{jsxref("Operators/super", "super")}}
   - : La palabra clave `super` llama al constructor padre.
 - {{jsxref("Operators/Spread_syntax", "...obj")}}
@@ -73,7 +73,7 @@ Operadores de incremento sufijo/prefijo y decremento sufijo/prefijo.
 
 Una operación unaria es una operación con un solo operando.
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
   - : El operador `delete` elimina una propiedad de un objeto.
 - {{jsxref("Operators/void", "void")}}
   - : El operador `void` descarta el valor de retorno de una expresión.
@@ -111,7 +111,7 @@ Un operador de comparación compara sus operandos y devuelve un valor `Boolean` 
 
 - {{jsxref("Operators/in", "in")}}
   - : El operador `in` determina si un objeto tiene una determinada propiedad.
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
   - : El operador `instanceof` determina si un objeto es una instancia de otro objeto.
 - {{jsxref("Operators/Less_than", "&lt;")}}
   - : Operador menor que.
@@ -171,7 +171,7 @@ Los operadores lógicos se utilizan normalmente con valores booleanos (lógicos)
 
 ### Operador condicional (ternario)
 
-- {{jsxref("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{jsxref("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
   - : El operador condicional devuelve uno de dos valores según el valor lógico de la condición.
 
 ### Operadores de asignación
@@ -206,15 +206,15 @@ Un operador de asignación asigna un valor a su operando izquierdo basándose en
   - : Asignación de `AND` lógico.
 - {{jsxref("Operators/Logical_OR_assignment", "||=")}}
   - : Asignación de `OR` lógico.
-- {{jsxref("Operators/Logical_nullish_assignment", "??=")}}
+- {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
   - : Asignación de anulación lógica.
-- {{jsxref("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-  {{jsxref("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{jsxref("Operators/Destructuring", "[a, b] = [1, 2]")}}
+  {{jsxref("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
   - : La desestructuración te permite asignar las propiedades de un arreglo u objeto a variables utilizando una sintaxis que se parece a los arreglos u objetos literales.
 
 ### Operador coma
 
-- {{jsxref("Operators/Comma_Operator", ",")}}
+- {{jsxref("Operators/Comma_operator", ",")}}
   - : El operador `coma` permite evaluar múltiples expresiones en una sola declaración y devuelve el resultado de la última expresión.
 
 ## Especificaciones
@@ -227,4 +227,4 @@ Un operador de asignación asigna un valor a su operando izquierdo basándose en
 
 ## Ve también
 
-- {{jsxref("Operators/Operator_Precedence", "Operator de precedencia")}}
+- {{jsxref("Operators/Operator_precedence", "Operator de precedencia")}}

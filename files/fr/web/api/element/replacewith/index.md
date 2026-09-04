@@ -1,31 +1,36 @@
 ---
-title: Element.replaceWith()
+title: "Element : méthode replaceWith()"
+short-title: replaceWith()
 slug: Web/API/Element/replaceWith
+l10n:
+  sourceCommit: 8374946642c18a9cc4bf510de767011124e832a2
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`Element.replaceWith()`** remplace l'élément courant dans la liste des enfants de son parent par un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères.
-
-Les chaînes de caractères sont insérées comme des nœuds [`Text`](/fr/docs/Web/API/Text).
+La méthode **`replaceWith()`** de l'interface {{DOMxRef("Element")}} remplace cet `Element` dans la liste des enfants de son parent par un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères. Les chaînes de caractères sont insérées comme des nœuds équivalents {{DOMxRef("Text")}}.
 
 ## Syntaxe
 
-```js
-replaceWith(param1);
-replaceWith(param1, param2);
-replaceWith(param1, param2, /* ... ,*/ paramN);
+```js-nolint
+replaceWith(param1)
+replaceWith(param1, param2)
+replaceWith(param1, param2, /* …, */ paramN)
 ```
 
 ### Paramètres
 
 - `param1`, …, `paramN`
-  - : Un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères par lesquels remplacer l'élément.
+  - : Un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères par lesquels remplacer l'élément.
+
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
 
 ### Exceptions
 
-- [`DOMException`](/fr/docs/Web/API/DOMException) `HierarchyRequestError`
-  - : Levée lorsque le nœud ne peut pas être inséré à l'emplacement indiqué dans la hiérarchie.
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : Levée lorsque le nœud ne peut pas être inséré à l'emplacement défini dans la hiérarchie.
 
 ## Exemples
 
@@ -43,9 +48,9 @@ console.log(div.outerHTML);
 // "<div><span></span></div>"
 ```
 
-### `replaceWith()` ne fait pas partie de la portée de `with`
+### `replaceWith()` ne fait pas partie de la portée
 
-La méthode `replaceWith()` ne fait pas partie de la portée créée par une instruction `with`. Voir [`Symbol.unscopables`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) pour plus d'informations.
+La méthode `replaceWith()` ne fait pas partie de la portée créée par une instruction `with`. Voir {{JSxRef("Symbol.unscopables")}} pour plus d'informations.
 
 ```js
 with (node) {
@@ -64,5 +69,7 @@ with (node) {
 
 ## Voir aussi
 
-- [`Node.replaceChild()`](/fr/docs/Web/API/Node/replaceChild)
-- [`NodeList`](/fr/docs/Web/API/NodeList)
+- La méthode {{DOMxRef("Node.replaceChild()")}}
+- L'interface {{DOMxRef("NodeList")}}
+- La méthode {{DOMxRef("CharacterData.replaceWith()")}}
+- La méthode {{DOMxRef("DocumentType.replaceWith()")}}

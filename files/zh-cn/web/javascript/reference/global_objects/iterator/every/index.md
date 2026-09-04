@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 {{jsxref("Iterator")}} 实例的 `every()` 方法与 {{jsxref("Array.prototype.every()")}} 类似：它测试迭代器的所有生成的元素是否都能通过由提供的函数实现的测试。它返回一个布尔值。
 

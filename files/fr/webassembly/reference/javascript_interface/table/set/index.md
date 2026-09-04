@@ -1,61 +1,60 @@
 ---
 title: WebAssembly.Table.prototype.set()
 slug: WebAssembly/Reference/JavaScript_interface/Table/set
-original_slug: WebAssembly/JavaScript_interface/Table/set
+l10n:
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
-{{WebAssemblySidebar}}
-
-La méthode **`set()`**, rattachée au prototype de {{jsxref("WebAssembly.Table")}}, permet de modifier une référence de fonction stockée dans un tableau WebAssembly.
+La méthode **`set()`** de l'objet [`WebAssembly.Table`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table) permet de modifier une référence stockée à un index donné par une valeur différente.
 
 ## Syntaxe
 
-```js
-table.set(index, valeur);
+```js-nolint
+set(index, value)
 ```
 
 ### Paramètres
 
 - `index`
   - : L'index de la référence de la fonction qu'on souhaite modifier.
-- `valeur`
-  - : La valeur par laquelle on souhaite remplacer la référence. Cette valeur doit être [une fonction exportée WebAssembly](/fr/docs/WebAssembly/Guides/Exported_functions) (c'est-à-dire une enveloppe JavaScript représentant une fonction WebAssembly sous-jacente).
+- `value`
+  - : La valeur par laquelle on souhaite remplacer la référence. Cette valeur doit être une valeur du type d'élément du tableau. Selon le type, il peut s'agir d'une [fonction WebAssembly exportée](/fr/docs/WebAssembly/Guides/Exported_functions), d'une enveloppe JavaScript pour une fonction Wasm sous-jacente, ou d'une référence hôte.
 
 ### Valeur de retour
 
-Aucune.
+Aucune ({{JSxRef("undefined")}}).
 
 ### Exceptions
 
-- Si `index` est supérieur ou égal à {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, une exception {{jsxref("RangeError")}} sera levée.
-- Si `valeur` n'est pas une fonction WebAssembly exportée ou la valeur {{jsxref("null")}}, une exception {{jsxref("TypeError")}} sera levée.
+- Si `index` est supérieur ou égal à [`Table.prototype.length`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table/length), une exception {{JSxRef("RangeError")}} est levée.
+- Si `value` n'est pas du type d'élément du tableau, une exception {{JSxRef("TypeError")}} est levée.
 
 ## Exemples
 
-Dans l'exemple qui suit (basé sur le [code source de `table2.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) et qui dispose [d'une démonstration](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)), on crée ue nouvelle instance d'un tableau WebAssembly (`Table`) qui permet initialement de stocker 2 référence. On imprime alors la longueur du tableau dans la console ainsi que le contenu pour les deux premiers index (obtenus grâce à la méthode {{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}) afin de montrer qu la longueur vaut 2 et qu'initialement, les deux éléments du tableau ne contiennent aucune référence (ils ont tous les deux la valeur {{jsxref("null")}}).
+### Utiliser la méthode `set()`
+
+L'exemple suivant (voir «&nbsp;table2.html&nbsp;» [code source <sup>(angl.)</sup>](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.html) et [version en direct <sup>(angl.)</sup>](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)) crée une nouvelle instance de tableau WebAssembly avec une taille initiale de deux références. Nous affichons ensuite la longueur du tableau et le contenu des deux index (ces valeurs sont obtenues à l'aide de [`Table.prototype.get()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table/get)) pour montrer que la longueur est de deux, et que les index ne contiennent actuellement aucune référence de fonction (ils retournent actuellement [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null)).
 
 ```js
-var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
+const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
 console.log(tbl.length);
 console.log(tbl.get(0));
 console.log(tbl.get(1));
 ```
 
-On crée ensuite un objet d'import qui contient une référence au tableau :
+Nous créons ensuite un objet d'importation qui contient une référence au tableau&nbsp;:
 
 ```js
-var importObj = {
-  js: {
-    tbl: tbl,
-  },
+const importObj = {
+  js: { tbl },
 };
 ```
 
-Enfin, on charge et on instancie le module WebAssembly (`table2.wasm`) grâce à la méthode {{jsxref("WebAssembly.instantiateStreaming()")}}, on logge la longueur du tableau et on appelle les deux fonctions référencées qui sont désormais dans le tableau (le module `table2.wasm` (cf. [la représentation textuelle](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table2.was)) ajoute deux références de fonctions au tableau et chacune affiche une valeur simple) :
+Enfin, nous chargeons et instancions un module Wasm (table2.wasm) en utilisant [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static), affichons la longueur du tableau, et invoquons les deux fonctions référencées qui sont maintenant stockées dans le tableau. Le module «&nbsp;table2.wasm&nbsp;» ajoute deux références de fonction au tableau, qui affichent chacune une valeur simple (voir [représentation textuelle <sup>(angl.)</sup>](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat))&nbsp;:
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
-  function (obj) {
+  (obj) => {
     console.log(tbl.length);
     console.log(tbl.get(0)());
     console.log(tbl.get(1)());
@@ -63,9 +62,9 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
 );
 ```
 
-On voit ici qu'il faut appeler la fonction après avoir appeler l'opérateur sur l'accesseur (autrement dit, on écrit `get(0)()` plutôt que `get(0)`) .
+Notez qu'il faut inclure un second opérateur d'appel de fonction à la fin de l'accesseur pour réellement invoquer la fonction référencée et afficher la valeur stockée à l'intérieur (par exemple, `get(0)()` plutôt que `get(0)`).
 
-Dans cet exemple, on montre comment créer et manipuler un tableau en JavaScript mais ce tableau est également accessible et manipulable depuis l'instance WebAssembly.
+Cet exemple montre que nous créons et accédons au tableau depuis JavaScript, mais que le même tableau est visible et appelable à l'intérieur de l'instance Wasm aussi.
 
 ## Spécifications
 
@@ -77,6 +76,6 @@ Dans cet exemple, on montre comment créer et manipuler un tableau en JavaScript
 
 ## Voir aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- Un aperçu de [WebAssembly](/fr/docs/WebAssembly)
+- [Les concepts associés à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
 - [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

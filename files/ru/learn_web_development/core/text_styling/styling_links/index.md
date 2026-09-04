@@ -3,7 +3,7 @@ title: Стилизация ссылок
 slug: Learn_web_development/Core/Text_styling/Styling_links
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
 При стилизации ссылок, важно понимать как использовать псевдоклассы, чтобы стилизировать состояния ссылок эффективно, и как стилизировать ссылки для использования в общих разнообразных функциях интерфейса: таких как например навигационное меню и вкладки. Мы рассмотрим все эти темы в этой статье.
 
@@ -196,8 +196,7 @@ a:active {
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <p>There are several browsers available, such as <a href="https://www.mozilla.org/en-US/firefox/">Mozilla
  Firefox</a>, <a href="https://www.google.com/chrome/index.html">Google Chrome</a>, and
-<a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a>.</p></textarea
-  >
+<a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a>.</p></textarea>
 
   <h2>CSS Input</h2>
   <textarea
@@ -226,8 +225,7 @@ a:hover {
 
 a:active {
 
-}</textarea
-  >
+}</textarea>
 
   <h2>Output</h2>
   <div
@@ -450,4 +448,4 @@ a:active {
 
 Мы надеемся эта статья снабдила вас всем что вам надо знать о ссылках — на данный момент! Последняя статья в нашем модуле стилизации текста детализирует как использовать пользовательские шрифты на вашем веб-сайте или как они больше известны веб-шрифты.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}

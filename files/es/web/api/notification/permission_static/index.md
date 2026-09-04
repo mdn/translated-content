@@ -15,7 +15,7 @@ var permission = Notification.permission;
 
 ### Valor
 
-Una {{domxref("DOMString")}} representa el permiso actual. El valor puede ser:
+Una {{jsxref("String")}} representa el permiso actual. El valor puede ser:
 
 - `granted`: El usuario ha concedido el permiso explicitamente al origen actual para mostrar notificaciones del sistema.
 - `denied`: El usuario ha denegado el permiso explicitamente al origen actual para mostrar notificaciones del sistema.

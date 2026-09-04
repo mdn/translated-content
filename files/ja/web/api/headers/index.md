@@ -50,7 +50,7 @@ Headers のすべてのメソッドは、[有効な HTTP ヘッダー名](https:
 - {{domxref("Headers.forEach()")}}
   - : 指定された関数を、この `Headers` オブジェクトのキー/値のペアそれぞれに対して一度ずつ実行します。
 - {{domxref("Headers.get()")}}
-  - : `Headers` オブジェクトにある指定された名前を持つ、ヘッダーのすべての値を示す文字列の配列を返します。
+  - : `Headers` オブジェクト内の指定された名前のヘッダーのすべての値を繋げた文字列を返します。
 - {{domxref("Headers.getSetCookie()")}}
   - : レスポンスに関連付けられたすべての {{httpheader("Set-Cookie")}} ヘッダーの値の入った配列を返します。
 - {{domxref("Headers.has()")}}
@@ -100,7 +100,7 @@ myHeaders.get("Content-Type"); // 'text/xml' が返される
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
 - [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)

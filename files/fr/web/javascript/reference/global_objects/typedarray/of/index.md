@@ -41,7 +41,7 @@ Une nouvelle instance de {{jsxref("TypedArray")}}.
 Il existe de légères différences entre {{jsxref("Array.of()")}} et `TypedArray.of()` :
 
 - Si la valeur de `this` passée à `TypedArray.of` n'est pas un constructeur, `TypedArray.of` lèvera une exception {{jsxref("TypeError")}}, tandis que `Array.of` créera un nouvel objet {{jsxref("Array")}}.
-- `TypedArray.of` utilise `[[Put]]` tandis que `Array.of` utilise `[[DefineProperty]]`. Ainsi lorsque les arguments sont des objets {{jsxref("Proxy")}} la première méthode appellera {{jsxref("Objets_globaux/Proxy/handler/set", "handler.set")}} pour créer les nouveaux éléments et la seconde appellera {{jsxref("Objets_globaux/Proxy/handler/defineProperty", "handler.defineProperty")}}.
+- `TypedArray.of` utilise `[[Put]]` tandis que `Array.of` utilise `[[DefineProperty]]`. Ainsi lorsque les arguments sont des objets {{jsxref("Proxy")}} la première méthode appellera {{jsxref("Proxy/Proxy/set", "handler.set")}} pour créer les nouveaux éléments et la seconde appellera {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty")}}.
 
 ## Exemples
 

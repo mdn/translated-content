@@ -1,9 +1,8 @@
 ---
 title: L'évolution du protocole HTTP
 slug: Web/HTTP/Guides/Evolution_of_HTTP
-original_slug: Web/HTTP/Evolution_of_HTTP
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: f9a9e52d36680ee55fb9f3f1dfc41ca3cdce046f
 ---
 
 **HTTP** (<i lang="en">HyperText Transfer Protocol</i>) est le protocole sous-jacent du World Wide Web. Développé par Tim Berners-Lee et son équipe entre 1989 et 1991, HTTP a connu de nombreuses évolutions qui ont permis de préserver sa simplicité tout en façonnant sa flexibilité. Découvrez comment HTTP est passé d'un protocole conçu pour échanger des fichiers dans un environnement de laboratoire semi-fiable à un labyrinthe moderne d'internet transportant des images et des vidéos en haute résolution et en 3D.
@@ -17,13 +16,13 @@ En 1989, alors qu'il travaillait au <abbr title="Centre Européen de Recherche N
 - Un client pour afficher (et éditer) ces documents, le premier navigateur web appelé _WorldWideWeb_.
 - Un serveur pour donner accès au document, une version précoce de _httpd_.
 
-Ces quatre éléments étaient finalisés fin 1990, et les premiers serveurs fonctionnaient en dehors du CERN début 1991. Le 6 août 1991, Tim Berners-Lee [publie <sup>(angl.)</sup>](https://www.w3.org/People/Berners-Lee/1991/08/art-6484.txt) un message sur le groupe de discussion public _alt.hypertext_. Cet événement est aujourd'hui considéré comme le lancement officiel du World Wide Web en tant que projet public.
+Ces quatre éléments étaient finalisés fin 1990, et les premiers serveurs fonctionnaient en dehors du CERN début 1991. Le 6 août 1991, Tim Berners-Lee [publie <sup>(angl.)</sup>](https://www.w3.org/People/Berners-Lee/1991/08/art-6484.txt) un message sur le groupe de discussion public _alt.hypertext_. Cet évènement est aujourd'hui considéré comme le lancement officiel du World Wide Web en tant que projet public.
 
 Le protocole HTTP utilisé à cette époque était très simple. Il fut plus tard nommé HTTP/0.9 et est parfois appelé le protocole en une ligne.
 
 ## HTTP/0.9 - Le protocole en _une ligne_
 
-La version initiale de HTTP ne comportait pas de numéro de version&nbsp;; elle fut ensuite appelée 0.9 pour la différencier des versions ultérieures. HTTP/0.9 était extrêmement simple&nbsp;: les requêtes consistaient en une seule ligne et commençaient par la seule méthode possible {{HTTPMethod("GET")}} suivie du chemin vers la ressource. L'URL complète n'était pas incluse car le protocole, le serveur et le port n'étaient pas nécessaires une fois connecté au serveur.
+La version initiale de HTTP ne comportait pas de numéro de version&nbsp;; elle fut ensuite appelée 0.9 pour la différencier des versions ultérieures. HTTP/0.9 était extrêmement simple&nbsp;: les requêtes consistaient en une seule ligne et commençaient par la seule méthode possible {{HTTPMethod("GET")}} suivie du chemin vers la ressource. L'URL complète n'était pas incluse, car le protocole, le serveur et le port n'étaient pas nécessaires une fois connecté au serveur.
 
 ```http
 GET /ma-page.html
@@ -58,6 +57,7 @@ HTTP/1.0 200 OK
 Date: Tue, 15 Nov 1994 08:12:31 GMT
 Server: CERN/3.0 libwww/2.17
 Content-Type: text/html
+
 <HTML>
 Une page avec une image
   <IMG SRC="/mon-image.gif">
@@ -74,6 +74,7 @@ HTTP/1.0 200 OK
 Date: Tue, 15 Nov 1994 08:12:32 GMT
 Server: CERN/3.0 libwww/2.17
 Content-Type: text/gif
+
 (contenu de l'image)
 ```
 
@@ -145,13 +146,13 @@ GET /static/js/main.a918a4e7.js HTTP/1.1
 Host: developer.mozilla.org
 ```
 
-L'établissement d'une connexion TCP est une étape coûteuse dans l'échange client-serveur, et la {{glossary("TCP slow start")}} implique que les connexions de longue durée sont plus rapides que les connexions nouvellement créées.
+L'établissement d'une connexion TCP est une étape coûteuse dans l'échange client-serveur, et la {{Glossary("TCP slow start")}} implique que les connexions de longue durée sont plus rapides que les connexions nouvellement créées.
 HTTP/1.1 permet de réutiliser une connexion TCP pour plusieurs requêtes et réponses, évitant ainsi de devoir créer une nouvelle connexion pour chaque requête.
-Cependant, les clients devaient toujours attendre que chaque ressource soit téléchargée avant de demander la suivante ({{glossary("Head_of_line_blocking", "blocage en tête de ligne")}}).
-Pour contourner cela, la plupart des navigateurs autorisent jusqu'à six connexions TCP par site web (ou {{glossary("origin", "origine")}}).
+Cependant, les clients devaient toujours attendre que chaque ressource soit téléchargée avant de demander la suivante ({{Glossary("Head_of_line_blocking", "blocage en tête de ligne")}}).
+Pour contourner cela, la plupart des navigateurs autorisent jusqu'à six connexions TCP par site web (ou {{Glossary("origin", "origine")}}).
 Avec six connexions parallèles, les navigateurs peuvent récupérer plusieurs ressources simultanément selon le modèle HTTP/1.1, ce qui a permis d'importantes améliorations de performance.
 
-HTTP/1.1 a été publié pour la première fois sous {{rfc(2068)}} en janvier 1997.
+HTTP/1.1 a été publié pour la première fois sous {{RFC(2068)}} en janvier 1997.
 
 ## Plus de deux décennies de développement
 
@@ -165,24 +166,24 @@ Le plus grand changement apporté à HTTP a eu lieu fin 1994. Au lieu d'envoyer 
 
 ### Utiliser HTTP pour des applications complexes
 
-Tim Berners-Lee n'imaginait pas à l'origine HTTP comme un média en lecture seule. Il souhaitait créer un web où chacun·e pourrait ajouter et déplacer des documents à distance&nbsp;: une sorte de système de fichiers distribué. Vers 1996, HTTP a été étendu pour permettre l'édition, et une norme appelée WebDAV a été créée. Elle s'est enrichie d'applications spécifiques comme CardDAV pour la gestion des carnets d'adresses et CalDAV pour les calendriers. Mais toutes ces extensions \*DAV avaient un défaut&nbsp;: elles n'étaient utilisables que si elles étaient implémentées par les serveurs.
+Tim Berners-Lee n'imaginait pas à l'origine HTTP comme un média en lecture seule. Il souhaitait créer un web où chacun·e peut ajouter et déplacer des documents à distance&nbsp;: une sorte de système de fichiers distribué. Vers 1996, HTTP a été étendu pour permettre l'édition, et une norme appelée WebDAV a été créée. Elle s'est enrichie d'applications spécifiques comme CardDAV pour la gestion des carnets d'adresses et CalDAV pour les calendriers. Mais toutes ces extensions \*DAV avaient un défaut&nbsp;: elles n'étaient utilisables que si elles étaient implémentées par les serveurs.
 
-En 2000, un nouveau modèle d'utilisation de HTTP a été conçu&nbsp;: {{glossary("REST", "transfert de représentation d'état")}} (ou REST). L'API ne reposait pas sur de nouvelles méthodes HTTP, mais sur l'accès à des URI spécifiques avec les méthodes HTTP/1.1 de base. Cela permettait à toute application web de proposer une API pour récupérer et modifier ses données sans avoir à mettre à jour les navigateurs ou les serveurs. Toutes les informations nécessaires étaient intégrées dans les fichiers servis via HTTP/1.1 standard. L'inconvénient du modèle REST était que chaque site définissait sa propre API REST non standard et en avait le contrôle total. Cela différait des extensions \*DAV où clients et serveurs étaient interopérables. Les API REST sont devenues très courantes dans les années 2010.
+En 2000, un nouveau modèle d'utilisation de HTTP a été conçu&nbsp;: {{Glossary("REST", "transfert de représentation d'état")}} (ou REST). L'API ne reposait pas sur de nouvelles méthodes HTTP, mais sur l'accès à des URI spécifiques avec les méthodes HTTP/1.1 de base. Cela permettait à toute application web de proposer une API pour récupérer et modifier ses données sans avoir à mettre à jour les navigateurs ou les serveurs. Toutes les informations nécessaires étaient intégrées dans les fichiers servis avec HTTP/1.1 standard. L'inconvénient du modèle REST était que chaque site définissait sa propre API REST non standard et en avait le contrôle total. Cela différait des extensions \*DAV où clients et serveurs étaient interopérables. Les API REST sont devenues très courantes dans les années 2010.
 
 Depuis 2005, davantage d'API sont disponibles pour les pages web. Plusieurs de ces API créent des extensions du protocole HTTP pour des usages spécifiques&nbsp;:
 
-- [Événements envoyés par le serveur](/fr/docs/Web/API/Server-sent_events), où le serveur peut envoyer occasionnellement des messages au navigateur.
+- [Évènements envoyés par le serveur](/fr/docs/Web/API/Server-sent_events), où le serveur peut envoyer occasionnellement des messages au navigateur.
 - [WebSocket](/fr/docs/Web/API/WebSockets_API), un nouveau protocole pouvant être établi en mettant à niveau une connexion HTTP existante.
 
 ### Assouplir le modèle de sécurité du web
 
-HTTP est indépendant du modèle de sécurité du web, connu sous le nom de [politique de même origine](/fr/docs/Web/Security/Same-origin_policy). En réalité, le modèle de sécurité actuel du web a été développé après la création de HTTP&nbsp;! Au fil des années, il s'est avéré utile d'assouplir certaines restrictions de cette politique sous certaines conditions. Le serveur transmettait au client, via de nouveaux en-têtes HTTP, dans quelle mesure et à quel moment lever ces restrictions. Ces en-têtes ont été définis dans des spécifications comme [Cross-Origin Resource Sharing](/fr/docs/Glossary/CORS) (CORS) et la [Content Security Policy](/fr/docs/Web/HTTP/Guides/CSP) (CSP).
+HTTP est indépendant du modèle de sécurité du web, connu sous le nom de [politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy). En réalité, le modèle de sécurité actuel du web a été développé après la création de HTTP&nbsp;! Au fil des années, il s'est avéré utile d'assouplir certaines restrictions de cette politique sous certaines conditions. Le serveur transmettait au client, avec de nouveaux en-têtes HTTP, dans quelle mesure et à quel moment lever ces restrictions. Ces en-têtes ont été définis dans des spécifications comme [Cross-Origin Resource Sharing](/fr/docs/Glossary/CORS) (CORS) et la [Content Security Policy](/fr/docs/Web/HTTP/Guides/CSP) (CSP).
 
 En plus de ces grandes extensions, de nombreux autres en-têtes ont été ajoutés, parfois uniquement à titre expérimental. Parmi les en-têtes notables, on trouve Do Not Track ({{HTTPHeader("DNT")}}) pour contrôler la vie privée, {{HTTPHeader("X-Frame-Options")}}, et {{HTTPHeader('Upgrade-Insecure-Requests')}} mais il en existe bien d'autres.
 
 ## HTTP/2 - Un protocole pour de meilleures performances
 
-Au fil des années, les pages web sont devenues plus complexes. Certaines sont même devenues de véritables applications. Plus de médias visuels étaient affichés et le volume ainsi que la taille des scripts ajoutant de l'interactivité ont aussi augmenté. Beaucoup plus de données étaient transmises via un nombre bien plus important de requêtes HTTP, ce qui a accru la complexité et la surcharge des connexions HTTP/1.1. Pour y remédier, Google a mis en œuvre un protocole expérimental, SPDY, au début des années 2010. Cette nouvelle façon d'échanger des données entre client et serveur a suscité l'intérêt des développeur·euse·s travaillant sur les navigateurs et les serveurs. SPDY a permis d'augmenter la réactivité et de résoudre le problème de la transmission de données en double, servant ainsi de base au protocole HTTP/2.
+Au fil des années, les pages web sont devenues plus complexes. Certaines sont même devenues de véritables applications. Plus de médias visuels étaient affichés et le volume ainsi que la taille des scripts ajoutant de l'interactivité ont aussi augmenté. Beaucoup plus de données étaient transmises avec un nombre bien plus important de requêtes HTTP, ce qui a accru la complexité et la surcharge des connexions HTTP/1.1. Pour y remédier, Google a mis en œuvre un protocole expérimental, SPDY, au début des années 2010. Cette nouvelle façon d'échanger des données entre client et serveur a suscité l'intérêt des développeur·euse·s travaillant sur les navigateurs et les serveurs. SPDY a permis d'augmenter la réactivité et de résoudre le problème de la transmission de données en double, servant ainsi de base au protocole HTTP/2.
 
 Le protocole HTTP/2 diffère de HTTP/1.1 sur plusieurs points&nbsp;:
 
@@ -216,9 +217,9 @@ Défini dans le {{RFC("9114")}}, [HTTP/3 est pris en charge par la plupart des p
 - [Mécanisme de mise à niveau du protocole](/fr/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
 - [Ressources et spécifications HTTP](/fr/docs/Web/HTTP/Reference/Resources_and_specifications)
 - Termes du glossaire&nbsp;:
-  - {{glossary('HTTP')}}
-  - {{glossary('HTTP_2', 'HTTP/2')}}
-  - {{glossary('QUIC')}}
-  - {{glossary('Round Trip Time', 'Temps aller-retour (RTT)')}}
-  - {{glossary('TCP slow start', 'Démarrage lent TCP')}}
-  - {{glossary('TCP', 'Transmission Control Protocol (TCP)')}}
+  - {{Glossary('HTTP')}}
+  - {{Glossary('HTTP_2', 'HTTP/2')}}
+  - {{Glossary('QUIC')}}
+  - {{Glossary('Round Trip Time', 'Temps aller-retour (RTT)')}}
+  - {{Glossary('TCP slow start', 'Démarrage lent TCP')}}
+  - {{Glossary('TCP', 'Transmission Control Protocol (TCP)')}}

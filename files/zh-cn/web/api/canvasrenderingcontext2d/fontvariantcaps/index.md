@@ -9,7 +9,7 @@ l10n:
 
 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 的 `CanvasRenderingContext2D.fontVariantCaps` 属性用于指定渲染文本的替代大写形式。
 
-该属性对应于 CSS 中的 [`font-variant-caps`](/zh-CN/docs/Web/CSS/font-variant-caps) 属性。
+该属性对应于 CSS 中的 [`font-variant-caps`](/zh-CN/docs/Web/CSS/Reference/Properties/font-variant-caps) 属性。
 
 ## 值
 
@@ -32,7 +32,7 @@ l10n:
 
 该属性可以用于获取或设置字体的大写值。
 
-请注意，某些内容可能会引发无障碍问题，具体内容请参阅相应的 [`font-variant-caps`](/zh-CN/docs/Web/CSS/font-variant-caps#无障碍访问风险) 主题。
+请注意，某些内容可能会引发无障碍问题，具体内容请参阅相应的 [`font-variant-caps`](/zh-CN/docs/Web/CSS/Reference/Properties/font-variant-caps#无障碍访问风险) 主题。
 
 ## 示例
 

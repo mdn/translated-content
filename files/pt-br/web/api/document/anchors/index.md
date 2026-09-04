@@ -5,7 +5,7 @@ slug: Web/API/Document/anchors
 
 {{APIRef("DOM")}}
 
-{{deprecated_header("HTML5")}}
+{{deprecated_header}}
 
 `anchors` retorna uma lista de todas as âncoras no documento.
 
@@ -73,7 +73,7 @@ O código a seguir é um exemplo que popula automaticamente um índice de conte�
 
 ## Notas
 
-Por motivos de compatibilidade, o conjunto de âncoras retornadas por `anchors` contém apenas as âncoras criadas com o atributo `name`, não incluindo as âncoras criadas com o atributo [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id).
+Por motivos de compatibilidade, o conjunto de âncoras retornadas por `anchors` contém apenas as âncoras criadas com o atributo `name`, não incluindo as âncoras criadas com o atributo [`id`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#id).
 
 ## Especificações
 

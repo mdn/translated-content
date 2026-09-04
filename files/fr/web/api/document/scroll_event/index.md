@@ -1,94 +1,63 @@
 ---
-title: scroll
+title: "Document : évènement scroll"
+short-title: scroll
 slug: Web/API/Document/scroll_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
-L'évènement **`scroll`** (défilement) est émis lorsque l'on fait défiler le document ou un élément.
+L'évènement **`scroll`** de l'interface {{DOMxRef("Document")}} est déclenché lorsque la vue du document a été défilée.
+Pour détecter lorsque le défilement est terminé, voir l'évènement {{DOMxRef("Document/scrollend_event", "scrollend")}} de `Document`.
+Pour le défilement des éléments, voir l'évènement {{DOMxRef("Element/scroll_event", "scroll")}} de `Element`.
 
-## Informations générales
+## Syntaxe
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bouillonne</th>
-      <td>
-        Pas sur les éléments, mais bouillonne vers la defaultView si émis sur le
-        document
-      </td>
-    </tr>
-    <tr>
-      <th>Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("UIEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Cible</th>
-      <td>
-        DefaultView, {{domxref("Document")}},
-        {{domxref("Element")}}
-      </td>
-    </tr>
-    <tr>
-      <th>Action par défaut</th>
-      <td>Aucune</td>
-    </tr>
-  </tbody>
-</table>
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènements.
 
-> [!NOTE]
-> Sur iOS UIWebViews, les évènements `scroll` ne sont pas émis pendant le défilement, mais une fois que celui-ci est terminé. Voir [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202). Safari et WKWebViews ne sont pas affectés par ce bogue.
+```js-nolint
+addEventListener("scroll", (event) => { })
 
-## Propriétés
+onscroll = (event) => { }
+```
 
-| Propriété                       | Type                       | Description                                                      |
-| ------------------------------- | -------------------------- | ---------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l'évènement (la plus haute dans l'arbre DOM).        |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Le type d'évènement.                                             |
-| `bubbles` {{readonlyInline}}    | {{domxref("Boolean")}}     | Si l'évènement bouillonne ou non.                                |
-| `cancelable` {{readonlyInline}} | {{domxref("Boolean")}}     | Si l'évènement est annulable ou non.                             |
-| `view` {{readonlyInline}}       | {{domxref("WindowProxy")}} | {{domxref("Document.defaultView")}} (objet `window` du document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)           | 0.                                                               |
+## Type d'évènement
 
-## Exemple
+Un objet {{DOMxRef("Event")}} générique.
 
-### Temporisation des évènements scroll
+## Exemples
 
-Comme les évènements `scroll` peuvent être émis à une fréquence élevée, le gestionnaire d'évènements ne devrait pas effectuer des opérations coûteuses en termes de puissance de calcul, telles que des modification du DOM. À la place, il est recommandé de temporiser l'évènement en utilisant {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{domxref("window.setTimeout()", "setTimeout()")}} ou un {{domxref("CustomEvent")}}, comme suit.
+### Limiter la fréquence de l'évènement de défilement
 
-Notez, cependant, que les évènements d'interface utilisateur et les frames d'animation sont émises à peu près à la même fréquence, et ainsi l'optimisation qui suit est souvent superflue. Cet exemple optimise l'évènement `scroll` avec `requestAnimationFrame`.
+Comme les évènements `scroll` peuvent se déclencher à un rythme élevé, le gestionnaire d'évènements ne doit pas exécuter des opérations coûteuses en calcul, telles que des modifications du DOM. Si vous remarquez un {{Glossary("jank", "ralentissement")}} lors d'un défilement rapide, vous devriez envisager de {{Glossary("throttle", "limiter la fréquence")}} l'évènement.
+
+Notez que vous pouvez rencontrer du code qui limite la fréquence du gestionnaire d'évènements `scroll` en utilisant {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}. Cela est _inutile_ car les rappels d'image d'animation sont déclenchés à la même fréquence que les gestionnaires d'évènements `scroll`. À la place, vous devez mesurer le délai vous-même, par exemple en utilisant {{DOMxRef("Window.setTimeout", "setTimeout()")}}.
 
 ```js
-// Référence: http://www.html5rocks.com/en/tutorials/speed/animations/
+let lastKnownScrollPosition = 0;
+let ticking = false;
 
-var derniere_position_de_scroll_connue = 0;
-var ticking = false;
-
-function faireQuelqueChose(position_scroll) {
-  // faire quelque chose avec la position du scroll
+function doSomething(scrollPos) {
+  // Faire quelque chose avec la position de défilement
 }
 
-window.addEventListener("scroll", function (e) {
-  derniere_position_de_scroll_connue = window.scrollY;
+document.addEventListener("scroll", (event) => {
+  lastKnownScrollPosition = window.scrollY;
 
   if (!ticking) {
-    window.requestAnimationFrame(function () {
-      faireQuelqueChose(derniere_position_de_scroll_connue);
+    // Limiter la fréquence de l'évènement pour "faire quelque chose" toutes les 20ms
+    setTimeout(() => {
+      doSomething(lastKnownScrollPosition);
       ticking = false;
-    });
-  }
+    }, 20);
 
-  ticking = true;
+    ticking = true;
+  }
 });
 ```
 
-### Autres exemples
-
-Pour plus d'exemples similaires, voir l'évènement [resize](/fr/docs/Web/API/Window/resize_event#example).
+De plus, vous pouvez envisager d'utiliser {{DOMxRef("IntersectionObserver")}} à la place, ce qui permet une écoute basée sur des seuils.
 
 ## Spécifications
 
@@ -100,4 +69,6 @@ Pour plus d'exemples similaires, voir l'évènement [resize](/fr/docs/Web/API/Wi
 
 ## Voir aussi
 
-- {{domxref("GlobalEventHandlers.onscroll")}}
+- L'évènement {{DOMxRef("Document.scrollend_event", "scrollend")}}
+- L'évènement {{DOMxRef("Element.scroll_event", "scroll")}}
+- L'évènement {{DOMxRef("Element.scrollend_event", "scrollend")}}

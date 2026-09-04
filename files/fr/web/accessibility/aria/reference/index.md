@@ -7,4 +7,4 @@ l10n:
 
 Cette page liste la documentation de référence pour les applications Internet riches accessibles (<abbr title="Accessible Rich Internet Applications">ARIA</abbr>).
 
-{{SubPagesWithSummaries}}
+{{SubpagesWithSummaries}}

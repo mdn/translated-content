@@ -2,7 +2,7 @@
 title: 構文の節
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
 l10n:
-  sourceCommit: 593fbf22e45cc0bf399aae1cf921af86885dd364
+  sourceCommit: 14acf1aa7885157debdf1b6111f4bd10c064ec60
 ---
 
 MDN リファレンスページの構文の節には、機能が持つ正確な構文を定義する構文ボックスがあります（例えば、どのような引数が受け入れられるか、どれがオプションかなど）。この記事では、リファレンス記事の構文ボックスの書き方を説明します。
@@ -117,7 +117,7 @@ arr.slice([begin[, end]])
 構文ブロックを簡潔にし、その機能の構文の定義の曖昧さをなくすために。無関係な構文を含めないでください。例えば、このサイトの多くの場所で、プロミスを説明するために次のような形をよく見かけます。
 
 ```js-nolint
-caches.match(request, options).then(function (response) {
+caches.match(request, options).then((response) => {
   // Do something with the response
 })
 ```
@@ -255,7 +255,7 @@ CSS プロパティによってはそれ自体が説明的であり、それ以�
 
 ### セレクター
 
-セレクターのリファレンスページの「構文」の節は、プロパティページよりもずっと簡潔です。ここには "Syntax Box" を使用してスタイル付けされたブロックが 1 つ入り、ここでセレクターの基本的な構文を、単純なキーワードだけ (例えば {{CSSxRef(":hover")}}) または引数を取るより複雑な関数値（例えば {{CSSxRef(":not", ":not()")}}）のどちらかで示します。引数を構文ブロックの中の別な項目で説明している場合もあります（例えば {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}} を参照してください）。
+セレクターのリファレンスページの「構文」の節は、プロパティページよりもずっと簡潔です。ここには "Syntax Box" を使用してスタイル付けされたブロックが 1 つ入り、ここでセレクターの基本的な構文を、単純なキーワードだけ (例えば {{CSSxRef(":hover")}}) または引数を取るより複雑な関数値（例えば {{cssxref(":not()")}}）のどちらかで示します。引数を構文ブロックの中の別な項目で説明している場合もあります（例えば {{cssxref(":nth-last-of-type()")}} を参照してください）。
 
 このブロックは、 [MDN data リポジトリー](https://github.com/mdn/data)の CSS ディレクトリーにあるデータから自動的に生成されます。題名の下で `CSSSyntax` マクロ呼び出しを追加するだけで、残りのことはマクロがやってくれます。
 

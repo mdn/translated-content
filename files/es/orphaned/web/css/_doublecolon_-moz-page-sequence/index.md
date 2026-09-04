@@ -8,7 +8,7 @@ original_slug: Web/CSS/::-moz-page-sequence
 
 ## Resumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) `::-moz-page-sequence` sirve para representar el fondo de la previsualización de impresión.
+El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/es/docs/Web/CSS) `::-moz-page-sequence` sirve para representar el fondo de la previsualización de impresión.
 
 ## Ejemplos
 

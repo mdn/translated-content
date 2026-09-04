@@ -3,7 +3,7 @@ title: Насколько дорого обойдётся сделать что-
 slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 Веб-разработка обходится не так дёшево, как вам может показаться. В этой статье мы обсудим, как много вам потребуется потратить и почему.
 

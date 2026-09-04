@@ -1,11 +1,10 @@
 ---
-title: "<br>: 改行要素"
+title: HTML `<br>` 改行要素
+short-title: <br>
 slug: Web/HTML/Reference/Elements/br
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<br>`** は [HTML](/ja/docs/Web/HTML) の要素で、文中に改行（キャリッジリターン）を生成します。詩や住所など、行の分割が重要な場合に有用です。
 
@@ -13,7 +12,7 @@ l10n:
 
 ```html interactive-example
 <p>
-  O’er all the hilltops<br />
+  O'er all the hilltops<br />
   Is quiet now,<br />
   In all the treetops<br />
   Hearest thou<br />
@@ -54,7 +53,7 @@ p {
 
 ## アクセシビリティ
 
-段落間の間隔を広げるために連続した `<br>` 要素を使用することは、読み上げ技術の支援の下で操作をしている人にとっては問題になります。読み上げソフトは要素が存在することをアナウンスするものの、その中にはコンテンツが何もないという状況になる可能性があります。これは読み上げソフトを使用している人の利用を混乱させ不満をためる可能性があります。
+段落間の間隔を広げるために連続した `<br>` 要素を使用することは、読み上げ技術の支援の下で操作をしている人にとっては問題になります。スクリーンリーダーは要素が存在することをアナウンスするものの、その中にはコンテンツが何もないという状況になる可能性があります。これはスクリーンリーダーを使用している人の利用を混乱させ不満をためる可能性があります。
 
 追加の間隔をあける必要がある場合は、 {{cssxref("margin")}} のような CSS プロパティを使用して効果を得るようにしてください。
 
@@ -115,7 +114,7 @@ USA<br />
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>

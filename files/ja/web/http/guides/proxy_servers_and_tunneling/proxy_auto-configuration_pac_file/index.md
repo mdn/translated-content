@@ -2,7 +2,7 @@
 title: プロキシー自動構成ファイル (PAC)
 slug: Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
 ---
 
 **プロキシー自動構成 (Proxy Auto-Configuration, PAC)** ファイルは、ウェブブラウザーのリクエスト (HTTP, HTTPS, FTP 等) を直接宛先に送るか、ウェブプロキシーサーバーに転送するか決める JavaScript の関数です。次の JavaScript 関数を PAC ファイル内に記述します。
@@ -99,7 +99,7 @@ PAC ファイルを作成するために、以下の関数を使用できます�
 - 時刻に基づく条件
   - [`weekdayRange()`](#weekdayrange)
   - [`dateRange()`](#daterange)
-  - [`timeRange()`](#timerange)
+  - [`timeRange()`](#timeRange)
 
 - ログ用ユーティリティ
   - [`alert()`](#alert)
@@ -495,12 +495,12 @@ timeRange(hour1, min1, sec1, hour2, min2, sec2, gmt)
 #### 例
 
 ```js-nolint
-timerange(12); // 正午から午後 1 時まで true を返す
-timerange(12, 13) // 正午から午後 1 時まで true を返す
-timerange(12, "GMT") // GMT タイムゾーンで正午から午後 1 時まで true を返す
-timerange(9, 17) // 午前 9 時から午後 5 時まで true を返す
-timerange(8, 30, 17, 0) // 午前 8 時 30 分から午後 5 時まで true を返す
-timerange(0, 0, 0, 0, 0, 30) // 午前 0 時から午前 0 時 30 秒までの間に true を返す
+timeRange(12); // 正午から午後 1 時まで true を返す
+timeRange(12, 13) // 正午から午後 1 時まで true を返す
+timeRange(12, "GMT") // GMT タイムゾーンで正午から午後 1 時まで true を返す
+timeRange(9, 17) // 午前 9 時から午後 5 時まで true を返す
+timeRange(8, 30, 17, 0) // 午前 8 時 30 分から午後 5 時まで true を返す
+timeRange(0, 0, 0, 0, 0, 30) // 午前 0 時から午前 0 時 30 秒までの間に true を返す
 ```
 
 ### alert()
@@ -581,7 +581,7 @@ function FindProxyForURL(url, host) {
   if (isResolvable(host)) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 
@@ -591,12 +591,12 @@ function FindProxyForURL(url, host) {
 function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
-    dnsDomainIs(host, ".mydomain.com") ||
+    dnsDomainIs(host, ".example.com") ||
     isResolvable(host)
   ) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 
@@ -611,7 +611,7 @@ function FindProxyForURL(url, host) {
   if (isInNet(host, "192.0.2.172", "255.255.0.0")) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 
@@ -621,12 +621,12 @@ function FindProxyForURL(url, host) {
 function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
-    dnsDomainIs(host, ".mydomain.com") ||
+    dnsDomainIs(host, ".example.com") ||
     isInNet(host, "192.0.2.0", "255.255.0.0")
   ) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 
@@ -647,14 +647,14 @@ function FindProxyForURL(url, host) {
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com")) {
+  if (isPlainHostName(host) || dnsDomainIs(host, ".example.com")) {
     return "DIRECT";
   } else if (shExpMatch(host, "*.com")) {
-    return "PROXY proxy1.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+    return "PROXY proxy1.example.com:8080; PROXY proxy4.example.com:8080";
   } else if (shExpMatch(host, "*.edu")) {
-    return "PROXY proxy2.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+    return "PROXY proxy2.example.com:8080; PROXY proxy4.example.com:8080";
   }
-  return "PROXY proxy3.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  return "PROXY proxy3.example.com:8080; PROXY proxy4.example.com:8080";
 }
 ```
 
@@ -667,13 +667,13 @@ function FindProxyForURL(url, host) {
 ```js
 function FindProxyForURL(url, host) {
   if (url.startsWith("http:")) {
-    return "PROXY http-proxy.mydomain.com:8080";
+    return "PROXY http-proxy.example.com:8080";
   } else if (url.startsWith("ftp:")) {
-    return "PROXY ftp-proxy.mydomain.com:8080";
+    return "PROXY ftp-proxy.example.com:8080";
   } else if (url.startsWith("gopher:")) {
-    return "PROXY gopher-proxy.mydomain.com:8080";
+    return "PROXY gopher-proxy.example.com:8080";
   } else if (url.startsWith("https:") || url.startsWith("snews:")) {
-    return "PROXY security-proxy.mydomain.com:8080";
+    return "PROXY security-proxy.example.com:8080";
   }
   return "DIRECT";
 }
@@ -686,7 +686,7 @@ function FindProxyForURL(url, host) {
 
 ```js
 if (shExpMatch(url, "http:*")) {
-  return "PROXY http-proxy.mydomain.com:8080";
+  return "PROXY http-proxy.example.com:8080";
 }
 ```
 
@@ -699,12 +699,12 @@ if (shExpMatch(url, "http:*")) {
 
 プロキシー自動構成は、 JavaScript が導入された 1990 年代後半に Netscape Navigator 2.0 に導入されました。 Netscape のオープンソース化は、最終的に Firefox 自体につながっています。
 
-PAC とその JavaScript ライブラリーの最も「オリジナルな」実装は、したがって、 Firefox の初期バージョンにある `nsProxyAutoConfig.js` です。これらのユーティリティは [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h) を含む他の多くのオープンソースシステムで見つかります。 Firefox では、後にこのファイルを [`ProxyAutoConfig.cpp`](https://searchfox.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) に C++ 文字列リテラルとして統合しています。これを独自のファイルに展開するには、その塊を JavaScript にコピーして、それを表示するための `console.log` ディレクティブを指定すれば十分です。
+PAC とその JavaScript ライブラリーの最も「オリジナルな」実装は、したがって、 Firefox の初期バージョンにある `nsProxyAutoConfig.js` です。これらのユーティリティは [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h) を含む他の多くのオープンソースシステムで見つかります。 Firefox では、後にこのファイルを [`ProxyAutoConfig.cpp`](https://searchfox.org/firefox-main/source/netwerk/base/ProxyAutoConfig.cpp) に C++ 文字列リテラルとして統合しています。これを独自のファイルに展開するには、その塊を JavaScript にコピーして、それを表示するための `console.log` ディレクティブを指定すれば十分です。
 
-マイクロソフトは一般に独自の実装をしています。以前は[ライブラリーの問題](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems)もありましたが、現在はほとんど解決しています。 IPv6 に対応するために、アドレス処理部分を中心に[いくつかの新しい "Ex" 接尾辞付き関数](https://learn.microsoft.com/ja-jp/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format)を定義しているそうです。この機能は Chromium では対応していますが、 Firefox ではまだ対応していません ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253))。
+マイクロソフトは一般に独自の実装をしています。以前は[ライブラリーの問題](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems)もありましたが、現在はほとんど解決しています。 IPv6 に対応するために、アドレス処理部分を中心に[いくつかの新しい "Ex" 接尾辞付き関数](https://learn.microsoft.com/ja-jp/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format)を定義しています。この機能は Chromium では対応していますが、 Firefox ではまだ対応していません ([bugzilla #558253](https://bugzil.la/558253))。
 
 ## 関連情報
 
 - {{glossary("Proxy server", "プロキシーサーバー")}}
-- [MIME types (IANA media types)](/ja/docs/Web/HTTP/Guides/MIME_types)
+- [MIME タイプ (IANA メディア種別)](/ja/docs/Web/HTTP/Guides/MIME_types)
 - [Automatic proxy HTTP server configuration in web browsers](https://jdebp.uk/FGA/web-browser-auto-proxy-configuration.html)

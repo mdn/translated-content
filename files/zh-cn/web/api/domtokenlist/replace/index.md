@@ -16,9 +16,9 @@ replace(oldToken, newToken)
 ### 参数
 
 - `oldToken`
-  - : {{domxref("DOMString")}}类型，想要替换掉的字符串。
+  - : {{jsxref("String")}}类型，想要替换掉的字符串。
 - `newToken`
-  - : {{domxref("DOMString")}}类型，表示要将`oldToken`字符串替换成的字符串。
+  - : {{jsxref("String")}}类型，表示要将`oldToken`字符串替换成的字符串。
 
 ### 返回值
 

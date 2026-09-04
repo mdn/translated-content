@@ -3,7 +3,7 @@ title: Какое программное обеспечение необходи
 slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 В этой статье мы изложим какие программные компоненты вам понадобятся при редактировании, загрузке или просмотре веб-сайта.
 

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-**`CSSSkew`** は {{domxref('CSS_Object_Model#css_typed_object_model','CSS 型付きオブジェクトモデル','',' ')}}のインターフェイスで、 {{domxref('CSSTransformValue')}} インターフェイスの一部です。これは CSS における個々の {{CSSXRef('transform')}} プロパティの [`skew()`](/ja/docs/Web/CSS/transform-function/skew) の値を表します。
+**`CSSSkew`** は {{domxref('CSS_Object_Model#css_typed_object_model','CSS 型付きオブジェクトモデル','',' ')}}のインターフェイスで、 {{domxref('CSSTransformValue')}} インターフェイスの一部です。これは CSS における個々の {{CSSXRef('transform')}} プロパティの [`skew()`](/ja/docs/Web/CSS/Reference/Values/transform-function/skew) の値を表します。
 
 {{InheritanceDiagram}}
 

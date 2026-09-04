@@ -1,14 +1,11 @@
 ---
 title: 色のコントラスト
 slug: Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast
-original_slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{AccessibilitySidebar}}
-
-背景と前景のコンテンツ（通常はテキスト）の[色のコントラスト](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio)は、可読性を確実に保持するのに十分なほど大きくすべきです。
+背景と前景のコンテンツ（通常はテキスト）の[色のコントラスト](https://w3c.github.io/wcag/guidelines/22/#dfn-contrast-ratio)<sup>（英語）</sup>は、可読性を確実に確保するのに十分な大きさである必要があります。
 
 さまざまな視覚能力に対応した読み取り可能なインターフェイスを設計する際、 WCAG ガイドラインでは次のコントラスト比に従うことを推奨しています。
 
@@ -28,7 +25,7 @@ l10n:
 
 ## 例
 
-単純な HTML と CSS のコードを見ていきましょう。
+HTML と CSS のコードをいくらか見ていきましょう。
 
 ```html
 <div class="good">良いコントラスト</div>
@@ -65,7 +62,7 @@ div {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  width: 250px;
+  width: 280px;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 4px 4px 4px black;
@@ -92,7 +89,7 @@ div {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  width: 250px;
+  width: 280px;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 4px 4px 4px black;
@@ -107,9 +104,9 @@ div {
 
 ## 解決策
 
-ウェブサイトに配色を選ぶ際には、前景色と背景色にコントラストの強い色を選びましょう。 デザイン上の制約の範囲内で、色のコントラストをできるだけ良くしてください。理想的には AAA 評価（下記 1.4.6 参照）を目指しますが、少なくとも AA 評価（下記 1.4.3 参照）を満たすようにしてください。
+ウェブサイトに配色を選ぶ際には、前景色と背景色にコントラストの高い色を選びましょう。 デザイン上の制約の範囲内で、色のコントラストをできるだけ良くしてください。理想的には AAA 評価（下記 1.4.6 参照）を目指しますが、少なくとも AA 評価（下記 1.4.3 参照）を満たすようにしてください。
 
-動画やアニメーションなどのテキスト以外のコンテンツが含まれる場合は、 1.4.11 に従うことで対応できます（下記参照）。
+動画やアニメーションなどのテキスト以外のコンテンツが含まれる場合は、 1.4.11 に従ってください（下記参照）。
 
 色を選択する際にコントラストを調べるには、 WebAIM の [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) などのツールを使用してください。
 
@@ -117,17 +114,17 @@ div {
 
 ## 関連する WCAG 達成基準
 
-- [1.4.3 最低限のコントラスト (AA)](https://www.w3.org/TR/WCAG21/#contrast-minimum)
+- [1.4.3 最低限のコントラスト (AA)](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum)
   - : 背景と前景のコンテンツの間の色のコントラストは、読みやすさを確実なものとするための最低限のレベルであるべきです。
     - テキストとその背景のコントラスト比は少なくとも 4.5:1 であるべきです。
     - 見出し（またはそれよりも大きい）テキストの比は、少なくとも 3:1 であるべきです。 大きいテキストは、少なくとも 18 ポイント、または 14 ポイントの太字として定義されます。
 
-- [1.4.6 強調されたテキスト (AAA)](https://www.w3.org/TR/WCAG21/#contrast-enhanced)
+- [1.4.6 強調されたテキスト (AAA)](https://w3c.github.io/wcag/guidelines/22/#contrast-enhanced)
   - : これは、基準 1.4.3 に従い、その上に構築されます。
     - テキストとその背景のコントラスト比は少なくとも 7:1 であるべきです。
     - 見出し（またはそれよりも大きい）テキストの比は少なくとも 4.5:1 であるべきです。
 
-- [1.4.11 テキスト以外のコントラスト (AA)](https://www.w3.org/TR/WCAG21/#non-text-contrast)（2.1 で追加）
+- [1.4.11 テキスト以外のコントラスト (AA)](https://w3c.github.io/wcag/guidelines/22/#non-text-contrast)
   - : ユーザーインターフェイスコンポーネントとグラフィックオブジェクトの最低限のカラーコントラスト比は 3:1 です。
 
 ## 関連情報

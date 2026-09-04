@@ -1,14 +1,12 @@
 ---
 title: Criterios para la inclusión en MDN Web Docs
+short-title: Criterios para la inclusión
 slug: MDN/Writing_guidelines/Criteria_for_inclusion
-original_slug: MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 l10n:
-  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
+  sourceCommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
 ---
 
-{{MDNSidebar}}
-
-Este artículo describe, en detalle, los criterios para que el contenido sea incluido en MDN Web Docs, el proceso de solicitud para incluir nueva documentación y las expectativas y pautas para una parte que solicita.
+Este artículo describe detalladamente los criterios de inclusión de contenido en MDN Web Docs, el proceso de solicitud para nueva documentación y las expectativas y pautas para la parte solicitante.
 
 Esto está dirigido a proyectos más grandes. Para sugerir una nueva página o artículo, consulta la sección [Sugerir contenido](/es/docs/MDN/Writing_guidelines/What_we_write#suggesting_content) en la página "Qué escribimos".
 
@@ -46,7 +44,7 @@ Relacionado con el punto anterior, tampoco queremos gastar nuestro tiempo docume
 
 ### No tener un recurso de documentación establecido en otro lugar
 
-Hay muchas bibliotecas y _frameworks_ en existencia, que no son estándares web pero están construidos sobre tecnologías web y son muy populares en la industria web. No documentamos ninguno de estos porque, en general, todos tienen recursos de documentación establecidos ya. Sería absurdo competir con el recurso oficial de un _framework_ popular, ya que sería una pérdida de tiempo y probablemente terminaría confundiendo a los desarrolladores que intentan aprender la tecnología.
+Existen muchas bibliotecas y _frameworks_ que no son estándares web pero están construidos sobre tecnologías web y son muy populares en la industria web. No documentamos ninguno de estos porque, en general, todos tienen recursos de documentación establecidos ya. Sería absurdo competir con el recurso oficial de un _framework_ popular, ya que sería una pérdida de tiempo y probablemente terminaría confundiendo a los desarrolladores que intentan aprender la tecnología.
 
 ### Tener una comunidad dispuesta a escribir y mantener la documentación
 
@@ -63,13 +61,13 @@ Si una tecnología parece ser un buen candidato para ser documentada en MDN Web 
 
 Las tecnologías serán consideradas para su inclusión en MDN Web Docs caso por caso. Para su consideración, deberías enviar una propuesta titulada "Propuesta para documentar una nueva tecnología en MDN Web Docs". Necesitaríamos la siguiente información de tu parte en la propuesta:
 
-- La tecnología, su propósito central/casos de uso y audiencia de desarrolladores objetivo.
-- ¿Qué tipo de interés hay en la industria o la comunidad en torno a la tecnología?
+- La tecnología, su propósito central/casos de uso y público objetivo de desarrolladores.
+- ¿Qué tipo de expectativa genera la tecnología en la industria o la comunidad?
   - ¿Muchos desarrolladores web la están usando? ¿Cómo es la adopción en la industria?
   - ¿Muchos desarrolladores web quieren o necesitan esta información?
   - ¿Cuál es el tamaño de la audiencia objetivo para esta información? Las estadísticas de apoyo ayudarían si las tienes.
 - ¿Cómo se relaciona la tecnología con la tecnología web central y los navegadores web? Los detalles útiles incluyen:
-  - ¿Usa HTML y CSS pero generalmente no se envía a la web?
+  - ¿Usa HTML y CSS pero generalmente no genera resultados para la web?
   - ¿Está soportado en navegadores web a través de un polyfill?
 - ¿Qué documentación o recursos ya están disponibles que cubren la tecnología?
 - ¿Cuánta documentación sería necesario agregar a MDN Web Docs?
@@ -82,7 +80,7 @@ Las tecnologías serán consideradas para su inclusión en MDN Web Docs caso por
 No necesitas proporcionarnos cientos de páginas de detalle en esta etapa (de hecho, preferiríamos que no lo hicieras). Un par de párrafos sobre cada uno de los puntos anteriores son más que adecuados.
 
 > [!NOTE]
-> MDN Web Docs es principalmente un sitio en inglés (en-US). El idioma principal para tu proyecto debe ser en inglés de EE. UU.
+> MDN Web Docs es principalmente un sitio en inglés (en-US). El idioma principal para tu proyecto debe ser el inglés de EE. UU.
 
 ### Esperar una respuesta
 
@@ -143,20 +141,21 @@ Si pasaste por el proceso de presentación de propuestas, entonces deberías ten
 
 Cada proyecto es diferente, pero aproximadamente recomendaríamos algo así:
 
-```plaintext
-Página de inicio
-|
-------Referencia
-      |
-      --------Elementos
-      |
-      --------Métodos
-      |
-      --------¿Otro tipo de página de referencia?
-|
-------Guías/tutoriales
-|
-------Ejemplos
+```plain
+├── Guías
+│   ├── guía_uno
+│   ├── guía_dos
+│   └── index.md
+├── index.md
+├── Referencia
+│   ├── Elementos
+│   ├── Métodos
+│   ├── Otros ?
+│   └── index.md
+└── Tutoriales
+    ├── tutorial_uno
+    ├── tutorial_dos
+    └── index.md
 ```
 
 Cada tipo de página que utilizarás en tu proyecto debería tener una plantilla de página para que otros copien la estructura. Deberías decidir sobre esto desde el principio.
@@ -179,4 +178,4 @@ Si no se observan cambios positivos durante un período de seis meses y la docum
 
 Entonces la documentación de esta tecnología se considerará muerta. Después de una discusión entre tu equipo y el representante del equipo de MDN Web Docs, la documentación será eliminada.
 
-Esperamos que entiendas que necesitamos ser estrictos en estos asuntos: no podemos permitir que el sitio se llene de documentación de mala calidad, incompleta o obsoleta.
+Esperamos que entiendas que necesitamos ser estrictos en estos asuntos: no podemos permitir que el sitio se llene de documentación de mala calidad, incompleta u obsoleta.

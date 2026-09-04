@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Testing
 original_slug: Learn/Server-side/Django/Testing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Quant un site web grandit, il devient plus difficile à tester manuellement. Non seulement il y a plus de choses à tester, mais encore, comme les interactions entres ses composants deviennent plus complexes, un léger changement dans une partie de l'application peut affecter les autres parties, si bien qu'il va être nécessaire de faire beaucoup de modifications pour s'assurer que tout continue de fonctionner, et qu'aucune erreur ne sera introduite quand il y aura encore plus de modifications. Une façon de limiter ces problèmes est d'écrire des tests automatiques qui puissent être lancés d'une manière simple et fiable à chaque fois que vous faites une modification. Ce tutoriel montre comment automatiser des _tests unitaires_ sur votre site web en utilisant le framework de tests de Django.
 
@@ -14,7 +14,7 @@ Quant un site web grandit, il devient plus difficile à tester manuellement. Non
       <th scope="row">Prérequis:</th>
       <td>
         Avoir terminé tous les tutoriels précédents, y compris
-        <a href="/fr/docs/Learn/Server-side/Django/Forms"
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/Django/Forms"
           >Django Tutorial Part 9: Working with forms</a
         >.
       </td>
@@ -57,7 +57,7 @@ Il y a beaucoup de genres, de niveaux et de classifications de tests, ainsi que 
 
 Tester un site web est une tâche complexe, car c'est une opération qui comporte plusieurs couches de logique : depuis la couche HTTP, la gestion des requêtes, les modèles d'interrogation de bases de données, jusqu'à la validation des formulaires, leur traitement et le rendu des templates.
 
-Django fournit un framework de test avec une petite hiérarchie de classes construites sur la librairie standard de Python [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest). Malgré son nom, ce framework de test est utilisable pour les tests unitaires aussi bien que pour les tests d'intégration. Le framework Django ajoute les méthodes et les outils d'une API pour aider à tester un site web et les comportements spécifiques à Django. Ces méthodes vous permettent de simuler des requêtes, d'insérer des données de test et d'inspecter la sortie de votre application. Django fournit aussi une API ([LiveServerTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase)) et des outils pour [utiliser d'autres frameworks de test](https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#other-testing-frameworks). Par exemple vous pouvez intégrer le célèbre framework [Selenium](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) pour simuler l'interaction entre un utilisateur et un vrai navigateur.
+Django fournit un framework de test avec une petite hiérarchie de classes construites sur la librairie standard de Python [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest). Malgré son nom, ce framework de test est utilisable pour les tests unitaires aussi bien que pour les tests d'intégration. Le framework Django ajoute les méthodes et les outils d'une API pour aider à tester un site web et les comportements spécifiques à Django. Ces méthodes vous permettent de simuler des requêtes, d'insérer des données de test et d'inspecter la sortie de votre application. Django fournit aussi une API ([LiveServerTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase)) et des outils pour [utiliser d'autres frameworks de test](https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#other-testing-frameworks). Par exemple vous pouvez intégrer le célèbre framework [Selenium](/fr/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment) pour simuler l'interaction entre un utilisateur et un vrai navigateur.
 
 Pour écrire un test, vous partez de l'une des classes de test de base fournies par Django (ou par _unittest_) ([SimpleTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#simpletestcase), [TransactionTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#transactiontestcase), [TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase), [LiveServerTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase)), et ensuite vous écrivez des méthodes séparées pour vérifier que telle fonctionnalité se comporte comme prévu (les tests utilisent des méthodes "assert" pour vérifier qu'une expression retourne `True` ou `False`, ou que deux valeurs sont égales, etc.). Quant vous commencez à lancer un test, le framework exécute les méthodes de test écrites dans vos classes dérivées. Les méthodes de test sont lancées de manière indépendante, avec en commun un réglage initial (_setUp_) et/ou un comportement de fin (_tearDown_) définis dans la classe, comme indiqué ci-dessous.
 
@@ -921,7 +921,7 @@ Le framework de test de Django peut vous aider à écrire des tests unitaires et
 Comme il y a un grand nombre d'autres outils de test à votre disposition, nous ne mentionnerons que les deux suivants :
 
 - [Coverage](http://coverage.readthedocs.io/en/latest/): Cet outil Python fait un rapport sur la proportion de votre code réellement exécutée par vos tests. C'est particulièrement intéressant quand vous commencez, et que vous cherchez à vous représenter exactement ce que vous devez tester.
-- [Selenium](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) est un framework pour automatiser les tests dans un vrai navigateur. Il vous permet de simuler un utilisateur réel en interaction avec le site, et fournit un excellent framework pour les tests système de votre site (l'étape qui suit les tests d'intégration).
+- [Selenium](/fr/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment) est un framework pour automatiser les tests dans un vrai navigateur. Il vous permet de simuler un utilisateur réel en interaction avec le site, et fournit un excellent framework pour les tests système de votre site (l'étape qui suit les tests d'intégration).
 
 ## Défi
 
@@ -955,4 +955,4 @@ Le prochain (et dernier) tutoriel montre comment vous pouvez déployer votre mer
 - [Workshop: Test-Driven Web Development with Django](http://test-driven-django-development.readthedocs.io/en/latest/index.html) (San Diego Python, 2014)
 - [Testing in Django (Part 1) - Best Practices and Examples](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}

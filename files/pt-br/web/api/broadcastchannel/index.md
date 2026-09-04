@@ -19,7 +19,7 @@ A interface **`BroadcastChannel`** representa um canal com um nome em que qualqu
 _Essa interface também herda propriedades de seu pai, {{domxref("EventTarget")}}._
 
 - {{domxref("BroadcastChannel.name")}}
-  - : Retorna um {{domxref("DOMString")}}, o nome do canal.
+  - : Retorna um {{jsxref("String")}}, o nome do canal.
 
 ### Event handlers
 

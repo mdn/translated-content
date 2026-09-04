@@ -1,19 +1,19 @@
 ---
 title: Request header (リクエストヘッダー)
 slug: Glossary/Request_header
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**リクエストヘッダー**とは、HTTP リクエストで使用できる{{glossary("HTTP header", "HTTP ヘッダー")}}の一種であり、リクエストのコンテキストに関する情報を提供することで、サーバーがレスポンスを適切に調整できるようにするものです。例えば、{{HTTPHeader("Accept", "Accept-*")}} ヘッダーは、レスポンスで許可される形式や優先される形式を示します。それ以外にも、認証情報（例：{{HTTPHeader("Authorization")}}）の提供、キャッシュ制御、ユーザーエージェントやリファラーに関する情報の取得などに使用できます。
 
-**リクエストヘッダー**は、 HTTP リクエストで使用される {{glossary("header", "HTTP ヘッダー")}}であり、メッセージの内容には関連しないものです。 {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language", "Accept-*")}}, {{HTTPHeader("If-Modified-Since", "If-*")}} などのリクエストヘッダーは、条件付きリクエストを行うことができます。他の {{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Referer")}} などはサーバーが回答を作成するための文脈を明確にします。
+リクエストに含まれる可能性のあるヘッダーのすべてが、仕様書において「リクエストヘッダー」と呼ばれるわけではありません。例えば、{{HTTPHeader("Content-Type")}} ヘッダーは{{glossary("representation header", "表現ヘッダー")}}と呼ばれます。
 
-リクエストに現れるすべてのヘッダーが*リクエストヘッダー*であるとは限りません。例えば、 {{HTTPMethod("POST")}} リクエストの中に現れる {{HTTPHeader("Content-Length")}} は、実際にはリクエストメッセージの本文の長さを表す{{glossary("entity header", "エンティティヘッダー")}}です。しかし、これらのエンティティヘッダーもそのような場面ではリクエストヘッダーと呼ばれることがよくあります。
+加えて、{{Glossary("CORS")}} では、常に認証が考慮され、{{glossary("preflight request", "プリフライト")}}リクエストへのレスポンスで明確に列挙されないリクエストヘッダーの一部を{{glossary('simple header', '単純ヘッダー')}}として定義しています。
 
-加えて、 [CORS](/ja/docs/Glossary/CORS) では、常に認証が考慮され、{{glossary("preflight request", "プリフライト")}}リクエストへのレスポンスで明確に列挙されないリクエストヘッダーの一部を{{glossary('simple header', '単純ヘッダー')}}として定義しています。
+下記の HTTP メッセージは、{{HTTPMethod("GET")}} リクエスト後のいくつかのリクエストヘッダーを示しています。
 
-{{HTTPMethod("GET")}} リクエストに続くリクエストヘッダーをいくつか示します。
-
-```
+```http
 GET /home.html HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
@@ -28,17 +28,7 @@ If-None-Match: "c561c68d0ba92bbeb8b0fff2a9199f722e3a621a"
 Cache-Control: max-age=0
 ```
 
-正確に言えば、この例の中にある {{HTTPHeader("Content-Length")}} ヘッダーは他のようなリクエストヘッダーではなく、{{glossary("entity header", "エンティティヘッダー")}}です。
-
-```
-POST /myform.html HTTP/1.1
-Host: developer.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-Content-Length: 128
-```
-
-## 詳細情報
-
-### 技術リファレンス
+## 関連情報
 
 - [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Reference/Headers)
+- [RFC 9110, section 6.3: Header Fields](https://httpwg.org/specs/rfc9110.html#header.fields)

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("CSSVariableReferenceValue")}} 接口的只读属性 **`fallback`** 返回 {{domxref("CSSVariableReferenceValue")}} 的[自定义属性回退值](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties#自定义属性回退值)。
+{{domxref("CSSVariableReferenceValue")}} 接口的只读属性 **`fallback`** 返回 {{domxref("CSSVariableReferenceValue")}} 的[自定义属性回退值](/zh-CN/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties#自定义属性回退值)。
 
 ## 值
 

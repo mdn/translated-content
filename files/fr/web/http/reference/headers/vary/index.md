@@ -15,7 +15,7 @@ L'en-tête `Vary` doit être renseigné de manière identique sur une réponse {
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>non</td>
     </tr>
   </tbody>

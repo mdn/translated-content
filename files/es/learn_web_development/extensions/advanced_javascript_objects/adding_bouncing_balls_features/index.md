@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bounci
 original_slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 En esta evaluación, se espera que use la demo de bouncing balls del artículo anterior como punto de partida y le agregue algunas características nuevas e interesantes.
 
@@ -152,4 +152,4 @@ Para implementar el contador de puntuación sigue estos pasos:
 
 Si está siguiendo esta evaluación como parte de un curso organizado, debe poder entregar su trabajo a su maestro / mentor para que lo marque. Si está aprendiendo solo, puede obtener la guía de calificación con bastante facilidad preguntando en el [discussion thread for this exercise](https://discourse.mozilla.org/t/adding-features-to-our-bouncing-balls-demo-assessment/24689), o en el [#mdn](irc://irc.mozilla.org/mdn) IRC channel en [Mozilla IRC](https://wiki.mozilla.org/IRC). Prueba a hacer el ejercicio primero — no hay nada que ganar con trampa!
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

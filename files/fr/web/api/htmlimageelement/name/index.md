@@ -3,19 +3,33 @@ title: "HTMLImageElement : propriété name"
 short-title: name
 slug: Web/API/HTMLImageElement/name
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
-La propriété **`name`** (_obsolète_) de l'interface {{domxref("HTMLImageElement")}} définit un nom pour l'élément. Elle a été remplacée par la propriété {{domxref("Element.id", "id")}} disponible sur tous les éléments.
+La propriété _obsolète_ **`name`** de l'interface {{DOMxRef("HTMLImageElement")}} définit un nom pour l'élément. Elle a été remplacée par la propriété {{DOMxRef("Element.id", "id")}} disponible sur tous les éléments.
 
 ## Valeur
 
 Une chaîne de caractères fournissant un nom par lequel l'image peut être référencée.
 
-> [!WARNING]
-> Cette propriété est obsolète et n'est présente dans la spécification que pour des raisons de compatibilité. Puisqu'elle fonctionne de manière identique à [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), vous pouvez et devez utiliser cette dernière à la place.
+## Exemples
+
+### Définir l'attribut `name`
+
+```js
+const img = new Image();
+img.src = "example.png";
+img.alt = "Une image d'exemple";
+img.name = "example-img";
+```
+
+Au lieu de faire ça, définissez plutôt la propriété `id`&nbsp;:
+
+```js
+img.id = "example-img";
+```
 
 ## Spécifications
 

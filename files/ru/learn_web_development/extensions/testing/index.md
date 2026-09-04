@@ -9,7 +9,7 @@ slug: Learn_web_development/Extensions/Testing
 
 ## Предпосылки
 
-Сначала вы должны изучить основы [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn/CSS),[JavaScript](/ru/docs/Learn/JavaScript) языков прежде чем пытаться использовать инструменты, описанные здесь.
+Сначала вы должны изучить основы [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn_web_development/Core/Styling_basics),[JavaScript](/ru/docs/Learn_web_development/Core/Scripting) языков прежде чем пытаться использовать инструменты, описанные здесь.
 
 ## Руководства
 

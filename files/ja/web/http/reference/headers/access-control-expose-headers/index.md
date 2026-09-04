@@ -1,35 +1,23 @@
 ---
-title: Access-Control-Expose-Headers
+title: Access-Control-Expose-Headers ヘッダー
+short-title: Access-Control-Expose-Headers
 slug: Web/HTTP/Reference/Headers/Access-Control-Expose-Headers
-original_slug: Web/HTTP/Headers/Access-Control-Expose-Headers
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-**`Access-Control-Expose-Headers`** レスポンスヘッダーは、レスポンスの一部としてどのヘッダーを公開するかを、その名前を列挙して示します。
+HTTP の **`Access-Control-Expose-Headers`** {{Glossary("response header", "レスポンスヘッダー")}}によりサーバーは、オリジンを越えるリクエストへの応答として、ブラウザー上で実行されているスクリプトに対してどのレスポンスヘッダーを公開すべきかを示すことができます。
 
-既定では、公開される {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}は 7 つだけです。
-
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Content-Language")}}
-- {{HTTPHeader("Content-Length")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Expires")}}
-- {{HTTPHeader("Last-Modified")}}
-- {{HTTPHeader("Pragma")}}
-
-クライアントが他のヘッダーにアクセスできるようにするには、 `Access-Control-Expose-Headers` ヘッダーを使用してヘッダーを列挙する必要があります。
+デフォルトでは {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}のみが公開されます。クライアントが他のヘッダーにアクセスできるようにするには、 `Access-Control-Expose-Headers` ヘッダーを使用してヘッダーを列挙する必要があります。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">ヘッダー種別</th>
-      <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
-      </td>
+      <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">
-        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
-      </th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
   </tbody>
@@ -37,44 +25,41 @@ original_slug: Web/HTTP/Headers/Access-Control-Expose-Headers
 
 ## 構文
 
-```
-Access-Control-Expose-Headers: <header-name>, <header-name>, ...
+```http
+Access-Control-Expose-Headers: [<header-name>[, <header-name>]*]
 Access-Control-Expose-Headers: *
 ```
 
 ## ディレクティブ
 
-- \<header-name>
-  - : ゼロ個以上の[ヘッダー名](/ja/docs/Web/HTTP/Reference/Headers)の一覧で、 {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}に含まれないものであり、リソースが使用する可能性があり、公開される可能性があるものです。
+- `<header-name>`
+  - : レスポンスからクライアントがアクセスすることが許可されたゼロ個以上の[ヘッダー名](/ja/docs/Web/HTTP/Reference/Headers)のカンマ区切りの一覧です。
+    これらは {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}に追加されるものです。
 - `*` (ワイルドカード)
-  - : "`*`" の値は、資格情報のないリクエスト ([HTTP Cookie](/ja/docs/Web/HTTP/Guides/Cookies) や HTTP の資格情報のないリクエスト) の特殊なワイルドカード値です。資格情報付きのリクエストでは、特別な意味のない "`*`" というヘッダー名として扱われます。
-    なお、 {{HTTPHeader("Authorization")}} ヘッダーはワイルドカードで表すことができず、常に明示的に列挙する必要があります。
+  - : `*` の値は、資格情報のないリクエスト ([HTTP Cookie](/ja/docs/Web/HTTP/Guides/Cookies) や HTTP の資格情報のないリクエスト) の特殊なワイルドカード値です。
+    資格情報付きのリクエストでは、特別な意味のない "`*`" というヘッダー名として扱われます。
 
 ## 例
 
-CORS セーフリストにないレスポンスヘッダーを公開するには、次のように指定します。
+{{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}は、{{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Expires")}}, {{HTTPHeader("Last-Modified")}}, {{HTTPHeader("Pragma")}} です。CORS セーフリストに登録されていないレスポンスヘッダーを公開するには、次のように指定できます。
 
-```
-Access-Control-Expose-Headers: Content-Length
+```http
+Access-Control-Expose-Headers: Content-Encoding
 ```
 
-`X-Kuma-Revision` のようなカスタムヘッダーをさらに公開するには、複数のヘッダーをカンマで区切って指定することができます。
+`Kuma-Revision` のようなカスタムヘッダーをさらに公開するには、複数のヘッダーをカンマで区切って指定することができます。
 
-```
-Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision
+```http
+Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision
 ```
 
 資格情報のないリクエストでは、ワイルドカード値を使うこともできます。
 
-```
+```http
 Access-Control-Expose-Headers: *
 ```
 
-但し、 {{HTTPHeader("Authorization")}} ヘッダーはワイルドカードの対象にならないので、明示的に列挙する必要があります。
-
-```
-Access-Control-Expose-Headers: *, Authorization
-```
+サーバーは、資格情報を含むリクエストに対して `*` という値を同時に返すこともありますが、その場合は `*` という名前付きヘッダーを参照します。
 
 ## 仕様書
 

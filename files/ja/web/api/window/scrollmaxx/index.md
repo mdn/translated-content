@@ -1,19 +1,18 @@
 ---
-title: Window.scrollMaxX
+title: "Window: scrollMaxX プロパティ"
+short-title: scrollMaxX
 slug: Web/API/Window/scrollMaxX
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}} {{Non-standard_header}}
 
 **`Window.scrollMaxX`** は読み取り専用プロパティで、文書が横方向にスクロールできる最大ピクセル数を返します。
 
-## 構文
+## 値
 
-```js
-xMax = window.scrollMaxX;
-```
-
-- `xMax` はピクセル数です。
+数値です。
 
 ## 例
 

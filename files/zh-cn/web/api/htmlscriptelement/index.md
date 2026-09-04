@@ -20,7 +20,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
     </tr>
     <tr>
       <td><code id="type_property">type</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         代表了脚本的 MIME 类型。它反映了 <a
           href="/zh-CN/docs/Web/HTML/Reference/Elements/script#type"><code>type</code></a
@@ -29,7 +29,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
     </tr>
     <tr>
       <td><code id="src_property">src</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         代表了使用外部脚本资源的地址。它反映了 <a
           href="/zh-CN/docs/Web/HTML/Reference/Elements/script#src"><code>src</code></a
@@ -40,7 +40,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
       <td>
         <code id="htmlFor_property">htmlFor</code> {{Deprecated_Inline}}
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         他 htmlFor 属性设置或返回的值的属性标签。属性指定的表单元素绑定到一个标签。
       </td>
@@ -49,14 +49,14 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
       <td>
         <code id="event_property">event</code>{{Deprecated_Inline}}
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         HTML DOM 事件允许 JavaScript 注册不同的事件处理程序的元素在一个 HTML 文档。
       </td>
     </tr>
     <tr>
       <td><code id="charset_property">charset</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         代表外部脚本资源的字符编码。它反映了 <a
           href="/zh-CN/docs/Web/HTML/Reference/Elements/script#charset"><code>charset</code></a
@@ -102,14 +102,14 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
         <code id="crossOrigin_property">crossOrigin</code>
         {{experimental_inline}}
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         反馈该脚本元素 <a href="/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin">CORS 设置</a>的字符串。对其他<a href="/zh-CN/docs/Glossary/Origin">源</a>的脚本，此属性控制错误信息的暴露情况。
       </td>
     </tr>
     <tr>
       <td><code id="text_property">text</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           一个字符串，用于按树形顺序连接并返回 {{HTMLElement("script")}} 元素（忽略注释等其他节点）内所有<a href="/zh-CN/docs/Web/API/Text">文本节点</a>的内容。在设置时，它的作用与 <a href="/zh-CN/docs/Web/API/Node/textContent"><code>textContent</code></a> IDL 属性相同。

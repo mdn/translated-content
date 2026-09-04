@@ -23,4 +23,4 @@ CSS **逻辑属性**提供了一种基于文档的书写模式和方向而不是
 
 ## 参见
 
-- [CSS 逻辑属性和值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)模块
+- [CSS 逻辑属性和值](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values)模块

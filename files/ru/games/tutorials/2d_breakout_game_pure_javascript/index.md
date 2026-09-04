@@ -3,7 +3,7 @@ title: 2D игра на чистом JavaScript
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 ---
 
-{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создание_Canvas_и_рисование_на_нём")}}
+{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 
 В этом пошаговом руководстве мы создадим простую игру **MDN Breakout,** написанную на чистом JavaScript и отрендеренную на HTML5 {{htmlelement("canvas")}}.
 
@@ -40,4 +40,4 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 Ладно, давайте начнём! Перейдите к первой главе — [Создание Canvas и рисование на нем](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it).
 
-{{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
+{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}

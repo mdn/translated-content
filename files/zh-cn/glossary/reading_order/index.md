@@ -7,7 +7,7 @@ l10n:
 
 **阅读顺序**（Reading order）指的是内容被访问的顺序，例如被{{glossary("screen reader", "屏幕阅读器")}}朗读时的顺序，或通过顺序导航方式（如使用 Tab 键遍历链接或按钮）访问时的顺序。默认情况下，网页的阅读顺序由文档的源代码顺序决定。
 
-通常，源代码顺序应符合内容合理的阅读顺序，并且应与内容布局的视觉顺序相一致。然而，有时视觉顺序与源代码顺序会不同步。例如，你可能会根据[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)为文档应用不同的布局，以适应各种设备或用户需求，或者通过 [`tabindex`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex) 调整 Tab 键导航顺序。
+通常，源代码顺序应符合内容合理的阅读顺序，并且应与内容布局的视觉顺序相一致。然而，有时视觉顺序与源代码顺序会不同步。例如，你可能会根据[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)为文档应用不同的布局，以适应各种设备或用户需求，或者通过 [`tabindex`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex) 调整 Tab 键导航顺序。
 
 这些调整可能会导致无障碍相关的问题。例如，当有视觉能力的用户使用屏幕阅读器通过 Tab 键遍历内容时，如果屏幕阅读器的顺序与视觉顺序不一致，会产生糟糕的用户体验，甚至导致内容无法访问。无论用户如何访问内容，阅读顺序都应当合理。
 

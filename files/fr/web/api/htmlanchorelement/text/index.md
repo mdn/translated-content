@@ -18,7 +18,7 @@ Une chaîne de caractères.
 ## Exemple
 
 ```html
-<a id="exampleLink" href="https://exemple.fr">Lien d'exemple</a>
+<a id="exampleLink" href="https://example.com">Lien d'exemple</a>
 <p class="text"></p>
 ```
 

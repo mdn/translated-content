@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/starts-with
 original_slug: Web/XPath/Functions/starts-with
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 La fonction `starts-with` vérifie si la première chaîne débute par la seconde, et retourne `true` ou `false`.
 

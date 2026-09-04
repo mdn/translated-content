@@ -3,12 +3,12 @@ title: 初探 JavaScript
 short-title: JavaScript 導覽
 slug: Learn_web_development/Core/Scripting/A_first_splash
 l10n:
-  sourceCommit: 693106d7bc9aa28f22a3f234455f5496efd728c4
+  sourceCommit: 4fa9407fe174a12ecdc50b680560b16021300bc1
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
 
-現在你已經學了一些關於 JavaScript 的理論以及它能做什麼，我們將透過一個實作教學，讓你了解建立一個簡單 JavaScript 程式的過程。在這裡，你將一步步地建立一個簡單的「猜數字」遊戲。
+既然你已經學了一些關於 JavaScript 的理論以及它能做什麼，我們將帶你完成一個實作教學，讓你了解如何建立一個簡單的 JavaScript 程式。在這裡，你將一步步建立一個簡單的「猜數字」遊戲。
 
 <table>
   <tbody>
@@ -27,6 +27,9 @@ l10n:
     </tr>
   </tbody>
 </table>
+
+> [!NOTE]
+> 從[撰寫你的第一個 JavaScript 變數](https://scrimba.com/learn-javascript-c0v/~04?via=mdn)開始，Scrimba<sup>[_MDN 學習合作夥伴_](/zh-TW/docs/MDN/Writing_guidelines/Learning_content#合作夥伴連結和嵌入)</sup>提供了有用的互動式課程，帶你了解 JavaScript 的基礎知識。
 
 我們想在這裡設定非常明確的期望：我們不期望你在讀完這篇文章後就學會 JavaScript，甚至不期望你理解我們要求你寫的所有程式碼。相反地，我們想讓你了解 JavaScript 的功能是如何協同運作的，以及撰寫 JavaScript 是什麼感覺。在後續的文章中，你將會更詳細地重新檢視這裡展示的所有功能，所以如果你沒有馬上全部理解，也請不要擔心！
 

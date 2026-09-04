@@ -33,7 +33,7 @@ setImmediate(func, param1, param2, /* …, */ paramN)
 
 ## メモ
 
-{{DOMxRef("Window.clearImmediate", "clearImmediate()")}} メソッドをを使用して、{{DOMxRef("Window.setTimeout", "setTimeout()")}} に対する {{DOMxRef("Window.clearTimeout", "clearTimeout()")}} と同様に、即時実行アクションをクリアすることができます。
+{{DOMxRef("Window.clearImmediate", "clearImmediate()")}} メソッドを使用して、{{DOMxRef("Window.setTimeout", "setTimeout()")}} に対する {{DOMxRef("Window.clearTimeout", "clearTimeout()")}} と同様に、即時実行アクションをクリアすることができます。
 
 このメソッドは `setTimeout(fn, 0)` メソッドの代わりに、[重い処理](https://humanwhocodes.com/blog/2009/08/11/timed-array-processing-in-javascript/) を実行するために使用できます。
 

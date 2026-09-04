@@ -5,10 +5,10 @@ slug: Web/JavaScript/Reference/Global_Objects/String/big
 
 {{JSRef}} {{deprecated_header}}
 
-O método **big()** cria um elemento HTML [\<big>](/pt-BR/docs/Web/HTML/Element/big) fazendo com que o texto dentro dele seja exibido uma uma fonte maior.
+O método **big()** cria um elemento HTML [\<big>](/pt-BR/docs/Web/HTML/Reference/Elements/big) fazendo com que o texto dentro dele seja exibido uma uma fonte maior.
 
 > [!NOTE]
-> O elemento \<big> foi removido no [HTML5](/pt-BR/docs/Glossary/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/font-size).
+> O elemento \<big> foi removido no [HTML5](/pt-BR/docs/Glossary/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/Reference/Properties/font-size).
 
 ## Sintaxe
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`x1`** 属性は、二つ以上の座標を必要とする SVG 要素を描画するための一つ目の x 座標を指定するのに使います。一つしか座標を必要としない要素は、これの代わりに {{SVGAttr("x")}} 属性を使います。
+**`x1`** 属性は、2 つ以上の座標を必要とする SVG 要素を描画するための 1 つ目の X 座標を指定するのに使います。1 つしか座標を必要としない要素は、これの代わりに {{SVGAttr("x")}} 属性を使います。
 
 ## 要素
 
@@ -13,7 +13,7 @@ l10n:
 
 ### `<line>`
 
-{{SVGElement('line')}} では、 `x1` は線の開始点の X 座標を定義します。
+{{SVGElement('line')}} では、 `x1` は線の始点の X 座標を定義します。
 
 <table class="properties">
   <tbody>
@@ -40,7 +40,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
@@ -70,7 +70,7 @@ svg {
 
 ### `<linearGradient>`
 
-{{SVGElement('linearGradient')}} に関しては、`x1` は、グラデーションの色経由点をマッピングするのに使われるグラデーションベクトル (_gradient vector_) の開始点の x 座標を定めます。この属性の正確な振る舞いは、{{SVGAttr('gradientUnits')}} 属性の影響を受けます。
+{{SVGElement('linearGradient')}} に関しては、`x1` は、グラデーションの色経由点をマッピングするのに使われるグラデーションベクトル (_gradient vector_) の始点の x 座標を定めます。この属性の正確な振る舞いは、{{SVGAttr('gradientUnits')}} 属性の影響を受けます。
 
 <table class="properties">
   <tbody>
@@ -85,7 +85,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -106,7 +106,7 @@ svg {
 ```html
 <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
   <!--
-  既定では、グラデーション・ベクトルは、適用先の形状を囲う境界の
+  既定では、グラデーションベクトルは、適用先の形状を囲う境界の
   左端から始まります。
   -->
   <linearGradient x1="0%" id="g0">

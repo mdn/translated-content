@@ -23,6 +23,6 @@ El valor asignado a la variable `flex` ocasiona que este tipo de elementos sean 
 
 ### Further reading
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/es/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/es/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)_
 - CSS Flexbox Guide: _[Mastering wrapping of flex items](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_

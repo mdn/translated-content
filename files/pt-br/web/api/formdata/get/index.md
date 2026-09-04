@@ -21,7 +21,7 @@ formData.get(nome);
 ### Parâmetros
 
 - `nome`
-  - : Um {{domxref("USVString")}} representando o nome da chave que queira retornar.
+  - : Um {{jsxref("String")}} representando o nome da chave que queira retornar.
 
 ### Retorno
 

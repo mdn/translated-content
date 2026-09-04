@@ -2,10 +2,10 @@
 title: stroke-width
 slug: Web/SVG/Reference/Attribute/stroke-width
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
-**`stroke-width`**属性は、図形に適用される描線の幅を定義する表示属性です。これは、あらゆる SVG 図形またはテキストコンテンツ要素に適用されますが、継承プロパティとして、 {{SVGElement("g")}} などの要素に適用され、子孫要素の線に意図通りの効果を持つことができます。
+**`stroke-width`** 属性は、図形に適用される描線の幅を定義する表示属性です。これは、あらゆる SVG 図形またはテキストコンテンツ要素に適用されますが、継承プロパティとして、 {{SVGElement("g")}} などの要素に適用され、子孫要素の線に意図通りの効果を持つことができます。
 
 > [!NOTE]
 > プレゼンテーション属性であるため、 `stroke-width` には対応する CSS プロパティ {{cssxref("stroke-width")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
@@ -21,7 +21,6 @@ l10n:
 - {{SVGElement('rect')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## 例

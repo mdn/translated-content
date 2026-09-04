@@ -36,23 +36,23 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 
 ## Referência da API
 
-- {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
+- [`WebAssembly`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface)
   - : Este objeto atua como o espaço para todas as funcionalidade relacionada à WebAssembly.
-- {{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module")}}
+- [`WebAssembly.Module`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/Module)
   - : A `WebAssembly.Module` o objeto contém o código da WebAssembly sem estado que já foi compilado pelo navegador e pode ser eficientemente [compartilhado com os trabalhos](/pt-BR/docs/Web/API/Worker/postMessage), [armazenados em cache no IndexedDB](</pt-BR/docs /WebAssembly/Caching_modules>), e instanciados várias vezes.
-- {{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance")}}
+- [`WebAssembly.Instance`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/Instance)
   - : A `WebAssembly.Instance` o objeto é uma instância executável e estável de um `Módulo`. Os objetos `Instanciados` contêm todas as [funções de WebAssembly exportadas](/pt-BR/docs/WebAssembly/Exported_functions)que permitem chamar o código WebAssembly do JavaScript.
-- {{jsxref("Global_objects/WebAssembly/instantiate", "WebAssembly.instantiate()")}}
+- [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/instantiate)
   - : The `WebAssembly.instantiate()` a função é a API primária para compilar e instanciar o código WebAssembly, retornando um `Module` e sua primeira `instância`.
-- {{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}
-  - : Em `WebAssembly`. O objeto `Memory` é redimensionável {{jsxref ("Global_objects / ArrayBuffer","ArrayBuffer")}} que detém os bytes de memória invocados por uma `instância` de código.
-- {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
+- [`WebAssembly.Memory()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/Memory)
+  - : Em `WebAssembly`. O objeto `Memory` é redimensionável {{jsxref("Global_Objects/ArrayBuffer", "ArrayBuffer")}} que detém os bytes de memória invocados por uma `instância` de código.
+- [`WebAssembly.Table()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : Em `WebAssembly`. O objeto `Table` é uma matriz redimensionável de valores opacos, como referências de funções, acessadas por uma `instância` de código.
-- {{jsxref("WebAssembly.CompileError()")}}
+- [`WebAssembly.CompileError()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
   - : Cria um novo objeto WebAssembly `CompileError`.
-- {{jsxref("WebAssembly.LinkError()")}}
+- [`WebAssembly.LinkError()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
   - : Cria um novo objeto WebAssembly `LinkError`.
-- {{jsxref("WebAssembly.RuntimeError()")}}
+- [`WebAssembly.RuntimeError()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
   - : Cria um novo objeto WebAssembly `RuntimeError`.
 
 ## Exemplos

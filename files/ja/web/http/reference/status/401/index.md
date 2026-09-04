@@ -2,7 +2,7 @@
 title: 401 Unauthorized
 slug: Web/HTTP/Reference/Status/401
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`401 Unauthorized`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、有効な認証資格情報が不足していることによりリクエストが適用されないことを示します。

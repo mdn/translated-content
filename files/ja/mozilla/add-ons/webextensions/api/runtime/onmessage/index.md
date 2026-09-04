@@ -2,10 +2,8 @@
 title: runtime.onMessage
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 l10n:
-  sourceCommit: 4b10cb28d5eee0e952b2d84bd1b23cc53daa93b7
+  sourceCommit: 38199423810927262c9cb4dec7ea7de4cb0c5e0f
 ---
-
-{{AddonSidebar}}
 
 このイベントを使って、拡張機能の別の部品からのメッセージを受け取ることができます。
 
@@ -13,27 +11,30 @@ l10n:
 
 - **[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#コンテンツスクリプト)の中**で、 [バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#バックグラウンドスクリプト)からのメッセージを受け取る。
 - **バックグラウンドスクリプトの中**で、コンテンツスクリプトからのメッセージを受け取る。
-- **[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#オプションページ)や[ポップアップ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface#ポップアップ)のスクリプトの中**で、バックグラウンドスクリプトからのメッセージを受け取る。
+- **[オプションページまたはポップアップ](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#サイドバー、ポップアップ、オプションページ)のスクリプトの中**で、バックグラウンドスクリプトからのメッセージを受け取る。
 - **バックグラウンドスクリプトの中**で、オプションページやポップアップのスクリプトからのメッセージを受け取る。
+- **[拡張機能ページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)**内のスクリプトで、ページ内のスクリプトでのコード実行をリクエストするメッセージを待ち受けします。
 
 `onMessage()` リスナーに受信させるメッセージを送るには、{{WebExtAPIRef("runtime.sendMessage()")}}、または (コンテンツスクリプトにメッセージを送るときは) {{WebExtAPIRef("tabs.sendMessage()")}} を使います。
 
 > [!NOTE]
-> 同じ種類のメッセージに対する `onMessage` リスナーを複数作ることは避けてください。複数のリスナーが実行される順番は保証されていないからです。
+> 同じ種類のメッセージに対する `onMessage()` リスナーを複数作ることは避けてください。複数のリスナーが実行される順番は保証されていないからです。
 >
-> 特定のリスナーへのメッセージ伝送を保証したいときは、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#コネクションベースのメッセージ)を使ってください。
+> 特定のエンドポイントへのメッセージ配信を保証したいときは、[メッセージ交換のコネクションベースのアプローチ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#コネクションベースのメッセージ)を使ってください。
 
 メッセージ本体の他に、リスナーは次のものを受け取ります。
 
 - `sender` オブジェクト。メッセージ送信側の詳細情報です。
 - `sendResponse` 関数。送信側への応答を送るために使います。
 
-メッセージに対して同期的に応答するには、`sendResponse` 関数をリスナーの中で実行します。[例を参照してください](#同期的な応答の送信)。
+メッセージに対して同期的に応答するには、`sendResponse` 関数をリスナーの中で実行します。[同期的な応答の送信の例](#同期的な応答の送信)を参照してください。
 
-非同期的に応答するには、二つの方法があります。
+非同期に応答するには、二つの方法があります。
 
-- イベントリスナーから `true` を返す。こうすることで、リスナーから復帰した後でも `sendResponse` 関数が有効なままになるため、後で実行することができます。[例を参照してください](#sendresponse_を使用した非同期の応答の送信)。
-- イベントリスナーから `Promise` を返して、応答が準備できた後にそれを解決する (またはエラーの場合は拒否する)。[例を参照してください](#プロミスを使用した非同期の応答の送信)。
+- イベントリスナーから `true` を返す。こうすることで、リスナーから復帰した後でも `sendResponse()` 関数が有効なままになるため、後で実行することができます。[`sendResponse` を使用した非同期レスポンスの送信例](#sendresponse_を使用した非同期の応答の送信)を参照してください。
+  > [!WARNING]
+  > 関数の先頭に `async` を付けないでください。`async` を付けると、その意味が[プロミスを使用した非同期の応答の送信](#プロミスを使用した非同期の応答の送信)に変更され、実質的に `sendResponse(true)` と同じ動作になります。
+- イベントリスナーから `Promise` を返して、応答が準備できた後にそれを解決する (またはエラーの場合は拒否する)。[プロミスを使用した非同期の応答の送信の例](#プロミスを使用した非同期の応答の送信)を参照してください。
 
 > [!NOTE]
 > また、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#コネクションベースのメッセージ)を使うこともできます。
@@ -60,22 +61,24 @@ browser.runtime.onMessage.hasListener(listener)
 ### 引数
 
 - `listener`
-  - : このイベントが発生したときに実行されるリスナー関数。関数には次の引数が渡される。
+  - : このイベントが発生した際に呼び出される関数です。この関数には、以下の引数が渡されます。
     - `message`
-      - : `object` 型。メッセージ本体。これは JSON 化できるオブジェクトです（[データクローンアルゴリズム](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#データクローンアルゴリズム)を参照）。
-
+      - : `object` 型。メッセージです。これは JSON 化できるオブジェクトです（[データクローンアルゴリズム](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#データクローンアルゴリズム)を参照）。
     - `sender`
       - : {{WebExtAPIRef('runtime.MessageSender')}} オブジェクト。メッセージの送信側を表します。
     - `sendResponse`
-      - : メッセージに対する応答を送るために、最大で一回実行できる関数。この関数は引数を一つ受け取り、それは JSON 化できるオブジェクトのはずです（[データクローンアルゴリズム](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#データクローンアルゴリズム)を参照）。その引数はメッセージ送信側に返送されます。
+      - : `message` に対して応答を返すために、最大 1 回呼び出される関数です。この関数は 1 つの引数を受け取ります。その引数は、シリアライズ可能な任意のオブジェクトです（[データ複製アルゴリズム](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)を参照してください）。この引数は、メッセージの送信者に渡されます。
 
         同じ文書中に `onMessage()` リスナーが 2 つ以上ある場合、応答を返すことができるのは 1 つだけです。
 
         同期的に応答するには、リスナー関数が復帰する前に `sendResponse()` を実行してください。
 
         非同期的に応答するには、次のどちらかを実行します。
+        - リスナー関数から {{jsxref("Promise")}} を返して、応答の準備ができたときにそのプロミスを解決する。こちらがより好ましい方法です。
         - `sendResponse()` に対する参照を保持したままリスナー関数から `true` を返す。そうすると、リスナー関数から復帰した後でも `sendResponse()` が実行できます。
-        - リスナー関数から {{jsxref("Promise")}} を返して、応答の準備ができたときにその Promise を解決する。こちらがより好ましい方法です。
+
+          > [!NOTE]
+          > [Chrome バグ 1185241](https://crbug.com/1185241) が解決されるまで、Chrome では返値としての Promise は対応していません。代替手段として、[true を返して sendResponse を使用してください](#sendresponse_を使用した非同期の応答の送信)。
 
     リスナー関数は、論理値または {{jsxref("Promise")}} のいずれかを返します。
 
@@ -91,7 +94,7 @@ browser.runtime.onMessage.hasListener(listener)
     > });
     > ```
     >
-    > もし、リスナーが特定の種類のメッセージにのみ応答したい場合は、リスナーを `async` ではない関数として定義し、リスナーが応答するメッセージに対してのみプロミスを、それ以外は false または undefined を返してください。
+    > リスナーに特定の種類のメッセージに対してのみ反応させたい場合を想定しましょう。その場合、リスナーを非 async 関数として定義し、リスナーが反応すべきメッセージに対してのみプロミスを返し、それ以外の場合は false または undefined を返す必要があります。
     >
     > ```js example-good
     > browser.runtime.onMessage.addListener((data, sender) => {
@@ -101,10 +104,6 @@ browser.runtime.onMessage.hasListener(listener)
     >   return false;
     > });
     > ```
-
-## ブラウザーの互換性
-
-{{Compat}}
 
 ## 例
 
@@ -135,7 +134,7 @@ browser.runtime.onMessage.addListener(notify);
 function notify(message) {
   browser.notifications.create({
     type: "basic",
-    iconUrl: browser.extension.getURL("link.png"),
+    iconUrl: browser.runtime.getURL("link.png"),
     title: "リンクをクリックしました!",
     message: message.url,
   });
@@ -221,7 +220,13 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
+> [!WARNING]
+> 関数の先頭に `async` を付けないでください。`async` を付けると、その意味が[プロミスを使用した非同期の応答の送信](#プロミスを使用した非同期の応答の送信)に変更され、実質的に `sendResponse(true)` と同じ動作になります。
+
 ### プロミスを使用した非同期の応答の送信
+
+> [!NOTE]
+> [Chrome バグ 1185241](https://crbug.com/1185241) が解決されるまで、Chrome では返値としての Promise は対応していません。代替手段として、[true を返して sendResponse を使用してください](#sendresponse_を使用した非同期の応答の送信)。
 
 次のコンテンツスクリプトは、まずページ上の `<a>` リンクを取得し、そしてそのリンクの場所がブックマークされているかどうかを尋ねるメッセージを送信します。このスクリプトは、その場所がブックマークされている場合は `true` を、そうでない場合は `false` というような、論理型の応答が返ってくることを想定しています。
 
@@ -243,7 +248,7 @@ browser.runtime
   .then(handleResponse);
 ```
 
-これが対応するバックグラウンドスクリプトです。`{{WebExtAPIRef("bookmarks.search()")}}` を使うことで、リンクがブックマークされているかを確認する {{jsxref("Promise")}} を返します。
+これが対応するバックグラウンドスクリプトです。{{WebExtAPIRef("bookmarks.search()")}} を使うことで、リンクがブックマークされているかを確認する {{jsxref("Promise")}} を返します。
 
 ```js
 // background-script.js
@@ -259,7 +264,7 @@ function isBookmarked(message, sender, response) {
 browser.runtime.onMessage.addListener(isBookmarked);
 ```
 
-非同期的なハンドラーがプロミスを返さない場合、明示的にプロミスを作ることができます。これは少し不自然な例ですが、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) を使って 1 秒の遅延を発生させた後に応答を返します。
+非同期的なハンドラーがプロミスを返さない場合、明示的にプロミスを作ることができます。これは少し不自然な例ですが、{{domxref("Window.setTimeout", "setTimeout()")}} を使って 1 秒の遅延を発生させた後に応答を返します。
 
 ```js
 // background-script.js
@@ -279,8 +284,12 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 {{WebExtExamples}}
 
+## ブラウザーの互換性
+
+{{Compat}}
+
 > [!NOTE]
-> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onMessage) API. このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。
+> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onMessage) API に基づいています。このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードから派生しています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

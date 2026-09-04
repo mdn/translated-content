@@ -17,7 +17,7 @@ clearMarks(name)
 ### 参数
 
 - name {{optional_inline}}
-  - : {{domxref("DOMString")}} 表示时间戳的名字，如果没有提供这个参数，则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。
+  - : {{jsxref("String")}} 表示时间戳的名字，如果没有提供这个参数，则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。
 
 ### 返回值
 

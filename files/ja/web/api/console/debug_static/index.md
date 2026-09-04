@@ -1,33 +1,34 @@
 ---
-title: console.debug()
+title: "console: debug() 静的メソッド"
+short-title: debug()
 slug: Web/API/console/debug_static
+l10n:
+  sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
-**`console.debug()`** メソッドは、メッセージを "debug" ログレベルでウェブコンソールに出力します。このメッセージは、デバッグ出力を表示するようにコンソールが構成されている場合にのみユーザーに表示されます。多くの場合、ログレベルはコンソールの UI の中で構成します。このログレベルは \`Debug\` または \`Verbose\` ログレベルに相当します。
-
-{{AvailableInWorkers}}
+**`console.debug()`** メソッドは、メッセージを "debug" ログレベルでウェブコンソールに出力します。このメッセージは、デバッグ出力を表示するようにコンソールが構成されている場合にのみユーザーに表示されます。多くの場合、ログレベルはコンソールの UI の中で構成します。このログレベルは `Debug` または `Verbose` ログレベルに相当します。
 
 ## 構文
 
-```js
-debug(obj1);
-debug(obj1, /* …, */ objN);
-debug(msg);
-debug(msg, subst1, /* …, */ substN);
+```js-nolint
+console.debug(val1)
+console.debug(val1, /* …, */ valN)
+console.debug(msg)
+console.debug(msg, subst1, /* …, */ substN)
 ```
 
 ### 引数
 
-- `obj1` … `objN`
-  - : 出力する JavaScript オブジェクトのリスト。これらの各オブジェクトの文字列表現は、リストされた順に追加され、コンソールに出力されます。
+- `val1` … `valN`
+  - : 出力する JavaScript 値のリスト。これらのそれぞれの値の表現が、指定された順序でコンソールに出力され、それぞれの間には何らかの区切りが挿入されます。`val1` が文字列である場合の特別な場合については、後述します。
 - `msg`
-  - : 連続した順序で `subst1` から `substN` に置き換えられる 0 個以上の置換文字列を含む JavaScript 文字列です。
+  - : 置換文字列をゼロ個以上含む JavaScript 文字列。置換文字列は、置換文字列の数まで順に `subst1` から `substN` で置き換えられます。置換の仕組みについては、[文字列置換の使用](/ja/docs/Web/API/console#文字列置換の使用)を参照してください。
 - `subst1` … `substN`
-  - : `msg` 内の置換文字列を置換する JavaScript オブジェクト。これにより、出力の形式をさらに制御できます。置換のしくみの説明については、 {{domxref("console")}} の[文字列置換の使用](/ja/docs/Web/API/console#文字列置換の使用)を参照してください。
+  - : `msg` 内の置換文字列を置き換える JavaScript 値。置換値が置換文字列の数より多い場合、余分な値は書式文字列が存在しない場合と同様に、詳細なアサーションメッセージの後にコンソールへ直接出力されます。
 
-詳細については、{{domxref("console")}} オブジェクトのドキュメントの[コンソールへのテキストの出力](/ja/docs/Web/API/console#コンソールへのテキストの出力)を参照してください。
+詳細については、[コンソールへのテキストの出力](/ja/docs/Web/API/console#コンソールへのテキストの出力)（{{domxref("console")}} のドキュメント）を参照してください。
 
 ### 返値
 
@@ -40,3 +41,9 @@ debug(msg, subst1, /* …, */ substN);
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [Microsoft Edge's documentation for `console.debug()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#debug)
+- [Node.js documentation for `console.debug()`](https://nodejs.org/docs/latest/api/console.html#consoledebugdata-args)
+- [Google Chrome's documentation for `console.debug()`](https://developer.chrome.com/docs/devtools/console/api/#debug)

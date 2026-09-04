@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 **`AsyncGeneratorFunction()`** 构造函数创建 {{jsxref("AsyncGeneratorFunction")}} 对象。
 
 注意，`AsyncGeneratorFunction` 不是全局对象。它可以通过执行以下代码获取。

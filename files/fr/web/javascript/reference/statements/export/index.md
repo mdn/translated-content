@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/export
 
 {{jsSidebar("Statements")}}
 
-L'instruction **`export`** est utilisée lors de la création de modules JavaScript pour exporter des fonctions, des objets ou des valeurs primitives à partir du module, de sorte qu'ils puissent être utilisés par d'autres programmes grâce à l'instruction {{jsxref("Instructions/import", "import")}}.
+L'instruction **`export`** est utilisée lors de la création de modules JavaScript pour exporter des fonctions, des objets ou des valeurs primitives à partir du module, de sorte qu'ils puissent être utilisés par d'autres programmes grâce à l'instruction {{jsxref("Statements/import", "import")}}.
 
 Les modules exportés sont interprétés en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) dans tous les cas. L'instruction `export` ne peut pas être utilisée dans les scripts embarqués.
 
@@ -75,7 +75,7 @@ Mais un export par défaut peut être importé avec n'importe quel nom, par exem
 
 ```js
 let k;
-export default k = 12; // dans le fichier test.js
+export default (k = 12); // dans le fichier test.js
 import m from "./test"; // notez que nous avons la liberté d'utiliser import m au lieu de import k, parce que k était l'export par défaut
 console.log(m); // enregistrera 12
 ```
@@ -167,7 +167,7 @@ Notez qu'il n'est pas possible d'utiliser `var`, `let` ou `const` avec `export d
 
 ## Voir aussi
 
-- {{jsxref("Instructions/import", "import")}}
+- {{jsxref("Statements/import", "import")}}
 - [Guide sur les modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules)
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post par Jason Orendorff
 - [Livre d'Axel Rauschmayer : "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

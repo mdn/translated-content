@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Instance/exports
 
 {{WebAssemblySidebar}}
 
-**`exports`** は {{jsxref("WebAssembly.Instance")}} オブジェクトプロトタイプの読み取り専用プロパティで、 WebAssembly モジュールインスタンスからエクスポートされたすべての関数をメンバ－として持つオブジェクトを返します。これらは、 JavaScript からアクセスして使用することができます。
+**`exports`** は [`WebAssembly.Instance`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance) オブジェクトプロトタイプの読み取り専用プロパティで、 WebAssembly モジュールインスタンスからエクスポートされたすべての関数をメンバ－として持つオブジェクトを返します。これらは、 JavaScript からアクセスして使用することができます。
 
 ```js
 instance.exports;
@@ -16,7 +16,7 @@ instance.exports;
 
 ### exports の使用
 
-fetch を使用して WebAssembly バイトコードを読み取った後、 {{jsxref("WebAssembly.instantiateStreaming()")}} 関数を使用してモジュールをコンパイルし、インスタンス化し、 JavaScript 関数をそのプロセスの WebAssembly モジュールにインポートします。その後、 `Instance` からエクスポートされた[エクスポート済み WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)を呼び出します。
+fetch を使用して WebAssembly バイトコードを読み取った後、 [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) 関数を使用してモジュールをコンパイルし、インスタンス化し、 JavaScript 関数をそのプロセスの WebAssembly モジュールにインポートします。その後、 `Instance` からエクスポートされた[エクスポート済み WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)を呼び出します。
 
 ```js
 var importObject = {

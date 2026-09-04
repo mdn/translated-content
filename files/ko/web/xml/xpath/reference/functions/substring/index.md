@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/substring
 original_slug: Web/XPath/Functions/substring
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `substring` 함수는 인수로 준 문자열의 부분을 반환합니다.
 

@@ -70,4 +70,4 @@ g.return(1); // { value: 1, done: true }
 
 ## Ver también
 
-- {{jsxref("Sentencias/function*","function*")}}
+- {{jsxref("Statements/function*","function*")}}

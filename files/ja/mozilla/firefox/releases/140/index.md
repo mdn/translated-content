@@ -18,7 +18,7 @@ l10n:
 
 - [CSS カスタムハイライト API](/ja/docs/Web/API/CSS_Custom_Highlight_API) をサポートしました。これは文書内の任意のテキスト範囲にスタイルを設定する仕組みを提供するもので、{{cssxref('::selection')}}、{{cssxref('::spelling-error')}}、{{cssxref('::grammar-error')}}、{{cssxref('::target-text')}} のようなほかのハイライト擬似要素の動作を一般化します。
   [`Highlight`](/ja/docs/Web/API/Highlight) でグループ化した [`Range`](/ja/docs/Web/API/Range) のインスタンスを使用して、JavaScript でテキスト範囲を定義します。そして、[`HighlightRegistry`](/ja/docs/Web/API/HighlightRegistry) を使用して名前をつけて登録します。
-  CSS の [`::highlight`](/ja/docs/Web/CSS/::highlight) 擬似要素を使用して、登録したハイライトにスタイルを適用できます ([Firefox bug 1964089](https://bugzil.la/1964089))。
+  CSS の [`::highlight`](/ja/docs/Web/CSS/Reference/Selectors/::highlight) 擬似要素を使用して、登録したハイライトにスタイルを適用できます ([Firefox bug 1964089](https://bugzil.la/1964089))。
 
 #### 廃止
 

@@ -21,10 +21,10 @@ if (true) {
 }
 
 console.log(x);
-// Expected output: 2
+// 予想される結果: 2
 
 console.log(y);
-// Expected output: 1
+// 予想される結果: 1
 ```
 
 ## 構文

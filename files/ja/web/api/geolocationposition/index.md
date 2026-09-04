@@ -2,7 +2,7 @@
 title: GeolocationPosition
 slug: Web/API/GeolocationPosition
 l10n:
-  sourceCommit: 5e98fd9cfbec6e28044a27c58bffca5ae464ec8b
+  sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
@@ -13,14 +13,17 @@ l10n:
 
 _`GeolocationPosition` インターフェイスが継承するプロパティはありません。_
 
-- {{domxref("GeolocationPosition.coords")}} {{ReadOnlyInline}} {{securecontext_inline}}
+- {{domxref("GeolocationPosition.coords")}} {{ReadOnlyInline}}
   - : 現在位置を示す {{domxref("GeolocationCoordinates")}} オブジェクトを返します。
-- {{domxref("GeolocationPosition.timestamp")}} {{ReadOnlyInline}} {{securecontext_inline}}
-  - : 位置情報が取得された時刻を表すタイムスタンプを、ミリ秒単位の [Unix 時刻](/ja/docs/Glossary/Unix_time)で返します。
+- {{domxref("GeolocationPosition.timestamp")}} {{ReadOnlyInline}}
+  - : 位置情報が取得された時刻を表すタイムスタンプを、ミリ秒単位の {{Glossary("Unix time", "Unix 時刻")}}で返します。
 
 ## インスタンスメソッド
 
-_`GeolocationPosition` インターフェイスが実装・継承するメソッドはありません。_
+_`GeolocationPosition` インターフェイスが継承しているメソッドはありません。_
+
+- {{domxref("GeolocationPosition.toJSON()")}}
+  - : この `GeolocationPosition` オブジェクトの JSON 表現を返し、 {{jsxref("JSON.stringify()")}} でシリアライズすることができるようにします。
 
 ## 仕様書
 

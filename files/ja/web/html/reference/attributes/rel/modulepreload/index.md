@@ -1,11 +1,10 @@
 ---
-title: rel="modulepreload"
+title: HTML `rel="modulepreload"` 属性値
+short-title: modulepreload
 slug: Web/HTML/Reference/Attributes/rel/modulepreload
 l10n:
-  sourceCommit: 0389dd29e0827791ad9d2f6b8cda217c121f9c19
+  sourceCommit: fc7c0c6df803d5ce26e7b2a72725a7d021ed0694
 ---
-
-{{HTMLSidebar}}
 
 **`modulepreload`** キーワードを {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性に指定すると、[モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)とその依存関係を先取りして取得し、後で実行するために文書のモジュールマップに保存するための宣言的な方法を提供します。
 
@@ -18,11 +17,11 @@ l10n:
 主な違いは、 `preload` はファイルをダウンロードしてキャッシュに格納するだけですが、 `modulepreload` はモジュールを取得し、解釈してコンパイルし、その結果をモジュールマップに格納して実行できるようにします。
 
 `modulepreload` を使用する場合、フェッチリクエストモードは常に [`cors`](/ja/docs/Web/API/Request/mode#cors) であり、 [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) プロパティを使用してリクエストの[資格情報モード](/ja/docs/Web/API/Request/credentials)を決定します。
-`crossorigin` が [`anonymous`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin#anonymous) または [`""`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin#sect1) (既定) に設定されていた場合、資格情報モードは [`same-origin`](/ja/docs/Web/API/Request/credentials#same-origin) となり、Cookie や認証のようなユーザー資格情報は `same-origin` のリクエストに対してのみ送信されます。
+`crossorigin` が [`anonymous`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin#anonymous) または [`""`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin#sect1) (デフォルト) に設定されていた場合、資格情報モードは [`same-origin`](/ja/docs/Web/API/Request/credentials#same-origin) となり、Cookie や認証のようなユーザー資格情報は `same-origin` のリクエストに対してのみ送信されます。
 `crossorigin` が [`use-credentials`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin#use-credentials) に設定されている場合、資格情報モードは [`include`](/ja/docs/Web/API/Request/credentials#include) となり、オリジン内・オリジン間の両方のリクエストに対してユーザー資格情報が送信されます。
 
-[`as`](/ja/docs/Web/HTML/Reference/Elements/link#as) 属性は `rel="modulepreload"` のリンクではオプションで、 `"script"` が既定です。
-`"script"` または `"audioworklet"`、`"paintworklet"`、`"serviceworker"`、`"sharedworker"`、`"worker"` などのスクリプトに似た出力先に設定することができます。
+[`as`](/ja/docs/Web/HTML/Reference/Elements/link#as) 属性は `rel="modulepreload"` のリンクではオプションで、 `"script"` がデフォルトです。
+`"script"`、`"style"`、`"json"`、`"text"`、または任意のスクリプト形式の出力先（`"audioworklet"`, `"paintworklet"`, `"serviceworker"`, `"sharedworker"`, `"worker"` など）に設定できます。許可される値の完全な一覧は、HTML 仕様書の [module preload destination](https://html.spec.whatwg.org/multipage/links.html#module-preload-destination) のマッピングで定義されています。スクリプトのような出力先のリストについては、[フェッチ仕様書](https://fetch.spec.whatwg.org/#request-destination-script-like)を参照してください。
 他の出力先が使用された場合、 "error" という名前の [`Event`](/ja/docs/Web/API/Event/Event) が要素に発生します。
 
 ブラウザーはさらに、モジュールリソースの依存関係を自動的に取得することを選ぶ可能性があります。
@@ -53,11 +52,6 @@ modules/
   <head>
     <meta charset="utf-8" />
     <title>Basic JavaScript module example</title>
-    <style>
-      canvas {
-        border: 1px solid black;
-      }
-    </style>
     <script type="module" src="main.js"></script>
   </head>
   <body></body>
@@ -77,12 +71,6 @@ modules/
     <link rel="modulepreload" href="main.js" />
     <link rel="modulepreload" href="modules/canvas.js" />
     <link rel="modulepreload" href="modules/square.js" />
-    <style>
-      canvas {
-        border: 1px solid black;
-      }
-    </style>
-
     <script type="module" src="main.js"></script>
   </head>
   <body></body>

@@ -9,7 +9,7 @@ l10n:
 
 El símbolo conocido como **`Symbol.search`** especifica el método que devuelve el índice dentro de una cadena que coincide con la expresión regular. Esta función es llamada por el método {{jsxref("String.prototype.search()")}}.
 
-Para más información, véase {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} y {{jsxref("String.prototype.search()")}}.
+Para más información, véase {{jsxref("RegExp/Symbol.search", "RegExp.prototype[@@search]()")}} y {{jsxref("String.prototype.search()")}}.
 
 {{InteractiveExample("JavaScript Demo: Symbol.search")}}
 
@@ -61,4 +61,4 @@ console.log("foobar".search(new caseInsensitiveSearch("BaR")));
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp/Symbol.search", "RegExp.prototype[@@search]()")}}

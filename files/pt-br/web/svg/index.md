@@ -3,7 +3,7 @@ title: "SVG: Gráficos Vetoriais Escaláveis"
 slug: Web/SVG
 ---
 
-**[Iniciando](/pt-BR/docs/Web/SVG/Tutorial)** Este tutorial irá ajudá-lo a começar a trabalhar com SVG.
+**[Iniciando](/pt-BR/docs/Web/SVG/Tutorials/SVG_from_scratch)** Este tutorial irá ajudá-lo a começar a trabalhar com SVG.
 
 {{SVGRef}}
 
@@ -13,9 +13,9 @@ SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se disti
 
 ## Documentação
 
-- [Referência de elementos SVG](/pt-BR/docs/Web/SVG/Element)
+- [Referência de elementos SVG](/pt-BR/docs/Web/SVG/Reference/Element)
   - : Veja detalhes sobre cada elemento SVG.
-- [Referência de atributos SVG](/pt-BR/docs/Web/SVG/Attribute)
+- [Referência de atributos SVG](/pt-BR/docs/Web/SVG/Reference/Attribute)
   - : Veja detalhes sobre cada atributo SVG.
 - [Referência da API de DOM do SVG](/pt-BR/docs/Gecko_DOM_Reference#SVG_interfaces)
   - : Veja detalhes sobre toda a API de DOM do SVG.

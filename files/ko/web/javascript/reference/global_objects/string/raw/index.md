@@ -35,7 +35,7 @@ String.raw`templateString`;
 - `...substitutions`
   - : 대체값을 포함합니다.
 - `templateString`
-  - : {{jsxref("template_literals", "템플릿 리터럴", "", 1)}}, 선택사항으로 대체를 포함 예:(`${...}`).
+  - : {{jsxref("Template_literals", "템플릿 리터럴", "", 1)}}, 선택사항으로 대체를 포함 예:(`${...}`).
 
 ### 반환값
 

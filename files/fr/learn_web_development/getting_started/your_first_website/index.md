@@ -1,7 +1,6 @@
 ---
 title: Votre premier site web
 slug: Learn_web_development/Getting_started/Your_first_website
-original_slug: Learn/Getting_started_with_the_web
 l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
@@ -27,7 +26,7 @@ Si ce n'est pas le cas, nous vous suggérons de suivre d'abord le module sur la 
   - : HTML (**H**yper**T**ext **M**arkup **L**anguage, pour Langage de balisage hypertexte en français) est le code utilisé pour structurer une page web et son contenu. Par exemple, le contenu peut être structuré en paragraphes, en liste à puces, ou à l'aide d'images et de tableaux de données. Cet article fournit une compréhension de base du HTML et de ses fonctions, et vous montre comment créer le contenu de base de votre premier site web.
 
 - [Mettre en forme le contenu](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
-  - : CSS (Cascading Style Sheets, pour Feuilles de style en cascade) est le code qui met en forme le contenu web. _Mettre en forme le contenu_ vous guide sur ce dont vous avez besoin pour commencer. Nous répondrons à des questions comme&nbsp;: Comment rendre le texte rouge&nbsp;? Comment afficher du contenu à un endroit précis dans la mise en page&nbsp;? Comment décorer votre page avec des images et des couleurs de fond&nbsp;?
+  - : CSS (Cascading Style Sheets, pour Feuilles de style en cascade) est le code qui met en forme le contenu web. _Mettre en forme le contenu_ vous guide sur ce dont vous avez besoin pour commencer. Nous répondons à des questions comme&nbsp;: Comment rendre le texte rouge&nbsp;? Comment afficher du contenu à un endroit précis dans la mise en page&nbsp;? Comment décorer votre page avec des images et des couleurs de fond&nbsp;?
 
 - [Ajouter de l'interactivité](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
   - : JavaScript est un langage de programmation qui ajoute de l'interactivité aux sites web. Cela intervient dans les jeux, dans le comportement des réponses lors de l'appui sur des boutons ou lors de la saisie de données dans des formulaires, avec du style dynamique, de l'animation, etc. Cet article vous aide à débuter avec JavaScript et à mieux comprendre ce qui est possible.
@@ -39,5 +38,5 @@ Si ce n'est pas le cas, nous vous suggérons de suivre d'abord le module sur la 
 
 ## Voir aussi
 
-- [Le parcours d'un développeur Front-end <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
-  - : [Scrimba <sup>(angl.)</sup>](https://scrimba.com/?via=mdn) _Le parcours d'un développeur Front-end_ enseigne tout ce qu'il faut savoir pour devenir un·e développeur·euse front-end compétent·e, avec des leçons interactives ludiques, des défis, des enseignant·e·s expérimenté·e·s et une communauté bienveillante. Passez de zéro à votre premier emploi front-end&nbsp;! De nombreux modules du cours sont disponibles gratuitement en version autonome.
+- [Le parcours d'un·e développeur·euse Front-end <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
+  - : [Scrimba <sup>(angl.)</sup>](https://scrimba.com/?via=mdn) _Le parcours d'un·e développeur·euse Front-end_ enseigne tout ce qu'il faut savoir pour devenir un·e développeur·euse front-end compétent·e, avec des leçons interactives ludiques, des défis, des enseignant·e·s expérimenté·e·s et une communauté bienveillante. Passez de zéro à votre premier emploi front-end&nbsp;! De nombreux modules du cours sont disponibles gratuitement en version autonome.

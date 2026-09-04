@@ -3,12 +3,12 @@ title: "GeolocationPositionError: code プロパティ"
 short-title: code
 slug: Web/API/GeolocationPositionError/code
 l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+  sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`GeolocationPositionError.code`** は読み取り専用プロパティで、 `unsigned short` でエラーコードを表します。
+**`code`** は {{domxref("GeolocationPositionError")}} インターフェイスの読み取り専用プロパティで、 `unsigned short` でエラーコードを表します。
 
 以下の値になる可能性があります。
 

@@ -1,38 +1,36 @@
 ---
-title: "Window: messageerror event"
+title: "Window : évènement messageerror"
+short-title: messageerror
 slug: Web/API/Window/messageerror_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef}}
 
-L'événement `messageerror` est déclenché sur un objet {{domxref('Window')}} lorsqu'il reçoit un message qui ne peut pas être désérialisé.
+L'évènement `messageerror` est déclenché sur un objet {{DOMxRef("Window")}} lorsqu'il reçoit un message qui ne peut pas être désérialisé.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
-      <td>
-        {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+Cet évènement n'est pas annulable et ne se propage pas.
+
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènements.
+
+```js-nolint
+addEventListener("messageerror", (event) => { })
+
+onmessageerror = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("MessageEvent")}}. Hérite de {{DOMxRef("Event")}}.
+
+{{InheritanceDiagram("MessageEvent")}}
 
 ## Exemples
 
-Écoutez `messageerror` en utilisant {{domxref("EventTarget/addEventListener", "addEventListener()")}} :
+Écoutez `messageerror` en utilisant {{DOMxRef("EventTarget/addEventListener", "addEventListener()")}}&nbsp;:
 
 ```js
 window.addEventListener("messageerror", (event) => {
@@ -40,7 +38,7 @@ window.addEventListener("messageerror", (event) => {
 });
 ```
 
-Idem, mais en utilisant la propriété de gestionnaire d'événements {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} :
+Idem, mais en utilisant la propriété de gestionnaire d'évènements `onmessageerror`&nbsp;:
 
 ```js
 window.onmessageerror = (event) => {
@@ -58,5 +56,5 @@ window.onmessageerror = (event) => {
 
 ## Voir aussi
 
-- {{domxref("Window.postMessage()")}}
-- Événements liés: {{domxref("Window/message_event", "message")}}.
+- La méthode {{DOMxRef("Window.postMessage()")}}
+- Évènements associés&nbsp;: {{DOMxRef("Window/message_event", "message")}}.

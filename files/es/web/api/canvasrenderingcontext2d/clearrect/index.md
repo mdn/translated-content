@@ -77,8 +77,7 @@ ctx.lineTo(120,120);
 ctx.closePath(); // draws last line of the triangle
 ctx.stroke();
 
-ctx.clearRect(10, 10, 100, 100);</textarea
->
+ctx.clearRect(10, 10, 100, 100);</textarea>
 ```
 
 ```js hidden

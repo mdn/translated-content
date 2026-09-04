@@ -59,4 +59,4 @@ console.log(typeof num); // number
 
 ## 같이 보기
 
-- {{jsxref("Number.prototype.toSource()")}}
+- {{jsxref("Number.prototype.toString()", "Number.prototype.toSource()")}}

@@ -40,7 +40,7 @@ O código acima cria três símbolos novos. Note que a função **_Symbol("foo")
 Symbol("foo") === Symbol("foo"); // false
 ```
 
-A sintaxe a seguir com o operador {{jsxref("Operators/new", "new")}} vai resultar em um {{jsxref("TypeError")}}:
+A sintaxe a seguir com o operador {{jsxref("new")}} vai resultar em um {{jsxref("TypeError")}}:
 
 ```js
 var sym = new Symbol(); // TypeError
@@ -69,7 +69,7 @@ O método {{jsxref("Object.getOwnPropertySymbols()")}} retorna um array de símb
 
 - `Symbol.length`
   - : Propriedade de tamanho cujo valor é 1.
-- {{jsxref("Symbol.prototype")}}
+- {{jsxref("Symbol")}}
   - : Representa o protótipo do `Symbol` construtor.
 
 ### Símbolos conhecidos
@@ -77,7 +77,7 @@ O método {{jsxref("Object.getOwnPropertySymbols()")}} retorna um array de símb
 Em adição para seus próprios símbolos, JavaScript possui alguns símbolos built-in que representa os comportamentos internos da linguagem que não foram revelados para os desenvolvedores no ECMAScript 5 e anterior. Esses símbolos podem ser acessados usando as seguintes propriedades:
 
 - Symbol.hasInstance
-  - : Especificado como @@hasInstance. Um método que determina se um construtor de um objeto é reconhecido como a instância de um objeto. Usado por {{jsxref("Operators/instanceof", "instanceof")}}.
+  - : Especificado como @@hasInstance. Um método que determina se um construtor de um objeto é reconhecido como a instância de um objeto. Usado por {{jsxref("instanceof")}}.
 - Symbol.isConcatSpreadable
   - : Especificado como @@isConcatSpreadable. Um valor Booleano indicando se um objeto deve ser adicionado como elemento de uma array. Usado por {{jsxref("Array.prototype.concat()")}}.
 - Symbol.isRegExp
@@ -100,7 +100,7 @@ Em adição para seus próprios símbolos, JavaScript possui alguns símbolos bu
 
 ## `Symbol` protótipo
 
-Todos os símbolos herdados de {{jsxref("Symbol.prototype")}}.
+Todos os símbolos herdados de {{jsxref("Symbol")}}.
 
 ### Propriedades
 

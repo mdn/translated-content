@@ -2,10 +2,8 @@
 title: ウェブフォーム
 slug: Learn_web_development/Extensions/Forms
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 76936e1d9ff271ac59307a0f858d0d7b57f3866a
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions")}}
 
@@ -20,7 +18,7 @@ l10n:
 上記のテキストは、なぜ私たちがウェブフォームを HTML、CSS、JavaScript のトピックに混ぜるのではなく、独立したモジュールにしたかを示す良い指標です。フォーム要素は他のほとんどの HTML 要素よりも複雑であり、またフォーム要素を最大限に活用するためには、関連する CSS と JavaScript のテクニックを密接に組み合わせる必要があります。
 
 > [!NOTE]
-> 自分のファイルを作ることができないコンピューター/タブレット/その他の端末で作業している場合、（大半の）コード例を [JS Bin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったオンラインコーディングプログラムで試すことができます。
+> ファイルを作成できないコンピューター、タブレット、その他の端末で作業している場合は、[CodePen](https://codepen.io/) や [JSFiddle](https://jsfiddle.net/) などのオンラインエディターでコードを実行してみてください。
 
 ## 導入ガイド
 
@@ -46,6 +44,8 @@ l10n:
   - : ここでは、スタイルが難しい要素を扱うために必要な、さらに高度なフォームスタイル設定テクニックを紹介します。
 - [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
   - : この記事では、最新の HTML と CSS の専用機能を使用して、完全にカスタマイズした `<select>` 要素を作成する方法について説明します。これには、選択ボタン、ドロップダウンピッカー、矢印アイコン、現在の選択チェックマーク、および個々の `<option>` 要素のスタイルを完全に制御する機能も含んでいます。
+- [カスタマイズ可能な select リストボックス](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes)
+  - : この記事は前の記事の続きで、カスタマイズ可能なリストボックス要素 `<select>` のスタイル設定方法について解説します。
 - [UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
   - : 現在の状態に応じて制御される HTML フォームコントロールを可能とする、UI 擬似クラス の入門です。
 
@@ -56,7 +56,7 @@ l10n:
 - [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
   - : この記事ではユーザーがフォームを送信するときに何が起こるのかを見ます — データがどこに行くのか、そしてそこでデータを受けたらどう扱うかなどです。また、フォームデータ送信に関連するセキュリティ上の懸念もその一部です。
 
-## 高度なガイド
+## 高度なチュートリアル
 
 下記の記事は学習コースに必須ではないですが、上記のテクニックをマスターしてそれ以上知りたいときには、興味深く役立つものでしょう。
 
@@ -64,14 +64,15 @@ l10n:
   - : 場合によってはネイティブのフォームウィジェットが必要となるものを提供していないことがあるでしょう。例えばスタイル設定や機能で。この場合、生の HTML から自分自身のフォームウィジェットを作る必要があります。この記事ではその方法と考慮すべき点を、実際のケーススタディと一緒に説明します。
 - [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
   - : この記事では、標準フォームの送信ではなく、カスタム JavaScript 内で HTTP リクエストを組み立てて送る方法を見ます。またそうしたい理由と、そうする意味も見ていきます（[FormData オブジェクトの使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)もご覧ください）。
-- [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
-  - : この記事では、最新の HTML と CSS の専用機能を使用して、完全にカスタマイズした {{htmlelement("select")}} 要素を作成する方法について説明します。
+- [古いブラウザーでの HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+  - : この記事では、HTML フォームが古いブラウザーに対応する必要が生じた際に、その負担を軽減するためのヒントやコツを紹介します。
+- [ユーザー入力方法とコントロール](/ja/docs/Learn_web_development/Extensions/Forms/User_input_methods)
+  - : この記事では、ユーザーがフォームやその他のウェブコンテンツとどのようにやり取りするかについて解説し、ユーザー入力の管理に関する推奨事項、実際の事例、および詳細情報へのリンクを紹介しています。
 
 ## 関連情報
 
 - [HTML フォーム要素リファレンス](/ja/docs/Web/HTML/Reference/Elements#forms)
 - [HTML \<input> 型リファレンス](/ja/docs/Web/HTML/Reference/Elements/input)
 - [HTML 属性リファレンス](/ja/docs/Web/HTML/Reference/Attributes)
-- [ユーザー入力とコントロール](/ja/docs/Learn_web_development/Extensions/Forms/User_input_methods)
 
 {{NextMenu("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions")}}

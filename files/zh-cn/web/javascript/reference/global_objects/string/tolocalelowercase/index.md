@@ -3,8 +3,6 @@ title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`toLocaleLowerCase()`** 方法会根据特定区域设置的大小写映射规则，将字符串转换为小写形式并返回。
 
 {{InteractiveExample("JavaScript Demo: String.toLocaleLowerCase()")}}

@@ -66,4 +66,4 @@ document.head.appendChild(meta);
 ## 関連情報
 
 - {{HTMLElement("meta")}}
-- [メディアクエリーで取りうる値](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [メディアクエリーで取りうる値](/ja/docs/Web/CSS/Guides/Media_queries/Using)

@@ -19,41 +19,41 @@ slug: Web/API/URL
 ## 属性
 
 - {{domxref("URL.hash", "hash")}}
-  - : 包含`'#'`的{{domxref("USVString")}}，后跟 URL 的片段标识符。
+  - : 包含`'#'`的{{jsxref("String")}}，后跟 URL 的片段标识符。
 - {{domxref("URL.host", "host")}}
-  - : 一个{{domxref("USVString")}}，其中包含域（即主机名），后跟（如果指定了端口）“：”和 URL 的端口。
+  - : 一个{{jsxref("String")}}，其中包含域（即主机名），后跟（如果指定了端口）“：”和 URL 的端口。
 - {{domxref("URL.hostname", "hostname")}}
-  - : 包含 URL 域名的 {{domxref("USVString")}}。
+  - : 包含 URL 域名的 {{jsxref("String")}}。
 - {{domxref("URL.href", "href")}}
-  - : 包含完整 URL 的 {{domxref("USVString")}}。
+  - : 包含完整 URL 的 {{jsxref("String")}}。
 - {{domxref("URL.origin", "origin")}} {{readonlyInline}}
-  - : 返回一个包含协议名、域名和端口号的 {{domxref("USVString")}}。
+  - : 返回一个包含协议名、域名和端口号的 {{jsxref("String")}}。
 - {{domxref("URL.password", "password")}}
-  - : 包含在域名前面指定的密码的 {{domxref("USVString")}} 。
+  - : 包含在域名前面指定的密码的 {{jsxref("String")}} 。
 - {{domxref("URL.pathname", "pathname")}}
-  - : 以 '/' 起头紧跟着 URL 文件路径的 {{domxref("DOMString")}}。
+  - : 以 '/' 起头紧跟着 URL 文件路径的 {{jsxref("String")}}。
 - {{domxref("URL.port", "port")}}
-  - : 包含 URL 端口号的 {{domxref("USVString")}}。
+  - : 包含 URL 端口号的 {{jsxref("String")}}。
 - {{domxref("URL.protocol", "protocol")}}
-  - : 包含 URL 协议名的 {{domxref("USVString")}}，末尾带 `':'`。
+  - : 包含 URL 协议名的 {{jsxref("String")}}，末尾带 `':'`。
 - {{domxref("URL.search", "search")}}
-  - : 一个{{domxref("USVString")}} ，指示 URL 的参数字符串；如果提供了任何参数，则此字符串包括所有参数，并以开头的“？”开头 字符。
+  - : 一个{{jsxref("String")}} ，指示 URL 的参数字符串；如果提供了任何参数，则此字符串包括所有参数，并以开头的“？”开头 字符。
 - {{domxref("URL.searchParams", "searchParams")}} {{readonlyInline}}
   - : {{domxref("URLSearchParams")}}对象，可用于访问`search`中找到的各个查询参数。
 - {{domxref("URL.username","username")}}
-  - : 包含在域名前面指定的用户名的 {{domxref("USVString")}}。
+  - : 包含在域名前面指定的用户名的 {{jsxref("String")}}。
 
 ## 方法
 
 - {{domxref("URL.toString", "toString()")}}
-  - : 返回包含整个 URL 的{{domxref("USVString")}}。它是{{domxref("URL.href")}}的同义词，尽管它不能用于修改值。
+  - : 返回包含整个 URL 的{{jsxref("String")}}。它是{{domxref("URL.href")}}的同义词，尽管它不能用于修改值。
 - {{domxref("URL.toJSON", "toJSON()")}}
-  - : 返回包含整个 URL 的{{domxref("USVString")}}。它返回与`href`属性相同的字符串。
+  - : 返回包含整个 URL 的{{jsxref("String")}}。它返回与`href`属性相同的字符串。
 
 ## 静态方法
 
 - {{domxref("URL.createObjectURL", "createObjectURL()")}}
-  - : 返回一个{{domxref("DOMString")}} ，包含一个唯一的 blob 链接（该链接协议为以 blob:，后跟唯一标识浏览器中的对象的掩码）。
+  - : 返回一个{{jsxref("String")}} ，包含一个唯一的 blob 链接（该链接协议为以 blob:，后跟唯一标识浏览器中的对象的掩码）。
 - {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
   - : 销毁之前使用{{ domxref("URL.createObjectURL()") }}方法创建的 URL 实例。
 

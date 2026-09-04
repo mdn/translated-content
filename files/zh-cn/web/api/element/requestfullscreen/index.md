@@ -51,7 +51,7 @@ _`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，�
 
 ## 安全性
 
-需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互才能使用此功能。
+需要[瞬态用户激活](/zh-CN/docs/Web/Security/Defenses/User_activation)。用户必须与页面或 UI 元素进行交互才能使用此功能。
 
 ## 使用说明
 

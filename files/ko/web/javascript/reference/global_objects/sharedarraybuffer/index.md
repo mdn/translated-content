@@ -60,7 +60,7 @@ worker.postMessage(sab);
 
 ### 생성자는 `new` 연산자를 필요로 함
 
-`SharedArrayBuffer` 생성자는 생성될 때, {{jsxref("Operators/new", "new")}} 연산자를 필요로 합니다. `SharedArrayBuffer` 생성자를 new 없이 함수로써 호출하면, {{jsxref("TypeError")}} 를 일으킬 것 입니다.
+`SharedArrayBuffer` 생성자는 생성될 때, {{jsxref("new")}} 연산자를 필요로 합니다. `SharedArrayBuffer` 생성자를 new 없이 함수로써 호출하면, {{jsxref("TypeError")}} 를 일으킬 것 입니다.
 
 ```js example-bad
 var sab = SharedArrayBuffer(1024);
@@ -76,12 +76,12 @@ var sab = new SharedArrayBuffer(1024);
 
 - `SharedArrayBuffer.length`
   - : 값이 1인 `SharedArrayBuffer` 생성자의 length 속성입니다.
-- {{jsxref("SharedArrayBuffer.prototype")}}
+- {{jsxref("SharedArrayBuffer")}}
   - : 모든 `SharedArrayBuffer` 객체에 프로퍼티 추가를 가능하게 해줍니다.
 
 ## `SharedArrayBuffer` prototype 객체
 
-모든 `SharedArrayBuffer` 인스턴스는 {{jsxref("SharedArrayBuffer.prototype")}} 를 상속합니다.
+모든 `SharedArrayBuffer` 인스턴스는 {{jsxref("SharedArrayBuffer")}} 를 상속합니다.
 
 ### 속성
 

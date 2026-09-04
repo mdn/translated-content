@@ -1,5 +1,5 @@
 ---
-title: "IDBFactory: deleteDatabase() method"
+title: "IDBFactory: deleteDatabase() メソッド"
 short-title: deleteDatabase()
 slug: Web/API/IDBFactory/deleteDatabase
 l10n:

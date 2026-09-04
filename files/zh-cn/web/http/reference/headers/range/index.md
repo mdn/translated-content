@@ -5,9 +5,9 @@ slug: Web/HTTP/Reference/Headers/Range
 
 **`Range`** {{Glossary("request header", "请求标头")}}告知服务器返回文件的哪一部分。在一个 `Range` 标头中，可以一次性请求多个部分，服务器会以 multipart 文件的形式将其返回。如果服务器返回的是范围响应，需要使用 {{HTTPStatus("206")}} `Partial Content` 状态码。假如所请求的范围不合法，那么服务器会返回 {{HTTPStatus("416")}} `Range Not Satisfiable` 状态码，表示客户端错误。服务器允许忽略 `Range` 标头，从而返回整个文件，状态码用 {{HTTPStatus("200")}} 。
 
-| Header type                           | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | no                             |
+| Header type                              | {{Glossary("Request header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | no                             |
 
 ## 语法
 

@@ -35,7 +35,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function
   - : Создает новую функцию, при вызове которой её `this` будет установлен на `thisArg`. Можно также указать ряд аргументов, которые будут добавлены к аргументам при вызове новой привязанной функции.
 - {{jsxref("Function.prototype.call()", "Function.prototype.call(<var>thisArg</var>[, <var>arg1</var>, <var>arg2</var>, ...<var>argN</var>])")}}
   - : Вызывает функцию и устанавливает её `this` на переданное значение. Аргументы могут быть переданы как есть.
-- {{jsxref("Function.prototype.toString()", "Function.prototype.toString()")}}
+- {{jsxref("Function.prototype.toString()")}}
   - : Возвращает строку с исходным кодом функции.
     Переопределяет метод {{jsxref("Object.prototype.toString")}}.
 

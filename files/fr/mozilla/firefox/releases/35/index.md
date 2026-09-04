@@ -1,174 +1,112 @@
 ---
-title: Firefox 35 pour les développeurs
+title: Firefox 35 note de version pour les développeurs
+short-title: Firefox 35
 slug: Mozilla/Firefox/Releases/35
+l10n:
+  sourceCommit: 83f4e64da466670c3700110da364546253eae127
 ---
 
-1. Notes de versions pour développeurs
-   1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
+Firefox 35 a été publié le 13 janvier 2015. Cet article répertorie les principaux changements utiles non seulement pour les développeur·euse·s web, mais aussi pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'extensions.
 
-2. Modules complémentaires
-   1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
-   2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
-
-3. Fonctionnement interne de Firefox
-   1. [Le projet Mozilla](/fr/docs/Mozilla)
-   2. [Gecko](/fr/docs/Mozilla/Gecko)
-   3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
-   4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
-   5. [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
-   6. [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
-   7. [MFBT](/fr/docs/Mozilla/MFBT)
-   8. [Les projets Mozilla](/fr/docs/Mozilla/Projects)
-   9. [Le système de préférences](/fr/docs/Mozilla/Preferences)
-   10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
-   11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
-   12. [XUL](/fr/docs/Mozilla/Tech/XUL)
-
-4. Développer et contribuer
-   1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-   2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
-   3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
-   4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
-   5. [Localisation](/fr/docs/Mozilla/Localization)
-   6. [Mercurial](/fr/docs/Mozilla/Mercurial)
-   7. [Assurance qualité](/fr/docs/Mozilla/QA)
-   8. [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
-
-## Changement concernant les développeurs
+## Changement concernant les développeur·euse·s
 
 ### Outils de développement
 
-Liens:
+Points forts&nbsp;:
 
-- [See ::before and ::after pseudo elements in the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#.3a.3abefore_and_.3a.3aafter)
-- [CSS source maps are now enabled by default](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html#source_map_support)
-- ["Show DOM Properties" from the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#element_popup_menu_2)
+- [Voir les pseudo-éléments `::before` et `::after` dans l'Inspecteur de page <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#.3a.3abefore-and-.3a.3aafter)
+- [Les correspondances de source CSS sont désormais disponibles par défaut <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html#source-map-support)
+- [«&nbsp;Afficher les propriétés DOM&nbsp;» depuis l'Inspecteur de page <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#element-popup-menu-2)
 
-[Tous les bugs des outils de développement résolus entre Firefox 34 et Firefox 35](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176).
+[Tous les bogues des outils de développement corrigés entre Firefox 34 et Firefox 35 <sup>(angl.)</sup>](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176).
 
 ### CSS
 
-- La proprieté [`mask-type`](/fr/docs/Web/CSS/mask-type) a été activée par défaut ([bug 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519)).
-- La propieté [`filter`](/fr/docs/Web/CSS/filter) est maintenant activée par défaut ([bug 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180)).
-- La fonction [`@font-face`](/fr/docs/Web/CSS/@font-face) est maintenant compatible avec les polices de type WOFF2 ([bug 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737)).
-- La notation fonctionnelle [`symbol()`](</fr/docs/Web/CSS/symbol()>) est maintenant supportée([bug 966168](https://bugzilla.mozilla.org/show_bug.cgi?id=966168)).
-- L'API CSS Font Loading a été implémentée ([bug 1028497](https://bugzilla.mozilla.org/show_bug.cgi?id=1028497)).
-- En utilisant [`-moz-appearance`](/fr/docs/Web/CSS/appearance) avec la valeur `none` sur un menu de type `select`, le bouton déroulant est maintenant supprimé ([bug 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849)).
-- La propriété accessor `element.style["css-property-name"]` a maintenant été ajoutée pour correspondre aux autres navigateurs ([bug 958887](https://bugzilla.mozilla.org/show_bug.cgi?id=958887 'FIXED: Add support for element.style["css-property-name"] non-standard extension')).
+- La propriété {{CSSxRef("mask-type")}} a été activée par défaut ([bogue Firefox 1058519 <sup>(angl.)</sup>](https://bugzil.la/1058519)).
+- La propriété {{CSSxRef("filter")}} est maintenant activée par défaut ([bogue Firefox 1057180 <sup>(angl.)</sup>](https://bugzil.la/1057180)).
+- La règle @font-face {{CSSxRef("@font-face")}} prend désormais en charge les polices WOFF2 ([bogue Firefox 1064737 <sup>(angl.)</sup>](https://bugzil.la/1064737)).
+- La notation fonctionnelle {{CSSxRef("symbols", "symbols()")}} est maintenant prise en charge ([bogue Firefox 966168 <sup>(angl.)</sup>](https://bugzil.la/966168)).
+- L'API CSS Font Loading a été implémentée ([bogue Firefox 1028497 <sup>(angl.)</sup>](https://bugzil.la/1028497)).
+- L'utilisation de `-moz-appearance` avec la valeur `none` sur une boîte combinée supprime désormais le bouton déroulant ([bogue Firefox 649849 <sup>(angl.)</sup>](https://bugzil.la/649849)).
+- L'accesseur de propriété `element.style["css-property-name"]` a été ajouté pour correspondre aux autres navigateurs ([bogue Firefox 958887 <sup>(angl.)</sup>](https://bugzil.la/958887)).
 
 ### HTML
 
-- Les obsolètes `et non conformes bottommargin`, `leftmargin`, `rightmargin` and `topmargin` attributs de l'élement `<body>` ont été activés en mode non-quirks ([bug 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530)).
-- Les [imports HTML](/fr/docs/Web/API/Web_components) sont maintenant supportés ([bug 877072](https://bugzilla.mozilla.org/show_bug.cgi?id=877072)).
+- Les obsolètes et non conformes `bottommargin`, `leftmargin`, `rightmargin` et `topmargin` attributs de l'élément `<body>` ont été activés en mode non-quirks ([bogue Firefox 95530 <sup>(angl.)</sup>](https://bugzil.la/95530)).
 
 ### JavaScript
 
-- La "[temporal dead zone](/fr/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" pour les déclarations [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) a été implementée. En conformité avec les sémantiques `let` ES6, les situations suivantes renvoyent des erreurs. Voir aussi cet [annoncement de newsgroup](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) et [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090).
-  - Redéclarer des variables existantes ou arguments utilisant `let` sans la même portée dans le corps de fonctions est maintenant une erreur de syntaxe.
-  - Utiliser une variable déclarée en utilisant `let` dans le corps de fonctions avant la déclaration de cette variable est maintenant une erreur d'exécution.
+- La «&nbsp;[zone temporelle morte](/fr/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)&nbsp;» pour les déclarations [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) a été implémentée. Conformément à la sémantique ES2015 de `let`, les situations suivantes génèrent désormais des erreurs. Voir également cette [annonce de groupe de discussion <sup>(angl.)</sup>](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) et [bogue Firefox 1001090 <sup>(angl.)</sup>](https://bugzil.la/1001090).
+  - Redéclarer des variables ou des arguments existants en utilisant `let` dans le même scope dans les corps de fonction est désormais une erreur de syntaxe.
+  - Utiliser une variable déclarée avec `let` dans les corps de fonction avant que la déclaration ne soit atteinte et évaluée est désormais une erreur d'exécution.
 
-- ES6 [`Symbols`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (disponible uniquement dans Nightly) a été mis à jour pour être conforme avec les récents changements de spécification :
-  - `String(Symbol("1"))` ne renvoie maintenant une [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError); au lieu d'un string (`"Symbol(1)"`) ([bug 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396)).
-  - Les divers [constructeurs _TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) ont maintenant comme `[[Prototype]]` une simple fonction, notée `%TypedArray%` en ES6 (mais pas directement exposé). Chaque prototype de tableau typé hérite maintenant de `%TypedArray%.prototype`. (`%TypedArray%` et `%TypedArray%.prototype` hérite eux-mêmes de [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) et [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), respectivement, ainsi ce constructeur et ces instances de tableau typé ont aussi les propriétés de ces objets.) Les propriétés des fonctions de tableau typés se trouvent maintenant sur `%TypedArray%.prototype` et fonctionnent sur tous les tableaux typés. Voir [_TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#description) et [bug 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) pour plus d'information.
+- Les {{JSxRef("Global_Objects/Symbol", "Symbols")}} ES2015 (seulement disponibles dans le canal Nightly) ont été mis à jour pour se conformer aux récents changements de spécification&nbsp;:
+  - `String(Symbol("1"))` ne génère plus de {{JSxRef("TypeError")}}&nbsp;; à la place, une chaîne de caractères (`"Symbol(1)"`) est retournée ([bogue Firefox 1058396 <sup>(angl.)</sup>](https://bugzil.la/1058396)).
 
-- Les semantiques ES6 pour les [mutations de prototype utilisant les _initialisateurs d'objet_](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_mutation) ont été implémentées ([bug 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853)).
-  - Maintenant un seul membre noté `__proto__:value` peut changer `le [[Prototype]]` dans la syntaxe de l'initialisateur d'objet.
-  - Les membres de méthode comme `__proto__() {}` ne réecrivent pas le `[[Prototype]]`.
+- Les différents constructeurs [_TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#objets_typedarray) ont désormais pour `[[Prototype]]` une seule fonction, notée `%TypedArray%` dans ES2015 (mais autrement non exposée directement). Chaque prototype de tableau typé hérite désormais de `%TypedArray%.prototype`. (`%TypedArray%` et `%TypedArray%.prototype` héritent respectivement de [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) et [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), de sorte que les constructeurs et instances de tableaux typés conservent les propriétés trouvées sur ces objets.) Les propriétés des fonctions de tableau typé résident désormais sur `%TypedArray%.prototype` et fonctionnent sur n'importe quel tableau typé. Voir [_TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#description) et [bogue Firefox 896116 <sup>(angl.)</sup>](https://bugzil.la/896116) pour plus d'informations.
+- La sémantique ES2015 pour [les mutations de prototype utilisant des littéraux d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer) a été implémentée ([bogue Firefox 1061853 <sup>(angl.)</sup>](https://bugzil.la/1061853)).
+  - Désormais, un seul membre noté `__proto__:value` modifie le `[[Prototype]]` dans la syntaxe de littéral d'objet.
+  - Les membres de méthode comme `__proto__() {}` ne remplacent plus le `[[Prototype]]`.
 
 ### Interfaces/APIs/DOM
 
-- L'interface [`NavigatorLanguage`](/fr/docs/Web/API/Navigator) est maintenant disponible aux développeurs sur [`WorkerNavigator`](/fr/docs/Web/API/WorkerNavigator) ([bug 925849](https://bugzilla.mozilla.org/show_bug.cgi?id=925849)).
-- La méthode [`Element.closest`](/fr/docs/Web/API/Element/closest) retourne l'ancêtre le plus proche de l'élément utilisé ([bug 1055533](https://bugzilla.mozilla.org/show_bug.cgi?id=1055533)).
-- Appui expérimental pour la propriété [`CanvasRenderingContext2D.filter`](/fr/docs/Web/API/CanvasRenderingContext2D/filter) a été ajouté sous le nom `canvas.filters.enabled` ([bug 927892](https://bugzilla.mozilla.org/show_bug.cgi?id=927892)).
-- Our experimental implementation of Web Animations progresses with the landing of the [`Animation.target`](/fr/docs/Web/API/Animation/target) property. This always is behind the dom.animations-api.core.enabled pref, off by default ([bug 1067701](https://bugzilla.mozilla.org/show_bug.cgi?id=1067701)).
-- The [`hasAttributes()`](/fr/docs/Web/API/Element/hasAttributes) method has been moved from [`Node`](/fr/docs/Web/API/Node) to [`Element`](/fr/docs/Web/API/Element) as required by the spec ([`1055773`](/fr/docs/Web/API/1055773)).
-- [Websockets](/fr/docs/Web/API/WebSockets_API) can now be used in [Workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers) ([bug 504553](https://bugzilla.mozilla.org/show_bug.cgi?id=504553)).
-- The `crossOrigin` reflected attribute of [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement), [`HTMLLinkElement`](/fr/docs/Web/API/HTMLLinkElement), [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement), [`HTMLScriptElement`](/fr/docs/Web/API/HTMLScriptElement), and [`SVGScriptElement`](/fr/docs/Web/API/SVGScriptElement) only accepts valid values, and `""` isn't, `null` has to be used instead ([bug 880997](https://bugzilla.mozilla.org/show_bug.cgi?id=880997)).
-- The Resource Timing API has been activated by default ([bug 1002855](https://bugzilla.mozilla.org/show_bug.cgi?id=1002855)).
-- To match the spec, the first argument of [`Selection.containsNode()`](/fr/docs/Web/API/Selection/containsNode) cannot be `null` anymore ([bug 1068058](https://bugzilla.mozilla.org/show_bug.cgi?id=1068058)).
-- The new [`ImageCapture`](/fr/docs/Web/API/ImageCapture) API has been implemented: [`ImageCapture.takePhoto()`](/fr/docs/Web/API/ImageCapture/takePhoto) is available ([bug 916643](https://bugzilla.mozilla.org/show_bug.cgi?id=916643)).
-- Non-HTTP [`XHR`](/fr/docs/Web/API/XMLHttpRequest) request now returns `200` in case of success (instead of the erroneous `0`) ([bug 716491](https://bugzilla.mozilla.org/show_bug.cgi?id=716491)).
-- The internal, non-standard, [`File.mozFullPath`](/fr/docs/Web/API/File/mozFullPath) property is no more visible from content ([bug 1048293](https://bugzilla.mozilla.org/show_bug.cgi?id=1048293)).
-- The constructor of [`File`](/fr/docs/Web/API/File) has been extended to match the specification ([bug 10457483](https://bugzilla.mozilla.org/show_bug.cgi?id=10457483)).
-- An experimental implementation of [`AbortablePromise`](/fr/docs/Web/API/AbortablePromise), a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled` property, defaulting to `false` ([bug 1035060](https://bugzilla.mozilla.org/show_bug.cgi?id=1035060)).
-- La propriété non standardisée [`Navigator.mozIsLocallyAvailable`](/fr/docs/Web/API/Navigator) a été supprimée ([bug 1066826](https://bugzilla.mozilla.org/show_bug.cgi?id=1066826)).
+- {{DOMxRef("WorkerNavigator.language", "navigator.language")}} et {{DOMxRef("WorkerNavigator.languages", "navigator.languages")}} sont désormais disponibles pour les workers sur {{DOMxRef("WorkerNavigator")}} ([bogue Firefox 925849 <sup>(angl.)</sup>](https://bugzil.la/925849)).
+- La méthode {{DOMxRef("Element.closest()")}} retourne l'ancêtre le plus proche de l'élément actuel ([bogue Firefox 1055533 <sup>(angl.)</sup>](https://bugzil.la/1055533)).
+- La prise en charge expérimentale de la propriété {{DOMxRef("CanvasRenderingContext2D.filter")}} a été ajoutée derrière le drapeau `canvas.filters.enabled` ([bogue Firefox 927892 <sup>(angl.)</sup>](https://bugzil.la/927892)).
+- Notre implémentation expérimentale des animations Web progresse avec l'ajout de la propriété `Animation.target`. Cela reste toujours derrière la préférence `dom.animations-api.core.enabled`, désactivée par défaut ([bogue Firefox 1067701 <sup>(angl.)</sup>](https://bugzil.la/1067701)).
+- La méthode {{DOMxRef("Element.hasAttributes", "hasAttributes()")}} a été déplacée de {{DOMxRef("Node")}} à {{DOMxRef("Element")}} comme requis par la spécification ([bogue Firefox 1055773 <sup>(angl.)</sup>](https://bugzil.la/1055773)).
+- L'attribut réfléchi `crossOrigin` de {{DOMxRef("HTMLImageElement")}}, {{DOMxRef("HTMLLinkElement")}}, {{DOMxRef("HTMLMediaElement")}}, {{DOMxRef("HTMLScriptElement")}} et {{DOMxRef("SVGScriptElement")}} n'accepte que des valeurs valides, et `""` ne l'est pas, `null` doit être utilisé à la place ([bogue Firefox 880997 <sup>(angl.)</sup>](https://bugzil.la/880997)).
+- L'API Resource Timing a été activée par défaut ([bogue Firefox 1002855 <sup>(angl.)</sup>](https://bugzil.la/1002855)).
+- Pour correspondre à la spécification, le premier argument de {{DOMxRef("Selection.containsNode()")}} ne peut plus être `null` ([bogue Firefox 1068058 <sup>(angl.)</sup>](https://bugzil.la/1068058)).
+- La nouvelle API {{DOMxRef("ImageCapture")}} a été implémentée&nbsp;: {{DOMxRef("ImageCapture.takePhoto()")}} est disponible ([bogue Firefox 916643 <sup>(angl.)</sup>](https://bugzil.la/916643)).
+- Les requêtes {{DOMxRef("XMLHttpRequest")}} non HTTP retournent désormais `200` en cas de succès (au lieu de `0` erroné) ([bogue Firefox 716491 <sup>(angl.)</sup>](https://bugzil.la/716491)).
+- {{DOMxRef("XMLHttpRequest.responseURL")}} a été adapté à la dernière spécification et n'inclut pas le fragment (`'#xyz'`) de l'URL, le cas échéant ([bogue Firefox 1073882 <sup>(angl.)</sup>](https://bugzil.la/1073882)).
+- La propriété interne non standard `File.mozFullPath` n'est plus visible depuis le contenu ([bogue Firefox 1048293 <sup>(angl.)</sup>](https://bugzil.la/1048293)).
+- Le constructeur de {{DOMxRef("File")}} a été étendu pour correspondre à la spécification ([bogue Firefox 1047483 <sup>(angl.)</sup>](https://bugzil.la/1047483)).
+- Une implémentation expérimentale de `AbortablePromise`, une promesse qui peut être annulée par une entité différente de celle qui l'a créée, a été ajoutée. Elle est préfixée par `Moz` et contrôlée par la propriété `dom.abortablepromise.enabled`, désactivée par défaut ([bogue Firefox 1035060 <sup>(angl.)</sup>](https://bugzil.la/1035060)).
+- La propriété non standard `Navigator.mozIsLocallyAvailable` a été supprimée ([bogue Firefox 1066826 <sup>(angl.)</sup>](https://bugzil.la/1066826)).
+- La préférence `network.websocket.enabled`, activée par défaut, a été supprimée&nbsp;; l'API [WebSocket](/fr/docs/Web/API/WebSockets_API) ne peut plus être désactivée ([bogue Firefox 1091016 <sup>(angl.)</sup>](https://bugzil.la/1091016)).
+- Les méthodes et propriétés non standard de {{DOMxRef("Crypto")}} ont été supprimées ([bogue Firefox 1030963 <sup>(angl.)</sup>](https://bugzil.la/1030963)). Seules les méthodes et propriétés définies dans l'API WebCrypto standard sont conservées.
+- Notre implémentation expérimentale de WebGL 2.0 progresse&nbsp;!
+  - La méthode {{DOMxRef("WebGL2RenderingContext.copyBufferSubData()")}} a été implémentée ([bogue Firefox 1048668 <sup>(angl.)</sup>](https://bugzil.la/1048668)).
 
 ### MathML
 
-- La fonction `dtls` OpenType (via les CSS [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings) sur la feuille de styles par défaut) est maintenant appliquée automatiquement aux éléments MathML lors du positionnement des scripts au-dessus (e.g. dotless i with mathematical hat).
+- La fonction `dtls` OpenType (avec les CSS {{CSSxRef("font-feature-settings")}} sur la feuille de styles par défaut) est maintenant appliquée automatiquement aux éléments MathML lors du positionnement des scripts au-dessus (par exemple, i sans point avec chapeau mathématique).
 
 ### SVG
 
-_Aucun changement._
+_Pas de changement._
 
-### Audio/Video
+### Audio/Vidéo
 
-_Aucun changement._
+_Pas de changement._
 
 ## Réseau & Sécurité
 
-- L'entête HTTP/2 `alt-svc` est maintenant supportée ([bug 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448)).
-- L'extension [Public Key Pinning](/fr/docs/Web/Security/Certificate_Transparency) pour HTTP (HPKP) a été implementée ([bug 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133)).
+- Le HTTP/2 a été implémenté et activé, avec uniquement des chiffrements AEAD ([bogue Firefox 1027720 <sup>(angl.)</sup>](https://bugzil.la/1027720) et [bogue Firefox 1047594 <sup>(angl.)</sup>](https://bugzil.la/1047594)).
+- L'en-tête HTTP/2 `alt-svc` est maintenant pris en charge ([bogue Firefox 1003448 <sup>(angl.)</sup>](https://bugzil.la/1003448)).
+- L'extension Public Key Pinning pour HTTP (HPKP) a été implémentée ([bogue Firefox 787133 <sup>(angl.)</sup>](https://bugzil.la/787133)).
+- La directive `base-uri` de la CSP 1.1 est maintenant prise en charge ([bogue Firefox 1045897 <sup>(angl.)</sup>](https://bugzil.la/1045897)).
+- Le chemin de la source est maintenant également pris en compte lors de la correspondance des sources hôtes dans la CSP ([bogue Firefox 808292 <sup>(angl.)</sup>](https://bugzil.la/808292)).
 
-## Changements pour les modules et les développeurs Mozilla
+## Changements pour les développeur·euse·s Mozilla et d'extensions
 
 ### XUL & Modules
 
-- La méthode privée `_getTabForBrowser()` sur l'élement [`tabbrowser`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) a été remplacée. À la place, nous avons ajouté une nouvelle méthode publique apellée [`getTabForBrowser`](/fr/docs/Mozilla/Tech/XUL/Méthodes/getTabForBrowser). Elle retourne assez prévisiblement l'élément [`tab`](/fr/docs/Mozilla/Tech/XUL/tab) qui contient le spécifique [`browser`](/fr/docs/Mozilla/Tech/XUL/browser).
-- `Components.utils.now()`, correspondant à [`Performance.now()`](/fr/docs/Web/API/Performance/now) a été implémenté pour les codes Chrome sans fenêtre ouverte ([bug 969490](https://bugzilla.mozilla.org/show_bug.cgi?id=969490)).
+- La méthode privée `_getTabForBrowser()` sur l'élément `<xul:tabbrowser>` a été remplacée. À la place, nous avons ajouté une nouvelle méthode publique appelée `getTabForBrowser`. Elle retourne assez prévisiblement l'élément `<xul:tab>` qui contient le spécifique `<xul:browser>`.
+- `Components.utils.now()`, correspondant à {{DOMxRef("Performance.now()")}} a été implémenté pour les codes Chrome sans fenêtre ouverte ([bogue Firefox 969490 <sup>(angl.)</sup>](https://bugzil.la/969490)).
 
-### Module SDK
+### SDK d'extension
 
-#### Titres
+#### Points forts
 
-- Ajout de [clés d'accès pour le menu contextuel](/fr/docs/Mozilla/Add-ons/SDK/Tutorials/Add_a_Context_Menu_Item#adding_an_access_key).
-- Suppression de `isPrivateBrowsing` de [`BrowserWindow`](/fr/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#browserwindow).
+- Ajout des clés d'accès pour le menu contextuel.
+- Suppression de `isPrivateBrowsing` de `BrowserWindow`.
+- Ajout de la méthode `toJSON` aux instances de `URL`.
 
 #### Détails
 
-[Commits de GitHub effectués entre Firefox 34 et Firefox 35](https://github.com/mozilla/addon-sdk/compare/firefox34...firefox35). Ceci ne comprendra pas les évolutions après la sortie officielle.
+[Instantanés GitHub faits entre Firefox 34 et Firefox 35](https://github.com/mozilla/addon-sdk/compare/firefox34...firefox35). Cela n'inclut pas les mises à jour effectuées après l'entrée de cette version dans Aurora.
 
-[Bugs corrigés entre Firefox 34 et Firefox 35](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=11562840). Ceci ne comprendra pas les évolutions après la sortie officielle.
-
-## Voir aussi
-
-- [Compatibilité web pour Firefox 35](/fr/docs/Mozilla/Firefox/Releases/35/Site_Compatibility)
-
-## Anciennes versions
-
-- [Firefox 34 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/34)
-- [Firefox 33 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/33)
-- [Firefox 32 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/32)
-- [Firefox 31 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/31)
-- [Firefox 30 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/30)
-- [Firefox 29 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/29)
-- [Firefox 28 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/28)
-- [Firefox 27 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/27)
-- [Firefox 26 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/26)
-- [Firefox 25 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/25)
-- [Firefox 24 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/24)
-- [Firefox 23 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/23)
-- [Firefox 22 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/22)
-- [Firefox 21 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/21)
-- [Firefox 20 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/20)
-- [Firefox 19 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/19)
-- [Firefox 18 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/18)
-- [Firefox 17 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/17)
-- [Firefox 16 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/16)
-- [Firefox 15 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/15)
-- [Firefox 14 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/14)
-- [Firefox 13 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/13)
-- [Firefox 12 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/12)
-- [Firefox 11 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/11)
-- [Firefox 10 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/10)
-- [Firefox 9 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/9)
-- [Firefox 8 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/8)
-- [Firefox 7 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/7)
-- [Firefox 6 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/6)
-- [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/5)
-- [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/4)
-- [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.6)
-- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.5)
-- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3)
-- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/1.5)
+[Bugs corrigés entre Firefox 34 et Firefox 35](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=11562840). Cela n'inclut pas les mises à jour effectuées après l'entrée de cette version dans Aurora.

@@ -1,89 +1,121 @@
 ---
 title: Response
 slug: Web/API/Response
+l10n:
+  sourceCommit: 252040efa8f6ca0f737fd7ec04e610354e58b98c
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-L'interface **`Response`** de l'API de [fetch](/fr/docs/Web/API/Fetch_API) représente la réponse d'une requête initialisée.
+L'interface **`Response`** de [l'API Fetch](/fr/docs/Web/API/Fetch_API) représente la réponse à une requête.
 
-Vous pouvez créer un nouvel objet `Response` en utilisant le constructeur {{domxref("Response.Response()")}}. Cependant, vous rencontrerez plus fréquemment l'objet Response comme étant le résultat d'une opération de l'API, par exemple, un service worker {{domxref("Fetchevent.respondWith")}}, ou un simple {{domxref("GlobalFetch.fetch()")}}.
+Vous pouvez créer un nouvel objet `Response` à l'aide du constructeur {{DOMxRef("Response.Response", "Response()")}}, mais vous rencontrerez plus souvent un objet `Response` retourné à la suite d'une autre opération d'API — par exemple, un service worker {{DOMxRef("FetchEvent.respondWith")}}, ou un simple {{DOMxRef("Window/fetch", "fetch()")}}.
 
 ## Constructeur
 
-- {{domxref("Response.Response","Response()")}}
+- {{DOMxRef("Response.Response","Response()")}}
   - : Crée un nouvel objet `Response`.
 
-## Propriétés
+## Propriétés d'instance
 
-- {{domxref("Response.headers")}} {{readonlyinline}}
-  - : Contient les objets {{domxref("Headers")}} associés à la réponse.
-- {{domxref("Response.ok")}} {{readonlyinline}}
-  - : Contient un booléen statuant s'il s'agit d'une réponse indiquant un succès (statut HTTP entre 200 et 299) ou non.
-- {{domxref("Response.redirected")}} {{ReadOnlyInline}}
-  - : Indique si oui ou non la réponse est le résultat d'une (ou plusieurs) redirection(s), c'est-à-dire que sa liste d'URLs a plus d'une entrée.
-- {{domxref("Response.status")}} {{readonlyinline}}
-  - : Contient le status code de la réponse (par exemple `200` en cas de réussite).
-- {{domxref("Response.statusText")}} {{readonlyinline}}
-  - : Contient le message du statut correspondant au status code (à savoir : `OK` pour le code `200` par exemple).
-- {{domxref("Response.type")}} {{readonlyinline}}
-  - : Contient le type de la réponse (par exemple, `basic`, `cors`).
-- {{domxref("Response.url")}} {{readonlyinline}}
-  - : Contient l'URL de la réponse.
-- {{domxref("Response.useFinalURL")}}
-  - : Contient un booléen statuant s'il s'agit de l'URL finale de la réponse.
+- {{DOMxRef("Response.body")}} {{ReadOnlyInline}}
+  - : Un objet {{DOMxRef("ReadableStream")}} contenant le corps de la réponse.
+- {{DOMxRef("Response.bodyUsed")}} {{ReadOnlyInline}}
+  - : Contient un booléen indiquant si le corps a déjà été utilisé dans une réponse.
+- {{DOMxRef("Response.headers")}} {{ReadOnlyInline}}
+  - : L'objet {{DOMxRef("Headers")}} associé à la réponse.
+- {{DOMxRef("Response.ok")}} {{ReadOnlyInline}}
+  - : Un booléen indiquant si la réponse a réussi (statut dans la plage `200` à `299`) ou non.
+- {{DOMxRef("Response.redirected")}} {{ReadOnlyInline}}
+  - : Indique si la réponse résulte d'une redirection (c'est-à-dire si sa liste d'URL comporte plus d'une entrée).
+- {{DOMxRef("Response.status")}} {{ReadOnlyInline}}
+  - : Le code d'état de la réponse. (Ce sera `200` en cas de succès).
+- {{DOMxRef("Response.statusText")}} {{ReadOnlyInline}}
+  - : Le message d'état correspondant au code d'état. (par exemple, `OK` pour `200`).
+- {{DOMxRef("Response.type")}} {{ReadOnlyInline}}
+  - : Le type de la réponse (par exemple, `basic`, `cors`).
+- {{DOMxRef("Response.url")}} {{ReadOnlyInline}}
+  - : L'URL de la réponse.
 
-Par ailleurs, `Response` implémente également une propriété {{domxref("Body")}}, voici les propriétés qui lui sont propres :
+## Méthodes statiques
 
-- {{domxref("Body.body")}} {{readonlyInline}}
-  - : Un simple getter utilisé afin d'exposer un {{domxref("ReadableStream")}} permettant de lire le contenu du body.
-- {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Stocke un {{domxref("Boolean")}} qui indique si le body a déjà été utilisé dans la réponse ou non.
-
-## Méthodes
-
-- {{domxref("Response.clone()")}}
-  - : Crée un clone de l'objet `Response`.
-- {{domxref("Response.error()")}}
+- {{DOMxRef("Response.error_static","Response.error()")}}
   - : Retourne un nouvel objet `Response` associé à une erreur réseau.
-- {{domxref("Response.redirect()")}}
-  - : Crée une nouvelle réponse avec une URL différente permettant de rediriger l'utilisateur.
+- {{DOMxRef("Response.redirect_static", "Response.redirect()")}}
+  - : Retourne une nouvelle réponse avec une URL différente.
+- {{DOMxRef("Response.json_static", "Response.json()")}}
+  - : Retourne un nouvel objet `Response` permettant de retourner les données JSON encodées fournies.
 
-`Response` implémente {{domxref("Body")}}, voici les différentes méthodes qui sont disponibles:
+## Méthodes d'instance
 
-- {{domxref("Body.arrayBuffer()")}}
-  - : Prend le stream de la {{domxref("Response")}} et le lit jusqu'à la fin. Renvoie une promise qui retourne un {{domxref("ArrayBuffer")}} lorsqu'elle est résolue.
-- {{domxref("Body.blob()")}}
-  - : Prend le stream de la {{domxref("Response")}} et le lit jusqu'à la fin. Renvoie une promise qui retourne un {{domxref("Blob")}} lorsqu'elle est résolue.
-- {{domxref("Body.formData()")}}
-  - : Prend le stream de la {{domxref("Response")}} et le lit jusqu'à la fin. Renvoie une promise qui retourne un {{domxref("FormData")}} lorsqu'elle est résolue.
-- {{domxref("Body.json()")}}
-  - : Prend le stream de la {{domxref("Response")}} et le lit jusqu'à la fin. Renvoie une promise qui retourne le résultat du parsing du body text, comme {{jsxref("JSON")}} ,lorsqu'elle est résolue.
-- {{domxref("Body.text()")}}
-  - : Prend le stream de la {{domxref("Response")}} et le lit jusqu'à la fin. Renvoie une promise qui est résolue avec un {{domxref("USVString")}} (text).
+- {{DOMxRef("Response.arrayBuffer()")}}
+  - : Retourne une promesse qui est résolue avec une représentation du corps de la réponse sous forme d'un objet {{JSxRef("ArrayBuffer")}}.
+- {{DOMxRef("Response.blob()")}}
+  - : Retourne une promesse qui est résolue avec une représentation du corps de la réponse sous forme d'un objet {{DOMxRef("Blob")}}.
+- {{DOMxRef("Response.bytes()")}}
+  - : Retourne une promesse qui est résolue avec une représentation du corps de la réponse sous forme d'un objet {{JSxRef("Uint8Array")}}.
+- {{DOMxRef("Response.clone()")}}
+  - : Crée un clone d'un objet `Response`.
+- {{DOMxRef("Response.formData()")}}
+  - : Retourne une promesse qui est résolue avec une représentation du corps de la réponse sous forme d'un objet {{DOMxRef("FormData")}}.
+- {{DOMxRef("Response.json()")}}
+  - : Retourne une promesse qui est résolue avec le résultat de l'analyse du texte du corps de la réponse comme du {{JSxRef("JSON")}}.
+- {{DOMxRef("Response.text()")}}
+  - : Retourne une promesse qui est résolue avec une représentation textuelle du corps de la réponse.
 
 ## Exemples
 
-Dans notre [exemple basique d'utilisation de `fetch()`](https://github.com/mdn/fetch-examples/tree/master/basic-fetch) ([voir l'exemple en direct](https://mdn.github.io/fetch-examples/basic-fetch/)), nous utilisons un simple appel `fetch()` pour récupérer une image et l'afficher dans un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img). L'appel `fetch()` retourne une promesse qui est résolue avec un objet `Response` associé à l'opération de récupération de la ressource.
+### Récupérer une image
 
-Vous remarquerez que puisque nous récupérons une image, nous avons besoin d'utiliser [`Response.blob`](/fr/docs/Web/API/Response/blob) pour attribuer le bon type MIME à la réponse.
+Dans notre [exemple basique sur la récupération <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/fetch/basic-fetch) ([voir l'exemple en direct <sup>(angl.)</sup>](https://mdn.github.io/dom-examples/fetch/basic-fetch/)), nous utilisons un simple appel à la fonction `fetch()` pour obtenir une image et l'afficher dans un élément HTML {{HTMLElement("img")}}.
+L'appel `fetch()` retourne une promesse, qui est résolue avec l'objet `Response` associé à l'opération de récupération de la ressource.
+
+Vous remarquerez que, puisque nous demandons une image, nous devons utiliser {{DOMxRef("Response.blob")}} pour donner à la réponse son type MIME correct.
 
 ```js
-var myImage = document.querySelector(".my-image");
-fetch("flowers.jpg")
-  .then(function (response) {
-    return response.blob();
+const image = document.querySelector(".mon-image");
+fetch("fleurs.jpg")
+  .then((reponse) => {
+    if (!reponse.ok) {
+      throw new Error(`Erreur HTTP ! statut : ${reponse.status}`);
+    }
+    return reponse.blob();
   })
-  .then(function (blob) {
-    var objectURL = URL.createObjectURL(blob);
-    myImage.src = objectURL;
+  .then((blob) => {
+    const urlObjet = URL.createObjectURL(blob);
+    image.src = urlObjet;
+  })
+  .catch((erreur) => {
+    console.error("Erreur de récupération de l'image :", erreur);
   });
 ```
 
-Vous pouvez également utiliser le constructeur {{domxref("Response.Response()")}} pour créer votre propre objet `Response`:
+Vous pouvez également utiliser le constructeur {{DOMxRef("Response.Response", "Response()")}} pour créer votre propre objet `Response` personnalisé&nbsp;:
 
 ```js
-var myResponse = new Response();
+const reponse = new Response();
+```
+
+### Appel à un fichier PHP
+
+Ici, nous appelons un fichier programme PHP qui génère une chaîne JSON, affichant le résultat en tant que valeur JSON.
+
+```js
+// Fonction pour récupérer du JSON en utilisant PHP
+const getJSON = async () => {
+  // Générer l'objet Response
+  const reponse = await fetch("getJSON.php");
+  if (reponse.ok) {
+    // Obtenir la valeur JSON à partir du corps de la réponse
+    return reponse.json();
+  }
+  throw new Error("*** Fichier PHP introuvable");
+};
+
+// Appeler la fonction et afficher la valeur ou le message d'erreur dans la console
+getJSON()
+  .then((resultat) => console.log(resultat))
+  .catch((erreur) => console.error(erreur));
 ```
 
 ## Spécifications
@@ -96,6 +128,6 @@ var myResponse = new Response();
 
 ## Voir aussi
 
-- [ServiceWorker API](/fr/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/fr/docs/Web/HTTP)
+- [L'API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
+- [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
+- La référence [HTTP](/fr/docs/Web/HTTP)

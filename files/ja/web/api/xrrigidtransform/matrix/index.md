@@ -29,7 +29,7 @@ WebGL で使用されるすべての 4x4 変換行列は、16 要素の {{domxre
 
 ### 行列の作成
 
-このセクションでは、より高度な読者を対象として、API が指定された変換の行列を計算する方法について説明します。 それは、新しい行列を割り当て、それに 4x4 の単位行列を書き込むことから始まります。
+このセクションでは、より高度な読者を対象として、API が指定された変換の行列を計算する方法について説明します。 それは、新しい行列を割り当て、それに 4x4 の恒等行列を書き込むことから始まります。
 
 <math display="block"><semantics><mrow><mo>[</mo><mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\begin{bmatrix} 1 &#x26; 0 &#x26; 0 &#x26; 0\\ 0 &#x26; 1 &#x26; 0 &#x26; 0\\ 0 &#x26; 0 &#x26; 1 &#x26; 0\\ 0 &#x26; 0 &#x26; 0 &#x26; 1 \end{bmatrix}</annotation></semantics></math>
 

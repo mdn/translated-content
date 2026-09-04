@@ -1,21 +1,21 @@
 ---
 title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Errors")}}
 
 JavaScript の例外 "redeclaration of formal parameter" は、関数の引数名としてある変数名が発生した後、関数本体内の {{jsxref("Statements/let", "let")}} 代入文を使用して同じ変数名を再度宣言すると発生します。
 
 ## エラーメッセージ
 
-```js
-SyntaxError: Let/Const redeclaration (Edge)
+```plain
+SyntaxError: Identifier "x" has already been declared (V8-based)
 SyntaxError: redeclaration of formal parameter "x" (Firefox)
-SyntaxError: Identifier "x" has already been declared (Chrome)
+SyntaxError: Cannot declare a let variable twice: 'x'. (Safari)
 ```
 
-## エラーの種類
+## エラー型
 
 {{jsxref("SyntaxError")}}
 
@@ -29,7 +29,7 @@ SyntaxError: Identifier "x" has already been declared (Chrome)
 
 この場合、変数 "arg" は、引数を再宣言しています。
 
-```js example-bad
+```js-nolint example-bad
 function f(arg) {
   let arg = "foo";
 }
@@ -44,7 +44,7 @@ function f(arg) {
   arg = "foo";
 }
 
-function f(arg) {
+function g(arg) {
   let bar = "foo";
 }
 ```

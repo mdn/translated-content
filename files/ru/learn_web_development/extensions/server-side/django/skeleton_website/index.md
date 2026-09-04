@@ -3,7 +3,7 @@ title: "Руководство по Django часть 2: создание ске
 slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Это вторая статья из нашего [руководства по Django](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), которая показывает, как можно создать "скелет" сайта, как фундамент, на котором можно строить всё остальное: настройки, ссылки, модели, контроллеры и представления.
 
@@ -339,4 +339,4 @@ python3 manage.py runserver
 - [Пишем своё первое приложение на Django - часть 1](https://docs.djangoproject.com/en/2.2/intro/tutorial01/) (документация Django)
 - [Приложения](https://docs.djangoproject.com/en/2.2/ref/applications/) (документация Django). содержит информацию о настройке приложений.
 
-{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}

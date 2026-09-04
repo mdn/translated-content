@@ -14,10 +14,10 @@ Cet article est une sorte de boîte à malices : elle introduit certaines des fo
       <th scope="row">Prérequis :</th>
       <td>
         Notions de HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction à HTML</a
         >) et idées sur le fonctionnement des CSS (voir
-        <a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction aux CSS</a
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Introduction_to_CSS">Introduction aux CSS</a
         >).
       </td>
     </tr>
@@ -380,8 +380,7 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ l'exemple avec 
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <div class="style-me">
-</div></textarea
-  >
+</div></textarea>
 
   <h2>Zone de saisie de la CSS</h2>
   <textarea
@@ -397,8 +396,7 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ l'exemple avec 
   background-color: red;
   background: url(colorful-heart.png) no-repeat center 20px,
               linear-gradient(to bottom right, #f33, #a33);
-} </textarea
-  >
+} </textarea>
 
   <h2>Zone de rendu</h2>
   <div

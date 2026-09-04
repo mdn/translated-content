@@ -14,10 +14,10 @@ Cet article illustre comment construire quelques exemples concrets de ce qu'on p
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les fondamentaux en HTML (étudier
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Une introduction au HTML</a
         >), et une idée du fonctionnement du CSS (étudier
-        <a href="/fr/docs/Learn/CSS/First_steps">Une introduction à CSS</a>.)
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Une introduction à CSS</a>.)
       </td>
     </tr>
     <tr>
@@ -113,7 +113,7 @@ body {
 }
 ```
 
-Il s'agit uniquement d'une configuration générale pour définir une police sans serif sur notre page, utiliser le modèle `border-box` [`box-sizing`](/fr/docs/Web/CSS/box-sizing), pour surcharger la marge par défaut de [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body).
+Il s'agit uniquement d'une configuration générale pour définir une police sans serif sur notre page, utiliser le modèle `border-box` [`box-sizing`](/fr/docs/Web/CSS/Reference/Properties/box-sizing), pour surcharger la marge par défaut de [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body).
 
 Ensuite, ajoutez ce qui suit en dessous de votre CSS précédent :
 
@@ -129,7 +129,7 @@ Cela définit une largeur et une hauteur spécifiques sur le contenu, et le cent
 
 ### Mettre en forme les onglets
 
-On souhaite que nos onglets ressemblent à des onglets. Autrement dit, on veut avoir un menu de navigation horizontal et, au lieu d'avoir différentes pages web depuis ce menu, obtenir l'affichage des différents panneaux sur la même page. Pour commencer, ajoutez la règle à la fin de votre CSS afin de retirer les valeurs par défaut de [`padding-left`](/fr/docs/Web/CSS/padding-left) et [`margin-top`](/fr/docs/Web/CSS/margin-top) pour la liste non-ordonnée&nbsp;:
+On souhaite que nos onglets ressemblent à des onglets. Autrement dit, on veut avoir un menu de navigation horizontal et, au lieu d'avoir différentes pages web depuis ce menu, obtenir l'affichage des différents panneaux sur la même page. Pour commencer, ajoutez la règle à la fin de votre CSS afin de retirer les valeurs par défaut de [`padding-left`](/fr/docs/Web/CSS/Reference/Properties/padding-left) et [`margin-top`](/fr/docs/Web/CSS/Reference/Properties/margin-top) pour la liste non-ordonnée&nbsp;:
 
 ```css
 .info-box ul {
@@ -141,7 +141,7 @@ On souhaite que nos onglets ressemblent à des onglets. Autrement dit, on veut a
 > [!NOTE]
 > On utilise ici un sélecteur de descendants avec `.info-box` au début du sélecteur et pour tout cet exemple afin qu'on puisse insérer cette fonctionnalité dans une page possédant déjà un autre contenu, sans risquer de causer des interférences avec le style déjà existant.
 
-Ensuite, mettons en forme les onglets horizontaux. Les éléments de la liste ont un flottement à gauche afin qu'ils soient sur une même ligne. Leur propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) est placée à `none` afin de ne plus avoir les puces et [`width`](/fr/docs/Web/CSS/width) vaut `150px` afin qu'il y ait suffisamment de place au sein de la boîte pour afficher ces éléments. Les éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) ont [`display`](/fr/docs/Web/CSS/display) avec la valeur `inline-block` afin qu'ils s'inscrivent dans une ligne mais qu'ils puissent tout de même être mis en forme pour des boutons d'onglet en utilisant d'autres propriétés.
+Ensuite, mettons en forme les onglets horizontaux. Les éléments de la liste ont un flottement à gauche afin qu'ils soient sur une même ligne. Leur propriété [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type) est placée à `none` afin de ne plus avoir les puces et [`width`](/fr/docs/Web/CSS/Reference/Properties/width) vaut `150px` afin qu'il y ait suffisamment de place au sein de la boîte pour afficher ces éléments. Les éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) ont [`display`](/fr/docs/Web/CSS/Reference/Properties/display) avec la valeur `inline-block` afin qu'ils s'inscrivent dans une ligne mais qu'ils puissent tout de même être mis en forme pour des boutons d'onglet en utilisant d'autres propriétés.
 
 Ajoutez le fragment de CSS qui suit&nbsp;:
 
@@ -182,7 +182,7 @@ Pour finir avec cette section, mettons en forme les liens selon leur état. Tout
 
 La suite consiste à mettre en forme les panneaux de contenu. Allons-y&nbsp;!
 
-Pour commencer, ajoutez la règle suivante qui met en forme le conteneur `.panels` [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div). Ici, on définit une hauteur fixe avec [`height`](/fr/docs/Web/CSS/height) afin de s'assurer que les panneaux s'inscriront correctement dans la boîte d'informations. On définit [`position`](/fr/docs/Web/CSS/position) `relative` sur l'élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) comme contexte de positionnement afin que les éléments enfants y soient relatifs (plutôt que relatifs à l'élément [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html)) pour la mise en forme. Enfin, on utilise [`clear`](/fr/docs/Web/CSS/clear) pour annuler le flottement défini plus haut afin qu'il n'y ait pas d'interférence avec le reste de la disposition.
+Pour commencer, ajoutez la règle suivante qui met en forme le conteneur `.panels` [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div). Ici, on définit une hauteur fixe avec [`height`](/fr/docs/Web/CSS/Reference/Properties/height) afin de s'assurer que les panneaux s'inscriront correctement dans la boîte d'informations. On définit [`position`](/fr/docs/Web/CSS/Reference/Properties/position) `relative` sur l'élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) comme contexte de positionnement afin que les éléments enfants y soient relatifs (plutôt que relatifs à l'élément [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html)) pour la mise en forme. Enfin, on utilise [`clear`](/fr/docs/Web/CSS/Reference/Properties/clear) pour annuler le flottement défini plus haut afin qu'il n'y ait pas d'interférence avec le reste de la disposition.
 
 ```css
 .info-box .panels {
@@ -192,9 +192,9 @@ Pour commencer, ajoutez la règle suivante qui met en forme le conteneur `.panel
 }
 ```
 
-Dans cette section, nous allons mettre en forme les éléments [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) qui forment les panneaux. La première règle va fixer [`position`](/fr/docs/Web/CSS/position) absolue pour les panneaux avant de les placer dans le coin supérieur gauche de leur conteneur [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) avec [`top`](/fr/docs/Web/CSS/top) et [`left`](/fr/docs/Web/CSS/left). C'est la clé de cette disposition&nbsp;: ainsi, les panneaux sont superposés les uns sur les autres. Cette règle fournit également la même hauteur que le conteneur et ajoute un peu de remplissage autour du contenu, une couleur pour le texte ([`color`](/fr/docs/Web/CSS/color)), ainsi qu'une couleur d'arrière-plan ([`background-color`](/fr/docs/Web/CSS/background-color)).
+Dans cette section, nous allons mettre en forme les éléments [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) qui forment les panneaux. La première règle va fixer [`position`](/fr/docs/Web/CSS/Reference/Properties/position) absolue pour les panneaux avant de les placer dans le coin supérieur gauche de leur conteneur [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) avec [`top`](/fr/docs/Web/CSS/Reference/Properties/top) et [`left`](/fr/docs/Web/CSS/Reference/Properties/left). C'est la clé de cette disposition&nbsp;: ainsi, les panneaux sont superposés les uns sur les autres. Cette règle fournit également la même hauteur que le conteneur et ajoute un peu de remplissage autour du contenu, une couleur pour le texte ([`color`](/fr/docs/Web/CSS/Reference/Properties/color)), ainsi qu'une couleur d'arrière-plan ([`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)).
 
-La deuxième règle ajoutée indique qu'un panneau avec une classe (`class`) valant `active-panel` aura une valeur de [`z-index`](/fr/docs/Web/CSS/z-index) à 1&nbsp;: il sera alors placé par-dessus les autres panneaux (par défaut les éléments positionnés ont un `z-index` qui vaut 0, ce qui les place en dessous). Là aussi, nous ajouterons cette classe au document à l'aide de JavaScript.
+La deuxième règle ajoutée indique qu'un panneau avec une classe (`class`) valant `active-panel` aura une valeur de [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index) à 1&nbsp;: il sera alors placé par-dessus les autres panneaux (par défaut les éléments positionnés ont un `z-index` qui vaut 0, ce qui les place en dessous). Là aussi, nous ajouterons cette classe au document à l'aide de JavaScript.
 
 ```css
 .info-box article {
@@ -248,9 +248,9 @@ Ce code effectue les actions suivantes&nbsp;:
 - Ensuite, on utilise une boucle `for` pour parcourir l'ensemble des onglets et, pour chaque, on exécute une fonction intitulée `setTabHandler()` qui met en place les fonctionnalités à utiliser lors d'un clic. Lorsque cette fonction est exécutée, elle reçoit une référence de l'onglet concerné ainsi qu'un indice `i` qui identifie la position de l'onglet dans le tableau `tabs`.
 - Dans la fonction `setTabHandler()`, l'onglet se voit affecter un gestionnaire d'évènement `onclick`. Ainsi dès qu'on clique sur un onglet, on a&nbsp;:
   - Une boucle `for` qui est utilisée afin de parcourir tous les onglets pour retirer les classes qui seraient présentes sur eux.
-  - Une classe (`class`) `active` qui est appliquée sur l'onglet sur lequel on a cliqué (nous avons vu plus haut que cette classe était associée à une règle CSS qui définit [`color`](/fr/docs/Web/CSS/color) et [`background-color`](/fr/docs/Web/CSS/background-color) sur l'onglet afin que celles-ci correspondent aux couleurs du panneau.
+  - Une classe (`class`) `active` qui est appliquée sur l'onglet sur lequel on a cliqué (nous avons vu plus haut que cette classe était associée à une règle CSS qui définit [`color`](/fr/docs/Web/CSS/Reference/Properties/color) et [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) sur l'onglet afin que celles-ci correspondent aux couleurs du panneau.
   - Une boucle `for` qui parcourt tous les panneaux afin de retirer toute classe qui serait présente sur eux.
-  - Une classe `active-panel` qui est appliquée sur le panneau correspondant à l'onglet. Cela permet d'appliquer la règle CSS vue plus haut qui définit [`z-index`](/fr/docs/Web/CSS/z-index) à 1, afin de faire apparaître ce panneau par-dessus les autres.
+  - Une classe `active-panel` qui est appliquée sur le panneau correspondant à l'onglet. Cela permet d'appliquer la règle CSS vue plus haut qui définit [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index) à 1, afin de faire apparaître ce panneau par-dessus les autres.
 
 Et voilà pour le premier exemple. Gardez le code actuel sous la main, nous allons le modifier pour construire le deuxième exemple.
 
@@ -312,7 +312,7 @@ Tout d'abord, il nous faut compléter le HTML afin de représenter le contenu pr
 
 ### Modifications au CSS existant
 
-Ensuite, adaptons le code CSS existant afin que la boîte d'information soit placée et positionnée. On change la règle ciblant `.info-box` afin de se débarrasser de `margin: 0 auto;` (on ne veut plus que la boîte soit centrée) et d'ajouter [`position`](/fr/docs/Web/CSS/position)`: fixed;` avant de l'attacher au haut de la zone d'affichage du navigateur avec [`top`](/fr/docs/Web/CSS/top).
+Ensuite, adaptons le code CSS existant afin que la boîte d'information soit placée et positionnée. On change la règle ciblant `.info-box` afin de se débarrasser de `margin: 0 auto;` (on ne veut plus que la boîte soit centrée) et d'ajouter [`position`](/fr/docs/Web/CSS/Reference/Properties/position)`: fixed;` avant de l'attacher au haut de la zone d'affichage du navigateur avec [`top`](/fr/docs/Web/CSS/Reference/Properties/top).
 
 Voici ce à quoi ça devrait ressembler&nbsp;:
 
@@ -339,7 +339,7 @@ Il nous reste alors à mettre en forme le contenu principal. Ajoutez la règle s
 }
 ```
 
-Pour commencer, on utilise la même couleur de texte et d'arrière-plan avec [`background-color`](/fr/docs/Web/CSS/background-color), [`color`](/fr/docs/Web/CSS/color), et le même remplissage ([`padding`](/fr/docs/Web/CSS/padding)) que pour les panneaux de la boîte d'information. On applique ensuite une marge à gauche suffisante ([`margin-left`](/fr/docs/Web/CSS/margin-left)) pour décaler le contenu à droite afin de créer suffisamment d'espace pour la boîte d'information pour que celle-ci ne recouvre pas le reste.
+Pour commencer, on utilise la même couleur de texte et d'arrière-plan avec [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color), [`color`](/fr/docs/Web/CSS/Reference/Properties/color), et le même remplissage ([`padding`](/fr/docs/Web/CSS/Reference/Properties/padding)) que pour les panneaux de la boîte d'information. On applique ensuite une marge à gauche suffisante ([`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left)) pour décaler le contenu à droite afin de créer suffisamment d'espace pour la boîte d'information pour que celle-ci ne recouvre pas le reste.
 
 Et voici la fin de ce deuxième exemple, espérons que le troisième vous sera tout aussi utile.
 
@@ -393,12 +393,12 @@ input[type="checkbox"] {
 
 La première règle met en forme `<label>`, on y trouve&nbsp;:
 
-- Une taille de police ([`font-size`](/fr/docs/Web/CSS/font-size)) élevée afin que l'icône soit bien visible.
-- Une [`position`](/fr/docs/Web/CSS/position) `absolute` avec des définitions pour [`top`](/fr/docs/Web/CSS/top) et [`right`](/fr/docs/Web/CSS/right) qui permettent de positionner l'icône dans le coin supérieur droit.
-- Une définition de [`z-index`](/fr/docs/Web/CSS/z-index) à 1 afin que, lorsque le panneau d'information est montré, il ne recouvre pas l'icône mais que celle-ci soit toujours affichée afin de pouvoir l'utiliser pour masquer le panneau d'information.
-- Une propriété [`cursor`](/fr/docs/Web/CSS/cursor) pour changer le curseur de la souris au survol de l'icône afin que le curseur prenne la forme d'une main (la même que celle utilisée par défaut au survol des liens). Cela fournit une indication visuelle supplémentaire comme quoi l'icône fait quelque chose d'intéressant.
+- Une taille de police ([`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size)) élevée afin que l'icône soit bien visible.
+- Une [`position`](/fr/docs/Web/CSS/Reference/Properties/position) `absolute` avec des définitions pour [`top`](/fr/docs/Web/CSS/Reference/Properties/top) et [`right`](/fr/docs/Web/CSS/Reference/Properties/right) qui permettent de positionner l'icône dans le coin supérieur droit.
+- Une définition de [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index) à 1 afin que, lorsque le panneau d'information est montré, il ne recouvre pas l'icône mais que celle-ci soit toujours affichée afin de pouvoir l'utiliser pour masquer le panneau d'information.
+- Une propriété [`cursor`](/fr/docs/Web/CSS/Reference/Properties/cursor) pour changer le curseur de la souris au survol de l'icône afin que le curseur prenne la forme d'une main (la même que celle utilisée par défaut au survol des liens). Cela fournit une indication visuelle supplémentaire comme quoi l'icône fait quelque chose d'intéressant.
 
-La deuxième règle applique [`position`](/fr/docs/Web/CSS/position) `absolute` sur la case à cocher `<input>` et la masquer en haut de l'écran, car on ne veut pas l'afficher sur l'interface utilisateur.
+La deuxième règle applique [`position`](/fr/docs/Web/CSS/Reference/Properties/position) `absolute` sur la case à cocher `<input>` et la masquer en haut de l'écran, car on ne veut pas l'afficher sur l'interface utilisateur.
 
 ### Mettre en forme le panneau
 
@@ -423,11 +423,11 @@ aside {
 
 Il y a plusieurs déclarations ici, voyons-les au fur et à mesure&nbsp;:
 
-- Tout d'abord, on applique une couleur d'arrière-plan et pour le texte avec [`background-color`](/fr/docs/Web/CSS/background-color) et [`color`](/fr/docs/Web/CSS/color).
-- Ensuite, on définit une largeur ([`width`](/fr/docs/Web/CSS/width)) fixe sur le panneau et on définit la hauteur ([`height`](/fr/docs/Web/CSS/height)) afin que celle-ci occupe la hauteur de toute la zone d'affichage.
-- On ajoute également du remplissage ([`padding`](/fr/docs/Web/CSS/padding)) horizontal pour espacer légèrement.
-- Ensuite, on utilise [`position`](/fr/docs/Web/CSS/position)`: fixed;` sur le panneau afin qu'il apparaisse toujours à la même place, même s'il y a du contenu à faire défiler sur la page. On le colle en haut ([`top`](/fr/docs/Web/CSS/top)) de la zone d'affichage et on le positionne afin que, par défaut, il soit situé à droite ([`right`](/fr/docs/Web/CSS/right)) et en dehors de l'écran.
-- Enfin, on applique une [`transition`](/fr/docs/Web/CSS/transition) sur l'élément. Les transitions permettent de réaliser des changements d'état de façon progressive plutôt que d'avoir un passage abrupt entre «&nbsp;actif&nbsp;» et «&nbsp;inactif&nbsp;». Ici, on veut que le panneau glisse progressivement pour apparaître à l'écran quand la case à cocher est cochée. Autrement dit, quand on clique sur l'icône du point d'interrogation (cela déclenche la bidouille qui coche la case), on veut que le panneau transitionne délicatement pour apparaître à l'écran.
+- Tout d'abord, on applique une couleur d'arrière-plan et pour le texte avec [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) et [`color`](/fr/docs/Web/CSS/Reference/Properties/color).
+- Ensuite, on définit une largeur ([`width`](/fr/docs/Web/CSS/Reference/Properties/width)) fixe sur le panneau et on définit la hauteur ([`height`](/fr/docs/Web/CSS/Reference/Properties/height)) afin que celle-ci occupe la hauteur de toute la zone d'affichage.
+- On ajoute également du remplissage ([`padding`](/fr/docs/Web/CSS/Reference/Properties/padding)) horizontal pour espacer légèrement.
+- Ensuite, on utilise [`position`](/fr/docs/Web/CSS/Reference/Properties/position)`: fixed;` sur le panneau afin qu'il apparaisse toujours à la même place, même s'il y a du contenu à faire défiler sur la page. On le colle en haut ([`top`](/fr/docs/Web/CSS/Reference/Properties/top)) de la zone d'affichage et on le positionne afin que, par défaut, il soit situé à droite ([`right`](/fr/docs/Web/CSS/Reference/Properties/right)) et en dehors de l'écran.
+- Enfin, on applique une [`transition`](/fr/docs/Web/CSS/Reference/Properties/transition) sur l'élément. Les transitions permettent de réaliser des changements d'état de façon progressive plutôt que d'avoir un passage abrupt entre «&nbsp;actif&nbsp;» et «&nbsp;inactif&nbsp;». Ici, on veut que le panneau glisse progressivement pour apparaître à l'écran quand la case à cocher est cochée. Autrement dit, quand on clique sur l'icône du point d'interrogation (cela déclenche la bidouille qui coche la case), on veut que le panneau transitionne délicatement pour apparaître à l'écran.
 
 ### Définir l'état coché
 
@@ -439,7 +439,7 @@ input[type="checkbox"]:checked + aside {
 }
 ```
 
-Le sélecteur utilisé ici est plutôt complexe&nbsp;: on sélectionne l'élément `<aside>` adjacent à l'élément `<input>`, uniquement lorsque ce dernier est coché (grâce à la pseudo-classe [`:checked`](/fr/docs/Web/CSS/:checked)). Lorsque c'est le cas, on définit la propriété [`right`](/fr/docs/Web/CSS/right) de l'élément `<aside>` à `0px`, ce qui fait que le panneau apparaît à l'écran (progressivement grâce à la transition). Cliquer sur le libellé à nouveau permettra de décocher la case et de masquer le panneau à nouveau.
+Le sélecteur utilisé ici est plutôt complexe&nbsp;: on sélectionne l'élément `<aside>` adjacent à l'élément `<input>`, uniquement lorsque ce dernier est coché (grâce à la pseudo-classe [`:checked`](/fr/docs/Web/CSS/Reference/Selectors/:checked)). Lorsque c'est le cas, on définit la propriété [`right`](/fr/docs/Web/CSS/Reference/Properties/right) de l'élément `<aside>` à `0px`, ce qui fait que le panneau apparaît à l'écran (progressivement grâce à la transition). Cliquer sur le libellé à nouveau permettra de décocher la case et de masquer le panneau à nouveau.
 
 Et voilà, une astuce sans JavaScript pour créer un interrupteur. Cela fonctionnera à partir de IE9 (les transitions fonctionneront à partir de IE10). Ce n'est pas totalement idéal&nbsp;: les éléments de formulaire n'ont pas été conçus pour ça&nbsp;; l'accessibilité n'est pas au rendez-vous non plus&nbsp;: le libellé ne peut pas recevoir le focus par défaut et on utilise des éléments de formulaire de façon non sémantique, ce qui pourrait causer des problèmes avec les lecteurs d'écran. Pour affiner cela, utiliser du JavaScript avec un lien ou un bouton serait sans doute plus approprié. Quoi qu'il en soit, cela permet d'avoir un exemple fonctionnel avec quelques astuces pour expérimenter.
 

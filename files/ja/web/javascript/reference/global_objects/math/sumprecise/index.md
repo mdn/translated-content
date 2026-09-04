@@ -18,7 +18,7 @@ console.log(Math.sumPrecise([1e20, 0.1, -1e20]));
 // 予想される結果: 0.1
 ```
 
-## 後部餡
+## 構文
 
 ```js-nolint
 Math.sumPrecise(numbers)

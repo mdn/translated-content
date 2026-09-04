@@ -16,7 +16,7 @@ storage.removeItem(keyName);
 ### Параметры
 
 - _**название Ключа**_
-  - : {{domxref("DOMString")}} содержит в себе название ключа.
+  - : {{jsxref("String")}} содержит в себе название ключа.
 
 ### Возвращает
 
@@ -36,7 +36,8 @@ function populateStorage() {
 }
 ```
 
-> **Примечание:**чтобы увидеть использование этой функции на реальном примере, загляните в [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!NOTE]
+> Чтобы увидеть использование этой функции на реальном примере, загляните в [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Спецификации
 

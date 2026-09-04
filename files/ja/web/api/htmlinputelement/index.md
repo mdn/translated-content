@@ -2,12 +2,12 @@
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 l10n:
-  sourceCommit: 050bcdba594e759c0a4dde172de5d334f5a3b20f
+  sourceCommit: de5b557883e8eff2514f0fe6eeb180db782575b1
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLInputElement`** インターフェイスは {{HtmlElement("input")}} 要素のオプション、レイアウト、表示方法を操作するための特別なプロパティやメソッドを提供します。
+**`HTMLInputElement`** インターフェイスは {{HTMLElement("input")}} 要素のオプション、レイアウト、表示方法を操作するための特別なプロパティやメソッドを提供します。
 
 {{InheritanceDiagram}}
 
@@ -19,6 +19,12 @@ _親インターフェイスである {{domxref("HTMLElement")}} から継承し
 
 - {{domxref("HTMLInputElement.align", "align")}} {{Deprecated_Inline}}
   - : 文字列で、要素の配置を表します。_代わりに CSS を使用してください。_
+
+- {{domxref("HTMLInputElement.alpha", "alpha")}} {{experimental_inline}}
+  - : 論理値で、この要素の [`alpha`](/ja/docs/Web/HTML/Reference/Elements/input/color#alpha) 属性を表し、色のアルファ成分をエンドユーザーが操作できるため、完全な不透明になるとは限らないか、そうでないかを表します。
+
+- {{domxref("HTMLInputElement.colorSpace", "colorSpace")}}
+  - : 文字列で、この要素の [`colorspace`](/ja/docs/Web/HTML/Reference/Elements/input/color#colorspace) 属性を表し、シリアライズされた CSS 色の{{glossary("color space", "色空間")}}（sRGB または display-p3）を示します。
 
 - {{domxref("HTMLInputElement.defaultValue", "defaultValue")}}
   - : 文字列で、このオブジェクトが生成された際にもともと HTML で指定されていた既定値を表します。
@@ -42,10 +48,10 @@ _親インターフェイスである {{domxref("HTMLElement")}} から継承し
   - : 文字列で、この要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) 属性を表します。ここにはフォーム送信時にその要素を識別する名前が入ります。
 
 - {{domxref("HTMLInputElement.popoverTargetAction", "popoverTargetAction")}}
-  - : {{htmlelement("input")}} 要素の `type="button"` 型で制御されるポップオーバー要素で実行されるアクション（`"hide"`、`"show"`、`"toggle"` のいずれか）を取得および設定します。これは [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/input#popovertargetaction) という HTML 属性の値を反映します。
+  - : {{HTMLElement("input")}} 要素の `type="button"` 型で制御されるポップオーバー要素で実行されるアクション（`"hide"`、`"show"`、`"toggle"` のいずれか）を取得および設定します。これは [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/input#popovertargetaction) という HTML 属性の値を反映します。
 
 - {{domxref("HTMLInputElement.popoverTargetElement", "popoverTargetElement")}}
-  - : {{htmlelement("input")}} 要素の `type="button"` 型で制御されるポップオーバー要素を取得および設定します。これは JavaScript で [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/input#popovertarget) という HTML 属性に相当するものです。
+  - : {{HTMLElement("input")}} 要素の `type="button"` 型で制御されるポップオーバー要素を取得および設定します。これは JavaScript で [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/input#popovertarget) という HTML 属性に相当するものです。
 
 - {{domxref("HTMLInputElement.step", "step")}}
   - : 文字列で、この要素の [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を表します。これは、 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) や [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) と共に、数値や日時の値を設定する際の増分を制限します。文字列 `any` または正の浮動小数点数を設定することができます。 `any` が設定されていない場合、コントロールは最小値よりも大きい step 値の倍数のみを受け入れます。
@@ -68,7 +74,7 @@ _親インターフェイスである {{domxref("HTMLElement")}} から継承し
 ### 親フォームに関連するインスタンスプロパティ
 
 - {{domxref("HTMLInputElement.form", "form")}} {{ReadOnlyInline}}
-  - : 親の {{HtmlElement("form")}} 要素の参照を返します。
+  - : 親の {{HTMLElement("form")}} 要素の参照を返します。
 
 - {{domxref("HTMLInputElement.formAction", "formAction")}}
   - : 文字列で、この要素の [`formaction`](/ja/docs/Web/HTML/Reference/Elements/input#formaction) 属性を表します。ここには要素によって送信された情報を処理するプログラムの URI が入ります。これは親フォームの [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性を上書きします。
@@ -94,7 +100,7 @@ _親インターフェイスである {{domxref("HTMLElement")}} から継承し
   - : 論理値で、この要素の [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を表します。これは、フォームを送信する前にユーザーが値を入力しなければならないかどうかを示します。
 
 - {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
-  - : そのコントロールが制約を満たしていない場合、それを記述したローカライズされたメッセージを返します（もしあれば）。これは、コントロールが制約検証の候補ではない場合（[`willValidate`](/ja/docs/Web/API/HTMLObjectElement/willValidate) が `false` の場合）、または制約を満たしている場合は空の文字列です。この値は、 {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}} メソッドで設定できます。
+  - : そのコントロールが制約を満たしていない場合、それを記述したローカライズされたメッセージを返します（もしあれば）。これは、コントロールが制約検証の候補ではない場合（{{domxref("HTMLInputElement.willValidate", "willValidate")}} が `false` の場合）、または制約を満たしている場合は空の文字列です。この値は、 {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}} メソッドで設定できます。
 
 - {{domxref("HTMLInputElement.validity", "validity")}} {{ReadOnlyInline}}
   - : この要素の現在の検証状態を返します。
@@ -171,7 +177,7 @@ _親インターフェイスである {{domxref("HTMLElement")}} から継承し
   - : 論理型で、この要素の [`readonly`](/ja/docs/Web/HTML/Reference/Elements/input#readonly) 属性を表します。これは、ユーザーがコントロールの値を変更できないことを示します。この属性は、 [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性の値が `hidden`、`range`、`color`、`checkbox`、`radio`、`file`、ボタン型の場合は無視されます。
 
 - {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}
-  - : 文字列で、選択された方向を表します。可能な値は、 `forward` （現在のロケールの文頭から文末の方向に選択）、 `backward` （逆方向）、 `none` （方向は不明）のいずれかです。
+  - : 文字列で、選択された方向を表します。取りうる値は、 `forward` （現在のロケールの文頭から文末の方向に選択）、 `backward` （逆方向）、 `none` （方向は不明）のいずれかです。
 
 - {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}
   - : 数値で、選択中のテキストの末尾の位置を表します。選択がない場合は、現在のテキスト入力カーソル位置の直後の文字のオフセットを返します。
@@ -219,13 +225,15 @@ _親インターフェイスである {{domxref("HTMLElement")}} から継承し
 
 以下のイベントは、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を用いるか、このインターフェイスの `onイベント名` プロパティにイベントリスナーを割り当てるかして待ち受けしてください。
 
+- {{domxref("HTMLInputElement/cancel_event", "cancel")}} イベント
+  - : ユーザーがファイルピッカーダイアログを <kbd>Esc</kbd> キーまたはキャンセルボタンでキャンセルしたときや、ユーザーが前回選択したファイルと同じファイルを再選択したときに発生します。
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベント
   - : 制約検証時に、要素が制約を満たしていなかった場合に発行されます。
 - {{domxref("HTMLInputElement/search_event", "search")}} イベント {{Non-standard_Inline}}
   - : {{HTMLElement("input")}} の `type="search"` で検索が開始されたときに発行されます。
 - {{domxref("HTMLInputElement/select_event", "select")}} イベント
   - : テキストが選択されたときに発行されます。
-- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} イベント {{Experimental_Inline}}
+- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} イベント
   - : {{HTMLElement("input")}} の中のテキストの選択が変更された場合に発行されます。
 
 ## 仕様書
@@ -238,4 +246,4 @@ _親インターフェイスである {{domxref("HTMLElement")}} から継承し
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{ HTMLElement("input") }}
+- このインターフェイスを実装している HTML 要素: {{HTMLElement("input")}}

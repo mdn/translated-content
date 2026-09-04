@@ -831,7 +831,7 @@ function fibonacci(num) {
 
 - {{domxref("Navigator")}}
 - {{domxref("WorkerGlobalScope.fetch", "fetch()")}}
-- {{jsxref("Global_Objects/Array", "Array")}}、{{jsxref("Global_Objects/Date", "Date")}}、{{jsxref("Global_Objects/Math", "Math")}}、{{jsxref("Global_Objects/String", "String")}}
+- {{jsxref("Array")}}、{{jsxref("Date")}}、{{jsxref("Math")}}、{{jsxref("String")}}
 - {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} および {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}}
 
 ワーカーでできないことは、主に親ページに直接影響を与えることです。例えば、DOM を操作したり、そのページのオブジェクトを使用したりすることなどです。このような操作は、{{domxref("DedicatedWorkerGlobalScope.postMessage()")}} を介してメインスクリプトにメッセージを送信し、イベントハンドラーで変更を行うといった間接的な方法で行う必要があります。

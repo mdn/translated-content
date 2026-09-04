@@ -1,45 +1,45 @@
 ---
-title: "Window: devicemotion event"
+title: "Window : évènement devicemotion"
+short-title: devicemotion
 slug: Web/API/Window/devicemotion_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{APIRef}}
+{{APIRef("Device Orientation Events")}}{{SecureContext_Header}}
 
-L'évènement `devicemotion` est déclenché à intervalles réguliers et indique la quantité de force physique d'accélération que le périphérique reçoit à ce moment. Il fournit également des informations sur le taux de rotation, si disponible.
+L'évènement **`devicemotion`** de l'interface {{DOMxRef("Window")}} est déclenché à intervalles réguliers et indique le taux d'accélération de l'appareil, avec ou sans la contribution de la force de gravité à ce moment. Il fournit également des informations sur le taux de rotation, si elles sont disponibles.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bouillonne</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td><a href="/fr/docs/Web/API/DeviceMotionEvent"><code>DeviceMotionEvent</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété gestionnaire d'évènement</th>
-      <td><a href="/fr/docs/Web/API/Window/ondevicemotion"><code>Window.ondevicemotion</code></a></td>
-    </tr>
-  </tbody>
-</table>
+Cet évènement n'est pas annulable et ne se propage pas.
+
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènements.
+
+```js-nolint
+addEventListener("devicemotion", (event) => { })
+
+ondevicemotion = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("DeviceMotionEvent")}}. Hérite de {{DOMxRef("Event")}}.
+
+{{InheritanceDiagram("DeviceMotionEvent")}}
 
 ## Exemples
 
 ```js
-function handleMotionEvent(event) {
-  var x = event.accelerationIncludingGravity.x;
-  var y = event.accelerationIncludingGravity.y;
-  var z = event.accelerationIncludingGravity.z;
+function gererEventRotation(event) {
+  const x = event.accelerationIncludingGravity.x;
+  const y = event.accelerationIncludingGravity.y;
+  const z = event.accelerationIncludingGravity.z;
 
   // Faire quelque chose de génial.
 }
 
-window.addEventListener("devicemotion", handleMotionEvent, true);
+window.addEventListener("devicemotion", gererEventRotation);
 ```
 
 ## Spécifications
@@ -52,5 +52,4 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 
 ## Voir aussi
 
-- [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
-- [`DeviceOrientation Event` (en anglais)](https://www.w3.org/TR/orientation-event/#devicemotion)
+- L'évènement {{DOMxRef("Window.deviceorientation_event", "deviceorientation")}}

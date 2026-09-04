@@ -1,15 +1,20 @@
 ---
-title: Trailer
+title: Trailer ヘッダー
+short-title: Trailer
 slug: Web/HTTP/Reference/Headers/Trailer
-original_slug: Web/HTTP/Headers/Trailer
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-**Trailer** レスポンスヘッダーにより、メッセージ本体の送信中に動的に生成される可能性のあるメタデータ（メッセージの完全性チェック、デジタル署名、後処理のステータスなど）を提供するために、送信者がチャンクされたメッセージの終わりに追加のフィールドを含めることが可能になります。
+HTTP の **Trailer** {{Glossary("Request header", "リクエストヘッダー")}}兼{{Glossary("Response header", "レスポンスヘッダー")}}により、メッセージ本体の送信中に動的に生成される可能性のあるメタデータ（メッセージの完全性チェック、デジタル署名、後処理のステータスなど）を提供するために、送信者がチャンク化されたメッセージの終わりに追加のフィールドを含めることが可能になります。
 
 > [!NOTE]
 > トレーラーフィールドを許可するには、{{HTTPHeader("TE")}} リクエストヘッダーを "trailer" に設定する必要があります。
+
+> [!WARNING]
+> 開発者は、Fetch API や XHR を通じて HTTP トレーラーにアクセスすることはできません。
+> また、{{HTTPHeader("Server-Timing")}} を除き、ブラウザーは HTTP トレーラーを無視します。
+> 詳細については、[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
 <table class="properties">
   <tbody>
@@ -18,7 +23,7 @@ l10n:
       <td>
         {{Glossary("Request header", "リクエストヘッダー")}}、
         {{Glossary("Response header", "レスポンスヘッダー")}}、
-        {{Glossary("Payload header", "ペイロードヘッダー")}}
+        {{Glossary("Content header", "コンテンツヘッダー")}}
       </td>
     </tr>
     <tr>
@@ -37,36 +42,30 @@ Trailer: header-names
 ## ディレクティブ
 
 - `header-names`
-  - : チャンクされたメッセージのトレーラー部分に存在する HTTP ヘッダーフィールド。
+  - : チャンク化されたメッセージのトレーラー部分に存在する HTTP ヘッダーフィールド。
     以下のヘッダーフィールドは**許可されていません**。
+    - {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}, `Trailer`
+    - 認証ヘッダー（{{HTTPHeader("Authorization")}} や {{HTTPHeader("Set-Cookie")}} など）
     - メッセージフレーミングヘッダー（{{HTTPHeader("Transfer-Encoding")}} や
       {{HTTPHeader("Content-Length")}} など）
-    - ルーティングヘッダー（{{HTTPHeader("Host")}}）
+    - ルーティングヘッダー（{{HTTPHeader("Host")}} など）
     - リクエスト修飾子（制御や条件、例えば {{HTTPHeader("Cache-Control")}}、{{HTTPHeader("Max-Forwards")}}、{{HTTPHeader("TE")}} など）
-    - 認証ヘッダー（{{HTTPHeader("Authorization")}} や {{HTTPHeader("Set-Cookie")}} など）
-    - または {{HTTPHeader("Content-Encoding")}}、{{HTTPHeader("Content-Type")}}、{{HTTPHeader("Content-Range")}}、そして `Trailer` 自体。
 
 ## 例
 
-### トレーラーヘッダーを使用するチャンク転送エンコード方式
+### HTTP トレーラーとしての Server-Timing
 
-この例では、{{HTTPHeader("Expires")}} ヘッダーがチャンクされたメッセージの終わりに使用され、末尾のヘッダーとして有益な役割を果たします。
+一部のブラウザーでは、{{HTTPHeader("Server-Timing")}} ヘッダーがトレーラーとして送信された場合、開発者ツールにサーバーのタイミングデータを表示させる機能を対応しています。
+以下のレスポンスでは、`Trailer` ヘッダーを使用して、レスポンス本体の後に `Server-Timing` ヘッダーが続くことを示しています。
+所要時間が `123.4` ミリ秒のメトリック `custom-metric` が送信されます。
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: text/plain
 Transfer-Encoding: chunked
-Trailer: Expires
+Trailer: Server-Timing
 
-7\r\n
-Mozilla\r\n
-9\r\n
-Developer\r\n
-7\r\n
-Network\r\n
-0\r\n
-Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
-\r\n
+--- レスポンス本体 ---
+Server-Timing: custom-metric;dur=123.4
 ```
 
 ## 仕様書
@@ -79,6 +78,7 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
 
 ## 関連情報
 
+- {{HTTPHeader("Server-Timing")}}
 - {{HTTPHeader("Transfer-Encoding")}}
 - {{HTTPHeader("TE")}}
 - [チャンク転送エンコーディング](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)（英語）

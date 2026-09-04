@@ -1,33 +1,34 @@
 ---
-title: console.error()
+title: "console: error() 静的メソッド"
+short-title: error()
 slug: Web/API/console/error_static
+l10n:
+  sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
-**`console.error()`** メソッドは、エラーメッセージをウェブコンソールに出力します。
-
-{{AvailableInWorkers}}
+**`console.error()`** 静的メソッドは、コンソールに "error" ログレベルでメッセージを出力します。このメッセージは、コンソールがエラー出力の表示に設定されている場合にのみユーザーに表示されます。ほとんどの場合、ログレベルはコンソールの UI 内で設定されます。メッセージはエラーとして書式化され、赤色で表示され、コールスタック情報が付加される場合があります。
 
 ## 構文
 
-```js
-error(obj1);
-error(obj1, /* …, */ objN);
-error(msg);
-error(msg, subst1, /* …, */ substN);
+```js-nolint
+console.error(val1)
+console.error(val1, /* …, */ valN)
+console.error(msg)
+console.error(msg, subst1, /* …, */ substN)
 ```
 
 ### 引数
 
-- `obj1` … `objN`
-  - : 出力する JavaScript オブジェクトのリスト。 各オブジェクトの文字列表現が記述順で出力されます。
+- `val1` … `valN`
+  - : 出力する JavaScript 値のリスト。これらのそれぞれの値の表現が、指定された順序でコンソールに出力され、それぞれの間には何らかの区切りが挿入されます。`val1` が文字列である場合の特別な場合については、後述します。
 - `msg`
-  - : 0 個以上の置換文字列 (substitution strings) を含む JavaScript 文字列です。
+  - : 置換文字列をゼロ個以上含む JavaScript 文字列。置換文字列は、置換文字列の数まで順に `subst1` から `substN` で置き換えられます。置換の仕組みについては、[文字列置換の使用](/ja/docs/Web/API/console#文字列置換の使用)を参照してください。
 - `subst1` … `substN`
-  - : `msg` 内の置換文字列を置換する JavaScript オブジェクト。これにより、出力の書式の詳細な制御が可能となります。
+  - : `msg` 内の置換文字列を置き換える JavaScript 値。置換値が置換文字列の数より多い場合、余分な値は書式文字列が存在しない場合と同様に、詳細なアサーションメッセージの後にコンソールへ直接出力されます。
 
-詳細については、{{domxref("console")}} ドキュメント内の[コンソールへのテキストの出力](/ja/docs/Web/API/console#コンソールへのテキストの出力)を参照してください。
+詳細については、[コンソールへのテキストの出力](/ja/docs/Web/API/console#コンソールへのテキストの出力)（{{domxref("console")}} のドキュメント）を参照してください。
 
 ### 返値
 
@@ -43,5 +44,6 @@ error(msg, subst1, /* …, */ substN);
 
 ## 関連情報
 
-- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
-- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools/console/api/#error)
+- [Microsoft Edge's documentation for `console.error()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#error)
+- [Node.js documentation for `console.error()`](https://nodejs.org/docs/latest/api/console.html#consoleerrordata-args)
+- [Google Chrome's documentation for `console.error()`](https://developer.chrome.com/docs/devtools/console/api/#error)

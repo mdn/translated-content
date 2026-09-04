@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/str/concat
 original_slug: Web/EXSLT/str/concat
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
 `str:concat()` retourne une chaîne contenant toutes les valeurs de chaînes d'un ensemble de nœuds concaténées ensembles.
 

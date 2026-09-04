@@ -2,9 +2,8 @@
 title: "JavaScript : Ajouter de l'interactivité"
 short-title: Ajouter de l'interactivité
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
-original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
 l10n:
-  sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
+  sourceCommit: b5a6d8bc5fd751032f70b88e7ec1ec61339937de
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
@@ -16,7 +15,7 @@ JavaScript est un langage de programmation qui ajoute de l'interactivité aux si
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Connaissance de base de votre système d'exploitation, des logiciels de base que vous utiliserez pour créer un site web, et des systèmes de fichiers.
+        Connaissance de base de votre système d'exploitation, des logiciels de base que vous utilisez pour créer un site web, et des systèmes de fichiers.
       </td>
     </tr>
     <tr>
@@ -24,7 +23,7 @@ JavaScript est un langage de programmation qui ajoute de l'interactivité aux si
       <td>
         <ul>
           <li>Le but et la fonction de JavaScript.</li>
-          <li>Une compréhension de base des fondamentaux du langage JavaScript, comme les variables, opérateurs, structures conditionnelles, fonctions et événements.</li>
+          <li>Une compréhension de base des fondamentaux du langage JavaScript, comme les variables, opérateurs, structures conditionnelles, fonctions et évènements.</li>
         </ul>
       </td>
     </tr>
@@ -39,7 +38,7 @@ JavaScript, lorsqu'il est utilisé sur des pages web (il peut aussi être utilis
 
 - Obtenir des références vers une ou plusieurs valeurs, comme des nombres ou des éléments de la page.
 - Faire quelque chose avec ces valeurs, comme additionner les nombres.
-- Retourner un résultat qui pourra être utilisé pour faire autre chose plus tard. Par exemple, vous pourriez vouloir afficher la somme de ces nombres sur la page.
+- Retourner un résultat qui peut être utilisé pour faire autre chose plus tard. Par exemple, vous voulez afficher la somme de ces nombres sur la page.
 
 Voyons un exemple. Nous allons utiliser la même liste de base que dans les précédents articles&nbsp;:
 
@@ -53,7 +52,7 @@ Voyons un exemple. Nous allons utiliser la même liste de base que dans les pré
 </ul>
 ```
 
-Nous allons aussi définir une classe CSS appelée `.fini` qui mettra en forme tout élément auquel elle est appliquée, pour le faire ressembler à une tâche terminée avec un texte vert et une rature pour barrer le texte. Nous l'appliquerons à nos éléments `<li>` en JavaScript à l'étape suivante.
+Nous allons aussi définir une classe CSS appelée `.fini` qui met en forme tout élément auquel elle est appliquée, pour le faire ressembler à une tâche terminée avec un texte vert et une rature pour barrer le texte. Nous l'appliquons à nos éléments `<li>` en JavaScript à l'étape suivante.
 
 ```css live-sample___basic-js
 .fini {
@@ -62,7 +61,7 @@ Nous allons aussi définir une classe CSS appelée `.fini` qui mettra en forme t
 }
 ```
 
-Passons maintenant au JavaScript. Ici, nous stockons d'abord les références aux éléments `<li>` dans une variable appelée `lesElements`. Nous définissons ensuite une fonction appelée `changerValidation()` qui ajoute la classe `fini` à un élément de liste s'il ne l'a pas déjà, et la retire s'il l'a. Enfin, nous parcourons les éléments de la liste (avec `forEach()`) et ajoutons un écouteur d'événement (avec `addEventListener()`) à chaque élément de liste pour que, lorsqu'il est cliqué, la classe `fini` soit basculée, appliquant ainsi le CSS défini plus haut.
+Passons maintenant au JavaScript. Ici, nous stockons d'abord les références aux éléments `<li>` dans une variable appelée `lesElements`. Nous définissons ensuite une fonction appelée `changerValidation()` qui ajoute la classe `fini` à un élément de liste s'il ne l'a pas déjà, et la retire s'il l'a. Enfin, nous parcourons les éléments de la liste (avec `forEach()`) et ajoutons un écouteur d'évènement (avec `addEventListener()`) à chaque élément de liste pour que, lorsqu'il est cliqué, la classe `fini` soit basculée, appliquant ainsi le CSS défini plus haut.
 
 ```js live-sample___basic-js
 const lesElements = document.querySelectorAll("li");
@@ -80,9 +79,9 @@ lesElements.forEach((element) => {
 });
 ```
 
-Ne vous inquiétez pas si vous ne comprenez pas encore ce JavaScript. Prendre en main JavaScript est plus difficile qu'avec HTML et CSS, mais tout deviendra plus clair plus loin dans le cours.
+Ne vous inquiétez pas si vous ne comprenez pas encore ce JavaScript. Prendre en main JavaScript est plus difficile qu'avec HTML et CSS, mais tout devient plus clair plus loin dans le cours.
 
-Cet exemple s'affichera ainsi dans un navigateur web&nbsp;:
+Cet exemple s'affiche ainsi dans un navigateur web&nbsp;:
 
 {{EmbedLiveSample("basic-js", "100%", "140px")}}
 
@@ -93,7 +92,7 @@ Essayez de cliquer plusieurs fois sur les éléments de la liste et notez commen
 Pour commencer à écrire un peu de JavaScript, nous allons vous guider pour ajouter un exemple _Hello world&nbsp;!_ à votre site d'exemple. ([«&nbsp;Hello world&nbsp;!&nbsp;»](https://fr.wikipedia.org/wiki/Hello_world) est l'exemple d'introduction standard en programmation.)
 
 > [!WARNING]
-> Si vous n'avez pas suivi le reste du cours, [téléchargez cet exemple de code](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages) et utilisez-le comme point de départ.
+> Si vous n'avez pas suivi le reste du cours, [téléchargez cet exemple de code <sup>(angl.)</sup>](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/main) et utilisez-le comme point de départ.
 
 1. Dans votre dossier `mon-premier-site` ou dans le dossier d'exemple que vous venez de télécharger, créez un nouveau dossier nommé `scripts`.
 2. Dans le dossier `scripts`, créez un nouveau fichier texte appelé `main.js` et enregistrez-le.
@@ -103,7 +102,7 @@ Pour commencer à écrire un peu de JavaScript, nous allons vous guider pour ajo
    <script async src="scripts/main.js"></script>
    ```
 
-   Cela a le même rôle que l'élément {{htmlelement("link")}} pour le CSS&nbsp;: cela applique le JavaScript à la page pour qu'il puisse agir sur le HTML (en plus du CSS et de tout le reste sur la page).
+   Cela a le même rôle que l'élément {{HTMLElement("link")}} pour le CSS&nbsp;: cela applique le JavaScript à la page pour qu'il puisse agir sur le HTML (en plus du CSS et de tout le reste sur la page).
 
 4. Ajoutez ce code à votre fichier `scripts/main.js`&nbsp;:
 
@@ -114,9 +113,9 @@ Pour commencer à écrire un peu de JavaScript, nous allons vous guider pour ajo
    monTitre.textContent = "Hello world !";
    ```
 
-5. Assurez-vous que les fichiers HTML et JavaScript sont enregistrés, puis chargez `index.html` dans votre navigateur. Vous devriez obtenir quelque chose comme ceci&nbsp;:
+5. Assurez-vous que les fichiers HTML et JavaScript sont enregistrés, puis chargez `index.html` dans votre navigateur. Vous devez obtenir quelque chose comme ceci&nbsp;:
 
-![Titre "hello world" au-dessus d'un logo Firefox](hello-world.png)
+![Titre « hello world » au-dessus d'un logo Firefox](hello-world.png)
 
 Voyons comment fonctionne cet exemple.
 
@@ -129,11 +128,11 @@ Les lignes qui commencent par `//` sont des commentaires JavaScript. Comme pour 
 Passons à l'ajout de nouvelles fonctionnalités à notre site d'exemple.
 
 > [!WARNING]
-> Avant d'aller plus loin, supprimez le code «&nbsp;Hello world !&nbsp;» de votre fichier `main.js`. Sinon, le code existant entrera en conflit avec le nouveau code que vous allez ajouter.
+> Avant d'aller plus loin, supprimez le code «&nbsp;Hello world !&nbsp;» de votre fichier `main.js`. Sinon, le code existant entre en conflit avec le nouveau code que vous allez ajouter.
 
 ## Ajouter un changement d'image
 
-Dans cette section, vous allez utiliser JavaScript et les fonctionnalités de l'[API DOM](/fr/docs/Web/API/HTML_DOM_API) pour alterner l'affichage entre deux images. Ce changement se produira lorsqu'un·e utilisateur·ice cliquera sur l'image affichée.
+Dans cette section, vous allez utiliser JavaScript et les fonctionnalités de [l'API DOM](/fr/docs/Web/API/HTML_DOM_API) pour alterner l'affichage entre deux images. Ce changement se produit lorsqu'un·e utilisateur·ice clique sur l'image affichée.
 
 1. Choisissez une autre image à mettre en avant sur votre site d'exemple. Idéalement, l'image doit avoir la même taille que celle que vous avez ajoutée précédemment, ou s'en approcher le plus possible.
 2. Enregistrez cette image dans votre dossier `images`.
@@ -154,7 +153,7 @@ Dans cette section, vous allez utiliser JavaScript et les fonctionnalités de l'
 
 4. Enregistrez tous les fichiers et chargez `index.html` dans le navigateur. Désormais, lorsque vous cliquez sur l'image, elle doit changer pour afficher l'autre.
 
-Dans ce code, vous stockez une référence vers votre élément HTML {{htmlelement("img")}} dans la variable `monImage`. Vous lui assignez ensuite une fonction de gestionnaire d'événement `click`. À chaque fois que l'élément `<img>` est cliqué, la fonction effectue les opérations suivantes&nbsp;:
+Dans ce code, vous stockez une référence vers votre élément HTML {{HTMLElement("img")}} dans la variable `monImage`. Vous lui assignez ensuite une fonction de gestionnaire d'évènement `click`. À chaque fois que l'élément `<img>` est cliqué, la fonction effectue les opérations suivantes&nbsp;:
 
 - Récupère la valeur de l'attribut `src` de l'image.
 - Utilise une structure conditionnelle (`if...else`) pour vérifier si la valeur de `src` correspond au chemin de l'image d'origine&nbsp;:
@@ -165,13 +164,13 @@ Dans ce code, vous stockez une référence vers votre élément HTML {{htmleleme
 > Cette section introduit plusieurs termes importants. Concepts clés&nbsp;:
 >
 > - {{Glossary("API")}}&nbsp;: Un ensemble de fonctionnalités qui permet à un·e développeur·euse d'interagir avec un environnement de programmation. Les API Web (comme les fonctionnalités de l'API DOM utilisées ci-dessus) sont construites au-dessus du langage JavaScript et permettent de manipuler différentes parties du navigateur et des pages web affichées.
-> - [Événements](/fr/docs/Learn_web_development/Core/Scripting/Events)&nbsp;: Éléments qui se produisent dans le navigateur. Ils sont essentiels pour rendre les sites web interactifs. Vous pouvez exécuter du code en réponse à des événements à l'aide de **fonctions de gestionnaire d'événements** — ce sont des blocs de code qui s'exécutent lorsqu'un événement se produit. L'exemple le plus courant est l'[événement click](/fr/docs/Web/API/Element/click_event), déclenché par le navigateur lorsqu'un·e utilisateur·ice clique sur un élément.
-> - [Fonctions](/fr/docs/Learn_web_development/Core/Scripting/Functions)&nbsp;: Une façon d'encapsuler du code que vous souhaitez réutiliser. Vous pouvez définir votre code dans une fonction une fois, puis l'exécuter autant de fois que vous le souhaitez, ce qui évite de réécrire le même code. Dans notre exemple, nous avons défini une fonction de gestionnaire d'événement `click`, qui s'exécute à chaque clic sur l'image.
-> - [Structures conditionnelles](/fr/docs/Learn_web_development/Core/Scripting/Conditionals)&nbsp;: Structures de code utilisées pour tester si une expression renvoie `true` ou `false` et exécuter un code différent selon le résultat. La forme la plus courante est l'instruction `if...else`.
+> - [Évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)&nbsp;: Éléments qui se produisent dans le navigateur. Ils sont essentiels pour rendre les sites web interactifs. Vous pouvez exécuter du code en réponse à des évènements à l'aide de **fonctions de gestionnaire d'évènements** — ce sont des blocs de code qui s'exécutent lorsqu'un évènement se produit. L'exemple le plus courant est [l'évènement `click`](/fr/docs/Web/API/Element/click_event), déclenché par le navigateur lorsqu'un·e utilisateur·ice clique sur un élément.
+> - [Fonctions](/fr/docs/Learn_web_development/Core/Scripting/Functions)&nbsp;: Une façon d'encapsuler du code que vous souhaitez réutiliser. Vous pouvez définir votre code dans une fonction une fois, puis l'exécuter autant de fois que vous le souhaitez, ce qui évite de réécrire le même code. Dans notre exemple, nous avons défini une fonction de gestionnaire d'évènement `click`, qui s'exécute à chaque clic sur l'image.
+> - [Structures conditionnelles](/fr/docs/Learn_web_development/Core/Scripting/Conditionals)&nbsp;: Structures de code utilisées pour tester si une expression retourne `true` ou `false` et exécuter un code différent selon le résultat. La forme la plus courante est l'instruction `if...else`.
 
 ## Ajouter un message de bienvenue personnalisé
 
-Nous allons maintenant modifier le titre de la page pour afficher un message de bienvenue personnalisé lors de la première visite de l'utilisateur·ice. Ce message de bienvenue sera enregistré dans le navigateur à l'aide de l'[API Web Storage](/fr/docs/Web/API/Web_Storage_API), ainsi, si l'utilisateur·ice quitte le site et y revient plus tard, ses données personnalisées seront toujours présentes. Nous inclurons également un moyen de modifier ce message.
+Nous allons maintenant modifier le titre de la page pour afficher un message de bienvenue personnalisé lors de la première visite de l'utilisateur·ice. Ce message de bienvenue est enregistré dans le navigateur à l'aide de [l'API Web Storage](/fr/docs/Web/API/Web_Storage_API), ainsi, si l'utilisateur·ice quitte le site et y revient plus tard, ses données personnalisées sont toujours présentes. Nous incluons également un moyen de modifier ce message.
 
 1. Dans le fichier `index.html`, ajoutez la ligne suivante juste avant la balise de fermeture `</body>`&nbsp;:
 
@@ -186,7 +185,7 @@ Nous allons maintenant modifier le titre de la page pour afficher un message de 
    let monTitre = document.querySelector("h1");
    ```
 
-3. Ajoutez la fonction suivante pour définir le message de bienvenue personnalisé. Elle ne fait encore rien&nbsp;: nous l'appellerons plus tard.
+3. Ajoutez la fonction suivante pour définir le message de bienvenue personnalisé. Elle ne fait encore rien&nbsp;: nous l'appelons plus tard.
 
    ```js
    function definirNomUtilisateur() {
@@ -196,9 +195,9 @@ Nous allons maintenant modifier le titre de la page pour afficher un message de 
    }
    ```
 
-   La fonction `definirNomUtilisateur()` utilise la fonction [`prompt()`](/fr/docs/Web/API/Window/prompt), qui demande à l'utilisateur·ice de saisir une donnée et la stocke dans une variable après avoir cliqué sur _OK_. Ici, nous demandons à l'utilisateur·ice de saisir un nom et nous le stockons dans `monNom`.<br /><br />
+   La fonction `definirNomUtilisateur()` utilise la fonction [`prompt()`](/fr/docs/Web/API/Window/prompt), qui demande à l'utilisateur·ice de saisir une donnée et la stocke dans une variable après avoir cliqué sur _OK_. Ici, nous demandons à l'utilisateur·ice de saisir un nom et nous le stockons dans `monNom`.
 
-   Ensuite, le code utilise l'[API Web Storage](/fr/docs/Web/API/Web_Storage_API), qui permet d'enregistrer des données dans le navigateur et de les récupérer plus tard. Nous utilisons la fonction {{domxref("Storage.setItem", "localStorage.setItem()")}} pour créer et stocker un élément de données appelé `"nom"`, en lui attribuant la valeur de la variable `monNom`, qui contient la saisie de l'utilisateur·ice.<br /><br />
+   Ensuite, le code utilise [l'API Web Storage](/fr/docs/Web/API/Web_Storage_API), qui permet d'enregistrer des données dans le navigateur et de les récupérer plus tard. Nous utilisons la fonction {{DOMxRef("Storage.setItem", "localStorage.setItem()")}} pour créer et stocker un élément de données appelé `"nom"`, en lui attribuant la valeur de la variable `monNom`, qui contient la saisie de l'utilisateur·ice.
 
    Enfin, nous définissons la propriété `textContent` du titre sur une chaîne de caractères qui inclut le nom enregistré.
 
@@ -213,9 +212,9 @@ Nous allons maintenant modifier le titre de la page pour afficher un message de 
    }
    ```
 
-   La première ligne de ce bloc utilise l'opérateur de négation logique (<i lang="en">NOT</i>, représenté par le caractère `!`) pour vérifier si l'élément de données `nom` n'est _pas_ déjà enregistré dans `localStorage`. Si ce n'est pas le cas, la fonction `definirNomUtilisateur()` s'exécute pour le créer. S'il existe (c'est-à-dire que l'utilisateur·ice a déjà défini un nom lors d'une visite précédente), nous récupérons le nom enregistré avec {{domxref("Storage.getItem", "localStorage.getItem()")}} et nous définissons la propriété `textContent` du titre sur une chaîne de caractères, plus le nom de l'utilisateur·ice — comme dans `definirNomUtilisateur()`.
+   La première ligne de ce bloc utilise l'opérateur de négation logique (<i lang="en">NOT</i>, représenté par le caractère `!`) pour vérifier si l'élément de données `nom` n'est _pas_ déjà enregistré dans `localStorage`. Si ce n'est pas le cas, la fonction `definirNomUtilisateur()` s'exécute pour le créer. S'il existe (c'est-à-dire que l'utilisateur·ice a déjà défini un nom lors d'une visite précédente), nous récupérons le nom enregistré avec {{DOMxRef("Storage.getItem", "localStorage.getItem()")}} et nous définissons la propriété `textContent` du titre sur une chaîne de caractères, plus le nom de l'utilisateur·ice — comme dans `definirNomUtilisateur()`.
 
-5. Ajoutez une fonction de gestionnaire d'événement `click` au bouton. Lorsqu'il est cliqué, `definirNomUtilisateur()` s'exécute. Cela permet à l'utilisateur·ice d'enregistrer un autre nom si besoin.
+5. Ajoutez une fonction de gestionnaire d'évènement `click` au bouton. Lorsqu'il est cliqué, `definirNomUtilisateur()` s'exécute. Cela permet à l'utilisateur·ice d'enregistrer un autre nom si besoin.
 
    ```js
    monBouton.addEventListener("click", () => {
@@ -223,16 +222,16 @@ Nous allons maintenant modifier le titre de la page pour afficher un message de 
    });
    ```
 
-6. Enregistrez tous les fichiers et chargez `index.html` dans le navigateur. Vous devriez être invité·e à saisir votre nom. Après validation, il apparaîtra dans le `<h1>` comme message de bienvenue personnalisé. Remarquez que la personnalisation persiste même après rechargement de la page. Vous pouvez cliquer sur le bouton «&nbsp;Changer d'utilisateur&nbsp;» pour saisir un nouveau nom.
+6. Enregistrez tous les fichiers et chargez `index.html` dans le navigateur. Vous devez être invité·e à saisir votre nom. Après validation, il apparaît dans le `<h1>` comme message de bienvenue personnalisé. Remarquez que la personnalisation persiste même après rechargement de la page. Vous pouvez cliquer sur le bouton «&nbsp;Changer d'utilisateur&nbsp;» pour saisir un nouveau nom.
 
 > [!NOTE]
 > Le terme [opérateur](/fr/docs/Learn_web_development/Core/Scripting/Math) désigne un caractère du langage JavaScript qui effectue une opération sur une ou plusieurs valeurs. Par exemple&nbsp;: `+` (additionne des valeurs), `-` (soustrait une valeur à une autre), et `!` (négation d'une valeur — comme vu plus haut).
 
 ## Un nom d'utilisateur null ?
 
-Lorsque vous exécutez l'exemple et que la boîte de dialogue vous invite à saisir votre nom, essayez d'appuyer sur le bouton _Annuler_. Vous devriez obtenir un titre affichant _Mozilla est génial, null_. Cela se produit parce que la valeur est définie sur [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) lorsque vous annulez la saisie. En JavaScript, _null_ est une valeur spéciale qui représente l'absence de valeur.
+Lorsque vous exécutez l'exemple et que la boîte de dialogue vous invite à saisir votre nom, essayez d'appuyer sur le bouton _Annuler_. Vous devez obtenir un titre affichant _Mozilla est génial, null_. Cela se produit parce que la valeur est définie sur [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) lorsque vous annulez la saisie. En JavaScript, _null_ est une valeur spéciale qui représente l'absence de valeur.
 
-Essayez aussi de cliquer sur _OK_ sans saisir de nom. Vous devriez obtenir un titre affichant _Mozilla est génial,_ car vous avez défini `monNom` sur une chaîne de caractères vide.
+Essayez aussi de cliquer sur _OK_ sans saisir de nom. Vous devez obtenir un titre affichant _Mozilla est génial_, car vous avez défini `monNom` sur une chaîne de caractères vide.
 
 Pour éviter ces problèmes, vous pouvez ajouter une condition supplémentaire pour vérifier que l'utilisateur·ice n'a pas laissé le nom vide. Modifiez votre fonction `definirNomUtilisateur()` comme suit&nbsp;:
 
@@ -252,7 +251,7 @@ En langage courant&nbsp;: si `monNom` n'a pas de valeur, on relance `definirNomU
 
 ## Conclusion
 
-Si vous avez suivi toutes les instructions de cet article, vous devriez obtenir une page ressemblant à l'image ci-dessous. Vous pouvez aussi [voir notre version <sup>(angl.)</sup>](https://mdn.github.io/beginner-html-site-scripted/).
+Si vous avez suivi toutes les instructions de cet article, vous devez obtenir une page ressemblant à l'image ci-dessous. Vous pouvez aussi [voir notre version <sup>(angl.)</sup>](https://mdn.github.io/beginner-html-site-scripted/).
 
 ![Apparence finale de la page HTML après création des éléments : un en-tête, un grand logo centré, du contenu et un bouton](website-screen-scripted.png)
 

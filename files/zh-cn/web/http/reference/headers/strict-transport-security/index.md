@@ -99,4 +99,4 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 - OWASP 文章：[HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
 - 维基百科：[HTTP Strict Transport Security](https://zh.wikipedia.org/wiki/HTTP严格传输安全)
 - [HSTS 预加载服务](https://hstspreload.org/)
-- [仅限于安全上下文的功能](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- [仅限于安全上下文的功能](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)

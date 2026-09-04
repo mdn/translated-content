@@ -12,7 +12,7 @@ slug: Web/API/Attr/localName
 
 ## 值
 
-属性的限定名称的本名 {{domxref("DOMString")}} 。
+属性的限定名称的本名 {{jsxref("String")}} 。
 
 ## 示例
 

@@ -17,7 +17,7 @@ Error: Permission denied to access property "x"
 
 ## Что пошло не так?
 
-Была попытка получить доступ к объекту, на который у вас нет разрешения. Вероятно, это элемент {{HTMLElement("iframe")}}, для которого вы нарушили [правило ограничения домена](/ru/docs/Web/Security/Same-origin_policy).
+Была попытка получить доступ к объекту, на который у вас нет разрешения. Вероятно, это элемент {{HTMLElement("iframe")}}, для которого вы нарушили [правило ограничения домена](/ru/docs/Web/Security/Defenses/Same-origin_policy).
 
 ## Примеры
 
@@ -42,4 +42,4 @@ Error: Permission denied to access property "x"
 ## Смотрите также
 
 - {{HTMLElement("iframe")}}
-- [Same-origin policy](/ru/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/ru/docs/Web/Security/Defenses/Same-origin_policy)

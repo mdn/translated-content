@@ -19,12 +19,12 @@ new ClipboardEvent(type, options)
 _`ClipboardEvent()` 构造函数也从_ _{{domxref("Event.Event", "Event()")}}_ _继承参数。_
 
 - _type_
-  - : 一个 {{domxref("DOMString")}} 字符串，描述了 `ClipboardEvent` 事件类型的名字，大小写敏感，可以是：`'copy'`、 `'cut'`或者 `'paste'`。
+  - : 一个 {{jsxref("String")}} 字符串，描述了 `ClipboardEvent` 事件类型的名字，大小写敏感，可以是：`'copy'`、 `'cut'`或者 `'paste'`。
 - _options_ **{{optional_inline}}**
   - : 选项如下：
     - `clipboardData`: 一个 {{domxref("DataTransfer")}} containing the data concerned by the clipboard event.
-    - `dataType`{{non-standard_inline}}: A {{domxref("DOMString")}} containing the MIME-type of the data contained in the `data` argument.
-    - `data`{{non-standard_inline}}: A {{domxref("DOMString")}} containing the data concerned by the clipboard event.
+    - `dataType`{{non-standard_inline}}: A {{jsxref("String")}} containing the MIME-type of the data contained in the `data` argument.
+    - `data`{{non-standard_inline}}: A {{jsxref("String")}} containing the data concerned by the clipboard event.
 
 ## 规范
 

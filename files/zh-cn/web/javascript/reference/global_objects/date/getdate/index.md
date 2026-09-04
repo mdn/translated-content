@@ -3,8 +3,6 @@ title: Date.prototype.getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 ---
 
-{{JSRef}}
-
 根据本地时间，返回一个指定的日期对象为一个月中的哪一日（从 1--31）。
 
 {{InteractiveExample("JavaScript Demo: Date.getDate()")}}

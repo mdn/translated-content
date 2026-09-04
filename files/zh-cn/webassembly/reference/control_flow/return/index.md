@@ -1,5 +1,6 @@
 ---
-title: return
+title: return：Wasm 文本指令
+short-title: return
 slug: WebAssembly/Reference/Control_flow/return
 l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
@@ -11,7 +12,7 @@ l10n:
 - 如果栈上的值的数量和函数的类型签名指定的数量一样，会返回这些值。
 - 如果栈上的值的数量超过函数的返回类型指定的数量，那么会返回位于最上面的 N 个值，并丢弃剩余的值。
 
-{{InteractiveExample("Wat Demo: return", "tabbed-taller")}}
+{{InteractiveExample("Wat 演示：return", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
@@ -31,7 +32,7 @@ const url = "{%wasm-url%}";
 await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
   const { get_90 } = result.instance.exports;
   console.log(get_90());
-  // 期望的输出：90
+  // 期望输出：90
 });
 ```
 

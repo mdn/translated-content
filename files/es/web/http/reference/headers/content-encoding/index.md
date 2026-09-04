@@ -8,9 +8,9 @@ La cabecera **`Content-Encoding`** es usada para comprimir el media-type. Cuando
 
 Se recomienda comprimir los datos tanto como sea posible y por lo tanto utilizar este campo, pero algunos tipos de recursos, como imágenes JPEG, ya están comprimidos. A veces, el uso de compresión adicional no reduce el tamaño de la petición e incluso puede hacer que la petición sea más larga.
 
-| Header type                           | {{Glossary("Entity header")}} |
-| ------------------------------------- | ----------------------------- |
-| {{Glossary("Forbidden header name")}} | no                            |
+| Header type                              | {{Glossary("Entity header")}} |
+| ---------------------------------------- | ----------------------------- |
+| {{Glossary("Forbidden request header")}} | no                            |
 
 ## Sintaxis
 

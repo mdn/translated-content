@@ -1,56 +1,60 @@
 ---
-title: Firefox 12 pour les développeurs
+title: Firefox 12 note de version pour les développeurs
+short-title: Firefox 12
 slug: Mozilla/Firefox/Releases/12
+l10n:
+  sourceCommit: 83f4e64da466670c3700110da364546253eae127
 ---
 
-Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume les principaux changements dans Firefox 12 qui sont utiles aux développeurs.
+Firefox 12 a été publié le 24 avril 2012. Cette page résume les changements dans Firefox 12 qui affectent les développeur·euse·s. Cet article fournit des informations sur les nouvelles fonctionnalités et les principaux bugs corrigés dans cette version, ainsi que des liens vers une documentation plus détaillée pour les développeur·euse·s web et les développeur·euse·s de modules complémentaires.
 
-## Changements pour les développeurs Web
+## Changements pour les développeur·euse·s Web
 
 ### HTML
 
-- L'attribut `title` supporte désormais les caractères de saut de ligne pour permettre des multi-lignes dans les info-bulles.
-- Si JavaScript est désactivé, l'élément {{HTMLElement("canvas")}} était rendu au lieu d'afficher le contenu de secours selon la [spécification](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html). Désormais, c'est le contenu de secours qui est rendu.
+- L'attribut `title` supporte désormais les caractères de saut de ligne pour permettre de multiples lignes dans les info-bulles.
+- Si JavaScript est désactivé, l'élément {{HTMLElement("canvas")}} était rendu au lieu d'afficher le contenu de secours selon la [spécification <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/canvas.html). Désormais, c'est le contenu de secours qui est rendu.
 - L'attribut `crossorigin` est à présent supporté par {{HTMLElement("video")}}.
 
 ### CSS
 
-- Le support de la propriété {{cssxref("text-align-last")}} a été ajouté (prefixée).
+- Le support de la propriété {{CSSxRef("text-align-last")}} a été ajouté (préfixée).
 
 ### JavaScript
 
-- Le support des [variables sharp](/fr/docs/JavaScript/Sharp_variables_in_JavaScript) (extension non-standard de Netscape) a été abandonné.
+- Le support des variables sharp (extension non-standard de Netscape) a été abandonné.
+- {{JSxRef("ArrayBuffer.prototype.slice()")}} a été implémenté.
 
 ### DOM
 
-- {{domxref("DOMParser")}} supporte désormais l'analyse de fragments de documents HTML.
-- {{domxref("XMLHttpRequest")}} supporte désormais des délais d'attente en utilisant la propriété `timeout` et l'évènement "timeout", ainsi que le gestionnaire d'évènements `ontimeout` de l'interface {{domxref("XMLHttpRequestEventTarget")}}.
-- {{domxref("XMLHttpRequest")}} peut désormais se charger à partir des [URIs `data:`](/fr/docs/Web/URI/Reference/Schemes/data).
-- Lors du téléchargement de grandes quantités de données, les gestionnaires d'événements {{domxref("XMLHttpRequest")}} de progression sont désormais appelés régulièrement avec l'ensemble `responseType` vers "moz-blob" et la réponse étant un {{domxref("Blob")}} contenant toutes les données reçues jusqu'ici. Cela permet aux gestionnaires de progression de commencer le traitement des données sans avoir à tout attendre.
-- Gecko supporte désormais le [multi-touch](/fr/docs/Web/API/Touch_events) (au lieu d'une touche à la fois) sur Android.
-- Lorsque vous éditez du texte à l'aide d'un IME, l'événement `input` est à présent envoyé chaque fois que le contenu de l'élément en cours d'édition a été changé, ce qui se passe après l'événement `compositionupdate` est envoyé pour indiquer que le texte de l'IME a été modifié. Vous pouvez donc utiliser le gestionnaire d'événements `input`, pour suivre l'évolution du contenu réel de l'élément.
-- {{domxref("DOMError")}} a été implémenté selon la spécification DOM 4.
-- La méthode {{domxref("Document.createNodeIterator()")}} a été mise à jour suivant la spécification DOM4. Cela rend les paramètres `whatToShow` et `filter` facultatifs et supprime le quatrième paramètre non-standard, `entityReferenceExpansion`.
-- La méthode `slice()` de l'interface {{domxref("Blob")}} a été touché par un bug qui l'empêchait d'accepter correctement le début et la fin des valeurs hors de la portée d'un entier de 64 bits signé, cela a été corrigé.
-- La méthode {{domxref("element.getBoundingClientRect()")}} considère désormais l'effet des [transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) lors du calcul des délimitations du rectangle de l'élément.
-- La propriété `crossOrigin` est à présent supportée par {{domxref("HTMLMediaElement")}}.
+- {{DOMxRef("DOMParser")}} supporte désormais l'analyse de fragments de documents HTML.
+- {{DOMxRef("XMLHttpRequest")}} supporte désormais des délais d'attente en utilisant la propriété `timeout` et l'évènement «&nbsp;de délais dépassé&nbsp;», ainsi que le gestionnaire d'évènements `ontimeout` de l'interface {{DOMxRef("XMLHttpRequestEventTarget")}}.
+- {{DOMxRef("XMLHttpRequest")}} peut désormais se charger à partir des [URIs `data:`](/fr/docs/Web/URI/Reference/Schemes/data).
+- Lors du téléchargement de grandes quantités de données, les gestionnaires d'évènements {{DOMxRef("XMLHttpRequest")}} de progression sont désormais appelés régulièrement avec l'ensemble `responseType` vers "moz-blob" et la réponse étant un {{DOMxRef("Blob")}} contenant toutes les données reçues jusqu'ici. Cela permet aux gestionnaires de progression de commencer le traitement des données sans avoir à tout attendre.
+- Gecko supporte désormais [l'appui multiple](/fr/docs/Web/API/Touch_events) (au lieu d'une touche à la fois) sur Android.
+- Lorsque vous éditez du texte à l'aide d'un IME, l'évènement `input` est à présent envoyé chaque fois que le contenu de l'élément en cours d'édition a été changé, ce qui se passe après l'évènement `compositionupdate` est envoyé pour indiquer que le texte de l'IME a été modifié. Vous pouvez donc utiliser le gestionnaire d'évènements `input`, pour suivre l'évolution du contenu réel de l'élément.
+- {{DOMxRef("DOMError")}} a été implémenté selon la spécification DOM 4.
+- La méthode {{DOMxRef("Document.createNodeIterator()")}} a été mise à jour suivant la spécification DOM4. Cela rend les paramètres `whatToShow` et `filter` facultatifs et supprime le quatrième paramètre non-standard, `entityReferenceExpansion`.
+- La méthode `slice()` de l'interface {{DOMxRef("Blob")}} a été touché par un bogue qui l'empêchait d'accepter correctement le début et la fin des valeurs hors de la portée d'un entier de 64 bits signé, cela a été corrigé.
+- La méthode {{DOMxRef("Element.getBoundingClientRect()")}} considère désormais l'effet des [transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using) lors du calcul des délimitations du rectangle de l'élément.
+- La propriété `crossOrigin` est à présent supportée par {{DOMxRef("HTMLMediaElement")}}.
 
-#### Nouvelles WebAPIs
+#### Nouvelles API Web
 
-- API Information Réseau : Ajout du support expérimental de {{domxref("window.navigator.connection")}} (prefixé).
-- API WebTelephony : {{domxref("window.navigator.mozTelephony")}} a été implémenté et fournit un support pour composer, répondre, et gérer les appels téléphoniques sur un appareil.
-- API WebSMS : {{domxref("window.navigator.mozSms")}} est à présent disponible pour les appareils mobiles pour envoyer des SMS.
-- API Screen brightness : {{domxref("window.screen.mozEnabled")}} et {{domxref("window.screen.mozBrightness")}} ont été ajoutés pour contrôler l'écran de l'appareil.
+- L'API Information Réseau&nbsp;: Ajout de la prise en charge expérimentale de {{DOMxRef("Navigator.connection", "window.navigator.connection")}} (préfixé).
+- L'API WebTelephony&nbsp;: `window.navigator.mozTelephony` a été implémenté et fournit un support pour composer, répondre, et gérer les appels téléphoniques sur un appareil.
+- L'API WebSMS&nbsp;: `window.navigator.mozSms` est à présent disponible pour les appareils mobiles pour envoyer des SMS.
+- L'API Screen brightness&nbsp;: `window.screen.mozEnabled` et `window.screen.mozBrightness` ont été ajoutés pour contrôler l'écran de l'appareil.
 
 ### SVG
 
-- Firefox implémente désormais l'API DOM {{domxref("SVGTests")}}, voir [bug Firefox 607854](https://bugzil.la/607854)
-- L'interface DOM {{domxref("SVGStringList")}} supporte la propriété non-standard `length`, voir [bug Firefox 711958](https://bugzil.la/711958)
+- Firefox implémente désormais l'API DOM `SVGTests`, voir [bogue Firefox 607854 <sup>(angl.)</sup>](https://bugzil.la/607854)
+- L'interface DOM {{DOMxRef("SVGStringList")}} supporte la propriété non standard `length`, voir [bogue Firefox 711958 <sup>(angl.)</sup>](https://bugzil.la/711958)
 
 ### MathML
 
-- Pour contrôler la directionnalité des formules de MathML, l'attribut `dir` est désormais supporté par les éléments {{MathMLElement("math")}}, {{MathMLElement("mrow")}} et {{MathMLElement("mstyle")}} ainsi que par les [éléments MathML Token](/fr/docs/Web/MathML/Reference/Element#éléments_textuels). C'est particulièrement important pour certaines [notations mathématiques Arabes](https://www.w3.org/TR/arabic-math/).
-- L'attribut d'alignement `align` definit dans MathML3 a été implementé pour {{MathMLElement("munder")}}, {{MathMLElement("mover")}} et {{MathMLElement("munderover")}}.
+- Pour contrôler la direction des formules de MathML, l'attribut `dir` est désormais supporté par les éléments {{MathMLElement("math")}}, {{MathMLElement("mrow")}} et {{MathMLElement("mstyle")}} ainsi que par les [éléments MathML Token](/fr/docs/Web/MathML/Reference/Element#éléments_textuels). C'est particulièrement important pour certaines [notations mathématiques Arabes <sup>(angl.)</sup>](https://www.w3.org/TR/arabic-math/).
+- L'attribut d'alignement `align` définit dans MathML3 a été implémenté pour {{MathMLElement("munder")}}, {{MathMLElement("mover")}} et {{MathMLElement("munderover")}}.
 
 ### Réseau
 
@@ -58,25 +62,25 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 
 ### Outils de développement
 
-- La [console Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) met à présent en cache les message d'erreurs et les entrées du journal ajoutés grâce à {{domxref("console.log()")}} si la console n'est pas ouverte actuellement, et les affichent lorsque qu'elle s'ouvre.
-- Vous pouvez désormais réinitialiser le niveau de zoom, panoramique et de rotation dans la [vue 3D](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) en appuyant sur la touche "r".
-- Vous pouvez désormais masquer les nœuds dans la [vue 3D](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) en appuyant sur la touche "x" après les avoir sélectionnés.
-- L'[éditeur de source](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#Source_editor) a plusieurs nouvelles fonctionnalités d'édition et de raccourcis clavier, voir [Utilisation de l'éditeur de source](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#Source_editor) pour plus de détails
+- La [console Web <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) met à présent en cache les message d'erreurs et les entrées du journal ajoutés grâce à {{domxref("console.log()")}} si la console n'est pas ouverte actuellement, et les affichent lorsque qu'elle s'ouvre.
+- Vous pouvez désormais réinitialiser le niveau de zoom, panoramique et de rotation dans la [vue 3D <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) en appuyant sur la touche "r".
+- Vous pouvez désormais masquer les nœuds dans la [vue 3D <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) en appuyant sur la touche "x" après les avoir sélectionnés.
+- L'[éditeur de source <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#Source_editor) a plusieurs nouvelles fonctionnalités d'édition et de raccourcis clavier, voir [Utilisation de l'éditeur de source <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#Source_editor) pour plus de détails
 
-Mozilla travaille sur l'intégration des ses propres outils de développement Web qui complètent l'add-on populaire [Firebug](https://getfirebug.com/). Vous pouvez obtenir plus d'informations sur ces outils et également voir une liste de ressources externes à Firefox qui vous aideront dans le développement Web. La liste se trouve dans les [outils de développement Web](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
+Mozilla travaille sur l'intégration des ses propres outils de développement Web qui complètent l'add-on populaire [Firebug <sup>(angl.)</sup>](https://getfirebug.com/). Vous pouvez obtenir plus d'informations sur ces outils et également voir une liste de ressources externes à Firefox qui vous aident dans le développement Web. La liste se trouve dans les [outils de développement Web <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
 
 ### Changements divers
 
 - Le jeu de caractères GEOSTD8, qui n'a jamais été entièrement supporté, n'est plus du tout pris en charge.
 
-## Changements pour les développeurs de Mozilla et de modules complémentaires
+## Changements pour les développeur·euse·s de Mozilla et de modules complémentaires
 
 ### Modules de code JavaScript
 
 #### source-editor.jsm
 
-- La méthode [`resetUndo()`](/fr/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29) a été ajoutée, elle vous permet d'effacer la pile d'annulation.
-- L'éditeur de source offre à présent des méthodes pour apporter des capacités de recherche : [`find()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#find()>), [`findNext()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#findNext()>), and [`findPrevious()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#findPrevious()>).
+- La méthode `resetUndo()` a été ajoutée, elle vous permet d'effacer la pile d'annulation.
+- L'éditeur de source offre à présent des méthodes pour apporter des capacités de recherche&nbsp;: `find()`, `findNext()` et `findPrevious()`.
 
 ### XUL
 
@@ -84,12 +88,12 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 ### XPCOM
 
-- [Les proxys `nsISupports`](/fr/docs/nsISupports_proxies) ne sont plus supportés. A la place, vous devez utiliser des exécutables ; voir [Faire des appels inter-thread exécutables](/fr/docs/XPCOM/Making_cross-thread_calls_using_runnables).
-- Firefox 11 a changé le comportement de [`Components.utils.getWeakReference()`](/fr/docs/Components.utils.getWeakReference) pour générer une exception lorsque la référence de l'objet est nulle, l'ancien comportement qui était silencieux a été rétabli.
+- Les mandataires `nsISupports` ne sont plus pris en charge. A la place, vous devez utiliser des exécutables.
+- Firefox 11 a changé le comportement de `Components.utils.getWeakReference()` pour générer une exception lorsque la référence de l'objet est nulle, l'ancien comportement qui était silencieux a été rétabli.
 
 ### XPConnect
 
-- Le type de données [`PRUint64`](/fr/docs/PRUint64) été mal utilisé puisqu'il est sensiblement identique à [`PRint64`](/fr/docs/PRInt64) lorsqu'il est utilisé avec XPConnect. Cela a été corrigé.
+- Le type de données `PRUint64` été mal utilisé puisqu'il est sensiblement identique à `PRint64` lorsqu'il est utilisé avec XPConnect. Cela a été corrigé.
 
 ### Changements dans les interfaces
 
@@ -97,10 +101,10 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 - L'interface `nsIScriptError2` a été intégré dans `nsIScriptError`.
 - `nsIDownloadManager.addDownload()` est à présent géré de manière asynchrone plutôt que de façon synchrone.
 - La méthode `imgIContainerObserver.frameChanged()` reçoit désormais le premier paramètre d'un objet `imgIRequest` qui identifie la demande correspondante.
-- La méthode `nsIDOMWindowUtils.sendTouchEvent()` a été ajoutée pour permettre de synthétiser les événements tactiles.
-- Vous pouvez désormais faire défiler le contenu spécifié verticalement au centre de la vue en spécifiant `SCROLL_CENTER_VERTICALLY` lors de l'appel de la constante de défilement `nsISelectionController.scrollSelectionIntoView()`.
-- Le nouvel attribut `nsIMemoryMultiReporter.explicitNonHeap` a été ajouté ; C'est un moyen plus efficace d'obtenir la somme de toutes les mesures du multi-rapporteur qui mesure ceux qui ont un chemin commençant par "explicit" **et** qui sont de type `KIND_NONHEAP`.
-- L'attribut `nsIDOMWindowUtils.paintingSuppressed` a été ajouté ; cette valeur booléenne indique si oui ou non la toile est en train d'être supprimée de la fenêtre. C'est utilisé sur mobile pour éviter le rendu sautillant qui se produit lorsque les tentatives pour dessiner la page commencent avant que le contenu disponible soit insuffisant pour le faire.
+- La méthode `nsIDOMWindowUtils.sendTouchEvent()` a été ajoutée pour permettre de synthétiser les évènements tactiles.
+- Vous pouvez désormais faire défiler le contenu défini verticalement au centre de la vue en définissant `SCROLL_CENTER_VERTICALLY` lors de l'appel de la constante de défilement `nsISelectionController.scrollSelectionIntoView()`.
+- Le nouvel attribut `nsIMemoryMultiReporter.explicitNonHeap` a été ajouté&nbsp;; C'est un moyen plus efficace d'obtenir la somme de toutes les mesures du multi-rapporteur qui mesure ceux qui ont un chemin commençant par `"explicit"` **et** qui sont de type `KIND_NONHEAP`.
+- L'attribut `nsIDOMWindowUtils.paintingSuppressed` a été ajouté&nbsp;; cette valeur booléenne indique si oui ou non la toile est en train d'être supprimée de la fenêtre. C'est utilisé sur mobile pour éviter le rendu sautillant qui se produit lorsque les tentatives pour dessiner la page commencent avant que le contenu disponible soit insuffisant pour le faire.
 - Les interfaces `nsIDocCharset` et `nsIDocumentCharsetInfo` ont été intégrées dans `nsIDocShell`. Dans le cadre de ce travail, le vieil attribut `forcedDetector` a été enlevé, il n'a jamais rien fait.
 
 ### SpiderMonkey
@@ -114,8 +118,4 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 ### Autres changements
 
-- Le composant d'édition (appelé [Midas](/fr/docs/Midas)) [n'accepte désormais que les évènements](/fr/docs/Using_the_Editor_from_XUL#Editor_event_handling) provenant du code privilégié.
-
-## Voir aussi
-
-{{Firefox_for_developers('11')}}
+- Le composant d'édition (appelé Midas) n'accepte désormais que les évènements provenant du code privilégié.

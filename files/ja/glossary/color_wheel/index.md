@@ -9,7 +9,7 @@ l10n:
 
 **色相環** (color wheel) は、色のパレットを図の形で、円の中に配置して表したものです。色相環は、原点（円の中心）からの角度と距離の 2 つの極座標によって識別される色を表示することができます。
 
-色相環は [`hsl()`](/ja/docs/Web/CSS/color_value/hsl), [`hwb()`](/ja/docs/Web/CSS/color_value/hwb), [`lch()`](/ja/docs/Web/CSS/color_value/lch) のように極座標や円柱座標で表現された色を比較するのに便利です。
+色相環は [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb), [`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch) のように極座標や円柱座標で表現された色を比較するのに便利です。
 
 このような場合、「補色」はたいてい同じ直径上の反対側にあります。同様に、「単色」 - 同じ「色調」あるが、「濃淡」が異なる色 - も同じ半径上にありますし、「三元色」 - 色相環の周囲に等間隔に配置された 3 つの色で、互いにうまく作用する色 - も見つけやすいです。
 
@@ -22,7 +22,7 @@ l10n:
 ## 関連情報
 
 - {{glossary("color_space", "色空間")}}
-- [`<color>`](/ja/docs/Web/CSS/color_value)（CSS 色の型）
+- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value)（CSS 色の型）
 - [Color theory and the color wheel](https://www.canva.com/colors/color-wheel/)
 - [How to Use the Color Wheel to Pick Your Perfect Color Palette](https://www.bhg.com/decorating/color/basics/color-wheel-color-chart/) (Better Homes & Gardens)
 - [色相環](https://ja.wikipedia.org/wiki/色相#色相環)（ウィキペディア）

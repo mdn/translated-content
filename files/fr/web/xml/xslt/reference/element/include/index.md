@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/include
 original_slug: Web/XSLT/Element/include
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 L'élément `<xsl:include>` fusionne les contenus de deux feuilles de styles. Contrairement à l'élément [\<xsl:import>](/fr/XSLT/import), les contenus des deux feuilles de styles fusionnées ont la même priorité.
 

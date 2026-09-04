@@ -1,73 +1,316 @@
-# Bienvenido a la localización de MDN en español
+# Localización de MDN en español
 
-Puedes comenzar en la siguiente [guía de contribución][]
+Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al español.
 
-## Pasos para configurar el entorno local
+> Antes de empezar, lee la [guía oficial de contribución][guia-contribucion].
 
-> Puedes ver: <https://youtu.be/pFeW0vUYbkg>
+## Tabla de contenido
 
-## Pasos para abrir un Pull Request
+- [¿Por dónde empezar?](#por-dónde-empezar)
+- [Tipos de contribución que preferimos](#tipos-de-contribución-que-preferimos)
+- [Abrir un Pull Request](#abrir-un-pull-request)
+  - [Opción A: Desde GitHub (sin instalar nada)](#opción-a-desde-github-sin-instalar-nada)
+  - [Opción B: Desde tu computadora (recomendada para cambios grandes)](#opción-b-desde-tu-computadora-recomendada-para-cambios-grandes)
+- [Traducir un documento](#traducir-un-documento)
+- [Imágenes y otros archivos](#imágenes-y-otros-archivos)
+- [Mantener el `l10n.sourceCommit` al día](#mantener-el-l10nsourcecommit-al-día)
+- [Convención de traducciones](#convención-de-traducciones)
+  - [Estilo de escritura](#estilo-de-escritura)
+- [Arreglar "flaws" (defectos)](#arreglar-flaws-defectos)
+- [Charla con nosotros](#charla-con-nosotros)
+- [Enlaces relevantes](#enlaces-relevantes)
 
-### Desde tu computadora
+---
 
-> Crear rama, hacer commit, crear pull request, esperar revisiones.
->
-> - Acceder a GitHub: <https://github.com/login/>
-> - Ir a <https://github.com/mdn/translated-content>
-> - ![Screenshot 2022-03-01 at 17-13-20 mdn translated-content All translated MDN content in raw form](https://user-images.githubusercontent.com/13079269/156264660-afcba14a-14a0-4c66-9a33-c1e2ad41737b.png) hacer Fork al repositorio en nuestra cuenta de GitHub.
-> - Clonar el repositorio de nuestra cuenta de GitHub `git clone git@github.com:TU_USUARIO/translated-content.git`
-> - `cd translated-content` #Entrar al directorio
-> - `git switch -c patch-error-on-123-issue` #Crear rama para trabajar
-> - Hacer nuestros cambios
-> - `git add files/es/archivo.md` #Agregamos los archivos modificados
-> - `git rm files/es/archivo.html` #Removemos los archivos eliminados (si los hubiera)
-> - `git commit -m "Corregido el error 123 [es]"` #Hacemos commit con una descripción de lo realizado y agregamos `[es]`
-> - `git push -u origin patch-error-on-123-issue` #Subimos nuestra rama a nuestro repositorio
-> - Ir a nuestro repositorio <https://github.com/TU_USUARIO/translated-content> y solicitar el Pull Request
+## ¿Por dónde empezar?
 
-A continuación puedes ver un ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
+Si no sabes por dónde comenzar, revisa los [issues con la etiqueta `l10n-es`](https://github.com/mdn/translated-content/issues?q=is%3Aissue+is%3Aopen+label%3Al10n-es). Allí publicamos documentos que necesitan traducción nueva, actualización o revisión. Comenta en el issue que te interese para evitar duplicar esfuerzos.
 
-## Pasos para traducir un documento
+---
 
-Ejemplificaremos el proceso a realizar cuando se desea traducir el contenido de una página.
-Ejemplo:
+## Tipos de contribución que preferimos
 
-Digamos que desea traducir el contenido de la página que se observa en esta dirección.
-![image](https://user-images.githubusercontent.com/7331511/152851642-5dea4df9-f771-4323-bc13-b238dec511ef.png)
+No todas las contribuciones aportan el mismo valor al lector. Estas son nuestras preferencias para que planifiques tu PR:
 
-1. Buscar la [versión original (en inglés)](https://github.com/mdn/content/tree/main/files/en-us) del documento que desea traducir.
-   Debería buscar en el repositorio [en inglés (mdn/content)](https://github.com/mdn/content) el archivo correspondiente al documento, en este caso la dirección sería [`files/en-us/web/javascript/reference/global_objects/array/index.md`](https://github.com/mdn/content/blob/main/files/en-us/web/javascript/reference/global_objects/array/index.md)
+### 🥇 Preferido: actualización completa de un documento
 
-2. Buscar la [versión en español](https://github.com/mdn/translated-content/blob/main/files/es/) del [documento](https://github.com/mdn/translated-content/blob/main/files/es/web/javascript/reference/global_objects/array/index.html) que desea traducir. En este caso la dirección seria [`files/es/web/javascript/reference/global_objects/array/index.{html|md}`](https://github.com/mdn/translated-content/blob/main/files/es/web/javascript/reference/global_objects/array/index.html)
+Un PR que traduce o actualiza una página entera para que coincida con la fuente en inglés más reciente (incluido el [`l10n.sourceCommit`](#mantener-el-l10nsourcecommit-al-día)). Este tipo de cambios cierra issues como los listados en [`l10n-es`](https://github.com/mdn/translated-content/issues?q=is%3Aissue+is%3Aopen+label%3Al10n-es) y reduce la deuda de traducción.
 
-   > NOTA:
-   >
-   > - Si el archivo no existe, deberá crearlo en formato `Markdown` imitando la ruta que tiene la versión en inglés.
-   > - Es posible que el archivo en la versión en español se encuentre en formato `HTML`, en cuyo caso tendrá que reemplazarlo por el formato `Markdown`.
+### ✅ También bienvenido: correcciones pequeñas
 
-3. Utilizar el texto y formato en inglés como guía para traducir al español.
+Arreglar acentos, tildes, erratas o una frase mal traducida es una excelente puerta de entrada para quien está conociendo el proyecto. Estos PRs se aceptan y se revisan con el mismo cuidado.
 
-## Arreglar "flaws" (defectos)
+Si es tu primera contribución, siéntete libre de empezar con un cambio pequeño: nos importa más que te integres a la comunidad que el tamaño del PR. Eso sí, procura no abrir varios PRs minúsculos sobre el mismo archivo en días consecutivos; si detectas varios problemas en una misma página, agrúpalos en un único PR.
 
-Al usar `yarn start` en localhost para el repositorio `mdn/content`, es posible ver una previsualización en tu servidor local de los cambios que has hecho y como lucirán. Esto también es posible creando un PR, el bot se encargará de generar una "preview URL" donde puedes observar el mismo resultado. En ambas pantallas, podrás, en la parte superior del documento, mostrar los "flaws" que el motor indique, y que contendrá aquellos defectos detectados de manera automática para ser corregidos, y, en algunos casos, la corrección disponible con un clic, o una sugerencia.
+---
 
-## Convención en traducciones
+## Abrir un Pull Request
 
-La comunidad de español sugiere utilizar las siguientes convenciones al traducir el contenido.
+Tienes dos maneras de contribuir. Elige la que te sea más cómoda.
 
-| Término original                | Traducción                     |
-| ------------------------------- | ------------------------------ |
-| Event listener                  | Detector de eventos            |
-| Event handler                   | Manejador de eventos           |
-| See also                        | Véase también                  |
-| Specifications                  | Especificaciones               |
-| Browser compatibility           | Compatibilidad con navegadores |
-| HTML Content o HTML             | HTML                           |
-| JavaScript Content o JavaScript | JavaScript                     |
-| Warning                         | Advertencia                    |
-| Framework                       | Framework                      |
+### Opción A: Desde GitHub (sin instalar nada)
 
-### Formatos especiales
+Ideal para erratas, traducciones cortas o cambios en un solo archivo. Todo el flujo vive en el navegador, no necesitas clonar el repositorio.
+
+1. Entra al archivo que quieres modificar dentro de [`files/es/`](https://github.com/mdn/translated-content/tree/main/files/es).
+2. Pulsa el ícono de lápiz (**Edit this file**) en la parte superior derecha. GitHub te ofrecerá crear un _fork_ automáticamente, acepta.
+3. Edita el contenido directamente en el navegador.
+4. Al terminar, en la parte inferior rellena el mensaje de commit (añade el sufijo `[es]`) y pulsa **Propose changes**.
+5. GitHub abrirá la pantalla de **Compare & pull request**. Completa el título/descripción y envía el PR hacia `mdn/translated-content:main`.
+
+### Opción B: Desde tu computadora (recomendada para cambios grandes)
+
+Necesaria si vas a traducir páginas extensas, actualizar varios archivos o ejecutar los linters localmente.
+
+> Tutorial en video: <https://youtu.be/pFeW0vUYbkg>
+
+#### Requisitos
+
+- **Node.js** >= 24 (ver [`.nvmrc`](https://github.com/mdn/translated-content/blob/main/.nvmrc) y [`.tool-versions`](https://github.com/mdn/translated-content/blob/main/.tool-versions)).
+- **npm** (la versión exacta se define en el campo `packageManager` de [`package.json`](https://github.com/mdn/translated-content/blob/main/package.json); `npm install` la respeta automáticamente con `corepack` habilitado).
+- Recomendamos un gestor de versiones de Node: [mise](https://mise.jdx.dev/), [fnm](https://github.com/Schniz/fnm) o [nvm](https://github.com/nvm-sh/nvm). Cualquiera de ellos leerá `.nvmrc` o `.tool-versions` automáticamente.
+
+No necesitas levantar un servidor local para traducir: el bot genera una URL de previsualización en cada PR. `npm install` sólo hace falta si quieres correr los linters (`npm run lint:md`, `npm run fix:md`) antes de enviar el cambio.
+
+#### Pasos
+
+1. Haz _fork_ de <https://github.com/mdn/translated-content> a tu cuenta de GitHub.
+2. Clona tu _fork_:
+
+   ```bash
+   git clone git@github.com:TU_USUARIO/translated-content.git
+   cd translated-content
+   ```
+
+   > ⏳ El repositorio es grande (varios GB de historia). El primer `clone` puede tardar varios minutos dependiendo de tu conexión. Ten paciencia, sólo hay que hacerlo una vez.
+
+3. Crea una rama descriptiva:
+
+   ```bash
+   git switch -c fix-issue-123
+   ```
+
+4. Realiza los cambios necesarios.
+5. Agrega y confirma los archivos:
+
+   ```bash
+   git add files/es/ruta/al/archivo.md
+   git rm  files/es/archivo-obsoleto.html   # si corresponde
+   git commit -m "Corrige error 123 [es]"
+   ```
+
+   > El sufijo `[es]` en el mensaje ayuda a identificar PRs en español.
+
+6. Publica la rama y abre el Pull Request:
+
+   ```bash
+   git push -u origin fix-issue-123
+   ```
+
+7. Abre <https://github.com/TU_USUARIO/translated-content> y crea el PR hacia `mdn/translated-content:main`.
+
+Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
+
+---
+
+## Traducir un documento
+
+1. Ubica la versión en inglés dentro de [`mdn/content/files/en-us/`](https://github.com/mdn/content/tree/main/files/en-us).
+   Ejemplo: [`files/en-us/web/javascript/reference/global_objects/array/index.md`](https://github.com/mdn/content/blob/main/files/en-us/web/javascript/reference/global_objects/array/index.md).
+
+2. Busca la versión en español en [`mdn/translated-content/files/es/`](https://github.com/mdn/translated-content/tree/main/files/es).
+   - Si **no existe**, créalo en formato Markdown respetando la misma ruta del original.
+   - Si el archivo existe en formato `HTML`, conviértelo a Markdown.
+
+3. Traduce manteniendo intacto lo siguiente:
+   - Identificadores del código (APIs, propiedades, métodos, variables, funciones).
+     - Los nombres propios de APIs conservan su forma en inglés: no se traducen **ni se reordenan**.
+       Escribe `Canvas API`, `WebVR API`, `WebXR Device API`, no «API Canvas» ni «API WebXR Device».
+       El artículo en español va delante del nombre completo: «la Canvas API quedó obsoleta».
+   - Macros de Kumascript como `{{domxref(...)}}`, `{{jsxref(...)}}`, `{{Glossary(...)}}`.
+   - Bloques de código: sólo traduce comentarios y cadenas dirigidas al usuario final.
+   - Enlaces externos (GitHub, web.dev, etc.).
+
+4. Cambia los enlaces internos de `/en-US/` a `/es/`.
+
+   **¿Por qué `/es/` aunque la página no exista en español?**
+   Por coherencia de idioma del proyecto, no por un respaldo automático: si `files/es/…/index.md` no existe, la URL `/es/docs/…` devuelve `404`. MDN no sirve el artículo completo en inglés como sustituto de una página en español inexistente, y tampoco rellena con inglés las secciones que falten dentro de una página ya traducida: el texto en inglés que se ve en una traducción parcial está escrito en el propio archivo de `files/es/`. Aun así, el enlace **debe** escribirse en `/es/`: es la convención del proyecto, y así queda correcto automáticamente en cuanto la página destino se traduzca.
+
+   Por eso la regla general es: **usa siempre `/es/` en los enlaces internos absolutos de MDN**, sin excepción. No conserves `/en-US/` "para que funcione": un enlace en `/en-US/` saca al lector del contexto de su idioma preferido, incluso si la traducción sí existe.
+
+   **Anclas (`#fragmento`): deben coincidir con un encabezado real de la página destino en español**
+
+   Cuando un enlace incluye un fragmento (`#`), la ancla debe coincidir con el ID de un encabezado que exista **en la página en español** (asumiendo que la página ya está traducida; si no lo está, aplica la regla anterior del error 404). Un fragmento que no coincide con ningún ID no rompe el enlace (el navegador simplemente lo ignora y carga la página desde el inicio), pero deja al lector en la parte superior en lugar de la sección esperada.
+
+   | Caso                                | Qué hacer con la ancla                                                            |
+   | ----------------------------------- | --------------------------------------------------------------------------------- |
+   | La página destino está traducida    | Usa el ID del encabezado **traducido**: `#compatibilidad_con_navegadores`         |
+   | La página destino no está traducida | Quita el fragmento y deja solo el enlace a la página; agrégalo cuando se traduzca |
+   | Enlace dentro de la misma página    | Usa el ID del encabezado traducido de este archivo                                |
+
+   **Ejemplo del problema frecuente:** dado el enlace en inglés `/en-US/docs/Web/API/Fetch_API#browser_compatibility`, al traducir, cambiar solo el prefijo (`/es/docs/Web/API/Fetch_API#browser_compatibility`) deja una ancla en inglés que no existe en la página en español, donde ese encabezado se renderiza como `#compatibilidad_con_navegadores`. En sentido contrario, copiar una ancla ya traducida hacia una página que aún no tiene traducción al español tampoco funciona.
+
+   La solución es verificar antes de escribir la ancla:
+   - ¿Existe `files/es/…/Fetch_API/index.md` con ese encabezado ya traducido? → usa la ancla en español.
+   - ¿No existe la página en español? → deja solo `/es/docs/Web/API/Fetch_API`, sin fragmento.
+   - ¿Existe la página pero esa sección puntual aún no está traducida? → usa el ID tal como aparece renderizado actualmente en la página en español (puede seguir en inglés).
+
+   Para los **enlaces dentro de la misma página** (`[ver más](#cómo_funciona)`), la ancla debe coincidir con el ID generado por el encabezado traducido. Si tradujiste `## How it works` como `## Cómo funciona`, el enlace debe ser `#cómo_funciona`.
+
+   **Cómo verificar el ID real de un encabezado:** la forma exacta en que un encabezado se convierte en ID (si conserva tildes, mayúsculas, guiones bajos, etc.) depende de la versión actual del motor de _build_ (Rari), así que no conviene deducirlo a mano. Para confirmarlo, levanta el sitio localmente:
+
+   ```bash
+   # Desde tu clon de mdn/content, con CONTENT_TRANSLATED_ROOT apuntando a translated-content
+   cd /ruta/a/content
+   npm start
+   ```
+
+   Abre la página en `http://localhost:5042/es/docs/...`, inspecciona el encabezado con las herramientas de desarrollo del navegador y copia el `id` real generado por el _build_. Ese es el único valor confiable; no lo derives manualmente del texto del encabezado.
+
+5. Revisa el _front-matter_ YAML (`title`, `slug`, `l10n.sourceCommit`) como se describe en la siguiente sección.
+
+---
+
+## Imágenes y otros archivos
+
+**Regla corta: no copies a `files/es/` las imágenes que ya existen en `mdn/content`.**
+
+Cuando una página en español referencia una imagen que sólo existe en la carpeta en inglés, el _build_ resuelve automáticamente el `src` hacia la ruta de `en-US`. Basta con conservar en el Markdown la misma referencia relativa que usa el original:
+
+```md
+![Descripción de la imagen traducida al español](default-vite.png)
+```
+
+Y el HTML publicado en la página en español queda así:
+
+```html
+<img
+  src="/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started/default-vite.png"
+  alt="Descripción de la imagen traducida al español" />
+```
+
+Es decir: **traduce el texto del `alt`, pero no subas el archivo binario.**
+
+### ¿Por qué no duplicarlas?
+
+- **Tamaño del repositorio.** Git no puede calcular diferencias (_diff_) sobre un `.png` o un `.jpg`: cada commit que toque el archivo suma su peso completo al historial, para siempre.
+- **Desincronización silenciosa.** Si la imagen en inglés se actualiza o se renombra, la copia en español queda obsoleta sin que nada falle en CI. Es un problema real: la versión anterior de [Primeros pasos en React][react-getting-started] seguía mostrando una captura de `create-react-app` mucho después de que el original en inglés cambiara a Vite.
+- **No aporta nada.** Una copia idéntica byte por byte se renderiza exactamente igual que la referencia al original.
+
+De hecho, en todo `files/es/` hay apenas un puñado de imágenes, y casi todas son capturas propias que no existen en inglés.
+
+### ¿Cuándo sí se agrega una imagen a `files/es/`?
+
+Sólo cuando el **contenido de la imagen** es específico del idioma, por ejemplo:
+
+- Una captura de pantalla de una interfaz en español (el navegador, un formulario, un panel de herramientas de desarrollo).
+- Un diagrama cuyas etiquetas están en inglés en el original y aportan al lector verlas en español.
+
+En ese caso, colócala en la misma carpeta del documento (`files/es/<ruta>/mi-imagen.png`), usa el mismo nombre de archivo que el original para que sea evidente qué está reemplazando, y comprímela antes de subirla:
+
+```bash
+# Desde tu clon de mdn/content
+npm run filecheck ../translated-content/files/es/<ruta>/mi-imagen.png --save-compression
+```
+
+### Cómo verificar cómo quedó resuelta una imagen
+
+Cualquier página de MDN expone su HTML ya renderizado en `index.json`, lo que permite comprobar el `src` final sin levantar el sitio:
+
+```bash
+curl -sL "https://developer.mozilla.org/es/docs/<Slug>/index.json" | grep -oE '<img[^>]{0,140}'
+```
+
+Si el resultado apunta a `/en-US/...`, el respaldo funcionó correctamente y no hace falta hacer nada más.
+
+> [!NOTE]
+> Antes de agregar una imagen nueva, revisa el repositorio [mdn/shared-assets](https://github.com/mdn/shared-assets): funciona como biblioteca de recursos compartidos y quizá ya exista algo que puedas reutilizar. Los detalles generales están en [Cómo agregar imágenes y medios][guia-imagenes].
+
+---
+
+## Mantener el `l10n.sourceCommit` al día
+
+Cada archivo traducido debe incluir un _front-matter_ YAML como este:
+
+```yaml
+---
+title: Título traducido
+slug: Ruta/Original/En/Ingles
+l10n:
+  sourceCommit: <SHA del commit en mdn/content>
+---
+```
+
+### Qué es `l10n.sourceCommit`
+
+Es el SHA del commit de `mdn/content` cuyo contenido en inglés refleja exactamente lo traducido. Sirve para detectar qué cambios en la fuente aún no se han trasladado al español.
+
+### Reglas del _front-matter_
+
+- Solo debe incluir: `title`, `short-title` (únicamente si está presente en el archivo en inglés), `slug` y `l10n.sourceCommit`.
+- **No** incluir `page-type`, `browser-compat`, `tags`, `sidebar` ni `original_slug`.
+- El `slug` debe ser idéntico al del archivo en inglés.
+
+### Cómo obtener el SHA correcto
+
+Usa el SHA del último commit que modificó el archivo en inglés:
+
+```bash
+# Dentro de tu clon actualizado de mdn/content, en la rama main
+git log -n 1 --format=%H -- files/en-us/ruta/al/archivo.md
+```
+
+O con la API de GitHub:
+
+```bash
+gh api "repos/mdn/content/commits?path=files/en-us/ruta/al/archivo.md&per_page=1" --jq '.[0].sha'
+```
+
+Copia el SHA completo (40 caracteres) y pégalo en el campo `sourceCommit`.
+
+### Cuándo actualizarlo
+
+- Al crear una traducción nueva, apunta al SHA más reciente de la página en inglés.
+- Al sincronizar con cambios posteriores del inglés, actualiza el SHA al del commit que acabas de incorporar.
+- Si no trasladaste todos los cambios, **conserva el SHA anterior** hasta completar la sincronización.
+
+---
+
+## Convención de traducciones
+
+La comunidad de español sugiere las siguientes convenciones.
+
+### Términos técnicos
+
+| Término en inglés     | Traducción al español          |
+| --------------------- | ------------------------------ |
+| Event listener        | Detector de eventos            |
+| Event handler         | Manejador de eventos           |
+| See also              | Véase también                  |
+| Specifications        | Especificaciones               |
+| Browser compatibility | Compatibilidad con navegadores |
+| Warning               | Advertencia                    |
+| Note                  | Nota                           |
+| Callout               | Observación                    |
+| Examples              | Ejemplos                       |
+| Syntax                | Sintaxis                       |
+| Parameters            | Parámetros                     |
+| Return value          | Valor de retorno               |
+| Exceptions            | Excepciones                    |
+| Instance properties   | Propiedades de instancia       |
+| Instance methods      | Métodos de instancia           |
+| Static properties     | Propiedades estáticas          |
+| Static methods        | Métodos estáticos              |
+| Events                | Eventos                        |
+| Value                 | Valor                          |
+| Event type            | Tipo de evento                 |
+| Description           | Descripción                    |
+| Constructor           | Constructor                    |
+| HTML                  | HTML (sin traducir)            |
+| JavaScript            | JavaScript (sin traducir)      |
+| Framework             | Framework (sin traducir)       |
+
+### Marcadores en línea
 
 | Inglés         | Español            |
 | -------------- | ------------------ |
@@ -75,51 +318,98 @@ La comunidad de español sugiere utilizar las siguientes convenciones al traduci
 | `**Warning:**` | `**Advertencia:**` |
 | `**Callout:**` | `**Observación:**` |
 
-## Formateo
+### Formato matemático
 
-| Expresión     | Como escribirlo |
+| Expresión     | Cómo escribirlo |
 | ------------- | --------------- |
-| 2<sup>5</sup> | 2^5             |
+| 2<sup>5</sup> | `2^5`           |
 
-Actualmente trabajando en: <https://github.com/mdn/translated-content/issues/8635>
+### Macros de glosario
+
+Cuando en inglés aparece `{{Glossary("TLD")}}` y el término natural en español no coincide, agrega el segundo argumento traducido:
+
+```text
+{{Glossary("TLD", "Dominio de primer nivel")}}
+```
+
+> Excepción: si la frase en español ya explica el término justo después del macro (por ejemplo, `{{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel`), deja el macro con un solo argumento para evitar duplicar el texto renderizado.
+
+### Estilo de escritura
+
+#### Tuteo (tú) en lugar de usted
+
+Usa la forma de **tú** (tuteo) cuando te dirijas directamente al lector. MDN español adoptó el tuteo como convención moderna: "abre el archivo", "asegúrate de incluir", "puedes omitir". Evita el ustedeo ("abra el archivo", "asegúrese de incluir").
+
+Esta convención adapta al español la [guía de estilo general de MDN](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#voice), que recomienda una redacción directa (voz activa) y cercana (tono conversacional). La fórmula estandarizada en español combina: **voz activa + tuteo (implícito) + modo imperativo**.
+
+**El imperativo hace innecesario el pronombre "tú".** Al conjugar en segunda persona, el sujeto queda implícito:
+
+- ❌ Redundante: "Tú haz clic aquí."
+- ✅ Imperativo natural: "Haz clic aquí."
+
+**Alterna con construcciones impersonales o pasivas para suavizar el tono.** Acumular órdenes seguidas puede sonar rígido; intercalar frases descriptivas mantiene la fluidez:
+
+- ❌ Demasiado imperativo: "Registra tu correo. Verifica tu contraseña."
+- ✅ Balance fluido: "Registra tu correo. Una vez que tu cuenta sea verificada, podrás ingresar."
+
+#### Bloques de aviso GFM (GitHub Flavored Markdown)
+
+Los bloques de aviso con sintaxis GFM deben conservar la palabra clave **en inglés**. Son: `[!NOTE]`, `[!WARNING]`, `[!CALLOUT]`. Rari/Yari solo los renderiza como cajas con estilo si están escritos exactamente así. Si los traduces (`[!Nota]`, `[!Advertencia]`), se muestran como una cita simple sin formato especial.
+
+```markdown
+<!-- Correcto -->
+
+> [!NOTE]
+> Este comportamiento cambió en Firefox 130.
+
+<!-- Incorrecto — se renderiza como blockquote sin estilos -->
+
+> [!Nota]
+> Este comportamiento cambió en Firefox 130.
+```
+
+El texto **dentro** del bloque sí debe ir en español.
+
+#### Nombres de macros (mayúsculas importan)
+
+Rari/Yari distingue mayúsculas en los nombres de macro. Usa exactamente la capitalización del archivo en inglés:
+
+- `{{Deprecated_Header}}`, no `{{deprecated_header}}`
+- `{{SeeCompatTable}}`, no `{{seecompattable}}`
+- `{{Non-standard_Header}}`, no `{{non-standard_header}}`
+
+---
+
+## Arreglar "flaws" (defectos)
+
+Al ejecutar `npm start` en tu clon de `mdn/content` puedes previsualizar localmente los cambios. La misma previsualización está disponible en la URL que genera el bot al abrir un PR. En ambas vistas, la parte superior del documento muestra los _flaws_ detectados automáticamente (enlaces rotos, macros mal usadas, etc.). Muchos se pueden corregir con un clic o aplicando una sugerencia.
+
+---
 
 ## Charla con nosotros
 
-Telegram: <https://t.me/+Dr6qKQCAepw4MjFj>
+- **Telegram:** <https://t.me/+Dr6qKQCAepw4MjFj>
+- **MDN Discord**, canal `#spanish`: <https://discord.gg/aZqEtMrbr7>
 
-Matrix: <https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org>
+---
 
-MDN Discord, canal #spanish: <https://discord.gg/aZqEtMrbr7>
+## Enlaces relevantes
 
 <details>
-  <summary><h2>Enlaces relevantes</h2></summary>
+  <summary>Despliega para ver recursos adicionales</summary>
 
-Documentación por prioridad.
-<https://developer.mozilla.org/en-US/docs/MDN/Contribute/Documentation_priorities>
-
-Proyecto `ES` en GitHub
-<https://github.com/mdn/translated-content/projects/7>
-
-Telegram link
-<https://t.me/+Dr6qKQCAepw4MjFj>
-
-Matrix link
-<https://chat.mozilla.org/#/room/!cIEBGoIHFpsXNeVUwp:mozilla.org>
-
-Grupo en community
-<https://community.mozilla.org/en/groups/mdn-localizacion-espanol/>
-
-Los `tags` no se usan para las traducciones de la documentación, borremoslo.
-<https://github.com/mdn/translated-content/pull/4058#discussion_r802298455>
-
-Tutorial para crear el ambiente de desarrollo para MDN
-<https://www.youtube.com/watch?v=pFeW0vUYbkg>
-
-Guía de markdown
-<https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN>
+- Documentación por prioridad: <https://developer.mozilla.org/en-US/docs/MDN/Contribute/Documentation_priorities>
+- Proyecto `ES` en GitHub: <https://github.com/mdn/translated-content/projects/7>
+- Grupo en Mozilla Community: <https://community.mozilla.org/en/groups/mdn-localizacion-espanol/>
+- Los `tags` no se usan en las traducciones ([contexto](https://github.com/mdn/translated-content/pull/4058#discussion_r802298455)).
+- Tutorial de configuración en video: <https://www.youtube.com/watch?v=pFeW0vUYbkg>
+- Guía de Markdown en MDN: <https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN>
+- Trabajo actual del equipo: <https://github.com/mdn/translated-content/issues/8635>
 
 </details>
 
-Más información [aqui](https://github.com/mdn/translated-content/discussions/4029)
+Más información en [la discusión general de la comunidad de español](https://github.com/mdn/translated-content/discussions/4029).
 
-[guía de contribución]: https://developer.mozilla.org/es/docs/MDN/Contribute
+[guia-contribucion]: https://developer.mozilla.org/es/docs/MDN/Contribute
+[guia-imagenes]: https://developer.mozilla.org/es/docs/MDN/Writing_guidelines/Howto/Images_media
+[react-getting-started]: https://developer.mozilla.org/es/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started

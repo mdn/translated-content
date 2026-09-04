@@ -1,19 +1,20 @@
 ---
-title: console.count()
+title: "console: count() 静的メソッド"
+short-title: count()
 slug: Web/API/console/count_static
+l10n:
+  sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
-**`console.count()`** メソッドは、 `count()` を実際に呼び出した回数を記録します。
-
-{{AvailableInWorkers}}
+**`console.count()`** 静的メソッドは、この特定の `count()` 呼び出しが呼び出された回数をログ出力します。
 
 ## 構文
 
-```js
-count();
-count(label);
+```js-nolint
+console.count()
+console.count(label)
 ```
 
 ### 引数
@@ -30,24 +31,20 @@ count(label);
 例えば、次のようなコードがあったとします。
 
 ```js
-let user = "";
-
-function greet() {
+function greet(user) {
   console.count();
   return `hi ${user}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
+greet("bob");
+greet("alice");
 greet();
 console.count();
 ```
 
 コンソールへの出力は、次のようになります。
 
-```
+```plain
 "default: 1"
 "default: 2"
 "default: 3"
@@ -59,24 +56,20 @@ console.count();
 変数 `user` を `label` 引数として、最初の `count()` の呼び出しには文字列 "bob" を、 2 回目の呼び出しには文字列 "alice" を渡してみます。
 
 ```js
-let user = "";
-
-function greet() {
+function greet(user) {
   console.count(user);
   return `hi ${user}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
+greet("bob");
+greet("alice");
+greet("alice");
 console.count("alice");
 ```
 
 以下のように出力されます。
 
-```
+```plain
 "bob: 1"
 "alice: 1"
 "alice: 2"
@@ -92,3 +85,9 @@ console.count("alice");
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [Microsoft Edge's documentation for `console.count()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#count)
+- [Node.js documentation for `console.count()`](https://nodejs.org/docs/latest/api/console.html#consolecountlabel)
+- [Google Chrome's documentation for `console.count()`](https://developer.chrome.com/docs/devtools/console/api/#count)

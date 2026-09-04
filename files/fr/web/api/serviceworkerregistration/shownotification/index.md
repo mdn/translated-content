@@ -23,9 +23,9 @@ serviceWorkerRegistration.showNotification(title, [options]);
 - `options` {{optional_inline}}
   - : Un objet d'options contenant tous les paramètres personnalisés que vous souhaitez appliquer à la notification. Les options possibles sont:
     - `actions`: Un tableau de {{domxref ("NotificationAction")}} représentant les actions disponibles pour l'utilisateur lorsque la notification est présentée. Ce sont des options parmi lesquelles l'utilisateur peut choisir pour agir sur l'action dans le contexte de la notification elle-même. Le nom de l'action est envoyé au gestionnaire de notifications du service worker pour lui faire savoir que l'action a été sélectionnée par l'utilisateur. Les membres du tableau doivent être un objet. Il peut contenir les valeurs suivantes:
-      - action: Une {{domxref("DOMString")}} représentant une action utilisateur à afficher sur la notification.
-      - title: Une {{domxref("DOMString")}} contenant le texte d'action à montrer à l'utilisateur.
-      - icon: Une {{domxref("USVString")}} contenant l'URL d'une icône à afficher avec l'action.
+      - action: Une {{jsxref("String")}} représentant une action utilisateur à afficher sur la notification.
+      - title: Une {{jsxref("String")}} contenant le texte d'action à montrer à l'utilisateur.
+      - icon: Une {{jsxref("String")}} contenant l'URL d'une icône à afficher avec l'action.
 
       Les réponses appropriées sont construites à l'aide de `event.action` dans l'événement [`notificationclick`](/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event).
 
@@ -35,7 +35,7 @@ serviceWorkerRegistration.showNotification(title, [options]);
     - `dir`: La direction dans laquelle afficher la notification. La valeur par défaut est `auto`, qui adopte simplement le comportement du paramètre de langue du navigateur, mais vous pouvez remplacer ce comportement en définissant les valeurs de `ltr` et `rtl` (bien que la plupart des navigateurs semblent ignorer ces paramètres.)
     - `icon`: Une {{domxref ("USVString")}} contenant l'URL d'une icône à afficher dans la notification.
     - `image`: Une {{domxref ("USVString")}} contenant l'URL d'une image à afficher dans la notification.
-    - `lang`: La langue de la notification, telle que spécifiée à l'aide d'un {{domxref ("DOMString")}} représentant une [balise de langue BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Consultez la page des [codes de langue à 2 lettres ISO](https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) de Sitepoint pour une référence simple.
+    - `lang`: La langue de la notification, telle que spécifiée à l'aide d'un {{domxref ("DOMString")}} représentant une [balise de langue BCP 47](https://www.rfc-editor.org/info/bcp/bcp47.txt). Consultez la page des [codes de langue à 2 lettres ISO](https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) de Sitepoint pour une référence simple.
     - `renotify`: Un {{domxref ("Boolean", "Booléen")}} spécifiant si l'utilisateur doit être notifié après qu'une nouvelle notification remplace l'ancienne. La valeur par défaut est `false`, ce qui signifie qu'ils ne seront pas notifiés.
     - `requireInteraction`: Un {{domxref ("Boolean", "Booléen")}} indiquant qu'une notification doit rester active jusqu'à ce que l'utilisateur clique dessus ou la rejette, plutôt que de se fermer automatiquement. La valeur par défaut est `false`.
     - `silent`: Un {{domxref ("Boolean", "Booléen")}} spécifiant si la notification est silencieuse (aucun son ni vibration émis), quels que soient les paramètres de l'appareil. La valeur par défaut est `false`, ce qui signifie qu'il ne sera pas silencieux.

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bounci
 original_slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Dans cet exercice, vous devrez utiliser le jeu des balles rebondissantes de l'article précédent comme base, pour y ajouter de nouvelles fonctionnalitées intéressantes.
 
@@ -139,7 +139,7 @@ Maintenant que nous avons définit notre viseur, on a besoin de le faire appara�
 
 Pour implémenter le compteur de score, suivez les étapes suivantes:
 
-1. Dans votre fichier HTML, ajoutez un élement {{HTMLElement("p")}} qui contiendra le texte suivant "Ball count: ", juste en dessous de l'élément {{HTMLElement("h1")}} .
+1. Dans votre fichier HTML, ajoutez un élement {{HTMLElement("p")}} qui contiendra le texte suivant "Ball count: ", juste en dessous de l'élément `{{htmlelement("Heading_Elements", "&lt;h1&gt;")}}` .
 2. Dans votre fichier CSS, ajouter les règlesz suivantes:
 
    ```css
@@ -167,4 +167,4 @@ Pour implémenter le compteur de score, suivez les étapes suivantes:
 
 Si vous effectuez cette évalutation dans le cadre d'un cours, vous devriez pouvoir fournir votre travail à votre professeur/mentor pour correction. Si vous apprenez par vous même, vous pouvez obtenir la correction sur [discussion thread for this exercise](https://discourse.mozilla.org/t/adding-features-to-our-bouncing-balls-demo-assessment/24689), ou sur [#mdn](irc://irc.mozilla.org/mdn) IRC channel sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Tout d'abord effectuez cet exercice — vous n'obtiendrez jamais rien en trichant !
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

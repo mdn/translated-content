@@ -31,11 +31,11 @@ measure(measureName, measureOptions, endMark)
 ### 参数
 
 - name
-  - : 一个 {{domxref("DOMString")}}，代表测量的名字。
+  - : 一个 {{jsxref("String")}}，代表测量的名字。
 - startMark {{optional_inline}}
-  - : 一个 {{domxref("DOMString")}}，代表测量的开始标志名字。May also be the name of a {{domxref("PerformanceTiming")}} property.
+  - : 一个 {{jsxref("String")}}，代表测量的开始标志名字。May also be the name of a {{domxref("PerformanceTiming")}} property.
 - endMark {{optional_inline}}
-  - : 一个{{domxref("DOMString")}}，代表测量的结束标志名字。May also be the name of a {{domxref("PerformanceTiming")}} property.
+  - : 一个{{jsxref("String")}}，代表测量的结束标志名字。May also be the name of a {{domxref("PerformanceTiming")}} property.
 
 ### 返回值
 

@@ -4,7 +4,7 @@ slug: Web/HTML/Guides/Responsive_images
 original_slug: Web/HTML/Responsive_images
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn_web_development/Core/Structuring_content/Splash_page", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
 
 En este artículo, aprenderemos sobre el concepto de imágenes adaptables — imágenes que funcionan bien en dispositivos con una amplia diferencia de tamaño de pantallas, resoluciones y otras tantas características — y observar qué herramientas proporciona HTML para ayudar a implementarlas. Esto ayuda a mejorar el rendimiento en diferentes dispositivos.
 
@@ -16,9 +16,9 @@ Las imágenes adaptables son solo una parte del diseño web responsivo, un tema 
       <th scope="row">Prerrequisitos:</th>
       <td>
         Deberías tener un conocimiento
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML">básico de HTML</a>
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">básico de HTML</a>
         y cómo
-        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/HTML_images"
           >agregar imágenes estáticas a un sitio web</a
         >.
       </td>
@@ -29,7 +29,7 @@ Las imágenes adaptables son solo una parte del diseño web responsivo, un tema 
       </th>
       <td>
         Aprende a usar características como
-        <a href="/es/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> y el elemento
+        <a href="/es/docs/Web/HTML/Reference/Elements/img#srcset"><code>srcset</code></a> y el elemento
         {{htmlelement("picture")}} para implementar soluciones de
         imágenes adaptables a sitios web.
       </td>
@@ -236,4 +236,4 @@ This also draws to a close the entire [Multimedia and embedding](/es/docs/confli
 - {{htmlelement("picture")}}
 - {{htmlelement("source")}}
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn_web_development/Core/Structuring_content/Splash_page", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}

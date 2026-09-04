@@ -9,7 +9,7 @@ Um _array (arranjo ou vetor)_ é um conjunto de dados (que pode assumir os mais 
 
 Cada item do array tem um número ligado a ele, chamado de índice numérico, que permite acesso a cada "valor" armazenado na váriavel.
 
-Em {{glossary("JavaScript")}}, um {{jsxref("array")}} começa no índice zero e pode ser manipulado a partir de vários {{Glossary("Method", "métodos")}}.
+Em {{glossary("JavaScript")}}, um {{jsxref("Array")}} começa no índice zero e pode ser manipulado a partir de vários {{Glossary("Method", "métodos")}}.
 
 Um exemplo simples de Array em Javascript:
 

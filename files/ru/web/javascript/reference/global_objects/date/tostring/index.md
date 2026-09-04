@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 
 ## Сводка
 
-Метод **`toString()`** возвращает строковое представление указанного объекта {{jsxref("Global_Objects/Date", "Date")}}.
+Метод **`toString()`** возвращает строковое представление указанного объекта {{jsxref("Date")}}.
 
 ## Синтаксис
 
@@ -21,7 +21,7 @@ dateObj.toString()
 
 ## Описание
 
-Объект {{jsxref("Global_Objects/Date", "Date")}} переопределяет метод `toString()`, унаследованный из объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Global_Objects/Date", "Date")}} метод `toString()` возвращает строковое представление объекта.
+Объект {{jsxref("Date")}} переопределяет метод `toString()`, унаследованный из объекта {{jsxref("Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Date")}} метод `toString()` возвращает строковое представление объекта.
 
 Метод `toString()` всегда возвращает строковое представление даты на американском английском.
 
@@ -31,7 +31,7 @@ JavaScript вызывает метод `toString()` автоматически, 
 
 ### Пример: использование метода `toString()`
 
-В следующем примере переменной `myVar` присваивается значение, возвращённое методом `toString()` объекта {{jsxref("Global_Objects/Date", "Date")}}:
+В следующем примере переменной `myVar` присваивается значение, возвращённое методом `toString()` объекта {{jsxref("Date")}}:
 
 ```js
 var x = new Date();

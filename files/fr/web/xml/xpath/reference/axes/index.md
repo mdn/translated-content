@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Axes
 original_slug: Web/XPath/Axes
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 Il existe treize axes différents dans la spécification [XPath](XPath). Un axe représente une relation au nœud de contexte, et il est utilisé pour situer dans l'arbre les autres nœuds par rapport à celui-ci. La liste suivante présente très brièvement les treize axes disponibles et le niveau de leur support dans [Gecko](Gecko).
 

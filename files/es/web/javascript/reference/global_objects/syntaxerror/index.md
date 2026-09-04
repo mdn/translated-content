@@ -9,7 +9,7 @@ El objeto **`SyntaxError`** represta un error cuando se trata de interpretar có
 
 ## Constructor
 
-- {{jsxref("Global_Objects/SyntaxError/SyntaxError", "SyntaxError()")}}
+- {{jsxref("SyntaxError.SyntaxError", "SyntaxError()")}}
   - : Crea un nuevo objeto `SyntaxError`.
 
 ## Propiedades de instancia

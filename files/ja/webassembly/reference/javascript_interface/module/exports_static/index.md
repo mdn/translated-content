@@ -17,7 +17,7 @@ WebAssembly.Module.exports(module);
 ### 引数
 
 - _module_
-  - : {{jsxref("WebAssembly.Module")}} オブジェクトです。
+  - : [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクトです。
 
 ### 返値
 
@@ -25,13 +25,13 @@ WebAssembly.Module.exports(module);
 
 ### 例外
 
-モジュールが {{jsxref("WebAssembly.Module")}} オブジェクトのインスタンスではない場合、{{jsxref("TypeError")}} が発生します。
+モジュールが [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクトのインスタンスではない場合、{{jsxref("TypeError")}} が発生します。
 
 ## 例
 
 ### exports の使用
 
-次の例 (Github のデモ [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) と、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)も参照) では、{{jsxref("WebAssembly.compileStreaming()")}} 関数を使用して読み込んだ simple.wasm のバイトコードをコンパイルして、[ワーカー](/ja/docs/Web/API/Web_Workers_API)に [postMessage()](/ja/docs/Web/API/Worker/postMessage) を使用して送信しています。</p>
+次の例 (Github のデモ [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) と、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)も参照) では、[`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming) 関数を使用して読み込んだ simple.wasm のバイトコードをコンパイルして、[ワーカー](/ja/docs/Web/API/Web_Workers_API)に [postMessage()](/ja/docs/Web/API/Worker/postMessage) を使用して送信しています。</p>
 
 ```js
 var worker = new Worker("wasm_worker.js");
@@ -41,7 +41,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
 );
 ```
 
-ワーカー ([`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js) を参照) 内で、モジュールで使用するためにインポートオブジェクトを定義して、そのあとにメインスレッドからモジュールを受け取るためのイベントハンドラーをセットアップします。モジュールを受け取ったとき、{{jsxref("WebAssembly.Instantiate()")}} メソッドを使用してインスタンスを生成し、その内部でエクスポートされた関数を実行します。そのあとに `WebAssembly.Module.exports` を使用してモジュール上の利用可能なエクスポートの情報を返す方法を示します。
+ワーカー ([`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js) を参照) 内で、モジュールで使用するためにインポートオブジェクトを定義して、そのあとにメインスレッドからモジュールを受け取るためのイベントハンドラーをセットアップします。モジュールを受け取ったとき、[`WebAssembly.Instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instantiate) メソッドを使用してインスタンスを生成し、その内部でエクスポートされた関数を実行します。そのあとに `WebAssembly.Module.exports` を使用してモジュール上の利用可能なエクスポートの情報を返す方法を示します。
 
 ```js
 var importObject = {

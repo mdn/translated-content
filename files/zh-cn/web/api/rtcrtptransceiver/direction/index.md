@@ -11,7 +11,7 @@ The transceiver's _current_ direction is indicated by the {{domxref("RTCRtpTrans
 
 ### 值
 
-A {{domxref("DOMString")}} whose value is one of the strings which are a member of the `RTCRtpTransceiverDirection` enumerated type, indicating the transceiver's preferred direction.
+A {{jsxref("String")}} whose value is one of the strings which are a member of the `RTCRtpTransceiverDirection` enumerated type, indicating the transceiver's preferred direction.
 
 <table class="standard-table">
   <thead>

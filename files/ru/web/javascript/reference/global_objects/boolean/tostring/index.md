@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 
 ## Сводка
 
-Метод **`toString()`** возвращает строковое представление указанного объекта {{jsxref("Global_Objects/Boolean", "Boolean")}}.
+Метод **`toString()`** возвращает строковое представление указанного объекта {{jsxref("Boolean")}}.
 
 ## Синтаксис
 
@@ -21,11 +21,11 @@ bool.toString()
 
 ## Описание
 
-Объект {{jsxref("Global_Objects/Boolean", "Boolean")}} переопределяет метод `toString` объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Global_Objects/Boolean", "Boolean")}} метод `toString` возвращает строковое представление объекта.
+Объект {{jsxref("Boolean")}} переопределяет метод `toString` объекта {{jsxref("Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Boolean")}} метод `toString` возвращает строковое представление объекта.
 
-JavaScript вызывает метод `toString` автоматически, когда объект {{jsxref("Global_Objects/Boolean", "Boolean")}} должен быть представлен в виде текста или когда объект {{jsxref("Global_Objects/Boolean", "Boolean")}} находится в контексте строковой конкатенации.
+JavaScript вызывает метод `toString` автоматически, когда объект {{jsxref("Boolean")}} должен быть представлен в виде текста или когда объект {{jsxref("Boolean")}} находится в контексте строковой конкатенации.
 
-Для объектов и значений {{jsxref("Global_Objects/Boolean", "Boolean")}} встроенный метод `toString` возвращает строки «`true`» или «`false`» в зависимости от значения логического объекта.
+Для объектов и значений {{jsxref("Boolean")}} встроенный метод `toString` возвращает строки «`true`» или «`false`» в зависимости от значения логического объекта.
 
 ## Примеры
 

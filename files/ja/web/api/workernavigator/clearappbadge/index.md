@@ -28,7 +28,7 @@ clearAppBadge()
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 文書が完全にアクティブでないとき投げられます。
 - `SecurityError` {{domxref("DOMException")}}
-  - : 呼び出しが[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)によりブロックされたとき投げられます。
+  - : 呼び出しが[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)によりブロックされたとき投げられます。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : {{domxref('PermissionStatus.state')}} が `granted` でないとき投げられます。
 

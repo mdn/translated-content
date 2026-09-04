@@ -2,7 +2,7 @@
 title: 什么是浏览器开发者工具？
 slug: Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
 l10n:
-  sourceCommit: 9a5b5597483ca34a58d400060f2e0534dceda240
+  sourceCommit: 1af3d045bad1d27c20b1236966301839971f9c09
 ---
 
 每一个现代网络浏览器都包含一套强大的开发工具套件。这些工具可以检查当前加载的 HTML、CSS 和 JavaScript，显示每个资源页面的请求以及载入所花费的时间。本文阐述了如何利用浏览器的开发工具的基本功能。
@@ -18,35 +18,36 @@ l10n:
 
 如何打开它？有三种方式：
 
-- **_键盘快捷键_**
-  - **Windows：** _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_ 或 <kbd>F12</kbd>
-  - **macOS：** _<kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>_
+- **_键盘快捷键_**：
+  - **Windows**：<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> 或 <kbd>F12</kbd>
+  - **macOS**：<kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>
 
-- **_菜单栏_**
-  - **Firefox：** 菜单 ![Firefox 浏览器汉堡菜单图标，提供更多自定义和控制 Firefox 浏览器的选项](2014-01-10-13-08-08-f52b8c.png) _➤ 更多工具 ➤ Web 开发者工具_
-  - **Chrome：** _➤ 更多工具 ➤ 开发者工具_
-  - **Safari：** _开发 ➤ 显示网页检查器_。如果你看不到*开发*菜单，去到 _Safari ➤ 设置 ➤ 高级_，然后点击*显示网页开发者功能*复选框。
-  - **Opera：** _开发者 ➤ 开发者工具_
+- **_菜单栏_**：
+  - **Firefox**：_菜单（☰）➤ 更多工具 ➤ Web 开发者工具_
+  - **Chrome**：_➤ 更多工具 ➤ 开发者工具_
+  - **Opera**：_开发者 ➤ 开发者工具_
+  - **Safari**：_开发 ➤ 显示 Web 检查器_。
+    > [!NOTE]
+    > Safari 开发者工具默认没有启用。要启用它们，前往 _Safari ➤ 偏好设置 ➤ 高级_，然后勾选*在菜单栏中显示“开发”菜单*或*启用 Web 开发者功能*复选框。
 
-- **_右键菜单：_** 右键单击网页中的一个项目上（在 Mac 上按 Ctrl 同时点击），并从弹出的菜单中选择*检查元素*。（_这种方法的好处_：该方法直接将你右击的元素的代码突出显示）。
+- **_右键菜单_**：在网页上长按/右键单击某项（在 Mac 上按 Ctrl 同时点击），并从弹出的菜单中选择*检查元素*。（_这种方法的好处_：此方法会立即高亮显示右键单击的元素的代码）。
 
 ![在一个示例网站中，将 Firefox 标志作为 DOM 元素显示出来，并显示上下文菜单。当右键单击网页上的任何项目时，会出现上下文菜单。菜单的最后一个项目是“Inspect element”。](inspector_context.png)
 
-## 检查器（Inspector）：DOM 浏览器和 CSS 编辑器
+## 检查器：DOM 浏览器和 CSS 编辑器
 
-开发者工具在打开时默认为检查器页面，如下图所示。这个工具可以让你看到你的网页的 HTML 运行时的样子，以及哪些 CSS 规则被应用到了页面上元素。它还允许你立即修改 HTML 和 CSS 并在浏览器中实时观察修改的结果。
+开发者工具在打开时默认为检查器（inspector）页面，如下图所示。这个工具可以让你看到你的网页的 HTML 运行时的样子，以及哪些 CSS 规则被应用到了页面上元素。它还允许你立即修改 HTML 和 CSS 并在浏览器中实时观察修改的结果。
 
 ![浏览器中打开了一个测试网站的标签页。开发者工具子窗口已经打开。开发者工具有多个选项卡。其中一个选项卡是“检查器”。检查器选项卡显示网站的 HTML 代码。从 HTML 代码中选择了一个图像标签。这导致网站中与所选标签对应的图像被突出显示。](inspector_highlighted.png)
 
 如果你*看不到*调试器，
 
-- 点击“检查”标签页。
-- 在 Chrome、Microsoft Edge 或 Opera 中，点击元素。
-- 在 Safari 中，控件的呈现并不是那么清晰，但如果你没有选择其他内容显示在窗口中，你应该能看到 HTML。点击“样式”按钮查看 CSS。
+- **Firefox**：选择**查看器**标签页。
+- **其他浏览器**：选择**元素**标签页。
 
 ### 探索 DOM 检查器
 
-首先在 DOM 检查器中右键单击（按 Ctrl 点击）一个 HTML 元素，看上下文菜单。菜单选项各不相同，但主要功能是相同的：
+首先在 DOM 检查器中右键单击（或按 Ctrl 同时单击）一个 HTML 元素，查看上下文菜单。菜单选项各不相同，但主要功能是相同的：
 
 ![浏览器开发者工具子窗口已打开。选择了检查器选项卡。从检查器选项卡中的 HTML 代码中右键单击了一个链接元素。出现了上下文菜单。不同浏览器的可用菜单选项有所不同，但重要的大多数是相同的。](dom_inspector.png)
 
@@ -56,7 +57,7 @@ l10n:
 - **复制/复制为 HTML**：复制当前选定的 HTML。
 - 一些浏览器也有*复制 CSS 路径*和*复制 XPath*，允许你选择复制当前的 HTML 元素 CSS 选择器或 XPath 表达式。
 
-现在试着编辑一些你的 DOM。双击元素，或在页面内容里右键单击它并选择编辑 HTML。你可以做出任何你想要的改变，但你不能保存。
+现在试着编辑一些你的 DOM。双击元素，或在页面内容里右键单击它并选择*编辑 HTML*。你可以做出任何你想要的改变，但你不能保存。
 
 ### 探索 CSS 编辑器
 
@@ -75,19 +76,24 @@ l10n:
 
 你会注意到 CSS 查看器顶部的一些可点击的选项卡：
 
-- _计算值_：显示当前所选元素的计算样式（浏览器应用的最终归一化值）。
-- _布局_：在 Firefox 中，这包含两个部分：
-  - _盒模型_：这可以直观地表示当前元素的盒模型，所以你可以一目了然地看到应用了什么内边距、边框和外边距，以及它的内容有多大。
-  - _网格_：如果你正在检查的页面使用了 CSS 网格布局，这个部分允许你查看网格的详细信息。
-- _字体_：在 Firefox 中，*字体*标签页显示应用于当前元素的字体。
+- _计算值_：显示当前所选元素的计算样式（浏览器应用的最终标准化值）。
+- _布局_：如果正在检查的元素使用了 CSS [网格](/zh-CN/docs/Web/CSS/Guides/Grid_layout)或[弹性盒](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)布局模式，此处将显示相关详细信息。
+- _字体_：在 Firefox 和 Safari 中，*字体*标签页显示应用于当前元素的字体。
+
+*盒模型*视图直观地展示了当前元素的盒模型，因此可以一目了然地看到该元素应用了哪些内边距、边框和外边距，以及其内容的大小。在 Firefox 中，该视图位于*布局*标签页下；而在其他浏览器中，则位于*计算值*标签页下。
+
+在某些浏览器中，还可以在此面板中查看所选元素的 JavaScript 详细信息。在 Safari 中，这些内容统一在*节点*标签页下，但在 Chrome、Opera 和 Edge 中则分别位于不同的选项卡中。
+
+- _属性_：元素对象的{{Glossary("Property/JavaScript", "属性")}}。
+- _事件监听器_：与该元素关联的[事件](/zh-CN/docs/Web/API/Event)。
 
 ### 了解更多
 
-了解更多 Inspector 在不同的浏览器中的细节：
+了解更多检查器在不同的浏览器中的细节：
 
 - [Firefox 页面检查器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
-- [Chrome DOM 检查器](https://developer.chrome.google.cn/docs/devtools/dom)（Opera 的 inspector 和它一样）
-- [Safari DOM 检查器和样式浏览器](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
+- [Chrome DOM 检查器](https://developer.chrome.google.cn/docs/devtools/dom)（Opera 和 Edge 的检查器和它一样）
+- [Safari 元素标签](https://webkit.org/web-inspector/elements-tab/)
 
 ## JavaScript 调试器
 
@@ -97,15 +103,12 @@ l10n:
 
 如何打开调试器：
 
-**Firefox**：选择 ![Firefox 菜单图标，具有更多选项，用于自定义和控制 Firefox。](2014-01-10-13-08-08-f52b8c.png) ➤ _Web 开发者_ ➤ _调试器_ 或按 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> 打开 JavaScript 调试器。如果工具已经显示，点击**调试器**标签。
-
-**Chrome**：打开开发者工具，然后选择**源代码/来源**标签。（Opera 的操作方式相同。）
-
-**Safari**：打开开发者工具，然后选择“调试器”标签。
+- **Firefox**：打开开发者工具，然后选择**调试器**标签页。
+- **其他浏览器**：打开开发者工具，然后选择**源代码**标签页。
 
 ### 探索调试器
 
-Firefox 的 JavaScript 调试器有三个面板。
+每个浏览器的 JavaScript 调试器都分为三个面板。这些面板的布局因所使用的浏览器而略有不同；本指南以 Firefox 为例进行说明。
 
 #### 文件列表
 
@@ -147,11 +150,7 @@ Firefox 的 JavaScript 调试器有三个面板。
 
 JavaScript 控制台是一个非常有用的工具，用于调试没有按预期运行的 JavaScript。它允许你针对浏览器当前加载的页面运行 JavaScript 行，并报告浏览器尝试执行代码时遇到的错误。要在任何浏览器中访问控制台：
 
-如果开发者工具已经打开，点击或按下控制台标签。
-
-如果没有，Firefox 允许你直接使用 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> 打开控制台，或使用菜单命令：菜单 ![Firefox 菜单](2014-01-10-13-08-08-f52b8c.png) _➤ Web 开发者 ➤ Web 控制台_，或 _工具 ➤ Web 开发者 ➤ Web 控制台_。在其他浏览器中，打开开发者工具，然后点击控制台标签。
-
-这将为你提供一个如下所示的窗口：
+要在任何浏览器中访问控制台，请打开开发者工具并选择**控制台**标签页。此时将显示如下窗口：
 
 ![浏览器开发者工具的控制台选项卡。已在控制台中执行了两个 JavaScript 函数。用户输入了这些函数，并且控制台显示了它们的返回值。](console_only.png)
 
@@ -200,8 +199,8 @@ document.querySelector("h1").appendChild(loginImage);
 了解更多 JavaScript 控制台在不同浏览器中的细节：
 
 - [Firefox Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [Chrome JavaScript 控制台](https://developer.chrome.google.cn/docs/devtools/console)（Opera 与它相同）
-- [Safari 控制台](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
+- [Chrome JavaScript 控制台](https://developer.chrome.google.cn/docs/devtools/console)（Opera 和 Edge 的控制台与它相同）
+- [Safari 控制对象 API](https://webkit.org/web-inspector/console-object-api/) 和[控制台命令行 API](https://webkit.org/web-inspector/console-command-line-api/)
 
 ## 参见
 

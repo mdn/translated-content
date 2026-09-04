@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/number
 original_slug: Web/XSLT/Element/number
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 L'élément `<xsl:number>` compte des éléments de façon séquentielle. Il peut également être utilisé
 pour formater rapidement un nombre.

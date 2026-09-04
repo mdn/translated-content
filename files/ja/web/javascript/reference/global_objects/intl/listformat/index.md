@@ -1,11 +1,11 @@
 ---
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Intl.ListFormat`** オブジェクトは、言語を考慮したリストの整形ができるようにします。
+**`Intl.ListFormat`** オブジェクトにより、言語を考慮したリストの書式化ができます。
 
 {{InteractiveExample("JavaScript デモ: Intl.ListFormat", "taller")}}
 
@@ -17,18 +17,18 @@ const formatter = new Intl.ListFormat("en", {
   type: "conjunction",
 });
 console.log(formatter.format(vehicles));
-// Expected output: "Motorcycle, Bus, and Car"
+// 予想される結果: "Motorcycle, Bus, and Car"
 
 const formatter2 = new Intl.ListFormat("de", {
   style: "short",
   type: "disjunction",
 });
 console.log(formatter2.format(vehicles));
-// Expected output: "Motorcycle, Bus oder Car"
+// 予想される結果: "Motorcycle, Bus oder Car"
 
 const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
 console.log(formatter3.format(vehicles));
-// Expected output: "Motorcycle Bus Car"
+// 予想される結果: "Motorcycle Bus Car"
 ```
 
 ## コンストラクター
@@ -39,7 +39,16 @@ console.log(formatter3.format(vehicles));
 ## 静的メソッド
 
 - {{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
-  - : 指定したロケールのうち、ランタイムの既定のロケールに代替されることなく対応しているものを含む配列を返します。
+  - : 指定されたロケールのうち、実行環境のデフォルトのロケールで代替されることなく対応するものを、配列に収めて返します。
+
+## インスタンスプロパティ
+
+これらのプロパティは `Intl.ListFormat.prototype` で定義されており、すべての `Intl.ListFormat` インスタンスで共有されます。
+
+- {{jsxref("Object/constructor", "Intl.ListFormat.prototype.constructor")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数です。`Intl.ListFormat` インスタンスの場合、初期値は {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat")}} コンストラクターとなります。
+- `Intl.ListFormat.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"Intl.ListFormat"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド
 
@@ -48,7 +57,7 @@ console.log(formatter3.format(vehicles));
 - {{jsxref("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}
   - : ロケールを考慮した方法で値のリストを書式化するために使用できる、さまざまな部分を表すオブジェクトの配列を返します。
 - {{jsxref("Intl/ListFormat/resolvedOptions", "Intl.ListFormat.prototype.resolvedOptions()")}}
-  - : 現在の {{jsxref("Intl.ListFormat")}} オブジェクトの構築時に計算されたロケールおよびスタイルの書式化オプションを反映したプロパティを持つ、新しいオブジェクトを返します。
+  - : 現在の `Intl.ListFormat` オブジェクトの構築時に計算されたロケールおよびスタイルの書式化オプションを反映したプロパティを持つ、新しいオブジェクトを返します。
 
 ## 例
 
@@ -64,19 +73,19 @@ console.log(
     list,
   ),
 );
-// > Motorcycle, Bus and Car
+// Motorcycle, Bus and Car
 
 console.log(
   new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
     list,
   ),
 );
-// > Motorcycle, Bus or Car
+// Motorcycle, Bus or Car
 
 console.log(
   new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
 );
-// > Motorcycle Bus Car
+// Motorcycle Bus Car
 ```
 
 ### formatToParts の使用
@@ -109,5 +118,5 @@ console.log(
 
 ## 関連情報
 
+- [`Intl.ListFormat` のポリフィル (FormatJS)](https://formatjs.github.io/docs/polyfills/intl-listformat/)
 - {{jsxref("Intl")}}
-- [FormatJS の `Intl.ListFormat` のポリフィル](https://formatjs.io/docs/polyfills/intl-listformat)

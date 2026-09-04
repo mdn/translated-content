@@ -62,7 +62,7 @@ x = null;
 // x can be garbage collected
 ```
 
-## 関連項目
+## 関連情報
 
 - [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete)
 - [メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)

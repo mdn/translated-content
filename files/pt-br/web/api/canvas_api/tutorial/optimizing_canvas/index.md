@@ -79,7 +79,7 @@ If like most games you have a static background image, use a plain {{HTMLElement
 
 ### Scaling canvas using CSS transforms
 
-[CSS transforms](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) are faster by using the GPU. Best case is to not scale the canvas or have a smaller canvas and scale up rather than a bigger canvas and scale down. For Firefox OS, target 480 x 320 px.
+[CSS transforms](/pt-BR/docs/Web/CSS/Guides/Transforms/Using) are faster by using the GPU. Best case is to not scale the canvas or have a smaller canvas and scale up rather than a bigger canvas and scale down. For Firefox OS, target 480 x 320 px.
 
 ```js
 var scaleX = window.innerWidth / canvas.width;

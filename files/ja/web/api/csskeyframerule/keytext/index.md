@@ -1,8 +1,9 @@
 ---
-title: CSSKeyframeRule.keyText
+title: "CSSKeyframeRule: keyText プロパティ"
+short-title: keyText
 slug: Web/API/CSSKeyframeRule/keyText
 l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+  sourceCommit: f3c4fc42e8817d0b8f703cf83957c33cd5342019
 ---
 
 {{APIRef("CSSOM") }}
@@ -21,10 +22,10 @@ l10n:
 ## 例
 
 この CSS には keyframes アットルールが記載されています。これは最初の {{domxref("CSSRule")}} であり、 `document.styleSheets[0].cssRules` で返されます。
-`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返し、その中に各キーフレームに対応する個々の {{domxref("CSSKeyFrame")}} オブジェクトが格納されます。
+`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返し、その中に各キーフレームに対応する個々の {{domxref("CSSKeyFrameRule")}} オブジェクトが格納されます。
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

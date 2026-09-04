@@ -103,7 +103,7 @@ Firefox 138 は、米国時間 [2025 年 4 月 29 日](https://whattrainisitnow.
 
 - **要素に裏づけられた擬似要素の後ろの擬似要素を許可する**
 
-  {{cssxref("::details-content")}} や {{cssxref("::file-selector-button")}} などの [要素に裏づけられた擬似要素](/ja/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) に、{{cssxref("::first-letter")}} や {{cssxref("::before")}} などの [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) を追加可能にする作業を始めました ([Firefox bug 1953557](https://bugzil.la/1953557))。
+  {{cssxref("::details-content")}} や {{cssxref("::file-selector-button")}} などの [要素に裏づけられた擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements#element-backed_pseudo-elements) に、{{cssxref("::first-letter")}} や {{cssxref("::before")}} などの [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements) を追加可能にする作業を始めました ([Firefox bug 1953557](https://bugzil.la/1953557))。
 
   > [!NOTE]
   > この機能の設定項目は、対象の要素に裏づけられた擬似要素に依存します。例: [`::details-content`](/ja/docs/Mozilla/Firefox/Experimental_features#details-content_pseudo-element)。

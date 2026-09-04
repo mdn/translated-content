@@ -1,32 +1,30 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
+l10n:
+  sourceCommit: efb84732016b60b17f81358960f9d5ebf516c5fe
 ---
 
-{{APIRef('WebRTC')}}
+{{APIRef("WebRTC")}}
 
-**`RTCPeerConnection`** インターフェイスは、ローカルコンピューターとリモートピアの間の WebRTC 接続を表します。リモートピアに接続したり、接続を維持・監視したり、不要になったら接続を切断したりするためのメソッドを提供します。
+**`RTCPeerConnection`** インターフェイスは、ローカルコンピューターとリモートピアの間の WebRTC 接続を表します。
+リモートピアに接続したり、接続を維持・監視したり、不要になったら接続を切断したりするためのメソッドを提供します。
 
 {{InheritanceDiagram}}
 
 ## コンストラクター
 
 - {{DOMxRef("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}}
-  - : ローカルデバイスとリモートピア間の接続を表す、新しく作成された `RTCPeerConnection` を返します。
+  - : 新しい `RTCPeerConnection` を返します。これは、ローカル端末とリモート端末間のピア接続を表します。
 
-## 静的メソッド
-
-- {{DOMxRef("RTCPeerConnection.generateCertificate", "generateCertificate()")}}
-  - : X.509 証明書とそれに対応する秘密鍵を作成し、それが生成されると新しい {{DOMxRef("RTCCertificate")}} で解決される {{jsxref("Promise")}} を返します。
-
-## プロパティ
+## インスタンスプロパティ
 
 _{{DOMxRef("EventTarget")}} から継承したプロパティもあります。_
 
 - {{DOMxRef("RTCPeerConnection.canTrickleIceCandidates", "canTrickleIceCandidates")}} {{ReadOnlyInline}}
   - : 論理値で、リモートピアが[トリクル ICE 候補](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice)を受け入れることができるかどうかを返します。
 - {{DOMxRef("RTCPeerConnection.connectionState", "connectionState")}} {{ReadOnlyInline}}
-  - : ピア接続の現在の状態を示します。 `new`, `connecting`, `connected`, `disconnected`, `failed`, `closed` のいずれかの文字列を返します。
+  - : ピア接続の現在の状態を示します。`new`, `connecting`, `connected`, `disconnected`, `failed`, `closed` のいずれかの文字列を返します。
 - {{DOMxRef("RTCPeerConnection.currentLocalDescription", "currentLocalDescription")}} {{ReadOnlyInline}}
   - : この `RTCPeerConnection` がリモートピアとの交渉を終了してから、直近で交渉に成功した接続のローカル側を記述した {{DOMxRef("RTCSessionDescription")}} オブジェクトを返します。
     また、この記述で表される提案や回答が最初にインスタンス化されて以降、 ICE エージェントによってすでに生成された可能性のある ICE 候補のリストも含まれます。
@@ -34,16 +32,17 @@ _{{DOMxRef("EventTarget")}} から継承したプロパティもあります。_
   - : この `RTCPeerConnection` がリモートピアとの交渉を終了してから、直近で交渉に成功した接続のリモート側を記述した {{DOMxRef("RTCSessionDescription")}} オブジェクトを返します。
     また、この記述で表される提案や回答が最初にインスタンス化されて以降、 ICE エージェントによってすでに生成された可能性のある ICE 候補のリストも含まれます。
 - {{DOMxRef("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} {{ReadOnlyInline}}
-  - : この RTCPeerConnection に関連する ICE エージェントの状態を文字列で返します。
-    `new`, `checking`, `connected`, `completed`, `failed`, `disconnected`, `closed` の何れかの値になります。
+  - : この RTCPeerConnection に関連する ICE エージェントの状態を文字列で返します。`new`, `checking`, `connected`, `completed`, `failed`, `disconnected`, `closed` のいずれかの値になります。
 - {{DOMxRef("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} {{ReadOnlyInline}}
   - : 接続の ICE 収集状態を表す文字列を返します。これにより、例えば ICE 候補の収集が終了したことを検出することができます。
-    取りうる値は、 `new`, `gathering`, `complete` の何れかです。
+    取りうる値は、 `new`, `gathering`, `complete` のいずれかです。
+- {{DOMxRef("RTCPeerConnection.idpLoginUrl", "idpLoginUrl")}} {{ReadOnlyInline}}
+  - : アプリケーションが {{Glossary("Identity provider", "ID プロバイダー")}} (IdP) にユーザーをログインさせるために移動できるエンドポイントを含む文字列を返します。ログインが不要な場合は `null` となる場合があります。
 - {{DOMxRef("RTCPeerConnection.localDescription", "localDescription")}} {{ReadOnlyInline}}
   - : 接続のローカル側のセッションを記述した {{DOMxRef("RTCSessionDescription")}} を返します。
     まだ設定されていない場合は、 `null` を返します。
 - {{DOMxRef("RTCPeerConnection.peerIdentity", "peerIdentity")}} {{ReadOnlyInline}}
-  - : リモートピアを識別する文字列を含む {{DOMxRef("RTCIdentityAssertion")}} に解決する {{jsxref("Promise")}} を返します。
+  - : リモートピアを識別する文字列を含む {{DOMxRef("RTCIdentityAssertion")}} に解決するプロミス ({{jsxref("Promise")}}) を返します。
     このプロミスが正常に解決されると、結果として得られる ID がターゲットピア ID になり、接続の間、変更されることはありません。
 - {{DOMxRef("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} {{ReadOnlyInline}}
   - : 接続のローカル側で保留中の設定変更を記述した {{DOMxRef("RTCSessionDescription")}} オブジェクトを返します。
@@ -60,6 +59,11 @@ _{{DOMxRef("EventTarget")}} から継承したプロパティもあります。_
 - {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} {{ReadOnlyInline}}
   - : 他のピアに接続中または再接続中の、ローカル側のシグナリングプロセスの状態を記述した文字列を返します。
     値は `stable`, `have-local-offer`, `have-remote-offer`, `have-local-pranswer`, `have-remote-pranswer`, `closed` のうちのいずれかになります。
+
+## 静的メソッド
+
+- {{DOMxRef("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}}
+  - : X.509 証明書とそれに対応する秘密鍵を作成し、それが生成されると新しい {{DOMxRef("RTCCertificate")}} で解決される {{jsxref("Promise")}} を返します。
 
 ## メソッド
 
@@ -81,8 +85,8 @@ _{{DOMxRef("EventTarget")}} から継承したメソッドもあります。_
   - : リモートピアとリンクした新しいチャネルの作成を開始し、その上であらゆる種類のデータを転送することができます。
     これは、画像、ファイル転送、テキストチャット、ゲームアップデートパケットなどのバックチャネルコンテンツに便利です。
 - {{DOMxRef("RTCPeerConnection.createOffer", "createOffer()")}}
-  - : リモートピアとの新しい WebRTC 接続を開始するために、{{Glossary("SDP")}} 提案 の作成を開始する。
-    SDP提案には、WebRTCセッションにすでにアタッチされている{{DOMxRef("MediaStreamTrack")}} オブジェクト、コーデック、ブラウザーが対応しているオプションに関する情報、および {{Glossary("ICE")}} エージェントがすでに収集している候補が含まれており、シグナルチャネルを介して、接続を要求または既存の接続の構成を更新するために相手候補 に送信されます。
+  - : リモートピアとの新しい WebRTC 接続を開始するために、{{Glossary("SDP")}} 提案 の作成を開始します。
+    SDP 提案には、WebRTC セッションにすでにアタッチされている{{DOMxRef("MediaStreamTrack")}} オブジェクト、コーデック、ブラウザーが対応しているオプションに関する情報、および {{Glossary("ICE")}} エージェントがすでに収集している候補が含まれており、シグナルチャネルを介して、接続を要求または既存の接続の構成を更新するために相手候補 に送信されます。
 - {{DOMxRef("RTCPeerConnection.getConfiguration", "getConfiguration()")}}
   - : 接続の現在の構成を示すオブジェクトを返す。
 - {{DOMxRef("RTCPeerConnection.getIdentityAssertion", "getIdentityAssertion()")}}
@@ -120,15 +124,12 @@ _{{DOMxRef("EventTarget")}} から継承したメソッドもあります。_
 
 ### 廃止されたメソッド
 
-- {{DOMxRef("RTCPeerConnection.addStream", "addStream()")}} {{deprecated_inline}}
+- {{DOMxRef("RTCPeerConnection.addStream", "addStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 音声または映像のローカルソースとして {{DOMxRef("MediaStream")}} を追加します。
     この古いメソッドを使用する代わりに、リモートピアに送信したいトラックごとに {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}} を 1 回使用する必要があります。
-- {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{deprecated_inline}}
+- {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : 特定の {{DOMxRef("MediaStreamTrack")}} と関連付けられた新たな {{DOMxRef("RTCDTMFSender")}} を生成します。これにより、その接続において {{Glossary("DTMF")}} 音（電話のトーン信号、プッシュ音）を送れるようになります。
-- {{DOMxRef("RTCPeerConnection.getStreamById", "getStreamById()")}} {{deprecated_inline}}
-  - : 接続のローカルまたはリモート側に関連する、指定された ID の {{DOMxRef("MediaStream")}} を返します。
-    このプロパティは {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}} と {{DOMxRef("RTCPeerConnection.getReceivers", "getReceivers()")}} メソッドに置き換えられました。
-- {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{deprecated_inline}}
+- {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 音声または映像のローカルソースとして {{DOMxRef("MediaStream")}} を削除します。
     このメソッドは廃止されたため、代わりに {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}} を使用してください。
 
@@ -160,12 +161,12 @@ _{{DOMxRef("EventTarget")}} から継承したメソッドもあります。_
 
 ### 廃止されたイベント
 
-- {{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{deprecated_inline}}
+- {{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 新しい {{domxref("MediaStream")}} が接続に追加されたときに送信されます。
     この古いイベントを待ち受けるのではなく、 {{domxref("RTCPeerConnection.track_event", "track")}} イベントを待ち受けるために使用する必要があります。
     接続に追加された {{domxref("MediaStreamTrack")}} ごとに 1 つ送信されます。
-- {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{deprecated_inline}}
-  - : domxref("MediaStream")}} が接続から削除されたときに送信されます。
+- {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : {{domxref("MediaStream")}} が接続から削除されたときに送信されます。
     この古いイベントを待ち受けるのではなく、それぞれのストリームの {{domxref("MediaStream.removetrack_event", "removetrack")}} イベントを待ち受けるために使用する必要があります。
 
 ## 仕様書
@@ -179,5 +180,5 @@ _{{DOMxRef("EventTarget")}} から継承したメソッドもあります。_
 ## 関連情報
 
 - <https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js>
-- [http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple](https://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple)
-- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML5 video capture, peer-to-peer video and filesharing application ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
+- [Get started with WebRTC](https://web.dev/articles/webrtc-basics)
+- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML video capture, peer-to-peer video and file sharing application ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))

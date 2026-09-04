@@ -174,7 +174,7 @@ let durée = vacations.trip?.getTime?.();
 
 ### Combinaison avec l'opérateur de coalescence des nuls (Nullish coalescing operator)
 
-L'{{JSxRef("Opérateurs/Nullish_coalescing_operator", "Opérateur de coalescence des nuls (Nullish coalescing operator)", '', 1)}} peut être utilisé après un chaînage optionnel afin de construire une valeur par défaut quand aucune n'a été trouvée :
+L'{{JSxRef("Operators/Nullish_coalescing", "Opérateur de coalescence des nuls (Nullish coalescing operator)", '', 1)}} peut être utilisé après un chaînage optionnel afin de construire une valeur par défaut quand aucune n'a été trouvée :
 
 ```js
 let client = {
@@ -195,4 +195,4 @@ console.log(villeDuClient); // Ville inconnue
 
 ## Voir aussi
 
-- {{JSxRef("Operators/Nullish_Coalescing_Operator", "Opérateur de coalescence des nuls (Nullish coalescing operator)", '', 1)}}
+- {{JSxRef("Operators/Nullish_coalescing", "Opérateur de coalescence des nuls (Nullish coalescing operator)", '', 1)}}

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 
 {{JSRef}}
 
-O symbol bem-conhecido **`Symbol.hasInstance`** é usado para determinar se um objeto construtor reconhece um objeto como de sua instância. O comportamento do operador {{jsxref("Operators/instanceof", "instanceof")}} pode ser customizado por este symbol.
+O symbol bem-conhecido **`Symbol.hasInstance`** é usado para determinar se um objeto construtor reconhece um objeto como de sua instância. O comportamento do operador {{jsxref("instanceof")}} pode ser customizado por este symbol.
 
 {{js_property_attributes(0,0,0)}}
 
@@ -40,5 +40,5 @@ console.log(new MyArray() instanceof MySubArray); // false
 
 ## Veja também
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Global_Objects/Object/isPrototypeOf", "isPrototypeOf()")}}
+- {{jsxref("instanceof")}}
+- {{jsxref("Object.isPrototypeOf", "isPrototypeOf()")}}

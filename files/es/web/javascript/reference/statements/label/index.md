@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Statements/label
 
 ## Resumen
 
-Proporciona una sentencia con un identificador al que se puede referir al usar las sentencias {{jsxref("Sentencias/break", "break")}} o {{jsxref("Sentencias/continue", "continue")}}.
+Proporciona una sentencia con un identificador al que se puede referir al usar las sentencias {{jsxref("Statements/break", "break")}} o {{jsxref("Statements/continue", "continue")}}.
 
 Por ejemplo, puede usar una etiqueta para identificar un bucle, y entonces usar las sentencias `break` o `continue` para indicar si un programa debería interrumpir el bucle o continuar su ejecución.
 
@@ -29,5 +29,5 @@ Para un ejemplo de una sentencia label usando `break`, vea `break`. Para un ejem
 
 ## Vea También
 
-- {{jsxref("Sentencias/break", "break")}}
-- {{jsxref("Sentencias/continue", "continue")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}

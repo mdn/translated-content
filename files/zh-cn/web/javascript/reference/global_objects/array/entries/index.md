@@ -3,8 +3,6 @@ title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
 
-{{JSRef}}
-
 **`entries()`** 方法返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象包含数组中每个索引的键/值对。
 
 {{InteractiveExample("JavaScript Demo: Array.entries()")}}

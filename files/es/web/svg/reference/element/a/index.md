@@ -62,7 +62,7 @@ svgns|a:active {
 {{EmbedLiveSample('Exemple', 100, 100)}}
 
 > [!WARNING]
-> Puesto que este elemento comparte su nombre de etiqueta con el [elemento `<a>` de HTML](/es/docs/Web/HTML/Reference/Elements/a), la selección de "`a`" con CSS o [`querySelector`](/es/docs/Web/API/Document/querySelector) puede aplicarse al tipo incorrecto de elemento. Pruebe [la regla `@namespace`](/es/docs/Web/CSS/@namespace) para distinguir entre los dos.
+> Puesto que este elemento comparte su nombre de etiqueta con el [elemento `<a>` de HTML](/es/docs/Web/HTML/Reference/Elements/a), la selección de "`a`" con CSS o [`querySelector`](/es/docs/Web/API/Document/querySelector) puede aplicarse al tipo incorrecto de elemento. Pruebe [la regla `@namespace`](/es/docs/Web/CSS/Reference/At-rules/@namespace) para distinguir entre los dos.
 
 ## Atributos
 
@@ -96,15 +96,15 @@ svgns|a:active {
 
 ### Atributos globales
 
-- [Atributos principales](/docs/Web/SVG/Attribute/Core)
+- [Atributos principales](/docs/Web/SVG/Reference/Attribute)
   - : Especialmente: {{SVGAttr('id')}}, {{SVGAttr('lang')}}, {{SVGAttr('tabindex')}}
-- [Atributos de estilo](/docs/Web/SVG/Attribute/Styling)
+- [Atributos de estilo](/docs/Web/SVG/Reference/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Atributos de procesamiento condicional](/docs/Web/SVG/Attribute/Conditional_Processing)
+- [Atributos de procesamiento condicional](/docs/Web/SVG/Reference/Attribute)
   - : Especialmente: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - Atributos de evento
-  - : [Atributos de eventos globales](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [atributos de eventos de elementos de documento](/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes), [atributos de eventos gráficos](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
-- [Atributos de presentación](/docs/Web/SVG/Attribute/Presentation)
+  - : [Atributos de eventos globales](/docs/Web/SVG/Reference/Attribute#Global_Event_Attributes), [atributos de eventos de elementos de documento](/docs/Web/SVG/Reference/Attribute#Document_Element_Event_Attributes), [atributos de eventos gráficos](/docs/Web/SVG/Reference/Attribute#Graphical_Event_Attributes)
+- [Atributos de presentación](/docs/Web/SVG/Reference/Attribute)
   - : Especialmente: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - Atributos XLink
   - : Most notably: {{SVGAttr("xlink:title")}}

@@ -19,7 +19,7 @@ slug: Web/JavaScript
 
 ### Для абсолютных новичков
 
-Загляните в наш [Учебный План,](/ru/docs/Learn/JavaScript) если вам хочется изучить JavaScript, но у вас нет опыта в JavaScript или программировании. Доступные разделы:
+Загляните в наш [Учебный План](/ru/docs/Learn_web_development/Core/Scripting), если вам хочется изучить JavaScript, но у вас нет опыта в JavaScript или программировании. Доступные разделы:
 
 - [Первые шаги в JavaScript](/ru/docs/Web/JavaScript/Guide)
   - : Отвечаем на такие вопросы, как "что такое JavaScript?", "как он выглядит?", "и что он может делать?", а также обсуждаем основные возможности JavaScript, такие, как переменные, строки, числа и массивы.
@@ -41,13 +41,13 @@ slug: Web/JavaScript
 ### Средний уровень
 
 - [Понимание JavaScript-фреймворков для фронтенда](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
-  - : JavaScript-ффреймворки являются неотъемлемой частью современной веб-разработки,предоставляя разработчикам проверенные и протестированныеинструменты для создания масштабируемых и интерактивных веб-приложений. Многиесовременные компании используют фреймворки для своих решений, поэтому многие задачи связанные с разработкой клиентской части веб-приложений теперь требуют опыта работы с ними.
+  - : JavaScript-фреймворки являются неотъемлемой частью современной веб-разработки, предоставляя разработчикам проверенные и протестированные инструменты для создания масштабируемых и интерактивных веб-приложений. Многие современные компании используют фреймворки для своих решений, поэтому многие задачи связанные с разработкой клиентской части веб-приложений теперь требуют опыта работы с ними.
 - [Повторное введение в JavaScript](/ru/docs/Web/JavaScript/Guide/Language_overview)
   - : Обзор для тех, кто _думает_, что знает JavaScript.
 - [Структуры данных JavaScript](/ru/docs/Web/JavaScript/Guide/Data_structures)
   - : Обзор существующих структур данных в JavaScript.
 - [Операторы сравнения и тождественности](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
-  - : JavaScript предоставляет три различных оператора сравнения значений: строгое равенство `===`, с приведением типов `==` и метод {{jsxref("Global_Objects/Object/is", "Object.is()")}}.
+  - : JavaScript предоставляет три различных оператора сравнения значений: строгое равенство `===`, с приведением типов `==` и метод {{jsxref("Object.is()")}}.
 - [Замыкания](/ru/docs/Web/JavaScript/Guide/Closures)
   - : Замыкания это сочетание функции и лексического окружения в котором она была определена.
 
@@ -73,7 +73,7 @@ slug: Web/JavaScript
 - [Стандартные встроенные объекты](/ru/docs/Web/JavaScript/Reference/Global_Objects)
   - : Узнайте о стандартных встроенных объектах {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} , {{jsxref("WeakSet")}} и других.
 - [Выражения и операторы](/ru/docs/Web/JavaScript/Reference/Operators)
-  - : Узнайте о поведении таких операторов в JavaScript, как {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}, [приоритете операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence) и многом другом.
+  - : Узнайте о поведении таких операторов в JavaScript, как {{jsxref("instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("new")}}, {{jsxref("this")}}, [приоритете операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence) и многом другом.
 - [Инструкции и объявления](/ru/docs/Web/JavaScript/Reference/Statements)
   - : Узнайте о {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} и многих других выражениях и ключевых словах в JavaScript.
 - [Функции](/ru/docs/Web/JavaScript/Reference/Functions)

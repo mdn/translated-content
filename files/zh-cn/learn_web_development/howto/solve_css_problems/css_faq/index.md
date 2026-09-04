@@ -77,7 +77,7 @@ h1 {
 }
 ```
 
-从 CSS2 开始，情况就不一样了。关键字 [initial](/zh-CN/docs/Web/CSS/initial) 现在是一个有效的 CSS 属性值。它将给定的 CSS 属性值重置为默认值。
+从 CSS2 开始，情况就不一样了。关键字 [initial](/zh-CN/docs/Web/CSS/Reference/Values/initial) 现在是一个有效的 CSS 属性值。它将给定的 CSS 属性值重置为默认值。
 
 ```css
 /* 标题元素的默认颜色为黑色 */
@@ -91,7 +91,7 @@ h1 {
 
 ## 我如何才可以从一个样式中衍生出另一种样式？
 
-CSS 并不完全允许用一种样式来定义另一种样式。但是，将多个类分配给单个元素，可以提供相同的效果。[CSS 变量](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)也提供了一种方法来定义在多处复用的样式信息。
+CSS 并不完全允许用一种样式来定义另一种样式。但是，将多个类分配给单个元素，可以提供相同的效果。[CSS 变量](/zh-CN/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)也提供了一种方法来定义在多处复用的样式信息。
 
 ## 我该如何给一个元素分配多个类？
 
@@ -245,7 +245,7 @@ div {
 <div id="orange" class="green" style="color: red;">我是红的</div>
 ```
 
-当选择器具有多个部分时，规则会更加复杂。有关优先级计算的更多信息，请参阅 [CSS 优先级文档](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)。
+当选择器具有多个部分时，规则会更加复杂。有关优先级计算的更多信息，请参阅 [CSS 优先级文档](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)。
 
 ## -moz-\*、-ms-\*、-webkit-\*、-o-\* 以及 -khtml-\* 属性有什么用？
 
@@ -266,7 +266,7 @@ text-stroke: 4px navy;
 > 为更深层次了解处理前缀属性，请参阅[跨浏览器测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)模块的[处理常见的 HTML 和 CSS 问题——处理 CSS 前缀](/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#处理_css_前缀)。
 
 > [!NOTE]
-> 请参阅 [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)和 [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)，以了解浏览器前缀 CSS 属性的列表。
+> 请参阅 [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)和 [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions)，以了解浏览器前缀 CSS 属性的列表。
 
 ## z-index 属性与定位有什么关系？
 

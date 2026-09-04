@@ -15,7 +15,7 @@ Existen varios tipos de complementos, pero el tipo más común son las extension
 
 ## Desarrollo de las extensiones
 
-En el pasado, habían varias juegos de herramientas para el desarrollo de las extensiones de Firefox, pero al finalizar el mes de noviembre de 2017, las extensiones deben crearse utilizando las [API de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions). Los otros juegos de herramientas, incluidos los complementos de overlay, los complementos de bootstrap y el complemento SDK, se espera que queden obsoletos durante el mismo período de tiempo.
+En el pasado, había varios juegos de herramientas para el desarrollo de las extensiones de Firefox, pero al finalizar el mes de noviembre de 2017, las extensiones deben crearse utilizando las [API de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions). Los otros juegos de herramientas, incluidos los complementos de overlay, los complementos de bootstrap y el complemento SDK, se espera que queden obsoletos durante el mismo período de tiempo.
 
 Si usted está escribiendo un nuevo complemento, le recomendamos que utilice la [API de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions).
 

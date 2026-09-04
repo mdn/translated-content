@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/math/highest
 original_slug: Web/EXSLT/math/highest
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
 `math:highest()` renvoie le nœud qui a la valeur maximale, parmi l'ensemble de nœuds passé en argument (la valeur maximale est calculée à l'aide de [`math:max()`](/fr/docs/Web/EXSLT/math/max)).
 

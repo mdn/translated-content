@@ -1,36 +1,33 @@
 ---
-title: "<kbd>: キーボード入力要素"
+title: HTML `<kbd>` キーボード入力要素
+short-title: <kbd>
 slug: Web/HTML/Reference/Elements/kbd
-original_slug: Web/HTML/Element/kbd
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<kbd>`** は [HTML](/ja/docs/Web/HTML) の要素で、キーボード、音声入力、その他の入力端末からのユーザーによる文字入力を表す行内の文字列の区間を表します。慣習的に、{{Glossary("user agent", "ユーザーエージェント")}}は既定で `<kbd>` 要素の中身を等幅フォントで表示しますが、 HTML 標準で規定されているものではありません。
 
 {{InteractiveExample("HTML デモ: &lt;kbd&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
-  Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an
-  MDN page.
+  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> を押して、MDN のページを読み込み直してください。
 </p>
 ```
 
 ```css interactive-example
 kbd {
-  background-color: #eee;
+  background-color: #eeeeee;
   border-radius: 3px;
   border: 1px solid #b4b4b4;
   box-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.2),
-    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
-  color: #333;
+    0 1px 1px rgb(0 0 0 / 0.2),
+    0 2px 0 0 rgb(255 255 255 / 0.7) inset;
+  color: #333333;
   display: inline-block;
   font-size: 0.85em;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
   padding: 2px 4px;
   white-space: nowrap;
@@ -58,10 +55,9 @@ kbd {
 
 ### 基本的な例
 
-```html
+```html-nolint
 <p>
-  コマンド "mycommand" のドキュメントを参照するには <kbd>help mycommand</kbd>
-  コマンドを使用してください。
+  コマンド "my-command" のドキュメントを参照するには <kbd>help my-command</kbd> コマンドを使用してください。
 </p>
 ```
 
@@ -79,11 +75,9 @@ kbd {
 
 ##### HTML
 
-```html
+```html-nolint
 <p>
-  キーボードショートカットの
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>
-  を使用して新規文書を作成することもできます。
+  キーボードショートカットの <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> を使用して新規文書を作成することもできます。
 </p>
 ```
 
@@ -120,10 +114,9 @@ kbd > kbd {
 
 それから HTML を更新して、このクラスを出力中のキーに使用するように表現します。
 
-```html
+```html-nolint
 <p>
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>
-  を押して新規文書を作成することもできます。
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> を押して新規文書を作成することもできます。
 </p>
 ```
 
@@ -137,10 +130,9 @@ kbd > kbd {
 
 `<kbd>` 要素を {{HTMLElement("samp")}} 要素内で使用すると、システムからエコーバックされた入力を表現することができます。
 
-```html
+```html-nolint
 <p>
-  構文エラーが発生すると、このツールは確認のために
-  あなたが入力したコマンドを出力します。
+  構文エラーが発生すると、このツールは確認のためにあなたが入力したコマンドを出力します。
 </p>
 <blockquote>
   <samp><kbd>custom-git ad my-new-file.cpp</kbd></samp>
@@ -181,17 +173,17 @@ kbd > kbd {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>
       </td>
     </tr>
     <tr>
@@ -201,7 +193,7 @@ kbd > kbd {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>

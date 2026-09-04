@@ -38,7 +38,7 @@ slug: Web/MathML/Tutorials/For_beginners/Tables
 
 MathML 表格元素与 [HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)的元素类似：`<mtable>` 元素表示数学表格，它的子元素是 `<mtr>` 元素（表示行），每个 `<mtr>` 元素都有 `<mtd>` 元素作为其子元素（表示单元格）。`<mtable>` 元素可以在 MathML 公式的任何位置插入。`<mtd>` 元素可以包含任意数量的 MathML 子元素，并将它们布局为 `<mrow>` 容器。
 
-表格通常用于矩阵式表达式（包括向量）。以下是一个基本示例，该示例取自[有关 CSS `matrix()` 函数的文章](/zh-CN/docs/Web/CSS/transform-function/matrix)：
+表格通常用于矩阵式表达式（包括向量）。以下是一个基本示例，该示例取自[有关 CSS `matrix()` 函数的文章](/zh-CN/docs/Web/CSS/Reference/Values/transform-function/matrix)：
 
 ```html hidden
 <link

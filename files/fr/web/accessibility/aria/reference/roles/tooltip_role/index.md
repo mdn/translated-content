@@ -3,7 +3,7 @@ title: "ARIA : rôle tooltip"
 short-title: tooltip
 slug: Web/Accessibility/ARIA/Reference/Roles/tooltip_role
 l10n:
-  sourceCommit: e38b228782cf7911b269ae643364dbaccca32b65
+  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
 ---
 
 Un `tooltip` («&nbsp;info-bulle&nbsp;») est une bulle de texte contextuelle qui affiche une description pour un élément, apparaissant au survol du pointeur ou lors de la sélection clavier.
@@ -20,15 +20,15 @@ Le rôle tooltip n'est pas adapté pour l'icône «&nbsp;i&nbsp;» d'information
 
 L'utilisation du rôle ARIA `tooltip` complète le comportement natif des info-bulles du navigateur. Un exemple d'info-bulle native est la façon dont certains navigateurs affichent la valeur de l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) lors d'un long survol de la souris. On ne peut pas activer cette fonctionnalité par la sélection clavier ou par interaction tactile, ce qui la rend inaccessible. Si l'information est suffisamment importante pour être dans une info-bulle ou un titre, envisagez de l'inclure dans un texte visible.
 
-Les éléments avec le rôle `tooltip` doivent être référencés via [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) avant ou lors de l'affichage de l'info-bulle. L'attribut `aria-describedby` est sur l'élément propriétaire, pas sur l'info-bulle.
+Les éléments avec le rôle `tooltip` doivent être référencés avec [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) avant ou lors de l'affichage de l'info-bulle. L'attribut `aria-describedby` est sur l'élément propriétaire, pas sur l'info-bulle.
 
 L'info-bulle n'est pas considérée comme un popup au sens de la propriété [`aria-haspopup`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) sur l'élément propriétaire, d'où l'utilisation du terme «&nbsp;bulle de texte&nbsp;» dans la définition introductive.
 
 Bien qu'une info-bulle puisse apparaître et disparaître, son apparition étant automatique et non contrôlée intentionnellement par l'utilisateur·ice, le rôle [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) n'est pas pris en charge.
 
-Le nom accessible d'une info-bulle peut provenir de son contenu. En théorie, il pourrait provenir d'un [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby), mais dans la plupart des cas, il n'est pas recommandé d'utiliser les propriétés ARIA pour fournir un nom accessible à une info-bulle.
+Le nom accessible d'une info-bulle peut provenir de son contenu. En théorie, il peut provenir d'un [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby), mais dans la plupart des cas, il n'est pas recommandé d'utiliser les propriétés ARIA pour fournir un nom accessible à une info-bulle.
 
-Les info-bulles fournissent des informations supplémentaires, généralement sans interaction directe sur l'info-bulle elle-même. Elles sont généralement associées au contenu qu'elles définissent via un [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) avec l'id de l'élément principal. Ainsi, si l'info-bulle a un nom accessible explicitement défini, ce nom est exposé comme description de l'élément principal plutôt que comme contenu de l'info-bulle, ce qui signifie que le contenu de l'info-bulle peut ne jamais être découvert par un·e utilisateur·ice de lecteur d'écran.
+Les info-bulles fournissent des informations supplémentaires, généralement sans interaction directe sur l'info-bulle elle-même. Elles sont généralement associées au contenu qu'elles définissent avec un [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) avec l'id de l'élément principal. Ainsi, si l'info-bulle a un nom accessible explicitement défini, ce nom est exposé comme description de l'élément principal plutôt que comme contenu de l'info-bulle, ce qui signifie que le contenu de l'info-bulle peut ne jamais être découvert par un·e utilisateur·ice de lecteur d'écran.
 
 ### Propriétés, états et rôles WAI-ARIA associés
 
@@ -44,11 +44,11 @@ L'info-bulle doit apparaître à la sélection ou au survol de l'élément, sans
 
 ### Fonctionnalités JavaScript requises
 
-- L'info-bulle s'affiche et disparaît via la sélection clavier et la perte de sélection, ainsi que par les événements souris&nbsp;: survol et sortie.
+- L'info-bulle s'affiche et disparaît avec la sélection clavier et la perte de sélection, ainsi que par les évènements souris&nbsp;: survol et sortie.
 - L'info-bulle ne reçoit jamais la sélection. La sélection reste sur l'élément propriétaire.
 - L'info-bulle peut être masquée avec la touche <kbd>Échap</kbd>.
 - L'info-bulle reste ouverte au survol.
-- L'info-bulle n'est masquée que via JavaScript et les sélecteurs CSS. Si JavaScript n'est pas disponible, l'info-bulle est affichée.
+- L'info-bulle n'est masquée que avec JavaScript et les sélecteurs CSS. Si JavaScript n'est pas disponible, l'info-bulle est affichée.
 
 ## Exemples
 
@@ -98,7 +98,7 @@ L'info-bulle peut être instanciée avec du CSS. Changez le nom de la classe ave
 
 {{EmbedLiveSample("exemples", "", 300)}}
 
-Le code ci-dessus masque l'info-bulle avec du CSS à l'état par défaut ou si la classe `hide-tooltip` a été ajoutée avec JavaScript (lorsque l'utilisateur·ice appuie sur <kbd>Échap</kbd>), avec une spécificité élevée pour garantir que l'info-bulle ne s'affiche pas. Quand l'élément propriétaire reçoit la sélection, il est positionné relativement et l'info-bulle devient visible. On garde l'info-bulle visible au survol, conformément à [WCAG 1.4.13](#problèmes_d'accessibilité). Ici, on permet au curseur de passer du champ à l'info-bulle sans que celle-ci disparaisse, en attendant 0,5&nbsp;s entre les deux&nbsp;; il existe d'autres moyens d'obtenir ce résultat, comme remplir l'espace avec un élément transparent qui garde l'info-bulle visible au survol.
+Le code ci-dessus masque l'info-bulle avec du CSS à l'état par défaut ou si la classe `hide-tooltip` a été ajoutée avec JavaScript (lorsque l'utilisateur·ice appuie sur <kbd>Échap</kbd>), avec une spécificité élevée pour garantir que l'info-bulle ne s'affiche pas. Quand l'élément propriétaire reçoit la sélection, il est positionné relativement et l'info-bulle devient visible. On garde l'info-bulle visible au survol, conformément à [WCAG 1.4.13](#problèmes_daccessibilité). Ici, on permet au curseur de passer du champ à l'info-bulle sans que celle-ci disparaisse, en attendant 0,5s entre les deux&nbsp;; il existe d'autres moyens d'obtenir ce résultat, comme remplir l'espace avec un élément transparent qui garde l'info-bulle visible au survol.
 
 ## Problèmes d'accessibilité
 
@@ -117,6 +117,6 @@ Plutôt que d'utiliser des info-bulles et de masquer des informations importante
 ## Voir aussi
 
 - [ARIA&nbsp;: rôle `dialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
-- [La pseudo-classe CSS `:focus`](/fr/docs/Web/CSS/:focus)
+- [La pseudo-classe CSS `:focus`](/fr/docs/Web/CSS/Reference/Selectors/:focus)
 - [Tooltips & Toggletips <sup>(angl.)</sup>](https://inclusive-components.design/tooltips-toggletips/) par Heydon Pickering
 - [Comprendre SC 1.4.13&nbsp;: contenu au survol ou à la sélection (WCAG niveau AA) <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html)

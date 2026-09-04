@@ -3,14 +3,16 @@ title: "Document: createElementNS() メソッド"
 short-title: createElementNS()
 slug: Web/API/Document/createElementNS
 l10n:
-  sourceCommit: 4b0f1ecd4e53e8f0741bac1099f9faecd6fefde8
+  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
 ---
 
 {{APIRef("DOM")}}
 
-指定された名前空間 URI と修飾名を持つ要素を生成します。
+**`createElementNS()`** は {{domxref("Document")}} インターフェイスのメソッドで、指定された名前空間 URI と修飾名を持つ新しい要素を生成します。
 
-名前空間 URI を指定せずに要素を生成する場合は、 {{DOMxRef("Document.createElement()", "createElement()")}} メソッドを使用してください。
+これは、HTML に埋め込まれた SVG や MathML など、名前空間が混在する文書において、パーサーが名前空間を確実に推測できない場合に有益です。
+
+生の HTML 要素を作成する場合は、{{DOMxRef("Document.createElement()", "createElement()")}} メソッドのほうがシンプルです。
 
 ## 構文
 
@@ -22,18 +24,41 @@ createElementNS(namespaceURI, qualifiedName, options)
 ### 引数
 
 - `namespaceURI`
-  - : 文字列で、要素に関連付ける[名前空間 URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) を指定します。
-    生成される要素の {{DOMxRef("element.namespaceURI", "namespaceURI")}} プロパティは _namespaceURI_ の値で初期化されます。
-    [有効な名前空間 URI](#重要な名前空間_uri) も参照してください。
+  - : 文字列で、要素に結び付ける{{DOMxRef("element.namespaceURI", "名前空間 URI")}} を指定します。重要な名前空間 URI をいくつか挙げておきます。
+    - [HTML](/ja/docs/Web/HTML)
+      - : `http://www.w3.org/1999/xhtml`
+    - [SVG](/ja/docs/Web/SVG)
+      - : `http://www.w3.org/2000/svg`
+    - [MathML](/ja/docs/Web/MathML)
+      - : `http://www.w3.org/1998/Math/MathML`
+
 - `qualifiedName`
   - : 文字列で、生成される要素の型を指定します。
-    生成される要素の {{DOMxRef("node.nodeName", "nodeName")}} プロパティは、 _qualifiedName_ の値で初期化されます。
-- `options` {{Optional_Inline}}
-  - : 任意の `ElementCreationOptions` オブジェクトで、 `is` という名前の単一のプロパティを持ち、その値として事前に `customElements.define()` を使用して定義されたカスタム要素のタグ名を設定します。
-    以前のバージョンの[カスタム要素仕様書](https://www.w3.org/TR/custom-elements/)との後方互換性のため、ブラウザーによってはここにオブジェクトの代わりに、文字列を渡すことができ、その文字列の値はカスタム要素のタグ名になります。
-    この引数の使い方について詳しい情報は、 [Extending native HTML elements](https://web.dev/articles/web-components/) を参照してください。
+    生成される要素の {{DOMxRef("node.nodeName", "nodeName")}} プロパティは、この値で初期化されます。
 
-    新しい要素には `is` 属性が与えられ、値はカスタム要素のタグ名になります。カスタム要素は一部のブラウザーのみで利用できる試行的な機能です。
+    修飾名の形式は `prefix:localName` または `localName` であり、各部分は次のように定義されます。
+    - `prefix` {{optional_inline}}
+      - : 名前空間の「短い別名」です。
+        接頭辞はオプションですが、指定する場合は、`namespaceURI` 引数も同時に指定しなければなりません。
+        接頭辞が `xml` または `xmlns` に設定されている場合、`namespaceURI` はそれぞれ `http://www.w3.org/XML/1998/namespace` または `http://www.w3.org/2000/xmlns/` に設定しなければなりません。
+
+        この値は、新しい要素の {{DOMxRef("Element/prefix", "prefix")}} プロパティを初期化するために使用されます。
+        デフォルト値は `null` です。
+
+    - `localName`
+      - : この要素のローカル名です。
+        この値は、新しい要素の {{DOMxRef("Element.localName", "localName")}} プロパティを初期化するために使用されます。
+
+- `options` {{Optional_Inline}}
+  - : 以下のオプションのプロパティを持つオブジェクト（なお、`is` と `customElementRegistry` のどちらかのみを設定できます）。
+    - `is` {{Optional_Inline}}
+      - : {{domxref("CustomElementRegistry/define", "customElements.define()")}} を使用して、以前定義されたカスタム要素のタグ名を指定する文字列です。
+        新しい要素には、そのカスタム要素のタグ名を値とする `is` 属性が指定されます。
+    - `customElementRegistry` {{Optional_Inline}}
+      - : {{domxref("CustomElementRegistry")}} であり、カスタム要素の[スコープ付きカスタム要素レジストリー](/ja/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries)を設定します。
+
+    下位互換性を確保するため、一部のブラウザーでは、オブジェクトの代わりに文字列を渡すことができます。この場合、文字列の値はカスタム要素のタグ名となります。
+    この引数の使用方法の情報については、[ネイティブ HTML 要素の拡張](https://web.dev/articles/web-components)<sup>（英語）</sup> をご覧ください。
 
 ### 返値
 
@@ -42,56 +67,62 @@ createElementNS(namespaceURI, qualifiedName, options)
 ### 例外
 
 - `NamespaceError` {{domxref("DOMException")}}
-  - : [`namespaceURI`](#namespaceuri) の値が有効な[名前空間 URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) でない場合に発生します。
+  - : [`namespaceURI`](#namespaceuri) の値が次のいずれかの場合に発生します。
+    - 有効な名前空間 URI ではない。
+    - `prefix` に値がある場合に、空文字列に設定した。
+    - [`prefix`](#prefix) が `xml` または `xmlns` に設定されている場合、それぞれ `http://www.w3.org/XML/1998/namespace` または `http://www.w3.org/2000/xmlns/` ではなかった場合。
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : [`qualifiedName`](#qualifiedname) の値が有効な [XML 名](https://www.w3.org/TR/REC-xml/#dt-name) でない場合に発生します。例えば、数字、ハイフン、ピリオドで始まったり、アルファベット文字、アンダースコア、ハイフン、ピリオド以外の文字を含んでいたりする場合です。
+  - : `prefix` または `localName` のどちらかが無効な場合、この例外が発生します：
+    - `prefix` は少なくとも 1 文字でなければならないし、ASCII ホワイトスペース、`NULL`、`/`、または `>`（それぞれ U+0000、U+002F、U+003E）を含んではなりません。
+    - `localName` は、長さが 1 文字以上であり、かつ以下の条件を満たす場合、有効な要素名となります。
+      - アルファベット文字で始まり、ASCII のホワイトスペース、`NULL`、`/`、`>`（それぞれU+0000、U+002F、U+003E）が含まれていないもの。
+      - 先頭が `:` (U+003A)、 `_` (U+005F)、U+0080 以上 U+10FFFF 以下の範囲内の任意の文字で始まり、かつ、残りのコードポイントは、それらの同じ文字に加え、ASCII 英数字、`-` (U+002D)、および `.` (U+002E) のみを含むもの。
 
-## 重要な名前空間 URI
+    > [!NOTE]
+    > 以前のバージョンの仕様書では、より厳しい制限があり、`localName` が有効な [XML 名](https://www.w3.org/TR/xml/#dt-name) であることが要求されていました。
 
-- [HTML](/ja/docs/Web/HTML)
-  - : `http://www.w3.org/1999/xhtml`
-- [SVG](/ja/docs/Web/SVG)
-  - : `http://www.w3.org/2000/svg`
-- [MathML](/ja/docs/Web/MathML)
-  - : `http://www.w3.org/1998/Math/MathML`
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : [`is`](#is) および [`customElementRegistry`](#customelementregistry) の両方のオプションが指定された場合、この例外が発生します。
 
 ## 例
 
-これは新しい `<div>` 要素を {{Glossary("XHTML")}} 名前空間に生成し、 vbox 要素に追加します。これは有用な XUL 文書ではありませんが、2 つの異なる名前空間の要素を単一の文書内で利用する方法を紹介しています。
+### 基本的な使用
 
-```xml
-<?xml version="1.0"?>
-<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-      xmlns:html="http://www.w3.org/1999/xhtml"
-      title="||Working with elements||"
-      onload="init()">
+この文書では、新しい `<div>` 要素を {{Glossary("XHTML")}} 名前空間に作成する方法を示します。
 
-<script type="application/javascript"><![CDATA[
- let container;
- let newdiv;
- let txtnode;
+```js
+const divElementXHTML = document.createElementNS(
+  "http://www.w3.org/1999/xhtml",
+  "div",
+);
 
- function init(){
-   container = document.getElementById("ContainerBox");
-   newdiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
-   txtnode = document.createTextNode("This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.");
-   newdiv.appendChild(txtnode);
-   container.appendChild(newdiv);
- }
-
-]]></script>
-
- <vbox id="ContainerBox" flex="1">
-  <html:div>
-   The script on this page will add dynamic content below:
-  </html:div>
- </vbox>
-
-</page>
+// 次のものと同等です!
+const divElementHTML = document.createElement("div");
 ```
 
-> [!NOTE]
-> 上記の例は XHTML 文書では推奨されていないインラインスクリプトを使用しています。この部分的な例は実際には XUL 文書に埋め込んだ XHTML があるものですが、それでもこの推奨事項は適用されます。
+### SVG 要素を作成
+
+この例では、SVG 要素 ({{domxref("SVGSVGElement")}}) を作成し、それを HTML の `<body>` 要素に追加する方法を示しています。
+
+HTML 文書で作業する際には、SVG 名前空間に対して `createElementNS()` を使用する必要があります。
+{{DOMxRef("Document.createElement()", "createElement(\"svg\")")}} を呼び出した場合、{{domxref("HTMLUnknownElement")}} が返され、SVG はレンダリングされません。
+
+```js
+const svgNS = "http://www.w3.org/2000/svg";
+
+const svg = document.createElementNS(svgNS, "svg");
+svg.setAttribute("width", "100");
+svg.setAttribute("height", "100");
+
+const circle = document.createElementNS(svgNS, "circle");
+circle.setAttribute("cx", "50");
+circle.setAttribute("cy", "50");
+circle.setAttribute("r", "40");
+circle.setAttribute("fill", "steelblue");
+
+svg.appendChild(circle);
+document.body.appendChild(svg);
+```
 
 ## 仕様書
 
@@ -106,4 +137,3 @@ createElementNS(namespaceURI, qualifiedName, options)
 - {{DOMxRef("document.createElement()")}}
 - {{DOMxRef("document.createTextNode()")}}
 - {{DOMxRef("Element.namespaceURI")}}
-- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)

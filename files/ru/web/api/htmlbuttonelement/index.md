@@ -24,7 +24,7 @@ _Наследует свойства от его родителя, {{domxref("HT
   <tbody>
     <tr>
       <td><code>accessKey</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>Определённая кнопка клавиатуры, дающая доступ к кнопке.</td>
     </tr>
     <tr>
@@ -54,11 +54,11 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>formAction</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           URI ресурса, обрабатывающего информацию, отправленную кнопкой. Если
-          задан, то переопределяет <a href="/ru/docs/Web/HTML/Element/form#action"><code>action</code></a>
+          задан, то переопределяет <a href="/ru/docs/Web/HTML/Reference/Elements/form#action"><code>action</code></a>
           атрибут {{HTMLElement("form")}} элемента, который является
           его владельцем.
         </p>
@@ -66,22 +66,22 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>formEncType</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         Тип содержимого, используемый для отправки формы на сервер. Если указан
         этот атрибут, то он переопределяет
-        <a href="/ru/docs/Web/HTML/Element/form#enctype"><code>enctype</code></a> атрибут элемента
+        <a href="/ru/docs/Web/HTML/Reference/Elements/form#enctype"><code>enctype</code></a> атрибут элемента
         {{HTMLElement("form")}}, который является владельцем этого
         элемента.
       </td>
     </tr>
     <tr>
       <td><code>formMethod</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           HTTP метод, который браузер использует для отправки формы. Если задан,
-          тогда он переопределяет <a href="/ru/docs/Web/HTML/Element/form#method"><code>method</code></a>
+          тогда он переопределяет <a href="/ru/docs/Web/HTML/Reference/Elements/form#method"><code>method</code></a>
           атрибут {{HTMLElement("form")}} своего владельца.
         </p>
       </td>
@@ -93,19 +93,19 @@ _Наследует свойства от его родителя, {{domxref("HT
         <p>
           Показывает что форма не будет проверена при отправке. Если задано,
           тогда переопределяет
-          <a href="/ru/docs/Web/HTML/Element/form#novalidate"><code>novalidate</code></a> атрибут
+          <a href="/ru/docs/Web/HTML/Reference/Elements/form#novalidate"><code>novalidate</code></a> атрибут
           {{HTMLElement("form")}} своего владельца.
         </p>
       </td>
     </tr>
     <tr>
       <td><code>formTarget</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           Имя или ключевое слово, указывающее, где должен отображаться ответ,
           полученный после отправки формы. Если задано, тогда переопределяет
-          <a href="/ru/docs/Web/HTML/Element/form#target"><code>target</code></a> атрибут
+          <a href="/ru/docs/Web/HTML/Reference/Elements/form#target"><code>target</code></a> атрибут
           {{HTMLElement("form")}} своего владельца.
         </p>
       </td>
@@ -128,7 +128,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>name</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           Имя объекта отправляемое с формой.
@@ -148,7 +148,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>type</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           Указывает поведение кнопки. Это перечисляемый атрибут со следующими
@@ -172,7 +172,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>validationMessage</code> {{readonlyInline}}</td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         <p>
           A localized message that describes the validation constraints that the
@@ -191,7 +191,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>value</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>The current form control value of the button.</td>
     </tr>
     <tr>

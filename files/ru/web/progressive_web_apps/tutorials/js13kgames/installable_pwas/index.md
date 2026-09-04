@@ -3,7 +3,7 @@ title: Как сделать PWA устанавливаемым
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 В предыдущей статье мы читали о том, как [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) работает в off-line режиме благодаря [service worker](/ru/docs/Web/API/Service_Worker_API), но мы можем пойти дальше и позволить устанавливать веб-приложения на поддерживающие мобильные браузеры, как если бы это было нативное приложение. В этой статье разберём, как этого добиться, используя веб-манифест и функцию под названием «Добавить на главный экран».
 
@@ -111,6 +111,6 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 
 Теперь давайте перейдём к последнему фрагменту PWA-головоломки — повторному запуску с помощью push-уведомлений.
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Progressive_web_apps/")}}

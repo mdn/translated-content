@@ -22,7 +22,7 @@ _変更なし。_
 
 #### 廃止
 
-- 独自仕様である [`-moz-touch-enabled`](/ja/docs/Web/CSS/@media/-moz-touch-enabled) メディアクエリーを削除しました ([Firefox バグ 1486964](https://bugzil.la/1486964))。代わりに [`pointer: coarse`](/ja/docs/Web/CSS/@media/pointer) を使用してください。
+- 独自仕様である [`-moz-touch-enabled`](/ja/docs/Web/CSS/@media/-moz-touch-enabled) メディアクエリーを削除しました ([Firefox バグ 1486964](https://bugzil.la/1486964))。代わりに [`pointer: coarse`](/ja/docs/Web/CSS/Reference/At-rules/@media/pointer) を使用してください。
 
 ### SVG
 

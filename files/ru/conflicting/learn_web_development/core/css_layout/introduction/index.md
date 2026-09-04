@@ -6,7 +6,7 @@ original_slug: Learn/CSS/CSS_layout/Normal_Flow
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
 Эта статья объясняет нормальный/базовый поток (normal flow) или способ, которым элементы страницы располагаются на веб-странице по умолчанию.
 
@@ -86,4 +86,4 @@ span {
 
 Теперь, когда вы поняли нормальный поток и как браузер выкладывает содержимое по умолчанию, двигаемся дальше, чтобы понять как это изменить для создания макета согласно вашему дизайну.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}

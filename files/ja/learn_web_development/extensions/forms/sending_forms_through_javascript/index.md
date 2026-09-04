@@ -1,11 +1,10 @@
 ---
 title: JavaScript によるフォームの送信
+short-title: JS フォーム送信
 slug: Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: f85d2e26b062decf7a2bb9179c3a93003f4067a9
 ---
-
-{{LearnSidebar}}
 
 ユーザーが HTML フォームを送信する場合、例えば送信ボタンをクリックすると、ブラウザーは [HTTP](/ja/docs/Web/HTTP) リクエストを送信してフォーム内のデータを送信します。しかし、この宣言的な手法ではなく、ウェブアプリでは、フォーム送信を期待するエンドポイントにプログラムでデータを送信するために、 {{domxref("Window/fetch", "fetch()")}} などの JavaScript API を使用することがあります。この記事では、この手法が重要なユースケースである理由と、その方法について説明します。
 
@@ -123,24 +122,3 @@ form.addEventListener("submit", (event) => {
 フォーム要素に送信イベントハンドラーを追加します。最初の呼び出しでは、ブラウザーの組み込みフォーム送信を防ぐために {{domxref("Event.preventDefault()", "preventDefault()")}} が呼び出され、その後、フォーム要素を取得してそれを `FormData` コンストラクターに渡す `sendData()` が呼び出されます。
 
 その後、`fetch()` を使用して、 HTTP の `POST` リクエストとして `FormData` インスタンスを送信します。
-
-## 関連情報
-
-### 学習コース
-
-- [初めてのフォーム](/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form)
-- [フォームの構築方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Other_form_controls)
-- [UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
-- [フォームへのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [クライアントサイドのフォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
-
-### 上級トピック
-
-- **JavaScript によるフォームの送信**
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [古いブラウザーでの HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)

@@ -5,7 +5,7 @@ slug: Web/API/URL/origin
 
 {{APIRef("URL API")}}
 
-A propriedade somente de leitura **`origin`** da interface {{domxref("URL")}} retorna uma {{domxref("USVString")}} contendo a serialização Unicode da origem da URL representada.
+A propriedade somente de leitura **`origin`** da interface {{domxref("URL")}} retorna uma {{jsxref("String")}} contendo a serialização Unicode da origem da URL representada.
 
 A estrutura exata tem uma variação dependendo do tipo de URL:
 
@@ -17,7 +17,7 @@ A estrutura exata tem uma variação dependendo do tipo de URL:
 
 ## Valor
 
-Uma {{domxref("USVString")}}.
+Uma {{jsxref("String")}}.
 
 ## Exemplo
 

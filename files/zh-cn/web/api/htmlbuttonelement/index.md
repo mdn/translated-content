@@ -22,7 +22,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
   <tbody>
     <tr>
       <td><code>accessKey</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>一个键盘字符构成的字符串，表明用哪个键盘字符能够访问这个按钮。</td>
     </tr>
     <tr>
@@ -47,7 +47,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
     </tr>
     <tr>
       <td><code>formAction</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         一个处理提交信息的 URI 资源地址。如果指定该属性，会覆盖拥有该元素的 {{HTMLElement("form")}}
         元素的 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/form#action"><code>action</code></a> 属性。
@@ -55,7 +55,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
     </tr>
     <tr>
       <td><code>formEncType</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         表单要提交给服务器处理的内容的类型。如果指定该属性，会覆盖拥有该元素的 {{HTMLElement("form")}}
         元素的 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/form#enctype"
@@ -64,7 +64,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
     </tr>
     <tr>
       <td><code>formMethod</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         浏览器提交表单内容的 HTTP 方法。如果指定该属性，会覆盖拥有该元素的 {{HTMLElement("form")}}
         元素的 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/form#method"
@@ -84,7 +84,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
     </tr>
     <tr>
       <td><code>formTarget</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         一个名字或关键字，用于表明显示服务器响应的页面。如果指定该属性，会覆盖拥有该元素的 {{HTMLElement("form")}}
         元素的 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/form#target"
@@ -107,7 +107,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
     </tr>
     <tr>
       <td><code>name</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         提交到服务器时表单描述该对象的 name。如果指定该属性，不能使用空字符串。
       </td>
@@ -119,7 +119,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
     </tr>
     <tr>
       <td><code>type</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         表明按钮的行为。这个属性是枚举类型，可以是以下的值：
         <ul>
@@ -139,7 +139,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
     </tr>
     <tr>
       <td><code>validationMessage</code> {{readonlyInline}}</td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         报告该控件不满足验证要求的，提示给用户的看的信息。如果这个控件没有验证约束（<code>willValidate</code> 值为 <code>false</code>），或者满足验证的要求，那么这个属性为空字符串。
       </td>
@@ -151,7 +151,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
     </tr>
     <tr>
       <td><code>value</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>这个控件当前的表单值。</td>
     </tr>
     <tr>

@@ -51,9 +51,9 @@ Par exemple, vous ne devriez pas utiliser Google Analytics de la façon suivante
 
 ```html example-bad
 <a
-  href="http://www.exemple.com"
-  onclick="trackLink('http://www.exemple.com', event);">
-  Visiter exemple.com
+  href="http://www.example.com"
+  onclick="trackLink('http://www.example.com', event);">
+  Visiter example.com
 </a>
 
 <script>
@@ -73,9 +73,9 @@ Au lieu de cela, prenez en compte le cas où Google Analytics est absent, en vé
 
 ```html example-good
 <a
-  href="http://www.exemple.com"
-  onclick="trackLink('http://www.exemple.com', event);">
-  Visiter exemple.com
+  href="http://www.example.com"
+  onclick="trackLink('http://www.example.com', event);">
+  Visiter example.com
 </a>
 
 <script>

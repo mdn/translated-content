@@ -15,7 +15,7 @@ Un `TypeError` puede ser lanzado cuando:
 
 ## Constructor
 
-- {{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}
+- {{jsxref("TypeError.TypeError", "TypeError()")}}
   - : Crea un nuevo objeto `TypeError`.
 
 ## Propiedades de instancia

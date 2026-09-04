@@ -9,7 +9,7 @@ slug: Web/API/BeforeInstallPromptEvent
 
 该接口继承自{{domxref("Event")}}接口。
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 ## 构造器
 
@@ -21,9 +21,9 @@ slug: Web/API/BeforeInstallPromptEvent
 _继承自父类，{{domxref("Event")}}._
 
 - {{domxref("BeforeInstallPromptEvent.platform")}} {{readonlyinline}}
-  - : 返回一个包含了调度事件的平台（s）的 {{domxref("DOMString")}} 数组。这是为希望向用户提供版本选择的 user agent 提供的，例如，“web”或“play”允许用户在 web 版本或 Android 版本之间进行选择。
+  - : 返回一个包含了调度事件的平台（s）的 {{jsxref("String")}} 数组。这是为希望向用户提供版本选择的 user agent 提供的，例如，“web”或“play”允许用户在 web 版本或 Android 版本之间进行选择。
 - {{domxref("BeforeInstallPromptEvent.userChoice")}} {{readonlyinline}}
-  - : 返回一个可以解析为 {{domxref("DOMString")}} 的 {{jsxref("Promise")}} ，其值为 'installed' 或 'dismissed'，用以判断用户是否选择安装该 PWA。
+  - : 返回一个可以解析为 {{jsxref("String")}} 的 {{jsxref("Promise")}} ，其值为 'installed' 或 'dismissed'，用以判断用户是否选择安装该 PWA。
 
 ## 方法
 

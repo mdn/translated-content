@@ -34,13 +34,13 @@ continue [label];
 
 ## Description
 
-Contrairement à {{jsxref("Instructions/break", "break")}}, `continue` ne termine pas la boucle complètement :
+Contrairement à {{jsxref("Statements/break", "break")}}, `continue` ne termine pas la boucle complètement :
 
-- au sein d'une boucle {{jsxref("Instructions/while", "while")}}, elle repart à la phase de la condition.
+- au sein d'une boucle {{jsxref("Statements/while", "while")}}, elle repart à la phase de la condition.
 
 <!---->
 
-- au sein d'une boucle {{jsxref("Instructions/for", "for")}}, elle repart à l'expression de mise à jour de la boucle.
+- au sein d'une boucle {{jsxref("Statements/for", "for")}}, elle repart à l'expression de mise à jour de la boucle.
 
 L'instruction `continue` peut éventuellement contenir une étiquette (_label_) qui permet de tirer parti des instructions de boucles étiquetées (plutôt que de ne traiter que la boucle courante). Dans le cas où l'étiquette est utilisée, il faut que l'instruction `continue` soit imbriquée dans l'instruction étiquetée.
 
@@ -48,7 +48,7 @@ L'instruction `continue` peut éventuellement contenir une étiquette (_label_) 
 
 ### Utiliser `continue` avec `while`
 
-L'instruction suivante illustre comment on peut utiliser continue au sein d'une boucle {{jsxref("Instructions/while", "while")}}, ici `continue` est utilisé lorsque `i` vaut 3. On a donc `n` qui prend les valeurs 1, 3, 7, et 12.
+L'instruction suivante illustre comment on peut utiliser continue au sein d'une boucle {{jsxref("Statements/while", "while")}}, ici `continue` est utilisé lorsque `i` vaut 3. On a donc `n` qui prend les valeurs 1, 3, 7, et 12.
 
 ```js
 var i = 0;
@@ -68,7 +68,7 @@ Dans l'exemple suivant, on a une instruction étiquetée `vérifIetJ` qui contie
 
 Si `continue` utilisait l'étiquette `vérifIetJ`, le programme continuerait au début de l'instruction `vérifIetJ`.
 
-Voir aussi {{jsxref("Instructions/label", "label")}}.
+Voir aussi {{jsxref("Statements/label", "label")}}.
 
 ```js
 var i = 0;
@@ -131,5 +131,5 @@ En utilisant le fragment ci-avant, on aura le résultat suivant :
 
 ## Voir aussi
 
-- {{jsxref("Instructions/break", "break")}}
-- {{jsxref("Instructions/label", "label")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/label", "label")}}

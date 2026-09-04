@@ -123,4 +123,4 @@ drawPaddle();
 
 Теперь у нас есть что-то похожее на игру. Беда только в том, что пока вы можете лишь бесконечно бить мяч ракеткой. Это все изменится в пятой главе, [Game over](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over), когда мы начнём добавлять конечное состояние для нашей игры.
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}

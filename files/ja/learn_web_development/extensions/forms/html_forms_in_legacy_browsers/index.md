@@ -1,11 +1,10 @@
 ---
 title: 古いブラウザーでの HTML フォーム
+short-title: 古いブラウザーでのフォーム
 slug: Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: dc9d517589ac7b74bc205f49492b0450dfdb78de
 ---
-
-{{LearnSidebar}}
 
 ウェブ開発者は誰でも、ウェブが自分たちにとって非常に厳しい場所であることを、すぐに（時には痛みを伴って）学びます。最悪の災いは古いブラウザーです。これはかつて "Internet Explorer" を意味していましたが、特に携帯電話など、ブラウザーも OS もアップデートできない古い端末を使用している人が何百万人もいます。
 
@@ -45,13 +44,13 @@ HTML5 で追加された入力型は、劣化の仕方が高度に予測可能�
     <tr>
       <td>
         <img
-          alt="Screen shot of the color input on Chrome for Mac OSX"
+          alt="Screen shot of the color input on Chrome for macOS"
           src="color-fallback-chrome.png"
         />
       </td>
       <td>
         <img
-          alt="Screen shot of the color input on Firefox for Mac OSX"
+          alt="Screen shot of the color input on Firefox for macOS"
           src="color-fallback-firefox.png"
         />
       </td>
@@ -74,38 +73,25 @@ HTML フォームでボタンを定義する方法は 2 つあります。
 <input type="button" value="click me" />
 ```
 
-すべての input から境界線を削除する場合、ボタンについてのみ既定の外見に戻すことができるでしょうか？
+すべての入力フィールドの境界線を除去した場合、グローバル CSS の {{cssxref('revert')}} 値を使用することで、入力ボタンのみデフォルトの外観に戻すことができます。
 
 ```css
 input {
-  /* この規則は、input 要素で定義するボタンを含む、境界線を持つ入力型の
-  既定のレンダリングを無効にします */
-  border: 1px solid #ccc;
+  /* このルールは、input 要素で定義するボタンを含む、境界線を持つ入力型の
+  デフォルトのレンダリングを無効にします */
+  border: 1px solid #cccccc;
 }
 input[type="button"] {
-  /* これでは既定のレンダリングを復元できません */
-  border: none;
-}
-input[type="button"] {
-  /* これでも復元できません。実際、どのブラウザーでもできる標準の方法はありませ */
-  border: auto;
-  border: initial;
-}
-input[type="button"] {
-  /* 対応していれば、これが既定のレンダリングに戻す最も近い方法です。 */
+  /* これではデフォルトのレンダリングを復元できません */
   border: revert;
 }
 ```
 
-詳しくは、CSS のグローバル値である {{cssxref('revert')}} を参照してください。
+### 古いブラウザーでのスタイル設定の制限
 
-### CSS を手放そう
+古いブラウザーにおける HTML フォームの大きな課題の一つは、CSS によるスタイル設定です。他の箇所でも説明されているように、{{cssxref('appearance', 'appearance: none;')}} を宣言することで、デフォルトのスタイルを除去し、その上に独自のスタイルを適用することができます。ただし、古いブラウザーでは、このモジュールの前半で取り上げたスタイル設定手法が、現行ブラウザーほど対応していない傾向があります。古いブラウザーでの対応が必要な場合は、フォームコントロールのスタイル設定を一切行わないほうがよいかもしれません。特定の入力型の対応状況を検出する方法については、次の節を参照してください。
 
-HTML フォームの大きな問題の一つは、 CSS によるフォームウィジェットのスタイル付けです。フォームコントロールの外観は、ブラウザーや OS に依存します。例えば、 color 型の入力は、 Safari、Chrome、Firefox のそれぞれのブラウザーによって外見が異なりますが、カラーピッカーのウィジェットは、OS のネイティブカラーピッカーを開くため、端末上のどのブラウザーでも同じになります。
-
-一般に、フォームコントロールの既定の外観は変更しない方が良いと考えられています。というのも、 1 つの CSS プロパティの値を変更すると、一部の入力型は変更されますが、他の入力型は変更されないからです。例えば、 `input { font-size: 2rem; }` と宣言した場合、 `number`、`date`、`text` には影響がありますが、 `color` や `range` には影響しません。プロパティを変更すると、予期せぬ形でウィジェットの外観に影響を与えることがあります。例えば、 `[value] { background-color: #ccc; }` は、 `value` 属性を持つすべての {{HTMLElement("input")}} を対象としていますが、 {{HTMLElement("meter")}} の背景色や境界線の角の丸めを変更すると、ブラウザーによって異なる予期せぬ結果になる可能性があります。 {{cssxref('appearance', 'appearance: none;')}} と宣言してブラウザーのスタイルを削除することもできますが、一般的には目的を達成できません。すべてのスタイルが失われ、訪問者が慣れ親しんだ既定のルック＆フィールが削除されるからです。
-
-まとめるとすると、フォームコントロールのウィジェットに CSS でスタイル付けすることで、予測できない副作用が発生することがあります。だからやめましょう。 [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls)の記事の複雑さからもわかるように、非常に難しいのです。テキスト要素に多少の調整 (サイズやフォントの色など) を行うことはまだ可能でも、必ず副作用が発生します。最良の方法は、 HTML フォームウィジェットにスタイルをまったく適用しないことです。しかし、周囲のアイテムになら、どれでも適用することはできます。また、どうしてもフォームウィジェットの既定のスタイルを変更しなければならない場合は、スタイルガイドを定義して、すべてのフォームコントロールの一貫性を確保し、ユーザーの使い勝手を損なわないようにしてください。また、 [JavaScript でのウィジェットの再構築](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)など、難しいテクニックを検討することもできます。しかし、その場合は、[そのような愚かな要求をするクライアントに請求すること](https://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/)をためらってはいけません。
+古いブラウザーでフォームウィジェットのデフォルトのスタイルを変更しなければならない場合は、スタイルガイドを定義して、すべてのフォームコントロールの一貫性を確保し、ユーザーの使い勝手を損なわないようにしてください。また、[JavaScript でのウィジェットの再構築](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)など、難しいテクニックを検討することもできますが、その手間を考えると、割に合わないことがあります。
 
 ## 機能検出とポリフィル
 
@@ -119,12 +105,30 @@ CSS や JavaScript は素晴らしい技術ですが、古いブラウザーで�
 @supports (appearance: none) {
   input[type="search"] {
     appearance: none;
-    /* restyle the search input */
+    /* 検索入力のスタイル再設定 */
   }
 }
 ```
 
-{{cssxref('appearance')}} プロパティは、要素をプラットフォームのネイティブのスタイルで表示したり、 `none` の値を指定することで、既定のプラットフォームのネイティブベースのスタイルを削除したりするために使用されます。
+{{cssxref('appearance')}} プロパティは、要素をプラットフォームのネイティブのスタイルで表示したり、 `none` の値を指定することで、デフォルトのプラットフォームのネイティブベースのスタイルを削除したりするために使用されます。
+
+### JavaScript によるフォーム入力の検出
+
+JavaScript で、特定の入力型の対応状況を確認することができます。これは、先ほど触れた事実、つまり、対応していないブラウザーではすべての入力型が `<input type="text">` に切り替わるということに基づいています。
+
+検査関数を定義しましょう。関数本体の最初の行では、検査用の `<input>` 要素を作成します。次に、その `type` 属性を、検査したい型に設定します。最後に、`type` 属性の値を検査します。その入力型に対応していないブラウザーでは、上記の行は効力がなく、`type` は `text` として返されます。その下の行では、否定演算子 (`!`) を使用して返値を反転させています。これは、`type` が `text` でない場合、その入力型が対応していることになるため、`true` を返したいからです。完全な関数は下記のようにします。
+
+```js
+function testDatetimeLocalSupport() {
+  const testInput = document.createElement("input");
+  testInput.setAttribute("type", "datetime-local");
+  return testInput.type !== "text";
+}
+```
+
+上記の例は、こうした検査の基本的な考え方を示しています。しかし、一から作り直すのではなく、機能検出ライブラリーを使用しましょう。
+
+この検査結果に基づいて、例えば、JavaScript を使用して未対応の型に対する独自の代替実装を作成したり、古いブラウザーには単純なデフォルトスタイルを指定したいという理由から、未対応の型にスタイルを適用するこのスタイルシートを適用しないといった選択が可能になります。
 
 ### 控えめな JavaScript
 
@@ -133,7 +137,7 @@ CSS や JavaScript は素晴らしい技術ですが、古いブラウザーで�
 - 構造と動作を厳密に分割する。
 - コードが動作しない場合でも、コンテンツや基本的な機能はアクセス可能かつ利用可能のままでなければならない。
 
-[The principles of unobtrusive JavaScript](https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript) (原文は Peter-Paul Koch 氏によって Dev.Opera.com 向けに記述され、現在は Docs.WebPlatform.org に移動しました) で、これらのアイデアを明快に説明しています。
+[The principles of unobtrusive JavaScript](https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript)（原文は Peter-Paul Koch 氏によって dev.opera.com 向けに記述されたものです）で、これらのアイデアを明快に説明しています。
 
 ### パフォーマンスに注意を払う
 
@@ -141,27 +145,6 @@ Modernizr のようなスクリプトはパフォーマンスを非常に意識�
 
 ## おわりに
 
-このように、ブラウザーや OS における既定のフォームコントロールの外観を考慮することは重要です。これらの問題に対処するためのテクニックは数多くありますが、そのすべてをマスターすることは、この記事の範囲を超えています。大前提として、既定の実装を変更することに価値があるかどうかを検討してから挑戦してください。
+このように、ブラウザーや OS におけるデフォルトのフォームコントロールの外観を考慮することは重要です。これらの問題に対処するためのテクニックは数多くありますが、そのすべてをマスターすることは、この記事の範囲を超えています。大前提として、デフォルトの実装を変更することに価値があるかどうかを検討してから挑戦してください。
 
 この [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)のすべての記事を読んでいれば、フォームの使用に慣れているはずです。新しいテクニックやヒントを見つけた場合は、ガイドの改善にご協力ください。
-
-## 関連情報
-
-### 学習経路
-
-- [初めてのフォーム](/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form)
-- [ウェブフォームの構築方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
-- [ネイティブのフォームウィジェット](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)
-- [高度なフォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Other_form_controls)
-- [UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
-- [ウェブフォームへのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [クライアントサイドのフォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
-
-### 高度なトピック
-
-- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
-- [カスタムフォームウィジェットの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- **古いブラウザーでの HTML フォーム**
-- [フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)

@@ -20,7 +20,7 @@ URLSearchParams.get(name)
 
 ### Retorno
 
-Um {{domxref("USVString")}} se o parâmetro de pesquisa for encontrado; Caso contrário, **`null`**.
+Um {{jsxref("String")}} se o parâmetro de pesquisa for encontrado; Caso contrário, **`null`**.
 
 ## Exemplo
 

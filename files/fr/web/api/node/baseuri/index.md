@@ -1,53 +1,66 @@
 ---
-title: Node.baseURI
+title: "Node : propriété baseURI"
+short-title: baseURI
 slug: Web/API/Node/baseURI
+l10n:
+  sourceCommit: b7c9a25bc747b8a4a3dfd91a37ac1b2193414c3a
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Node.baseURI`** renvoie l'URL de base absolue d'un noeud.
+La propriété en lecture seule **`baseURI`** de l'interface {{DOMxRef("Node")}} retourne l'URL de base absolue du document contenant le nœud.
 
-L'URL de base est utilisée pour [résoudre](https://developers.whatwg.org/urls.html#resolving-urls) les URL relatives quand le navigateur a besoin d'obtenir une URL absolue, par exemple lors du traitement de l'attribut `src` en HTML ou XML `xlink:href` d'un élément {{HTMLElement("img")}} HTML.
+L'URL de base est utilisée pour résoudre les URL relatives lorsque le navigateur doit obtenir une URL absolue, par exemple lors du traitement de l'attribut `src` d'un élément HTML {{HTMLElement("img")}} ou des attributs `xlink:href` {{Deprecated_Inline}} ou `href` dans SVG.
 
-En général, l'URL de base est simplement l'emplacement du document, mais elle peut être affectée par de nombreux facteurs, y compris l'élément {{HTMLElement("base")}} en HTML et l'attribut [`xml:base`](/fr/docs/Web/API/Node/baseURI) en XML.
+Bien que cette propriété soit en lecture seule, sa valeur est déterminée par un algorithme chaque fois que la propriété est consultée, et peut changer si les conditions changent.
 
-## Syntaxe
+L'URL de base est déterminée comme suit&nbsp;:
 
-```js
-var baseURI = node.baseURI;
+1. Par défaut, l'URL de base est l'emplacement du document (tel que déterminé par {{DOMxRef("window.location")}}).
+2. S'il s'agit d'un document HTML et qu'il existe un élément {{HTMLElement("base")}} dans le document,
+   la valeur `href` du _premier_ élément `base` avec un tel attribut est utilisée à la place.
+
+## Valeur
+
+Une chaîne de caractères représentant l'URL de base du nœud ({{DOMxRef("Node")}}).
+
+## Exemples
+
+### Sans \<base>
+
+```html
+<output>Pas calculé</output>
 ```
 
-- `baseURI` est une {{ domxref("DOMString") }} (_chaîne de caractères_) représentant l'URL de base du {{domxref("Node")}} spécifié. Elle peut être `null` s'il est impossible d'obtenir une URI absolue.
-- `node.baseURI` est en lecture seule.
-- `node.baseURI` peut changer avec le temps (voir ci-dessous).
+```js
+const sortie = document.querySelector("output");
+sortie.value = sortie.baseURI;
+```
 
-## Détails
+{{EmbedLiveSample("Sans \<base>", "100%", 40)}}
 
-### L'URL de base d'un document
+### Avec \<base>
 
-L'URL de base d'un _document_ est par défaut l'adresse du document (telle qu'affichée par le navigateur et disponible dans {{domxref("window.location")}}), mais peut changer par défaut :
+```html
+<base href="https://developer.mozilla.org/modified_base_uri/" />
+<output>Pas calculé</output>
+```
 
-- Si une balise HTML {{HTMLElement("base")}} est trouvée dans le document ;
-- Lorsque celui-ci est un nouveau document créé dynamiquement.
+```js
+const sortie = document.querySelector("output");
+sortie.value = sortie.baseURI;
+```
 
-Voir la page [Base URLs section of the HTML Living standard](https://developers.whatwg.org/urls.html#base-urls) (en) pour plus de détails.
-
-Vous pouvez utiliser `{{domxref("document")}}.baseURI` pour obtenir l'URL de base d'un document. Notez que l'obtention de l'URL de base d'un document peut renvoyer des URL différentes au fil du temps si la balise {{HTMLElement("base")}} ou l'emplacement du document change.
-
-### L'URL de base d'un élément
-
-L'URL de base d'un _element_ en HTML est normalement équivalente à celle du document dans lequel se trouve le noeud.
-
-Si le document contient des attributs [`xml:base`](/fr/docs/Web/API/Node/baseURI) (ce que vous ne devriez pas faire dans les documents HTML), l'`element.baseURI` prend en compte l'attribut `xml:base` des parents de l'élément lors du calcul de l'URL de base. Voir [xml:base](/fr/docs/Web/API/Node/baseURI) pour plus de détails.
-
-Vous pouvez utiliser `{{domxref("element")}}.baseURI` pour obtenir l'URL de base d'un élément.
+{{EmbedLiveSample("Avec \<base>", "100%", 40)}}
 
 ## Spécifications
 
 {{Specifications}}
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 ## Voir aussi
 
-- l'élément {{HTMLElement("base")}} (HTML)
-- l'attribut [`xml:base`](/fr/docs/Web/API/Node/baseURI) (documents XML).
-- {{domxref("Node.baseURIObject")}} - une variante de cette API pour les add-ons Mozilla et le code interne. Renvoie l'URL de base en tant que `nsIURI`.
+- L'élément HTML {{HTMLElement("base")}}

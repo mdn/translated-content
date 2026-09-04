@@ -19,7 +19,7 @@ performance.clearMeasures(name);
 ### Arguments
 
 - name {{optional_inline}}
-  - : Un {{domxref("DOMString")}} représentant le nom de l'horodatage. Si cet argument est omis, toutes les {{domxref("PerformanceEntry","entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entrType")}} de « `measure` » seront supprimés.
+  - : Un {{jsxref("String")}} représentant le nom de l'horodatage. Si cet argument est omis, toutes les {{domxref("PerformanceEntry","entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entrType")}} de « `measure` » seront supprimés.
 
 ### Valeur de retour
 

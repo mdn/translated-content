@@ -1,24 +1,23 @@
 ---
 title: RegExp.prototype.flags
+short-title: flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`flags`** は {{jsxref("RegExp")}} インスタンスのプロパティで、現在の正規表現オブジェクトの[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)から成る文字列を返します。
 
 {{InteractiveExample("JavaScript デモ: RegExp.prototype.flags")}}
 
 ```js interactive-example
-// Outputs RegExp flags in alphabetical order
+// 正規表現フラグをアルファベット順に出力
 
 console.log(/foo/gi.flags);
-// Expected output: "gi"
+// 予想される結果: "gi"
 
-console.log(/bar/muy.flags);
-// Expected output: "muy"
+console.log(/^bar/muy.flags);
+// 予想される結果: "muy"
 ```
 
 ## 解説
@@ -35,7 +34,7 @@ console.log(/bar/muy.flags);
 
 ```js-nolint
 /foo/ig.flags; // "gi"
-/bar/myu.flags; // "muy"
+/^bar/myu.flags; // "muy"
 ```
 
 ## 仕様書
@@ -49,4 +48,6 @@ console.log(/bar/muy.flags);
 ## 関連情報
 
 - [`RegExp.prototype.flags` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{JSxRef("RegExp.prototype.source")}}
+- [es-shims による `RegExp.prototype.flags` のポリフィル](https://www.npmjs.com/package/regexp.prototype.flags)
+- [フラグを用いた高度な検索](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)（正規表現ガイド）
+- {{jsxref("RegExp.prototype.source")}}

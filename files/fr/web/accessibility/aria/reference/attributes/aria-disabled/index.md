@@ -3,14 +3,14 @@ title: "ARIA : attribut aria-disabled"
 short-title: aria-disabled
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-disabled
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-L'état `aria-disabled` indique que l'élément est perceptible mais désactivé, donc non modifiable ni opérable.
+L'état `aria-disabled` indique que l'élément est perceptible mais désactivé, donc non modifiable ni utilisable.
 
 ## Description
 
-L'attribut `aria-disabled`, lorsqu'il est défini à `true`, indique que l'élément sur lequel il est appliqué, ainsi que tous ses descendants focalisables, doivent être considérés comme désactivés. Cette déclaration informe les utilisateur·ice·s de technologies d'assistance, comme les lecteurs d'écran, que ces éléments ne sont pas censés être modifiables ou opérables.
+L'attribut `aria-disabled`, lorsqu'il est défini à `true`, indique que l'élément sur lequel il est appliqué, ainsi que tous ses descendants focalisables, doivent être considérés comme désactivés. Cette déclaration informe les utilisateur·ice·s de technologies d'assistance, comme les lecteurs d'écran, que ces éléments ne sont pas censés être modifiables ou utilisables.
 
 Contrairement à l'attribut booléen HTML [`disabled`](/fr/docs/Web/HTML/Reference/Elements/input#disabled), qui communique qu'un contrôle de formulaire est désactivé, modifie son apparence et supprime toute fonctionnalité (y compris la participation à la soumission du formulaire), `aria-disabled="true"` <strong>expose uniquement</strong> ces éléments comme désactivés sur le plan sémantique. Les développeur·euse·s doivent s'assurer manuellement que la fonctionnalité de ces éléments est effectivement désactivée.
 
@@ -20,7 +20,7 @@ Pour désactiver des contrôles de formulaire HTML natifs, il faut utiliser l'at
 - Un bouton qui doit rester dans l'ordre de tabulation mais dont l'action est momentanément indisponible (ex. : soumission d'un formulaire),
 - Des éléments temporairement inactifs dans un menu qui seraient sinon ignorés par la navigation clavier standard.
 
-Dans ces cas, on souhaite que les utilisateur·ice·s trouvent ces éléments via la navigation clavier, même si leur fonctionnalité est désactivée. Il faut alors utiliser JavaScript pour désactiver la fonctionnalité et modifier l'apparence de l'élément afin que les utilisateur·ice·s voyant·e·s sachent qu'il est désactivé.
+Dans ces cas, on souhaite que les utilisateur·ice·s trouvent ces éléments avec la navigation clavier, même si leur fonctionnalité est désactivée. Il faut alors utiliser JavaScript pour désactiver la fonctionnalité et modifier l'apparence de l'élément afin que les utilisateur·ice·s voyant·e·s sachent qu'il est désactivé.
 
 > [!NOTE]
 > L'état désactivé s'applique à l'élément avec `aria-disabled="true"` et à tous ses descendants focalisables. Soyez vigilant·e lors de l'utilisation sur des conteneurs, notamment s'ils contiennent à la fois des contrôles de formulaire et des liens&nbsp;: l'intention peut être de désactiver les contrôles sans désactiver les liens.
@@ -31,7 +31,7 @@ Un autre cas d'usage de `aria-disabled` plutôt que l'attribut HTML `disabled` c
 <div role="button" aria-disabled="true" tabindex="-1">Modifier</div>
 ```
 
-Comme pour la désactivation fonctionnelle, il faut aussi adapter le style. Contrairement à l'attribut HTML `disabled`, qui applique les styles `:disabled` du navigateur, `aria-disabled="true"` n'applique aucun style par défaut. On peut styliser l'élément avec le [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"]`.
+Comme pour la désactivation fonctionnelle, il faut aussi adapter le style. Contrairement à l'attribut HTML `disabled`, qui applique les styles `:disabled` du navigateur, `aria-disabled="true"` n'applique aucun style par défaut. On peut styliser l'élément avec le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[aria-disabled="true"]`.
 
 ```css
 [aria-disabled="true"] {
@@ -50,12 +50,12 @@ Si vous souhaitez que le contrôle reste dans l'ordre de tabulation, notamment s
 }
 ```
 
-La [requête média `forced-colors`](/fr/docs/Web/CSS/@media/forced-colors) détecte si l'agent utilisateur a activé un mode couleurs forcées&nbsp;: dans ce cas, la couleur du texte et des bordures est définie sur la couleur système [GrayText](/fr/docs/Web/CSS/system-color#syntax).
+La [requête média `forced-colors`](/fr/docs/Web/CSS/Reference/At-rules/@media/forced-colors) détecte si l'agent utilisateur a activé un mode couleurs forcées&nbsp;: dans ce cas, la couleur du texte et des bordures est définie sur la couleur système [GrayText](/fr/docs/Web/CSS/Reference/Values/system-color#syntax).
 
 À noter&nbsp;: avec `aria-disabled`, il faut toujours prévoir le style visuel pour signaler l'état désactivé, notamment en mode contraste élevé sous Windows.
 
 > [!NOTE]
-> Si vous utilisez [`pointer-events: none;`](/fr/docs/Web/CSS/pointer-events) pour rendre un élément non cliquable, pensez à désactiver aussi l'interactivité côté JavaScript. `pointer-events: none;` bloque les clics souris, mais n'empêche pas l'activation clavier.
+> Si vous utilisez [`pointer-events: none;`](/fr/docs/Web/CSS/Reference/Properties/pointer-events) pour rendre un élément non cliquable, pensez à désactiver aussi l'interactivité côté JavaScript. `pointer-events: none;` bloque les clics souris, mais n'empêche pas l'activation clavier.
 
 ```js
 function onClick(event) {
@@ -83,7 +83,7 @@ Quand vous basculez de `aria-disabled="true"` à `"false"`, utilisez JavaScript 
 2. Activer l'élément,
 3. Informer l'utilisateur·ice que le contrôle est activé.
 
-Si vous n'utilisez que le CSS pour styliser l'état désactivé via un sélecteur d'attribut, ce style ne s'appliquera plus dès que l'attribut sera retiré ou modifié.
+Si vous n'utilisez que le CSS pour styliser l'état désactivé avec un sélecteur d'attribut, ce style ne s'appliquera plus dès que l'attribut sera retiré ou modifié.
 
 ## Valeurs
 
@@ -95,10 +95,10 @@ Si vous n'utilisez que le CSS pour styliser l'état désactivé via un sélecteu
 
 ## Interfaces associées
 
-- {{domxref("Element.ariaDisabled")}}
-  - : La propriété [`ariaDisabled`](/fr/docs/Web/API/Element/ariaDisabled), qui fait partie de l'interface {{domxref("Element")}}, reflète la valeur de l'attribut `aria-disabled`, qui indique que l'élément est perceptible mais désactivé, donc non modifiable ni opérable.
-- {{domxref("ElementInternals.ariaDisabled")}}
-  - : La propriété [`ariaDisabled`](/fr/docs/Web/API/ElementInternals/ariaDisabled) de l'interface {{domxref("ElementInternals")}} reflète la valeur de l'attribut `aria-disabled`.
+- {{DOMxRef("Element.ariaDisabled")}}
+  - : La propriété [`ariaDisabled`](/fr/docs/Web/API/Element/ariaDisabled), qui fait partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-disabled`, qui indique que l'élément est perceptible mais désactivé, donc non modifiable ni utilisable.
+- {{DOMxRef("ElementInternals.ariaDisabled")}}
+  - : La propriété [`ariaDisabled`](/fr/docs/Web/API/ElementInternals/ariaDisabled) de l'interface {{DOMxRef("ElementInternals")}} reflète la valeur de l'attribut `aria-disabled`.
 
 ## Rôles associés
 
@@ -151,9 +151,9 @@ Hérité par les rôles&nbsp;:
 ## Voir aussi
 
 - [Rendre les boutons désactivés plus inclusifs <sup>(angl.)</sup>](https://css-tricks.com/making-disabled-buttons-more-inclusive/)
-- [Styliser pour le contraste élevé Windows avec les nouveaux standards de couleurs forcées <sup>(angl.)</sup>](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
+- [Mettre en forme pour le contraste élevé Windows avec les nouveaux standards de couleurs forcées <sup>(angl.)</sup>](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
 - L'attribut HTML [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled)
-- {{domxref("Element.ariaDisabled")}}
-- {{domxref("ElementInternals.ariaDisabled")}}
+- La propriété API {{DOMxRef("Element.ariaDisabled")}}
+- La propriété API {{DOMxRef("ElementInternals.ariaDisabled")}}
 - L'attribut ARIA [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
 - L'attribut ARIA [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)

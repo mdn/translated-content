@@ -25,7 +25,7 @@ El evento `change` se dispara para elementos {{HTMLElement("input")}}, {{HTMLEle
       <th scope="row">Propiedad del manejador del evento</th>
       <td>
         <code
-          ><a href="/es/docs/Web/API/GlobalEventHandlers/onchange"
+          ><a href="/es/docs/conflicting/Web/API/HTMLElement/change_event"
             >onchange</a
           ></code
         >

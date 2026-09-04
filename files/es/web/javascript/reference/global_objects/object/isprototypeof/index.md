@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 El método **`isPrototypeOf()`** comprueba si un objeto se encuentra en la cadena de prototipado de otro.
 
 > [!NOTE]
-> `isPrototypeOf` difiere del operador {{jsxref("Operators/instanceof", "instanceof")}}. En la expresión "`object instanceof AFunction`", la cadena de prototipado de `object` es comprobada contra `AFunction.prototype`, no contra la propia `AFunction`.
+> `isPrototypeOf` difiere del operador {{jsxref("instanceof")}}. En la expresión "`object instanceof AFunction`", la cadena de prototipado de `object` es comprobada contra `AFunction.prototype`, no contra la propia `AFunction`.
 
 ## Sintaxis
 
@@ -61,7 +61,7 @@ if (Fi.prototype.isPrototypeOf(fum)) {
 }
 ```
 
-Esto, junto con el operador {{jsxref("Operators/instanceof", "instanceof")}} resulta especialmente útil si se tiene código que sólo puede operar cuando se trata de objetos descendientes de una cadena de prototipado específica, p.e., para garantizar que ciertos métodos o propiedades estén presentes en dichos objetos.
+Esto, junto con el operador {{jsxref("instanceof")}} resulta especialmente útil si se tiene código que sólo puede operar cuando se trata de objetos descendientes de una cadena de prototipado específica, p.e., para garantizar que ciertos métodos o propiedades estén presentes en dichos objetos.
 
 ## Especificaciones
 
@@ -73,7 +73,7 @@ Esto, junto con el operador {{jsxref("Operators/instanceof", "instanceof")}} res
 
 ## Ver también
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

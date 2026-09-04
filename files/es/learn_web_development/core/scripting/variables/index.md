@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Variables
 original_slug: Learn/JavaScript/First_steps/Variables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Después de leer los últimos artículos, deberías saber qué es JavaScript, qué puede hacer por ti, cómo usarlo junto con otras tecnologías web y cómo se ven sus características principales desde un alto nivel. En este artículo, llegaremos a los conceptos básicos reales, y veremos cómo trabajar con los bloques de construcción más básicos de JavaScript — Variables.
 
@@ -128,7 +128,7 @@ En este punto, puedes estar pensando "¿por qué necesitamos dos palabras clave 
 
 Las razones son algo históricas. Cuando se creó JavaScript por primera vez, solo existía `var`. Esto básicamente funciona bien en la mayoría de los casos, pero tiene algunos problemas en la forma en que trabaja — su diseño a veces puede ser confuso o francamente molesto. Entonces, se creó `let` en versiones modernas de JavaScript, una nueva palabra clave para crear variables que funciona de manera algo diferente a `var`, solucionando sus problemas en el proceso.
 
-A continuación se explican un par de diferencias simples. No abordaremos todas las diferencias ahora, pero comenzarás a descubrirlas a medida que aprendas más sobre JavaScript (si realmente deseas leer sobre ellas ahora, no dudes en consultar {{jsxref("Sentencias/let", "let")}} en nuestra página de referencia.
+A continuación se explican un par de diferencias simples. No abordaremos todas las diferencias ahora, pero comenzarás a descubrirlas a medida que aprendas más sobre JavaScript (si realmente deseas leer sobre ellas ahora, no dudes en consultar {{jsxref("Statements/let", "let")}} en nuestra página de referencia.
 
 Para empezar, si escribes un programa JavaScript de varias líneas que declara e inicia una variable, puedes declarar una variable con `var` después de iniciarla y seguirá funcionando. Por ejemplo:
 
@@ -147,7 +147,7 @@ var myName;
 > [!NOTE]
 > Esto no funcionará al escribir líneas individuales en una consola de JavaScript, solo cuando se ejecutan varias líneas de JavaScript en un documento web.
 
-Esto funciona debido a la **elevación** — lee {{jsxref("Sentencias/var", "Elevación de variables", "#Elevación_de_variables")}} para obtener más detalles sobre el tema.
+Esto funciona debido a la **elevación** — lee {{jsxref("Statements/var", "Elevación de variables", "#Elevación_de_variables")}} para obtener más detalles sobre el tema.
 
 La elevación (`hoisting`) ya no funciona con `let`. Si cambiamos `var` a `let` en el ejemplo anterior, fallaría con un error. Esto es bueno — declarar una variable después de iniciarla resulta en un código confuso y más difícil de entender.
 
@@ -198,7 +198,7 @@ Puedes llamar a una variable prácticamente como quieras, pero existen limitacio
 - Un último punto: también debes evitar el uso de palabras reservadas de JavaScript como nombres de variables — con esto, nos referimos a las palabras que componen la sintaxis real de JavaScript. Por lo tanto, no puedes usar palabras como `var`, `function`, `let` y `for` como nombres de variables. Los navegadores las reconocen como elementos de código diferentes, por lo que obtendrás errores.
 
 > [!NOTE]
-> Puedes encontrar una lista bastante completa de palabras clave reservadas que debes evitar en {{jsxref("Gramática_léxica", "Gramática léxica — Palabras clave", "#Palabras_clave")}}.
+> Puedes encontrar una lista bastante completa de palabras clave reservadas que debes evitar en {{jsxref("Lexical_grammar", "Gramática léxica — Palabras clave", "#Palabras_clave")}}.
 
 Ejemplos de buenos nombres:
 
@@ -323,7 +323,7 @@ myNumber = 500; // mucho mejor — ahora este es un número
 typeof myNumber;
 ```
 
-Intenta ingresar las cuatro líneas anteriores en tu consola una por una y ve cuáles son los resultados. Notarás que estamos usando un operador especial llamado {{jsxref("Operadores/typeof", "typeof")}} — esto devuelve el tipo de datos de la variable que escribes después. La primera vez que se llama, debe devolver `string`, ya que en ese punto la variable `myNumber` contiene una cadena, `'500'`. Échale un vistazo y ve qué devuelve la segunda vez que lo llamas.
+Intenta ingresar las cuatro líneas anteriores en tu consola una por una y ve cuáles son los resultados. Notarás que estamos usando un operador especial llamado {{jsxref("Operators/typeof", "typeof")}} — esto devuelve el tipo de datos de la variable que escribes después. La primera vez que se llama, debe devolver `string`, ya que en ese punto la variable `myNumber` contiene una cadena, `'500'`. Échale un vistazo y ve qué devuelve la segunda vez que lo llamas.
 
 ## Constantes en JavaScript
 
@@ -351,4 +351,4 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 
 A estas alturas, deberías saber bastante sobre las variables de JavaScript y cómo crearlas. En el próximo artículo, nos centraremos en los números con más detalle, y veremos cómo hacer matemáticas básicas en JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "conflicting/Learn_web_development/Core/Scripting")}}

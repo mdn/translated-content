@@ -8,12 +8,12 @@ slug: Web/HTML/Reference/Elements/output
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式元素</a>，<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语元素</a>，<a href="/zh-CN/docs/HTML/Content_categories#Form_listed">listed</a>, <a href="/zh-CN/docs/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/zh-CN/docs/HTML/Content_categories#Form_resettable">resettable</a>  <a href="/zh-CN/docs/HTML/Content_categories#Form-associated_content">form-associated element</a>, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">流式元素</a>，<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">短语元素</a>，<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Form_listed">listed</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Form_labelable">labelable</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Form_resettable">resettable</a>  <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Form-associated_content">form-associated element</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">允许元素</th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语元素</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">短语元素</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -21,7 +21,7 @@ slug: Web/HTML/Reference/Elements/output
   </tr>
   <tr>
    <th scope="row">允许父元素</th>
-   <td>接受任何 <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语元素</a></td>
+   <td>接受任何 <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">短语元素</a></td>
   </tr>
   <tr>
    <th scope="row">允许 ARIA 角色</th>

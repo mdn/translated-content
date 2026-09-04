@@ -9,7 +9,7 @@ l10n:
 
 ## 类型
 
-`bookmarks.BookmarkTreeNodeUnmodifiable` 是一个{{jsxref("string", "字符串", "", 1)}}，目前只能具有一个值：`"managed"`。这表示书签节点是由管理员或受监督用户的监护人（例如在家长控制的例子里的家长）配置的。
+`bookmarks.BookmarkTreeNodeUnmodifiable` 是一个{{jsxref("String", "字符串", "", 1)}}，目前只能具有一个值：`"managed"`。这表示书签节点是由管理员或受监督用户的监护人（例如在家长控制的例子里的家长）配置的。
 
 ## 浏览器兼容性
 

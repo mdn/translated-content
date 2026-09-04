@@ -3,8 +3,6 @@ title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
 
-{{JSRef}}
-
 **`findIndex()`** 方法返回数组中满足提供的测试函数的第一个元素的索引。若没有找到对应元素则返回 -1。
 
 另请参阅 {{jsxref("Array/find", "find()")}} 方法，它返回满足测试函数的第一个元素（而不是它的索引）。

@@ -2,32 +2,29 @@
 title: Otras macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Other
 l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
 ---
 
-{{MDNSidebar}}
-
-A diferencia de las macros enumeradas en [Macros de uso común](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), las macros documentadas en este artículo se usan con poca frecuencia o solo en contextos específicos, o están obsoletas.
+A diferencia de las macros enumeradas en [Macros de uso común](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), las macros documentadas en este artículo se usan con poca frecuencia, en contextos específicos, o están obsoletas.
 
 ## Contextos especiales
 
-Estas macros se usan solo con contextos particulares, como una referencia de API específica.
+Esta macro se utiliza solo en contextos particulares, como una referencia de API específica.
 
-- [`RFC`](https://github.com/mdn/yari/blob/main/kumascript/macros/RFC.ejs) crea un enlace al RFC especificado, dado su número. La sintaxis es: `\{\{RFC(número)\}\}`. Por ejemplo, `\{\{RFC(2616)\}\}` se convierte en {{ RFC(2616) }}.
+- [`RFC`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/rfc.rs) crea un enlace al RFC especificado, dado su número. La sintaxis es `\{{RFC(número)}}`. Por ejemplo, `\{{RFC(2616)}}` se convierte en {{ RFC(2616) }}.
 
-### Componentes de la página destino
+### Componentes de la página de inicio
 
-Tenemos una variedad de macros que se pueden usar para generar automáticamente los contenidos de las páginas de destino. Aquí están.
+Tenemos una variedad de macros que se pueden usar para generar automáticamente el contenido de las páginas de inicio. Aquí están.
 
 #### Listas de subpáginas
 
-- [`ListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/ListSubpages.ejs) genera una lista desordenada de enlaces a todos los elementos secundarios inmediatos de la página actual; útil para generar automáticamente tablas de contenido para conjuntos de documentación.
-- [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs) genera una lista de definición de dos columnas de todas las subpáginas inmediatas de la página actual, con sus títulos como {{HTMLElement("dt")}} y su resumen de SEO como {{HTMLElement("dd")}}. Esto facilita la generación automática de páginas de destino razonablemente atractivas.
-- [`APIListAlpha`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIListAlpha.ejs) crea una lista de las subpáginas de la página actual, formateada como una lista de términos de la API, dividida por la primera letra. Hay tres parámetros. El primero es 0 si desea incluir todas las subpáginas de nivel superior o 1 para omitir las subpáginas con "." en sus nombres. El segundo y el tercero le permiten agregar texto para mostrar como parte del nombre en cada enlace. Esto se puede usar para agregar "<" y ">" para enlaces de elementos, o para agregar "()" al final de las listas de nombres de métodos.
-- [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) construye una lista de definiciones de todos los elementos secundarios inmediatos de la página actual. No se ha hecho ningún otro formateo. Puede obtener una lista de dos columnas preparada para usar como una página destino de varias columnas usando [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs).
+- [`ListSubpages`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/listsubpages.rs) genera una lista no ordenada de enlaces a todas las páginas hijas directas de la página actual; resulta útil para generar automáticamente tablas de contenido para conjuntos de documentación.
+- [`SubpagesWithSummaries`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs) construye una lista de definiciones de todas las páginas hijas directas de la página actual, con sus títulos como {{HTMLElement("dt")}} y su resumen SEO como {{HTMLElement("dd")}}. Esto facilita la generación automática de páginas de inicio razonablemente atractivas.
+- [`APIListAlpha`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/api_list_alpha.rs) crea una lista de las subpáginas de la página actual, formateada como una lista de términos de API, dividida por la primera letra. Tiene tres parámetros. El primero es 0 si quieres incluir todas las subpáginas de nivel superior, o 1 para omitir las subpáginas que tengan "." en su nombre. El segundo y el tercero te permiten añadir texto para mostrar como parte del nombre en cada enlace. Esto se puede usar para añadir "<" y ">" a los enlaces de elementos, o para agregar "()" al final de las listas de nombres de métodos.
 
-### Enlaces rápidos
+### Listas de enlaces
 
-Tenemos una macro diseñada específicamente para crear [enlaces rápidos](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars):
+Tenemos una macro diseñada específicamente para crear [listas de enlaces](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars) dentro del contenido:
 
-- [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) crea un conjunto de enlaces rápidos compuestos por las páginas debajo de la página actual (o la página especificada, si se proporciona una). Se generan hasta dos niveles totales de profundidad.
+- [`QuickLinksWithSubpages`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs) crea una lista de enlaces formada por las subpáginas de la página actual (o de la página especificada, si se indica una). Se generan hasta dos niveles de profundidad en total.

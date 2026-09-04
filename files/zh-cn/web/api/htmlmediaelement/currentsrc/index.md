@@ -15,7 +15,7 @@ var mediaUrl = audioObject.currentSrc;
 
 ### 值
 
-一个 {{domxref("DOMString")}} 对象包含所选媒体源的绝对 URL 路径。当 `networkState` ＝＝ `EMPTY 时，其值为空字符串（empty string）`; 否则，它会是 {{domxref("HTMLSourceElement")}} 所包含媒体列表中的一个，或者是 {{HTMLElement("source")}} 标签的 src 值。
+一个 {{jsxref("String")}} 对象包含所选媒体源的绝对 URL 路径。当 `networkState` ＝＝ `EMPTY 时，其值为空字符串（empty string）`; 否则，它会是 {{domxref("HTMLSourceElement")}} 所包含媒体列表中的一个，或者是 {{HTMLElement("source")}} 标签的 src 值。
 
 ## 示例
 

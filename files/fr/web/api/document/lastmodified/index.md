@@ -1,37 +1,44 @@
 ---
-title: Document.lastModified
+title: "Document : propriété lastModified"
+short-title: lastModified
 slug: Web/API/Document/lastModified
+l10n:
+  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
 {{APIRef("DOM")}}
 
-Retourne une chaîne de caractère contenant la date et l'heure à laquelle le présent document a été modifié pour la dernière fois.
+La propriété en lecture seule **`lastModified`** de l'interface {{DOMxRef("Document")}} retourne une chaîne de caractères contenant la date et l'heure locales auxquelles le document actuel a été modifié pour la dernière fois.
 
-## Syntaxe
+## Valeur
 
-```js
-string = document.lastModified;
-```
+Une chaîne de caractères.
 
 ## Exemples
 
-### Exemple #1: Utilisation simple
+### Utilisation simple
+
+Cet exemple affiche une alerte avec la valeur de `lastModified`.
 
 ```js
 alert(document.lastModified);
-// renvoie: 11/28/2015 16:11:15
+// retourne : Tuesday, December 16, 2017 11:09:42
 ```
 
-### Exemple #2: Transformer `lastModified` en un objet de type [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date)
+### Transformer `lastModified` en un objet `Date`
+
+Cet exemple transforme `lastModified` en un objet {{JSxRef("Date")}}.
 
 ```js
-var oLastModif = new Date(document.lastModified);
+let oLastModif = new Date(document.lastModified);
 ```
 
-### Exemple #3: Transformer `lastModified` en un nombre de millisecondes passées depuis le 1 Janvier 1970 à 00:00:00, heure locale
+### Transformer `lastModified` en millisecondes
+
+Cet exemple transforme `lastModified` en nombre de millisecondes écoulées depuis le 1er janvier 1970 à 00:00:00, heure locale.
 
 ```js
-var nLastModif = Date.parse(document.lastModified);
+let nLastModif = Date.parse(document.lastModified);
 ```
 
 ## Notes
@@ -39,20 +46,17 @@ var nLastModif = Date.parse(document.lastModified);
 Veuillez noter qu'en tant que chaîne de caractères, `lastModified` ne peut être _facilement_ utilisé pour des comparaisons entre les dates modifiées des documents. Voici un exemple possible qui montre comment afficher une alerte quand la page change (voir aussi [l'API des cookies en JavaScript](/fr/docs/Web/API/Document/cookie))&nbsp;:
 
 ```js
+// Fait correspondre 'timestamp' dans 'last_modif=timestamp'
+// exemple '1687964614822' dans 'last_modif=1687964614822'
+const pattern = /last_modif\s*=\s*([^;]*)/;
+
 if (
   Date.parse(document.lastModified) >
-  parseFloat(
-    document.cookie.replace(
-      /(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/,
-      "$1",
-    ) || "0",
-  )
+  (parseFloat(document.cookie.match(pattern)?.[1]) || 0)
 ) {
-  document.cookie =
-    "last_modif=" +
-    Date.now() +
-    "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" +
-    location.pathname;
+  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${
+    location.pathname
+  }`;
   alert("Cette page a changé !");
 }
 ```
@@ -60,34 +64,27 @@ if (
 … le même exemple, mais en ignorant la première visite:
 
 ```js
-var nLastVisit = parseFloat(
-    document.cookie.replace(
-      /(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/,
-      "$1",
-    ),
-  ),
-  nLastModif = Date.parse(document.lastModified);
+const pattern = /last_modif\s*=\s*([^;]*)/;
 
-if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
-  document.cookie =
-    "last_modif=" +
-    Date.now() +
-    "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" +
-    location.pathname;
-  if (isFinite(nLastVisit)) {
+const lastVisit = parseFloat(document.cookie.replace(pattern, "$1"));
+const lastModif = Date.parse(document.lastModified);
+
+if (Number.isNaN(lastVisit) || lastModif > lastVisit) {
+  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${
+    location.pathname
+  }`;
+
+  if (isFinite(lastVisit)) {
     alert("Cette page a changé !");
   }
 }
 ```
 
-> [!NOTE]
-> WebKit renvoie le temps sous forme de chaîne de caractère en UTC; Gecko et Internet Explorer renvoient le temps selon le fuseau horaire local. (Voir: [Bogue 4363 – document.lastModified renoive la date en UTC, mais devrait la renvoyer selon le fuseau horaire local](https://bugs.webkit.org/show_bug.cgi?id=4363))
+Si vous voulez savoir lorsqu'une page _externe_ a changé, vous pouvez effectuer une requête {{HTTPMethod("HEAD")}} en utilisant l'API {{DOMxRef("Window/fetch", "fetch()")}}, et examiner l'en-tête de réponse {{HTTPHeader("Last-Modified")}}.
 
-Si vous voulez savoir **si _une page externe_ a changé,** veuillez lire [ce paragraphe à propos de l'API `XMLHttpRequest()`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#get_last_modified_date).
+## Spécifications
 
-## Spécification
-
-HTML5
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

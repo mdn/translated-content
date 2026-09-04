@@ -1,26 +1,25 @@
 ---
 title: TypedArray.prototype.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`set()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、複数の値を指定した配列から入力値を読み込み、型付き配列に格納します。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.set()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.set()")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// ArrayBuffer をバイト単位のサイズで作成
 const buffer = new ArrayBuffer(8);
 const uint8 = new Uint8Array(buffer);
 
-// Copy the values into the array starting at index 3
+// 値を配列のインデックス 3 からコピーする
 uint8.set([1, 2, 3], 3);
 
 console.log(uint8);
-// Expected output: Uint8Array [0, 0, 0, 1, 2, 3, 0, 0]
+// 予想される結果: Uint8Array [0, 0, 0, 1, 2, 3, 0, 0]
 ```
 
 ## 構文

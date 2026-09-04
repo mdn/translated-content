@@ -52,4 +52,4 @@ console.log(myRules[0].cssRules[1].style);
 ## 関連情報
 
 - {{domxref("CSSNestedDeclarations")}}
-- [入れ子の宣言ルール](/ja/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#入れ子の宣言ルール)
+- [入れ子の宣言ルール](/ja/docs/Web/CSS/Guides/Nesting/Using#入れ子の宣言ルール)

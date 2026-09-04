@@ -3,8 +3,6 @@ title: WeakSet.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 ---
 
-{{JSRef}}
-
 {{jsxref("WeakSet")}} 实例的 **`add()`** 方法在该 `WeakSet` 对象的末尾追加一个新的对象。
 
 {{InteractiveExample("JavaScript Demo: WeakSet.Prototype.add()", "taller")}}

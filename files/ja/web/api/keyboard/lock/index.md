@@ -40,7 +40,7 @@ lock(keyCodes)
 
 ## セキュリティ
 
-[一時的なユーザーによる有効化](/ja/docs/Web/Security/User_activation)が必要です。この機能が動作するためには、ユーザーがページや UI 要素を操作する必要があります。
+[一時的なユーザーによる有効化](/ja/docs/Web/Security/Defenses/User_activation)が必要です。この機能が動作するためには、ユーザーがページや UI 要素を操作する必要があります。
 
 ## 例
 

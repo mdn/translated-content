@@ -1,56 +1,84 @@
 ---
-title: Element.releasePointerCapture()
+title: "Element : méthode releasePointerCapture()"
+short-title: releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
+l10n:
+  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
 ---
 
 {{APIRef("DOM")}}
 
-Relâche (arrête) la capture de pointeur précédemment définie pour un _pointer_ ({{domxref("PointerEvent")}}) spécifique.
-
-Voir la méthode **{{domxref("Element.setPointerCapture","Element.setPointerCapture()")}}** pour une description de _pointer capture_ et la façon de le définir pour un élément particulier.
+La méthode **`releasePointerCapture()`** de l'interface {{DOMxRef("Element")}} relâche (arrête) la [_capture de pointeur_](/fr/docs/Web/API/Pointer_events#pointer_capture) qui avait été précédemment définie pour un _pointer_ spécifique ({{DOMxRef("PointerEvent")}}).
 
 ## Syntaxe
 
-```js
-targetElement.releasePointerCapture(pointerId);
+```js-nolint
+releasePointerCapture(pointerId)
 ```
 
-### Arguments
+### Paramètres
 
-- _pointerId_
-  - : L'{{domxref("PointerEvent.pointerId","identifiant")}} pour un {{domxref("PointerEvent","pointer event")}}.
+- `pointerId`
+  - : Le {{DOMxRef("PointerEvent.pointerId", "pointerId")}} d'un objet {{DOMxRef("PointerEvent")}}.
 
-### Valeur retournée
+### Valeur de retour
 
-Si `pointerId` ne correspond à aucun pointeur actif, cette méthode renvoie `void` (_vide_) et déclenche une {{domxref("DOMException")}} avec le nom `InvalidPointerId`.
+Aucune ({{JSxRef("undefined")}}).
 
-## Exemple
+### Exceptions
+
+- `NotFoundError` {{DOMxRef("DOMException")}}
+  - : Levée si `pointerId` ne correspond à aucun pointeur actif.
+
+## Exemples
+
+Cet exemple définit la capture de pointeur sur un {{HTMLElement("div")}} lorsque vous appuyez dessus. Cela vous permet de faire glisser l'élément horizontalement, même lorsque votre pointeur se déplace en dehors de ses limites.
+
+### HTML
 
 ```html
-<html>
-  <script>
-    function downHandler(ev) {
-      var el = document.getElementById("target");
-      // L'élément "target" va recevoir/capturer d'autres évènements
-      el.setPointerCapture(ev.pointerId);
-    }
-    function cancelHandler(ev) {
-      var el = document.getElementById("target");
-      // Relâche la capture du pointeur
-      el.releasePointerCapture(ev.pointerId);
-    }
-    function init() {
-      var el = document.getElementById("target");
-      // Enregistre les gestionnaires du pointeur
-      el.onpointerdown = downHandler;
-      el.onpointercancel = cancelHandler;
-    }
-  </script>
-  <body onload="init();">
-    <div id="target">Touch me ...</div>
-  </body>
-</html>
+<div id="glissiere">Glissez-moi</div>
 ```
+
+### CSS
+
+```css
+div {
+  width: 140px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffbbee;
+}
+```
+
+### JavaScript
+
+```js
+const glissiere = document.getElementById("glissiere");
+
+function debuterGlissement(e) {
+  glissiere.onpointermove = defiler;
+  glissiere.setPointerCapture(e.pointerId);
+}
+
+function arreterGlissement(e) {
+  glissiere.onpointermove = null;
+  glissiere.releasePointerCapture(e.pointerId);
+}
+
+function defiler(e) {
+  glissiere.style.transform = `translate(${e.clientX - 70}px)`;
+}
+
+glissiere.onpointerdown = debuterGlissement;
+glissiere.onpointerup = arreterGlissement;
+```
+
+### Résultat
+
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -62,5 +90,6 @@ Si `pointerId` ne correspond à aucun pointeur actif, cette méthode renvoie `vo
 
 ## Voir aussi
 
-- {{ domxref("Element.setPointerCapture","Element.setPointerCapture()") }}
-- {{ domxref("Pointer_events","Pointer Events") }}
+- La méthode {{DOMxRef("Element.hasPointerCapture()")}}
+- La méthode {{DOMxRef("Element.setPointerCapture()")}}
+- [Les évènements du pointeur](/fr/docs/Web/API/Pointer_events)

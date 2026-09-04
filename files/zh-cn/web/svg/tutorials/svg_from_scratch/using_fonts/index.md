@@ -28,7 +28,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Using_fonts
 
 ## 引用一个远程字体
 
-上门的部分使用 CSS 来应用系统字体，但是你还可以以相同的方式使用 {{cssxref("@font-face")}} at 规则来应用 Web 字体
+上面的部分使用 CSS 来应用系统字体，但是你还可以以相同的方式使用 {{cssxref("@font-face")}} at 规则来应用 Web 字体
 
 示例展示了如何首先定义然后使用名为“FiraSans”的字体家族：
 

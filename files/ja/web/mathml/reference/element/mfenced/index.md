@@ -1,14 +1,13 @@
 ---
 title: <mfenced>
 slug: Web/MathML/Reference/Element/mfenced
-original_slug: Web/MathML/Element/mfenced
 l10n:
-  sourceCommit: 0fb5d5d5579d459f58ab52d0e6e94fc4634a9fe0
+  sourceCommit: c263f06fa14ed56153e345006bb459c9df014b98
 ---
 
-{{MathMLRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
-**`<mfenced>`** は [MathML](/ja/docs/Web/MathML) の要素で、独自の括弧類（角括弧など）や区切り記号（カンマやセミコロンなど）を数式に追加する機能を提供します。
+**`<mfenced>`** [MathML](/ja/docs/Web/MathML) 要素は、式に任意の開始・終了括弧（丸括弧など）や区切り文字（カンマやセミコロンなど）を追加する機能を提供します。
 
 > [!NOTE]
 > 歴史的には、 `<mfenced>` 要素はフェンス式を書くための省略記法として定義され、 {{MathMLElement("mrow")}} と {{MathMLElement("mo")}} 要素を含む展開形に等しいものでした。現在では、代わりにその等価な形式を使用することが推奨されています。
@@ -28,6 +27,19 @@ l10n:
 
 ### 最後の区切り記号 (`,`) は繰り返される
 
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+```
+
 ```html
 <math display="block">
   <mfenced open="{" close="}" separators=";;,">
@@ -40,13 +52,28 @@ l10n:
 </math>
 ```
 
-レンダリング例: ![{a;b;c,d,e}](mfenced01.png)
+レンダリング例:
+
+![{a;b;c,d,e}](mfenced-repeated.svg)
 
 このブラウザーでのレンダリング:
 
 {{ EmbedLiveSample('mfenced_example1', 700, 200, "", "") }}
 
 ### 余分な区切り記号 (`,`) は無視される
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+```
 
 ```html
 <math display="block">
@@ -60,11 +87,26 @@ l10n:
 </math>
 ```
 
-レンダリング例: ![[a|b|c|d|e]](mfenced02.png)
+レンダリング例:
+
+![[a|b|c|d|e]](mfenced-ignored.svg)
 
 このブラウザーでのレンダリング:
 
 {{ EmbedLiveSample('mfenced_example1', 700, 200, "", "") }}
+
+## 技術的概要
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles">暗黙の ARIA ロール</a>
+    </th>
+    <td>
+      なし
+    </td>
+  </tr>
+</table>
 
 ## 仕様書
 

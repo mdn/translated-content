@@ -15,7 +15,7 @@ selectElt.setCustomValidity(string);
 
 ### Parameters
 
-- `string` is the {{domxref("DOMString")}} containing the error message.
+- `string` is the {{jsxref("String")}} containing the error message.
 
 ## Especificaciones
 

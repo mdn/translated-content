@@ -16,9 +16,9 @@ tokenList.replace(oldToken, newToken);
 ### Параметры
 
 - `oldToken`
-  - : {{domxref("DOMString")}} - класс, который вы хотите заменить.
+  - : {{jsxref("String")}} - класс, который вы хотите заменить.
 - `newToken`
-  - : {{domxref("DOMString")}} класс, которым вы хотите заменить класс `oldToken`.
+  - : {{jsxref("String")}} класс, которым вы хотите заменить класс `oldToken`.
 
 ### Возвращает значение
 

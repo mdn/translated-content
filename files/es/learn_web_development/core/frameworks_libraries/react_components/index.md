@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 16d3095f33bd0655b01098ce662e3014510fdef6
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 
 En este punto, nuestra aplicación es un monolito. Antes de hacer que haga cosas, necesitamos dividirlo en componentes manejables y descriptivos. React no tiene ninguna regla estricta sobre lo que es y no es un componente - ¡eso depende de ti! En este artículo, le mostraremos una forma sensata de dividir nuestra aplicación en componentes.
 
@@ -16,9 +16,9 @@ En este punto, nuestra aplicación es un monolito. Antes de hacer que haga cosas
       <th scope="row">Prerequesitos:</th>
       <td>
         <p>
-          Estar familiarizado con los lenguajes básicos <a href="/es/docs/Learn/HTML">HTML</a>,
-          <a href="/es/docs/Learn/CSS">CSS</a>, y
-          <a href="/es/docs/Learn/JavaScript">JavaScript</a>,
+          Estar familiarizado con los lenguajes básicos <a href="/es/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>, y
+          <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a>,
           conocimientos de la
           <a
             href="/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
@@ -443,4 +443,4 @@ Con esto en su lugar, ¡estamos _casi_ listos para abordar algo de interactivida
 
 Y eso es todo en este artículo — hemos profundizado un poco en cómo dividir su aplicación en componentes, y renderizarlos eficientemente. Ahora veremos como manejamos los eventos en React, y empezaremos a agregar algo de interactividad.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -40,7 +40,7 @@ isSubsetOf(other)
 > [!NOTE]
 > 部分集合の関係は、真部分集合ではありません。つまり、`this` と `other` の中の要素が同じである場合、`isSubsetOf()` は `true` を返します。
 
-`isSubsetOf()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("Operators/this", "this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。その後、その動作は `this` と `other` のサイズに依存します。
+`isSubsetOf()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。その後、その動作は `this` と `other` のサイズに依存します。
 
 - `this` の要素数が `other.size` より多い場合は、直接 `false` を返します。
 - そうでなければ、`this` の要素を走査し、`this` の要素 `e` のうち、`other.has(e)` が[偽値](/ja/docs/Glossary/Falsy)を返せば `false` を返します。それ以外の場合は、`true` を返します。

@@ -1,81 +1,188 @@
 ---
-title: "Testez vos connaissances : le modèle de boîte"
+title: "Testez vos compétences : Le modèle de boîte"
+short-title: "Test : Le modèle de boîte"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
-original_slug: Learn/CSS/Building_blocks/Box_Model_Tasks
 l10n:
-  sourceCommit: 40cfeaf2623824ff3acf9d95af67a0498e23e3e8
+  sourceCommit: a623d4459e2aa00d17dc0fd6b6bc44f56c589950
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
 
 L'objectif de cette évaluation est de vous aider à vérifier votre compréhension du [modèle de boîte CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
 > [!NOTE]
-> Vous pouvez tester des solutions dans les éditeurs interactifs présents sur cette page. Toutefois il peut toutefois être plus utile de télécharger le code et de passer par un éditeur en ligne comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour travailler sur les exercices.
->
-> Si vous bloquez, demandez-nous de l'aide&nbsp;: voir la section [Évaluation et aide](#évaluation_et_aide) en bas de cette page.
+> Pour obtenir de l'aide, consultez notre guide d'utilisation [Testez vos compétences](/fr/docs/Learn_web_development#testez_vos_compétences). Vous pouvez également nous contacter par l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
 
-## Exercice n°1
+## Défi interactif
 
-Regardez les deux boîtes ci-dessous&nbsp;: l'une utilise le modèle de boîte standard, tandis que l'autre utilise le modèle de boîte alternatif. Changez la largeur de la seconde boîte en ajoutant des règles à la classe `.alternate`, de façon à ce que sa largeur corresponde à la largeur visuelle de la première boîte.
+Tout d'abord, nous vous proposons un défi interactif amusant impliquant le raccourci de marge, créé par notre [partenaire d'apprentissage](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations), [Scrimba <sup>(angl.)</sup>](https://scrimba.com/home).
 
-Le résultat final doit ressembler à l'image ci-dessous&nbsp;:
+Regardez le cours intégré, et complétez les tâches sur la timeline (les petites icônes fantômes) en suivant les instructions et en modifiant le code. Une fois terminé, vous pouvez reprendre le cours pour vérifier comment la solution de l'enseignant correspond à la vôtre.
 
-![Deux boîtes de la même taille](mdn-box-model1.png)
+<mdn-scrim-inline url="https://scrimba.com/learn-html-and-css-c0p/~01s" scrimtitle="Marges raccourcies" survey="true"></mdn-scrim-inline>
 
-Essayez de mettre à jour le code éditable ci-dessous pour reproduire l'exemple terminé&nbsp;:
+## Modèle de boîte n°1
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/box-model/box-models.html", '100%', 1100)}}
+Dans cette tâche, il y a deux boîtes ci-dessous, l'une utilise le modèle de boîte standard, l'autre le modèle de boîte alternatif. Nous aimerions que vous changiez la largeur de la deuxième boîte en ajoutant des déclarations à la classe `.alternatif`, afin qu'elle corresponde à la largeur visuelle de la première boîte.
 
-> [!CALLOUT]
-> [Téléchargez le code de départ pour cet exercice](https://github.com/mdn/css-examples/blob/main/learn/tasks/box-model/box-models-download.html) afin de travailler avec votre propre éditeur ou avec un éditeur en ligne.
+Le point de départ de la tâche ressemble à ceci&nbsp;:
 
-## Exercice n°2
+{{EmbedLiveSample("box-model1-start", "", 540)}}
 
-Dans cet exercice, ajoutez ce qui suit à la boîte&nbsp;:
+Voici le code sous-jacent pour ce point de départ&nbsp;:
 
-- Une bordure pointillée, noire, de 5px d'épaisseur&nbsp;;
-- Une marge supérieure de 20px&nbsp;;
-- Une marge à droite de 1em&nbsp;;
-- Une marge inférieure de 40px&nbsp;;
-- Une marge gauche de 2em&nbsp;;
-- Un espace intérieur sur tous les côtés de 1em.
+```html live-sample___box-model1-start live-sample___box-model1-finish
+<div class="boite">J'utilise le modèle de boîte standard.</div>
+<div class="boite alternatif">J'utilise le modèle de boîte alternatif.</div>
+```
 
-Le résultat final devrait ressembler à cette image&nbsp;:
+```css live-sample___box-model1-start live-sample___box-model1-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.boite {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+  width: 300px;
+  height: 150px;
+}
 
-![Une boîte avec une bordure pointillée](mdn-box-model2.png)
+.alternatif {
+  box-sizing: border-box;
+}
+```
 
-Essayez de mettre à jour le code éditable ci-dessous pour reproduire l'exemple terminé&nbsp;:
+Le style mis à jour doit ressembler à ceci&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/box-model/mbp.html", '100%', 600)}}
+{{EmbedLiveSample("box-model1-finish", "", 540)}}
 
-> [!CALLOUT]
-> [Téléchargez le code de départ pour cet exercice](https://github.com/mdn/css-examples/blob/main/learn/tasks/box-model/mbp-download.html) afin de travailler avec votre propre éditeur ou avec un éditeur en ligne.
+<details>
+<summary>Cliquez ici pour afficher la solution</summary>
 
-## Exercice n°3
+Vous devez augmenter la largeur du deuxième bloc pour ajouter la taille du remplissage et de la bordure&nbsp;:
 
-Dans cet exercice, l'élément en ligne possède une marge, un espacement intérieur et une bordure. Toutefois, les lignes au-dessus et en dessous débordent. Que pouvez-vous ajouter à votre code CSS pour que la taille de la marge, de l'espacement intérieur et de la bordure soient respectée par les autres lignes, tout en gardant l'élément en ligne&nbsp;?
+```css live-sample___box-model1-finish
+.alternatif {
+  box-sizing: border-box;
+  width: 390px;
+}
+```
 
-Le résultat final devrait ressembler à cette image&nbsp;:
+</details>
 
-![Une boîte en ligne avec un espace entre elle et le texte qui l'entoure](mdn-box-model3.png)
+## Modèle de boîte n°2
 
-Essayez de mettre à jour le code éditable ci-dessous pour reproduire l'exemple terminé&nbsp;:
+Pour compléter cette tâche, ajoutez les fonctionnalités suivantes à la boîte fournie&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/box-model/inline-block.html", '100%', 800)}}
+- Une bordure de `5px`, noire, en pointillée.
+- Une marge supérieure de `20px`.
+- Une marge droite de `1em`.
+- Une marge inférieure de `40px`.
+- Une marge gauche de `2em`.
+- Un espace intérieur sur tous les côtés de `1em`.
 
-> [!CALLOUT]
-> [Téléchargez le code de départ pour cet exercice](https://github.com/mdn/css-examples/blob/main/learn/tasks/box-model/inline-block-download.html) afin de travailler avec votre propre éditeur ou avec un éditeur en ligne.
+Le point de départ de la tâche ressemble à ceci&nbsp;:
 
-## Évaluation et aide
+{{EmbedLiveSample("box-model2-start", "100%", 100)}}
 
-Vous pouvez essayer ces exemples dans les éditeurs interactifs présents sur cette page.
+Voici le code sous-jacent pour ce point de départ&nbsp;:
 
-Si vous souhaitez obtenir une évaluation de votre travail, ou si vous bloquez et que vous souhaitez obtenir de l'aide&nbsp;:
+```html live-sample___box-model2-start live-sample___box-model2-finish
+<div class="boite">J'utilise le modèle de boîte standard.</div>
+```
 
-1. Enregistrez votre travail dans un éditeur en ligne partageable, du type [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez soit écrire le code vous-même, soit utiliser les fichiers de départ fournis dans chacune des sections ci-dessus.
-2. Écrivez un message demandant une évaluation et/ou de l'aide dans la catégorie [<i lang="en">Learning</i> du forum Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn/250). Votre message doit inclure&nbsp;:
-   - Un titre explicite, par exemple "Évaluation demandée pour le test de modèle de boîte CSS 1".
-   - Des détails sur ce que vous avez déjà tenté, et ce que vous attendez de nous&nbsp;: par exemple, si vous bloquez et avez besoin d'aide, ou si vous souhaitez obtenir une évaluation de votre travail.
-   - Un lien vers l'exemple que vous souhaitez voir évalué ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne partageable (comme mentionné dans l'étape 1 au-dessus). C'est une bonne habitude à prendre&nbsp;: il est très difficile d'aider quelqu'un qui rencontre un problème de codage… si vous ne pouvez pas voir leur code&nbsp;!
-   - Un lien vers l'exercice en cours ou la page d'évaluation, de façon à ce qu'on puisse trouver la question pour laquelle vous avez besoin d'aide.
+```css live-sample___box-model2-start live-sample___box-model2-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.boite {
+}
+```
+
+Le style mis à jour doit ressembler à ceci&nbsp;:
+
+{{EmbedLiveSample("box-model2-finish", "100%", 140)}}
+
+<details>
+<summary>Cliquez ici pour afficher la solution</summary>
+
+Cette tâche consiste à utiliser correctement les propriétés de marge, de bordure et de remplissage.
+Vous pouvez choisir d'utiliser les propriétés longues ({{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, etc.)&nbsp;; cependant, lorsque vous définissez une marge et un remplissage sur tous les côtés, la notation abrégée est probablement le meilleur choix&nbsp;:
+
+```css live-sample___box-model2-finish
+.boite {
+  border: 5px dotted black;
+  margin: 20px 1em 40px 2em;
+  padding: 1em;
+}
+```
+
+</details>
+
+## Modèle de boîte n°3
+
+Dans cette tâche, l'élément en ligne possède une marge, un espacement intérieur et une bordure. Cependant, les lignes au-dessus et en dessous se chevauchent.
+
+Pour compléter cette tâche, mettez à jour le CSS afin que la taille de la marge, de l'espacement intérieur et de la bordure soit respectée par les autres lignes, tout en gardant l'élément en ligne.
+
+Le point de départ de la tâche ressemble à ceci&nbsp;:
+
+{{EmbedLiveSample("box-model3-start", "100%", 220)}}
+
+Voici le code sous-jacent pour ce point de départ&nbsp;:
+
+```html live-sample___box-model3-start live-sample___box-model3-finish
+<div class="boite">
+  <p>
+    Les légumes, c'est un plus pour vous,
+    <span>c'est pourquoi je vous demande</span> de mettre davantage de
+    chou-rave, ciboulette, daikon, amarante, tatsoi, tomatillo, melon, haricots
+    azuki, ail.
+  </p>
+
+  <p>
+    Feuilles de betterave, maïs, soko, endive, courge à gumbo. Persil, échalote,
+    courgette, tatsoi, pousses de pois, fèves, chou vert, pissenlit, gombo,
+    wakamé, tomate. Pissenlit, concombre, arachide, pois, cacahuète, soko,
+    courgette.
+  </p>
+</div>
+```
+
+```css live-sample___box-model3-start live-sample___box-model3-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.boite span {
+  background-color: pink;
+  border: 5px solid black;
+  padding: 1em;
+}
+```
+
+Le style mis à jour doit ressembler à ceci&nbsp;:
+
+{{EmbedLiveSample("box-model3-finish", "100%", 260)}}
+
+<details>
+<summary>Cliquez ici pour afficher la solution</summary>
+
+La résolution de cette tâche nécessite de comprendre quand utiliser différentes valeurs de {{CSSxRef("display")}}.
+Après avoir ajouté `display: inline-block`, la marge, la bordure et le remplissage dans la direction du bloc font en sorte que les autres lignes soient repoussées loin de l'élément&nbsp;:
+
+```css live-sample___box-model3-finish
+.boite span {
+  background-color: pink;
+  border: 5px solid black;
+  padding: 1em;
+  display: inline-block;
+}
+```
+
+</details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}

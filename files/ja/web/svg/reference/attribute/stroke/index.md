@@ -2,7 +2,7 @@
 title: stroke
 slug: Web/SVG/Reference/Attribute/stroke
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
 **`stroke`** 属性はプレゼンテーション属性で、この図形の描線を描画するのに使われる色（またはグラデーションやパターンなどの SVG ペイントサーバー）を定義します。
@@ -21,7 +21,6 @@ l10n:
 - {{SVGElement('rect')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## 例
@@ -68,7 +67,7 @@ svg {
   <style>
     path {
       stroke-width: 2px;
-      marker: url(#circle);
+      marker: url("#circle");
     }
   </style>
   <path d="M 10 44.64 L 30 10 L 70 10 L 90 44.64 L 70 79.28 L 30 79.28 Z"
@@ -80,7 +79,7 @@ svg {
   <marker id="circle" markerWidth="12" markerHeight="12"
           refX="6" refY="6" markerUnits="userSpaceOnUse">
     <circle cx="6" cy="6" r="3" stroke-width="2"
-            stroke="context-stroke" fill="context-fill"  />
+            stroke="context-stroke" fill="context-fill" />
   </marker>
 </svg>
 ```

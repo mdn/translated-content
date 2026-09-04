@@ -3,7 +3,7 @@ title: "AbortSignal: abort イベント"
 short-title: abort
 slug: Web/API/AbortSignal/abort_event
 l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -15,7 +15,7 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js-nolint
-addEventListener('abort', (event) => { })
+addEventListener("abort", (event) => { })
 
 onabort = (event) => { }
 ```

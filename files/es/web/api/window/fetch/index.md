@@ -27,19 +27,19 @@ Promise<Response> fetch(input[, init]);
 
 - _input_
   - : Define el recurso que se quiere solicitar. Puede ser:
-    - Un {{domxref("USVString")}} con la URL del recurso a solicitar. Algunos navegadores aceptan los esquemas `blob:` y `data:`.
+    - Un {{jsxref("String")}} con la URL del recurso a solicitar. Algunos navegadores aceptan los esquemas `blob:` y `data:`.
     - Un objeto {{domxref("Request")}}.
 
 - _init_ {{optional_inline}}
   - : Objeto de opciones que contiene configuraciones para personalizar la solicitud. Estas opciones pueden ser:
     - `method`: El método de solicitud, p.ej., `GET`, `POST`.
     - `headers`: Cualquier cabecera que se quiera añadir a la solicitud, contenidas en un objeto {{domxref("Headers")}} o un objeto literal con valores {{domxref("ByteString")}}.
-    - `body`: Cualquier cuerpo que se quiera añadir a la solicitud: puede ser un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, u objeto {{domxref("USVString")}}. Nótese que las solicitudes con métodos `GET` o `HEAD` no pueden tener cuerpo.
+    - `body`: Cualquier cuerpo que se quiera añadir a la solicitud: puede ser un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, u objeto {{jsxref("String")}}. Nótese que las solicitudes con métodos `GET` o `HEAD` no pueden tener cuerpo.
     - `mode`: El modo a usar en la solicitud, p.ej., `cors`, `no-cors`, o `same-origin`.
     - `credentials`: Las credenciales que se quieran utilizar para la solicitud: `omit`, `same-origin`, o `include`. Para enviar automáticamente las cookies del dominio actual, debe indicarse esta opción. Desde Chrome 50, esta propiedad también acepta una instancia de {{domxref("FederatedCredential")}} o de {{domxref("PasswordCredential")}}.
     - `cache`: El modo de caché a utilizar en la solicitud: `default`, `no-store`, `reload`, `no-cache`, `force-cache`, o `only-if-cached`.
     - `redirect`: El modo de redirección a usar: `follow` (seguir redirecciones automáticamente), `error` (abortar si sucede un error durante la redirección), o `manual` (gestionar redirecciones manualmente). El valor por defecto en Chrome es `follow` (hasta la versión 46 era `manual`).
-    - `referrer`: Un {{domxref("USVString")}} que especifique `no-referrer`, `client`, o una URL. El valor por defecto es `client`.
+    - `referrer`: Un {{jsxref("String")}} que especifique `no-referrer`, `client`, o una URL. El valor por defecto es `client`.
     - `referrerPolicy`: Especifica el valor de la cabecera HTTP referer. Puede ser `no-referrer`, `no-referrer-when-downgrade`, `origin`, `origin-when-cross-origin`, `unsafe-url`.
     - `integrity`: Contiene el valor de [integridad de subrecurso (subresource integrity)](/es/docs/Web/Security/Subresource_Integrity) de la solicitud (p.ej., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
     - `keepalive`: La opción `keepalive` se puede usar para permitir que recurso dure más que la página. Las solicitudes con el indicador `keepalive` son un reemplazo de la API {{domxref("Navigator.sendBeacon()")}}.

@@ -17,19 +17,19 @@ slug: Web/API/FontFace
 _这个接口不继承任何属性。_
 
 - {{domxref("FontFace.family")}}
-  - : 这是不是一个{{domxref("DOMString")}} ？是的话将表示该字体的 _family_ 属性，相当于 {{cssxref("@font-face/family", "family")}} 。
+  - : 这是不是一个{{jsxref("String")}} ？是的话将表示该字体的 _family_ 属性，相当于 {{cssxref("@font-face/family", "family")}} 。
 - {{domxref("FontFace.style")}}
-  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _style_ 属性，相当于 {{cssxref("@font-face/style", "style")}} 。
+  - : 这是不是一个 {{jsxref("String")}} ？是的话将表示该字体的 _style_ 属性，相当于 {{cssxref("@font-face/style", "style")}} 。
 - {{domxref("FontFace.weight")}}
-  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _weight_ 属性，相当于 {{cssxref("@font-face/weight", "weight")}}。
+  - : 这是不是一个 {{jsxref("String")}} ？是的话将表示该字体的 _weight_ 属性，相当于 {{cssxref("@font-face/weight", "weight")}}。
 - {{domxref("FontFace.stretch")}}
-  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _stretches_ 属性，相当于 {{cssxref("@font-face/stretch", "stretch")}} 。
+  - : 这是不是一个 {{jsxref("String")}} ？是的话将表示该字体的 _stretches_ 属性，相当于 {{cssxref("@font-face/stretch", "stretch")}} 。
 - {{domxref("FontFace.unicodeRange")}}
-  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体涵盖的 _range of code_（字符编码的范围），相当于 {{cssxref("@font-face/unicode-range", "unicode-range")}} 。
+  - : 这是不是一个 {{jsxref("String")}} ？是的话将表示该字体涵盖的 _range of code_（字符编码的范围），相当于 {{cssxref("@font-face/unicode-range", "unicode-range")}} 。
 - {{domxref("FontFace.variant")}}
-  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _variant_ 属性，相当于 {{cssxref("@font-face/range", "range")}} 。
+  - : 这是不是一个 {{jsxref("String")}} ？是的话将表示该字体的 _variant_ 属性，相当于 {{cssxref("@font-face/range", "range")}} 。
 - {{domxref("FontFace.featureSettings")}}
-  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _features_ 属性，相当于 {{cssxref("@font-face/feature-settings", "feature-settings")}} 。
+  - : 这是不是一个 {{jsxref("String")}} ？是的话将表示该字体的 _features_ 属性，相当于 {{cssxref("@font-face/feature-settings", "feature-settings")}} 。
 - {{domxref("FontFace.status")}} {{readonlyinline}}
   - : 返回一个表示字体当前状态的可枚举值，它可能是下列之一：`"unloaded"`、`"loading"`、`"loaded"`、`"error"`。
 - {{domxref("FontFace.loaded")}} {{readonlyinline}}

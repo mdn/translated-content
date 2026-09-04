@@ -2,15 +2,34 @@
 title: <feDropShadow>
 slug: Web/SVG/Reference/Element/feDropShadow
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: f8939dd06d7b120f77c4b4c70cac591d0eb20beb
 ---
 
-**`<feDropShadow>`** は [SVG](/ja/docs/Web/SVG) のフィルタープリミティブで、入力画像のドロップシャドウを生成します。これは {{SVGElement('filter')}} 要素の中でのみ使用できます。
+**`<feDropShadow>`** は [SVG](/ja/docs/Web/SVG) のフィルタープリミティブで、入力画像のドロップシャドウを作成します。これは、{{SVGElement('filter')}} 要素内でのみ使用できます。
 
 > [!NOTE]
-> ドロップシャドウの色や不透明度は、 {{SVGAttr('flood-color')}} や {{SVGAttr('flood-opacity')}} の各プレゼンテーション属性を使用することで変更できます。
+> ドロップシャドウの色と透明度は、{{SVGAttr('flood-color')}} および {{SVGAttr('flood-opacity')}} というプレゼンテーション属性を使用して変更できます。
 
-他のフィルタープリミティブと同様に、既定では色成分を `linearRGB` {{glossary("color space", "色空間")}}で処理します。 {{svgattr("color-interpolation-filters")}} を使用すると、代わりに `sRGB` を使用することができます。
+他のフィルタープリミティブと同様に、デフォルトで `linearRGB` {{glossary("color space", "色空間")}}の色成分を処理します。{{svgattr("color-interpolation-filters")}} を使用することで、代わりに `sRGB` を使用することも可能です。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+- {{SVGAttr("dx")}}: この属性はドロップシャドウの x オフセットを定義します。
+  _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _デフォルト値_: `2`; _アニメーション_: **可**
+- {{SVGAttr("dy")}}: この属性はドロップシャドウの y オフセットを定義します。
+  _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _デフォルト値_: `2`; _アニメーション_: **可**
+- {{SVGAttr("in")}}
+- {{SVGAttr("stdDeviation")}}: この属性は、ドロップシャドウのぼかし処理における標準偏差を定義します。
+  _値の型_: [**\<number-optional-number>**](/ja/docs/Web/SVG/Guides/Content_type#number-optional-number); _デフォルト値_: `2`; _アニメーション_: **可**
+- [フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGFEDropShadowElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -41,31 +60,13 @@ svg {
     </filter>
   </defs>
 
-  <circle cx="5" cy="50%" r="4" style="fill:pink; filter:url(#shadow);" />
-
-  <circle cx="15" cy="50%" r="4" style="fill:pink; filter:url(#shadow2);" />
-
-  <circle cx="25" cy="50%" r="4" style="fill:pink; filter:url(#shadow3);" />
+  <circle cx="5" cy="50%" r="4" fill="pink" filter="url(#shadow)" />
+  <circle cx="15" cy="50%" r="4" fill="pink" filter="url(#shadow2)" />
+  <circle cx="25" cy="50%" r="4" fill="pink" filter="url(#shadow3)" />
 </svg>
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## 属性
-
-- {{SVGAttr("dx")}}
-  - : この属性は、ドロップシャドウの X 方向のオフセットを定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _既定値_: `2`; _アニメーション_: **可**
-- {{SVGAttr("dy")}}
-  - : この属性は、ドロップシャドウの Y 方向のオフセットを定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _既定値_: `2`; _アニメーション_: **可**
-- {{SVGAttr("stdDeviation")}}
-  - : この属性は、ドロップシャドウのぼかし操作の標準偏差を定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _既定値_: `2`; _アニメーション_: **可**
-
-## 使用コンテキスト
-
-{{svginfo}}
 
 ## 仕様書
 
@@ -77,5 +78,5 @@ svg {
 
 ## 関連情報
 
-- [SVG フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#フィルタープリミティブ属性)、例えば {{SVGAttr('height')}}, {{SVGAttr('in')}}, {{SVGAttr('result')}}, {{SVGAttr('x')}}, {{SVGAttr('y')}}, {{SVGAttr('width')}} など。
-- [SVG プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#プレゼンテーション属性)、例えば {{SVGAttr('flood-color')}}, {{SVGAttr('flood-opacity')}} など。
+- [SVG フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#フィルター属性)、例えば {{SVGAttr('height')}}, {{SVGAttr('in')}}, {{SVGAttr('result')}}, {{SVGAttr('x')}}, {{SVGAttr('y')}}, {{SVGAttr('width')}}
+- [SVG プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#プレゼンテーション属性)、例えば {{SVGAttr('flood-color')}}, {{SVGAttr('flood-opacity')}}.

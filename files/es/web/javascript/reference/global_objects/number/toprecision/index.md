@@ -43,7 +43,7 @@ Si el parámetro `precision` es omitido, se comporta como {{jsxref("Number.proto
 
 ### Exceptions
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+- {{jsxref("RangeError")}}
   - : If `precision` is not between 1 and 100 (inclusive), a {{jsxref("RangeError")}} is thrown. Implementations are allowed to support larger and smaller values as well. ECMA-262 only requires a precision of up to 21 significant digits.
 
 ## Ejemplos

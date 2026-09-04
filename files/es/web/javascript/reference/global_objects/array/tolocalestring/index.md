@@ -54,7 +54,7 @@ precios.toLocaleString("es-AR", { style: "currency", currency: "ARS" });
 // "$7, $500, $8.123, $12"
 ```
 
-Para más ejemplos, ver también {{jsxref("Intl")}}, {{jsxref("NumberFormat")}}, y {{jsxref("DateTimeFormat")}}.
+Para más ejemplos, ver también {{jsxref("Intl")}}, {{jsxref("Intl/NumberFormat", "NumberFormat")}}, y {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}}.
 
 ## Polyfill
 

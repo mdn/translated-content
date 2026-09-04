@@ -64,7 +64,7 @@ l10n:
       <td><code>background</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        请使用 CSS <a href="/zh-CN/docs/Web/CSS/background-color"><code>background-color</code></a> 代替。
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/Reference/Properties/background-color"><code>background-color</code></a> 代替。
       </td>
     </tr>
     <tr>
@@ -75,7 +75,7 @@ l10n:
     <tr>
       <td><code>color</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
-      <td>请使用 CSS <a href="/zh-CN/docs/Web/CSS/color"><code>color</code></a> 代替。</td>
+      <td>请使用 CSS <a href="/zh-CN/docs/Web/CSS/Reference/Properties/color"><code>color</code></a> 代替。</td>
     </tr>
     <tr>
       <td><code>columnalign</code></td>
@@ -134,7 +134,7 @@ l10n:
       <td><a href="/zh-CN/docs/Web/MathML/Reference/Global_attributes">所有 MathML 元素</a></td>
       <td>
         <p>
-        一个 <a href="/zh-CN/docs/Web/MathML/Reference/Values#mathml_特定类型"><code>&lt;boolean&gt;</code></a> 值，指定是否将 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>normal</code>（如果为真）或 <code>compact</code>（其他情况下）。
+        一个 <a href="/zh-CN/docs/Web/MathML/Reference/Values#mathml_特定类型"><code>&lt;boolean&gt;</code></a> 值，指定是否将 <a href="/zh-CN/docs/Web/CSS/Reference/Properties/math-style">math-style</a> 设置为 <code>normal</code>（如果为真）或 <code>compact</code>（其他情况下）。
         </p>
       </td>
     </tr>
@@ -149,28 +149,28 @@ l10n:
       <td><code>fontfamily</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-family"><code>font-family</code></a> 代替。
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/Reference/Properties/font-family"><code>font-family</code></a> 代替。
       </td>
     </tr>
     <tr>
       <td><code>fontsize</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 代替。
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/Reference/Properties/font-size"><code>font-size</code></a> 代替。
       </td>
     </tr>
     <tr>
       <td><code>fontstyle</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-style"><code>font-style</code></a> 代替。
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/Reference/Properties/font-style"><code>font-style</code></a> 代替。
       </td>
     </tr>
     <tr>
       <td><code>fontweight</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        请使用 CSS <a href="/zh-CN/docs/Web/CSS/font-weight"><code>font-weight</code></a> 代替。
+        请使用 CSS <a href="/zh-CN/docs/Web/CSS/Reference/Properties/font-weight"><code>font-weight</code></a> 代替。
       </td>
     </tr>
     <tr>
@@ -240,21 +240,21 @@ l10n:
       <td><code>mathbackground</code></td>
       <td><a href="/zh-CN/docs/Web/MathML/Reference/Global_attributes">所有 MathML 元素</a></td>
       <td>
-        元素的 <a href="/zh-CN/docs/Web/CSS/background-color">background-color</a> 值。
+        元素的 <a href="/zh-CN/docs/Web/CSS/Reference/Properties/background-color">background-color</a> 值。
       </td>
     </tr>
     <tr>
       <td><code>mathcolor</code></td>
       <td><a href="/zh-CN/docs/Web/MathML/Reference/Global_attributes">所有 MathML 元素</a></td>
       <td>
-        元素的 <a href="/zh-CN/docs/Web/CSS/color">color</a> 值。
+        元素的 <a href="/zh-CN/docs/Web/CSS/Reference/Properties/color">color</a> 值。
       </td>
     </tr>
     <tr>
       <td><code>mathsize</code></td>
       <td><a href="/zh-CN/docs/Web/MathML/Reference/Global_attributes">所有 MathML 元素</a></td>
       <td>
-        一个 {{cssxref("length-percentage")}} 值，作为元素的 <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 值。
+        一个 {{cssxref("length-percentage")}} 值，作为元素的 <a href="/zh-CN/docs/Web/CSS/Reference/Properties/font-size"><code>font-size</code></a> 值。
       </td>
     </tr>
     <tr>
@@ -276,7 +276,7 @@ l10n:
       <td><code>movablelimits</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/MathML/Reference/Values#mathml_特定类型"><code>&lt;boolean&gt;</code></a> 值，表示当 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>compact</code> 时，所附的下标和上标是否移动到下角标和上角标的位置。
+        一个 <a href="/zh-CN/docs/Web/MathML/Reference/Values#mathml_特定类型"><code>&lt;boolean&gt;</code></a> 值，表示当 <a href="/zh-CN/docs/Web/CSS/Reference/Properties/math-style">math-style</a> 设置为 <code>compact</code> 时，所附的下标和上标是否移动到下角标和上角标的位置。
       </td>
     </tr>
     <tr>
@@ -336,7 +336,7 @@ l10n:
       <td><code>scriptlevel</code></td>
       <td><a href="/zh-CN/docs/Web/MathML/Reference/Global_attributes">所有 MathML 元素</a></td>
       <td>
-        指定了元素的 <a href="/zh-CN/docs/Web/CSS/math-depth">math-depth</a> 值。参见 <a href="/zh-CN/docs/Web/MathML/Reference/Global_attributes/scriptlevel#values">scriptlevel 页面</a>以了解接受的值和映射。
+        指定了元素的 <a href="/zh-CN/docs/Web/CSS/Reference/Properties/math-depth">math-depth</a> 值。参见 <a href="/zh-CN/docs/Web/MathML/Reference/Global_attributes/scriptlevel#values">scriptlevel 页面</a>以了解接受的值和映射。
       </td>
     </tr>
     <tr>

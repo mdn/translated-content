@@ -60,7 +60,7 @@ for octal literals use the \"0o\" prefix instead
 "\xA9";
 ```
 
-## 関連項目
+## 関連情報
 
 - [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
 - [Warning: 08/09 is not a legal ECMA-262 octal constant](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)

@@ -1,11 +1,14 @@
 ---
-title: TreeWalker.root
+title: "TreeWalker: root プロパティ"
+short-title: root
 slug: Web/API/TreeWalker/root
+l10n:
+  sourceCommit: 169a9199209be8c6db80e1cd56238456f2641203
 ---
 
 {{ APIRef("DOM") }}
 
-**`TreeWalker.root`** は読み取り専用のプロパティで、 `TreeWalker` を作成したときに指定したルートノードを返します。
+**`TreeWalker.root`** は読み取り専用のプロパティで、この {{domxref("TreeWalker")}} を作成したときに指定したルートノードを {{domxref("Node")}} で返します。
 
 ## 値
 
@@ -14,8 +17,8 @@ slug: Web/API/TreeWalker/root
 ## 例
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body, // root として document.body を指定している
+const treeWalker = document.createTreeWalker(
+  document.body,
   NodeFilter.SHOW_ELEMENT,
   {
     acceptNode(node) {
@@ -24,7 +27,7 @@ var treeWalker = document.createTreeWalker(
   },
   false,
 );
-root = treeWalker.root; // document.body が返却される
+root = treeWalker.root; // この場合は document.body
 ```
 
 ## 仕様書

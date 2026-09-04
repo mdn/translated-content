@@ -41,11 +41,11 @@ handler を空にすると、ほとんどすべての点でターゲットとま
 - {{jsxref("Proxy/Proxy/apply", "handler.apply()")}}
   - : 関数呼び出しのトラップです。
 - {{jsxref("Proxy/Proxy/construct", "handler.construct()")}}
-  - : {{jsxref("Operators/new", "new")}} 演算子のトラップです。
+  - : {{jsxref("new")}} 演算子のトラップです。
 - {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
   - : {{jsxref("Object.defineProperty")}} のトラップです。
 - {{jsxref("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
-  - : {{jsxref("Operators/delete", "delete")}} 演算子のトラップです。
+  - : {{jsxref("delete")}} 演算子のトラップです。
 - {{jsxref("Proxy/Proxy/get", "handler.get()")}}
   - : プロパティ値の取得のトラップです。
 - {{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}

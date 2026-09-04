@@ -37,4 +37,4 @@ El método `toSource` devuelve los siguientes valores:
 
 ## Ver también
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

@@ -60,7 +60,7 @@ slug: Web/API/Response
 - {{domxref("Body.json()")}}
   - : 读取 {{domxref("Response")}} 对象并且将它设置为已读（因为 Responses 对象被设置为了 stream 的方式，所以它们只能被读取一次），并返回一个被解析为 {{domxref("JSON")}} 格式的 Promise 对象。
 - {{domxref("Body.text()")}}
-  - : 读取 {{domxref("Response")}} 对象并且将它设置为已读（因为 Responses 对象被设置为了 stream 的方式，所以它们只能被读取一次），并返回一个被解析为 {{domxref("USVString")}} 格式的 Promise 对象。
+  - : 读取 {{domxref("Response")}} 对象并且将它设置为已读（因为 Responses 对象被设置为了 stream 的方式，所以它们只能被读取一次），并返回一个被解析为 {{jsxref("String")}} 格式的 Promise 对象。
 
 ## 示例
 

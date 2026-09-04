@@ -61,4 +61,4 @@ label {
   - {{HTMLElement("input/text")}}
   - {{HTMLElement("input/email")}}
 
-- [Compatibility of CSS properties](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibility of CSS properties](/ru/docs/Learn_web_development/Extensions/Forms)

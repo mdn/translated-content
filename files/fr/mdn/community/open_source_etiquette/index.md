@@ -1,141 +1,135 @@
 ---
-title: Étiquette de base pour les projets open source
+title: Étiquette pour les projets open source
 slug: MDN/Community/Open_source_etiquette
+l10n:
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
 
-{{MDNSidebar}}
-
-Si vous n'avez jamais travaillé sur un projet open source (OSP pour « _Open Source Project_ ») auparavant, il est bon de lire cet article avant de commencer à contribuer à MDN (ou à d'autres projets open source). Il y a quelques bonnes pratiques à adopter qui vous permettront, à vous et aux autres contributrices et contributeurs du projet, de vous sentir valorisés et en sécurité, et de rester productifs.
-
-Cet article ne vous apprendra pas tout ce qu'il faut savoir sur la contribution à un projet open source ; l'objectif est plutôt de vous donner quelques bons points de départ sur lesquels vous pourrez réfléchir et en apprendre davantage lorsque vous commencerez à contribuer à un projet open source.
+Si vous n'avez jamais travaillé sur un projet open source (<abbr lang="en">OSP</abbr> pour «&nbsp;<i lang="en">Open Source Project</i>&nbsp;») auparavant, il est bon de lire cet article avant de commencer à contribuer à MDN Web Docs et à d'autres projets open source.
+Il y a quelques comportements à adopter qui vous aident, vous et les autres contributeur·ice·s du projet, à vous sentir valorisés et en sécurité, et à rester productifs.
+Cet article ne vous apprend pas tout ce qu'il faut savoir sur la contribution à un projet open source&nbsp;; l'objectif est de couvrir les sujets fondamentaux pour participer aux communautés open source.
 
 ## Réfléchissez à la raison pour laquelle vous contribuez à un OSP
 
-Avant de commencer à contribuer à un projet open source, demandez-vous pourquoi vous voulez le faire. Si la réponse à cette question est simplement « Je m'ennuie et je veux trouver quelque chose de productif à faire avec mon temps », c'est bien, mais vous pouvez probablement aller plus loin.
+Avant de commencer à contribuer à un projet open source, demandez-vous pourquoi vous voulez le faire.
+Si la réponse à cette question est simplement «&nbsp;Je veux quelque chose à faire avec mon temps libre&nbsp;», c'est bien, mais des raisons encore meilleures pourraient être&nbsp;:
 
-De meilleures raisons encore peuvent être envisagées :
+- Je veux améliorer mes compétences.
+- J'utilise cet outil en permanence et j'ai trouvé un bogue dans celui-ci ou je veux contribuer à son amélioration.
+- Je veux aider d'autres personnes à utiliser cet outil avec plus de succès.
+- Je veux aider d'autres personnes à contribuer au projet avec plus de succès.
+- Je veux démontrer publiquement mes propres compétences dans le cadre de mon cursus universitaire ou collégial ou pour améliorer mes chances de trouver un emploi.
 
-- J'utilise cet outil en permanence et j'ai trouvé un bogue dans celui-ci/je veux contribuer à son amélioration.
-- Je veux aider d'autres personnes à utiliser cet outil avec plus de facilité.
-- Je veux aider d'autres personnes à contribuer au projet avec plus de facilité.
-- Je veux améliorer mes propres compétences.
-- Je veux démontrer publiquement mes propres compétences dans le cadre de mon cursus universitaire ou collégial.
-- Je veux démontrer publiquement mes propres compétences pour améliorer mes chances de trouver un emploi.
-
-Si vous passez votre temps à travailler gratuitement sur un projet, il est raisonnable de s'attendre à en retirer quelque chose. En fait, vous êtes beaucoup plus susceptible de rester plus longtemps et de contribuer de manière plus productive au projet. En outre, si vous avez un bon ensemble de raisons de contribuer avant de commencer, il sera plus facile de décider des tâches à entreprendre.
-
-Voici quelques raisons pour lesquelles vous ne devriez pas commencer à contribuer :
-
-- Je veux quelqu'un à qui parler.
-- Je veux des gens à troller ou à diriger.
-- Je veux montrer à quel point je suis incroyable.
-
-Votre présence sur le projet doit rester productive, et ne pas empêcher les autres d'être productifs.
+Certaines de ces raisons sont égoïstes, et c'est bien&nbsp;!
+Avoir un ensemble clair de raisons pour contribuer vous rend plus productif et facilite le travail avec la communauté.
 
 ## Soyez polis, soyez aimables, évitez les propos incendiaires ou offensants
 
-On pourrait abréger cela en disant « soyez gentil ». C'est le conseil numéro un que nous donnons à toute personne qui se lance dans les contributions open source.
+Nous pourrions résumer cela par «&nbsp;soyez aimables&nbsp;».
+C'est notre principal conseil pour toute personne débutant dans les contributions open source.
+Soyez aimables avec les autres contributeur·ice·s du projet, et l'ambiance y sera plus agréable et plus productive.
 
-Soyez gentil avec les autres contributeurs du projet, et le projet sera plus agréable et plus productif. Cela inclut :
+- Remerciez les personnes si elles vous aident.
+- Félicitez les personnes lorsque c'est approprié, par exemple si elles réussissent une demande de tirage ou corrigent un bogue difficile.
+- Répondez toujours avec respect, même si vous pensez que la réponse à une question était évidente ou que quelqu'un a fait une erreur stupide.
 
-- Remercier les gens s'ils vous aident.
-- Féliciter les personnes lorsque cela est approprié (par exemple, si elles déposent leur toute première demande de révision ou si elles résolvent un bogue particulièrement difficile).
-- Toujours répondre respectueusement aux gens, même si vous avez l'impression que la réponse à leur question était un peu évidente, ou qu'ils se répètent.
-- Essayer d'aider les gens à faire mieux la prochaine fois, en les soutenant, par exemple lors de l'examen des demandes de modification ou en répondant à leurs questions. Dire « c'est faux » ou « voici la réponse » est loin d'être aussi utile que de dire « c'est correct, mais je pense que ce serait mieux si vous essayiez de faire plus comme ceci, voici un article de blog pour plus d'idées » ou « vous pouvez trouver la réponse ici ; consultez également ce lien pour des réponses plus courantes ».
-
-Vous et les autres contributeurs êtes (ou devriez être) ici parce qu'ils veulent apporter une contribution positive au projet, mais au-delà de cela, vous ne pouvez rien présumer d'eux. Cela inclut leurs :
+Les contributeur·ice·s sont ici parce qu'ils veulent avoir un impact positif sur le projet.
+Au-delà de cela, ne faites pas d'hypothèses, telles que&nbsp;:
 
 - Connaissance du projet et des technologies utilisées pour le construire
-- Sexe, sexualité, âge, langues parlées, lieu de résidence, opinions politiques, religion ou autres caractéristiques personnelles
-- Expérience des projets open source
-- Confiance
+- Genre, sexualité, âge, langues parlées, lieu de résidence, opinions politiques, religion ou autres attributs personnels
+- Expérience avec les projets open source
+- Niveau de confiance
 - Attentes
 - Sens de l'humour
 
-Vous devez donc vous en tenir autant que possible au sujet, en évitant les hors-sujets potentiellement controversés comme la religion ou la politique, et en faisant preuve de soutien et de respect même si vous n'êtes pas d'accord avec quelqu'un ou si vous n'aimez pas une décision qu'il a prise.
+Vous devez rester sur le sujet et éviter les sujets controversés, tels que la religion ou la politique.
+Abstenez-vous de jurer ou d'utiliser un langage potentiellement offensant.
+Cela améliore rarement la communication et peut rendre plus difficile la participation des autres.
 
-De même, vous devez vous abstenir de tout juron ou langage offensant sur MDN, même s'il n'est pas dirigé contre quelqu'un en particulier. Ce n'est pas nécessaire pour participer, et certaines personnes y sont vraiment sensibles.
+Faites preuve de soutien et de respect, même si vous n'êtes pas d'accord avec quelqu'un ou si vous n'appréciez pas une décision qu'il a prise.
+Sachez que toute bonne communauté OSP dispose de règles visant à protéger ses contributeur·ice·s contre toute situation susceptible de les mettre mal à l'aise lors de leur participation.
+Cela se trouve généralement dans un fichier `CODE_OF_CONDUCT.md` sur GitHub (voir [`mdn/content` CODE_OF_CONDUCT <sup>(angl.)</sup>](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md) pour un exemple).
 
-Sachez qu'il existe des règles dans toute bonne OSP pour protéger ses contributeurs afin qu'ils ne se sentent pas mal à l'aise lorsqu'ils contribuent. Ces règles prennent généralement la forme d'un fichier CODE_OF_CONDUCT.md sur GitHub.
+Les dépôts de MDN sont régis par les [Directives relatives à la participation communautaire de Mozilla](https://www.mozilla.org/fr/about/governance/policies/participation/) (DRP).
+En général, un comportement légèrement offensant sur les dépôts MDN Web Docs (comme être constamment hors sujet/perturbateur, ou être impoli) est d'abord signalé par un avertissement, suivi d'un avertissement final, puis d'une interdiction temporaire ou permanente.
+Les problèmes de comportement plus graves, tels que les discours de haine ou les menaces contre un·e autre contributeur·ice, ne sont pas tolérés et entraîneront probablement une sanction immédiate.
 
-Par exemple, les dépôts du MDN sont régis par les vastes [Mozilla Community Participation Guidelines](https://www.mozilla.org/fr/about/governance/policies/participation/). Habituellement, un comportement légèrement offensant sur les dépôts MDN (comme le fait d'être constamment hors sujet/perturbant, ou d'être impoli) sera d'abord répondu par un avertissement sur le dépôt, suivi d'un dernier avertissement, puis d'un bannissement temporaire ou permanent. Les problèmes de comportement plus graves, tels que les discours haineux ou les menaces à l'encontre d'un autre contributeur, ne seront pas tolérés et entraîneront probablement un bannissement immédiat.
-
-Si vous recevez quelque chose qui vous met mal à l'aise, vous devez toujours le signaler en utilisant le mécanisme prévu dans le code de conduite.
+Si vous recevez quoi que ce soit qui vous met mal à l'aise, vous devez toujours le signaler en utilisant le mécanisme prévu dans le code de conduite.
 
 ## Choisissez des contributions percutantes
 
-Réfléchissez à ce que vous voulez faire sur le projet. Par exemple, nous avons une grande liste de problèmes déposés sur <https://github.com/mdn/translated-content/issues>, répartis selon diverses étiquettes GitHub en temps estimé de correction, catégories technologiques, et plus encore. Une autre bonne étiquette à rechercher est « good first issue », qui est généralement donnée aux issues qui sont assez simples et bonnes pour les débutants du projet pour commencer. Nous allons bientôt commencer à trier nos problèmes de manière plus approfondie, en ajoutant d'autres étiquettes telles que des indicateurs de priorité. Essayez de choisir quelques problèmes que vous pensez pouvoir gérer correctement avec le temps dont vous disposez, et demandez à y être affecté.
+Réfléchissez à ce que vous souhaitez faire dans le cadre de ce projet. Par exemple, nous disposons d'une longue liste de tickets enregistrés sur le [tableau des tâches des contributeur·ice·s](https://github.com/orgs/mdn/projects/44/views/7), classés par priorité de tâche.
+Vous pouvez également contribuer en ouvrant des [demandes de tirage](/fr/docs/MDN/Community/Pull_requests) pour résoudre les problèmes que vous rencontrez en lisant les articles du site MDN.
 
-Vous pouvez également contribuer en ouvrant des demandes de triage pour résoudre les problèmes que vous rencontrez en lisant les articles du site MDN.
+Une grande partie du travail sur MDN consiste à rédiger de la documentation et des exemples de code, mais il existe d'autres façons de contribuer&nbsp;:
+Cela pourrait inclure aider à trier les problèmes qui arrivent, corriger des fautes de frappe, améliorer la grammaire pour rendre les pages plus compréhensibles, ou encadrer les personnes qui essaient de corriger les problèmes.
+Chaque correction est utile, aussi petite soit-elle, et nous n'en refusons aucune.
+Cela dit, veillez à ce que vos corrections soient productives. Nous vous déconseillons ce genre de contributions&nbsp;:
 
-Une grande partie du travail sur le MDN consiste à rédiger de la documentation et des exemples de code, mais il existe d'autres façons de contribuer :
+- Modifier le style du code, la formulation des textes ou le cadre de test simplement parce que vous le préférez ainsi.
+- Remplacer l'anglais américain par l'anglais britannique dans les pages.
+- Ajouter ou supprimer des signes de ponctuation alors que le texte original est correct.
 
-- Aidez à trier les problèmes qui arrivent.
-- Aidez à corriger les fautes de frappe.
-- Aider à améliorer la grammaire et à rendre les pages plus compréhensibles.
-- Aidez à encadrer les personnes qui essaient de corriger les problèmes.
+> [!NOTE]
+> Pour les contenus traduits, nous vous recommandons de respecter le contenu écrit dans les pages anglaises, c'est ce contenu qui doit se retrouver dans la version traduite. De ce fait, si vous souhaitez changer le sens d'une phrase, ou ajouter un nouvel exemple&nbsp;; il faut le faire en premier lieu **sur la page anglaise** avant de proposer une traduction.
 
-Chaque correction est utile, aussi petite soit-elle, et nous n'en refuserons aucune. Cela dit, veillez à ce que vos corrections soient productives. Nous vous déconseillons ce genre de contributions :
-
-- Mettre à jour le style du code juste parce que "vous préférez ce style".
-- Mettre à jour le style de la langue "juste parce que vous aimez mieux ce style".
-- Changer les pages de l'anglais américain à l'anglais britannique.
-- Ajouter ou enlever un tas de ponctuation alors qu'il n'y a pas vraiment de problème.
-- Changer le cadre de test que nous utilisons pour quelque chose d'autre parce que vous le préférez.
-
-Dans de nombreux cas, les choses sont comme elles sont sur les OSP pour une raison. Vous devriez lire leurs guides de style, s'ils en ont un, et en cas de doute sur la productivité de quelque chose, demandez toujours avant !
+Dans de nombreux cas, les choses sont ainsi sur les OSP pour une raison.
+Vous devriez lire les guides de style s'ils en ont un, et en cas de doute sur la productivité de quelque chose, demandez toujours d'abord&nbsp;!
 
 ## Suivez le guide
 
-Les bons OSP rendront toujours la documentation des contributeurs facilement accessible. Sur les projets GitHub, elle se trouve généralement dans le fichier CONTRIBUTING.md du dépôt, ou parfois dans le fichier README.md du projet. Étant un projet de documentation, le contenu de MDN dispose d'un [README](https://github.com/mdn/translated-content/blob/main/README.md) et d'un ensemble décent de docs pour les contributeurs sur le site lui-même (voir [Contribuer à MDN](/fr/docs/MDN/Community)).
+Les bons OSP mettent toujours la documentation destinée aux contributeur·ice·s à la disposition de tous. Dans les projets GitHub, celle-ci se trouve généralement dans le fichier CONTRIBUTING.md du dépôt, ou parfois dans le fichier README.md du projet. En tant que projet de documentation, MDN dispose d'un fichier [README <sup>(angl.)</sup>](https://github.com/mdn/translated-content/blob/main/README.md) et d'un ensemble complet de documents destinés aux contributeur·ice·s sur le site même (voir [Ressources communautaires](/fr/docs/MDN/Community)).
 
-La seule chose à demander ici est de ne pas avoir peur de demander de l'aide, mais de TOUJOURS essayer de trouver la réponse à votre question avant de la poser. De cette façon, vous développez votre connaissance du projet et devenez plus indépendant, et vous n'imposez pas une charge inutile aux autres contributeurs.
-
-Bien sûr, la documentation ne sera pas toujours parfaite. Si vous trouvez quelque chose qui est difficile à trouver ou qui n'est pas très bien expliqué, déposez un ticket ou créez une demande de modification pour essayer de le corriger vous-même.
+N'hésitez pas à demander de l'aide, mais essayez toujours de trouver la réponse à votre question avant de la poser.
+De cette façon, vous enrichissez vos connaissances du projet et devenez plus autonome, sans imposer de charge inutile aux autres contributeur·ice·s.
+Si une explication est difficile à trouver ou n'est pas très bien décrite, ouvrez un ticket ou créez une pull request pour essayer de la corriger vous-même.
 
 ## Découvrez où poser des questions
 
-Cherchez toujours à savoir quel est le meilleur endroit pour poser des questions. Les bons OSP le préciseront toujours dans leur docs (voir [Demander de l'aide sur le MDN](/fr/docs/MDN/Community/Getting_started#step_4_ask_for_help)). Si vous souhaitez poser des questions d'ordre général, utilisez toujours ces canaux. Ne vous contentez pas de déposer un ticket sur GitHub pour chaque question, car cela ajoute du poids au projet (voir "Faites des progrès, pas du bruit" ci-dessous).
+Découvrez où il est préférable de poser des questions. Les bons OSP le précisent toujours dans leur documentation (voir [Contactez-nous](/fr/docs/MDN/Community/Communication_channels)). Si vous souhaitez poser des questions d'ordre général, utilisez toujours ces canaux. Ne déposez pas un ticket sur GitHub pour chaque question, car cela ajoute du bruit au projet (voir la section suivante).
 
 ## Faites des progrès, pas du bruit
 
-Réfléchissez bien à la façon dont vous gérez la communication dans le projet - assurez-vous qu'elle est utile et qu'elle ne complique pas le travail des autres contributeurs. Soumettre des pull requests pour corriger des bogues, c'est bien, mais sont-elles vraiment utiles et faciles à examiner ? Déposer des questions et participer à d'autres conversations, c'est bien, mais vos questions et commentaires sont-ils pertinents ou ne font-ils qu'ajouter du brouhaha ?
+Réfléchissez bien à la manière dont vous gérez la communication au sein du projet — assurez-vous qu'elle soit utile et qu'elle ne complique pas la tâche des autres contributeur·ice·s. Soumettre des requêtes de tirage pour corriger des bogues, c'est très bien, mais veillez à ce qu'elles soient utiles ou faciles à examiner.
+Signaler des problèmes et participer à d'autres discussions est tout à fait acceptable, mais vos signalements et vos commentaires sont-ils pertinents, ou ne font-ils qu'ajouter du bruit&nbsp;?
 
-En règle générale, faites ceci :
+En règle générale, faites ceci&nbsp;:
 
-- Discutez d'un seul sujet par question - il est facile de garder les questions ciblées et productives.
-- Corrigez un problème par PR - cela peut représenter un peu plus de travail pour vous, mais il est beaucoup plus facile d'examiner une seule correction claire.
-- Contribuez à d'autres fils de discussion si vous avez une remarque utile à faire ou si vous pouvez répondre à la question d'une autre personne.
+- Discutez d'un sujet par problème — il est facile de garder les problèmes concentrés et productifs.
+- Corrigez un problème par PR — cela peut représenter un peu plus de travail pour vous, mais il est beaucoup plus facile de revoir une seule correction claire.
+- Contribuez à d'autres fils de discussion si vous avez un point utile à apporter ou si vous pouvez répondre à la question de quelqu'un d'autre.
 - Posez des questions en utilisant d'autres mécanismes comme les salons de discussion ou les forums si vous n'êtes pas sûr de l'utilité de quelque chose ou si vous avez une question simple.
-- Lisez d'abord le guide pour essayer de répondre vous-même à la question avant de la poser.
+- Lisez le manuel d'abord pour essayer de répondre à la question vous-même avant de la poser.
 
-Et pas :
+Ne faites pas&nbsp;:
 
-- Compliquez les choses en essayant de discuter de plusieurs sujets à la fois, ou en faisant des commentaires hors sujet.
-- Essayer de regrouper plusieurs corrections dans une seule demande de triage. Cela rend la révision beaucoup plus difficile et éveille les soupçons (certaines personnes pourraient penser que vous essayez de cacher un code malveillant entre les changements valides).
-- Ouvrir beaucoup de tickets en posant des questions vagues.
-- Posez des questions sans essayer d'abord de résoudre le problème vous-même.
+- Compliquer les problèmes en essayant de discuter de plusieurs sujets à la fois, ou en faisant des commentaires hors sujet.
+- Essayer de regrouper plusieurs corrections dans une seule pull request. Cela rend la révision beaucoup plus difficile et suscite des soupçons (certaines personnes pourraient penser que vous essayez de cacher du code malveillant entre les modifications valides).
+- Ouvrir de nombreux problèmes en posant des questions vagues.
+- Poser des questions sans essayer de résoudre le problème par vous-même d'abord.
 
 ## Les OSP sont une démocratie (ou presque)
 
-Les OSP sont assez démocratiques - de nombreuses décisions font l'objet d'un vote, et vous êtes largement libre de contribuer comme vous le souhaitez, tant que vous n'empêchez personne d'autre de contribuer.
+Les OSP sont assez démocratiques — de nombreuses décisions font l'objet d'un vote, et vous êtes largement libre de contribuer comme vous le souhaitez, tant que vous n'empêchez personne d'autre de contribuer.
 
-Cependant, certaines choses seront largement décidées par un petit groupe de contributeurs principaux. Vous êtes libre de vous opposer à toute décision, mais il arrive qu'un modérateur prenne une décision qui va à l'encontre de votre opinion. Vous devez respecter et accepter ces décisions.
+Cependant, certaines choses sont en grande partie décidées par un petit groupe de contributeur·ice·s principaux. Vous êtes libre de contester n'importe quelle décision, mais il arrive parfois qu'un·e modérateur·ice prenne une décision qui va à l'encontre de votre opinion. Vous devez respecter et accepter ces décisions.
 
-Il est utile d'apprendre à connaître les modérateurs d'un projet, afin de savoir à qui demander de l'aide, par exemple dans les fils de discussion des demandes de triage ou des problèmes.
+Il est utile de faire connaissance avec les modérateur·ice·s de chaque projet, afin de savoir à qui vous adresser pour obtenir de l'aide, par exemple pour les requêtes de tirage ou les fils de discussion.
 
-## Soyez patient, soyez ponctuel
+## Soyez patient·e, soyez ponctuel·le
 
-Gardez à l'esprit que de nombreuses personnes travaillant sur des OSP le font sur leur temps libre, sans rémunération, et que toutes les personnes travaillant sur des OSP sont généralement très occupées. Si vous attendez quelque chose comme la révision d'une pull request ou une réponse à une question, soyez patient.
+Gardez à l'esprit que de nombreuses personnes travaillant sur les OSP le font pendant leur temps libre, sans rémunération, et que toutes les personnes travaillant sur les OSP sont généralement très occupées. Si vous attendez une réponse, par exemple à une requête de tirage ou à une question, soyez patient.
 
-Il est raisonnable d'attendre quelques jours, puis de demander poliment à quelqu'un s'il a eu le temps d'y jeter un coup d'œil, et éventuellement de relancer une semaine plus tard pour demander s'il est trop occupé pour le moment.
+Il est raisonnable d'attendre quelques jours, puis de relancer poliment la personne pour lui demander si elle a eu le temps d'y jeter un œil. Si elle est trop occupée, il vaut peut-être mieux attendre une semaine de plus et essayer de la relancer à ce moment-là.
 
-Il n'est PAS raisonnable de commencer à exiger des choses, comme si on vous devait une réponse rapide. Ce n'est pas le cas.
+Il n'est **pas** raisonnable ni poli d'exiger une réponse rapide.
 
-Si quelqu'un attend que vous fassiez quelque chose pour lui, vous devez faire preuve de la même courtoisie, mais en même temps, essayez de répondre aussi rapidement que possible. Si vous ne pouvez vraiment pas trouver le temps, faites-le savoir et demandez aux responsables de vous aider à trouver quelqu'un d'autre pour effectuer cette tâche.
+Si quelqu'un attend que vous fassiez quelque chose pour lui, vous devriez lui accorder la même courtoisie, mais en même temps, essayez de répondre aussi rapidement que possible. Si vous ne pouvez vraiment pas trouver le temps, informez-les et demandez aux mainteneur·euse·s de vous aider à trouver quelqu'un d'autre pour accomplir la tâche.
 
 ## Voir aussi
 
-- [Comment contribuer à l'Open Source](https://opensource.guide/how-to-contribute/)
-- [Liste plus générale de freeCodeCamp « Comment contribuer à l'open source ».](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)
-- [Commencer à contribuer à l'open source](https://stackoverflow.blog/2020/08/03/getting-started-with-contributing-to-open-source/)
+- [Comment contribuer à l'Open Source <sup>(angl.)</sup>](https://opensource.guide/how-to-contribute/)
+- [Liste plus générale de freeCodeCamp «&nbsp;Comment contribuer à l'open source&nbsp;» <sup>(angl.)</sup>](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)
+- [Commencer à contribuer à l'open source <sup>(angl.)</sup>](https://stackoverflow.blog/2020/08/03/getting-started-with-contributing-to-open-source/)
+- [Documentation des pratiques d'ingénierie de Google <sup>(angl.)</sup>](https://google.github.io/eng-practices/) sur google.github.io/eng-practices

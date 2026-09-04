@@ -1,115 +1,215 @@
 ---
-title: Débordements de contenu (overflow)
+title: Débordement de contenu
+short-title: Débordement
 slug: Learn_web_development/Core/Styling_basics/Overflow
-original_slug: Learn/CSS/Building_blocks/Overflowing_content
+l10n:
+  sourceCommit: 936233e89fd5714c957c5931b26dfb56c64f9a91
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
-Dans ce cours nous allons étudier un autre concept important en CSS : les **débordements** (<i lang="en">overflows</i> en anglais). Un débordement de contenu correspond à ce qui se produit lorsque le contenu à insérer dans une boîte occupe trop d'espace pour s'y insérer confortablement. Dans ce guide vous allez apprendre à gérer cela.
+Le débordement (<i lang="en">overflow</i> en anglais) se produit lorsqu'il y a trop de contenu pour s'adapter à l'intérieur d'une boîte d'élément. Dans cette leçon, vous apprenez à gérer le débordement à l'aide de CSS.
 
-<table class="standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Connaissances élémentaires en informatique,
-        <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >suite logicielle de base installée</a
-        >, compétences élémentaires pour
-        <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
-          >travailler avec des fichiers</a
-        >, connaissance de base du HTML (cf.
-        <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
-          >Introduction à HTML</a
-        >), et une idée
-        <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works"
-          >du fonctionnement de CSS</a
-        >.
+        Notions de base en HTML (étudiez
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Syntaxe HTML de base</a
+        >), CSS <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units">Valeurs et unités</a> et <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Sizing">La taille</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif&nbsp;:</th>
-      <td>Comprendre le principe des débordements et comment les gérer.</td>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
+      <td>
+        <ul>
+          <li>Comprendre ce qu'est le débordement.</li>
+          <li>Contrôler le débordement avec la propriété <code>overflow</code>.</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
 
 ## Qu'est-ce qu'un débordement ?
 
-Nous savons déjà qu'en CSS tout fonctionne par boîte, et que nous pouvons définir la taille de ces boîtes en leur donnant les valeurs [`width`](/fr/docs/Web/CSS/width) et [`height`](/fr/docs/Web/CSS/height) (ou [`inline-size`](/fr/docs/Web/CSS/inline-size) et [`block-size`](/fr/docs/Web/CSS/block-size)). Un dépassement correspond à ce qui se produit lorsqu'il y a trop de contenu dans une boîte et que ce contenu ne s'y intègre pas confortablement. CSS propose différents outils pour gérer ce phénomène, c'est un concept utile à comprendre à ce stade. Vous allez rencontrer des cas de dépassement fréquemment en codant du CSS, particulièrement quand vous irez plus loin dans la mise en page avec CSS.
+Tout dans le CSS est une boîte. Vous pouvez définir la taille de ces boîtes en leur définissant des valeurs pour des propriétés telles que {{CSSxRef("width")}} et {{CSSxRef("height")}}. **Un dépassement se produit lorsque le contenu est trop volumineux pour tenir dans une boîte.** Le CSS propose divers outils pour gérer les dépassements. À mesure que vous approfondissez vos connaissances en matière de mise en page et d'écriture CSS, vous allez être confronté à davantage de situations impliquant des débordements.
 
-## CSS essaie d'éviter les pertes de données
+## CSS essaie d'éviter les « pertes de données »
 
-Commençons par observer deux exemples qui montrent comment CSS se comporte par défaut quand il y a un débordement de contenu.
+Considérons deux exemples qui démontrent le comportement par défaut du CSS en cas de débordement.
 
-Le premier est une boîte dont la dimension dans le bloc a été définie en lui donnant une valeur `height`. Nous lui avons ensuite ajouté plus de contenu qu'il n'y a d'espace disponible dans la boîte. Le contenu déborde de la boîte et chevauche de façon désordonnée le paragraphe situé sous la boîte.
+Le premier exemple présente une boîte dont la taille a été limitée par la définition d'une hauteur (`height`). Le contenu de la boîte dépasse l'espace disponible&nbsp;; il déborde de la boîte et s'affiche dans le paragraphe suivant.
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/block-overflow.html", '100%', 600)}}
+```html live-sample___block-overflow
+<div class="boite">
+  Cette boîte a une hauteur et une largeur. Cela signifie que s'il y a trop de
+  contenu pour être affiché dans la hauteur attribuée, il y a une situation de
+  débordement. Si overflow est défini sur hidden, tout débordement n'est pas
+  visible.
+</div>
 
-Le second est un mot dans une boîte limitée sur la dimension inline. La boîte a été rendue trop petite pour que ce mot puisse s'y insérer et il déborde de la boîte.
+<p>Ce contenu est en dehors de la boîte.</p>
+```
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/inline-overflow.html", '100%', 500)}}
+```css live-sample___block-overflow
+.boite {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+}
+```
 
-Vous vous demandez peut-être pourquoi le CSS a adopté par défaut l'approche plutôt brouillonne consistant à faire déborder le contenu de manière désordonnée ? Pourquoi ne pas cacher le contenu supplémentaire, ou faire grossir la boîte ?
+{{EmbedLiveSample("block-overflow", "", 200)}}
 
-Dans la mesure du possible, le CSS ne masque pas votre contenu ; le faire entraînerait des pertes de données, ce qui pose généralement problème. En termes de CSS, cela signifie que certains contenus disparaissent. Le problème de la disparition de contenu est que vous pourriez ne pas remarquer qu'il a disparu. Vos visiteurs également ne le remarqueront peut-être pas. Si c'est le bouton "Envoyer" d'un formulaire qui disparaît et que personne ne peut remplir ce formulaire, c'est un gros problème ! Au lieu de cela, le CSS a tendance à déborder de manière visible. Il est probable que vous verrez le désordre, ou au pire un visiteur de votre site vous fera savoir que certains contenus se chevauchent et qu'il faut donc les corriger.
+Le deuxième exemple montre un mot dans une boîte. La taille de la boîte est définie trop petite pour le mot, ce qui fait que le mot déborde de la boîte.
 
-Si vous avez défini une boîte avec des valeurs `width` ou `height`, CSS part du principe que vous savez ce que vous faites et que vous gérez le risque de débordement. En général, contraindre la dimension du bloc est problématique lorsque du texte va être mis dans une boîte, car il peut y avoir plus de texte que prévu lors de la conception du site ou que le texte peut être plus gros - par exemple si l'utilisateur a augmenté la taille de sa police.
+```html live-sample___inline-overflow
+<div class="mot">Débordement</div>
+```
 
-Dans les deux prochaines leçons, nous examinerons différentes façons de contrôler la taille des éléments afin de limiter le dépassement. Cependant, si vous avez besoin d'une taille fixe, vous pouvez également contrôler le comportement du trop-plein. Voyons maintenant&nbsp;!
+```css live-sample___inline-overflow
+.mot {
+  border: 1px solid #333333;
+  width: 100px;
+  font-size: 250%;
+}
+```
 
-## La propriété overflow
+{{EmbedLiveSample("inline-overflow")}}
 
-La propriété [`overflow`](/fr/docs/Web/CSS/overflow) est la façon dont vous prenez le contrôle du débordement d'un élément et dîtes au navigateur comment vous voulez qu'il se comporte. La valeur par défaut est `visible`, c'est pourquoi, par défaut, nous pouvons voir notre contenu quand il déborde.
+Vous vous demandez peut-être pourquoi le CSS fonctionne de manière aussi désordonnée, affichant le contenu en dehors de son conteneur prévu. Pourquoi ne pas cacher le contenu qui déborde&nbsp;? Pourquoi ne pas ajuster la taille du conteneur pour qu'il s'adapte à tout le contenu&nbsp;?
 
-Si vous souhaitez recadrer le contenu qui déborde, vous pouvez définir `overflow: hidden` pour votre boîte. Cela fera exactement ce qui est indiqué — cacher le débordement. Vous ne devez donc le faire que si la disparition du contenu ne pose pas de problème.
+Dans la mesure du possible, le CSS ne masque pas le contenu. Cela entraîne une perte de données. Le problème avec la perte de données est que vous, ou les visiteur·euse·s de votre site, pouvez ne pas le remarquer. Si le bouton «&nbsp;Envoyer&nbsp;» d'un formulaire disparaît et que personne ne peut remplir le formulaire, cela peut poser un gros problème&nbsp;! Au lieu de cela, le CSS déborde de manière visible. Vous êtes plus susceptible de remarquer un problème. Au pire, un·e visiteur·euse du site vous fait savoir que le contenu se chevauche.
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/hidden.html", '100%', 600)}}
+Si vous restreignez une boîte avec une largeur (`width`) ou une hauteur (`height`), le CSS vous fait confiance pour savoir ce que vous faites. Le CSS suppose que vous gérez le potentiel de débordement. En général, restreindre la dimension d'un bloc est problématique lorsque la boîte contient du texte. Il peut y avoir plus de texte que prévu lors de la conception du site, ou le texte peut être plus grand (par exemple, si l'utilisateur·ice a augmenté la taille de la police).
 
-Peut-être préféreriez-vous ajouter des barres de défilement lorsque le contenu déborde ? Si vous utilisez `overflow: scroll` alors votre navigateur ajoutera systématiquement des barres de défilement — même s'il n'y a pas assez de contenu pour faire défiler. Vous pourriez le souhaiter, car cela empêche l'apparition et la disparition des barres de défilement en fonction du contenu.
+## La propriété `overflow`
 
-**Si vous retirez du contenu de la boîte ci-dessous, vous constaterez que les barres de défilement restent même s'il n'y a rien à faire défiler.**
+La propriété {{CSSxRef("overflow")}} permet de définir comment le navigateur doit gérer le contenu qui déborde. Sa valeur par défaut est `visible`, ce qui signifie que vous pouvez voir le contenu lorsqu'il déborde.
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/scroll.html", '100%', 600)}}
+Les deux valeurs `overflow` suivantes fournissent le comportement dont vous avez besoin pour résoudre la majorité des problèmes de débordement&nbsp;:
 
-Dans l'exemple ci-dessus nous n'avons besoin de faire défiler que l'axe `y`, cependant nous avons des barres de défilement sur les deux axes. Vous pourriez utiliser à la place la propriété [`overflow-y`](/fr/docs/Web/CSS/overflow-y), qui définit `overflow-y: scroll` afin de faire défiler uniquement sur l'axe `y`.
+- `overflow: clip` coupe le contenu qui déborde, de sorte qu'il n'est jamais visible.
+- `overflow: auto` affiche des barres de défilement uniquement lorsque cela est nécessaire, permettant à l'utilisateur·ice de faire défiler les boîtes pour lire le contenu qui déborde.
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 600)}}
+Les deux sections suivantes expliquent comment utiliser ces valeurs. Ensuite, nous examinons d'autres valeurs de `overflow` et expliquons comment contrôler séparément le débordement des axes x et y.
 
-Vous pourriez également faire défiler sur l'axe x en utilisant [`overflow-x`](/fr/docs/Web/CSS/overflow-x), bien que ce ne soit pas une méthode recommandée pour gérer les longs mots ! Si vous avez besoin de gérer un long mot dans une petite boîte alors vous pourriez vous tourner vers les propriétés [`word-break`](/fr/docs/Web/CSS/word-break) ou [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap). En complément, certaines méthodes présentées dans le cours [Définir la taille des éléments en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Sizing) peuvent vous aider à créer des boîtes qui s'adapteront mieux à des quantités variables de contenu.
+### Masquer le contenu qui déborde
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 500)}}
+Pour couper le contenu lorsqu'il déborde, définissez `overflow: clip`. Tout ce qui ne rentre pas est coupé au bord de la boîte et ne peut pas être atteint. Cela signifie qu'une partie du contenu devient invisible, donc ne le faites que lorsque le masquage ne pose pas de problème.
 
-Comme pour `scroll`, une barre de défilement apparaîtra sur l'axe sélectionné qu'il y ait suffisamment de contenu ou pas pour créer un défilement.
+```html live-sample___clip
+<div class="boite">
+  Cette boîte a une hauteur et une largeur. Cela signifie que s'il y a trop de
+  contenu pour être affiché dans la hauteur attribuée, il y a une situation de
+  débordement. Si overflow est défini sur clip, tout débordement n'est pas
+  visible.
+</div>
+
+<p>Ce contenu est en dehors de la boîte.</p>
+```
+
+```css live-sample___clip
+.boite {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+  overflow: clip;
+}
+```
+
+{{EmbedLiveSample("clip", "", 200)}}
+
+Essayez de modifier cet exemple pour définir `overflow` sur `visible`, puis revenez à `clip`, pour voir l'effet.
 
 > [!NOTE]
-> Vous pouvez spécifier le défilement x et y simultanément en utilisant la propriété `overflow` en déclarant deux valeurs. Si deux mots clés sont spécifiés, le premier s'applique à `overflow-x` et le second à `overflow-y`. Sinon, `overflow-x` et `overflow-y` sont définis sur la même valeur. Par exemple, `overflow: scroll hidden` définira `overflow-x` sur `scroll` et `overflow-y` sur `hidden`.
+> Par défaut, `clip` coupe le contenu au bord de la boîte. La propriété CSS {{CSSxRef("overflow-clip-margin")}} déplace ce bord de découpe vers l'extérieur, permettant à une quantité définie de contenu débordant de rester visible avant que le reste ne soit coupé.
 
-Si vous souhaitez que les barres de défilement n'apparaissent que s'il y a plus de contenu que la boîte ne peut en contenir, utilisez `overflow: auto`. Dans ce cas c'est le navigateur qui décidera d'afficher ou non les barres de défilement. Les navigateurs de bureau ne le font généralement que lorsqu'il y a suffisamment de contenu pour provoquer un débordement.
+## Défiler le contenu débordant
 
-**Dans l'exemple ci-dessous, retirez du contenu jusqu'à ce que ça rentre dans la boîte et vous devriez voir les barres de défilement disparaître.**
+Au lieu de cela, vous voulez peut-être que les utilisateur·ice·s fassent défiler le contenu pour tout lire. Définir `overflow: auto` rend la boîte défilable, et les navigateurs avec des barres de défilement visibles n'affichent une barre de défilement que lorsqu'il y a réellement trop de contenu pour tenir.
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/auto.html", '100%', 600)}}
+Dans l'exemple ci-dessous, retirez du contenu du `<div>` jusqu'à ce qu'il ne déborde plus. Vous devez voir la barre de défilement disparaître&nbsp;:
 
-## Overflow crée un "Block Formatting Context"
+```html live-sample___auto
+<div class="boite">
+  Cette boîte a une hauteur et une largeur. Cela signifie que s'il y a trop de
+  contenu pour être affiché dans la hauteur attribuée, il y a une situation de
+  débordement. Si overflow est défini sur auto, les barres de défilement
+  n'apparaissent que lorsque c'est nécessaire.
+</div>
 
-Il existe un concept dans le CSS de **<i lang="en">Block Formatting Context</i>** (BFC). Ce n'est pas quelque chose dont vous devez trop vous préoccuper pour l'instant, mais il est utile de savoir que lorsque vous utilisez une valeur de `overflow` comme `scroll` ou `auto` vous créez un BFC. Le résultat est que le contenu de la boîte pour laquelle vous avez modifié la valeur de `overflow` devient une mini mise en page à part entière. Les éléments extérieurs au conteneur ne peuvent pas pénétrer dans le conteneur, et rien ne peut sortir de cette boîte pour pénétrer dans la mise en page qui l'entoure. Cela permet d'activer le défilement, car tout le contenu de votre boîte devra être intégré et ne pas chevaucher d'autres éléments de la page afin de créer une expérience de défilement cohérente.
+<p>Ce contenu est en dehors de la boîte.</p>
+```
 
-## Débordements indésirables en web design
+```css live-sample___auto
+.boite {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+  overflow: auto;
+}
+```
 
-Les méthodes de mise en page modernes (comme étudiées dans le module [La mise en page avec le CSS](/fr/docs/Learn_web_development/Core/CSS_layout)) gèrent très bien le débordement. Elles ont été conçues pour faire face au fait que nous avons tendance à ne pas pouvoir prévoir la quantité de contenu que nous aurons sur le web. Par le passé, les développeurs utilisaient souvent des hauteurs fixes pour aligner le bas des boîtes qui n'avaient pas vraiment de relation entre elles. C'était une méthode fragile et il peut arriver qu'occasionnellement, dans une application ancienne, vous soyez confrontés à une boîte dans laquelle le contenu déborde sur la suite de la page. Si vous observez ce phénomène, vous savez maintenant qu'il s'agit d'un débordement ; idéalement vous devriez remanier la mise en page afin de ne pas avoir à contraindre la taille de la boîte.
+{{EmbedLiveSample("auto", "", 200)}}
 
-Lorsque vous développez un site, vous devez toujours garder à l'esprit les problèmes de débordement. Vous devez tester des conceptions avec des quantités de contenu importantes et réduites, augmenter la taille de la police et vous assurer que votre CSS peut s'en sortir de manière efficace. La modification de la valeur d'`overflow` pour masquer le contenu ou ajouter des barres de défilement ne sera probablement réservée qu'à quelques rares cas particuliers - par exemple lorsque vous voulez spécifiquement une barre de défilement.
+> [!NOTE]
+> La visibilité des barres de défilement dépend du système d'exploitation.
+> Vous devez peut-être modifier les paramètres de votre navigateur pour toujours afficher les barres de défilement afin que les barres de défilement s'affichent toujours dans les exemples suivants.
 
-## Testez vos compétences&nbsp;!
+## Contrôler le débordement sur chaque axe
 
-Nous avons couvert beaucoup de choses dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien retenu ces informations avant de partir - voir (en anglais) [Testez vos compétences: overflow](/fr/docs/Learn/CSS/Building_blocks/Overflow_Tasks).
+Définir un seul mot-clé pour la valeur de la propriété `overflow` définit le comportement de débordement pour les axes x _et_ y d'un conteneur. Dans l'exemple précédent, si vous définissez `overflow` sur `scroll` (ce qui fait que les barres de défilement [apparaissent toujours](#always_displaying_scrollbars) indépendamment du fait que le contenu déborde ou non), vous voyez des barres de défilement sur les deux axes. Pour contrôler les axes séparément, utilisez les propriétés CSS {{CSSxRef("overflow-x")}} et {{CSSxRef("overflow-y")}}. Essayez de définir `overflow-y: auto` dans l'exemple.
+
+L'exemple suivant montre comment activer le défilement le long de l'axe x avec `overflow-x`, bien que cela ne soit pas recommandé pour gérer les mots longs&nbsp;! Si vous avez un mot long dans une petite boîte, envisagez d'utiliser les propriétés CSS {{CSSxRef("word-break")}} ou {{CSSxRef("overflow-wrap")}} pour couper le mot sur plusieurs lignes. De plus, certaines des méthodes abordées dans [la taille des éléments en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Sizing) peuvent vous aider à créer des boîtes qui s'adaptent mieux à des quantités de contenu variables.
+
+```html live-sample___scroll-x
+<div class="mot">Débordement</div>
+```
+
+```css live-sample___scroll-x
+.mot {
+  border: 5px solid #333333;
+  width: 100px;
+  font-size: 250%;
+  overflow-x: scroll;
+}
+```
+
+{{EmbedLiveSample("scroll-x")}}
+
+> [!NOTE]
+> Vous pouvez également définir le débordement sur les axes x et y séparément en passant deux valeurs de mot-clé à la propriété `overflow`&nbsp;: la première s'applique à `overflow-x` et la seconde à `overflow-y`. Par exemple, `overflow: clip auto` définit `overflow-x` sur `clip` et `overflow-y` sur `auto`.
+
+`clip` est la seule valeur que vous pouvez combiner avec `visible` sur l'autre axe. Si vous définissez un axe sur une valeur de défilement (`auto`, `scroll` ou `hidden`) et l'autre sur `visible`, la valeur `visible` est calculée comme `auto` à la place, car une boîte ne peut pas défiler sur un axe tout en laissant le contenu déborder de l'autre. Ainsi, `overflow: clip visible` coupe horizontalement et laisse le contenu déborder verticalement, tandis que `overflow: hidden visible` se comporte comme `overflow: hidden auto`.
+
+## Toujours afficher les barres de défilement
+
+Définir `overflow: scroll` rend la boîte défilable comme le fait `overflow: auto`, sauf que les navigateurs avec des barres de défilement visibles les affichent en permanence, même lorsque le contenu ne déborde pas.
+
+La principale raison d'utiliser `scroll` est la cohérence de la mise en page&nbsp;: la barre de défilement est toujours présente&nbsp;; par conséquent, le contenu ne se déplace pas lorsque la quantité de contenu change entre débordement et non débordement. Cependant, dans un tel cas, combiner `overflow: auto` avec une valeur {{cssxref("scrollbar-gutter")}} de `stable` est généralement une meilleure solution, car elle réserve l'espace sans forcer le dessin d'une barre de défilement.
+
+## La valeur `hidden`
+
+Vous rencontrez souvent `overflow: hidden` dans le code existant. Comme `clip`, il coupe le contenu débordant et n'affiche pas de barres de défilement. Contrairement à `clip`, il transforme néanmoins la boîte en conteneur défilable, et le contenu peut être défilé par d'autres moyens, par exemple en utilisant [JavaScript](/fr/docs/Learn_web_development/Core/Scripting) ou en tabulant vers un élément sélectionnable plus bas dans le contenu, comme un [élément de lien](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links).
+
+Vous devez utiliser la valeur `clip` la plupart du temps&nbsp;; `hidden` n'est nécessaire que si vous avez besoin du comportement défilable décrit ci-dessus.
+
+## Débordements indésirables dans la conception web
+
+Les méthodes de mise en page modernes (comme étudiées dans le module [La mise en page avec le CSS](/fr/docs/Learn_web_development/Core/CSS_layout)) gèrent très bien le débordement. Elles ont été conçues pour faire face au fait que nous avons tendance à ne pas pouvoir prévoir la quantité de contenu que nous avons sur le web.
+
+Cela n'a pas toujours été la norme. Par le passé, certains sites étaient construits avec des conteneurs de hauteur fixe pour aligner le bas des boîtes. Ces boîtes n'avaient autrement aucune relation entre elles. C'était fragile. Si vous rencontrez une boîte où le contenu chevauche un autre contenu, vous reconnaîtrez maintenant que le débordement peut en être la cause. Idéalement, vous devez remanier la mise en page pour ne pas dépendre de conteneurs de hauteur fixe.
+
+Lorsque vous développez un site, vous devez toujours garder à l'esprit les problèmes de débordement. Vous devez tester des conceptions avec des quantités de contenu importantes et réduites, augmenter et diminuer la taille de la police d'au moins deux incréments. Assurez-vous que votre CSS est robuste. La modification des valeurs de `overflow` pour masquer le contenu ou ajouter des barres de défilement est réservée à quelques cas particuliers (par exemple, lorsque vous souhaitez avoir une boîte défilante qui affiche toujours des barres de défilement).
 
 ## Résumé
 
-Cette courte leçon a introduit le concept de débordement ; vous comprenez maintenant que le CSS essaie de ne pas faire disparaître le contenu qui déborde car cela entraînerait des pertes de données. Vous avez découvert que vous pouvez gérer un débordement éventuel, et que vous devez également tester votre travail pour vous assurer que vous ne causez pas accidentellement un débordement problématique.
+Cette leçon a introduit le concept de débordement. Par défaut, le CSS évite de rendre le contenu débordant invisible. Vous pouvez gérer un débordement potentiel, et vous devez tester votre travail pour vous assurer qu'il ne cause pas accidentellement un débordement problématique.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+Dans le prochain article, nous vous proposons des tests que vous pouvez utiliser pour vérifier dans quelle mesure vous avez compris et retenu les informations que nous avons fournies sur le débordement.
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics")}}

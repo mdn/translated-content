@@ -26,7 +26,7 @@ new Error([message[, fileName[, lineNumber]]])
 
 ### Llamada a función o construcción `new`
 
-Cuando se usa `Error` como una función, sin {{JSxRef("Operators/new", "new")}}, devolverá un objeto `Error`. Por lo tanto, una simple llamada a `Error` producirá el mismo resultado que la construcción de un objeto `Error` mediante la palabra clave `new`.
+Cuando se usa `Error` como una función, sin {{JSxRef("new")}}, devolverá un objeto `Error`. Por lo tanto, una simple llamada a `Error` producirá el mismo resultado que la construcción de un objeto `Error` mediante la palabra clave `new`.
 
 ```js
 // esto...
@@ -46,5 +46,5 @@ const y = new Error('¡Fui construido con la palabra clave "new"!');
 
 ## Ve también
 
-- {{JSxRef("Sentencias/throw", "throw")}}
-- {{JSxRef("Sentencias/try...catch", "try...catch")}}
+- {{JSxRef("Statements/throw", "throw")}}
+- {{JSxRef("Statements/try...catch", "try...catch")}}

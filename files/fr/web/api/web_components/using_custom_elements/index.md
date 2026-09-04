@@ -16,7 +16,7 @@ Le contrôleur des éléments personnalisés d'un document Web est l'objet {{dom
 
 Pour enregistrer un élément personnalisé sur la page, vous utilisez la méthode {{domxref ("CustomElementRegistry.define()")}}. Elle prend comme arguments :
 
-- une {{domxref("DOMString")}} représentant le nom que vous donnez à l'élément ; notez que les noms d'éléments personnalisés doivent comprendre un tiret ; ils ne peuvent pas être des mots simples ;
+- une {{jsxref("String")}} représentant le nom que vous donnez à l'élément ; notez que les noms d'éléments personnalisés doivent comprendre un tiret ; ils ne peuvent pas être des mots simples ;
 - un objet de classe définissant le comportement de l'élément ;
 - facultativement, un objet d'options contenant une propriété extends, qui indique l'élément intégré dont votre élément hérite, le cas échéant.
 

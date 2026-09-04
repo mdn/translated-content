@@ -13,7 +13,7 @@ O **`Access-Control-Allow-Origin`** cabeçalho de resposta indica se os recursos
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>

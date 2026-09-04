@@ -37,7 +37,7 @@ l10n:
   - {{cssxref("break-inside")}} 现在是 {{cssxref("page-break-inside")}} 的别名。
 
 - 现已实现 {{cssxref("overflow-wrap")}} 属性的 `anywhere` 值（[Firefox bug 1505786](https://bugzil.la/1505786)）。
-- 现已实现 [`steps()` 时间函数](/zh-CN/docs/Web/CSS/easing-function/steps)中使用的新步骤位置关键字 `jump-start`、`jump-end`、`jump-none` 和 `jump-both`（[Firefox bug 1496619](https://bugzil.la/1496619)）。这也与 `frames()` 定时函数的移除不谋而合，该函数是以前实现此类功能的方法，现已弃用。
+- 现已实现 [`steps()` 时间函数](/zh-CN/docs/Web/CSS/Reference/Values/easing-function/steps)中使用的新步骤位置关键字 `jump-start`、`jump-end`、`jump-none` 和 `jump-both`（[Firefox bug 1496619](https://bugzil.la/1496619)）。这也与 `frames()` 定时函数的移除不谋而合，该函数是以前实现此类功能的方法，现已弃用。
 - 为了与其他浏览器兼容，新增了一些新的 {{cssxref("appearance", "-webkit-appearance")}} 值，特别是：
   - `meter`，现在用作 UA 样式表中 {{htmlelement("meter")}} 元素的默认值。现有值 `meterbar` 现在是 `meter` 的别名（[Firefox bug 1501483](https://bugzil.la/1501483)）。
   - `progress-bar`，现在用作 UA 样式表中 {{htmlelement("progress")}} 元素的默认值。现有值 `progressbar` 现在是 `progress-bar` 的别名（[Firefox bug 1501506](https://bugzil.la/1501506)）。

@@ -13,7 +13,7 @@ O cabeçalho de entidade **`Content-Length`** indica o tamanho do corpo da entid
       <td>{{Glossary("Entity header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>sim</td>
     </tr>
   </tbody>

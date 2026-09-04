@@ -61,7 +61,7 @@ console.log(f.name); // "f"
 console.log(object.someMethod.name); // "someMethod"
 ```
 
-Você pode definir uma função com um nome numa {{jsxref("Operators/Function", "expressão de função", "", 1)}}:
+Você pode definir uma função com um nome numa {{jsxref("Operators/function", "expressão de função", "", 1)}}:
 
 ```js
 var object = {

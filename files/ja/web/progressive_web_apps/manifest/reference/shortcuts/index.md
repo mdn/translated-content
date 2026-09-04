@@ -195,5 +195,5 @@ l10n:
 - [`icons`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/icons) マニフェストメンバー
 - [`scope`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/scope) マニフェストメンバー
 - [`start_url`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) マニフェストメンバー
-- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
+- [同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)
 - PWA で[よくある操作をショートカットとして公開](/ja/docs/Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts)する方法

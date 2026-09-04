@@ -1,13 +1,12 @@
 ---
 title: Intl.DurationFormat.supportedLocalesOf()
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/supportedLocalesOf
 l10n:
-  sourceCommit: 65bd9d66ad51dfe250494618a695046c6574421a
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-{{JSRef}}
-
-**`Intl.DurationFormat.supportedLocalesOf()`** 静的メソッドは、実行時の既定のロケールに代替されることなく、経過時間の書式に対応する、指定されたロケールの配列を返します。
+**`Intl.DurationFormat.supportedLocalesOf()`** は静的メソッドで、指定されたロケールのうち、実行環境のデフォルトのロケールで代替されることなく、経過時間の書式化に対応するものを配列に収めて返します。
 
 ## 構文
 
@@ -19,22 +18,21 @@ Intl.DurationFormat.supportedLocalesOf(locales, options)
 ### 引数
 
 - `locales`
-  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式と解釈については、 [`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
+  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}の文字列、またはそのような文字列の配列です。`locales` 引数の一般的な形と解釈については、[`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 - `options` {{optional_inline}}
-  - : 以下のプロパティを持つことがあるオブジェクトです。
+  - : 以下のプロパティを持つ可能性があるオブジェクトです。
     - `localeMatcher`
-      - : 使用するロケールの照合アルゴリズムです。指定可能な値は `"lookup"` および `"best fit"` で、既定値は `"best fit"` です。このオプションの詳細は、 {{jsxref("Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
+      - : 使用するロケール照合アルゴリズムです。指定可能な値は `"lookup"` および `"best fit"` です。デフォルト値は `"best fit"` です。このオプションについては、{{jsxref("Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
 
 ### 返値
 
-経過時間の書式で、ランタイムの既定のロケールに代替されることなく、指定されたロケールタグのサブセットに対応する文字列の配列です。
+指定したロケールタグのうち、実行環境のデフォルトのロケールで代替する必要なく、経過時間の書式化に対応しているものを表す文字列の配列です。
 
 ## 例
 
 ### supportedLocalesOf() の使用
 
-経過時間の書式化で、インドネシア語とドイツ語には対応しているが、バリ語に対応していないランタイムを想定すると、`pinyin` 照合は経過時間の書式化とは関係がなく、インドネシア語では使用されないにもかかわらず、 `supportedLocalesOf` はインドネシア語とドイツ語の言語タグを、変更せずに返します。また、インドネシア語専用のドイツ語が対応している可能性は低いです。
-ここで `"lookup"` アルゴリズムの仕様に注意してください。 `"best fit"` マッチャーは、ほとんどのバリ語話者はインドネシア語も理解するため、インドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返します。
+実行環境がインドネシア語とドイツ語の経過時間の書式化に対応しているものの、バリ語には対応していないと想定した場合、`supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返します。`pinyin` の照合順序は経過時間の書式化には関係なく、インドネシア語でも使用されません。また、インドネシアに特化したドイツ語にはおそらく対応していません。ここでの `"lookup"` アルゴリズムの仕様に注意してください。`"best fit"` の照合では、バリ語話者のほとんどがインドネシア語も理解しているので、インドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。
 
 ```js
 const locales = ["ban", "id-u-co-pinyin", "de-ID"];

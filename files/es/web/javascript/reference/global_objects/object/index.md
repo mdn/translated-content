@@ -25,7 +25,7 @@ Véase también la [la sintaxis literal / inicializador de objeto](/es/docs/Web/
 
 ## Borrando una propiedad de un objeto
 
-No hay ningún método en un Objeto que sirva para borrar sus propiedades (como {{jsxref("Map.prototype.delete", "Map.prototype.delete()")}}). Para hacerlo, es necesario el uso del [operador delete](/es/docs/Web/JavaScript/Reference/Operators/delete).
+No hay ningún método en un Objeto que sirva para borrar sus propiedades (como {{jsxref("Map.prototype.delete()")}}). Para hacerlo, es necesario el uso del [operador delete](/es/docs/Web/JavaScript/Reference/Operators/delete).
 
 ## Constructor
 
@@ -34,47 +34,47 @@ No hay ningún método en un Objeto que sirva para borrar sus propiedades (como 
 
 ## Métodos estáticos
 
-- {{jsxref("Object.assign","Object.assign()")}}
+- {{jsxref("Object.assign()")}}
   - : Copia los valores de todas las propiedades enumerables propias de uno o más objetos fuente al objeto asignado.
-- {{jsxref("Object.create","Object.create()")}}
+- {{jsxref("Object.create()")}}
   - : Crea un nuevo objeto con el objeto prototipal especificado y sus propiedades.
-- {{jsxref("Object.defineProperty","Object.defineProperty()")}}
+- {{jsxref("Object.defineProperty()")}}
   - : Agrega la propiedad nombrada descrita por el descriptor dado a un objeto.
-- {{jsxref("Object.defineProperties","Object.defineProperties()")}}
+- {{jsxref("Object.defineProperties()")}}
   - : Añade las propiedades nombradas a un objeto.
-- {{jsxref("Object.entries","Object.entries()")}}
+- {{jsxref("Object.entries()")}}
   - : Devuelve un array que contiene todos los pares `[key, value]` de las propiedades enumerables en formato cadena de texto que le **pertenecen** a un objeto dado.
-- {{jsxref("Object.freeze","Object.freeze()")}}
+- {{jsxref("Object.freeze()")}}
   - : Congela un objeto. Otro código no puede borrar ni cambiar sus propiedades.
-- {{jsxref("Object.fromEntries","Object.fromEntries()")}}
+- {{jsxref("Object.fromEntries()")}}
   - : Devuelve un nuevo objeto de los pares iterables `[key, value]`. (Este método hace lo contrario a {{jsxref("Object.entries")}}).
-- {{jsxref("Object.getOwnPropertyDescriptor","Object.getOwnPropertyDescriptor()")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
   - : Devuelve un descriptor de propiedad para una propiedad nombrada en un objeto.
-- {{jsxref("Object.getOwnPropertyDescriptors","Object.getOwnPropertyDescriptors()")}}
+- {{jsxref("Object.getOwnPropertyDescriptors()")}}
   - : Devuelve un objeto con todos los descriptores de propiedad pertenecientes a un objeto.
-- {{jsxref("Object.getOwnPropertyNames","Object.getOwnPropertyNames()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
   - : Devuelve un arreglo que contiene todos los nombres de las propiedades enumerables y no enumerables que le **pertenecen** a un objeto dado.
-- {{jsxref("Object.getOwnPropertySymbols","Object.getOwnPropertySymbols()")}}
+- {{jsxref("Object.getOwnPropertySymbols()")}}
   - : Devuelve un objeto que contiene todas las propiedades símbolo encontradas directamente en un objeto dado.
-- {{jsxref("Object.getPrototypeOf","Object.getPrototypeOf()")}}
+- {{jsxref("Object.getPrototypeOf()")}}
   - : Devuelve el prototipo (la propiedad interna `[[Prototype]]`) del objeto especificado.
-- {{jsxref("Object.is","Object.is()")}}
+- {{jsxref("Object.is()")}}
   - : Compara si dos valores son el mismo valor. Iguala todos los valores `NaN` (lo que difiere de la Comparación Abstracta de Igualdad y de la Comparación Estricta de Igualdad).
-- {{jsxref("Object.isExtensible","Object.isExtensible()")}}
+- {{jsxref("Object.isExtensible()")}}
   - : Determina si está permitido extender un objeto.
-- {{jsxref("Object.isFrozen","Object.isFrozen()")}}
+- {{jsxref("Object.isFrozen()")}}
   - : Determina si un objeto está congelado.
-- {{jsxref("Object.isSealed","Object.isSealed()")}}
+- {{jsxref("Object.isSealed()")}}
   - : Determines si un objeto está sellado.
-- {{jsxref("Object.keys","Object.keys()")}}
+- {{jsxref("Object.keys()")}}
   - : Devuelve un arreglo que contiene todos los nombres de las propiedades enumerables de tipo cadena de texto **pertenecientes** al objeto dado.
-- {{jsxref("Object.preventExtensions","Object.preventExtensions()")}}
+- {{jsxref("Object.preventExtensions()")}}
   - : Previene que un objeto pueda extenderse.
-- {{jsxref("Object.seal","Object.seal()")}}
+- {{jsxref("Object.seal()")}}
   - : Previene que otro código pueda borrar propiedades de un objeto.
-- {{jsxref("Object.setPrototypeOf","Object.setPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}}
   - : Estipula el prototipo de un objeto (su propiedad interna `[[Prototype]]`).
-- {{jsxref("Object.values","Object.values()")}}
+- {{jsxref("Object.values()")}}
   - : Devuelve un arreglo que contiene todos los valores correspondientes a las propiedades enumerables de tipo cadena de texto **pertenecientes** a un objeto dado.
 
 ## Propiedades de instancia

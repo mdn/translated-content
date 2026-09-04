@@ -74,4 +74,4 @@ var x = function* (y) {
 - Objeto {{jsxref("Function")}}
 - {{jsxref("Statements/function", "Sentencia function")}}
 - {{jsxref("Operators/function", "Expresión function")}}
-- {{jsxref("Functions_and_function_scope", "Funciones y alcance de funciones")}}
+- {{jsxref("Functions", "Funciones y alcance de funciones")}}

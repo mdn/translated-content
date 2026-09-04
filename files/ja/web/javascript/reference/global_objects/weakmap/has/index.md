@@ -1,50 +1,50 @@
 ---
 title: WeakMap.prototype.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
+l10n:
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-{{JSRef}}
-
-**`has()`** メソッドは、特定のキーをもつ要素が `WeakMap` オブジェクト内に存在するかどうかを示す真偽値を返します。
+**`has()`** は {{jsxref("WeakMap")}} インスタンスのメソッドで、指定されたキーをもつ要素が `WeakMap` オブジェクト内に存在するかどうかを示す論理値を返します。
 
 {{InteractiveExample("JavaScript デモ: WeakMap.prototype.has()")}}
 
 ```js interactive-example
-const weakmap1 = new WeakMap();
+const weakmap = new WeakMap();
 const object1 = {};
 const object2 = {};
 
-weakmap1.set(object1, "foo");
+weakmap.set(object1, "foo");
 
-console.log(weakmap1.has(object1));
-// Expected output: true
+console.log(weakmap.has(object1));
+// 予想される結果: true
 
-console.log(weakmap1.has(object2));
-// Expected output: false
+console.log(weakmap.has(object2));
+// 予想される結果: false
 ```
 
 ## 構文
 
-```
-ws.has(key);
+```js-nolint
+has(key)
 ```
 
 ### 引数
 
 - `key`
-  - : `WeakMap` オブジェクトに存在するかテストする要素のキーです。
+  - : `WeakMap` オブジェクトに存在するかテストする項目のキーです。オブジェクトのキーは値ではなく[参照](/ja/docs/Glossary/Object_reference)として比較されます。
 
 ### 返値
 
-- Boolean
-  - : `WeakMap` オブジェクト内に特定のキーをもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
+指定されたキーをもつ項目が `WeakMap` オブジェクト内に存在したら `true` を返します。そうでなければ `false` を返します。`key` がオブジェクトでも[非登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)でもない場合は常に `false` を返します。
 
 ## 例
 
 ### has() メソッドの使用
 
 ```js
-var wm = new WeakMap();
+const wm = new WeakMap();
 wm.set(window, "foo");
 
 wm.has(window); // true を返す
@@ -62,5 +62,6 @@ wm.has("baz"); // false を返す
 ## 関連情報
 
 - {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.set()")}}
+- {{jsxref("WeakMap.prototype.delete()")}}
 - {{jsxref("WeakMap.prototype.get()")}}
+- {{jsxref("WeakMap.prototype.set()")}}

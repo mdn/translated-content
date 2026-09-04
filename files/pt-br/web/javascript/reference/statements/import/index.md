@@ -99,7 +99,7 @@ import '/modules/my-module.js';
 
 ### Importando Padrões
 
-É possível ter um padrão {{JSxRef ("Declarações / exportação", "exportação")}} (seja um objeto, uma função, uma classe etc.). A declaração de importação pode então ser usada para importar esses padrões.
+É possível ter um padrão {{jsxref("Statements/export", "exportação")}} (seja um objeto, uma função, uma classe etc.). A declaração de importação pode então ser usada para importar esses padrões.
 
 A versão mais simples importa diretamente o padrão:
 

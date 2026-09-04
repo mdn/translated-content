@@ -21,7 +21,7 @@ browser.bookmarks.remove(
 ### 引数
 
 - `id`
-  - : 削除したいブックマーク / 空フォルダーの ID を指定する {{jsxref("string")}} です。
+  - : 削除したいブックマーク / 空フォルダーの ID を指定する {{jsxref("String")}} です。
 - `callback`{{optional_inline}}
   - : ブックマークやフォルダーが削除された際に実行される関数です。この関数に渡される引数はありません。
 

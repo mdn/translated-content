@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/decimal-format
 original_slug: Web/XSLT/Element/decimal-format
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 L'élément `<xsl:decimal-format>` définit les caractères et symboles à utiliser lors de la conversion de nombres en chaînes à l'aide de la fonction `format-number( )`.
 

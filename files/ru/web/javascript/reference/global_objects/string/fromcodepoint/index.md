@@ -22,12 +22,12 @@ String.fromCodePoint(num1[, ...[, numN]])
 
 ### Выбрасываемые исключения
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-  - : Исключение {{jsxref("Global_Objects/RangeError", "RangeError")}} выбрасывается в случае, если методу предоставлена неверная кодовая точка Юникода (например, "RangeError: NaN is not a valid code point").
+- {{jsxref("RangeError")}}
+  - : Исключение {{jsxref("RangeError")}} выбрасывается в случае, если методу предоставлена неверная кодовая точка Юникода (например, "RangeError: NaN is not a valid code point").
 
 ## Описание
 
-Поскольку метод `fromCodePoint()` является статическим методом объекта {{jsxref("Global_Objects/String", "String")}}, вы всегда должны использовать его как `String.fromCodePoint()`, а не как метод созданного вами экземпляра {{jsxref("Global_Objects/String", "String")}}.
+Поскольку метод `fromCodePoint()` является статическим методом объекта {{jsxref("String")}}, вы всегда должны использовать его как `String.fromCodePoint()`, а не как метод созданного вами экземпляра {{jsxref("String")}}.
 
 ## Примеры
 

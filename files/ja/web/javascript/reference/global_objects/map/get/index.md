@@ -3,10 +3,10 @@ title: Map.prototype.get()
 short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-**`get()`** は {{jsxref("Map")}} インスタンスのメソッドで、この `Map` オブジェクトから指定された要素を返します。指定されたキーに関連付けられた値がオブジェクトである場合は、そのオブジェクトの参照を受け取ることになり、そのオブジェクトに対して変更を行った場合は、 `Map` オブジェクトの中にあるものに変更が行われます。
+**`get()`** は {{jsxref("Map")}} インスタンスのメソッドで、この対応表 (`Map`) 内のキーに対応する値を返します。該当するキーがない場合は `undefined` を返します。オブジェクトの値は、コピーではなく、元から格納されていたものと同じ参照として返されます。そのため、返されたオブジェクトに対して変更を行うと、`Map` 内部を含め、その参照が保持されているすべての場所で反映されます。
 
 {{InteractiveExample("JavaScript デモ: Map.prototype.get()")}}
 
@@ -30,11 +30,11 @@ get(key)
 ### 引数
 
 - `key`
-  - : `Map` オブジェクトから返される要素のキーです。
+  - : `Map` オブジェクトから返される要素のキーです。オブジェクトのキーは値ではなく[参照](/ja/docs/Glossary/Object_reference)として比較されます。
 
 ### 返値
 
-指定されたキーに関連付けられた要素を返します。 `Map` オブジェクト内にキーが見つからない場合は、{{jsxref("undefined")}} を返します。
+この `Map` オブジェクト内の指定されたキーに関連付けられた値です。キーが見つからない場合は、{{jsxref("undefined")}} が返されます。
 
 ## 例
 
@@ -61,8 +61,6 @@ console.log(arr); // ["foo"]
 console.log(myMap.get("bar")); // ["foo"]
 ```
 
-マップが元のオブジェクトへの参照を保持することで、実質的にオブジェクトがガベージコレクトされないことを意味し、予期せぬメモリー問題を引き起こす可能性があることに注意してください。もし、マップに格納されるオブジェクトが元のオブジェクトと同じ寿命を持つようにしたい場合は、 {{jsxref("WeakMap")}} を使用することを検討してください。
-
 ## 仕様書
 
 {{Specifications}}
@@ -74,5 +72,6 @@ console.log(myMap.get("bar")); // ["foo"]
 ## 関連情報
 
 - {{jsxref("Map")}}
+- {{jsxref("Map.prototype.delete()")}}
 - {{jsxref("Map.prototype.set()")}}
 - {{jsxref("Map.prototype.has()")}}

@@ -14,27 +14,27 @@ A interface `Location` representa a localização do objeto a qual ele está ass
 _A inteface `Location` não herda nenhuma propriedade, mas implementa as propriedades de_ _{{domxref("URLUtils")}}._
 
 - {{domxref("URLUtils.href")}}
-  - : É uma {{domxref("DOMString")}} que contém toda URL.
+  - : É uma {{jsxref("String")}} que contém toda URL.
 - {{domxref("URLUtils.protocol")}}
-  - : É uma {{domxref("DOMString")}} que contém o esquema de protocolo da URL, incluindo o final ':'.
+  - : É uma {{jsxref("String")}} que contém o esquema de protocolo da URL, incluindo o final ':'.
 - {{domxref("URLUtils.host")}}
-  - : É uma {{domxref("DOMString")}} que contém o _host_, que é o _hostname_ seguido de ':' e a _port_ da URL.
+  - : É uma {{jsxref("String")}} que contém o _host_, que é o _hostname_ seguido de ':' e a _port_ da URL.
 - {{domxref("URLUtils.hostname")}}
-  - : É uma {{domxref("DOMString")}} que contém o domínio da URL.
+  - : É uma {{jsxref("String")}} que contém o domínio da URL.
 - {{domxref("URLUtils.port")}}
-  - : É uma {{domxref("DOMString")}} que contém o número da porta da URL.
+  - : É uma {{jsxref("String")}} que contém o número da porta da URL.
 - {{domxref("URLUtils.pathname")}}
-  - : É uma {{domxref("DOMString")}} que contém `'/'`, como caractere inicial, seguido do caminho da URL.
+  - : É uma {{jsxref("String")}} que contém `'/'`, como caractere inicial, seguido do caminho da URL.
 - {{domxref("URLUtils.search")}}
-  - : É uma {{domxref("DOMString")}} que contém um `'?'` seguido dos parâmetros da URL.
+  - : É uma {{jsxref("String")}} que contém um `'?'` seguido dos parâmetros da URL.
 - {{domxref("URLUtils.hash")}}
-  - : É uma {{domxref("DOMString")}} que contém um `'#'` seguido do identificador de fragmento da URL.
+  - : É uma {{jsxref("String")}} que contém um `'#'` seguido do identificador de fragmento da URL.
 - {{domxref("URLUtils.username")}}
-  - : É uma {{domxref("DOMString")}} que contém o nome de usuário especificado antes do nome de domínio.
+  - : É uma {{jsxref("String")}} que contém o nome de usuário especificado antes do nome de domínio.
 - {{domxref("URLUtils.password")}}
-  - : É uma {{domxref("DOMString")}} que contém a senha especificada antes do nome de domínio.
+  - : É uma {{jsxref("String")}} que contém a senha especificada antes do nome de domínio.
 - {{domxref("URLUtils.origin")}} {{readOnlyInline}}
-  - : Retorna uma {{domxref("DOMString")}} que contém a forma canônica da origem do local especificado.
+  - : Retorna uma {{jsxref("String")}} que contém a forma canônica da origem do local especificado.
 
 ## Métodos
 
@@ -47,7 +47,7 @@ _A inteface `Location` não herda nenhum método, mas implementa os métodos de 
 - {{domxref("Location.replace()")}}
   - : Substitui o recurso atual pelo recurso presente na URL fornecida. A diferença entre o método `assign()` é que após usar `replace()` a página atual não será salva na sessão {{domxref("History")}}, ou seja, o usuário não será capaz de usar o botão _voltar_ para navegar até a página.
 - {{domxref("URLUtils.toString()")}}
-  - : Retorna uma {{domxref("DOMString")}} que contém toda URL. O método é um sinônimo para {{domxref("URLUtils.href")}}, embora não possa ser usado para modificar o valor.
+  - : Retorna uma {{jsxref("String")}} que contém toda URL. O método é um sinônimo para {{domxref("URLUtils.href")}}, embora não possa ser usado para modificar o valor.
 
 ## Especificações
 

@@ -88,7 +88,7 @@ console.log(coisa.next().value); // 1
 
 ### Métodos assíncronos
 
-{{jsxref("Statements/funcoes_assincronas", "Funções assíncronas", "", 1)}} também podem ser definidas usando a sintaxe reduzida.
+{{jsxref("Statements/async_function", "Funções assíncronas", "", 1)}} também podem ser definidas usando a sintaxe reduzida.
 
 ```js
 // Utilizando a propriedade com nome (pre-ES6)
@@ -108,7 +108,7 @@ var obj3 = {
 
 ### Generator methods assíncronos
 
-Os [generator methods](/pt-BR/docs/Web/JavaScript/Reference/Statements/function*) também podem ser {{jsxref("Statements/funcoes_assincronas", "assíncronos", "", 1)}}
+Os [generator methods](/pt-BR/docs/Web/JavaScript/Reference/Statements/function*) também podem ser {{jsxref("Statements/async_function", "assíncronos", "", 1)}}
 
 ```js
 var obj4 = {

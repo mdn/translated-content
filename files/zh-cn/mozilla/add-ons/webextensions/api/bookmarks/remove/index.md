@@ -23,7 +23,7 @@ var removingBookmark = browser.bookmarks.remove(
 ### 参数
 
 - `id`
-  - : 一个指定要移除的书签或空文件夹的 ID 的{{jsxref("string", "字符串", "", 1)}}。
+  - : 一个指定要移除的书签或空文件夹的 ID 的{{jsxref("String", "字符串", "", 1)}}。
 
 ### 返回值
 

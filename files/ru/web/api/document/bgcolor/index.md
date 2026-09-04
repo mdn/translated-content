@@ -3,7 +3,7 @@ title: Document.bgColor
 slug: Web/API/Document/bgColor
 ---
 
-{{APIRef("DOM")}} {{ Deprecated_header() }}
+{{APIRef("DOM")}} {{ Deprecated_header }}
 
 Устаревшее свойство `bgColor` возвращает или устанавливает цвет фона текущего документа.
 
