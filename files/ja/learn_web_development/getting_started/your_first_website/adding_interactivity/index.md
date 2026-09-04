@@ -88,7 +88,7 @@ listItems.forEach((item) => {
 
 ## "Hello world!" の手順を追って説明
 
-JavaScript で記述を始めるにあたって、サンプルウェブサイトに _Hello world!_ の例を追加する手順を順を追って追ってみましょう。（[_Hello world!_](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) は、プログラミング入門の標準例です。）
+JavaScript で記述を始めるにあたって、サンプルウェブサイトに _Hello world!_ の例を追加する手順を順を追って追ってみましょう。（[_Hello world!_](https://ja.wikipedia.org/wiki/Hello_world) は、プログラミング入門の標準例です。）
 
 > [!WARNING]
 > これまでこのコースに沿って進めてきていない場合は、[このサンプルコードをダウンロードして](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/main)作業を進めてください。
