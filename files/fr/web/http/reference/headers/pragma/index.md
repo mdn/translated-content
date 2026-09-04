@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{Deprecated_Header}}
-
 L'en-tête HTTP **`Pragma`** est un en-tête spécifique à l'implémentation qui peut avoir divers effets tout au long de la chaîne requête-réponse.
 Cet en-tête sert à assurer la rétrocompatibilité avec les caches HTTP/1.0 qui ne prennent pas en charge l'en-tête {{HTTPHeader("Cache-Control")}} de HTTP/1.1.
 

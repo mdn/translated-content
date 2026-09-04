@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 L'en-tête HTTP {{HTTPHeader("Permissions-Policy")}} avec la directive **`attribution-reporting`** contrôle si le document courant est autorisé à utiliser [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API).
 

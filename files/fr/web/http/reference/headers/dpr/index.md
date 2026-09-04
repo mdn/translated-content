@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 013f3148c4e85038bd961c984e357da703d315e3
 ---
 
-{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{Non-standard_Header}}
 
 > [!WARNING]
 > L'en-tête `DPR` a été standardisé sous le nom {{HTTPHeader("Sec-CH-DPR")}} et ce nouveau nom est désormais privilégié.

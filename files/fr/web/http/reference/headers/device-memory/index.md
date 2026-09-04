@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b304d8d3c870fba028df550a51f5b4258ab3ac08
 ---
 
-{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{Non-standard_Header}}
 
 > [!WARNING]
 > L'en-tête `Device-Memory` a été standardisé sous le nom {{HTTPHeader("Sec-CH-Device-Memory")}} et ce nouveau nom est désormais privilégié.

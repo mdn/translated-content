@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{Deprecated_Header}}
-
 > [!WARNING]
 > La directive {{CSP("report-to")}} est prévue pour remplacer `report-uri`, et dans les navigateurs qui prennent en charge `report-to`, la directive `report-uri` est ignorée.
 >

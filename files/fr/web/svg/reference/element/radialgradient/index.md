@@ -121,7 +121,7 @@ svg {
     - Peut être animé
       - : Oui
 - [`href`](/fr/docs/Web/SVG/Attribute/href)
-  - : {{Deprecated_Header}} Une référence [`<IRI>`](/fr/docs/Web/SVG/Guides/Content_type#iri) à un autre élément `<radialGradient>` qui pourra être utilisé comme modèle.
+  - : Une référence [`<IRI>`](/fr/docs/Web/SVG/Guides/Content_type#iri) à un autre élément `<radialGradient>` qui pourra être utilisé comme modèle.
     - Type de valeur
       - : [`<IRI>`](/fr/docs/Web/SVG/Guides/Content_type#iri)
     - Valeur par défaut

@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}
-
 La méthode **`setYear()`** des instances de {{JSxRef("Date")}} définit l'année pour une date définie selon l'heure locale.
 
 Cependant, la façon dont la méthode héritée `setYear()` définit les valeurs d'année diffère de celle de la méthode préférée {{JSxRef("Date/setFullYear", "setFullYear()")}} — et dans certains cas, diffère aussi de la façon dont `new Date()` et {{JSxRef("Date.parse()")}} définissent les valeurs d'année. Plus précisément, pour des nombres à deux chiffres, comme `22` et `61`&nbsp;:

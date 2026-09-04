@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 > [!NOTE]
 > La spécification DNT (Do Not Track) a été abandonnée. Voir {{DOMxRef("Navigator.doNotTrack")}} pour plus d'informations.

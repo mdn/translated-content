@@ -3,7 +3,7 @@ title: String.prototype.bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{JSRef}}
 
 La méthode **`bold()`** crée un élément HTML {{HTMLElement("b")}} qui affiche la chaine de caractères en gras.
 

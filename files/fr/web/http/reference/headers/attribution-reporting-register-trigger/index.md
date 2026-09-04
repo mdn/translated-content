@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Attribution-Reporting-Register-Trigger`** enregistre une fonctionnalité de page comme [déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers). Cet en-tête est inclus dans la réponse à une requête contenant l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}.
 

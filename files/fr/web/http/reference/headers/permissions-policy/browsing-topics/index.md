@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 L'en-tête HTTP {{HTTPHeader("Permissions-Policy")}} avec la directive **`browsing-topics`** contrôle l'accès à [l'API Topics](/fr/docs/Web/API/Topics_API).
 

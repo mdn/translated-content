@@ -3,7 +3,7 @@ title: String.prototype.small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{JSRef}}
 
 La méthode **`small()`** permet de créer un élément HTML {{HTMLElement("small")}}, ce qui permet d'afficher la chaîne de caractères dans une fonte de petite taille.
 

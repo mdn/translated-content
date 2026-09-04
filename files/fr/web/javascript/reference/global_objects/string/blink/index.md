@@ -3,7 +3,7 @@ title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{JSRef}}
 
 La méthode **`blink()`** crée un élément HTML `<blink>` qui affiche la chaine de caractères en clignotant.
 

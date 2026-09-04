@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{Deprecated_Header}}
-
 L'{{Glossary("response header", "en-tête de réponse")}} `Expect-CT` permet aux sites d'activer la déclaration et/ou l'application des exigences de la [transparence des certificats](/fr/docs/Web/Security/Defenses/Certificate_Transparency).
 La transparence des certificats (<abbr title="Certificate Transparency" lang="en">CT</abbr>) vise à empêcher l'utilisation de certificats mal émis pour ce site de passer inaperçue.
 
