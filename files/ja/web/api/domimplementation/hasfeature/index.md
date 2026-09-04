@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{Deprecated_Header}}
+{{ApiRef("DOM")}}
 
 **`DOMImplementation.hasFeature()`** メソッドは、指定された機能に対応しているかどうかを示す論理値を返します。これは非推奨です。現代のブラウザーはすべて `true` を返します。
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 41c3f093216bda022f04b4a40fa55e2f0b7af5e0
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}}
+{{APIRef("DOM")}}
 
 文書本文のアクティブなリンクの色を取得または設定します。リンクは `mousedown` と `mouseup` イベントの間にアクティブになります。
 

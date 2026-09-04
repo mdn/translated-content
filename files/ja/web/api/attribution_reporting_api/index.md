@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0c906f7f464d8ff632baf8d25fa63eed3f03b632
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Attribution Reporting API")}}{{deprecated_header}}{{non-standard_header}}
+{{securecontext_header}}{{DefaultAPISidebar("Attribution Reporting API")}}{{non-standard_header}}
 
 **帰属レポート API**は、例えば、ユーザーがあるサイトに埋め込まれた広告をクリックし、その後、ベンダーのサイトでアイテムを購入した場合など、開発者がコンバージョンを測定し、それらのコンバージョンに関するレポートにアクセスすることができるようにします。これにはサードパーティのトラッキングクッキーに頼る必要はありません。
 

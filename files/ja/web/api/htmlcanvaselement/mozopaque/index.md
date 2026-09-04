@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("Canvas API")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Canvas API")}}{{non-standard_header}}
 
 標準外の **`HTMLCanvasElement.mozOpaque`** プロパティは論理値で、この {{HTMLElement("canvas")}} 要素の [`moz-opaque`](/ja/docs/Web/HTML/Reference/Elements/canvas#moz-opaque) 属性を反映します。これは、半透明の要素があるかどうかをキャンバスに知らせるものです。半透明がないことがキャンバスに伝われば、描画性能を最適化することができます。
 
