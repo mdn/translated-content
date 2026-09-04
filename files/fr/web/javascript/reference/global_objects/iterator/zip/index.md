@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 38c09bffe4654e74bfd225d28575afe42d4fe344
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La méthode statique **`Iterator.zip()`** crée un nouvel objet {{JSxRef("Iterator")}} qui agrège plusieurs éléments à partir de plusieurs objets itérables en retournant des tableaux contenant les éléments à la même position. Elle permet essentiellement de "zipper" les itérables d'entrée, permettant une itération simultanée sur eux.
 

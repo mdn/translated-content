@@ -3,7 +3,7 @@ title: RegExp.lastParen ($+)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{non-standard_header}}
 
 La propriété **`lastParen`** est une propriété statique accessible en lecture seule qui contient la dernière correspondance enregistrée dans un groupe (entre parenthèse) si jamais elle existe. `RegExp.$+` est un alias pour cette propriété.
 

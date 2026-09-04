@@ -15,11 +15,11 @@ L'élément MathML `<mfenced>` offre la possibilité d'ajouter des parenthèses 
   - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/Web/CSS).
 - close
   - : Une chaîne de caractère pour le délimiteur fermant. La valeur par défaut est «&nbsp;`)`&nbsp;» et tous les blancs sont tronqués.
-- href {{Deprecated_Inline()}}
+- href {{Deprecated_Inline}}
   - : Un hyperlien pointant vers un URI donné.
-- mathbackground {{Deprecated_Inline()}}
+- mathbackground {{Deprecated_Inline}}
   - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-clés).
-- mathcolor {{Deprecated_Inline()}}
+- mathcolor {{Deprecated_Inline}}
   - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-clés).
 
 <!---->

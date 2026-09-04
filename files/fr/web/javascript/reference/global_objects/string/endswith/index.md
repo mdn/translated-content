@@ -3,8 +3,6 @@ title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
 
-{{JSRef}}
-
 La méthode **`endsWith()`** renvoie un booléen indiquant si la chaine de caractères se termine par la chaine de caractères fournie en argument.
 
 {{InteractiveExample("JavaScript Demo: String.endsWith()")}}

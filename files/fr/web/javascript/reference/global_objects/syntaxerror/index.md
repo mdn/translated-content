@@ -3,8 +3,6 @@ title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
 ---
 
-{{JSRef}}
-
 L'objet **`SyntaxError`** représente une erreur qui se produit lors de l'interprétation d'un code dont la syntaxe est invalide. Une telle exception est déclenchée lorsque le moteur JavaScript rencontre des entités lexicales invalides ou dans un ordre invalide par rapport à la grammaire du langage.
 
 ## Constructeur
