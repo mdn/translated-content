@@ -4,8 +4,6 @@ slug: Web/XML/XSLT
 original_slug: Web/XSLT
 ---
 
-{{XSLTRef}}
-
 <div id="Quick_links">
   <ol>
     <li><strong><a href="/fr/docs/Web/XML/XSLT">XSLT</a></strong></li>
