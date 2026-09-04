@@ -3,8 +3,6 @@ title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
 
-{{JSRef}}
-
 Un objet **`TypeError`** représente une erreur qui se produit généralement (mais pas toujours) lorsqu'une opération n'a pu avoir lieu parce qu'une valeur n'a pas le type attendu.
 
 Une exception `TypeError` peut être levée lorsque&nbsp;:

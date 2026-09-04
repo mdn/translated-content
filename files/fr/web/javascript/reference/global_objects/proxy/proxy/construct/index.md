@@ -3,8 +3,6 @@ title: handler.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 ---
 
-{{JSRef}}
-
 La méthode **`handler.construct()`** est une trappe pour l'opérateur {{jsxref("new")}}. Afin que l'opération `new` puisse être valide sur le proxy correspondant, la cible utilisée doit avoir une méthode interne `[[Construct]]` (autrement dit, l'instruction `new cible` doit être valide).
 
 {{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}

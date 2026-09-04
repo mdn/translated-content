@@ -3,8 +3,6 @@ title: RegExp.prototype.unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 ---
 
-{{JSRef}}
-
 La propriété **`unicode`** indique si le drapeau "`u`" a été utilisé avec l'expression rationnelle. `unicode` est une propriété en lecture seule et liée à une instance d'expression rationnelle.
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.unicode", "taller")}}

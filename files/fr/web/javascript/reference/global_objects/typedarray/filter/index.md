@@ -3,8 +3,6 @@ title: TypedArray.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 ---
 
-{{JSRef}}
-
 La méthode **`filter()`** crée un nouveau tableau qui contient l'ensemble des éléments qui remplissent une condition fournie par la fonction de test passée en argument. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.filter()")}}_._ _TypedArray_ est utilisé ici de façon générique pour représenter [l'un des types de tableaux typés possibles](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
 {{InteractiveExample("JavaScript Demo: TypedArray.filter()")}}

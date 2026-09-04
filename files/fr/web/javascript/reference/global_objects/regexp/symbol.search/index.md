@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search
 original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 ---
 
-{{JSRef}}
-
 La méthode **`[@@search]()`** recherche une correspondance entre une expression rationnelle décrite par `this` et une chaîne de caractères donnée.
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.search]()")}}

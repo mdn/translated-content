@@ -3,8 +3,6 @@ title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 ---
 
-{{JSRef}}
-
 La méthode **`split()`** divise une [chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) en une liste ordonnée de sous-chaînes, place ces sous-chaînes dans un tableau et retourne le tableau. La division est effectuée en recherchant un motif ; où le motif est fourni comme premier paramètre dans l'appel de la méthode.
 
 {{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
