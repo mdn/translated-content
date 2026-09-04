@@ -79,7 +79,7 @@ Cette propriété est définie avec le mot-clé `none` ou avec une liste sépar�
 
 La propriété `background-image` définit des images d'arrière-plan sur un élément.
 
-Vous pouvez définir [plusieurs arrière-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) sur un élément en indiquant une liste d'images séparées par des virgules. Les images d'arrière-plan sont dessinées sur des couches de contexte d'empilement les unes au-dessus des autres. La première couche indiquée est dessinée comme si elle était la plus proche de l'utilisateur·ice.
+Vous pouvez définir [plusieurs arrière-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) sur un élément en indiquant une liste d'images séparées par des virgules. Les images d'arrière-plan sont dessinées sur des couches de contexte d'empilement les unes au-dessus des autres. La première couche indiquée est dessinée comme si elle est la plus proche de l'utilisateur·ice.
 
 Les [bordures](/fr/docs/Web/CSS/Reference/Properties/border) de l'élément sont ensuite dessinées au-dessus, et la {{CSSxRef("background-color")}} est dessinée en dessous. La façon dont les images sont dessinées par rapport à la boîte et à ses bordures est définie par les propriétés CSS {{CSSxRef("background-clip")}} et {{CSSxRef("background-origin")}}.
 
@@ -170,7 +170,7 @@ div {
 
 ## Voir aussi
 
-- {{HTMLElement("img")}}
+- L'élément HTML {{HTMLElement("img")}}
 - Les fonctions CSS associées aux images&nbsp;:
   - {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}
   - {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}

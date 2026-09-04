@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-end-width`** définit la largeur de la bordure logique en ligne de fin d'un élément, qui correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond à la propriété {{CSSxRef("border-top-width")}}, {{CSSxRef("border-right-width")}}, {{CSSxRef("border-bottom-width")}}, ou {{CSSxRef("border-left-width")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-end-width`** définit la largeur de la bordure logique en incise (<i lang="en">inline</i> en anglais) de fin d'un élément, qui correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond à la propriété {{CSSxRef("border-top-width")}}, {{CSSxRef("border-right-width")}}, {{CSSxRef("border-bottom-width")}}, ou {{CSSxRef("border-left-width")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: border-inline-end-width")}}
 

@@ -3,16 +3,16 @@ title: Propriété CSS `corner-shape`
 short-title: corner-shape
 slug: Web/CSS/Reference/Properties/corner-shape
 l10n:
-  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`corner-shape`** permet de définir la forme des coins d'une boîte, dans la zone déterminée par la valeur de sa propriété {{CSSxRef("border-radius")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`corner-shape`** permet de définir la forme des coins d'une boîte, dans la zone déterminée par la valeur de sa propriété {{CSSxRef("border-radius")}}.
 
 ## Propriétés constitutives
 
-La propriété `corner-shape` est une forme raccourcie pour les propriétés physiques suivantes&nbsp;:
+Cette propriété est une forme raccourcie pour les propriétés physiques suivantes&nbsp;:
 
 - {{CSSxRef("corner-top-left-shape")}}
 - {{CSSxRef("corner-top-right-shape")}}
@@ -130,7 +130,7 @@ Voir la [démonstration des propriétés qui suivent la forme du coin](#demonstr
 
 ### Interaction avec `border-shape`
 
-La propriété `corner-shape` n'a aucun effet lorsque la propriété {{cssxref("border-shape")}} est définie sur un élément. En effet, `border-shape` est incompatible avec `border-radius`&nbsp;: lorsque `border-shape` est défini, tout `border-radius` défini est ignoré&nbsp;; `corner-shape` dépend de `border-radius` et n'a donc aucun effet non plus.
+La propriété `corner-shape` n'a aucun effet lorsque la propriété {{CSSxRef("border-shape")}} est définie sur un élément. En effet, `border-shape` est incompatible avec `border-radius`&nbsp;: lorsque `border-shape` est défini, tout `border-radius` défini est ignoré&nbsp;; `corner-shape` dépend de `border-radius` et n'a donc aucun effet non plus.
 
 Si vous souhaitez utiliser des coins façonnés dans un `border-shape`, vous devez les dessiner directement dans la forme.
 

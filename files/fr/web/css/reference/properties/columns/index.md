@@ -3,10 +3,10 @@ title: Propriété CSS `columns`
 short-title: columns
 slug: Web/CSS/Reference/Properties/columns
 l10n:
-  sourceCommit: ab90c79ca764c4431c7f4a078d81c02ef4bfce2e
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`columns`** permet de définir le nombre maximum de colonnes à utiliser pour afficher le contenu d'un élément, ainsi que la largeur minimale et la hauteur maximale des colonnes de l'élément.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`columns`** permet de définir le nombre maximum de colonnes à utiliser pour afficher le contenu d'un élément, ainsi que la largeur minimale et la hauteur maximale des colonnes de l'élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: columns")}}
 
@@ -147,7 +147,7 @@ Notez comment le texte est réparti en trois colonnes.
 
 ### Créer des colonnes à hauteur fixe et à retour à la ligne
 
-Cet exemple montre comment inclure une valeur `<column-height>` avec la propriété raccourcie `columns` pour diviser un conteneur de texte en colonnes à hauteur fixe qui se replient sur de nouvelles lignes lorsque le bord en ligne du conteneur est atteint.
+Cet exemple montre comment inclure une valeur `<column-height>` avec la propriété raccourcie `columns` pour diviser un conteneur de texte en colonnes à hauteur fixe qui se replient sur de nouvelles lignes lorsque le bord en incise (<i lang="en">inline</i> en anglais) du conteneur est atteint.
 
 #### HTML
 
@@ -201,7 +201,7 @@ body {
 
 #### Résultat
 
-{{EmbedLiveSample('fixed-height', 'auto', 320)}}
+{{EmbedLiveSample("fixed-height", "auto", 320)}}
 
 Notez comment le texte est réparti en trois colonnes. Chaque colonne a une hauteur de `5em`. Après chaque troisième colonne, les colonnes se replient sur une nouvelle ligne dans la direction du bloc.
 

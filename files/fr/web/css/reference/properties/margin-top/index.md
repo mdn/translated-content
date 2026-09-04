@@ -60,7 +60,7 @@ margin-top: 0;
 }
 ```
 
-Cette propriété n'a aucun effet sur les éléments en ligne _non [remplacés](/fr/docs/Glossary/Replaced_elements)_, tels que {{HTMLElement("span")}} ou {{HTMLElement("code")}}.
+Cette propriété n'a aucun effet sur les éléments en incise (<i lang="en">inline</i> en anglais) _qui ne sont pas [remplacés](/fr/docs/Glossary/Replaced_elements)_, tels que {{HTMLElement("span")}} ou {{HTMLElement("code")}}.
 
 ## Syntaxe
 
@@ -92,7 +92,7 @@ La propriété `margin-top` peut être définie avec le mot-clé `auto`, une val
     - Pour les éléments positionnés par ancre, la fonction {{CSSxRef("anchor-size()")}} donne une valeur {{CSSxRef("&lt;length&gt;")}} relative à la largeur ou la hauteur de l'élément ancre associé (voir [Définir la marge d'un élément selon la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre)).
 
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille de la marge en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
+  - : La taille de la marge en pourcentage, relative à la taille en incise (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
 - `auto`
   - : Le navigateur choisit une valeur adaptée. Voir {{CSSxRef("margin")}}.
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-width`** définit la largeur d'un élément que le navigateur utilisera pour la mise en page lorsque l'élément est soumis à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#compartimentation_de_la_taille).
+La propriété [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-width`** définit la largeur d'un élément que le navigateur utilise pour la mise en page lorsque l'élément est envoyé à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#compartimentation_de_la_taille).
 
 ## Syntaxe
 
@@ -44,11 +44,11 @@ Les valeurs suivantes peuvent être définies pour un élément.
 
 La propriété est couramment appliquée aux éléments qui peuvent déclencher la compartimentation de taille, tels que {{CSSxRef("contain", "contain: size")}} et {{CSSxRef("content-visibility")}}, et peut également être définie en utilisant la [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) {{CSSxRef("contain-intrinsic-size")}}.
 
-La compartimentation de taille permet à un agent utilisateur de disposer un élément comme s'il avait une taille fixe, évitant des recalculs de mise en page inutiles en évitant le rerendu des éléments enfants pour déterminer la taille réelle (améliorant ainsi l'expérience utilisateur).
-Par défaut, la compartimentation de taille considère les éléments comme s'ils n'avaient pas de contenu et peut contracter la mise en page de la même manière que si les contenus n'avaient ni largeur ni hauteur.
-La propriété `contain-intrinsic-inline-size` permet aux auteur·ice·s de définir une valeur appropriée à utiliser comme taille en ligne pour la mise en page.
+La compartimentation de taille permet à un agent utilisateur de disposer un élément comme s'il a une taille fixe, évitant des recalcules de mise en page inutiles en évitant le re-rendu des éléments enfants pour déterminer la taille réelle (améliorant ainsi l'expérience utilisateur).
+Par défaut, la compartimentation de taille considère les éléments comme s'ils n'ont pas de contenu et peut contracter la mise en page de la même manière que si les contenus n'ont ni largeur ni hauteur.
+La propriété `contain-intrinsic-inline-size` permet aux auteur·ice·s de définir une valeur appropriée à utiliser comme taille en incise (<i lang="en">inline</i> en anglais) pour la mise en page.
 
-La valeur `auto <length>` permet de mémoriser la taille en ligne d'un élément si celui‑ci a déjà été «&nbsp;rendu normalement&nbsp;» (avec ses éléments enfants), puis d'utiliser cette valeur mémorisée à la place de la valeur définie lorsque l'élément omet son contenu.
+La valeur `auto <length>` permet de mémoriser la taille en incise d'un élément si celui‑ci a déjà été «&nbsp;rendu normalement&nbsp;» (avec ses éléments enfants), puis d'utiliser cette valeur mémorisée à la place de la valeur définie lorsque l'élément omet son contenu.
 Cela permet aux éléments hors écran avec {{CSSxRef("content-visibility", "content-visibility: auto")}} de bénéficier de la compartimentation de taille sans que les développeur·euse·s aient à être aussi précis·e·s dans leurs estimations de la taille des éléments.
 La valeur mémorisée n'est pas utilisée si les éléments enfants sont en cours de rendu (si la compartimentation de taille est activée, la `<length>` définie est utilisée).
 
@@ -66,7 +66,7 @@ En plus de l'exemple ci-dessous, la page {{CSSxRef("contain-intrinsic-size")}} c
 
 ### Définir la largeur intrinsèque
 
-Le HTML ci-dessous définit un élément «&nbsp;contained_element&nbsp;» qui sera soumis à la contrainte de taille et qui contient un élément enfant.
+Le HTML ci-dessous définit un élément «&nbsp;contained_element&nbsp;» qui est envoyé à la contrainte de taille et qui contient un élément enfant.
 
 ```html
 <div id="contained_element">
@@ -74,8 +74,8 @@ Le HTML ci-dessous définit un élément «&nbsp;contained_element&nbsp;» qui s
 </div>
 ```
 
-Le CSS ci-dessous définit {{CSSxRef("content-visibility")}} de `contained_element` sur `auto`, donc si l'élément est masqué, il sera soumis à la contrainte de taille.
-La largeur et la hauteur utilisées lorsque l'élément est soumis à la contrainte de taille sont définies simultanément à l'aide de `contain-intrinsic-width` et `contain-intrinsic-height`, respectivement.
+Le CSS ci-dessous définit {{CSSxRef("content-visibility")}} de `contained_element` sur `auto`, donc si l'élément est masqué, il est envoyé à la contrainte de taille.
+La largeur et la hauteur utilisées lorsque l'élément est envoyé à la contrainte de taille sont définies simultanément à l'aide de `contain-intrinsic-width` et `contain-intrinsic-height`, respectivement.
 
 ```css
 #contained_element {

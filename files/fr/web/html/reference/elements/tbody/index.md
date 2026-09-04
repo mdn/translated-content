@@ -3,10 +3,10 @@ title: "Élément HTML `<tbody>` : l'élément de corps d'un tableau"
 short-title: <tbody>
 slug: Web/HTML/Reference/Elements/tbody
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<tbody>`** permet de regrouper une ou plusieurs lignes du tableau (éléments {{HTMLElement("tr")}}), indiquant qu'elles constituent le corps (principal) des données d'un tableau.
+L'élément [HTML](/fr/docs/Web/HTML) **`<tbody>`** regroupe une ou plusieurs lignes du tableau (éléments {{HTMLElement("tr")}}), indiquant qu'elles constituent le corps (principal) des données d'un tableau.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;tbody&gt;", "tabbed-taller")}}
 
@@ -100,7 +100,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 - Le `<tbody>` est placé après tout élément {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}} et {{HTMLElement("thead")}}.
 - Si des éléments {{HTMLElement("tr")}} sont définis comme enfants directs de {{HTMLElement("table")}} (voir «&nbsp;omission de balise&nbsp;» dans le [résumé technique](#résumé_technique) pour une description des cas où cela est valide), alors le balisage généré par le navigateur inclut un élément `<tbody>` qui les encapsule. En conséquence, les sélecteurs CSS comme `table > tr` ne sélectionnent pas ces éléments. Voir aussi l'exemple [Sans corps explicite](#sans_définir_de_corps).
-- Il est permis d'utiliser plusieurs `<tbody>` par tableau tant qu'ils sont tous consécutifs. Cela permet de diviser les lignes (éléments {{HTMLElement("tr")}}) des grands tableaux en sections, chacune pouvant être mise en forme séparément si besoin. Si les éléments ne sont pas balisés comme consécutifs, les navigateurs corrigent cette erreur d'auteur·ice, en s'assurant que tout élément {{HTMLElement("thead")}} et {{HTMLElement("tfoot")}} soit respectivement rendu en premier et en dernier dans le tableau.
+- Il est permis d'utiliser plusieurs `<tbody>` par tableau tant qu'ils sont tous consécutifs. Cela vous permet de diviser les lignes (éléments {{HTMLElement("tr")}}) des grands tableaux en sections, chacune pouvant être mise en forme séparément si besoin. Si les éléments ne sont pas balisés comme consécutifs, les navigateurs corrigent cette erreur d'auteur·ice, en s'assurant que tout élément {{HTMLElement("thead")}} et {{HTMLElement("tfoot")}} soit respectivement rendu en premier et en dernier dans le tableau.
 - Avec les éléments associés {{HTMLElement("thead")}} et {{HTMLElement("tfoot")}}, l'élément `<tbody>` fournit des informations {{Glossary("semantics", "sémantiques")}} utiles et peut être utilisé lors du rendu à l'écran ou à l'impression. Définir de tels groupes de contenu de tableau fournit aussi des informations contextuelles précieuses pour les technologies d'assistance, y compris les lecteurs d'écran et les moteurs de recherche.
 - Lors de l'impression d'un document, dans le cas d'un tableau multi-page, les éléments {{HTMLElement("thead")}} et {{HTMLElement("tfoot")}} définissent généralement des informations qui restent identiques — ou du moins très similaires — sur chaque page, tandis que le contenu de l'élément `<tbody>` diffère généralement d'une page à l'autre.
 - Lorsqu'un tableau est présenté dans un contexte d'écran (comme une fenêtre) qui n'est pas assez grand pour afficher le tableau en entier, le {{Glossary("user agent", "agent utilisateur")}} peut permettre à l'utilisateur·ice de faire défiler séparément le contenu des blocs {{HTMLElement("thead")}}, `<tbody>`, {{HTMLElement("tfoot")}} et {{HTMLElement("caption")}} pour un même parent {{HTMLElement("table")}}.

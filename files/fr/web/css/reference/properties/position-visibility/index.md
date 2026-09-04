@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`position-visibility`** permet de masquer conditionnellement un élément positionné par ancre en fonction, par exemple, de son débordement par rapport à son élément contenant ou à la fenêtre d'affichage.
+La propriété [CSS](/fr/docs/Web/CSS) **`position-visibility`** permet de masquer conditionnellement un élément positionné par ancre en fonction, par exemple, de son débordement par rapport à son élément contenant ou à la zone d'affichage.
 
 ## Syntaxe
 
@@ -34,9 +34,9 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 - `anchors-valid`
   - : Si la valeur de la propriété {{CSSxRef("position-anchor")}} de l'élément positionné ne pointe pas vers un élément d'ancrage valide, l'élément positionné est fortement masqué.
 - `anchors-visible`
-  - : Si l'ancre est complètement masquée, soit en débordant de son élément contenant (ou de la fenêtre d'affichage), soit en étant recouverte par d'autres éléments, l'élément positionné est fortement masqué.
+  - : Si l'ancre est complètement masquée, soit en débordant de son élément contenant (ou de la zone d'affichage), soit en étant recouverte par d'autres éléments, l'élément positionné est fortement masqué.
 - `no-overflow`
-  - : Si l'élément positionné commence à déborder de son élément contenant ou de la fenêtre d'affichage, il est fortement masqué.
+  - : Si l'élément positionné commence à déborder de son élément contenant ou de la zone d'affichage, il est fortement masqué.
 
 ## Description
 
@@ -147,7 +147,7 @@ Nous définissons deux éléments HTML {{HTMLElement("div")}}&nbsp;: un élémen
 </form>
 ```
 
-Le HTML inclut également du texte factice pour rendre le contenu plus grand que la fenêtre d'affichage, nécessitant ainsi un défilement. Nous avons également inclus un {{HTMLElement("fieldset")}} avec un groupe de [boutons radio](/fr/docs/Web/HTML/Reference/Elements/input/radio) avec différentes valeurs de `position-visibility`. Le balisage pour ceux-ci n'est pas affiché pour des raisons de concision.
+Le HTML inclut également du texte factice pour rendre le contenu plus grand que la zone d'affichage, nécessitant ainsi un défilement. Nous avons également inclus un {{HTMLElement("fieldset")}} avec un groupe de [boutons radio](/fr/docs/Web/HTML/Reference/Elements/input/radio) avec différentes valeurs de `position-visibility`. Le balisage pour ceux-ci n'est pas affiché pour des raisons de concision.
 
 #### CSS
 
@@ -220,7 +220,7 @@ function definirVisibiliteDePosition(e) {
 
 #### Résultat
 
-Sélectionnez différentes valeurs de `position-visibility` puis faites défiler la page vers le haut et vers le bas pour voir leurs effets. Avec `position-visibility: always`, l'élément positionné n'est pas masqué. Avec `position-visibility: anchors-visible`, l'élément positionné n'est visible que lorsque l'ancre est partiellement ou entièrement à l'écran. Avec `position-visibility: no-overflow`, l'élément positionné est masqué dès qu'il commence à déborder de la fenêtre d'affichage.
+Sélectionnez différentes valeurs de `position-visibility` puis faites défiler la page vers le haut et vers le bas pour voir leurs effets. Avec `position-visibility: always`, l'élément positionné n'est pas masqué. Avec `position-visibility: anchors-visible`, l'élément positionné n'est visible que lorsque l'ancre est partiellement ou entièrement à l'écran. Avec `position-visibility: no-overflow`, l'élément positionné est masqué dès qu'il commence à déborder de la zone d'affichage.
 
 {{EmbedLiveSample("Utilisation simple", "100%", 180)}}
 

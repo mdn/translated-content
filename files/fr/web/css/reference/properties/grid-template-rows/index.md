@@ -3,7 +3,7 @@ title: Propriété CSS `grid-template-rows`
 short-title: grid-template-rows
 slug: Web/CSS/Reference/Properties/grid-template-rows
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 2f710bc43d966483d0204330b14f841b440a6b60
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`grid-template-rows`** définit les noms de lignes et les fonctions de dimensionnement des pistes des {{Glossary("grid_row", "lignes de grille")}}.
@@ -70,7 +70,6 @@ grid-template-rows: minmax(100px, 1fr);
 grid-template-rows: fit-content(40%);
 grid-template-rows: repeat(3, 200px);
 grid-template-rows: subgrid;
-grid-template-rows: masonry;
 
 /* Valeurs de type <auto-track-list> */
 grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
@@ -131,8 +130,6 @@ Cette propriété peut être définie avec&nbsp;:
   - : Cette notation représente la formule `min(max-content, max(auto, argument))` qui est calculée comme pour `auto` (i.e. `minmax(auto, max-content)`) sauf que la taille de la piste est ramenée à _argument_ si elle est plus grande que le minimum fourni par `auto`.
 - {{CSSxRef("repeat()","repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ], &lt;track-list&gt; )")}}
   - : Représente un fragment répété d'une liste de pistes, cela permet de gérer des grilles avec de nombreuses lignes pour lesquelles on réutilise un motif.
-- [`masonry`](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) {{Experimental_Inline}}
-  - : La valeur `masonry` indique que cet axe doit être mis en page selon l'algorithme de compartimentation.
 - [`subgrid`](/fr/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : La valeur `subgrid` indique que la grille adopte la portion englobante de la grille parente sur cet axe. Plutôt que d'être définies explicitement, les tailles des lignes/colonnes de la grille sont reprises de la définition de la grille parente.
 

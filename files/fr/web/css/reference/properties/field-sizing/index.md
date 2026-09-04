@@ -102,7 +102,7 @@ Remarquez les points suivants concernant le HTML&nbsp;:
 
 - Les deux premiers champs n'ont pas de restrictions de longueur définies.
 - Le troisième champ (de type `tel`) a un attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength) défini, ce qui empêche la taille du champ d'augmenter lorsque la limite de caractères est atteinte.
-- Le `<textarea>` grandit dans la direction en ligne jusqu'à atteindre la contrainte {{CSSxRef("min-width")}} (définie dans le code CSS ci-dessous), puis commence à ajouter de nouvelles lignes dans la direction bloc pour contenir les caractères supplémentaires.
+- Le `<textarea>` grandit dans la direction en incise jusqu'à atteindre la contrainte {{CSSxRef("min-width")}} (définie dans le code CSS ci-dessous), puis commence à ajouter de nouvelles lignes dans la direction bloc pour contenir les caractères supplémentaires.
 - Le champ `email` a un texte d'exemple (placeholder). Cela fait que le champ est affiché assez grand pour montrer tout le texte d'exemple. Une fois le champ sélectionné et que l'utilisateur·ice commence à saisir, le champ change de taille pour la valeur de `min-width`. Le champ `text`, qui n'a pas de texte d'exemple, s'affiche initialement à `min-width`.
 
 #### CSS

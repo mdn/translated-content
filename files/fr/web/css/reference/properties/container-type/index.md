@@ -3,7 +3,7 @@ title: Propriété CSS `container-type`
 short-title: container-type
 slug: Web/CSS/Reference/Properties/container-type
 l10n:
-  sourceCommit: 2ce88199869b63f8da3bbeafd899400f7579cce9
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`container-type`** permet de définir le type de contexte de conteneur utilisé dans une requête de conteneur.
@@ -31,14 +31,14 @@ container-type: unset;
 
 ### Valeurs
 
-La propriété `container-type` peut prendre une seule valeur parmi la liste ci-dessous, ou deux valeurs. Dans le cas de deux valeurs, l'une doit être `scroll-state` et l'autre peut être `inline-size` ou `size`.
+Cette propriété est définie par une ou deux valeurs de mots-clés issues de la liste suivante. Dans le cas où deux valeurs sont spécifiées, l'une doit être `scroll-state` et l'autre doit être `inline-size` ou `size`&nbsp;:
 
 - `anchored`
   - : Établit un conteneur de requête pour les requêtes de conteneur ancré sur le conteneur. Dans ce cas, la taille de l'élément n'est pas calculée de façon isolée&nbsp;; aucune [compartimentation](/fr/docs/Web/CSS/Guides/Containment/Using) n'est appliquée.
 
 - `inline-size`
-  - : Établit un conteneur de requête pour les requêtes dimensionnelles sur [l'axe en ligne](/fr/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#dimensions_de_bloc_et_en_ligne) du conteneur.
-    Applique la compartimentation du [`style`](/fr/docs/Web/CSS/Reference/Properties/contain#style) et de [`inline-size`](/fr/docs/Web/CSS/Reference/Properties/contain#inline-size) à l'élément. La taille en ligne de l'élément peut être [calculée isolément](/fr/docs/Web/CSS/Guides/Containment/Using#size_containment), en ignorant les éléments enfants (voir [Utiliser la compartimentation CSS](/fr/docs/Web/CSS/Guides/Containment/Using)).
+  - : Établit un conteneur de requête pour les requêtes dimensionnelles sur [l'axe en incise](/fr/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#dimensions_de_bloc_et_en_incise) du conteneur.
+    Applique la compartimentation du [`style`](/fr/docs/Web/CSS/Reference/Properties/contain#style) et de [`inline-size`](/fr/docs/Web/CSS/Reference/Properties/contain#inline-size) à l'élément. La taille en incise (<i lang="en">inline</i> en anglais) de l'élément peut être [calculée isolément](/fr/docs/Web/CSS/Guides/Containment/Using#size_containment), en ignorant les éléments enfants (voir [Utiliser la compartimentation CSS](/fr/docs/Web/CSS/Guides/Containment/Using)).
 
 - `normal`
   - : Valeur par défaut. L'élément n'est pas un conteneur de requête pour les requêtes de taille, d'état de défilement ou ancrées, mais peut être utilisé comme conteneur de requête pour les [requêtes de style de conteneur](/fr/docs/Web/CSS/Reference/At-rules/@container#requêtes_de_style_de_conteneur) et les [requêtes de conteneur uniquement par nom](/fr/docs/Web/CSS/Guides/Containment/Container_queries#requêtes_de_conteneur_uniquement_par_un_nom).
@@ -47,8 +47,8 @@ La propriété `container-type` peut prendre une seule valeur parmi la liste ci-
   - : Établit un conteneur de requête pour les requêtes d'état de défilement sur le conteneur. Dans ce cas, la taille de l'élément n'est pas calculée isolément&nbsp;; aucune compartimentation n'est appliquée.
 
 - `size`
-  - : Établit un conteneur de requête pour les requêtes de taille de conteneur dans les dimensions [en ligne et de bloc](/fr/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#dimensions_de_bloc_et_en_ligne).
-    Applique la compartimentation [du style](/fr/docs/Web/CSS/Reference/Properties/contain#style) et [de la taille](/fr/docs/Web/CSS/Reference/Properties/contain#size) à l'élément. La compartimentation de taille est appliquée à l'élément dans les directions en ligne et de bloc. La taille de l'élément peut être calculée isolément, en ignorant les éléments enfants.
+  - : Établit un conteneur de requête pour les requêtes de taille de conteneur dans les dimensions [en incise et de bloc](/fr/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#dimensions_de_bloc_et_en_incise).
+    Applique la compartimentation [du style](/fr/docs/Web/CSS/Reference/Properties/contain#style) et [de la taille](/fr/docs/Web/CSS/Reference/Properties/contain#size) à l'élément. La compartimentation de taille est appliquée à l'élément dans les directions en incise et de bloc. La taille de l'élément peut être calculée isolément, en ignorant les éléments enfants.
 
 ## Définition formelle
 
@@ -64,7 +64,7 @@ Les requêtes de conteneur permettent d'appliquer sélectivement des styles à l
 
 Certains types de requêtes de conteneur ne peuvent être effectués que sur des éléments pour lesquels des valeurs spécifiques ont été définies pour la propriété `container-type`, ce qui établit des contextes de conteneur spécifiques sur ces conteneurs&nbsp;:
 
-- [Taille](#requêtes_de_taille_de_conteneur)&nbsp;: Permet d'appliquer sélectivement des règles CSS aux enfants d'un conteneur, en fonction d'une condition de taille générale ou en ligne, telle qu'une dimension maximale ou minimale, un rapport d'aspect ou une orientation.
+- [Taille](#requêtes_de_taille_de_conteneur)&nbsp;: Permet d'appliquer sélectivement des règles CSS aux enfants d'un conteneur, en fonction d'une condition de taille générale ou en incise, telle qu'une dimension maximale ou minimale, un rapport d'aspect ou une orientation.
 - [État de défilement](#requêtes_détat_de_défilement_du_conteneur)&nbsp;: Permet d'appliquer sélectivement des règles CSS aux enfants d'un conteneur, en fonction d'une condition d'état de défilement, comme si le conteneur est partiellement défilé ou s'il est une [cible d'accrochage](/fr/docs/Glossary/Scroll_snap#cible_daccrochage) qui va être accrochée à son conteneur d'accrochage de défilement.
 - [Ancré](#requêtes_de_conteneur_ancré)&nbsp;: Permet d'appliquer sélectivement des règles CSS aux enfants d'un conteneur, en fonction de si le conteneur est [positionné par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning) et a une [option de repli de position](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) appliquée.
 
@@ -109,7 +109,7 @@ Par exemple, vous pouvez avoir un élément infobulle positionné par une ancre 
 
 ## Exemples
 
-### Mettre en place la compartimentation de taille en ligne
+### Mettre en place la compartimentation de taille en incise
 
 Prenez l'exemple HTML suivant qui est un composant carte avec une image, un titre et du texte&nbsp;:
 
@@ -183,7 +183,7 @@ h3 {
 }
 ```
 
-{{EmbedLiveSample("Mettre en place la compartimentation de taille en ligne", "100%", 300)}}
+{{EmbedLiveSample("Mettre en place la compartimentation de taille en incise", "100%", 300)}}
 
 ## Spécifications
 
