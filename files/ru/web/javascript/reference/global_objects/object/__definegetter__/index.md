@@ -3,7 +3,7 @@ title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ---
 
-{{JSRef}} {{non-standard_header}} {{deprecated_header}}
+{{JSRef}} {{non-standard_header}}
 
 ## Сводка
 

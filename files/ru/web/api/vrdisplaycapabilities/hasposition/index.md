@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 Доступное только для чтения свойство **`hasPosition`** интерфейса {{domxref("VRDisplayCapabilities")}} возвращает `true` если VR-устройство может отслеживать и возвращать информацию о своём местоположении.
 
