@@ -5,8 +5,6 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fixed
 
 {{JSRef}}
 
-{{deprecated_header}}
-
 ## Resumen
 
 Causa que una cadena se muestre con una fuente de ancho fijo, como si estuviesde dentro de una etiqueta {{HTMLElement("tt")}}.
