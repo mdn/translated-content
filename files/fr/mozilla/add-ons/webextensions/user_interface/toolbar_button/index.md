@@ -3,8 +3,6 @@ title: Actions du navigateur
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 ---
 
-{{AddonSidebar}}
-
 Une action du navigateur est un bouton que vous pouvez ajouter à la barre d'outils du navigateur. Les utilisateurs peuvent cliquer sur le bouton pour interagir avec votre extension.
 
 ![](browser-action.png)

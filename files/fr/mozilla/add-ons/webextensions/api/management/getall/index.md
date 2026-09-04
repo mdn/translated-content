@@ -3,8 +3,6 @@ title: management.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getAll
 ---
 
-{{AddonSidebar}}
-
 Récupère un ensemble d'objets {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}, un pour chaque extension installé.
 
 Notez que Google Chrome récupère les applications ainsi que les modules complémentaires. Dans Chrome vous pouvez distinguer les applications des extensions en utilisant la propriété `type` de {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}.

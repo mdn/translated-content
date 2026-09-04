@@ -3,8 +3,6 @@ title: runtime.onMessage
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 ---
 
-{{AddonSidebar}}
-
 Utilisez cet événement pour écouter les messages d'une autre partie de votre extension.
 
 Voici quelques exemples de cas d'utilisation :

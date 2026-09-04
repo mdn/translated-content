@@ -3,8 +3,6 @@ title: omnibox.onInputEntered
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque l'utilisateur a sélectionné l'une des suggestions que votre extension a ajoutées à la liste déroulante de la barre d'adresse.
 
 Utilisez cet événement pour gérer la sélection de l'utilisateur, généralement en ouvrant la page correspondante. L'écouteur d'événement est transmis w:

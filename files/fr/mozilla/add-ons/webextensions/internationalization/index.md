@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 16d1903feb387e054a502c20f35ccb12d823dedb
 ---
 
-{{AddonSidebar}}
-
 L'API [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions) dispose d'un module pour [l'internationalisation](/fr/docs/Glossary/Internationalization) des extensions&nbsp;: [`i18n`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n). Dans cet article, nous allons explorer ses fonctionnalités et illustrer son utilisation par un exemple pratique. L'API `i18n` pour les extensions web est similaire aux bibliothèques JavaScript tierces d'internationalisation.
 
 > [!NOTE]

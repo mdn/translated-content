@@ -3,8 +3,6 @@ title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
 
-{{AddonSidebar}}
-
 Représente la zone de stockage `local`. Les éléments stockés `localement` sont locaux sur la machine sur laquelle l'extension a été installée.
 
 Le navigateur peut limiter la quantité de données qu'une extension peut stocker dans la zone de stockage locale :
