@@ -51,7 +51,7 @@ Repr-Digest: <digest-algorithm>=<digest-value>,…,<digest-algorithmN>=<digest-v
 
 ## Exemples
 
-Dans tous les exemples, les points d'accès sont configurés pour envoyer des en-têtes de digest non sollicités. Les champs {{HTTPHeader("Want-Content-Digest")}} et {{HTTPHeader("Want-Repr-Digest")}} peuvent éventuellement être utilisés par un expéditeur pour demander un `Content-Digest` ou un `Repr-Digest`, ainsi que ses préférences d'algorithme de hachage."
+Dans tous les exemples, les points d'accès sont configurés pour envoyer des en-têtes de digest non sollicités. Les champs {{HTTPHeader("Want-Content-Digest")}} et {{HTTPHeader("Want-Repr-Digest")}} peuvent éventuellement être utilisés par un expéditeur pour demander un `Content-Digest` ou un `Repr-Digest`, ainsi que ses préférences d'algorithme de hachage.
 
 ### Utiliser un `Repr-Digest` SHA-256 dans une réponse
 
