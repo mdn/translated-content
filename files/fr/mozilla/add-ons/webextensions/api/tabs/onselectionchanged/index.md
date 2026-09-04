@@ -3,8 +3,6 @@ title: tabs.onSelectionChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onSelectionChanged
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.
 

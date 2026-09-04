@@ -3,8 +3,6 @@ title: sessions.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
 ---
 
-{{AddonSidebar}}
-
 Mise en place lorsque une liste d'onglets fermes ou de fenêtre changes.
 
 ## Syntaxe

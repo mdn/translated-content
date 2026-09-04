@@ -27,7 +27,11 @@ La pseudoclase `:not()` requiere una lista separada por comas de uno o más sele
 > [!WARNING]
 > La capacidad de enumerar más de un selector es experimental y aún no es ampliamente compatible.
 
-{{csssyntax}}
+```css-nolint
+:not(<complex-selector-list>) {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

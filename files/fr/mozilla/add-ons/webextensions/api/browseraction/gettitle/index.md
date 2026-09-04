@@ -3,8 +3,6 @@ title: browserAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
 ---
 
-{{AddonSidebar}}
-
 Obtient le titre de l'action du navigateur.
 
 Tout comme vous pouvez définir le titre par onglet en utilisant {{WebExtAPIRef("browserAction.setTitle()")}}, vous pouvez donc récupérer un titre spécifique à un onglet en passant l'ID de l'onglet dans cette fonction.

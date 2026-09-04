@@ -82,7 +82,7 @@ l10n:
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Comienza el contenido de la página con un párrafo introductorio: empieza nombrando el método, indicando a qué interfaz pertenece y explicando qué hace.
 Lo ideal es que sean una o dos frases breves. Puedes copiar la mayor parte de este texto del resumen del método en la página de referencia de la API correspondiente.

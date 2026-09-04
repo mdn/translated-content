@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Multicol_layout/Handling_content_breaks
 original_slug: Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout
 ---
 
-{{CSSRef}}
-
 Le contenu est coupé entre les colonnes d'une disposition multi-colonnes de la même façon qu'il est coupé entre chaque page d'un média paginé. Dans ces deux contextes, la façon dont on contrôle l'emplacement et la coupure se paramètre grâce aux propriétés décrites dans le module de spécification _CSS Fragmentation_. Dans ce guide, nous verrons comment fonctionne la fragmentation en multi-colonnes.
 
 ## Quelques notions de bases sur la fragmentation

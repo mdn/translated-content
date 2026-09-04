@@ -3,8 +3,6 @@ title: runtime.requestUpdateCheck()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
 ---
 
-{{AddonSidebar}}
-
 Vérifie de voir si un mise à jour de l'extension est disponible.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

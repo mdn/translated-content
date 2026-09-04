@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Inline_layout/Inline_formatting_context
 original_slug: Web/CSS/CSS_inline_layout/Inline_formatting_context
 ---
 
-{{CSSRef}}
-
 Dans cet article, nous allons voir ce qu'est le contexte de formatage en ligne (_inline formatting context_).
 
 ## Concepts-clés

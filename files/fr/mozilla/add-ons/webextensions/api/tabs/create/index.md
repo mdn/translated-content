@@ -3,8 +3,6 @@ title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
 
-{{AddonSidebar}}
-
 Crée un nouvel onglet
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

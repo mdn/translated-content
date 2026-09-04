@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
 ---
 
-{{CSSRef}}
-
 Les méthodes de disposition telles que les boîtes flexibles (<i lang="en">flexbox</i>) et les grilles CSS permettent de contrôler l'ordre du contenu. Dans cet article, nous verrons comment changer l'ordre visuel du contenu grâce aux boîtes flexibles. Nous examinerons également les conséquences de cette réorganisation du point de vue de l'accessibilité.
 
 ## Inverser l'affichage des éléments

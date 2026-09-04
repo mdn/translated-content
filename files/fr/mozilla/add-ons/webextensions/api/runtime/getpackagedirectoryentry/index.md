@@ -3,8 +3,6 @@ title: runtime.getPackageDirectoryEntry()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
 ---
 
-{{AddonSidebar}}
-
 Renvoie un objet `DirectoryEntry` représentant le répertoire du package.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

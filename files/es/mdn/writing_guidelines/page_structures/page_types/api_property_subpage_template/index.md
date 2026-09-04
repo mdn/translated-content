@@ -83,7 +83,7 @@ l10n:
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicarla._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 La propiedad **`NameOfTheProperty`** [de solo lectura] de la interfaz \{{domxref("NameOfTheParentInterface")}} _\<proporciona un resumen conciso del comportamiento\>_.
 

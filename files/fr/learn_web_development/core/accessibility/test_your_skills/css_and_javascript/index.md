@@ -4,8 +4,6 @@ slug: Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScri
 original_slug: Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
 ---
 
-{{LearnSidebar}}
-
 L'objectif de ce test de connaissances est d'évaluer si vous maîtrisez les [meilleures pratiques d'accessibilité en CSS et en JavaScript](/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript).
 
 > [!NOTE]

@@ -3,8 +3,6 @@ title: management.getSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getSelf
 ---
 
-{{AddonSidebar}}
-
 Récupère un objet {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} contenant les informations de l'extension appelée.
 
 Cette API _ne requière pas_ l' [API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".

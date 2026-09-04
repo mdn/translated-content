@@ -3,8 +3,6 @@ title: devtools.network
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network
 ---
 
-{{AddonSidebar}}
-
 L'API `devtools.network` permet à une extension devtools d'obtenir des informations sur les demandes de réseau associées à la fenêtre à laquelle les devtools sont attachés (la fenêtre inspectée).
 
 Comme toutes les APIs de devtools, cette API est uniquement disponible pour le code exécuté dans le document défini dans la clé [devtools_page](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) du manifest.json, ou dans d'autres documents de devtools créés par l'extension (tel que le document du panneau). Voir [Extension des outils de développement](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) pour plus d'informations.

@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/fill
 original_slug: Web/SVG/Attribute/fill
 ---
 
-{{SVGRef}}
-
 L'attribut **`fill`** a deux significations différentes: 1. pour les formes et le texte, il définit le remplissage (_couleur, dégradé, motif, etc_); 2. pour les animations, il définit l'état final.
 
 Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les formes suivantes: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}

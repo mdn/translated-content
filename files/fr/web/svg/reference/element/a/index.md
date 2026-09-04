@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/a
 original_slug: Web/SVG/Element/a
 ---
 
-{{SVGRef}}
-
 L'élément SVG **`<a>`** crée un hyperlien vers d'autres pages web, fichiers, emplacements dans la page en cours, adresses email, ou toute autre URL.
 
 En SVG, l'élément `<a>` est un conteneur, ce qui veut dire que vous pouvez créer un lien autour du texte comme en HTML, mais que vous pouvez aussi créer un lien autour de n'importe quelle forme.

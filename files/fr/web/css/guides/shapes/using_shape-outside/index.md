@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Shapes/Using_shape-outside
 original_slug: Web/CSS/CSS_shapes/Basic_shapes
 ---
 
-{{CSSRef}}
-
 Les formes CSS peuvent être définies grâce au type {{cssxref("&lt;basic-shape&gt;")}}. Dans ce guide, nous verrons les différentes valeurs utilisables avec ce type et leur fonctionnement. Ces formes peuvent par exemple décrire des cercles simples voire des polygones complexes.
 
 Avant d'étudier ces formes dans le détail, attardons nous sur deux notions qui permettent de construire les formes :

@@ -76,7 +76,7 @@ l10n:
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Párrafo de resumen: comienza nombrando el selector y explicando qué hace. Lo ideal es que sea una o dos frases cortas.
 

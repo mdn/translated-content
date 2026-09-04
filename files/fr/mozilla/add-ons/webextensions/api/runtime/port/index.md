@@ -3,8 +3,6 @@ title: runtime.Port
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/Port
 ---
 
-{{AddonSidebar}}
-
 Un objet `Port` represente une extrémité d'une connexion entre deux contextes spécifiques, qui peut-être utilisée pour échanger des messages.
 
 Un côté initie la connexion à l'aide d'une API `connect()`. Cela retourne un objet `Port`. L'autre camp écoute les tentatives de connexion à l'aide d'un écouteur `onConnect`. Ceci est passé un objet `Port` correspondant.

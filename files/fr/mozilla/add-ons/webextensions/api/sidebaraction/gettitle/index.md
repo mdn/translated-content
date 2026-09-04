@@ -3,8 +3,6 @@ title: sidebarAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 ---
 
-{{AddonSidebar}}
-
 Obtient le titre de la barre latérale.
 
 Tout comme vous pouvez définir le titre par tabulation à l'aide de {{WebExtAPIRef("sidebarAction.setTitle()")}},vous pouvez ainsi récupérer un titre spécifique à un onglet en lui transmettant l'ID de l'onglet.
