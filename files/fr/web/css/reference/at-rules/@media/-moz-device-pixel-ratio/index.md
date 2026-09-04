@@ -3,7 +3,7 @@ title: Caractéristique média CSS `-moz-device-pixel-ratio`
 short-title: -moz-device-pixel-ratio
 slug: Web/CSS/Reference/At-rules/@media/-moz-device-pixel-ratio
 l10n:
-  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 {{Non-standard_Header}}

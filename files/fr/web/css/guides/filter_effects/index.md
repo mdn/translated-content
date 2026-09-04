@@ -1,9 +1,9 @@
 ---
 title: Effets de filtre CSS
+short-title: Effets de filtre
 slug: Web/CSS/Guides/Filter_effects
-original_slug: Web/CSS/CSS_filter_effects
 l10n:
-  sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
+  sourceCommit: 35958cdccf9d974ee47bb2ba282466725cae3416
 ---
 
 Les propriétés du module **Effets de filtre CSS** permettent de définir une façon de traiter le rendu d'un élément avant qu'il ne soit affiché dans le document. Parmi ces effets, on trouve le flou et la modification de l'intensité de la couleur d'un élément.
@@ -234,25 +234,27 @@ function sepia() {
 }
 ```
 
-{{EmbedLiveSample("filters", "", "550px")}}
+{{EmbedLiveSample("filters", "", 550)}}
+
+## Référence
 
 ### Propriétés
 
-- {{cssxref("backdrop-filter")}}
-- {{cssxref("filter")}}
+- {{CSSxRef("backdrop-filter")}}
+- {{CSSxRef("filter")}}
 
 ### Fonctions
 
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{CSSxRef("filter-function/blur", "blur()")}}
+- {{CSSxRef("filter-function/brightness", "brightness()")}}
+- {{CSSxRef("filter-function/contrast", "contrast()")}}
+- {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}
+- {{CSSxRef("filter-function/grayscale", "grayscale()")}}
+- {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}
+- {{CSSxRef("filter-function/invert", "invert()")}}
+- {{CSSxRef("filter-function/opacity", "opacity()")}}
+- {{CSSxRef("filter-function/saturate", "saturate()")}}
+- {{CSSxRef("filter-function/sepia", "sepia()")}}
 
 ## Guides
 
@@ -262,15 +264,21 @@ function sepia() {
 ## Concepts associés
 
 - Le type de donnée {{CSSxRef("&lt;image&gt;")}}
-- Le type de donnée {{cssxref("&lt;filter-function&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;filter-function&gt;")}}
 
-- La propriété CSS {{cssxref("background-image")}}
-- La propriété CSS {{cssxref("background-blend-mode")}}
-- La propriété CSS {{cssxref("mix-blend-mode")}}
+<!-- -->
 
-- Le terme du glossaire {{glossary("interpolation")}}
+- La propriété CSS {{CSSxRef("background-image")}}
+- La propriété CSS {{CSSxRef("background-blend-mode")}}
+- La propriété CSS {{CSSxRef("mix-blend-mode")}}
 
-- La propriété SVG [`color-interpolation-filters`](/fr/docs/Web/SVG/Reference/Attribute/color-interpolation-filters)
+<!-- -->
+
+- Le terme du glossaire {{Glossary("interpolation")}}
+
+<!-- -->
+
+- La propriété SVG {{SVGAttr("color-interpolation-filters")}}
 
 ## Spécifications
 

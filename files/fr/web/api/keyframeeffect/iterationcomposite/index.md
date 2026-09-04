@@ -1,5 +1,5 @@
 ---
-title: "KeyframeEffect : la propriété iterationComposite"
+title: "KeyframeEffect : propriété iterationComposite"
 short-title: iterationComposite
 slug: Web/API/KeyframeEffect/iterationComposite
 l10n:

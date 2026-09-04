@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{deprecated_header}}
-
 HTTP **`102 Processing`** [資訊回應](/zh-TW/docs/Web/HTTP/Reference/Status#資訊回應)狀態碼表示伺服器已收到完整請求，且正在處理中。只有當伺服器預期請求需要花費較長時間時，才會傳送此狀態碼。
 
 > [!NOTE]

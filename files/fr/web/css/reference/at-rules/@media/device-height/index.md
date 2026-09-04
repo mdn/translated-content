@@ -3,7 +3,7 @@ title: Caractéristique média CSS `device-height`
 short-title: device-height
 slug: Web/CSS/Reference/At-rules/@media/device-height
 l10n:
-  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 > [!NOTE]

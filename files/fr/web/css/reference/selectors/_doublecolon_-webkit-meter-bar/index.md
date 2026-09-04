@@ -3,7 +3,7 @@ title: Pseudo-élément CSS `::-webkit-meter-bar`
 short-title: ::-webkit-meter-bar
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-bar
 l10n:
-  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 {{Non-standard_Header}}

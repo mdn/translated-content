@@ -3,10 +3,10 @@ title: "Window : propriété innerHeight"
 short-title: innerHeight
 slug: Web/API/Window/innerHeight
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 La propriété en lecture seule **`innerHeight`** de l'interface {{DOMxRef("Window")}} retourne la hauteur intérieure de la fenêtre en pixels, y compris la hauteur de la barre de défilement horizontale, si elle est présente.
 
@@ -32,13 +32,13 @@ Les deux propriétés `innerHeight` et `innerWidth` sont disponibles sur n'impor
 console.log(window.innerHeight); // ou
 
 console.log(self.innerHeight);
-// retournera la hauteur de la partie visible du cadre dans frameset
+// retourne la hauteur de la partie visible du cadre dans frameset
 
 console.log(parent.innerHeight);
-// retournera la hauteur de la partie visible du frameset le plus proche
+// retourne la hauteur de la partie visible du frameset le plus proche
 
 console.log(top.innerHeight);
-// retournera la hauteur de la partie visible du frameset le plus éloigné
+// retourne la hauteur de la partie visible du frameset le plus éloigné
 ```
 
 Pour modifier les dimensions d'une fenêtre, voir {{DOMxRef("window.resizeBy()")}} et
@@ -59,7 +59,7 @@ L'illustration suivante montre la différence entre `outerHeight` et `innerHeigh
 
 ```html
 <p>
-  Redimensionnez la fenêtre du navigateur pour déclencher l'événement
+  Redimensionnez la fenêtre du navigateur pour déclencher l'évènement
   <code>resize</code>.
 </p>
 <p>Hauteur de la fenêtre&nbsp;: <span id="height"></span></p>

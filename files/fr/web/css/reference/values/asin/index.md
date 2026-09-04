@@ -3,7 +3,7 @@ title: Fonction CSS `asin()`
 short-title: asin()
 slug: Web/CSS/Reference/Values/asin
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: daa035392f8466e6d75f290d9ffa4317adca4070
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`asin()`** est une fonction trigonométrique qui retourne l'arc sinus d'un nombre compris entre `-1` et `1`. Cette fonction effectue un unique calcul qui retourne un angle ({{CSSxRef("&lt;angle&gt;")}}) entre `-90deg` et `90deg`.

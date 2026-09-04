@@ -3,7 +3,7 @@ title: "Window : évènement orientationchange"
 short-title: orientationchange
 slug: Web/API/Window/orientationchange_event
 l10n:
-  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 {{APIRef}}

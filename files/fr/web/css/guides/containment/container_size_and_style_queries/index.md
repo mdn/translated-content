@@ -2,7 +2,7 @@
 title: Utiliser les requêtes de taille et de style des conteneurs
 slug: Web/CSS/Guides/Containment/Container_size_and_style_queries
 l10n:
-  sourceCommit: 2ce88199869b63f8da3bbeafd899400f7579cce9
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 Les [requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries) permettent d'appliquer des styles aux éléments imbriqués dans un conteneur spécifique en fonction des caractéristiques de ce conteneur. La requête retourne vrai ou faux selon que la condition de la requête est vraie pour le conteneur.

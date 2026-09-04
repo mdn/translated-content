@@ -3,10 +3,10 @@ title: "Window : évènement message"
 short-title: message
 slug: Web/API/Window/message_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 L'évènement `message` est déclenché sur un objet {{DOMxRef("Window")}} lorsque la fenêtre reçoit un message, par exemple à partir d'un appel à {{DOMxRef("Window.postMessage()")}} depuis un autre contexte de navigation.
 

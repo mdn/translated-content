@@ -137,13 +137,18 @@ Les arguments `<shape-radius>` représentent _rx_ et _ry_, les rayons selon les 
 
 ### Syntaxe pour les polygones
 
-La fonction {{CSSxRef("basic-shape/polygon","polygon()")}} définit un polygone à l'aide d'une règle de remplissage {{SVGAttr("fill-rule")}} SVG et d'un ensemble de coordonnées.
+La fonction {{CSSxRef("basic-shape/polygon", "polygon()")}} définit un polygone à l'aide d'un ensemble de paires de coordonnées séparées par des virgules, précédé facultativement par une règle de remplissage ({{SVGAttr("fill-rule")}}) SVG, un paramètre d'arrondissement des coins, ou les deux.
 
 ```plain
-polygon( <'fill-rule'>? , [ <length-percentage> <length-percentage> ]# )
+polygon( <'fill-rule'>? [ round <length> ]? , [ <length-percentage> <length-percentage> ]# )
 ```
 
-La fonction prend une liste de paires de coordonnées séparées par des virgules, chacune composée de deux valeurs `<length-percentage>` séparées par un espace, représentant les coordonnées x et y du polygone à la position _i_ (le sommet où deux lignes se rejoignent).
+Le premier paramètre facultatif peut contenir l'un ou l'autre des éléments suivants, ou les deux, séparés par une espace&nbsp;:
+
+- Une valeur SVG {{SVGAttr("fill-rule")}}, soit `nonzero`, soit `evenodd`, qui définit l'algorithme utilisé pour remplir la forme du polygone.
+- Le mot-clé [`round`](/fr/docs/Web/CSS/Reference/Values/basic-shape/polygon#round) suivi d'une valeur {{CSSxRef("&lt;length&gt;")}}, séparés par une espace. Cela définit que le polygone possède des coins arrondis, `<length>` définissant le rayon des coins.
+
+Chaque paire de coordonnées se compose de deux valeurs `<length-percentage>` séparées par une espace. Ces valeurs représentent les coordonnées sur les axes x et y d'un sommet du polygone.
 
 ### Syntaxe pour les chemins
 

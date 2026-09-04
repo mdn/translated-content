@@ -3,7 +3,7 @@ title: "Window : propriété orientation"
 short-title: orientation
 slug: Web/API/Window/orientation
 l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 {{APIRef}}

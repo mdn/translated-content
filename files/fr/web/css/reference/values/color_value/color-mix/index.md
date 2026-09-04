@@ -3,7 +3,7 @@ title: Fonction CSS `color-mix()`
 short-title: color-mix()
 slug: Web/CSS/Reference/Values/color_value/color-mix
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 138b6273756ffe17de769b760cd2dd23e1301c7d
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`color-mix()`** prend une ou plusieurs valeurs de type {{CSSxRef("&lt;color&gt;")}} et retourne le résultat de leur mélange selon des proportions données, dans un espace de couleur donné.
@@ -32,8 +32,8 @@ color-mix(in oklab, teal 20%, olive 30%, blue 50%)
 
 La notation `color-mix( <color-interpolation-method>? , [ <color> && <percentage [0,100]>? ]#)` accepte les paramètres suivants&nbsp;:
 
-- {{CSSxRef("&lt;color-interpolation-method&gt;")}}
-  - : Définit la méthode d'interpolation à utiliser pour mélanger les couleurs. Elle consiste en le mot-clé `in` suivi d'un {{Glossary("color space", "espace de couleur")}} (un des espaces colorimétriques listés dans la [syntaxe formelle](#syntaxe_formelle)), et, éventuellement, d'un {{CSSxRef("&lt;hue-interpolation-method&gt;")}}.
+- {{CSSxRef("&lt;color-interpolation-method&gt;")}} {{Optional_Inline}}
+  - : Définit la méthode d'interpolation à utiliser pour mélanger les couleurs. Elle consiste en le mot-clé `in` suivi d'un {{Glossary("color space", "espace de couleur")}} (un des espaces colorimétriques listés dans la [syntaxe formelle](#syntaxe_formelle), par défaut sur `oklab`), et, éventuellement, d'un {{CSSxRef("&lt;hue-interpolation-method&gt;")}}, qui par défaut est `shorter hue`.
 
 - {{CSSxRef("&lt;color&gt;")}}
   - : Une couleur à mélanger&nbsp;; peut être n'importe quelle valeur de type `<color>` valide.
@@ -162,6 +162,14 @@ li:nth-child(6) {
 {{EmbedLiveSample("Mélanger deux couleurs", "100%", 120)}}
 
 La valeur totale des deux couleurs dans une fonction `color-mix()` est de 100%, même si les valeurs définies par le·la développeur·euse ne totalisent pas 100%. Dans cet exemple, comme une seule couleur a un pourcentage attribué, l'autre couleur se voit implicitement attribuer une valeur en pourcentage afin que le total combiné soit égal à 100%. Dans le dernier {{HTMLElement("li")}}, où aucune couleur n'a de pourcentage attribué, les deux couleurs par défaut sont de 50%.
+
+Lorsqu'on mélange des couleurs sans espace colorimétrique ni méthode d'interpolation des teintes, c'est l'espace colorimétrique `oklab` qui est utilisé, avec la méthode d'interpolation des teintes `shorter`. Les trois déclarations suivantes sont équivalentes&nbsp;:
+
+```css
+background-color: color-mix(red, blue);
+background-color: color-mix(in oklab, red, blue);
+background-color: color-mix(in oklab shorter hue, red, blue);
+```
 
 ### Ajouter de la transparence
 
