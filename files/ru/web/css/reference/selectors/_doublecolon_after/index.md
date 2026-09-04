@@ -20,7 +20,12 @@ a::after {
 
 ## Синтаксис
 
-{{csssyntax}}
+```css-nolint
+::after {
+  content: /* value */;
+  /* properties */
+}
+```
 
 > [!NOTE]
 > В CSS3 появилась запись `::after` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Браузеры также поддерживают запись `:after`, введённую в CSS2.
