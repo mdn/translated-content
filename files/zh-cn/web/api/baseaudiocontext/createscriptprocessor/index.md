@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("Web Audio API")}}{{deprecated_header}}
+{{APIRef("Web Audio API")}}
 
 {{domxref("AudioContext")}} 接口的 `createScriptProcessor()` 方法创建一个 {{domxref("ScriptProcessorNode")}}，用于直接使用 JavaScript 处理音频。
 

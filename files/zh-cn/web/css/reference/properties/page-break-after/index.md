@@ -6,8 +6,6 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{deprecated_header}}
-
 > [!WARNING]
 > 此属性已被 {{cssxref("break-after")}} 属性取代。
 

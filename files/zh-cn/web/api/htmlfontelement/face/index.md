@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{deprecated_header}}{{ APIRef("HTML DOM") }}
+{{ APIRef("HTML DOM") }}
 
 已过时的 **`HTMLFontElement.face`** 属性是一个反映 [`face`](/zh-CN/docs/Web/HTML/Reference/Elements/font#face) HTML 属性的字符串，包含一个或多个字体名称的逗号分隔列表。
 

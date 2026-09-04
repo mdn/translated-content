@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{deprecated_header}}
-
 [HTML](/zh-CN/docs/Web/HTML) 元素 **`<rtc>`** 用于包裹出现在 {{HTMLElement("ruby")}} 元素内、由 {{HTMLElement("rb")}} 元素组成的 ruby 注释中字符的语义注解。{{HTMLElement("rb")}} 元素可以同时具有发音注解（{{HTMLElement("rt")}}）和语义注解（`<rtc>`）。
 
 {{InteractiveExample("HTML 演示：&lt;rtc&gt;", "tabbed-standard")}}

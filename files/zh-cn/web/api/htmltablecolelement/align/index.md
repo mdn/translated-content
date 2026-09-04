@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 {{domxref("HTMLTableColElement")}} 接口的 **`align`** 属性是一个指示如何在表格 {{htmlelement("col")}} 列元素中水平对齐文本的字符串。
 

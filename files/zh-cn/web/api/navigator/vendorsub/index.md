@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ApiRef}} {{Deprecated_Header}}
+{{ApiRef}}
 
 **`Navigator.vendorSub`** 属性的值在任何浏览器中始终为空字符串。
 

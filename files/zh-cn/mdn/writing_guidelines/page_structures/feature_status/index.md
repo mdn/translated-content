@@ -62,8 +62,6 @@ browser-compat: api.feature
 - `\{{Deprecated_Header}}`
   - : 用于 `deprecated` 状态。它会生成**已弃用状态**横幅：
 
-    {{deprecated_header}}
-
 ### 定义列表中的特性状态图标
 
 以下宏用于在定义列表项的旁边呈现行内状态图标：

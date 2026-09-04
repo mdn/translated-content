@@ -3,8 +3,6 @@ title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
 
-{{deprecated_header}}
-
 {{jsxref("String")}} 值的 **`substr()`** 方法返回该字符串的一部分，从指定的索引开始，然后扩展到给定数量的字符。
 
 > [!NOTE]

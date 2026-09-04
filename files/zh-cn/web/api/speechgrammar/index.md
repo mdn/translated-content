@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 10313e7be178b2af803c902d4f91e4ccc31b09e7
 ---
 
-{{APIRef("Web Speech API")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Web Speech API")}}{{non-standard_header}}
 
 [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) 的 **`SpeechGrammar`** 接口表示一组希望识别服务识别的单词或单词模式。
 

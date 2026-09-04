@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}}{{AvailableInWorkers}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`CustomEvent.initCustomEvent()`** 方法用于初始化 {{domxref("CustomEvent")}} 对象。如果该事件已经被分发出去，则此方法什么都不做。
 

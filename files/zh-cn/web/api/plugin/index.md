@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 `Plugin` 接口提供了关于浏览器插件的信息。
 

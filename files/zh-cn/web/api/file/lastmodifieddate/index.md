@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("File API")}}{{AvailableInWorkers}}{{Non-standard_Header}}
 
 {{domxref("File")}} 接口的 **`lastModifiedDate`** 只读属性返回文件的最后修改日期。没有已知最后修改日期的文件则返回当前日期。
 

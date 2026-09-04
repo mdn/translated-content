@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 9a9dcd5848aaf1c4226f746539e6218c48647249
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 {{domxref("Navigator")}} 接口的 **`getVRDisplays()`** 方法会返回兑现为 {{domxref("VRDisplay")}} 对象数组的 promise，该数组代表连接到计算机的任何可用的 VR 显示器。
 

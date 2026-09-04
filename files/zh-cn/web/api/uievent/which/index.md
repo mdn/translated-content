@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 22080a7cc403f7f45c8e85065b182c9f0d4d383c
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 {{domxref("UIEvent")}} 接口的 **`UIEvent.which`** 只读属性返回一个数字，表示按下了鼠标上的哪个按钮，或者是键盘上按下的键的 `keyCode` 或字符代码（`charCode`）的数字值。
 

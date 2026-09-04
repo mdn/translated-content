@@ -3,7 +3,7 @@ title: FileSystemSync
 slug: Web/API/FileSystemSync
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
 
 在[文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API) 中， `FileSystemSync` 对象表示文件系统。它有两个属性。
 

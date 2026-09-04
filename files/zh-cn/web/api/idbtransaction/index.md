@@ -74,8 +74,6 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 
 ## 模式常量
 
-{{deprecated_header}}
-
 > [!WARNING]
 > 这些常量将不再可用——它们在 Gecko 25 中被移除。你应该直接使用字符串常量来作为替代。 ([Firefox bug 888598](https://bugzil.la/888598))
 
