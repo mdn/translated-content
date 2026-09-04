@@ -3,6 +3,10 @@ title: asm.js
 slug: Games/Tools/asm.js
 ---
 
+> [!WARNING]
+> [asm.js](http://asmjs.org/) の仕様は非推奨と見なされています。
+> ブラウザーで高性能なコードを実行する場合は、asm.js の代替として [WebAssembly](/ja/docs/WebAssembly) を検討してください。
+
 [asm.js](http://asmjs.org/) は 高度に最適化可能な JavaScript のサブセットを規定する仕様です。この文書では、asm.js で可能なこと、利点、利用方法、そして関連する情報と使用例を解説します。
 
 ## asm.js とは
