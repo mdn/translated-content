@@ -15,7 +15,11 @@ El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) CSS *
 
 ## Syntax
 
-{{csssyntax}}
+```css
+::-moz-range-thumb {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

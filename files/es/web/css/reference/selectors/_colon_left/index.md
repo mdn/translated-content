@@ -22,7 +22,11 @@ La dirección principal de escritura del documento determina si una página es "
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:left {
+  /* ... */
+}
+```
 
 ## Ejemplos
 
