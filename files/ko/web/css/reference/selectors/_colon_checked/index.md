@@ -21,7 +21,11 @@ original_slug: Web/CSS/:checked
 
 ## 구문
 
-{{csssyntax}}
+```css
+:checked {
+  /* ... */
+}
+```
 
 ## 예제
 
