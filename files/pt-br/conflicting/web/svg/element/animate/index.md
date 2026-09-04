@@ -3,7 +3,7 @@ title: animateColor
 slug: conflicting/Web/SVG/Element/animate
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{SVGRef}}
 
 > [!WARNING]
 > Este elemento ficou obsoleto na Segunda Edição do SVG 1.1 e deverá ser removida das futuras versões do SVG. Este elemento fornece recursos ainda não disponíveis utilizando o elemento {{ SVGElement("animate") }} e não está implementado no Firefox e no Internet Explorer. Os autores devem utilizar o elemento {{ SVGElement("animate") }} em seu lugar.
