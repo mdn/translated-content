@@ -43,7 +43,7 @@ La propriété `corner-bottom-left-shape` se définit avec une valeur {{CSSxRef(
 
 {{CSSSyntax}}
 
-## Examples
+## Exemples
 
 Vous pouvez trouver d'autres exemples liés sur la page de référence {{CSSxRef("corner-shape")}}.
 

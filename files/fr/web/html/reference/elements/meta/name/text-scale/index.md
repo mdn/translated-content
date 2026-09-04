@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<meta name="text-scale">`
 short-title: text-scale
 slug: Web/HTML/Reference/Elements/meta/name/text-scale
 l10n:
-  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
+  sourceCommit: 4c58f4735f986a91bee1b77e336143630df727a2
 ---
 
 {{SeeCompatTable}}
@@ -72,7 +72,7 @@ Nous incluons l'élément `<meta name="text-scale" content="scale">` dans le `<h
 <html lang="fr">
   <head>
     <meta name="text-scale" content="scale" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
     <p class="text-scale">
@@ -95,7 +95,7 @@ Nous incluons l'élément `<meta name="text-scale" content="scale">` dans le `<h
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
     <p class="text-scale">
@@ -158,7 +158,7 @@ Comme dans l'exemple précédent, notre balisage inclut à nouveau les élément
 <html lang="fr">
   <head>
     <meta name="text-scale" content="scale" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
     <main>Contenu principal</main>

@@ -2,18 +2,18 @@
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 l10n:
-  sourceCommit: f6e66d18205c93fcaeb2ea9ad51541b5b4d7d2b1
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 {{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
-Les objets `XMLHttpRequest` (XHR) permettent d'interagir avec des serveurs. On peut récupérer des données à partir d'une URL sans avoir à rafraîchir complètement la page. Cela permet à une page web d'être mise à jour sans perturber les actions de l'utilisatrice ou de l'utilisateur.
+Les objets `XMLHttpRequest` (XHR) permettent d'interagir avec des serveurs. On peut récupérer des données à partir d'une URL sans avoir à rafraîchir complètement la page. Cela permet à une page web d'être mise à jour sans perturber les actions de l'utilisateur·ice.
 
 {{InheritanceDiagram}}
 
 Malgré son nom, `XMLHttpRequest` peut être utilisé afin de récupérer tout type de données et pas uniquement du XML.
 
-Si vos opérations de communication nécessitent l'échange d'évènements ou de messages avec un serveur, pensez à utiliser [les évènements serveur](/fr/docs/Web/API/Server-sent_events) via l'interface {{DOMxRef("EventSource")}}. Pour une communication bidirectionnelle complète, les [WebSockets](/fr/docs/Web/API/WebSockets_API) peuvent être une meilleure alternative.
+Si vos opérations de communication nécessitent l'échange d'évènements ou de messages avec un serveur, pensez à utiliser [les évènements serveur](/fr/docs/Web/API/Server-sent_events) avec l'interface {{DOMxRef("EventSource")}}. Pour une communication bidirectionnelle complète, les [WebSockets](/fr/docs/Web/API/WebSockets_API) peuvent être une meilleure alternative.
 
 ## Constructeur
 
@@ -33,13 +33,13 @@ _Cette interface hérite également des propriétés de {{DOMxRef("XMLHttpReques
 - {{DOMxRef("XMLHttpRequest.responseType")}}
   - : Retourne une valeur parmi une liste qui définit le type de réponse.
 - {{DOMxRef("XMLHttpRequest.responseURL")}} {{ReadOnlyInline}}
-  - : Retourne l'URL sérialisée de la réponse ou la chaîne vide si l'URL est nulle.
+  - : Retourne l'URL sérialisée de la réponse ou la chaîne de caractères vide si l'URL est nulle.
 - {{DOMxRef("XMLHttpRequest.responseXML")}} {{ReadOnlyInline}}
   - : Retourne un objet {{DOMxRef("Document")}} qui contient la réponse de la requête ou `null` si la requête a échoué, qu'elle n'a pas encore été envoyée ou qu'elle ne peut pas être analysée comme XML ou HTML. Cette propriété n'est pas disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 - {{DOMxRef("XMLHttpRequest.status")}} {{ReadOnlyInline}}
   - : Retourne le [code de statut de la réponse HTTP](/fr/docs/Web/HTTP/Reference/Status) de la requête.
 - {{DOMxRef("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
-  - : Retourne une chaîne de caractères qui contient la chaîne de caractères / réponse renvoyée par le serveur HTTP. À la différence de {{DOMxRef("XMLHttpRequest.status")}}, tout le texte du statut est inclus ("`200 OK`" plutôt que "`200`" par exemple).
+  - : Retourne une chaîne de caractères qui contient la chaîne de caractères / réponse retournée par le serveur HTTP. À la différence de {{DOMxRef("XMLHttpRequest.status")}}, tout le texte du statut est inclus ("`200 OK`" plutôt que "`200`" par exemple).
 
 > [!NOTE]
 > Selon la spécification HTTP/2 {{RFC(7540, "Response Pseudo-Header Fields <sup>(angl.)</sup>", "8.1.2.4")}}, HTTP/2 ne définit pas de méthode pour porter la version ou la raison/phrase incluse dans la ligne de statut HTTP/1.1.
@@ -49,14 +49,14 @@ _Cette interface hérite également des propriétés de {{DOMxRef("XMLHttpReques
 - {{DOMxRef("XMLHttpRequest.upload")}} {{ReadOnlyInline}}
   - : Un objet {{DOMxRef("XMLHttpRequestUpload")}} qui représente le processus de téléversement.
 - {{DOMxRef("XMLHttpRequest.withCredentials")}}
-  - : Retourne `true` si les requêtes `Access-Control` intersites doivent être effectuées en utilisant des informations d'identification telles que des cookies ou des en-têtes d'autorisation&nbsp;; sinon `false`.
+  - : Retourne `true` si les requêtes `Access-Control` inter-sites doivent être effectuées en utilisant des informations d'identification telles que des cookies ou des en-têtes d'autorisation&nbsp;; sinon `false`.
 
 ### Propriétés non-standard
 
 - `XMLHttpRequest.mozAnon` {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Un booléen. S'il est vrai, la requête sera envoyée sans cookie ou en-tête d'autorisation.
+  - : Un booléen. S'il est vrai, la requête est envoyée sans cookie ou en-tête d'autorisation.
 - `XMLHttpRequest.mozSystem` {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Un booléen. S'il est vrai, la politique d'origine unique ne sera pas vérifiée pour la requête.
+  - : Un booléen. S'il est vrai, la politique d'origine unique n'est pas vérifiée pour la requête.
 
 ## Méthodes d'instance
 
@@ -71,8 +71,8 @@ _Cette interface hérite également des propriétés de {{DOMxRef("XMLHttpReques
 - {{DOMxRef("XMLHttpRequest.overrideMimeType()")}}
   - : Surcharge le type MIME retourné par le serveur.
 - {{DOMxRef("XMLHttpRequest.send()")}}
-  - : Envoie la requête. Si la requête est asynchrone (le comportement par défaut), la méthode renvoie un résultat dès que la requête est envoyée.
-- {{DOMxRef("XMLHttpRequest.setAttributionReporting()")}} {{SecureContext_Inline}} {{Deprecated_Inline}}
+  - : Envoie la requête. Si la requête est asynchrone (le comportement par défaut), la méthode retourne un résultat dès que la requête est envoyée.
+- {{DOMxRef("XMLHttpRequest.setAttributionReporting()")}} {{SecureContext_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Indique que vous souhaitez que la réponse de la requête puisse enregistrer une source d'attribution ou déclencher un évènement.
 - {{DOMxRef("XMLHttpRequest.setPrivateToken()")}} {{Experimental_Inline}}
   - : Ajoute des informations de [jeton d'état privé](/fr/docs/Web/API/Private_State_Token_API/Using) à un appel `XMLHttpRequest`, pour initier des opérations de jeton d'état privé.
@@ -85,7 +85,7 @@ _Cette interface hérite également des évènements de {{DOMxRef("XMLHttpReques
 
 - {{DOMxRef("XMLHttpRequest/readystatechange_event", "readystatechange")}}
   - : Déclenché chaque fois que la propriété {{DOMxRef("XMLHttpRequest.readyState", "readyState")}} change.
-    Disponible également via la propriété du gestionnaire d'évènements `onreadystatechange`.
+    Disponible également avec la propriété du gestionnaire d'évènements `onreadystatechange`.
 
 ## Spécifications
 

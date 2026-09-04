@@ -2,7 +2,7 @@
 title: HTMLAllCollection
 slug: Web/API/HTMLAllCollection
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 5b9e4bb67e5cb4bb2b780e7338a6560463e5a1a7
 ---
 
 {{APIRef("DOM")}}{{Deprecated_Header}}
@@ -13,14 +13,14 @@ L'interface **`HTMLAllCollection`** représente une collection de _tous_ les él
 
 ## Propriétés d'instance
 
-- {{DOMxRef("HTMLAllCollection.length")}} {{ReadOnlyInline}}
+- {{DOMxRef("HTMLAllCollection.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Retourne le nombre d'éléments dans la collection.
 
 ## Méthodes d'instance
 
-- {{DOMxRef("HTMLAllCollection.item()")}}
+- {{DOMxRef("HTMLAllCollection.item()")}} {{Deprecated_Inline}}
   - : Retourne l'élément situé au décalage défini dans la collection, ou l'élément dont la valeur de l'attribut `id` ou `name` correspond à la chaîne de caractères donnée. Retourne `null` si aucun élément n'est trouvé.
-- {{DOMxRef("HTMLAllCollection.namedItem()")}}
+- {{DOMxRef("HTMLAllCollection.namedItem()")}} {{Deprecated_Inline}}
   - : Retourne le premier [élément](/fr/docs/Web/API/Element) de la collection dont l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) ou `name` correspond à la chaîne de caractères donnée, ou `null` si aucun élément ne correspond.
 
 ## Utiliser dans JavaScript

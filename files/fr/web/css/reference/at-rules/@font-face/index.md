@@ -3,10 +3,10 @@ title: Règle CSS `@font-face`
 short-title: "@font-face"
 slug: Web/CSS/Reference/At-rules/@font-face
 l10n:
-  sourceCommit: e328268bb418551ab451881845881b5837c9da83
+  sourceCommit: 916eb95f63de092d96ed1b1b13f3e2261739a8e2
 ---
 
-La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisatrice ou l'utilisateur.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisateur·ice.
 
 ## Syntaxe
 
@@ -30,7 +30,7 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 - {{CSSxRef("@font-face/font-display", "font-display")}}
   - : Ce descripteur détermine la façon dont une police est affichée selon qu'elle a été téléchargée et/ou si elle est prête à être utilisée.
 - {{CSSxRef("@font-face/font-family", "font-family")}}
-  - : Ce descripteur définit un nom qui sera utilisé pour désigner cette police dans les différentes règles associées.
+  - : Ce descripteur définit un nom qui est utilisé pour désigner cette police dans les différentes règles associées.
 - {{CSSxRef("@font-face/font-stretch", "font-stretch")}}
   - : Une valeur [`font-stretch`](/fr/docs/Web/CSS/Reference/Properties/font-stretch). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-stretch: 50% 200%;`.
 - {{CSSxRef("@font-face/font-style", "font-style")}}
@@ -41,6 +41,8 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
   - : Ce descripteur permet d'avoir un contrôle avancé sur les fonctionnalités typographiques relatives aux polices OpenType.
 - {{CSSxRef("@font-face/font-variation-settings", "font-variation-settings")}}
   - : Ce descripteur permet d'avoir un contrôle de bas niveau sur les variations des polices OpenType et TrueType en indiquant les noms des axes et des fonctionnalités à faire varier.
+- {{cssxref("@font-face/font-width", "font-width")}}
+  - : Permet aux auteur·ice·s de définir une police normale, condensée ou étendue pour les polices spécifiées.
 - {{CSSxRef("@font-face/line-gap-override", "line-gap-override")}}
   - : Définit la métrique pour l'interlignage de la police.
 - {{CSSxRef("@font-face/size-adjust", "size-adjust")}}
@@ -54,9 +56,9 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 
 On utilise fréquemment une combinaison de `url()` et de `local()` afin d'utiliser une version locale de la police si elle existe, puis de recourir au téléchargement d'un exemplaire distant si nécessaire.
 
-Si la fonction `local()` est fournie, on lui passera un nom de police à rechercher sur l'appareil. Lorsque l'agent utilisateur trouve une correspondance, c'est cette police locale qui est utilisée. Sinon, le navigateur télécharge la police pointée par la fonction `url()` et l'utilise.
+Si la fonction `local()` est fournie, on lui passe un nom de police à rechercher sur l'appareil. Lorsque l'agent utilisateur trouve une correspondance, c'est cette police locale qui est utilisée. Sinon, le navigateur télécharge la police pointée par la fonction `url()` et l'utilise.
 
-Les navigateurs tentent le téléchargement des ressources selon leur ordre de déclaration. Aussi, on écrira généralement `local()` avant `url()`. Les deux fonctions sont optionnelles et on peut donc avoir un bloc de règle contenant un ou plusieurs appels à `local()`, sans `url()`. On peut utiliser les fonctions `format()` ou `tech()` afin de cibler des polices plus spécifiques. Dans ce cas, on doit lister ces versions _avant_ celles qui n'utilisent pas ces valeurs. En effet, dans le cas contraire, ce seraient les versions moins spécifiques qui seraient tentées et utilisées.
+Les navigateurs tentent le téléchargement des ressources selon leur ordre de déclaration. Aussi, on écrit généralement `local()` avant `url()`. Les deux fonctions sont optionnelles et on peut donc avoir un bloc de règle contenant un ou plusieurs appels à `local()`, sans `url()`. On peut utiliser les fonctions `format()` ou `tech()` afin de cibler des polices plus spécifiques. Dans ce cas, on doit lister ces versions _avant_ celles qui n'utilisent pas ces valeurs. En effet, dans le cas contraire, ce sont les versions moins spécifiques qui sont tentées et utilisées.
 
 Pour la diffusion sur le Web, il est généralement préférable de fournir les polices au format WOFF2, car il compresse les polices plus efficacement que les formats plus anciens comme WOFF ou OpenType, ce qui réduit la taille des fichiers et améliore les temps de chargement. WOFF2 est également bien pris en charge par les navigateurs modernes, ce qui en fait un choix par défaut sûr pour la plupart des sites.
 
@@ -79,7 +81,7 @@ La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuill
 ### Notes
 
 - Les polices utilisées sur le Web sont sujettes à la règle de même origine (les fichiers des polices doivent être sur le même domaine que la page qui les utilise), à moins que [les paramètres de CORS](/fr/docs/Web/HTTP/Guides/CORS) soient utilisés afin de lever ces restrictions.
-- `@font-face` ne peut pas être déclarée au sein d'un sélecteur CSS. L'exemple qui suit ne fonctionnera pas&nbsp;:
+- `@font-face` ne peut pas être déclarée au sein d'un sélecteur CSS. L'exemple qui suit ne fonctionne pas&nbsp;:
 
   ```css example-bad
   .className {
@@ -153,6 +155,6 @@ Dans cet exemple, c'est l'exemplaire local de la police Helvetica Neue Bold qui 
 ## Voir aussi
 
 - [À propos de WOFF](/fr/docs/Web/CSS/Guides/Fonts/WOFF)
-- [Générateur `@font-face` de FontSquirrel <sup>(angl.)</sup>](https://www.fontsquirrel.com/tools/webfont-generator)
+- [Générateur de police web de Transfonter <sup>(angl.)</sup>](https://transfonter.org/)
 - Le billet de blog [De belles polices avec @font-face <sup>(angl.)</sup>](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/) de Mozilla (2009)
 - [<i lang="en">Font Library</i> <sup>(angl.)</sup>](https://fontlibrary.org/), un site cataloguant des polices

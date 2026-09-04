@@ -3,10 +3,10 @@ title: Fonction CSS `-moz-image-rect()`
 short-title: -moz-image-rect()
 slug: Web/CSS/Reference/Values/-moz-image-rect
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 La valeur [CSS](/fr/docs/Web/CSS) **`-moz-image-rect`** pour {{CSSxRef("background-image")}} permet d'utiliser une portion d'une image plus grande comme arrière-plan.
 
@@ -148,7 +148,7 @@ function rotate() {
 document.getElementById("container").addEventListener("click", rotate);
 ```
 
-Cela utilise {{DOMxRef("window.getComputedStyle()")}} pour obtenir le style de chaque élément, en le décalant vers l'élément suivant. Remarquez qu'avant de commencer, il sauvegarde une copie du style de la dernière boîte puisqu'il sera écrasé par le style du troisième élément. En copiant les valeurs de la propriété {{CSSxRef("background-image")}} d'un élément à l'autre à chaque clic de souris, on obtient l'effet souhaité.
+Cela utilise {{DOMxRef("window.getComputedStyle()")}} pour obtenir le style de chaque élément, en le décalant vers l'élément suivant. Remarquez qu'avant de commencer, il sauvegarde une copie du style de la dernière boîte puisqu'il est écrasé par le style du troisième élément. En copiant les valeurs de la propriété {{CSSxRef("background-image")}} d'un élément à l'autre à chaque clic de souris, on obtient l'effet souhaité.
 
 ### Aperçu visuel
 

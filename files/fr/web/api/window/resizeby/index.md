@@ -3,10 +3,10 @@ title: "Window : méthode resizeBy()"
 short-title: resizeBy()
 slug: Web/API/Window/resizeBy
 l10n:
-  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 La méthode **`resizeBy()`** de l'interface {{DOMxRef("Window")}} redimensionne la fenêtre actuelle à une taille définie.
 
@@ -42,7 +42,7 @@ Cette méthode redimensionne la fenêtre par rapport à sa taille actuelle. Pour
 
 Pour des raisons de sécurité, il n'est plus possible dans Firefox pour un site Web de modifier la taille par défaut d'une fenêtre dans un navigateur si la fenêtre n'a pas été créée par `window.open()` ou contient plusieurs onglets. Consultez le tableau de compatibilité pour plus de détails sur le changement.
 
-Même si vous créez une fenêtre avec `window.open()` **elle n'est pas redimensionnable par défaut.** Pour rendre la fenêtre redimensionnable, vous devez l'ouvrir avec le paramètre `"resizable"` .
+Même si vous créez une fenêtre avec `window.open()` **elle n'est pas redimensionnable par défaut.** Pour rendre la fenêtre redimensionnable, vous devez l'ouvrir avec le paramètre `"resizable"`.
 
 ```js
 // Créer une fenêtre redimensionnable
@@ -59,7 +59,7 @@ myExternalWindow.resizeTo(500, 500);
 myExternalWindow.resizeBy(-100, -100);
 ```
 
-La fenêtre que vous créez doit respecter la politique de même origine. Si la fenêtre que vous ouvrez n'est pas dans la même origine que la fenêtre actuelle, vous ne pourrez pas redimensionner ni accéder aux informations sur cette fenêtre / cet onglet.
+La fenêtre que vous créez doit respecter la politique de même origine. Si la fenêtre que vous ouvrez n'est pas dans la même origine que la fenêtre actuelle, vous ne pouvez pas redimensionner ni accéder aux informations sur cette fenêtre / cet onglet.
 
 ## Spécifications
 
@@ -70,5 +70,5 @@ La fenêtre que vous créez doit respecter la politique de même origine. Si la 
 {{Compat}}
 
 > [!NOTE]
-> Cette fonction pourrait ne pas redimensionner la fenêtre de manière synchrone.
-> Dans certains environnements (comme les mobiles), elle pourrait ne pas redimensionner la fenêtre du tout. Vous pouvez écouter l'évènement {{DOMxRef("Window/resize_event", "resize")}} pour voir si/quand la fenêtre a été redimensionnée.
+> Cette fonction peut ne pas redimensionner la fenêtre de manière synchrone.
+> Dans certains environnements (comme les mobiles), elle peut ne pas redimensionner la fenêtre du tout. Vous pouvez écouter l'évènement {{DOMxRef("Window/resize_event", "resize")}} pour voir si/quand la fenêtre a été redimensionnée.
