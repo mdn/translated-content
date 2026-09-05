@@ -79,13 +79,13 @@ column-rule-color: unset;
   - : {{cssxref("repeat()")}} 関数に、第一引数で {{cssxref("&lt;integer&gt;")}} で `1` 以上の値を指定し、それ以降の引数で 1 つ以上の `<color>` 値を指定したものです。この `<integer>` は、一連の `<color>` 値を繰り返す回数です。
 
 - `<auto-repeat-line-color>`
-  - : {{cssxref("repeat()")}} 関数に、第一引数で `auto` を指定し、それ以降の引数で 1 つ以上の `<color>` 値を指定したものです。指定された `<color>` の値は、プロパティ値の他の要素によって明示的に指定されていない罫線に対して値を埋めるために、必要な回数だけ繰り返して使用されます。
+  - : {{cssxref("repeat()")}} 関数に、第一引数で `auto` を指定し、それ以降の引数で 1 つ以上の `<color>` 値を指定したものです。指定された `<color>` の値は、プロパティ値の他の要素によって明示的に指定されていない列間罫に対して値を埋めるために、必要な回数だけ繰り返して使用されます。
 
 ## 解説
 
-`column-rule-color` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーに複数の列・段がある場合に、列・段間の隙間に描画される罫線の色を定義します。
+`column-rule-color` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーに複数の列・段がある場合に、列・段間のギャップに描画される罫線の色を定義します。
 
-この値は、カンマ区切りの一連の成分からなり、`<line-color>`、`<repeat-line-color>`、`<auto-repeat-line-color>` といった型を含めることができます。
+この値は、カンマで区切られた一連の成分からなり、`<line-color>`、`<repeat-line-color>`、`<auto-repeat-line-color>` といった型を含めることができます。
 
 `column-rule-color` は、{{cssxref("column-rule-width")}} および {{cssxref("column-rule-style")}} プロパティとともに、一括指定の {{cssxref("column-rule")}} で設定できます。`column-rule-color` は、{{cssxref("row-rule-color")}} プロパティとともに、一括指定の {{cssxref("rule-color")}} で設定することもできます。
 
@@ -120,9 +120,9 @@ column-rule-color: blue, repeat(2, yellow, red);
 column-rule-color: blue, repeat(auto, yellow), red;
 ```
 
-この場合、最初の罫線は青、最後の罫線は赤、それ以外はすべて黄色になります。罫線が 2 本あれば、最初の罫線は常に青、最後の罫線は常に赤になります。それ以外はすべて黄色になるため、列や段が 2 つまたは 3 つしかない場合は、黄色の線は表示されません。
+この場合、最初の列間罫・段間罫は青、最後は赤、それ以外はすべて黄色になります。列間罫・段間罫が 2 本あれば、最初は常に青、最後は常に赤になります。それ以外はすべて黄色になるため、列や段が 2 つまたは 3 つしかない場合は、黄色の線は表示されません。
 
-`auto` キーワードを`repeat()` 関数内で使用すると、リストの他の部分から値を受け取らない罫線色の値を設定する自動リピーターを作成し、リストが繰り返されるのを防ぎます。`column-rule-color` の値に記載することができる `repeat(auto, <color>)` の数は、最大 1 つです。
+`auto` キーワードを`repeat()` 関数内で使用すると、リストの他の部分から値を受け取らない罫線色の値を設定する自動リピーターを作成し、リストが繰り返されるのを防ぎます。`column-rule-color` の値に指定することができる `repeat(auto, <color>)` の数は、最大 1 つです。
 
 ## 公式定義
 
@@ -214,7 +214,7 @@ p {
 
 ### `repeat()` 関数の使用
 
-この例では、`repeat()` 関数を `column-rule-color` プロパティの値内で使用する方法と、この関数が複雑な値を扱いにくくしないための助けとなり得ることを示しています。
+この例では、`repeat()` 関数を `column-rule-color` プロパティの値内で使用する方法と、この関数が複雑な値を扱いにくさを軽減することを示しています。
 
 #### HTML
 
