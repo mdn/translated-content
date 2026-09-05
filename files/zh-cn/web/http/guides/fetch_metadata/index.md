@@ -51,7 +51,7 @@ Fetch 元数据可以让服务器知道（除此之外还有更多用途）：
 
 ### Sec-Fetch-Mode
 
-这个标头指明请求的 _模式_。与 _目标_ 类似，此属性也在 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 上有定义，并以 {{domxref("Request.mode")}} 属性的形式对外暴露。
+这个标头指明请求的*模式*。与*目标*类似，此属性也在 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 上有定义，并以 {{domxref("Request.mode")}} 属性的形式对外暴露。
 
 它最常用的值有：
 
