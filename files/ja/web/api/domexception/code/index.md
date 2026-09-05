@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ APIRef("DOM") }} {{deprecated_header}}
+{{ APIRef("DOM") }}
 
 **`code`** は {{domxref("DOMException")}} インターフェイスの読み取り専用プロパティで、古い[エラーコード定数](/ja/docs/Web/API/DOMException#エラー名)のいずれか、または一致するものがなければ `0` を返します。
 

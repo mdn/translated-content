@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 54fe4cbcaa46720a432cbcc20adfdc573bd474c2
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 多くの WebVR ハードウェアは、ヘッドセットとゲームパッドがセットになっています。WebVR アプリにおいては、ヘッドセットとゲームパッドは[ゲームパッド API](/ja/docs/Web/API/Gamepad_API)を通じて接続されます。中でも、[ゲームパッド拡張 API](/ja/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) は、ゲームパッドの状態([controller pose](/ja/docs/Web/API/GamepadPose))、触覚アクチュエータ([haptic actuators](/ja/docs/Web/API/GamepadHapticActuator))などの情報を取得します。この記事では、その基礎となる部分を解説します。
 

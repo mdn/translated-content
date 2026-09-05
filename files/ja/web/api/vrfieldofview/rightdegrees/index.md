@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{APIRef("WebVR API")}}{{Non-standard_header}}
 
 **`rightDegrees`** は {{domxref("VRFieldOfView")}} インターフェイスの読み取り専用プロパティで、視野が右方向に何度広がっているかを返します。
 

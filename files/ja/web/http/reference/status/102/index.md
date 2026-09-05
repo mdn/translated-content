@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-{{deprecated_header}}
-
 HTTP の **`102 Processing`** は[情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#情報レスポンス)ステータスコードで、リクエスト全体が受信され、サーバーがそれを処理中であることをクライアントに示します。
 このステータスコードは、リクエストの処理に長時間かかるとサーバーが判断した場合のみ送信されます。
 

@@ -72,7 +72,7 @@ svg {
   - : この属性は、グラデーションが、グラデーションを含むシェイプの境界の内側で開始または終了した場合の動作を示すものです。
     _値の型_: `pad` | `reflect` | `repeat`; _既定値_: `pad`; _アニメーション_: **可**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
-  - : {{Deprecated_Header}} [\<IRI>](/ja/docs/Web/SVG/Guides/Content_type#iri) の参照で、テンプレートとして使用される他の `<radialGradient>` 要素を差します。
+  - : [\<IRI>](/ja/docs/Web/SVG/Guides/Content_type#iri) の参照で、テンプレートとして使用される他の `<radialGradient>` 要素を差します。
     _値の型_: [**\<IRI>**](/ja/docs/Web/SVG/Guides/Content_type#iri); _既定値_: none; _アニメーション_: **可**
 
 ## 使用コンテキスト

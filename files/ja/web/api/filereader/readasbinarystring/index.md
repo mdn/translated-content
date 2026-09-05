@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bc9f7bec1ab48f29d241e38a9f1598f783f6b60a
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 > [!NOTE]
 > このメソッドは {{DOMxRef("FileReader.readAsArrayBuffer","readAsArrayBuffer()")}} に置き換えられて非推奨になりました。

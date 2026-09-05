@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-{{Non-standard_header}}{{deprecated_header}}
+{{Non-standard_header}}
 
 > [!WARNING]
 > この機能は、まだ {{Glossary("CSP")}} に対応していない古いブラウザーのユーザーを保護できるにもかかわらず、場合によっては、他の安全なウェブサイトで **XSS 保護機能が XSS の脆弱性を作り出す可能性**があります。

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}
 
 標準外の **`-moz-float-edge`** [CSS](/ja/docs/Web/CSS) プロパティは、要素の高さと幅のプロパティが margin 、border 、padding の太さを含んでいるかどうかを指定します。
 

@@ -55,7 +55,7 @@ l10n:
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 **`<要素名を挿入>`** は [HTML](/ja/docs/Web/HTML) の要素で、 _（その要素の名前とそれが何をするのか、できれば 1 つか 2 つの短い文章で概要を述べてください）_ を行います。
 

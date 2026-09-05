@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{deprecated_header}}{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}
 
 **`PushManager.hasPermission()`** は {{domxref("PushManager")}} インターフェイスのメソッドで、 {{jsxref("Promise")}} を返します。このプロミスは、ウェブアプリへのリクエストの `PushPermissionStatus` に解決し、 `granted`, `denied`, `default` のいずれかになります。
 

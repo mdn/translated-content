@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef}}
 
 ビューポートの向きを、端末の自然な向きに対する角度（90 度単位）で返します。
 

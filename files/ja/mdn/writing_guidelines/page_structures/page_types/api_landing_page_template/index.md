@@ -91,7 +91,7 @@ l10n:
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 ページのコンテンツは導入段落から始めてください。API の名前で始め、それが何をするのかを示してください。これはできれば 1、2 の短い文にすべきです。
 

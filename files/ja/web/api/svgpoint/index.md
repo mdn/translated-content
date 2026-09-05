@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("SVG")}}{{Deprecated_Header}}
+{{APIRef("SVG")}}
 
 > [!WARNING]
 > `SVGPoint` は非推奨です。

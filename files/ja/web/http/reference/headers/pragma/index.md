@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{Deprecated_Header}}
-
 HTTP の **`Pragma`** ヘッダーは、実装依存のヘッダーであり、リクエスト・レスポンスの連鎖においてさまざまな効果を及ぼす可能性があります。
 このヘッダーは、{{HTTPHeader("Cache-Control")}} という HTTP/1.1 ヘッダーに対応していない HTTP/1.0 キャッシュとの下位互換性を確保するために用いられます。
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Window")}}{{Non-standard_Header}}
 
 **`vrdisplaydisconnect`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のイベントで、互換性のある VR 機器がこのコンピューターから取り外されたときに発生します。
 

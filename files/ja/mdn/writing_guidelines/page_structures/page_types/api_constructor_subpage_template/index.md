@@ -68,7 +68,7 @@ l10n:
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 ページのコンテンツは導入段落で始めてください。コンストラクターの名前で始め、それが何をするのかを述べてください。
 これはできれば 1、2 の短い文にすべきです。対応する API リファレンスページのコンストラクターの概要から、この大部分をコピーすることができます。

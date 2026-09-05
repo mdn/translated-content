@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}{{non-standard_header}}
+{{ApiRef("DOM")}}{{non-standard_header}}
 
 > [!NOTE]
 > `execCommand()` メソッドは非推奨となっていますが、まだ有効な代替手段を持たない有効な用途がいくつか存在します。例えば、直接的な DOM 操作とは異なり、`execCommand()` による変更では、取り消しバッファー（編集履歴）が保持されます。このような用途では、引き続きこのメソッドを使用することができますが、{{domxref("document.queryCommandSupported()")}} などを使用して、ブラウザー間の互換性を検証してください。

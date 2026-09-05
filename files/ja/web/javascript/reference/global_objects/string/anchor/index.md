@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}
-
 **`anchor()`** は {{jsxref("String")}} 値のメソッドで、{{HTMLElement("a")}} 要素に name を付けたものに文字列を埋め込んだ文字列 (`<a name="...">str</a>`) を生成します。
 
 > [!NOTE]

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`linearVelocity`** は {{domxref("VRPose")}} インターフェイスの読み取り専用プロパティで、 現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の線速度ベクトルを表す配列を、メートル/秒の単位で返します。
 

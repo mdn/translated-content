@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{Deprecated_Header}}
-
 SVG では、要素内の空白文字を処理するために、XML の組み込み属性 **`xml:space`** に対応しています。要素内の子要素にも `xml:space` 属性を設定でき、その場合は親要素の属性の設定を上書きします。
 
 > [!NOTE]

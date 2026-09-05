@@ -3,7 +3,7 @@ title: Screen.top
 slug: Web/API/ScreenDetailed/top
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}{{Non-standard_Header}}
+{{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 現在の画面の上端からの距離をピクセル単位で返します。
 

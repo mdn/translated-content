@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{deprecated_header}}{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}
 
 **`register`** メソッドは、システムにプッシュ通知の新しい端点をリクエストするために使用します。
 

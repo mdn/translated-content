@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}{{deprecated_header}}
+{{ APIRef("Web Audio API") }}
 
 `setOrientation()` は {{ domxref("AudioListener") }} インターフェイスのメソッドで、聞き手の方向を定義します。
 
