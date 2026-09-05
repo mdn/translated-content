@@ -19,7 +19,11 @@ p:first-of-type {
 
 ## 구문
 
-{{csssyntax}}
+```css
+:first-of-type {
+  /* ... */
+}
+```
 
 ## 예제
 

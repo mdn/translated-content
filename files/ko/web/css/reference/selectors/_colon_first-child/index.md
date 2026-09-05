@@ -19,7 +19,11 @@ p:first-child {
 
 ## 구문
 
-{{csssyntax}}
+```css
+:first-child {
+  /* ... */
+}
+```
 
 ## 예제
 

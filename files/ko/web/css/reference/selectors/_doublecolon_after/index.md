@@ -18,7 +18,12 @@ a::after {
 
 ## 구문
 
-{{csssyntax}}
+```css-nolint
+::after {
+  content: /* value */;
+  /* properties */
+}
+```
 
 > [!NOTE]
 > [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)와 [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)를 구분하기 위해 CSS3부터`::after` 구문을 도입했습니다. 그러나 브라우저는 CSS2 구문인 `:after`도 허용합니다.
