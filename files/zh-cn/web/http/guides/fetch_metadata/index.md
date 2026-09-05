@@ -170,7 +170,7 @@ app.get("/admin", (req, res) => {
 
 注意代码中同时设置了 {{httpheader("Vary")}} 响应标头。这可以确保缓存系统只会将缓存的响应提供给具有相同 Fetch 元数据标头取值的请求（在上述例子中，涉及的 Fetch 元数据标头便是 `sec‑fetch‑site` 和 `sec‑fetch‑mode`）。
 
-更多资源隔离策略的示例代码，请参阅 [资源隔离策略](https://xsleaks.dev/docs/defenses/isolation-policies/resource-isolation/)。
+更多资源隔离策略的示例代码，请参阅[资源隔离策略](https://xsleaks.dev/docs/defenses/isolation-policies/resource-isolation/)。
 
 ## 参见
 
