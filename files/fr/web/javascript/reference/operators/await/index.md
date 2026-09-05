@@ -88,10 +88,10 @@ Ils peuvent également être rompus&nbsp;:
 async function f2() {
   const objetSemiPromesse = {
     then(_, rejeter) {
-      rejeter(new Error("rejetée !"));
+      rejeter(new Error("rompue !"));
     },
   };
-  await objetSemiPromesse; // Lève l'erreur Error : rejetée !
+  await objetSemiPromesse; // Lève l'erreur Error : rompue !
 }
 
 f2();
@@ -120,9 +120,9 @@ Si la promesse (`Promise`) est rompue, la valeur rompue est levée.
 ```js
 async function f4() {
   try {
-    const z = await Promise.reject(new Error("rejetée !"));
+    const z = await Promise.reject(new Error("rompue !"));
   } catch (e) {
-    console.error(e); // Erreur : rejetée !
+    console.error(e); // Erreur : rompue !
   }
 }
 
