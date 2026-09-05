@@ -2,7 +2,7 @@
 title: モバイルアクセシビリティのチェックリスト
 slug: Web/Accessibility/Guides/Mobile_accessibility_checklist
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 このドキュメントは、モバイルアプリ開発者向けのアクセシビリティ要件の簡潔なチェックリストを提供します。 それはより多くのパターンが生じるにつれて絶えず進化することを意図しています。
@@ -33,16 +33,16 @@ l10n:
 ## 同等のテキスト
 
 - アプリ内の全ての非厳密で提示的な非テキスト要素には、同等のテキストを提供しなければなりません。
-  - 必要に応じて `alt` や `title` を使用してください（良いガイドについては、 [Using the HTML title attribute](https://www.tpgi.com/using-the-html-title-attribute-updated/) （英語）に関する Steve Faulkner の投稿を参照してください）。
+  - 必要に応じて `alt` や `title` を使用してください（良いガイドについては、 [Using the HTML title attribute](https://vispero.com/resources/using-the-html-title-attribute-updated/)<sup>（英語）</sup>に関する Steve Faulkner の投稿を参照してください）。
   - 上記の属性が適用できない場合は、適切な [ARIA 状態とプロパティ](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)、例えば `aria-label`、`aria-labelledby`、`aria-describedby` などを使用してください。
 
 - テキストの画像は避ける必要があります。
 - ラベルとして表示されるテキスト（またはテキストの画像）を持つすべてのユーザーインターフェイス要素は、その要素のプログラム上の[名前](https://w3c.github.io/wcag/guidelines/22/#dfn-name)と同じテキストを利用できる必要があります。 [WCAG 2.1: Label in name.](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
 - すべてのフォームコントロールには、スクリーンリーダーのユーザーのために、ラベル（{{ htmlelement("label") }} 要素）を付ける必要があります。
 
-## 状態の取り扱い
+## ステートの取り扱い
 
-- ラジオボタンやチェックボックスのような標準コントロールは、オペレーティングシステムによって処理されます。 ただし、他のカスタムコントロールでは [ARIA 状態](https://w3c.github.io/aria/#state_prop_def)（英語）、例えば `aria-checked`、`aria-disabled`、`aria-selected`、`aria-expanded`、 `aria-press` などを介して状態の変更を提供する必要があります。
+- ラジオボタンやチェックボックスのような標準コントロールは、オペレーティングシステムによって処理されます。 ただし、他のカスタムコントロールでは [ARIA ステート](https://w3c.github.io/aria/#state_prop_def)<sup>（英語）</sup>、例えば `aria-checked`、`aria-disabled`、`aria-selected`、`aria-expanded`、 `aria-press` などを介して状態の変更を提供する必要があります。
 
 ## 向き
 
@@ -68,7 +68,7 @@ l10n:
   - 上記が失敗した場合、 up イベントは down イベントで開始されたすべての措置を元に戻すことができる必要があります。
   - 通常、実際の使い勝手をシミュレートしたり、リアルタイムのフィードバックを提供したりするために、 down イベントで措置を開始することが不可欠な場合は、上記のすべてに違反してもかまいません。例えば、ゲームコントロール、ピアノキーボード、仮想キーボードなどです。
 
-- タッチターゲットは、ユーザーが対話するのに十分な大きさでなければならない（有用なタッチターゲットサイズのガイドラインについては、[BBC モバイルアクセシビリティ・ガイドライン](https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/target-touch-size)（英語）を参照してください）。
+- タッチターゲットは、ユーザーが対話するのに十分な大きさでなければならない（有用なタッチターゲットサイズのガイドラインについては、[BBC モバイルアクセシビリティ・ガイドライン](https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/target-touch-size)<sup>（英語）</sup>を参照してください）。
 
 > [!NOTE]
-> [この文書のオリジナル版](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)（英語）は、[Yura Zenevich](https://yzen.github.io/) が執筆しました。
+> [この文書のオリジナル版](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)<sup>（英語）</sup>は、[Yura Zenevich](https://yzen.github.io/) が執筆しました。
