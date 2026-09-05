@@ -1,6 +1,7 @@
 ---
 title: Создание компонента элемента (item component)
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_item_component
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries
+original_slug: Learn_web_development/Core/Frameworks_libraries/Angular_item_component
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}

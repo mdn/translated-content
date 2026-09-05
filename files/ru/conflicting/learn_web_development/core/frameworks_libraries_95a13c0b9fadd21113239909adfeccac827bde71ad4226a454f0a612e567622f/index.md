@@ -1,6 +1,7 @@
 ---
 title: Начинаем приложение списка дел с использованием Angular
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_95a13c0b9fadd21113239909adfeccac827bde71ad4226a454f0a612e567622f
+original_slug: Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning
 ---
 
 {{LearnSidebar}}
