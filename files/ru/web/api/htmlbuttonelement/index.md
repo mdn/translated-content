@@ -7,7 +7,7 @@ slug: Web/API/HTMLButtonElement
 
 Интерфейс HTMLButtonElement предоставляет свойства и методы для управления элементами {{HTMLElement("button")}} (помимо обычного интерфейса {{domxref("HTMLElement")}}, он также доступен - по наследованию) .
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 
