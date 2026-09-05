@@ -61,7 +61,7 @@ const theFuture = previousMaxSafe + 2n;
 const multi = previousMaxSafe * 2n;
 // ↪ 18014398509481982n
 
-const subtr = multi – 10n;
+const subtr = multi - 10n;
 // ↪ 18014398509481972n
 
 const mod = multi % 10n;
@@ -70,8 +70,8 @@ const mod = multi % 10n;
 const bigN = 2n ** 54n;
 // ↪ 18014398509481984n
 
-bigN * -1n
-// ↪ –18014398509481984n
+bigN * -1n;
+// ↪ -18014398509481984n
 ```
 
 `/` 操作符对于整数的运算也没问题。可是因为这些变量是 `BigInt` 而不是 `BigDecimal` ，该操作符结果会向零取整，也就是说不会返回小数部分。
