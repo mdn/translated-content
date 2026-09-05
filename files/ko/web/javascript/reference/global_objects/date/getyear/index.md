@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("Date")}} 인스턴스의 `getYear()` 메서드는 현지 시간에 따라 이 날짜의 연도를 반환합니다. `getYear()`는 전체 연도("2000년도 문제")를 반환하지 않기 때문에 더 이상 사용되지 않으며 {{jsxref("Date/getFullYear", "getFullYear()")}} 메서드로 대체되었습니다.
 

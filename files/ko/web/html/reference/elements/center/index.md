@@ -4,8 +4,6 @@ slug: Web/HTML/Reference/Elements/center
 original_slug: Web/HTML/Element/center
 ---
 
-{{deprecated_header}}
-
 ## 개요
 
 이 HTML Center (`<center>`)요소는 또다른 블록요소을 포함하거나, 인라인요소(Inline)를 포함할 수 있는 [블록속성(block-level)](/ko/docs/Glossary/Block-level_content) 의 요소이다. 그리고 해당 \<center> 요소안에 포함된 전체요소는 \<center>의 내용안에 가운데 정렬이 된다. (통상적으로 {{HTMLElement("body")}}로 쓰임).

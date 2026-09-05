@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("Date")}} 인스턴스의 **`setYear()`** 메서드는 현지 시간에 따른 특정 날짜의 연도를 설정합니다.
 

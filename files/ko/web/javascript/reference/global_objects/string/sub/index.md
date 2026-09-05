@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`sub()`** 메서드는 이 문자열을 {{HTMLElement("sub")}} 요소(`<sub>str</sub>`)에 포함하는 문자열을 생성하여 이 문자열이 아래 첨자로 표시되도록 합니다.
 
