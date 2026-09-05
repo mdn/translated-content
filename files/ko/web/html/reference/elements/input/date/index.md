@@ -60,7 +60,7 @@ Firefox의 날짜 컨트롤입니다.
       </td>
       <td>
         YYYY-MM-DD 형식으로 날짜를 나타내거나, 빈
-        {{domxref("DOMString")}}.
+        {{jsxref("String")}}.
       </td>
     </tr>
     <tr>
@@ -99,7 +99,7 @@ Firefox의 날짜 컨트롤입니다.
 
 ## 값
 
-날짜 입력 칸의 값은 입력한 날짜를 나타내는 {{domxref("DOMString")}}입니다. 날짜는 유효한 날짜 문자열 문서에서 설명하듯, ISO8601을 따르는 서식을 취합니다.
+날짜 입력 칸의 값은 입력한 날짜를 나타내는 {{jsxref("String")}}입니다. 날짜는 유효한 날짜 문자열 문서에서 설명하듯, ISO8601을 따르는 서식을 취합니다.
 
 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성에 날짜를 지정해서 입력 칸의 기본값을 지정할 수 있습니다.
 

@@ -36,7 +36,7 @@ slug: Web/API/Blob
 - {{domxref("Blob.prototype.stream()")}}
   - : `Blob`의 콘텐츠를 읽을 수 있는 {{domxref("ReadableStream")}}을 반환합니다.
 - {{domxref("Blob.prototype.text()")}}
-  - : `Blob`의 전체 내용을 UTF-8 텍스트로 담은 {{domxref("USVString")}}으로 이행하는 프로미스를 반환합니다.
+  - : `Blob`의 전체 내용을 UTF-8 텍스트로 담은 {{jsxref("String")}}으로 이행하는 프로미스를 반환합니다.
 
 ## 예제
 

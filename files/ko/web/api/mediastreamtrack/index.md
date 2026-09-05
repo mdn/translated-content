@@ -19,13 +19,13 @@ slug: Web/API/MediaStreamTrack
     > 일반적인 "음소거" 기능은 `enabled`를 `false`로 바꿔서 구현할 수 있습니다. `muted` 속성은 기술적인 문제로 인해 미디어가 존재하지 않을 때를 나타냅니다.
 
 - {{domxref("MediaStreamTrack.id")}} {{readonlyInline}}
-  - : 트랙의 고유 식별자(GUID)를 담은 {{domxref("DOMString")}}을 반환합니다. 고유 식별자는 브라우저가 생성합니다.
+  - : 트랙의 고유 식별자(GUID)를 담은 {{jsxref("String")}}을 반환합니다. 고유 식별자는 브라우저가 생성합니다.
 - {{domxref("MediaStreamTrack.isolated")}} {{ReadOnlyInline}}
   - : 트랙이 **고립**된 경우 `true`인 속성입니다. 고립 상태란 해당 `MediaStreamTrack`을 소유한 문서에서 트랙에 접근할 수 없을 때를 의미합니다. {{domxref("MediaStreamTrack.peerIdentity", "peerIdentity")}} 속성이 설정된 경우, 그리고 트랙의 소스가 교차 출처에 위치하는 경우 발생합니다.
 - {{domxref("MediaStreamTrack.kind")}} {{readonlyInline}}
-  - : 오디오 트랙인 경우 `"audio"`, 비디오 트랙인 경우 `"video"`인 {{domxref("DOMString")}}을 반환합니다. 트랙이 소스에서 분리된 경우 변하지 않습니다.
+  - : 오디오 트랙인 경우 `"audio"`, 비디오 트랙인 경우 `"video"`인 {{jsxref("String")}}을 반환합니다. 트랙이 소스에서 분리된 경우 변하지 않습니다.
 - {{domxref("MediaStreamTrack.label")}} {{readonlyInline}}
-  - : 트랙 소스에 대해 사용자 에이전트가 할당한 식별자를 담은 {{domxref("DOMString")}}을 반환합니다. 식별자의 예시는 `"internal microphone"`입니다. 빈 문자열일 수 있으며, 연결된 소스가 없는 경우 계속 빈 문자열로 남아 있습니다. 트랙이 소스에서 분리되더라도 식별자는 변하지 않습니다.
+  - : 트랙 소스에 대해 사용자 에이전트가 할당한 식별자를 담은 {{jsxref("String")}}을 반환합니다. 식별자의 예시는 `"internal microphone"`입니다. 빈 문자열일 수 있으며, 연결된 소스가 없는 경우 계속 빈 문자열로 남아 있습니다. 트랙이 소스에서 분리되더라도 식별자는 변하지 않습니다.
 - {{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}
   - : 기술적인 문제로 인해 트랙이 미디어 데이터를 제공할 수 없음을 나타내는 불리언 값을 반환합니다.
     > [!NOTE]

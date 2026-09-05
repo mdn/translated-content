@@ -58,7 +58,7 @@ pc = new RTCPeerConnection([configuration]);
         - `"relay"`
           - : IP 주소가 중개 중인, 예컨대 STUN 또는 TURN 서버를 통해 전송 중인 ICE candidate만 고려합니다.
     - `peerIdentity` {{optional_inline}}
-      - : {{domxref("RTCPeerConnection")}}의 대상 피어 아이덴티티를 나타내는 {{domxref("DOMString")}}입니다. 기본 값은 `null`입니다. 이 값을 지정한 경우 `RTCPeerConnection`은 주어진 이름으로 인증에 성공해야 원격 피어로 연결을 시도합니다.
+      - : {{domxref("RTCPeerConnection")}}의 대상 피어 아이덴티티를 나타내는 {{jsxref("String")}}입니다. 기본 값은 `null`입니다. 이 값을 지정한 경우 `RTCPeerConnection`은 주어진 이름으로 인증에 성공해야 원격 피어로 연결을 시도합니다.
     - `rtcpMuxPolicy` {{optional_inline}}
       - : non-multiplexed RTCP를 지원하기 위해 ICE 수집 중 사용할 RTCP mux 정책입니다. 가능한 값은 다음과 같습니다.
         - `negotiate`

@@ -21,7 +21,7 @@ formData.has(name);
 ### Parameters
 
 - `name`
-  - : 테스트 하려는 키의 이름을 나타내는 {{domxref("USVString")}} 입니다.
+  - : 테스트 하려는 키의 이름을 나타내는 {{jsxref("String")}} 입니다.
 
 ### Returns
 
