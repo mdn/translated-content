@@ -1,9 +1,9 @@
 ---
-title: Firefox 154 release notes for developers (Stable)
-short-title: Firefox 154 (Stable)
+title: Firefox 154 release notes for developers
+short-title: Firefox 154
 slug: Mozilla/Firefox/Releases/154
 l10n:
-  sourceCommit: 2ad62b2e8cb4dbd6305f23fda33d800e218d8aef
+  sourceCommit: a31068ba2df086b7aba127b26d28b083537d5894
 ---
 
 このページでは、開発者に影響する Firefox 154 の変更点をまとめています。
@@ -32,6 +32,13 @@ Firefox 154 は、米国時間 [2026 年 8 月 18 日](https://whattrainisitnow.
 - {{jsxref("Iterator.prototype.chunks()")}} および {{jsxref("Iterator.prototype.windows()")}} メソッドをサポートしました。
   これらはどちらも、元のイテレーターからいくつかの要素を配列として作成する、反復可能な [イテレーターヘルパーオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator#イテレーターヘルパーオブジェクト) を返します。
   これらのメソッドの違いは、`chunks()` ヘルパーは要素を元のイテレーターから連続する配列のチャンクに分割するのに対して、`windows()` ヘルパーは元のイテレーターのスライディングウィンドウである配列を返します (それぞれの反復処理で、1 要素分前方へスライドした配列を作成します。すなわち、前の反復処理で取得した最初の要素を削除して、元のイテレーターから新しい要素を 1 つ取得します) ([Firefox bug 2047997](https://bugzil.la/2047997))。
+
+### HTTP
+
+- {{httpheader("No-Vary-Search")}} レスポンスヘッダーをサポートしました。
+  デフォルトでは、一部またはすべてのパラメーターに対しるレスポンスが変化しない場合、あるいはパラメーターの順序に依存しない場合でも、ブラウザーはクエリー文字列ごとにレスポンスを保存するために、別々の HTTP キャッシュ項目を作成します。
+  このヘッダーは順序が重要であるか、およびレスポンスの変化がある場合に、どのクエリーパラメーターがレスポンスの内容を変更するかをサーバーが指定できます。
+  ブラウザーは、リソースを重複してキャッシュあるいは取得することを回避できます ([Firefox bug 2038013](https://bugzil.la/2038013))。
 
 ### API
 
@@ -80,6 +87,10 @@ Firefox 154 は、米国時間 [2026 年 8 月 18 日](https://whattrainisitnow.
 - **`progress()` に基づく値の計算**: `layout.css.progress-function.enabled`
 
   {{cssxref("progress")}} CSS 関数をサポートしました。これによりユーザーは、最小値と最大値の間の値 (または進捗) に基づいて {{cssxref("number")}} を計算できます ([Firefox bug 2047015](https://bugzil.la/2047015))。
+
+- **`alpha()` による色の透過度の更新**: `layout.css.alpha-color-function.enabled`
+
+  {{cssxref("color_value/alpha", "alpha()")}} CSS 関数をサポートしました。これにより色を渡すことで、ほかの色の成分を変更せずにアルファ値 (透過度) が異なる色を取得できます ([Firefox bug 2047437](https://bugzil.la/2047437))。
 
 - **CSS 型付きオブジェクトモデル Level 1** (Nightly): `layout.css.typed-om.enabled`
 
