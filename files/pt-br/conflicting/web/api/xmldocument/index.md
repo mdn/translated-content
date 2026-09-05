@@ -3,7 +3,7 @@ title: Document.async
 slug: conflicting/Web/API/XMLDocument
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}} {{Non-standard_header}}
+{{APIRef("DOM")}} {{Non-standard_header}}
 
 `document.async` pode ser configurado para indicar se uma chamada {{domxref ("document.load")}} deve ser uma solicitação assíncrona ou síncrona. True é o valor padrão, indicando que os documentos devem ser carregados de forma assíncrona.
 
