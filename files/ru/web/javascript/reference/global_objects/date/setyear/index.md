@@ -3,7 +3,7 @@ title: Date.prototype.setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 ## Сводка
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 Интерфейс **`VRFrameData`** из [WebVR API](/ru/docs/Web/API/WebVR_API) предоставляет всю необходимую информацию для отображения одного кадра VR-сцены, создаётся с помощью {{domxref("VRDisplay.getFrameData()")}}.
 

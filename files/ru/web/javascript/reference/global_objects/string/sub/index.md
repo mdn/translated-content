@@ -3,7 +3,7 @@ title: String.prototype.sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 ## Сводка
 

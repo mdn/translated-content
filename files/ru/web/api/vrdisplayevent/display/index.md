@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 Доступное только для чтения свойство **`display`** интерфейса {{domxref ("VRDisplayEvent")}} возвращает объект {{domxref ("VRDisplay")}}, связанный с этим событием.
 

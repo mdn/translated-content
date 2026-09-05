@@ -3,7 +3,7 @@ title: Date.prototype.getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
 ---
 
-{{JSRef}} {{deprecated_header("")}}
+{{JSRef}}
 
 ## Сводка
 
