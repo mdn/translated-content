@@ -102,9 +102,9 @@ instance.#privateField === 42; // Syntax error
 
 **private static 메소드**는 public static 메소드처럼 인스턴스가 아닌 class 로부터 호출된다. 그리고 private static 필드처럼 class 선언문 내부에서만 접근 가능하다.
 
-```js
 private static 메소드는 generator, async 그리고 async generator 함수가 될 수 있다.
 
+```js
     class ClassWithPrivateStaticMethod {
       static #privateStaticMethod() {
         return 42
