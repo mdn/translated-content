@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`rule-visibility-items`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、空の領域に隣接する隙間に、行間罫、列間罫、段間罫の線分を描画するかどうかを定義します。
+**`rule-visibility-items`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、空の領域に隣接する隙間に、行間罫、列間罫、段間罫の区間を描画するかどうかを定義します。
 
 ## 構成要素のプロパティ
 
