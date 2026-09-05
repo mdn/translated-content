@@ -2,7 +2,7 @@
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 l10n:
-  sourceCommit: e142519e137b3a2ce99d5820c3f2049b6d83113d
+  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
 ---
 
 **`BigInt`** représente des valeurs entières qui sont [trop élevées](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) ou [trop faibles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) pour être représentées par le type {{Glossary("Primitive", "primitif")}} `number`.
@@ -17,7 +17,7 @@ const plusGrandEntier = 9007199254740991n;
 const grandNombre = BigInt(9007199254740991);
 // 9007199254740991n
 
-const grandNombreEnChaîne = BigInt("9007199254740991");
+const grandNombreEnChaine = BigInt("9007199254740991");
 // 9007199254740991n
 
 const grandeNombreHexa = BigInt("0x1fffffffffffff");
@@ -224,7 +224,7 @@ console.log(deserialise);
 ```
 
 > [!NOTE]
-> Bien qu'il soit possible de rendre le replacer de `JSON.stringify()` générique et de sérialiser correctement les valeurs `BigInt` pour tous les objets comme montré ci‑dessus, le reviver de `JSON.parse()` doit être utilisé avec prudence, car la sérialisation est _irréversible_&nbsp;: il n'est pas possible de distinguer entre un objet qui possède fortuitement une propriété appelée `$bigint` et un véritable `BigInt`.
+> Bien qu'il soit possible de rendre le replacer de `JSON.stringify()` générique et de sérialiser correctement les valeurs `BigInt` pour tous les objets comme montré ci‑dessus, la fonction de révocation de `JSON.parse()` doit être utilisée avec prudence, car la sérialisation est _irréversible_&nbsp;: il n'est pas possible de distinguer entre un objet qui possède fortuitement une propriété appelée `$bigint` et un véritable `BigInt`.
 >
 > De plus, l'exemple ci‑dessus crée un objet entier lors du remplacement et de la reconstitution, ce qui peut avoir des implications en matière de performance ou de stockage pour des objets plus volumineux contenant de nombreux `BigInt`. Si vous connaissez la structure de la charge utile, il peut être préférable de simplement les sérialiser sous forme de chaînes de caractères et de les reconstituer en fonction du nom de la clé de propriété.
 
@@ -294,7 +294,7 @@ nthPrime(20n);
 ```
 
 > [!NOTE]
-> L'implémentation de `isPrime()` est uniquement destinée à la démonstration. Pour une application réelle, vous voulez utiliser un algorithme fortement mémorisé tel que le [Crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) pour éviter les calculs répétés.
+> L'implémentation de `isPrime()` est uniquement destinée à la démonstration. Pour une application réelle, vous voulez utiliser un algorithme fortement {{Glossary("Memoization", "mémoïsé")}} tel que le [Crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) pour éviter les calculs répétés.
 
 ## Spécifications
 

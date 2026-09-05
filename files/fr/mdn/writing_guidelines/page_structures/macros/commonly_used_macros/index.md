@@ -2,7 +2,7 @@
 title: Macros couramment utilisées
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 l10n:
-  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 Cette page liste de nombreuses macros générales que le système de compilation de MDN, [rari <sup>(angl.)</sup>](https://github.com/mdn/rari), fournit pour être utilisées sur MDN.
@@ -233,7 +233,6 @@ Ils peuvent aussi servir à marquer une section d'une page.
 - [`Non-standard_Header` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)&nbsp;: `\{{Non-standard_Header}}` {{Non-standard_Header}}
 - [`SeeCompatTable` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) utilisé sur les pages documentant des [fonctionnalités expérimentales](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#expérimental).
   Exemple&nbsp;: `\{{SeeCompatTable}}` {{SeeCompatTable}}
-- [`Deprecated_Header` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)&nbsp;: `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`SecureContext_Header` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs).
   À utiliser sur les pages principales comme les pages d'interface, d'API ou d'entrée d'API (ex.&nbsp;: `navigator.xyz`), mais généralement pas sur les sous-pages de méthodes ou propriétés.
   Exemple&nbsp;: `\{{SecureContext_Header}}` {{SecureContext_Header}}

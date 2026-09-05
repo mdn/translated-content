@@ -1,5 +1,5 @@
 ---
-title: "KeyframeEffect : la propriété pseudoElement"
+title: "KeyframeEffect : propriété pseudoElement"
 short-title: pseudoElement
 slug: Web/API/KeyframeEffect/pseudoElement
 l10n:

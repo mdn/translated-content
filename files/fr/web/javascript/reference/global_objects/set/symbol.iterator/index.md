@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator
 original_slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 ---
 
-{{JSRef}}
-
 La valeur initiale de la propriété **`@@iterator`** est le même objet fonction que la valeur initiale de la propriété {{jsxref("Set.prototype.values()", "Set.prototype.values")}}.
 
 {{InteractiveExample("JavaScript Demo: Set.prototype[Symbol.iterator]()")}}

@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feDropShadow
 original_slug: Web/SVG/Element/feDropShadow
 ---
 
-{{SVGRef}}
-
 La primitive de filtre **`<feDropShadow>`** crée une ombre portée pour l'image en entrée. Il s'agit d'un raccourci, le résultat du filtre `<feDropShadow>` revient à appliquer les primitives suivantes:
 
 ```xml

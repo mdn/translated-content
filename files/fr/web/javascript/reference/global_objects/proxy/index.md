@@ -3,8 +3,6 @@ title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
 
-{{JSRef}}
-
 Un objet **Proxy** permet de créer un intermédiaire pour un autre objet et qui peut intercepter et redéfinir certaines opérations fondamentales pour lui.
 
 ## Description

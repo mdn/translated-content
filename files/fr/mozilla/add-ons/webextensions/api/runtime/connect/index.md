@@ -3,8 +3,6 @@ title: runtime.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connect
 ---
 
-{{AddonSidebar}}
-
 Créer une connexion pour plusieurs cas d'utilisation pout votre extension.
 
 Vous pouvez utiliser cette facilité dans les situations suivantes:

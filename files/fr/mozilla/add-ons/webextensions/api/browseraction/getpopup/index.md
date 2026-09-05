@@ -3,8 +3,6 @@ title: browserAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getPopup
 ---
 
-{{AddonSidebar}}
-
 Obtient le document HTML défini comme la popup pour cette action du navigateur.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

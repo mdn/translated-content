@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/animateMotion
 original_slug: Web/SVG/Element/animateMotion
 ---
 
-{{SVGRef}}
-
 L'élément **`<animateMotion>`** permet d'animer un élément le long d'un chemin donné.
 
 ## Contexte d'utilisation

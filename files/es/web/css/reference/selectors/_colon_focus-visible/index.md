@@ -12,7 +12,11 @@ Nótese que Firefox soporta una funcionalidad similar a través de una pseudo-cl
 
 ## Sintaxis
 
-{{CSSSyntax}}
+```css
+:focus-visible {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

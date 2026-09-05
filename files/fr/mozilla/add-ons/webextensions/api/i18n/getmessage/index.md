@@ -3,8 +3,6 @@ title: i18n.getMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 ---
 
-{{AddonSidebar}}
-
 Obtient la chaîne localisée pour le message spécifié.
 
 ## Syntaxe

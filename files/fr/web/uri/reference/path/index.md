@@ -3,10 +3,10 @@ title: Chemin d'une URI
 short-title: Chemin
 slug: Web/URI/Reference/Path
 l10n:
-  sourceCommit: ab279632b84d201ae9ddd3db3981bf0b01573371
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-Le **chemin** d'une URI est la section qui vient après l'[autorité](/fr/docs/Web/URI/Reference/Authority).
+Le **chemin** d'une URI est la section qui vient après [l'autorité](/fr/docs/Web/URI/Reference/Authority).
 Il contient des données, généralement organisées de façon hiérarchique, pour identifier une ressource dans le cadre du [schéma](/fr/docs/Web/URI/Reference/Schemes) et de l'autorité de nommage de l'URI.
 
 ## Syntaxe
@@ -16,7 +16,7 @@ http://example.com:80<path>
 urn:<path>
 ```
 
-Le chemin peut contenir presque tous les caractères, sauf `?` et `#` (qui débutent respectivement la [requête](/fr/docs/Web/URI/Reference/Query) et le [fragment](/fr/docs/Web/URI/Reference/Fragment)), ainsi que d'autres caractères réservés par le schéma URI. Certains schémas (appelés _schémas hiérarchiques_) analysent le chemin comme une séquence de segments séparés par des barres obliques (`/`)&nbsp;; d'autres le considèrent comme une chaîne opaque unique.
+Le chemin peut contenir presque tous les caractères, sauf `?` et `#` (qui débutent respectivement la [requête](/fr/docs/Web/URI/Reference/Query) et le [fragment](/fr/docs/Web/URI/Reference/Fragment)), ainsi que d'autres caractères réservés par le schéma URI. Certains schémas (appelés _schémas hiérarchiques_) analysent le chemin comme une séquence de segments séparés par des barres obliques (`/`)&nbsp;; d'autres le considèrent comme une chaîne de caractères opaque unique.
 
 ## Description
 
@@ -28,7 +28,7 @@ urn:nbn:de:bvb:19-epub-5359-3
 https://example.com:80/images/animated/ayse.gif
 ```
 
-`nbn:de:bvb:19-epub-5359-3` est le chemin de l'[URN](/fr/docs/Web/URI/Reference/Schemes/urn). `/images/animated/ayse.gif` est le chemin de l'URI `https`.
+`nbn:de:bvb:19-epub-5359-3` est le chemin de [l'URN](/fr/docs/Web/URI/Reference/Schemes/urn). `/images/animated/ayse.gif` est le chemin de l'URI `https`.
 
 Chaque URI possède un composant chemin, ce qui signifie que les chemins dans les exemples suivants sont une barre oblique (`/`) dans la première URL et un composant chemin vide dans la seconde&nbsp;:
 

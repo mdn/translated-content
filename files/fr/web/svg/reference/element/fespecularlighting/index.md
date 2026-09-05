@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feSpecularLighting
 original_slug: Web/SVG/Element/feSpecularLighting
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feSpecularLighting>`** éclaire une image en utilisant son canal alpha en tant que relief. L'image résultante est une image RGBA qui dépend de la couleur de la lumière, de sa position et du relief de l'image en entrée. Le calcul de l'éclairage se fait suivant le [modèle d'illumination de Phong](https://fr.wikipedia.org/wiki/Ombrage_de_Phong).
 
 La lumière crée par cette primitive de filtre peut être combinée avec une image de texture à l'aide de l'opérateur `arithmetic` de la primitive de filtre {{SVGElement("feComposite")}}. De multiples sources lumineuses peuvent être simulées en ajoutant plusieurs éléments à la texture.

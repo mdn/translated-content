@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 3a22bb59de072d368ad47cf36f8c385f1f3494fe
 ---
 
-{{CSSRef}}
-
 [Le module de spécification CSS pour les dispositions en grilles (<i lang="en">Grid Layout</i> en anglais)](/fr/docs/Web/CSS/Guides/Grid_layout) ajoute un système de grille en deux dimensions à CSS. Les grilles peuvent être utilisées pour agencer des pages entières ou de petits éléments d'interface. Cet article présente ce module de grille, et introduit la terminologie de la spécification de niveau 1 des grilles CSS. Les fonctionnalités évoquées dans cet aperçu seront expliquées plus en détails dans le reste du guide.
 
 ## Qu'est-ce qu'une grille&nbsp;?

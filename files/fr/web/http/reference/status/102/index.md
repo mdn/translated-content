@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-{{Deprecated_Header}}
-
 Le code de statut de [réponse informative](/fr/docs/Web/HTTP/Reference/Status#réponses_informatives) HTTP **`102 Processing`** indique au client qu'une requête complète a été reçue et que le serveur est en train de la traiter.
 Ce code de statut n'est envoyé que si le serveur prévoit que la requête prendra un temps significatif.
 

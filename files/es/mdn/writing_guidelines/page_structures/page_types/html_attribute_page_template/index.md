@@ -71,7 +71,7 @@ Ten en cuenta que la mayoría de los atributos específicos no necesitan artícu
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar._
 >
-> {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+> {{SeeCompatTable}}{{Non-standard_Header}}
 >
 > Comienza presentando al lector el atributo y su uso.
 > Por ejemplo: El **`nombre-del-atributo`** [atributo global](/es/docs/Web/HTML/Reference/Global_attributes) describe o manipula [insertar descripción de uso].

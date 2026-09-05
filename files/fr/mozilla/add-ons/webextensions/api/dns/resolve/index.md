@@ -3,8 +3,6 @@ title: dns.resolve()
 slug: Mozilla/Add-ons/WebExtensions/API/dns/resolve
 ---
 
-{{AddonSidebar}}
-
 Résout le nom d'hôte donné en un enregistrement DNS.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

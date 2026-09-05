@@ -5,8 +5,6 @@ slug: Web/JavaScript/Reference/Global_Objects/String/strike
 
 {{JSRef}}
 
-{{deprecated_header}}
-
 ## Resumen
 
 Causa que una cadena se muestre como texto tachado, como si estuviese dentro de una etiqueta {{HTMLElement("strike")}}.

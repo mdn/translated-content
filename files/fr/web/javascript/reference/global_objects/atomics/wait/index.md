@@ -3,7 +3,7 @@ title: "Atomics : méthode statique wait()"
 short-title: wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 l10n:
-  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
 La méthode statique **`Atomics.wait()`** vérifie qu'un emplacement de mémoire partagée contient une valeur donnée et, si c'est le cas, se met en sommeil en attendant une notification de réveil ou l'expiration d'un délai. Elle retourne une chaîne de caractères valant `"not-equal"` si l'emplacement mémoire ne correspond pas à la valeur donnée, `"ok"` si elle est réveillée par {{JSxRef("Atomics.notify()")}}, ou `"timed-out"` si le délai expire.
@@ -63,7 +63,7 @@ const int32 = new Int32Array(sab);
 
 Un processus de lecture est en sommeil et attend l'emplacement 0 parce que la `value` fournie correspond à ce qui est stocké à un `index` donné.
 Le processus de lecture ne reprend pas l'exécution tant que le processus d'écriture n'a pas appelé `Atomics.notify()` sur la position 0 du `typedArray` fourni.
-Remarquez que si, après le réveil, la valeur de l'emplacement 0 n'a pas été modifiée par le processus d'écriture, le processus de lecture **ne** se remettra **pas** en sommeil, mais continuera son exécution.
+Remarquez que si, après le réveil, la valeur de l'emplacement 0 n'a pas été modifiée par le processus d'écriture, le processus de lecture **ne** se remet **pas** en sommeil, mais continue son exécution.
 
 ```js
 Atomics.wait(int32, 0, 0);

@@ -3,7 +3,7 @@ title: Storage.key()
 slug: Web/API/Storage/key
 ---
 
-{{APIRef()}}
+{{APIRef}}
 
 La méthode `key()` de l'interface {{domxref("Storage")}} prend un nombre n en argument et retourne la n-ième clé contenue dans storage. L'ordre des clés étant définie par le navigateur, il est recommandé de ne pas s'y référer .
 

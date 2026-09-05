@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/stroke-opacity
 original_slug: Web/SVG/Attribute/stroke-opacity
 ---
 
-{{SVGRef}}
-
 L'attribut **`stroke-opacity`** définit l'opacité du contour (_couleur_, _dégradé_, _motif_, etc) appliqué à une forme SVG.
 
 > [!NOTE]

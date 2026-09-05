@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 ---
 
-{{JSRef}}
-
 La méthode **`[@@toPrimitive]()`** permet de convertir un objet symbole en une valeur primitive.
 
 ## Syntaxe

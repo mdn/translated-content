@@ -20,7 +20,11 @@ simple-custom:defined {
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:defined {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

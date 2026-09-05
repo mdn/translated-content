@@ -3,8 +3,6 @@ title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
 ---
 
-{{JSRef}}
-
 Un objet **`WeakRef`** permet de tenir une référence faible vers un autre objet, sans empêcher que ce dernier puisse être récupéré par le ramasse-miettes.
 
 ## Description

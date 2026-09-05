@@ -3,8 +3,6 @@ title: Ajouter un bouton à la barre d'outils
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 ---
 
-{{AddonSidebar}}
-
 Les boutons de la barre d'outils sont l'un des principaux composants UI disponibles aux WebExtensions. Les boutons de la barre d'outils sont présents dans la barre d'outils principale du navigateur et contiennent une icône. Lorsque l'utilisateur clique sur l'icône, une des deux choses peut arriver&nbsp;:
 
 - Si vous avez spécifié une fenêtre contextuelle pour l'icône, la fenêtre contextuelle s'affiche. Les fenêtres contextuelles sont des boîtes de dialogue spécifiées à l'aide de HTML, CSS et JavaScript.

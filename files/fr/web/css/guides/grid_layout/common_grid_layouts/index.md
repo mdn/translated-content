@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 72304bf90ccd530ff9dc9e5ff12397b2600248ed
 ---
 
-{{CSSRef}}
-
 Pour clôturer ces différents guides, nous allons maintenant voir différentes dispositions sur lesquelles nous appliquerons des techniques avec les grilles CSS. Nous prendrons un exemple qui utilise [les zones nommées d'une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas), un système de grille flexible avec 12 colonnes, et aussi une liste de produits avec un placement automatique. Comme nous le verrons, il existe plusieurs méthodes pour obtenir chaque résultat. À vous de choisir la méthode qui vous paraît la plus pertinente et utile pour les problèmes que vous avez à résoudre et les dispositions que vous devez implémenter.
 
 ## Une disposition adaptative avec une à trois colonnes en utilisant `grid-template-areas`

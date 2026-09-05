@@ -3,8 +3,6 @@ title: find.highlightResults()
 slug: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
 ---
 
-{{AddonSidebar}}
-
 Souligne les résultats d'un précédent appel à {{WebExtAPIRef("find.find()")}}.
 
 Lorsqu'une extension appelle `find()`, les correspondances ne sont pas automatiquement mises en surbrillance, mais elles sont stockées par le navigateur. Appelez `highlightResults()` pour les mettre en surbrillance.

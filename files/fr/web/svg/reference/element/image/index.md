@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/image
 original_slug: Web/SVG/Element/image
 ---
 
-{{SVGRef}}
-
 L'élément Image SVG (\<image>) permet d'inclure une image matricielle dans un document SVG.
 
 ## Contexte d'Utilisation

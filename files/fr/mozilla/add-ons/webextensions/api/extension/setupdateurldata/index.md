@@ -3,8 +3,6 @@ title: extension.setUpdateUrlData()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/setUpdateUrlData
 ---
 
-{{AddonSidebar}}
-
 Définit les paramètres de l'URL de mise à jour de l'extension. Cette valeur est ignorée pour les extensions hébergées dans le magasin du fournisseur du navigateur.
 
 ## Syntaxe
