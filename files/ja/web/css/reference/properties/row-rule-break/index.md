@@ -115,7 +115,7 @@ row-rule-break: unset;
 
 グリッドコンテナーでは、デフォルトで、行間罫の区間は、目に見える「十字」の交差部分を通って連続します。`row-rule-break: intersection` を設定すると、本来なら交差するはずの区間が、列のギャップごとに強制的に区切られるようになります。
 
-```html hidden
+```html-nolint hidden
 <h1>グリッドでのデフォルトの罫線分割</h1>
 <div class="grid">
   <div></div>
@@ -173,7 +173,7 @@ h2 {
 
 フレックスボックスでは、横書きにおいて `flex-direction` が `row` または `row-reverse` の場合、行間罫が連続し、列の区間は行のギャップの端で始まったり終わったりします。`flex-direction` が `column` または `column-reverse` の場合、列間罫が連続し、行の区間は列のギャップの端で始まったり終わったりします。
 
-```html hidden
+```html-nolint hidden
 <h1>フレックスボックスでのデフォルトの罫線分割</h1>
 <article>
   <section>
