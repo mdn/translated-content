@@ -74,4 +74,4 @@ usedOptions.numeric; // false
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Collator")}}
+- L'objet natif {{JSxRef("Intl.Collator")}}

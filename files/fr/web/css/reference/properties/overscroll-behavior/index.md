@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`overscroll-behavior`** définit le comportement d'un navigateur lorsqu'il atteint la limite d'une zone de défilement.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`overscroll-behavior`** définit le comportement d'un navigateur lorsqu'il atteint la limite d'une zone de défilement.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: overscroll-behavior")}}
 

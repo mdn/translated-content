@@ -3,8 +3,6 @@ title: browserSettings.useDocumentFonts
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/useDocumentFonts
 ---
 
-{{AddonSidebar}}
-
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jacente est un booléen.
 
 Par défaut, bien sûr, les pages Web peuvent spécifier les polices qu'ils veulent utiliser les propriétés CSS comme [`font-family`](/fr/docs/Web/CSS/Reference/Properties/font-family). Ce paramètre permet à une extension d'indiquer à Firefox d'ignorer les polices spécifiées par la page et d'utiliser uniquement les polices système.

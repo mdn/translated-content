@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species
 original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 ---
 
-{{JSRef}}
-
 La propriété accesseur **`RegExp[@@species]`** renvoie le constructeur `RegExp`.
 
 {{InteractiveExample("JavaScript Demo: RegExp[Symbol.species]")}}

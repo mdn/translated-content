@@ -84,7 +84,7 @@ La propriété `padding-right` est définie comme une seule valeur choisie dans 
 - {{CSSxRef("&lt;length&gt;")}}
   - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur doit être positive.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille du remplissage exprimée en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur doit être positive.
+  - : La taille du remplissage exprimée en pourcentage, relative à la taille en incise (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur doit être positive.
 
 ## Définition formelle
 

@@ -3,13 +3,11 @@ title: Propriété CSS `clip`
 short-title: clip
 slug: Web/CSS/Reference/Properties/clip
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
-{{Deprecated_Header}}
-
 > [!WARNING]
-> Cette propriété est dépréciée, on utilisera {{CSSxRef("clip-path")}} à la place.
+> Cette propriété est dépréciée, on utilise {{CSSxRef("clip-path")}} à la place.
 
 La propriété [CSS](/fr/docs/Web/CSS) **`clip`** définit la portion visible d'un élément. La propriété `clip` ne s'applique qu'aux éléments positionnés absolument — c'est-à-dire les éléments avec {{CSSxRef("position","position:absolute")}} ou {{CSSxRef("position","position:fixed")}}.
 
@@ -33,7 +31,7 @@ clip: unset;
 ### Valeurs
 
 - `rect()`
-  - : Un rectangle défini à l'aide d'une fonction `rect()` de la forme `rect(<top>, <right>, <bottom>, <left>)`. Les valeurs `<top>` et `<bottom>` sont des décalages par rapport au \_bord supérieur de la boîte, tandis que `<right>` et `<left>` sont des décalages par rapport au \_bord gauche de la boîte - c'est-à-dire l'étendue de la marge de remplissage de boîte.
+  - : Un rectangle défini à l'aide d'une fonction `rect()` de la forme `rect(<top>, <right>, <bottom>, <left>)`. Les valeurs `<top>` et `<bottom>` sont des décalages par rapport au _bord supérieur de la boîte_, tandis que `<right>` et `<left>` sont des décalages par rapport au _bord gauche de la boîte_ — c'est-à-dire l'étendue de la marge de remplissage de boîte.
 
     Les valeurs `<top>`, `<right>`, `<bottom>` et `<left>` peuvent être soit une longueur ({{CSSxRef("&lt;length&gt;")}}) soit `auto`. Si la valeur d'un côté est `auto`, l'élément est rogné sur le _bord intérieur de la bordure_ de ce côté.
 

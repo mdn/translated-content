@@ -3,10 +3,10 @@ title: Propriété CSS `-moz-float-edge`
 short-title: -moz-float-edge
 slug: Web/CSS/Reference/Properties/-moz-float-edge
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 La propriété [CSS](/fr/docs/Web/CSS) non standard **`-moz-float-edge`** définit si les propriétés de hauteur et de larguer d'un élément incluent la marge, la bordure et/ou le remplissage (_padding_).
 
@@ -75,4 +75,4 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [Boggue Firefox 432891 <sup>(angl.)</sup>](https://bugzil.la/432891)
+- [Le bogue Firefox 432891 <sup>(angl.)</sup>](https://bugzil.la/432891)

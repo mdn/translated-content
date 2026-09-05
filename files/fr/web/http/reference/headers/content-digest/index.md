@@ -3,7 +3,7 @@ title: En-tête Content-Digest
 short-title: Content-Digest
 slug: Web/HTTP/Reference/Headers/Content-Digest
 l10n:
-  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
+  sourceCommit: e5a63f8d002dcac9654be79bd03bfda262dd4d89
 ---
 
 L'en-tête HTTP **`Content-Digest`** {{Glossary("request header", "en-tête de requête")}} et {{Glossary("response header", "en-tête de réponse")}} fournit un {{Glossary("hash function", "digest")}} calculé à l'aide d'un algorithme de hachage appliqué au contenu du message.
@@ -165,7 +165,7 @@ Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 ```
 
 Au lieu d'omettre `Content-Digest` lorsqu'il n'y a pas de contenu, un serveur peut le calculer explicitement sur une chaîne de caractères vide.
-Selon la [Section 6.3 de la RFC 9530 <sup>(angl.)</sup>](https://www.rfc-editor.org/rfc/rfc9530.html#section-6.3), cela permet à un destinataire, en particulier lorsque le condensé est couvert par une signature de message HTTP, de vérifier qu'aucun contenu n'a été ajouté ou supprimé, plutôt que de se contenter de constater que l'en-tête a été omis&nbsp;:
+Selon la [Section 6.3 de la RFC 9530 <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc9530/#section-6.3), cela permet à un destinataire, en particulier lorsque le condensé est couvert par une signature de message HTTP, de vérifier qu'aucun contenu n'a été ajouté ou supprimé, plutôt que de se contenter de constater que l'en-tête a été omis&nbsp;:
 
 ```http
 HTTP/1.1 200 OK

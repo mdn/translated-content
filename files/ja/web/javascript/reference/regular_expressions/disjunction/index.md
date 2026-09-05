@@ -2,10 +2,8 @@
 title: "論理和: |"
 slug: Web/JavaScript/Reference/Regular_expressions/Disjunction
 l10n:
-  sourceCommit: 0ae85e77a55f1c32bb831b611a497dab7f6a03c7
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{JsSidebar}}
 
 **論理和**は、複数の選択肢を指定します。いずれかの選択肢が入力に一致すると、その論理和全体が一致することになります。
 
@@ -72,7 +70,7 @@ isImage("image.pdf"); // false
 
 ## 関連情報
 
-- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [修飾子: `*`, `+`, `?`, `{n}`, `{n,}`, `{n,m}`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)
 - [文字クラス: `[...]`, `[^...]`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)

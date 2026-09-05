@@ -46,5 +46,5 @@ console.log(duration.total("milliseconds"));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Now")}}
-- L'objet {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.Now")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}

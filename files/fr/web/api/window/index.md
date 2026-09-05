@@ -2,10 +2,10 @@
 title: Window
 slug: Web/API/Window
 l10n:
-  sourceCommit: 9cf3002bd29376c15d49df6fab2e6a264285abf6
+  sourceCommit: 6b9bb948a570848254e2023fda959cf86721f8e4
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 L'interface **`Window`** représente une fenêtre contenant un document {{Glossary("DOM")}}&nbsp;; la propriété `document` pointe vers le [document DOM](/fr/docs/Web/API/Document) chargé dans cette fenêtre.
 
@@ -49,7 +49,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
   - : Retourne une référence vers le document contenu dans la fenêtre.
 - {{DOMxRef("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Retourne une référence vers la fenêtre [Picture-in-Picture du document](/fr/docs/Web/API/Document_Picture-in-Picture_API) pour le contexte du document courant.
-- {{DOMxRef("Window.fence")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("Window.fence")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Retourne une instance de l'objet {{DOMxRef("Fence")}} pour le contexte du document courant. Disponible uniquement pour les documents intégrés dans une {{HTMLElement("fencedframe")}}.
 - {{DOMxRef("Window.frameElement")}} {{ReadOnlyInline}}
   - : Retourne l'élément dans lequel la fenêtre est intégrée, ou null si la fenêtre n'est pas intégrée.
@@ -114,9 +114,9 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 - {{DOMxRef("Window.screen")}} {{ReadOnlyInline}}
   - : Retourne une référence à l'objet screen associé à la fenêtre.
 - {{DOMxRef("Window.screenX")}} and {{DOMxRef("Window.screenLeft")}} {{ReadOnlyInline}}
-  - : Les deux propriétés Retournent la distance horizontale entre le bord gauche de la zone d'affichage (<i lang="en">viewport</i> en anglais) du navigateur de l'utilisateur·ice et le bord gauche de l'écran.
+  - : Les deux propriétés Retournent la distance horizontale entre le bord gauche de la fenêtre du navigateur de l'utilisateur·ice et le bord gauche de l'écran.
 - {{DOMxRef("Window.screenY")}} and {{DOMxRef("Window.screenTop")}} {{ReadOnlyInline}}
-  - : Les deux propriétés Retournent la distance verticale entre le bord supérieur de la zone d'affichage (<i lang="en">viewport</i> en anglais) du navigateur de l'utilisateur·ice et le bord supérieur de l'écran.
+  - : Les deux propriétés Retournent la distance verticale entre le bord supérieur de la fenêtre du navigateur de l'utilisateur·ice et le bord supérieur de l'écran.
 - {{DOMxRef("Window.scrollbars")}} {{ReadOnlyInline}}
   - : Retourne l'objet scrollbars.
 - {{DOMxRef("Window.scrollMaxX")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
@@ -162,7 +162,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 ### Propriétés dépréciées
 
 - {{DOMxRef("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Retourne l'**évènement courant**, c'est-à-dire l'évènement actuellement traité par le contexte du code JavaScript, ou `undefined` si aucun évènement n'est en cours de traitement. Il est recommandé d'utiliser l'objet {{DOMxRef("Event")}} passé directement aux gestionnaires d'évènements.
+  - : Retourne **l'évènement courant**, c'est-à-dire l'évènement actuellement traité par le contexte du code JavaScript, ou `undefined` si aucun évènement n'est en cours de traitement. Il est recommandé d'utiliser l'objet {{DOMxRef("Event")}} passé directement aux gestionnaires d'évènements.
 - {{DOMxRef("Window.external")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Retourne un objet avec des fonctions permettant d'ajouter des fournisseurs de recherche externes au navigateur.
 - {{DOMxRef("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
@@ -175,13 +175,13 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("Window.atob()")}}
-  - : Décode une chaîne de données encodée en base 64.
+  - : Décode une chaîne de caractères de données encodée en base 64.
 - {{DOMxRef("Window.alert()")}}
   - : Affiche une boîte de dialogue d'alerte.
 - {{DOMxRef("Window.blur()")}} {{Deprecated_Inline}}
   - : Retire la sélection de la fenêtre.
 - {{DOMxRef("Window.btoa()")}}
-  - : Crée une chaîne ASCII encodée en base 64 à partir d'une chaîne de données binaires.
+  - : Crée une chaîne de caractères ASCII encodée en base 64 à partir d'une chaîne de caractères de données binaires.
 - {{DOMxRef("Window.cancelAnimationFrame()")}}
   - : Permet d'annuler un rappel précédemment planifié avec {{DOMxRef("Window.requestAnimationFrame")}}.
 - {{DOMxRef("Window.cancelIdleCallback()")}}
@@ -215,7 +215,7 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window.getSelection()")}}
   - : Retourne l'objet de sélection représentant l'élément ou les éléments sélectionnés.
 - {{DOMxRef("Window.matchMedia()")}}
-  - : Retourne un objet {{DOMxRef("MediaQueryList")}} représentant la chaîne de requête média définie.
+  - : Retourne un objet {{DOMxRef("MediaQueryList")}} représentant la chaîne de caractères de requête média définie.
 - {{DOMxRef("Window.moveBy()")}}
   - : Déplace la fenêtre courante d'une certaine distance.
 - {{DOMxRef("Window.moveTo()")}}
@@ -223,7 +223,7 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window.open()")}}
   - : Ouvre une nouvelle fenêtre.
 - {{DOMxRef("Window.postMessage()")}}
-  - : Permet à une fenêtre d'envoyer de façon sécurisée une chaîne de données à une autre fenêtre, même si elle n'est pas du même domaine.
+  - : Permet à une fenêtre d'envoyer de façon sécurisée une chaîne de caractères de données à une autre fenêtre, même si elle n'est pas du même domaine.
 - {{DOMxRef("Window.print()")}}
   - : Ouvre la boîte de dialogue d'impression pour imprimer le document courant.
 - {{DOMxRef("Window.prompt()")}}

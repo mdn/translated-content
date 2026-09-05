@@ -7,8 +7,6 @@ l10n:
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-{{PWASidebar}}
-
 Dans l'article précédent, nous avons vu comment [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) fonctionne en mode hors connexion grâce à son [<i lang="en">service worker</i>](/fr/docs/Web/API/Service_Worker_API), mais nous pouvons aller encore plus loin et permettre aux utilisatrices et utilisateurs d'installer l'application web sur leur appareil. L'application web installée peut ensuite être lancée comme s'il s'agissait d'une application native du système d'exploitation. Cet article explique comment y parvenir à l'aide du manifeste de l'application web.
 
 Ces technologies permettent à l'application d'être directement lancée depuis l'écran d'accueil, la barre de tâche, ou le dock de l'appareil, plutôt que d'ouvrir le navigateur, puis d'accéder au site en utilisant un marque-page ou en tapant l'URL. Votre application web peut être placée à côté d'applications natives, ce qui en facilite l'accès. De plus, vous pouvez spécifier que l'application soit lancée en mode plein écran ou autonome, supprimant ainsi l'interface utilisateur du navigateur par défaut qui serait autrement présente, créant ainsi une sensation encore plus transparente et native.

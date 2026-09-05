@@ -77,5 +77,5 @@ console.log(nf.formatRange(2.9, 3.1)); // "~3 €"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.NumberFormat")}}
+- L'objet natif {{JSxRef("Intl.NumberFormat")}}
 - La méthode {{JSxRef("Number.prototype.toLocaleString()")}}

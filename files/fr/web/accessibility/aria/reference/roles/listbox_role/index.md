@@ -3,8 +3,10 @@ title: "ARIA : rôle listbox"
 short-title: listbox
 slug: Web/Accessibility/ARIA/Reference/Roles/listbox_role
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
+
+<!-- cSpell:ignore labelled -->
 
 Le rôle `listbox` est utilisé pour les listes à partir desquelles un·e utilisateur·ice peut sélectionner un ou plusieurs éléments qui sont statiques et, contrairement aux éléments HTML {{HTMLElement("select")}}, peuvent contenir des images.
 
@@ -18,7 +20,7 @@ Les éléments avec le rôle `listbox` ont une valeur implicite de [`aria-orient
 
 Lorsqu'une liste est sélectionnée, le premier élément de la liste est sélectionné si rien d'autre ne l'est déjà. Les flèches haut/bas naviguent dans la liste, et en appuyant sur <kbd>Maj</kbd> + flèches haut/bas, la sélection est déplacée et étendue. Taper une ou plusieurs lettres navigue dans les éléments de la liste (la même lettre va à chaque élément commençant par cela, des lettres différentes vont au premier élément commençant par cette chaîne de caractères entière). Si l'élément actuel a un menu contextuel associé, <kbd>Maj</kbd> + <kbd>F10</kbd> lance ce menu. Si les éléments de la liste sont sélectionnables, la barre d'espace peut être utilisée pour basculer les [cases à cocher](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role). Pour les éléments de liste sélectionnables, la barre d'espace bascule leur sélection, <kbd>Maj</kbd> + <kbd>Espace</kbd> peut être utilisé pour sélectionner des éléments contigus, <kbd>Ctrl</kbd> + flèche se déplace sans sélectionner, et <kbd>Ctrl</kbd> + <kbd>Espace</kbd> peut être utilisé pour sélectionner des éléments non contigus. Il est recommandé d'utiliser une case à cocher, un lien ou une autre méthode pour sélectionner tous les éléments, et <kbd>Ctrl</kbd> + <kbd>A</kbd> peut être utilisé comme touche de raccourci pour cela.
 
-Lorsque le rôle `listbox` est ajouté à un élément, ou qu'un tel élément devient visible, les lecteurs d'écran annoncent l'étiquette et le rôle de la boîte de liste lorsqu'elle obtient la sélection. Si un élément ou une option est focalisé dans la liste, il est annoncé ensuite, suivi d'une indication de la position de l'élément dans la liste si le lecteur d'écran prend en charge cela. Au fur et à mesure que la sélection se déplace dans la liste, le lecteur d'écran annonce les éléments pertinents.
+Lorsque le rôle `listbox` est ajouté à un élément, ou qu'un tel élément devient visible, les lecteurs d'écran annoncent l'étiquette et le rôle de la boîte de liste lorsqu'elle obtient la sélection. Si un élément ou une option est sélectionné dans la liste, il est annoncé ensuite, suivi d'une indication de la position de l'élément dans la liste si le lecteur d'écran prend en charge cela. Au fur et à mesure que la sélection se déplace dans la liste, le lecteur d'écran annonce les éléments pertinents.
 
 ### Propriétés, états et rôles ARIA associés
 
@@ -32,7 +34,7 @@ Lorsque le rôle `listbox` est ajouté à un élément, ou qu'un tel élément d
 #### États et propriétés
 
 - [`aria-activedescendant`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
-  - : Contient la chaîne de caractères `id` de l'élément actuellement actif au sein de la boîte de liste. Si c'est un élément d'option, alors c'est un `id` de l'option avec laquelle l'utilisateur·ice a interagi le plus récemment, peu importe si cette option a une valeur [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) de `true` ou non. Prend la valeur d'un seul `id`, même dans une boîte de liste multi-sélectionnable. Si l'`id` ne fait pas référence à un descendant DOM de la boîte de liste, alors cet `id` doit être inclus parmi les IDs dans l'attribut [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns).
+  - : Contient la chaîne de caractères `id` de l'élément actuellement actif au sein de la boîte de liste. Si c'est un élément d'option, alors c'est un `id` de l'option avec laquelle l'utilisateur·ice a interagi le plus récemment, peu importe si cette option a une valeur [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) de `true` ou non. Prend la valeur d'un seul `id`, même dans une boîte de liste multi-sélectionnable. Si un `id` ne fait pas référence à un descendant DOM de la boîte de liste, alors cet `id` doit être inclus parmi les IDs dans l'attribut [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns).
 - [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
   - : Il s'agit d'une liste d'IDs d'éléments séparés par des espaces qui ne sont pas des éléments enfants DOM de la boîte de liste. Les IDs énumérés ici ne peuvent pas également être énumérés dans les attributs [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) d'autres éléments.
 
@@ -103,9 +105,9 @@ Lorsque l'utilisateur·ice sélectionne une option, les éléments suivants doiv
 
 #### Changement de l'état d'une option dans une boîte de liste à sélection multiple
 
-Lorsque l'utilisateur·ice clique sur une option, appuie sur <kbd>Espace</kbd> lorsqu'il·elle est focalisé·e sur une option, ou change autrement l'état d'une option, les éléments suivants doivent se produire&nbsp;:
+Lorsque l'utilisateur·ice clique sur une option, appuie sur <kbd>Espace</kbd> lorsqu'une option est sélectionnée, ou change autrement l'état d'une option, les éléments suivants doivent se produire&nbsp;:
 
-1. Basculer l'état de [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) de l'option actuellement focalisée, en changeant l'état de `aria-selected` en true si c'était false ou false si c'était true.
+1. Basculer l'état de [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) de l'option actuellement focalisée, en changeant l'état de `aria-selected` en vrai (`true`) si c'était faux (`false`) ou faux si c'était vrai.
 2. Changer l'apparence de l'option pour refléter son état sélectionné.
 3. Mettre à jour la valeur de [`aria-activedescendant`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) sur la boîte de liste avec l'ID de l'option avec laquelle l'utilisateur·ice vient d'interagir, même s'il·elle a basculé l'option pour qu'elle ne soit plus sélectionnée.
 
@@ -114,7 +116,7 @@ Lorsque l'utilisateur·ice clique sur une option, appuie sur <kbd>Espace</kbd> l
 
 ## Exemples
 
-### Exemple 1&nbsp;: une liste de sélection simple qui utilise l'attribut `aria-activedescendant`
+### Exemple 1 : une liste de sélection simple qui utilise l'attribut `aria-activedescendant`
 
 Le code ci-dessous, utilisant [`aria-activedescendant`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant), montre comment le rôle de la boîte de liste est ajouté directement dans le code source HTML.
 
@@ -170,7 +172,7 @@ Cela peut être plus facilement géré avec les éléments HTML natifs {{HTMLEle
 - Il est recommandé que les auteur·ice·s utilisent un style différent pour la sélection lorsque la liste n'est pas focalisée, par exemple, une sélection non active est souvent affichée avec une couleur de fond plus claire.
 - Si la boîte de liste ne fait pas partie d'un autre composant, elle doit avoir la propriété [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) définie.
 - Si une ou plusieurs entrées ne sont pas des enfants DOM de la boîte de liste, des propriétés `aria-*` supplémentaires doivent être définies (voir [Bonnes pratiques ARIA <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/)).
-- S'il y a une raison valable d'[étendre](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) la boîte de liste, le rôle [`combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) peut être plus approprié.
+- S'il y a une raison valable [d'étendre](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) la boîte de liste, le rôle [`combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) peut être plus approprié.
 
 ## Spécifications
 

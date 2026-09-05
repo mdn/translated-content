@@ -59,6 +59,6 @@ async function lireContenuFichier(chemin) {
 ## Voir aussi
 
 - [Gestion des ressources en JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
-- L'objet global {{JSxRef("AsyncDisposableStack")}}
+- L'objet natif {{JSxRef("AsyncDisposableStack")}}
 - La méthode {{JSxRef("AsyncDisposableStack.prototype.adopt()")}}
 - La méthode {{JSxRef("AsyncDisposableStack.prototype.defer()")}}

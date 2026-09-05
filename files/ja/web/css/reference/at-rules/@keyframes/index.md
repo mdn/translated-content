@@ -1,8 +1,9 @@
 ---
-title: "@keyframes"
+title: CSS `@keyframes` アットルール
+short-title: "@keyframes"
 slug: Web/CSS/Reference/At-rules/@keyframes
 l10n:
-  sourceCommit: 4779d7c77859441641c1e061b21f2c74024fe796
+  sourceCommit: f2a9542e6c266ac7028eae954b5c7913e499d1f1
 ---
 
 **`@keyframes`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の CSS アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/Web/CSS/Guides/Transitions)よりも詳細に制御できます。
@@ -23,20 +24,20 @@ l10n:
 
 ### 値
 
-- {{cssxref("custom-ident")}}
-  - : キーフレームのリストを識別する名前。これは CSS 構文で定義されている識別子に適合する必要があります。
+- `<keyframes-name>`
+  - : 大文字小文字を区別する {{cssxref("custom-ident")}} または文字列で、キーフレームリストの名前を指定します。
 - `from`
   - : アニメーションの始まりである `0%` を示します。
 - `to`
   - : アニメーションの終わりである `100%` を示します。
 - {{cssxref("&lt;percentage&gt;")}}
   - : 指定したキーフレームがアニメーションの中で作動する時間を示すパーセント値です。
-- `<timeline-range-name>` {{cssxref("&lt;percentage&gt;")}}
-  - : 指定したアニメーション範囲の、指定したキーフレームが発生する時点までの割合。名前付きタイムライン範囲を使用するアニメーションの種類については、[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を参照してください。
+- {{cssxref("timeline-range-name")}} の {{cssxref("&lt;percentage&gt;")}}
+  - : 指定したアニメーション範囲の、指定したキーフレームが発生する時点までの割合です。
 
 ## 解説
 
-キーフレームを使うには、アニメーションとそのキーフレームを一致させるために、 {{ cssxref("animation-name") }} プロパティで指定したものと同じ名前がついた `@keyframes` ルールを作成します。それぞれの `@keyframes` ルールは、キーフレームセレクターのスタイルリストを含んでいます。それは、そのキーフレームが作動する時のアニメーションのパーセント値と、そのキーフレームでのスタイルを指定するブロックとで構成されています。
+キーフレームを使うには、アニメーションとそのキーフレームを一致させるために、 {{ cssxref("animation-name") }} プロパティで指定したものと同じ名前がついた `@keyframes` ルールを作成します。それぞれの `@keyframes` ルールは、[キーフレームセレクター](/ja/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)のスタイルリストを含んでいます。それは、そのキーフレームが作動する時のアニメーションのパーセント値と、そのキーフレームでのスタイルを指定するブロックとで構成されています。
 
 キーフレームは任意の順番で並べることができます。それらは、作動する時を示すパーセント値の順番に従って制御されます。
 
@@ -104,11 +105,9 @@ JavaScript は、 `@keyframes` アットルールに CSS オブジェクトモ�
 
 この例では、 `50%` のキーフレームで、使用される値は `top: 10px` と `left: 20px` です。
 
-カスケード的なキーフレームは Firefox 14 から対応しています。
-
 ### キーフレーム内の `!important`
 
-キーフレーム内で `!important` が付けられた宣言は無視されます。
+キーフレーム内で {{cssxref("important")}} フラグが設定された宣言は無視されます。
 
 ```css
 @keyframes important1 {
@@ -157,8 +156,9 @@ JavaScript は、 `@keyframes` アットルールに CSS オブジェクトモ�
 
 - {{cssxref("animation-name")}}
 - [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
-- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール
 - [CSS スクロール駆動アニメーションタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [タイムライン範囲名を理解する](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
-- [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}
+- [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)

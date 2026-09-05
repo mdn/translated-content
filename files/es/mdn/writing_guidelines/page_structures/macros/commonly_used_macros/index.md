@@ -233,7 +233,7 @@ También puedes usarlas para marcar una sección en una página.
 - [`Non-standard_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
 - [`SeeCompatTable`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) se usa en páginas que documentan [características experimentales](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
   Ejemplo: `\{{SeeCompatTable}}` {{SeeCompatTable}}
-- [`Deprecated_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
+- [`Deprecated_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs): `\{{Deprecated_Header}}`
 - [`SecureContext_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs).
   Debe usarse en páginas principales, como páginas de interfaz, páginas de descripción general de la API y puntos de entrada de la API (por ejemplo, `navigator.xyz`), pero normalmente no en subpáginas como páginas de métodos y propiedades.
   Ejemplo: `\{{SecureContext_Header}}` {{SecureContext_Header}}

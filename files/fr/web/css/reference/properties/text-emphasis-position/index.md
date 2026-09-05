@@ -3,7 +3,7 @@ title: Propriété CSS `text-emphasis-position`
 short-title: text-emphasis-position
 slug: Web/CSS/Reference/Properties/text-emphasis-position
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-emphasis-position`** définit l'emplacement des marques d'emphase. Similaire au texte rendu par l'élément HTML {{HTMLElement("ruby")}}, si l'espace disponible pour les marques d'emphase est insuffisant, la hauteur de ligne est augmentée.
@@ -182,7 +182,7 @@ La position préférée des marques d'emphase dépend de la langue. Par exemple,
 
 ### Ajouter des positions de marques d'emphase
 
-Utilisez le menu déroulant pour changer la position des marques d'emphase. Cela changera la classe sur l'élément `<section>`, ce qui mettra à jour la position des marques d'emphase sur le texte.
+Utilisez le menu déroulant pour changer la position des marques d'emphase. Cela change la classe sur l'élément `<section>`, ce qui met à jour la position des marques d'emphase sur le texte.
 
 #### HTML
 

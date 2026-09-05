@@ -1,11 +1,12 @@
 ---
-title: border-inline-end-width
+title: CSS `border-inline-end-width` プロパティ
+short-title: border-inline-end-width
 slug: Web/CSS/Reference/Properties/border-inline-end-width
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
-**`border-inline-end-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の終端側の境界の幅を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界の幅に対応づけられます。これは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} のいずれかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
+**`border-inline-end-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向末尾側の境界の幅を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界の幅に対応づけられます。これは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} のいずれかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
 {{InteractiveExample("CSS デモ: border-inline-end-width")}}
 
@@ -48,7 +49,7 @@ direction: rtl;
 ## 構文
 
 ```css
-/* <'border-width'> 値 */
+/* <'line-width'> 値 */
 border-inline-end-width: 2px;
 border-inline-end-width: thick;
 
@@ -60,7 +61,7 @@ border-inline-end-width: revert-layer;
 border-inline-end-width: unset;
 ```
 
-関連するプロパティとしては、 {{cssxref("border-block-start-width")}}、{{cssxref("border-block-end-width")}}、{{cssxref("border-inline-start-width")}} が要素の他の境界の幅を定義します。
+関連するプロパティとしては、{{cssxref("border-block-start-width")}}、{{cssxref("border-block-end-width")}}、{{cssxref("border-inline-start-width")}} が要素の他の境界の幅を定義します。
 
 ### 値
 
@@ -77,7 +78,7 @@ border-inline-end-width: unset;
 
 ## 例
 
-### 縦書きテキストの境界の適用
+### 縦書きテキストの境界線の適用
 
 #### HTML
 
@@ -105,7 +106,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("縦書きテキストの境界の適用", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの境界線の適用", 140, 140)}}
 
 ## 仕様書
 
@@ -118,5 +119,5 @@ div {
 ## 関連情報
 
 - [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
-- このプロパティは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} のうちの一つに対応づけられます
+- このプロパティは物理的な境界プロパティである {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} のいずれかに対応します。
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

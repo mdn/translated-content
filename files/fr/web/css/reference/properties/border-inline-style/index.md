@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-style`** définit le style des bordures logiques en ligne d'un élément, qui correspond à un style de bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("border-top-style")}} et {{CSSxRef("border-bottom-style")}}, ou {{CSSxRef("border-left-style")}} et {{CSSxRef("border-right-style")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-style`** définit le style des bordures logiques en incise (<i lang="en">inline</i> en anglais) d'un élément, qui correspond à un style de bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("border-top-style")}} et {{CSSxRef("border-bottom-style")}}, ou {{CSSxRef("border-left-style")}} et {{CSSxRef("border-right-style")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
 Le style de bordure dans l'autre dimension peut être défini avec {{CSSxRef("border-block-style")}}, qui définit {{CSSxRef("border-block-start-style")}} et {{CSSxRef("border-block-end-style")}}.
 

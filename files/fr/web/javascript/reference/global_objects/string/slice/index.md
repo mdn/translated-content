@@ -3,8 +3,6 @@ title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
 
-{{JSRef}}
-
 La méthode **`slice()`** extrait une section d'une chaine de caractères et la retourne comme une nouvelle chaine de caractères. La chaîne de caractères courante n'est pas modifiée.
 
 {{InteractiveExample("JavaScript Demo: String.slice()")}}

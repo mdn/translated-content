@@ -39,7 +39,7 @@ Une `scrollbar` représente la valeur courante et l'éventail des valeurs possib
 > [!NOTE]
 > Les technologies d'assistance rendent généralement la valeur de `aria-valuenow` comme un pourcentage de la plage entre `aria-valuemin` et `aria-valuemax`, sauf si [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) est défini. Il est recommandé de définir `aria-valuemin`, `aria-valuemax` et `aria-valuenow` de manière appropriée pour ce calcul.
 
-Comme une barre de défilement native, les utilisateur·rice·s interagissent avec les éléments `scrollbar` directement ou indirectement à l'aide de la souris, du pavé tactile, du clavier et de la commande vocale. Les implémentations du rôle `scrollbar` doivent aussi tenir compte de tous ces modes d'interaction.
+Comme une barre de défilement native, les utilisateur·ice·s interagissent avec les éléments `scrollbar` directement ou indirectement à l'aide de la souris, du pavé tactile, du clavier et de la commande vocale. Les implémentations du rôle `scrollbar` doivent aussi tenir compte de tous ces modes d'interaction.
 
 Avec la souris, l'utilisateur·ice doit pouvoir activer la `scrollbar` en cliquant sur les flèches de défilement éventuellement présentes aux extrémités, en cliquant sur une zone vide de la piste, ainsi qu'en cliquant et en faisant glisser le pouce.
 

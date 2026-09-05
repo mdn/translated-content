@@ -3,10 +3,10 @@ title: En-tête Origin
 short-title: Origin
 slug: Web/HTTP/Reference/Headers/Origin
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 4db27688840b67e416373ea571d9e3a17bafa92d
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Origin`** indique {{Glossary("origin", "l'origine")}} ([schéma](/fr/docs/Web/URI/Reference/Schemes), nom d'hôte et port) à l'origine de la requête.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Origin`** indique {{Glossary("origin", "l'origine")}} ([schéma](/fr/docs/Web/URI/Reference/Schemes), nom d'hôte et port) à l'origine de la requête.
 Par exemple, si un agent utilisateur doit demander des ressources incluses dans une page, ou récupérées par des scripts qu'il exécute, alors l'origine de la page peut être incluse dans la requête.
 
 <table class="properties">
@@ -39,19 +39,19 @@ Origin: <scheme>://<hostname>:<port>
 - `<hostname>`
   - : Le nom de domaine ou l'adresse IP du serveur d'origine.
 - `<port>` {{Optional_Inline}}
-  - : Le numéro de port sur lequel écoute le serveur. Si aucun port n'est donné, c'est le port par défaut pour le protocole correspondant qui est utilisé (par exemple `443` pour une URL qui utiliserait le protocole HTTPS).
+  - : Le numéro de port sur lequel écoute le serveur. Si aucun port n'est donné, c'est le port par défaut pour le protocole correspondant qui est utilisé (par exemple `443` pour une URL qui utilise le protocole HTTPS).
 
 ## Description
 
 L'en-tête `Origin` est semblable à l'en-tête {{HTTPHeader("Referer")}}, mais ne contient pas le chemin de la ressource et peut valoir `null`.
-Il est utilisé pour fournir le contexte de sécurité de la requête d'origine, sauf dans les cas où l'information de l'origine serait sensible ou superflue.
+Il est utilisé pour fournir le contexte de sécurité de la requête d'origine, sauf dans les cas où l'information de l'origine est sensible ou superflue.
 
 De façon générale, les agents utilisateurs ajoutent l'en-tête de requête `Origin` aux&nbsp;:
 
 - Requêtes {{Glossary("CORS", "inter-origine")}}.
 - Requêtes [de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), sauf pour les requêtes {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} (c'est-à-dire qu'il est ajouté aux requêtes de même origine {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}} et {{HTTPMethod("DELETE")}}).
 
-Il existe quelques exceptions à ces règles&nbsp;; par exemple, si une requête {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} d'origine croisée est effectuée en [mode no-cors](/fr/docs/Web/API/Request/mode#value), l'en-tête `Origin` ne sera pas ajouté.
+Il existe quelques exceptions à ces règles&nbsp;; par exemple, si une requête {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} d'origine croisée est effectuée en [mode no-cors](/fr/docs/Web/API/Request/mode#value), l'en-tête `Origin` n'est pas ajouté.
 
 La valeur de l'en-tête `Origin` peut être `null` dans un certain nombre de cas, notamment (liste non exhaustive)&nbsp;:
 
@@ -62,7 +62,8 @@ La valeur de l'en-tête `Origin` peut être `null` dans un certain nombre de cas
 - Les documents servis avec la directive `sandbox` de {{HTTPHeader("Content-Security-Policy")}} dont la valeur n'inclut pas `allow-same-origin`.
 - Les {{HTMLElement("iframe", "cadres intégrés")}} avec un attribut sandbox dont la valeur n'inclut pas `allow-same-origin`.
 - Les réponses qui sont des erreurs réseau.
-- {{HTTPHeader("Referrer-Policy")}} défini à `no-referrer` pour les modes de requête non-`cors` (par exemple, les envois de formulaires basiques).
+- Certaines valeurs de {{HTTPHeader("Referrer-Policy")}}, pour les requêtes qui n'utilisent ni `GET` ni `HEAD` et qui ne sont pas effectuées en mode `cors` (par exemple, les envois de formulaires basiques).
+  Voir [Effet sur l'en-tête `Origin`](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy#effet_sur_len-tete-origin) pour les valeurs de politique qui déclenchent cela.
 
 > [!NOTE]
 > Une liste plus détaillée de ces cas avec `null` est présentée sur Stack Overflow&nbsp;: [Quand les navigateurs envoient-ils l'en-tête d'origine&nbsp;? Quand l'origine est-elle mise à nul&nbsp;? <sup>(angl.)</sup>](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)

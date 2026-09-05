@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!NOTE]
 > En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), accéder à `caller` d'une fonction déclenche une erreur — l'API est supprimée sans remplacement. Cela vise à empêcher le code de «&nbsp;remonter la pile&nbsp;», ce qui pose des risques de sécurité et limite fortement les possibilités d'optimisations comme l'intégration et l'optimisation des appels en queue. Pour plus d'explications, vous pouvez lire [la justification de la dépréciation de `arguments.callee`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee#description).

@@ -65,11 +65,11 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `cite`
   - : Cet attribut définit l'URI d'une ressource qui explique la modification (par exemple un lien vers le compte rendu d'une réunion ou un ticket dans un système de suivi).
 - `datetime`
-  - : Cet attribut indique la date et l'heure de la modification et doit être une date valide avec une chaîne horaire optionnelle. Si la valeur ne peut pas être analysée comme une date avec une chaîne horaire optionnelle, l'élément n'a pas d'horodatage associé. Pour le format de la chaîne sans heure, voir [Format d'une chaîne de date valide](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates). Le format de la chaîne incluant la date et l'heure est décrit dans [Format d'une chaîne de date et heure locales valides](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates_et_heures_locales).
+  - : Cet attribut indique la date et l'heure de la modification et doit être une date valide avec une chaîne de caractères horaire optionnelle. Si la valeur ne peut pas être analysée comme une date avec une chaîne de caractères horaire optionnelle, l'élément n'a pas d'horodatage associé. Pour le format de la chaîne de caractères sans heure, voir [Format d'une chaîne de caractères de date valide](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates). Le format de la chaîne de caractères incluant la date et l'heure est décrit dans [Format d'une chaîne de caractères de date et heure locales valides](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates_et_heures_locales).
 
 ## Accessibilité
 
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `ins`. On peut le rendre annonçable via la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
+Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `ins`. On peut le rendre comme pouvant être annoncé avec la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
 
 ```css
 ins::before,

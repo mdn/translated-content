@@ -3,10 +3,10 @@ title: "Element : évènement MozMousePixelScroll"
 short-title: MozMousePixelScroll
 slug: Web/API/Element/MozMousePixelScroll_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("UI Events")}}{{Non-standard_Header}}
 
 L'évènement pour Firefox uniquement, _non standard_, et _obsolète_ **`MozMousePixelScroll`** est déclenché de manière asynchrone sur un objet {{DOMxRef("Element")}} lorsqu'une molette de souris ou un dispositif similaire est utilisé. Il est représenté par l'interface {{DOMxRef("MouseScrollEvent")}}.
 

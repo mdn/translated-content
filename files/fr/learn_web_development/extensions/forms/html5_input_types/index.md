@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/HTML5_input_types
 original_slug: Learn/Forms/HTML5_input_types
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 Dans [l'article précédent](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls), nous avons vu l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et les types qu'il pouvait avoir depuis les origines de HTML. Voyons ici, en détails, les fonctionnalités offertes par les contrôles de formulaire plus récents, dont certains ont été ajoutés en HTML5 et qui permettent de récupérer des données d'un certain type.
 

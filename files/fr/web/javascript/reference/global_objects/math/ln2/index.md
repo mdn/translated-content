@@ -16,7 +16,7 @@ function getNatLog2() {
 }
 
 console.log(getNatLog2());
-// Sortie attendue : 0.6931471805599453
+// Résultat attendu : 0.6931471805599453
 ```
 
 ## Valeur

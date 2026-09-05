@@ -51,4 +51,4 @@ console.log(Intl.DurationFormat.supportedLocalesOf(locales, options));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DurationFormat")}}
+- L'objet natif {{JSxRef("Intl.DurationFormat")}}

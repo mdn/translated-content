@@ -3,15 +3,14 @@ title: "HTMLTableElement : méthode createTFoot()"
 short-title: createTFoot()
 slug: Web/API/HTMLTableElement/createTFoot
 l10n:
-  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`createTFoot()`** de l'interface {{DOMxRef("HTMLTableElement")}} retourne l'élément HTML {{HTMLElement("tfoot")}} associé à un tableau ({{HTMLElement("table")}}) donné. Si aucun pied n'existe dans le tableau, cette méthode le crée, puis le retourne.
+La méthode **`createTFoot()`** de l'interface {{DOMxRef("HTMLTableElement")}} crée un élément HTML {{HTMLElement("tfoot")}}, l'insère comme dernier enfant du tableau ({{HTMLElement("table")}}) donné, et le retourne. Si le tableau a déjà un enfant `<tfoot>`, cette méthode retourne le premier enfant de ce type sans en créer un nouveau.
 
-> [!NOTE]
-> Si aucun pied n'existe, `createTFoot()` insère un nouveau pied directement dans le tableau. Il n'est pas nécessaire d'ajouter le pied séparément comme cela serait le cas si {{DOMxRef("Document.createElement()")}} avait été utilisé pour créer le nouvel élément `<tfoot>`.
+Lorsque la création est nécessaire, cette méthode crée et insère l'élément directement, sans nécessiter d'appels séparés à des méthodes telles que {{DOMxRef("Document.createElement()")}} et {{DOMxRef("Node.appendChild()")}}.
 
 ## Syntaxe
 
@@ -25,12 +24,12 @@ Aucun.
 
 ### Valeur de retour
 
-Un objet {{DOMxRef("HTMLTableSectionElement")}}.
+Un objet {{DOMxRef("HTMLTableSectionElement")}} (qui est toujours un `tfoot`).
 
 ## Exemples
 
 ```js
-let myFoot = myTable.createTFoot();
+const myFoot = myTable.createTFoot();
 // Ceci doit maintenant être vrai : myFoot === myTable.tFoot
 ```
 
@@ -41,3 +40,10 @@ let myFoot = myTable.createTFoot();
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La méthode {{DOMxRef("HTMLTableElement.createCaption()")}}
+- La méthode {{DOMxRef("HTMLTableElement.createTBody()")}}
+- La méthode {{DOMxRef("HTMLTableElement.createTHead()")}}
+- La méthode {{DOMxRef("HTMLTableElement.deleteTFoot()")}}

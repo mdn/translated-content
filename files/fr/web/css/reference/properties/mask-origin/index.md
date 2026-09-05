@@ -3,11 +3,11 @@ title: Propriété CSS `mask-origin`
 short-title: mask-origin
 slug: Web/CSS/Reference/Properties/mask-origin
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-origin`** définit l'origine d'un masque. Cette propriété détermine la zone de positionnement du masque&nbsp;: la zone dans laquelle une image de masque est positionnée. Les éléments HTML peuvent avoir des masques contenus dans leur boîte de contenu, boîte de remplissage ou boîte de contenu, tandis que les éléments SVG (qui n'ont pas les boîtes de mise en page CSS associées) peuvent avoir des masques contenus à l'intérieur de leur boîte de remplissage, de contour ou de vue.
-Pour les éléments rendus comme plusieurs boîtes, comme un {{HTMLElement("span")}} de texte qui s'étend sur plusieurs lignes, la propriété `mask-origin` spécifie sur quelles boîtes la propriété {{CSSxRef("box-decoration-break")}} agit pour déterminer la zone de positionnement du masque.
+Pour les éléments rendus comme plusieurs boîtes, comme un {{HTMLElement("span")}} de texte qui s'étend sur plusieurs lignes, la propriété `mask-origin` définit sur quelles boîtes la propriété {{CSSxRef("box-decoration-break")}} agit pour déterminer la zone de positionnement du masque.
 
 ## Syntaxe
 
@@ -63,9 +63,9 @@ Si le nombre de valeurs dans les deux propriétés diffère, les valeurs excéde
 
 Pour les éléments rendus comme une seule boîte, cette propriété définit la zone de positionnement du masque — ou la position d'origine — de l'image référencée par la propriété `mask-image`.
 
-Pour les éléments rendus comme plusieurs boîtes, tels que les boîtes en ligne qui s'étendent sur plusieurs lignes, la propriété `mask-origin` définit sur quelles boîtes la propriété {{CSSxRef("box-decoration-break")}} agit pour déterminer la zone de positionnement du masque.
+Pour les éléments rendus comme plusieurs boîtes, tels que les boîtes en incise (<i lang="en">inline</i> en anglais) qui s'étendent sur plusieurs lignes, la propriété `mask-origin` définit sur quelles boîtes la propriété {{CSSxRef("box-decoration-break")}} agit pour déterminer la zone de positionnement du masque.
 
-La propriété `mask-origin` peut provoquer le rognage de l'image de la couche de masque. Par exemple, si la propriété {{CSSxRef("mask-clip")}} est définie sur `padding-box`, que `mask-origin` est définie sur `border-box`, que la propriété {{CSSxRef("mask-position")}} est définie sur le coin supérieur gauche, et que l'élément a une bordure, alors l'image de la couche de masque sera rognée au niveau du coin supérieur gauche.
+La propriété `mask-origin` peut provoquer le rognage de l'image de la couche de masque. Par exemple, si la propriété {{CSSxRef("mask-clip")}} est définie sur `padding-box`, que `mask-origin` est définie sur `border-box`, que la propriété {{CSSxRef("mask-position")}} est définie sur le coin supérieur gauche, et que l'élément a une bordure, alors l'image de la couche de masque est rognée au niveau du coin supérieur gauche.
 
 ## Définition formelle
 

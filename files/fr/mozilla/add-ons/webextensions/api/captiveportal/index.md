@@ -3,8 +3,6 @@ title: captivePortal
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal
 ---
 
-{{AddonSidebar}}
-
 Déterminer l'état du portail captif de la connexion de l'utilisateur. Un portail captif est une page web qui s'affiche lorsqu'un utilisateur se connecte pour la première fois à un réseau Wi-Fi. L'utilisateur fournit des informations ou agit sur la page web du portail captif afin d'obtenir un accès plus large aux ressources du réseau, par exemple en acceptant les conditions générales ou en effectuant un paiement.
 
 Pour utiliser cette API, vous devez disposer de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "captivePortal".

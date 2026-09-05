@@ -48,7 +48,7 @@ div:focus {
 如果我们在 {{htmlelement("div")}} 上设置了 `tabindex` 属性，它的子元素内容不能使用箭头键来滚动，除非我们在内容上也设置 `tabindex`。[查看这篇 fiddle 来理解 tabindex 的滚动影响](https://jsfiddle.net/jainakshay/0b2q4Lgv/)。
 
 > [!NOTE]
-> tabindex 的最大值不应超过 32767。如果没有指定，它的默认值为 0。
+> tabindex 的最大值不应超过 32767。如果没有指定，一些可聚焦的 HTML 元素的默认值为 0。
 
 ## 规范
 

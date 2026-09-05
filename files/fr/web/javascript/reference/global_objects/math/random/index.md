@@ -19,13 +19,13 @@ function getRandomInt(max) {
 }
 
 console.log(getRandomInt(3));
-// Sortie attendue : 0, 1 ou 2
+// Résultat attendu : 0, 1 ou 2
 
 console.log(getRandomInt(1));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(Math.random());
-// Sortie attendue : un nombre de 0 à <1
+// Résultat attendu : un nombre de 0 à <1
 ```
 
 ## Syntaxe

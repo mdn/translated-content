@@ -66,7 +66,7 @@ l10n:
 >
 > _發布前請記得移除此整個說明性註解。_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 在頁面內容開始處，撰寫一段簡介文字——首先點名建構子並說明其用途。這通常應該是一到兩個簡短的句子。你可以從相應 API 參考頁面的建構子摘要中複製大部分內容。
 

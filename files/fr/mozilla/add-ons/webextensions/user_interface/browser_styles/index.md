@@ -3,8 +3,6 @@ title: Styles des navigateurs
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 ---
 
-{{AddonSidebar}}
-
 Certains composants de l'interface utilisateur - les [fenêtres contextuelles](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [fenêtres latérales](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), et les [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) du navigateur et de la page - sont spécifiés par votre extension de la même manière :
 
 1. créer un fichier HTML définissant la structure de l'élément d'interface utilisateur

@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feColorMatrix
 original_slug: Web/SVG/Element/feColorMatrix
 ---
 
-{{SVGRef}}
-
 La primitive de filtre SVG **`<feColorMatrix>`** change les couleurs d'un élément en fonction d'une matrice de transformation. Chaque pixel (représenté par un vecteur \[R,G,B,A]) est [multiplié par matrice](https://fr.wikipedia.org/wiki/Produit_matriciel) pour créer une nouvelle couleur:
 
 ```

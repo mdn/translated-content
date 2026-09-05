@@ -97,7 +97,7 @@ Autrement dit, la modélisation des menaces vous aide à comprendre contre quell
 
 ## Authentification
 
-L'authentification est le processus de vérification qu'une entité — comme un·e utilisateur·rice d'un site web — est bien celle qu'elle prétend être. Vous devez très probablement réfléchir à l'authentification si vous souhaitez que les utilisateur·ice·s se connectent à votre site web.
+L'authentification est le processus de vérification qu'une entité — comme un·e utilisateur·ice d'un site web — est bien celle qu'elle prétend être. Vous devez très probablement réfléchir à l'authentification si vous souhaitez que les utilisateur·ice·s se connectent à votre site web.
 
 Si des utilisateur·ice·s peuvent se connecter à votre site web, il y a généralement des actions qu'ils peuvent effectuer ou des données auxquelles ils peuvent accéder, que vous ne souhaitez pas rendre accessibles à tout le monde. Cela fait de l'accès aux comptes utilisateur·ice·s l'une des cibles les plus précieuses pour les attaquant·e·s.
 
@@ -108,7 +108,7 @@ Dans cet ensemble de guides, nous examinons les principales techniques disponibl
 - [Identité fédérée](/fr/docs/Web/Security/Authentication/Federated_identity)
 - [Clés d'accès](/fr/docs/Web/Security/Authentication/Passkeys)
 
-Dans cette section, nous présentons également les bonnes pratiques pour la [gestion des sessions](/fr/docs/Web/Security/Authentication/Session_management), c'est-à-dire la manière dont un site web se souvient de l'état de connexion d'un·e utilisateur·rice.
+Dans cette section, nous présentons également les bonnes pratiques pour la [gestion des sessions](/fr/docs/Web/Security/Authentication/Session_management), c'est-à-dire la manière dont un site web se souvient de l'état de connexion d'un·e utilisateur·ice.
 
 ## Observatoire HTTP
 

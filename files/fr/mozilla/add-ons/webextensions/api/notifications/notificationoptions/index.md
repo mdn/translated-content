@@ -3,8 +3,6 @@ title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 ---
 
-{{AddonSidebar}}
-
 Ce type contient les données nécessaires pour :
 
 - créer une notification avec {{WebExtAPIRef("notifications.create()")}},

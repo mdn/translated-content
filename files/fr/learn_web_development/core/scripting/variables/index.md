@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Variables
 original_slug: Learn/JavaScript/First_steps/Variables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
 
 Après lecture des deux articles précédents, vous savez maintenant ce qu'est JavaScript, ce qu'il peut vous apporter, comment l'utiliser aux côtés d'autres technologies web et l'aspect de ses principales fonctionnalités vues de haut. Dans cet article, nous revenons aux fondements réels en examinant comment travailler avec le bloc de construction le plus basique du JavaScript — les variables.
 

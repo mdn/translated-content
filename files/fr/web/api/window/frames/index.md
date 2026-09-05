@@ -3,10 +3,10 @@ title: "Window : propriété frames"
 short-title: frames
 slug: Web/API/Window/frames
 l10n:
-  sourceCommit: fff34aeef99745d594b618950330cb8333e9bfc6
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`frames`** de l'interface {{DOMxRef("Window")}} retourne la fenêtre elle-même, qui est semblable à un objet de type tableau (`array`), listant les sous-cadres directs de la fenêtre courante.
 

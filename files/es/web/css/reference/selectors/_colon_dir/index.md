@@ -36,7 +36,11 @@ La pseudoclase `:dir()` requiere un parámetro, que representa la direccionalida
 
 ### Sintaxis formal
 
-{{csssyntax}}
+```css-nolint
+:dir([ltr | rtl]) {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

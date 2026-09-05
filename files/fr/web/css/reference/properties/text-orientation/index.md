@@ -3,7 +3,7 @@ title: Propriété CSS `text-orientation`
 short-title: text-orientation
 slug: Web/CSS/Reference/Properties/text-orientation
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-orientation`** définit l'orientation du texte sur une ligne. Cette propriété n'a d'effet qu'en mode vertical (autrement dit, quand {{CSSxRef("writing-mode")}} n'est pas `horizontal-tb`). Elle est utile pour contrôler l'affichage de l'écriture pour les langues dont le script est vertical. Elle permet aussi de gérer les en-têtes de tableaux verticaux.
@@ -49,16 +49,16 @@ text-orientation: revert-layer;
 text-orientation: unset;
 ```
 
-La propriété `text-orientation` peut valoir l'un des mots-clés suivants.
-
 ### Valeurs
+
+Cette propriété est définie comme l'une des valeurs parmi les suivantes&nbsp;:
 
 - `mixed`
   - : Ce mot-clé permet de tourner les caractères de 90° dans le sens des aiguilles d'une montre pour les scripts horizontaux, les glyphes des scripts verticaux sont affichés normalement. C'est la valeur par défaut.
 - `upright`
-  - : Ce mot-clé permet d'afficher les caractères des scripts horizontaux normalement et d'afficher les glyphes des scripts verticaux « debout ». Ce mot-clé implique que tous les caractères soient considérés comme _ltr_ (_left-to-right_ ou gauche à droite). La valeur utilisée pour {{CSSxRef("direction")}} sera `ltr`, quelle que soit celle définie par l'utilisateur.
+  - : Ce mot-clé permet d'afficher les caractères des scripts horizontaux normalement et d'afficher les glyphes des scripts verticaux «&nbsp;debout&nbsp;». Ce mot-clé implique que tous les caractères soient considérés comme _ltr_ (_left-to-right_ ou gauche à droite). La valeur utilisée pour {{CSSxRef("direction")}} est `ltr`, quelle que soit celle définie par l'utilisateur·ice.
 - `sideways`
-  - : Ce mot-clé permet d'afficher les caractères comme s'ils étaient disposés horizontalement et que la ligne de base était tournée de 90° dans le sens des aiguilles d'une montre.
+  - : Ce mot-clé permet d'afficher les caractères comme s'ils sont disposés horizontalement et que la ligne de base est tournée de 90° dans le sens des aiguilles d'une montre.
 - `sideways-right`
   - : Un alias pour `sideways` conservé pour des raisons de compatibilité.
 - `use-glyph-orientation`

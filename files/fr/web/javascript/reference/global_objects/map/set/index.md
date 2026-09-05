@@ -15,10 +15,10 @@ const map = new Map();
 map.set("tata", "toto");
 
 console.log(map.get("tata"));
-// Sortie attendue : "toto"
+// Résultat attendu : "toto"
 
 console.log(map.get("truc"));
-// Sortie attendue : undefined
+// Résultat attendu : undefined
 ```
 
 ## Syntaxe
@@ -72,7 +72,7 @@ maMap.set("truc", "toto").set(1, "tototruc").set(2, "bidule");
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Map")}}
+- L'objet natif {{JSxRef("Map")}}
 - La méthode {{JSxRef("Map.prototype.delete()")}}
 - La méthode {{JSxRef("Map.prototype.get()")}}
 - La méthode {{JSxRef("Map.prototype.has()")}}

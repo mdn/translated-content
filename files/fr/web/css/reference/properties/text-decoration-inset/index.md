@@ -81,7 +81,7 @@ Une ou deux valeurs {{CSSxRef("&lt;length&gt;")}}, ou le mot-clé `auto`.
 
 Par défaut, la décoration de texte d'un élément, telle que définie par la propriété raccourcie {{CSSxRef("text-decoration")}} et les propriétés longues associées, a la même taille que le texte rendu.
 
-La propriété `text-decoration-inset` permet d'ajuster les points de début et/ou de fin de la décoration de texte d'un conteneur de texte. Cela est utile pour créer des effets où vous souhaitez que la décoration de texte soit en retrait ou en saillie par rapport au texte lui-même, ou décalée en position. Voir [Cas d'utilisation simple](#cas_dutilisation_simple) pour un exemple de chaque.
+La propriété `text-decoration-inset` permet d'ajuster les points de début et/ou de fin de la décoration de texte d'un conteneur de texte. C'est utile pour créer des effets où vous souhaitez que la décoration de texte soit en retrait ou en saillie par rapport au texte lui-même, ou décalée en position. Voir [Cas d'utilisation simple](#cas_dutilisation_simple) pour un exemple de chaque.
 
 Une seule valeur `<length>` définit le retrait (si positif) ou la saillie (si négatif) aux positions de début et de fin de la décoration de texte. Pour définir séparément les positions de début et de fin, vous pouvez utiliser deux valeurs `<length>` — la première s'applique à la position de début de la décoration de texte et la seconde à la fin.
 

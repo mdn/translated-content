@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Display/Formatting_contexts
 original_slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 ---
 
-{{CSSRef}}
-
 Dans cet article, nous aborderons le concept des contextes de formatage. Ceux-ci peuvent être de différents types : contextes de formatage de bloc, contextes de formatage en ligne, contextes de formatage flexibles. Nous verrons les bases de leur comportement et comment les utiliser.
 
 Sur une page web, tout s'inscrit dans un **contexte de formatage**, une zone qui a été définie pour être organisée d'une certaine façon. Un **contexte de formatage en bloc** (ou _block formatting context_ (BFC)) organisera ses éléments fils selon une disposition en bloc, un **contexte de formatage flexible** organisera ses éléments fils comme des objets flexibles, etc. Chaque contexte de formatage possède des règles spécifiques qui décrivent le comportement de la disposition pour ce contexte.

@@ -1,11 +1,12 @@
 ---
-title: border-width
+title: CSS `border-width` プロパティ
+short-title: border-width
 slug: Web/CSS/Reference/Properties/border-width
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-**`border-width`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の幅を設定します。
+**`border-width`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、要素の境界の幅を設定します。
 
 {{InteractiveExample("CSS デモ: border-width")}}
 
@@ -95,14 +96,8 @@ border-width: unset;
 
 ### 値
 
-- `<line-width>`
-  - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合は、以下の値の何れかでなければなりません。
-    - `thin`
-    - `medium`
-    - `thick`
-
-> [!NOTE]
-> 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+- {{cssxref("&lt;line-width&gt;")}}
+  - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワード `thin`、`medium`、`thick` のいずれかで定義します。キーワードの場合は、以下の値の何れかでなければなりません。
 
 ## 公式定義
 
@@ -118,13 +113,13 @@ border-width: unset;
 
 #### HTML
 
-```html-nolint live-sample___a_mix_of_values_and_lengths
+```html-nolint
 <p id="one-value">1 つの値: 6px 幅が全 4 辺の境界に適用</p>
 <p id="two-values">
-  異なる値 2 つの値: 2px 幅が上下の境界に、 10px 幅が左右の境界に適用
+  異なる値 2 つの値: 2px 幅が上下の境界に、10px 幅が左右の境界に適用
 </p>
 <p id="three-values">
-  異なる 3 つの値: 0.3em 幅が上に、 9px 幅が下に、ゼロ幅が左右に適用
+  異なる 3 つの値: 0.3em 幅が上に、9px 幅が下に、ゼロ幅が左右に適用
 </p>
 <p id="four-values">
   異なる 4 つの値: "thin" が上に、 "medium" が右に、 "thick" が下に、 1em が左に
@@ -133,7 +128,7 @@ border-width: unset;
 
 #### CSS
 
-```css live-sample___a_mix_of_values_and_lengths
+```css
 #one-value {
   border: ridge #cccccc;
   border-width: 6px;
@@ -159,7 +154,7 @@ p {
 
 #### 結果
 
-{{ EmbedLiveSample('A_mix_of_values_and_lengths', 320, 320) }}
+{{ EmbedLiveSample('値と長さの組み合わせ', 320, 320) }}
 
 ## 仕様書
 

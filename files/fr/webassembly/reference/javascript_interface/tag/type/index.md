@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/Tag/type
 original_slug: WebAssembly/JavaScript_interface/Tag/type
 ---
 
-{{WebAssemblySidebar}}
-
 La méthode **`type()`**, rattachée au prototype d'un objet [`Tag`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Tag), permet d'accéder à la séquence des types de données associés à la balise.
 
 L'objet renvoyé par la méthode sera le même que celui initialement passé au [constructeur `Tag()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Tag/Tag).

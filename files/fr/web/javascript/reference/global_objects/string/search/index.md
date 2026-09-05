@@ -3,8 +3,6 @@ title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 ---
 
-{{JSRef}}
-
 La méthode **`search()`** éxecute une recherche dans une chaine de caractères grâce à une expression rationnelle appliquée sur la chaîne courante.
 
 {{InteractiveExample("JavaScript Demo: String.search()")}}

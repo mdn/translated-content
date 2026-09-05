@@ -12,13 +12,13 @@ La méthode statique **`Math.round()`** retourne la valeur d'un nombre arrondi �
 
 ```js interactive-example
 console.log(Math.round(0.9));
-// Sortie attendue : 1
+// Résultat attendu : 1
 
 console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));
-// Sortie attendue : 6 6 5
+// Résultat attendu : 6 6 5
 
 console.log(Math.round(-5.05), Math.round(-5.5), Math.round(-5.95));
-// Sortie attendue : -5 -5 -6
+// Résultat attendu : -5 -5 -6
 ```
 
 ## Syntaxe

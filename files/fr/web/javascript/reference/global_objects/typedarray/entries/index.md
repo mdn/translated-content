@@ -3,8 +3,6 @@ title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 ---
 
-{{JSRef}}
-
 La méthode **`entries()`** renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.entries()")}}

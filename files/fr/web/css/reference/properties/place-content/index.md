@@ -3,10 +3,10 @@ title: Propriété CSS `place-content`
 short-title: place-content
 slug: Web/CSS/Reference/Properties/place-content
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-content`** permet d'aligner le contenu à la fois dans les directions bloc et en ligne (c'est-à-dire les propriétés {{CSSxRef("align-content")}} et {{CSSxRef("justify-content")}}) dans un système de mise en page pertinent tel que [la grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou [les boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-content`** permet d'aligner le contenu à la fois dans les directions bloc et en incise (c'est-à-dire les propriétés {{CSSxRef("align-content")}} et {{CSSxRef("justify-content")}}) dans un système de mise en page pertinent tel que [la grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou [les boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: place-content")}}
 
@@ -96,10 +96,10 @@ place-content: revert-layer;
 place-content: unset;
 ```
 
-La première valeur utilisée sera celle qui correspond à {{CSSxRef("align-content")}} et la seconde valeur correspondra à {{CSSxRef("justify-content")}}.
+La première valeur utilisée est celle qui correspond à {{CSSxRef("align-content")}} et la seconde valeur correspond à {{CSSxRef("justify-content")}}.
 
 > [!NOTE]
-> Si la deuxième valeur n'est pas présente, la première valeur indiquée sera également utilisée pour `justify-content`, à condition qu'elle soit valide pour les deux propriétés. Si elle est invalide pour l'une ou l'autre, la déclaration entière sera invalide.
+> Si la deuxième valeur n'est pas présente, la première valeur indiquée est également utilisée pour `justify-content`, à condition qu'elle soit valide pour les deux propriétés. Si elle est invalide pour l'une ou l'autre, la déclaration entière est invalide.
 
 ### Valeurs
 
@@ -116,9 +116,9 @@ La première valeur utilisée sera celle qui correspond à {{CSSxRef("align-cont
 - `center`
   - : Les éléments sont regroupés les uns contre les autres vers le centre du conteneur d'alignement.
 - `left`
-  - : Les éléments sont regroupés les uns contre les autres vers le bord gauche du conteneur d'alignement. Si l'axe de la propriété n'est pas parallèle à l'axe en ligne, cette valeur se comporte comme `start`.
+  - : Les éléments sont regroupés les uns contre les autres vers le bord gauche du conteneur d'alignement. Si l'axe de la propriété n'est pas parallèle à l'axe en incise, cette valeur se comporte comme `start`.
 - `right`
-  - : Les éléments sont regroupés les uns contre les autres vers le bord droit du conteneur d'alignement dans l'axe approprié. Si l'axe de la propriété n'est pas parallèle à l'axe en ligne, cette valeur se comporte comme `start`.
+  - : Les éléments sont regroupés les uns contre les autres vers le bord droit du conteneur d'alignement dans l'axe approprié. Si l'axe de la propriété n'est pas parallèle à l'axe en incise, cette valeur se comporte comme `start`.
 - `space-between`
   - : Les éléments sont répartis de manière égale à l'intérieur du conteneur d'alignement. L'espacement entre chaque paire d'éléments adjacents est le même. Le premier élément est aligné avec le bord de départ principal, et le dernier élément est aligné avec le bord de fin principal.
 - `baseline`, `first baseline`, `last baseline`

@@ -3,8 +3,6 @@ title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
 
-{{JSRef}}
-
 La méthode statique **`Reflect.deleteProperty()`** permet de supprimer des propriétés. Il agit comme l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete).
 
 {{InteractiveExample("JavaScript Demo: Reflect.deleteProperty()", "taller")}}

@@ -3,10 +3,10 @@ title: "Window : méthode focus()"
 short-title: focus()
 slug: Web/API/Window/focus
 l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 Demande à placer la fenêtre au premier plan. Cette opération peut échouer selon les paramètres utilisateur et la fenêtre n'est pas garantie d'être au premier plan avant la fin de l'exécution de cette méthode.
 

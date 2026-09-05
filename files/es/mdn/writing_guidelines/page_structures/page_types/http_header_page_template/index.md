@@ -68,7 +68,7 @@ l10n:
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar._
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 La primera frase de la página debe seguir este formato:
 

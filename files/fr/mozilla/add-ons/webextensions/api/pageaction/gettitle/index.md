@@ -3,8 +3,6 @@ title: pageAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
 ---
 
-{{AddonSidebar}}
-
 Obtient le titre de la page action.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

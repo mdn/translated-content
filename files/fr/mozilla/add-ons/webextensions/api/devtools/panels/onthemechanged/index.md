@@ -3,8 +3,6 @@ title: devtools.panels.onThemeChanged
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged
 ---
 
-{{AddonSidebar}}
-
 Remplacement quand le thème de devtools change
 
 ## Syntaxe

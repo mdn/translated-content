@@ -3,7 +3,7 @@ title: Propriété CSS `view-transition-scope`
 short-title: view-transition-scope
 slug: Web/CSS/Reference/Properties/view-transition-scope
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
 ---
 
 {{SeeCompatTable}}
@@ -90,7 +90,7 @@ body {
 
 section,
 .changez-moi {
-  border: 2px solid #666;
+  border: 2px solid #666666;
   padding: 10px;
 }
 

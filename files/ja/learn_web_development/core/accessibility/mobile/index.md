@@ -2,7 +2,7 @@
 title: モバイルのアクセシビリティ
 slug: Learn_web_development/Core/Accessibility/Mobile
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
@@ -175,42 +175,240 @@ VoiceOver を使ったウェブ閲覧を試してみましょう。
 
 7. 見出しを選択します。これで、上下にスワイプしてページ上の見出し間を移動できます。
 
-注: 利用可能な VoiceOver ジェスチャおよび iOS でのアクセシビリティテストに関するその他のヒントを網羅した詳細なリファレンスについては、 [Apple の VoiceOver のドキュメント](https://developer.apple.com/documentation/accessibility/voiceover/)（英語）を参照してください。
+注: 利用可能な VoiceOver ジェスチャおよび iOS でのアクセシビリティテストに関するその他のヒントを網羅した詳細なリファレンスについては、 [Apple の VoiceOver のドキュメント](https://developer.apple.com/documentation/accessibility/voiceover/)<sup>(英語)</sup>を参照してください。
 
 ## 制御機構
 
 CSS および JavaScript のアクセシビリティの記事では、特定の種類の制御機構に固有のイベントの概念を調べました（[マウスに特有のイベント](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#mouse-specific_events)を参照）。要約すると、他の制御機構は関連する機能をアクティブにできないため、これらはアクセシビリティの問題を引き起こします。
 
-例えば、[click](/ja/docs/Web/API/Element/click_event) イベントはアクセシビリティの点で優れています — 関連付けられているイベントハンドラーは、ハンドラーが設定されている要素をクリックするか、タブ移動して Enter / Return キーを押すか、タッチスクリーン端末でタップすることで起動できます。[simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) の例を試してみてください（[ライブで動いているのを見る](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)）。
+例えば、[click](/ja/docs/Web/API/Element/click_event) イベントはアクセシビリティの点で優れています — 関連付けられているイベントハンドラーは、ハンドラーが設定されている要素をクリックするか、タブ移動して Enter / Return キーを押すか、タッチスクリーン端末でタップすることで起動できます。以下の基本的なボタンの例を試して、その意味を確認してみてください。
 
-あるいは、[mousedown](/ja/docs/Web/API/Element/mousedown_event) や [mouseup](/ja/docs/Web/API/Element/mouseup_event) のようなマウス固有のイベントは問題を引き起こします — それらのイベントハンドラーはマウス以外の制御を使って呼び出すことはできません。
+```html hidden live-sample___basic-button
+<button>押してください</button>
+```
 
-キーボードまたはタッチで、[simple-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-box-drag.html) の例を制御しようとすると、問題が発生します（[ライブで例を見る](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)）。これは、次のようなコードを使用しているために発生します。
+```css hidden live-sample___basic-button
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  font-size: 150%;
+  line-height: 1.5;
+}
+```
+
+```js hidden live-sample___basic-button
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", () => {
+  alert("うわっ、痛っ！");
+});
+```
+
+{{embedlivesample("basic-button", "100%", "100")}}
+
+しかし、[mousedown](/ja/docs/Web/API/Element/mousedown_event) や [mouseup](/ja/docs/Web/API/Element/mouseup_event) のようなマウス固有のイベントは問題を引き起こします — それらのイベントハンドラーはマウス以外の制御を使って呼び出すことはできません。
+
+次の例では、次のコードを使用して、マウスで画面上のボックスをドラッグすることができるようにしています。
 
 ```js
-div.onmousedown = () => {
+div.addEventListener("mousedown", () => {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
-};
+});
 
-document.onmouseup = stopMove;
+document.addEventListener("mouseup", stopMove);
 ```
 
-他の形式の制御を有効にするには、異なるが同等のイベントを使用する必要があります — 例えば、タッチイベントはタッチ画面装置で機能します。
+```html hidden live-sample___mouse-drag live-sample___multi-drag
+<div></div>
+```
+
+```css hidden live-sample___mouse-drag live-sample___multi-drag
+html {
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+body {
+  background: #ffe;
+  margin: 0;
+}
+
+div {
+  background-color: #1fe200;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(0 0 0 / 0),
+    rgb(0 0 0 / 0.4)
+  );
+  width: 200px;
+  height: 150px;
+  border: 1px solid green;
+  position: absolute;
+}
+```
+
+```js hidden live-sample___mouse-drag
+document.body.width = window.innerWidth;
+document.body.height = window.innerHeight;
+
+let mouseX, mouseY;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+const div = document.querySelector("div");
+
+let initialMouseX = null;
+
+let initialMouseY = null;
+
+var initialBoxX, initialBoxY, rAF;
+
+div.addEventListener("mousedown", () => {
+  initialBoxX = div.offsetLeft;
+  initialBoxY = div.offsetTop;
+  movePanel();
+});
+
+document.addEventListener("mouseup", stopMove);
+
+function movePanel() {
+  if (initialMouseX === null) {
+    initialMouseX = mouseX;
+    initialMouseY = mouseY;
+  } else {
+    let mouseMoveX = mouseX - initialMouseX;
+    let mouseMoveY = mouseY - initialMouseY;
+
+    let offsetX = initialBoxX + mouseMoveX;
+    let offsetY = initialBoxY + mouseMoveY;
+    console.log(offsetX + " " + offsetY);
+
+    div.style.left = offsetX + "px";
+    div.style.top = offsetY + "px";
+  }
+
+  rAF = requestAnimationFrame(movePanel);
+}
+
+function stopMove() {
+  cancelAnimationFrame(rAF);
+
+  console.log("mousemove stopped");
+
+  initialMouseX = null;
+  initialMouseY = null;
+}
+```
+
+{{embedlivesample("mouse-drag", "100%", "400")}}
+
+ただし、タッチスクリーン端末で指を使ってドラッグしようとすると、うまくいきません。他の操作方法を有効にするには、異なるが同等のイベントを使用する必要があります。例えば、タッチスクリーン端末ではタッチイベントが機能します。
 
 ```js
-div.ontouchstart = (e) => {
+div.addEventListener("touchstart", (e) => {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   positionHandler(e);
   movePanel();
-};
+});
 
-panel.ontouchend = stopMove;
+document.addEventListener("touchend", stopMove);
 ```
 
-マウスイベントとタッチイベントを一緒に使用する方法を示す簡単な例を示しました — [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/multi-control-box-drag.html) を参照してください（[この例もライブで見てください](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html)）。
+```js hidden live-sample___multi-drag
+document.body.width = window.innerWidth;
+document.body.height = window.innerHeight;
+
+let posX, posY;
+
+document.addEventListener("mousemove", positionHandler);
+document.addEventListener("touchmove", positionHandler);
+
+function positionHandler(e) {
+  if (e.clientX && e.clientY) {
+    posX = e.clientX;
+    posY = e.clientY;
+  } else if (e.targetTouches) {
+    posX = e.targetTouches[0].clientX;
+    posY = e.targetTouches[0].clientY;
+    e.preventDefault();
+  }
+}
+
+const div = document.querySelector("div");
+
+let initialPosX = null;
+
+let initialPosY = null;
+
+let rAF;
+
+div.addEventListener("mousedown", () => {
+  initialBoxX = div.offsetLeft;
+  initialBoxY = div.offsetTop;
+  movePanel();
+});
+
+div.addEventListener("touchstart", (e) => {
+  initialBoxX = div.offsetLeft;
+  initialBoxY = div.offsetTop;
+  positionHandler(e);
+  movePanel();
+});
+
+document.addEventListener("mouseup", stopMove);
+document.addEventListener("touchend", stopMove);
+
+function movePanel() {
+  if (initialPosX === null) {
+    initialPosX = posX;
+    initialPosY = posY;
+  } else {
+    let posMoveX = posX - initialPosX;
+    let posMoveY = posY - initialPosY;
+
+    let offsetX = initialBoxX + posMoveX;
+    let offsetY = initialBoxY + posMoveY;
+
+    div.style.left = offsetX + "px";
+    div.style.top = offsetY + "px";
+  }
+
+  rAF = requestAnimationFrame(movePanel);
+}
+
+function stopMove() {
+  cancelAnimationFrame(rAF);
+
+  initialPosX = null;
+  initialPosY = null;
+}
+```
+
+更新版では、マウスによるドラッグとタッチ操作によるドラッグの両方に対応しています。
+
+{{embedlivesample("multi-drag", "100%", "400")}}
 
 > [!NOTE]
 > [ゲーム制御機構の実装](/ja/docs/Games/Techniques/Control_mechanisms)では、さまざまな制御機構を実装する方法を示す完全に機能する例も見ることができます。
@@ -234,7 +432,7 @@ panel.ontouchend = stopMove;
 
 #### ズームを無効にしない
 
-[ビューポート](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)を使用すると、ズームを無効にすることができます。常にリサイズ可能にして、{{htmlelement("head")}} で端末の幅にあわせるにはこうします:
+[ビューポート](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)を使用すると、ズームを無効にすることができます。常にリサイズ可能にして端末の幅に合わせるには、{{htmlelement("head")}} でこうします。
 
 ```html
 <meta name="viewport" content="width=device-width; user-scalable=yes" />
@@ -254,12 +452,62 @@ panel.ontouchend = stopMove;
 
 モバイル端末では、データを入力することは、デスクトップコンピューター上の同等の経験よりもユーザーにとってより面倒なことが多いです。タッチスクリーンの仮想キーボードや小型のモバイル物理キーボードよりも、デスクトップやラップトップのキーボードを使用してテキストをフォーム入力に入力する方が便利です。
 
-このため、必要なタイピングの量を最小限に抑えることを試みる価値があります。例として、通常のテキスト入力を使用して毎回ユーザーに役職を記入させるのではなく、最も一般的な選択肢を含む \<select> メニューを提供できます（データ入力の一貫性を保つのにも役立ちます）。そして、それ以外の値を入力するテキストフィールドを表示する「その他」選択肢を提供できます。[common-job-types.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/common-job-types.html) で、このアイデアの簡単な例を実際に見ることができます（[一般的な仕事の例をライブで見る](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)）。
+このため、必要なタイピングの量を最小限に抑えることを試みる価値があります。例として、通常のテキスト入力を使用して毎回ユーザーに役職を記入させるのではなく、最も一般的な選択肢を含む \<select> メニューを提供できます（データ入力の一貫性を保つのにも役立ちます）。そして、それ以外の値を入力するテキストフィールドを表示する「その他」選択肢を提供できます。このアイデアの簡単な例は、次の例で見ることができます。
 
-モバイルプラットフォームでの日付などの HTML5 フォームの入力タイプを使用することも考慮する価値があります。例えば、Android と iOS の両方で、端末エクスペリエンスに適した使用可能なウィジェットが表示されます。いくつかの例については [html5-form-examples.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/html5-form-examples.html) を参照してください（[HTML5 フォームの例をライブで見る](https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)） - これらをモバイル端末でロードして操作してみてください。例えば、
+```html hidden live-sample___select-text-combo
+<form>
+  <div>
+    <label for="job">仕事の種類:</label>
+    <select id="job" name="job">
+      <option value="">-- 仕事を選択 --</option>
+      <option value="butcher">肉屋</option>
+      <option value="baker">パン屋</option>
+      <option value="candle">燭台職人</option>
+      <option value="other">その他</option>
+    </select>
+  </div>
+  <div>
+    <label for="other-job">その他の仕事:</label>
+    <input type="text" name="other-job" id="other-job" />
+  </div>
+</form>
+```
 
-- 番号 (`number`)、電話番号 (`tel`)、電子メール (`email`) の入力では、番号や電話番号を入力するための適切な仮想キーボードを表示します。
+```css hidden live-sample___select-text-combo
+html {
+  font-family: sans-serif;
+}
+
+div {
+  margin-bottom: 10px;
+}
+```
+
+```js hidden live-sample___select-text-combo
+const select = document.querySelector("select");
+const other = document.querySelector("input");
+
+other.parentElement.style.display = "none";
+
+select.onchange = function () {
+  if (select.value === "other") {
+    other.parentElement.style.display = "block";
+  } else {
+    other.parentElement.style.display = "none";
+  }
+};
+```
+
+{{embedlivesample("select-text-combo", "100%", "80")}}
+
+同時に、モバイルプラットフォームでは（Android でも iOS でも）HTML フォームの入力型が適切に処理されるため、その使用を考えてみる価値があります。
+
+例えば、
+
+- 数値 (`number`)、電話番号 (`tel`)、電子メール (`email`) の入力では、数字や電話番号を入力するための適切な仮想キーボードを表示します。
 - 日時 (`date`, `time`) の入力では、日時を選択するための適切なピッカーを表示します。
+
+これらを試してみるには、[HTML5 の入力型](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)で利用できるライブサンプルをご覧ください。
 
 デスクトップとは別の解決策を提供したい場合は、機能検出を使用して、モバイル端末に常に別のマークアップを提供できます。より詳しい情報については[機能検出の記事](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)をチェックしてください。
 
@@ -269,7 +517,7 @@ panel.ontouchend = stopMove;
 
 ## 関連情報
 
-- [モバイルウェブ開発のためのガイドライン](https://www.smashingmagazine.com/2012/07/guidelines-for-mobile-web-development/)（英語） — モバイルウェブデザインのためのさまざまな技術を網羅した _Smashing Magazine_ の記事のリスト。
-- [サイトをタッチ端末で機能させる](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644)（英語） — タッチイベントを使用してモバイル端末で対話を機能させるための便利な記事。
+- [モバイルウェブ開発のためのガイドライン](https://www.smashingmagazine.com/2012/07/guidelines-for-mobile-web-development/)<sup>(英語)</sup> — モバイルウェブデザインのためのさまざまな技術を網羅した _Smashing Magazine_ の記事のリスト。
+- [サイトをタッチ端末で機能させる](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644)<sup>(英語)</sup> — タッチイベントを使用してモバイル端末で対話を機能させるための便利な記事。
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}

@@ -3,7 +3,7 @@ title: Propriété CSS `caret-animation`
 short-title: caret-animation
 slug: Web/CSS/Reference/Properties/caret-animation
 l10n:
-  sourceCommit: 00da2fc19d0c8c7cd2e91c78cf55e204cd94cf2b
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 {{SeeCompatTable}}
@@ -32,7 +32,7 @@ caret-animation: unset;
 
 ### Valeurs
 
-La propriété `caret-animation` est définie avec l'une des valeurs de mot-clé listées ci-dessous.
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : Le curseur clignote. Il s'agit de la valeur par défaut (initiale).

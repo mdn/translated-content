@@ -21,9 +21,9 @@ new Map([
   ["tata", undefined],
 ]).forEach(logMapElements);
 
-// Sortie attendue : "m[toto] = 3"
-// Sortie attendue : "m[truc] = [object Object]"
-// Sortie attendue : "m[tata] = undefined"
+// Résultat attendu : "m[toto] = 3"
+// Résultat attendu : "m[truc] = [object Object]"
+// Résultat attendu : "m[tata] = undefined"
 ```
 
 ## Syntaxe

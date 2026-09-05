@@ -2,10 +2,10 @@
 title: "Window : évènement load"
 slug: Web/API/Window/load_event
 l10n:
-  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 L'évènement **`load`** de l'interface {{DOMxRef("Window")}} est déclenché lorsque la page et toutes ses ressources dépendantes (telles que des feuilles de style, des scripts (y compris les scripts asynchrones, différés et les modules), des cadres intégrés et des images) sont complètement chargées, à l'exception de celles qui sont [chargées paresseusement](/fr/docs/Web/Performance/Guides/Lazy_loading#images_iframes_vidéos_et_audio).
 Cela contraste avec {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, qui est déclenché dès que le DOM de la page est chargé, sans attendre la fin du chargement des ressources.

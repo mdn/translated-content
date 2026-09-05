@@ -3,7 +3,7 @@ title: "HTMLVideoElement : évènement enterpictureinpicture"
 short-title: enterpictureinpicture
 slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
 l10n:
-  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("Picture-in-Picture API")}}
@@ -27,10 +27,6 @@ onenterpictureinpicture = (event) => { }
 Un objet {{DOMxRef("PictureInPictureEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
-
-## Propriétés de l'évènement
-
-Cette interface hérite également des propriétés de son parent {{DOMxRef("Event")}}.
 
 ## Exemples
 

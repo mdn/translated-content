@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/Instance
 original_slug: WebAssembly/JavaScript_interface/Instance
 ---
 
-{{WebAssemblySidebar}}
-
 Un objet **`WebAssembly.Instance`** représente un objet exécutable, avec un état, qui est une instance d'un [module WebAssembly](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module). Un objet `Instance` contient l'ensemble [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Guides/Exported_functions) qui permettent d'invoquer du code WebAssembly depuis du code JavaScript.
 
 ## Constructeur

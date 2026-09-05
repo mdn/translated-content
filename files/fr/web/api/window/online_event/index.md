@@ -3,10 +3,10 @@ title: "Window : évènement online"
 short-title: online
 slug: Web/API/Window/online_event
 l10n:
-  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 L'évènement **`online`** de l'interface {{DOMxRef("Window")}} se déclenche lorsque le navigateur obtient l'accès au réseau et que la valeur de {{DOMxRef("Navigator.onLine")}} passe à `true`.
 

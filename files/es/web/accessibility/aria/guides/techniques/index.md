@@ -17,12 +17,12 @@ l10n:
     <li><a href="/es/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">Cómo registrar errores relacionados con ARIA</a></li>
     <li class="toggle">
       <details><summary>Estados y propiedades de ARIA</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
+        {{ListSubpagesForSidebar("/es/docs/Web/Accessibility/ARIA/Attributes", 1)}}
       </details>
     </li>
     <li class="toggle">
       <details><summary>Roles WAI-ARIA</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
+        {{ListSubpagesForSidebar("/es/docs/Web/Accessibility/ARIA/Roles", 1)}}
       </details>
     </li>
   </ol>

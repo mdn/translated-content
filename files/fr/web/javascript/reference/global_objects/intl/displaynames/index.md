@@ -142,4 +142,4 @@ nomsDevises.of("CNY"); // "人民幣"
 ## Voir aussi
 
 - [Prothèse d'émulation de `Intl.DisplayNames` dans FormatJS <sup>(angl.)</sup>](https://formatjs.github.io/docs/polyfills/intl-displaynames/)
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}

@@ -3,8 +3,6 @@ title: String.prototype.strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
 ---
 
-{{JSRef}}{{deprecated_header}}
-
 La méthode **`strike()`** permet de créer un élément HTML {{HTMLElement("strike")}} qui permet d'afficher la chaîne comme un texte barré.
 
 ## Syntaxe

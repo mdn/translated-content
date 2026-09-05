@@ -16,13 +16,13 @@ function compoundOneYear(interestRate, currentVal) {
 }
 
 console.log(Math.E);
-// Sortie attendue : 2.718281828459045
+// Résultat attendu : 2.718281828459045
 
 console.log((1 + 1 / 1000000) ** 1000000);
-// Sortie attendue : 2.718280469 (approximativement)
+// Résultat attendu : 2.718280469 (approximativement)
 
 console.log(compoundOneYear(0.05, 100));
-// Sortie attendue : 105.12710963760242
+// Résultat attendu : 105.12710963760242
 ```
 
 ## Valeur

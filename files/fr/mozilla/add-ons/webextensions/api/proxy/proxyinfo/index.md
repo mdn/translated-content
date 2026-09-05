@@ -3,8 +3,6 @@ title: proxy.ProxyInfo
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo
 ---
 
-{{AddonSidebar}}
-
 Contient des informations sur un proxy. Cet objet, ou un tableau de ces objets, est renvoyé par le programme d'écoute à {{WebExtAPIRef("proxy.onRequest")}}. Il indique au navigateur si la requête doit être mandatée et, dans l'affirmative, quel proxy utiliser.
 
 ## Type

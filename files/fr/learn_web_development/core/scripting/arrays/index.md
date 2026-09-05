@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Arrays
 original_slug: Learn/JavaScript/First_steps/Arrays
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
 
 Dans le dernier article de ce module, nous examinerons les tableaux — une façon de stocker proprement une liste d'éléments de données sous un seul nom de variable. Ici nous verrons pourquoi c'est utile, puis nous apprendrons comment créer un tableau, y retrouver, y ajouter ou en enlever les éléments dedans, et quelques à‑côtés en bonus.
 

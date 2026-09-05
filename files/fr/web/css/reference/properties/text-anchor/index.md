@@ -33,7 +33,7 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
   - : Aligne le texte de manière à ce que le début de la chaîne de caractères textuelle soit aligné sur le point d'ancrage. Cet alignement est relatif au sens d'écriture du texte&nbsp;; ainsi, par exemple, dans une écriture de droite à gauche et de haut en bas, le texte est placé à gauche du point d'ancrage. Si le sens d'écriture du texte est vertical, comme c'est le cas pour de nombreuses langues asiatiques, le bord supérieur du texte est aligné sur le point d'ancrage.
 
 - `middle`
-  - : Aligne le texte de manière à ce que le centre (milieu) de la boîte en ligne de la chaîne de caractères textuelle soit aligné avec le point d'ancrage.
+  - : Aligne le texte de manière à ce que le centre (milieu) de la boîte en incise de la chaîne de caractères textuelle soit aligné avec le point d'ancrage.
 
 - `end`
   - : Aligne le texte de manière à ce que la fin de la chaîne de caractères textuelle soit alignée sur le point d'ancrage. Cet alignement est relatif au sens d'écriture du texte&nbsp;; ainsi, par exemple, dans une écriture de droite à gauche et de haut en bas, le texte est placé à droite du point d'ancrage. Si le sens d'écriture du texte est vertical, comme c'est le cas pour de nombreuses langues asiatiques, le bord inférieur du texte est aligné sur le point d'ancrage.

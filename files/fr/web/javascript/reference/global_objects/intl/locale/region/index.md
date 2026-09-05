@@ -48,5 +48,5 @@ console.log(locale.region); // "FR"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - [Tableau Unicode des régions <sup>(angl.)</sup>](https://www.unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html)

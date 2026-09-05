@@ -3,8 +3,6 @@ title: webRequest.onBeforeRedirect
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRedirect
 ---
 
-{{AddonSidebar}}
-
 Déclenché lorsqu'une redirection initiée par le serveur est sur le point de se produire.
 
 Notez que vous ne pouvez pas passer le `"blockage"` pour cet événement, donc vous ne pouvez pas modifier ou annuler la demande de cet événement : c'est uniquement à titre d'information.

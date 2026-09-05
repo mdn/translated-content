@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 337d60017f421e14f17bf8e9051d302b0fdb9b9b
 ---
 
-La méthode **`then()`** des instances {{JSxRef("Promise")}} prend jusqu'à deux arguments&nbsp;: des fonctions de rappel pour les cas de réussite et d'échec de la `Promise`. Elle stocke les fonctions de rappel dans la promesse sur laquelle elle est appelée et retourne immédiatement un autre objet {{JSxRef("Promise")}}, ce qui permet de [chaîner](/fr/docs/Web/JavaScript/Guide/Using_promises#chaînage_des_promesses) les appels à d'autres méthodes de promesse.
+La méthode **`then()`** des instances {{JSxRef("Promise")}} prend jusqu'à deux arguments&nbsp;: des fonctions de rappel pour les cas de complétion (<i lang="en">fulfilled</i> en anglais) et de rejet de la promesse (`Promise`). Elle stocke les fonctions de rappel dans la promesse sur laquelle elle est appelée et retourne immédiatement un autre objet {{JSxRef("Promise")}}, ce qui permet de [chaîner](/fr/docs/Web/JavaScript/Guide/Using_promises#chaînage_des_promesses) les appels à d'autres méthodes de promesse.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Promise.then()")}}
 
@@ -31,16 +31,16 @@ then(onFulfilled, onRejected)
 ### Paramètres
 
 - `onFulfilled`
-  - : Une fonction à exécuter de façon asynchrone lorsque cette promesse est tenue. Sa valeur de retour devient la valeur de réussite de la promesse retournée par `then()`. La fonction est appelée avec les arguments suivants&nbsp;:
+  - : Une fonction à exécuter de façon asynchrone lorsque cette promesse est complétée. Sa valeur de retour devient la valeur de complétion de la promesse retournée par `then()`. La fonction est appelée avec les arguments suivants&nbsp;:
     - `value`
-      - : La valeur avec laquelle la promesse a été tenue.
+      - : La valeur avec laquelle la promesse a été complétée.
 
-    Si ce n'est pas une fonction, elle est remplacée en interne par une fonction _identité_ (`(x) => x`) qui transmet simplement la valeur de réussite.
+    Si ce n'est pas une fonction, elle est remplacée en interne par une fonction _identité_ (`(x) => x`) qui transmet simplement la valeur de complétion.
 
 - `onRejected` {{Optional_Inline}}
-  - : Une fonction à exécuter de façon asynchrone lorsque cette promesse est rejetée. Sa valeur de retour devient la valeur de réussite de la promesse retournée par `then()`. La fonction est appelée avec les arguments suivants&nbsp;:
+  - : Une fonction à exécuter de façon asynchrone lorsque cette promesse est rompue (<i lang="en">rejected</i> en anglais). Sa valeur de retour devient la valeur de complétion de la promesse retournée par `then()`. La fonction est appelée avec les arguments suivants&nbsp;:
     - `reason`
-      - : La valeur avec laquelle la promesse a été rejetée.
+      - : La valeur avec laquelle la promesse a été rompue.
 
     Si ce n'est pas une fonction, elle est remplacée en interne par une fonction _lanceuse_ (`(x) => { throw x; }`) qui lance la raison du rejet qu'elle a reçue.
 
@@ -48,18 +48,18 @@ then(onFulfilled, onRejected)
 
 Retourne une nouvelle promesse ({{JSxRef("Promise")}}) immédiatement. Cette promesse retournée est toujours en attente lorsqu'elle est retournée, quel que soit l'état de la promesse actuelle.
 
-L'un des gestionnaires `onFulfilled` ou `onRejected` est exécuté pour gérer la réussite ou le rejet de la promesse actuelle. L'appel se produit toujours de manière asynchrone, même lorsque la promesse actuelle est déjà réglée. Le comportement de la promesse retournée par `then()` (appelée `p` dans la liste suivante) dépend du résultat de l'exécution du gestionnaire, selon un ensemble spécifique de règles. Si la fonction gestionnaire&nbsp;:
+L'un des gestionnaires `onFulfilled` ou `onRejected` est exécuté pour gérer la complétion ou le rejet de la promesse actuelle. L'appel se produit toujours de manière asynchrone, même lorsque la promesse actuelle est déjà acquittée (<i lang="en">settled</i> en anglais). Le comportement de la promesse retournée par `then()` (appelée `p` dans la liste suivante) dépend du résultat de l'exécution du gestionnaire, selon un ensemble spécifique de règles. Si la fonction gestionnaire&nbsp;:
 
-- retourne une valeur&nbsp;: `p` est tenue avec la valeur retournée comme sa valeur.
-- ne retourne rien&nbsp;: `p` est tenue avec `undefined` comme sa valeur.
-- lance une erreur&nbsp;: `p` est rejetée avec l'erreur lancée comme sa valeur.
-- retourne une promesse déjà tenue&nbsp;: `p` est tenue avec la valeur de cette promesse comme sa valeur.
-- retourne une promesse déjà rejetée&nbsp;: `p` est rejetée avec la valeur de cette promesse comme sa valeur.
-- retourne une autre promesse en attente&nbsp;: `p` est en attente et est tenue/rejetée avec la valeur de cette promesse immédiatement après que cette promesse est tenue/rejetée.
+- retourne une valeur&nbsp;: `p` est complétée avec la valeur retournée comme sa valeur.
+- ne retourne rien&nbsp;: `p` est complétée avec `undefined` comme sa valeur.
+- lance une erreur&nbsp;: `p` est rompue avec l'erreur lancée comme sa valeur.
+- retourne une promesse déjà complétée&nbsp;: `p` est complétée avec la valeur de cette promesse comme sa valeur.
+- retourne une promesse déjà rompue&nbsp;: `p` est rompue avec la valeur de cette promesse comme sa valeur.
+- retourne une autre promesse en attente&nbsp;: `p` est en attente et est complétée/rompue avec la valeur de cette promesse immédiatement après que cette promesse est complétée/rompue.
 
 ## Description
 
-La méthode `then()` permet de planifier l'exécution des fonctions de rappel pour gérer la résolution d'une promesse (que ce soit une réussite ou un échec). Il s'agit d'une méthode primitive pour les promesses&nbsp;: le protocole [<i lang="en">thenable</i>](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) attend de tous les objets semblables à une promesse qu'ils exposent une méthode `then()`, et les méthodes {{JSxRef("Promise/catch", "catch()")}} et {{JSxRef("Promise/finally", "finally()")}} fonctionnent toutes les deux en appelant la méthode `then()`.
+La méthode `then()` permet de planifier l'exécution des fonctions de rappel pour gérer la résolution d'une promesse (que ce soit une réussite ou un échec). Il s'agit d'une méthode primitive pour les promesses&nbsp;: le protocole [de semi-promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#semi-promesse) attend de tous les objets semblables à une promesse qu'ils exposent une méthode `then()`, et les méthodes {{JSxRef("Promise/catch", "catch()")}} et {{JSxRef("Promise/finally", "finally()")}} fonctionnent toutes les deux en appelant la méthode `then()`.
 
 Pour plus d'informations à propos du gestionnaire d'échec `siRejetée()`, voir la référence pour la méthode {{JSxRef("Promise/catch", "catch()")}}.
 
@@ -72,7 +72,9 @@ while (true) {
 }
 ```
 
-Les objets [thenable](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) qui apparaissent le long de la chaîne `then()` sont toujours [résolus](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#the_resolve_function) — le gestionnaire `onFulfilled` ne reçoit jamais un objet thenable, et tout thenable retourné par l'un ou l'autre des gestionnaires est toujours résolu avant d'être passé au gestionnaire suivant. Cela s'explique par le fait que lors de la construction de la nouvelle promesse, les fonctions `resolve` et `reject` passées par un `executor` sont sauvegardées, et lorsque la promesse actuelle est réglée, la fonction respective est appelée avec la valeur de réussite ou la raison du rejet. La logique de résolution provient de la fonction `resolve` passée par le constructeur {{JSxRef("Promise/Promise", "Promise()")}}.
+Si vous appelez la méthode `then()` deux fois sur le même objet promesse (au lieu de chaîner), alors cet objet promesse a deux paires de gestionnaires d'acquittement. Tous les gestionnaires attachés au même objet promesse sont toujours appelés dans l'ordre dans lequel ils ont été ajoutés. De plus, les deux promesses retournées par chaque appel de `then()` démarrent des chaînes séparées et n'attendent pas l'acquittement de l'autre.
+
+Les objets de [semi-promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#semi-promesse) qui apparaissent le long de la chaîne `then()` sont toujours [résolus](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#the_resolve_function) — le gestionnaire `onFulfilled` ne reçoit jamais un objet de semi-promesse, et toute semi-promesse retournée par l'un ou l'autre des gestionnaires est toujours résolue avant d'être passée au gestionnaire suivant. Cela s'explique par le fait que lors de la construction de la nouvelle promesse, les fonctions `resolve` et `reject` passées par un `executor` sont sauvegardées, et lorsque la promesse actuelle est acquittée, la fonction respective est appelée avec la valeur de complétion ou la raison du rejet. La logique de résolution provient de la fonction `resolve` passée par le constructeur {{JSxRef("Promise/Promise", "Promise()")}}.
 
 `then()` prend en charge la sous-classification, ce qui signifie qu'il peut être appelé sur des instances de sous-classes de `Promise`, et le résultat est une promesse du type de la sous-classe. Vous pouvez personnaliser le type de la valeur de retour grâce à la propriété [`[Symbol.species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species).
 
@@ -170,7 +172,7 @@ p2.then((valeur) => {
 });
 ```
 
-Un appel à `then()` retourne une promesse qui peut échouer si la fonction déclenche une erreur ou retourne une promesse rompue.
+Un appel à `then()` retourne une promesse qui peut se rompre si la fonction déclenche une erreur ou retourne une promesse rompue.
 
 ```js
 Promise.resolve()
@@ -199,7 +201,7 @@ Promise.resolve()
     throw new Error("Oh non !");
   })
   .catch((erreur) => {
-    console.error(`Fonction siRejetée() appelée : ${erreur.message}`);
+    console.error(`Fonction onRejected() appelée : ${erreur.message}`);
   })
   .then(() => {
     console.log(
@@ -215,21 +217,21 @@ Promise.reject()
   .then(
     () => 99,
     () => 42,
-  ) // siRejetée retourne 42 qui est empaqueté dans une promesse tenue
+  ) // onRejected retourne 42 qui est empaqueté dans une promesse tenue
   .then((solution) => console.log(`Résolue avec ${solution}`)); // Résolue avec 42
 ```
 
 Si `onFulfilled` retourne une promesse, la valeur de retour de `then()` est tenue/rompue selon l'état de cette promesse.
 
 ```js
-function resoudrePlusTard(resoudre, rejeter) {
+function resoudrePlusTard(resoudre, rompre) {
   setTimeout(() => {
     resoudre(10);
   }, 1000);
 }
-function rejeterPlusTard(resoudre, rejeter) {
+function romprePlusTard(resoudre, rompre) {
   setTimeout(() => {
-    rejeter(new Error("Erreur"));
+    rompre(new Error("Erreur"));
   }, 1000);
 }
 
@@ -244,13 +246,13 @@ p2.then(
   },
   (e) => {
     // N'est pas appelée
-    console.error("rejetée", e);
+    console.error("rompue", e);
   },
 );
 
 const p3 = p1.then(() => {
-  // On retourne une promesse qui est rejetée avec 'Erreur' après 1 seconde
-  return new Promise(rejeterPlusTard);
+  // On retourne une promesse qui est rompue avec 'Erreur' après 1 seconde
+  return new Promise(romprePlusTard);
 });
 p3.then(
   (v) => {
@@ -258,7 +260,7 @@ p3.then(
     console.log("résolue", v);
   },
   (e) => {
-    console.error("rejetée", e); // "rejetée", 'Erreur'
+    console.error("rompue", e); // "rompue", 'Erreur'
   },
 );
 ```
@@ -269,13 +271,13 @@ On peut enchaîner les appels des fonctions qui retournent des promesses.
 function obtenirDonnees() {
   // L'API fetch() retourne une promesse. Cette fonction
   // retourne également une promesse sauf qu'on effectue
-  // un traitement plus avancé sur la valeur de résolution
+  // un traitement plus avancé sur la valeur de complétion
   // de la promesse retournée.
-  return fetch("current-data.json").then((response) => {
-    if (response.headers.get("content-type") !== "application/json") {
+  return fetch("current-data.json").then((reponse) => {
+    if (reponse.headers.get("content-type") !== "application/json") {
       throw new TypeError();
     }
-    const j = response.json();
+    const j = reponse.json();
     // faire quelque chose avec j
 
     // La valeur de réussite fournie lorsqu'on
@@ -331,5 +333,5 @@ setTimeout(() => {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Promise")}}
+- L'objet natif {{JSxRef("Promise")}}
 - La méthode {{JSxRef("Promise.prototype.catch()")}}

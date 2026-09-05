@@ -3,18 +3,18 @@ title: En-tête DNT
 short-title: DNT
 slug: Web/HTTP/Reference/Headers/DNT
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 > [!NOTE]
 > La spécification DNT (Do Not Track) a été abandonnée. Voir {{DOMxRef("Navigator.doNotTrack")}} pour plus d'informations.
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`DNT`** «&nbsp;Ne Pas Suivre&nbsp;» (<i lang="en">Do Not Track</i> en anglais) indique la préférence de suivi de l'utilisateur·ice.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`DNT`** «&nbsp;Ne Pas Suivre&nbsp;» (<i lang="en">Do Not Track</i> en anglais) indique la préférence de suivi de l'utilisateur·ice.
 Il permet aux utilisateur·ice·s d'indiquer s'ils·elles préfèrent la confidentialité plutôt que du contenu personnalisé.
 
-DNT est obsolète au profit de [Global Privacy Control <sup>(angl.)</sup>](https://globalprivacycontrol.org/), qui est transmis aux serveurs via l'en-tête {{HTTPHeader("Sec-GPC")}} et accessible aux clients via {{DOMxRef("navigator.globalPrivacyControl")}}.
+DNT est obsolète au profit de [Global Privacy Control <sup>(angl.)</sup>](https://globalprivacycontrol.org/), qui est transmis aux serveurs avec l'en-tête {{HTTPHeader("Sec-GPC")}} et accessible aux clients avec {{DOMxRef("navigator.globalPrivacyControl")}}.
 
 <table class="properties">
   <tbody>

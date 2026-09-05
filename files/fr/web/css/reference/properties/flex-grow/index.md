@@ -3,7 +3,7 @@ title: Propriété CSS `flex-grow`
 short-title: flex-grow
 slug: Web/CSS/Reference/Properties/flex-grow
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`flex-grow`** définit le facteur de grossissement, qui indique quelle part de [**l'espace libre positif**](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios), s'il y en a, doit être attribuée à la [taille principale](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox#aparté_sur_le_modèle_flex) de l'élément flexible.
@@ -70,7 +70,7 @@ flex-grow: unset;
 
 ### Valeurs
 
-Cette propriété est définie par une valeur de type `<number>`&nbsp;:
+Cette propriété est définie par la valeur suivante&nbsp;:
 
 - `<number>`
   - : Un nombre ({{CSSxRef("&lt;number&gt;")}}). Les valeurs négatives sont invalides. La valeur par défaut est 0, ce qui empêche l'agrandissement de l'élément flexible.

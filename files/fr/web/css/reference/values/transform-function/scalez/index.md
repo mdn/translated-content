@@ -127,7 +127,7 @@ scaleZ(s)
   <tbody>
     <tr>
       <td colspan="2">
-        This transformation applies to the 3D space and can't be represented on the plane.
+        Cette transformation s'applique à l'espace tridimensionnel et ne peut pas être représentée sur un plan.
       </td>
       <td>
         <math display="block">

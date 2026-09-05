@@ -3,7 +3,7 @@ title: Iterator.zip()
 short-title: zip()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/zip
 l10n:
-  sourceCommit: c534ba0cb925657de5e99ab8c540eae31afd9382
+  sourceCommit: 38c09bffe4654e74bfd225d28575afe42d4fe344
 ---
 
 {{JSRef}}{{SeeCompatTable}}
@@ -92,7 +92,7 @@ const numbers = (function* () {
     yield n++;
   }
 })();
-for (const [index, [name, age]] of Iterator.zip([numbers(), ages])) {
+for (const [index, [name, age]] of Iterator.zip([numbers, ages])) {
   console.log(`${index}: ${name} is ${age} years old.`);
 }
 
@@ -102,7 +102,7 @@ for (const [index, [name, age]] of Iterator.zip([numbers(), ages])) {
 // 2: Evelyn is 35 years old.
 ```
 
-`numbers()` は `0` から始まる増加する数値を生成する無限イテレーターです。`Iterator.zip()` はデフォルトで最短の入力反復可能オブジェクトが終了すると停止するため、ループは正確に 3 回反復処理します。`numbers()` イテレーターはループ終了後に適切に閉じられるため、無限ループは発生しません。
+`numbers` は `0` から始まる増加する数値を生成する無限イテレーターです。`Iterator.zip()` はデフォルトで最短の入力反復可能オブジェクトが終了すると停止するため、ループは正確に 3 回反復処理します。`numbers` イテレーターはループ終了後に適切に閉じられるため、無限ループは発生しません。
 
 ### キーと値のリストからマップを作成
 

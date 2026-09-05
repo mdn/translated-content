@@ -12,10 +12,10 @@ La méthode statique **`Math.sumPrecise()`** prend un itérable de nombres et re
 
 ```js interactive-example
 console.log(Math.sumPrecise([1, 2]));
-// Sortie attendue : 3
+// Résultat attendu : 3
 
 console.log(Math.sumPrecise([1e20, 0.1, -1e20]));
-// Sortie attendue : 0.1
+// Résultat attendu : 0.1
 ```
 
 ## Syntaxe

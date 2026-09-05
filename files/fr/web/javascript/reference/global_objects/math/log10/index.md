@@ -18,16 +18,16 @@ La méthode statique **`Math.log10()`** retourne le logarithme de base 10 d'un n
 
 ```js interactive-example
 console.log(Math.log10(100000));
-// Sortie attendue : 5
+// Résultat attendu : 5
 
 console.log(Math.log10(2));
-// Sortie attendue : 0.3010299956639812
+// Résultat attendu : 0.3010299956639812
 
 console.log(Math.log10(1));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(Math.log10(0));
-// Sortie attendue : -Infinity
+// Résultat attendu : -Infinity
 ```
 
 ## Syntaxe

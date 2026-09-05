@@ -106,5 +106,5 @@ for (const sousChaine of sousChaines) {
 
 - [La prothèse d'émulation de `Iterator.prototype.windows` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-chunking)
 - [La prothèse d'émulation es-shims de `Iterator.prototype.windows` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.chunks()")}}

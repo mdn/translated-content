@@ -3,8 +3,6 @@ title: tabs.getZoomSettings()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getZoomSettings
 ---
 
-{{AddonSidebar}}
-
 Obtient les paramètres de zoom actuels pour un onglet spécifié.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

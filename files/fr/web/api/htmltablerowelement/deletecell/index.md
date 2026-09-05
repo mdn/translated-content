@@ -3,7 +3,7 @@ title: "HTMLTableRowElement : méthode deleteCell()"
 short-title: deleteCell()
 slug: Web/API/HTMLTableRowElement/deleteCell
 l10n:
-  sourceCommit: 712156520cf3aaca9f9b37d9a82831063eb9c87b
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
@@ -19,7 +19,7 @@ deleteCell(index)
 ### Paramètres
 
 - `index`
-  - : L'indice de la cellule à supprimer. Si `index` vaut `-1` ou est égal au nombre de cellules, la dernière cellule de la ligne est supprimée.
+  - : L'indice de la cellule à supprimer dans la collection {{DOMxRef("HTMLTableRowElement.cells", "cells")}}. Si `index` vaut `-1`, la dernière cellule de la ligne est supprimée.
 
 ### Valeur de retour
 
@@ -28,7 +28,7 @@ Aucune ({{JSxRef("undefined")}}).
 ### Exceptions
 
 - `IndexSizeError` {{DOMxRef("DOMException")}}
-  - : Levée si `index` est supérieur au nombre de cellules ou s'il est inférieur à `-1`.
+  - : Levée si `index` est supérieur ou égal au nombre de cellules ou s'il est inférieur à `-1`.
 
 ## Exemples
 
@@ -125,4 +125,5 @@ removeButton.addEventListener("click", () => {
 ## Voir aussi
 
 - La méthode {{DOMxRef("HTMLTableElement.insertRow()")}}
+- La méthode {{DOMxRef("HTMLTableRowElement.insertCell()")}}
 - L'élément HTML représentant les cellules&nbsp;: {{DOMxRef("HTMLTableCellElement")}}

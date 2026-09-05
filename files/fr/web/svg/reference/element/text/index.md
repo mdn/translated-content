@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/text
 original_slug: Web/SVG/Element/text
 ---
 
-{{SVGRef}}
-
 L'élément SVG `text` définit un élément graphique contenant du texte. Notez qu'il est possible d'y appliquer un dégradé, un motif, un tracé spécifique (clipping path), un masque ou un filtre.
 
 Si du texte est écrit dans le SVG sans être intégré dans un balise \<text>, il ne sera pas affiché. Le texte n'est pas _caché_ par défaut, la propriété display ne le montre simplement pas.

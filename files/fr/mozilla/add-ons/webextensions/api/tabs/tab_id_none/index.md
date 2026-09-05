@@ -3,8 +3,6 @@ title: tabs.TAB_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE
 ---
 
-{{AddonSidebar}}
-
 Une valeur d'ID spéciale donnée aux onglets qui ne sont pas des onglets du navigateur (par exemple, des onglets dans les fenêtres devtools).
 
 ## Compatibilité des navigateurs

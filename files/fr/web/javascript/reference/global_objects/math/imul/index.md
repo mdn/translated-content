@@ -12,16 +12,16 @@ La méthode statique **`Math.imul()`** retourne le résultat de la multiplicatio
 
 ```js interactive-example
 console.log(Math.imul(3, 4));
-// Sortie attendue : 12
+// Résultat attendu : 12
 
 console.log(Math.imul(-5, 12));
-// Sortie attendue : -60
+// Résultat attendu : -60
 
 console.log(Math.imul(0xffffffff, 5));
-// Sortie attendue : -5
+// Résultat attendu : -5
 
 console.log(Math.imul(0xfffffffe, 5));
-// Sortie attendue : -10
+// Résultat attendu : -10
 ```
 
 ## Syntaxe

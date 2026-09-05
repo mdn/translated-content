@@ -95,9 +95,9 @@ La valeur définie a un impact sur l'apparence des propriétés suivantes&nbsp;:
 
 ## Exemples
 
-### Fragments de boîte en ligne
+### Fragments de boîte en incise
 
-Un élément en ligne avec une décoration de boîte peut avoir une apparence inattendue lorsqu'il contient des sauts de ligne à cause de la valeur initiale `slice`.
+Un élément en incise avec une décoration de boîte peut avoir une apparence inattendue lorsqu'il contient des sauts de ligne à cause de la valeur initiale `slice`.
 L'exemple suivant montre l'effet de l'ajout de `box-decoration-break: clone` à un {{HTMLElement("span")}} qui contient des balises {{HTMLElement("br")}}&nbsp;:
 
 ```css hidden
@@ -141,7 +141,7 @@ span {
 </p>
 ```
 
-{{EmbedLiveSample("Fragments de boîte en ligne", "100%", 210)}}
+{{EmbedLiveSample("Fragments de boîte en incise", "100%", 210)}}
 
 ### Fragments de boîte en bloc
 

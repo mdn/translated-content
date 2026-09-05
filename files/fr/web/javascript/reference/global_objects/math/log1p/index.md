@@ -18,16 +18,16 @@ La fonction **`Math.log1p()`** retourne le logarithme népérien (en base {{JSxR
 
 ```js interactive-example
 console.log(Math.log1p(1));
-// Sortie attendue : 0.6931471805599453
+// Résultat attendu : 0.6931471805599453
 
 console.log(Math.log1p(0));
-// Sortie attendue : 0
+// Résultat attendu : 0
 
 console.log(Math.log1p(-1));
-// Sortie attendue : -Infinity
+// Résultat attendu : -Infinity
 
 console.log(Math.log1p(-2));
-// Sortie attendue : NaN
+// Résultat attendu : NaN
 ```
 
 ## Syntaxe
