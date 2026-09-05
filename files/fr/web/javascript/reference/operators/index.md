@@ -1,9 +1,9 @@
 ---
 title: Expressions et opérateurs
 slug: Web/JavaScript/Reference/Operators
+l10n:
+  sourceCommit: 5c8d0ac21db572edebbd4ad428efca0af3ec1734
 ---
-
-{{jsSidebar("Operators")}}
 
 Ce chapitre documente l'ensemble des opérateurs, expressions et mots-clés pour le langage JavaScript.
 
@@ -13,220 +13,247 @@ Pour une liste triée par ordre alphabétique, voir sur la barre de navigation �
 
 ### Expressions primaires
 
-Mots-clés de base et expressions générales en JavaScript.
+Les mots-clés de base et les expressions générales en JavaScript. Ces expressions ont la plus haute priorité (plus élevée que celle des [opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
-- [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this)
-  - : Le mot-clé `this` fait référence à une propriété spéciale indiquant le contexte d'exécution.
-- [`function`](/fr/docs/Web/JavaScript/Reference/Operators/function)
+- {{JSxRef("this")}}
+  - : Le mot-clé `this` fait référence à une propriété spéciale d'un contexte d'exécution.
+- [Littéraux](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#littéraux)
+  - : Littéraux de base `null`, booléens, nombres et chaînes de caractères.
+- {{JSxRef("Array", "[]")}}
+  - : Syntaxe d'initialisation/littérale d'un tableau.
+- {{JSxRef("Operators/Object_initializer", "{}")}}
+  - : Syntaxe d'initialisation/littérale d'un objet.
+- {{JSxRef("Operators/function", "function")}}
   - : Le mot-clé `function` définit une expression de fonction.
-- [`class`](/fr/docs/Web/JavaScript/Reference/Operators/class)
+- {{JSxRef("Operators/class", "class")}}
   - : Le mot-clé `class` définit une expression de classe.
-- [`function*`](/fr/docs/Web/JavaScript/Reference/Operators/function*)
-  - : Le mot-clé `function*` définit une expression de générateur.
-- [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield)
-  - : Ce mot-clé permet de suspendre ou de reprendre l'exécution d'une fonction génératrice.
-- [`yield*`](/fr/docs/Web/JavaScript/Reference/Operators/yield*)
-  - : Ce mot-clé délègue à une autre fonction génératrice ou à un objet itérable.
-- [`async function`](/fr/docs/Web/JavaScript/Reference/Operators/async_function)
-  - : Le couple de mots-clés `async function` définit une expression de fonction asynchrone.
-- [`await`](/fr/docs/Web/JavaScript/Reference/Operators/await)
-  - : Ce mot-clé permet de suspendre et de reprendre l'exécution d'une fonction asynchrone et d'attendre la résolution ou l'échec de la promesse.
-- [`[]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
-  - : Syntaxe d'initialisation littérale pour les tableaux.
-- [`{}`](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer)
-  - : Syntaxe d'initialisation littérale pour les objets.
-- [`/ab+c/i`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-  - : Syntaxe pour les expressions littérales d'expressions rationnelles.
-- [`( )`](/fr/docs/Web/JavaScript/Reference/Operators/Grouping)
-  - : Opérateur de groupement.
+- {{JSxRef("Operators/function*", "function*")}}
+  - : Le mot-clé `function*` définit une expression de fonction génératrice.
+- {{JSxRef("Operators/async_function", "async function")}}
+  - : Le mot-clé `async function` définit une expression de fonction asynchrone.
+- {{JSxRef("Operators/async_function*", "async function*")}}
+  - : Les mots-clés `async function*` définissent une expression de fonction génératrice asynchrone.
+- {{JSxRef("RegExp", "/ab+c/i")}}
+  - : Syntaxe littérale des expressions régulières.
+- {{JSxRef("Template_literals", "`string`")}}
+  - : Syntaxe des littéraux gabarits.
+- {{JSxRef("Operators/Grouping", "( )")}}
+  - : Opérateur de regroupement.
 
 ### Expression « vers la gauche »
 
 Les valeurs situées à gauche sont la cible de l'affectation.
 
-- [Accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-  - : Les opérateurs d'accès aux membres permettent d'accéder à une propriété ou à une méthode d'un objet.
-    (cela regroupe `objet.propriete` et `objet["propriete"]`).
-- [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new)
-  - : L'opérateur `new` crée une instance grâce à un constructeur.
-- [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target)
-  - : Pour les constructeurs, `new.target` fait référence au constructeur invoqué avec [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new).
-- [`import.meta`](/fr/docs/Web/JavaScript/Reference/Operators/import.meta)
-  - : Un objet qui expose des métadonnées spécifiques au contexte pour un module JavaScript.
-- [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super)
-  - : Le mot-clé `super` appelle le constructeur parent.
-- [`...obj`](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-  - : La syntaxe de décomposition permet de développer une expression là où plusieurs arguments (dans le cas des appels à une fonction) ou là où plusieurs éléments (dans le cas des tableaux) sont attendus.
+- {{JSxRef("Operators/Property_accessors", "Accesseurs de propriété", "", 1)}}
+  - : Les opérateurs d'accès aux membres permettent d'accéder à une propriété ou à une méthode d'un objet (`object.property` et `object["property"]`).
+- {{JSxRef("Operators/Optional_chaining", "?.")}}
+  - : L'opérateur de chaînage optionnel retourne `undefined` au lieu de provoquer une erreur si une référence est [&équivalent à nulle](/fr/docs/Glossary/Nullish) ([`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+- {{JSxRef("new")}}
+  - : L'opérateur `new` crée une instance d'un constructeur.
+- {{JSxRef("Operators/new.target", "new.target")}}
+  - : Dans les constructeur, `new.target` fait référence au constructeur qui est invoqué par {{JSxRef("new")}}.
+- {{JSxRef("Operators/import.meta", "import.meta")}}
+  - : Un objet exposant des métadonnées spécifiques au contexte à un module JavaScript.
+- {{JSxRef("Operators/super", "super")}}
+  - : Le mot-clé `super` appelle le constructeur parent ou permet d'accéder aux propriétés de l'objet parent.
+- {{JSxRef("Operators/import", "import()")}}
+  - : La syntaxe `import()` permet de charger un module de manière asynchrone et dynamique dans un environnement qui n'est pas nécessairement un module.
 
 ### Incrémentation et décrémentation
 
 Des opérateurs préfixes ou suffixes pour incrémenter/décrémenter.
 
-- [`A++`](/fr/docs/Web/JavaScript/Reference/Operators/Increment)
+- {{JSxRef("Operators/Increment", "A++")}}
   - : L'opérateur d'incrémentation suffixe.
-- [`A--`](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
+- {{JSxRef("Operators/Decrement", "A--")}}
   - : L'opérateur de décrémentation suffixe.
-- [`++A`](/fr/docs/Web/JavaScript/Reference/Operators/Increment)
+- {{JSxRef("Operators/Increment", "++A")}}
   - : L'opérateur d'incrémentation préfixe.
-- [`--A`](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
+- {{JSxRef("Operators/Decrement", "--A")}}
   - : L'opérateur de décrémentation préfixe.
 
 ### Opérateurs unaires
 
 Une opération unaire est une opération qui ne manipule qu'un seul opérande.
 
-- [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete)
-  - : L'opérateur `delete` permet de supprimer une propriété d'un objet.
-- [`void`](/fr/docs/Web/JavaScript/Reference/Operators/void)
-  - : L'opérateur `void` permet d'ignorer la valeur de retour d'une expression.
-- [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof)
+- {{JSxRef("delete")}}
+  - : L'opérateur `delete` supprime une propriété dans un objet.
+- {{JSxRef("Operators/void", "void")}}
+  - : L'opérateur `void` évalue une expression et ignore sa valeur de retour.
+- {{JSxRef("Operators/typeof", "typeof")}}
   - : L'opérateur `typeof` détermine le type d'un objet donné.
-- [`+`](/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus)
-  - : L'opérateur unaire `+` convertit son opérande en une valeur de type `number`.
-- [`-`](/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-  - : L'opérateur unaire `-` convertit son opérande en nombre puis prend son opposé.
-- [`~`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT)
-  - : L'opérateur binaire NON.
-- [`!`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_NOT)
-  - : L'opérateur logique NON.
+- {{JSxRef("Operators/Unary_plus", "+")}}
+  - : L'opérateur plus unaire convertit son opérande en type `Number`.
+- {{JSxRef("Operators/Unary_negation", "-")}}
+  - : L'opérateur de négation unaire convertit son opérande en type `Number`, puis le rend négatif.
+- {{JSxRef("Operators/Bitwise_NOT", "~")}}
+  - : L'opérateur NOT binaire.
+- {{JSxRef("Operators/Logical_NOT", "!")}}
+  - : L'opérateur NOT logique.
+- {{JSxRef("Operators/await", "await")}}
+  - : Met en pause puis reprend une fonction asynchrone et attend que la promesse soit complétée/rompue.
 
 ### Opérateurs arithmétiques
 
-Les opérateurs arithmétiques utilisent des valeurs numériques (littérales ou variables) pour leurs opérandes et renvoient une seule valeur numérique en résultat.
+Les opérateurs arithmétiques prennent des valeurs numériques (littéraux ou variables) comme opérandes et retournent une seule valeur numérique.
 
-- [`+`](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
-  - : L'opérateur d'addition.
-- [`-`](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction)
-  - : L'opérateur de soustraction.
-- [`/`](/fr/docs/Web/JavaScript/Reference/Operators/Division)
-  - : L'opérateur de division.
-- [`*`](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication)
-  - : L'opérateur de multiplication.
-- [`%`](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
-  - : L'opérateur du reste.
-- [`**`](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- {{JSxRef("Operators/Exponentiation", "**")}}
   - : L'opérateur d'exponentiation.
+- {{JSxRef("Operators/Multiplication", "*")}}
+  - : L'opérateur de multiplication.
+- {{JSxRef("Operators/Division", "/")}}
+  - : L'opérateur de division.
+- {{JSxRef("Operators/Remainder", "%")}}
+  - : L'opérateur de reste.
+- {{JSxRef("Operators/Addition", "+")}} (Plus)
+  - : L'opérateur d'addition.
+- {{JSxRef("Operators/Subtraction", "-")}}
+  - : L'opérateur de soustraction.
 
 ### Opérateurs relationnels
 
 Un opérateur de comparaison compare ses opérandes et renvoie une valeur booléenne en fonction de la vérité de cette comparaison.
 
-- [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in)
-  - : L'opérateur `in` détermine la présence d'une propriété donnée au sein d'un objet.
-- [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof)
-  - : L'opérateur `instanceof` détermine si un objet est une instance d'un autre objet.
-- [`<`](/fr/docs/Web/JavaScript/Reference/Operators/Less_than)
-  - : L'opérateur d'infériorité strict.
-- [`>`](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- {{JSxRef("Operators/Less_than", "&lt;")}} (Moins que)
+  - : L'opérateur d'infériorité stricte.
+- {{JSxRef("Operators/Greater_than", "&gt;")}} (Plus que)
   - : L'opérateur de supériorité stricte.
-- [`<=`](/fr/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+- {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
   - : L'opérateur d'infériorité.
-- [`>=`](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
   - : L'opérateur de supériorité.
+- {{JSxRef("instanceof")}}
+  - : L'opérateur `instanceof` détermine si un objet est une instance d'un autre objet.
+- {{JSxRef("Operators/in", "in")}}
+  - : L'opérateur `in` détermine la présence d'une propriété donnée au sein d'un objet.
 
 > [!NOTE]
-> `=>` n'est pas un opérateur mais la notation utilisée pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> `=>` n'est [pas un opérateur](#que_sont_les_opérateurs), mais la notation utilisée pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Opérateurs d'égalité
 
 Le résultat de l'évaluation fournie par un opérateur d'égalité est toujours un booléen, fonction de la vérité de la comparaison effectuée.
 
-- [`==`](/fr/docs/Web/JavaScript/Reference/Operators/Equality)
+- {{JSxRef("Operators/Equality", "==")}}
   - : L'opérateur d'égalité.
-- [`!=`](/fr/docs/Web/JavaScript/Reference/Operators/Inequality)
+- {{JSxRef("Operators/Inequality", "!=")}}
   - : L'opérateur d'inégalité.
-- [`===`](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- {{JSxRef("Operators/Strict_equality", "===")}}
   - : L'opérateur d'égalité stricte.
-- [`!==`](/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- {{JSxRef("Operators/Strict_inequality", "!==")}}
   - : L'opérateur d'inégalité stricte.
 
 ### Opérateurs de décalage binaires
 
 Ces opérations permettent de décaler les bits de la représentation binaire de l'opérande.
 
-- [`<<`](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift)
-  - : Opérateur de décalage binaire à gauche.
-- [`>>`](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift)
-  - : Opérateur de décalage binaire à droite.
-- [`>>>`](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
-  - : Opérateur de décalage binaire à droite non signé.
+- {{JSxRef("Operators/Left_shift", "&lt;&lt;")}}
+  - : L'opérateur de décalage binaire à gauche.
+- {{JSxRef("Operators/Right_shift", "&gt;&gt;")}}
+  - : L'opérateur de décalage binaire à droite.
+- {{JSxRef("Operators/Unsigned_right_shift", "&gt;&gt;&gt;")}}
+  - : L'opérateur de décalage binaire à droite non signé.
 
 ### Opérateurs binaires booléens
 
-Ces opérateurs manipulent leurs opérandes comme des ensembles de 32 bits et renvoient des valeurs numériques standard.
+Les opérateurs binaires traitent leurs opérandes comme un ensemble de 32 bits (zéros et uns) et retournent des valeurs numériques standard en JavaScript.
 
-- [`&`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
-  - : Opérateur ET/AND binaire.
-- [`|`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
-  - : Opérateur OU/OR binaire.
-- [`^`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
-  - : Opérateur OU exclusif/XOR binaire.
+- {{JSxRef("Operators/Bitwise_AND", "&amp;")}}
+  - : ET/AND binaire.
+- {{JSxRef("Operators/Bitwise_OR", "|")}}
+  - : OU/OR binaire.
+- {{JSxRef("Operators/Bitwise_XOR", "^")}}
+  - : OU exclusif/XOR binaire.
 
 ### Opérateurs logiques
 
-Les opérateurs logiques sont généralement utilisés avec des valeurs booléennes, quand c'est le cas, la valeur de retour de l'expression est une valeur booléenne.
+Les opérateurs logiques manipulent des valeurs booléennes (logiques) et ont un comportement de [court-circuit](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence#court-circuiter).
 
-- [`&&`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-  - : Opérateur logique ET/AND.
-- [`||`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-  - : Opérateur logique OU/OR.
-- [`??`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-  - : Opérateur de coalescence des nuls.
+- {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
+  - : ET/AND logique.
+- {{JSxRef("Operators/Logical_OR", "||")}}
+  - : OU/OR logique.
+- {{JSxRef("Operators/Nullish_coalescing", "??")}}
+  - : L'opérateur de coalescence des nuls.
 
-### Opérateur conditionnel ternaire
+### Opérateur conditionnel (ternaire)
 
-- [`(condition ? ifTrue : ifFalse)`](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
-  - : L'opérateur conditionnel renvoie une valeur parmi deux selon la valeur logique de la condition portée par le premier opérande.
-
-### Opérateur de chaînage optionnel
-
-- [`?.`](/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-  - : L'opérateur de chaînage optionnel renvoie `undefined` plutôt que de causer une erreur si une référence vaut [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
+  - : L'opérateur conditionnel retourne une valeur parmi deux selon la valeur logique de la condition portée par le premier opérande.
 
 ### Opérateurs d'affectation
 
 Un opérateur d'affectation permet d'affecter une valeur à son opérande gauche en fonction de la valeur de son opérande droit.
 
-- [`=`](/fr/docs/Web/JavaScript/Reference/Operators/Assignment)
-  - : Opérateur d'affectation.
-- [`*=`](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)
-  - : Opérateur de multiplication et d'affectation.
-- [`**=`](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)
-  - : Opérateur d'exponentiation et d'affectation.
-- [`/=`](/fr/docs/Web/JavaScript/Reference/Operators/Division_assignment)
-  - : Opérateur de division et d'affectation.
-- [`%=`](/fr/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)
-  - : Opérateur de reste et d'affectation.
-- [`+=`](/fr/docs/Web/JavaScript/Reference/Operators/Addition_assignment)
-  - : Opérateur d'addition et d'affectation.
-- [`-=`](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)
-  - : Opérateur de soustraction et d'affectation
-- [`<<=`](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
-  - : Opérateur de décalage à gauche et d'affectation.
-- [`>>=`](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
-  - : Opérateur de décalage à droite et d'affectation.
-- [`>>>=`](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
-  - : Opérateur de décalage à droite non signé et d'affectation.
-- [`&=`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
-  - : Opérateur binaire ET et d'affectation.
-- [`^=`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
-  - : Opérateur binaire OU exclusif et d'affectation.
-- [`|=`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
-  - : Opérateur binaire OU et d'affectation.
-- [`&&=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
-  - : Opérateur booléen ET et d'affectation.
-- [`||=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
-  - : Opérateur booléen OU et d'affectation.
-- [`??=`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
-  - : Opérateur d'affectation et de logique nulle.
-- [`[a, b] = [1, 2]`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
-  [`{a, b} = {a:1, b:2}`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
-  - : L'affectation par décomposition permet d'affecter les propriétés d'un tableau ou d'un objet à des variables en utilisant une syntaxe similaire à celle des littéraux pour les tableaux et les objets.
+- {{JSxRef("Operators/Assignment", "=")}}
+  - : L'opérateur d'affectation.
+- {{JSxRef("Operators/Multiplication_assignment", "*=")}}
+  - : L'opérateur de multiplication et d'affectation.
+- {{JSxRef("Operators/Division_assignment", "/=")}}
+  - : L'opérateur de division et d'affectation.
+- {{JSxRef("Operators/Remainder_assignment", "%=")}}
+  - : L'opérateur de reste et d'affectation.
+- {{JSxRef("Operators/Addition_assignment", "+=")}}
+  - : L'opérateur d'addition et d'affectation.
+- {{JSxRef("Operators/Subtraction_assignment", "-=")}}
+  - : L'opérateur de soustraction et d'affectation.
+- {{JSxRef("Operators/Left_shift_assignment", "&lt;&lt;=")}}
+  - : L'opérateur de décalage binaire à gauche et d'affectation.
+- {{JSxRef("Operators/Right_shift_assignment", "&gt;&gt;=")}}
+  - : L'opérateur de décalage binaire à droite et d'affectation.
+- {{JSxRef("Operators/Unsigned_right_shift_assignment", "&gt;&gt;&gt;=")}}
+  - : L'opérateur de décalage binaire à droite non signé et d'affectation.
+- {{JSxRef("Operators/Bitwise_AND_assignment", "&amp;=")}}
+  - : L'opérateur ET/AND binaire et d'affectation.
+- {{JSxRef("Operators/Bitwise_XOR_assignment", "^=")}}
+  - : L'opérateur OU exclusif/XOR binaire et d'affectation.
+- {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
+  - : L'opérateur OU/OR binaire et d'affectation.
+- {{JSxRef("Operators/Exponentiation_assignment", "**=")}}
+  - : L'opérateur d'exponentiation et d'affectation.
+- {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
+  - : L'opérateur ET/AND logique et d'affectation.
+- {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
+  - : L'opérateur OU/OR logique et d'affectation.
+- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
+  - : L'opérateur de coalescence des nuls et d'affectation.
+- [`[a, b] = arr`, `{ a, b } = obj`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
+  - : L'affectation par déstructuration permet d'assigner les propriétés d'un tableau ou d'un objet à des variables en utilisant une syntaxe qui ressemble à celle des littéraux de tableau ou d'objet.
+
+### Les opérateurs de générateur
+
+- {{JSxRef("Operators/yield", "yield")}}
+  - : Met en pause et reprend une fonction génératrice.
+- {{JSxRef("Operators/yield*", "yield*")}}
+  - : Délègue à une autre fonction génératrice ou à un objet itérable.
+
+### La syntaxe de propagation
+
+- {{JSxRef("Operators/Spread_syntax", "...obj")}}
+  - : La syntaxe de propagation permet à un itérable, tel qu'un tableau ou une chaîne de caractères, d'être développé dans des endroits où zéro ou plusieurs arguments (pour les appels de fonction) ou éléments (pour les littéraux de tableau) sont attendus. Dans un littéral d'objet, la syntaxe de propagation énumère les propriétés d'un objet et ajoute les paires clé-valeur à l'objet en cours de création.
 
 ### Opérateur virgule
 
-- [`,`](/fr/docs/Web/JavaScript/Reference/Operators/Comma_operator)
-  - : L'opérateur virgule permet d'évaluer plusieurs expressions dans une seule instruction et renvoie le résultat de la dernière expression.
+- {{JSxRef("Operators/Comma_operator", ",")}}
+  - : L'opérateur virgule permet d'évaluer plusieurs expressions dans une seule instruction et retourne le résultat de la dernière expression.
+
+## Que sont les opérateurs ?
+
+Comme l'explique la section [Que sont les instructions, les déclarations et les expressions&nbsp;?](/fr/docs/Web/JavaScript/Reference/Statements#que_sont_les_instructions_les_déclarations_et_les_expressions), une expression est un élément fondamental qui s'évalue en une valeur. Les instructions, les déclarations et les expressions peuvent toutes définir des emplacements précis où les expressions sont acceptées. Lorsqu'une expression contient des emplacements pour d'autres expressions imbriquées, les parties qui ne sont pas des emplacements sont appelées des opérateurs.
+
+Par exemple, la syntaxe d'une expression appelée [addition](/fr/docs/Web/JavaScript/Reference/Operators/Addition) est `expression + expression` (si vous consultez la spécification, les opérandes sont appelés _expression additive_ et _expression multiplicative_, qui sont tous deux des sous-ensembles _d'expression_, mais il s'agit du mécanisme de la spécification pour définir la [priorité et l'associativité](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence), ce qui ne concerne pas notre propos). En dehors des deux emplacements d'expression, l'entité de code introduite est simplement `+`&nbsp;: le terme _opérateur d'addition_. De même, la syntaxe de l'expression de [production](/fr/docs/Web/JavaScript/Reference/Operators/yield) est `yield expression`, donc `yield` est appelé l'opérateur. Autrement dit, chaque opérateur correspond à une expression.
+
+MDN considère également les expressions sans emplacements, comme [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), comme des opérateurs selon la définition ci-dessus, bien que nous les appelions presque toujours «&nbsp;syntaxe&nbsp;» ou «&nbsp;expression&nbsp;».
+
+Une expression n'a pas besoin de prendre un nombre fixe d'emplacements. Par exemple, l'expression littérale de tableau `[expression, expression, expression]` peut prendre un nombre arbitraire d'emplacements d'expression. La partie `[,,]` peut être appelée un «&nbsp;opérateur&nbsp;». Le MDN évite cet usage, mais vous pouvez le rencontrer dans des langages de programmation fonctionnelle comme [Haskell <sup>(angl.)</sup>](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html).
+
+La définition des opérateurs devient moins précise avec certaines autres entités de code&nbsp;: que se passe-t-il si une expression possède un emplacement qui n'est pas une expression, ou si une entité de code combinée à une expression ne forme pas une expression&nbsp;? Appelons-nous tout de même cette entité de code un opérateur&nbsp;?
+
+- Dans l'expression du [chaînage optionnel](/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining) `toto?.truc`, `toto` est une expression, mais `truc` doit être un identifiant et ne s'évalue pas en une valeur. Considérons-nous toujours `?.` comme un opérateur&nbsp;?
+- Dans l'expression de la [fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) `arg => body`, `body` peut être une expression (bien qu'il puisse également s'agir d'un corps de bloc), et `arg` est simplement une liste d'arguments. Considérons-nous toujours `=>` comme un opérateur&nbsp;?
+- Dans la [syntaxe de propagation](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) `...toto`, `toto` est une expression, mais l'ensemble n'est pas une expression, car il ne s'évalue pas en une valeur — il n'a de sens que dans certaines autres expressions comme les appels de fonction, les littéraux de tableau et les littéraux d'objet. Considérons-nous toujours `...` comme un opérateur&nbsp;?
+
+Le terme «&nbsp;opérateur&nbsp;» n'est pas défini avec précision en JavaScript, donc MDN ne donne pas de réponse définitive. Nous regroupons toutes ces constructions sous «&nbsp;Opérateurs&nbsp;», mais nous évitons de les désigner officiellement comme des opérateurs. De nombreux concepts utiles concernant les opérateurs, comme la [priorité](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence), s'appliquent tout de même à ces constructions, quelle que soit leur nature exacte.
 
 ## Spécifications
 
@@ -238,4 +265,4 @@ Un opérateur d'affectation permet d'affecter une valeur à son opérande gauche
 
 ## Voir aussi
 
-- [Précédence des opérateurs en JavaScript](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
+- [Précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
