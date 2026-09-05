@@ -93,5 +93,5 @@ console.log(formatter.formatRangeToParts(startRange, endRange));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.NumberFormat")}}
+- L'objet natif {{JSxRef("Intl.NumberFormat")}}
 - La méthode {{JSxRef("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}

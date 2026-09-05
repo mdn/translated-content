@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`overflow-inline`** définit ce qu'il faut afficher lorsque le contenu dépasse les bords en ligne d'une boîte. Cela peut être rien, une barre de défilement ou le contenu débordant.
+La propriété [CSS](/fr/docs/Web/CSS) **`overflow-inline`** définit ce qu'il faut afficher lorsque le contenu dépasse les bords en incise (<i lang="en">inline</i> en anglais) d'une boîte. Cela peut être rien, une barre de défilement ou le contenu débordant.
 
 > [!NOTE]
 > La propriété `overflow-inline` correspond à {{CSSxRef("overflow-y")}} ou {{CSSxRef("overflow-x")}} selon le mode d'écriture du document.
@@ -34,13 +34,13 @@ overflow-inline: unset;
 Cette propriété est définie par l'une des valeurs de mot-clé {{CSSxRef("overflow_value", "&lt;overflow&gt;")}} suivantes&nbsp;:
 
 - `visible`
-  - : Le contenu n'est pas rogné et peut être affiché en dehors des limites en ligne de la boîte.
+  - : Le contenu n'est pas rogné et peut être affiché en dehors des limites en incise de la boîte.
 - `hidden`
-  - : Le contenu qui dépasse est masqué afin de ne pas dépasser dans l'axe en ligne. Aucune barre de défilement n'est affichée.
+  - : Le contenu qui dépasse est masqué afin de ne pas dépasser dans l'axe en incise. Aucune barre de défilement n'est affichée.
 - `clip`
   - : Le contenu qui dépasse est rogné sur le bord de dépassement de l'élément, défini avec la propriété {{CSSxRef("overflow-clip-margin")}}.
 - `scroll`
-  - : Le contenu est rogné si nécessaire selon l'axe en ligne pour tenir dans la boîte (de remplissage). Les navigateurs affichent des barres de défilement que le contenu soit rogné ou non (on évite ainsi d'avoir des barres qui apparaissent/disparaissent lorsque le contenu change). Les imprimantes peuvent imprimer le contenu qui dépasse.
+  - : Le contenu est rogné si nécessaire selon l'axe en incise pour tenir dans la boîte (de remplissage). Les navigateurs affichent des barres de défilement que le contenu soit rogné ou non (on évite ainsi d'avoir des barres qui apparaissent/disparaissent lorsque le contenu change). Les imprimantes peuvent imprimer le contenu qui dépasse.
 - `auto`
   - : Le comportement de cette valeur dépend de l'agent utilisateur. Si le contenu tient dans la boîte de remplissage, elle se comporte comme `visible` mais établit un nouveau contexte de formatage. Les navigateurs de bureau affichent des barres de défilement si le contenu dépasse.
 
@@ -54,7 +54,7 @@ Cette propriété est définie par l'une des valeurs de mot-clé {{CSSxRef("over
 
 ## Exemples
 
-### Définir le comportement du débordement en ligne
+### Définir le comportement du débordement en incise
 
 #### HTML
 
@@ -121,7 +121,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Définir le comportement du débordement en ligne", "100%", 270)}}
+{{EmbedLiveSample("Définir le comportement du débordement en incise", "100%", 270)}}
 
 ## Spécifications
 

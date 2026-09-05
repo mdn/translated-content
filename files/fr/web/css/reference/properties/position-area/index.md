@@ -13,7 +13,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`position-area`** permet de positionner
 Si un élément n'a pas d'élément d'ancrage par défaut, ou n'est pas un élément positionné absolument, cette propriété n'a aucun effet.
 
 > [!NOTE]
-> Cette propriété était à l'origine nommée et prise en charge dans les navigateurs Chromium sous le nom de `inset-area`, avec les mêmes valeurs de propriété. Les deux noms de propriété seront pris en charge pendant un certain temps, à des fins de compatibilité ascendante.
+> Cette propriété était à l'origine nommée et prise en charge dans les navigateurs Chromium sous le nom de `inset-area`, avec les mêmes valeurs de propriété. Les deux noms de propriété sont pris en charge pendant un certain temps, à des fins de compatibilité ascendante.
 
 ## Syntaxe
 
@@ -71,7 +71,7 @@ La propriété `position-area` fournit une alternative à la fonction `anchor()`
 
 ![La grille de la zone de position, comme décrit ci-dessous](position-area.svg)
 
-Les cases de la grille sont réparties en lignes et colonnes&nbsp;:
+Les cases de la grille sont réparties en incises (<i lang="en">inline</i> en anglais) et colonnes&nbsp;:
 
 - Les trois lignes sont représentées par les [valeurs physiques](/fr/docs/Web/CSS/Reference/Values/position-area_value#mots-clés_de_la_grille_physique) `top`, `center` et `bottom`. Elles ont également des [équivalents logiques](/fr/docs/Web/CSS/Reference/Values/position-area_value#mots-clés_logiques) tels que `block-start`, `center` et `block-end`, et des [équivalents de coordonnées](/fr/docs/Web/CSS/Reference/Values/position-area_value#mots-clés_de_la_grille_par_coordonnées) — `y-start`, `center` et `y-end`.
 - Les trois colonnes sont représentées par les valeurs physiques `left`, `center` et `right`. Elles ont également des équivalents logiques tels que `inline-start`, `center` et `inline-end`, et des équivalents de coordonnées — `x-start`, `center` et `x-end`.
@@ -85,14 +85,14 @@ Par exemple&nbsp;:
 - Vous pouvez définir une valeur de ligne et une valeur de colonne pour placer l'élément positionné dans une seule case de la grille spécifique — par exemple, `top left` (équivalent logique `start start`) ou `bottom center` (équivalent logique `end center`) placera l'élément positionné dans la case en haut à droite ou au centre en bas.
 - Vous pouvez définir une valeur de ligne ou de colonne plus une valeur `span-*` pour couvrir deux ou trois cases. La première valeur définit la ligne ou la colonne dans laquelle placer l'élément positionné, le plaçant initialement au centre, et l'autre définit les autres cases de cette ligne ou colonne à couvrir. Par exemple&nbsp;:
   - `top span-left` fait que l'élément positionné est placé au centre de la ligne du haut et s'étend sur les cases du centre et de la gauche de cette ligne.
-  - `block-end span-inline-end` fait que l'élément positionné est placé au centre de la ligne de fin de bloc et s'étend sur les cases du centre et de la fin en ligne de cette ligne.
+  - `block-end span-inline-end` fait que l'élément positionné est placé au centre de la ligne de fin de bloc et s'étend sur les cases du centre et de la fin en incise de cette ligne.
   - `bottom span-all` et `y-end span-all` font que l'élément positionné est placé au centre de la ligne du bas et s'étend sur trois cases, dans ce cas les cases de gauche, du centre et de droite de la ligne du bas.
 
 Pour des informations détaillées sur les fonctionnalités des ancres, leur utilisation et la propriété `position-area`, consultez le module [de positionnement des ancres CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [Utilisation du positionnement des ancres CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using), en particulier la section sur [définir une `position-area`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#setting_a_position-area).
 
 ### Ajuster le comportement par défaut
 
-Lorsque une valeur {{CSSxRef("position-area_value", "&lt;position-area&gt;")}} est définie sur un élément positionné, certaines de ses propriétés verront leur comportement par défaut ajusté pour fournir un alignement par défaut approprié.
+Lorsque une valeur {{CSSxRef("position-area_value", "&lt;position-area&gt;")}} est définie sur un élément positionné, certaines de ses propriétés voient leur comportement par défaut ajusté pour fournir un alignement par défaut approprié.
 
 #### Valeur `normal` des propriétés d'auto-alignement
 
@@ -101,19 +101,19 @@ La valeur `normal` des propriétés d'auto-alignement, y compris {{CSSxRef("alig
 - Si la valeur de `position-area` définit la région centrale dans un axe, l'alignement par défaut dans cet axe est `anchor-center`.
 - Sinon, le comportement est l'opposé de la région définie par la propriété `position-area`. Par exemple, si la valeur de `position-area` définit la région de début de son axe, l'alignement par défaut dans cet axe est `end`.
 
-Par exemple, si le `writing-mode` est défini sur `horizontal-tb`, `position-area: top span-x-start` fait que l'élément positionné est placé au centre de la ligne du haut et s'étend sur les cases du centre et du début de cette ligne. Dans ce cas, les propriétés d'auto-alignement auront par défaut `align-self: end` et `justify-self: anchor-center`.
+Par exemple, si le `writing-mode` est défini sur `horizontal-tb`, `position-area: top span-x-start` fait que l'élément positionné est placé au centre de la ligne du haut et s'étend sur les cases du centre et du début de cette ligne. Dans ce cas, les propriétés d'auto-alignement ont par défaut `align-self: end` et `justify-self: anchor-center`.
 
 #### Propriétés d'encart et valeurs
 
-Lorsque un élément positionné par ancre est positionné à l'aide de la propriété `position-area`, toutes les {{Glossary("inset properties", "propriétés d'encart")}} définies, telles que {{CSSxRef("top")}} ou {{CSSxRef("inset-inline-end")}}, définissent des décalages par rapport à la zone de position. Certaines autres valeurs de propriété, comme [`max-block-size: 100%`](/fr/docs/Web/CSS/Reference/Properties/max-block-size), seront également relatives à la zone de position. Toutes les propriétés d'encart définies ou par défaut sur `auto` se comporteront comme si leur valeur était définie sur `0`.
+Lorsque un élément positionné par ancre est positionné à l'aide de la propriété `position-area`, toutes les {{Glossary("inset properties", "propriétés d'encart")}} définies, telles que {{CSSxRef("top")}} ou {{CSSxRef("inset-inline-end")}}, définissent des décalages par rapport à la zone de position. Certaines autres valeurs de propriété, comme [`max-block-size: 100%`](/fr/docs/Web/CSS/Reference/Properties/max-block-size), sont également relatives à la zone de position. Toutes les propriétés d'encart définies ou par défaut sur `auto` se comportent comme si leur valeur est définie sur `0`.
 
 ### Digression sur la largeur des éléments positionnés
 
-Si l'élément positionné n'a pas de taille spécifique définie, sa taille par défaut sera sa {{Glossary("Intrinsic_Size", "taille intrinsèque")}}, mais elle sera également affectée par la taille de la grille de la zone de position.
+Si l'élément positionné n'a pas de taille spécifique définie, sa taille par défaut est sa {{Glossary("Intrinsic_Size", "taille intrinsèque")}}, mais elle est également affectée par la taille de la grille de la zone de position.
 
-Si l'élément positionné est placé dans une seule cellule haut-centre, bas-centre ou centre-centre, sa taille en bloc sera la même que celle du bloc contenant l'ancre, s'étendant vers le haut, le bas ou dans les deux directions respectivement. L'élément positionné s'alignera avec la case de la grille définie mais adoptera la même largeur que l'élément ancre. Cependant, il ne permettra pas à son contenu de déborder — sa largeur minimale sera son `min-content` (comme défini par la largeur de son mot le plus long).
+Si l'élément positionné est placé dans une seule cellule haut-centre, bas-centre ou centre-centre, sa taille en bloc est la même que celle du bloc contenant l'ancre, s'étendant vers le haut, le bas ou dans les deux directions respectivement. L'élément positionné s'aligne avec la case de la grille définie mais adopte la même largeur que l'élément ancre. Cependant, il ne permet pas à son contenu de déborder — sa largeur minimale est son `min-content` (comme défini par la largeur de son mot le plus long).
 
-Si l'élément positionné est placé dans toute autre case unique de la grille (par exemple avec `position-area: top left`) ou est défini pour s'étendre sur deux cases ou plus (par exemple en utilisant `position-area: bottom span-all`), il s'alignera avec la zone de grille définie mais se comportera comme s'il avait une largeur ({{CSSxRef("width")}}) de `max-content` définie dessus. Il est dimensionné en fonction de la taille de son bloc contenant, qui est la taille qui lui est imposée lorsqu'il est défini sur `position: fixed`. Il s'étendra aussi large que le contenu textuel, bien qu'il puisse également être contraint par le bord du `<body>`.
+Si l'élément positionné est placé dans toute autre case unique de la grille (par exemple avec `position-area: top left`) ou est défini pour s'étendre sur deux cases ou plus (par exemple en utilisant `position-area: bottom span-all`), il s'aligne avec la zone de grille définie mais se comporte comme s'il a une largeur ({{CSSxRef("width")}}) de `max-content` définie dessus. Il est dimensionné en fonction de la taille de son bloc contenant, qui est la taille qui lui est imposée lorsqu'il est défini sur `position: fixed`. Il s'étend aussi large que le contenu textuel, bien qu'il puisse également être contraint par le bord du `<body>`.
 
 ### Utiliser `position-area` pour positionner des fenêtres contextuelles
 
@@ -144,7 +144,7 @@ Dans cet exemple, un élément positionné est attaché et positionné par rappo
 
 #### HTML
 
-Le HTML inclut un bloc ({{HTMLElement("div")}}) et un paragraphe ({{HTMLElement("p")}}). Le `<p>` sera positionné par rapport au `<div>` avec CSS. Nous incluons également un bloc de style qui sera rendu visible. Tous les éléments sont définis pour être directement modifiables avec l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).
+Le HTML inclut un bloc ({{HTMLElement("div")}}) et un paragraphe ({{HTMLElement("p")}}). Le `<p>` est positionné par rapport au `<div>` avec CSS. Nous incluons également un bloc de style qui est rendu visible. Tous les éléments sont définis pour être directement modifiables avec l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 
 ```html-nolint
 <div class="ancre" contenteditable="true">⚓︎</div>
@@ -289,9 +289,9 @@ Nous avons également inclus deux formulaires contenant les éléments HTML {{HT
 
 #### CSS
 
-Dans le CSS, nous déclarons d'abord le `<div>` `ancre` comme un élément d'ancrage en lui attribuant un nom d'ancrage via la propriété {{CSSxRef("anchor-name")}}.
+Dans le CSS, nous déclarons d'abord le `<div>` `ancre` comme un élément d'ancrage en lui attribuant un nom d'ancrage avec la propriété {{CSSxRef("anchor-name")}}.
 
-L'élément positionné est associé à l'élément d'ancrage en définissant son nom d'ancrage comme valeur de la propriété {{CSSxRef("position-anchor")}} de l'élément positionné. Nous lui donnons également une position initiale avec `position-area: top left`&nbsp;; cela sera remplacé lorsque de nouvelles valeurs seront sélectionnées dans le menu `<select>`. Enfin, nous définissons son {{CSSxRef("opacity")}} à `0.8`, de sorte que lorsque l'élément positionné reçoit une valeur `position-area` qui le place au-dessus de l'ancre, vous pouvez toujours voir la position des éléments les uns par rapport aux autres.
+L'élément positionné est associé à l'élément d'ancrage en définissant son nom d'ancrage comme valeur de la propriété {{CSSxRef("position-anchor")}} de l'élément positionné. Nous lui donnons également une position initiale avec `position-area: top left`&nbsp;; c'est remplacé lorsque de nouvelles valeurs sont sélectionnées dans le menu `<select>`. Enfin, nous définissons son {{CSSxRef("opacity")}} à `0.8`, de sorte que lorsque l'élément positionné reçoit une valeur `position-area` qui le place au-dessus de l'ancre, vous pouvez toujours voir la position des éléments les uns par rapport aux autres.
 
 ```css hidden
 .ancre {
@@ -387,7 +387,7 @@ const inputElemContainer = document.querySelector(
 const inputElem = document.querySelector("#position-area-personnalise");
 const checkboxElem = document.querySelector("#writing-mode-checkbox");
 
-// Empêche le formulaire de se soumettre lorsque la touche Entrée est enfoncée
+// Empêche le formulaire de s'envoyer lorsque la touche Entrée est enfoncée
 positionAreaForm.addEventListener("submit", (e) => {
   e.preventDefault();
 });

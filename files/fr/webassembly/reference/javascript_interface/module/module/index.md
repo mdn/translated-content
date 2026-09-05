@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/Module/Module
 original_slug: WebAssembly/JavaScript_interface/Module/Module
 ---
 
-{{WebAssemblySidebar}}
-
 Le constructeur **`WebAssembly.Module()`** crée un nouvel objet `Module` contenant du code WebAssembly sans état qui a déjà été compilé par le navigateur et qui peut efficacement [être partagé avec des workers](/fr/docs/Web/API/Worker/postMessage) et être instancié plusieurs fois.
 
 Le constructeur `WebAssembly.Module()` peut être appelé de façon synchrone afin de compiler le code binaire WebAssembly correspondant. Toutefois, la méthode principale pour obtenir un `Module` consiste à utiliser une fonction de compilation asynchrone comme [`WebAssembly.compile()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/compile_static).

@@ -5,8 +5,6 @@ slug: Web/JavaScript/Reference/Global_Objects/String/italics
 
 {{JSRef}}
 
-{{deprecated_header}}
-
 ## Resumen
 
 Provoca que una cadena ponga en cursiva, como si estuviese dentro de una etiqueta {{HTMLElement("i")}}.

@@ -3,7 +3,7 @@ title: "Content-Security-Policy : directive connect-src"
 short-title: connect-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/connect-src
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
 ---
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`connect-src`** restreint les URL qui peuvent être chargées en utilisant des interfaces de programmation. Les API suivantes sont contrôlées par cette directive&nbsp;:
@@ -32,7 +32,7 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`connect-src
     <tr>
       <th scope="row">Solution de repli {{CSP("default-src")}}</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
+        Oui, si cette directive est absente, l'agent utilisateur consulte la directive <code>default-src</code>.
       </td>
     </tr>
   </tbody>
@@ -65,22 +65,22 @@ Soit cet en-tête CSP&nbsp;:
 Content-Security-Policy: connect-src https://example.com/
 ```
 
-Les connexions suivantes seront bloquées et ne se chargeront pas&nbsp;:
+Les connexions suivantes sont bloquées et ne se chargent pas&nbsp;:
 
 ```html
-<a ping="https://hors-example.com" href="/">Lien</a>
+<a ping="https://not-example.com" href="/">Lien</a>
 <script>
-  const reponse = fetch("https://hors-example.com/");
+  const reponse = fetch("https://not-example.com/");
 
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://hors-example.com/");
+  xhr.open("GET", "https://not-example.com/");
   xhr.send();
 
-  const ws = new WebSocket("wss://hors-example.com/");
+  const ws = new WebSocket("wss://not-example.com/");
 
-  const es = new EventSource("https://hors-example.com/");
+  const es = new EventSource("https://not-example.com/");
 
-  navigateur.sendBeacon("https://hors-example.com/", {/* … */});
+  navigateur.sendBeacon("https://not-example.com/", {/* … */});
 </script>
 ```
 

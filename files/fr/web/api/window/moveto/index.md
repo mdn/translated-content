@@ -3,10 +3,10 @@ title: "Window : méthode moveTo()"
 short-title: moveTo()
 slug: Web/API/Window/moveTo
 l10n:
-  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 La méthode **`moveTo()`** de l'interface {{DOMxRef("Window")}} déplace la fenêtre actuelle vers les coordonnées définies.
 
@@ -54,7 +54,7 @@ function origin() {
 2. Vous ne pouvez pas déplacer une fenêtre ou un onglet lorsqu'il se trouve dans une fenêtre avec plus d'un onglet.
 
 > [!NOTE]
-> Cette fonction pourrait ne pas déplacer la fenêtre de manière synchrone.
+> Cette fonction peut ne pas déplacer la fenêtre de manière synchrone.
 > Dans certains environnements (comme Wayland ou les appareils mobiles), il se peut qu'elle ne déplace pas du tout la fenêtre. Actuellement, il n'existe aucun moyen d'écouter un évènement de déplacement, voir [Ticket #7693 du Groupe de travail CSS <sup>(angl.)</sup>](https://github.com/w3c/csswg-drafts/issues/7693).
 
 ## Voir aussi

@@ -1,11 +1,10 @@
 ---
 title: React を始める
+short-title: React 入門
 slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 52a81d8138473b6ac4bec77d0be4261cb0b76d41
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -101,6 +100,10 @@ JSX の詳細については、React チームの [JSX でマークアップを�
 
 [既存のプロジェクトに React を追加する](https://ja.react.dev/learn/add-react-to-an-existing-project)には、いくつかの [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) を HTML ファイルにコピーすることで可能ですが、 Vite を使用することで、より多くの時間をアプリの構築に費やすことができ、セットアップに費やす時間を減らすことができます。
 
+> [!NOTE]
+> Scrimba の [First React Code](https://scrimba.com/learn-react-c0e/~03uo?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>の scrim に沿って読み終えれば、一切ローカル環境の設定を行うことなく、Reactのコードを書き始めることができます。
+> 続ける前にお気軽にお試しください。
+
 ### 必要条件
 
 Vite を使用するには、[Node.js](https://nodejs.org/en/) がインストールされている必要があります。Vite 5.0 の時点では、少なくとも Node のバージョン18以降が要求されており、できる限り最新の長期サポート (LTS) バージョンを実行するのがよい考えです。2023 年 10 月 24 日現在、ノード 20 が最新の LTS バージョンです。Node には npm（Node パッケージマネージャ）が含まれています。
@@ -115,7 +118,7 @@ node -v
 
 npm の代替として Yarn パッケージマネージャを使用することもできますが、この一連のチュートリアルでは npm を使用していることを想定します。npm と yarn の詳細情報は[パッケージ管理の基本](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)を参照してください。
 
-Windows を使用している場合、このチュートリアルで言及されている端末コマンドを使用するには、Unix / macOS 端末と同等のソフトウェアをインストールする必要があります。 **Gitbash** （[git for Windows のツールセット](https://gitforwindows.org/)の一部として提供）または **[Linux 用の Windows サブシステム](https://learn.microsoft.com/windows/wsl/about)** (**WSL**) の両方が適しています。これら、および一般的な端末コマンドの詳細については、[コマンドライン短期集中講座](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)を参照してください。
+Windows を使用している場合、このチュートリアルで言及されている端末コマンドを使用するには、Unix / macOS 端末と同等のソフトウェアをインストールする必要があります。 **Git Bash** （[git for Windows のツールセット](https://gitforwindows.org/)の一部として提供）または **[Linux 用の Windows サブシステム](https://learn.microsoft.com/windows/wsl/about)** (**WSL**) の両方が適しています。これら、および一般的な端末コマンドの詳細については、[コマンドライン短期集中講座](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)を参照してください。
 
 また、このチュートリアルを読み終えて作業する際には、React と ReactDOM は Firefox、Microsoft Edge、Safari、Chrome のようなかなり新しいブラウザーでなければ動作しないアプリを作成することも念頭に置いてください。
 
@@ -209,8 +212,8 @@ React では、**コンポーネント**はアプリケーション全体の一�
 
 ```jsx
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
 import "./App.css";
 
 function App() {
@@ -253,8 +256,8 @@ export default App;
 
 ```jsx
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
 import "./App.css";
 ```
 
@@ -320,25 +323,25 @@ export default App;
 `src/main.jsx` を開きましょう。`<App />` コンポーネントを使用しているのがわかります。このファイルはアプリのエントリーポイントであり、最初は次のようになっています。
 
 ```jsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import "./index.css";
+import App from "./App.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
     <App />
-  </React.StrictMode>,
+  </StrictMode>,
 );
 ```
 
-`App.jsx` と同様に、ファイルは、実行する必要のあるすべての JS モジュールとその他の資産をインポートすることから始まります。
+`App.jsx` と同様に、ファイルは、実行する必要のあるすべての JavaScript モジュールとその他の資産をインポートすることから始まります。
 
-最初の 2 つの文は `React` および `ReactDOM` ライブラリーをインポートしています。これらのライブラリーはローカルファイルではないので、インポートする際にパスや拡張子は書きません。実際、これらのライブラリーは `package.json` ファイルに依存ファイルとして掲載されています。この区別に注意して、このレッスンを読み終えてください。
+最初の 2 つの文は、`react` および `react-dom` ライブラリーから `StrictMode` と `createRoot` をインポートし、ファイルの後半でこれらを参照できるようにします。これらのライブラリーはローカルファイルではないので、インポートする際にパスや拡張子は書きません。実際、これらのライブラリーは `package.json` ファイルに依存ファイルとして掲載されています。この区別に注意して、このレッスンを読み終えてください。
 
 次に `App()` 関数と、アプリ全体に適用されるグローバルスタイル設定を保持する `index.css` をインポートします。
 
-次に、アプリケーションのルートノードを定義する関数 `ReactDOM.createRoot()` を呼び出します。この関数は、React アプリをレンダリングする DOM 要素を引数として取ります。この場合、ID が `root` の DOM 要素です。最後に、`createRoot()` の呼び出しに `render()` メソッドを連結して、ルートの中にレンダリングしたい JSX 式を渡します。この JSX 式に `<App />` と書くことで、ルートノード内に `App` コンポーネントをレンダリングする `App()` 関数を呼び出すように React に指示しています。
+次に、アプリケーションのルートノードを定義する関数 `createRoot()` を呼び出します。この関数は、React アプリをレンダリングする DOM 要素を引数として取ります。この場合、ID が `root` の DOM 要素です。最後に、`createRoot()` の呼び出しに `render()` メソッドを連結して、ルートの中にレンダリングしたい JSX 式を渡します。この JSX 式に `<App />` と書くことで、ルートノード内に `App` コンポーネントをレンダリングする `App()` 関数を呼び出すように React に指示しています。
 
 > [!NOTE]
 > `<App />` は特別な `<React.StrictMode>` コンポーネント内でレンダリングされます。この部品は、開発者がコードの潜在的な問題を発見するのに役立ちます。
@@ -396,7 +399,7 @@ JSX 要素には HTML 要素と同じように属性を設定することがで�
 
 ### コンテンツとしての JavaScript 式
 
-HTML とは異なり、JSX では変数や JavaScript の式を他のコンテンツと横に並べて書くことができます。`App()` 関数のすぐ上に `subject` と呼ばれる変数を宣言してみましょう。
+HTML とは異なり、JSX では変数や JavaScript の式を他のコンテンツと横に並べて書くことができます。`App.jsx` ふぁいるの `App()` 関数のすぐ上に `subject` と呼ばれる変数を宣言してみましょう。
 
 ```jsx
 const subject = "React";
@@ -417,14 +420,14 @@ function App() {
 
 ```jsx-nolint
 {/* Hello, React :)! */}
-<h1>Hello, {subject + ' :)'}!</h1>
+<h1>Hello, {`${subject} :)`}!</h1>
 {/* Hello, REACT */}
 <h1>Hello, {subject.toUpperCase()}</h1>
 {/* Hello, 4! */}
 <h1>Hello, {2 + 2}!</h1>
 ```
 
-JSX のコメントも中括弧の中に書きます。コメントも技術的には JavaScript の式だからです。 `/* ブロックコメント構文 */` は、プログラムがコメントの始まりと終わりを知るために必要です。
+JSX 内では、コメントでさえ中括弧で囲んで記述します。これは、中括弧の中に単一の JavaScript 式を含めることができ、コメントも JavaScript 式の一部として有効であるためです（ただし、コメントは無視されます）。中括弧の中では、`/* ブロックコメント構文 */` と `// 行コメント構文`（末尾に改行を付ける）の両方を使用できます。
 
 ### コンポーネントの props
 
@@ -446,7 +449,11 @@ React では、データフローは一方向です。 props は親コンポー�
 function App(props) {
   console.log(props);
   return (
-  // 簡略化のためコード省略
+    <>
+      {
+        // 簡略化のためコード省略
+      }
+    </>
   );
 }
 ```
@@ -500,7 +507,7 @@ React では:
 
 ## 関連情報
 
-- [Learn React](https://v2.scrimba.com/learn-react-c0e?via=mdn) <sup>_MDN カリキュラムパートナー_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn React_ コースは、 React の初心者にとって完璧な出発点となる究極の React 101 です。 140 以上の対話式のコード課題を解き、 8 つの楽しいプロジェクトを構築することで、現行の React の基本を学ぶことができます。
+- [Learn React](https://scrimba.com/learn-react-c0e?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : [Scrimba](https://scrimba.com?via=mdn) の _Learn React_ コースは、 React の初心者にとって完璧な出発点となる究極の React 101 です。 140 以上の対話式のコード課題を解き、 8 つの楽しいプロジェクトを構築することで、現行の React の基本を学ぶことができます。
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

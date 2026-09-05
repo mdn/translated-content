@@ -3,8 +3,6 @@ title: getState
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getState
 ---
 
-{{AddonSidebar}}
-
 Renvoie l'état du portail comme `unknown`, `not_captive`, `unlocked_portal`, ou `locked_portal`.
 
 ## Syntaxe

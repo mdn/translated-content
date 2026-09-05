@@ -4,8 +4,6 @@ slug: Web/XML/EXSLT/Reference/math/lowest
 original_slug: Web/EXSLT/math/lowest
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
-
 `math:lowest()` renvoie le nœud qui a la valeur minimale, parmi l'ensemble de nœuds passé en argument (la valeur minimale est calculée à l'aide de [`math:min()`](/fr/docs/Web/XML/EXSLT/Reference/math/min)).
 
 Un nœud possède cette valeur minimale si la conversion de sa valeur qui est une chaîne de caractères en nombre est égale à la valeur minimale.

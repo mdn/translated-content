@@ -3,10 +3,10 @@ title: Propriété CSS `white-space`
 short-title: white-space
 slug: Web/CSS/Reference/Properties/white-space
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`white-space`** détermine comment les {{Glossary("whitespace", "espaces blancs")}} à l'intérieur d'un élément sont gérés.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`white-space`** détermine comment les {{Glossary("whitespace", "espaces blancs")}} à l'intérieur d'un élément sont gérés.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: white-space")}}
 
@@ -121,7 +121,7 @@ Les valeurs de la propriété `white-space` peuvent être définies par un ou de
 > [!NOTE]
 > La propriété `white-space` en tant que raccourci est une fonctionnalité relativement récente (voir la [compatibilité des navigateurs](#compatibilité_des_navigateurs)). À l'origine, elle possédait six valeurs par mot-clé&nbsp;; désormais, la valeur `nowrap` est interprétée comme une valeur pour {{CSSxRef("text-wrap-mode")}}, tandis que la valeur `break-spaces` est interprétée comme une valeur pour {{CSSxRef("white-space-collapse")}}. Les quatre mots-clés ci‑dessus restent spécifiques à `white-space`, mais ils ont des équivalents en version longue. Le fait de faire de `white-space` un raccourci étend les valeurs acceptables à encore plus de mots-clés et de combinaisons, tels que `wrap` et `collapse`.
 
-Le tableau qui suit résume le comportement des différentes valeurs :
+Le tableau qui suit résume le comportement des différentes valeurs&nbsp;:
 
 <table class="standard-table">
   <thead>

@@ -3,7 +3,7 @@ title: "ARIA : rôle meter"
 short-title: meter
 slug: Web/Accessibility/ARIA/Reference/Roles/meter_role
 l10n:
-  sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `meter` sert à identifier un élément utilisé comme indicateur de mesure.

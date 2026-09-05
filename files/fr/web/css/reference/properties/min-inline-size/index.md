@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`min-inline-size`** définit la taille minimale horizontale ou verticale d'un élément en ligne selon le mode d'écriture utilisé. Elle correspond à la propriété {{CSSxRef("min-width")}} ou {{CSSxRef("min-height")}}, selon la valeur de {{CSSxRef("writing-mode")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`min-inline-size`** définit la taille minimale horizontale ou verticale d'un élément en incise (<i lang="en">inline</i> en anglais) selon le mode d'écriture utilisé. Elle correspond à la propriété {{CSSxRef("min-width")}} ou {{CSSxRef("min-height")}}, selon la valeur de {{CSSxRef("writing-mode")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: min-inline-size")}}
 
@@ -90,7 +90,7 @@ La propriété `min-inline-size` peut prendre les mêmes valeurs que les propri�
 
 ## Exemples
 
-### Définir la taille minimale en ligne pour le texte vertical
+### Définir la taille minimale en incise pour le texte vertical
 
 #### HTML
 
@@ -111,7 +111,7 @@ La propriété `min-inline-size` peut prendre les mêmes valeurs que les propri�
 
 #### Résultat
 
-{{EmbedLiveSample("Définir la taille minimale en ligne pour le texte vertical")}}
+{{EmbedLiveSample("Définir la taille minimale en incise pour le texte vertical")}}
 
 ## Spécifications
 

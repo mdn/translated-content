@@ -3,8 +3,6 @@ title: downloads.cancel()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/cancel
 ---
 
-{{AddonSidebar}}
-
 La fonction **`cancel()`** de l'API de {{WebExtAPIRef("downloads")}} annule un téléchargement. L'appel échouera si le téléchargement n'est pas actif : par exemple, parce qu'il a terminé le téléchargement..
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

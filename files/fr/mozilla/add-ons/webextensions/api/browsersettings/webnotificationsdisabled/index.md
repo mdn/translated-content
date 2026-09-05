@@ -3,8 +3,6 @@ title: browserSettings.webNotificationsDisabled
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/webNotificationsDisabled
 ---
 
-{{AddonSidebar}}
-
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour empêcher les sites Web d'afficher des [`Notifications`](/fr/docs/Web/API/Notifications_API) à l'aide de l'API Web de notifications.
 
 L'API `Notifications` est utilisée pour afficher les notifications de bureau à l'utilisateur. Il existe trois niveaux d'autorisation pour les notifications : _allow_, _deny_, et _prompt_. Les utilisateurs peuvent définir cette autorisation pour chaque site. Si l'utilisateur n'a pas défini d'autorisation pour un site particulier, le navigateur reviendra à une autorisation globale, qui sera par défaut *invité*e.

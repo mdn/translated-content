@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
-La valeur de **`theme-color`** comme attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta#name) de l'élément HTML {{HTMLElement("meta")}}, indique une suggestion de couleur que les agents utilisateur devraient utiliser pour personnaliser l'affichage de la page ou l'interface utilisateur environnante. Si elle est utilisée, l'attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) devra avoir une valeur CSS de type {{CSSxRef("&lt;color&gt;")}}.
+La valeur de **`theme-color`** comme attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta#name) de l'élément HTML {{HTMLElement("meta")}}, indique une suggestion de couleur que les agents utilisateur doivent utiliser pour personnaliser l'affichage de la page ou l'interface utilisateur environnante. Si elle est utilisée, l'attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) doit avoir une valeur CSS de type {{CSSxRef("&lt;color&gt;")}}.
 
 Par exemple, pour indiquer qu'un document doit utiliser `cornflowerblue` comme couleur de thème, définissez la balise `<meta>` ainsi&nbsp;:
 
@@ -14,7 +14,7 @@ Par exemple, pour indiquer qu'un document doit utiliser `cornflowerblue` comme c
 <meta name="theme-color" content="cornflowerblue" />
 ```
 
-Pour définir le média auquel la métadonnée de couleur de thème s'applique, ajoutez l'attribut [`media`](/fr/docs/Web/HTML/Reference/Elements/meta#media) avec une liste de requêtes média valide (voir l'[exemple de requête média pour `theme-color`](#utilisation_dune_requête_média_avec_theme-color)).
+Pour définir le média auquel la métadonnée de couleur de thème s'applique, ajoutez l'attribut [`media`](/fr/docs/Web/HTML/Reference/Elements/meta#media) avec une liste de requêtes média valide (voir [l'exemple de requête média pour `theme-color`](#utilisation_dune_requête_média_avec_theme-color)).
 
 ## Notes d'utilisation
 

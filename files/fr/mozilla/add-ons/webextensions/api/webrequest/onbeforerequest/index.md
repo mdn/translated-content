@@ -3,8 +3,6 @@ title: webRequest.onBeforeRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
 ---
 
-{{AddonSidebar}}
-
 Cet événement est déclenché lorsqu'une demande est sur le point d'être faite et avant que les en-têtes ne soient disponibles. C'est un bon endroit pour écouter si vous voulez annuler ou rediriger la demande.
 
 Pour annuler ou rediriger la requête, incluez d'abord `"blocking"` dans l'argument tableau `extraInfoSpec` pour `addListener()`. Ensuite, dans la fonction Listener, retournez un objet {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}, en définissant la propriété appropriée :

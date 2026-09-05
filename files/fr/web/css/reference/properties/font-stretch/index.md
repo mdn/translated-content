@@ -3,7 +3,7 @@ title: Propriété CSS `font-stretch`
 short-title: font-stretch
 slug: Web/CSS/Reference/Properties/font-stretch
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 > [!NOTE]
@@ -91,9 +91,9 @@ font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
-Cette propriété peut être définie avec un seul mot-clé de type pourcentage ({{CSSxRef("&lt;percentage&gt;")}}).
-
 ### Valeurs
+
+Cette propriété est définie comme une seule valeur parmi la liste suivante&nbsp;:
 
 - `normal`
   - : Définit une fonte normalement condensée.
@@ -124,7 +124,7 @@ Le tableau suivant indique les correspondances entre les valeurs sous la forme d
 
 Certaines polices possèdent différentes fontes pour lesquelles les caractères sont plus étroits (fontes _condensées_) et d'autres pour lesquelles les caractères sont plus amples (fontes _étendues_).
 
-`font-stretch` permet de choisir entre les versions condensées ou étendues d'une police. Si la police utilisée ne possède pas de fonte utilisant cet axe de variation, elle n'aura aucun effet.
+`font-stretch` permet de choisir entre les versions condensées ou étendues d'une police. Si la police utilisée ne possède pas de fonte utilisant cet axe de variation, elle n'a aucun effet.
 
 ### Sélection de la fonte
 

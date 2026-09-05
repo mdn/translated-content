@@ -3,10 +3,10 @@ title: Propriété CSS `all`
 short-title: all
 slug: Web/CSS/Reference/Properties/all
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`all`** permet de réinitialiser toutes les propriétés d'un élément, à l'exception de {{CSSxRef("unicode-bidi")}}, {{CSSxRef("direction")}} et des [propriétés personnalisées](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), avec leurs valeurs initiales, héritées ou qui proviennent d'une autre couche de la cascade voire d'une autre feuille de style.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`all`** permet de réinitialiser toutes les propriétés d'un élément, à l'exception de {{CSSxRef("unicode-bidi")}}, {{CSSxRef("direction")}} et des [propriétés personnalisées](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), avec leurs valeurs initiales, héritées ou qui proviennent d'une autre couche de la cascade voire d'une autre feuille de style.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: all")}}
 
@@ -186,7 +186,7 @@ blockquote {
 
 {{EmbedLiveSample("`all: initial`", 200, 125)}}
 
-Lorsque la propriété `all` vaut `initial` dans la règle `blockquote`, l'élément HTML {{HTMLElement("blockquote")}} n'utilise plus la mise en forme par défaut du navigateur&nbsp;: il s'agit maintenant d'un élément _en ligne_ (valeur initiale), sa propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color#définition_formelle) vaut `transparent` (valeur initiale), sa propriété [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size#définition_formelle) vaut `medium`, et sa propriété [`color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle) vaut `black` (valeur initiale).
+Lorsque la propriété `all` vaut `initial` dans la règle `blockquote`, l'élément HTML {{HTMLElement("blockquote")}} n'utilise plus la mise en forme par défaut du navigateur&nbsp;: il s'agit maintenant d'un élément _en incise (<i lang="en">inline</i> en anglais)_ (valeur initiale), sa propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color#définition_formelle) vaut `transparent` (valeur initiale), sa propriété [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size#définition_formelle) vaut `medium`, et sa propriété [`color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle) vaut `black` (valeur initiale).
 
 #### `all: inherit`
 
@@ -238,7 +238,7 @@ blockquote {
 
 {{EmbedLiveSample("`all: unset`", 200, 125)}}
 
-Lorsque la valeur `unset` est appliquée à la propriété `all` dans la règle `blockquote`, l'élément HTML {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du navigateur. Comme la propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color#définition_formelle) n'est pas héritée, tandis que [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size#définition_formelle) et [`color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle) le sont, l'élément `<blockquote>` est maintenant un élément _en ligne_ (valeur initiale), sa propriété {{CSSxRef("background-color")}} vaut `transparent` (valeur initiale), mais sa propriété {{CSSxRef("font-size")}} vaut toujours `small` (valeur héritée), et sa propriété {{CSSxRef("color")}} vaut `blue` (valeur héritée).
+Lorsque la valeur `unset` est appliquée à la propriété `all` dans la règle `blockquote`, l'élément HTML {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du navigateur. Comme la propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color#définition_formelle) n'est pas héritée, tandis que [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size#définition_formelle) et [`color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle) le sont, l'élément `<blockquote>` est maintenant un élément _en incise_ (valeur initiale), sa propriété {{CSSxRef("background-color")}} vaut `transparent` (valeur initiale), mais sa propriété {{CSSxRef("font-size")}} vaut toujours `small` (valeur héritée), et sa propriété {{CSSxRef("color")}} vaut `blue` (valeur héritée).
 
 #### `all: revert`
 

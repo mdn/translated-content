@@ -3,14 +3,14 @@ title: "ARIA : rôle separator"
 short-title: separator
 slug: Web/Accessibility/ARIA/Reference/Roles/separator_role
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `separator` indique que l'élément est un diviseur qui sépare et distingue les sections de contenu ou les groupes d'éléments de menu. Le rôle ARIA implicite de l'élément de rupture thématique natif {{HTMLElement("hr")}} est `separator`.
 
 ## Description
 
-Un séparateur est un diviseur qui sépare et distingue les sections de contenu ou les groupes d'éléments de menu. Il existe deux types de séparateurs&nbsp;: une structure statique qui fournit une frontière visible, identique à l'élément HTML {{HTMLElement("hr")}} , et un composant déplaçable et sélectionnable.
+Un séparateur est un diviseur qui sépare et distingue les sections de contenu ou les groupes d'éléments de menu. Il existe deux types de séparateurs&nbsp;: une structure statique qui fournit une frontière visible, identique à l'élément HTML {{HTMLElement("hr")}}, et un composant déplaçable et sélectionnable.
 
 Les éléments avec le rôle `separator` ont une valeur implicite de [`aria-orientation`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) de `horizontal`.
 

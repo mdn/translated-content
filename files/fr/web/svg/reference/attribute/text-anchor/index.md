@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/text-anchor
 original_slug: Web/SVG/Attribute/text-anchor
 ---
 
-{{SVGRef}}
-
 L'attribut **`text-anchor`** est utilisé pour aligner (alignement de début, de milieu ou de fin) une chaîne de texte préformaté ou un texte auto-enveloppé dont la zone d'enveloppement est déterminée à partir de la propriété [`inline-size`](/fr/docs/Web/SVG/Attribute/inline-size) par rapport à un point donné. Elle ne s'applique pas aux autres types de texte auto-enveloppé. Pour ces cas, vous devez utiliser [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align). Pour le texte à plusieurs lignes, l'alignement a lieu pour chaque ligne.
 
 L'attribut `text-anchor` est appliqué à chaque bloc de texte individuel dans un élément [`<text>`](/fr/docs/Web/SVG/Reference/Element/text) donné. Chaque fragment de texte a une position de texte actuelle initiale, qui représente le point du système de coordonnées de l'utilisateur résultant (selon le contexte) de l'application des attributs [`x`](/fr/docs/Web/SVG/Reference/Attribute/x) et [`y`](/fr/docs/Web/SVG/Attribute/y) sur l'élément `<text>`, toute valeur d'attribut `x` ou `y` sur un élément [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan), [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) ou [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph) assigné explicitement au premier caractère rendu dans un fragment de texte, ou la détermination de la position initiale du texte actuel pour un élément [`<textPath>`](/fr/docs/Web/SVG/Element/textPath).

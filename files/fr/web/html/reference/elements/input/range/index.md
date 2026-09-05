@@ -151,7 +151,7 @@ Par défaut, la granularité vaut `1`, ce qui signifie que la valeur est toujour
 
 #### Utiliser l'attribut `step` avec `any`
 
-Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on pourra utiliser la valeur `any` pour l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step)&nbsp;:
+Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on peut utiliser la valeur `any` pour l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step)&nbsp;:
 
 ##### HTML
 
@@ -177,7 +177,7 @@ Cet exemple permet à l'utilisateur·ice de choisir n'importe quelle valeur entr
 
 ### Ajouter des marques
 
-Pour ajouter des marques à un contrôle d'intervalle, incluez l'attribut `list`, en lui donnant l'`id` d'un élément {{HTMLElement("datalist")}} qui définit une série de marques sur le contrôle. Chaque point est représenté par un élément {{HTMLElement("option")}} dont la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/option#value) correspond à la valeur de l'intervalle à laquelle une marque doit être dessinée.
+Pour ajouter des marques à un contrôle d'intervalle, incluez l'attribut `list`, en lui donnant un `id` d'un élément {{HTMLElement("datalist")}} qui définit une série de marques sur le contrôle. Chaque point est représenté par un élément {{HTMLElement("option")}} dont la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/option#value) correspond à la valeur de l'intervalle à laquelle une marque doit être dessinée.
 
 #### HTML
 
@@ -367,7 +367,7 @@ Voir [Créer des contrôles de formulaire verticaux](/fr/docs/Web/CSS/Guides/Wri
 - [Les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
 - L'élément {{HTMLElement("input")}} et l'interface {{DOMxRef("HTMLInputElement")}} sur laquelle l'élément du DOM correspondant est basé
 - L'élément [`<input type="number">`](/fr/docs/Web/HTML/Reference/Elements/input/number)
-- Les propriétés {{DOMxRef('validityState.rangeOverflow')}} et {{DOMxRef('validityState.rangeUnderflow')}}
+- Les propriétés {{DOMxRef("validityState.rangeOverflow")}} et {{DOMxRef("validityState.rangeUnderflow")}}
 - [Contrôler plusieurs paramètres avec `ConstantSourceNode`](/fr/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Créer des contrôles de formulaire verticaux](/fr/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - [Mettre en forme un contrôle d'intervalle <sup>(angl.)</sup>](https://css-tricks.com/sliding-nightmare-understanding-range-input/)

@@ -1,35 +1,38 @@
 ---
-title: CssRule.selectorText
+title: "CSSStyleRule: propiedad selectorText"
+short-title: selectorText
 slug: Web/API/CSSStyleRule/selectorText
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{ ApiRef() }}
+{{APIRef("CSSOM") }}
 
-### Resumen
+La propiedad **`selectorText`** de la interfaz {{domxref("CSSStyleRule")}} obtiene y establece los selectores asociados a la `CSSStyleRule`.
 
-**selectorText** recoge/establece la representación en forma de texto, del selector para el grupo de reglas.
+## Valor
 
-### Sintaxis
+Una cadena.
 
-```
-string = cssRule.selectorText
-cssRule.selectorText = string
-```
+## Ejemplos
 
-### Ejemplo
+El CSS incluye una única regla de estilo. Esta será la primera {{domxref("CSSRule")}} que devuelva `document.styleSheets[0].cssRules`, así que `myRules[0].selectorText` devuelve una cadena literal con el selector, en este caso `"h1"`.
 
-```
- // for cssrule: body { background-color: darkblue; }
- cssrule = document.styleSheets[1]
- !!TODO!!
- selector = cssrule.selectorText;
- // selector is now "body"
+```css
+h1 {
+  color: pink;
+}
 ```
 
-### Notas
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].selectorText); // una cadena que contiene "h1".
+```
 
-La implementación puede haber eliminado espacios en blanco no significativos, en el momento de comprobar el selector.
+## Especificaciones
 
-### Especificación
+{{Specifications}}
 
-DOM Level 2 Style - cssRule
+## Compatibilidad con navegadores
+
+{{Compat}}

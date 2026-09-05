@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/cx
 original_slug: Web/SVG/Attribute/cx
 ---
 
-{{SVGRef}}
-
 L'attribut **`cx`** définit la coordonnée de l'axe x pour le point central d'un élément.
 
 Trois éléments utilisent cet attribut: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, et {{SVGElement("radialGradient")}}

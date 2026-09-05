@@ -1,14 +1,14 @@
 ---
-title: "KeyframeEffect : la méthode getKeyframes()"
+title: "KeyframeEffect : méthode getKeyframes()"
 short-title: getKeyframes()
 slug: Web/API/KeyframeEffect/getKeyframes
 l10n:
-  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{ APIRef("Web Animations") }}
+{{APIRef("Web Animations")}}
 
-La méthode **`getKeyframes()`** de l'interface {{domxref("KeyframeEffect")}} renvoie un tableau des images clés (<i lang="en">keyframes</i> en anglais) calculées qui composent cette animation ainsi que leurs décalages calculés.
+La méthode **`getKeyframes()`** de l'interface {{DOMxRef("KeyframeEffect")}} retourne un tableau des images clés (<i lang="en">keyframes</i> en anglais) calculées qui composent cette animation ainsi que leurs décalages calculés.
 
 ## Syntaxe
 
@@ -22,18 +22,18 @@ Aucun.
 
 ### Valeur de retour
 
-Renvoie une séquence d'objets avec le format suivant&nbsp;:
+Retourne une séquence d'objets avec le format suivant&nbsp;:
 
 - paires propriété/valeur
   - : Autant de paires propriété/valeur que contient chaque image clé de l'animation.
 - `offset`
-  - : Le décalage de l'image clé, spécifié comme un nombre entre `0.0` et `1.0` inclus ou `null`. Cela équivaut à indiquer des états de début et de fin en pourcentages dans les feuilles de style CSS avec `@keyframes`. Cette valeur vaudra `null` si l'image clé est espacée automatiquement.
+  - : Le décalage de l'image clé, défini comme un nombre entre `0.0` et `1.0` inclus ou `null`. Cela équivaut à indiquer des états de début et de fin en pourcentages dans les feuilles de style CSS avec `@keyframes`. Cette valeur vaut `null` si l'image clé est espacée automatiquement.
 - `computedOffset`
   - : Le décalage calculé pour cette image clé, déterminé lorsque la liste des images clés calculées a été produite. Contrairement à **`offset`**, ci-dessus, **`computedOffset`** n'est jamais `null`.
 - `easing`
   - : La [fonction d'atténuation](/fr/docs/Web/CSS/Reference/Values/easing-function) utilisée de cette image clé jusqu'à la suivante de la série.
 - `composite`
-  - : L'opération {{domxref("KeyframeEffect.composite")}} utilisée pour combiner les valeurs spécifiées dans cette image clé avec la valeur sous-jacente. Cette propriété sera absente si l'opération de composition spécifiée sur l'effet est utilisée.
+  - : L'opération {{DOMxRef("KeyframeEffect.composite")}} utilisée pour combiner les valeurs définies dans cette image clé avec la valeur sous-jacente. Cette propriété est absente si l'opération de composition définie sur l'effet est utilisée.
 
 ## Exemples
 
@@ -94,5 +94,5 @@ div {
 
 ## Voir aussi
 
-- L'[API Web Animations](/fr/docs/Web/API/Web_Animations_API)
-- Méthode des objets {{domxref("KeyframeEffect")}}
+- [L'API Web Animations](/fr/docs/Web/API/Web_Animations_API)
+- Méthode des objets {{DOMxRef("KeyframeEffect")}}

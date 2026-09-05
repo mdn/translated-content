@@ -95,7 +95,7 @@ bottom: unset;
   - : Un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) de la hauteur du bloc englobant.
 - `auto`
   - : Définit que&nbsp;:
-    - pour les _éléments positionnés de façon absolue_, la position de l'élément est basée sur la propriété {{CSSxRef("top")}}, tandis que `height: auto` est traitée comme une hauteur basée sur le contenu&nbsp;; ou si `top` vaut aussi `auto`, l'élément est positionné là où il devrait l'être verticalement s'il était un élément statique.
+    - pour les _éléments positionnés de façon absolue_, la position de l'élément est basée sur la propriété {{CSSxRef("top")}}, tandis que `height: auto` est traitée comme une hauteur basée sur le contenu&nbsp;; ou si `top` vaut aussi `auto`, l'élément est positionné là où il doit l'être verticalement s'il est un élément statique.
     - pour les _éléments positionnés de façon relative_, la distance de l'élément par rapport à sa position normale est basée sur la propriété {{CSSxRef("top")}}&nbsp;; ou si `top` vaut aussi `auto`, l'élément n'est pas déplacé verticalement.
 
 ## Description
@@ -121,7 +121,7 @@ Lorsque {{CSSxRef("top")}} et `bottom` sont tous deux définis, que `position` v
 
 ### Positionner en absolu et en fixe
 
-Dans l'exemple qui suit, on illustre la différence de comportement de la propriété `bottom` lorsque {{CSSxRef("position")}} vaut `absolute` ou lorsqu'elle vaut `fixed`. When the regular text becomes taller than the viewable portion of the page (that is, the browser window's viewport), blocks positioned with `position:absolute` scroll with the page, while blocks positioned with `position:fixed` don't.
+Dans l'exemple qui suit, on illustre la différence de comportement de la propriété `bottom` lorsque {{CSSxRef("position")}} vaut `absolute` ou lorsqu'elle vaut `fixed`. Lorsque le texte normal dépasse la partie visible de la page (c'est-à-dire la zone d'affichage de la fenêtre du navigateur), les éléments positionnés avec `position:absolute` défilent avec la page, contrairement à ceux positionnés avec `position:fixed`.
 
 #### HTML
 

@@ -3,7 +3,7 @@ title: Fonction CSS `repeat()`
 short-title: repeat()
 slug: Web/CSS/Reference/Values/repeat
 l10n:
-  sourceCommit: 01b76b3a2afa161bd2481e3623d76f05de4b2797
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`repeat()`** permet de répéter un fragment d'une [liste de pistes](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts) ou d'une [liste de lignes de règle](/fr/docs/Web/CSS/Guides/Gaps). Elle permet d'écrire de manière compacte des motifs répétés de colonnes, de lignes et de leurs décorations d'écart.
@@ -194,7 +194,7 @@ Le second argument est une liste de valeurs séparées par des virgules ou des e
 - **tracks**:
   - : Définit l'ensemble des pistes qui sont répétées. Fondamentalement, cela consiste en une ou plusieurs valeurs séparées par des espaces, chaque valeur représentant la taille de cette piste. Chaque taille est définie en utilisant soit une valeur [`<track-size>`](#track-size), soit une valeur [`<fixed-size>`](#fixed-size). Vous pouvez également définir un ou plusieurs [noms de lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines) avant ou après chaque piste, en fournissant des valeurs [`<line-names>`](#line-names) avant et/ou après la taille de la piste.
 - **rule feature**:
-  - : Définit la règle de fonctionnalité qui est répétée. Il s'agit soit d'une liste séparée par des virgules de {{CSSxRef("&lt;color>")}}, {{CSSxRef("line-width")}}, ou {{CSSxRef("line-style")}} valeurs, soit d'une liste séparée par des virgules de déclarations abrégées définissant la couleur, la largeur et le style de la ligne.
+  - : Définit la règle de fonctionnalité qui est répétée. Il s'agit soit d'une liste séparée par des virgules de {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("line-width")}}, ou {{CSSxRef("line-style")}} valeurs, soit d'une liste séparée par des virgules de déclarations abrégées définissant la couleur, la largeur et le style de la ligne.
 
 ### Formes syntaxiques
 
@@ -202,33 +202,45 @@ La syntaxe de la fonction `repeat()` prend plusieurs formes&nbsp;:
 
 - `<track-repeat>` = `repeat( <integer>, [ <line-names>? <track-size> ]+ <line-names>? )`
   - : L'entier (`<integer>`) définit le nombre de répétitions.
-  - : Les valeurs `<track-size>` définissent la taille de la piste. Un `<track-size>` est soit une {{CSSxRef("&lt;length-percentage&gt;")}}, soit une valeur {{CSSxRef("&lt;flex&gt;")}} (une valeur positive d'unité `fr`), soit le mot-clé `min-content`, `max-content` ou `auto`, soit une fonction {{CSSxRef("fit-content()")}} avec un paramètre `<length-percentage>`, soit une fonction {{CSSxRef("minmax()")}}. Pour les valeurs de piste `minmax()`, `min` est soit un `<length-percentage>`, soit le mot-clé `min-content`, `max-content` ou `auto`, tandis que `max` peut être l'un de ces mots-clés ou une valeur `<flex>`.
-  - : Chaque `<track-size>` est éventuellement précédé de `<line-names>`, qui sont zéro ou plusieurs valeurs {{CSSxRef("&lt;custom-ident&gt;")}} séparées par des espaces et entourées de crochets.
-  - : Un `<line-names>` final est facultatif.
+
+    Les valeurs `<track-size>` définissent la taille de la piste. Un `<track-size>` est soit une {{CSSxRef("&lt;length-percentage&gt;")}}, soit une valeur {{CSSxRef("&lt;flex&gt;")}} (une valeur positive d'unité `fr`), soit le mot-clé `min-content`, `max-content` ou `auto`, soit une fonction {{CSSxRef("fit-content()")}} avec un paramètre de longueur/pourcentage (`<length-percentage>`), soit une fonction {{CSSxRef("minmax()")}}. Pour les valeurs de piste `minmax()`, `min` est soit une longueur/pourcentage (`<length-percentage>`), soit le mot-clé `min-content`, `max-content` ou `auto`, tandis que `max` peut être l'un de ces mots-clés ou une valeur `<flex>`.
+
+    Chaque `<track-size>` est éventuellement précédé de `<line-names>`, qui sont zéro ou plusieurs valeurs {{CSSxRef("&lt;custom-ident&gt;")}} séparées par des espaces et entourées de crochets.
+
+    Un `<line-names>` final est facultatif.
 
 - `<auto-repeat>` = `repeat( auto-fill | auto-fit, [ <line-names>? <fixed-size> ]+ <line-names>? )`
   - : Le mot-clé `auto-fill` ou `auto-fit` définit le nombre de répétitions.
-  - : Le `<fixed-size>` définit la taille de la piste. Un `<fixed-size>` est soit une valeur `<length-percentage>`, soit une fonction `minmax()` dont `min` ou `max` est un `<length-percentage>` et dont l'autre valeur est aussi un `<length-percentage>`, soit la valeur du mot-clé `min-content`, `max-content` ou `auto`.
-  - : Chaque `<fixed-size>` est éventuellement précédé de `<line-names>`.
-  - : Un `<line-names>` final est facultatif.
+
+    La taille fixe (`<fixed-size>`) définit la taille de la piste. Une taille fixe (`<fixed-size>`) est soit une valeur longueur/pourcentage (`<length-percentage>`), soit une fonction `minmax()` dont `min` ou `max` est une longueur/pourcentage (`<length-percentage>`) et dont l'autre valeur est aussi une longueur/pourcentage (`<length-percentage>`), soit la valeur du mot-clé `min-content`, `max-content` ou `auto`.
+
+    Chaque `<fixed-size>` est éventuellement précédé de `<line-names>`.
+
+    Le `<line-names>` final est facultatif.
 
 - `<fixed-repeat>` = `repeat( <integer>, [ <line-names>? <fixed-size> ]+ <line-names>? )`
-  - : Identique à `<auto-repeat>`, sauf que le `<integer>` définit le nombre de répétitions, donc il n'y a pas de répétition automatique.
+  - : Identique à `<auto-repeat>`, sauf que l'entier (`<integer>`) définit le nombre de répétitions, donc il n'y a pas de répétition automatique.
 
 - `<name-repeat>` = `repeat( [ <integer> | auto-fill ], <line-names>+)`
   - : L'entier ou le mot-clé `auto-fill` définit le nombre de répétitions.
-  - : Les `<line-names>` sont une ou plusieurs valeurs {{CSSxRef("&lt;custom-ident&gt;")}} séparées par des espaces et entourées de crochets.
-  - : Ces noms de lignes (plutôt que les tailles de piste) concernent [`subgrid`](/fr/docs/Web/CSS/Guides/Grid_layout/Subgrid).
+
+    Les `<line-names>` sont une ou plusieurs valeurs {{CSSxRef("&lt;custom-ident&gt;")}} séparées par des espaces et entourées de crochets.
+
+    Ces noms de lignes (plutôt que les tailles de piste) concernent [`subgrid`](/fr/docs/Web/CSS/Guides/Grid_layout/Subgrid).
 
 - `<repeat-value-type>` = `repeat( <integer> , <value># )`
-  - : Le `<integer>` définit le nombre de répétitions.
-  - : Le `<value>` est une ou plusieurs valeurs valides séparées par des virgules pour la propriété sur laquelle la fonction `repeat()` est appliquée.
-  - : Plusieurs fonctions `repeat()` du `<repeat-value-type>` peuvent être utilisées dans une seule déclaration de valeur.
+  - : L'entier (`<integer>`) définit le nombre de répétitions.
+
+    La valeur (`<value>`) est une ou plusieurs valeurs valides séparées par des virgules pour la propriété sur laquelle la fonction `repeat()` est appliquée.
+
+    Plusieurs fonctions `repeat()` du `<repeat-value-type>` peuvent être utilisées dans une seule déclaration de valeur.
 
 - `<auto-repeat-value-type>` = `repeat( auto , <value># )`
-  - : Le mot-clé `auto` définit un répéteur automatique. Un répéteur automatique est utilisé pour compléter les valeurs des espaces qui ne recevraient pas autrement de valeurs des autres parties de la liste.
-  - : Le `<value>` est une ou plusieurs valeurs valides séparées par des virgules pour la propriété sur laquelle la fonction `repeat()` est appliquée.
-  - : Au plus une fonction `repeat()` dans une liste donnée de valeurs peut être un répéteur automatique.
+  - : Le mot-clé `auto` définit un répéteur automatique. Un répéteur automatique est utilisé pour compléter les valeurs des espaces qui ne reçoivent pas autrement de valeurs des autres parties de la liste.
+
+    La valeur (`<value>`) est une ou plusieurs valeurs valides séparées par des virgules pour la propriété sur laquelle la fonction `repeat()` est appliquée.
+
+    Au plus une fonction `repeat()` dans une liste donnée de valeurs peut être un répéteur automatique.
 
 ### `auto-fit` contre `auto-fill`
 

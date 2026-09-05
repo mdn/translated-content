@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Scroll_anchoring/Overview
 original_slug: Web/CSS/CSS_scroll_anchoring/Scroll_anchoring
 ---
 
-{{CSSRef}}
-
 Lorsque vous naviguez sur le Web avec une connexion plus ou moins performante, vous avez déjà pu rencontrer le problème suivant : vous faites défiler verticalement le contenu d'une page qui est en cours de chargement puis, au milieu de votre lecture, le contenu se décale brutalement plus bas (parce que des images au-dessus ou d'autres éléments ont fini de charger et s'affichent enfin).
 
 L'ancrage du défilement (ou _scroll anchoring_ en anglais) est une fonctionnalité des navigateurs qui vise à résoudre ce problème de « saut » (qui se produit lorsque l'utilisateur a déjà suffisamment fait défiler le contenu pour arriver sur une autre partie du document).

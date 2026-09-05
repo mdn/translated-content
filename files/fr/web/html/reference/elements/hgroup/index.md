@@ -47,7 +47,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Notes d'utilisation
 
-L'élément `<hgroup>` permet de regrouper le titre principal d'une section avec du contenu secondaire associé, tel que son (ou ses) sous-titre(s), un titre alternatif ou un slogan. Chaque contenu de ce type sera représenté par un élément `<p>` au sein de l'élément `<hgroup>`.
+L'élément `<hgroup>` permet de regrouper le titre principal d'une section avec du contenu secondaire associé, tel que son (ou ses) sous-titre(s), un titre alternatif ou un slogan. Chaque contenu de ce type est représenté par un élément `<p>` au sein de l'élément `<hgroup>`.
 
 L'élément `<hgroup>` en tant que tel n'a pas d'effet sur le plan (<i lang="en">outline</i>) d'une page web. C'est le titre intégré au sein de l'élément `<hgroup>` qui contribue au plan du document.
 

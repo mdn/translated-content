@@ -82,5 +82,5 @@ console.log(matches.join(", ")); // "Congrès, congres"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Collator")}}
+- L'objet natif {{JSxRef("Intl.Collator")}}
 - La méthode {{JSxRef("String.prototype.localeCompare()")}}

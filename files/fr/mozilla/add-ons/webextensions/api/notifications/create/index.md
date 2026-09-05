@@ -3,8 +3,6 @@ title: notifications.create()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
 ---
 
-{{AddonSidebar}}
-
 Crée et affiche une notification.
 
 Passez un {{WebExtAPIRef("notifications.NotificationOptions")}} pour définir le contenu et le comportement de la notification.

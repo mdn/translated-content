@@ -90,7 +90,7 @@ La valeur de la propriété `margin-right` peut être le mot-clé `auto`, une lo
     - Pour les éléments positionnés par ancre, la fonction {{CSSxRef("anchor-size()")}} donne une valeur {{CSSxRef("&lt;length&gt;")}} relative à la largeur ou la hauteur de l'élément ancre associé (voir [Définir la marge d'un élément selon la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre)).
 
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille de la marge en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
+  - : La taille de la marge en pourcentage, relative à la taille en incise (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
 - `auto`
   - : La marge droite reçoit une part de l'espace horizontal inutilisé, déterminée principalement par le mode de disposition utilisé. Si les valeurs de `margin-left` et `margin-right` sont toutes deux `auto`, l'espace calculé est réparti équitablement. Ce tableau résume les différents cas&nbsp;:
 
@@ -113,7 +113,7 @@ La valeur de la propriété `margin-right` peut être le mot-clé `auto`, une lo
           <th><em>n'importe laquelle</em></th>
           <th><code>static</code> ou <code>relative</code></th>
           <td><code>0</code></td>
-          <td>Disposition en ligne</td>
+          <td>Disposition en incise</td>
         </tr>
         <tr>
           <th>

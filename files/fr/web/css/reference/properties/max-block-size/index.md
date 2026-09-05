@@ -103,7 +103,7 @@ La valeur de la propriété `max-block-size` peut être n'importe quelle valeur 
 - [`fit-content(<length-percentage>)`](/fr/docs/Web/CSS/Reference/Values/fit-content_function) {{Experimental_Inline}}
   - : Utilise la formule `fit-content` avec l'espace disponible remplacé par l'argument spécifié, c'est-à-dire `min(max-content, max(min-content, argument))`.
 
-### Comment le mode d'écriture affecte la directionnalité
+### Comment le mode d'écriture affecte la direction
 
 Les valeurs de `writing-mode` affectent la correspondance de `max-block-size` avec `max-width` ou `max-height` comme suit&nbsp;:
 

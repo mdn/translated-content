@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e593d32ad2a2fde33cfd4d4d71b152efdc371f8e
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{ApiRef("DOM")}}
 
 > [!NOTE]
 > 雖然 `execCommand()` 方法已被棄用，但仍有一些有效的用例尚未有可行的替代方案。例如，與直接操作 DOM 不同，由 `execCommand()` 執行的修改會保留撤銷緩衝區（編輯歷史）。對於這些用例，你仍然可以使用此方法，但請進行測試以確保跨瀏覽器相容性，例如使用 {{domxref("document.queryCommandSupported()")}}。

@@ -3,7 +3,7 @@ title: Propriété CSS `scrollbar-color`
 short-title: scrollbar-color
 slug: Web/CSS/Reference/Properties/scrollbar-color
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 2e2dfb27a085911dd64aa4798d4a1071660c2397
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scrollbar-color`** définit la couleur de la piste et du curseur de la barre de défilement.
@@ -13,6 +13,12 @@ La **piste** désigne l'arrière-plan de la barre de défilement, qui reste gén
 Le **curseur** désigne la partie mobile de la barre de défilement, qui flotte généralement au-dessus de la piste.
 
 Lorsque la valeur `scrollbar-color` est définie sur l'élément racine du document, les valeurs s'appliquent aux barres de défilement de la zone d'affichage (<i lang="en">viewport</i> en anglais).
+
+> [!NOTE]
+> Les navigateurs ignorent la famille de pseudo-éléments non standard {{CSSxRef("::-webkit-scrollbar")}} sur tout élément dont la valeur _calculée_ de `scrollbar-color` est autre que `auto`.
+> Comme `scrollbar-color` est hérité, cela inclut les éléments qui ne le définissent pas eux-mêmes mais héritent d'une valeur non `auto` d'un ancêtre.
+> Définir `scrollbar-color: auto` sur un tel élément restaure son style `::-webkit-scrollbar-*` s'il avait été précédemment supprimé par un réglage `scrollbar-color` sur un ancêtre.
+> Voir [Ajouter une solution de repli pour les styles de barre de défilement](/fr/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar#ajouter_une_solution_de_repli_pour_les_styles_de_barre_de_défilement).
 
 ## Syntaxe
 

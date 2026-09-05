@@ -3,8 +3,6 @@ title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
 
-{{JSRef}}
-
 La méthode **`add()`** permet d'ajouter un nouvel élément ayant une valeur donnée à un ensemble `Set`. Cette valeur sera ajoutée à la fin de l'objet `Set`.
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}

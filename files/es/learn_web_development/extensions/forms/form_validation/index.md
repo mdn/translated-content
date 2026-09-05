@@ -182,7 +182,7 @@ Implementemos un ejemplo. Actualiza tu HTML para añadir un atributo [`pattern`]
 ```html
 <form>
   <label for="choose">¿Prefieres un plátano o una cereza?</label>
-  <input id="choose" name="i_like" required pattern="[Pp]látano|[Cc]ereza " />
+  <input id="choose" name="i_like" required pattern="[Pp]látano|[Cc]ereza" />
   <button>Enviar</button>
 </form>
 ```
@@ -308,7 +308,7 @@ Aquí hay un ejemplo completo que muestra el uso de las funciones de validación
   <p>
     <label for="t1">¿Cuál es tu fruta favorita?<abbr title="Este campo es obligatorio" aria-label="required">*</abbr></label>
     <input type="text" id="t1" name="fruit" list="l1" required
-           pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range ">
+           pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
     <datalist id="l1">
       <option>Plátano</option>
       <option>Cereza</option>

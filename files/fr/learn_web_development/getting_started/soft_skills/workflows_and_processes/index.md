@@ -2,7 +2,7 @@
 title: Flux de travail et processus
 slug: Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes
 l10n:
-  sourceCommit: 30f3ddc823c82f8135f96a5a7ca081baebda7a33
+  sourceCommit: 11a5944cd0a3bf015b2ee9c7ee4c55025dd878ca
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Finding_a_job", "Learn_web_development/Getting_started/Soft_skills")}}
@@ -61,26 +61,26 @@ Le vôtre, construit autour d'un produit serveur comme Apache, ou un service com
 
 Sur MDN, nous nous concentrons surtout sur la partie front-end, mais même celle-ci se divise en de nombreux éléments. Par exemple&nbsp;:
 
-- Vous utiliserez probablement un cadriciel (<i lang="en">framework</i> en anglais) JavaScript (comme [React](/fr/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)) pour définir les composants qui composent l'interface utilisateur.
-- Le cadriciel utilisera sans doute un langage de template (comme [Mustache <sup>(angl.)</sup>](https://mustache.github.io/)) pour définir la structure HTML et inclure dynamiquement du contenu variable.
-- Vous ajouterez des styles avec du CSS compatible avec le cadriciel. Cela peut être du CSS pur, un cadriciel CSS (comme [Tailwind <sup>(angl.)</sup>](https://tailwindcss.com/)) ou un préprocesseur (comme [Sass <sup>(angl.)</sup>](https://sass-lang.com/)).
+- Vous utilisez probablement un cadriciel (<i lang="en">framework</i> en anglais) JavaScript (comme [React](/fr/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)) pour définir les composants qui composent l'interface utilisateur.
+- Le cadriciel utilise sans doute un langage de template (comme [Mustache <sup>(angl.)</sup>](https://mustache.github.io/)) pour définir la structure HTML et inclure dynamiquement du contenu variable.
+- Vous ajoutez des styles avec du CSS compatible avec le cadriciel. Cela peut être du CSS pur, un cadriciel CSS (comme [Tailwind <sup>(angl.)</sup>](https://tailwindcss.com/)) ou un préprocesseur (comme [Sass <sup>(angl.)</sup>](https://sass-lang.com/)).
 - Un projet JavaScript doit inclure des tests pour s'assurer que les ajouts de code ne cassent rien. Les tests sont généralement réalisés avec un cadriciel de test (comme [Jest <sup>(angl.)</sup>](https://jestjs.io/)).
 - Les sites plus importants utilisent un outil de packaging/build (comme [Parcel <sup>(angl.)</sup>](https://parceljs.org/)) pour améliorer la performance, réduire la taille des fichiers, supprimer les composants inutilisés, etc.
 - Et ainsi de suite.
 
 > [!NOTE]
-> Vous entendrez aussi parler de **schémas d'architecture**. Par exemple, [modèle-vue-contrôleur (MVC)](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur) est un schéma suivi par de nombreux cadriciels JavaScript, tandis que [publish-subscribe (pub/sub) <sup>(angl.)</sup>](https://dev.to/willvelida/the-publisher-subscriber-pattern-pubsub-messaging-10in) est courant dans les applications de messagerie. Il n'est pas nécessaire de tout comprendre en détail, mais une certaine familiarité aide à appréhender un nouvel outil ou cadriciel.
+> Vous entendez aussi parler de **schémas d'architecture**. Par exemple, [modèle-vue-contrôleur (MVC)](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur) est un schéma suivi par de nombreux cadriciels JavaScript, tandis que [publish-subscribe (pub/sub) <sup>(angl.)</sup>](https://dev.to/willvelida/the-publisher-subscriber-pattern-pubsub-messaging-10in) est courant dans les applications de messagerie. Il n'est pas nécessaire de tout comprendre en détail, mais une certaine familiarité aide à appréhender un nouvel outil ou cadriciel.
 
 Il existe aussi des outils hors de la pile technique elle-même pour vous aider à la gérer ou à créer des ressources pour le site&nbsp;:
 
 - Outils de planification pour organiser le projet dans sa globalité (comme [Miro <sup>(angl.)</sup>](https://miro.com/)).
-- Systèmes de gestion de versions (VCS). Vous utiliserez probablement un VCS basé sur [git <sup>(angl.)</sup>](https://git-scm.com/), comme [GitHub <sup>(angl.)</sup>](https://github.com/).
+- Systèmes de gestion de versions (VCS). Vous utilisez probablement un VCS basé sur [git <sup>(angl.)</sup>](https://git-scm.com/), comme [GitHub <sup>(angl.)</sup>](https://github.com/).
 - Logiciels de design graphique/interface (comme [Figma <sup>(angl.)</sup>](https://www.figma.com/) ou [Canva <sup>(angl.)</sup>](https://www.canva.com/)).
 - Outils de gestion de projet comme [Trello <sup>(angl.)</sup>](https://trello.com/) ou [Asana <sup>(angl.)</sup>](https://asana.com/).
 
-Cela fait beaucoup d'informations à assimiler. Notre conseil&nbsp;: **ne paniquez pas&nbsp;!** Le but de cet article n'est pas de vous inquiéter en vous faisant croire que vous avez soudainement dix fois plus de choses à apprendre. Il s'agit simplement de vous donner une vision d'ensemble des projets web et de vous familiariser avec certains termes que vous croiserez.
+Cela fait beaucoup d'informations à assimiler. Notre conseil&nbsp;: **ne paniquez pas&nbsp;!** Le but de cet article n'est pas de vous inquiéter en vous faisant croire que vous avez soudainement dix fois plus de choses à apprendre. Il s'agit simplement de vous donner une vision d'ensemble des projets web et de vous familiariser avec certains termes que vous croisez.
 
-Avec le temps, vous allez développer des connaissances sur plusieurs de ces outils et technologies, mais vous ne serez pas expert·e en tout, et ce n'est pas nécessaire&nbsp;: c'est le rôle de l'équipe. Pour l'instant, vous faites exactement ce qu'il faut en apprenant les compétences de base comme HTML, CSS et JavaScript. Les autres outils et spécialisations viendront plus tard dans votre parcours.
+Avec le temps, vous allez développer des connaissances sur plusieurs de ces outils et technologies, mais vous n'êtes pas expert·e en tout, et ce n'est pas nécessaire&nbsp;: c'est le rôle de l'équipe. Pour l'instant, vous faites exactement ce qu'il faut en apprenant les compétences de base comme HTML, CSS et JavaScript. Les autres outils et spécialisations viendront plus tard dans votre parcours.
 
 ## Métiers
 
@@ -130,7 +130,7 @@ Un projet technique typique peut se dérouler ainsi&nbsp;:
 10. Développeur·euse·s&nbsp;: correction des bogues jugés suffisamment graves pour bloquer la mise en ligne de la fonctionnalité.
 11. Équipe projet&nbsp;: mise en ligne de la fonctionnalité sur le site web une fois les bogues bloquants corrigés et le projet validé.
 
-Il s'agit d'une vue simplifiée&nbsp;: d'autres phases existent autour de la mise en œuvre de la fonctionnalité, et elles ne seront pas forcément toutes réalisées dans l'ordre indiqué, mais cela vous donne une idée de ce qui est impliqué.
+Il s'agit d'une vue simplifiée&nbsp;: d'autres phases existent autour de la mise en œuvre de la fonctionnalité, et elles ne sont pas forcément toutes réalisées dans l'ordre indiqué, mais cela vous donne une idée de ce qui est impliqué.
 
 ## Processus de gestion de projet
 

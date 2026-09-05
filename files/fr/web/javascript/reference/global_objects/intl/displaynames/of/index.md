@@ -106,4 +106,4 @@ console.log(
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DisplayNames")}}
+- L'objet natif {{JSxRef("Intl.DisplayNames")}}

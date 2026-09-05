@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/color
 original_slug: Web/SVG/Attribute/color
 ---
 
-{{SVGRef}}
-
 L'attribut `color` est utilisé pour définir indirectement une valeur potentielle (`currentColor`) pour les attributs {{ SVGAttr("fill") }}, {{ SVGAttr("stroke") }}, {{ SvgAttr("stop-color") }}, {{ SVGAttr("flood-color") }} et {{ SVGAttr("lighting-color") }}.
 
 > [!NOTE]

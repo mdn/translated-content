@@ -3,7 +3,7 @@ title: Propriété CSS `font-variation-settings`
 short-title: font-variation-settings
 slug: Web/CSS/Reference/Properties/font-variation-settings
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variation-settings`** permet de contrôler de façon fine les caractéristiques des [polices variables](/fr/docs/Web/CSS/Guides/Fonts/Variable_fonts) en définissant les noms d'axes à quatre lettres des caractéristiques à faire varier ainsi que leurs valeurs.
@@ -68,16 +68,18 @@ font-variation-settings: unset;
 
 ### Valeurs
 
+Cette propriété se définit comme `normal` ou comme une liste de paires chaîne de caractères/nombre séparées par des virgules&nbsp;:
+
 - `normal`
   - : Le texte est disposé avec les caractéristiques par défaut.
 - `<string> <number>`
-  - : Lors de l'affichage du texte, les axes OpenType sont passés au moteur graphique afin d'activer ou de désactiver certaines fonctionnalités de la police. Chaque valeur est une chaîne de caractères ({{CSSxRef("&lt;string&gt;")}}) avec quatre caractères ASCII, suivie par un nombre ({{CSSxRef("number")}}) qui indique la valeur pour l'axe correspondant. Si la chaîne de caractères `<string>` a plus ou moins de 4 caractères et contient des caractères en dehors de l'intervalle U+20 - U+7E, la propriété sera considérée comme invalide. La valeur numérique `<number>` n'est pas nécessairement entière et positive, ce peut être un nombre décimal ou un nombre négatif.
+  - : Lors de l'affichage du texte, les axes OpenType sont passés au moteur graphique afin d'activer ou de désactiver certaines fonctionnalités de la police. Chaque valeur est une chaîne de caractères ({{CSSxRef("&lt;string&gt;")}}) avec quatre caractères ASCII, suivie par un nombre ({{CSSxRef("number")}}) qui indique la valeur pour l'axe correspondant. Si la chaîne de caractères `<string>` a plus ou moins de 4 caractères et contient des caractères en dehors de l'intervalle U+20 - U+7E, la propriété est considérée comme invalide. La valeur numérique `<number>` n'est pas nécessairement entière et positive, ce peut être un nombre décimal ou un nombre négatif.
 
 ## Description
 
 Cette propriété est un mécanisme de bas niveau conçu pour définir des fonctionnalités de polices variables lorsqu'il n'existe aucun autre moyen d'activer ou d'accéder à ces fonctionnalités. Vous ne devez l'utiliser que lorsqu'aucune propriété de base n'existe pour définir ces fonctionnalités (par exemple, {{CSSxRef("font-weight")}}, {{CSSxRef("font-style")}}).
 
-Les caractéristiques de police définies avec `font-variation-settings` prévaudront toujours sur celles définies avec les propriétés de police de base correspondantes, par exemple `font-weight`, peu importe leur place dans la cascade. Dans certains navigateurs, cela n'est actuellement vrai que lorsque la déclaration {{CSSxRef("@font-face")}} inclut un intervalle {{CSSxRef("@font-face/font-weight", "font-weight")}}.
+Les caractéristiques de police définies avec `font-variation-settings` prévaut toujours sur celles définies avec les propriétés de police de base correspondantes, par exemple `font-weight`, peu importe leur place dans la cascade. Dans certains navigateurs, cela n'est actuellement vrai que lorsque la déclaration {{CSSxRef("@font-face")}} inclut un intervalle {{CSSxRef("@font-face/font-weight", "font-weight")}}.
 
 ### Axes enregistrés et axes spécifiques
 
@@ -121,9 +123,9 @@ Voici la liste des axes enregistrés et les propriétés CSS correspondantes, qu
 Les axes spécifiques peuvent correspondre à n'importe quel axe que le concepteur de la police souhaite faire varier (ce peut par exemple être la hauteur des hampes et des jambages, la taille des empattements ou tout autre chose). N'importe quel axe peut être utilisé tant qu'il a une étiquette unique sur quatre caractères. Il est possible que, si des axes spécifiques deviennent majoritairement présents, ils soient intégrés parmi les axes enregistrés.
 
 > [!NOTE]
-> Les étiquettes des axes enregistrés sont écrits en minuscules et les axes spécifiques doivent être écrits en majuscules. On notera que rien n'oblige à suivre cette règle et qu'il est tout à fait possible que des concepteurs de polices donnent des étiquettes en minuscules à des axes spécifiques. Quoiqu'il en soit, on retiendra que les étiquettes des axes sont sensibles à la casse.
+> Les étiquettes des axes enregistrés sont écrits en minuscules et les axes spécifiques doivent être écrits en majuscules. Notez que rien n'oblige à suivre cette règle et qu'il est tout à fait possible que des concepteurs de polices donnent des étiquettes en minuscules à des axes spécifiques. Quoiqu'il en soit, retenez que les étiquettes des axes sont sensibles à la casse.
 
-Pour utiliser les polices variables sur votre système d'exploitation, vous devez vous assurer qu'il est à jour. Par exemple, les systèmes Linux nécessitent la dernière version de Linux FreeType, et macOS avant 10.13 ne prend pas en charge les polices variables. Si votre système d'exploitation n'est pas à jour, vous ne pourrez pas utiliser les polices variables dans les pages web ou les outils de développement de Firefox.
+Pour utiliser les polices variables sur votre système d'exploitation, vous devez vous assurer qu'il est à jour. Par exemple, les systèmes Linux nécessitent la dernière version de Linux FreeType, et macOS avant 10.13 ne prend pas en charge les polices variables. Si votre système d'exploitation n'est pas à jour, vous ne pouvez pas utiliser les polices variables dans les pages web ou les outils de développement de Firefox.
 
 ## Définition formelle
 

@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/Exception/Exception
 original_slug: WebAssembly/JavaScript_interface/Exception/Exception
 ---
 
-{{WebAssemblySidebar}}
-
 Le constructeur **`WebAssembly.Exception()`** permet de créer des objets [`WebAssembly.Exception`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception).
 
 Le constructeur prend comme arguments une balise [`Tag`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception) et un tableau `payload` de champs de données. Les types de données pour chaque élément du tableau `payload` doivent correspondre aux types de données définis par la balise `Tag`.

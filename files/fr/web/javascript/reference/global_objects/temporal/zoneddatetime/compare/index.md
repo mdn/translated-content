@@ -80,5 +80,5 @@ console.log(dateTimes.map((d) => d.toString()));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/equals", "Temporal.ZonedDateTime.prototype.equals()")}}

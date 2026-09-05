@@ -3,8 +3,6 @@ title: tabs.goForward()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goForward
 ---
 
-{{AddonSidebar}}
-
 Passez à la page suivante dans l'historique de l'onglet, si disponible.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

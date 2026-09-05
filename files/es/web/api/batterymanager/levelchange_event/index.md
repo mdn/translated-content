@@ -3,7 +3,7 @@ title: BatteryManager.onlevelchange
 slug: Web/API/BatteryManager/levelchange_event
 ---
 
-{{deprecated_header}} {{APIRef("Battery API")}}
+{{APIRef("Battery API")}}
 
 La propiedad **`BatteryManager.onlevelchange`** especifica un detector
 de eventos para recibir eventos de [`levelchange`](/es/docs/Web/Reference/Events/levelchange). Estos eventos ocurren

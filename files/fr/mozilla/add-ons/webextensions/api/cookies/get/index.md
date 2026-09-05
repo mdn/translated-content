@@ -3,8 +3,6 @@ title: cookies.get()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/get
 ---
 
-{{AddonSidebar}}
-
 La méthode **`get()`** de l'API {{WebExtAPIRef("cookies")}} récupère les informations d'un seul cookie, par son nom et son URL.
 
 Si plus d'un cookie portant le même nom existent pour une URL donnée, celui contenant le chemin le plus long sera retourné. Pour les cookies ayant la même longueur de chemin, le plus ancien cookie sera retourné. Si aucun cookie ne correspond alors `null` est retourné.

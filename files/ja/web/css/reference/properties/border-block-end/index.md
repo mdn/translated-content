@@ -1,11 +1,12 @@
 ---
-title: border-block-end
+title: CSS `border-block-end` プロパティ
+short-title: border-block-end
 slug: Web/CSS/Reference/Properties/border-block-end
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-**`border-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なブロック方向の末尾側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)です。
+**`border-block-end`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、個々の論理的なブロック方向末尾側の境界のプロパティ値を、スタイルシート内の単一の場所で設定します。
 
 {{InteractiveExample("CSS デモ: border-block-end")}}
 
@@ -52,9 +53,9 @@ writing-mode: vertical-lr;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-block-end-color`](/ja/docs/Web/CSS/Reference/Properties/border-block-end-color)
-- [`border-block-end-style`](/ja/docs/Web/CSS/Reference/Properties/border-block-end-style)
-- [`border-block-end-width`](/ja/docs/Web/CSS/Reference/Properties/border-block-end-width)
+- {{cssxref("border-block-end-color")}}
+- {{cssxref("border-block-end-style")}}
+- {{cssxref("border-block-end-width")}}
 
 ## 構文
 
@@ -71,17 +72,17 @@ border-block-end: revert-layer;
 border-block-end: unset;
 ```
 
-`border-block-end` は 1 つ以上の {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, {{cssxref("border-block-end-color")}} の値の組み合わせを使用することができます。対応づけられる物理的な境界は、書字方向やテキストの向きによって決まります。これは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+`border-block-end` は 1 つ以上の {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, {{cssxref("border-block-end-color")}} の値の組み合わせを使用することができます。対応づけられる物理的な境界は、書字方向やテキストの向きによって決まります。これは {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} のいずれかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
-関連するプロパティとしては、 {{cssxref("border-block-start")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-inline-end")}} が要素の他の境界を定義します。
+関連するプロパティとしては、 {{cssxref("border-block-start")}}、{{cssxref("border-inline-start")}}、{{cssxref("border-inline-end")}} が要素の他の境界を定義します。
 
 ### 値
 
 `border-block-end` は以下の値のうちの 1 つ以上を任意の順序で指定します。
 
-- `<'border-width'>`
+- {{cssxref("&lt;line-width&gt;")}}
   - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
-- `<'border-style'>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : 境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。
 - {{CSSXref("&lt;color&gt;")}}
   - : 境界線の色です。
@@ -96,7 +97,7 @@ border-block-end: unset;
 
 ## 例
 
-### 縦書きテキストの境界
+### 縦書きテキストの境界線
 
 #### HTML
 
@@ -123,7 +124,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("縦書きテキストの境界", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの境界線", 140, 140)}}
 
 ## 仕様書
 

@@ -3,10 +3,10 @@ title: Iterator.prototype.every()
 short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/every
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 76972cdb4d87dd72e0a2a3146af07d82c7ef7d67
 ---
 
-**`every()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、 {{jsxref("Array.prototype.every()")}} と似ています。このイテレーターによって生成されたすべての要素が、指定された関数によって実装された試験に合格するかどうかを確認します。論理値を返します。
+**`every()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、 {{jsxref("Array.prototype.every()")}} と似ています。指定されたテスト関数の条件を満たさない要素が見つかった場合は、`false` を返します。それ以外の場合、つまりそのような要素が見つからないままイテレーターが終了した場合は、`true` を返します。
 
 ## 構文
 
@@ -33,6 +33,8 @@ every(callbackFn)
 
 イテレーターヘルパーの主な利点は、配列メソッドよりも「遅延的」であるということです。つまり、要求されたときにのみ次の値を生成するという意味です。これにより、不必要なコンピューター処理を避けることができ、また無限イテレーターでも使用することができます。無限イテレーターでは、`every()` は最初の偽値が得られるとすぐに `false` を返します。もし `callbackFn` が常に真値を返した場合、メソッドは終了しません。
 
+`every()` を呼び出すと、メソッドが早期に終了した場合でも、常にその元となるイテレーターが閉じられます。 イテレーターが未完了の状態で残されることはありません。
+
 ## 例
 
 ### every() の使用
@@ -52,10 +54,10 @@ console.log(fibonacci().every(isEven)); // false
 
 const isPositive = (x) => x > 0;
 console.log(fibonacci().take(10).every(isPositive)); // true
-console.log(fibonacci().every(isPositive)); // Never completes
+console.log(fibonacci().every(isPositive)); // 完了しない
 ```
 
-`every()` を呼び出すと、メソッドが早期に終了した場合でも、常にその元となるイテレーターが閉じられます。 イテレーターが未完了の状態で残されることはありません。
+このメソッドは返値の返却後、イテレーターを閉じます。
 
 ```js
 const seq = fibonacci();

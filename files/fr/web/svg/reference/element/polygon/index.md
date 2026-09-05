@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/polygon
 original_slug: Web/SVG/Element/polygon
 ---
 
-{{SVGRef}}
-
 L'élément **`<polygon>`** délimite une forme close composée d'un groupe de plusieurs segments de droites. Le dernier point est relié au premier afin de fermer la forme et de relier les traits entre deux. Pour créer une forme ouverte, voir l'élément {{SVGElement("polyline")}}.
 
 ## Exemple

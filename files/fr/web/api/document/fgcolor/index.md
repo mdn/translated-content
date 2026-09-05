@@ -3,10 +3,10 @@ title: "Document : propriété fgColor"
 short-title: fgColor
 slug: Web/API/Document/fgColor
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 La propriété **`fgColor`** de l'interface {{DOMxRef("Document")}} permet d'obtenir ou de définir la couleur de premier plan, ou couleur du texte, du document actuel.
 

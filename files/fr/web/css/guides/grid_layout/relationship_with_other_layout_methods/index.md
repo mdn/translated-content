@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods
 original_slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
 ---
 
-{{CSSRef}}
-
 Le mode de disposition en grille a été conçu afin de pouvoir fonctionner avec les autres composantes de CSS pour construire un système complet de disposition. Dans ce guide, nous expliquerons comment intégrer une grille CSS parmi d'autres techniques que vous pourriez déjà utiliser.
 
 ## Les grilles et les boîtes flexibles (_flexbox_)

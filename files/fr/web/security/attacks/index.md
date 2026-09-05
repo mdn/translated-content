@@ -19,8 +19,8 @@ Cette page retourne vers des pages qui expliquent le fonctionnement de certaines
   - : Dans une attaque par script inter-site (<i lang="en">XSS</i>), un site accepte une entrée conçue par l'attaquant·e et l'inclut par erreur dans ses propres pages d'une manière qui amène le navigateur à l'exécuter comme du code. Le code malveillant peut alors faire tout ce que le code frontal du site peut faire.
 - [Référence directe non sécurisée d'objet (<i lang="en">IDOR</i>)](/fr/docs/Web/Security/Attacks/IDOR)
   - : Dans une attaque par référence directe non sécurisée d'objet (<i lang="en">IDOR</i>), l'attaquant·e profite d'un contrôle d'accès insuffisant et de l'exposition non sécurisée des identifiants d'objet, tels que les clés de base de données ou les chemins de fichiers.
-- [Attaque de l'intercepteur (<i lang="en">MITM</i>)](/fr/docs/Web/Security/Attacks/MITM)
-  - : Dans une attaque de l'intercepteur (<i lang="en">MITM</i>, <i lang="en">Man-in-the-Middle</i> en anglais), l'attaquant·e s'insère entre le navigateur de l'utilisateur·ice et le serveur, et peut voir et potentiellement modifier tout le trafic échangé avec HTTP.
+- [Attaque du monstre du milieu (<i lang="en">MITM</i>)](/fr/docs/Web/Security/Attacks/MITM)
+  - : Dans une attaque du monstre du milieu (<i lang="en">MITM</i>, <i lang="en">Man-in-the-Middle</i> en anglais), l'attaquant·e s'insère entre le navigateur de l'utilisateur·ice et le serveur, et peut voir et potentiellement modifier tout le trafic échangé avec HTTP.
 - [Hameçonnage (<i lang="en">Phishing</i>)](/fr/docs/Web/Security/Attacks/Phishing)
   - : L'hameçonnage (<i lang="en">Phishing</i>) est une attaque de {{Glossary("social engineering", "l'ingénierie sociale")}} dans laquelle l'attaquant·e vole les {{Glossary("credential", "identifiants")}} d'un·e utilisateur·ice en le·la trompant pour lui faire croire qu'il·elle se connecte au site cible, alors qu'en réalité il·elle interagit avec un site factice contrôlé par l'attaquant·e.
 - [Pollution de prototype (<i lang="en">Prototype pollution</i>)](/fr/docs/Web/Security/Attacks/Prototype_pollution)

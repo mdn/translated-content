@@ -4,7 +4,6 @@ slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 original_slug: Learn/Accessibility/Accessibility_troubleshooting
 ---
 
-{{LearnSidebar}}
 {{PreviousMenu("Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
 
 Dans l'évaluation de ce module, nous vous présentons un site simple, qui présente un certain nombre de problèmes d'accessibilité que vous devez diagnostiquer et résoudre.

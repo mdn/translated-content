@@ -46,13 +46,13 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
   - : La marge du dernier enfant de type bloc avec le bord du conteneur est rognée à zéro.
 
 - `inline` {{Experimental_Inline}}
-  - : Les marges des enfants en ligne qui sont adjacentes aux bords du conteneur sont rognées à zéro, sans affecter l'espacement au début et à la fin de la ligne.
+  - : Les marges des enfants en incise (<i lang="en">inline</i> en anglais) qui sont adjacentes aux bords du conteneur sont rognées à zéro, sans affecter l'espacement au début et à la fin de la ligne.
 
 - `inline-start` {{Experimental_Inline}}
-  - : La marge entre le bord du conteneur et le premier enfant en ligne est rognée à zéro.
+  - : La marge entre le bord du conteneur et le premier enfant en incise est rognée à zéro.
 
 - `inline-end` {{Experimental_Inline}}
-  - : La marge entre le bord du conteneur et le dernier enfant en ligne est rognée à zéro.
+  - : La marge entre le bord du conteneur et le dernier enfant en incise est rognée à zéro.
 
 ## Définition formelle
 
@@ -68,7 +68,7 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 Une fois la prise en charge de cette propriété implémentée, elle fonctionne probablement ainsi&nbsp;:
 
-Lorsque vous avez un conteneur avec des enfants en ligne et que vous souhaitez mettre une marge entre chaque enfant sans que cela n'interfère avec l'espacement à la fin de la ligne, vous pouvez faire quelque chose comme ceci&nbsp;:
+Lorsque vous avez un conteneur avec des enfants en incise et que vous souhaitez mettre une marge entre chaque enfant sans que cela n'interfère avec l'espacement à la fin de la ligne, vous pouvez faire quelque chose comme ceci&nbsp;:
 
 ```css
 article {

@@ -78,11 +78,11 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 - `end`
   - : Cette valeur a le même effet que la valeur `right` si la direction du texte va de gauche à droite ou le même effet que `left` si la direction du texte va de droite à gauche.
 - `left`
-  - : Les contenus en ligne (<i lang="en">inline</i> en anglais) sont alignés sur le bord gauche de la boîte contenant la ligne.
+  - : Les contenus en incise (<i lang="en">inline</i> en anglais) sont alignés sur le bord gauche de la boîte contenant la ligne.
 - `right`
-  - : Les contenus en ligne (<i lang="en">inline</i> en anglais) sont alignés sur le bord droit de la boîte contenant la ligne.
+  - : Les contenus en incise (<i lang="en">inline</i> en anglais) sont alignés sur le bord droit de la boîte contenant la ligne.
 - `center`
-  - : Les contenus en ligne (<i lang="en">inline</i> en anglais) sont horizontalement centrés par rapport à la boîte contenant la ligne.
+  - : Les contenus en incise (<i lang="en">inline</i> en anglais) sont horizontalement centrés par rapport à la boîte contenant la ligne.
 - `justify`
   - : Le texte est justifié. Les bords gauche et droit du texte sont alignés avec les bord gauche et droit du paragraphe.
 

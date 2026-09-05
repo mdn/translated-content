@@ -3,7 +3,7 @@ title: Propriété CSS `flex-shrink`
 short-title: flex-shrink
 slug: Web/CSS/Reference/Properties/flex-shrink
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: efbef0da1dbe29be125eb7db0b831a4e4bd9220d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`flex-shrink`** définit le facteur de rétrécissement d'un élément flexible. Si la taille de tous les éléments flexibles est supérieure à celle du conteneur flexible, [les éléments flexibles peuvent rétrécir](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#la_propriété_flex-shrink) pour s'adapter selon leur valeur `flex-shrink`. [L'espace négatif libre](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#espace_libre_positif_et_négatif) de chaque ligne flexible se répartit entre les éléments flexibles de la ligne ayant une valeur `flex-shrink` supérieure à `0`.
@@ -169,7 +169,7 @@ div {
 
 {{EmbedLiveSample("Définir le facteur de rétrécissement d'un élément flexible", 500, 100)}}
 
-Les éléments flexibles ne débordent pas de leur conteneur, car ils peuvent rétrécir&nbsp;: les `500px` d'espace négatif libre sont répartis entre les cinq éléments selon leurs valeurs `flex-shrink`. Les trois premiers éléments ont la valeur `flex-shrink: 1`. D a la valeur `flex-shrink: 1.5` et E a la valeur `flex-shrink: 2`. La largeur finale de D et E est inférieure à celle des autres, E étant plus petit que D.
+Les éléments flexibles ne débordent pas de leur conteneur, car ils peuvent rétrécir&nbsp;: les `500px` d'espace négatif libre sont répartis entre les cinq éléments selon leurs valeurs `flex-shrink`. La somme de toutes les valeurs de rétrécissement pour les cinq éléments est `1 + 1 + 1 + 1.5 + 2` = `6.5`. En conséquence, la largeur des éléments avec `flex-shrink: 1` est réduite de `1/6.5 * 500px` = `76.92px`, la largeur des éléments avec `flex-shrink: 1.5` est réduite de `1.5/6.5 * 500px` = `115.38px`, et la largeur des éléments avec `flex-shrink: 2` est réduite de `2/6.5 * 500px` = `153.85px`.
 
 ## Spécifications
 

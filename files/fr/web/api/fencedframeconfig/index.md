@@ -2,14 +2,14 @@
 title: FencedFrameConfig
 slug: Web/API/FencedFrameConfig
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: e316526e520d8163e9151dca8973eb777b5285e0
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}
 
-L'interface **`FencedFrameConfig`** représente la navigation d'un élément HTML {{htmlelement("fencedframe")}}, c'est-à-dire le contenu qui y sera affiché.
+L'interface **`FencedFrameConfig`** représente la navigation d'un élément HTML {{HTMLElement("fencedframe")}}, c'est-à-dire le contenu qui y est affiché.
 
-Les objets `FencedFrameConfig` ne peuvent pas être construits manuellement en JavaScript. Ils sont renvoyés par une source telle que l'[API Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr) et affectés à la propriété {{domxref("HTMLFencedFrameElement.config")}}.
+Les objets `FencedFrameConfig` ne peuvent pas être construits manuellement en JavaScript. Ils sont retournés par une source telle que [l'API Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr) et affectés à la propriété {{DOMxRef("HTMLFencedFrameElement.config")}}.
 
 Une instance d'objet `FencedFrameConfig` possède une méthode exposée, mais elle correspond aussi à des informations de configuration internes contenant des propriétés opaques non accessibles depuis JavaScript. Cela inclut des informations telles que la source du contenu chargé et les groupes d'intérêt à des fins publicitaires. C'est un élément clé de la façon dont les cadres protégés permettent de mettre en œuvre des cas d'utilisation tout en respectant la vie privée des utilisateur·ice·s.
 
@@ -17,7 +17,7 @@ Une instance d'objet `FencedFrameConfig` possède une méthode exposée, mais el
 
 ## Méthodes d'instance
 
-- {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} {{experimental_inline}}
+- {{DOMxRef("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} {{Experimental_Inline}}
   - : Transmet des données du document parent au stockage partagé du `<fencedframe>`.
 
 ## Exemples
@@ -39,15 +39,15 @@ frame.config = frameConfig;
 ```
 
 > [!NOTE]
-> Il faut passer `resolveToConfig: true` à l'appel de `runAdAuction()` pour obtenir un objet `FencedFrameConfig`. Si ce n'est pas le cas, la promesse ({{jsxref("Promise")}}) résultante renverra un URN qui ne peut être utilisé que dans un élément HTML {{htmlelement("iframe")}}.
+> Il faut passer `resolveToConfig: true` à l'appel de `runAdAuction()` pour obtenir un objet `FencedFrameConfig`. Si ce n'est pas le cas, la promesse ({{JSxRef("Promise")}}) résultante retourne un URN qui ne peut être utilisé que dans un élément HTML {{HTMLElement("iframe")}}.
 
-### Passage de données contextuelles via `setSharedStorageContext()`
+### Passage de données contextuelles avec `setSharedStorageContext()`
 
-Vous pouvez utiliser l'[API Private Aggregation](https://privacysandbox.google.com/private-advertising/private-aggregation?hl=fr) pour créer des rapports combinant des données d'événement à l'intérieur des cadres protégés avec des données contextuelles du document parent. `setSharedStorageContext()` peut être utilisé pour transmettre des données contextuelles de l'intégrateur aux worklets de stockage partagé initiés par l'[API Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr).
+Vous pouvez utiliser [l'API Private Aggregation](https://privacysandbox.google.com/private-advertising/private-aggregation?hl=fr) pour créer des rapports combinant des données d'évènement à l'intérieur des cadres protégés avec des données contextuelles du document parent. `setSharedStorageContext()` peut être utilisé pour transmettre des données contextuelles de l'intégrateur aux worklets de stockage partagé initiés par [l'API Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr).
 
 Dans l'exemple suivant, nous stockons des données à la fois depuis la page intégratrice et depuis le cadre protégé dans le [stockage partagé](https://privacysandbox.google.com/private-advertising/shared-storage).
 
-Dans la page intégratrice, nous allons définir un identifiant d'événement fictif comme contexte de stockage partagé à l'aide de `setSharedStorageContext()`&nbsp;:
+Dans la page intégratrice, nous allons définir un identifiant d'évènement fictif comme contexte de stockage partagé à l'aide de `setSharedStorageContext()`&nbsp;:
 
 ```js
 const frameConfig = await navigator.runAdAuction({ resolveToConfig: true });
@@ -59,7 +59,7 @@ const frame = document.createElement("fencedframe");
 frame.config = frameConfig;
 ```
 
-À l'intérieur du cadre protégé, on ajoute le module worklet avec {{domxref("Worklet.addModule","window.sharedStorage.worklet.addModule()")}}, puis on envoie les données d'événement au worklet de stockage partagé via {{domxref("WindowSharedStorage.run","window.sharedStorage.run()")}} (cela n'est pas lié aux données contextuelles du document parent)&nbsp;:
+À l'intérieur du cadre protégé, on ajoute le module worklet avec {{DOMxRef("Worklet.addModule","window.sharedStorage.worklet.addModule()")}}, puis on envoie les données d'évènement au worklet de stockage partagé avec {{DOMxRef("WindowSharedStorage.run","window.sharedStorage.run()")}} (cela n'est pas lié aux données contextuelles du document parent)&nbsp;:
 
 ```js
 const frameData = {
@@ -75,7 +75,7 @@ await window.sharedStorage.run("send-report", {
 });
 ```
 
-Dans le worklet `reporting-worklet.js`, on lit l'identifiant d'événement du document parent depuis `sharedStorage.context` et les données d'événement du cadre depuis l'objet data, puis on les rapporte via [Private Aggregation](https://privacysandbox.google.com/private-advertising/private-aggregation?hl=fr)&nbsp;:
+Dans le worklet `reporting-worklet.js`, on lit l'identifiant d'évènement du document parent depuis `sharedStorage.context` et les données d'évènement du cadre depuis l'objet data, puis on les rapporte avec [Private Aggregation](https://privacysandbox.google.com/private-advertising/private-aggregation?hl=fr)&nbsp;:
 
 ```js
 class ReportingOperation {
@@ -90,7 +90,7 @@ class ReportingOperation {
     // Données de l'intégrateur
     const eventId = sharedStorage.context;
 
-    // Données du fenced frame
+    // Données du cadre protégé
     const eventPayload = data.frameData;
 
     privateAggregation.sendHistogramReport({

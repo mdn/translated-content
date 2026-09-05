@@ -1,5 +1,5 @@
 ---
-title: "`overflow-anchor` CSS プロパティ"
+title: CSS `overflow-anchor` プロパティ
 short-title: overflow-anchor
 slug: Web/CSS/Reference/Properties/overflow-anchor
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 **`overflow-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、コンテンツの移動を最小化するためにスクロール位置を調整する、ブラウザーのスクロール固定の動作をオプトアウトする方法を提供します。
 
-スクロール固定の動作は、対応しているすべてのブラウザーで既定で有効になっています。したがって、このプロパティを変更するのは通常、文書または文書の一部でスクロール固定によって操作上の問題が発生し、この動作をオフにする必要がある場合のみです。
+スクロール固定の動作は、対応しているすべてのブラウザーでデフォルトで有効になっています。したがって、このプロパティを変更するのは通常、文書または文書の一部でスクロール固定によって操作上の問題が発生し、この動作をオフにする必要がある場合のみです。
 
 {{InteractiveExample("CSS デモ: overflow-anchor")}}
 
@@ -78,7 +78,7 @@ function setInitialState() {
 }
 
 function addContent() {
-  console.log("adding content");
+  console.log("コンテンツの追加");
   const magicNumber = Math.floor(Math.random() * 10000);
   example.insertAdjacentHTML(
     "afterbegin",
@@ -134,7 +134,7 @@ overflow-anchor: unset;
 
 ### スクロール固定を抑止
 
-文書内でスクロール固定を抑止する場合は、 `overflow-anchor` プロパティを使用してください。
+文書内でスクロール固定を抑止する場合は、`overflow-anchor` プロパティを使用してください。
 
 ```css
 * {
@@ -152,5 +152,5 @@ overflow-anchor: unset;
 
 ## 関連情報
 
-- [スクロールアンカリングの紹介](/ja/docs/Web/CSS/Guides/Scroll_anchoring/Overview)
+- [スクロール固定の概要](/ja/docs/Web/CSS/Guides/Scroll_anchoring/Overview)
 - [CSS スクロール固定](/ja/docs/Web/CSS/Guides/Scroll_anchoring)モジュール

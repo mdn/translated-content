@@ -3,8 +3,6 @@ title: bookmarks.onImportBegan
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque le navigateur a commencé à importer un ensemble de signet.
 
 Pendant l'importation d'un ensemble de signets, {{WebExtAPIRef("bookmarks.onCreated", "onCreated")}} peut déclencher plusieurs fois. Si votre extension écoute `onCreated`, et que l'écouteur est cher, vous devez également écouter `onImportBegan` et {{WebExtAPIRef("bookmarks.onImportEnded", "onImportEnded")}}. Lorsque vous recevez `onImportBegan`, ignorez `onCreated` jusqu'à ce que vous receviez `onImportEnded`. Vous pouvez gérer toutes les autres notifications comme d'habitude.

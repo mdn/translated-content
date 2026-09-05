@@ -2,10 +2,10 @@
 title: HTMLMarqueeElement
 slug: Web/API/HTMLMarqueeElement
 l10n:
-  sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 L'interface **`HTMLMarqueeElement`** fournit des méthodes pour manipuler les éléments HTML {{HTMLElement("marquee")}}.
 
@@ -20,7 +20,7 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 - `HTMLMarqueeElement.behavior` {{Deprecated_Inline}}
   - : Définit la façon dont le texte défile à l'intérieur du marquee. Les valeurs possibles sont `scroll`, `slide` et `alternate`. Si aucune valeur n'est définie, la valeur par défaut est `scroll`.
 - `HTMLMarqueeElement.bgColor` {{Deprecated_Inline}}
-  - : Définit la couleur de fond via un nom de couleur ou une valeur hexadécimale.
+  - : Définit la couleur de fond avec un nom de couleur ou une valeur hexadécimale.
 - `HTMLMarqueeElement.direction` {{Deprecated_Inline}}
   - : Définit la direction du défilement à l'intérieur du marquee. Les valeurs possibles sont `left`, `right`, `up` et `down`. Si aucune valeur n'est définie, la valeur par défaut est `left`.
 - `HTMLMarqueeElement.height` {{Deprecated_Inline}}
@@ -28,7 +28,7 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 - `HTMLMarqueeElement.hspace` {{Deprecated_Inline}}
   - : Définit la marge horizontale.
 - `HTMLMarqueeElement.loop` {{Deprecated_Inline}}
-  - : Définit le nombre de fois que le texte défilera. Si aucune valeur n'est définie, la valeur par défaut est −1, ce qui signifie que le texte défilera en continu.
+  - : Définit le nombre de fois que le texte défile. Si aucune valeur n'est définie, la valeur par défaut est −1, ce qui signifie que le texte défile en continu.
 - `HTMLMarqueeElement.scrollAmount` {{Deprecated_Inline}}
   - : Définit la quantité de défilement à chaque intervalle en pixels. La valeur par défaut est 6.
 - `HTMLMarqueeElement.scrollDelay` {{Deprecated_Inline}}

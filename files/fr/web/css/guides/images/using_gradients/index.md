@@ -6,8 +6,6 @@ l10n:
   sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
 ---
 
-{{CSSRef}}
-
 Les **dégradés CSS** sont représentés par le type de donnée [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient) qui est un sous-ensemble du type [`<image>`](/fr/docs/Web/CSS/Reference/Values/image). L'utilisation de dégradés CSS permet d'afficher des transitions douces entre deux couleurs ou plus. Il existe trois sortes de dégradés&nbsp;:
 
 - Les dégradés linéaires (créés avec la fonction [`linear-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/linear-gradient)),

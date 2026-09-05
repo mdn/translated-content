@@ -2,10 +2,10 @@
 title: Falsy (偽値)
 slug: Glossary/Falsy
 l10n:
-  sourceCommit: 19036f6d79250ddc254d17e2b08bd0c45944b0ef
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+<!-- cSpell:ignore falsey -->
 
 **偽値** (**falsy** または **falsey**) な値とは、論理型コンテキストに現れたときに偽とみなされる値です。
 
@@ -25,7 +25,7 @@ l10n:
 | `""`                        | 文字列型     | 空[文字列](/ja/docs/Web/JavaScript/Guide/Data_structures#文字列型)値。`''` や ` `` ` も含みます。                                                                                |
 | {{domxref("document.all")}} | オブジェクト | JavaScript で唯一の偽値のオブジェクトは、組み込みの {{domxref("document.all")}} です。                                                                                           |
 
-`null` および `undefined` は[ヌル値](/ja/docs/Glossary/Nullish)でもあります。
+`null` および `undefined` は{{Glossary("nullish", "ヌル値")}}でもあります。
 
 ## 例
 
@@ -79,7 +79,8 @@ console.log(0 && "dog");
 
 ## 関連情報
 
-- {{Glossary("Truthy", "真値")}}
-- {{Glossary("Type_coercion", "型変換")}}
-- {{Glossary("Boolean", "論理型")}}
+- 関連用語:
+  - {{Glossary("Truthy", "真値")}}
+  - {{Glossary("Type_coercion", "型変換")}}
+  - {{Glossary("Boolean", "論理型")}}
 - [論理型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean#論理値への型強制)

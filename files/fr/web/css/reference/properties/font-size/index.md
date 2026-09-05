@@ -3,7 +3,7 @@ title: Propriété CSS `font-size`
 short-title: font-size
 slug: Web/CSS/Reference/Properties/font-size
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-size`** définit la taille de la fonte. Modifier la taille de la fonte met également à jour les tailles des unités {{CSSxRef("&lt;length&gt;")}} relatives à la taille de la fonte, telles que `em`, `ex`, etc.
@@ -80,11 +80,13 @@ font-size: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme une seule valeur parmi la liste suivante&nbsp;:
+
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
   - : Mots-clés de [taille absolue](/fr/docs/Web/CSS/Reference/Values/absolute-size), basés sur la taille de fonte par défaut de l'utilisateur·ice (qui vaut `medium`).
 
 - `larger, smaller`
-  - : Mots-clés de [taille relative](/fr/docs/Web/CSS/Reference/Values/relative-size). La fonte sera plus grande ou plus petite par rapport à la taille de fonte de l'élément parent, selon un ratio proche de celui utilisé pour séparer les mots-clés de taille absolue ci-dessus.
+  - : Mots-clés de [taille relative](/fr/docs/Web/CSS/Reference/Values/relative-size). La fonte est plus grande ou plus petite par rapport à la taille de fonte de l'élément parent, selon un ratio proche de celui utilisé pour séparer les mots-clés de taille absolue ci-dessus.
 
 - {{CSSxRef("&lt;length&gt;")}}
   - : Une valeur positive de type {{CSSxRef("&lt;length&gt;")}}. Pour la plupart des unités relatives à la fonte (telles que `em` et `ex`), la taille de la fonte est relative à la taille de fonte de l'élément parent.
@@ -112,7 +114,7 @@ Les mots-clés sont une bonne façon de déterminer la taille de la fonte sur le
 
 Définir la taille de la fonte en pixels (`px`) est un bon choix lorsque vous avez besoin d'une précision en pixels. Une valeur en px est statique. Il s'agit d'une méthode indépendante du système d'exploitation et des navigateurs pour indiquer littéralement aux navigateurs d'afficher les lettres avec exactement le nombre de pixels de hauteur que vous avez défini. Les résultats peuvent légèrement varier selon les navigateurs, car ils peuvent utiliser des algorithmes différents pour obtenir un effet similaire.
 
-Les réglages de taille de fonte peuvent aussi être utilisés en combinaison. Par exemple, si un élément parent est défini à `16px` et que son élément enfant est défini à `larger`, l'élément enfant s'affichera plus grand que l'élément parent sur la page.
+Les réglages de taille de fonte peuvent aussi être utilisés en combinaison. Par exemple, si un élément parent est défini à `16px` et que son élément enfant est défini à `larger`, l'élément enfant s'affiche plus grand que l'élément parent sur la page.
 
 > [!NOTE]
 > Définir les tailles de fonte en `px` n'est _[pas accessible](https://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web)_, car l'utilisateur·ice ne peut pas modifier la taille de la fonte dans certains navigateurs. Par exemple, les utilisateur·ice·s malvoyant·e·s peuvent souhaiter définir une taille de fonte bien plus grande que celle choisie par un·e concepteur·ice web. Évitez de les utiliser pour les tailles de fonte si vous souhaitez créer un design inclusif.
@@ -127,9 +129,9 @@ p {
 }
 ```
 
-Dans ce cas, la taille de la fonte des éléments `<p>` sera le double de la valeur calculée de `font-size` héritée par les éléments `<p>`. Par extension, une valeur de `font-size` de `1em` équivaut à la valeur calculée de `font-size` de l'élément sur lequel elle est utilisée.
+Dans ce cas, la taille de la fonte des éléments `<p>` est le double de la valeur calculée de `font-size` héritée par les éléments `<p>`. Par extension, une valeur de `font-size` de `1em` équivaut à la valeur calculée de `font-size` de l'élément sur lequel elle est utilisée.
 
-Si aucune valeur de `font-size` n'a été définie sur un des ancêtres de `<p>`, alors `1em` sera égal à la valeur par défaut de `font-size` du navigateur, qui est généralement `16px`. Ainsi, par défaut, `1em` équivaut à `16px`, et `2em` à `32px`. Si vous définissez par exemple une valeur de `font-size` de `20px` sur l'élément `<body>`, alors `1em` sur les éléments `<p>` équivaudra à `20px`, et `2em` à `40px`.
+Si aucune valeur de `font-size` n'a été définie sur un des ancêtres de `<p>`, alors `1em` est égal à la valeur par défaut de `font-size` du navigateur, qui est généralement `16px`. Ainsi, par défaut, `1em` équivaut à `16px`, et `2em` à `32px`. Si vous définissez par exemple une valeur de `font-size` de `20px` sur l'élément `<body>`, alors `1em` sur les éléments `<p>` équivaut à `20px`, et `2em` à `40px`.
 
 Pour calculer l'équivalent en `em` pour une valeur en pixels souhaitée, vous pouvez utiliser cette formule&nbsp;:
 
@@ -137,9 +139,9 @@ Pour calculer l'équivalent en `em` pour une valeur en pixels souhaitée, vous p
 em = taille visée en px / font-size du parent en pixels
 ```
 
-Par exemple, supposons que la propriété `font-size` du `<body>` de la page soit définie à `16px`. Si la taille de fonte souhaitée est de `12px`, vous devrez indiquer `0.75em` (car 12/16 = 0.75). De même, si vous souhaitez une taille de fonte de `10px`, indiquez `0.625em` (10/16 = 0.625)&nbsp;; pour `22px`, indiquez `1.375em` (22/16).
+Par exemple, supposons que la propriété `font-size` du `<body>` de la page soit définie à `16px`. Si la taille de fonte souhaitée est de `12px`, vous devez indiquer `0.75em` (car 12/16 = 0.75). De même, si vous souhaitez une taille de fonte de `10px`, indiquez `0.625em` (10/16 = 0.625)&nbsp;; pour `22px`, indiquez `1.375em` (22/16).
 
-L'unité `em` est très utile en CSS car elle s'adapte automatiquement à la taille de la fonte choisie par le·la lecteur·ice.
+L'unité `em` est très utile en CSS, car elle s'adapte automatiquement à la taille de la fonte choisie par le·la lecteur·ice.
 
 Un point important à garder à l'esprit&nbsp;: les valeurs en em se composent. Prenons le HTML et le CSS suivants&nbsp;:
 
@@ -162,7 +164,7 @@ Le résultat est&nbsp;:
 
 {{EmbedLiveSample("Ems", 400, 100)}}
 
-En supposant que la valeur par défaut de `font-size` du navigateur soit 16px, les mots «&nbsp;Extérieur&nbsp;» seront affichés à 25.6px, mais le mot «&nbsp;intérieur&nbsp;» sera affiché à 40.96px. Cela s'explique par le fait que la propriété `font-size` du {{HTMLElement("span")}} interne vaut 1.6em, ce qui est relatif à la valeur de `font-size` de son parent, elle-même relative à la valeur de `font-size` de son parent. C'est ce qu'on appelle **la composition**.
+En supposant que la valeur par défaut de `font-size` du navigateur soit 16px, les mots «&nbsp;Extérieur&nbsp;» sont affichés à `25.6px`, mais le mot «&nbsp;intérieur&nbsp;» est affiché à 40.96px. Cela s'explique par le fait que la propriété `font-size` du {{HTMLElement("span")}} interne vaut 1.6em, ce qui est relatif à la valeur de `font-size` de son parent, elle-même relative à la valeur de `font-size` de son parent. C'est ce qu'on appelle **la composition**.
 
 ### Rems
 

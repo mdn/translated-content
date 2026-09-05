@@ -60,5 +60,5 @@ Notez qu'il est conseillé d'appeler `toArray()` en dernière étape de votre tr
 
 - [Prothèse d'émulation de `Iterator.prototype.toArray` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
 - [Prothèse d'émulation es-shims de `Iterator.prototype.toArray` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Array.from()")}}

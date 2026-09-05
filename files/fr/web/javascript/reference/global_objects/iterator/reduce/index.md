@@ -76,7 +76,7 @@ console.log(
 
 - [Prothèse d'émulation de `Iterator.prototype.reduce` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
 - [Prothèse d'émulation es-shims de `Iterator.prototype.reduce` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.map()")}}
 - La méthode {{JSxRef("Iterator.prototype.flatMap()")}}
 - La méthode {{JSxRef("Array.prototype.reduce()")}}

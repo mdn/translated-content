@@ -3,7 +3,7 @@ title: Propriété CSS `forced-color-adjust`
 short-title: forced-color-adjust
 slug: Web/CSS/Reference/Properties/forced-color-adjust
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`forced-color-adjust`** permet aux auteur·ice·s de ne pas activer les modes de couleurs forcées sur certains éléments. Cela restaure la possibilité de contrôler ces valeurs en CSS.

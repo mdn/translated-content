@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
-{{WebAssemblySidebar}}
-
 La méthode statique **`WebAssembly.instantiate()`** permet de compiler et d'instancier du code WebAssembly. Cette fonction possède deux formes&nbsp;:
 
 - La première forme prend un code binaire WebAssembly sous forme d'un [tableau typé](/fr/docs/Web/JavaScript/Guide/Typed_arrays) ou d'un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) et effectue les étapes de compilation et d'instanciation en une fois. La valeur de résolution de la promesse renvoyée se compose d'un module [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module) compilé et de sa première instance [`WebAssembly.Instance`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Instance).

@@ -2,14 +2,14 @@
 title: Objets natifs standards
 slug: Web/JavaScript/Reference/Global_Objects
 l10n:
-  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 Ce chapitre documente tous les objets standards intégrés de JavaScript, y compris leurs méthodes et propriétés.
 
 Le terme «&nbsp;objets globaux&nbsp;» (ou objets natifs standards) ne doit pas être confondu avec **l'objet global**. Ici, «&nbsp;objets globaux&nbsp;» fait référence aux **objets dans la portée globale**.
 
-L'**objet global** lui-même peut être accédé à l'aide de l'opérateur {{JSxRef("this")}} dans la portée globale. En fait, la portée globale **est constituée** des propriétés de l'objet global, y compris les propriétés héritées, le cas échéant.
+**L'objet global** lui-même peut être accédé à l'aide de l'opérateur {{JSxRef("this")}} dans la portée globale. En fait, la portée globale **est constituée** des propriétés de l'objet global, y compris les propriétés héritées, le cas échéant.
 
 Les autres objets dans la portée globale sont soit [créés par le script utilisateur](/fr/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects), soit fournis par l'application hôte. Les objets hôtes disponibles dans les contextes de navigateur sont documentés dans la [référence des API](/fr/docs/Web/API).
 
@@ -19,7 +19,7 @@ Pour plus d'informations sur la distinction entre le [DOM](/fr/docs/Web/API/Docu
 
 ### Propriétés de valeur
 
-Ces propriétés globales renvoient une valeur simple. Elles n'ont ni propriétés ni méthodes.
+Ces propriétés globales retournent une valeur simple. Elles n'ont ni propriétés ni méthodes.
 
 - {{JSxRef("globalThis")}}
 - {{JSxRef("Infinity")}}
@@ -28,7 +28,7 @@ Ces propriétés globales renvoient une valeur simple. Elles n'ont ni propriét�
 
 ### Propriétés de fonction
 
-Ces fonctions globales — fonctions appelées globalement, et non sur un objet — renvoient directement leur résultat à l'appelant.
+Ces fonctions globales — fonctions appelées globalement, et non sur un objet — retournent directement leur résultat à l'appelant.
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
 - {{JSxRef("isFinite()")}}

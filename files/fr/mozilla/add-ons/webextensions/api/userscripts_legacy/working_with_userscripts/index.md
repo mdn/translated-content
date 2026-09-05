@@ -4,8 +4,6 @@ slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScri
 original_slug: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
 ---
 
-{{AddonSidebar}}
-
 En implémentant userScripts, les développeurs d'extension peuvent modifier l'apparence et/ou le fonctionnement des sites pour mieux répondre aux besoins des utilisateurs.
 
 Implémentez userScripts dans votre extension en suivant les étapes suivantes :

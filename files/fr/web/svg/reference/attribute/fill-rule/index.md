@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/fill-rule
 original_slug: Web/SVG/Attribute/fill-rule
 ---
 
-{{SVGRef}}
-
 L'attribut **`fill-rule`** définit l'algorithme à utiliser pour déterminer les parties qui sont considérées _à l'intérieur_ de la forme.
 
 > [!NOTE]

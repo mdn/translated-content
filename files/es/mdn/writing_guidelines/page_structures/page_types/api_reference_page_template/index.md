@@ -67,7 +67,7 @@ l10n:
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 El párrafo de resumen: comienza nombrando la interfaz, indicando a qué API pertenece y qué hace. Idealmente debería ser una o dos frases cortas. Puedes copiar gran parte de esto desde el resumen de la interfaz en la página de aterrizaje de la API correspondiente.
 

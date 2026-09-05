@@ -12,10 +12,10 @@ La méthode statique **`Array.from()`** crée une nouvelle instance d'`Array` (c
 
 ```js interactive-example
 console.log(Array.from("toto"));
-// Sortie attendue : Array ["t", "o", "t", "o"]
+// Résultat attendu : Array ["t", "o", "t", "o"]
 
 console.log(Array.from([1, 2, 3], (x) => x + x));
-// Sortie attendue : Array [2, 4, 6]
+// Résultat attendu : Array [2, 4, 6]
 ```
 
 ## Syntaxe
@@ -198,7 +198,7 @@ console.log(Array.from.call({}, { length: 1, 0: "toto" })); // [ 'toto' ]
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array/Array", "Array()")}}
 - La méthode {{JSxRef("Array.of()")}}
 - La méthode {{JSxRef("Array.fromAsync()")}}
