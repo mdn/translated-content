@@ -1,7 +1,7 @@
 ---
 title: Svelte 앱 컴포넌트화하기
-slug: Learn_web_development/Core/Frameworks_libraries/Svelte_components
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components
+slug: conflicting/Learn_web_development/Core/Frameworks_libraries_4ba249da5c10e42e479924fd181058b287e95ced2854d2f79b63c08e1e66aa6d
+original_slug: Learn_web_development/Core/Frameworks_libraries/Svelte_components
 l10n:
   sourceCommit: e9be22eaa7416206e3f263a058f0d509a7f81f88
 ---
