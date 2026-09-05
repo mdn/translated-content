@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`margin-left`** d'un élément définit l'espace horizontal à gauche qui formera [la zone de marge](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_marge) à gauche de l'élément. On peut avoir une marge gauche négative qui rapproche l'élément de ses voisins ou une marge positive qui l'en écarte.
+La propriété [CSS](/fr/docs/Web/CSS) **`margin-left`** d'un élément définit l'espace horizontal à gauche qui forme [la zone de marge](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_marge) à gauche de l'élément. On peut avoir une marge gauche négative qui rapproche l'élément de ses voisins ou une marge positive qui l'en écarte.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: margin-left")}}
 
@@ -60,7 +60,7 @@ margin-left: 0;
 
 Les marges verticales de deux boîtes adjacentes peuvent fusionner entre elles. C'est ce qu'on appelle [_la fusion de marges_](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 
-Dans certains cas où la largeur est sur-contrainte (autrement dit quand `width`, `margin-left`, `border`, `padding`, la taille de la zone de contenu et `margin-right` sont toutes définies), `margin-left` est ignorée. La valeur calculée sera la même que si `auto` avait été utilisée.
+Dans certains cas où la largeur est sur-contrainte (autrement dit quand `width`, `margin-left`, `border`, `padding`, la taille de la zone de contenu et `margin-right` sont toutes définies), `margin-left` est ignorée. La valeur calculée est la même que si `auto` a été utilisée.
 
 ## Syntaxe
 
@@ -92,7 +92,7 @@ La valeur de la propriété `margin-left` peut être le mot-clé `auto`, une lon
     - Pour les éléments positionnés par ancre, la fonction {{CSSxRef("anchor-size()")}} donne une valeur {{CSSxRef("&lt;length&gt;")}} relative à la largeur ou la hauteur de l'élément ancre associé (voir [Définir la marge d'un élément selon la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre)).
 
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille de la marge en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
+  - : La taille de la marge en pourcentage, relative à la taille en incise (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
 - `auto`
   - : La marge gauche reçoit une part de l'espace horizontal inutilisé, déterminée principalement par le mode de disposition utilisé. Si les valeurs de `margin-left` et `margin-right` sont toutes deux `auto`, l'espace calculé est réparti équitablement. Ce tableau résume les différents cas&nbsp;:
 
@@ -114,7 +114,7 @@ La valeur de la propriété `margin-left` peut être le mot-clé `auto`, une lon
           <th>N'importe laquelle</th>
           <th><code>static</code> ou <code>relative</code></th>
           <td><code>0</code></td>
-          <td>Disposition en ligne</td>
+          <td>Disposition en incise</td>
         </tr>
         <tr>
           <th>
@@ -123,7 +123,7 @@ La valeur de la propriété `margin-left` peut être le mot-clé `auto`, une lon
           <th>N'importe laquelle</th>
           <th><code>static</code> ou <code>relative</code></th>
           <td>
-            <code>0</code> sauf si <code>margin-left</code> et <code>margin-right</code> valent <code>auto</code>. Dans ce cas, la valeur utilisée sera celle qui permet de centrer l'élément au sein de l'élément parent.
+            <code>0</code> sauf si <code>margin-left</code> et <code>margin-right</code> valent <code>auto</code>. Dans ce cas, la valeur utilisée est celle qui permet de centrer l'élément au sein de l'élément parent.
           </td>
           <td>Disposition en bloc</td>
         </tr>
@@ -156,7 +156,7 @@ La valeur de la propriété `margin-left` peut être le mot-clé `auto`, une lon
             <code>fixed</code> ou <code>absolute</code>
           </th>
           <td>
-            <code>0</code> sauf si <code>margin-left</code> et <code>margin-right</code> valent <code>auto</code>. Dans ce cas, la valeur utilisée sera celle qui permet de centrer la boîte de bordure dans la zone de largeur disponible si elle fixée.
+            <code>0</code> sauf si <code>margin-left</code> et <code>margin-right</code> valent <code>auto</code>. Dans ce cas, la valeur utilisée est celle qui permet de centrer la boîte de bordure dans la zone de largeur disponible si elle fixée.
           </td>
           <td>Positionnement absolu.</td>
         </tr>
@@ -165,7 +165,7 @@ La valeur de la propriété `margin-left` peut être le mot-clé `auto`, une lon
           <th>N'importe laquelle</th>
           <th>N'importe laquelle</th>
           <td>
-            <code>0</code>, sauf s'il reste de l'espace libre. Dans ce cas, l'espace restant sera distribué de façon équitable entre toutes les marges avec <code>auto</code>.
+            <code>0</code>, sauf s'il reste de l'espace libre. Dans ce cas, l'espace restant est distribué de façon équitable entre toutes les marges avec <code>auto</code>.
           </td>
           <td>Boîtes flexibles.</td>
         </tr>
@@ -184,19 +184,18 @@ La valeur de la propriété `margin-left` peut être le mot-clé `auto`, une lon
 
 ### Définir la marge de gauche en pourcentage
 
-Les valeurs en pourcentage pour `margin-left` sont relatives à la taille en ligne du conteneur.
+Les valeurs en pourcentage pour `margin-left` sont relatives à la taille en incise (<i lang="en">inline</i> en anglais) du conteneur.
 
 #### HTML
 
 ```html
 <p>
-  Un grand rosier se trouvait à l'entrée du jardin&nbsp;; les roses qu'il
-  portait étaient blanches, mais trois jardiniers étaient en train de les
-  peindre en rouge.
+  Un grand rosier se trouve à l'entrée du jardin&nbsp;; les roses qu'il porte
+  est blanches, mais trois jardiniers est en train de les peindre en rouge.
 </p>
 <p class="exemple">
-  Alice s'avança pour les regarder, et, au moment où elle approchait, elle en
-  entendit un qui disait&nbsp;: «&nbsp;Fais donc attention, Cinq, et ne
+  Alice s'avança pour les regarder, et, au moment où elle approche, elle en
+  entendit un qui dit&nbsp;: «&nbsp;Fais donc attention, Cinq, et ne
   m'éclabousse pas ainsi avec ta peinture.&nbsp;»
 </p>
 <p>

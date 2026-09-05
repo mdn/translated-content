@@ -21,10 +21,10 @@ function calcAngle(opposite, adjacent) {
 }
 
 console.log(calcAngle(8, 10));
-// Sortie attendue : 0.6747409422235527
+// Résultat attendu : 0.6747409422235527
 
 console.log(calcAngle(5, 3));
-// Sortie attendue : 1.0303768265243125
+// Résultat attendu : 1.0303768265243125
 ```
 
 ## Syntaxe

@@ -3,7 +3,7 @@ title: "ARIA : rôle columnheader"
 short-title: columnheader
 slug: Web/Accessibility/ARIA/Reference/Roles/columnheader_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
 Le rôle `columnheader` identifie un élément comme étant une cellule dans une ligne contenant des informations d'en-tête pour une colonne, similaire à l'élément HTML natif {{HTMLElement("th")}} avec une portée de colonne.

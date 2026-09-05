@@ -4,8 +4,6 @@ slug: Web/MathML/Reference/Values
 original_slug: Web/MathML/Values
 ---
 
-{{MathMLRef}}
-
 ## Longueurs
 
 Plusieurs éléments de présentation MathML possèdent des attributs qui acceptent des valeurs pour mesurer des tailles ou des espacements. MathML accepte différentes unités et constantes pour spécifier les longueurs.

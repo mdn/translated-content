@@ -3,8 +3,6 @@ title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 ---
 
-{{JSRef}}
-
 La méthode **`handler.deleteProperty()`** est une trappe pour l'opérateur {{jsxref("delete")}}.
 
 {{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}

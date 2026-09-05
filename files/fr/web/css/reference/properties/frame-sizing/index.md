@@ -51,7 +51,7 @@ Pour permettre le redimensionnement réactif des éléments HTML {{HTMLElement("
 
 La propriété `frame-sizing` peut prendre les valeurs `content-width` ou `content-height` pour que la `width` ou la `height` de l'élément `<iframe>` adopte respectivement la largeur ou la hauteur de mise en page du document intégré.
 
-Il existe également des équivalents logiques — la propriété `frame-sizing` peut prendre les valeurs `content-inline-size` ou `content-block-size` pour que la `inline-size` ou la `block-size` de l'élément `<iframe>` adopte respectivement la taille en incise ou la taille de bloc du document intégré. La direction de bloc ou en incise est déterminée par le {{CSSxRef("writing-mode")}} de l'élément `<iframe>`, et non par celle du contenu du document intégré.
+Il existe également des équivalents logiques — la propriété `frame-sizing` peut prendre les valeurs `content-inline-size` ou `content-block-size` pour que la `inline-size` ou la `block-size` de l'élément `<iframe>` adopte respectivement la taille en incise (<i lang="en">inline</i> en anglais) ou la taille de bloc du document intégré. La direction de bloc ou en incise est déterminée par le {{CSSxRef("writing-mode")}} de l'élément `<iframe>`, et non par celle du contenu du document intégré.
 
 Pour redimensionner dynamiquement l'élément `<iframe>` lorsque le document intégré modifie sa taille de mise en page, vous pouvez appeler la méthode {{DOMxRef("Window.requestResize()")}} depuis le document intégré pour lui faire signaler une taille mise à jour.
 

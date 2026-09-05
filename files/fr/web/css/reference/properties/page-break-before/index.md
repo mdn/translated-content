@@ -3,10 +3,8 @@ title: Propriété CSS `page-break-before`
 short-title: page-break-before
 slug: Web/CSS/Reference/Properties/page-break-before
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 > [!WARNING]
 > Cette propriété a été remplacée par la propriété {{CSSxRef("break-before")}}.

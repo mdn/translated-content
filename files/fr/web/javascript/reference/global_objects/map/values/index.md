@@ -19,10 +19,10 @@ map.set(1, "tata");
 const iterator = map.values();
 
 console.log(iterator.next().value);
-// Sortie attendue : "toto"
+// Résultat attendu : "toto"
 
 console.log(iterator.next().value);
-// Sortie attendue : "tata"
+// Résultat attendu : "tata"
 ```
 
 ## Syntaxe
@@ -66,5 +66,5 @@ console.log(mapIter.next().value); // "licorne"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Map.prototype.entries()")}}
-- L'objet {{JSxRef("Map.prototype.keys()")}}
+- L'objet natif {{JSxRef("Map.prototype.entries()")}}
+- L'objet natif {{JSxRef("Map.prototype.keys()")}}

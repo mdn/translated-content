@@ -3,7 +3,7 @@ title: Les bases des tableaux HTML
 short-title: Bases des tableaux
 slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
 l10n:
-  sourceCommit: 30cb9ca54d74a63bd95e0e0f5281e9ade578c044
+  sourceCommit: ce12c10364f35c64184dec44be85537b7e10d91f
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
@@ -221,9 +221,9 @@ Lorsque c'est fait correctement, les tableaux HTML sont bien pris en charge par 
 
 ### Style de tableau
 
-Vous pouvez également [consulter l'exemple de données planétaires en temps réel <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) sur GitHub&nbsp;! Vous pouvez remarquer que le tableau y est un peu plus lisible&nbsp;: cela s'explique par le fait que le tableau affiché ci-dessus sur cette page ne comporte qu'un style minimal, tandis que la version GitHub bénéficie d'un CSS plus élaboré.
+Vous pouvez également [consulter l'exemple de données planétaires en temps réel <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/tables/planets-data/) sur GitHub&nbsp;! Vous pouvez remarquer que le tableau y est un peu plus lisible&nbsp;: cela s'explique par le fait que le tableau affiché ci-dessus sur cette page ne comporte qu'un style minimal, tandis que la version GitHub bénéficie d'un CSS plus élaboré.
 
-Ne vous faites pas d'illusions&nbsp;; pour que les tableaux soient efficaces sur le Web, vous devez leur appliquer des styles à l'aide de [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), ainsi qu'une structure solide en HTML. Dans cette leçon, nous nous concentrons sur la partie HTML&nbsp;; vous découvrirez la mise en forme des tableaux plus tard, dans notre leçon [Mise en forme des tableaux](/fr/docs/Learn_web_development/Core/Styling_basics/Tables).
+Ne vous faites pas d'illusions&nbsp;; pour que les tableaux soient efficaces sur le Web, vous devez leur appliquer des styles à l'aide de [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), ainsi qu'une structure solide en HTML. Dans cette leçon, nous nous concentrons sur la partie HTML&nbsp;; vous découvrez la mise en forme des tableaux plus tard, dans notre leçon [Mise en forme des tableaux](/fr/docs/Learn_web_development/Core/Styling_basics/Tables).
 
 Nous ne nous concentrons pas sur le CSS dans ce module, mais nous avons fourni une feuille de style CSS minimale que vous pouvez utiliser pour rendre vos tableaux plus lisibles que ceux par défaut, sans aucun style. Vous pouvez trouver la [feuille de style ici <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css), ainsi qu'un [modèle HTML <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) qui applique cette feuille de style — ensemble, ils vous offrent un bon point de départ pour vous familiariser avec les tableaux HTML.
 
@@ -243,7 +243,7 @@ Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et c
 
 1. Avant tout, faites une copie locale de [blank-template.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) et [minimal-table.css <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire de votre ordinateur.
 2. Le contenu de chaque tableau est encadré par ces deux balises&nbsp;: **[`<table></table>`](/fr/docs/Web/HTML/Reference/Elements/table)**. Ajoutez‑les dans le corps de votre HTML.
-3. Le plus petit conteneur d'un tableau est la cellule&nbsp;; elle est créée avec l'élément **[`<td>`](/fr/docs/Web/HTML/Reference/Elements/td)** («&nbsp;td&nbsp;» comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau&nbsp;:
+3. Le plus petit conteneur d'un tableau est la cellule&nbsp;; elle est créée avec l'élément **{{HTMLElement("td")}}** («&nbsp;td&nbsp;» comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau&nbsp;:
 
    ```html
    <td>Bonjour, je suis votre première cellule.</td>
@@ -260,7 +260,7 @@ Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et c
 
 Comme vous pouvez le voir, les cellules ne sont pas placées les unes en dessous des autres, mais elles sont automatiquement affichées dans une même ligne. chaque élément `<td>` crée une cellule simple et ensemble elles forment la première ligne. Toutes les cellules que nous ajoutons allongent la ligne.
 
-Pour empêcher cette ligne de croître et commencer à placer les cellules suivantes sur une deuxième ligne, nous devons utiliser la balise **[`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)** («&nbsp;tr&nbsp;» comme «&nbsp;table rangée&nbsp;»). Étudions cela maintenant.
+Pour empêcher cette ligne de croître et commencer à placer les cellules suivantes sur une deuxième ligne, nous devons utiliser la balise {{HTMLElement("tr")}} («&nbsp;tr&nbsp;» comme «&nbsp;table rangée&nbsp;»). Étudions cela maintenant.
 
 1. Placez les quatre cellules que vous avez créées entre deux balises `<tr>` ainsi&nbsp;:
 
@@ -298,8 +298,6 @@ Il doit en résulter un tableau qui ressemble à&nbsp;:
   </tbody>
 </table>
 ```
-
-Vous pouvez également trouver cela sur GitHub [simple-table.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/simple-table.html) ([voir en direct aussi <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
 </details>
 
@@ -362,15 +360,58 @@ Maintenant, le rendu du tableau réel&nbsp;:
 
 {{EmbedLiveSample("table-headers", "", 250)}}
 
-Le problème ici c'est que, bien que vous puissiez comprendre le tableau, il n'est pas aussi facile de croiser les données que ça peut être. Si les en-têtes de colonnes et de lignes se démarquaient d'une manière ou d'une autre, c'est mieux.
+Le problème ici c'est que, bien que vous puissiez comprendre le tableau, il n'est pas aussi facile de croiser les données que ça peut être. Si les en-têtes de colonnes et de lignes se démarquent d'une manière ou d'une autre, c'est mieux.
 
 ### Ajouter des en-têtes au tableau des chiens
 
 Maintenant, essayons d'améliorer l'exemple du tableau des chiens en ajoutant des en-têtes.
 
-1. Tout d'abord, faites une copie locale de nos fichiers [dogs-table.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table.html) et [minimal-table.css <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre machine locale.
-2. Pour reconnaître les en-têtes de tableau en tant qu'en-têtes, à la fois visuellement et sémantiquement, vous pouvez utiliser l'élément **[`<th>`](/fr/docs/Web/HTML/Reference/Elements/th)** («&nbsp;th&nbsp;» signifie «&nbsp;en-tête de tableau&nbsp;»). Cela fonctionne exactement de la même manière qu'un `<td>`, sauf qu'il indique un en-tête, et non une cellule normale. Allez dans votre HTML et remplacez tous les éléments `<td>` entourant les en-têtes du tableau par des éléments `<th>`.
-3. Enregistrez votre HTML et chargez-le dans un navigateur, et vous devez voir que les en-têtes ressemblent maintenant à des en-têtes.
+1. Premièrement, faites une autre copie de nos fichiers [blank-template.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) et [minimal-table.css <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre machine locale.
+2. Ajoutez le code suivant à l'intérieur de la balise `<body>` de votre HTML&nbsp;:
+
+   ```html
+   <h1>Tableau des chiens</h1>
+   <table>
+     <tr>
+       <td>&nbsp;</td>
+       <td>Knocky</td>
+       <td>Flor</td>
+       <td>Ella</td>
+       <td>Juan</td>
+     </tr>
+     <tr>
+       <td>Breed</td>
+       <td>Jack Russell</td>
+       <td>Poodle</td>
+       <td>Streetdog</td>
+       <td>Cocker Spaniel</td>
+     </tr>
+     <tr>
+       <td>Age</td>
+       <td>16</td>
+       <td>9</td>
+       <td>10</td>
+       <td>5</td>
+     </tr>
+     <tr>
+       <td>Propriétaire</td>
+       <td>Belle-mère</td>
+       <td>Moi</td>
+       <td>Moi</td>
+       <td>Belle-sœur</td>
+     </tr>
+     <tr>
+       <td>Habitudes alimentaires</td>
+       <td>Mange tous les restes</td>
+       <td>Grignote la nourriture</td>
+       <td>Mange copieusement</td>
+       <td>Mange jusqu'à ce qu'il éclate</td>
+     </tr>
+   </table>
+   ```
+
+3. Pour reconnaître les en-têtes de tableau comme tels, à la fois visuellement et sémantiquement, vous pouvez utiliser l'élément {{HTMLElement("th")}} («&nbsp;th&nbsp;» signifie «&nbsp;table header&nbsp;» ou «&nbsp;en-tête de tableau&nbsp;»). Cela fonctionne exactement de la même manière qu'un `<td>`, sauf qu'il indique un en-tête, et non une cellule normale. Allez dans votre HTML et changez tous les éléments `<td>` entourant les en-têtes de tableau en éléments `<th>`.
+4. Enregistrez votre HTML et chargez-le dans un navigateur, et vous devez voir que les en-têtes ressemblent maintenant à des en-têtes.
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
@@ -417,8 +458,6 @@ Votre HTML final doit ressembler à ceci&nbsp;:
 </table>
 ```
 
-Vous pouvez également trouver ce code sur GitHub à l'adresse [dogs-table-fixed.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table-fixed.html) ([voir également en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
-
 </details>
 
 ### Pourquoi les en-têtes sont-ils utiles ?
@@ -428,7 +467,7 @@ Nous avons déjà partiellement répondu à cette question — il vous est plus 
 > [!NOTE]
 > Les en-têtes de tableau sont accompagnés d'un style par défaut — ils sont en gras et centrés même si vous n'ajoutez pas votre propre style pour les démarquer.
 
-Les en-têtes de tableau ont un autre avantage — avec l'attribut `scope` (que nous étudierons dans le prochain article), ils rendent les tableaux plus accessibles en associant chaque en-tête à toutes les données des cellules d'une ligne ou d'une colonne. Les lecteurs d'écran peuvent alors lire toute une ligne ou une colonne de données, ce qui peut être très utile.
+Les en-têtes de tableau ont un autre avantage — avec l'attribut `scope` (que nous étudions dans le prochain article), ils rendent les tableaux plus accessibles en associant chaque en-tête à toutes les données des cellules d'une ligne ou d'une colonne. Les lecteurs d'écran peuvent alors lire toute une ligne ou une colonne de données, ce qui peut être très utile.
 
 ## Étendre des cellules sur plusieurs lignes ou colonnes
 
@@ -485,10 +524,40 @@ Nous avons besoin d'un moyen pour étendre «&nbsp;Animaux&nbsp;», «&nbsp;Hipp
 
 Utilisons `colspan` et `rowspan` pour améliorer ce tableau.
 
-1. Tout d'abord, faites une copie locale de nos fichiers [animals-table.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) et [minimal-table.css <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre ordinateur. Le HTML contient le même exemple d'animaux vu ci-dessus.
-2. Ensuite, utilisez `colspan` pour mettre «&nbsp;Animaux&nbsp;», «&nbsp;Hippopotame&nbsp;» et «&nbsp;Crocodile&nbsp;» sur deux colonnes.
-3. Enfin, utilisez `rowspan` pour mettre «&nbsp;Cheval&nbsp;» and «&nbsp;Poulet&nbsp;» sur deux lignes.
-4. Enregistrez et ouvrez votre code sur un navigateur pour voir l'amélioration.
+1. Faites une autre copie locale de nos fichiers [blank-template.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) et [minimal-table.css <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre machine locale.
+2. Ajoutez ce qui suit dans le `<body>` de votre HTML&nbsp;:
+
+   ```html
+   <table>
+     <tr>
+       <th>Animaux</th>
+     </tr>
+     <tr>
+       <th>Hippopotame</th>
+     </tr>
+     <tr>
+       <th>Cheval</th>
+       <td>Jument</td>
+     </tr>
+     <tr>
+       <td>Étalon</td>
+     </tr>
+     <tr>
+       <th>Crocodile</th>
+     </tr>
+     <tr>
+       <th>Poulet</th>
+       <td>Poule</td>
+     </tr>
+     <tr>
+       <td>Coq</td>
+     </tr>
+   </table>
+   ```
+
+3. Ensuite, utilisez `colspan` pour faire en sorte que «&nbsp;Animaux&nbsp;», «&nbsp;Hippopotame&nbsp;» et «&nbsp;Crocodile&nbsp;» s'étendent sur deux colonnes.
+4. Enfin, utilisez `rowspan` pour faire en sorte que «&nbsp;Cheval&nbsp;» et «&nbsp;Poulet&nbsp;» s'étendent sur deux lignes.
+5. Enregistrez ensuite votre code et ouvrez-le dans un navigateur pour voir l'amélioration.
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
@@ -523,15 +592,13 @@ Votre HTML final doit ressembler à ceci&nbsp;:
 </table>
 ```
 
-Vous pouvez également trouver ce code sur GitHub à [animals-table-fixed.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html) ([voir le résultat en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
-
 </details>
 
 ## Grouper les colonnes avec `<colgroup>` et `<col>`
 
 Il existe un moyen de cibler des colonnes de tableau entières en tant qu'entité unique, par exemple lors de l'application de styles à un tableau (ce que vous apprendrez plus tard, dans [Mettre en forme les tableaux](/fr/docs/Learn_web_development/Core/Styling_basics/Tables)). À mesure que vous gagnez de l'expérience dans la création de tableaux HTML, vous pouvez constater que l'application d'une couleur de fond, par exemple, à chaque cellule d'une seule colonne est plus difficile que vous ne le pensez. Les éléments {{HTMLElement("colgroup")}} et {{HTMLElement("col")}} offrent une solution à ce problème.
 
-L'élément `<colgroup>` doit être inclus en tant qu'enfant du tableau, juste après l'ouverture de l'élément `<table>`. À l'intérieur de l'élément `<colgroup>`, vous pouvez inclure un ou plusieurs éléments `<col>`, qui représentent des groupes de colonnes. L'élément `<col>` peut inclure un attribut `span` qui indique le nombre de colonnes dans ce groupe. Il peut également inclure des attributs globaux tels que `style` (si vous souhaitez cibler le groupe avec des styles en ligne) ou `class` (si vous souhaitez cibler ce groupe avec CSS ou JavaScript en utilisant un nom de classe). Les éléments `<col>` représentent les colonnes du tableau à partir du début des colonnes, par exemple à partir du côté gauche d'un tableau écrit dans une langue de gauche à droite comme l'anglais.
+L'élément `<colgroup>` doit être inclus en tant qu'enfant du tableau, juste après l'ouverture de l'élément `<table>`. À l'intérieur de l'élément `<colgroup>`, vous pouvez inclure un ou plusieurs éléments `<col>`, qui représentent des groupes de colonnes. L'élément `<col>` peut inclure un attribut `span` qui indique le nombre de colonnes dans ce groupe. Il peut également inclure des attributs globaux tels que `style` (si vous souhaitez cibler le groupe avec des styles en incise) ou `class` (si vous souhaitez cibler ce groupe avec CSS ou JavaScript en utilisant un nom de classe). Les éléments `<col>` représentent les colonnes du tableau à partir du début des colonnes, par exemple à partir du côté gauche d'un tableau écrit dans une langue de gauche à droite comme l'anglais.
 
 Voyons un exemple pour illustrer ce que nous voulons dire. Le tableau suivant montre un emploi du temps scolaire&nbsp;:
 
@@ -669,7 +736,7 @@ td {
 - Les éléments `<col>` avec une classe `column-fixed-width` ont une largeur fixe étroite appliquée.
 - L'élément `<col>` avec une classe `column-background-border` a une couleur de fond solide et une bordure épaisse appliquées.
 
-Vous n'avez pas besoin de vous inquiéter de la façon dont le CSS fonctionne pour l'instant&nbsp;; vous en apprendrez les détails plus tard dans notre module [Bases du style CSS](/fr/docs/Learn_web_development/Core/Styling_basics).
+Vous n'avez pas besoin de vous inquiéter de la façon dont le CSS fonctionne pour l'instant&nbsp;; vous allez apprendre les détails plus tard dans notre module [Bases du style CSS](/fr/docs/Learn_web_development/Core/Styling_basics).
 
 Regardons comment le code ci-dessus s'affiche&nbsp;:
 

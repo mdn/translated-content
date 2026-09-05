@@ -48,6 +48,6 @@ buffer.maxByteLength; // 16
 
 ## See also
 
-- L'objet global {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
 - La propriété {{JSxRef("ArrayBuffer.prototype.byteLength")}}
 - La méthode {{JSxRef("ArrayBuffer.prototype.resize()")}}

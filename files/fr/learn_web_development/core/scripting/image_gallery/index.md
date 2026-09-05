@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Image_gallery
 original_slug: Learn/JavaScript/Building_blocks/Image_gallery
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenu("Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
 Maintenant que nous avons examiné les blocs fondamentaux de construction de JavaScript, nous allons tester vos connaissances sur les boucles, les fonctions, les conditions et les événements en vous aidant à créer un élément assez commun que vous verrez sur de nombreux sites web. Une galerie JavaScript animée.
 

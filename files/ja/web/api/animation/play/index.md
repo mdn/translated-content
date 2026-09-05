@@ -3,7 +3,7 @@ title: "Animation: play() メソッド"
 short-title: play()
 slug: Web/API/Animation/play
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: b2c48c8b7c097aeab4bc15a388c913f466f40e25
 ---
 
 {{ APIRef("Web Animations") }}
@@ -29,7 +29,7 @@ play()
 [アリスの成長/縮小ゲーム](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)の例では、ケーキをクリックまたはタップすると、アリスの成長アニメーション (`aliceChange`) が再生され、ケーキのアニメーションが発生すると同時に、アリスが大きくなります。 2 つの `Animation.play()`、 1 つの `EventListener` です。
 
 ```js
-// The cake has its own animation:
+// ケーキには独自のアニメーションがある
 const nommingCake = document
   .getElementById("eat-me_sprite")
   .animate(
@@ -41,21 +41,21 @@ const nommingCake = document
     },
   );
 
-// Pause the cake's animation so it doesn't play immediately.
+// ケーキのアニメーションを一時停止し、直ちに実行されないようにする
 nommingCake.pause();
 
-// This function will play when ever a user clicks or taps
+// この関数は、ユーザーがクリックまたはタップするたびに実行され鵜
 const growAlice = () => {
-  // Play Alice's animation.
+  // アリスのアニメーションを実行
   aliceChange.play();
 
-  // Play the cake's animation.
+  // ケーキのアニメーションを実行
   nommingCake.play();
 };
 
-// When a user holds their mouse down or taps, call growAlice to make all the animations play.
-cake.addEventListener("mousedown", growAlice, false);
-cake.addEventListener("touchstart", growAlice, false);
+// ユーザーがマウスを押し続けたままにしたり、長押ししたりしたときは、growAlice を呼び出して、すべてのアニメーションを再生する
+cake.addEventListener("mousedown", growAlice);
+cake.addEventListener("touchstart", growAlice);
 ```
 
 ## 仕様書

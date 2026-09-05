@@ -4,8 +4,6 @@ slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/UserScriptOptions
 original_slug: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions
 ---
 
-{{AddonSidebar}}
-
 L'objet UserScriptOptions représente les scripts de contenu à enregistrer. Sa syntaxe est similaire à celle des options contentScript prises en charge par browser.contentScripts.register. Les différences sont les suivantes :
 
 - il ne prend pas en charge une propriété css (utilisez browser.contentScripts.register pour enregistrer/désenregistrer dynamiquement les feuilles de style)

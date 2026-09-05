@@ -3,10 +3,10 @@ title: "Document : propriété applets"
 short-title: applets
 slug: Web/API/Document/applets
 l10n:
-  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 La propriété **`applets`** de l'objet {{DOMxRef("Document")}} retourne une collection d'éléments ({{DOMxRef("HTMLCollection")}}) vide. Cette propriété est conservée uniquement pour des raisons de compatibilité&nbsp;; dans les anciennes versions des navigateurs, elle retournait une liste des applets présents dans un document.
 

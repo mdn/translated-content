@@ -1,5 +1,5 @@
 ---
-title: "KeyframeEffect : la propriété target"
+title: "KeyframeEffect : propriété target"
 short-title: target
 slug: Web/API/KeyframeEffect/target
 l10n:

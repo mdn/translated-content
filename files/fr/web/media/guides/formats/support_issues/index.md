@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Formats/Support_issues
 original_slug: Web/Media/Formats/Support_issues
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
-
 L'une des réalités du travail avec la présentation et la manipulation audio et vidéo sur le web est qu'il existe un certain nombre de formats de médias disponibles, de degrés de popularité variables et avec des capacités variées. La possibilité de choisir est bonne pour l'utilisateur, dans la mesure où il peut choisir le format qui répond le mieux à ses besoins. Il y a cependant un inconvénient : comme il y a un grand choix, avec tant de types de licences et de principes de conception différents, chaque développeur de navigateur web est laissé à lui-même pour décider des types de fichiers média et des codecs à prendre en charge.
 
 Cela impose une charge légère, mais raisonnablement facile à surmonter, au développeur web : gérer correctement la situation lorsque le navigateur de l'utilisateur ne peut pas gérer un type de média particulier. Ce guide couvre les techniques que vous pouvez utiliser pour développer des contenus web qui répondent à vos besoins médiatiques tout en offrant l'expérience la plus largement compatible possible. Les sujets que nous examinerons sont les solutions de secours, les formats de base des médias et les pratiques de traitement des erreurs qui permettront à votre contenu de fonctionner dans le plus grand nombre de situations possible.

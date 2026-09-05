@@ -15,9 +15,9 @@ const array = ["a", "b", "c"];
 
 array.forEach((element) => console.log(element));
 
-// Sortie attendue : "a"
-// Sortie attendue : "b"
-// Sortie attendue : "c"
+// Résultat attendu : "a"
+// Résultat attendu : "b"
+// Résultat attendu : "c"
 ```
 
 ## Syntaxe
@@ -69,7 +69,7 @@ notes.forEach(async (note) => {
 });
 
 console.log(somme);
-// Sortie attendue : 14
+// Résultat attendu : 14
 // Sortie réelle : 0
 ```
 
@@ -262,7 +262,7 @@ Array.prototype.forEach.call(objetSimilaireTableau, (x) => console.log(x));
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}
 - La méthode {{JSxRef("Array.prototype.map()")}}
 - La méthode {{JSxRef("Array.prototype.filter()")}}

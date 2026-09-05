@@ -2,7 +2,7 @@
 title: Element
 slug: Web/API/Element
 l10n:
-  sourceCommit: 361dd9caf4ac5db8a73cc33e4d8ee43fa2e35fcc
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 {{APIRef("DOM")}}
@@ -95,7 +95,7 @@ _L'interface `Element` inclut également les propriétés suivantes._
 - {{DOMxRef("Element.ariaAtomic")}}
   - : Une chaîne de caractères reflétant l'attribut [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic), qui indique si les technologies d'assistance présentent toutes les parties ou seulement certaines parties de la région modifiée en fonction des notifications de changement définies par l'attribut [`aria-relevant`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant).
 - {{DOMxRef("Element.ariaAutoComplete")}}
-  - : Une chaîne de caractères reflétant l'attribut [`aria-autocomplete`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete), qui indique si la saisie de texte peut déclencher l'affichage d'une ou plusieurs prédictions de la valeur prévue par l'utilisateur·ice pour une zone de combinaison, une zone de recherche ou une zone de texte, et définit comment les prédictions seraient présentées si elles étaient faites.
+  - : Une chaîne de caractères reflétant l'attribut [`aria-autocomplete`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete), qui indique si la saisie de texte peut déclencher l'affichage d'une ou plusieurs prédictions de la valeur prévue par l'utilisateur·ice pour une zone de combinaison, une zone de recherche ou une zone de texte, et définit comment les prédictions sont présentées si elles sont faites.
 - {{DOMxRef("Element.ariaBrailleLabel")}}
   - : Une chaîne de caractères reflétant l'attribut [`aria-braillelabel`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel), qui définit l'étiquette braille de l'élément.
 - {{DOMxRef("Element.ariaBrailleRoleDescription")}}
@@ -103,7 +103,7 @@ _L'interface `Element` inclut également les propriétés suivantes._
 - {{DOMxRef("Element.ariaBusy")}}
   - : Une chaîne de caractères reflétant l'attribut [`aria-busy`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy), qui indique si un élément est en cours de modification, car les technologies d'assistance peuvent vouloir attendre que les modifications soient terminées avant de les exposer à l'utilisateur·ice.
 - {{DOMxRef("Element.ariaChecked")}}
-  - : Une chaîne de caractères reflétant l'attribut [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked), qui indique l'état actuel «&nbsp;coché&nbsp;» des cases à cocher, des boutons radio et d'autres widgets ayant un état coché.
+  - : Une chaîne de caractères reflétant l'attribut [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked), qui indique l'état actuel «&nbsp;coché&nbsp;» des cases à cocher, des boutons radio et d'autres composants ayant un état coché.
 - {{DOMxRef("Element.ariaColCount")}}
   - : Une chaîne de caractères reflétant l'attribut [`aria-colcount`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount), qui définit le nombre de colonnes dans un tableau, une grille ou une arborescence de grille.
 - {{DOMxRef("Element.ariaColIndex")}}
@@ -135,7 +135,7 @@ _L'interface `Element` inclut également les propriétés suivantes._
 - {{DOMxRef("Element.ariaLive")}}
   - : Une chaîne de caractères reflétant l'attribut [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live), qui indique qu'un élément est mis à jour et décrit les types de mises à jour que les agents utilisateurs, les technologies d'assistance et l'utilisateur·ice peuvent attendre de la région dynamique.
 - {{DOMxRef("Element.ariaModal")}}
-  - : Une chaîne de caractères reflétant l'attribut [`aria-modal`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal), qui indique si un élément est modal lorsqu'il est affiché.
+  - : Une chaîne de caractères reflétant l'attribut [`aria-modal`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal), qui indique si un élément est bloquante lorsqu'il est affiché.
 - {{DOMxRef("Element.ariaMultiline")}}
   - : Une chaîne de caractères reflétant l'attribut [`aria-multiline`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline), qui indique si une zone de texte accepte plusieurs lignes de saisie ou seulement une seule ligne.
 - {{DOMxRef("Element.ariaMultiSelectable")}}
@@ -302,7 +302,7 @@ _`Element` hérite des méthodes de ses parents {{DOMxRef("Node")}}, et de son p
 - {{DOMxRef("Element.requestFullscreen()")}}
   - : Demande de manière asynchrone au navigateur de mettre l'élément en plein écran.
 - {{DOMxRef("Element.requestPointerLock()")}}
-  - : Permet de demander de manière asynchrone que le pointeur soit verrouillé sur l'élément donné.
+  - : Vous permet de demander de manière asynchrone que le pointeur soit verrouillé sur l'élément donné.
 - {{DOMxRef("Element.scroll()")}}
   - : Fait défiler vers un ensemble particulier de coordonnées à l'intérieur d'un élément donné.
 - {{DOMxRef("Element.scrollBy()")}}
@@ -326,7 +326,7 @@ _`Element` hérite des méthodes de ses parents {{DOMxRef("Node")}}, et de son p
 - {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}}
   - : Analyse et [assainit](/fr/docs/Web/API/HTML_Sanitizer_API) une chaîne de caractères HTML en un fragment de document, qui remplace ensuite le sous-arbre original de l'élément dans le DOM.
 - {{DOMxRef("Element.setHTMLUnsafe()")}}
-  - : Analyse une chaîne de caractères HTML en un fragment de document, sans assainissement, qui remplace ensuite le sous-arbre original de l'élément dans le DOM. La chaîne de caractères HTML peut inclure des racines d'ombre déclaratives, qui seraient analysées comme des éléments de modèle si le HTML était défini en utilisant {{DOMxRef("Element.innerHTML")}}.
+  - : Analyse une chaîne de caractères HTML en un fragment de document, sans assainissement, qui remplace ensuite le sous-arbre original de l'élément dans le DOM. La chaîne de caractères HTML peut inclure des racines d'ombre déclaratives, qui sont analysées comme des éléments de modèle si le HTML est défini en utilisant {{DOMxRef("Element.innerHTML")}}.
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : Désigne un élément spécifique comme cible de capture des futurs [évènements de pointeur](/fr/docs/Web/API/Pointer_events).
 - {{DOMxRef("Element.startViewTransition()")}} {{Experimental_Inline}}
@@ -338,23 +338,23 @@ _`Element` hérite des méthodes de ses parents {{DOMxRef("Node")}}, et de son p
 
 Écoutez ces évènements en utilisant `addEventListener()` ou en assignant un écouteur d'évènements à la propriété `oneventname` de cette interface.
 
-- {{DOMxRef("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- {{DOMxRef("Element/afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Déclenché lorsqu'un script a été exécuté.
 - {{DOMxRef("Element/beforeinput_event", "beforeinput")}}
   - : Déclenché lorsque la valeur d'un élément de saisie est sur le point d'être modifiée.
 - {{DOMxRef("Element/beforematch_event", "beforematch")}}
   - : Déclenché sur un élément qui est dans l'état [_caché jusqu'à ce qu'il soit trouvé_](/fr/docs/Web/HTML/Reference/Global_attributes/hidden), lorsque le navigateur est sur le point de révéler son contenu parce que l'utilisateur·ice a trouvé le contenu avec la fonction «&nbsp;rechercher dans la page&nbsp;» ou avec la navigation par fragment.
-- {{DOMxRef("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- {{DOMxRef("Element/beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Déclenché lorsqu'un script est sur le point d'être exécuté.
 - {{DOMxRef("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
   - : Déclenché avant que les évènements de sélection WebXR ({{DOMxRef("XRSession/select_event", "select")}}, {{DOMxRef("XRSession/selectstart_event", "selectstart")}}, {{DOMxRef("XRSession/selectend_event", "selectend")}}) ne soient dispatchés.
 - {{DOMxRef("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
   - : Déclenché sur tout élément avec {{CSSxRef("content-visibility", "content-visibility: auto")}} lorsqu'il commence ou cesse d'être [pertinent pour l'utilisateur·ice](/fr/docs/Web/CSS/Guides/Containment/Using#pertinent_pour_lutilisatrice_et_lutilisateur) et [ignore son contenu](/fr/docs/Web/CSS/Guides/Containment/Using#ignorer_le_contenu).
-- {{DOMxRef("Element/input_event","input")}}
+- {{DOMxRef("Element/input_event", "input")}}
   - : Déclenché lorsqu'une valeur d'un élément est modifiée directement par une action de l'utilisateur·ice.
-- {{DOMxRef("Element/securitypolicyviolation_event","securitypolicyviolation")}}
+- {{DOMxRef("Element/securitypolicyviolation_event", "securitypolicyviolation")}}
   - : Déclenché lorsqu'une [Politique de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) est violée.
-- {{DOMxRef("Element/wheel_event","wheel")}}
+- {{DOMxRef("Element/wheel_event", "wheel")}}
   - : Déclenché lorsque l'utilisateur·ice fait tourner un bouton de molette sur un dispositif de pointage (généralement une souris).
 
 ### Évènements d'animation

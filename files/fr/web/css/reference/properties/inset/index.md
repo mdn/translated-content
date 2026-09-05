@@ -3,10 +3,10 @@ title: Propriété CSS `inset`
 short-title: inset
 slug: Web/CSS/Reference/Properties/inset
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`inset`** correspond aux propriétés {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} et/ou {{CSSxRef("left")}}. Elle utilise la même syntaxe à valeurs multiples que la propriété raccourcie {{CSSxRef("margin")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`inset`** correspond aux propriétés {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} et/ou {{CSSxRef("left")}}. Elle utilise la même syntaxe à valeurs multiples que la propriété raccourcie {{CSSxRef("margin")}}.
 
 Ces {{Glossary("inset properties", "propriétés d'encart")}}, y compris `inset`, n'ont aucun effet sur les éléments non positionnés.
 

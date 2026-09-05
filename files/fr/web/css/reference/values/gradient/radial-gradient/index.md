@@ -217,7 +217,7 @@ La boîte de gauche utilise [l'interpolation la plus courte](/fr/docs/Web/CSS/Re
 
 {{EmbedLiveSample("Interpolation avec teinte", 240, 200)}}
 
-### More radial-gradient examples
+### Autres exemples de dégradés radiaux
 
 Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients) pour plus d'exemples.
 

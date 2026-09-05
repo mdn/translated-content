@@ -1,11 +1,12 @@
 ---
-title: border-block-start
+title: CSS `border-block-start` プロパティ
+short-title: border-block-start
 slug: Web/CSS/Reference/Properties/border-block-start
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-**`border-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なブロック方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)です。
+**`border-block-start`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、個々の論理的なブロック方向先頭側の境界のプロパティ値を、スタイルシート内の単一の場所で設定します。
 
 {{InteractiveExample("CSS デモ: border-block-start")}}
 
@@ -52,9 +53,9 @@ writing-mode: vertical-lr;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-block-start-color`](/ja/docs/Web/CSS/Reference/Properties/border-block-start-color)
-- [`border-block-start-style`](/ja/docs/Web/CSS/Reference/Properties/border-block-start-style)
-- [`border-block-start-width`](/ja/docs/Web/CSS/Reference/Properties/border-block-start-width)
+- {{cssxref("border-block-start-color")}}
+- {{cssxref("border-block-start-style")}}
+- {{cssxref("border-block-start-width")}}
 
 ## 構文
 
@@ -71,7 +72,7 @@ border-block-start: revert-layer;
 border-block-start: unset;
 ```
 
-`border-block-start` は 1 つ以上の {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, {{cssxref("border-block-start-color")}} の値の組み合わせを使用することができます。対応づけられる物理的な境界は、書字方向やテキストの向きによって決まります。これは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+`border-block-start` は 1 つ以上の {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, {{cssxref("border-block-start-color")}} の値の組み合わせを使用することができます。対応づけられる物理的な境界は、書字方向やテキストの向きによって決まります。これは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} のいずれかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
 
 関連するプロパティとしては、 {{cssxref("border-block-end")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-inline-end")}} が要素の他の境界を定義します。
 
@@ -79,9 +80,9 @@ border-block-start: unset;
 
 `border-block-start` は以下の値のうちの 1 つ以上を任意の順序で指定します。
 
-- `<'border-width'>`
+- {{cssxref("&lt;line-width&gt;")}}
   - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
-- `<'border-style'>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : 境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。
 - {{CSSXref("&lt;color&gt;")}}
   - : 境界線の色です。

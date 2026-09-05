@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="search">`
 short-title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`search`** sont des champs de texte conçus pour que l'utilisateur·ice puisse saisir des requêtes de recherche. Ils sont fonctionnellement identiques aux champs [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text), mais peuvent être mis en forme différemment par {{Glossary("user agent", "l'agent utilisateur")}}.
@@ -107,7 +107,7 @@ Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent �
 
 Un champ de saisi peut avoir la vérification orthographique activée s'il n'utilise pas l'attribut [`readonly`](#readonly) et qu'il n'est pas désactivé.
 
-La valeur renvoyée par la lecture de `spellcheck` peut ne pas refléter l'état réel de la vérification orthographique pour le contrôle (par exemple, si des préférences au sein de {{Glossary("user agent", "l'agent utilisateur")}} surchargent ce paramètre).
+La valeur retournée par la lecture de `spellcheck` peut ne pas refléter l'état réel de la vérification orthographique pour le contrôle (par exemple, si des préférences au sein de {{Glossary("user agent", "l'agent utilisateur")}} surchargent ce paramètre).
 
 ## Attributs non standard
 
@@ -185,14 +185,14 @@ Voici le résultat obtenu avec ce fragment HTML&nbsp;:
 
 ### Les champs de recherche et l'accessibilité
 
-Un des problèmes posés par les formulaires de recherche est leur accessibilité. En effet, dans la plupart des situations, il n'est pas nécessaire de fournir une étiquette indiquant le rôle de la recherche, car le placement du champ rend son rôle clair ([cet exemple montre un motif commun <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
+Un des problèmes posés par les formulaires de recherche est leur accessibilité. En effet, dans la plupart des situations, il n'est pas nécessaire de fournir une étiquette indiquant le rôle de la recherche, car le placement du champ rend son rôle clair ([cet exemple montre un motif visuel commun](#formulaire_de_recherche_accessible)).
 
 Cela peut toutefois prêter à confusion pour les utilisateur·ice·s de lecteurs d'écran, car ceux-ci ne reçoivent aucune indication vocale sur la nature du champ de recherche. Une solution qui n'a pas d'incidence sur la conception visuelle consiste à utiliser des [éléments de repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role).
 
 - Enveloppez toute la fonctionnalité de recherche dans un élément {{HTMLElement("search")}}, ce qui crée une région de repère que les technologies d'assistance peuvent annoncer et naviguer rapidement. Si votre `<input>` est déjà dans un `<form>`, vous pouvez alternativement ajouter [`role="search"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) à l'élément `<form>`, ce qui fait également du `<form>` un repère de recherche. L'élément `<search>` utilise la sémantique HTML native, tandis que `role="search"` bénéficie d'un meilleur support et peut être plus concis à taper si vous avez déjà un `<form>` englobant.
 - Si cela ne suffit pas, vous pouvez utiliser un attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) sur le {{HTMLElement("input")}} lui-même. Il s'agit d'une étiquette textuelle descriptive qui est lue par le lecteur d'écran&nbsp;; elle est utilisée comme équivalent non visuel de `<label>`.
 
-Prenons un exemple&nbsp;:
+Prenons un exemple minimaliste&nbsp;:
 
 ```html
 <form role="search">
@@ -244,7 +244,7 @@ On obtient une boîte de recherche plus large qu'auparavant&nbsp;:
 Les éléments `<input>` de type `search` possèdent les mêmes fonctionnalités de validation que les éléments `<input type="text">`. Il existe peu de raison de contraindre les termes d'une recherche mais voici quelques cas.
 
 > [!NOTE]
-> Attention, la validation des données d'un formulaire de recherche HTML par le client _ne doit pas remplacer_ la vérification de ces données lorsqu'elles sont reçues sur le serveur. En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML de la page pour outrepasser les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur. Si le serveur ne valide pas les données reçues, des données potentiellement mal formatées pourraient causer des dommages aux bases de données et autres composants sensibles.
+> Attention, la validation des données d'un formulaire de recherche HTML par le client _ne doit pas remplacer_ la vérification de ces données lorsqu'elles sont reçues sur le serveur. En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML de la page pour outrepasser les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur. Si le serveur ne valide pas les données reçues, des données potentiellement mal formatées peuvent causer des dommages aux bases de données et autres composants sensibles.
 
 ### Une note sur la mise en forme
 
@@ -322,9 +322,7 @@ Dans l'exemple qui suit, la valeur saisie dans le champ de recherche doit mesure
 ```html
 <form>
   <div>
-    <label for="maRecherche">
-      Rechercher une utilisatrice ou un utilisateur
-    </label>
+    <label for="maRecherche"> Rechercher un·e utilisateur·ice </label>
     <input
       type="search"
       id="maRecherche"
@@ -412,7 +410,106 @@ Voici le résultat obtenu avec ce fragment HTML&nbsp;:
 
 ## Exemples
 
-Vous pouvez consulter un exemple de formulaire de recherche dans notre exemple [`website-aria-roles` <sup>(angl.)</sup>](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) ([voir la démonstration en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
+### Formulaire de recherche accessible
+
+Cet exemple montre un menu typique avec {{HTMLElement("nav")}} qui inclut un formulaire de recherche. Les fonctionnalités [WAI-ARIA](/fr/docs/Web/Accessibility/ARIA) sont utilisées pour rendre le formulaire plus accessible aux technologies d'assistance (<abbr lang="en" title="Assistive Technology">AT</abbr>).
+
+#### HTML
+
+Les principaux éléments de navigation sont composés d'une liste de liens. Le formulaire de recherche {{HTMLElement("form")}} se voit attribuer un [`role="search"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role), ce qui fait du `<form>` un point de repère de recherche, annoncé aux technologies d'assistance. Nous donnons également à l'élément `<input type="search">` un [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) pour lui fournir une étiquette claire qui est lue par les lecteurs d'écran.
+
+```html live-sample___accessible-search
+<nav>
+  <ul>
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#">À propos</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <form role="search">
+    <input
+      type="search"
+      name="q"
+      placeholder="Requête de recherche"
+      aria-label="Rechercher dans le contenu du site" />
+    <button>Rechercher !</button>
+  </form>
+</nav>
+```
+
+```css hidden live-sample___accessible-search
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 10px;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  text-align: center;
+  flex: 1;
+}
+
+nav a {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 1.2;
+}
+
+nav form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+input {
+  font-size: 1.6rem;
+}
+
+input[type="search"] {
+  flex: 3;
+  height: 30px;
+}
+
+button {
+  flex: 1;
+  height: 30px;
+  padding: 0 1em;
+  background: #333;
+  border: 0;
+  color: white;
+}
+```
+
+Nous avons masqué le CSS et le JavaScript de l'exemple pour plus de concision, car ils ne sont pas pertinents pour comprendre le HTML. Vous pouvez les consulter en appuyant sur le bouton «&nbsp;Exécuter&nbsp;» dans l'exemple interactif ci-dessous.
+
+```js hidden live-sample___accessible-search
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+```
+
+#### Résultat
+
+{{EmbedLiveSample("accessible-search", "100%", 70)}}
 
 ## Résumé technique
 

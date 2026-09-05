@@ -3,7 +3,7 @@ title: "Element : propriété prefix"
 short-title: prefix
 slug: Web/API/Element/prefix
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 68f3a6c1641c2524d291c9103589f3aa361e74a2
 ---
 
 {{APIRef("DOM")}}
@@ -12,7 +12,7 @@ La propriété en lecture seule **`prefix`** de l'interface {{DOMxRef("Element")
 
 ## Valeur
 
-Une chaîne de caractères.
+Une chaîne de caractères ou `null`.
 
 ## Exemples
 

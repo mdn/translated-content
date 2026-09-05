@@ -3,7 +3,7 @@ title: "ARIA : rôle img"
 short-title: img
 slug: Web/Accessibility/ARIA/Reference/Roles/img_role
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `img` est utilisé pour identifier plusieurs éléments à l'intérieur du contenu de la page qui doivent être considérés comme une seule image. Ces éléments sont des images, des extraits de code, du texte, des emojis ou d'autres contenus qui peuvent être combinés pour transmettre des informations de manière visuelle.
@@ -24,7 +24,7 @@ Vous ne devez pas compter sur le texte alternatif des images individuelles pour 
 ```html
 <div role="img" aria-label="Description de l'image globale">
   <img src="graphic1.png" alt="texte alternatif" />
-  <img src="graphic2.png" alt="au cas où les images ne se chargeraient pas" />
+  <img src="graphic2.png" alt="au cas où les images ne se chargent pas" />
 </div>
 ```
 

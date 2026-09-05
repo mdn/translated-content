@@ -3,8 +3,6 @@ title: runtime.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
 ---
 
-{{AddonSidebar}}
-
 Récupère l'objet [`Window`](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours.
 
 Cela consiste un moyen pratique pour d'autres scripts d'extension privilégiés d'accéder directement à la portée du script d'arrière plan. Cela leur permet d'accéder aux variables ou aux fonctions d'appel définies dans cette portée. Le "script privilégié" inclut ici les scripts s'exécutant dans les [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages), ou les scripts s'exécutant dans les fenêtres d'[action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) ou d'[action page](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions), mais n'inclut pas les [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts).

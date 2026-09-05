@@ -2,10 +2,10 @@
 title: Utiliser les cookies HTTP
 slug: Web/HTTP/Guides/Cookies
 l10n:
-  sourceCommit: cd0ac3ad401c47d7c854d2e30d65af5934a8f657
+  sourceCommit: 487e626006534b7f5ddcecb833f5a5aa007c3059
 ---
 
-Un **cookie** (également appelé cookie web ou cookie de navigateur) est un petit morceau de données qu'un serveur envoie au navigateur web d'un·e utilisateur·ice. Le navigateur peut stocker des cookies, créer de nouveaux cookies, modifier ceux existants et les renvoyer au même serveur lors de requêtes ultérieures. Les cookies permettent aux applications web de stocker des quantités limitées de données et de se souvenir des informations d'état&nbsp;; par défaut, le protocole HTTP est [sans état](/fr/docs/Web/HTTP/Guides/Overview#http_est_sans_état_mais_pas_sans_session).
+Un **cookie** (également appelé cookie web ou cookie de navigateur) est un petit morceau de données qu'un serveur envoie au navigateur web d'un·e utilisateur·ice. Le navigateur peut stocker des cookies, créer de nouveaux cookies, modifier ceux existants et les retourner au même serveur lors de requêtes ultérieures. Les cookies permettent aux applications web de stocker des quantités limitées de données et de se souvenir des informations d'état&nbsp;; par défaut, le protocole HTTP est [sans état](/fr/docs/Web/HTTP/Guides/Overview#http_est_sans_état_mais_pas_sans_session).
 
 Dans cet article, nous allons explorer les principales utilisations des cookies, expliquer les meilleures pratiques pour les utiliser et examiner leurs implications en matière de confidentialité et de sécurité.
 
@@ -28,7 +28,7 @@ Les cookies sont principalement utilisés à trois fins&nbsp;:
 
 ### Stockage des données
 
-Aux débuts du web, lorsqu'il n'y avait pas d'autre option, les cookies sont utilisés à des fins générales de stockage côté client. Les API de stockage modernes sont désormais recommandées, par exemple [l'API Web Storage](/fr/docs/Web/API/Web_Storage_API) (`localStorage` et `sessionStorage`) et [IndexedDB](/fr/docs/Web/API/IndexedDB_API).
+Aux débuts du web, lorsqu'il n'y a pas d'autre option, les cookies sont utilisés à des fins générales de stockage côté client. Les API de stockage modernes sont désormais recommandées, par exemple [l'API Web Storage](/fr/docs/Web/API/Web_Storage_API) (`localStorage` et `sessionStorage`) et [IndexedDB](/fr/docs/Web/API/IndexedDB_API).
 
 Elles sont conçues pour le stockage, n'envoient jamais de données au serveur et n'ont pas les autres inconvénients liés à l'utilisation des cookies pour le stockage&nbsp;:
 
@@ -90,7 +90,7 @@ Vous pouvez définir une date d'expiration ou une période après laquelle le co
 - _Session_ cookies — cookies sans attribut `Max-Age` ou `Expires` — sont supprimés lorsque la session en cours se termine. Le navigateur définit quand la «&nbsp;session en cours&nbsp;» se termine, et certains navigateurs utilisent la _restauration de session_ lors du redémarrage. Cela peut entraîner la persistance indéfinie des cookies de session.
 
   > [!NOTE]
-  > Si votre site authentifie des utilisateur·ice·s, il doit régénérer et renvoyer les cookies de session, même ceux qui existent déjà, chaque fois qu'un·e utilisateur·ice s'authentifie. Cette approche aide à prévenir les attaques de [fixation de session <sup>(angl.)</sup>](https://owasp.org/www-community/attacks/Session_fixation), où un tiers peut réutiliser la session d'un·e utilisateur·ice.
+  > Si votre site authentifie des utilisateur·ice·s, il doit régénérer et retourner les cookies de session, même ceux qui existent déjà, chaque fois qu'un·e utilisateur·ice s'authentifie. Cette approche aide à prévenir les attaques de [fixation de session <sup>(angl.)</sup>](https://owasp.org/www-community/attacks/Session_fixation), où un tiers peut réutiliser la session d'un·e utilisateur·ice.
 
 Pour supprimer immédiatement un cookie, définissez à nouveau le cookie avec le même nom, chemin et domaine (si défini), et définissez son attribut `Expires` à une date passée ou son attribut `Max-Age` à `0` ou négatif. Cela indique au navigateur de supprimer le cookie immédiatement. Par exemple&nbsp;:
 
@@ -156,7 +156,7 @@ Vous pouvez vous assurer que les cookies sont envoyés de manière sécurisée e
 Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 ```
 
-- Un cookie avec l'attribut `Secure` n'est envoyé au serveur qu'avec une requête chiffrée par le protocole HTTPS. Il n'est jamais envoyé avec HTTP non sécurisé (sauf sur localhost), ce qui signifie que les attaques {{Glossary("MitM", "du monstre du milieu")}} ne peuvent pas y accéder facilement. Les sites non sécurisés (avec `http:` dans l'URL) ne peuvent pas définir de cookies avec l'attribut `Secure`. Cependant, ne supposez pas que `Secure` empêche tout accès aux informations sensibles dans les cookies. Par exemple, quelqu'un ayant accès au disque dur du client (ou à JavaScript si l'attribut `HttpOnly` n'est pas défini) peut lire et modifier les informations.
+- Un cookie avec l'attribut `Secure` n'est envoyé au serveur qu'avec une requête chiffrée par le protocole HTTPS. Il n'est jamais envoyé avec HTTP non sécurisé (sauf sur localhost, bien que cette exception ne soit pas prise en charge par Safari), ce qui signifie que les attaques du [monstre du milieu (MITM)](/fr/docs/Web/Security/Attacks/MITM) ne peuvent pas y accéder facilement. Les sites non sécurisés (avec `http:` dans l'URL) ne peuvent pas définir de cookies avec l'attribut `Secure`. Cependant, ne supposez pas que `Secure` empêche tout accès aux informations sensibles dans les cookies. Par exemple, quelqu'un ayant accès au disque dur du client (ou à JavaScript si l'attribut `HttpOnly` n'est pas défini) peut lire et modifier les informations.
 
 - Un cookie avec l'attribut `HttpOnly` ne peut pas être accédé par JavaScript, par exemple en utilisant {{DOMxRef("Document.cookie")}}&nbsp;; il ne peut être accédé que lorsqu'il atteint le serveur. Les cookies qui persistent les sessions utilisateur·ice, par exemple, doivent avoir l'attribut `HttpOnly` défini — il est vraiment dangereux de les rendre disponibles à JavaScript. Cette précaution aide à atténuer les attaques de type script inter-sites ([XSS](/fr/docs/Web/Security/Attacks/XSS)).
 

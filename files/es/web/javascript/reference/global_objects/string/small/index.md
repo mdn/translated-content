@@ -5,8 +5,6 @@ slug: Web/JavaScript/Reference/Global_Objects/String/small
 
 {{JSRef}}
 
-{{deprecated_header}}
-
 ## Resumen
 
 Causa que una cadena se muestra con una fuente pequeña, como si estuviese dentro de una etiqueta {{HTMLElement("small")}}.

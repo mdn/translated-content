@@ -3,14 +3,14 @@ title: "ARIA : rôle slider"
 short-title: slider
 slug: Web/Accessibility/ARIA/Reference/Roles/slider_role
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `slider` définit un champ de saisie dans lequel l'utilisateur·ice sélectionne une valeur comprise dans une plage donnée.
 
 ## Description
 
-Le rôle `slider` s'applique aux widgets de saisie de plage où l'utilisateur·ice sélectionne une valeur comprise entre des valeurs minimale et maximale définies.
+Le rôle `slider` s'applique aux composants de saisie de plage où l'utilisateur·ice sélectionne une valeur comprise entre des valeurs minimale et maximale définies.
 
 ### Le rôle `slider` comparé aux autres options de plage
 

@@ -3,8 +3,6 @@ title: tabs.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/hide
 ---
 
-{{AddonSidebar}}
-
 Masque un ou plusieurs onglets.
 
 Les onglets cachés ne sont plus visibles dans l'onglet du navigateur. Les onglets cachés ne sont pas automatiquement [supprimés](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) : le code qui s'y trouve continue à s'exécuter. Vous pouvez explicitement supprimer les onglets à chaque fois que vous les masquez : bien que cela ne soit pas approprié dans toutes les situations, cela aidera à réduire les ressources utilisées par le navigateur.

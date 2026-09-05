@@ -53,5 +53,5 @@ Ces propriétés sont définies sur `AsyncDisposableStack.prototype` et sont par
 - [Gestion des ressources en JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - La propriété {{JSxRef("Symbol.asyncDispose")}}
 - L'instruction {{JSxRef("Statements/await_using", "await using")}}
-- L'objet {{JSxRef("DisposableStack")}}
+- L'objet natif {{JSxRef("DisposableStack")}}
 - [Prothèse d'émulation de `AsyncDisposableStack` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#explicit-resource-management)

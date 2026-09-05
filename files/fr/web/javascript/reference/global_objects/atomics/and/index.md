@@ -82,6 +82,6 @@ console.log(Atomics.load(ta, 0)); // 2, la nouvelle/valeur actuelle
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Atomics")}}
+- L'objet natif {{JSxRef("Atomics")}}
 - La méthode {{JSxRef("Atomics.or()")}}
 - La méthode {{JSxRef("Atomics.xor()")}}

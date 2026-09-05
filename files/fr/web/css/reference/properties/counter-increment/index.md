@@ -3,7 +3,7 @@ title: Propriété CSS `counter-increment`
 short-title: counter-increment
 slug: Web/CSS/Reference/Properties/counter-increment
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: fd30a91f7c0f5bc65445dd931ec9754806bbd5fb
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`counter-increment`** permet d'incrémenter ou de décrémenter la valeur des compteurs nommés [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) selon les valeurs définies, ou d'empêcher la modification de tous les compteurs ou de la valeur d'un compteur individuel.
@@ -15,25 +15,29 @@ La valeur du compteur peut être réinitialisée à n'importe quel entier avec l
 {{InteractiveExample("Démonstration CSS&nbsp;: counter-increment")}}
 
 ```css interactive-example-choice
-counter-increment: example-counter;
+counter-increment: chapter-count;
 ```
 
 ```css interactive-example-choice
-counter-increment: example-counter 0;
+counter-increment: chapter-count 0;
 ```
 
 ```css interactive-example-choice
-counter-increment: example-counter 5;
+counter-increment: chapter-count 5;
 ```
 
 ```css interactive-example-choice
-counter-increment: example-counter -5;
+counter-increment: chapter-count -5;
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Valeur du compteur&nbsp;:
+  <div class="transition-all" id="chapters">
+    <h1>Les aventures d'Alice au pays des merveilles</h1>
+    <h2>Dans le terrier du lapin</h2>
+    <h2 id="example-element">La mare des larmes</h2>
+    <h2>Une course caucus et une longue histoire</h2>
+    <h2>Le lapin envoie un petit Bill</h2>
   </div>
 </section>
 ```
@@ -41,11 +45,21 @@ counter-increment: example-counter -5;
 ```css interactive-example
 #default-example {
   text-align: left;
-  counter-reset: example-counter;
+  counter-reset: chapter-count;
 }
 
-#example-element::after {
-  content: counter(example-counter);
+#example-element {
+  background-color: lightblue;
+  color: black;
+}
+
+h2 {
+  counter-increment: chapter-count;
+  font-size: 1em;
+}
+
+h2::before {
+  content: "Chapitre " counter(chapter-count) ": ";
 }
 ```
 
@@ -61,7 +75,7 @@ counter-increment: mon-compteur -1;
 /* On incrémente 'compteur1' de 1 et on décrémente 'compteur2' de 4 */
 counter-increment: compteur1 compteur2 -4;
 
-/* On n'incrémente/décremente rien : cela permet d'effacer les règles moins spécifiques */
+/* Ne pas incrémenter/décrémenter : utilisé pour remplacer des règles moins spécifiques */
 counter-increment: none;
 
 /* Valeurs globales */
@@ -74,12 +88,12 @@ counter-increment: unset;
 
 ### Valeurs
 
-La propriété `counter-increment` accepte comme valeur soit une liste de noms de compteurs séparés par des espaces, définis comme `<custom-ident>` (identifiant personnalisé) avec une valeur `<integer>` (entier) optionnelle, soit le mot-clé `none`. Vous pouvez définir autant de compteurs à incrémenter que vous le souhaitez, chaque nom ou paire nom-nombre étant séparé par un espace.
+Cette propriété est définie sous la forme d'une liste de valeurs `<custom-ident>` séparées par des espaces, chacune pouvant être suivie d'un `<integer>` ou du mot-clé `none`&nbsp;:
 
 - {{CSSxRef("&lt;custom-ident&gt;")}}
   - : Le nom du compteur qu'on souhaite incrémenter ou décrémenter.
 - {{CSSxRef("&lt;integer&gt;")}}
-  - : Définit la valeur à ajouter au compteur. Si l'entier est précédé d'un signe `-`, la valeur sera retirée du compteur. La valeur par défaut est `1` si aucune valeur n'est définie.
+  - : Définit la valeur à ajouter au compteur. Si l'entier est précédé d'un signe `-`, la valeur est retirée du compteur. La valeur par défaut est `1` si aucune valeur n'est définie.
 - `none`
   - : Indique qu'aucun compteur ne doit être incrémenté ou décrémenté. Cette valeur peut aussi servir à annuler l'incrémentation ou la décrémentation de tous les compteurs dans des règles plus spécifiques. Il s'agit de la valeur par défaut de la propriété.
 

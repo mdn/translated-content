@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c534ba0cb925657de5e99ab8c540eae31afd9382
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La méthode statique **`Iterator.zipKeyed()`** crée un nouvel objet {{JSxRef("Iterator")}} qui agrège des éléments à partir de plusieurs objets itérables en produisant des objets contenant les éléments à la même position, avec des clés définies par l'entrée. Elle permet essentiellement de «&nbsp;zipper&nbsp;» les itérables d'entrée, autorisant une itération simultanée sur eux.
 
@@ -110,7 +110,7 @@ La plupart des cas d'utilisation de `Iterator.zipKeyed()` sont identiques à ceu
 
 - [Prothèse d'émulation de `Iterator.zipKeyed` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/proposals/joint-iteration)
 - [Prothèse d'émulation es-shims de `Iterator.zipKeyed` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Iterator.zip()")}}
 - La méthode statique {{JSxRef("Iterator.from()")}}
 - La méthode statique {{JSxRef("Iterator.concat()")}}

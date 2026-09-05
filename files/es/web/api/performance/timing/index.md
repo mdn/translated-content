@@ -3,7 +3,7 @@ title: Performance.timing
 slug: Web/API/Performance/timing
 ---
 
-{{APIRef("Navigation Timing")}}{{deprecated_header}}
+{{APIRef("Navigation Timing")}}
 
 > [!WARNING]
 > Esta propiedad está deprecada en [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Por favor usa {{domxref("Performance.timeOrigin")}} en vez esta..

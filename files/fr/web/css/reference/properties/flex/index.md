@@ -3,10 +3,10 @@ title: Propriété CSS `flex`
 short-title: flex
 slug: Web/CSS/Reference/Properties/flex
 l10n:
-  sourceCommit: 28839be2d5cdb1235fdd75b873c90cf491e93367
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`flex`** définit comment un {{Glossary("flex item", "élément flexible")}} va grandir ou rétrécir pour occuper l'espace disponible dans son conteneur flexible.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`flex`** définit comment un {{Glossary("flex item", "élément flexible")}} va grandir ou rétrécir pour occuper l'espace disponible dans son conteneur flexible.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: flex")}}
 

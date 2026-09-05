@@ -3,10 +3,10 @@ title: En-tête Content-Location
 short-title: Content-Location
 slug: Web/HTTP/Reference/Headers/Content-Location
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 66b84361858a649275921a2414a2c25be54f0502
 ---
 
-L'{{Glossary("representation header", "en-tête de représentation")}} HTTP **`Content-Location`** indique un emplacement alternatif pour les données renvoyées.
+{{Glossary("representation header", "L'en-tête de représentation")}} HTTP **`Content-Location`** indique un emplacement alternatif pour les données retournées.
 Son utilisation principale est d'indiquer l'URL d'une ressource transmise à la suite d'une [négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation).
 
 L'en-tête `Content-Location` est différent de l'en-tête {{HTTPHeader("Location")}}.
@@ -41,7 +41,7 @@ Content-Location: <url>
 
 ### Requêter des données auprès d'un serveur dans différents formats
 
-Supposons qu'une API de site puisse retourner des données au format {{Glossary("JSON")}}, {{Glossary("XML")}} ou au format [CSV <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Comma-separated_values). Si l'URL d'un document particulier est `https://example.com/documents/toto`, le site pourrait retourner différentes URLs pour `Content-Location` selon l'en-tête {{HTTPHeader("Accept")}} de la requête&nbsp;:
+Supposons qu'une API de site puisse retourner des données au format {{Glossary("JSON")}}, {{Glossary("XML")}} ou au format [CSV <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Comma-separated_values). Si l'URL d'un document particulier est `https://example.com/documents/toto`, le site peut retourner différentes URLs pour `Content-Location` selon l'en-tête {{HTTPHeader("Accept")}} de la requête&nbsp;:
 
 | En-tête de requête                    | En-tête de réponse                       |
 | ------------------------------------- | ---------------------------------------- |
@@ -49,15 +49,14 @@ Supposons qu'une API de site puisse retourner des données au format {{Glossary(
 | `Accept: application/xml, text/xml`   | `Content-Location: /documents/toto.xml`  |
 | `Accept: text/plain, text/*`          | `Content-Location: /documents/toto.txt`  |
 
-These URLs are examples — the site could serve the different filetypes with any URL
-patterns it wishes, such as a [query string parameter](/fr/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`,
-`/documents/foo?format=xml`, and so on.
+Ces URL sont données à titre d'exemple — le site peut servir les différents types de fichiers avec n'importe quel modèle d'URL
+de son choix, tel qu'un [paramètres de chaîne de caractères de requête](/fr/docs/Web/API/HTMLAnchorElement/search)&nbsp;: `/documents/toto?format=json`, `/documents/toto?format=xml`, et ainsi de suite.
 
-Le client pourrait alors se souvenir que la version JSON est disponible à cette URL précise, et éviter la négociation de contenu lors de la prochaine requête pour ce document.
+Le client peut alors se souvenir que la version JSON est disponible à cette URL précise, et éviter la négociation de contenu lors de la prochaine requête pour ce document.
 
-Le serveur pourrait également prendre en compte d'autres en-têtes de [négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation), comme {{HTTPHeader("Accept-Language")}}.
+Le serveur peut également prendre en compte d'autres en-têtes de [négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation), comme {{HTTPHeader("Accept-Language")}}.
 
-### Indicating the URL of a transaction's result
+### Indiquer l'URL du résultat d'une transaction
 
 Supposons que vous ayez un {{HTMLElement("form")}} pour envoyer de l'argent à un·e autre utilisateur·ice d'un site.
 
@@ -81,13 +80,12 @@ Supposons que vous ayez un {{HTMLElement("form")}} pour envoyer de l'argent à u
 </form>
 ```
 
-Lorsque le formulaire est soumis, le site génère un reçu pour la transaction. Le
-serveur pourrait utiliser `Content-Location` pour indiquer l'URL de ce reçu pour un accès futur.
+Lorsque le formulaire est envoyé, le site génère un reçu pour la transaction. Le serveur peut utiliser `Content-Location` pour indiquer l'URL de ce reçu pour un accès futur.
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=utf-8
-Content-Location: /mon-reçus/38
+Content-Location: /mon-reçu/38
 
 <!doctype html>
 (Beaucoup de HTML…)

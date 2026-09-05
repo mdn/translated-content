@@ -3,8 +3,6 @@ title: Reflect.set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ---
 
-{{JSRef}}
-
 La méthode statique **`Reflect.set()`** permet de définir ou de modifier une propriété sur un objet.
 
 {{InteractiveExample("JavaScript Demo: Reflect.set()")}}

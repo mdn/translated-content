@@ -66,6 +66,6 @@ console.log(dataview.getFloat16(1)); // 0.00001537799835205078
 
 - [La prothèse d'émulation de `DataView.prototype.getFloat16` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#float16-methods)
 - Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- L'objet {{JSxRef("DataView")}}
-- L'objet {{JSxRef("ArrayBuffer")}}
-- L'objet {{JSxRef("Float16Array")}}
+- L'objet natif {{JSxRef("DataView")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("Float16Array")}}

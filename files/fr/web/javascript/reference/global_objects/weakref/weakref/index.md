@@ -3,8 +3,6 @@ title: Constructeur WeakRef()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 ---
 
-{{JSRef}}
-
 Le constructeur **`WeakRef`** crée un objet [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)
 qui représente une référence faible vers un objet cible.
 

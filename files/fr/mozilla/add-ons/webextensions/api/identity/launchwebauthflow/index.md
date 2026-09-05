@@ -3,8 +3,6 @@ title: identity.launchWebAuthFlow
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 ---
 
-{{AddonSidebar}}
-
 Effectue la première partie d'un flux [OAuth2](https://oauth.net/2/) y compris l'authentification de l'utilisateur et l'autorisation du client.
 
 Le seul paramètre obligatoire de cette fonction est l'URL d'autorisation du fournisseur de services, qui doit contenir un certain nombre de paramètres d'URL, y compris l'[URL de redirection](/fr/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url) et l'[ID client](/fr/docs/Mozilla/Add-ons/WebExtensions/API/identity#registering_your_add-on) de l'extension. Le fournisseur de service alors :

@@ -2,7 +2,7 @@
 title: HTMLTableElement
 slug: Web/API/HTMLTableElement
 l10n:
-  sourceCommit: 0b5859108411e47d228a4bb9f30a5556ab17f63c
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
@@ -16,20 +16,20 @@ L'interface **`HTMLTableElement`** fournit des propriétés et méthodes particu
 _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
 - {{DOMxRef("HTMLTableElement.caption")}}
-  - : Un objet {{DOMxRef("HTMLTableCaptionElement")}} représentant le premier {{HTMLElement("caption")}} enfant de l'élément, ou `null` si aucun n'est trouvé. Lors de l'affectation, si l'objet ne représente pas un `<caption>`, une exception ({{DOMxRef("DOMException")}}) avec le nom `HierarchyRequestError` est levée. Si un objet correct est fourni, il est inséré dans l'arbre comme premier enfant de cet élément et le premier `<caption>` enfant de cet élément est supprimé de l'arbre, le cas échéant.
+  - : Un objet {{DOMxRef("HTMLTableCaptionElement")}} représentant le premier élément HTML {{HTMLElement("caption")}} enfant du tableau donné {{HTMLElement("table")}}, ou `null` si aucun élément de ce type n'existe. Cette propriété peut être assignée, ce qui entraîne la suppression du premier élément `<caption>` existant, le cas échéant, et l'insertion de la valeur donnée, si elle n'est pas `null`, en tant que premier enfant. Si la valeur assignée n'est pas un {{DOMxRef("HTMLTableCaptionElement")}} ou `null`, une {{JSxRef("TypeError")}} est levée.
 - {{DOMxRef("HTMLTableElement.tHead")}}
-  - : Un objet {{DOMxRef("HTMLTableSectionElement")}} représentant le premier {{HTMLElement("thead")}} enfant de l'élément, ou `null` si aucun n'est trouvé. Lors de l'affectation, si l'objet ne représente pas un `<thead>`, une {{DOMxRef("DOMException")}} avec le nom `HierarchyRequestError` est levée. Si un objet correct est fourni, il est inséré dans l'arbre juste avant le premier élément qui n'est ni un {{HTMLElement("caption")}}, ni un {{HTMLElement("colgroup")}}, ou comme dernier enfant s'il n'y a pas un tel élément, et le premier `<thead>` enfant de cet élément est supprimé de l'arbre, le cas échéant.
+  - : Un objet {{DOMxRef("HTMLTableSectionElement")}} représentant le premier élément HTML {{HTMLElement("thead")}} enfant du tableau donné {{HTMLElement("table")}}, ou `null` si aucun élément de ce type n'existe. Cette propriété peut être assignée, ce qui entraîne la suppression du premier élément `<thead>` existant, le cas échéant, et l'insertion de la valeur donnée, si elle n'est pas `null`, immédiatement avant le premier élément qui HTML n'est ni un enfant {{HTMLElement("caption")}} ni un {{HTMLElement("colgroup")}}, ou en tant que dernier enfant s'il n'existe pas un tel élément. Si la valeur assignée n'est pas un {{DOMxRef("HTMLTableSectionElement")}} ou `null`, une {{JSxRef("TypeError")}} est levée&nbsp;; sinon, si ce n'est pas un élément HTML {{HTMLElement("thead")}} ou `null`, une `HierarchyRequestError` {{DOMxRef("DOMException")}} est levée.
 - {{DOMxRef("HTMLTableElement.tFoot")}}
-  - : Un objet {{DOMxRef("HTMLTableSectionElement")}} représentant le premier {{HTMLElement("tfoot")}} enfant de l'élément, ou `null` si aucun n'est trouvé. Lors de l'affectation, si l'objet ne représente pas un `<tfoot>`, une {{DOMxRef("DOMException")}} avec le nom `HierarchyRequestError` est levée. Si un objet correct est fourni, il est inséré dans l'arbre juste avant le premier élément qui n'est ni un {{HTMLElement("caption")}}, ni un {{HTMLElement("colgroup")}}, ni un {{HTMLElement("thead")}}, ou comme dernier enfant s'il n'y a pas un tel élément, et le premier `<tfoot>` enfant de cet élément est supprimé de l'arbre, le cas échéant.
+  - : Un objet {{DOMxRef("HTMLTableSectionElement")}} représentant le premier élément HTML {{HTMLElement("tfoot")}} enfant du tableau donné {{HTMLElement("table")}}, ou `null` si aucun élément de ce type n'existe. Cette propriété peut être assignée, ce qui entraîne la suppression du premier élément `<tfoot>` existant, le cas échéant, et l'insertion de la valeur donnée, si elle n'est pas `null`, en tant que dernier enfant. Si la valeur assignée n'est pas un {{DOMxRef("HTMLTableSectionElement")}} ou `null`, une {{JSxRef("TypeError")}} est levée&nbsp;; sinon, si ce n'est pas un élément HTML {{HTMLElement("tfoot")}} ou `null`, une `HierarchyRequestError` {{DOMxRef("DOMException")}} est levée.
 - {{DOMxRef("HTMLTableElement.rows")}} {{ReadOnlyInline}}
-  - : Retourne une collection ({{DOMxRef("HTMLCollection")}}) dynamique contenant toutes les lignes de l'élément, c'est-à-dire tous les {{HTMLElement("tr")}} qui sont enfants de l'élément, ou enfants de l'un de ses {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} et {{HTMLElement("tfoot")}} enfants. Les membres de lignes d'un `<thead>` apparaissent en premier, dans l'ordre de l'arbre, et ceux d'un `<tbody>` en dernier, également dans l'ordre de l'arbre. La `HTMLCollection` est dynamique et se met automatiquement à jour lorsque le `HTMLTableElement` change.
+  - : Retourne un {{DOMxRef("HTMLCollection")}} dynamique de tous les éléments HTML {{HTMLElement("tr")}} qui sont des enfants de l'élément HTML {{HTMLElement("table")}} donné, ou des enfants de l'un des enfants {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} et {{HTMLElement("tfoot")}} du tableau. Les membres du `<thead>` apparaissent en premier, suivis des membres du `<tbody>` et du tableau lui-même, et les membres du `<tfoot>` viennent en dernier, triés par ordre dans l'arbre au sein de chaque groupe. L'objet retourné est automatiquement mis à jour lorsque le `HTMLTableElement` change.
 - {{DOMxRef("HTMLTableElement.tBodies")}} {{ReadOnlyInline}}
-  - : Retourne une collection ({{DOMxRef("HTMLCollection")}}) dynamique contenant tous les {{HTMLElement("tbody")}} de l'élément. La `HTMLCollection` est dynamique et se met automatiquement à jour lorsque le `HTMLTableElement` change.
+  - : Retourne un {{DOMxRef("HTMLCollection")}} dynamique de tous les éléments enfants {{HTMLElement("tbody")}} du tableau donné {{HTMLElement("table")}}. L'objet retourné est automatiquement mis à jour lorsque le `HTMLTableElement` change.
 
 ### Propriétés obsolètes
 
 > [!WARNING]
-> Les propriétés suivantes sont obsolètes. Vous devriez éviter de les utiliser.
+> Les propriétés suivantes sont obsolètes. Vous devez éviter de les utiliser.
 
 - {{DOMxRef("HTMLTableElement.align")}} {{Deprecated_Inline}}
   - : Une chaîne de caractères contenant une valeur énumérée reflétant l'attribut [`align`](/fr/docs/Web/HTML/Reference/Elements/table#align). Elle indique l'alignement du contenu de l'élément par rapport au contexte environnant. Les valeurs possibles sont `"left"`, `"right"` et `"center"`.
@@ -55,23 +55,23 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 _Hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 
 - {{DOMxRef("HTMLTableElement.createTHead()")}}
-  - : Retourne un objet {{DOMxRef("HTMLTableSectionElement")}} représentant le premier {{HTMLElement("thead")}} enfant de l'élément. Si aucun n'est trouvé, un nouveau est créé et inséré dans l'arbre juste avant le premier élément qui n'est ni un {{HTMLElement("caption")}}, ni un {{HTMLElement("colgroup")}}, ou comme dernier enfant s'il n'y a pas un tel élément.
+  - : Crée un élément HTML {{HTMLElement("thead")}}, l'insère avant le premier enfant élément du {{HTMLElement("table")}} donné qui n'est ni un {{HTMLElement("caption")}} ni un {{HTMLElement("colgroup")}}, ou comme dernier enfant si aucun emplacement d'insertion de ce type n'est trouvé, et le retourne. Si le tableau a déjà un enfant `<thead>`, cette méthode retourne le premier enfant de ce type sans en créer un nouveau.
 - {{DOMxRef("HTMLTableElement.deleteTHead()")}}
-  - : Supprime le premier {{HTMLElement("thead")}} enfant de l'élément.
+  - : Supprime le premier enfant élément HTML {{HTMLElement("thead")}} d'un {{HTMLElement("table")}} donné, le cas échéant.
 - {{DOMxRef("HTMLTableElement.createTFoot()")}}
-  - : Retourne un objet {{DOMxRef("HTMLTableSectionElement")}} représentant le premier {{HTMLElement("tfoot")}} enfant de l'élément. Si aucun n'est trouvé, un nouveau est créé et inséré dans l'arbre comme dernier enfant.
+  - : Crée un élément HTML {{HTMLElement("tfoot")}}, l'insère comme dernier enfant du {{HTMLElement("table")}} donné, et le retourne. Si le tableau a déjà un enfant `<tfoot>`, cette méthode retourne le premier enfant de ce type sans en créer un nouveau.
 - {{DOMxRef("HTMLTableElement.deleteTFoot()")}}
-  - : Supprime le premier {{HTMLElement("tfoot")}} enfant de l'élément.
+  - : Supprime le premier enfant élément HTML {{HTMLElement("tfoot")}} d'un {{HTMLElement("table")}} donné, le cas échéant.
 - {{DOMxRef("HTMLTableElement.createTBody()")}}
-  - : Retourne un objet {{DOMxRef("HTMLTableSectionElement")}} représentant un nouvel {{HTMLElement("tbody")}} enfant de l'élément. Il est inséré dans l'arbre après le dernier élément qui est un {{HTMLElement("tbody")}}, ou comme dernier enfant s'il n'y a pas un tel élément.
+  - : Crée un élément HTML {{HTMLElement("tbody")}}, l'insère immédiatement après le dernier enfant élément `<tbody>` du {{HTMLElement("table")}} donné, ou comme dernier enfant s'il n'y a pas un tel élément, et le retourne.
 - {{DOMxRef("HTMLTableElement.createCaption()")}}
-  - : Retourne un objet {{DOMxRef("HTMLElement")}} représentant le premier {{HTMLElement("caption")}} enfant de l'élément. Si aucun n'est trouvé, un nouveau est créé et inséré dans l'arbre comme premier enfant de l'élément {{HTMLElement("table")}}.
+  - : Crée un élément HTML {{HTMLElement("caption")}}, l'insère comme premier enfant du {{HTMLElement("table")}} donné, et le retourne. Si le tableau a déjà un enfant `<caption>`, cette méthode retourne le premier enfant de ce type sans en créer un nouveau.
 - {{DOMxRef("HTMLTableElement.deleteCaption()")}}
-  - : Supprime le premier {{HTMLElement("caption")}} enfant de l'élément.
+  - : Supprime le premier enfant élément HTML {{HTMLElement("caption")}} d'un {{HTMLElement("table")}} donné, le cas échéant.
 - {{DOMxRef("HTMLTableElement.insertRow()")}}
-  - : Retourne un objet {{DOMxRef("HTMLTableRowElement")}} représentant une nouvelle ligne du tableau. Elle est insérée dans la collection de lignes juste avant l'élément {{HTMLElement("tr")}} à la position `index` donnée. Si nécessaire, un {{HTMLElement("tbody")}} est créé. Si l'`index` vaut `-1`, la nouvelle ligne est ajoutée à la fin de la collection. Si l'`index` est inférieur à `-1` ou supérieur au nombre de lignes de la collection, une {{DOMxRef("DOMException")}} avec la valeur `IndexSizeError` est levée.
+  - : Crée un élément HTML {{HTMLElement("tr")}}, l'insère à la position définie dans la collection {{DOMxRef("HTMLTableElement.rows", "rows")}}, et le retourne. Si la collection `rows` est vide et que le tableau n'a également aucun élément HTML {{HTMLElement("tbody")}}, un élément `<tbody>` est d'abord créé et inséré.
 - {{DOMxRef("HTMLTableElement.deleteRow()")}}
-  - : Supprime la ligne correspondant à l'`index` donné en paramètre. Si la valeur de l'`index` est `-1`, la dernière ligne est supprimée&nbsp;; si elle est inférieure à `-1` ou supérieure au nombre de lignes de la collection, une {{DOMxRef("DOMException")}} avec la valeur `IndexSizeError` est levée.
+  - : Supprime une ligne spécifique ({{HTMLElement("tr")}}) d'un {{HTMLElement("table")}} donné. Si `index` est `-1`, la dernière ligne est supprimée.
 
 ## Exemples
 

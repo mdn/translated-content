@@ -3,10 +3,10 @@ title: "HTMLTableElement : propriété bgColor"
 short-title: bgColor
 slug: Web/API/HTMLTableElement/bgColor
 l10n:
-  sourceCommit: d16706e4e930c57161d473287374a9286c663147
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`bgColor`** de {{DOMxRef("HTMLTableElement")}} représente la couleur de fond du tableau.
 
@@ -17,7 +17,7 @@ La propriété **`bgColor`** de {{DOMxRef("HTMLTableElement")}} représente la c
 
 Une chaîne de caractères représentant une valeur de couleur.
 
-Lorsque la valeur `null` est affectée, cette valeur est convertie en chaîne vide (`""`), donc `elt.bgColor = null` est équivalent à `elt.bgColor = ""`.
+Lorsque la valeur `null` est affectée, cette valeur est convertie en chaîne de caractères vide (`""`), donc `elt.bgColor = null` est équivalent à `elt.bgColor = ""`.
 
 ## Exemples
 

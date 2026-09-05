@@ -3,8 +3,6 @@ title: tabs.onZoomChange
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onZoomChange
 ---
 
-{{AddonSidebar}}
-
 Envoyé lorsqu'un onglet est agrandi.
 
 ## Syntaxe

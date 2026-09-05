@@ -1,51 +1,48 @@
 ---
-title: Object.groupBy()
+title: "Object : méthode statique groupBy()"
+short-title: groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 l10n:
-  sourceCommit: eb061bd719102c148cf87d12fd7056ed0c5071c8
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 > [!NOTE]
 > Dans certaines versions de navigateurs, cette méthode fut implémentée avec `Array.prototype.group()`. Suite à des problèmes de compatibilité web, elle est désormais implémentée comme une méthode statique. Voir [le tableau de compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.
 
-La méthode statique **`Object.groupBy()`** groupe les éléments d'un itérable donné selon la chaîne de caractères obtenue par la fonction de rappel fournie. L'objet renvoyé possède différentes propriétés pour chaque groupe, contenant des tableaux avec les éléments du groupe.
+La méthode statique **`Object.groupBy()`** groupe les éléments d'un itérable donné selon la chaîne de caractères obtenue par la fonction de rappel fournie. L'objet retourné possède différentes propriétés pour chaque groupe, contenant des tableaux avec les éléments du groupe.
 
-Cette méthode devrait être utilisée lorsque les noms des groupes peuvent être représentés par des chaînes de caractères. S'il vous faut grouper des éléments selon une clé qui peut être une valeur arbitraire, privilégiez la méthode [`Map.groupBy()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy).
+Cette méthode doit être utilisée lorsque les noms des groupes peuvent être représentés par des chaînes de caractères. S'il vous faut grouper des éléments selon une clé qui peut être une valeur arbitraire, privilégiez la méthode {{JSxRef("Map.groupBy()")}}.
 
-{{InteractiveExample("JavaScript Demo: Object.groupBy()", "taller")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.groupBy()", "taller")}}
 
 ```js interactive-example
 const inventory = [
-  { name: "asparagus", type: "vegetables", quantity: 9 },
-  { name: "bananas", type: "fruit", quantity: 5 },
-  { name: "goat", type: "meat", quantity: 23 },
-  { name: "cherries", type: "fruit", quantity: 12 },
-  { name: "fish", type: "meat", quantity: 22 },
+  { name: "asperges", type: "légumes", quantity: 9 },
+  { name: "bananes", type: "fruit", quantity: 5 },
+  { name: "chèvre", type: "viande", quantity: 23 },
+  { name: "cerises", type: "fruit", quantity: 12 },
+  { name: "poisson", type: "viande", quantity: 22 },
 ];
 
-const restock = { restock: true };
-const sufficient = { restock: false };
 const result = Object.groupBy(inventory, ({ quantity }) =>
   quantity < 6 ? "restock" : "sufficient",
 );
 console.log(result.restock);
-// [{ name: "bananas", type: "fruit", quantity: 5 }]
+// [{ name: "bananes", type: "fruit", quantity: 5 }]
 ```
 
 ## Syntaxe
 
 ```js-nolint
-Object.groupBy(items, fnRappel)
+Object.groupBy(items, callbackFn)
 ```
 
 ### Paramètres
 
 - `items`
-  - : Un [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») (comme un [tableau (`Array`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) dont les éléments seront groupés.
-- `fnRappel`
-  - : Une fonction à exécuter pour chaque élément de l'itérable. Cette fonction devrait renvoyer une valeur qui peut être convertie en une clé de propriété (c'est-à-dire une chaîne de caractères ou un [symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)) indiquant le groupe de l'élément courant. Cette fonction est appelée avec les arguments suivants&nbsp;:
+  - : Un [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») (comme un tableau ({{JSxRef("Array")}})) dont les éléments sont groupés.
+- `callbackFn`
+  - : Une fonction à exécuter pour chaque élément de l'itérable. Cette fonction doit retourner une valeur qui peut être convertie en une clé de propriété (c'est-à-dire une chaîne de caractères ou un [symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)) indiquant le groupe de l'élément courant. Cette fonction est appelée avec les arguments suivants&nbsp;:
     - `element`
       - : L'élément courant qui est traité.
     - `index`
@@ -57,9 +54,9 @@ Un [objet avec un prototype `null`](/fr/docs/Web/JavaScript/Reference/Global_Obj
 
 ## Description
 
-`Object.groupBy()` appelle une fonction de rappel `fnRappel()` sur chaque élément de l'itérable. Cette fonction renvoie alors une chaîne de caractères ou un symbole (sinon la valeur est [convertie en chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#conversion_en_chaîne_de_caractères)) qui indique le groupe de l'élément. Les valeurs renvoyées par `fnRappel()` sont utilisées comme clés pour l'objet renvoyé par `Object.groupBy()`. La valeur de chaque propriété est un tableau dont les éléments sont ceux pour lesquels la fonction de rappel a renvoyé la même valeur.
+`Object.groupBy()` appelle une fonction de rappel `callbackFn()` sur chaque élément de l'itérable. Cette fonction retourne alors une chaîne de caractères ou un symbole (sinon la valeur est [convertie en chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#conversion_en_chaîne_de_caractères)) qui indique le groupe de l'élément. Les valeurs retournées par `callbackFn()` sont utilisées comme clés pour l'objet retourné par `Object.groupBy()`. La valeur de chaque propriété est un tableau dont les éléments sont ceux pour lesquels la fonction de rappel a retourné la même valeur.
 
-Les éléments de l'objet renvoyé et de l'itérable original sont les mêmes (il ne s'agit pas de [copies profondes](/fr/docs/Glossary/Deep_copy)). Modifier la structure interne des éléments sera reflété à la fois sur l'itérable original et sur l'objet renvoyé.
+Les éléments de l'objet retourné et de l'itérable original sont les mêmes (il ne s'agit pas de {{Glossary("deep copy", "copies profondes")}}). Modifier la structure interne des éléments est reflété à la fois sur l'itérable original et sur l'objet retourné.
 
 ## Exemples
 
@@ -77,12 +74,12 @@ const inventaire = [
 ];
 ```
 
-L'instruction suivante groupera les éléments selon leur propriété `type`.
+L'instruction suivante groupe les éléments selon leur propriété `type`.
 
 ```js
 const resultat = Object.groupBy(inventaire, ({ type }) => type);
 
-/* Le résultat sera :
+/* Le résultat est :
 {
   légumes: [
     { nom: 'asperges', type: 'légumes', quantite: 5 },
@@ -99,9 +96,9 @@ const resultat = Object.groupBy(inventaire, ({ type }) => type);
 */
 ```
 
-La fonction fléchée renvoie la valeur de `type` pour chaque élément du tableau. On notera que l'argument `{ type }` est un exemple [de la syntaxe de décomposition d'objet pour les arguments de fonction](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring#décomposer_les_propriétés_dobjets_passés_en_arguments). Cela extrait la propriété `type` d'un objet passé en paramètre et affecte la valeur à une variable nommée `type` dans le corps de la fonction. On peut ainsi écrire succinctement l'accès aux propriétés d'un élément dans une fonction.
+La fonction fléchée retourne la valeur de `type` pour chaque élément du tableau. Notez que l'argument `{ type }` est un exemple [de la syntaxe de décomposition d'objet pour les arguments de fonction](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring#décomposer_les_propriétés_dobjets_passés_en_arguments). Cela extrait la propriété `type` d'un objet passé en paramètre et affecte la valeur à une variable nommée `type` dans le corps de la fonction. On peut ainsi écrire succinctement l'accès aux propriétés d'un élément dans une fonction.
 
-On pourrait également créer des groupes selon les valeurs d'une ou plusieurs propriétés de l'élément. Dans l'exemple qui suit, on place les aliments dans deux groupes `ok` ou `restock` selon la valeur de leur propriété `quantite`.
+On peut également créer des groupes selon les valeurs d'une ou plusieurs propriétés de l'élément. Dans l'exemple qui suit, on place les aliments dans deux groupes `ok` ou `restock` selon la valeur de leur propriété `quantite`.
 
 ```js
 function maFonctionDeRappel({ quantite }) {
@@ -110,7 +107,7 @@ function maFonctionDeRappel({ quantite }) {
 
 const resultat2 = Object.groupBy(inventaire, maFonctionDeRappel);
 
-/* Le résultat sera :
+/* Le résultat est :
 {
   restock: [
     { nom: "asperges", type: "légumes", quantite: 5 },
@@ -135,8 +132,9 @@ const resultat2 = Object.groupBy(inventaire, maFonctionDeRappel);
 
 ## Voir aussi
 
-- [Une prothèse d'émulation (<i lang="en">polyfill</i>) de `Object.groupBy()` dans la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#array-grouping)
-- [Le guide sur les collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
-- [`Object.fromEntries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
-- [`Map.groupBy()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy)
+- [La prothèse d'émulation de `Object.groupBy()` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#array-grouping)
+- [La prothèse d'émulation es-shims de `Object.groupBy` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.groupby)
+- Le guide [des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- La méthode statique {{JSxRef("Array.prototype.reduce()")}}
+- La méthode statique {{JSxRef("Object.fromEntries()")}}
+- La méthode statique {{JSxRef("Map.groupBy()")}}

@@ -3,8 +3,6 @@ title: TypedArray.BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 ---
 
-{{JSRef}}
-
 La propriété **`TypedArray.BYTES_PER_ELEMENT`** représente la taille, exprimée en octets, de chaque élément du tableau typé.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.BYTES_PER_ELEMENT")}}

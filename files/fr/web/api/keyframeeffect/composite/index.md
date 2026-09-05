@@ -1,5 +1,5 @@
 ---
-title: "KeyframeEffect : la propriété composite"
+title: "KeyframeEffect : propriété composite"
 short-title: composite
 slug: Web/API/KeyframeEffect/composite
 l10n:

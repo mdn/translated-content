@@ -3,8 +3,6 @@ title: Command
 slug: Mozilla/Add-ons/WebExtensions/API/commands/Command
 ---
 
-{{AddonSidebar}}
-
 Information sur une commande. Cela contient les informations spécifiées pour la commande dans la [`commande` clef manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 Un tableau de ces objets est renvoyé par {{WebExtAPIRef('commands.getAll()')}}.

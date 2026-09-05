@@ -3,7 +3,7 @@ title: "ARIA : rôle menubar"
 short-title: menubar
 slug: Web/Accessibility/ARIA/Reference/Roles/menubar_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 Le rôle `menubar` est une présentation de `menu` qui reste généralement visible et présenté horizontalement.

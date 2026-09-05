@@ -369,8 +369,8 @@ Les objets `Temporal` refuseront de construire une instance représentant une da
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
-- L'objet {{JSxRef("Intl.RelativeTimeFormat")}}
-- L'objet {{JSxRef("Intl.DurationFormat")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Intl.RelativeTimeFormat")}}
+- L'objet natif {{JSxRef("Intl.DurationFormat")}}
 - [Prothèse d'émulation de Temporal par les champion·ne·s de la proposition <sup>(angl.)</sup>](https://www.npmjs.com/package/@js-temporal/polyfill)
 - [Prothèse d'émulation de Temporal par FullCalendar <sup>(angl.)</sup>](https://www.npmjs.com/package/temporal-polyfill)

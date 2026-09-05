@@ -44,7 +44,7 @@ samp {
 ```
 
 > [!NOTE]
-> S'il vous faut un élément qui serve de conteneur pour une valeur produite par le site ou l'application, vous devriez utiliser {{HTMLElement("output")}} plutôt que `<samp>`.
+> S'il vous faut un élément qui serve de conteneur pour une valeur produite par le site ou l'application, vous devez utiliser {{HTMLElement("output")}} plutôt que `<samp>`.
 
 ## Exemples
 
@@ -54,8 +54,8 @@ Dans cet exemple simple, un paragraphe contient une mention d'un résultat d'un 
 
 ```html
 <p>
-  Lorsque le traitement est terminé, l'outil affichera le texte
-  <samp>Scan terminé. <em>N</em> résultats trouvés</samp>. Vous pourrez alors
+  Lorsque le traitement est terminé, l'outil affiche le texte
+  <samp>Scan terminé. <em>N</em> résultats trouvés</samp>. Vous pouvez alors
   passer à l'étape suivante.
 </p>
 ```
@@ -66,7 +66,7 @@ Dans cet exemple simple, un paragraphe contient une mention d'un résultat d'un 
 
 ### Sortie incluant une entrée utilisateur
 
-Il est possible d'imbriquer un élément {{HTMLElement("kbd")}} dans un bloc `<samp>` afin de représenter un fragment de texte saisi par la personne. Par exemple, si on souhaite retranscrire une session d'un terminal (sous Linux ou macOS), on pourra utiliser le code suivant.
+Il est possible d'imbriquer un élément {{HTMLElement("kbd")}} dans un bloc `<samp>` afin de représenter un fragment de texte saisi par la personne. Par exemple, si on souhaite retranscrire une session d'un terminal (sous Linux ou macOS), on peut utiliser le code suivant.
 
 #### HTML
 
@@ -80,7 +80,7 @@ MD5 ("Coucou monde") = b961d9fb0ef48ff051fb67625abd0022
 </pre>
 ```
 
-On notera l'utilisation de {{HTMLElement("span")}} qui permet de personnaliser l'apparence de certaines portions du texte (comme l'invite ou le curseur). On notera également l'utilisation de `<kbd>` afin de représenter la commande saisie dans l'invite.
+Notez que l'utilisation de {{HTMLElement("span")}} qui permet de personnaliser l'apparence de certaines portions du texte (comme l'invite ou le curseur). Notez également que l'utilisation de `<kbd>` afin de représenter la commande saisie dans l'invite.
 
 #### CSS
 

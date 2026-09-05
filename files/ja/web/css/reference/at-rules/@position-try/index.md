@@ -1,11 +1,12 @@
 ---
-title: "@position-try"
+title: CSS `@position-try` アットルール
+short-title: "@position-try"
 slug: Web/CSS/Reference/At-rules/@position-try
 l10n:
-  sourceCommit: 3e0ba995376cace7f08f0771635f86f0fb1753b3
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
-**`@position-try`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、アンカー位置指定された要素の位置指定と配置を定義するために使用することができます、独自の位置指定試行フォールバックオプションを定義するために使用されます。アンカー要素には、{{cssxref("position-try-fallbacks")}} プロパティまたは {{cssxref("position-try")}} 一括指定を介して、1 つ以上の位置指定の代替オプションセットを適用できます。位置指定された要素が、その包含ブロックまたはビューポートからオーバーフローし始める位置に移動されると、ブラウザーは位置指定された要素を完全に画面内に収める最初の位置指定の代替オプションを選択します。
+**`@position-try`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、アンカー位置指定された要素の位置指定と配置を定義するために使用することができます、独自の位置指定試行フォールバックオプションを定義するために使用されます。アンカー要素には、{{cssxref("position-try-fallbacks")}} プロパティまたは {{cssxref("position-try")}} 一括指定を介して、1 つ以上の位置指定の代替オプション群を適用できます。位置指定された要素が、その包含ブロックまたはビューポートからオーバーフローし始める位置に移動されると、ブラウザーは位置指定された要素を完全に画面内に収める最初の位置指定の代替オプションを選択します。
 
 それぞれの位置オプションは {{cssxref("dashed-ident")}} で名付けられ、インセット位置、マージン、サイズ、自己配置などの情報を定義する宣言を指定する記述子リストを含みます。`<dashed-ident>` は、{{cssxref("position-try-fallbacks")}} プロパティおよび {{cssxref("position-try")}} 一括指定においてカスタム位置オプションを参照するために使用されます。
 
@@ -228,6 +229,6 @@ body {
 - The {{cssxref("anchor()")}} function
 - The {{cssxref("anchor-size()")}} function
 - [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール
-- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイド
 - [オーバーフロー時の代替オプションと条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)ガイド
 - {{domxref("CSSPositionTryRule")}}

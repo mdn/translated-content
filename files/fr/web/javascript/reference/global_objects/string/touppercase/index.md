@@ -3,8 +3,6 @@ title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
 
-{{JSRef}}
-
 La méthode **`toUpperCase()`** retourne la valeur de la chaîne courante, convertie en majuscules.
 
 {{InteractiveExample("JavaScript Demo: String.toUpperCase()")}}

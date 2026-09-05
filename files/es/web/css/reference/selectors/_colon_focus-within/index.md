@@ -17,7 +17,11 @@ Este selector es útil, por tomar un ejemplo común, para resaltar un contenedor
 
 ## Sintaxis
 
-{{CSSSyntax}}
+```css
+:focus-within {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

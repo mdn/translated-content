@@ -3,8 +3,6 @@ title: tabs.onReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'un onglet est remplacé par un autre en raison d'un prérendering ou d'un instantané.
 
 Cet événement peut ne pas être pertinent ou pris en charge par des navigateurs autres que Chrome.

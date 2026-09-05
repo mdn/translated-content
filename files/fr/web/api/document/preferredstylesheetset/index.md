@@ -3,10 +3,10 @@ title: "Document : propriété preferredStyleSheetSet"
 short-title: preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 La propriété **`preferredStyleSheetSet`** de l'interface {{DOMxRef("Document")}} retourne l'ensemble de feuilles de style préféré tel que défini par l'auteur·ice de la page.
 

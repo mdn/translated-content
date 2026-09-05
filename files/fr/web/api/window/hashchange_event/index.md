@@ -3,10 +3,10 @@ title: "Window : évènement hashchange"
 short-title: hashchange
 slug: Web/API/Window/hashchange_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 L'évènement **`hashchange`** de l'interface {{DOMxRef("Window")}} est déclenché lorsque l'identificateur de fragment de l'URL a changé (la partie de l'URL commençant par et suivant le symbole `#`).
 

@@ -3,10 +3,10 @@ title: "Document : propriété anchors"
 short-title: anchors
 slug: Web/API/Document/anchors
 l10n:
-  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 La propriété en lecture seule **`anchors`** de l'interface {{DOMxRef("Document")}} retourne une liste de toutes les ancres du document.
 

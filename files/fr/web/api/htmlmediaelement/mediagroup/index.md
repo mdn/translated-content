@@ -3,10 +3,10 @@ title: "HTMLMediaElement : propriété mediaGroup"
 short-title: mediaGroup
 slug: Web/API/HTMLMediaElement/mediaGroup
 l10n:
-  sourceCommit: 8beb479c558d4220932721e61b6a334d5b5c274a
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 La propriété **`mediaGroup`** de l'interface {{DOMxRef("HTMLMediaElement")}} reflète l'attribut HTML `mediagroup`, qui indique le nom du groupe d'éléments auquel il appartient. Un groupe d'éléments multimédias partage un `controller` commun.
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 La conception réactive, plus souvent appelée <i lang="en">responsive design</i> (ou RWD pour <i lang="en">responsive web design</i>) est une approche de la conception web visant à ce que les pages web s'affichent correctement pour toutes les tailles et résolution d'écran, tout en ayant une utilisabilité correcte. Il s'agit de concevoir un site ou une application web à destination de l'ensemble des appareils existants. Dans cet article, nous verrons certaines techniques liées au <i lang="en">responsive design</i>.
 

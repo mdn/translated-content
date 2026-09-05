@@ -3,10 +3,8 @@ title: HTML `<center>` 中央揃えテキスト要素
 short-title: <center>
 slug: Web/HTML/Reference/Elements/center
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{deprecated_header}}
 
 **`<center>`** は [HTML](/ja/docs/Web/HTML) の要素で、中に含まれるブロックレベルまたはインラインコンテンツを中央揃えして表示する[ブロックレベル要素](/ja/docs/Glossary/Block-level_content)です。コンテナーはふつう {{HTMLElement("body")}} ですが、必ずしもそうとは限りません。
 

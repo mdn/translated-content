@@ -3,8 +3,6 @@ title: TypedArray.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
 ---
 
-{{JSRef}}
-
 La méthode **`copyWithin()`** permet de copier des éléments d'un tableau dans le tableau typé à partir de la position `cible`. Les éléments copiés sont ceux contenus entre les index `début` et `fin`. L'argument `fin` est optionnel, sa valeur par défaut correspondra à la longueur du tableau dont on souhaite copier les éléments. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.copyWithin")}}_._ _TypedArray_ est l'un des types de [tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
 {{InteractiveExample("JavaScript Demo: TypedArray.copyWithin()")}}

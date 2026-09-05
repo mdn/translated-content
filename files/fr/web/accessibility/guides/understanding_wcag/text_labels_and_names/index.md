@@ -2,7 +2,7 @@
 title: Libellés et noms textuels
 slug: Web/Accessibility/Guides/Understanding_WCAG/Text_labels_and_names
 l10n:
-  sourceCommit: fd60358f242f522accc5f548be62cd79610f8c0f
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 Il existe de nombreuses situations où un contrôle, une boîte de dialogue ou une autre fonctionnalité d'un site web doit recevoir un nom ou un libellé descriptif afin que les utilisateur·ice·s de technologies d'assistance comprennent son but et sachent comment l'utiliser. Il existe plusieurs types de problèmes dans cette catégorie, selon le contexte, chacun ayant sa propre solution. Les différents problèmes et solutions sont présentés dans les sections ci-dessous.
@@ -40,7 +40,7 @@ Consultez la [page de référence de l'élément HTML `<area>`](/fr/docs/Web/HTM
 
 ## Les boîtes de dialogue doivent être étiquetées
 
-Pour tout conteneur dont le contenu agit comme une boîte de dialogue (par exemple, une boîte de dialogue modale demandant à l'utilisateur·ice de faire un choix ou de répondre à une action), donnez-lui un libellé ou un nom descriptif, afin que les utilisateur·ice·s de technologies d'assistance puissent facilement découvrir son but.
+Pour tout conteneur dont le contenu agit comme une boîte de dialogue (par exemple, une boîte de dialogue bloquante demandant à l'utilisateur·ice de faire un choix ou de répondre à une action), donnez-lui un libellé ou un nom descriptif, afin que les utilisateur·ice·s de technologies d'assistance puissent facilement découvrir son but.
 
 Une boîte de dialogue est généralement indiquée par un ARIA [`role="dialog"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) ou [`role="alertdialog"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)&nbsp;; vous pouvez utiliser les attributs [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) pour fournir un libellé.
 
@@ -101,7 +101,7 @@ Le titre de l'article de référence sur l'élément {{HTMLElement("title")}} es
 </title>
 ```
 
-Un autre exemple pourrait ressembler à ceci&nbsp;:
+Un autre exemple peut ressembler à ceci&nbsp;:
 
 ```html
 <title>Renseignez vos informations pour vous inscrire — services monGouv</title>
@@ -148,7 +148,7 @@ Les éléments fieldset doivent avoir une description textuelle, comme les autre
 
 Lorsque vous regroupez un ensemble de champs de formulaire avec un élément {{HTMLElement("fieldset")}}, incluez un élément {{HTMLElement("legend")}} imbriqué à l'intérieur, contenant une description claire du groupe.
 
-Les utilisateur·ice·s de technologies d'assistance trouvent cette description utile pour comprendre le but global du groupe. Sans la légende, ils·elles devraient parcourir chaque champ pour en déduire l'objectif, ce qui pourrait entraîner de la confusion.
+Les utilisateur·ice·s de technologies d'assistance trouvent cette description utile pour comprendre le but global du groupe. Sans la légende, ils·elles doivent parcourir chaque champ pour en déduire l'objectif, ce qui peut entraîner de la confusion.
 
 ### Exemples
 
@@ -180,7 +180,7 @@ Vous pouvez voir une version interactive de cet exemple sur la [page de référe
 
 Tous les éléments d'un formulaire doivent avoir un {{HTMLElement("label")}} qui identifie leur but. Cela s'applique à tous les types de {{HTMLElement("input")}}, ainsi qu'aux éléments {{HTMLElement("button")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}, ainsi qu'à tout élément avec le rôle ARIA [`switch`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role).
 
-L'élément de formulaire peut être placé à l'intérieur du {{HTMLElement("label")}}, auquel cas l'association est évidente. Sinon, vous pouvez associer un {{HTMLElement("label")}} à un élément de formulaire en spécifiant la valeur de l'attribut `id` de l'élément comme valeur de l'attribut `for` du label.
+L'élément de formulaire peut être placé à l'intérieur du {{HTMLElement("label")}}, auquel cas l'association est évidente. Sinon, vous pouvez associer un {{HTMLElement("label")}} à un élément de formulaire en définissant la valeur de l'attribut `id` de l'élément comme valeur de l'attribut `for` du label.
 
 ### Exemple
 
@@ -204,7 +204,7 @@ En plus d'avoir un élément HTML {{HTMLElement("label")}} pour chaque élément
 
 Les éléments frame, qu'il s'agisse de {{HTMLElement("iframe")}} ou de l'ancien {{HTMLElement("frame")}}, doivent avoir un titre pour décrire leur contenu. Utilisez l'attribut `title` pour étiqueter un élément frame. Sans titre, les utilisateur·ice·s de technologies d'assistance doivent naviguer dans le cadre pour comprendre son contenu, ce qui peut être difficile et source de confusion.
 
-L'élément {{HTMLElement('frame')}} ne fait plus partie de la spécification HTML. Son support pourrait être supprimé par les navigateurs à l'avenir. De plus, il est difficile pour les lecteurs d'écran de naviguer dans des pages utilisant des frames. Pour une meilleure accessibilité et maintenance, refondez toute page utilisant des frames pour utiliser du CSS à la place.
+L'élément {{HTMLElement('frame')}} ne fait plus partie de la spécification HTML. Son support peut être supprimé par les navigateurs à l'avenir. De plus, il est difficile pour les lecteurs d'écran de naviguer dans des pages utilisant des frames. Pour une meilleure accessibilité et maintenance, refondez toute page utilisant des frames pour utiliser du CSS à la place.
 
 Par bonne pratique, fournissez aussi un {{HTMLElement("title")}} pour le document inclus dans le frame, avec un contenu identique à l'attribut `title` du frame (si le document vous appartient&nbsp;; sinon, essayez d'harmoniser les titres). Certains lecteurs d'écran remplacent le contenu de l'attribut `title` par celui du document inclus. Il est donc plus sûr et accessible de fournir le même titre aux deux endroits.
 
@@ -246,12 +246,12 @@ Pour les attributs `alt` sur les images purement décoratives, une valeur vide p
 ```html
 <img
   src="milkweed.jgp"
-  alt="Black and white close-up photo of milkweed flowers" />
+  alt="Photo en gros plan, en noir et blanc, de fleurs d'asclépiade" />
 ```
 
 ## Les éléments interactifs doivent être étiquetés
 
-Si un élément est destiné à l'interaction utilisateur, il doit avoir un libellé. Les éléments interactifs incluent les liens ({{HTMLElement("a")}}), les éléments de formulaire, les boutons, et tout élément ayant un gestionnaire d'événements souris ou clavier. La façon d'étiqueter dépend du type&nbsp;: pour les champs de formulaire, utilisez un {{HTMLElement("label")}}&nbsp;; pour les liens, boutons et éléments cliquables, le texte de l'élément sert généralement de libellé. Si aucune autre option n'est possible, utilisez l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
+Si un élément est destiné à l'interaction utilisateur, il doit avoir un libellé. Les éléments interactifs incluent les liens ({{HTMLElement("a")}}), les éléments de formulaire, les boutons, et tout élément ayant un gestionnaire d'évènements souris ou clavier. La façon d'étiqueter dépend du type&nbsp;: pour les champs de formulaire, utilisez un {{HTMLElement("label")}}&nbsp;; pour les liens, boutons et éléments cliquables, le texte de l'élément sert généralement de libellé. Si aucune autre option n'est possible, utilisez l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
 ## Utiliser l'attribut `label` sur les éléments `optgroup`
 
@@ -290,6 +290,6 @@ Si vous définissez plusieurs barres d'outils dans une application web avec le r
 - [1.1.1 Contenu non textuel (A) <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#non-text-content)
   - : Tout contenu non textuel présenté à l'utilisateur·ice dispose d'une alternative textuelle remplissant un but équivalent, sauf dans les situations listées dans le lien ci-dessus.
 - [2.4.4 Finalité des liens (dans le contexte) (A) <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#link-purpose-in-context)
-  - : La finalité de chaque lien peut être déterminée à partir du texte du lien seul ou du texte du lien et de son contexte déterminé par programme, sauf si la finalité du lien serait ambiguë pour les utilisateur·ice·s en général.
+  - : La finalité de chaque lien peut être déterminée à partir du texte du lien seul ou du texte du lien et de son contexte déterminé par programme, sauf si la finalité du lien est ambiguë pour les utilisateur·ice·s en général.
 - [2.4.9 Finalité des liens (lien seul) (AAA) <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#link-purpose-link-only)
-  - : Un mécanisme permet d'identifier la finalité de chaque lien à partir du texte du lien seul, sauf si la finalité du lien serait ambiguë pour les utilisateur·ice·s en général.
+  - : Un mécanisme permet d'identifier la finalité de chaque lien à partir du texte du lien seul, sauf si la finalité du lien est ambiguë pour les utilisateur·ice·s en général.

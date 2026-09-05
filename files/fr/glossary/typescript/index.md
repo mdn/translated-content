@@ -2,7 +2,7 @@
 title: TypeScript
 slug: Glossary/TypeScript
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: ce12c10364f35c64184dec44be85537b7e10d91f
 ---
 
 TypeScript est un langage de programmation qui ajoute la {{Glossary("static_typing", "vérification de type statique")}} à JavaScript.
@@ -11,7 +11,7 @@ TypeScript est un sur-ensemble de JavaScript, ce qui signifie que tout ce qui es
 
 Cependant, TypeScript ajoute une vérification des types au moment de la compilation, en appliquant des règles sur l'utilisation et la combinaison des différents types. Ceci permet de détecter un grand nombre d'erreurs de programmation qui, en JavaScript, ne sont repérées qu'à l'exécution.
 
-Certaines règles de typage sont inférées de JavaScript. Par exemple, dans le code ci-dessous, TypeScript infère que `maVariable` est une chaîne, et n'autorise pas sa réaffectation à un autre type&nbsp;:
+Certaines règles de typage sont inférées de JavaScript. Par exemple, dans le code ci-dessous, TypeScript infère que `maVariable` est une chaîne de caractères, et n'autorise pas sa réaffectation à un autre type&nbsp;:
 
 ```js
 let maVariable = "Bonjour, le monde !";

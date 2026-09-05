@@ -3,8 +3,6 @@ title: tabs.show()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/show
 ---
 
-{{AddonSidebar}}
-
 Affiche un ou plusieurs onglets précédemment masqués par un appel à {{WebExtAPIRef("tabs.hide")}}.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

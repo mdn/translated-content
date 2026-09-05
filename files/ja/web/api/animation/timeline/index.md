@@ -8,15 +8,15 @@ l10n:
 
 {{ APIRef("Web Animations") }}
 
-**`Animation.timeline`** は {{domxref("Animation")}} インターフェイスのプロパティで、このアニメーションに関連付けられた {{domxref("AnimationTimeline", "timeline")}} を返したり設定したりします。タイムラインは同期を目的とした時刻値の元であり、{{domxref("AnimationTimeline")}}ベースのオブジェクトです。既定値では、アニメーションのタイムラインと {{domxref("Document")}} のタイムラインは同じです。
+**`Animation.timeline`** は {{domxref("Animation")}} インターフェイスのプロパティで、このアニメーションに関連付けられた {{domxref("AnimationTimeline", "timeline")}} を返したり設定したりします。タイムラインは同期を目的とした時刻値の元であり、{{domxref("AnimationTimeline")}}ベースのオブジェクトです。デフォルト値では、アニメーションのタイムラインと {{domxref("Document")}} のタイムラインは同じです。
 
 ## 値
 
-アニメーションのタイミングソースとして使用する{{domxref("AnimationTimeline", "タイムラインオブジェクト", "", 1)}}、または既定値では `null` であり、 {{domxref("Document")}} のタイムラインを使用することを表します。
+アニメーションのタイミングソースとして使用する{{domxref("AnimationTimeline", "タイムラインオブジェクト", "", 1)}}、またはデフォルト値では `null` であり、 {{domxref("Document")}} のタイムラインを使用することを表します。
 
 ## 例
 
-ここでは、アニメーションのタイムラインを文書のタイムラインと同じに設定します（ちなみに、これはすべてのアニメーションの既定値です）：
+ここでは、アニメーションのタイムラインを文書のタイムラインと同じに設定します（ちなみに、これはすべてのアニメーションのデフォルト値です）：
 
 ```js
 animation.timeline = document.timeline;
@@ -36,4 +36,4 @@ animation.timeline = document.timeline;
 - {{domxref("Animation")}}
 - {{domxref("AnimationTimeline")}}: すべてのタイムラインが継承する親オブジェクト
 - {{domxref("DocumentTimeline")}}: 現在利用できる唯一のタイムラインオブジェクト
-- {{domxref("Document.timeline")}}: すべてのアニメーションに割り当てる既定値
+- {{domxref("Document.timeline")}}: すべてのアニメーションに割り当てるデフォルト値

@@ -3,7 +3,7 @@ title: Fonction CSS `if()`
 short-title: if()
 slug: Web/CSS/Reference/Values/if
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 3143a6094e7b87cf1a96b61f9551fb4d95049777
 ---
 
 {{SeeCompatTable}}
@@ -120,7 +120,7 @@ div {
 }
 ```
 
-Le débogage d'une valeur qui ne se comporte pas comme prévu est un cas où vous pourriez vouloir placer une paire `else : <value>` à une position autre que la fin de la liste de valeurs. Dans l'exemple suivant, nous essayons de déterminer si la première paire `<if-test> : <value>` fonctionne correctement. Si ce n'est pas le cas, la paire `else : <value>` retourne une valeur de `url("debug.png")` pour afficher une image indiquant que la première paire `<if-test> : <value>` doit être corrigée. Les deux dernières paires `<if-test> : <value>` ne sont à nouveau jamais évaluées.
+Le débogage d'une valeur qui ne se comporte pas comme prévu est un cas où vous pouvez vouloir placer une paire `else : <value>` à une position autre que la fin de la liste de valeurs. Dans l'exemple suivant, nous essayons de déterminer si la première paire `<if-test> : <value>` fonctionne correctement. Si ce n'est pas le cas, la paire `else : <value>` retourne une valeur de `url("debug.png")` pour afficher une image indiquant que la première paire `<if-test> : <value>` doit être corrigée. Les deux dernières paires `<if-test> : <value>` ne sont à nouveau jamais évaluées.
 
 ```css-nolint
 div {
@@ -200,7 +200,7 @@ background-color: if(
 )
 ```
 
-Vous pouvez également utiliser des fonctionnalités de média — ce qui suit retourne une valeur de `0 auto` si la largeur de la fenêtre d'affichage actuelle est inférieure à `700px`, ou `20px auto` si ce n'est pas le cas :
+Vous pouvez également utiliser des fonctionnalités de média — ce qui suit retourne une valeur de `0 auto` si la largeur de la fenêtre d'affichage actuelle est inférieure à `700px`, ou `20px auto` si ce n'est pas le cas&nbsp;:
 
 ```css-nolint
 margin: if(
@@ -395,7 +395,7 @@ section {
 }
 ```
 
-Ensuite, nous ciblons le pseudo-élément {{CSSxRef("::before")}} de l'élément `<h2>`, en définissant sa propriété {{CSSxRef("content")}} sur un emoji de pomme, mais uniquement si `--show-apple: true` est défini (nous l'avons fait plus tôt avec un {{HTMLElement("style")}} en ligne dans notre HTML). Nous réalisons cela en utilisant une fonction `if()` avec une [requête de style](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#requêtes_de_style_pour_les_propriétés_personnalisées) comme `<if-test>`&nbsp;:
+Ensuite, nous ciblons le pseudo-élément {{CSSxRef("::before")}} de l'élément `<h2>`, en définissant sa propriété {{CSSxRef("content")}} sur un emoji de pomme, mais uniquement si `--show-apple: true` est défini (nous l'avons fait plus tôt avec un {{HTMLElement("style")}} en incise dans notre HTML). Nous réalisons cela en utilisant une fonction `if()` avec une [requête de style](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#requêtes_de_style_pour_les_propriétés_personnalisées) comme `<if-test>`&nbsp;:
 
 ```css-nolint live-sample___basic
 h2::before {
@@ -423,7 +423,7 @@ h2 {
 Notez comment le style est appliqué. Testez le style conditionnel pour les deux premières requêtes `if()` en modifiant la démonstration rendue à l'aide des outils de développement de votre navigateur&nbsp;:
 
 - Supprimez l'attribut `style` de l'élément `<section>` et notez comment les emojis de pomme ne sont plus rendus.
-- Changez l'attribut `height` de l'`<iframe>` intégré à `1200px`. Cela change l'orientation de paysage à portrait. Notez comment la disposition change en conséquence.
+- Changez l'attribut `height` d'un `<iframe>` intégré à `1200px`. Cela change l'orientation de paysage à portrait. Notez comment la disposition change en conséquence.
 
 ### Contrôler un schéma de couleurs avec `if()`
 

@@ -3,8 +3,6 @@ title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
 
-{{JSRef}}
-
 La méthode **`has()`** renvoie un booléen qui indique s'il existe un élément de l'ensemble `Set` avec une certaine valeur.
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}

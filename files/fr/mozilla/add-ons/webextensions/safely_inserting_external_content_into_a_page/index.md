@@ -3,8 +3,6 @@ title: Insérer en toute sécurité du contenu externe dans une page
 slug: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
 ---
 
-{{AddonSidebar}}
-
 Il y a des moments où vous pourriez vouloir ou devez inclure du contenu d'une source externe dans votre extension. Cependant, il existe un risque que des scripts malveillants soient intégrés à la source, soit par le développeur de la source, soit par une tierce partie malveillante.
 
 Prenez un lecteur RSS à titre d'exemple. Vous ne savez pas quels flux RSS votre extension va ouvrir et n'ont aucun contrôle sur le contenu de ces flux RSS. Ainsi, il est possible que l'utilisateur puisse s'abonner à un flux où, par exemple, le titre d'un élément de fil inclut un script. Cela pourrait être quelque chose d'aussi simple que d'inclure du code JavaScript dans les balises `<script></script>`. Si vous deviez extraire le titre, supposer qu'il s'agissait d'un texte brut et l'ajouter au DOM d'une page créée par votre extension, votre script a maintenant un script inconnu dans son navigateur. Par conséquent, il faut prendre soin d'éviter d'évaluer du texte arbitraire au format HTML.

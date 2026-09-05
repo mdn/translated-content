@@ -54,31 +54,31 @@ Par défaut, les boutons HTML sont présentés dans un style ressemblant à la p
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `autofocus`
-  - : Cet attribut booléen indique que le bouton doit recevoir le [focus](/fr/docs/Web/API/HTMLElement/focus) lors du chargement de la page. **Un seul élément dans un document peut avoir cet attribut.**
+  - : Cet attribut booléen indique que le bouton doit recevoir la [sélection](/fr/docs/Web/API/HTMLElement/focus) lors du chargement de la page. **Un seul élément dans un document peut avoir cet attribut.**
 
 - `command`
-  - : Définit l'action à effectuer sur un élément contrôlé par un bouton `<button>` via l'attribut `commandfor`. Les valeurs possibles sont&nbsp;:
+  - : Définit l'action à effectuer sur un élément contrôlé par un bouton `<button>` avec l'attribut `commandfor`. Les valeurs possibles sont&nbsp;:
     - `"show-modal"`
-      - : Le bouton affichera un élément {{HTMLElement("dialog")}} en mode modale. Si la boîte de dialogue est déjà modale, aucune action ne sera effectuée. C'est l'équivalent déclaratif de l'appel à la méthode {{DOMxRef("HTMLDialogElement.showModal()")}} sur l'élément `<dialog>`.
+      - : Le bouton affiche un élément {{HTMLElement("dialog")}} en mode fenêtre bloquante (<i lang="en">modale</i> en anglais). Si la boîte de dialogue est déjà fenêtre bloquante, aucune action n'est effectuée. C'est l'équivalent déclaratif de l'appel à la méthode {{DOMxRef("HTMLDialogElement.showModal()")}} sur l'élément `<dialog>`.
     - `"close"`
-      - : Le bouton fermera un élément {{HTMLElement("dialog")}}.
-        Si la boîte de dialogue est déjà fermée, aucune action ne sera effectuée.
+      - : Le bouton ferme un élément {{HTMLElement("dialog")}}.
+        Si la boîte de dialogue est déjà fermée, aucune action n'est effectuée.
         C'est l'équivalent déclaratif de l'appel à la méthode {{DOMxRef("HTMLDialogElement.close()")}} sur l'élément `<dialog>`.
-        Lorsqu'il est utilisé avec l'attribut `value`, la valeur du bouton sera transmise comme propriété {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} de la boîte de dialogue.
+        Lorsqu'il est utilisé avec l'attribut `value`, la valeur du bouton est transmise comme propriété {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} de la boîte de dialogue.
     - `"request-close"`
-      - : Le bouton déclenchera un évènement {{DOMxRef("HTMLDialogElement.cancel_event", "cancel")}} sur un élément {{HTMLElement("dialog")}} pour demander au navigateur de le fermer, suivi d'un évènement {{DOMxRef("HTMLDialogElement.close_event", "close")}}.
-        Cela diffère de la commande `close` car les auteur·ice·s peuvent appeler {{DOMxRef("Event.preventDefault()")}} sur l'évènement `cancel` pour empêcher la fermeture du `<dialog>`.
-        Si la boîte de dialogue est déjà fermée, aucune action ne sera effectuée.
+      - : Le bouton déclenche un évènement {{DOMxRef("HTMLDialogElement.cancel_event", "cancel")}} sur un élément {{HTMLElement("dialog")}} pour demander au navigateur de le fermer, suivi d'un évènement {{DOMxRef("HTMLDialogElement.close_event", "close")}}.
+        Cela diffère de la commande `close`, car les auteur·ice·s peuvent appeler {{DOMxRef("Event.preventDefault()")}} sur l'évènement `cancel` pour empêcher la fermeture du `<dialog>`.
+        Si la boîte de dialogue est déjà fermée, aucune action n'est effectuée.
         C'est l'équivalent déclaratif de l'appel à la méthode {{DOMxRef("HTMLDialogElement.requestClose()")}} sur l'élément `<dialog>`.
-        Lorsqu'il est utilisé avec l'attribut `value`, la valeur du bouton sera transmise comme propriété {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} de la boîte de dialogue.
+        Lorsqu'il est utilisé avec l'attribut `value`, la valeur du bouton est transmise comme propriété {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} de la boîte de dialogue.
     - `"show-popover"`
-      - : Le bouton affichera un élément contextuel flottant (<i lang="en">popover</i> en anglais) caché. Si vous essayez d'afficher un élément contextuel flottant déjà affiché, aucune action ne sera effectuée. Voir {{DOMxRef("Popover API", "l'API Popover", "", "nocode")}} pour plus de détails. Ceci est équivalent à la valeur `show` pour l'attribut [`popovertargetaction`](#popovertargetaction), et fournit également un équivalent déclaratif à l'appel de la méthode {{DOMxRef("HTMLElement.showPopover()")}} sur l'élément contextuel flottant.
+      - : Le bouton affiche un élément fenêtre intrusive (<i lang="en">popover</i> en anglais) caché. Si vous essayez d'afficher un élément fenêtre intrusive déjà affiché, aucune action n'est effectuée. Voir {{DOMxRef("Popover API", "l'API Popover", "", 1)}} pour plus de détails. Ceci est équivalent à la valeur `show` pour l'attribut [`popovertargetaction`](#popovertargetaction), et fournit également un équivalent déclaratif à l'appel de la méthode {{DOMxRef("HTMLElement.showPopover()")}} sur l'élément fenêtre intrusive.
     - `"hide-popover"`
-      - : Le bouton masquera un élément contextuel flottant (<i lang="en">popover</i> en anglais) affiché. Si vous essayez de masquer un élément contextuel flottant déjà caché, aucune action ne sera effectuée. Voir {{DOMxRef("Popover API", "l'API Popover", "", "nocode")}} pour plus de détails. C'est équivalent à la valeur `hide` pour l'attribut [`popovertargetaction`](#popovertargetaction), et fournit aussi un équivalent déclaratif à l'appel de la méthode {{DOMxRef("HTMLElement.hidePopover()")}} sur l'élément contextuel flottant.
+      - : Le bouton masque un élément fenêtre intrusive (<i lang="en">popover</i> en anglais) affiché. Si vous essayez de masquer un élément fenêtre intrusive déjà caché, aucune action n'est effectuée. Voir {{DOMxRef("Popover API", "l'API Popover", "", 1)}} pour plus de détails. C'est équivalent à la valeur `hide` pour l'attribut [`popovertargetaction`](#popovertargetaction), et fournit aussi un équivalent déclaratif à l'appel de la méthode {{DOMxRef("HTMLElement.hidePopover()")}} sur l'élément fenêtre intrusive.
     - `"toggle-popover"`
-      - : Le bouton basculera l'affichage d'un élément contextuel flottant (<i lang="en">popover</i> en anglais) entre visible et caché. Si l'élément contextuel flottant est caché, il sera affiché&nbsp;; s'il est affiché, il sera caché. Voir {{DOMxRef("Popover API", "l'API Popover", "", "nocode")}} pour plus de détails. C'est équivalent à la valeur `toggle` pour l'attribut [`popovertargetaction`](#popovertargetaction), et fournit aussi un équivalent déclaratif à l'appel de la méthode {{DOMxRef("HTMLElement.togglePopover()")}} sur l'élément contextuel flottant.
+      - : Le bouton bascule l'affichage d'un élément fenêtre intrusive (<i lang="en">popover</i> en anglais) entre visible et caché. Si l'élément fenêtre intrusive est caché, il est affiché&nbsp;; s'il est affiché, il est caché. Voir {{DOMxRef("Popover API", "l'API Popover", "", 1)}} pour plus de détails. C'est équivalent à la valeur `toggle` pour l'attribut [`popovertargetaction`](#popovertargetaction), et fournit aussi un équivalent déclaratif à l'appel de la méthode {{DOMxRef("HTMLElement.togglePopover()")}} sur l'élément fenêtre intrusive.
     - Valeurs personnalisées
-      - : Cet attribut peut représenter des valeurs personnalisées préfixées par deux tirets (`--`). Les boutons avec une valeur personnalisée déclencheront un {{DOMxRef("CommandEvent")}} sur l'élément contrôlé.
+      - : Cet attribut peut représenter des valeurs personnalisées préfixées par deux tirets (`--`). Les boutons avec une valeur personnalisée déclenchent un {{DOMxRef("CommandEvent")}} sur l'élément contrôlé.
 
 - `commandfor`
   - : Transforme un élément `<button>` en bouton de commande, contrôlant un élément interactif donné en émettant la commande définie dans l'attribut [`command`](#command) du bouton. L'attribut `commandfor` prend comme valeur l'identifiant de l'élément à contrôler. Il s'agit d'une version plus générale de [`popovertarget`](#popovertarget).
@@ -90,25 +90,25 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Cet attribut permet d'associer des éléments `<button>` à des `<form>` n'importe où dans le document, pas seulement à l'intérieur d'un `<form>`. Il peut aussi remplacer un élément `<form>` ancêtre.
 
 - `formaction`
-  - : L'URL qui traite les informations soumises par le bouton. Remplace l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) du propriétaire du formulaire du bouton. Ne fait rien s'il n'y a pas de propriétaire de formulaire.
+  - : L'URL qui traite les informations envoyées par le bouton. Remplace l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) du propriétaire du formulaire du bouton. Ne fait rien s'il n'y a pas de propriétaire de formulaire.
 - `formenctype`
-  - : Si le bouton est un bouton de soumission (il est à l'intérieur ou associé à un `<form>` et n'a pas `type="button"`), définit la façon dont les données du formulaire sont encodées lors de la soumission. Valeurs possibles&nbsp;:
+  - : Si le bouton est un bouton d'envoi (il est à l'intérieur ou associé à un `<form>` et n'a pas `type="button"`), définit la façon dont les données du formulaire sont encodées lors de l'envoi. Valeurs possibles&nbsp;:
     - `application/x-www-form-urlencoded`&nbsp;: La valeur par défaut si l'attribut n'est pas utilisé.
-    - `multipart/form-data`&nbsp;: Utilisé pour soumettre des éléments {{HTMLElement("input")}} dont l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) est défini à `file`.
-    - `text/plain`&nbsp;: Définie comme aide au débogage&nbsp;; ne doit pas être utilisé pour une soumission réelle de formulaire.
+    - `multipart/form-data`&nbsp;: Utilisé pour envoyer des éléments {{HTMLElement("input")}} dont l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) est défini à `file`.
+    - `text/plain`&nbsp;: Définie comme aide au débogage&nbsp;; ne doit pas être utilisé pour un envoi réel de formulaire.
 
     Si cet attribut est défini, il remplace l'attribut [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#enctype) du formulaire rattaché au bouton.
 
 - `formmethod`
-  - : Lorsque l'attribut **`type`** possède la valeur `submit` (explicitement ou comme valeur par défaut), cet attribut définit la [méthode HTTP](/fr/docs/Web/HTTP/Reference/Methods) qui sera utilisée pour envoyer les données au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes&nbsp;:
-    - `post`&nbsp;: Les données du formulaire sont incluses dans le corps de la requête HTTP lorsqu'elles sont envoyées au serveur. À utiliser lorsque le formulaire contient des informations qui ne devraient pas être publiques, comme les identifiants de connexion.
+  - : Lorsque l'attribut **`type`** possède la valeur `submit` (explicitement ou comme valeur par défaut), cet attribut définit la [méthode HTTP](/fr/docs/Web/HTTP/Reference/Methods) qui est utilisée pour envoyer les données au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes&nbsp;:
+    - `post`&nbsp;: Les données du formulaire sont incluses dans le corps de la requête HTTP lorsqu'elles sont envoyées au serveur. À utiliser lorsque le formulaire contient des informations qui ne doivent pas être publiques, comme les identifiants de connexion.
     - `get`&nbsp;: Les données du formulaire sont ajoutées à l'URL `action` du formulaire, avec un `?` comme séparateur, et l'URL résultante est envoyée au serveur. Utilisez cette méthode lorsque le formulaire [n'a pas d'effets secondaires](/fr/docs/Glossary/Idempotent), comme les formulaires de recherche.
     - `dialog`&nbsp;: Cette méthode permet d'indiquer que le bouton ferme [l'élément `<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) auquel il est associé, et n'envoie pas de données du formulaire.
 
     S'il est défini, cet attribut remplace l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method) du formulaire rattaché au bouton.
 
 - `formnovalidate`
-  - : Si le bouton est un bouton de soumission, cet attribut booléen indique que le formulaire ne doit pas être [validé](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation) lors de sa soumission. Si cet attribut est défini, il remplace l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) du propriétaire du formulaire du bouton.
+  - : Si le bouton est un bouton d'envoi, cet attribut booléen indique que le formulaire ne doit pas être [validé](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation) lors de son envoi. Si cet attribut est défini, il remplace l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) du propriétaire du formulaire du bouton.
 
     Cet attribut est également disponible sur les éléments [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image) et [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit).
 
@@ -120,10 +120,10 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `_top`&nbsp;: Charge la réponse dans le contexte de navigation de niveau supérieur (c'est-à-dire le contexte de navigation qui est un ancêtre du contexte actuel, et qui n'a pas de parent). S'il n'y a pas de parent, cette option se comporte de la même manière que `_self`.
 
 - `interestfor` {{Experimental_Inline}} {{Non-standard_Inline}}
-  - : Définit l'élément `<button>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est l'`id` de l'élément cible, qui sera affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
+  - : Définit l'élément `<button>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est un `id` de l'élément cible, qui est affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection (<i lang="en">focus/blur</i> en anglais)). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
 
 - `name`
-  - : Le nom du bouton, soumis en tant que paire avec la valeur (`value`) du bouton comme partie des données du formulaire.
+  - : Le nom du bouton, envoyé en tant que paire avec la valeur (`value`) du bouton comme partie des données du formulaire.
 
 - `popovertarget`
   - : Transforme un `<button>` en un élément de contrôle d'un élément contextuel flottant (<i lang="en">popover</i> en anglais)&nbsp;; il prend comme valeur `id` de l'élément élément contextuel flottant à contrôler. Voir la page sur [l'API Popover](/fr/docs/Web/API/Popover_API) pour plus de détails.
@@ -131,34 +131,34 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `popovertargetaction`
   - : Définit l'action à effectuer sur l'élément contextuel flottant (<i lang="en">popover</i> en anglais) cible lorsqu'un bouton est activé. Les valeurs possibles sont&nbsp;:
     - `"hide"`
-      - : Le bouton masquera l'élément contextuel flottant cible. Si l'élément contextuel flottant cible est déjà masqué, rien ne se passera.
+      - : Le bouton masque l'élément contextuel flottant cible. Si l'élément contextuel flottant cible est déjà masqué, rien ne se passe.
     - `"show"`
-      - : Le bouton affichera l'élément contextuel flottant cible. Si l'élément contextuel flottant cible est déjà affiché, rien ne se passera.
+      - : Le bouton affiche l'élément contextuel flottant cible. Si l'élément contextuel flottant cible est déjà affiché, rien ne se passe.
     - `"toggle"`
-      - : Le bouton affichera l'élément contextuel flottant cible s'il est masqué, ou le masquera s'il est affiché. Si `popovertargetaction` n'est pas défini, le bouton se comportera comme s'il avait la valeur `"toggle"`.
+      - : Le bouton affiche l'élément contextuel flottant cible s'il est masqué, ou le masque s'il est affiché. Si `popovertargetaction` n'est pas défini, le bouton se comporte comme s'il avait la valeur `"toggle"`.
 
 - `type`
   - : Le comportement par défaut du bouton. Les valeurs possibles sont&nbsp;:
-    - `submit`&nbsp;: Le bouton soumet les données du formulaire au serveur. C'est la valeur par défaut si l'attribut n'est pas défini pour les boutons associés à un `<form>`, ou si l'attribut est une valeur vide ou invalide.
+    - `submit`&nbsp;: Le bouton envoie les données du formulaire au serveur. C'est la valeur par défaut si l'attribut n'est pas défini pour les boutons associés à un `<form>`, ou si l'attribut est une valeur vide ou invalide.
     - `reset`&nbsp;: Le bouton réinitialise tous les contrôles à leur valeur initiale, comme [`<input type="reset">`](/fr/docs/Web/HTML/Reference/Elements/input/reset). (Ce comportement a tendance à agacer les utilisateur·ice·s).
     - `button`&nbsp;: Le bouton n'a pas de comportement par défaut et ne fait rien lorsqu'il est pressé par défaut. Les scripts côté client peuvent écouter les évènements de l'élément, qui sont déclenchés lorsque les évènements se produisent.
 
 - `value`
-  - : Définit la valeur associée au `name` du bouton lorsqu'il est soumis avec les données du formulaire.
-    Cette valeur est transmise au serveur en paramètres lorsque le formulaire est soumis.
+  - : Définit la valeur associée au `name` du bouton lorsqu'il est envoyé avec les données du formulaire.
+    Cette valeur est transmise au serveur en paramètres lorsque le formulaire est envoyé.
     Lorsqu'il est utilisé avec les commandes `close` ou `request-close`, l'attribut `value` définit le {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} de l'élément {{HTMLElement("dialog")}} contrôlé.
 
 ## Notes
 
-Un bouton de soumission avec l'attribut `formaction` défini, mais sans formulaire associé ne fait rien. Vous devez définir un formulaire rattaché, soit en l'enveloppant dans un `<form>`, soit en définissant la valeur de l'attribut `form` avec l'identifiant du formulaire.
+Un bouton d'envoi avec l'attribut `formaction` défini, mais sans formulaire associé ne fait rien. Vous devez définir un formulaire rattaché, soit en l'enveloppant dans un `<form>`, soit en définissant la valeur de l'attribut `form` avec l'identifiant du formulaire.
 
 Les éléments `<button>` sont beaucoup plus faciles à mettre en forme que les éléments {{HTMLElement("input")}}. Vous pouvez ajouter du contenu HTML interne (pensez à `<i>`, `<br>`, ou même `<img>`), et utiliser les pseudo-éléments {{CSSxRef("::after")}} et {{CSSxRef("::before")}} pour un rendu complexe.
 
-Si vos boutons ne servent pas à soumettre des données de formulaire à un serveur, assurez-vous de définir leur attribut `type` à `button`. Sinon, ils tenteront de soumettre des données de formulaire et de charger la réponse (inexistante), détruisant éventuellement l'état actuel du document.
+Si vos boutons ne servent pas à envoyer des données de formulaire à un serveur, assurez-vous de définir leur attribut `type` à `button`. Sinon, ils tentent d'envoyer des données de formulaire et de charger la réponse (inexistante), détruisant éventuellement l'état actuel du document.
 
-Bien que `<button type="button">` n'ait pas de comportement par défaut, on peut utiliser des gestionnaires d'évènements scriptés pour déclencher certaines actions. Un bouton pourra déclencher des actions grâce à [JavaScript](/fr/docs/Learn_web_development/Core/Scripting), par exemple pour retirer un élément d'une liste.
+Bien que `<button type="button">` n'ait pas de comportement par défaut, on peut utiliser des gestionnaires d'évènements scriptés pour déclencher certaines actions. Un bouton peut déclencher des actions grâce à [JavaScript](/fr/docs/Learn_web_development/Core/Scripting), par exemple pour retirer un élément d'une liste.
 
-Par défaut, les agents utilisateurs appliquent le style `display: flow-root` aux boutons, ce qui établit un [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) et centre les enfants du bouton horizontalement et verticalement tant qu'ils ne débordent pas. Si le bouton est défini comme conteneur flex ou grid, ses enfants se comporteront comme des éléments flex ou grid. Un bouton avec `display: inline` sera stylisé comme si la valeur était `display: inline-block`.
+Par défaut, les agents utilisateurs appliquent le style `display: flow-root` aux boutons, ce qui établit un [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) et centre les enfants du bouton horizontalement et verticalement tant qu'ils ne débordent pas. Si le bouton est défini comme conteneur flex ou grid, ses enfants se comportent comme des éléments flex ou grid. Un bouton avec `display: inline` est mis en forme comme si la valeur était `display: inline-block`.
 
 ## Accessibilité
 
@@ -192,13 +192,13 @@ Cependant, il est important de noter que laisser le texte du bouton visible peut
 
 - [Qu'est-ce qu'un nom accessible&nbsp;? | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/what-is-an-accessible-name/)
 - [MDN Comprendre WCAG, explications de la règle 4.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust#règle_4.1_—_compatible_maximiser_la_compatibilité_avec_les_agent·e·s_utilisateur·ice·s_actuels_et_futurs_y_compris_les_technologies_dassistance)
-- [Comprendre le critère de succès 4.1.2 | W3C Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
+- [Comprendre le critère de succès 4.1.2 | Comprendre les WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 
 ### Dimensionnement et proximité
 
 #### Dimensionnement
 
-Les éléments interactifs tels que les boutons doivent fournir une surface suffisamment grande pour qu'il soit facile de les activer. Cela facilitera la tâche à une variété de personnes&nbsp;: celles qui ont des problèmes moteurs, celles qui utilisent des dispositifs de pointage peu précis (doigt ou stylet). La taille interactive minimale recommandée est de 44×44 [pixels CSS](/fr/docs/Glossary/CSS_pixel).
+Les éléments interactifs tels que les boutons doivent fournir une surface suffisamment grande pour qu'il soit facile de les activer. Cela facilite la tâche à une variété de personnes&nbsp;: celles qui ont des problèmes moteurs, celles qui utilisent des dispositifs de pointage peu précis (doigt ou stylet). La taille interactive minimale recommandée est de 44×44 [pixels CSS](/fr/docs/Glossary/CSS_pixel).
 
 - [Comprendre le critère de succès 2.5.5&nbsp;: Taille de la cible | W3C Comprendre WCAG 2.1 <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Taille de la cible et 2.5.5 | Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
@@ -206,7 +206,7 @@ Les éléments interactifs tels que les boutons doivent fournir une surface suff
 
 #### Proximité
 
-De grandes quantités de contenu interactif — y compris les boutons — placées à proximité visuelle les unes des autres doivent être séparées par de l'espace. Cet espacement est bénéfique pour les personnes ayant des problèmes de contrôle moteur, qui pourraient activer accidentellement le mauvais contenu interactif.
+De grandes quantités de contenu interactif — y compris les boutons — placées à proximité visuelle les unes des autres doivent être séparées par de l'espace. Cet espacement est bénéfique pour les personnes ayant des problèmes de contrôle moteur, qui peuvent activer accidentellement le mauvais contenu interactif.
 
 L'espacement peut être créé à l'aide de propriétés CSS telles que {{CSSxRef("margin")}}.
 
@@ -218,9 +218,9 @@ Pour décrire l'état d'un bouton, l'attribut ARIA correct à utiliser est [`ari
 
 ### Mises en formes de bouton
 
-Il est préférable de ne pas surcharger l'anneau de sélection par défaut pour les éléments qui reçoivent la sélection. Si les styles de bouton sont modifiés, il est important de **s'assurer que l'état de sélection présente un contraste suffisant** pour que les personnes malvoyantes puissent le percevoir et que les personnes ayant des différences cognitives puissent le comprendre.
+Il est préférable de ne pas surcharger l'anneau de sélection (<i lang="en">focus</i> en anglais) par défaut pour les éléments qui reçoivent la sélection. Si les styles de bouton sont modifiés, il est important de **s'assurer que l'état de sélection présente un contraste suffisant** pour que les personnes malvoyantes puissent le percevoir et que les personnes ayant des différences cognitives puissent le comprendre.
 
-La pseudo-classe {{CSSxRef(":focus-visible")}} peut être utilisée pour appliquer des styles à un élément qui a {{CSSxRef(":focus")}} uniquement lorsque les heuristiques de l'agent utilisateur déterminent que le focus doit être mis en évidence, par exemple lorsqu'un `<button>` reçoit le focus au clavier. Voir [:focus contre :focus-visible](/fr/docs/Web/CSS/Reference/Selectors/:focus-visible#focus_contre_focus-visible) pour plus d'informations.
+La pseudo-classe {{CSSxRef(":focus-visible")}} peut être utilisée pour appliquer des styles à un élément qui a {{CSSxRef(":focus")}} uniquement lorsque les heuristiques de l'agent utilisateur déterminent que la sélection doit être mis en évidence, par exemple lorsqu'un `<button>` reçoit la sélection au clavier. Voir [`:focus` contre `:focus-visible`](/fr/docs/Web/CSS/Reference/Selectors/:focus-visible#focus_contre_focus-visible) pour plus d'informations.
 
 Le ratio de contraste des couleurs est déterminé en comparant la luminosité des valeurs de couleur du texte du bouton et de l'arrière-plan avec l'arrière-plan sur lequel le bouton est placé. Pour respecter les [Règles pour l'accessibilité des contenus Web (WCAG) <sup>(angl.)</sup>](https://www.w3.org/WAI/standards-guidelines/wcag/), un ratio de 4,5:1 est requis pour le contenu textuel et de 3:1 pour les grands textes. (Un grand texte est défini comme un texte de 18,66px et {{CSSxRef("font-weight", "bold")}} ou plus, ou de 24px ou plus.)
 
@@ -228,9 +228,9 @@ Le ratio de contraste des couleurs est déterminé en comparant la luminosité d
 - [MDN Comprendre WCAG, explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
 - [Comprendre le critère de succès 1.4.3 | W3C Comprendre WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-### Clic et focus
+### Clic et sélection
 
-Le fait de cliquer sur un `<button>` ou sur un bouton {{HTMLElement("input")}} peut, selon le navigateur et l'OS, lui donner la sélection par défaut. La plupart des navigateurs donnent la sélection à un bouton cliqué, mais [Safari ne le fait pas, par conception <sup>(angl.)</sup>](https://webkit.org/b/22261#c68).
+Le fait de cliquer sur un `<button>` ou sur un bouton {{HTMLElement("input")}} peut, selon le navigateur et l'OS, lui donner la sélection (<i lang="en">focus</i> en anglais) par défaut. La plupart des navigateurs donnent la sélection à un bouton cliqué, mais [Safari ne le fait pas, par conception <sup>(angl.)</sup>](https://webkit.org/b/22261#c68).
 
 ## Exemples
 
@@ -253,11 +253,11 @@ Sélectionnez **Oui** ou **Non**, puis cliquez sur **Demander la fermeture** pou
 Si **Oui** est sélectionné, la boîte de dialogue se ferme&nbsp;; si **Non** est sélectionné, la boîte de dialogue reste ouverte et affiche un message à la place.
 
 ```html
-<button type="button" commandfor="mydialog" command="show-modal">
+<button type="button" commandfor="mondialogue" command="show-modal">
   Ouvrir la boîte de dialogue
 </button>
-<dialog id="mydialog">
-  <div class="wrapper">
+<dialog id="mondialogue">
+  <div class="enveloppe">
     <form>
       <fieldset>
         <legend>
@@ -274,7 +274,7 @@ Si **Oui** est sélectionné, la boîte de dialogue se ferme&nbsp;; si **Non** e
         </div>
       </fieldset>
     </form>
-    <button commandfor="mydialog" command="request-close">
+    <button commandfor="mondialogue" command="request-close">
       Demander la fermeture
     </button>
     <p class="warning" hidden>
@@ -310,8 +310,8 @@ dialog.addEventListener("cancel", (e) => {
 
 Le bouton **Ouvrir la boîte de dialogue** ouvre l'élément `<dialog>` en utilisant `command="show-modal"`.
 
-Le bouton **Demander la fermeture** a `command="request-close"`, qui cible l'élément `<dialog>` en utilisant l'attribut `commandfor="mydialog"`. Lorsqu'il est cliqué, il demande au `<dialog>` s'il peut être fermé (contrairement à l'attribut `command="close"`, qui fermerait immédiatement le `<dialog>`).
-Cela vérifie si le `<dialog>` est [`cancelable`](/fr/docs/Web/API/Event/cancelable) en utilisant un évènement `cancel`.
+Le bouton **Demander la fermeture** a `command="request-close"`, qui cible l'élément `<dialog>` en utilisant l'attribut `commandfor="mondialogue"`. Lorsqu'il est cliqué, il demande au `<dialog>` s'il peut être fermé (contrairement à l'attribut `command="close"`, qui ferme immédiatement le `<dialog>`).
+Cela vérifie si le `<dialog>` est annulable ({{DOMxRef("Event/cancelable", "cancelable")}} en utilisant un évènement `cancel`.
 
 Lorsque l'évènement est `cancelable`, la valeur des boutons radio est vérifiée&nbsp;:
 
@@ -323,7 +323,7 @@ Lorsque l'évènement est `cancelable`, la valeur des boutons radio est vérifi�
 Cet exemple montre comment utiliser l'attribut `value` d'un bouton avec la commande `close` pour remplir la propriété {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} d'un dialogue.
 
 Lorsque le bouton **Annuler** ou **Supprimer** est cliqué, le dialogue se ferme et définit sa `returnValue` sur l'attribut `value` du bouton.
-Le gestionnaire d'évènements `close` vérifie `dialog.returnValue` pour déterminer quelle action l'utilisateur a choisie et affiche le résultat à l'écran.
+Le gestionnaire d'évènements `close` vérifie `dialog.returnValue` pour déterminer quelle action l'utilisateur·ice a choisie et affiche le résultat à l'écran.
 
 #### HTML
 
@@ -333,19 +333,19 @@ Dans le dialogue, les boutons **Annuler** et **Supprimer** utilisent l'attribut 
 Ils définissent également l'attribut `command` sur `"close"` et l'attribut `value` sur `"cancel"` et `"delete"` respectivement — la valeur du bouton sélectionné est automatiquement copiée dans la propriété `returnValue` du dialogue lorsque le bouton est cliqué.
 
 ```html
-<button commandfor="confirm-dialog" command="show-modal">
+<button commandfor="confirmer-dialogue" command="show-modal">
   Supprimer l'enregistrement
 </button>
-<dialog id="confirm-dialog">
+<dialog id="confirmer-dialogue">
   <header>
     <h1>Supprimer l'enregistrement ?</h1>
   </header>
   <p>Êtes-vous sûr&nbsp;? Cette action est irréversible.</p>
   <footer>
-    <button commandfor="confirm-dialog" command="close" value="cancel">
+    <button commandfor="confirmer-dialogue" command="close" value="cancel">
       Annuler
     </button>
-    <button commandfor="confirm-dialog" command="close" value="delete">
+    <button commandfor="confirmer-dialogue" command="close" value="delete">
       Supprimer
     </button>
   </footer>
@@ -353,19 +353,19 @@ Ils définissent également l'attribut `command` sur `"close"` et l'attribut `va
 ```
 
 ```html
-<pre id="log"></pre>
+<pre id="journal"></pre>
 ```
 
 ```css hidden
-#log {
+#journal {
   height: 20px;
 }
 ```
 
 ```js hidden
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = text;
+const elementJournal = document.querySelector("#journal");
+function journaliser(text) {
+  elementJournal.innerText = text;
 }
 ```
 
@@ -374,18 +374,18 @@ function log(text) {
 The code uses a `close` event listener to log the dialog's `returnValue`.
 
 ```js
-const dialog = document.getElementById("confirm-dialog");
+const dialog = document.getElementById("confirmer-dialogue");
 
 dialog.addEventListener("close", () => {
   switch (dialog.returnValue) {
     case "cancel":
-      log("Annuler a été cliqué");
+      journaliser("Annuler a été cliqué");
       break;
     case "delete":
-      log("Supprimer a été cliqué");
+      journaliser("Supprimer a été cliqué");
       break;
     default:
-      log("Fermé avec la valeur :", dialog.returnValue);
+      journaliser("Fermé avec la valeur :", dialog.returnValue);
   }
 });
 ```
@@ -428,7 +428,7 @@ dialog.addEventListener("close", () => {
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phras%C3%A9">Contenu phrasé</a> mais sans <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_interactif">contenu interactif</a>.
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé">Contenu phrasé</a> mais sans <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_interactif">contenu interactif</a>.
       </td>
     </tr>
     <tr>
@@ -438,7 +438,7 @@ dialog.addEventListener("close", () => {
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        Tout élément acceptant du <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phras%C3%A9">contenu phrasé</a>.
+        Tout élément acceptant du <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé">contenu phrasé</a>.
       </td>
     </tr>
     <tr>

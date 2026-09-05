@@ -3,7 +3,7 @@ title: Firefox 8 note de version pour les développeurs
 short-title: Firefox 8
 slug: Mozilla/Firefox/Releases/8
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
 Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fournit des informations à la fois pour les développeur·euse·s Web et pour les développeur·euse·s d'extensions et de projets liés à Mozilla pour aider à tirer pleinement parti des fonctionnalités de cette version.

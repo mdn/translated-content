@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 08e04f121ea7b3a55e6ef47782d2d82fb053ca88
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}
 
 > [!WARNING]
 > 許多與 `createEvent` 一起使用的方法，例如 `initCustomEvent`，已被淘汰。請改用[事件建構子](/zh-TW/docs/Web/API/CustomEvent)。

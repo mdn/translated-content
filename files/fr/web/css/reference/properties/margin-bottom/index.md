@@ -62,7 +62,7 @@ margin-bottom: 0;
 
 ![Effet de la propriété CSS margin-bottom sur la boîte de l'élément](margin-bottom.svg)
 
-Cette propriété n'a aucun effet sur les éléments en ligne (_inline_) qui ne sont pas remplacés comme {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.
+Cette propriété n'a aucun effet sur les éléments en incise (<i lang="en">inline</i> en anglais) qui ne sont pas remplacés comme {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.
 
 ## Syntaxe
 
@@ -94,7 +94,7 @@ La valeur de la propriété `margin-bottom` peut être le mot-clé `auto`, une l
     - Pour les éléments positionnés par ancre, la fonction {{CSSxRef("anchor-size()")}} donne une valeur {{CSSxRef("&lt;length&gt;")}} relative à la largeur ou la hauteur de l'élément ancre associé (voir [Définir la marge d'un élément selon la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre)).
 
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille de la marge en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
+  - : La taille de la marge en pourcentage, relative à la taille en incise (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
 - `auto`
   - : Le navigateur choisit une valeur adaptée. Voir {{CSSxRef("margin")}}.
 
@@ -166,7 +166,7 @@ div {
 
 {{Compat}}
 
-## See also
+## Voir aussi
 
 - Les propriétés {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}} et {{CSSxRef("margin-left")}}
 - La propriété raccourcie {{CSSxRef("margin")}}

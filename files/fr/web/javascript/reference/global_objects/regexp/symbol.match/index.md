@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match
 original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 ---
 
-{{JSRef}}
-
 La méthode **`[@@match]()`** permet de récupérer les correspondances obtenues lorsqu'on teste une chaîne de caractères par rapport à une expression rationnelle (_regexp_).
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.match]()")}}

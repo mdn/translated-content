@@ -3,10 +3,10 @@ title: "HTMLTableCellElement : propriété noWrap"
 short-title: noWrap
 slug: Web/API/HTMLTableCellElement/noWrap
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM API")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM API")}}
 
 La propriété **`noWrap`** de l'interface {{DOMxRef("HTMLTableCellElement")}} retourne une valeur booléenne indiquant si le texte de la cellule peut être scindé en plusieurs lignes ou non.
 

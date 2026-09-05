@@ -48,6 +48,6 @@ console.log(locale.calendar); // "buddhist"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - La méthode {{JSxRef("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}}
 - [Identifiants Unicode pour les calendriers <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/#UnicodeCalendarIdentifier) dans la spécification Unicode du langage de balisage des données de locale Unicode

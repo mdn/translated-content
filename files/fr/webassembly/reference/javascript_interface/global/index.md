@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/Global
 original_slug: WebAssembly/JavaScript_interface/Global
 ---
 
-{{WebAssemblySidebar}}
-
 Un objet **`WebAssembly.Global`** représente une instance d'une variable globale, accessible depuis le code JavaScript et importable/exportable pour un ou plusieurs modules WebAssembly ([`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module)). Cela permet de lier dynamiquement plusieurs modules.
 
 ## Constructeur
