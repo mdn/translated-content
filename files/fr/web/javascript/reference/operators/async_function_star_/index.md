@@ -2,75 +2,74 @@
 title: Expression async function*
 slug: Web/JavaScript/Reference/Operators/async_function*
 l10n:
-  sourceCommit: 1be604140d8179f54bc180af6cd4bc27576219de
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Operators")}}
+Les mots-clés **`async function*`** peuvent être utilisés pour définir une fonction génératrice asynchrone au sein d'une expression.
 
-Les mots-clés **`async function*`** peuvent être utilisés afin de créer une fonction génératrice asynchrone au sein d'une expression.
+Vous pouvez également définir des fonctions génératrices asynchrones en utilisant une [déclaration `async function*`](/fr/docs/Web/JavaScript/Reference/Statements/async_function*).
 
-{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: l'expression async function*", "taller")}}
 
 ```js interactive-example
-async function* foo() {
+async function joinAll(generator) {
+  let str = "";
+  for await (const val of generator()) {
+    str += val;
+  }
+  return str;
+}
+joinAll(async function* () {
   yield await Promise.resolve("a");
   yield await Promise.resolve("b");
   yield await Promise.resolve("c");
-}
-
-let str = "";
-
-async function generate() {
-  for await (const val of foo()) {
-    str = str + val;
-  }
-  console.log(str);
-}
-
-generate();
-// Expected output: "abc"
+}).then((str) => console.log(str));
+// Résultat attendu : "abc"
 ```
 
 ## Syntaxe
 
-```js
+```js-nolint
 async function* (param0) {
-  instructions
+  statements
 }
 async function* (param0, param1) {
-  instructions
+  statements
 }
-async function* (param0, param1, /* … ,*/ paramN) {
-  instructions
+async function* (param0, param1, /* …, */ paramN) {
+  statements
 }
 
-async function* nom(param0) {
-  instructions
+async function* name(param0) {
+  statements
 }
-async function* nom(param0, param1) {
-  instructions
+async function* name(param0, param1) {
+  statements
 }
-async function* nom(param0, param1, /* … ,*/ paramN) {
-  instructions
+async function* name(param0, param1, /* …, */ paramN) {
+  statements
 }
 ```
 
+> [!NOTE]
+> Une [instruction d'expression](/fr/docs/Web/JavaScript/Reference/Statements/Expression_statement) ne peut pas commencer par les mots-clés `async function` afin d'éviter toute ambiguïté avec une [déclaration `async function`](/fr/docs/Web/JavaScript/Reference/Statements/async_function). Les mots-clés `async function` ne commencent une expression que lorsqu'ils apparaissent dans un contexte qui ne peut pas accepter d'instructions.
+
 ### Paramètres
 
-- `nom` {{optional_inline}}
-  - : Le nom de la fonction. S'il est absent, la fonction est _anonyme_. Le nom est uniquement local au corps de la fonction.
-- `paramN` {{optional_inline}}
-  - : Le nom d'un argument à passer à la fonction. Une fonction peut avoir jusqu'à 255 arguments.
-- `instructions` {{optional_inline}}
-  - : Les instructions qui forment le corps de la fonction.
+- `name` {{Optional_Inline}}
+  - : Le nom de la fonction. Peut être omis, auquel cas la fonction est _anonyme_. Le nom n'est local qu'au corps de la fonction.
+- `paramN` {{Optional_Inline}}
+  - : Le nom d'un paramètre formel pour la fonction. Pour la syntaxe des paramètres, voir la [référence sur les fonctions](/fr/docs/Web/JavaScript/Guide/Functions#paramètres_de_fonction).
+- `statements` {{Optional_Inline}}
+  - : Les instructions qui composent le corps de la fonction.
 
 ## Description
 
-Une expression `async function*` est très proche et possède quasiment la même syntaxe qu'une [instruction `async function*`](/fr/docs/Web/JavaScript/Reference/Statements/async_function*). La différence principale entre une expression `async function*` et une instruction `async function*` est que _le nom de la fonction_ peut être omis dans les expressions `async function*` afin de créer des fonctions génératrices asynchrones _anonymes_. Voir aussi le chapitre sur [les fonctions en JavaScript](/fr/docs/Web/JavaScript/Reference/Functions) pour plus d'informations.
+Une expression `async function*` est très proche, et partage quasiment la même syntaxe avec une [déclaration `async function*`](/fr/docs/Web/JavaScript/Reference/Statements/async_function*). La différence principale entre une expression `async function*` et une déclaration `async function*` est le _nom de la fonction_, qui peut être omis dans les expressions `async function*` pour créer des fonctions _anonymes_. Une expression `async function*` peut être utilisée comme une [<abbr>IIFE</abbr>](/fr/docs/Glossary/IIFE) (<i lang="en">Immediately Invoked Function Expression</i>) qui s'exécute dès qu'elle est définie, ce qui permet de créer un [objet itérable asynchrone](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#les_protocoles_ditérateur_asynchrone_et_ditérable_asynchrone) ad hoc. Voir également le chapitre sur [les fonctions](/fr/docs/Web/JavaScript/Reference/Functions) pour plus d'informations.
 
 ## Exemples
 
-### Utiliser async function\*
+### Utiliser l'expression `async function*`
 
 L'exemple qui suit définit une fonction génératrice asynchrone anonyme et l'affecte à `x`. Cette fonction génère le carré de son argument&nbsp;:
 
@@ -80,7 +79,7 @@ const x = async function* (y) {
 };
 x(6)
   .next()
-  .then((res) => console.log(res.value)); // affiche 36
+  .then((res) => console.log(res.value)); // 36
 ```
 
 ## Spécifications
@@ -93,11 +92,10 @@ x(6)
 
 ## Voir aussi
 
-- L'instruction [`async function*`](/fr/docs/Web/JavaScript/Reference/Statements/async_function*)
-- L'objet [`AsyncGeneratorFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)
-- [Le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- L'objet [`GeneratorFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)
-- [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield)
-- [`yield*`](/fr/docs/Web/JavaScript/Reference/Operators/yield*)
-- L'objet [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- [Les fonctions en JavaScript](/fr/docs/Web/JavaScript/Reference/Functions)
+- Le guide [des fonctions](/fr/docs/Web/JavaScript/Guide/Functions)
+- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)
+- L'instruction {{JSxRef("Statements/async_function*", "async function*")}}
+- L'objet natif {{JSxRef("AsyncGeneratorFunction")}}
+- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
+- L'opérateur {{JSxRef("Operators/yield", "yield")}}
+- L'opérateur {{JSxRef("Operators/yield*", "yield*")}}
