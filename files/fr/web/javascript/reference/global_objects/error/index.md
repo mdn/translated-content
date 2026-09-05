@@ -2,7 +2,7 @@
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 Les objets **`Error`** sont levés lorsque des erreurs d'exécution se produisent. L'objet `Error` peut aussi être utilisé comme objet de base pour des exceptions définies par l'utilisateur·ice. Voir ci-dessous pour les types d'erreurs intégrés standards.
@@ -124,7 +124,7 @@ Il arrive parfois que des erreurs semblables (type et message identiques) néces
 Si vous ne maîtrisez pas l'origine des erreurs, vous pouvez les intercepter et renvoyer de nouveaux objets `Error` avec des messages plus spécifiques.
 L'erreur d'origine doit être passée au nouveau `Error` dans le paramètre [`options`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#options) du constructeur comme propriété `cause`. Cela garantit que l'erreur d'origine et la pile d'appels sont disponibles pour les blocs try/catch de plus haut niveau.
 
-Dans l'exemple qui suit, on illustre ceci pour deux méthodes qui échoueraient avec des erreurs similaires (`echecUneFacon()` et `echecAutreFacon()`)&nbsp;:
+Dans l'exemple qui suit, on illustre ceci pour deux méthodes qui échouent avec des erreurs similaires (`echecUneFacon()` et `echecAutreFacon()`)&nbsp;:
 
 ```js
 function faireTruc() {
@@ -157,7 +157,7 @@ try {
 > [!NOTE]
 > Si vous créez une bibliothèque, il est préférable d'utiliser la cause de l'erreur pour différencier les différentes erreurs émises — plutôt que de demander à vos utilisateur·ice·s d'analyser le message d'erreur. Voir la [page sur la cause d'erreur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#fournir_des_données_structurées_comme_cause_derreur) pour un exemple.
 
-[Les types d'erreur personnalisés](#types_derreur_personnalisés) peuvent également utiliser la propriété `cause`, à condition que le constructeur des sous-classes transmette le paramètre `options` lors de l'appel à `super()`. Le constructeur de la classe de base `Error()` lira `options.cause` et définira la propriété `cause` sur la nouvelle instance d'erreur.
+[Les types d'erreur personnalisés](#types_derreur_personnalisés) peuvent également utiliser la propriété `cause`, à condition que le constructeur des sous-classes transmette le paramètre `options` lors de l'appel à `super()`. Le constructeur de la classe de base `Error()` lit `options.cause` et définit la propriété `cause` sur la nouvelle instance d'erreur.
 
 ```js
 class MonErreur extends Error {
@@ -179,7 +179,7 @@ Il est possible de définir ses propres types d'erreur dérivés de `Error` et d
 Voir [«&nbsp;Quelle est une bonne façon d'étendre Error en JavaScript&nbsp;?&nbsp;» <sup>(angl.)</sup>](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) sur StackOverflow pour une discussion détaillée.
 
 > [!WARNING]
-> Le sous-classage natif ne peut pas être transpilé de manière fiable vers du code pré-ES6, car il n'existe aucun moyen de construire la super-classe avec un `new.target` particulier sans {{JSxRef("Reflect.construct()")}}. Vous avez besoin d'une [configuration supplémentaire <sup>(angl.)</sup>](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) ou d'appeler manuellement {{JSxRef("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} à la fin du constructeur&nbsp;; sinon, l'instance construite ne sera pas une instance de `CustomError`. Voir [la FAQ TypeScript <sup>(angl.)</sup>](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) pour plus d'informations.
+> Le sous-classage natif ne peut pas être transpilé de manière fiable vers du code pré-ES6, car il n'existe aucun moyen de construire la super-classe avec un `new.target` particulier sans {{JSxRef("Reflect.construct()")}}. Vous avez besoin d'une [configuration supplémentaire <sup>(angl.)</sup>](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) ou d'appeler manuellement {{JSxRef("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} à la fin du constructeur&nbsp;; sinon, l'instance construite n'est pas une instance de `CustomError`. Voir [la FAQ TypeScript <sup>(angl.)</sup>](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) pour plus d'informations.
 
 > [!NOTE]
 > Certains navigateurs incluent le constructeur `CustomError` dans la pile d'appel lorsque les classes ES2015 sont utilisées.

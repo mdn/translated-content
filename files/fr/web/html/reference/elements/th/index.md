@@ -16,7 +16,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<th>`** définit une cellule comme l'en
     Stars du football extraterrestre
   </caption>
   <tr>
-    <th scope="col">Joueur·euse</th>
+    <th scope="col">joueur·se</th>
     <th scope="col">Gloobles</th>
     <th scope="col">Za'taak</th>
   </tr>
@@ -319,7 +319,7 @@ Pour des relations plus complexes entre cellules d'en-tête, l'utilisation des �
 Pour améliorer {{Glossary("accessibility", "l'accessibilité")}} du [précédent exemple](#extension_de_colonnes_et_de_lignes) et permettre, par exemple, aux lecteurs d'écran d'énoncer les en-têtes associés à chaque cellule d'en-tête, l'attribut [`headers`](#headers) peut être introduit avec des attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). En raison de la façon dont la colonne «&nbsp;Prononciation&nbsp;» est divisée en deux colonnes dans l'exemple, introduisant un en-tête sur «&nbsp;deux lignes&nbsp;», les technologies d'assistance comme les lecteurs d'écran peuvent ne pas être capables d'identifier à quelles autres cellules d'en-tête (éléments `th`) la cellule d'en-tête «&nbsp;Prononciation&nbsp;» est liée, et inversement. Par conséquent, l'attribut [`headers`](#headers) est utilisé sur les cellules d'en-tête «&nbsp;Prononciation&nbsp;», «&nbsp;API&nbsp;» et «&nbsp;Prononciation simplifiée&nbsp;» pour associer les cellules d'en-tête concernées en fonction des valeurs des identifiants uniques ajoutés avec les attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) sous forme de liste séparée par des espaces.
 
 > [!NOTE]
-> Il est recommandé d'utiliser des valeurs plus descriptives et utiles pour l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Chaque `id` dans un document doit être unique dans ce document. Dans cet exemple, les valeurs d'`id` sont des caractères uniques pour se concentrer sur le concept de l'attribut [`headers`](#headers).
+> Il est recommandé d'utiliser des valeurs plus descriptives et utiles pour l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Chaque `id` dans un document doit être unique dans ce document. Dans cet exemple, les valeurs d'un `id` sont des caractères uniques pour se concentrer sur le concept de l'attribut [`headers`](#headers).
 
 ```html
 <table>

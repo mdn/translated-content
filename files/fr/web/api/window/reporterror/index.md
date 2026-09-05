@@ -3,16 +3,16 @@ title: "Window : méthode reportError()"
 short-title: reportError()
 slug: Web/API/Window/reportError
 l10n:
-  sourceCommit: 4f90930051faa1ff1f4278068885e59c5bbb0069
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 La méthode **`reportError()`** de l'interface {{DOMxRef("Window")}} peut être utilisée pour signaler des erreurs à la console ou aux gestionnaires d'évènements des portées globales, en simulant une exception JavaScript non interceptée.
 
 Cette fonctionnalité est principalement destinée aux bibliothèques personnalisées de distribution d'évènements ou de manipulation de fonctions de rappels.
 Les bibliothèques peuvent utiliser cette fonctionnalité pour intercepter les erreurs dans le code de rappel et les relancer vers le gestionnaire de niveau supérieur.
-Cela garantit qu'une exception dans un rappel ne empêchera pas les autres d'être traités, tout en garantissant que les informations de trace de pile sont toujours facilement disponibles pour le débogage au niveau supérieur.
+Cela garantit qu'une exception dans un rappel n'empêche pas les autres d'être traités, tout en garantissant que les informations de trace de pile sont toujours facilement disponibles pour le débogage au niveau supérieur.
 
 ## Syntaxe
 

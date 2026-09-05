@@ -3,7 +3,7 @@ title: URLs de données
 short-title: "data:"
 slug: Web/URI/Reference/Schemes/data
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: c8b64fbd9beeee79caa5e3f0e8a47f02033e7c0d
 ---
 
 **URLs de données**, URLs préfixées par le schéma `data:`, permettent aux créateur·ice·s de contenu d'intégrer de petits fichiers inline dans des documents. Elles étaient auparavant connues sous le nom de «&nbsp;data URIs&nbsp;» jusqu'à ce que ce nom soit retiré par le WHATWG.
@@ -30,6 +30,8 @@ Quelques exemples&nbsp;:
 
 - `data:,Bonjour%2C%20le%20Monde%20%21`
   - : Les données text/plain `Bonjour, le Monde !`. Notez que la virgule est {{Glossary("Percent-encoding", "encodée en pourcentage")}} en `%2C`, et l'espace en `%20`.
+- `data:text/plain,Hello%2C%20%57%6F%72%6C%64%21`
+  - : Les données text/plain `Hello, World!`, avec les caractères `World` encodés en pourcentage ainsi que les caractères de virgule et d'espace&nbsp;: vous pouvez encoder en pourcentage n'importe quels caractères, même s'ils n'ont pas besoin d'être encodés. Notez que {{JSxRef("decodeURIComponent()")}} peut être utilisé pour décoder tous les caractères encodés.
 - `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==`
   - : Version encodée en base64 de l'exemple ci-dessus
 - `data:text/html,%3Ch1%3EBonjour%2C%20le%20Monde%20%21%3C%2Fh1%3E`
@@ -47,7 +49,7 @@ Les APIs web proposent des méthodes natives pour encoder ou décoder en base64&
 
 ### Encodage sur un système Unix
 
-L'encodage base64 d'un fichier ou d'une chaîne sur les systèmes Linux et macOS peut être réalisé avec la commande `base64` (ou, en alternative, l'utilitaire `uuencode` avec l'argument `-m`).
+L'encodage base64 d'un fichier ou d'une chaîne de caractères sur les systèmes Linux et macOS peut être réalisé avec la commande `base64` (ou, en alternative, l'utilitaire `uuencode` avec l'argument `-m`).
 
 ```bash
 echo -n bonjour|base64
@@ -95,17 +97,17 @@ beaucoup de texte…
 - Syntaxe
   - : Le format des URLs de type `data` est très simple, mais il est facile d'oublier la virgule avant le segment de données ou de mal encoder la donnée en base64.
 - Mise en forme HTML
-  - : Une URL de type `data` fournit un fichier dans un fichier, qui peut potentiellement être très large par rapport au document englobant. En tant qu'URL, la donnée devrait pouvoir être mise en forme avec des espaces (saut de ligne, tabulation ou espace), mais des problèmes pratiques apparaissent [lors de l'encodage en base64 <sup>(angl.)</sup>](https://bugzil.la/73026#c12).
+  - : Une URL de type `data` fournit un fichier dans un fichier, qui peut potentiellement être très large par rapport au document englobant. En tant qu'URL, la donnée doit pouvoir être mise en forme avec des espaces (saut de ligne, tabulation ou espace), mais des problèmes pratiques apparaissent [lors de l'encodage en base64 <sup>(angl.)</sup>](https://bugzil.la/73026#c12).
 - Limitations de longueur
   - : Les navigateurs ne sont pas obligés de supporter une longueur maximale particulière pour la donnée.
     Chromium et Firefox limitent les URLs de type `data` à 512 Mo, et Safari (WebKit) à 2048 Mo.
     Notez que Firefox 97 a augmenté la limite de 256 Ko à 32 Mo, et [Firefox 136 l'a portée à 512 Mo](/fr/docs/Mozilla/Firefox/Releases/136).
 - Absence de gestion d'erreur
   - : Les paramètres invalides dans le média, ou les coquilles lors de la spécification de `'base64'`, sont ignorés, mais aucune erreur n'est retournée.
-- Aucun support des chaînes de requête, etc.
-  - : La partie donnée d'une URL de type `data` est opaque, donc toute tentative d'utiliser une chaîne de requête (paramètres spécifiques à la page, avec la syntaxe `<url>?parameter-data`) avec une URL de type `data` inclura simplement la chaîne de requête dans la donnée représentée par l'URL.
+- Aucun support des chaînes de caractères de requête, etc.
+  - : La partie donnée d'une URL de type `data` est opaque, donc toute tentative d'utiliser une chaîne de caractères de requête (paramètres spécifiques à la page, avec la syntaxe `<url>?parameter-data`) avec une URL de type `data` inclut simplement la chaîne de caractères de requête dans la donnée représentée par l'URL.
 - Problèmes de sécurité
-  - : De nombreux problèmes de sécurité (par exemple, le phishing) ont été associés aux URLs de type `data`, et à la navigation vers celles-ci au niveau supérieur du navigateur. Pour limiter ces problèmes, la navigation de haut niveau vers les URLs `data:` est bloquée dans tous les navigateurs modernes. Voir [cet article du Mozilla Security Team <sup>(angl.)</sup>](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/) pour plus de détails.
+  - : De nombreux problèmes de sécurité (par exemple, le hameçonnage) ont été associés aux URLs de type `data`, et à la navigation vers celles-ci au niveau supérieur du navigateur. Pour limiter ces problèmes, la navigation de haut niveau vers les URLs `data:` est bloquée dans tous les navigateurs modernes. Voir [cet article du Mozilla Security Team <sup>(angl.)</sup>](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/) pour plus de détails.
 
 ## Spécifications
 

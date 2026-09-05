@@ -1,11 +1,12 @@
 ---
-title: border-inline
+title: CSS `border-inline` プロパティ
+short-title: border-inline
 slug: Web/CSS/Reference/Properties/border-inline
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-**`border-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なインライン方向のそれぞれの境界プロパティをスタイルシートの一ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)です。
+**`border-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、論理的なインライン方向のそれぞれの境界プロパティをスタイルシートの一ヶ所で設定します。
 
 {{InteractiveExample("CSS デモ: border-inline")}}
 
@@ -25,7 +26,7 @@ writing-mode: horizontal-tb;
 direction: rtl;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
     これは周囲に境界線があるボックスです。
@@ -71,16 +72,16 @@ border-inline: unset;
 
 `border-inline` は以下の値のうちの1つ以上を任意の順序で指定します。
 
-- `<'border-width'>`
+- {{cssxref("&lt;line-width&gt;")}}
   - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
-- `<'border-style'>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : 境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。
 - {{CSSXref("&lt;color&gt;")}}
   - : 境界線の色です。
 
 ## 解説
 
-`border-inline` の割り当て先の物理的な境界は、要素の書字方向によって決まります。 {{cssxref("border-top")}} と {{cssxref("border-bottom")}}、または {{cssxref("border-right")}} と {{cssxref("border-left")}} のどちらかの組み合わせに対して、 {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} に設定された値に応じて対応づけられます。
+`border-inline` の割り当て先の物理的な境界は、要素の書字方向によって決まります。 {{cssxref("border-top")}} と {{cssxref("border-bottom")}}、または {{cssxref("border-right")}} と {{cssxref("border-left")}} のどちらかの組み合わせに対して、{{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} に設定された値に応じて対応づけられます。
 
 他の方向の境界については、 {{cssxref("border-block")}} によって、 {{cssxref("border-block-start")}} と {{cssxref("border-block-end")}} の両方を設定することができます。
 

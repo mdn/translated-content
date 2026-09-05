@@ -3,14 +3,14 @@ title: "Document : propriété fullscreen"
 short-title: fullscreen
 slug: Web/API/Document/fullscreen
 l10n:
-  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("Fullscreen API")}}{{Deprecated_Header}}
+{{APIRef("Fullscreen API")}}
 
 La propriété obsolète en lecture seule **`fullscreen`** de l'interface {{DOMxRef("Document")}} indique si le document affiche actuellement du contenu en mode plein écran.
 
-Bien que cette propriété soit en lecture seule, elle ne générera pas d'erreur si elle est modifiée (même en mode strict)&nbsp;; le mutateur est une opération nulle et sera ignoré.
+Bien que cette propriété soit en lecture seule, elle ne générera pas d'erreur si elle est modifiée (même en mode strict)&nbsp;; le mutateur est une opération nulle et est ignoré.
 
 > [!NOTE]
 > Étant donné que cette propriété est obsolète, vous pouvez déterminer si le mode plein écran est actif sur le document en vérifiant si {{DOMxRef("Document.fullscreenElement")}} n'est pas `null`.

@@ -3,7 +3,7 @@ title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 El método obsoleto **`compile()`** es usado para (re-)compilar una expresión regular durante la ejecución del script. Es básicamente lo mismo que el constructor `RegExp`.
 

@@ -3,7 +3,7 @@ title: Fonction CSS `linear-gradient()`
 short-title: linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/linear-gradient
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 11a5944cd0a3bf015b2ee9c7ee4c55025dd878ca
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`linear-gradient()`** crée une image qui est un dégradé entre deux ou plusieurs couleurs le long d'une ligne droite. Elle fournit une valeur de type [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient) qui est un type spécial d'image ([`<image>`](/fr/docs/Web/CSS/Reference/Values/image)).

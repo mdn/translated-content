@@ -3,10 +3,10 @@ title: Propriété CSS `padding-block`
 short-title: padding-block
 slug: Web/CSS/Reference/Properties/padding-block
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`padding-block`** définit le remplissage logique au début et à la fin de l'axe de bloc d'un élément, ce qui correspond aux propriétés de remplissage physiques en fonction du mode d'écriture, de la direction et de l'orientation du texte de l'élément.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`padding-block`** définit le remplissage logique au début et à la fin de l'axe de bloc d'un élément, ce qui correspond aux propriétés de remplissage physiques en fonction du mode d'écriture, de la direction et de l'orientation du texte de l'élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: padding-block")}}
 
@@ -70,7 +70,7 @@ padding-block: 1em 2em; /* Des longueurs relatives à la taille du texte */
 padding-block: 10px; /* Une seule valeur définit le remplissage des deux côtés */
 
 /* Valeurs de type <percentage> */
-padding-block: 5% 2%; /* relative to the nearest block container's width */
+padding-block: 5% 2%; /* relatif à la largeur du conteneur de blocs le plus proche */
 
 /* Valeurs globales */
 padding-block: inherit;

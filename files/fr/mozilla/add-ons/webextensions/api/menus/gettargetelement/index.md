@@ -3,8 +3,6 @@ title: menus.getTargetElement()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 ---
 
-{{AddonSidebar}}
-
 Renvoie l'élément pour un `targetElementId` donné
 
 Cette méthode est disponible pour tous les contextes de script d'extension (scripts de contenu, pages de fond et autres pages d'extension) et retourne l'élément pour un `info.targetElementId` donnée, à condition que l'élément existe toujours dans le document où la méthode est appelée.

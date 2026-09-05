@@ -3,7 +3,7 @@ title: Règle CSS `@custom-media`
 short-title: "@custom-media"
 slug: Web/CSS/Reference/At-rules/@custom-media
 l10n:
-  sourceCommit: e328268bb418551ab451881845881b5837c9da83
+  sourceCommit: 6b0dc010f6c32a23b54aef95094cee9ec0e1b7b5
 ---
 
 {{SeeCompatTable}}
@@ -53,7 +53,7 @@ Comme la valeur d'une `@custom-media` est simplement une `<media-query-list>` no
 L'opérateur `not` inverse toute la condition média. Cela est utile si vous souhaitez qu'une règle s'applique uniquement lorsqu'une condition spécifique est équivalente à faux.
 
 ```css
-@custom-media --no-script not (script);
+@custom-media --no-script not (scripting);
 
 @media (--no-script) {
 }
@@ -74,20 +74,20 @@ Cet alias ne correspond que lorsque la zone d'affichage (<i lang="en">viewport</
 
 #### Utilisation de l'opérateur `or`
 
-L'opérateur logique `or` (ou son alias par virgule) crée une requête média qui correspond si l'une des conditions listées est équivalente à vrai.
+L'opérateur logique `or` (ou son alias par virgule, lorsqu'il est utilisé pour combiner des types de média) crée une requête média qui correspond si l'une des conditions listées est équivalente à vrai.
 
 ```css
-@custom-media --screen-or-print-1 screen, print;
-@custom-media --screen-or-print-2 screen or print;
+@custom-media --screen-or-print screen, print;
+@custom-media --narrow-or-tall (width < 600px) or (height > 800px);
 
-@media (--screen-or-print-1) {
+@media (--screen-or-print) {
 }
 
-@media (--screen-or-print-2) {
+@media (--narrow-or-tall) {
 }
 ```
 
-Les deux alias sont identiques. Ils sont activés pour les environnements écran et impression.
+L'alias `--screen-or-print` utilise une virgule pour correspondre soit au type de média `screen`, soit au type de média `print`. L'alias `--narrow-or-tall` utilise le mot-clé `or` pour combiner deux fonctionnalités de média, correspondant lorsque la zone d'affichage est plus étroite que 600px, plus haute que 800px, ou les deux.
 
 ## Syntaxe formelle
 

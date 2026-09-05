@@ -3,8 +3,6 @@ title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
 ---
 
-{{JSRef}} {{deprecated_header}}
-
 La méthode **`sup()`** crée un élément HTML {{HTMLElement("sup")}} qui entraîne l'affichage de la chaîne en exposant.
 
 ## Syntaxe

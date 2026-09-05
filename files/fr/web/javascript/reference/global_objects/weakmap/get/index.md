@@ -3,8 +3,6 @@ title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 ---
 
-{{JSRef}}
-
 La méthode **`get()`** permet de renvoyer un élément donné d'un objet `WeakMap`.
 
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.get()")}}

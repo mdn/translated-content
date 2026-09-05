@@ -3,8 +3,6 @@ title: browserSettings.openSearchResultsInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs
 ---
 
-{{AddonSidebar}}
-
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jacente est un booléen.
 
 Si la valeur est définie à `true`, lorsque l'utilisateur sélectionne un terme dans la zone de recherche du navigateur, les résultats de la recherche s'affichent dans un nouvel onglet. Si la valeur est `false` (valeur par défaut), les résultats de la recherche apparaissent dans l'onglet en cours.

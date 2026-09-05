@@ -3,7 +3,7 @@ title: "Animation: cancel イベント"
 short-title: cancel
 slug: Web/API/Animation/cancel_event
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{ APIRef("Web Animations") }}
@@ -27,15 +27,6 @@ oncancel = (event) => { }
 {{domxref("AnimationPlaybackEvent")}} です。 {{domxref("Event")}} から継承しています。
 
 {{InheritanceDiagram("AnimationPlaybackEvent")}}
-
-## イベントプロパティ
-
-_以下に挙げたプロパティに加え、親インターフェイスである {{domxref("Event")}} から継承したプロパティが利用できます。_
-
-- {{domxref("AnimationPlaybackEvent.currentTime")}} {{ReadOnlyInline}}
-  - : イベントを生成したアニメーションの現在時刻。
-- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{ReadOnlyInline}}
-  - : イベントを生成したアニメーションのタイムラインの時刻値。
 
 ## 例
 

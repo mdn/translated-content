@@ -38,14 +38,14 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<div>`** est le conteneur générique d
 }
 ```
 
-En tant que conteneur «&nbsp;pur&nbsp;», l'élément `<div>` ne représente rien en soi. Il est plutôt utilisé pour regrouper le contenu afin qu'il puisse être facilement stylé à l'aide des attributs [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), pour marquer une section d'un document comme étant écrite dans une langue différente (à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang)), etc.
+En tant que conteneur «&nbsp;pur&nbsp;», l'élément `<div>` ne représente rien en soi. Il est plutôt utilisé pour regrouper le contenu afin qu'il puisse être facilement mis en forme à l'aide des attributs [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), pour marquer une section d'un document comme étant écrite dans une langue différente (à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang)), etc.
 
 ## Attributs
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
-> L'attribut `align` est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox)) pour aligner et positionner des éléments `<div>`.
+> L'attribut `align` est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégie l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox)) pour aligner et positionner des éléments `<div>`.
 
 ## Notes d'utilisation
 
@@ -74,7 +74,7 @@ L'élément `<div>` possède [un rôle ARIA implicite `generic` <sup>(angl.)</su
 
 ### Un exemple mis en forme
 
-Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via du CSS sur l'élément `<div>`. On notera l'utilisation de l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) sur l'élément `<div>` afin d'appliquer la règle `"shadowbox"`.
+Cet exemple crée une boîte avec une ombre en appliquant la mise en forme avec du CSS sur l'élément `<div>`. Notez que l'utilisation de l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) sur l'élément `<div>` afin d'appliquer la règle `"shadowbox"`.
 
 #### HTML
 

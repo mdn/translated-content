@@ -3,10 +3,10 @@ title: Propriété CSS `scroll-timeline`
 short-title: scroll-timeline
 slug: Web/CSS/Reference/Properties/scroll-timeline
 l10n:
-  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-timeline`** est utilisée pour définir une [chronologie de progression de défilement nommée](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines), qui progresse en faisant défiler un élément défilable (_défileur_) entre le haut et le bas (ou de gauche à droite).
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-timeline`** est utilisée pour définir une [chronologie de progression de défilement nommée](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines), qui progresse en faisant défiler un élément défilable (_défileur_) entre le haut et le bas (ou de gauche à droite).
 
 ## Propriétés constitutives
 
@@ -97,7 +97,7 @@ En utilisant la propriété `scroll-timeline`, nous définissons le conteneur co
 }
 ```
 
-Nous fournissons des styles de base pour le carré. Nous appliquons l'animation `rotateAnimation` en utilisant la propriété {{CSSxRef("animation-name")}}. Par défaut, cela utiliserait la chronologie basée sur le temps du document. En définissant la propriété `animation-timeline` sur la chronologie nommée `--square-timeline` ci-dessus, nous faisons en sorte que le carré tourne en fonction de la chronologie basée sur le défilement, qui progresse au fur et à mesure que le conteneur défile.
+Nous fournissons des styles de base pour le carré. Nous appliquons l'animation `rotateAnimation` en utilisant la propriété {{CSSxRef("animation-name")}}. Par défaut, cela utilise la chronologie basée sur le temps du document. En définissant la propriété `animation-timeline` sur la chronologie nommée `--square-timeline` ci-dessus, nous faisons en sorte que le carré tourne en fonction de la chronologie basée sur le défilement, qui progresse au fur et à mesure que le conteneur défile.
 
 ```css
 #square {
@@ -113,7 +113,7 @@ Nous fournissons des styles de base pour le carré. Nous appliquons l'animation 
 ```
 
 Nous nous assurons que le conteneur déborde en définissant un élément d'extension qui est plus large que son parent.
-Sans contenu qui déborde du conteneur, il n'y aurait pas de barre de défilement, et donc pas de chronologie de défilement. Nous définissons également une animation CSS avec images clés qui fait tourner les éléments sur lesquels elle est appliquée d'une rotation complète.
+Sans contenu qui déborde du conteneur, il n'y a pas de barre de défilement, et donc pas de chronologie de défilement. Nous définissons également une animation CSS avec images clés qui fait tourner les éléments sur lesquels elle est appliquée d'une rotation complète.
 
 ```css
 #stretcher {

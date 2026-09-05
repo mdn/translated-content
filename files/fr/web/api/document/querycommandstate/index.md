@@ -3,10 +3,10 @@ title: "Document : méthode queryCommandState()"
 short-title: queryCommandState()
 slug: Web/API/Document/queryCommandState
 l10n:
-  sourceCommit: 22cf84fc5704222a2e2e5ac67b95b02dcfea08ff
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 > [!NOTE]
 > Bien que la méthode {{DOMxRef("Document/execCommand", "execCommand()")}} soit obsolète, il existe encore des cas d'utilisation valides pour lesquels il n'existe pas encore d'alternatives viables, comme mentionné dans l'article `execCommand()`. Dans ces cas, vous pouvez trouver cette méthode utile pour implémenter une expérience utilisateur·ice complète, mais testez pour garantir la compatibilité entre les navigateurs.
@@ -54,10 +54,10 @@ function mettreEnGras() {
   let message;
   switch (state) {
     case true:
-      message = "Le formatage en gras sera supprimé du texte sélectionné.";
+      message = "Le formatage en gras est supprimé du texte sélectionné.";
       break;
     case false:
-      message = "Le texte sélectionné sera affiché en gras.";
+      message = "Le texte sélectionné est affiché en gras.";
       break;
     default:
       message = "L'état de la commande 'gras' est indéterminable.";

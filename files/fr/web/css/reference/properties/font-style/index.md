@@ -3,7 +3,7 @@ title: Propriété CSS `font-style`
 short-title: font-style
 slug: Web/CSS/Reference/Properties/font-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-style`** permet de sélectionner une fonte italique ou oblique parmi celles listées par {{CSSxRef("font-family")}}.
@@ -52,7 +52,7 @@ section {
 }
 ```
 
-Les fontes **italiques** sont généralement cursives, utilisant en général moins d'espace horizontal que leurs équivalents non stylisés, tandis que les fontes **obliques** sont habituellement des versions inclinées de la fonte régulière. Lorsque le style demandé n'est pas disponible, les fontes italique et oblique sont simulées en inclinant artificiellement les glyphes de la fonte régulière (utilisez {{CSSxRef("font-synthesis")}} pour contrôler ce comportement).
+Les fontes **italiques** sont généralement cursives, utilisant en général moins d'espace horizontal que leurs équivalents qui ne sont pas mis en forme, tandis que les fontes **obliques** sont habituellement des versions inclinées de la fonte régulière. Lorsque le style demandé n'est pas disponible, les fontes italique et oblique sont simulées en inclinant artificiellement les glyphes de la fonte régulière (utilisez {{CSSxRef("font-synthesis")}} pour contrôler ce comportement).
 
 ## Syntaxe
 
@@ -72,24 +72,24 @@ font-style: revert-layer;
 font-style: unset;
 ```
 
-La propriété `font-style` s'utilise avec un mot-clé parmi ceux qui suivent. Si ce mot-clé est `oblique`, il peut également être suivi de l'angle.
-
 ### Valeurs
+
+Cette propriété est définie comme l'une des valeurs clés suivantes. Le mot-clé `oblique` peut éventuellement être suivi d'un `<angle>`:
 
 - `normal`
   - : Sélectionne une police qualifiée de `normal` parmi celles de {{CSSxRef("font-family")}}.
 - `italic`
-  - : Sélectionne une police qualifiée d'`italic`. S'il n'y a pas de version italique, une version `oblique` sera sélectionnée à la place. Si aucune version n'est disponible, le style de police est synthétisé.
+  - : Sélectionne une police qualifiée d'`italic`. S'il n'y a pas de version italique, une version `oblique` est sélectionnée à la place. Si aucune version n'est disponible, le style de police est synthétisé.
 - `oblique`
-  - : Sélectionne une police qualifiée d'`oblique`. S'il n'y a pas de version oblique, une version `italic` sera sélectionnée à la place. Si aucune version n'est disponible, le style de police est synthétisé.
+  - : Sélectionne une police qualifiée d'`oblique`. S'il n'y a pas de version oblique, une version `italic` est sélectionnée à la place. Si aucune version n'est disponible, le style de police est synthétisé.
 - `oblique` {{CSSxRef("angle")}}
-  - : Sélectionne une police qualifiée d'`oblique` et indique l'angle à utiliser pour la pente du texte. Si plusieurs fontes sont disponibles pour la police, c'est la fonte avec la pente la plus proche qui est utilisée. Si aucune police oblique n'est disponible, le navigateur _synthétisera_ une police penchée en tournant les caractères d'une fonte normale. L'angle indiqué doit être compris entre `-90deg` et `90deg`. Si aucun angle n'est indiqué, la valeur par défaut utilisée sera `14deg`. Les valeurs positives correspondent à une pente où le haut des caractères penche vers la fin de la ligne et les valeurs négatives permettent d'obtenir une pente orientée vers le début de la ligne.
+  - : Sélectionne une police qualifiée de `oblique` et indique l'angle à utiliser pour la pente du texte. Si plusieurs fontes sont disponibles pour la police, c'est la fonte avec la pente la plus proche qui est utilisée. Si aucune police oblique n'est disponible, le navigateur _synthétisera_ une police penchée en tournant les caractères d'une fonte normale. L'angle indiqué doit être compris entre `-90deg` et `90deg`. Si aucun angle n'est indiqué, la valeur par défaut utilisée est de `14deg`. Les valeurs positives correspondent à une pente où le haut des caractères penche vers la fin de la ligne et les valeurs négatives permettent d'obtenir une pente orientée vers le début de la ligne.
 
     En général, si on utilise un angle de 14 degrés ou plus, des angles plus grands sont préférables&nbsp;; sinon, des angles plus petits sont préférables (voir [la section Font Matching Algorithm <sup>(angl.)</sup>](https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm) dans la spécification pour l'algorithme exact).
 
 ### Polices variables
 
-Les polices variables permettent d'obtenir un contrôle fin sur la pente appliquée à la fonte. Pour cela, on pourra utiliser une police variable et `font-style` avec le mot-clé `oblique` suivi d'une valeur d'angle.
+Les polices variables permettent d'obtenir un contrôle fin sur la pente appliquée à la fonte. Pour cela, on peut utiliser une police variable et `font-style` avec le mot-clé `oblique` suivi d'une valeur d'angle.
 
 Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"slnt"` qui est utilisé afin d'implémenter les variations de pente. C'est l'axe `"ital"` qui est utilisé avec une valeur de 1 pour implémenter les fontes italiques. Voir {{CSSxRef("font-variation-settings")}}.
 
@@ -97,8 +97,8 @@ Cliquez sur «&nbsp;Exécuter&nbsp;» dans les blocs de code ci-dessous pour éd
 
 ```html live-sample___oblique-example
 <p class="exemple">
-  ...il ne serait pas étonnant de croiser un Mégalosaure, long d'une quarantaine
-  de pieds, se dandinant comme un lézard éléphantesque sur Holborn Hill.
+  ...il n'est pas étonnant de croiser un Mégalosaure, long d'une quarantaine de
+  pieds, se dandinant comme un lézard éléphantesque sur Holborn Hill.
 </p>
 ```
 

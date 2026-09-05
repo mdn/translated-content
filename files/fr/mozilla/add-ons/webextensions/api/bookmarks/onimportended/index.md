@@ -3,8 +3,6 @@ title: bookmarks.onImportEnded
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque le navigateur a fini d'importer un ensemble de signets.
 
 Voir {{WebExtAPIRef("bookmarks.onImportBegan")}}.

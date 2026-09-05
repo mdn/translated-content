@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 3c0315d7898d2a5bc21784002c9cdc9dddcf559d
 ---
 
-{{PWASidebar}}
-
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
 Dans la section précédente, nous avons écrit le code HTML et CSS de CycleTracker, et ainsi obtenu une version statique de notre application web. Dans cette section, nous écrirons le code JavaScript qui permettra de convertir le HTML statique en une application web fonctionnelle.

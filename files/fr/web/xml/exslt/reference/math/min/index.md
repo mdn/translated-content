@@ -4,8 +4,6 @@ slug: Web/XML/EXSLT/Reference/math/min
 original_slug: Web/EXSLT/math/min
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
-
 `math:min()` renvoie la valeur minimale d'un ensemble de nœuds.
 
 Pour calculer la valeur minimale d'un ensemble de nœuds, l'ensemble est trié selon l'ordre croissant, comme on pourrait le faire avec [`xsl:sort()`](/fr/docs/Web/XML/XSLT/Reference/Element/sort) en utilisant un type de données `number`. La valeur minimale est ensuite construite avec la valeur du premier nœud de cette liste ordonnée, convertie en nombre.

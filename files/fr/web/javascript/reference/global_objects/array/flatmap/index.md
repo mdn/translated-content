@@ -16,7 +16,7 @@ const arr = [1, 2, 1];
 const result = arr.flatMap((num) => (num === 2 ? [2, 2] : 1));
 
 console.log(result);
-// sortie attendue : Array [1, 2, 2, 1]
+// Résultat attendu : Array [1, 2, 2, 1]
 ```
 
 ## Syntaxe
@@ -190,7 +190,7 @@ console.log(
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.concat()")}}
 - La méthode {{JSxRef("Array.prototype.flat()")}}
 - La méthode {{JSxRef("Array.prototype.map()")}}

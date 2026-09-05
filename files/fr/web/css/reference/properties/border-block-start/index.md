@@ -3,10 +3,10 @@ title: Propriété CSS `border-block-start`
 short-title: border-block-start
 slug: Web/CSS/Reference/Properties/border-block-start
 l10n:
-  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-block-start`** permet de définir à un seul endroit dans la feuille de style les valeurs de la propriété logique de bordure de début de bloc.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-block-start`** permet de définir à un seul endroit dans la feuille de style les valeurs de la propriété logique de bordure de début de bloc.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: border-block-start")}}
 

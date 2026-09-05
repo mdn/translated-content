@@ -326,4 +326,4 @@ Dans la version non compressée, le programme exécute la branche vraie et affic
 
 - [Prothèse d'émulation pour `Function: name` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-function)
 - [Prothèse es-shims de `Function.prototype.name` <sup>(angl.)</sup>](https://www.npmjs.com/package/function.prototype.name)
-- L'objet {{JSxRef("Function")}}
+- L'objet natif {{JSxRef("Function")}}

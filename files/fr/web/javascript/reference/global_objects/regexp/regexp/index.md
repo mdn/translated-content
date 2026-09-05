@@ -3,8 +3,6 @@ title: Constructeur RegExp()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 ---
 
-{{JSRef}}
-
 Le constructeur **`RegExp`** crée une expression rationnelle pour manipuler les correspondances trouvées dans un texte par rapport à un motif.
 
 Pour une introduction au sujet des expressions rationnelles, nous vous conseillons de lire [le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide).

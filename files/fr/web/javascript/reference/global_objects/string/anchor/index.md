@@ -3,8 +3,6 @@ title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 ---
 
-{{JSRef}}
-
 La méthode **`anchor()`** permet de créer une ancre HTML {{HTMLElement("a")}} qui est utilisé comme cible hypertexte.
 
 ## Syntaxe

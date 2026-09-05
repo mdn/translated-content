@@ -3,10 +3,10 @@ title: Propriété CSS `dominant-baseline`
 short-title: dominant-baseline
 slug: Web/CSS/Reference/Properties/dominant-baseline
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`dominant-baseline`** définit la [ligne de base](/fr/docs/Glossary/Baseline/Typography) précise utilisée pour aligner le texte et le contenu de niveau en ligne de la boîte. Elle indique également la ligne de base d'alignement par défaut de toutes les boîtes participant à l'alignement sur la ligne de base dans le contexte d'alignement de la boîte. Si elle est présente, elle remplace l'attribut {{SVGAttr("dominant-baseline")}} de la forme.
+La propriété [CSS](/fr/docs/Web/CSS) **`dominant-baseline`** définit la [ligne de base](/fr/docs/Glossary/Baseline/Typography) précise utilisée pour aligner le texte et le contenu de niveau en incise (<i lang="en">inline</i> en anglais) de la boîte. Elle indique également la ligne de base d'alignement par défaut de toutes les boîtes participant à l'alignement sur la ligne de base dans le contexte d'alignement de la boîte. Si elle est présente, elle remplace l'attribut {{SVGAttr("dominant-baseline")}} de la forme.
 
 Les lignes de base sont sélectionnées à partir de la table des lignes de base de la police. S'il n'y a pas de table de lignes de base dans la police nominale, ou si la table ne contient pas d'entrée pour la ligne de base souhaitée, le navigateur peut utiliser des heuristiques pour déterminer la position de la ligne de base désirée.
 
@@ -16,7 +16,7 @@ La propriété `dominant-baseline` sert à déterminer ou à redéfinir une _tab
 2. une table des lignes de base,
 3. une taille de police pour la table des lignes de base.
 
-Certaines valeurs de `dominant-baseline` redéfinissent les trois éléments. D'autres ne font que rétablir la taille de police de la table des lignes de base. Lorsque la valeur initiale, `auto`, produirait un résultat non souhaité, cette propriété permet de définir explicitement la table des lignes de base mise à l'échelle désirée.
+Certaines valeurs de `dominant-baseline` redéfinissent les trois éléments. D'autres ne font que rétablir la taille de police de la table des lignes de base. Lorsque la valeur initiale, `auto`, produit un résultat non souhaité, cette propriété permet de définir explicitement la table des lignes de base mise à l'échelle désirée.
 
 > [!NOTE]
 > La propriété `dominant-baseline` n'a d'effet que sur les éléments SVG {{SVGElement("text")}}, {{SVGElement("textPath")}} et {{SVGElement("tspan")}}.
@@ -46,6 +46,8 @@ dominant-baseline: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : Si cette propriété est appliquée à un élément SVG {{SVGElement("text")}}, la valeur calculée dépend de la valeur de l'attribut SVG {{SVGAttr("writing-mode")}}.

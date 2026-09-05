@@ -65,7 +65,7 @@ hwb(from lch(40% 70 240deg) h w calc(b - 30))
 
 ### 値
 
-下記は、絶対色と[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の両方に対してすることができる値の説明です。
+下記は、絶対色と[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の両方に使える値の説明です。
 
 #### 絶対的な値の構文
 

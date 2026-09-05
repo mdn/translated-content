@@ -3,10 +3,10 @@ title: "HTMLImageElement : propriété align"
 short-title: align
 slug: Web/API/HTMLImageElement/align
 l10n:
-  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété _obsolète_ **`align`** de l'interface {{DOMxRef("HTMLImageElement")}} est une chaîne de caractères qui indique comment positionner l'image par rapport à son conteneur.
 

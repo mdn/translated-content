@@ -62,9 +62,9 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 La propriété `ruby-overhang` contrôle si la boîte de texte d'annotation ruby ({{HTMLElement("rt")}}) peut chevaucher le texte adjacent en dehors de la boîte du conteneur `<ruby>`.
 
-Lorsque le texte d'annotation ruby n'est pas autorisé à dépasser — lorsque `ruby-overhang: none` est défini sur l'élément `<ruby>` — cet élément se comporte comme une boîte en ligne, comme si sa propriété {{CSSxRef("display")}} était définie sur `inline`, avec uniquement son propre contenu rendu à l'intérieur de ses limites et les éléments adjacents ne franchissant pas la boîte de délimitation.
+Lorsque le texte d'annotation ruby n'est pas autorisé à dépasser — lorsque `ruby-overhang: none` est défini sur l'élément `<ruby>` — cet élément se comporte comme une boîte en incise, comme si sa propriété {{CSSxRef("display")}} était définie sur `inline`, avec uniquement son propre contenu rendu à l'intérieur de ses limites et les éléments adjacents ne franchissant pas la boîte de délimitation.
 
-Par défaut, le contenu d'un élément `<rt>` est autorisé à dépasser, de sorte que le contenu peut chevaucher la boîte du conteneur `<ruby>`, se rendant partiellement au-dessus ou en dessous du contenu environnant de niveau en ligne.
+Par défaut, le contenu d'un élément `<rt>` est autorisé à dépasser, de sorte que le contenu peut chevaucher la boîte du conteneur `<ruby>`, se rendant partiellement au-dessus ou en dessous du contenu environnant de niveau en incise.
 Avec `auto`, la valeur par défaut, le contenu peut dépasser, mais il ne dépasse pas si cela chevauche des éléments `<rt>` adjacents ou des éléments avec une valeur de `display` résolvant à `ruby-base` ou `ruby-text`.
 
 ## Définition formelle

@@ -3,7 +3,7 @@ title: "Animation: currentTime プロパティ"
 short-title: currentTime
 slug: Web/API/Animation/currentTime
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: 3b5a1c0dfd59257c0a51052a9efa7b0108f8ecca
 ---
 
 {{APIRef("Web Animations")}}
@@ -35,11 +35,15 @@ animation.currentTime =
 ## 時間精度の低下
 
 タイミング攻撃や[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)から保護するために、 `animation.currentTime` の精度はブラウザー設定によっては丸められている可能性があります。
-Firefox では、 `privacy.reduceTimerPrecision` 環境設定が既定で有効になっており、 Firefox 59 では 20 マイクロ秒が既定値です。
+Firefox では、環境設定の `privacy.reduceTimerPrecision` がデフォルトで有効になっており、2 ミリ秒がデフォルト値です。
+同時に、`privacy.resistFingerprinting` を有効にすることもできます。この場合、精度は 100 ミリ秒または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のうち、大きい方の値になります。
+
+例えば、時間精度が縮小されている場合、`animation.currentTime` の結果は常に 0.002 の倍数、あるいは `privacy.resistFingerprinting` が有効な場合は 0.1 の倍数（または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`）になります。
 
 ```js
 // Firefox 60 における 時間制度の低下 (2ms)
 animation.currentTime;
+// 恐らくこうなります。
 // 23.404
 // 24.192
 // 25.514
@@ -47,13 +51,12 @@ animation.currentTime;
 
 // `privacy.resistFingerprinting` が有効な場合の時間制度の低下
 animation.currentTime;
+// 恐らくこうなります。
 // 49.8
 // 50.6
 // 51.7
 // …
 ```
-
-Firefox では、 `privacy.resistFingerprinting` を有効にすると、精度を 100ms または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のどちらか大きい方にすることができます。
 
 ## 仕様書
 

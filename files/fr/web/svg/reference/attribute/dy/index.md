@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/dy
 original_slug: Web/SVG/Attribute/dy
 ---
 
-{{SVGRef}}
-
 L'attribut **`dy`** indique un décalage sur l'axe y de la position d'un élément ou de son contenu.
 
 Sept éléments utilisent cet attribut: {{SVGElement('altGlyph')}}, {{SVGElement('feDropShadow')}}, {{SVGElement('feOffset')}}, {{SVGElement('glyphRef')}}, {{SVGElement('text')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}

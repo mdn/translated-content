@@ -3,7 +3,7 @@ title: Propriété CSS `stop-opacity`
 short-title: stop-opacity
 slug: Web/CSS/Reference/Properties/stop-opacity
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stop-opacity`** définit l'opacité d'un arrêt de couleur dans un élément SVG {{SVGElement("stop")}} au sein d'un dégradé SVG. Si elle est présente, elle remplace l'attribut {{SVGAttr("stop-opacity")}} de l'élément.
@@ -56,7 +56,7 @@ Cet exemple montre l'utilisation de base de `stop-opacity` et comment la propri�
 
 #### HTML
 
-Nous avons un SVG avec quelques {{SVGElement("polygon")}} étoiles et trois {{SVGElement("linearGradient")}} éléments : chacun a trois {{SVGElement("stop")}} éléments définissant trois arrêts de couleur qui créent un dégradé allant du bleu au blanc puis au rose&nbsp;; la seule différence entre eux est la valeur de leur `id`.
+Nous avons un SVG avec quelques {{SVGElement("polygon")}} étoiles et trois {{SVGElement("linearGradient")}} éléments&nbsp;: chacun a trois {{SVGElement("stop")}} éléments définissant trois arrêts de couleur qui créent un dégradé allant du bleu au blanc puis au rose&nbsp;; la seule différence entre eux est la valeur de leur `id`.
 
 ```html
 <svg viewBox="0 0 250 120" xmlns="http://www.w3.org/2000/svg">
@@ -136,7 +136,7 @@ polygon:nth-of-type(3) {
 
 {{EmbedLiveSample("Définir l'opacité d'un arrêt de couleur dans un dégradé SVG", 300, 200)}}
 
-La première étoile est entièrement opaque. Le remplissage de la deuxième étoile est opaque à 80 % car les arrêts de couleur sont légèrement translucides&nbsp;; la valeur `stop-opacity: 0.8;` a remplacé la valeur de l'attribut d'élément `stop-opacity="1"`. Le remplissage de la dernière étoile est à peine visible avec des arrêts de couleur opaques à 25%. Notez que le contour est le même gris foncé opaque dans tous les cas.
+La première étoile est entièrement opaque. Le remplissage de la deuxième étoile est opaque à 80%, car les arrêts de couleur sont légèrement translucides&nbsp;; la valeur `stop-opacity: 0.8;` a remplacé la valeur de l'attribut d'élément `stop-opacity="1"`. Le remplissage de la dernière étoile est à peine visible avec des arrêts de couleur opaques à 25%. Notez que le contour est le même gris foncé opaque dans tous les cas.
 
 > [!NOTE]
 > Parce que nous avons utilisé la même valeur de `stop-opacity` pour tous les éléments `<stop>` voisins dans le dégradé linéaire, nous aurions pu utiliser un seul `<linearGradient>` avec des arrêts entièrement opaques, et définir une valeur pour la propriété {{CSSxRef("fill-opacity")}} de chaque `<polygon>` à la place.
@@ -149,7 +149,7 @@ La première étoile est entièrement opaque. Le remplissage de la deuxième ét
 
 {{Compat}}
 
-## See also
+## Voir aussi
 
 - L'attribut SVG {{SVGAttr("stop-opacity")}}
 - Les propriétés de présentation&nbsp;: `stop-opacity`, {{CSSxRef("clip-rule")}}, {{CSSxRef("color-interpolation-filters")}}, {{CSSxRef("fill-opacity")}}, {{CSSxRef("fill-rule")}}, {{CSSxRef("fill")}}, {{CSSxRef("marker-end")}}, {{CSSxRef("marker-mid")}}, {{CSSxRef("marker-start")}}, {{CSSxRef("shape-rendering")}}, {{CSSxRef("stop-color")}}, {{CSSxRef("stroke")}}, {{CSSxRef("stroke-dasharray")}}, {{CSSxRef("stroke-dashoffset")}}, {{CSSxRef("stroke-linecap")}}, {{CSSxRef("stroke-linejoin")}}, {{CSSxRef("stroke-miterlimit")}}, {{CSSxRef("stroke-opacity")}}, {{CSSxRef("stroke-width")}}, {{CSSxRef("text-anchor")}} et {{CSSxRef("vector-effect")}}

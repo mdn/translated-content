@@ -18,7 +18,7 @@ map.set("b", "beta");
 map.set("g", "gamma");
 
 console.log(map.size);
-// Sortie attendue : 3
+// Résultat attendu : 3
 ```
 
 ## Description
@@ -48,4 +48,4 @@ console.log(maMap.size); // 3
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Map")}}
+- L'objet natif {{JSxRef("Map")}}

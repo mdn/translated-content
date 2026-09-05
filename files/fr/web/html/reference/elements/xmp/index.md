@@ -3,10 +3,8 @@ title: "Élément HTML `<xmp>` : l'élément de texte préformaté"
 short-title: <xmp>
 slug: Web/HTML/Reference/Elements/xmp
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<xmp>`** affiche le texte entre les balises de début et de fin sans interpréter le HTML contenu et en utilisant une police à chasse fixe. La spécification HTML2 recommandait un affichage suffisamment large pour permettre 80 caractères par ligne.
 
@@ -14,7 +12,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<xmp>`** affiche le texte entre les bal
 > Ne pas utiliser cet élément.
 >
 > - Il est obsolète depuis HTML3.2 et n'a jamais été implémenté de façon cohérente. Il a été complètement supprimé du HTML actuel.
-> - Utilisez l'élément {{HTMLElement("pre")}} ou, si cela est sémantiquement approprié, l'élément {{HTMLElement("code")}} à la place. Notez qu'il faudra échapper le caractère `<` en `&lt;` et le caractère `&` en `&amp;` pour éviter qu'ils ne soient interprétés comme du balisage.
+> - Utilisez l'élément {{HTMLElement("pre")}} ou, si cela est sémantiquement approprié, l'élément {{HTMLElement("code")}} à la place. Notez qu'il faut échapper le caractère `<` en `&lt;` et le caractère `&` en `&amp;` pour éviter qu'ils ne soient interprétés comme du balisage.
 > - Une police à chasse fixe peut aussi être obtenue sur n'importe quel élément, en appliquant un style [CSS](/fr/docs/Web/CSS) approprié utilisant `monospace` comme valeur générique pour la propriété CSS {{CSSxRef("font-family")}}.
 
 ## Attributs

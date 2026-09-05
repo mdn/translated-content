@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/defs
 original_slug: Web/SVG/Element/defs
 ---
 
-{{SVGRef}}
-
 SVG permet de définir des objets graphiques (génériques) pour une utilisation ultérieure. Autant qu'il est possible, cet usage est recommandé grâce aux propriétés offertes par l'élément `defs`.
 Ainsi définir ces éléments au sein de l'élément `defs` promeut une meilleure compréhension du contenu SVG par l'homme et donc son accessibilité.
 

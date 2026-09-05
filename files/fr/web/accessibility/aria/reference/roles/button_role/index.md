@@ -3,7 +3,7 @@ title: "ARIA : rôle button"
 short-title: button
 slug: Web/Accessibility/ARIA/Reference/Roles/button_role
 l10n:
-  sourceCommit: 4bd173b85d62fcc9471fa878f64cd6c166f114ab
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `button` est destiné aux éléments cliquables qui déclenchent une réponse lorsqu'ils sont activés par l'utilisateur·ice. Ajouter `role="button"` indique au lecteur d'écran que l'élément est un bouton, mais ne fournit pas les autres fonctionnalités typiques d'un bouton, telles que les évènements de clic et la gestion du clavier. Vous pouvez les ajouter vous-même, mais vous devez généralement utiliser {{HTMLElement("button")}} ou {{HTMLElement("input")}} avec `type="button"` à la place.

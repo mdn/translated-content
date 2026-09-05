@@ -3,10 +3,10 @@ title: Propriété CSS `place-self`
 short-title: place-self
 slug: Web/CSS/Reference/Properties/place-self
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-self`** permet d'aligner un élément individuel à la fois dans les directions bloc et en ligne (c'est-à-dire les propriétés {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}}). Cette propriété s'applique aux boîtes de niveau bloc, aux boîtes positionnées absolument et aux éléments de grille. Si la deuxième valeur n'est pas présente, la première valeur est également utilisée pour elle.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-self`** permet d'aligner un élément individuel à la fois dans les directions bloc et en incise (c'est-à-dire les propriétés {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}}). Cette propriété s'applique aux boîtes de niveau bloc, aux boîtes positionnées absolument et aux éléments de grille. Si la deuxième valeur n'est pas présente, la première valeur est également utilisée pour elle.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: place-self")}}
 
@@ -111,7 +111,7 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 - `stretch`
   - : Si la taille combinée des éléments le long de l'axe transversal est inférieure à la taille du conteneur d'alignement et que l'élément est de taille `auto`, sa taille est augmentée de manière égale (et non proportionnelle), tout en respectant les contraintes imposées par {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (ou fonctionnalité équivalente), de sorte que la taille combinée de tous les éléments de taille `auto` remplisse exactement le conteneur d'alignement le long de l'axe transversal.
 - `anchor-center`
-  - : Dans le cas des éléments [positionnés par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne l'élément au centre de l'élément d'ancrage associé dans la direction bloc et en ligne. Voir [Centrer sur l'ancre en utilisant `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
+  - : Dans le cas des éléments [positionnés par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne l'élément au centre de l'élément d'ancrage associé dans la direction bloc et en incise. Voir [Centrer sur l'ancre en utilisant `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
 
 ## Définition formelle
 
@@ -127,7 +127,7 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 Dans l'exemple suivant, nous avons une grille de 2 x 2. Initialement, le conteneur de la grille a des valeurs de {{CSSxRef("justify-items")}} et {{CSSxRef("align-items")}} de `stretch` — les valeurs par défaut — ce qui fait que les éléments de la grille s'étendent sur toute la largeur de leurs cellules.
 
-Les deuxième, troisième et quatrième éléments de la grille se voient ensuite attribuer différentes valeurs de `place-self`, pour montrer comment celles-ci remplacent les placements par défaut. Ces valeurs font que les éléments de la grille ne s'étendent que sur la largeur/hauteur de leur contenu, et s'alignent à différentes positions dans leurs cellules, dans les directions bloc et en ligne.
+Les deuxième, troisième et quatrième éléments de la grille se voient ensuite attribuer différentes valeurs de `place-self`, pour montrer comment celles-ci remplacent les placements par défaut. Ces valeurs font que les éléments de la grille ne s'étendent que sur la largeur/hauteur de leur contenu, et s'alignent à différentes positions dans leurs cellules, dans les directions bloc et en incise.
 
 #### HTML
 

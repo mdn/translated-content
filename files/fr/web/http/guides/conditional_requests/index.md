@@ -2,7 +2,7 @@
 title: Requêtes conditionnelles HTTP
 slug: Web/HTTP/Guides/Conditional_requests
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 HTTP a un concept de _requêtes conditionnelles_, où le résultat, et même le succès d'une requête, peut être contrôlé en comparant les ressources affectées avec un _validateur_.
@@ -15,7 +15,7 @@ Les requêtes conditionnelles HTTP sont des requêtes qui s'exécutent différem
 
 Les comportements différents sont définis par la méthode de la requête utilisée et par l'ensemble des en-têtes utilisés pour une précondition&nbsp;:
 
-- pour les méthodes {{Glossary("Safe/HTTP", "safe")}}, comme {{HTTPMethod("GET")}}, qui essaient généralement de récupérer un document, la requête conditionnelle peut être utilisée pour renvoyer le document uniquement si c'est pertinent. Cela permet donc d'économiser de la bande passante.
+- pour les méthodes {{Glossary("Safe/HTTP", "safe")}}, comme {{HTTPMethod("GET")}}, qui essaient généralement de récupérer un document, la requête conditionnelle peut être utilisée pour retourner le document uniquement si c'est pertinent. Cela permet donc d'économiser de la bande passante.
 - pour les méthodes {{Glossary("Safe/HTTP", "unsafe")}}, comme {{HTTPMethod("PUT")}}, qui permettent généralement de télécharger un document, la requête conditionnelle peut être utilisée pour télécharger le document uniquement si l'original sur lequel elle se base est le même que celui stocké sur le serveur.
 
 ## Validateurs
@@ -44,11 +44,11 @@ Il est assez difficile d'avoir un identifiant unique pour la validation forte av
 
 ### Validation faible
 
-La validation faible diffère de la validation forte, car elle considère que deux versions du document sont identiques si le contenu est équivalent. Par exemple, une page qui différerait d'une autre seulement par sa date dans le pied de page ou une publicité différente, est considérée comme _identique_ à l'autre avec la validation faible. Ces mêmes deux versions sont considérées comme _différentes_ avec la validation forte. Construire un système d'ETags utilisant la validation faible est très utile pour optimiser les performances du cache, mais peut être complexe, car cela implique de connaître l'importance des différents éléments d'une page.
+La validation faible diffère de la validation forte, car elle considère que deux versions du document sont identiques si le contenu est équivalent. Par exemple, une page qui diffère d'une autre seulement par sa date dans le pied de page ou une publicité différente, est considérée comme _identique_ à l'autre avec la validation faible. Ces mêmes deux versions sont considérées comme _différentes_ avec la validation forte. Construire un système d'ETags utilisant la validation faible est très utile pour optimiser les performances du cache, mais peut être complexe, car cela implique de connaître l'importance des différents éléments d'une page.
 
 ## En-têtes conditionnels
 
-Plusieurs en-têtes HTTP, appelées en-têtes conditionels, permettent de conditionner les requêtes&nbsp;:
+Plusieurs en-têtes HTTP, appelées en-têtes conditionnels, permettent de conditionner les requêtes&nbsp;:
 
 - {{HTTPHeader("If-Match")}}
   - : Réussit si le {{HTTPHeader("ETag")}} de la ressource distante est égal à un de ceux listés dans cet en-tête. Cela effectue une validation forte.
@@ -65,21 +65,21 @@ Plusieurs en-têtes HTTP, appelées en-têtes conditionels, permettent de condit
 
 ### Mise à jour du cache
 
-Le cas d'utilisation le plus commun pour les requêtes conditionnelles est la mise à jour du'uncache. Avec un cache vide ou absent, la ressource demandée est renvoyée avec un statut {{HTTPStatus("200")}} `OK`.
+Le cas d'utilisation le plus commun pour les requêtes conditionnelles est la mise à jour du cache. Avec un cache vide ou absent, la ressource demandée est retournée avec un statut {{HTTPStatus("200")}} `OK`.
 
-![La requête émise lorsque le cache est vide déclenche le téléchargement de la ressource et les deux valeurs de validation son prevent itt envoyés en en-tête. Le cache est alors rempli.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/cache-sequence-1.svg)
+![La requête émise lorsque le cache est vide déclenche le téléchargement de la ressource, avec les deux valeurs de validation envoyées en en-tête. Le cache est alors rempli.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/cache-sequence-1.svg)
 
-Avec la ressource, les validateurs sont envoyés dans les en-têtes. Dans cet exemple, à la fois {{HTTPHeader("Last-Modified")}} et {{HTTPHeader("ETag")}} sont envoyés, mais il pourrait tout aussi bien n'y en avoir qu'un seul. Ces validateurs sont mis en cache avec la ressource (comme tous les en-têtes) et sont utilisés pour créer des requêtes conditionnelles, une fois que le cache devient obsolète.
+Avec la ressource, les validateurs sont envoyés dans les en-têtes. Dans cet exemple, à la fois {{HTTPHeader("Last-Modified")}} et {{HTTPHeader("ETag")}} sont envoyés, mais il peut tout aussi bien n'y en avoir qu'un seul. Ces validateurs sont mis en cache avec la ressource (comme tous les en-têtes) et sont utilisés pour créer des requêtes conditionnelles, une fois que le cache devient obsolète.
 
 Tant que le cache n'est pas obsolète, aucune requête n'est émise. Mais une fois qu'il devient obsolète, ce processus est principalement contrôlé par l'en-tête {{HTTPHeader("Cache-Control")}}. Le client n'utilise pas directement la valeur mise en cache, mais émet une _requête conditionnelle_. La valeur du validateur est utilisée comme paramètre des en-têtes {{HTTPHeader("If-Modified-Since")}} et {{HTTPHeader("If-None-Match")}}.
 
-Si la ressource n'a pas changé, le serveur renvoie une réponse {{HTTPStatus("304")}} `Not Modified`. Cela rend le cache à nouveau frais, et le client utilise la ressource mise en cache. Bien qu'il y ait un aller-retour de requête/réponse qui consomme certaines ressources, c'est plus efficace que de transmettre à nouveau l'intégralité de la ressource.
+Si la ressource n'a pas changé, le serveur retourne une réponse {{HTTPStatus("304")}} `Not Modified`. Cela rend le cache à nouveau frais, et le client utilise la ressource mise en cache. Bien qu'il y ait un aller-retour de requête/réponse qui consomme certaines ressources, c'est plus efficace que de transmettre à nouveau l'intégralité de la ressource.
 
 ![Avec un cache obsolète, la requête conditionnelle est envoyée. Le serveur peut déterminer si la ressource a changé et, comme dans ce cas, décider de ne pas l'envoyer à nouveau, car elle est identique.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/cache-sequence-2.svg)
 
-Si la ressource a changé, le serveur renvoie simplement une réponse {{HTTPStatus("200", "200 OK")}} avec la nouvelle version de la ressource (comme si la requête n'était pas conditionnelle). Le client utilise cette nouvelle ressource (et la met en cache).
+Si la ressource a changé, le serveur retourne simplement une réponse {{HTTPStatus("200", "200 OK")}} avec la nouvelle version de la ressource (comme si la requête n'est pas conditionnelle). Le client utilise cette nouvelle ressource (et la met en cache).
 
-![Dans le cas où la ressource a été modifiée, elle est renvoyée comme si la requête n'était pas conditionnelle.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/cache-sequence-3.svg)
+![Dans le cas où la ressource a été modifiée, elle est retournée comme si la requête n'est pas conditionnelle.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/cache-sequence-3.svg)
 
 En dehors de la définition des validateurs côté serveur, ce mécanisme est transparent&nbsp;: tous les navigateurs gèrent un cache et envoient de telles requêtes conditionnelles sans qu'aucun travail spécial ne soit nécessaire de la part des développeur·euse·s Web.
 
@@ -95,19 +95,19 @@ Un serveur prenant en charge les téléchargements partiels le signale en envoya
 
 Le principe est simple, mais il y a un problème potentiel&nbsp;: si la ressource téléchargée a été modifiée entre les deux téléchargements, les plages obtenues correspondent à deux versions différentes de la ressource, et le document final est corrompu.
 
-Pour éviter cela, des requêtes conditionnelles sont utilisées. Pour les plages, il existe deux façons de le faire. La plus flexible utilise {{HTTPHeader("If-Unmodified-Since")}} et {{HTTPHeader("If-Match")}} et le serveur renvoie une erreur si la précondition échoue&nbsp;; le client recommence alors le téléchargement depuis le début&nbsp;:
+Pour éviter cela, des requêtes conditionnelles sont utilisées. Pour les plages, il existe deux façons de le faire. La plus flexible utilise {{HTTPHeader("If-Unmodified-Since")}} et {{HTTPHeader("If-Match")}} et le serveur retourne une erreur si la précondition échoue&nbsp;; le client recommence alors le téléchargement depuis le début&nbsp;:
 
 ![Lorsque la ressource partiellement téléchargée a été modifiée, les préconditions échouent et la ressource doit être téléchargée à nouveau complètement.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/resume-download-3.svg)
 
 Même si cette méthode fonctionne, elle ajoute un échange supplémentaire de réponse/requête lorsque le document a été modifié. Cela nuit aux performances, et HTTP dispose d'un en-tête spécifique pour éviter ce scénario&nbsp;: {{HTTPHeader("If-Range")}}&nbsp;:
 
-![L'en-tête If-Range permet au serveur de renvoyer directement la ressource complète si elle a été modifiée, sans avoir besoin d'envoyer une erreur 412 et d'attendre que le client relance le téléchargement.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/resume-download-4.svg)
+![L'en-tête If-Range permet au serveur de retourner directement la ressource complète si elle a été modifiée, sans avoir besoin d'envoyer une erreur 412 et d'attendre que le client relance le téléchargement.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/resume-download-4.svg)
 
 Cette solution est plus efficace, mais légèrement moins flexible, car une seule ETag peut être utilisée dans la condition. Rarement, une flexibilité supplémentaire est nécessaire.
 
 ### Éviter les problèmes de perte de mise à jour avec le verrouillage optimiste
 
-Une opération courante dans les applications Web est de _mettre à jour_ un document distant. C'est très courant dans les systèmes de fichiers ou les applications de contrôle de version, mais toute application permettant de stocker des ressources distantes a besoin d'un tel mécanisme. Les sites Web courants, comme les wikis et autres CMS, ont un tel besoin.
+Une opération courante dans les applications Web est de _mettre à jour_ un document distant. C'est très courant dans les systèmes de fichiers ou les applications de contrôle de version, mais toute application vous permettant de stocker des ressources distantes a besoin d'un tel mécanisme. Les sites Web courants, comme les wikis et autres CMS, ont un tel besoin.
 
 Avec la méthode {{HTTPMethod("PUT")}}, vous pouvez implémenter cela. Le client lit d'abord les fichiers originaux, les modifie, puis les envoie finalement au serveur&nbsp;:
 
@@ -119,9 +119,9 @@ Malheureusement, les choses deviennent un peu imprécises dès que l'on prend en
 
 Il n'y a aucun moyen de gérer ce problème sans ennuyer l'un des deux clients. Cependant, les mises à jour perdues et les conditions de course doivent être évitées. Nous voulons des résultats prévisibles et nous attendons à ce que les clients soient informés lorsque leurs modifications sont rejetées.
 
-Les requêtes conditionnelles permettent de mettre en œuvre _l'algorithme de verrouillage optimiste_ (utilisé par la plupart des wikis ou des systèmes de contrôle de version). Le concept est de permettre à tous les clients d'obtenir des copies de la ressource, puis de les laisser les modifier localement, en contrôlant la concurrence en autorisant avec succès le premier client à soumettre une mise à jour. Toutes les mises à jour ultérieures, basées sur la version désormais obsolète de la ressource, sont rejetées&nbsp;:
+Les requêtes conditionnelles permettent de mettre en œuvre _l'algorithme de verrouillage optimiste_ (utilisé par la plupart des wikis ou des systèmes de contrôle de version). Le concept est de permettre à tous les clients d'obtenir des copies de la ressource, puis de les laisser les modifier localement, en contrôlant la concurrence en autorisant avec succès le premier client à envoyer une mise à jour. Toutes les mises à jour ultérieures, basées sur la version désormais obsolète de la ressource, sont rejetées&nbsp;:
 
-![Les requêtes conditionnelles permettent de mettre en œuvre le verrouillage optimiste : maintenant, le plus rapide gagne, et les autres reçoivent une erreur.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/optimistic-locking-3.svg)
+![Les requêtes conditionnelles vous permettent de mettre en œuvre le verrouillage optimiste : maintenant, le plus rapide gagne, et les autres reçoivent une erreur.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/optimistic-locking-3.svg)
 
 C'est mis en œuvre en utilisant les en-têtes {{HTTPHeader("If-Match")}} ou {{HTTPHeader("If-Unmodified-Since")}}. Si l'ETag ne correspond pas au fichier original, ou si le fichier a été modifié depuis qu'il a été obtenu, la modification est rejetée avec une erreur {{HTTPStatus("412", "412 Precondition Failed")}}. Il appartient alors au client de gérer l'erreur&nbsp;: soit en informant l'utilisateur·ice de recommencer (cette fois sur la version la plus récente), soit en affichant à l'utilisateur·ice une _diff_ des deux versions, l'aidant à décider quelles modifications il souhaite conserver.
 

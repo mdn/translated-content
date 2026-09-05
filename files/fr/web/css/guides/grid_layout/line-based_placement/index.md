@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Grid_layout/Line-based_placement
 original_slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 ---
 
-{{CSSRef}}
-
 {{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Basic_concepts", "Web/CSS/Guides/Grid_layout/Grid_template_areas","Web/CSS/Guides/Grid_layout")}}
 
 Dans [l'article sur les concepts de base](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts), nous avons vu comment positionner des éléments en utilisant des numéros de lignes. Nous allons désormais étudier cette fonctionnalité de positionnement plus en détail.

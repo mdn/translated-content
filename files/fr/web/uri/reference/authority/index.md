@@ -3,10 +3,10 @@ title: Autorité d'une URI
 short-title: Autorité
 slug: Web/URI/Reference/Authority
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-L'**autorité** d'une URI est la section qui vient après le [schéma](/fr/docs/Web/URI/Reference/Schemes) et avant le chemin. Elle peut comporter jusqu'à trois parties&nbsp;: les informations utilisateur, l'hôte et le port.
+**L'autorité** d'une URI est la section qui vient après le [schéma](/fr/docs/Web/URI/Reference/Schemes) et avant le chemin. Elle peut comporter jusqu'à trois parties&nbsp;: les informations utilisateur, l'hôte et le port.
 
 ## Syntaxe
 
@@ -18,14 +18,14 @@ user@host:port
 ```
 
 - `host`
-  - : L'_hôte_ est généralement le nom de domaine ou l'adresse IP du serveur hébergeant la ressource. Le nom de domaine est résolu en adresse IP via le {{Glossary("DNS", "système de noms de domaine")}}.
+  - : _L'hôte_ est généralement le nom de domaine ou l'adresse IP du serveur hébergeant la ressource. Le nom de domaine est résolu en adresse IP avec le {{Glossary("DNS", "système de noms de domaine")}}.
 - `port` {{Optional_Inline}}
   - : Le _port_ est un nombre qui indique le port sur lequel le serveur écoute les requêtes. Il est optionnel et vaut par défaut 80 pour HTTP et 443 pour HTTPS. D'autres schémas peuvent définir leur propre valeur par défaut ou le rendre obligatoire.
 - `user` {{Optional_Inline}}
-  - : L'_utilisateur_ est optionnel et sert à l'authentification. Il est rarement utilisé dans les URI web.
+  - : _L'utilisateur_ est optionnel et sert à l'authentification. Il est rarement utilisé dans les URI web.
 
     > [!WARNING]
-    > Il est déconseillé de fournir des informations utilisateur directement dans les URLs HTTP, car cela peut exposer des informations sensibles. Utilisez plutôt d'autres méthodes comme l'authentification HTTP ou les cookies de session. Parfois, des sites de phishing trompent les utilisateur·ice·s en affichant des URLs trompeuses dont la partie «&nbsp;utilisateur&nbsp;» ressemble à un nom de domaine, ce qu'on appelle une [attaque par URL sémantique <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Semantic_URL_attack).
+    > Il est déconseillé de fournir des informations utilisateur directement dans les URLs HTTP, car cela peut exposer des informations sensibles. Utilisez plutôt d'autres méthodes comme l'authentification HTTP ou les cookies de session. Parfois, des sites de hameçonnage trompent les utilisateur·ice·s en affichant des URLs trompeuses dont la partie «&nbsp;utilisateur&nbsp;» ressemble à un nom de domaine, ce qu'on appelle une [attaque par URL sémantique <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Semantic_URL_attack).
 
 ## Description
 
@@ -49,13 +49,13 @@ Comme les adresses IP sont moins pratiques et plus difficiles à retenir, il est
 ## Exemples
 
 - `https://developer.mozilla.org`
-  - : L'hôte est `developer.mozilla.org`. Le port n'est pas défini mais sera par défaut 443 si l'accès se fait via `https:`.
+  - : L'hôte est `developer.mozilla.org`. Le port n'est pas défini mais est par défaut 443 si l'accès se fait avec `https:`.
 - `http://localhost:8080`
   - : L'hôte est `localhost` et le port est `8080`. `localhost` est un nom d'hôte spécial que le navigateur résout à l'adresse locale `127.0.0.1`.
 - `postgresql://postgres:admin123@db:5432`
-  - : L'hôte est `db`, et le port est `5432`. On précise aussi un utilisateur `postgres` et son mot de passe `admin123`. Cela peut servir à se connecter à une base PostgreSQL.
+  - : L'hôte est `db`, et le port est `5432`. On précise aussi un·e utilisateur·ice `postgres` et son mot de passe `admin123`. Cela peut servir à se connecter à une base PostgreSQL.
 - `https://cnn.example.com&story=breaking_news@10.0.0.1`
-  - : Une URL trompeuse qui semble pointer vers un site de confiance. Cependant, le nom d'hôte est `10.0.0.1`, et la partie `cnn.example.com&story=breaking_news` est l'«&nbsp;utilisateur&nbsp;».
+  - : Une URL trompeuse qui semble pointer vers un site de confiance. Cependant, le nom d'hôte est `10.0.0.1`, et la partie `cnn.example.com&story=breaking_news` est «&nbsp;l'utilisateur·ice&nbsp;».
 
 ## Spécifications
 

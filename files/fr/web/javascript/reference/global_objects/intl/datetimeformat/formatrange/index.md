@@ -92,4 +92,4 @@ console.log(fmt2.formatRange(date1, date3)); // 'Jan 10 — 20, 1906'
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}

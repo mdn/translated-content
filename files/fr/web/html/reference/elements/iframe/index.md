@@ -3,7 +3,7 @@ title: "Élément HTML `<iframe>` : l'élément de cadre intégré"
 short-title: <iframe>
 slug: Web/HTML/Reference/Elements/iframe
 l10n:
-  sourceCommit: 04c41175b160dc00b1a1b8e4e13b2183d89fdf1a
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<iframe>`** représente un {{Glossary("Browsing context", "contexte de navigation")}} imbriqué, intégrant une autre page HTML dans la page courante.
@@ -30,14 +30,14 @@ iframe {
 Chaque contexte de navigation intégré possède son propre [document](/fr/docs/Web/API/Document) et permet des navigations vers des URL. Les navigations de chaque contexte de navigation intégré sont linéarisées dans [l'historique de session](/fr/docs/Web/API/History) du contexte de navigation _le plus élevé_. Le contexte de navigation qui contient les autres est appelé _contexte de navigation parent_. Le contexte de navigation _le plus élevé_ — celui qui n'a pas de parent — correspond généralement à la fenêtre du navigateur, représentée par l'objet {{DOMxRef("Window")}}.
 
 > [!WARNING]
-> Parce que chaque contexte de navigation constitue un environnement de document complet, chaque `<iframe>` présent dans une page augmente la mémoire et les ressources informatiques nécessaires. Bien qu'en théorie vous puissiez utiliser autant d'`<iframe>` que vous le souhaitez, surveillez les problèmes de performance.
+> Parce que chaque contexte de navigation constitue un environnement de document complet, chaque `<iframe>` présent dans une page augmente la mémoire et les ressources informatiques nécessaires. Bien qu'en théorie vous puissiez utiliser autant d'un `<iframe>` que vous le souhaitez, surveillez les problèmes de performance.
 
 ## Attributs
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `allow`
-  - : Définit une [Permissions Policy](/fr/docs/Web/HTTP/Guides/Permissions_Policy) pour l'`<iframe>`. La politique définit quelles fonctionnalités sont disponibles pour l'`<iframe>` (par exemple l'accès au microphone, à la caméra, à la batterie, au partage Web, etc.) en fonction de l'origine de la requête.
+  - : Définit une [Permissions Policy](/fr/docs/Web/HTTP/Guides/Permissions_Policy) pour un `<iframe>`. La politique définit quelles fonctionnalités sont disponibles pour un `<iframe>` (par exemple l'accès au microphone, à la caméra, à la batterie, au partage Web, etc.) en fonction de l'origine de la requête.
 
     Voir [iframes](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes) dans le sujet `Permissions-Policy` pour des exemples.
 
@@ -45,13 +45,13 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > Une Permissions Policy définie par l'attribut `allow` applique une restriction supplémentaire en plus de la politique indiquée dans l'en-tête {{HTTPHeader("Permissions-Policy")}}. Elle ne la remplace pas.
 
 - `allowfullscreen`
-  - : Cet attribut, lorsqu'il vaut `true`, indique que l'`<iframe>` intégrée peut être passée en plein écran avec la méthode {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}}.
+  - : Cet attribut, lorsqu'il vaut `true`, indique qu'un `<iframe>` intégrée peut être passée en plein écran avec la méthode {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}}.
 
     > [!NOTE]
     > Cet attribut est considéré comme historique et a été redéfini avec `allow="fullscreen"`.
 
 - `allowpaymentrequest` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Cet attribut, lorsqu'il vaut `true`, permet à l'`<iframe>` intégrée d'appeler [l'API Payment Request](/fr/docs/Web/API/Payment_Request_API).
+  - : Cet attribut, lorsqu'il vaut `true`, permet à un `<iframe>` intégrée d'appeler [l'API Payment Request](/fr/docs/Web/API/Payment_Request_API).
 
     > [!NOTE]
     > Cet attribut est considéré comme historique et a été redéfini avec `allow="payment"`.
@@ -60,7 +60,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Un attribut booléen qui, s'il est présent, indique que les sujets sélectionnés pour l'utilisateur·ice courant·e doivent être envoyés avec la requête pour la source d'un `<iframe>`.
 
 - `credentialless` {{Experimental_Inline}}
-  - : Mettre à `true` pour rendre l'`<iframe>` sans identifiants, son contenu est chargé dans un contexte éphémère qui n'a pas accès au réseau, aux cookies ni aux données de stockage associées à son origine. Il utilise un contexte local à la durée de vie du document de plus haut niveau. En contrepartie, les règles d'intégration de {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) peuvent être levées, permettant à des documents avec COEP défini d'intégrer des documents tiers qui ne le sont pas. Voir [IFrame credentialless](/fr/docs/Web/HTTP/Guides/IFrame_credentialless) pour plus de détails.
+  - : Mettre à `true` pour rendre un `<iframe>` sans identifiants, son contenu est chargé dans un contexte éphémère qui n'a pas accès au réseau, aux cookies ni aux données de stockage associées à son origine. Il utilise un contexte local à la durée de vie du document de plus haut niveau. En contrepartie, les règles d'intégration de {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) peuvent être levées, permettant à des documents avec COEP défini d'intégrer des documents tiers qui ne le sont pas. Voir [IFrame credentialless](/fr/docs/Web/HTTP/Guides/IFrame_credentialless) pour plus de détails.
 
 - `csp` {{Experimental_Inline}}
   - : L'attribut `csp` définit [la politique de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) que le document intégré doit respecter. Voir {{DOMxRef("HTMLIFrameElement.csp")}} pour plus de détails.
@@ -81,7 +81,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `name`
   - : Un nom pour le contexte de navigation (ou la _frame_). Ce nom peut être utilisé comme la valeur de l'attribut `target` d'un élément {{HTMLElement("a")}}, {{HTMLElement("form")}}, ou {{HTMLElement("base")}}&nbsp;; l'attribut `formtarget` d'un élément {{HTMLElement("input")}} ou {{HTMLElement("button")}}&nbsp;; ou le paramètre `windowName` de la méthode {{DOMxRef("Window.open()","window.open()")}}. De plus, ce nom devient une propriété des objets {{DOMxRef("Window")}} et {{DOMxRef("Document")}}, contenant une référence à la fenêtre intégrée ou à l'élément lui-même.
 - `referrerpolicy`
-  - : Une chaîne de caractères qui indique le référent (_referrer_) à utiliser lors de la récupération de la ressource&nbsp;:
+  - : Une chaîne de caractères qui indique le référent (<i lang="en">referrer</i> en anglais) à utiliser lors de la récupération de la ressource&nbsp;:
     - `no-referrer`
       - : L'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé.
     - `no-referrer-when-downgrade`
@@ -100,7 +100,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
       - : Le référent inclut l'origine et le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom utilisateur·ice](/fr/docs/Web/API/HTMLAnchorElement/username)). **Cette valeur n'est pas sûre**, car elle peut entraîner des fuites d'origine ou de chemin provenant de ressources sécurisées avec TLS vers des origines non sécurisées.
 
 - `sandbox`
-  - : Cet attribut permet d'appliquer des restrictions sur le contenu qui peut apparaître dans l'`<iframe>`. Si cet attribut vaut la chaîne de caractères vide, toutes les restrictions sont appliquées, sinon, on peut utiliser une liste de mots-clés séparés par des espaces pour définir des restrictions précises. Les mots-clés qui peuvent être utilisés sont&nbsp;:
+  - : Cet attribut permet d'appliquer des restrictions sur le contenu qui peut apparaître dans un `<iframe>`. Si cet attribut vaut la chaîne de caractères vide, toutes les restrictions sont appliquées, sinon, on peut utiliser une liste de mots-clés séparés par des espaces pour définir des restrictions précises. Les mots-clés qui peuvent être utilisés sont&nbsp;:
     - `allow-downloads`
       - : Permet le téléchargement de fichiers avec un élément {{HTMLElement("a")}} ou {{HTMLElement("area")}} avec l'attribut [download](/fr/docs/Web/HTML/Reference/Elements/a#download), ainsi qu'avec la navigation qui conduit au téléchargement d'un fichier. Cela fonctionne que l'utilisateur·ice ait cliqué sur le lien ou que du code JavaScript l'ait initié sans interaction de l'utilisateur·ice.
     - `allow-forms`
@@ -135,7 +135,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > [!NOTE]
     >
     > - Lorsque le document intégré possède la même origine que la page englobante, il est **fortement déconseillé** d'utiliser à la fois `allow-scripts` et `allow-same-origin`, car cela permet au document intégré de retirer l'attribut `sandbox` — le rendant aussi peu sûr que de ne pas utiliser `sandbox` du tout.
-    > - La mise en bac à sable est inutile si un·e attaquant·e peut afficher du contenu en dehors d'un `iframe` sandboxé — par exemple si le·a visiteur·euse ouvre le cadre dans un nouvel onglet. Un tel contenu doit également être servi depuis une _origine séparée_ pour limiter les dommages potentiels.
+    > - La mise en bac à sable est inutile si un·e attaquant·e peut afficher du contenu en dehors d'un `iframe` en mode bac à sable — par exemple si le·la visiteur·euse ouvre le cadre dans un nouvel onglet. Un tel contenu doit également être servi depuis une _origine séparée_ pour limiter les dommages potentiels.
 
     > [!NOTE]
     > Lorsqu'on redirige l'utilisateur·ice, ouvre une fenêtre intrusive ou un nouvel onglet depuis une page intégrée dans un `<iframe>` avec l'attribut `sandbox`, le nouveau contexte de navigation est envoyé aux mêmes restrictions `sandbox`. Cela peut poser des problèmes — par exemple, si une page intégrée dans un `<iframe>` sans l'attribut `sandbox="allow-forms"` ou `sandbox="allow-popups-to-escape-sandbox"` ouvre un nouveau site dans un onglet séparé, l'envoi d'un formulaire dans ce nouveau contexte de navigation échoue silencieusement.
@@ -170,7 +170,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `scrolling` {{Deprecated_Inline}}
   - : Un attribut à valeur contrainte qui indique si le navigateur doit afficher une barre de défilement (ou tout autre moyen de défilement) pour le cadre&nbsp;:
     - `auto`
-      - : Uniquement lorsque le contenu de la frame dépasse ses dimensions.
+      - : Uniquement lorsque le contenu du cadre dépasse ses dimensions.
     - `yes`
       - : Toujours afficher une barre de défilement.
     - `no`
@@ -180,7 +180,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 Les `iframes` (et aussi les {{HTMLElement("frame")}}) font partie du pseudo-tableau {{DOMxRef("window.frames")}}.
 
-En utilisant l'élément {{DOMxRef("HTMLIFrameElement")}} du DOM, les scripts peuvent accéder à l'objet {{DOMxRef("window")}} de la page HTML incluse par la propriété {{DOMxRef("HTMLIFrameElement.contentWindow", "contentWindow")}}. La propriété {{DOMxRef("HTMLIFrameElement.contentDocument", "contentDocument")}} fait référence au document contenu dans l'`iframe` (l'équivalent de `contentWindow.document`).
+En utilisant l'élément {{DOMxRef("HTMLIFrameElement")}} du DOM, les scripts peuvent accéder à l'objet {{DOMxRef("window")}} de la page HTML incluse par la propriété {{DOMxRef("HTMLIFrameElement.contentWindow", "contentWindow")}}. La propriété {{DOMxRef("HTMLIFrameElement.contentDocument", "contentDocument")}} fait référence au document contenu dans un `iframe` (l'équivalent de `contentWindow.document`).
 
 Depuis le cadre intégré (_iframe_), un script peut obtenir une référence à la fenêtre parente avec la propriété {{DOMxRef("window.parent")}}.
 
@@ -210,13 +210,13 @@ En tant {{Glossary("replaced elements", "qu'élément remplacé")}}, la position
 
 ## Comportement des évènements `error` et `load`
 
-Les évènements `error` et `load` déclenchés sur des `<iframe>` pourraient être utilisés pour sonder l'espace d'URL des serveurs HTTP du réseau local. Par conséquent, par mesure de sécurité, les agents utilisateur ne déclenchent pas l'évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event) sur les `<iframe>`, et l'évènement [`load`](/fr/docs/Web/API/HTMLElement/load_event) est toujours déclenché même si le contenu de l'`<iframe>` échoue à se charger.
+Les évènements `error` et `load` déclenchés sur des `<iframe>` peuvent être utilisés pour sonder l'espace d'URL des serveurs HTTP du réseau local. Par conséquent, par mesure de sécurité, les agents utilisateur ne déclenchent pas l'évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event) sur les `<iframe>`, et l'évènement [`load`](/fr/docs/Web/API/HTMLElement/load_event) est toujours déclenché même si le contenu d'un `<iframe>` échoue à se charger.
 
 ## Dimensionnement adaptatif de `<iframe>`
 
-Pour des raisons de sécurité et de confidentialité, les éléments {{HTMLElement("iframe")}} n'exposent pas par défaut d'informations au document parent sur la taille du contenu dans le document qu'ils intègrent.
+Pour des raisons de sécurité et de confidentialité, les éléments `<iframe>` n'exposent pas par défaut d'informations au document parent sur la taille du contenu dans le document qu'ils intègrent.
 
-Pour permettre le dimensionnement adaptatif des éléments {{HTMLElement("iframe")}} en fonction de leur contenu, la balise [`<meta name="responsive-embedded-sizing">`](/fr/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) peut être incluse dans un document intégré pour lui permettre de partager les informations sur sa taille avec le document parent. La propriété CSS {{CSSxRef("frame-sizing")}} peut ensuite être définie sur l'`<iframe>` pour qu'il adopte la même taille horizontale ou verticale que la taille réelle du contenu du document intégré. Cela garantit que le contenu d'un `<iframe>` s'intègre parfaitement dans son conteneur, évitant ainsi les barres de défilement inutiles.
+Pour permettre le dimensionnement adaptatif des éléments `<iframe>` en fonction de leur contenu, la balise [`<meta name="responsive-embedded-sizing">`](/fr/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) peut être incluse dans un document intégré pour lui permettre de partager les informations sur sa taille avec le document parent. La propriété CSS {{CSSxRef("frame-sizing")}} peut ensuite être définie sur un `<iframe>` pour qu'il adopte la même taille horizontale ou verticale que la taille réelle du contenu du document intégré. Cela garantit que le contenu d'un `<iframe>` s'intègre parfaitement dans son conteneur, évitant ainsi les barres de défilement inutiles.
 
 Pour redimensionner dynamiquement un `<iframe>` lorsque le document intégré modifie la taille de sa mise en page, vous pouvez appeler la méthode {{DOMxRef("Window.requestResize()")}} depuis le document intégré pour lui faire signaler une taille mise à jour.
 

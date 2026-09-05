@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 original_slug: Learn/Accessibility/What_is_accessibility
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
+{{NextMenu("Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 
 Cet article présente un module général sur ce que l'accessibilité est actuellement — Cela comprend les groupes de personnes que l'on a besoin de considérer et pourquoi, quels outils ils utilisent afin d'intéragir avec les pages web et comment rendre accessible la partie de notre espace de travail web.
 

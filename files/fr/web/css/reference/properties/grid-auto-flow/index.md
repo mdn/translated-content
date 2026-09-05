@@ -3,7 +3,7 @@ title: Propriété CSS `grid-auto-flow`
 short-title: grid-auto-flow
 slug: Web/CSS/Reference/Properties/grid-auto-flow
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 2f710bc43d966483d0204330b14f841b440a6b60
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`grid-auto-flow`** contrôle le fonctionnement de l'algorithme de placement automatique, en définissant précisément la façon dont les éléments placés automatiquement sont intégrés dans la grille.
@@ -59,10 +59,6 @@ grid-auto-flow: row dense;
   grid-column: auto / span 2;
 }
 ```
-
-> [!NOTE]
-> La propriété `masonry-auto-flow` a été retirée de la [disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) CSS au profit de `grid-auto-flow`.
-> Voir [csswg-drafts #10231 <sup>(angl.)</sup>](https://github.com/w3c/csswg-drafts/issues/10231) pour plus de détails.
 
 ## Syntaxe
 

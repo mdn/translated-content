@@ -3,7 +3,7 @@ title: Iterator.concat()
 short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/concat
 l10n:
-  sourceCommit: dc02b8a490ea0ff4ac1236546f32270ca0cc0aa5
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 **`Iterator.concat()`** は静的メソッドで、新しい {{jsxref("Iterator")}} オブジェクトを反復可能オブジェクトのリストから作成します。新しいイテレーターは、入力した反復可能オブジェクトそれぞれの値を順番に返します。

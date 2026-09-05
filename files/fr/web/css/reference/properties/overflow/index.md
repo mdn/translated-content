@@ -3,10 +3,10 @@ title: Propriété CSS `overflow`
 short-title: overflow
 slug: Web/CSS/Reference/Properties/overflow
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`overflow`** définit le comportement souhaité lorsque le contenu ne tient pas dans la boîte de remplissage (<i lang="en">padding</i> en anglais) de l'élément (dépassements) dans la direction horizontale et/ou verticale.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`overflow`** définit le comportement souhaité lorsque le contenu ne tient pas dans la boîte de remplissage (<i lang="en">padding</i> en anglais) de l'élément (dépassements) dans la direction horizontale et/ou verticale.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: overflow")}}
 
@@ -109,11 +109,11 @@ La propriété `overflow` est une propriété raccourcie pour les propriétés h
 
 Les options de débordement incluent la possibilité de masquer le contenu débordant, d'activer les barres de défilement pour visualiser le contenu débordant ou d'afficher le contenu s'écoulant en dehors de la boîte d'un élément dans la zone environnante, ainsi que des combinaisons de ces options.
 
-Toutes les valeurs, sauf `visible` et `clip`, créent un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context). Le nouveau contexte de formatage de bloc est nécessaire pour les conteneurs de défilement, car si un flottant devait intersecter avec un élément défilant, il réorganise de force le contenu après chaque étape de défilement, ce qui entraîne une expérience de défilement lente.
+Toutes les valeurs, sauf `visible` et `clip`, créent un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context). Le nouveau contexte de formatage de bloc est nécessaire pour les conteneurs de défilement, car si un flottant doit intersecter avec un élément défilant, il réorganise de force le contenu après chaque étape de défilement, ce qui entraîne une expérience de défilement lente.
 
 ### Qu'est-ce qui crée le débordement
 
-Le débordement se produit lorsqu'un élément de niveau bloc a un contenu qui dépasse son espace contraint. L'espace alloué peut être contraint par une hauteur ({{CSSxRef("height")}} ou {{CSSxRef("max-height")}}) pour le débordement vertical, une largeur ({{CSSxRef("width")}} ou {{CSSxRef("max-width")}}) pour le débordement horizontal, une taille de bloc ({{CSSxRef("block-size")}} ou {{CSSxRef("max-block-size")}}) pour le débordement dans la direction du bloc, ou une taille en ligne ({{CSSxRef("inline-size")}}, {{CSSxRef("max-inline-size")}} ou {{CSSxRef("white-space")}} définie sur `nowrap`) pour le débordement dans la direction en ligne.
+Le débordement se produit lorsqu'un élément de niveau bloc a un contenu qui dépasse son espace contraint. L'espace alloué peut être contraint par une hauteur ({{CSSxRef("height")}} ou {{CSSxRef("max-height")}}) pour le débordement vertical, une largeur ({{CSSxRef("width")}} ou {{CSSxRef("max-width")}}) pour le débordement horizontal, une taille de bloc ({{CSSxRef("block-size")}} ou {{CSSxRef("max-block-size")}}) pour le débordement dans la direction du bloc, ou une taille en incise ({{CSSxRef("inline-size")}}, {{CSSxRef("max-inline-size")}} ou {{CSSxRef("white-space")}} définie sur `nowrap`) pour le débordement dans la direction en incise.
 
 Le CSS suivant limite la taille du conteneur, en définissant des valeurs de propriété du [modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model) qui limitent la taille du conteneur.
 Une couleur de fond, découpée dans le `content-box`, est également ajoutée pour aider à démontrer comment le contenu débordant déborde de la boîte de contenu dans les explications qui suivent.

@@ -16,7 +16,11 @@ La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:root`
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:root {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

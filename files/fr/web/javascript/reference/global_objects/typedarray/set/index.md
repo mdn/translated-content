@@ -3,8 +3,6 @@ title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 ---
 
-{{JSRef}}
-
 La méthode **`set()`** permet d'enregistrer plusieurs valeurs dans le tableau typé à partir d'un tableau donné.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.set()")}}

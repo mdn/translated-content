@@ -77,6 +77,6 @@ console.log(float16DepuisUnIterable);
 ## Voir aussi
 
 - Le guide [des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- L'objet {{JSxRef("TypedArray")}}
-- L'objet {{JSxRef("ArrayBuffer")}}
-- L'objet {{JSxRef("DataView")}}
+- L'objet natif {{JSxRef("TypedArray")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("DataView")}}

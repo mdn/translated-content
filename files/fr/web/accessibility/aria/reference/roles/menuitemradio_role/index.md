@@ -3,7 +3,7 @@ title: "ARIA : rôle menuitemradio"
 short-title: menuitemradio
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role
 l10n:
-  sourceCommit: 7ba6358a0ff684cc67c60b76d6d972722bbf0d18
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `menuitemradio` est un élément de menu sélectionnable dans un ensemble d'éléments ayant le même rôle, dont un seul peut être sélectionné à la fois.
@@ -76,9 +76,9 @@ Lorsqu'un `menu` s'ouvre ou qu'une `menubar` reçoit la sélection, la sélectio
 Si le `menuitemradio` se trouve dans un sous-menu d'une `menubar` ou d'un menu ouvert avec un bouton de menu, les interactions clavier suivantes doivent être programmées&nbsp;:
 
 - <kbd>Entrée</kbd>
-  - : Si non sélectionné, sélectionne le `menuitemradio` focalisé et désélectionne tout autre élément `menuitemradio` sélectionné dans le même groupe. Ferme également le menu.
+  - : Si non sélectionné, sélectionne le `menuitemradio` sélectionné et désélectionne tout autre élément `menuitemradio` sélectionné dans le même groupe. Ferme également le menu.
 - <kbd>Espace</kbd>
-  - : Si non sélectionné, sélectionne le `menuitemradio` focalisé et désélectionne tout autre élément `menuitemradio` sélectionné dans le même groupe sans fermer le menu.
+  - : Si non sélectionné, sélectionne le `menuitemradio` sélectionné et désélectionne tout autre élément `menuitemradio` sélectionné dans le même groupe sans fermer le menu.
 - <kbd>Échap</kbd>
   - : Ferme le menu. Dans une menubar, déplace la sélection vers l'élément parent de la menubar.
 - <kbd>Flèche vers la droite</kbd>

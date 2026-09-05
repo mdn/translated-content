@@ -3,10 +3,10 @@ title: Propriété CSS `view-timeline`
 short-title: view-timeline
 slug: Web/CSS/Reference/Properties/view-timeline
 l10n:
-  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`view-timeline`** définit le nom, l'axe et les valeurs d'encart d'une [chronologie de progression de la vue nommée](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_la_vue_nommée).
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`view-timeline`** définit le nom, l'axe et les valeurs d'encart d'une [chronologie de progression de la vue nommée](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_la_vue_nommée).
 
 ## Propriétés constitutives
 
@@ -76,7 +76,7 @@ Les noms définis dans le composant `<view-timeline-name>` doivent être une lis
 ### Créer une chronologie de progression de la vue nommée
 
 Une chronologie de progression de la vue nommée `--reveler-sujet` est définie en utilisant la propriété `view-timeline` sur un élément sujet avec une `class` de `animation`.
-Cela est ensuite défini comme la chronologie pour le même élément en utilisant `animation-timeline: --reveler-sujet`. Le résultat est que l'élément sujet s'anime lorsqu'il se déplace vers le haut à travers le document au fur et à mesure du défilement.
+C'est ensuite défini comme la chronologie pour le même élément en utilisant `animation-timeline: --reveler-sujet`. Le résultat est que l'élément sujet s'anime lorsqu'il se déplace vers le haut à travers le document au fur et à mesure du défilement.
 
 #### HTML
 

@@ -3,8 +3,6 @@ title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
 
-{{JSRef}}
-
 La méthode **`normalize()`** permet de renvoyer la forme normalisée Unicode d'une chaîne de caractères.
 
 {{InteractiveExample("JavaScript Demo: String.normalize()")}}

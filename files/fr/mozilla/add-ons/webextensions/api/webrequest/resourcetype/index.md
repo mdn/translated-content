@@ -3,8 +3,6 @@ title: webRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
 ---
 
-{{AddonSidebar}}
-
 Ce type est une chaîne de caractères, qui représente le contexte dans lequel une ressource a été récupérée dans une requête web.
 
 Il est utilisé pour [filtrer](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter) les requêtes que vous écoutez en utilisant l'API webRequest. Par exemple : vous pouvez écouter les requêtes uniquement pour les images, ou uniquement pour les scripts.

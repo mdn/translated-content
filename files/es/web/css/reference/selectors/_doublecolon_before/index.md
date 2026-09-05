@@ -18,7 +18,12 @@ a::before {
 
 ## Sintaxis
 
-{{csssyntax}}
+```css-nolint
+::before {
+  content: /* value */;
+  /* properties */
+}
+```
 
 > [!NOTE]
 > CSS3 introdujo la notación `::before` (con doble dos puntos) para diferenciar [pseudo-clases](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) con [pseudo-elementos](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Los navegadores aceptan `:before`, añadido en CSS2.

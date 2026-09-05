@@ -3,8 +3,6 @@ title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 
-{{JSRef}}
-
 Un objet **RegExp** est utilisé pour étudier les correspondances d'un texte avec un motif donné.
 
 Pour une introduction aux expressions rationnelles, lire [le chapitre Expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) dans [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Regular_expressions).

@@ -49,5 +49,5 @@ console.log(dt1.equals(dt4)); // false
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}
 - La méthode statique {{JSxRef("Temporal/PlainDateTime/compare", "Temporal.PlainDateTime.compare()")}}

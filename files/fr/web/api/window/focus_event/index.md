@@ -3,10 +3,10 @@ title: "Window : évènement focus"
 short-title: focus
 slug: Web/API/Window/focus_event
 l10n:
-  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 L'évènement **`focus`** est déclenché lorsqu'un élément reçoit la sélection.
 

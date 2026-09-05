@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/RuntimeError/RuntimeError
 original_slug: WebAssembly/JavaScript_interface/RuntimeError/RuntimeError
 ---
 
-{{WebAssemblySidebar}}
-
 Le constructeur **`WebAssembly.RuntimeError()`** crée un nouvel objet `RuntimeError` WebAssembly, une erreur levée quand WebAssembly définit une [trappe](https://webassembly.org/docs/semantics/#traps).
 
 ## Syntaxe

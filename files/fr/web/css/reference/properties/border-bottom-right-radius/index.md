@@ -3,7 +3,7 @@ title: Propriété CSS `border-bottom-right-radius`
 short-title: border-bottom-right-radius
 slug: Web/CSS/Reference/Properties/border-bottom-right-radius
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: f78ca75460fbdbc7f17b6e366dad47b9760054b0
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-bottom-right-radius`** arrondit le coin inférieur droit d'un élément en définissant le rayon (ou les rayons des axes semi-majeur et semi-mineur) de l'ellipse qui détermine la courbure du coin.

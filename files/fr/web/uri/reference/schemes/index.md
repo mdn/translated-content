@@ -3,7 +3,7 @@ title: Schémas URI
 short-title: Schéma
 slug: Web/URI/Reference/Schemes
 l10n:
-  sourceCommit: 44373c3805ba65db7542af75b664dc6fdce2aec0
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le **schéma** d'une URI est la première partie de l'URI, avant le caractère `:`.
@@ -19,7 +19,7 @@ protocol:
 - `protocol`
   - : Une séquence de caractères qui identifie le protocole à utiliser.
     Elle ne doit contenir que des caractères alphanumériques ainsi que les caractères `+`, `-` et `.`.
-    Les schémas courants sont :
+    Les schémas courants sont&nbsp;:
     - [`blob`](/fr/docs/Web/URI/Reference/Schemes/blob)
       - : Binary Large Object&nbsp;; un pointeur vers un grand objet en mémoire
     - [`data`](/fr/docs/Web/URI/Reference/Schemes/data)

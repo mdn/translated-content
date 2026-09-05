@@ -3,8 +3,6 @@ title: bookmarks.get()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
 ---
 
-{{AddonSidebar}}
-
 Étant donné l'ID d'un {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} ou d'un tableau de ces ID, la méthode **`bookmarks.get()`** récupère les nœuds correspondants.
 
 C'est une fonction asynchrone qui renvoie une {{jsxref("Promise")}}.

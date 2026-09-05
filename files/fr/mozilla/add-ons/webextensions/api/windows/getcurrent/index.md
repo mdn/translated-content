@@ -3,8 +3,6 @@ title: windows.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
 ---
 
-{{AddonSidebar}}
-
 Obtient la fenêtre actuelle du navigateur, en passant ses détails dans un rappel.
 
 La fenêtre "actuelle" n'est pas nécessairement la même que la fenêtre ayant actuellement le focus. Si cette fonction est appelée à partir d'un script en arrière-plan, elle renvoie la fenêtre ayant actuellement le focus. Mais s'il est appelé à partir d'un script dont le document est associé à une fenêtre de navigateur particulière, il retourne la fenêtre de ce navigateur. Par exemple, si le navigateur affiche une barre latérale, chaque fenêtre de navigateur possède sa propre instance du document de la barre latérale. Si un script exécuté dans le document de la barre latérale appelle `getCurrent()`, il renverra la fenêtre de ce document de la barre latérale.

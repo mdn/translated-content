@@ -3,10 +3,10 @@ title: Propriété CSS `grid-template`
 short-title: grid-template
 slug: Web/CSS/Reference/Properties/grid-template
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`grid-template`** définit les {{Glossary("grid column", "colonnes de grille")}}, les {{Glossary("grid_row", "lignes de grille")}} et les {{Glossary("grid areas", "zones de grille")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`grid-template`** définit les {{Glossary("grid column", "colonnes de grille")}}, les {{Glossary("grid_row", "lignes de grille")}} et les {{Glossary("grid areas", "zones de grille")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: grid-template")}}
 
@@ -113,17 +113,17 @@ grid-template: unset;
 ### Valeurs
 
 - `none`
-  - : Définit les trois propriétés détaillées sur `none`, ce qui signifie qu'il n'y a pas de grille explicite. Il n'y a pas de zone de grille nommée. Les lignes et les colonnes seront générées de façon implicite&nbsp;; leur taille sera déterminée par les propriétés {{CSSxRef("grid-auto-rows")}} et {{CSSxRef("grid-auto-columns")}}. Il s'agit de la valeur par défaut.
+  - : Définit les trois propriétés détaillées sur `none`, ce qui signifie qu'il n'y a pas de grille explicite. Il n'y a pas de zone de grille nommée. Les lignes et les colonnes sont générées de façon implicite&nbsp;; leur taille est déterminée par les propriétés {{CSSxRef("grid-auto-rows")}} et {{CSSxRef("grid-auto-columns")}}. Il s'agit de la valeur par défaut.
 - `<'grid-template-rows'> / <'grid-template-columns'>`
-  - : Voir {{CSSxRef("grid-template-rows")}} et {{CSSxRef("grid-template-columns")}} pour les valeurs définies. {{CSSxRef("grid-template-areas")}} recevra la valeur `none`.
+  - : Voir {{CSSxRef("grid-template-rows")}} et {{CSSxRef("grid-template-columns")}} pour les valeurs définies. {{CSSxRef("grid-template-areas")}} reçoit la valeur `none`.
 - `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <track-list> ]?`
-  - : {{CSSxRef("grid-template-areas")}} est définie avec les chaînes listées, {{CSSxRef("grid-template-rows")}} est définie avec les tailles de piste suivant chaque chaîne (`auto` sera utilisé pour les tailles manquantes), les lignes seront découpées selon les noms avant et après chaque taille. {{CSSxRef("grid-template-columns")}} sera définie avec la valeur listée après la barre oblique (ou `none` sinon).
+  - : {{CSSxRef("grid-template-areas")}} est définie avec les chaînes de caractères listées, {{CSSxRef("grid-template-rows")}} est définie avec les tailles de piste suivant chaque chaîne de caractères (`auto` est utilisé pour les tailles manquantes), les lignes sont découpées selon les noms avant et après chaque taille. {{CSSxRef("grid-template-columns")}} est définie avec la valeur listée après la barre oblique (ou `none` sinon).
 
     > [!NOTE]
-    > La fonction {{CSSxRef("repeat()")}} n'est pas autorisée parmi les listes de pistes car les pistes sont conçues pour correspondre à la disposition finale (à la façon d'un dessin en ASCII).
+    > La fonction {{CSSxRef("repeat()")}} n'est pas autorisée parmi les listes de pistes, car les pistes sont conçues pour correspondre à la disposition finale (à la façon d'un dessin en ASCII).
 
 > [!NOTE]
-> La propriété raccourcie {{CSSxRef("grid")}} accepte la même syntaxe mais réinitialise également les propriétés implicites avec leurs valeurs initiales. On pourra utiliser `grid` (plutôt que `grid-template`) pour empêcher les valeurs de suivre la cascade de façon séparée.
+> La propriété raccourcie {{CSSxRef("grid")}} accepte la même syntaxe mais réinitialise également les propriétés implicites avec leurs valeurs initiales. On peut utiliser `grid` (plutôt que `grid-template`) pour empêcher les valeurs de suivre la cascade de façon séparée.
 
 ## Définition formelle
 

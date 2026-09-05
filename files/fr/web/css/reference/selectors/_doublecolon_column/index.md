@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::column`** représente les colonnes individuelles générées lorsqu'un conteneur est configuré pour afficher son contenu dans plusieurs colonnes via une [mise en page CSS multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout). Le pseudo-élément `::column` permet d'appliquer des styles qui n'affectent pas la mise en page à ces fragments générés.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::column`** représente les colonnes individuelles générées lorsqu'un conteneur est configuré pour afficher son contenu dans plusieurs colonnes avec une [mise en page CSS multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout). Le pseudo-élément `::column` permet d'appliquer des styles qui n'affectent pas la mise en page à ces fragments générés.
 
 ## Syntaxe
 
@@ -28,9 +28,9 @@ Le pseudo-élément `::column` peut avoir un pseudo-élément {{CSSxRef("::scrol
 
 Cela est utile pour les [carrousels CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels)&nbsp;: `::column` peut être utilisé pour générer des pseudo-éléments `::scroll-marker` pour chaque colonne, et les définir comme [cibles de défilement](/fr/docs/Glossary/Scroll_snap#snap_target) en utilisant [accrochage de défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap).
 
-Bien que le style qui peut être appliqué à `::column` soit très limité, il pourrait être étendu à l'avenir. Toutes les propriétés et valeurs prises en charge à l'avenir seront limitées à celles qui n'affectent pas la mise en page.
+Bien que le style qui peut être appliqué à `::column` soit très limité, il peut être étendu à l'avenir. Toutes les propriétés et valeurs prises en charge à l'avenir sont limitées à celles qui n'affectent pas la mise en page.
 
-## Examples
+## Exemples
 
 ### Mise en page de colonnes défilantes
 
@@ -102,7 +102,7 @@ Le code HTML suivant consiste en une [liste non ordonnée](/fr/docs/Web/HTML/Ref
 
 #### CSS
 
-La liste est donnée avec une hauteur ({{CSSxRef("height")}}) fixe et une largeur ({{CSSxRef("width")}}) de `100vw` pour s'étendre sur toute la largeur de la fenêtre d'affichage. Une valeur {{CSSxRef("overflow-x")}} de `scroll` est ensuite définie afin que le contenu défile horizontalement, et [CSS scroll snap](/fr/docs/Web/CSS/Guides/Scroll_snap) est utilisé pour s'accrocher à chaque élément ou «&nbsp;page&nbsp;» — une valeur {{CSSxRef("scroll-snap-type")}} de `x mandatory` est utilisée pour faire de la liste un [scroll snap container](/fr/docs/Glossary/Scroll_snap#scroll_snap_container). Enfin, une valeur {{CSSxRef("columns")}} de `1` est définie pour forcer le contenu de la liste à s'afficher comme une seule colonne. Une valeur {{CSSxRef("text-align")}} de `center` est également appliquée, pour aligner le contenu avec le centre de la liste.
+La liste est donnée avec une hauteur ({{CSSxRef("height")}}) fixe et une largeur ({{CSSxRef("width")}}) de `100vw` pour s'étendre sur toute la largeur de la fenêtre d'affichage. Une valeur {{CSSxRef("overflow-x")}} de `scroll` est ensuite définie afin que le contenu défile horizontalement, et [l'accroche au défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap) est utilisé pour s'accrocher à chaque élément ou «&nbsp;page&nbsp;» — une valeur {{CSSxRef("scroll-snap-type")}} de `x mandatory` est utilisée pour faire de la liste un [scroll snap container](/fr/docs/Glossary/Scroll_snap#scroll_snap_container). Enfin, une valeur {{CSSxRef("columns")}} de `1` est définie pour forcer le contenu de la liste à s'afficher comme une seule colonne. Une valeur {{CSSxRef("text-align")}} de `center` est également appliquée, pour aligner le contenu avec le centre de la liste.
 
 ```css hidden live-sample___mise_en_page_de_colonnes_défilantes live-sample___carousel_basé_sur_les_colonnes_avec_des_marqueurs_de_défilement
 * {
@@ -133,8 +133,8 @@ Les éléments de la liste sont ensuite mis en forme&nbsp;:
 
 - Une valeur {{CSSxRef("display")}} de `inline-block` est définie pour faire en sorte que les éléments de la liste s'alignent les uns à côté des autres et que la liste défile horizontalement.
 - Une {{CSSxRef("width")}} et une {{CSSxRef("height")}} fixes ont été définies sur eux.
-- Une valeur de `text-align` de `left` est définie sur eux pour remplacer le `text-align: center` défini sur le conteneur parent, de sorte que le contenu de l'élément sera aligné à gauche.
-- Chaque élément de liste de numéro pair se voit attribuer une couleur de fond différente via {{CSSxRef(":nth-child()")}}, afin qu'il soit plus facile de voir l'effet de défilement.
+- Une valeur de `text-align` de `left` est définie sur eux pour remplacer le `text-align: center` défini sur le conteneur parent, de sorte que le contenu de l'élément est aligné à gauche.
+- Chaque élément de liste de numéro pair se voit attribuer une couleur de fond différente avec {{CSSxRef(":nth-child()")}}, afin qu'il soit plus facile de voir l'effet de défilement.
 
 ```css live-sample___mise_en_page_de_colonnes_défilantes live-sample___carousel_basé_sur_les_colonnes_avec_des_marqueurs_de_défilement
 li {

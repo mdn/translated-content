@@ -91,7 +91,7 @@ Bien que ce code fonctionne dans les navigateurs web, `f1()` déclenchera une er
 
 - La déclaration {{JSxRef("Statements/function", "function")}}
 - Le mot-clé {{JSxRef("Operators/function", "function")}}
-- L'objet {{JSxRef("AsyncFunction")}}
-- L'objet {{JSxRef("AsyncGeneratorFunction")}}
-- L'objet {{JSxRef("GeneratorFunction")}}
+- L'objet natif {{JSxRef("AsyncFunction")}}
+- L'objet natif {{JSxRef("AsyncGeneratorFunction")}}
+- L'objet natif {{JSxRef("GeneratorFunction")}}
 - {{JSxRef("Functions", "Les fonctions", "", 1)}}

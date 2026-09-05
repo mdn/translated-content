@@ -51,4 +51,4 @@ console.log(Intl.DisplayNames.supportedLocalesOf(locales, options));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DisplayNames")}}
+- L'objet natif {{JSxRef("Intl.DisplayNames")}}

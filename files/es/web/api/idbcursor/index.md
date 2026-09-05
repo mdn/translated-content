@@ -42,8 +42,6 @@ Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene
 
 ## Constants
 
-{{ deprecated_header(13) }}
-
 > [!WARNING]
 > These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Error 891944 en Firefox](https://bugzil.la/891944))
 

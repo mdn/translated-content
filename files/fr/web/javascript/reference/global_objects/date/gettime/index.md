@@ -3,7 +3,7 @@ title: "Date : méthode getTime()"
 short-title: getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 0abb70602b0b3b11a2909c417a03e10eabd607a8
 ---
 
 La méthode **`getTime()`** des instances de {{JSxRef("Date")}} retourne le nombre de millisecondes écoulées depuis [l'epoch](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), défini comme le début du 1er janvier 1970 à minuit UTC.
@@ -43,7 +43,7 @@ Les objets `Date` sont fondamentalement représentés par un [timestamp](/fr/doc
 Construire un objet date avec la même valeur temporelle.
 
 ```js
-// Puisque que les mois sont indexés à partir de zéro, l'anniversaire sera le 10 janvier 1995
+// Puisque que les mois sont indexés à partir de zéro, l'anniversaire est le 10 janvier 1995
 const anniversaire = new Date(1994, 12, 10);
 const copie = new Date();
 copie.setTime(anniversaire.getTime());
@@ -68,7 +68,7 @@ console.log(
 ```
 
 > [!NOTE]
-> Dans les navigateurs qui prennent en charge la fonctionnalité de mesure temporelle haute résolution de {{DOMxRef("Performance API", "l'API Performance", "", "nocode")}}, {{DOMxRef("Performance.now()")}} peut fournir des mesures du temps écoulé plus fiables et précises que {{JSxRef("Date.now()")}}.
+> Dans les navigateurs qui prennent en charge la fonctionnalité de mesure temporelle haute résolution de {{DOMxRef("Performance API", "l'API Performance", "", 1)}}, {{DOMxRef("Performance.now()")}} peut fournir des mesures du temps écoulé plus fiables et précises que {{JSxRef("Date.now()")}}.
 
 ## Spécifications
 

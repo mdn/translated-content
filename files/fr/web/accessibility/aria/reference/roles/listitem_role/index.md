@@ -3,7 +3,7 @@ title: "ARIA : rôle listitem"
 short-title: listitem
 slug: Web/Accessibility/ARIA/Reference/Roles/listitem_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: e5cd1cab36e2fdcf5dfe28e10b0a7cb235354e62
 ---
 
 Le rôle `listitem` peut être utilisé pour identifier un élément à l'intérieur d'une liste d'éléments. Il est normalement utilisé en conjonction avec le rôle [`list`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role), qui est utilisé pour identifier un conteneur de liste.

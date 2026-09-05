@@ -13,15 +13,15 @@ La méthode statique **`Math.clz32()`** retourne le nombre de bits à zéro en t
 ```js interactive-example
 // 00000000000000000000000000000001
 console.log(Math.clz32(1));
-// Sortie attendue : 31
+// Résultat attendu : 31
 
 // 00000000000000000000000000000100
 console.log(Math.clz32(4));
-// Sortie attendue : 29
+// Résultat attendu : 29
 
 // 00000000000000000000001111101000
 console.log(Math.clz32(1000));
-// Sortie attendue : 22
+// Résultat attendu : 22
 ```
 
 ## Syntaxe
@@ -167,5 +167,5 @@ const { ctrz, ctron } = compterBitsFinMethodes;
 
 - [Prothèse d'émulation de `Math.clz32` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
 - [Prothèse d'émulation es-shims de `Math.clz32` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.clz32)
-- L'objet {{JSxRef("Math")}}
+- L'objet natif {{JSxRef("Math")}}
 - La méthode statique {{JSxRef("Math.imul()")}}
