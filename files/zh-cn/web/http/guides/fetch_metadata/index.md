@@ -9,7 +9,7 @@ l10n:
 
 Fetch 元数据可以让服务器知道（除此之外还有更多用途）：
 
-- 该请求是代表文档之间的导航，还是对子资源的请求，又或是由 JavaScript 显式发起的（例如使用 {{domxref("window.fetch()", "fetch()")}} 方法）。
+- 该请求是代表文档之间的导航，还是对子资源的请求，又或是由 JavaScript 显式发起的（例如使用 {{domxref("window.fetch()", "fetch()")}} API）。
 
 - 资源请求方与被请求资源之间的关系：是同{{glossary("origin", "来源")}}的、同{{glossary("site", "站点")}}的，还是来自完全不同的站点。
 
@@ -42,7 +42,7 @@ Fetch 元数据可以让服务器知道（除此之外还有更多用途）：
 - `script`
   - : 资源将作为脚本，被 HTML 的 {{htmlelement("script")}} 元素或 web worker 调用的 {{domxref("WorkerGlobalScope.importScripts()", "importScripts()")}} 加载。
 
-    更具体的值用于指明资源作为脚本被使用的其他位置，例如工作单元（`audioworklet` 和 `paintworklet`）以及工作线程（`sharedworker`、`serviceworker` 和 `worker`）。
+    更具体的值用于指明资源作为脚本被使用的其他位置，例如 worklet（`audioworklet` 和 `paintworklet`）以及 worker（`sharedworker`、`serviceworker` 和 `worker`）。
 
 - `empty`
   - : 请求未明确指定目标：除其他可能原因外，当请求是由 {{domxref("Window.fetch()", "fetch()")}} 方法触发时，标头就会应用这个值。
@@ -61,7 +61,7 @@ Fetch 元数据可以让服务器知道（除此之外还有更多用途）：
 - `no-cors`
   - : 请求使用 `no-cors` 模式发起。
 
-    这意味着即使服务端未发送合适的 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 标头，跨域请求也是被允许的，但有一个限制：客户端运行的 JavaScript 无法访问该响应（该响应是 _不透明的_）。
+    这意味着即使服务端未发送合适的 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 标头，跨域请求也是被允许的，但有一个限制：客户端运行的 JavaScript 无法访问该响应（该响应是*不透明的*）。
 
     这是页面加载子资源（例如图片、字体、脚本、样式表）的默认模式，这也解释了为什么默认情况下，尽管你没有配置 CORS，其他站点也能使用你的站点的子资源。
 
@@ -105,14 +105,14 @@ Fetch 元数据可以让服务器知道（除此之外还有更多用途）：
 
 ## 跨源攻击
 
-Fetch 元数据对于防御 _跨源攻击_ 尤为有效。这类攻击通常针对在合法站点拥有账号且处于登录状态的用户。攻击者搭建会向合法站点发起跨源请求的恶意网站，并诱导用户触发该请求。
+Fetch 元数据对于防御*跨源攻击*尤为有效。这类攻击通常针对在合法站点拥有账号且处于登录状态的用户。攻击者搭建会向合法站点发起跨源请求的恶意网站，并诱导用户触发该请求。
 
 > [!NOTE]
-> 本文使用术语 _跨源攻击_，尽管很多攻击习惯上被称为 _跨站攻击_。
+> 本文使用术语*跨源攻击*，尽管很多攻击习惯上被称为*跨站攻击*。
 >
 > {{glossary("origin", "来源")}}的约束比{{glossary("site", "站点")}}更加严格。尤其是，一个站点（site）包含域名下的全部子域名，而一个来源（origin）则不包含：因此 `https://example.org` 和 `https://login.example.org` 属于同一站点，但属于不同来源。
 >
-> 这意味着，所有跨站攻击都属于跨源攻击，但 _不是_ 所有跨源攻击都是跨站攻击。例如，如果攻击者控制了某个站点的子域名，就可以利用 _跨源、同站点_ 的请求对主站实施攻击。因此本文使用约束性更强的术语“跨源”。
+> 这意味着，所有跨站攻击都属于跨源攻击，但*不是*所有跨源攻击都是跨站攻击。例如，如果攻击者控制了某个站点的子域名，就可以利用*跨源、同站点*的请求对主站实施攻击。因此本文使用约束性更强的术语“跨源”。
 
 例如，攻击者的页面中可能放置了一个会向合法站点提交数据的 {{htmlelement ("form")}} 元素。有些跨源攻击甚至不需要任何用户交互：恶意页面会在加载时直接调用 {{domxref("Window.fetch()", "fetch()")}} 方法向合法站点发送请求，用户只需要打开恶意页面，攻击请求就会自动发出。
 
@@ -122,7 +122,7 @@ Fetch 元数据对于防御 _跨源攻击_ 尤为有效。这类攻击通常针�
 
 - [跨站请求伪造（CSRF）](/zh-CN/docs/Web/Security/Attacks/CSRF)：这类攻击的跨源请求会使用攻击者提供的参数，在合法服务器上执行有实际影响的操作。例如请求让服务器将用户账户中的资金转账至攻击者账户。
 
-- [跨站信息泄露](/zh-CN/docs/Web/Security/Attacks/XS‑Leaks)：这类攻击中，攻击者会借助请求获取到用户与目标站点之间的相关信息，这种信息窃取通常是借助[错误事件](/zh-CN/docs/Web/Security/Attacks/XS-Leaks#leaking_page_existence_using_error_events)这类侧信道完成的。
+- [跨站信息泄露](/zh-CN/docs/Web/Security/Attacks/XS-Leaks)：这类攻击中，攻击者会借助请求获取到用户与目标站点之间的相关信息，这种信息窃取通常是借助[错误事件](/zh-CN/docs/Web/Security/Attacks/XS-Leaks#利用错误事件泄露页面存在信息)这类侧信道完成的。
 
 大多数网站会希望拒绝一部分跨源请求，同时放行另一部分。举个例子：如果你拒绝全部跨源请求，就没有人能够从其他站点跳转到你的网站！
 
@@ -130,7 +130,7 @@ Fetch 元数据对于防御 _跨源攻击_ 尤为有效。这类攻击通常针�
 
 ## 资源隔离策略
 
-有一类常见的策略叫做 _资源隔离策略_。服务器收到一个请求时，会检查请求的 Fetch 元数据标头，只放行以下几类请求：
+有一类常见的策略叫做*资源隔离策略*。服务器收到一个请求时，会检查请求的 Fetch 元数据标头，只放行以下几类请求：
 
 - 同源请求（若信任子域名，也可以放行同站点请求）。
 - 来自其他源的顶层导航请求，这类请求让用户可以通过外部站点的链接访问你的网站。
@@ -176,5 +176,5 @@ app.get("/admin", (req, res) => {
 
 - [CSRF](/zh-CN/docs/Web/Security/Attacks/CSRF)
 - [跨站信息泄露](/zh-CN/docs/Web/Security/Attacks/XS-Leaks)
-- [使用 Fetch 元数据保护你的资源免受网络攻击](https://web.developers.google.cn/articles/fetch-metadata)（web.dev）
+- [使用 Fetch 元数据保护你的资源免受网络攻击](https://web.developers.google.cn/articles/fetch-metadata)（web.developers.google.cn）
 - [Fetch 元数据](https://xsleaks.dev/docs/defenses/opt-in/fetch-metadata/)（XS-Leaks Wiki）
