@@ -118,7 +118,7 @@ rule-break: unset;
 
 グリッドコンテナーでは、デフォルトで、罫線の線分は、目に見える「交差」箇所を通過し続けます。`rule-break: intersection` を設定すると、本来なら交差するはずの箇所で線分が強制的に区切られるようになります。
 
-```html hidden
+```html-nolint hidden
 <h1>グリッドでのデフォルトの罫線分割</h1>
 <div class="grid">
   <div></div>
@@ -174,7 +174,7 @@ h2 {
 
 フレックスボックスでは、`flex-direction` が `row` または `row-reverse` の場合、行の線分が連続し、列の線分は行の隙間の端で始まり、その端で終わります。`flex-direction` が `column` または `column-reverse` の場合、列の罫線が連続し、行の線分は列の隙間の端で始まり、その端で終わります。
 
-```html hidden
+```html-nolint hidden
 <h1>フレックスボックスでのデフォルトの罫線分割</h1>
 <article>
   <section>
