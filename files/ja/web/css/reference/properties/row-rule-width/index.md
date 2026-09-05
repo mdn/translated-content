@@ -1,5 +1,5 @@
 ---
-1title: CSS `row-rule-width` プロパティ
+title: CSS `row-rule-width` プロパティ
 short-title: row-rule-width
 slug: Web/CSS/Reference/Properties/row-rule-width
 l10n:
