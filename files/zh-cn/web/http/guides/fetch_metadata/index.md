@@ -28,7 +28,7 @@ Fetch 元数据可以让服务器知道（除此之外还有更多用途）：
 
 ### Sec-Fetch-Dest
 
-这个标头指明请求的 _目标_。该属性在 Fetch API 上定义，并以 {{domxref("Request.destination")}} 属性的形式对外暴露。
+这个标头指明请求的*目标*。该属性在 Fetch API 上定义，并以 {{domxref("Request.destination")}} 属性的形式对外暴露。
 
 我们大致可以将其理解为返回资源的用途。
 
