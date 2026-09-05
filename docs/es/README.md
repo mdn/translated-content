@@ -16,6 +16,7 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 - [Mantener el `l10n.sourceCommit` al día](#mantener-el-l10nsourcecommit-al-día)
 - [Convención de traducciones](#convención-de-traducciones)
   - [Estilo de escritura](#estilo-de-escritura)
+  - [Notas pendientes (`TODO`)](#notas-pendientes-todo)
 - [Arreglar "flaws" (defectos)](#arreglar-flaws-defectos)
 - [Charla con nosotros](#charla-con-nosotros)
 - [Enlaces relevantes](#enlaces-relevantes)
@@ -377,6 +378,30 @@ Rari/Yari distingue mayúsculas en los nombres de macro. Usa exactamente la capi
 - `{{Deprecated_Header}}`, no `{{deprecated_header}}`
 - `{{SeeCompatTable}}`, no `{{seecompattable}}`
 - `{{Non-standard_Header}}`, no `{{non-standard_header}}`
+
+---
+
+### Notas pendientes (`TODO`)
+
+A veces, al traducir, queda una duda que no se puede resolver en el momento: un ancla cuyo destino todavía no existe en español, un término sin equivalente acordado. Para esos casos usamos un marcador en el propio archivo, con **este formato exacto**:
+
+```md
+<!-- TODO(l10n-es): el ancla #display-p3 depende de que se traduzca Glossary/Color_space -->
+```
+
+**El prefijo `TODO(l10n-es)` no es decorativo.** Buscar sólo `TODO` en `files/es/` no es fiable: también encuentra la palabra española _TODOS_ (`Elimina el contorno de TODOS los enlaces`) y títulos de enlaces en inglés (`A simple TODO list using HTML5 IndexedDB`). Con el prefijo, un solo comando da el inventario completo del locale en cualquier momento:
+
+```bash
+grep -rn 'TODO(l10n-es)' files/es/
+```
+
+Tres cosas que conviene tener presentes:
+
+1. **Se publican.** Los comentarios HTML llegan al HTML renderizado de la página. No se ven al leer, pero quedan en el código fuente de la página publicada. Por eso el marcador debe ser breve y explicar la duda concreta, no ser un apunte personal.
+2. **Antes de dejar el marcador, intenta responder la duda.** La mayoría se resuelven en el momento con dos preguntas: ¿la página destino ya está traducida?, y ¿el fragmento apunta a prosa o a un identificador técnico? Los encabezados en prosa cambian al traducirse (`#deprecated` → `#obsoleto`), pero los identificadores no: `#display-p3` convive con `srgb`, `oklab` y `rec2020`, son valores de la función CSS `color()` y sobrevivirán igual. Si la duda tiene respuesta hoy, corrige y no dejes marcador.
+3. **Si la duda depende de otra página, el issue va en la página destino.** Es decir, un issue para _traducir_ `Glossary/Color_space`, listando en su cuerpo los enlaces que están esperando. No al revés: nadie que vaya a traducir una página busca antes qué otras páginas le enlazan, así que un issue abierto sobre el archivo que lleva el marcador se quedaría dormido igual que el marcador.
+
+**Un `TODO` no es para contenido sin traducir.** Si a una sección le falta el texto, eso no es una duda pendiente sino una traducción incompleta, y el camino es una sub-tarea de sincronización de esa página. Marcadores como `<!-- TODO: add content -->` o `!!TODO!!` dejados en medio de la prosa acaban publicándose y se leen como un error en la página.
 
 ---
 
