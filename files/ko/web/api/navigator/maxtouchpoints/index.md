@@ -35,4 +35,3 @@ if (navigator.maxTouchPoints > 1) {
 ## 브라우저 호환성
 
 {{Compat}}
-
