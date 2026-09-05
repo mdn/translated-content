@@ -156,12 +156,12 @@ Aquí hay un ejemplo:
 ```js
 const personPrototype = {
   greet() {
-    console.log("hello!");
+    console.log("¡hola!");
   },
 };
 
 const carl = Object.create(personPrototype);
-carl.greet(); // hello!
+carl.greet(); // ¡hola!
 ```
 
 Aquí creamos un objeto `personPrototype`, que tiene un método `greet()`. Luego usamos `Object.create()` para crear un nuevo objeto con `personPrototype` como su prototipo. Ahora podemos llamar a `greet()` en el nuevo objeto, y el prototipo proporciona su implementación.
@@ -175,7 +175,7 @@ Entonces, si establecemos el `prototype` de un constructor, podemos asegurarnos 
 ```js
 const personPrototype = {
   greet() {
-    console.log(`hello, my name is ${this.name}!`);
+    console.log(`¡hola!, me llamo ${this.name}!`);
   },
 };
 
@@ -184,7 +184,7 @@ function Person(name) {
 }
 
 Object.assign(Person.prototype, personPrototype);
-// or
+// o
 // Person.prototype.greet = personPrototype.greet;
 ```
 
@@ -199,7 +199,7 @@ Después de este código, los objetos creados usando `Person()` tendrán `Person
 
 ```js
 const reuben = new Person("Reuben");
-reuben.greet(); // hello, my name is Reuben!
+reuben.greet(); // ¡hola!, me llamo Reuben!
 ```
 
 Esto también explica por qué dijimos antes que el prototipo de `myDate` se llama `Date.prototype`: es la propiedad `prototype` del constructor `Date`.
