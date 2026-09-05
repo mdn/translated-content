@@ -1,214 +1,623 @@
 ---
 title: 内容安全策略（CSP）
 slug: Web/HTTP/Guides/CSP
+l10n:
+  sourceCommit: 6720d579bd658f02c56363805e97e69f93dc79f1
 ---
 
-**内容安全策略**（{{Glossary("CSP")}}）是一个额外的安全层，用于检测并削弱某些特定类型的攻击，包括跨站脚本（{{Glossary("Cross-site_scripting", "XSS")}}）和数据注入攻击等。无论是数据盗取、网站内容污染还是恶意软件分发，这些攻击都是主要的手段。
+**内容安全策略**（Content Security Policy，CSP）是一项有助于防范或降低特定类型安全威胁风险的特性。它由网站向浏览器发出的一系列指令组成，这些指令要求浏览器对构成该站点的代码被允许执行的操作施加限制。
 
-CSP 被设计成完全向后兼容（除 CSP2 在向后兼容有明确提及的不一致; 更多细节查看[这里](https://www.w3.org/TR/CSP2) 章节 1.1）。不支持 CSP 的浏览器也能与实现了 CSP 的服务器正常工作，反之亦然：不支持 CSP 的浏览器只会忽略它，如常运行，默认为网页内容使用标准的同源策略。如果网站不提供 CSP 标头，浏览器也使用标准的[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)。
+CSP 的主要用途是控制文档允许加载哪些资源，尤其是 JavaScript 资源。这主要用于防御{{glossary("cross-site scripting", "跨站脚本攻击")}}（XSS），在此类攻击中，攻击者能够将恶意代码注入受害者的站点。
 
-为使 CSP 可用，你需要配置你的网络服务器返回 {{HTTPHeader("Content-Security-Policy")}} HTTP 标头（有时你会看到 `X-Content-Security-Policy` 标头，但那是旧版本，并且你无须再如此指定它）。
+CSP 还可以用于其他目的，包括防御[点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)，以及帮助确保站点页面通过 HTTPS 加载。
 
-除此之外，{{HTMLElement("meta")}} 元素也可以被用来配置该策略，例如
+本指南将首先从较高层面说明 CSP 如何送达浏览器，以及它大致是什么样的。
 
-```html
-<meta
-  http-equiv="Content-Security-Policy"
-  content="default-src 'self'; img-src https://*; child-src 'none';" />
+然后我们会说明如何用它来：
+
+1. [控制加载哪些资源](#控制资源加载)，以防御 XSS。
+2. [限制嵌入](#点击劫持防护)，以防御点击劫持。
+3. [升级不安全请求](#升级不安全请求)，以帮助确保所有资源都通过 HTTPS 提供。
+4. [强制使用可信类型](#强制使用可信类型)，以帮助防御客户端 XSS。
+
+请注意，这些用例之间没有依赖关系：如果你只想添加点击劫持防护而不做 XSS 缓解，只需添加该用例对应的指令即可。
+
+最后我们会说明[部署 CSP 的策略](#测试你的策略)，以及有助于简化这一过程的工具。
+
+## CSP 概述
+
+CSP 应当通过 {{httpheader("Content-Security-Policy")}} 响应标头送达浏览器。它应当设置在对所有请求的所有响应上，而不仅仅是主文档。
+
+你也可以使用文档 {{htmlelement("meta")}} 元素的 [`http-equiv`](/zh-CN/docs/Web/HTML/Reference/Elements/meta/http-equiv) 属性来指定 CSP，对某些用例来说这很有用，例如只有静态资源的客户端渲染{{glossary("SPA", "单页应用")}}，因为这样可以避免依赖任何服务端基础设施。不过，这种方式并不支持所有 CSP 特性。
+
+策略由一系列用分号分隔的*指令*指定。每条指令控制安全策略的一个不同方面。每条指令都有一个名称，后跟一个空格，再跟一个值。不同指令可以有不同的语法。
+
+例如，考虑下面这条 CSP：
+
+```http
+Content-Security-Policy: default-src 'self'; img-src 'self' example.com
 ```
+
+它设置了两条指令：
+
+- `default-src` 指令被设为 `'self'`
+- `img-src` 指令被设为 `'self' example.com`。
+
+![拆分成各条指令的 CSP。](csp-overview.svg)
+
+第一条指令 `default-src` 告诉浏览器只加载与文档同源的资源，除非其他更具体的指令为其他资源类型设置了不同的策略。第二条指令 `img-src` 告诉浏览器加载同源的图片，或从 `example.com` 提供的图片。
+
+下一节我们将看看可用于控制资源加载的工具，这是 CSP 的主要功能。
+
+## 控制资源加载
+
+CSP 可用于控制文档允许加载的资源。这主要用于防御跨站脚本（XSS）攻击。
+
+本节将首先说明控制资源加载如何有助于防御 XSS，然后介绍 CSP 提供的用于控制加载哪些资源的工具。最后我们会说明一种特别推荐的策略，称为“严格 CSP”。
+
+### XSS 与资源加载
+
+跨站脚本（XSS）攻击是指攻击者能够在目标网站的上下文中执行其代码。这段代码随后可以做该网站自身代码能做的任何事情，例如：
+
+- 访问或修改站点已加载页面的内容
+- 访问或修改本地存储中的内容
+- 使用用户的凭据发起 HTTP 请求，从而冒充用户或访问敏感数据
+
+当网站接受可能由攻击者精心构造的输入（例如 URL 参数，或博客文章的评论），然后在未*净化*的情况下将其包含到页面中时，XSS 攻击就成为可能：也就是说，没有确保它不能作为 JavaScript 执行。
+
+网站应当通过在将这些输入包含到页面中之前对其进行净化，来防御 XSS。
 
 > [!NOTE]
-> 某些功能（例如发送 CSP 违规报告）仅在使用 HTTP 标头时可用。
+> CSP 实际上可以通过两种不同的方式帮助防御 XSS：
+>
+> - 它可以帮助确保输入在客户端使用之前经过净化：我们稍后会在[强制使用可信类型](#强制使用可信类型)中讨论这一点。
+> - 通过控制资源加载，CSP 可以为 XSS 提供纵深防御，即使净化失败也能保护网站。这就是本节将讨论的 XSS 防御。
 
-## 威胁
+如果净化失败，注入的恶意代码在文档中可能呈现为多种形式，包括：
 
-### 缓解跨站脚本攻击
+- 指向恶意源的 {{htmlelement("script")}} 标签：
 
-CSP 的主要目标是减少和报告 XSS 攻击。XSS 攻击利用了浏览器对于从服务器所获取的内容的信任。恶意脚本在受害者的浏览器中得以运行，因为浏览器信任其内容来源，即使有的时候这些脚本并非来自于它本该来的地方。
+  ```html
+  <script src="https://evil.example.com/hacker.js"></script>
+  ```
 
-CSP 通过指定有效域——即浏览器认可的可执行脚本的有效来源——使服务器管理者有能力减少或消除 XSS 攻击所依赖的载体。一个 CSP 兼容的浏览器将会仅执行从白名单域获取到的脚本文件，忽略所有的其他脚本（包括内联脚本和 HTML 的事件处理属性）。
+- 包含内联 JavaScript 的 `<script>` 标签：
 
-作为一种终极防护形式，始终不允许执行脚本的站点可以选择全面禁止脚本执行。
+  ```html
+  <script>
+    console.log("你已被入侵！");
+  </script>
+  ```
 
-### 缓解数据包嗅探攻击
+- 内联事件处理器：
 
-除限制可以加载内容的域，服务器还可指明哪种协议允许使用；比如（从理想化的安全角度来说），服务器可指定所有内容必须通过 HTTPS 加载。一个完整的数据安全传输策略不仅强制使用 HTTPS 进行数据传输，也为所有的 [cookie 标记 `secure` 标识](/zh-CN/docs/Web/HTTP/Guides/Cookies)，并且提供自动的重定向使得 HTTP 页面导向 HTTPS 版本。网站也可以使用 {{HTTPHeader("Strict-Transport-Security")}} HTTP 标头确保连接它的浏览器只使用加密通道。
+  ```html
+  <img onmouseover="console.log(`你已被入侵！`)" src="thumbnail.jpg" alt="" />
+  ```
 
-## 使用 CSP
+- `javascript:` URL：
 
-配置内容安全策略涉及到添加 {{HTTPHeader("Content-Security-Policy")}} HTTP 标头到一个页面，并配置相应的值，以控制用户代理（浏览器等）可以为该页面获取哪些资源。比如一个可以上传文件和显示图片页面，应该允许图片来自任何地方，但限制表单的 action 属性只可以赋值为指定的端点。一个经过恰当设计的内容安全策略应该可以有效的保护页面免受跨站脚本攻击。本文阐述如何恰当的构造这样的标头，并提供了一些例子。
+  ```html
+  <iframe src="javascript:console.log(`你已被入侵！`)"></iframe>
+  ```
 
-### 制定策略
+- 传给 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 等不安全 API 的字符串参数：
 
-你可以使用 {{HTTPHeader("Content-Security-Policy")}} HTTP 标头来指定你的策略，像这样：
+  ```js
+  eval("console.log(`你已被入侵！`)");
+  ```
+
+通过控制资源加载，CSP 可以为以上所有情况提供防护。有了 CSP，你可以：
+
+- 定义 JavaScript 文件和其他资源的允许来源，从而有效阻止从 `https://evil.example.com` 加载
+- 禁用内联脚本标签
+- 只允许设置了正确{{Glossary("Nonce", "一次性随机数")}}或散列的脚本标签
+- 禁用内联事件处理器
+- 禁用 `javascript:` URL
+- 禁用 `eval()` 等危险 API
+
+下一节我们将介绍 CSP 提供的用于完成这些事情的工具。
+
+> [!NOTE]
+> 设置 CSP 并不能替代对输入进行净化。网站应当净化输入*并且*设置 CSP，从而为 XSS 提供纵深防御。
+
+### Fetch 指令
+
+Fetch 指令用于指定文档允许加载的某一类资源——例如 JavaScript、CSS 样式表、图片、字体等。
+
+不同类型的资源有不同的 Fetch 指令。例如：
+
+- [`script-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) 设置 JavaScript 的允许来源。
+- [`style-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src) 设置 CSS 样式表的允许来源。
+- [`img-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) 设置图片的允许来源。
+
+一条特殊的 Fetch 指令是 `default-src`，它为所有未显式列出指令的资源设置后备策略。
+
+完整的 Fetch 指令列表见[参考文档](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_指令)。
+
+每条 Fetch 指令指定为单独的关键字 `'none'`，或一个或多个用空格分隔的*源表达式*。列出多个源表达式时：只要其中任一方式允许该资源，该资源就被允许。
+
+例如，下面的 CSP 设置了两条 Fetch 指令：
+
+- `default-src` 被赋予单个源表达式 `'self'`
+- `img-src` 被赋予两个源表达式：`'self'` 和 `example.com`
+
+![展示源表达式的 CSP 示意图](csp-source-expressions.svg)
+
+其效果是：
+
+- 图片必须与文档同源，或从 `example.com` 加载
+- 所有其他资源必须与文档同源。
+
+接下来几节将介绍一些使用源表达式来控制资源加载的方式。请注意，虽然我们分开描述它们，但这些表达式通常可以组合使用：例如，单条 Fetch 指令既可以包含 nonce，也可以包含主机名。
+
+#### 阻止资源
+
+要完全阻止某一资源类型，使用 `'none'` 关键字。例如，下面的指令会阻止所有 {{htmlelement("object")}} 和 {{htmlelement("embed")}} 资源：
 
 ```http
-Content-Security-Policy: policy
+Content-Security-Policy: object-src 'none'
 ```
 
-策略（policy）参数是一个包含了各种描述你的 CSP 策略指令的字符串。
+请注意，在某一条指令中，`'none'` 不能与任何其他方式组合：实际上，如果 `'none'` 旁边还给出了其他源表达式，这些表达式会被忽略。
 
-### 编写策略
+#### 一次性随机数
 
-策略由一系列策略指令所组成，每个策略指令都描述了针对某个特定资源的类型以及策略生效的范围。你的策略应当包含一个 {{CSP("default-src")}} 策略指令，在其他资源类型没有符合自己的策略时应用该策略（有关完整列表，请查看 {{CSP("default-src")}} 指令的描述）。一个策略可以包含 {{CSP("default-src")}} 或者 {{CSP("script-src")}} 指令来防止内联脚本运行，并杜绝 `eval()` 的使用。一个策略也可包含一个 {{CSP("default-src")}} 或 {{CSP("style-src")}} 指令去限制来自一个 {{HTMLElement("style")}} 元素或者 `style` 属性的內联样式。对于不同类型的项目都有特定的指令，因此每种类型都可以有自己的指令，包括字体、frame、图像、音频和视频媒体、script 和 worker。
+`nonce`（一次性随机数）是限制加载 {{htmlelement("script")}} 和 {{htmlelement("style")}} 资源的推荐做法。
 
-## 示例：常见用例
-
-这一部分提供了一些常用的安全策略方案示例。
-
-### 示例 1
-
-一个网站管理者想要所有内容均来自站点的同一个源（不包括其子域名）。
+使用 nonce 时，服务器为每个 HTTP 响应生成一个随机值，并将其包含在 `script-src` 和/或 `style-src` 指令中：
 
 ```http
-Content-Security-Policy: default-src 'self'
+Content-Security-Policy:
+  script-src 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
 ```
 
-### 示例 2
+然后，服务器将此值作为它打算包含在文档中的所有 `<script>` 和/或 `<style>` 标签的 `nonce` 属性值。
 
-一个网站管理者允许内容来自信任的域名及其子域名（域名不必须与 CSP 设置所在的域名相同）。
+浏览器比较这两个值，仅在它们匹配时才加载该资源。其思路是：即使攻击者能向页面插入一些 JavaScript，他们也不会知道服务器将使用哪个 nonce，因此浏览器会拒绝运行该脚本。
+
+要使这种方法奏效，攻击者必须无法猜出该 nonce。
+
+**实际上，这意味着每个 HTTP 响应的 nonce 都必须不同，而且必须不可预测。**
+
+这进而意味着服务器不能提供静态 HTML，因为它必须每次插入新的 nonce。通常服务器会使用模板引擎来插入 nonce。
+
+下面是一段 [Express](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) 代码片段作为演示：
+
+```js
+function content(nonce) {
+  return `
+    <script nonce="${nonce}" src="/main.js"></script>
+    <script nonce="${nonce}">console.log("你好！");</script>
+    <h1>你好，世界</h1> 
+    `;
+}
+
+app.get("/", (req, res) => {
+  const nonce = crypto.randomUUID();
+  res.setHeader("Content-Security-Policy", `script-src 'nonce-${nonce}'`);
+  res.send(content(nonce));
+});
+```
+
+在每个请求上，服务器都会生成一个新的 nonce，将其插入 CSP 以及返回文档中的 {{htmlelement("script")}} 标签。请注意，服务器：
+
+- 为每个请求生成新的 nonce
+- 可以在外部脚本和内联脚本上使用 nonce
+- 对文档中的所有 `<script>` 标签使用同一个 nonce
+
+重要的是，服务器应使用某种模板机制来插入 nonce，而不是把 nonce 插入到所有 `<script>` 标签中：否则，服务器可能会无意中把 nonce 插入到攻击者注入的脚本里。
+
+请注意，nonce 只能用于具有 `nonce` 属性的元素：也就是只有 `<script>` 和 `<style>` 元素。
+
+#### 散列
+
+Fetch 指令也可以使用脚本的散列来保证其完整性。使用这种方法时，服务器会：
+
+1. 使用{{glossary("hash function", "散列函数")}}（SHA-256、SHA-384 或 SHA-512 之一）计算脚本内容的散列
+2. 对结果进行 {{glossary("Base64", "Base64 编码")}}
+3. 追加标识所用散列算法的前缀（`sha256-`、`sha384-` 或 `sha512-` 之一）。
+
+然后将结果添加到指令中：
 
 ```http
-Content-Security-Policy: default-src 'self' *.trusted.com
+Content-Security-Policy: script-src 'sha256-cd9827ad...'
 ```
 
-### 示例 3
+当浏览器接收到文档时，它会对脚本进行散列计算，将结果与标头中的值比较，仅在它们匹配时才加载该脚本。
 
-一个网站管理者允许网页应用的用户在他们自己的内容中包含来自任何源的图片，但是限制音频或视频需从信任的资源提供者，所有脚本必须从特定主机服务器获取可信的代码。
+外部脚本还必须包含 [`integrity`](/zh-CN/docs/Web/HTML/Reference/Elements/script#integrity) 属性，这种方法才能生效。
+
+下面是一段 Express 代码片段作为演示：
+
+```js
+const hash1 = "sha256-ex2O7MWOzfczthhKm6azheryNVoERSFrPrdvxRtP8DI=";
+const hash2 = "sha256-H/eahVJiG1zBXPQyXX0V6oaxkfiBdmanvfG9eZWSuEc=";
+
+const csp = `script-src '${hash1}' '${hash2}'`;
+const content = `
+  <script src="./main.js" integrity="${hash2}"></script>
+  <script>console.log("你好！");</script>
+    <h1>你好，世界</h1> 
+    `;
+
+app.get("/", (req, res) => {
+  res.setHeader("Content-Security-Policy", csp);
+  res.send(content);
+});
+```
+
+请注意：
+
+- 文档中的每个脚本都有各自的散列。
+- 对于外部脚本“main.js”，我们还包含了 `integrity` 属性，并赋予相同的值。
+- 与使用 nonce 的示例不同，CSP 和内容都可以是静态的，因为散列保持不变。这使基于散列的策略更适合静态页面或依赖客户端渲染的网站。
+
+#### 基于方案的策略
+
+Fetch 指令可以列出一种方案，例如 `https:`，以允许使用该方案提供的资源。这例如可以让策略要求所有资源加载都使用 HTTPS：
 
 ```http
-Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com
+Content-Security-Policy: default-src https:
 ```
 
-在这里，各种内容默认仅允许从文档所在的源获取，但存在如下例外：
+#### 基于位置的策略
 
-- 图片可以从任何地方加载 (注意“\*”通配符)。
-- 多媒体文件仅允许从 media1.com 和 media2.com 加载（不允许从这些站点的子域名）。
-- 可运行脚本仅允许来自于 userscripts.example.com。
+Fetch 指令可以根据资源所在的位置来控制资源加载。
 
-### 示例 4
-
-一个线上银行网站的管理者想要确保网站的所有内容都要通过 SSL 方式获取，以避免攻击者窃听用户发出的请求。
+关键字 `'self'` 允许与文档本身同源的资源：
 
 ```http
-Content-Security-Policy: default-src https://onlinebanking.jumbobank.com
+Content-Security-Policy: img-src 'self'
 ```
 
-该服务器仅允许通过 HTTPS 方式并仅从 onlinebanking.jumbobank.com 域名来访问文档。
-
-### 示例 5
-
-一个在线邮箱的管理者想要允许在邮件里包含 HTML，同样图片允许从任何地方加载，但不允许 JavaScript 或者其他潜在的危险内容（从任意位置加载）。
+你也可以指定一个或多个主机名，还可以包含通配符，此时只有从这些主机提供的资源会被允许。这例如可以用来允许从受信任的 CDN 提供内容。
 
 ```http
-Content-Security-Policy: default-src 'self' *.mailsite.com; img-src *
+Content-Security-Policy: img-src *.example.org
 ```
 
-注意这个示例并未指定 {{CSP("script-src")}}；在此 CSP 示例中，站点通过 {{CSP("default-src")}} 指令的对其进行配置，这也同样意味着脚本文件仅允许从原始服务器获取。
+你可以指定多个位置。下面的指令只允许与当前文档同源的图片，或从“example.org”的子域提供的图片，或从“example.com”提供的图片：
 
-## 对策略进行测试
+```http
+Content-Security-Policy: img-src 'self' *.example.org  example.com
+```
 
-为降低部署成本，CSP 可以部署为仅报告（report-only）模式。在此模式下，CSP 策略不是强制性的，但是任何违规行为将会报告给一个指定的 URI 地址。此外，仅报告标头可以用来测试对策略未来的修订，而不用实际部署它。
+#### 内联 JavaScript
 
-你可以用 {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP 标头来指定你的策略，像这样：
+如果 CSP 包含 `default-src` 或 `script-src` 指令，则除非采取额外措施来启用，否则内联 JavaScript 将不被允许执行。这包括：
+
+- 页面中 `<script>` 元素内包含的 JavaScript：
+
+  ```html
+  <script>
+    console.log("来自内联脚本的问候");
+  </script>
+  ```
+
+- 内联事件处理器属性中的 JavaScript：
+
+  ```html
+  <img src="x" onerror="console.log('来自内联事件处理器的问候')" />
+  ```
+
+- `javascript:` URL 中的 JavaScript：
+
+  ```html
+  <a href="javascript:console.log('来自 javascript: URL 的问候')">点我</a>
+  ```
+
+`unsafe-inline` 关键字可用于覆盖这一限制。例如，下面的指令要求所有资源都同源，但允许内联 JavaScript：
+
+```http example-bad
+Content-Security-Policy: default-src 'self' 'unsafe-inline'
+```
+
+> [!WARNING]
+> 开发者应避免使用 `'unsafe-inline'`，因为它会破坏设置 CSP 的大部分意义。内联 JavaScript 是最常见的 XSS 攻击向量之一，而 CSP 最基本的目标之一就是防止其不受控制地使用。
+
+如果内联 `<script>` 元素受到上文所述的 nonce 或散列保护，则它们是被允许的。
+
+如果指令中包含 nonce 或散列表达式，则浏览器会忽略 `unsafe-inline` 关键字。
+
+#### `eval()` 和类似的 API
+
+与内联 JavaScript 类似，如果 CSP 包含 `default-src` 或 `script-src` 指令，则 `eval()` 和类似的 API 将不被允许执行。这包括（以及其他 API）：
+
+- [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 本身：
+
+  ```js
+  eval('console.log("来自 eval() 的问候")');
+  ```
+
+- {{jsxref("Function/Function()", "Function()")}} 构造函数：
+
+  ```js
+  const sum = new Function("a", "b", "return a + b");
+  ```
+
+- {{domxref("Window.setTimeout()", "setTimeout()")}} 和 {{domxref("Window.setInterval()", "setInterval()")}} 的字符串参数：
+
+  ```js
+  setTimeout("console.log('来自 setTimeout 的问候')", 1);
+  ```
+
+`unsafe-eval` 关键字可用于覆盖这一行为，并且与 `unsafe-inline` 一样，出于同样的原因：**开发者应避免使用 `unsafe-eval`**。
+
+有时很难移除对 `eval()` 及其他方法的使用：在这些情况下，[可信类型 API](/zh-CN/docs/Web/API/Trusted_Types_API) 可以使其更安全，方法是确保输入符合已定义的策略。此时应使用 `trusted-types-eval` 关键字来覆盖该行为。与 `unsafe-inline` 不同，它仅在浏览器支持并启用了可信类型时才会覆盖该行为；这确保了在不支持可信类型的浏览器上，这些方法仍会被阻止。
+
+与 `unsafe-inline` 不同，`unsafe-eval` 关键字在包含 nonce 或散列表达式的指令中仍然有效。
+
+### 严格 CSP
+
+为控制脚本加载以缓解 XSS，推荐的做法是使用基于[一次性随机数](#一次性随机数)或[散列](#散列)的 Fetch 指令。这称为*严格 CSP*。这类 CSP 相比基于位置的 CSP（通常称为*允许列表 CSP*）有两个主要优势：
+
+- 允许列表 CSP 很难做对，策略常常会无意中将不安全的域名列入允许列表，因而无法有效防御 XSS（参见 [CSP 已死，CSP 万岁！论允许列表的不安全性与内容安全策略的未来](https://dl.acm.org/doi/pdf/10.1145/2976749.2978363)）。
+- 允许列表 CSP 可能非常庞大且难以维护，尤其是在使用不受你控制的脚本时。根据[我如何学会停止焦虑并爱上内容安全策略](https://www.netlify.com/blog/general-availability-content-security-policy-csp-nonce-integration/)，仅仅为了集成 Google Analytics，开发者就被要求将 187 个 Google 域名加入允许列表。
+
+基于 nonce 的严格 CSP 如下所示：
+
+```http
+Content-Security-Policy:
+  script-src 'nonce-{RANDOM}';
+  object-src 'none';
+  base-uri 'none';
+```
+
+在这条 CSP 中，我们：
+
+- 使用 nonce 来控制允许加载哪些 JavaScript 资源
+- 阻止所有 object 嵌入
+- 阻止所有使用 `<base>` 元素设置基础 URI 的行为。
+
+基于散列的严格 CSP 与此相同，只是用散列代替 nonce：
+
+```http
+Content-Security-Policy:
+  script-src 'sha256-{HASHED_SCRIPT}';
+  object-src 'none';
+  base-uri 'none';
+```
+
+如果你能动态生成响应（包括内容本身），基于 nonce 的指令更容易维护。否则，你需要使用基于散列的指令。基于散列的指令的问题在于，只要脚本内容有任何改动，你就必须重新计算并重新应用散列。
+
+#### `strict-dynamic` 关键字
+
+如上所述，当你使用不受自己控制的脚本时，严格 CSP 很难实现。如果第三方脚本加载了任何额外脚本，或使用了任何内联脚本，就会失败，因为第三方脚本不会把 nonce 或散列传递下去。
+
+`strict-dynamic` 关键字就是为了帮助解决这个问题。它可以包含在 Fetch 指令中，其效果是：如果某个脚本带有 nonce 或散列，则该脚本将被允许加载本身没有 nonce 或散列的后续脚本。也就是说，nonce 或散列赋予某个脚本的信任会传递给该原始脚本所加载的脚本（以及*它们*所加载的脚本，依此类推）。
+
+例如，考虑如下文档：
+
+```html
+<html lang="zh-CN">
+  <head>
+    <script
+      src="./main.js"
+      integrity="sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk="></script>
+  </head>
+  <body>
+    <h1>示例页面！</h1>
+  </body>
+</html>
+```
+
+它包含脚本“main.js”，该脚本会创建并添加另一个脚本“main2.js”：
+
+```js
+console.log("你好");
+
+const scriptElement = document.createElement("script");
+scriptElement.src = `main2.js`;
+
+document.head.appendChild(scriptElement);
+```
+
+我们用如下 CSP 提供该文档：
+
+```http
+Content-Security-Policy:
+  script-src 'sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk='
+```
+
+“main.js”脚本将被允许加载，因为它的散列与 CSP 中的值匹配。但它尝试加载“main2.js”会失败。
+
+如果我们将 `'strict-dynamic'` 添加到 CSP 中，则“main.js”将被允许加载“main2.js”：
+
+```http
+Content-Security-Policy:
+  script-src 'sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk='
+  'strict-dynamic'
+```
+
+`'strict-dynamic'` 关键字使创建和维护基于 nonce 或散列的 CSP 容易得多，尤其是在网站使用第三方脚本时。不过，它也会使你的 CSP 安全性降低，因为如果你包含的脚本基于潜在的 XSS 来源创建 `<script>` 元素，CSP 将无法保护它们。
+
+#### 重构内联 JavaScript 和 `eval()`
+
+上文已经看到，在 CSP 中，内联 JavaScript 默认是不被允许的。有了 nonce 或散列，开发者可以使用内联 `<script>` 标签，但你仍需要重构代码以移除其他不被允许的模式，包括内联事件处理器、`javascript:` URL，以及对 `eval()` 的使用。例如，内联事件处理器通常应替换为对 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 的调用：
+
+```html example-bad
+<p onclick="console.log('来自内联事件处理器的问候')">点我</p>
+```
+
+```html
+<!-- 随如下 CSP 一起提供：
+ `script-src 'sha256-AjYfua7yQhrSlg807yyeaggxQ7rP9Lu0Odz7MZv8cL0='`
+ -->
+<p id="hello">点我</p>
+<script>
+  const hello = document.querySelector("#hello");
+  hello.addEventListener("click", () => {
+    console.log("来自内联脚本的问候");
+  });
+</script>
+```
+
+## 点击劫持防护
+
+[`frame-ancestors`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) 指令可用于控制哪些文档（如果有的话）被允许在嵌套浏览上下文（例如 {{htmlelement("iframe")}}）中嵌入本文档。这是对点击劫持攻击的有效防护，因为这类攻击依赖于将目标站点嵌入攻击者控制的站点中。
+
+`frame-ancestors` 的语法是 Fetch 指令语法的子集：你可以提供单独的关键字值 `'none'`，或一个或多个源表达式。不过，你可以使用的源表达式只有方案、主机名或 `'self'` 关键字值。
+
+除非你需要让自己的站点可被嵌入，否则应将 `frame-ancestors` 设为 `'none'`：
+
+```http
+Content-Security-Policy: frame-ancestors 'none'
+```
+
+该指令是 {{httpheader("X-Frame-Options")}} 标头更灵活的替代品。
+
+## 升级不安全请求
+
+强烈鼓励 Web 开发者通过 HTTPS 提供所有内容。在将站点升级到 HTTPS 的过程中，站点有时会通过 HTTPS 提供主文档，但通过 HTTP 提供其资源，例如使用如下标记：
+
+```html
+<script src="http://example.org/my-cat.js"></script>
+```
+
+这称为*混合内容*，不安全资源的存在会大大削弱 HTTPS 所提供的保护。根据浏览器实现的[混合内容算法](/zh-CN/docs/Web/Security/Defenses/Mixed_content)，如果文档通过 HTTPS 提供，不安全资源会被分为“可升级内容”和“可拦截内容”。可升级内容会被升级到 HTTPS，可拦截内容会被拦截，这可能会破坏页面。
+
+混合内容的最终解决方案是开发者通过 HTTPS 加载所有资源。然而，即使站点实际上能够通过 HTTPS 提供所有内容，开发者要重写站点用于加载资源的所有 URL 仍然可能非常困难（在涉及归档内容时，甚至实际上几乎不可能）。
+
+[`upgrade-insecure-requests`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) 指令旨在解决这个问题。该指令没有任何值：要设置它，只需包含指令名称：
+
+```http
+Content-Security-Policy: upgrade-insecure-requests
+```
+
+如果在文档上设置了该指令，浏览器会在以下情况下自动将 HTTP URL 升级为 HTTPS：
+
+- 加载资源的请求（例如图片、脚本或字体）
+- 与文档同源的导航请求（例如链接目标）
+- 嵌套浏览上下文中的导航请求，例如 iframe
+- 表单提交
+
+不过，目标为不同源的顶级导航请求不会被升级。
+
+例如，假设 `https://example.org` 上的文档随包含 `upgrade-insecure-requests` 指令的 CSP 一起提供，且文档包含如下标记：
+
+```html
+<script src="http://example.org/my-cat.js"></script>
+<script src="http://not-example.org/another-cat.js"></script>
+```
+
+浏览器会自动将这两个请求都升级为 HTTPS。
+
+假设文档还包含这些内容：
+
+```html
+<a href="http://example.org/more-cats">再看一些猫咪！</a>
+<a href="http://not-example.org/even-more-cats">另一个站点上还有更多猫咪！</a>
+```
+
+浏览器会将第一个链接升级为 HTTPS，但不会升级第二个，因为它导航到了不同的源。
+
+该指令不能替代 {{httpheader("Strict-Transport-Security")}} 标头（也称为 HSTS），因为它不会升级指向站点的外部链接。站点应当同时包含该指令和 `Strict-Transport-Security` 标头。
+
+## 强制使用可信类型
+
+[`require-trusted-types-for`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) 和 [`trusted-types`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) 指令使你能够防御客户端[跨站脚本（XSS）](/zh-CN/docs/Web/Security/Attacks/XSS)攻击，方法是确保任何输入在被传给可能会将其作为代码执行的 Web 平台 API 之前，都经过转换以使其安全。[`require-trusted-types-for`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) 和 [`trusted-types`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) 指令可用于强制执行[可信类型 API](/zh-CN/docs/Web/API/Trusted_Types_API)。这使你能够通过要求任何输入都必须经过转换函数来防御客户端[跨站脚本（XSS）](/zh-CN/docs/Web/Security/Attacks/XSS)攻击，从而在将其发送给可能会将其作为代码执行的 Web 平台 API 之前，有机会使其变得安全。
+
+### 注入汇点与净化
+
+Web 平台中的一些 API 被称为*注入汇点*。这些 API 可以接收某些输入（通常是字符串形式），并将其解释为代码。本指南中我们已经见过 `eval()`，但还有许多其他注入汇点，例如 {{domxref("Element.innerHTML")}} 或 {{domxref("Document.write()")}}。
+
+如果攻击者能向你的网站提供某些精心构造的输入，而你的网站将其传给这些注入汇点之一，则攻击者就可以执行恶意代码。
+
+有些注入汇点（如 `eval()`）很难安全使用，我们已经看到 CSP 通常会[完全阻止它们](#eval_和类似的_api)。其他注入汇点则可以更安全，前提是对传入它们的输入进行处理以移除不安全的元素。这种做法称为[净化](/zh-CN/docs/Web/Security/Attacks/XSS#sanitization)。
+
+### 可信类型 API
+
+借助[可信类型 API](/zh-CN/docs/Web/API/Trusted_Types_API)，你可以将*可信类型*传入注入汇点，而不是字符串。可信类型是将潜在危险的输入通过转换函数处理后得到的对象。这种转换通常会净化输入，移除任何可能使其可执行的元素（例如 {{htmlelement("script")}} 标签）。
+
+默认情况下，你的代码可以选择将可信类型或未净化的字符串传给注入汇点。不过，如果你在 CSP 中包含 [`require-trusted-types-for`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) 指令，并将其值设为 `'script'`，则浏览器将只允许你的站点将可信类型传给注入汇点。例如，下面的代码会抛出异常：
+
+```js example-bad
+const possiblyXSS = "<p>我可能是 XSS</p>";
+const target = document.querySelector("#target");
+
+target.innerHTML = possiblyXSS;
+// 若设置了 require-trusted-types-for，将抛出异常
+```
+
+可信类型对象使用用户定义的*策略*对象创建。你的代码可以创建任何种类的策略对象，包括那些转换函数实际上并不净化输入、因而无法保护你的策略。为尽量降低这一风险，你可以包含 [`trusted-types`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) 指令。它列出可接受的策略名称，浏览器将只允许使用这些已命名的策略。
+
+## 测试你的策略
+
+为便于部署，CSP 可以在仅报告模式下部署。策略不会被强制执行，但任何违规都会被发送到策略中指定的报告端点。此外，可以使用仅报告标头来测试策略的未来修订，而无需实际部署它。
+
+你可以使用 {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP 标头来指定策略，像这样：
 
 ```http
 Content-Security-Policy-Report-Only: policy
 ```
 
-如果 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 标头和 {{HTTPHeader("Content-Security-Policy")}} 同时出现在一个响应中，两个策略均有效。在 `Content-Security-Policy` 标头中指定的策略有强制性，而 `Content-Security-Policy-Report-Only` 中的策略仅产生报告而不具有强制性。
+如果同一响应中同时存在 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 标头和 {{HTTPHeader("Content-Security-Policy")}} 标头，两条策略都会生效。`Content-Security-Policy` 标头中指定的策略会被强制执行，而 `Content-Security-Policy-Report-Only` 策略会生成报告但不会被强制执行。
 
-支持 CSP 的浏览器将始终对于每个企图违反你所建立的策略都发送违规报告，如果策略里包含一个有效的{{CSP("report-uri")}} 指令。
+请注意，与普通的内容安全策略不同，仅报告策略不能通过 `<meta>` 元素送达。
 
-## 启用报告
+### 违规报告
 
-默认情况下，违规报告并不会发送。为启用发送违规报告，你需要指定 {{CSP("report-to")}} 策略指令，并提供至少一个 URI 地址去递交报告：
+报告 CSP 违规的推荐方法是使用[报告 API](/zh-CN/docs/Web/API/Reporting_API)，在 {{HTTPHeader("Reporting-Endpoints")}} 中声明端点，并使用 `Content-Security-Policy` 标头的 {{CSP("report-to")}} 指令将其中之一指定为 CSP 报告目标。
 
-```http
-Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.example.com/collector.cgi
-```
+> [!WARNING]
+> 你也可以使用 CSP 的 {{CSP("report-uri")}} 指令来指定 CSP 违规报告的目标 URL。
+> 这会通过 {{HTTPHeader("Content-Type")}} 为 `application/csp-report` 的 `POST` 操作发送略有不同的 JSON 报告格式。
+> 这种方法已弃用，但在所有浏览器都支持 {{CSP("report-to")}} 之前，你应当同时声明两者。
+> 有关该方法的更多信息，请参见 {{CSP("report-uri")}} 主题。
 
-然后你需要设置你的服务器能够接收报告；使其能够以你认为恰当的方式存储并处理这些报告。
-
-## 违规报告的语法
-
-作为报告的 JSON 对象和 `application/csp-report` {{HTTPHeader("Content-Type")}} 一起发送，并包含了以下数据：
-
-- `blocked-uri`
-  - : 被 CSP 阻止的资源 URI。如果被阻止的 URI 来自不同的源而非 `document-uri`，那么被阻止的资源 URI 会被删减，仅保留协议、主机和端口号。
-- `disposition`
-  - : 根据 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 和 `Content-Security-Policy` 标头使用情况的不同，值为 `"enforce"` 或 `"report"`。
-- `document-uri`
-  - : 发生违规的文档的 URI。
-- `effective-directive`
-  - : 导致违规行为发生的指令。一些浏览器可能提供不同的值，例如 Chrome 提供 `style-src-elem` 或 `style-src-attr`，即使实际执行的指令是 `style-src`。
-- `original-policy`
-  - : 由 `Content-Security-Policy` HTTP 标头指定的原始策略值。
-- `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 违规发生处的文档引用（地址）。
-- `script-sample`
-  - : 导致该违规的内联代码、事件处理器或样式的前 40 个字符。只适用于 `script-src*` 或 `style-src*` 包含 `'report-sample'` 的情况。
-- `status-code`
-  - : 全局对象被实例化的资源的 HTTP 状态代码。
-- `violated-directive` {{deprecated_inline}}
-  - : 导致违反策略的指令。`violated-directive` 是 `effective-directive` 字段的历史名称，并包含相同的值。
-
-## 违规报告的样本
-
-我们假设页面位于 `http://example.com/signup.html`。它使用如下策略，该策略禁止任何资源的加载，除了来自 `cdn.example.com` 的样式表。
+服务器可以使用 {{HTTPHeader("Reporting-Endpoints")}} HTTP 响应标头告知客户端将报告发送到何处。该标头将一个或多个端点 URL 定义为逗号分隔的列表。例如，要定义一个名为 `csp-endpoint`、在 `https://example.com/csp-reports` 接受报告的报告端点，服务器的响应标头可以如下所示：
 
 ```http
-Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 ```
 
-`signup.html` 的 HTML 像这样：
+如果你希望有多个端点处理不同类型的报告，可以像这样指定它们：
 
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    Here be content.
-  </body>
-</html>
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
+                     hpkp-endpoint="https://example.com/hpkp-reports"
 ```
 
-你能看出其中错误吗？这里仅允许加载自 `cdn.example.com` 的样式表，然而该页面企图从自己的源（`http://example.com`）加载。当该文档被访问时，一个兼容 CSP 的浏览器将以 POST 请求的形式发送违规报告到 `http://example.com/_/csp-reports`，内容如下：
+然后你可以使用 `Content-Security-Policy` 标头的 {{CSP("report-to")}} 指令，指定应使用某个已定义的端点进行报告。例如，要将 `default-src` 的 CSP 违规报告发送到 `https://example.com/csp-reports`，你可以发送如下所示的响应标头：
+
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
+Content-Security-Policy: default-src 'self'; report-to csp-endpoint
+```
+
+当发生 CSP 违规时，浏览器会将报告作为 JSON 对象，通过 HTTP {{httpmethod("POST")}} 操作发送到指定端点，其 {{HTTPHeader("Content-Type")}} 为 `application/reports+json`。该报告是 {{domxref("CSPViolationReport")}} 对象的序列化形式，其中包含值为 `"csp-violation"` 的 `type` 属性。
+
+一个典型的对象可能如下所示：
 
 ```json
 {
-  "csp-report": {
-    "blocked-uri": "http://example.com/css/style.css",
-    "disposition": "report",
-    "document-uri": "http://example.com/signup.html",
-    "effective-directive": "style-src-elem",
-    "original-policy": "default-src 'none'; style-src cdn.example.com; report-to /_/csp-reports",
-    "referrer": "",
-    "status-code": 200,
-    "violated-directive": "style-src-elem"
-  }
+  "age": 53531,
+  "body": {
+    "blockedURL": "inline",
+    "columnNumber": 39,
+    "disposition": "enforce",
+    "documentURL": "https://example.com/csp-report",
+    "effectiveDirective": "script-src-elem",
+    "lineNumber": 121,
+    "originalPolicy": "default-src 'self'; report-to csp-endpoint-name",
+    "referrer": "https://www.google.com/",
+    "sample": "console.log(\"lo\")",
+    "sourceFile": "https://example.com/csp-report",
+    "statusCode": 200
+  },
+  "type": "csp-violation",
+  "url": "https://example.com/csp-report",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
 }
 ```
 
-如你所见，该报告在 `blocked-uri` 字段中包含了违规资源的完整路径，但情况并非总是如此。比如，当 `signup.html` 试图从 `http://anothercdn.example.com/stylesheet.css` 加载 CSS 时，浏览器将*不会*包含完整路径，而只会保留源路径（`http://anothercdn.example.com`）。CSP 技术规范小组对此古怪行为给出了[解释](https://www.w3.org/TR/CSP/#violation-reports)。大体上说，这样是为了防止泄露跨源资源的敏感信息。
-
-## 浏览器兼容性
-
-{{Compat}}
-
-### 兼容性备注
-
-在某些版本的 Safari 网络浏览器中存在一种特殊的不兼容性，即如果设置了内容安全策略标头，但没有设置相同来源（Same Origin）标头。浏览器将阻止自我托管的内容和网站外的内容，并错误地报告说这是由于内容安全政策不允许该内容。
+你需要设置一台服务器，以接收具有给定 JSON 格式和内容类型的报告。处理这些请求的服务器随后可以按照最适合你需求的方式存储或处理传入的报告。
 
 ## 参见
 
-- {{HTTPHeader("Content-Security-Policy")}} HTTP 标头
-- {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP 标头
-- [WebExtensions 中的安全策略](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Web Worker 中的 CSP](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#csp_in_workers)
-- [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)
-- [CSP 评估器](https://github.com/google/csp-evaluator)——评估你的内容安全策略
+- [CSP 错误和警告](/zh-CN/docs/Web/HTTP/Guides/CSP/Errors)
+- web.dev 上的[使用严格内容安全策略缓解跨站脚本攻击](https://web.developers.google.cn/articles/strict-csp)（2024）
+- [内容安全策略：加固与缓解之间的成功乱局](https://infocondb.org/con/locomocosec/locomocosec-2019/content-security-policy-a-successful-mess-between-hardening-and-mitigation)
+- owasp.org 上的[内容安全策略速查表](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)
+- [CSP 评估器](https://csp-evaluator.withgoogle.com/)
