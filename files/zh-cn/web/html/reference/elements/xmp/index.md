@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{deprecated_header}}
-
 ## 概述
 
 **`<xmp>`** [HTML](/zh-CN/docs/Web/HTML) 元素能够在不解释其中的 HTML 代码的情况下，以等宽字体渲染起始标签与结束标签之间的文本。HTML2 规范建议其渲染宽度应足以容纳每行 80 个字符。

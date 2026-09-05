@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cede06423af0242a18670246e1b25562d21c0004
 ---
 
-{{deprecated_header}}{{APIRef("UI Events")}}{{Non-standard_header}}
+{{APIRef("UI Events")}}{{Non-standard_header}}
 
 {{domxref("CompositionEvent")}} 接口的只读属性 **`locale`** 返回当前输入法的区域设置（例如，如果组合与{{glossary("Input method editor", "输入法编辑器")}}相关联，则为键盘布局区域设置）。
 

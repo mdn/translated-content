@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
 
-{{APIRef("UI Events")}}{{deprecated_header}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent.initMouseEvent()`** 方法用于在鼠标事件创建时（一般通过 {{domxref("Document.createEvent()")}} 方法创建）初始化其属性的值。
 

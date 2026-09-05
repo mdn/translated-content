@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{deprecated_header}}{{ APIRef("HTML DOM") }}
+{{ APIRef("HTML DOM") }}
 
 已过时的 **`HTMLFontElement.size`** 属性是一个反映 [`size`](/zh-CN/docs/Web/HTML/Reference/Elements/font#size) HTML 属性的字符串。包含从 1 到 7 的字体大小或相对于默认值 3 的数字，例如 -2 或 +1。
 

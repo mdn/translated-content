@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}
+{{APIRef("CSSOM")}}
 
 **`CSSValueList`** 接口继承自 {{DOMxRef("CSSValue")}} 接口，提供了一种 CSS 值的有序集合的抽象。
 

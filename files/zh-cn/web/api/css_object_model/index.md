@@ -81,8 +81,6 @@ CSSOM 相关规范也扩展了其他几个接口：{{DOMxRef("Document")}}、{{D
 
 ### 废弃的 CSSOM 接口 {{deprecated_inline}}
 
-{{deprecated_header}}
-
 - {{DOMxRef("CSSPrimitiveValue")}} {{deprecated_inline}}
 - {{DOMxRef("CSSValue")}} {{deprecated_inline}}
 - {{DOMxRef("CSSValueList")}} {{deprecated_inline}}

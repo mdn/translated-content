@@ -5,7 +5,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 {{domxref("Document")}} 接口的 **`anchors`** 只读属性返回文档中所有锚点的列表。
 

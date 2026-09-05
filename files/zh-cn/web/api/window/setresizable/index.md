@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ffff697fbd3004c3da50323ef4d868b3ad47e4d0
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}} {{non-standard_header}}
 
 此方法不执行任何操作；它是一个空操作。仅为了与 Netscape 4.x 兼容而保留。
 
