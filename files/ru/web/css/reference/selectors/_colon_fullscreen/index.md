@@ -10,7 +10,11 @@ original_slug: Web/CSS/:fullscreen
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:fullscreen {
+  /* ... */
+}
+```
 
 ## Примечания по использованию
 

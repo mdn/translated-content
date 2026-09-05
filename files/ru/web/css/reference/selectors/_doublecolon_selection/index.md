@@ -38,7 +38,11 @@ original_slug: Web/CSS/::selection
 }
 ```
 
-{{csssyntax}}
+```css
+::selection {
+  /* ... */
+}
+```
 
 ## Пример
 

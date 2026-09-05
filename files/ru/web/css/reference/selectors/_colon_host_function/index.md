@@ -23,7 +23,11 @@ original_slug: Web/CSS/:host_function
 
 ## Синтаксис
 
-{{CSSSyntax}}
+```css-nolint
+:host(<compound-selector>) {
+  /* ... */
+}
+```
 
 ## Примеры
 
