@@ -2,6 +2,8 @@
 title: Элементы MathML с индексами
 short-title: Элементы с индексами
 slug: Web/MathML/Tutorials/For_beginners/Scripts
+l10n:
+  sourceCommit: 41df35b68f52dcfa4d07d979a629c893b0ecc3fd
 ---
 
 {{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Tutorials/For_beginners")}}
