@@ -116,7 +116,7 @@ column-rule-break: unset;
 
 グリッドコンテナーでは、デフォルトで、列間罫は行のギャップと交差する部分でも途切れることなく続き、これは `column-rule-break: none` と同じ挙動です。`column-rule-break: intersection` を設定すると、本来なら交差するはずの区間が、列のギャップごとに強制的に区切られるようになります。
 
-```html hidden
+```html-nolint hidden
 <h1>グリッドでのデフォルトの罫線分割</h1>
 <div class="grid">
   <div></div>
@@ -175,7 +175,7 @@ h2 {
 
 フレックスボックスでは、列間罫がデフォルトですべての行のギャップで折り返されるかどうかは、`flex-direction`の設定によって決まります。書字方向が横書きの場合、`flex-direction` が `row` または `row-reverse` に設定されている場合、列間罫はそれぞれの行のギャップで区切られ、これは `column-rule-break: intersection` と同等です。`flex-direction` が `column` または `column-reverse` の場合、列間罫はデフォルトで連続し、これは `column-rule-break: none` と同等です。
 
-```html hidden
+```html-nolint hidden
 <h1>フレックスボックスでのデフォルトの罫線分割</h1>
 <article>
   <section>
@@ -293,7 +293,7 @@ section {
   <li>Go ask your dad.</li>
 </ol>
 <fieldset>
-  <legend><code>column-rule-break:</code> の設定</legend>
+  <legend><code>column-rule-break:</code> を設定</legend>
   <label
     ><input type="radio" name="break" value="none" /> <code>none</code></label
   >
